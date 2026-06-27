@@ -1,0 +1,105 @@
+---
+name: Chambre de Révision Algorithmique de Bruxelles (CRAB)
+type: instance
+slug: tribunal_algorithmique_de_bruxelles_policy_reform
+entite: tribunal_algorithmique_de_bruxelles
+scenario: policy_reform
+localisation:
+  zone: hub_europeen_regulation
+  lieu: Bruxelles
+  type_lieu: ville
+  statut: review_manuelle
+  note: "La CRAB est explicitement située à Bruxelles (quartier européen), mais aucune zone 'Bruxelles' n'existe dans la liste ; le hub_europeen_regulation (Genève-La Haye-Tampere) est le candidat le plus proche par fonction institutionnelle européenne, sans correspondance géographique exacte."
+
+type_dans_scenario: institution
+
+role_dans_scenario: >
+  Dans le monde de policy_reform, la CRAB constitue l'un des rouages centraux de la gouvernance technocratique régulée : une juridiction hybride, mi-tribunal mi-agence d'audit, chargée de statuer sur les recours formés contre les décisions automatisées des systèmes de gouvernance délégués à l'IA à l'échelle européenne et, par extension, onusienne. Elle ne juge pas les algorithmes en abstrait — elle tranche des cas concrets : allocations de ressources critiques contestées, scores de crédit climatique invalidants, décisions d'exclusion du marché du travail augmenté, relocalisations forcées générées par des modèles prédictifs. Son existence est à la fois symbole de maturité institutionnelle et aveu d'une crise de légitimité : la régulation a créé le tribunal précisément parce que les machines gouvernent déjà.
+
+responsabilites: >
+  La CRAB instruit les recours individuels et collectifs contre les décisions automatisées émises par des systèmes certifiés, publie des avis contraignants de conformité algorithmique opposables aux opérateurs publics et privés, et produit une jurisprudence codifiée alimentant les standards de l'ACRA et du Conseil ONU de Gouvernance Numérique et IA. Elle mandate des audits techniques auprès du RAAI et dispose d'un pouvoir de suspension temporaire d'un système décisionnel en cas de risque grave sur les droits fondamentaux.
+
+impact_local: 3
+impact_systemique_global: 4
+
+variables_influencees:
+    - gouvernance_institutions
+    - technologie_information
+
+zone_geographique:
+    - continentale
+    - globale
+
+zone_systemique:
+    - gouvernance
+    - IA
+    - information
+
+alliances:
+    - bureau_gouvernance_algorithmique_policy_reform
+    - conseil_onu_de_gouvernance_numerique_et_ia_policy_reform
+    - conseil_regulation_algorithmique_policy_reform
+    - collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform
+    - reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
+    - conseil_intergouvernemental_de_regulation_technologique_policy_reform
+    - collectifs_citoyens_de_deliberation_augmentee_policy_reform
+
+oppositions:
+    - consortiums_prives_de_gouvernance_algorithmique_policy_reform
+    - front_techno_utopiste_de_la_decision_automatisee_policy_reform
+    - conglomerats_d_automatisation_industrielle_integrale_policy_reform
+    - consortiums_d_optimisation_rh_algorithmique_policy_reform
+    - coalition_des_souverainistes_numeriques_policy_reform
+    - front_souverainiste_des_blocs_non_signataires_policy_reform
+    - consortium_nexus_calcul_policy_reform
+
+type_relation_dominante: coopération
+
+annee_debut: 2061
+annee_fin: 
+
+etat_temporel: actif
+age_historique: mature
+generation: ère cognitive
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Nichée dans un immeuble de verre et de béton surchargé de câbles au cœur du quartier européen de Bruxelles, la Chambre de Révision Algorithmique reçoit chaque semaine des centaines de dossiers en provenance des vingt-sept États membres et de douze juridictions associées. Ses audiences mêlent avocats en robe et ingénieurs en pull, dépositions humaines et logs de systèmes versés au dossier comme pièces à conviction. Fondée en 2061 dans la foulée du Pacte de Gouvernance Numérique Intégrée, elle a rendu plus de quarante mille décisions en trente-sept ans, dont certaines ont forcé la refonte complète de systèmes d'allocation déployés à l'échelle continentale. Ses détracteurs — principalement les grands consortiums d'automatisation — l'accusent d'être une institution lente qui freine la réactivité des systèmes dans des situations d'urgence climatique et énergétique. Ses défenseurs y voient le dernier rempart contre la tyrannie douce du score et du modèle.
+
+signes_distinctifs: >
+  Le logo de la CRAB représente une balance dont l'un des plateaux porte un circuit imprimé et l'autre un texte manuscrit — symbole de l'équilibre jamais atteint entre code et droit. Ses audiences publiques sont retransmises en flux continu sur le réseau Prisme Global, avec sous-titrage en temps réel par une IA éditoriale certifiée, ce qui crée une ironie institutionnelle assumée : un algorithme retranscrit le procès d'un algorithme.
+
+tensions_narratives: >
+  La CRAB est structurellement prise entre deux feux : les consortiums privés et les blocs souverainistes qui refusent sa juridiction au nom de l'efficacité ou de la souveraineté nationale, et les collectifs citoyens qui lui reprochent d'être trop lente, trop techniciste et trop dépendante des expertises émanant des acteurs qu'elle est censée contrôler. Une tension interne croissante oppose les juges-humains, garants de la dimension éthique, aux panels d'auditeurs algorithmiques qui réclament un droit de décision autonome au sein même de la chambre — ouvrant la question vertigineuse de savoir si un algorithme peut juger un algorithme. Enfin, une jurisprudence récente suspendant temporairement le système ARIA-Nexus a provoqué une crise diplomatique avec plusieurs États membres, mettant la CRAB au centre d'un bras de fer entre légitimité juridique et impératifs de gestion des ressources critiques.
+
+date_creation: 2026-06-25
+---
+
+# Chambre de Révision Algorithmique de Bruxelles (CRAB)
+
+## Rôle dans [[policy_reform]]
+Dans le monde de policy_reform, la CRAB constitue l'un des rouages centraux de la gouvernance technocratique régulée : une juridiction hybride, mi-tribunal mi-agence d'audit, chargée de statuer sur les recours formés contre les décisions automatisées des systèmes de gouvernance délégués à l'IA à l'échelle européenne et, par extension, onusienne. Elle ne juge pas les algorithmes en abstrait — elle tranche des cas concrets : allocations de ressources critiques contestées, scores de crédit climatique invalidants, décisions d'exclusion du marché du travail augmenté, relocalisations forcées générées par des modèles prédictifs. Son existence est à la fois symbole de maturité institutionnelle et aveu d'une crise de légitimité : la régulation a créé le tribunal précisément parce que les machines gouvernent déjà.
+
+## Responsabilités
+La CRAB instruit les recours individuels et collectifs contre les décisions automatisées émises par des systèmes certifiés, publie des avis contraignants de conformité algorithmique opposables aux opérateurs publics et privés, et produit une jurisprudence codifiée alimentant les standards de l'ACRA et du Conseil ONU de Gouvernance Numérique et IA. Elle mandate des audits techniques auprès du RAAI et dispose d'un pouvoir de suspension temporaire d'un système décisionnel en cas de risque grave sur les droits fondamentaux.
+
+## Variables influencées
+- [[gouvernance_institutions]]
+- [[technologie_information]]
+
+## Relations
+**Alliés** : [[bureau_gouvernance_algorithmique_policy_reform]], [[conseil_onu_de_gouvernance_numerique_et_ia_policy_reform]], [[conseil_regulation_algorithmique_policy_reform]], [[collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform]], [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]], [[conseil_intergouvernemental_de_regulation_technologique_policy_reform]], [[collectifs_citoyens_de_deliberation_augmentee_policy_reform]]
+**Opposants** : [[consortiums_prives_de_gouvernance_algorithmique_policy_reform]], [[front_techno_utopiste_de_la_decision_automatisee_policy_reform]], [[conglomerats_d_automatisation_industrielle_integrale_policy_reform]], [[consortiums_d_optimisation_rh_algorithmique_policy_reform]], [[coalition_des_souverainistes_numeriques_policy_reform]], [[front_souverainiste_des_blocs_non_signataires_policy_reform]], [[consortium_nexus_calcul_policy_reform]]
+
+## Description journalistique
+Nichée dans un immeuble de verre et de béton surchargé de câbles au cœur du quartier européen de Bruxelles, la Chambre de Révision Algorithmique reçoit chaque semaine des centaines de dossiers en provenance des vingt-sept États membres et de douze juridictions associées. Ses audiences mêlent avocats en robe et ingénieurs en pull, dépositions humaines et logs de systèmes versés au dossier comme pièces à conviction. Fondée en 2061 dans la foulée du Pacte de Gouvernance Numérique Intégrée, elle a rendu plus de quarante mille décisions en trente-sept ans, dont certaines ont forcé la refonte complète de systèmes d'allocation déployés à l'échelle continentale. Ses détracteurs — principalement les grands consortiums d'automatisation — l'accusent d'être une institution lente qui freine la réactivité des systèmes dans des situations d'urgence climatique et énergétique. Ses défenseurs y voient le dernier rempart contre la tyrannie douce du score et du modèle.
+
+## Tensions narratives
+La CRAB est structurellement prise entre deux feux : les consortiums privés et les blocs souverainistes qui refusent sa juridiction au nom de l'efficacité ou de la souveraineté nationale, et les collectifs citoyens qui lui reprochent d'être trop lente, trop techniciste et trop dépendante des expertises émanant des acteurs qu'elle est censée contrôler. Une tension interne croissante oppose les juges-humains, garants de la dimension éthique, aux panels d'auditeurs algorithmiques qui réclament un droit de décision autonome au sein même de la chambre — ouvrant la question vertigineuse de savoir si un algorithme peut juger un algorithme. Enfin, une jurisprudence récente suspendant temporairement le système ARIA-Nexus a provoqué une crise diplomatique avec plusieurs États membres, mettant la CRAB au centre d'un bras de fer entre légitimité juridique et impératifs de gestion des ressources critiques.

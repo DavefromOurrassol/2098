@@ -1,0 +1,89 @@
+---
+name: Les Forges du Commun — Proclamation des Zones Libres du Rust Belt
+type: event_instance
+slug: insurrection_rust_belt_breakdown
+archetype: insurrection_rust_belt
+scenario: breakdown
+localisation:
+  zone: communes_rust_belt
+  lieu: Communes Libres du Rust Belt (Detroit, Cleveland, Pittsburgh)
+  type_lieu: region
+type_evenement: political_social
+portee: regionale
+date: 2061
+date_label: automne 2061
+impossible: false
+custom: true
+description: >
+  Automne 2061 : dans les entrailles rouillées de Detroit, les sirènes des usines reconverties sonnent l'occupation. Les Communes Libres du Rust Belt dressent leurs bannières sur les toits des anciens temples industriels — Pittsburgh, Cleveland, Detroit — et proclament la mort de l'algorithme souverain. Mais dans ce monde déjà fracassé, leur cri ne brise pas un ordre : il s'engouffre dans un vide. Les colonnes du Commandement Atlantique qui défilent vers les barricades ressemblent davantage à des milices contractuelles épuisées qu'à la puissance d'État d'autrefois. Trois semaines de guérilla urbaine, de coupures d'énergie négociées et de tractations avec des seigneuries logistiques armées voisines — personne ne gagne vraiment, personne ne perd complètement.
+consequences: >
+  Les Zones Libres du Rust Belt survivent comme enclaves autonomes post-industrielles, mais leur modèle ne se propage pas : dans un monde de fragmentation généralisée, leur victoire partielle devient simplement un territoire de plus dans la mosaïque de pouvoirs concurrents. Le Commandement Atlantique, humilié et partiellement désavoué par ses propres unités, perd définitivement sa prétention à l'autorité sur les corridors industriels du Midwest. Les Communes deviennent un point de référence symbolique pour d'autres mouvements populistes anti-technocratiques, mais leur isolement logistique les condamne à une survie précaire dépendante de négociations permanentes avec les cartels logistiques régionaux.
+realisation: >
+  Dans un contexte d'effondrement des structures fédérales américaines et de fragmentation des blocs de gouvernance numérique, le Mouvement des Communes du Rust Belt occupe simultanément les friches industrielles de Detroit, Cleveland et Pittsburgh à l'automne 2061. La proclamation de 'zones libres de l'algorithme' résonne dans un monde où les Protocoles Fantômes sont déjà morts depuis dix ans. Le Commandement Atlantique, lui-même vestige fracturé d'une autorité militaire jadis unifiée, ne parvient à mobiliser que des unités de maintien de l'ordre numérique partiellement opérationnelles — certaines unités refusent de marcher contre leurs communautés d'origine. Les trois semaines de confrontations urbaines débouchent non pas sur une répression victorieuse, mais sur une fragmentation accrue : les Communes tiennent leurs zones, mais isolées, sans horizon fédérateur.
+impact_sur_variables:
+  - variable: geopolitique_conflits
+    delta_level: 8
+    duree: 15
+    polarite: -1
+  - variable: valeurs_culture_tempo_sociale
+    delta_level: 12
+    duree: 25
+    polarite: 1
+  - variable: gouvernance_institutions
+    delta_level: -10
+    duree: 20
+    polarite: -1
+  - variable: technologie_information
+    delta_level: -6
+    duree: 12
+    polarite: -1
+  - variable: organisation_territoires
+    delta_level: 10
+    duree: 30
+    polarite: -1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+    - mouvement_des_communes_du_rust_belt_breakdown
+    - conseil_regulation_algorithmique_breakdown
+    - fronts_populistes_anti_technocratiques_breakdown
+    - milices_contractuelles_des_anciens_etats_membres_breakdown
+    - enclaves_corporatives_fortifiees_breakdown
+    - cartels_logistiques_regionaux_breakdown
+    - collectifs_de_reparation_energetique_breakdown
+    - seigneuries_logistiques_armees_breakdown
+note_coherence: Dans un monde de fragmentation avancée (gouvernance à 20, conflits à 95), l'insurrection ne renverse pas un ordre mais s'insère dans la mosaïque des pouvoirs locaux concurrents — victoire symbolique sans débouché systémique, cohérente avec la trajectoire de breakdown.
+custom_source: rééquilibrage_geo_2026-06
+date_creation: 2026-06-24
+---
+
+# Les Forges du Commun — Proclamation des Zones Libres du Rust Belt
+
+## Réalisation dans [[breakdown]]
+Dans un contexte d'effondrement des structures fédérales américaines et de fragmentation des blocs de gouvernance numérique, le Mouvement des Communes du Rust Belt occupe simultanément les friches industrielles de Detroit, Cleveland et Pittsburgh à l'automne 2061. La proclamation de 'zones libres de l'algorithme' résonne dans un monde où les Protocoles Fantômes sont déjà morts depuis dix ans. Le Commandement Atlantique, lui-même vestige fracturé d'une autorité militaire jadis unifiée, ne parvient à mobiliser que des unités de maintien de l'ordre numérique partiellement opérationnelles — certaines unités refusent de marcher contre leurs communautés d'origine. Les trois semaines de confrontations urbaines débouchent non pas sur une répression victorieuse, mais sur une fragmentation accrue : les Communes tiennent leurs zones, mais isolées, sans horizon fédérateur.
+
+## Description journalistique
+Automne 2061 : dans les entrailles rouillées de Detroit, les sirènes des usines reconverties sonnent l'occupation. Les Communes Libres du Rust Belt dressent leurs bannières sur les toits des anciens temples industriels — Pittsburgh, Cleveland, Detroit — et proclament la mort de l'algorithme souverain. Mais dans ce monde déjà fracassé, leur cri ne brise pas un ordre : il s'engouffre dans un vide. Les colonnes du Commandement Atlantique qui défilent vers les barricades ressemblent davantage à des milices contractuelles épuisées qu'à la puissance d'État d'autrefois. Trois semaines de guérilla urbaine, de coupures d'énergie négociées et de tractations avec des seigneuries logistiques armées voisines — personne ne gagne vraiment, personne ne perd complètement.
+
+## Conséquences
+Les Zones Libres du Rust Belt survivent comme enclaves autonomes post-industrielles, mais leur modèle ne se propage pas : dans un monde de fragmentation généralisée, leur victoire partielle devient simplement un territoire de plus dans la mosaïque de pouvoirs concurrents. Le Commandement Atlantique, humilié et partiellement désavoué par ses propres unités, perd définitivement sa prétention à l'autorité sur les corridors industriels du Midwest. Les Communes deviennent un point de référence symbolique pour d'autres mouvements populistes anti-technocratiques, mais leur isolement logistique les condamne à une survie précaire dépendante de négociations permanentes avec les cartels logistiques régionaux.
+
+## Impact sur les variables
+- **geopolitique_conflits** : delta -8 sur 15 ans
+- **valeurs_culture_tempo_sociale** : delta +12 sur 25 ans
+- **gouvernance_institutions** : delta +10 sur 20 ans
+- **technologie_information** : delta +6 sur 12 ans
+- **organisation_territoires** : delta -10 sur 30 ans
+
+## Acteurs impliqués
+- [[mouvement_des_communes_du_rust_belt_breakdown]]
+- [[conseil_regulation_algorithmique_breakdown]]
+- [[fronts_populistes_anti_technocratiques_breakdown]]
+- [[milices_contractuelles_des_anciens_etats_membres_breakdown]]
+- [[enclaves_corporatives_fortifiees_breakdown]]
+- [[cartels_logistiques_regionaux_breakdown]]
+- [[collectifs_de_reparation_energetique_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]
+
+## Note de cohérence
+Dans un monde de fragmentation avancée (gouvernance à 20, conflits à 95), l'insurrection ne renverse pas un ordre mais s'insère dans la mosaïque des pouvoirs locaux concurrents — victoire symbolique sans débouché systémique, cohérente avec la trajectoire de breakdown.

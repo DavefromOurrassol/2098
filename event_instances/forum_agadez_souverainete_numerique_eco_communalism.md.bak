@@ -1,0 +1,75 @@
+---
+name: Forum d'Agadez pour la Souveraineté Numérique des Périphéries
+type: event_instance
+slug: forum_agadez_souverainete_numerique_eco_communalism
+archetype: forum_agadez_souverainete_numerique
+scenario: eco_communalism
+type_evenement: political_social
+portee: continentale
+date: 2062
+date_label: automne 2062
+impossible: false
+custom: true
+description: >
+  Pendant dix jours d'octobre 2062, Agadez accueille ce que ses organisateurs appellent non pas un sommet mais une 'convergence d'architectures vivantes'. Les délégués des communautés sahéliennes, des archipels d'Asie du Sud-Est et des corridors bioterritoriaux d'Afrique subsaharienne n'arrivent pas en négociateurs mais en praticiens. Sur les places dallées de la vieille ville, des démonstrateurs low-tech côtoient des séances de cartographie participative : systèmes mesh alimentés par solaire, protocoles d'échange de données hors-grille, registres communautaires distribués sans dépendance cloud. La Charte adoptée le dernier jour est sobre — quatorze principes, pas un de plus — mais son adoption simultanée par des territoires aussi disparates crée un précédent institutionnel inédit dans le paysage fragmenté de 2062.
+consequences: >
+  La Charte d'Agadez devient une référence jurisprudentielle citée par les assemblées bioterritoriales pour arbitrer les conflits d'interopérabilité entre réseaux mesh locaux. Le modèle sahélien de gouvernance numérique périphérique essaime progressivement vers l'Asie du Sud-Est et l'Amérique andine, renforçant la légitimité des réseaux hors-grille face aux tentatives résiduelles de réagrégation par les plateformes centralisées. La Ligue consolide son rôle de nœud de coordination horizontale sans jamais se muer en autorité supranationale.
+realisation: >
+  Dans un monde déjà fragmenté en bassins autonomes, la Ligue des Cités du Sahel Numérique n'a pas besoin de 'rompre' avec des standards globaux qui se sont largement effondrés d'eux-mêmes. Le Forum d'Agadez devient plutôt un acte de codification collective : 200 délégations de zones périphériques convergent pour formaliser des pratiques hors-grille déjà en cours depuis des années. La Charte d'Agadez n'est pas une déclaration révolutionnaire mais une reconnaissance mutuelle — un vocabulaire commun pour des expériences parallèles. La portée symbolique reste forte : le Sahel numérique s'affirme comme laboratoire de référence pour les infrastructures mesh frugales.
+impact_sur_variables:
+  - variable: technologie_information
+    delta_level: 10
+    duree: 18
+    polarite: 1
+  - variable: gouvernance_institutions
+    delta_level: 6
+    duree: 15
+    polarite: 1
+  - variable: organisation_territoires
+    delta_level: 7
+    duree: 20
+    polarite: 1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+    - ligue_des_cites_du_sahel_numerique_eco_communalism
+    - reseau_mnemos_eco_communalism
+    - assemblee_territoires_eco_communalism
+    - archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
+    - collectifs_de_techniciens_sobres_eco_communalism
+    - plateformes_centralisees_de_reagregation_globale_eco_communalism
+    - courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism
+    - voix_du_dehors_eco_communalism
+note_coherence: Dans un monde éco-communaliste fragmenté à trajectoire régénérative, un forum de codification des pratiques hors-grille déjà existantes est précisément le type d'événement institutionnel modéré qui consolide le modèle sans le transformer radicalement — cohérent avec une intensité modérée et des variables à niveaux intermédiaires.
+custom_source: rééquilibrage_geo_2026-06
+date_creation: 2026-06-23
+---
+
+# Forum d'Agadez pour la Souveraineté Numérique des Périphéries
+
+## Réalisation dans [[eco_communalism]]
+Dans un monde déjà fragmenté en bassins autonomes, la Ligue des Cités du Sahel Numérique n'a pas besoin de 'rompre' avec des standards globaux qui se sont largement effondrés d'eux-mêmes. Le Forum d'Agadez devient plutôt un acte de codification collective : 200 délégations de zones périphériques convergent pour formaliser des pratiques hors-grille déjà en cours depuis des années. La Charte d'Agadez n'est pas une déclaration révolutionnaire mais une reconnaissance mutuelle — un vocabulaire commun pour des expériences parallèles. La portée symbolique reste forte : le Sahel numérique s'affirme comme laboratoire de référence pour les infrastructures mesh frugales.
+
+## Description journalistique
+Pendant dix jours d'octobre 2062, Agadez accueille ce que ses organisateurs appellent non pas un sommet mais une 'convergence d'architectures vivantes'. Les délégués des communautés sahéliennes, des archipels d'Asie du Sud-Est et des corridors bioterritoriaux d'Afrique subsaharienne n'arrivent pas en négociateurs mais en praticiens. Sur les places dallées de la vieille ville, des démonstrateurs low-tech côtoient des séances de cartographie participative : systèmes mesh alimentés par solaire, protocoles d'échange de données hors-grille, registres communautaires distribués sans dépendance cloud. La Charte adoptée le dernier jour est sobre — quatorze principes, pas un de plus — mais son adoption simultanée par des territoires aussi disparates crée un précédent institutionnel inédit dans le paysage fragmenté de 2062.
+
+## Conséquences
+La Charte d'Agadez devient une référence jurisprudentielle citée par les assemblées bioterritoriales pour arbitrer les conflits d'interopérabilité entre réseaux mesh locaux. Le modèle sahélien de gouvernance numérique périphérique essaime progressivement vers l'Asie du Sud-Est et l'Amérique andine, renforçant la légitimité des réseaux hors-grille face aux tentatives résiduelles de réagrégation par les plateformes centralisées. La Ligue consolide son rôle de nœud de coordination horizontale sans jamais se muer en autorité supranationale.
+
+## Impact sur les variables
+- **technologie_information** : delta +10 sur 18 ans
+- **gouvernance_institutions** : delta +6 sur 15 ans
+- **organisation_territoires** : delta +7 sur 20 ans
+
+## Acteurs impliqués
+- [[ligue_des_cites_du_sahel_numerique_eco_communalism]]
+- [[reseau_mnemos_eco_communalism]]
+- [[assemblee_territoires_eco_communalism]]
+- [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]]
+- [[collectifs_de_techniciens_sobres_eco_communalism]]
+- [[plateformes_centralisees_de_reagregation_globale_eco_communalism]]
+- [[courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism]]
+- [[voix_du_dehors_eco_communalism]]
+
+## Note de cohérence
+Dans un monde éco-communaliste fragmenté à trajectoire régénérative, un forum de codification des pratiques hors-grille déjà existantes est précisément le type d'événement institutionnel modéré qui consolide le modèle sans le transformer radicalement — cohérent avec une intensité modérée et des variables à niveaux intermédiaires.

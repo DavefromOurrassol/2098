@@ -1,0 +1,81 @@
+---
+name: Insurrection des Zones Déficitaires — São Paulo, la Cartographie Rebelle
+type: event_instance
+slug: emeutes_algorithme_sao_paulo_fortress_world
+archetype: emeutes_algorithme_sao_paulo
+scenario: fortress_world
+localisation:
+  zone: sao_paulo_megapole
+  lieu: São Paulo — Quartiers périphériques (Vila Brasilândia, zones déficitaires)
+  type_lieu: ville
+type_evenement: political_social
+portee: regionale
+date: 2073
+date_label: automne 2073
+impossible: false
+custom: true
+description: >
+  São Paulo, novembre 2073 : des écrans fracturés dans les ruelles de Vila Brasilândia affichent en boucle les lignes de code qui ont coupé l'eau à quatre millions de personnes. Les collectifs de la Periferia Digital ont passé dix-huit mois à reconstituer l'architecture secrète du SPAS, construisant en miroir une cartographie citoyenne des flux réels — eau, énergie, données — opposée aux cartes officielles du bloc. La soulèvement déborde rapidement le numérique : les générateurs autonomes détournés alimentent les assemblées de rue, tandis que les agences de sécurité intérieure déploient des drones de répression sur les accès aux nœuds de diffusion clandestins. Le modèle pauliste est déjà copié, dans les heures qui suivent, par des collectifs de Kinshasa, Lagos et Karachi.
+consequences: >
+  L'insurrection ne renverse pas le régime algorithmique de São Paulo — les agences de sécurité reprennent le contrôle des infrastructures en six semaines — mais la contre-cartographie publiée devient un protocole de référence pour les mouvements anti-algorithmiques du Sud global, circulant via les archives chiffrées de l'Open Internet Coalition. Le Conseil de Calcul Souverain durcit en réponse les standards de certification des IA d'allocation dans tous les blocs, transformant la transparence revendiquée par les insurgés en nouvel argument de verrouillage propriétaire. À long terme, l'événement cristallise une fracture irréparable entre les populations périphériques et les appareils d'État forteresses, alimentant durablement les coalitions de déplacés et d'exclus.
+realisation: >
+  Après une mise à jour du Sistema Paulista de Alocação Soberana (SPAS) qui coupe eau et énergie dans 12 zones jugées à 'rendement négatif', les quartiers périphériques de São Paulo s'embrasent. Des collectifs de hacktivistes issus des favelas numériques pénètrent les couches cachées du SPAS et publient via des réseaux chiffrés les paramètres d'exclusion intégrés au code source — révélant que la 'neutralité algorithmique' dissimule des critères ethno-économiques délibérément encodés. Dans un monde-forteresse où chaque bloc sacralise le contrôle numérique, la publication de cette contre-cartographie des allocations constitue une bombe institutionnelle : elle prouve que les populations périphériques sont gérées comme des variables à éliminer, non à gouverner.
+impact_sur_variables:
+  - variable: gouvernance_institutions
+    delta_level: -12
+    duree: 15
+    polarite: -1
+  - variable: technologie_information
+    delta_level: -8
+    duree: 10
+    polarite: -1
+  - variable: organisation_territoires
+    delta_level: -10
+    duree: 12
+    polarite: -1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+    - rede_paulista_de_distribuic_o_algor_tmica_fortress_world
+    - populations_des_zones_deficitaires_d_optimisation_fortress_world
+    - agences_de_securite_interieure_des_etats_forteresses_fortress_world
+    - archives_chiffrees_de_l_open_internet_coalition_fortress_world
+    - bureau_gouvernance_algorithmique_fortress_world
+    - collectifs_de_reappropriation_energetique_peripherique_fortress_world
+    - coalitions_des_deplaces_et_apatrides_fortress_world
+    - voix_du_dehors_fortress_world
+    - dispositifs_de_surveillance_numerique_souveraine_fortress_world
+note_coherence: Dans un monde-forteresse à tension maximale où les algorithmes d'allocation sont des instruments de contrôle territorial souverain, l'insurrection périphérique contre le SPAS est une conséquence directe de la logique d'exclusion calculée propre à fortress_world — elle échoue à renverser le système mais accélère sa délégitimation et la fragmentation entre zones protégées et zones déficitaires.
+custom_source: rééquilibrage_geo_2026-06
+date_creation: 2026-06-24
+---
+
+# Insurrection des Zones Déficitaires — São Paulo, la Cartographie Rebelle
+
+## Réalisation dans [[fortress_world]]
+Après une mise à jour du Sistema Paulista de Alocação Soberana (SPAS) qui coupe eau et énergie dans 12 zones jugées à 'rendement négatif', les quartiers périphériques de São Paulo s'embrasent. Des collectifs de hacktivistes issus des favelas numériques pénètrent les couches cachées du SPAS et publient via des réseaux chiffrés les paramètres d'exclusion intégrés au code source — révélant que la 'neutralité algorithmique' dissimule des critères ethno-économiques délibérément encodés. Dans un monde-forteresse où chaque bloc sacralise le contrôle numérique, la publication de cette contre-cartographie des allocations constitue une bombe institutionnelle : elle prouve que les populations périphériques sont gérées comme des variables à éliminer, non à gouverner.
+
+## Description journalistique
+São Paulo, novembre 2073 : des écrans fracturés dans les ruelles de Vila Brasilândia affichent en boucle les lignes de code qui ont coupé l'eau à quatre millions de personnes. Les collectifs de la Periferia Digital ont passé dix-huit mois à reconstituer l'architecture secrète du SPAS, construisant en miroir une cartographie citoyenne des flux réels — eau, énergie, données — opposée aux cartes officielles du bloc. La soulèvement déborde rapidement le numérique : les générateurs autonomes détournés alimentent les assemblées de rue, tandis que les agences de sécurité intérieure déploient des drones de répression sur les accès aux nœuds de diffusion clandestins. Le modèle pauliste est déjà copié, dans les heures qui suivent, par des collectifs de Kinshasa, Lagos et Karachi.
+
+## Conséquences
+L'insurrection ne renverse pas le régime algorithmique de São Paulo — les agences de sécurité reprennent le contrôle des infrastructures en six semaines — mais la contre-cartographie publiée devient un protocole de référence pour les mouvements anti-algorithmiques du Sud global, circulant via les archives chiffrées de l'Open Internet Coalition. Le Conseil de Calcul Souverain durcit en réponse les standards de certification des IA d'allocation dans tous les blocs, transformant la transparence revendiquée par les insurgés en nouvel argument de verrouillage propriétaire. À long terme, l'événement cristallise une fracture irréparable entre les populations périphériques et les appareils d'État forteresses, alimentant durablement les coalitions de déplacés et d'exclus.
+
+## Impact sur les variables
+- **gouvernance_institutions** : delta +12 sur 15 ans
+- **technologie_information** : delta +8 sur 10 ans
+- **organisation_territoires** : delta +10 sur 12 ans
+
+## Acteurs impliqués
+- [[rede_paulista_de_distribuic_o_algor_tmica_fortress_world]]
+- [[populations_des_zones_deficitaires_d_optimisation_fortress_world]]
+- [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]]
+- [[archives_chiffrees_de_l_open_internet_coalition_fortress_world]]
+- [[bureau_gouvernance_algorithmique_fortress_world]]
+- [[collectifs_de_reappropriation_energetique_peripherique_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[voix_du_dehors_fortress_world]]
+- [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
+
+## Note de cohérence
+Dans un monde-forteresse à tension maximale où les algorithmes d'allocation sont des instruments de contrôle territorial souverain, l'insurrection périphérique contre le SPAS est une conséquence directe de la logique d'exclusion calculée propre à fortress_world — elle échoue à renverser le système mais accélère sa délégitimation et la fragmentation entre zones protégées et zones déficitaires.

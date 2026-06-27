@@ -1,0 +1,86 @@
+---
+name: Traité de Belém sur la Souveraineté Carbone Amazonienne
+type: event_instance
+slug: traite_souverainete_carbone_amazonie_new_sustainability
+archetype: traite_souverainete_carbone_amazonie
+scenario: new_sustainability
+type_evenement: political_social
+portee: globale
+date: 2055
+date_label: automne 2055
+impossible: false
+custom: true
+description: >
+  Le 14 novembre 2055, sous les auvents du Forum Fluvial de Belém, les délégués du Consortium Amazônia Viva apposent leur signature à côté de représentants de soixante-deux États et des trois grands blocs géopolitiques — deux d'entre eux pleinement, un troisième sous réserve de ratification parlementaire. Le traité institue pour la première fois une souveraineté carbone juridiquement opposable : aucun projet industriel ne peut être lancé dans le périmètre protégé sans aval autochtone. La redevance carbone — calculée en temps réel par les IA climatiques du Consortium des IA Climatiques — alimente directement les fonds communautaires des peuples autochtones via un mécanisme de traçabilité blockchain certifié par le CAAO. Kofi Asante-Mensah, depuis Nairobi, décrit l'événement comme « le moment où la forêt a obtenu un siège permanent à la table des puissants ».
+consequences: >
+  Le traité établit un précédent normatif mondial : d'autres bassins écosystémiques majeurs — Congo, Mékong, boréal canadien — entament des négociations analogues en s'appuyant sur le modèle de Belém. À long terme, la redevance carbone amazonienne redistribue plusieurs dizaines de milliards annuels vers les économies autochtones, renforçant leur capacité à participer activement à la gouvernance mondiale du vivant et consolidant la légitimité du Parlement Délibératif Mondial comme arène de résolution de ce type de différend.
+realisation: >
+  Dans un monde où la gouvernance institutionnelle a atteint un niveau de maturité élevé (level 90), le Consortium Amazônia Viva parvient à négocier un traité structuré et juridiquement contraignant à Belém. Les grandes institutions supranationales — AGRB-ONU, APRC, Parlement Délibératif Mondial — servent de cadre de médiation, rendant possible une signature quasi-universelle après 18 mois de délibérations. Les conditions sont néanmoins dures : veto autochtone sur les projets industriels dans un rayon de 500 km, redevance carbone directe aux peuples autochtones gérée via le Fonds Mondial de Régénération Écologique. Deux blocs périphériques refusent initialement de signer, mais la pression normative internationale et les mécanismes d'incitation du Conseil Énergétique Intercontinental réduisent la fracture diplomatique à un désaccord gérable plutôt qu'à une rupture systémique.
+impact_sur_variables:
+  - variable: climat_environnement_global
+    delta_level: 10
+    duree: 30
+    polarite: 1
+  - variable: gouvernance_institutions
+    delta_level: 6
+    duree: 25
+    polarite: 1
+  - variable: geopolitique_conflits
+    delta_level: -5
+    duree: 15
+    polarite: -1
+  - variable: energie_ressources_critiques
+    delta_level: 5
+    duree: 20
+    polarite: 1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+    - consortium_amazonia_viva_new_sustainability
+    - agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
+    - agence_stabilisation_climatique_new_sustainability
+    - parlement_deliberatif_mondial_new_sustainability
+    - fonds_mondial_de_regeneration_ecologique_new_sustainability
+    - consortium_des_ia_climatiques_new_sustainability
+    - consortium_d_audit_algorithmique_ouvert_new_sustainability
+    - conseil_energetique_intercontinental_new_sustainability
+    - factions_souverainistes_des_blocs_peripheriques_new_sustainability
+    - coalition_des_industries_extractives_residuelles_new_sustainability
+    - le_temoin_new_sustainability
+note_coherence: Dans new_sustainability, la gouvernance institutionnelle mature (level 90) et la trajectoire de régénération rendent plausible un traité ambitieux mais négocié — la fracture diplomatique existe mais reste contenue, cohérente avec une tension géopolitique basse (level 30).
+custom_source: rééquilibrage_geo_2026-06
+date_creation: 2026-06-23
+---
+
+# Traité de Belém sur la Souveraineté Carbone Amazonienne
+
+## Réalisation dans [[new_sustainability]]
+Dans un monde où la gouvernance institutionnelle a atteint un niveau de maturité élevé (level 90), le Consortium Amazônia Viva parvient à négocier un traité structuré et juridiquement contraignant à Belém. Les grandes institutions supranationales — AGRB-ONU, APRC, Parlement Délibératif Mondial — servent de cadre de médiation, rendant possible une signature quasi-universelle après 18 mois de délibérations. Les conditions sont néanmoins dures : veto autochtone sur les projets industriels dans un rayon de 500 km, redevance carbone directe aux peuples autochtones gérée via le Fonds Mondial de Régénération Écologique. Deux blocs périphériques refusent initialement de signer, mais la pression normative internationale et les mécanismes d'incitation du Conseil Énergétique Intercontinental réduisent la fracture diplomatique à un désaccord gérable plutôt qu'à une rupture systémique.
+
+## Description journalistique
+Le 14 novembre 2055, sous les auvents du Forum Fluvial de Belém, les délégués du Consortium Amazônia Viva apposent leur signature à côté de représentants de soixante-deux États et des trois grands blocs géopolitiques — deux d'entre eux pleinement, un troisième sous réserve de ratification parlementaire. Le traité institue pour la première fois une souveraineté carbone juridiquement opposable : aucun projet industriel ne peut être lancé dans le périmètre protégé sans aval autochtone. La redevance carbone — calculée en temps réel par les IA climatiques du Consortium des IA Climatiques — alimente directement les fonds communautaires des peuples autochtones via un mécanisme de traçabilité blockchain certifié par le CAAO. Kofi Asante-Mensah, depuis Nairobi, décrit l'événement comme « le moment où la forêt a obtenu un siège permanent à la table des puissants ».
+
+## Conséquences
+Le traité établit un précédent normatif mondial : d'autres bassins écosystémiques majeurs — Congo, Mékong, boréal canadien — entament des négociations analogues en s'appuyant sur le modèle de Belém. À long terme, la redevance carbone amazonienne redistribue plusieurs dizaines de milliards annuels vers les économies autochtones, renforçant leur capacité à participer activement à la gouvernance mondiale du vivant et consolidant la légitimité du Parlement Délibératif Mondial comme arène de résolution de ce type de différend.
+
+## Impact sur les variables
+- **climat_environnement_global** : delta +10 sur 30 ans
+- **gouvernance_institutions** : delta +6 sur 25 ans
+- **geopolitique_conflits** : delta +5 sur 15 ans
+- **energie_ressources_critiques** : delta +5 sur 20 ans
+
+## Acteurs impliqués
+- [[consortium_amazonia_viva_new_sustainability]]
+- [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]]
+- [[agence_stabilisation_climatique_new_sustainability]]
+- [[parlement_deliberatif_mondial_new_sustainability]]
+- [[fonds_mondial_de_regeneration_ecologique_new_sustainability]]
+- [[consortium_des_ia_climatiques_new_sustainability]]
+- [[consortium_d_audit_algorithmique_ouvert_new_sustainability]]
+- [[conseil_energetique_intercontinental_new_sustainability]]
+- [[factions_souverainistes_des_blocs_peripheriques_new_sustainability]]
+- [[coalition_des_industries_extractives_residuelles_new_sustainability]]
+- [[le_temoin_new_sustainability]]
+
+## Note de cohérence
+Dans new_sustainability, la gouvernance institutionnelle mature (level 90) et la trajectoire de régénération rendent plausible un traité ambitieux mais négocié — la fracture diplomatique existe mais reste contenue, cohérente avec une tension géopolitique basse (level 30).

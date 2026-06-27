@@ -1,0 +1,83 @@
+---
+name: L'Affaire Van Derburgh — Archives Non Certifiées
+type: event_instance
+slug: arrestation_chris_van_derburgh_fortress_world
+archetype: arrestation_chris_van_derburgh
+scenario: fortress_world
+localisation:
+  zone: bloc_atlantique
+  lieu: Bruxelles-Forteresse
+  type_lieu: ville
+type_evenement: political_social
+portee: locale
+date: 2078
+date_label: février 2078
+impossible: false
+custom: true
+description: >
+  Chris van Derburgh, 67 ans, technicien retraité de Bruxelles-Forteresse,
+  est arrêté en février 2078 par l'ANBA pour possession d'archives numériques
+  datant de 2024-2027 — disques durs contenant des données d'avant la
+  certification des réseaux du Bloc. La détention de contenus non certifiés
+  antérieurs à 2044 est illégale depuis le Protocole de Conformité Mémorielle
+  de 2061. Van Derburgh affirme qu'il ne savait pas que ses archives
+  personnelles étaient soumises à cette loi.
+consequences: >
+  L'affaire devient un cas test jurisprudentiel sur les archives personnelles
+  pré-certification. Vera Solano en fait un sujet dans ses publications mesh.
+  L'ANBA maintient la poursuite malgré la pression informelle de certains
+  ingénieurs. Van Derburgh est condamné à 18 mois de rééducation numérique.
+realisation: >
+  Dans fortress_world, posséder des archives non certifiées est un délit réel.
+  L'affaire Van Derburgh illustre parfaitement comment la mémoire du passé
+  est devenue un terrain politique — ce qu'on conserve, ce qu'on efface.
+impact_sur_variables:
+  - variable: valeurs_culture_tempo_sociale
+    delta_level: 2
+    duree: 10
+    polarite: -1
+  - variable: gouvernance_institutions
+    delta_level: 1
+    duree: 5
+    polarite: -1
+propagation:
+  via_matrice: false
+acteurs_impliques:
+  - le_temoin_fortress_world
+  - conseil_regulation_algorithmique_fortress_world
+note_coherence: >
+  Impact très limité sur les variables — c'est un événement local, narratif
+  plutôt que systémique. Sa valeur est dans les articles qu'il permet
+  d'ancrer concrètement dans le monde fortress_world.
+date_creation: 2098-01-01
+---
+
+# L'Affaire Van Derburgh — Archives Non Certifiées
+
+## Réalisation dans [[fortress_world]]
+Dans fortress_world, posséder des archives non certifiées est un délit réel.
+L'affaire Van Derburgh illustre comment la mémoire du passé est devenue
+un terrain politique.
+
+## Description journalistique
+Chris van Derburgh, 67 ans, technicien retraité de Bruxelles-Forteresse,
+est arrêté pour possession d'archives numériques datant de 2024-2027.
+La détention de contenus non certifiés antérieurs à 2044 est illégale
+depuis le Protocole de Conformité Mémorielle de 2061.
+
+## Conséquences
+L'affaire devient un cas test jurisprudentiel. Vera Solano en fait un sujet
+dans ses publications mesh. Van Derburgh est condamné à 18 mois de
+rééducation numérique.
+
+## Impact sur les variables
+- **valeurs_culture_tempo_sociale** : delta -2 sur 10 ans
+- **gouvernance_institutions** : delta -1 sur 5 ans
+
+## Acteurs impliqués
+- [[le_temoin_fortress_world]]
+- [[conseil_regulation_algorithmique_fortress_world]]
+
+## Note de cohérence
+Impact très limité — événement local et narratif plutôt que systémique.
+Sa valeur est dans les articles qu'il permet d'ancrer concrètement.

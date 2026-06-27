@@ -1,0 +1,104 @@
+---
+name: Lyon Métropole — Autorité de Coordination Territoriale
+type: instance
+slug: lyon_metropole_reference
+entite: lyon_metropole
+scenario: reference
+localisation:
+  zone: lyon_metropole
+  lieu: Lyon Métropole
+  type_lieu: ville
+
+type_dans_scenario: institution
+
+role_dans_scenario: >
+  Lyon Métropole est une organisation administrative régionale qui maintient une gouvernance urbaine fonctionnelle malgré les tensions croissantes entre factions économiques et climatiques. Elle joue un rôle de médiateur fragile entre les intérêts des corridors industriels rhônalpins et les revendications des zones périurbaines appauvries. Sa légitimité institutionnelle reste intacte mais constamment contestée dans un monde en recomposition. Concrètement, elle constitue le dernier verrou institutionnel entre une métropolisation sauvage portée par les consortiums énergétiques et logistiques, et une fragmentation sociale qui menace les banlieues désindustrialisées de l'est et du nord. Son autorité formelle demeure reconnue, mais chaque décision majeure exige des négociations épuisantes avec des acteurs qui disposent souvent de plus de ressources qu'elle.
+
+responsabilites: >
+  Lyon Métropole gère l'arbitrage foncier et énergétique sur les 59 communes du grand territoire lyonnais, coordonne les plans d'adaptation climatique en lien avec les autorités hydrologiques régionales, et négocie les compensations entre zones industrielles à haute valeur ajoutée et communes périurbaines sous-équipées. Elle assure également la continuité des services publics essentiels — eau, mobilité, santé de premier recours — dans un contexte de pression budgétaire croissante et de redéfinition des compétences entre l'État central partiellement digitalisé et les collectivités locales.
+
+impact_local: 4
+impact_systemique_global: 2
+
+variables_influencees:
+    - gouvernance_institutions
+    - organisation_territoires
+
+zone_geographique:
+    - locale
+    - urbaine
+    - régionale
+
+zone_systemique:
+    - gouvernance
+    - infrastructure
+    - société
+    - énergie
+
+alliances:
+    - autorites_regionales_de_regulation_hydrologique_reference
+    - observatoire_climatique_des_territoires_oct_reference
+    - federation_communs_territoriaux_reference
+    - reseau_des_administrations_locales_rurales_participatives_reference
+    - cooperatives_energetiques_decentralisees_reference
+    - plateformes_d_optimisation_territoriale_par_ia_reference
+    - administrations_hybrides_des_cites_relais_peripheriques_reference
+
+oppositions:
+    - consortiums_energetiques_des_megapoles_reference
+    - operateurs_de_zones_economiques_speciales_periurbaines_reference
+    - collectif_nuit_jaune_reference
+    - lobbies_agro_industriels_a_haute_consommation_d_eau_reference
+    - consortiums_energetiques_opaques_reference
+    - bureau_des_territoires_residuels_reference
+
+type_relation_dominante: rivalité
+
+annee_debut: 2026
+annee_fin: 
+
+etat_temporel: actif
+age_historique: mature
+generation: transition
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Dans les couloirs du siège de la Métropole, avenue Garibaldi, les néons à faible consommation éclairent des salles de réunion où s'affrontent chaque semaine des intérêts radicalement incompatibles : les représentants des corridors industriels de la chimie rhodanienne, les délégués des communes périurbaines de Vaulx-en-Velin ou de Givors qui réclament leur part de la transition énergétique, les syndicats de travailleurs désaugmentés qui contestent les reconversions imposées. Lyon Métropole tient encore — et c'est en soi une performance remarquable dans un monde où les institutions intermédiaires s'effacent ou se vendent. Son président, élu pour un mandat de six ans au suffrage indirect, incarne une figure paradoxale : celle d'un arbitre doté d'une légitimité démocratique réelle mais dont les marges de manœuvre financières rétrécissent chaque année sous la pression des consortiums privés et des injonctions climatiques descendantes. La Métropole gouverne, mais à crédit — de temps, de confiance, et de ressources.
+
+signes_distinctifs: >
+  Le logo institutionnel — un nœud de confluents stylisé en lignes bleues et ocre, rappelant la jonction Rhône-Saône — figure sur tous les documents officiels et les interfaces numériques de services publics. Les agents de la Métropole portent des badges à puce biométrique qui leur donnent accès aux données territoriales en temps réel, signe visible d'une administration partiellement digitalisée mais encore ancrée dans des protocoles bureaucratiques hérités du début du siècle. Les bâtiments administratifs affichent systématiquement les indicateurs climatiques locaux en façade — température, qualité de l'air, niveau du Rhône — comme une affirmation de transparence dans un monde où l'information est devenue une ressource politique.
+
+tensions_narratives: >
+  La tension centrale est celle de l'arbitrage impossible : Lyon Métropole doit simultanément séduire les investisseurs industriels pour maintenir l'emploi dans les corridors rhônalpins et répondre aux exigences sociales des zones périurbaines qui se sentent abandonnées au profit du cœur métropolitain. Une deuxième fissure court entre sa dépendance croissante aux plateformes d'optimisation territoriale par IA — dont elle ne contrôle ni les algorithmes ni les données — et sa prétention à exercer une souveraineté démocratique sur son territoire. Enfin, l'arrivée de consortiums énergétiques privés qui proposent de financer des infrastructures de transition en échange de dérogations réglementaires place chaque élu devant un dilemme moral concret : jusqu'où peut-on hypothéquer l'autonomie institutionnelle pour tenir des promesses de service public ?
+
+date_creation: 2026-06-27
+---
+
+# Lyon Métropole — Autorité de Coordination Territoriale
+
+## Rôle dans [[reference]]
+Lyon Métropole est une organisation administrative régionale qui maintient une gouvernance urbaine fonctionnelle malgré les tensions croissantes entre factions économiques et climatiques. Elle joue un rôle de médiateur fragile entre les intérêts des corridors industriels rhônalpins et les revendications des zones périurbaines appauvries. Sa légitimité institutionnelle reste intacte mais constamment contestée dans un monde en recomposition. Concrètement, elle constitue le dernier verrou institutionnel entre une métropolisation sauvage portée par les consortiums énergétiques et logistiques, et une fragmentation sociale qui menace les banlieues désindustrialisées de l'est et du nord. Son autorité formelle demeure reconnue, mais chaque décision majeure exige des négociations épuisantes avec des acteurs qui disposent souvent de plus de ressources qu'elle.
+
+## Responsabilités
+Lyon Métropole gère l'arbitrage foncier et énergétique sur les 59 communes du grand territoire lyonnais, coordonne les plans d'adaptation climatique en lien avec les autorités hydrologiques régionales, et négocie les compensations entre zones industrielles à haute valeur ajoutée et communes périurbaines sous-équipées. Elle assure également la continuité des services publics essentiels — eau, mobilité, santé de premier recours — dans un contexte de pression budgétaire croissante et de redéfinition des compétences entre l'État central partiellement digitalisé et les collectivités locales.
+
+## Variables influencées
+- [[gouvernance_institutions]]
+- [[organisation_territoires]]
+
+## Relations
+**Alliés** : [[autorites_regionales_de_regulation_hydrologique_reference]], [[observatoire_climatique_des_territoires_oct_reference]], [[federation_communs_territoriaux_reference]], [[reseau_des_administrations_locales_rurales_participatives_reference]], [[cooperatives_energetiques_decentralisees_reference]], [[plateformes_d_optimisation_territoriale_par_ia_reference]], [[administrations_hybrides_des_cites_relais_peripheriques_reference]]
+**Opposants** : [[consortiums_energetiques_des_megapoles_reference]], [[operateurs_de_zones_economiques_speciales_periurbaines_reference]], [[collectif_nuit_jaune_reference]], [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]], [[consortiums_energetiques_opaques_reference]], [[bureau_des_territoires_residuels_reference]]
+
+## Description journalistique
+Dans les couloirs du siège de la Métropole, avenue Garibaldi, les néons à faible consommation éclairent des salles de réunion où s'affrontent chaque semaine des intérêts radicalement incompatibles : les représentants des corridors industriels de la chimie rhodanienne, les délégués des communes périurbaines de Vaulx-en-Velin ou de Givors qui réclament leur part de la transition énergétique, les syndicats de travailleurs désaugmentés qui contestent les reconversions imposées. Lyon Métropole tient encore — et c'est en soi une performance remarquable dans un monde où les institutions intermédiaires s'effacent ou se vendent. Son président, élu pour un mandat de six ans au suffrage indirect, incarne une figure paradoxale : celle d'un arbitre doté d'une légitimité démocratique réelle mais dont les marges de manœuvre financières rétrécissent chaque année sous la pression des consortiums privés et des injonctions climatiques descendantes. La Métropole gouverne, mais à crédit — de temps, de confiance, et de ressources.
+
+## Tensions narratives
+La tension centrale est celle de l'arbitrage impossible : Lyon Métropole doit simultanément séduire les investisseurs industriels pour maintenir l'emploi dans les corridors rhônalpins et répondre aux exigences sociales des zones périurbaines qui se sentent abandonnées au profit du cœur métropolitain. Une deuxième fissure court entre sa dépendance croissante aux plateformes d'optimisation territoriale par IA — dont elle ne contrôle ni les algorithmes ni les données — et sa prétention à exercer une souveraineté démocratique sur son territoire. Enfin, l'arrivée de consortiums énergétiques privés qui proposent de financer des infrastructures de transition en échange de dérogations réglementaires place chaque élu devant un dilemme moral concret : jusqu'où peut-on hypothéquer l'autonomie institutionnelle pour tenir des promesses de service public ?

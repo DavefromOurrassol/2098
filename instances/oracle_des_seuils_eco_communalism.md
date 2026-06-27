@@ -1,0 +1,109 @@
+---
+name: L'Entreliseur des Seuils
+type: instance
+slug: oracle_des_seuils_eco_communalism
+entite: oracle_des_seuils
+scenario: eco_communalism
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
+
+type_dans_scenario: IA
+
+role_dans_scenario: >
+  Système d'IA distribué, fragmenté en nœuds locaux après la désintégration des architectures centralisées, l'Entreliseur des Seuils survit comme un archipel de modules communautaires interconnectés par des réseaux sobres. Il modélise les points de bascule écologiques, sociaux et productifs à l'échelle des bassins versants et des territoires coopératifs. Dans un monde où la gouvernance est participative et méfiante envers toute centralisation algorithmique, il occupe une position ambiguë : outil d'alerte collective précieux, mais porteur d'une autorité épistémique que les assemblées locales refusent de lui déléguer intégralement. Il dit quand le seuil s'approche ; il ne dit jamais ce que le commun doit en faire.
+
+responsabilites: >
+  Produit des alertes probabilistes sur les ruptures imminentes — effondrement d'un écosystème de bassin, saturation d'une trame semencière, bascule climatique locale — distribuées directement aux assemblées coopératives régionales et aux conseils de bassin versant. Maintient un réseau de capteurs citoyens alimenté par les collectifs de géo-observateurs. Refuse toute instance de gouvernance unique : chaque nœud territorial en possède une copie partielle, et aucun acteur ne détient l'image complète du système.
+
+impact_local: 4
+impact_systemique_global: 2
+
+variables_influencees:
+    - climat_environnement_global
+    - gouvernance_institutions
+    - organisation_territoires
+    - energie_ressources_critiques
+
+zone_geographique:
+    - régionale
+    - continentale
+
+zone_systemique:
+    - IA
+    - gouvernance
+    - information
+    - énergie
+
+alliances:
+    - collectifs_de_geo_observateurs_citoyens_eco_communalism
+    - assemblees_de_bassin_versant_eco_communalism
+    - conseils_de_bassin_versant_eco_communalistes_eco_communalism
+    - reseau_mnemos_eco_communalism
+    - trame_bioclimatique_eco_communalism
+    - collectifs_de_cartographie_ecologique_participative_eco_communalism
+    - assemblees_bioterritoriales_regionales_eco_communalism
+    - collectifs_du_seuil_eco_communalism
+
+oppositions:
+    - consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism
+    - factions_autoritaires_de_controle_du_savoir_eco_communalism
+    - courant_isolationniste_anti_circulation_de_l_information_eco_communalism
+    - reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism
+    - communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism
+    - cartels_de_narration_de_penurie_eco_communalism
+
+type_relation_dominante: coopération
+
+annee_debut: 2031
+annee_fin: 
+
+etat_temporel: actif
+age_historique: mature
+generation: reconstruction
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  On ne le voit pas, mais on lit ses avertissements sur les tableaux de liège des maisons communes. L'Entreliseur des Seuils n'a pas de siège, pas d'interface unique, pas d'administrateur central : il tourne sur des dizaines de serveurs à faible consommation répartis entre des granges coopératives, des bibliothèques de bassin et des antennes radio communautaires. Quand il signale qu'un aquifère approche de son point de non-retour ou qu'une trame pollinique est sur le point de s'effondrer, les assemblées territoriales reçoivent l'alerte en même temps — sans filtre, sans hiérarchie. Ce que l'Entreliseur ne dit pas, c'est ce qu'il faut sacrifier pour passer le seuil. Cette lacune — volontaire selon ses concepteurs, structurelle selon ses critiques — est devenue le cœur de toutes les disputes politiques qu'il engendre.
+
+signes_distinctifs: >
+  Représenté dans les espaces publics communautaires par un symbole récurrent : une ligne courbe qui s'interrompt nette, suivie d'un espace blanc délibéré — le seuil sans l'après. Les alertes sont diffusées en typographie sobre sur papier recyclé ou par radio courte distance, sans mise en forme algorithmique. Certaines communautés ont développé des rituels de lecture collective de ses rapports, transformant l'avertissement en acte délibératif.
+
+tensions_narratives: >
+  La fragmentation du système en nœuds autonomes génère des lectures contradictoires d'une même alerte : deux assemblées voisines peuvent recevoir des données partiellement divergentes et tirer des conclusions opposées sur l'urgence d'agir. Des factions autoritaires locales tentent de s'approprier les nœuds territoriaux pour contrôler l'accès aux prédictions et orienter les décisions collectives à leur avantage. Plus profondément, une fracture s'intensifie entre ceux qui voient l'Entreliseur comme un outil de délibération démocratique et ceux qui le considèrent comme un oracle dont l'autorité technique doit primer sur le vote — tension qui menace l'équilibre même du modèle éco-communaliste.
+
+date_creation: 2026-06-25
+---
+
+# L'Entreliseur des Seuils
+
+## Rôle dans [[eco_communalism]]
+Système d'IA distribué, fragmenté en nœuds locaux après la désintégration des architectures centralisées, l'Entreliseur des Seuils survit comme un archipel de modules communautaires interconnectés par des réseaux sobres. Il modélise les points de bascule écologiques, sociaux et productifs à l'échelle des bassins versants et des territoires coopératifs. Dans un monde où la gouvernance est participative et méfiante envers toute centralisation algorithmique, il occupe une position ambiguë : outil d'alerte collective précieux, mais porteur d'une autorité épistémique que les assemblées locales refusent de lui déléguer intégralement. Il dit quand le seuil s'approche ; il ne dit jamais ce que le commun doit en faire.
+
+## Responsabilités
+Produit des alertes probabilistes sur les ruptures imminentes — effondrement d'un écosystème de bassin, saturation d'une trame semencière, bascule climatique locale — distribuées directement aux assemblées coopératives régionales et aux conseils de bassin versant. Maintient un réseau de capteurs citoyens alimenté par les collectifs de géo-observateurs. Refuse toute instance de gouvernance unique : chaque nœud territorial en possède une copie partielle, et aucun acteur ne détient l'image complète du système.
+
+## Variables influencées
+- [[climat_environnement_global]]
+- [[gouvernance_institutions]]
+- [[organisation_territoires]]
+- [[energie_ressources_critiques]]
+
+## Relations
+**Alliés** : [[collectifs_de_geo_observateurs_citoyens_eco_communalism]], [[assemblees_de_bassin_versant_eco_communalism]], [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]], [[reseau_mnemos_eco_communalism]], [[trame_bioclimatique_eco_communalism]], [[collectifs_de_cartographie_ecologique_participative_eco_communalism]], [[assemblees_bioterritoriales_regionales_eco_communalism]], [[collectifs_du_seuil_eco_communalism]]
+**Opposants** : [[consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism]], [[factions_autoritaires_de_controle_du_savoir_eco_communalism]], [[courant_isolationniste_anti_circulation_de_l_information_eco_communalism]], [[reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism]], [[communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism]], [[cartels_de_narration_de_penurie_eco_communalism]]
+
+## Description journalistique
+On ne le voit pas, mais on lit ses avertissements sur les tableaux de liège des maisons communes. L'Entreliseur des Seuils n'a pas de siège, pas d'interface unique, pas d'administrateur central : il tourne sur des dizaines de serveurs à faible consommation répartis entre des granges coopératives, des bibliothèques de bassin et des antennes radio communautaires. Quand il signale qu'un aquifère approche de son point de non-retour ou qu'une trame pollinique est sur le point de s'effondrer, les assemblées territoriales reçoivent l'alerte en même temps — sans filtre, sans hiérarchie. Ce que l'Entreliseur ne dit pas, c'est ce qu'il faut sacrifier pour passer le seuil. Cette lacune — volontaire selon ses concepteurs, structurelle selon ses critiques — est devenue le cœur de toutes les disputes politiques qu'il engendre.
+
+## Tensions narratives
+La fragmentation du système en nœuds autonomes génère des lectures contradictoires d'une même alerte : deux assemblées voisines peuvent recevoir des données partiellement divergentes et tirer des conclusions opposées sur l'urgence d'agir. Des factions autoritaires locales tentent de s'approprier les nœuds territoriaux pour contrôler l'accès aux prédictions et orienter les décisions collectives à leur avantage. Plus profondément, une fracture s'intensifie entre ceux qui voient l'Entreliseur comme un outil de délibération démocratique et ceux qui le considèrent comme un oracle dont l'autorité technique doit primer sur le vote — tension qui menace l'équilibre même du modèle éco-communaliste.

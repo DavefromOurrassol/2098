@@ -1,0 +1,86 @@
+---
+name: Les Enchères du Fond Émergé — Kalaallit Nunaat vend ses terres à qui ?
+type: event_instance
+slug: encheres_terres_rares_groenland_eco_communalism
+archetype: encheres_terres_rares_groenland
+scenario: eco_communalism
+localisation:
+  zone: nuuk_fonds_terres_emergees
+  lieu: Nuuk
+  type_lieu: ville
+type_evenement: political_social
+portee: globale
+date: 2041
+date_label: automne 2041
+impossible: false
+custom: true
+description: >
+  Nuuk, octobre 2041 — Les écrans de la Trame Mnemos s'emballent pendant soixante-douze heures : le Fonds des Terres Émergées du Kalaallit Nunaat vient d'ouvrir la première enchère internationale sur les gisements de terres rares mis à nu par le recul de l'inlandsis. Mais ce qui devait être un triomphe de la souveraineté groenlandaise vire rapidement à la cacophonie : les Consortiums Logistiques Néo-Industriels des Terres Reconstruites surenchérissent contre des coalitions improbables de communs arctiques, pendant que Le Fil Commun diffuse en direct les protestations des assemblées de bassin versant fennoscandien qui dénoncent une 'privatisation de l'irréparable'. Le centre de gravité diplomatique est bien là — mais la gravité attire des forces que personne ne contrôle plus.
+consequences: >
+  La vente partielle se conclut dans l'ambiguïté : deux lots sont attribués à des consortiums néo-industriels résiduels, un troisième reste suspendu à une procédure d'arbitrage initiée par la Confédération des Communs de l'Arc Septentrional. L'événement accélère la cristallisation d'un mouvement de 'démétallisation' des économies locales — plusieurs assemblées coopératives régionales adoptent des chartes d'économie circulaire des matériaux critiques pour réduire leur dépendance aux extractions nouvelles. La légitimité du Fonds des Terres Émergées est durablement contestée en interne, ouvrant une fracture entre factions pro-extraction et courants bioterritoriaux au sein même des institutions groenlandaises.
+realisation: >
+  Le Fonds des Terres Émergées du Kalaallit Nunaat organise effectivement les enchères, mais dans un monde où les blocs géopolitiques classiques sont déjà partiellement désintégrés, les offres proviennent autant de consortiums néo-industriels résiduels que de coalitions de communs septentrionaux cherchant à bloquer l'extraction. La Confédération des Communs de l'Arc Septentrional tente de se porter candidate au nom d'une 'gestion bioterritoriale partagée', sans disposer des masses financières des opérateurs extractivistes. Les 72 heures d'enchères se transforment en crise de légitimité : plusieurs assemblées bioterritoriales régionales refusent de reconnaître la légalité de la vente, tandis que les Gardiens du Territoire publient un manifeste commun avec des communautés inuit dissidentes contestant le droit du Fonds à aliéner des ressources souterraines au nom de populations vivantes.
+impact_sur_variables:
+  - variable: energie_ressources_critiques
+    delta_level: -8
+    duree: 15
+    polarite: -1
+  - variable: geopolitique_conflits
+    delta_level: 10
+    duree: 10
+    polarite: -1
+  - variable: gouvernance_institutions
+    delta_level: -7
+    duree: 12
+    polarite: -1
+  - variable: organisation_territoires
+    delta_level: 6
+    duree: 18
+    polarite: 1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+    - kalaallit_nunaat_sovereign_fund_eco_communalism
+    - confederation_des_communs_de_l_arc_septentrional_eco_communalism
+    - consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism
+    - coalition_vivant_eco_communalism
+    - assemblee_territoires_eco_communalism
+    - assemblees_bioterritoriales_regionales_eco_communalism
+    - reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism
+    - voix_du_dehors_eco_communalism
+    - reseau_mnemos_eco_communalism
+note_coherence: Dans un monde éco-communaliste fragmenté, l'enchère existe mais ne produit pas la domination nette d'un bloc — elle révèle la décomposition des rapports de force classiques et renforce paradoxalement la légitimité des alternatives communalistes sur les ressources critiques.
+custom_source: rééquilibrage_geo_2026-06
+date_creation: 2026-06-24
+---
+
+# Les Enchères du Fond Émergé — Kalaallit Nunaat vend ses terres à qui ?
+
+## Réalisation dans [[eco_communalism]]
+Le Fonds des Terres Émergées du Kalaallit Nunaat organise effectivement les enchères, mais dans un monde où les blocs géopolitiques classiques sont déjà partiellement désintégrés, les offres proviennent autant de consortiums néo-industriels résiduels que de coalitions de communs septentrionaux cherchant à bloquer l'extraction. La Confédération des Communs de l'Arc Septentrional tente de se porter candidate au nom d'une 'gestion bioterritoriale partagée', sans disposer des masses financières des opérateurs extractivistes. Les 72 heures d'enchères se transforment en crise de légitimité : plusieurs assemblées bioterritoriales régionales refusent de reconnaître la légalité de la vente, tandis que les Gardiens du Territoire publient un manifeste commun avec des communautés inuit dissidentes contestant le droit du Fonds à aliéner des ressources souterraines au nom de populations vivantes.
+
+## Description journalistique
+Nuuk, octobre 2041 — Les écrans de la Trame Mnemos s'emballent pendant soixante-douze heures : le Fonds des Terres Émergées du Kalaallit Nunaat vient d'ouvrir la première enchère internationale sur les gisements de terres rares mis à nu par le recul de l'inlandsis. Mais ce qui devait être un triomphe de la souveraineté groenlandaise vire rapidement à la cacophonie : les Consortiums Logistiques Néo-Industriels des Terres Reconstruites surenchérissent contre des coalitions improbables de communs arctiques, pendant que Le Fil Commun diffuse en direct les protestations des assemblées de bassin versant fennoscandien qui dénoncent une 'privatisation de l'irréparable'. Le centre de gravité diplomatique est bien là — mais la gravité attire des forces que personne ne contrôle plus.
+
+## Conséquences
+La vente partielle se conclut dans l'ambiguïté : deux lots sont attribués à des consortiums néo-industriels résiduels, un troisième reste suspendu à une procédure d'arbitrage initiée par la Confédération des Communs de l'Arc Septentrional. L'événement accélère la cristallisation d'un mouvement de 'démétallisation' des économies locales — plusieurs assemblées coopératives régionales adoptent des chartes d'économie circulaire des matériaux critiques pour réduire leur dépendance aux extractions nouvelles. La légitimité du Fonds des Terres Émergées est durablement contestée en interne, ouvrant une fracture entre factions pro-extraction et courants bioterritoriaux au sein même des institutions groenlandaises.
+
+## Impact sur les variables
+- **energie_ressources_critiques** : delta +8 sur 15 ans
+- **geopolitique_conflits** : delta -10 sur 10 ans
+- **gouvernance_institutions** : delta +7 sur 12 ans
+- **organisation_territoires** : delta +6 sur 18 ans
+
+## Acteurs impliqués
+- [[kalaallit_nunaat_sovereign_fund_eco_communalism]]
+- [[confederation_des_communs_de_l_arc_septentrional_eco_communalism]]
+- [[consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism]]
+- [[coalition_vivant_eco_communalism]]
+- [[assemblee_territoires_eco_communalism]]
+- [[assemblees_bioterritoriales_regionales_eco_communalism]]
+- [[reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism]]
+- [[voix_du_dehors_eco_communalism]]
+- [[reseau_mnemos_eco_communalism]]
+
+## Note de cohérence
+Dans un monde éco-communaliste fragmenté, l'enchère existe mais ne produit pas la domination nette d'un bloc — elle révèle la décomposition des rapports de force classiques et renforce paradoxalement la légitimité des alternatives communalistes sur les ressources critiques.

@@ -1,0 +1,105 @@
+---
+name: Guadalajara Nexus
+type: instance
+slug: guadalajara_nexus_reference
+entite: guadalajara_nexus
+scenario: reference
+localisation:
+  zone: guadalajara_nexus
+  lieu: Guadalajara
+  type_lieu: ville
+
+type_dans_scenario: hybride
+
+role_dans_scenario: >
+  Le Guadalajara Nexus est un hub logistique et commercial informel né de la reconfiguration des chaînes d'approvisionnement nord-américaines dans un monde fragmenté. Il agrège des réseaux de distribution privés, de cartels reconvertis et de municipalités autonomes autour de la gestion des flux de marchandises entre Amérique centrale et Amérique du Nord. Son influence repose moins sur une légitimité institutionnelle que sur sa capacité à maintenir des corridors économiques fonctionnels malgré les tensions géopolitiques. Dans le scénario de référence, le Nexus opère comme une chambre de compensation de facto : là où les États fédéraux nord-américains vacillent dans leur coordination et où les blocs géopolitiques se disputent les routes commerciales, il s'impose comme le seul acteur capable de faire circuler marchandises, énergie distribuée et données logistiques entre des partenaires qui ne se reconnaissent aucune autorité commune.
+
+responsabilites: >
+  Le Nexus gère l'arbitrage des droits de passage sur les corridors terrestres et maritimes reliant le Mexique central aux zones de distribution des Grands Lacs et de la côte pacifique nord-américaine. Il opère des protocoles de compensation entre acteurs hétérogènes — municipalités autonomes, opérateurs privés, anciens réseaux de distribution informels — en garantissant la neutralité des flux contre une rétribution en données, ressources ou accès. Il assure également une fonction discrète de règlement des différends commerciaux en zone grise, suppléant à l'absence d'arbitrage institutionnel régional.
+
+impact_local: 4
+impact_systemique_global: 3
+
+variables_influencees:
+    - systeme_economique_redistribution
+    - organisation_territoires
+    - geopolitique_conflits
+    - gouvernance_institutions
+
+zone_geographique:
+    - régionale
+    - continentale
+
+zone_systemique:
+    - économie
+    - infrastructure
+    - gouvernance
+    - sécurité
+
+alliances:
+    - administrations_hybrides_des_cites_relais_peripheriques_reference
+    - detroit_compact_grands_lacs_reference
+    - great_lakes_autonomous_compact_reference
+    - operateurs_de_zones_economiques_speciales_periurbaines_reference
+    - confederation_des_megapoles_autonomes_reference
+    - consortium_des_grandes_plateformes_logistiques_globales_reference
+
+oppositions:
+    - armada_logistique_nordique_reference
+    - gouvernements_federaux_residuels_souverainistes_reference
+    - milices_concurrentes_des_droits_de_passage_reference
+    - alliance_blocs_souverains_reference
+    - agences_de_securite_regionales_de_normalisation_des_zones_grises_reference
+
+type_relation_dominante: symbiose
+
+annee_debut: 2041
+annee_fin: 
+
+etat_temporel: actif
+age_historique: ascendant
+generation: transition
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  À Guadalajara, il n'y a pas de siège social, pas d'emblème officiel, pas de PDG dont le nom figure dans un registre. Pourtant, toute cargaison qui transite entre Ciudad de México et les entrepôts automatisés de Detroit Compact passe, d'une façon ou d'une autre, par une table de négociation que le Nexus a installée dans l'une des zones portuaires reconverties de la ville. Des délégués de municipalités autonomes voisinent avec des représentants de consortiums logistiques privés et, selon les rumeurs persistantes jamais démenties, avec des intermédiaires issus des anciens réseaux de distribution informels recyclés en opérateurs régionaux. Le Nexus ne prétend gouverner personne : il se contente de rendre possible ce que personne d'autre ne parvient à organiser. C'est précisément cette discrétion calculée — cette façon d'être indispensable sans jamais se déclarer — qui inquiète autant qu'elle fascine les analystes de la gouvernance émergente.
+
+signes_distinctifs: >
+  Aucun logo officiel, mais une signature visuelle reconnaissable dans les documents de transit : un carré de quatre nœuds interconnectés, imprimé en encre thermique sur les bordereaux de passage. Les délégués du Nexus se reconnaissent à leurs badges de coordination multilatérale — fond gris anthracite, texte en trois langues — et à la sobriété délibérée de leur communication, qui ne mentionne jamais explicitement le nom de l'organisation.
+
+tensions_narratives: >
+  La neutralité opérationnelle du Nexus est son atout et sa blessure : en traitant indifféremment flux légitimes et flux opaques, il normalise des circuits que les États fédéraux résiduels tentent de réguler, alimentant une controverse permanente sur sa complicité structurelle avec des acteurs prédateurs. La montée en puissance de l'Armada Logistique Nordique sur les corridors arctiques redessine les équilibres et menace de marginaliser les routes terrestres que le Nexus contrôle, l'obligeant à chercher de nouveaux partenaires au risque de compromettre sa neutralité. Enfin, plusieurs municipalités autonomes qui lui doivent leur survie économique commencent à réclamer une formalisation de ses règles d'arbitrage — une institutionnalisation qui transformerait le Nexus en ce qu'il a toujours refusé d'être : une autorité.
+
+date_creation: 2026-06-27
+---
+
+# Guadalajara Nexus
+
+## Rôle dans [[reference]]
+Le Guadalajara Nexus est un hub logistique et commercial informel né de la reconfiguration des chaînes d'approvisionnement nord-américaines dans un monde fragmenté. Il agrège des réseaux de distribution privés, de cartels reconvertis et de municipalités autonomes autour de la gestion des flux de marchandises entre Amérique centrale et Amérique du Nord. Son influence repose moins sur une légitimité institutionnelle que sur sa capacité à maintenir des corridors économiques fonctionnels malgré les tensions géopolitiques. Dans le scénario de référence, le Nexus opère comme une chambre de compensation de facto : là où les États fédéraux nord-américains vacillent dans leur coordination et où les blocs géopolitiques se disputent les routes commerciales, il s'impose comme le seul acteur capable de faire circuler marchandises, énergie distribuée et données logistiques entre des partenaires qui ne se reconnaissent aucune autorité commune.
+
+## Responsabilités
+Le Nexus gère l'arbitrage des droits de passage sur les corridors terrestres et maritimes reliant le Mexique central aux zones de distribution des Grands Lacs et de la côte pacifique nord-américaine. Il opère des protocoles de compensation entre acteurs hétérogènes — municipalités autonomes, opérateurs privés, anciens réseaux de distribution informels — en garantissant la neutralité des flux contre une rétribution en données, ressources ou accès. Il assure également une fonction discrète de règlement des différends commerciaux en zone grise, suppléant à l'absence d'arbitrage institutionnel régional.
+
+## Variables influencées
+- [[systeme_economique_redistribution]]
+- [[organisation_territoires]]
+- [[geopolitique_conflits]]
+- [[gouvernance_institutions]]
+
+## Relations
+**Alliés** : [[administrations_hybrides_des_cites_relais_peripheriques_reference]], [[detroit_compact_grands_lacs_reference]], [[great_lakes_autonomous_compact_reference]], [[operateurs_de_zones_economiques_speciales_periurbaines_reference]], [[confederation_des_megapoles_autonomes_reference]], [[consortium_des_grandes_plateformes_logistiques_globales_reference]]
+**Opposants** : [[armada_logistique_nordique_reference]], [[gouvernements_federaux_residuels_souverainistes_reference]], [[milices_concurrentes_des_droits_de_passage_reference]], [[alliance_blocs_souverains_reference]], [[agences_de_securite_regionales_de_normalisation_des_zones_grises_reference]]
+
+## Description journalistique
+À Guadalajara, il n'y a pas de siège social, pas d'emblème officiel, pas de PDG dont le nom figure dans un registre. Pourtant, toute cargaison qui transite entre Ciudad de México et les entrepôts automatisés de Detroit Compact passe, d'une façon ou d'une autre, par une table de négociation que le Nexus a installée dans l'une des zones portuaires reconverties de la ville. Des délégués de municipalités autonomes voisinent avec des représentants de consortiums logistiques privés et, selon les rumeurs persistantes jamais démenties, avec des intermédiaires issus des anciens réseaux de distribution informels recyclés en opérateurs régionaux. Le Nexus ne prétend gouverner personne : il se contente de rendre possible ce que personne d'autre ne parvient à organiser. C'est précisément cette discrétion calculée — cette façon d'être indispensable sans jamais se déclarer — qui inquiète autant qu'elle fascine les analystes de la gouvernance émergente.
+
+## Tensions narratives
+La neutralité opérationnelle du Nexus est son atout et sa blessure : en traitant indifféremment flux légitimes et flux opaques, il normalise des circuits que les États fédéraux résiduels tentent de réguler, alimentant une controverse permanente sur sa complicité structurelle avec des acteurs prédateurs. La montée en puissance de l'Armada Logistique Nordique sur les corridors arctiques redessine les équilibres et menace de marginaliser les routes terrestres que le Nexus contrôle, l'obligeant à chercher de nouveaux partenaires au risque de compromettre sa neutralité. Enfin, plusieurs municipalités autonomes qui lui doivent leur survie économique commencent à réclamer une formalisation de ses règles d'arbitrage — une institutionnalisation qui transformerait le Nexus en ce qu'il a toujours refusé d'être : une autorité.

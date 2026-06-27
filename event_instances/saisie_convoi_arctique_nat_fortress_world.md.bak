@@ -1,0 +1,75 @@
+---
+name: Saisie du Convoi Arctique par la NAT — Crise du Passage Nord-Ouest
+type: event_instance
+slug: saisie_convoi_arctique_nat_fortress_world
+archetype: saisie_convoi_arctique_nat
+scenario: fortress_world
+type_evenement: political_social
+portee: continentale
+date: 2059
+date_label: automne 2059
+impossible: false
+custom: true
+description: >
+  Le 14 octobre 2059, des unités armées de la Nordisk Arktisk Transitkontroll abordent le convoi APA-7 à 340 kilomètres au nord de Resolute Bay — trois navires cargo battant pavillon de l'Arctic Passage Authority, chargés de terres rares à destination du Bloc Atlantique. La manœuvre, brutale et préméditée, fait deux blessés graves parmi l'équipage et déclenche une onde de choc diplomatique immédiate. Nuna Capital gèle ses investissements dans les infrastructures NAT, tandis que le Commandement Stratégique des Matières Critiques Atlantique émet une note de protestation formelle qualifiant l'acte de 'piraterie d'État autorisée'. Pour la première fois depuis la militarisation des blocs, deux autorités de transit légitimes se font face les armes à la main dans l'Arctique.
+consequences: >
+  La crise cristallise la fracture entre les blocs autour du contrôle des routes arctiques, désormais ouvertes aux navires toute l'année du fait du recul des glaces. La CARS, saisie par le Groenland, rend une décision non contraignante ignorée par la NAT, achevant de démontrer l'inanité des institutions multilatérales résiduelles. Le Passage Nord-Ouest devient un corridor militarisé de facto, les nations Inuit se retrouvent instrumentalisées comme prétexte de légitimité par les deux blocs sans jamais être consultées.
+realisation: >
+  Dans un monde où chaque bloc fortifie ses corridors logistiques, la NAT — opérateur nordique semi-militarisé — intercepte et aborde de force trois navires de l'Arctic Passage Authority dans les eaux disputées du Passage Nord-Ouest. L'opération, présentée comme une 'sécurisation de corridor souverain', est en réalité une prise de contrôle unilatérale d'une route stratégique que le Bloc Atlantique et le Bloc Eurasiatique se disputent depuis 2049. Le Groenland, via son fonds souverain Nuna Capital, saisit immédiatement les instances résiduelles du droit maritime international — désormais la Chambre d'Arbitrage des Ressources Souveraines. La procédure s'enlise dans les blocages institutionnels caractéristiques du monde-forteresse, pendant que les nations Inuit réclament leur souveraineté sur le corridor.
+impact_sur_variables:
+  - variable: geopolitique_conflits
+    delta_level: 10
+    duree: 15
+    polarite: -1
+  - variable: organisation_territoires
+    delta_level: 8
+    duree: 20
+    polarite: -1
+  - variable: frontieres_du_systeme
+    delta_level: 12
+    duree: 25
+    polarite: -1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+    - armada_logistique_nordique_fortress_world
+    - kalaallit_nunaat_sovereign_fund_fortress_world
+    - commandement_strategique_des_matieres_critiques_atlantique_fortress_world
+    - conseil_regulation_ressources_fortress_world
+    - coalition_arctique_des_blocs_continentaux_fortress_world
+    - institutions_multilaterales_residuelles_fortress_world
+    - milices_de_piraterie_logistique_arctique_fortress_world
+    - bloc_pacifique_nord_fortress_world
+note_coherence: Dans un monde fortress_world à tension maximale et fragmentation accélérée, une confrontation armée entre deux autorités de transit arctiques concurrentes est non seulement plausible mais emblématique de la logique de sécurisation unilatérale des corridors critiques qui structure l'ensemble du scénario.
+custom_source: rééquilibrage_geo_2026-06
+date_creation: 2026-06-23
+---
+
+# Saisie du Convoi Arctique par la NAT — Crise du Passage Nord-Ouest
+
+## Réalisation dans [[fortress_world]]
+Dans un monde où chaque bloc fortifie ses corridors logistiques, la NAT — opérateur nordique semi-militarisé — intercepte et aborde de force trois navires de l'Arctic Passage Authority dans les eaux disputées du Passage Nord-Ouest. L'opération, présentée comme une 'sécurisation de corridor souverain', est en réalité une prise de contrôle unilatérale d'une route stratégique que le Bloc Atlantique et le Bloc Eurasiatique se disputent depuis 2049. Le Groenland, via son fonds souverain Nuna Capital, saisit immédiatement les instances résiduelles du droit maritime international — désormais la Chambre d'Arbitrage des Ressources Souveraines. La procédure s'enlise dans les blocages institutionnels caractéristiques du monde-forteresse, pendant que les nations Inuit réclament leur souveraineté sur le corridor.
+
+## Description journalistique
+Le 14 octobre 2059, des unités armées de la Nordisk Arktisk Transitkontroll abordent le convoi APA-7 à 340 kilomètres au nord de Resolute Bay — trois navires cargo battant pavillon de l'Arctic Passage Authority, chargés de terres rares à destination du Bloc Atlantique. La manœuvre, brutale et préméditée, fait deux blessés graves parmi l'équipage et déclenche une onde de choc diplomatique immédiate. Nuna Capital gèle ses investissements dans les infrastructures NAT, tandis que le Commandement Stratégique des Matières Critiques Atlantique émet une note de protestation formelle qualifiant l'acte de 'piraterie d'État autorisée'. Pour la première fois depuis la militarisation des blocs, deux autorités de transit légitimes se font face les armes à la main dans l'Arctique.
+
+## Conséquences
+La crise cristallise la fracture entre les blocs autour du contrôle des routes arctiques, désormais ouvertes aux navires toute l'année du fait du recul des glaces. La CARS, saisie par le Groenland, rend une décision non contraignante ignorée par la NAT, achevant de démontrer l'inanité des institutions multilatérales résiduelles. Le Passage Nord-Ouest devient un corridor militarisé de facto, les nations Inuit se retrouvent instrumentalisées comme prétexte de légitimité par les deux blocs sans jamais être consultées.
+
+## Impact sur les variables
+- **geopolitique_conflits** : delta -10 sur 15 ans
+- **organisation_territoires** : delta -8 sur 20 ans
+- **frontieres_du_systeme** : delta -12 sur 25 ans
+
+## Acteurs impliqués
+- [[armada_logistique_nordique_fortress_world]]
+- [[kalaallit_nunaat_sovereign_fund_fortress_world]]
+- [[commandement_strategique_des_matieres_critiques_atlantique_fortress_world]]
+- [[conseil_regulation_ressources_fortress_world]]
+- [[coalition_arctique_des_blocs_continentaux_fortress_world]]
+- [[institutions_multilaterales_residuelles_fortress_world]]
+- [[milices_de_piraterie_logistique_arctique_fortress_world]]
+- [[bloc_pacifique_nord_fortress_world]]
+
+## Note de cohérence
+Dans un monde fortress_world à tension maximale et fragmentation accélérée, une confrontation armée entre deux autorités de transit arctiques concurrentes est non seulement plausible mais emblématique de la logique de sécurisation unilatérale des corridors critiques qui structure l'ensemble du scénario.

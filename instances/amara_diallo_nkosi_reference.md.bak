@@ -1,0 +1,102 @@
+---
+name: Amara Diallo-Nkosi
+type: instance
+slug: amara_diallo_nkosi_reference
+entite: amara_diallo_nkosi
+scenario: reference
+localisation:
+  zone: kinshasa_accords_hydriques
+  lieu: Kinshasa
+  type_lieu: ville
+  statut: review_manuelle
+  note: "Amara Diallo-Nkosi est l'architecte des Accords de Kinshasa et travaille à la Commission Hydrique, mais elle est nomade (train solaire entre Bamako, Brazzaville et Nairobi), ce qui rend l'ancrage sur une seule zone ambigu — Kinshasa reste le lieu institutionnel dominant."
+
+type_dans_scenario: humain
+
+role_dans_scenario: >
+  Architecte principale des Accords de Kinshasa sur la redistribution des eaux du bassin du Congo (2071-2089), Amara Diallo-Nkosi incarne la figure de la technocratie humaniste dans un monde de compromis permanents. Elle opère à l'interface entre les institutions régionales africaines partiellement digitalisées et les communautés sahéliennes dont les droits à l'eau demeurent structurellement précaires. Son rôle systémique est celui d'une médiatrice à double langage : elle traduit l'ingénierie hydrologique en politique redistributive, et la revendication populaire en protocoles techniques acceptables par les États. Dans un scénario de transition fragile, elle est à la fois outil de légitimation institutionnelle et voix dissidente tolérée.
+
+responsabilites: >
+  Elle supervise la mise en œuvre technique des quotas d'allocation hydrique négociés sous les Accords de Kinshasa, en arbitrant les conflits d'usage entre États riverains, coopératives agricoles et mégapoles en expansion. Elle pilote également un réseau de capteurs hydrométéorologiques distribués sur le bassin du Congo et du Niger, dont les données alimentent les modèles de prévision utilisés par l'Union Africaine et les agences onusiennes. En parallèle, elle anime des commissions locales d'audit populaire qui évaluent l'impact des décisions techniques sur les populations les plus exposées.
+
+impact_local: 4
+impact_systemique_global: 3
+variables_influencees:
+    - climat_environnement_global
+    - energie_ressources_critiques
+    - systeme_economique_redistribution
+    - gouvernance_institutions
+
+zone_geographique:
+    - régionale
+    - continentale
+
+zone_systemique:
+    - gouvernance
+    - infrastructure
+    - économie
+    - société
+
+alliances:
+    - commission_hydrique_de_l_union_africaine_reference
+    - reseau_des_cooperatives_agro_saheliennes_reference
+    - programme_onu_eau_2080_reference
+    - institut_polytechnique_de_ouagadougou_reference
+
+oppositions:
+    - consortiums_d_extraction_miniere_du_bassin_congolais_reference
+    - bloc_des_gouvernements_souverainistes_hydriques_new_sustainability
+    - lobbies_agro_industriels_a_haute_consommation_d_eau_reference
+
+type_relation_dominante: coopération
+
+annee_debut: 2061
+annee_fin: 
+
+etat_temporel: actif
+age_historique: mature
+generation: transition
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  À 67 ans, Amara Diallo-Nkosi arrive aux réunions de la Commission Hydrique avec deux tablettes, un carnet papier et une patience que ses adversaires ont appris à redouter. Formée à Ouagadougou et à Delft, elle est l'une des rares technocrates africaines dont le nom circule aussi bien dans les couloirs climatisés de Kinshasa que dans les assemblées villageoises du Sahel. On lui doit l'amendement dit 'de l'usage vital' dans les Accords de 2089, qui garantit un accès prioritaire aux communautés rurales avant toute allocation industrielle — une clause que trois États ont tenté de faire supprimer depuis. Elle répond aux accusations de naïveté avec des chiffres, et aux accusations de technocratie avec des noms de villages.
+
+signes_distinctifs: >
+  Toujours vêtue d'un boubou aux tons ocre et bleu-nil, couleurs qu'elle dit avoir choisies pour 'porter le fleuve avec soi en réunion'. Son bureau nomade — elle se déplace en train solaire entre Bamako, Brazzaville et Nairobi — est reconnaissable à ses modèles physiques de bassins versants miniaturisés qu'elle manipule pour expliquer les enjeux à des interlocuteurs non-techniciens. Elle n'utilise pas d'assistant IA pour ses prises de décision, par choix philosophique revendiqué publiquement.
+
+tensions_narratives: >
+  L'équilibre fragile des Accords de Kinshasa est menacé par la sécheresse exceptionnelle de 2096 qui pousse plusieurs États à invoquer des clauses d'urgence nationale — Amara doit choisir entre défendre la lettre de l'accord ou accepter des dérogations qui affaibliront le précédent pour des décennies. Par ailleurs, une fuite de données de son réseau de capteurs, exploitée par un consortium minier pour anticiper les décisions d'allocation, soulève la question de savoir si la transparence technique qu'elle défend n'arme pas ses adversaires plus qu'elle ne protège les vulnérables. Enfin, une nouvelle génération d'ingénieurs sahéliens, formés à l'IA prédictive, remet en question son refus des systèmes automatisés de décision hydrique, la accusant d'un humanisme qui ralentit l'adaptation.
+
+date_creation: 2026-06-15
+---
+
+# Amara Diallo-Nkosi
+
+## Rôle dans [[reference]]
+Architecte principale des Accords de Kinshasa sur la redistribution des eaux du bassin du Congo (2071-2089), Amara Diallo-Nkosi incarne la figure de la technocratie humaniste dans un monde de compromis permanents. Elle opère à l'interface entre les institutions régionales africaines partiellement digitalisées et les communautés sahéliennes dont les droits à l'eau demeurent structurellement précaires. Son rôle systémique est celui d'une médiatrice à double langage : elle traduit l'ingénierie hydrologique en politique redistributive, et la revendication populaire en protocoles techniques acceptables par les États. Dans un scénario de transition fragile, elle est à la fois outil de légitimation institutionnelle et voix dissidente tolérée.
+
+## Responsabilités
+Elle supervise la mise en œuvre technique des quotas d'allocation hydrique négociés sous les Accords de Kinshasa, en arbitrant les conflits d'usage entre États riverains, coopératives agricoles et mégapoles en expansion. Elle pilote également un réseau de capteurs hydrométéorologiques distribués sur le bassin du Congo et du Niger, dont les données alimentent les modèles de prévision utilisés par l'Union Africaine et les agences onusiennes. En parallèle, elle anime des commissions locales d'audit populaire qui évaluent l'impact des décisions techniques sur les populations les plus exposées.
+
+## Variables influencées
+- [[climat_environnement_global]]
+- [[energie_ressources_critiques]]
+- [[systeme_economique_redistribution]]
+- [[gouvernance_institutions]]
+
+## Relations
+**Alliés** : [[commission_hydrique_de_l_union_africaine_reference]], [[reseau_des_cooperatives_agro_saheliennes_reference]], [[programme_onu_eau_2080_reference]], [[institut_polytechnique_de_ouagadougou_reference]]
+**Opposants** : [[consortiums_d_extraction_miniere_du_bassin_congolais_reference]], [[bloc_des_gouvernements_souverainistes_hydriques_new_sustainability]], [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]]
+
+## Description journalistique
+À 67 ans, Amara Diallo-Nkosi arrive aux réunions de la Commission Hydrique avec deux tablettes, un carnet papier et une patience que ses adversaires ont appris à redouter. Formée à Ouagadougou et à Delft, elle est l'une des rares technocrates africaines dont le nom circule aussi bien dans les couloirs climatisés de Kinshasa que dans les assemblées villageoises du Sahel. On lui doit l'amendement dit 'de l'usage vital' dans les Accords de 2089, qui garantit un accès prioritaire aux communautés rurales avant toute allocation industrielle — une clause que trois États ont tenté de faire supprimer depuis. Elle répond aux accusations de naïveté avec des chiffres, et aux accusations de technocratie avec des noms de villages.
+
+## Tensions narratives
+L'équilibre fragile des Accords de Kinshasa est menacé par la sécheresse exceptionnelle de 2096 qui pousse plusieurs États à invoquer des clauses d'urgence nationale — Amara doit choisir entre défendre la lettre de l'accord ou accepter des dérogations qui affaibliront le précédent pour des décennies. Par ailleurs, une fuite de données de son réseau de capteurs, exploitée par un consortium minier pour anticiper les décisions d'allocation, soulève la question de savoir si la transparence technique qu'elle défend n'arme pas ses adversaires plus qu'elle ne protège les vulnérables. Enfin, une nouvelle génération d'ingénieurs sahéliens, formés à l'IA prédictive, remet en question son refus des systèmes automatisés de décision hydrique, la accusant d'un humanisme qui ralentit l'adaptation.

@@ -1,0 +1,105 @@
+---
+name: NexCore Global Infrastructure Group
+type: instance
+slug: nexcore_reference
+entite: nexcore
+scenario: reference
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
+
+type_dans_scenario: entreprise
+
+role_dans_scenario: >
+  NexCore GIG est devenu l'épine dorsale numérique de facto d'un monde incapable de financer ses propres infrastructures publiques. Dans l'équilibre fragile de 2098, elle opère les réseaux de communication intercontinentaux, les nœuds de traitement de données climatiques critiques et les systèmes de routage énergétique intelligent — services formellement indispensables aux États mais juridiquement privés. Sa position pivot lui confère un pouvoir de négociation asymétrique avec les gouvernements : elle n'impose pas, elle 'propose des conditions de continuité'. Ni alliée ni ennemie des institutions, NexCore GIG navigue dans la zone grise entre prestataire essentiel et souverain technique de l'ombre.
+
+responsabilites: >
+  Opère et maintient 67% des câbles sous-marins actifs, les principales grilles de calcul distribuées pour la modélisation climatique et les systèmes de coordination énergétique transfrontaliers. Gère les protocoles d'authentification des transactions financières interbancaires mondiales et fournit les couches d'infrastructure sur lesquelles s'appuient la majorité des plateformes d'IA institutionnelles. Négocie directement avec les blocs régionaux des licences d'exploitation souveraine en échange d'un accès préférentiel aux données stratégiques.
+
+impact_local: 3
+impact_systemique_global: 5
+variables_influencees:
+    - technologie_information
+    - systeme_economique_redistribution
+    - energie_ressources_critiques
+    - gouvernance_institutions
+
+zone_geographique:
+    - globale
+    - continentale
+    - nationale
+
+zone_systemique:
+    - infrastructure
+    - information
+    - énergie
+    - économie
+    - gouvernance
+    - cyberspace
+
+alliances:
+    - bloc_ressources_eurasiatique_bre_reference
+    - consortiums_bancaires_financiarises_reference
+    - agence_mondiale_de_modelisation_climatique_ammc_new_sustainability
+    - consortium_des_fournisseurs_d_energie_renouvelable_distribuee_reference
+
+oppositions:
+    - coalition_pour_la_souverainete_numerique_nationale_reference
+    - bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference
+    - reseau_meshcommons_netsolidaire_reference
+    - regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference
+
+type_relation_dominante: dépendance
+
+annee_debut: 2026
+annee_fin: 
+
+etat_temporel: actif
+age_historique: dominant
+generation: transition
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Demandez à n'importe quel ingénieur réseau de Lagos, de Séoul ou de Bogotá de qui dépend sa ligne critique, il prononcera le même nom : NexCore. En 2098, le Groupe n'affiche pas de logo sur les bâtiments gouvernementaux — il n'en a pas besoin. Ses câbles courent sous les océans, ses nœuds de calcul ronronnent dans des data centers climatisés à l'énergie géothermique, et ses algorithmes de routage décident, milliseconde après milliseconde, quelle donnée climatique arrive en premier sur le bureau d'un ministre. Officiellement, NexCore GIG est un 'opérateur d'infrastructure critique sous régime de concession internationale'. Officieusement, c'est le propriétaire silencieux du système nerveux de la planète — une entité dont la chute serait, selon ses propres rapports de risque systémique soigneusement divulgués aux régulateurs, 'une extinction de signal mondiale de niveau catastrophique'.
+
+signes_distinctifs: >
+  Identité visuelle épurée en gris anthracite et bleu électrique profond, logomark en forme de nœud de réseau stylisé évoquant à la fois une synapse et un carrefour autoroutier. Les installations NexCore sont reconnaissables à leurs façades sans fenêtre, bardées de dissipateurs thermiques en aluminium brossé et ornées d'un simple numéro de nœud — jamais de nom de ville. Les employés portent des badges noirs à puce active ; les contrats de travail comportent une clause de 'continuité opérationnelle' interdisant toute grève sur les nœuds classés critiques.
+
+tensions_narratives: >
+  La grande question de 2098 : peut-on nationaliser ce qu'on ne comprend plus techniquement ? Plusieurs États tentent de renégocier leurs contrats d'infrastructure après avoir découvert des clauses d'accès aux données embarquées — NexCore conteste devant les tribunaux arbitraux privés qu'elle a elle-même contribué à financer. En parallèle, une fuite interne ('le Dossier Latence') suggère que NexCore aurait délibérément dégradé les performances réseau de zones géographiques jugées 'non rentables' pendant une crise climatique, accélérant une décision d'évacuation. La tension entre infrastructure vitale et empire privé n'a jamais été aussi tranchante — et la réponse appartient à celui qui contrôle les câbles.
+
+date_creation: 2026-06-20
+---
+
+# NexCore Global Infrastructure Group
+
+## Rôle dans [[reference]]
+NexCore GIG est devenu l'épine dorsale numérique de facto d'un monde incapable de financer ses propres infrastructures publiques. Dans l'équilibre fragile de 2098, elle opère les réseaux de communication intercontinentaux, les nœuds de traitement de données climatiques critiques et les systèmes de routage énergétique intelligent — services formellement indispensables aux États mais juridiquement privés. Sa position pivot lui confère un pouvoir de négociation asymétrique avec les gouvernements : elle n'impose pas, elle 'propose des conditions de continuité'. Ni alliée ni ennemie des institutions, NexCore GIG navigue dans la zone grise entre prestataire essentiel et souverain technique de l'ombre.
+
+## Responsabilités
+Opère et maintient 67% des câbles sous-marins actifs, les principales grilles de calcul distribuées pour la modélisation climatique et les systèmes de coordination énergétique transfrontaliers. Gère les protocoles d'authentification des transactions financières interbancaires mondiales et fournit les couches d'infrastructure sur lesquelles s'appuient la majorité des plateformes d'IA institutionnelles. Négocie directement avec les blocs régionaux des licences d'exploitation souveraine en échange d'un accès préférentiel aux données stratégiques.
+
+## Variables influencées
+- [[technologie_information]]
+- [[systeme_economique_redistribution]]
+- [[energie_ressources_critiques]]
+- [[gouvernance_institutions]]
+
+## Relations
+**Alliés** : [[bloc_ressources_eurasiatique_bre_reference]], [[consortiums_bancaires_financiarises_reference]], [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]], [[consortium_des_fournisseurs_d_energie_renouvelable_distribuee_reference]]
+**Opposants** : [[coalition_pour_la_souverainete_numerique_nationale_reference]], [[bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference]], [[reseau_meshcommons_netsolidaire_reference]], [[regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference]]
+
+## Description journalistique
+Demandez à n'importe quel ingénieur réseau de Lagos, de Séoul ou de Bogotá de qui dépend sa ligne critique, il prononcera le même nom : NexCore. En 2098, le Groupe n'affiche pas de logo sur les bâtiments gouvernementaux — il n'en a pas besoin. Ses câbles courent sous les océans, ses nœuds de calcul ronronnent dans des data centers climatisés à l'énergie géothermique, et ses algorithmes de routage décident, milliseconde après milliseconde, quelle donnée climatique arrive en premier sur le bureau d'un ministre. Officiellement, NexCore GIG est un 'opérateur d'infrastructure critique sous régime de concession internationale'. Officieusement, c'est le propriétaire silencieux du système nerveux de la planète — une entité dont la chute serait, selon ses propres rapports de risque systémique soigneusement divulgués aux régulateurs, 'une extinction de signal mondiale de niveau catastrophique'.
+
+## Tensions narratives
+La grande question de 2098 : peut-on nationaliser ce qu'on ne comprend plus techniquement ? Plusieurs États tentent de renégocier leurs contrats d'infrastructure après avoir découvert des clauses d'accès aux données embarquées — NexCore conteste devant les tribunaux arbitraux privés qu'elle a elle-même contribué à financer. En parallèle, une fuite interne ('le Dossier Latence') suggère que NexCore aurait délibérément dégradé les performances réseau de zones géographiques jugées 'non rentables' pendant une crise climatique, accélérant une décision d'évacuation. La tension entre infrastructure vitale et empire privé n'a jamais été aussi tranchante — et la réponse appartient à celui qui contrôle les câbles.

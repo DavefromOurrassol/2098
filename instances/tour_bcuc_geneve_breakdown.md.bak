@@ -1,0 +1,99 @@
+---
+name: Tour Bcuc Genève — Le Comptoir des Ruines
+type: instance
+slug: tour_bcuc_geneve_breakdown
+entite: tour_bcuc_geneve
+scenario: breakdown
+
+type_dans_scenario: institution
+
+role_dans_scenario: >
+  Vestige d'une ancienne institution financière internationale basée à Genève, la Tour Bcuc fonctionne désormais comme une structure hybride semi-autonome après l'effondrement des organes de régulation globaux. Elle tente de maintenir une forme de coordination économique locale entre les fragments d'États européens en survie, avec une légitimité contestée et des ressources en déclin. Ni banque centrale ni tribunal arbitral reconnu, elle occupe un espace interstitiel : celui d'un intermédiaire dont personne ne veut pleinement mais que personne n'ose formellement liquider, car ses archives contractuelles et ses protocoles hérités restent les seuls référentiels communs encore partiellement acceptés dans les négociations entre fragments souverains.
+
+responsabilites: >
+  La Tour Bcuc émet des certificats de reconnaissance de dette inter-fragments, tient un registre des accords économiques passés entre anciennes entités étatiques européennes, et propose une chambre d'arbitrage informelle pour les litiges commerciaux et énergétiques régionaux. Elle entretient également un service de mémoire réglementaire — conservant les textes des traités, normes et conventions financières pré-effondrement — utilisé comme base de référence par les acteurs qui ne disposent plus de leur propre appareil juridique.
+
+impact_local: 3
+impact_systemique_global: 2
+
+variables_influencees:
+    - gouvernance_institutions
+    - systeme_economique_redistribution
+
+zone_geographique:
+    - régionale
+    - continentale
+
+zone_systemique:
+    - gouvernance
+    - économie
+    - information
+
+alliances:
+    - archives_neutres_de_geneve_breakdown
+    - archives_neutres_geneve_breakdown
+    - geneve_bunker_institutions_breakdown
+    - tribunal_algorithmique_de_bruxelles_breakdown
+    - hanse_baltique_breakdown
+    - hanse_baltique_recomposee_breakdown
+    - ligue_des_cites_littorales_en_sursis_breakdown
+    - noeud_mnemos_pannonie_breakdown
+
+oppositions:
+    - fronts_populistes_anti_technocratiques_breakdown
+    - milices_contractuelles_des_anciens_etats_membres_breakdown
+    - collectif_hackers_decroissance_infrastructure_breakdown
+    - seigneuries_logistiques_armees_breakdown
+    - etats_fragmentes_nationalisant_les_stocks_breakdown
+    - front_de_resistance_aux_peages_sur_les_ressources_breakdown
+
+type_relation_dominante: dépendance
+
+annee_debut: 2026
+annee_fin: 
+
+etat_temporel: transformé
+age_historique: résiduel
+generation: post-effondrement
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Au 34e étage de la tour de verre grise qui domine encore la rade de Genève, une vingtaine de techniciens en costume élimé continuent de saisir des données dans des terminaux dont la moitié fonctionnent sur générateurs de secours. Le Comptoir des Ruines — surnom que lui ont collé les diplomates de la Ligue Méditerranéenne — émet toujours ses fameux 'certificats Bcuc', ces documents en papier pelure sécurisé que les fragments d'États acceptent encore comme base de négociation faute de mieux. Mais l'autorité de la Tour est celle d'un arbitre dont tout le monde connaît les limites : ses décisions ne sont appliquées que si les deux parties y ont intérêt, et ses archives, bien que précieuses, sont convoitées par des acteurs qui préféreraient les posséder plutôt que de les voir neutraliser. Entre deux délestages électriques, ses agents parcourent les couloirs en tenant à bout de bras la mémoire contractuelle d'un monde qui n'existe plus.
+
+signes_distinctifs: >
+  La tour conserve son logo d'origine — un double cercle entrelacé en bleu acier — désormais peint à la main sur les documents officiels faute d'encre d'imprimante standardisée. Les agents portent un brassard blanc frappé du sigle 'BCUC/GE' en lettres noires, signe de neutralité revendiquée que certaines milices respectent encore par réflexe institutionnel. Les couloirs dégagent une odeur caractéristique d'archives papier humides et de diesel froid.
+
+tensions_narratives: >
+  La Tour est assise sur un paradoxe existentiel : plus elle mobilise ses archives pour arbitrer des conflits, plus elle révèle l'étendue de ses anciennes compromissions avec des entités aujourd'hui disparues ou ennemies, sapant la neutralité qu'elle revendique. Certains fragments d'États membres la soupçonnent de favoriser secrètement les grandes enclaves corporatives qui continuent de la financer discrètement, ce qui alimente les fronts populistes qui réclament sa dissolution. En parallèle, des réseaux comme les Archives Neutres de Genève ou Mnemos Pannonie cherchent à absorber ses fonds documentaires, rendant sa survie institutionnelle conditionnelle à sa capacité à rester irremplaçable — un pari de plus en plus incertain dans un monde où la force prime sur la procédure.
+
+date_creation: 2026-06-27
+---
+
+# Tour Bcuc Genève — Le Comptoir des Ruines
+
+## Rôle dans [[breakdown]]
+Vestige d'une ancienne institution financière internationale basée à Genève, la Tour Bcuc fonctionne désormais comme une structure hybride semi-autonome après l'effondrement des organes de régulation globaux. Elle tente de maintenir une forme de coordination économique locale entre les fragments d'États européens en survie, avec une légitimité contestée et des ressources en déclin. Ni banque centrale ni tribunal arbitral reconnu, elle occupe un espace interstitiel : celui d'un intermédiaire dont personne ne veut pleinement mais que personne n'ose formellement liquider, car ses archives contractuelles et ses protocoles hérités restent les seuls référentiels communs encore partiellement acceptés dans les négociations entre fragments souverains.
+
+## Responsabilités
+La Tour Bcuc émet des certificats de reconnaissance de dette inter-fragments, tient un registre des accords économiques passés entre anciennes entités étatiques européennes, et propose une chambre d'arbitrage informelle pour les litiges commerciaux et énergétiques régionaux. Elle entretient également un service de mémoire réglementaire — conservant les textes des traités, normes et conventions financières pré-effondrement — utilisé comme base de référence par les acteurs qui ne disposent plus de leur propre appareil juridique.
+
+## Variables influencées
+- [[gouvernance_institutions]]
+- [[systeme_economique_redistribution]]
+
+## Relations
+**Alliés** : [[archives_neutres_de_geneve_breakdown]], [[archives_neutres_geneve_breakdown]], [[geneve_bunker_institutions_breakdown]], [[tribunal_algorithmique_de_bruxelles_breakdown]], [[hanse_baltique_breakdown]], [[hanse_baltique_recomposee_breakdown]], [[ligue_des_cites_littorales_en_sursis_breakdown]], [[noeud_mnemos_pannonie_breakdown]]
+**Opposants** : [[fronts_populistes_anti_technocratiques_breakdown]], [[milices_contractuelles_des_anciens_etats_membres_breakdown]], [[collectif_hackers_decroissance_infrastructure_breakdown]], [[seigneuries_logistiques_armees_breakdown]], [[etats_fragmentes_nationalisant_les_stocks_breakdown]], [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
+
+## Description journalistique
+Au 34e étage de la tour de verre grise qui domine encore la rade de Genève, une vingtaine de techniciens en costume élimé continuent de saisir des données dans des terminaux dont la moitié fonctionnent sur générateurs de secours. Le Comptoir des Ruines — surnom que lui ont collé les diplomates de la Ligue Méditerranéenne — émet toujours ses fameux 'certificats Bcuc', ces documents en papier pelure sécurisé que les fragments d'États acceptent encore comme base de négociation faute de mieux. Mais l'autorité de la Tour est celle d'un arbitre dont tout le monde connaît les limites : ses décisions ne sont appliquées que si les deux parties y ont intérêt, et ses archives, bien que précieuses, sont convoitées par des acteurs qui préféreraient les posséder plutôt que de les voir neutraliser. Entre deux délestages électriques, ses agents parcourent les couloirs en tenant à bout de bras la mémoire contractuelle d'un monde qui n'existe plus.
+
+## Tensions narratives
+La Tour est assise sur un paradoxe existentiel : plus elle mobilise ses archives pour arbitrer des conflits, plus elle révèle l'étendue de ses anciennes compromissions avec des entités aujourd'hui disparues ou ennemies, sapant la neutralité qu'elle revendique. Certains fragments d'États membres la soupçonnent de favoriser secrètement les grandes enclaves corporatives qui continuent de la financer discrètement, ce qui alimente les fronts populistes qui réclament sa dissolution. En parallèle, des réseaux comme les Archives Neutres de Genève ou Mnemos Pannonie cherchent à absorber ses fonds documentaires, rendant sa survie institutionnelle conditionnelle à sa capacité à rester irremplaçable — un pari de plus en plus incertain dans un monde où la force prime sur la procédure.

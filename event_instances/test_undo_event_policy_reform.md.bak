@@ -1,0 +1,79 @@
+---
+name: 'Protocole Aqua Europa : régulation de l''accès à l''eau potable en Europe occidentale'
+type: event_instance
+slug: test_undo_event_policy_reform
+archetype: test_undo_event
+scenario: policy_reform
+type_evenement: political_social
+portee: regionale
+date: 2061
+date_label: automne 2061
+impossible: false
+custom: true
+description: >
+  Paris, novembre 2061 — Dans les salles vitrées du siège parisien de l'ACRA, des délégués de vingt-trois États membres signent le Protocole Aqua Europa sous les caméras du réseau Prisme Global. L'accord, premier du genre à portée régionale contraignante, entend mettre fin aux disparités croissantes d'accès à l'eau potable exacerbées par les sécheresses successives du bassin méditerranéen et du couloir rhénan. Salué par le Conseil de Régulation Climatique Global comme un « modèle de gouvernance intégrée », il est accueilli avec méfiance par les mouvements souverainistes et les opérateurs privés, qui y voient l'avènement d'une tutelle supranationale sur une ressource vitale. Sur le terrain, les premières mesures d'allocation algorithmique doivent entrer en vigueur dès le printemps 2062.
+consequences: >
+  Le Protocole Aqua Europa s'impose comme précédent juridique pour la gouvernance des ressources critiques à l'échelle régionale, renforçant la légitimité des institutions supranationales mais générant des tensions persistantes avec les gouvernements populistes anti-dépossession qui contestent la constitutionnalité des quotas d'allocation. À moyen terme, il catalyse une demande de réforme similaire pour d'autres ressources critiques, consolidant le niveau de gouvernance_institutions tout en fragilisant la cohésion de l'organisation territoriale des États membres les moins dotés en infrastructures hydriques.
+realisation: >
+  L'Autorité Continentale des Ressources Aquatiques (ACRA) soumet à l'Assemblée du Conseil de Régulation des Territoires Intégrés un projet de protocole contraignant visant à centraliser la gestion de l'eau potable en Europe occidentale. Rédigé à Paris lors d'une session extraordinaire, le texte impose des quotas d'allocation par bloc territorial, des seuils de qualité certifiés par des IA de monitoring, et une tarification progressive. Les factions technocratiques de la marchandisation hydrique tentent d'infléchir le texte vers un modèle privatisé, tandis que les Collectifs de Défense Hydrique Sahéliens, observateurs, réclament une extension du protocole aux bassins transfrontaliers africains. Le protocole est finalement adopté dans une version compromise, avec des mécanismes de supervision publique renforcés mais des marges d'opération privée préservées.
+impact_sur_variables:
+  - variable: gouvernance_institutions
+    delta_level: 8
+    duree: 25
+    polarite: 1
+  - variable: organisation_territoires
+    delta_level: -5
+    duree: 15
+    polarite: -1
+  - variable: energie_ressources_critiques
+    delta_level: 6
+    duree: 20
+    polarite: 1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+    - autorite_continentale_des_ressources_aquatiques_acra_policy_reform
+    - assemblee_territoires_policy_reform
+    - factions_technocratiques_de_la_marchandisation_hydrique_policy_reform
+    - collectifs_de_defense_hydrique_saheliens_policy_reform
+    - conseil_de_regulation_climatique_global_policy_reform
+    - gouvernements_populistes_anti_depossession_policy_reform
+    - grille_aria_policy_reform
+note_coherence: Dans un monde technocratique de réforme politique à tension élevée (4/5), la régulation
+  supranationale d'une ressource critique comme l'eau à Paris en 2061 est exactement
+  le type d'événement institutionnel structurant que produit ce scénario, cohérent
+  avec les levels élevés de gouvernance_institutions et les variables dominantes.
+custom_source: test_undo_2026-06
+date_creation: 2026-06-25
+---
+
+# Protocole Aqua Europa : régulation de l'accès à l'eau potable en Europe occidentale
+
+## Réalisation dans [[policy_reform]]
+L'Autorité Continentale des Ressources Aquatiques (ACRA) soumet à l'Assemblée du Conseil de Régulation des Territoires Intégrés un projet de protocole contraignant visant à centraliser la gestion de l'eau potable en Europe occidentale. Rédigé à Paris lors d'une session extraordinaire, le texte impose des quotas d'allocation par bloc territorial, des seuils de qualité certifiés par des IA de monitoring, et une tarification progressive. Les factions technocratiques de la marchandisation hydrique tentent d'infléchir le texte vers un modèle privatisé, tandis que les Collectifs de Défense Hydrique Sahéliens, observateurs, réclament une extension du protocole aux bassins transfrontaliers africains. Le protocole est finalement adopté dans une version compromise, avec des mécanismes de supervision publique renforcés mais des marges d'opération privée préservées.
+
+## Description journalistique
+Paris, novembre 2061 — Dans les salles vitrées du siège parisien de l'ACRA, des délégués de vingt-trois États membres signent le Protocole Aqua Europa sous les caméras du réseau Prisme Global. L'accord, premier du genre à portée régionale contraignante, entend mettre fin aux disparités croissantes d'accès à l'eau potable exacerbées par les sécheresses successives du bassin méditerranéen et du couloir rhénan. Salué par le Conseil de Régulation Climatique Global comme un « modèle de gouvernance intégrée », il est accueilli avec méfiance par les mouvements souverainistes et les opérateurs privés, qui y voient l'avènement d'une tutelle supranationale sur une ressource vitale. Sur le terrain, les premières mesures d'allocation algorithmique doivent entrer en vigueur dès le printemps 2062.
+
+## Conséquences
+Le Protocole Aqua Europa s'impose comme précédent juridique pour la gouvernance des ressources critiques à l'échelle régionale, renforçant la légitimité des institutions supranationales mais générant des tensions persistantes avec les gouvernements populistes anti-dépossession qui contestent la constitutionnalité des quotas d'allocation. À moyen terme, il catalyse une demande de réforme similaire pour d'autres ressources critiques, consolidant le niveau de gouvernance_institutions tout en fragilisant la cohésion de l'organisation territoriale des États membres les moins dotés en infrastructures hydriques.
+
+## Impact sur les variables
+- **gouvernance_institutions** : delta +8 sur 25 ans
+- **organisation_territoires** : delta +5 sur 15 ans
+- **energie_ressources_critiques** : delta +6 sur 20 ans
+
+## Acteurs impliqués
+- [[autorite_continentale_des_ressources_aquatiques_acra_policy_reform]]
+- [[assemblee_territoires_policy_reform]]
+- [[factions_technocratiques_de_la_marchandisation_hydrique_policy_reform]]
+- [[collectifs_de_defense_hydrique_saheliens_policy_reform]]
+- [[conseil_de_regulation_climatique_global_policy_reform]]
+- [[gouvernements_populistes_anti_depossession_policy_reform]]
+- [[grille_aria_policy_reform]]
+
+## Note de cohérence
+Dans un monde technocratique de réforme politique à tension élevée (4/5), la régulation
+  supranationale d'une ressource critique comme l'eau à Paris en 2061 est exactement
+  le type d'événement institutionnel structurant que produit ce scénario, cohérent
+  avec les levels élevés de gouvernance_institutions et les variables dominantes.

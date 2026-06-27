@@ -1,0 +1,86 @@
+---
+name: Insurrection des Communes du Rust Belt — Zones Libres de l'Algorithme
+type: event_instance
+slug: insurrection_rust_belt_fortress_world
+archetype: insurrection_rust_belt
+scenario: fortress_world
+type_evenement: political_social
+portee: regionale
+date: 2063
+date_label: automne 2063
+impossible: false
+custom: true
+description: >
+  L'automne 2063 voit les ruines fumantes des usines de Detroit et les silos désaffectés de Pittsburgh se transformer en barricades symboliques contre l'ordre algorithmique. Des dizaines de milliers de résidents des zones déficitaires d'optimisation, exclus des quotas de productivité depuis des années, hissent des drapeaux noirs marqués 'Hors Réseau' sur les cheminées d'acier. L'Autorité Numérique du Bloc Atlantique désigne immédiatement l'insurrection comme 'nœud de contamination numérique souverain' et déclenche la Directive 7-Fermeture : coupures de flux, déploiement de drones de maintien de l'ordre et blackout informationnel total sur les trois zones. La journaliste clandestine Vera Solano, infiltrée depuis le début, transmet les seules images du conflit à travers les réseaux de passeurs d'information inter-blocs — des images qui traverseront les frontières forteresses comme une fissure dans le béton.
+consequences: >
+  L'insurrection est militairement écrasée au bout de vingt-deux jours, mais ses effets de fracture sont durables : les zones repassent sous contrôle algorithmique avec un régime de surveillance renforcé, alimentant une radicalisation croissante des syndicats industriels résiduels et des collectifs de réappropriation énergétique périphérique. Le Bloc Atlantique, contraint d'admettre une brèche dans sa cohérence interne, durcit ses dispositifs de surveillance numérique souveraine et accélère le déploiement de systèmes de scoring préventifs — créant un cercle vicieux d'exclusion et de résistance qui préfigure les fractures urbaines de la décennie suivante.
+realisation: >
+  Dans un Bloc Atlantique où le scoring citoyen et la gouvernance algorithmique ont marginalisé des millions de travailleurs des anciennes ceintures industrielles, la Fédération des Communes Libres du Rust Belt coordonne simultanément l'occupation de friches industrielles majeures à Detroit, Cleveland et Pittsburgh. Les communes proclament des 'zones libres de l'algorithme' — espaces soustraits au scoring de l'Autorité Numérique du Bloc Atlantique. L'exécutif militaro-civil, incapable de tolérer ces enclaves hors-contrôle à l'intérieur du bloc, déploie les unités de maintien de l'ordre numérique du Commandement Stratégique des Matières Critiques Atlantique. Trois semaines de confrontations urbaines s'ensuivent, caractérisées par des brouillages de réseaux de surveillance, des batailles de rues dans les corridors industriels reconvertis et des tentatives de coupures énergétiques ciblées.
+impact_sur_variables:
+  - variable: geopolitique_conflits
+    delta_level: 8
+    duree: 12
+    polarite: -1
+  - variable: valeurs_culture_tempo_sociale
+    delta_level: 12
+    duree: 15
+    polarite: -1
+  - variable: gouvernance_institutions
+    delta_level: -10
+    duree: 18
+    polarite: -1
+  - variable: technologie_information
+    delta_level: 6
+    duree: 10
+    polarite: -1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+    - mouvement_des_communes_du_rust_belt_fortress_world
+    - conseil_regulation_algorithmique_fortress_world
+    - commandement_strategique_des_matieres_critiques_atlantique_fortress_world
+    - agences_de_securite_interieure_des_etats_forteresses_fortress_world
+    - populations_des_zones_deficitaires_d_optimisation_fortress_world
+    - syndicats_industriels_residuels_post_crise_fortress_world
+    - collectifs_de_reappropriation_energetique_peripherique_fortress_world
+    - le_temoin_fortress_world
+    - reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world
+    - dispositifs_de_surveillance_numerique_souveraine_fortress_world
+    - systemes_de_scoring_de_productivite_corporative_fortress_world
+note_coherence: Dans un monde-forteresse où la gouvernance algorithmique est l'instrument central de contrôle interne, une insurrection réclamant des 'zones libres de l'algorithme' est précisément le type de friction que génèrent les périphéries sacrifiées des blocs autoritaires — et son écrasement violent renforce la logique de fragmentation et de méfiance institutionnelle propre à fortress_world.
+custom_source: rééquilibrage_geo_2026-06
+date_creation: 2026-06-24
+---
+
+# Insurrection des Communes du Rust Belt — Zones Libres de l'Algorithme
+
+## Réalisation dans [[fortress_world]]
+Dans un Bloc Atlantique où le scoring citoyen et la gouvernance algorithmique ont marginalisé des millions de travailleurs des anciennes ceintures industrielles, la Fédération des Communes Libres du Rust Belt coordonne simultanément l'occupation de friches industrielles majeures à Detroit, Cleveland et Pittsburgh. Les communes proclament des 'zones libres de l'algorithme' — espaces soustraits au scoring de l'Autorité Numérique du Bloc Atlantique. L'exécutif militaro-civil, incapable de tolérer ces enclaves hors-contrôle à l'intérieur du bloc, déploie les unités de maintien de l'ordre numérique du Commandement Stratégique des Matières Critiques Atlantique. Trois semaines de confrontations urbaines s'ensuivent, caractérisées par des brouillages de réseaux de surveillance, des batailles de rues dans les corridors industriels reconvertis et des tentatives de coupures énergétiques ciblées.
+
+## Description journalistique
+L'automne 2063 voit les ruines fumantes des usines de Detroit et les silos désaffectés de Pittsburgh se transformer en barricades symboliques contre l'ordre algorithmique. Des dizaines de milliers de résidents des zones déficitaires d'optimisation, exclus des quotas de productivité depuis des années, hissent des drapeaux noirs marqués 'Hors Réseau' sur les cheminées d'acier. L'Autorité Numérique du Bloc Atlantique désigne immédiatement l'insurrection comme 'nœud de contamination numérique souverain' et déclenche la Directive 7-Fermeture : coupures de flux, déploiement de drones de maintien de l'ordre et blackout informationnel total sur les trois zones. La journaliste clandestine Vera Solano, infiltrée depuis le début, transmet les seules images du conflit à travers les réseaux de passeurs d'information inter-blocs — des images qui traverseront les frontières forteresses comme une fissure dans le béton.
+
+## Conséquences
+L'insurrection est militairement écrasée au bout de vingt-deux jours, mais ses effets de fracture sont durables : les zones repassent sous contrôle algorithmique avec un régime de surveillance renforcé, alimentant une radicalisation croissante des syndicats industriels résiduels et des collectifs de réappropriation énergétique périphérique. Le Bloc Atlantique, contraint d'admettre une brèche dans sa cohérence interne, durcit ses dispositifs de surveillance numérique souveraine et accélère le déploiement de systèmes de scoring préventifs — créant un cercle vicieux d'exclusion et de résistance qui préfigure les fractures urbaines de la décennie suivante.
+
+## Impact sur les variables
+- **geopolitique_conflits** : delta -8 sur 12 ans
+- **valeurs_culture_tempo_sociale** : delta -12 sur 15 ans
+- **gouvernance_institutions** : delta +10 sur 18 ans
+- **technologie_information** : delta -6 sur 10 ans
+
+## Acteurs impliqués
+- [[mouvement_des_communes_du_rust_belt_fortress_world]]
+- [[conseil_regulation_algorithmique_fortress_world]]
+- [[commandement_strategique_des_matieres_critiques_atlantique_fortress_world]]
+- [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]]
+- [[populations_des_zones_deficitaires_d_optimisation_fortress_world]]
+- [[syndicats_industriels_residuels_post_crise_fortress_world]]
+- [[collectifs_de_reappropriation_energetique_peripherique_fortress_world]]
+- [[le_temoin_fortress_world]]
+- [[reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world]]
+- [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
+- [[systemes_de_scoring_de_productivite_corporative_fortress_world]]
+
+## Note de cohérence
+Dans un monde-forteresse où la gouvernance algorithmique est l'instrument central de contrôle interne, une insurrection réclamant des 'zones libres de l'algorithme' est précisément le type de friction que génèrent les périphéries sacrifiées des blocs autoritaires — et son écrasement violent renforce la logique de fragmentation et de méfiance institutionnelle propre à fortress_world.

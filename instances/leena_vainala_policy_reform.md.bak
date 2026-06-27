@@ -1,0 +1,95 @@
+---
+name: Leena Väinälä
+type: instance
+slug: leena_vainala_policy_reform
+entite: leena_vainala
+scenario: policy_reform
+
+type_dans_scenario: humain
+
+role_dans_scenario: >
+  Philosophe-architecte de gouvernance devenue figure institutionnelle ambivalente dans un monde technocratique en transition. Väinälä occupe le rôle paradoxal de voix critique intégrée : ses chartes des communs numériques ont été partiellement absorbées par les grandes institutions de régulation globale, qui s'en réclament tout en en vidant la substance délibérative. Elle est à la fois conseillère sollicitée par les instances de coordination internationale et dissidente tolérée, dont les avertissements sur la dérive technocratique servent d'alibi démocratique aux régulateurs. Sa pensée structure les débats sur la gouvernance de l'IA et des flux de données, mais se trouve constamment mise en tension entre intégration institutionnelle et trahison de ses principes fondateurs.
+
+responsabilites: >
+  Rédige et négocie des protocoles de délibération citoyenne insérés dans les cadres réglementaires des grandes institutions de gouvernance numérique globale. Intervient comme experte auprès des commissions mixtes IA-gouvernance pour défendre des garde-fous délibératifs contre l'automatisation des décisions politiques. Maintient en parallèle un réseau informel de penseurs et praticiens des communs, opérant comme contre-pouvoir intellectuel aux dérives technocratiques qu'elle observe de l'intérieur.
+
+impact_local: 2
+impact_systemique_global: 4
+variables_influencees:
+    - gouvernance_institutions
+    - technologie_information
+    - valeurs_culture_tempo_sociale
+
+zone_geographique:
+    - nationale
+    - continentale
+    - globale
+
+zone_systemique:
+    - gouvernance
+    - information
+    - société
+
+alliances:
+    - communs_numeriques_agroecologiques_reference
+    - conseil_onu_de_gouvernance_numerique_et_ia_policy_reform
+    - universites_et_think_tanks_en_zones_de_liberte_academique_reference
+    - collectifs_citoyens_de_deliberation_augmentee_policy_reform
+
+oppositions:
+    - bloc_des_architectes_d_efficience_algorithmique_new_sustainability
+    - consortiums_prives_de_gouvernance_algorithmique_policy_reform
+    - courant_autoritaire_recuperateur_du_vocabulaire_communautaire_policy_reform
+    - front_techno_utopiste_de_la_decision_automatisee_policy_reform
+
+type_relation_dominante: rivalité
+
+annee_debut: 2031
+annee_fin: 
+
+etat_temporel: actif
+age_historique: dominant
+generation: transition
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  On la croise toujours avec deux écrans pliés sous le bras et une tasse de café noir finlandais qu'elle ne finit jamais — trop de réunions, trop de textes à corriger. Leena Väinälä, 71 ans, est l'une de ces rares intellectuelles dont les idées ont réussi à entrer dans les institutions sans tout à fait s'y dissoudre. Ses chartes des communs numériques, rédigées dans les années 2030 dans une chambre d'hôtel de Tampere, sont aujourd'hui citées dans dix-sept traités de gouvernance internationale. Le problème, dit-elle sans sourire, c'est qu'on cite les mots et qu'on oublie la procédure. En 2098, elle siège trois jours par semaine au Conseil de régulation numérique de Genève, et consacre les quatre autres à tenter de réparer ce que le Conseil abîme. Célébrée comme architecte de la démocratie numérique, elle se décrit elle-même comme une plombière qui colmate des fuites dans un bâtiment construit sans elle.
+
+signes_distinctifs: >
+  Tenue sobre, toujours en nuances de gris et de bleu ardoise — une esthétique nordique lisible comme un refus du spectacle. Ses interventions publiques commencent invariablement par une question adressée à l'audience, jamais par une affirmation. Symbole personnel : un nœud de Borromée gravé sur sa tablette de travail, métaphore de l'interdépendance des trois piliers de sa doctrine — délibération, transparence, réversibilité.
+
+tensions_narratives: >
+  La tension centrale de Väinälä en 2098 est celle de la cooptation : jusqu'où peut-on travailler de l'intérieur d'un système technocratique sans en devenir le visage légitime ? Ses anciens alliés des communs l'accusent de caution intellectuelle ; les institutions la tolèrent précisément parce qu'elle les critique avec un vocabulaire qu'elles contrôlent. Une deuxième tension émerge autour de son héritage : ses chartes sont désormais invoquées par des régimes autoritaires pour justifier la régulation des plateformes sans délibération réelle. Enfin, une question biographique hante ses entretiens : que fera-t-elle si le prochain traité de gouvernance IA exclut définitivement toute procédure délibérative — partira-t-elle, ou signera-t-elle quand même ?
+
+date_creation: 2026-06-15
+---
+
+# Leena Väinälä
+
+## Rôle dans [[policy_reform]]
+Philosophe-architecte de gouvernance devenue figure institutionnelle ambivalente dans un monde technocratique en transition. Väinälä occupe le rôle paradoxal de voix critique intégrée : ses chartes des communs numériques ont été partiellement absorbées par les grandes institutions de régulation globale, qui s'en réclament tout en en vidant la substance délibérative. Elle est à la fois conseillère sollicitée par les instances de coordination internationale et dissidente tolérée, dont les avertissements sur la dérive technocratique servent d'alibi démocratique aux régulateurs. Sa pensée structure les débats sur la gouvernance de l'IA et des flux de données, mais se trouve constamment mise en tension entre intégration institutionnelle et trahison de ses principes fondateurs.
+
+## Responsabilités
+Rédige et négocie des protocoles de délibération citoyenne insérés dans les cadres réglementaires des grandes institutions de gouvernance numérique globale. Intervient comme experte auprès des commissions mixtes IA-gouvernance pour défendre des garde-fous délibératifs contre l'automatisation des décisions politiques. Maintient en parallèle un réseau informel de penseurs et praticiens des communs, opérant comme contre-pouvoir intellectuel aux dérives technocratiques qu'elle observe de l'intérieur.
+
+## Variables influencées
+- [[gouvernance_institutions]]
+- [[technologie_information]]
+- [[valeurs_culture_tempo_sociale]]
+
+## Relations
+**Alliés** : [[communs_numeriques_agroecologiques_reference]], [[conseil_onu_de_gouvernance_numerique_et_ia_policy_reform]], [[universites_et_think_tanks_en_zones_de_liberte_academique_reference]], [[collectifs_citoyens_de_deliberation_augmentee_policy_reform]]
+**Opposants** : [[bloc_des_architectes_d_efficience_algorithmique_new_sustainability]], [[consortiums_prives_de_gouvernance_algorithmique_policy_reform]], [[courant_autoritaire_recuperateur_du_vocabulaire_communautaire_policy_reform]], [[front_techno_utopiste_de_la_decision_automatisee_policy_reform]]
+
+## Description journalistique
+On la croise toujours avec deux écrans pliés sous le bras et une tasse de café noir finlandais qu'elle ne finit jamais — trop de réunions, trop de textes à corriger. Leena Väinälä, 71 ans, est l'une de ces rares intellectuelles dont les idées ont réussi à entrer dans les institutions sans tout à fait s'y dissoudre. Ses chartes des communs numériques, rédigées dans les années 2030 dans une chambre d'hôtel de Tampere, sont aujourd'hui citées dans dix-sept traités de gouvernance internationale. Le problème, dit-elle sans sourire, c'est qu'on cite les mots et qu'on oublie la procédure. En 2098, elle siège trois jours par semaine au Conseil de régulation numérique de Genève, et consacre les quatre autres à tenter de réparer ce que le Conseil abîme. Célébrée comme architecte de la démocratie numérique, elle se décrit elle-même comme une plombière qui colmate des fuites dans un bâtiment construit sans elle.
+
+## Tensions narratives
+La tension centrale de Väinälä en 2098 est celle de la cooptation : jusqu'où peut-on travailler de l'intérieur d'un système technocratique sans en devenir le visage légitime ? Ses anciens alliés des communs l'accusent de caution intellectuelle ; les institutions la tolèrent précisément parce qu'elle les critique avec un vocabulaire qu'elles contrôlent. Une deuxième tension émerge autour de son héritage : ses chartes sont désormais invoquées par des régimes autoritaires pour justifier la régulation des plateformes sans délibération réelle. Enfin, une question biographique hante ses entretiens : que fera-t-elle si le prochain traité de gouvernance IA exclut définitivement toute procédure délibérative — partira-t-elle, ou signera-t-elle quand même ?

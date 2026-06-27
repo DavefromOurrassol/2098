@@ -1,0 +1,89 @@
+---
+name: Prisme Global
+type: instance
+slug: prisme_global_new_sustainability
+entite: prisme_global
+scenario: new_sustainability
+
+type_dans_scenario: hybride
+
+role_dans_scenario: >
+  Prisme Global opère en 2098 comme l'une des infrastructures narratives centrales du système informationnel mondial stabilisé, jouant le rôle de chambre de résonance collective entre les millions de contributeurs locaux et les IA éditoriales régulées par les accords de gouvernance numérique de Genève III. Dans le contexte de new_sustainability, Prisme Global n'est plus un contre-pouvoir marginal mais un acteur institutionnalisé de la co-production de sens, intégré aux mécanismes de cohésion culturelle globale. Sa tension fondamentale — pluralisme radical versus cacophonie instrumentalisée — est aujourd'hui partiellement arbitrée par des protocoles de modération algorithmique co-écrits avec les gouvernances régionales, ce qui lui confère une légitimité ambiguë : à la fois garant du pluralisme et outil de régulation narrative.
+
+responsabilites: >
+  Agrège et modélise en temps réel les récits locaux issus de 340 zones contributives pour produire des cartographies prospectives accessibles aux citoyens, aux institutions et aux décideurs climatiques. Assure la traçabilité éditoriale de chaque contribution via des IA certifiées conformes aux standards d'interopérabilité de l'Alliance Numérique Eurasie-Pacifique. Maintient des espaces de dissidence narrative balisés, permettant l'expression de voix minoritaires sans déstabilisation systémique.
+
+impact_local: 3
+impact_systemique_global: 5
+variables_influencees:
+    - technologie_information
+    - valeurs_culture_tempo_sociale
+
+zone_geographique:
+    - globale
+
+zone_systemique:
+    - information
+    - gouvernance
+    - société
+
+alliances:
+    - alliance_numerique_eurasie_pacifique_new_sustainability
+    - conseil_de_regulation_cognitive_de_l_onu_new_sustainability
+    - observatoire_climatique_narratif_de_nairobi_new_sustainability
+
+oppositions:
+    - collectifs_de_narration_sauvage_hors_protocole_new_sustainability
+    - reseaux_d_information_souverainistes_fermes_new_sustainability
+    - factions_internes_contestataires_du_bureau_de_moderation_new_sustainability
+
+type_relation_dominante: symbiose
+
+annee_debut: 2026
+annee_fin: 
+
+etat_temporel: actif
+age_historique: dominant
+generation: ère cognitive
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Depuis ses serveurs distribués entre Lagos, Montréal et Singapour, Prisme Global pulse comme le système nerveux narratif d'une planète qui a appris à se raconter sans se déchirer — ou presque. En 2098, la plateforme traite chaque jour 4,7 milliards de contributions locales, des récits de reforestation au Sahel aux chroniques de mobilité climatique du delta du Mékong, filtrées, pondérées et remontées par des IA éditoriales dont les chartes sont publiques et auditables. Ce qui frappe le visiteur, c'est l'étrange sérénité du flux : plus de guerre des tendances, plus d'emballement viral incontrôlé, mais un murmure organisé, presque liturgique. Ses détracteurs l'appellent 'le grand berceau' ; ses défenseurs, 'la seule mémoire vivante du monde commun'.
+
+signes_distinctifs: >
+  Interface visuelle en couches translucides superposées, évoquant un prisme décomposant la lumière en spectres de récits géolocalisés — chaque zone du monde émet une teinte dominante selon la densité et la tonalité des contributions actives. Le logo, un dodécaèdre irisé en rotation lente, est gravé dans les espaces publics numériques des villes membres comme un sceau de confiance narrative. La typographie éditoriale alterne scripts humains manuscrits numérisés et polices IA pour marquer visuellement l'origine de chaque couche de contenu.
+
+tensions_narratives: >
+  La frontière entre 'espace de dissidence balisé' et mise sous cloche du désaccord réel est dénoncée par les collectifs de narration sauvage, qui accusent Prisme Global d'avoir transformé le pluralisme en pluralisme contrôlé. En interne, le Bureau de Modération est fracturé entre une faction technocratique favorable à un resserrement des protocoles et une faction humaniste qui réclame l'élargissement des zones de parole non filtrée. La question non résolue : si Prisme Global est désormais trop central pour échouer, qui le surveille — et qui raconte l'histoire de ceux qui le racontent ?
+
+date_creation: 2026-06-15
+---
+
+# Prisme Global
+
+## Rôle dans [[new_sustainability]]
+Prisme Global opère en 2098 comme l'une des infrastructures narratives centrales du système informationnel mondial stabilisé, jouant le rôle de chambre de résonance collective entre les millions de contributeurs locaux et les IA éditoriales régulées par les accords de gouvernance numérique de Genève III. Dans le contexte de new_sustainability, Prisme Global n'est plus un contre-pouvoir marginal mais un acteur institutionnalisé de la co-production de sens, intégré aux mécanismes de cohésion culturelle globale. Sa tension fondamentale — pluralisme radical versus cacophonie instrumentalisée — est aujourd'hui partiellement arbitrée par des protocoles de modération algorithmique co-écrits avec les gouvernances régionales, ce qui lui confère une légitimité ambiguë : à la fois garant du pluralisme et outil de régulation narrative.
+
+## Responsabilités
+Agrège et modélise en temps réel les récits locaux issus de 340 zones contributives pour produire des cartographies prospectives accessibles aux citoyens, aux institutions et aux décideurs climatiques. Assure la traçabilité éditoriale de chaque contribution via des IA certifiées conformes aux standards d'interopérabilité de l'Alliance Numérique Eurasie-Pacifique. Maintient des espaces de dissidence narrative balisés, permettant l'expression de voix minoritaires sans déstabilisation systémique.
+
+## Variables influencées
+- [[technologie_information]]
+- [[valeurs_culture_tempo_sociale]]
+
+## Relations
+**Alliés** : [[alliance_numerique_eurasie_pacifique_new_sustainability]], [[conseil_de_regulation_cognitive_de_l_onu_new_sustainability]], [[observatoire_climatique_narratif_de_nairobi_new_sustainability]]
+**Opposants** : [[collectifs_de_narration_sauvage_hors_protocole_new_sustainability]], [[reseaux_d_information_souverainistes_fermes_new_sustainability]], [[factions_internes_contestataires_du_bureau_de_moderation_new_sustainability]]
+
+## Description journalistique
+Depuis ses serveurs distribués entre Lagos, Montréal et Singapour, Prisme Global pulse comme le système nerveux narratif d'une planète qui a appris à se raconter sans se déchirer — ou presque. En 2098, la plateforme traite chaque jour 4,7 milliards de contributions locales, des récits de reforestation au Sahel aux chroniques de mobilité climatique du delta du Mékong, filtrées, pondérées et remontées par des IA éditoriales dont les chartes sont publiques et auditables. Ce qui frappe le visiteur, c'est l'étrange sérénité du flux : plus de guerre des tendances, plus d'emballement viral incontrôlé, mais un murmure organisé, presque liturgique. Ses détracteurs l'appellent 'le grand berceau' ; ses défenseurs, 'la seule mémoire vivante du monde commun'.
+
+## Tensions narratives
+La frontière entre 'espace de dissidence balisé' et mise sous cloche du désaccord réel est dénoncée par les collectifs de narration sauvage, qui accusent Prisme Global d'avoir transformé le pluralisme en pluralisme contrôlé. En interne, le Bureau de Modération est fracturé entre une faction technocratique favorable à un resserrement des protocoles et une faction humaniste qui réclame l'élargissement des zones de parole non filtrée. La question non résolue : si Prisme Global est désormais trop central pour échouer, qui le surveille — et qui raconte l'histoire de ceux qui le racontent ?

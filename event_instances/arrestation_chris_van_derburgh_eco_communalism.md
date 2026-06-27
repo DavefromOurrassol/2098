@@ -1,0 +1,84 @@
+---
+name: Le Procès Communautaire de Van Derburgh
+type: event_instance
+slug: arrestation_chris_van_derburgh_eco_communalism
+archetype: arrestation_chris_van_derburgh
+scenario: eco_communalism
+localisation:
+  zone: vallee_du_rhone_reconstituee
+  lieu: Vallée-du-Rhône Reconstituée
+  type_lieu: region
+type_evenement: political_social
+portee: locale
+date: 2078
+date_label: automne 2078
+impossible: false
+custom: true
+description: >
+  Chris van Derburgh, 67 ans, membre de l'assemblée de la Vallée-du-Rhône
+  Reconstituée, est convoqué devant le cercle de délibération communautaire
+  en automne 2078. Il possède une collection d'objets de 2026 —
+  smartphones, ordinateurs, gadgets — conservés dans sa cave. La communauté
+  débat : est-ce du "stockage personnel légitime" ou de l'"accumulation
+  contraire aux principes de sobriété partagée" ? Van Derburgh argue que
+  ces objets ont une valeur mémorielle.
+consequences: >
+  Après trois sessions de délibération, la communauté vote pour le "droit
+  à la mémoire personnelle" — Van Derburgh garde sa collection mais s'engage
+  à l'ouvrir comme archive communautaire. L'affaire génère un débat dans
+  le Réseau des Assemblées sur la frontière entre possession personnelle
+  et communs de la mémoire.
+realisation: >
+  Dans eco_communalism, "l'arrestation" prend la forme d'un procès
+  communautaire participatif. Pas de prison, pas de loi formelle —
+  une délibération collective sur ce que signifie posséder des objets
+  du monde d'avant.
+impact_sur_variables:
+  - variable: valeurs_culture_tempo_sociale
+    delta_level: 2
+    duree: 15
+    polarite: 1
+  - variable: gouvernance_institutions
+    delta_level: 1
+    duree: 10
+    polarite: 1
+propagation:
+  via_matrice: false
+acteurs_impliques:
+  - le_temoin_eco_communalism
+  - assemblee_territoires_eco_communalism
+note_coherence: >
+  Impact positif et léger — une délibération communautaire qui renforce
+  les valeurs et la gouvernance locale. Cohérent avec la trajectoire
+  eco_communalism.
+date_creation: 2098-01-01
+---
+
+# Le Procès Communautaire de Van Derburgh
+
+## Réalisation dans [[eco_communalism]]
+"L'arrestation" prend la forme d'un procès communautaire participatif.
+Pas de prison — une délibération collective sur ce que signifie posséder
+des objets du monde d'avant.
+
+## Description journalistique
+Chris van Derburgh est convoqué devant le cercle de délibération de la
+Vallée-du-Rhône Reconstituée pour sa collection d'objets de 2026. La
+communauté débat : stockage légitime ou accumulation contraire à la sobriété ?
+
+## Conséquences
+Van Derburgh garde sa collection mais s'engage à l'ouvrir comme archive
+communautaire. L'affaire génère un débat dans le Réseau des Assemblées
+sur les communs de la mémoire.
+
+## Impact sur les variables
+- **valeurs_culture_tempo_sociale** : delta +2 sur 15 ans
+- **gouvernance_institutions** : delta +1 sur 10 ans
+
+## Acteurs impliqués
+- [[le_temoin_eco_communalism]]
+- [[assemblee_territoires_eco_communalism]]
+
+## Note de cohérence
+Impact positif et léger — délibération communautaire renforçant les valeurs
+et la gouvernance locale.

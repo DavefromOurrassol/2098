@@ -1,0 +1,103 @@
+---
+name: Administration Fédérale Résiduelle du Midwest — Les Coursiers du Protocole
+type: instance
+slug: midwest_desertifie_breakdown
+entite: midwest_desertifie
+scenario: breakdown
+localisation:
+  zone: midwest_desertifie
+  lieu: Topeka, Midwest désertifié
+  type_lieu: region
+
+type_dans_scenario: institution
+
+role_dans_scenario: >
+  Entité administrative fantôme héritée des anciennes structures fédérales américaines, tentant de coordonner les communautés survivantes d'un Midwest largement désertifié par la crise climatique. Sans véritable autorité centralisée, elle fonctionne comme une coalition lâche de chefs locaux négociant l'accès aux rares points d'eau et aux corridors migratoires. Son existence est contestée par les milices indépendantes qui contrôlent de facto le territoire. Dans ce contexte de fragmentation extrême, l'AFR agit moins comme un gouvernement que comme un réseau de mémoire institutionnelle itinérante : ses 'représentants' sont des coursiers portant des actes signés, des tampons officiels et des titres de fonction que personne n'a formellement abolis — et que peu de gens croient encore.
+
+responsabilites: >
+  Négociation de trêves temporaires entre communautés survivantes pour l'accès aux aquifères résiduels et aux corridors migratoires vers les zones habitables. Émission de documents administratifs hérités (permis de transit, actes de propriété de l'eau, certificats de réfugié climatique interne) dont la valeur légale est contestée mais dont la valeur symbolique reste suffisante pour ouvrir certaines portes. Tentative de cartographie centralisée des ressources disponibles par transmission radio cryptée entre les nœuds locaux encore actifs.
+
+impact_local: 3
+impact_systemique_global: 1
+
+variables_influencees:
+    - gouvernance_institutions
+    - organisation_territoires
+    - demographie_mobilite_humaine
+    - energie_ressources_critiques
+
+zone_geographique:
+    - régionale
+
+zone_systemique:
+    - gouvernance
+    - société
+    - infrastructure
+
+alliances:
+    - grandes_lacs_compact_eau_breakdown
+    - mouvement_des_communes_du_rust_belt_breakdown
+    - brigades_medicales_itinerantes_breakdown
+    - ong_de_gestion_migratoire_survivantes_breakdown
+    - gouvernements_regionaux_residuels_reterritorialisants_breakdown
+
+oppositions:
+    - milices_de_controle_territorial_breakdown
+    - milices_d_accaparement_hydrique_breakdown
+    - factions_para_etatiques_hydriques_breakdown
+    - seigneuries_logistiques_armees_breakdown
+    - factions_secessionnistes_agrariennes_du_desert_breakdown
+    - seigneurs_de_guerre_agro_territoriaux_breakdown
+
+type_relation_dominante: rivalité
+
+annee_debut: 2026
+annee_fin: 
+
+etat_temporel: transformé
+age_historique: résiduel
+generation: post-effondrement
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Depuis Topeka, ce qui reste du Bureau Régional fédéral opère depuis un hangar climatisé au diesel, où des fonctionnaires en uniformes délavés apposent encore des tampons sur des formulaires que les milices du Kansas ne reconnaissent plus depuis trois ans. Les 'Coursiers du Protocole', comme les appellent les survivants qui les croisent sur les pistes de poussière rouge, sillonnent à moto les zones mortes du Nebraska et du Missouri avec des cartables remplis d'actes officiels et de cartes hydrologiques périmées. Leur crédit se mesure en eau : une négociation réussie autour d'un puits vaut plus que dix décrets signés. Ni tout à fait légitimes, ni tout à fait ignorés, ils survivent parce que dans un monde sans arbitre, même un fantôme en uniforme peut servir de prétexte à la paix.
+
+signes_distinctifs: >
+  Uniformes fédéraux élimés portant l'aigle américain recousu à la main, souvent décolorés par le soleil et la poussière ocre du Midwest désertifié. Véhicules balisés de rubans de signalisation orange et de plaques officielles rouillées. Documentation portée en cartables cuir frappés des sceaux du Département de l'Intérieur — tampons, registres et formulaires triplicatas devenus fétiches bureaucratiques dans un monde qui a oublié ce qu'ils sont censés garantir.
+
+tensions_narratives: >
+  La tension centrale est celle d'une institution qui ne peut survivre qu'en négociant, mais qui perd toute crédibilité à chaque concession faite aux milices — ses propres représentants se demandent s'ils servent encore un État ou s'ils sont devenus des courtiers privés habillés en fonctionnaires. La question de la succession interne est paralysée : nommer un nouveau 'Directeur Régional' crédible nécessiterait une élection que personne ne peut organiser, et un mandat que personne ne peut octroyer. Enfin, le Compact des Grands Lacs — leur allié le plus solide — commence à exiger des contreparties territoriales que l'AFR n'a légalement pas le droit de céder, mais qu'elle ne peut refuser sans perdre l'accès à l'eau qui la maintient en vie.
+
+date_creation: 2026-06-27
+---
+
+# Administration Fédérale Résiduelle du Midwest — Les Coursiers du Protocole
+
+## Rôle dans [[breakdown]]
+Entité administrative fantôme héritée des anciennes structures fédérales américaines, tentant de coordonner les communautés survivantes d'un Midwest largement désertifié par la crise climatique. Sans véritable autorité centralisée, elle fonctionne comme une coalition lâche de chefs locaux négociant l'accès aux rares points d'eau et aux corridors migratoires. Son existence est contestée par les milices indépendantes qui contrôlent de facto le territoire. Dans ce contexte de fragmentation extrême, l'AFR agit moins comme un gouvernement que comme un réseau de mémoire institutionnelle itinérante : ses 'représentants' sont des coursiers portant des actes signés, des tampons officiels et des titres de fonction que personne n'a formellement abolis — et que peu de gens croient encore.
+
+## Responsabilités
+Négociation de trêves temporaires entre communautés survivantes pour l'accès aux aquifères résiduels et aux corridors migratoires vers les zones habitables. Émission de documents administratifs hérités (permis de transit, actes de propriété de l'eau, certificats de réfugié climatique interne) dont la valeur légale est contestée mais dont la valeur symbolique reste suffisante pour ouvrir certaines portes. Tentative de cartographie centralisée des ressources disponibles par transmission radio cryptée entre les nœuds locaux encore actifs.
+
+## Variables influencées
+- [[gouvernance_institutions]]
+- [[organisation_territoires]]
+- [[demographie_mobilite_humaine]]
+- [[energie_ressources_critiques]]
+
+## Relations
+**Alliés** : [[grandes_lacs_compact_eau_breakdown]], [[mouvement_des_communes_du_rust_belt_breakdown]], [[brigades_medicales_itinerantes_breakdown]], [[ong_de_gestion_migratoire_survivantes_breakdown]], [[gouvernements_regionaux_residuels_reterritorialisants_breakdown]]
+**Opposants** : [[milices_de_controle_territorial_breakdown]], [[milices_d_accaparement_hydrique_breakdown]], [[factions_para_etatiques_hydriques_breakdown]], [[seigneuries_logistiques_armees_breakdown]], [[factions_secessionnistes_agrariennes_du_desert_breakdown]], [[seigneurs_de_guerre_agro_territoriaux_breakdown]]
+
+## Description journalistique
+Depuis Topeka, ce qui reste du Bureau Régional fédéral opère depuis un hangar climatisé au diesel, où des fonctionnaires en uniformes délavés apposent encore des tampons sur des formulaires que les milices du Kansas ne reconnaissent plus depuis trois ans. Les 'Coursiers du Protocole', comme les appellent les survivants qui les croisent sur les pistes de poussière rouge, sillonnent à moto les zones mortes du Nebraska et du Missouri avec des cartables remplis d'actes officiels et de cartes hydrologiques périmées. Leur crédit se mesure en eau : une négociation réussie autour d'un puits vaut plus que dix décrets signés. Ni tout à fait légitimes, ni tout à fait ignorés, ils survivent parce que dans un monde sans arbitre, même un fantôme en uniforme peut servir de prétexte à la paix.
+
+## Tensions narratives
+La tension centrale est celle d'une institution qui ne peut survivre qu'en négociant, mais qui perd toute crédibilité à chaque concession faite aux milices — ses propres représentants se demandent s'ils servent encore un État ou s'ils sont devenus des courtiers privés habillés en fonctionnaires. La question de la succession interne est paralysée : nommer un nouveau 'Directeur Régional' crédible nécessiterait une élection que personne ne peut organiser, et un mandat que personne ne peut octroyer. Enfin, le Compact des Grands Lacs — leur allié le plus solide — commence à exiger des contreparties territoriales que l'AFR n'a légalement pas le droit de céder, mais qu'elle ne peut refuser sans perdre l'accès à l'eau qui la maintient en vie.

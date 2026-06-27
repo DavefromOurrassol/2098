@@ -1,0 +1,96 @@
+---
+name: Mémoire des Terres
+type: instance
+slug: prisme_global_eco_communalism
+entite: prisme_global
+scenario: eco_communalism
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
+type_dans_scenario: réseau
+
+role_dans_scenario: >
+  Héritière fragmentée de Prisme Global, 'Mémoire des Terres' n'est plus une plateforme centralisée mais une fédération lâche de nœuds narratifs locaux — des 'archives vivantes' tenues par des communautés rurales, des coopératives urbaines et des cercles de mémoire intergénérationnelle. Elle tente de maintenir un fil de récit partagé entre des territoires qui communiquent peu et se méfient des agrégateurs. Son autorité n'est plus éditoriale mais protocolaire : elle fournit un langage commun de description du monde sans prétendre en fixer le sens.
+
+responsabilites: >
+  Chaque nœud local collecte, encode et diffuse des témoignages, données environnementales et récits de pratiques selon un protocole ouvert baptisé 'Trame'. Des IA éditoriales légères — déployées localement, sans connexion permanente — synthétisent périodiquement des 'Lettres de Territoire' distribuées par porteurs physiques ou radio basse fréquence. La fédération organise des 'Assemblées de Récit' saisonnières pour confronter les mémoires divergentes.
+
+impact_local: 3
+impact_systemique_global: 2
+variables_influencees:
+    - technologie_information
+    - valeurs_culture_tempo_sociale
+    - organisation_territoires
+
+zone_geographique:
+    - locale
+    - régionale
+
+zone_systemique:
+    - information
+    - société
+    - gouvernance
+
+alliances:
+    - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
+    - reseaux_de_radio_communautaire_basse_consommation_eco_communalism
+    - cercles_de_mediation_territoriale_intercommunautaire_eco_communalism
+
+oppositions:
+    - plateformes_centralisees_de_reagregation_globale_eco_communalism
+    - factions_communautaires_refusant_le_partage_narratif_exterieur_eco_communalism
+    - consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism
+
+type_relation_dominante: coopération
+
+annee_debut: 2041
+annee_fin: 
+
+etat_temporel: actif
+age_historique: marginal
+generation: reconstruction
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Dans le hameau de Corrèze-Haute, une ancienne grange abrite le nœud 47 de 'Mémoire des Terres' : trois serveurs refroidis à l'air libre, une antenne radio artisanale et une bibliothécaire de soixante ans qui encode à la main les comptes rendus des assemblées locales. Deux fois par an, une 'Lettre de Territoire' part vers les nœuds voisins — imprimée sur papier recyclé et transmise numériquement aux rares communes connectées. Née des cendres de Prisme Global après l'effondrement des datacenters européens de 2038, la fédération revendique aujourd'hui 2 300 nœuds actifs sur quatre continents, mais personne ne sait vraiment combien fonctionnent encore. C'est, disent ses défenseurs, précisément ce qui la rend honnête.
+
+signes_distinctifs: >
+  Logo variable selon les nœuds — toujours une spirale ouverte d'une couleur locale choisie par la communauté fondatrice. Les 'Lettres de Territoire' sont systématiquement datées selon le calendrier solaire local en plus du grégorien. Les IA éditoriales portent des noms de rivières ou de cols de montagne de leur zone de déploiement.
+
+tensions_narratives: >
+  La fédération est tiraillée entre sa vocation à tisser un récit commun et la tentation des nœuds les plus puissants de s'autonomiser en systèmes d'information locaux fermés. Certaines communautés accusent le protocole 'Trame' d'être lui-même un vecteur d'homogénéisation culturelle masquée. La question de la mémoire des territoires disparus — inondés, désertifiés, abandonnés — crée des frictions politiques vives : qui a le droit de raconter ce qui n'existe plus ? Enfin, des acteurs extérieurs tentent périodiquement de racheter ou d'infiltrer des nœuds stratégiques pour accéder à des données environnementales rares.
+
+date_creation: 2026-06-15
+---
+
+# Mémoire des Terres
+
+## Rôle dans [[eco_communalism]]
+Héritière fragmentée de Prisme Global, 'Mémoire des Terres' n'est plus une plateforme centralisée mais une fédération lâche de nœuds narratifs locaux — des 'archives vivantes' tenues par des communautés rurales, des coopératives urbaines et des cercles de mémoire intergénérationnelle. Elle tente de maintenir un fil de récit partagé entre des territoires qui communiquent peu et se méfient des agrégateurs. Son autorité n'est plus éditoriale mais protocolaire : elle fournit un langage commun de description du monde sans prétendre en fixer le sens.
+
+## Responsabilités
+Chaque nœud local collecte, encode et diffuse des témoignages, données environnementales et récits de pratiques selon un protocole ouvert baptisé 'Trame'. Des IA éditoriales légères — déployées localement, sans connexion permanente — synthétisent périodiquement des 'Lettres de Territoire' distribuées par porteurs physiques ou radio basse fréquence. La fédération organise des 'Assemblées de Récit' saisonnières pour confronter les mémoires divergentes.
+
+## Variables influencées
+- [[technologie_information]]
+- [[valeurs_culture_tempo_sociale]]
+- [[organisation_territoires]]
+
+## Relations
+**Alliés** : [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]], [[reseaux_de_radio_communautaire_basse_consommation_eco_communalism]], [[cercles_de_mediation_territoriale_intercommunautaire_eco_communalism]]
+**Opposants** : [[plateformes_centralisees_de_reagregation_globale_eco_communalism]], [[factions_communautaires_refusant_le_partage_narratif_exterieur_eco_communalism]], [[consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism]]
+
+## Description journalistique
+Dans le hameau de Corrèze-Haute, une ancienne grange abrite le nœud 47 de 'Mémoire des Terres' : trois serveurs refroidis à l'air libre, une antenne radio artisanale et une bibliothécaire de soixante ans qui encode à la main les comptes rendus des assemblées locales. Deux fois par an, une 'Lettre de Territoire' part vers les nœuds voisins — imprimée sur papier recyclé et transmise numériquement aux rares communes connectées. Née des cendres de Prisme Global après l'effondrement des datacenters européens de 2038, la fédération revendique aujourd'hui 2 300 nœuds actifs sur quatre continents, mais personne ne sait vraiment combien fonctionnent encore. C'est, disent ses défenseurs, précisément ce qui la rend honnête.
+
+## Tensions narratives
+La fédération est tiraillée entre sa vocation à tisser un récit commun et la tentation des nœuds les plus puissants de s'autonomiser en systèmes d'information locaux fermés. Certaines communautés accusent le protocole 'Trame' d'être lui-même un vecteur d'homogénéisation culturelle masquée. La question de la mémoire des territoires disparus — inondés, désertifiés, abandonnés — crée des frictions politiques vives : qui a le droit de raconter ce qui n'existe plus ? Enfin, des acteurs extérieurs tentent périodiquement de racheter ou d'infiltrer des nœuds stratégiques pour accéder à des données environnementales rares.

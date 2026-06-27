@@ -1,0 +1,80 @@
+---
+name: 'La Fondation de Fond : Tuvalu et la Souveraineté Post-Territoriale'
+type: event_instance
+slug: tuvalu_submersion_souverainete_flottante_new_sustainability
+archetype: tuvalu_submersion_souverainete_flottante
+scenario: new_sustainability
+type_evenement: political_social
+portee: globale
+date: 2039
+date_label: automne 2039
+impossible: false
+custom: true
+description: >
+  Le 14 octobre 2039, alors que les derniers mètres carrés de Funafuti disparaissent sous les eaux du Pacifique, les délégués de Tuvalu, Kiribati et des Îles Marshall signent la Déclaration de Fond — un traité fondateur qui redéfinit la souveraineté comme un lien entre un peuple et son droit à l'autodétermination, et non entre un État et un sol. Depuis la plateforme flottante Moana Nui, bâtiment de 2,4 km² ancré à 180 milles nautiques de l'ancienne capitale, les dirigeants insulaires tendent leurs documents au Secrétaire général de l'ONU en liaison holographique avec New York. Dans les rues numériques de cent villes régénératives, des veillées silencieuses accompagnent le moment. Le juriste malaisien Azrul Haffiz décrit l'événement comme « la nuit où le droit international a dû s'agenouiller devant l'océan ».
+consequences: >
+  La Déclaration de Fond ouvre une brèche juridique durable dans le droit international : d'autres États côtiers vulnérables — Bangladesh, Maldives, delta du Nil — commencent à préparer des cadres de souveraineté post-territoriale d'urgence, légitimés par le précédent onusien. Le Parlement des Territoires intègre formellement le Pacifique Sud Resilience Network comme membre à part entière dès 2041, forçant une refonte du Traité de Nairobi pour inclure les entités sans territoire fixe. À long terme, la notion même d'organisation_territoires est redéfinie : le territoire devient un attribut contingent et non constitutif de la souveraineté.
+realisation: >
+  Dans le monde de new_sustainability, la submersion de l'île principale de Tuvalu en octobre 2039 n'arrive pas comme une catastrophe non anticipée mais comme l'aboutissement tragique et prévu d'une trajectoire documentée depuis des décennies. Grâce aux données de l'AMMC et à la préparation institutionnelle menée depuis les années 2030, les gouvernements insulaires ont eu le temps de préparer leur transition vers une plateforme flottante modulaire ancrée en eaux internationales. L'ONU, dans une session extraordinaire largement facilitée par le cadre multilatéral renforcé des années 2030-2039, reconnaît formellement Tuvalu comme État post-territorial. Le Pacifique Sud Resilience Network, déjà en gestation depuis 2035, se constitue officiellement en confédération maritime souveraine lors de cette cérémonie fondatrice. La gouvernance hybride humain-IA du nouveau cadre juridique est négociée avec l'appui du Conseil Mondial de l'IA Régénérative.
+impact_sur_variables:
+  - variable: gouvernance_institutions
+    delta_level: 8
+    duree: 30
+    polarite: 1
+  - variable: organisation_territoires
+    delta_level: 10
+    duree: 40
+    polarite: 1
+  - variable: demographie_mobilite_humaine
+    delta_level: 7
+    duree: 25
+    polarite: 1
+  - variable: climat_environnement_global
+    delta_level: -4
+    duree: 10
+    polarite: -1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+    - pacifique_sud_resilience_network_new_sustainability
+    - assemblee_territoires_new_sustainability
+    - agence_mondiale_de_modelisation_climatique_ammc_new_sustainability
+    - conseil_regulation_algorithmique_new_sustainability
+    - programme_onusien_de_mobilite_climatique_new_sustainability
+    - collectifs_de_deplaces_climatiques_non_representes_new_sustainability
+    - parlement_deliberatif_mondial_new_sustainability
+    - le_temoin_new_sustainability
+note_coherence: Dans new_sustainability, la préparation institutionnelle préalable et la robustesse des cadres multilatéraux permettent à cet événement dramatique de devenir un moment fondateur constructif plutôt qu'une catastrophe déstabilisatrice — parfaitement cohérent avec la trajectoire de régénération et la gouvernance de niveau 90.
+custom_source: rééquilibrage_geo_2026-06
+date_creation: 2026-06-23
+---
+
+# La Fondation de Fond : Tuvalu et la Souveraineté Post-Territoriale
+
+## Réalisation dans [[new_sustainability]]
+Dans le monde de new_sustainability, la submersion de l'île principale de Tuvalu en octobre 2039 n'arrive pas comme une catastrophe non anticipée mais comme l'aboutissement tragique et prévu d'une trajectoire documentée depuis des décennies. Grâce aux données de l'AMMC et à la préparation institutionnelle menée depuis les années 2030, les gouvernements insulaires ont eu le temps de préparer leur transition vers une plateforme flottante modulaire ancrée en eaux internationales. L'ONU, dans une session extraordinaire largement facilitée par le cadre multilatéral renforcé des années 2030-2039, reconnaît formellement Tuvalu comme État post-territorial. Le Pacifique Sud Resilience Network, déjà en gestation depuis 2035, se constitue officiellement en confédération maritime souveraine lors de cette cérémonie fondatrice. La gouvernance hybride humain-IA du nouveau cadre juridique est négociée avec l'appui du Conseil Mondial de l'IA Régénérative.
+
+## Description journalistique
+Le 14 octobre 2039, alors que les derniers mètres carrés de Funafuti disparaissent sous les eaux du Pacifique, les délégués de Tuvalu, Kiribati et des Îles Marshall signent la Déclaration de Fond — un traité fondateur qui redéfinit la souveraineté comme un lien entre un peuple et son droit à l'autodétermination, et non entre un État et un sol. Depuis la plateforme flottante Moana Nui, bâtiment de 2,4 km² ancré à 180 milles nautiques de l'ancienne capitale, les dirigeants insulaires tendent leurs documents au Secrétaire général de l'ONU en liaison holographique avec New York. Dans les rues numériques de cent villes régénératives, des veillées silencieuses accompagnent le moment. Le juriste malaisien Azrul Haffiz décrit l'événement comme « la nuit où le droit international a dû s'agenouiller devant l'océan ».
+
+## Conséquences
+La Déclaration de Fond ouvre une brèche juridique durable dans le droit international : d'autres États côtiers vulnérables — Bangladesh, Maldives, delta du Nil — commencent à préparer des cadres de souveraineté post-territoriale d'urgence, légitimés par le précédent onusien. Le Parlement des Territoires intègre formellement le Pacifique Sud Resilience Network comme membre à part entière dès 2041, forçant une refonte du Traité de Nairobi pour inclure les entités sans territoire fixe. À long terme, la notion même d'organisation_territoires est redéfinie : le territoire devient un attribut contingent et non constitutif de la souveraineté.
+
+## Impact sur les variables
+- **gouvernance_institutions** : delta +8 sur 30 ans
+- **organisation_territoires** : delta +10 sur 40 ans
+- **demographie_mobilite_humaine** : delta +7 sur 25 ans
+- **climat_environnement_global** : delta +4 sur 10 ans
+
+## Acteurs impliqués
+- [[pacifique_sud_resilience_network_new_sustainability]]
+- [[assemblee_territoires_new_sustainability]]
+- [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]]
+- [[conseil_regulation_algorithmique_new_sustainability]]
+- [[programme_onusien_de_mobilite_climatique_new_sustainability]]
+- [[collectifs_de_deplaces_climatiques_non_representes_new_sustainability]]
+- [[parlement_deliberatif_mondial_new_sustainability]]
+- [[le_temoin_new_sustainability]]
+
+## Note de cohérence
+Dans new_sustainability, la préparation institutionnelle préalable et la robustesse des cadres multilatéraux permettent à cet événement dramatique de devenir un moment fondateur constructif plutôt qu'une catastrophe déstabilisatrice — parfaitement cohérent avec la trajectoire de régénération et la gouvernance de niveau 90.

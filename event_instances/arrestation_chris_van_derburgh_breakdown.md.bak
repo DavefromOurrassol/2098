@@ -1,0 +1,74 @@
+---
+name: L'Arrestation de Van Derburgh par la Milice de Detroit-Sud
+type: event_instance
+slug: arrestation_chris_van_derburgh_breakdown
+archetype: arrestation_chris_van_derburgh
+scenario: breakdown
+type_evenement: political_social
+portee: locale
+date: 2078
+date_label: été 2078
+impossible: false
+custom: true
+description: >
+  Chris van Derburgh, 67 ans, collecteur de déchets technologiques dans
+  la zone de Detroit-Sud, est arrêté par la milice locale en été 2078.
+  Il possède une cache de dispositifs datant de 2024-2027 — batteries,
+  processeurs, câbles — objets de valeur dans une économie de récupération.
+  La milice l'accuse de "hoarding stratégique" — thésaurisation de
+  ressources vitales. Il n'existe pas de cadre légal clair pour ce crime.
+consequences: >
+  Van Derburgh est retenu 40 jours avant d'être relâché contre la cession
+  de 60% de sa cache. L'incident est documenté par Le Signal sur les réseaux
+  mesh. Il illustre comment dans les zones de collapse, la possession
+  d'objets du passé est devenue une question de survie et de pouvoir.
+realisation: >
+  Dans breakdown, il n'y a pas de loi sur le patrimoine — il y a des
+  rapports de force. L'arrestation de Van Derburgh est une transaction
+  de pouvoir déguisée en procédure, dans un monde où la légalité n'existe
+  plus vraiment.
+impact_sur_variables:
+  - variable: gouvernance_institutions
+    delta_level: 1
+    duree: 5
+    polarite: -1
+  - variable: valeurs_culture_tempo_sociale
+    delta_level: 1
+    duree: 8
+    polarite: -1
+propagation:
+  via_matrice: false
+acteurs_impliques:
+  - le_temoin_breakdown
+note_coherence: >
+  Impact quasi nul sur les variables — événement micro-local dans un monde
+  déjà en effondrement. Sa valeur est narrative et illustrative du quotidien
+  dans breakdown.
+date_creation: 2098-01-01
+---
+
+# L'Arrestation de Van Derburgh par la Milice de Detroit-Sud
+
+## Réalisation dans [[breakdown]]
+Dans breakdown, il n'y a pas de loi sur le patrimoine — il y a des rapports
+de force. L'arrestation est une transaction de pouvoir déguisée en procédure.
+
+## Description journalistique
+Chris van Derburgh, 67 ans, collecteur de déchets technologiques dans
+Detroit-Sud, est arrêté par la milice locale pour "hoarding stratégique" de
+dispositifs datant de 2024-2027.
+
+## Conséquences
+Retenu 40 jours, relâché contre la cession de 60% de sa cache. Documenté
+par Le Signal sur les réseaux mesh.
+
+## Impact sur les variables
+- **gouvernance_institutions** : delta -1 sur 5 ans
+- **valeurs_culture_tempo_sociale** : delta -1 sur 8 ans
+
+## Acteurs impliqués
+- [[le_temoin_breakdown]]
+
+## Note de cohérence
+Impact quasi nul — événement micro-local. Valeur narrative et illustrative
+du quotidien dans breakdown.

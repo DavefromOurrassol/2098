@@ -1,0 +1,97 @@
+---
+name: Pacte des Souverains — Ce qui en reste
+type: instance
+slug: alliance_blocs_souverains_breakdown
+entite: alliance_blocs_souverains
+scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
+
+type_dans_scenario: institution
+
+role_dans_scenario: >
+  L'Alliance des Blocs Souverains, fondée sur la promesse d'un ordre stable par la séparation, s'est fracassée contre les réalités du breakdown. Ce qui subsiste en 2098 est un résidu institutionnel — une série de pactes bilatéraux militaro-énergétiques en décomposition, disputés entre factions internes et États membres qui renient leurs engagements dès que leurs intérêts divergent. L'ABS n'est plus une coalition : c'est un champ de bataille diplomatique fossilisé, où les anciens partenaires se pillent mutuellement les stocks énergétiques sous couvert de clauses contractuelles jamais honorées. Son nom est encore invoqué pour légitimer des actions unilatérales — signe que le mythe survit là où l'institution a disparu.
+
+responsabilites: >
+  Administration nominale de traités bilatéraux devenus lettres mortes, réclamations territoriales croisées entre États-membres en conflit ouvert, gestion fantôme de corridors énergétiques désormais sous contrôle militaire local. Certaines délégations régionales continuent d'émettre des décrets et des quotas que personne n'applique.
+
+impact_local: 3
+impact_systemique_global: 4
+variables_influencees:
+    - geopolitique_conflits
+    - energie_ressources_critiques
+    - organisation_territoires
+
+zone_geographique:
+    - régionale
+    - continentale
+    - globale
+
+zone_systemique:
+    - gouvernance
+    - énergie
+    - sécurité
+
+alliances:
+    - milices_contractuelles_des_anciens_etats_membres_breakdown
+    - factions_energetiques_heritieres_des_pactes_abs_breakdown
+
+oppositions:
+    - reseaux_de_solidarite_horizontale_post_effondrement_breakdown
+    - cites_etats_secessionistes_breakdown
+    - front_humanitaire_d_urgence_non_affilie_breakdown
+
+type_relation_dominante: conflit
+
+annee_debut: 2026
+annee_fin: 
+
+etat_temporel: transformé
+age_historique: résiduel
+generation: forteresse
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Il n'existe plus de siège, plus de secrétariat général, plus de drapeau unifié — et pourtant, le nom 'Pacte des Souverains' s'affiche encore sur les ultimatums que se lancent mutuellement les commandants de Bloc IV et Bloc IX dans la zone du Bassin Caspien. L'Alliance des Blocs Souverains a survécu à son propre effondrement sous la forme la plus perverse qui soit : un cadre juridique fantôme que chaque belligérant invoque pour justifier l'agression, jamais pour contraindre la paix. Des archivistes de Genève-Bunker ont recensé 340 violations croisées des traités ABS enregistrées entre 2091 et 2097 — sans qu'une seule procédure d'arbitrage ait abouti. Ce que l'Alliance promettait — l'ordre par la séparation — a produit son exact contraire : la guerre de tous contre tous, habillée en droit international.
+
+signes_distinctifs: >
+  Armoiries fragmentées — le sceau original à huit blocs hexagonaux est désormais représenté brisé ou amputé selon les factions, chaque État-membre n'affichant que les segments qui lui sont favorables. Les documents officiels résiduels portent des tampons contradictoires, certains annotés à la main 'sous réserve de souveraineté locale'. Le bleu acier institutionnel est souvent recouvert de noir ou de rouge militaire dans les représentations visuelles de terrain.
+
+tensions_narratives: >
+  Qui détient la légitimité d'invoquer les traités ABS — et à quelles fins ? Des diplomates zombies continuent de négocier dans des bunkers au nom d'États qui n'existent plus, créant des droits fantômes sur des ressources bien réelles. La question de savoir si l'ABS peut être 'réactivée' divise profondément les survivants institutionnels : certains y voient le seul cadre possible pour une reconstruction par blocs, d'autres l'accusent d'être la matrice même du chaos actuel. Un conflit latent oppose les archivistes-juristes qui veulent préserver les traités comme socle normatif futur aux commandants de terrain qui veulent les effacer pour repartir de zéro.
+
+date_creation: 2026-06-15
+---
+
+# Pacte des Souverains — Ce qui en reste
+
+## Rôle dans [[breakdown]]
+L'Alliance des Blocs Souverains, fondée sur la promesse d'un ordre stable par la séparation, s'est fracassée contre les réalités du breakdown. Ce qui subsiste en 2098 est un résidu institutionnel — une série de pactes bilatéraux militaro-énergétiques en décomposition, disputés entre factions internes et États membres qui renient leurs engagements dès que leurs intérêts divergent. L'ABS n'est plus une coalition : c'est un champ de bataille diplomatique fossilisé, où les anciens partenaires se pillent mutuellement les stocks énergétiques sous couvert de clauses contractuelles jamais honorées. Son nom est encore invoqué pour légitimer des actions unilatérales — signe que le mythe survit là où l'institution a disparu.
+
+## Responsabilités
+Administration nominale de traités bilatéraux devenus lettres mortes, réclamations territoriales croisées entre États-membres en conflit ouvert, gestion fantôme de corridors énergétiques désormais sous contrôle militaire local. Certaines délégations régionales continuent d'émettre des décrets et des quotas que personne n'applique.
+
+## Variables influencées
+- [[geopolitique_conflits]]
+- [[energie_ressources_critiques]]
+- [[organisation_territoires]]
+
+## Relations
+**Alliés** : [[milices_contractuelles_des_anciens_etats_membres_breakdown]], [[factions_energetiques_heritieres_des_pactes_abs_breakdown]]
+**Opposants** : [[reseaux_de_solidarite_horizontale_post_effondrement_breakdown]], [[cites_etats_secessionistes_breakdown]], [[front_humanitaire_d_urgence_non_affilie_breakdown]]
+
+## Description journalistique
+Il n'existe plus de siège, plus de secrétariat général, plus de drapeau unifié — et pourtant, le nom 'Pacte des Souverains' s'affiche encore sur les ultimatums que se lancent mutuellement les commandants de Bloc IV et Bloc IX dans la zone du Bassin Caspien. L'Alliance des Blocs Souverains a survécu à son propre effondrement sous la forme la plus perverse qui soit : un cadre juridique fantôme que chaque belligérant invoque pour justifier l'agression, jamais pour contraindre la paix. Des archivistes de Genève-Bunker ont recensé 340 violations croisées des traités ABS enregistrées entre 2091 et 2097 — sans qu'une seule procédure d'arbitrage ait abouti. Ce que l'Alliance promettait — l'ordre par la séparation — a produit son exact contraire : la guerre de tous contre tous, habillée en droit international.
+
+## Tensions narratives
+Qui détient la légitimité d'invoquer les traités ABS — et à quelles fins ? Des diplomates zombies continuent de négocier dans des bunkers au nom d'États qui n'existent plus, créant des droits fantômes sur des ressources bien réelles. La question de savoir si l'ABS peut être 'réactivée' divise profondément les survivants institutionnels : certains y voient le seul cadre possible pour une reconstruction par blocs, d'autres l'accusent d'être la matrice même du chaos actuel. Un conflit latent oppose les archivistes-juristes qui veulent préserver les traités comme socle normatif futur aux commandants de terrain qui veulent les effacer pour repartir de zéro.

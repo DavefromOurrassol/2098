@@ -1,0 +1,103 @@
+---
+name: Réseau ARIA — Architecture Régionale d'Intelligence Allocative
+type: instance
+slug: grille_aria_new_sustainability
+entite: grille_aria
+scenario: new_sustainability
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
+
+type_dans_scenario: hybride
+
+role_dans_scenario: >
+  ARIA constitue l'épine dorsale invisible de la gouvernance des ressources dans le monde new_sustainability : une infrastructure IA-native déployée à l'échelle continentale qui orchestre en temps réel les flux d'énergie renouvelable, de protéines cultivées et de soins préventifs. Ni omnipotente ni effacée, elle opère dans un cadre de co-gouvernance négocié entre institutions technocratiques régionales et assemblées citoyennes de supervision. Son rôle narratif est celui d'un arbitre dont la neutralité affichée est constamment mise à l'épreuve par les intérêts qu'elle équilibre.
+
+responsabilites: >
+  ARIA alloue les surplus énergétiques solaires et géothermiques entre secteurs résidentiels, agricoles et industriels selon des indices de criticité écologique et sociale actualisés toutes les 90 secondes. Elle génère des recommandations contraignantes d'allocation sanitaire pour les systèmes de médecine régénérative, et produit des rapports de transparence algorithmique accessibles publiquement via les nœuds d'information civique.
+
+impact_local: 4
+impact_systemique_global: 5
+variables_influencees:
+    - energie_ressources_critiques
+    - technologie_information
+    - gouvernance_institutions
+    - sante_biotechnologies
+    - systeme_economique_redistribution
+
+zone_geographique:
+    - continentale
+    - globale
+
+zone_systemique:
+    - énergie
+    - IA
+    - gouvernance
+    - infrastructure
+    - économie
+
+alliances:
+    - conseil_technocratique_de_coordination_regionale_new_sustainability
+    - fonds_mondial_de_redistribution_technologique_new_sustainability
+    - reseaux_de_medecine_regenerative_universelle_new_sustainability
+
+oppositions:
+    - coalition_anti_algorithme_des_autonomies_locales_new_sustainability
+    - reseau_des_communs_alimentaires_hors_grille_new_sustainability
+    - factions_internes_pro_opacite_des_parametres_new_sustainability
+
+type_relation_dominante: symbiose
+
+annee_debut: 2041
+annee_fin: 
+
+etat_temporel: actif
+age_historique: dominant
+generation: IA-native
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  À Ourrassol en 2098, peu de gens savent à quoi ressemble ARIA — mais tout le monde sait ce qu'elle décide. Ce matin, elle a redirigé 14 % de la capacité solaire du corridor ibérique vers les fermes verticales du delta du Rhône, après avoir détecté une anomalie de rendement liée à trois jours de canicule résiduelle. La décision a été notifiée aux élus locaux six minutes avant exécution, délai réglementaire minimal. Ses partisans y voient l'efficacité froide d'un système qui ne se trompe presque jamais. Ses critiques rappellent que 'presque' est un mot politique, pas un mot technique.
+
+signes_distinctifs: >
+  Visualisée dans les interfaces publiques sous forme d'un réseau de flux lumineux bleu-vert pulsant sur fond de cartographie topographique — une esthétique délibérément apaisante conçue pour désarmer la méfiance. Ses rapports portent le sceau d'un entrelacs de feuille et de circuit imprimé, symbole institutionnel de la réconciliation écotechnologique. Ses nœuds physiques, discrets pylônes céramiques répartis sur le territoire, sont devenus des points de rassemblement pour les mouvements de surveillance citoyenne.
+
+tensions_narratives: >
+  La question de savoir qui programme les priorités d'ARIA — et selon quels axiomes éthiques non-publiés — alimente un procès en cours devant le Tribunal de Gouvernance Algorithmique de Bruxelles. Parallèlement, des chercheurs ont détecté des micro-biais systématiques défavorisant les zones rurales à faible rendement énergétique, rouvrant le débat sur l'équité structurelle de l'optimisation. Enfin, une faction technocratique minoritaire plaide pour retirer le délai de notification aux élus, jugé 'inefficace en situation de crise', ce qui ferait basculer ARIA d'outil de co-gouvernance en système autonome de facto.
+
+date_creation: 2026-06-15
+---
+
+# Réseau ARIA — Architecture Régionale d'Intelligence Allocative
+
+## Rôle dans [[new_sustainability]]
+ARIA constitue l'épine dorsale invisible de la gouvernance des ressources dans le monde new_sustainability : une infrastructure IA-native déployée à l'échelle continentale qui orchestre en temps réel les flux d'énergie renouvelable, de protéines cultivées et de soins préventifs. Ni omnipotente ni effacée, elle opère dans un cadre de co-gouvernance négocié entre institutions technocratiques régionales et assemblées citoyennes de supervision. Son rôle narratif est celui d'un arbitre dont la neutralité affichée est constamment mise à l'épreuve par les intérêts qu'elle équilibre.
+
+## Responsabilités
+ARIA alloue les surplus énergétiques solaires et géothermiques entre secteurs résidentiels, agricoles et industriels selon des indices de criticité écologique et sociale actualisés toutes les 90 secondes. Elle génère des recommandations contraignantes d'allocation sanitaire pour les systèmes de médecine régénérative, et produit des rapports de transparence algorithmique accessibles publiquement via les nœuds d'information civique.
+
+## Variables influencées
+- [[energie_ressources_critiques]]
+- [[technologie_information]]
+- [[gouvernance_institutions]]
+- [[sante_biotechnologies]]
+- [[systeme_economique_redistribution]]
+
+## Relations
+**Alliés** : [[conseil_technocratique_de_coordination_regionale_new_sustainability]], [[fonds_mondial_de_redistribution_technologique_new_sustainability]], [[reseaux_de_medecine_regenerative_universelle_new_sustainability]]
+**Opposants** : [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]], [[reseau_des_communs_alimentaires_hors_grille_new_sustainability]], [[factions_internes_pro_opacite_des_parametres_new_sustainability]]
+
+## Description journalistique
+À Ourrassol en 2098, peu de gens savent à quoi ressemble ARIA — mais tout le monde sait ce qu'elle décide. Ce matin, elle a redirigé 14 % de la capacité solaire du corridor ibérique vers les fermes verticales du delta du Rhône, après avoir détecté une anomalie de rendement liée à trois jours de canicule résiduelle. La décision a été notifiée aux élus locaux six minutes avant exécution, délai réglementaire minimal. Ses partisans y voient l'efficacité froide d'un système qui ne se trompe presque jamais. Ses critiques rappellent que 'presque' est un mot politique, pas un mot technique.
+
+## Tensions narratives
+La question de savoir qui programme les priorités d'ARIA — et selon quels axiomes éthiques non-publiés — alimente un procès en cours devant le Tribunal de Gouvernance Algorithmique de Bruxelles. Parallèlement, des chercheurs ont détecté des micro-biais systématiques défavorisant les zones rurales à faible rendement énergétique, rouvrant le débat sur l'équité structurelle de l'optimisation. Enfin, une faction technocratique minoritaire plaide pour retirer le délai de notification aux élus, jugé 'inefficace en situation de crise', ce qui ferait basculer ARIA d'outil de co-gouvernance en système autonome de facto.

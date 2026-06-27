@@ -1,0 +1,848 @@
+queue:
+- nom: Almaty Zone Friction
+  category: territoire
+  role: Zone tampon surveillée aux abords d'Almaty, marquant la frontière entre l'enclave
+    climatisée des élites et les quartiers périphériques non protégés. Ce territoire
+    de friction concentre les checkpoints biométriques, les tensions sociales et les
+    flux migratoires bloqués par les murs de la forteresse kazakhe. Il est le théâtre
+    permanent de négociations clandestines et d'incidents sécuritaires.
+  etat: actif
+  scenario_ref: fortress_world
+  scenario_hint:
+  - fortress_world
+  source: phantom_enrich_minimal_2026-06-27
+  _slug_fantome_original: almaty_zone_friction_fortress_world
+  _slug_corrige: almaty_zone_friction_fortress_world
+  _mentions: 1
+- nom: Amazonie Consortium Viva
+  category: corporation
+  role: Consortium privé regroupant des intérêts agro-industriels et biotechnologiques
+    opérant dans le bassin amazonien dans un contexte de fragmentation réglementaire
+    mondiale. Viva exploite les zones grises juridiques entre États affaiblis pour
+    extraire et breveter des ressources génétiques forestières. Sa gouvernance actionnariale
+    diffuse le rend difficile à réguler ou à contraindre diplomatiquement.
+  etat: actif
+  scenario_ref: reference
+  scenario_hint:
+  - reference
+  source: phantom_enrich_minimal_2026-06-27
+  _slug_fantome_original: amazonie_consortium_viva_reference
+  _slug_corrige: amazonie_consortium_viva_reference
+  _mentions: 1
+- nom: Arctique Nordark
+  category: territoire
+  role: Territoire arctique rebaptisé Nordark après l'effondrement des souverainetés
+    étatiques circumpolaires, désormais disputé entre factions locales de survivants
+    et groupes d'extraction opportunistes. Ses ressources souterraines, rendues accessibles
+    par la fonte du pergélisol, en font un enjeu stratégique dans un monde sans gouvernance
+    globale. Les communautés qui s'y sont installées vivent en autarcie précaire,
+    loin de toute autorité centrale.
+  etat: actif
+  scenario_ref: breakdown
+  scenario_hint:
+  - breakdown
+  source: phantom_enrich_minimal_2026-06-27
+  _slug_fantome_original: arctique_nordark_breakdown
+  _slug_corrige: arctique_nordark_breakdown
+  _mentions: 1
+- nom: Communes Rust Belt
+  category: territoire
+  role: Ensemble de micro-territoires autogérés émergés des anciennes zones industrielles
+    désindustrialisées du Midwest américain. Après l'effondrement des structures étatiques
+    fédérales, ces communes organisent la survie locale autour de ressources partagées
+    et de milices civiles. Elles constituent des nœuds de résistance fragmentés face
+    à la désintégration géopolitique.
+  etat: actif
+  scenario_ref: breakdown
+  scenario_hint:
+  - breakdown
+  source: phantom_enrich_minimal_2026-06-27
+  _slug_fantome_original: communes_rust_belt_breakdown
+  _slug_corrige: communes_rust_belt_breakdown
+  _mentions: 7
+- nom: Communes Rust Belt Zones Libres
+  category: territoire
+  role: Zones échappant à tout contrôle institutionnel résiduel, déclarées libres
+    par leurs habitants à la suite des effondrements successifs des années 2080. Elles
+    fonctionnent comme des espaces d'expérimentation radicale où coexistent troc,
+    justice communautaire et exclusion des anciens appareils étatiques. Leur légitimité
+    repose uniquement sur la capacité à assurer la survie collective.
+  etat: clandestin
+  scenario_ref: breakdown
+  scenario_hint:
+  - breakdown
+  source: phantom_enrich_minimal_2026-06-27
+  _slug_fantome_original: communes_rust_belt_zones_libres_breakdown
+  _slug_corrige: communes_rust_belt_zones_libres_breakdown
+  _mentions: 3
+- nom: Corridor Arctique Nordique
+  category: territoire
+  role: Le Corridor Arctique Nordique est une voie de transit stratégique reliant
+    les États scandinaves aux territoires sibériens dégelés, ouverte par la fonte
+    des glaces. Dans un monde fragmenté, il constitue l'un des rares axes logistiques
+    encore fonctionnels mais disputé entre puissances régionales concurrentes. Son
+    contrôle partiel alterne entre consortiums privés et États affaiblis incapables
+    d'en imposer une gouvernance unifiée.
+  etat: actif
+  scenario_ref: reference
+  scenario_hint:
+  - reference
+  source: phantom_enrich_minimal_2026-06-27
+  _slug_fantome_original: corridor_arctique_nordique_reference
+  _slug_corrige: corridor_arctique_nordique_reference
+  _mentions: 2
+- nom: Corridor Lithium Bouches
+  category: territoire
+  role: Le Corridor Lithium Bouches désigne une zone d'extraction et de convoyage
+    du lithium sud-américain dont les institutions de régulation se sont effondrées,
+    laissant place à des milices locales et des seigneurs de guerre miniers. Les flux
+    d'approvisionnement y sont erratiques, négociés au cas par cas entre communautés
+    survivantes et acheteurs étrangers désespérés. Ce territoire morcelé représente
+    un enjeu vital pour quiconque cherche encore à alimenter des batteries ou des
+    systèmes énergétiques.
+  etat: actif
+  scenario_ref: breakdown
+  scenario_hint:
+  - breakdown
+  source: phantom_enrich_minimal_2026-06-27
+  _slug_fantome_original: corridor_lithium_bouches_breakdown
+  _slug_corrige: corridor_lithium_bouches_breakdown
+  _mentions: 2
+- nom: Corridors Eurasiens Convoyage
+  category: territoire
+  role: Les Corridors Eurasiens Convoyage sont un réseau de routes terrestres et fluviales
+    autrefois coordonnées par des accords interétatiques, désormais géré par des convois
+    armés indépendants faisant transiter marchandises et réfugiés. Chaque segment
+    du corridor est contrôlé par une faction différente, rendant tout transit long
+    une négociation permanente et périlleuse. Ils constituent la colonne vertébrale
+    informelle d'une économie de survie eurasienne post-institutionnelle.
+  etat: actif
+  scenario_ref: breakdown
+  scenario_hint:
+  - breakdown
+  source: phantom_enrich_minimal_2026-06-27
+  _slug_fantome_original: corridors_eurasiens_convoyage_breakdown
+  _slug_corrige: corridors_eurasiens_convoyage_breakdown
+  _mentions: 2
+- nom: Corridors Gris Asie Centrale
+  category: territoire
+  role: Les Corridors Gris Asie Centrale sont des zones tampons non officielles situées
+    entre les forteresses climatiques des grandes métropoles d'Asie centrale, peuplées
+    de populations non accréditées et de travailleurs clandestins. Sous surveillance
+    satellitaire permanente des forteresses adjacentes, ces espaces servent de réservoirs
+    de main-d'œuvre bon marché tolérés mais jamais reconnus. Toute organisation politique
+    y est réprimée, mais ils constituent un nœud nerveux du commerce informel régional.
+  etat: actif
+  scenario_ref: fortress_world
+  scenario_hint:
+  - fortress_world
+  source: phantom_enrich_minimal_2026-06-27
+  _slug_fantome_original: corridors_gris_asie_centrale_fortress_world
+  _slug_corrige: corridors_gris_asie_centrale_fortress_world
+  _mentions: 3
+- nom: Delta Du Gange
+  category: territoire
+  role: Territoire en crise permanente, submergé par la montée des eaux et les migrations
+    massives qu'elle génère. Le Delta du Gange cristallise les tensions entre États
+    riverains incapables de s'entendre sur un régime de gestion commune. Sa population,
+    partiellement déplacée, alimente les flux migratoires qui fracturent davantage
+    un monde déjà fragmenté.
+  etat: actif
+  scenario_ref: reference
+  scenario_hint:
+  - reference
+  source: phantom_enrich_minimal_2026-06-27
+  _slug_fantome_original: delta_du_gange
+  _slug_corrige: delta_du_gange_reference
+  _mentions: 1
+  _note: suffixe _reference ajouté automatiquement
+- nom: Delta Du Mekong
+  category: territoire
+  role: Zone de convergence des pressions climatiques, agricoles et géopolitiques
+    en Asie du Sud-Est, où plusieurs États revendiquent des droits d'exploitation
+    concurrents. Le Delta du Mekong subit l'effondrement progressif de ses écosystèmes
+    nourriciers sous l'effet combiné des barrages en amont et de la salinisation côtière.
+    Il reste un point de friction non résolu entre puissances régionales.
+  etat: actif
+  scenario_ref: reference
+  scenario_hint:
+  - reference
+  source: phantom_enrich_minimal_2026-06-27
+  _slug_fantome_original: delta_du_mekong
+  _slug_corrige: delta_du_mekong_reference
+  _mentions: 1
+  _note: suffixe _reference ajouté automatiquement
+- nom: Delta Mekong Racines
+  category: territoire
+  role: Ce qui subsiste du Delta du Mekong après l'effondrement des structures étatiques
+    est désormais géré par des collectifs locaux enracinés dans des pratiques agricoles
+    et spirituelles ancestrales. Ces communautés de survie ont rompu avec les institutions
+    défaillantes pour développer des formes d'autonomie hydrique et alimentaire fragmentées.
+    Le territoire est devenu un laboratoire improvisé de résilience locale, jalousement
+    défendu contre toute ingérence extérieure.
+  etat: actif
+  scenario_ref: breakdown
+  scenario_hint:
+  - breakdown
+  source: phantom_enrich_minimal_2026-06-27
+  _slug_fantome_original: delta_mekong_racines_breakdown
+  _slug_corrige: delta_mekong_racines_breakdown
+  _mentions: 3
+- nom: District Mourmansk Residuel
+  category: territoire
+  role: Vestige administratif de l'ancienne oblast russe de Mourmansk, maintenu sous
+    une autorité locale de fait après la désintégration des structures fédérales.
+    Il contrôle l'accès aux infrastructures portuaires arctiques dans un contexte
+    de compétition entre milices et opérateurs privés. Sa souveraineté n'est reconnue
+    par aucun État constitué.
+  etat: actif
+  scenario_ref: breakdown
+  scenario_hint:
+  - breakdown
+  source: phantom_enrich_minimal_2026-06-27
+  _slug_fantome_original: district_mourmansk_residuel_breakdown
+  _slug_corrige: district_mourmansk_residuel_breakdown
+  _mentions: 1
+- nom: Enclaves Extractivistes Et Etats Residuels
+  category: territoire
+  role: Ensemble hétérogène de zones extractives et d'États-coquilles persistant en
+    marge des communautés autogérées, exploitant des ressources que les collectifs
+    éco-communalistes refusent de mobiliser. Ils constituent un pôle de tension permanent
+    avec les réseaux décroissants, attirant main-d'œuvre précaire et capitaux résiduels.
+    Leur existence est tolérée de fait, mais moralement condamnée par les assemblées
+    locales.
+  etat: actif
+  scenario_ref: eco_communalism
+  scenario_hint:
+  - eco_communalism
+  source: phantom_enrich_minimal_2026-06-27
+  _slug_fantome_original: enclaves_extractivistes_et_etats_residuels_eco_communalism
+  _slug_corrige: enclaves_extractivistes_et_etats_residuels_eco_communalism
+  _mentions: 3
+- nom: Enclaves Finlandaises
+  category: territoire
+  role: Territoires semi-autonomes issus de la fragmentation de l'État finlandais,
+    organisés autour de réseaux de villes moyennes et de coopératives de survie nordiques.
+    Chaque enclave gère localement ses ressources énergétiques et alimentaires, sans
+    coordination centrale stable. Elles entretiennent des relations pragmatiques et
+    méfiantes avec les puissances arctiques voisines.
+  etat: actif
+  scenario_ref: breakdown
+  scenario_hint:
+  - breakdown
+  source: phantom_enrich_minimal_2026-06-27
+  _slug_fantome_original: enclaves_finlandaises_breakdown
+  _slug_corrige: enclaves_finlandaises_breakdown
+  _mentions: 1
+- nom: Massif Central Cicatrices Vertes
+  category: territoire
+  role: Territoire fragmenté du Massif Central français, marqué par des décennies
+    de reforestation chaotique et de reconquête végétale sur des terres agricoles
+    abandonnées après l'effondrement des circuits alimentaires nationaux. Des communautés
+    autonomes s'y sont établies, vivant en autarcie partielle et gérant collectivement
+    des ressources forestières disputées. Ces 'cicatrices vertes' sont à la fois refuge
+    et enjeu de conflits fonciers entre clans locaux.
+  etat: actif
+  scenario_ref: breakdown
+  scenario_hint:
+  - breakdown
+  source: phantom_enrich_minimal_2026-06-27
+  _slug_fantome_original: massif_central_cicatrices_vertes_breakdown
+  _slug_corrige: massif_central_cicatrices_vertes_breakdown
+  _mentions: 3
+- nom: Murmansk Transit Arctique
+  category: territoire
+  role: Plaque tournante stratégique du trafic maritime et énergétique arctique, Murmansk
+    s'est imposée comme nœud incontournable des nouvelles routes commerciales ouvertes
+    par la fonte des glaces polaires. Le territoire est administré par un consortium
+    russo-scandinave fragile, soumis aux pressions concurrentes des puissances cherchant
+    à contrôler le passage du Nord-Est. Sa position géopolitique en fait un terrain
+    de négociations permanentes et de tensions sourdes entre acteurs étatiques et
+    corporatifs.
+  etat: actif
+  scenario_ref: reference
+  scenario_hint:
+  - reference
+  source: phantom_enrich_minimal_2026-06-27
+  _slug_fantome_original: murmansk_transit_arctique_reference
+  _slug_corrige: murmansk_transit_arctique_reference
+  _mentions: 1
+- nom: Rust Belt Communes Libres
+  category: territoire
+  role: Ensemble de communes autogérées établies dans les anciennes zones industrielles
+    désindustrialisées de l'Amérique du Nord, les Rust Belt Communes Libres survivent
+    en marge des forteresses climatiques sécurisées. Refusant la soumission aux enclaves
+    surveillées des élites, elles constituent des espaces de résistance précaires
+    mais organisés, vivant de récupération, de troc et d'entraide dans un environnement
+    hostile.
+  etat: clandestin
+  scenario_ref: fortress_world
+  scenario_hint:
+  - fortress_world
+  source: phantom_enrich_minimal_2026-06-27
+  _slug_fantome_original: rust_belt_communes_libres_fortress_world
+  _slug_corrige: rust_belt_communes_libres_fortress_world
+  _mentions: 17
+- nom: Rust Belt Communes Libres
+  category: territoire
+  role: Ensemble de communes autogérées établies dans les anciennes zones industrielles
+    désindustrialisées de l'Amérique du Nord, les Rust Belt Communes Libres survivent
+    en marge des forteresses climatiques sécurisées. Refusant la soumission aux enclaves
+    surveillées des élites, elles constituent des espaces de résistance précaires
+    mais organisés, vivant de récupération, de troc et d'entraide dans un environnement
+    hostile.
+  etat: clandestin
+  scenario_ref: fortress_world
+  scenario_hint:
+  - fortress_world
+  source: phantom_enrich_minimal_2026-06-27
+  _slug_fantome_original: rust_belt_communes_libres
+  _slug_corrige: rust_belt_communes_libres_fortress_world
+  _mentions: 1
+  _note: suffixe _fortress_world ajouté automatiquement
+- nom: Tbilissi Nord Zone Franche
+  category: territoire
+  role: Enclave urbaine fortifiée au nord de Tbilissi, la Zone Franche s'est transformée
+    en territoire-forteresse géré par un consortium privé de sécurité climatique.
+    Elle abrite les élites caucasiennes et les expatriés fortunés derrière des murs
+    thermiques et des systèmes de surveillance biométrique, tandis que les zones périphériques
+    sont laissées à la dégradation environnementale.
+  etat: actif
+  scenario_ref: fortress_world
+  scenario_hint:
+  - fortress_world
+  source: phantom_enrich_minimal_2026-06-27
+  _slug_fantome_original: tbilissi_nord_zone_franche_fortress_world
+  _slug_corrige: tbilissi_nord_zone_franche_fortress_world
+  _mentions: 1
+- nom: Tresse Verte Corridor
+  category: territoire
+  role: Corridor écologique reliant plusieurs communautés autonomes d'Europe centrale,
+    la Tresse Verte Corridor est un réseau de zones habitées en permaculture et en
+    autosuffisance énergétique. Elle fonctionne comme un espace de transit et d'échange
+    entre villages décroissants, refusant tout découpage administratif étatique.
+  etat: actif
+  scenario_ref: eco_communalism
+  scenario_hint:
+  - eco_communalism
+  source: phantom_enrich_minimal_2026-06-27
+  _slug_fantome_original: tresse_verte_corridor_eco_communalism
+  _slug_corrige: tresse_verte_corridor_eco_communalism
+  _mentions: 1
+- nom: Vallee Allier Terrafond
+  category: territoire
+  role: Territoire semi-rural de la vallée de l'Allier reconstitué autour d'un fonds
+    foncier collectif dit Terrafond, gérant les terres arables et les ressources en
+    eau après l'effondrement des structures propriétaires classiques. Dans un contexte
+    de fragmentation institutionnelle, ce territoire fait figure de modèle précaire
+    de gouvernance locale de survie, constamment sous pression de factions extérieures.
+  etat: actif
+  scenario_ref: breakdown
+  scenario_hint:
+  - breakdown
+  source: phantom_enrich_minimal_2026-06-27
+  _slug_fantome_original: vallee_allier_terrafond_breakdown
+  _slug_corrige: vallee_allier_terrafond_breakdown
+  _mentions: 1
+- nom: Zone Usines Forteresses Eurasie
+  category: territoire
+  role: Vaste corridor industriel eurasiatique enclavé derrière des infrastructures
+    de protection climatique et sécuritaire, produisant pour les forteresses riches
+    tout en maintenant ses travailleurs sous surveillance biométrique permanente.
+    Ces zones fonctionnent comme des prisons productives, juridiquement séparées des
+    cités protégées qu'elles alimentent. Elles sont administrées par des consortiums
+    privés sous mandat des blocs forteresses.
+  etat: actif
+  scenario_ref: fortress_world
+  scenario_hint:
+  - fortress_world
+  source: phantom_enrich_minimal_2026-06-27
+  _slug_fantome_original: zone_usines_forteresses_eurasie_fortress_world
+  _slug_corrige: zone_usines_forteresses_eurasie_fortress_world
+  _mentions: 2
+- nom: Zones Extractivistes Corridors
+  category: territoire
+  role: Anciens territoires d'extraction minière et énergétique progressivement reconvertis
+    en corridors de transit écologique par des coalitions communautaires. Ces zones
+    servent de liens entre communautés autonomes qui refusent la logique des flux
+    globaux et privilégient les circuits courts. Leur statut est disputé entre les
+    réseaux communalistes qui les revendiquent et les anciennes multinationales qui
+    y détiennent encore des titres fonciers.
+  etat: transformé
+  scenario_ref: eco_communalism
+  scenario_hint:
+  - eco_communalism
+  source: phantom_enrich_minimal_2026-06-27
+  _slug_fantome_original: zones_extractivistes_corridors_eco_communalism
+  _slug_corrige: zones_extractivistes_corridors_eco_communalism
+  _mentions: 2
+- nom: Zones Grises Globales
+  category: territoire
+  role: Espaces territoriaux non gouvernés ou sous-gouvernés, ni intégrés aux blocs
+    régionaux ni totalement abandonnés, où coexistent économies parallèles, milices
+    locales et populations déplacées. Ils constituent les marges du système mondial
+    fragmenté, échappant aux régulations sans bénéficier d'aucune protection. Ces
+    zones sont à la fois des soupapes de pression sociale et des foyers de tensions
+    non résolues.
+  etat: actif
+  scenario_ref: reference
+  scenario_hint:
+  - reference
+  source: phantom_enrich_minimal_2026-06-27
+  _slug_fantome_original: zones_grises_globales
+  _slug_corrige: zones_grises_globales_reference
+  _mentions: 1
+  _note: suffixe _reference ajouté automatiquement
+- nom: Zones Grises Tampons
+  category: territoire
+  role: 'Territoires-tampons maintenus délibérément dans un état de flou juridique
+    et infrastructurel entre les forteresses climatiques et les zones d''exclusion.
+    Ils servent de sas de contrôle, de réservoirs de main-d''œuvre précaire et de
+    zones d''absorption des flux migratoires que les forteresses ne veulent ni accueillir
+    ni laisser périr visiblement. Leur population est soumise à une surveillance asymétrique
+    : observable depuis les forteresses, mais sans recours institutionnel.'
+  etat: actif
+  scenario_ref: fortress_world
+  scenario_hint:
+  - fortress_world
+  source: phantom_enrich_minimal_2026-06-27
+  _slug_fantome_original: zones_grises_tampons_fortress_world
+  _slug_corrige: zones_grises_tampons_fortress_world
+  _mentions: 4
+- nom: Almaty Zone Friction
+  category: territoire
+  role: Zone tampon fortifiée autour d'Almaty, transformée en corridor de friction
+    entre enclaves climatiques riches et territoires exclus. Elle concentre des checkpoints
+    de surveillance biométrique et des murs mobiles régulant les flux migratoires
+    selon des quotas environnementaux stricts. Son administration est disputée entre
+    consortiums privés de sécurité et autorités kazakhes résiduelles.
+  etat: actif
+  scenario_ref: fortress_world
+  scenario_hint:
+  - fortress_world
+  source: phantom_validate_2026-06-27
+  _slug_fantome_original: almaty_zone_friction_fortress_world
+  _slug_corrige: almaty_zone_friction_fortress_world
+  _mentions: 1
+  _source: validate
+- nom: Amazonie Consortium Viva
+  category: corporation
+  role: Consortium agro-industriel opérant sur les derniers massifs forestiers amazoniens
+    partiellement préservés, exploitant des brevets de séquestration carbone et de
+    biomasse synthétique. Il navigue entre pressions réglementaires fragmentées et
+    intérêts d'actionnaires dispersés sur plusieurs blocs géopolitiques rivaux. Sa
+    stratégie repose sur l'ambiguïté juridique persistante autour de la souveraineté
+    territoriale amazonienne.
+  etat: actif
+  scenario_ref: reference
+  scenario_hint:
+  - reference
+  source: phantom_validate_2026-06-27
+  _slug_fantome_original: amazonie_consortium_viva_reference
+  _slug_corrige: amazonie_consortium_viva_reference
+  _mentions: 1
+  _source: validate
+- nom: Arctique Nordark
+  category: territoire
+  role: Territoire arctique recomposé après la fonte des glaces, devenu un espace
+    de survie locale fragmenté entre communautés autochtones reorganisées, prospecteurs
+    indépendants et micro-États issus de l'effondrement des puissances circumpolaires.
+    L'absence d'autorité centrale en fait un laboratoire chaotique de gouvernances
+    alternatives et de conflits de ressources non régulés. Nordark est autant un mythe
+    de liberté radicale qu'une réalité de violence quotidienne.
+  etat: actif
+  scenario_ref: breakdown
+  scenario_hint:
+  - breakdown
+  source: phantom_validate_2026-06-27
+  _slug_fantome_original: arctique_nordark_breakdown
+  _slug_corrige: arctique_nordark_breakdown
+  _mentions: 1
+  _source: validate
+- nom: Communes Rust Belt
+  category: territoire
+  role: Ensemble de communautés autogérées émergées des ruines industrielles du Rust
+    Belt américain, ces communes ont développé des économies de subsistance locales
+    après l'effondrement des structures étatiques fédérales. Elles constituent des
+    îlots de gouvernance horizontale dans un territoire morcelé et contesté.
+  etat: actif
+  scenario_ref: breakdown
+  scenario_hint:
+  - breakdown
+  source: phantom_validate_2026-06-27
+  _slug_fantome_original: communes_rust_belt_breakdown
+  _slug_corrige: communes_rust_belt_breakdown
+  _mentions: 7
+  _source: validate
+- nom: Communes Rust Belt Zones Libres
+  category: territoire
+  role: Territoires dissidents issus des Communes du Rust Belt, les Zones Libres revendiquent
+    une autonomie radicale vis-à-vis de toute autorité extérieure, qu'elle soit étatique,
+    corporative ou milicienne. Leur existence précaire repose sur des alliances informelles
+    entre communautés et un refus assumé de toute intégration aux nouveaux blocs de
+    pouvoir régionaux.
+  etat: actif
+  scenario_ref: breakdown
+  scenario_hint:
+  - breakdown
+  source: phantom_validate_2026-06-27
+  _slug_fantome_original: communes_rust_belt_zones_libres_breakdown
+  _slug_corrige: communes_rust_belt_zones_libres_breakdown
+  _mentions: 3
+  _source: validate
+- nom: Corridor Arctique Nordique
+  category: territoire
+  role: Zone de transit stratégique longeant les côtes arctiques désormais dégelées,
+    le Corridor Arctique Nordique est disputé entre puissances scandinaves, russes
+    et canadiennes pour le contrôle des nouvelles routes maritimes. Il concentre des
+    enjeux d'extraction minière et d'acheminement énergétique dans un contexte de
+    tensions non résolues entre blocs régionaux.
+  etat: actif
+  scenario_ref: reference
+  scenario_hint:
+  - reference
+  source: phantom_validate_2026-06-27
+  _slug_fantome_original: corridor_arctique_nordique_reference
+  _slug_corrige: corridor_arctique_nordique_reference
+  _mentions: 2
+  _source: validate
+- nom: Corridor Lithium Bouches
+  category: territoire
+  role: Ancienne zone d'extraction lithifère reliant plusieurs gisements du pourtour
+    méditerranéen, le Corridor Lithium Bouches est désormais morcelé entre milices
+    locales et opérateurs privés depuis l'effondrement des autorités centrales. Son
+    contrôle représente un enjeu vital pour quiconque cherche à maintenir une production
+    énergétique autonome dans la région.
+  etat: actif
+  scenario_ref: breakdown
+  scenario_hint:
+  - breakdown
+  source: phantom_validate_2026-06-27
+  _slug_fantome_original: corridor_lithium_bouches_breakdown
+  _slug_corrige: corridor_lithium_bouches_breakdown
+  _mentions: 2
+  _source: validate
+- nom: Corridors Eurasiens Convoyage
+  category: territoire
+  role: Réseau de routes terrestres et fluviales reliant les fragments survivants
+    de l'espace eurasien, ces corridors sont désormais gérés par des convoyeurs indépendants
+    et des coalitions de survie locale. Ils constituent l'épine dorsale fragile du
+    commerce de subsistance dans un continent aux institutions effondrées.
+  etat: actif
+  scenario_ref: breakdown
+  scenario_hint:
+  - breakdown
+  source: phantom_validate_2026-06-27
+  _slug_fantome_original: corridors_eurasiens_convoyage_breakdown
+  _slug_corrige: corridors_eurasiens_convoyage_breakdown
+  _mentions: 2
+  _source: validate
+- nom: Corridors Gris Asie Centrale
+  category: territoire
+  role: Zones de passage non officielles traversant l'Asie Centrale, les Corridors
+    Gris échappent aux juridictions des forteresses climatiques et servent de voies
+    clandestines pour les populations exclues des zones protégées. Sous surveillance
+    satellite partielle, ils sont tolérés par les puissances dominantes tant qu'ils
+    ne menacent pas la sécurité des enclaves fortifiées.
+  etat: clandestin
+  scenario_ref: fortress_world
+  scenario_hint:
+  - fortress_world
+  source: phantom_validate_2026-06-27
+  _slug_fantome_original: corridors_gris_asie_centrale_fortress_world
+  _slug_corrige: corridors_gris_asie_centrale_fortress_world
+  _mentions: 3
+  _source: validate
+- nom: Delta Du Gange
+  category: territoire
+  role: Zone côtière à la confluence du Gange et du golfe du Bengale, le Delta du
+    Gange est en 2098 un territoire disputé entre Bangladesh résiduel, Inde fragmentée
+    et coalitions de réfugiés climatiques. Partiellement submergé, il reste stratégique
+    pour le contrôle des flux migratoires et des ressources halieutiques. Ses autorités
+    locales fluctuantes négocient leur survie entre puissances régionales concurrentes.
+  etat: actif
+  scenario_ref: reference
+  scenario_hint:
+  - reference
+  source: phantom_validate_2026-06-27
+  _slug_fantome_original: delta_du_gange
+  _slug_corrige: delta_du_gange_reference
+  _mentions: 1
+  _source: validate
+  _note: suffixe _reference ajouté automatiquement
+- nom: Delta Du Mekong
+  category: territoire
+  role: Carrefour fluvial d'Asie du Sud-Est, le Delta du Mékong subit en 2098 la pression
+    conjuguée de la montée des eaux, de la salinisation des rizières et des tensions
+    entre États riverains affaiblis. Fragmenté entre micro-juridictions vietnamiennes,
+    cambodgiennes et des zones grises contrôlées par des conglomérats agro-industriels,
+    il cristallise les conflits d'usage entre survie alimentaire et extraction économique.
+    Sa gouvernance est l'objet de négociations permanentes et non résolues.
+  etat: actif
+  scenario_ref: reference
+  scenario_hint:
+  - reference
+  source: phantom_validate_2026-06-27
+  _slug_fantome_original: delta_du_mekong
+  _slug_corrige: delta_du_mekong_reference
+  _mentions: 1
+  _source: validate
+  _note: suffixe _reference ajouté automatiquement
+- nom: Delta Mekong Racines
+  category: territoire
+  role: Dans le contexte d'effondrement institutionnel, Delta Mekong Racines désigne
+    les communautés paysannes et pêcheurs qui ont recomposé des formes d'autorité
+    locale à partir des savoir-faire ancestraux et des réseaux de parenté. Ce territoire
+    de facto résiste à toute intégration dans des blocs supérieurs, fonctionnant sur
+    une économie de subsistance et de troc hyper-localisé. Il est perçu comme un îlot
+    de résilience précaire dans une région par ailleurs livrée au chaos.
+  etat: actif
+  scenario_ref: breakdown
+  scenario_hint:
+  - breakdown
+  source: phantom_validate_2026-06-27
+  _slug_fantome_original: delta_mekong_racines_breakdown
+  _slug_corrige: delta_mekong_racines_breakdown
+  _mentions: 3
+  _source: validate
+- nom: District Mourmansk Residuel
+  category: territoire
+  role: Vestige administratif de l'ancienne région russe de Mourmansk, le District
+    Mourmansk Résiduel est en 2098 un territoire arctique semi-autonome survivant
+    grâce à ses infrastructures énergétiques héritées et à l'exploitation opportuniste
+    des nouvelles routes maritimes polaires. Son autorité locale, hybride entre anciens
+    fonctionnaires et milices de ressources, négocie sa survie avec des acteurs privés
+    et des puissances étrangères en l'absence de tout État central russe fonctionnel.
+    Il constitue un nœud logistique disputé dans l'Arctique post-effondrement.
+  etat: actif
+  scenario_ref: breakdown
+  scenario_hint:
+  - breakdown
+  source: phantom_validate_2026-06-27
+  _slug_fantome_original: district_mourmansk_residuel_breakdown
+  _slug_corrige: district_mourmansk_residuel_breakdown
+  _mentions: 1
+  _source: validate
+- nom: Enclaves Extractivistes Et Etats Residuels
+  category: territoire
+  role: Ces enclaves désignent les poches territoriales où des industries extractives
+    continuent d'opérer sous couvert d'États fantômes ou de structures para-étatiques
+    résiduelles, en marge des communautés éco-communalistes dominantes. Elles représentent
+    le point de friction central entre le modèle décroissant et les logiques d'accumulation
+    persistantes, alimentant des flux clandestins de matières premières vers des marchés
+    offshore. Leur existence est tolérée, combattue ou instrumentalisée selon les
+    alliances locales du moment.
+  etat: clandestin
+  scenario_ref: eco_communalism
+  scenario_hint:
+  - eco_communalism
+  source: phantom_validate_2026-06-27
+  _slug_fantome_original: enclaves_extractivistes_et_etats_residuels_eco_communalism
+  _slug_corrige: enclaves_extractivistes_et_etats_residuels_eco_communalism
+  _mentions: 3
+  _source: validate
+- nom: Enclaves Finlandaises
+  category: territoire
+  role: Archipel de zones autonomes établies dans l'ancienne Finlande après l'effondrement
+    des structures étatiques nordiques. Ces enclaves organisent leur survie collective
+    autour de ressources forestières et hydriques, constituant l'un des rares modèles
+    de gouvernance locale viable en Europe du Nord fragmentée.
+  etat: actif
+  scenario_ref: breakdown
+  scenario_hint:
+  - breakdown
+  source: phantom_validate_2026-06-27
+  _slug_fantome_original: enclaves_finlandaises_breakdown
+  _slug_corrige: enclaves_finlandaises_breakdown
+  _mentions: 1
+  _source: validate
+- nom: Massif Central Cicatrices Vertes
+  category: territoire
+  role: Zone de reforestation sauvage et de reconquête agricole autonome née des ruines
+    de l'État central français. Le Massif Central Cicatrices Vertes désigne un territoire
+    fragmenté géré par des conseils de communes rurales pratiquant l'agro-sylviculture
+    de subsistance. Ses frontières informelles sont défendues par des milices locales
+    contre les flux migratoires et les prédateurs corporatifs.
+  etat: actif
+  scenario_ref: breakdown
+  scenario_hint:
+  - breakdown
+  source: phantom_validate_2026-06-27
+  _slug_fantome_original: massif_central_cicatrices_vertes_breakdown
+  _slug_corrige: massif_central_cicatrices_vertes_breakdown
+  _mentions: 3
+  _source: validate
+- nom: Murmansk Transit Arctique
+  category: territoire
+  role: Plateforme logistique stratégique contrôlant les routes de transit maritime
+    arctique dégelées par le réchauffement climatique. Murmansk Transit Arctique est
+    un nœud commercial disputé entre intérêts russes résiduels, consortiums scandinaves
+    et opérateurs chinois. Sa position confère un pouvoir de levier considérable dans
+    les négociations sur le transport d'hydrocarbures et de minerais critiques.
+  etat: actif
+  scenario_ref: reference
+  scenario_hint:
+  - reference
+  source: phantom_validate_2026-06-27
+  _slug_fantome_original: murmansk_transit_arctique_reference
+  _slug_corrige: murmansk_transit_arctique_reference
+  _mentions: 1
+  _source: validate
+- nom: Rust Belt Communes Libres
+  category: territoire
+  role: Ensemble de municipalités désindustrialisées de l'ancienne ceinture manufacturière
+    nord-américaine, reconfiguré en réseau de communes autogérées adossées aux murs
+    de protection climatique des métropoles voisines. Les Communes Libres subsistent
+    dans les zones grises entre les forteresses, pratiquant une économie de récupération
+    et de troc hors des circuits surveillés. Tolérées mais non reconnues, elles servent
+    de soupape sociale aux populations exclues des enclaves protégées.
+  etat: actif
+  scenario_ref: fortress_world
+  scenario_hint:
+  - fortress_world
+  source: phantom_validate_2026-06-27
+  _slug_fantome_original: rust_belt_communes_libres_fortress_world
+  _slug_corrige: rust_belt_communes_libres_fortress_world
+  _mentions: 17
+  _source: validate
+- nom: Rust Belt Communes Libres
+  category: territoire
+  role: Ensemble de municipalités désindustrialisées de l'ancienne ceinture manufacturière
+    nord-américaine, reconfiguré en réseau de communes autogérées adossées aux murs
+    de protection climatique des métropoles voisines. Les Communes Libres subsistent
+    dans les zones grises entre les forteresses, pratiquant une économie de récupération
+    et de troc hors des circuits surveillés. Tolérées mais non reconnues, elles servent
+    de soupape sociale aux populations exclues des enclaves protégées.
+  etat: actif
+  scenario_ref: fortress_world
+  scenario_hint:
+  - fortress_world
+  source: phantom_validate_2026-06-27
+  _slug_fantome_original: rust_belt_communes_libres
+  _slug_corrige: rust_belt_communes_libres_fortress_world
+  _mentions: 1
+  _source: validate
+  _note: suffixe _fortress_world ajouté automatiquement
+- nom: Tbilissi Nord Zone Franche
+  category: territoire
+  role: Enclave privilégiée du Caucase septentrional, Tbilissi Nord Zone Franche est
+    une zone économique ultra-sécurisée réservée aux élites climatiques et aux corporations
+    technologiques. Ses murailles intelligentes et ses dômes climatisés la séparent
+    physiquement des faubourgs appauvris du Sud, faisant d'elle un symbole de la ségrégation
+    spatiale de 2098. Les habitants y bénéficient d'un accès garanti à l'eau potable,
+    à l'énergie propre et à une surveillance biométrique permanente présentée comme
+    un service.
+  etat: actif
+  scenario_ref: fortress_world
+  scenario_hint:
+  - fortress_world
+  source: phantom_validate_2026-06-27
+  _slug_fantome_original: tbilissi_nord_zone_franche_fortress_world
+  _slug_corrige: tbilissi_nord_zone_franche_fortress_world
+  _mentions: 1
+  _source: validate
+- nom: Tresse Verte Corridor
+  category: territoire
+  role: Le Tresse Verte Corridor est un réseau de territoires reliés par des corridors
+    écologiques aménagés, né de la fusion de plusieurs communes rurales ayant choisi
+    la décroissance volontaire et l'autonomie alimentaire. Il sert de voie d'échange
+    agricole, culturel et humain entre communautés éco-communalistes dispersées à
+    travers une région post-industrielle revegetalisée. Son gouvernance repose sur
+    des assemblées tournantes et des chartes de sobriété négociées collectivement.
+  etat: actif
+  scenario_ref: eco_communalism
+  scenario_hint:
+  - eco_communalism
+  source: phantom_validate_2026-06-27
+  _slug_fantome_original: tresse_verte_corridor_eco_communalism
+  _slug_corrige: tresse_verte_corridor_eco_communalism
+  _mentions: 1
+  _source: validate
+- nom: Vallee Allier Terrafond
+  category: territoire
+  role: La Vallée Allier Terrafond est un territoire de survie semi-organisé qui a
+    émergé dans le sillage de l'effondrement des structures étatiques françaises,
+    autour des ressources hydriques encore accessibles de la rivière Allier. Des groupes
+    locaux y ont constitué des micro-fiefs agricoles en tension permanente pour le
+    contrôle de l'eau et des terres arables. Le nom Terrafond désigne une tentative
+    avortée de fonds foncier commun, dont les statuts juridiques restent disputés
+    entre factions rivales.
+  etat: transformé
+  scenario_ref: breakdown
+  scenario_hint:
+  - breakdown
+  source: phantom_validate_2026-06-27
+  _slug_fantome_original: vallee_allier_terrafond_breakdown
+  _slug_corrige: vallee_allier_terrafond_breakdown
+  _mentions: 1
+  _source: validate
+- nom: Zone Usines Forteresses Eurasie
+  category: territoire
+  role: Vaste ensemble de complexes industriels fortifiés répartis sur le continent
+    eurasiatique, opérant sous surveillance totale et contrôle biométrique des travailleurs.
+    Ces zones-usines produisent les biens essentiels aux forteresses climatiques des
+    élites tout en maintenant une population laborieuse captive dans des corridors
+    sécurisés. Elles incarnent le modèle productiviste extrême du scénario Fortress
+    World, où la sécurité prime sur tout droit.
+  etat: actif
+  scenario_ref: fortress_world
+  scenario_hint:
+  - fortress_world
+  source: phantom_validate_2026-06-27
+  _slug_fantome_original: zone_usines_forteresses_eurasie_fortress_world
+  _slug_corrige: zone_usines_forteresses_eurasie_fortress_world
+  _mentions: 2
+  _source: validate
+- nom: Zones Extractivistes Corridors
+  category: territoire
+  role: Territoires autrefois dédiés à l'extraction intensive de ressources, progressivement
+    reconvertis par des communautés éco-communalistes en corridors de résilience écologique.
+    Des collectifs locaux y démantèlent les infrastructures extractivistes pour replanter,
+    restaurer les sols et établir des économies circulaires à courte portée. Ces zones
+    restent néanmoins disputées par des intérêts extérieurs cherchant à reprendre
+    la main sur les ressources résiduelles.
+  etat: transformé
+  scenario_ref: eco_communalism
+  scenario_hint:
+  - eco_communalism
+  source: phantom_validate_2026-06-27
+  _slug_fantome_original: zones_extractivistes_corridors_eco_communalism
+  _slug_corrige: zones_extractivistes_corridors_eco_communalism
+  _mentions: 2
+  _source: validate
+- nom: Zones Grises Globales
+  category: territoire
+  role: Espaces périphériques non gouvernés qui se multiplient dans les interstices
+    du monde fragmenté de 2098, ni intégrés aux blocs dominants ni véritablement autonomes.
+    On y trouve des populations déplacées, des économies informelles et des réseaux
+    parallèles échappant à toute régulation officielle. Ces zones grises servent à
+    la fois de soupapes sociales et de terrains fertiles pour les acteurs clandestins
+    de toutes obédiences.
+  etat: actif
+  scenario_ref: reference
+  scenario_hint:
+  - reference
+  source: phantom_validate_2026-06-27
+  _slug_fantome_original: zones_grises_globales
+  _slug_corrige: zones_grises_globales_reference
+  _mentions: 1
+  _source: validate
+  _note: suffixe _reference ajouté automatiquement
+- nom: Zones Grises Tampons
+  category: territoire
+  role: Bandes territoriales intercalées entre les forteresses climatiques sécurisées
+    et les zones de chaos extérieur, jouant un rôle d'amortisseur démographique et
+    sécuritaire. Elles accueillent des populations en attente de tri, des sous-traitants
+    de services non admis dans les forteresses et des milices privées chargées de
+    filtrer les flux migratoires. Sous surveillance partielle, elles constituent un
+    espace de négociation opaque entre les élites fortifiées et les intermédiaires
+    du monde extérieur.
+  etat: actif
+  scenario_ref: fortress_world
+  scenario_hint:
+  - fortress_world
+  source: phantom_validate_2026-06-27
+  _slug_fantome_original: zones_grises_tampons_fortress_world
+  _slug_corrige: zones_grises_tampons_fortress_world
+  _mentions: 4
+  _source: validate

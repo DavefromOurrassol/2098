@@ -1,0 +1,78 @@
+---
+name: Protocole de Médiation de La Haye — Crise Israélo-Iranienne
+type: event_instance
+slug: conflit_israel_iran_2026_policy_reform
+archetype: conflit_israel_iran_2026
+scenario: policy_reform
+localisation:
+  zone: zone_moyen_orient_golfe
+  lieu: Moyen-Orient / Golfe Persique (Israël, Iran, Kharg Island)
+  type_lieu: region
+type_evenement: political_social
+portee: globale
+date: 2027
+date_label: automne 2027
+impossible: false
+custom: true
+description: >
+  Les colonnes de fumée sur Kharg Island et les sirènes de Tel-Aviv s'éteignent presque aussi vite qu'elles s'allument. Pour la première fois dans l'histoire des conflits du Moyen-Orient, une architecture institutionnelle globale — encore fragile mais fonctionnelle — parvient à transformer un embrasement potentiellement régional en crise contenue. Les marchés pétroliers vacillent soixante-douze heures, les flux de tankers sont redirigés via des couloirs négociés, et les délégations s'envolent pour La Haye sous pression coordonnée des blocs technocratiques. La victoire est présentée comme un triomphe de la régulation multilatérale — mais le coût humain et les destructions d'infrastructures laissent une plaie béante dans la géopolitique de la région.
+consequences: >
+  Le conflit accélère paradoxalement la consolidation des institutions de gouvernance mondiale : leur capacité à stopper une guerre majeure légitime leur autorité et renforce les Protocoles de Sécurité Énergétique Régionale adoptés en 2029. Toutefois, la disruption temporaire des flux pétroliers du Golfe précipite les investissements dans les alternatives énergétiques régulées, consolidant le niveau élevé de la variable énergie. La région reste sous surveillance institutionnelle renforcée pendant deux décennies, créant un précédent de tutelle technocratique sur les conflits armés souverains.
+realisation: >
+  En 2026-2027, Israël lance des frappes ciblées sur les sites d'enrichissement iraniens, déclenchant des représailles sur les infrastructures pétrolières du Golfe. Mais contrairement aux scénarios d'escalade totale, les institutions de gouvernance mondiale — appuyées par le Conseil de Régulation des Ressources Critiques — activent en urgence un mécanisme de désescalade économique, menaçant les deux parties de sanctions sur leurs flux énergétiques régulés. Le conflit reste intense mais court : contenu en moins de quatre mois par une pression institutionnelle coordonnée sans précédent. Un cessez-le-feu technique est signé à La Haye fin 2027, sous supervision de l'ACRA pour le suivi des communications de commandement.
+impact_sur_variables:
+  - variable: geopolitique_conflits
+    delta_level: -8
+    duree: 12
+    polarite: -1
+  - variable: energie_ressources_critiques
+    delta_level: -10
+    duree: 5
+    polarite: -1
+  - variable: gouvernance_institutions
+    delta_level: 12
+    duree: 20
+    polarite: 1
+  - variable: demographie_mobilite_humaine
+    delta_level: -5
+    duree: 8
+    polarite: -1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+    - conseil_regulation_ressources_policy_reform
+    - bureau_gouvernance_algorithmique_policy_reform
+    - le_temoin_policy_reform
+    - gouvernement_israel_policy_reform
+    - republique_islamique_iran_policy_reform
+note_coherence: Dans un monde technocratique à tension 4/5 mais stable, un conflit majeur peut éclater mais être contenu par des institutions fortes (gouvernance_institutions à 80), transformant la crise en vecteur de légitimation institutionnelle plutôt qu'en effondrement systémique.
+custom_source: actualite_2026-06
+date_creation: 2026-06-17
+---
+
+# Protocole de Médiation de La Haye — Crise Israélo-Iranienne
+
+## Réalisation dans [[policy_reform]]
+En 2026-2027, Israël lance des frappes ciblées sur les sites d'enrichissement iraniens, déclenchant des représailles sur les infrastructures pétrolières du Golfe. Mais contrairement aux scénarios d'escalade totale, les institutions de gouvernance mondiale — appuyées par le Conseil de Régulation des Ressources Critiques — activent en urgence un mécanisme de désescalade économique, menaçant les deux parties de sanctions sur leurs flux énergétiques régulés. Le conflit reste intense mais court : contenu en moins de quatre mois par une pression institutionnelle coordonnée sans précédent. Un cessez-le-feu technique est signé à La Haye fin 2027, sous supervision de l'ACRA pour le suivi des communications de commandement.
+
+## Description journalistique
+Les colonnes de fumée sur Kharg Island et les sirènes de Tel-Aviv s'éteignent presque aussi vite qu'elles s'allument. Pour la première fois dans l'histoire des conflits du Moyen-Orient, une architecture institutionnelle globale — encore fragile mais fonctionnelle — parvient à transformer un embrasement potentiellement régional en crise contenue. Les marchés pétroliers vacillent soixante-douze heures, les flux de tankers sont redirigés via des couloirs négociés, et les délégations s'envolent pour La Haye sous pression coordonnée des blocs technocratiques. La victoire est présentée comme un triomphe de la régulation multilatérale — mais le coût humain et les destructions d'infrastructures laissent une plaie béante dans la géopolitique de la région.
+
+## Conséquences
+Le conflit accélère paradoxalement la consolidation des institutions de gouvernance mondiale : leur capacité à stopper une guerre majeure légitime leur autorité et renforce les Protocoles de Sécurité Énergétique Régionale adoptés en 2029. Toutefois, la disruption temporaire des flux pétroliers du Golfe précipite les investissements dans les alternatives énergétiques régulées, consolidant le niveau élevé de la variable énergie. La région reste sous surveillance institutionnelle renforcée pendant deux décennies, créant un précédent de tutelle technocratique sur les conflits armés souverains.
+
+## Impact sur les variables
+- **geopolitique_conflits** : delta +8 sur 12 ans
+- **energie_ressources_critiques** : delta +10 sur 5 ans
+- **gouvernance_institutions** : delta +12 sur 20 ans
+- **demographie_mobilite_humaine** : delta +5 sur 8 ans
+
+## Acteurs impliqués
+- [[conseil_regulation_ressources_policy_reform]]
+- [[bureau_gouvernance_algorithmique_policy_reform]]
+- [[le_temoin_policy_reform]]
+- [[gouvernement_israel_policy_reform]]
+- [[republique_islamique_iran_policy_reform]]
+
+## Note de cohérence
+Dans un monde technocratique à tension 4/5 mais stable, un conflit majeur peut éclater mais être contenu par des institutions fortes (gouvernance_institutions à 80), transformant la crise en vecteur de légitimation institutionnelle plutôt qu'en effondrement systémique.

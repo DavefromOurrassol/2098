@@ -1,0 +1,115 @@
+---
+name: Nairobi CRRC — Centre Régional de Résilience et de Coordination
+type: instance
+slug: nairobi_crrc_reference
+entite: nairobi_crrc
+scenario: reference
+localisation:
+  zone: nairobi_crrc
+  lieu: Nairobi, campus Gigiri
+  type_lieu: ville
+
+type_dans_scenario: organisation
+
+role_dans_scenario: >
+  Le Nairobi CRRC est une organisation régionale de coordination climatique et des ressources, héritière des mécanismes onusiens de résilience urbaine. Dans un monde fragmenté mais encore institutionnellement structuré, il négocie entre acteurs privés, municipalités et blocs régionaux africains pour maintenir des flux d'approvisionnement stables. Son influence reste limitée par les rivalités géopolitiques non résolues. Concrètement, il occupe la position de médiateur structurel irremplaçable : trop enchâssé dans les dépendances croisées pour être dissous, trop dépourvu de mandat souverain pour imposer ses arbitrages. Il gouverne par le fait — en contrôlant les flux d'information logistique, les tableaux de bord hydriques et les protocoles d'urgence alimentaire — sans jamais gouverner par le droit.
+
+responsabilites: >
+  Coordination des flux d'approvisionnement en eau, énergie distribuée et denrées alimentaires entre municipalités est-africaines, consortiums privés d'extraction et blocs régionaux de l'Union Africaine. Gestion des protocoles d'urgence climatique inter-acteurs, publication des tableaux de bord de résilience territoriale, et animation des négociations de crise lors des ruptures d'approvisionnement. Maintien d'un secrétariat technique neutre servant de référence commune malgré l'absence de pouvoir d'exécution formelle.
+
+impact_local: 4
+impact_systemique_global: 3
+
+variables_influencees:
+    - energie_ressources_critiques
+    - gouvernance_institutions
+    - climat_environnement_global
+    - organisation_territoires
+
+zone_geographique:
+    - régionale
+    - continentale
+
+zone_systemique:
+    - gouvernance
+    - énergie
+    - infrastructure
+    - société
+
+alliances:
+    - commission_hydrique_de_l_union_africaine_reference
+    - union_africaine_de_resilience_territoriale_reference
+    - kinshasa_accords_hydriques_reference
+    - autorites_regionales_de_regulation_hydrologique_reference
+    - gouvernements_du_bloc_sahelien_autonome_reference
+    - reseau_des_cooperatives_agro_saheliennes_reference
+    - programme_onu_eau_2080_reference
+    - agence_stabilisation_climatique_reference
+    - observatoire_climatique_des_territoires_oct_reference
+    - institutions_multilaterales_survivantes_reference
+    - ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference
+    - institut_polytechnique_de_ouagadougou_reference
+    - consortium_africain_de_biotechnologies_sociales_reference
+
+oppositions:
+    - consortiums_d_extraction_miniere_du_bassin_congolais_reference
+    - consortiums_prives_d_extraction_de_ressources_critiques_reference
+    - factions_eurasiatiques_contre_la_tarification_hydrique_reference
+    - bloc_des_souverainistes_climatiques_reference
+    - milices_concurrentes_des_droits_de_passage_reference
+    - factions_d_extraction_miniere_independantes_reference
+    - lobbies_agro_industriels_a_haute_consommation_d_eau_reference
+    - gouvernements_federaux_residuels_souverainistes_reference
+
+type_relation_dominante: dépendance
+
+annee_debut: 2031
+annee_fin: 
+
+etat_temporel: actif
+age_historique: mature
+generation: transition
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Dans les salles de réunion climatisées du campus Gigiri, à deux kilomètres de l'ancienne ambassade américaine, le Nairobi CRRC ressemble à ce qu'il est : une institution qui a survécu à ses mandataires. Fondé sur les ruines du bureau régional OCHA en 2031, après l'effondrement partiel des mécanismes onusiens de résilience, il coordonne aujourd'hui les flux d'eau potable, de gasoil agro-industriel et de semences certifiées pour une douzaine d'agglomérations est-africaines — sans qu'aucun traité ne lui reconnaisse formellement ce rôle. Ses agents de terrain, reconnaissables à leurs tablettes orange frappées du logo CRRC, circulent librement là où les diplomates sont bloqués : dans les entrepôts des consortiums miniers du Kivu, dans les salles des pompes de Mombasa, dans les marchés d'urgence de Kampala. 'On n'a pas d'armée, on a des données', résume avec une ironie amère sa directrice adjointe. C'est précisément ce monopole informationnel de fait — les tableaux de bord de flux, les alertes de rupture, les prévisions saisonnières — qui maintient l'organisation en vie malgré les tentatives récurrentes des blocs souverainistes de la contourner.
+
+signes_distinctifs: >
+  Logo aux trois anneaux entrelacés représentant eau, énergie et alimentation sur fond ocre, apposé sur les véhicules blancs à bandes orange. Secrétariat installé dans un bâtiment modulaire de béton apparent au design délibérément sobre — ni prestige diplomatique ni austérité bureaucratique — signifiant une neutralité revendiquée. Les agents de coordination portent une veste légère technique estampillée 'CRRC Nairobi' sans drapeau national, marqueur visible de leur statut apatride institutionnel.
+
+tensions_narratives: >
+  Le CRRC marche sur un fil permanent : chaque accord de coordination qu'il obtient renforce son autorité de fait mais attise la méfiance des États qui y voient une délégation de souveraineté non consentie. La montée en puissance des consortiums privés d'extraction — qui préfèrent négocier en bilatéral avec les municipalités en contournant le CRRC — menace de vider l'organisation de sa substance sans jamais la supprimer formellement. Par ailleurs, la tentation existe en interne de basculer vers un rôle plus directif, appuyé sur les outils de modélisation climatique que lui fournissent ses partenaires comme l'OCT ou l'Agence Mondiale pour la Stabilisation Climatique — ce qui l'exposerait à une réaction souverainiste violente. Sa survie à moyen terme dépend peut-être moins de sa compétence technique que de sa capacité à rester assez faible pour ne jamais menacer ceux dont il dépend.
+
+date_creation: 2026-06-27
+---
+
+# Nairobi CRRC — Centre Régional de Résilience et de Coordination
+
+## Rôle dans [[reference]]
+Le Nairobi CRRC est une organisation régionale de coordination climatique et des ressources, héritière des mécanismes onusiens de résilience urbaine. Dans un monde fragmenté mais encore institutionnellement structuré, il négocie entre acteurs privés, municipalités et blocs régionaux africains pour maintenir des flux d'approvisionnement stables. Son influence reste limitée par les rivalités géopolitiques non résolues. Concrètement, il occupe la position de médiateur structurel irremplaçable : trop enchâssé dans les dépendances croisées pour être dissous, trop dépourvu de mandat souverain pour imposer ses arbitrages. Il gouverne par le fait — en contrôlant les flux d'information logistique, les tableaux de bord hydriques et les protocoles d'urgence alimentaire — sans jamais gouverner par le droit.
+
+## Responsabilités
+Coordination des flux d'approvisionnement en eau, énergie distribuée et denrées alimentaires entre municipalités est-africaines, consortiums privés d'extraction et blocs régionaux de l'Union Africaine. Gestion des protocoles d'urgence climatique inter-acteurs, publication des tableaux de bord de résilience territoriale, et animation des négociations de crise lors des ruptures d'approvisionnement. Maintien d'un secrétariat technique neutre servant de référence commune malgré l'absence de pouvoir d'exécution formelle.
+
+## Variables influencées
+- [[energie_ressources_critiques]]
+- [[gouvernance_institutions]]
+- [[climat_environnement_global]]
+- [[organisation_territoires]]
+
+## Relations
+**Alliés** : [[commission_hydrique_de_l_union_africaine_reference]], [[union_africaine_de_resilience_territoriale_reference]], [[kinshasa_accords_hydriques_reference]], [[autorites_regionales_de_regulation_hydrologique_reference]], [[gouvernements_du_bloc_sahelien_autonome_reference]], [[reseau_des_cooperatives_agro_saheliennes_reference]], [[programme_onu_eau_2080_reference]], [[agence_stabilisation_climatique_reference]], [[observatoire_climatique_des_territoires_oct_reference]], [[institutions_multilaterales_survivantes_reference]], [[ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference]], [[institut_polytechnique_de_ouagadougou_reference]], [[consortium_africain_de_biotechnologies_sociales_reference]]
+**Opposants** : [[consortiums_d_extraction_miniere_du_bassin_congolais_reference]], [[consortiums_prives_d_extraction_de_ressources_critiques_reference]], [[factions_eurasiatiques_contre_la_tarification_hydrique_reference]], [[bloc_des_souverainistes_climatiques_reference]], [[milices_concurrentes_des_droits_de_passage_reference]], [[factions_d_extraction_miniere_independantes_reference]], [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]], [[gouvernements_federaux_residuels_souverainistes_reference]]
+
+## Description journalistique
+Dans les salles de réunion climatisées du campus Gigiri, à deux kilomètres de l'ancienne ambassade américaine, le Nairobi CRRC ressemble à ce qu'il est : une institution qui a survécu à ses mandataires. Fondé sur les ruines du bureau régional OCHA en 2031, après l'effondrement partiel des mécanismes onusiens de résilience, il coordonne aujourd'hui les flux d'eau potable, de gasoil agro-industriel et de semences certifiées pour une douzaine d'agglomérations est-africaines — sans qu'aucun traité ne lui reconnaisse formellement ce rôle. Ses agents de terrain, reconnaissables à leurs tablettes orange frappées du logo CRRC, circulent librement là où les diplomates sont bloqués : dans les entrepôts des consortiums miniers du Kivu, dans les salles des pompes de Mombasa, dans les marchés d'urgence de Kampala. 'On n'a pas d'armée, on a des données', résume avec une ironie amère sa directrice adjointe. C'est précisément ce monopole informationnel de fait — les tableaux de bord de flux, les alertes de rupture, les prévisions saisonnières — qui maintient l'organisation en vie malgré les tentatives récurrentes des blocs souverainistes de la contourner.
+
+## Tensions narratives
+Le CRRC marche sur un fil permanent : chaque accord de coordination qu'il obtient renforce son autorité de fait mais attise la méfiance des États qui y voient une délégation de souveraineté non consentie. La montée en puissance des consortiums privés d'extraction — qui préfèrent négocier en bilatéral avec les municipalités en contournant le CRRC — menace de vider l'organisation de sa substance sans jamais la supprimer formellement. Par ailleurs, la tentation existe en interne de basculer vers un rôle plus directif, appuyé sur les outils de modélisation climatique que lui fournissent ses partenaires comme l'OCT ou l'Agence Mondiale pour la Stabilisation Climatique — ce qui l'exposerait à une réaction souverainiste violente. Sa survie à moyen terme dépend peut-être moins de sa compétence technique que de sa capacité à rester assez faible pour ne jamais menacer ceux dont il dépend.

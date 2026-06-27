@@ -1,0 +1,83 @@
+---
+name: Victoire de la Coalition de Transition Sociale
+type: event_instance
+slug: election_parti_commun_americain_new_sustainability
+archetype: election_parti_commun_americain
+scenario: new_sustainability
+localisation:
+  zone: ameriques_reconfigurees
+  lieu: États-Unis
+  type_lieu: region
+type_evenement: political_social
+portee: continentale
+date: 2055
+date_label: novembre 2055
+impossible: false
+custom: true
+description: >
+  La Coalition de Transition Sociale — héritière du mouvement communiste
+  américain, reformulé dans le langage de la durabilité — remporte 52% des
+  suffrages en novembre 2055. Première présidente issue de ce courant,
+  Dr. Amara Osei-Mensah, prend ses fonctions en janvier 2056. Son programme
+  combine redistribution fiscale, transition énergétique accélérée et
+  intégration dans les accords de gouvernance mondiale.
+consequences: >
+  Accélération des réformes redistributives aux États-Unis. Renforcement
+  de la position américaine dans les institutions globales. Modèle repris
+  par plusieurs pays d'Amérique latine. Début d'une convergence progressive
+  entre les systèmes économiques nord et sud-américains.
+realisation: >
+  L'élection se déroule comme prévu et la Coalition remporte une majorité
+  nette. Dans new_sustainability, les conditions institutionnelles et culturelles
+  permettent cette victoire — le mouvement a su se reformuler dans le langage
+  des transitions durables plutôt que dans celui de la lutte des classes.
+impact_sur_variables:
+  - variable: gouvernance_institutions
+    delta_level: 8
+    duree: 30
+    polarite: 1
+  - variable: systeme_economique_redistribution
+    delta_level: 12
+    duree: 40
+    polarite: 1
+  - variable: valeurs_culture_tempo_sociale
+    delta_level: 6
+    duree: 35
+    polarite: 1
+propagation:
+  via_matrice: true
+acteurs_impliques: []
+note_coherence: >
+  Dans new_sustainability, gouvernance_institutions est à 75 et les valeurs
+  sont orientées vers la transition. Une victoire électorale de ce type est
+  cohérente et renforce les dynamiques existantes sans les contredire.
+date_creation: 2098-01-01
+---
+
+# Victoire de la Coalition de Transition Sociale
+
+## Réalisation dans [[new_sustainability]]
+L'élection se déroule comme prévu et la Coalition remporte une majorité
+nette. Dans new_sustainability, les conditions institutionnelles et culturelles
+permettent cette victoire.
+
+## Description journalistique
+La Coalition de Transition Sociale remporte 52% des suffrages en novembre 2055.
+Première présidente issue de ce courant, Dr. Amara Osei-Mensah, prend ses
+fonctions en janvier 2056 avec un programme de redistribution et de transition
+énergétique accélérée.
+
+## Conséquences
+Accélération des réformes redistributives aux États-Unis. Renforcement
+de la position américaine dans les institutions globales. Modèle repris
+par plusieurs pays d'Amérique latine.
+
+## Impact sur les variables
+- **gouvernance_institutions** : delta +8 sur 30 ans
+- **systeme_economique_redistribution** : delta +12 sur 40 ans
+- **valeurs_culture_tempo_sociale** : delta +6 sur 35 ans
+
+## Note de cohérence
+Dans new_sustainability, gouvernance_institutions est à 75 et les valeurs
+sont orientées vers la transition. Une victoire de ce type est cohérente
+et renforce les dynamiques existantes.

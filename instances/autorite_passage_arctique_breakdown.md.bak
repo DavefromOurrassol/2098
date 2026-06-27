@@ -1,0 +1,102 @@
+---
+name: Autorité du Passage Arctique — Ce qu'il en reste
+type: instance
+slug: autorite_passage_arctique_breakdown
+entite: autorite_passage_arctique
+scenario: breakdown
+
+type_dans_scenario: institution
+
+role_dans_scenario: >
+  L'Autorité du Passage Arctique était initialement une institution intergouvernementale chargée de réguler les nouvelles routes maritimes ouvertes par la fonte des glaces. Depuis l'effondrement des institutions internationales, elle survit comme une entité fragmentée, disputée entre factions régionales concurrentes qui cherchent à contrôler ces corridors stratégiques. Son autorité réelle ne s'étend plus qu'à quelques postes de contrôle isolés. Elle est devenue à la fois l'enjeu et le théâtre d'une guerre de légitimité : chaque faction qui s'en empare brandit son sceau comme preuve d'un droit à taxer, à interdire ou à ouvrir le passage — transformant le régulateur neutre en arme diplomatique et militaire.
+
+responsabilites: >
+  Les postes de contrôle encore opérationnels perçoivent des droits de transit au nom de l'Autorité, redistribués selon les loyautés locales plutôt que selon un mandat commun. Chaque fragment revendique la gestion des couloirs maritimes, impose ses propres règles de passage et tente de faire reconnaître son autorité par les convois qui transitent encore dans ces eaux.
+
+impact_local: 4
+impact_systemique_global: 3
+
+variables_influencees:
+    - geopolitique_conflits
+    - energie_ressources_critiques
+    - organisation_territoires
+    - gouvernance_institutions
+
+zone_geographique:
+    - régionale
+    - continentale
+
+zone_systemique:
+    - gouvernance
+    - énergie
+    - infrastructure
+    - sécurité
+    - économie
+
+alliances:
+    - federation_russe_residuelle_district_de_mourmansk_breakdown
+    - armada_logistique_nordique_breakdown
+    - kalaallit_nunaat_sovereign_fund_breakdown
+    - hanse_baltique_recomposee_breakdown
+    - conglometrat_sino_siberien_bohai_transit_breakdown
+
+oppositions:
+    - milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown
+    - saboteurs_des_corridors_de_transit_breakdown
+    - factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
+    - blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
+    - seigneuries_logistiques_armees_breakdown
+    - front_de_resistance_aux_peages_sur_les_ressources_breakdown
+
+type_relation_dominante: rivalité
+
+annee_debut: 2031
+annee_fin: 
+
+etat_temporel: transformé
+age_historique: résiduel
+generation: post-effondrement
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Il existe encore, quelque part entre le détroit de Béring et les eaux du Svalbard, des hommes en uniforme gris portant l'écusson bleu de l'Autorité du Passage Arctique — une ancre stylisée sur fond de calotte glaciaire fondue. Mais demandez-leur à qui ils rendent compte : les réponses divergent selon le poste de contrôle. À Mourmansk-Est, l'Autorité est une extension de facto du District résiduel russe. Au large du Groenland, elle est une franchise commerciale du Kalaallit Sovereign Fund. Dans les eaux contestées entre Islande et Norvège, elle est une coquille vide dont les deux factions revendiquent le sceau pour justifier leurs barricades flottantes. Née d'un accord de 2031 pour administrer les nouvelles routes ouvertes par le recul des glaces, l'Autorité était censée être l'ONU des mers du Nord. Elle est devenue leur champ de bataille.
+
+signes_distinctifs: >
+  Écusson bleu arctique à l'ancre stylisée sur fond de calotte glaciaire — porté par des agents dont les uniformes varient d'un poste à l'autre selon les réparations disponibles. Les postes de contrôle arborent des drapeaux délavés et des panneaux trilingues (anglais, russe, mandarin) dont certaines lignes ont été biffées ou réécrites à la main selon les nouvelles allégeances.
+
+tensions_narratives: >
+  Quel fragment de l'Autorité sera reconnu comme légitime par les grandes puissances encore capables de projeter une force navale en Arctique — et cette reconnaissance suffira-t-elle à faire plier les autres ? Les droits de transit perçus alimentent directement les budgets militaires des factions qui contrôlent les postes : l'Autorité finance sa propre décomposition. Un convoi énergétique refusant de payer les doubles péages risque le blocage ou la saisie — mais payer signifie reconnaître une légitimité que les autres factions contesteront par les armes. Et dans les archives du siège originel d'Oslo, désormais occupé par une milice nordique, dorment les actes fondateurs qui pourraient, en théorie, servir à une refondation — ou à une falsification.
+
+date_creation: 2026-06-27
+---
+
+# Autorité du Passage Arctique — Ce qu'il en reste
+
+## Rôle dans [[breakdown]]
+L'Autorité du Passage Arctique était initialement une institution intergouvernementale chargée de réguler les nouvelles routes maritimes ouvertes par la fonte des glaces. Depuis l'effondrement des institutions internationales, elle survit comme une entité fragmentée, disputée entre factions régionales concurrentes qui cherchent à contrôler ces corridors stratégiques. Son autorité réelle ne s'étend plus qu'à quelques postes de contrôle isolés. Elle est devenue à la fois l'enjeu et le théâtre d'une guerre de légitimité : chaque faction qui s'en empare brandit son sceau comme preuve d'un droit à taxer, à interdire ou à ouvrir le passage — transformant le régulateur neutre en arme diplomatique et militaire.
+
+## Responsabilités
+Les postes de contrôle encore opérationnels perçoivent des droits de transit au nom de l'Autorité, redistribués selon les loyautés locales plutôt que selon un mandat commun. Chaque fragment revendique la gestion des couloirs maritimes, impose ses propres règles de passage et tente de faire reconnaître son autorité par les convois qui transitent encore dans ces eaux.
+
+## Variables influencées
+- [[geopolitique_conflits]]
+- [[energie_ressources_critiques]]
+- [[organisation_territoires]]
+- [[gouvernance_institutions]]
+
+## Relations
+**Alliés** : [[federation_russe_residuelle_district_de_mourmansk_breakdown]], [[armada_logistique_nordique_breakdown]], [[kalaallit_nunaat_sovereign_fund_breakdown]], [[hanse_baltique_recomposee_breakdown]], [[conglometrat_sino_siberien_bohai_transit_breakdown]]
+**Opposants** : [[milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown]], [[saboteurs_des_corridors_de_transit_breakdown]], [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]], [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]], [[seigneuries_logistiques_armees_breakdown]], [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
+
+## Description journalistique
+Il existe encore, quelque part entre le détroit de Béring et les eaux du Svalbard, des hommes en uniforme gris portant l'écusson bleu de l'Autorité du Passage Arctique — une ancre stylisée sur fond de calotte glaciaire fondue. Mais demandez-leur à qui ils rendent compte : les réponses divergent selon le poste de contrôle. À Mourmansk-Est, l'Autorité est une extension de facto du District résiduel russe. Au large du Groenland, elle est une franchise commerciale du Kalaallit Sovereign Fund. Dans les eaux contestées entre Islande et Norvège, elle est une coquille vide dont les deux factions revendiquent le sceau pour justifier leurs barricades flottantes. Née d'un accord de 2031 pour administrer les nouvelles routes ouvertes par le recul des glaces, l'Autorité était censée être l'ONU des mers du Nord. Elle est devenue leur champ de bataille.
+
+## Tensions narratives
+Quel fragment de l'Autorité sera reconnu comme légitime par les grandes puissances encore capables de projeter une force navale en Arctique — et cette reconnaissance suffira-t-elle à faire plier les autres ? Les droits de transit perçus alimentent directement les budgets militaires des factions qui contrôlent les postes : l'Autorité finance sa propre décomposition. Un convoi énergétique refusant de payer les doubles péages risque le blocage ou la saisie — mais payer signifie reconnaître une légitimité que les autres factions contesteront par les armes. Et dans les archives du siège originel d'Oslo, désormais occupé par une milice nordique, dorment les actes fondateurs qui pourraient, en théorie, servir à une refondation — ou à une falsification.

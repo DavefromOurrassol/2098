@@ -1,0 +1,100 @@
+---
+name: Cargo Mombasa CRRC — Les Dhows de la Dernière Chance
+type: instance
+slug: cargo_mombasa_crrc_breakdown
+entite: cargo_mombasa_crrc
+scenario: breakdown
+localisation:
+  zone: cargo_mombasa_crrc
+  lieu: Cargo au large de Mombasa
+  type_lieu: infrastructure
+
+type_dans_scenario: organisation
+
+role_dans_scenario: >
+  Flotte marchande opérant depuis le port de Mombasa sous pavillon CRRC, assurant des liaisons commerciales et logistiques dans un contexte d'effondrement des chaînes d'approvisionnement mondiales. Elle navigue entre contrats légitimes et trafics opportunistes, s'adaptant à l'absence d'autorité régulatrice stable. Son ancrage local en fait un acteur de survie économique essentiel pour les communautés côtières est-africaines. Dans l'effondrement généralisé, elle est devenue l'une des rares structures capables de maintenir des flux de marchandises vitales — médicaments, semences, carburant frelaté, pièces détachées — entre des ports que les grandes routes maritimes ont définitivement abandonnés. Sa légitimité ne vient d'aucun mandat, mais de l'utilité brute qu'elle incarne chaque jour pour des millions de personnes qui n'ont plus d'autre option.
+
+responsabilites: >
+  Maintien des liaisons maritimes entre les ports côtiers d'Afrique orientale (Mombasa, Dar es Salaam, Mogadiscio, Pemba, Lamu) en assurant la rotation de convois mixtes — cargaisons légales, marchandises grises et trafics de survie selon la demande. Négociation directe avec les factions paramilitaires et seigneurs locaux contrôlant les accès portuaires, afin de garantir le passage des navires. Fixation unilatérale des tarifs de fret dans les zones où toute concurrence a disparu, créant de facto une dépendance structurelle des communautés côtières isolées.
+
+impact_local: 5
+impact_systemique_global: 2
+
+variables_influencees:
+    - organisation_territoires
+    - systemes_productifs_travail
+
+zone_geographique:
+    - régionale
+    - continentale
+
+zone_systemique:
+    - économie
+    - infrastructure
+    - sécurité
+
+alliances:
+    - ligue_des_cites_littorales_en_sursis_breakdown
+    - bloc_de_johannesburg_breakdown
+    - cartels_logistiques_regionaux_breakdown
+    - seigneuries_logistiques_armees_breakdown
+    - front_humanitaire_d_urgence_non_affilie_breakdown
+    - reseau_de_recuperation_industrielle_illicite_breakdown
+
+oppositions:
+    - saboteurs_des_corridors_de_transit_breakdown
+    - milices_extractivistes_du_bassin_du_congo_breakdown
+    - blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
+    - etats_fragmentes_nationalisant_les_stocks_breakdown
+    - reseau_logistique_criminel_concurrent_breakdown
+
+type_relation_dominante: dépendance
+
+annee_debut: 2031
+annee_fin: 
+
+etat_temporel: actif
+age_historique: dominant
+generation: post-effondrement
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Sur les quais de Mombasa, les containers rouillés portant le sigle CRRC — quatre lettres peintes à la hâte sur des coques rafistolées — sont devenus aussi familiers que l'odeur du mazout coupé d'huile végétale que brûlent leurs moteurs. Les Dhows de la Dernière Chance, comme les appellent les dockers, n'ont pas de siège social, pas de registre d'actionnaires identifiable, et leurs capitaines changent de pavillon aussi souvent que le vent tourne. Pourtant, ce sont eux qui livrent les antibiotiques à Lamu, les semences à Pemba et le gasoil de contrebande à Mogadiscio — quand personne d'autre ne s'y risque plus. Le prix est élevé, parfois exorbitant : une communauté de pêcheurs de Zanzibar a récemment cédé trois mois de sa prise pour un unique chargement de pompes à eau. Mais l'alternative, c'est le vide.
+
+signes_distinctifs: >
+  Navires hybrides arborant des coques hétéroclites — acier soudé sur bois, panneaux solaires bricolés sur des ponts de vieux cargo, antennes satellites détournées fixées aux mâts avec du fil de fer. Le sigle CRRC apparaît systématiquement en rouge sang sur fond ocre, parfois accompagné d'un croissant stylisé hérité d'un ancien opérateur ferroviaire chinois dont le nom n'est plus jamais prononcé. Les équipages mélangent swahili, somali, hindi portuaire et un pidgin propre aux routes côtières qu'aucun linguiste n'a encore documenté.
+
+tensions_narratives: >
+  La CRRC incarne la contradiction vivante de l'effondrement : plus les États côtiers s'effondrent, plus elle devient indispensable — et plus elle devient prédatrice. Jusqu'où une organisation de survie peut-elle aller avant de devenir le problème qu'elle prétend résoudre ? Plusieurs capitaines dissidents auraient refusé de transporter des chargements d'armes légères pour des milices locales, créant une fracture interne entre un aile 'utilitaire humaniste' et une direction pragmatiquement amorale. Par ailleurs, le Bloc de Johannesburg cherche à absorber la flotte pour sécuriser ses propres corridors d'approvisionnement, ce qui ferait basculer la CRRC d'une logique de survie communautaire vers celle d'un instrument de puissance régionale — une transformation que certaines communautés côtières perçoivent déjà comme une trahison annoncée.
+
+date_creation: 2026-06-27
+---
+
+# Cargo Mombasa CRRC — Les Dhows de la Dernière Chance
+
+## Rôle dans [[breakdown]]
+Flotte marchande opérant depuis le port de Mombasa sous pavillon CRRC, assurant des liaisons commerciales et logistiques dans un contexte d'effondrement des chaînes d'approvisionnement mondiales. Elle navigue entre contrats légitimes et trafics opportunistes, s'adaptant à l'absence d'autorité régulatrice stable. Son ancrage local en fait un acteur de survie économique essentiel pour les communautés côtières est-africaines. Dans l'effondrement généralisé, elle est devenue l'une des rares structures capables de maintenir des flux de marchandises vitales — médicaments, semences, carburant frelaté, pièces détachées — entre des ports que les grandes routes maritimes ont définitivement abandonnés. Sa légitimité ne vient d'aucun mandat, mais de l'utilité brute qu'elle incarne chaque jour pour des millions de personnes qui n'ont plus d'autre option.
+
+## Responsabilités
+Maintien des liaisons maritimes entre les ports côtiers d'Afrique orientale (Mombasa, Dar es Salaam, Mogadiscio, Pemba, Lamu) en assurant la rotation de convois mixtes — cargaisons légales, marchandises grises et trafics de survie selon la demande. Négociation directe avec les factions paramilitaires et seigneurs locaux contrôlant les accès portuaires, afin de garantir le passage des navires. Fixation unilatérale des tarifs de fret dans les zones où toute concurrence a disparu, créant de facto une dépendance structurelle des communautés côtières isolées.
+
+## Variables influencées
+- [[organisation_territoires]]
+- [[systemes_productifs_travail]]
+
+## Relations
+**Alliés** : [[ligue_des_cites_littorales_en_sursis_breakdown]], [[bloc_de_johannesburg_breakdown]], [[cartels_logistiques_regionaux_breakdown]], [[seigneuries_logistiques_armees_breakdown]], [[front_humanitaire_d_urgence_non_affilie_breakdown]], [[reseau_de_recuperation_industrielle_illicite_breakdown]]
+**Opposants** : [[saboteurs_des_corridors_de_transit_breakdown]], [[milices_extractivistes_du_bassin_du_congo_breakdown]], [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]], [[etats_fragmentes_nationalisant_les_stocks_breakdown]], [[reseau_logistique_criminel_concurrent_breakdown]]
+
+## Description journalistique
+Sur les quais de Mombasa, les containers rouillés portant le sigle CRRC — quatre lettres peintes à la hâte sur des coques rafistolées — sont devenus aussi familiers que l'odeur du mazout coupé d'huile végétale que brûlent leurs moteurs. Les Dhows de la Dernière Chance, comme les appellent les dockers, n'ont pas de siège social, pas de registre d'actionnaires identifiable, et leurs capitaines changent de pavillon aussi souvent que le vent tourne. Pourtant, ce sont eux qui livrent les antibiotiques à Lamu, les semences à Pemba et le gasoil de contrebande à Mogadiscio — quand personne d'autre ne s'y risque plus. Le prix est élevé, parfois exorbitant : une communauté de pêcheurs de Zanzibar a récemment cédé trois mois de sa prise pour un unique chargement de pompes à eau. Mais l'alternative, c'est le vide.
+
+## Tensions narratives
+La CRRC incarne la contradiction vivante de l'effondrement : plus les États côtiers s'effondrent, plus elle devient indispensable — et plus elle devient prédatrice. Jusqu'où une organisation de survie peut-elle aller avant de devenir le problème qu'elle prétend résoudre ? Plusieurs capitaines dissidents auraient refusé de transporter des chargements d'armes légères pour des milices locales, créant une fracture interne entre un aile 'utilitaire humaniste' et une direction pragmatiquement amorale. Par ailleurs, le Bloc de Johannesburg cherche à absorber la flotte pour sécuriser ses propres corridors d'approvisionnement, ce qui ferait basculer la CRRC d'une logique de survie communautaire vers celle d'un instrument de puissance régionale — une transformation que certaines communautés côtières perçoivent déjà comme une trahison annoncée.

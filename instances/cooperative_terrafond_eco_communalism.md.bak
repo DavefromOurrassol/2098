@@ -1,0 +1,102 @@
+---
+name: Réseau Terrafond des Bassins
+type: instance
+slug: cooperative_terrafond_eco_communalism
+entite: cooperative_terrafond
+scenario: eco_communalism
+localisation:
+  zone: vallee_de_l_ourthe
+  lieu: Vallée de l'Ourthe
+  type_lieu: region
+  statut: review_manuelle
+  note: "Le berceau historique du réseau est explicitement la vallée de l'Ourthe, mais le réseau couvre une douzaine de bassins versants d'Europe occidentale et du Maghreb méditerranéen, ce qui le rend multi-zonal plutôt que strictement local."
+
+type_dans_scenario: réseau
+
+role_dans_scenario: >
+  Épine dorsale productive des territoires réorganisés après la désintégration des chaînes agroalimentaires globales. Le Réseau Terrafond des Bassins fédère plusieurs centaines de coopératives locales autour des unités hydrologiques naturelles — vallées, watersheds, zones humides — transformant la logique du bassin versant en unité économique fondamentale. Dans un monde fragmenté, il incarne l'alternative concrète à l'effondrement des circuits longs : ni marché global défaillant, ni autarcie rigide, mais une réciprocité à géométrie variable entre communautés voisines.
+
+responsabilites: >
+  Coordination des semences, des cycles de rotation et des excédents alimentaires entre coopératives membres au sein de chaque bassin hydrologique. Gestion des communs fonciers et hydrauliques via des assemblées de bassin élues. Mutualisation des outils lourds, des savoirs agronomiques et des capacités de stockage à l'échelle régionale.
+
+impact_local: 5
+impact_systemique_global: 2
+variables_influencees:
+    - systemes_productifs_travail
+    - organisation_territoires
+    - climat_environnement_global
+    - energie_ressources_critiques
+
+zone_geographique:
+    - locale
+    - régionale
+
+zone_systemique:
+    - économie
+    - gouvernance
+    - infrastructure
+    - société
+
+alliances:
+    - assemblees_de_bassin_versant_eco_communalism
+    - brigades_de_restauration_ecologique_eco_communalism
+    - mutuelles_de_sante_territoriales_eco_communalism
+    - reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism
+
+oppositions:
+    - agro_conglomerats_des_enclaves_technologiques_eco_communalism
+    - seigneuries_foncieres_opportunistes_breakdown
+    - factions_extractivistes_des_aquiferes_communs_eco_communalism
+
+type_relation_dominante: coopération
+
+annee_debut: 2031
+annee_fin: 
+
+etat_temporel: actif
+age_historique: ascendant
+generation: reconstruction
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Dans la vallée de l'Ourthe reconstituée, on reconnaît une coopérative Terrafond à ses silos peints en ocre et aux panneaux d'affichage des bilans de récolte accrochés à l'entrée des villages. Le Réseau Terrafond des Bassins n'est pas une entreprise ni un État : c'est quelque chose d'intermédiaire, de pragmatiquement vivant. Fondé dans les années 2030 sur les ruines des filières agro-industrielles effondrées, il regroupe aujourd'hui plus de 340 coopératives sur une douzaine de bassins versants d'Europe occidentale et du Maghreb méditerranéen. Chaque assemblée de bassin vote ses propres règles d'échange, mais toutes partagent un même principe : aucune coopérative ne peut accumuler au-delà de ses besoins documentés sur trois ans. Fragile, lent, parfois épuisant à gouverner — mais réel.
+
+signes_distinctifs: >
+  Logo en forme de coupe hydrologique stylisée, couleurs terre et bleu-ardoise. Les membres portent souvent un bracelet tressé aux couleurs du bassin d'appartenance — tradition née spontanément pour se reconnaître lors des marchés inter-coopératives. Les documents officiels sont toujours bilingues : langue locale et langue du bassin partagé.
+
+tensions_narratives: >
+  La tension centrale est celle du seuil : jusqu'où étendre le réseau sans perdre la logique de réciprocité locale qui le fonde ? Certains bassins prospèrent et commencent à attirer des flux migratoires que leurs communs ne peuvent absorber. D'autres, en zone climatiquement dégradée, peinent à atteindre l'autosuffisance et réclament des transferts que les bassins riches rechignent à accorder. La question de la gouvernance des aquifères transfrontaliers génère des frictions croissantes avec des micro-États voisins qui refusent le principe de communs partagés.
+
+date_creation: 2026-06-15
+---
+
+# Réseau Terrafond des Bassins
+
+## Rôle dans [[eco_communalism]]
+Épine dorsale productive des territoires réorganisés après la désintégration des chaînes agroalimentaires globales. Le Réseau Terrafond des Bassins fédère plusieurs centaines de coopératives locales autour des unités hydrologiques naturelles — vallées, watersheds, zones humides — transformant la logique du bassin versant en unité économique fondamentale. Dans un monde fragmenté, il incarne l'alternative concrète à l'effondrement des circuits longs : ni marché global défaillant, ni autarcie rigide, mais une réciprocité à géométrie variable entre communautés voisines.
+
+## Responsabilités
+Coordination des semences, des cycles de rotation et des excédents alimentaires entre coopératives membres au sein de chaque bassin hydrologique. Gestion des communs fonciers et hydrauliques via des assemblées de bassin élues. Mutualisation des outils lourds, des savoirs agronomiques et des capacités de stockage à l'échelle régionale.
+
+## Variables influencées
+- [[systemes_productifs_travail]]
+- [[organisation_territoires]]
+- [[climat_environnement_global]]
+- [[energie_ressources_critiques]]
+
+## Relations
+**Alliés** : [[assemblees_de_bassin_versant_eco_communalism]], [[brigades_de_restauration_ecologique_eco_communalism]], [[mutuelles_de_sante_territoriales_eco_communalism]], [[reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism]]
+**Opposants** : [[agro_conglomerats_des_enclaves_technologiques_eco_communalism]], [[seigneuries_foncieres_opportunistes_breakdown]], [[factions_extractivistes_des_aquiferes_communs_eco_communalism]]
+
+## Description journalistique
+Dans la vallée de l'Ourthe reconstituée, on reconnaît une coopérative Terrafond à ses silos peints en ocre et aux panneaux d'affichage des bilans de récolte accrochés à l'entrée des villages. Le Réseau Terrafond des Bassins n'est pas une entreprise ni un État : c'est quelque chose d'intermédiaire, de pragmatiquement vivant. Fondé dans les années 2030 sur les ruines des filières agro-industrielles effondrées, il regroupe aujourd'hui plus de 340 coopératives sur une douzaine de bassins versants d'Europe occidentale et du Maghreb méditerranéen. Chaque assemblée de bassin vote ses propres règles d'échange, mais toutes partagent un même principe : aucune coopérative ne peut accumuler au-delà de ses besoins documentés sur trois ans. Fragile, lent, parfois épuisant à gouverner — mais réel.
+
+## Tensions narratives
+La tension centrale est celle du seuil : jusqu'où étendre le réseau sans perdre la logique de réciprocité locale qui le fonde ? Certains bassins prospèrent et commencent à attirer des flux migratoires que leurs communs ne peuvent absorber. D'autres, en zone climatiquement dégradée, peinent à atteindre l'autosuffisance et réclament des transferts que les bassins riches rechignent à accorder. La question de la gouvernance des aquifères transfrontaliers génère des frictions croissantes avec des micro-États voisins qui refusent le principe de communs partagés.

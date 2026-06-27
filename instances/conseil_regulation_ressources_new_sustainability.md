@@ -1,0 +1,97 @@
+---
+name: Autorité Mondiale de Régulation des Ressources et de la Transition (AMRRT)
+type: instance
+slug: conseil_regulation_ressources_new_sustainability
+entite: conseil_regulation_ressources
+scenario: new_sustainability
+localisation:
+  zone: hub_nairobi_kigali
+  lieu: Kigali
+  type_lieu: ville
+
+type_dans_scenario: institution
+
+role_dans_scenario: >
+  Héritière directe du Conseil de Nairobi, l'AMRRT a évolué d'un organe d'arbitrage conflictuel vers une institution de coordination proactive. Dans le contexte de l'abondance énergétique relative de 2098, elle ne gère plus la rareté mais orchestre la redistribution équitable des surplus et supervise la transition régénérative des écosystèmes surexploités. Elle fonctionne en symbiose avec des systèmes d'IA décisionnels qui modélisent en temps réel les flux de ressources critiques à l'échelle planétaire, lui conférant une légitimité technocratique solide. Son autorité, autrefois contestée, est aujourd'hui largement acceptée car elle incarne le consensus post-crise climatique.
+
+responsabilites: >
+  L'AMRRT alloue les quotas d'extraction des minéraux critiques pour les infrastructures de fusion et d'IA, certifie les protocoles de régénération écologique des zones post-industrielles, et arbitre les différends entre blocs régionaux sur l'accès aux corridors énergétiques. Elle publie chaque trimestre le Bilan Planétaire des Ressources, document de référence intégré aux décisions de gouvernance mondiale.
+
+impact_local: 2
+impact_systemique_global: 5
+variables_influencees:
+    - energie_ressources_critiques
+    - gouvernance_institutions
+    - geopolitique_conflits
+
+zone_geographique:
+    - globale
+
+zone_systemique:
+    - énergie
+    - gouvernance
+    - économie
+    - infrastructure
+
+alliances:
+    - reseau_des_villes_regeneratives_new_sustainability
+    - consortium_des_ia_climatiques_new_sustainability
+    - union_des_blocs_energetiques_regionaux_new_sustainability
+    - programme_onu_de_restauration_des_sols_new_sustainability
+
+oppositions:
+    - lobbies_des_energies_fossiles_residuelles_policy_reform
+    - factions_souverainistes_des_blocs_peripheriques_new_sustainability
+    - collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability
+
+type_relation_dominante: coopération
+
+annee_debut: 2061
+annee_fin: 
+
+etat_temporel: actif
+age_historique: dominant
+generation: reconstruction
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Depuis son siège circulaire de Kigali — ville choisie en 2061 comme symbole de la réconciliation post-extractiviste — l'AMRRT publie chaque lundi son tableau de bord des ressources mondiales, consulté par 194 gouvernements avant toute décision d'infrastructure majeure. Ses commissaires, issus de quotas régionaux stricts et assistés par l'IA Arbiter-7, ont tranché en 2097 plus de 340 litiges inter-étatiques sans qu'aucun n'escalade en conflit armé. Longtemps raillée comme 'chambre d'enregistrement des puissants', elle est aujourd'hui perçue comme l'un des piliers silencieux de la stabilité mondiale — celle qu'on remarque uniquement quand elle flanche.
+
+signes_distinctifs: >
+  Logo en spirale verte et or symbolisant le cycle ressource-régénération, affiché sur toutes les infrastructures certifiées. Les sessions plénières se tiennent dans une salle à ciel ouvert recouvert d'une canopée végétalisée — délibérément conçue pour rappeler que les décisions prises concernent le vivant. Les commissaires portent un insigne bleu-terre visible sur toutes les diffusions holographiques.
+
+tensions_narratives: >
+  La question lancinante de 2098 : l'AMRRT est-elle encore un organe de régulation ou est-elle devenue un gouvernement mondial de facto, légitimé par l'urgence mais jamais élu ? Des voix s'élèvent dans les blocs périphériques pour dénoncer une technocratie de la régénération qui décide, depuis Kigali, quelles terres peuvent être exploitées et lesquelles doivent 'se reposer'. La dépendance croissante à Arbiter-7 soulève une autre fracture : que se passe-t-il le jour où l'IA et les commissaires humains divergent sur une allocation critique ?
+
+date_creation: 2026-06-15
+---
+
+# Autorité Mondiale de Régulation des Ressources et de la Transition (AMRRT)
+
+## Rôle dans [[new_sustainability]]
+Héritière directe du Conseil de Nairobi, l'AMRRT a évolué d'un organe d'arbitrage conflictuel vers une institution de coordination proactive. Dans le contexte de l'abondance énergétique relative de 2098, elle ne gère plus la rareté mais orchestre la redistribution équitable des surplus et supervise la transition régénérative des écosystèmes surexploités. Elle fonctionne en symbiose avec des systèmes d'IA décisionnels qui modélisent en temps réel les flux de ressources critiques à l'échelle planétaire, lui conférant une légitimité technocratique solide. Son autorité, autrefois contestée, est aujourd'hui largement acceptée car elle incarne le consensus post-crise climatique.
+
+## Responsabilités
+L'AMRRT alloue les quotas d'extraction des minéraux critiques pour les infrastructures de fusion et d'IA, certifie les protocoles de régénération écologique des zones post-industrielles, et arbitre les différends entre blocs régionaux sur l'accès aux corridors énergétiques. Elle publie chaque trimestre le Bilan Planétaire des Ressources, document de référence intégré aux décisions de gouvernance mondiale.
+
+## Variables influencées
+- [[energie_ressources_critiques]]
+- [[gouvernance_institutions]]
+- [[geopolitique_conflits]]
+
+## Relations
+**Alliés** : [[reseau_des_villes_regeneratives_new_sustainability]], [[consortium_des_ia_climatiques_new_sustainability]], [[union_des_blocs_energetiques_regionaux_new_sustainability]], [[programme_onu_de_restauration_des_sols_new_sustainability]]
+**Opposants** : [[lobbies_des_energies_fossiles_residuelles_policy_reform]], [[factions_souverainistes_des_blocs_peripheriques_new_sustainability]], [[collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability]]
+
+## Description journalistique
+Depuis son siège circulaire de Kigali — ville choisie en 2061 comme symbole de la réconciliation post-extractiviste — l'AMRRT publie chaque lundi son tableau de bord des ressources mondiales, consulté par 194 gouvernements avant toute décision d'infrastructure majeure. Ses commissaires, issus de quotas régionaux stricts et assistés par l'IA Arbiter-7, ont tranché en 2097 plus de 340 litiges inter-étatiques sans qu'aucun n'escalade en conflit armé. Longtemps raillée comme 'chambre d'enregistrement des puissants', elle est aujourd'hui perçue comme l'un des piliers silencieux de la stabilité mondiale — celle qu'on remarque uniquement quand elle flanche.
+
+## Tensions narratives
+La question lancinante de 2098 : l'AMRRT est-elle encore un organe de régulation ou est-elle devenue un gouvernement mondial de facto, légitimé par l'urgence mais jamais élu ? Des voix s'élèvent dans les blocs périphériques pour dénoncer une technocratie de la régénération qui décide, depuis Kigali, quelles terres peuvent être exploitées et lesquelles doivent 'se reposer'. La dépendance croissante à Arbiter-7 soulève une autre fracture : que se passe-t-il le jour où l'IA et les commissaires humains divergent sur une allocation critique ?

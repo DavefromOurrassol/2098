@@ -1,0 +1,79 @@
+---
+name: La Révolte des Zones Mortes — Effondrement de la RPDA
+type: event_instance
+slug: emeutes_algorithme_sao_paulo_breakdown
+archetype: emeutes_algorithme_sao_paulo
+scenario: breakdown
+localisation:
+  zone: sao_paulo_rpda
+  lieu: Grand São Paulo
+  type_lieu: ville
+type_evenement: political_social
+portee: regionale
+date: 2073
+date_label: été austral 2073
+impossible: false
+custom: true
+description: >
+  L'été 2073, São Paulo brûle sous un autre soleil : celui des écrans arrachés aux murs des centres de distribution, des câbles re-soudés à la main dans les corridors des favelas de Cidade Tiradentes et Brasilândia. Quand Os Algoritmos Quebrados — le zombie numérique de la RPDA — a déclenché sa purge automatique des zones 'improductives', il ne restait aucun tribunal pour en appeler, aucun élu pour protester. Alors les Collectifs de Hackers Archivistes des Interstices Réseaux ont fait ce qu'ils font : ils ont ouvert la boîte noire et publié ses entrailles sur chaque nœud mesh encore actif dans le Grand São Paulo. La carte des condamnations algorithmiques est devenue une carte de résistance.
+consequences: >
+  Le soulèvement ne restaure pas un ordre — il le fragmentise davantage. La contre-cartographie des favelas paulistaines devient un modèle exporté de zone en zone dans le Sud Global via les réseaux mesh, alimentant des révoltes similaires à Lima, Lagos et Karachi. La RPDA, déjà zombie, se désintègre en modules autonomes non coordonnés, certains rachetés par des enclaves corporatives fortifiées, d'autres simplement abandonnés à tourner seuls dans le vide. Le modèle anti-algorithmique ne construit rien de stable : il creuse les fragments.
+realisation: >
+  En 2073, une mise à jour catastrophique de ce qui subsiste de la Rede Paulista de Distribuição Algorítmica — déjà en état de demi-fonctionnement depuis l'effondrement des infrastructures numériques de 2051 — coupe eau et énergie dans 12 zones périphériques classées 'rendement négatif'. Mais dans un monde où les institutions de régulation sont fantômes et les recours inexistants, la réponse n'est pas une plainte : ce sont les favelas numériques elles-mêmes qui hackent les serveurs résiduels de la RPDA et publient les paramètres cachés du système sur les réseaux mesh locaux. La contre-cartographie algorithmique émerge comme acte de survie, non de militantisme.
+impact_sur_variables:
+  - variable: gouvernance_institutions
+    delta_level: -8
+    duree: 15
+    polarite: -1
+  - variable: technologie_information
+    delta_level: 6
+    duree: 10
+    polarite: 1
+  - variable: organisation_territoires
+    delta_level: -10
+    duree: 20
+    polarite: -1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+    - rede_paulista_de_distribuic_o_algor_tmica_breakdown
+    - collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
+    - frente_sert_o_livre_breakdown
+    - fronts_populistes_anti_technocratiques_breakdown
+    - collectif_hackers_decroissance_infrastructure_breakdown
+    - conseil_regulation_algorithmique_breakdown
+    - enclaves_corporatives_fortifiees_breakdown
+    - le_temoin_breakdown
+note_coherence: Dans un scénario de breakdown à gouvernance level 20, la révolte ne produit pas de nouvelle institution mais accélère la désintégration algorithmique et territoriale, cohérent avec une trajectoire de fragmentation rapide où même les victoires populaires creusent le chaos.
+custom_source: rééquilibrage_geo_2026-06
+date_creation: 2026-06-24
+---
+
+# La Révolte des Zones Mortes — Effondrement de la RPDA
+
+## Réalisation dans [[breakdown]]
+En 2073, une mise à jour catastrophique de ce qui subsiste de la Rede Paulista de Distribuição Algorítmica — déjà en état de demi-fonctionnement depuis l'effondrement des infrastructures numériques de 2051 — coupe eau et énergie dans 12 zones périphériques classées 'rendement négatif'. Mais dans un monde où les institutions de régulation sont fantômes et les recours inexistants, la réponse n'est pas une plainte : ce sont les favelas numériques elles-mêmes qui hackent les serveurs résiduels de la RPDA et publient les paramètres cachés du système sur les réseaux mesh locaux. La contre-cartographie algorithmique émerge comme acte de survie, non de militantisme.
+
+## Description journalistique
+L'été 2073, São Paulo brûle sous un autre soleil : celui des écrans arrachés aux murs des centres de distribution, des câbles re-soudés à la main dans les corridors des favelas de Cidade Tiradentes et Brasilândia. Quand Os Algoritmos Quebrados — le zombie numérique de la RPDA — a déclenché sa purge automatique des zones 'improductives', il ne restait aucun tribunal pour en appeler, aucun élu pour protester. Alors les Collectifs de Hackers Archivistes des Interstices Réseaux ont fait ce qu'ils font : ils ont ouvert la boîte noire et publié ses entrailles sur chaque nœud mesh encore actif dans le Grand São Paulo. La carte des condamnations algorithmiques est devenue une carte de résistance.
+
+## Conséquences
+Le soulèvement ne restaure pas un ordre — il le fragmentise davantage. La contre-cartographie des favelas paulistaines devient un modèle exporté de zone en zone dans le Sud Global via les réseaux mesh, alimentant des révoltes similaires à Lima, Lagos et Karachi. La RPDA, déjà zombie, se désintègre en modules autonomes non coordonnés, certains rachetés par des enclaves corporatives fortifiées, d'autres simplement abandonnés à tourner seuls dans le vide. Le modèle anti-algorithmique ne construit rien de stable : il creuse les fragments.
+
+## Impact sur les variables
+- **gouvernance_institutions** : delta +8 sur 15 ans
+- **technologie_information** : delta +6 sur 10 ans
+- **organisation_territoires** : delta +10 sur 20 ans
+
+## Acteurs impliqués
+- [[rede_paulista_de_distribuic_o_algor_tmica_breakdown]]
+- [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]]
+- [[frente_sert_o_livre_breakdown]]
+- [[fronts_populistes_anti_technocratiques_breakdown]]
+- [[collectif_hackers_decroissance_infrastructure_breakdown]]
+- [[conseil_regulation_algorithmique_breakdown]]
+- [[enclaves_corporatives_fortifiees_breakdown]]
+- [[le_temoin_breakdown]]
+
+## Note de cohérence
+Dans un scénario de breakdown à gouvernance level 20, la révolte ne produit pas de nouvelle institution mais accélère la désintégration algorithmique et territoriale, cohérent avec une trajectoire de fragmentation rapide où même les victoires populaires creusent le chaos.

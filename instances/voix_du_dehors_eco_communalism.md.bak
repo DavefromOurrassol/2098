@@ -1,0 +1,96 @@
+---
+name: Le Fil Commun
+type: instance
+slug: voix_du_dehors_eco_communalism
+entite: voix_du_dehors
+scenario: eco_communalism
+localisation:
+  zone: europe_occidentale_reconstituee
+  lieu: bassin ourrassoli
+  type_lieu: region
+  statut: review_manuelle
+  note: "Le réseau opère à travers 'les territoires du bassin ourrassoli' sans siège fixe ; le terme 'Ourrassol' évoque la vallée de l'Ourthe et l'Europe occidentale reconstituée, mais le réseau est explicitement décentralisé et régional, rendant le mapping sur une zone unique incertain."
+
+type_dans_scenario: réseau
+
+role_dans_scenario: >
+  Réseau de journalisme d'investigation décentralisé né des cendres des grandes plateformes médiatiques effondrées, Le Fil Commun opère comme tissu nerveux informationnel entre les communautés autonomes d'Ourrassol. Il n'a pas de siège — il existe dans les courriers chiffrés, les messagers cyclistes entre bassins de vie, les antennes radio basse puissance et les assemblées où des correspondants locaux lisent à voix haute leurs enquêtes. Son rôle systémique est autant de connecter les territoires entre eux que de rendre visible ce que chaque communauté préfère parfois taire.
+
+responsabilites: >
+  Documenter les pratiques de gouvernance locale, les tensions sur les ressources communes (eau, semences, énergie), et les accords régionaux. Archiver les mémoires de transition post-effondrement pour les générations futures. Relayer les alertes environnementales entre territoires.
+
+impact_local: 4
+impact_systemique_global: 2
+variables_influencees:
+    - technologie_information
+    - gouvernance_institutions
+
+zone_geographique:
+    - locale
+    - régionale
+
+zone_systemique:
+    - information
+    - gouvernance
+    - société
+
+alliances:
+    - assemblees_cooperatives_regionales_eco_communalism
+    - reseaux_de_bibliotheques_archives_communautaires_eco_communalism
+    - collectifs_de_cartographie_ecologique_participative_eco_communalism
+
+oppositions:
+    - conseils_territoriaux_opaques_sur_la_gestion_des_ressources_eco_communalism
+    - cartels_de_narration_de_penurie_eco_communalism
+    - courant_isolationniste_anti_circulation_de_l_information_eco_communalism
+
+type_relation_dominante: symbiose
+
+annee_debut: 2041
+annee_fin: 
+
+etat_temporel: actif
+age_historique: mature
+generation: reconstruction
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  On reconnaît une publication du Fil Commun à l'encre de synthèse végétale sur papier recyclé gris, ou au timbre sonore particulier de ses bulletins radio — une voix lente, sans musique d'habillage, presque délibérément humble. En 2098, le réseau compte environ deux mille correspondants permanents et plusieurs dizaines de milliers de relayeurs occasionnels à travers les territoires du bassin ourrassoli. Ce n'est pas un média de masse : c'est un média de précision communautaire, dont chaque édition est pensée pour un territoire, une saison, un débat en cours. Il lui arrive aussi de publier des choses qui dérangent — des enquêtes sur des détournements de semences, des conflits d'eau enterrés par les assemblées — et c'est là que son utilité se révèle la plus âpre.
+
+signes_distinctifs: >
+  Logo typographique minimal — un fil rouge traversant horizontalement le nom, évoquant à la fois le lien et la limite. Publications imprimées en format pliable de poche. Les correspondants portent parfois un bracelet tressé de couleurs variables selon leur région d'appartenance, signe de reconnaissance muet dans les assemblées publiques.
+
+tensions_narratives: >
+  Le Fil Commun est tiraillé entre sa vocation d'outil commun et la tentation de certains nœuds régionaux de l'instrumentaliser pour amplifier leurs propres positions dans les négociations de ressources. Une enquête en cours sur la dissimulation de données de contamination hydrique par une assemblée du sud menace de fracturer pour la première fois le réseau selon des lignes géographiques. Par ailleurs, la question de savoir s'il faut ou non documenter les accords informels avec des entités marchandes extérieures divise profondément les correspondants : la transparence totale est-elle toujours un bien commun, ou peut-elle fragiliser des équilibres locaux précaires ?
+
+date_creation: 2026-06-15
+---
+
+# Le Fil Commun
+
+## Rôle dans [[eco_communalism]]
+Réseau de journalisme d'investigation décentralisé né des cendres des grandes plateformes médiatiques effondrées, Le Fil Commun opère comme tissu nerveux informationnel entre les communautés autonomes d'Ourrassol. Il n'a pas de siège — il existe dans les courriers chiffrés, les messagers cyclistes entre bassins de vie, les antennes radio basse puissance et les assemblées où des correspondants locaux lisent à voix haute leurs enquêtes. Son rôle systémique est autant de connecter les territoires entre eux que de rendre visible ce que chaque communauté préfère parfois taire.
+
+## Responsabilités
+Documenter les pratiques de gouvernance locale, les tensions sur les ressources communes (eau, semences, énergie), et les accords régionaux. Archiver les mémoires de transition post-effondrement pour les générations futures. Relayer les alertes environnementales entre territoires.
+
+## Variables influencées
+- [[technologie_information]]
+- [[gouvernance_institutions]]
+
+## Relations
+**Alliés** : [[assemblees_cooperatives_regionales_eco_communalism]], [[reseaux_de_bibliotheques_archives_communautaires_eco_communalism]], [[collectifs_de_cartographie_ecologique_participative_eco_communalism]]
+**Opposants** : [[conseils_territoriaux_opaques_sur_la_gestion_des_ressources_eco_communalism]], [[cartels_de_narration_de_penurie_eco_communalism]], [[courant_isolationniste_anti_circulation_de_l_information_eco_communalism]]
+
+## Description journalistique
+On reconnaît une publication du Fil Commun à l'encre de synthèse végétale sur papier recyclé gris, ou au timbre sonore particulier de ses bulletins radio — une voix lente, sans musique d'habillage, presque délibérément humble. En 2098, le réseau compte environ deux mille correspondants permanents et plusieurs dizaines de milliers de relayeurs occasionnels à travers les territoires du bassin ourrassoli. Ce n'est pas un média de masse : c'est un média de précision communautaire, dont chaque édition est pensée pour un territoire, une saison, un débat en cours. Il lui arrive aussi de publier des choses qui dérangent — des enquêtes sur des détournements de semences, des conflits d'eau enterrés par les assemblées — et c'est là que son utilité se révèle la plus âpre.
+
+## Tensions narratives
+Le Fil Commun est tiraillé entre sa vocation d'outil commun et la tentation de certains nœuds régionaux de l'instrumentaliser pour amplifier leurs propres positions dans les négociations de ressources. Une enquête en cours sur la dissimulation de données de contamination hydrique par une assemblée du sud menace de fracturer pour la première fois le réseau selon des lignes géographiques. Par ailleurs, la question de savoir s'il faut ou non documenter les accords informels avec des entités marchandes extérieures divise profondément les correspondants : la transparence totale est-elle toujours un bien commun, ou peut-elle fragiliser des équilibres locaux précaires ?

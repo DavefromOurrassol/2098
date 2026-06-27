@@ -1,0 +1,82 @@
+---
+name: 'Belém : l''Amazonie bascule, les milices prennent le bassin'
+type: event_instance
+slug: crise_gouvernance_amazonie_fortress_world
+archetype: crise_gouvernance_amazonie
+scenario: fortress_world
+type_evenement: political_social
+portee: continentale
+date: 2047
+date_label: été austral 2047
+impossible: false
+custom: true
+description: >
+  À l'été 2047, les colonnes de fumée au-dessus du Pará ne laissent plus de doute : ce n'est pas un accident, c'est une stratégie. Des opérateurs privés, sous-contractants des Consortiums Énergétiques des Blocs, avancent à travers la forêt avec des machines et des hommes en armes. Belém se retrouve encerclée par des milices en uniformes sans insigne, tandis que le Pacte Vert Amazônia mobilise ses réseaux de gardiens autochtones dans une résistance aussi héroïque que désespérée. La communauté internationale regarde — chaque bloc y voit d'abord une opportunité, aucun ne lève le petit doigt. Premier test de souveraineté du bassin amazonien : il est perdu avant même d'avoir commencé.
+consequences: >
+  L'échec du bassin amazonie à s'imposer comme acteur géopolitique autonome ouvre la voie à une partition informelle de l'Amazonie entre zones d'exploitation contrôlées par les blocs. Le précédent Belém normalise la militarisation des ressources biologiques et forestières comme variable de compétition inter-blocs, accélérant la dégradation irréversible du biome. Les gardiens autochtones rejoignent massivement les réseaux clandestins et les organisations de résistance périphérique, radicalisant la dissidence écologique à l'échelle continentale.
+realisation: >
+  Le Pacte Vert Amazônia proclame un état d'urgence écologique sur 40% du bassin amazonien après la détection de déforestations industrielles orchestrées par des opérateurs liés aux consortiums énergétiques des blocs atlantique et eurasien. Belém devient le théâtre d'une confrontation armée entre les gardiens autochtones et les milices corporatives privées mandatées par ces consortiums. L'ONU-Éclat, simple coquille procédurale, saisie formellement, se révèle incapable de toute intervention — ses archives servent davantage à légitimer les blocs rivaux qu'à protéger le bassin. La Chambre de Sécurité Territoriale arbitre à distance, refusant d'engager ses forces dans une zone disputée entre blocs concurrents.
+impact_sur_variables:
+  - variable: climat_environnement_global
+    delta_level: -18
+    duree: 30
+    polarite: -1
+  - variable: geopolitique_conflits
+    delta_level: 8
+    duree: 20
+    polarite: -1
+  - variable: gouvernance_institutions
+    delta_level: -12
+    duree: 25
+    polarite: -1
+  - variable: organisation_territoires
+    delta_level: -10
+    duree: 25
+    polarite: -1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+    - consortium_amazonia_viva_fortress_world
+    - complexes_militaro_industriels_de_gestion_des_ressources_fortress_world
+    - consortiums_energetiques_du_bloc_ourrassol_fortress_world
+    - archives_diplomatiques_de_l_onu_eclat_fortress_world
+    - assemblee_territoires_fortress_world
+    - coalition_vivant_fortress_world
+    - institutions_multilaterales_residuelles_fortress_world
+    - commandement_strategique_des_matieres_critiques_atlantique_fortress_world
+    - voix_du_dehors_fortress_world
+note_coherence: Dans un monde fortress_world à tension 5/5, l'échec d'une souveraineté émergente face aux milices corporatives et l'impuissance totale des institutions multilatérales sont exactement le type de basculement qui accélère la fragmentation — le bassin amazonien devient une zone de pillage compétitif inter-blocs plutôt qu'un acteur autonome, ce qui est parfaitement cohérent avec la trajectoire de fragmentation rapide du scénario.
+custom_source: rééquilibrage_geo_2026-06
+date_creation: 2026-06-24
+---
+
+# Belém : l'Amazonie bascule, les milices prennent le bassin
+
+## Réalisation dans [[fortress_world]]
+Le Pacte Vert Amazônia proclame un état d'urgence écologique sur 40% du bassin amazonien après la détection de déforestations industrielles orchestrées par des opérateurs liés aux consortiums énergétiques des blocs atlantique et eurasien. Belém devient le théâtre d'une confrontation armée entre les gardiens autochtones et les milices corporatives privées mandatées par ces consortiums. L'ONU-Éclat, simple coquille procédurale, saisie formellement, se révèle incapable de toute intervention — ses archives servent davantage à légitimer les blocs rivaux qu'à protéger le bassin. La Chambre de Sécurité Territoriale arbitre à distance, refusant d'engager ses forces dans une zone disputée entre blocs concurrents.
+
+## Description journalistique
+À l'été 2047, les colonnes de fumée au-dessus du Pará ne laissent plus de doute : ce n'est pas un accident, c'est une stratégie. Des opérateurs privés, sous-contractants des Consortiums Énergétiques des Blocs, avancent à travers la forêt avec des machines et des hommes en armes. Belém se retrouve encerclée par des milices en uniformes sans insigne, tandis que le Pacte Vert Amazônia mobilise ses réseaux de gardiens autochtones dans une résistance aussi héroïque que désespérée. La communauté internationale regarde — chaque bloc y voit d'abord une opportunité, aucun ne lève le petit doigt. Premier test de souveraineté du bassin amazonien : il est perdu avant même d'avoir commencé.
+
+## Conséquences
+L'échec du bassin amazonie à s'imposer comme acteur géopolitique autonome ouvre la voie à une partition informelle de l'Amazonie entre zones d'exploitation contrôlées par les blocs. Le précédent Belém normalise la militarisation des ressources biologiques et forestières comme variable de compétition inter-blocs, accélérant la dégradation irréversible du biome. Les gardiens autochtones rejoignent massivement les réseaux clandestins et les organisations de résistance périphérique, radicalisant la dissidence écologique à l'échelle continentale.
+
+## Impact sur les variables
+- **climat_environnement_global** : delta +18 sur 30 ans
+- **geopolitique_conflits** : delta -8 sur 20 ans
+- **gouvernance_institutions** : delta +12 sur 25 ans
+- **organisation_territoires** : delta +10 sur 25 ans
+
+## Acteurs impliqués
+- [[consortium_amazonia_viva_fortress_world]]
+- [[complexes_militaro_industriels_de_gestion_des_ressources_fortress_world]]
+- [[consortiums_energetiques_du_bloc_ourrassol_fortress_world]]
+- [[archives_diplomatiques_de_l_onu_eclat_fortress_world]]
+- [[assemblee_territoires_fortress_world]]
+- [[coalition_vivant_fortress_world]]
+- [[institutions_multilaterales_residuelles_fortress_world]]
+- [[commandement_strategique_des_matieres_critiques_atlantique_fortress_world]]
+- [[voix_du_dehors_fortress_world]]
+
+## Note de cohérence
+Dans un monde fortress_world à tension 5/5, l'échec d'une souveraineté émergente face aux milices corporatives et l'impuissance totale des institutions multilatérales sont exactement le type de basculement qui accélère la fragmentation — le bassin amazonien devient une zone de pillage compétitif inter-blocs plutôt qu'un acteur autonome, ce qui est parfaitement cohérent avec la trajectoire de fragmentation rapide du scénario.

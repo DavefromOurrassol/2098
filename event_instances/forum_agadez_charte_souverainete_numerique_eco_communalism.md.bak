@@ -1,0 +1,79 @@
+---
+name: Charte d'Agadez sur la Souveraineté Numérique des Périphéries
+type: event_instance
+slug: forum_agadez_charte_souverainete_numerique_eco_communalism
+archetype: forum_agadez_charte_souverainete_numerique
+scenario: eco_communalism
+type_evenement: political_social
+portee: continentale
+date: 2062
+date_label: automne 2062
+impossible: false
+custom: true
+description: >
+  Agadez, novembre 2062. Sous les tentes tendues entre les anciennes tours de la vieille ville et les fermes solaires qui alimentent le Forum, 200 délégations venues des marges du monde signent la Charte de Souveraineté Numérique des Périphéries. Les représentants du Sahel, de l'Asie du Sud-Est insulaire, des friches industrielles d'Amérique du Nord et des bassins fennoscandiens n'ont pas attendu de permission : leurs protocoles maillés, leurs assistants IA frugaux, leurs registres communautaires décentralisés tournent depuis des années. La Charte grave dans le marbre ce que la pratique a construit — et pose un verrou collectif contre toute tentative de réintégration dans les standards propriétaires des enclaves technologiques.
+consequences: >
+  La Charte d'Agadez devient le texte de référence pour les conflits de souveraineté numérique dans les Assemblées Bioterritoriales Régionales, alimentant les Archives Ouvertes des Jurisprudences Communales d'une nouvelle couche de droit coutumier technologique. Elle accélère l'exclusion des Consortiums d'IA Propriétaires des trames communautaires, mais attise en retour les pressions des plateformes centralisées de réagrégation globale et des factions techno-solutionnistes qui y voient une fermeture idéologique néfaste à la résilience collective.
+realisation: >
+  Dans un monde déjà fragmenté en unités autonomes, le Forum d'Agadez ne surgit pas de nulle part : il cristallise une décennie de pratiques sahéliennes hors-grille. La Ligue des Cités du Sahel Numérique, appuyée sur la Trame Mnemos et les réseaux de radio communautaire basse consommation, rassemble 200 délégations non pour négocier avec les blocs dominants, mais pour codifier des standards déjà existants. La Charte n'est pas une rupture — c'est une reconnaissance officielle d'une réalité technique et politique déjà en œuvre depuis les années 2050.
+impact_sur_variables:
+  - variable: technologie_information
+    delta_level: 8
+    duree: 18
+    polarite: 1
+  - variable: gouvernance_institutions
+    delta_level: 6
+    duree: 15
+    polarite: 1
+  - variable: organisation_territoires
+    delta_level: 7
+    duree: 20
+    polarite: 1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+    - ligue_des_cites_du_sahel_numerique_eco_communalism
+    - reseau_mnemos_eco_communalism
+    - assemblee_territoires_eco_communalism
+    - assemblees_bioterritoriales_regionales_eco_communalism
+    - archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
+    - consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism
+    - plateformes_centralisees_de_reagregation_globale_eco_communalism
+    - courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism
+    - reseaux_de_radio_communautaire_basse_consommation_eco_communalism
+    - collectifs_de_techniciens_sobres_eco_communalism
+note_coherence: Dans un éco-communalisme à fragmentation avancée (organisation_territoires level 40), la Charte d'Agadez est moins une révolution qu'une codification — cohérente avec un monde où les pratiques hors-grille précèdent toujours les institutions, et où les acteurs sahéliens comme la Ligue des Cités du Sahel Numérique existent déjà comme entités structurantes.
+custom_source: rééquilibrage_geo_2026-06
+date_creation: 2026-06-23
+---
+
+# Charte d'Agadez sur la Souveraineté Numérique des Périphéries
+
+## Réalisation dans [[eco_communalism]]
+Dans un monde déjà fragmenté en unités autonomes, le Forum d'Agadez ne surgit pas de nulle part : il cristallise une décennie de pratiques sahéliennes hors-grille. La Ligue des Cités du Sahel Numérique, appuyée sur la Trame Mnemos et les réseaux de radio communautaire basse consommation, rassemble 200 délégations non pour négocier avec les blocs dominants, mais pour codifier des standards déjà existants. La Charte n'est pas une rupture — c'est une reconnaissance officielle d'une réalité technique et politique déjà en œuvre depuis les années 2050.
+
+## Description journalistique
+Agadez, novembre 2062. Sous les tentes tendues entre les anciennes tours de la vieille ville et les fermes solaires qui alimentent le Forum, 200 délégations venues des marges du monde signent la Charte de Souveraineté Numérique des Périphéries. Les représentants du Sahel, de l'Asie du Sud-Est insulaire, des friches industrielles d'Amérique du Nord et des bassins fennoscandiens n'ont pas attendu de permission : leurs protocoles maillés, leurs assistants IA frugaux, leurs registres communautaires décentralisés tournent depuis des années. La Charte grave dans le marbre ce que la pratique a construit — et pose un verrou collectif contre toute tentative de réintégration dans les standards propriétaires des enclaves technologiques.
+
+## Conséquences
+La Charte d'Agadez devient le texte de référence pour les conflits de souveraineté numérique dans les Assemblées Bioterritoriales Régionales, alimentant les Archives Ouvertes des Jurisprudences Communales d'une nouvelle couche de droit coutumier technologique. Elle accélère l'exclusion des Consortiums d'IA Propriétaires des trames communautaires, mais attise en retour les pressions des plateformes centralisées de réagrégation globale et des factions techno-solutionnistes qui y voient une fermeture idéologique néfaste à la résilience collective.
+
+## Impact sur les variables
+- **technologie_information** : delta +8 sur 18 ans
+- **gouvernance_institutions** : delta +6 sur 15 ans
+- **organisation_territoires** : delta +7 sur 20 ans
+
+## Acteurs impliqués
+- [[ligue_des_cites_du_sahel_numerique_eco_communalism]]
+- [[reseau_mnemos_eco_communalism]]
+- [[assemblee_territoires_eco_communalism]]
+- [[assemblees_bioterritoriales_regionales_eco_communalism]]
+- [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]]
+- [[consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism]]
+- [[plateformes_centralisees_de_reagregation_globale_eco_communalism]]
+- [[courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism]]
+- [[reseaux_de_radio_communautaire_basse_consommation_eco_communalism]]
+- [[collectifs_de_techniciens_sobres_eco_communalism]]
+
+## Note de cohérence
+Dans un éco-communalisme à fragmentation avancée (organisation_territoires level 40), la Charte d'Agadez est moins une révolution qu'une codification — cohérente avec un monde où les pratiques hors-grille précèdent toujours les institutions, et où les acteurs sahéliens comme la Ligue des Cités du Sahel Numérique existent déjà comme entités structurantes.

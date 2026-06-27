@@ -1,0 +1,99 @@
+---
+name: Selin Çelik-Marchetti
+type: instance
+slug: selin_celik_marchetti_reference
+entite: selin_celik_marchetti
+scenario: reference
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
+
+type_dans_scenario: humain
+
+role_dans_scenario: >
+  Architecte de compromis migratoires opérant en courtière indépendante pour des coalitions d'États et de blocs régionaux dans un monde multipolaire où les flux humains sont devenus une monnaie diplomatique à part entière. Dans le scénario reference, où la mobilité contrainte s'intensifie sous pression climatique et économique sans qu'aucun cadre global ne s'impose, Çelik-Marchetti occupe une niche structurelle : elle traduit les désespoirs humains en variables négociables entre blocs concurrents. Son travail consiste à fabriquer des accords provisoires — jamais définitifs — dans un système international qui refuse de se donner les institutions permanentes nécessaires pour les absorber.
+
+responsabilites: >
+  Elle négocie des accords de redistribution migratoire entre coalitions d'États, transformant des quotas d'accueil en contreparties d'accès à l'énergie, aux données ou aux ressources critiques. Elle conçoit des architectures juridiques ad hoc — corridors humanitaires temporaires, statuts de résidence conditionnels — qui permettent à des blocs souverains incompatibles de coopérer ponctuellement sans jamais céder de souveraineté.
+
+impact_local: 2
+impact_systemique_global: 4
+
+variables_influencees:
+    - demographie_mobilite_humaine
+    - geopolitique_conflits
+    - gouvernance_institutions
+
+zone_geographique:
+    - régionale
+    - continentale
+    - globale
+
+zone_systemique:
+    - gouvernance
+    - société
+    - économie
+
+alliances:
+    - administrations_hybrides_des_cites_relais_peripheriques_reference
+    - fonds_monetaire_climatique_fmc_reference
+
+oppositions:
+    - alliance_blocs_souverains_reference
+    - bloc_des_souverainistes_climatiques_reference
+    - gouvernements_federaux_residuels_souverainistes_reference
+    - collectif_nuit_jaune_reference
+
+type_relation_dominante: neutralité
+
+annee_debut: 2061
+annee_fin: 
+
+etat_temporel: actif
+age_historique: dominant
+generation: transition
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  On dit d'elle qu'elle est la seule personne capable de faire asseoir à la même table un représentant du Pacte des Souverains et un délégué de la Confédération des Mégapoles — à condition que chacun croit encore que l'autre a plus besoin de lui. Çelik-Marchetti ne représente personne officiellement, ne figure sur aucune liste diplomatique, et pourtant son nom apparaît dans les notes de bas de page de presque tous les accords migratoires significatifs des quinze dernières années. Elle travaille à partir d'un bureau flotant — tantôt Marseille, tantôt Tunis, tantôt Nicosie — et facture ses services en termes de résultats : nombre de personnes déplacées dotées d'un statut viable, corridors maintenus ouverts, crises évitées. Ses détracteurs dans les mouvements pour la libre circulation l'appellent 'l'architecte du purgatoire légal'. Ses clients l'appellent indispensable.
+
+signes_distinctifs: >
+  Elle parle avec une précision lexicale chirurgicale, substituant systématiquement le mot 'personnes' au mot 'migrants' dans ses documents — une discipline symbolique qu'elle maintient même dans les textes les plus cyniquement marchandisés. Ses contrats portent toujours une clause de révision humanitaire à 18 mois, qu'elle insère comme signature morale dans chaque accord, quelle que soit la résistance de la partie adverse.
+
+tensions_narratives: >
+  La tension centrale de Çelik-Marchetti en 2098 est celle d'une praticienne qui a construit sa légitimité sur la réduction mesurable de la souffrance, mais dont chaque accord réussi renforce le cadre qui transforme les êtres humains en variables d'ajustement géopolitique. Alors que le Mouvement pour la Libre Circulation monte en puissance et conteste la légalité même des corridors conditionnels, elle se retrouve attaquée simultanément par les souverainistes qui la jugent trop permissive et par les militants qui voient en elle la figure emblématique de l'instrumentalisation légalisée. La question narrative ouverte : peut-elle concevoir un accord qui soit à la fois efficace et non-marchand — ou ce projet est-il, dans le monde de reference, une contradiction dans les termes ?
+
+date_creation: 2026-06-25
+---
+
+# Selin Çelik-Marchetti
+
+## Rôle dans [[reference]]
+Architecte de compromis migratoires opérant en courtière indépendante pour des coalitions d'États et de blocs régionaux dans un monde multipolaire où les flux humains sont devenus une monnaie diplomatique à part entière. Dans le scénario reference, où la mobilité contrainte s'intensifie sous pression climatique et économique sans qu'aucun cadre global ne s'impose, Çelik-Marchetti occupe une niche structurelle : elle traduit les désespoirs humains en variables négociables entre blocs concurrents. Son travail consiste à fabriquer des accords provisoires — jamais définitifs — dans un système international qui refuse de se donner les institutions permanentes nécessaires pour les absorber.
+
+## Responsabilités
+Elle négocie des accords de redistribution migratoire entre coalitions d'États, transformant des quotas d'accueil en contreparties d'accès à l'énergie, aux données ou aux ressources critiques. Elle conçoit des architectures juridiques ad hoc — corridors humanitaires temporaires, statuts de résidence conditionnels — qui permettent à des blocs souverains incompatibles de coopérer ponctuellement sans jamais céder de souveraineté.
+
+## Variables influencées
+- [[demographie_mobilite_humaine]]
+- [[geopolitique_conflits]]
+- [[gouvernance_institutions]]
+
+## Relations
+**Alliés** : [[administrations_hybrides_des_cites_relais_peripheriques_reference]], [[fonds_monetaire_climatique_fmc_reference]]
+**Opposants** : [[alliance_blocs_souverains_reference]], [[bloc_des_souverainistes_climatiques_reference]], [[gouvernements_federaux_residuels_souverainistes_reference]], [[collectif_nuit_jaune_reference]]
+
+## Description journalistique
+On dit d'elle qu'elle est la seule personne capable de faire asseoir à la même table un représentant du Pacte des Souverains et un délégué de la Confédération des Mégapoles — à condition que chacun croit encore que l'autre a plus besoin de lui. Çelik-Marchetti ne représente personne officiellement, ne figure sur aucune liste diplomatique, et pourtant son nom apparaît dans les notes de bas de page de presque tous les accords migratoires significatifs des quinze dernières années. Elle travaille à partir d'un bureau flotant — tantôt Marseille, tantôt Tunis, tantôt Nicosie — et facture ses services en termes de résultats : nombre de personnes déplacées dotées d'un statut viable, corridors maintenus ouverts, crises évitées. Ses détracteurs dans les mouvements pour la libre circulation l'appellent 'l'architecte du purgatoire légal'. Ses clients l'appellent indispensable.
+
+## Tensions narratives
+La tension centrale de Çelik-Marchetti en 2098 est celle d'une praticienne qui a construit sa légitimité sur la réduction mesurable de la souffrance, mais dont chaque accord réussi renforce le cadre qui transforme les êtres humains en variables d'ajustement géopolitique. Alors que le Mouvement pour la Libre Circulation monte en puissance et conteste la légalité même des corridors conditionnels, elle se retrouve attaquée simultanément par les souverainistes qui la jugent trop permissive et par les militants qui voient en elle la figure emblématique de l'instrumentalisation légalisée. La question narrative ouverte : peut-elle concevoir un accord qui soit à la fois efficace et non-marchand — ou ce projet est-il, dans le monde de reference, une contradiction dans les termes ?

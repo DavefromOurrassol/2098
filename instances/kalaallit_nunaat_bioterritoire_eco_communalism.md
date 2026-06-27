@@ -1,0 +1,117 @@
+---
+name: Kalaallit Nunaat Bioterritoire Souverain
+type: instance
+slug: kalaallit_nunaat_bioterritoire_eco_communalism
+entite: kalaallit_nunaat_bioterritoire
+scenario: eco_communalism
+localisation:
+  zone: kalaallit_nunaat_bioterritoire
+  lieu: Kalaallit Nunaat (Groenland)
+  type_lieu: region
+
+type_dans_scenario: organisation
+
+role_dans_scenario: >
+  Ancien territoire autonome du Groenland reconverti en bioterritoire souverain, Kalaallit Nunaat a organisé sa société autour de la préservation des écosystèmes arctiques et de l'autosuffisance communautaire. Refusant toute intégration aux grands blocs économiques, il sert de référence symbolique au mouvement éco-communaliste mondial tout en protégeant jalousement ses ressources hydriques et biologiques. Sa simple existence constitue une démonstration vivante qu'un autre modèle social est praticable, ce qui lui confère une autorité morale disproportionnée à sa taille démographique. Le bioterritoire assume pleinement ce rôle de lieu-manifeste tout en s'efforçant de ne pas se laisser instrumentaliser par les projections extérieures que cette stature symbolique génère inévitablement.
+
+responsabilites: >
+  Le Kalaallit Nunaat Bioterritoire Souverain administre la totalité de ses écosystèmes arctiques selon des protocoles de préservation définis collectivement par ses assemblées communautaires, garantit l'autosuffisance alimentaire, hydrique et énergétique de sa population, et contrôle strictement tout accès extérieur à ses ressources biologiques et glaciaires. Il maintient des relations diplomatiques minimales avec les réseaux éco-communalistes mondiaux, partageant sélectivement ses jurisprudences et savoir-faire écologiques sans jamais compromettre son autonomie décisionnelle.
+
+impact_local: 5
+impact_systemique_global: 4
+
+variables_influencees:
+    - organisation_territoires
+    - climat_environnement_global
+    - energie_ressources_critiques
+    - valeurs_culture_tempo_sociale
+    - geopolitique_conflits
+
+zone_geographique:
+    - nationale
+    - régionale
+    - globale
+
+zone_systemique:
+    - gouvernance
+    - société
+    - énergie
+    - infrastructure
+
+alliances:
+    - confederation_des_communs_de_l_arc_septentrional_eco_communalism
+    - reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism
+    - confederation_communs_arc_septentrional_eco_communalism
+    - assemblee_territoires_eco_communalism
+    - assemblees_bioterritoriales_regionales_eco_communalism
+    - kalaallit_nunaat_sovereign_fund_eco_communalism
+    - confederation_bassins_vivants_eco_communalism
+    - brigades_de_restauration_ecologique_eco_communalism
+    - collectifs_de_geo_observateurs_citoyens_eco_communalism
+    - archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
+    - amazonie_pacte_viva_eco_communalism
+
+oppositions:
+    - consortiums_industriels_de_l_eau_eco_communalism
+    - agro_conglomerats_des_enclaves_technologiques_eco_communalism
+    - plateformes_centralisees_de_reagregation_globale_eco_communalism
+    - factions_technophiles_de_la_geo_ingenierie_centralisee_eco_communalism
+    - enclaves_extractivistes_residuelles_des_corridors_eco_communalism
+    - factions_extractivistes_des_aquiferes_communs_eco_communalism
+    - reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism
+    - cartels_de_narration_de_penurie_eco_communalism
+    - consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism
+
+type_relation_dominante: alliance stratégique
+
+annee_debut: 2031
+annee_fin: 
+
+etat_temporel: actif
+age_historique: mature
+generation: post-effondrement
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Sur la carte mouvante des bioterritoires de 2098, Kalaallit Nunaat fait figure d'anomalie persistante : soixante-sept ans après sa proclamation de souveraineté écologique complète, ce territoire de glaces et de toundras arctiques n'a toujours pas cédé à la pression des consortiums hydriques qui lorgnent ses aquifères, ni aux sirènes des réseaux numériques qui voudraient numériser ses protocoles de gouvernance. Ses quelque quatre-vingt mille habitants vivent selon un rythme délibérément arctique — assemblées saisonnières, quotas de prélèvement révisés chaque solstice, interdiction constitutionnelle de toute extraction minière au-delà des besoins stricts de la communauté. Ce que le monde retient surtout, c'est la force silencieuse de son exemple : chaque délégation éco-communaliste qui passe par Nuuk repart avec des photos de glaciers stables et des copies de jurisprudences territoriales copiées à la main sur du papier de kelp. Mais cette gloire symbolique a un prix — les tentatives d'instrumentalisation se multiplient, et les jeunes générations du bioterritoire commencent à questionner le coût de la pureté.
+
+signes_distinctifs: >
+  Le drapeau du bioterritoire représente un umiak — embarcation traditionnelle inuit — naviguant sur un fond de glace bleue striée de vert, symbole de la continuité entre culture ancestrale et écologie vivante. Ses bâtiments publics, construits en matériaux locaux recyclés et en tourbe consolidée, portent tous une inscription en kalaallisuut gravée au seuil : 'Nunami inissassiorneq' — 'Vivre en accord avec la terre'. Les délégués du bioterritoire se distinguent lors des rencontres éco-communalistes par leurs vêtements en fibres naturelles teintes à l'ocre de fer arctique et leur refus systématique de tout dispositif numérique connecté à des réseaux extérieurs.
+
+tensions_narratives: >
+  La tension centrale qui traverse le bioterritoire en 2098 est celle entre l'intégrité du retrait et la pression de la célébrité mondiale : plus Kalaallit Nunaat devient une référence symbolique incontournable, plus des acteurs extérieurs — des consortiums industriels aux mouvements politiques instrumentalisateurs — cherchent à s'en approcher, à en extraire des ressources ou à en capturer le récit. En interne, une fracture générationnelle s'approfondit entre les 'gardiens du seuil', partisans d'un isolationnisme absolu, et une jeunesse qui souhaite peser davantage sur la gouvernance éco-communaliste mondiale sans pour autant renoncer à l'autonomie. La question des eaux de fonte glaciaire représente l'enjeu le plus explosif : les aquifères du bioterritoire sont parmi les dernières réserves d'eau douce non contaminées de l'hémisphère nord, et la pression des factions extractivistes extérieures croît chaque année, testant les limites de la souveraineté proclamée.
+
+date_creation: 2026-06-27
+---
+
+# Kalaallit Nunaat Bioterritoire Souverain
+
+## Rôle dans [[eco_communalism]]
+Ancien territoire autonome du Groenland reconverti en bioterritoire souverain, Kalaallit Nunaat a organisé sa société autour de la préservation des écosystèmes arctiques et de l'autosuffisance communautaire. Refusant toute intégration aux grands blocs économiques, il sert de référence symbolique au mouvement éco-communaliste mondial tout en protégeant jalousement ses ressources hydriques et biologiques. Sa simple existence constitue une démonstration vivante qu'un autre modèle social est praticable, ce qui lui confère une autorité morale disproportionnée à sa taille démographique. Le bioterritoire assume pleinement ce rôle de lieu-manifeste tout en s'efforçant de ne pas se laisser instrumentaliser par les projections extérieures que cette stature symbolique génère inévitablement.
+
+## Responsabilités
+Le Kalaallit Nunaat Bioterritoire Souverain administre la totalité de ses écosystèmes arctiques selon des protocoles de préservation définis collectivement par ses assemblées communautaires, garantit l'autosuffisance alimentaire, hydrique et énergétique de sa population, et contrôle strictement tout accès extérieur à ses ressources biologiques et glaciaires. Il maintient des relations diplomatiques minimales avec les réseaux éco-communalistes mondiaux, partageant sélectivement ses jurisprudences et savoir-faire écologiques sans jamais compromettre son autonomie décisionnelle.
+
+## Variables influencées
+- [[organisation_territoires]]
+- [[climat_environnement_global]]
+- [[energie_ressources_critiques]]
+- [[valeurs_culture_tempo_sociale]]
+- [[geopolitique_conflits]]
+
+## Relations
+**Alliés** : [[confederation_des_communs_de_l_arc_septentrional_eco_communalism]], [[reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism]], [[confederation_communs_arc_septentrional_eco_communalism]], [[assemblee_territoires_eco_communalism]], [[assemblees_bioterritoriales_regionales_eco_communalism]], [[kalaallit_nunaat_sovereign_fund_eco_communalism]], [[confederation_bassins_vivants_eco_communalism]], [[brigades_de_restauration_ecologique_eco_communalism]], [[collectifs_de_geo_observateurs_citoyens_eco_communalism]], [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]], [[amazonie_pacte_viva_eco_communalism]]
+**Opposants** : [[consortiums_industriels_de_l_eau_eco_communalism]], [[agro_conglomerats_des_enclaves_technologiques_eco_communalism]], [[plateformes_centralisees_de_reagregation_globale_eco_communalism]], [[factions_technophiles_de_la_geo_ingenierie_centralisee_eco_communalism]], [[enclaves_extractivistes_residuelles_des_corridors_eco_communalism]], [[factions_extractivistes_des_aquiferes_communs_eco_communalism]], [[reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism]], [[cartels_de_narration_de_penurie_eco_communalism]], [[consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism]]
+
+## Description journalistique
+Sur la carte mouvante des bioterritoires de 2098, Kalaallit Nunaat fait figure d'anomalie persistante : soixante-sept ans après sa proclamation de souveraineté écologique complète, ce territoire de glaces et de toundras arctiques n'a toujours pas cédé à la pression des consortiums hydriques qui lorgnent ses aquifères, ni aux sirènes des réseaux numériques qui voudraient numériser ses protocoles de gouvernance. Ses quelque quatre-vingt mille habitants vivent selon un rythme délibérément arctique — assemblées saisonnières, quotas de prélèvement révisés chaque solstice, interdiction constitutionnelle de toute extraction minière au-delà des besoins stricts de la communauté. Ce que le monde retient surtout, c'est la force silencieuse de son exemple : chaque délégation éco-communaliste qui passe par Nuuk repart avec des photos de glaciers stables et des copies de jurisprudences territoriales copiées à la main sur du papier de kelp. Mais cette gloire symbolique a un prix — les tentatives d'instrumentalisation se multiplient, et les jeunes générations du bioterritoire commencent à questionner le coût de la pureté.
+
+## Tensions narratives
+La tension centrale qui traverse le bioterritoire en 2098 est celle entre l'intégrité du retrait et la pression de la célébrité mondiale : plus Kalaallit Nunaat devient une référence symbolique incontournable, plus des acteurs extérieurs — des consortiums industriels aux mouvements politiques instrumentalisateurs — cherchent à s'en approcher, à en extraire des ressources ou à en capturer le récit. En interne, une fracture générationnelle s'approfondit entre les 'gardiens du seuil', partisans d'un isolationnisme absolu, et une jeunesse qui souhaite peser davantage sur la gouvernance éco-communaliste mondiale sans pour autant renoncer à l'autonomie. La question des eaux de fonte glaciaire représente l'enjeu le plus explosif : les aquifères du bioterritoire sont parmi les dernières réserves d'eau douce non contaminées de l'hémisphère nord, et la pression des factions extractivistes extérieures croît chaque année, testant les limites de la souveraineté proclamée.

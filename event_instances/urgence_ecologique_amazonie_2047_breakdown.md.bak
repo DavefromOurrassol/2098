@@ -1,0 +1,80 @@
+---
+name: La Guerre des Racines — Effondrement du Pacte des Gardiens de l'Amazone
+type: event_instance
+slug: urgence_ecologique_amazonie_2047_breakdown
+archetype: urgence_ecologique_amazonie_2047
+scenario: breakdown
+type_evenement: environmental
+portee: continentale
+date: 2049
+date_label: saison sèche 2049
+impossible: false
+custom: true
+description: >
+  Les feux de la saison sèche 2049 ne sont pas accidentels. Dans le delta de Belém, les gardiens autochtones et les fragments du Pacte des Gardiens dressent des barricades de fortune contre les convois blindés des opérateurs extractivistes — des milices contractuelles liées aux factions énergétiques héritières des pactes ABS. Les flammes avalent des millions d'hectares pendant que les délégués du Registre des Zones Non Récupérables estampillent des cartes de territoires abandonnés à la prédation. Ce n'est plus une urgence écologique : c'est une liquidation.
+consequences: >
+  Le bassin amazonien entre dans une spirale de fragmentation territoriale irréversible, divisé entre enclaves corporatives fortifiées, zones de résistance autochtone isolées et no man's lands carbonisés administrés par personne. La Confédération des Bassins Vivants perd toute crédibilité comme instance de coordination régionale. Les émissions de carbone issues de la destruction accélèrent les boucles de rétroaction climatique déjà hors de contrôle, rendant caducs les rares modèles de stabilisation encore maintenus par le BCUC.
+realisation: >
+  En 2049, ce qui restait du Consortium Amazônia Viva — rebaptisé Pacte des Gardiens — tente de déclarer un état d'urgence sur 40% du bassin amazonien après la détection de déforestations massives orchestrées par les factions énergétiques héritières des anciens pactes de ressources. Mais le Pacte est lui-même fragmenté : trois factions autochtones refusent de reconnaître l'autorité centrale de Belém, tandis que les milices corporatives financées par les blocs énergétiques avancent sans rencontrer de résistance coordonnée. L'ONU, fantôme institutionnel, émet une déclaration sans effet. L'urgence est déclarée, mais personne n'a les moyens de la faire respecter.
+impact_sur_variables:
+  - variable: climat_environnement_global
+    delta_level: 8
+    duree: 30
+    polarite: -1
+  - variable: geopolitique_conflits
+    delta_level: 7
+    duree: 15
+    polarite: -1
+  - variable: gouvernance_institutions
+    delta_level: -5
+    duree: 25
+    polarite: -1
+  - variable: organisation_territoires
+    delta_level: 6
+    duree: 20
+    polarite: -1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+    - consortium_amazonia_viva_breakdown
+    - factions_energetiques_heritieres_des_pactes_abs_breakdown
+    - milices_contractuelles_des_anciens_etats_membres_breakdown
+    - federation_communs_territoriaux_breakdown
+    - bureau_des_territoires_residuels_breakdown
+    - agence_stabilisation_climatique_breakdown
+    - frente_sert_o_livre_breakdown
+    - enclaves_corporatives_fortifiees_breakdown
+note_coherence: "Dans un monde de breakdown à tension 5/5, l'urgence écologique ne peut que s'effondrer sur elle-même : aucune institution n'a la légitimité ni la force d'imposer quoi que ce soit, et l'événement devient une liquidation violente plutôt qu'un test de souveraineté — ce qui est précisément la logique de fragmentation dominante du scénario."
+custom_source: rééquilibrage_geo_2026-06
+date_creation: 2026-06-23
+---
+
+# La Guerre des Racines — Effondrement du Pacte des Gardiens de l'Amazone
+
+## Réalisation dans [[breakdown]]
+En 2049, ce qui restait du Consortium Amazônia Viva — rebaptisé Pacte des Gardiens — tente de déclarer un état d'urgence sur 40% du bassin amazonien après la détection de déforestations massives orchestrées par les factions énergétiques héritières des anciens pactes de ressources. Mais le Pacte est lui-même fragmenté : trois factions autochtones refusent de reconnaître l'autorité centrale de Belém, tandis que les milices corporatives financées par les blocs énergétiques avancent sans rencontrer de résistance coordonnée. L'ONU, fantôme institutionnel, émet une déclaration sans effet. L'urgence est déclarée, mais personne n'a les moyens de la faire respecter.
+
+## Description journalistique
+Les feux de la saison sèche 2049 ne sont pas accidentels. Dans le delta de Belém, les gardiens autochtones et les fragments du Pacte des Gardiens dressent des barricades de fortune contre les convois blindés des opérateurs extractivistes — des milices contractuelles liées aux factions énergétiques héritières des pactes ABS. Les flammes avalent des millions d'hectares pendant que les délégués du Registre des Zones Non Récupérables estampillent des cartes de territoires abandonnés à la prédation. Ce n'est plus une urgence écologique : c'est une liquidation.
+
+## Conséquences
+Le bassin amazonien entre dans une spirale de fragmentation territoriale irréversible, divisé entre enclaves corporatives fortifiées, zones de résistance autochtone isolées et no man's lands carbonisés administrés par personne. La Confédération des Bassins Vivants perd toute crédibilité comme instance de coordination régionale. Les émissions de carbone issues de la destruction accélèrent les boucles de rétroaction climatique déjà hors de contrôle, rendant caducs les rares modèles de stabilisation encore maintenus par le BCUC.
+
+## Impact sur les variables
+- **climat_environnement_global** : delta -8 sur 30 ans
+- **geopolitique_conflits** : delta -7 sur 15 ans
+- **gouvernance_institutions** : delta +5 sur 25 ans
+- **organisation_territoires** : delta -6 sur 20 ans
+
+## Acteurs impliqués
+- [[consortium_amazonia_viva_breakdown]]
+- [[factions_energetiques_heritieres_des_pactes_abs_breakdown]]
+- [[milices_contractuelles_des_anciens_etats_membres_breakdown]]
+- [[federation_communs_territoriaux_breakdown]]
+- [[bureau_des_territoires_residuels_breakdown]]
+- [[agence_stabilisation_climatique_breakdown]]
+- [[frente_sert_o_livre_breakdown]]
+- [[enclaves_corporatives_fortifiees_breakdown]]
+
+## Note de cohérence
+Dans un monde de breakdown à tension 5/5, l'urgence écologique ne peut que s'effondrer sur elle-même : aucune institution n'a la légitimité ni la force d'imposer quoi que ce soit, et l'événement devient une liquidation violente plutôt qu'un test de souveraineté — ce qui est précisément la logique de fragmentation dominante du scénario.

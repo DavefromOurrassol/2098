@@ -1,0 +1,103 @@
+---
+name: Accords Hydriques de Kinshasa
+type: instance
+slug: kinshasa_accords_hydriques_reference
+entite: kinshasa_accords_hydriques
+scenario: reference
+
+type_dans_scenario: institution
+
+role_dans_scenario: >
+  Cadre de négociation instauré à Kinshasa pour réguler l'accès au bassin du Congo, les Accords Hydriques sont le fruit d'une diplomatie de la dernière chance entre États riverains aux intérêts divergents. Régulièrement mis à l'épreuve par les sécheresses, les migrations climatiques et les pressions des multinationales de l'eau, leur application reste partielle et contestée. Ils incarnent la logique du scénario reference dans toute sa contradiction : un mécanisme multilatéral indispensable dont tout le monde reconnaît l'utilité et que personne ne respecte pleinement, maintenu en vie par la crainte collective de ce qui surviendrait sans lui plutôt que par une adhésion sincère à ses principes.
+
+responsabilites: >
+  Les Accords fixent des quotas d'extraction et de dérivation des eaux du bassin du Congo entre États signataires, organisent des sessions semestrielles de révision des allocations selon les données hydrologiques en temps réel, et mandatent des missions d'inspection conjointe sur les grands barrages et prises d'eau. En pratique, ils servent aussi de forum diplomatique informel où les tensions liées aux migrations climatiques et aux projets d'infrastructure privés sont débattues, souvent sans conclusion contraignante.
+
+impact_local: 4
+impact_systemique_global: 3
+
+variables_influencees:
+    - climat_environnement_global
+    - energie_ressources_critiques
+    - geopolitique_conflits
+    - gouvernance_institutions
+
+zone_geographique:
+    - continentale
+    - régionale
+
+zone_systemique:
+    - gouvernance
+    - infrastructure
+    - énergie
+    - société
+
+alliances:
+    - commission_hydrique_de_l_union_africaine_reference
+    - autorites_regionales_de_regulation_hydrologique_reference
+    - programme_onu_eau_2080_reference
+    - union_africaine_de_resilience_territoriale_reference
+    - banque_mondiale_des_transitions_climatiques_reference
+    - ong_de_tracabilite_des_ressources_critiques_reference
+    - observatoire_climatique_des_territoires_oct_reference
+
+oppositions:
+    - consortiums_d_extraction_miniere_du_bassin_congolais_reference
+    - lobbies_agro_industriels_a_haute_consommation_d_eau_reference
+    - factions_eurasiatiques_contre_la_tarification_hydrique_reference
+    - consortiums_prives_d_extraction_de_ressources_critiques_reference
+    - bloc_des_souverainistes_climatiques_reference
+    - gouvernements_du_bloc_sahelien_autonome_reference
+
+type_relation_dominante: coopération
+
+annee_debut: 2041
+annee_fin: 
+
+etat_temporel: actif
+age_historique: mature
+generation: transition
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Depuis leur signature dans la chaleur étouffante de Kinshasa en 2041, les Accords Hydriques ont survécu à sept crises majeures, quatre tentatives de retrait unilatéral et une sécheresse qui a failli réduire le débit du Congo à son étiage historique. Aujourd'hui, les délégations se réunissent dans l'immense salle climatisée du Palais du Peuple rénové, entourées d'écrans affichant en temps réel les données des capteurs hydrologiques — une vitrine technologique derrière laquelle se jouent des négociations d'une brutalité tranquille. Les États riverains plus puissants extraient systématiquement au-delà de leurs quotas lors des années sèches, tandis que les petits signataires agitent leurs rapports de violations sans parvenir à déclencher la moindre sanction. Selon un diplomate en poste à Kinshasa sous couvert d'anonymat, 'les Accords fonctionnent exactement comme prévu : ils empêchent la guerre ouverte, et c'est tout ce qu'on leur a vraiment demandé de faire.'
+
+signes_distinctifs: >
+  Le logo des Accords — un fleuve bleu stylisé traversant un cercle de mains jointes sur fond vert foncé — s'affiche sur les bâtiments administratifs de toutes les capitales riveraines, souvent terni ou décoloré par le soleil intense. Les sessions plénières sont formellement ouvertes par la lecture rituelle du préambule de 2041, un texte lyrique sur la 'souveraineté partagée des eaux communes' que les délégués écoutent en regardant leurs tablettes.
+
+tensions_narratives: >
+  La prochaine grande sécheresse du bassin — que l'Oracle des Seuils prédit avec 73 % de probabilité pour 2101-2103 — risque de rendre caducs les quotas actuels et de forcer une renégociation dans un contexte de rivalité accrue entre États et consortiums privés. Par ailleurs, la pression croissante des consortiums miniers du bassin congolais pour obtenir des dérogations permanentes aux restrictions de dérivation fragilise le secrétariat des Accords, dont plusieurs fonctionnaires clés font l'objet d'enquêtes pour corruption. Enfin, la question de l'intégration des données citoyennes collectées par les réseaux de capteurs locaux dans les décisions d'allocation divise profondément les signataires entre États transparents et régimes opaques.
+
+date_creation: 2026-06-27
+---
+
+# Accords Hydriques de Kinshasa
+
+## Rôle dans [[reference]]
+Cadre de négociation instauré à Kinshasa pour réguler l'accès au bassin du Congo, les Accords Hydriques sont le fruit d'une diplomatie de la dernière chance entre États riverains aux intérêts divergents. Régulièrement mis à l'épreuve par les sécheresses, les migrations climatiques et les pressions des multinationales de l'eau, leur application reste partielle et contestée. Ils incarnent la logique du scénario reference dans toute sa contradiction : un mécanisme multilatéral indispensable dont tout le monde reconnaît l'utilité et que personne ne respecte pleinement, maintenu en vie par la crainte collective de ce qui surviendrait sans lui plutôt que par une adhésion sincère à ses principes.
+
+## Responsabilités
+Les Accords fixent des quotas d'extraction et de dérivation des eaux du bassin du Congo entre États signataires, organisent des sessions semestrielles de révision des allocations selon les données hydrologiques en temps réel, et mandatent des missions d'inspection conjointe sur les grands barrages et prises d'eau. En pratique, ils servent aussi de forum diplomatique informel où les tensions liées aux migrations climatiques et aux projets d'infrastructure privés sont débattues, souvent sans conclusion contraignante.
+
+## Variables influencées
+- [[climat_environnement_global]]
+- [[energie_ressources_critiques]]
+- [[geopolitique_conflits]]
+- [[gouvernance_institutions]]
+
+## Relations
+**Alliés** : [[commission_hydrique_de_l_union_africaine_reference]], [[autorites_regionales_de_regulation_hydrologique_reference]], [[programme_onu_eau_2080_reference]], [[union_africaine_de_resilience_territoriale_reference]], [[banque_mondiale_des_transitions_climatiques_reference]], [[ong_de_tracabilite_des_ressources_critiques_reference]], [[observatoire_climatique_des_territoires_oct_reference]]
+**Opposants** : [[consortiums_d_extraction_miniere_du_bassin_congolais_reference]], [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]], [[factions_eurasiatiques_contre_la_tarification_hydrique_reference]], [[consortiums_prives_d_extraction_de_ressources_critiques_reference]], [[bloc_des_souverainistes_climatiques_reference]], [[gouvernements_du_bloc_sahelien_autonome_reference]]
+
+## Description journalistique
+Depuis leur signature dans la chaleur étouffante de Kinshasa en 2041, les Accords Hydriques ont survécu à sept crises majeures, quatre tentatives de retrait unilatéral et une sécheresse qui a failli réduire le débit du Congo à son étiage historique. Aujourd'hui, les délégations se réunissent dans l'immense salle climatisée du Palais du Peuple rénové, entourées d'écrans affichant en temps réel les données des capteurs hydrologiques — une vitrine technologique derrière laquelle se jouent des négociations d'une brutalité tranquille. Les États riverains plus puissants extraient systématiquement au-delà de leurs quotas lors des années sèches, tandis que les petits signataires agitent leurs rapports de violations sans parvenir à déclencher la moindre sanction. Selon un diplomate en poste à Kinshasa sous couvert d'anonymat, 'les Accords fonctionnent exactement comme prévu : ils empêchent la guerre ouverte, et c'est tout ce qu'on leur a vraiment demandé de faire.'
+
+## Tensions narratives
+La prochaine grande sécheresse du bassin — que l'Oracle des Seuils prédit avec 73 % de probabilité pour 2101-2103 — risque de rendre caducs les quotas actuels et de forcer une renégociation dans un contexte de rivalité accrue entre États et consortiums privés. Par ailleurs, la pression croissante des consortiums miniers du bassin congolais pour obtenir des dérogations permanentes aux restrictions de dérivation fragilise le secrétariat des Accords, dont plusieurs fonctionnaires clés font l'objet d'enquêtes pour corruption. Enfin, la question de l'intégration des données citoyennes collectées par les réseaux de capteurs locaux dans les décisions d'allocation divise profondément les signataires entre États transparents et régimes opaques.

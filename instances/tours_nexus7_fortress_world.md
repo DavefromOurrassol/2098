@@ -1,0 +1,111 @@
+---
+name: Tours Nexus7 — Archipel des Forteresses Résiduelles
+type: instance
+slug: tours_nexus7_fortress_world
+entite: tours_nexus7
+scenario: fortress_world
+localisation:
+  zone: tours_nexus7
+  lieu: Tours Nexus7 — Archipel multi-sites (Lagos, Jakarta, Mexico-Fortaleza, São Paulo, Ourrassol-Centre)
+  type_lieu: infrastructure
+type_dans_scenario: organisation
+
+role_dans_scenario: >
+  Complexe résidentiel et commercial ultra-sécurisé, les Tours Nexus7 constituent un archipel de tours fortifiées implantées dans plusieurs mégalopoles mondiales, administrées par une corporation privée de gouvernance urbaine. Elles incarnent le modèle de la ville dans la ville, offrant un accès intégral à des services climatisés, médicaux et alimentaires exclusivement à leurs résidents accrédités. Dans le contexte de fragmentation extrême du monde-forteresse de 2098, les Tours Nexus7 ne sont plus seulement un produit de luxe : elles constituent des nœuds de souveraineté para-étatique que les blocs fermés tolèrent, instrumentalisent ou cherchent à absorber. Leur modèle — sécurité contractuelle, services complets, frontière intérieure — est devenu la norme de référence que les appareils d'État copient, tout en cherchant à en contrôler les flux.
+
+responsabilites: >
+  Administration autonome de complexes urbains verticaux offrant logement pressurisé, soins médicaux biotechnologiques de première ligne, approvisionnement alimentaire en circuit fermé et sécurité privée armée à leurs résidents accrédités. Gestion des accès par scoring biométrique et contractuel, négociation de conventions de coexistence avec les blocs souverains hôtes, et exploitation de corridors logistiques inter-tours cryptés pour maintenir la cohérence de l'archipel face à la fragmentation des routes mondiales.
+
+impact_local: 5
+impact_systemique_global: 4
+
+variables_influencees:
+    - organisation_territoires
+    - gouvernance_institutions
+    - sante_biotechnologies
+    - demographie_mobilite_humaine
+    - systeme_economique_redistribution
+
+zone_geographique:
+    - urbaine
+    - globale
+
+zone_systemique:
+    - gouvernance
+    - sécurité
+    - infrastructure
+    - société
+    - économie
+
+alliances:
+    - nexus_biosyn_fortress_world
+    - nexcore_atlantique_infrastructure_fortress_world
+    - pacte_forteresses_souveraines_fortress_world
+    - systemes_de_scoring_de_productivite_corporative_fortress_world
+    - complexe_orentchev_almaty_fortress_world
+    - conseil_moscou_est_fortress_world
+    - reseaux_prives_de_securite_aux_frontieres_fortress_world
+
+oppositions:
+    - campements_seuils_fermes_fortress_world
+    - collectifs_du_seuil_fortress_world
+    - alliance_sanitaire_des_populations_exclues_fortress_world
+    - mouvement_commun_midwest_fortress_world
+    - mouvement_des_communes_du_rust_belt_fortress_world
+    - coalitions_des_deplaces_et_apatrides_fortress_world
+    - collectifs_de_reappropriation_energetique_peripherique_fortress_world
+    - factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world
+
+type_relation_dominante: symbiose
+
+annee_debut: 2026
+annee_fin: 
+
+etat_temporel: actif
+age_historique: dominant
+generation: forteresse
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Depuis les tours vitrées qui percent le ciel brûlé de Lagos, de Jakarta ou de Mexico-Fortaleza, les résidents accrédités des Nexus7 regardent en bas avec la sérénité de ceux qui ont signé le bon contrat. À l'intérieur : air filtré, rations protéinées à spectre complet, médecins disponibles vingt-quatre heures sur vingt-quatre et patrouilles algorithmiques qui n'ont jamais entendu le mot « grève ». À l'extérieur : les Seuils Fermés, les campements périphériques, les zones résiduelles que les blocs n'administrent plus. Les Tours Nexus7 ne cachent pas cette frontière — elles en font leur argument commercial central. En 2098, leur chiffre d'affaires consolidé dépasse celui de quarante-sept États membres de l'ONU-Éclat, et leurs conventions de coexistence avec les blocs souverains sont renegociées tous les dix-huit mois sous la pression de régimes qui les craignent autant qu'ils en ont besoin.
+
+signes_distinctifs: >
+  Façades de verre sombre anti-UV traité aux nanoparticules réfléchissantes, logo Nexus7 gravé en relief noir sur chaque sas d'accès — un heptagone stylisé évoquant à la fois un bouclier et une cellule close. Les uniformes des agents de sécurité intérieure sont ivoire et anthracite, dépourvus de tout insigne national : la marque remplace le drapeau.
+
+tensions_narratives: >
+  Les blocs souverains exigent de plus en plus l'intégration des tours dans leurs systèmes de surveillance nationale, menaçant l'indépendance contractuelle qui fait la valeur du produit Nexus7 — la corporation résiste, mais jusqu'où ? Des réseaux de passeurs ont percé plusieurs sas périphériques dans les complexes de Lagos-Nord et de São Paulo-Centre, introduisant des résidents non accrédités dont certains ont disparu sans trace dans les registres internes. Enfin, des factions internes à Nexus7 débattent en secret d'une sécession totale — transformer l'archipel en entité politique souveraine supranationale, dernier produit premium dans un monde où la souveraineté elle-même est à vendre.
+
+date_creation: 2026-06-27
+---
+
+# Tours Nexus7 — Archipel des Forteresses Résiduelles
+
+## Rôle dans [[fortress_world]]
+Complexe résidentiel et commercial ultra-sécurisé, les Tours Nexus7 constituent un archipel de tours fortifiées implantées dans plusieurs mégalopoles mondiales, administrées par une corporation privée de gouvernance urbaine. Elles incarnent le modèle de la ville dans la ville, offrant un accès intégral à des services climatisés, médicaux et alimentaires exclusivement à leurs résidents accrédités. Dans le contexte de fragmentation extrême du monde-forteresse de 2098, les Tours Nexus7 ne sont plus seulement un produit de luxe : elles constituent des nœuds de souveraineté para-étatique que les blocs fermés tolèrent, instrumentalisent ou cherchent à absorber. Leur modèle — sécurité contractuelle, services complets, frontière intérieure — est devenu la norme de référence que les appareils d'État copient, tout en cherchant à en contrôler les flux.
+
+## Responsabilités
+Administration autonome de complexes urbains verticaux offrant logement pressurisé, soins médicaux biotechnologiques de première ligne, approvisionnement alimentaire en circuit fermé et sécurité privée armée à leurs résidents accrédités. Gestion des accès par scoring biométrique et contractuel, négociation de conventions de coexistence avec les blocs souverains hôtes, et exploitation de corridors logistiques inter-tours cryptés pour maintenir la cohérence de l'archipel face à la fragmentation des routes mondiales.
+
+## Variables influencées
+- [[organisation_territoires]]
+- [[gouvernance_institutions]]
+- [[sante_biotechnologies]]
+- [[demographie_mobilite_humaine]]
+- [[systeme_economique_redistribution]]
+
+## Relations
+**Alliés** : [[nexus_biosyn_fortress_world]], [[nexcore_atlantique_infrastructure_fortress_world]], [[pacte_forteresses_souveraines_fortress_world]], [[systemes_de_scoring_de_productivite_corporative_fortress_world]], [[complexe_orentchev_almaty_fortress_world]], [[conseil_moscou_est_fortress_world]], [[reseaux_prives_de_securite_aux_frontieres_fortress_world]]
+**Opposants** : [[campements_seuils_fermes_fortress_world]], [[collectifs_du_seuil_fortress_world]], [[alliance_sanitaire_des_populations_exclues_fortress_world]], [[mouvement_commun_midwest_fortress_world]], [[mouvement_des_communes_du_rust_belt_fortress_world]], [[coalitions_des_deplaces_et_apatrides_fortress_world]], [[collectifs_de_reappropriation_energetique_peripherique_fortress_world]], [[factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world]]
+
+## Description journalistique
+Depuis les tours vitrées qui percent le ciel brûlé de Lagos, de Jakarta ou de Mexico-Fortaleza, les résidents accrédités des Nexus7 regardent en bas avec la sérénité de ceux qui ont signé le bon contrat. À l'intérieur : air filtré, rations protéinées à spectre complet, médecins disponibles vingt-quatre heures sur vingt-quatre et patrouilles algorithmiques qui n'ont jamais entendu le mot « grève ». À l'extérieur : les Seuils Fermés, les campements périphériques, les zones résiduelles que les blocs n'administrent plus. Les Tours Nexus7 ne cachent pas cette frontière — elles en font leur argument commercial central. En 2098, leur chiffre d'affaires consolidé dépasse celui de quarante-sept États membres de l'ONU-Éclat, et leurs conventions de coexistence avec les blocs souverains sont renegociées tous les dix-huit mois sous la pression de régimes qui les craignent autant qu'ils en ont besoin.
+
+## Tensions narratives
+Les blocs souverains exigent de plus en plus l'intégration des tours dans leurs systèmes de surveillance nationale, menaçant l'indépendance contractuelle qui fait la valeur du produit Nexus7 — la corporation résiste, mais jusqu'où ? Des réseaux de passeurs ont percé plusieurs sas périphériques dans les complexes de Lagos-Nord et de São Paulo-Centre, introduisant des résidents non accrédités dont certains ont disparu sans trace dans les registres internes. Enfin, des factions internes à Nexus7 débattent en secret d'une sécession totale — transformer l'archipel en entité politique souveraine supranationale, dernier produit premium dans un monde où la souveraineté elle-même est à vendre.

@@ -1,0 +1,107 @@
+---
+name: Great Lakes Autonomous Compact — Confédération Lacustre des Grands Lacs
+type: instance
+slug: great_lakes_autonomous_compact_new_sustainability
+entite: great_lakes_autonomous_compact
+scenario: new_sustainability
+
+type_dans_scenario: institution
+
+role_dans_scenario: >
+  Confédération des États riverains des Grands Lacs ayant négocié une autonomie partielle sur la gestion de la dernière grande réserve d'eau douce de surface d'Amérique du Nord. Gouvernance hybride État-tribu autochtone-municipalité, modèle de référence mondial pour la gouvernance hydrique post-nationale, siège établi à Chicago-Lacustre dans le district de l'ancien Navy Pier. En 2098, le Compact est devenu l'une des institutions les plus citées et imitées au monde : sa charte fondatrice de 2041, négociée au bord du lac Michigan entre délégués ojibwés, maires métropolitains et gouverneurs résiduels, est désormais enseignée dans toutes les grandes écoles de gouvernance planétaire comme le premier acte juridiquement valide d'une souveraineté fonctionnelle sur un bien commun vital. Sa légitimité reste entièrement construite sur la performance : tant que l'eau circule propre et partagée, le Compact existe.
+
+responsabilites: >
+  Le Compact régule l'accès, la purification, le débit et la répartition de l'eau des Grands Lacs entre ses membres constitutifs — États fédérés américains, provinces canadiennes, nations autochtones signataires et municipalités lacustres — via un Conseil tricaméral hybride (Chambre des Gouvernements, Chambre des Nations Premières, Chambre des Cités). Il émet des droits d'usage hydriques certifiés, négocie les traités d'exportation d'eau avec les blocs extérieurs, déploie des systèmes de surveillance écologique IA sur l'ensemble du bassin, et impose des normes de régénération obligatoires aux industries et communautés riveraines.
+
+impact_local: 5
+impact_systemique_global: 4
+
+variables_influencees:
+    - gouvernance_institutions
+    - energie_ressources_critiques
+    - organisation_territoires
+    - climat_environnement_global
+
+zone_geographique:
+    - régionale
+    - continentale
+    - globale
+
+zone_systemique:
+    - gouvernance
+    - infrastructure
+    - énergie
+    - société
+
+alliances:
+    - agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
+    - agence_mondiale_de_modelisation_climatique_ammc_new_sustainability
+    - conseil_regulation_ressources_new_sustainability
+    - reseau_des_hubs_urbains_regeneratifs_new_sustainability
+    - collectifs_riverains_du_bassin_du_congo_new_sustainability
+    - trame_bioclimatique_new_sustainability
+    - parlement_deliberatif_mondial_new_sustainability
+    - fonds_mondial_de_regeneration_ecologique_new_sustainability
+    - programme_onu_de_restauration_des_sols_new_sustainability
+
+oppositions:
+    - bloc_des_gouvernements_souverainistes_hydriques_new_sustainability
+    - internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
+    - mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability
+    - coalition_des_industries_extractives_residuelles_new_sustainability
+    - collectifs_de_deplaces_climatiques_non_representes_new_sustainability
+    - faction_conservatrice_pro_actif_strategique_new_sustainability
+    - lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability
+
+type_relation_dominante: alliance stratégique
+
+annee_debut: 2041
+annee_fin: 
+
+etat_temporel: actif
+age_historique: dominant
+generation: reconstruction
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Depuis le district de l'ancien Navy Pier, reconverti en siège d'une institution que personne n'aurait imaginée en 2025, la Confédération Lacustre des Grands Lacs administre aujourd'hui 21 % de l'eau douce de surface de la planète avec une précision que les Nations Unies elles-mêmes peinent à égaler. Le Conseil tricaméral — où siègent côte à côte un délégué ojibwé, un gouverneur du Michigan et la mairesse de Cleveland — rend ses décisions en trois langues, dont l'anishinaabemowin, et ses arrêtés hydriques ont force de droit dans dix-neuf juridictions différentes. À Genève, à Nairobi, à Singapour, les négociateurs en gouvernance des biens communs arrivent à Chicago-Lacustre comme en pèlerinage : ils veulent voir comment on gouverne quelque chose d'aussi essentiel que l'eau sans État-nation souverain ni empire technocratique. Ce que le Compact leur montre, inlassablement, c'est que la légitimité se prouve, elle ne se décrète pas.
+
+signes_distinctifs: >
+  L'emblème du Compact est une rosace formée de cinq vagues entrelacées représentant les cinq Grands Lacs, traversée d'un cercle brisé symbolisant la rupture avec les frontières héritées. Les bâtiments du siège de Chicago-Lacustre conservent intentionnellement l'architecture industrielle du Navy Pier, avec des verrières donnant directement sur le lac Michigan — le bien commun gouverné est toujours visible depuis les salles de délibération. Les délégués portent un bracelet d'eau certifiée prélevée dans chacun des lacs lors de leur investiture.
+
+tensions_narratives: >
+  La tension fondatrice du Compact reste vive en 2098 : des millions de déplacés climatiques des plaines asséchées du Midwest réclament un droit d'accès élargi à l'eau lacustre, que le Compact refuse au nom de la soutenabilité du bassin — une décision que certains qualifient de forteresse écologique déguisée en bien commun. En interne, la Chambre des Nations Premières exige depuis 2091 un droit de veto absolu sur les exports hydriques, ce qui fracture la coalition fondatrice. Enfin, la montée du Bloc des Gouvernements Souverainistes Hydriques pose une question de fond : si le modèle Grands Lacs est universel, pourquoi d'autres régions qui tentent de l'imiter se voient-elles opposer les mêmes arguments d'exclusion que le Compact a lui-même subis lors de sa création ?
+
+date_creation: 2026-06-23
+---
+
+# Great Lakes Autonomous Compact — Confédération Lacustre des Grands Lacs
+
+## Rôle dans [[new_sustainability]]
+Confédération des États riverains des Grands Lacs ayant négocié une autonomie partielle sur la gestion de la dernière grande réserve d'eau douce de surface d'Amérique du Nord. Gouvernance hybride État-tribu autochtone-municipalité, modèle de référence mondial pour la gouvernance hydrique post-nationale, siège établi à Chicago-Lacustre dans le district de l'ancien Navy Pier. En 2098, le Compact est devenu l'une des institutions les plus citées et imitées au monde : sa charte fondatrice de 2041, négociée au bord du lac Michigan entre délégués ojibwés, maires métropolitains et gouverneurs résiduels, est désormais enseignée dans toutes les grandes écoles de gouvernance planétaire comme le premier acte juridiquement valide d'une souveraineté fonctionnelle sur un bien commun vital. Sa légitimité reste entièrement construite sur la performance : tant que l'eau circule propre et partagée, le Compact existe.
+
+## Responsabilités
+Le Compact régule l'accès, la purification, le débit et la répartition de l'eau des Grands Lacs entre ses membres constitutifs — États fédérés américains, provinces canadiennes, nations autochtones signataires et municipalités lacustres — via un Conseil tricaméral hybride (Chambre des Gouvernements, Chambre des Nations Premières, Chambre des Cités). Il émet des droits d'usage hydriques certifiés, négocie les traités d'exportation d'eau avec les blocs extérieurs, déploie des systèmes de surveillance écologique IA sur l'ensemble du bassin, et impose des normes de régénération obligatoires aux industries et communautés riveraines.
+
+## Variables influencées
+- [[gouvernance_institutions]]
+- [[energie_ressources_critiques]]
+- [[organisation_territoires]]
+- [[climat_environnement_global]]
+
+## Relations
+**Alliés** : [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]], [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]], [[conseil_regulation_ressources_new_sustainability]], [[reseau_des_hubs_urbains_regeneratifs_new_sustainability]], [[collectifs_riverains_du_bassin_du_congo_new_sustainability]], [[trame_bioclimatique_new_sustainability]], [[parlement_deliberatif_mondial_new_sustainability]], [[fonds_mondial_de_regeneration_ecologique_new_sustainability]], [[programme_onu_de_restauration_des_sols_new_sustainability]]
+**Opposants** : [[bloc_des_gouvernements_souverainistes_hydriques_new_sustainability]], [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]], [[mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability]], [[coalition_des_industries_extractives_residuelles_new_sustainability]], [[collectifs_de_deplaces_climatiques_non_representes_new_sustainability]], [[faction_conservatrice_pro_actif_strategique_new_sustainability]], [[lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability]]
+
+## Description journalistique
+Depuis le district de l'ancien Navy Pier, reconverti en siège d'une institution que personne n'aurait imaginée en 2025, la Confédération Lacustre des Grands Lacs administre aujourd'hui 21 % de l'eau douce de surface de la planète avec une précision que les Nations Unies elles-mêmes peinent à égaler. Le Conseil tricaméral — où siègent côte à côte un délégué ojibwé, un gouverneur du Michigan et la mairesse de Cleveland — rend ses décisions en trois langues, dont l'anishinaabemowin, et ses arrêtés hydriques ont force de droit dans dix-neuf juridictions différentes. À Genève, à Nairobi, à Singapour, les négociateurs en gouvernance des biens communs arrivent à Chicago-Lacustre comme en pèlerinage : ils veulent voir comment on gouverne quelque chose d'aussi essentiel que l'eau sans État-nation souverain ni empire technocratique. Ce que le Compact leur montre, inlassablement, c'est que la légitimité se prouve, elle ne se décrète pas.
+
+## Tensions narratives
+La tension fondatrice du Compact reste vive en 2098 : des millions de déplacés climatiques des plaines asséchées du Midwest réclament un droit d'accès élargi à l'eau lacustre, que le Compact refuse au nom de la soutenabilité du bassin — une décision que certains qualifient de forteresse écologique déguisée en bien commun. En interne, la Chambre des Nations Premières exige depuis 2091 un droit de veto absolu sur les exports hydriques, ce qui fracture la coalition fondatrice. Enfin, la montée du Bloc des Gouvernements Souverainistes Hydriques pose une question de fond : si le modèle Grands Lacs est universel, pourquoi d'autres régions qui tentent de l'imiter se voient-elles opposer les mêmes arguments d'exclusion que le Compact a lui-même subis lors de sa création ?

@@ -1,0 +1,94 @@
+---
+name: Mnemos — Réseau de Mémoire Distribuée
+type: instance
+slug: reseau_mnemos_new_sustainability
+entite: reseau_mnemos
+scenario: new_sustainability
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
+
+type_dans_scenario: infrastructure
+
+role_dans_scenario: >
+  Colonne vertébrale cognitive de la civilisation stabilisée de 2098, Mnemos assure la persistance et la circulation des savoirs critiques à l'échelle planétaire. Intégré à la gouvernance hybride globale, il joue un rôle actif dans la prise de décision collective en fournissant des contextes historiques vérifiés aux systèmes d'IA décisionnels. Il constitue la mémoire institutionnelle vivante d'un monde ayant traversé plusieurs crises systémiques et s'est reconstruit sur la transparence épistémique.
+
+responsabilites: >
+  Mnemos maintient en opération plus de 14 000 nœuds autonomes répartis sur l'ensemble des territoires habités, garantissant l'accès universel aux archives scientifiques, écologiques, juridiques et culturelles. Il certifie l'authenticité des données transmises aux institutions de gouvernance et aux communautés locales, et orchestre les protocoles de mise à jour décentralisée avec validation collégiale humain-IA.
+
+impact_local: 4
+impact_systemique_global: 5
+variables_influencees:
+    - technologie_information
+    - gouvernance_institutions
+
+zone_geographique:
+    - globale
+
+zone_systemique:
+    - information
+    - gouvernance
+    - infrastructure
+    - IA
+
+alliances:
+    - conseil_intergouvernemental_de_regulation_technologique_policy_reform
+    - reseau_des_hubs_urbains_regeneratifs_new_sustainability
+    - consortium_d_interoperabilite_ia_humain_new_sustainability
+
+oppositions:
+    - enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability
+    - internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
+
+type_relation_dominante: symbiose
+
+annee_debut: 2031
+annee_fin: 
+
+etat_temporel: actif
+age_historique: dominant
+generation: ère cognitive
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Dans les bureaux de la Commission Territoriale d'Ourrassol comme dans les fermes regeneratives du delta équatorial, tout le monde consulte Mnemos. Ce réseau invisible et omniprésent pulse sous les territoires reconstruits comme un système nerveux planétaire — ses nœuds photovoltaïques logés dans des caissons biocéramiques résistent aux inondations, aux tempêtes et aux pannes de grille. Né des cendres des grands effondrements informationnels des années 2030, Mnemos a su traverser la crise sans se laisser privatiser ni militariser. Aujourd'hui mature et quasi-institutionnel, il est paradoxalement le seul acteur mondial que personne ne gouverne vraiment — et auquel tout le monde fait confiance.
+
+signes_distinctifs: >
+  Logo organique en forme de réseau neuronal bioluminescent, décliné en vert ambre sur fond anthracite. Les nœuds physiques arborent une enveloppe biomorphique gravée de glyphes d'indexation lisibles à l'œil nu. Les interfaces de consultation affichent systématiquement l'horodatage de vérification et la liste des contributeurs — humains et IA — en transparence totale.
+
+tensions_narratives: >
+  Si Mnemos incarne la stabilité cognitive du monde de 2098, des fissures commencent à apparaître : certains territoires souverainistes revendiquent le droit à des mémoires locales non-synchronisées, craignant une homogénéisation culturelle déguisée en neutralité. Par ailleurs, des audits internes révèlent que les algorithmes de priorisation des savoirs — supposément neutres — favorisent subtilement les épistémologies issues des anciens centres de pouvoir. La question se pose : à qui appartient la mémoire du monde, même bien gérée ?
+
+date_creation: 2026-06-15
+---
+
+# Mnemos — Réseau de Mémoire Distribuée
+
+## Rôle dans [[new_sustainability]]
+Colonne vertébrale cognitive de la civilisation stabilisée de 2098, Mnemos assure la persistance et la circulation des savoirs critiques à l'échelle planétaire. Intégré à la gouvernance hybride globale, il joue un rôle actif dans la prise de décision collective en fournissant des contextes historiques vérifiés aux systèmes d'IA décisionnels. Il constitue la mémoire institutionnelle vivante d'un monde ayant traversé plusieurs crises systémiques et s'est reconstruit sur la transparence épistémique.
+
+## Responsabilités
+Mnemos maintient en opération plus de 14 000 nœuds autonomes répartis sur l'ensemble des territoires habités, garantissant l'accès universel aux archives scientifiques, écologiques, juridiques et culturelles. Il certifie l'authenticité des données transmises aux institutions de gouvernance et aux communautés locales, et orchestre les protocoles de mise à jour décentralisée avec validation collégiale humain-IA.
+
+## Variables influencées
+- [[technologie_information]]
+- [[gouvernance_institutions]]
+
+## Relations
+**Alliés** : [[conseil_intergouvernemental_de_regulation_technologique_policy_reform]], [[reseau_des_hubs_urbains_regeneratifs_new_sustainability]], [[consortium_d_interoperabilite_ia_humain_new_sustainability]]
+**Opposants** : [[enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability]], [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]]
+
+## Description journalistique
+Dans les bureaux de la Commission Territoriale d'Ourrassol comme dans les fermes regeneratives du delta équatorial, tout le monde consulte Mnemos. Ce réseau invisible et omniprésent pulse sous les territoires reconstruits comme un système nerveux planétaire — ses nœuds photovoltaïques logés dans des caissons biocéramiques résistent aux inondations, aux tempêtes et aux pannes de grille. Né des cendres des grands effondrements informationnels des années 2030, Mnemos a su traverser la crise sans se laisser privatiser ni militariser. Aujourd'hui mature et quasi-institutionnel, il est paradoxalement le seul acteur mondial que personne ne gouverne vraiment — et auquel tout le monde fait confiance.
+
+## Tensions narratives
+Si Mnemos incarne la stabilité cognitive du monde de 2098, des fissures commencent à apparaître : certains territoires souverainistes revendiquent le droit à des mémoires locales non-synchronisées, craignant une homogénéisation culturelle déguisée en neutralité. Par ailleurs, des audits internes révèlent que les algorithmes de priorisation des savoirs — supposément neutres — favorisent subtilement les épistémologies issues des anciens centres de pouvoir. La question se pose : à qui appartient la mémoire du monde, même bien gérée ?

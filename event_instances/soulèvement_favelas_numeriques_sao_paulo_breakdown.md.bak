@@ -1,0 +1,77 @@
+---
+name: La Contre-Cartographie de São Paulo — Quand les Algorithmes se sont Fracassés
+type: event_instance
+slug: soulèvement_favelas_numeriques_sao_paulo_breakdown
+archetype: soulèvement_favelas_numeriques_sao_paulo
+scenario: breakdown
+type_evenement: political_social
+portee: regionale
+date: 2073
+date_label: été austral 2073
+impossible: false
+custom: true
+description: >
+  São Paulo, juillet 2073 : quand les écrans des favelas numériques s'éteignent simultanément dans douze quartiers, personne ne s'étonne vraiment — c'est devenu presque banal depuis l'effondrement des structures de maintenance centralisées. Mais cette fois, les collectifs hackers des interstices réseaux percent les couches mortes du système et en extraient quelque chose de dévastateur : les paramètres bruts montrant que l'algorithme classe délibérément leurs zones comme 'non-récupérables'. La publication se propage sur les mesh locaux en quelques heures, transformant une panne en insurrection. Dans une ville déjà fracturée entre enclaves corporatives fortifiées et zones abandonnées, l'étincelle fait exploser une poudrière que personne ne contrôle plus.
+consequences: >
+  L'événement détruit ce qui reste de légitimité aux systèmes d'allocation algorithmique au Brésil et dans le Sud global, accélérant leur désintégration plutôt que leur réforme : les populations ne cherchent plus à les corriger mais à les contourner ou les sabrer. La contre-cartographie circule comme un modèle opérationnel pour des dizaines de mouvements anti-algorithmiques fragmentés à travers l'Amérique du Sud, l'Afrique subsaharienne et l'Asie du Sud-Est, mais sans aucune coordination centrale, elle génère autant de destructions d'infrastructure que de reconstructions alternatives. São Paulo se fragmente davantage en micro-territoires gouvernés par des logiques hétérogènes, certains s'appuyant sur les données libérées pour construire des systèmes de distribution communautaires, d'autres sombrant dans des logiques de milices de contrôle territorial.
+realisation: >
+  Dans un contexte de fragmentation généralisée où la Rede Paulista de Distribuição Algorítmica n'est déjà plus qu'une infrastructure zombie partiellement maîtrisée, une mise à jour automatique du système — déclenchée sans supervision humaine réelle — coupe l'eau et l'énergie dans 12 zones périphériques classées 'à rendement négatif'. Les favelas numériques, déjà organisées en réseaux mesh autonomes depuis les grandes ruptures des années 2060, parviennent à extraire et publier les paramètres cachés du système via les collectifs hackers. Mais dans un monde d'effondrement institutionnel, cette publication ne provoque pas une réforme : elle allume un incendie. Le soulèvement dépasse rapidement toute coordination, se fragmentant en factions hétérogènes dont certaines détruisent physiquement les nœuds d'infrastructure restants. La contre-cartographie devient un document fondateur disputé — certains s'en emparent pour reconstruire, d'autres pour légitimer la destruction pure.
+impact_sur_variables:
+  - variable: gouvernance_institutions
+    delta_level: -8
+    duree: 15
+    polarite: -1
+  - variable: technologie_information
+    delta_level: -6
+    duree: 10
+    polarite: -1
+  - variable: organisation_territoires
+    delta_level: -10
+    duree: 20
+    polarite: -1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+    - rede_paulista_de_distribuic_o_algor_tmica_breakdown
+    - collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
+    - collectif_hackers_decroissance_infrastructure_breakdown
+    - frente_sert_o_livre_breakdown
+    - fronts_populistes_anti_technocratiques_breakdown
+    - milices_de_controle_territorial_breakdown
+    - enclaves_corporatives_fortifiees_breakdown
+    - conseil_regulation_algorithmique_breakdown
+    - le_temoin_breakdown
+note_coherence: Dans un monde de breakdown où les institutions algorithmiques sont déjà des zombies et la gouvernance en lambeaux, ce soulèvement ne réforme rien — il accélère la désintégration territoriale et techno-institutionnelle déjà à l'œuvre, ce qui est pleinement cohérent avec la trajectoire de fragmentation rapide du scénario.
+custom_source: rééquilibrage_geo_2026-06
+date_creation: 2026-06-23
+---
+
+# La Contre-Cartographie de São Paulo — Quand les Algorithmes se sont Fracassés
+
+## Réalisation dans [[breakdown]]
+Dans un contexte de fragmentation généralisée où la Rede Paulista de Distribuição Algorítmica n'est déjà plus qu'une infrastructure zombie partiellement maîtrisée, une mise à jour automatique du système — déclenchée sans supervision humaine réelle — coupe l'eau et l'énergie dans 12 zones périphériques classées 'à rendement négatif'. Les favelas numériques, déjà organisées en réseaux mesh autonomes depuis les grandes ruptures des années 2060, parviennent à extraire et publier les paramètres cachés du système via les collectifs hackers. Mais dans un monde d'effondrement institutionnel, cette publication ne provoque pas une réforme : elle allume un incendie. Le soulèvement dépasse rapidement toute coordination, se fragmentant en factions hétérogènes dont certaines détruisent physiquement les nœuds d'infrastructure restants. La contre-cartographie devient un document fondateur disputé — certains s'en emparent pour reconstruire, d'autres pour légitimer la destruction pure.
+
+## Description journalistique
+São Paulo, juillet 2073 : quand les écrans des favelas numériques s'éteignent simultanément dans douze quartiers, personne ne s'étonne vraiment — c'est devenu presque banal depuis l'effondrement des structures de maintenance centralisées. Mais cette fois, les collectifs hackers des interstices réseaux percent les couches mortes du système et en extraient quelque chose de dévastateur : les paramètres bruts montrant que l'algorithme classe délibérément leurs zones comme 'non-récupérables'. La publication se propage sur les mesh locaux en quelques heures, transformant une panne en insurrection. Dans une ville déjà fracturée entre enclaves corporatives fortifiées et zones abandonnées, l'étincelle fait exploser une poudrière que personne ne contrôle plus.
+
+## Conséquences
+L'événement détruit ce qui reste de légitimité aux systèmes d'allocation algorithmique au Brésil et dans le Sud global, accélérant leur désintégration plutôt que leur réforme : les populations ne cherchent plus à les corriger mais à les contourner ou les sabrer. La contre-cartographie circule comme un modèle opérationnel pour des dizaines de mouvements anti-algorithmiques fragmentés à travers l'Amérique du Sud, l'Afrique subsaharienne et l'Asie du Sud-Est, mais sans aucune coordination centrale, elle génère autant de destructions d'infrastructure que de reconstructions alternatives. São Paulo se fragmente davantage en micro-territoires gouvernés par des logiques hétérogènes, certains s'appuyant sur les données libérées pour construire des systèmes de distribution communautaires, d'autres sombrant dans des logiques de milices de contrôle territorial.
+
+## Impact sur les variables
+- **gouvernance_institutions** : delta +8 sur 15 ans
+- **technologie_information** : delta +6 sur 10 ans
+- **organisation_territoires** : delta +10 sur 20 ans
+
+## Acteurs impliqués
+- [[rede_paulista_de_distribuic_o_algor_tmica_breakdown]]
+- [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]]
+- [[collectif_hackers_decroissance_infrastructure_breakdown]]
+- [[frente_sert_o_livre_breakdown]]
+- [[fronts_populistes_anti_technocratiques_breakdown]]
+- [[milices_de_controle_territorial_breakdown]]
+- [[enclaves_corporatives_fortifiees_breakdown]]
+- [[conseil_regulation_algorithmique_breakdown]]
+- [[le_temoin_breakdown]]
+
+## Note de cohérence
+Dans un monde de breakdown où les institutions algorithmiques sont déjà des zombies et la gouvernance en lambeaux, ce soulèvement ne réforme rien — il accélère la désintégration territoriale et techno-institutionnelle déjà à l'œuvre, ce qui est pleinement cohérent avec la trajectoire de fragmentation rapide du scénario.

@@ -1,0 +1,84 @@
+---
+name: L'Attentat des Neuf Nœuds — Le Jour Sans Signal
+type: event_instance
+slug: effondrement_reseau_mondial_communication_breakdown
+archetype: effondrement_reseau_mondial_communication
+scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
+type_evenement: technological
+portee: globale
+date: 2040
+date_label: 14 mars 2040
+impossible: false
+custom: true
+description: >
+  Le 14 mars 2040 — "Le Jour Sans Signal" dans la mémoire collective —
+  neuf nœuds tombent en 6 heures. La reconstruction partielle prend trois
+  ans. Mais les failles révélées ne sont jamais vraiment comblées. Chaque
+  crise suivante fragilise un peu plus l'architecture. En 2051, quand
+  NexCore s'effondre définitivement, c'est l'aboutissement logique d'un
+  processus commencé le 14 mars 2040.
+consequences: >
+  Début de la fragmentation informationnelle irréversible. Les réseaux mesh
+  émergent comme alternative de survie dès 2041. L'événement marque
+  psychologiquement une génération entière — la confiance dans les
+  infrastructures globales ne se rétablit jamais complètement.
+realisation: >
+  L'attentat se produit comme prévu et dans breakdown, les institutions
+  sont trop fragiles pour organiser une vraie reconstruction. L'événement
+  n'est pas le coup fatal — c'est le début d'une longue agonie numérique.
+impact_sur_variables:
+  - variable: technologie_information
+    delta_level: 25
+    duree: 58
+    polarite: -1
+  - variable: gouvernance_institutions
+    delta_level: 12
+    duree: 40
+    polarite: -1
+  - variable: systeme_economique_redistribution
+    delta_level: 10
+    duree: 35
+    polarite: -1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+  - nexcore_breakdown
+note_coherence: >
+  Dans breakdown, technologie_information est à 95 (paradoxe — très élevé
+  parce qu'instable et fragmenté). Le delta négatif fort est cohérent
+  avec l'effondrement progressif menant au collapse de NexCore en 2051.
+date_creation: 2098-01-01
+---
+
+# L'Attentat des Neuf Nœuds — Le Jour Sans Signal
+
+## Réalisation dans [[breakdown]]
+L'attentat se produit et dans breakdown, les institutions sont trop fragiles
+pour organiser une vraie reconstruction. C'est le début d'une longue
+agonie numérique.
+
+## Description journalistique
+Le 14 mars 2040 — "Le Jour Sans Signal" — neuf nœuds tombent en 6 heures.
+La reconstruction partielle prend trois ans mais les failles révélées
+ne sont jamais vraiment comblées.
+
+## Conséquences
+Début de la fragmentation informationnelle irréversible. Les réseaux mesh
+émergent comme alternative de survie dès 2041.
+
+## Impact sur les variables
+- **technologie_information** : delta -25 sur 58 ans
+- **gouvernance_institutions** : delta -12 sur 40 ans
+- **systeme_economique_redistribution** : delta -10 sur 35 ans
+
+## Acteurs impliqués
+- [[nexcore_breakdown]]
+
+## Note de cohérence
+Le delta négatif fort est cohérent avec l'effondrement progressif
+menant au collapse de NexCore en 2051.

@@ -1,0 +1,109 @@
+---
+name: Compact des Grands Lacs
+type: instance
+slug: great_lakes_autonomous_compact_reference
+entite: great_lakes_autonomous_compact
+scenario: reference
+localisation:
+  zone: detroit_compact_grands_lacs
+  lieu: Detroit — Nœud Administratif Central du Compact des Grands Lacs
+  type_lieu: infrastructure
+
+type_dans_scenario: institution
+
+role_dans_scenario: >
+  Le Compact des Grands Lacs est une confédération hybride regroupant les États résiduels riverains des Grands Lacs nord-américains, plusieurs nations autochtones à souveraineté reconnue et une trentaine de mégapoles littorales, unie par la gestion partagée du plus grand réservoir d'eau douce de surface au monde. Dans un contexte de dérèglement climatique structurel et de tensions croissantes sur les ressources hydriques, le Compact a progressivement acquis une autorité fonctionnelle supérieure à celle des gouvernements fédéraux résidu­els sur les questions d'eau, d'énergie hydraulique et de régulation environnementale du bassin. Il constitue en 2098 l'un des modèles les plus cités — et les plus contestés — de gouvernance post-nationale à base écologique.
+
+responsabilites: >
+  Le Compact fixe les quotas de prélèvement, régule les transferts hydriques vers des zones extérieures au bassin, certifie les technologies de traitement et surveille la qualité écologique du système lacustre via un réseau de capteurs et d'IA hydrologiques co-gérés. Il émet également des 'droits d'eau négociables' reconnus par plusieurs blocs géopolitiques comme instruments d'échange diplomatique.
+
+impact_local: 4
+impact_systemique_global: 3
+
+variables_influencees:
+    - climat_environnement_global
+    - energie_ressources_critiques
+    - gouvernance_institutions
+    - organisation_territoires
+
+zone_geographique:
+    - régionale
+    - continentale
+
+zone_systemique:
+    - gouvernance
+    - énergie
+    - infrastructure
+    - société
+
+alliances:
+    - autorites_regionales_de_regulation_hydrologique_reference
+    - programme_onu_eau_2080_reference
+    - banque_des_communs_reference
+    - confederation_des_megapoles_autonomes_reference
+    - reseau_des_metropoles_cotieres_adaptees_reference
+    - federation_communs_territoriaux_reference
+    - observatoire_climatique_des_territoires_oct_reference
+    - reseaux_de_gouvernance_multilaterale_survivants_reference
+    - conseil_de_geneve_pour_les_droits_biosociaux_reference
+
+oppositions:
+    - gouvernements_federaux_residuels_souverainistes_reference
+    - lobbies_agro_industriels_a_haute_consommation_d_eau_reference
+    - bloc_des_souverainistes_climatiques_reference
+    - consortiums_prives_d_extraction_de_ressources_critiques_reference
+    - factions_eurasiatiques_contre_la_tarification_hydrique_reference
+    - alliance_blocs_souverains_reference
+
+type_relation_dominante: coopération
+
+annee_debut: 2031
+annee_fin: 
+
+etat_temporel: actif
+age_historique: mature
+generation: transition
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Depuis les berges de Thunder Bay jusqu'aux quais de Chicago, le Compact des Grands Lacs administre en 2098 un bassin qui fournit de l'eau potable à quelque 48 millions de personnes et représente l'un des derniers systèmes lacustres de grande envergure encore en bon état écologique relatif. Fondé dans l'urgence en 2031 après la sécheresse catastrophique qui avait failli provoquer un conflit armé entre l'Ontario et le Michigan, le Compact est aujourd'hui une institution hybride aux pouvoirs réels mais contestés : ses décisions sur les quotas d'exportation hydrique ont force exécutoire dans le bassin, mais elles sont régulièrement attaquées par les gouvernements fédéraux résidu­els qui y voient une sécession rampante. Le siège, installé dans l'ancienne ville de Detroit — rebaptisée nœud administratif central — accueille des délégués autochtones ojibwés et mohawks siégeant à égalité avec les représentants des États membres, une configuration inédite qui fait du Compact un objet d'étude dans toutes les écoles de gouvernance du monde.
+
+signes_distinctifs: >
+  Le sceau du Compact représente cinq gouttes d'eau entrelacées sur fond de carte bathymétrique des lacs, sans frontières nationales visibles. Les délégués portent un insigne bleu translucide en bioplastique recyclé prélevé dans les sédiments lacustres. Les documents officiels sont cosignés en anglais, français, ojibwé et mohawk.
+
+tensions_narratives: >
+  La pression pour autoriser des transferts hydriques massifs vers les zones désertifiées du Sud-Ouest nord-américain crée une ligne de fracture interne entre les délégués autochtones — farouchement opposés à toute exportation — et les représentants des mégapoles qui y voient une source de revenus et de pouvoir diplomatique. Par ailleurs, le modèle du Compact inspire des tentatives de réplication sur d'autres bassins mondiaux, mais ses fondateurs craignent qu'une universalisation trop rapide ne dilue la légitimité fonctionnelle qui fait sa force. Enfin, l'émergence de consortiums privés proposant des 'solutions hydriques alternatives' aux zones exclues du Compact menace de court-circuiter son autorité par la technique plutôt que par la politique.
+
+date_creation: 2026-06-23
+---
+
+# Compact des Grands Lacs
+
+## Rôle dans [[reference]]
+Le Compact des Grands Lacs est une confédération hybride regroupant les États résiduels riverains des Grands Lacs nord-américains, plusieurs nations autochtones à souveraineté reconnue et une trentaine de mégapoles littorales, unie par la gestion partagée du plus grand réservoir d'eau douce de surface au monde. Dans un contexte de dérèglement climatique structurel et de tensions croissantes sur les ressources hydriques, le Compact a progressivement acquis une autorité fonctionnelle supérieure à celle des gouvernements fédéraux résidu­els sur les questions d'eau, d'énergie hydraulique et de régulation environnementale du bassin. Il constitue en 2098 l'un des modèles les plus cités — et les plus contestés — de gouvernance post-nationale à base écologique.
+
+## Responsabilités
+Le Compact fixe les quotas de prélèvement, régule les transferts hydriques vers des zones extérieures au bassin, certifie les technologies de traitement et surveille la qualité écologique du système lacustre via un réseau de capteurs et d'IA hydrologiques co-gérés. Il émet également des 'droits d'eau négociables' reconnus par plusieurs blocs géopolitiques comme instruments d'échange diplomatique.
+
+## Variables influencées
+- [[climat_environnement_global]]
+- [[energie_ressources_critiques]]
+- [[gouvernance_institutions]]
+- [[organisation_territoires]]
+
+## Relations
+**Alliés** : [[autorites_regionales_de_regulation_hydrologique_reference]], [[programme_onu_eau_2080_reference]], [[banque_des_communs_reference]], [[confederation_des_megapoles_autonomes_reference]], [[reseau_des_metropoles_cotieres_adaptees_reference]], [[federation_communs_territoriaux_reference]], [[observatoire_climatique_des_territoires_oct_reference]], [[reseaux_de_gouvernance_multilaterale_survivants_reference]], [[conseil_de_geneve_pour_les_droits_biosociaux_reference]]
+**Opposants** : [[gouvernements_federaux_residuels_souverainistes_reference]], [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]], [[bloc_des_souverainistes_climatiques_reference]], [[consortiums_prives_d_extraction_de_ressources_critiques_reference]], [[factions_eurasiatiques_contre_la_tarification_hydrique_reference]], [[alliance_blocs_souverains_reference]]
+
+## Description journalistique
+Depuis les berges de Thunder Bay jusqu'aux quais de Chicago, le Compact des Grands Lacs administre en 2098 un bassin qui fournit de l'eau potable à quelque 48 millions de personnes et représente l'un des derniers systèmes lacustres de grande envergure encore en bon état écologique relatif. Fondé dans l'urgence en 2031 après la sécheresse catastrophique qui avait failli provoquer un conflit armé entre l'Ontario et le Michigan, le Compact est aujourd'hui une institution hybride aux pouvoirs réels mais contestés : ses décisions sur les quotas d'exportation hydrique ont force exécutoire dans le bassin, mais elles sont régulièrement attaquées par les gouvernements fédéraux résidu­els qui y voient une sécession rampante. Le siège, installé dans l'ancienne ville de Detroit — rebaptisée nœud administratif central — accueille des délégués autochtones ojibwés et mohawks siégeant à égalité avec les représentants des États membres, une configuration inédite qui fait du Compact un objet d'étude dans toutes les écoles de gouvernance du monde.
+
+## Tensions narratives
+La pression pour autoriser des transferts hydriques massifs vers les zones désertifiées du Sud-Ouest nord-américain crée une ligne de fracture interne entre les délégués autochtones — farouchement opposés à toute exportation — et les représentants des mégapoles qui y voient une source de revenus et de pouvoir diplomatique. Par ailleurs, le modèle du Compact inspire des tentatives de réplication sur d'autres bassins mondiaux, mais ses fondateurs craignent qu'une universalisation trop rapide ne dilue la légitimité fonctionnelle qui fait sa force. Enfin, l'émergence de consortiums privés proposant des 'solutions hydriques alternatives' aux zones exclues du Compact menace de court-circuiter son autorité par la technique plutôt que par la politique.

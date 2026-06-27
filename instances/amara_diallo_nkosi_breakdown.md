@@ -1,0 +1,98 @@
+---
+name: Amara Diallo-Nkosi
+type: instance
+slug: amara_diallo_nkosi_breakdown
+entite: amara_diallo_nkosi
+scenario: breakdown
+localisation:
+  zone: afrique_centrale_australe
+  lieu: Corridor sahélo-congolais (Brazzaville-Nord – Kivu disputé)
+  type_lieu: region
+
+type_dans_scenario: humain
+
+role_dans_scenario: >
+  Ancienne architecte des accords de redistribution des eaux du bassin du Congo, Amara Diallo-Nkosi est désormais une figure errante de la technocratie humaniste en déroute. Ses accords, conçus pour une ère de coopération régionale, se sont effondrés avec les États qui les portaient. Elle survit en tant que médiatrice informelle entre communautés rivales, portant un savoir hydrologue devenu à la fois précieux et dangereux dans un monde où l'eau est une arme. Son expertise la rend indispensable aux puissants et vulnérable aux désespérés.
+
+responsabilites: >
+  Elle négocie des trêves techniques autour des points d'eau critiques entre factions armées, milices communautaires et réfugiés climatiques dans le corridor sahélo-congolais. Elle maintient en fonctionnement partiel des infrastructures hydrauliques orphelines de leurs administrations d'origine, souvent avec des pièces de récupération et des équipes improvisées.
+
+impact_local: 4
+impact_systemique_global: 1
+variables_influencees:
+    - energie_ressources_critiques
+    - demographie_mobilite_humaine
+    - organisation_territoires
+    - climat_environnement_global
+
+zone_geographique:
+    - régionale
+    - continentale
+
+zone_systemique:
+    - infrastructure
+    - gouvernance
+    - société
+
+alliances:
+    - diaspora_tech_sahel_breakdown
+    - collectifs_riverains_du_bassin_du_congo_new_sustainability
+    - reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown
+
+oppositions:
+    - seigneuries_logistiques_armees_breakdown
+    - consortiums_industriels_de_l_eau_eco_communalism
+    - factions_etatiques_residuelles_de_souverainete_hydrique_breakdown
+
+type_relation_dominante: conflit
+
+annee_debut: 2041
+annee_fin: 
+
+etat_temporel: actif
+age_historique: résiduel
+generation: post-effondrement
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  On la reconnaît aux cartes plastifiées qu'elle porte roulées dans son sac à dos — des cartes que plus personne d'autre ne sait lire. Amara Diallo-Nkosi, 61 ans, se déplace entre Brazzaville-Nord et les avant-postes du Kivu disputé avec la régularité d'une hydrologue qui connaît les crues mieux que les lignes de front. Ses accords de 2067, salués comme le triomphe de la diplomatie de l'eau, sont aujourd'hui des textes fantômes : les signataires sont morts, exilés ou renégats. Ce qu'il reste, c'est elle — et la certitude que si elle disparaît, trois millions de personnes perdent leur accès à une eau potable à peu près fiable. Certains la protègent pour cette raison. D'autres la cherchent pour la même.
+
+signes_distinctifs: >
+  Cartes hydrologiques annotées à la main, tatouage discret du bassin du Congo stylisé sur l'avant-bras gauche — symbole originel de la commission qu'elle a fondée. Vêtements de terrain usés mais méthodiquement entretenus, matériel de mesure de qualité de l'eau toujours à portée.
+
+tensions_narratives: >
+  Sa compétence est son bouclier et sa malédiction : chaque faction veut la capturer plutôt que la tuer, ce qui l'enferme dans une neutralité imposée qu'elle ne choisit plus. Elle doit choisir entre servir tout le monde — et donc ne protéger personne en priorité — ou choisir un camp et transformer son expertise en arme géopolitique. Une trahison passée la hante : un accord qu'elle a facilité en 2081 a indirectement permis à une milice d'assécher une vallée peuplée. La question de sa responsabilité morale dans un système qu'elle n'a jamais pleinement contrôlé est ouverte.
+
+date_creation: 2026-06-15
+---
+
+# Amara Diallo-Nkosi
+
+## Rôle dans [[breakdown]]
+Ancienne architecte des accords de redistribution des eaux du bassin du Congo, Amara Diallo-Nkosi est désormais une figure errante de la technocratie humaniste en déroute. Ses accords, conçus pour une ère de coopération régionale, se sont effondrés avec les États qui les portaient. Elle survit en tant que médiatrice informelle entre communautés rivales, portant un savoir hydrologue devenu à la fois précieux et dangereux dans un monde où l'eau est une arme. Son expertise la rend indispensable aux puissants et vulnérable aux désespérés.
+
+## Responsabilités
+Elle négocie des trêves techniques autour des points d'eau critiques entre factions armées, milices communautaires et réfugiés climatiques dans le corridor sahélo-congolais. Elle maintient en fonctionnement partiel des infrastructures hydrauliques orphelines de leurs administrations d'origine, souvent avec des pièces de récupération et des équipes improvisées.
+
+## Variables influencées
+- [[energie_ressources_critiques]]
+- [[demographie_mobilite_humaine]]
+- [[organisation_territoires]]
+- [[climat_environnement_global]]
+
+## Relations
+**Alliés** : [[diaspora_tech_sahel_breakdown]], [[collectifs_riverains_du_bassin_du_congo_new_sustainability]], [[reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown]]
+**Opposants** : [[seigneuries_logistiques_armees_breakdown]], [[consortiums_industriels_de_l_eau_eco_communalism]], [[factions_etatiques_residuelles_de_souverainete_hydrique_breakdown]]
+
+## Description journalistique
+On la reconnaît aux cartes plastifiées qu'elle porte roulées dans son sac à dos — des cartes que plus personne d'autre ne sait lire. Amara Diallo-Nkosi, 61 ans, se déplace entre Brazzaville-Nord et les avant-postes du Kivu disputé avec la régularité d'une hydrologue qui connaît les crues mieux que les lignes de front. Ses accords de 2067, salués comme le triomphe de la diplomatie de l'eau, sont aujourd'hui des textes fantômes : les signataires sont morts, exilés ou renégats. Ce qu'il reste, c'est elle — et la certitude que si elle disparaît, trois millions de personnes perdent leur accès à une eau potable à peu près fiable. Certains la protègent pour cette raison. D'autres la cherchent pour la même.
+
+## Tensions narratives
+Sa compétence est son bouclier et sa malédiction : chaque faction veut la capturer plutôt que la tuer, ce qui l'enferme dans une neutralité imposée qu'elle ne choisit plus. Elle doit choisir entre servir tout le monde — et donc ne protéger personne en priorité — ou choisir un camp et transformer son expertise en arme géopolitique. Une trahison passée la hante : un accord qu'elle a facilité en 2081 a indirectement permis à une milice d'assécher une vallée peuplée. La question de sa responsabilité morale dans un système qu'elle n'a jamais pleinement contrôlé est ouverte.

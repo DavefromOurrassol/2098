@@ -1,0 +1,100 @@
+---
+name: L'Exode des Grands Brûlés — La Déroute du Bureau des Résidus
+type: event_instance
+slug: exode_midwest_grands_lacs_breakdown
+archetype: exode_midwest_grands_lacs
+scenario: breakdown
+localisation:
+  zone: midwest_desertifie
+  lieu: Midwest désertifié vers Grands Lacs (Chicago, Detroit, Cleveland)
+  type_lieu: region
+  statut: review_manuelle
+  note: "L'événement couvre à la fois le Midwest désertifié (zone de départ) et les Grands Lacs / Rust Belt (zone d'arrivée), impliquant plusieurs zones existantes (midwest_desertifie, grandes_lacs_compact_eau, detroit_sud, communes_rust_belt) sans ancrage unique évident."
+type_evenement: environmental
+portee: continentale
+date: 2044
+date_label: été 2044
+impossible: false
+custom: true
+description: >
+  L'été 2044 marque la fin du Midwest habitable. Des colonnes humaines s'étirent sur des centaines de kilomètres vers Chicago, Detroit, Cleveland — des villes qui n'ont elles-mêmes plus les ressources pour les accueillir. Les Grands Lacs deviennent une zone de friction explosive : les Communes Libres du Rust Belt barricadent leurs périmètres, les milices agro-défensives locales ouvrent le feu sur des convois, et les cartels logistiques régionaux spéculent sur l'eau potable et les places dans les entrepôts climatisés. Le Bureau des Territoires Résiduels publie un dernier rapport de 340 pages que personne ne lit, puis cesse d'émettre.
+consequences: >
+  Les zones lacustres deviennent des territoires de friction permanente entre populations déplacées, milices locales et factions para-étatiques, accélérant la sécession de fait des cités-états du Nord industriel. Le Midwest est officiellement classifié zone non récupérable dans les registres résiduels, mais aucune institution n'a l'autorité pour faire appliquer quoi que ce soit. Cette migration fonde un précédent : la notion même de citoyenneté américaine se dissout au profit de l'allégeance territoriale locale, et les flux migratoires deviennent structurellement non intégrables pour une génération.
+realisation: >
+  Après trois étés consécutifs où les températures du Midwest désertifié ont dépassé 55°C, 18 millions d'Américains abandonnent leurs territoires en moins de 18 mois. Le Bureau des Territoires Résiduels — déjà fantôme administratif incapable de cartographier les zones abandonnées — s'effondre sous la pression logistique. Les migrations ne sont pas organisées : elles sont des ruées, des chaos de routes saturées, de convois armés, de familles séparées aux checkpoints que commencent à ériger les cités-états lacustres refusant l'afflux. L'État fédéral, lui-même fragmenté, ne parvient à coordonner aucune réponse cohérente ; les quelques directives émises sont ignorées ou contredites par les gouvernements régionaux résiduels.
+impact_sur_variables:
+  - variable: demographie_mobilite_humaine
+    delta_level: 8
+    duree: 25
+    polarite: -1
+  - variable: organisation_territoires
+    delta_level: -15
+    duree: 30
+    polarite: -1
+  - variable: gouvernance_institutions
+    delta_level: -12
+    duree: 20
+    polarite: -1
+  - variable: climat_environnement_global
+    delta_level: 5
+    duree: 40
+    polarite: -1
+  - variable: geopolitique_conflits
+    delta_level: 12
+    duree: 20
+    polarite: -1
+  - variable: energie_ressources_critiques
+    delta_level: -10
+    duree: 15
+    polarite: -1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+    - bureau_des_territoires_residuels_breakdown
+    - mouvement_des_communes_du_rust_belt_breakdown
+    - flux_migratoires_non_integrables_breakdown
+    - milices_agro_defensives_locales_breakdown
+    - cites_etats_secessionistes_breakdown
+    - cartels_logistiques_regionaux_breakdown
+    - ong_de_gestion_migratoire_survivantes_breakdown
+    - gouvernements_regionaux_residuels_reterritorialisants_breakdown
+    - collectifs_de_sante_communautaire_autogeree_breakdown
+    - front_humanitaire_d_urgence_non_affilie_breakdown
+note_coherence: Dans un scénario de fragmentation rapide à tension 5/5, l'exode se produit mais sans filet institutionnel — il devient vecteur d'effondrement territorial et de conflictualisation des ressources hydriques lacustres plutôt que d'une réponse coordonnée.
+custom_source: rééquilibrage_geo_2026-06
+date_creation: 2026-06-24
+---
+
+# L'Exode des Grands Brûlés — La Déroute du Bureau des Résidus
+
+## Réalisation dans [[breakdown]]
+Après trois étés consécutifs où les températures du Midwest désertifié ont dépassé 55°C, 18 millions d'Américains abandonnent leurs territoires en moins de 18 mois. Le Bureau des Territoires Résiduels — déjà fantôme administratif incapable de cartographier les zones abandonnées — s'effondre sous la pression logistique. Les migrations ne sont pas organisées : elles sont des ruées, des chaos de routes saturées, de convois armés, de familles séparées aux checkpoints que commencent à ériger les cités-états lacustres refusant l'afflux. L'État fédéral, lui-même fragmenté, ne parvient à coordonner aucune réponse cohérente ; les quelques directives émises sont ignorées ou contredites par les gouvernements régionaux résiduels.
+
+## Description journalistique
+L'été 2044 marque la fin du Midwest habitable. Des colonnes humaines s'étirent sur des centaines de kilomètres vers Chicago, Detroit, Cleveland — des villes qui n'ont elles-mêmes plus les ressources pour les accueillir. Les Grands Lacs deviennent une zone de friction explosive : les Communes Libres du Rust Belt barricadent leurs périmètres, les milices agro-défensives locales ouvrent le feu sur des convois, et les cartels logistiques régionaux spéculent sur l'eau potable et les places dans les entrepôts climatisés. Le Bureau des Territoires Résiduels publie un dernier rapport de 340 pages que personne ne lit, puis cesse d'émettre.
+
+## Conséquences
+Les zones lacustres deviennent des territoires de friction permanente entre populations déplacées, milices locales et factions para-étatiques, accélérant la sécession de fait des cités-états du Nord industriel. Le Midwest est officiellement classifié zone non récupérable dans les registres résiduels, mais aucune institution n'a l'autorité pour faire appliquer quoi que ce soit. Cette migration fonde un précédent : la notion même de citoyenneté américaine se dissout au profit de l'allégeance territoriale locale, et les flux migratoires deviennent structurellement non intégrables pour une génération.
+
+## Impact sur les variables
+- **demographie_mobilite_humaine** : delta -8 sur 25 ans
+- **organisation_territoires** : delta +15 sur 30 ans
+- **gouvernance_institutions** : delta +12 sur 20 ans
+- **climat_environnement_global** : delta -5 sur 40 ans
+- **geopolitique_conflits** : delta -12 sur 20 ans
+- **energie_ressources_critiques** : delta +10 sur 15 ans
+
+## Acteurs impliqués
+- [[bureau_des_territoires_residuels_breakdown]]
+- [[mouvement_des_communes_du_rust_belt_breakdown]]
+- [[flux_migratoires_non_integrables_breakdown]]
+- [[milices_agro_defensives_locales_breakdown]]
+- [[cites_etats_secessionistes_breakdown]]
+- [[cartels_logistiques_regionaux_breakdown]]
+- [[ong_de_gestion_migratoire_survivantes_breakdown]]
+- [[gouvernements_regionaux_residuels_reterritorialisants_breakdown]]
+- [[collectifs_de_sante_communautaire_autogeree_breakdown]]
+- [[front_humanitaire_d_urgence_non_affilie_breakdown]]
+
+## Note de cohérence
+Dans un scénario de fragmentation rapide à tension 5/5, l'exode se produit mais sans filet institutionnel — il devient vecteur d'effondrement territorial et de conflictualisation des ressources hydriques lacustres plutôt que d'une réponse coordonnée.

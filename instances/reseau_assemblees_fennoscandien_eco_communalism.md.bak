@@ -1,0 +1,107 @@
+---
+name: Réseau des Assemblées Fennoscandien
+type: instance
+slug: reseau_assemblees_fennoscandien_eco_communalism
+entite: reseau_assemblees_fennoscandien
+scenario: eco_communalism
+
+type_dans_scenario: organisation
+
+role_dans_scenario: >
+  Fédération décentralisée d'assemblées citoyennes couvrant la Fennoscandie, ce réseau organise la vie collective selon les principes de décroissance et d'autonomie locale. Il coordonne les échanges de ressources entre villages et cités-forêts tout en résistant activement aux tentatives d'intégration dans des structures de gouvernance suprarégionales. Il incarne sur le sol fennoscandien la tension constitutive de tout projet fédéraliste horizontal : comment rester une fédération sans devenir un pouvoir ? Le Réseau est à la fois la preuve vivante qu'une solidarité à grande échelle sans hiérarchie est possible, et le lieu où cette preuve est chaque jour contestée de l'intérieur.
+
+responsabilites: >
+  Organise les cycles saisonniers d'échange de ressources — bois, semences, énergie thermique, savoir-faire artisanaux — entre les quelque 340 assemblées membres réparties de la Carélie au Finnmark. Anime les grands cercles délibératifs annuels (les 'Tings du Vivant') où les assemblées harmonisent leurs pratiques sans se lier juridiquement. Maintient les protocoles de communication basse-technologie (radio communautaire, courriers cyclistes, archives itinérantes) qui permettent la coordination sans dépendance aux infrastructures numériques centralisées.
+
+impact_local: 4
+impact_systemique_global: 3
+
+variables_influencees:
+    - organisation_territoires
+    - gouvernance_institutions
+    - systeme_economique_redistribution
+    - valeurs_culture_tempo_sociale
+
+zone_geographique:
+    - régionale
+
+zone_systemique:
+    - gouvernance
+    - économie
+    - société
+    - infrastructure
+
+alliances:
+    - confederation_communs_arc_septentrional_eco_communalism
+    - confederation_des_communs_de_l_arc_septentrional_eco_communalism
+    - reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism
+    - guildes_des_semenciers_itinerants_eco_communalism
+    - collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism
+    - reseaux_de_radio_communautaire_basse_consommation_eco_communalism
+    - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
+    - cercles_de_mediation_territoriale_intercommunautaire_eco_communalism
+    - mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism
+    - leena_vainala_eco_communalism
+
+oppositions:
+    - fragments_d_etats_centraux_residuels_eco_communalism
+    - plateformes_centralisees_de_reagregation_globale_eco_communalism
+    - communs_secessionnistes_hors_coordination_eco_communalism
+    - communautes_rurales_dissidentes_anti_cooperation_regionale_eco_communalism
+    - factions_autoritaires_locales_identitaires_exclusionnistes_eco_communalism
+    - courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism
+    - reseaux_de_notables_communautaires_capturistes_eco_communalism
+    - consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism
+
+type_relation_dominante: coopération
+
+annee_debut: 2041
+annee_fin: 
+
+etat_temporel: actif
+age_historique: mature
+generation: reconstruction
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Depuis les rives du lac Inari jusqu'aux fjords de Vestlandet, le Réseau des Assemblées Fennoscandien est devenu en cinquante ans l'un des exemples les plus étudiés — et les plus discutés — de gouvernance horizontale à grande échelle. Sans siège permanent, sans président, sans budget centralisé, il fait circuler chaque automne des dizaines de milliers de tonnes de ressources entre communautés qui n'ont signé aucun traité formel. Les journalistes étrangers qui viennent couvrir les Tings du Vivant repartent souvent avec la même question sans réponse : qui décide, finalement ? Les militants du Réseau sourient à cette question : 'C'est précisément le bon signe que tu ne trouves pas de réponse.' Mais derrière l'harmonie affichée, les tensions s'accumulent — certaines assemblées du sud réclament des règles contraignantes sur les flux d'eau, tandis que des communautés sámi du nord refusent toute codification écrite de leurs pratiques.
+
+signes_distinctifs: >
+  Le Réseau n'a pas de logo officiel — les assemblées utilisent collectivement une carte dessinée à la main représentant la Fennoscandie comme un tissu de nœuds reliés par des fils de couleurs différentes selon les types d'échanges. Les délégués portent lors des Tings une broche en bouleau gravée du symbole de leur assemblée locale. Les documents du Réseau sont systématiquement rédigés en trois langues (finnois, norvégien, sámi du Nord) et reproduits sur papier recyclé.
+
+tensions_narratives: >
+  La pression monte depuis trois ans autour de la gestion des corridors forestiers boréaux : certaines assemblées veulent centraliser la décision d'accès pour éviter la surexploitation, ce qui reviendrait à créer une autorité supra-locale que le Réseau refuse constitutionnellement d'être. Parallèlement, la Confédération des Communs de l'Arc Septentrional pousse à une fusion institutionnelle qui permettrait une représentation commune face aux blocs extérieurs — proposition que le Réseau vit comme une menace existentielle sur son principe de souveraineté locale. Enfin, une faction interne de 'réalistes' argumente que sans règles contraignantes, les premières crises sévères de sécheresse ou de disette fragmenteront le Réseau en quelques saisons.
+
+date_creation: 2026-06-27
+---
+
+# Réseau des Assemblées Fennoscandien
+
+## Rôle dans [[eco_communalism]]
+Fédération décentralisée d'assemblées citoyennes couvrant la Fennoscandie, ce réseau organise la vie collective selon les principes de décroissance et d'autonomie locale. Il coordonne les échanges de ressources entre villages et cités-forêts tout en résistant activement aux tentatives d'intégration dans des structures de gouvernance suprarégionales. Il incarne sur le sol fennoscandien la tension constitutive de tout projet fédéraliste horizontal : comment rester une fédération sans devenir un pouvoir ? Le Réseau est à la fois la preuve vivante qu'une solidarité à grande échelle sans hiérarchie est possible, et le lieu où cette preuve est chaque jour contestée de l'intérieur.
+
+## Responsabilités
+Organise les cycles saisonniers d'échange de ressources — bois, semences, énergie thermique, savoir-faire artisanaux — entre les quelque 340 assemblées membres réparties de la Carélie au Finnmark. Anime les grands cercles délibératifs annuels (les 'Tings du Vivant') où les assemblées harmonisent leurs pratiques sans se lier juridiquement. Maintient les protocoles de communication basse-technologie (radio communautaire, courriers cyclistes, archives itinérantes) qui permettent la coordination sans dépendance aux infrastructures numériques centralisées.
+
+## Variables influencées
+- [[organisation_territoires]]
+- [[gouvernance_institutions]]
+- [[systeme_economique_redistribution]]
+- [[valeurs_culture_tempo_sociale]]
+
+## Relations
+**Alliés** : [[confederation_communs_arc_septentrional_eco_communalism]], [[confederation_des_communs_de_l_arc_septentrional_eco_communalism]], [[reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism]], [[guildes_des_semenciers_itinerants_eco_communalism]], [[collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism]], [[reseaux_de_radio_communautaire_basse_consommation_eco_communalism]], [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]], [[cercles_de_mediation_territoriale_intercommunautaire_eco_communalism]], [[mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism]], [[leena_vainala_eco_communalism]]
+**Opposants** : [[fragments_d_etats_centraux_residuels_eco_communalism]], [[plateformes_centralisees_de_reagregation_globale_eco_communalism]], [[communs_secessionnistes_hors_coordination_eco_communalism]], [[communautes_rurales_dissidentes_anti_cooperation_regionale_eco_communalism]], [[factions_autoritaires_locales_identitaires_exclusionnistes_eco_communalism]], [[courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism]], [[reseaux_de_notables_communautaires_capturistes_eco_communalism]], [[consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism]]
+
+## Description journalistique
+Depuis les rives du lac Inari jusqu'aux fjords de Vestlandet, le Réseau des Assemblées Fennoscandien est devenu en cinquante ans l'un des exemples les plus étudiés — et les plus discutés — de gouvernance horizontale à grande échelle. Sans siège permanent, sans président, sans budget centralisé, il fait circuler chaque automne des dizaines de milliers de tonnes de ressources entre communautés qui n'ont signé aucun traité formel. Les journalistes étrangers qui viennent couvrir les Tings du Vivant repartent souvent avec la même question sans réponse : qui décide, finalement ? Les militants du Réseau sourient à cette question : 'C'est précisément le bon signe que tu ne trouves pas de réponse.' Mais derrière l'harmonie affichée, les tensions s'accumulent — certaines assemblées du sud réclament des règles contraignantes sur les flux d'eau, tandis que des communautés sámi du nord refusent toute codification écrite de leurs pratiques.
+
+## Tensions narratives
+La pression monte depuis trois ans autour de la gestion des corridors forestiers boréaux : certaines assemblées veulent centraliser la décision d'accès pour éviter la surexploitation, ce qui reviendrait à créer une autorité supra-locale que le Réseau refuse constitutionnellement d'être. Parallèlement, la Confédération des Communs de l'Arc Septentrional pousse à une fusion institutionnelle qui permettrait une représentation commune face aux blocs extérieurs — proposition que le Réseau vit comme une menace existentielle sur son principe de souveraineté locale. Enfin, une faction interne de 'réalistes' argumente que sans règles contraignantes, les premières crises sévères de sécheresse ou de disette fragmenteront le Réseau en quelques saisons.

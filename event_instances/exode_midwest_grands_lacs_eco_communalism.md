@@ -1,0 +1,97 @@
+---
+name: La Grande Convergence des Lacs — Exode du Midwest Carbonisé
+type: event_instance
+slug: exode_midwest_grands_lacs_eco_communalism
+archetype: exode_midwest_grands_lacs
+scenario: eco_communalism
+localisation:
+  zone: bioterritoires_amerique_du_nord
+  lieu: Grands Lacs / Midwest américain
+  type_lieu: region
+type_evenement: environmental
+portee: continentale
+date: 2044
+date_label: été 2044
+impossible: false
+custom: true
+description: >
+  L'été 2044 restera gravé comme l'été de la Fonte Humaine. Des colonnes interminables de familles du Kansas, de l'Iowa et du Missouri remontent vers les rivages des Grands Lacs, portant ce qui reste de leurs vies dans des chariots solaires et des sacs isothermes. Les assemblées bioterritoriales régionales, déjà fragilisées, se réunissent en session d'urgence permanente. Sur les plages du lac Michigan, des camps de transit auto-organisés surgissent en quelques semaines — certains deviendront des communautés pérennes, d'autres des zones de tension aiguë. La Tresse Verte tente d'évaluer les capacités d'accueil écologique territoire par territoire, tandis que les Cartels de Narration de Pénurie amplifient la peur du surpeuplement pour fracturer les solidarités naissantes.
+consequences: >
+  L'afflux massif redessine durablement la géographie des communs lacustres : de nouvelles assemblées de bassin versant émergent, intégrant les compétences agronomiques et énergétiques des migrants du Midwest, mais créant aussi des conflits de ressources hydriques inédits. Les factions isolationnistes se renforcent dans plusieurs bioterritoires, tandis que la Confédération des Friches Vivantes devient paradoxalement plus influente en portant un modèle d'intégration par le travail de régénération écologique. La démographie des communs lacustres est profondément recomposée, accelerant la pression sur les écosystèmes lacustres et forçant une révision des chartes territoriales.
+realisation: >
+  Après trois étés consécutifs à plus de 55°C, le Midwest américain est définitivement inhabitable. Le Bureau des Territoires Résiduels — vestige d'un État fédéral déjà squelettique — s'effondre sous l'afflux de 18 millions de personnes en 18 mois. Mais dans ce monde fragmenté en communs bioterritoriaux, ce n'est pas Washington qui absorbe le choc : ce sont les assemblées de bassin versant des Grands Lacs, la Confédération des Friches Vivantes et les coopératives d'habitat régénératif qui organisent l'accueil — avec des résultats inégaux, entre intégration délibérative et fermetures communautaires.
+impact_sur_variables:
+  - variable: demographie_mobilite_humaine
+    delta_level: 18
+    duree: 25
+    polarite: -1
+  - variable: organisation_territoires
+    delta_level: 15
+    duree: 20
+    polarite: -1
+  - variable: gouvernance_institutions
+    delta_level: -12
+    duree: 15
+    polarite: -1
+  - variable: climat_environnement_global
+    delta_level: -8
+    duree: 30
+    polarite: -1
+  - variable: energie_ressources_critiques
+    delta_level: -10
+    duree: 18
+    polarite: -1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+    - mouvement_des_communes_du_rust_belt_eco_communalism
+    - assemblee_territoires_eco_communalism
+    - assemblees_de_bassin_versant_eco_communalism
+    - assemblees_bioterritoriales_regionales_eco_communalism
+    - cooperatives_d_habitat_regeneratif_eco_communalism
+    - trame_bioclimatique_eco_communalism
+    - cartels_de_narration_de_penurie_eco_communalism
+    - communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism
+    - cercles_de_mediation_territoriale_intercommunautaire_eco_communalism
+    - brigades_de_restauration_ecologique_eco_communalism
+    - mutuelles_de_sante_territoriales_eco_communalism
+    - fragments_d_etats_centraux_residuels_eco_communalism
+note_coherence: Dans un monde éco-communaliste fragmenté à tension 3/5, l'exode est plausible et se réalise — mais c'est le tissu des communs, non l'État, qui absorbe (imparfaitement) le choc, ce qui amplifie à la fois la régénération communautaire et les fractures isolationnistes, cohérent avec la trajectoire 'régénération fragile'.
+custom_source: rééquilibrage_geo_2026-06
+date_creation: 2026-06-24
+---
+
+# La Grande Convergence des Lacs — Exode du Midwest Carbonisé
+
+## Réalisation dans [[eco_communalism]]
+Après trois étés consécutifs à plus de 55°C, le Midwest américain est définitivement inhabitable. Le Bureau des Territoires Résiduels — vestige d'un État fédéral déjà squelettique — s'effondre sous l'afflux de 18 millions de personnes en 18 mois. Mais dans ce monde fragmenté en communs bioterritoriaux, ce n'est pas Washington qui absorbe le choc : ce sont les assemblées de bassin versant des Grands Lacs, la Confédération des Friches Vivantes et les coopératives d'habitat régénératif qui organisent l'accueil — avec des résultats inégaux, entre intégration délibérative et fermetures communautaires.
+
+## Description journalistique
+L'été 2044 restera gravé comme l'été de la Fonte Humaine. Des colonnes interminables de familles du Kansas, de l'Iowa et du Missouri remontent vers les rivages des Grands Lacs, portant ce qui reste de leurs vies dans des chariots solaires et des sacs isothermes. Les assemblées bioterritoriales régionales, déjà fragilisées, se réunissent en session d'urgence permanente. Sur les plages du lac Michigan, des camps de transit auto-organisés surgissent en quelques semaines — certains deviendront des communautés pérennes, d'autres des zones de tension aiguë. La Tresse Verte tente d'évaluer les capacités d'accueil écologique territoire par territoire, tandis que les Cartels de Narration de Pénurie amplifient la peur du surpeuplement pour fracturer les solidarités naissantes.
+
+## Conséquences
+L'afflux massif redessine durablement la géographie des communs lacustres : de nouvelles assemblées de bassin versant émergent, intégrant les compétences agronomiques et énergétiques des migrants du Midwest, mais créant aussi des conflits de ressources hydriques inédits. Les factions isolationnistes se renforcent dans plusieurs bioterritoires, tandis que la Confédération des Friches Vivantes devient paradoxalement plus influente en portant un modèle d'intégration par le travail de régénération écologique. La démographie des communs lacustres est profondément recomposée, accelerant la pression sur les écosystèmes lacustres et forçant une révision des chartes territoriales.
+
+## Impact sur les variables
+- **demographie_mobilite_humaine** : delta -18 sur 25 ans
+- **organisation_territoires** : delta -15 sur 20 ans
+- **gouvernance_institutions** : delta +12 sur 15 ans
+- **climat_environnement_global** : delta +8 sur 30 ans
+- **energie_ressources_critiques** : delta +10 sur 18 ans
+
+## Acteurs impliqués
+- [[mouvement_des_communes_du_rust_belt_eco_communalism]]
+- [[assemblee_territoires_eco_communalism]]
+- [[assemblees_de_bassin_versant_eco_communalism]]
+- [[assemblees_bioterritoriales_regionales_eco_communalism]]
+- [[cooperatives_d_habitat_regeneratif_eco_communalism]]
+- [[trame_bioclimatique_eco_communalism]]
+- [[cartels_de_narration_de_penurie_eco_communalism]]
+- [[communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism]]
+- [[cercles_de_mediation_territoriale_intercommunautaire_eco_communalism]]
+- [[brigades_de_restauration_ecologique_eco_communalism]]
+- [[mutuelles_de_sante_territoriales_eco_communalism]]
+- [[fragments_d_etats_centraux_residuels_eco_communalism]]
+
+## Note de cohérence
+Dans un monde éco-communaliste fragmenté à tension 3/5, l'exode est plausible et se réalise — mais c'est le tissu des communs, non l'État, qui absorbe (imparfaitement) le choc, ce qui amplifie à la fois la régénération communautaire et les fractures isolationnistes, cohérent avec la trajectoire 'régénération fragile'.

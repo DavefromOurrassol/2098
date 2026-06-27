@@ -1,0 +1,105 @@
+---
+name: Kalaallit Nunaat Sovereign Fund — Autorité de Gestion des Ressources Circumpolaires (KNSF-AGRC)
+type: instance
+slug: kalaallit_nunaat_sovereign_fund_policy_reform
+entite: kalaallit_nunaat_sovereign_fund
+scenario: policy_reform
+localisation:
+  zone: nuuk_knsf
+  lieu: Nuuk
+  type_lieu: ville
+
+type_dans_scenario: institution
+
+role_dans_scenario: >
+  Dans un monde de gouvernance technocratique stabilisée, le KNSF-AGRC s'est mué en acteur incontournable de la régulation des ressources critiques circumpolaires. Fort des revenus générés par l'exploitation des minéraux stratégiques rendus accessibles par la fonte des glaces — terres rares, lithium, hydrates de méthane capturés — le fonds groenlandais négocie désormais à égalité avec les grandes institutions internationales. Il joue un rôle de pivot entre le Conseil de Régulation des Ressources Critiques et les blocs souverainistes, instrumentalisant sa légitimité historique de territoire marginalisé pour obtenir des conditions d'intégration exceptionnelles dans les cadres de régulation globale. Sa sophistication financière et diplomatique croissante en fait un acteur qui force les réformes institutionnelles plutôt que de simplement s'y conformer.
+
+responsabilites: >
+  Gestion d'un portefeuille souverain de ressources circumpolaires évalué à plusieurs billions d'unités de compte carbone ; négociation de licences d'extraction régulées auprès des consortiums privés sous supervision internationale ; financement conditionnel d'infrastructures de transition énergétique dans les zones arctiques en échange de sièges aux tables de gouvernance globale ; participation active aux mécanismes de redistribution du Fonds de Stabilisation Climatique ONU-3 tout en résistant à toute cession de souveraineté sur les actifs du sous-sol.
+
+impact_local: 4
+impact_systemique_global: 4
+
+variables_influencees:
+    - energie_ressources_critiques
+    - gouvernance_institutions
+    - geopolitique_conflits
+    - organisation_territoires
+
+zone_geographique:
+    - nationale
+    - régionale
+    - globale
+
+zone_systemique:
+    - énergie
+    - gouvernance
+    - économie
+
+alliances:
+    - conseil_regulation_ressources_policy_reform
+    - fonds_de_stabilisation_climatique_onu_3_policy_reform
+    - fonds_souverain_de_transition_verte_fstv_policy_reform
+    - observatoire_mondial_des_ressources_critiques_policy_reform
+    - agence_internationale_de_l_energie_reformatee_aier_policy_reform
+    - consortium_des_villes_etats_durables_policy_reform
+
+oppositions:
+    - syndicats_d_extraction_privee_non_regules_policy_reform
+    - front_des_souverainistes_energetiques_policy_reform
+    - lobbies_des_energies_fossiles_residuelles_policy_reform
+    - coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform
+    - front_souverainiste_des_blocs_non_signataires_policy_reform
+
+type_relation_dominante: alliance stratégique
+
+annee_debut: 2041
+annee_fin: 
+
+etat_temporel: actif
+age_historique: dominant
+generation: transition
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Depuis son siège de Nuuk — une ville dont l'architecture hybride mêle verre thermorégulé et motifs inuit gravés au laser —, le KNSF-AGRC gère aujourd'hui plus de ressources stratégiques que la plupart des États de taille moyenne. Ce qui était, au milieu du siècle, un fonds de compensation climatique alimenté par des dons culpabilisés des puissances industrielles est devenu l'un des négociateurs les plus redoutés des forums de régulation internationale. Ses délégués — formés aux écoles de droit de Copenhague et aux think tanks de Singapour, mais parlant toujours le kalaallisut en séance plénière par principe politique — ont l'habitude de poser sur la table, avant toute négociation, un document appelé 'le Relevé de la Fonte' : une comptabilité historique chiffrée des pertes territoriales, écosystémiques et culturelles subies par le Groenland depuis 1950. C'est leur monnaie d'ouverture. Et elle vaut cher.
+
+signes_distinctifs: >
+  Logo institutionnel représentant un ours polaire stylisé dont le contour se dissout en courbes de données géologiques ; documents officiels systématiquement bilingues kalaallisut-anglais, jamais en français ni en mandarin quelle que soit l'instance ; délégués vêtus de combinaisons semi-formelles intégrant des motifs de broderie traditionnelle amauti dans les cols et poignets — détail immédiatement reconnaissable dans les couloirs des forums onusiens.
+
+tensions_narratives: >
+  La tension centrale du KNSF-AGRC en 2098 est celle du choix entre deux légitimités incompatibles : redistribuer une fraction de la rente circumpolaire au fonds climatique mondial — ce qui consoliderait son image de 'bon acteur' de la gouvernance globale mais affaiblirait l'argument souverain — ou capitaliser sur cette ressource comme rempart identitaire et politique face à l'absorption technocratique. Une faction interne de jeunes économistes formés à l'ARIA-Nexus pousse vers une intégration totale dans les marchés de crédits énergétiques régulés, ce qui déchire le conseil d'administration. Pendant ce temps, les syndicats d'extraction privée non régulés cherchent à contourner les licences KNSF en finançant des opérations para-légales dans les zones maritimes disputées — une menace existentielle que le fonds ne peut contrer qu'en renforçant précisément les institutions internationales qu'il cherche par ailleurs à tenir à distance.
+
+date_creation: 2026-06-23
+---
+
+# Kalaallit Nunaat Sovereign Fund — Autorité de Gestion des Ressources Circumpolaires (KNSF-AGRC)
+
+## Rôle dans [[policy_reform]]
+Dans un monde de gouvernance technocratique stabilisée, le KNSF-AGRC s'est mué en acteur incontournable de la régulation des ressources critiques circumpolaires. Fort des revenus générés par l'exploitation des minéraux stratégiques rendus accessibles par la fonte des glaces — terres rares, lithium, hydrates de méthane capturés — le fonds groenlandais négocie désormais à égalité avec les grandes institutions internationales. Il joue un rôle de pivot entre le Conseil de Régulation des Ressources Critiques et les blocs souverainistes, instrumentalisant sa légitimité historique de territoire marginalisé pour obtenir des conditions d'intégration exceptionnelles dans les cadres de régulation globale. Sa sophistication financière et diplomatique croissante en fait un acteur qui force les réformes institutionnelles plutôt que de simplement s'y conformer.
+
+## Responsabilités
+Gestion d'un portefeuille souverain de ressources circumpolaires évalué à plusieurs billions d'unités de compte carbone ; négociation de licences d'extraction régulées auprès des consortiums privés sous supervision internationale ; financement conditionnel d'infrastructures de transition énergétique dans les zones arctiques en échange de sièges aux tables de gouvernance globale ; participation active aux mécanismes de redistribution du Fonds de Stabilisation Climatique ONU-3 tout en résistant à toute cession de souveraineté sur les actifs du sous-sol.
+
+## Variables influencées
+- [[energie_ressources_critiques]]
+- [[gouvernance_institutions]]
+- [[geopolitique_conflits]]
+- [[organisation_territoires]]
+
+## Relations
+**Alliés** : [[conseil_regulation_ressources_policy_reform]], [[fonds_de_stabilisation_climatique_onu_3_policy_reform]], [[fonds_souverain_de_transition_verte_fstv_policy_reform]], [[observatoire_mondial_des_ressources_critiques_policy_reform]], [[agence_internationale_de_l_energie_reformatee_aier_policy_reform]], [[consortium_des_villes_etats_durables_policy_reform]]
+**Opposants** : [[syndicats_d_extraction_privee_non_regules_policy_reform]], [[front_des_souverainistes_energetiques_policy_reform]], [[lobbies_des_energies_fossiles_residuelles_policy_reform]], [[coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform]], [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+
+## Description journalistique
+Depuis son siège de Nuuk — une ville dont l'architecture hybride mêle verre thermorégulé et motifs inuit gravés au laser —, le KNSF-AGRC gère aujourd'hui plus de ressources stratégiques que la plupart des États de taille moyenne. Ce qui était, au milieu du siècle, un fonds de compensation climatique alimenté par des dons culpabilisés des puissances industrielles est devenu l'un des négociateurs les plus redoutés des forums de régulation internationale. Ses délégués — formés aux écoles de droit de Copenhague et aux think tanks de Singapour, mais parlant toujours le kalaallisut en séance plénière par principe politique — ont l'habitude de poser sur la table, avant toute négociation, un document appelé 'le Relevé de la Fonte' : une comptabilité historique chiffrée des pertes territoriales, écosystémiques et culturelles subies par le Groenland depuis 1950. C'est leur monnaie d'ouverture. Et elle vaut cher.
+
+## Tensions narratives
+La tension centrale du KNSF-AGRC en 2098 est celle du choix entre deux légitimités incompatibles : redistribuer une fraction de la rente circumpolaire au fonds climatique mondial — ce qui consoliderait son image de 'bon acteur' de la gouvernance globale mais affaiblirait l'argument souverain — ou capitaliser sur cette ressource comme rempart identitaire et politique face à l'absorption technocratique. Une faction interne de jeunes économistes formés à l'ARIA-Nexus pousse vers une intégration totale dans les marchés de crédits énergétiques régulés, ce qui déchire le conseil d'administration. Pendant ce temps, les syndicats d'extraction privée non régulés cherchent à contourner les licences KNSF en finançant des opérations para-légales dans les zones maritimes disputées — une menace existentielle que le fonds ne peut contrer qu'en renforçant précisément les institutions internationales qu'il cherche par ailleurs à tenir à distance.

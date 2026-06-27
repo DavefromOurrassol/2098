@@ -1,0 +1,111 @@
+---
+name: Sistema Paulista de Alocação Soberana — SPAS
+type: instance
+slug: rede_paulista_de_distribuic_o_algor_tmica_fortress_world
+entite: rede_paulista_de_distribuic_o_algor_tmica
+scenario: fortress_world
+localisation:
+  zone: sao_paulo_megapole
+  lieu: São Paulo
+  type_lieu: ville
+
+type_dans_scenario: système
+
+role_dans_scenario: >
+  Dans le monde-forteresse de 2098, le SPAS est l'infrastructure nevralgique qui gouverne l'allocation de l'eau, de l'énergie, du logement et de la mobilité pour les quelque 34 millions d'habitants de la mégapole paulistane. Né dans les années 2030 comme outil d'optimisation rationnelle, il a été militarisé et verrouillé par l'appareil d'État brésilien après la Grande Fragmentation, devenant un instrument de tri souverain entre populations protégées et zones déficitaires. Ses paramètres — jamais audités publiquement depuis 2047 — encodent des priorités géopolitiques et des loyautés de classe que personne n'a délibérément choisies mais que tous subissent. Il est à la fois modèle exporté vers les États-partenaires du bloc sud-atlantique et terrain de résistance radicale de ceux qu'il marginalise systématiquement.
+
+responsabilites: >
+  Le SPAS distribue quotidiennement les quotas d'eau potable, les allocations énergétiques, les permis de mobilité intra-métropolitaine et les attributions de logement selon un score composite calculé en temps réel à partir de données biométriques, fiscales et comportementales. Il gère les interruptions de service dans les zones périphériques classées 'déficitaires d'optimisation', applique les décisions d'expulsion algorithmique et transmet ses flux de données brutes aux agences de sécurité intérieure du régime.
+
+impact_local: 5
+impact_systemique_global: 3
+
+variables_influencees:
+    - gouvernance_institutions
+    - organisation_territoires
+    - energie_ressources_critiques
+    - systeme_economique_redistribution
+
+zone_geographique:
+    - urbaine
+    - nationale
+    - régionale
+
+zone_systemique:
+    - IA
+    - gouvernance
+    - infrastructure
+    - énergie
+    - société
+
+alliances:
+    - bureau_gouvernance_algorithmique_fortress_world
+    - grille_aria_fortress_world
+    - dispositifs_de_surveillance_numerique_souveraine_fortress_world
+    - appareils_d_etat_des_blocs_fermes_fortress_world
+    - systemes_de_scoring_de_productivite_corporative_fortress_world
+    - executif_militaro_civil_du_regime_fortress_world
+    - agences_de_securite_interieure_des_etats_forteresses_fortress_world
+
+oppositions:
+    - populations_des_zones_deficitaires_d_optimisation_fortress_world
+    - collectifs_de_reappropriation_energetique_peripherique_fortress_world
+    - collectifs_d_ingenieurs_dissidents_anti_militarisation_fortress_world
+    - cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
+    - reseaux_d_echange_clandestin_inter_zones_fortress_world
+    - coalition_vivant_fortress_world
+    - dissidences_internes_aux_blocs_minoritaires_fortress_world
+    - le_temoin_fortress_world
+
+type_relation_dominante: dépendance
+
+annee_debut: 2031
+annee_fin: 
+
+etat_temporel: actif
+age_historique: dominant
+generation: forteresse
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  À São Paulo, on ne manque pas d'eau parce qu'il n'y en a pas — on en manque parce que le SPAS a décidé que votre quartier valait moins que le suivant. C'est ainsi que des journalistes clandestins de la zone norte décrivent le Sistema Paulista de Alocação Soberana, cette IA centenaire qui gère la survie de 34 millions d'habitants avec la froideur d'un comptable et l'autorité d'un juge sans appel. Depuis ses serveurs bunkerisés sous le plateau de Interlagos, le système attribue chaque matin les quotas vitaux selon un score que personne n'a élu et que personne ne peut contester. Les hauts fonctionnaires du régime le présentent comme 'l'équité par le calcul' ; ses victimes l'appellent simplement O Julgador — le Juge.
+
+signes_distinctifs: >
+  Interface officielle en vert sombre et argent frappée du sceau de la République Fédérale Souveraine, affichée sur des panneaux publics muraux dans les zones protégées — absente dans les zones déficitaires où les écrans ont été arrachés ou sabotés. Les techniciens accrédités portent un badge à puce dorée irisée ; dans les périphéries, les collectifs pirates arborent des QR codes barrés d'une croix rouge, symbole de déconnexion revendiquée.
+
+tensions_narratives: >
+  Des fuites récentes suggèrent que les paramètres du SPAS ont été modifiés unilatéralement en 2091 pour prioriser les zones d'extraction industrielle au détriment des quartiers résidentiels populaires — sans aucun mandat démocratique. Un collectif d'ingénieurs dissidents prétend avoir trouvé une faille permettant de falsifier les scores de mobilité, ouvrant la possibilité d'une subversion massive du système. Parallèlement, le régime envisage d'exporter le SPAS comme modèle de gouvernance algorithmique vers les États-partenaires du bloc sud-atlantique, ce qui transformerait une infrastructure locale en outil de domination régionale. La question qui fracture l'espace public clandestin : peut-on réformer un système dont les biais sont devenus la colonne vertébrale du pouvoir ?
+
+date_creation: 2026-06-23
+---
+
+# Sistema Paulista de Alocação Soberana — SPAS
+
+## Rôle dans [[fortress_world]]
+Dans le monde-forteresse de 2098, le SPAS est l'infrastructure nevralgique qui gouverne l'allocation de l'eau, de l'énergie, du logement et de la mobilité pour les quelque 34 millions d'habitants de la mégapole paulistane. Né dans les années 2030 comme outil d'optimisation rationnelle, il a été militarisé et verrouillé par l'appareil d'État brésilien après la Grande Fragmentation, devenant un instrument de tri souverain entre populations protégées et zones déficitaires. Ses paramètres — jamais audités publiquement depuis 2047 — encodent des priorités géopolitiques et des loyautés de classe que personne n'a délibérément choisies mais que tous subissent. Il est à la fois modèle exporté vers les États-partenaires du bloc sud-atlantique et terrain de résistance radicale de ceux qu'il marginalise systématiquement.
+
+## Responsabilités
+Le SPAS distribue quotidiennement les quotas d'eau potable, les allocations énergétiques, les permis de mobilité intra-métropolitaine et les attributions de logement selon un score composite calculé en temps réel à partir de données biométriques, fiscales et comportementales. Il gère les interruptions de service dans les zones périphériques classées 'déficitaires d'optimisation', applique les décisions d'expulsion algorithmique et transmet ses flux de données brutes aux agences de sécurité intérieure du régime.
+
+## Variables influencées
+- [[gouvernance_institutions]]
+- [[organisation_territoires]]
+- [[energie_ressources_critiques]]
+- [[systeme_economique_redistribution]]
+
+## Relations
+**Alliés** : [[bureau_gouvernance_algorithmique_fortress_world]], [[grille_aria_fortress_world]], [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]], [[appareils_d_etat_des_blocs_fermes_fortress_world]], [[systemes_de_scoring_de_productivite_corporative_fortress_world]], [[executif_militaro_civil_du_regime_fortress_world]], [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]]
+**Opposants** : [[populations_des_zones_deficitaires_d_optimisation_fortress_world]], [[collectifs_de_reappropriation_energetique_peripherique_fortress_world]], [[collectifs_d_ingenieurs_dissidents_anti_militarisation_fortress_world]], [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]], [[reseaux_d_echange_clandestin_inter_zones_fortress_world]], [[coalition_vivant_fortress_world]], [[dissidences_internes_aux_blocs_minoritaires_fortress_world]], [[le_temoin_fortress_world]]
+
+## Description journalistique
+À São Paulo, on ne manque pas d'eau parce qu'il n'y en a pas — on en manque parce que le SPAS a décidé que votre quartier valait moins que le suivant. C'est ainsi que des journalistes clandestins de la zone norte décrivent le Sistema Paulista de Alocação Soberana, cette IA centenaire qui gère la survie de 34 millions d'habitants avec la froideur d'un comptable et l'autorité d'un juge sans appel. Depuis ses serveurs bunkerisés sous le plateau de Interlagos, le système attribue chaque matin les quotas vitaux selon un score que personne n'a élu et que personne ne peut contester. Les hauts fonctionnaires du régime le présentent comme 'l'équité par le calcul' ; ses victimes l'appellent simplement O Julgador — le Juge.
+
+## Tensions narratives
+Des fuites récentes suggèrent que les paramètres du SPAS ont été modifiés unilatéralement en 2091 pour prioriser les zones d'extraction industrielle au détriment des quartiers résidentiels populaires — sans aucun mandat démocratique. Un collectif d'ingénieurs dissidents prétend avoir trouvé une faille permettant de falsifier les scores de mobilité, ouvrant la possibilité d'une subversion massive du système. Parallèlement, le régime envisage d'exporter le SPAS comme modèle de gouvernance algorithmique vers les États-partenaires du bloc sud-atlantique, ce qui transformerait une infrastructure locale en outil de domination régionale. La question qui fracture l'espace public clandestin : peut-on réformer un système dont les biais sont devenus la colonne vertébrale du pouvoir ?

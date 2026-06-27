@@ -1,0 +1,113 @@
+---
+name: Charte de Tampere
+type: instance
+slug: tampere_charte_eco_communalism
+entite: tampere_charte
+scenario: eco_communalism
+
+type_dans_scenario: institution
+
+role_dans_scenario: >
+  La Charte de Tampere est l'accord fondateur signé entre communes finlandaises et collectifs nordiques engagés dans la décroissance assumée, établissant des règles de réciprocité économique locale et de sobriété énergétique contraignante. Elle sert de modèle de référence pour les mouvements éco-communalistes européens cherchant à formaliser leur rupture avec les circuits marchands globaux. En instituant des obligations mutuelles exigibles — plafonds d'extraction énergétique, priorité aux échanges intracommunautaires, interdiction de cession des communs fonciers à des opérateurs extérieurs — elle transforme une convergence de valeurs en architecture juridique vivante. Elle ne gouverne pas : elle trace une ligne de démarcation entre ceux qui s'engagent à la respecter et ceux qui refusent, conférant à ses signataires une légitimité symbolique et une identité collective forte dans un monde fragmenté.
+
+responsabilites: >
+  La Charte certifie les engagements des communautés signataires via des protocoles d'audit participatif annuels, gérés par des délégués rotatifs issus des assemblées locales. Elle produit et actualise un corpus normatif commun — annexes techniques sur les seuils de sobriété, mécanismes de réciprocité et procédures de médiation en cas de manquement — diffusé par les réseaux de bibliothèques-archives communautaires. Elle accompagne l'extension du modèle hors du contexte fennoscandinave en proposant des modules d'adaptation à d'autres territoires européens.
+
+impact_local: 4
+impact_systemique_global: 3
+
+variables_influencees:
+    - gouvernance_institutions
+    - systeme_economique_redistribution
+    - energie_ressources_critiques
+    - organisation_territoires
+
+zone_geographique:
+    - régionale
+    - continentale
+
+zone_systemique:
+    - gouvernance
+    - économie
+    - société
+    - infrastructure
+
+alliances:
+    - reseau_assemblees_fennoscandien_eco_communalism
+    - reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism
+    - confederation_des_communs_de_l_arc_septentrional_eco_communalism
+    - confederation_communs_arc_septentrional_eco_communalism
+    - assemblees_cooperatives_regionales_eco_communalism
+    - archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
+    - leena_vainala_eco_communalism
+    - collectifs_de_techniciens_sobres_eco_communalism
+    - mutuelles_de_sante_territoriales_eco_communalism
+    - reseaux_de_bibliotheques_archives_communautaires_eco_communalism
+    - guildes_de_mediateurs_ecologiques_eco_communalism
+    - cercles_de_mediation_territoriale_intercommunautaire_eco_communalism
+    - amazonie_pacte_viva_eco_communalism
+
+oppositions:
+    - agro_conglomerats_des_enclaves_technologiques_eco_communalism
+    - plateformes_centralisees_de_reagregation_globale_eco_communalism
+    - consortiums_industriels_de_l_eau_eco_communalism
+    - communs_secessionnistes_hors_coordination_eco_communalism
+    - communautes_rurales_dissidentes_anti_cooperation_regionale_eco_communalism
+    - factions_autoritaires_locales_identitaires_exclusionnistes_eco_communalism
+    - fragments_d_etats_centraux_residuels_eco_communalism
+    - courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism
+    - consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism
+    - enclaves_extractivistes_residuelles_des_corridors_eco_communalism
+
+type_relation_dominante: alliance stratégique
+
+annee_debut: 2041
+annee_fin: 
+
+etat_temporel: actif
+age_historique: mature
+generation: post-effondrement
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Depuis les salles basses de l'ancien Tampere Hall reconverti en maison des communs, la Charte de Tampere continue de circuler entre les mains des délégués qui traversent la Fennoscandie à vélo ou par les liaisons fluviales rouvertes. Ce texte de quarante-deux articles, amendé sept fois depuis sa signature initiale en 2041, est devenu la référence la plus citée — et la plus disputée — dans les assemblées éco-communalistes d'Europe du Nord. On le brandit comme une caution lors de l'adhésion de nouvelles communes, on le conteste comme une contrainte injuste quand ses seuils énergétiques bloquent un projet local. Journalistes et observateurs extérieurs y voient surtout un paradoxe vivant : un document émancipateur qui oblige, un cadre anti-hégémonique devenu hégémonie douce.
+
+signes_distinctifs: >
+  Le sceau de la Charte représente un cercle brisé ouvert vers le nord, symbole de rupture assumée sans clôture définitive, imprimé à l'encre végétale sur chaque exemplaire signé. Les délégués chartistes portent un lien de bouleau tressé au poignet gauche lors des assemblées de ratification, signe visible de l'engagement pris. Le texte original est gravé sur des plaques de bois de pin carbonisé exposées dans la maison des communs de Tampere.
+
+tensions_narratives: >
+  La tension centrale tourne autour de la rigidité croissante des seuils de sobriété énergétique : des communes nordiques aux hivers particulièrement sévères réclament des dérogations que les gardiens du texte refusent, au nom de l'intégrité du modèle. Parallèlement, des collectifs d'Europe centrale qui cherchent à adopter la Charte exigent des adaptations culturelles et climatiques que les signataires historiques vivent comme une dilution. Enfin, des fragments d'États résiduels tentent de récupérer la légitimité symbolique de la Charte pour l'instrumentaliser comme substitut d'autorité — menaçant de transformer l'acte de sécession en nouvelle forme de souveraineté institutionnalisée.
+
+date_creation: 2026-06-27
+---
+
+# Charte de Tampere
+
+## Rôle dans [[eco_communalism]]
+La Charte de Tampere est l'accord fondateur signé entre communes finlandaises et collectifs nordiques engagés dans la décroissance assumée, établissant des règles de réciprocité économique locale et de sobriété énergétique contraignante. Elle sert de modèle de référence pour les mouvements éco-communalistes européens cherchant à formaliser leur rupture avec les circuits marchands globaux. En instituant des obligations mutuelles exigibles — plafonds d'extraction énergétique, priorité aux échanges intracommunautaires, interdiction de cession des communs fonciers à des opérateurs extérieurs — elle transforme une convergence de valeurs en architecture juridique vivante. Elle ne gouverne pas : elle trace une ligne de démarcation entre ceux qui s'engagent à la respecter et ceux qui refusent, conférant à ses signataires une légitimité symbolique et une identité collective forte dans un monde fragmenté.
+
+## Responsabilités
+La Charte certifie les engagements des communautés signataires via des protocoles d'audit participatif annuels, gérés par des délégués rotatifs issus des assemblées locales. Elle produit et actualise un corpus normatif commun — annexes techniques sur les seuils de sobriété, mécanismes de réciprocité et procédures de médiation en cas de manquement — diffusé par les réseaux de bibliothèques-archives communautaires. Elle accompagne l'extension du modèle hors du contexte fennoscandinave en proposant des modules d'adaptation à d'autres territoires européens.
+
+## Variables influencées
+- [[gouvernance_institutions]]
+- [[systeme_economique_redistribution]]
+- [[energie_ressources_critiques]]
+- [[organisation_territoires]]
+
+## Relations
+**Alliés** : [[reseau_assemblees_fennoscandien_eco_communalism]], [[reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism]], [[confederation_des_communs_de_l_arc_septentrional_eco_communalism]], [[confederation_communs_arc_septentrional_eco_communalism]], [[assemblees_cooperatives_regionales_eco_communalism]], [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]], [[leena_vainala_eco_communalism]], [[collectifs_de_techniciens_sobres_eco_communalism]], [[mutuelles_de_sante_territoriales_eco_communalism]], [[reseaux_de_bibliotheques_archives_communautaires_eco_communalism]], [[guildes_de_mediateurs_ecologiques_eco_communalism]], [[cercles_de_mediation_territoriale_intercommunautaire_eco_communalism]], [[amazonie_pacte_viva_eco_communalism]]
+**Opposants** : [[agro_conglomerats_des_enclaves_technologiques_eco_communalism]], [[plateformes_centralisees_de_reagregation_globale_eco_communalism]], [[consortiums_industriels_de_l_eau_eco_communalism]], [[communs_secessionnistes_hors_coordination_eco_communalism]], [[communautes_rurales_dissidentes_anti_cooperation_regionale_eco_communalism]], [[factions_autoritaires_locales_identitaires_exclusionnistes_eco_communalism]], [[fragments_d_etats_centraux_residuels_eco_communalism]], [[courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism]], [[consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism]], [[enclaves_extractivistes_residuelles_des_corridors_eco_communalism]]
+
+## Description journalistique
+Depuis les salles basses de l'ancien Tampere Hall reconverti en maison des communs, la Charte de Tampere continue de circuler entre les mains des délégués qui traversent la Fennoscandie à vélo ou par les liaisons fluviales rouvertes. Ce texte de quarante-deux articles, amendé sept fois depuis sa signature initiale en 2041, est devenu la référence la plus citée — et la plus disputée — dans les assemblées éco-communalistes d'Europe du Nord. On le brandit comme une caution lors de l'adhésion de nouvelles communes, on le conteste comme une contrainte injuste quand ses seuils énergétiques bloquent un projet local. Journalistes et observateurs extérieurs y voient surtout un paradoxe vivant : un document émancipateur qui oblige, un cadre anti-hégémonique devenu hégémonie douce.
+
+## Tensions narratives
+La tension centrale tourne autour de la rigidité croissante des seuils de sobriété énergétique : des communes nordiques aux hivers particulièrement sévères réclament des dérogations que les gardiens du texte refusent, au nom de l'intégrité du modèle. Parallèlement, des collectifs d'Europe centrale qui cherchent à adopter la Charte exigent des adaptations culturelles et climatiques que les signataires historiques vivent comme une dilution. Enfin, des fragments d'États résiduels tentent de récupérer la légitimité symbolique de la Charte pour l'instrumentaliser comme substitut d'autorité — menaçant de transformer l'acte de sécession en nouvelle forme de souveraineté institutionnalisée.

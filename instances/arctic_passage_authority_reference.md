@@ -1,0 +1,111 @@
+---
+name: Autorité de Passage Arctique
+type: instance
+slug: arctic_passage_authority_reference
+entite: arctic_passage_authority
+scenario: reference
+localisation:
+  zone: ilulissat_apa
+  lieu: Ilulissat
+  type_lieu: ville
+
+type_dans_scenario: institution
+
+role_dans_scenario: >
+  L'Autorité de Passage Arctique (APA) est l'organe de co-gouvernance qui administre les corridors maritimes rendus navigables toute l'année par le dérèglement climatique structurel des années 2040-2060. Elle incarne un modèle hybride fragile : treize États souverains riverains siègent à parité formelle avec les représentants des nations Inuit, Sami, Yupik et Nenets dans un Conseil de Gouvernance à double chambre. En 2098, elle est à la fois opérateur de transit stratégique pour les blocs concurrents et gardienne d'un territoire dont la transformation physique irréversible est la condition même de son existence. Sa légitimité repose sur un équilibre précaire entre la reconnaissance historique des droits autochtones et les impératifs de fluidité logistique que lui imposent les puissances consommatrices de ressources arctiques.
+
+responsabilites: >
+  L'APA délivre les permis de transit et d'extraction dans les zones économiques exclusives arctiques, arbitre les conflits de souveraineté entre États riverains, et gère le Fonds de Compensation Écologique Arctique alimenté par les redevances de passage. Elle coordonne également les protocoles de surveillance environnementale conjoints avec les collectivités autochtones et les agences climatiques internationales, et publie les rapports de franchissement permettant la traçabilité des flux énergétiques empruntant les corridors polaires.
+
+impact_local: 4
+impact_systemique_global: 3
+
+variables_influencees:
+    - climat_environnement_global
+    - energie_ressources_critiques
+    - geopolitique_conflits
+    - gouvernance_institutions
+
+zone_geographique:
+    - régionale
+    - globale
+
+zone_systemique:
+    - gouvernance
+    - énergie
+    - infrastructure
+    - société
+
+alliances:
+    - conseil_des_etats_nordiques_integres_reference
+    - collectifs_de_peche_inuit_et_sami_reference
+    - fonds_souverain_arctique_scandinave_reference
+    - kalaallit_nunaat_sovereign_fund_reference
+    - armada_logistique_nordique_reference
+    - agence_stabilisation_climatique_reference
+    - observatoire_climatique_des_territoires_oct_reference
+    - conseil_regulation_ressources_reference
+    - ong_de_tracabilite_des_ressources_critiques_reference
+
+oppositions:
+    - bloc_ressources_eurasiatique_bre_reference
+    - siberie_federale_reference
+    - consortiums_prives_d_extraction_de_ressources_critiques_reference
+    - milices_concurrentes_des_droits_de_passage_reference
+    - corporations_d_extraction_energetique_non_signataires_reference
+    - consortium_logistique_asiatique_de_contournement_aln_reference
+    - factions_d_extraction_miniere_independantes_reference
+    - bloc_des_souverainistes_climatiques_reference
+
+type_relation_dominante: coopération
+
+annee_debut: 2041
+annee_fin: 
+
+etat_temporel: actif
+age_historique: mature
+generation: transition
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Depuis son siège d'Ilulissat — ville dont les glaciers fondants ont précisément rendu l'institution nécessaire — l'Autorité de Passage Arctique reçoit chaque semaine des délégations aux intérêts radicalement contradictoires. D'un côté, les ingénieurs-logisticiens du Consortium Logistique Asiatique brandissent leurs projections de rentabilité ; de l'autre, les porte-parole du Conseil Inuit Circumpolaire rappellent que le corridor qu'on leur demande de valider traverse les territoires de chasse de leurs ancêtres. L'APA survit à cette contradiction en la ritualisant : deux co-présidents, un État membre et un représentant autochtone, signent conjointement chaque acte. Mais les couloirs du bâtiment en bois lamellé aux façades de granit gris racontent une autre histoire — celle des délégués autochtones qui arrivent en retard aux votes décisifs, faute d'avoir reçu les documents techniques dans leur langue.
+
+signes_distinctifs: >
+  Le logo de l'APA représente une boussole dont l'aiguille pointe vers une étoile polaire dédoublée — l'une institutionnelle, l'autre autochtone. Ses documents officiels sont systématiquement bilingues en anglais et dans la langue du peuple autochtone concerné, une règle respectée à la lettre mais souvent critiquée pour masquer l'asymétrie réelle des pouvoirs. Le bâtiment d'Ilulissat, construit en 2044, intègre des motifs sculptés par des artistes Kalaallit sur ses façades de bois, désormais partiellement délavées par des pluies acides de plus en plus fréquentes.
+
+tensions_narratives: >
+  La question centrale qui mine l'APA en 2098 est celle du vote qualifié : les nations autochtones disposent d'un droit de veto formel sur les décisions environnementales, mais les États membres ont progressivement reclassé la majorité des décisions comme 'logistiques' ou 'économiques', soustrayant ainsi des pans entiers de la gouvernance au regard autochtone. Une réforme structurelle est en débat depuis trois ans, bloquée par la Sibérie Fédérale et le bloc eurasiatique. Parallèlement, le Fonds de Compensation Écologique, théoriquement destiné aux communautés riveraines, est accusé par les Collectifs de Pêche Inuit et Sami d'être capté à 70% par des projets d'infrastructure bénéficiant aux États membres. L'APA risque à terme de devenir le symbole exactement inversé de ce qu'elle prétend incarner : une institution qui a donné aux peuples du Nord une voix formelle pour mieux légitimer leur dépossession effective.
+
+date_creation: 2026-06-23
+---
+
+# Autorité de Passage Arctique
+
+## Rôle dans [[reference]]
+L'Autorité de Passage Arctique (APA) est l'organe de co-gouvernance qui administre les corridors maritimes rendus navigables toute l'année par le dérèglement climatique structurel des années 2040-2060. Elle incarne un modèle hybride fragile : treize États souverains riverains siègent à parité formelle avec les représentants des nations Inuit, Sami, Yupik et Nenets dans un Conseil de Gouvernance à double chambre. En 2098, elle est à la fois opérateur de transit stratégique pour les blocs concurrents et gardienne d'un territoire dont la transformation physique irréversible est la condition même de son existence. Sa légitimité repose sur un équilibre précaire entre la reconnaissance historique des droits autochtones et les impératifs de fluidité logistique que lui imposent les puissances consommatrices de ressources arctiques.
+
+## Responsabilités
+L'APA délivre les permis de transit et d'extraction dans les zones économiques exclusives arctiques, arbitre les conflits de souveraineté entre États riverains, et gère le Fonds de Compensation Écologique Arctique alimenté par les redevances de passage. Elle coordonne également les protocoles de surveillance environnementale conjoints avec les collectivités autochtones et les agences climatiques internationales, et publie les rapports de franchissement permettant la traçabilité des flux énergétiques empruntant les corridors polaires.
+
+## Variables influencées
+- [[climat_environnement_global]]
+- [[energie_ressources_critiques]]
+- [[geopolitique_conflits]]
+- [[gouvernance_institutions]]
+
+## Relations
+**Alliés** : [[conseil_des_etats_nordiques_integres_reference]], [[collectifs_de_peche_inuit_et_sami_reference]], [[fonds_souverain_arctique_scandinave_reference]], [[kalaallit_nunaat_sovereign_fund_reference]], [[armada_logistique_nordique_reference]], [[agence_stabilisation_climatique_reference]], [[observatoire_climatique_des_territoires_oct_reference]], [[conseil_regulation_ressources_reference]], [[ong_de_tracabilite_des_ressources_critiques_reference]]
+**Opposants** : [[bloc_ressources_eurasiatique_bre_reference]], [[siberie_federale_reference]], [[consortiums_prives_d_extraction_de_ressources_critiques_reference]], [[milices_concurrentes_des_droits_de_passage_reference]], [[corporations_d_extraction_energetique_non_signataires_reference]], [[consortium_logistique_asiatique_de_contournement_aln_reference]], [[factions_d_extraction_miniere_independantes_reference]], [[bloc_des_souverainistes_climatiques_reference]]
+
+## Description journalistique
+Depuis son siège d'Ilulissat — ville dont les glaciers fondants ont précisément rendu l'institution nécessaire — l'Autorité de Passage Arctique reçoit chaque semaine des délégations aux intérêts radicalement contradictoires. D'un côté, les ingénieurs-logisticiens du Consortium Logistique Asiatique brandissent leurs projections de rentabilité ; de l'autre, les porte-parole du Conseil Inuit Circumpolaire rappellent que le corridor qu'on leur demande de valider traverse les territoires de chasse de leurs ancêtres. L'APA survit à cette contradiction en la ritualisant : deux co-présidents, un État membre et un représentant autochtone, signent conjointement chaque acte. Mais les couloirs du bâtiment en bois lamellé aux façades de granit gris racontent une autre histoire — celle des délégués autochtones qui arrivent en retard aux votes décisifs, faute d'avoir reçu les documents techniques dans leur langue.
+
+## Tensions narratives
+La question centrale qui mine l'APA en 2098 est celle du vote qualifié : les nations autochtones disposent d'un droit de veto formel sur les décisions environnementales, mais les États membres ont progressivement reclassé la majorité des décisions comme 'logistiques' ou 'économiques', soustrayant ainsi des pans entiers de la gouvernance au regard autochtone. Une réforme structurelle est en débat depuis trois ans, bloquée par la Sibérie Fédérale et le bloc eurasiatique. Parallèlement, le Fonds de Compensation Écologique, théoriquement destiné aux communautés riveraines, est accusé par les Collectifs de Pêche Inuit et Sami d'être capté à 70% par des projets d'infrastructure bénéficiant aux États membres. L'APA risque à terme de devenir le symbole exactement inversé de ce qu'elle prétend incarner : une institution qui a donné aux peuples du Nord une voix formelle pour mieux légitimer leur dépossession effective.

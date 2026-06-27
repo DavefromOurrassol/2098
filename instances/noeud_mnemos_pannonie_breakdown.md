@@ -1,0 +1,102 @@
+---
+name: Nœud Mnemos Pannonie — Les Gardiens du Danube
+type: instance
+slug: noeud_mnemos_pannonie_breakdown
+entite: noeud_mnemos_pannonie
+scenario: breakdown
+localisation:
+  zone: noeud_mnemos_pannonie
+  lieu: Győr, plaine pannonienne (bassin du Danube)
+  type_lieu: region
+
+type_dans_scenario: organisation
+
+role_dans_scenario: >
+  Nœud décentralisé du réseau Mnemos implanté en Pannonie, assurant la conservation et la transmission de mémoires collectives locales face à la désintégration des archives institutionnelles. Composé de bibliothécaires, d'anciens fonctionnaires et de techniciens reconvertis, il sert de référentiel juridique et historique pour les communautés survivantes de la plaine danubienne. Son existence discrète en fait un acteur de médiation informelle entre villages autonomes en conflit. Dans un monde où les États ont cessé de tenir leurs registres et où les conflits fonciers et hydriques fragmentent les territoires, les Gardiens du Danube sont devenus les seuls dépositaires crédibles des titres fonciers, des traités inter-villages et des chroniques locales, transformant leur rôle archivistique en une forme de magistrature coutumière non déclarée.
+
+responsabilites: >
+  Collecte, numérisation partielle et conservation physique des archives juridiques et historiques des communes de la plaine pannonienne ; arbitrage informel des litiges fonciers et frontaliers entre villages autonomes sur la base des documents conservés ; transmission orale et documentaire des mémoires collectives auprès des communautés fragmentées pour maintenir leur cohésion identitaire et négociatoire.
+
+impact_local: 4
+impact_systemique_global: 1
+
+variables_influencees:
+    - gouvernance_institutions
+    - valeurs_culture_tempo_sociale
+    - organisation_territoires
+    - technologie_information
+
+zone_geographique:
+    - régionale
+
+zone_systemique:
+    - gouvernance
+    - information
+    - société
+
+alliances:
+    - reseau_mnemos_breakdown
+    - collectifs_de_gardiens_archivistes_itinerants_breakdown
+    - communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+    - communautes_rurales_autonomes_breakdown
+    - archives_neutres_de_geneve_breakdown
+    - federation_communs_territoriaux_breakdown
+
+oppositions:
+    - seigneuries_foncieres_opportunistes_breakdown
+    - milices_de_controle_territorial_breakdown
+    - factions_propagandistes_des_archives_breakdown
+    - seigneurs_de_guerre_agro_territoriaux_breakdown
+
+type_relation_dominante: neutralité
+
+annee_debut: 2061
+annee_fin: 
+
+etat_temporel: actif
+age_historique: ascendant
+generation: post-effondrement
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Dans les caves d'une ancienne mairie de Győr transformée en dépôt d'archives improvisé, une dizaine de silhouettes penchées sur des registres papier et des tablettes de fortune constituent ce que les habitants de la plaine appellent simplement 'les Gardiens'. Anciens archivistes d'État, ex-cadastreurs hongrois ou techniciens reconvertis de Bratislava, ils ont tissé en vingt ans un réseau de mémoire vivante qui court de village en village le long du Danube. Quand deux communes se disputent un puits ou la propriété d'un grenier communautaire, ce sont eux qu'on convoque — non parce qu'ils ont été élus, mais parce qu'ils détiennent les preuves. Leur pouvoir est celui de l'encre sur le papier dans un monde où les serveurs sont morts.
+
+signes_distinctifs: >
+  Sachets de silice glissés entre les feuillets de registres reliés à la main ; sceaux de cire rouge portant l'empreinte d'un flot stylisé — le Danube — accompagné d'une clé ouverte ; messagers se déplaçant à vélo ou à cheval avec des besaces de cuir marquées d'une fine ligne bleue horizontale, signe de reconnaissance entre nœuds Mnemos.
+
+tensions_narratives: >
+  La neutralité des Gardiens est leur seul bouclier, mais elle se fissure : une seigneurie foncière opportuniste propose des vivres et de la protection en échange d'une relecture favorable d'anciens titres de propriété, mettant en crise la faction la plus précaire du nœud. Par ailleurs, la question de la légitimité de leur arbitrage monte : qui a mandaté ces archivistes pour trancher les litiges ? Certaines communes contestent leurs verdicts documentaires, les accusant de favoriser les villages qui leur apportent le plus de ressources. Enfin, un fragment rival du réseau Mnemos, opérant depuis Novi Sad avec des méthodes plus opaques, commence à concurrencer leur autorité mémorielle sur le sud de la plaine.
+
+date_creation: 2026-06-27
+---
+
+# Nœud Mnemos Pannonie — Les Gardiens du Danube
+
+## Rôle dans [[breakdown]]
+Nœud décentralisé du réseau Mnemos implanté en Pannonie, assurant la conservation et la transmission de mémoires collectives locales face à la désintégration des archives institutionnelles. Composé de bibliothécaires, d'anciens fonctionnaires et de techniciens reconvertis, il sert de référentiel juridique et historique pour les communautés survivantes de la plaine danubienne. Son existence discrète en fait un acteur de médiation informelle entre villages autonomes en conflit. Dans un monde où les États ont cessé de tenir leurs registres et où les conflits fonciers et hydriques fragmentent les territoires, les Gardiens du Danube sont devenus les seuls dépositaires crédibles des titres fonciers, des traités inter-villages et des chroniques locales, transformant leur rôle archivistique en une forme de magistrature coutumière non déclarée.
+
+## Responsabilités
+Collecte, numérisation partielle et conservation physique des archives juridiques et historiques des communes de la plaine pannonienne ; arbitrage informel des litiges fonciers et frontaliers entre villages autonomes sur la base des documents conservés ; transmission orale et documentaire des mémoires collectives auprès des communautés fragmentées pour maintenir leur cohésion identitaire et négociatoire.
+
+## Variables influencées
+- [[gouvernance_institutions]]
+- [[valeurs_culture_tempo_sociale]]
+- [[organisation_territoires]]
+- [[technologie_information]]
+
+## Relations
+**Alliés** : [[reseau_mnemos_breakdown]], [[collectifs_de_gardiens_archivistes_itinerants_breakdown]], [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]], [[communautes_rurales_autonomes_breakdown]], [[archives_neutres_de_geneve_breakdown]], [[federation_communs_territoriaux_breakdown]]
+**Opposants** : [[seigneuries_foncieres_opportunistes_breakdown]], [[milices_de_controle_territorial_breakdown]], [[factions_propagandistes_des_archives_breakdown]], [[seigneurs_de_guerre_agro_territoriaux_breakdown]]
+
+## Description journalistique
+Dans les caves d'une ancienne mairie de Győr transformée en dépôt d'archives improvisé, une dizaine de silhouettes penchées sur des registres papier et des tablettes de fortune constituent ce que les habitants de la plaine appellent simplement 'les Gardiens'. Anciens archivistes d'État, ex-cadastreurs hongrois ou techniciens reconvertis de Bratislava, ils ont tissé en vingt ans un réseau de mémoire vivante qui court de village en village le long du Danube. Quand deux communes se disputent un puits ou la propriété d'un grenier communautaire, ce sont eux qu'on convoque — non parce qu'ils ont été élus, mais parce qu'ils détiennent les preuves. Leur pouvoir est celui de l'encre sur le papier dans un monde où les serveurs sont morts.
+
+## Tensions narratives
+La neutralité des Gardiens est leur seul bouclier, mais elle se fissure : une seigneurie foncière opportuniste propose des vivres et de la protection en échange d'une relecture favorable d'anciens titres de propriété, mettant en crise la faction la plus précaire du nœud. Par ailleurs, la question de la légitimité de leur arbitrage monte : qui a mandaté ces archivistes pour trancher les litiges ? Certaines communes contestent leurs verdicts documentaires, les accusant de favoriser les villages qui leur apportent le plus de ressources. Enfin, un fragment rival du réseau Mnemos, opérant depuis Novi Sad avec des méthodes plus opaques, commence à concurrencer leur autorité mémorielle sur le sud de la plaine.

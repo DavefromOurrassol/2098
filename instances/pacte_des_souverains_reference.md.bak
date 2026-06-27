@@ -1,0 +1,100 @@
+---
+name: Alliance des Blocs Souverains (ABS)
+type: instance
+slug: pacte_des_souverains_reference
+entite: pacte_des_souverains
+scenario: reference
+
+type_dans_scenario: organisation
+
+role_dans_scenario: >
+  Alliance diplomatique informelle regroupant des États-nations ayant refusé de céder une part de leur souveraineté aux blocs supranationaux émergents. Le Pacte coordonne des positions communes sur les questions de frontières, de données et de ressources naturelles, dans un monde où l'autorité étatique est constamment contestée. Structurellement, l'ABS fonctionne comme un forum de résistance collective plutôt que comme un bloc intégré : ses membres partagent un refus commun de l'absorption dans les grandes architectures technocratiques ou économiques, mais peinent à transformer ce refus en puissance d'action durable. Dans le contexte de transition fragile de 2098, l'ABS occupe une position paradoxale : suffisamment cohérente pour peser sur les négociations multilatérales, trop divisée en interne pour imposer une alternative crédible.
+
+responsabilites: >
+  L'ABS négocie des positions communes lors des sommets sur la gouvernance des données, la tarification des ressources critiques et la délimitation des zones frontalières contestées. Elle émet des déclarations de résistance aux chartes d'intégration supranationale et coordonne des vetos collectifs dans les instances multilatérales survivantes. Elle maintient un secrétariat permanent à rotation tournante chargé de centraliser les positions nationales sans les mutualiser.
+
+impact_local: 2
+impact_systemique_global: 3
+
+variables_influencees:
+    - gouvernance_institutions
+    - geopolitique_conflits
+
+zone_geographique:
+    - nationale
+    - régionale
+    - globale
+
+zone_systemique:
+    - gouvernance
+    - information
+    - énergie
+
+alliances:
+    - gouvernements_federaux_residuels_souverainistes_reference
+    - bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference
+    - coalition_pour_la_souverainete_numerique_nationale_reference
+    - front_souverainiste_des_ressources_d_amerique_du_sud_reference
+    - bloc_des_souverainistes_climatiques_reference
+    - coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference
+    - gouvernements_du_bloc_sahelien_autonome_reference
+
+oppositions:
+    - confederation_des_megapoles_autonomes_reference
+    - consortium_des_grandes_plateformes_ia_integrees_reference
+    - banque_mondiale_des_transitions_climatiques_reference
+    - tribunal_algorithmique_de_bruxelles_reference
+    - europe_occidentale_reconstructee_reference
+    - directive_kontinuum_reference
+    - fonds_monetaire_climatique_fmc_reference
+
+type_relation_dominante: alliance stratégique
+
+annee_debut: 2041
+annee_fin: 
+
+etat_temporel: actif
+age_historique: mature
+generation: transition
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  À Genève, lors des dernières négociations sur la gouvernance des données critiques, les délégués de l'Alliance des Blocs Souverains se sont présentés en ordre dispersé : trois positions différentes, un seul communiqué de façade. C'est l'image habituelle de l'ABS en 2098 — une coalition qui fait du bruit sans faire bloc. Née dans les années 2040 de la résistance à la première vague d'intégration supranationale forcée, l'ABS regroupe aujourd'hui des dizaines d'États allant du Bloc Sahélien Autonome aux franges eurasiatiques non alignées, unis par leur méfiance commune envers les plateformes, les fonds climatiques conditionnels et les chartes numériques contraignantes. Les journalistes couvrant l'ABS savent qu'ils trouveront toujours un désaccord interne plus fertile que tout accord externe.
+
+signes_distinctifs: >
+  Sigle stylisé représentant plusieurs drapeaux nationaux non superposés mais adjacents, refusant délibérément la fusion des emblèmes. Les documents officiels portent un en-tête multilingue sans langue dominante désignée. Les sommets se tiennent dans des pays membres à rotation annuelle, aucune ville n'étant acceptée comme siège permanent.
+
+tensions_narratives: >
+  La tension centrale de l'ABS est celle de sa propre contradiction : protéger la souveraineté de chaque membre interdit toute véritable mutualisation, condamnant le pacte à l'impuissance face aux blocs qu'il dénonce. Des fissures apparaissent entre membres tentés par des accords bilatéraux avec les grandes puissances supranationales et ceux qui maintiennent une ligne dure. La question des données climatiques — faut-il les partager avec l'Agence Mondiale pour la Stabilisation Climatique au risque de céder de la souveraineté, ou les refuser au risque de l'isolement ? — menace à chaque sommet de faire exploser l'alliance.
+
+date_creation: 2026-06-27
+---
+
+# Alliance des Blocs Souverains (ABS)
+
+## Rôle dans [[reference]]
+Alliance diplomatique informelle regroupant des États-nations ayant refusé de céder une part de leur souveraineté aux blocs supranationaux émergents. Le Pacte coordonne des positions communes sur les questions de frontières, de données et de ressources naturelles, dans un monde où l'autorité étatique est constamment contestée. Structurellement, l'ABS fonctionne comme un forum de résistance collective plutôt que comme un bloc intégré : ses membres partagent un refus commun de l'absorption dans les grandes architectures technocratiques ou économiques, mais peinent à transformer ce refus en puissance d'action durable. Dans le contexte de transition fragile de 2098, l'ABS occupe une position paradoxale : suffisamment cohérente pour peser sur les négociations multilatérales, trop divisée en interne pour imposer une alternative crédible.
+
+## Responsabilités
+L'ABS négocie des positions communes lors des sommets sur la gouvernance des données, la tarification des ressources critiques et la délimitation des zones frontalières contestées. Elle émet des déclarations de résistance aux chartes d'intégration supranationale et coordonne des vetos collectifs dans les instances multilatérales survivantes. Elle maintient un secrétariat permanent à rotation tournante chargé de centraliser les positions nationales sans les mutualiser.
+
+## Variables influencées
+- [[gouvernance_institutions]]
+- [[geopolitique_conflits]]
+
+## Relations
+**Alliés** : [[gouvernements_federaux_residuels_souverainistes_reference]], [[bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference]], [[coalition_pour_la_souverainete_numerique_nationale_reference]], [[front_souverainiste_des_ressources_d_amerique_du_sud_reference]], [[bloc_des_souverainistes_climatiques_reference]], [[coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference]], [[gouvernements_du_bloc_sahelien_autonome_reference]]
+**Opposants** : [[confederation_des_megapoles_autonomes_reference]], [[consortium_des_grandes_plateformes_ia_integrees_reference]], [[banque_mondiale_des_transitions_climatiques_reference]], [[tribunal_algorithmique_de_bruxelles_reference]], [[europe_occidentale_reconstructee_reference]], [[directive_kontinuum_reference]], [[fonds_monetaire_climatique_fmc_reference]]
+
+## Description journalistique
+À Genève, lors des dernières négociations sur la gouvernance des données critiques, les délégués de l'Alliance des Blocs Souverains se sont présentés en ordre dispersé : trois positions différentes, un seul communiqué de façade. C'est l'image habituelle de l'ABS en 2098 — une coalition qui fait du bruit sans faire bloc. Née dans les années 2040 de la résistance à la première vague d'intégration supranationale forcée, l'ABS regroupe aujourd'hui des dizaines d'États allant du Bloc Sahélien Autonome aux franges eurasiatiques non alignées, unis par leur méfiance commune envers les plateformes, les fonds climatiques conditionnels et les chartes numériques contraignantes. Les journalistes couvrant l'ABS savent qu'ils trouveront toujours un désaccord interne plus fertile que tout accord externe.
+
+## Tensions narratives
+La tension centrale de l'ABS est celle de sa propre contradiction : protéger la souveraineté de chaque membre interdit toute véritable mutualisation, condamnant le pacte à l'impuissance face aux blocs qu'il dénonce. Des fissures apparaissent entre membres tentés par des accords bilatéraux avec les grandes puissances supranationales et ceux qui maintiennent une ligne dure. La question des données climatiques — faut-il les partager avec l'Agence Mondiale pour la Stabilisation Climatique au risque de céder de la souveraineté, ou les refuser au risque de l'isolement ? — menace à chaque sommet de faire exploser l'alliance.

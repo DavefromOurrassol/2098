@@ -1,0 +1,25 @@
+============================================================
+OURRASSOL 2098 — Officialisation alliances/oppositions
+============================================================
+
+[1/4] Extraction des mentions texte libre...
+  → 501 mentions au total, 498 unique(s)
+
+[2/4] Déduplication sémantique (498 mentions)...
+  [dédup] Lot 1/4 (150 mentions)...
+Traceback (most recent call last):
+  File "/Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/generator/officialize_alliances.py", line 747, in <module>
+    main()
+  File "/Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/generator/officialize_alliances.py", line 660, in main
+    clusters = deduplicate_mentions(client, unique_mentions, dry_run)
+  File "/Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/generator/officialize_alliances.py", line 296, in deduplicate_mentions
+    result = call_claude_json(client, DEDUP_SYSTEM, user_content, max_tokens=8000)
+  File "/Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/generator/officialize_alliances.py", line 189, in call_claude_json
+    return json.loads(text)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 760 column 29 (char 24725)

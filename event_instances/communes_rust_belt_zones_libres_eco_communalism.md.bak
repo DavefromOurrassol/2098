@@ -1,0 +1,82 @@
+---
+name: 'La Proclamation des Friches Libres : Detroit, Cleveland, Pittsburgh hors-algorithme'
+type: event_instance
+slug: communes_rust_belt_zones_libres_eco_communalism
+archetype: communes_rust_belt_zones_libres
+scenario: eco_communalism
+type_evenement: political_social
+portee: regionale
+date: 2063
+date_label: automne 2063
+impossible: false
+custom: true
+description: >
+  À l'automne 2063, des milliers de personnes convergent vers les anciennes zones industrielles sinistrées du Rust Belt américain, portant des bannières frappées du slogan 'Ici, la terre décide — pas l'algorithme'. La Confédération des Friches Vivantes, forte de deux décennies de pratique communaliste dans les friches de l'intérieur, transforme ces carcasses d'acier et de béton en laboratoires vivants d'autogouvernance : jardins sur toits d'usines, assemblées dans les nefs des anciens laminoirs, réseaux de radio communautaire basse consommation diffusant les débats en temps réel. Face à elle, les appareils sécuritaires résiduels tentent d'étouffer l'expérience par le blocus, mais la visibilité de l'événement — relayée par Le Fil Commun — transforme rapidement les friches en symbole continental.
+consequences: >
+  L'événement devient le catalyseur d'une vague d'occupations similaires en Amérique du Nord et en Europe industrielle déclinante, accélérant la reconnaissance de facto des zones de souveraineté commune comme forme légitime d'organisation territoriale. Il fragilise durablement la prétention des Fragments d'États Centraux Résiduels à exercer une tutelle sur les territoires post-industriels, tout en exposant les communes à une pression accrue des Consortiums Logistiques Néo-Industriels cherchant à récupérer ces fonciers stratégiques. La Trame Mnemos intègre les jurisprudences nées dans ces friches comme modèles de référence pour les assemblées communalistes du monde entier.
+realisation: >
+  Dans un contexte de fragmentation avancée des structures fédérales nord-américaines, la Confédération des Friches Vivantes coordonne l'occupation simultanée de trois grands sites industriels désaffectés — les anciens complexes de Détroit-Rivière, Cleveland-Lakefront et Pittsburgh-Monongahela. Les occupants y proclament des 'zones de souveraineté commune' explicitement affranchies de tout système de gouvernance algorithmique, ce qui constitue un défi direct aux blocs sécuritaires résiduels qui tentent encore de maintenir une surveillance numérique centralisée sur ces corridors industriels. La résistance des Fragments d'États Centraux Résiduels est réelle mais fragmentée : incapables de mobiliser une réponse coercitive unifiée, ils optent pour un blocus logistique et une guerre de récits via les Cartels de Narration de Pénurie. Les communes tiennent, s'appuyant sur les Collectifs de Techniciens Sobres pour maintenir des infrastructures low-tech autonomes.
+impact_sur_variables:
+  - variable: geopolitique_conflits
+    delta_level: 8
+    duree: 12
+    polarite: -1
+  - variable: valeurs_culture_tempo_sociale
+    delta_level: 12
+    duree: 20
+    polarite: 1
+  - variable: gouvernance_institutions
+    delta_level: -10
+    duree: 15
+    polarite: -1
+  - variable: organisation_territoires
+    delta_level: 14
+    duree: 25
+    polarite: 1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+    - mouvement_des_communes_du_rust_belt_eco_communalism
+    - fragments_d_etats_centraux_residuels_eco_communalism
+    - collectifs_de_techniciens_sobres_eco_communalism
+    - cartels_de_narration_de_penurie_eco_communalism
+    - voix_du_dehors_eco_communalism
+    - reseaux_de_radio_communautaire_basse_consommation_eco_communalism
+    - reseau_mnemos_eco_communalism
+    - communs_secessionnistes_hors_coordination_eco_communalism
+    - archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
+note_coherence: "L'événement s'inscrit parfaitement dans la trajectoire de régénération fragile du scénario : les communes post-industrielles du Rust Belt sont l'expression directe du communalisme éco-territorial, leur défi anti-algorithmique cohérent avec le mouvement de déconnexion algorithmique communautaire déjà amorcé, tandis que la tension avec les blocs résiduels reflète le level intermédiaire de gouvernance_institutions (75) et la fragilité géopolitique persistante (35)."
+custom_source: rééquilibrage_geo_2026-06
+date_creation: 2026-06-24
+---
+
+# La Proclamation des Friches Libres : Detroit, Cleveland, Pittsburgh hors-algorithme
+
+## Réalisation dans [[eco_communalism]]
+Dans un contexte de fragmentation avancée des structures fédérales nord-américaines, la Confédération des Friches Vivantes coordonne l'occupation simultanée de trois grands sites industriels désaffectés — les anciens complexes de Détroit-Rivière, Cleveland-Lakefront et Pittsburgh-Monongahela. Les occupants y proclament des 'zones de souveraineté commune' explicitement affranchies de tout système de gouvernance algorithmique, ce qui constitue un défi direct aux blocs sécuritaires résiduels qui tentent encore de maintenir une surveillance numérique centralisée sur ces corridors industriels. La résistance des Fragments d'États Centraux Résiduels est réelle mais fragmentée : incapables de mobiliser une réponse coercitive unifiée, ils optent pour un blocus logistique et une guerre de récits via les Cartels de Narration de Pénurie. Les communes tiennent, s'appuyant sur les Collectifs de Techniciens Sobres pour maintenir des infrastructures low-tech autonomes.
+
+## Description journalistique
+À l'automne 2063, des milliers de personnes convergent vers les anciennes zones industrielles sinistrées du Rust Belt américain, portant des bannières frappées du slogan 'Ici, la terre décide — pas l'algorithme'. La Confédération des Friches Vivantes, forte de deux décennies de pratique communaliste dans les friches de l'intérieur, transforme ces carcasses d'acier et de béton en laboratoires vivants d'autogouvernance : jardins sur toits d'usines, assemblées dans les nefs des anciens laminoirs, réseaux de radio communautaire basse consommation diffusant les débats en temps réel. Face à elle, les appareils sécuritaires résiduels tentent d'étouffer l'expérience par le blocus, mais la visibilité de l'événement — relayée par Le Fil Commun — transforme rapidement les friches en symbole continental.
+
+## Conséquences
+L'événement devient le catalyseur d'une vague d'occupations similaires en Amérique du Nord et en Europe industrielle déclinante, accélérant la reconnaissance de facto des zones de souveraineté commune comme forme légitime d'organisation territoriale. Il fragilise durablement la prétention des Fragments d'États Centraux Résiduels à exercer une tutelle sur les territoires post-industriels, tout en exposant les communes à une pression accrue des Consortiums Logistiques Néo-Industriels cherchant à récupérer ces fonciers stratégiques. La Trame Mnemos intègre les jurisprudences nées dans ces friches comme modèles de référence pour les assemblées communalistes du monde entier.
+
+## Impact sur les variables
+- **geopolitique_conflits** : delta -8 sur 12 ans
+- **valeurs_culture_tempo_sociale** : delta +12 sur 20 ans
+- **gouvernance_institutions** : delta +10 sur 15 ans
+- **organisation_territoires** : delta +14 sur 25 ans
+
+## Acteurs impliqués
+- [[mouvement_des_communes_du_rust_belt_eco_communalism]]
+- [[fragments_d_etats_centraux_residuels_eco_communalism]]
+- [[collectifs_de_techniciens_sobres_eco_communalism]]
+- [[cartels_de_narration_de_penurie_eco_communalism]]
+- [[voix_du_dehors_eco_communalism]]
+- [[reseaux_de_radio_communautaire_basse_consommation_eco_communalism]]
+- [[reseau_mnemos_eco_communalism]]
+- [[communs_secessionnistes_hors_coordination_eco_communalism]]
+- [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]]
+
+## Note de cohérence
+L'événement s'inscrit parfaitement dans la trajectoire de régénération fragile du scénario : les communes post-industrielles du Rust Belt sont l'expression directe du communalisme éco-territorial, leur défi anti-algorithmique cohérent avec le mouvement de déconnexion algorithmique communautaire déjà amorcé, tandis que la tension avec les blocs résiduels reflète le level intermédiaire de gouvernance_institutions (75) et la fragilité géopolitique persistante (35).

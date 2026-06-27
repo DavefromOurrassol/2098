@@ -1,0 +1,110 @@
+---
+name: Pacte Amazônia Viva
+type: instance
+slug: consortium_amazonia_viva_eco_communalism
+entite: consortium_amazonia_viva
+scenario: eco_communalism
+
+type_dans_scenario: organisation
+
+role_dans_scenario: >
+  Dans un monde fragmenté en communautés autonomes, le Pacte Amazônia Viva s'est transformé en une confédération souple de nations autochtones, de collectifs scientifiques et de conseils de bassin versant amazoniens, exerçant une souveraineté écologique de facto sur plusieurs millions de kilomètres carrés de forêt régénérée. Il ne négocie plus avec des États-nations — qui ont eux-mêmes perdu de leur cohérence — mais tisse des accords de réciprocité avec d'autres réseaux territoriaux continentaux, incarnant une diplomatie du vivant horizontale. Son autorité repose moins sur un texte juridique que sur la légitimité de garde : ceux qui ont survécu à l'effondrement en restant sur place, en restaurant les sols et en maintenant les cycles hydrologiques, parlent désormais au nom de l'Amazonie avec une crédibilité que nul autre acteur ne peut revendiquer.
+
+responsabilites: >
+  Le Pacte coordonne les protocoles de régénération des corridors écologiques, arbitre les conflits d'usage entre communautés membres, et représente le territoire dans les échanges interrégionaux de semences, de savoirs agronomiques et de données climatiques partagées. Il maintient une cartographie vivante de l'état écologique du bassin, mise à jour par des observateurs citoyens embarqués dans les réseaux communautaires.
+
+impact_local: 5
+impact_systemique_global: 3
+
+variables_influencees:
+    - climat_environnement_global
+    - organisation_territoires
+    - gouvernance_institutions
+    - energie_ressources_critiques
+
+zone_geographique:
+    - régionale
+    - continentale
+
+zone_systemique:
+    - gouvernance
+    - société
+    - infrastructure
+    - énergie
+
+alliances:
+    - coalition_vivant_eco_communalism
+    - assemblee_territoires_eco_communalism
+    - assemblees_bioterritoriales_regionales_eco_communalism
+    - assemblees_de_bassin_versant_eco_communalism
+    - brigades_de_restauration_ecologique_eco_communalism
+    - collectifs_de_cartographie_ecologique_participative_eco_communalism
+    - collectifs_de_geo_observateurs_citoyens_eco_communalism
+    - conseils_de_bassin_versant_eco_communalistes_eco_communalism
+    - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
+    - federation_communs_territoriaux_eco_communalism
+    - guildes_de_mediateurs_ecologiques_eco_communalism
+    - mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism
+    - trame_bioclimatique_eco_communalism
+
+oppositions:
+    - enclaves_extractivistes_residuelles_des_corridors_eco_communalism
+    - factions_extractivistes_des_aquiferes_communs_eco_communalism
+    - consortiums_industriels_de_l_eau_eco_communalism
+    - agro_conglomerats_des_enclaves_technologiques_eco_communalism
+    - consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism
+    - factions_technophiles_de_la_geo_ingenierie_centralisee_eco_communalism
+    - communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism
+
+type_relation_dominante: alliance stratégique
+
+annee_debut: 2031
+annee_fin: 
+
+etat_temporel: actif
+age_historique: dominant
+generation: reconstruction
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Depuis la grande confluence de Manaus en 2041, le Pacte Amazônia Viva est devenu la référence mondiale de ce que les communautés appellent ici la 'garde souveraine'. Pas de siège fixe, pas de drapeau unique : le Pacte se réunit deux fois par an en assemblée fluviale itinérante, sur des pirogues élargies et des plateformes de bambou ancrées aux confluences. Ses représentants — moitiés chamanes, moitiés agronomes — négocient des échanges de semences avec la Confédération des Communs de l'Arc Septentrional aussi naturellement qu'ils cartographient l'avancée du tapir dans des zones réhabilitées. Ce que les journalistes étrangers peinent encore à saisir, c'est que leur pouvoir ne vient pas d'un traité : il vient du fait que la forêt, elle, les reconnaît.
+
+signes_distinctifs: >
+  Les délégués du Pacte portent des cordons tressés de fibres d'açaí et de kapok teintées à l'argile rouge — marqueur visible d'appartenance sans hiérarchie de rang. Leurs documents officiels sont gravés sur plaques de céramique locale ou imprimés sur papier de feuilles séchées, jamais sur support numérique propriétaire. Le symbole du Pacte est une anaconda stylisée formant un cercle ouvert — le cycle, jamais fermé.
+
+tensions_narratives: >
+  La légitimité du Pacte est contestée de l'intérieur : certaines nations autochtones membres refusent de partager leurs cartographies sacrées avec les collectifs scientifiques, craignant une réappropriation culturelle même bienveillante. Par ailleurs, les enclaves extractivistes résiduelles des corridors grignotent les marges du territoire en profitant des zones grises entre communautés. La grande question de 2098 est de savoir si le Pacte peut tenir sa promesse d'horizontalité quand la pression des consortiums industriels de l'eau menace de forcer une centralisation défensive — devenir un État pour survivre, au risque de trahir ce qu'il défend.
+
+date_creation: 2026-06-23
+---
+
+# Pacte Amazônia Viva
+
+## Rôle dans [[eco_communalism]]
+Dans un monde fragmenté en communautés autonomes, le Pacte Amazônia Viva s'est transformé en une confédération souple de nations autochtones, de collectifs scientifiques et de conseils de bassin versant amazoniens, exerçant une souveraineté écologique de facto sur plusieurs millions de kilomètres carrés de forêt régénérée. Il ne négocie plus avec des États-nations — qui ont eux-mêmes perdu de leur cohérence — mais tisse des accords de réciprocité avec d'autres réseaux territoriaux continentaux, incarnant une diplomatie du vivant horizontale. Son autorité repose moins sur un texte juridique que sur la légitimité de garde : ceux qui ont survécu à l'effondrement en restant sur place, en restaurant les sols et en maintenant les cycles hydrologiques, parlent désormais au nom de l'Amazonie avec une crédibilité que nul autre acteur ne peut revendiquer.
+
+## Responsabilités
+Le Pacte coordonne les protocoles de régénération des corridors écologiques, arbitre les conflits d'usage entre communautés membres, et représente le territoire dans les échanges interrégionaux de semences, de savoirs agronomiques et de données climatiques partagées. Il maintient une cartographie vivante de l'état écologique du bassin, mise à jour par des observateurs citoyens embarqués dans les réseaux communautaires.
+
+## Variables influencées
+- [[climat_environnement_global]]
+- [[organisation_territoires]]
+- [[gouvernance_institutions]]
+- [[energie_ressources_critiques]]
+
+## Relations
+**Alliés** : [[coalition_vivant_eco_communalism]], [[assemblee_territoires_eco_communalism]], [[assemblees_bioterritoriales_regionales_eco_communalism]], [[assemblees_de_bassin_versant_eco_communalism]], [[brigades_de_restauration_ecologique_eco_communalism]], [[collectifs_de_cartographie_ecologique_participative_eco_communalism]], [[collectifs_de_geo_observateurs_citoyens_eco_communalism]], [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]], [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]], [[federation_communs_territoriaux_eco_communalism]], [[guildes_de_mediateurs_ecologiques_eco_communalism]], [[mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism]], [[trame_bioclimatique_eco_communalism]]
+**Opposants** : [[enclaves_extractivistes_residuelles_des_corridors_eco_communalism]], [[factions_extractivistes_des_aquiferes_communs_eco_communalism]], [[consortiums_industriels_de_l_eau_eco_communalism]], [[agro_conglomerats_des_enclaves_technologiques_eco_communalism]], [[consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism]], [[factions_technophiles_de_la_geo_ingenierie_centralisee_eco_communalism]], [[communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism]]
+
+## Description journalistique
+Depuis la grande confluence de Manaus en 2041, le Pacte Amazônia Viva est devenu la référence mondiale de ce que les communautés appellent ici la 'garde souveraine'. Pas de siège fixe, pas de drapeau unique : le Pacte se réunit deux fois par an en assemblée fluviale itinérante, sur des pirogues élargies et des plateformes de bambou ancrées aux confluences. Ses représentants — moitiés chamanes, moitiés agronomes — négocient des échanges de semences avec la Confédération des Communs de l'Arc Septentrional aussi naturellement qu'ils cartographient l'avancée du tapir dans des zones réhabilitées. Ce que les journalistes étrangers peinent encore à saisir, c'est que leur pouvoir ne vient pas d'un traité : il vient du fait que la forêt, elle, les reconnaît.
+
+## Tensions narratives
+La légitimité du Pacte est contestée de l'intérieur : certaines nations autochtones membres refusent de partager leurs cartographies sacrées avec les collectifs scientifiques, craignant une réappropriation culturelle même bienveillante. Par ailleurs, les enclaves extractivistes résiduelles des corridors grignotent les marges du territoire en profitant des zones grises entre communautés. La grande question de 2098 est de savoir si le Pacte peut tenir sa promesse d'horizontalité quand la pression des consortiums industriels de l'eau menace de forcer une centralisation défensive — devenir un État pour survivre, au risque de trahir ce qu'il défend.

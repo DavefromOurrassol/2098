@@ -1,0 +1,104 @@
+---
+name: Lagos Est Nexcore — Les Nœuds Lagunaires
+type: instance
+slug: lagos_est_nexcore_breakdown
+entite: lagos_est_nexcore
+scenario: breakdown
+localisation:
+  zone: lagos_est_nexcore
+  lieu: Lagos-Est (Nœud NexCore)
+  type_lieu: ville
+
+type_dans_scenario: organisation
+
+role_dans_scenario: >
+  Lagos Est Nexcore est une organisation de coordination économique émergée des ruines des anciennes structures corporatives de l'est lagunaire. Elle gère les flux d'énergie et de données entre les enclaves autonomes de Lagos-Est, agissant comme intermédiaire pragmatique dans un territoire morcelé. Son autorité repose sur le contrôle des nœuds de réseau survivants plutôt que sur une légitimité institutionnelle. Dans le chaos du scenario Breakdown, elle incarne la forme la plus brute de l'ordre résiduel : ni État, ni corporation, ni milice — une entité de fait dont le pouvoir se mesure en mégawatts distribués et en paquets de données acheminés, et dont la légitimité se négocie enclave par enclave, nœud par nœud, dans un territoire où l'alternative à sa présence n'est pas un autre ordre mais l'absence totale d'ordre.
+
+responsabilites: >
+  Maintien opérationnel des nœuds énergétiques et des relais de données survivants dans l'est lagunaire de Lagos ; arbitrage pragmatique des accès aux ressources critiques entre enclaves autonomes concurrentes ; perception de droits de transit et de synchronisation en échange de la continuité des flux vitaux.
+
+impact_local: 5
+impact_systemique_global: 2
+
+variables_influencees:
+    - energie_ressources_critiques
+    - organisation_territoires
+    - gouvernance_institutions
+    - technologie_information
+
+zone_geographique:
+    - locale
+    - urbaine
+    - régionale
+
+zone_systemique:
+    - énergie
+    - infrastructure
+    - gouvernance
+    - économie
+
+alliances:
+    - guilde_des_techniciens_nomades_breakdown
+    - enclaves_technologiques_survivantes_breakdown
+    - collectifs_de_reparation_energetique_breakdown
+    - ligue_des_cites_littorales_en_sursis_breakdown
+
+oppositions:
+    - seigneuries_logistiques_armees_breakdown
+    - milices_de_controle_territorial_breakdown
+    - front_de_resistance_aux_peages_sur_les_ressources_breakdown
+    - fronts_populistes_anti_technocratiques_breakdown
+    - reseau_logistique_criminel_concurrent_breakdown
+
+type_relation_dominante: dépendance
+
+annee_debut: 2061
+annee_fin: 
+
+etat_temporel: actif
+age_historique: ascendant
+generation: post-effondrement
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Depuis le terminal flottant de Badore, les techniciens des Nœuds Lagunaires ne portent pas d'uniforme — ils portent des jauges. Tension de réseau sur le poignet gauche, carte de transit sur le droit. Lagos Est Nexcore n'a jamais été fondée : elle s'est agrégée autour des huit nœuds de distribution énergétique que personne d'autre ne savait faire fonctionner après la désintégration de 2059. Aujourd'hui, neuf enclaves de l'est lagunaire lui versent des droits de synchronisation pour rester connectées — certaines de gré, d'autres parce que couper le nœud équivaudrait à éteindre leurs hôpitaux. Ses délégués se déplacent en pirogue blindée entre Ajah et Ibeju, arbitrant des conflits de bande passante comme d'autres arbitraient jadis des contrats pétroliers. Coordinatrice vitale ou nouveau seigneur des nœuds — la question se pose chaque saison des pluies, quand les crues remontent et que les prix de l'accès montent avec elles.
+
+signes_distinctifs: >
+  Balises de nœud orange fixées aux structures survivantes — poteaux, pilotis, tours partiellement écroulées — marquant le territoire opérationnel des Nœuds Lagunaires. Techniciens identifiables à leur double jauge de réseau portée au poignet et à la combinaison imperméable couleur rouille. Les documents de transit émis par Lagos Est Nexcore portent un filigrane algorithmique en forme de lagune fragmentée — signe de reconnaissance et de passe entre enclaves.
+
+tensions_narratives: >
+  La consolidation progressive du contrôle de Lagos Est Nexcore sur les nœuds survivants soulève une question centrale : à quel moment la coordinatrice d'urgence devient-elle le seigneur féodal qu'elle prétend remplacer ? Plusieurs enclaves commencent à murmurer contre les tarifs de synchronisation jugés prédateurs, tandis que des factions paramilitaires locales lorgnent sur les nœuds comme sur des forteresses à prendre. En parallèle, la Guilde des Techniciens Nomades — dont Lagos Est Nexcore dépend pour maintenir ses infrastructures — commence à négocier ses propres termes, fragilisant la colonne vertébrale opérationnelle de l'organisation. La question ultime : si une enclave parvenait à construire son propre nœud autonome, le modèle entier s'effondrerait-il par contagion ?
+
+date_creation: 2026-06-27
+---
+
+# Lagos Est Nexcore — Les Nœuds Lagunaires
+
+## Rôle dans [[breakdown]]
+Lagos Est Nexcore est une organisation de coordination économique émergée des ruines des anciennes structures corporatives de l'est lagunaire. Elle gère les flux d'énergie et de données entre les enclaves autonomes de Lagos-Est, agissant comme intermédiaire pragmatique dans un territoire morcelé. Son autorité repose sur le contrôle des nœuds de réseau survivants plutôt que sur une légitimité institutionnelle. Dans le chaos du scenario Breakdown, elle incarne la forme la plus brute de l'ordre résiduel : ni État, ni corporation, ni milice — une entité de fait dont le pouvoir se mesure en mégawatts distribués et en paquets de données acheminés, et dont la légitimité se négocie enclave par enclave, nœud par nœud, dans un territoire où l'alternative à sa présence n'est pas un autre ordre mais l'absence totale d'ordre.
+
+## Responsabilités
+Maintien opérationnel des nœuds énergétiques et des relais de données survivants dans l'est lagunaire de Lagos ; arbitrage pragmatique des accès aux ressources critiques entre enclaves autonomes concurrentes ; perception de droits de transit et de synchronisation en échange de la continuité des flux vitaux.
+
+## Variables influencées
+- [[energie_ressources_critiques]]
+- [[organisation_territoires]]
+- [[gouvernance_institutions]]
+- [[technologie_information]]
+
+## Relations
+**Alliés** : [[guilde_des_techniciens_nomades_breakdown]], [[enclaves_technologiques_survivantes_breakdown]], [[collectifs_de_reparation_energetique_breakdown]], [[ligue_des_cites_littorales_en_sursis_breakdown]]
+**Opposants** : [[seigneuries_logistiques_armees_breakdown]], [[milices_de_controle_territorial_breakdown]], [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]], [[fronts_populistes_anti_technocratiques_breakdown]], [[reseau_logistique_criminel_concurrent_breakdown]]
+
+## Description journalistique
+Depuis le terminal flottant de Badore, les techniciens des Nœuds Lagunaires ne portent pas d'uniforme — ils portent des jauges. Tension de réseau sur le poignet gauche, carte de transit sur le droit. Lagos Est Nexcore n'a jamais été fondée : elle s'est agrégée autour des huit nœuds de distribution énergétique que personne d'autre ne savait faire fonctionner après la désintégration de 2059. Aujourd'hui, neuf enclaves de l'est lagunaire lui versent des droits de synchronisation pour rester connectées — certaines de gré, d'autres parce que couper le nœud équivaudrait à éteindre leurs hôpitaux. Ses délégués se déplacent en pirogue blindée entre Ajah et Ibeju, arbitrant des conflits de bande passante comme d'autres arbitraient jadis des contrats pétroliers. Coordinatrice vitale ou nouveau seigneur des nœuds — la question se pose chaque saison des pluies, quand les crues remontent et que les prix de l'accès montent avec elles.
+
+## Tensions narratives
+La consolidation progressive du contrôle de Lagos Est Nexcore sur les nœuds survivants soulève une question centrale : à quel moment la coordinatrice d'urgence devient-elle le seigneur féodal qu'elle prétend remplacer ? Plusieurs enclaves commencent à murmurer contre les tarifs de synchronisation jugés prédateurs, tandis que des factions paramilitaires locales lorgnent sur les nœuds comme sur des forteresses à prendre. En parallèle, la Guilde des Techniciens Nomades — dont Lagos Est Nexcore dépend pour maintenir ses infrastructures — commence à négocier ses propres termes, fragilisant la colonne vertébrale opérationnelle de l'organisation. La question ultime : si une enclave parvenait à construire son propre nœud autonome, le modèle entier s'effondrerait-il par contagion ?

@@ -1,0 +1,40 @@
+---
+name: Selin Çelik-Marchetti
+type: entity
+slug: selin_celik_marchetti
+category: humain
+description: >
+  Ancienne négociatrice en droit des migrations pour un bloc régional méditerranéen, Selin Çelik-Marchetti a acquis une expertise rare dans l'art de convertir les flux humains non désirés en monnaies d'échange diplomatique. Elle ne représente aucun État fixe mais se loue à des coalitions provisoires comme architecte de compromis migratoires : quotas contre accès aux ressources, corridors humanitaires contre reconnaissance de souveraineté. Elle incarne la figure du courtier en humanité — quelqu'un qui croit sincèrement réduire la souffrance tout en construisant les infrastructures légales de son instrumentalisation.
+tension_fondamentale: >
+  Protéger les personnes en négociant leur statut comme une marchandise : le pragmatisme humanitaire est-il une forme de dignité ou sa négation la plus efficace ?
+variables_potentielles:
+  - demographie_mobilite_humaine
+  - gouvernance_institutions
+  - geopolitique_conflits
+  - valeurs_culture_tempo_sociale
+scenarios_instances:
+  - breakdown
+  - fortress_world
+  - policy_reform
+  - reference
+date_creation: 2026-06-25
+---
+
+# Selin Çelik-Marchetti
+
+## Description archétypale
+Ancienne négociatrice en droit des migrations pour un bloc régional méditerranéen, Selin Çelik-Marchetti a acquis une expertise rare dans l'art de convertir les flux humains non désirés en monnaies d'échange diplomatique. Elle ne représente aucun État fixe mais se loue à des coalitions provisoires comme architecte de compromis migratoires : quotas contre accès aux ressources, corridors humanitaires contre reconnaissance de souveraineté. Elle incarne la figure du courtier en humanité — quelqu'un qui croit sincèrement réduire la souffrance tout en construisant les infrastructures légales de son instrumentalisation.
+
+## Tension fondamentale
+Protéger les personnes en négociant leur statut comme une marchandise : le pragmatisme humanitaire est-il une forme de dignité ou sa négation la plus efficace ?
+
+## Instances par scénario
+| Scénario | Instance | État | Rôle |
+|---|---|---|---|
+| [[breakdown]] | [[selin_celik_marchetti_breakdown]] | | |
+| [[fortress_world]] | [[selin_celik_marchetti_fortress_world]] | | |
+| [[new_sustainability]] | — | — | — |
+| [[eco_communalism]] | — | — | — |
+| [[policy_reform]] | [[selin_celik_marchetti_policy_reform]] | | |
+| [[reference]] | [[selin_celik_marchetti_reference]] | | |
+

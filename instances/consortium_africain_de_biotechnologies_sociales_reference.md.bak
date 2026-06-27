@@ -1,0 +1,100 @@
+---
+name: Consortium Africain de Biotechnologies Sociales (CABS)
+type: instance
+slug: consortium_africain_de_biotechnologies_sociales_reference
+entite: consortium_africain_de_biotechnologies_sociales
+scenario: reference
+
+type_dans_scenario: organisation
+
+role_dans_scenario: >
+  Le CABS opère comme un intermédiaire stratégique entre les grandes institutions financières et régulatrices mondiales et les populations africaines à faibles revenus. Basé à Nairobi, il déploie sur l'ensemble du continent des programmes de biorevenu — mécanismes par lesquels les individus valorisent leurs données biologiques, leurs pratiques agricoles ou leur participation à des essais thérapeutiques en échange de compensations redistributives. Il tient une double ligne de crête : crédible aux yeux des bailleurs institutionnels du Nord global, légitime aux yeux des communautés qu'il prétend servir. Dans un monde de transition fragile, le CABS incarne la promesse réformiste que le système peut être retourné — sans jamais que cette promesse ne soit tout à fait tenue.
+
+responsabilites: >
+  Le CABS pilote des programmes de biorevenu continental, certifie l'accès aux biotechnologies médicales et agricoles pour les populations à faibles revenus, négocie des accords de licence sociale avec des firmes biotech globales, et administre des fonds de redistribution issus de partenariats institutionnels. Il assure également une veille régulatoire auprès des instances de l'Union Continentale Africaine pour défendre des standards éthiques minimaux dans l'exploitation des données biologiques.
+
+impact_local: 4
+impact_systemique_global: 3
+
+variables_influencees:
+    - sante_biotechnologies
+    - systeme_economique_redistribution
+
+zone_geographique:
+    - continentale
+
+zone_systemique:
+    - société
+    - économie
+    - gouvernance
+
+alliances:
+    - regulateurs_de_l_union_continentale_africaine_reference
+    - banque_des_communs_reference
+    - conseil_de_geneve_pour_les_droits_biosociaux_reference
+    - commission_hydrique_de_l_union_africaine_reference
+    - union_africaine_de_resilience_territoriale_reference
+    - institut_polytechnique_de_ouagadougou_reference
+    - collectifs_de_biopiraterie_inversee_reference
+    - reseau_des_cooperatives_agro_saheliennes_reference
+    - federation_des_cliniques_autonomes_reference
+    - reseaux_de_medecine_traditionnelle_augmentee_reference
+    - banque_mondiale_des_transitions_climatiques_reference
+
+oppositions:
+    - nexus_biosyn_reference
+    - consortiums_bancaires_financiarises_reference
+    - gouvernements_a_regime_de_productivite_mandatee_reference
+    - consortiums_d_extraction_miniere_du_bassin_congolais_reference
+    - courant_nationaliste_instrumentalisateur_du_discours_des_racines_reference
+
+type_relation_dominante: alliance stratégique
+
+annee_debut: 2041
+annee_fin: 
+
+etat_temporel: actif
+age_historique: ascendant
+generation: transition
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Depuis ses bureaux en verre dépoli surplombant le quartier biotech de Karen à Nairobi, le Consortium Africain de Biotechnologies Sociales publie chaque trimestre des rapports que les bailleurs de Genève lisent avec attention et que les communautés rurales du Sahel voient affichés, traduits en wolof ou en haoussa, dans les dispensaires locaux. En 2098, le CABS administre des programmes de biorevenu touchant quelque 340 millions de personnes sur le continent — des mécanismes par lesquels un agriculteur du Burkina Faso ou une sage-femme du Delta du Niger peut valoriser ses données sanitaires contre un accès à des thérapies géniques ou des semences bioprophylactiques. Ses défenseurs y voient la preuve que les outils du capital peuvent être retournés contre ses logiques d'exclusion. Ses critiques — dont plusieurs viennent des collectifs de biopiraterie inversée qu'il finance lui-même — murmurent que le biorevenu est peut-être la forme la plus sophistiquée de l'extraction : on prend le corps là où on prenait jadis la terre.
+
+signes_distinctifs: >
+  Logo vert profond sur fond ocre, représentant une double hélice stylisée enracinée dans un sol continental. Les agents de terrain portent des tablettes biométriques certifiées 'CABS Open Ethics' — un label que le Consortium a inventé et dont il contrôle seul les critères. Les communautés partenaires reçoivent des kits estampillés d'un QR-code renvoyant à un portail multilingue de transparence budgétaire, souvent inaccessible faute de connectivité stable.
+
+tensions_narratives: >
+  La tension centrale du CABS tient à la nature même de son instrument : le biorevenu redistribue, mais il collecte d'abord. À mesure que les grands consortiums biotech globaux, dont NexCore et Nexus BioSyn, cherchent à négocier des accords de données directement avec les États africains en contournant le CABS, le Consortium se retrouve en position défensive — défendant à la fois sa part de marché institutionnel et sa crédibilité communautaire. Une deuxième ligne de fracture s'ouvre en interne : plusieurs responsables régionaux du CABS, issus des mouvements de biopiraterie inversée, plaident pour une rupture avec les certifications des bailleurs du Nord, au risque d'assécher les financements qui font tenir le système. Enfin, des gouvernements du bloc sahélien autonome commencent à percevoir le CABS comme un acteur para-souverain empiétant sur leurs prérogatives sanitaires — ce qui pourrait à terme faire basculer l'organisation du côté des entités sous surveillance politique.
+
+date_creation: 2026-06-25
+---
+
+# Consortium Africain de Biotechnologies Sociales (CABS)
+
+## Rôle dans [[reference]]
+Le CABS opère comme un intermédiaire stratégique entre les grandes institutions financières et régulatrices mondiales et les populations africaines à faibles revenus. Basé à Nairobi, il déploie sur l'ensemble du continent des programmes de biorevenu — mécanismes par lesquels les individus valorisent leurs données biologiques, leurs pratiques agricoles ou leur participation à des essais thérapeutiques en échange de compensations redistributives. Il tient une double ligne de crête : crédible aux yeux des bailleurs institutionnels du Nord global, légitime aux yeux des communautés qu'il prétend servir. Dans un monde de transition fragile, le CABS incarne la promesse réformiste que le système peut être retourné — sans jamais que cette promesse ne soit tout à fait tenue.
+
+## Responsabilités
+Le CABS pilote des programmes de biorevenu continental, certifie l'accès aux biotechnologies médicales et agricoles pour les populations à faibles revenus, négocie des accords de licence sociale avec des firmes biotech globales, et administre des fonds de redistribution issus de partenariats institutionnels. Il assure également une veille régulatoire auprès des instances de l'Union Continentale Africaine pour défendre des standards éthiques minimaux dans l'exploitation des données biologiques.
+
+## Variables influencées
+- [[sante_biotechnologies]]
+- [[systeme_economique_redistribution]]
+
+## Relations
+**Alliés** : [[regulateurs_de_l_union_continentale_africaine_reference]], [[banque_des_communs_reference]], [[conseil_de_geneve_pour_les_droits_biosociaux_reference]], [[commission_hydrique_de_l_union_africaine_reference]], [[union_africaine_de_resilience_territoriale_reference]], [[institut_polytechnique_de_ouagadougou_reference]], [[collectifs_de_biopiraterie_inversee_reference]], [[reseau_des_cooperatives_agro_saheliennes_reference]], [[federation_des_cliniques_autonomes_reference]], [[reseaux_de_medecine_traditionnelle_augmentee_reference]], [[banque_mondiale_des_transitions_climatiques_reference]]
+**Opposants** : [[nexus_biosyn_reference]], [[consortiums_bancaires_financiarises_reference]], [[gouvernements_a_regime_de_productivite_mandatee_reference]], [[consortiums_d_extraction_miniere_du_bassin_congolais_reference]], [[courant_nationaliste_instrumentalisateur_du_discours_des_racines_reference]]
+
+## Description journalistique
+Depuis ses bureaux en verre dépoli surplombant le quartier biotech de Karen à Nairobi, le Consortium Africain de Biotechnologies Sociales publie chaque trimestre des rapports que les bailleurs de Genève lisent avec attention et que les communautés rurales du Sahel voient affichés, traduits en wolof ou en haoussa, dans les dispensaires locaux. En 2098, le CABS administre des programmes de biorevenu touchant quelque 340 millions de personnes sur le continent — des mécanismes par lesquels un agriculteur du Burkina Faso ou une sage-femme du Delta du Niger peut valoriser ses données sanitaires contre un accès à des thérapies géniques ou des semences bioprophylactiques. Ses défenseurs y voient la preuve que les outils du capital peuvent être retournés contre ses logiques d'exclusion. Ses critiques — dont plusieurs viennent des collectifs de biopiraterie inversée qu'il finance lui-même — murmurent que le biorevenu est peut-être la forme la plus sophistiquée de l'extraction : on prend le corps là où on prenait jadis la terre.
+
+## Tensions narratives
+La tension centrale du CABS tient à la nature même de son instrument : le biorevenu redistribue, mais il collecte d'abord. À mesure que les grands consortiums biotech globaux, dont NexCore et Nexus BioSyn, cherchent à négocier des accords de données directement avec les États africains en contournant le CABS, le Consortium se retrouve en position défensive — défendant à la fois sa part de marché institutionnel et sa crédibilité communautaire. Une deuxième ligne de fracture s'ouvre en interne : plusieurs responsables régionaux du CABS, issus des mouvements de biopiraterie inversée, plaident pour une rupture avec les certifications des bailleurs du Nord, au risque d'assécher les financements qui font tenir le système. Enfin, des gouvernements du bloc sahélien autonome commencent à percevoir le CABS comme un acteur para-souverain empiétant sur leurs prérogatives sanitaires — ce qui pourrait à terme faire basculer l'organisation du côté des entités sous surveillance politique.

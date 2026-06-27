@@ -1,0 +1,75 @@
+---
+name: Les Éclats d'Agadez — Ce qui reste du Forum
+type: event_instance
+slug: grand_forum_sahel_numerique_breakdown
+archetype: grand_forum_sahel_numerique
+scenario: breakdown
+localisation:
+  zone: agadez_ligue_sahel_numerique
+  lieu: Agadez, Palais des Conférences
+  type_lieu: ville
+type_evenement: political_social
+portee: continentale
+date: 2061
+date_label: automne 2061
+impossible: false
+custom: true
+description: >
+  Agadez, novembre 2061. Dans la grande salle du Palais des Conférences à demi-ruiné, 61 délégués signent ce qu'ils appellent la Charte d'Agadez — mais dehors, trois autres groupes tiennent des assemblées parallèles et rejettent le texte comme illégitime. La Diaspora Tech Sahel, connectée via des relais mesh instables depuis Dakar et Lagos, transmet en direct des contre-délibérations. Le Réseau des Courriers Nomades Sahélo-Méditerranéens, seul à avoir acheminé la moitié des délégués, exige en échange un droit de regard sur la gouvernance des nœuds. Ce qui aurait pu être un moment fondateur ressemble davantage à la mise en scène d'une unité qui n'existe plus.
+consequences: >
+  La Charte d'Agadez devient un artefact politique disputé : chaque fragment du Sahel numérique en revendique l'interprétation légitime, transformant un document de coopération en vecteur de fragmentation supplémentaire. À long terme, l'événement accélère la balkanisation des infrastructures hors-grille sahéliennes — chaque nœud développe ses propres protocoles incompatibles — tout en offrant paradoxalement un référentiel symbolique que certains collectifs utilisent comme point de ralliement minimum pour négocier des accords locaux ponctuels.
+realisation: >
+  Ce qui devait être le premier Forum Mondial des Infrastructures Hors-Grille se tient bien à Agadez en automne 2061, mais dans un contexte radicalement dégradé. La Ligue des Cités du Sahel Numérique n'est plus qu'une constellation d'îlots déconnectés — certains fragments refusent de reconnaître la légitimité des autres pour parler en leur nom. Sur les 200 délégations annoncées, 61 seulement parviennent physiquement à Agadez, les autres étant bloquées par des corridors logistiques fracturés, des milices de transit ou des épidémies régionales. La Charte d'Agadez sur la souveraineté numérique des périphéries est adoptée dans une salle à moitié vide, par des représentants dont la légitimité territoriale est contestée dès le lendemain. Trois versions concurrentes de la Charte circulent simultanément sur les réseaux mesh, chacune revendiquée par un fragment différent.
+impact_sur_variables:
+  - variable: technologie_information
+    delta_level: 4
+    duree: 12
+    polarite: 1
+  - variable: gouvernance_institutions
+    delta_level: -8
+    duree: 20
+    polarite: -1
+  - variable: organisation_territoires
+    delta_level: -6
+    duree: 18
+    polarite: -1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+    - ligue_des_cites_du_sahel_numerique_breakdown
+    - diaspora_tech_sahel_breakdown
+    - reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown
+    - collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
+    - factions_secessionnistes_agrariennes_du_desert_breakdown
+    - fronts_populistes_anti_technocratiques_breakdown
+note_coherence: Dans un scénario de fragmentation à tension 5/5, un forum de coopération continentale ne peut que se réaliser comme parodie d'unité — suffisamment crédible pour exister, suffisamment fracturé pour approfondir les divisions qu'il prétendait résoudre.
+custom_source: rééquilibrage_geo_2026-06
+date_creation: 2026-06-24
+---
+
+# Les Éclats d'Agadez — Ce qui reste du Forum
+
+## Réalisation dans [[breakdown]]
+Ce qui devait être le premier Forum Mondial des Infrastructures Hors-Grille se tient bien à Agadez en automne 2061, mais dans un contexte radicalement dégradé. La Ligue des Cités du Sahel Numérique n'est plus qu'une constellation d'îlots déconnectés — certains fragments refusent de reconnaître la légitimité des autres pour parler en leur nom. Sur les 200 délégations annoncées, 61 seulement parviennent physiquement à Agadez, les autres étant bloquées par des corridors logistiques fracturés, des milices de transit ou des épidémies régionales. La Charte d'Agadez sur la souveraineté numérique des périphéries est adoptée dans une salle à moitié vide, par des représentants dont la légitimité territoriale est contestée dès le lendemain. Trois versions concurrentes de la Charte circulent simultanément sur les réseaux mesh, chacune revendiquée par un fragment différent.
+
+## Description journalistique
+Agadez, novembre 2061. Dans la grande salle du Palais des Conférences à demi-ruiné, 61 délégués signent ce qu'ils appellent la Charte d'Agadez — mais dehors, trois autres groupes tiennent des assemblées parallèles et rejettent le texte comme illégitime. La Diaspora Tech Sahel, connectée via des relais mesh instables depuis Dakar et Lagos, transmet en direct des contre-délibérations. Le Réseau des Courriers Nomades Sahélo-Méditerranéens, seul à avoir acheminé la moitié des délégués, exige en échange un droit de regard sur la gouvernance des nœuds. Ce qui aurait pu être un moment fondateur ressemble davantage à la mise en scène d'une unité qui n'existe plus.
+
+## Conséquences
+La Charte d'Agadez devient un artefact politique disputé : chaque fragment du Sahel numérique en revendique l'interprétation légitime, transformant un document de coopération en vecteur de fragmentation supplémentaire. À long terme, l'événement accélère la balkanisation des infrastructures hors-grille sahéliennes — chaque nœud développe ses propres protocoles incompatibles — tout en offrant paradoxalement un référentiel symbolique que certains collectifs utilisent comme point de ralliement minimum pour négocier des accords locaux ponctuels.
+
+## Impact sur les variables
+- **technologie_information** : delta +4 sur 12 ans
+- **gouvernance_institutions** : delta +8 sur 20 ans
+- **organisation_territoires** : delta +6 sur 18 ans
+
+## Acteurs impliqués
+- [[ligue_des_cites_du_sahel_numerique_breakdown]]
+- [[diaspora_tech_sahel_breakdown]]
+- [[reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown]]
+- [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]]
+- [[factions_secessionnistes_agrariennes_du_desert_breakdown]]
+- [[fronts_populistes_anti_technocratiques_breakdown]]
+
+## Note de cohérence
+Dans un scénario de fragmentation à tension 5/5, un forum de coopération continentale ne peut que se réaliser comme parodie d'unité — suffisamment crédible pour exister, suffisamment fracturé pour approfondir les divisions qu'il prétendait résoudre.

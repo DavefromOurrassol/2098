@@ -1,0 +1,90 @@
+---
+name: Réseau des Assemblées Bioterritioriales
+type: instance
+slug: assemblee_territoires_eco_communalism
+entite: assemblee_territoires
+scenario: eco_communalism
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
+type_dans_scenario: réseau
+role_dans_scenario: >
+  Réseau horizontal d'assemblées locales coordonnant les communs globaux
+  sans autorité centrale. Se réunit deux fois par an en session plénière
+  itinérante, hébergée à chaque fois par un bioterritoire différent.
+  Pas de vote contraignant — décisions par consensus ou non-objection.
+responsabilites: >
+  Coordination des communs globaux — eau, semences, fréquences mesh.
+  Partage des innovations de résilience entre bioterritoires.
+  Médiation des conflits inter-communautaires. Archivage des pratiques.
+impact_local: 3
+impact_systemique_global: 2
+variables_influencees:
+  - organisation_territoires
+  - gouvernance_institutions
+  - valeurs_culture_tempo_sociale
+zone_geographique:
+  - globale
+zone_systemique:
+  - gouvernance
+  - société
+alliances:
+  - coalition_vivant_eco_communalism
+  - le_temoin_eco_communalism
+oppositions: []
+type_relation_dominante: coopération
+annee_debut: 2052
+annee_fin:
+etat_temporel: actif
+age_historique: ascendant
+generation: reconstruction
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+description_journalistique: >
+  La prochaine session plénière du Réseau se tient au Chiapas en octobre.
+  340 délégués de 89 bioterritoires sur 6 continents. Il n'y a pas
+  de président, pas de siège permanent, pas de budget centralisé.
+  Les décisions prennent du temps — parfois des années. Les participants
+  disent que c'est intentionnel. "Nous prenons des décisions à la vitesse
+  des arbres", explique une déléguée de Polynésie.
+signes_distinctifs: >
+  Session itinérante — chaque réunion dans un territoire différent.
+  Cercles de délibération sans estrade ni tribune. Décisions affichées
+  sur des panneaux physiques avant d'être numérisées.
+tensions_narratives: >
+  Tension entre communautés qui veulent plus de coordination globale
+  et celles qui refusent tout mécanisme supralocal. Question non résolue —
+  peut-on gérer le climat sans autorité centrale ?
+date_creation: 2098-01-01
+---
+
+# Réseau des Assemblées Bioterritioriales
+
+## Rôle dans [[eco_communalism]]
+Réseau horizontal d'assemblées locales coordonnant les communs globaux
+sans autorité centrale. Session itinérante deux fois par an.
+
+## Variables influencées
+- [[organisation_territoires]]
+- [[gouvernance_institutions]]
+- [[valeurs_culture_tempo_sociale]]
+
+## Relations
+**Alliés** : [[coalition_vivant_eco_communalism]], [[le_temoin_eco_communalism]]
+**Opposants** : _aucun défini_
+
+## Description journalistique
+La prochaine session plénière se tient au Chiapas. 340 délégués, pas de
+président, pas de siège permanent. "Nous prenons des décisions à la vitesse
+des arbres."
+
+## Tensions narratives
+Tension entre communautés voulant plus de coordination et celles refusant
+tout mécanisme supralocal. Peut-on gérer le climat sans autorité centrale ?

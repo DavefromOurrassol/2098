@@ -1,0 +1,76 @@
+---
+name: La Déflagration du Croissant — Embrasement sans arbitre
+type: event_instance
+slug: conflit_israel_iran_2026_breakdown
+archetype: conflit_israel_iran_2026
+scenario: breakdown
+localisation:
+  zone: zone_golfe_levant
+  lieu: Zone Golfe Persique–Levant (Ispahan, Fordow, Kharg, Haïfa, détroit d'Ormuz)
+  type_lieu: region
+type_evenement: political_social
+portee: globale
+date: 2027
+date_label: automne 2027
+impossible: false
+custom: true
+description: >
+  Automne 2027 : les caméras de surveillance satellitaire captent les champignons de fumée noire s'élevant des cuves de Kharg avant même que les chancelleries n'aient eu le temps de se réunir. Il n'y a plus de Conseil de sécurité fonctionnel pour voter un cessez-le-feu, plus d'hotline Washington-Téhéran qui tienne. Les marchés pétroliers — déjà sous tension depuis la fragmentation des accords OPEP+ — s'effondrent en quelques heures dans un sens, puis explosent à la hausse dans l'autre. Sur les réseaux mesh qui survivent à la coupure, Le Signal diffuse des images de colonnes de réfugiés quittant Bassorah : c'est le début d'un exode qui ne s'arrêtera pas.
+consequences: >
+  La destruction partielle des infrastructures pétrolières du Golfe accélère l'effondrement des systèmes d'approvisionnement énergétique mondiaux déjà à genoux, rendant caducs les derniers mécanismes de régulation internationale des ressources. Les flux migratoires du Moyen-Orient et du Golfe se déversent en vagues incontrôlées vers l'arc eurasien, saturant des corridors déjà sous la coupe de seigneurs de guerre logistiques. La zone Golfe Persique–Levant devient une zone grise permanente où aucun acteur souverain n'exerce de contrôle stable, servant de modèle fractal à d'autres régions en voie de désintégration.
+realisation: >
+  En septembre 2027, Israël lance une série de frappes massives sur les installations nucléaires d'Ispahan et de Fordow, ainsi que sur les terminaux pétroliers de Kharg. L'Iran riposte par des salves de missiles balistiques sur Haïfa et les champs gaziers offshore. Sans OTAN cohérente et avec une diplomatie américaine paralysée par la crise intérieure, aucune puissance ne peut ni ne veut jouer le rôle d'arbitre. L'Arabie saoudite ferme le détroit d'Ormuz à titre 'préventif', précipitant une panique énergétique mondiale. Le conflit ne se résout pas — il se cristallise en état de guerre permanente de basse à moyenne intensité, redessinant les flux d'hydrocarbures pour les décennies suivantes.
+impact_sur_variables:
+  - variable: geopolitique_conflits
+    delta_level: 4
+    duree: 25
+    polarite: -1
+  - variable: energie_ressources_critiques
+    delta_level: -8
+    duree: 30
+    polarite: -1
+  - variable: gouvernance_institutions
+    delta_level: -5
+    duree: 20
+    polarite: -1
+  - variable: demographie_mobilite_humaine
+    delta_level: -7
+    duree: 25
+    polarite: -1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+    - vasil_orentchev_breakdown
+    - conseil_regulation_ressources_breakdown
+    - le_temoin_breakdown
+    - alliance_blocs_souverains_breakdown
+note_coherence: Dans un monde déjà fracturé sans arbitre global, ce conflit ne déclenche pas une Troisième Guerre Mondiale mais accélère la désintégration des derniers mécanismes de régulation énergétique et migratoire, cohérent avec les levels extrêmes des variables et la trajectoire de fragmentation du scénario Breakdown.
+custom_source: actualite_2026-06
+date_creation: 2026-06-17
+---
+
+# La Déflagration du Croissant — Embrasement sans arbitre
+
+## Réalisation dans [[breakdown]]
+En septembre 2027, Israël lance une série de frappes massives sur les installations nucléaires d'Ispahan et de Fordow, ainsi que sur les terminaux pétroliers de Kharg. L'Iran riposte par des salves de missiles balistiques sur Haïfa et les champs gaziers offshore. Sans OTAN cohérente et avec une diplomatie américaine paralysée par la crise intérieure, aucune puissance ne peut ni ne veut jouer le rôle d'arbitre. L'Arabie saoudite ferme le détroit d'Ormuz à titre 'préventif', précipitant une panique énergétique mondiale. Le conflit ne se résout pas — il se cristallise en état de guerre permanente de basse à moyenne intensité, redessinant les flux d'hydrocarbures pour les décennies suivantes.
+
+## Description journalistique
+Automne 2027 : les caméras de surveillance satellitaire captent les champignons de fumée noire s'élevant des cuves de Kharg avant même que les chancelleries n'aient eu le temps de se réunir. Il n'y a plus de Conseil de sécurité fonctionnel pour voter un cessez-le-feu, plus d'hotline Washington-Téhéran qui tienne. Les marchés pétroliers — déjà sous tension depuis la fragmentation des accords OPEP+ — s'effondrent en quelques heures dans un sens, puis explosent à la hausse dans l'autre. Sur les réseaux mesh qui survivent à la coupure, Le Signal diffuse des images de colonnes de réfugiés quittant Bassorah : c'est le début d'un exode qui ne s'arrêtera pas.
+
+## Conséquences
+La destruction partielle des infrastructures pétrolières du Golfe accélère l'effondrement des systèmes d'approvisionnement énergétique mondiaux déjà à genoux, rendant caducs les derniers mécanismes de régulation internationale des ressources. Les flux migratoires du Moyen-Orient et du Golfe se déversent en vagues incontrôlées vers l'arc eurasien, saturant des corridors déjà sous la coupe de seigneurs de guerre logistiques. La zone Golfe Persique–Levant devient une zone grise permanente où aucun acteur souverain n'exerce de contrôle stable, servant de modèle fractal à d'autres régions en voie de désintégration.
+
+## Impact sur les variables
+- **geopolitique_conflits** : delta -4 sur 25 ans
+- **energie_ressources_critiques** : delta +8 sur 30 ans
+- **gouvernance_institutions** : delta +5 sur 20 ans
+- **demographie_mobilite_humaine** : delta +7 sur 25 ans
+
+## Acteurs impliqués
+- [[vasil_orentchev_breakdown]]
+- [[conseil_regulation_ressources_breakdown]]
+- [[le_temoin_breakdown]]
+- [[alliance_blocs_souverains_breakdown]]
+
+## Note de cohérence
+Dans un monde déjà fracturé sans arbitre global, ce conflit ne déclenche pas une Troisième Guerre Mondiale mais accélère la désintégration des derniers mécanismes de régulation énergétique et migratoire, cohérent avec les levels extrêmes des variables et la trajectoire de fragmentation du scénario Breakdown.

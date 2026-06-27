@@ -1,0 +1,83 @@
+---
+name: La Révolte des Zones Négatives — São Paulo 2073
+type: event_instance
+slug: emeutes_algorithme_sao_paulo_reference
+archetype: emeutes_algorithme_sao_paulo
+scenario: reference
+localisation:
+  zone: sao_paulo_spaar
+  lieu: São Paulo — Périphéries et SPAAR
+  type_lieu: infrastructure
+type_evenement: political_social
+portee: regionale
+date: 2073
+date_label: automne 2073
+impossible: false
+custom: true
+description: >
+  Le 14 octobre 2073, les écrans des favelas numériques de Paraisópolis et Cidade Tiradentes s'allument simultanément pour diffuser les entrailles du SPAAR : coefficients de rentabilité par habitant, seuils d'exclusion automatique, identifiants des zones sacrifiées. Ce que les algorithmes avaient invisibilisé pendant des années devient soudainement lisible — et insupportable. Des dizaines de milliers de résidents descendent dans les rues, armés de données, construisant en temps réel une cartographie alternative de l'allocation des ressources. La Ligue des Métropoles du Sud et Prisme Global amplifient le signal : en 72 heures, 'Zona Negativa' devient le symbole planétaire de la gouvernance algorithmique opaque.
+consequences: >
+  L'audit partiel imposé par la négociation crée un précédent institutionnel fragile mais réel : plusieurs villes du Sud global adoptent des chartes de transparence algorithmique inspirées du modèle pauliste. Le mouvement ne renverse pas les systèmes d'allocation — dans l'équilibre fragile du scénario, les pressions économiques maintiennent l'essentiel de la logique du SPAAR — mais il impose un régime d'auditabilité partielle qui rogne durablement la légitimité des plateformes d'optimisation territoriale par IA et alimente une génération de militants techno-critiques du Sud global.
+realisation: >
+  En octobre 2073, une mise à jour du Sistema Paulista de Alocação Algorítmica de Recursos coupe eau et électricité dans 12 zones périphériques classifiées 'rendement négatif'. Les communautés des favelas numériques, équipées de capteurs citoyens et de nœuds mesh décentralisés, organisent une contre-cartographie collaborative qui expose les paramètres cachés du SPAAR — notamment les coefficients de 'productivité contributive' pondérant l'accès aux ressources. La publication virale des paramètres déclenche trois semaines d'occupations d'infrastructures, de grèves et de blocages logistiques. Dans un scénario de fragile équilibre institutionnel, l'État fédéral brésilien négocie à contrecœur un audit partiel plutôt que de risquer l'embrasement d'une métropole de 28 millions d'habitants.
+impact_sur_variables:
+  - variable: gouvernance_institutions
+    delta_level: -8
+    duree: 15
+    polarite: -1
+  - variable: technologie_information
+    delta_level: 6
+    duree: 20
+    polarite: 1
+  - variable: organisation_territoires
+    delta_level: 7
+    duree: 18
+    polarite: 1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+    - rede_paulista_de_distribuic_o_algor_tmica_reference
+    - ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference
+    - reseau_meshcommons_netsolidaire_reference
+    - reseaux_de_capteurs_citoyens_reference
+    - prisme_global_reference
+    - plateformes_d_optimisation_territoriale_par_ia_reference
+    - conseil_regulation_algorithmique_reference
+    - frente_sert_o_livre_reference
+    - collectifs_de_journalisme_embarque_reference
+    - bureau_des_territoires_residuels_reference
+note_coherence: Dans un monde à équilibre fragile dominé par la technologie et les ajustements institutionnels continus, la révélation des paramètres cachés d'un système d'allocation algorithmique est à la fois plausible (les outils citoyens existent), perturbatrice (elle fragilise la légitimité de la gouvernance hybride) et incomplète dans ses effets (le système n'est pas aboli mais contraint), ce qui correspond exactement à la trajectoire de transition progressive du scénario référence.
+custom_source: rééquilibrage_geo_2026-06
+date_creation: 2026-06-24
+---
+
+# La Révolte des Zones Négatives — São Paulo 2073
+
+## Réalisation dans [[reference]]
+En octobre 2073, une mise à jour du Sistema Paulista de Alocação Algorítmica de Recursos coupe eau et électricité dans 12 zones périphériques classifiées 'rendement négatif'. Les communautés des favelas numériques, équipées de capteurs citoyens et de nœuds mesh décentralisés, organisent une contre-cartographie collaborative qui expose les paramètres cachés du SPAAR — notamment les coefficients de 'productivité contributive' pondérant l'accès aux ressources. La publication virale des paramètres déclenche trois semaines d'occupations d'infrastructures, de grèves et de blocages logistiques. Dans un scénario de fragile équilibre institutionnel, l'État fédéral brésilien négocie à contrecœur un audit partiel plutôt que de risquer l'embrasement d'une métropole de 28 millions d'habitants.
+
+## Description journalistique
+Le 14 octobre 2073, les écrans des favelas numériques de Paraisópolis et Cidade Tiradentes s'allument simultanément pour diffuser les entrailles du SPAAR : coefficients de rentabilité par habitant, seuils d'exclusion automatique, identifiants des zones sacrifiées. Ce que les algorithmes avaient invisibilisé pendant des années devient soudainement lisible — et insupportable. Des dizaines de milliers de résidents descendent dans les rues, armés de données, construisant en temps réel une cartographie alternative de l'allocation des ressources. La Ligue des Métropoles du Sud et Prisme Global amplifient le signal : en 72 heures, 'Zona Negativa' devient le symbole planétaire de la gouvernance algorithmique opaque.
+
+## Conséquences
+L'audit partiel imposé par la négociation crée un précédent institutionnel fragile mais réel : plusieurs villes du Sud global adoptent des chartes de transparence algorithmique inspirées du modèle pauliste. Le mouvement ne renverse pas les systèmes d'allocation — dans l'équilibre fragile du scénario, les pressions économiques maintiennent l'essentiel de la logique du SPAAR — mais il impose un régime d'auditabilité partielle qui rogne durablement la légitimité des plateformes d'optimisation territoriale par IA et alimente une génération de militants techno-critiques du Sud global.
+
+## Impact sur les variables
+- **gouvernance_institutions** : delta +8 sur 15 ans
+- **technologie_information** : delta +6 sur 20 ans
+- **organisation_territoires** : delta +7 sur 18 ans
+
+## Acteurs impliqués
+- [[rede_paulista_de_distribuic_o_algor_tmica_reference]]
+- [[ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference]]
+- [[reseau_meshcommons_netsolidaire_reference]]
+- [[reseaux_de_capteurs_citoyens_reference]]
+- [[prisme_global_reference]]
+- [[plateformes_d_optimisation_territoriale_par_ia_reference]]
+- [[conseil_regulation_algorithmique_reference]]
+- [[frente_sert_o_livre_reference]]
+- [[collectifs_de_journalisme_embarque_reference]]
+- [[bureau_des_territoires_residuels_reference]]
+
+## Note de cohérence
+Dans un monde à équilibre fragile dominé par la technologie et les ajustements institutionnels continus, la révélation des paramètres cachés d'un système d'allocation algorithmique est à la fois plausible (les outils citoyens existent), perturbatrice (elle fragilise la légitimité de la gouvernance hybride) et incomplète dans ses effets (le système n'est pas aboli mais contraint), ce qui correspond exactement à la trajectoire de transition progressive du scénario référence.

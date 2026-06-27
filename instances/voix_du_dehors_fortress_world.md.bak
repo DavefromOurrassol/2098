@@ -1,0 +1,95 @@
+---
+name: Fractures
+type: instance
+slug: voix_du_dehors_fortress_world
+entite: voix_du_dehors
+scenario: fortress_world
+
+type_dans_scenario: réseau
+
+role_dans_scenario: >
+  Fractures est ce qu'il reste de la presse internationale indépendante dans un monde où chaque bloc géopolitique a bâti sa propre vérité officielle. Opérant en rhizome — sans siège, sans serveur central, sans visage public — le réseau agrège des correspondants clandestins disséminés dans les zones de friction entre blocs. Son rôle systémique est double et contradictoire : il maintient un fil d'information transfrontalier là où toute porosité est criminalisée, mais sa survie dépend de financements opaques qui en font, aux yeux de ses propres membres, une arme potentielle autant qu'un idéal. Dans fortress_world, Fractures est moins un média qu'une cicatrice dans le tissu informationnel mondial.
+
+responsabilites: >
+  Publication de dossiers d'investigation sur les flux de ressources critiques dissimulés entre blocs officiellement ennemis, sur les violences aux frontières et sur les architectures de surveillance intérieure. Maintien d'un protocole de transmission physique — courriers humains, supports chiffrés sur matériel mort — pour contourner les écosystèmes numériques souverains. Vérification croisée des sources dans au moins trois blocs géopolitiques distincts avant toute diffusion.
+
+impact_local: 2
+impact_systemique_global: 4
+variables_influencees:
+    - technologie_information
+    - gouvernance_institutions
+    - geopolitique_conflits
+    - organisation_territoires
+
+zone_geographique:
+    - globale
+    - régionale
+
+zone_systemique:
+    - information
+    - gouvernance
+    - sécurité
+    - cyberspace
+
+alliances:
+    - reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world
+    - cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
+    - archives_chiffrees_de_l_open_internet_coalition_fortress_world
+
+oppositions:
+    - dispositifs_de_surveillance_numerique_souveraine_fortress_world
+    - consortium_des_medias_d_etat_souverains_hegemonia_press_xinhua_fortifiee_eurovox_integral_fortress_world
+    - services_de_contre_information_des_blocs_geopolitiques_concurrents_reference
+
+type_relation_dominante: infiltration
+
+annee_debut: 2041
+annee_fin: 
+
+etat_temporel: clandestin
+age_historique: résiduel
+generation: forteresse
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  On ne trouve pas Fractures — on est trouvé par Fractures. Dans les couloirs des zones franches de Tbilissi-Nord ou sous les néons des marchés gris de Casablanca-Périphérie, des mains passent des clés USB encapsulées dans de la résine biosourcée, marquées d'une ligne brisée gravée au laser. Les dossiers qu'elles contiennent ont fait tomber deux gouverneurs de bloc en dix ans, révélé les échanges secrets d'uranium enrichi entre ennemis déclarés, et coûté la vie à au moins dix-sept correspondants confirmés. Fractures publie en rafales irrégulières, sur des miroirs éphémères que les filtres souverains mettent moins de six heures à détruire — mais ces six heures suffisent. Ce que ses ennemis ne lui pardonnent pas, c'est moins ce qu'il révèle que ce qu'il prouve : que la frontière existe encore, et qu'elle est poreuse.
+
+signes_distinctifs: >
+  Logo absent — seul signe d'authentification : une ligne brisée en deux segments inégaux, encodée en stéganographie dans l'image de couverture de chaque publication. Typographie volontairement hétérogène, jamais uniforme, pour signaler l'origine multi-source et résister à l'empreinte stylistique traçable. Les documents originaux sont toujours publiés en parallèle des analyses, bruts et non édités.
+
+tensions_narratives: >
+  La question qui fracture Fractures de l'intérieur : depuis 2089, des preuves circulent qu'un des trois nœuds de financement anonyme du réseau serait une opération d'influence d'un bloc concurrent — ce qui ferait de certaines révélations des armes déguisées en vérités. Certains correspondants ont commencé à publier en dehors des protocoles officiels du réseau, créant des branches sauvages incontrôlables. Et pour la première fois, un État-bloc propose une amnistie et une légalisation partielle en échange d'une intégration surveillée — offre que deux membres fondateurs encore actifs envisagent sérieusement d'accepter.
+
+date_creation: 2026-06-15
+---
+
+# Fractures
+
+## Rôle dans [[fortress_world]]
+Fractures est ce qu'il reste de la presse internationale indépendante dans un monde où chaque bloc géopolitique a bâti sa propre vérité officielle. Opérant en rhizome — sans siège, sans serveur central, sans visage public — le réseau agrège des correspondants clandestins disséminés dans les zones de friction entre blocs. Son rôle systémique est double et contradictoire : il maintient un fil d'information transfrontalier là où toute porosité est criminalisée, mais sa survie dépend de financements opaques qui en font, aux yeux de ses propres membres, une arme potentielle autant qu'un idéal. Dans fortress_world, Fractures est moins un média qu'une cicatrice dans le tissu informationnel mondial.
+
+## Responsabilités
+Publication de dossiers d'investigation sur les flux de ressources critiques dissimulés entre blocs officiellement ennemis, sur les violences aux frontières et sur les architectures de surveillance intérieure. Maintien d'un protocole de transmission physique — courriers humains, supports chiffrés sur matériel mort — pour contourner les écosystèmes numériques souverains. Vérification croisée des sources dans au moins trois blocs géopolitiques distincts avant toute diffusion.
+
+## Variables influencées
+- [[technologie_information]]
+- [[gouvernance_institutions]]
+- [[geopolitique_conflits]]
+- [[organisation_territoires]]
+
+## Relations
+**Alliés** : [[reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world]], [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]], [[archives_chiffrees_de_l_open_internet_coalition_fortress_world]]
+**Opposants** : [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]], [[consortium_des_medias_d_etat_souverains_hegemonia_press_xinhua_fortifiee_eurovox_integral_fortress_world]], [[services_de_contre_information_des_blocs_geopolitiques_concurrents_reference]]
+
+## Description journalistique
+On ne trouve pas Fractures — on est trouvé par Fractures. Dans les couloirs des zones franches de Tbilissi-Nord ou sous les néons des marchés gris de Casablanca-Périphérie, des mains passent des clés USB encapsulées dans de la résine biosourcée, marquées d'une ligne brisée gravée au laser. Les dossiers qu'elles contiennent ont fait tomber deux gouverneurs de bloc en dix ans, révélé les échanges secrets d'uranium enrichi entre ennemis déclarés, et coûté la vie à au moins dix-sept correspondants confirmés. Fractures publie en rafales irrégulières, sur des miroirs éphémères que les filtres souverains mettent moins de six heures à détruire — mais ces six heures suffisent. Ce que ses ennemis ne lui pardonnent pas, c'est moins ce qu'il révèle que ce qu'il prouve : que la frontière existe encore, et qu'elle est poreuse.
+
+## Tensions narratives
+La question qui fracture Fractures de l'intérieur : depuis 2089, des preuves circulent qu'un des trois nœuds de financement anonyme du réseau serait une opération d'influence d'un bloc concurrent — ce qui ferait de certaines révélations des armes déguisées en vérités. Certains correspondants ont commencé à publier en dehors des protocoles officiels du réseau, créant des branches sauvages incontrôlables. Et pour la première fois, un État-bloc propose une amnistie et une légalisation partielle en échange d'une intégration surveillée — offre que deux membres fondateurs encore actifs envisagent sérieusement d'accepter.

@@ -1,0 +1,77 @@
+---
+name: L'Incident du Passage Nord-Ouest — Saisie du Convoi APA
+type: event_instance
+slug: incident_passage_arctique_reference
+archetype: incident_passage_arctique
+scenario: reference
+type_evenement: political_social
+portee: continentale
+date: 2059
+date_label: été 2059
+impossible: false
+custom: true
+description: >
+  Les eaux grises du Passage Nord-Ouest, déglaciées depuis deux décennies, sont devenues la scène d'une confrontation que beaucoup annonçaient inévitable. Des patrouilleurs de l'Armada Logistique Nordique ont ouvert le feu de sommation sur le convoi de l'APA le 14 août 2059, avant de procéder à un abordage armé — une première depuis la création des deux autorités concurrentes. Les images transmises par les collectifs de journalisme embarqué à bord montrent des hommes en combinaisons grises sans insigne d'État clair, soulignant l'ambiguïté juridique fondamentale de ces forces para-étatiques. À Nuuk, le gouvernement groenlandais qualifie l'incident de 'piraterie institutionnalisée' et active ses recours juridiques internationaux.
+consequences: >
+  L'incident cristallise la fracture de gouvernance arctique en forçant les blocs signataires du Pacte Énergétique Multilatéral à prendre position sur le statut juridique des opérateurs para-étatiques dans les corridors maritimes. À moyen terme, la procédure devant le Tribunal International de la Mer pourrait aboutir à un précédent normatif redéfinissant les droits de transit arctiques — mais risque également de s'enliser dans une impasse institutionnelle si l'ALN refuse sa juridiction, renforçant la logique de milices concurrentes des droits de passage dans l'ensemble de la région.
+realisation: >
+  En août 2059, l'Armada Logistique Nordique intercepte un convoi de l'Autorité de Passage Arctique dans les eaux disputées du Passage Nord-Ouest, arguant d'une violation des droits de transit accordés par les accords bilatéraux ALN-Canada de 2052. Les unités para-étatiques de l'ALN immobilisent trois navires-cargo sous escorte armée, blessant deux membres d'équipage. C'est la première confrontation armée directe entre les deux autorités concurrentes de transit arctiques. Le Groenland, dont le Kalaallit Nunaat Sovereign Fund finance partiellement l'APA, porte immédiatement l'affaire devant le Tribunal International de la Mer, tandis que le Conseil des États Nordiques Intégrés se réunit en session d'urgence.
+impact_sur_variables:
+  - variable: geopolitique_conflits
+    delta_level: 12
+    duree: 15
+    polarite: -1
+  - variable: frontieres_du_systeme
+    delta_level: 10
+    duree: 20
+    polarite: -1
+  - variable: energie_ressources_critiques
+    delta_level: -8
+    duree: 10
+    polarite: -1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+    - arctic_passage_authority_reference
+    - armada_logistique_nordique_reference
+    - kalaallit_nunaat_sovereign_fund_reference
+    - conseil_des_etats_nordiques_integres_reference
+    - collectifs_de_peche_inuit_et_sami_reference
+    - collectifs_de_journalisme_embarque_reference
+    - milices_concurrentes_des_droits_de_passage_reference
+    - fonds_souverain_arctique_scandinave_reference
+    - reseaux_de_gouvernance_multilaterale_survivants_reference
+note_coherence: Dans un monde en équilibre fragile à tension 3/5 avec gouvernance hybride, la coexistence conflictuelle de l'APA et de l'ALN dans des eaux arctiques déglaciées et disputées rend cet incident non seulement plausible mais structurellement attendu — la violence para-étatique y remplace la guerre étatique ouverte, cohérent avec les variables geopolitique_conflits (75) et frontieres_du_systeme (25) reflétant une contestation normative profonde.
+custom_source: rééquilibrage_geo_2026-06
+date_creation: 2026-06-24
+---
+
+# L'Incident du Passage Nord-Ouest — Saisie du Convoi APA
+
+## Réalisation dans [[reference]]
+En août 2059, l'Armada Logistique Nordique intercepte un convoi de l'Autorité de Passage Arctique dans les eaux disputées du Passage Nord-Ouest, arguant d'une violation des droits de transit accordés par les accords bilatéraux ALN-Canada de 2052. Les unités para-étatiques de l'ALN immobilisent trois navires-cargo sous escorte armée, blessant deux membres d'équipage. C'est la première confrontation armée directe entre les deux autorités concurrentes de transit arctiques. Le Groenland, dont le Kalaallit Nunaat Sovereign Fund finance partiellement l'APA, porte immédiatement l'affaire devant le Tribunal International de la Mer, tandis que le Conseil des États Nordiques Intégrés se réunit en session d'urgence.
+
+## Description journalistique
+Les eaux grises du Passage Nord-Ouest, déglaciées depuis deux décennies, sont devenues la scène d'une confrontation que beaucoup annonçaient inévitable. Des patrouilleurs de l'Armada Logistique Nordique ont ouvert le feu de sommation sur le convoi de l'APA le 14 août 2059, avant de procéder à un abordage armé — une première depuis la création des deux autorités concurrentes. Les images transmises par les collectifs de journalisme embarqué à bord montrent des hommes en combinaisons grises sans insigne d'État clair, soulignant l'ambiguïté juridique fondamentale de ces forces para-étatiques. À Nuuk, le gouvernement groenlandais qualifie l'incident de 'piraterie institutionnalisée' et active ses recours juridiques internationaux.
+
+## Conséquences
+L'incident cristallise la fracture de gouvernance arctique en forçant les blocs signataires du Pacte Énergétique Multilatéral à prendre position sur le statut juridique des opérateurs para-étatiques dans les corridors maritimes. À moyen terme, la procédure devant le Tribunal International de la Mer pourrait aboutir à un précédent normatif redéfinissant les droits de transit arctiques — mais risque également de s'enliser dans une impasse institutionnelle si l'ALN refuse sa juridiction, renforçant la logique de milices concurrentes des droits de passage dans l'ensemble de la région.
+
+## Impact sur les variables
+- **geopolitique_conflits** : delta -12 sur 15 ans
+- **frontieres_du_systeme** : delta -10 sur 20 ans
+- **energie_ressources_critiques** : delta +8 sur 10 ans
+
+## Acteurs impliqués
+- [[arctic_passage_authority_reference]]
+- [[armada_logistique_nordique_reference]]
+- [[kalaallit_nunaat_sovereign_fund_reference]]
+- [[conseil_des_etats_nordiques_integres_reference]]
+- [[collectifs_de_peche_inuit_et_sami_reference]]
+- [[collectifs_de_journalisme_embarque_reference]]
+- [[milices_concurrentes_des_droits_de_passage_reference]]
+- [[fonds_souverain_arctique_scandinave_reference]]
+- [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
+
+## Note de cohérence
+Dans un monde en équilibre fragile à tension 3/5 avec gouvernance hybride, la coexistence conflictuelle de l'APA et de l'ALN dans des eaux arctiques déglaciées et disputées rend cet incident non seulement plausible mais structurellement attendu — la violence para-étatique y remplace la guerre étatique ouverte, cohérent avec les variables geopolitique_conflits (75) et frontieres_du_systeme (25) reflétant une contestation normative profonde.

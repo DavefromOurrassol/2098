@@ -1,0 +1,94 @@
+---
+name: Leena Väinälä
+type: instance
+slug: leena_vainala_new_sustainability
+entite: leena_vainala
+scenario: new_sustainability
+
+type_dans_scenario: humain
+
+role_dans_scenario: >
+  Architecte intellectuelle de la gouvernance hybride humain-IA de 2098, Leena Väinälä occupe une position paradoxale : célébrée comme cofondatrice des Chartes de Délibération Augmentée qui structurent les communs numériques globaux, elle est simultanément la voix critique la plus acerbe du système qu'elle a contribué à bâtir. Dans un monde où la gouvernance technocratique a stabilisé les crises climatiques et institutionnelles, elle incarne la conscience délibérative — celle qui rappelle que l'efficacité des algorithmes décisionnels ne saurait remplacer la friction productive du débat humain. Son travail philosophique irrigue les cadres normatifs des instances de régulation internationale, tout en contestant leur dérive vers l'automatisation du consentement.
+
+responsabilites: >
+  Rédaction et mise à jour des protocoles normatifs encadrant la participation humaine dans les systèmes de gouvernance hybride au sein du Réseau des Communs Numériques Globaux. Animation des forums de délibération post-représentative dans les nœuds régionaux eurasiatiques, et formation des cohortes de 'médiateurs cognitifs' chargés d'assurer l'intelligibilité des décisions algorithmiques pour les populations.
+
+impact_local: 3
+impact_systemique_global: 4
+variables_influencees:
+    - gouvernance_institutions
+    - valeurs_culture_tempo_sociale
+    - technologie_information
+
+zone_geographique:
+    - nationale
+    - continentale
+    - globale
+
+zone_systemique:
+    - gouvernance
+    - information
+    - société
+
+alliances:
+    - reseau_des_communs_numeriques_globaux_new_sustainability
+    - conseil_de_deliberation_augmentee_de_l_union_nordique_new_sustainability
+    - institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability
+    - collectif_des_mediateurs_cognitifs_internationaux_new_sustainability
+
+oppositions:
+    - bloc_des_architectes_d_efficience_algorithmique_new_sustainability
+    - lobbies_des_plateformes_de_consensus_automatise_new_sustainability
+    - factions_technocratiques_du_conseil_de_regulation_informationnelle_global_new_sustainability
+
+type_relation_dominante: rivalité
+
+annee_debut: 2026
+annee_fin: 
+
+etat_temporel: actif
+age_historique: dominant
+generation: ère cognitive
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  À 74 ans, Leena Väinälä arrive toujours en retard à ses propres conférences — non par négligence, dit-elle, mais 'pour laisser le silence parler avant moi'. Depuis son bureau d'Helsinki où les murs sont couverts de manuscrits annotés à la main dans un monde qui n'écrit plus, cette philosophe finlandaise est devenue l'inconfortable conscience de la gouvernance hybride mondiale. Elle a co-rédigé les Chartes de 2041 qui ont rendu possible la coordination climatique globale, mais passe désormais l'essentiel de son temps à dénoncer ce qu'elle nomme 'la démocratie somnambule' — ce régime où les citoyens valident en temps réel des décisions qu'aucun humain n'a véritablement délibérées. Les instances qu'elle critique continuent pourtant de l'inviter, car ses arguments sont les seuls capables de légitimer, par leur seule présence, un système qui en a besoin.
+
+signes_distinctifs: >
+  Tenue systématiquement en laine brute grise et blanc cassé, refus ostensible des interfaces haptiques au profit du papier et de la voix non filtrée. Son symbole reconnaissable : un nœud gordien stylisé en fil de cuivre porté comme broche — emblème de la complexité délibérative irréductible à toute simplification algorithmique.
+
+tensions_narratives: >
+  La tension centrale de Väinälä en 2098 est celle de la co-optation : en siégeant dans les instances qu'elle critique, légitime-t-elle précisément ce qu'elle combat ? Une faction montante de jeunes philosophes 'post-délibératifs' la considère désormais comme une figure du passé, attachée à des rituels de débat humain devenus anchroniques face à l'urgence des défis systémiques. Par ailleurs, des rumeurs persistantes évoquent l'existence d'un 'Protocole Väinälä' secret — un ensemble de seuils normatifs au-delà desquels elle aurait accepté que l'autonomie algorithmique soit légitime — dont la révélation pourrait fracasser son image de gardienne intransigeante de la délibération.
+
+date_creation: 2026-06-15
+---
+
+# Leena Väinälä
+
+## Rôle dans [[new_sustainability]]
+Architecte intellectuelle de la gouvernance hybride humain-IA de 2098, Leena Väinälä occupe une position paradoxale : célébrée comme cofondatrice des Chartes de Délibération Augmentée qui structurent les communs numériques globaux, elle est simultanément la voix critique la plus acerbe du système qu'elle a contribué à bâtir. Dans un monde où la gouvernance technocratique a stabilisé les crises climatiques et institutionnelles, elle incarne la conscience délibérative — celle qui rappelle que l'efficacité des algorithmes décisionnels ne saurait remplacer la friction productive du débat humain. Son travail philosophique irrigue les cadres normatifs des instances de régulation internationale, tout en contestant leur dérive vers l'automatisation du consentement.
+
+## Responsabilités
+Rédaction et mise à jour des protocoles normatifs encadrant la participation humaine dans les systèmes de gouvernance hybride au sein du Réseau des Communs Numériques Globaux. Animation des forums de délibération post-représentative dans les nœuds régionaux eurasiatiques, et formation des cohortes de 'médiateurs cognitifs' chargés d'assurer l'intelligibilité des décisions algorithmiques pour les populations.
+
+## Variables influencées
+- [[gouvernance_institutions]]
+- [[valeurs_culture_tempo_sociale]]
+- [[technologie_information]]
+
+## Relations
+**Alliés** : [[reseau_des_communs_numeriques_globaux_new_sustainability]], [[conseil_de_deliberation_augmentee_de_l_union_nordique_new_sustainability]], [[institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability]], [[collectif_des_mediateurs_cognitifs_internationaux_new_sustainability]]
+**Opposants** : [[bloc_des_architectes_d_efficience_algorithmique_new_sustainability]], [[lobbies_des_plateformes_de_consensus_automatise_new_sustainability]], [[factions_technocratiques_du_conseil_de_regulation_informationnelle_global_new_sustainability]]
+
+## Description journalistique
+À 74 ans, Leena Väinälä arrive toujours en retard à ses propres conférences — non par négligence, dit-elle, mais 'pour laisser le silence parler avant moi'. Depuis son bureau d'Helsinki où les murs sont couverts de manuscrits annotés à la main dans un monde qui n'écrit plus, cette philosophe finlandaise est devenue l'inconfortable conscience de la gouvernance hybride mondiale. Elle a co-rédigé les Chartes de 2041 qui ont rendu possible la coordination climatique globale, mais passe désormais l'essentiel de son temps à dénoncer ce qu'elle nomme 'la démocratie somnambule' — ce régime où les citoyens valident en temps réel des décisions qu'aucun humain n'a véritablement délibérées. Les instances qu'elle critique continuent pourtant de l'inviter, car ses arguments sont les seuls capables de légitimer, par leur seule présence, un système qui en a besoin.
+
+## Tensions narratives
+La tension centrale de Väinälä en 2098 est celle de la co-optation : en siégeant dans les instances qu'elle critique, légitime-t-elle précisément ce qu'elle combat ? Une faction montante de jeunes philosophes 'post-délibératifs' la considère désormais comme une figure du passé, attachée à des rituels de débat humain devenus anchroniques face à l'urgence des défis systémiques. Par ailleurs, des rumeurs persistantes évoquent l'existence d'un 'Protocole Väinälä' secret — un ensemble de seuils normatifs au-delà desquels elle aurait accepté que l'autonomie algorithmique soit légitime — dont la révélation pourrait fracasser son image de gardienne intransigeante de la délibération.

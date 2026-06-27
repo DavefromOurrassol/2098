@@ -1,0 +1,108 @@
+---
+name: Selin Çelik-Marchetti — Architecte des Seuils
+type: instance
+slug: selin_celik_marchetti_fortress_world
+entite: selin_celik_marchetti
+scenario: fortress_world
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
+
+type_dans_scenario: humain
+
+role_dans_scenario: >
+  Négociatrice indépendante spécialisée dans la conversion des flux migratoires en monnaies d'échange entre blocs fermés, Selin Çelik-Marchetti opère dans les marges institutionnelles du système fortress_world comme courtière en statuts humains. Elle n'appartient à aucun bloc, ce qui fait d'elle à la fois une ressource rare et une anomalie dangereuse dans un monde où l'absence d'appartenance est une vulnérabilité. Elle construit des architectures juridiques provisoires — corridors humanitaires contre accès à des matières critiques, quotas de déplacés contre reconnaissance de souveraineté — qui permettent aux blocs de gérer leurs surplus humains sans les admettre comme sujets de droit. Sa position est celle d'un intermédiaire que tous les blocs méprisent publiquement et sollicitent discrètement.
+
+responsabilites: >
+  Elle négocie des accords de transit migratoire entre blocs rivaux, transformant les populations déplacées hors quota en leviers diplomatiques chiffrés. Elle rédige des protocoles d'échange humanitaire qui établissent des équivalences entre vies humaines et ressources stratégiques, en maintenant une façade de droit international résiduel. Elle maintient un réseau de contacts actifs dans les institutions multilatérales résiduelles et les bureaux de contrôle frontalier pour identifier les fenêtres d'opportunité diplomatique.
+
+impact_local: 2
+impact_systemique_global: 4
+
+variables_influencees:
+    - demographie_mobilite_humaine
+    - gouvernance_institutions
+    - geopolitique_conflits
+    - valeurs_culture_tempo_sociale
+
+zone_geographique:
+    - régionale
+    - continentale
+    - globale
+
+zone_systemique:
+    - gouvernance
+    - société
+    - sécurité
+    - économie
+
+alliances:
+    - institutions_multilaterales_residuelles_fortress_world
+    - archives_diplomatiques_de_l_onu_eclat_fortress_world
+    - coalitions_des_deplaces_et_apatrides_fortress_world
+    - bloc_des_nations_non_alignees_residuelles_fortress_world
+    - corps_des_inspecteurs_de_conformite_inter_blocs_fortress_world
+    - communautes_deplacees_hors_quota_migratoire_fortress_world
+
+oppositions:
+    - administrations_de_controle_frontalier_des_blocs_fortress_world
+    - agences_de_securite_interieure_des_etats_forteresses_fortress_world
+    - factions_internes_pro_autarcie_totale_fortress_world
+    - appareils_d_etat_des_blocs_fermes_fortress_world
+    - dispositifs_de_surveillance_numerique_souveraine_fortress_world
+    - collectifs_du_seuil_fortress_world
+
+type_relation_dominante: neutralité
+
+annee_debut: 2061
+annee_fin: 
+
+etat_temporel: clandestin
+age_historique: marginal
+generation: forteresse
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Dans les couloirs fantômes de ce qu'on appelait autrefois la diplomatie internationale, Selin Çelik-Marchetti circule avec deux passeports d'États qui n'existent plus et une réputation qui précède ses demandes d'accréditation. Elle est la femme que les ministres des blocs n'admettent pas avoir rencontrée mais dont les paraphes apparaissent sur les annexes secrètes des accords de transit. En 2098, elle a structuré au moins sept corridors migratoires majeurs — chacun d'eux portant un nom de code énergétique plutôt qu'humanitaire, comme si les corps en transit étaient des barils de pétrole reclassifiés. Ses détracteurs dans les collectifs de déplacés l'appellent 'l'architecte des cages dorées'. Ses clients — les blocs qui la mandatent — préfèrent ne pas lui donner de nom du tout.
+
+signes_distinctifs: >
+  Elle porte systématiquement des vêtements neutres de coupe méditerranéenne ancienne, sans insigne de bloc ni marqueur d'appartenance visible — une tenue de non-alignée dans un monde où l'absence de couleurs est déjà une déclaration politique. Ses dossiers de négociation sont structurés selon une nomenclature propre, mêlant terminologie juridique onusienne pré-fragmentation et lexique logistique des blocs actuels : une langue hybride que seuls ses interlocuteurs les plus aguerris savent déchiffrer.
+
+tensions_narratives: >
+  La tension centrale est celle de la complicité éclairée : chaque accord qu'elle conclut sauve des milliers de personnes d'une mort certaine en zone grise, tout en légitimant le système de quotas qui condamne des millions d'autres à l'inexistence juridique. Elle est confrontée à une demande croissante des blocs pour des protocoles d'échange intégrant des critères biométriques et génétiques — une ligne qu'elle n'a pas encore franchie mais que ses commanditaires poussent. Une troisième tension émerge de son propre statut : sans appartenance à un bloc, elle est elle-même une personne hors quota, et le jour où elle cessera d'être utile, personne ne négociera pour elle.
+
+date_creation: 2026-06-25
+---
+
+# Selin Çelik-Marchetti — Architecte des Seuils
+
+## Rôle dans [[fortress_world]]
+Négociatrice indépendante spécialisée dans la conversion des flux migratoires en monnaies d'échange entre blocs fermés, Selin Çelik-Marchetti opère dans les marges institutionnelles du système fortress_world comme courtière en statuts humains. Elle n'appartient à aucun bloc, ce qui fait d'elle à la fois une ressource rare et une anomalie dangereuse dans un monde où l'absence d'appartenance est une vulnérabilité. Elle construit des architectures juridiques provisoires — corridors humanitaires contre accès à des matières critiques, quotas de déplacés contre reconnaissance de souveraineté — qui permettent aux blocs de gérer leurs surplus humains sans les admettre comme sujets de droit. Sa position est celle d'un intermédiaire que tous les blocs méprisent publiquement et sollicitent discrètement.
+
+## Responsabilités
+Elle négocie des accords de transit migratoire entre blocs rivaux, transformant les populations déplacées hors quota en leviers diplomatiques chiffrés. Elle rédige des protocoles d'échange humanitaire qui établissent des équivalences entre vies humaines et ressources stratégiques, en maintenant une façade de droit international résiduel. Elle maintient un réseau de contacts actifs dans les institutions multilatérales résiduelles et les bureaux de contrôle frontalier pour identifier les fenêtres d'opportunité diplomatique.
+
+## Variables influencées
+- [[demographie_mobilite_humaine]]
+- [[gouvernance_institutions]]
+- [[geopolitique_conflits]]
+- [[valeurs_culture_tempo_sociale]]
+
+## Relations
+**Alliés** : [[institutions_multilaterales_residuelles_fortress_world]], [[archives_diplomatiques_de_l_onu_eclat_fortress_world]], [[coalitions_des_deplaces_et_apatrides_fortress_world]], [[bloc_des_nations_non_alignees_residuelles_fortress_world]], [[corps_des_inspecteurs_de_conformite_inter_blocs_fortress_world]], [[communautes_deplacees_hors_quota_migratoire_fortress_world]]
+**Opposants** : [[administrations_de_controle_frontalier_des_blocs_fortress_world]], [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]], [[factions_internes_pro_autarcie_totale_fortress_world]], [[appareils_d_etat_des_blocs_fermes_fortress_world]], [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]], [[collectifs_du_seuil_fortress_world]]
+
+## Description journalistique
+Dans les couloirs fantômes de ce qu'on appelait autrefois la diplomatie internationale, Selin Çelik-Marchetti circule avec deux passeports d'États qui n'existent plus et une réputation qui précède ses demandes d'accréditation. Elle est la femme que les ministres des blocs n'admettent pas avoir rencontrée mais dont les paraphes apparaissent sur les annexes secrètes des accords de transit. En 2098, elle a structuré au moins sept corridors migratoires majeurs — chacun d'eux portant un nom de code énergétique plutôt qu'humanitaire, comme si les corps en transit étaient des barils de pétrole reclassifiés. Ses détracteurs dans les collectifs de déplacés l'appellent 'l'architecte des cages dorées'. Ses clients — les blocs qui la mandatent — préfèrent ne pas lui donner de nom du tout.
+
+## Tensions narratives
+La tension centrale est celle de la complicité éclairée : chaque accord qu'elle conclut sauve des milliers de personnes d'une mort certaine en zone grise, tout en légitimant le système de quotas qui condamne des millions d'autres à l'inexistence juridique. Elle est confrontée à une demande croissante des blocs pour des protocoles d'échange intégrant des critères biométriques et génétiques — une ligne qu'elle n'a pas encore franchie mais que ses commanditaires poussent. Une troisième tension émerge de son propre statut : sans appartenance à un bloc, elle est elle-même une personne hors quota, et le jour où elle cessera d'être utile, personne ne négociera pour elle.

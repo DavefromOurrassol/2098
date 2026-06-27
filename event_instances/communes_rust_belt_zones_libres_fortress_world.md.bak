@@ -1,0 +1,92 @@
+---
+name: La Révolte des Communes Libres du Rust Belt — Zones Hors-Algorithme
+type: event_instance
+slug: communes_rust_belt_zones_libres_fortress_world
+archetype: communes_rust_belt_zones_libres
+scenario: fortress_world
+type_evenement: political_social
+portee: regionale
+date: 2063
+date_label: automne 2063
+impossible: false
+custom: true
+description: >
+  Automne 2063 : des colonnes de travailleurs anciennement déclassés, guidés par des ingénieurs dissidents et des organisateurs communautaires, investissent les colosses de béton rouillé des anciens centres industriels du Middle West américain. Sur les façades éventrées de Detroit, des banderoles proclament : 'Ici, l'algorithme ne calcule pas.' Les Communes Libres coupent les connexions aux réseaux de scoring du Bloc Atlantique, réactivent des micro-réseaux énergétiques autonomes et instaurent des assemblées de gestion collective. Face à elles, les agences de sécurité intérieure déploient des cordons numériques et des coupures d'accès aux hydrogénoducs — une guerre d'asphyxie lente, invisible, que le Consortium des Médias d'État Souverains s'emploie à effacer des écrans.
+consequences: >
+  L'écrasement progressif des communes — par le froid, la pénurie énergétique et les arrestations ciblées plutôt que par la force brute — produit un effet de martyr souterrain qui irrigue durablement les réseaux dissidents du Bloc Atlantique. La 'Ligne de Pittsburgh' devient une référence codée dans les communications clandestines inter-zones, alimentant pendant des décennies les collectifs du seuil et les cellules universitaires dissidentes. Paradoxalement, l'événement renforce la rhétorique sécuritaire des appareils d'État, qui obtiennent un durcissement des dispositifs de surveillance et un reclassement des zones industrielles périphériques en 'territoires de vigilance algorithmique renforcée'.
+realisation: >
+  Dans un monde où le Bloc Atlantique a sacrifié ses périphéries industrielles déclinantes au profit de ses nœuds stratégiques fortifiés, la Fédération des Communes Libres du Rust Belt occupe les friches géantes de Detroit, Cleveland et Pittsburgh à l'automne 2063. Appuyées sur les syndicats industriels résiduels et les collectifs de réappropriation énergétique, elles proclament des territoires soustraits aux systèmes de scoring de productivité et aux dispositifs de surveillance numérique souveraine. Le Bloc Atlantique, via ses agences de sécurité intérieure, répond par un blocus logistique et énergétique — refusant toute intervention militaire frontale qui légitimerait les communes — tandis que le Bureau des Territoires Résiduels déclare les zones concernées 'non-conformes au protocole d'optimisation continentale'. La résistance tient plusieurs mois dans un rapport de force asymétrique et médiatiquement étouffé.
+impact_sur_variables:
+  - variable: geopolitique_conflits
+    delta_level: 8
+    duree: 15
+    polarite: -1
+  - variable: valeurs_culture_tempo_sociale
+    delta_level: 12
+    duree: 25
+    polarite: 1
+  - variable: gouvernance_institutions
+    delta_level: -7
+    duree: 20
+    polarite: -1
+  - variable: organisation_territoires
+    delta_level: 10
+    duree: 18
+    polarite: -1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+    - mouvement_des_communes_du_rust_belt_fortress_world
+    - agences_de_securite_interieure_des_etats_forteresses_fortress_world
+    - bureau_des_territoires_residuels_fortress_world
+    - syndicats_industriels_residuels_post_crise_fortress_world
+    - collectifs_de_reappropriation_energetique_peripherique_fortress_world
+    - collectifs_d_ingenieurs_dissidents_anti_militarisation_fortress_world
+    - conseil_regulation_algorithmique_fortress_world
+    - dispositifs_de_surveillance_numerique_souveraine_fortress_world
+    - systemes_de_scoring_de_productivite_corporative_fortress_world
+    - consortium_des_medias_d_etat_souverains_hegemonia_press_xinhua_fortifiee_eurovox_integral_fortress_world
+    - collectifs_du_seuil_fortress_world
+    - cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
+    - reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world
+    - voix_du_dehors_fortress_world
+note_coherence: Dans un monde fortress_world à tension maximale et trajectoire de fragmentation, la révolte des communes se réalise mais est étouffée par asphyxie plutôt que vaincue militairement — cohérent avec un régime autoritaire qui nie la légitimité des contestataires en les invisibilisant plutôt qu'en les martérisant ouvertement.
+custom_source: rééquilibrage_geo_2026-06
+date_creation: 2026-06-24
+---
+
+# La Révolte des Communes Libres du Rust Belt — Zones Hors-Algorithme
+
+## Réalisation dans [[fortress_world]]
+Dans un monde où le Bloc Atlantique a sacrifié ses périphéries industrielles déclinantes au profit de ses nœuds stratégiques fortifiés, la Fédération des Communes Libres du Rust Belt occupe les friches géantes de Detroit, Cleveland et Pittsburgh à l'automne 2063. Appuyées sur les syndicats industriels résiduels et les collectifs de réappropriation énergétique, elles proclament des territoires soustraits aux systèmes de scoring de productivité et aux dispositifs de surveillance numérique souveraine. Le Bloc Atlantique, via ses agences de sécurité intérieure, répond par un blocus logistique et énergétique — refusant toute intervention militaire frontale qui légitimerait les communes — tandis que le Bureau des Territoires Résiduels déclare les zones concernées 'non-conformes au protocole d'optimisation continentale'. La résistance tient plusieurs mois dans un rapport de force asymétrique et médiatiquement étouffé.
+
+## Description journalistique
+Automne 2063 : des colonnes de travailleurs anciennement déclassés, guidés par des ingénieurs dissidents et des organisateurs communautaires, investissent les colosses de béton rouillé des anciens centres industriels du Middle West américain. Sur les façades éventrées de Detroit, des banderoles proclament : 'Ici, l'algorithme ne calcule pas.' Les Communes Libres coupent les connexions aux réseaux de scoring du Bloc Atlantique, réactivent des micro-réseaux énergétiques autonomes et instaurent des assemblées de gestion collective. Face à elles, les agences de sécurité intérieure déploient des cordons numériques et des coupures d'accès aux hydrogénoducs — une guerre d'asphyxie lente, invisible, que le Consortium des Médias d'État Souverains s'emploie à effacer des écrans.
+
+## Conséquences
+L'écrasement progressif des communes — par le froid, la pénurie énergétique et les arrestations ciblées plutôt que par la force brute — produit un effet de martyr souterrain qui irrigue durablement les réseaux dissidents du Bloc Atlantique. La 'Ligne de Pittsburgh' devient une référence codée dans les communications clandestines inter-zones, alimentant pendant des décennies les collectifs du seuil et les cellules universitaires dissidentes. Paradoxalement, l'événement renforce la rhétorique sécuritaire des appareils d'État, qui obtiennent un durcissement des dispositifs de surveillance et un reclassement des zones industrielles périphériques en 'territoires de vigilance algorithmique renforcée'.
+
+## Impact sur les variables
+- **geopolitique_conflits** : delta -8 sur 15 ans
+- **valeurs_culture_tempo_sociale** : delta +12 sur 25 ans
+- **gouvernance_institutions** : delta +7 sur 20 ans
+- **organisation_territoires** : delta -10 sur 18 ans
+
+## Acteurs impliqués
+- [[mouvement_des_communes_du_rust_belt_fortress_world]]
+- [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]]
+- [[bureau_des_territoires_residuels_fortress_world]]
+- [[syndicats_industriels_residuels_post_crise_fortress_world]]
+- [[collectifs_de_reappropriation_energetique_peripherique_fortress_world]]
+- [[collectifs_d_ingenieurs_dissidents_anti_militarisation_fortress_world]]
+- [[conseil_regulation_algorithmique_fortress_world]]
+- [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
+- [[systemes_de_scoring_de_productivite_corporative_fortress_world]]
+- [[consortium_des_medias_d_etat_souverains_hegemonia_press_xinhua_fortifiee_eurovox_integral_fortress_world]]
+- [[collectifs_du_seuil_fortress_world]]
+- [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]]
+- [[reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world]]
+- [[voix_du_dehors_fortress_world]]
+
+## Note de cohérence
+Dans un monde fortress_world à tension maximale et trajectoire de fragmentation, la révolte des communes se réalise mais est étouffée par asphyxie plutôt que vaincue militairement — cohérent avec un régime autoritaire qui nie la légitimité des contestataires en les invisibilisant plutôt qu'en les martérisant ouvertement.

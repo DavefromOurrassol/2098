@@ -1,0 +1,90 @@
+---
+name: Selin Çelik-Marchetti
+type: instance
+slug: selin_celik_marchetti_breakdown
+entite: selin_celik_marchetti
+scenario: breakdown
+localisation:
+  zone: arc_sahelo_mediterraneen
+  lieu: Arc méditerranéen (Valence, Thessalonique, corridor tunisien)
+  type_lieu: region
+type_dans_scenario: humain
+
+role_dans_scenario: >
+  Dans un monde où les blocs régionaux s'effondrent et où les corridors migratoires sont devenus des zones de guerre ouverte, Selin Çelik-Marchetti opère comme courtière indépendante en négociations migratoires d'urgence — louée par des coalitions éphémères, des cités-États portuaires ou des fragments d'ONG pour convertir les flux humains non intégrables en monnaies d'échange entre factions. Elle n'a plus de mandant stable depuis la fragmentation des blocs méditerranéens, et navigue entre mandats contradictoires, souvent simultanés, jonglant avec des loyautés temporaires et des compromis qui lui coûtent chaque fois un peu plus. Elle incarne le paradoxe terminal du pragmatisme humanitaire : l'architecte des seuls accords qui fonctionnent encore, dans un monde où chaque accord enterre un peu plus l'idée qu'une personne déplacée est autre chose qu'une ressource négociable.
+
+responsabilites: >
+  Elle négocie des corridors de transit migratoire contre des accès à des ressources critiques entre factions hostiles, rédige des protocoles d'urgence reconnus provisoirement par des entités sans légitimité internationale, et assure la continuité de filières humanitaires minimales là où les structures institutionnelles ont disparu. Elle coordonne ponctuellement des transferts de population avec les ONG survivantes et certaines milices de contrôle territorial en échange de garanties de non-interférence.
+
+impact_local: 3
+impact_systemique_global: 2
+
+variables_influencees:
+    - demographie_mobilite_humaine
+    - gouvernance_institutions
+    - geopolitique_conflits
+
+zone_geographique:
+    - régionale
+    - continentale
+
+zone_systemique:
+    - gouvernance
+    - société
+    - sécurité
+
+alliances:
+
+oppositions:
+
+type_relation_dominante: neutralité
+
+annee_debut: 2061
+annee_fin: 
+
+etat_temporel: actif
+age_historique: résiduel
+generation: post-effondrement
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  On la dit présente à Valence trois jours avant l'accord sur le corridor tunisien, à Thessalonique la semaine d'après pour un échange de quotas contre du gaz liquéfié. Selin Çelik-Marchetti ne représente plus personne officiellement — son bloc méditerranéen s'est désintégré en 2089 — mais elle reste la personne qu'on appelle quand les chiffres doivent correspondre à des corps vivants. Elle voyage avec deux identités de travail, un porte-documents chiffré contenant des modèles de protocoles d'urgence reconnus par au moins sept entités distinctes, et la réputation d'être la seule négociatrice capable de faire signer des factions qui se tirent dessus la veille. Ceux qu'elle a sauvés ne la remercient pas. Ceux qu'elle n'a pas pu sauver lui ont appris à ne plus compter.
+
+signes_distinctifs: >
+  Elle porte invariablement des vêtements civils neutres sans insigne ni affiliation visible — une règle professionnelle absolue dans un monde où les couleurs tuent. Son matériel de travail inclut un carnet papier doublé d'un support chiffré hors réseau, symbole délibéré d'une époque où les engagements écrits valaient encore quelque chose. Elle a développé un tic de reformulation systématique : elle traduit chaque exigence de ses interlocuteurs en termes d'équivalences quantifiables avant de parler de personnes.
+
+tensions_narratives: >
+  Elle est sollicitée simultanément par la Ligue Méditerranéenne des Villes-États Portuaires et par une faction para-étatique hydrique pour des accords incompatibles portant sur les mêmes populations en transit — un triangle de négociation qui la place en position de choisir qui survit. La question de sa propre légitimité la ronge : sans mandat institutionnel, ses accords ne tiennent que par la réputation personnelle, et la première trahison d'un signataire effondre l'édifice entier. Il existe par ailleurs des rumeurs selon lesquelles certains des corridors qu'elle a négociés ont été récupérés par des réseaux logistiques criminels pour faire passer autre chose que des réfugiés — une compromission qu'elle nie, ou qu'elle s'est appris à ne plus regarder.
+
+date_creation: 2026-06-25
+---
+
+# Selin Çelik-Marchetti
+
+## Rôle dans [[breakdown]]
+Dans un monde où les blocs régionaux s'effondrent et où les corridors migratoires sont devenus des zones de guerre ouverte, Selin Çelik-Marchetti opère comme courtière indépendante en négociations migratoires d'urgence — louée par des coalitions éphémères, des cités-États portuaires ou des fragments d'ONG pour convertir les flux humains non intégrables en monnaies d'échange entre factions. Elle n'a plus de mandant stable depuis la fragmentation des blocs méditerranéens, et navigue entre mandats contradictoires, souvent simultanés, jonglant avec des loyautés temporaires et des compromis qui lui coûtent chaque fois un peu plus. Elle incarne le paradoxe terminal du pragmatisme humanitaire : l'architecte des seuls accords qui fonctionnent encore, dans un monde où chaque accord enterre un peu plus l'idée qu'une personne déplacée est autre chose qu'une ressource négociable.
+
+## Responsabilités
+Elle négocie des corridors de transit migratoire contre des accès à des ressources critiques entre factions hostiles, rédige des protocoles d'urgence reconnus provisoirement par des entités sans légitimité internationale, et assure la continuité de filières humanitaires minimales là où les structures institutionnelles ont disparu. Elle coordonne ponctuellement des transferts de population avec les ONG survivantes et certaines milices de contrôle territorial en échange de garanties de non-interférence.
+
+## Variables influencées
+- [[demographie_mobilite_humaine]]
+- [[gouvernance_institutions]]
+- [[geopolitique_conflits]]
+
+## Relations
+**Alliés** : _aucun défini_
+**Opposants** : _aucun défini_
+
+## Description journalistique
+On la dit présente à Valence trois jours avant l'accord sur le corridor tunisien, à Thessalonique la semaine d'après pour un échange de quotas contre du gaz liquéfié. Selin Çelik-Marchetti ne représente plus personne officiellement — son bloc méditerranéen s'est désintégré en 2089 — mais elle reste la personne qu'on appelle quand les chiffres doivent correspondre à des corps vivants. Elle voyage avec deux identités de travail, un porte-documents chiffré contenant des modèles de protocoles d'urgence reconnus par au moins sept entités distinctes, et la réputation d'être la seule négociatrice capable de faire signer des factions qui se tirent dessus la veille. Ceux qu'elle a sauvés ne la remercient pas. Ceux qu'elle n'a pas pu sauver lui ont appris à ne plus compter.
+
+## Tensions narratives
+Elle est sollicitée simultanément par la Ligue Méditerranéenne des Villes-États Portuaires et par une faction para-étatique hydrique pour des accords incompatibles portant sur les mêmes populations en transit — un triangle de négociation qui la place en position de choisir qui survit. La question de sa propre légitimité la ronge : sans mandat institutionnel, ses accords ne tiennent que par la réputation personnelle, et la première trahison d'un signataire effondre l'édifice entier. Il existe par ailleurs des rumeurs selon lesquelles certains des corridors qu'elle a négociés ont été récupérés par des réseaux logistiques criminels pour faire passer autre chose que des réfugiés — une compromission qu'elle nie, ou qu'elle s'est appris à ne plus regarder.

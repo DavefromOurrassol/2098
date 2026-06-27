@@ -1,0 +1,22 @@
+
+Variables:
+systeme_economique_redistribution
+gouvernance_institutions
+geopolitique_conflits
+valeurs_culture_tempo_sociale
+organisation_territoires
+sante_biotechnologies
+frontieres_du_systeme
+technologie_information
+climat_environnement_global
+energie_ressources_critiques
+demographie_mobilite_humaine
+systemes_productifs_travail
+
+Scenarios :
+fortress_world
+new_sustainability
+breakdown
+eco_communalism
+policy_reform
+reference

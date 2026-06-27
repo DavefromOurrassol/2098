@@ -1,0 +1,92 @@
+---
+name: Vasil Orentchev
+type: instance
+slug: vasil_orentchev_breakdown
+entite: vasil_orentchev
+scenario: breakdown
+
+type_dans_scenario: humain
+
+role_dans_scenario: >
+  Seigneur de guerre logistique opérant dans les corridors d'approvisionnement fracturés de l'arc eurasien central, Orentchev s'est imposé comme l'un des rares acteurs capables de faire circuler des marchandises critiques — carburant synthétique, pièces industrielles, médicaments de base — à travers des zones où aucun État ne garantit plus rien. Ancien colonel des forces de sécurité d'un bloc eurasien aujourd'hui dissous, il a reconverti son réseau de contacts militaires et ses compétences opérationnelles en une infrastructure privée de convoyage armé. Dans un monde où les chaînes logistiques mondiales se sont effondrées, il incarne la figure du pragmatique absolu : ni idéologue ni prédateur pur, mais un opérateur qui survit en rendant des services que personne d'autre ne peut rendre.
+
+responsabilites: >
+  Orentchev coordonne des convois blindés entre enclaves industrielles survivantes et zones de consommation isolées, négociant des sauf-conduits avec les factions armées locales et prélevant un péage en ressources ou en information. Il maintient une force paramilitaire de taille modeste mais hautement mobile, recrutée parmi les soldats démobilisés des guerres de fragmentation, et gère des dépôts logistiques clandestins dissimulés dans d'anciens nœuds ferroviaires ou portuaires désaffectés.
+
+impact_local: 4
+impact_systemique_global: 2
+variables_influencees:
+    - energie_ressources_critiques
+    - organisation_territoires
+    - geopolitique_conflits
+
+zone_geographique:
+    - régionale
+    - continentale
+
+zone_systemique:
+    - infrastructure
+    - sécurité
+    - économie
+
+alliances:
+    - enclaves_industrielles_du_corridor_oural_caspien_breakdown
+    - factions_paramilitaires_locales_neutralisees_breakdown
+    - reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown
+
+oppositions:
+    - blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
+    - reseau_logistique_criminel_concurrent_breakdown
+    - front_de_resistance_aux_peages_sur_les_ressources_breakdown
+
+type_relation_dominante: alliance stratégique
+
+annee_debut: 2061
+annee_fin: 
+
+etat_temporel: actif
+age_historique: dominant
+generation: post-effondrement
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  On dit qu'un convoi Orentchev arrive toujours — ou n'arrive jamais du tout. Dans les zones grises qui s'étendent de l'ancienne Géorgie aux plaines kazakh, son nom est à la fois une garantie et une menace. Les enclaves qui paient passent l'hiver. Celles qui refusent cherchent d'autres routes, souvent inexistantes. À 67 ans, Vasil Orentchev n'a plus l'uniforme d'un colonel mais l'autorité d'un État sans drapeau : ses hommes portent des insignes neutres, ses camions n'ont pas d'immatriculation reconnaissable, et ses comptes ne sont dans aucun registre consultable. Les journalistes qui ont tenté de le suivre ont décrit un homme méthodique, peu bavard, qui parle de logistique comme d'autres parlent de morale — avec la certitude tranquille de celui qui a raison parce qu'il est encore debout.
+
+signes_distinctifs: >
+  Convois identifiés par un simple marquage de bande orange horizontale sur les véhicules — couleur de la neutralité armée dans les codes tacites des corridors eurasiens. Orentchev lui-même porte un manteau militaire débarrassé de tout insigne, signe ostentatoire d'une allégeance à personne. Ses dépôts logistiques sont signalés par une icône cartographique informelle — un cercle barré d'une ligne diagonale — que les factions locales respectent comme zone neutre sous peine de représailles collectives.
+
+tensions_narratives: >
+  La question centrale d'Orentchev dans ce scénario est celle de sa propre durée : son modèle repose sur un équilibre fragile entre suffisamment de chaos pour être indispensable et suffisamment d'ordre pour que ses convois circulent — un équilibre que la trajectoire de fragmentation menace de rompre définitivement. Si un bloc émergent parvient à reconsolidiser les corridors eurasiens, il devient soit un actif à absorber soit une menace à éliminer. Parallèlement, les populations des enclaves qu'il dessert commencent à questionner publiquement la légitimité d'un homme qui profite structurellement de leur dépendance, alimentant une tension entre utilité fonctionnelle et exploitation systémique que ses opérateurs locaux peinent à contenir.
+
+date_creation: 2026-06-15
+---
+
+# Vasil Orentchev
+
+## Rôle dans [[breakdown]]
+Seigneur de guerre logistique opérant dans les corridors d'approvisionnement fracturés de l'arc eurasien central, Orentchev s'est imposé comme l'un des rares acteurs capables de faire circuler des marchandises critiques — carburant synthétique, pièces industrielles, médicaments de base — à travers des zones où aucun État ne garantit plus rien. Ancien colonel des forces de sécurité d'un bloc eurasien aujourd'hui dissous, il a reconverti son réseau de contacts militaires et ses compétences opérationnelles en une infrastructure privée de convoyage armé. Dans un monde où les chaînes logistiques mondiales se sont effondrées, il incarne la figure du pragmatique absolu : ni idéologue ni prédateur pur, mais un opérateur qui survit en rendant des services que personne d'autre ne peut rendre.
+
+## Responsabilités
+Orentchev coordonne des convois blindés entre enclaves industrielles survivantes et zones de consommation isolées, négociant des sauf-conduits avec les factions armées locales et prélevant un péage en ressources ou en information. Il maintient une force paramilitaire de taille modeste mais hautement mobile, recrutée parmi les soldats démobilisés des guerres de fragmentation, et gère des dépôts logistiques clandestins dissimulés dans d'anciens nœuds ferroviaires ou portuaires désaffectés.
+
+## Variables influencées
+- [[energie_ressources_critiques]]
+- [[organisation_territoires]]
+- [[geopolitique_conflits]]
+
+## Relations
+**Alliés** : [[enclaves_industrielles_du_corridor_oural_caspien_breakdown]], [[factions_paramilitaires_locales_neutralisees_breakdown]], [[reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown]]
+**Opposants** : [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]], [[reseau_logistique_criminel_concurrent_breakdown]], [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
+
+## Description journalistique
+On dit qu'un convoi Orentchev arrive toujours — ou n'arrive jamais du tout. Dans les zones grises qui s'étendent de l'ancienne Géorgie aux plaines kazakh, son nom est à la fois une garantie et une menace. Les enclaves qui paient passent l'hiver. Celles qui refusent cherchent d'autres routes, souvent inexistantes. À 67 ans, Vasil Orentchev n'a plus l'uniforme d'un colonel mais l'autorité d'un État sans drapeau : ses hommes portent des insignes neutres, ses camions n'ont pas d'immatriculation reconnaissable, et ses comptes ne sont dans aucun registre consultable. Les journalistes qui ont tenté de le suivre ont décrit un homme méthodique, peu bavard, qui parle de logistique comme d'autres parlent de morale — avec la certitude tranquille de celui qui a raison parce qu'il est encore debout.
+
+## Tensions narratives
+La question centrale d'Orentchev dans ce scénario est celle de sa propre durée : son modèle repose sur un équilibre fragile entre suffisamment de chaos pour être indispensable et suffisamment d'ordre pour que ses convois circulent — un équilibre que la trajectoire de fragmentation menace de rompre définitivement. Si un bloc émergent parvient à reconsolidiser les corridors eurasiens, il devient soit un actif à absorber soit une menace à éliminer. Parallèlement, les populations des enclaves qu'il dessert commencent à questionner publiquement la légitimité d'un homme qui profite structurellement de leur dépendance, alimentant une tension entre utilité fonctionnelle et exploitation systémique que ses opérateurs locaux peinent à contenir.

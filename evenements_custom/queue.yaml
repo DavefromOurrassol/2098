@@ -1,0 +1,59 @@
+# evenements_custom/queue.yaml
+#
+# Ajoute ici tes idées d'événements custom (observations de l'actualité,
+# idées narratives...). Lance ensuite :
+#
+#   python3 generator/inject_custom_events.py            ← injection réelle
+#   python3 generator/inject_custom_events.py --dry-run  ← test sans écriture
+#
+# CHAMPS :
+#   id                    : identifiant court lisible (lettres, chiffres, underscores)
+#   description           : l'idée en langage naturel, quelques phrases suffisent
+#   portee                : locale | regionale | continentale | globale
+#   date_approximative     : année 2025-2097 (peut varier de +/-10 ans par scénario)
+#   intensite              : faible | modérée | forte | majeure
+#   scenarios              : liste de scénarios à couvrir, ou null pour les 6 par défaut
+#                            (valeurs : breakdown, fortress_world, new_sustainability,
+#                            eco_communalism, policy_reform, reference)
+#   variables_hint         : optionnel. null si tu ne sais pas — Claude choisit
+#                            automatiquement. Sinon une variable (chaîne) ou
+#                            plusieurs (liste) que tu IMPOSES comme impactées.
+#                            Variables disponibles :
+#                              systeme_economique_redistribution | gouvernance_institutions
+#                              geopolitique_conflits | valeurs_culture_tempo_sociale
+#                              organisation_territoires | sante_biotechnologies
+#                              frontieres_du_systeme | technologie_information
+#                              climat_environnement_global | energie_ressources_critiques
+#                              demographie_mobilite_humaine | systemes_productifs_travail
+#   variables_hint_count   : optionnel, entier 1-4. Plafond du nombre total de
+#                            variables (hint(s) inclus). Défaut : 2.
+#   acteurs_hint           : optionnel. null si tu ne sais pas — Claude choisit
+#                            parmi les instances d'entités existantes pour
+#                            chaque scénario. Sinon un slug d'instance (chaîne)
+#                            ou plusieurs (liste) que tu IMPOSES.
+#   acteurs_hint_count     : optionnel, entier 1-4. Plafond du nombre total
+#                            d'acteurs (hint(s) inclus). Défaut : 2.
+#   source                 : libre — date, lien d'article...
+#
+# EXEMPLE :
+#   - id: guerre_israelo_iranienne
+#     description: >
+#       Conflit armé direct entre Israël et l'Iran, frappes sur les
+#       infrastructures nucléaires et pétrolières, risque d'escalade
+#       régionale impliquant les puissances du Golfe.
+#     portee: globale
+#     date_approximative: 2026
+#     intensite: majeure
+#     scenarios: null
+#     variables_hint: [geopolitique_conflits, energie_ressources_critiques]
+#     variables_hint_count: null
+#     acteurs_hint: null
+#     acteurs_hint_count: null
+#     source: actualite_2026-06
+#
+# Les idées traitées sont déplacées vers processed.yaml (succès) ou
+# needs_review.yaml (échec après corrections automatiques).
+# ──────────────────────────────────────────────────────────────────────────────
+
+queue:
+  [] # ← remplace [] par tes idées

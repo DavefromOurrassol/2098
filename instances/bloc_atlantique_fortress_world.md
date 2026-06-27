@@ -1,0 +1,131 @@
+---
+name: Pacte Atlantique de Préservation Civilisationnelle — PAPC
+type: instance
+slug: bloc_atlantique_fortress_world
+entite: bloc_atlantique
+scenario: fortress_world
+localisation:
+  zone: bloc_atlantique
+  lieu: Bloc Atlantique (siège à Lisbonne-Haute)
+  type_lieu: region
+
+type_dans_scenario: organisation
+
+role_dans_scenario: >
+  Le PAPC constitue l'architecture politico-militaire dominante des États côtiers de l'Atlantique Nord ayant survécu aux submersions et aux vagues de déplacements climatiques de 2040-2070. Alliance de fermeture assumée, il administre un espace intérieur hermétiquement délimité par le Système Mur-Digue Atlantique (SMDA) et gouverné par une doctrine de préservation civilisationnelle codifiée dans la Charte de Dublin (2061). Il sert simultanément de modèle revendiqué par les régimes autoritaires en quête de légitimité et de repoussoir absolu pour les coalitions de déplacés et les États non-alignés. Son existence structure l'ensemble des débats géopolitiques mondiaux de 2098 : on est pour ou contre le modèle PAPC, il n'existe plus de position neutre.
+
+responsabilites: >
+  Le PAPC impose des quotas stricts d'immigration climatique par algorithme de scoring biométrique et génétique, administre le SMDA — réseau intégré de murs, digues, drones et capteurs biométriques couvrant 14 000 km de frontières terrestres et maritimes —, et coordonne la doctrine de souveraineté biopolitique entre ses États membres, incluant le contrôle des flux informationnels, énergétiques et sanitaires entrants et sortants.
+
+impact_local: 5
+impact_systemique_global: 5
+
+variables_influencees:
+    - geopolitique_conflits
+    - demographie_mobilite_humaine
+    - gouvernance_institutions
+    - frontieres_du_systeme
+    - valeurs_culture_tempo_sociale
+
+zone_geographique:
+    - continentale
+    - globale
+
+zone_systemique:
+    - gouvernance
+    - sécurité
+    - société
+    - infrastructure
+    - information
+
+alliances:
+    - commandement_strategique_des_matieres_critiques_atlantique_fortress_world
+    - conseil_regulation_algorithmique_fortress_world
+    - nexcore_fortress_world
+    - alliance_blocs_souverains_fortress_world
+    - administrations_de_controle_frontalier_des_blocs_fortress_world
+    - agences_de_securite_interieure_des_etats_forteresses_fortress_world
+    - appareils_d_etat_des_blocs_fermes_fortress_world
+    - bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world
+    - consortium_des_medias_d_etat_souverains_hegemonia_press_xinhua_fortifiee_eurovox_integral_fortress_world
+    - dispositifs_de_surveillance_numerique_souveraine_fortress_world
+    - etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world
+    - executif_militaro_civil_du_regime_fortress_world
+    - front_resilient_pro_systeme_fortress_world
+    - grille_aria_fortress_world
+    - reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world
+    - reseaux_prives_de_securite_aux_frontieres_fortress_world
+    - systemes_de_scoring_de_productivite_corporative_fortress_world
+    - tribunal_algorithmique_de_bruxelles_fortress_world
+
+oppositions:
+    - alliance_sanitaire_des_populations_exclues_fortress_world
+    - bloc_des_nations_non_alignees_residuelles_fortress_world
+    - cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
+    - coalitions_des_deplaces_et_apatrides_fortress_world
+    - collectifs_du_seuil_fortress_world
+    - communautes_deplacees_hors_quota_migratoire_fortress_world
+    - dissidences_internes_aux_blocs_minoritaires_fortress_world
+    - factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world
+    - factions_internes_pro_autarcie_totale_fortress_world
+    - factions_traditionalistes_du_mandat_electif_fortress_world
+    - mouvement_des_communes_du_rust_belt_fortress_world
+    - reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world
+    - voix_du_dehors_fortress_world
+    - coalition_vivant_fortress_world
+    - bassora_couloir_refugies_fortress_world
+    - institutions_multilaterales_residuelles_fortress_world
+
+type_relation_dominante: alliance stratégique
+
+annee_debut: 2061
+annee_fin: 
+
+etat_temporel: actif
+age_historique: dominant
+generation: forteresse
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Depuis son siège permanent de Lisbonne-Haute — quartier général perché à 47 mètres au-dessus du niveau de la mer submergée —, le Pacte Atlantique de Préservation Civilisationnelle administre ce que ses détracteurs nomment 'la plus grande prison volontaire de l'histoire humaine' et ce que ses partisans appellent 'la dernière démocratie viable de 2098'. Fondé sur la Charte de Dublin en réponse à la Grande Submersion de 2059, le PAPC regroupe aujourd'hui dix-neuf États membres, de l'Irlande fortifiée aux enclavess marocaines du Nord sous protectorat, tous reliés par le Système Mur-Digue Atlantique dont les caméras biométriques traitent en temps réel quelque 800 millions d'identités. Chaque année, le Comité des Quotas attribue 47 000 visas de migration climatique, sélectionnés selon un algorithme de scoring combinant santé, compétences et 'indice de cohérence culturelle' — un critère que la Chambre de Recours Algorithmique de Bruxelles Résiduelle refuse systématiquement de déclassifier. À l'extérieur de ses digues, des millions de déplacés attendent dans les zones tampons méditerranéennes et atlantiques une réponse qui ne viendra statistiquement jamais.
+
+signes_distinctifs: >
+  Le logo officiel du PAPC représente un phare blanc sur fond bleu-ardoise, flanqué de deux arcs de cercle évoquant à la fois des bras protecteurs et une enceinte fermée — ambiguïté volontaire, selon les sémiologues dissidents. Les agents du Contrôle Frontalier Atlantique portent des uniformes gris-perle à liseré turquoise et des visières à lecture biométrique intégrée ; les délégations officielles arborent invariablement le pin's de l'Étoile Atlantique, cinq points symbolisant les cinq piliers de la Charte : Sécurité, Continuité, Identité, Résilience, Ordre.
+
+tensions_narratives: >
+  Le PAPC est traversé par une fracture croissante entre sa faction technocratique — partisane d'une ouverture sélective maîtrisée pour compenser l'effondrement démographique interne — et ses courants souverainistes radicaux qui réclament une autarcie totale et menacent de faire sécession vers un bloc ultra-fermé. Simultanément, les premières générations nées entièrement à l'intérieur du Mur commencent à contester une doctrine de préservation qui ne leur a jamais laissé le choix d'un dehors ; des cellules dissidentes internes, infiltrées ou spontanées, font circuler des archives de ce que le monde extérieur ressemble réellement, sapant le récit officiel de 'chaos barbare' au-delà des digues. Enfin, la question de la soutenabilité économique du Système Mur-Digue devient critique : maintenir 14 000 km de frontières militarisées consomme 38 % du budget collectif du Pacte, et les premières fissures dans l'infrastructure — physiques et politiques — commencent à apparaître.
+
+date_creation: 2026-06-27
+---
+
+# Pacte Atlantique de Préservation Civilisationnelle — PAPC
+
+## Rôle dans [[fortress_world]]
+Le PAPC constitue l'architecture politico-militaire dominante des États côtiers de l'Atlantique Nord ayant survécu aux submersions et aux vagues de déplacements climatiques de 2040-2070. Alliance de fermeture assumée, il administre un espace intérieur hermétiquement délimité par le Système Mur-Digue Atlantique (SMDA) et gouverné par une doctrine de préservation civilisationnelle codifiée dans la Charte de Dublin (2061). Il sert simultanément de modèle revendiqué par les régimes autoritaires en quête de légitimité et de repoussoir absolu pour les coalitions de déplacés et les États non-alignés. Son existence structure l'ensemble des débats géopolitiques mondiaux de 2098 : on est pour ou contre le modèle PAPC, il n'existe plus de position neutre.
+
+## Responsabilités
+Le PAPC impose des quotas stricts d'immigration climatique par algorithme de scoring biométrique et génétique, administre le SMDA — réseau intégré de murs, digues, drones et capteurs biométriques couvrant 14 000 km de frontières terrestres et maritimes —, et coordonne la doctrine de souveraineté biopolitique entre ses États membres, incluant le contrôle des flux informationnels, énergétiques et sanitaires entrants et sortants.
+
+## Variables influencées
+- [[geopolitique_conflits]]
+- [[demographie_mobilite_humaine]]
+- [[gouvernance_institutions]]
+- [[frontieres_du_systeme]]
+- [[valeurs_culture_tempo_sociale]]
+
+## Relations
+**Alliés** : [[commandement_strategique_des_matieres_critiques_atlantique_fortress_world]], [[conseil_regulation_algorithmique_fortress_world]], [[nexcore_fortress_world]], [[alliance_blocs_souverains_fortress_world]], [[administrations_de_controle_frontalier_des_blocs_fortress_world]], [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]], [[appareils_d_etat_des_blocs_fermes_fortress_world]], [[bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world]], [[consortium_des_medias_d_etat_souverains_hegemonia_press_xinhua_fortifiee_eurovox_integral_fortress_world]], [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]], [[etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world]], [[executif_militaro_civil_du_regime_fortress_world]], [[front_resilient_pro_systeme_fortress_world]], [[grille_aria_fortress_world]], [[reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world]], [[reseaux_prives_de_securite_aux_frontieres_fortress_world]], [[systemes_de_scoring_de_productivite_corporative_fortress_world]], [[tribunal_algorithmique_de_bruxelles_fortress_world]]
+**Opposants** : [[alliance_sanitaire_des_populations_exclues_fortress_world]], [[bloc_des_nations_non_alignees_residuelles_fortress_world]], [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]], [[coalitions_des_deplaces_et_apatrides_fortress_world]], [[collectifs_du_seuil_fortress_world]], [[communautes_deplacees_hors_quota_migratoire_fortress_world]], [[dissidences_internes_aux_blocs_minoritaires_fortress_world]], [[factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world]], [[factions_internes_pro_autarcie_totale_fortress_world]], [[factions_traditionalistes_du_mandat_electif_fortress_world]], [[mouvement_des_communes_du_rust_belt_fortress_world]], [[reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world]], [[voix_du_dehors_fortress_world]], [[coalition_vivant_fortress_world]], [[bassora_couloir_refugies_fortress_world]], [[institutions_multilaterales_residuelles_fortress_world]]
+
+## Description journalistique
+Depuis son siège permanent de Lisbonne-Haute — quartier général perché à 47 mètres au-dessus du niveau de la mer submergée —, le Pacte Atlantique de Préservation Civilisationnelle administre ce que ses détracteurs nomment 'la plus grande prison volontaire de l'histoire humaine' et ce que ses partisans appellent 'la dernière démocratie viable de 2098'. Fondé sur la Charte de Dublin en réponse à la Grande Submersion de 2059, le PAPC regroupe aujourd'hui dix-neuf États membres, de l'Irlande fortifiée aux enclavess marocaines du Nord sous protectorat, tous reliés par le Système Mur-Digue Atlantique dont les caméras biométriques traitent en temps réel quelque 800 millions d'identités. Chaque année, le Comité des Quotas attribue 47 000 visas de migration climatique, sélectionnés selon un algorithme de scoring combinant santé, compétences et 'indice de cohérence culturelle' — un critère que la Chambre de Recours Algorithmique de Bruxelles Résiduelle refuse systématiquement de déclassifier. À l'extérieur de ses digues, des millions de déplacés attendent dans les zones tampons méditerranéennes et atlantiques une réponse qui ne viendra statistiquement jamais.
+
+## Tensions narratives
+Le PAPC est traversé par une fracture croissante entre sa faction technocratique — partisane d'une ouverture sélective maîtrisée pour compenser l'effondrement démographique interne — et ses courants souverainistes radicaux qui réclament une autarcie totale et menacent de faire sécession vers un bloc ultra-fermé. Simultanément, les premières générations nées entièrement à l'intérieur du Mur commencent à contester une doctrine de préservation qui ne leur a jamais laissé le choix d'un dehors ; des cellules dissidentes internes, infiltrées ou spontanées, font circuler des archives de ce que le monde extérieur ressemble réellement, sapant le récit officiel de 'chaos barbare' au-delà des digues. Enfin, la question de la soutenabilité économique du Système Mur-Digue devient critique : maintenir 14 000 km de frontières militarisées consomme 38 % du budget collectif du Pacte, et les premières fissures dans l'infrastructure — physiques et politiques — commencent à apparaître.

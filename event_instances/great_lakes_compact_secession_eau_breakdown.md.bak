@@ -1,0 +1,71 @@
+---
+name: La Sécession des Lacs — Rupture du Compact Lacustre
+type: event_instance
+slug: great_lakes_compact_secession_eau_breakdown
+archetype: great_lakes_compact_secession_eau
+scenario: breakdown
+type_evenement: political_social
+portee: continentale
+date: 2053
+date_label: été 2053
+impossible: false
+custom: true
+description: >
+  Été 2053 : les délégués du Great Lakes Autonomous Compact signent la Déclaration de Chicago-Lacustre dans un entrepôt reconverti au bord du lac Michigan, sans cérémonie, sans caméras fédérales — Washington n'envoie aucun représentant. Quarante nations autochtones co-signataires revendiquent la tutelle sur les 20 % d'eau douce de surface de la planète. Sur le terrain, les Communes Libres du Rust Belt contrôlent déjà les pompes et les canaux ; les milices hydriques patrouillent les rives. Ce qui aurait pu être un acte fondateur ressemble davantage à une nécrologie : celle de l'union américaine.
+consequences: >
+  La rupture lacustre accélère l'effet domino sur les autres régions fédérales américaines, chaque entité revendiquant ses ressources critiques locales comme capital de survie. Le modèle 'Compact hydrique' devient référence pour d'autres sécessions ressources-centrées dans le monde fragmenté, mais sans cadre juridique partagé, chaque imitation aggrave la fragmentation globale des corridors d'approvisionnement. Washington, fantôme institutionnel, perd définitivement toute capacité de projection territoriale à l'intérieur de son propre espace continental.
+realisation: >
+  Dans un contexte fédéral américain déjà délité par des années de crises climatiques et d'effondrements institutionnels en cascade, le Great Lakes Autonomous Compact ne vote pas une sécession ordonnée mais acte une rupture de facto après que Washington cesse simplement de répondre aux ultimatums hydriques. Chicago-Lacustre devient capitale par défaut d'une confédération d'États squelettiques et de nations autochtones plus organisées que les gouvernements résiduels. La 'sécession' est moins une déclaration solennelle qu'un constat : il n'y a plus rien à quitter. Les milices d'accaparement hydrique et les communes libres du Rust Belt occupent simultanément le terrain avant que le Compact ait fini de rédiger ses proclamations.
+impact_sur_variables:
+  - variable: organisation_territoires
+    delta_level: 8
+    duree: 30
+    polarite: -1
+  - variable: gouvernance_institutions
+    delta_level: -12
+    duree: 25
+    polarite: -1
+  - variable: energie_ressources_critiques
+    delta_level: 6
+    duree: 20
+    polarite: -1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+    - mouvement_des_communes_du_rust_belt_breakdown
+    - milices_d_accaparement_hydrique_breakdown
+    - factions_etatiques_residuelles_de_souverainete_hydrique_breakdown
+    - cites_etats_secessionistes_breakdown
+    - federation_communs_territoriaux_breakdown
+    - bureau_des_territoires_residuels_breakdown
+note_coherence: Dans un monde breakdown à gouvernance level 20, la sécession n'est pas un acte politique fort mais un effondrement silencieux du centre fédéral, ce qui amplifie la fragmentation territoriale et la guerre de ressources sans produire aucune stabilité nouvelle.
+custom_source: rééquilibrage_geo_2026-06
+date_creation: 2026-06-23
+---
+
+# La Sécession des Lacs — Rupture du Compact Lacustre
+
+## Réalisation dans [[breakdown]]
+Dans un contexte fédéral américain déjà délité par des années de crises climatiques et d'effondrements institutionnels en cascade, le Great Lakes Autonomous Compact ne vote pas une sécession ordonnée mais acte une rupture de facto après que Washington cesse simplement de répondre aux ultimatums hydriques. Chicago-Lacustre devient capitale par défaut d'une confédération d'États squelettiques et de nations autochtones plus organisées que les gouvernements résiduels. La 'sécession' est moins une déclaration solennelle qu'un constat : il n'y a plus rien à quitter. Les milices d'accaparement hydrique et les communes libres du Rust Belt occupent simultanément le terrain avant que le Compact ait fini de rédiger ses proclamations.
+
+## Description journalistique
+Été 2053 : les délégués du Great Lakes Autonomous Compact signent la Déclaration de Chicago-Lacustre dans un entrepôt reconverti au bord du lac Michigan, sans cérémonie, sans caméras fédérales — Washington n'envoie aucun représentant. Quarante nations autochtones co-signataires revendiquent la tutelle sur les 20 % d'eau douce de surface de la planète. Sur le terrain, les Communes Libres du Rust Belt contrôlent déjà les pompes et les canaux ; les milices hydriques patrouillent les rives. Ce qui aurait pu être un acte fondateur ressemble davantage à une nécrologie : celle de l'union américaine.
+
+## Conséquences
+La rupture lacustre accélère l'effet domino sur les autres régions fédérales américaines, chaque entité revendiquant ses ressources critiques locales comme capital de survie. Le modèle 'Compact hydrique' devient référence pour d'autres sécessions ressources-centrées dans le monde fragmenté, mais sans cadre juridique partagé, chaque imitation aggrave la fragmentation globale des corridors d'approvisionnement. Washington, fantôme institutionnel, perd définitivement toute capacité de projection territoriale à l'intérieur de son propre espace continental.
+
+## Impact sur les variables
+- **organisation_territoires** : delta -8 sur 30 ans
+- **gouvernance_institutions** : delta +12 sur 25 ans
+- **energie_ressources_critiques** : delta -6 sur 20 ans
+
+## Acteurs impliqués
+- [[mouvement_des_communes_du_rust_belt_breakdown]]
+- [[milices_d_accaparement_hydrique_breakdown]]
+- [[factions_etatiques_residuelles_de_souverainete_hydrique_breakdown]]
+- [[cites_etats_secessionistes_breakdown]]
+- [[federation_communs_territoriaux_breakdown]]
+- [[bureau_des_territoires_residuels_breakdown]]
+
+## Note de cohérence
+Dans un monde breakdown à gouvernance level 20, la sécession n'est pas un acte politique fort mais un effondrement silencieux du centre fédéral, ce qui amplifie la fragmentation territoriale et la guerre de ressources sans produire aucune stabilité nouvelle.

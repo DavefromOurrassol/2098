@@ -1,0 +1,105 @@
+---
+name: Registre des Zones Non Récupérables
+type: instance
+slug: bureau_des_territoires_residuels_breakdown
+entite: bureau_des_territoires_residuels
+scenario: breakdown
+localisation:
+  zone: cracovie_registre_zones
+  lieu: Cracovie
+  type_lieu: ville
+  statut: review_manuelle
+  note: "Le Registre est un réseau diffus avec des antennes à Cracovie, Mombasa et au Piémont, mais Cracovie est la zone dédiée existante ; cependant l'entité elle-même est transnationale et sans siège unique."
+
+type_dans_scenario: institution
+
+role_dans_scenario: >
+  Fantôme administratif issu des appareils étatiques d'avant l'effondrement, le Registre des Zones Non Récupérables survit en marge de toute autorité centrale cohérente. Dans un monde fragmenté où les États ont perdu le contrôle de pans entiers de territoire, l'institution continue mécaniquement sa mission originelle — recenser, classer, archiver les zones abandonnées — mais sans commanditaire légitime pour réceptionner ses rapports. Ses agents dispersés, souvent coupés les uns des autres, compilent des données sur des territoires que plus personne ne gouverne, produisant un inventaire exhaustif et monstrueux du sacrifice systémique. Le Registre est devenu une institution zombie : trop désorganisée pour exercer un pouvoir, trop documentée pour être ignorée.
+
+responsabilites: >
+  Ses cellules éparses continuent de classer des territoires en catégories d'abandon — zones d'évacuation définitive, espaces de retrait logistique, corridors de sacrifice climatique — en suivant des protocoles bureaucratiques périmés. Certaines antennes locales vendent leurs archives fragmentées à des factions régionales, des milices ou des collectifs de hackers pour financer leur survie. D'autres maintiennent le secret par inertie institutionnelle, incapables de décider à qui leurs données appartiennent désormais.
+
+impact_local: 3
+impact_systemique_global: 4
+
+variables_influencees:
+    - gouvernance_institutions
+    - organisation_territoires
+    - technologie_information
+    - demographie_mobilite_humaine
+
+zone_geographique:
+    - régionale
+    - continentale
+    - globale
+
+zone_systemique:
+    - gouvernance
+    - information
+    - société
+
+alliances:
+    - collectifs_de_gardiens_archivistes_itinerants_breakdown
+    - collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
+    - archives_neutres_de_geneve_breakdown
+    - reseau_mnemos_breakdown
+
+oppositions:
+    - factions_propagandistes_des_archives_breakdown
+    - gouvernements_regionaux_residuels_reterritorialisants_breakdown
+    - seigneuries_foncieres_opportunistes_breakdown
+    - conseil_regulation_algorithmique_breakdown
+    - reseau_des_anciens_financeurs_devenus_censeurs_breakdown
+
+type_relation_dominante: infiltration
+
+annee_debut: 2031
+annee_fin: 
+
+etat_temporel: clandestin
+age_historique: résiduel
+generation: post-effondrement
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Personne ne sait exactement combien d'antennes du Registre des Zones Non Récupérables sont encore actives en 2098. On en a retrouvé une dans un sous-sol de Cracovie, une autre dans un conteneur réfrigéré au large de Mombasa, une troisième dissimulée dans les serveurs d'une coopérative agricole du Piémont. Ce qui les unit : des archives colossales de territoires officiellement effacés, compilées avec une rigueur bureaucratique absurde dans un monde où les bureaux ont brûlé. Leurs agents — fonctionnaires oubliés, contractuels reconvertis, parfois de simples dépositaires — continuent de remplir des formulaires pour des États qui n'existent plus. Le Registre est devenu, malgré lui, le seul témoin systématique de ce que l'ancien monde a délibérément laissé mourir.
+
+signes_distinctifs: >
+  Tampons rouges estampillant les dossiers de la mention « ZONE NR » — pour Non Récupérable — sur des formulaires imprimés en quadruple exemplaire dont trois copies n'arrivent jamais à destination. Les agents portent souvent encore des badges plastifiés périmés d'administrations dissoutes, comme des reliques identitaires. Leurs archives physiques, quand elles existent encore, sentent le papier humide et le fixatif bon marché.
+
+tensions_narratives: >
+  La tension centrale est celle du secret devenu arme : les archives du Registre contiennent les preuves de sacrifices territoriaux délibérés — populations abandonnées, zones climatiques sacrifiées sans recours — et chaque fragment qui fuit alimente à la fois les résistances légitimes et les propagandes des factions. Certains agents dissidents cherchent à transmettre leurs données aux communautés concernées ; d'autres les monétisent auprès de seigneuries logistiques ou de gouvernements-forteresses qui veulent savoir ce que leurs rivaux ont sacrifié. La question irrésolue : si le Registre rend ses archives publiques, il donne aux abandonnés la preuve de leur abandon — mais aussi aux prédateurs une cartographie précise des territoires sans défense.
+
+date_creation: 2026-06-23
+---
+
+# Registre des Zones Non Récupérables
+
+## Rôle dans [[breakdown]]
+Fantôme administratif issu des appareils étatiques d'avant l'effondrement, le Registre des Zones Non Récupérables survit en marge de toute autorité centrale cohérente. Dans un monde fragmenté où les États ont perdu le contrôle de pans entiers de territoire, l'institution continue mécaniquement sa mission originelle — recenser, classer, archiver les zones abandonnées — mais sans commanditaire légitime pour réceptionner ses rapports. Ses agents dispersés, souvent coupés les uns des autres, compilent des données sur des territoires que plus personne ne gouverne, produisant un inventaire exhaustif et monstrueux du sacrifice systémique. Le Registre est devenu une institution zombie : trop désorganisée pour exercer un pouvoir, trop documentée pour être ignorée.
+
+## Responsabilités
+Ses cellules éparses continuent de classer des territoires en catégories d'abandon — zones d'évacuation définitive, espaces de retrait logistique, corridors de sacrifice climatique — en suivant des protocoles bureaucratiques périmés. Certaines antennes locales vendent leurs archives fragmentées à des factions régionales, des milices ou des collectifs de hackers pour financer leur survie. D'autres maintiennent le secret par inertie institutionnelle, incapables de décider à qui leurs données appartiennent désormais.
+
+## Variables influencées
+- [[gouvernance_institutions]]
+- [[organisation_territoires]]
+- [[technologie_information]]
+- [[demographie_mobilite_humaine]]
+
+## Relations
+**Alliés** : [[collectifs_de_gardiens_archivistes_itinerants_breakdown]], [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]], [[archives_neutres_de_geneve_breakdown]], [[reseau_mnemos_breakdown]]
+**Opposants** : [[factions_propagandistes_des_archives_breakdown]], [[gouvernements_regionaux_residuels_reterritorialisants_breakdown]], [[seigneuries_foncieres_opportunistes_breakdown]], [[conseil_regulation_algorithmique_breakdown]], [[reseau_des_anciens_financeurs_devenus_censeurs_breakdown]]
+
+## Description journalistique
+Personne ne sait exactement combien d'antennes du Registre des Zones Non Récupérables sont encore actives en 2098. On en a retrouvé une dans un sous-sol de Cracovie, une autre dans un conteneur réfrigéré au large de Mombasa, une troisième dissimulée dans les serveurs d'une coopérative agricole du Piémont. Ce qui les unit : des archives colossales de territoires officiellement effacés, compilées avec une rigueur bureaucratique absurde dans un monde où les bureaux ont brûlé. Leurs agents — fonctionnaires oubliés, contractuels reconvertis, parfois de simples dépositaires — continuent de remplir des formulaires pour des États qui n'existent plus. Le Registre est devenu, malgré lui, le seul témoin systématique de ce que l'ancien monde a délibérément laissé mourir.
+
+## Tensions narratives
+La tension centrale est celle du secret devenu arme : les archives du Registre contiennent les preuves de sacrifices territoriaux délibérés — populations abandonnées, zones climatiques sacrifiées sans recours — et chaque fragment qui fuit alimente à la fois les résistances légitimes et les propagandes des factions. Certains agents dissidents cherchent à transmettre leurs données aux communautés concernées ; d'autres les monétisent auprès de seigneuries logistiques ou de gouvernements-forteresses qui veulent savoir ce que leurs rivaux ont sacrifié. La question irrésolue : si le Registre rend ses archives publiques, il donne aux abandonnés la preuve de leur abandon — mais aussi aux prédateurs une cartographie précise des territoires sans défense.

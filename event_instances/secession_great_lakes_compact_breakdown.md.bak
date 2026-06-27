@@ -1,0 +1,83 @@
+---
+name: Le Compact des Grands Lacs — Sécession de fait
+type: event_instance
+slug: secession_great_lakes_compact_breakdown
+archetype: secession_great_lakes_compact
+scenario: breakdown
+type_evenement: political_social
+portee: continentale
+date: 2053
+date_label: été 2053
+impossible: false
+custom: true
+description: >
+  L'été 2053, Chicago-Lacustre est pavoisée de drapeaux bleus à onde blanche. Le Great Lakes Autonomous Compact, né trois ans plus tôt d'un accord pragmatique entre gouverneurs résiduels et conseils tribaux ojibwés, potawatomis et haudenosaunee, proclame sa juridiction exclusive sur les Grands Lacs — non pas comme une déclaration de guerre à Washington, mais comme un constat : il n'y a plus personne en face. Les Communes Libres du Rust Belt y voient une victoire historique ; les cartels logistiques régionaux y voient une opportunité. Pour les 40 nations autochtones signataires, c'est la reconnaissance tardive et chaotique d'une souveraineté que nul n'avait jamais vraiment leur accorder. Première rupture territoriale formelle sur le sol américain depuis 1865 — célébrée ici, ignorée là, combattue ailleurs.
+consequences: >
+  Le Compact des Grands Lacs devient immédiatement une cible géopolitique de premier ordre : l'eau douce qu'il contrôle est une ressource que les factions étatiques résiduelles du Midwest et du Sud-Est américain réclament par la force ou la négociation. Les milices d'accaparement hydrique prolifèrent aux marges du territoire revendiqué, tandis que les nations autochtones membres du Compact tentent de consolider un modèle de gouvernance par les communs que nul État voisin ne reconnaît — et que plusieurs cherchent activement à démanteler. Le précédent inspire une douzaine d'autres entités régionales sur le continent, accélérant la désintégration du cadre fédéral américain au-delà de tout seuil de récupération.
+realisation: >
+  Dans un contexte de délitement fédéral accéléré et de sécheresses catastrophiques frappant le Midwest, le Great Lakes Autonomous Compact ne vote pas une sécession proprement dite — les institutions fédérales américaines sont trop fragmentées pour qu'un tel vote ait encore un sens formel. C'est plutôt une déclaration de juridiction exclusive sur les Grands Lacs qui s'impose de facto, Chicago-Lacustre devenant le nœud de coordination d'une confédération informelle regroupant huit États résiduels et quarante nations autochtones. Washington, incapable de projeter une réponse militaire cohérente et lui-même fracturé entre factions gouvernementales concurrentes, enregistre l'événement comme une 'dérogation administrative temporaire'. Le Compact contrôle désormais le plus grand réservoir d'eau douce de surface au monde, dans un monde qui meurt de soif.
+impact_sur_variables:
+  - variable: organisation_territoires
+    delta_level: 8
+    duree: 25
+    polarite: -1
+  - variable: gouvernance_institutions
+    delta_level: -10
+    duree: 30
+    polarite: -1
+  - variable: geopolitique_conflits
+    delta_level: 12
+    duree: 20
+    polarite: -1
+  - variable: energie_ressources_critiques
+    delta_level: 10
+    duree: 25
+    polarite: -1
+  - variable: climat_environnement_global
+    delta_level: 4
+    duree: 15
+    polarite: 1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+    - mouvement_des_communes_du_rust_belt_breakdown
+    - cites_etats_secessionistes_breakdown
+    - milices_d_accaparement_hydrique_breakdown
+    - factions_etatiques_residuelles_de_souverainete_hydrique_breakdown
+    - federation_communs_territoriaux_breakdown
+    - gouvernements_regionaux_residuels_reterritorialisants_breakdown
+    - front_de_resistance_aux_peages_sur_les_ressources_breakdown
+note_coherence: Dans un monde de fragmentation accélérée, la sécession des Grands Lacs n'est pas une rupture révolutionnaire mais la formalisation d'un vide de pouvoir déjà consommé — cohérent avec organisation_territoires à 90 et gouvernance_institutions à 20, elle aggrave les tensions hydriques et géopolitiques sans produire de stabilité durable.
+custom_source: rééquilibrage_geo_2026-06
+date_creation: 2026-06-24
+---
+
+# Le Compact des Grands Lacs — Sécession de fait
+
+## Réalisation dans [[breakdown]]
+Dans un contexte de délitement fédéral accéléré et de sécheresses catastrophiques frappant le Midwest, le Great Lakes Autonomous Compact ne vote pas une sécession proprement dite — les institutions fédérales américaines sont trop fragmentées pour qu'un tel vote ait encore un sens formel. C'est plutôt une déclaration de juridiction exclusive sur les Grands Lacs qui s'impose de facto, Chicago-Lacustre devenant le nœud de coordination d'une confédération informelle regroupant huit États résiduels et quarante nations autochtones. Washington, incapable de projeter une réponse militaire cohérente et lui-même fracturé entre factions gouvernementales concurrentes, enregistre l'événement comme une 'dérogation administrative temporaire'. Le Compact contrôle désormais le plus grand réservoir d'eau douce de surface au monde, dans un monde qui meurt de soif.
+
+## Description journalistique
+L'été 2053, Chicago-Lacustre est pavoisée de drapeaux bleus à onde blanche. Le Great Lakes Autonomous Compact, né trois ans plus tôt d'un accord pragmatique entre gouverneurs résiduels et conseils tribaux ojibwés, potawatomis et haudenosaunee, proclame sa juridiction exclusive sur les Grands Lacs — non pas comme une déclaration de guerre à Washington, mais comme un constat : il n'y a plus personne en face. Les Communes Libres du Rust Belt y voient une victoire historique ; les cartels logistiques régionaux y voient une opportunité. Pour les 40 nations autochtones signataires, c'est la reconnaissance tardive et chaotique d'une souveraineté que nul n'avait jamais vraiment leur accorder. Première rupture territoriale formelle sur le sol américain depuis 1865 — célébrée ici, ignorée là, combattue ailleurs.
+
+## Conséquences
+Le Compact des Grands Lacs devient immédiatement une cible géopolitique de premier ordre : l'eau douce qu'il contrôle est une ressource que les factions étatiques résiduelles du Midwest et du Sud-Est américain réclament par la force ou la négociation. Les milices d'accaparement hydrique prolifèrent aux marges du territoire revendiqué, tandis que les nations autochtones membres du Compact tentent de consolider un modèle de gouvernance par les communs que nul État voisin ne reconnaît — et que plusieurs cherchent activement à démanteler. Le précédent inspire une douzaine d'autres entités régionales sur le continent, accélérant la désintégration du cadre fédéral américain au-delà de tout seuil de récupération.
+
+## Impact sur les variables
+- **organisation_territoires** : delta -8 sur 25 ans
+- **gouvernance_institutions** : delta +10 sur 30 ans
+- **geopolitique_conflits** : delta -12 sur 20 ans
+- **energie_ressources_critiques** : delta -10 sur 25 ans
+- **climat_environnement_global** : delta +4 sur 15 ans
+
+## Acteurs impliqués
+- [[mouvement_des_communes_du_rust_belt_breakdown]]
+- [[cites_etats_secessionistes_breakdown]]
+- [[milices_d_accaparement_hydrique_breakdown]]
+- [[factions_etatiques_residuelles_de_souverainete_hydrique_breakdown]]
+- [[federation_communs_territoriaux_breakdown]]
+- [[gouvernements_regionaux_residuels_reterritorialisants_breakdown]]
+- [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
+
+## Note de cohérence
+Dans un monde de fragmentation accélérée, la sécession des Grands Lacs n'est pas une rupture révolutionnaire mais la formalisation d'un vide de pouvoir déjà consommé — cohérent avec organisation_territoires à 90 et gouvernance_institutions à 20, elle aggrave les tensions hydriques et géopolitiques sans produire de stabilité durable.

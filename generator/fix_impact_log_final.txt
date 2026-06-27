@@ -1,0 +1,82 @@
+============================================================
+OURRASSOL 2098 — Correction échelle impact_local/global
+============================================================
+
+72 fichier(s) à corriger.
+
+[1/72] agence_stabilisation_climatique_new_sustainability.md (actuel : local=6, global=9)... ✓ -> local=3, global=5
+[2/72] agence_stabilisation_climatique_policy_reform.md (actuel : local=4, global=9)... ✓ -> local=2, global=5
+[3/72] agence_stabilisation_climatique_reference.md (actuel : local=4, global=7)... ✓ -> local=2, global=5
+[4/72] alliance_blocs_souverains_breakdown.md (actuel : local=2, global=6)... ✓ -> local=3, global=4
+[5/72] alliance_blocs_souverains_fortress_world.md (actuel : local=4, global=8)... ✓ -> local=3, global=4
+[6/72] alliance_blocs_souverains_reference.md (actuel : local=4, global=7)... ✓ -> local=2, global=4
+[7/72] amara_diallo_nkosi_breakdown.md (actuel : local=7, global=3)... ✓ -> local=4, global=1
+[8/72] amara_diallo_nkosi_new_sustainability.md (actuel : local=6, global=88)... ✓ -> local=3, global=4
+[9/72] amara_diallo_nkosi_policy_reform.md (actuel : local=72, global=85)... ✓ -> local=4, global=4
+[10/72] amara_diallo_nkosi_reference.md (actuel : local=72, global=58)... ✓ -> local=4, global=3
+[11/72] armada_logistique_nordique_breakdown.md (actuel : local=7, global=8)... ✓ -> local=5, global=4
+[12/72] armada_logistique_nordique_fortress_world.md (actuel : local=7, global=9)... ✓ -> local=4, global=5
+[13/72] armada_logistique_nordique_reference.md (actuel : local=6, global=8)... ✓ -> local=3, global=5
+[14/72] assemblee_territoires_policy_reform.md (actuel : local=6, global=9)... ✓ -> local=3, global=5
+[15/72] bureau_gouvernance_algorithmique_fortress_world.md (actuel : local=82, global=61)... ✓ -> local=5, global=4
+[16/72] bureau_gouvernance_algorithmique_new_sustainability.md (actuel : local=5, global=9)... ✓ -> local=2, global=5
+[17/72] bureau_gouvernance_algorithmique_policy_reform.md (actuel : local=4, global=9)... ✓ -> local=2, global=5
+[18/72] collectifs_du_seuil_breakdown.md (actuel : local=8, global=3)... ✓ -> local=4, global=2
+[19/72] collectifs_du_seuil_eco_communalism.md (actuel : local=6, global=2)... ✓ -> local=3, global=1
+[20/72] collectifs_du_seuil_fortress_world.md (actuel : local=6, global=4)... ✓ -> local=4, global=2
+[21/72] conseil_regulation_ressources_new_sustainability.md (actuel : local=3, global=9)... ✓ -> local=2, global=5
+[22/72] conseil_regulation_ressources_policy_reform.md (actuel : local=4, global=9)... ✓ -> local=2, global=5
+[23/72] conseil_regulation_ressources_reference.md (actuel : local=3, global=7)... ✓ -> local=2, global=4
+[24/72] consortium_helios_fortress_world.md (actuel : local=7, global=9)... ✓ -> local=4, global=4
+[25/72] consortium_helios_new_sustainability.md (actuel : local=4, global=9)... ✓ -> local=3, global=5
+[26/72] consortium_helios_policy_reform.md (actuel : local=4, global=9)... ✓ -> local=3, global=5
+[27/72] consortium_helios_reference.md (actuel : local=4, global=8)... ✓ -> local=4, global=5
+[28/72] cooperative_terrafond_breakdown.md (actuel : local=7, global=1)... ✓ -> local=3, global=1
+[29/72] cooperative_terrafond_eco_communalism.md (actuel : local=8, global=3)... ✓ -> local=5, global=2
+[30/72] cooperative_terrafond_reference.md (actuel : local=7, global=4)... ✓ -> local=4, global=2
+[31/72] federation_communs_territoriaux_breakdown.md (actuel : local=8, global=2)... ✓ -> local=3, global=1
+[32/72] federation_communs_territoriaux_eco_communalism.md (actuel : local=8, global=4)... ✓ -> local=4, global=3
+[33/72] federation_communs_territoriaux_reference.md (actuel : local=72, global=38)... ✓ -> local=4, global=3
+[34/72] grille_aria_fortress_world.md (actuel : local=9, global=7)... ✓ -> local=5, global=4
+[35/72] grille_aria_new_sustainability.md (actuel : local=6, global=9)... ✓ -> local=4, global=5
+[36/72] grille_aria_policy_reform.md (actuel : local=7, global=9)... ✓ -> local=4, global=5
+[37/72] internationale_travailleurs_augmentes_fortress_world.md (actuel : local=6, global=2)... ✓ -> local=3, global=1
+[38/72] internationale_travailleurs_augmentes_new_sustainability.md (actuel : local=4, global=7)... ✓ -> local=3, global=4
+[39/72] internationale_travailleurs_augmentes_policy_reform.md (actuel : local=6, global=8)... ✓ -> local=3, global=4
+[40/72] internationale_travailleurs_augmentes_reference.md (actuel : local=5, global=7)... ✓ -> local=3, global=4
+[41/72] leena_vainala_eco_communalism.md (actuel : local=7, global=5)... ✓ -> local=4, global=2
+[42/72] leena_vainala_new_sustainability.md (actuel : local=4, global=8)... ✓ -> local=3, global=4
+[43/72] leena_vainala_policy_reform.md (actuel : local=4, global=8)... ✓ -> local=2, global=4
+[44/72] leena_vainala_reference.md (actuel : local=4, global=7)... ✓ -> local=2, global=4
+[45/72] mouvement_racines_vivantes_breakdown.md (actuel : local=8, global=2)... ✓ -> local=4, global=1
+[46/72] mouvement_racines_vivantes_eco_communalism.md (actuel : local=8, global=3)... ✓ -> local=4, global=2
+[47/72] mouvement_racines_vivantes_reference.md (actuel : local=72, global=28)... ✓ -> local=4, global=2
+[48/72] nexcore_reference.md (actuel : local=4, global=9)... ✓ -> local=3, global=5
+[49/72] nexus_biosyn_breakdown.md (actuel : local=8, global=4)... ✓ -> local=4, global=3
+[50/72] nexus_biosyn_fortress_world.md (actuel : local=4, global=9)... ✓ -> local=3, global=5
+[51/72] nexus_biosyn_new_sustainability.md (actuel : local=6, global=9)... ✓ -> local=3, global=5
+[52/72] nexus_biosyn_policy_reform.md (actuel : local=6, global=9)... ✓ -> local=2, global=5
+[53/72] nexus_biosyn_reference.md (actuel : local=6, global=9)... ✓ -> local=3, global=5
+[54/72] prisme_global_eco_communalism.md (actuel : local=8, global=3)... ✓ -> local=3, global=2
+[55/72] prisme_global_new_sustainability.md (actuel : local=6, global=9)... ✓ -> local=3, global=5
+[56/72] prisme_global_policy_reform.md (actuel : local=5, global=8)... ✓ -> local=2, global=5
+[57/72] prisme_global_reference.md (actuel : local=6, global=8)... ✓ -> local=3, global=4
+[58/72] reseau_mnemos_breakdown.md (actuel : local=7, global=3)... ✓ -> local=4, global=3
+[59/72] reseau_mnemos_eco_communalism.md (actuel : local=8, global=4)... ✓ -> local=5, global=2
+[60/72] reseau_mnemos_new_sustainability.md (actuel : local=72, global=91)... ✓ -> local=4, global=5
+[61/72] reseau_mnemos_reference.md (actuel : local=5, global=7)... ✓ -> local=3, global=4
+[62/72] trame_bioclimatique_breakdown.md (actuel : local=8, global=2)... ✓ -> local=4, global=2
+[63/72] trame_bioclimatique_eco_communalism.md (actuel : local=8, global=5)... ✓ -> local=4, global=3
+[64/72] trame_bioclimatique_new_sustainability.md (actuel : local=7, global=9)... ✓ -> local=3, global=5
+[65/72] trame_bioclimatique_policy_reform.md (actuel : local=6, global=9)... ✓ -> local=3, global=5
+[66/72] vasil_orentchev_breakdown.md (actuel : local=7, global=4)... ✓ -> local=4, global=2
+[67/72] vasil_orentchev_fortress_world.md (actuel : local=8, global=6)... ✓ -> local=5, global=3
+[68/72] vasil_orentchev_reference.md (actuel : local=7, global=4)... ✓ -> local=4, global=2
+[69/72] voix_du_dehors_breakdown.md (actuel : local=8, global=4)... ✓ -> local=4, global=2
+[70/72] voix_du_dehors_eco_communalism.md (actuel : local=8, global=4)... ✓ -> local=4, global=2
+[71/72] voix_du_dehors_fortress_world.md (actuel : local=6, global=8)... ✓ -> local=2, global=4
+[72/72] voix_du_dehors_reference.md (actuel : local=5, global=7)... ✓ -> local=3, global=4
+
+============================================================
+✓ 72/72 fiche(s) corrigées
+============================================================

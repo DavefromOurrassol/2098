@@ -1,0 +1,101 @@
+---
+name: Konsortiet Nordark — Axes du Grand Nord
+type: instance
+slug: armada_logistique_nordique_breakdown
+entite: armada_logistique_nordique
+scenario: breakdown
+localisation:
+  zone: arctique_nordark
+  lieu: Arctique Nordark (Tromsø, corridor de Barents, Svalbard)
+  type_lieu: region
+
+type_dans_scenario: organisation
+
+role_dans_scenario: >
+  Dans un monde de ruptures logistiques généralisées, Nordark est devenue une puissance de fait dans l'Arctique déglacialisé, contrôlant les derniers corridors fonctionnels entre les blocs eurasiatique et nord-américain. Ni État ni simple entreprise, le Konsortiet opère comme un seigneur de guerre logistique : il fixe les prix de passage, lève ses propres milices de protection et arbitre les conflits de transit à coups de contrats armés. Sa légitimité ne repose plus sur aucun mandat institutionnel mais sur la seule capacité à faire circuler — ou bloquer — ce dont les populations ont besoin pour survivre.
+
+responsabilites: >
+  Nordark maintient sous contrôle armé les routes maritimes arctiques (passage du Nord-Est, corridor de Barents), les terminaux énergétiques de Tromsø, Mourmansk-Ouest et Svalbard, ainsi que les pipelines de transit hydrogène et GNL reliant les enclaves industrielles scandinaves aux clients asiatiques et nord-américains. Elle perçoit des droits de passage sur tout convoi — alimentaire, énergétique ou militaire — empruntant ses axes, et assure la maintenance minimale des balises et systèmes de navigation dans sa zone d'influence.
+
+impact_local: 5
+impact_systemique_global: 4
+variables_influencees:
+    - geopolitique_conflits
+    - energie_ressources_critiques
+    - organisation_territoires
+    - climat_environnement_global
+
+zone_geographique:
+    - régionale
+    - continentale
+
+zone_systemique:
+    - infrastructure
+    - énergie
+    - gouvernance
+    - sécurité
+    - économie
+
+alliances:
+    - enclaves_industrielles_de_bergen_troms_breakdown
+    - factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
+    - consortiums_energetiques_samoiedes_du_yamal_breakdown
+
+oppositions:
+    - hanse_baltique_recomposee_breakdown
+    - milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown
+    - federation_russe_residuelle_district_de_mourmansk_breakdown
+    - conglometrat_sino_siberien_bohai_transit_breakdown
+
+type_relation_dominante: rivalité
+
+annee_debut: 2026
+annee_fin: 
+
+etat_temporel: actif
+age_historique: dominant
+generation: post-effondrement
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  À Tromsø, on ne parle plus de la ville mais du 'nœud Nordark'. Leurs convois brise-glace portent des drapeaux noirs frappés d'un compas brisé sur fond de mer blanche — symbole involontairement honnête d'une organisation qui oriente le monde sans plus croire aux anciennes directions. Un reporter qui tente d'embarquer sans accréditation Nordark disparaît dans les statistiques de 'pertes de transit'. Le Konsortiet ne communique plus par conférences de presse mais par bulletins tarifaires : en 2097, le droit de passage d'un convoi alimentaire vers les enclaves finlandaises a augmenté de 340 % en six mois. Ce que les anciens gouvernements scandinaves avaient construit comme infrastructure publique, Nordark l'a transformé en feudalisme de flux — et personne n'a encore trouvé comment les en déloger.
+
+signes_distinctifs: >
+  Uniformes thermorégulés gris-ardoise frappés du compas brisé en relief noir, flotte de brise-glace autonomes reconvertis en plateformes d'armement modulaire. Les terminaux Nordark se reconnaissent à leurs tours de contrôle encagées de grillages anti-drones et à leurs écrans tarifaires affichant en temps réel les 'indices de passage' — une cotation cynique des vies humaines en transit.
+
+tensions_narratives: >
+  Nordark est au bord d'une implosion interne : les factions militaires intégrées réclament une partition des revenus que les technocrates logistiques refusent, créant une ligne de fracture entre seigneurs de guerre et gestionnaires de flux. Parallèlement, le dégel accéléré de l'Arctique ouvre de nouveaux passages que Nordark n'a ni les moyens ni le personnel pour sécuriser — des routes grises que des acteurs hostiles commencent à emprunter. La question qui hante les couloirs de Tromsø : peut-on maintenir un empire logistique sans État derrière soi, ou Nordark est-elle condamnée à devenir l'État qu'elle a remplacé ?
+
+date_creation: 2026-06-15
+---
+
+# Konsortiet Nordark — Axes du Grand Nord
+
+## Rôle dans [[breakdown]]
+Dans un monde de ruptures logistiques généralisées, Nordark est devenue une puissance de fait dans l'Arctique déglacialisé, contrôlant les derniers corridors fonctionnels entre les blocs eurasiatique et nord-américain. Ni État ni simple entreprise, le Konsortiet opère comme un seigneur de guerre logistique : il fixe les prix de passage, lève ses propres milices de protection et arbitre les conflits de transit à coups de contrats armés. Sa légitimité ne repose plus sur aucun mandat institutionnel mais sur la seule capacité à faire circuler — ou bloquer — ce dont les populations ont besoin pour survivre.
+
+## Responsabilités
+Nordark maintient sous contrôle armé les routes maritimes arctiques (passage du Nord-Est, corridor de Barents), les terminaux énergétiques de Tromsø, Mourmansk-Ouest et Svalbard, ainsi que les pipelines de transit hydrogène et GNL reliant les enclaves industrielles scandinaves aux clients asiatiques et nord-américains. Elle perçoit des droits de passage sur tout convoi — alimentaire, énergétique ou militaire — empruntant ses axes, et assure la maintenance minimale des balises et systèmes de navigation dans sa zone d'influence.
+
+## Variables influencées
+- [[geopolitique_conflits]]
+- [[energie_ressources_critiques]]
+- [[organisation_territoires]]
+- [[climat_environnement_global]]
+
+## Relations
+**Alliés** : [[enclaves_industrielles_de_bergen_troms_breakdown]], [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]], [[consortiums_energetiques_samoiedes_du_yamal_breakdown]]
+**Opposants** : [[hanse_baltique_recomposee_breakdown]], [[milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown]], [[federation_russe_residuelle_district_de_mourmansk_breakdown]], [[conglometrat_sino_siberien_bohai_transit_breakdown]]
+
+## Description journalistique
+À Tromsø, on ne parle plus de la ville mais du 'nœud Nordark'. Leurs convois brise-glace portent des drapeaux noirs frappés d'un compas brisé sur fond de mer blanche — symbole involontairement honnête d'une organisation qui oriente le monde sans plus croire aux anciennes directions. Un reporter qui tente d'embarquer sans accréditation Nordark disparaît dans les statistiques de 'pertes de transit'. Le Konsortiet ne communique plus par conférences de presse mais par bulletins tarifaires : en 2097, le droit de passage d'un convoi alimentaire vers les enclaves finlandaises a augmenté de 340 % en six mois. Ce que les anciens gouvernements scandinaves avaient construit comme infrastructure publique, Nordark l'a transformé en feudalisme de flux — et personne n'a encore trouvé comment les en déloger.
+
+## Tensions narratives
+Nordark est au bord d'une implosion interne : les factions militaires intégrées réclament une partition des revenus que les technocrates logistiques refusent, créant une ligne de fracture entre seigneurs de guerre et gestionnaires de flux. Parallèlement, le dégel accéléré de l'Arctique ouvre de nouveaux passages que Nordark n'a ni les moyens ni le personnel pour sécuriser — des routes grises que des acteurs hostiles commencent à emprunter. La question qui hante les couloirs de Tromsø : peut-on maintenir un empire logistique sans État derrière soi, ou Nordark est-elle condamnée à devenir l'État qu'elle a remplacé ?

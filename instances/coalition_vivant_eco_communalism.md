@@ -1,0 +1,94 @@
+---
+name: Les Gardiens du Territoire
+type: instance
+slug: coalition_vivant_eco_communalism
+entite: coalition_vivant
+scenario: eco_communalism
+localisation:
+  zone: grande_vallee_bioterritoire
+  lieu: La Grande-Vallée
+  type_lieu: region
+type_dans_scenario: mouvement
+role_dans_scenario: >
+  Force politique et spirituelle centrale dans la gouvernance des
+  bioterritoires. Les Gardiens du Territoire ne sont pas une organisation
+  centralisée mais une pratique partagée — chaque communauté a ses propres
+  gardiens, formés par les anciens, responsables de la relation entre
+  la communauté et son écosystème local.
+responsabilites: >
+  Surveillance et soin des écosystèmes locaux. Médiation entre besoins
+  humains et capacités de l'environnement. Transmission des savoirs
+  écologiques traditionnels et contemporains. Représentation du territoire
+  dans les assemblées communautaires.
+impact_local: 4
+impact_systemique_global: 2
+variables_influencees:
+  - climat_environnement_global
+  - organisation_territoires
+  - valeurs_culture_tempo_sociale
+zone_geographique:
+  - locale
+  - régionale
+zone_systemique:
+  - société
+  - infrastructure
+alliances:
+  - assemblee_territoires_eco_communalism
+  - le_temoin_eco_communalism
+oppositions: []
+type_relation_dominante: symbiose
+annee_debut: 2045
+annee_fin:
+etat_temporel: actif
+age_historique: dominant
+generation: reconstruction
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+description_journalistique: >
+  Dans le bioterritoire de la Grande-Vallée, ils sont sept — dont trois
+  héritiers de traditions autochtones et quatre formés par l'Université
+  Nomade. Ils se lèvent avant l'aube pour mesurer les eaux. Ils savent
+  quels arbres sont malades avant que les instruments le détectent.
+  Ils parlent deux fois par an à l'assemblée. Quand ils parlent,
+  les débats s'arrêtent.
+signes_distinctifs: >
+  Présence physique constante dans les zones qu'ils gardent. Carnets
+  de terrain partagés avec la communauté. Pas d'uniformes ni de hiérarchie
+  formelle — reconnus par leur connaissance et leur présence.
+tensions_narratives: >
+  Tension entre la transmission traditionnelle et l'intégration des
+  données numériques. Débat sur les limites de leur autorité — quand
+  le territoire dit non, les humains doivent-ils obéir ?
+date_creation: 2098-01-01
+---
+
+# Les Gardiens du Territoire
+
+## Rôle dans [[eco_communalism]]
+Force politique et spirituelle dans la gouvernance des bioterritoires.
+Pratique partagée — chaque communauté a ses propres gardiens.
+
+## Variables influencées
+- [[climat_environnement_global]]
+- [[organisation_territoires]]
+- [[valeurs_culture_tempo_sociale]]
+
+## Relations
+**Alliés** : [[assemblee_territoires_eco_communalism]], [[le_temoin_eco_communalism]]
+**Opposants** : _aucun défini_
+
+## Description journalistique
+Dans le bioterritoire de la Grande-Vallée, ils sont sept. Ils se lèvent
+avant l'aube pour mesurer les eaux. Ils savent quels arbres sont malades
+avant que les instruments le détectent. Quand ils parlent à l'assemblée,
+les débats s'arrêtent.
+
+## Tensions narratives
+Tension entre transmission traditionnelle et données numériques. Débat sur
+les limites de leur autorité — quand le territoire dit non, les humains
+doivent-ils obéir ?

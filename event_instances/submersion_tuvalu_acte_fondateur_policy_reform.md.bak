@@ -1,0 +1,90 @@
+---
+name: 'Acte Fondateur de Funafuti : Naissance du Pacifique Sud Resilience Network'
+type: event_instance
+slug: submersion_tuvalu_acte_fondateur_policy_reform
+archetype: submersion_tuvalu_acte_fondateur
+scenario: policy_reform
+localisation:
+  zone: iles_pacifique_sud
+  lieu: Funafuti, Tuvalu
+  type_lieu: site_strategique
+  statut: review_manuelle
+  note: "L'événement se déroule physiquement à Funafuti (Tuvalu), dans le Pacifique Sud, mais sa portée est explicitement globale avec une validation à Genève ; la zone 'iles_pacifique_sud' est le meilleur candidat géographique pour l'ancrage principal."
+type_evenement: political_social
+portee: globale
+date: 2039
+date_label: novembre 2039
+impossible: false
+custom: true
+description: >
+  Depuis la barge Alofa-Fenua, les caméras du Prisme Global transmettent en direct le vote historique : onze ministres tuvaluans, costumes trempés par les embruns, ratifient la dissolution de leur assise terrestre et la naissance d'un État sans sol. Le Conseil de Régulation Climatique Global valide le Protocole de Funafuti en moins de soixante-douze heures — une vélocité institutionnelle jugée impossible une décennie plus tôt. Leena Väinälä, présente à Genève pour la session extraordinaire, qualifie l'acte de « révolution juridique silencieuse accomplie par des hommes qui ont perdu leur île mais pas leur dignité ». Pour la première fois, un droit post-territorial pleinement opérationnel est codifié dans un traité onusien contraignant.
+consequences: >
+  Le Protocole de Funafuti devient le socle du droit international post-territorial, redéfinissant la souveraineté comme un attribut de la communauté et non du sol — un précédent que vingt-trois États côtiers menacés invoquent dans les deux décennies suivantes pour négocier leur propre statut flottant ou diasporique. Le Pacific South Resilience Network s'impose comme interlocuteur incontournable dans toutes les négociations climatiques globales, transformant la catastrophe en levier diplomatique durable et fragilisant les doctrines de souveraineté territoriale absolue défendues par plusieurs blocs continentaux.
+realisation: >
+  En novembre 2039, la submersion définitive de l'atoll principal de Funafuti, accélérée par une saison cyclonique record, force la tenue d'un dernier Conseil des ministres en territoire physique — à bord d'une barge ancrée à deux mètres au-dessus de ce qui fut jadis la capitale. Dans ce scénario de gouvernance technocratique stabilisée, la communauté internationale réagit avec une rapidité sans précédent : le Conseil de Régulation Climatique Global active un protocole d'urgence, reconnaissant formellement la souveraineté flottante de Tuvalu et de six autres États insulaires co-signataires. Le transfert de souveraineté vers une plateforme modulaire financée par le Fonds Mondial de Résilience Infrastructurelle est ratifié en séance plénière par 94 États membres. Le Pacific South Resilience Network est constitué comme entité de droit international post-territorial, dotée d'un siège permanent au Conseil de Régulation Climatique Global.
+impact_sur_variables:
+  - variable: climat_environnement_global
+    delta_level: 6
+    duree: 30
+    polarite: 1
+  - variable: gouvernance_institutions
+    delta_level: 14
+    duree: 40
+    polarite: 1
+  - variable: organisation_territoires
+    delta_level: -10
+    duree: 35
+    polarite: -1
+  - variable: frontieres_du_systeme
+    delta_level: 12
+    duree: 40
+    polarite: 1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+    - pacifique_sud_resilience_network_policy_reform
+    - conseil_de_regulation_climatique_global_policy_reform
+    - fonds_mondial_de_resilience_infrastructurelle_policy_reform
+    - leena_vainala_policy_reform
+    - prisme_global_policy_reform
+    - assemblee_territoires_policy_reform
+    - agence_stabilisation_climatique_policy_reform
+    - office_integre_des_flux_migratoires_policy_reform
+    - mouvement_pour_la_souverainete_territoriale_absolue_policy_reform
+    - fonds_de_stabilisation_climatique_onu_3_policy_reform
+note_coherence: Dans un monde technocratique à gouvernance_institutions level 80, la réponse institutionnelle rapide et codifiée à la submersion de Tuvalu est non seulement plausible mais attendue — l'événement catalyse exactement le type de réforme juridique systémique que ce scénario valorise, tout en fragilisant les conceptions territoriales classiques (organisation_territoires déjà en tension à 50) et en repoussant les frontières du droit international (frontieres_du_systeme à 45, en expansion).
+custom_source: rééquilibrage_geo_2026-06
+date_creation: 2026-06-24
+---
+
+# Acte Fondateur de Funafuti : Naissance du Pacifique Sud Resilience Network
+
+## Réalisation dans [[policy_reform]]
+En novembre 2039, la submersion définitive de l'atoll principal de Funafuti, accélérée par une saison cyclonique record, force la tenue d'un dernier Conseil des ministres en territoire physique — à bord d'une barge ancrée à deux mètres au-dessus de ce qui fut jadis la capitale. Dans ce scénario de gouvernance technocratique stabilisée, la communauté internationale réagit avec une rapidité sans précédent : le Conseil de Régulation Climatique Global active un protocole d'urgence, reconnaissant formellement la souveraineté flottante de Tuvalu et de six autres États insulaires co-signataires. Le transfert de souveraineté vers une plateforme modulaire financée par le Fonds Mondial de Résilience Infrastructurelle est ratifié en séance plénière par 94 États membres. Le Pacific South Resilience Network est constitué comme entité de droit international post-territorial, dotée d'un siège permanent au Conseil de Régulation Climatique Global.
+
+## Description journalistique
+Depuis la barge Alofa-Fenua, les caméras du Prisme Global transmettent en direct le vote historique : onze ministres tuvaluans, costumes trempés par les embruns, ratifient la dissolution de leur assise terrestre et la naissance d'un État sans sol. Le Conseil de Régulation Climatique Global valide le Protocole de Funafuti en moins de soixante-douze heures — une vélocité institutionnelle jugée impossible une décennie plus tôt. Leena Väinälä, présente à Genève pour la session extraordinaire, qualifie l'acte de « révolution juridique silencieuse accomplie par des hommes qui ont perdu leur île mais pas leur dignité ». Pour la première fois, un droit post-territorial pleinement opérationnel est codifié dans un traité onusien contraignant.
+
+## Conséquences
+Le Protocole de Funafuti devient le socle du droit international post-territorial, redéfinissant la souveraineté comme un attribut de la communauté et non du sol — un précédent que vingt-trois États côtiers menacés invoquent dans les deux décennies suivantes pour négocier leur propre statut flottant ou diasporique. Le Pacific South Resilience Network s'impose comme interlocuteur incontournable dans toutes les négociations climatiques globales, transformant la catastrophe en levier diplomatique durable et fragilisant les doctrines de souveraineté territoriale absolue défendues par plusieurs blocs continentaux.
+
+## Impact sur les variables
+- **climat_environnement_global** : delta +6 sur 30 ans
+- **gouvernance_institutions** : delta +14 sur 40 ans
+- **organisation_territoires** : delta +10 sur 35 ans
+- **frontieres_du_systeme** : delta +12 sur 40 ans
+
+## Acteurs impliqués
+- [[pacifique_sud_resilience_network_policy_reform]]
+- [[conseil_de_regulation_climatique_global_policy_reform]]
+- [[fonds_mondial_de_resilience_infrastructurelle_policy_reform]]
+- [[leena_vainala_policy_reform]]
+- [[prisme_global_policy_reform]]
+- [[assemblee_territoires_policy_reform]]
+- [[agence_stabilisation_climatique_policy_reform]]
+- [[office_integre_des_flux_migratoires_policy_reform]]
+- [[mouvement_pour_la_souverainete_territoriale_absolue_policy_reform]]
+- [[fonds_de_stabilisation_climatique_onu_3_policy_reform]]
+
+## Note de cohérence
+Dans un monde technocratique à gouvernance_institutions level 80, la réponse institutionnelle rapide et codifiée à la submersion de Tuvalu est non seulement plausible mais attendue — l'événement catalyse exactement le type de réforme juridique systémique que ce scénario valorise, tout en fragilisant les conceptions territoriales classiques (organisation_territoires déjà en tension à 50) et en repoussant les frontières du droit international (frontieres_du_systeme à 45, en expansion).

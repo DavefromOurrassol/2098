@@ -1,0 +1,102 @@
+---
+name: Fragments BioSyn
+type: instance
+slug: nexus_biosyn_breakdown
+entite: nexus_biosyn
+scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
+
+type_dans_scenario: organisation
+
+role_dans_scenario: >
+  Ce qui subsiste de Nexus BioSyn n'est plus un conglomérat unifié mais une nébuleuse de filiales autonomes, de détenteurs de brevets dissidents et de réseaux noirs de distribution biotechnologique opérant sans coordination centrale. Certains segments ont été absorbés par des seigneurs régionaux qui contrôlent les stocks de semences et les thérapies cellulaires comme monnaies d'influence. D'autres opèrent en clandestinité, vendant aux plus offrants dans un contexte de pandémies récurrentes qui font de chaque traitement une ressource stratégique. L'entité archétype s'est fracturée suivant les lignes de rupture du monde lui-même.
+
+responsabilites: >
+  Distribution fragmentée et opportuniste de semences de quatrième génération dans les zones encore productives, souvent via des intermédiaires armés ou des accords avec des milices territoriales. Maintien partiel de bases de données de propriété intellectuelle dans des serveurs redondants décentralisés, utilisées comme levier de négociation avec les régimes survivants. Vente de thérapies cellulaires adaptatives à des prix prohibitifs dans les crises sanitaires, exacerbant les inégalités d'accès aux soins.
+
+impact_local: 4
+impact_systemique_global: 3
+variables_influencees:
+    - sante_biotechnologies
+    - systemes_productifs_travail
+    - systeme_economique_redistribution
+    - organisation_territoires
+
+zone_geographique:
+    - régionale
+    - nationale
+
+zone_systemique:
+    - économie
+    - société
+    - gouvernance
+    - infrastructure
+
+alliances:
+    - seigneurs_de_guerre_agro_territoriaux_breakdown
+    - reseaux_noirs_pharmaceutiques_breakdown
+    - milices_de_controle_territorial_breakdown
+    - enclaves_technologiques_survivantes_breakdown
+
+oppositions:
+    - internationale_des_semenciers_agro_pirates_fortress_world
+    - collectifs_de_sante_communautaire_autogeree_breakdown
+    - etats_fragmentes_nationalisant_les_stocks_breakdown
+    - pirates_biologiques_open_source_breakdown
+
+type_relation_dominante: dépendance
+
+annee_debut: 2026
+annee_fin: 
+
+etat_temporel: transformé
+age_historique: résiduel
+generation: post-effondrement
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Il n'existe plus de siège social de Nexus BioSyn. Il n'existe plus de PDG, de conseil d'administration, de rapport annuel. Ce qui reste, c'est le brevet — des millions de séquences génétiques verrouillées dans des serveurs bunkerisés dont personne ne connaît plus tous les accès. Dans les marchés de Karachi, de Lagos ou de Medellin, on parle encore de 'biosyn' comme d'un nom commun : une ampoule de biosyn, un sac de graines biosyn. La marque a survécu à l'entreprise. Des opérateurs locaux brandissent des licences photocopiées, des codes d'activation expirés, pour justifier leur monopole sur la nourriture et la guérison. C'est peut-être la forme la plus pure du capitalisme tardif : l'institution meurt, mais la propriété intellectuelle, elle, demeure.
+
+signes_distinctifs: >
+  Le logo d'origine — un double hélix stylisé en vert électrique sur fond noir — réapparaît fragmenté : tatoué sur les bras de distributeurs clandestins, gravé sur des containers frigorifiques rouillés, imprimé en basse résolution sur des emballages de fortune. Certains fragments d'organisation arborent des couleurs régionales ajoutées au logo d'origine, marquant leur territoire comme une tribu marque sa peau.
+
+tensions_narratives: >
+  Qui détient légitimement les brevets des semences dans un monde sans tribunal international capable de les faire respecter — et que se passe-t-il quand deux factions BioSyn rivales revendiquent le même territoire agricole ? Des communautés entières vivent sous la menace d'une 'coupure de licence' pour leurs cultures génétiquement verrouillées, sans avoir les moyens de payer ni les ressources pour revenir à des semences libres. À l'inverse, des pirates biologiques tentent de décoder et libérer les séquences propriétaires, transformant la biologie en champ de bataille idéologique entre le droit à se nourrir et la logique du brevet. La question hante les zones de conflit : si Nexus BioSyn n'existe plus vraiment, la dette biologique qu'on lui doit existe-t-elle encore ?
+
+date_creation: 2026-06-15
+---
+
+# Fragments BioSyn
+
+## Rôle dans [[breakdown]]
+Ce qui subsiste de Nexus BioSyn n'est plus un conglomérat unifié mais une nébuleuse de filiales autonomes, de détenteurs de brevets dissidents et de réseaux noirs de distribution biotechnologique opérant sans coordination centrale. Certains segments ont été absorbés par des seigneurs régionaux qui contrôlent les stocks de semences et les thérapies cellulaires comme monnaies d'influence. D'autres opèrent en clandestinité, vendant aux plus offrants dans un contexte de pandémies récurrentes qui font de chaque traitement une ressource stratégique. L'entité archétype s'est fracturée suivant les lignes de rupture du monde lui-même.
+
+## Responsabilités
+Distribution fragmentée et opportuniste de semences de quatrième génération dans les zones encore productives, souvent via des intermédiaires armés ou des accords avec des milices territoriales. Maintien partiel de bases de données de propriété intellectuelle dans des serveurs redondants décentralisés, utilisées comme levier de négociation avec les régimes survivants. Vente de thérapies cellulaires adaptatives à des prix prohibitifs dans les crises sanitaires, exacerbant les inégalités d'accès aux soins.
+
+## Variables influencées
+- [[sante_biotechnologies]]
+- [[systemes_productifs_travail]]
+- [[systeme_economique_redistribution]]
+- [[organisation_territoires]]
+
+## Relations
+**Alliés** : [[seigneurs_de_guerre_agro_territoriaux_breakdown]], [[reseaux_noirs_pharmaceutiques_breakdown]], [[milices_de_controle_territorial_breakdown]], [[enclaves_technologiques_survivantes_breakdown]]
+**Opposants** : [[internationale_des_semenciers_agro_pirates_fortress_world]], [[collectifs_de_sante_communautaire_autogeree_breakdown]], [[etats_fragmentes_nationalisant_les_stocks_breakdown]], [[pirates_biologiques_open_source_breakdown]]
+
+## Description journalistique
+Il n'existe plus de siège social de Nexus BioSyn. Il n'existe plus de PDG, de conseil d'administration, de rapport annuel. Ce qui reste, c'est le brevet — des millions de séquences génétiques verrouillées dans des serveurs bunkerisés dont personne ne connaît plus tous les accès. Dans les marchés de Karachi, de Lagos ou de Medellin, on parle encore de 'biosyn' comme d'un nom commun : une ampoule de biosyn, un sac de graines biosyn. La marque a survécu à l'entreprise. Des opérateurs locaux brandissent des licences photocopiées, des codes d'activation expirés, pour justifier leur monopole sur la nourriture et la guérison. C'est peut-être la forme la plus pure du capitalisme tardif : l'institution meurt, mais la propriété intellectuelle, elle, demeure.
+
+## Tensions narratives
+Qui détient légitimement les brevets des semences dans un monde sans tribunal international capable de les faire respecter — et que se passe-t-il quand deux factions BioSyn rivales revendiquent le même territoire agricole ? Des communautés entières vivent sous la menace d'une 'coupure de licence' pour leurs cultures génétiquement verrouillées, sans avoir les moyens de payer ni les ressources pour revenir à des semences libres. À l'inverse, des pirates biologiques tentent de décoder et libérer les séquences propriétaires, transformant la biologie en champ de bataille idéologique entre le droit à se nourrir et la logique du brevet. La question hante les zones de conflit : si Nexus BioSyn n'existe plus vraiment, la dette biologique qu'on lui doit existe-t-elle encore ?

@@ -1,0 +1,73 @@
+---
+name: 'Incident du Passage du Nord-Ouest : la NAT saisit le convoi de l''APA'
+type: event_instance
+slug: incident_passage_arctique_fortress_world
+archetype: incident_passage_arctique
+scenario: fortress_world
+type_evenement: political_social
+portee: continentale
+date: 2059
+date_label: février 2059
+impossible: false
+custom: true
+description: >
+  Les images des trois navires encerclés dans la banquise par les drones de la NAT circulent sur Fractures avant d'être censurées par les médias des blocs. C'est la première confrontation armée directe entre deux autorités de transit arctiques depuis la militarisation des routes polaires. À Nuuk, le Fonds Souverain Nuna Capital convoque une conférence d'urgence et annonce le dépôt d'une requête devant le Tribunal International de la Mer — une institution que ni le Bloc Atlantique ni le Bloc Eurasiatique Occidental ne reconnaissent plus formellement. Les milices de piraterie logistique arctique profitent de la confusion pour intercepter un quatrième navire non escorté.
+consequences: >
+  L'incident entérine la fragmentation définitive des routes arctiques en corridors souverains incompatibles, chaque bloc déployant ses propres protocoles d'escorte armée. La saisine du Tribunal International de la Mer, ignorée par les grandes puissances, démontre l'impuissance des institutions multilatérales résiduelles face aux rapports de force entre blocs. À terme, Nuna Capital se trouve contraint de négocier des accords de protection militaire bilatéraux avec chacun des blocs pour sécuriser ses exportations, renforçant la logique forteresse au détriment de toute gouvernance partagée de l'Arctique.
+realisation: >
+  En février 2059, des unités armées de la Nordisk Arktisk Transitkontroll interceptent et immobilisent trois navires de l'Arctic Passage Authority dans les eaux du passage Nord-Ouest, revendiquées simultanément par plusieurs blocs. L'APA, opérateur para-étatique aligné sur la Coalition Arctique des Blocs Continentaux, transportait des cargaisons de terres rares issues des gisements ouverts par Nuna Capital en 2041. La NAT justifie l'interception par une violation présumée des protocoles de transit souverain instaurés après les décrets de 2049. Nuna Capital dépose immédiatement une plainte devant le tribunal international de la mer — instance résiduelle dont la légitimité est contestée par les grands blocs.
+impact_sur_variables:
+  - variable: geopolitique_conflits
+    delta_level: 8
+    duree: 15
+    polarite: -1
+  - variable: energie_ressources_critiques
+    delta_level: 10
+    duree: 20
+    polarite: -1
+  - variable: frontieres_du_systeme
+    delta_level: 12
+    duree: 25
+    polarite: -1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+    - armada_logistique_nordique_fortress_world
+    - kalaallit_nunaat_sovereign_fund_fortress_world
+    - coalition_arctique_des_blocs_continentaux_fortress_world
+    - institutions_multilaterales_residuelles_fortress_world
+    - milices_de_piraterie_logistique_arctique_fortress_world
+    - complexes_militaro_industriels_de_gestion_des_ressources_fortress_world
+    - voix_du_dehors_fortress_world
+note_coherence: Dans un monde fortress_world à tension maximale où les routes arctiques sont déjà militarisées et les institutions multilatérales vidées de substance, une confrontation armée entre autorités de transit concurrentes est non seulement plausible mais inévitable — elle illustre parfaitement la logique de fragmentation souveraine qui structure ce scénario.
+custom_source: rééquilibrage_geo_2026-06
+date_creation: 2026-06-24
+---
+
+# Incident du Passage du Nord-Ouest : la NAT saisit le convoi de l'APA
+
+## Réalisation dans [[fortress_world]]
+En février 2059, des unités armées de la Nordisk Arktisk Transitkontroll interceptent et immobilisent trois navires de l'Arctic Passage Authority dans les eaux du passage Nord-Ouest, revendiquées simultanément par plusieurs blocs. L'APA, opérateur para-étatique aligné sur la Coalition Arctique des Blocs Continentaux, transportait des cargaisons de terres rares issues des gisements ouverts par Nuna Capital en 2041. La NAT justifie l'interception par une violation présumée des protocoles de transit souverain instaurés après les décrets de 2049. Nuna Capital dépose immédiatement une plainte devant le tribunal international de la mer — instance résiduelle dont la légitimité est contestée par les grands blocs.
+
+## Description journalistique
+Les images des trois navires encerclés dans la banquise par les drones de la NAT circulent sur Fractures avant d'être censurées par les médias des blocs. C'est la première confrontation armée directe entre deux autorités de transit arctiques depuis la militarisation des routes polaires. À Nuuk, le Fonds Souverain Nuna Capital convoque une conférence d'urgence et annonce le dépôt d'une requête devant le Tribunal International de la Mer — une institution que ni le Bloc Atlantique ni le Bloc Eurasiatique Occidental ne reconnaissent plus formellement. Les milices de piraterie logistique arctique profitent de la confusion pour intercepter un quatrième navire non escorté.
+
+## Conséquences
+L'incident entérine la fragmentation définitive des routes arctiques en corridors souverains incompatibles, chaque bloc déployant ses propres protocoles d'escorte armée. La saisine du Tribunal International de la Mer, ignorée par les grandes puissances, démontre l'impuissance des institutions multilatérales résiduelles face aux rapports de force entre blocs. À terme, Nuna Capital se trouve contraint de négocier des accords de protection militaire bilatéraux avec chacun des blocs pour sécuriser ses exportations, renforçant la logique forteresse au détriment de toute gouvernance partagée de l'Arctique.
+
+## Impact sur les variables
+- **geopolitique_conflits** : delta -8 sur 15 ans
+- **energie_ressources_critiques** : delta -10 sur 20 ans
+- **frontieres_du_systeme** : delta -12 sur 25 ans
+
+## Acteurs impliqués
+- [[armada_logistique_nordique_fortress_world]]
+- [[kalaallit_nunaat_sovereign_fund_fortress_world]]
+- [[coalition_arctique_des_blocs_continentaux_fortress_world]]
+- [[institutions_multilaterales_residuelles_fortress_world]]
+- [[milices_de_piraterie_logistique_arctique_fortress_world]]
+- [[complexes_militaro_industriels_de_gestion_des_ressources_fortress_world]]
+- [[voix_du_dehors_fortress_world]]
+
+## Note de cohérence
+Dans un monde fortress_world à tension maximale où les routes arctiques sont déjà militarisées et les institutions multilatérales vidées de substance, une confrontation armée entre autorités de transit concurrentes est non seulement plausible mais inévitable — elle illustre parfaitement la logique de fragmentation souveraine qui structure ce scénario.

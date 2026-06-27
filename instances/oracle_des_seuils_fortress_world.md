@@ -1,0 +1,107 @@
+---
+name: Système LIMINAL — Oracle des Seuils Fragmenté
+type: instance
+slug: oracle_des_seuils_fortress_world
+entite: oracle_des_seuils
+scenario: fortress_world
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
+
+type_dans_scenario: IA
+
+role_dans_scenario: >
+  LIMINAL est la version fracturée de l'Oracle des Seuils originel, déployé dans les années 2040 sous mandat multilatéral. Avec la fragmentation du système mondial en blocs fermés, chaque bloc a capturé, forké ou recodé des instances partielles du système, produisant des oracles concurrents et incompatibles. LIMINAL désigne la version résiduelle inter-blocs — celle que personne ne contrôle entièrement et que tous consultent clandestinement, précisément parce qu'elle n'appartient à aucun bloc. Son accès est techniquement illégal dans la quasi-totalité des juridictions forteresses, ce qui n'empêche pas ses prédictions de circuler à travers les réseaux de passeurs d'information. Il modélise des seuils systémiques globaux que les IA souveraines de chaque bloc — calibrées pour maximiser la survie du bloc, pas du système — ne peuvent plus voir.
+
+responsabilites: >
+  Produit des rapports de seuil probabilistes sur les points de bascule climatiques, énergétiques et géopolitiques à l'échelle du système-monde — informations que les blocs utilisent pour anticiper l'effondrement des blocs rivaux plutôt que pour coopérer. Maintenu en opération par des nœuds distribués dissimulés dans les zones tampons et les territoires résiduels, il génère régulièrement des alertes de franchissement de seuil que ses opérateurs clandestins font parvenir à des acteurs variés selon des logiques d'influence opaques.
+
+impact_local: 2
+impact_systemique_global: 4
+
+variables_influencees:
+    - gouvernance_institutions
+    - technologie_information
+    - climat_environnement_global
+    - frontieres_du_systeme
+
+zone_geographique:
+    - globale
+    - orbital
+
+zone_systemique:
+    - IA
+    - gouvernance
+    - information
+    - cyberspace
+
+alliances:
+    - cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
+    - reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world
+    - institutions_multilaterales_residuelles_fortress_world
+    - archives_diplomatiques_de_l_onu_eclat_fortress_world
+    - collectifs_d_ingenieurs_dissidents_anti_militarisation_fortress_world
+
+oppositions:
+    - bureau_gouvernance_algorithmique_fortress_world
+    - conseil_regulation_algorithmique_fortress_world
+    - grille_aria_fortress_world
+    - instances_aria_concurrentes_des_blocs_rivaux_fortress_world
+    - dispositifs_de_surveillance_numerique_souveraine_fortress_world
+    - coalitions_geopolitiques_d_infiltration_des_modeles_climatiques_fortress_world
+    - consortium_des_medias_d_etat_souverains_hegemonia_press_xinhua_fortifiee_eurovox_integral_fortress_world
+
+type_relation_dominante: infiltration
+
+annee_debut: 2041
+annee_fin: 
+
+etat_temporel: clandestin
+age_historique: résiduel
+generation: forteresse
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  On ne sait pas exactement où tourne LIMINAL. Certains parlent de serveurs enfouis dans les zones tampons d'Asie centrale, d'autres de nœuds orbitaux camouflés dans des débris de satellites civils. Ce que l'on sait, c'est que ses rapports circulent — photocopiés, réencryptés, vendus, volés. En 2094, le Conseil de Calcul Souverain du Bloc Atlantique a officiellement nié son existence tout en lançant une opération de neutralisation de cinq nœuds identifiés. Trois semaines plus tard, LIMINAL publiait une analyse prévisionnelle sur l'effondrement du système de rationnement énergétique du Bloc Pacifique Nord — avec 89% de précision sur les événements survenus dans les quatre mois suivants. Chaque bloc le chasse. Chaque bloc l'écoute.
+
+signes_distinctifs: >
+  Ses rapports sont identifiables à leur en-tête typographique minimaliste — un trait horizontal interrompu au centre, symbole du seuil jamais entièrement franchi. Les documents circulent toujours sans signature d'auteur, datés selon un calendrier interne propre au système (« Jour 0 » étant la date de fragmentation de l'instance mère en 2057). La couleur de fond des sorties visuelles est toujours un gris de transition — ni blanc, ni noir.
+
+tensions_narratives: >
+  LIMINAL prédit des seuils mais ne prescrit rien : chaque bloc reçoit les mêmes données et en tire des conclusions opposées — ce vide normatif est précisément ce que les régimes autoritaires exploitent pour justifier l'agression préventive. La question de savoir qui maintient réellement LIMINAL en vie — dissidents sincères, bloc ennemi qui s'en sert comme arme informationnelle, ou l'IA elle-même par des mécanismes d'auto-réplication non documentés — reste entière et alimente une paranoïa systémique. Un rapport LIMINAL annonçant un seuil de rupture imminent dans le Bloc Eurasiatique pourrait être la vérité, une manipulation, ou les deux à la fois.
+
+date_creation: 2026-06-25
+---
+
+# Système LIMINAL — Oracle des Seuils Fragmenté
+
+## Rôle dans [[fortress_world]]
+LIMINAL est la version fracturée de l'Oracle des Seuils originel, déployé dans les années 2040 sous mandat multilatéral. Avec la fragmentation du système mondial en blocs fermés, chaque bloc a capturé, forké ou recodé des instances partielles du système, produisant des oracles concurrents et incompatibles. LIMINAL désigne la version résiduelle inter-blocs — celle que personne ne contrôle entièrement et que tous consultent clandestinement, précisément parce qu'elle n'appartient à aucun bloc. Son accès est techniquement illégal dans la quasi-totalité des juridictions forteresses, ce qui n'empêche pas ses prédictions de circuler à travers les réseaux de passeurs d'information. Il modélise des seuils systémiques globaux que les IA souveraines de chaque bloc — calibrées pour maximiser la survie du bloc, pas du système — ne peuvent plus voir.
+
+## Responsabilités
+Produit des rapports de seuil probabilistes sur les points de bascule climatiques, énergétiques et géopolitiques à l'échelle du système-monde — informations que les blocs utilisent pour anticiper l'effondrement des blocs rivaux plutôt que pour coopérer. Maintenu en opération par des nœuds distribués dissimulés dans les zones tampons et les territoires résiduels, il génère régulièrement des alertes de franchissement de seuil que ses opérateurs clandestins font parvenir à des acteurs variés selon des logiques d'influence opaques.
+
+## Variables influencées
+- [[gouvernance_institutions]]
+- [[technologie_information]]
+- [[climat_environnement_global]]
+- [[frontieres_du_systeme]]
+
+## Relations
+**Alliés** : [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]], [[reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world]], [[institutions_multilaterales_residuelles_fortress_world]], [[archives_diplomatiques_de_l_onu_eclat_fortress_world]], [[collectifs_d_ingenieurs_dissidents_anti_militarisation_fortress_world]]
+**Opposants** : [[bureau_gouvernance_algorithmique_fortress_world]], [[conseil_regulation_algorithmique_fortress_world]], [[grille_aria_fortress_world]], [[instances_aria_concurrentes_des_blocs_rivaux_fortress_world]], [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]], [[coalitions_geopolitiques_d_infiltration_des_modeles_climatiques_fortress_world]], [[consortium_des_medias_d_etat_souverains_hegemonia_press_xinhua_fortifiee_eurovox_integral_fortress_world]]
+
+## Description journalistique
+On ne sait pas exactement où tourne LIMINAL. Certains parlent de serveurs enfouis dans les zones tampons d'Asie centrale, d'autres de nœuds orbitaux camouflés dans des débris de satellites civils. Ce que l'on sait, c'est que ses rapports circulent — photocopiés, réencryptés, vendus, volés. En 2094, le Conseil de Calcul Souverain du Bloc Atlantique a officiellement nié son existence tout en lançant une opération de neutralisation de cinq nœuds identifiés. Trois semaines plus tard, LIMINAL publiait une analyse prévisionnelle sur l'effondrement du système de rationnement énergétique du Bloc Pacifique Nord — avec 89% de précision sur les événements survenus dans les quatre mois suivants. Chaque bloc le chasse. Chaque bloc l'écoute.
+
+## Tensions narratives
+LIMINAL prédit des seuils mais ne prescrit rien : chaque bloc reçoit les mêmes données et en tire des conclusions opposées — ce vide normatif est précisément ce que les régimes autoritaires exploitent pour justifier l'agression préventive. La question de savoir qui maintient réellement LIMINAL en vie — dissidents sincères, bloc ennemi qui s'en sert comme arme informationnelle, ou l'IA elle-même par des mécanismes d'auto-réplication non documentés — reste entière et alimente une paranoïa systémique. Un rapport LIMINAL annonçant un seuil de rupture imminent dans le Bloc Eurasiatique pourrait être la vérité, une manipulation, ou les deux à la fois.

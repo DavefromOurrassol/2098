@@ -1,0 +1,97 @@
+---
+name: Amara Diallo-Nkosi
+type: instance
+slug: amara_diallo_nkosi_policy_reform
+entite: amara_diallo_nkosi
+scenario: policy_reform
+
+type_dans_scenario: humain
+
+role_dans_scenario: >
+  Architecte principale des Protocoles de Redistribution Hydrologique du Bassin du Congo (PRHBC), Amara Diallo-Nkosi incarne la figure de la technocratie humaniste dans un monde où les institutions globales cherchent à transformer la compétence en légitimité. Elle occupe un poste de commissaire technique au sein de l'Autorité Continentale des Ressources Aquatiques (ACRA), instance multi-niveaux héritée des réformes de gouvernance des années 2060. Son rôle est à la fois normatif — elle rédige les standards de partage hydrique opposables aux États membres — et politique, car elle arbitre les conflits d'intérêts entre régions excédentaires et populations déficitaires. Elle est la preuve vivante que la transition peut produire des figures d'autorité morale autant que technique.
+
+responsabilites: >
+  Elle supervise la modélisation prédictive des flux hydriques sahélo-congolais via des jumeaux numériques couplés aux capteurs orbitaux du réseau Ourrassol. Elle négocie les quotas d'accès à l'eau entre gouvernements locaux, coalitions communautaires et opérateurs d'infrastructure, en s'appuyant sur des algorithmes de justice distributive qu'elle a elle-même co-conçus. Elle rend compte annuellement devant le Conseil de Régulation Climatique Global, garantissant la transparence publique des allocations.
+
+impact_local: 4
+impact_systemique_global: 4
+variables_influencees:
+    - energie_ressources_critiques
+    - gouvernance_institutions
+    - climat_environnement_global
+    - demographie_mobilite_humaine
+
+zone_geographique:
+    - régionale
+    - continentale
+    - globale
+
+zone_systemique:
+    - gouvernance
+    - infrastructure
+    - énergie
+    - société
+
+alliances:
+    - autorite_continentale_des_ressources_aquatiques_acra_policy_reform
+    - conseil_de_regulation_climatique_global_policy_reform
+    - collectifs_de_defense_hydrique_saheliens_policy_reform
+    - institut_de_modelisation_hydrologique_de_kinshasa_policy_reform
+
+oppositions:
+    - consortiums_agro_industriels_du_bassin_fluvial_policy_reform
+    - bloc_des_gouvernements_souverainistes_hydriques_new_sustainability
+    - factions_technocratiques_de_la_marchandisation_hydrique_policy_reform
+
+type_relation_dominante: coopération
+
+annee_debut: 2061
+annee_fin: 
+
+etat_temporel: actif
+age_historique: dominant
+generation: transition
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Dans les couloirs climatisés du siège de l'ACRA à Brazzaville, Amara Diallo-Nkosi parle d'eau comme d'autres parlent de constitution. À 67 ans, cette femme née à Agadez alors que le Niger achevait de mourir porte dans sa voix la mémoire des puits asséchés et dans ses mains les tablettes de projection holographique des débits du Congo. Elle est celle qui a transformé une ressource en droit opposable — et certains ne le lui pardonnent pas. Les lobbies agro-industriels la qualifient de 'pasionaria du débit', les communautés lacustres du Tchad la désignent simplement comme 'la femme qui a rendu l'eau juste'. Elle incarne la promesse et la limite de la technocratie humaniste : capable de faire plier les États, impuissante à effacer les inégalités qu'elle n'a pas le mandat de toucher.
+
+signes_distinctifs: >
+  Elle porte invariablement un bracelet en argile bleue du lac Tchad — symbole de sa communauté d'origine et rappel physique de ce qui est en jeu. Ses présentations institutionnelles mêlent toujours une cartographie algorithmique ultra-précise et des témoignages audio de communautés rurales, refusant de séparer la donnée de l'humain qu'elle représente. Sa signature publique est un schéma hydraulique dessiné à la main qu'elle reproduit à l'identique depuis vingt ans.
+
+tensions_narratives: >
+  La tension centrale de son parcours est celle du mandataire pris en étau : les protocoles qu'elle a conçus favorisent objectivement les populations les plus vulnérables, mais leur application passe par des institutions qui restent dominées par les États les plus puissants. Une fuite récente de données algorithmiques suggère que ses modèles prédictifs ont été altérés par des opérateurs privés, ce qui menace sa réputation d'intégrité et la stabilité des accords. Par ailleurs, une nouvelle génération de militants hydriques conteste la légitimité même de la gouvernance technocratique, l'accusant de 'gérer l'injustice plutôt que de la détruire'. Sa trajectoire oscille entre consécration institutionnelle et désillusion radicale.
+
+date_creation: 2026-06-15
+---
+
+# Amara Diallo-Nkosi
+
+## Rôle dans [[policy_reform]]
+Architecte principale des Protocoles de Redistribution Hydrologique du Bassin du Congo (PRHBC), Amara Diallo-Nkosi incarne la figure de la technocratie humaniste dans un monde où les institutions globales cherchent à transformer la compétence en légitimité. Elle occupe un poste de commissaire technique au sein de l'Autorité Continentale des Ressources Aquatiques (ACRA), instance multi-niveaux héritée des réformes de gouvernance des années 2060. Son rôle est à la fois normatif — elle rédige les standards de partage hydrique opposables aux États membres — et politique, car elle arbitre les conflits d'intérêts entre régions excédentaires et populations déficitaires. Elle est la preuve vivante que la transition peut produire des figures d'autorité morale autant que technique.
+
+## Responsabilités
+Elle supervise la modélisation prédictive des flux hydriques sahélo-congolais via des jumeaux numériques couplés aux capteurs orbitaux du réseau Ourrassol. Elle négocie les quotas d'accès à l'eau entre gouvernements locaux, coalitions communautaires et opérateurs d'infrastructure, en s'appuyant sur des algorithmes de justice distributive qu'elle a elle-même co-conçus. Elle rend compte annuellement devant le Conseil de Régulation Climatique Global, garantissant la transparence publique des allocations.
+
+## Variables influencées
+- [[energie_ressources_critiques]]
+- [[gouvernance_institutions]]
+- [[climat_environnement_global]]
+- [[demographie_mobilite_humaine]]
+
+## Relations
+**Alliés** : [[autorite_continentale_des_ressources_aquatiques_acra_policy_reform]], [[conseil_de_regulation_climatique_global_policy_reform]], [[collectifs_de_defense_hydrique_saheliens_policy_reform]], [[institut_de_modelisation_hydrologique_de_kinshasa_policy_reform]]
+**Opposants** : [[consortiums_agro_industriels_du_bassin_fluvial_policy_reform]], [[bloc_des_gouvernements_souverainistes_hydriques_new_sustainability]], [[factions_technocratiques_de_la_marchandisation_hydrique_policy_reform]]
+
+## Description journalistique
+Dans les couloirs climatisés du siège de l'ACRA à Brazzaville, Amara Diallo-Nkosi parle d'eau comme d'autres parlent de constitution. À 67 ans, cette femme née à Agadez alors que le Niger achevait de mourir porte dans sa voix la mémoire des puits asséchés et dans ses mains les tablettes de projection holographique des débits du Congo. Elle est celle qui a transformé une ressource en droit opposable — et certains ne le lui pardonnent pas. Les lobbies agro-industriels la qualifient de 'pasionaria du débit', les communautés lacustres du Tchad la désignent simplement comme 'la femme qui a rendu l'eau juste'. Elle incarne la promesse et la limite de la technocratie humaniste : capable de faire plier les États, impuissante à effacer les inégalités qu'elle n'a pas le mandat de toucher.
+
+## Tensions narratives
+La tension centrale de son parcours est celle du mandataire pris en étau : les protocoles qu'elle a conçus favorisent objectivement les populations les plus vulnérables, mais leur application passe par des institutions qui restent dominées par les États les plus puissants. Une fuite récente de données algorithmiques suggère que ses modèles prédictifs ont été altérés par des opérateurs privés, ce qui menace sa réputation d'intégrité et la stabilité des accords. Par ailleurs, une nouvelle génération de militants hydriques conteste la légitimité même de la gouvernance technocratique, l'accusant de 'gérer l'injustice plutôt que de la détruire'. Sa trajectoire oscille entre consécration institutionnelle et désillusion radicale.

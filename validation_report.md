@@ -1,0 +1,1085 @@
+# Rapport de validation — Ourrassol 2098
+Date : 2026-06-16 05:38
+
+## Résumé
+0 erreurs | 1068 avertissements | 0 corrections
+
+## Inventaire
+- [nomenclature] 6/6 scénarios | 12/12 variables
+- [entities] 25 entités chargées
+- [instances] 92 instances chargées
+- [thematiques] 20 thématiques trouvées
+- [cross_references] 156 slugs dans le référentiel
+- [matrix] 132 edges dans la matrice
+- [events] 3 archétypes d'événements
+- [events] 18 instances d'événements
+
+## Avertissements
+- [entities] `prisme_global.md` — catégorie invalide : 'média'
+- [entities] `voix_du_dehors.md` — catégorie invalide : 'média'
+- [instances] `agence_stabilisation_climatique_new_sustainability.md` — impact_local hors plage [0-5] : 6
+- [instances] `agence_stabilisation_climatique_new_sustainability.md` — impact_systemique_global hors plage [0-5] : 9
+- [instances] `agence_stabilisation_climatique_policy_reform.md` — impact_systemique_global hors plage [0-5] : 9
+- [instances] `agence_stabilisation_climatique_reference.md` — impact_systemique_global hors plage [0-5] : 7
+- [instances] `alliance_blocs_souverains_breakdown.md` — impact_systemique_global hors plage [0-5] : 6
+- [instances] `alliance_blocs_souverains_fortress_world.md` — impact_systemique_global hors plage [0-5] : 8
+- [instances] `alliance_blocs_souverains_reference.md` — impact_systemique_global hors plage [0-5] : 7
+- [instances] `amara_diallo_nkosi_breakdown.md` — impact_local hors plage [0-5] : 7
+- [instances] `amara_diallo_nkosi_new_sustainability.md` — impact_local hors plage [0-5] : 6
+- [instances] `amara_diallo_nkosi_new_sustainability.md` — impact_systemique_global hors plage [0-5] : 88
+- [instances] `amara_diallo_nkosi_policy_reform.md` — impact_local hors plage [0-5] : 72
+- [instances] `amara_diallo_nkosi_policy_reform.md` — impact_systemique_global hors plage [0-5] : 85
+- [instances] `amara_diallo_nkosi_reference.md` — impact_local hors plage [0-5] : 72
+- [instances] `amara_diallo_nkosi_reference.md` — impact_systemique_global hors plage [0-5] : 58
+- [instances] `armada_logistique_nordique_breakdown.md` — etat_temporel 'actif' potentiellement incohérent avec state_of_system 'chaotique' du scénario 'breakdown'
+- [instances] `armada_logistique_nordique_breakdown.md` — impact_local hors plage [0-5] : 7
+- [instances] `armada_logistique_nordique_breakdown.md` — impact_systemique_global hors plage [0-5] : 8
+- [instances] `armada_logistique_nordique_fortress_world.md` — impact_local hors plage [0-5] : 7
+- [instances] `armada_logistique_nordique_fortress_world.md` — impact_systemique_global hors plage [0-5] : 9
+- [instances] `armada_logistique_nordique_reference.md` — impact_local hors plage [0-5] : 6
+- [instances] `armada_logistique_nordique_reference.md` — impact_systemique_global hors plage [0-5] : 8
+- [instances] `bureau_gouvernance_algorithmique_fortress_world.md` — impact_local hors plage [0-5] : 82
+- [instances] `bureau_gouvernance_algorithmique_fortress_world.md` — impact_systemique_global hors plage [0-5] : 61
+- [instances] `bureau_gouvernance_algorithmique_new_sustainability.md` — impact_systemique_global hors plage [0-5] : 9
+- [instances] `bureau_gouvernance_algorithmique_policy_reform.md` — impact_systemique_global hors plage [0-5] : 9
+- [instances] `collectifs_du_seuil_breakdown.md` — etat_temporel 'actif' potentiellement incohérent avec state_of_system 'chaotique' du scénario 'breakdown'
+- [instances] `collectifs_du_seuil_breakdown.md` — impact_local hors plage [0-5] : 8
+- [instances] `collectifs_du_seuil_eco_communalism.md` — impact_local hors plage [0-5] : 6
+- [instances] `collectifs_du_seuil_fortress_world.md` — impact_local hors plage [0-5] : 6
+- [instances] `conseil_regulation_ressources_fortress_world.md` — etat_temporel 'transformé' potentiellement incohérent avec state_of_system 'instable' du scénario 'fortress_world'
+- [instances] `conseil_regulation_ressources_new_sustainability.md` — impact_systemique_global hors plage [0-5] : 9
+- [instances] `conseil_regulation_ressources_policy_reform.md` — impact_systemique_global hors plage [0-5] : 9
+- [instances] `conseil_regulation_ressources_reference.md` — impact_systemique_global hors plage [0-5] : 7
+- [instances] `consortium_helios_fortress_world.md` — etat_temporel 'transformé' potentiellement incohérent avec state_of_system 'instable' du scénario 'fortress_world'
+- [instances] `consortium_helios_fortress_world.md` — impact_local hors plage [0-5] : 7
+- [instances] `consortium_helios_fortress_world.md` — impact_systemique_global hors plage [0-5] : 9
+- [instances] `consortium_helios_new_sustainability.md` — impact_systemique_global hors plage [0-5] : 9
+- [instances] `consortium_helios_policy_reform.md` — impact_systemique_global hors plage [0-5] : 9
+- [instances] `consortium_helios_reference.md` — impact_systemique_global hors plage [0-5] : 8
+- [instances] `cooperative_terrafond_breakdown.md` — impact_local hors plage [0-5] : 7
+- [instances] `cooperative_terrafond_eco_communalism.md` — impact_local hors plage [0-5] : 8
+- [instances] `cooperative_terrafond_reference.md` — impact_local hors plage [0-5] : 7
+- [instances] `federation_communs_territoriaux_breakdown.md` — impact_local hors plage [0-5] : 8
+- [instances] `federation_communs_territoriaux_eco_communalism.md` — impact_local hors plage [0-5] : 8
+- [instances] `federation_communs_territoriaux_reference.md` — impact_local hors plage [0-5] : 72
+- [instances] `federation_communs_territoriaux_reference.md` — impact_systemique_global hors plage [0-5] : 38
+- [instances] `grille_aria_fortress_world.md` — impact_local hors plage [0-5] : 9
+- [instances] `grille_aria_fortress_world.md` — impact_systemique_global hors plage [0-5] : 7
+- [instances] `grille_aria_new_sustainability.md` — impact_local hors plage [0-5] : 6
+- [instances] `grille_aria_new_sustainability.md` — impact_systemique_global hors plage [0-5] : 9
+- [instances] `internationale_travailleurs_augmentes_fortress_world.md` — impact_local hors plage [0-5] : 6
+- [instances] `internationale_travailleurs_augmentes_new_sustainability.md` — impact_systemique_global hors plage [0-5] : 7
+- [instances] `internationale_travailleurs_augmentes_policy_reform.md` — impact_local hors plage [0-5] : 6
+- [instances] `internationale_travailleurs_augmentes_policy_reform.md` — impact_systemique_global hors plage [0-5] : 8
+- [instances] `internationale_travailleurs_augmentes_reference.md` — impact_systemique_global hors plage [0-5] : 7
+- [instances] `leena_vainala_eco_communalism.md` — impact_local hors plage [0-5] : 7
+- [instances] `leena_vainala_new_sustainability.md` — impact_systemique_global hors plage [0-5] : 8
+- [instances] `leena_vainala_policy_reform.md` — impact_systemique_global hors plage [0-5] : 8
+- [instances] `leena_vainala_reference.md` — impact_systemique_global hors plage [0-5] : 7
+- [instances] `mouvement_racines_vivantes_breakdown.md` — impact_local hors plage [0-5] : 8
+- [instances] `mouvement_racines_vivantes_eco_communalism.md` — impact_local hors plage [0-5] : 8
+- [instances] `mouvement_racines_vivantes_reference.md` — impact_local hors plage [0-5] : 72
+- [instances] `mouvement_racines_vivantes_reference.md` — impact_systemique_global hors plage [0-5] : 28
+- [instances] `nexus_biosyn_breakdown.md` — impact_local hors plage [0-5] : 8
+- [instances] `nexus_biosyn_fortress_world.md` — impact_systemique_global hors plage [0-5] : 9
+- [instances] `nexus_biosyn_new_sustainability.md` — impact_local hors plage [0-5] : 6
+- [instances] `nexus_biosyn_new_sustainability.md` — impact_systemique_global hors plage [0-5] : 9
+- [instances] `nexus_biosyn_policy_reform.md` — impact_local hors plage [0-5] : 6
+- [instances] `nexus_biosyn_policy_reform.md` — impact_systemique_global hors plage [0-5] : 9
+- [instances] `nexus_biosyn_reference.md` — impact_local hors plage [0-5] : 6
+- [instances] `nexus_biosyn_reference.md` — impact_systemique_global hors plage [0-5] : 9
+- [instances] `prisme_global_eco_communalism.md` — impact_local hors plage [0-5] : 8
+- [instances] `prisme_global_new_sustainability.md` — impact_local hors plage [0-5] : 6
+- [instances] `prisme_global_new_sustainability.md` — impact_systemique_global hors plage [0-5] : 9
+- [instances] `prisme_global_policy_reform.md` — impact_systemique_global hors plage [0-5] : 8
+- [instances] `prisme_global_reference.md` — impact_local hors plage [0-5] : 6
+- [instances] `prisme_global_reference.md` — impact_systemique_global hors plage [0-5] : 8
+- [instances] `reseau_mnemos_breakdown.md` — impact_local hors plage [0-5] : 7
+- [instances] `reseau_mnemos_eco_communalism.md` — impact_local hors plage [0-5] : 8
+- [instances] `reseau_mnemos_new_sustainability.md` — impact_local hors plage [0-5] : 72
+- [instances] `reseau_mnemos_new_sustainability.md` — impact_systemique_global hors plage [0-5] : 91
+- [instances] `reseau_mnemos_reference.md` — impact_systemique_global hors plage [0-5] : 7
+- [instances] `trame_bioclimatique_breakdown.md` — impact_local hors plage [0-5] : 8
+- [instances] `trame_bioclimatique_eco_communalism.md` — impact_local hors plage [0-5] : 8
+- [instances] `trame_bioclimatique_new_sustainability.md` — impact_local hors plage [0-5] : 7
+- [instances] `trame_bioclimatique_new_sustainability.md` — impact_systemique_global hors plage [0-5] : 9
+- [instances] `trame_bioclimatique_policy_reform.md` — impact_local hors plage [0-5] : 6
+- [instances] `trame_bioclimatique_policy_reform.md` — impact_systemique_global hors plage [0-5] : 9
+- [instances] `vasil_orentchev_breakdown.md` — etat_temporel 'actif' potentiellement incohérent avec state_of_system 'chaotique' du scénario 'breakdown'
+- [instances] `vasil_orentchev_breakdown.md` — impact_local hors plage [0-5] : 7
+- [instances] `vasil_orentchev_fortress_world.md` — impact_local hors plage [0-5] : 8
+- [instances] `vasil_orentchev_fortress_world.md` — impact_systemique_global hors plage [0-5] : 6
+- [instances] `vasil_orentchev_reference.md` — impact_local hors plage [0-5] : 7
+- [instances] `voix_du_dehors_breakdown.md` — impact_local hors plage [0-5] : 8
+- [instances] `voix_du_dehors_eco_communalism.md` — impact_local hors plage [0-5] : 8
+- [instances] `voix_du_dehors_fortress_world.md` — impact_local hors plage [0-5] : 6
+- [instances] `voix_du_dehors_fortress_world.md` — impact_systemique_global hors plage [0-5] : 8
+- [instances] `voix_du_dehors_reference.md` — impact_systemique_global hors plage [0-5] : 7
+- [instances] `agence_stabilisation_climatique_breakdown.md` — référence alliances 'Réseaux scientifiques indépendants (climatologues sans État)' non trouvée dans instances/
+- [instances] `agence_stabilisation_climatique_breakdown.md` — référence alliances 'ONG de gestion migratoire survivantes' non trouvée dans instances/
+- [instances] `agence_stabilisation_climatique_breakdown.md` — référence alliances 'Quelques cités-États côtières désespérées' non trouvée dans instances/
+- [instances] `agence_stabilisation_climatique_breakdown.md` — référence oppositions 'Blocs régionaux souverainistes (Ligue Eurasiatique, Coalition Pacifique)' non trouvée dans instances/
+- [instances] `agence_stabilisation_climatique_breakdown.md` — référence oppositions 'Compagnies de géo-ingénierie privées opérant sans mandat' non trouvée dans instances/
+- [instances] `agence_stabilisation_climatique_breakdown.md` — référence oppositions 'Mouvements populistes anti-technocratiques' non trouvée dans instances/
+- [instances] `agence_stabilisation_climatique_new_sustainability.md` — référence alliances 'Consortium des IA Climatiques (CIAC)' non trouvée dans instances/
+- [instances] `agence_stabilisation_climatique_new_sustainability.md` — référence alliances 'Fonds Mondial de Régénération Écologique' non trouvée dans instances/
+- [instances] `agence_stabilisation_climatique_new_sustainability.md` — référence alliances 'Réseau des Villes Résilientes 2080' non trouvée dans instances/
+- [instances] `agence_stabilisation_climatique_new_sustainability.md` — référence alliances 'Programme Onusien de Mobilité Climatique' non trouvée dans instances/
+- [instances] `agence_stabilisation_climatique_new_sustainability.md` — référence oppositions 'Souverainistes du Bloc Eurasien' non trouvée dans instances/
+- [instances] `agence_stabilisation_climatique_new_sustainability.md` — référence oppositions 'Coalition des Industries Extractives Résiduelles' non trouvée dans instances/
+- [instances] `agence_stabilisation_climatique_new_sustainability.md` — référence oppositions 'Mouvement pour l'Autodétermination Territoriale' non trouvée dans instances/
+- [instances] `agence_stabilisation_climatique_new_sustainability.md` — référence oppositions 'Collectifs de déplacés climatiques non-représentés' non trouvée dans instances/
+- [instances] `agence_stabilisation_climatique_policy_reform.md` — référence alliances 'Consortium Technologique des Nations Intégrées' non trouvée dans instances/
+- [instances] `agence_stabilisation_climatique_policy_reform.md` — référence alliances 'Fonds Mondial de Résilience Infrastructurelle' non trouvée dans instances/
+- [instances] `agence_stabilisation_climatique_policy_reform.md` — référence alliances 'Réseau des Villes-Refuges Certifiées' non trouvée dans instances/
+- [instances] `agence_stabilisation_climatique_policy_reform.md` — référence alliances 'Agence Internationale de l'Énergie Climatique' non trouvée dans instances/
+- [instances] `agence_stabilisation_climatique_policy_reform.md` — référence oppositions 'Mouvement pour la Souveraineté Territoriale Absolue' non trouvée dans instances/
+- [instances] `agence_stabilisation_climatique_policy_reform.md` — référence oppositions 'Collectifs de résistance aux relocalisations forcées' non trouvée dans instances/
+- [instances] `agence_stabilisation_climatique_policy_reform.md` — référence oppositions 'États dissidents du Bloc Austral' non trouvée dans instances/
+- [instances] `agence_stabilisation_climatique_policy_reform.md` — référence oppositions 'Lobbies industriels des énergies fossiles résiduelles' non trouvée dans instances/
+- [instances] `agence_stabilisation_climatique_reference.md` — référence alliances 'Consortium Énergétique des Mers du Nord' non trouvée dans instances/
+- [instances] `agence_stabilisation_climatique_reference.md` — référence alliances 'Union Africaine de Résilience Territoriale' non trouvée dans instances/
+- [instances] `agence_stabilisation_climatique_reference.md` — référence alliances 'Réseau des Métropoles Côtières Adaptées' non trouvée dans instances/
+- [instances] `agence_stabilisation_climatique_reference.md` — référence alliances 'Programme Onusien pour les Mobilités Contraintes (POMC)' non trouvée dans instances/
+- [instances] `agence_stabilisation_climatique_reference.md` — référence oppositions 'Bloc des Souverainistes Climatiques (coalition d'États refusant les mandats géo-ingénieristes)' non trouvée dans instances/
+- [instances] `agence_stabilisation_climatique_reference.md` — référence oppositions 'Collectif Nuit Jaune (mouvement de résistance aux migrations forcées certifiées)' non trouvée dans instances/
+- [instances] `agence_stabilisation_climatique_reference.md` — référence oppositions 'Corporations d'extraction énergétique non signataires' non trouvée dans instances/
+- [instances] `alliance_blocs_souverains_breakdown.md` — référence alliances 'Milices contractuelles des anciens États-membres' non trouvée dans instances/
+- [instances] `alliance_blocs_souverains_breakdown.md` — référence alliances 'Factions énergétiques régionales héritières des pactes ABS' non trouvée dans instances/
+- [instances] `alliance_blocs_souverains_breakdown.md` — référence oppositions 'Réseaux de solidarité horizontale post-effondrement' non trouvée dans instances/
+- [instances] `alliance_blocs_souverains_breakdown.md` — référence oppositions 'Cités-États indépendantes ayant rompu tout lien institutionnel' non trouvée dans instances/
+- [instances] `alliance_blocs_souverains_breakdown.md` — référence oppositions 'Coalitions d'urgence humanitaire non affiliées' non trouvée dans instances/
+- [instances] `alliance_blocs_souverains_fortress_world.md` — référence alliances 'Complexes militaro-industriels des blocs membres' non trouvée dans instances/
+- [instances] `alliance_blocs_souverains_fortress_world.md` — référence alliances 'Cartels énergétiques régionaux sous contrôle étatique' non trouvée dans instances/
+- [instances] `alliance_blocs_souverains_fortress_world.md` — référence alliances 'Réseaux privés de sécurité aux frontières' non trouvée dans instances/
+- [instances] `alliance_blocs_souverains_fortress_world.md` — référence oppositions 'Mouvements de populations déplacées et apatrides' non trouvée dans instances/
+- [instances] `alliance_blocs_souverains_fortress_world.md` — référence oppositions 'Réseaux d'échange clandestin inter-zones' non trouvée dans instances/
+- [instances] `alliance_blocs_souverains_fortress_world.md` — référence oppositions 'Factions internes prônant l'autarcie totale' non trouvée dans instances/
+- [instances] `alliance_blocs_souverains_fortress_world.md` — référence oppositions 'Institutions multilatérales résiduelles (ONU fragmentée, agences humanitaires)' non trouvée dans instances/
+- [instances] `alliance_blocs_souverains_reference.md` — référence alliances 'Blocs énergétiques régionaux signataires de la Charte de Réciprocité' non trouvée dans instances/
+- [instances] `alliance_blocs_souverains_reference.md` — référence alliances 'Consortiums privés d'extraction de ressources critiques' non trouvée dans instances/
+- [instances] `alliance_blocs_souverains_reference.md` — référence alliances 'Appareils militaires nationaux des États membres' non trouvée dans instances/
+- [instances] `alliance_blocs_souverains_reference.md` — référence oppositions 'Réseaux de gouvernance multilatérale survivants' non trouvée dans instances/
+- [instances] `alliance_blocs_souverains_reference.md` — référence oppositions 'Mégapoles globales à logique post-nationale' non trouvée dans instances/
+- [instances] `alliance_blocs_souverains_reference.md` — référence oppositions 'Mouvements de libre circulation des personnes et des données' non trouvée dans instances/
+- [instances] `amara_diallo_nkosi_breakdown.md` — référence alliances 'Réseaux informels d'ingénieurs hydrologues déplacés (Diaspora Tech Sahel)' non trouvée dans instances/
+- [instances] `amara_diallo_nkosi_breakdown.md` — référence alliances 'Communautés riveraines du bassin du Congo maintenant des accords tacites locaux' non trouvée dans instances/
+- [instances] `amara_diallo_nkosi_breakdown.md` — référence alliances 'Organisations humanitaires opérant hors cadre onusien effondré' non trouvée dans instances/
+- [instances] `amara_diallo_nkosi_breakdown.md` — référence oppositions 'Seigneurs de guerre contrôlant les barrages et monnayant l'accès à l'eau' non trouvée dans instances/
+- [instances] `amara_diallo_nkosi_breakdown.md` — référence oppositions 'Consortiums privés rachetant les infrastructures hydrauliques à la faveur du chaos' non trouvée dans instances/
+- [instances] `amara_diallo_nkosi_breakdown.md` — référence oppositions 'Factions étatiques résiduelles réclamant souveraineté exclusive sur les ressources hydriques' non trouvée dans instances/
+- [instances] `amara_diallo_nkosi_new_sustainability.md` — référence alliances 'Agence Globale de Régénération des Bassins Versants (AGRB-ONU)' non trouvée dans instances/
+- [instances] `amara_diallo_nkosi_new_sustainability.md` — référence alliances 'Conseil Technique de l'Eau — Union Panafricaine' non trouvée dans instances/
+- [instances] `amara_diallo_nkosi_new_sustainability.md` — référence alliances 'Réseau des Ingénieurs Climatiques du Sud Global' non trouvée dans instances/
+- [instances] `amara_diallo_nkosi_new_sustainability.md` — référence alliances 'Collectifs riverains du bassin du Congo' non trouvée dans instances/
+- [instances] `amara_diallo_nkosi_new_sustainability.md` — référence oppositions 'Lobbies agro-industriels du bassin inférieur du Congo' non trouvée dans instances/
+- [instances] `amara_diallo_nkosi_new_sustainability.md` — référence oppositions 'Factions technocratiques partisans d'une délégation totale aux IA décisionnelles sans supervision humaine' non trouvée dans instances/
+- [instances] `amara_diallo_nkosi_new_sustainability.md` — référence oppositions 'Gouvernements nationalistes résistant à la souveraineté partagée sur les ressources hydriques' non trouvée dans instances/
+- [instances] `amara_diallo_nkosi_policy_reform.md` — référence alliances 'Autorité Continentale des Ressources Aquatiques (ACRA)' non trouvée dans instances/
+- [instances] `amara_diallo_nkosi_policy_reform.md` — référence alliances 'Conseil de Régulation Climatique Global' non trouvée dans instances/
+- [instances] `amara_diallo_nkosi_policy_reform.md` — référence alliances 'Collectifs de défense hydrique sahéliens' non trouvée dans instances/
+- [instances] `amara_diallo_nkosi_policy_reform.md` — référence alliances 'Institut de Modélisation Hydrologique de Kinshasa' non trouvée dans instances/
+- [instances] `amara_diallo_nkosi_policy_reform.md` — référence oppositions 'Consortiums agro-industriels du bassin fluvial' non trouvée dans instances/
+- [instances] `amara_diallo_nkosi_policy_reform.md` — référence oppositions 'Gouvernements nationaux résistant à la souveraineté déléguée sur l'eau' non trouvée dans instances/
+- [instances] `amara_diallo_nkosi_policy_reform.md` — référence oppositions 'Factions technocratiques favorisant la marchandisation totale des ressources hydriques' non trouvée dans instances/
+- [instances] `amara_diallo_nkosi_reference.md` — référence alliances 'Commission Hydrique de l'Union Africaine' non trouvée dans instances/
+- [instances] `amara_diallo_nkosi_reference.md` — référence alliances 'Réseau des Coopératives Agro-Sahéliennes' non trouvée dans instances/
+- [instances] `amara_diallo_nkosi_reference.md` — référence alliances 'Programme ONU-Eau 2080' non trouvée dans instances/
+- [instances] `amara_diallo_nkosi_reference.md` — référence alliances 'Institut Polytechnique de Ouagadougou' non trouvée dans instances/
+- [instances] `amara_diallo_nkosi_reference.md` — référence oppositions 'Consortiums d'extraction minière du bassin congolais' non trouvée dans instances/
+- [instances] `amara_diallo_nkosi_reference.md` — référence oppositions 'Gouvernements riverains défendant la souveraineté hydrique absolue' non trouvée dans instances/
+- [instances] `amara_diallo_nkosi_reference.md` — référence oppositions 'Lobbies agro-industriels à haute consommation d'eau' non trouvée dans instances/
+- [instances] `armada_logistique_nordique_breakdown.md` — référence alliances 'Enclaves industrielles de Bergen et Tromsø' non trouvée dans instances/
+- [instances] `armada_logistique_nordique_breakdown.md` — référence alliances 'Factions militaires résidуelles de l'ex-OTAN nordique' non trouvée dans instances/
+- [instances] `armada_logistique_nordique_breakdown.md` — référence alliances 'Consortiums énergétiques samoïèdes du Yamal' non trouvée dans instances/
+- [instances] `armada_logistique_nordique_breakdown.md` — référence oppositions 'Bloc de la Hanse Baltique recomposée' non trouvée dans instances/
+- [instances] `armada_logistique_nordique_breakdown.md` — référence oppositions 'Milices séparatistes du Conseil des Pêcheries d'Islande' non trouvée dans instances/
+- [instances] `armada_logistique_nordique_breakdown.md` — référence oppositions 'Fédération Russe résiduelle — District de Mourmansk' non trouvée dans instances/
+- [instances] `armada_logistique_nordique_breakdown.md` — référence oppositions 'Conglométrat sino-sibérien Bohai Transit' non trouvée dans instances/
+- [instances] `armada_logistique_nordique_fortress_world.md` — référence alliances 'Conseil des États Nordiques Souverains (structure para-étatique tutélaire)' non trouvée dans instances/
+- [instances] `armada_logistique_nordique_fortress_world.md` — référence alliances 'Consortiums énergétiques des blocs baltiques' non trouvée dans instances/
+- [instances] `armada_logistique_nordique_fortress_world.md` — référence alliances 'Opérateurs privés de flotte autonome (construction navale sino-finlandaise)' non trouvée dans instances/
+- [instances] `armada_logistique_nordique_fortress_world.md` — référence oppositions 'Blocs continentaux cherchant à nationaliser les corridors arctiques' non trouvée dans instances/
+- [instances] `armada_logistique_nordique_fortress_world.md` — référence oppositions 'Milices de piraterie logistique opérant en zones grises arctiques' non trouvée dans instances/
+- [instances] `armada_logistique_nordique_fortress_world.md` — référence oppositions 'Factions au sein des institutions scandinaves refusant la privatisation des voies souveraines' non trouvée dans instances/
+- [instances] `armada_logistique_nordique_reference.md` — référence alliances 'Conseil des États Nordiques Intégrés' non trouvée dans instances/
+- [instances] `armada_logistique_nordique_reference.md` — référence alliances 'Consortium Énergétique Baltique' non trouvée dans instances/
+- [instances] `armada_logistique_nordique_reference.md` — référence alliances 'Fonds Souverain Arctique Scandinave' non trouvée dans instances/
+- [instances] `armada_logistique_nordique_reference.md` — référence oppositions 'Sibérie Fédérale — contestation des zones d'exclusion maritime' non trouvée dans instances/
+- [instances] `armada_logistique_nordique_reference.md` — référence oppositions 'Collectifs de pêche inuit et Sami — spoliation des territoires ancestraux déglaciés' non trouvée dans instances/
+- [instances] `armada_logistique_nordique_reference.md` — référence oppositions 'Opérateurs logistiques asiatiques cherchant à court-circuiter les routes ALN' non trouvée dans instances/
+- [instances] `bureau_gouvernance_algorithmique_fortress_world.md` — référence alliances 'Consortiums énergétiques du bloc Ourrassol' non trouvée dans instances/
+- [instances] `bureau_gouvernance_algorithmique_fortress_world.md` — référence alliances 'Agences de surveillance numérique souveraine' non trouvée dans instances/
+- [instances] `bureau_gouvernance_algorithmique_fortress_world.md` — référence alliances 'Exécutif militaro-civil du régime' non trouvée dans instances/
+- [instances] `bureau_gouvernance_algorithmique_fortress_world.md` — référence oppositions 'Réseaux de désobéissance algorithmique (hacktivisme interne)' non trouvée dans instances/
+- [instances] `bureau_gouvernance_algorithmique_fortress_world.md` — référence oppositions 'Factions politiques traditionalistes refusant la dépossession du mandat électif' non trouvée dans instances/
+- [instances] `bureau_gouvernance_algorithmique_fortress_world.md` — référence oppositions 'Blocs géopolitiques rivaux cherchant à infiltrer ou discréditer les modèles' non trouvée dans instances/
+- [instances] `bureau_gouvernance_algorithmique_new_sustainability.md` — référence alliances 'Parlement Délibératif Mondial' non trouvée dans instances/
+- [instances] `bureau_gouvernance_algorithmique_new_sustainability.md` — référence alliances 'Réseau des Agences Climatiques Régionales' non trouvée dans instances/
+- [instances] `bureau_gouvernance_algorithmique_new_sustainability.md` — référence alliances 'Consortium d'Audit Algorithmique Ouvert (CAAO)' non trouvée dans instances/
+- [instances] `bureau_gouvernance_algorithmique_new_sustainability.md` — référence alliances 'Fonds Universel de Redistribution Technologique' non trouvée dans instances/
+- [instances] `bureau_gouvernance_algorithmique_new_sustainability.md` — référence oppositions 'Mouvements souverainistes de la ceinture boréale' non trouvée dans instances/
+- [instances] `bureau_gouvernance_algorithmique_new_sustainability.md` — référence oppositions 'Collectifs de désobéissance algorithmique' non trouvée dans instances/
+- [instances] `bureau_gouvernance_algorithmique_new_sustainability.md` — référence oppositions 'Blocs économiques refusant la fiscalité universelle' non trouvée dans instances/
+- [instances] `bureau_gouvernance_algorithmique_new_sustainability.md` — référence oppositions 'Réseaux néo-démocratiques plaidant pour la gouvernance participative directe' non trouvée dans instances/
+- [instances] `bureau_gouvernance_algorithmique_policy_reform.md` — référence alliances 'Consortium Nexus-Calcul (infrastructure de calcul quantique)' non trouvée dans instances/
+- [instances] `bureau_gouvernance_algorithmique_policy_reform.md` — référence alliances 'Fonds de Stabilisation Climatique ONU-3' non trouvée dans instances/
+- [instances] `bureau_gouvernance_algorithmique_policy_reform.md` — référence alliances 'Réseau des Régulateurs Numériques Souverains (RRNS)' non trouvée dans instances/
+- [instances] `bureau_gouvernance_algorithmique_policy_reform.md` — référence alliances 'Institut Brookings-Singapour de Politique Computationnelle' non trouvée dans instances/
+- [instances] `bureau_gouvernance_algorithmique_policy_reform.md` — référence oppositions 'Coalition des Souverainistes Numériques (États non-signataires)' non trouvée dans instances/
+- [instances] `bureau_gouvernance_algorithmique_policy_reform.md` — référence oppositions 'Front des Communes Algorithmiques (mouvement citoyen pour l'audit ouvert)' non trouvée dans instances/
+- [instances] `bureau_gouvernance_algorithmique_policy_reform.md` — référence oppositions 'Gouvernements populistes dénonçant la dépossession démocratique' non trouvée dans instances/
+- [instances] `bureau_gouvernance_algorithmique_policy_reform.md` — référence oppositions 'Chercheurs en éthique de l'IA critiquant l'opacité des modèles délibératifs' non trouvée dans instances/
+- [instances] `collectifs_du_seuil_breakdown.md` — référence alliances 'Réseaux de troc post-étatiques des marges périurbaines' non trouvée dans instances/
+- [instances] `collectifs_du_seuil_breakdown.md` — référence alliances 'Factions sécessionnistes agrariennes des zones de désertification' non trouvée dans instances/
+- [instances] `collectifs_du_seuil_breakdown.md` — référence alliances 'Certains groupes de hackers d'infrastructure prônant la décroissance forcée' non trouvée dans instances/
+- [instances] `collectifs_du_seuil_breakdown.md` — référence oppositions 'Gouvernements régionaux résiduels tentant de reprendre le contrôle territorial' non trouvée dans instances/
+- [instances] `collectifs_du_seuil_breakdown.md` — référence oppositions 'Coalitions humanitaires d'urgence (ONG, agences onusiennes résiduelles)' non trouvée dans instances/
+- [instances] `collectifs_du_seuil_breakdown.md` — référence oppositions 'Blocs de reconstruction techno-centrés refusant la narration effondriste' non trouvée dans instances/
+- [instances] `collectifs_du_seuil_eco_communalism.md` — référence alliances 'Communautés rurales dissidentes refusant les protocoles de coopération régionale' non trouvée dans instances/
+- [instances] `collectifs_du_seuil_eco_communalism.md` — référence alliances 'Réseaux de semenciers non-certifiés' non trouvée dans instances/
+- [instances] `collectifs_du_seuil_eco_communalism.md` — référence alliances 'Anciennes fraternités de survivalistes reconvertis à l'écospiritualité' non trouvée dans instances/
+- [instances] `collectifs_du_seuil_eco_communalism.md` — référence oppositions 'Conseils de bassin versant éco-communalistes' non trouvée dans instances/
+- [instances] `collectifs_du_seuil_eco_communalism.md` — référence oppositions 'Réseaux de reconstruction coopérative inter-communautés' non trouvée dans instances/
+- [instances] `collectifs_du_seuil_eco_communalism.md` — référence oppositions 'Archives vivantes du savoir partagé (mouvement de documentation ouverte)' non trouvée dans instances/
+- [instances] `collectifs_du_seuil_fortress_world.md` — référence alliances 'réseaux de contrebande énergétique des zones grises' non trouvée dans instances/
+- [instances] `collectifs_du_seuil_fortress_world.md` — référence alliances 'dissidences internes aux blocs minoritaires' non trouvée dans instances/
+- [instances] `collectifs_du_seuil_fortress_world.md` — référence alliances 'communautés déplacées hors quota migratoire' non trouvée dans instances/
+- [instances] `collectifs_du_seuil_fortress_world.md` — référence oppositions 'administrations de contrôle frontalier des blocs' non trouvée dans instances/
+- [instances] `collectifs_du_seuil_fortress_world.md` — référence oppositions 'agences de sécurité intérieure des États forteresses' non trouvée dans instances/
+- [instances] `collectifs_du_seuil_fortress_world.md` — référence oppositions 'mouvements résilients pro-système prônant l'adaptation dans le cadre' non trouvée dans instances/
+- [instances] `conseil_regulation_algorithmique_policy_reform.md` — référence alliances 'assemblee_territoires_policy_reform' non trouvée dans instances/
+- [instances] `conseil_regulation_algorithmique_reference.md` — référence oppositions 'nexcore_reference' non trouvée dans instances/
+- [instances] `conseil_regulation_ressources_breakdown.md` — référence alliances 'Bloc de Johannesburg (faction africaine dissidente revendiquant le siège originel)' non trouvée dans instances/
+- [instances] `conseil_regulation_ressources_breakdown.md` — référence alliances 'Réseau des villes-États portuaires de la Ligue Méditerranéenne' non trouvée dans instances/
+- [instances] `conseil_regulation_ressources_breakdown.md` — référence alliances 'Archives neutres de Genève (stockage des derniers traités valides)' non trouvée dans instances/
+- [instances] `conseil_regulation_ressources_breakdown.md` — référence oppositions 'Coalition Pacifique Nord (refuse toute supervision externe sur ses ressources)' non trouvée dans instances/
+- [instances] `conseil_regulation_ressources_breakdown.md` — référence oppositions 'Consortium Énergétique Oural-Caspien' non trouvée dans instances/
+- [instances] `conseil_regulation_ressources_breakdown.md` — référence oppositions 'Milices extractivistes indépendantes du Bassin du Congo' non trouvée dans instances/
+- [instances] `conseil_regulation_ressources_breakdown.md` — référence oppositions 'Gouvernements de forteresse refusant la légitimité de Nairobi' non trouvée dans instances/
+- [instances] `conseil_regulation_ressources_fortress_world.md` — référence alliances 'Bloc Pacifique Nord (observateur passif)' non trouvée dans instances/
+- [instances] `conseil_regulation_ressources_fortress_world.md` — référence alliances 'Nations Non-Alignées Résiduelles (soutien de façade)' non trouvée dans instances/
+- [instances] `conseil_regulation_ressources_fortress_world.md` — référence alliances 'Archives Diplomatiques de l'ONU-Éclat' non trouvée dans instances/
+- [instances] `conseil_regulation_ressources_fortress_world.md` — référence oppositions 'Consortium Eurasiatique des Ressources Fermées' non trouvée dans instances/
+- [instances] `conseil_regulation_ressources_fortress_world.md` — référence oppositions 'Commandement Stratégique des Matières Critiques Atlantique (CSMCA)' non trouvée dans instances/
+- [instances] `conseil_regulation_ressources_fortress_world.md` — référence oppositions 'Cartels miniers militarisés subsahariens' non trouvée dans instances/
+- [instances] `conseil_regulation_ressources_new_sustainability.md` — référence alliances 'Réseau des Villes Régénératives' non trouvée dans instances/
+- [instances] `conseil_regulation_ressources_new_sustainability.md` — référence alliances 'Consortium IA Climatique' non trouvée dans instances/
+- [instances] `conseil_regulation_ressources_new_sustainability.md` — référence alliances 'Union des Blocs Energétiques Régionaux' non trouvée dans instances/
+- [instances] `conseil_regulation_ressources_new_sustainability.md` — référence alliances 'Programme ONU de Restauration des Sols' non trouvée dans instances/
+- [instances] `conseil_regulation_ressources_new_sustainability.md` — référence oppositions 'Lobbies miniers extractivistes résiduels' non trouvée dans instances/
+- [instances] `conseil_regulation_ressources_new_sustainability.md` — référence oppositions 'Factions souverainistes des blocs périphériques' non trouvée dans instances/
+- [instances] `conseil_regulation_ressources_new_sustainability.md` — référence oppositions 'Collectifs anarcho-autonomistes des Zones Libres' non trouvée dans instances/
+- [instances] `conseil_regulation_ressources_policy_reform.md` — référence alliances 'Union Technocratique Eurasiatique' non trouvée dans instances/
+- [instances] `conseil_regulation_ressources_policy_reform.md` — référence alliances 'Agence Internationale de l'Énergie Reformatée (AIER)' non trouvée dans instances/
+- [instances] `conseil_regulation_ressources_policy_reform.md` — référence alliances 'Consortium des Villes-États Durables' non trouvée dans instances/
+- [instances] `conseil_regulation_ressources_policy_reform.md` — référence alliances 'Réseau des Auditeurs Algorithmiques Indépendants (RAAI)' non trouvée dans instances/
+- [instances] `conseil_regulation_ressources_policy_reform.md` — référence oppositions 'Front des Souverainistes Énergétiques (coalitions Amérique du Sud / Afrique subsaharienne dissidente)' non trouvée dans instances/
+- [instances] `conseil_regulation_ressources_policy_reform.md` — référence oppositions 'Syndicats d'Extraction Privée Non Régulés' non trouvée dans instances/
+- [instances] `conseil_regulation_ressources_policy_reform.md` — référence oppositions 'Mouvements de décroissance radicale contestant la légitimité de toute planification centralisée' non trouvée dans instances/
+- [instances] `conseil_regulation_ressources_reference.md` — référence alliances 'Union Africaine des Ressources Souveraines' non trouvée dans instances/
+- [instances] `conseil_regulation_ressources_reference.md` — référence alliances 'Consortium Indo-Pacifique de l'Hydrogène' non trouvée dans instances/
+- [instances] `conseil_regulation_ressources_reference.md` — référence alliances 'Banque Mondiale des Transitions Climatiques' non trouvée dans instances/
+- [instances] `conseil_regulation_ressources_reference.md` — référence alliances 'Agence Internationale des Énergies Renouvelables (IRENA-2)' non trouvée dans instances/
+- [instances] `conseil_regulation_ressources_reference.md` — référence oppositions 'Bloc Ressources Eurasiatique (BRE)' non trouvée dans instances/
+- [instances] `conseil_regulation_ressources_reference.md` — référence oppositions 'Cartel des Terres Rares d'Asie Centrale' non trouvée dans instances/
+- [instances] `conseil_regulation_ressources_reference.md` — référence oppositions 'Lobbies industriels des États non-signataires' non trouvée dans instances/
+- [instances] `conseil_regulation_ressources_reference.md` — référence oppositions 'Mouvements souverainistes de ressources en Amérique du Sud' non trouvée dans instances/
+- [instances] `consortium_helios_fortress_world.md` — référence alliances 'Régimes autoritaires du bloc eurasiatique occidental' non trouvée dans instances/
+- [instances] `consortium_helios_fortress_world.md` — référence alliances 'Consortiums de défense orbitale privés' non trouvée dans instances/
+- [instances] `consortium_helios_fortress_world.md` — référence alliances 'Réseaux de distribution d'hydrogène sous contrat militaire' non trouvée dans instances/
+- [instances] `consortium_helios_fortress_world.md` — référence oppositions 'Blocs concurrents disposant de leurs propres infrastructures solaires orbitales' non trouvée dans instances/
+- [instances] `consortium_helios_fortress_world.md` — référence oppositions 'Mouvements de réappropriation énergétique communautaire dans les zones périphériques' non trouvée dans instances/
+- [instances] `consortium_helios_fortress_world.md` — référence oppositions 'Anciennes branches dissidentes du Consortium Helios d'origine' non trouvée dans instances/
+- [instances] `consortium_helios_fortress_world.md` — référence oppositions 'Réseaux de contrebande énergétique transfrontalière' non trouvée dans instances/
+- [instances] `consortium_helios_new_sustainability.md` — référence alliances 'Conseil Énergétique Intercontinental' non trouvée dans instances/
+- [instances] `consortium_helios_new_sustainability.md` — référence alliances 'Fonds Mondial de Redistribution Technologique' non trouvée dans instances/
+- [instances] `consortium_helios_new_sustainability.md` — référence alliances 'Agence Orbitale de Régulation Commune (AORC)' non trouvée dans instances/
+- [instances] `consortium_helios_new_sustainability.md` — référence oppositions 'Collectifs d'énergie décentralisée (mouvements communautaires micro-grid)' non trouvée dans instances/
+- [instances] `consortium_helios_new_sustainability.md` — référence oppositions 'Faction interne conservatrice pro-actif stratégique' non trouvée dans instances/
+- [instances] `consortium_helios_new_sustainability.md` — référence oppositions 'Observatoire Anti-Monopole de Genève' non trouvée dans instances/
+- [instances] `consortium_helios_policy_reform.md` — référence alliances 'Conseil Énergétique Intercontinental (CEI)' non trouvée dans instances/
+- [instances] `consortium_helios_policy_reform.md` — référence alliances 'Syndicat des Ingénieurs Orbitaux' non trouvée dans instances/
+- [instances] `consortium_helios_policy_reform.md` — référence alliances 'Fonds Souverain de Transition Verte (FSTV)' non trouvée dans instances/
+- [instances] `consortium_helios_policy_reform.md` — référence alliances 'Lobbyistes intégrés dans les comités techniques de l'ONU-Énergie' non trouvée dans instances/
+- [instances] `consortium_helios_policy_reform.md` — référence oppositions 'Mouvement pour la Souveraineté Énergétique Commune (MSEC)' non trouvée dans instances/
+- [instances] `consortium_helios_policy_reform.md` — référence oppositions 'Collectifs de communes autogérées en microgrids solaires' non trouvée dans instances/
+- [instances] `consortium_helios_policy_reform.md` — référence oppositions 'Faction régulatrice dure au sein du CEI' non trouvée dans instances/
+- [instances] `consortium_helios_policy_reform.md` — référence oppositions 'Journalistes d'investigation spécialisés en transparence énergétique' non trouvée dans instances/
+- [instances] `consortium_helios_reference.md` — référence alliances 'Blocs d'États signataires du Pacte Énergétique Multilatéral' non trouvée dans instances/
+- [instances] `consortium_helios_reference.md` — référence alliances 'Fonds souverains de la Ceinture Financière Pacifique' non trouvée dans instances/
+- [instances] `consortium_helios_reference.md` — référence alliances 'Consortium de maintenance orbitale SEOM-7' non trouvée dans instances/
+- [instances] `consortium_helios_reference.md` — référence oppositions 'Mouvement pour la Souveraineté Énergétique Populaire (MSEP)' non trouvée dans instances/
+- [instances] `consortium_helios_reference.md` — référence oppositions 'Coalitions de métropoles du Sud Global revendiquant l'accès libre aux infrastructures' non trouvée dans instances/
+- [instances] `consortium_helios_reference.md` — référence oppositions 'Factions étatiques du bloc eurasiatique contestant la tarification différenciée' non trouvée dans instances/
+- [instances] `cooperative_terrafond_breakdown.md` — référence alliances 'Communautés paysannes réfugiées' non trouvée dans instances/
+- [instances] `cooperative_terrafond_breakdown.md` — référence alliances 'Réseaux de semenciers clandestins' non trouvée dans instances/
+- [instances] `cooperative_terrafond_breakdown.md` — référence alliances 'Brigades médicales itinérantes' non trouvée dans instances/
+- [instances] `cooperative_terrafond_breakdown.md` — référence oppositions 'Seigneuries foncières opportunistes' non trouvée dans instances/
+- [instances] `cooperative_terrafond_breakdown.md` — référence oppositions 'Milices d'accaparement hydrique' non trouvée dans instances/
+- [instances] `cooperative_terrafond_breakdown.md` — référence oppositions 'Cartels logistiques régionaux' non trouvée dans instances/
+- [instances] `cooperative_terrafond_eco_communalism.md` — référence alliances 'Assemblées de bassin versant' non trouvée dans instances/
+- [instances] `cooperative_terrafond_eco_communalism.md` — référence alliances 'Brigades de restauration écologique' non trouvée dans instances/
+- [instances] `cooperative_terrafond_eco_communalism.md` — référence alliances 'Mutuelles de santé territoriales' non trouvée dans instances/
+- [instances] `cooperative_terrafond_eco_communalism.md` — référence alliances 'Réseaux de troc inter-coopératives' non trouvée dans instances/
+- [instances] `cooperative_terrafond_eco_communalism.md` — référence oppositions 'Agro-conglomérats résiduels sous contrôle des enclaves technologiques' non trouvée dans instances/
+- [instances] `cooperative_terrafond_eco_communalism.md` — référence oppositions 'Spéculateurs fonciers opérant dans les zones grises juridiques post-effondrement' non trouvée dans instances/
+- [instances] `cooperative_terrafond_eco_communalism.md` — référence oppositions 'Factions extractivistes locales cherchant à monétiser les aquifères communs' non trouvée dans instances/
+- [instances] `cooperative_terrafond_reference.md` — référence alliances 'Agences de régulation hydrologique régionales' non trouvée dans instances/
+- [instances] `cooperative_terrafond_reference.md` — référence alliances 'Syndicats de travail rural hybride' non trouvée dans instances/
+- [instances] `cooperative_terrafond_reference.md` — référence alliances 'Réseaux de communs numériques agroécologiques' non trouvée dans instances/
+- [instances] `cooperative_terrafond_reference.md` — référence oppositions 'Consortiums d'agriculture verticale algorithmique' non trouvée dans instances/
+- [instances] `cooperative_terrafond_reference.md` — référence oppositions 'Fonds d'investissement foncier climatique' non trouvée dans instances/
+- [instances] `cooperative_terrafond_reference.md` — référence oppositions 'Opérateurs de zones économiques spéciales périurbaines' non trouvée dans instances/
+- [instances] `federation_communs_territoriaux_breakdown.md` — référence alliances 'Réseaux de semenciers clandestins' non trouvée dans instances/
+- [instances] `federation_communs_territoriaux_breakdown.md` — référence alliances 'Milices agro-défensives locales' non trouvée dans instances/
+- [instances] `federation_communs_territoriaux_breakdown.md` — référence alliances 'Collectifs de réparation énergétique' non trouvée dans instances/
+- [instances] `federation_communs_territoriaux_breakdown.md` — référence oppositions 'Enclaves corporatives fortifiées' non trouvée dans instances/
+- [instances] `federation_communs_territoriaux_breakdown.md` — référence oppositions 'Seigneuries logistiques armées' non trouvée dans instances/
+- [instances] `federation_communs_territoriaux_breakdown.md` — référence oppositions 'Flux migratoires non intégrables' non trouvée dans instances/
+- [instances] `federation_communs_territoriaux_eco_communalism.md` — référence alliances 'Assemblées de bassin locales' non trouvée dans instances/
+- [instances] `federation_communs_territoriaux_eco_communalism.md` — référence alliances 'Réseaux de semenciers coopératifs' non trouvée dans instances/
+- [instances] `federation_communs_territoriaux_eco_communalism.md` — référence alliances 'Guildes de médiateurs écologiques' non trouvée dans instances/
+- [instances] `federation_communs_territoriaux_eco_communalism.md` — référence alliances 'Observatoires citoyens du climat' non trouvée dans instances/
+- [instances] `federation_communs_territoriaux_eco_communalism.md` — référence oppositions 'Fragments d'États centraux résiduels revendiquant la souveraineté territoriale' non trouvée dans instances/
+- [instances] `federation_communs_territoriaux_eco_communalism.md` — référence oppositions 'Consortiums industriels de l'eau cherchant à reprendre le contrôle des nappes phréatiques' non trouvée dans instances/
+- [instances] `federation_communs_territoriaux_eco_communalism.md` — référence oppositions 'Communs sécessionnistes refusant toute forme de coordination supralocale' non trouvée dans instances/
+- [instances] `federation_communs_territoriaux_reference.md` — référence alliances 'Réseaux de coopératives agro-écologiques du Bassin méditerranéen' non trouvée dans instances/
+- [instances] `federation_communs_territoriaux_reference.md` — référence alliances 'Observatoire climatique des territoires (OCT)' non trouvée dans instances/
+- [instances] `federation_communs_territoriaux_reference.md` — référence alliances 'Banque des Communs — institution de financement décentralisée' non trouvée dans instances/
+- [instances] `federation_communs_territoriaux_reference.md` — référence alliances 'Syndicats de travailleurs de la transition énergétique' non trouvée dans instances/
+- [instances] `federation_communs_territoriaux_reference.md` — référence oppositions 'Grandes plateformes d'infrastructure logistique globale' non trouvée dans instances/
+- [instances] `federation_communs_territoriaux_reference.md` — référence oppositions 'Gouvernements fédéraux résiduels défendant la souveraineté nationale classique' non trouvée dans instances/
+- [instances] `federation_communs_territoriaux_reference.md` — référence oppositions 'Opérateurs privés d'énergie distribuée refusant les protocoles FCT' non trouvée dans instances/
+- [instances] `federation_communs_territoriaux_reference.md` — référence oppositions 'Blocs mégapolitains autonomes concurrents' non trouvée dans instances/
+- [instances] `grille_aria_fortress_world.md` — référence alliances 'Appareils d'État des blocs fermés' non trouvée dans instances/
+- [instances] `grille_aria_fortress_world.md` — référence alliances 'Complexes militaro-industriels de gestion des ressources' non trouvée dans instances/
+- [instances] `grille_aria_fortress_world.md` — référence alliances 'Oligarchies technologiques souveraines fournissant les infrastructures de calcul' non trouvée dans instances/
+- [instances] `grille_aria_fortress_world.md` — référence oppositions 'Réseaux de résistance algorithmique cherchant à pirater les scores d'allocation' non trouvée dans instances/
+- [instances] `grille_aria_fortress_world.md` — référence oppositions 'Populations des zones 'déficitaires' condamnées par les calculs d'optimisation' non trouvée dans instances/
+- [instances] `grille_aria_fortress_world.md` — référence oppositions 'Instances ARIA concurrentes des blocs rivaux' non trouvée dans instances/
+- [instances] `grille_aria_fortress_world.md` — référence oppositions 'Collectifs d'ingénieurs dissidents refusant la militarisation du système' non trouvée dans instances/
+- [instances] `grille_aria_new_sustainability.md` — référence alliances 'Conseil Technocratique de Coordination Régionale' non trouvée dans instances/
+- [instances] `grille_aria_new_sustainability.md` — référence alliances 'Fonds Mondial de Redistribution Technologique' non trouvée dans instances/
+- [instances] `grille_aria_new_sustainability.md` — référence alliances 'Réseaux de Médecine Régénérative Universelle' non trouvée dans instances/
+- [instances] `grille_aria_new_sustainability.md` — référence oppositions 'Mouvements d'autonomie locale anti-algorithme' non trouvée dans instances/
+- [instances] `grille_aria_new_sustainability.md` — référence oppositions 'Coalitions de communautés hors-grille revendiquant la souveraineté alimentaire' non trouvée dans instances/
+- [instances] `grille_aria_new_sustainability.md` — référence oppositions 'Factions internes au sein des institutions réclamant une opacité accrue des paramètres' non trouvée dans instances/
+- [instances] `internationale_travailleurs_augmentes_fortress_world.md` — référence alliances 'Cliniques de déaugmentation indépendantes' non trouvée dans instances/
+- [instances] `internationale_travailleurs_augmentes_fortress_world.md` — référence alliances 'Réseaux de juristes spécialisés en droit corporel souverain' non trouvée dans instances/
+- [instances] `internationale_travailleurs_augmentes_fortress_world.md` — référence alliances 'Fragments résiduels des syndicats industriels pré-crise' non trouvée dans instances/
+- [instances] `internationale_travailleurs_augmentes_fortress_world.md` — référence oppositions 'Conglomérats industriels d'État produisant les augmentations propriétaires' non trouvée dans instances/
+- [instances] `internationale_travailleurs_augmentes_fortress_world.md` — référence oppositions 'Agences de surveillance numérique des blocs souverains' non trouvée dans instances/
+- [instances] `internationale_travailleurs_augmentes_fortress_world.md` — référence oppositions 'Algorithmes de scoring de productivité corporative' non trouvée dans instances/
+- [instances] `internationale_travailleurs_augmentes_new_sustainability.md` — référence alliances 'Conseil de Régulation des Interfaces Cognitives (CRIC)' non trouvée dans instances/
+- [instances] `internationale_travailleurs_augmentes_new_sustainability.md` — référence alliances 'Réseau des Communs Productifs Régénératifs' non trouvée dans instances/
+- [instances] `internationale_travailleurs_augmentes_new_sustainability.md` — référence alliances 'Fonds Mondial de Transition Écologique du Travail' non trouvée dans instances/
+- [instances] `internationale_travailleurs_augmentes_new_sustainability.md` — référence oppositions 'Consortiums d'optimisation algorithmique privés' non trouvée dans instances/
+- [instances] `internationale_travailleurs_augmentes_new_sustainability.md` — référence oppositions 'Factions internes prônant une rupture radicale avec l'augmentation' non trouvée dans instances/
+- [instances] `internationale_travailleurs_augmentes_new_sustainability.md` — référence oppositions 'Blocs technocratiques favorables à une automatisation totale sans seuils humains' non trouvée dans instances/
+- [instances] `internationale_travailleurs_augmentes_policy_reform.md` — référence alliances 'Bureau International du Travail Augmenté (BITA)' non trouvée dans instances/
+- [instances] `internationale_travailleurs_augmentes_policy_reform.md` — référence alliances 'Coalition des Villes de Reconversion' non trouvée dans instances/
+- [instances] `internationale_travailleurs_augmentes_policy_reform.md` — référence alliances 'Fédération des Mutuelles Biotech' non trouvée dans instances/
+- [instances] `internationale_travailleurs_augmentes_policy_reform.md` — référence oppositions 'Consortiums d'optimisation RH algorithmique' non trouvée dans instances/
+- [instances] `internationale_travailleurs_augmentes_policy_reform.md` — référence oppositions 'Blocs industriels d'automatisation intégrale' non trouvée dans instances/
+- [instances] `internationale_travailleurs_augmentes_policy_reform.md` — référence oppositions 'Factions internes prônant la désaugmentation totale' non trouvée dans instances/
+- [instances] `internationale_travailleurs_augmentes_reference.md` — référence alliances 'Conseil de Genève pour les Droits Biosociaux' non trouvée dans instances/
+- [instances] `internationale_travailleurs_augmentes_reference.md` — référence alliances 'Fédération des Cliniques Autonomes' non trouvée dans instances/
+- [instances] `internationale_travailleurs_augmentes_reference.md` — référence alliances 'Réseau des Villes-Refuge pour Travailleurs Désaugmentés' non trouvée dans instances/
+- [instances] `internationale_travailleurs_augmentes_reference.md` — référence oppositions 'Consortium AugmentWork (lobbying pro-optimisation)' non trouvée dans instances/
+- [instances] `internationale_travailleurs_augmentes_reference.md` — référence oppositions 'Algorithmic Labor Exchange (place de marché de travail augmenté)' non trouvée dans instances/
+- [instances] `internationale_travailleurs_augmentes_reference.md` — référence oppositions 'Gouvernements à régime de productivité mandatée' non trouvée dans instances/
+- [instances] `leena_vainala_eco_communalism.md` — référence alliances 'Confédération des Communs de l'Arc Septentrional' non trouvée dans instances/
+- [instances] `leena_vainala_eco_communalism.md` — référence alliances 'Réseau des Assemblées de Bassin Fennoscandien' non trouvée dans instances/
+- [instances] `leena_vainala_eco_communalism.md` — référence alliances 'Archives Ouvertes des Jurisprudences Communales (AOJC)' non trouvée dans instances/
+- [instances] `leena_vainala_eco_communalism.md` — référence alliances 'Collectifs de facilitateurs délibératifs itinérants' non trouvée dans instances/
+- [instances] `leena_vainala_eco_communalism.md` — référence oppositions 'Technocraties d'efficience locales issues des anciens corps d'ingénieurs d'État' non trouvée dans instances/
+- [instances] `leena_vainala_eco_communalism.md` — référence oppositions 'Factions algorithmiques prônant la gouvernance automatisée par IA légère' non trouvée dans instances/
+- [instances] `leena_vainala_eco_communalism.md` — référence oppositions 'Notables communautaires cherchant à capturer les assemblées au profit de lignages familiaux' non trouvée dans instances/
+- [instances] `leena_vainala_new_sustainability.md` — référence alliances 'Réseau des Communs Numériques Globaux' non trouvée dans instances/
+- [instances] `leena_vainala_new_sustainability.md` — référence alliances 'Conseil de Délibération Augmentée de l'Union Nordique' non trouvée dans instances/
+- [instances] `leena_vainala_new_sustainability.md` — référence alliances 'Institut de Philosophie des Systèmes Hybrides d'Helsinki' non trouvée dans instances/
+- [instances] `leena_vainala_new_sustainability.md` — référence alliances 'Collectif des Médiateurs Cognitifs Internationaux' non trouvée dans instances/
+- [instances] `leena_vainala_new_sustainability.md` — référence oppositions 'Bloc des Architectes d'Efficience Algorithmique (partisans de la gouvernance IA-first)' non trouvée dans instances/
+- [instances] `leena_vainala_new_sustainability.md` — référence oppositions 'Lobbies des plateformes de consensus automatisé' non trouvée dans instances/
+- [instances] `leena_vainala_new_sustainability.md` — référence oppositions 'Factions technocratiques au sein du Conseil de Régulation Informationnelle Global' non trouvée dans instances/
+- [instances] `leena_vainala_policy_reform.md` — référence alliances 'Réseaux des communs numériques mondiaux' non trouvée dans instances/
+- [instances] `leena_vainala_policy_reform.md` — référence alliances 'Commissions mixtes de régulation IA-démocratie (ONU Digital Governance Council)' non trouvée dans instances/
+- [instances] `leena_vainala_policy_reform.md` — référence alliances 'Universités et think tanks nordiques' non trouvée dans instances/
+- [instances] `leena_vainala_policy_reform.md` — référence alliances 'Collectifs citoyens de délibération augmentée' non trouvée dans instances/
+- [instances] `leena_vainala_policy_reform.md` — référence oppositions 'Blocs technocratiques pro-efficacité au sein des institutions globales' non trouvée dans instances/
+- [instances] `leena_vainala_policy_reform.md` — référence oppositions 'Consortiums privés de gouvernance algorithmique' non trouvée dans instances/
+- [instances] `leena_vainala_policy_reform.md` — référence oppositions 'Courants autoritaires qui récupèrent son vocabulaire pour légitimer la régulation opaque' non trouvée dans instances/
+- [instances] `leena_vainala_policy_reform.md` — référence oppositions 'Techno-utopistes partisans de la décision automatisée sans délibération' non trouvée dans instances/
+- [instances] `leena_vainala_reference.md` — référence alliances 'Réseaux de communs numériques nordiques et baltes' non trouvée dans instances/
+- [instances] `leena_vainala_reference.md` — référence alliances 'Coalitions de villes-États pilotes en gouvernance participative' non trouvée dans instances/
+- [instances] `leena_vainala_reference.md` — référence alliances 'Chercheurs en éthique des systèmes distribués (réseau informel post-académique)' non trouvée dans instances/
+- [instances] `leena_vainala_reference.md` — référence oppositions 'Opérateurs de plateformes d'IA centralisées résistant à la délibération obligatoire' non trouvée dans instances/
+- [instances] `leena_vainala_reference.md` — référence oppositions 'Gouvernements autoritaires classant ses chartes comme 'infrastructure de déstabilisation'' non trouvée dans instances/
+- [instances] `leena_vainala_reference.md` — référence oppositions 'Technocrates institutionnels promouvant l'optimisation algorithmique sans consultation' non trouvée dans instances/
+- [instances] `mouvement_racines_vivantes_breakdown.md` — référence alliances 'communautés rurales autonomes' non trouvée dans instances/
+- [instances] `mouvement_racines_vivantes_breakdown.md` — référence alliances 'réseaux de soigneurs traditionnels' non trouvée dans instances/
+- [instances] `mouvement_racines_vivantes_breakdown.md` — référence alliances 'collectifs de semenciers clandestins' non trouvée dans instances/
+- [instances] `mouvement_racines_vivantes_breakdown.md` — référence oppositions 'seigneurs de guerre locaux en compétition pour les terres fertiles' non trouvée dans instances/
+- [instances] `mouvement_racines_vivantes_breakdown.md` — référence oppositions 'opérateurs logistiques corporatifs tentant de reprendre le contrôle des ressources agricoles' non trouvée dans instances/
+- [instances] `mouvement_racines_vivantes_breakdown.md` — référence oppositions 'factions techno-solutionnistes' non trouvée dans instances/
+- [instances] `mouvement_racines_vivantes_eco_communalism.md` — référence alliances 'Conseils de bassins versants autonomes' non trouvée dans instances/
+- [instances] `mouvement_racines_vivantes_eco_communalism.md` — référence alliances 'Réseaux de semences libres et vivantes' non trouvée dans instances/
+- [instances] `mouvement_racines_vivantes_eco_communalism.md` — référence alliances 'Coopératives d'habitat régénératif' non trouvée dans instances/
+- [instances] `mouvement_racines_vivantes_eco_communalism.md` — référence oppositions 'Blocs logistiques néo-industriels cherchant à rationaliser les terres reconstruites' non trouvée dans instances/
+- [instances] `mouvement_racines_vivantes_eco_communalism.md` — référence oppositions 'Courants techno-solutionnistes promouvant une re-globalisation numérique' non trouvée dans instances/
+- [instances] `mouvement_racines_vivantes_eco_communalism.md` — référence oppositions 'Factions autoritaires locales instrumentalisant le discours identitaire à des fins d'exclusion' non trouvée dans instances/
+- [instances] `mouvement_racines_vivantes_reference.md` — référence alliances 'Coopératives agro-écologiques de reconstruction territoriale' non trouvée dans instances/
+- [instances] `mouvement_racines_vivantes_reference.md` — référence alliances 'Réseaux de médecine traditionnelle augmentée' non trouvée dans instances/
+- [instances] `mouvement_racines_vivantes_reference.md` — référence alliances 'Certaines administrations locales rurales en quête de légitimité participative' non trouvée dans instances/
+- [instances] `mouvement_racines_vivantes_reference.md` — référence oppositions 'Agro-industries d'adaptation climatique technologique' non trouvée dans instances/
+- [instances] `mouvement_racines_vivantes_reference.md` — référence oppositions 'Plateformes d'optimisation territoriale pilotées par IA' non trouvée dans instances/
+- [instances] `mouvement_racines_vivantes_reference.md` — référence oppositions 'Courants nationalistes qui tentent d'instrumentaliser le discours des racines' non trouvée dans instances/
+- [instances] `nexus_biosyn_breakdown.md` — référence alliances 'seigneurs régionaux agricoles' non trouvée dans instances/
+- [instances] `nexus_biosyn_breakdown.md` — référence alliances 'réseaux noirs pharmaceutiques' non trouvée dans instances/
+- [instances] `nexus_biosyn_breakdown.md` — référence alliances 'milices de contrôle territorial' non trouvée dans instances/
+- [instances] `nexus_biosyn_breakdown.md` — référence alliances 'enclaves technologiques survivantes' non trouvée dans instances/
+- [instances] `nexus_biosyn_breakdown.md` — référence oppositions 'collectifs de semences libres' non trouvée dans instances/
+- [instances] `nexus_biosyn_breakdown.md` — référence oppositions 'mouvements de santé communautaire autogérée' non trouvée dans instances/
+- [instances] `nexus_biosyn_breakdown.md` — référence oppositions 'États fragmentés tentant de nationaliser les stocks' non trouvée dans instances/
+- [instances] `nexus_biosyn_breakdown.md` — référence oppositions 'pirates biologiques open-source' non trouvée dans instances/
+- [instances] `nexus_biosyn_fortress_world.md` — référence alliances 'États-forteresses sous contrat de souveraineté biologique' non trouvée dans instances/
+- [instances] `nexus_biosyn_fortress_world.md` — référence alliances 'Cartels énergétiques fournissant les infrastructures de bioréacteurs' non trouvée dans instances/
+- [instances] `nexus_biosyn_fortress_world.md` — référence alliances 'Milices privées de protection des sites germinaux' non trouvée dans instances/
+- [instances] `nexus_biosyn_fortress_world.md` — référence oppositions 'Réseaux clandestins de semences libres (mouvements agro-pirates)' non trouvée dans instances/
+- [instances] `nexus_biosyn_fortress_world.md` — référence oppositions 'Coalitions sanitaires des populations exclues des blocs' non trouvée dans instances/
+- [instances] `nexus_biosyn_fortress_world.md` — référence oppositions 'Divisions concurrentes Nexus BioSyn dans les zones de friction géopolitique' non trouvée dans instances/
+- [instances] `nexus_biosyn_new_sustainability.md` — référence alliances 'OMS Étendue (Organisation Mondiale de la Santé Augmentée)' non trouvée dans instances/
+- [instances] `nexus_biosyn_new_sustainability.md` — référence alliances 'Conseil Technocratique de Gouvernance Alimentaire' non trouvée dans instances/
+- [instances] `nexus_biosyn_new_sustainability.md` — référence alliances 'Réseau Global de Cliniques Régénératives' non trouvée dans instances/
+- [instances] `nexus_biosyn_new_sustainability.md` — référence alliances 'Fonds de Redistribution Technologique de l'Alliance Verte' non trouvée dans instances/
+- [instances] `nexus_biosyn_new_sustainability.md` — référence oppositions 'Mouvement des Semences Libres (open-source agricole radical)' non trouvée dans instances/
+- [instances] `nexus_biosyn_new_sustainability.md` — référence oppositions 'Collectifs de bio-communs régionaux' non trouvée dans instances/
+- [instances] `nexus_biosyn_new_sustainability.md` — référence oppositions 'Auditeurs indépendants du Parlement Biotechnologique Mondial' non trouvée dans instances/
+- [instances] `nexus_biosyn_policy_reform.md` — référence alliances 'Autorité Mondiale du Vivant (AMV)' non trouvée dans instances/
+- [instances] `nexus_biosyn_policy_reform.md` — référence alliances 'Consortium Agro-Pacifique' non trouvée dans instances/
+- [instances] `nexus_biosyn_policy_reform.md` — référence alliances 'Institut de Thérapeutique Intégrée de Nairobi' non trouvée dans instances/
+- [instances] `nexus_biosyn_policy_reform.md` — référence alliances 'Fonds Mondial de Stabilisation Biotechnologique' non trouvée dans instances/
+- [instances] `nexus_biosyn_policy_reform.md` — référence oppositions 'Coalition des Semences Libres' non trouvée dans instances/
+- [instances] `nexus_biosyn_policy_reform.md` — référence oppositions 'Front de Souveraineté Biologique Eurasiatique' non trouvée dans instances/
+- [instances] `nexus_biosyn_policy_reform.md` — référence oppositions 'Collectifs de biohackers agro-communautaires' non trouvée dans instances/
+- [instances] `nexus_biosyn_policy_reform.md` — référence oppositions 'Bloc des Nations à Économie Carbone-Contrôlée' non trouvée dans instances/
+- [instances] `nexus_biosyn_reference.md` — référence alliances 'Fonds Monétaire Climatique (FMC)' non trouvée dans instances/
+- [instances] `nexus_biosyn_reference.md` — référence alliances 'Consortium Agro-Pacifique' non trouvée dans instances/
+- [instances] `nexus_biosyn_reference.md` — référence alliances 'Réseau Hospitalier Hybride Eurasiatique' non trouvée dans instances/
+- [instances] `nexus_biosyn_reference.md` — référence alliances 'Plateformes de données biologiques AgriSynth' non trouvée dans instances/
+- [instances] `nexus_biosyn_reference.md` — référence oppositions 'Coalitions paysannes de semences libres (mouvement OpenSeed)' non trouvée dans instances/
+- [instances] `nexus_biosyn_reference.md` — référence oppositions 'Gouvernements du Bloc Sahélien Autonome' non trouvée dans instances/
+- [instances] `nexus_biosyn_reference.md` — référence oppositions 'Collectifs de biopiraterie inversée' non trouvée dans instances/
+- [instances] `nexus_biosyn_reference.md` — référence oppositions 'Régulateurs de l'Union Continentale Africaine' non trouvée dans instances/
+- [instances] `prisme_global_eco_communalism.md` — référence alliances 'Coopératives semencières et d'archives agronomiques' non trouvée dans instances/
+- [instances] `prisme_global_eco_communalism.md` — référence alliances 'Réseaux de radio communautaire basse consommation' non trouvée dans instances/
+- [instances] `prisme_global_eco_communalism.md` — référence alliances 'Cercles de médiation territoriale intercommunautaire' non trouvée dans instances/
+- [instances] `prisme_global_eco_communalism.md` — référence oppositions 'Plateformes centralisées résiduelles à visée réagrégation globale' non trouvée dans instances/
+- [instances] `prisme_global_eco_communalism.md` — référence oppositions 'Factions communautaires refusant tout partage narratif extérieur' non trouvée dans instances/
+- [instances] `prisme_global_eco_communalism.md` — référence oppositions 'Opérateurs d'IA propriétaires cherchant à indexer les Trames' non trouvée dans instances/
+- [instances] `prisme_global_new_sustainability.md` — référence alliances 'Alliance Numérique Eurasie-Pacifique' non trouvée dans instances/
+- [instances] `prisme_global_new_sustainability.md` — référence alliances 'Conseil de Régulation Cognitive de l'ONU' non trouvée dans instances/
+- [instances] `prisme_global_new_sustainability.md` — référence alliances 'Observatoire Climatique Narratif de Nairobi' non trouvée dans instances/
+- [instances] `prisme_global_new_sustainability.md` — référence oppositions 'Collectifs de narration sauvage hors-protocole' non trouvée dans instances/
+- [instances] `prisme_global_new_sustainability.md` — référence oppositions 'Réseaux d'information souverainistes fermés' non trouvée dans instances/
+- [instances] `prisme_global_new_sustainability.md` — référence oppositions 'Factions internes contestataires du Bureau de Modération' non trouvée dans instances/
+- [instances] `prisme_global_policy_reform.md` — référence alliances 'Conseil de Gouvernance de l'Information (CGI)' non trouvée dans instances/
+- [instances] `prisme_global_policy_reform.md` — référence alliances 'Consortium des IA Éditoriales Certifiées' non trouvée dans instances/
+- [instances] `prisme_global_policy_reform.md` — référence alliances 'Réseaux académiques prospectivistes du Pacte de Genève 2081' non trouvée dans instances/
+- [instances] `prisme_global_policy_reform.md` — référence oppositions 'Collectifs de journalisme radical non-certifié (les 'Hors-Prisme')' non trouvée dans instances/
+- [instances] `prisme_global_policy_reform.md` — référence oppositions 'Mouvements souverainistes de l'information régionale' non trouvée dans instances/
+- [instances] `prisme_global_policy_reform.md` — référence oppositions 'Factions internes dissidentes des contributeurs historiques' non trouvée dans instances/
+- [instances] `prisme_global_reference.md` — référence alliances 'collectifs de journalisme embarqué' non trouvée dans instances/
+- [instances] `prisme_global_reference.md` — référence alliances 'réseaux de capteurs citoyens' non trouvée dans instances/
+- [instances] `prisme_global_reference.md` — référence alliances 'coopératives IA open-source' non trouvée dans instances/
+- [instances] `prisme_global_reference.md` — référence oppositions 'plateformes centralisées de narration officielle' non trouvée dans instances/
+- [instances] `prisme_global_reference.md` — référence oppositions 'agences gouvernementales de régulation informationnelle' non trouvée dans instances/
+- [instances] `prisme_global_reference.md` — référence oppositions 'consortiums médiatiques corporatifs' non trouvée dans instances/
+- [instances] `reseau_mnemos_breakdown.md` — référence alliances 'Communautés rurales autogérées utilisant les nœuds comme bibliothèques de survie' non trouvée dans instances/
+- [instances] `reseau_mnemos_breakdown.md` — référence alliances 'Réseaux médicaux décentralisés dépendant des corpus sanitaires Mnemos' non trouvée dans instances/
+- [instances] `reseau_mnemos_breakdown.md` — référence alliances 'Collectifs de gardiens-archivistes itinérants' non trouvée dans instances/
+- [instances] `reseau_mnemos_breakdown.md` — référence oppositions 'Seigneurs de guerre locaux cherchant à monopoliser l'accès aux données stratégiques' non trouvée dans instances/
+- [instances] `reseau_mnemos_breakdown.md` — référence oppositions 'Corporations de l'ère pré-effondrement revendiquant des droits de propriété intellectuelle sur les corpus' non trouvée dans instances/
+- [instances] `reseau_mnemos_breakdown.md` — référence oppositions 'Factions propagandistes cherchant à corrompre ou réécrire les archives historiques' non trouvée dans instances/
+- [instances] `reseau_mnemos_eco_communalism.md` — référence alliances 'Assemblées territoriales éco-communalistes' non trouvée dans instances/
+- [instances] `reseau_mnemos_eco_communalism.md` — référence alliances 'Guildes de semenciers et d'agronomes itinérants' non trouvée dans instances/
+- [instances] `reseau_mnemos_eco_communalism.md` — référence alliances 'Réseaux de soins communautaires' non trouvée dans instances/
+- [instances] `reseau_mnemos_eco_communalism.md` — référence alliances 'Collectifs de techniciens sobres' non trouvée dans instances/
+- [instances] `reseau_mnemos_eco_communalism.md` — référence oppositions 'Enclaves corporatives à accès propriétaire à l'information' non trouvée dans instances/
+- [instances] `reseau_mnemos_eco_communalism.md` — référence oppositions 'Factions autoritaires cherchant à contrôler les flux de savoir' non trouvée dans instances/
+- [instances] `reseau_mnemos_eco_communalism.md` — référence oppositions 'Acteurs du marché noir de données extractivistes' non trouvée dans instances/
+- [instances] `reseau_mnemos_new_sustainability.md` — référence alliances 'Conseil de Coordination Technologique Mondial' non trouvée dans instances/
+- [instances] `reseau_mnemos_new_sustainability.md` — référence alliances 'Réseau des Hubs Urbains Régénératifs' non trouvée dans instances/
+- [instances] `reseau_mnemos_new_sustainability.md` — référence alliances 'Consortium d'Interopérabilité IA-Humain' non trouvée dans instances/
+- [instances] `reseau_mnemos_new_sustainability.md` — référence oppositions 'Enclaves de données propriétaires des anciennes mégacorporations' non trouvée dans instances/
+- [instances] `reseau_mnemos_new_sustainability.md` — référence oppositions 'Mouvements souverainistes de déconnexion territoriale' non trouvée dans instances/
+- [instances] `reseau_mnemos_reference.md` — référence alliances 'Collectifs académiques indépendants' non trouvée dans instances/
+- [instances] `reseau_mnemos_reference.md` — référence alliances 'Municipalités périphériques sous-connectées' non trouvée dans instances/
+- [instances] `reseau_mnemos_reference.md` — référence alliances 'ONG de préservation patrimoniale numérique' non trouvée dans instances/
+- [instances] `reseau_mnemos_reference.md` — référence alliances 'Coopératives énergétiques décentralisées' non trouvée dans instances/
+- [instances] `reseau_mnemos_reference.md` — référence oppositions 'Grandes plateformes d'IA intégrées (contrôle des flux)' non trouvée dans instances/
+- [instances] `reseau_mnemos_reference.md` — référence oppositions 'États à tendance centraliste numérique' non trouvée dans instances/
+- [instances] `reseau_mnemos_reference.md` — référence oppositions 'Consortiums privés de gestion des données critiques' non trouvée dans instances/
+- [instances] `trame_bioclimatique_breakdown.md` — référence alliances 'Enclaves agro-communautaires autonomes' non trouvée dans instances/
+- [instances] `trame_bioclimatique_breakdown.md` — référence alliances 'Factions para-étatiques régionales contrôlant des nœuds hydriques' non trouvée dans instances/
+- [instances] `trame_bioclimatique_breakdown.md` — référence alliances 'Réseaux de techniciens nomades (anciens ingénieurs du réseau)' non trouvée dans instances/
+- [instances] `trame_bioclimatique_breakdown.md` — référence oppositions 'Coalitions industrielles de récupération pillant les équipements' non trouvée dans instances/
+- [instances] `trame_bioclimatique_breakdown.md` — référence oppositions 'États-fragments en guerre pour le contrôle des stations atmosphériques' non trouvée dans instances/
+- [instances] `trame_bioclimatique_breakdown.md` — référence oppositions 'Populations déplacées sabotant les corridors perçus comme propriété ennemie' non trouvée dans instances/
+- [instances] `trame_bioclimatique_eco_communalism.md` — référence alliances 'Conseils de bassins versants locaux' non trouvée dans instances/
+- [instances] `trame_bioclimatique_eco_communalism.md` — référence alliances 'Guildes de semenciers itinérants' non trouvée dans instances/
+- [instances] `trame_bioclimatique_eco_communalism.md` — référence alliances 'Assemblées bioterritoriales régionales' non trouvée dans instances/
+- [instances] `trame_bioclimatique_eco_communalism.md` — référence alliances 'Collectifs de géo-observateurs citoyens' non trouvée dans instances/
+- [instances] `trame_bioclimatique_eco_communalism.md` — référence oppositions 'Enclaves extractivistes résiduelles cherchant à monétiser les corridors' non trouvée dans instances/
+- [instances] `trame_bioclimatique_eco_communalism.md` — référence oppositions 'Factions technophiles prônant la géo-ingénierie centralisée' non trouvée dans instances/
+- [instances] `trame_bioclimatique_eco_communalism.md` — référence oppositions 'Communautés isolationnistes refusant les obligations de continuité écologique' non trouvée dans instances/
+- [instances] `trame_bioclimatique_new_sustainability.md` — référence alliances 'Consortium de Régénération Planétaire (CRP)' non trouvée dans instances/
+- [instances] `trame_bioclimatique_new_sustainability.md` — référence alliances 'Agence Mondiale de Modélisation Climatique (AMMC)' non trouvée dans instances/
+- [instances] `trame_bioclimatique_new_sustainability.md` — référence alliances 'Réseaux de gouvernance territoriale distribués' non trouvée dans instances/
+- [instances] `trame_bioclimatique_new_sustainability.md` — référence alliances 'Opérateurs de fusion énergétique régionaux' non trouvée dans instances/
+- [instances] `trame_bioclimatique_new_sustainability.md` — référence oppositions 'Lobbies d'extraction minière des zones-tampons' non trouvée dans instances/
+- [instances] `trame_bioclimatique_new_sustainability.md` — référence oppositions 'États souverainistes refusant la cession de territoires au réseau' non trouvée dans instances/
+- [instances] `trame_bioclimatique_new_sustainability.md` — référence oppositions 'Communautés locales exclues des décisions de traçé des corridors' non trouvée dans instances/
+- [instances] `trame_bioclimatique_policy_reform.md` — référence alliances 'Agence Technocratique pour la Résilience Biosphérique (ATRB)' non trouvée dans instances/
+- [instances] `trame_bioclimatique_policy_reform.md` — référence alliances 'Consortium de Géo-ingénierie Atmosphérique Pacifique' non trouvée dans instances/
+- [instances] `trame_bioclimatique_policy_reform.md` — référence alliances 'Fonds Mondial pour la Transition Écosystémique (FMTE)' non trouvée dans instances/
+- [instances] `trame_bioclimatique_policy_reform.md` — référence alliances 'Réseaux de capteurs IA-climatiques déployés par les États membres' non trouvée dans instances/
+- [instances] `trame_bioclimatique_policy_reform.md` — référence oppositions 'Coalitions d'États souverainistes refusant la cession de droits territoriaux au RIREC' non trouvée dans instances/
+- [instances] `trame_bioclimatique_policy_reform.md` — référence oppositions 'Lobbies extractivistes opérant dans les zones-tampons du réseau' non trouvée dans instances/
+- [instances] `trame_bioclimatique_policy_reform.md` — référence oppositions 'Mouvements populaires dénonçant la dépossession écologique des communautés locales' non trouvée dans instances/
+- [instances] `trame_bioclimatique_policy_reform.md` — référence oppositions 'Collectifs de hackers biosphériques contestant le monopole des données environnementales' non trouvée dans instances/
+- [instances] `vasil_orentchev_breakdown.md` — référence alliances 'Enclaves industrielles survivantes du corridor oural-caspien' non trouvée dans instances/
+- [instances] `vasil_orentchev_breakdown.md` — référence alliances 'Factions paramilitaires locales achetées ou neutralisées' non trouvée dans instances/
+- [instances] `vasil_orentchev_breakdown.md` — référence alliances 'Réseaux de renseignement informels issus de l'ancienne structure militaire eurasienne' non trouvée dans instances/
+- [instances] `vasil_orentchev_breakdown.md` — référence oppositions 'Blocs géopolitiques tentant de recontroler les couloirs d'approvisionnement stratégiques' non trouvée dans instances/
+- [instances] `vasil_orentchev_breakdown.md` — référence oppositions 'Concurrents logistiques criminels cherchant à absorber ou éliminer ses réseaux' non trouvée dans instances/
+- [instances] `vasil_orentchev_breakdown.md` — référence oppositions 'Mouvements de résistance locaux refusant les péages imposés sur les ressources de base' non trouvée dans instances/
+- [instances] `vasil_orentchev_fortress_world.md` — référence alliances 'Commandements logistiques périphériques du Bloc Eurasien Central' non trouvée dans instances/
+- [instances] `vasil_orentchev_fortress_world.md` — référence alliances 'Opérateurs privés de transit énergétique des zones grises caucasiennes et centrasiatiques' non trouvée dans instances/
+- [instances] `vasil_orentchev_fortress_world.md` — référence alliances 'Réseaux de maintenance d'infrastructures critiques hors-blocs' non trouvée dans instances/
+- [instances] `vasil_orentchev_fortress_world.md` — référence oppositions 'Agences de contrôle des frontières des blocs fermés cherchant à éliminer les intermédiaires non-alignés' non trouvée dans instances/
+- [instances] `vasil_orentchev_fortress_world.md` — référence oppositions 'Factions djihadistes logistiques concurrentes dans les corridors d'Asie centrale' non trouvée dans instances/
+- [instances] `vasil_orentchev_fortress_world.md` — référence oppositions 'Inspecteurs de conformité des traités inter-blocs mandatés pour réguler les flux non-déclarés' non trouvée dans instances/
+- [instances] `vasil_orentchev_reference.md` — référence alliances 'Opérateurs logistiques privés des zones grises eurasiennes' non trouvée dans instances/
+- [instances] `vasil_orentchev_reference.md` — référence alliances 'Administrations hybrides de cités-relais périphériques' non trouvée dans instances/
+- [instances] `vasil_orentchev_reference.md` — référence alliances 'Factions d'extraction minière indépendantes' non trouvée dans instances/
+- [instances] `vasil_orentchev_reference.md` — référence alliances 'Réseaux de financement gris issus d'anciens blocs militaires' non trouvée dans instances/
+- [instances] `vasil_orentchev_reference.md` — référence oppositions 'Consortiums énergétiques des mégapoles cherchant à internaliser les corridors' non trouvée dans instances/
+- [instances] `vasil_orentchev_reference.md` — référence oppositions 'Agences de sécurité régionales mandatées pour normaliser les zones grises' non trouvée dans instances/
+- [instances] `vasil_orentchev_reference.md` — référence oppositions 'Milices concurrentes disputant les droits de passage' non trouvée dans instances/
+- [instances] `vasil_orentchev_reference.md` — référence oppositions 'ONG de traçabilité des ressources critiques dénonçant ses pratiques' non trouvée dans instances/
+- [instances] `voix_du_dehors_breakdown.md` — référence alliances 'Réseaux de courriers nomades des couloirs sahélo-méditerranéens' non trouvée dans instances/
+- [instances] `voix_du_dehors_breakdown.md` — référence alliances 'Collectifs de hackers archivistes opérant sur les interstices réseaux survivants' non trouvée dans instances/
+- [instances] `voix_du_dehors_breakdown.md` — référence alliances 'Communautés religieuses gérant des relais physiques discrets' non trouvée dans instances/
+- [instances] `voix_du_dehors_breakdown.md` — référence oppositions 'Blocs régionaux cherchant à contrôler le récit de leurs conflits ressources' non trouvée dans instances/
+- [instances] `voix_du_dehors_breakdown.md` — référence oppositions 'Factions militaires privées documentées dans les enquêtes terrain' non trouvée dans instances/
+- [instances] `voix_du_dehors_breakdown.md` — référence oppositions 'Anciens financeurs devenus censeurs après retournement d'intérêt' non trouvée dans instances/
+- [instances] `voix_du_dehors_eco_communalism.md` — référence alliances 'Assemblées coopératives régionales' non trouvée dans instances/
+- [instances] `voix_du_dehors_eco_communalism.md` — référence alliances 'Réseaux de bibliothèques-archives communautaires' non trouvée dans instances/
+- [instances] `voix_du_dehors_eco_communalism.md` — référence alliances 'Collectifs de cartographie écologique participative' non trouvée dans instances/
+- [instances] `voix_du_dehors_eco_communalism.md` — référence oppositions 'Conseils territoriaux opaques sur la gestion des ressources' non trouvée dans instances/
+- [instances] `voix_du_dehors_eco_communalism.md` — référence oppositions 'Réseaux marchands informels cherchant à contrôler le récit de pénurie' non trouvée dans instances/
+- [instances] `voix_du_dehors_eco_communalism.md` — référence oppositions 'Courants isolationnistes refusant la circulation de l'information inter-communautés' non trouvée dans instances/
+- [instances] `voix_du_dehors_fortress_world.md` — référence alliances 'Réseaux de passeurs d'information aux frontières inter-blocs' non trouvée dans instances/
+- [instances] `voix_du_dehors_fortress_world.md` — référence alliances 'Cellules universitaires dissidentes dans les zones tampons' non trouvée dans instances/
+- [instances] `voix_du_dehors_fortress_world.md` — référence alliances 'Archives chiffrées distribuées de l'ancienne Open Internet Coalition' non trouvée dans instances/
+- [instances] `voix_du_dehors_fortress_world.md` — référence oppositions 'Agences de sécurité informationnelle des blocs dominants' non trouvée dans instances/
+- [instances] `voix_du_dehors_fortress_world.md` — référence oppositions 'Médias d'État souverains des grands blocs (Hegemonia Press, Xinhua Fortifiée, EuroVox Integral)' non trouvée dans instances/
+- [instances] `voix_du_dehors_fortress_world.md` — référence oppositions 'Unités de contre-narration des appareils militarisés de chaque bloc' non trouvée dans instances/
+- [instances] `voix_du_dehors_reference.md` — référence alliances 'Collectifs de journalistes indépendants régionaux' non trouvée dans instances/
+- [instances] `voix_du_dehors_reference.md` — référence alliances 'ONG environnementales de terrain' non trouvée dans instances/
+- [instances] `voix_du_dehors_reference.md` — référence alliances 'Réseaux de lanceurs d'alerte institutionnels dissidents' non trouvée dans instances/
+- [instances] `voix_du_dehors_reference.md` — référence alliances 'Universités de recherche en zones de relative liberté académique' non trouvée dans instances/
+- [instances] `voix_du_dehors_reference.md` — référence oppositions 'Plateformes informationnelles dominantes et leurs IA de modération' non trouvée dans instances/
+- [instances] `voix_du_dehors_reference.md` — référence oppositions 'Services de contre-information des blocs géopolitiques concurrents' non trouvée dans instances/
+- [instances] `voix_du_dehors_reference.md` — référence oppositions 'Consortiums énergétiques opérant dans l'opacité réglementaire' non trouvée dans instances/
+- [instances] `voix_du_dehors_reference.md` — référence oppositions 'Agences gouvernementales de sécurité numérique' non trouvée dans instances/
+- [cross_references] `agence_stabilisation_climatique_breakdown.md` — wikilink cassé : [[Réseaux scientifiques indépendants (climatologues sans État)]]
+- [cross_references] `agence_stabilisation_climatique_breakdown.md` — wikilink cassé : [[ONG de gestion migratoire survivantes]]
+- [cross_references] `agence_stabilisation_climatique_breakdown.md` — wikilink cassé : [[Quelques cités-États côtières désespérées]]
+- [cross_references] `agence_stabilisation_climatique_breakdown.md` — wikilink cassé : [[Blocs régionaux souverainistes (Ligue Eurasiatique, Coalition Pacifique)]]
+- [cross_references] `agence_stabilisation_climatique_breakdown.md` — wikilink cassé : [[Compagnies de géo-ingénierie privées opérant sans mandat]]
+- [cross_references] `agence_stabilisation_climatique_breakdown.md` — wikilink cassé : [[Mouvements populistes anti-technocratiques]]
+- [cross_references] `agence_stabilisation_climatique_new_sustainability.md` — wikilink cassé : [[Consortium des IA Climatiques (CIAC)]]
+- [cross_references] `agence_stabilisation_climatique_new_sustainability.md` — wikilink cassé : [[Fonds Mondial de Régénération Écologique]]
+- [cross_references] `agence_stabilisation_climatique_new_sustainability.md` — wikilink cassé : [[Réseau des Villes Résilientes 2080]]
+- [cross_references] `agence_stabilisation_climatique_new_sustainability.md` — wikilink cassé : [[Programme Onusien de Mobilité Climatique]]
+- [cross_references] `agence_stabilisation_climatique_new_sustainability.md` — wikilink cassé : [[Souverainistes du Bloc Eurasien]]
+- [cross_references] `agence_stabilisation_climatique_new_sustainability.md` — wikilink cassé : [[Coalition des Industries Extractives Résiduelles]]
+- [cross_references] `agence_stabilisation_climatique_new_sustainability.md` — wikilink cassé : [[Mouvement pour l'Autodétermination Territoriale]]
+- [cross_references] `agence_stabilisation_climatique_new_sustainability.md` — wikilink cassé : [[Collectifs de déplacés climatiques non-représentés]]
+- [cross_references] `agence_stabilisation_climatique_policy_reform.md` — wikilink cassé : [[Consortium Technologique des Nations Intégrées]]
+- [cross_references] `agence_stabilisation_climatique_policy_reform.md` — wikilink cassé : [[Fonds Mondial de Résilience Infrastructurelle]]
+- [cross_references] `agence_stabilisation_climatique_policy_reform.md` — wikilink cassé : [[Réseau des Villes-Refuges Certifiées]]
+- [cross_references] `agence_stabilisation_climatique_policy_reform.md` — wikilink cassé : [[Agence Internationale de l'Énergie Climatique]]
+- [cross_references] `agence_stabilisation_climatique_policy_reform.md` — wikilink cassé : [[Mouvement pour la Souveraineté Territoriale Absolue]]
+- [cross_references] `agence_stabilisation_climatique_policy_reform.md` — wikilink cassé : [[Collectifs de résistance aux relocalisations forcées]]
+- [cross_references] `agence_stabilisation_climatique_policy_reform.md` — wikilink cassé : [[États dissidents du Bloc Austral]]
+- [cross_references] `agence_stabilisation_climatique_policy_reform.md` — wikilink cassé : [[Lobbies industriels des énergies fossiles résiduelles]]
+- [cross_references] `agence_stabilisation_climatique_reference.md` — wikilink cassé : [[Consortium Énergétique des Mers du Nord]]
+- [cross_references] `agence_stabilisation_climatique_reference.md` — wikilink cassé : [[Union Africaine de Résilience Territoriale]]
+- [cross_references] `agence_stabilisation_climatique_reference.md` — wikilink cassé : [[Réseau des Métropoles Côtières Adaptées]]
+- [cross_references] `agence_stabilisation_climatique_reference.md` — wikilink cassé : [[Programme Onusien pour les Mobilités Contraintes (POMC)]]
+- [cross_references] `agence_stabilisation_climatique_reference.md` — wikilink cassé : [[Bloc des Souverainistes Climatiques (coalition d'États refusant les mandats géo-ingénieristes)]]
+- [cross_references] `agence_stabilisation_climatique_reference.md` — wikilink cassé : [[Collectif Nuit Jaune (mouvement de résistance aux migrations forcées certifiées)]]
+- [cross_references] `agence_stabilisation_climatique_reference.md` — wikilink cassé : [[Corporations d'extraction énergétique non signataires]]
+- [cross_references] `alliance_blocs_souverains_breakdown.md` — wikilink cassé : [[Milices contractuelles des anciens États-membres]]
+- [cross_references] `alliance_blocs_souverains_breakdown.md` — wikilink cassé : [[Factions énergétiques régionales héritières des pactes ABS]]
+- [cross_references] `alliance_blocs_souverains_breakdown.md` — wikilink cassé : [[Réseaux de solidarité horizontale post-effondrement]]
+- [cross_references] `alliance_blocs_souverains_breakdown.md` — wikilink cassé : [[Cités-États indépendantes ayant rompu tout lien institutionnel]]
+- [cross_references] `alliance_blocs_souverains_breakdown.md` — wikilink cassé : [[Coalitions d'urgence humanitaire non affiliées]]
+- [cross_references] `alliance_blocs_souverains_fortress_world.md` — wikilink cassé : [[Complexes militaro-industriels des blocs membres]]
+- [cross_references] `alliance_blocs_souverains_fortress_world.md` — wikilink cassé : [[Cartels énergétiques régionaux sous contrôle étatique]]
+- [cross_references] `alliance_blocs_souverains_fortress_world.md` — wikilink cassé : [[Réseaux privés de sécurité aux frontières]]
+- [cross_references] `alliance_blocs_souverains_fortress_world.md` — wikilink cassé : [[Mouvements de populations déplacées et apatrides]]
+- [cross_references] `alliance_blocs_souverains_fortress_world.md` — wikilink cassé : [[Réseaux d'échange clandestin inter-zones]]
+- [cross_references] `alliance_blocs_souverains_fortress_world.md` — wikilink cassé : [[Factions internes prônant l'autarcie totale]]
+- [cross_references] `alliance_blocs_souverains_fortress_world.md` — wikilink cassé : [[Institutions multilatérales résiduelles (ONU fragmentée, agences humanitaires)]]
+- [cross_references] `alliance_blocs_souverains_reference.md` — wikilink cassé : [[Blocs énergétiques régionaux signataires de la Charte de Réciprocité]]
+- [cross_references] `alliance_blocs_souverains_reference.md` — wikilink cassé : [[Consortiums privés d'extraction de ressources critiques]]
+- [cross_references] `alliance_blocs_souverains_reference.md` — wikilink cassé : [[Appareils militaires nationaux des États membres]]
+- [cross_references] `alliance_blocs_souverains_reference.md` — wikilink cassé : [[Réseaux de gouvernance multilatérale survivants]]
+- [cross_references] `alliance_blocs_souverains_reference.md` — wikilink cassé : [[Mégapoles globales à logique post-nationale]]
+- [cross_references] `alliance_blocs_souverains_reference.md` — wikilink cassé : [[Mouvements de libre circulation des personnes et des données]]
+- [cross_references] `amara_diallo_nkosi_breakdown.md` — wikilink cassé : [[Réseaux informels d'ingénieurs hydrologues déplacés (Diaspora Tech Sahel)]]
+- [cross_references] `amara_diallo_nkosi_breakdown.md` — wikilink cassé : [[Communautés riveraines du bassin du Congo maintenant des accords tacites locaux]]
+- [cross_references] `amara_diallo_nkosi_breakdown.md` — wikilink cassé : [[Organisations humanitaires opérant hors cadre onusien effondré]]
+- [cross_references] `amara_diallo_nkosi_breakdown.md` — wikilink cassé : [[Seigneurs de guerre contrôlant les barrages et monnayant l'accès à l'eau]]
+- [cross_references] `amara_diallo_nkosi_breakdown.md` — wikilink cassé : [[Consortiums privés rachetant les infrastructures hydrauliques à la faveur du chaos]]
+- [cross_references] `amara_diallo_nkosi_breakdown.md` — wikilink cassé : [[Factions étatiques résiduelles réclamant souveraineté exclusive sur les ressources hydriques]]
+- [cross_references] `amara_diallo_nkosi_new_sustainability.md` — wikilink cassé : [[Agence Globale de Régénération des Bassins Versants (AGRB-ONU)]]
+- [cross_references] `amara_diallo_nkosi_new_sustainability.md` — wikilink cassé : [[Conseil Technique de l'Eau — Union Panafricaine]]
+- [cross_references] `amara_diallo_nkosi_new_sustainability.md` — wikilink cassé : [[Réseau des Ingénieurs Climatiques du Sud Global]]
+- [cross_references] `amara_diallo_nkosi_new_sustainability.md` — wikilink cassé : [[Collectifs riverains du bassin du Congo]]
+- [cross_references] `amara_diallo_nkosi_new_sustainability.md` — wikilink cassé : [[Lobbies agro-industriels du bassin inférieur du Congo]]
+- [cross_references] `amara_diallo_nkosi_new_sustainability.md` — wikilink cassé : [[Factions technocratiques partisans d'une délégation totale aux IA décisionnelles sans supervision humaine]]
+- [cross_references] `amara_diallo_nkosi_new_sustainability.md` — wikilink cassé : [[Gouvernements nationalistes résistant à la souveraineté partagée sur les ressources hydriques]]
+- [cross_references] `amara_diallo_nkosi_policy_reform.md` — wikilink cassé : [[Autorité Continentale des Ressources Aquatiques (ACRA)]]
+- [cross_references] `amara_diallo_nkosi_policy_reform.md` — wikilink cassé : [[Conseil de Régulation Climatique Global]]
+- [cross_references] `amara_diallo_nkosi_policy_reform.md` — wikilink cassé : [[Collectifs de défense hydrique sahéliens]]
+- [cross_references] `amara_diallo_nkosi_policy_reform.md` — wikilink cassé : [[Institut de Modélisation Hydrologique de Kinshasa]]
+- [cross_references] `amara_diallo_nkosi_policy_reform.md` — wikilink cassé : [[Consortiums agro-industriels du bassin fluvial]]
+- [cross_references] `amara_diallo_nkosi_policy_reform.md` — wikilink cassé : [[Gouvernements nationaux résistant à la souveraineté déléguée sur l'eau]]
+- [cross_references] `amara_diallo_nkosi_policy_reform.md` — wikilink cassé : [[Factions technocratiques favorisant la marchandisation totale des ressources hydriques]]
+- [cross_references] `amara_diallo_nkosi_reference.md` — wikilink cassé : [[Commission Hydrique de l'Union Africaine]]
+- [cross_references] `amara_diallo_nkosi_reference.md` — wikilink cassé : [[Réseau des Coopératives Agro-Sahéliennes]]
+- [cross_references] `amara_diallo_nkosi_reference.md` — wikilink cassé : [[Programme ONU-Eau 2080]]
+- [cross_references] `amara_diallo_nkosi_reference.md` — wikilink cassé : [[Institut Polytechnique de Ouagadougou]]
+- [cross_references] `amara_diallo_nkosi_reference.md` — wikilink cassé : [[Consortiums d'extraction minière du bassin congolais]]
+- [cross_references] `amara_diallo_nkosi_reference.md` — wikilink cassé : [[Gouvernements riverains défendant la souveraineté hydrique absolue]]
+- [cross_references] `amara_diallo_nkosi_reference.md` — wikilink cassé : [[Lobbies agro-industriels à haute consommation d'eau]]
+- [cross_references] `armada_logistique_nordique_breakdown.md` — wikilink cassé : [[Enclaves industrielles de Bergen et Tromsø]]
+- [cross_references] `armada_logistique_nordique_breakdown.md` — wikilink cassé : [[Factions militaires résidуelles de l'ex-OTAN nordique]]
+- [cross_references] `armada_logistique_nordique_breakdown.md` — wikilink cassé : [[Consortiums énergétiques samoïèdes du Yamal]]
+- [cross_references] `armada_logistique_nordique_breakdown.md` — wikilink cassé : [[Bloc de la Hanse Baltique recomposée]]
+- [cross_references] `armada_logistique_nordique_breakdown.md` — wikilink cassé : [[Milices séparatistes du Conseil des Pêcheries d'Islande]]
+- [cross_references] `armada_logistique_nordique_breakdown.md` — wikilink cassé : [[Fédération Russe résiduelle — District de Mourmansk]]
+- [cross_references] `armada_logistique_nordique_breakdown.md` — wikilink cassé : [[Conglométrat sino-sibérien Bohai Transit]]
+- [cross_references] `armada_logistique_nordique_fortress_world.md` — wikilink cassé : [[Conseil des États Nordiques Souverains (structure para-étatique tutélaire)]]
+- [cross_references] `armada_logistique_nordique_fortress_world.md` — wikilink cassé : [[Consortiums énergétiques des blocs baltiques]]
+- [cross_references] `armada_logistique_nordique_fortress_world.md` — wikilink cassé : [[Opérateurs privés de flotte autonome (construction navale sino-finlandaise)]]
+- [cross_references] `armada_logistique_nordique_fortress_world.md` — wikilink cassé : [[Blocs continentaux cherchant à nationaliser les corridors arctiques]]
+- [cross_references] `armada_logistique_nordique_fortress_world.md` — wikilink cassé : [[Milices de piraterie logistique opérant en zones grises arctiques]]
+- [cross_references] `armada_logistique_nordique_fortress_world.md` — wikilink cassé : [[Factions au sein des institutions scandinaves refusant la privatisation des voies souveraines]]
+- [cross_references] `armada_logistique_nordique_reference.md` — wikilink cassé : [[Conseil des États Nordiques Intégrés]]
+- [cross_references] `armada_logistique_nordique_reference.md` — wikilink cassé : [[Consortium Énergétique Baltique]]
+- [cross_references] `armada_logistique_nordique_reference.md` — wikilink cassé : [[Fonds Souverain Arctique Scandinave]]
+- [cross_references] `armada_logistique_nordique_reference.md` — wikilink cassé : [[Sibérie Fédérale — contestation des zones d'exclusion maritime]]
+- [cross_references] `armada_logistique_nordique_reference.md` — wikilink cassé : [[Collectifs de pêche inuit et Sami — spoliation des territoires ancestraux déglaciés]]
+- [cross_references] `armada_logistique_nordique_reference.md` — wikilink cassé : [[Opérateurs logistiques asiatiques cherchant à court-circuiter les routes ALN]]
+- [cross_references] `bureau_gouvernance_algorithmique_fortress_world.md` — wikilink cassé : [[Consortiums énergétiques du bloc Ourrassol]]
+- [cross_references] `bureau_gouvernance_algorithmique_fortress_world.md` — wikilink cassé : [[Agences de surveillance numérique souveraine]]
+- [cross_references] `bureau_gouvernance_algorithmique_fortress_world.md` — wikilink cassé : [[Exécutif militaro-civil du régime]]
+- [cross_references] `bureau_gouvernance_algorithmique_fortress_world.md` — wikilink cassé : [[Réseaux de désobéissance algorithmique (hacktivisme interne)]]
+- [cross_references] `bureau_gouvernance_algorithmique_fortress_world.md` — wikilink cassé : [[Factions politiques traditionalistes refusant la dépossession du mandat électif]]
+- [cross_references] `bureau_gouvernance_algorithmique_fortress_world.md` — wikilink cassé : [[Blocs géopolitiques rivaux cherchant à infiltrer ou discréditer les modèles]]
+- [cross_references] `bureau_gouvernance_algorithmique_new_sustainability.md` — wikilink cassé : [[Parlement Délibératif Mondial]]
+- [cross_references] `bureau_gouvernance_algorithmique_new_sustainability.md` — wikilink cassé : [[Réseau des Agences Climatiques Régionales]]
+- [cross_references] `bureau_gouvernance_algorithmique_new_sustainability.md` — wikilink cassé : [[Consortium d'Audit Algorithmique Ouvert (CAAO)]]
+- [cross_references] `bureau_gouvernance_algorithmique_new_sustainability.md` — wikilink cassé : [[Fonds Universel de Redistribution Technologique]]
+- [cross_references] `bureau_gouvernance_algorithmique_new_sustainability.md` — wikilink cassé : [[Mouvements souverainistes de la ceinture boréale]]
+- [cross_references] `bureau_gouvernance_algorithmique_new_sustainability.md` — wikilink cassé : [[Collectifs de désobéissance algorithmique]]
+- [cross_references] `bureau_gouvernance_algorithmique_new_sustainability.md` — wikilink cassé : [[Blocs économiques refusant la fiscalité universelle]]
+- [cross_references] `bureau_gouvernance_algorithmique_new_sustainability.md` — wikilink cassé : [[Réseaux néo-démocratiques plaidant pour la gouvernance participative directe]]
+- [cross_references] `bureau_gouvernance_algorithmique_policy_reform.md` — wikilink cassé : [[Consortium Nexus-Calcul (infrastructure de calcul quantique)]]
+- [cross_references] `bureau_gouvernance_algorithmique_policy_reform.md` — wikilink cassé : [[Fonds de Stabilisation Climatique ONU-3]]
+- [cross_references] `bureau_gouvernance_algorithmique_policy_reform.md` — wikilink cassé : [[Réseau des Régulateurs Numériques Souverains (RRNS)]]
+- [cross_references] `bureau_gouvernance_algorithmique_policy_reform.md` — wikilink cassé : [[Institut Brookings-Singapour de Politique Computationnelle]]
+- [cross_references] `bureau_gouvernance_algorithmique_policy_reform.md` — wikilink cassé : [[Coalition des Souverainistes Numériques (États non-signataires)]]
+- [cross_references] `bureau_gouvernance_algorithmique_policy_reform.md` — wikilink cassé : [[Front des Communes Algorithmiques (mouvement citoyen pour l'audit ouvert)]]
+- [cross_references] `bureau_gouvernance_algorithmique_policy_reform.md` — wikilink cassé : [[Gouvernements populistes dénonçant la dépossession démocratique]]
+- [cross_references] `bureau_gouvernance_algorithmique_policy_reform.md` — wikilink cassé : [[Chercheurs en éthique de l'IA critiquant l'opacité des modèles délibératifs]]
+- [cross_references] `collectifs_du_seuil_breakdown.md` — wikilink cassé : [[Réseaux de troc post-étatiques des marges périurbaines]]
+- [cross_references] `collectifs_du_seuil_breakdown.md` — wikilink cassé : [[Factions sécessionnistes agrariennes des zones de désertification]]
+- [cross_references] `collectifs_du_seuil_breakdown.md` — wikilink cassé : [[Certains groupes de hackers d'infrastructure prônant la décroissance forcée]]
+- [cross_references] `collectifs_du_seuil_breakdown.md` — wikilink cassé : [[Gouvernements régionaux résiduels tentant de reprendre le contrôle territorial]]
+- [cross_references] `collectifs_du_seuil_breakdown.md` — wikilink cassé : [[Coalitions humanitaires d'urgence (ONG, agences onusiennes résiduelles)]]
+- [cross_references] `collectifs_du_seuil_breakdown.md` — wikilink cassé : [[Blocs de reconstruction techno-centrés refusant la narration effondriste]]
+- [cross_references] `collectifs_du_seuil_eco_communalism.md` — wikilink cassé : [[Communautés rurales dissidentes refusant les protocoles de coopération régionale]]
+- [cross_references] `collectifs_du_seuil_eco_communalism.md` — wikilink cassé : [[Réseaux de semenciers non-certifiés]]
+- [cross_references] `collectifs_du_seuil_eco_communalism.md` — wikilink cassé : [[Anciennes fraternités de survivalistes reconvertis à l'écospiritualité]]
+- [cross_references] `collectifs_du_seuil_eco_communalism.md` — wikilink cassé : [[Conseils de bassin versant éco-communalistes]]
+- [cross_references] `collectifs_du_seuil_eco_communalism.md` — wikilink cassé : [[Réseaux de reconstruction coopérative inter-communautés]]
+- [cross_references] `collectifs_du_seuil_eco_communalism.md` — wikilink cassé : [[Archives vivantes du savoir partagé (mouvement de documentation ouverte)]]
+- [cross_references] `collectifs_du_seuil_fortress_world.md` — wikilink cassé : [[réseaux de contrebande énergétique des zones grises]]
+- [cross_references] `collectifs_du_seuil_fortress_world.md` — wikilink cassé : [[dissidences internes aux blocs minoritaires]]
+- [cross_references] `collectifs_du_seuil_fortress_world.md` — wikilink cassé : [[communautés déplacées hors quota migratoire]]
+- [cross_references] `collectifs_du_seuil_fortress_world.md` — wikilink cassé : [[administrations de contrôle frontalier des blocs]]
+- [cross_references] `collectifs_du_seuil_fortress_world.md` — wikilink cassé : [[agences de sécurité intérieure des États forteresses]]
+- [cross_references] `collectifs_du_seuil_fortress_world.md` — wikilink cassé : [[mouvements résilients pro-système prônant l'adaptation dans le cadre]]
+- [cross_references] `conseil_regulation_algorithmique_policy_reform.md` — wikilink cassé : [[assemblee_territoires_policy_reform]]
+- [cross_references] `conseil_regulation_algorithmique_reference.md` — wikilink cassé : [[nexcore_reference]]
+- [cross_references] `conseil_regulation_ressources_breakdown.md` — wikilink cassé : [[Bloc de Johannesburg (faction africaine dissidente revendiquant le siège originel)]]
+- [cross_references] `conseil_regulation_ressources_breakdown.md` — wikilink cassé : [[Réseau des villes-États portuaires de la Ligue Méditerranéenne]]
+- [cross_references] `conseil_regulation_ressources_breakdown.md` — wikilink cassé : [[Archives neutres de Genève (stockage des derniers traités valides)]]
+- [cross_references] `conseil_regulation_ressources_breakdown.md` — wikilink cassé : [[Coalition Pacifique Nord (refuse toute supervision externe sur ses ressources)]]
+- [cross_references] `conseil_regulation_ressources_breakdown.md` — wikilink cassé : [[Consortium Énergétique Oural-Caspien]]
+- [cross_references] `conseil_regulation_ressources_breakdown.md` — wikilink cassé : [[Milices extractivistes indépendantes du Bassin du Congo]]
+- [cross_references] `conseil_regulation_ressources_breakdown.md` — wikilink cassé : [[Gouvernements de forteresse refusant la légitimité de Nairobi]]
+- [cross_references] `conseil_regulation_ressources_fortress_world.md` — wikilink cassé : [[Bloc Pacifique Nord (observateur passif)]]
+- [cross_references] `conseil_regulation_ressources_fortress_world.md` — wikilink cassé : [[Nations Non-Alignées Résiduelles (soutien de façade)]]
+- [cross_references] `conseil_regulation_ressources_fortress_world.md` — wikilink cassé : [[Archives Diplomatiques de l'ONU-Éclat]]
+- [cross_references] `conseil_regulation_ressources_fortress_world.md` — wikilink cassé : [[Consortium Eurasiatique des Ressources Fermées]]
+- [cross_references] `conseil_regulation_ressources_fortress_world.md` — wikilink cassé : [[Commandement Stratégique des Matières Critiques Atlantique (CSMCA)]]
+- [cross_references] `conseil_regulation_ressources_fortress_world.md` — wikilink cassé : [[Cartels miniers militarisés subsahariens]]
+- [cross_references] `conseil_regulation_ressources_new_sustainability.md` — wikilink cassé : [[Réseau des Villes Régénératives]]
+- [cross_references] `conseil_regulation_ressources_new_sustainability.md` — wikilink cassé : [[Consortium IA Climatique]]
+- [cross_references] `conseil_regulation_ressources_new_sustainability.md` — wikilink cassé : [[Union des Blocs Energétiques Régionaux]]
+- [cross_references] `conseil_regulation_ressources_new_sustainability.md` — wikilink cassé : [[Programme ONU de Restauration des Sols]]
+- [cross_references] `conseil_regulation_ressources_new_sustainability.md` — wikilink cassé : [[Lobbies miniers extractivistes résiduels]]
+- [cross_references] `conseil_regulation_ressources_new_sustainability.md` — wikilink cassé : [[Factions souverainistes des blocs périphériques]]
+- [cross_references] `conseil_regulation_ressources_new_sustainability.md` — wikilink cassé : [[Collectifs anarcho-autonomistes des Zones Libres]]
+- [cross_references] `conseil_regulation_ressources_policy_reform.md` — wikilink cassé : [[Union Technocratique Eurasiatique]]
+- [cross_references] `conseil_regulation_ressources_policy_reform.md` — wikilink cassé : [[Agence Internationale de l'Énergie Reformatée (AIER)]]
+- [cross_references] `conseil_regulation_ressources_policy_reform.md` — wikilink cassé : [[Consortium des Villes-États Durables]]
+- [cross_references] `conseil_regulation_ressources_policy_reform.md` — wikilink cassé : [[Réseau des Auditeurs Algorithmiques Indépendants (RAAI)]]
+- [cross_references] `conseil_regulation_ressources_policy_reform.md` — wikilink cassé : [[Front des Souverainistes Énergétiques (coalitions Amérique du Sud / Afrique subsaharienne dissidente)]]
+- [cross_references] `conseil_regulation_ressources_policy_reform.md` — wikilink cassé : [[Syndicats d'Extraction Privée Non Régulés]]
+- [cross_references] `conseil_regulation_ressources_policy_reform.md` — wikilink cassé : [[Mouvements de décroissance radicale contestant la légitimité de toute planification centralisée]]
+- [cross_references] `conseil_regulation_ressources_reference.md` — wikilink cassé : [[Union Africaine des Ressources Souveraines]]
+- [cross_references] `conseil_regulation_ressources_reference.md` — wikilink cassé : [[Consortium Indo-Pacifique de l'Hydrogène]]
+- [cross_references] `conseil_regulation_ressources_reference.md` — wikilink cassé : [[Banque Mondiale des Transitions Climatiques]]
+- [cross_references] `conseil_regulation_ressources_reference.md` — wikilink cassé : [[Agence Internationale des Énergies Renouvelables (IRENA-2)]]
+- [cross_references] `conseil_regulation_ressources_reference.md` — wikilink cassé : [[Bloc Ressources Eurasiatique (BRE)]]
+- [cross_references] `conseil_regulation_ressources_reference.md` — wikilink cassé : [[Cartel des Terres Rares d'Asie Centrale]]
+- [cross_references] `conseil_regulation_ressources_reference.md` — wikilink cassé : [[Lobbies industriels des États non-signataires]]
+- [cross_references] `conseil_regulation_ressources_reference.md` — wikilink cassé : [[Mouvements souverainistes de ressources en Amérique du Sud]]
+- [cross_references] `consortium_helios_fortress_world.md` — wikilink cassé : [[Régimes autoritaires du bloc eurasiatique occidental]]
+- [cross_references] `consortium_helios_fortress_world.md` — wikilink cassé : [[Consortiums de défense orbitale privés]]
+- [cross_references] `consortium_helios_fortress_world.md` — wikilink cassé : [[Réseaux de distribution d'hydrogène sous contrat militaire]]
+- [cross_references] `consortium_helios_fortress_world.md` — wikilink cassé : [[Blocs concurrents disposant de leurs propres infrastructures solaires orbitales]]
+- [cross_references] `consortium_helios_fortress_world.md` — wikilink cassé : [[Mouvements de réappropriation énergétique communautaire dans les zones périphériques]]
+- [cross_references] `consortium_helios_fortress_world.md` — wikilink cassé : [[Anciennes branches dissidentes du Consortium Helios d'origine]]
+- [cross_references] `consortium_helios_fortress_world.md` — wikilink cassé : [[Réseaux de contrebande énergétique transfrontalière]]
+- [cross_references] `consortium_helios_new_sustainability.md` — wikilink cassé : [[Conseil Énergétique Intercontinental]]
+- [cross_references] `consortium_helios_new_sustainability.md` — wikilink cassé : [[Fonds Mondial de Redistribution Technologique]]
+- [cross_references] `consortium_helios_new_sustainability.md` — wikilink cassé : [[Agence Orbitale de Régulation Commune (AORC)]]
+- [cross_references] `consortium_helios_new_sustainability.md` — wikilink cassé : [[Collectifs d'énergie décentralisée (mouvements communautaires micro-grid)]]
+- [cross_references] `consortium_helios_new_sustainability.md` — wikilink cassé : [[Faction interne conservatrice pro-actif stratégique]]
+- [cross_references] `consortium_helios_new_sustainability.md` — wikilink cassé : [[Observatoire Anti-Monopole de Genève]]
+- [cross_references] `consortium_helios_policy_reform.md` — wikilink cassé : [[Conseil Énergétique Intercontinental (CEI)]]
+- [cross_references] `consortium_helios_policy_reform.md` — wikilink cassé : [[Syndicat des Ingénieurs Orbitaux]]
+- [cross_references] `consortium_helios_policy_reform.md` — wikilink cassé : [[Fonds Souverain de Transition Verte (FSTV)]]
+- [cross_references] `consortium_helios_policy_reform.md` — wikilink cassé : [[Lobbyistes intégrés dans les comités techniques de l'ONU-Énergie]]
+- [cross_references] `consortium_helios_policy_reform.md` — wikilink cassé : [[Mouvement pour la Souveraineté Énergétique Commune (MSEC)]]
+- [cross_references] `consortium_helios_policy_reform.md` — wikilink cassé : [[Collectifs de communes autogérées en microgrids solaires]]
+- [cross_references] `consortium_helios_policy_reform.md` — wikilink cassé : [[Faction régulatrice dure au sein du CEI]]
+- [cross_references] `consortium_helios_policy_reform.md` — wikilink cassé : [[Journalistes d'investigation spécialisés en transparence énergétique]]
+- [cross_references] `consortium_helios_reference.md` — wikilink cassé : [[Blocs d'États signataires du Pacte Énergétique Multilatéral]]
+- [cross_references] `consortium_helios_reference.md` — wikilink cassé : [[Fonds souverains de la Ceinture Financière Pacifique]]
+- [cross_references] `consortium_helios_reference.md` — wikilink cassé : [[Consortium de maintenance orbitale SEOM-7]]
+- [cross_references] `consortium_helios_reference.md` — wikilink cassé : [[Mouvement pour la Souveraineté Énergétique Populaire (MSEP)]]
+- [cross_references] `consortium_helios_reference.md` — wikilink cassé : [[Coalitions de métropoles du Sud Global revendiquant l'accès libre aux infrastructures]]
+- [cross_references] `consortium_helios_reference.md` — wikilink cassé : [[Factions étatiques du bloc eurasiatique contestant la tarification différenciée]]
+- [cross_references] `cooperative_terrafond_breakdown.md` — wikilink cassé : [[Communautés paysannes réfugiées]]
+- [cross_references] `cooperative_terrafond_breakdown.md` — wikilink cassé : [[Réseaux de semenciers clandestins]]
+- [cross_references] `cooperative_terrafond_breakdown.md` — wikilink cassé : [[Brigades médicales itinérantes]]
+- [cross_references] `cooperative_terrafond_breakdown.md` — wikilink cassé : [[Seigneuries foncières opportunistes]]
+- [cross_references] `cooperative_terrafond_breakdown.md` — wikilink cassé : [[Milices d'accaparement hydrique]]
+- [cross_references] `cooperative_terrafond_breakdown.md` — wikilink cassé : [[Cartels logistiques régionaux]]
+- [cross_references] `cooperative_terrafond_eco_communalism.md` — wikilink cassé : [[Assemblées de bassin versant]]
+- [cross_references] `cooperative_terrafond_eco_communalism.md` — wikilink cassé : [[Brigades de restauration écologique]]
+- [cross_references] `cooperative_terrafond_eco_communalism.md` — wikilink cassé : [[Mutuelles de santé territoriales]]
+- [cross_references] `cooperative_terrafond_eco_communalism.md` — wikilink cassé : [[Réseaux de troc inter-coopératives]]
+- [cross_references] `cooperative_terrafond_eco_communalism.md` — wikilink cassé : [[Agro-conglomérats résiduels sous contrôle des enclaves technologiques]]
+- [cross_references] `cooperative_terrafond_eco_communalism.md` — wikilink cassé : [[Spéculateurs fonciers opérant dans les zones grises juridiques post-effondrement]]
+- [cross_references] `cooperative_terrafond_eco_communalism.md` — wikilink cassé : [[Factions extractivistes locales cherchant à monétiser les aquifères communs]]
+- [cross_references] `cooperative_terrafond_reference.md` — wikilink cassé : [[Agences de régulation hydrologique régionales]]
+- [cross_references] `cooperative_terrafond_reference.md` — wikilink cassé : [[Syndicats de travail rural hybride]]
+- [cross_references] `cooperative_terrafond_reference.md` — wikilink cassé : [[Réseaux de communs numériques agroécologiques]]
+- [cross_references] `cooperative_terrafond_reference.md` — wikilink cassé : [[Consortiums d'agriculture verticale algorithmique]]
+- [cross_references] `cooperative_terrafond_reference.md` — wikilink cassé : [[Fonds d'investissement foncier climatique]]
+- [cross_references] `cooperative_terrafond_reference.md` — wikilink cassé : [[Opérateurs de zones économiques spéciales périurbaines]]
+- [cross_references] `federation_communs_territoriaux_breakdown.md` — wikilink cassé : [[Réseaux de semenciers clandestins]]
+- [cross_references] `federation_communs_territoriaux_breakdown.md` — wikilink cassé : [[Milices agro-défensives locales]]
+- [cross_references] `federation_communs_territoriaux_breakdown.md` — wikilink cassé : [[Collectifs de réparation énergétique]]
+- [cross_references] `federation_communs_territoriaux_breakdown.md` — wikilink cassé : [[Enclaves corporatives fortifiées]]
+- [cross_references] `federation_communs_territoriaux_breakdown.md` — wikilink cassé : [[Seigneuries logistiques armées]]
+- [cross_references] `federation_communs_territoriaux_breakdown.md` — wikilink cassé : [[Flux migratoires non intégrables]]
+- [cross_references] `federation_communs_territoriaux_eco_communalism.md` — wikilink cassé : [[Assemblées de bassin locales]]
+- [cross_references] `federation_communs_territoriaux_eco_communalism.md` — wikilink cassé : [[Réseaux de semenciers coopératifs]]
+- [cross_references] `federation_communs_territoriaux_eco_communalism.md` — wikilink cassé : [[Guildes de médiateurs écologiques]]
+- [cross_references] `federation_communs_territoriaux_eco_communalism.md` — wikilink cassé : [[Observatoires citoyens du climat]]
+- [cross_references] `federation_communs_territoriaux_eco_communalism.md` — wikilink cassé : [[Fragments d'États centraux résiduels revendiquant la souveraineté territoriale]]
+- [cross_references] `federation_communs_territoriaux_eco_communalism.md` — wikilink cassé : [[Consortiums industriels de l'eau cherchant à reprendre le contrôle des nappes phréatiques]]
+- [cross_references] `federation_communs_territoriaux_eco_communalism.md` — wikilink cassé : [[Communs sécessionnistes refusant toute forme de coordination supralocale]]
+- [cross_references] `federation_communs_territoriaux_reference.md` — wikilink cassé : [[Réseaux de coopératives agro-écologiques du Bassin méditerranéen]]
+- [cross_references] `federation_communs_territoriaux_reference.md` — wikilink cassé : [[Observatoire climatique des territoires (OCT)]]
+- [cross_references] `federation_communs_territoriaux_reference.md` — wikilink cassé : [[Banque des Communs — institution de financement décentralisée]]
+- [cross_references] `federation_communs_territoriaux_reference.md` — wikilink cassé : [[Syndicats de travailleurs de la transition énergétique]]
+- [cross_references] `federation_communs_territoriaux_reference.md` — wikilink cassé : [[Grandes plateformes d'infrastructure logistique globale]]
+- [cross_references] `federation_communs_territoriaux_reference.md` — wikilink cassé : [[Gouvernements fédéraux résiduels défendant la souveraineté nationale classique]]
+- [cross_references] `federation_communs_territoriaux_reference.md` — wikilink cassé : [[Opérateurs privés d'énergie distribuée refusant les protocoles FCT]]
+- [cross_references] `federation_communs_territoriaux_reference.md` — wikilink cassé : [[Blocs mégapolitains autonomes concurrents]]
+- [cross_references] `grille_aria_fortress_world.md` — wikilink cassé : [[Appareils d'État des blocs fermés]]
+- [cross_references] `grille_aria_fortress_world.md` — wikilink cassé : [[Complexes militaro-industriels de gestion des ressources]]
+- [cross_references] `grille_aria_fortress_world.md` — wikilink cassé : [[Oligarchies technologiques souveraines fournissant les infrastructures de calcul]]
+- [cross_references] `grille_aria_fortress_world.md` — wikilink cassé : [[Réseaux de résistance algorithmique cherchant à pirater les scores d'allocation]]
+- [cross_references] `grille_aria_fortress_world.md` — wikilink cassé : [[Populations des zones 'déficitaires' condamnées par les calculs d'optimisation]]
+- [cross_references] `grille_aria_fortress_world.md` — wikilink cassé : [[Instances ARIA concurrentes des blocs rivaux]]
+- [cross_references] `grille_aria_fortress_world.md` — wikilink cassé : [[Collectifs d'ingénieurs dissidents refusant la militarisation du système]]
+- [cross_references] `grille_aria_new_sustainability.md` — wikilink cassé : [[Conseil Technocratique de Coordination Régionale]]
+- [cross_references] `grille_aria_new_sustainability.md` — wikilink cassé : [[Fonds Mondial de Redistribution Technologique]]
+- [cross_references] `grille_aria_new_sustainability.md` — wikilink cassé : [[Réseaux de Médecine Régénérative Universelle]]
+- [cross_references] `grille_aria_new_sustainability.md` — wikilink cassé : [[Mouvements d'autonomie locale anti-algorithme]]
+- [cross_references] `grille_aria_new_sustainability.md` — wikilink cassé : [[Coalitions de communautés hors-grille revendiquant la souveraineté alimentaire]]
+- [cross_references] `grille_aria_new_sustainability.md` — wikilink cassé : [[Factions internes au sein des institutions réclamant une opacité accrue des paramètres]]
+- [cross_references] `grille_aria_policy_reform.md` — wikilink cassé : [[Conseil Intergouvernemental de Régulation Technologique (CIRT)]]
+- [cross_references] `grille_aria_policy_reform.md` — wikilink cassé : [[Observatoire Mondial des Ressources Critiques]]
+- [cross_references] `grille_aria_policy_reform.md` — wikilink cassé : [[Fonds de Stabilisation Climatique d'Ourrassol]]
+- [cross_references] `grille_aria_policy_reform.md` — wikilink cassé : [[Réseau des Agences Sanitaires Régionales]]
+- [cross_references] `grille_aria_policy_reform.md` — wikilink cassé : [[Coalitions souverainistes des blocs non-signataires]]
+- [cross_references] `grille_aria_policy_reform.md` — wikilink cassé : [[Collectifs citoyens pour l'audit algorithmique ouvert]]
+- [cross_references] `grille_aria_policy_reform.md` — wikilink cassé : [[Opérateurs énergétiques privés contestant les quotas imposés]]
+- [cross_references] `grille_aria_policy_reform.md` — wikilink cassé : [[Mouvements post-technocratiques dénonçant la dépossession démocratique]]
+- [cross_references] `internationale_travailleurs_augmentes_fortress_world.md` — wikilink cassé : [[Cliniques de déaugmentation indépendantes]]
+- [cross_references] `internationale_travailleurs_augmentes_fortress_world.md` — wikilink cassé : [[Réseaux de juristes spécialisés en droit corporel souverain]]
+- [cross_references] `internationale_travailleurs_augmentes_fortress_world.md` — wikilink cassé : [[Fragments résiduels des syndicats industriels pré-crise]]
+- [cross_references] `internationale_travailleurs_augmentes_fortress_world.md` — wikilink cassé : [[Conglomérats industriels d'État produisant les augmentations propriétaires]]
+- [cross_references] `internationale_travailleurs_augmentes_fortress_world.md` — wikilink cassé : [[Agences de surveillance numérique des blocs souverains]]
+- [cross_references] `internationale_travailleurs_augmentes_fortress_world.md` — wikilink cassé : [[Algorithmes de scoring de productivité corporative]]
+- [cross_references] `internationale_travailleurs_augmentes_new_sustainability.md` — wikilink cassé : [[Conseil de Régulation des Interfaces Cognitives (CRIC)]]
+- [cross_references] `internationale_travailleurs_augmentes_new_sustainability.md` — wikilink cassé : [[Réseau des Communs Productifs Régénératifs]]
+- [cross_references] `internationale_travailleurs_augmentes_new_sustainability.md` — wikilink cassé : [[Fonds Mondial de Transition Écologique du Travail]]
+- [cross_references] `internationale_travailleurs_augmentes_new_sustainability.md` — wikilink cassé : [[Consortiums d'optimisation algorithmique privés]]
+- [cross_references] `internationale_travailleurs_augmentes_new_sustainability.md` — wikilink cassé : [[Factions internes prônant une rupture radicale avec l'augmentation]]
+- [cross_references] `internationale_travailleurs_augmentes_new_sustainability.md` — wikilink cassé : [[Blocs technocratiques favorables à une automatisation totale sans seuils humains]]
+- [cross_references] `internationale_travailleurs_augmentes_policy_reform.md` — wikilink cassé : [[Bureau International du Travail Augmenté (BITA)]]
+- [cross_references] `internationale_travailleurs_augmentes_policy_reform.md` — wikilink cassé : [[Coalition des Villes de Reconversion]]
+- [cross_references] `internationale_travailleurs_augmentes_policy_reform.md` — wikilink cassé : [[Fédération des Mutuelles Biotech]]
+- [cross_references] `internationale_travailleurs_augmentes_policy_reform.md` — wikilink cassé : [[Consortiums d'optimisation RH algorithmique]]
+- [cross_references] `internationale_travailleurs_augmentes_policy_reform.md` — wikilink cassé : [[Blocs industriels d'automatisation intégrale]]
+- [cross_references] `internationale_travailleurs_augmentes_policy_reform.md` — wikilink cassé : [[Factions internes prônant la désaugmentation totale]]
+- [cross_references] `internationale_travailleurs_augmentes_reference.md` — wikilink cassé : [[Conseil de Genève pour les Droits Biosociaux]]
+- [cross_references] `internationale_travailleurs_augmentes_reference.md` — wikilink cassé : [[Fédération des Cliniques Autonomes]]
+- [cross_references] `internationale_travailleurs_augmentes_reference.md` — wikilink cassé : [[Réseau des Villes-Refuge pour Travailleurs Désaugmentés]]
+- [cross_references] `internationale_travailleurs_augmentes_reference.md` — wikilink cassé : [[Consortium AugmentWork (lobbying pro-optimisation)]]
+- [cross_references] `internationale_travailleurs_augmentes_reference.md` — wikilink cassé : [[Algorithmic Labor Exchange (place de marché de travail augmenté)]]
+- [cross_references] `internationale_travailleurs_augmentes_reference.md` — wikilink cassé : [[Gouvernements à régime de productivité mandatée]]
+- [cross_references] `leena_vainala_eco_communalism.md` — wikilink cassé : [[Confédération des Communs de l'Arc Septentrional]]
+- [cross_references] `leena_vainala_eco_communalism.md` — wikilink cassé : [[Réseau des Assemblées de Bassin Fennoscandien]]
+- [cross_references] `leena_vainala_eco_communalism.md` — wikilink cassé : [[Archives Ouvertes des Jurisprudences Communales (AOJC)]]
+- [cross_references] `leena_vainala_eco_communalism.md` — wikilink cassé : [[Collectifs de facilitateurs délibératifs itinérants]]
+- [cross_references] `leena_vainala_eco_communalism.md` — wikilink cassé : [[Technocraties d'efficience locales issues des anciens corps d'ingénieurs d'État]]
+- [cross_references] `leena_vainala_eco_communalism.md` — wikilink cassé : [[Factions algorithmiques prônant la gouvernance automatisée par IA légère]]
+- [cross_references] `leena_vainala_eco_communalism.md` — wikilink cassé : [[Notables communautaires cherchant à capturer les assemblées au profit de lignages familiaux]]
+- [cross_references] `leena_vainala_new_sustainability.md` — wikilink cassé : [[Réseau des Communs Numériques Globaux]]
+- [cross_references] `leena_vainala_new_sustainability.md` — wikilink cassé : [[Conseil de Délibération Augmentée de l'Union Nordique]]
+- [cross_references] `leena_vainala_new_sustainability.md` — wikilink cassé : [[Institut de Philosophie des Systèmes Hybrides d'Helsinki]]
+- [cross_references] `leena_vainala_new_sustainability.md` — wikilink cassé : [[Collectif des Médiateurs Cognitifs Internationaux]]
+- [cross_references] `leena_vainala_new_sustainability.md` — wikilink cassé : [[Bloc des Architectes d'Efficience Algorithmique (partisans de la gouvernance IA-first)]]
+- [cross_references] `leena_vainala_new_sustainability.md` — wikilink cassé : [[Lobbies des plateformes de consensus automatisé]]
+- [cross_references] `leena_vainala_new_sustainability.md` — wikilink cassé : [[Factions technocratiques au sein du Conseil de Régulation Informationnelle Global]]
+- [cross_references] `leena_vainala_policy_reform.md` — wikilink cassé : [[Réseaux des communs numériques mondiaux]]
+- [cross_references] `leena_vainala_policy_reform.md` — wikilink cassé : [[Commissions mixtes de régulation IA-démocratie (ONU Digital Governance Council)]]
+- [cross_references] `leena_vainala_policy_reform.md` — wikilink cassé : [[Universités et think tanks nordiques]]
+- [cross_references] `leena_vainala_policy_reform.md` — wikilink cassé : [[Collectifs citoyens de délibération augmentée]]
+- [cross_references] `leena_vainala_policy_reform.md` — wikilink cassé : [[Blocs technocratiques pro-efficacité au sein des institutions globales]]
+- [cross_references] `leena_vainala_policy_reform.md` — wikilink cassé : [[Consortiums privés de gouvernance algorithmique]]
+- [cross_references] `leena_vainala_policy_reform.md` — wikilink cassé : [[Courants autoritaires qui récupèrent son vocabulaire pour légitimer la régulation opaque]]
+- [cross_references] `leena_vainala_policy_reform.md` — wikilink cassé : [[Techno-utopistes partisans de la décision automatisée sans délibération]]
+- [cross_references] `leena_vainala_reference.md` — wikilink cassé : [[Réseaux de communs numériques nordiques et baltes]]
+- [cross_references] `leena_vainala_reference.md` — wikilink cassé : [[Coalitions de villes-États pilotes en gouvernance participative]]
+- [cross_references] `leena_vainala_reference.md` — wikilink cassé : [[Chercheurs en éthique des systèmes distribués (réseau informel post-académique)]]
+- [cross_references] `leena_vainala_reference.md` — wikilink cassé : [[Opérateurs de plateformes d'IA centralisées résistant à la délibération obligatoire]]
+- [cross_references] `leena_vainala_reference.md` — wikilink cassé : [[Gouvernements autoritaires classant ses chartes comme 'infrastructure de déstabilisation']]
+- [cross_references] `leena_vainala_reference.md` — wikilink cassé : [[Technocrates institutionnels promouvant l'optimisation algorithmique sans consultation]]
+- [cross_references] `mouvement_racines_vivantes_breakdown.md` — wikilink cassé : [[communautés rurales autonomes]]
+- [cross_references] `mouvement_racines_vivantes_breakdown.md` — wikilink cassé : [[réseaux de soigneurs traditionnels]]
+- [cross_references] `mouvement_racines_vivantes_breakdown.md` — wikilink cassé : [[collectifs de semenciers clandestins]]
+- [cross_references] `mouvement_racines_vivantes_breakdown.md` — wikilink cassé : [[seigneurs de guerre locaux en compétition pour les terres fertiles]]
+- [cross_references] `mouvement_racines_vivantes_breakdown.md` — wikilink cassé : [[opérateurs logistiques corporatifs tentant de reprendre le contrôle des ressources agricoles]]
+- [cross_references] `mouvement_racines_vivantes_breakdown.md` — wikilink cassé : [[factions techno-solutionnistes]]
+- [cross_references] `mouvement_racines_vivantes_eco_communalism.md` — wikilink cassé : [[Conseils de bassins versants autonomes]]
+- [cross_references] `mouvement_racines_vivantes_eco_communalism.md` — wikilink cassé : [[Réseaux de semences libres et vivantes]]
+- [cross_references] `mouvement_racines_vivantes_eco_communalism.md` — wikilink cassé : [[Coopératives d'habitat régénératif]]
+- [cross_references] `mouvement_racines_vivantes_eco_communalism.md` — wikilink cassé : [[Blocs logistiques néo-industriels cherchant à rationaliser les terres reconstruites]]
+- [cross_references] `mouvement_racines_vivantes_eco_communalism.md` — wikilink cassé : [[Courants techno-solutionnistes promouvant une re-globalisation numérique]]
+- [cross_references] `mouvement_racines_vivantes_eco_communalism.md` — wikilink cassé : [[Factions autoritaires locales instrumentalisant le discours identitaire à des fins d'exclusion]]
+- [cross_references] `mouvement_racines_vivantes_reference.md` — wikilink cassé : [[Coopératives agro-écologiques de reconstruction territoriale]]
+- [cross_references] `mouvement_racines_vivantes_reference.md` — wikilink cassé : [[Réseaux de médecine traditionnelle augmentée]]
+- [cross_references] `mouvement_racines_vivantes_reference.md` — wikilink cassé : [[Certaines administrations locales rurales en quête de légitimité participative]]
+- [cross_references] `mouvement_racines_vivantes_reference.md` — wikilink cassé : [[Agro-industries d'adaptation climatique technologique]]
+- [cross_references] `mouvement_racines_vivantes_reference.md` — wikilink cassé : [[Plateformes d'optimisation territoriale pilotées par IA]]
+- [cross_references] `mouvement_racines_vivantes_reference.md` — wikilink cassé : [[Courants nationalistes qui tentent d'instrumentaliser le discours des racines]]
+- [cross_references] `nexus_biosyn_breakdown.md` — wikilink cassé : [[seigneurs régionaux agricoles]]
+- [cross_references] `nexus_biosyn_breakdown.md` — wikilink cassé : [[réseaux noirs pharmaceutiques]]
+- [cross_references] `nexus_biosyn_breakdown.md` — wikilink cassé : [[milices de contrôle territorial]]
+- [cross_references] `nexus_biosyn_breakdown.md` — wikilink cassé : [[enclaves technologiques survivantes]]
+- [cross_references] `nexus_biosyn_breakdown.md` — wikilink cassé : [[collectifs de semences libres]]
+- [cross_references] `nexus_biosyn_breakdown.md` — wikilink cassé : [[mouvements de santé communautaire autogérée]]
+- [cross_references] `nexus_biosyn_breakdown.md` — wikilink cassé : [[États fragmentés tentant de nationaliser les stocks]]
+- [cross_references] `nexus_biosyn_breakdown.md` — wikilink cassé : [[pirates biologiques open-source]]
+- [cross_references] `nexus_biosyn_fortress_world.md` — wikilink cassé : [[États-forteresses sous contrat de souveraineté biologique]]
+- [cross_references] `nexus_biosyn_fortress_world.md` — wikilink cassé : [[Cartels énergétiques fournissant les infrastructures de bioréacteurs]]
+- [cross_references] `nexus_biosyn_fortress_world.md` — wikilink cassé : [[Milices privées de protection des sites germinaux]]
+- [cross_references] `nexus_biosyn_fortress_world.md` — wikilink cassé : [[Réseaux clandestins de semences libres (mouvements agro-pirates)]]
+- [cross_references] `nexus_biosyn_fortress_world.md` — wikilink cassé : [[Coalitions sanitaires des populations exclues des blocs]]
+- [cross_references] `nexus_biosyn_fortress_world.md` — wikilink cassé : [[Divisions concurrentes Nexus BioSyn dans les zones de friction géopolitique]]
+- [cross_references] `nexus_biosyn_new_sustainability.md` — wikilink cassé : [[OMS Étendue (Organisation Mondiale de la Santé Augmentée)]]
+- [cross_references] `nexus_biosyn_new_sustainability.md` — wikilink cassé : [[Conseil Technocratique de Gouvernance Alimentaire]]
+- [cross_references] `nexus_biosyn_new_sustainability.md` — wikilink cassé : [[Réseau Global de Cliniques Régénératives]]
+- [cross_references] `nexus_biosyn_new_sustainability.md` — wikilink cassé : [[Fonds de Redistribution Technologique de l'Alliance Verte]]
+- [cross_references] `nexus_biosyn_new_sustainability.md` — wikilink cassé : [[Mouvement des Semences Libres (open-source agricole radical)]]
+- [cross_references] `nexus_biosyn_new_sustainability.md` — wikilink cassé : [[Collectifs de bio-communs régionaux]]
+- [cross_references] `nexus_biosyn_new_sustainability.md` — wikilink cassé : [[Auditeurs indépendants du Parlement Biotechnologique Mondial]]
+- [cross_references] `nexus_biosyn_policy_reform.md` — wikilink cassé : [[Autorité Mondiale du Vivant (AMV)]]
+- [cross_references] `nexus_biosyn_policy_reform.md` — wikilink cassé : [[Consortium Agro-Pacifique]]
+- [cross_references] `nexus_biosyn_policy_reform.md` — wikilink cassé : [[Institut de Thérapeutique Intégrée de Nairobi]]
+- [cross_references] `nexus_biosyn_policy_reform.md` — wikilink cassé : [[Fonds Mondial de Stabilisation Biotechnologique]]
+- [cross_references] `nexus_biosyn_policy_reform.md` — wikilink cassé : [[Coalition des Semences Libres]]
+- [cross_references] `nexus_biosyn_policy_reform.md` — wikilink cassé : [[Front de Souveraineté Biologique Eurasiatique]]
+- [cross_references] `nexus_biosyn_policy_reform.md` — wikilink cassé : [[Collectifs de biohackers agro-communautaires]]
+- [cross_references] `nexus_biosyn_policy_reform.md` — wikilink cassé : [[Bloc des Nations à Économie Carbone-Contrôlée]]
+- [cross_references] `nexus_biosyn_reference.md` — wikilink cassé : [[Fonds Monétaire Climatique (FMC)]]
+- [cross_references] `nexus_biosyn_reference.md` — wikilink cassé : [[Consortium Agro-Pacifique]]
+- [cross_references] `nexus_biosyn_reference.md` — wikilink cassé : [[Réseau Hospitalier Hybride Eurasiatique]]
+- [cross_references] `nexus_biosyn_reference.md` — wikilink cassé : [[Plateformes de données biologiques AgriSynth]]
+- [cross_references] `nexus_biosyn_reference.md` — wikilink cassé : [[Coalitions paysannes de semences libres (mouvement OpenSeed)]]
+- [cross_references] `nexus_biosyn_reference.md` — wikilink cassé : [[Gouvernements du Bloc Sahélien Autonome]]
+- [cross_references] `nexus_biosyn_reference.md` — wikilink cassé : [[Collectifs de biopiraterie inversée]]
+- [cross_references] `nexus_biosyn_reference.md` — wikilink cassé : [[Régulateurs de l'Union Continentale Africaine]]
+- [cross_references] `prisme_global_eco_communalism.md` — wikilink cassé : [[Coopératives semencières et d'archives agronomiques]]
+- [cross_references] `prisme_global_eco_communalism.md` — wikilink cassé : [[Réseaux de radio communautaire basse consommation]]
+- [cross_references] `prisme_global_eco_communalism.md` — wikilink cassé : [[Cercles de médiation territoriale intercommunautaire]]
+- [cross_references] `prisme_global_eco_communalism.md` — wikilink cassé : [[Plateformes centralisées résiduelles à visée réagrégation globale]]
+- [cross_references] `prisme_global_eco_communalism.md` — wikilink cassé : [[Factions communautaires refusant tout partage narratif extérieur]]
+- [cross_references] `prisme_global_eco_communalism.md` — wikilink cassé : [[Opérateurs d'IA propriétaires cherchant à indexer les Trames]]
+- [cross_references] `prisme_global_new_sustainability.md` — wikilink cassé : [[Alliance Numérique Eurasie-Pacifique]]
+- [cross_references] `prisme_global_new_sustainability.md` — wikilink cassé : [[Conseil de Régulation Cognitive de l'ONU]]
+- [cross_references] `prisme_global_new_sustainability.md` — wikilink cassé : [[Observatoire Climatique Narratif de Nairobi]]
+- [cross_references] `prisme_global_new_sustainability.md` — wikilink cassé : [[Collectifs de narration sauvage hors-protocole]]
+- [cross_references] `prisme_global_new_sustainability.md` — wikilink cassé : [[Réseaux d'information souverainistes fermés]]
+- [cross_references] `prisme_global_new_sustainability.md` — wikilink cassé : [[Factions internes contestataires du Bureau de Modération]]
+- [cross_references] `prisme_global_policy_reform.md` — wikilink cassé : [[Conseil de Gouvernance de l'Information (CGI)]]
+- [cross_references] `prisme_global_policy_reform.md` — wikilink cassé : [[Consortium des IA Éditoriales Certifiées]]
+- [cross_references] `prisme_global_policy_reform.md` — wikilink cassé : [[Réseaux académiques prospectivistes du Pacte de Genève 2081]]
+- [cross_references] `prisme_global_policy_reform.md` — wikilink cassé : [[Collectifs de journalisme radical non-certifié (les 'Hors-Prisme')]]
+- [cross_references] `prisme_global_policy_reform.md` — wikilink cassé : [[Mouvements souverainistes de l'information régionale]]
+- [cross_references] `prisme_global_policy_reform.md` — wikilink cassé : [[Factions internes dissidentes des contributeurs historiques]]
+- [cross_references] `prisme_global_reference.md` — wikilink cassé : [[collectifs de journalisme embarqué]]
+- [cross_references] `prisme_global_reference.md` — wikilink cassé : [[réseaux de capteurs citoyens]]
+- [cross_references] `prisme_global_reference.md` — wikilink cassé : [[coopératives IA open-source]]
+- [cross_references] `prisme_global_reference.md` — wikilink cassé : [[plateformes centralisées de narration officielle]]
+- [cross_references] `prisme_global_reference.md` — wikilink cassé : [[agences gouvernementales de régulation informationnelle]]
+- [cross_references] `prisme_global_reference.md` — wikilink cassé : [[consortiums médiatiques corporatifs]]
+- [cross_references] `reseau_mnemos_breakdown.md` — wikilink cassé : [[Communautés rurales autogérées utilisant les nœuds comme bibliothèques de survie]]
+- [cross_references] `reseau_mnemos_breakdown.md` — wikilink cassé : [[Réseaux médicaux décentralisés dépendant des corpus sanitaires Mnemos]]
+- [cross_references] `reseau_mnemos_breakdown.md` — wikilink cassé : [[Collectifs de gardiens-archivistes itinérants]]
+- [cross_references] `reseau_mnemos_breakdown.md` — wikilink cassé : [[Seigneurs de guerre locaux cherchant à monopoliser l'accès aux données stratégiques]]
+- [cross_references] `reseau_mnemos_breakdown.md` — wikilink cassé : [[Corporations de l'ère pré-effondrement revendiquant des droits de propriété intellectuelle sur les corpus]]
+- [cross_references] `reseau_mnemos_breakdown.md` — wikilink cassé : [[Factions propagandistes cherchant à corrompre ou réécrire les archives historiques]]
+- [cross_references] `reseau_mnemos_eco_communalism.md` — wikilink cassé : [[Assemblées territoriales éco-communalistes]]
+- [cross_references] `reseau_mnemos_eco_communalism.md` — wikilink cassé : [[Guildes de semenciers et d'agronomes itinérants]]
+- [cross_references] `reseau_mnemos_eco_communalism.md` — wikilink cassé : [[Réseaux de soins communautaires]]
+- [cross_references] `reseau_mnemos_eco_communalism.md` — wikilink cassé : [[Collectifs de techniciens sobres]]
+- [cross_references] `reseau_mnemos_eco_communalism.md` — wikilink cassé : [[Enclaves corporatives à accès propriétaire à l'information]]
+- [cross_references] `reseau_mnemos_eco_communalism.md` — wikilink cassé : [[Factions autoritaires cherchant à contrôler les flux de savoir]]
+- [cross_references] `reseau_mnemos_eco_communalism.md` — wikilink cassé : [[Acteurs du marché noir de données extractivistes]]
+- [cross_references] `reseau_mnemos_new_sustainability.md` — wikilink cassé : [[Conseil de Coordination Technologique Mondial]]
+- [cross_references] `reseau_mnemos_new_sustainability.md` — wikilink cassé : [[Réseau des Hubs Urbains Régénératifs]]
+- [cross_references] `reseau_mnemos_new_sustainability.md` — wikilink cassé : [[Consortium d'Interopérabilité IA-Humain]]
+- [cross_references] `reseau_mnemos_new_sustainability.md` — wikilink cassé : [[Enclaves de données propriétaires des anciennes mégacorporations]]
+- [cross_references] `reseau_mnemos_new_sustainability.md` — wikilink cassé : [[Mouvements souverainistes de déconnexion territoriale]]
+- [cross_references] `reseau_mnemos_reference.md` — wikilink cassé : [[Collectifs académiques indépendants]]
+- [cross_references] `reseau_mnemos_reference.md` — wikilink cassé : [[Municipalités périphériques sous-connectées]]
+- [cross_references] `reseau_mnemos_reference.md` — wikilink cassé : [[ONG de préservation patrimoniale numérique]]
+- [cross_references] `reseau_mnemos_reference.md` — wikilink cassé : [[Coopératives énergétiques décentralisées]]
+- [cross_references] `reseau_mnemos_reference.md` — wikilink cassé : [[Grandes plateformes d'IA intégrées (contrôle des flux)]]
+- [cross_references] `reseau_mnemos_reference.md` — wikilink cassé : [[États à tendance centraliste numérique]]
+- [cross_references] `reseau_mnemos_reference.md` — wikilink cassé : [[Consortiums privés de gestion des données critiques]]
+- [cross_references] `trame_bioclimatique_breakdown.md` — wikilink cassé : [[Enclaves agro-communautaires autonomes]]
+- [cross_references] `trame_bioclimatique_breakdown.md` — wikilink cassé : [[Factions para-étatiques régionales contrôlant des nœuds hydriques]]
+- [cross_references] `trame_bioclimatique_breakdown.md` — wikilink cassé : [[Réseaux de techniciens nomades (anciens ingénieurs du réseau)]]
+- [cross_references] `trame_bioclimatique_breakdown.md` — wikilink cassé : [[Coalitions industrielles de récupération pillant les équipements]]
+- [cross_references] `trame_bioclimatique_breakdown.md` — wikilink cassé : [[États-fragments en guerre pour le contrôle des stations atmosphériques]]
+- [cross_references] `trame_bioclimatique_breakdown.md` — wikilink cassé : [[Populations déplacées sabotant les corridors perçus comme propriété ennemie]]
+- [cross_references] `trame_bioclimatique_eco_communalism.md` — wikilink cassé : [[Conseils de bassins versants locaux]]
+- [cross_references] `trame_bioclimatique_eco_communalism.md` — wikilink cassé : [[Guildes de semenciers itinérants]]
+- [cross_references] `trame_bioclimatique_eco_communalism.md` — wikilink cassé : [[Assemblées bioterritoriales régionales]]
+- [cross_references] `trame_bioclimatique_eco_communalism.md` — wikilink cassé : [[Collectifs de géo-observateurs citoyens]]
+- [cross_references] `trame_bioclimatique_eco_communalism.md` — wikilink cassé : [[Enclaves extractivistes résiduelles cherchant à monétiser les corridors]]
+- [cross_references] `trame_bioclimatique_eco_communalism.md` — wikilink cassé : [[Factions technophiles prônant la géo-ingénierie centralisée]]
+- [cross_references] `trame_bioclimatique_eco_communalism.md` — wikilink cassé : [[Communautés isolationnistes refusant les obligations de continuité écologique]]
+- [cross_references] `trame_bioclimatique_new_sustainability.md` — wikilink cassé : [[Consortium de Régénération Planétaire (CRP)]]
+- [cross_references] `trame_bioclimatique_new_sustainability.md` — wikilink cassé : [[Agence Mondiale de Modélisation Climatique (AMMC)]]
+- [cross_references] `trame_bioclimatique_new_sustainability.md` — wikilink cassé : [[Réseaux de gouvernance territoriale distribués]]
+- [cross_references] `trame_bioclimatique_new_sustainability.md` — wikilink cassé : [[Opérateurs de fusion énergétique régionaux]]
+- [cross_references] `trame_bioclimatique_new_sustainability.md` — wikilink cassé : [[Lobbies d'extraction minière des zones-tampons]]
+- [cross_references] `trame_bioclimatique_new_sustainability.md` — wikilink cassé : [[États souverainistes refusant la cession de territoires au réseau]]
+- [cross_references] `trame_bioclimatique_new_sustainability.md` — wikilink cassé : [[Communautés locales exclues des décisions de traçé des corridors]]
+- [cross_references] `trame_bioclimatique_policy_reform.md` — wikilink cassé : [[Agence Technocratique pour la Résilience Biosphérique (ATRB)]]
+- [cross_references] `trame_bioclimatique_policy_reform.md` — wikilink cassé : [[Consortium de Géo-ingénierie Atmosphérique Pacifique]]
+- [cross_references] `trame_bioclimatique_policy_reform.md` — wikilink cassé : [[Fonds Mondial pour la Transition Écosystémique (FMTE)]]
+- [cross_references] `trame_bioclimatique_policy_reform.md` — wikilink cassé : [[Réseaux de capteurs IA-climatiques déployés par les États membres]]
+- [cross_references] `trame_bioclimatique_policy_reform.md` — wikilink cassé : [[Coalitions d'États souverainistes refusant la cession de droits territoriaux au RIREC]]
+- [cross_references] `trame_bioclimatique_policy_reform.md` — wikilink cassé : [[Lobbies extractivistes opérant dans les zones-tampons du réseau]]
+- [cross_references] `trame_bioclimatique_policy_reform.md` — wikilink cassé : [[Mouvements populaires dénonçant la dépossession écologique des communautés locales]]
+- [cross_references] `trame_bioclimatique_policy_reform.md` — wikilink cassé : [[Collectifs de hackers biosphériques contestant le monopole des données environnementales]]
+- [cross_references] `vasil_orentchev_breakdown.md` — wikilink cassé : [[Enclaves industrielles survivantes du corridor oural-caspien]]
+- [cross_references] `vasil_orentchev_breakdown.md` — wikilink cassé : [[Factions paramilitaires locales achetées ou neutralisées]]
+- [cross_references] `vasil_orentchev_breakdown.md` — wikilink cassé : [[Réseaux de renseignement informels issus de l'ancienne structure militaire eurasienne]]
+- [cross_references] `vasil_orentchev_breakdown.md` — wikilink cassé : [[Blocs géopolitiques tentant de recontroler les couloirs d'approvisionnement stratégiques]]
+- [cross_references] `vasil_orentchev_breakdown.md` — wikilink cassé : [[Concurrents logistiques criminels cherchant à absorber ou éliminer ses réseaux]]
+- [cross_references] `vasil_orentchev_breakdown.md` — wikilink cassé : [[Mouvements de résistance locaux refusant les péages imposés sur les ressources de base]]
+- [cross_references] `vasil_orentchev_fortress_world.md` — wikilink cassé : [[Commandements logistiques périphériques du Bloc Eurasien Central]]
+- [cross_references] `vasil_orentchev_fortress_world.md` — wikilink cassé : [[Opérateurs privés de transit énergétique des zones grises caucasiennes et centrasiatiques]]
+- [cross_references] `vasil_orentchev_fortress_world.md` — wikilink cassé : [[Réseaux de maintenance d'infrastructures critiques hors-blocs]]
+- [cross_references] `vasil_orentchev_fortress_world.md` — wikilink cassé : [[Agences de contrôle des frontières des blocs fermés cherchant à éliminer les intermédiaires non-alignés]]
+- [cross_references] `vasil_orentchev_fortress_world.md` — wikilink cassé : [[Factions djihadistes logistiques concurrentes dans les corridors d'Asie centrale]]
+- [cross_references] `vasil_orentchev_fortress_world.md` — wikilink cassé : [[Inspecteurs de conformité des traités inter-blocs mandatés pour réguler les flux non-déclarés]]
+- [cross_references] `vasil_orentchev_reference.md` — wikilink cassé : [[Opérateurs logistiques privés des zones grises eurasiennes]]
+- [cross_references] `vasil_orentchev_reference.md` — wikilink cassé : [[Administrations hybrides de cités-relais périphériques]]
+- [cross_references] `vasil_orentchev_reference.md` — wikilink cassé : [[Factions d'extraction minière indépendantes]]
+- [cross_references] `vasil_orentchev_reference.md` — wikilink cassé : [[Réseaux de financement gris issus d'anciens blocs militaires]]
+- [cross_references] `vasil_orentchev_reference.md` — wikilink cassé : [[Consortiums énergétiques des mégapoles cherchant à internaliser les corridors]]
+- [cross_references] `vasil_orentchev_reference.md` — wikilink cassé : [[Agences de sécurité régionales mandatées pour normaliser les zones grises]]
+- [cross_references] `vasil_orentchev_reference.md` — wikilink cassé : [[Milices concurrentes disputant les droits de passage]]
+- [cross_references] `vasil_orentchev_reference.md` — wikilink cassé : [[ONG de traçabilité des ressources critiques dénonçant ses pratiques]]
+- [cross_references] `voix_du_dehors_breakdown.md` — wikilink cassé : [[Réseaux de courriers nomades des couloirs sahélo-méditerranéens]]
+- [cross_references] `voix_du_dehors_breakdown.md` — wikilink cassé : [[Collectifs de hackers archivistes opérant sur les interstices réseaux survivants]]
+- [cross_references] `voix_du_dehors_breakdown.md` — wikilink cassé : [[Communautés religieuses gérant des relais physiques discrets]]
+- [cross_references] `voix_du_dehors_breakdown.md` — wikilink cassé : [[Blocs régionaux cherchant à contrôler le récit de leurs conflits ressources]]
+- [cross_references] `voix_du_dehors_breakdown.md` — wikilink cassé : [[Factions militaires privées documentées dans les enquêtes terrain]]
+- [cross_references] `voix_du_dehors_breakdown.md` — wikilink cassé : [[Anciens financeurs devenus censeurs après retournement d'intérêt]]
+- [cross_references] `voix_du_dehors_eco_communalism.md` — wikilink cassé : [[Assemblées coopératives régionales]]
+- [cross_references] `voix_du_dehors_eco_communalism.md` — wikilink cassé : [[Réseaux de bibliothèques-archives communautaires]]
+- [cross_references] `voix_du_dehors_eco_communalism.md` — wikilink cassé : [[Collectifs de cartographie écologique participative]]
+- [cross_references] `voix_du_dehors_eco_communalism.md` — wikilink cassé : [[Conseils territoriaux opaques sur la gestion des ressources]]
+- [cross_references] `voix_du_dehors_eco_communalism.md` — wikilink cassé : [[Réseaux marchands informels cherchant à contrôler le récit de pénurie]]
+- [cross_references] `voix_du_dehors_eco_communalism.md` — wikilink cassé : [[Courants isolationnistes refusant la circulation de l'information inter-communautés]]
+- [cross_references] `voix_du_dehors_fortress_world.md` — wikilink cassé : [[Réseaux de passeurs d'information aux frontières inter-blocs]]
+- [cross_references] `voix_du_dehors_fortress_world.md` — wikilink cassé : [[Cellules universitaires dissidentes dans les zones tampons]]
+- [cross_references] `voix_du_dehors_fortress_world.md` — wikilink cassé : [[Archives chiffrées distribuées de l'ancienne Open Internet Coalition]]
+- [cross_references] `voix_du_dehors_fortress_world.md` — wikilink cassé : [[Agences de sécurité informationnelle des blocs dominants]]
+- [cross_references] `voix_du_dehors_fortress_world.md` — wikilink cassé : [[Médias d'État souverains des grands blocs (Hegemonia Press, Xinhua Fortifiée, EuroVox Integral)]]
+- [cross_references] `voix_du_dehors_fortress_world.md` — wikilink cassé : [[Unités de contre-narration des appareils militarisés de chaque bloc]]
+- [cross_references] `voix_du_dehors_reference.md` — wikilink cassé : [[Collectifs de journalistes indépendants régionaux]]
+- [cross_references] `voix_du_dehors_reference.md` — wikilink cassé : [[ONG environnementales de terrain]]
+- [cross_references] `voix_du_dehors_reference.md` — wikilink cassé : [[Réseaux de lanceurs d'alerte institutionnels dissidents]]
+- [cross_references] `voix_du_dehors_reference.md` — wikilink cassé : [[Universités de recherche en zones de relative liberté académique]]
+- [cross_references] `voix_du_dehors_reference.md` — wikilink cassé : [[Plateformes informationnelles dominantes et leurs IA de modération]]
+- [cross_references] `voix_du_dehors_reference.md` — wikilink cassé : [[Services de contre-information des blocs géopolitiques concurrents]]
+- [cross_references] `voix_du_dehors_reference.md` — wikilink cassé : [[Consortiums énergétiques opérant dans l'opacité réglementaire]]
+- [cross_references] `voix_du_dehors_reference.md` — wikilink cassé : [[Agences gouvernementales de sécurité numérique]]

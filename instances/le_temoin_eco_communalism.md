@@ -1,0 +1,86 @@
+---
+name: Mele Tupou
+type: instance
+slug: le_temoin_eco_communalism
+entite: le_temoin
+scenario: eco_communalism
+localisation:
+  zone: polynesie_reconstituee
+  lieu: Polynésie Reconstituée
+  type_lieu: region
+type_dans_scenario: humain
+role_dans_scenario: >
+  Chroniqueuse de territoire et archiviste communautaire, 38 ans, basée
+  dans le bioterritoire de Polynésie-Reconstituée. Documente les pratiques
+  communautaires, les conflits de gouvernance locale et les succès des
+  assemblées bioterritioriales. Son travail circule sur les réseaux mesh
+  locaux et lors des rassemblements saisonniers.
+responsabilites: >
+  Documentation des assemblées communautaires. Archivage des pratiques
+  locales de résilience. Correspondance avec d'autres chroniqueurs de
+  territoires dans le monde.
+impact_local: 3
+impact_systemique_global: 1
+variables_influencees:
+  - valeurs_culture_tempo_sociale
+  - organisation_territoires
+zone_geographique:
+  - régionale
+zone_systemique:
+  - société
+  - information
+alliances:
+  - coalition_vivant_eco_communalism
+oppositions: []
+type_relation_dominante: coopération
+annee_debut: 2082
+annee_fin:
+etat_temporel: actif
+age_historique: ascendant
+generation: reconstruction
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+description_journalistique: >
+  Mele Tupou écrit à la main dans des cahiers reliés qu'elle numérise
+  une fois par semaine. Ses chroniques de l'Assemblée de Polynésie-Reconstituée
+  sont lues par 3 000 personnes — ce qui, dans son monde, est un lectorat
+  considérable. Elle ne se considère pas journaliste. "Je suis une
+  mémoire de mon territoire", dit-elle.
+signes_distinctifs: >
+  Cahiers reliés en tissu local, écriture serrée et précise. Photographies
+  argentiques — elle refuse le numérique pour l'image. Présence physique
+  systématique dans toutes les assemblées.
+tensions_narratives: >
+  Débat avec l'assemblée sur ce qu'il faut documenter et ce qu'il vaut
+  mieux garder oral. Tension entre la préservation de la mémoire et la
+  protection de la vie privée communautaire.
+date_creation: 2098-01-01
+---
+
+# Mele Tupou
+
+## Rôle dans [[eco_communalism]]
+Chroniqueuse de territoire et archiviste communautaire dans le bioterritoire
+de Polynésie-Reconstituée.
+
+## Variables influencées
+- [[valeurs_culture_tempo_sociale]]
+- [[organisation_territoires]]
+
+## Relations
+**Alliés** : [[coalition_vivant_eco_communalism]]
+**Opposants** : _aucun défini_
+
+## Description journalistique
+Mele Tupou écrit à la main dans des cahiers reliés. Ses chroniques de
+l'Assemblée de Polynésie-Reconstituée sont lues par 3 000 personnes.
+"Je suis une mémoire de mon territoire", dit-elle.
+
+## Tensions narratives
+Débat sur ce qu'il faut documenter et ce qu'il vaut mieux garder oral.
+Tension entre préservation de la mémoire et protection de la vie privée.

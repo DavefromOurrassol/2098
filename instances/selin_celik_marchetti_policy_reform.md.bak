@@ -1,0 +1,102 @@
+---
+name: Selin Çelik-Marchetti
+type: instance
+slug: selin_celik_marchetti_policy_reform
+entite: selin_celik_marchetti
+scenario: policy_reform
+localisation:
+  zone: geneve_nexus
+  lieu: Palais des Nations, Genève
+  type_lieu: infrastructure
+
+type_dans_scenario: humain
+
+role_dans_scenario: >
+  Architecte de compromis migratoires opérant à l'interface des institutions internationales et des coalitions d'États, Selin Çelik-Marchetti est devenue une figure incontournable du régime de gouvernance coordonnée post-2085. Dans un monde où les flux migratoires sont gérés comme des variables systémiques à optimiser, elle traduit les impératifs humanitaires en équations diplomatiques acceptables pour les technocraties au pouvoir. Elle ne représente aucun gouvernement mais se loue comme ingénieure de transition migratoire aux coalitions provisoires qui structurent la gouvernance multi-niveaux de 2098. Son pragmatisme radical fait d'elle une pièce maîtresse du système — et sa conscience morale, une anomalie qu'il contient.
+
+responsabilites: >
+  Elle conçoit et négocie les architectures légales des corridors migratoires intégrés, troquant quotas d'accueil contre accès préférentiel aux ressources critiques ou reconnaissance de droits souverains. Elle coordonne avec l'Office Intégré des Flux Migratoires et les agences technocratiques pour calibrer les paramètres humains des accords de stabilisation, transformant des crises démographiques en leviers de négociation institutionnelle.
+
+impact_local: 2
+impact_systemique_global: 4
+
+variables_influencees:
+    - demographie_mobilite_humaine
+    - gouvernance_institutions
+    - geopolitique_conflits
+
+zone_geographique:
+    - régionale
+    - continentale
+    - globale
+
+zone_systemique:
+    - gouvernance
+    - société
+    - économie
+
+alliances:
+    - office_integre_des_flux_migratoires_policy_reform
+    - assemblee_territoires_policy_reform
+    - fonds_mondial_de_resilience_infrastructurelle_policy_reform
+    - bureau_international_du_travail_augmente_bita_policy_reform
+    - conseil_de_gouvernance_de_l_information_policy_reform
+
+oppositions:
+    - collectifs_de_resistance_aux_relocalisations_forcees_policy_reform
+    - front_des_autonomies_territoriales_radicales_policy_reform
+    - mouvement_pour_la_souverainete_territoriale_absolue_policy_reform
+    - courants_post_technocratiques_de_reconquete_democratique_policy_reform
+    - front_souverainiste_des_blocs_non_signataires_policy_reform
+
+type_relation_dominante: alliance stratégique
+
+annee_debut: 2061
+annee_fin: 
+
+etat_temporel: actif
+age_historique: dominant
+generation: transition
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Dans les couloirs feutrés du Palais des Nations à Genève ou lors des sessions plénières de l'Office Intégré des Flux Migratoires, Selin Çelik-Marchetti est reconnaissable à sa façon d'écouter avant de parler — et de ne parler qu'en chiffres. À 54 ans, cette ancienne juriste spécialisée en droit des migrations pour le Bloc Méditerranéen Étendu est devenue ce que ses détracteurs appellent une 'marchande de personnes diplômée' et ce que ses clients nomment 'la meilleure architecte de la paix migratoire en exercice'. Elle a signé sept des dix-huit protocoles d'intégration qui structurent aujourd'hui les flux entre les zones de stress climatique et les métropoles-nœuds. Ses accords sauvent des vies — et assignent ces vies à des trajectoires calculées par des algorithmes qu'elle a elle-même contribué à légitimer.
+
+signes_distinctifs: >
+  Elle se déplace avec un carnet de notes papier dans un monde saturé d'interfaces numériques — geste délibéré, dit-elle, pour 'rappeler que les mots écrits à la main engagent différemment'. Porte invariablement des vêtements d'une seule couleur, souvent gris ardoise ou bleu profond, comme pour signaler une neutralité institutionnelle incarnée. Son bureau mobile contient deux objets permanents : une photographie de réfugiés sur une côte méditerranéenne non identifiée, et une copie annotée de la Convention de Barcelone 2041 qu'elle a elle-même rédigée.
+
+tensions_narratives: >
+  Sa propre réussite est son piège le plus profond : plus ses accords sont efficaces, plus la logique de marchandisation des personnes qu'ils véhiculent se normalise et s'étend. Elle commence à documenter des cas où des migrants 'alloués' selon ses propres protocoles se retrouvent dans des conditions proches du travail contraint, ce qui la force à interroger si son pragmatisme n'est pas devenu le lubrifiant d'un système qu'elle croyait réformer. Des collectifs de résistance aux relocalisations forcées utilisent désormais ses propres textes juridiques pour dénoncer les dérivés du régime — la citant à la fois comme autrice du cadre et comme complice de ses abus. Une demande de mandat officiel auprès du Conseil de Régulation des Territoires Intégrés pourrait la faire passer de courtière libre à fonctionnaire captive de l'institution qu'elle a contribué à bâtir.
+
+date_creation: 2026-06-25
+---
+
+# Selin Çelik-Marchetti
+
+## Rôle dans [[policy_reform]]
+Architecte de compromis migratoires opérant à l'interface des institutions internationales et des coalitions d'États, Selin Çelik-Marchetti est devenue une figure incontournable du régime de gouvernance coordonnée post-2085. Dans un monde où les flux migratoires sont gérés comme des variables systémiques à optimiser, elle traduit les impératifs humanitaires en équations diplomatiques acceptables pour les technocraties au pouvoir. Elle ne représente aucun gouvernement mais se loue comme ingénieure de transition migratoire aux coalitions provisoires qui structurent la gouvernance multi-niveaux de 2098. Son pragmatisme radical fait d'elle une pièce maîtresse du système — et sa conscience morale, une anomalie qu'il contient.
+
+## Responsabilités
+Elle conçoit et négocie les architectures légales des corridors migratoires intégrés, troquant quotas d'accueil contre accès préférentiel aux ressources critiques ou reconnaissance de droits souverains. Elle coordonne avec l'Office Intégré des Flux Migratoires et les agences technocratiques pour calibrer les paramètres humains des accords de stabilisation, transformant des crises démographiques en leviers de négociation institutionnelle.
+
+## Variables influencées
+- [[demographie_mobilite_humaine]]
+- [[gouvernance_institutions]]
+- [[geopolitique_conflits]]
+
+## Relations
+**Alliés** : [[office_integre_des_flux_migratoires_policy_reform]], [[assemblee_territoires_policy_reform]], [[fonds_mondial_de_resilience_infrastructurelle_policy_reform]], [[bureau_international_du_travail_augmente_bita_policy_reform]], [[conseil_de_gouvernance_de_l_information_policy_reform]]
+**Opposants** : [[collectifs_de_resistance_aux_relocalisations_forcees_policy_reform]], [[front_des_autonomies_territoriales_radicales_policy_reform]], [[mouvement_pour_la_souverainete_territoriale_absolue_policy_reform]], [[courants_post_technocratiques_de_reconquete_democratique_policy_reform]], [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+
+## Description journalistique
+Dans les couloirs feutrés du Palais des Nations à Genève ou lors des sessions plénières de l'Office Intégré des Flux Migratoires, Selin Çelik-Marchetti est reconnaissable à sa façon d'écouter avant de parler — et de ne parler qu'en chiffres. À 54 ans, cette ancienne juriste spécialisée en droit des migrations pour le Bloc Méditerranéen Étendu est devenue ce que ses détracteurs appellent une 'marchande de personnes diplômée' et ce que ses clients nomment 'la meilleure architecte de la paix migratoire en exercice'. Elle a signé sept des dix-huit protocoles d'intégration qui structurent aujourd'hui les flux entre les zones de stress climatique et les métropoles-nœuds. Ses accords sauvent des vies — et assignent ces vies à des trajectoires calculées par des algorithmes qu'elle a elle-même contribué à légitimer.
+
+## Tensions narratives
+Sa propre réussite est son piège le plus profond : plus ses accords sont efficaces, plus la logique de marchandisation des personnes qu'ils véhiculent se normalise et s'étend. Elle commence à documenter des cas où des migrants 'alloués' selon ses propres protocoles se retrouvent dans des conditions proches du travail contraint, ce qui la force à interroger si son pragmatisme n'est pas devenu le lubrifiant d'un système qu'elle croyait réformer. Des collectifs de résistance aux relocalisations forcées utilisent désormais ses propres textes juridiques pour dénoncer les dérivés du régime — la citant à la fois comme autrice du cadre et comme complice de ses abus. Une demande de mandat officiel auprès du Conseil de Régulation des Territoires Intégrés pourrait la faire passer de courtière libre à fonctionnaire captive de l'institution qu'elle a contribué à bâtir.

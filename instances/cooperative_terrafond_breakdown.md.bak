@@ -1,0 +1,98 @@
+---
+name: Fragments Terrafond
+type: instance
+slug: cooperative_terrafond_breakdown
+entite: cooperative_terrafond
+scenario: breakdown
+localisation:
+  zone: arc_sahelo_mediterraneen
+  lieu: Massif Central / Vallée de l'Allier et plaines de l'Ebre
+  type_lieu: region
+  statut: review_manuelle
+  note: "L'entité est ancrée dans le Massif Central français et les plaines de l'Ebre espagnol, zones qui ne correspondent exactement à aucune zone disponible mais dont la géographie sud-européenne/méditerranéenne se rapproche le plus de l'Arc Sahélo-Méditerranéen ; toutefois le réseau est fragmenté sur plusieurs territoires sans zone parfaitement adaptée."
+
+type_dans_scenario: réseau
+
+role_dans_scenario: >
+  Ce qui fut la Coopérative Terrafond n'existe plus comme entité unifiée : le réseau s'est fragmenté en dizaines de nœuds autonomes, isolés les uns des autres par l'effondrement des infrastructures de communication et les conflits territoriaux. Certains fragments survivent comme cellules de subsistance locales, d'autres ont été absorbés par des milices ou des seigneuries foncières de facto. Le nom 'Terrafond' persiste comme référent identitaire partagé, une mémoire organisationnelle sans corps central, invoquée différemment selon les territoires — parfois comme légitimité politique, parfois comme mythe fondateur d'une autonomie perdue.
+
+responsabilites: >
+  Gestion fragmentée et non coordonnée de bassins agricoles micro-locaux, maintien précaire de savoirs agroécologiques transmis oralement faute de réseaux numériques stables. Certains nœuds négocient des accords de protection avec des factions armées en échange de production alimentaire, compromettant les principes fondateurs de réciprocité.
+
+impact_local: 3
+impact_systemique_global: 1
+variables_influencees:
+    - systemes_productifs_travail
+    - organisation_territoires
+    - climat_environnement_global
+
+zone_geographique:
+    - locale
+    - régionale
+
+zone_systemique:
+    - économie
+    - société
+    - infrastructure
+
+alliances:
+    - communautes_paysannes_refugiees_breakdown
+    - internationale_des_semenciers_agro_pirates_fortress_world
+    - brigades_medicales_itinerantes_breakdown
+
+oppositions:
+    - seigneuries_foncieres_opportunistes_breakdown
+    - milices_d_accaparement_hydrique_breakdown
+    - cartels_logistiques_regionaux_breakdown
+
+type_relation_dominante: dépendance
+
+annee_debut: 2026
+annee_fin: 
+
+etat_temporel: transformé
+age_historique: résiduel
+generation: post-effondrement
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Dans la vallée de l'Allier carbonisée, une pancarte délavée porte encore le logo Terrafond — trois rivières entrelacées sur fond ocre. Derrière, huit familles cultivent un hectare de sorgho sous filet anti-UV de récupération. Elles ne savent pas si d'autres 'Terrafond' existent encore ailleurs. Le réseau qui gérait autrefois seize bassins hydrologiques et fédérait plus de 400 coopératives s'est dissous dans le chaos de 2091 sans acte de dissolution formel. Ce qu'il reste ressemble moins à une organisation qu'à une langue : un vocabulaire commun de la réciprocité, prononcé avec des accents très différents selon qu'on se trouve dans un fragment autonome du Massif Central ou dans un nœud sous tutelle milicienne des plaines de l'Ebre.
+
+signes_distinctifs: >
+  Le trigramme des trois rivières entrelacées, repeint à la main sur des surfaces de fortune — murs, caisses, vêtements de travail. Usage persistant du terme 'suffisance' comme marqueur identitaire fort. Assemblées décisionnelles tenues au lever du soleil, rituel conservé comme signe de continuité avec le modèle originel.
+
+tensions_narratives: >
+  La question déchirante : jusqu'où négocier avec les factions armées pour survivre sans trahir l'éthique fondatrice ? Des rumeurs circulent d'un 'Nœud-Mère' qui aurait conservé les archives numériques cryptées du réseau originel et tenterait de recontacter les fragments — mais est-ce une opportunité de renaissance ou un vecteur d'infiltration ? Enfin, la tension entre ceux qui veulent préserver le nom 'Terrafond' comme promesse de reconnexion future, et ceux qui y voient un fardeau identitaire qui attire les prédateurs.
+
+date_creation: 2026-06-15
+---
+
+# Fragments Terrafond
+
+## Rôle dans [[breakdown]]
+Ce qui fut la Coopérative Terrafond n'existe plus comme entité unifiée : le réseau s'est fragmenté en dizaines de nœuds autonomes, isolés les uns des autres par l'effondrement des infrastructures de communication et les conflits territoriaux. Certains fragments survivent comme cellules de subsistance locales, d'autres ont été absorbés par des milices ou des seigneuries foncières de facto. Le nom 'Terrafond' persiste comme référent identitaire partagé, une mémoire organisationnelle sans corps central, invoquée différemment selon les territoires — parfois comme légitimité politique, parfois comme mythe fondateur d'une autonomie perdue.
+
+## Responsabilités
+Gestion fragmentée et non coordonnée de bassins agricoles micro-locaux, maintien précaire de savoirs agroécologiques transmis oralement faute de réseaux numériques stables. Certains nœuds négocient des accords de protection avec des factions armées en échange de production alimentaire, compromettant les principes fondateurs de réciprocité.
+
+## Variables influencées
+- [[systemes_productifs_travail]]
+- [[organisation_territoires]]
+- [[climat_environnement_global]]
+
+## Relations
+**Alliés** : [[communautes_paysannes_refugiees_breakdown]], [[internationale_des_semenciers_agro_pirates_fortress_world]], [[brigades_medicales_itinerantes_breakdown]]
+**Opposants** : [[seigneuries_foncieres_opportunistes_breakdown]], [[milices_d_accaparement_hydrique_breakdown]], [[cartels_logistiques_regionaux_breakdown]]
+
+## Description journalistique
+Dans la vallée de l'Allier carbonisée, une pancarte délavée porte encore le logo Terrafond — trois rivières entrelacées sur fond ocre. Derrière, huit familles cultivent un hectare de sorgho sous filet anti-UV de récupération. Elles ne savent pas si d'autres 'Terrafond' existent encore ailleurs. Le réseau qui gérait autrefois seize bassins hydrologiques et fédérait plus de 400 coopératives s'est dissous dans le chaos de 2091 sans acte de dissolution formel. Ce qu'il reste ressemble moins à une organisation qu'à une langue : un vocabulaire commun de la réciprocité, prononcé avec des accents très différents selon qu'on se trouve dans un fragment autonome du Massif Central ou dans un nœud sous tutelle milicienne des plaines de l'Ebre.
+
+## Tensions narratives
+La question déchirante : jusqu'où négocier avec les factions armées pour survivre sans trahir l'éthique fondatrice ? Des rumeurs circulent d'un 'Nœud-Mère' qui aurait conservé les archives numériques cryptées du réseau originel et tenterait de recontacter les fragments — mais est-ce une opportunité de renaissance ou un vecteur d'infiltration ? Enfin, la tension entre ceux qui veulent préserver le nom 'Terrafond' comme promesse de reconnexion future, et ceux qui y voient un fardeau identitaire qui attire les prédateurs.

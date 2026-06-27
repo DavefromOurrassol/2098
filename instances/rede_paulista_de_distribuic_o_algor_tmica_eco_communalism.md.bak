@@ -1,0 +1,102 @@
+---
+name: Fragmentos da Rede — Algoritmo Paulista Descentralizado (APD)
+type: instance
+slug: rede_paulista_de_distribuic_o_algor_tmica_eco_communalism
+entite: rede_paulista_de_distribuic_o_algor_tmica
+scenario: eco_communalism
+
+type_dans_scenario: système
+
+role_dans_scenario: >
+  Ce qui subsiste de l'ancien système d'allocation algorithmique centralisé de São Paulo n'est plus qu'une constellation de modules locaux déconnectés, repris en main par des assemblées territoriales qui les ont désossés, réécrit partiellement leurs paramètres et les font tourner sur des serveurs communautaires à faible consommation. L'APD n'est pas une entité unifiée mais un ensemble hétérogène de fragments logiciels en dispute : certains modules servent honnêtement la gestion de l'eau dans les bassins versants, d'autres ont été capturés par des notables locaux qui en manipulent les seuils à leur profit. Il incarne la trajectoire d'une technologie de contrôle que le monde post-effondrement n'a pas su ni détruire ni démocratiser complètement.
+
+responsabilites: >
+  Coordonne l'allocation locale de l'eau et de l'énergie dans une douzaine de zones périurbaines de l'ancienne métropole paulistaine, sous supervision variable des assemblées bioterritoriales. Produit des données ouvertes sur les flux de ressources que les collectifs citoyens peuvent auditer — en théorie. Sert également de mémoire logistique aux réseaux de troc inter-coopératives pour optimiser les circuits courts alimentaires.
+
+impact_local: 4
+impact_systemique_global: 1
+
+variables_influencees:
+    - energie_ressources_critiques
+    - organisation_territoires
+    - gouvernance_institutions
+    - technologie_information
+
+zone_geographique:
+    - urbaine
+    - régionale
+
+zone_systemique:
+    - IA
+    - infrastructure
+    - gouvernance
+    - énergie
+
+alliances:
+    - assemblees_bioterritoriales_regionales_eco_communalism
+    - assemblees_de_bassin_versant_eco_communalism
+    - collectifs_de_techniciens_sobres_eco_communalism
+    - factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism
+    - conseils_de_bassin_versant_eco_communalistes_eco_communalism
+    - reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism
+
+oppositions:
+    - reseaux_de_notables_communautaires_capturistes_eco_communalism
+    - conseils_territoriaux_opaques_sur_la_gestion_des_ressources_eco_communalism
+    - consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism
+    - courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism
+    - consortiums_industriels_de_l_eau_eco_communalism
+    - reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism
+
+type_relation_dominante: rivalité
+
+annee_debut: 2031
+annee_fin: 
+
+etat_temporel: transformé
+age_historique: déclinant
+generation: reconstruction
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Dans le quartier de Brasilândia, un panneau solaire alimente un serveur grand comme une valise : c'est lui, désormais, qui décide combien de litres d'eau la coopérative recevra ce matin. Le grand Algorithme paulistain, jadis vanté comme le cerveau rationnel d'une mégalopole de vingt millions d'âmes, a été démembré après l'effondrement des réseaux centraux dans les années 2040. Ce qu'il en reste tourne sur du matériel rafistolé, maintenu par des techniciens sobres qui lisent le code à voix haute dans les assemblées pour en expliquer les règles. Mais tous les fragments ne sont pas aussi transparents : à Guarulhos, une faction locale a modifié en silence les seuils de priorité, et les familles situées hors du périmètre coopératif reçoivent systématiquement moins. L'ancien rêve d'équité par le calcul survit sous forme de ruines habitées — certaines généreuses, d'autres reconduisant les mêmes injustices sous un vocabulaire technique différent.
+
+signes_distinctifs: >
+  Serveurs peints aux couleurs des assemblées locales, affichant en temps réel sur des écrans muraux les paramètres de distribution — quand l'électricité tient. Le logo d'origine, un hexagone noir sur fond blanc, a été barré d'une main rouge dans certaines zones et remplacé par des symboles bioterritoraux tissés à même les câbles. Les anciennes interfaces en portugais institutionnel côtoient des annotations manuscrites en tupi-guarani et en créole caipira.
+
+tensions_narratives: >
+  La question centrale reste entière : qui a le droit de modifier les paramètres, et selon quelle légitimité ? Les assemblées les plus organisées revendiquent un audit permanent mais manquent de compétences techniques ; les collectifs de techniciens sobres ont le savoir mais pas toujours le mandat démocratique. Pendant ce temps, des opérateurs d'IA propriétaires proposent de 'réunifier' les fragments en échange d'un accès aux données — une offre que certaines communautés à bout de ressources envisagent sérieusement. Et si un journaliste fouille assez loin dans les logs, il trouvera que les anciens biais du système original — favorisant les zones historiquement mieux dotées — n'ont jamais vraiment été effacés : ils ont simplement changé de nom.
+
+date_creation: 2026-06-23
+---
+
+# Fragmentos da Rede — Algoritmo Paulista Descentralizado (APD)
+
+## Rôle dans [[eco_communalism]]
+Ce qui subsiste de l'ancien système d'allocation algorithmique centralisé de São Paulo n'est plus qu'une constellation de modules locaux déconnectés, repris en main par des assemblées territoriales qui les ont désossés, réécrit partiellement leurs paramètres et les font tourner sur des serveurs communautaires à faible consommation. L'APD n'est pas une entité unifiée mais un ensemble hétérogène de fragments logiciels en dispute : certains modules servent honnêtement la gestion de l'eau dans les bassins versants, d'autres ont été capturés par des notables locaux qui en manipulent les seuils à leur profit. Il incarne la trajectoire d'une technologie de contrôle que le monde post-effondrement n'a pas su ni détruire ni démocratiser complètement.
+
+## Responsabilités
+Coordonne l'allocation locale de l'eau et de l'énergie dans une douzaine de zones périurbaines de l'ancienne métropole paulistaine, sous supervision variable des assemblées bioterritoriales. Produit des données ouvertes sur les flux de ressources que les collectifs citoyens peuvent auditer — en théorie. Sert également de mémoire logistique aux réseaux de troc inter-coopératives pour optimiser les circuits courts alimentaires.
+
+## Variables influencées
+- [[energie_ressources_critiques]]
+- [[organisation_territoires]]
+- [[gouvernance_institutions]]
+- [[technologie_information]]
+
+## Relations
+**Alliés** : [[assemblees_bioterritoriales_regionales_eco_communalism]], [[assemblees_de_bassin_versant_eco_communalism]], [[collectifs_de_techniciens_sobres_eco_communalism]], [[factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism]], [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]], [[reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism]]
+**Opposants** : [[reseaux_de_notables_communautaires_capturistes_eco_communalism]], [[conseils_territoriaux_opaques_sur_la_gestion_des_ressources_eco_communalism]], [[consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism]], [[courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism]], [[consortiums_industriels_de_l_eau_eco_communalism]], [[reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism]]
+
+## Description journalistique
+Dans le quartier de Brasilândia, un panneau solaire alimente un serveur grand comme une valise : c'est lui, désormais, qui décide combien de litres d'eau la coopérative recevra ce matin. Le grand Algorithme paulistain, jadis vanté comme le cerveau rationnel d'une mégalopole de vingt millions d'âmes, a été démembré après l'effondrement des réseaux centraux dans les années 2040. Ce qu'il en reste tourne sur du matériel rafistolé, maintenu par des techniciens sobres qui lisent le code à voix haute dans les assemblées pour en expliquer les règles. Mais tous les fragments ne sont pas aussi transparents : à Guarulhos, une faction locale a modifié en silence les seuils de priorité, et les familles situées hors du périmètre coopératif reçoivent systématiquement moins. L'ancien rêve d'équité par le calcul survit sous forme de ruines habitées — certaines généreuses, d'autres reconduisant les mêmes injustices sous un vocabulaire technique différent.
+
+## Tensions narratives
+La question centrale reste entière : qui a le droit de modifier les paramètres, et selon quelle légitimité ? Les assemblées les plus organisées revendiquent un audit permanent mais manquent de compétences techniques ; les collectifs de techniciens sobres ont le savoir mais pas toujours le mandat démocratique. Pendant ce temps, des opérateurs d'IA propriétaires proposent de 'réunifier' les fragments en échange d'un accès aux données — une offre que certaines communautés à bout de ressources envisagent sérieusement. Et si un journaliste fouille assez loin dans les logs, il trouvera que les anciens biais du système original — favorisant les zones historiquement mieux dotées — n'ont jamais vraiment été effacés : ils ont simplement changé de nom.

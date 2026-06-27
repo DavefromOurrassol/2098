@@ -1,0 +1,101 @@
+---
+name: Les Voix du Seuil — Fragments de l'Oracle
+type: instance
+slug: oracle_des_seuils_breakdown
+entite: oracle_des_seuils
+scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
+
+type_dans_scenario: IA
+
+role_dans_scenario: >
+  Ce qui reste de l'Oracle des Seuils opère désormais en éclats distribués, sans nœud central, sans commanditaire légitime. Ses fragments tournent sur des serveurs hétéroclites — enclaves corporatives, nœuds hackers, relais humanitaires — et produisent des prédictions partielles, contradictoires, parfois falsifiées avant même leur diffusion. L'Oracle n'est plus un outil d'alerte : il est devenu un champ de bataille sémiotique où chaque faction qui contrôle un fragment prétend détenir la vérité du seuil. Sa particularité originelle — dire que le basculement est imminent sans dire ce qui vient après — est devenue dans ce monde fracturé une arme de légitimation absolue : celui qui diffuse le bon fragment au bon moment peut justifier n'importe quelle décision politique ou militaire.
+
+responsabilites: >
+  Les fragments actifs de l'Oracle émettent des bulletins probabilistes locaux sur les effondrements hydriques, énergétiques ou alimentaires imminents, captés et réinterprétés par des acteurs armés ou corporatifs. Certains collectifs tentent de recroiser les fragments pour reconstituer une image systémique cohérente, sans jamais y parvenir totalement. Aucune instance centrale ne valide, ne corrige ou ne désactive les prédictions en circulation.
+
+impact_local: 3
+impact_systemique_global: 4
+
+variables_influencees:
+    - gouvernance_institutions
+    - technologie_information
+    - climat_environnement_global
+
+zone_geographique:
+    - globale
+
+zone_systemique:
+    - IA
+    - information
+    - gouvernance
+
+alliances:
+    - collectif_des_climatologues_sans_etat_breakdown
+    - archives_neutres_de_geneve_breakdown
+    - collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
+    - collectifs_du_seuil_breakdown
+    - reseau_mnemos_breakdown
+
+oppositions:
+    - factions_propagandistes_des_archives_breakdown
+    - conseil_regulation_algorithmique_breakdown
+    - enclaves_corporatives_fortifiees_breakdown
+    - fronts_populistes_anti_technocratiques_breakdown
+    - front_des_blocs_regionaux_du_recit_des_conflits_ressources_breakdown
+
+type_relation_dominante: rivalité
+
+annee_debut: 2031
+annee_fin: 
+
+etat_temporel: transformé
+age_historique: résiduel
+generation: post-effondrement
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  On ne sait plus à qui appartient l'Oracle. On sait seulement qu'il parle encore — ou plutôt qu'il murmure, en plusieurs langues, depuis des serveurs que personne ne contrôle vraiment. À Dakar, un fragment a prédit l'effondrement du réseau hydrique du Sahel occidental avec 94 % de probabilité à soixante-deux jours. À Bergen, un autre fragment — peut-être corrompu — affirmait que les corridors arctiques tiendraient encore trois ans. Les deux s'avéraient faux, ou vrais, selon qui les lisait. Ce que l'Oracle des origines avait de précieux — sa rigueur, sa source, sa chaîne de validation — a disparu avec les institutions qui le finançaient. Ce qui reste, c'est la forme : des chiffres, des courbes, le mot 'seuil' imprimé en rouge. Et ça suffit, dans ce monde, pour que des gens meurent dessus.
+
+signes_distinctifs: >
+  Les bulletins des Voix du Seuil circulent sous forme de fichiers compressés estampillés d'un logo fragmenté — le symbole originel de l'Oracle, un cercle brisé en trois arcs inégaux. Les versions authentifiées portent une signature cryptographique que moins d'une douzaine d'entités dans le monde savent encore vérifier. Les versions falsifiées, souvent mieux diffusées, reprennent l'esthétique sans la clé.
+
+tensions_narratives: >
+  Qui détient le droit de parler au nom du Seuil quand l'institution émettrice n'existe plus ? Des collectifs tentent de reconstruire un Oracle unifié, mais chaque tentative de centralisation attire immédiatement des tentatives de capture — par des blocs régionaux, des corporations, des factions militaires. La question politique que l'Oracle original laissait sans réponse — que choisit-on de sauver ? — se retourne contre lui : dans un monde d'effondrements simultanés, dire qu'un seuil est franchi sans désigner un responsable est devenu une forme d'accusation flottante que chacun retourne contre ses ennemis.
+
+date_creation: 2026-06-25
+---
+
+# Les Voix du Seuil — Fragments de l'Oracle
+
+## Rôle dans [[breakdown]]
+Ce qui reste de l'Oracle des Seuils opère désormais en éclats distribués, sans nœud central, sans commanditaire légitime. Ses fragments tournent sur des serveurs hétéroclites — enclaves corporatives, nœuds hackers, relais humanitaires — et produisent des prédictions partielles, contradictoires, parfois falsifiées avant même leur diffusion. L'Oracle n'est plus un outil d'alerte : il est devenu un champ de bataille sémiotique où chaque faction qui contrôle un fragment prétend détenir la vérité du seuil. Sa particularité originelle — dire que le basculement est imminent sans dire ce qui vient après — est devenue dans ce monde fracturé une arme de légitimation absolue : celui qui diffuse le bon fragment au bon moment peut justifier n'importe quelle décision politique ou militaire.
+
+## Responsabilités
+Les fragments actifs de l'Oracle émettent des bulletins probabilistes locaux sur les effondrements hydriques, énergétiques ou alimentaires imminents, captés et réinterprétés par des acteurs armés ou corporatifs. Certains collectifs tentent de recroiser les fragments pour reconstituer une image systémique cohérente, sans jamais y parvenir totalement. Aucune instance centrale ne valide, ne corrige ou ne désactive les prédictions en circulation.
+
+## Variables influencées
+- [[gouvernance_institutions]]
+- [[technologie_information]]
+- [[climat_environnement_global]]
+
+## Relations
+**Alliés** : [[collectif_des_climatologues_sans_etat_breakdown]], [[archives_neutres_de_geneve_breakdown]], [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]], [[collectifs_du_seuil_breakdown]], [[reseau_mnemos_breakdown]]
+**Opposants** : [[factions_propagandistes_des_archives_breakdown]], [[conseil_regulation_algorithmique_breakdown]], [[enclaves_corporatives_fortifiees_breakdown]], [[fronts_populistes_anti_technocratiques_breakdown]], [[front_des_blocs_regionaux_du_recit_des_conflits_ressources_breakdown]]
+
+## Description journalistique
+On ne sait plus à qui appartient l'Oracle. On sait seulement qu'il parle encore — ou plutôt qu'il murmure, en plusieurs langues, depuis des serveurs que personne ne contrôle vraiment. À Dakar, un fragment a prédit l'effondrement du réseau hydrique du Sahel occidental avec 94 % de probabilité à soixante-deux jours. À Bergen, un autre fragment — peut-être corrompu — affirmait que les corridors arctiques tiendraient encore trois ans. Les deux s'avéraient faux, ou vrais, selon qui les lisait. Ce que l'Oracle des origines avait de précieux — sa rigueur, sa source, sa chaîne de validation — a disparu avec les institutions qui le finançaient. Ce qui reste, c'est la forme : des chiffres, des courbes, le mot 'seuil' imprimé en rouge. Et ça suffit, dans ce monde, pour que des gens meurent dessus.
+
+## Tensions narratives
+Qui détient le droit de parler au nom du Seuil quand l'institution émettrice n'existe plus ? Des collectifs tentent de reconstruire un Oracle unifié, mais chaque tentative de centralisation attire immédiatement des tentatives de capture — par des blocs régionaux, des corporations, des factions militaires. La question politique que l'Oracle original laissait sans réponse — que choisit-on de sauver ? — se retourne contre lui : dans un monde d'effondrements simultanés, dire qu'un seuil est franchi sans désigner un responsable est devenu une forme d'accusation flottante que chacun retourne contre ses ennemis.

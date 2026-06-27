@@ -1,0 +1,80 @@
+---
+name: La Sécession des Lacs — Le Compact de l'Eau Dernière
+type: event_instance
+slug: secession_grands_lacs_eau_douce_breakdown
+archetype: secession_grands_lacs_eau_douce
+scenario: breakdown
+type_evenement: political_social
+portee: continentale
+date: 2053
+date_label: été 2053
+impossible: false
+custom: true
+description: >
+  L'été 2053 marque l'acte de naissance chaotique du Compact de l'Eau Dernière. Depuis les quais fracturés de Chicago-Lacustre, des délégués aux mandats contestés signent la Charte de Souveraineté Hydrique des Grands Lacs — un texte rédigé en trois langues autochtones et en anglais, reconnu par personne en dehors de la confédération elle-même. Washington, déjà en quasi-cessation de paiements, qualifie l'acte d'«illégal» depuis un communiqué que personne ne lit. Les premières escarmouches éclatent dès la semaine suivante sur le détroit de Mackinac, où des milices armées disputent les droits de transit aux nouvelles autorités lacustres. Ce qui devait être un acte fondateur ressemble davantage à une fracture béante dans un tissu déjà en lambeaux.
+consequences: >
+  Le Compact de l'Eau Dernière devient un modèle ambigu pour d'autres sécessions régionales en Amérique du Nord, accélérant la désintégration fédérale sans pour autant produire une gouvernance stable : la confédération lacustre elle-même se fracture en zones de contrôle disputées dans les cinq ans suivants. L'eau douce des Grands Lacs, théoriquement protégée, devient l'enjeu d'une guerre d'usure entre milices hydriques, nations autochtones souveraines et enclaves corporatives fortifiées cherchant à sécuriser leurs approvisionnements. Le précédent juridique — nul et non avenu pour les États tiers — légitime pourtant une vague de revendications souveraines similaires sur d'autres bassins hydrographiques continentaux.
+realisation: >
+  Dans un contexte de fragmentation fédérale avancée, le Great Lakes Autonomous Compact ne proclame pas une sécession ordonnée mais un effondrement de loyauté : Washington n'est plus capable d'envoyer des troupes ou des transferts fiscaux depuis 2050. La déclaration de juridiction exclusive sur les Grands Lacs arrive dans un vide de pouvoir, moins comme une rupture que comme l'officialisation d'une réalité déjà vécue. Chicago-Lacustre émerge comme capitale de facto d'une confédération fragile de 8 entités étatiques résiduelles et 40 nations autochtones dont les Communes Libres du Rust Belt constituent l'épine dorsale industrielle. Mais la confédération est traversée de tensions internes immédiates — les milices d'accaparement hydrique surgissent aux marges, et les seigneuries foncières opportunistes tentent de verrouiller les rivages.
+impact_sur_variables:
+  - variable: organisation_territoires
+    delta_level: 8
+    duree: 15
+    polarite: -1
+  - variable: gouvernance_institutions
+    delta_level: -12
+    duree: 20
+    polarite: -1
+  - variable: geopolitique_conflits
+    delta_level: 5
+    duree: 25
+    polarite: -1
+  - variable: energie_ressources_critiques
+    delta_level: -10
+    duree: 20
+    polarite: -1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+    - mouvement_des_communes_du_rust_belt_breakdown
+    - factions_para_etatiques_hydriques_breakdown
+    - milices_d_accaparement_hydrique_breakdown
+    - seigneuries_foncieres_opportunistes_breakdown
+    - cites_etats_secessionistes_breakdown
+    - federation_communs_territoriaux_breakdown
+    - enclaves_corporatives_fortifiees_breakdown
+    - factions_etatiques_residuelles_de_souverainete_hydrique_breakdown
+note_coherence: Dans un scénario de breakdown à gouvernance level 20, une sécession ne crée pas d'ordre nouveau mais révèle et amplifie la fragmentation déjà à l'œuvre — le Compact naît dans le chaos et y retourne immédiatement, cohérent avec une trajectoire de fragmentation rapide.
+custom_source: rééquilibrage_geo_2026-06
+date_creation: 2026-06-23
+---
+
+# La Sécession des Lacs — Le Compact de l'Eau Dernière
+
+## Réalisation dans [[breakdown]]
+Dans un contexte de fragmentation fédérale avancée, le Great Lakes Autonomous Compact ne proclame pas une sécession ordonnée mais un effondrement de loyauté : Washington n'est plus capable d'envoyer des troupes ou des transferts fiscaux depuis 2050. La déclaration de juridiction exclusive sur les Grands Lacs arrive dans un vide de pouvoir, moins comme une rupture que comme l'officialisation d'une réalité déjà vécue. Chicago-Lacustre émerge comme capitale de facto d'une confédération fragile de 8 entités étatiques résiduelles et 40 nations autochtones dont les Communes Libres du Rust Belt constituent l'épine dorsale industrielle. Mais la confédération est traversée de tensions internes immédiates — les milices d'accaparement hydrique surgissent aux marges, et les seigneuries foncières opportunistes tentent de verrouiller les rivages.
+
+## Description journalistique
+L'été 2053 marque l'acte de naissance chaotique du Compact de l'Eau Dernière. Depuis les quais fracturés de Chicago-Lacustre, des délégués aux mandats contestés signent la Charte de Souveraineté Hydrique des Grands Lacs — un texte rédigé en trois langues autochtones et en anglais, reconnu par personne en dehors de la confédération elle-même. Washington, déjà en quasi-cessation de paiements, qualifie l'acte d'«illégal» depuis un communiqué que personne ne lit. Les premières escarmouches éclatent dès la semaine suivante sur le détroit de Mackinac, où des milices armées disputent les droits de transit aux nouvelles autorités lacustres. Ce qui devait être un acte fondateur ressemble davantage à une fracture béante dans un tissu déjà en lambeaux.
+
+## Conséquences
+Le Compact de l'Eau Dernière devient un modèle ambigu pour d'autres sécessions régionales en Amérique du Nord, accélérant la désintégration fédérale sans pour autant produire une gouvernance stable : la confédération lacustre elle-même se fracture en zones de contrôle disputées dans les cinq ans suivants. L'eau douce des Grands Lacs, théoriquement protégée, devient l'enjeu d'une guerre d'usure entre milices hydriques, nations autochtones souveraines et enclaves corporatives fortifiées cherchant à sécuriser leurs approvisionnements. Le précédent juridique — nul et non avenu pour les États tiers — légitime pourtant une vague de revendications souveraines similaires sur d'autres bassins hydrographiques continentaux.
+
+## Impact sur les variables
+- **organisation_territoires** : delta -8 sur 15 ans
+- **gouvernance_institutions** : delta +12 sur 20 ans
+- **geopolitique_conflits** : delta -5 sur 25 ans
+- **energie_ressources_critiques** : delta +10 sur 20 ans
+
+## Acteurs impliqués
+- [[mouvement_des_communes_du_rust_belt_breakdown]]
+- [[factions_para_etatiques_hydriques_breakdown]]
+- [[milices_d_accaparement_hydrique_breakdown]]
+- [[seigneuries_foncieres_opportunistes_breakdown]]
+- [[cites_etats_secessionistes_breakdown]]
+- [[federation_communs_territoriaux_breakdown]]
+- [[enclaves_corporatives_fortifiees_breakdown]]
+- [[factions_etatiques_residuelles_de_souverainete_hydrique_breakdown]]
+
+## Note de cohérence
+Dans un scénario de breakdown à gouvernance level 20, une sécession ne crée pas d'ordre nouveau mais révèle et amplifie la fragmentation déjà à l'œuvre — le Compact naît dans le chaos et y retourne immédiatement, cohérent avec une trajectoire de fragmentation rapide.

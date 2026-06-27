@@ -1,0 +1,89 @@
+---
+name: Saisie du Convoi Arctique — Incident du Passage Nord-Ouest
+type: event_instance
+slug: saisie_convoi_passage_nordouest_fortress_world
+archetype: saisie_convoi_passage_nordouest
+scenario: fortress_world
+type_evenement: political_social
+portee: continentale
+date: 2059
+date_label: août 2059
+impossible: false
+custom: true
+description: >
+  Le 14 août 2059, des vedettes armées de la NAT ont ouvert le feu sur le convoi GX-7 de l'Arctic Passage Authority à 140 milles nautiques au nord de Resolute Bay. Trois membres d'équipage tués, deux navires saisis, cargaison de terres rares et de concentrés de lithium mise sous séquestre — les images de l'arraisonnement, diffusées par Fractures avant d'être censurées par les médias des blocs, montrent une scène de guerre ouverte là où couraient encore, il y a dix ans, de simples navires marchands. Nuna Capital dépose une plainte formelle devant la Chambre d'Arbitrage des Ressources Souveraines mais l'institution est trop décomposée pour rendre un verdict contraignant. À Copenhague et à Moscou, les conseillers militaires se frottent les mains : la route arctique vaut désormais plus que le droit.
+consequences: >
+  L'incident officialise la militarisation totale du Passage Nord-Ouest et enterre de facto tout régime de transit partagé : chaque bloc impose ses propres corridors d'escorte armée, triplant les coûts de transit et fragmentant la route en segments de souveraineté exclusive. Le Groenland, humilié dans son recours juridique, accélère ses négociations d'alignement avec l'un des grands blocs continentaux pour garantir sa protection militaire, sacrifiant une part de son autonomie au passage. Les milices de piraterie logistique arctique prolifèrent dans les angles morts laissés par la confrontation des deux autorités légitimes.
+realisation: >
+  Dans un contexte de militarisation totale des routes commerciales, des unités de la Nordisk Arktisk Transitkontroll interceptent et immobilisent un convoi sous bannière de l'Arctic Passage Authority dans les eaux disputées du Passage Nord-Ouest. La confrontation armée — première directe entre les deux autorités de transit — fait trois morts parmi les équipages. Le Groenland, via son fonds souverain Nuna Capital, porte l'affaire devant un Tribunal International de la Mer en quasi-déliquescence, tandis que les blocs atlantique et eurasiatique instrumentalisent immédiatement l'incident pour défendre leurs intérêts d'accès aux routes arctiques. Les nations Inuit, dont le territoire sert de prétexte aux deux camps, ne sont consultées par aucun des belligérants.
+impact_sur_variables:
+  - variable: geopolitique_conflits
+    delta_level: 12
+    duree: 18
+    polarite: -1
+  - variable: energie_ressources_critiques
+    delta_level: 10
+    duree: 25
+    polarite: -1
+  - variable: frontieres_du_systeme
+    delta_level: 8
+    duree: 20
+    polarite: -1
+  - variable: gouvernance_institutions
+    delta_level: -9
+    duree: 15
+    polarite: -1
+  - variable: organisation_territoires
+    delta_level: 7
+    duree: 20
+    polarite: -1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+    - armada_logistique_nordique_fortress_world
+    - kalaallit_nunaat_sovereign_fund_fortress_world
+    - coalition_arctique_des_blocs_continentaux_fortress_world
+    - conseil_regulation_ressources_fortress_world
+    - commandement_strategique_des_matieres_critiques_atlantique_fortress_world
+    - regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world
+    - milices_de_piraterie_logistique_arctique_fortress_world
+    - voix_du_dehors_fortress_world
+    - institutions_multilaterales_residuelles_fortress_world
+    - factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world
+note_coherence: Dans un Fortress World à tension maximale où les blocs militarisent toutes leurs routes d'accès aux ressources critiques, la transformation du Passage Nord-Ouest en zone de confrontation armée est non seulement plausible mais presque inévitable — l'arctique étant la dernière grande route non encore entièrement appropriée.
+custom_source: rééquilibrage_geo_2026-06
+date_creation: 2026-06-23
+---
+
+# Saisie du Convoi Arctique — Incident du Passage Nord-Ouest
+
+## Réalisation dans [[fortress_world]]
+Dans un contexte de militarisation totale des routes commerciales, des unités de la Nordisk Arktisk Transitkontroll interceptent et immobilisent un convoi sous bannière de l'Arctic Passage Authority dans les eaux disputées du Passage Nord-Ouest. La confrontation armée — première directe entre les deux autorités de transit — fait trois morts parmi les équipages. Le Groenland, via son fonds souverain Nuna Capital, porte l'affaire devant un Tribunal International de la Mer en quasi-déliquescence, tandis que les blocs atlantique et eurasiatique instrumentalisent immédiatement l'incident pour défendre leurs intérêts d'accès aux routes arctiques. Les nations Inuit, dont le territoire sert de prétexte aux deux camps, ne sont consultées par aucun des belligérants.
+
+## Description journalistique
+Le 14 août 2059, des vedettes armées de la NAT ont ouvert le feu sur le convoi GX-7 de l'Arctic Passage Authority à 140 milles nautiques au nord de Resolute Bay. Trois membres d'équipage tués, deux navires saisis, cargaison de terres rares et de concentrés de lithium mise sous séquestre — les images de l'arraisonnement, diffusées par Fractures avant d'être censurées par les médias des blocs, montrent une scène de guerre ouverte là où couraient encore, il y a dix ans, de simples navires marchands. Nuna Capital dépose une plainte formelle devant la Chambre d'Arbitrage des Ressources Souveraines mais l'institution est trop décomposée pour rendre un verdict contraignant. À Copenhague et à Moscou, les conseillers militaires se frottent les mains : la route arctique vaut désormais plus que le droit.
+
+## Conséquences
+L'incident officialise la militarisation totale du Passage Nord-Ouest et enterre de facto tout régime de transit partagé : chaque bloc impose ses propres corridors d'escorte armée, triplant les coûts de transit et fragmentant la route en segments de souveraineté exclusive. Le Groenland, humilié dans son recours juridique, accélère ses négociations d'alignement avec l'un des grands blocs continentaux pour garantir sa protection militaire, sacrifiant une part de son autonomie au passage. Les milices de piraterie logistique arctique prolifèrent dans les angles morts laissés par la confrontation des deux autorités légitimes.
+
+## Impact sur les variables
+- **geopolitique_conflits** : delta -12 sur 18 ans
+- **energie_ressources_critiques** : delta -10 sur 25 ans
+- **frontieres_du_systeme** : delta -8 sur 20 ans
+- **gouvernance_institutions** : delta +9 sur 15 ans
+- **organisation_territoires** : delta -7 sur 20 ans
+
+## Acteurs impliqués
+- [[armada_logistique_nordique_fortress_world]]
+- [[kalaallit_nunaat_sovereign_fund_fortress_world]]
+- [[coalition_arctique_des_blocs_continentaux_fortress_world]]
+- [[conseil_regulation_ressources_fortress_world]]
+- [[commandement_strategique_des_matieres_critiques_atlantique_fortress_world]]
+- [[regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world]]
+- [[milices_de_piraterie_logistique_arctique_fortress_world]]
+- [[voix_du_dehors_fortress_world]]
+- [[institutions_multilaterales_residuelles_fortress_world]]
+- [[factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world]]
+
+## Note de cohérence
+Dans un Fortress World à tension maximale où les blocs militarisent toutes leurs routes d'accès aux ressources critiques, la transformation du Passage Nord-Ouest en zone de confrontation armée est non seulement plausible mais presque inévitable — l'arctique étant la dernière grande route non encore entièrement appropriée.

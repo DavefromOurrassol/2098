@@ -1,0 +1,105 @@
+---
+name: Fonds Souverain Kalaallit Nunaat — Kivfak Nunani
+type: instance
+slug: kalaallit_nunaat_sovereign_fund_new_sustainability
+entite: kalaallit_nunaat_sovereign_fund
+scenario: new_sustainability
+localisation:
+  zone: nuuk_kivfak_nunani
+  lieu: Nuuk — Siège du Fonds Souverain Kalaallit Nunaat
+  type_lieu: infrastructure
+
+type_dans_scenario: institution
+
+role_dans_scenario: >
+  Dans le monde stabilisé de 2098, le Fonds Souverain Kalaallit Nunaat — rebaptisé 'Kivfak Nunani' (littéralement 'Ce qui était sous la glace') — s'est mué en institution financière et géopolitique de premier rang, gérant une rente extractive et régénérative née de la fonte des glaces du XXIe siècle. Loin d'être un simple véhicule d'enrichissement, il joue désormais un rôle de médiateur stratégique entre les grandes puissances institutionnelles de la gouvernance mondiale, capitalisant sur sa position de territoire arctique souverain détenteur de ressources minières rares, de corridors maritimes ouverts et de capacités de séquestration carbone certifiées. Il incarne la transformation d'une périphérie colonisée en pôle de négociation incontournable, mobilisant sa légitimité historique de victime climatique comme capital de négociation dans les arènes technocratiques globales.
+
+responsabilites: >
+  Le Fonds gère les revenus issus de l'exploitation contrôlée des ressources libérées par la fonte — terres rares, hydrocarbures résiduels, minerais critiques pour la transition énergétique — selon un cadre de gouvernance hybride qui conditionne chaque contrat d'extraction à des obligations de régénération écologique certifiées par l'AMMC. Il finance des programmes d'autonomisation technologique des communautés inuit et investit dans des infrastructures de gouvernance distribuée arctique, tout en redistribuant une fraction de la rente vers les mécanismes internationaux de compensation climatique.
+
+impact_local: 5
+impact_systemique_global: 3
+
+variables_influencees:
+    - energie_ressources_critiques
+    - gouvernance_institutions
+    - geopolitique_conflits
+    - organisation_territoires
+
+zone_geographique:
+    - nationale
+    - régionale
+    - globale
+
+zone_systemique:
+    - économie
+    - gouvernance
+    - énergie
+    - infrastructure
+
+alliances:
+    - conseil_regulation_ressources_new_sustainability
+    - fonds_mondial_de_regeneration_ecologique_new_sustainability
+    - mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability
+    - conseil_energetique_intercontinental_new_sustainability
+    - great_lakes_autonomous_compact_new_sustainability
+    - agence_stabilisation_climatique_new_sustainability
+
+oppositions:
+    - coalition_des_industries_extractives_residuelles_new_sustainability
+    - lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability
+    - coalition_anti_fiscalite_universelle_new_sustainability
+    - factions_souverainistes_des_blocs_peripheriques_new_sustainability
+
+type_relation_dominante: alliance stratégique
+
+annee_debut: 2031
+annee_fin: 
+
+etat_temporel: actif
+age_historique: dominant
+generation: reconstruction
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Depuis ses bureaux de verre et de bois flotté arctique surplombant le fjord de Nuuk, le Kivfak Nunani gère aujourd'hui un portefeuille estimé à 2 400 milliards de crédits carbone-équivalents — une fortune née littéralement du désastre que le Groenland a subi avant tous les autres. Ses négociateurs, formés aux grandes écoles de gouvernance technocratique d'Helsinki et de Singapour mais profondément ancrés dans la culture kalaallit, manient avec une élégance déconcertante le double langage de la souveraineté blessée et de la puissance assumée. En 2096, le Fonds a bloqué pendant six semaines un traité d'accès aux corridors arctiques jusqu'à obtenir un siège permanent au Conseil de Gouvernance Algorithmique Intégrée — une victoire saluée comme historique par les mouvements d'autonomie des peuples circumpolaires. Certains observateurs de Genève murmurent cependant que la sophistication du Fonds cache une dépendance croissante aux algorithmes d'optimisation du Réseau ARIA pour calibrer ses stratégies de négociation.
+
+signes_distinctifs: >
+  Logo représentant une calotte glaciaire inversée — la pointe vers le haut, symbole d'émergence — gravée sur des jetons de certification en fonte d'aluminium recyclé arctique. Les délégués portent systématiquement une pièce de vêtement en laine de mouton groenlandaise lors des négociations internationales, geste politique autant qu'identitaire. Les documents officiels du Fonds sont rédigés en trois langues : kalaallisuut, anglais et code de gouvernance algorithmique ouvert.
+
+tensions_narratives: >
+  La tension fondamentale du Kivfak Nunani en 2098 tient à une question que ses propres fondateurs refusent de trancher : la rente climatique doit-elle être un bien commun mondial, au nom de la solidarité avec les autres victimes du réchauffement, ou le rempart légitime d'une souveraineté trop longtemps confisquée ? En interne, une faction jeune et radicale — les 'Sermersooq' — pousse à nationaliser intégralement les ressources et à rompre avec les cadres de gouvernance globale, tandis que la direction technocratique historique mise sur l'intégration institutionnelle comme seule garantie durable d'influence. Par ailleurs, les communautés inuit des zones non urbanisées contestent de plus en plus la captation de la rente par une élite nuukoise jugée trop déconnectée des réalités territoriales, ouvrant une fracture interne potentiellement déstabilisatrice.
+
+date_creation: 2026-06-23
+---
+
+# Fonds Souverain Kalaallit Nunaat — Kivfak Nunani
+
+## Rôle dans [[new_sustainability]]
+Dans le monde stabilisé de 2098, le Fonds Souverain Kalaallit Nunaat — rebaptisé 'Kivfak Nunani' (littéralement 'Ce qui était sous la glace') — s'est mué en institution financière et géopolitique de premier rang, gérant une rente extractive et régénérative née de la fonte des glaces du XXIe siècle. Loin d'être un simple véhicule d'enrichissement, il joue désormais un rôle de médiateur stratégique entre les grandes puissances institutionnelles de la gouvernance mondiale, capitalisant sur sa position de territoire arctique souverain détenteur de ressources minières rares, de corridors maritimes ouverts et de capacités de séquestration carbone certifiées. Il incarne la transformation d'une périphérie colonisée en pôle de négociation incontournable, mobilisant sa légitimité historique de victime climatique comme capital de négociation dans les arènes technocratiques globales.
+
+## Responsabilités
+Le Fonds gère les revenus issus de l'exploitation contrôlée des ressources libérées par la fonte — terres rares, hydrocarbures résiduels, minerais critiques pour la transition énergétique — selon un cadre de gouvernance hybride qui conditionne chaque contrat d'extraction à des obligations de régénération écologique certifiées par l'AMMC. Il finance des programmes d'autonomisation technologique des communautés inuit et investit dans des infrastructures de gouvernance distribuée arctique, tout en redistribuant une fraction de la rente vers les mécanismes internationaux de compensation climatique.
+
+## Variables influencées
+- [[energie_ressources_critiques]]
+- [[gouvernance_institutions]]
+- [[geopolitique_conflits]]
+- [[organisation_territoires]]
+
+## Relations
+**Alliés** : [[conseil_regulation_ressources_new_sustainability]], [[fonds_mondial_de_regeneration_ecologique_new_sustainability]], [[mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability]], [[conseil_energetique_intercontinental_new_sustainability]], [[great_lakes_autonomous_compact_new_sustainability]], [[agence_stabilisation_climatique_new_sustainability]]
+**Opposants** : [[coalition_des_industries_extractives_residuelles_new_sustainability]], [[lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability]], [[coalition_anti_fiscalite_universelle_new_sustainability]], [[factions_souverainistes_des_blocs_peripheriques_new_sustainability]]
+
+## Description journalistique
+Depuis ses bureaux de verre et de bois flotté arctique surplombant le fjord de Nuuk, le Kivfak Nunani gère aujourd'hui un portefeuille estimé à 2 400 milliards de crédits carbone-équivalents — une fortune née littéralement du désastre que le Groenland a subi avant tous les autres. Ses négociateurs, formés aux grandes écoles de gouvernance technocratique d'Helsinki et de Singapour mais profondément ancrés dans la culture kalaallit, manient avec une élégance déconcertante le double langage de la souveraineté blessée et de la puissance assumée. En 2096, le Fonds a bloqué pendant six semaines un traité d'accès aux corridors arctiques jusqu'à obtenir un siège permanent au Conseil de Gouvernance Algorithmique Intégrée — une victoire saluée comme historique par les mouvements d'autonomie des peuples circumpolaires. Certains observateurs de Genève murmurent cependant que la sophistication du Fonds cache une dépendance croissante aux algorithmes d'optimisation du Réseau ARIA pour calibrer ses stratégies de négociation.
+
+## Tensions narratives
+La tension fondamentale du Kivfak Nunani en 2098 tient à une question que ses propres fondateurs refusent de trancher : la rente climatique doit-elle être un bien commun mondial, au nom de la solidarité avec les autres victimes du réchauffement, ou le rempart légitime d'une souveraineté trop longtemps confisquée ? En interne, une faction jeune et radicale — les 'Sermersooq' — pousse à nationaliser intégralement les ressources et à rompre avec les cadres de gouvernance globale, tandis que la direction technocratique historique mise sur l'intégration institutionnelle comme seule garantie durable d'influence. Par ailleurs, les communautés inuit des zones non urbanisées contestent de plus en plus la captation de la rente par une élite nuukoise jugée trop déconnectée des réalités territoriales, ouvrant une fracture interne potentiellement déstabilisatrice.

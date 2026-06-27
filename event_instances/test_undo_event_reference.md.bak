@@ -1,0 +1,79 @@
+---
+name: 'Protocole Aqua-Ouest : la régulation hydrique en débat à Paris'
+type: event_instance
+slug: test_undo_event_reference
+archetype: test_undo_event
+scenario: reference
+type_evenement: political_social
+portee: regionale
+date: 2061
+date_label: automne 2061
+impossible: false
+custom: true
+description: >
+  Paris, novembre 2061 — Dans les salles feutrées du Palais de Chaillot reconverti en hub diplomatique climatique, des délégués de vingt-trois États et régions d'Europe occidentale paraphent le Protocole Aqua-Ouest sous les caméras de Prisme Global. L'ARGHO, organisation internationale montée en urgence après les pénuries de l'été 2059 qui ont touché Lyon, Madrid et le bassin de la Ruhr, présente ce cadre comme une 'première historique de régulation supranationale de l'eau douce'. Mais derrière les communiqués triomphalistes, les lobbies agro-industriels et plusieurs gouvernements souverainistes ont vidé le texte de ses mécanismes contraignants. Une victoire cosmétique dans un monde habitué aux équilibres fragiles.
+consequences: >
+  Le Protocole Aqua-Ouest s'impose comme référence normative sans devenir outil opérationnel : les Autorités Régionales de Régulation Hydrologique s'en emparent pour légitimer leurs arbitrages locaux, tandis que les lobbies agro-industriels continuent d'y opposer des recours. À moyen terme, l'événement cristallise la ligne de fracture entre gouvernance supranationale des ressources critiques et souveraineté territoriale, fragilisant les institutions hybrides existantes tout en renforçant les logiques de régulation décentralisée.
+realisation: >
+  En 2061, dans un contexte de tension croissante sur les ressources hydriques en Europe occidentale suite aux sécheresses répétées du bassin méditerranéen et rhénan, une organisation internationale ad hoc — l'Autorité Régionale de Gestion Hydrique Occidentale (ARGHO) — tente de faire adopter à Paris un cadre contraignant de régulation de l'accès à l'eau potable. Le processus se heurte immédiatement à la résistance des acteurs agro-industriels et à la méfiance des gouvernements souverainistes, qui y voient une atteinte à la gestion territoriale locale. L'accord final, dit 'Protocole Aqua-Ouest', est adopté dans une version édulcorée : mécanismes de surveillance partiels, sans pouvoir coercitif réel, mais avec un registre commun des prélèvements. La régulation existe sur le papier, mais son application demeure fragile et contestée.
+impact_sur_variables:
+  - variable: gouvernance_institutions
+    delta_level: 5
+    duree: 15
+    polarite: 1
+  - variable: organisation_territoires
+    delta_level: -4
+    duree: 12
+    polarite: -1
+  - variable: energie_ressources_critiques
+    delta_level: 6
+    duree: 18
+    polarite: 1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+    - autorites_regionales_de_regulation_hydrologique_reference
+    - programme_onu_eau_2080_reference
+    - lobbies_agro_industriels_a_haute_consommation_d_eau_reference
+    - gouvernements_federaux_residuels_souverainistes_reference
+    - conseil_regulation_ressources_reference
+    - prisme_global_reference
+    - factions_eurasiatiques_contre_la_tarification_hydrique_reference
+note_coherence: Dans un scénario en équilibre fragile à régime hybride, une tentative de régulation
+  supranationale de l'eau aboutissant à un accord partiel et contesté est exactement
+  le type d'avancée institutionnelle imparfaite qui caractérise ce monde de transition
+  progressive.
+custom_source: test_undo_2026-06
+date_creation: 2026-06-25
+---
+
+# Protocole Aqua-Ouest : la régulation hydrique en débat à Paris
+
+## Réalisation dans [[reference]]
+En 2061, dans un contexte de tension croissante sur les ressources hydriques en Europe occidentale suite aux sécheresses répétées du bassin méditerranéen et rhénan, une organisation internationale ad hoc — l'Autorité Régionale de Gestion Hydrique Occidentale (ARGHO) — tente de faire adopter à Paris un cadre contraignant de régulation de l'accès à l'eau potable. Le processus se heurte immédiatement à la résistance des acteurs agro-industriels et à la méfiance des gouvernements souverainistes, qui y voient une atteinte à la gestion territoriale locale. L'accord final, dit 'Protocole Aqua-Ouest', est adopté dans une version édulcorée : mécanismes de surveillance partiels, sans pouvoir coercitif réel, mais avec un registre commun des prélèvements. La régulation existe sur le papier, mais son application demeure fragile et contestée.
+
+## Description journalistique
+Paris, novembre 2061 — Dans les salles feutrées du Palais de Chaillot reconverti en hub diplomatique climatique, des délégués de vingt-trois États et régions d'Europe occidentale paraphent le Protocole Aqua-Ouest sous les caméras de Prisme Global. L'ARGHO, organisation internationale montée en urgence après les pénuries de l'été 2059 qui ont touché Lyon, Madrid et le bassin de la Ruhr, présente ce cadre comme une 'première historique de régulation supranationale de l'eau douce'. Mais derrière les communiqués triomphalistes, les lobbies agro-industriels et plusieurs gouvernements souverainistes ont vidé le texte de ses mécanismes contraignants. Une victoire cosmétique dans un monde habitué aux équilibres fragiles.
+
+## Conséquences
+Le Protocole Aqua-Ouest s'impose comme référence normative sans devenir outil opérationnel : les Autorités Régionales de Régulation Hydrologique s'en emparent pour légitimer leurs arbitrages locaux, tandis que les lobbies agro-industriels continuent d'y opposer des recours. À moyen terme, l'événement cristallise la ligne de fracture entre gouvernance supranationale des ressources critiques et souveraineté territoriale, fragilisant les institutions hybrides existantes tout en renforçant les logiques de régulation décentralisée.
+
+## Impact sur les variables
+- **gouvernance_institutions** : delta +5 sur 15 ans
+- **organisation_territoires** : delta +4 sur 12 ans
+- **energie_ressources_critiques** : delta +6 sur 18 ans
+
+## Acteurs impliqués
+- [[autorites_regionales_de_regulation_hydrologique_reference]]
+- [[programme_onu_eau_2080_reference]]
+- [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]]
+- [[gouvernements_federaux_residuels_souverainistes_reference]]
+- [[conseil_regulation_ressources_reference]]
+- [[prisme_global_reference]]
+- [[factions_eurasiatiques_contre_la_tarification_hydrique_reference]]
+
+## Note de cohérence
+Dans un scénario en équilibre fragile à régime hybride, une tentative de régulation
+  supranationale de l'eau aboutissant à un accord partiel et contesté est exactement
+  le type d'avancée institutionnelle imparfaite qui caractérise ce monde de transition
+  progressive.

@@ -1,0 +1,98 @@
+---
+name: Mouvement des Racines Vivantes
+type: instance
+slug: mouvement_racines_vivantes_reference
+entite: mouvement_racines_vivantes
+scenario: reference
+localisation:
+  zone: zones_tampons_climatiques_europeennes
+  lieu: Zones tampons du Sud-Est européen
+  type_lieu: region
+  statut: review_manuelle
+  note: "Réseau diffus sans siège, mais la mention explicite des 'micro-bassins versants du Sud-Est européen' et des 'jardins-carrefours aux seuils des zones tampons' ancre le récit principal dans les zones tampons climatiques européennes, bien que le mouvement soit présent dans plusieurs régions."
+
+type_dans_scenario: réseau
+
+role_dans_scenario: >
+  Réseau spirituel et politique diffus qui s'est ancré dans les interstices du monde de 2098 : ruralités reconstruites après les crises climatiques, marges périurbaines des mégapoles, zones de transition écologique. Le Mouvement joue un rôle de tiers-espace entre les institutions technocratiques d'adaptation climatique et les communautés qui refusent ou ne peuvent s'intégrer au système dominant. Il produit une légitimité alternative fondée sur la mémoire écologique, les savoirs paysans augmentés et une spiritualité du cycle naturel, tout en restant en tension interne entre sa fonction de résistance culturelle et sa récupération potentielle par des logiques identitaires réactionnaires.
+
+responsabilites: >
+  Organisation de réseaux de transmission de savoirs agronomiques, botaniques et rituels entre communautés rurales reconstituées et enclaves urbaines marginales. Animation de cérémonies saisonnières qui doublent de forums politiques décentralisés sur la gestion locale des ressources. Maintien d'archives vivantes — bibliothèques humaines, jardins-mémoire, cartographies orales — en complément ou en opposition aux bases de données institutionnelles.
+
+impact_local: 4
+impact_systemique_global: 2
+variables_influencees:
+    - valeurs_culture_tempo_sociale
+    - climat_environnement_global
+    - organisation_territoires
+
+zone_geographique:
+    - locale
+    - régionale
+
+zone_systemique:
+    - société
+    - gouvernance
+    - énergie
+
+alliances:
+    - cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference
+    - reseaux_de_medecine_traditionnelle_augmentee_reference
+    - reseau_des_administrations_locales_rurales_participatives_reference
+
+oppositions:
+    - agro_conglomerats_des_enclaves_technologiques_eco_communalism
+    - plateformes_d_optimisation_territoriale_par_ia_reference
+    - courant_nationaliste_instrumentalisateur_du_discours_des_racines_reference
+
+type_relation_dominante: rivalité
+
+annee_debut: 2031
+annee_fin: 
+
+etat_temporel: actif
+age_historique: ascendant
+generation: reconstruction
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  On les reconnaît à leurs jardins-carrefours plantés aux seuils des zones tampons, là où l'asphalte cède aux terres remaniées par les crues. Le Mouvement des Racines Vivantes n'est pas une organisation au sens classique : pas de siège, pas de porte-parole unique, mais des milliers de nœuds actifs qui se reconnaissent à un vocabulaire commun — 'mémoire du sol', 'temps long', 'dette de germination'. En 2098, ils ont gagné une crédibilité inattendue : quand les modèles prédictifs des grandes agences climatiques ont failli sur les micro-bassins versants du Sud-Est européen, ce sont les archives orales des Racines qui ont fourni les données manquantes. Mais ce succès même les expose : récupérés par des municipalités en quête d'image, courtisés par des fonds d'impact qui veulent 'packageur' leurs savoirs, ils négocient en permanence l'impossible équilibre entre visibilité et intégrité.
+
+signes_distinctifs: >
+  Symbole de la spirale végétale entrelacée à une ligne de temps brisée, porté en tatouage, broderie ou tracé à la craie sur les murs des lieux de rassemblement. Vêtements à dominante de terres et d'ocres, souvent réparés et layés, affichant volontairement le temps passé sur le corps. Présence systématique d'une plante-totem locale dans chaque espace de délibération — enracinée, jamais coupée.
+
+tensions_narratives: >
+  La ligne de fracture interne la plus vive oppose les 'transmetteurs ouverts', favorables au dialogue avec les institutions technocratiques d'adaptation, aux 'gardiens du seuil', qui refusent toute collaboration au nom de la pureté doctrinale — et dont certains glissent vers un ruralisme xénophobe. Par ailleurs, la captation de leurs savoirs par des plateformes d'IA agronomique soulève une crise de propriété collective : à qui appartient la mémoire du sol ? Enfin, la montée d'une seconde génération née dans les mégapoles et attirée par le Mouvement comme esthétique plutôt que comme pratique pose la question de l'authenticité et de la dilution — et pourrait soit revitaliser le réseau, soit l'évider de l'intérieur.
+
+date_creation: 2026-06-15
+---
+
+# Mouvement des Racines Vivantes
+
+## Rôle dans [[reference]]
+Réseau spirituel et politique diffus qui s'est ancré dans les interstices du monde de 2098 : ruralités reconstruites après les crises climatiques, marges périurbaines des mégapoles, zones de transition écologique. Le Mouvement joue un rôle de tiers-espace entre les institutions technocratiques d'adaptation climatique et les communautés qui refusent ou ne peuvent s'intégrer au système dominant. Il produit une légitimité alternative fondée sur la mémoire écologique, les savoirs paysans augmentés et une spiritualité du cycle naturel, tout en restant en tension interne entre sa fonction de résistance culturelle et sa récupération potentielle par des logiques identitaires réactionnaires.
+
+## Responsabilités
+Organisation de réseaux de transmission de savoirs agronomiques, botaniques et rituels entre communautés rurales reconstituées et enclaves urbaines marginales. Animation de cérémonies saisonnières qui doublent de forums politiques décentralisés sur la gestion locale des ressources. Maintien d'archives vivantes — bibliothèques humaines, jardins-mémoire, cartographies orales — en complément ou en opposition aux bases de données institutionnelles.
+
+## Variables influencées
+- [[valeurs_culture_tempo_sociale]]
+- [[climat_environnement_global]]
+- [[organisation_territoires]]
+
+## Relations
+**Alliés** : [[cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference]], [[reseaux_de_medecine_traditionnelle_augmentee_reference]], [[reseau_des_administrations_locales_rurales_participatives_reference]]
+**Opposants** : [[agro_conglomerats_des_enclaves_technologiques_eco_communalism]], [[plateformes_d_optimisation_territoriale_par_ia_reference]], [[courant_nationaliste_instrumentalisateur_du_discours_des_racines_reference]]
+
+## Description journalistique
+On les reconnaît à leurs jardins-carrefours plantés aux seuils des zones tampons, là où l'asphalte cède aux terres remaniées par les crues. Le Mouvement des Racines Vivantes n'est pas une organisation au sens classique : pas de siège, pas de porte-parole unique, mais des milliers de nœuds actifs qui se reconnaissent à un vocabulaire commun — 'mémoire du sol', 'temps long', 'dette de germination'. En 2098, ils ont gagné une crédibilité inattendue : quand les modèles prédictifs des grandes agences climatiques ont failli sur les micro-bassins versants du Sud-Est européen, ce sont les archives orales des Racines qui ont fourni les données manquantes. Mais ce succès même les expose : récupérés par des municipalités en quête d'image, courtisés par des fonds d'impact qui veulent 'packageur' leurs savoirs, ils négocient en permanence l'impossible équilibre entre visibilité et intégrité.
+
+## Tensions narratives
+La ligne de fracture interne la plus vive oppose les 'transmetteurs ouverts', favorables au dialogue avec les institutions technocratiques d'adaptation, aux 'gardiens du seuil', qui refusent toute collaboration au nom de la pureté doctrinale — et dont certains glissent vers un ruralisme xénophobe. Par ailleurs, la captation de leurs savoirs par des plateformes d'IA agronomique soulève une crise de propriété collective : à qui appartient la mémoire du sol ? Enfin, la montée d'une seconde génération née dans les mégapoles et attirée par le Mouvement comme esthétique plutôt que comme pratique pose la question de l'authenticité et de la dilution — et pourrait soit revitaliser le réseau, soit l'évider de l'intérieur.

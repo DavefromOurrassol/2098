@@ -1,0 +1,100 @@
+---
+name: Detroit Compact Grands Lacs
+type: instance
+slug: detroit_compact_grands_lacs_reference
+entite: detroit_compact_grands_lacs
+scenario: reference
+localisation:
+  zone: detroit_compact_grands_lacs
+  lieu: Detroit — Maison des Lacs (ancien Cadillac Center)
+  type_lieu: infrastructure
+
+type_dans_scenario: institution
+
+role_dans_scenario: >
+  Accord de gouvernance régionale regroupant les municipalités et zones industrielles du bassin des Grands Lacs autour de Detroit, le Compact coordonne la gestion des ressources hydriques et la reconversion économique post-désindustrialisation dans une région qui a connu l'effondrement de son tissu manufacturier traditionnel. Il joue le rôle d'autorité intermédiaire pragmatique, comblant un vide laissé par des États fédéraux en retrait partiel, en arbitrant entre intérêts municipaux, industriels et environnementaux sur l'un des plus grands bassins d'eau douce de la planète. Sa légitimité reste structurellement contestée par les communautés autochtones riveraines — Anishinaabe, Haudenosaunee, Ojibwé — dont les droits antérieurs sur les eaux n'ont jamais été intégrés à sa fondation, faisant de lui un instrument de coordination efficace mais perçu comme un dispositif colonial perpétué sous couverture technocratique.
+
+responsabilites: >
+  Le Compact alloue les quotas d'utilisation hydrique entre municipalités, zones industrielles reconverties et projets agricoles, fixe les standards de traitement des eaux usées industrielles, et coordonne les investissements dans les infrastructures de reconversion énergétique des friches de la Rust Belt. Il émet des licences d'accès au bassin et gère un fonds régional alimenté par des taxes sur les prélèvements industriels, redistribué en partie vers des programmes de réhabilitation écologique.
+
+impact_local: 4
+impact_systemique_global: 2
+
+variables_influencees:
+    - energie_ressources_critiques
+    - gouvernance_institutions
+    - organisation_territoires
+
+zone_geographique:
+    - régionale
+
+zone_systemique:
+    - gouvernance
+    - infrastructure
+    - énergie
+
+alliances:
+    - autorites_regionales_de_regulation_hydrologique_reference
+    - programme_onu_eau_2080_reference
+    - reseau_des_metropoles_cotieres_adaptees_reference
+    - confederation_des_megapoles_autonomes_reference
+    - observatoire_climatique_des_territoires_oct_reference
+
+oppositions:
+    - great_lakes_autonomous_compact_reference
+    - collectifs_de_peche_inuit_et_sami_reference
+    - federation_communs_territoriaux_reference
+    - mouvement_racines_vivantes_reference
+    - lobbies_agro_industriels_a_haute_consommation_d_eau_reference
+
+type_relation_dominante: rivalité
+
+annee_debut: 2031
+annee_fin: 
+
+etat_temporel: actif
+age_historique: mature
+generation: transition
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Depuis son siège fonctionnel installé dans l'ancien Cadillac Center de Detroit — rebaptisé Maison des Lacs — le Compact gère chaque année l'équivalent de 84 milliards de mètres cubes d'eau douce avec la froideur d'un algorithme de distribution. Fondé en 2031 dans l'urgence d'une sécheresse qui avait révélé l'absence totale de coordination intermunicipale sur le bassin, l'accord a progressivement construit une bureaucratie hydrique efficace, dotée de capteurs en temps réel et d'un tribunal arbitral des conflits de prélèvement. Ce que les délégués n'ont jamais résolu, en revanche, c'est la question posée dès le premier sommet par les représentants Anishinaabe : au nom de quoi un accord signé entre maires et PDG industriels définit-il les droits sur des eaux que leurs ancêtres habitaient avant que Detroit n'existe ? En 2098, cette question reste sans réponse institutionnelle, et les tensions autour du Compact cristallisent une fracture plus large entre gouvernance technocratique de l'eau et souveraineté historique des riverains autochtones.
+
+signes_distinctifs: >
+  Logo représentant les cinq Grands Lacs superposés à une carte de circuits industriels, en bleu acier et orange rouillé — couleurs revendiquées comme symbole de la reconversion de la Rust Belt. Les documents officiels portent systématiquement cinq langues : anglais, français, espagnol, et deux langues autochtones de la région, une concession symbolique jamais accompagnée de droits de vote réels.
+
+tensions_narratives: >
+  La demande croissante en eau des nouvelles zones d'agriculture verticale algorithmique autour de Detroit menace de rouvrir les conflits de quotas entre municipalités membres, fracturant l'unité fragile du Compact. Parallèlement, plusieurs nations Anishinaabe ont déposé devant le Tribunal Algorithmique de Bruxelles une plainte pour exclusion structurelle de leur souveraineté hydrique, créant un précédent juridique qui pourrait invalider rétroactivement les licences d'accès délivrées depuis 2031. Enfin, la montée d'un Compact alternatif — le Great Lakes Autonomous Compact — porté par des communautés autochtones et des coopératives locales, pose la question de savoir si l'institution technocratique peut survivre à la concurrence d'une légitimité qu'elle n'a jamais su construire.
+
+date_creation: 2026-06-27
+---
+
+# Detroit Compact Grands Lacs
+
+## Rôle dans [[reference]]
+Accord de gouvernance régionale regroupant les municipalités et zones industrielles du bassin des Grands Lacs autour de Detroit, le Compact coordonne la gestion des ressources hydriques et la reconversion économique post-désindustrialisation dans une région qui a connu l'effondrement de son tissu manufacturier traditionnel. Il joue le rôle d'autorité intermédiaire pragmatique, comblant un vide laissé par des États fédéraux en retrait partiel, en arbitrant entre intérêts municipaux, industriels et environnementaux sur l'un des plus grands bassins d'eau douce de la planète. Sa légitimité reste structurellement contestée par les communautés autochtones riveraines — Anishinaabe, Haudenosaunee, Ojibwé — dont les droits antérieurs sur les eaux n'ont jamais été intégrés à sa fondation, faisant de lui un instrument de coordination efficace mais perçu comme un dispositif colonial perpétué sous couverture technocratique.
+
+## Responsabilités
+Le Compact alloue les quotas d'utilisation hydrique entre municipalités, zones industrielles reconverties et projets agricoles, fixe les standards de traitement des eaux usées industrielles, et coordonne les investissements dans les infrastructures de reconversion énergétique des friches de la Rust Belt. Il émet des licences d'accès au bassin et gère un fonds régional alimenté par des taxes sur les prélèvements industriels, redistribué en partie vers des programmes de réhabilitation écologique.
+
+## Variables influencées
+- [[energie_ressources_critiques]]
+- [[gouvernance_institutions]]
+- [[organisation_territoires]]
+
+## Relations
+**Alliés** : [[autorites_regionales_de_regulation_hydrologique_reference]], [[programme_onu_eau_2080_reference]], [[reseau_des_metropoles_cotieres_adaptees_reference]], [[confederation_des_megapoles_autonomes_reference]], [[observatoire_climatique_des_territoires_oct_reference]]
+**Opposants** : [[great_lakes_autonomous_compact_reference]], [[collectifs_de_peche_inuit_et_sami_reference]], [[federation_communs_territoriaux_reference]], [[mouvement_racines_vivantes_reference]], [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]]
+
+## Description journalistique
+Depuis son siège fonctionnel installé dans l'ancien Cadillac Center de Detroit — rebaptisé Maison des Lacs — le Compact gère chaque année l'équivalent de 84 milliards de mètres cubes d'eau douce avec la froideur d'un algorithme de distribution. Fondé en 2031 dans l'urgence d'une sécheresse qui avait révélé l'absence totale de coordination intermunicipale sur le bassin, l'accord a progressivement construit une bureaucratie hydrique efficace, dotée de capteurs en temps réel et d'un tribunal arbitral des conflits de prélèvement. Ce que les délégués n'ont jamais résolu, en revanche, c'est la question posée dès le premier sommet par les représentants Anishinaabe : au nom de quoi un accord signé entre maires et PDG industriels définit-il les droits sur des eaux que leurs ancêtres habitaient avant que Detroit n'existe ? En 2098, cette question reste sans réponse institutionnelle, et les tensions autour du Compact cristallisent une fracture plus large entre gouvernance technocratique de l'eau et souveraineté historique des riverains autochtones.
+
+## Tensions narratives
+La demande croissante en eau des nouvelles zones d'agriculture verticale algorithmique autour de Detroit menace de rouvrir les conflits de quotas entre municipalités membres, fracturant l'unité fragile du Compact. Parallèlement, plusieurs nations Anishinaabe ont déposé devant le Tribunal Algorithmique de Bruxelles une plainte pour exclusion structurelle de leur souveraineté hydrique, créant un précédent juridique qui pourrait invalider rétroactivement les licences d'accès délivrées depuis 2031. Enfin, la montée d'un Compact alternatif — le Great Lakes Autonomous Compact — porté par des communautés autochtones et des coopératives locales, pose la question de savoir si l'institution technocratique peut survivre à la concurrence d'une légitimité qu'elle n'a jamais su construire.

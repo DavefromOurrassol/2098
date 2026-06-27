@@ -1,0 +1,122 @@
+---
+name: Confédération des Friches Vivantes
+type: instance
+slug: mouvement_des_communes_du_rust_belt_eco_communalism
+entite: mouvement_des_communes_du_rust_belt
+scenario: eco_communalism
+localisation:
+  zone: rust_belt_confederation_friches
+  lieu: Confédération des Friches Vivantes (Rust Belt, zones post-industrielles d'Europe centrale et d'Asie du Nord-Est)
+  type_lieu: region
+
+type_dans_scenario: réseau
+
+role_dans_scenario: >
+  La Confédération des Friches Vivantes est l'héritière directe des premières communes du Rust Belt américain, désormais étendue aux zones post-industrielles d'Europe centrale et d'Asie du Nord-Est. Dans le monde fragmenté de 2098, elle constitue l'une des formes d'organisation horizontale les plus matures et les plus étendues de la période de régénération : un réseau de plusieurs centaines de communautés autonomes, reliées par des protocoles de mutualisation des ressources, de gouvernance par délibération et de mémoire collective des savoirs industriels reconvertis. Elle joue un rôle pivot dans la recomposition territoriale post-industrielle, transformant les friches en communs vivants — énergétiques, agricoles, productifs — sans jamais centraliser le pouvoir. Sa légitimité repose entièrement sur la pratique et la durée, non sur une reconnaissance formelle.
+
+responsabilites: >
+  Coordination des flux de ressources et de savoir-faire entre communes membres via des protocoles de réciprocité non marchands. Organisation de chantiers collectifs de dépollution, de reconversion énergétique et d'implantation de systèmes alimentaires locaux sur les friches industrielles. Maintien d'une mémoire active des jurisprudences communales et des précédents de gouvernance pour guider les communautés émergentes dans leur structuration.
+
+impact_local: 5
+impact_systemique_global: 3
+
+variables_influencees:
+    - organisation_territoires
+    - systemes_productifs_travail
+    - energie_ressources_critiques
+    - gouvernance_institutions
+
+zone_geographique:
+    - régionale
+    - continentale
+
+zone_systemique:
+    - gouvernance
+    - société
+    - énergie
+    - économie
+    - infrastructure
+
+alliances:
+    - archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
+    - assemblees_cooperatives_regionales_eco_communalism
+    - brigades_de_restauration_ecologique_eco_communalism
+    - collectifs_de_techniciens_sobres_eco_communalism
+    - confederation_des_communs_de_l_arc_septentrional_eco_communalism
+    - conseils_de_bassin_versant_eco_communalistes_eco_communalism
+    - cooperatives_d_habitat_regeneratif_eco_communalism
+    - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
+    - federation_communs_territoriaux_eco_communalism
+    - guildes_de_mediateurs_ecologiques_eco_communalism
+    - mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism
+    - mutuelles_de_sante_territoriales_eco_communalism
+    - reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
+    - trame_bioclimatique_eco_communalism
+
+oppositions:
+    - agro_conglomerats_des_enclaves_technologiques_eco_communalism
+    - cartels_de_narration_de_penurie_eco_communalism
+    - communs_secessionnistes_hors_coordination_eco_communalism
+    - consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism
+    - consortiums_industriels_de_l_eau_eco_communalism
+    - consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism
+    - courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism
+    - enclaves_extractivistes_residuelles_des_corridors_eco_communalism
+    - factions_autoritaires_locales_identitaires_exclusionnistes_eco_communalism
+    - factions_extractivistes_des_aquiferes_communs_eco_communalism
+    - fragments_d_etats_centraux_residuels_eco_communalism
+    - plateformes_centralisees_de_reagregation_globale_eco_communalism
+    - reseaux_de_notables_communautaires_capturistes_eco_communalism
+
+type_relation_dominante: coopération
+
+annee_debut: 2031
+annee_fin: 
+
+etat_temporel: actif
+age_historique: mature
+generation: reconstruction
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Depuis les ruines rouillées de Pittsburgh, Detroit et Łódź jusqu'aux zones grises de la Mandchourie désindustrialisée, la Confédération des Friches Vivantes tisse, depuis plus de soixante ans, une toile discrète mais tenace de communes autogérées. Pas de siège social, pas de porte-parole officiel, pas de budget centralisé : seulement des protocoles de réciprocité que les délégués communaux renégocient tous les trois ans lors de leurs Assemblées Tournantes. On la reconnaît à ses toits végétalisés sur des charpentes métalliques d'autrefois, à ses ateliers de reconversion où d'anciens ouvriers sidérurgistes forment aujourd'hui des jeunes à la biométhanisation et à la taille des haies bocagères. Ses détracteurs l'accusent d'inefficacité et de romantisme industriel recyclé ; ses membres répondent simplement par leurs chiffres : 94 % des communes affiliées ont atteint l'autosuffisance alimentaire de base, et leurs terres dépolluted représentent la plus grande superficie de régénération écologique non étatique du monde post-fragmenté.
+
+signes_distinctifs: >
+  L'emblème non officiel de la Confédération est une engrenage à dents brisées dont les interstices laissent pousser des tiges de blé et de ronces — symbole jamais formalisé, né spontanément dans plusieurs communes simultanément vers 2045. Ses délégués portent souvent des outils réels attachés à leurs vêtements lors des Assemblées, signe que l'autorité vient du faire, pas du titre.
+
+tensions_narratives: >
+  La Confédération est désormais assez puissante pour que les fragments d'États résiduels cherchent à la régulariser, à en faire une interlocutrice institutionnelle — ce qui divise profondément ses membres entre ceux qui voient dans cette reconnaissance une victoire et ceux qui y lisent le début de leur domestication. Par ailleurs, la pression des consortiums logistiques néo-industriels s'intensifie sur certaines friches à haute valeur minière, menaçant de racheter des communes isolées à court de ressources. Enfin, une génération née dans les friches, n'ayant jamais connu le monde industriel, commence à questionner la centralité de la mémoire ouvrière dans l'identité confédérale — tension générationnelle qui pourrait redéfinir ce que 'friche vivante' signifie pour les décennies à venir.
+
+date_creation: 2026-06-23
+---
+
+# Confédération des Friches Vivantes
+
+## Rôle dans [[eco_communalism]]
+La Confédération des Friches Vivantes est l'héritière directe des premières communes du Rust Belt américain, désormais étendue aux zones post-industrielles d'Europe centrale et d'Asie du Nord-Est. Dans le monde fragmenté de 2098, elle constitue l'une des formes d'organisation horizontale les plus matures et les plus étendues de la période de régénération : un réseau de plusieurs centaines de communautés autonomes, reliées par des protocoles de mutualisation des ressources, de gouvernance par délibération et de mémoire collective des savoirs industriels reconvertis. Elle joue un rôle pivot dans la recomposition territoriale post-industrielle, transformant les friches en communs vivants — énergétiques, agricoles, productifs — sans jamais centraliser le pouvoir. Sa légitimité repose entièrement sur la pratique et la durée, non sur une reconnaissance formelle.
+
+## Responsabilités
+Coordination des flux de ressources et de savoir-faire entre communes membres via des protocoles de réciprocité non marchands. Organisation de chantiers collectifs de dépollution, de reconversion énergétique et d'implantation de systèmes alimentaires locaux sur les friches industrielles. Maintien d'une mémoire active des jurisprudences communales et des précédents de gouvernance pour guider les communautés émergentes dans leur structuration.
+
+## Variables influencées
+- [[organisation_territoires]]
+- [[systemes_productifs_travail]]
+- [[energie_ressources_critiques]]
+- [[gouvernance_institutions]]
+
+## Relations
+**Alliés** : [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]], [[assemblees_cooperatives_regionales_eco_communalism]], [[brigades_de_restauration_ecologique_eco_communalism]], [[collectifs_de_techniciens_sobres_eco_communalism]], [[confederation_des_communs_de_l_arc_septentrional_eco_communalism]], [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]], [[cooperatives_d_habitat_regeneratif_eco_communalism]], [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]], [[federation_communs_territoriaux_eco_communalism]], [[guildes_de_mediateurs_ecologiques_eco_communalism]], [[mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism]], [[mutuelles_de_sante_territoriales_eco_communalism]], [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]], [[trame_bioclimatique_eco_communalism]]
+**Opposants** : [[agro_conglomerats_des_enclaves_technologiques_eco_communalism]], [[cartels_de_narration_de_penurie_eco_communalism]], [[communs_secessionnistes_hors_coordination_eco_communalism]], [[consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism]], [[consortiums_industriels_de_l_eau_eco_communalism]], [[consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism]], [[courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism]], [[enclaves_extractivistes_residuelles_des_corridors_eco_communalism]], [[factions_autoritaires_locales_identitaires_exclusionnistes_eco_communalism]], [[factions_extractivistes_des_aquiferes_communs_eco_communalism]], [[fragments_d_etats_centraux_residuels_eco_communalism]], [[plateformes_centralisees_de_reagregation_globale_eco_communalism]], [[reseaux_de_notables_communautaires_capturistes_eco_communalism]]
+
+## Description journalistique
+Depuis les ruines rouillées de Pittsburgh, Detroit et Łódź jusqu'aux zones grises de la Mandchourie désindustrialisée, la Confédération des Friches Vivantes tisse, depuis plus de soixante ans, une toile discrète mais tenace de communes autogérées. Pas de siège social, pas de porte-parole officiel, pas de budget centralisé : seulement des protocoles de réciprocité que les délégués communaux renégocient tous les trois ans lors de leurs Assemblées Tournantes. On la reconnaît à ses toits végétalisés sur des charpentes métalliques d'autrefois, à ses ateliers de reconversion où d'anciens ouvriers sidérurgistes forment aujourd'hui des jeunes à la biométhanisation et à la taille des haies bocagères. Ses détracteurs l'accusent d'inefficacité et de romantisme industriel recyclé ; ses membres répondent simplement par leurs chiffres : 94 % des communes affiliées ont atteint l'autosuffisance alimentaire de base, et leurs terres dépolluted représentent la plus grande superficie de régénération écologique non étatique du monde post-fragmenté.
+
+## Tensions narratives
+La Confédération est désormais assez puissante pour que les fragments d'États résiduels cherchent à la régulariser, à en faire une interlocutrice institutionnelle — ce qui divise profondément ses membres entre ceux qui voient dans cette reconnaissance une victoire et ceux qui y lisent le début de leur domestication. Par ailleurs, la pression des consortiums logistiques néo-industriels s'intensifie sur certaines friches à haute valeur minière, menaçant de racheter des communes isolées à court de ressources. Enfin, une génération née dans les friches, n'ayant jamais connu le monde industriel, commence à questionner la centralité de la mémoire ouvrière dans l'identité confédérale — tension générationnelle qui pourrait redéfinir ce que 'friche vivante' signifie pour les décennies à venir.

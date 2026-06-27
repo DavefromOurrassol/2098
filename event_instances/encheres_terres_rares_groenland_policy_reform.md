@@ -1,0 +1,90 @@
+---
+name: Enchères Circumpolaires du Kalaallit — Protocole de Nairobi
+type: event_instance
+slug: encheres_terres_rares_groenland_policy_reform
+archetype: encheres_terres_rares_groenland
+scenario: policy_reform
+localisation:
+  zone: nuuk_knsf
+  lieu: Nuuk
+  type_lieu: ville
+type_evenement: political_social
+portee: globale
+date: 2041
+date_label: automne 2041
+impossible: false
+custom: true
+description: >
+  Nuuk, automne 2041 : pour la première fois dans l'histoire de la diplomatie des ressources, un fonds souverain autochtone préside à la répartition mondiale de minéraux stratégiques sous l'œil des algorithmes de surveillance du CRRC-ARN. Les salles de négociation hybrides — physiques à Nuuk, virtuelles dans les capitales des blocs — voient s'affronter des délégations portant des offres assorties de certifications climatiques, de plans de réhabilitation et de garanties de traçabilité. L'Observatoire Mondial des Ressources Critiques diffuse en temps réel les indicateurs d'impact environnemental de chaque lot mis aux enchères. Ingrid Larsson, depuis le Consortium de Presse Indépendante, documente l'ironie historique : la fonte qui dévaste devient la richesse qui régule.
+consequences: >
+  L'événement consolide le modèle de gouvernance technocratique des ressources critiques : les blocs dissidents perdent leur argument selon lequel la régulation multilatérale est inapplicable aux situations de compétition aiguë. Le KNSF-AGRC devient un modèle institutionnel pour d'autres territoires arctiques et sub-arctiques, tandis que le CRRC-ARN gagne une légitimité opérationnelle sans précédent. En revanche, les syndicats d'extraction privée non régulés et les souverainistes énergétiques s'unissent dans une coalition de contestation qui pèsera sur les négociations des années suivantes.
+realisation: >
+  En septembre 2041, le Kalaallit Nunaat Sovereign Fund (KNSF-AGRC) lance la première vente aux enchères internationale des droits d'extraction sur les gisements de terres rares mis à nu par la fonte accélérée de l'inlandsis. Contrairement aux scénarios de ruée anarchique, l'événement se déroule dans le cadre institutionnel strict du Conseil de Régulation des Ressources Critiques (CRRC-ARN), qui impose des quotas d'extraction, des clauses de réhabilitation environnementale et un mécanisme de redistribution vers les fonds de transition. Les trois grands blocs (Union Technocratique Eurasiatique, Bloc des Nations à Économie Carbone-Contrôlée, consortium occidental via l'AIER) s'affrontent dans une surenchère d'offres réglementées, chacun cherchant à satisfaire les conditions de conformité institutionnelle tout en maximisant son accès stratégique. Le KNSF-AGRC, fort de son nouveau statut d'acteur incontournable reconnu par le Traité circumpolaire de 2038, arbitre avec une autorité technocratique inédite, transformant 72 heures de négociations en un précédent normatif mondial pour la gestion des ressources critiques de l'ère post-glaciaire.
+impact_sur_variables:
+  - variable: energie_ressources_critiques
+    delta_level: 12
+    duree: 18
+    polarite: 1
+  - variable: gouvernance_institutions
+    delta_level: 10
+    duree: 25
+    polarite: 1
+  - variable: geopolitique_conflits
+    delta_level: -8
+    duree: 12
+    polarite: -1
+  - variable: organisation_territoires
+    delta_level: 7
+    duree: 20
+    polarite: 1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+    - kalaallit_nunaat_sovereign_fund_policy_reform
+    - conseil_regulation_ressources_policy_reform
+    - agence_internationale_de_l_energie_reformatee_aier_policy_reform
+    - union_technocratique_eurasiatique_policy_reform
+    - bloc_des_nations_a_economie_carbone_controlee_policy_reform
+    - arctic_passage_authority_policy_reform
+    - observatoire_mondial_des_ressources_critiques_policy_reform
+    - grille_aria_policy_reform
+    - syndicats_d_extraction_privee_non_regules_policy_reform
+    - front_des_souverainistes_energetiques_policy_reform
+    - le_temoin_policy_reform
+note_coherence: Dans un monde technocratique à tension 4/5 et gouvernance_institutions à 80, la compétition pour les terres rares se canalise naturellement via des enchères institutionnalisées plutôt qu'un conflit ouvert, renforçant les frameworks régulatoires existants tout en révélant leurs limites face aux intérêts des blocs.
+custom_source: rééquilibrage_geo_2026-06
+date_creation: 2026-06-24
+---
+
+# Enchères Circumpolaires du Kalaallit — Protocole de Nairobi
+
+## Réalisation dans [[policy_reform]]
+En septembre 2041, le Kalaallit Nunaat Sovereign Fund (KNSF-AGRC) lance la première vente aux enchères internationale des droits d'extraction sur les gisements de terres rares mis à nu par la fonte accélérée de l'inlandsis. Contrairement aux scénarios de ruée anarchique, l'événement se déroule dans le cadre institutionnel strict du Conseil de Régulation des Ressources Critiques (CRRC-ARN), qui impose des quotas d'extraction, des clauses de réhabilitation environnementale et un mécanisme de redistribution vers les fonds de transition. Les trois grands blocs (Union Technocratique Eurasiatique, Bloc des Nations à Économie Carbone-Contrôlée, consortium occidental via l'AIER) s'affrontent dans une surenchère d'offres réglementées, chacun cherchant à satisfaire les conditions de conformité institutionnelle tout en maximisant son accès stratégique. Le KNSF-AGRC, fort de son nouveau statut d'acteur incontournable reconnu par le Traité circumpolaire de 2038, arbitre avec une autorité technocratique inédite, transformant 72 heures de négociations en un précédent normatif mondial pour la gestion des ressources critiques de l'ère post-glaciaire.
+
+## Description journalistique
+Nuuk, automne 2041 : pour la première fois dans l'histoire de la diplomatie des ressources, un fonds souverain autochtone préside à la répartition mondiale de minéraux stratégiques sous l'œil des algorithmes de surveillance du CRRC-ARN. Les salles de négociation hybrides — physiques à Nuuk, virtuelles dans les capitales des blocs — voient s'affronter des délégations portant des offres assorties de certifications climatiques, de plans de réhabilitation et de garanties de traçabilité. L'Observatoire Mondial des Ressources Critiques diffuse en temps réel les indicateurs d'impact environnemental de chaque lot mis aux enchères. Ingrid Larsson, depuis le Consortium de Presse Indépendante, documente l'ironie historique : la fonte qui dévaste devient la richesse qui régule.
+
+## Conséquences
+L'événement consolide le modèle de gouvernance technocratique des ressources critiques : les blocs dissidents perdent leur argument selon lequel la régulation multilatérale est inapplicable aux situations de compétition aiguë. Le KNSF-AGRC devient un modèle institutionnel pour d'autres territoires arctiques et sub-arctiques, tandis que le CRRC-ARN gagne une légitimité opérationnelle sans précédent. En revanche, les syndicats d'extraction privée non régulés et les souverainistes énergétiques s'unissent dans une coalition de contestation qui pèsera sur les négociations des années suivantes.
+
+## Impact sur les variables
+- **energie_ressources_critiques** : delta +12 sur 18 ans
+- **gouvernance_institutions** : delta +10 sur 25 ans
+- **geopolitique_conflits** : delta +8 sur 12 ans
+- **organisation_territoires** : delta +7 sur 20 ans
+
+## Acteurs impliqués
+- [[kalaallit_nunaat_sovereign_fund_policy_reform]]
+- [[conseil_regulation_ressources_policy_reform]]
+- [[agence_internationale_de_l_energie_reformatee_aier_policy_reform]]
+- [[union_technocratique_eurasiatique_policy_reform]]
+- [[bloc_des_nations_a_economie_carbone_controlee_policy_reform]]
+- [[arctic_passage_authority_policy_reform]]
+- [[observatoire_mondial_des_ressources_critiques_policy_reform]]
+- [[grille_aria_policy_reform]]
+- [[syndicats_d_extraction_privee_non_regules_policy_reform]]
+- [[front_des_souverainistes_energetiques_policy_reform]]
+- [[le_temoin_policy_reform]]
+
+## Note de cohérence
+Dans un monde technocratique à tension 4/5 et gouvernance_institutions à 80, la compétition pour les terres rares se canalise naturellement via des enchères institutionnalisées plutôt qu'un conflit ouvert, renforçant les frameworks régulatoires existants tout en révélant leurs limites face aux intérêts des blocs.

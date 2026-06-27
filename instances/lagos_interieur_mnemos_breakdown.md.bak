@@ -1,0 +1,103 @@
+---
+name: Lagos Intérieur Mnemos — Les Cryptes Lagunaires
+type: instance
+slug: lagos_interieur_mnemos_breakdown
+entite: lagos_interieur_mnemos
+scenario: breakdown
+
+type_dans_scenario: réseau
+
+role_dans_scenario: >
+  Dans le chaos du territoire lagunaire post-effondrement, Lagos Intérieur Mnemos opère comme gardien clandestin des identités communautaires de l'ancien delta du Niger — quartiers engloutis, registres d'état civil perdus, généalogies fragmentées par les déplacements climatiques et les conflits de milices. L'organisation ne se réclame d'aucune autorité formelle mais tire sa puissance du fait qu'elle détient ce que personne d'autre ne possède plus : les traces d'existence de dizaines de milliers de personnes. Elle négocie ces archives contre protection physique, accès aux ressources énergétiques ou passage sécurisé à travers les zones contrôlées par les seigneuries logistiques armées. Sa structure décentralisée — des cellules autonomes logées dans des embarcations, des entrepôts immergés et des serveurs cryptés en transit permanent — lui permet de survivre là où toute institution centralisée aurait disparu.
+
+responsabilites: >
+  Collecte, chiffrement et redistribution des archives identitaires communautaires (actes de naissance, titres fonciers traditionnels, cartographies mémoriales orales numérisées) à travers un réseau de nœuds mobiles dans la lagune de Lagos. Négocie l'accès à ces données contre des ressources vitales — énergie, médicaments, protection armée — auprès des factions qui contrôlent les corridors logistiques ou les enclaves fortifiées. Assure ponctuellement la certification mémorielle de communautés déplacées cherchant à faire valoir des droits sur des territoires disputés.
+
+impact_local: 4
+impact_systemique_global: 2
+
+variables_influencees:
+    - valeurs_culture_tempo_sociale
+    - technologie_information
+    - gouvernance_institutions
+    - organisation_territoires
+
+zone_geographique:
+    - locale
+    - régionale
+
+zone_systemique:
+    - information
+    - société
+    - gouvernance
+    - cyberspace
+
+alliances:
+    - reseau_mnemos_breakdown
+    - collectifs_de_gardiens_archivistes_itinerants_breakdown
+    - collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
+    - lagos_est_nexcore_breakdown
+    - reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown
+    - communautes_religieuses_des_relais_physiques_breakdown
+    - diaspora_tech_sahel_breakdown
+
+oppositions:
+    - factions_propagandistes_des_archives_breakdown
+    - milices_de_controle_territorial_breakdown
+    - seigneuries_logistiques_armees_breakdown
+    - nexcore_breakdown
+    - enclaves_corporatives_fortifiees_breakdown
+    - reseau_des_anciens_financeurs_devenus_censeurs_breakdown
+
+type_relation_dominante: infiltration
+
+annee_debut: 2061
+annee_fin: 
+
+etat_temporel: clandestin
+age_historique: ascendant
+generation: post-effondrement
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  On ne les voit pas. On les convoque. Dans la lagune de Lagos, les Cryptes Mnemos circulent sur des pirogues à coques renforcées dont les flancs dissimulent des serveurs étanches alimentés par récupération solaire de fortune. Quand une famille veut prouver qu'elle a existé — qu'un terrain lui appartenait, qu'un fils est bien né quelque part entre deux inondations — elle fait passer le mot à travers les réseaux de confiance. Quelqu'un vient. Montre. Négocie. Repart. Les journalistes qui ont tenté de localiser un nœud fixe de l'organisation n'ont jamais trouvé que des traces : un boîtier vide, un QR code effacé à l'acide, une femme qui ne savait rien. Ce que l'on sait, c'est que les Cryptes Lagunaires détiennent ce qui reste de l'identité de plusieurs centaines de milliers de personnes — et qu'elles le font payer.
+
+signes_distinctifs: >
+  Cachets de cire noire frappés d'un croissant de lune sur eau — signe d'authentification des documents certifiés — apposés à même les supports physiques ou reproduits en tatouage discret sur les coursiers de confiance. Langage codé mêlant yoruba, pidgin et fragments de métadonnées numériques oralisées. Les nœuds se reconnaissent à un motif de nœuds marins gravé sur des jetons de métal récupéré.
+
+tensions_narratives: >
+  La ligne entre préservation sacrée et marchandisation cynique s'efface à mesure que la crise s'approfondit : certaines cellules facturent désormais l'accès aux archives au prix de la survie, excluant de fait les plus démunis de leur propre mémoire. Des factions internes disputent si les données doivent rester chiffrées et inconditionnellement protégées ou si elles peuvent être utilisées comme levier géopolitique face aux milices territoriales. En parallèle, les Fragments NexCore cherchent à infiltrer les nœuds pour s'approprier les bases identitaires et en faire un instrument de contrôle de population — ce qui pourrait provoquer soit la destruction délibérée des archives par les Cryptes elles-mêmes, soit leur trahison ultime.
+
+date_creation: 2026-06-27
+---
+
+# Lagos Intérieur Mnemos — Les Cryptes Lagunaires
+
+## Rôle dans [[breakdown]]
+Dans le chaos du territoire lagunaire post-effondrement, Lagos Intérieur Mnemos opère comme gardien clandestin des identités communautaires de l'ancien delta du Niger — quartiers engloutis, registres d'état civil perdus, généalogies fragmentées par les déplacements climatiques et les conflits de milices. L'organisation ne se réclame d'aucune autorité formelle mais tire sa puissance du fait qu'elle détient ce que personne d'autre ne possède plus : les traces d'existence de dizaines de milliers de personnes. Elle négocie ces archives contre protection physique, accès aux ressources énergétiques ou passage sécurisé à travers les zones contrôlées par les seigneuries logistiques armées. Sa structure décentralisée — des cellules autonomes logées dans des embarcations, des entrepôts immergés et des serveurs cryptés en transit permanent — lui permet de survivre là où toute institution centralisée aurait disparu.
+
+## Responsabilités
+Collecte, chiffrement et redistribution des archives identitaires communautaires (actes de naissance, titres fonciers traditionnels, cartographies mémoriales orales numérisées) à travers un réseau de nœuds mobiles dans la lagune de Lagos. Négocie l'accès à ces données contre des ressources vitales — énergie, médicaments, protection armée — auprès des factions qui contrôlent les corridors logistiques ou les enclaves fortifiées. Assure ponctuellement la certification mémorielle de communautés déplacées cherchant à faire valoir des droits sur des territoires disputés.
+
+## Variables influencées
+- [[valeurs_culture_tempo_sociale]]
+- [[technologie_information]]
+- [[gouvernance_institutions]]
+- [[organisation_territoires]]
+
+## Relations
+**Alliés** : [[reseau_mnemos_breakdown]], [[collectifs_de_gardiens_archivistes_itinerants_breakdown]], [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]], [[lagos_est_nexcore_breakdown]], [[reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown]], [[communautes_religieuses_des_relais_physiques_breakdown]], [[diaspora_tech_sahel_breakdown]]
+**Opposants** : [[factions_propagandistes_des_archives_breakdown]], [[milices_de_controle_territorial_breakdown]], [[seigneuries_logistiques_armees_breakdown]], [[nexcore_breakdown]], [[enclaves_corporatives_fortifiees_breakdown]], [[reseau_des_anciens_financeurs_devenus_censeurs_breakdown]]
+
+## Description journalistique
+On ne les voit pas. On les convoque. Dans la lagune de Lagos, les Cryptes Mnemos circulent sur des pirogues à coques renforcées dont les flancs dissimulent des serveurs étanches alimentés par récupération solaire de fortune. Quand une famille veut prouver qu'elle a existé — qu'un terrain lui appartenait, qu'un fils est bien né quelque part entre deux inondations — elle fait passer le mot à travers les réseaux de confiance. Quelqu'un vient. Montre. Négocie. Repart. Les journalistes qui ont tenté de localiser un nœud fixe de l'organisation n'ont jamais trouvé que des traces : un boîtier vide, un QR code effacé à l'acide, une femme qui ne savait rien. Ce que l'on sait, c'est que les Cryptes Lagunaires détiennent ce qui reste de l'identité de plusieurs centaines de milliers de personnes — et qu'elles le font payer.
+
+## Tensions narratives
+La ligne entre préservation sacrée et marchandisation cynique s'efface à mesure que la crise s'approfondit : certaines cellules facturent désormais l'accès aux archives au prix de la survie, excluant de fait les plus démunis de leur propre mémoire. Des factions internes disputent si les données doivent rester chiffrées et inconditionnellement protégées ou si elles peuvent être utilisées comme levier géopolitique face aux milices territoriales. En parallèle, les Fragments NexCore cherchent à infiltrer les nœuds pour s'approprier les bases identitaires et en faire un instrument de contrôle de population — ce qui pourrait provoquer soit la destruction délibérée des archives par les Cryptes elles-mêmes, soit leur trahison ultime.

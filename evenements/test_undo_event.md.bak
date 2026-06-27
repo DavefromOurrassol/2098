@@ -1,0 +1,36 @@
+---
+name: Protocole Aqua-Ouest : la régulation hydrique en débat à Paris
+type: event_archetype
+slug: test_undo_event
+type_evenement: political_social
+portee: regionale
+date_approximative: 2061
+intensite: moderee
+description: >
+  Un événement test pour valider le script undo_custom.py. Situé à Paris, implique une organisation internationale fictive qui tente de réguler l'accès à l'eau potable en Europe occidentale.
+variables_hint:
+  - gouvernance_institutions
+  - organisation_territoires
+  - energie_ressources_critiques
+scenarios_instances:
+  - reference
+  - policy_reform
+date_creation: 2026-06-25
+custom_source: test_undo_2026-06
+---
+
+# Protocole Aqua-Ouest : la régulation hydrique en débat à Paris
+
+## Description archétypale
+Un événement test pour valider le script undo_custom.py. Situé à Paris, implique une organisation internationale fictive qui tente de réguler l'accès à l'eau potable en Europe occidentale.
+
+## Instances par scénario
+| Scénario | Instance | Réalisation | Impact |
+|---|---|---|---|
+| [[breakdown]] | — | — | — |
+| [[fortress_world]] | — | — | — |
+| [[new_sustainability]] | — | — | — |
+| [[eco_communalism]] | — | — | — |
+| [[policy_reform]] | [[test_undo_event_policy_reform]] | | |
+| [[reference]] | [[test_undo_event_reference]] | | |
+

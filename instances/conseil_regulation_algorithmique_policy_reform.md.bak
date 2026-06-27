@@ -1,0 +1,82 @@
+---
+name: Agence Internationale de Supervision IA
+type: instance
+slug: conseil_regulation_algorithmique_policy_reform
+entite: conseil_regulation_algorithmique
+scenario: policy_reform
+type_dans_scenario: institution
+role_dans_scenario: >
+  Agence intergouvernementale créée par le Traité de Genève sur l'IA
+  de 2037. Supervise les systèmes IA critiques avec mandat contraignant
+  limité aux secteurs publics. Résultat d'un compromis difficile entre
+  souveraineté nationale et régulation globale.
+responsabilites: >
+  Audits obligatoires des IA gouvernementales. Certification volontaire
+  des IA privées. Médiation en cas d'incidents algorithmiques
+  transfrontaliers. Publication de standards techniques annuels.
+impact_local: 2
+impact_systemique_global: 3
+variables_influencees:
+  - gouvernance_institutions
+  - technologie_information
+zone_geographique:
+  - globale
+zone_systemique:
+  - IA
+  - gouvernance
+alliances:
+  - assemblee_territoires_policy_reform
+oppositions: []
+type_relation_dominante: coopération
+annee_debut: 2037
+annee_fin:
+etat_temporel: actif
+age_historique: ascendant
+generation: transition
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+description_journalistique: >
+  L'Agence Internationale de Supervision IA — l'AISIA — est le résultat
+  de dix ans de négociations âpres. Ses pouvoirs sont limités mais réels —
+  elle peut bloquer le déploiement d'une IA gouvernementale jugée non
+  conforme. Sa secrétaire générale, Priya Nambiar, est réputée pour sa
+  capacité à trouver des compromis là où tout le monde voyait un mur.
+signes_distinctifs: >
+  Siège à Genève-Lac. Personnel de 180 experts issus de 52 pays.
+  Rapports techniques réputés pour leur rigueur. Budget toujours insuffisant
+  selon ses défenseurs.
+tensions_narratives: >
+  Pression constante des grandes puissances pour limiter son mandat.
+  Débat sur l'extension de sa compétence au secteur privé.
+  Accusée d'être trop lente face à l'accélération technologique.
+date_creation: 2098-01-01
+---
+
+# Agence Internationale de Supervision IA
+
+## Rôle dans [[policy_reform]]
+Agence intergouvernementale créée par le Traité de Genève sur l'IA de 2037.
+Supervise les systèmes IA critiques avec mandat contraignant limité.
+
+## Variables influencées
+- [[gouvernance_institutions]]
+- [[technologie_information]]
+
+## Relations
+**Alliés** : [[assemblee_territoires_policy_reform]]
+**Opposants** : _aucun défini_
+
+## Description journalistique
+L'AISIA est le résultat de dix ans de négociations âpres. Ses pouvoirs
+sont limités mais réels. Sa secrétaire générale, Priya Nambiar, est
+réputée pour sa capacité à trouver des compromis là où tout le monde
+voyait un mur.
+
+## Tensions narratives
+Pression constante des grandes puissances pour limiter son mandat.
+Débat sur l'extension de sa compétence au secteur privé.

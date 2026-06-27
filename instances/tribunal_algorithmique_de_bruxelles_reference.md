@@ -1,0 +1,105 @@
+---
+name: Tribunal Algorithmique de Bruxelles
+type: instance
+slug: tribunal_algorithmique_de_bruxelles_reference
+entite: tribunal_algorithmique_de_bruxelles
+scenario: reference
+localisation:
+  zone: bruxelles_nouveau
+  lieu: Bruxelles — ancien Palais de Justice
+  type_lieu: infrastructure
+
+type_dans_scenario: institution
+
+role_dans_scenario: >
+  Le Tribunal Algorithmique de Bruxelles est la juridiction de référence de l'Union Continentale Européenne chargée de statuer sur les litiges nés des décisions automatisées affectant les droits fondamentaux — allocations de ressources, scores de crédit social climatique, accès aux soins, mobilité contrainte. Dans un monde de transition fragile, il incarne à la fois l'ambition d'une gouvernance de droit sur les systèmes IA et la preuve de ses limites structurelles : sous-financé, débordé, contesté par les grandes plateformes qui instrumentalisent sa lenteur. Il fonctionne comme un espace symbolique autant que juridique — un lieu où la société tente encore de nommer ce que les machines ont décidé.
+
+responsabilites: >
+  Instruit et tranche les recours individuels et collectifs contre des décisions algorithmiques affectant droits fondamentaux, conditions de travail, accès aux ressources critiques et mobilité. Mandate des audits techniques sur les systèmes IA mis en cause, en s'appuyant sur des experts certifiés et des protocoles d'explicabilité partielle. Émet des injonctions de suspension temporaire sur des systèmes jugés discriminatoires ou opaques, avec un taux d'exécution variable selon la puissance des entités concernées.
+
+impact_local: 3
+impact_systemique_global: 2
+
+variables_influencees:
+    - gouvernance_institutions
+    - technologie_information
+
+zone_geographique:
+    - régionale
+    - continentale
+
+zone_systemique:
+    - gouvernance
+    - IA
+    - société
+
+alliances:
+    - conseil_regulation_algorithmique_reference
+    - conseil_de_geneve_pour_les_droits_biosociaux_reference
+    - reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference
+    - collectifs_academiques_independants_reference
+    - reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference
+    - universites_et_think_tanks_en_zones_de_liberte_academique_reference
+    - mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
+    - cooperatives_ia_open_source_reference
+    - ligue_des_municipalites_peripheriques_sous_connectees_reference
+
+oppositions:
+    - consortium_des_grandes_plateformes_ia_integrees_reference
+    - consortium_des_plateformes_ia_centralisees_anti_deliberation_reference
+    - consortiums_prives_de_gestion_des_donnees_critiques_reference
+    - etats_a_tendance_centraliste_numerique_reference
+    - alliance_blocs_souverains_reference
+    - directive_kontinuum_reference
+    - plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference
+
+type_relation_dominante: rivalité
+
+annee_debut: 2031
+annee_fin: 
+
+etat_temporel: actif
+age_historique: ascendant
+generation: transition
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Installé dans l'ancien Palais de Justice de Bruxelles — dont la façade néoclassique contraste violemment avec les terminaux d'audit IA qui tapissent désormais ses salles d'audience — le Tribunal Algorithmique traite chaque semaine plusieurs centaines de recours venus de tout le continent. La grande majorité concerne des décisions d'allocation de ressources énergétiques ou d'accès aux soins. Ses juges — mi-magistrats humains, mi-panneaux d'analyse contradictoire — délibèrent dans un cadre procédural que les grandes plateformes ont appris à contourner avec une efficacité décourageante : délais d'explicabilité systématiquement dépassés, modèles mis à jour entre la plainte et l'audience. On dit qu'il rend la justice comme on répare un filet avec les mains — utile, mais toujours en retard sur les trous.
+
+signes_distinctifs: >
+  Le sceau du Tribunal superpose la balance classique de la justice à un graphe de réseau neuronal stylisé — symbole ambigu que certains lisent comme une réconciliation, d'autres comme une capitulation. Les audiences publiques sont diffusées en flux ouvert sur le réseau MeshCommons, avec des sous-titres algorithmiques que le Tribunal lui-même n'a pas validés, ironie que la presse locale relève régulièrement.
+
+tensions_narratives: >
+  Le Tribunal est pris en étau entre son ambition normative et son impuissance opérationnelle : ses injonctions sont respectées par les petits acteurs, ignorées ou contournées par les grandes plateformes qui ont les ressources pour jouer la montre. Ses propres outils d'audit reposent sur des IA fournies par des consortiums qu'il est susceptible de juger — une contradiction structurelle que ses détracteurs exploitent. La question ouverte en 2098 est celle de son évolution : deviendra-t-il un tribunal symbolique vidé de substance, une juridiction réformée dotée de pouvoirs d'exécution réels, ou le terrain d'une bataille plus large sur qui contrôle les règles de l'IA continentale ?
+
+date_creation: 2026-06-25
+---
+
+# Tribunal Algorithmique de Bruxelles
+
+## Rôle dans [[reference]]
+Le Tribunal Algorithmique de Bruxelles est la juridiction de référence de l'Union Continentale Européenne chargée de statuer sur les litiges nés des décisions automatisées affectant les droits fondamentaux — allocations de ressources, scores de crédit social climatique, accès aux soins, mobilité contrainte. Dans un monde de transition fragile, il incarne à la fois l'ambition d'une gouvernance de droit sur les systèmes IA et la preuve de ses limites structurelles : sous-financé, débordé, contesté par les grandes plateformes qui instrumentalisent sa lenteur. Il fonctionne comme un espace symbolique autant que juridique — un lieu où la société tente encore de nommer ce que les machines ont décidé.
+
+## Responsabilités
+Instruit et tranche les recours individuels et collectifs contre des décisions algorithmiques affectant droits fondamentaux, conditions de travail, accès aux ressources critiques et mobilité. Mandate des audits techniques sur les systèmes IA mis en cause, en s'appuyant sur des experts certifiés et des protocoles d'explicabilité partielle. Émet des injonctions de suspension temporaire sur des systèmes jugés discriminatoires ou opaques, avec un taux d'exécution variable selon la puissance des entités concernées.
+
+## Variables influencées
+- [[gouvernance_institutions]]
+- [[technologie_information]]
+
+## Relations
+**Alliés** : [[conseil_regulation_algorithmique_reference]], [[conseil_de_geneve_pour_les_droits_biosociaux_reference]], [[reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference]], [[collectifs_academiques_independants_reference]], [[reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference]], [[universites_et_think_tanks_en_zones_de_liberte_academique_reference]], [[mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference]], [[cooperatives_ia_open_source_reference]], [[ligue_des_municipalites_peripheriques_sous_connectees_reference]]
+**Opposants** : [[consortium_des_grandes_plateformes_ia_integrees_reference]], [[consortium_des_plateformes_ia_centralisees_anti_deliberation_reference]], [[consortiums_prives_de_gestion_des_donnees_critiques_reference]], [[etats_a_tendance_centraliste_numerique_reference]], [[alliance_blocs_souverains_reference]], [[directive_kontinuum_reference]], [[plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference]]
+
+## Description journalistique
+Installé dans l'ancien Palais de Justice de Bruxelles — dont la façade néoclassique contraste violemment avec les terminaux d'audit IA qui tapissent désormais ses salles d'audience — le Tribunal Algorithmique traite chaque semaine plusieurs centaines de recours venus de tout le continent. La grande majorité concerne des décisions d'allocation de ressources énergétiques ou d'accès aux soins. Ses juges — mi-magistrats humains, mi-panneaux d'analyse contradictoire — délibèrent dans un cadre procédural que les grandes plateformes ont appris à contourner avec une efficacité décourageante : délais d'explicabilité systématiquement dépassés, modèles mis à jour entre la plainte et l'audience. On dit qu'il rend la justice comme on répare un filet avec les mains — utile, mais toujours en retard sur les trous.
+
+## Tensions narratives
+Le Tribunal est pris en étau entre son ambition normative et son impuissance opérationnelle : ses injonctions sont respectées par les petits acteurs, ignorées ou contournées par les grandes plateformes qui ont les ressources pour jouer la montre. Ses propres outils d'audit reposent sur des IA fournies par des consortiums qu'il est susceptible de juger — une contradiction structurelle que ses détracteurs exploitent. La question ouverte en 2098 est celle de son évolution : deviendra-t-il un tribunal symbolique vidé de substance, une juridiction réformée dotée de pouvoirs d'exécution réels, ou le terrain d'une bataille plus large sur qui contrôle les règles de l'IA continentale ?

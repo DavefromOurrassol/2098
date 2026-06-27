@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../signaux_custom"
+		},
+		{
+			"path": "../evenements_custom"
+		},
+		{
+			"path": "../entites_custom"
+		},
+		{
+			"path": "../instances"
+		},
+		{
+			"path": "../documentation"
+		}
+	],
+	"settings": {}
+}

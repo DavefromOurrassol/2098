@@ -1,0 +1,84 @@
+---
+name: La Grande Déroute du Cœur Sec — Exode des Brûlés du Midwest
+type: event_instance
+slug: exode_midwest_desertification_2044_breakdown
+archetype: exode_midwest_desertification_2044
+scenario: breakdown
+type_evenement: environmental
+portee: continentale
+date: 2044
+date_label: été-automne 2044
+impossible: false
+custom: true
+description: >
+  Les routes du Midwest ressemblent à des artères d'un corps qui saigne : convois de fortune, familles à pied sous des ciels orange, villes-étapes transformées en camps en soixante-douze heures. Detroit, Cleveland, Chicago-Nord refusent l'entrée aux nouveaux arrivants, tandis que des milices agro-défensives locales tirent en l'air pour marquer leurs périmètres. Les ONG de gestion migratoire survivantes sont débordées d'un facteur cent. Sur les réseaux mesh, Le Signal documente en temps réel la destruction des archives d'état civil — des millions d'identités officiellement effacées. Ce qui devait être une crise humanitaire gérée devient le symbole définitif de l'implosion de l'État fédéral américain.
+consequences: >
+  L'afflux non régulé dans les zones lacustres fracture durablement les équilibres locaux : les Communes Libres du Rust Belt se barricadent et adoptent des chartes d'exclusion, tandis que les seigneuries foncières opportunistes accaparent les terres abandonnées du Midwest à des prix nuls, constituant des fiefs agricoles armés. L'absence de registres fiables des déplacés devient une arme — des centaines de milliers de personnes sans identité documentée tombent dans les circuits de main-d'œuvre captive des enclaves corporatives fortifiées. Le traumatisme fonde une culture de méfiance radicale entre communautés d'accueil et migrants internes qui structure encore les conflits territoriaux des décennies suivantes.
+realisation: >
+  En 2044, après trois étés consécutifs à plus de 55°C dans ce qui fut le grenier américain, 18 millions de personnes quittent le Midwest en moins de dix-huit mois. Le Bureau des Territoires Résiduels — déjà fantôme administratif — s'effondre sous la pression : ses agents abandonnent leurs postes, ses archives brûlent ou sont délibérément falsifiées par des factions cherchant à accaparer les droits fonciers des déplacés. Les zones lacustres des Grands Lacs, déjà sous tension entre cités-États sécessionistes et gouvernements régionaux résiduels, reçoivent des flux que rien ne peut absorber. L'événement n'est pas géré — il se déverse, comme une inondation dans un bâtiment sans portes.
+impact_sur_variables:
+  - variable: demographie_mobilite_humaine
+    delta_level: 8
+    duree: 30
+    polarite: -1
+  - variable: organisation_territoires
+    delta_level: 10
+    duree: 25
+    polarite: -1
+  - variable: gouvernance_institutions
+    delta_level: -8
+    duree: 20
+    polarite: -1
+  - variable: climat_environnement_global
+    delta_level: 5
+    duree: 15
+    polarite: -1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+    - bureau_des_territoires_residuels_breakdown
+    - mouvement_des_communes_du_rust_belt_breakdown
+    - ong_de_gestion_migratoire_survivantes_breakdown
+    - milices_agro_defensives_locales_breakdown
+    - seigneuries_foncieres_opportunistes_breakdown
+    - enclaves_corporatives_fortifiees_breakdown
+    - cites_etats_secessionistes_breakdown
+    - flux_migratoires_non_integrables_breakdown
+    - collectifs_de_gardiens_archivistes_itinerants_breakdown
+    - le_temoin_breakdown
+note_coherence: Dans un monde breakdown à gouvernance effondrée (level 20), un exode de cette ampleur ne déclenche aucune réponse institutionnelle coordonnée — il aggrave la fragmentation territoriale et alimente exactement la logique de seigneuries, de milices et de cités-États sécessionistes qui caractérise ce scénario.
+custom_source: rééquilibrage_geo_2026-06
+date_creation: 2026-06-23
+---
+
+# La Grande Déroute du Cœur Sec — Exode des Brûlés du Midwest
+
+## Réalisation dans [[breakdown]]
+En 2044, après trois étés consécutifs à plus de 55°C dans ce qui fut le grenier américain, 18 millions de personnes quittent le Midwest en moins de dix-huit mois. Le Bureau des Territoires Résiduels — déjà fantôme administratif — s'effondre sous la pression : ses agents abandonnent leurs postes, ses archives brûlent ou sont délibérément falsifiées par des factions cherchant à accaparer les droits fonciers des déplacés. Les zones lacustres des Grands Lacs, déjà sous tension entre cités-États sécessionistes et gouvernements régionaux résiduels, reçoivent des flux que rien ne peut absorber. L'événement n'est pas géré — il se déverse, comme une inondation dans un bâtiment sans portes.
+
+## Description journalistique
+Les routes du Midwest ressemblent à des artères d'un corps qui saigne : convois de fortune, familles à pied sous des ciels orange, villes-étapes transformées en camps en soixante-douze heures. Detroit, Cleveland, Chicago-Nord refusent l'entrée aux nouveaux arrivants, tandis que des milices agro-défensives locales tirent en l'air pour marquer leurs périmètres. Les ONG de gestion migratoire survivantes sont débordées d'un facteur cent. Sur les réseaux mesh, Le Signal documente en temps réel la destruction des archives d'état civil — des millions d'identités officiellement effacées. Ce qui devait être une crise humanitaire gérée devient le symbole définitif de l'implosion de l'État fédéral américain.
+
+## Conséquences
+L'afflux non régulé dans les zones lacustres fracture durablement les équilibres locaux : les Communes Libres du Rust Belt se barricadent et adoptent des chartes d'exclusion, tandis que les seigneuries foncières opportunistes accaparent les terres abandonnées du Midwest à des prix nuls, constituant des fiefs agricoles armés. L'absence de registres fiables des déplacés devient une arme — des centaines de milliers de personnes sans identité documentée tombent dans les circuits de main-d'œuvre captive des enclaves corporatives fortifiées. Le traumatisme fonde une culture de méfiance radicale entre communautés d'accueil et migrants internes qui structure encore les conflits territoriaux des décennies suivantes.
+
+## Impact sur les variables
+- **demographie_mobilite_humaine** : delta -8 sur 30 ans
+- **organisation_territoires** : delta -10 sur 25 ans
+- **gouvernance_institutions** : delta +8 sur 20 ans
+- **climat_environnement_global** : delta -5 sur 15 ans
+
+## Acteurs impliqués
+- [[bureau_des_territoires_residuels_breakdown]]
+- [[mouvement_des_communes_du_rust_belt_breakdown]]
+- [[ong_de_gestion_migratoire_survivantes_breakdown]]
+- [[milices_agro_defensives_locales_breakdown]]
+- [[seigneuries_foncieres_opportunistes_breakdown]]
+- [[enclaves_corporatives_fortifiees_breakdown]]
+- [[cites_etats_secessionistes_breakdown]]
+- [[flux_migratoires_non_integrables_breakdown]]
+- [[collectifs_de_gardiens_archivistes_itinerants_breakdown]]
+- [[le_temoin_breakdown]]
+
+## Note de cohérence
+Dans un monde breakdown à gouvernance effondrée (level 20), un exode de cette ampleur ne déclenche aucune réponse institutionnelle coordonnée — il aggrave la fragmentation territoriale et alimente exactement la logique de seigneuries, de milices et de cités-États sécessionistes qui caractérise ce scénario.

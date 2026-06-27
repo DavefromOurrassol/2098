@@ -1,0 +1,86 @@
+---
+name: Traité de Belém — Souveraineté Carbone Amazonienne
+type: event_instance
+slug: accord_carbone_amazonie_blocs_new_sustainability
+archetype: accord_carbone_amazonie_blocs
+scenario: new_sustainability
+localisation:
+  zone: belem_consortium_amazonia
+  lieu: Belém
+  type_lieu: ville
+type_evenement: political_social
+portee: globale
+date: 2053
+date_label: été 2053
+impossible: false
+custom: true
+description: >
+  Belém, été 2053 : sous les projecteurs d'une diplomatie mondiale rodée aux compromis climatiques, le Consortium Amazônia Viva paraphe avec deux blocs géopolitiques le premier traité de souveraineté carbone de l'histoire. La cérémonie, retransmise sur Prisme Global, voit les délégués autochtones recevoir les accréditations de droit de veto territorial — une première dans le droit international. Le troisième bloc, où les factions souverainistes et les lobbies extractifs résiduels ont finalement emporté le débat interne, annonce qu'il 'prend acte sans adhérer', laissant une fracture diplomatique visible mais contenue par l'architecture institutionnelle existante. L'Agence Globale de Régénération des Bassins Versants est désignée autorité de contrôle indépendante.
+consequences: >
+  Le traité institue un précédent juridique mondial : les écosystèmes critiques peuvent désormais exercer une souveraineté de veto sur les projets industriels périphériques, ouvrant la voie à des mécanismes similaires pour le bassin du Congo et les tourbières boréales. La fracture entre blocs signataires et non-signataires alimente une asymétrie carbone dans les marchés régénératifs, poussant progressivement le bloc récalcitrant à renégocier sous pression économique d'ici 2062. Les peuples autochtones amazoniens deviennent des acteurs institutionnels reconnus du système de gouvernance climatique mondiale.
+realisation: >
+  Dans un monde où la gouvernance institutionnelle a atteint un niveau de maturité élevé, le Consortium Amazônia Viva négocie depuis 2049 un traité inédit à Belém. Contrairement aux scénarios d'effondrement, les trois grands blocs géopolitiques participent activement aux négociations, conscients que le carbone amazonien est central à leurs bilans régénératifs. Deux blocs signent, le troisième — sous pression des lobbies extractifs résiduels — refuse, provoquant une fracture diplomatique maîtrisée mais structurante. Le traité impose un veto autochtone sur les projets industriels dans un rayon de 500 km, et crée un mécanisme de redevance carbone directe aux peuples autochtones via le Fonds Mondial de Régénération Écologique.
+impact_sur_variables:
+  - variable: climat_environnement_global
+    delta_level: 8
+    duree: 30
+    polarite: 1
+  - variable: gouvernance_institutions
+    delta_level: 5
+    duree: 25
+    polarite: 1
+  - variable: geopolitique_conflits
+    delta_level: -6
+    duree: 15
+    polarite: -1
+  - variable: energie_ressources_critiques
+    delta_level: 4
+    duree: 20
+    polarite: 1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+    - consortium_amazonia_viva_new_sustainability
+    - agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
+    - fonds_mondial_de_regeneration_ecologique_new_sustainability
+    - assemblee_territoires_new_sustainability
+    - coalition_des_industries_extractives_residuelles_new_sustainability
+    - factions_souverainistes_des_blocs_peripheriques_new_sustainability
+    - parlement_deliberatif_mondial_new_sustainability
+    - agence_stabilisation_climatique_new_sustainability
+    - prisme_global_new_sustainability
+note_coherence: Dans un monde à gouvernance institutions level 90 et trajectoire régénérative, ce traité est non seulement plausible mais attendu — il cristallise la maturation institutionnelle autour de la souveraineté écologique autochtone, avec une fracture diplomatique résiduelle cohérente avec la tension 2/5 encore présente.
+custom_source: rééquilibrage_geo_2026-06
+date_creation: 2026-06-24
+---
+
+# Traité de Belém — Souveraineté Carbone Amazonienne
+
+## Réalisation dans [[new_sustainability]]
+Dans un monde où la gouvernance institutionnelle a atteint un niveau de maturité élevé, le Consortium Amazônia Viva négocie depuis 2049 un traité inédit à Belém. Contrairement aux scénarios d'effondrement, les trois grands blocs géopolitiques participent activement aux négociations, conscients que le carbone amazonien est central à leurs bilans régénératifs. Deux blocs signent, le troisième — sous pression des lobbies extractifs résiduels — refuse, provoquant une fracture diplomatique maîtrisée mais structurante. Le traité impose un veto autochtone sur les projets industriels dans un rayon de 500 km, et crée un mécanisme de redevance carbone directe aux peuples autochtones via le Fonds Mondial de Régénération Écologique.
+
+## Description journalistique
+Belém, été 2053 : sous les projecteurs d'une diplomatie mondiale rodée aux compromis climatiques, le Consortium Amazônia Viva paraphe avec deux blocs géopolitiques le premier traité de souveraineté carbone de l'histoire. La cérémonie, retransmise sur Prisme Global, voit les délégués autochtones recevoir les accréditations de droit de veto territorial — une première dans le droit international. Le troisième bloc, où les factions souverainistes et les lobbies extractifs résiduels ont finalement emporté le débat interne, annonce qu'il 'prend acte sans adhérer', laissant une fracture diplomatique visible mais contenue par l'architecture institutionnelle existante. L'Agence Globale de Régénération des Bassins Versants est désignée autorité de contrôle indépendante.
+
+## Conséquences
+Le traité institue un précédent juridique mondial : les écosystèmes critiques peuvent désormais exercer une souveraineté de veto sur les projets industriels périphériques, ouvrant la voie à des mécanismes similaires pour le bassin du Congo et les tourbières boréales. La fracture entre blocs signataires et non-signataires alimente une asymétrie carbone dans les marchés régénératifs, poussant progressivement le bloc récalcitrant à renégocier sous pression économique d'ici 2062. Les peuples autochtones amazoniens deviennent des acteurs institutionnels reconnus du système de gouvernance climatique mondiale.
+
+## Impact sur les variables
+- **climat_environnement_global** : delta +8 sur 30 ans
+- **gouvernance_institutions** : delta +5 sur 25 ans
+- **geopolitique_conflits** : delta +6 sur 15 ans
+- **energie_ressources_critiques** : delta +4 sur 20 ans
+
+## Acteurs impliqués
+- [[consortium_amazonia_viva_new_sustainability]]
+- [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]]
+- [[fonds_mondial_de_regeneration_ecologique_new_sustainability]]
+- [[assemblee_territoires_new_sustainability]]
+- [[coalition_des_industries_extractives_residuelles_new_sustainability]]
+- [[factions_souverainistes_des_blocs_peripheriques_new_sustainability]]
+- [[parlement_deliberatif_mondial_new_sustainability]]
+- [[agence_stabilisation_climatique_new_sustainability]]
+- [[prisme_global_new_sustainability]]
+
+## Note de cohérence
+Dans un monde à gouvernance institutions level 90 et trajectoire régénérative, ce traité est non seulement plausible mais attendu — il cristallise la maturation institutionnelle autour de la souveraineté écologique autochtone, avec une fracture diplomatique résiduelle cohérente avec la tension 2/5 encore présente.

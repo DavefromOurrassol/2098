@@ -1,0 +1,78 @@
+---
+name: L'Affaire Van Derburgh — Procès du Patrimoine Numérique
+type: event_instance
+slug: arrestation_chris_van_derburgh_new_sustainability
+archetype: arrestation_chris_van_derburgh
+scenario: new_sustainability
+localisation:
+  zone: hub_nairobi_kigali
+  lieu: Nairobi-Centre
+  type_lieu: ville
+type_evenement: political_social
+portee: locale
+date: 2078
+date_label: mars 2078
+impossible: false
+custom: true
+description: >
+  Chris van Derburgh, 67 ans, conservateur indépendant à Nairobi-Centre,
+  est interpellé en mars 2078 pour possession de 47 artefacts technologiques
+  datant de 2026 — terminaux, interfaces et dispositifs de l'ère pré-transition
+  classifiés "patrimoine non déclaré" selon le Protocole de Recensement des
+  Héritages Technologiques de 2065. Van Derburgh conteste la classification,
+  affirmant que ces objets ont une valeur éducative et documentaire.
+consequences: >
+  Acquitté en appel six mois plus tard. L'affaire déclenche un débat public
+  sur les limites du Protocole de Recensement. Le Parlement des Territoires
+  vote une révision de la loi en 2079 créant une catégorie "patrimoine privé
+  documentaire" exemptée de déclaration obligatoire.
+realisation: >
+  Dans new_sustainability, la loi existe mais les institutions sont capables
+  de s'auto-corriger. L'affaire Van Derburgh contribue positivement à
+  l'évolution du cadre juridique — c'est un exemple de réforme incrémentale.
+impact_sur_variables:
+  - variable: gouvernance_institutions
+    delta_level: 2
+    duree: 15
+    polarite: 1
+  - variable: valeurs_culture_tempo_sociale
+    delta_level: 1
+    duree: 20
+    polarite: 1
+propagation:
+  via_matrice: false
+acteurs_impliques:
+  - le_temoin_new_sustainability
+note_coherence: >
+  Impact très limité et positif. Dans new_sustainability, les tensions
+  juridiques génèrent des réformes. Cohérent avec la dynamique d'amélioration
+  progressive du scénario.
+date_creation: 2098-01-01
+---
+
+# L'Affaire Van Derburgh — Procès du Patrimoine Numérique
+
+## Réalisation dans [[new_sustainability]]
+Dans new_sustainability, la loi existe mais les institutions sont capables
+de s'auto-corriger. L'affaire contribue positivement à l'évolution du cadre juridique.
+
+## Description journalistique
+Chris van Derburgh, 67 ans, conservateur à Nairobi-Centre, est interpellé
+pour possession de 47 artefacts technologiques de 2026 classifiés "patrimoine
+non déclaré". Il conteste la classification pour valeur éducative.
+
+## Conséquences
+Acquitté en appel. L'affaire déclenche un débat public. Le Parlement des
+Territoires vote une révision de la loi en 2079 créant une catégorie
+"patrimoine privé documentaire".
+
+## Impact sur les variables
+- **gouvernance_institutions** : delta +2 sur 15 ans
+- **valeurs_culture_tempo_sociale** : delta +1 sur 20 ans
+
+## Acteurs impliqués
+- [[le_temoin_new_sustainability]]
+
+## Note de cohérence
+Impact positif — dans new_sustainability, les tensions juridiques génèrent
+des réformes incrémentales.

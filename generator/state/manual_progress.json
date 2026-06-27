@@ -1,0 +1,23 @@
+{
+  "completed": [],
+  "pending": {
+    "thematique": "actualites_a_la_une",
+    "date_fictive": "3 janvier 2098",
+    "scenario": "breakdown",
+    "metadata": {
+      "scenario": "breakdown",
+      "thematique": "actualites_a_la_une",
+      "format": "brève",
+      "longueur": "300 à 500 mots"
+    },
+    "state_of_system": "chaotique",
+    "tension_level": 5,
+    "pilot_variables": [
+      "geopolitique_conflits",
+      "energie_ressources_critiques",
+      "organisation_territoires",
+      "climat_environnement_global",
+      "systemes_productifs_travail"
+    ]
+  }
+}

@@ -1,0 +1,99 @@
+---
+name: Leena Väinälä
+type: instance
+slug: leena_vainala_eco_communalism
+entite: leena_vainala
+scenario: eco_communalism
+localisation:
+  zone: arc_septentrional
+  lieu: Arc Septentrional (espace fenno-scandinave et baltique)
+  type_lieu: region
+  statut: review_manuelle
+  note: "Leena Väinälä est itinérante à travers l'Arc septentrional sans ancrage local unique — la Charte de Tampere est un événement fondateur lié à elle, mais son activité couvre toute la zone régionale, rendant le choix entre arc_septentrional et tampere_charte ambigu."
+
+type_dans_scenario: humain
+
+role_dans_scenario: >
+  Philosophe-praticienne de la gouvernance des communs, Leena Väinälä est devenue l'une des architectes les plus influentes des chartes constitutives des confédérations locales post-effondrement. Dans un monde fragmenté en unités autonomes souvent en tension entre tradition communautaire et pragmatisme de survie, elle circule entre les réseaux régionaux scandinaves, baltiques et nord-européens comme une figure médiatrice et fondatrice. Son œuvre théorique sur la démocratie délibérative à échelle humaine est devenue un texte de référence opérationnel, repris, adapté, parfois dévoyé, dans des dizaines de chartes locales. Elle incarne la résistance à la tentation technocratique qui menace ces communautés fragiles.
+
+responsabilites: >
+  Elle rédige et négocie des protocoles de gouvernance participative pour les assemblées de bassin et les conseils de communs numériques régionaux. Elle forme des facilitateurs délibératifs dans les réseaux de l'Arc septentrional et intervient comme médiatrice lors des crises de légitimité institutionnelle entre communes. Elle maintient une archive ouverte et décentralisée de jurisprudence des communs, accessible via les réseaux mesh locaux.
+
+impact_local: 4
+impact_systemique_global: 2
+variables_influencees:
+    - gouvernance_institutions
+    - valeurs_culture_tempo_sociale
+    - technologie_information
+
+zone_geographique:
+    - régionale
+    - continentale
+
+zone_systemique:
+    - gouvernance
+    - information
+    - société
+
+alliances:
+    - confederation_des_communs_de_l_arc_septentrional_eco_communalism
+    - reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism
+    - archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
+    - collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism
+
+oppositions:
+    - front_techno_utopiste_de_la_decision_automatisee_policy_reform
+    - factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism
+    - reseaux_de_notables_communautaires_capturistes_eco_communalism
+
+type_relation_dominante: coopération
+
+annee_debut: 2031
+annee_fin: 
+
+etat_temporel: actif
+age_historique: dominant
+generation: reconstruction
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  On la reconnaît souvent à son sac de toile portant les armoiries brodées de trois communes différentes — une habitude qu'elle a prise de ne jamais se revendiquer d'un seul territoire. À 71 ans, Leena Väinälä parcourt encore les routes lentes de l'Arc septentrional pour assister aux assemblées constitutives, carnet en main, posant ses questions tranchantes avec une douceur désarmante. Ses textes fondateurs — notamment la Charte de Tampere sur les communs numériques de 2038 — sont désormais imprimés sur papier local dans des dizaines de communes qui n'ont jamais eu accès à internet global. Elle dit elle-même qu'elle n'a pas voulu fonder une école, mais que les écoles ont quand même surgi derrière elle, ce qui la préoccupe autant que ça la réjouit.
+
+signes_distinctifs: >
+  Carnet de terrain relié en cuir recyclé couverts d'annotations multilingues, présence physique systématiquement sobre et dépourvue de projection technologique lors des assemblées. Sa signature visuelle informelle est un triptyque de cercles entrelacés — symbole devenu iconique des chartes qu'elle a rédigées — repris sur des affiches, des murs et des tokens de gouvernance locaux.
+
+tensions_narratives: >
+  La tension centrale de son parcours dans ce monde est la suivante : ses outils conceptuels, pensés pour émanciper les communautés, sont régulièrement instrumentalisés par des factions locales pour légitimer des fermetures identitaires ou des oligarchies de façade délibérative. Doit-elle amender ses chartes pour les rendre plus résistantes au détournement, au risque de les rigidifier ? Par ailleurs, une nouvelle génération de facilitateurs formés par ses réseaux commence à diverger de sa philosophie, préférant des protocoles algorithmiques légers qu'ils jugent plus équitables — un conflit générationnel qui menace l'unité du mouvement. Sa propre trajectoire vers une forme de figure tutélaire mythifiée la trouble profondément, elle qui a fondé toute son œuvre sur la méfiance envers l'autorité incarnée.
+
+date_creation: 2026-06-15
+---
+
+# Leena Väinälä
+
+## Rôle dans [[eco_communalism]]
+Philosophe-praticienne de la gouvernance des communs, Leena Väinälä est devenue l'une des architectes les plus influentes des chartes constitutives des confédérations locales post-effondrement. Dans un monde fragmenté en unités autonomes souvent en tension entre tradition communautaire et pragmatisme de survie, elle circule entre les réseaux régionaux scandinaves, baltiques et nord-européens comme une figure médiatrice et fondatrice. Son œuvre théorique sur la démocratie délibérative à échelle humaine est devenue un texte de référence opérationnel, repris, adapté, parfois dévoyé, dans des dizaines de chartes locales. Elle incarne la résistance à la tentation technocratique qui menace ces communautés fragiles.
+
+## Responsabilités
+Elle rédige et négocie des protocoles de gouvernance participative pour les assemblées de bassin et les conseils de communs numériques régionaux. Elle forme des facilitateurs délibératifs dans les réseaux de l'Arc septentrional et intervient comme médiatrice lors des crises de légitimité institutionnelle entre communes. Elle maintient une archive ouverte et décentralisée de jurisprudence des communs, accessible via les réseaux mesh locaux.
+
+## Variables influencées
+- [[gouvernance_institutions]]
+- [[valeurs_culture_tempo_sociale]]
+- [[technologie_information]]
+
+## Relations
+**Alliés** : [[confederation_des_communs_de_l_arc_septentrional_eco_communalism]], [[reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism]], [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]], [[collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism]]
+**Opposants** : [[front_techno_utopiste_de_la_decision_automatisee_policy_reform]], [[factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism]], [[reseaux_de_notables_communautaires_capturistes_eco_communalism]]
+
+## Description journalistique
+On la reconnaît souvent à son sac de toile portant les armoiries brodées de trois communes différentes — une habitude qu'elle a prise de ne jamais se revendiquer d'un seul territoire. À 71 ans, Leena Väinälä parcourt encore les routes lentes de l'Arc septentrional pour assister aux assemblées constitutives, carnet en main, posant ses questions tranchantes avec une douceur désarmante. Ses textes fondateurs — notamment la Charte de Tampere sur les communs numériques de 2038 — sont désormais imprimés sur papier local dans des dizaines de communes qui n'ont jamais eu accès à internet global. Elle dit elle-même qu'elle n'a pas voulu fonder une école, mais que les écoles ont quand même surgi derrière elle, ce qui la préoccupe autant que ça la réjouit.
+
+## Tensions narratives
+La tension centrale de son parcours dans ce monde est la suivante : ses outils conceptuels, pensés pour émanciper les communautés, sont régulièrement instrumentalisés par des factions locales pour légitimer des fermetures identitaires ou des oligarchies de façade délibérative. Doit-elle amender ses chartes pour les rendre plus résistantes au détournement, au risque de les rigidifier ? Par ailleurs, une nouvelle génération de facilitateurs formés par ses réseaux commence à diverger de sa philosophie, préférant des protocoles algorithmiques légers qu'ils jugent plus équitables — un conflit générationnel qui menace l'unité du mouvement. Sa propre trajectoire vers une forme de figure tutélaire mythifiée la trouble profondément, elle qui a fondé toute son œuvre sur la méfiance envers l'autorité incarnée.

@@ -1,0 +1,85 @@
+---
+name: Raj Mehta
+type: instance
+slug: le_temoin_reference
+entite: le_temoin
+scenario: reference
+type_dans_scenario: humain
+role_dans_scenario: >
+  Correspondant international pour l'Agence Mondiale de Presse, 42 ans,
+  basé à Singapour-Est. Couvre les tensions géopolitiques et économiques
+  dans un contexte d'incertitude croissante. Reporter compétent dans
+  un environnement médiatique sous pression.
+responsabilites: >
+  Couverture des crises internationales pour l'AMP. Maintien d'un
+  réseau de sources dans les zones de tension. Respect des protocoles
+  d'accréditation dans un environnement de plus en plus contrôlé.
+impact_local: 1
+impact_systemique_global: 2
+variables_influencees:
+  - technologie_information
+  - valeurs_culture_tempo_sociale
+zone_geographique:
+  - globale
+zone_systemique:
+  - information
+  - société
+alliances: []
+oppositions:
+  - conseil_regulation_algorithmique_reference
+type_relation_dominante: neutralité
+annee_debut: 2080
+annee_fin:
+etat_temporel: actif
+age_historique: ascendant
+generation: transition
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+description_journalistique: >
+  Raj Mehta fait son travail. Dans un monde où les certitudes s'effritent
+  et où les accréditations peuvent être retirées sur décision algorithmique,
+  il couvre ce qu'il peut, comme il peut. Ses dépêches sont lues, corrigées
+  par un éditeur IA, et publiées. Parfois il se demande ce qu'il reste
+  de sa voix dans le résultat final.
+signes_distinctifs: >
+  Style neutre, dépêches courtes et précises. Présence sur les réseaux
+  officiels uniquement. A commencé à tenir un journal personnel chiffré
+  — "pour garder une trace de ce que j'ai vraiment vu."
+tensions_narratives: >
+  Son éditeur IA a commencé à modifier le ton de ses articles sans lui
+  demander. Il ne sait pas encore quoi faire de ça. Il a 42 ans et
+  commence à se demander si le journalisme qu'il pratique sert encore
+  à quelque chose.
+date_creation: 2098-01-01
+---
+
+# Raj Mehta
+
+## Rôle dans [[reference]]
+Correspondant international pour l'Agence Mondiale de Presse, basé à
+Singapour-Est. Reporter compétent dans un environnement médiatique sous
+pression croissante.
+
+## Variables influencées
+- [[technologie_information]]
+- [[valeurs_culture_tempo_sociale]]
+
+## Relations
+**Alliés** : _aucun défini_
+**Opposants** : [[conseil_regulation_algorithmique_reference]]
+
+## Description journalistique
+Raj Mehta fait son travail. Dans un monde où les accréditations peuvent
+être retirées sur décision algorithmique, il couvre ce qu'il peut, comme
+il peut. Ses dépêches sont lues, corrigées par un éditeur IA, et publiées.
+Parfois il se demande ce qu'il reste de sa voix dans le résultat final.
+
+## Tensions narratives
+Son éditeur IA a commencé à modifier le ton de ses articles sans lui
+demander. Il a 42 ans et commence à se demander si le journalisme qu'il
+pratique sert encore à quelque chose.

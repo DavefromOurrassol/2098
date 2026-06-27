@@ -1,0 +1,78 @@
+---
+name: Fondation du Pacifique Sud Resilience Network — Acte Constitutif de Funafuti
+type: event_instance
+slug: tuvalu_submersion_droit_post_territorial_new_sustainability
+archetype: tuvalu_submersion_droit_post_territorial
+scenario: new_sustainability
+type_evenement: political_social
+portee: globale
+date: 2039
+date_label: septembre 2039
+impossible: false
+custom: true
+description: >
+  Le 14 septembre 2039, lors d'une séance historique retransmise sur l'ensemble des réseaux d'information ouverts, le Conseil insulaire de Tuvalu signe l'Acte Constitutif de Funafuti depuis une plateforme flottante au-dessus de l'atoll disparu. L'Assemblée générale de l'ONU, réunie en session extraordinaire à Nairobi quarante-huit heures plus tard, reconnaît officiellement le Pacifique Sud Resilience Network comme entité politique sans territoire fixe — une première dans l'histoire du droit international. Kiribati, les Îles Marshall et Tonga rejoignent immédiatement la confédération, fusionnant leurs souverainetés dans un cadre partagé de gouvernance maritime et numérique. Le Parlement des Territoires accueille la délégation du PSRN sous les applaudissements de cent quarante-trois États membres.
+consequences: >
+  L'Acte de Funafuti devient le texte fondateur d'une nouvelle branche du droit international — le droit post-territorial — formalisée par le Traité de Nairobi amendé en 2041, ouvrant la voie à d'autres configurations pour les États côtiers vulnérables. Le PSRN s'impose comme acteur référent sur les questions de mobilité climatique et de résilience maritime, pesant désormais dans toutes les grandes négociations environnementales. La reconnaissance onusienne renforce durablement la légitimité des institutions supranationales et valide la trajectoire de gouvernance coordonnée du scénario new_sustainability.
+realisation: >
+  Dans un monde de gouvernance institutionnelle consolidée (level 90), la submersion définitive de l'atoll de Funafuti ne prend pas les formes d'une catastrophe politique insoluble, mais d'un moment fondateur soigneusement anticipé. Le Programme Onusien de Mobilité Climatique et le Parlement des Territoires avaient, depuis 2036, préparé le cadre juridique nécessaire. Le dernier conseil insulaire se tient en territoire physique partiellement émergé, en présence de délégués onusiens, avant un transfert ordonné de souveraineté vers une plateforme flottante hybride ancrée dans les eaux internationales. La communauté tuvaluane, déjà partiellement relocalisée en Nouvelle-Zélande et en Fiji dans le cadre des accords de mobilité climatique de 2038, conserve son identité politique et sa représentation au Parlement des Territoires.
+impact_sur_variables:
+  - variable: gouvernance_institutions
+    delta_level: 6
+    duree: 25
+    polarite: 1
+  - variable: climat_environnement_global
+    delta_level: -3
+    duree: 10
+    polarite: -1
+  - variable: organisation_territoires
+    delta_level: 8
+    duree: 30
+    polarite: 1
+  - variable: demographie_mobilite_humaine
+    delta_level: 5
+    duree: 20
+    polarite: 1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+    - pacifique_sud_resilience_network_new_sustainability
+    - assemblee_territoires_new_sustainability
+    - programme_onusien_de_mobilite_climatique_new_sustainability
+    - agence_mondiale_de_modelisation_climatique_ammc_new_sustainability
+    - collectifs_de_deplaces_climatiques_non_representes_new_sustainability
+    - parlement_deliberatif_mondial_new_sustainability
+    - le_temoin_new_sustainability
+note_coherence: Dans un monde de gouvernance institutionnelle très consolidée (level 90) et de trajectoire régénérative, la création du PSRN est non seulement plausible mais constitue l'aboutissement logique des cadres de mobilité climatique et de droit territorial en construction depuis les années 2030 dans ce scénario.
+custom_source: rééquilibrage_geo_2026-06
+date_creation: 2026-06-23
+---
+
+# Fondation du Pacifique Sud Resilience Network — Acte Constitutif de Funafuti
+
+## Réalisation dans [[new_sustainability]]
+Dans un monde de gouvernance institutionnelle consolidée (level 90), la submersion définitive de l'atoll de Funafuti ne prend pas les formes d'une catastrophe politique insoluble, mais d'un moment fondateur soigneusement anticipé. Le Programme Onusien de Mobilité Climatique et le Parlement des Territoires avaient, depuis 2036, préparé le cadre juridique nécessaire. Le dernier conseil insulaire se tient en territoire physique partiellement émergé, en présence de délégués onusiens, avant un transfert ordonné de souveraineté vers une plateforme flottante hybride ancrée dans les eaux internationales. La communauté tuvaluane, déjà partiellement relocalisée en Nouvelle-Zélande et en Fiji dans le cadre des accords de mobilité climatique de 2038, conserve son identité politique et sa représentation au Parlement des Territoires.
+
+## Description journalistique
+Le 14 septembre 2039, lors d'une séance historique retransmise sur l'ensemble des réseaux d'information ouverts, le Conseil insulaire de Tuvalu signe l'Acte Constitutif de Funafuti depuis une plateforme flottante au-dessus de l'atoll disparu. L'Assemblée générale de l'ONU, réunie en session extraordinaire à Nairobi quarante-huit heures plus tard, reconnaît officiellement le Pacifique Sud Resilience Network comme entité politique sans territoire fixe — une première dans l'histoire du droit international. Kiribati, les Îles Marshall et Tonga rejoignent immédiatement la confédération, fusionnant leurs souverainetés dans un cadre partagé de gouvernance maritime et numérique. Le Parlement des Territoires accueille la délégation du PSRN sous les applaudissements de cent quarante-trois États membres.
+
+## Conséquences
+L'Acte de Funafuti devient le texte fondateur d'une nouvelle branche du droit international — le droit post-territorial — formalisée par le Traité de Nairobi amendé en 2041, ouvrant la voie à d'autres configurations pour les États côtiers vulnérables. Le PSRN s'impose comme acteur référent sur les questions de mobilité climatique et de résilience maritime, pesant désormais dans toutes les grandes négociations environnementales. La reconnaissance onusienne renforce durablement la légitimité des institutions supranationales et valide la trajectoire de gouvernance coordonnée du scénario new_sustainability.
+
+## Impact sur les variables
+- **gouvernance_institutions** : delta +6 sur 25 ans
+- **climat_environnement_global** : delta +3 sur 10 ans
+- **organisation_territoires** : delta +8 sur 30 ans
+- **demographie_mobilite_humaine** : delta +5 sur 20 ans
+
+## Acteurs impliqués
+- [[pacifique_sud_resilience_network_new_sustainability]]
+- [[assemblee_territoires_new_sustainability]]
+- [[programme_onusien_de_mobilite_climatique_new_sustainability]]
+- [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]]
+- [[collectifs_de_deplaces_climatiques_non_representes_new_sustainability]]
+- [[parlement_deliberatif_mondial_new_sustainability]]
+- [[le_temoin_new_sustainability]]
+
+## Note de cohérence
+Dans un monde de gouvernance institutionnelle très consolidée (level 90) et de trajectoire régénérative, la création du PSRN est non seulement plausible mais constitue l'aboutissement logique des cadres de mobilité climatique et de droit territorial en construction depuis les années 2030 dans ce scénario.

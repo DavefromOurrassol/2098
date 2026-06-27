@@ -1,0 +1,77 @@
+---
+name: Pacte Lacustre des Grands Lacs — Autonomie Négociée dans le Cadre de Nairobi
+type: event_instance
+slug: secession_great_lakes_compact_new_sustainability
+archetype: secession_great_lakes_compact
+scenario: new_sustainability
+localisation:
+  zone: chicago_lacustre_compact
+  lieu: Chicago-Lacustre
+  type_lieu: ville
+type_evenement: political_social
+portee: continentale
+date: 2051
+date_label: automne 2051
+impossible: false
+custom: true
+description: >
+  En ce mois d'octobre 2051, les drapeaux bleu-vert du Great Lakes Autonomous Compact flottent sur les quais de Chicago-Lacustre. Le vote historique de la Confédération — 87 % des délégués, nations autochtones comprises — ne signe pas une rupture, mais une refondation : Washington cède la juridiction première sur les Grands Lacs en échange d'une intégration formelle du Compact dans l'architecture du Parlement des Territoires de Nairobi. L'AGRB-ONU supervise l'accord comme modèle de gouvernance hydrique distribuée. Pour la première fois depuis 1865, une recomposition territoriale majeure s'opère sur le sol américain — mais par protocole institutionnel, non par les armes.
+consequences: >
+  Le Pacte Lacustre s'impose immédiatement comme jurisprudence mondiale pour les régions détenant des ressources hydriques critiques, renforçant les revendications des blocs souverainistes hydriques sur tous les continents. À moyen terme, il consolide le modèle de gouvernance multi-niveaux de Nairobi tout en fragilisant la souveraineté exclusive des États-nations sur leurs ressources intérieures, ouvrant un précédent que d'autres régions — bassins amazoniens, Sahel, Sibérie — s'empresseront d'invoquer.
+realisation: >
+  Dans le monde de new_sustainability, la rupture brutale cède la place à une sécession partielle négociée. Le Great Lakes Autonomous Compact, fort de la jurisprudence du Traité de Nairobi (2041) reconnaissant la souveraineté territoriale des entités infra-étatiques sur les ressources critiques, vote en octobre 2051 un statut d'autonomie hydrique étendue. Washington, contraint par les nouvelles normes de gouvernance multi-niveaux et la pression de l'AGRB-ONU, reconnaît la juridiction prioritaire du Compact sur les Grands Lacs sans rupture formelle de l'union fédérale. Chicago-Lacustre devient capitale administrative d'une confédération de 8 États et 40 nations autochtones, mais dans un cadre légal hybride plutôt que secessionniste.
+impact_sur_variables:
+  - variable: organisation_territoires
+    delta_level: 12
+    duree: 25
+    polarite: 1
+  - variable: gouvernance_institutions
+    delta_level: 6
+    duree: 20
+    polarite: 1
+  - variable: geopolitique_conflits
+    delta_level: -5
+    duree: 15
+    polarite: -1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+    - great_lakes_autonomous_compact_new_sustainability
+    - agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
+    - assemblee_territoires_new_sustainability
+    - bloc_des_gouvernements_souverainistes_hydriques_new_sustainability
+    - arctic_passage_authority_new_sustainability
+    - mouvement_pour_l_autodetermination_territoriale_new_sustainability
+    - conseil_regulation_ressources_new_sustainability
+note_coherence: Dans new_sustainability, les ruptures territoriales passent par les institutions multi-niveaux de Nairobi plutôt que par la sécession unilatérale, transformant un potentiel conflit constitutionnel en jurisprudence de gouvernance hydrique distribuée cohérente avec la trajectoire de régénération.
+custom_source: rééquilibrage_geo_2026-06
+date_creation: 2026-06-24
+---
+
+# Pacte Lacustre des Grands Lacs — Autonomie Négociée dans le Cadre de Nairobi
+
+## Réalisation dans [[new_sustainability]]
+Dans le monde de new_sustainability, la rupture brutale cède la place à une sécession partielle négociée. Le Great Lakes Autonomous Compact, fort de la jurisprudence du Traité de Nairobi (2041) reconnaissant la souveraineté territoriale des entités infra-étatiques sur les ressources critiques, vote en octobre 2051 un statut d'autonomie hydrique étendue. Washington, contraint par les nouvelles normes de gouvernance multi-niveaux et la pression de l'AGRB-ONU, reconnaît la juridiction prioritaire du Compact sur les Grands Lacs sans rupture formelle de l'union fédérale. Chicago-Lacustre devient capitale administrative d'une confédération de 8 États et 40 nations autochtones, mais dans un cadre légal hybride plutôt que secessionniste.
+
+## Description journalistique
+En ce mois d'octobre 2051, les drapeaux bleu-vert du Great Lakes Autonomous Compact flottent sur les quais de Chicago-Lacustre. Le vote historique de la Confédération — 87 % des délégués, nations autochtones comprises — ne signe pas une rupture, mais une refondation : Washington cède la juridiction première sur les Grands Lacs en échange d'une intégration formelle du Compact dans l'architecture du Parlement des Territoires de Nairobi. L'AGRB-ONU supervise l'accord comme modèle de gouvernance hydrique distribuée. Pour la première fois depuis 1865, une recomposition territoriale majeure s'opère sur le sol américain — mais par protocole institutionnel, non par les armes.
+
+## Conséquences
+Le Pacte Lacustre s'impose immédiatement comme jurisprudence mondiale pour les régions détenant des ressources hydriques critiques, renforçant les revendications des blocs souverainistes hydriques sur tous les continents. À moyen terme, il consolide le modèle de gouvernance multi-niveaux de Nairobi tout en fragilisant la souveraineté exclusive des États-nations sur leurs ressources intérieures, ouvrant un précédent que d'autres régions — bassins amazoniens, Sahel, Sibérie — s'empresseront d'invoquer.
+
+## Impact sur les variables
+- **organisation_territoires** : delta +12 sur 25 ans
+- **gouvernance_institutions** : delta +6 sur 20 ans
+- **geopolitique_conflits** : delta +5 sur 15 ans
+
+## Acteurs impliqués
+- [[great_lakes_autonomous_compact_new_sustainability]]
+- [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]]
+- [[assemblee_territoires_new_sustainability]]
+- [[bloc_des_gouvernements_souverainistes_hydriques_new_sustainability]]
+- [[arctic_passage_authority_new_sustainability]]
+- [[mouvement_pour_l_autodetermination_territoriale_new_sustainability]]
+- [[conseil_regulation_ressources_new_sustainability]]
+
+## Note de cohérence
+Dans new_sustainability, les ruptures territoriales passent par les institutions multi-niveaux de Nairobi plutôt que par la sécession unilatérale, transformant un potentiel conflit constitutionnel en jurisprudence de gouvernance hydrique distribuée cohérente avec la trajectoire de régénération.

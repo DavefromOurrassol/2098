@@ -1,0 +1,84 @@
+---
+name: L'Attentat des Neuf Nœuds — Prétexte à la Souveraineté Numérique
+type: event_instance
+slug: effondrement_reseau_mondial_communication_fortress_world
+archetype: effondrement_reseau_mondial_communication
+scenario: fortress_world
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
+type_evenement: technological
+portee: globale
+date: 2040
+date_label: 14 mars 2040
+impossible: false
+custom: true
+description: >
+  Le 14 mars 2040, neuf nœuds critiques du réseau mondial sont détruits
+  simultanément. Responsabilité jamais officiellement établie — chaque
+  bloc accuse les autres. Dans les 72 heures, le Commandement Atlantique
+  décrète l'état d'urgence numérique et nationalise de facto les
+  infrastructures de NexCore sur son territoire. C'est la naissance
+  officielle des internets de blocs.
+consequences: >
+  Création des architectures numériques souveraines des blocs dès 2041-2044.
+  NexCore nationalisé et transformé en infrastructure d'État. Fin de l'internet
+  mondial unifié. L'attentat — quel qu'en soit l'auteur — est rétrospectivement
+  considéré comme le moment fondateur du fortress_world numérique.
+realisation: >
+  L'attentat se produit comme prévu mais ses conséquences sont instrumentalisées
+  par les blocs émergents comme prétexte à la souveraineté numérique.
+  Ce qui est une catastrophe devient un outil de contrôle.
+impact_sur_variables:
+  - variable: technologie_information
+    delta_level: 20
+    duree: 58
+    polarite: -1
+  - variable: gouvernance_institutions
+    delta_level: 10
+    duree: 30
+    polarite: -1
+  - variable: geopolitique_conflits
+    delta_level: 15
+    duree: 40
+    polarite: 1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+  - nexcore_fortress_world
+note_coherence: >
+  Dans fortress_world, cet événement est le catalyseur de la nationalisation
+  numérique. Il précède directement la création des commandements cyber
+  des blocs en 2044 et la nationalisation de NexCore en 2048.
+date_creation: 2098-01-01
+---
+
+# L'Attentat des Neuf Nœuds — Prétexte à la Souveraineté Numérique
+
+## Réalisation dans [[fortress_world]]
+L'attentat se produit comme prévu mais ses conséquences sont instrumentalisées
+par les blocs émergents comme prétexte à la souveraineté numérique.
+
+## Description journalistique
+Le 14 mars 2040, neuf nœuds critiques du réseau mondial sont détruits
+simultanément. Dans les 72 heures, le Commandement Atlantique nationalise
+de facto NexCore. C'est la naissance officielle des internets de blocs.
+
+## Conséquences
+Création des architectures numériques souveraines des blocs. Fin de l'internet
+mondial unifié. L'attentat est rétrospectivement considéré comme le moment
+fondateur du fortress_world numérique.
+
+## Impact sur les variables
+- **technologie_information** : delta -20 sur 58 ans
+- **gouvernance_institutions** : delta -10 sur 30 ans
+- **geopolitique_conflits** : delta +15 sur 40 ans
+
+## Acteurs impliqués
+- [[nexcore_fortress_world]]
+
+## Note de cohérence
+Cet événement précède directement la création des commandements cyber
+des blocs en 2044 et la nationalisation de NexCore en 2048.

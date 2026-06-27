@@ -1,0 +1,109 @@
+---
+name: Confédération des Territoires Sahéliens Autonomes — CTSA
+type: instance
+slug: ligue_des_cites_du_sahel_numerique_new_sustainability
+entite: ligue_des_cites_du_sahel_numerique
+scenario: new_sustainability
+localisation:
+  zone: ouagadougou_nouvelle_ctsa
+  lieu: Ouagadougou Nouvelle — Siège tournant de la CTSA
+  type_lieu: ville
+
+type_dans_scenario: réseau
+
+role_dans_scenario: >
+  Dans un monde de régénération stabilisée, la CTSA s'est imposée comme l'un des modèles de gouvernance distribuée les plus aboutis de l'hémisphère sud. Née du refus historique des cités sahéliennes de subir les infrastructures numériques et énergétiques héritées des blocs dominants, elle a co-construit sur deux décennies un système d'interopérabilité open-source reliant quarante-trois cités de la bande sahélienne — de Dakar à Djibouti. Aujourd'hui mature, elle est à la fois un laboratoire de gouvernance post-coloniale et un exportateur actif de protocoles souverains adoptés par des territoires périphériques d'Amérique latine et d'Asie centrale. Sa tension fondamentale est désormais interne : réussie et devenue référence mondiale, la CTSA doit résister à la tentation de reproduire les asymétries dont elle est issue.
+
+responsabilites: >
+  La CTSA administre un réseau d'infrastructures communes — micro-grids solaires mutualisés, protocoles de gouvernance algorithmique ouverts, banques de semences et de savoirs locaux numérisés — selon un modèle de délibération multi-niveaux impliquant conseils communautaires, assemblées de cités et chambre confédérale. Elle certifie les protocoles numériques souverains et arbitre les conflits inter-cités sur les ressources partagées, tout en pilotant des programmes d'exportation technologique à destination des territoires demandeurs.
+
+impact_local: 5
+impact_systemique_global: 3
+
+variables_influencees:
+    - technologie_information
+    - energie_ressources_critiques
+    - gouvernance_institutions
+    - organisation_territoires
+
+zone_geographique:
+    - continentale
+    - régionale
+
+zone_systemique:
+    - gouvernance
+    - énergie
+    - infrastructure
+    - information
+    - société
+
+alliances:
+    - reseau_des_communs_numeriques_globaux_new_sustainability
+    - mouvement_communautaire_des_micro_grids_energetiques_new_sustainability
+    - reseau_des_villes_regeneratives_new_sustainability
+    - fonds_mondial_de_redistribution_technologique_new_sustainability
+    - consortium_d_audit_algorithmique_ouvert_new_sustainability
+    - reseau_des_ingenieurs_climatiques_du_sud_global_new_sustainability
+    - mouvement_pour_l_autodetermination_territoriale_new_sustainability
+    - reseau_des_communs_productifs_regeneratifs_new_sustainability
+
+oppositions:
+    - enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability
+    - etats_souverainistes_anti_reseau_new_sustainability
+    - factions_internes_pro_opacite_des_parametres_new_sustainability
+    - internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
+    - coalition_des_industries_extractives_residuelles_new_sustainability
+    - lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability
+
+type_relation_dominante: alliance stratégique
+
+annee_debut: 2041
+annee_fin: 
+
+etat_temporel: actif
+age_historique: mature
+generation: reconstruction
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Depuis son siège tournant — cette année à Ouagadougou Nouvelle, l'an prochain à Niamey Solaire — la Confédération des Territoires Sahéliens Autonomes réunit chaque trimestre les délégués de quarante-trois cités pour statuer sur les protocoles qui font tourner l'une des architectures numériques les plus copiées au monde. Fondée sur les cendres des politiques d'aide conditionnelle des années 2030, la CTSA a démontré qu'une ceinture de territoires longtemps qualifiés de 'périphérie fragile' pouvait produire des standards technologiques exportés jusqu'en Bolivie et au Kazakhstan. Ses partisans la décrivent comme la preuve vivante que la souveraineté technique n'est pas un privilège des riches. Ses critiques, de plus en plus nombreux au sein même de l'organisation, se demandent si Dakar et Addis-Abeba — les deux nœuds les plus puissants du réseau — ne sont pas en train de reproduire, à l'échelle confédérale, exactement les rapports de force que la Ligue promettait d'abolir.
+
+signes_distinctifs: >
+  Le logo de la CTSA représente un réseau de points lumineux reliant les méridiens sahéliens sur fond de carte topographique générée en temps réel par ses propres satellites open-data — symbole de la souveraineté orbitale revendiquée. Ses agents de terrain portent des sacoches orange frappées du sigle CTSA brodé en tifinagh, arabe et wolof. Les assemblées confédérales se tiennent toujours en plein air, sous des ombrières photovoltaïques fabriquées localement — une esthétique du commun revendiquée comme position politique.
+
+tensions_narratives: >
+  La montée en puissance des cités-nœuds de Dakar et Addis-Abeba crée une fracture silencieuse entre les membres fondateurs riches en données et les cités périphériques qui se sentent de nouveau marginalisées — cette fois par leurs propres alliés. Par ailleurs, plusieurs demandes d'adhésion émanant de territoires d'Asie centrale poussent la CTSA à définir si elle reste un projet africain ou devient une architecture globale, risquant de diluer son identité fondatrice. Enfin, la pression croissante du Conseil de Gouvernance Algorithmique Intégrée pour intégrer les protocoles CTSA dans le cadre mondial soulève une question existentielle : l'absorption dans la gouvernance globale est-elle consécration ou dissolution ?
+
+date_creation: 2026-06-23
+---
+
+# Confédération des Territoires Sahéliens Autonomes — CTSA
+
+## Rôle dans [[new_sustainability]]
+Dans un monde de régénération stabilisée, la CTSA s'est imposée comme l'un des modèles de gouvernance distribuée les plus aboutis de l'hémisphère sud. Née du refus historique des cités sahéliennes de subir les infrastructures numériques et énergétiques héritées des blocs dominants, elle a co-construit sur deux décennies un système d'interopérabilité open-source reliant quarante-trois cités de la bande sahélienne — de Dakar à Djibouti. Aujourd'hui mature, elle est à la fois un laboratoire de gouvernance post-coloniale et un exportateur actif de protocoles souverains adoptés par des territoires périphériques d'Amérique latine et d'Asie centrale. Sa tension fondamentale est désormais interne : réussie et devenue référence mondiale, la CTSA doit résister à la tentation de reproduire les asymétries dont elle est issue.
+
+## Responsabilités
+La CTSA administre un réseau d'infrastructures communes — micro-grids solaires mutualisés, protocoles de gouvernance algorithmique ouverts, banques de semences et de savoirs locaux numérisés — selon un modèle de délibération multi-niveaux impliquant conseils communautaires, assemblées de cités et chambre confédérale. Elle certifie les protocoles numériques souverains et arbitre les conflits inter-cités sur les ressources partagées, tout en pilotant des programmes d'exportation technologique à destination des territoires demandeurs.
+
+## Variables influencées
+- [[technologie_information]]
+- [[energie_ressources_critiques]]
+- [[gouvernance_institutions]]
+- [[organisation_territoires]]
+
+## Relations
+**Alliés** : [[reseau_des_communs_numeriques_globaux_new_sustainability]], [[mouvement_communautaire_des_micro_grids_energetiques_new_sustainability]], [[reseau_des_villes_regeneratives_new_sustainability]], [[fonds_mondial_de_redistribution_technologique_new_sustainability]], [[consortium_d_audit_algorithmique_ouvert_new_sustainability]], [[reseau_des_ingenieurs_climatiques_du_sud_global_new_sustainability]], [[mouvement_pour_l_autodetermination_territoriale_new_sustainability]], [[reseau_des_communs_productifs_regeneratifs_new_sustainability]]
+**Opposants** : [[enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability]], [[etats_souverainistes_anti_reseau_new_sustainability]], [[factions_internes_pro_opacite_des_parametres_new_sustainability]], [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]], [[coalition_des_industries_extractives_residuelles_new_sustainability]], [[lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability]]
+
+## Description journalistique
+Depuis son siège tournant — cette année à Ouagadougou Nouvelle, l'an prochain à Niamey Solaire — la Confédération des Territoires Sahéliens Autonomes réunit chaque trimestre les délégués de quarante-trois cités pour statuer sur les protocoles qui font tourner l'une des architectures numériques les plus copiées au monde. Fondée sur les cendres des politiques d'aide conditionnelle des années 2030, la CTSA a démontré qu'une ceinture de territoires longtemps qualifiés de 'périphérie fragile' pouvait produire des standards technologiques exportés jusqu'en Bolivie et au Kazakhstan. Ses partisans la décrivent comme la preuve vivante que la souveraineté technique n'est pas un privilège des riches. Ses critiques, de plus en plus nombreux au sein même de l'organisation, se demandent si Dakar et Addis-Abeba — les deux nœuds les plus puissants du réseau — ne sont pas en train de reproduire, à l'échelle confédérale, exactement les rapports de force que la Ligue promettait d'abolir.
+
+## Tensions narratives
+La montée en puissance des cités-nœuds de Dakar et Addis-Abeba crée une fracture silencieuse entre les membres fondateurs riches en données et les cités périphériques qui se sentent de nouveau marginalisées — cette fois par leurs propres alliés. Par ailleurs, plusieurs demandes d'adhésion émanant de territoires d'Asie centrale poussent la CTSA à définir si elle reste un projet africain ou devient une architecture globale, risquant de diluer son identité fondatrice. Enfin, la pression croissante du Conseil de Gouvernance Algorithmique Intégrée pour intégrer les protocoles CTSA dans le cadre mondial soulève une question existentielle : l'absorption dans la gouvernance globale est-elle consécration ou dissolution ?

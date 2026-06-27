@@ -1,0 +1,96 @@
+---
+name: Agence Mondiale pour la Stabilisation Climatique
+type: instance
+slug: agence_stabilisation_climatique_policy_reform
+entite: agence_stabilisation_climatique
+scenario: policy_reform
+
+type_dans_scenario: institution
+
+role_dans_scenario: >
+  Pilier central de la gouvernance planétaire en 2098, l'AMSC coordonne l'ensemble des interventions géo-ingénieristes à grande échelle — gestion des aérosols stratosphériques, ensemencement des océans, régulation des albédos urbains — tout en supervisant les corridors de migration climatique qui déplacent chaque année plusieurs dizaines de millions de personnes. Dans le scénario policy_reform, elle incarne la technocratie mature : légitime aux yeux des États membres car indispensable, contestée par les populations car inaccessible. Elle agit comme architecture invisible de la stabilisation, moins visible qu'un gouvernement mais plus puissante qu'un traité.
+
+responsabilites: >
+  L'AMSC émet des mandats climatiques contraignants applicables aux 147 États signataires, déploie les flottes de drones atmosphériques de classe Veil-7 pour les interventions d'urgence, et gère le Registre Mondial des Zones Inhabitables qui détermine les droits de relocalisation de populations entières. Elle alloue également les quotas d'accès aux ressources énergétiques critiques liées aux systèmes de refroidissement planétaire.
+
+impact_local: 2
+impact_systemique_global: 5
+variables_influencees:
+    - climat_environnement_global
+    - gouvernance_institutions
+    - demographie_mobilite_humaine
+    - energie_ressources_critiques
+
+zone_geographique:
+    - globale
+
+zone_systemique:
+    - gouvernance
+    - énergie
+    - infrastructure
+    - société
+
+alliances:
+    - consortium_technologique_des_nations_integrees_policy_reform
+    - fonds_mondial_de_resilience_infrastructurelle_policy_reform
+    - reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference
+    - agence_internationale_de_l_energie_reformatee_aier_policy_reform
+
+oppositions:
+    - mouvement_pour_la_souverainete_territoriale_absolue_policy_reform
+    - collectifs_de_resistance_aux_relocalisations_forcees_policy_reform
+    - etats_dissidents_du_bloc_austral_policy_reform
+    - lobbies_des_energies_fossiles_residuelles_policy_reform
+
+type_relation_dominante: coopération
+
+annee_debut: 2031
+annee_fin: 
+
+etat_temporel: actif
+age_historique: dominant
+generation: transition
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Depuis son siège flottant de Genève-Lacustre — une plateforme modulaire construite sur les eaux montées du lac Léman — l'AMSC gère en silence ce que les gouvernements élus n'ont jamais osé décider. Ses 4 200 techniciens, climatologues et coordinateurs migratoires ne sont pas élus ; ils sont certifiés. Chaque matin, ses algorithmes de décision climato-sociale publient des 'recommandations contraignantes' que les États appliquent sans débat parlementaire, faute de capacités alternatives. Pour ses défenseurs, l'AMSC est la raison pour laquelle l'effondrement n'a pas eu lieu. Pour ses critiques, elle est la preuve que l'effondrement démocratique, lui, est déjà consommé.
+
+signes_distinctifs: >
+  Logo hexagonal bleu-gris inspiré des cristaux de glace, omniprésent sur les infrastructures de relocalisation et les balises des zones rouges. Les agents de terrain portent des combinaisons grises à bandes photoluminescentes turquoise, identifiables dans les zones de crise. Ses rapports annuels — traduits en 89 langues et diffusés obligatoirement sur tous les réseaux d'information publics — arborent une typographie épurée qui contraste avec la violence des données qu'ils contiennent.
+
+tensions_narratives: >
+  La légitimité de l'AMSC repose sur son efficacité : si une intervention géo-ingénieriste majeure échoue ou produit des effets secondaires catastrophiques sur une région non consultée, toute l'architecture de confiance s'effondre. Par ailleurs, la tension entre sa mission de stabilisation globale et les intérêts nationaux des États membres s'intensifie à mesure que les zones inhabitables se rapprochent des territoires des puissances fondatrices. Enfin, une faction interne — les 'Réformistes du Mandat' — pousse à l'organisation d'un référendum mondial sur la légitimité de l'Agence, une initiative que la direction centrale bloque systématiquement au nom de 'l'urgence opérationnelle permanente'.
+
+date_creation: 2026-06-15
+---
+
+# Agence Mondiale pour la Stabilisation Climatique
+
+## Rôle dans [[policy_reform]]
+Pilier central de la gouvernance planétaire en 2098, l'AMSC coordonne l'ensemble des interventions géo-ingénieristes à grande échelle — gestion des aérosols stratosphériques, ensemencement des océans, régulation des albédos urbains — tout en supervisant les corridors de migration climatique qui déplacent chaque année plusieurs dizaines de millions de personnes. Dans le scénario policy_reform, elle incarne la technocratie mature : légitime aux yeux des États membres car indispensable, contestée par les populations car inaccessible. Elle agit comme architecture invisible de la stabilisation, moins visible qu'un gouvernement mais plus puissante qu'un traité.
+
+## Responsabilités
+L'AMSC émet des mandats climatiques contraignants applicables aux 147 États signataires, déploie les flottes de drones atmosphériques de classe Veil-7 pour les interventions d'urgence, et gère le Registre Mondial des Zones Inhabitables qui détermine les droits de relocalisation de populations entières. Elle alloue également les quotas d'accès aux ressources énergétiques critiques liées aux systèmes de refroidissement planétaire.
+
+## Variables influencées
+- [[climat_environnement_global]]
+- [[gouvernance_institutions]]
+- [[demographie_mobilite_humaine]]
+- [[energie_ressources_critiques]]
+
+## Relations
+**Alliés** : [[consortium_technologique_des_nations_integrees_policy_reform]], [[fonds_mondial_de_resilience_infrastructurelle_policy_reform]], [[reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference]], [[agence_internationale_de_l_energie_reformatee_aier_policy_reform]]
+**Opposants** : [[mouvement_pour_la_souverainete_territoriale_absolue_policy_reform]], [[collectifs_de_resistance_aux_relocalisations_forcees_policy_reform]], [[etats_dissidents_du_bloc_austral_policy_reform]], [[lobbies_des_energies_fossiles_residuelles_policy_reform]]
+
+## Description journalistique
+Depuis son siège flottant de Genève-Lacustre — une plateforme modulaire construite sur les eaux montées du lac Léman — l'AMSC gère en silence ce que les gouvernements élus n'ont jamais osé décider. Ses 4 200 techniciens, climatologues et coordinateurs migratoires ne sont pas élus ; ils sont certifiés. Chaque matin, ses algorithmes de décision climato-sociale publient des 'recommandations contraignantes' que les États appliquent sans débat parlementaire, faute de capacités alternatives. Pour ses défenseurs, l'AMSC est la raison pour laquelle l'effondrement n'a pas eu lieu. Pour ses critiques, elle est la preuve que l'effondrement démocratique, lui, est déjà consommé.
+
+## Tensions narratives
+La légitimité de l'AMSC repose sur son efficacité : si une intervention géo-ingénieriste majeure échoue ou produit des effets secondaires catastrophiques sur une région non consultée, toute l'architecture de confiance s'effondre. Par ailleurs, la tension entre sa mission de stabilisation globale et les intérêts nationaux des États membres s'intensifie à mesure que les zones inhabitables se rapprochent des territoires des puissances fondatrices. Enfin, une faction interne — les 'Réformistes du Mandat' — pousse à l'organisation d'un référendum mondial sur la légitimité de l'Agence, une initiative que la direction centrale bloque systématiquement au nom de 'l'urgence opérationnelle permanente'.

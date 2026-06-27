@@ -1,0 +1,75 @@
+---
+name: Incident du Passage Arctique — Saisie de l'APA par les Unités NAT
+type: event_instance
+slug: incident_passage_arctique_policy_reform
+archetype: incident_passage_arctique
+scenario: policy_reform
+localisation:
+  zone: iqaluit_apa
+  lieu: Passage du Nord-Ouest (eaux arctiques disputées)
+  type_lieu: site_strategique
+type_evenement: political_social
+portee: continentale
+date: 2059
+date_label: été 2059
+impossible: false
+custom: true
+description: >
+  Dans l'Arctique de 2059, la fonte accélérée des glaces a transformé le Passage du Nord-Ouest en artère stratégique disputée entre deux autorités aux mandats incompatibles. Lorsque les navires d'escorte de la NAT hissent leurs fanions d'interception face au convoi de l'APA, les caméras des drones de surveillance du KNSF transmettent en temps réel les images à Nuuk et à Genève. La tension monte d'un cran dans des institutions mondiales habituées à arbitrer les conflits de compétence par la procédure — non par les armes. Le Tribunal International de la Mer enregistre la plainte groenlandaise sous procédure d'urgence, tandis que le Conseil de Régulation des Ressources Critiques convoque une session extraordinaire.
+consequences: >
+  L'incident force une clarification institutionnelle longtemps différée sur la juridiction arctique, aboutissant en 2062 à la négociation d'un Protocole Polaire intégré sous l'égide du CRRC-ARN, qui reconnaît la primauté de l'APA sur les eaux du Passage du Nord-Ouest contre des mécanismes de partage des revenus de transit. À court terme, il fragilise la confiance dans la capacité des institutions technocratiques à prévenir les confrontations armées sur les ressources critiques, alimentant les discours souverainistes au sein du Front des Souverainistes Énergétiques.
+realisation: >
+  En juillet 2059, une unité d'intervention maritime de la North Atlantic Transit Authority intercepte et immobilise un convoi de l'Arctic Passage Authority dans les eaux disputées du Passage du Nord-Ouest. La NAT invoque un droit de contrôle unilatéral sur les voies de transit énergétique, contestant la légitimité de l'APA à réguler seule le flux de méthaniers et de convois minéraux issus du sous-sol groenlandais. C'est la première confrontation armée directe entre les deux autorités de transit arctiques depuis la création de l'APA en 2038. Le Groenland, via son Kalaallit Nunaat Sovereign Fund, saisit immédiatement le Tribunal International de la Mer, appuyé par le Conseil de Régulation des Ressources Critiques.
+impact_sur_variables:
+  - variable: geopolitique_conflits
+    delta_level: 12
+    duree: 15
+    polarite: -1
+  - variable: frontieres_du_systeme
+    delta_level: 10
+    duree: 20
+    polarite: -1
+  - variable: energie_ressources_critiques
+    delta_level: -8
+    duree: 12
+    polarite: -1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+    - arctic_passage_authority_policy_reform
+    - kalaallit_nunaat_sovereign_fund_policy_reform
+    - conseil_regulation_ressources_policy_reform
+    - front_des_souverainistes_energetiques_policy_reform
+    - observatoire_mondial_des_ressources_critiques_policy_reform
+    - assemblee_territoires_policy_reform
+note_coherence: Dans un monde technocratique à haute tension institutionnelle (4/5), une confrontation armée circumpolaire entre deux autorités de transit aux mandats chevauchants est plausible et cohérente avec les variables geopolitique_conflits et energie_ressources_critiques à niveau modéré-élevé, l'incident agissant comme test de résistance du système de gouvernance réformé plutôt que comme rupture irréversible.
+custom_source: rééquilibrage_geo_2026-06
+date_creation: 2026-06-24
+---
+
+# Incident du Passage Arctique — Saisie de l'APA par les Unités NAT
+
+## Réalisation dans [[policy_reform]]
+En juillet 2059, une unité d'intervention maritime de la North Atlantic Transit Authority intercepte et immobilise un convoi de l'Arctic Passage Authority dans les eaux disputées du Passage du Nord-Ouest. La NAT invoque un droit de contrôle unilatéral sur les voies de transit énergétique, contestant la légitimité de l'APA à réguler seule le flux de méthaniers et de convois minéraux issus du sous-sol groenlandais. C'est la première confrontation armée directe entre les deux autorités de transit arctiques depuis la création de l'APA en 2038. Le Groenland, via son Kalaallit Nunaat Sovereign Fund, saisit immédiatement le Tribunal International de la Mer, appuyé par le Conseil de Régulation des Ressources Critiques.
+
+## Description journalistique
+Dans l'Arctique de 2059, la fonte accélérée des glaces a transformé le Passage du Nord-Ouest en artère stratégique disputée entre deux autorités aux mandats incompatibles. Lorsque les navires d'escorte de la NAT hissent leurs fanions d'interception face au convoi de l'APA, les caméras des drones de surveillance du KNSF transmettent en temps réel les images à Nuuk et à Genève. La tension monte d'un cran dans des institutions mondiales habituées à arbitrer les conflits de compétence par la procédure — non par les armes. Le Tribunal International de la Mer enregistre la plainte groenlandaise sous procédure d'urgence, tandis que le Conseil de Régulation des Ressources Critiques convoque une session extraordinaire.
+
+## Conséquences
+L'incident force une clarification institutionnelle longtemps différée sur la juridiction arctique, aboutissant en 2062 à la négociation d'un Protocole Polaire intégré sous l'égide du CRRC-ARN, qui reconnaît la primauté de l'APA sur les eaux du Passage du Nord-Ouest contre des mécanismes de partage des revenus de transit. À court terme, il fragilise la confiance dans la capacité des institutions technocratiques à prévenir les confrontations armées sur les ressources critiques, alimentant les discours souverainistes au sein du Front des Souverainistes Énergétiques.
+
+## Impact sur les variables
+- **geopolitique_conflits** : delta -12 sur 15 ans
+- **frontieres_du_systeme** : delta -10 sur 20 ans
+- **energie_ressources_critiques** : delta +8 sur 12 ans
+
+## Acteurs impliqués
+- [[arctic_passage_authority_policy_reform]]
+- [[kalaallit_nunaat_sovereign_fund_policy_reform]]
+- [[conseil_regulation_ressources_policy_reform]]
+- [[front_des_souverainistes_energetiques_policy_reform]]
+- [[observatoire_mondial_des_ressources_critiques_policy_reform]]
+- [[assemblee_territoires_policy_reform]]
+
+## Note de cohérence
+Dans un monde technocratique à haute tension institutionnelle (4/5), une confrontation armée circumpolaire entre deux autorités de transit aux mandats chevauchants est plausible et cohérente avec les variables geopolitique_conflits et energie_ressources_critiques à niveau modéré-élevé, l'incident agissant comme test de résistance du système de gouvernance réformé plutôt que comme rupture irréversible.

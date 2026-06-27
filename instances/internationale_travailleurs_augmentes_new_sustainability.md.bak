@@ -1,0 +1,102 @@
+---
+name: Confédération Mondiale des Travailleurs Cognitifs et Augmentés
+type: instance
+slug: internationale_travailleurs_augmentes_new_sustainability
+entite: internationale_travailleurs_augmentes
+scenario: new_sustainability
+localisation:
+  zone: hub_nairobi_kigali
+  lieu: Barcelone-Hub et Nairobi-Node
+  type_lieu: infrastructure
+  statut: review_manuelle
+  note: "La CMTCA a des bureaux à Barcelone-Hub et Nairobi-Node, mais est une organisation mondiale avec une zone_geographique 'globale' ; Nairobi-Node est mappable sur hub_nairobi_kigali, mais Barcelone n'a pas de zone correspondante, et l'ancrage est bi-localisé sans siège principal clair."
+
+type_dans_scenario: organisation
+
+role_dans_scenario: >
+  Dans l'équilibre technocratique du scénario new_sustainability, la CMTCA s'est progressivement institutionnalisée comme interlocuteur reconnu des grandes coordinations de gouvernance mondiale du travail. Elle ne combat plus l'automatisation frontalement mais négocie les termes de la 'transition augmentée' : allocation des revenus de productivité, droits à la déconnexion cognitive, encadrement des interfaces neuro-professionnelles. Son radicalisme originel s'est muté en expertise réglementaire, lui conférant une légitimité paradoxale au sein même des institutions technocratiques qu'elle était née pour contester.
+
+responsabilites: >
+  Négocie et supervise les 'Chartes d'Augmentation Éthique' signées avec les coalitions de gouvernance productive régionales, garantissant des planchers de contribution humaine dans les chaînes de valeur automatisées. Gère un réseau de centres de reconversion cognitive ouverts aux travailleurs en transition forcée. Administre le Fonds de Réversibilité Augmentée, permettant aux travailleurs hybridés de financer le retrait partiel ou total de leurs interfaces professionnelles.
+
+impact_local: 3
+impact_systemique_global: 4
+variables_influencees:
+    - systemes_productifs_travail
+    - gouvernance_institutions
+    - valeurs_culture_tempo_sociale
+    - technologie_information
+
+zone_geographique:
+    - globale
+    - régionale
+    - nationale
+
+zone_systemique:
+    - gouvernance
+    - économie
+    - société
+    - IA
+
+alliances:
+    - conseil_de_regulation_cognitive_de_l_onu_new_sustainability
+    - reseau_des_communs_productifs_regeneratifs_new_sustainability
+    - fonds_mondial_de_transition_ecologique_du_travail_new_sustainability
+
+oppositions:
+    - consortiums_d_optimisation_rh_algorithmique_policy_reform
+    - factions_internes_pro_desaugmentation_totale_policy_reform
+    - bloc_des_architectes_d_efficience_algorithmique_new_sustainability
+
+type_relation_dominante: coopération
+
+annee_debut: 2031
+annee_fin: 
+
+etat_temporel: actif
+age_historique: mature
+generation: ère cognitive
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Depuis ses bureaux modulaires de Barcelone-Hub et de Nairobi-Node, la CMTCA ressemble davantage à une agence de régulation qu'à un syndicat de combat. Ses délégués, souvent eux-mêmes interfacés, négocient en session mixte avec des IA de médiation institutionnelle les clauses des prochains accords productifs continentaux. Les anciens militantes parlent de 'victoire par absorption' : la Confédération a obtenu des droits concrets — le fameux seuil des 30% de présence humaine cognitive dans les processus critiques — mais au prix d'une intégration profonde dans l'architecture même qu'elle entendait réformer. Une nouvelle génération de membres, dits 'dissidents du confort', commence à faire entendre une voix plus acérée dans les assemblées de printemps.
+
+signes_distinctifs: >
+  Logo en double hélice entrelacée d'un poing fermé et d'un circuit neuronal, décliné en hologramme basse consommation sur tous les espaces publics de négociation. Les délégués arborent un brassard tressé de fibres biosynthétiques aux couleurs de leur région d'origine, signal discret d'appartenance dans les espaces technocratiques feutrés. La Confédération publie ses positions sous forme de 'mémorandums vivants', documents évolutifs co-rédigés par ses membres humains et ses IA de synthèse interne.
+
+tensions_narratives: >
+  La fracture interne entre les 'intégrateurs' — favorables à la négociation permanente dans les structures technocratiques — et les 'dissidents du confort' qui accusent la Confédération d'avoir légitimé l'optimisation en l'encadrant sans la questionner. La question du Fonds de Réversibilité, dont les demandes augmentent chaque année, révèle une souffrance augmentée que les Chartes n'ont pas résolue. Enfin, la tentation pour certains États membres de contourner la CMTCA au profit de régulations nationales plus permissives crée des brèches dans la cohérence globale durement construite.
+
+date_creation: 2026-06-15
+---
+
+# Confédération Mondiale des Travailleurs Cognitifs et Augmentés
+
+## Rôle dans [[new_sustainability]]
+Dans l'équilibre technocratique du scénario new_sustainability, la CMTCA s'est progressivement institutionnalisée comme interlocuteur reconnu des grandes coordinations de gouvernance mondiale du travail. Elle ne combat plus l'automatisation frontalement mais négocie les termes de la 'transition augmentée' : allocation des revenus de productivité, droits à la déconnexion cognitive, encadrement des interfaces neuro-professionnelles. Son radicalisme originel s'est muté en expertise réglementaire, lui conférant une légitimité paradoxale au sein même des institutions technocratiques qu'elle était née pour contester.
+
+## Responsabilités
+Négocie et supervise les 'Chartes d'Augmentation Éthique' signées avec les coalitions de gouvernance productive régionales, garantissant des planchers de contribution humaine dans les chaînes de valeur automatisées. Gère un réseau de centres de reconversion cognitive ouverts aux travailleurs en transition forcée. Administre le Fonds de Réversibilité Augmentée, permettant aux travailleurs hybridés de financer le retrait partiel ou total de leurs interfaces professionnelles.
+
+## Variables influencées
+- [[systemes_productifs_travail]]
+- [[gouvernance_institutions]]
+- [[valeurs_culture_tempo_sociale]]
+- [[technologie_information]]
+
+## Relations
+**Alliés** : [[conseil_de_regulation_cognitive_de_l_onu_new_sustainability]], [[reseau_des_communs_productifs_regeneratifs_new_sustainability]], [[fonds_mondial_de_transition_ecologique_du_travail_new_sustainability]]
+**Opposants** : [[consortiums_d_optimisation_rh_algorithmique_policy_reform]], [[factions_internes_pro_desaugmentation_totale_policy_reform]], [[bloc_des_architectes_d_efficience_algorithmique_new_sustainability]]
+
+## Description journalistique
+Depuis ses bureaux modulaires de Barcelone-Hub et de Nairobi-Node, la CMTCA ressemble davantage à une agence de régulation qu'à un syndicat de combat. Ses délégués, souvent eux-mêmes interfacés, négocient en session mixte avec des IA de médiation institutionnelle les clauses des prochains accords productifs continentaux. Les anciens militantes parlent de 'victoire par absorption' : la Confédération a obtenu des droits concrets — le fameux seuil des 30% de présence humaine cognitive dans les processus critiques — mais au prix d'une intégration profonde dans l'architecture même qu'elle entendait réformer. Une nouvelle génération de membres, dits 'dissidents du confort', commence à faire entendre une voix plus acérée dans les assemblées de printemps.
+
+## Tensions narratives
+La fracture interne entre les 'intégrateurs' — favorables à la négociation permanente dans les structures technocratiques — et les 'dissidents du confort' qui accusent la Confédération d'avoir légitimé l'optimisation en l'encadrant sans la questionner. La question du Fonds de Réversibilité, dont les demandes augmentent chaque année, révèle une souffrance augmentée que les Chartes n'ont pas résolue. Enfin, la tentation pour certains États membres de contourner la CMTCA au profit de régulations nationales plus permissives crée des brèches dans la cohérence globale durement construite.

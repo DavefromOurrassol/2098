@@ -1,0 +1,103 @@
+---
+name: Seoul Collectif Nexcore — Les Grilles de l'Entre-Deux
+type: instance
+slug: seoul_collectif_nexcore_breakdown
+entite: seoul_collectif_nexcore
+scenario: breakdown
+
+type_dans_scenario: organisation
+
+role_dans_scenario: >
+  Collectif de Seoul né de l'effondrement de la gouvernance centrale coréenne, regroupant d'anciens ingénieurs tech et militants de quartier autour d'infrastructures numériques décentralisées. Gère des réseaux d'échange et de sécurité locale dans les districts abandonnés par l'État. Tenu en suspicion par les blocs régionaux voisins qui craignent son influence disruptive. Dans le chaos du breakdown, le Collectif est devenu l'épine dorsale invisible de plusieurs districts de l'ancienne métropole : là où les institutions ont disparu, ses nœuds de connectivité et ses protocoles de coordination tiennent lieu de contrat social. Son influence s'étend sans se formaliser — ce qui le rend insaisissable autant qu'indispensable.
+
+responsabilites: >
+  Maintient en état des réseaux de communication décentralisés dans les zones abandonnées par l'État coréen résiduel, opère des systèmes d'échange communautaire (énergie, vivres, données médicales) via des protocoles mesh chiffrés, et assure une forme de sécurité collective par coordination entre groupes de quartier. Documente également les effondrements d'infrastructure pour archivage et partage inter-nœuds.
+
+impact_local: 5
+impact_systemique_global: 2
+
+variables_influencees:
+    - gouvernance_institutions
+    - technologie_information
+    - organisation_territoires
+
+zone_geographique:
+    - urbaine
+    - régionale
+
+zone_systemique:
+    - gouvernance
+    - information
+    - infrastructure
+    - société
+    - cyberspace
+
+alliances:
+    - nexcore_breakdown
+    - lagos_est_nexcore_breakdown
+    - carthage_nord_nexcore_breakdown
+    - nairobi_crrc_breakdown
+    - collectifs_de_reparation_energetique_breakdown
+    - guilde_des_techniciens_nomades_breakdown
+    - collectif_hackers_decroissance_infrastructure_breakdown
+    - reseaux_de_solidarite_horizontale_post_effondrement_breakdown
+
+oppositions:
+    - coalition_pacifique_nord_breakdown
+    - conglometrat_sino_siberien_bohai_transit_breakdown
+    - enclaves_corporatives_fortifiees_breakdown
+    - milices_de_controle_territorial_breakdown
+    - fronts_populistes_anti_technocratiques_breakdown
+    - conseil_regulation_algorithmique_breakdown
+
+type_relation_dominante: symbiose
+
+annee_debut: 2081
+annee_fin: 
+
+etat_temporel: actif
+age_historique: ascendant
+generation: post-effondrement
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Dans les districts de Nowon et Dobong, là où les panneaux officiels ont été arrachés et les antennes étatiques sabotées, les habitants parlent simplement des 'grilles' — ces nœuds de câbles et de boîtiers recyclés qui pendent entre les immeubles comme des nervures exposées. Derrière eux, le Seoul Collectif Nexcore : ni administration, ni milice, ni entreprise, mais quelque chose qui fait le travail des trois. Des anciens ingénieurs de Samsung ou de Kakao côtoient des militants anti-démolition de 2060, et ensemble ils font tourner des marchés d'échange numériques, des alertes d'intrusion de quartier et des archives médicales partagées. Les blocs régionaux du Pacifique Nord les surveillent avec une méfiance croissante : chaque nouveau district que le Collectif 'câble' est un district qui échappe à leur orbite. Personne ne sait exactement combien de personnes en font partie. Personne à Seoul ne peut se permettre de le leur demander.
+
+signes_distinctifs: >
+  Logo informel : une grille hexagonale incomplète, toujours partiellement effacée ou peinte sur des surfaces de récupération. Les membres portent des badges RFID à géométrie variable qui changent de couleur selon le niveau d'alerte du réseau local. Le langage interne mêle jargon technique coréen, anglais de protocole et un argot de quartier issu des communautés de réparation électronique des années 2060.
+
+tensions_narratives: >
+  Le Collectif est à un point de bascule : son efficacité attire des demandes de formalisation — de la part de réfugiés qui veulent une 'adresse' pour négocier, et de blocs régionaux qui préféreraient un interlocuteur identifiable à une nébuleuse incontrôlable. Accepter équivaut à se soumettre à des logiques de pouvoir qui les trahiraient ; refuser risque de les laisser isolés face à des pressions militaires croissantes. En interne, une fracture monte entre les techniciens qui veulent étendre le réseau au-delà de Seoul et les militants de quartier qui craignent de perdre l'ancrage territorial qui fait leur légitimité. Et une question sans réponse hante les assemblées nocturnes : si le Collectif devient une puissance, qui le contrôlera ?
+
+date_creation: 2026-06-27
+---
+
+# Seoul Collectif Nexcore — Les Grilles de l'Entre-Deux
+
+## Rôle dans [[breakdown]]
+Collectif de Seoul né de l'effondrement de la gouvernance centrale coréenne, regroupant d'anciens ingénieurs tech et militants de quartier autour d'infrastructures numériques décentralisées. Gère des réseaux d'échange et de sécurité locale dans les districts abandonnés par l'État. Tenu en suspicion par les blocs régionaux voisins qui craignent son influence disruptive. Dans le chaos du breakdown, le Collectif est devenu l'épine dorsale invisible de plusieurs districts de l'ancienne métropole : là où les institutions ont disparu, ses nœuds de connectivité et ses protocoles de coordination tiennent lieu de contrat social. Son influence s'étend sans se formaliser — ce qui le rend insaisissable autant qu'indispensable.
+
+## Responsabilités
+Maintient en état des réseaux de communication décentralisés dans les zones abandonnées par l'État coréen résiduel, opère des systèmes d'échange communautaire (énergie, vivres, données médicales) via des protocoles mesh chiffrés, et assure une forme de sécurité collective par coordination entre groupes de quartier. Documente également les effondrements d'infrastructure pour archivage et partage inter-nœuds.
+
+## Variables influencées
+- [[gouvernance_institutions]]
+- [[technologie_information]]
+- [[organisation_territoires]]
+
+## Relations
+**Alliés** : [[nexcore_breakdown]], [[lagos_est_nexcore_breakdown]], [[carthage_nord_nexcore_breakdown]], [[nairobi_crrc_breakdown]], [[collectifs_de_reparation_energetique_breakdown]], [[guilde_des_techniciens_nomades_breakdown]], [[collectif_hackers_decroissance_infrastructure_breakdown]], [[reseaux_de_solidarite_horizontale_post_effondrement_breakdown]]
+**Opposants** : [[coalition_pacifique_nord_breakdown]], [[conglometrat_sino_siberien_bohai_transit_breakdown]], [[enclaves_corporatives_fortifiees_breakdown]], [[milices_de_controle_territorial_breakdown]], [[fronts_populistes_anti_technocratiques_breakdown]], [[conseil_regulation_algorithmique_breakdown]]
+
+## Description journalistique
+Dans les districts de Nowon et Dobong, là où les panneaux officiels ont été arrachés et les antennes étatiques sabotées, les habitants parlent simplement des 'grilles' — ces nœuds de câbles et de boîtiers recyclés qui pendent entre les immeubles comme des nervures exposées. Derrière eux, le Seoul Collectif Nexcore : ni administration, ni milice, ni entreprise, mais quelque chose qui fait le travail des trois. Des anciens ingénieurs de Samsung ou de Kakao côtoient des militants anti-démolition de 2060, et ensemble ils font tourner des marchés d'échange numériques, des alertes d'intrusion de quartier et des archives médicales partagées. Les blocs régionaux du Pacifique Nord les surveillent avec une méfiance croissante : chaque nouveau district que le Collectif 'câble' est un district qui échappe à leur orbite. Personne ne sait exactement combien de personnes en font partie. Personne à Seoul ne peut se permettre de le leur demander.
+
+## Tensions narratives
+Le Collectif est à un point de bascule : son efficacité attire des demandes de formalisation — de la part de réfugiés qui veulent une 'adresse' pour négocier, et de blocs régionaux qui préféreraient un interlocuteur identifiable à une nébuleuse incontrôlable. Accepter équivaut à se soumettre à des logiques de pouvoir qui les trahiraient ; refuser risque de les laisser isolés face à des pressions militaires croissantes. En interne, une fracture monte entre les techniciens qui veulent étendre le réseau au-delà de Seoul et les militants de quartier qui craignent de perdre l'ancrage territorial qui fait leur légitimité. Et une question sans réponse hante les assemblées nocturnes : si le Collectif devient une puissance, qui le contrôlera ?

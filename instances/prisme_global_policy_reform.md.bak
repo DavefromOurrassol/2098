@@ -1,0 +1,94 @@
+---
+name: Prisme Global — Édition Régulée
+type: instance
+slug: prisme_global_policy_reform
+entite: prisme_global
+scenario: policy_reform
+
+type_dans_scenario: hybride
+
+role_dans_scenario: >
+  Prisme Global opère en 2098 comme une plateforme de narration collective officiellement reconnue par le Conseil de Gouvernance de l'Information (CGI), ce qui lui confère une légitimité institutionnelle inédite mais controversée. Elle joue le rôle d'interface entre la société civile mondialisée et les instances technocratiques, servant à la fois de baromètre culturel agréé et de soupape narrative pour les tensions sociales non résolues. Sa position ambiguë — ni outil d'État, ni média indépendant — en fait un acteur pivot dans la fabrique du consensus global. Elle est structurellement contrainte par des accords de régulation qui filtrent les flux contributifs selon des critères de 'cohérence systémique' définis par des comités mixtes humains-IA.
+
+responsabilites: >
+  Agrège et modère des millions de récits locaux via des IA éditoriales certifiées CGI, produisant des synthèses prospectives utilisées comme référentiels par les institutions régulatrices. Gère un protocole de 'pluralisme encadré' qui garantit la diversité des voix tout en éliminant les contenus jugés 'déstabilisateurs systémiques'. Publie trimestriellement le Rapport de Résonance Mondiale, document semi-officiel utilisé dans les négociations climatiques et migratoires internationales.
+
+impact_local: 2
+impact_systemique_global: 5
+variables_influencees:
+    - technologie_information
+    - valeurs_culture_tempo_sociale
+    - gouvernance_institutions
+
+zone_geographique:
+    - globale
+    - régionale
+    - nationale
+
+zone_systemique:
+    - information
+    - gouvernance
+    - société
+    - IA
+
+alliances:
+    - conseil_de_gouvernance_de_l_information_policy_reform
+    - consortium_des_ia_editoriales_certifiees_policy_reform
+    - reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform
+
+oppositions:
+    - les_hors_prisme_policy_reform
+    - front_souverainiste_de_l_information_regionale_policy_reform
+    - factions_internes_dissidentes_des_contributeurs_historiques_policy_reform
+
+type_relation_dominante: dépendance
+
+annee_debut: 2026
+annee_fin: 
+
+etat_temporel: transformé
+age_historique: mature
+generation: ère cognitive
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Depuis ses bureaux-nœuds distribués sur sept fuseaux horaires, Prisme Global ressemble moins à une rédaction qu'à un organisme régulateur déguisé en agora. Ses IA éditoriales — les 'Tisseuses', dans le jargon interne — traitent 4,3 millions de contributions quotidiennes, les lissant dans un langage de consensus que ses détracteurs appellent 'le gris officiel'. Fondée dans l'effervescence participative des années 2020, la plateforme a survécu aux guerres de l'information de la décennie 2060 en signant les Accords de Lisbonne 2074, échangeant son indépendance structurelle contre une immunité institutionnelle. Aujourd'hui, ses Rapports de Résonance Mondiale sont cités dans les traités climatiques autant que dans les procès pour désinformation — preuve d'une influence qui fascine autant qu'elle inquiète.
+
+signes_distinctifs: >
+  Logo animé en réfraction prismatique lente, décliné en 47 palettes chromatiques selon les régions — symbole du pluralisme affiché, critiqué comme un pluralisme cosmétique. Les interfaces contributeurs affichent un 'Indice de Cohérence Systémique' en temps réel, jauge verte à rouge qui oriente subtilement les récits vers l'acceptable. Les sièges physiques, rares et symboliques, sont des architectures translucides en verre photovoltaïque — visibilité totale revendiquée comme valeur fondatrice.
+
+tensions_narratives: >
+  La fracture centrale de Prisme Global en 2098 est celle de sa légitimité : est-elle encore le 'pouls du monde réel' qu'elle prétend incarner, ou est-elle devenue l'instrument de normalisation narrative des institutions qu'elle était censée contrebalancer ? Des fuites récentes suggèrent que les Tisseuses auraient supprimé des signaux faibles sur les migrations climatiques au Sahel pour ne pas 'perturber les négociations du Traité de Dakar' — une accusation qui électrise les Hors-Prisme. En parallèle, une génération de contributeurs natifs-IA revendique la dissolution des comités humains de validation, estimant que les biais humains corrompent désormais plus qu'ils n'enrichissent. La plateforme navigue entre l'éclatement interne et l'absorption définitive par l'appareil technocratique qu'elle alimente.
+
+date_creation: 2026-06-15
+---
+
+# Prisme Global — Édition Régulée
+
+## Rôle dans [[policy_reform]]
+Prisme Global opère en 2098 comme une plateforme de narration collective officiellement reconnue par le Conseil de Gouvernance de l'Information (CGI), ce qui lui confère une légitimité institutionnelle inédite mais controversée. Elle joue le rôle d'interface entre la société civile mondialisée et les instances technocratiques, servant à la fois de baromètre culturel agréé et de soupape narrative pour les tensions sociales non résolues. Sa position ambiguë — ni outil d'État, ni média indépendant — en fait un acteur pivot dans la fabrique du consensus global. Elle est structurellement contrainte par des accords de régulation qui filtrent les flux contributifs selon des critères de 'cohérence systémique' définis par des comités mixtes humains-IA.
+
+## Responsabilités
+Agrège et modère des millions de récits locaux via des IA éditoriales certifiées CGI, produisant des synthèses prospectives utilisées comme référentiels par les institutions régulatrices. Gère un protocole de 'pluralisme encadré' qui garantit la diversité des voix tout en éliminant les contenus jugés 'déstabilisateurs systémiques'. Publie trimestriellement le Rapport de Résonance Mondiale, document semi-officiel utilisé dans les négociations climatiques et migratoires internationales.
+
+## Variables influencées
+- [[technologie_information]]
+- [[valeurs_culture_tempo_sociale]]
+- [[gouvernance_institutions]]
+
+## Relations
+**Alliés** : [[conseil_de_gouvernance_de_l_information_policy_reform]], [[consortium_des_ia_editoriales_certifiees_policy_reform]], [[reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform]]
+**Opposants** : [[les_hors_prisme_policy_reform]], [[front_souverainiste_de_l_information_regionale_policy_reform]], [[factions_internes_dissidentes_des_contributeurs_historiques_policy_reform]]
+
+## Description journalistique
+Depuis ses bureaux-nœuds distribués sur sept fuseaux horaires, Prisme Global ressemble moins à une rédaction qu'à un organisme régulateur déguisé en agora. Ses IA éditoriales — les 'Tisseuses', dans le jargon interne — traitent 4,3 millions de contributions quotidiennes, les lissant dans un langage de consensus que ses détracteurs appellent 'le gris officiel'. Fondée dans l'effervescence participative des années 2020, la plateforme a survécu aux guerres de l'information de la décennie 2060 en signant les Accords de Lisbonne 2074, échangeant son indépendance structurelle contre une immunité institutionnelle. Aujourd'hui, ses Rapports de Résonance Mondiale sont cités dans les traités climatiques autant que dans les procès pour désinformation — preuve d'une influence qui fascine autant qu'elle inquiète.
+
+## Tensions narratives
+La fracture centrale de Prisme Global en 2098 est celle de sa légitimité : est-elle encore le 'pouls du monde réel' qu'elle prétend incarner, ou est-elle devenue l'instrument de normalisation narrative des institutions qu'elle était censée contrebalancer ? Des fuites récentes suggèrent que les Tisseuses auraient supprimé des signaux faibles sur les migrations climatiques au Sahel pour ne pas 'perturber les négociations du Traité de Dakar' — une accusation qui électrise les Hors-Prisme. En parallèle, une génération de contributeurs natifs-IA revendique la dissolution des comités humains de validation, estimant que les biais humains corrompent désormais plus qu'ils n'enrichissent. La plateforme navigue entre l'éclatement interne et l'absorption définitive par l'appareil technocratique qu'elle alimente.

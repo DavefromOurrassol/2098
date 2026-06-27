@@ -1,0 +1,43 @@
+# ─────────────────────────────────────────
+# CONFIGURATION GÉNÉRATION D'ARTICLES
+# Ourrassol 2098
+# ─────────────────────────────────────────
+
+# ── Scénario monde ──
+# Valeurs possibles :
+#   fortress_world | new_sustainability | breakdown
+#   eco_communalism | policy_reform | reference
+scenario: fortress_world
+
+# ── Thématique ──
+# Valeurs possibles :
+#   actualites_a_la_une | politique | economie_finance
+#   environnement_climat | sciences_technologies | societe
+#   culture | international | musique | sports | faits_divers
+#   opinions_editoriaux | lifestyle_art_de_vivre | sante
+#   education | histoire_patrimoine | medias_communication
+#   religion_spiritualite | petites_annonces_services | meteo
+thematique: sciences_technologies
+
+# ── Paramètres article ──
+article:
+  # Titre suggéré (optionnel — laisser vide pour laisser Claude choisir)
+  titre_suggere: ""
+
+  # Angle spécifique (optionnel — précise le sujet ou le point de vue)
+  # Exemple : "focus sur les réfugiés climatiques en Europe du Nord"
+  angle_specifique: ""
+
+  # Longueur cible
+  # Valeurs : breve | analyse | reportage | chronique | editorial
+  longueur: auto
+
+# ── Sortie ──
+output:
+  # Dossier de sauvegarde (relatif au vault)
+  dossier: articles/
+
+  # Nom du fichier généré
+  # "auto" = horodatage automatique (recommandé)
+  # ou spécifier un nom : "mon_article.md"
+  nom_fichier: auto

@@ -1,0 +1,109 @@
+---
+name: Frente Sertão Livre
+type: instance
+slug: frente_sert_o_livre_eco_communalism
+entite: frente_sert_o_livre
+scenario: eco_communalism
+
+type_dans_scenario: réseau
+
+role_dans_scenario: >
+  Réseau de communautés semi-arides du Nordeste brésilien organisées en coopératives d'énergie solaire et d'agriculture sèche, en résistance ouverte aux grands propriétaires terriens et aux corporations biotechnologiques. Principal foyer de contre-pouvoir rural dans l'intérieur brésilien, avec des ramifications au Paraguay et en Bolivie. Ancré à Fortaleza, Caruaru et Feira de Santana, le Frente constitue dans le contexte éco-communaliste de 2098 un laboratoire vivant de la marge devenue centre : là où les structures globales se sont retirées ou effondrées, ces communautés ont érigé une économie de subsistance émancipée fondée sur la réciprocité, la gestion collective des ressources critiques et le refus actif de toute réintégration aux circuits d'accumulation. Sa trajectoire de régénération reste fragile, constamment arbitrée entre l'imperméabilité nécessaire à sa survie et les ouvertures indispensables à son expansion.
+
+responsabilites: >
+  Coordination des coopératives d'énergie solaire distribuée et des réseaux d'agriculture sèche (cisternas, mandalas, semences paysannes adaptées au semi-aride) sur l'arc Fortaleza–Caruaru–Feira de Santana et au-delà. Organisation de la résistance foncière face aux latifundiaires et aux offensives des corporations biotechnologiques cherchant à breveter les variétés locales. Maintenance des circuits de solidarité et d'échange interterritoriaux avec les antennes paraguayennes et boliviennes, garantissant la continuité des flux de semences, de savoirs agronomiques et de technologies sobres.
+
+impact_local: 5
+impact_systemique_global: 3
+
+variables_influencees:
+    - organisation_territoires
+    - energie_ressources_critiques
+    - systemes_productifs_travail
+    - climat_environnement_global
+
+zone_geographique:
+    - régionale
+    - continentale
+
+zone_systemique:
+    - énergie
+    - gouvernance
+    - économie
+    - société
+    - infrastructure
+
+alliances:
+    - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
+    - guildes_des_semenciers_itinerants_eco_communalism
+    - assemblee_territoires_eco_communalism
+    - assemblees_cooperatives_regionales_eco_communalism
+    - mouvement_racines_vivantes_eco_communalism
+    - reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism
+    - brigades_de_restauration_ecologique_eco_communalism
+    - reseaux_de_radio_communautaire_basse_consommation_eco_communalism
+    - consortium_amazonia_viva_eco_communalism
+    - collectifs_de_techniciens_sobres_eco_communalism
+    - mutuelles_de_sante_territoriales_eco_communalism
+
+oppositions:
+    - agro_conglomerats_des_enclaves_technologiques_eco_communalism
+    - consortiums_industriels_de_l_eau_eco_communalism
+    - factions_extractivistes_des_aquiferes_communs_eco_communalism
+    - enclaves_extractivistes_residuelles_des_corridors_eco_communalism
+    - reseaux_de_notables_communautaires_capturistes_eco_communalism
+    - plateformes_centralisees_de_reagregation_globale_eco_communalism
+    - cartels_de_narration_de_penurie_eco_communalism
+
+type_relation_dominante: conflit
+
+annee_debut: 2026
+annee_fin: 
+
+etat_temporel: actif
+age_historique: ascendant
+generation: reconstruction
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Dans les caatingas brûlées de l'intérieur brésilien, le Frente Sertão Livre s'impose en 2098 comme l'une des expériences les plus abouties de souveraineté populaire sur les ressources critiques. Ses champs de panneaux solaires basse technologie, réparables par n'importe quel technicien local, alimentent des villages que les réseaux nationaux ont abandonnés depuis deux décennies ; ses banques de semences paysannes résistent pied à pied aux offensives juridiques des corporations biotechnologiques qui revendiquent des droits de propriété sur des variétés cultivées depuis des générations. Les délégués du Frente circulent à vélo ou en camionnette solaire entre Fortaleza, Caruaru et Feira de Santana, portant des arbitrages collectifs plutôt que des ordres, et les antennes paraguayennes et boliviennes envoient régulièrement des courriers de semences et d'apprentis agronomes. Pour ses membres, la force du réseau réside précisément dans ce qu'il n'a pas : pas de siège central attaquable, pas de compte bancaire saisissable, pas de chef identifiable — seulement des assemblées, des greniers communs et une mémoire agronomique obstinément transmise.
+
+signes_distinctifs: >
+  Drapeaux cousus de tissu mandacaru (cactus colonnaire stylisé) en fil jaune sur fond brun-rouge, symbole de la vie persistante dans l'aridité. Les coopératives arborent des plaques de métal recyclé gravées au numéro d'assemblée locale plutôt qu'à un logo central. Les délégués itinérants portent des carnets de terrain reliés en cuir de caprins locaux, compilant jurisprudences communales, variétés semencières et schémas d'installation solaire — objets à la fois techniques et rituels.
+
+tensions_narratives: >
+  La tentation de l'intégration se fait pressante : plusieurs municípios offrent des subventions publiques en échange d'une formalisation juridique du Frente, ce qui divise profondément les assemblées entre pragmatiques et tenants de l'imperméabilité. Par ailleurs, la croissance des antennes au Paraguay et en Bolivie soulève la question de la gouvernance à distance — comment maintenir l'horizontalité quand le réseau franchit les frontières et les langues ? Enfin, les corporations biotechnologiques intensifient leurs stratégies de contournement : rachat discret de terres limitrophes, recrutement de leaders locaux, dépôts de brevets sur des variétés cousines — autant de pressions qui pourraient fracturer le réseau ou le contraindre à des compromis qu'il s'est jusqu'ici refusé à concéder.
+
+date_creation: 2026-06-23
+---
+
+# Frente Sertão Livre
+
+## Rôle dans [[eco_communalism]]
+Réseau de communautés semi-arides du Nordeste brésilien organisées en coopératives d'énergie solaire et d'agriculture sèche, en résistance ouverte aux grands propriétaires terriens et aux corporations biotechnologiques. Principal foyer de contre-pouvoir rural dans l'intérieur brésilien, avec des ramifications au Paraguay et en Bolivie. Ancré à Fortaleza, Caruaru et Feira de Santana, le Frente constitue dans le contexte éco-communaliste de 2098 un laboratoire vivant de la marge devenue centre : là où les structures globales se sont retirées ou effondrées, ces communautés ont érigé une économie de subsistance émancipée fondée sur la réciprocité, la gestion collective des ressources critiques et le refus actif de toute réintégration aux circuits d'accumulation. Sa trajectoire de régénération reste fragile, constamment arbitrée entre l'imperméabilité nécessaire à sa survie et les ouvertures indispensables à son expansion.
+
+## Responsabilités
+Coordination des coopératives d'énergie solaire distribuée et des réseaux d'agriculture sèche (cisternas, mandalas, semences paysannes adaptées au semi-aride) sur l'arc Fortaleza–Caruaru–Feira de Santana et au-delà. Organisation de la résistance foncière face aux latifundiaires et aux offensives des corporations biotechnologiques cherchant à breveter les variétés locales. Maintenance des circuits de solidarité et d'échange interterritoriaux avec les antennes paraguayennes et boliviennes, garantissant la continuité des flux de semences, de savoirs agronomiques et de technologies sobres.
+
+## Variables influencées
+- [[organisation_territoires]]
+- [[energie_ressources_critiques]]
+- [[systemes_productifs_travail]]
+- [[climat_environnement_global]]
+
+## Relations
+**Alliés** : [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]], [[guildes_des_semenciers_itinerants_eco_communalism]], [[assemblee_territoires_eco_communalism]], [[assemblees_cooperatives_regionales_eco_communalism]], [[mouvement_racines_vivantes_eco_communalism]], [[reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism]], [[brigades_de_restauration_ecologique_eco_communalism]], [[reseaux_de_radio_communautaire_basse_consommation_eco_communalism]], [[consortium_amazonia_viva_eco_communalism]], [[collectifs_de_techniciens_sobres_eco_communalism]], [[mutuelles_de_sante_territoriales_eco_communalism]]
+**Opposants** : [[agro_conglomerats_des_enclaves_technologiques_eco_communalism]], [[consortiums_industriels_de_l_eau_eco_communalism]], [[factions_extractivistes_des_aquiferes_communs_eco_communalism]], [[enclaves_extractivistes_residuelles_des_corridors_eco_communalism]], [[reseaux_de_notables_communautaires_capturistes_eco_communalism]], [[plateformes_centralisees_de_reagregation_globale_eco_communalism]], [[cartels_de_narration_de_penurie_eco_communalism]]
+
+## Description journalistique
+Dans les caatingas brûlées de l'intérieur brésilien, le Frente Sertão Livre s'impose en 2098 comme l'une des expériences les plus abouties de souveraineté populaire sur les ressources critiques. Ses champs de panneaux solaires basse technologie, réparables par n'importe quel technicien local, alimentent des villages que les réseaux nationaux ont abandonnés depuis deux décennies ; ses banques de semences paysannes résistent pied à pied aux offensives juridiques des corporations biotechnologiques qui revendiquent des droits de propriété sur des variétés cultivées depuis des générations. Les délégués du Frente circulent à vélo ou en camionnette solaire entre Fortaleza, Caruaru et Feira de Santana, portant des arbitrages collectifs plutôt que des ordres, et les antennes paraguayennes et boliviennes envoient régulièrement des courriers de semences et d'apprentis agronomes. Pour ses membres, la force du réseau réside précisément dans ce qu'il n'a pas : pas de siège central attaquable, pas de compte bancaire saisissable, pas de chef identifiable — seulement des assemblées, des greniers communs et une mémoire agronomique obstinément transmise.
+
+## Tensions narratives
+La tentation de l'intégration se fait pressante : plusieurs municípios offrent des subventions publiques en échange d'une formalisation juridique du Frente, ce qui divise profondément les assemblées entre pragmatiques et tenants de l'imperméabilité. Par ailleurs, la croissance des antennes au Paraguay et en Bolivie soulève la question de la gouvernance à distance — comment maintenir l'horizontalité quand le réseau franchit les frontières et les langues ? Enfin, les corporations biotechnologiques intensifient leurs stratégies de contournement : rachat discret de terres limitrophes, recrutement de leaders locaux, dépôts de brevets sur des variétés cousines — autant de pressions qui pourraient fracturer le réseau ou le contraindre à des compromis qu'il s'est jusqu'ici refusé à concéder.

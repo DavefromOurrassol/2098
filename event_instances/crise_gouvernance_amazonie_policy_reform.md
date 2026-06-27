@@ -1,0 +1,88 @@
+---
+name: Protocole d'Urgence Amazonienne — Crise de Gouvernance du Bassin Vert
+type: event_instance
+slug: crise_gouvernance_amazonie_policy_reform
+archetype: crise_gouvernance_amazonie
+scenario: policy_reform
+localisation:
+  zone: manaus_amazonia_viva
+  lieu: Belém / Bassin Amazonien
+  type_lieu: region
+type_evenement: political_social
+portee: continentale
+date: 2047
+date_label: automne 2047
+impossible: false
+custom: true
+description: >
+  Depuis la tour de crise de Belém, les écrans du Consortium Amazônia Viva affichent en temps réel l'avancée des fronts de déforestation — des cicatrices rouges sur fond vert que les algorithmes du RIREC calculent à 2,3 millions d'hectares en soixante-douze heures. Les milices corporatives, outillées de drones d'extraction et de blindés légers, repoussent les patrouilles autochtones vers les lisières protégées, tandis que Belém se couvre de fumée et de barricades improvisées. À Genève, le Conseil de Régulation Climatique Global convoque une session d'urgence : les délégués débattent de résolutions pendant que les tronçonneuses tournent. C'est la première fois qu'une entité infranationale — le Bassin Amazonien — invoque son statut géopolitique autonome pour exiger une intervention directe, court-circuitant les États membres.
+consequences: >
+  La crise force l'adoption précipitée du Protocole de Souveraineté Écosystémique de Belém (2048), qui reconnaît pour la première fois des droits d'intervention directe à des consortiums autochtones-institutionnels sur des territoires en état d'urgence écologique, créant un précédent juridique majeur mais fragilisant la légitimité des États-nations riverains. Les blocs énergétiques privés, sous pression du CRRC-ARN et des fonds de stabilisation, acceptent un régime de supervision algorithmique de leurs opérations extractives en Amazonie — une victoire partielle qui n'efface pas les 2,3 millions d'hectares perdus. La gouvernance amazonienne devient un laboratoire mondial conflictuel pour la question de la souveraineté écosystémique comme acteur géopolitique de plein droit.
+realisation: >
+  Le Consortium Amazônia Viva, reconnu depuis 2041 comme délégation auprès du Conseil de Régulation Climatique Global, déclenche formellement un état d'urgence écologique sur 40% du bassin amazonien après que les réseaux de capteurs IA-climatiques détectent une déforestation illégale massive coordonnée par des opérateurs liés aux blocs énergétiques privés. Dans ce monde de gouvernance technocratique à tension 4/5, les institutions existent mais leur capacité coercitive reste limitée face aux acteurs privés puissants. L'ONU, engluée dans ses procédures de coordination multi-niveaux, mandate le Conseil de Régulation Climatique Global pour une médiation d'urgence, mais les milices corporatives ont déjà sécurisé plusieurs corridors d'extraction avant que le mécanisme ne s'active. Belém devient le théâtre d'une confrontation directe entre gardiens autochtones soutenus par l'Autorité Mondiale du Vivant et des opérateurs privés bénéficiant de couvertures légales dans les zones grises réglementaires.
+impact_sur_variables:
+  - variable: climat_environnement_global
+    delta_level: -8
+    duree: 15
+    polarite: -1
+  - variable: geopolitique_conflits
+    delta_level: 10
+    duree: 12
+    polarite: -1
+  - variable: gouvernance_institutions
+    delta_level: 7
+    duree: 20
+    polarite: 1
+  - variable: organisation_territoires
+    delta_level: 9
+    duree: 25
+    polarite: 1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+    - consortium_amazonia_viva_policy_reform
+    - conseil_de_regulation_climatique_global_policy_reform
+    - autorite_mondiale_du_vivant_amv_policy_reform
+    - coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform
+    - reseaux_de_capteurs_ia_climatiques_deployes_par_les_etats_membres_policy_reform
+    - trame_bioclimatique_policy_reform
+    - conseil_regulation_ressources_policy_reform
+    - fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform
+    - assemblee_territoires_policy_reform
+    - mouvement_pour_la_justice_ecologique_communautaire_policy_reform
+note_coherence: Dans un monde technocratique à gouvernance active mais tension élevée (4/5), la crise se produit mais débouche sur un cadre réglementaire inédit plutôt que sur un effondrement pur — cohérent avec la trajectoire de transition et le level élevé de gouvernance_institutions (80).
+custom_source: rééquilibrage_geo_2026-06
+date_creation: 2026-06-24
+---
+
+# Protocole d'Urgence Amazonienne — Crise de Gouvernance du Bassin Vert
+
+## Réalisation dans [[policy_reform]]
+Le Consortium Amazônia Viva, reconnu depuis 2041 comme délégation auprès du Conseil de Régulation Climatique Global, déclenche formellement un état d'urgence écologique sur 40% du bassin amazonien après que les réseaux de capteurs IA-climatiques détectent une déforestation illégale massive coordonnée par des opérateurs liés aux blocs énergétiques privés. Dans ce monde de gouvernance technocratique à tension 4/5, les institutions existent mais leur capacité coercitive reste limitée face aux acteurs privés puissants. L'ONU, engluée dans ses procédures de coordination multi-niveaux, mandate le Conseil de Régulation Climatique Global pour une médiation d'urgence, mais les milices corporatives ont déjà sécurisé plusieurs corridors d'extraction avant que le mécanisme ne s'active. Belém devient le théâtre d'une confrontation directe entre gardiens autochtones soutenus par l'Autorité Mondiale du Vivant et des opérateurs privés bénéficiant de couvertures légales dans les zones grises réglementaires.
+
+## Description journalistique
+Depuis la tour de crise de Belém, les écrans du Consortium Amazônia Viva affichent en temps réel l'avancée des fronts de déforestation — des cicatrices rouges sur fond vert que les algorithmes du RIREC calculent à 2,3 millions d'hectares en soixante-douze heures. Les milices corporatives, outillées de drones d'extraction et de blindés légers, repoussent les patrouilles autochtones vers les lisières protégées, tandis que Belém se couvre de fumée et de barricades improvisées. À Genève, le Conseil de Régulation Climatique Global convoque une session d'urgence : les délégués débattent de résolutions pendant que les tronçonneuses tournent. C'est la première fois qu'une entité infranationale — le Bassin Amazonien — invoque son statut géopolitique autonome pour exiger une intervention directe, court-circuitant les États membres.
+
+## Conséquences
+La crise force l'adoption précipitée du Protocole de Souveraineté Écosystémique de Belém (2048), qui reconnaît pour la première fois des droits d'intervention directe à des consortiums autochtones-institutionnels sur des territoires en état d'urgence écologique, créant un précédent juridique majeur mais fragilisant la légitimité des États-nations riverains. Les blocs énergétiques privés, sous pression du CRRC-ARN et des fonds de stabilisation, acceptent un régime de supervision algorithmique de leurs opérations extractives en Amazonie — une victoire partielle qui n'efface pas les 2,3 millions d'hectares perdus. La gouvernance amazonienne devient un laboratoire mondial conflictuel pour la question de la souveraineté écosystémique comme acteur géopolitique de plein droit.
+
+## Impact sur les variables
+- **climat_environnement_global** : delta +8 sur 15 ans
+- **geopolitique_conflits** : delta -10 sur 12 ans
+- **gouvernance_institutions** : delta +7 sur 20 ans
+- **organisation_territoires** : delta +9 sur 25 ans
+
+## Acteurs impliqués
+- [[consortium_amazonia_viva_policy_reform]]
+- [[conseil_de_regulation_climatique_global_policy_reform]]
+- [[autorite_mondiale_du_vivant_amv_policy_reform]]
+- [[coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform]]
+- [[reseaux_de_capteurs_ia_climatiques_deployes_par_les_etats_membres_policy_reform]]
+- [[trame_bioclimatique_policy_reform]]
+- [[conseil_regulation_ressources_policy_reform]]
+- [[fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform]]
+- [[assemblee_territoires_policy_reform]]
+- [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]]
+
+## Note de cohérence
+Dans un monde technocratique à gouvernance active mais tension élevée (4/5), la crise se produit mais débouche sur un cadre réglementaire inédit plutôt que sur un effondrement pur — cohérent avec la trajectoire de transition et le level élevé de gouvernance_institutions (80).

@@ -1,0 +1,86 @@
+---
+name: Acte Fondateur du Pacifique Sud Resilience Network
+type: event_instance
+slug: submersion_tuvalu_acte_fondateur_reference
+archetype: submersion_tuvalu_acte_fondateur
+scenario: reference
+localisation:
+  zone: pacifique_sud_archipels_flottants
+  lieu: Funafuti, Tuvalu — Pacifique Sud
+  type_lieu: site_strategique
+type_evenement: political_social
+portee: globale
+date: 2039
+date_label: septembre 2039
+impossible: false
+custom: true
+description: >
+  Depuis la plateforme ancrée à 40 milles nautiques au nord de l'atoll englouti, les délégués de neuf États insulaires signent le Protocole de Souveraineté Flottante sous les objectifs des collectifs de journalisme embarqué. Les images circulent en boucle — la salle du conseil, les eaux montantes derrière les baies vitrées — tandis que Raj Mehta décrit en direct pour l'Agence Mondiale de Presse ce qu'il nomme 'le premier acte constitutionnel sans sol sous les pieds'. L'Alliance pour la Souveraineté Maritime des Peuples Insulaires (ASMPI) émerge officiellement de cet accord, fédérant des populations dont les territoires ancestraux ont disparu sous les flots. Le monde observe, fasciné et embarrassé.
+consequences: >
+  Le Protocole de Souveraineté Flottante ouvre une brèche dans le droit international territorial classique, forçant progressivement les institutions multilatérales survivantes à négocier un cadre post-territorial partiel — reconnu sous réserves dans les enceintes de l'ONU d'ici 2048. L'événement légitime durablement les revendications des États côtiers en danger et accélère la constitution de précédents juridiques que la Confédération des Mégapoles Autonomes et d'autres acteurs non-étatiques s'empressent de récupérer à leur avantage.
+realisation: >
+  En septembre 2039, la submersion définitive de Funafuti — île principale de Tuvalu — est documentée en temps réel par les capteurs citoyens et l'Observatoire Climatique des Territoires. Les gouvernements insulaires du Pacifique tiennent leur dernier conseil en territoire physique à bord d'une plateforme semi-immergée, avant de transférer collectivement leur souveraineté juridique vers une infrastructure flottante ancrée en eaux internationales. Le Pacifique Sud Resilience Network est officiellement constitué, soutenu par les Fonds Souverains de la Ceinture Financière Pacifique et adossé à un cadre juridique provisoire négocié dans les interstices du droit international existant. L'événement est partiel : le transfert de souveraineté est reconnu par une minorité d'États membres de l'ONU, les grandes puissances restant ambiguës face à ce précédent.
+impact_sur_variables:
+  - variable: climat_environnement_global
+    delta_level: 6
+    duree: 25
+    polarite: -1
+  - variable: gouvernance_institutions
+    delta_level: 8
+    duree: 30
+    polarite: 1
+  - variable: organisation_territoires
+    delta_level: 10
+    duree: 35
+    polarite: -1
+  - variable: frontieres_du_systeme
+    delta_level: 7
+    duree: 30
+    polarite: -1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+    - pacifique_sud_resilience_network_reference
+    - fonds_souverains_de_la_ceinture_financiere_pacifique_reference
+    - observatoire_climatique_des_territoires_oct_reference
+    - reseaux_de_gouvernance_multilaterale_survivants_reference
+    - collectifs_de_journalisme_embarque_reference
+    - le_temoin_reference
+    - reseau_des_metropoles_cotieres_adaptees_reference
+    - agence_stabilisation_climatique_reference
+    - reseaux_de_capteurs_citoyens_reference
+note_coherence: Dans un scénario en équilibre fragile à régime hybride, la création d'un précédent post-territorial par des acteurs insulaires vulnérables est exactement le type d'ajustement institutionnel contraint que ce monde produit — ni effondrement, ni triomphe, mais une innovation juridique incomplète et disputée.
+custom_source: rééquilibrage_geo_2026-06
+date_creation: 2026-06-24
+---
+
+# Acte Fondateur du Pacifique Sud Resilience Network
+
+## Réalisation dans [[reference]]
+En septembre 2039, la submersion définitive de Funafuti — île principale de Tuvalu — est documentée en temps réel par les capteurs citoyens et l'Observatoire Climatique des Territoires. Les gouvernements insulaires du Pacifique tiennent leur dernier conseil en territoire physique à bord d'une plateforme semi-immergée, avant de transférer collectivement leur souveraineté juridique vers une infrastructure flottante ancrée en eaux internationales. Le Pacifique Sud Resilience Network est officiellement constitué, soutenu par les Fonds Souverains de la Ceinture Financière Pacifique et adossé à un cadre juridique provisoire négocié dans les interstices du droit international existant. L'événement est partiel : le transfert de souveraineté est reconnu par une minorité d'États membres de l'ONU, les grandes puissances restant ambiguës face à ce précédent.
+
+## Description journalistique
+Depuis la plateforme ancrée à 40 milles nautiques au nord de l'atoll englouti, les délégués de neuf États insulaires signent le Protocole de Souveraineté Flottante sous les objectifs des collectifs de journalisme embarqué. Les images circulent en boucle — la salle du conseil, les eaux montantes derrière les baies vitrées — tandis que Raj Mehta décrit en direct pour l'Agence Mondiale de Presse ce qu'il nomme 'le premier acte constitutionnel sans sol sous les pieds'. L'Alliance pour la Souveraineté Maritime des Peuples Insulaires (ASMPI) émerge officiellement de cet accord, fédérant des populations dont les territoires ancestraux ont disparu sous les flots. Le monde observe, fasciné et embarrassé.
+
+## Conséquences
+Le Protocole de Souveraineté Flottante ouvre une brèche dans le droit international territorial classique, forçant progressivement les institutions multilatérales survivantes à négocier un cadre post-territorial partiel — reconnu sous réserves dans les enceintes de l'ONU d'ici 2048. L'événement légitime durablement les revendications des États côtiers en danger et accélère la constitution de précédents juridiques que la Confédération des Mégapoles Autonomes et d'autres acteurs non-étatiques s'empressent de récupérer à leur avantage.
+
+## Impact sur les variables
+- **climat_environnement_global** : delta -6 sur 25 ans
+- **gouvernance_institutions** : delta +8 sur 30 ans
+- **organisation_territoires** : delta -10 sur 35 ans
+- **frontieres_du_systeme** : delta -7 sur 30 ans
+
+## Acteurs impliqués
+- [[pacifique_sud_resilience_network_reference]]
+- [[fonds_souverains_de_la_ceinture_financiere_pacifique_reference]]
+- [[observatoire_climatique_des_territoires_oct_reference]]
+- [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
+- [[collectifs_de_journalisme_embarque_reference]]
+- [[le_temoin_reference]]
+- [[reseau_des_metropoles_cotieres_adaptees_reference]]
+- [[agence_stabilisation_climatique_reference]]
+- [[reseaux_de_capteurs_citoyens_reference]]
+
+## Note de cohérence
+Dans un scénario en équilibre fragile à régime hybride, la création d'un précédent post-territorial par des acteurs insulaires vulnérables est exactement le type d'ajustement institutionnel contraint que ce monde produit — ni effondrement, ni triomphe, mais une innovation juridique incomplète et disputée.

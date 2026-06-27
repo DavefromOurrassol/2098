@@ -1,0 +1,105 @@
+---
+name: Nuna Capital — Fonds Souverain de Kalaallit Nunaat
+type: instance
+slug: kalaallit_nunaat_sovereign_fund_fortress_world
+entite: kalaallit_nunaat_sovereign_fund
+scenario: fortress_world
+localisation:
+  zone: nuna_capital_siege
+  lieu: Nuuk-Forteresse — Siège de Nuna Capital
+  type_lieu: infrastructure
+
+type_dans_scenario: institution
+
+role_dans_scenario: >
+  Nuna Capital est le fonds souverain de l'État autonome du Groenland, devenu l'un des acteurs géopolitiques les plus redoutés de l'Arc Arctique depuis la libération massive de terres rares, d'hydrocarbures profonds et de corridors maritimes par la fonte quasi-totale de l'inlandsis. Dans un monde structuré en blocs fermés et militarisés, Nuna Capital a su convertir la rente exceptionnelle issue du désastre climatique en levier de souveraineté absolue, jouant simultanément les blocs atlantique, eurasiatique et pacifique les uns contre les autres. Il incarne la revanche géopolitique d'un peuple périphérique longtemps administré par Copenhague, désormais assis sur l'une des plus grandes concentrations de ressources critiques du monde fragmenté. Sa sophistication diplomatique et financière dépasse de loin ce que sa taille démographique laisserait supposer.
+
+responsabilites: >
+  Nuna Capital alloue les droits d'extraction des ressources groenlandaises (terres rares, pétrole, gaz, eau douce fossile) par adjudications secrètes aux blocs en concurrence, encaisse des rentes en devises forteresses et en garanties sécuritaires croisées, et gère un portefeuille d'actifs stratégiques répartis dans plusieurs zones protégées pour éviter toute dépendance à un seul bloc. Il finance les infrastructures souveraines du territoire — défense, santé, habitat climatique — tout en maintenant une ambiguïté délibérée sur son alignement géopolitique définitif.
+
+impact_local: 5
+impact_systemique_global: 4
+
+variables_influencees:
+    - energie_ressources_critiques
+    - geopolitique_conflits
+    - gouvernance_institutions
+    - organisation_territoires
+
+zone_geographique:
+    - nationale
+    - régionale
+    - continentale
+    - globale
+
+zone_systemique:
+    - énergie
+    - économie
+    - gouvernance
+    - sécurité
+
+alliances:
+    - coalition_arctique_des_blocs_continentaux_fortress_world
+    - armada_logistique_nordique_fortress_world
+    - commandement_strategique_des_matieres_critiques_atlantique_fortress_world
+    - conseil_regulation_ressources_fortress_world
+
+oppositions:
+    - factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world
+    - milices_de_piraterie_logistique_arctique_fortress_world
+    - coalitions_geopolitiques_d_infiltration_des_modeles_climatiques_fortress_world
+    - collectifs_de_reappropriation_energetique_peripherique_fortress_world
+    - consortium_eurasiatique_des_ressources_fermees_fortress_world
+
+type_relation_dominante: rivalité
+
+annee_debut: 2041
+annee_fin: 
+
+etat_temporel: actif
+age_historique: dominant
+generation: forteresse
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  À Nuuk-Forteresse, le siège de Nuna Capital ressemble moins à une institution financière qu'à un bunker diplomatique : vitres blindées, personnel polyglotte formé à Genève et à Pékin, et des délégations des trois grands blocs qui se croisent dans des salles d'attente séparées, sans jamais se voir. Le Fonds gère aujourd'hui l'équivalent de 2 400 milliards d'unités de valeur bloc — une fortune bâtie sur la disparition d'un glacier. Ses directeurs, majoritairement Inuit, ont imposé au monde une règle simple : qui veut le lithium groenlandais accepte les conditions groenlandaises. Dans un monde où chaque ressource est une arme, Nuna Capital est peut-être la seule institution à n'appartenir officiellement à aucun camp — ce qui en fait, paradoxalement, l'acteur le plus courtisé de l'Arc Arctique.
+
+signes_distinctifs: >
+  Logo minimaliste : un ours polaire stylisé en silhouette dorée sur fond noir arctique, frappé du mot 'Nuna' en syllabaire inuktitut. Les délégations du Fonds voyagent toujours à bord de navires battant pavillon groenlandais peints en blanc immaculé — couleur devenue symbole d'une neutralité armée. Les contrats portent systématiquement le sceau bilingue kalaallisuit-anglais, refus ostentatoire de toute langue de bloc dominant.
+
+tensions_narratives: >
+  La tension centrale de Nuna Capital est existentielle : la souveraineté retrouvée repose intégralement sur une catastrophe que le peuple kalaallit n'a pas voulue, et la conscience de cette origine empoisonne les débats internes entre la faction 'rente comme rempart' et les voix qui réclament une redistribution vers les zones climatiquement sinistrées. Par ailleurs, les trois blocs convergent lentement vers une stratégie de pression coordonnée pour forcer un alignement — et Nuna Capital doit décider si son ambiguïté peut tenir encore longtemps face à la militarisation croissante de l'Arc. Enfin, les Inuit des zones côtières submergées, déplacés par la même fonte qui enrichit le Fonds, commencent à organiser une contestation interne que les dirigeants de Nuuk-Forteresse ne peuvent plus ignorer.
+
+date_creation: 2026-06-23
+---
+
+# Nuna Capital — Fonds Souverain de Kalaallit Nunaat
+
+## Rôle dans [[fortress_world]]
+Nuna Capital est le fonds souverain de l'État autonome du Groenland, devenu l'un des acteurs géopolitiques les plus redoutés de l'Arc Arctique depuis la libération massive de terres rares, d'hydrocarbures profonds et de corridors maritimes par la fonte quasi-totale de l'inlandsis. Dans un monde structuré en blocs fermés et militarisés, Nuna Capital a su convertir la rente exceptionnelle issue du désastre climatique en levier de souveraineté absolue, jouant simultanément les blocs atlantique, eurasiatique et pacifique les uns contre les autres. Il incarne la revanche géopolitique d'un peuple périphérique longtemps administré par Copenhague, désormais assis sur l'une des plus grandes concentrations de ressources critiques du monde fragmenté. Sa sophistication diplomatique et financière dépasse de loin ce que sa taille démographique laisserait supposer.
+
+## Responsabilités
+Nuna Capital alloue les droits d'extraction des ressources groenlandaises (terres rares, pétrole, gaz, eau douce fossile) par adjudications secrètes aux blocs en concurrence, encaisse des rentes en devises forteresses et en garanties sécuritaires croisées, et gère un portefeuille d'actifs stratégiques répartis dans plusieurs zones protégées pour éviter toute dépendance à un seul bloc. Il finance les infrastructures souveraines du territoire — défense, santé, habitat climatique — tout en maintenant une ambiguïté délibérée sur son alignement géopolitique définitif.
+
+## Variables influencées
+- [[energie_ressources_critiques]]
+- [[geopolitique_conflits]]
+- [[gouvernance_institutions]]
+- [[organisation_territoires]]
+
+## Relations
+**Alliés** : [[coalition_arctique_des_blocs_continentaux_fortress_world]], [[armada_logistique_nordique_fortress_world]], [[commandement_strategique_des_matieres_critiques_atlantique_fortress_world]], [[conseil_regulation_ressources_fortress_world]]
+**Opposants** : [[factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world]], [[milices_de_piraterie_logistique_arctique_fortress_world]], [[coalitions_geopolitiques_d_infiltration_des_modeles_climatiques_fortress_world]], [[collectifs_de_reappropriation_energetique_peripherique_fortress_world]], [[consortium_eurasiatique_des_ressources_fermees_fortress_world]]
+
+## Description journalistique
+À Nuuk-Forteresse, le siège de Nuna Capital ressemble moins à une institution financière qu'à un bunker diplomatique : vitres blindées, personnel polyglotte formé à Genève et à Pékin, et des délégations des trois grands blocs qui se croisent dans des salles d'attente séparées, sans jamais se voir. Le Fonds gère aujourd'hui l'équivalent de 2 400 milliards d'unités de valeur bloc — une fortune bâtie sur la disparition d'un glacier. Ses directeurs, majoritairement Inuit, ont imposé au monde une règle simple : qui veut le lithium groenlandais accepte les conditions groenlandaises. Dans un monde où chaque ressource est une arme, Nuna Capital est peut-être la seule institution à n'appartenir officiellement à aucun camp — ce qui en fait, paradoxalement, l'acteur le plus courtisé de l'Arc Arctique.
+
+## Tensions narratives
+La tension centrale de Nuna Capital est existentielle : la souveraineté retrouvée repose intégralement sur une catastrophe que le peuple kalaallit n'a pas voulue, et la conscience de cette origine empoisonne les débats internes entre la faction 'rente comme rempart' et les voix qui réclament une redistribution vers les zones climatiquement sinistrées. Par ailleurs, les trois blocs convergent lentement vers une stratégie de pression coordonnée pour forcer un alignement — et Nuna Capital doit décider si son ambiguïté peut tenir encore longtemps face à la militarisation croissante de l'Arc. Enfin, les Inuit des zones côtières submergées, déplacés par la même fonte qui enrichit le Fonds, commencent à organiser une contestation interne que les dirigeants de Nuuk-Forteresse ne peuvent plus ignorer.

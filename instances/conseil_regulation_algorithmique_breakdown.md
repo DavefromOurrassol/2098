@@ -1,0 +1,82 @@
+---
+name: Les Protocoles Fantômes
+type: instance
+slug: conseil_regulation_algorithmique_breakdown
+entite: conseil_regulation_algorithmique
+scenario: breakdown
+localisation:
+  zone: geneve_bunker_institutions
+  lieu: Genève-Bunker
+  type_lieu: infrastructure
+type_dans_scenario: système
+role_dans_scenario: >
+  N'existe plus en tant qu'institution. Les derniers protocoles de
+  régulation IA ont été abandonnés en 2049 avec l'effondrement des
+  instances multilatérales. Il n'en reste que des fragments de code
+  que quelques ingénieurs tentent encore d'appliquer sans autorité réelle.
+responsabilites: >
+  Aucune — institution dissoute de facto. Des collectifs informels
+  maintiennent des standards minimaux sans légitimité ni moyens.
+impact_local: 0
+impact_systemique_global: 1
+variables_influencees:
+  - technologie_information
+  - gouvernance_institutions
+zone_geographique:
+  - globale
+zone_systemique:
+  - IA
+  - information
+alliances: []
+oppositions: []
+type_relation_dominante: neutralité
+annee_debut: 2030
+annee_fin: 2049
+etat_temporel: disparu
+age_historique: résiduel
+generation: post-effondrement
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+description_journalistique: >
+  Quand on demande à un ingénieur de 2098 ce qu'était le Comité Mondial
+  de Régulation IA, il hausse les épaules. "Une idée du siècle dernier."
+  Les protocoles existent encore dans des archives que personne ne consulte.
+  Les IA fonctionnent. Personne ne sait vraiment comment.
+signes_distinctifs: >
+  Quelques serveurs d'archives dans une salle abandonnée de Genève-Bunker.
+  Des ingénieurs retraités qui se souviennent. Des fichiers PDF datés de 2047.
+tensions_narratives: >
+  Des archéologues du code retrouvent des fragments des anciens protocoles
+  et tentent de les réactiver. Question centrale — peut-on réguler ce
+  qu'on ne comprend plus ? Certains groupes utilisent ces protocoles comme
+  base pour reconstruire une gouvernance IA locale.
+date_creation: 2098-01-01
+---
+
+# Les Protocoles Fantômes
+
+## Rôle dans [[breakdown]]
+N'existe plus. Les protocoles de régulation IA ont été abandonnés en 2049.
+Il n'en reste que des fragments que quelques ingénieurs tentent d'appliquer.
+
+## Variables influencées
+- [[technologie_information]]
+- [[gouvernance_institutions]]
+
+## Relations
+**Alliés** : _aucun défini_
+**Opposants** : _aucun défini_
+
+## Description journalistique
+Quand on demande à un ingénieur de 2098 ce qu'était le Comité Mondial
+de Régulation IA, il hausse les épaules. "Une idée du siècle dernier."
+Les protocoles existent encore dans des archives que personne ne consulte.
+
+## Tensions narratives
+Des archéologues du code retrouvent des fragments et tentent de les
+réactiver. Peut-on réguler ce qu'on ne comprend plus ?

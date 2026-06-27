@@ -1,0 +1,110 @@
+---
+name: Sistema Paulista de Alocação Regenerativa (SPAR)
+type: instance
+slug: rede_paulista_de_distribuic_o_algor_tmica_new_sustainability
+entite: rede_paulista_de_distribuic_o_algor_tmica
+scenario: new_sustainability
+localisation:
+  zone: ameriques_reconfigurees
+  lieu: São Paulo (Santo André / Heliópolis)
+  type_lieu: ville
+  statut: review_manuelle
+  note: "Le SPAR est clairement ancré à São Paulo (métropole, complexe de Santo André, quartier d'Heliópolis), mais aucune zone spécifique à São Paulo n'existe dans la liste ; la zone parente la plus proche est ameriques_reconfigurees."
+
+type_dans_scenario: système
+
+role_dans_scenario: >
+  Le SPAR est l'héritier institutionnalisé et réformé de la Rede Paulista de Distribuição Algorítmica, opérant dans un contexte de gouvernance hybride stabilisée. Intégré au cadre de régulation du Conseil de Gouvernance Algorithmique Intégrée (CGAI) et audité en continu par le Consortium d'Audit Algorithmique Ouvert, il alloue eau, énergie, logement et mobilité à la métropole de São Paulo et ses 34 millions d'habitants. Sa particularité dans ce monde régénératif est d'avoir intégré des paramètres de justice territoriale et de résilience écologique dans ses fonctions d'optimisation — une évolution arrachée par deux décennies de contestation citoyenne. Il demeure néanmoins un nœud de tension structurel entre efficacité technocratique et légitimité démocratique.
+
+responsabilites: >
+  Le SPAR distribue en temps réel les ressources vitales métropolitaines en appliquant des pondérations négociées entre indicateurs d'efficacité énergétique, d'équité sociale et de régénération écologique. Il produit des rapports d'allocation publics lisibles par les assemblées citoyennes locales et soumet ses paramètres à révision triennale via un processus de délibération augmentée. Il sert également de modèle d'exportation pour d'autres mégalopoles du Sud global dans le cadre du Réseau des Hubs Urbains Régénératifs.
+
+impact_local: 5
+impact_systemique_global: 3
+
+variables_influencees:
+    - gouvernance_institutions
+    - energie_ressources_critiques
+    - organisation_territoires
+    - systeme_economique_redistribution
+
+zone_geographique:
+    - urbaine
+    - nationale
+    - régionale
+
+zone_systemique:
+    - IA
+    - gouvernance
+    - énergie
+    - infrastructure
+    - société
+
+alliances:
+    - bureau_gouvernance_algorithmique_new_sustainability
+    - consortium_d_audit_algorithmique_ouvert_new_sustainability
+    - reseau_des_hubs_urbains_regeneratifs_new_sustainability
+    - reseau_des_villes_regeneratives_new_sustainability
+    - grille_aria_new_sustainability
+    - conseil_regulation_algorithmique_new_sustainability
+    - assemblee_territoires_new_sustainability
+
+oppositions:
+    - collectifs_de_desobeissance_algorithmique_new_sustainability
+    - coalition_anti_algorithme_des_autonomies_locales_new_sustainability
+    - factions_internes_pro_opacite_des_parametres_new_sustainability
+    - collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability
+    - reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability
+
+type_relation_dominante: coopération
+
+annee_debut: 2031
+annee_fin: 
+
+etat_temporel: actif
+age_historique: mature
+generation: ère cognitive
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Depuis ses bureaux vitrés du complexe administratif de Santo André, le SPAR gère chaque matin l'équivalent de cent mille décisions simultanées — qui reçoit de l'eau pressurisée, quelle ligne de métro est prioritaire, quel quartier accède en premier aux blocs d'énergie de fusion. En 2098, le système est devenu une institution aussi incontournable que controversée : ses défenseurs citent des données éloquentes, une réduction de 38 % des coupures d'eau dans les périphéries depuis 2067, une mobilité trois fois plus fluide qu'à l'ère pré-algorithmique. Ses détracteurs, eux, pointent la révision de 2089 qui a discrètement abaissé le coefficient de pondération des zones à faible productivité économique — une modification passée à travers un amendement technique de 800 lignes de code que seuls quatre auditeurs du Consortium ont lue. 'La machine optimise, mais pour qui ?' demande régulièrement le collectif Dados Abertos Já depuis ses marchés improvisés d'Heliópolis. Le SPAR reste le miroir le plus fidèle et le plus troublant de ce que signifie gouverner une mégalopole à l'ère de la régénération technique.
+
+signes_distinctifs: >
+  Interface publique en flux lumineux cyan et vert régénératif sur les écrans urbains, avec des barres de distribution visibles en temps réel dans les hubs de quartier. Le logo — un arbre stylisé dont les racines forment un circuit imprimé — est omniprésent sur les bornes d'accès aux ressources. Les agents humains du SPAR portent des vestes anthracite marquées du sigle SPAR en broderie phosphorescente, signe d'une institution qui revendique simultanément sa transparence et son autorité.
+
+tensions_narratives: >
+  La tension principale réside dans la révision triennale des paramètres de 2100, qui s'annonce explosive : une coalition de communautés périphériques exige l'introduction d'un droit de veto populaire sur toute modification algorithmique, tandis que les factions technocratiques internes résistent au nom de l'efficacité systémique. Par ailleurs, le SPAR est sollicité pour exporter son modèle à Lagos et Jakarta via le Réseau des Hubs Urbains Régénératifs — ce qui pose la question de savoir si ses biais structurels paulistains seront également exportés. Enfin, une fuite récente de documentation interne suggère que certains paramètres énergétiques sont restés calqués sur des modèles de consommation datant de 2045, rendant invisible toute une génération de pratiques communautaires régénératives développées hors-grille.
+
+date_creation: 2026-06-23
+---
+
+# Sistema Paulista de Alocação Regenerativa (SPAR)
+
+## Rôle dans [[new_sustainability]]
+Le SPAR est l'héritier institutionnalisé et réformé de la Rede Paulista de Distribuição Algorítmica, opérant dans un contexte de gouvernance hybride stabilisée. Intégré au cadre de régulation du Conseil de Gouvernance Algorithmique Intégrée (CGAI) et audité en continu par le Consortium d'Audit Algorithmique Ouvert, il alloue eau, énergie, logement et mobilité à la métropole de São Paulo et ses 34 millions d'habitants. Sa particularité dans ce monde régénératif est d'avoir intégré des paramètres de justice territoriale et de résilience écologique dans ses fonctions d'optimisation — une évolution arrachée par deux décennies de contestation citoyenne. Il demeure néanmoins un nœud de tension structurel entre efficacité technocratique et légitimité démocratique.
+
+## Responsabilités
+Le SPAR distribue en temps réel les ressources vitales métropolitaines en appliquant des pondérations négociées entre indicateurs d'efficacité énergétique, d'équité sociale et de régénération écologique. Il produit des rapports d'allocation publics lisibles par les assemblées citoyennes locales et soumet ses paramètres à révision triennale via un processus de délibération augmentée. Il sert également de modèle d'exportation pour d'autres mégalopoles du Sud global dans le cadre du Réseau des Hubs Urbains Régénératifs.
+
+## Variables influencées
+- [[gouvernance_institutions]]
+- [[energie_ressources_critiques]]
+- [[organisation_territoires]]
+- [[systeme_economique_redistribution]]
+
+## Relations
+**Alliés** : [[bureau_gouvernance_algorithmique_new_sustainability]], [[consortium_d_audit_algorithmique_ouvert_new_sustainability]], [[reseau_des_hubs_urbains_regeneratifs_new_sustainability]], [[reseau_des_villes_regeneratives_new_sustainability]], [[grille_aria_new_sustainability]], [[conseil_regulation_algorithmique_new_sustainability]], [[assemblee_territoires_new_sustainability]]
+**Opposants** : [[collectifs_de_desobeissance_algorithmique_new_sustainability]], [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]], [[factions_internes_pro_opacite_des_parametres_new_sustainability]], [[collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability]], [[reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability]]
+
+## Description journalistique
+Depuis ses bureaux vitrés du complexe administratif de Santo André, le SPAR gère chaque matin l'équivalent de cent mille décisions simultanées — qui reçoit de l'eau pressurisée, quelle ligne de métro est prioritaire, quel quartier accède en premier aux blocs d'énergie de fusion. En 2098, le système est devenu une institution aussi incontournable que controversée : ses défenseurs citent des données éloquentes, une réduction de 38 % des coupures d'eau dans les périphéries depuis 2067, une mobilité trois fois plus fluide qu'à l'ère pré-algorithmique. Ses détracteurs, eux, pointent la révision de 2089 qui a discrètement abaissé le coefficient de pondération des zones à faible productivité économique — une modification passée à travers un amendement technique de 800 lignes de code que seuls quatre auditeurs du Consortium ont lue. 'La machine optimise, mais pour qui ?' demande régulièrement le collectif Dados Abertos Já depuis ses marchés improvisés d'Heliópolis. Le SPAR reste le miroir le plus fidèle et le plus troublant de ce que signifie gouverner une mégalopole à l'ère de la régénération technique.
+
+## Tensions narratives
+La tension principale réside dans la révision triennale des paramètres de 2100, qui s'annonce explosive : une coalition de communautés périphériques exige l'introduction d'un droit de veto populaire sur toute modification algorithmique, tandis que les factions technocratiques internes résistent au nom de l'efficacité systémique. Par ailleurs, le SPAR est sollicité pour exporter son modèle à Lagos et Jakarta via le Réseau des Hubs Urbains Régénératifs — ce qui pose la question de savoir si ses biais structurels paulistains seront également exportés. Enfin, une fuite récente de documentation interne suggère que certains paramètres énergétiques sont restés calqués sur des modèles de consommation datant de 2045, rendant invisible toute une génération de pratiques communautaires régénératives développées hors-grille.

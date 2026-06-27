@@ -1,0 +1,83 @@
+---
+name: Insurrection des Favelas Numériques de São Paulo contre la RPDA
+type: event_instance
+slug: emeutes_algorithme_sao_paulo_policy_reform
+archetype: emeutes_algorithme_sao_paulo
+scenario: policy_reform
+localisation:
+  zone: sao_paulo_rpda
+  lieu: São Paulo
+  type_lieu: ville
+type_evenement: political_social
+portee: regionale
+date: 2073
+date_label: été austral 2073
+impossible: false
+custom: true
+description: >
+  Pendant trois semaines, les quartiers périphériques de São Paulo tiennent en échec l'un des systèmes d'allocation algorithmique les plus sophistiqués d'Amérique du Sud. Les habitants ne brûlent pas des serveurs — ils les lisent. La contre-cartographie publiée par les collectifs locaux révèle que le critère de 'rendement négatif' masque en réalité une pondération raciale et économique inscrite dans les couches profondes de la RPDA. Les flux d'information explosent sur les plateformes certifiées et non certifiées simultanément, mettant en crise le Conseil de Gouvernance de l'Information qui peine à contenir la narration. São Paulo devient en quelques jours le symbole mondial d'une gouvernance algorithmique qui redistribue la précarité sous couvert d'optimisation.
+consequences: >
+  L'événement catalyse une réforme forcée des standards d'auditabilité des systèmes d'allocation publics, avec l'adoption en 2076 d'un protocole de transparence paramétrique obligatoire pour tout système gérant des ressources critiques dans les métropoles membres du CRTI. Il exporte également le modèle de contre-cartographie citoyenne au reste du Sud global, fragilisant durablement la légitimité des consortiums privés de gouvernance algorithmique et renforçant les collectifs d'audit indépendants comme interlocuteurs institutionnels reconnus.
+realisation: >
+  En juillet 2073, une mise à jour de la Rede Paulista de Distribuição Algorítmica classe 12 zones périphériques comme 'à rendement négatif' et suspend automatiquement eau et énergie. Les favelas numériques, équipées d'outils de délibération augmentée issus des réformes de gouvernance participative des années 2040, organisent une contre-expertise collective : elles extraient, décodent et publient les paramètres cachés du système via des réseaux d'audit citoyen. Dans un monde de policy_reform où la transparence institutionnelle est un principe affiché mais rarement tenu, la publication des paramètres internes de la RPDA constitue une bombe politique. L'événement force le Conseil Intergouvernemental de Régulation Technologique à ouvrir une procédure d'urgence, et le RAAI est mandaté pour un audit indépendant, donnant au soulèvement une résonance institutionnelle inédite.
+impact_sur_variables:
+  - variable: gouvernance_institutions
+    delta_level: 8
+    duree: 15
+    polarite: 1
+  - variable: technologie_information
+    delta_level: -10
+    duree: 12
+    polarite: -1
+  - variable: organisation_territoires
+    delta_level: 6
+    duree: 18
+    polarite: 1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+    - rede_paulista_de_distribuic_o_algor_tmica_policy_reform
+    - collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform
+    - reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
+    - conseil_intergouvernemental_de_regulation_technologique_policy_reform
+    - bureau_gouvernance_algorithmique_policy_reform
+    - front_des_communes_algorithmiques_policy_reform
+    - consortiums_prives_de_gouvernance_algorithmique_policy_reform
+    - conseil_de_gouvernance_de_l_information_policy_reform
+    - collectifs_citoyens_de_deliberation_augmentee_policy_reform
+    - prisme_global_policy_reform
+note_coherence: Dans un monde technocratique à tension 4/5 en phase de transition, un soulèvement qui emprunte les outils institutionnels de la réforme (audit, transparence, délibération augmentée) pour les retourner contre un système opaque est exactement le type de friction productive qui caractérise le scénario policy_reform — il renforce la pression régulatrice sans provoquer l'effondrement du cadre.
+custom_source: rééquilibrage_geo_2026-06
+date_creation: 2026-06-24
+---
+
+# Insurrection des Favelas Numériques de São Paulo contre la RPDA
+
+## Réalisation dans [[policy_reform]]
+En juillet 2073, une mise à jour de la Rede Paulista de Distribuição Algorítmica classe 12 zones périphériques comme 'à rendement négatif' et suspend automatiquement eau et énergie. Les favelas numériques, équipées d'outils de délibération augmentée issus des réformes de gouvernance participative des années 2040, organisent une contre-expertise collective : elles extraient, décodent et publient les paramètres cachés du système via des réseaux d'audit citoyen. Dans un monde de policy_reform où la transparence institutionnelle est un principe affiché mais rarement tenu, la publication des paramètres internes de la RPDA constitue une bombe politique. L'événement force le Conseil Intergouvernemental de Régulation Technologique à ouvrir une procédure d'urgence, et le RAAI est mandaté pour un audit indépendant, donnant au soulèvement une résonance institutionnelle inédite.
+
+## Description journalistique
+Pendant trois semaines, les quartiers périphériques de São Paulo tiennent en échec l'un des systèmes d'allocation algorithmique les plus sophistiqués d'Amérique du Sud. Les habitants ne brûlent pas des serveurs — ils les lisent. La contre-cartographie publiée par les collectifs locaux révèle que le critère de 'rendement négatif' masque en réalité une pondération raciale et économique inscrite dans les couches profondes de la RPDA. Les flux d'information explosent sur les plateformes certifiées et non certifiées simultanément, mettant en crise le Conseil de Gouvernance de l'Information qui peine à contenir la narration. São Paulo devient en quelques jours le symbole mondial d'une gouvernance algorithmique qui redistribue la précarité sous couvert d'optimisation.
+
+## Conséquences
+L'événement catalyse une réforme forcée des standards d'auditabilité des systèmes d'allocation publics, avec l'adoption en 2076 d'un protocole de transparence paramétrique obligatoire pour tout système gérant des ressources critiques dans les métropoles membres du CRTI. Il exporte également le modèle de contre-cartographie citoyenne au reste du Sud global, fragilisant durablement la légitimité des consortiums privés de gouvernance algorithmique et renforçant les collectifs d'audit indépendants comme interlocuteurs institutionnels reconnus.
+
+## Impact sur les variables
+- **gouvernance_institutions** : delta +8 sur 15 ans
+- **technologie_information** : delta +10 sur 12 ans
+- **organisation_territoires** : delta +6 sur 18 ans
+
+## Acteurs impliqués
+- [[rede_paulista_de_distribuic_o_algor_tmica_policy_reform]]
+- [[collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform]]
+- [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]]
+- [[conseil_intergouvernemental_de_regulation_technologique_policy_reform]]
+- [[bureau_gouvernance_algorithmique_policy_reform]]
+- [[front_des_communes_algorithmiques_policy_reform]]
+- [[consortiums_prives_de_gouvernance_algorithmique_policy_reform]]
+- [[conseil_de_gouvernance_de_l_information_policy_reform]]
+- [[collectifs_citoyens_de_deliberation_augmentee_policy_reform]]
+- [[prisme_global_policy_reform]]
+
+## Note de cohérence
+Dans un monde technocratique à tension 4/5 en phase de transition, un soulèvement qui emprunte les outils institutionnels de la réforme (audit, transparence, délibération augmentée) pour les retourner contre un système opaque est exactement le type de friction productive qui caractérise le scénario policy_reform — il renforce la pression régulatrice sans provoquer l'effondrement du cadre.

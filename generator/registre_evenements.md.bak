@@ -1,0 +1,486 @@
+# Registre des événements (signal_to_state)
+
+Généré automatiquement — liste tous les `evenement_cle` existants,
+par scénario, triés chronologiquement, pour éviter les collisions
+de noms/dates/lieux lors de l'ajout de nouveaux signaux (section 7 → 12).
+
+Total : 444 entrées (74 signaux uniques × 6 scénarios).
+
+**Événements custom canoniques (hors signal_to_state)** :
+- L'Attentat des Neuf Nœuds — Le Jour Sans Signal (2040)
+- Victoire Fantôme du Parti Commun (2055)
+- L'Arrestation de Van Derburgh par la Milice de Detroit-Sud (2078)
+
+## breakdown
+
+| Date | Variable | Signal | Pilote | Événement clé |
+|---|---|---|---|---|
+| 2028-2047 | gouvernance_institutions | trump_putsch_ice_2028 | non | dissolution du Congrès américain sous pression paramilitaire 2036 |
+| 2029-2045 | geopolitique_conflits | trump_putsch_recomposition_blocs_2028 | oui | dissolution formelle de l'OTAN sous pression paramilitaire 2037 |
+| 2035-2055 | sante_biotechnologies | emergence_pathogenes_nouveaux | non | Pandémie H7X de 2043 et effondrement de l'OMS |
+| 2036-2055 | systemes_productifs_travail | robotisation_services | oui | réquisition massive des robots de service dans les mégapoles 2050 |
+| 2037-2057 | systemes_productifs_travail | disparition_metiers_intermediaires | oui | fermeture de la dernière grande filière de formation intermédiaire 2049 |
+| 2038-2056 | systemes_productifs_travail | automatisation_cognitive | oui | chômage structurel à 45% dans les économies avancées 2049 |
+| 2038-2056 | climat_environnement_global | discours_effondrement_climatique | oui | manifeste collapsologue mondial diffusé après le Jour Sans Signal 2041 |
+| 2038-2056 | systeme_economique_redistribution | explosion_inegalites_patrimoniales | non | rapport confirmant une concentration record du patrimoine mondial 2051 |
+| 2038-2057 | valeurs_culture_tempo_sociale | guerres_culturelles_transnationales | non | premiers affrontements identitaires transfrontaliers coordonnés 2049 |
+| 2039-2057 | climat_environnement_global | megafeux_saisonniers | oui | perte totale des forêts méditerranéennes lors des feux de 2050 |
+| 2039-2058 | gouvernance_institutions | systemes_decision_automatises_publics | non | panne systémique des administrations automatisées pendant trois mois 2051 |
+| 2039-2057 | systeme_economique_redistribution | taxation_carbone_globale | non | suspension générale des mécanismes de taxation carbone 2050 |
+| 2039-2058 | technologie_information | agents_autonomes_multi_ia | non | incident majeur d'agents IA non coordonnés dans la finance 2050 |
+| 2039-2058 | valeurs_culture_tempo_sociale | desynchronisation_generationnelle | non | premières émeutes intergénérationnelles documentées dans les mégapoles 2050 |
+| 2040-2058 | geopolitique_conflits | militarisation_du_cyberespace | oui | effondrement des protocoles de non-agression numérique 2049 |
+| 2040-2058 | valeurs_culture_tempo_sociale | hybridation_ia_culture | non | prolifération non contrôlée des IA génératives culturelles |
+| 2040-2058 | energie_ressources_critiques | fusion_experimentale | oui | effondrement des consortiums de recherche fusion 2051 |
+| 2040-2058 | demographie_mobilite_humaine | vieillissement_demographique | non | faillite des systèmes de retraite des pays développés 2050 |
+| 2040-2058 | systemes_productifs_travail | fragmentation_chaines_valeur | oui | rupture simultanée de 60% des chaînes d'approvisionnement 2051 |
+| 2040-2059 | demographie_mobilite_humaine | politiques_migratoires_restrictives | non | fermeture simultanée de douze frontières majeures 2052 |
+| 2040-2059 | gouvernance_institutions | crise_confiance_institutions | non | boycott massif des dernières élections nationales organisées 2052 |
+| 2040-2059 | organisation_territoires | villes_intelligentes_autonomes | oui | extinction simultanée des réseaux intelligents de trois mégapoles 2054 |
+| 2040-2058 | systeme_economique_redistribution | remise_en_cause_capitalisme_croissance | non | dernier sommet économique mondial centré sur la croissance 2052 |
+| 2040-2059 | technologie_information | consommation_energetique_ia | non | fermeture en cascade des centres de données surconsommateurs 2051 |
+| 2041-2055 | systeme_economique_redistribution | automatisation_financière_algorithmique | non | effondrement des protocoles de régulation des IA financières |
+| 2041-2058 | gouvernance_institutions | gouvernance_algorithmique_emergente | non | effondrement des protocoles de régulation IA institutionnelle |
+| 2041-2060 | climat_environnement_global | instabilite_saisonniere | oui | franchissement de cinq points de basculement simultanés 2053 |
+| 2041-2060 | demographie_mobilite_humaine | outils_predictifs_migratoires | non | piratage des bases prédictives migratoires de l'Alliance Pacifique 2054 |
+| 2041-2059 | geopolitique_conflits | ia_militaire_autonome | oui | premier incident de frappe autonome non autorisée 2052 |
+| 2041-2060 | geopolitique_conflits | normalisation_conflit_hybride | oui | abandon officiel de la distinction entre paix et guerre 2053 |
+| 2041-2059 | energie_ressources_critiques | stockage_energie_nouvelle_generation | oui | pillage des dépôts de batteries stratégiques à Detroit-Sud 2053 |
+| 2041-2060 | energie_ressources_critiques | acceptation_transition_contrainte | oui | discours officiel reconnaissant l'impossibilité du retour à l'abondance 2053 |
+| 2041-2060 | gouvernance_institutions | transformation_attentes_democratiques | non | dernière élection nationale considérée comme légitime par l'opinion 2052 |
+| 2041-2060 | organisation_territoires | recomposition_centres_economiques | oui | fermeture définitive de la bourse de Lagos-Mumbai-Jakarta 2053 |
+| 2041-2059 | systemes_productifs_travail | automatisation_agricole_massive | oui | pannes simultanées des fermes automatisées de trois continents 2052 |
+| 2041-2060 | technologie_information | crise_verite_informationnelle | non | abandon officiel de toute vérité factuelle commune 2052 |
+| 2041-2059 | valeurs_culture_tempo_sociale | acceleration_rythmes_vie_urbains | non | abolition de facto des horaires sociaux dans les mégapoles 2052 |
+| 2042-2058 | geopolitique_conflits | tensions_sur_terres_rares | oui | guerre des minerais d'Afrique centrale 2051 |
+| 2042-2060 | sante_biotechnologies | inegalites_acces_soins | non | collapse des mutuelles et assurances santé globales |
+| 2042-2059 | technologie_information | concentration_informationnelle | non | collapse du duopole numérique mondial 2051 |
+| 2042-2060 | energie_ressources_critiques | competition_terres_rares | oui | guerre des lithium-cobalt en Afrique australe 2052 |
+| 2042-2062 | demographie_mobilite_humaine | migrations_climatiques | non | exode climatique de 400 millions de personnes 2055 |
+| 2042-2061 | climat_environnement_global | captation_carbone_industrielle | oui | sabotage des installations de capture carbone du Sahara 2055 |
+| 2042-2061 | demographie_mobilite_humaine | gestion_algorithmique_flux_humains | non | panne généralisée des systèmes de tri migratoire automatisés 2052 |
+| 2042-2060 | geopolitique_conflits | militarisation_societes | oui | instauration de la conscription générale dans les zones de conflit 2053 |
+| 2042-2061 | energie_ressources_critiques | adaptation_sobriete_energetique | oui | émeutes de l'énergie dans les mégapoles surpeuplées 2054 |
+| 2042-2060 | frontieres_du_systeme | industrialisation_orbitale_privee | non | faillite en chaîne des stations industrielles orbitales privées 2052 |
+| 2042-2060 | gouvernance_institutions | gouvernance_environnementale_multiniveaux | non | dissolution du dernier organe mondial de coordination climatique 2053 |
+| 2042-2061 | organisation_territoires | declin_rural_accelere | oui | abandon officiel de mille communes rurales 2052 |
+| 2042-2060 | systeme_economique_redistribution | economie_plateformes_dominante | non | panne en cascade des grandes plateformes économiques mondiales 2051 |
+| 2042-2060 | systemes_productifs_travail | normalisation_post_travail | oui | retour massif au travail de subsistance non rémunéré 2050 |
+| 2043-2062 | valeurs_culture_tempo_sociale | fatigue_civilisationnelle | non | mouvement de décrochage sociétal global |
+| 2043-2062 | organisation_territoires | stress_territorial_climatique | oui | abandon de cinq mégapoles côtières majeures 2055 |
+| 2043-2063 | frontieres_du_systeme | spatialisation_des_conflits | non | premier conflit armé orbital 2055 |
+| 2043-2062 | technologie_information | dependance_numerique | non | blackout numérique global de 72 heures 2053 |
+| 2043-2062 | climat_environnement_global | stress_hydrique | oui | conflits armés pour les bassins versants 2054 |
+| 2043-2062 | demographie_mobilite_humaine | debats_identitaires_migrations | non | vague de pogroms anti-migrants dans les enclaves urbaines 2056 |
+| 2043-2061 | geopolitique_conflits | conflits_climatiques_armes | oui | première guerre officiellement qualifiée de climatique à Carthage-Nord 2055 |
+| 2043-2062 | energie_ressources_critiques | degradation_sites_miniers | oui | catastrophe de contamination des mines de lithium d'Afrique australe 2056 |
+| 2043-2060 | organisation_territoires | montee_localisme | oui | fermeture des frontières communales dans les zones de conflit 2053 |
+| 2044-2062 | gouvernance_institutions | fragmentation_institutionnelle_regionale | non | dissolution de facto des Nations Unies 2055 |
+| 2044-2063 | organisation_territoires | megapoles_sous_pression | oui | crise urbaine de Lagos-Mumbai-Jakarta 2056 |
+| 2044-2063 | climat_environnement_global | relocalisation_cotiere | oui | évacuation forcée de Lagos-Est sous tension armée 2057 |
+| 2044-2063 | frontieres_du_systeme | minage_asteroides | non | attaque sur une plateforme de minage d'astéroïdes 2057 |
+| 2044-2062 | frontieres_du_systeme | retour_recit_civilisationnel_spatial | non | dernière retransmission publique d'une mission spatiale civile 2056 |
+| 2044-2063 | technologie_information | automatisation_decisionnelle | non | sabotage massif des systèmes décisionnels automatisés critiques 2055 |
+| 2044-2063 | valeurs_culture_tempo_sociale | retour_spiritualites_hybrides | non | émergence de cultes de survie dans les zones effondrées 2055 |
+| 2045-2065 | sante_biotechnologies | medecine_predictive_ia | non | fermeture des bases médicales prédictives de l'Alliance Pacifique 2058 |
+| 2045-2065 | frontieres_du_systeme | saturation_orbitale | non | catastrophe orbitale de 2057 bloquant l'accès spatial |
+| 2045-2064 | frontieres_du_systeme | nouvelles_communautes_orbitales | non | rupture de communication avec une station orbitale habitée 2058 |
+| 2048-2062 | systeme_economique_redistribution | dedollarisation_progressive | non | abandon du dollar comme devise de réserve globale |
+| 2048-2068 | sante_biotechnologies | course_biotech_internationale | non | fuite de souches modifiées du complexe clandestin de Karaganda 2061 |
+| 2050-2070 | sante_biotechnologies | surveillance_sanitaire_continue | non | scandale des registres médicaux pillés de Detroit-Sud 2066 |
+| 2050-2070 | sante_biotechnologies | acceptation_homme_augmente | non | émeutes anti-augmentés dans les enclaves de Lagos-Est 2063 |
+
+## fortress_world
+
+| Date | Variable | Signal | Pilote | Événement clé |
+|---|---|---|---|---|
+| 2028-2045 | gouvernance_institutions | trump_putsch_ice_2028 | non | doctrine de continuité sécuritaire du Bloc Atlantique 2038 |
+| 2029-2044 | geopolitique_conflits | trump_putsch_recomposition_blocs_2028 | oui | proclamation de la doctrine de sécurité continentale du Bloc Atlantique 2036 |
+| 2033-2050 | systemes_productifs_travail | robotisation_services | oui | déploiement des robots de service dans les administrations des blocs 2046 |
+| 2034-2050 | systemes_productifs_travail | automatisation_cognitive | oui | déploiement des usines entièrement automatisées des blocs 2045 |
+| 2034-2051 | systeme_economique_redistribution | explosion_inegalites_patrimoniales | non | instauration de classes patrimoniales officielles dans les blocs 2046 |
+| 2035-2052 | demographie_mobilite_humaine | vieillissement_demographique | non | politiques de natalité forcée et sélection migratoire des blocs |
+| 2035-2051 | systemes_productifs_travail | fragmentation_chaines_valeur | oui | programme de réindustrialisation interne des blocs 2046 |
+| 2035-2051 | demographie_mobilite_humaine | politiques_migratoires_restrictives | non | charte commune de fermeture migratoire des blocs 2045 |
+| 2035-2053 | gouvernance_institutions | transformation_attentes_democratiques | non | sondage confirmant la préférence majoritaire pour la sécurité des blocs 2046 |
+| 2035-2052 | organisation_territoires | villes_intelligentes_autonomes | oui | inauguration de la première cité intelligente fermée du Bloc Sibérien 2049 |
+| 2035-2052 | systeme_economique_redistribution | taxation_carbone_globale | non | adoption de barèmes carbone distincts par chaque bloc 2048 |
+| 2035-2052 | technologie_information | agents_autonomes_multi_ia | non | lancement des agents administratifs autonomes des blocs 2045 |
+| 2035-2050 | valeurs_culture_tempo_sociale | guerres_culturelles_transnationales | non | lancement de la doctrine de guerre culturelle des blocs 2045 |
+| 2036-2050 | geopolitique_conflits | militarisation_du_cyberespace | oui | création des commandements cyber des blocs 2044 |
+| 2036-2051 | valeurs_culture_tempo_sociale | hybridation_ia_culture | non | déploiement des systèmes de production culturelle des blocs |
+| 2036-2052 | climat_environnement_global | megafeux_saisonniers | oui | création des zones rouges incendie hors-bloc 2046 |
+| 2036-2053 | climat_environnement_global | discours_effondrement_climatique | oui | campagne officielle des blocs sur la fin du monde ancien 2046 |
+| 2036-2053 | demographie_mobilite_humaine | outils_predictifs_migratoires | non | déploiement du système de tri prédictif frontalier du Bloc Atlantique 2049 |
+| 2036-2052 | geopolitique_conflits | militarisation_societes | oui | instauration du service de sécurité territoriale obligatoire des blocs 2046 |
+| 2036-2053 | geopolitique_conflits | normalisation_conflit_hybride | oui | adoption de la doctrine de conflit permanent par les blocs 2046 |
+| 2036-2052 | energie_ressources_critiques | stockage_energie_nouvelle_generation | oui | nationalisation des giga-usines de batteries du Bloc Atlantique 2046 |
+| 2036-2053 | gouvernance_institutions | crise_confiance_institutions | non | sondage confirmant l'effondrement de la confiance dans les institutions mondiales 2045 |
+| 2036-2052 | gouvernance_institutions | systemes_decision_automatises_publics | non | déploiement des administrations entièrement automatisées dans les blocs 2046 |
+| 2036-2053 | organisation_territoires | recomposition_centres_economiques | oui | transfert du centre financier mondial vers le Bloc Atlantique 2048 |
+| 2036-2053 | systeme_economique_redistribution | remise_en_cause_capitalisme_croissance | non | doctrine officielle de puissance économique des blocs 2047 |
+| 2036-2052 | systemes_productifs_travail | disparition_metiers_intermediaires | oui | reconversion forcée des métiers intermédiaires vers les administrations des blocs 2045 |
+| 2036-2053 | technologie_information | consommation_energetique_ia | non | rationnement énergétique civil au profit des centres de calcul des blocs |
+| 2037-2052 | gouvernance_institutions | gouvernance_algorithmique_emergente | non | déploiement du système de scoring citoyen des blocs 2046 |
+| 2037-2052 | valeurs_culture_tempo_sociale | fatigue_civilisationnelle | non | renaissance des mouvements civilisationnels des blocs |
+| 2037-2053 | technologie_information | concentration_informationnelle | non | nationalisation des infrastructures numériques des blocs 2047 |
+| 2037-2053 | technologie_information | dependance_numerique | non | déploiement des internets de blocs 2048 |
+| 2037-2053 | climat_environnement_global | instabilite_saisonniere | oui | création des zones climatiques protégées des blocs 2048 |
+| 2037-2053 | energie_ressources_critiques | competition_terres_rares | oui | doctrine de sécurité énergétique des blocs 2047 |
+| 2037-2053 | demographie_mobilite_humaine | migrations_climatiques | non | construction du système de barrières des blocs 2048 |
+| 2037-2054 | demographie_mobilite_humaine | debats_identitaires_migrations | non | doctrine identitaire officielle du Bloc Sibérien sur la mobilité 2050 |
+| 2037-2053 | geopolitique_conflits | ia_militaire_autonome | oui | déploiement d'unités de combat autonomes par la Chambre de Sécurité 2047 |
+| 2037-2054 | energie_ressources_critiques | adaptation_sobriete_energetique | oui | instauration des quotas énergétiques par catégorie sociale dans les blocs 2048 |
+| 2037-2054 | frontieres_du_systeme | industrialisation_orbitale_privee | non | saisie des stations industrielles privées par le Bloc Atlantique 2048 |
+| 2037-2054 | gouvernance_institutions | gouvernance_environnementale_multiniveaux | non | adoption de standards environnementaux distincts par chaque bloc 2047 |
+| 2037-2054 | organisation_territoires | declin_rural_accelere | oui | classification des zones rurales hors-bloc comme territoires non prioritaires 2046 |
+| 2037-2054 | systeme_economique_redistribution | economie_plateformes_dominante | non | nationalisation des plateformes numériques par le Bloc Atlantique 2045 |
+| 2037-2053 | systemes_productifs_travail | automatisation_agricole_massive | oui | nationalisation des fermes automatisées stratégiques par les blocs 2047 |
+| 2038-2052 | systeme_economique_redistribution | automatisation_financière_algorithmique | non | nationalisation des infrastructures algorithmiques financières |
+| 2038-2054 | gouvernance_institutions | fragmentation_institutionnelle_regionale | non | création de l'Alliance des Blocs Atlantique et Eurasiatique 2048 |
+| 2038-2052 | geopolitique_conflits | tensions_sur_terres_rares | oui | création des zones d'exclusion minière des blocs 2047 |
+| 2038-2054 | organisation_territoires | stress_territorial_climatique | oui | création des territoires protégés des blocs 2049 |
+| 2038-2055 | sante_biotechnologies | emergence_pathogenes_nouveaux | non | incident biologique de Vladivostok 2049 |
+| 2038-2053 | sante_biotechnologies | inegalites_acces_soins | non | création des zones sanitaires prioritaires des blocs |
+| 2038-2055 | sante_biotechnologies | course_biotech_internationale | non | lancement du programme Biodéfense Eurasia par le Bloc Sibérien 2046 |
+| 2038-2055 | sante_biotechnologies | surveillance_sanitaire_continue | non | généralisation des capteurs biométriques obligatoires du Bloc Atlantique 2045 |
+| 2038-2055 | frontieres_du_systeme | spatialisation_des_conflits | non | création des commandements spatiaux des blocs 2049 |
+| 2038-2054 | climat_environnement_global | stress_hydrique | oui | militarisation des grands fleuves transfrontaliers 2049 |
+| 2038-2055 | demographie_mobilite_humaine | gestion_algorithmique_flux_humains | non | mise en service du classement migratoire automatisé du Bloc Eurasiatique 2050 |
+| 2038-2055 | geopolitique_conflits | conflits_climatiques_armes | oui | première guerre par procuration pour un territoire climatique viable 2048 |
+| 2038-2055 | energie_ressources_critiques | degradation_sites_miniers | oui | classification des zones minières comme zones sacrifiées par les blocs 2049 |
+| 2038-2056 | frontieres_du_systeme | retour_recit_civilisationnel_spatial | non | lancement de la doctrine du destin orbital par les blocs 2048 |
+| 2038-2055 | organisation_territoires | montee_localisme | oui | campagne identitaire locale officielle des blocs 2047 |
+| 2038-2054 | systemes_productifs_travail | normalisation_post_travail | oui | instauration du statut de citoyen productif obligatoire des blocs 2046 |
+| 2038-2054 | technologie_information | crise_verite_informationnelle | non | adoption de récits factuels officiels distincts par les blocs 2048 |
+| 2038-2053 | valeurs_culture_tempo_sociale | desynchronisation_generationnelle | non | instauration de quotas générationnels dans les administrations des blocs 2048 |
+| 2039-2055 | organisation_territoires | megapoles_sous_pression | oui | création des zones urbaines protégées des blocs 2050 |
+| 2039-2056 | climat_environnement_global | captation_carbone_industrielle | oui | programme de capture carbone du Bloc Atlantique 2052 |
+| 2039-2056 | energie_ressources_critiques | acceptation_transition_contrainte | oui | discours unificateur sur l'autosuffisance énergétique des blocs 2049 |
+| 2039-2057 | frontieres_du_systeme | nouvelles_communautes_orbitales | non | reconnaissance des stations orbitales comme territoires officiels des blocs 2050 |
+| 2039-2055 | technologie_information | automatisation_decisionnelle | non | déploiement des systèmes décisionnels automatisés des blocs 2049 |
+| 2039-2054 | valeurs_culture_tempo_sociale | acceleration_rythmes_vie_urbains | non | instauration des cycles de vie optimisés dans les blocs 2049 |
+| 2040-2060 | sante_biotechnologies | medecine_predictive_ia | non | Score de Priorité Sanitaire du Bloc Atlantique 2047 |
+| 2040-2058 | sante_biotechnologies | acceptation_homme_augmente | non | cérémonies officielles d'augmentation des cadres du Bloc Atlantique 2050 |
+| 2040-2058 | frontieres_du_systeme | saturation_orbitale | non | programme de nettoyage orbital militarisé des blocs |
+| 2040-2057 | climat_environnement_global | relocalisation_cotiere | oui | programme de réinstallation côtière du Bloc Atlantique 2051 |
+| 2040-2055 | valeurs_culture_tempo_sociale | retour_spiritualites_hybrides | non | adoption d'une spiritualité officielle hybride par les blocs 2050 |
+| 2041-2058 | frontieres_du_systeme | minage_asteroides | non | lancement de la première mission minière militarisée d'astéroïde 2051 |
+| 2043-2057 | systeme_economique_redistribution | dedollarisation_progressive | non | création du système monétaire des Blocs de Shanghai |
+| 2045-2062 | energie_ressources_critiques | fusion_experimentale | oui | premier réacteur à fusion militarisé du Bloc Asiatique 2058 |
+
+## new_sustainability
+
+| Date | Variable | Signal | Pilote | Événement clé |
+|---|---|---|---|---|
+| 2028-2043 | gouvernance_institutions | trump_putsch_ice_2028 | non | Pacte de La Haye sur la protection constitutionnelle des démocraties 2033 |
+| 2029-2045 | energie_ressources_critiques | acceptation_transition_contrainte | oui | lancement du récit mondial de la transition comme opportunité 2038 |
+| 2029-2045 | organisation_territoires | villes_intelligentes_autonomes | oui | déploiement du réseau mondial de villes intelligentes adaptatives 2039 |
+| 2029-2045 | systeme_economique_redistribution | explosion_inegalites_patrimoniales | non | entrée en vigueur de l'impôt mondial sur la fortune 2039 |
+| 2029-2045 | systemes_productifs_travail | normalisation_post_travail | oui | adoption du récit mondial de la société post-travail 2039 |
+| 2029-2042 | geopolitique_conflits | trump_putsch_recomposition_blocs_2028 | oui | Pacte de Stockholm sur la solidarité démocratique internationale 2034 |
+| 2030-2045 | sante_biotechnologies | course_biotech_internationale | non | signature du Pacte de Singapour pour la recherche biotech ouverte 2039 |
+| 2030-2046 | systemes_productifs_travail | fragmentation_chaines_valeur | oui | déploiement du système mondial de traçabilité des chaînes 2038 |
+| 2030-2046 | climat_environnement_global | discours_effondrement_climatique | oui | publication du manifeste de la transition régénérative 2037 |
+| 2030-2046 | demographie_mobilite_humaine | politiques_migratoires_restrictives | non | accord mondial de mobilité régulée remplaçant les quotas unilatéraux 2038 |
+| 2030-2046 | energie_ressources_critiques | stockage_energie_nouvelle_generation | oui | commercialisation mondiale des batteries à flux longue durée 2038 |
+| 2030-2046 | gouvernance_institutions | transformation_attentes_democratiques | non | adoption du premier référendum permanent assisté par IA 2039 |
+| 2030-2046 | organisation_territoires | recomposition_centres_economiques | oui | lancement du réseau mondial des hubs économiques distribués 2040 |
+| 2030-2046 | systeme_economique_redistribution | taxation_carbone_globale | non | entrée en vigueur de la taxe carbone mondiale universelle 2038 |
+| 2030-2046 | technologie_information | agents_autonomes_multi_ia | non | déploiement du réseau mondial d'agents IA collaboratifs 2038 |
+| 2030-2045 | valeurs_culture_tempo_sociale | guerres_culturelles_transnationales | non | création du forum mondial de dialogue interculturel permanent 2038 |
+| 2031-2047 | climat_environnement_global | stress_hydrique | oui | Traité mondial sur l'eau et la sécurité hydrique 2038 |
+| 2031-2047 | demographie_mobilite_humaine | outils_predictifs_migratoires | non | déploiement de la plateforme mondiale d'anticipation migratoire 2039 |
+| 2031-2048 | geopolitique_conflits | militarisation_societes | oui | lancement du programme mondial de démilitarisation civile 2039 |
+| 2031-2047 | energie_ressources_critiques | adaptation_sobriete_energetique | oui | lancement de la campagne mondiale pour la sobriété choisie 2039 |
+| 2031-2047 | frontieres_du_systeme | industrialisation_orbitale_privee | non | fusion des consortiums orbitaux dans le réseau économique mondial 2039 |
+| 2031-2047 | gouvernance_institutions | crise_confiance_institutions | non | publication du premier baromètre mondial de confiance institutionnelle 2039 |
+| 2031-2047 | organisation_territoires | declin_rural_accelere | oui | lancement du programme de revitalisation rurale par IA 2039 |
+| 2031-2047 | systeme_economique_redistribution | remise_en_cause_capitalisme_croissance | non | adoption mondiale des indicateurs de prosperité post-croissance 2039 |
+| 2031-2047 | systemes_productifs_travail | disparition_metiers_intermediaires | oui | lancement du programme mondial de reconversion vers les métiers hybrides 2038 |
+| 2031-2047 | technologie_information | consommation_energetique_ia | non | premiers centres de données alimentés à 100% par fusion 2039 |
+| 2031-2046 | valeurs_culture_tempo_sociale | desynchronisation_generationnelle | non | lancement du pacte intergénérationnel mondial pour la régénération 2039 |
+| 2032-2047 | gouvernance_institutions | fragmentation_institutionnelle_regionale | non | réforme majeure de l'ONU et création du Conseil Climatique Mondial 2039 |
+| 2032-2047 | valeurs_culture_tempo_sociale | hybridation_ia_culture | non | Charte mondiale de l'IA créative 2039 |
+| 2032-2048 | organisation_territoires | megapoles_sous_pression | oui | programme Villes Régénératives 2040 |
+| 2032-2045 | sante_biotechnologies | emergence_pathogenes_nouveaux | non | création du Réseau Mondial de Biosurveillance en 2038 |
+| 2032-2048 | sante_biotechnologies | surveillance_sanitaire_continue | non | extension du Réseau Mondial de Biosurveillance aux foyers en 2042 |
+| 2032-2048 | frontieres_du_systeme | spatialisation_des_conflits | non | Traité de l'Espace renouvelé et étendu 2040 |
+| 2032-2047 | technologie_information | concentration_informationnelle | non | Traité mondial sur la régulation des plateformes numériques 2039 |
+| 2032-2047 | technologie_information | dependance_numerique | non | programme mondial de résilience numérique 2039 |
+| 2032-2048 | climat_environnement_global | instabilite_saisonniere | oui | déploiement mondial des puits de carbone technologiques 2040 |
+| 2032-2047 | energie_ressources_critiques | competition_terres_rares | oui | Fonds Mondial des Ressources Critiques 2040 |
+| 2032-2048 | demographie_mobilite_humaine | migrations_climatiques | non | Pacte mondial de gestion des migrations climatiques 2040 |
+| 2032-2048 | systemes_productifs_travail | automatisation_cognitive | oui | instauration du revenu universel global 2041 |
+| 2032-2047 | geopolitique_conflits | ia_militaire_autonome | oui | ratification du traité d'interdiction des armes autonomes 2040 |
+| 2032-2048 | geopolitique_conflits | normalisation_conflit_hybride | oui | lancement de la campagne mondiale pour la paix systémique 2040 |
+| 2032-2049 | frontieres_du_systeme | retour_recit_civilisationnel_spatial | non | lancement du récit mondial de la civilisation multi-orbitale 2041 |
+| 2032-2048 | gouvernance_institutions | systemes_decision_automatises_publics | non | certification mondiale des systèmes décisionnels publics automatisés 2040 |
+| 2032-2048 | systeme_economique_redistribution | economie_plateformes_dominante | non | adoption du statut de bien commun pour les plateformes mondiales 2039 |
+| 2033-2048 | gouvernance_institutions | gouvernance_algorithmique_emergente | non | Accord de Séoul sur la gouvernance IA institutionnelle 2040 |
+| 2033-2047 | geopolitique_conflits | militarisation_du_cyberespace | oui | Convention de Genève numérique 2040 |
+| 2033-2048 | valeurs_culture_tempo_sociale | fatigue_civilisationnelle | non | premier Forum Mondial des Civilisations Régénératives 2041 |
+| 2033-2049 | organisation_territoires | stress_territorial_climatique | oui | plan mondial de relocalisation climatique 2041 |
+| 2033-2050 | frontieres_du_systeme | saturation_orbitale | non | Agence Mondiale du Trafic Spatial 2041 |
+| 2033-2049 | climat_environnement_global | megafeux_saisonniers | oui | déploiement du réseau mondial de détection précoce des feux 2039 |
+| 2033-2049 | demographie_mobilite_humaine | debats_identitaires_migrations | non | lancement du forum mondial des identités mobiles 2039 |
+| 2033-2049 | demographie_mobilite_humaine | gestion_algorithmique_flux_humains | non | déploiement de la plateforme mondiale de gestion des mobilités 2040 |
+| 2033-2049 | geopolitique_conflits | conflits_climatiques_armes | oui | signature du pacte mondial de partage des ressources climatiques 2041 |
+| 2033-2049 | energie_ressources_critiques | degradation_sites_miniers | oui | adoption de la norme mondiale de restauration minière 2041 |
+| 2033-2049 | frontieres_du_systeme | nouvelles_communautes_orbitales | non | adoption du statut de citoyenneté orbitale universelle 2042 |
+| 2033-2049 | systemes_productifs_travail | robotisation_services | oui | généralisation mondiale des robots de service dans le tertiaire 2039 |
+| 2033-2048 | technologie_information | crise_verite_informationnelle | non | lancement du système mondial de certification de la réalité 2041 |
+| 2034-2050 | climat_environnement_global | captation_carbone_industrielle | oui | mise en service du réseau mondial de capture carbone 2043 |
+| 2034-2051 | frontieres_du_systeme | minage_asteroides | non | lancement du programme international de minage d'astéroïdes 2043 |
+| 2034-2050 | gouvernance_institutions | gouvernance_environnementale_multiniveaux | non | adoption par le Conseil Climatique Mondial du cadre multi-niveaux 2043 |
+| 2034-2050 | organisation_territoires | montee_localisme | oui | lancement du mouvement mondial des cultures glocales 2039 |
+| 2034-2050 | systemes_productifs_travail | automatisation_agricole_massive | oui | lancement du programme mondial d'agriculture régénérative automatisée 2040 |
+| 2034-2049 | technologie_information | automatisation_decisionnelle | non | certification mondiale des systèmes décisionnels automatisés fiables 2042 |
+| 2034-2049 | valeurs_culture_tempo_sociale | acceleration_rythmes_vie_urbains | non | déploiement mondial des horaires adaptatifs urbains pilotés par IA 2042 |
+| 2035-2048 | systeme_economique_redistribution | automatisation_financière_algorithmique | non | Accords de Genève sur la régulation des IA financières |
+| 2035-2050 | geopolitique_conflits | tensions_sur_terres_rares | oui | Traité de Nairobi sur les minerais stratégiques 2042 |
+| 2035-2052 | sante_biotechnologies | inegalites_acces_soins | non | Accord de Lagos sur la santé universelle 2045 |
+| 2035-2050 | sante_biotechnologies | medecine_predictive_ia | non | déploiement du Réseau Mondial de Médecine Prédictive en 2044 |
+| 2035-2052 | sante_biotechnologies | acceptation_homme_augmente | non | premier Sommet mondial sur l'humain augmenté éthique 2046 |
+| 2035-2052 | climat_environnement_global | relocalisation_cotiere | oui | lancement du programme mondial de villes-refuges côtières 2044 |
+| 2035-2050 | valeurs_culture_tempo_sociale | retour_spiritualites_hybrides | non | lancement du mouvement spirituel mondial de la régénération 2043 |
+| 2040-2055 | systeme_economique_redistribution | dedollarisation_progressive | non | création du Droit de Tirage Universel 2.0 |
+| 2040-2060 | demographie_mobilite_humaine | vieillissement_demographique | non | allongement de l'espérance de vie active à 90 ans |
+| 2048-2065 | energie_ressources_critiques | fusion_experimentale | oui | premier réseau de réacteurs à fusion commercial 2060 |
+
+## eco_communalism
+
+| Date | Variable | Signal | Pilote | Événement clé |
+|---|---|---|---|---|
+| 2029-2048 | gouvernance_institutions | trump_putsch_ice_2028 | non | manifeste des assemblées bioterritoriales contre les États putschistes |
+| 2030-2048 | geopolitique_conflits | trump_putsch_recomposition_blocs_2028 | oui | manifeste de désalignement bioterritorial face aux putschs d'État |
+| 2035-2055 | frontieres_du_systeme | spatialisation_des_conflits | non | abandon des programmes spatiaux nationaux non essentiels |
+| 2035-2053 | frontieres_du_systeme | saturation_orbitale | non | moratoire communautaire sur les lancements commerciaux |
+| 2035-2055 | energie_ressources_critiques | fusion_experimentale | oui | abandon communautaire des projets centralisés de fusion |
+| 2035-2055 | demographie_mobilite_humaine | vieillissement_demographique | non | renaissance des modèles familiaux élargis et communautaires |
+| 2036-2055 | climat_environnement_global | discours_effondrement_climatique | oui | diffusion virale du mouvement des veillées de l'effondrement |
+| 2036-2055 | energie_ressources_critiques | acceptation_transition_contrainte | oui | manifeste bioterritorial de la sobriété choisie |
+| 2036-2055 | frontieres_du_systeme | industrialisation_orbitale_privee | non | dissolution volontaire des consortiums orbitaux à but lucratif |
+| 2036-2055 | organisation_territoires | villes_intelligentes_autonomes | oui | réseau bioterritorial de capteurs urbains low-tech partagés |
+| 2036-2055 | systeme_economique_redistribution | explosion_inegalites_patrimoniales | non | généralisation des communs bioterritoriaux remplaçant la propriété privée |
+| 2036-2055 | systemes_productifs_travail | robotisation_services | oui | charte bioterritoriale pour des services assurés par des humains |
+| 2037-2056 | systemes_productifs_travail | fragmentation_chaines_valeur | oui | mouvement de localisation des chaînes de valeur essentielles |
+| 2037-2055 | climat_environnement_global | megafeux_saisonniers | oui | renaissance des pratiques autochtones de brûlage dirigé |
+| 2037-2056 | energie_ressources_critiques | stockage_energie_nouvelle_generation | oui | réseau bioterritorial de stockage thermique communautaire |
+| 2037-2056 | frontieres_du_systeme | nouvelles_communautes_orbitales | non | fondation de la première communauté orbitale coopérative scientifique |
+| 2037-2056 | gouvernance_institutions | systemes_decision_automatises_publics | non | démantèlement volontaire des systèmes décisionnels automatisés locaux |
+| 2037-2056 | organisation_territoires | recomposition_centres_economiques | oui | mouvement de relocalisation économique vers les territoires bioterritoriaux |
+| 2037-2056 | systeme_economique_redistribution | taxation_carbone_globale | non | charte bioterritoriale de redevabilité écologique directe |
+| 2037-2056 | technologie_information | agents_autonomes_multi_ia | non | charte bioterritoriale des assistants IA communautaires |
+| 2038-2057 | climat_environnement_global | instabilite_saisonniere | oui | mouvement de régénération écologique territoriale |
+| 2038-2056 | climat_environnement_global | stress_hydrique | oui | mouvement mondial de souveraineté hydrique locale |
+| 2038-2057 | systemes_productifs_travail | automatisation_cognitive | oui | mouvement néo-artisanal et de l'économie du soin |
+| 2038-2057 | demographie_mobilite_humaine | outils_predictifs_migratoires | non | réseau bioterritorial d'anticipation des mobilités locales |
+| 2038-2057 | geopolitique_conflits | normalisation_conflit_hybride | oui | diffusion des récits bioterritoriaux de réparation post-conflit |
+| 2038-2057 | energie_ressources_critiques | adaptation_sobriete_energetique | oui | charte bioterritoriale de sobriété énergétique partagée |
+| 2038-2057 | frontieres_du_systeme | minage_asteroides | non | charte scientifique internationale contre le minage extractif d'astéroïdes |
+| 2038-2056 | frontieres_du_systeme | retour_recit_civilisationnel_spatial | non | manifeste pour une présence spatiale sobre et non conquérante |
+| 2038-2057 | gouvernance_institutions | gouvernance_environnementale_multiniveaux | non | constitution du réseau des conseils environnementaux bioterritoriaux |
+| 2038-2057 | organisation_territoires | declin_rural_accelere | oui | mouvement de retour à la terre bioterritorial |
+| 2038-2057 | systeme_economique_redistribution | remise_en_cause_capitalisme_croissance | non | charte fondatrice post-croissance des assemblées bioterritoriales |
+| 2038-2057 | technologie_information | consommation_energetique_ia | non | mouvement bioterritorial des modèles IA frugaux |
+| 2038-2056 | valeurs_culture_tempo_sociale | guerres_culturelles_transnationales | non | mouvement bioterritorial de désengagement des récits globaux |
+| 2039-2058 | energie_ressources_critiques | competition_terres_rares | oui | mouvement de circularité des matériaux critiques |
+| 2039-2058 | demographie_mobilite_humaine | migrations_climatiques | non | programme d'accueil des réfugiés climatiques bioterritoriaux |
+| 2039-2058 | climat_environnement_global | captation_carbone_industrielle | oui | mouvement de boycott des fermes de capture carbone industrielles |
+| 2039-2058 | geopolitique_conflits | ia_militaire_autonome | oui | mouvement de démilitarisation autonome des territoires |
+| 2039-2058 | gouvernance_institutions | crise_confiance_institutions | non | généralisation des assemblées de redevabilité locale dans les bioterritoires |
+| 2039-2058 | organisation_territoires | montee_localisme | oui | manifeste fondateur du localisme bioterritorial |
+| 2039-2058 | systeme_economique_redistribution | economie_plateformes_dominante | non | lancement du réseau coopératif bioterritorial d'échanges numériques |
+| 2039-2058 | systemes_productifs_travail | disparition_metiers_intermediaires | oui | mouvement de revalorisation des savoir-faire intermédiaires bioterritoriaux |
+| 2039-2058 | technologie_information | crise_verite_informationnelle | non | réseau bioterritorial de vérification communautaire de l'information |
+| 2039-2057 | valeurs_culture_tempo_sociale | desynchronisation_generationnelle | non | charte bioterritoriale du mentorat intergénérationnel |
+| 2040-2058 | gouvernance_institutions | fragmentation_institutionnelle_regionale | non | création des Assemblées Bioterritioriales Régionales |
+| 2040-2060 | geopolitique_conflits | tensions_sur_terres_rares | oui | mouvement de démétallisation des économies locales |
+| 2040-2058 | valeurs_culture_tempo_sociale | fatigue_civilisationnelle | non | renaissance des cultures situées et des récits de lieu |
+| 2040-2058 | organisation_territoires | stress_territorial_climatique | oui | mouvement global de retour aux territoires vivables |
+| 2040-2058 | sante_biotechnologies | emergence_pathogenes_nouveaux | non | reconfiguration des systèmes de santé locaux post-pandémie |
+| 2040-2058 | sante_biotechnologies | inegalites_acces_soins | non | mouvement des maisons de santé communautaires |
+| 2040-2058 | sante_biotechnologies | course_biotech_internationale | non | création du réseau open-source "Semences et Remèdes" 2049 |
+| 2040-2058 | technologie_information | dependance_numerique | non | mouvement de sobriété numérique global |
+| 2040-2058 | demographie_mobilite_humaine | debats_identitaires_migrations | non | charte des identités bioterritoriales et de l'accueil |
+| 2040-2059 | demographie_mobilite_humaine | gestion_algorithmique_flux_humains | non | mouvement de débranchement des systèmes de gestion migratoire centralisés |
+| 2040-2059 | geopolitique_conflits | conflits_climatiques_armes | oui | création des conseils de médiation climatique bioterritoriaux |
+| 2040-2059 | energie_ressources_critiques | degradation_sites_miniers | oui | mouvement de réhabilitation bioterritoriale des friches minières |
+| 2040-2059 | gouvernance_institutions | transformation_attentes_democratiques | non | généralisation des assemblées délibératives locales comme norme démocratique |
+| 2040-2059 | systemes_productifs_travail | automatisation_agricole_massive | oui | mouvement de retour aux pratiques agricoles low-tech bioterritoriales |
+| 2041-2060 | organisation_territoires | megapoles_sous_pression | oui | mouvement de décroissance urbaine volontaire |
+| 2041-2060 | technologie_information | concentration_informationnelle | non | déploiement mondial des réseaux mesh communautaires |
+| 2041-2059 | climat_environnement_global | relocalisation_cotiere | oui | mouvement de retour vers les terres hautes bioterritoriales |
+| 2041-2059 | demographie_mobilite_humaine | politiques_migratoires_restrictives | non | dissolution de fait des contrôles migratoires nationaux dans les bioterritoires |
+| 2041-2060 | geopolitique_conflits | militarisation_societes | oui | charte des milices civiques non armées des bioterritoires |
+| 2041-2060 | systemes_productifs_travail | normalisation_post_travail | oui | manifeste bioterritorial de la contribution choisie |
+| 2041-2059 | valeurs_culture_tempo_sociale | acceleration_rythmes_vie_urbains | non | charte bioterritoriale du tempo lent et des cycles naturels |
+| 2042-2060 | systeme_economique_redistribution | automatisation_financière_algorithmique | non | mouvement de déconnexion des marchés algorithmiques |
+| 2042-2060 | geopolitique_conflits | militarisation_du_cyberespace | oui | mouvement de souveraineté numérique locale |
+| 2042-2060 | valeurs_culture_tempo_sociale | hybridation_ia_culture | non | mouvement de réappropriation culturelle locale |
+| 2042-2060 | sante_biotechnologies | surveillance_sanitaire_continue | non | charte des maisons de santé sur le consentement sanitaire 2047 |
+| 2042-2060 | sante_biotechnologies | acceptation_homme_augmente | non | charte communautaire pour des corps non augmentés 2044 |
+| 2042-2061 | technologie_information | automatisation_decisionnelle | non | démantèlement communautaire des systèmes décisionnels automatisés |
+| 2043-2062 | gouvernance_institutions | gouvernance_algorithmique_emergente | non | mouvement de déconnexion algorithmique communautaire |
+| 2043-2061 | valeurs_culture_tempo_sociale | retour_spiritualites_hybrides | non | fondation des premières communautés spirituelles bioterritoriales |
+| 2045-2065 | systeme_economique_redistribution | dedollarisation_progressive | non | mouvement des monnaies bioterritioriales |
+| 2045-2065 | sante_biotechnologies | medecine_predictive_ia | non | diffusion des kits de diagnostic communautaire "Santé Sobre" 2052 |
+
+## policy_reform
+
+| Date | Variable | Signal | Pilote | Événement clé |
+|---|---|---|---|---|
+| 2025-2041 | systeme_economique_redistribution | explosion_inegalites_patrimoniales | non | adoption de la réforme fiscale internationale sur les grandes fortunes 2035 |
+| 2025-2040 | systemes_productifs_travail | disparition_metiers_intermediaires | oui | lancement du plan international de reconversion professionnelle 2033 |
+| 2025-2041 | technologie_information | agents_autonomes_multi_ia | non | adoption de la norme mondiale d'auditabilité des agents IA 2033 |
+| 2026-2041 | systemes_productifs_travail | fragmentation_chaines_valeur | oui | directive sur la résilience des chaînes d'approvisionnement critiques 2032 |
+| 2026-2043 | demographie_mobilite_humaine | debats_identitaires_migrations | non | programme international de dialogue interculturel sur les migrations 2034 |
+| 2026-2042 | energie_ressources_critiques | acceptation_transition_contrainte | oui | lancement de la campagne publique de pédagogie énergétique 2033 |
+| 2026-2042 | organisation_territoires | villes_intelligentes_autonomes | oui | adoption de la norme internationale des villes intelligentes 2036 |
+| 2026-2042 | systeme_economique_redistribution | taxation_carbone_globale | non | accord international sur un prix plancher du carbone 2033 |
+| 2026-2042 | technologie_information | consommation_energetique_ia | non | adoption de la norme internationale d'efficacité énergétique de l'IA 2034 |
+| 2026-2042 | valeurs_culture_tempo_sociale | guerres_culturelles_transnationales | non | lancement du programme international d'éducation au dialogue interculturel 2033 |
+| 2027-2043 | climat_environnement_global | megafeux_saisonniers | oui | création de la force mondiale anti-incendie de l'ONU 2034 |
+| 2027-2043 | demographie_mobilite_humaine | politiques_migratoires_restrictives | non | accord-cadre international sur les quotas migratoires négociés 2034 |
+| 2027-2043 | geopolitique_conflits | normalisation_conflit_hybride | oui | publication du rapport-cadre sur la gestion du conflit hybride 2034 |
+| 2027-2043 | energie_ressources_critiques | adaptation_sobriete_energetique | oui | lancement du plan international de sobriété énergétique 2034 |
+| 2027-2043 | frontieres_du_systeme | industrialisation_orbitale_privee | non | adoption du cadre international sur l'industrie orbitale privée 2034 |
+| 2027-2044 | frontieres_du_systeme | retour_recit_civilisationnel_spatial | non | lancement de la campagne institutionnelle pour la culture spatiale 2035 |
+| 2027-2043 | gouvernance_institutions | transformation_attentes_democratiques | non | lancement de la plateforme mondiale de consultation citoyenne 2034 |
+| 2027-2044 | gouvernance_institutions | systemes_decision_automatises_publics | non | adoption de la norme sur la supervision humaine obligatoire 2035 |
+| 2027-2043 | organisation_territoires | recomposition_centres_economiques | oui | lancement du programme international de rééquilibrage économique territorial 2035 |
+| 2027-2043 | systeme_economique_redistribution | remise_en_cause_capitalisme_croissance | non | adoption du tableau de bord international post-PIB 2035 |
+| 2027-2043 | systemes_productifs_travail | robotisation_services | oui | adoption de la charte de transition des métiers de service 2034 |
+| 2027-2043 | technologie_information | crise_verite_informationnelle | non | adoption de la norme internationale de certification informationnelle 2035 |
+| 2027-2043 | valeurs_culture_tempo_sociale | desynchronisation_generationnelle | non | lancement du programme national de dialogue intergénérationnel 2034 |
+| 2028-2044 | frontieres_du_systeme | spatialisation_des_conflits | non | Convention de l'Espace sur la limitation des armes orbitales 2036 |
+| 2028-2043 | frontieres_du_systeme | saturation_orbitale | non | directive internationale sur les débris orbitaux 2035 |
+| 2028-2043 | technologie_information | dependance_numerique | non | directive internationale sur la résilience des infrastructures 2035 |
+| 2028-2044 | climat_environnement_global | instabilite_saisonniere | oui | accord climatique de Nairobi 2+ avec mécanismes contraignants 2035 |
+| 2028-2043 | climat_environnement_global | stress_hydrique | oui | Convention de Genève sur le droit à l'eau 2035 |
+| 2028-2044 | demographie_mobilite_humaine | migrations_climatiques | non | Convention de Genève sur les réfugiés climatiques 2035 |
+| 2028-2044 | demographie_mobilite_humaine | vieillissement_demographique | non | grand plan de réforme des retraites de 2035 |
+| 2028-2044 | systemes_productifs_travail | automatisation_cognitive | oui | Taxe Tobin sur l'automatisation et fonds de reconversion 2036 |
+| 2028-2044 | geopolitique_conflits | militarisation_societes | oui | lancement du programme international de démobilisation civile 2035 |
+| 2028-2044 | energie_ressources_critiques | stockage_energie_nouvelle_generation | oui | lancement du fonds international pour le stockage énergétique 2035 |
+| 2028-2044 | gouvernance_institutions | crise_confiance_institutions | non | adoption de la charte mondiale de transparence institutionnelle 2035 |
+| 2028-2044 | organisation_territoires | declin_rural_accelere | oui | lancement du plan national de revitalisation des territoires ruraux 2034 |
+| 2028-2044 | systeme_economique_redistribution | economie_plateformes_dominante | non | adoption de la directive mondiale sur la taxation des plateformes 2034 |
+| 2028-2044 | valeurs_culture_tempo_sociale | acceleration_rythmes_vie_urbains | non | adoption de la charte internationale des rythmes urbains soutenables 2035 |
+| 2028-2042 | gouvernance_institutions | trump_putsch_ice_2028 | non | traité onusien de garantie des transitions démocratiques 2034 |
+| 2029-2044 | valeurs_culture_tempo_sociale | hybridation_ia_culture | non | traité international sur la propriété intellectuelle et l'IA 2036 |
+| 2029-2044 | technologie_information | concentration_informationnelle | non | démantèlement judiciaire des GAFAM 2+ de 2036 |
+| 2029-2044 | energie_ressources_critiques | competition_terres_rares | oui | traité OCDE sur les minerais de la transition 2036 |
+| 2029-2045 | climat_environnement_global | discours_effondrement_climatique | oui | premier plan national de santé mentale climatique 2034 |
+| 2029-2045 | demographie_mobilite_humaine | outils_predictifs_migratoires | non | charte internationale sur l'usage éthique des prédictions migratoires 2036 |
+| 2029-2045 | geopolitique_conflits | conflits_climatiques_armes | oui | création du mécanisme international de médiation climatique 2036 |
+| 2029-2045 | energie_ressources_critiques | degradation_sites_miniers | oui | création du fonds international de réhabilitation minière 2037 |
+| 2029-2045 | frontieres_du_systeme | nouvelles_communautes_orbitales | non | lancement du programme international d'habitats orbitaux partagés 2036 |
+| 2029-2045 | gouvernance_institutions | gouvernance_environnementale_multiniveaux | non | signature du cadre de coordination environnementale multi-niveaux 2036 |
+| 2029-2045 | organisation_territoires | montee_localisme | oui | adoption du cadre de gouvernance locale participative 2034 |
+| 2029-2045 | systemes_productifs_travail | automatisation_agricole_massive | oui | adoption de la directive sur l'automatisation agricole responsable 2035 |
+| 2029-2043 | geopolitique_conflits | trump_putsch_recomposition_blocs_2028 | oui | Accord de Bruxelles sur la continuité des alliances démocratiques 2033 |
+| 2030-2045 | gouvernance_institutions | gouvernance_algorithmique_emergente | non | directive mondiale sur l'IA dans les services publics 2037 |
+| 2030-2046 | gouvernance_institutions | fragmentation_institutionnelle_regionale | non | traité de réforme des institutions de Bretton Woods 2037 |
+| 2030-2046 | organisation_territoires | megapoles_sous_pression | oui | programme ONU-Habitat de résilience des mégapoles 2037 |
+| 2030-2044 | sante_biotechnologies | emergence_pathogenes_nouveaux | non | Traité de Genève sur la sécurité sanitaire globale 2035 |
+| 2030-2046 | sante_biotechnologies | surveillance_sanitaire_continue | non | adoption du règlement mondial sur les données de santé 2037 |
+| 2030-2046 | climat_environnement_global | captation_carbone_industrielle | oui | protocole international de certification de la capture carbone 2037 |
+| 2030-2047 | demographie_mobilite_humaine | gestion_algorithmique_flux_humains | non | norme internationale sur les systèmes algorithmiques migratoires 2035 |
+| 2030-2046 | geopolitique_conflits | ia_militaire_autonome | oui | création du registre international des systèmes d'armes autonomes 2037 |
+| 2030-2046 | frontieres_du_systeme | minage_asteroides | non | adoption du traité de partage des ressources astéroïdales 2038 |
+| 2030-2046 | systemes_productifs_travail | normalisation_post_travail | oui | adoption de la semaine de travail réduite à l'échelle mondiale 2033 |
+| 2030-2045 | technologie_information | automatisation_decisionnelle | non | adoption de la norme sur la supervision des décisions automatisées 2037 |
+| 2030-2045 | valeurs_culture_tempo_sociale | retour_spiritualites_hybrides | non | adoption du cadre légal de reconnaissance des spiritualités hybrides 2037 |
+| 2031-2046 | geopolitique_conflits | militarisation_du_cyberespace | oui | traité sur la limitation des cyberarmes 2038 |
+| 2031-2046 | valeurs_culture_tempo_sociale | fatigue_civilisationnelle | non | programme UNESCO de recomposition culturelle post-crise |
+| 2031-2047 | organisation_territoires | stress_territorial_climatique | oui | directive internationale d'adaptation territoriale 2038 |
+| 2031-2048 | climat_environnement_global | relocalisation_cotiere | oui | fonds mondial pour la relocalisation côtière de l'ONU 2039 |
+| 2032-2048 | sante_biotechnologies | inegalites_acces_soins | non | directive OMS sur l'accès équitable aux médicaments essentiels |
+| 2032-2048 | sante_biotechnologies | course_biotech_internationale | non | ratification du Traité de Brasília sur la biotech responsable 2043 |
+| 2032-2050 | sante_biotechnologies | acceptation_homme_augmente | non | premières assises citoyennes sur l'humain augmenté 2040 |
+| 2033-2047 | systeme_economique_redistribution | automatisation_financière_algorithmique | non | traité international sur les marchés algorithmiques |
+| 2033-2048 | geopolitique_conflits | tensions_sur_terres_rares | oui | accord OCDE sur la traçabilité des ressources critiques |
+| 2034-2048 | sante_biotechnologies | medecine_predictive_ia | non | adoption de la Charte Internationale de la Médecine Prédictive Équitable 2041 |
+| 2038-2052 | systeme_economique_redistribution | dedollarisation_progressive | non | réforme du FMI et création du Conseil Monétaire Mondial |
+| 2040-2058 | energie_ressources_critiques | fusion_experimentale | oui | création de l'Agence Internationale de la Fusion 2045 |
+
+## reference
+
+| Date | Variable | Signal | Pilote | Événement clé |
+|---|---|---|---|---|
+| 2022-2037 | systemes_productifs_travail | fragmentation_chaines_valeur | oui | troisième crise des semiconducteurs 2029 |
+| 2023-2038 | systemes_productifs_travail | robotisation_services | oui | premier déploiement massif de robots dans la restauration 2030 |
+| 2023-2037 | technologie_information | agents_autonomes_multi_ia | non | premier déploiement commercial massif d'agents IA autonomes 2030 |
+| 2023-2038 | valeurs_culture_tempo_sociale | guerres_culturelles_transnationales | non | première étude mondiale sur la polarisation culturelle médiatique 2030 |
+| 2024-2039 | technologie_information | dependance_numerique | non | premières pannes systémiques d'envergure 2030 |
+| 2024-2040 | climat_environnement_global | instabilite_saisonniere | oui | première décennie au-dessus de 1.5°C 2031 |
+| 2024-2039 | climat_environnement_global | stress_hydrique | oui | première grande crise hydrique régionale documentée 2031 |
+| 2024-2040 | demographie_mobilite_humaine | migrations_climatiques | non | premier million de réfugiés climatiques officiellement reconnus 2030 |
+| 2024-2038 | demographie_mobilite_humaine | vieillissement_demographique | non | première grande crise de financement des retraites 2031 |
+| 2024-2039 | systemes_productifs_travail | automatisation_cognitive | oui | première vague de désindustrialisation cognitive 2031 |
+| 2024-2041 | climat_environnement_global | discours_effondrement_climatique | oui | best-seller mondial sur l'effondrement civilisationnel 2030 |
+| 2024-2040 | geopolitique_conflits | normalisation_conflit_hybride | oui | première enquête internationale sur la normalisation du conflit hybride 2032 |
+| 2024-2040 | energie_ressources_critiques | acceptation_transition_contrainte | oui | premier sondage mondial sur l'acceptation de la transition 2031 |
+| 2024-2040 | gouvernance_institutions | transformation_attentes_democratiques | non | premier mouvement citoyen mondial pour la démocratie directe 2032 |
+| 2024-2039 | organisation_territoires | villes_intelligentes_autonomes | oui | premier classement mondial des villes intelligentes publié 2032 |
+| 2024-2040 | organisation_territoires | recomposition_centres_economiques | oui | premier rapport sur le déclin relatif des centres économiques traditionnels 2032 |
+| 2024-2041 | organisation_territoires | montee_localisme | oui | premier sondage mondial sur la montée du localisme 2032 |
+| 2024-2040 | systeme_economique_redistribution | explosion_inegalites_patrimoniales | non | premier rapport mondial sur la concentration patrimoniale record 2032 |
+| 2024-2041 | systeme_economique_redistribution | economie_plateformes_dominante | non | premier rapport sur la concentration record des plateformes mondiales 2032 |
+| 2024-2038 | technologie_information | consommation_energetique_ia | non | premier rapport sur l'empreinte énergétique mondiale de l'IA 2031 |
+| 2024-2039 | valeurs_culture_tempo_sociale | desynchronisation_generationnelle | non | premier rapport mondial sur la fracture générationnelle 2031 |
+| 2025-2040 | frontieres_du_systeme | spatialisation_des_conflits | non | premier incident spatial militaire non mortel 2032 |
+| 2025-2040 | frontieres_du_systeme | saturation_orbitale | non | premier incident critique lié aux débris orbitaux 2031 |
+| 2025-2040 | technologie_information | concentration_informationnelle | non | fusion des deux dernières grandes plateformes mondiales 2032 |
+| 2025-2040 | energie_ressources_critiques | competition_terres_rares | oui | première crise des terres rares post-Covid 2030 |
+| 2025-2041 | climat_environnement_global | megafeux_saisonniers | oui | saison record de mégafeux sur trois continents 2032 |
+| 2025-2041 | demographie_mobilite_humaine | outils_predictifs_migratoires | non | premiers systèmes prédictifs migratoires commercialisés aux frontières 2032 |
+| 2025-2042 | demographie_mobilite_humaine | politiques_migratoires_restrictives | non | vague de fermetures frontalières en réponse aux crises migratoires 2031 |
+| 2025-2041 | geopolitique_conflits | militarisation_societes | oui | premier rapport sur la militarisation croissante des sociétés civiles 2032 |
+| 2025-2041 | energie_ressources_critiques | stockage_energie_nouvelle_generation | oui | premiers déploiements commerciaux de stockage longue durée 2032 |
+| 2025-2042 | energie_ressources_critiques | adaptation_sobriete_energetique | oui | première campagne nationale de sobriété énergétique obligatoire 2032 |
+| 2025-2042 | frontieres_du_systeme | industrialisation_orbitale_privee | non | premier contrat industriel privé en orbite basse 2031 |
+| 2025-2041 | frontieres_du_systeme | retour_recit_civilisationnel_spatial | non | dernier lancement habité médiatisé à grande échelle 2032 |
+| 2025-2041 | gouvernance_institutions | crise_confiance_institutions | non | premier indice mondial de défiance institutionnelle publié 2032 |
+| 2025-2042 | gouvernance_institutions | systemes_decision_automatises_publics | non | premier scandale d'erreur judiciaire algorithmique documenté 2033 |
+| 2025-2041 | organisation_territoires | declin_rural_accelere | oui | premier rapport sur la désertification rurale accélérée 2032 |
+| 2025-2041 | systeme_economique_redistribution | taxation_carbone_globale | non | premier rapport sur l'échec de la coordination carbone mondiale 2031 |
+| 2025-2040 | systemes_productifs_travail | disparition_metiers_intermediaires | oui | premier rapport sur la disparition accélérée des métiers intermédiaires 2030 |
+| 2025-2040 | valeurs_culture_tempo_sociale | acceleration_rythmes_vie_urbains | non | premier rapport mondial sur l'accélération des rythmes urbains 2032 |
+| 2026-2040 | gouvernance_institutions | fragmentation_institutionnelle_regionale | non | crise de gouvernance multilatérale de 2032 |
+| 2026-2040 | valeurs_culture_tempo_sociale | hybridation_ia_culture | non | première crise des droits d'auteur IA globale 2031 |
+| 2026-2041 | organisation_territoires | megapoles_sous_pression | oui | première crise de gouvernance d'une mégapole 2033 |
+| 2026-2045 | sante_biotechnologies | course_biotech_internationale | non | rapport sur la concentration mondiale de la recherche biotech 2033 |
+| 2026-2048 | sante_biotechnologies | surveillance_sanitaire_continue | non | polémique sur les assureurs et les données de santé connectées 2031 |
+| 2026-2048 | sante_biotechnologies | acceptation_homme_augmente | non | sondage révélant la fracture générationnelle sur l'augmentation 2034 |
+| 2026-2042 | climat_environnement_global | captation_carbone_industrielle | oui | premiers démonstrateurs industriels de capture carbone à grande échelle 2033 |
+| 2026-2042 | demographie_mobilite_humaine | debats_identitaires_migrations | non | percée électorale de mouvements anti-migration dans plusieurs pays 2032 |
+| 2026-2042 | geopolitique_conflits | ia_militaire_autonome | oui | premier déploiement opérationnel documenté d'une arme autonome 2033 |
+| 2026-2043 | geopolitique_conflits | conflits_climatiques_armes | oui | premier conflit armé officiellement attribué au changement climatique 2033 |
+| 2026-2043 | energie_ressources_critiques | degradation_sites_miniers | oui | premier rapport mondial sur la dégradation des sites miniers 2033 |
+| 2026-2043 | frontieres_du_systeme | nouvelles_communautes_orbitales | non | installation de la première communauté orbitale permanente 2033 |
+| 2026-2042 | gouvernance_institutions | gouvernance_environnementale_multiniveaux | non | premier rapport sur les lacunes de la gouvernance environnementale mondiale 2033 |
+| 2026-2042 | systeme_economique_redistribution | remise_en_cause_capitalisme_croissance | non | premier débat mondial télévisé sur la fin de la croissance 2032 |
+| 2026-2041 | systemes_productifs_travail | automatisation_agricole_massive | oui | premier rapport sur l'impact rural de l'automatisation agricole 2031 |
+| 2026-2041 | technologie_information | crise_verite_informationnelle | non | premier sondage mondial confirmant la défiance informationnelle généralisée 2032 |
+| 2027-2042 | geopolitique_conflits | militarisation_du_cyberespace | oui | première cyberattaque majeure sur infrastructure critique 2033 |
+| 2027-2041 | valeurs_culture_tempo_sociale | fatigue_civilisationnelle | non | première décennie perdue de cohésion culturelle 2035 |
+| 2027-2042 | organisation_territoires | stress_territorial_climatique | oui | premières migrations climatiques massives documentées 2034 |
+| 2027-2044 | climat_environnement_global | relocalisation_cotiere | oui | premier plan municipal de retrait côtier documenté 2034 |
+| 2027-2044 | demographie_mobilite_humaine | gestion_algorithmique_flux_humains | non | premier scandale de discrimination algorithmique aux frontières 2032 |
+| 2027-2044 | frontieres_du_systeme | minage_asteroides | non | première mission expérimentale de minage d'astéroïde 2035 |
+| 2027-2042 | systemes_productifs_travail | normalisation_post_travail | oui | premier débat médiatique mondial sur la fin du travail 2030 |
+| 2027-2042 | technologie_information | automatisation_decisionnelle | non | premier scandale judiciaire lié à une décision automatisée 2033 |
+| 2028-2042 | gouvernance_institutions | gouvernance_algorithmique_emergente | non | premiers scandales de biais algorithmiques systémiques 2034 |
+| 2028-2043 | geopolitique_conflits | tensions_sur_terres_rares | oui | crise des terres rares asiatiques 2038 |
+| 2028-2042 | sante_biotechnologies | emergence_pathogenes_nouveaux | non | crise sanitaire régionale non résolue de 2037 |
+| 2028-2042 | sante_biotechnologies | inegalites_acces_soins | non | rapport OMS sur la fracture sanitaire mondiale 2035 |
+| 2028-2042 | valeurs_culture_tempo_sociale | retour_spiritualites_hybrides | non | premier recensement mondial des spiritualités hybrides émergentes 2035 |
+| 2028-2041 | gouvernance_institutions | trump_putsch_ice_2028 | non | premier audit international d'une transition présidentielle contestée 2030 |
+| 2028-2040 | geopolitique_conflits | trump_putsch_recomposition_blocs_2028 | oui | premier sommet de crise post-putsch entre puissances atlantiques 2030 |
+| 2030-2045 | systeme_economique_redistribution | automatisation_financière_algorithmique | non | crise flash-crash globale de 2039 |
+| 2030-2050 | sante_biotechnologies | medecine_predictive_ia | non | lancement commercial des premiers bilans prédictifs IA 2036 |
+| 2035-2050 | systeme_economique_redistribution | dedollarisation_progressive | non | crise de la dette souveraine de 2041 |
+| 2035-2055 | energie_ressources_critiques | fusion_experimentale | oui | premier réacteur à fusion pilote commercial 2052 |

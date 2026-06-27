@@ -1,0 +1,108 @@
+---
+name: Tbilissi Nœud Mnemos
+type: instance
+slug: tbilissi_noeud_mnemos_reference
+entite: tbilissi_noeud_mnemos
+scenario: reference
+
+type_dans_scenario: organisation
+
+role_dans_scenario: >
+  Le Nœud Mnemos de Tbilissi est un centre de mémoire collective distribuée, hébergeant des archives numériques et culturelles pour les régions du Caucase et d'Asie centrale dans un contexte de fragmentation informationnelle mondiale. Il joue un rôle stratégique de préservation et de redistribution des savoirs, disputé entre acteurs étatiques, corporations de données et réseaux citoyens. Positionné à l'intersection des blocs géopolitiques eurasiatiques et de la sphère d'influence des grandes plateformes IA, il constitue un point nodal rare où des mémoires menacées de disparition — langues minoritaires, archives communautaires, patrimoines juridiques locaux — trouvent une infrastructure pérenne. Son existence même est une déclaration politique dans un monde où le contrôle narratif vaut autant que le contrôle énergétique.
+
+responsabilites: >
+  Le Nœud collecte, indexe et redistribue des archives culturelles, linguistiques et institutionnelles issues de dizaines de communautés du Caucase et d'Asie centrale, en maintenant des copies redondantes sur des serveurs décentralisés hors de portée directe des régulateurs étatiques dominants. Il opère également comme intermédiaire de confiance entre collectifs académiques indépendants, réseaux citoyens locaux et instances multilatérales pour l'authentification et la circulation sécurisée des savoirs sensibles.
+
+impact_local: 4
+impact_systemique_global: 3
+
+variables_influencees:
+    - technologie_information
+    - valeurs_culture_tempo_sociale
+    - gouvernance_institutions
+    - geopolitique_conflits
+
+zone_geographique:
+    - régionale
+    - continentale
+
+zone_systemique:
+    - information
+    - gouvernance
+    - société
+    - cyberspace
+
+alliances:
+    - reseau_mnemos_reference
+    - collectifs_academiques_independants_reference
+    - ong_de_preservation_patrimoniale_numerique_reference
+    - reseau_meshcommons_netsolidaire_reference
+    - mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
+    - universites_et_think_tanks_en_zones_de_liberte_academique_reference
+    - ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference
+    - helsinki_communs_numeriques_reference
+    - bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference
+    - reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference
+
+oppositions:
+    - consortium_des_grandes_plateformes_ia_integrees_reference
+    - consortiums_prives_de_gestion_des_donnees_critiques_reference
+    - regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference
+    - etats_a_tendance_centraliste_numerique_reference
+    - plateformes_centralisees_de_narration_officielle_reference
+    - services_de_contre_information_des_blocs_geopolitiques_concurrents_reference
+    - bureaux_de_regulation_informationnelle_reference
+    - bloc_eurasien_central_reference
+
+type_relation_dominante: rivalité
+
+annee_debut: 2041
+annee_fin: 
+
+etat_temporel: actif
+age_historique: ascendant
+generation: transition
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Dans les sous-sols renforcés d'un ancien bâtiment de l'Académie des Sciences géorgienne, plusieurs milliers de téraoctets de mémoires régionales survivent à la guerre des données. Le Nœud Mnemos de Tbilissi, fondé dans les années 2040 en réponse aux premières grandes purges informationnelles du Bloc Eurasien Central, s'est imposé comme la bibliothèque de l'impensable : on y trouve des dialectes kartvéliens en voie d'extinction, des registres fonciers contestés du Karabakh d'avant-guerre, des corpus de jurisprudence islamique centre-asiatique effacés des plateformes commerciales. Ses équipes — une centaine de personnes, entre archivistes, ingénieurs réseau et médiateurs culturels — travaillent sous une pression croissante : les régulateurs eurasiatiques réclament des droits d'accès, les corporations de données offrent des rachats, et certains États financeurs exigent des exclusivités. Le Nœud tient, pour l'instant, en jouant ses contradicteurs les uns contre les autres.
+
+signes_distinctifs: >
+  Le logo du Nœud représente un grenadier dont les racines se transforment en câbles réseau, symbole choisi pour sa résonance simultanée dans les cultures géorgienne, arménienne et persane. Les serveurs physiques sont signalés par des pastilles orangées discrètes sur les façades des bâtiments partenaires à travers la région, code visuel reconnu par les initiés. Les agents du Nœud portent souvent des badges imprimés à la main avec l'inscription en géorgien, arménien et kazakh : «ce que l'on se rappelle, existe».
+
+tensions_narratives: >
+  La tension centrale est celle d'un bien commun sous siège : le Nœud ne peut survivre financièrement sans accepter des partenariats avec des acteurs qui ont intérêt à orienter ce qui est conservé et ce qui ne l'est pas. Un État partenaire réclame la suppression d'archives documentant ses propres violences passées, menaçant de couper son financement — et son accord de non-ingérence opérationnelle. Parallèlement, une faction interne au Nœud pousse à une ouverture totale des archives, au risque d'exposer des témoins protégés encore en vie. Enfin, le Réseau Mnemos global propose une intégration formelle qui garantirait des ressources mais diluerait l'autonomie régionale — une offre que certains voient comme une salvation, d'autres comme une absorption déguisée.
+
+date_creation: 2026-06-27
+---
+
+# Tbilissi Nœud Mnemos
+
+## Rôle dans [[reference]]
+Le Nœud Mnemos de Tbilissi est un centre de mémoire collective distribuée, hébergeant des archives numériques et culturelles pour les régions du Caucase et d'Asie centrale dans un contexte de fragmentation informationnelle mondiale. Il joue un rôle stratégique de préservation et de redistribution des savoirs, disputé entre acteurs étatiques, corporations de données et réseaux citoyens. Positionné à l'intersection des blocs géopolitiques eurasiatiques et de la sphère d'influence des grandes plateformes IA, il constitue un point nodal rare où des mémoires menacées de disparition — langues minoritaires, archives communautaires, patrimoines juridiques locaux — trouvent une infrastructure pérenne. Son existence même est une déclaration politique dans un monde où le contrôle narratif vaut autant que le contrôle énergétique.
+
+## Responsabilités
+Le Nœud collecte, indexe et redistribue des archives culturelles, linguistiques et institutionnelles issues de dizaines de communautés du Caucase et d'Asie centrale, en maintenant des copies redondantes sur des serveurs décentralisés hors de portée directe des régulateurs étatiques dominants. Il opère également comme intermédiaire de confiance entre collectifs académiques indépendants, réseaux citoyens locaux et instances multilatérales pour l'authentification et la circulation sécurisée des savoirs sensibles.
+
+## Variables influencées
+- [[technologie_information]]
+- [[valeurs_culture_tempo_sociale]]
+- [[gouvernance_institutions]]
+- [[geopolitique_conflits]]
+
+## Relations
+**Alliés** : [[reseau_mnemos_reference]], [[collectifs_academiques_independants_reference]], [[ong_de_preservation_patrimoniale_numerique_reference]], [[reseau_meshcommons_netsolidaire_reference]], [[mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference]], [[universites_et_think_tanks_en_zones_de_liberte_academique_reference]], [[ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference]], [[helsinki_communs_numeriques_reference]], [[bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference]], [[reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference]]
+**Opposants** : [[consortium_des_grandes_plateformes_ia_integrees_reference]], [[consortiums_prives_de_gestion_des_donnees_critiques_reference]], [[regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference]], [[etats_a_tendance_centraliste_numerique_reference]], [[plateformes_centralisees_de_narration_officielle_reference]], [[services_de_contre_information_des_blocs_geopolitiques_concurrents_reference]], [[bureaux_de_regulation_informationnelle_reference]], [[bloc_eurasien_central_reference]]
+
+## Description journalistique
+Dans les sous-sols renforcés d'un ancien bâtiment de l'Académie des Sciences géorgienne, plusieurs milliers de téraoctets de mémoires régionales survivent à la guerre des données. Le Nœud Mnemos de Tbilissi, fondé dans les années 2040 en réponse aux premières grandes purges informationnelles du Bloc Eurasien Central, s'est imposé comme la bibliothèque de l'impensable : on y trouve des dialectes kartvéliens en voie d'extinction, des registres fonciers contestés du Karabakh d'avant-guerre, des corpus de jurisprudence islamique centre-asiatique effacés des plateformes commerciales. Ses équipes — une centaine de personnes, entre archivistes, ingénieurs réseau et médiateurs culturels — travaillent sous une pression croissante : les régulateurs eurasiatiques réclament des droits d'accès, les corporations de données offrent des rachats, et certains États financeurs exigent des exclusivités. Le Nœud tient, pour l'instant, en jouant ses contradicteurs les uns contre les autres.
+
+## Tensions narratives
+La tension centrale est celle d'un bien commun sous siège : le Nœud ne peut survivre financièrement sans accepter des partenariats avec des acteurs qui ont intérêt à orienter ce qui est conservé et ce qui ne l'est pas. Un État partenaire réclame la suppression d'archives documentant ses propres violences passées, menaçant de couper son financement — et son accord de non-ingérence opérationnelle. Parallèlement, une faction interne au Nœud pousse à une ouverture totale des archives, au risque d'exposer des témoins protégés encore en vie. Enfin, le Réseau Mnemos global propose une intégration formelle qui garantirait des ressources mais diluerait l'autonomie régionale — une offre que certains voient comme une salvation, d'autres comme une absorption déguisée.

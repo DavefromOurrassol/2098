@@ -1,0 +1,104 @@
+---
+name: Ligue du Sahel Numérique — Les Nœuds d'Agadez
+type: instance
+slug: agadez_ligue_sahel_numerique_breakdown
+entite: agadez_ligue_sahel_numerique
+scenario: breakdown
+localisation:
+  zone: agadez_ligue_sahel_numerique
+  lieu: Agadez
+  type_lieu: ville
+
+type_dans_scenario: organisation
+
+role_dans_scenario: >
+  Réseau d'organisations locales fondé à Agadez pour coordonner l'accès aux infrastructures numériques dans un Sahel fragmenté par l'effondrement des États centraux. La Ligue administre des réseaux maillés autonomes et des marchés de données décentralisés pour les communautés isolées, faisant office de quasi-gouvernance technique dans les zones où toute autorité institutionnelle a disparu. Dans le chaos du scénario Breakdown, elle est l'une des rares structures à avoir survécu à l'effondrement en s'y adaptant — non par résilience institutionnelle mais par plasticité radicale, fragmentant ses propres structures pour traverser les zones de conflit et les coupures de réseau. Elle assume un pouvoir de fait croissant sur les flux d'information et d'échange dans la bande sahélienne, sans avoir jamais eu ni cherché de mandat démocratique explicite.
+
+responsabilites: >
+  Déploie et maintient des réseaux maillés basse-énergie entre les communautés isolées du Sahel, administre des marchés de données décentralisés permettant le troc de ressources numériques et physiques, et arbitre les conflits d'accès entre groupes concurrents. Forme des techniciens locaux, négocie des couloirs de connectivité avec les milices de contrôle territorial, et émet des protocoles de gouvernance locale adoptés de facto par les communautés dépourvues d'autre autorité.
+
+impact_local: 5
+impact_systemique_global: 2
+
+variables_influencees:
+    - technologie_information
+    - gouvernance_institutions
+    - organisation_territoires
+
+zone_geographique:
+    - régionale
+    - continentale
+
+zone_systemique:
+    - gouvernance
+    - information
+    - infrastructure
+    - société
+
+alliances:
+    - diaspora_tech_sahel_breakdown
+    - reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown
+    - guilde_des_techniciens_nomades_breakdown
+    - communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+    - collectifs_de_reparation_energetique_breakdown
+    - ligue_des_cites_du_sahel_numerique_breakdown
+
+oppositions:
+    - milices_de_controle_territorial_breakdown
+    - seigneuries_logistiques_armees_breakdown
+    - factions_secessionnistes_agrariennes_du_desert_breakdown
+    - fronts_populistes_anti_technocratiques_breakdown
+    - enclaves_corporatives_fortifiees_breakdown
+    - reseau_logistique_criminel_concurrent_breakdown
+
+type_relation_dominante: symbiose
+
+annee_debut: 2061
+annee_fin: 
+
+etat_temporel: actif
+age_historique: ascendant
+generation: post-effondrement
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Depuis la tour de relais solaire d'Agadez, repeinte aux couleurs du sable et coiffée d'antennes improvisées, les Nœuds coordonnent aujourd'hui ce que trois États faillis n'ont plus la force de faire : maintenir vivant le flux d'information entre des communautés séparées par des centaines de kilomètres de désert militarisé. Un technicien de la Ligue, les mains calleuses et le terminal à la ceinture, ne se présente jamais comme un fonctionnaire — il est un 'architecte de passage', terme interne désignant ceux qui ouvrent des chemins dans le vide. La Ligue perçoit des 'frais de nœud' — payables en eau, en semences, en heures de travail ou en données cartographiques — et cette monnaie plurielle est devenue, dans certaines zones, le seul système d'échange fonctionnel à des centaines de kilomètres à la ronde. Personne n'a voté pour eux. Tout le monde en dépend.
+
+signes_distinctifs: >
+  Logo d'un réseau de points reliés sur fond ocre, évoquant les routes caravanières anciennes redessinées en topologie maillée. Les techniciens portent des vestes de travail à bandes réfléchissantes marquées 'LSN / Nœud Libre', et les infrastructures physiques sont signalées par des balises de couleur terracotta fixées aux pylônes et aux murs. Leurs protocoles de communication interne intègrent délibérément des phrases en tamasheq, haoussa et zarma comme marqueurs d'authenticité territoriale.
+
+tensions_narratives: >
+  La Ligue se retrouve prise en étau entre les milices qui exigent un accès prioritaire à ses réseaux pour des usages militaires et les communautés qui réclament une gouvernance plus transparente sur les données qu'elles génèrent. Certains nœuds ont commencé à émettre des 'certificats d'accès' exclusifs, recréant de facto une hiérarchie d'accès que la Ligue prétendait abolir. La question de savoir qui contrôle les archives des marchés de données — et donc la mémoire économique de la région — est devenue un enjeu de pouvoir brûlant. Enfin, la pression de la Diaspora Tech Sahel, opérant depuis des enclaves mieux équipées, pour 'standardiser' les protocoles de la Ligue menace d'effacer ce qui en fait la singularité : son ancrage radical dans les usages locaux.
+
+date_creation: 2026-06-27
+---
+
+# Ligue du Sahel Numérique — Les Nœuds d'Agadez
+
+## Rôle dans [[breakdown]]
+Réseau d'organisations locales fondé à Agadez pour coordonner l'accès aux infrastructures numériques dans un Sahel fragmenté par l'effondrement des États centraux. La Ligue administre des réseaux maillés autonomes et des marchés de données décentralisés pour les communautés isolées, faisant office de quasi-gouvernance technique dans les zones où toute autorité institutionnelle a disparu. Dans le chaos du scénario Breakdown, elle est l'une des rares structures à avoir survécu à l'effondrement en s'y adaptant — non par résilience institutionnelle mais par plasticité radicale, fragmentant ses propres structures pour traverser les zones de conflit et les coupures de réseau. Elle assume un pouvoir de fait croissant sur les flux d'information et d'échange dans la bande sahélienne, sans avoir jamais eu ni cherché de mandat démocratique explicite.
+
+## Responsabilités
+Déploie et maintient des réseaux maillés basse-énergie entre les communautés isolées du Sahel, administre des marchés de données décentralisés permettant le troc de ressources numériques et physiques, et arbitre les conflits d'accès entre groupes concurrents. Forme des techniciens locaux, négocie des couloirs de connectivité avec les milices de contrôle territorial, et émet des protocoles de gouvernance locale adoptés de facto par les communautés dépourvues d'autre autorité.
+
+## Variables influencées
+- [[technologie_information]]
+- [[gouvernance_institutions]]
+- [[organisation_territoires]]
+
+## Relations
+**Alliés** : [[diaspora_tech_sahel_breakdown]], [[reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown]], [[guilde_des_techniciens_nomades_breakdown]], [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]], [[collectifs_de_reparation_energetique_breakdown]], [[ligue_des_cites_du_sahel_numerique_breakdown]]
+**Opposants** : [[milices_de_controle_territorial_breakdown]], [[seigneuries_logistiques_armees_breakdown]], [[factions_secessionnistes_agrariennes_du_desert_breakdown]], [[fronts_populistes_anti_technocratiques_breakdown]], [[enclaves_corporatives_fortifiees_breakdown]], [[reseau_logistique_criminel_concurrent_breakdown]]
+
+## Description journalistique
+Depuis la tour de relais solaire d'Agadez, repeinte aux couleurs du sable et coiffée d'antennes improvisées, les Nœuds coordonnent aujourd'hui ce que trois États faillis n'ont plus la force de faire : maintenir vivant le flux d'information entre des communautés séparées par des centaines de kilomètres de désert militarisé. Un technicien de la Ligue, les mains calleuses et le terminal à la ceinture, ne se présente jamais comme un fonctionnaire — il est un 'architecte de passage', terme interne désignant ceux qui ouvrent des chemins dans le vide. La Ligue perçoit des 'frais de nœud' — payables en eau, en semences, en heures de travail ou en données cartographiques — et cette monnaie plurielle est devenue, dans certaines zones, le seul système d'échange fonctionnel à des centaines de kilomètres à la ronde. Personne n'a voté pour eux. Tout le monde en dépend.
+
+## Tensions narratives
+La Ligue se retrouve prise en étau entre les milices qui exigent un accès prioritaire à ses réseaux pour des usages militaires et les communautés qui réclament une gouvernance plus transparente sur les données qu'elles génèrent. Certains nœuds ont commencé à émettre des 'certificats d'accès' exclusifs, recréant de facto une hiérarchie d'accès que la Ligue prétendait abolir. La question de savoir qui contrôle les archives des marchés de données — et donc la mémoire économique de la région — est devenue un enjeu de pouvoir brûlant. Enfin, la pression de la Diaspora Tech Sahel, opérant depuis des enclaves mieux équipées, pour 'standardiser' les protocoles de la Ligue menace d'effacer ce qui en fait la singularité : son ancrage radical dans les usages locaux.

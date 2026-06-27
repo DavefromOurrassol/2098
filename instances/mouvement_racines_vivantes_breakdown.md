@@ -1,0 +1,97 @@
+---
+name: Les Racines-Mères
+type: instance
+slug: mouvement_racines_vivantes_breakdown
+entite: mouvement_racines_vivantes
+scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
+
+type_dans_scenario: réseau
+
+role_dans_scenario: >
+  Dans le chaos du Breakdown, les Racines-Mères ne sont plus un mouvement unifié mais une nébuleuse de cellules locales autonomes, parfois contradictoires, qui ont survécu à l'effondrement des structures centrales. Certaines branches ont embrassé une écologie du soin et de la reconstruction communautaire, devenant les gardiennes de savoirs vitaux — semences, eau, médecine par les plantes — dans des territoires abandonnés par toute gouvernance. D'autres ont glissé vers un mysticisme autoritaire, expulsant les 'pollueurs' et instaurant des logiques tribales fermées. Le mouvement est simultanément une ressource de survie et un foyer de repli identitaire, selon la branche et la région.
+
+responsabilites: >
+  Maintien et transmission de pratiques agricoles régénératives et de savoirs ethnobotaniques dans les zones rurales en rupture logistique. Organisation de rituels de cohésion sociale qui servent aussi de mécanismes de gouvernance locale informelle. Dans certaines cellules, contrôle des accès à l'eau et aux terres arables reconstituées.
+
+impact_local: 4
+impact_systemique_global: 1
+variables_influencees:
+    - valeurs_culture_tempo_sociale
+    - organisation_territoires
+    - climat_environnement_global
+
+zone_geographique:
+    - locale
+    - régionale
+
+zone_systemique:
+    - société
+    - gouvernance
+    - infrastructure
+
+alliances:
+    - communautes_rurales_autonomes_breakdown
+    - reseaux_de_soigneurs_traditionnels_breakdown
+    - internationale_des_semenciers_agro_pirates_fortress_world
+
+oppositions:
+    - seigneurs_de_guerre_agro_territoriaux_breakdown
+    - consortiums_logistiques_agro_corporatifs_breakdown
+    - front_techno_utopiste_de_la_decision_automatisee_policy_reform
+
+type_relation_dominante: conflit
+
+annee_debut: 2026
+annee_fin: 
+
+etat_temporel: transformé
+age_historique: résiduel
+generation: post-effondrement
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Sur les routes défoncées de l'ancienne Occitanie ou dans les friches du delta du Mékong, on reconnaît leurs cairns — trois pierres empilées, une branche d'aubépine fichée au sommet. Les Racines-Mères, ce qu'il reste du grand mouvement des années 2040, n'ont plus de site, plus de congrès, plus de porte-parole. Seulement des cellules qui se nomment elles-mêmes différemment selon les vallées. Certaines sauvent des vies en produisant de la nourriture là où plus rien ne pousse. D'autres ont fermé leurs frontières avec du fil barbelé béni. Impossible de les cartographier : les branches se reconnaissent à des gestes, des chants, une façon de saluer l'aurore. Et elles se combattent parfois aussi férocement qu'elles combattent l'extérieur.
+
+signes_distinctifs: >
+  Cairns rituels marquant les territoires et les chemins sûrs. Port de brassards ou de tatouages représentant des systèmes racinaires stylisés. Usage d'un calendrier lunaire propre qui sert à la fois d'outil agricole et de marqueur identitaire communautaire.
+
+tensions_narratives: >
+  La fracture entre les branches 'ouvertes' — accueillantes, échangistes, fondées sur la réciprocité — et les branches 'closes' — autarciques, xénophobes, sacralisées — est la ligne de faille centrale du mouvement. Qui peut prétendre représenter l'héritage légitime des Racines ? La question de la transmission des savoirs pose un enjeu dramatique : faut-il les partager pour que l'humanité survive, ou les garder secrets pour protéger les communautés ? Enfin, certaines cellules commencent à nouer des alliances avec des technologies de captage d'eau ou de biologie synthétique, ce qui pourrait régénérer le mouvement ou le faire exploser de l'intérieur.
+
+date_creation: 2026-06-15
+---
+
+# Les Racines-Mères
+
+## Rôle dans [[breakdown]]
+Dans le chaos du Breakdown, les Racines-Mères ne sont plus un mouvement unifié mais une nébuleuse de cellules locales autonomes, parfois contradictoires, qui ont survécu à l'effondrement des structures centrales. Certaines branches ont embrassé une écologie du soin et de la reconstruction communautaire, devenant les gardiennes de savoirs vitaux — semences, eau, médecine par les plantes — dans des territoires abandonnés par toute gouvernance. D'autres ont glissé vers un mysticisme autoritaire, expulsant les 'pollueurs' et instaurant des logiques tribales fermées. Le mouvement est simultanément une ressource de survie et un foyer de repli identitaire, selon la branche et la région.
+
+## Responsabilités
+Maintien et transmission de pratiques agricoles régénératives et de savoirs ethnobotaniques dans les zones rurales en rupture logistique. Organisation de rituels de cohésion sociale qui servent aussi de mécanismes de gouvernance locale informelle. Dans certaines cellules, contrôle des accès à l'eau et aux terres arables reconstituées.
+
+## Variables influencées
+- [[valeurs_culture_tempo_sociale]]
+- [[organisation_territoires]]
+- [[climat_environnement_global]]
+
+## Relations
+**Alliés** : [[communautes_rurales_autonomes_breakdown]], [[reseaux_de_soigneurs_traditionnels_breakdown]], [[internationale_des_semenciers_agro_pirates_fortress_world]]
+**Opposants** : [[seigneurs_de_guerre_agro_territoriaux_breakdown]], [[consortiums_logistiques_agro_corporatifs_breakdown]], [[front_techno_utopiste_de_la_decision_automatisee_policy_reform]]
+
+## Description journalistique
+Sur les routes défoncées de l'ancienne Occitanie ou dans les friches du delta du Mékong, on reconnaît leurs cairns — trois pierres empilées, une branche d'aubépine fichée au sommet. Les Racines-Mères, ce qu'il reste du grand mouvement des années 2040, n'ont plus de site, plus de congrès, plus de porte-parole. Seulement des cellules qui se nomment elles-mêmes différemment selon les vallées. Certaines sauvent des vies en produisant de la nourriture là où plus rien ne pousse. D'autres ont fermé leurs frontières avec du fil barbelé béni. Impossible de les cartographier : les branches se reconnaissent à des gestes, des chants, une façon de saluer l'aurore. Et elles se combattent parfois aussi férocement qu'elles combattent l'extérieur.
+
+## Tensions narratives
+La fracture entre les branches 'ouvertes' — accueillantes, échangistes, fondées sur la réciprocité — et les branches 'closes' — autarciques, xénophobes, sacralisées — est la ligne de faille centrale du mouvement. Qui peut prétendre représenter l'héritage légitime des Racines ? La question de la transmission des savoirs pose un enjeu dramatique : faut-il les partager pour que l'humanité survive, ou les garder secrets pour protéger les communautés ? Enfin, certaines cellules commencent à nouer des alliances avec des technologies de captage d'eau ou de biologie synthétique, ce qui pourrait régénérer le mouvement ou le faire exploser de l'intérieur.

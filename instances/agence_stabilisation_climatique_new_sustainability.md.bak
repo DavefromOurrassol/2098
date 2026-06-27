@@ -1,0 +1,99 @@
+---
+name: Autorité Planétaire pour la Régénération Climatique
+type: instance
+slug: agence_stabilisation_climatique_new_sustainability
+entite: agence_stabilisation_climatique
+scenario: new_sustainability
+
+type_dans_scenario: institution
+
+role_dans_scenario: >
+  Dans le monde stabilisé de new_sustainability, l'APRC s'est imposée comme la colonne vertébrale institutionnelle de la gouvernance environnementale mondiale. Elle coordonne en temps réel les interventions géo-ingénieristes à grande échelle — ensemencement nuageux, alcalinisation océanique, reboisement algorithmique — en s'appuyant sur une infrastructure d'IA décisionnelle distribuée. Son mandat, initialement d'urgence, s'est progressivement institutionnalisé en autorité permanente reconnue par 174 États signataires. Elle incarne la synthèse réussie, mais fragile, entre technocratie efficace et légitimité négociée.
+
+responsabilites: >
+  L'APRC déploie et supervise les programmes de restauration des grands écosystèmes via ses antennes régionales dotées de pouvoirs d'intervention directe sur les corridors migratoires climatiques. Elle émet les 'Certificats de Stabilité Territoriale' conditionnant l'accès aux ressources énergétiques redistributives et valide les plans d'aménagement climatique des États membres. Elle gère également le Registre Mondial des Populations Déplacées en coordination avec les systèmes d'IA de mobilité humaine.
+
+impact_local: 3
+impact_systemique_global: 5
+variables_influencees:
+    - climat_environnement_global
+    - gouvernance_institutions
+    - demographie_mobilite_humaine
+    - energie_ressources_critiques
+
+zone_geographique:
+    - globale
+    - continentale
+    - régionale
+
+zone_systemique:
+    - gouvernance
+    - infrastructure
+    - énergie
+    - IA
+    - société
+
+alliances:
+    - consortium_des_ia_climatiques_new_sustainability
+    - fonds_mondial_de_regeneration_ecologique_new_sustainability
+    - reseau_des_villes_regeneratives_new_sustainability
+    - programme_onusien_de_mobilite_climatique_new_sustainability
+
+oppositions:
+    - souverainistes_du_bloc_eurasien_new_sustainability
+    - coalition_des_industries_extractives_residuelles_new_sustainability
+    - mouvement_pour_l_autodetermination_territoriale_new_sustainability
+    - collectifs_de_deplaces_climatiques_non_representes_new_sustainability
+
+type_relation_dominante: coopération
+
+annee_debut: 2031
+annee_fin: 
+
+etat_temporel: actif
+age_historique: dominant
+generation: reconstruction
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Depuis ses tours de verre fumé surplombant le nouveau littoral de Genève — rehaussé de trois mètres après les accords de 2044 — l'APRC orchestre discrètement le métabolisme climatique de la planète. Ses 12 000 techniciens et agents répartis sur six continents opèrent avec une efficacité que ses défenseurs comparent à une chirurgie et que ses détracteurs assimilent à une tutelle. En 2098, elle publie chaque trimestre ses 'Tableaux de Bord Planétaires', devenus la référence absolue pour évaluer l'état du monde — un pouvoir de narration que certains jugent plus redoutable encore que ses drones d'ensemencement nuageux. Son directrice générale, Amara Diallo-Svensson, est souvent citée comme la personne la plus influente de la planète sans avoir jamais été élue.
+
+signes_distinctifs: >
+  Logo en spirale verte et bleue évoquant une double hélice d'ADN fusionnée avec une carte atmosphérique, présent sur tous les équipements géo-ingénieristes déployés dans le monde. Ses agents de terrain portent des combinaisons modulaires couleur 'terre humide' avec brassard holographique affichant les données climatiques locales en temps réel. Ses bâtiments régionaux sont systématiquement construits en matériaux biosourcés et servent de démonstrateurs architecturaux de la régénération qu'elle promeut.
+
+tensions_narratives: >
+  La légitimité démocratique de l'APRC reste le point de friction central : ses décisions s'imposent aux États membres sans vote populaire, au nom de l'urgence perpétuée. Des voix croissantes au sein même de l'institution questionnent le seuil à partir duquel la 'stabilisation' devient une justification pour figer les inégalités géographiques héritées. Par ailleurs, la dépendance croissante à ses systèmes d'IA décisionnels soulève la question de qui gouverne réellement — les humains ou les modèles climatiques prédictifs. Enfin, les communautés déplacées des zones sacrifiées aux programmes de régénération forestière commencent à s'organiser, réclamant une représentation directe dans les instances qui décident de leur territoire.
+
+date_creation: 2026-06-15
+---
+
+# Autorité Planétaire pour la Régénération Climatique
+
+## Rôle dans [[new_sustainability]]
+Dans le monde stabilisé de new_sustainability, l'APRC s'est imposée comme la colonne vertébrale institutionnelle de la gouvernance environnementale mondiale. Elle coordonne en temps réel les interventions géo-ingénieristes à grande échelle — ensemencement nuageux, alcalinisation océanique, reboisement algorithmique — en s'appuyant sur une infrastructure d'IA décisionnelle distribuée. Son mandat, initialement d'urgence, s'est progressivement institutionnalisé en autorité permanente reconnue par 174 États signataires. Elle incarne la synthèse réussie, mais fragile, entre technocratie efficace et légitimité négociée.
+
+## Responsabilités
+L'APRC déploie et supervise les programmes de restauration des grands écosystèmes via ses antennes régionales dotées de pouvoirs d'intervention directe sur les corridors migratoires climatiques. Elle émet les 'Certificats de Stabilité Territoriale' conditionnant l'accès aux ressources énergétiques redistributives et valide les plans d'aménagement climatique des États membres. Elle gère également le Registre Mondial des Populations Déplacées en coordination avec les systèmes d'IA de mobilité humaine.
+
+## Variables influencées
+- [[climat_environnement_global]]
+- [[gouvernance_institutions]]
+- [[demographie_mobilite_humaine]]
+- [[energie_ressources_critiques]]
+
+## Relations
+**Alliés** : [[consortium_des_ia_climatiques_new_sustainability]], [[fonds_mondial_de_regeneration_ecologique_new_sustainability]], [[reseau_des_villes_regeneratives_new_sustainability]], [[programme_onusien_de_mobilite_climatique_new_sustainability]]
+**Opposants** : [[souverainistes_du_bloc_eurasien_new_sustainability]], [[coalition_des_industries_extractives_residuelles_new_sustainability]], [[mouvement_pour_l_autodetermination_territoriale_new_sustainability]], [[collectifs_de_deplaces_climatiques_non_representes_new_sustainability]]
+
+## Description journalistique
+Depuis ses tours de verre fumé surplombant le nouveau littoral de Genève — rehaussé de trois mètres après les accords de 2044 — l'APRC orchestre discrètement le métabolisme climatique de la planète. Ses 12 000 techniciens et agents répartis sur six continents opèrent avec une efficacité que ses défenseurs comparent à une chirurgie et que ses détracteurs assimilent à une tutelle. En 2098, elle publie chaque trimestre ses 'Tableaux de Bord Planétaires', devenus la référence absolue pour évaluer l'état du monde — un pouvoir de narration que certains jugent plus redoutable encore que ses drones d'ensemencement nuageux. Son directrice générale, Amara Diallo-Svensson, est souvent citée comme la personne la plus influente de la planète sans avoir jamais été élue.
+
+## Tensions narratives
+La légitimité démocratique de l'APRC reste le point de friction central : ses décisions s'imposent aux États membres sans vote populaire, au nom de l'urgence perpétuée. Des voix croissantes au sein même de l'institution questionnent le seuil à partir duquel la 'stabilisation' devient une justification pour figer les inégalités géographiques héritées. Par ailleurs, la dépendance croissante à ses systèmes d'IA décisionnels soulève la question de qui gouverne réellement — les humains ou les modèles climatiques prédictifs. Enfin, les communautés déplacées des zones sacrifiées aux programmes de régénération forestière commencent à s'organiser, réclamant une représentation directe dans les instances qui décident de leur territoire.

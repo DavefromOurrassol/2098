@@ -1,0 +1,78 @@
+---
+name: "Frappes croisées Israël-Iran : l'embrasement contenu"
+type: event_instance
+slug: conflit_israel_iran_2026_reference
+archetype: conflit_israel_iran_2026
+scenario: reference
+localisation:
+  zone: zones_grises_globales
+  lieu: Moyen-Orient (Israël, Iran, Golfe Persique)
+  type_lieu: region
+type_evenement: political_social
+portee: globale
+date: 2026
+date_label: automne 2026
+impossible: false
+custom: true
+description: >
+  Les images de Fordo en flammes font le tour des réseaux en quelques minutes : Israël vient de franchir le seuil que la communauté internationale repoussait depuis vingt ans. Téhéran répond dès le lendemain, ses missiles traçant des arcs lumineux au-dessus du Golfe Persique. Les cours du pétrole bondissent de 40 % en quarante-huit heures, les marchés du gaz naturel liquéfié s'affolent, et les corridors de transit énergétique vers l'Asie se retrouvent sous surveillance militaire active. Raj Mehta, depuis Singapour, décrit un monde 'qui retient son souffle en regardant deux États jouer à la roulette avec les pipelines dont le reste de la planète dépend'.
+consequences: >
+  Le conflit accélère la fragmentation des marchés énergétiques mondiaux : le Consortium Helios doit recomposer en urgence ses flux d'approvisionnement en contournant le Golfe, renforçant paradoxalement les corridors nordiques et accélérant certains investissements dans les énergies renouvelables par peur de dépendance. Sur le plan géopolitique, l'événement consolide le Pacte des Souverains — qui y voit la démonstration que les institutions multilatérales sont incapables de prévenir les conflits régionaux majeurs — et affaiblit durablement la crédibilité des mécanismes de non-prolifération, laissant plusieurs États du Moyen-Orient accélérer discrètement leurs propres programmes.
+realisation: >
+  En octobre 2026, Israël lance une série de frappes de précision sur les sites nucléaires iraniens de Fordo et Natanz, ainsi que sur plusieurs terminaux pétroliers du Khuzestan. L'Iran riposte par des salves de missiles balistiques ciblant des bases militaires israéliennes et des infrastructures énergétiques en mer Rouge. Les monarchies du Golfe, prises en étau, appliquent une neutralité de façade tout en fermant leurs espaces aériens. La mobilisation diplomatique d'urgence — portée notamment par des canaux back-channel via la Turquie et le Qatar — évite une escalade terrestre, mais le conflit reste suspendu pendant plusieurs semaines dans un état de 'guerre de frappes maîtrisées'. L'équilibre fragile du scénario de référence joue ici un rôle amortisseur : aucune puissance majeure n'a intérêt à une déflagration totale qui effondrerait les marchés énergétiques sur lesquels repose la transition.
+impact_sur_variables:
+  - variable: geopolitique_conflits
+    delta_level: 12
+    duree: 15
+    polarite: -1
+  - variable: energie_ressources_critiques
+    delta_level: -10
+    duree: 12
+    polarite: -1
+  - variable: gouvernance_institutions
+    delta_level: -8
+    duree: 10
+    polarite: -1
+  - variable: demographie_mobilite_humaine
+    delta_level: 6
+    duree: 8
+    polarite: -1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+    - consortium_helios_reference
+    - alliance_blocs_souverains_reference
+    - le_temoin_reference
+    - conseil_regulation_ressources_reference
+    - voix_du_dehors_reference
+note_coherence: Dans un monde à l'équilibre fragile où les variables énergétiques et géopolitiques sont déjà sous tension (levels 72-75), un conflit Israël-Iran limité mais structurellement déstabilisateur est non seulement plausible mais presque inévitable — la logique du scénario de référence implique précisément que ce type de choc est absorbé sans effondrement total, mais laisse des cicatrices durables sur les architectures de gouvernance et d'approvisionnement.
+custom_source: actualite_2026-06
+date_creation: 2026-06-17
+---
+
+# Frappes croisées Israël-Iran : l'embrasement contenu
+
+## Réalisation dans [[reference]]
+En octobre 2026, Israël lance une série de frappes de précision sur les sites nucléaires iraniens de Fordo et Natanz, ainsi que sur plusieurs terminaux pétroliers du Khuzestan. L'Iran riposte par des salves de missiles balistiques ciblant des bases militaires israéliennes et des infrastructures énergétiques en mer Rouge. Les monarchies du Golfe, prises en étau, appliquent une neutralité de façade tout en fermant leurs espaces aériens. La mobilisation diplomatique d'urgence — portée notamment par des canaux back-channel via la Turquie et le Qatar — évite une escalade terrestre, mais le conflit reste suspendu pendant plusieurs semaines dans un état de 'guerre de frappes maîtrisées'. L'équilibre fragile du scénario de référence joue ici un rôle amortisseur : aucune puissance majeure n'a intérêt à une déflagration totale qui effondrerait les marchés énergétiques sur lesquels repose la transition.
+
+## Description journalistique
+Les images de Fordo en flammes font le tour des réseaux en quelques minutes : Israël vient de franchir le seuil que la communauté internationale repoussait depuis vingt ans. Téhéran répond dès le lendemain, ses missiles traçant des arcs lumineux au-dessus du Golfe Persique. Les cours du pétrole bondissent de 40 % en quarante-huit heures, les marchés du gaz naturel liquéfié s'affolent, et les corridors de transit énergétique vers l'Asie se retrouvent sous surveillance militaire active. Raj Mehta, depuis Singapour, décrit un monde 'qui retient son souffle en regardant deux États jouer à la roulette avec les pipelines dont le reste de la planète dépend'.
+
+## Conséquences
+Le conflit accélère la fragmentation des marchés énergétiques mondiaux : le Consortium Helios doit recomposer en urgence ses flux d'approvisionnement en contournant le Golfe, renforçant paradoxalement les corridors nordiques et accélérant certains investissements dans les énergies renouvelables par peur de dépendance. Sur le plan géopolitique, l'événement consolide le Pacte des Souverains — qui y voit la démonstration que les institutions multilatérales sont incapables de prévenir les conflits régionaux majeurs — et affaiblit durablement la crédibilité des mécanismes de non-prolifération, laissant plusieurs États du Moyen-Orient accélérer discrètement leurs propres programmes.
+
+## Impact sur les variables
+- **geopolitique_conflits** : delta -12 sur 15 ans
+- **energie_ressources_critiques** : delta +10 sur 12 ans
+- **gouvernance_institutions** : delta +8 sur 10 ans
+- **demographie_mobilite_humaine** : delta -6 sur 8 ans
+
+## Acteurs impliqués
+- [[consortium_helios_reference]]
+- [[alliance_blocs_souverains_reference]]
+- [[le_temoin_reference]]
+- [[conseil_regulation_ressources_reference]]
+- [[voix_du_dehors_reference]]
+
+## Note de cohérence
+Dans un monde à l'équilibre fragile où les variables énergétiques et géopolitiques sont déjà sous tension (levels 72-75), un conflit Israël-Iran limité mais structurellement déstabilisateur est non seulement plausible mais presque inévitable — la logique du scénario de référence implique précisément que ce type de choc est absorbé sans effondrement total, mais laisse des cicatrices durables sur les architectures de gouvernance et d'approvisionnement.

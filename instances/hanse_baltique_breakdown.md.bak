@@ -1,0 +1,104 @@
+---
+name: Ligue Hanséatique Baltique — Le Sceau du Gotland
+type: instance
+slug: hanse_baltique_breakdown
+entite: hanse_baltique
+scenario: breakdown
+
+type_dans_scenario: organisation
+
+role_dans_scenario: >
+  La Ligue Hanséatique Baltique est une confédération de cités portuaires — de Tallinn à Hambourg, en passant par Riga, Gdańsk, Rostock et Lübeck — qui, face à l'effondrement des structures étatiques européennes, a ressuscité consciemment le modèle médiéval de la Hanse pour assurer sa survie économique et sécuritaire. Elle contrôle les routes maritimes de la Baltique, impose ses propres règles commerciales et douanières, et administre ses propres tribunaux de commerce. Elle constitue l'une des rares autorités juridiques fonctionnelles dans un espace nord-européen ravagé par la fragmentation politique, les conflits de ressources et l'instabilité climatique. Sa garde maritime privée — la Garde du Sceau — représente la principale force de dissuasion dans la région, opérant des patrouilles armées permanentes et escortant les convois marchands contre pirates, milices séparatistes et factions para-étatiques concurrentes.
+
+responsabilites: >
+  Elle perçoit des droits de transit sur l'ensemble des flux maritimes traversant la Baltique, juge les litiges commerciaux entre membres via ses cours consulaires, et impose des embargos punitifs aux ports non membres qui perturbent ses routes. Sa garde maritime assure l'escorte armée des convois, la neutralisation des pirates et la surveillance des détroits stratégiques. Elle négocie aussi des accords d'approvisionnement énergétique et alimentaire entre ses cités membres, constituant l'ossature logistique minimale d'une région sinon livrée au chaos.
+
+impact_local: 5
+impact_systemique_global: 3
+
+variables_influencees:
+    - geopolitique_conflits
+    - organisation_territoires
+    - systeme_economique_redistribution
+    - gouvernance_institutions
+
+zone_geographique:
+    - régionale
+    - continentale
+
+zone_systemique:
+    - gouvernance
+    - économie
+    - sécurité
+    - infrastructure
+
+alliances:
+    - armada_logistique_nordique_breakdown
+    - enclaves_industrielles_de_bergen_troms_breakdown
+    - ligue_des_cites_littorales_en_sursis_breakdown
+    - ligue_mediterraneenne_des_villes_etats_portuaires_breakdown
+    - kalaallit_nunaat_sovereign_fund_breakdown
+    - cites_etats_secessionistes_breakdown
+
+oppositions:
+    - milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown
+    - factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
+    - reseau_logistique_criminel_concurrent_breakdown
+    - saboteurs_des_corridors_de_transit_breakdown
+    - front_de_resistance_aux_peages_sur_les_ressources_breakdown
+    - federation_russe_residuelle_district_de_mourmansk_breakdown
+    - seigneuries_logistiques_armees_breakdown
+    - blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
+
+type_relation_dominante: alliance stratégique
+
+annee_debut: 2041
+annee_fin: 
+
+etat_temporel: actif
+age_historique: ascendant
+generation: post-effondrement
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Dans le port de Lübeck, les drapeaux des États n'existent plus depuis longtemps. Ce qui flotte sur les grues rouillées, c'est le sceau aux deux clés croisées sur fond d'or et de bleu — l'emblème de la Ligue Hanséatique Baltique, que les dockers appellent simplement 'le Sceau'. Fondée en 2041 par sept conseils portuaires confrontés à la même question vitale — qui protège nos navires, qui fait respecter nos contrats, qui nourrit nos populations —, la Ligue s'est étendue à vingt-deux ports en moins de dix ans. Elle n'est ni un État ni une entreprise : c'est une confédération d'intérêts marchands armés, qui lève ses propres taxes, siège dans ses propres tribunaux et tire sur ses propres ennemis. Ses frégates de la Garde du Sceau patrouillent en permanence entre Bornholm et le golfe de Finlande, et plus d'un capitaine de fortune a appris à ses dépens ce que signifie naviguer sans le laissez-passer hanséatique.
+
+signes_distinctifs: >
+  Le double sceau aux clés médiévales revisité — or et bleu acier — figure sur toutes les coques des navires membres, les uniformes kaki et marine de la Garde du Sceau, et les sceaux de cire rouge des décrets commerciaux. Les réunions du Grand Conseil se tiennent dans la Rathaus de Lübeck, délibérément choisie pour son symbole historique, entourée de gardes portant des armures tactiques gravées de motifs hanséatiques.
+
+tensions_narratives: >
+  La légitimité juridique que s'arroge la Ligue repose sur un paradoxe fondamental : elle prétend incarner un ordre juste et partagé, mais ses règles sont rédigées par les grandes cités membres au détriment des ports mineurs et des populations côtières non représentées, qui paient les droits sans siéger au Conseil. La montée des milices séparatistes islandaises et la pression croissante du Consortium Énergétique Oural-Caspien sur les détroits orientaux menacent d'embraser un équilibre déjà précaire. En interne, Hambourg et Tallinn s'affrontent sourdement pour le contrôle des routes les plus lucratives, et des rumeurs persistent sur des arrangements secrets entre des capitaines de la Garde et des réseaux logistiques criminels concurrents.
+
+date_creation: 2026-06-27
+---
+
+# Ligue Hanséatique Baltique — Le Sceau du Gotland
+
+## Rôle dans [[breakdown]]
+La Ligue Hanséatique Baltique est une confédération de cités portuaires — de Tallinn à Hambourg, en passant par Riga, Gdańsk, Rostock et Lübeck — qui, face à l'effondrement des structures étatiques européennes, a ressuscité consciemment le modèle médiéval de la Hanse pour assurer sa survie économique et sécuritaire. Elle contrôle les routes maritimes de la Baltique, impose ses propres règles commerciales et douanières, et administre ses propres tribunaux de commerce. Elle constitue l'une des rares autorités juridiques fonctionnelles dans un espace nord-européen ravagé par la fragmentation politique, les conflits de ressources et l'instabilité climatique. Sa garde maritime privée — la Garde du Sceau — représente la principale force de dissuasion dans la région, opérant des patrouilles armées permanentes et escortant les convois marchands contre pirates, milices séparatistes et factions para-étatiques concurrentes.
+
+## Responsabilités
+Elle perçoit des droits de transit sur l'ensemble des flux maritimes traversant la Baltique, juge les litiges commerciaux entre membres via ses cours consulaires, et impose des embargos punitifs aux ports non membres qui perturbent ses routes. Sa garde maritime assure l'escorte armée des convois, la neutralisation des pirates et la surveillance des détroits stratégiques. Elle négocie aussi des accords d'approvisionnement énergétique et alimentaire entre ses cités membres, constituant l'ossature logistique minimale d'une région sinon livrée au chaos.
+
+## Variables influencées
+- [[geopolitique_conflits]]
+- [[organisation_territoires]]
+- [[systeme_economique_redistribution]]
+- [[gouvernance_institutions]]
+
+## Relations
+**Alliés** : [[armada_logistique_nordique_breakdown]], [[enclaves_industrielles_de_bergen_troms_breakdown]], [[ligue_des_cites_littorales_en_sursis_breakdown]], [[ligue_mediterraneenne_des_villes_etats_portuaires_breakdown]], [[kalaallit_nunaat_sovereign_fund_breakdown]], [[cites_etats_secessionistes_breakdown]]
+**Opposants** : [[milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown]], [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]], [[reseau_logistique_criminel_concurrent_breakdown]], [[saboteurs_des_corridors_de_transit_breakdown]], [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]], [[federation_russe_residuelle_district_de_mourmansk_breakdown]], [[seigneuries_logistiques_armees_breakdown]], [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
+
+## Description journalistique
+Dans le port de Lübeck, les drapeaux des États n'existent plus depuis longtemps. Ce qui flotte sur les grues rouillées, c'est le sceau aux deux clés croisées sur fond d'or et de bleu — l'emblème de la Ligue Hanséatique Baltique, que les dockers appellent simplement 'le Sceau'. Fondée en 2041 par sept conseils portuaires confrontés à la même question vitale — qui protège nos navires, qui fait respecter nos contrats, qui nourrit nos populations —, la Ligue s'est étendue à vingt-deux ports en moins de dix ans. Elle n'est ni un État ni une entreprise : c'est une confédération d'intérêts marchands armés, qui lève ses propres taxes, siège dans ses propres tribunaux et tire sur ses propres ennemis. Ses frégates de la Garde du Sceau patrouillent en permanence entre Bornholm et le golfe de Finlande, et plus d'un capitaine de fortune a appris à ses dépens ce que signifie naviguer sans le laissez-passer hanséatique.
+
+## Tensions narratives
+La légitimité juridique que s'arroge la Ligue repose sur un paradoxe fondamental : elle prétend incarner un ordre juste et partagé, mais ses règles sont rédigées par les grandes cités membres au détriment des ports mineurs et des populations côtières non représentées, qui paient les droits sans siéger au Conseil. La montée des milices séparatistes islandaises et la pression croissante du Consortium Énergétique Oural-Caspien sur les détroits orientaux menacent d'embraser un équilibre déjà précaire. En interne, Hambourg et Tallinn s'affrontent sourdement pour le contrôle des routes les plus lucratives, et des rumeurs persistent sur des arrangements secrets entre des capitaines de la Garde et des réseaux logistiques criminels concurrents.

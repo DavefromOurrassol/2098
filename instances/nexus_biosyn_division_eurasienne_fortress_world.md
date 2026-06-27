@@ -1,0 +1,114 @@
+---
+name: Nexus BioSyn — Division Eurasienne des Forteresses Vitales
+type: instance
+slug: nexus_biosyn_division_eurasienne_fortress_world
+entite: nexus_biosyn_division_eurasienne
+scenario: fortress_world
+localisation:
+  zone: nexus_biosyn_division_eurasienne
+  lieu: Nexus BioSyn — Division Eurasienne
+  type_lieu: infrastructure
+
+type_dans_scenario: entreprise
+
+role_dans_scenario: >
+  Branche eurasienne du conglomérat Nexus BioSyn, spécialisée dans la biotechnologie de survie climatique et la gestion des enclaves fortifiées à haut revenu. Elle fournit aux zones protégées des solutions biologiques de filtration atmosphérique et de contrôle épidémique, tout en maintenant un réseau de surveillance biométrique couvrant l'arc eurasien. Son modèle économique repose sur la vente différenciée de l'accès aux infrastructures vitales. En pratique, elle opère comme un État sanitaire parallèle dans un arc géopolitique fracturé : ses contrats avec les régimes autoritaires locaux lui confèrent une juridiction de fait sur les corps des populations accréditées, tandis que les zones non contractualisées sont laissées à leur propre dégradation biologique. Elle est à la fois prestataire de survie et instrument de stratification territoriale.
+
+responsabilites: >
+  Déploiement et maintenance des systèmes de filtration atmosphérique bioactive dans les enclaves fortifiées de l'arc eurasien ; gestion des protocoles de contrôle épidémique différenciés selon le statut de solvabilité des zones ; administration du réseau de surveillance biométrique couvrant les corridors de transit entre forteresses ; négociation des contrats de souveraineté biologique avec les régimes autoritaires locaux ; vente d'accès graduée aux infrastructures vitales selon des niveaux tarifaires définis par le centre.
+
+impact_local: 5
+impact_systemique_global: 4
+
+variables_influencees:
+    - sante_biotechnologies
+    - organisation_territoires
+    - geopolitique_conflits
+    - gouvernance_institutions
+
+zone_geographique:
+    - continentale
+    - régionale
+
+zone_systemique:
+    - santé
+    - infrastructure
+    - gouvernance
+    - économie
+    - sécurité
+
+alliances:
+    - nexus_biosyn_fortress_world
+    - etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world
+    - regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world
+    - conseil_moscou_est_fortress_world
+    - complexe_orentchev_almaty_fortress_world
+    - bloc_eurasiatique_occidental_fortress_world
+    - consortium_eurasiatique_des_ressources_fermees_fortress_world
+    - systemes_de_scoring_de_productivite_corporative_fortress_world
+    - reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world
+
+oppositions:
+    - alliance_sanitaire_des_populations_exclues_fortress_world
+    - coalition_vivant_fortress_world
+    - internationale_des_semenciers_agro_pirates_fortress_world
+    - consortium_africain_de_biotechnologies_sociales_fortress_world
+    - cliniques_de_deaugmentation_independantes_fortress_world
+    - divisions_concurrentes_nexus_biosyn_fortress_world
+    - marches_gris_tbilissi_fortress_world
+    - cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
+    - collectifs_du_seuil_fortress_world
+    - factions_djihadistes_logistiques_d_asie_centrale_fortress_world
+
+type_relation_dominante: dépendance
+
+annee_debut: 2051
+annee_fin: 
+
+etat_temporel: actif
+age_historique: dominant
+generation: forteresse
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  À Almaty, à Minsk, à Tbilissi, les façades des enclaves résidentielles haut de gamme portent toutes le même logo discret : un double hélix stylisé sur fond anthracite, sigle de la Division Eurasienne des Forteresses Vitales de Nexus BioSyn. Derrière ce signe, une réalité aussi banale que radicale — l'air que vous respirez, la membrane filtrante qui sépare votre poumon des particules-PM 9.8 du dehors, est un service abonné, résilié en cas d'impayé. La Division ne se présente pas comme un acteur politique : elle vend de la 'continuité biologique', formule consacrée dans ses prospectus en sept langues. Ses ingénieurs négocient avec les régimes locaux la cession de droits biométriques sur les populations accréditées, en échange d'une couverture épidémique qui vaut passeport de survie. Ce que personne ne dit à voix haute : les zones hors-contrat ne bénéficient d'aucun protocole. Pour un journaliste qui tenterait d'enquêter sur la cartographie réelle de ses déploiements, la Division oppose une opacité contractuelle parfaitement légale — et des escortes biométriques aux frontières de ses installations.
+
+signes_distinctifs: >
+  Double hélix anthracite sur signalétique sobre, omniprésent aux points d'accès des enclaves — checkpoint biométrique, sas de filtration, dispensaires accrédités. Les agents de terrain portent des combinaisons grises à brassard bleu nuit marqué 'BioSyn Vital Services'. Les rapports internes circulent sur des supports à autodestruction programmée, et les contrats de souveraineté biologique sont systématiquement rédigés dans trois langues : anglais corporate, langue du régime local, et un dialecte juridique propriétaire.
+
+tensions_narratives: >
+  La Division navigue en permanence sur le fil entre autonomie opérationnelle et subordination au centre — une tension que les régimes locaux exploitent pour renégocier leurs contrats à la hausse, menaçant de basculer vers des concurrents régionaux émergents. Son réseau biométrique, conçu pour 'sécuriser la santé', est régulièrement sollicité par les appareils d'État pour des fonctions de surveillance politique, ce qui expose la Division à des accusations de complicité que le centre cherche à distance à démentir. Par ailleurs, les campements périphériques aux portes des enclaves documentent avec une précision croissante la corrélation entre zones hors-contrat et surmortalité épidémique — une cartographie qui, si elle atteignait les tribunaux résiduels, pourrait requalifier le modèle économique de la Division en crime sanitaire systémique. Enfin, des factions internes pro-autarcie totale dans certains régimes clients poussent à la nationalisation des infrastructures BioSyn, ce qui menacerait l'existence même de la branche eurasienne.
+
+date_creation: 2026-06-27
+---
+
+# Nexus BioSyn — Division Eurasienne des Forteresses Vitales
+
+## Rôle dans [[fortress_world]]
+Branche eurasienne du conglomérat Nexus BioSyn, spécialisée dans la biotechnologie de survie climatique et la gestion des enclaves fortifiées à haut revenu. Elle fournit aux zones protégées des solutions biologiques de filtration atmosphérique et de contrôle épidémique, tout en maintenant un réseau de surveillance biométrique couvrant l'arc eurasien. Son modèle économique repose sur la vente différenciée de l'accès aux infrastructures vitales. En pratique, elle opère comme un État sanitaire parallèle dans un arc géopolitique fracturé : ses contrats avec les régimes autoritaires locaux lui confèrent une juridiction de fait sur les corps des populations accréditées, tandis que les zones non contractualisées sont laissées à leur propre dégradation biologique. Elle est à la fois prestataire de survie et instrument de stratification territoriale.
+
+## Responsabilités
+Déploiement et maintenance des systèmes de filtration atmosphérique bioactive dans les enclaves fortifiées de l'arc eurasien ; gestion des protocoles de contrôle épidémique différenciés selon le statut de solvabilité des zones ; administration du réseau de surveillance biométrique couvrant les corridors de transit entre forteresses ; négociation des contrats de souveraineté biologique avec les régimes autoritaires locaux ; vente d'accès graduée aux infrastructures vitales selon des niveaux tarifaires définis par le centre.
+
+## Variables influencées
+- [[sante_biotechnologies]]
+- [[organisation_territoires]]
+- [[geopolitique_conflits]]
+- [[gouvernance_institutions]]
+
+## Relations
+**Alliés** : [[nexus_biosyn_fortress_world]], [[etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world]], [[regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world]], [[conseil_moscou_est_fortress_world]], [[complexe_orentchev_almaty_fortress_world]], [[bloc_eurasiatique_occidental_fortress_world]], [[consortium_eurasiatique_des_ressources_fermees_fortress_world]], [[systemes_de_scoring_de_productivite_corporative_fortress_world]], [[reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world]]
+**Opposants** : [[alliance_sanitaire_des_populations_exclues_fortress_world]], [[coalition_vivant_fortress_world]], [[internationale_des_semenciers_agro_pirates_fortress_world]], [[consortium_africain_de_biotechnologies_sociales_fortress_world]], [[cliniques_de_deaugmentation_independantes_fortress_world]], [[divisions_concurrentes_nexus_biosyn_fortress_world]], [[marches_gris_tbilissi_fortress_world]], [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]], [[collectifs_du_seuil_fortress_world]], [[factions_djihadistes_logistiques_d_asie_centrale_fortress_world]]
+
+## Description journalistique
+À Almaty, à Minsk, à Tbilissi, les façades des enclaves résidentielles haut de gamme portent toutes le même logo discret : un double hélix stylisé sur fond anthracite, sigle de la Division Eurasienne des Forteresses Vitales de Nexus BioSyn. Derrière ce signe, une réalité aussi banale que radicale — l'air que vous respirez, la membrane filtrante qui sépare votre poumon des particules-PM 9.8 du dehors, est un service abonné, résilié en cas d'impayé. La Division ne se présente pas comme un acteur politique : elle vend de la 'continuité biologique', formule consacrée dans ses prospectus en sept langues. Ses ingénieurs négocient avec les régimes locaux la cession de droits biométriques sur les populations accréditées, en échange d'une couverture épidémique qui vaut passeport de survie. Ce que personne ne dit à voix haute : les zones hors-contrat ne bénéficient d'aucun protocole. Pour un journaliste qui tenterait d'enquêter sur la cartographie réelle de ses déploiements, la Division oppose une opacité contractuelle parfaitement légale — et des escortes biométriques aux frontières de ses installations.
+
+## Tensions narratives
+La Division navigue en permanence sur le fil entre autonomie opérationnelle et subordination au centre — une tension que les régimes locaux exploitent pour renégocier leurs contrats à la hausse, menaçant de basculer vers des concurrents régionaux émergents. Son réseau biométrique, conçu pour 'sécuriser la santé', est régulièrement sollicité par les appareils d'État pour des fonctions de surveillance politique, ce qui expose la Division à des accusations de complicité que le centre cherche à distance à démentir. Par ailleurs, les campements périphériques aux portes des enclaves documentent avec une précision croissante la corrélation entre zones hors-contrat et surmortalité épidémique — une cartographie qui, si elle atteignait les tribunaux résiduels, pourrait requalifier le modèle économique de la Division en crime sanitaire systémique. Enfin, des factions internes pro-autarcie totale dans certains régimes clients poussent à la nationalisation des infrastructures BioSyn, ce qui menacerait l'existence même de la branche eurasienne.

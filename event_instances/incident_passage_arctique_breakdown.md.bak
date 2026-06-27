@@ -1,0 +1,83 @@
+---
+name: La Saisie du Détroit — Incident du Passage Nord-Ouest
+type: event_instance
+slug: incident_passage_arctique_breakdown
+archetype: incident_passage_arctique
+scenario: breakdown
+type_evenement: political_social
+portee: continentale
+date: 2057
+date_label: été arctique 2057
+impossible: false
+custom: true
+description: >
+  Août 2057, eaux du Passage Nord-Ouest : trois navires sous pavillon de l'Autorité du Passage Arctique sont arraisonnés par des unités armées du Konsortiet Nordark, agissant au nom d'une 'créance de transit non honorée'. Les équipages sont détenus quarante-deux heures. Nuuk dépose une plainte devant les Archives Neutres de Genève, seul référentiel légal encore reconnu par une partie des belligérants. La cargaison — hydrocarbures résiduels et équipements de forage — disparaît dans les entrepôts flottants de Nordark. Ce qui fut un différend juridique entre autorités de transit est devenu une razzia industrielle revendiquée.
+consequences: >
+  L'incident consacre la mort de facto de toute gouvernance partagée du Passage Nord-Ouest : chaque opérateur armé peut désormais invoquer une 'créance' pour légitimer une saisie. Le Kalaallit Nunaat Sovereign Fund accélère sa militarisation défensive et cherche des alliances avec la Hanse Baltique Recomposée. Les corridors arctiques basculent définitivement dans la logique des seigneuries logistiques armées, réduisant les flux à ce que chaque faction peut défendre par la force.
+realisation: >
+  Dans un contexte où l'Autorité du Passage Arctique n'est plus qu'un fantôme institutionnel disputé entre factions, les unités armées de la NAT — une coalition paramilitaire héritière des anciens blocs nordiques — interceptent physiquement un convoi encore opéré sous pavillon APA dans les eaux du Passage Nord-Ouest. L'incident n'est pas une 'première confrontation armée' au sens classique : c'est une saisie de force par des milices qui ne reconnaissent plus aucune autorité supérieure. Le Groenland, via le Kalaallit Nunaat Sovereign Fund, tente de porter l'affaire devant un tribunal international — mais le Tribunal de la Mer ne dispose plus ni du quorum ni de l'autorité d'exécution pour trancher. La procédure s'enlise dans le vide institutionnel.
+impact_sur_variables:
+  - variable: geopolitique_conflits
+    delta_level: 8
+    duree: 15
+    polarite: -1
+  - variable: energie_ressources_critiques
+    delta_level: -10
+    duree: 20
+    polarite: -1
+  - variable: frontieres_du_systeme
+    delta_level: -6
+    duree: 25
+    polarite: -1
+  - variable: organisation_territoires
+    delta_level: -7
+    duree: 18
+    polarite: -1
+  - variable: climat_environnement_global
+    delta_level: -4
+    duree: 12
+    polarite: -1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+    - arctic_passage_authority_breakdown
+    - armada_logistique_nordique_breakdown
+    - kalaallit_nunaat_sovereign_fund_breakdown
+    - archives_neutres_de_geneve_breakdown
+    - factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
+    - hanse_baltique_recomposee_breakdown
+    - seigneuries_logistiques_armees_breakdown
+note_coherence: Dans un monde de fragmentation à tension 5/5, la confrontation armée arctique ne produit pas de résolution juridique mais une prédation consommée, cohérente avec l'effondrement des autorités de transit et la domination des acteurs logistiques armés.
+custom_source: rééquilibrage_geo_2026-06
+date_creation: 2026-06-24
+---
+
+# La Saisie du Détroit — Incident du Passage Nord-Ouest
+
+## Réalisation dans [[breakdown]]
+Dans un contexte où l'Autorité du Passage Arctique n'est plus qu'un fantôme institutionnel disputé entre factions, les unités armées de la NAT — une coalition paramilitaire héritière des anciens blocs nordiques — interceptent physiquement un convoi encore opéré sous pavillon APA dans les eaux du Passage Nord-Ouest. L'incident n'est pas une 'première confrontation armée' au sens classique : c'est une saisie de force par des milices qui ne reconnaissent plus aucune autorité supérieure. Le Groenland, via le Kalaallit Nunaat Sovereign Fund, tente de porter l'affaire devant un tribunal international — mais le Tribunal de la Mer ne dispose plus ni du quorum ni de l'autorité d'exécution pour trancher. La procédure s'enlise dans le vide institutionnel.
+
+## Description journalistique
+Août 2057, eaux du Passage Nord-Ouest : trois navires sous pavillon de l'Autorité du Passage Arctique sont arraisonnés par des unités armées du Konsortiet Nordark, agissant au nom d'une 'créance de transit non honorée'. Les équipages sont détenus quarante-deux heures. Nuuk dépose une plainte devant les Archives Neutres de Genève, seul référentiel légal encore reconnu par une partie des belligérants. La cargaison — hydrocarbures résiduels et équipements de forage — disparaît dans les entrepôts flottants de Nordark. Ce qui fut un différend juridique entre autorités de transit est devenu une razzia industrielle revendiquée.
+
+## Conséquences
+L'incident consacre la mort de facto de toute gouvernance partagée du Passage Nord-Ouest : chaque opérateur armé peut désormais invoquer une 'créance' pour légitimer une saisie. Le Kalaallit Nunaat Sovereign Fund accélère sa militarisation défensive et cherche des alliances avec la Hanse Baltique Recomposée. Les corridors arctiques basculent définitivement dans la logique des seigneuries logistiques armées, réduisant les flux à ce que chaque faction peut défendre par la force.
+
+## Impact sur les variables
+- **geopolitique_conflits** : delta -8 sur 15 ans
+- **energie_ressources_critiques** : delta +10 sur 20 ans
+- **frontieres_du_systeme** : delta +6 sur 25 ans
+- **organisation_territoires** : delta +7 sur 18 ans
+- **climat_environnement_global** : delta +4 sur 12 ans
+
+## Acteurs impliqués
+- [[arctic_passage_authority_breakdown]]
+- [[armada_logistique_nordique_breakdown]]
+- [[kalaallit_nunaat_sovereign_fund_breakdown]]
+- [[archives_neutres_de_geneve_breakdown]]
+- [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]]
+- [[hanse_baltique_recomposee_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]
+
+## Note de cohérence
+Dans un monde de fragmentation à tension 5/5, la confrontation armée arctique ne produit pas de résolution juridique mais une prédation consommée, cohérente avec l'effondrement des autorités de transit et la domination des acteurs logistiques armés.

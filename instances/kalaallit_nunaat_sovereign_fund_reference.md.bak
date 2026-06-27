@@ -1,0 +1,104 @@
+---
+name: Kalaallit Nunaat Sovereign Fund
+type: instance
+slug: kalaallit_nunaat_sovereign_fund_reference
+entite: kalaallit_nunaat_sovereign_fund
+scenario: reference
+
+type_dans_scenario: institution
+
+role_dans_scenario: >
+  Fonds souverain du Groenland indépendant depuis 2038, le KNSF gère les revenus colossaux tirés de l'extraction de terres rares, lithium et uranium rendus accessibles par la fonte quasi-totale de l'inlandsis. Acteur géopolitique de premier plan dans les négociations arctiques, il joue méthodiquement les grands blocs — Union Eurasiatique, Confédération Indo-Pacifique, blocs nord-américains — les uns contre les autres pour maximiser la rente stratégique groenlandaise. Siège dans une tour de verre à Nuuk-Capitale, au bord du fjord, le fonds est devenu le symbole mondial de la transformation d'une marginalité coloniale en puissance souveraine, incarnant la paradoxe d'une richesse née du désastre climatique commun.
+
+responsabilites: >
+  Gestion et allocation des revenus d'extraction minière souterraine post-inlandsis ; négociation des contrats d'accès aux ressources critiques avec les blocs géopolitiques concurrents ; pilotage d'une diplomatie de la rente visant à préserver l'indépendance politique du Groenland tout en maximisant les retombées économiques pour la population kalaallit.
+
+impact_local: 5
+impact_systemique_global: 4
+
+variables_influencees:
+    - energie_ressources_critiques
+    - geopolitique_conflits
+    - systeme_economique_redistribution
+    - gouvernance_institutions
+
+zone_geographique:
+    - nationale
+    - régionale
+    - globale
+
+zone_systemique:
+    - énergie
+    - économie
+    - gouvernance
+    - sécurité
+
+alliances:
+    - conseil_des_etats_nordiques_integres_reference
+    - fonds_souverain_arctique_scandinave_reference
+    - armada_logistique_nordique_reference
+    - conseil_regulation_ressources_reference
+    - collectifs_de_peche_inuit_et_sami_reference
+    - bloc_des_souverainistes_climatiques_reference
+    - fonds_monetaire_climatique_fmc_reference
+
+oppositions:
+    - cartel_des_terres_rares_d_asie_centrale_reference
+    - bloc_ressources_eurasiatique_bre_reference
+    - consortiums_prives_d_extraction_de_ressources_critiques_reference
+    - ong_de_tracabilite_des_ressources_critiques_reference
+    - agence_stabilisation_climatique_reference
+    - factions_d_extraction_miniere_independantes_reference
+
+type_relation_dominante: rivalité
+
+annee_debut: 2038
+annee_fin: 
+
+etat_temporel: actif
+age_historique: ascendant
+generation: transition
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Installé dans une tour de verre qui domine le fjord de Nuuk par tous les temps, le Kalaallit Nunaat Sovereign Fund est devenu en moins de soixante ans l'un des acteurs les plus redoutés des négociations sur les ressources critiques mondiales. Là où des générations de Groenlandais ont subi la tutelle danoise et l'indifférence internationale, ses négociateurs reçoivent aujourd'hui délégations eurasiatiques et émissaires indo-pacifiques dans des salles de conférence aux vitres teintées d'où l'on voit les brise-glaces charger leur cargaison de lithium. Le fonds gère une rente qui se chiffre en centaines de milliards annuels — née de la fonte catastrophique de l'inlandsis — et n'hésite pas à suspendre un contrat d'extraction pour faire monter les enchères entre deux blocs rivaux. Pour ses partisans, c'est la souveraineté retrouvée d'un peuple trop longtemps dépossédé ; pour ses critiques, c'est la monétisation cynique d'une catastrophe climatique dont le Groenland n'est pas responsable.
+
+signes_distinctifs: >
+  Logo d'un ours polaire stylisé debout sur un socle de cristal géologique, omniprésent sur les bâtiments de Nuuk-Capitale et les convois miniers blindés ; architecture de la tour-siège combinant verre fumé noir et parement de basalte groenlandais brut, visible à vingt kilomètres sur le fjord ; délégations systématiquement vêtues de parkas de travail haute-technicité aux couleurs du drapeau kalaallit, ostensiblement fonctionnelles dans les salons diplomatiques.
+
+tensions_narratives: >
+  La question centrale qui divise la société groenlandaise : redistribuer une part significative de la rente au fonds climatique mondial — contribution à la réparation d'un désastre global — ou la sanctuariser intégralement comme rempart d'une souveraineté encore fragile ? En parallèle, la pression croissante des collectifs inuit pour que les communautés locales voient concrètement leur niveau de vie transformé, face à une technocratie du fonds perçue comme de plus en plus déconnectée. Enfin, le risque que le jeu de bascule entre blocs géopolitiques finisse par se retourner contre Nuuk si l'un d'eux décidait qu'une déstabilisation forcée coûte moins cher qu'une négociation.
+
+date_creation: 2026-06-23
+---
+
+# Kalaallit Nunaat Sovereign Fund
+
+## Rôle dans [[reference]]
+Fonds souverain du Groenland indépendant depuis 2038, le KNSF gère les revenus colossaux tirés de l'extraction de terres rares, lithium et uranium rendus accessibles par la fonte quasi-totale de l'inlandsis. Acteur géopolitique de premier plan dans les négociations arctiques, il joue méthodiquement les grands blocs — Union Eurasiatique, Confédération Indo-Pacifique, blocs nord-américains — les uns contre les autres pour maximiser la rente stratégique groenlandaise. Siège dans une tour de verre à Nuuk-Capitale, au bord du fjord, le fonds est devenu le symbole mondial de la transformation d'une marginalité coloniale en puissance souveraine, incarnant la paradoxe d'une richesse née du désastre climatique commun.
+
+## Responsabilités
+Gestion et allocation des revenus d'extraction minière souterraine post-inlandsis ; négociation des contrats d'accès aux ressources critiques avec les blocs géopolitiques concurrents ; pilotage d'une diplomatie de la rente visant à préserver l'indépendance politique du Groenland tout en maximisant les retombées économiques pour la population kalaallit.
+
+## Variables influencées
+- [[energie_ressources_critiques]]
+- [[geopolitique_conflits]]
+- [[systeme_economique_redistribution]]
+- [[gouvernance_institutions]]
+
+## Relations
+**Alliés** : [[conseil_des_etats_nordiques_integres_reference]], [[fonds_souverain_arctique_scandinave_reference]], [[armada_logistique_nordique_reference]], [[conseil_regulation_ressources_reference]], [[collectifs_de_peche_inuit_et_sami_reference]], [[bloc_des_souverainistes_climatiques_reference]], [[fonds_monetaire_climatique_fmc_reference]]
+**Opposants** : [[cartel_des_terres_rares_d_asie_centrale_reference]], [[bloc_ressources_eurasiatique_bre_reference]], [[consortiums_prives_d_extraction_de_ressources_critiques_reference]], [[ong_de_tracabilite_des_ressources_critiques_reference]], [[agence_stabilisation_climatique_reference]], [[factions_d_extraction_miniere_independantes_reference]]
+
+## Description journalistique
+Installé dans une tour de verre qui domine le fjord de Nuuk par tous les temps, le Kalaallit Nunaat Sovereign Fund est devenu en moins de soixante ans l'un des acteurs les plus redoutés des négociations sur les ressources critiques mondiales. Là où des générations de Groenlandais ont subi la tutelle danoise et l'indifférence internationale, ses négociateurs reçoivent aujourd'hui délégations eurasiatiques et émissaires indo-pacifiques dans des salles de conférence aux vitres teintées d'où l'on voit les brise-glaces charger leur cargaison de lithium. Le fonds gère une rente qui se chiffre en centaines de milliards annuels — née de la fonte catastrophique de l'inlandsis — et n'hésite pas à suspendre un contrat d'extraction pour faire monter les enchères entre deux blocs rivaux. Pour ses partisans, c'est la souveraineté retrouvée d'un peuple trop longtemps dépossédé ; pour ses critiques, c'est la monétisation cynique d'une catastrophe climatique dont le Groenland n'est pas responsable.
+
+## Tensions narratives
+La question centrale qui divise la société groenlandaise : redistribuer une part significative de la rente au fonds climatique mondial — contribution à la réparation d'un désastre global — ou la sanctuariser intégralement comme rempart d'une souveraineté encore fragile ? En parallèle, la pression croissante des collectifs inuit pour que les communautés locales voient concrètement leur niveau de vie transformé, face à une technocratie du fonds perçue comme de plus en plus déconnectée. Enfin, le risque que le jeu de bascule entre blocs géopolitiques finisse par se retourner contre Nuuk si l'un d'eux décidait qu'une déstabilisation forcée coûte moins cher qu'une négociation.

@@ -1,0 +1,118 @@
+---
+name: Réseau Terrafond des Bassins
+type: instance
+slug: reseau_terrafond_bassins_eco_communalism
+entite: reseau_terrafond_bassins
+scenario: eco_communalism
+localisation:
+  zone: reseau_terrafond_bassins
+  lieu: Réseau Terrafond des Bassins
+  type_lieu: infrastructure
+
+type_dans_scenario: réseau
+
+role_dans_scenario: >
+  Réseau de gestion communautaire des bassins versants et des terres agricoles, Terrafond Bassins administre les biens communs naturels selon une logique de souveraineté locale et de sobriété assumée. Il finance et garantit l'accès équitable à la terre et à l'eau pour les communautés autonomes, en opposition aux logiques de marché et de privatisation des ressources. Agissant à la fois comme gardien foncier, banquier communautaire et arbitre des usages, le Réseau Terrafond constitue la colonne vertébrale institutionnelle de l'éco-communalisme territorial : sans lui, les conflits d'accès à l'eau et à la terre risqueraient de fragmenter le tissu coopératif en guerres de ressources. Sa légitimité repose entièrement sur la confiance délibérative des communautés membres — une légitimité fragile, régulièrement disputée.
+
+responsabilites: >
+  Terrafond administre les droits d'usage des terres et des bassins versants via des assemblées délibératives locales, distribue des financements non marchands pour la restauration et l'entretien des communs naturels, et arbitre les conflits d'usage entre communautés membres. Il tient les registres fonciers vivants — documents cartographiques co-produits avec les Collectifs de Cartographie Écologique Participative — et garantit que nul usage extractif ou privatif ne peut être contractualisé sans consentement collectif formalisé.
+
+impact_local: 5
+impact_systemique_global: 3
+
+variables_influencees:
+    - organisation_territoires
+    - energie_ressources_critiques
+    - systeme_economique_redistribution
+    - gouvernance_institutions
+
+zone_geographique:
+    - locale
+    - régionale
+
+zone_systemique:
+    - gouvernance
+    - économie
+    - infrastructure
+    - société
+
+alliances:
+    - assemblee_territoires_eco_communalism
+    - assemblees_bioterritoriales_regionales_eco_communalism
+    - assemblees_de_bassin_versant_eco_communalism
+    - confederation_bassins_vivants_eco_communalism
+    - conseils_de_bassin_versant_eco_communalistes_eco_communalism
+    - collectifs_de_cartographie_ecologique_participative_eco_communalism
+    - collectifs_de_geo_observateurs_citoyens_eco_communalism
+    - brigades_de_restauration_ecologique_eco_communalism
+    - guildes_de_mediateurs_ecologiques_eco_communalism
+    - cercles_de_mediation_territoriale_intercommunautaire_eco_communalism
+    - archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
+    - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
+    - trame_bioclimatique_eco_communalism
+    - assemblees_cooperatives_regionales_eco_communalism
+
+oppositions:
+    - consortiums_industriels_de_l_eau_eco_communalism
+    - factions_extractivistes_des_aquiferes_communs_eco_communalism
+    - agro_conglomerats_des_enclaves_technologiques_eco_communalism
+    - enclaves_extractivistes_residuelles_des_corridors_eco_communalism
+    - consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism
+    - reseaux_de_notables_communautaires_capturistes_eco_communalism
+    - conseils_territoriaux_opaques_sur_la_gestion_des_ressources_eco_communalism
+    - communs_secessionnistes_hors_coordination_eco_communalism
+    - communautes_rurales_dissidentes_anti_cooperation_regionale_eco_communalism
+    - cartels_de_narration_de_penurie_eco_communalism
+
+type_relation_dominante: coopération
+
+annee_debut: 2041
+annee_fin: 
+
+etat_temporel: actif
+age_historique: mature
+generation: reconstruction
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Dans les territoires où l'État central n'est plus qu'un souvenir diffus, le Réseau Terrafond des Bassins fait figure d'institution la plus concrète qui soit : ses délégués arpentent les berges, toisent les parcelles, et réunissent les assemblées de bassin au rythme des saisons. Fondé dans les années 2040 sur les décombres des agences foncières nationales, il administre aujourd'hui des millions d'hectares de terres agricoles et des centaines de bassins versants selon une règle unique : aucune ressource vitale ne peut être cédée, vendue ou exploitée sans le consentement formalisé de la communauté qui en dépend. Ses détracteurs — souvent des opérateurs industriels contraints de négocier l'accès à des aquifères jadis librement pompés — l'accusent d'être une bureaucratie déguisée en démocratie. Ses membres, eux, y voient la seule garantie que l'eau ne deviendra pas une marchandise de plus dans un monde qui en a déjà trop produit.
+
+signes_distinctifs: >
+  Les délégués Terrafond arborent une ceinture d'outils de mesure hydraulique et un carnet de registres cartographiques enluminés à la main — mélange délibéré de rigueur technique et de mémoire sensible du territoire. Les assemblées se tiennent toujours en plein air, à proximité immédiate de la ressource en débat, souvent marquées par un cairn de pierres colorées signalant le lieu de délibération.
+
+tensions_narratives: >
+  La question lancinante du Réseau Terrafond est celle-ci : jusqu'où la discipline collective peut-elle contraindre une communauté qui refuse ses verdicts ? Plusieurs bassins versants ont déjà connu des sécessions de fait, des groupes locaux appliquant leurs propres règles d'extraction sans mandat collectif. En parallèle, des réseaux de notables capturistes infiltrent les assemblées pour orienter les décisions foncières en leur faveur, menaçant la légitimité délibérative de l'intérieur. Et la pression des consortiums industriels sur les aquifères frontaliers ne faiblit pas : Terrafond manque de force coercitive propre, et sa survie dépend entièrement de la cohésion — fragile — de ses membres.
+
+date_creation: 2026-06-27
+---
+
+# Réseau Terrafond des Bassins
+
+## Rôle dans [[eco_communalism]]
+Réseau de gestion communautaire des bassins versants et des terres agricoles, Terrafond Bassins administre les biens communs naturels selon une logique de souveraineté locale et de sobriété assumée. Il finance et garantit l'accès équitable à la terre et à l'eau pour les communautés autonomes, en opposition aux logiques de marché et de privatisation des ressources. Agissant à la fois comme gardien foncier, banquier communautaire et arbitre des usages, le Réseau Terrafond constitue la colonne vertébrale institutionnelle de l'éco-communalisme territorial : sans lui, les conflits d'accès à l'eau et à la terre risqueraient de fragmenter le tissu coopératif en guerres de ressources. Sa légitimité repose entièrement sur la confiance délibérative des communautés membres — une légitimité fragile, régulièrement disputée.
+
+## Responsabilités
+Terrafond administre les droits d'usage des terres et des bassins versants via des assemblées délibératives locales, distribue des financements non marchands pour la restauration et l'entretien des communs naturels, et arbitre les conflits d'usage entre communautés membres. Il tient les registres fonciers vivants — documents cartographiques co-produits avec les Collectifs de Cartographie Écologique Participative — et garantit que nul usage extractif ou privatif ne peut être contractualisé sans consentement collectif formalisé.
+
+## Variables influencées
+- [[organisation_territoires]]
+- [[energie_ressources_critiques]]
+- [[systeme_economique_redistribution]]
+- [[gouvernance_institutions]]
+
+## Relations
+**Alliés** : [[assemblee_territoires_eco_communalism]], [[assemblees_bioterritoriales_regionales_eco_communalism]], [[assemblees_de_bassin_versant_eco_communalism]], [[confederation_bassins_vivants_eco_communalism]], [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]], [[collectifs_de_cartographie_ecologique_participative_eco_communalism]], [[collectifs_de_geo_observateurs_citoyens_eco_communalism]], [[brigades_de_restauration_ecologique_eco_communalism]], [[guildes_de_mediateurs_ecologiques_eco_communalism]], [[cercles_de_mediation_territoriale_intercommunautaire_eco_communalism]], [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]], [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]], [[trame_bioclimatique_eco_communalism]], [[assemblees_cooperatives_regionales_eco_communalism]]
+**Opposants** : [[consortiums_industriels_de_l_eau_eco_communalism]], [[factions_extractivistes_des_aquiferes_communs_eco_communalism]], [[agro_conglomerats_des_enclaves_technologiques_eco_communalism]], [[enclaves_extractivistes_residuelles_des_corridors_eco_communalism]], [[consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism]], [[reseaux_de_notables_communautaires_capturistes_eco_communalism]], [[conseils_territoriaux_opaques_sur_la_gestion_des_ressources_eco_communalism]], [[communs_secessionnistes_hors_coordination_eco_communalism]], [[communautes_rurales_dissidentes_anti_cooperation_regionale_eco_communalism]], [[cartels_de_narration_de_penurie_eco_communalism]]
+
+## Description journalistique
+Dans les territoires où l'État central n'est plus qu'un souvenir diffus, le Réseau Terrafond des Bassins fait figure d'institution la plus concrète qui soit : ses délégués arpentent les berges, toisent les parcelles, et réunissent les assemblées de bassin au rythme des saisons. Fondé dans les années 2040 sur les décombres des agences foncières nationales, il administre aujourd'hui des millions d'hectares de terres agricoles et des centaines de bassins versants selon une règle unique : aucune ressource vitale ne peut être cédée, vendue ou exploitée sans le consentement formalisé de la communauté qui en dépend. Ses détracteurs — souvent des opérateurs industriels contraints de négocier l'accès à des aquifères jadis librement pompés — l'accusent d'être une bureaucratie déguisée en démocratie. Ses membres, eux, y voient la seule garantie que l'eau ne deviendra pas une marchandise de plus dans un monde qui en a déjà trop produit.
+
+## Tensions narratives
+La question lancinante du Réseau Terrafond est celle-ci : jusqu'où la discipline collective peut-elle contraindre une communauté qui refuse ses verdicts ? Plusieurs bassins versants ont déjà connu des sécessions de fait, des groupes locaux appliquant leurs propres règles d'extraction sans mandat collectif. En parallèle, des réseaux de notables capturistes infiltrent les assemblées pour orienter les décisions foncières en leur faveur, menaçant la légitimité délibérative de l'intérieur. Et la pression des consortiums industriels sur les aquifères frontaliers ne faiblit pas : Terrafond manque de force coercitive propre, et sa survie dépend entièrement de la cohésion — fragile — de ses membres.

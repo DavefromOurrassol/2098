@@ -1,0 +1,87 @@
+---
+name: Chambre de Sécurité Territoriale
+type: instance
+slug: assemblee_territoires_fortress_world
+entite: assemblee_territoires
+scenario: fortress_world
+localisation:
+  zone: zones_grises_tampons
+  lieu: Genève-Bunker
+  type_lieu: infrastructure
+type_dans_scenario: institution
+role_dans_scenario: >
+  Instance de coordination sécuritaire entre les blocs géopolitiques pour
+  la gestion des zones tampons, des territoires contestés et des flux
+  de population. Réunit des délégués militaires et civils des blocs.
+  Son agenda est dominé par la sécurité, non par le développement.
+responsabilites: >
+  Gestion des zones tampons inter-blocs. Coordination sur les flux
+  migratoires forcés. Délimitation des zones d'exclusion climatique.
+  Négociation des accès aux ressources dans les zones contestées.
+impact_local: 2
+impact_systemique_global: 3
+variables_influencees:
+  - organisation_territoires
+  - gouvernance_institutions
+  - geopolitique_conflits
+zone_geographique:
+  - globale
+zone_systemique:
+  - gouvernance
+  - sécurité
+alliances:
+  - conseil_regulation_algorithmique_fortress_world
+oppositions: []
+type_relation_dominante: alliance stratégique
+annee_debut: 2050
+annee_fin:
+etat_temporel: actif
+age_historique: mature
+generation: forteresse
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+description_journalistique: >
+  La Chambre de Sécurité Territoriale tient ses sessions dans un bunker
+  sous Genève-Bunker — aucun journaliste n'y est accrédité. Ce qu'on
+  sait de ses décisions arrive par des fuites soigneusement calibrées.
+  Elle gère 23 zones tampons actives, dont 7 ont été classées "zones
+  de non-droit temporaires" depuis plus de 15 ans.
+signes_distinctifs: >
+  Opacité totale. Communiqués laconiques. Délégués sans noms publics.
+  Ses décisions s'appliquent sans délai ni recours.
+tensions_narratives: >
+  Au moins trois zones tampons ont connu des "incidents non documentés"
+  cette année. Les organisations humanitaires n'y ont plus accès
+  depuis 2091. Certains délégués auraient demandé une révision —
+  aucune suite connue.
+date_creation: 2098-01-01
+---
+
+# Chambre de Sécurité Territoriale
+
+## Rôle dans [[fortress_world]]
+Instance de coordination sécuritaire entre blocs pour la gestion des zones
+tampons et des flux de population. Agenda dominé par la sécurité.
+
+## Variables influencées
+- [[organisation_territoires]]
+- [[gouvernance_institutions]]
+- [[geopolitique_conflits]]
+
+## Relations
+**Alliés** : [[conseil_regulation_algorithmique_fortress_world]]
+**Opposants** : _aucun défini_
+
+## Description journalistique
+La Chambre tient ses sessions dans un bunker sous Genève-Bunker. Aucun
+journaliste n'y est accrédité. Elle gère 23 zones tampons actives, dont
+7 classées "zones de non-droit temporaires" depuis plus de 15 ans.
+
+## Tensions narratives
+Au moins trois zones tampons ont connu des "incidents non documentés"
+cette année. Les organisations humanitaires n'y ont plus accès depuis 2091.

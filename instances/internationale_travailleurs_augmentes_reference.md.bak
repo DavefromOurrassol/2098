@@ -1,0 +1,96 @@
+---
+name: Internationale des Travailleurs Augmentés
+type: instance
+slug: internationale_travailleurs_augmentes_reference
+entite: internationale_travailleurs_augmentes
+scenario: reference
+
+type_dans_scenario: organisation
+
+role_dans_scenario: >
+  Syndicat transnational représentant les quelque 2,3 milliards de travailleurs hybridés — porteurs d'implants cognitifs, d'exosquelettes professionnels ou d'interfaces neurales employeur-imposées — dans un monde où les frontières entre corps humain et outil de production se dissolvent progressivement. L'ITA occupe une position pivot inconfortable : trop institutionnalisée pour incarner la radicalité des bases, trop revendicative pour être acceptée comme partenaire stable par les blocs économiques dominants. Elle joue un rôle de régulateur de pression sociale, absorbant les colères tout en négociant à la marge des droits nouveaux. Sa légitimité est constamment disputée, mais son réseau reste indispensable à l'équilibre fragile du système productif mondial.
+
+responsabilites: >
+  Négocie des conventions d'augmentation obligatoire avec les consortiums industriels et les États-plateformes, en exigeant des standards minimaux de réversibilité technologique et de propriété des données biométriques générées par les implants de travail. Organise des grèves de déconnexion synchronisée — moments où des millions de travailleurs augmentés désactivent collectivement leurs interfaces employeur — comme levier de pression. Gère un réseau de cliniques syndicales offrant maintenance, désaugmentation et suivi psychologique aux travailleurs en rupture contractuelle.
+
+impact_local: 3
+impact_systemique_global: 4
+variables_influencees:
+    - systemes_productifs_travail
+    - systeme_economique_redistribution
+    - technologie_information
+    - valeurs_culture_tempo_sociale
+
+zone_geographique:
+    - globale
+    - continentale
+    - nationale
+
+zone_systemique:
+    - économie
+    - gouvernance
+    - société
+    - IA
+
+alliances:
+    - conseil_de_geneve_pour_les_droits_biosociaux_reference
+    - federation_des_cliniques_autonomes_reference
+    - reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference
+
+oppositions:
+    - consortium_augmentwork_reference
+    - algorithmic_labor_exchange_reference
+    - gouvernements_a_regime_de_productivite_mandatee_reference
+
+type_relation_dominante: rivalité
+
+annee_debut: 2031
+annee_fin: 
+
+etat_temporel: actif
+age_historique: ascendant
+generation: transition
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  On les reconnaît aux brassards orangés portés sur les exosquelettes lors des rassemblements, et à leur slogan gravé dans les mémoires : *Le corps augmenté reste un corps souverain*. L'Internationale des Travailleurs Augmentés a fêté en 2097 ses soixante-six ans d'existence dans une ambivalence revendiquée : ni révolutionnaire, ni domestiquée. Son secrétariat général, partagé entre São Paulo, Nairobi et Séoul par rotation triennale, reflète la géographie réelle du travail augmenté mondial. En 2098, l'ITA négocie simultanément le Protocole de Lagos sur la portabilité des implants et fait face à une scission interne entre sa faction *minimaliste* — favorable aux accords progressifs — et les *désaugmenteurs* qui exigent l'interdiction totale des interfaces imposées par contrat. Sa survie institutionnelle tient à ce fil tendu.
+
+signes_distinctifs: >
+  Brassard orange sur membre augmenté, logo représentant une main humaine dont les doigts se prolongent en circuits non fermés — symbole d'hybridation incomplète et volontaire. Communications officielles systématiquement diffusées en clair, sans couche d'IA éditoriale, comme acte politique de lisibilité humaine.
+
+tensions_narratives: >
+  La scission entre réformistes et désaugmenteurs menace d'éclater lors du Congrès de Lagos 2099, où sera voté le soutien ou non au Protocole d'Harmonisation Productive des Nations-Économies. Certains délégués soupçonnent l'aile modérée d'être infiltrée par des agents des consortiums industriels via des implants cognitifs compromis — une accusation impossible à prouver sans violer l'intégrité corporelle des suspects. Par ailleurs, la montée d'une génération de travailleurs *nés augmentés* remet en question le cadre philosophique fondateur de l'ITA : peut-on défendre la souveraineté d'un corps qui n'a jamais existé sans ses augmentations ?
+
+date_creation: 2026-06-15
+---
+
+# Internationale des Travailleurs Augmentés
+
+## Rôle dans [[reference]]
+Syndicat transnational représentant les quelque 2,3 milliards de travailleurs hybridés — porteurs d'implants cognitifs, d'exosquelettes professionnels ou d'interfaces neurales employeur-imposées — dans un monde où les frontières entre corps humain et outil de production se dissolvent progressivement. L'ITA occupe une position pivot inconfortable : trop institutionnalisée pour incarner la radicalité des bases, trop revendicative pour être acceptée comme partenaire stable par les blocs économiques dominants. Elle joue un rôle de régulateur de pression sociale, absorbant les colères tout en négociant à la marge des droits nouveaux. Sa légitimité est constamment disputée, mais son réseau reste indispensable à l'équilibre fragile du système productif mondial.
+
+## Responsabilités
+Négocie des conventions d'augmentation obligatoire avec les consortiums industriels et les États-plateformes, en exigeant des standards minimaux de réversibilité technologique et de propriété des données biométriques générées par les implants de travail. Organise des grèves de déconnexion synchronisée — moments où des millions de travailleurs augmentés désactivent collectivement leurs interfaces employeur — comme levier de pression. Gère un réseau de cliniques syndicales offrant maintenance, désaugmentation et suivi psychologique aux travailleurs en rupture contractuelle.
+
+## Variables influencées
+- [[systemes_productifs_travail]]
+- [[systeme_economique_redistribution]]
+- [[technologie_information]]
+- [[valeurs_culture_tempo_sociale]]
+
+## Relations
+**Alliés** : [[conseil_de_geneve_pour_les_droits_biosociaux_reference]], [[federation_des_cliniques_autonomes_reference]], [[reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference]]
+**Opposants** : [[consortium_augmentwork_reference]], [[algorithmic_labor_exchange_reference]], [[gouvernements_a_regime_de_productivite_mandatee_reference]]
+
+## Description journalistique
+On les reconnaît aux brassards orangés portés sur les exosquelettes lors des rassemblements, et à leur slogan gravé dans les mémoires : *Le corps augmenté reste un corps souverain*. L'Internationale des Travailleurs Augmentés a fêté en 2097 ses soixante-six ans d'existence dans une ambivalence revendiquée : ni révolutionnaire, ni domestiquée. Son secrétariat général, partagé entre São Paulo, Nairobi et Séoul par rotation triennale, reflète la géographie réelle du travail augmenté mondial. En 2098, l'ITA négocie simultanément le Protocole de Lagos sur la portabilité des implants et fait face à une scission interne entre sa faction *minimaliste* — favorable aux accords progressifs — et les *désaugmenteurs* qui exigent l'interdiction totale des interfaces imposées par contrat. Sa survie institutionnelle tient à ce fil tendu.
+
+## Tensions narratives
+La scission entre réformistes et désaugmenteurs menace d'éclater lors du Congrès de Lagos 2099, où sera voté le soutien ou non au Protocole d'Harmonisation Productive des Nations-Économies. Certains délégués soupçonnent l'aile modérée d'être infiltrée par des agents des consortiums industriels via des implants cognitifs compromis — une accusation impossible à prouver sans violer l'intégrité corporelle des suspects. Par ailleurs, la montée d'une génération de travailleurs *nés augmentés* remet en question le cadre philosophique fondateur de l'ITA : peut-on défendre la souveraineté d'un corps qui n'a jamais existé sans ses augmentations ?

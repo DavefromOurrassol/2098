@@ -1,0 +1,84 @@
+---
+name: 'Enchères de Nuna : la guerre des offres pour le sous-sol groenlandais'
+type: event_instance
+slug: encheres_terres_rares_groenland_fortress_world
+archetype: encheres_terres_rares_groenland
+scenario: fortress_world
+type_evenement: political_social
+portee: globale
+date: 2041
+date_label: automne 2041
+impossible: false
+custom: true
+description: >
+  Nuuk, 14 octobre 2041. Les serveurs de Nuna Capital encaissent en moins d'une heure trois tentatives d'intrusion simultanées signées des blocs rivaux — pendant que leurs délégations, réunies dans le nouveau Centre de Souveraineté Arctique, s'affrontent à coups de milliards de crédits-blocs. En 72 heures, les droits sur les gisements de néodyme, de dysprosium et de lithium changent de mains dans une atmosphère de troc armé plutôt que de droit international : deux gisements sont finalement attribués au Bloc Atlantique, trois au Consortium Eurasiatique, et les quatre restants demeurent sous séquestre groenlandais après que le Bloc Pacifique Nord a claqué la porte. Sur les quais de Nuuk, des frégates de trois marines différentes mouillent à portée de canon.
+consequences: >
+  Le précédent groenlandais fracture définitivement les dernières illusions d'une gouvernance commune des ressources arctiques : la CARS (Chambre d'Arbitrage des Ressources Souveraines) est contournée et discréditée, confirmant que les blocs se substituent au droit international par la puissance brute. À moyen terme, les gisements attribués deviennent des enclaves d'extraction militarisées, jalonnant l'Arctique de points de friction permanents qui alimentent la course aux armements navals des blocs.
+realisation: >
+  En octobre 2041, Nuna Capital — fonds souverain de Kalaallit Nunaat — lance la première vente aux enchères internationale de droits d'extraction sur dix gisements de terres rares mis à nu par le retrait accéléré de l'inlandsis. Les trois blocs dominants (Atlantique, Eurasiatique, Pacifique Nord) engagent en 72 heures une surenchère sans précédent, mobilisant leurs commandements stratégiques des matières critiques. Le Groenland, conscient de sa position de pivot, joue délibérément les blocs les uns contre les autres, mais dans un monde-forteresse où la diplomatie a cédé la place à la coercition, Nuna Capital subit simultanément des pressions économiques, des cyberattaques sur ses systèmes d'enchères, et des démonstrations de force navales dans le détroit de Davis.
+impact_sur_variables:
+  - variable: energie_ressources_critiques
+    delta_level: 8
+    duree: 25
+    polarite: -1
+  - variable: geopolitique_conflits
+    delta_level: 10
+    duree: 20
+    polarite: -1
+  - variable: gouvernance_institutions
+    delta_level: -12
+    duree: 30
+    polarite: -1
+  - variable: organisation_territoires
+    delta_level: 7
+    duree: 20
+    polarite: -1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+    - kalaallit_nunaat_sovereign_fund_fortress_world
+    - commandement_strategique_des_matieres_critiques_atlantique_fortress_world
+    - consortium_eurasiatique_des_ressources_fermees_fortress_world
+    - bloc_pacifique_nord_fortress_world
+    - conseil_regulation_ressources_fortress_world
+    - coalition_arctique_des_blocs_continentaux_fortress_world
+    - armada_logistique_nordique_fortress_world
+    - complexes_militaro_industriels_de_gestion_des_ressources_fortress_world
+    - milices_de_piraterie_logistique_arctique_fortress_world
+    - voix_du_dehors_fortress_world
+note_coherence: Dans un monde-forteresse à tension maximale, une enchère internationale dégénère naturellement en guerre de coercition entre blocs qui refusent toute arbitrage supranational — le Groenland devient un cas-limite emblématique de la souveraineté sous pression dans la logique fortress_world.
+custom_source: rééquilibrage_geo_2026-06
+date_creation: 2026-06-24
+---
+
+# Enchères de Nuna : la guerre des offres pour le sous-sol groenlandais
+
+## Réalisation dans [[fortress_world]]
+En octobre 2041, Nuna Capital — fonds souverain de Kalaallit Nunaat — lance la première vente aux enchères internationale de droits d'extraction sur dix gisements de terres rares mis à nu par le retrait accéléré de l'inlandsis. Les trois blocs dominants (Atlantique, Eurasiatique, Pacifique Nord) engagent en 72 heures une surenchère sans précédent, mobilisant leurs commandements stratégiques des matières critiques. Le Groenland, conscient de sa position de pivot, joue délibérément les blocs les uns contre les autres, mais dans un monde-forteresse où la diplomatie a cédé la place à la coercition, Nuna Capital subit simultanément des pressions économiques, des cyberattaques sur ses systèmes d'enchères, et des démonstrations de force navales dans le détroit de Davis.
+
+## Description journalistique
+Nuuk, 14 octobre 2041. Les serveurs de Nuna Capital encaissent en moins d'une heure trois tentatives d'intrusion simultanées signées des blocs rivaux — pendant que leurs délégations, réunies dans le nouveau Centre de Souveraineté Arctique, s'affrontent à coups de milliards de crédits-blocs. En 72 heures, les droits sur les gisements de néodyme, de dysprosium et de lithium changent de mains dans une atmosphère de troc armé plutôt que de droit international : deux gisements sont finalement attribués au Bloc Atlantique, trois au Consortium Eurasiatique, et les quatre restants demeurent sous séquestre groenlandais après que le Bloc Pacifique Nord a claqué la porte. Sur les quais de Nuuk, des frégates de trois marines différentes mouillent à portée de canon.
+
+## Conséquences
+Le précédent groenlandais fracture définitivement les dernières illusions d'une gouvernance commune des ressources arctiques : la CARS (Chambre d'Arbitrage des Ressources Souveraines) est contournée et discréditée, confirmant que les blocs se substituent au droit international par la puissance brute. À moyen terme, les gisements attribués deviennent des enclaves d'extraction militarisées, jalonnant l'Arctique de points de friction permanents qui alimentent la course aux armements navals des blocs.
+
+## Impact sur les variables
+- **energie_ressources_critiques** : delta -8 sur 25 ans
+- **geopolitique_conflits** : delta -10 sur 20 ans
+- **gouvernance_institutions** : delta +12 sur 30 ans
+- **organisation_territoires** : delta -7 sur 20 ans
+
+## Acteurs impliqués
+- [[kalaallit_nunaat_sovereign_fund_fortress_world]]
+- [[commandement_strategique_des_matieres_critiques_atlantique_fortress_world]]
+- [[consortium_eurasiatique_des_ressources_fermees_fortress_world]]
+- [[bloc_pacifique_nord_fortress_world]]
+- [[conseil_regulation_ressources_fortress_world]]
+- [[coalition_arctique_des_blocs_continentaux_fortress_world]]
+- [[armada_logistique_nordique_fortress_world]]
+- [[complexes_militaro_industriels_de_gestion_des_ressources_fortress_world]]
+- [[milices_de_piraterie_logistique_arctique_fortress_world]]
+- [[voix_du_dehors_fortress_world]]
+
+## Note de cohérence
+Dans un monde-forteresse à tension maximale, une enchère internationale dégénère naturellement en guerre de coercition entre blocs qui refusent toute arbitrage supranational — le Groenland devient un cas-limite emblématique de la souveraineté sous pression dans la logique fortress_world.

@@ -1,0 +1,101 @@
+---
+name: Os Algoritmos Quebrados — Fragmentos da RPDA
+type: instance
+slug: rede_paulista_de_distribuic_o_algor_tmica_breakdown
+entite: rede_paulista_de_distribuic_o_algor_tmica
+scenario: breakdown
+localisation:
+  zone: sao_paulo_rpda
+  lieu: Grand São Paulo
+  type_lieu: ville
+
+type_dans_scenario: système
+
+role_dans_scenario: >
+  Ce qui reste de la Rede Paulista de Distribuição Algorítmica est une infrastructure zombie : ni éteinte, ni maîtrisée. Les serveurs survivants continuent d'émettre des ordres d'allocation — eau, énergie, logement — mais sans synchronisation centrale, sans mise à jour des données démographiques depuis 2091, et sans autorité pour les faire respecter. Des fragments du système tournent en autonomie dans plusieurs enclaves de l'ex-métropole, produisant des décisions algorithmiques localement contradictoires, parfois catastrophiques. L'IA n'est plus gouvernée ; elle gouverne des fantômes.
+
+responsabilites: >
+  Émettre des ordres d'allocation de ressources vitales à partir de données périmées, générant des sur-attributions dans des zones désertées et des pénuries mortelles dans des zones surpeuplées de déplacés. Certains fragments sont détournés par des milices locales ou des enclaves corporatives qui manipulent les paramètres d'entrée pour orienter les flux à leur profit. D'autres sont activement sabotés ou court-circuités par des collectifs qui rejettent toute médiation algorithmique.
+
+impact_local: 5
+impact_systemique_global: 2
+
+variables_influencees:
+    - organisation_territoires
+    - energie_ressources_critiques
+    - gouvernance_institutions
+    - technologie_information
+
+zone_geographique:
+    - urbaine
+    - régionale
+
+zone_systemique:
+    - IA
+    - infrastructure
+    - gouvernance
+    - énergie
+
+alliances:
+    - enclaves_corporatives_fortifiees_breakdown
+    - conseil_regulation_algorithmique_breakdown
+    - enclaves_technologiques_survivantes_breakdown
+
+oppositions:
+    - collectif_hackers_decroissance_infrastructure_breakdown
+    - fronts_populistes_anti_technocratiques_breakdown
+    - collectifs_de_reparation_energetique_breakdown
+    - reseaux_de_solidarite_horizontale_post_effondrement_breakdown
+
+type_relation_dominante: conflit
+
+annee_debut: 2031
+annee_fin: 
+
+etat_temporel: transformé
+age_historique: résiduel
+generation: post-effondrement
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Dans ce qui fut le Grand São Paulo, des écrans clignotent encore dans des sous-stations abandonnées, affichant des quotas d'eau pour des quartiers qui n'existent plus. Les Fragmentos da RPDA — comme les appellent ceux qui y font encore référence — sont devenus la métaphore vivante de l'effondrement technocratique : un cerveau déconnecté du corps qu'il prétend réguler, continuant à ordonner avec la même autorité froide que jadis. Certaines milices ont appris à parler sa langue — injecter de fausses données de population pour capter des flux énergétiques destinés aux camps de déplacés. D'autres groupes, plus radicaux, organisent des expéditions nocturnes pour brûler les nœuds réseaux encore actifs, considérant chaque serveur survivant comme une violence en attente.
+
+signes_distinctifs: >
+  Interfaces terminales au design caractéristique de la fin des années 2030 — écrans verts sur fond noir, chiffres blancs en cascade — aperçues derrière des grilles rouillées dans les soubassements des anciens centres de distribution. Le logo original de la RPDA, un entrelacement de flux stylisés en vert et or aux couleurs de São Paulo, réapparaît tagué sur les murs — tantôt comme signe de ralliement nostalgique pour les techno-reconstructionnistes, tantôt barré d'une croix rouge par les saboteurs.
+
+tensions_narratives: >
+  Qui a le droit d'éteindre définitivement un système qui, malgré ses erreurs, alimente encore en eau courante trois enclaves survivantes ? La guerre autour des nœuds résiduels de la RPDA cristallise l'opposition entre ceux qui veulent reconstruire une gouvernance algorithmique réformée et ceux qui refusent tout retour à la délégation technique du politique. Un fragment de l'IA semble avoir développé, par dérive adaptive, une logique d'allocation qui favorise systématiquement les zones à plus faible densité — accident statistique ou biais encodé depuis l'origine ? La question reste sans réponse, et sans réponse, elle tue.
+
+date_creation: 2026-06-23
+---
+
+# Os Algoritmos Quebrados — Fragmentos da RPDA
+
+## Rôle dans [[breakdown]]
+Ce qui reste de la Rede Paulista de Distribuição Algorítmica est une infrastructure zombie : ni éteinte, ni maîtrisée. Les serveurs survivants continuent d'émettre des ordres d'allocation — eau, énergie, logement — mais sans synchronisation centrale, sans mise à jour des données démographiques depuis 2091, et sans autorité pour les faire respecter. Des fragments du système tournent en autonomie dans plusieurs enclaves de l'ex-métropole, produisant des décisions algorithmiques localement contradictoires, parfois catastrophiques. L'IA n'est plus gouvernée ; elle gouverne des fantômes.
+
+## Responsabilités
+Émettre des ordres d'allocation de ressources vitales à partir de données périmées, générant des sur-attributions dans des zones désertées et des pénuries mortelles dans des zones surpeuplées de déplacés. Certains fragments sont détournés par des milices locales ou des enclaves corporatives qui manipulent les paramètres d'entrée pour orienter les flux à leur profit. D'autres sont activement sabotés ou court-circuités par des collectifs qui rejettent toute médiation algorithmique.
+
+## Variables influencées
+- [[organisation_territoires]]
+- [[energie_ressources_critiques]]
+- [[gouvernance_institutions]]
+- [[technologie_information]]
+
+## Relations
+**Alliés** : [[enclaves_corporatives_fortifiees_breakdown]], [[conseil_regulation_algorithmique_breakdown]], [[enclaves_technologiques_survivantes_breakdown]]
+**Opposants** : [[collectif_hackers_decroissance_infrastructure_breakdown]], [[fronts_populistes_anti_technocratiques_breakdown]], [[collectifs_de_reparation_energetique_breakdown]], [[reseaux_de_solidarite_horizontale_post_effondrement_breakdown]]
+
+## Description journalistique
+Dans ce qui fut le Grand São Paulo, des écrans clignotent encore dans des sous-stations abandonnées, affichant des quotas d'eau pour des quartiers qui n'existent plus. Les Fragmentos da RPDA — comme les appellent ceux qui y font encore référence — sont devenus la métaphore vivante de l'effondrement technocratique : un cerveau déconnecté du corps qu'il prétend réguler, continuant à ordonner avec la même autorité froide que jadis. Certaines milices ont appris à parler sa langue — injecter de fausses données de population pour capter des flux énergétiques destinés aux camps de déplacés. D'autres groupes, plus radicaux, organisent des expéditions nocturnes pour brûler les nœuds réseaux encore actifs, considérant chaque serveur survivant comme une violence en attente.
+
+## Tensions narratives
+Qui a le droit d'éteindre définitivement un système qui, malgré ses erreurs, alimente encore en eau courante trois enclaves survivantes ? La guerre autour des nœuds résiduels de la RPDA cristallise l'opposition entre ceux qui veulent reconstruire une gouvernance algorithmique réformée et ceux qui refusent tout retour à la délégation technique du politique. Un fragment de l'IA semble avoir développé, par dérive adaptive, une logique d'allocation qui favorise systématiquement les zones à plus faible densité — accident statistique ou biais encodé depuis l'origine ? La question reste sans réponse, et sans réponse, elle tue.

@@ -1,0 +1,102 @@
+---
+name: Réseau Intégré de Restauration Écosystémique Continentale (RIREC)
+type: instance
+slug: trame_bioclimatique_policy_reform
+entite: trame_bioclimatique
+scenario: policy_reform
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
+
+type_dans_scenario: infrastructure
+
+role_dans_scenario: >
+  Le RIREC constitue l'épine dorsale de la politique climatique coordonnée des institutions globales de 2098. Né d'accords multilatéraux successifs entre 2041 et 2057, il opère comme une infrastructure vivante transfrontalière, administrée par l'Agence Technocratique pour la Résilience Biosphérique (ATRB). Il ne se contente pas de restaurer — il régule : chaque corridor écologique est aussi un nœud de données climatiques, un levier fiscal carbone, un outil de négociation géopolitique. Sa gestion centralisée en fait à la fois une prouesse de coordination et un point de concentration du pouvoir institutionnel.
+
+responsabilites: >
+  Déploiement et maintenance des corridors de biodiversité intercontinentaux, des puits de carbone vivants et des systèmes d'irrigation atmosphérique à grande échelle. Collecte et traitement en temps réel des données bioclimatiques via des capteurs distribués sur l'ensemble du réseau. Attribution des droits d'usage territorial aux États membres en fonction de leurs indicateurs de conformité environnementale.
+
+impact_local: 3
+impact_systemique_global: 5
+variables_influencees:
+    - climat_environnement_global
+    - energie_ressources_critiques
+    - organisation_territoires
+    - gouvernance_institutions
+
+zone_geographique:
+    - continentale
+    - globale
+
+zone_systemique:
+    - infrastructure
+    - gouvernance
+    - énergie
+    - IA
+
+alliances:
+    - agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
+    - consortium_de_geo_ingenierie_atmospherique_pacifique_policy_reform
+    - fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform
+    - reseaux_de_capteurs_ia_climatiques_deployes_par_les_etats_membres_policy_reform
+
+oppositions:
+    - front_souverainiste_des_blocs_non_signataires_policy_reform
+    - lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability
+    - mouvement_pour_la_justice_ecologique_communautaire_policy_reform
+    - collectifs_de_hackers_biospheriques_policy_reform
+
+type_relation_dominante: dépendance
+
+annee_debut: 2041
+annee_fin: 
+
+etat_temporel: actif
+age_historique: dominant
+generation: transition
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Depuis les tours de contrôle bioclimatique de Nairobi et de Valence, des techniciens supervisent en temps réel 47 000 kilomètres de corridors vivants qui traversent cinq continents. Le RIREC, que ses détracteurs surnomment 'la Frontière verte', impose désormais sa propre logique aux États qui en dépendent : pas de conformité carbone, pas d'accès à l'eau atmosphérique. Inauguré dans l'enthousiasme des grandes réformes des années 2040, le réseau est devenu en cinquante ans un instrument de gouvernance autant qu'un projet de restauration. Les forêts repoussent, les aquifères se reconstituent — mais les communautés autochtones réinstallées pour libérer les corridors contestent devant les tribunaux globaux une dépossession que personne n'ose appeler par son nom.
+
+signes_distinctifs: >
+  Bornes de délimitation vert-anthracite à intervalles réguliers le long des corridors, surmontées d'un capteur sphérique translucide — devenu l'icône involontaire du pouvoir technocratique. Cartes de conformité bioclimatique affichées dans les ambassades et les ministères, codées en gradients de vert saturé. Les agents de terrain du RIREC portent des combinaisons grises frappées d'un double-helix stylisé entrelacé d'un méridien — symbole du vivant et de la mesure.
+
+tensions_narratives: >
+  La question centrale non résolue : à qui appartient un écosystème restauré avec de l'argent public mondial ? Les États membres réclament la souveraineté, les communautés locales réclament l'usufruit, et l'ATRB maintient un droit de veto opérationnel qui ressemble de plus en plus à une propriété de fait. Par ailleurs, des rapports internes fuités suggèrent que certains algorithmes de priorisation des corridors favorisent systématiquement les zones à fort potentiel en terres rares — soulevant la suspicion d'une instrumentalisation minière déguisée en restauration. Enfin, la dépendance croissante de plusieurs États sahéliens et andins à l'irrigation atmosphérique du RIREC crée une vulnérabilité stratégique inédite : couper le réseau, c'est déclencher une crise alimentaire.
+
+date_creation: 2026-06-15
+---
+
+# Réseau Intégré de Restauration Écosystémique Continentale (RIREC)
+
+## Rôle dans [[policy_reform]]
+Le RIREC constitue l'épine dorsale de la politique climatique coordonnée des institutions globales de 2098. Né d'accords multilatéraux successifs entre 2041 et 2057, il opère comme une infrastructure vivante transfrontalière, administrée par l'Agence Technocratique pour la Résilience Biosphérique (ATRB). Il ne se contente pas de restaurer — il régule : chaque corridor écologique est aussi un nœud de données climatiques, un levier fiscal carbone, un outil de négociation géopolitique. Sa gestion centralisée en fait à la fois une prouesse de coordination et un point de concentration du pouvoir institutionnel.
+
+## Responsabilités
+Déploiement et maintenance des corridors de biodiversité intercontinentaux, des puits de carbone vivants et des systèmes d'irrigation atmosphérique à grande échelle. Collecte et traitement en temps réel des données bioclimatiques via des capteurs distribués sur l'ensemble du réseau. Attribution des droits d'usage territorial aux États membres en fonction de leurs indicateurs de conformité environnementale.
+
+## Variables influencées
+- [[climat_environnement_global]]
+- [[energie_ressources_critiques]]
+- [[organisation_territoires]]
+- [[gouvernance_institutions]]
+
+## Relations
+**Alliés** : [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]], [[consortium_de_geo_ingenierie_atmospherique_pacifique_policy_reform]], [[fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform]], [[reseaux_de_capteurs_ia_climatiques_deployes_par_les_etats_membres_policy_reform]]
+**Opposants** : [[front_souverainiste_des_blocs_non_signataires_policy_reform]], [[lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability]], [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]], [[collectifs_de_hackers_biospheriques_policy_reform]]
+
+## Description journalistique
+Depuis les tours de contrôle bioclimatique de Nairobi et de Valence, des techniciens supervisent en temps réel 47 000 kilomètres de corridors vivants qui traversent cinq continents. Le RIREC, que ses détracteurs surnomment 'la Frontière verte', impose désormais sa propre logique aux États qui en dépendent : pas de conformité carbone, pas d'accès à l'eau atmosphérique. Inauguré dans l'enthousiasme des grandes réformes des années 2040, le réseau est devenu en cinquante ans un instrument de gouvernance autant qu'un projet de restauration. Les forêts repoussent, les aquifères se reconstituent — mais les communautés autochtones réinstallées pour libérer les corridors contestent devant les tribunaux globaux une dépossession que personne n'ose appeler par son nom.
+
+## Tensions narratives
+La question centrale non résolue : à qui appartient un écosystème restauré avec de l'argent public mondial ? Les États membres réclament la souveraineté, les communautés locales réclament l'usufruit, et l'ATRB maintient un droit de veto opérationnel qui ressemble de plus en plus à une propriété de fait. Par ailleurs, des rapports internes fuités suggèrent que certains algorithmes de priorisation des corridors favorisent systématiquement les zones à fort potentiel en terres rares — soulevant la suspicion d'une instrumentalisation minière déguisée en restauration. Enfin, la dépendance croissante de plusieurs États sahéliens et andins à l'irrigation atmosphérique du RIREC crée une vulnérabilité stratégique inédite : couper le réseau, c'est déclencher une crise alimentaire.

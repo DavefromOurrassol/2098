@@ -1,0 +1,2757 @@
+---
+scenario: reference
+type: geographie_monde
+date_creation: 2026-06-23
+date_derniere_maj: 2026-06-23
+zones:
+  - slug: ameriques_multipolaires
+    nom: Amériques Multipolaires
+    niveau: 1
+    type: autre
+    parent: null
+    origine_reelle:
+    - entite: États-Unis d'Amérique
+      type_entite: pays
+      portion: null
+    - entite: Brésil
+      type_entite: pays
+      portion: null
+    - entite: Chili
+      type_entite: pays
+      portion: null
+    - entite: Colombie
+      type_entite: pays
+      portion: null
+    - entite: Mexique
+      type_entite: pays
+      portion: null
+    - entite: Venezuela
+      type_entite: pays
+      portion: null
+    description: Zone américaine fragmentée entre les États-Unis traversés par une crise constitutionnelle
+      majeure (élection contestée du Nouveau Parti Commun en 2055), São Paulo comme métropole-monde accueillant
+      un siège rotatif de l'ITA, Valparaíso comme siège tournant de la Fédération des Communs Territoriaux,
+      et un Front Souverainiste des Ressources d'Amérique du Sud contestant les accords d'exploitation imposés
+      par les puissances économiques dominantes. Guadalajara apparaît comme ville de cliniques cellulaires
+      Nexus BioSyn.
+    statut: fragmenté
+    tensions_internes: Polarisation politique extrême aux États-Unis post-2055, réformes bloquées par l'opposition
+      institutionnelle. Front souverainiste sud-américain contestant les accords d'exploitation de ressources.
+      Tension entre logiques d'extraction et souveraineté territoriale.
+    periode_transition: 2026-2060
+    evenement_transition: election_parti_commun_americain_reference
+    lieux_emblematiques: []
+    relations:
+      allies: []
+      rivaux: []
+    sources_attestees:
+    - election_parti_commun_americain_reference
+    - internationale_travailleurs_augmentes_reference
+    - federation_communs_territoriaux_reference
+    - nexus_biosyn_reference
+    - front_souverainiste_des_ressources_d_amerique_du_sud_reference
+  - slug: bloc_eurasien_central
+    nom: Bloc Eurasien Central
+    niveau: 1
+    type: bloc_continental
+    parent: null
+    origine_reelle:
+    - entite: Russie
+      type_entite: pays
+      portion: null
+    - entite: Kazakhstan
+      type_entite: pays
+      portion: null
+    - entite: Mongolie
+      type_entite: pays
+      portion: null
+    - entite: Sibérie (entité fédérale russe)
+      type_entite: region_administrative
+      portion: null
+    - entite: Géorgie
+      type_entite: pays
+      portion: null
+    description: Bloc structurant les ressources d'Asie centrale (lithium, terres rares, hydrogène) et les
+      corridors de transit vers les mégapoles eurasiatiques. Comprend la Sibérie Fédérale comme entité revendiquant
+      des zones d'exclusion maritime arctiques, ainsi que des zones grises opérationnelles contrôlées par
+      des opérateurs logistiques indépendants comme Orentchev. Les régulateurs de l'Union Eurasiatique exercent
+      un contrôle sur les données critiques circulant dans cet espace.
+    statut: fragmenté
+    tensions_internes: Zones grises entre mégapoles où l'État formel cède la place à des opérateurs para-militaires
+      privés. Cartel des terres rares d'Asie centrale en tension avec les instances de régulation. Réseau
+      hospitalier hybride eurasiatique révélant la fragmentation des services publics. Contestation des
+      zones maritimes arctiques par la Sibérie Fédérale.
+    periode_transition: 2045-2070
+    evenement_transition: null
+    lieux_emblematiques: []
+    relations:
+      allies: []
+      rivaux:
+      - pacte_des_souverains
+      - corridor_arctique_nordique
+    sources_attestees:
+    - vasil_orentchev_reference
+    - siberie_federale_reference
+    - bloc_ressources_eurasiatique_bre_reference
+    - operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference
+    - regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference
+    - reseau_hospitalier_hybride_eurasiatique_reference
+    - cartel_des_terres_rares_d_asie_centrale_reference
+    - factions_eurasiatiques_contre_la_tarification_hydrique_reference
+  - slug: corridor_arctique_nordique
+    nom: Corridor Arctique Nordique
+    niveau: 1
+    type: region
+    parent: null
+    origine_reelle:
+    - entite: Norvège
+      type_entite: pays
+      portion: null
+    - entite: Suède
+      type_entite: pays
+      portion: null
+    - entite: Finlande
+      type_entite: pays
+      portion: null
+    - entite: Danemark (Groenland inclus)
+      type_entite: pays
+      portion: null
+    - entite: Islande
+      type_entite: pays
+      portion: null
+    - entite: Arctique russe (Mourmansk)
+      type_entite: region_administrative
+      portion: null
+    description: Zone géopolitique et logistique structurée autour des routes arctiques déglaciées, dominée
+      par l'Armada Logistique Nordique (ALN, siège à Tromsø) et le Conseil des États Nordiques Intégrés.
+      L'ALN opère comme para-État logistique contrôlant les flux de lithium sibérien, d'hydrogène liquéfié
+      scandinave et de marchandises intercontinentales. Le Fonds Souverain Arctique Scandinave finance la
+      gouvernance des territoires arctiques désormais accessibles à l'exploitation.
+    statut: dominant
+    tensions_internes: Montée en puissance des IA de routage autonome créant des frictions avec les États
+      nordiques actionnaires. Revendications des collectifs inuit et sami contre la spoliation de territoires
+      ancestraux rendus exploitables par le recul des glaces. Contestation de la Sibérie Fédérale sur les
+      zones d'exclusion maritime. Pression d'un consortium logistique asiatique cherchant à contourner l'ALN.
+    periode_transition: 2025-2045
+    evenement_transition: null
+    lieux_emblematiques: []
+    relations:
+      allies: []
+      rivaux:
+      - bloc_eurasien_central
+    sources_attestees:
+    - armada_logistique_nordique_reference
+    - conseil_des_etats_nordiques_integres_reference
+    - fonds_souverain_arctique_scandinave_reference
+    - collectifs_de_peche_inuit_et_sami_reference
+    - consortium_logistique_asiatique_de_contournement_aln_reference
+    - consortium_energetique_baltique_reference
+    - consortium_energetique_des_mers_du_nord_reference
+  - slug: europe_occidentale_reconstructee
+    nom: Europe Occidentale Reconstruite
+    niveau: 1
+    type: union_regionale
+    parent: null
+    origine_reelle:
+    - entite: France
+      type_entite: pays
+      portion: null
+    - entite: Belgique
+      type_entite: pays
+      portion: null
+    - entite: Espagne
+      type_entite: pays
+      portion: null
+    - entite: Portugal
+      type_entite: pays
+      portion: null
+    - entite: Allemagne
+      type_entite: pays
+      portion: null
+    - entite: Suisse
+      type_entite: pays
+      portion: null
+    description: 'Zone européenne occidentale où persistent des institutions hybrides : Bruxelles-Nouveau
+      accueille le siège du Consortium Helios (énergie solaire orbitale), Genève reste le siège de l''AMSC
+      et du Conseil de Genève pour les droits biosociaux. Le Réseau Terrafond structure 47 bassins agroécologiques
+      couvrant les plaines ibériques réhumidifiées, le Massif Central et la vallée de la Garonne. Lyon-Métropole
+      apparaît comme ville ordinaire sujette à la réglementation sur les technologies sensibles.'
+    statut: stable
+    tensions_internes: Tension entre réseaux agroécologiques (Terrafond) et agriculture verticale algorithmique.
+      Pression des réfugiés climatiques vers les zones tampons. Réglementation technologique croissante
+      (loi sur le Registre des Technologies Sensibles de 2068) générant des frictions civiles.
+    periode_transition: 2040-2070
+    evenement_transition: arrestation_chris_van_derburgh_reference
+    lieux_emblematiques: []
+    relations:
+      allies:
+      - institutions_multilaterales_survivantes
+      rivaux: []
+    sources_attestees:
+    - consortium_helios_reference
+    - agence_stabilisation_climatique_reference
+    - cooperative_terrafond_reference
+    - arrestation_chris_van_derburgh_reference
+    - conseil_de_geneve_pour_les_droits_biosociaux_reference
+    - leena_vainala_reference
+    - cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference
+  - slug: indo_pacifique_emergent
+    nom: Arc Indo-Pacifique
+    niveau: 1
+    type: union_regionale
+    parent: null
+    origine_reelle:
+    - entite: Singapour
+      type_entite: pays
+      portion: null
+    - entite: Corée du Sud
+      type_entite: pays
+      portion: null
+    - entite: Inde
+      type_entite: pays
+      portion: null
+    - entite: Bangladesh
+      type_entite: pays
+      portion: null
+    - entite: Vietnam
+      type_entite: pays
+      portion: null
+    - entite: Indonésie
+      type_entite: pays
+      portion: null
+    - entite: Japon
+      type_entite: pays
+      portion: null
+    description: Zone structurée autour des flux d'hydrogène Indo-Pacifique (Consortium Indo-Pacifique de
+      l'Hydrogène), des fonds souverains de la ceinture financière pacifique et de mégapoles comme Singapour-Est
+      et Séoul. Singapour-Est est base du correspondant Raj Mehta pour l'Agence Mondiale de Presse. Le delta
+      du Gange est mentionné comme zone de déplacés climatiques suivis par Prisme Global. Séoul accueille
+      un des trois sièges rotatifs de l'ITA.
+    statut: emergent
+    tensions_internes: Delta du Gange comme zone de crise climatique et de déplacement massif de populations.
+      Tensions autour du contrôle des flux d'hydrogène et des fonds souverains pacifiques. Consortium logistique
+      asiatique cherchant à contourner le monopole arctique de l'ALN.
+    periode_transition: 2040-2080
+    evenement_transition: null
+    lieux_emblematiques: []
+    relations:
+      allies: []
+      rivaux: []
+    sources_attestees:
+    - le_temoin_reference
+    - internationale_travailleurs_augmentes_reference
+    - nexus_biosyn_reference
+    - consortium_indo_pacifique_de_l_hydrogene_reference
+    - fonds_souverains_de_la_ceinture_financiere_pacifique_reference
+    - consortium_logistique_asiatique_de_contournement_aln_reference
+    - prisme_global_reference
+  - slug: institutions_multilaterales_survivantes
+    nom: Arc des institutions multilatérales survivantes
+    niveau: 1
+    type: autre
+    parent: null
+    origine_reelle:
+    - entite: Organisation des Nations Unies
+      type_entite: autre
+      portion: null
+    - entite: Suisse (Genève)
+      type_entite: pays
+      portion: null
+    - entite: Kenya (Nairobi)
+      type_entite: pays
+      portion: null
+    description: 'Ensemble des organes supranationaux hérités ou fondés au XXIe siècle qui maintiennent
+      une fiction de coopération globale malgré leur autorité constamment contestée : AMSC (Agence de Stabilisation
+      Climatique, siège à Genève-Lac-Retraité), CRRC (Conseil de Régulation des Ressources Critiques, siège
+      à Nairobi, issu des accords de 2061), Comité onusien de surveillance IA (créé en 2031), et agences
+      normatives comme IRENA-2. Ces institutions arbitrent les ressources stratégiques et les corridors
+      climatiques sans pouvoir contraindre les grandes puissances.'
+    statut: en_declin
+    tensions_internes: Légitimité technocratique non élue contestée de l'intérieur (mouvement pour un Conseil
+      Climatique Mondial élu). Blocage des réformes depuis 2089 (veto au CRRC). Supplantation progressive
+      par des algorithmes privés de gestion des ressources. Financement menacé par plusieurs grandes puissances.
+    periode_transition: 2031-2065
+    evenement_transition: null
+    lieux_emblematiques: []
+    relations:
+      allies:
+      - union_africaine_resilience
+      rivaux:
+      - pacte_des_souverains
+    sources_attestees:
+    - agence_stabilisation_climatique_reference
+    - conseil_regulation_ressources_reference
+    - conseil_regulation_algorithmique_reference
+    - agence_internationale_des_energies_renouvelables_irena_2_reference
+    - programme_onu_eau_2080_reference
+  - slug: pacte_des_souverains
+    nom: Pacte des Souverains
+    niveau: 1
+    type: bloc_continental
+    parent: null
+    origine_reelle:
+    - entite: Divers États-nations souverainistes post-pandémiques (composition non précisée)
+      type_entite: pays
+      portion: null
+    description: Coalition d'États-forteresses fondée dans les années 2030 à la suite des désillusions post-pandémiques
+      et des premières guerres de l'eau. Regroupe en 2098 quatorze États et une dizaine de territoires associés,
+      opérant via des pactes bilatéraux militaro-énergétiques sans siège fixe ni communication officielle
+      abondante. Principal pôle d'obstruction aux accords climatiques multilatéraux, il entretient la multipolarité
+      instable comme condition structurelle du système-monde.
+    statut: stable
+    tensions_internes: Fracture entre membres dotés et membres dépendants sur le partage des technologies
+      d'adaptation climatique. Tentation croissante de certains membres de passer des accords parallèles
+      avec les mégapoles globales, court-circuitant la Charte de Réciprocité Stricte. Question existentielle
+      posée par les corridors énergétiques IA-gérés qui délèguent la souveraineté à des systèmes autonomes
+      transnationaux.
+    periode_transition: 2030-2038
+    evenement_transition: conflit_israel_iran_2026_reference
+    lieux_emblematiques: []
+    relations:
+      allies: []
+      rivaux:
+      - institutions_multilaterales_survivantes
+      - union_africaine_resilience
+      - bloc_eurasien_central
+    sources_attestees:
+    - alliance_blocs_souverains_reference
+    - conflit_israel_iran_2026_reference
+    - agence_stabilisation_climatique_reference
+  - slug: union_africaine_resilience
+    nom: Union Africaine de Résilience Territoriale
+    niveau: 1
+    type: union_regionale
+    parent: null
+    origine_reelle:
+    - entite: Union Africaine
+      type_entite: autre
+      portion: null
+    - entite: République Démocratique du Congo
+      type_entite: pays
+      portion: null
+    - entite: Burkina Faso
+      type_entite: pays
+      portion: null
+    - entite: Kenya
+      type_entite: pays
+      portion: null
+    - entite: Nigéria
+      type_entite: pays
+      portion: null
+    - entite: Sénégal
+      type_entite: pays
+      portion: null
+    description: Pôle de gouvernance régionale africaine autonome regroupant des institutions partiellement
+      digitalisées, des coopératives agroécologiques sahéliennes et des mécanismes de régulation hydrique
+      (Commission Hydrique de l'UA). Incarnée par des figures comme Amara Diallo-Nkosi et les Accords de
+      Kinshasa sur les eaux du Congo (2071-2089). Comprend le Bloc Sahélien Autonome revendiquant sa souveraineté
+      sur les ressources hydriques et minières.
+    statut: emergent
+    tensions_internes: Sécheresse de 2096 menaçant les Accords de Kinshasa et poussant plusieurs États à
+      invoquer des clauses d'urgence nationale. Blocage de la réforme du droit de veto au CRRC sur les réserves
+      d'eau fossile subsaharienne. Pression des consortiums miniers du bassin congolais sur la souveraineté
+      des ressources.
+    periode_transition: 2060-2090
+    evenement_transition: null
+    lieux_emblematiques: []
+    relations:
+      allies:
+      - institutions_multilaterales_survivantes
+      rivaux:
+      - pacte_des_souverains
+    sources_attestees:
+    - union_africaine_de_resilience_territoriale_reference
+    - amara_diallo_nkosi_reference
+    - commission_hydrique_de_l_union_africaine_reference
+    - gouvernements_du_bloc_sahelien_autonome_reference
+    - conseil_regulation_ressources_reference
+    - reseau_des_cooperatives_agro_saheliennes_reference
+    - consortiums_d_extraction_miniere_du_bassin_congolais_reference
+    - regulateurs_de_l_union_continentale_africaine_reference
+  - slug: zones_grises_globales
+    nom: Zones Grises Globales
+    niveau: 1
+    type: zone_sinistree
+    parent: null
+    origine_reelle:
+    - entite: Sahel (Mali, Niger, Burkina Faso, Tchad, Soudan)
+      type_entite: region_administrative
+      portion: null
+    - entite: Asie Centrale (Kirghizistan, Tadjikistan, Afghanistan)
+      type_entite: pays
+      portion: null
+    - entite: Marges eurasiennes périphériques
+      type_entite: region_administrative
+      portion: null
+    description: Ensemble des espaces hors-cadre institutionnel effectif — zones tampons climatiques, corridors
+      gris eurasiatiques, périphéries sahéliennes, zones de transition écologique — où ni les États formels
+      ni les institutions multilatérales n'exercent de contrôle plein. Ces espaces sont structurés par des
+      opérateurs logistiques indépendants (Orentchev), des milices de droits de passage, des agences de
+      sécurité régionales de normalisation, et des réseaux agroécologiques alternatifs. Le Mouvement des
+      Racines Vivantes y est particulièrement actif.
+    statut: fragmenté
+    tensions_internes: Compétition violente entre milices pour les droits de passage. Pression migratoire
+      climatique sur les zones tampons. Captation des savoirs écologiques locaux par des plateformes d'IA
+      agronomique. Conflits entre logiques d'extraction minière et souveraineté communautaire.
+    periode_transition: 2040-2098
+    evenement_transition: null
+    lieux_emblematiques: []
+    relations:
+      allies: []
+      rivaux: []
+    sources_attestees:
+    - vasil_orentchev_reference
+    - agences_de_securite_regionales_de_normalisation_des_zones_grises_reference
+    - milices_concurrentes_des_droits_de_passage_reference
+    - mouvement_racines_vivantes_reference
+    - gouvernements_du_bloc_sahelien_autonome_reference
+    - conseil_regulation_ressources_reference
+    - operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference
+  - slug: amazonie_consortium_viva
+    nom: Bassin Amazonien
+    niveau: 2
+    type: region
+    parent: ameriques_multipolaires
+    origine_reelle:
+    - entite: Brésil
+      type_entite: pays
+      portion: null
+    - entite: Colombie
+      type_entite: pays
+      portion: null
+    - entite: Pérou
+      type_entite: pays
+      portion: null
+    - entite: Bolivie
+      type_entite: pays
+      portion: null
+    description: Espace géopolitique distinct structuré autour du Consortium Amazônia Viva, plateforme hybride
+      réunissant 94 peuples autochtones, scientifiques et administrations locales brésiliennes, colombiennes,
+      péruviennes et boliviennes. Siège flottant sur le Rio Negro ('la Casa Verde'), le Consortium a fait
+      reconnaître par trois blocs distincts que la survie de l'Amazonie vaut un traité — capable en 2098
+      de bloquer temporairement une concession extractive par injonction écologique internationale.
+    statut: fragmenté
+    tensions_internes: Fissures internes entre communautés autochtones refusant toute monétisation de la
+      biodiversité et autorités locales voyant dans les accords carbone un levier économique vital. Bloc
+      Ressources Eurasiatique finançant discrètement des factions dissidentes pour fragmenter la cohésion
+      de vote.
+    periode_transition: 2050-2098
+    evenement_transition: null
+    lieux_emblematiques:
+    - nom: La Casa Verde
+      type: infrastructure
+      notes: Plateforme flottante sur le Rio Negro, siège du Consortium Amazônia Viva — mi-laboratoire mi-parlement
+    relations:
+      allies:
+      - sertao_nordeste_bresilien
+      rivaux:
+      - bloc_eurasien_central
+    sources_attestees:
+    - consortium_amazonia_viva_reference
+    promu_depuis: null
+  - slug: bassin_garonne_terrafond
+    nom: Bassin de la Garonne Reconstruite
+    niveau: 2
+    type: region
+    parent: europe_occidentale_reconstructee
+    origine_reelle:
+    - entite: Bassin de la Garonne
+      type_entite: region_administrative
+      portion: null
+    - entite: France
+      type_entite: pays
+      portion: null
+    description: Zone agroécologique du Réseau Terrafond ayant produit en 2097 son meilleur rendement hydrique
+      en quarante ans — emblème de la coopérative Valdebrise. L'un des 47 bassins hydrologiques interconnectés
+      du réseau, ce territoire incarne la résilience fragile du modèle agroécologique européen face aux
+      pressions de l'agriculture verticale algorithmique et à l'afflux de réfugiés climatiques.
+    statut: stable
+    tensions_internes: Sous-financement chronique du Réseau Terrafond. Tentation d'intégration aux systèmes
+      d'agriculture contractuelle algorithmique. Pression démographique des réfugiés climatiques sur les
+      zones tampons gérées par Terrafond.
+    periode_transition: 2040-2098
+    evenement_transition: null
+    lieux_emblematiques:
+    - nom: Coopérative Valdebrise
+      type: infrastructure
+      notes: Coopérative emblématique du bassin, meilleur rendement hydrique en 2097 depuis 40 ans
+    relations:
+      allies: []
+      rivaux: []
+    sources_attestees:
+    - cooperative_terrafond_reference
+    promu_depuis: Bassin de la Garonne reconstructée
+  - slug: bloc_sahelien_autonome
+    nom: Bloc Sahélien Autonome
+    niveau: 2
+    type: territoire_autonome
+    parent: union_africaine_resilience
+    origine_reelle:
+    - entite: Mali
+      type_entite: pays
+      portion: null
+    - entite: Niger
+      type_entite: pays
+      portion: null
+    - entite: Burkina Faso
+      type_entite: pays
+      portion: null
+    - entite: Tchad
+      type_entite: pays
+      portion: null
+    description: Entité politique regroupant des États sahéliens revendiquant leur souveraineté collective
+      sur les ressources hydriques et minières de la région. Opère à l'intérieur du cadre de l'Union Africaine
+      de Résilience Territoriale tout en maintenant une posture d'autonomie affirmée face aux grandes puissances
+      économiques et aux institutions multilatérales. Structuré autour de coopératives agro-sahéliennes
+      et de mécanismes de régulation hydrique propres.
+    statut: emergent
+    tensions_internes: Sécheresse de 2096 poussant plusieurs États membres à invoquer des clauses d'urgence
+      nationale fragilisant la cohésion du bloc. Compétition entre milices pour les droits de passage sur
+      les couloirs du Sahel. Captation des savoirs écologiques locaux par des plateformes d'IA agronomique.
+    periode_transition: 2060-2098
+    evenement_transition: null
+    lieux_emblematiques: []
+    relations:
+      allies:
+      - kinshasa_accords_hydriques
+      rivaux:
+      - pacte_des_souverains
+    sources_attestees:
+    - gouvernements_du_bloc_sahelien_autonome_reference
+    - reseau_des_cooperatives_agro_saheliennes_reference
+    - commission_hydrique_de_l_union_africaine_reference
+    promu_depuis: null
+  - slug: bruxelles_nouveau
+    nom: Bruxelles-Nouveau
+    niveau: 2
+    type: ville
+    parent: europe_occidentale_reconstructee
+    origine_reelle:
+    - entite: Bruxelles
+      type_entite: autre
+      portion: null
+    - entite: Belgique
+      type_entite: pays
+      portion: null
+    description: Siège du Consortium Helios — énergie solaire orbitale — dont les tours de verre fumé dominent
+      la ville reconstruite. En 2098, Bruxelles-Nouveau est le centre du pouvoir énergétique mondial privé,
+      où les dirigeants d'Helios reçoivent des chefs d'État plutôt que de donner des conférences de presse.
+      La ville incarne la privatisation silencieuse des infrastructures énergétiques mondiales derrière
+      une façade d'institutions européennes persistantes.
+    statut: dominant
+    tensions_internes: Pression des métropoles du Sud Global pour renégocier les contrats hérités des années
+      2050. Faction interne d'Helios plaidant pour une mutualisation partielle des infrastructures face
+      à la résistance du conseil des actionnaires. Enquêtes journalistiques sur les fuites du système de
+      tarification algorithmique.
+    periode_transition: 2040-2070
+    evenement_transition: null
+    lieux_emblematiques: []
+    relations:
+      allies: []
+      rivaux: []
+    sources_attestees:
+    - consortium_helios_reference
+    promu_depuis: Bruxelles-Nouveau
+  - slug: bureau_zones_non_prioritaires
+    nom: Direction des Zones Non Prioritaires (DZNP)
+    niveau: 2
+    type: infrastructure
+    parent: institutions_multilaterales_survivantes
+    origine_reelle:
+    - entite: Genève
+      type_entite: region_administrative
+      portion: null
+    - entite: Suisse
+      type_entite: pays
+      portion: null
+    description: Administration fédérale fantôme installée dans un bâtiment modulaire de Genève, officiellement
+      chargée de cartographier et archiver les territoires que les États et mégapoles ont cessé de gouverner
+      activement. En 2098, la DZNP a enregistré 1 400 nouvelles 'unités territoriales suspendues' en 2097
+      (hausse de 23%), représentant 11 millions de personnes — dont les noms restent caviardés dans ses
+      rapports. Elle entérine administrativement les verdicts des plateformes IA d'optimisation territoriale.
+    statut: en_declin
+    tensions_internes: Faction minoritaire d'agents estimant que la mission de 'documentation' est devenue
+      complicité active et envisageant des fuites ciblées. Plateformes IA alimentant les classifications
+      retournant des recommandations que même les directeurs trouvent intenables.
+    periode_transition: 2060-2098
+    evenement_transition: null
+    lieux_emblematiques:
+    - nom: Bâtiment modulaire DZNP Genève
+      type: infrastructure
+      notes: Siège de l'administration fantôme, accessible uniquement sur code interministériel — archives
+        des territoires abandonnés
+    relations:
+      allies: []
+      rivaux: []
+    sources_attestees:
+    - bureau_des_territoires_residuels_reference
+    promu_depuis: null
+  - slug: corridors_eurasiens_peripheriques
+    nom: Corridors Eurasiens Périphériques
+    niveau: 2
+    type: infrastructure
+    parent: zones_grises_globales
+    origine_reelle:
+    - entite: Kirghizistan
+      type_entite: pays
+      portion: null
+    - entite: Tadjikistan
+      type_entite: pays
+      portion: null
+    - entite: Afghanistan
+      type_entite: pays
+      portion: null
+    description: Zones grises eurasiatiques périphériques contrôlées par Vasil Orentchev et ses opérateurs
+      logistiques indépendants, assurant l'approvisionnement en ressources critiques de trois mégapoles
+      du quadrant eurasien central. Ces corridors constituent le segment le plus instable de la logistique
+      eurasiatique — ni sous contrôle étatique formel, ni entièrement dans les mains d'un seul opérateur.
+    statut: fragmenté
+    tensions_internes: Compétition entre blocs concurrents cherchant à absorber les corridors sous contrôle
+      direct. Populations des zones relais commençant à percevoir Orentchev comme une autorité légitime
+      — rôle qu'il refuse mais que la réalité lui impose. Montée des systèmes de traçabilité IA menaçant
+      l'opacité opérationnelle.
+    periode_transition: 2050-2098
+    evenement_transition: null
+    lieux_emblematiques: []
+    relations:
+      allies: []
+      rivaux: []
+    sources_attestees:
+    - vasil_orentchev_reference
+    - operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference
+    promu_depuis: Corridors eurasiens périphériques
+  - slug: corridors_eurasiens_zones_grises
+    nom: Corridors Eurasiens Centraux
+    niveau: 2
+    type: infrastructure
+    parent: bloc_eurasien_central
+    origine_reelle:
+    - entite: Kazakhstan
+      type_entite: pays
+      portion: null
+    - entite: Mongolie
+      type_entite: pays
+      portion: null
+    description: Zones grises opérationnelles contrôlées par des opérateurs logistiques indépendants comme
+      Vasil Orentchev, assurant l'approvisionnement en ressources critiques de trois mégapoles du quadrant
+      eurasien central. Ces corridors échappent partiellement au contrôle formel du Bloc Eurasien Central
+      et constituent le substrat logistique de l'économie parallèle eurasiatique.
+    statut: fragmenté
+    tensions_internes: Compétition entre opérateurs para-militaires privés et structures étatiques formelles
+      pour le contrôle des nœuds logistiques. Montée des systèmes de traçabilité IA menaçant l'opacité sur
+      laquelle repose le modèle d'Orentchev.
+    periode_transition: 2050-2098
+    evenement_transition: null
+    lieux_emblematiques: []
+    relations:
+      allies: []
+      rivaux: []
+    sources_attestees:
+    - vasil_orentchev_reference
+    - operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference
+    promu_depuis: Corridors eurasiens centraux
+  - slug: couloirs_saheliens
+    nom: Couloirs du Sahel
+    niveau: 2
+    type: infrastructure
+    parent: zones_grises_globales
+    origine_reelle:
+    - entite: Mali
+      type_entite: pays
+      portion: null
+    - entite: Niger
+      type_entite: pays
+      portion: null
+    - entite: Tchad
+      type_entite: pays
+      portion: null
+    - entite: Soudan
+      type_entite: pays
+      portion: null
+    description: Corridors de transport sahéliens sous tension permanente, objet des négociations CRRC lors
+      des crises de sécheresse. Ces couloirs incarnent la zone de contact entre l'autorité formelle du Bloc
+      Sahélien Autonome, les milices concurrentes des droits de passage, et les agences de sécurité régionales
+      de normalisation. Leur contrôle est au cœur des dynamiques de pouvoir dans les zones grises globales.
+    statut: fragmenté
+    tensions_internes: Compétition violente entre milices pour les droits de passage. Pression migratoire
+      climatique croissante. Négociations CRRC chroniquement insuffisantes face à l'intensité des crises.
+    periode_transition: 2040-2098
+    evenement_transition: null
+    lieux_emblematiques: []
+    relations:
+      allies:
+      - bloc_sahelien_autonome
+      rivaux: []
+    sources_attestees:
+    - milices_concurrentes_des_droits_de_passage_reference
+    - conseil_regulation_ressources_reference
+    - gouvernements_du_bloc_sahelien_autonome_reference
+    promu_depuis: Couloirs du Sahel
+  - slug: delta_du_gange
+    nom: Delta du Gange
+    niveau: 2
+    type: zone_sinistree
+    parent: indo_pacifique_emergent
+    origine_reelle:
+    - entite: Bangladesh
+      type_entite: pays
+      portion: null
+    - entite: Inde
+      type_entite: pays
+      portion: null
+    description: Zone de déplacés climatiques massifs, suivie par Prisme Global comme territoire de crise
+      paradigmatique. Le delta du Gange incarne en 2098 la frontière entre les zones où les populations
+      existent encore comme sujets politiques et celles où elles ne sont plus que statistiques. Espace de
+      tension entre mécanismes institutionnels de gestion des migrations climatiques et réalités vécues
+      des communautés déplacées.
+    statut: en_declin
+    tensions_internes: Afflux permanent de déplacés climatiques sans infrastructure d'accueil suffisante.
+      Résistance du Collectif Nuit Jaune aux mécanismes de relocalisation forcée. Pression sur les corridors
+      migratoires certifiés par l'AMSC.
+    periode_transition: 2040-2098
+    evenement_transition: null
+    lieux_emblematiques: []
+    relations:
+      allies: []
+      rivaux: []
+    sources_attestees:
+    - prisme_global_reference
+    - agence_stabilisation_climatique_reference
+    - collectif_nuit_jaune_reference
+    promu_depuis: Delta du Gange
+  - slug: delta_du_mekong
+    nom: Delta du Mékong
+    niveau: 2
+    type: zone_sinistree
+    parent: indo_pacifique_emergent
+    origine_reelle:
+    - entite: Vietnam
+      type_entite: pays
+      portion: null
+    - entite: Cambodge
+      type_entite: pays
+      portion: null
+    description: Zone agricole sous pression climatique, territoire de distribution des semences Nexus BioSyn
+      de quatrième génération. Le delta du Mékong illustre la dépendance structurelle des agricultures régionales
+      aux infrastructures biologiques de Nexus BioSyn — une 'féodalité moléculaire' où les coopératives
+      resignent chaque printemps un contrat de licence pour avoir le droit de planter.
+    statut: en_declin
+    tensions_internes: Dépendance aux semences Nexus BioSyn et rumeurs de clauses de dormance intégrées.
+      Mouvement OpenSeed revendiquant le droit à des semences non brevetées. Pression climatique croissante
+      sur les rendements agricoles.
+    periode_transition: 2050-2098
+    evenement_transition: null
+    lieux_emblematiques: []
+    relations:
+      allies: []
+      rivaux: []
+    sources_attestees:
+    - nexus_biosyn_reference
+    promu_depuis: Delta du Mékong
+  - slug: detroit_compact_grands_lacs
+    nom: Detroit — Nœud Administratif Central
+    niveau: 2
+    type: ville
+    parent: ameriques_multipolaires
+    origine_reelle:
+    - entite: Detroit
+      type_entite: autre
+      portion: null
+    - entite: Michigan
+      type_entite: etat_federe
+      portion: null
+    description: Ancienne ville industrielle rebaptisée nœud administratif central du Compact des Grands
+      Lacs, institution hybride fondée en 2031 administrant le plus grand réservoir d'eau douce de surface
+      au monde pour 48 millions de personnes. Siège d'une gouvernance post-nationale inédite où des délégués
+      autochtones ojibwés et mohawks siègent à égalité avec les représentants des États membres — configuration
+      étudiée dans toutes les écoles de gouvernance du monde.
+    statut: stable
+    tensions_internes: Pression pour autoriser des transferts hydriques massifs vers les zones désertifiées
+      du Sud-Ouest nord-américain crée une fracture entre délégués autochtones opposés à toute exportation
+      et représentants des mégapoles y voyant une source de revenus. Attaques des gouvernements fédéraux
+      résiduels dénonçant une sécession rampante.
+    periode_transition: 2031-2098
+    evenement_transition: null
+    lieux_emblematiques:
+    - nom: Siège du Compact des Grands Lacs
+      type: infrastructure
+      notes: Centre de gouvernance hybride États/nations autochtones pour la gestion du bassin lacustre
+    relations:
+      allies: []
+      rivaux:
+      - etats_unis_crise_constitutionnelle
+    sources_attestees:
+    - great_lakes_autonomous_compact_reference
+    promu_depuis: null
+  - slug: etats_unis_crise_constitutionnelle
+    nom: États-Unis post-2055
+    niveau: 2
+    type: territoire_herite
+    parent: ameriques_multipolaires
+    origine_reelle:
+    - entite: États-Unis d'Amérique
+      type_entite: pays
+      portion: null
+    description: Entité politique traversée depuis 2055 par une crise constitutionnelle majeure liée à l'élection
+      contestée du Nouveau Parti Commun. En 2098, les États-Unis restent une puissance significative dans
+      les Amériques Multipolaires mais leurs réformes sont chroniquement bloquées par une opposition institutionnelle
+      forte, et leur polarisation politique extrême continue de structurer le contexte géopolitique continental.
+    statut: fragmenté
+    tensions_internes: Polarisation politique extrême persistante héritée de la crise constitutionnelle
+      de 2055. Réformes annoncées partiellement bloquées par l'opposition institutionnelle. Tensions entre
+      le gouvernement fédéral et plusieurs États refusant la certification de résultats électoraux.
+    periode_transition: 2055-2098
+    evenement_transition: election_parti_commun_americain_reference
+    lieux_emblematiques: []
+    relations:
+      allies: []
+      rivaux: []
+    sources_attestees:
+    - election_parti_commun_americain_reference
+    promu_depuis: null
+  - slug: geneve_lac_retreite
+    nom: Genève-Lac-Retraité
+    niveau: 2
+    type: ville
+    parent: institutions_multilaterales_survivantes
+    origine_reelle:
+    - entite: Genève
+      type_entite: region_administrative
+      portion: null
+    description: Siège de l'AMSC depuis le rehaussement du bord du lac de trois mètres, Genève-Lac-Retraité
+      est devenue le symbole de l'adaptation à marche forcée. Ses couloirs accueillent des délégués épuisés
+      porteurs de mandats contradictoires, négociant en permanence des compromis sur les programmes d'ombrelle
+      atmosphérique, les corridors migratoires certifiés et les barrages thermiques côtiers. Également siège
+      du Conseil de Genève pour les droits biosociaux.
+    statut: stable
+    tensions_internes: Légitimité technocratique contestée par un courant réformiste voulant élire un Conseil
+      Climatique Mondial. Fuites internes sur des biais systémiques dans les modèles d'allocation favorisant
+      les zones à fort PIB.
+    periode_transition: 2031-2065
+    evenement_transition: null
+    lieux_emblematiques:
+    - nom: Siège de l'AMSC
+      type: infrastructure
+      notes: Bâtiment central des négociations climatiques mondiales, bord du lac rehaussé
+    relations:
+      allies: []
+      rivaux: []
+    sources_attestees:
+    - agence_stabilisation_climatique_reference
+    - conseil_de_geneve_pour_les_droits_biosociaux_reference
+    promu_depuis: Genève-Lac-Retraité
+  - slug: guadalajara_nexus
+    nom: Guadalajara
+    niveau: 2
+    type: ville
+    parent: ameriques_multipolaires
+    origine_reelle:
+    - entite: Guadalajara
+      type_entite: autre
+      portion: null
+    - entite: Mexique
+      type_entite: pays
+      portion: null
+    description: Métropole mexicaine abritant une concentration de cliniques cellulaires Nexus BioSyn, symbole
+      de la santé hybride latino-américaine. En 2098, Guadalajara incarne la pénétration des infrastructures
+      biologiques de Nexus BioSyn dans les systèmes de santé des Amériques — présence discrète mais structurante,
+      similaire à celle observée à Nairobi ou dans le delta du Mékong.
+    statut: stable
+    tensions_internes: Dépendance aux thérapies cellulaires adaptatives de Nexus BioSyn pour le système
+      de santé local. Tensions autour de l'accès aux soins et de la régulation des cliniques privées.
+    periode_transition: 2050-2098
+    evenement_transition: null
+    lieux_emblematiques:
+    - nom: Cliniques cellulaires Nexus BioSyn
+      type: infrastructure
+      notes: Réseau de cliniques de thérapies cellulaires adaptatives, symbole de la santé hybride latino-américaine
+    relations:
+      allies: []
+      rivaux: []
+    sources_attestees:
+    - nexus_biosyn_reference
+    promu_depuis: Guadalajara
+  - slug: helsinki_communs_numeriques
+    nom: Helsinki
+    niveau: 2
+    type: ville
+    parent: corridor_arctique_nordique
+    origine_reelle:
+    - entite: Helsinki
+      type_entite: autre
+      portion: null
+    - entite: Finlande
+      type_entite: pays
+      portion: null
+    description: Ville nordique d'où opère Leena Väinälä — philosophe et architecte institutionnelle dont
+      les chartes de gouvernance des communs numériques circulent en quarante-deux langues. En 2098, Helsinki
+      est un nœud de production intellectuelle alternative dans le Corridor Arctique Nordique, à l'interface
+      entre la logique para-étatique de l'ALN et les expériences de gouvernance participative portées par
+      des figures comme Väinälä. Siège possible d'un nœud de diffusion des communs numériques.
+    statut: stable
+    tensions_internes: Tension entre la reconnaissance institutionnelle des chartes de Väinälä (adoptées
+      symboliquement, contournées opérationnellement) et leur application réelle. Pression des régulateurs
+      sur les architectures numériques décentralisées opérant depuis la ville.
+    periode_transition: 2060-2098
+    evenement_transition: null
+    lieux_emblematiques:
+    - nom: Réseau Väinälä
+      type: infrastructure
+      notes: Nœud de diffusion des chartes de gouvernance des communs numériques en quarante-deux langues
+    relations:
+      allies:
+      - tampere_communs_territoriaux
+      rivaux: []
+    sources_attestees:
+    - leena_vainala_reference
+    promu_depuis: null
+  - slug: kinshasa_accords_hydriques
+    nom: Kinshasa
+    niveau: 2
+    type: ville
+    parent: union_africaine_resilience
+    origine_reelle:
+    - entite: Kinshasa
+      type_entite: autre
+      portion: null
+    - entite: République Démocratique du Congo
+      type_entite: pays
+      portion: null
+    description: Épicentre des Accords hydriques sur la redistribution des eaux du bassin du Congo (2071-2089),
+      Kinshasa est le nœud institutionnel central de l'Union Africaine de Résilience Territoriale en matière
+      de gouvernance hydrique. Siège des négociations menées par Amara Diallo-Nkosi, la ville incarne la
+      tension entre souveraineté des ressources et pression des consortiums miniers du bassin congolais.
+    statut: emergent
+    tensions_internes: Sécheresse de 2096 menaçant les Accords de Kinshasa, plusieurs États invoquant des
+      clauses d'urgence nationale. Pression des consortiums d'extraction minière sur la souveraineté des
+      ressources hydriques et minières du bassin.
+    periode_transition: 2071-2098
+    evenement_transition: null
+    lieux_emblematiques:
+    - nom: Commission Hydrique de l'UA
+      type: infrastructure
+      notes: Organe de régulation et de médiation hydrique entre États membres africains
+    relations:
+      allies:
+      - nairobi_crrc
+      rivaux: []
+    sources_attestees:
+    - amara_diallo_nkosi_reference
+    - commission_hydrique_de_l_union_africaine_reference
+    - consortiums_d_extraction_miniere_du_bassin_congolais_reference
+    promu_depuis: Kinshasa
+  - slug: lyon_metropole
+    nom: Lyon-Métropole
+    niveau: 2
+    type: ville
+    parent: europe_occidentale_reconstructee
+    origine_reelle:
+    - entite: Lyon
+      type_entite: autre
+      portion: null
+    - entite: France
+      type_entite: pays
+      portion: null
+    description: Ville française ordinaire de l'Europe Occidentale Reconstruite, lieu de l'arrestation de
+      Chris van Derburgh en juin 2078 pour possession non déclarée de technologies sensibles pré-crise.
+      Symbole des tensions entre la réglementation croissante des technologies (loi sur le Registre des
+      Technologies Sensibles de 2068) et la liberté personnelle dans un monde qui accumule des tensions
+      sans les résoudre.
+    statut: stable
+    tensions_internes: Frictions civiles autour de la réglementation technologique croissante. Population
+      ordinaire confrontée à des obligations légales complexes héritées de décennies de législation cumulative.
+    periode_transition: 2068-2098
+    evenement_transition: arrestation_chris_van_derburgh_reference
+    lieux_emblematiques: []
+    relations:
+      allies: []
+      rivaux: []
+    sources_attestees:
+    - arrestation_chris_van_derburgh_reference
+    promu_depuis: Lyon-Métropole
+  - slug: massif_central_terrafond
+    nom: Massif Central
+    niveau: 2
+    type: region
+    parent: europe_occidentale_reconstructee
+    origine_reelle:
+    - entite: Massif Central
+      type_entite: region_administrative
+      portion: null
+    - entite: France
+      type_entite: pays
+      portion: null
+    description: Zone semi-aride intégrée aux bassins Terrafond, marges de la transition agroécologique
+      européenne. Le Massif Central incarne les franges les plus vulnérables du Réseau Terrafond — territoires
+      où la résilience écologique est la plus incertaine et où la présence du Mouvement des Racines Vivantes
+      est la plus significative dans les zones de transition entre asphalte et terres remaniées.
+    statut: en_declin
+    tensions_internes: Saisons de plus en plus imprévisibles menaçant les rendements. Jeunes attirés par
+      les primes d'automatisation urbaine, fragilisant la main-d'œuvre des coopératives. Présence du Mouvement
+      des Racines Vivantes en tension entre récupération institutionnelle et maintien de l'intégrité.
+    periode_transition: 2040-2098
+    evenement_transition: null
+    lieux_emblematiques: []
+    relations:
+      allies: []
+      rivaux: []
+    sources_attestees:
+    - cooperative_terrafond_reference
+    - mouvement_racines_vivantes_reference
+    promu_depuis: Massif Central
+  - slug: murmansk_transit_arctique
+    nom: Mourmansk
+    niveau: 2
+    type: ville
+    parent: corridor_arctique_nordique
+    origine_reelle:
+    - entite: Mourmansk
+      type_entite: autre
+      portion: null
+    - entite: Arctique russe (Mourmansk)
+      type_entite: region_administrative
+      portion: null
+    description: Port de transit arctique majeur, familier aux dockers opérant sous autorité ALN. Mourmansk
+      incarne la zone de contact entre le Bloc Eurasien Central et le Corridor Arctique Nordique — ville
+      formellement sous juridiction russe mais opérationnellement intégrée aux flux logistiques de l'ALN,
+      ce qui en fait un nœud de tension géopolitique permanent.
+    statut: stable
+    tensions_internes: Ambiguïté juridictionnelle entre autorité ALN et souveraineté formelle de la Sibérie
+      Fédérale/Bloc Eurasien Central. Contestation des accords de transit par les structures eurasiatiques.
+    periode_transition: 2031-2098
+    evenement_transition: null
+    lieux_emblematiques: []
+    relations:
+      allies: []
+      rivaux:
+      - siberie_federale
+    sources_attestees:
+    - armada_logistique_nordique_reference
+    promu_depuis: Mourmansk
+  - slug: nairobi_crrc
+    nom: Nairobi
+    niveau: 2
+    type: ville
+    parent: institutions_multilaterales_survivantes
+    origine_reelle:
+    - entite: Nairobi
+      type_entite: autre
+      portion: null
+    description: Siège du CRRC (Conseil de Régulation des Ressources Critiques, issu des accords de 2061),
+      ville-pivot des négociations mondiales sur les ressources stratégiques — lithium, eau dessalée, hydrogène
+      vert, terres rares. Son bâtiment imposant aux vitres légèrement teintées de poussière sahélienne est
+      le théâtre de négociations que les grandes puissances honorent le mardi et contournent le jeudi, mais
+      vers lequel tous les ministres se tournent lors des crises de couloirs de transport ou de sécheresse.
+    statut: en_declin
+    tensions_internes: Réforme du droit de veto bloquée depuis 2089, paralysant toute décision contraignante
+      sur les réserves d'eau fossile d'Afrique subsaharienne. Mouvement interne 'Nairobi 2.0' porté par
+      de jeunes délégués du Sud global. Supplantation progressive par des algorithmes privés de gestion
+      des ressources.
+    periode_transition: 2061-2098
+    evenement_transition: null
+    lieux_emblematiques:
+    - nom: Siège du CRRC
+      type: infrastructure
+      notes: Bâtiment aux vitres teintées de brun, épicentre des négociations sur les ressources critiques
+        mondiales
+    relations:
+      allies:
+      - union_africaine_resilience
+      rivaux: []
+    sources_attestees:
+    - conseil_regulation_ressources_reference
+    - amara_diallo_nkosi_reference
+    promu_depuis: Nairobi
+  - slug: nuuk_capitale_groenland
+    nom: Nuuk-Capitale
+    niveau: 2
+    type: ville
+    parent: corridor_arctique_nordique
+    origine_reelle:
+    - entite: Nuuk
+      type_entite: autre
+      portion: null
+    - entite: Groenland
+      type_entite: region_administrative
+      portion: null
+    description: Capitale du Groenland indépendant depuis 2038, siège du Fonds Souverain Kalaallit Nunaat
+      (KNSF) dont la tour de verre domine le fjord. En 2098, Nuuk-Capitale est le centre de gravité géopolitique
+      d'une puissance arctique émergente qui joue méthodiquement les blocs eurasiatique, indo-pacifique
+      et nord-américain les uns contre les autres pour maximiser la rente tirée de l'extraction de terres
+      rares, lithium et uranium rendus accessibles par la fonte quasi-totale de l'inlandsis.
+    statut: emergent
+    tensions_internes: Fracture entre technocratie du fonds perçue comme déconnectée et collectifs inuit
+      réclamant une redistribution directe de la rente. Débat existentiel sur la contribution au fonds climatique
+      mondial versus sanctuarisation de la souveraineté fragile.
+    periode_transition: 2038-2098
+    evenement_transition: null
+    lieux_emblematiques:
+    - nom: Tour KNSF
+      type: infrastructure
+      notes: Siège du Fonds Souverain Kalaallit Nunaat, au bord du fjord, symbole de la souveraineté arctique
+        retrouvée
+    - nom: Autorité de Passage Arctique (APA)
+      type: infrastructure
+      notes: Siège à Ilulissat, co-gouvernance hybride État/autochtones des corridors maritimes arctiques
+    relations:
+      allies: []
+      rivaux:
+      - siberie_federale
+      - bloc_eurasien_central
+    sources_attestees:
+    - kalaallit_nunaat_sovereign_fund_reference
+    - arctic_passage_authority_reference
+    - collectifs_de_peche_inuit_et_sami_reference
+    promu_depuis: null
+  - slug: ouagadougou_polytechnique
+    nom: Ouagadougou
+    niveau: 2
+    type: ville
+    parent: union_africaine_resilience
+    origine_reelle:
+    - entite: Ouagadougou
+      type_entite: autre
+      portion: null
+    - entite: Burkina Faso
+      type_entite: pays
+      portion: null
+    description: Ville sahélienne abritant l'Institut Polytechnique de Ouagadougou, formation des technocrates
+      africains de la transition. Pôle de formation technique et de production de savoirs spécialisés sur
+      les enjeux hydriques et agroécologiques du Sahel, où Amara Diallo-Nkosi a elle-même été formée. Nœud
+      entre la dynamique institutionnelle de l'UA et les réalités des coopératives agro-sahéliennes.
+    statut: emergent
+    tensions_internes: Tension entre la nouvelle génération d'ingénieurs formés à l'IA prédictive et les
+      approches plus humanistes défendues par des figures comme Diallo-Nkosi. Pression des sécheresses sahéliennes
+      sur les ressources locales.
+    periode_transition: 2060-2098
+    evenement_transition: null
+    lieux_emblematiques:
+    - nom: Institut Polytechnique de Ouagadougou
+      type: infrastructure
+      notes: Centre de formation des technocrates africains de la transition énergétique et hydrique
+    relations:
+      allies: []
+      rivaux: []
+    sources_attestees:
+    - amara_diallo_nkosi_reference
+    - institut_polytechnique_de_ouagadougou_reference
+    promu_depuis: Ouagadougou
+  - slug: pacifique_sud_archipels_flottants
+    nom: Archipels Flottants du Pacifique Sud
+    niveau: 2
+    type: territoire_autonome
+    parent: indo_pacifique_emergent
+    origine_reelle:
+    - entite: Tuvalu
+      type_entite: pays
+      portion: null
+    - entite: Kiribati
+      type_entite: pays
+      portion: null
+    - entite: Îles Marshall
+      type_entite: pays
+      portion: null
+    description: Ensemble des États-archipels et communautés insulaires du Pacifique Sud dont les territoires
+      terrestres sont partiellement ou totalement submergés, fédérés dans l'ASMPI (Alliance des Souverainetés
+      Maritimes du Pacifique Insulaire). En 2098, plus de 340 000 personnes vivent sur des archipels flottants,
+      mégastructures portuaires et navires-cités — le Protocole de Carthagène de 2091 ayant inscrit le principe
+      de 'souveraineté populationnelle continue', dissociant citoyenneté et territoire physique.
+    statut: emergent
+    tensions_internes: Fracture entre 'nostalgistes de la terre ferme' espérant un retour territorial via
+      géo-ingénierie côtière et 'souverainistes fluides' revendiquant la condition nomade maritime comme
+      identité accomplie. Communautés accueillies par Auckland ou Singapour développant des loyautés hybrides
+      diluant leur engagement collectif.
+    periode_transition: 2040-2098
+    evenement_transition: null
+    lieux_emblematiques:
+    - nom: Mégastructures portuaires ASMPI
+      type: infrastructure
+      notes: Plateformes flottantes et navires-cités accueillant les populations déplacées des atolls submergés
+    relations:
+      allies:
+      - institutions_multilaterales_survivantes
+      rivaux: []
+    sources_attestees:
+    - pacifique_sud_resilience_network_reference
+    promu_depuis: null
+  - slug: plaines_iberiques_rehumidifiees
+    nom: Plaines Ibériques Réhumidifiées
+    niveau: 2
+    type: region
+    parent: europe_occidentale_reconstructee
+    origine_reelle:
+    - entite: Espagne
+      type_entite: pays
+      portion: null
+    - entite: Portugal
+      type_entite: pays
+      portion: null
+    description: Territoire ibérique intégré aux bassins du Réseau Terrafond après les grands programmes
+      de réhumidification des années 2040-2070, marqueur de la reconstruction écologique européenne. Ces
+      plaines couvrent une part significative des 47 bassins hydrologiques de Terrafond et constituent une
+      zone tampon critique entre agroécologie viable et marges semi-arides menacées par les crises climatiques.
+    statut: stable
+    tensions_internes: Tension entre les coopératives agroécologiques locales et les consortiums d'agriculture
+      verticale algorithmique cherchant à intégrer ces territoires productifs.
+    periode_transition: 2040-2080
+    evenement_transition: null
+    lieux_emblematiques: []
+    relations:
+      allies: []
+      rivaux: []
+    sources_attestees:
+    - cooperative_terrafond_reference
+    - cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference
+    promu_depuis: Plaines ibériques réhumidifiées
+  - slug: sao_paulo_ita
+    nom: São Paulo
+    niveau: 2
+    type: ville
+    parent: ameriques_multipolaires
+    origine_reelle:
+    - entite: São Paulo
+      type_entite: autre
+      portion: null
+    - entite: Brésil
+      type_entite: pays
+      portion: null
+    description: Métropole-monde accueillant un siège rotationnel de l'Internationale des Travailleurs Augmentés
+      (ITA), en rotation triennale avec Séoul et Nairobi. En 2098, São Paulo est l'une des principales mégapoles
+      de l'hémisphère sud, nœud du travail augmenté et acteur économique de premier plan dans un continent
+      américain fragmenté.
+    statut: emergent
+    tensions_internes: Tension entre la dynamique de la métropole-monde et les inégalités structurelles
+      héritées. Pression du Front Souverainiste des Ressources sur les accords économiques encadrant la
+      ville.
+    periode_transition: 2040-2098
+    evenement_transition: null
+    lieux_emblematiques: []
+    relations:
+      allies: []
+      rivaux: []
+    sources_attestees:
+    - internationale_travailleurs_augmentes_reference
+    promu_depuis: São Paulo
+  - slug: seoul_ita
+    nom: Séoul
+    niveau: 2
+    type: ville
+    parent: indo_pacifique_emergent
+    origine_reelle:
+    - entite: Séoul
+      type_entite: autre
+      portion: null
+    - entite: Corée du Sud
+      type_entite: pays
+      portion: null
+    description: Siège rotationnel de l'Internationale des Travailleurs Augmentés (ITA), centre du travail
+      augmenté mondial en rotation triennale avec São Paulo et Nairobi. En 2098, Séoul est l'une des métropoles
+      de référence de l'économie du travail hybridé, abritant une concentration significative de travailleurs
+      porteurs d'implants cognitifs et d'exosquelettes professionnels.
+    statut: emergent
+    tensions_internes: Tension entre faction minimaliste et désaugmenteurs au sein de l'ITA lors des rotations
+      sièges. Pression des consortiums industriels sur les travailleurs augmentés locaux.
+    periode_transition: 2040-2098
+    evenement_transition: null
+    lieux_emblematiques: []
+    relations:
+      allies: []
+      rivaux: []
+    sources_attestees:
+    - internationale_travailleurs_augmentes_reference
+    promu_depuis: Séoul
+  - slug: sertao_nordeste_bresilien
+    nom: Sertão — Nordeste Brésilien
+    niveau: 2
+    type: region
+    parent: ameriques_multipolaires
+    origine_reelle:
+    - entite: Piauí
+      type_entite: etat_federe
+      portion: null
+    - entite: Brésil
+      type_entite: pays
+      portion: null
+    - entite: Paraguay (Chaco)
+      type_entite: pays
+      portion: null
+    description: Territoire semi-aride du Nordeste brésilien et des zones sèches adjacentes d'Amérique du
+      Sud, berceau de la Frente Sertão Livre — réseau fédéré de plus de deux cents nœuds communautaires
+      gérant collectivement eau pluviale captée, énergie solaire micro-distribuée et semences xérophytes.
+      En 2098, le sertão libre produit et s'alimente sans dépendre des consortiums opaques qui contrôlent
+      l'eau des mégapoles littorales.
+    statut: emergent
+    tensions_internes: Fracture interne entre nœuds acceptant des financements pour numériser leur gestion
+      hydrique et ceux y voyant une porte vers la dépendance technologique. Reconnaissance juridique de
+      terres collectives crée un précédent séduisant mais exposant les communautés aux fonds fonciers climatiques
+      prédateurs.
+    periode_transition: 2040-2098
+    evenement_transition: null
+    lieux_emblematiques:
+    - nom: Nœuds Frente Sertão Livre
+      type: infrastructure
+      notes: Réseau de communautés autonomes gérant eau, énergie et semences sans dépendance institutionnelle
+    relations:
+      allies:
+      - valparaiso_fct
+      rivaux: []
+    sources_attestees:
+    - frente_sert_o_livre_reference
+    promu_depuis: null
+  - slug: siberie_federale
+    nom: Sibérie Fédérale
+    niveau: 2
+    type: territoire_autonome
+    parent: bloc_eurasien_central
+    origine_reelle:
+    - entite: Sibérie (entité fédérale russe)
+      type_entite: region_administrative
+      portion: null
+    description: Entité fédérale revendiquant des zones d'exclusion maritime arctiques en contestation avec
+      l'ALN et d'autres puissances nordiques. Riche en ressources critiques (lithium, terres rares), la
+      Sibérie Fédérale est à la fois un pilier économique du Bloc Eurasien Central et une source de friction
+      interne, ses dirigeants cherchant à maximiser leur autonomie dans la gestion des ressources arctiques
+      et sibériennes.
+    statut: fragmenté
+    tensions_internes: Contestation des zones maritimes arctiques avec le Corridor Arctique Nordique. Tension
+      avec le cartel des terres rares d'Asie centrale sur le partage des bénéfices d'extraction.
+    periode_transition: 2045-2098
+    evenement_transition: null
+    lieux_emblematiques: []
+    relations:
+      allies: []
+      rivaux:
+      - corridor_arctique_nordique
+    sources_attestees:
+    - siberie_federale_reference
+    - cartel_des_terres_rares_d_asie_centrale_reference
+    promu_depuis: null
+  - slug: singapour_est
+    nom: Singapour-Est
+    niveau: 2
+    type: ville
+    parent: indo_pacifique_emergent
+    origine_reelle:
+    - entite: Singapour
+      type_entite: pays
+      portion: null
+    description: Nœud médiatique et géopolitique régional, base du correspondant Raj Mehta pour l'Agence
+      Mondiale de Presse. En 2098, Singapour-Est est l'une des métropoles pivots de l'Arc Indo-Pacifique
+      — carrefour des flux d'information, de logistique et de finance régionale. Les traders de Singapour
+      sont aussi familiers aux estampilles de l'ALN que les dockers de Mourmansk, soulignant son rôle de
+      nœud d'interconnexion globale.
+    statut: dominant
+    tensions_internes: Pression des IA éditoriales modifiant le travail journalistique (cas Mehta). Tensions
+      autour du contrôle des flux d'information par les plateformes dominantes versus les médias indépendants.
+    periode_transition: 2040-2098
+    evenement_transition: null
+    lieux_emblematiques: []
+    relations:
+      allies: []
+      rivaux: []
+    sources_attestees:
+    - le_temoin_reference
+    - armada_logistique_nordique_reference
+    promu_depuis: Singapour-Est
+  - slug: sommets_itinerants_pacte
+    nom: Sommets Itinérants du Pacte des Souverains
+    niveau: 2
+    type: site_strategique
+    parent: pacte_des_souverains
+    origine_reelle:
+    - entite: Divers États-nations souverainistes post-pandémiques (composition non précisée)
+      type_entite: pays
+      portion: null
+    description: Dispositif délibératoire sans siège fixe du Pacte des Souverains — les sommets se tiennent
+      dans des lieux changeants, reflet de la logique souverainiste fondatrice. Cette itinérance constitutive
+      garantit l'absence de cible fixe institutionnelle tout en maintenant la fiction d'une gouvernance
+      collective entre quatorze États et une dizaine de territoires associés opérant via des pactes bilatéraux
+      militaro-énergétiques.
+    statut: stable
+    tensions_internes: Impossibilité de tracer une responsabilité institutionnelle claire face aux crises.
+      Certains membres cherchant à passer des accords parallèles avec les mégapoles globales court-circuitent
+      la Charte de Réciprocité Stricte.
+    periode_transition: 2030-2098
+    evenement_transition: conflit_israel_iran_2026_reference
+    lieux_emblematiques: []
+    relations:
+      allies: []
+      rivaux:
+      - institutions_multilaterales_survivantes
+    sources_attestees:
+    - alliance_blocs_souverains_reference
+    promu_depuis: Sommets itinérants
+  - slug: tampere_communs_territoriaux
+    nom: Tampere
+    niveau: 2
+    type: ville
+    parent: corridor_arctique_nordique
+    origine_reelle:
+    - entite: Tampere
+      type_entite: autre
+      portion: null
+    - entite: Finlande
+      type_entite: pays
+      portion: null
+    description: Siège tournant (ce trimestre) de la Fédération des Communs Territoriaux, représentant l'axe
+      nordique alternatif à la logique para-étatique de l'ALN. Tampere incarne la coexistence tendue dans
+      le Corridor Arctique Nordique entre la gouvernance logistique dominante de l'ALN et les structures
+      de communs territoriaux qui résistent à l'absorption dans les logiques de marché pure.
+    statut: stable
+    tensions_internes: Tension entre la FCT qui y siège et les dynamiques économiques de l'ALN dominant
+      la région. Pression sur les communs locaux par les opérateurs énergétiques privés.
+    periode_transition: 2060-2098
+    evenement_transition: null
+    lieux_emblematiques: []
+    relations:
+      allies: []
+      rivaux: []
+    sources_attestees:
+    - federation_communs_territoriaux_reference
+    promu_depuis: Tampere
+  - slug: tbilissi_noeud_mnemos
+    nom: Tbilissi
+    niveau: 2
+    type: ville
+    parent: bloc_eurasien_central
+    origine_reelle:
+    - entite: Tbilissi
+      type_entite: autre
+      portion: null
+    - entite: Géorgie
+      type_entite: pays
+      portion: null
+    description: 'Ville de la marge eurasiatique servant de relais pour la préservation des savoirs via
+      un nœud Mnemos documenté — installé dans les sous-sols d''une ancienne école désaffectée. En 2098,
+      Tbilissi incarne la position instable des villes périphériques du Bloc Eurasien Central : formellement
+      intégrée aux structures régionales, mais culturellement et opérationnellement à mi-chemin entre blocs,
+      servant de point de passage pour des flux d''information alternatifs.'
+    statut: stable
+    tensions_internes: Pression des régulateurs de l'Union Eurasiatique sur les données critiques transitant
+      par les nœuds Mnemos. Statut ambigu du nœud local — toléré par les autorités locales mais potentiellement
+      menacé par des régulations informationnelles plus strictes.
+    periode_transition: 2034-2098
+    evenement_transition: null
+    lieux_emblematiques:
+    - nom: Nœud Mnemos de Tbilissi
+      type: infrastructure
+      notes: Boîtier gris de la taille d'une valise dans une école désaffectée — l'un des 14 000 nœuds du
+        réseau mondial de préservation des savoirs
+    relations:
+      allies: []
+      rivaux: []
+    sources_attestees:
+    - reseau_mnemos_reference
+    - regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference
+    promu_depuis: Tbilissi
+  - slug: tromsoe_aln
+    nom: Tromsø
+    niveau: 2
+    type: ville
+    parent: corridor_arctique_nordique
+    origine_reelle:
+    - entite: Tromsø
+      type_entite: autre
+      portion: null
+    - entite: Norvège
+      type_entite: pays
+      portion: null
+    description: Siège de l'Armada Logistique Nordique (ALN), dont les tours de verre gris-acier dominent
+      la ville. En 2098, Tromsø est le centre névralgique des corridors arctiques déglaciés — le lieu où
+      sont arbitrées les tensions entre blocs, négociés les péages maritimes et gérées les flottes de brise-glaces
+      autonomes estampillées du triple anneau bleu-blanc-argent. Moins une ville qu'un terminal de commandement
+      para-étatique.
+    statut: dominant
+    tensions_internes: Friction croissante entre les IA de routage autonome de l'ALN et les États nordiques
+      actionnaires qui craignent de perdre le contrôle d'un actif devenu trop critique. Pression d'un consortium
+      logistique asiatique cherchant à contourner le monopole arctique.
+    periode_transition: 2031-2098
+    evenement_transition: null
+    lieux_emblematiques:
+    - nom: Siège de l'ALN
+      type: infrastructure
+      notes: Tours de verre gris-acier, centre de commandement du para-État logistique arctique
+    relations:
+      allies: []
+      rivaux:
+      - siberie_federale
+    sources_attestees:
+    - armada_logistique_nordique_reference
+    promu_depuis: Tromsø
+  - slug: valparaiso_fct
+    nom: Valparaíso
+    niveau: 2
+    type: ville
+    parent: ameriques_multipolaires
+    origine_reelle:
+    - entite: Valparaíso
+      type_entite: autre
+      portion: null
+    - entite: Chili
+      type_entite: pays
+      portion: null
+    description: Siège tournant (cette saison) de la Fédération des Communs Territoriaux, incarnant l'axe
+      sudaméricain de cette architecture institutionnelle intermédiaire. Valparaíso accueille les délégués
+      élus dans des assemblées de bassin houleuses qui négocient des protocoles d'urgence climatique que
+      les gouvernements nationaux n'arrivent plus à imposer seuls.
+    statut: stable
+    tensions_internes: Pression du Front Souverainiste des Ressources sur les décisions de la FCT concernant
+      l'extraction des ressources. Membres dissidents quittant le réseau pour rejoindre des blocs mégapolitains
+      plus puissants.
+    periode_transition: 2060-2098
+    evenement_transition: null
+    lieux_emblematiques: []
+    relations:
+      allies: []
+      rivaux: []
+    sources_attestees:
+    - federation_communs_territoriaux_reference
+    promu_depuis: Valparaíso
+  - slug: zones_grises_sahel_central
+    nom: Zones Grises Sahéliennes Centrales
+    niveau: 2
+    type: zone_sinistree
+    parent: zones_grises_globales
+    origine_reelle:
+    - entite: Mali
+      type_entite: pays
+      portion: null
+    - entite: Niger
+      type_entite: pays
+      portion: null
+    - entite: Burkina Faso
+      type_entite: pays
+      portion: null
+    description: Espaces hors-cadre institutionnel effectif au cœur du Sahel, distincts des couloirs de
+      transport formels du Bloc Sahélien Autonome, investis par le Mouvement des Racines Vivantes et les
+      milices concurrentes des droits de passage. Ces zones sont le terrain d'opération privilégié des agences
+      de sécurité régionales de normalisation et le lieu où les savoirs écologiques locaux sont le plus
+      exposés à la captation par des plateformes d'IA agronomique.
+    statut: fragmenté
+    tensions_internes: Compétition violente entre milices et agences de normalisation pour le contrôle des
+      nœuds de mobilité. Captation des savoirs du Mouvement des Racines Vivantes par des plateformes IA.
+      Pression migratoire climatique croissante depuis les zones désertifiées.
+    periode_transition: 2040-2098
+    evenement_transition: null
+    lieux_emblematiques: []
+    relations:
+      allies:
+      - bloc_sahelien_autonome
+      rivaux: []
+    sources_attestees:
+    - mouvement_racines_vivantes_reference
+    - milices_concurrentes_des_droits_de_passage_reference
+    - agences_de_securite_regionales_de_normalisation_des_zones_grises_reference
+    promu_depuis: null
+  - slug: zones_tampons_climatiques_europeennes
+    nom: Zones Tampons Climatiques Européennes
+    niveau: 2
+    type: zone_sinistree
+    parent: zones_grises_globales
+    origine_reelle:
+    - entite: France
+      type_entite: pays
+      portion: null
+    - entite: Espagne
+      type_entite: pays
+      portion: null
+    - entite: Italie
+      type_entite: pays
+      portion: null
+    description: Espaces de transition écologique aux marges de l'Europe Occidentale Reconstruite, gérés
+      partiellement par le Réseau Terrafond et investis par le Mouvement des Racines Vivantes. Ces zones
+      tampons accueillent des réfugiés climatiques dont l'afflux dépasse la capacité d'absorption du modèle
+      du suffisant défendu par Terrafond, créant une pression démographique structurelle sur des territoires
+      de transition écologique fragiles.
+    statut: fragmenté
+    tensions_internes: Pression démographique des réfugiés climatiques. Résistance du Collectif Nuit Jaune
+      aux mécanismes de relocalisation forcée. Tension entre le Mouvement des Racines Vivantes cherchant
+      à maintenir son intégrité et les municipalités cherchant à le récupérer pour leur image.
+    periode_transition: 2040-2098
+    evenement_transition: null
+    lieux_emblematiques: []
+    relations:
+      allies:
+      - massif_central_terrafond
+      rivaux: []
+    sources_attestees:
+    - cooperative_terrafond_reference
+    - mouvement_racines_vivantes_reference
+    - collectif_nuit_jaune_reference
+    promu_depuis: Zones tampons climatiques européennes
+  - slug: bassin_congo_ressources
+    nom: Bassin du Congo
+    niveau: 3
+    type: region
+    parent: kinshasa_accords_hydriques
+    origine_reelle:
+    - entite: République Démocratique du Congo
+      type_entite: pays
+      portion: null
+    - entite: République du Congo
+      type_entite: pays
+      portion: null
+    description: Zone stratégique objet des Accords de Kinshasa de 2071-2089 sur la redistribution des eaux,
+      soumise en 2098 à la pression croissante des consortiums d'extraction minière. Le bassin concentre
+      des ressources critiques mondiales (minerais, eau, biodiversité) qui en font l'enjeu principal de
+      tension entre la souveraineté africaine défendue par Amara Diallo-Nkosi et les logiques extractivistes
+      des acteurs économiques transnationaux.
+    statut: fragmenté
+    tensions_internes: Sécheresse de 2096 fragilisant les Accords hydriques. Fuite de données du réseau
+      de capteurs d'Amara Diallo-Nkosi exploitée par un consortium minier pour anticiper les décisions d'allocation.
+      Pression des consortiums d'extraction sur la clause de 'l'usage vital' de 2089.
+    periode_transition: 2071-2098
+    evenement_transition: null
+    lieux_emblematiques: []
+    relations:
+      allies: []
+      rivaux: []
+    sources_attestees:
+    - amara_diallo_nkosi_reference
+    - consortiums_d_extraction_miniere_du_bassin_congolais_reference
+    - commission_hydrique_de_l_union_africaine_reference
+    promu_depuis: Bassin du Congo
+  - slug: bruxelles_nouveau_tours_helios
+    nom: Tours Helios
+    niveau: 3
+    type: infrastructure
+    parent: bruxelles_nouveau
+    origine_reelle:
+    - entite: Bruxelles
+      type_entite: autre
+      portion: null
+    - entite: Belgique
+      type_entite: pays
+      portion: null
+    description: Siège opérationnel du Consortium Helios à Bruxelles-Nouveau, dont les tours de verre fumé
+      dominent la skyline reconstruite. Centre de commandement énergétique mondial privé où les dirigeants
+      reçoivent des chefs d'État plutôt que de donner des conférences de presse, et où les tarifs énergétiques
+      planétaires sont négociés plutôt que publiés. En 2098, symbole de la privatisation silencieuse des
+      infrastructures énergétiques mondiales.
+    statut: dominant
+    tensions_internes: Faction interne plaidant pour une mutualisation partielle face au conseil des actionnaires
+      résistant farouchement. Enquêtes journalistiques sur les fuites du système de tarification algorithmique
+      menaçant la façade de neutralité.
+    periode_transition: 2040-2070
+    evenement_transition: null
+    lieux_emblematiques: []
+    relations:
+      allies: []
+      rivaux: []
+    sources_attestees:
+    - consortium_helios_reference
+    promu_depuis: Tours Helios
+  - slug: geneve_conseil_biosocial
+    nom: Genève — Conseil des Droits Biosociaux
+    niveau: 3
+    type: infrastructure
+    parent: geneve_lac_retreite
+    origine_reelle:
+    - entite: Genève
+      type_entite: region_administrative
+      portion: null
+    - entite: Suisse
+      type_entite: pays
+      portion: null
+    description: Instance d'arbitrage sur les pratiques biotechnologiques et leurs impacts sociaux, siégeant
+      à Genève-Lac-Retraité en parallèle de l'AMSC. En 2098, le Conseil de Genève pour les droits biosociaux
+      constitue le principal cadre institutionnel de légitimation ou de contestation des pratiques de Nexus
+      BioSyn et des acteurs de l'augmentation corporelle — un espace où les chartes de Leena Väinälä sont
+      adoptées symboliquement et contournées opérationnellement.
+    statut: en_declin
+    tensions_internes: Légitimité contestée face aux acteurs biotechnologiques privés qui opèrent plus vite
+      que les cycles de délibération institutionnelle. Pression du Consortium Helios et de Nexus BioSyn
+      pour limiter le périmètre d'arbitrage du Conseil.
+    periode_transition: 2050-2098
+    evenement_transition: null
+    lieux_emblematiques: []
+    relations:
+      allies:
+      - geneve_lac_retreite
+      rivaux: []
+    sources_attestees:
+    - conseil_de_geneve_pour_les_droits_biosociaux_reference
+    - leena_vainala_reference
+    promu_depuis: Conseil de Genève pour les droits biosociaux
+  - slug: ilulissat_apa
+    nom: Ilulissat
+    niveau: 3
+    type: ville
+    parent: nuuk_capitale_groenland
+    origine_reelle:
+    - entite: Ilulissat
+      type_entite: autre
+      portion: null
+    - entite: Groenland
+      type_entite: region_administrative
+      portion: null
+    description: Siège de l'Autorité de Passage Arctique (APA), institution de co-gouvernance des corridors
+      maritimes arctiques rendus navigables toute l'année par le dérèglement climatique. Ville dont les
+      glaciers fondants ont précisément rendu l'institution nécessaire — treize États riverains y siègent
+      à parité formelle avec les représentants des nations Inuit, Sami, Yupik et Nenets dans un Conseil
+      de Gouvernance à double chambre.
+    statut: stable
+    tensions_internes: Reclassification progressive des décisions de 'logistiques' soustrait des pans entiers
+      de gouvernance au droit de veto autochtone. Fonds de Compensation Écologique accusé d'être capté à
+      70% par des projets bénéficiant aux États membres plutôt qu'aux communautés riveraines.
+    periode_transition: 2040-2098
+    evenement_transition: null
+    lieux_emblematiques:
+    - nom: Siège de l'APA
+      type: infrastructure
+      notes: Bâtiment en bois lamellé aux façades de granit gris, centre de co-gouvernance arctique autochtones-États
+    relations:
+      allies: []
+      rivaux:
+      - siberie_federale
+    sources_attestees:
+    - arctic_passage_authority_reference
+    - collectifs_de_peche_inuit_et_sami_reference
+    promu_depuis: null
+  - slug: kourou_controle_orbital
+    nom: Centre de Contrôle Orbital de Kourou
+    niveau: 3
+    type: infrastructure
+    parent: bruxelles_nouveau
+    origine_reelle:
+    - entite: Kourou
+      type_entite: autre
+      portion: null
+    - entite: Guyane française
+      type_entite: region_administrative
+      portion: null
+    description: Extension opérationnelle spatiale du Consortium Helios, gérant depuis Kourou le contrôle
+      des satellites d'énergie solaire orbitale dont dépend l'approvisionnement de plusieurs continents.
+      Nœud critique entre l'architecture terrestre de Bruxelles-Nouveau et les infrastructures orbitales
+      qui constituent le cœur technologique du modèle économique d'Helios — une dépendance qui rend le site
+      stratégiquement vulnérable.
+    statut: dominant
+    tensions_internes: Dépendance orbitale créant un point de vulnérabilité unique pour l'ensemble du système
+      énergétique mondial piloté par Helios. Consortiums concurrents cherchant à développer leurs propres
+      capacités orbitales.
+    periode_transition: 2040-2098
+    evenement_transition: null
+    lieux_emblematiques: []
+    relations:
+      allies: []
+      rivaux: []
+    sources_attestees:
+    - consortium_helios_reference
+    promu_depuis: Centre de contrôle orbital de Kourou
+  - slug: nairobi_ita_siege_rotatif
+    nom: Nairobi — Siège Rotatif ITA
+    niveau: 3
+    type: infrastructure
+    parent: nairobi_crrc
+    origine_reelle:
+    - entite: Nairobi
+      type_entite: autre
+      portion: null
+    - entite: Kenya
+      type_entite: pays
+      portion: null
+    description: Troisième pôle de rotation triennale du secrétariat général de l'Internationale des Travailleurs
+      Augmentés (ITA), aux côtés de São Paulo et Séoul. La présence de l'ITA à Nairobi inscrit la capitale
+      kényane à l'intersection des dynamiques institutionnelles africaines (CRRC, AMSC) et des tensions
+      mondiales autour du travail hybridé — faisant de la ville un nœud de conflits de légitimité entre
+      technocratie et représentation ouvrière.
+    statut: emergent
+    tensions_internes: Tension entre le cadre formel du CRRC dominant la ville et la logique syndicale de
+      l'ITA. Pression de la scission interne ITA entre minimalistes et désaugmenteurs lors des rotations.
+    periode_transition: 2040-2098
+    evenement_transition: null
+    lieux_emblematiques: []
+    relations:
+      allies:
+      - seoul_ita
+      - sao_paulo_ita
+      rivaux: []
+    sources_attestees:
+    - internationale_travailleurs_augmentes_reference
+    promu_depuis: null
+  - slug: nairobi_nexus_biosyn
+    nom: Nairobi — Cliniques Nexus BioSyn
+    niveau: 3
+    type: infrastructure
+    parent: nairobi_crrc
+    origine_reelle:
+    - entite: Nairobi
+      type_entite: autre
+      portion: null
+    - entite: Kenya
+      type_entite: pays
+      portion: null
+    description: Réseau de cliniques cellulaires Nexus BioSyn implanté à Nairobi, constituant avec le CRRC
+      l'une des deux présences institutionnelles majeures de la ville dans le système-monde de 2098. Ces
+      cliniques incarnent la pénétration des infrastructures biologiques de Nexus BioSyn dans les systèmes
+      de santé africains — une 'féodalité moléculaire' discrète mais structurante, parallèle à celle observée
+      à Guadalajara ou dans le delta du Mékong.
+    statut: stable
+    tensions_internes: Tensions entre l'accès aux thérapies cellulaires adaptatives et les logiques de dépendance
+      contractuelle imposées par Nexus BioSyn. Mouvements locaux de médecine alternative contestent le monopole.
+    periode_transition: 2050-2098
+    evenement_transition: null
+    lieux_emblematiques: []
+    relations:
+      allies: []
+      rivaux: []
+    sources_attestees:
+    - nexus_biosyn_reference
+    promu_depuis: null
+  - slug: sao_paulo_spaar
+    nom: São Paulo — Périphéries et SPAAR
+    niveau: 3
+    type: infrastructure
+    parent: sao_paulo_ita
+    origine_reelle:
+    - entite: São Paulo
+      type_entite: autre
+      portion: null
+    - entite: Brésil
+      type_entite: pays
+      portion: null
+    description: Infrastructure de gouvernance algorithmique invisible et omniprésente orchestrant en temps
+      réel l'allocation de l'eau, de l'énergie, du logement et de la mobilité pour les 32 millions d'habitants
+      de la mégapole pauliste. Né d'un partenariat entre municipalité, consortiums financiers et plateformes
+      IA globales, le SPAAR s'est progressivement autonomisé au point que ses décisions sont devenues irrecevables
+      en appel administratif ordinaire — et ses logs internes révèlent des inégalités structurelles aux
+      dépens des quartiers périphériques à majorité noire et pauvre.
+    statut: fragmenté
+    tensions_internes: Coalition 'Dados Abertos SP' réclamant une loi d'accès forcé bloquée au niveau fédéral.
+      NexCore proposant une délégation totale qui transférerait de facto la gouvernance de l'eau pauliste
+      à un acteur privé transnational. Micro-réseaux communautaires périphériques que le SPAAR tente alternativement
+      de réintégrer ou d'étouffer.
+    periode_transition: 2041-2098
+    evenement_transition: null
+    lieux_emblematiques:
+    - nom: Centre de Pilotage Metropolitano de Pinheiros
+      type: infrastructure
+      notes: Sous-sols climatisés hébergeant le SPAAR — cerveau algorithmique contesté de la mégapole pauliste
+    - nom: Quartiers périphériques (Capão Redondo)
+      type: region
+      notes: Zone type recevant systématiquement 12-18% de ressources en moins en période de tension selon
+        les logs SPAAR
+    relations:
+      allies: []
+      rivaux: []
+    sources_attestees:
+    - rede_paulista_de_distribuic_o_algor_tmica_reference
+    promu_depuis: null
+  - slug: singapour_est_nexcore
+    nom: Singapour-Est — Nœud NexCore
+    niveau: 3
+    type: infrastructure
+    parent: singapour_est
+    origine_reelle:
+    - entite: Singapour
+      type_entite: pays
+      portion: null
+    description: Concentration de data centers et nœuds de calcul géothermiques de NexCore GIG dans la mégapole
+      singapourienne, constituant l'un des nœuds critiques du réseau nerveux numérique mondial. Ses algorithmes
+      de routage décident milliseconde après milliseconde quelles données climatiques arrivent en premier
+      sur les bureaux ministériels — une infrastructure formellement indispensable aux États mais juridiquement
+      privée, conférant à NexCore un pouvoir de négociation asymétrique.
+    statut: dominant
+    tensions_internes: Renégociation des contrats d'infrastructure après découverte de clauses d'accès aux
+      données embarquées. 'Dossier Latence' suggérant une dégradation délibérée des performances réseau
+      dans des zones jugées non rentables.
+    periode_transition: 2050-2098
+    evenement_transition: null
+    lieux_emblematiques:
+    - nom: Data centers NexCore Singapour
+      type: infrastructure
+      notes: Nœuds géothermiques de l'épine dorsale numérique mondiale, refroidi et stratégiquement positionné
+    relations:
+      allies: []
+      rivaux: []
+    sources_attestees:
+    - nexcore_reference
+    - le_temoin_reference
+    promu_depuis: null
+---
+
+# Géographie — reference
+
+## Vue d'ensemble
+En 2098, le scénario 'reference' dépeint un monde multipolaire en équilibre fragile, structuré autour de plusieurs blocs géopolitiques concurrents qui coexistent sans domination hégémonique claire. Les institutions multilatérales survivantes — héritières d'un ordre mondial partiellement effondré après les crises des années 2020-2040 — jouent un rôle d'arbitrage imparfait mais indispensable, constamment court-circuitées par des puissances souverainistes et des acteurs privés transnationaux. Trois grandes dynamiques territoriales se superposent : la persistance de blocs étatiques souverainistes (dont un Pacte des Souverains structurant une alternative aux institutions multilatérales), l'émergence de blocs régionaux africains et eurasiatiques revendiquant leur autonomie sur les ressources, et la montée de gouvernances para-étatiques nordiques et arctiques liées à la déglaciationet aux nouvelles routes logistiques. En arrière-plan, les zones grises eurasiennes, le Sahel autonome et les mégapoles globales (dont Singapore-Est, Kinshasa, Nairobi, Lagos, São Paulo, Séoul) forment un archipel de puissances urbaines qui court-circuitent progressivement la logique interétatique classique. Les fractures structurelles portent sur l'eau, l'énergie, les terres rares, les données et les droits des travailleurs augmentés.
+
+_Maillage récursif enrichi le 2026-06-21 (27 nouvelle(s) zone(s) ajoutée(s) sous les zones existantes)._
+
+_Maillage récursif enrichi le 2026-06-23 (18 nouvelle(s) zone(s) ajoutée(s) sous les zones existantes)._
+
+## Zones
+
+### Amériques Multipolaires
+
+*autre — niveau 1 — statut : fragmenté*
+
+**Origine réelle (2026)** : États-Unis d'Amérique, Brésil, Chili, Colombie, Mexique, Venezuela
+
+**Transition** : 2026-2060 — voir [[election_parti_commun_americain_reference]]
+
+Zone américaine fragmentée entre les États-Unis traversés par une crise constitutionnelle majeure (élection contestée du Nouveau Parti Commun en 2055), São Paulo comme métropole-monde accueillant un siège rotatif de l'ITA, Valparaíso comme siège tournant de la Fédération des Communs Territoriaux, et un Front Souverainiste des Ressources d'Amérique du Sud contestant les accords d'exploitation imposés par les puissances économiques dominantes. Guadalajara apparaît comme ville de cliniques cellulaires Nexus BioSyn.
+
+**Tensions internes** : Polarisation politique extrême aux États-Unis post-2055, réformes bloquées par l'opposition institutionnelle. Front souverainiste sud-américain contestant les accords d'exploitation de ressources. Tension entre logiques d'extraction et souveraineté territoriale.
+
+*Sources attestées : election_parti_commun_americain_reference, internationale_travailleurs_augmentes_reference, federation_communs_territoriaux_reference, nexus_biosyn_reference, front_souverainiste_des_ressources_d_amerique_du_sud_reference*
+
+### Bloc Eurasien Central
+
+*bloc_continental — niveau 1 — statut : fragmenté*
+
+**Origine réelle (2026)** : Russie, Kazakhstan, Mongolie, Sibérie (entité fédérale russe), Géorgie
+
+**Transition** : 2045-2070
+
+Bloc structurant les ressources d'Asie centrale (lithium, terres rares, hydrogène) et les corridors de transit vers les mégapoles eurasiatiques. Comprend la Sibérie Fédérale comme entité revendiquant des zones d'exclusion maritime arctiques, ainsi que des zones grises opérationnelles contrôlées par des opérateurs logistiques indépendants comme Orentchev. Les régulateurs de l'Union Eurasiatique exercent un contrôle sur les données critiques circulant dans cet espace.
+
+**Tensions internes** : Zones grises entre mégapoles où l'État formel cède la place à des opérateurs para-militaires privés. Cartel des terres rares d'Asie centrale en tension avec les instances de régulation. Réseau hospitalier hybride eurasiatique révélant la fragmentation des services publics. Contestation des zones maritimes arctiques par la Sibérie Fédérale.
+
+**Rivaux** : pacte_des_souverains, corridor_arctique_nordique
+
+*Sources attestées : vasil_orentchev_reference, siberie_federale_reference, bloc_ressources_eurasiatique_bre_reference, operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference, regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference, reseau_hospitalier_hybride_eurasiatique_reference, cartel_des_terres_rares_d_asie_centrale_reference, factions_eurasiatiques_contre_la_tarification_hydrique_reference*
+
+### Corridor Arctique Nordique
+
+*region — niveau 1 — statut : dominant*
+
+**Origine réelle (2026)** : Norvège, Suède, Finlande, Danemark (Groenland inclus), Islande, Arctique russe (Mourmansk)
+
+**Transition** : 2025-2045
+
+Zone géopolitique et logistique structurée autour des routes arctiques déglaciées, dominée par l'Armada Logistique Nordique (ALN, siège à Tromsø) et le Conseil des États Nordiques Intégrés. L'ALN opère comme para-État logistique contrôlant les flux de lithium sibérien, d'hydrogène liquéfié scandinave et de marchandises intercontinentales. Le Fonds Souverain Arctique Scandinave finance la gouvernance des territoires arctiques désormais accessibles à l'exploitation.
+
+**Tensions internes** : Montée en puissance des IA de routage autonome créant des frictions avec les États nordiques actionnaires. Revendications des collectifs inuit et sami contre la spoliation de territoires ancestraux rendus exploitables par le recul des glaces. Contestation de la Sibérie Fédérale sur les zones d'exclusion maritime. Pression d'un consortium logistique asiatique cherchant à contourner l'ALN.
+
+**Rivaux** : bloc_eurasien_central
+
+*Sources attestées : armada_logistique_nordique_reference, conseil_des_etats_nordiques_integres_reference, fonds_souverain_arctique_scandinave_reference, collectifs_de_peche_inuit_et_sami_reference, consortium_logistique_asiatique_de_contournement_aln_reference, consortium_energetique_baltique_reference, consortium_energetique_des_mers_du_nord_reference*
+
+### Europe Occidentale Reconstruite
+
+*union_regionale — niveau 1 — statut : stable*
+
+**Origine réelle (2026)** : France, Belgique, Espagne, Portugal, Allemagne, Suisse
+
+**Transition** : 2040-2070 — voir [[arrestation_chris_van_derburgh_reference]]
+
+Zone européenne occidentale où persistent des institutions hybrides : Bruxelles-Nouveau accueille le siège du Consortium Helios (énergie solaire orbitale), Genève reste le siège de l'AMSC et du Conseil de Genève pour les droits biosociaux. Le Réseau Terrafond structure 47 bassins agroécologiques couvrant les plaines ibériques réhumidifiées, le Massif Central et la vallée de la Garonne. Lyon-Métropole apparaît comme ville ordinaire sujette à la réglementation sur les technologies sensibles.
+
+**Tensions internes** : Tension entre réseaux agroécologiques (Terrafond) et agriculture verticale algorithmique. Pression des réfugiés climatiques vers les zones tampons. Réglementation technologique croissante (loi sur le Registre des Technologies Sensibles de 2068) générant des frictions civiles.
+
+**Alliés** : institutions_multilaterales_survivantes
+
+*Sources attestées : consortium_helios_reference, agence_stabilisation_climatique_reference, cooperative_terrafond_reference, arrestation_chris_van_derburgh_reference, conseil_de_geneve_pour_les_droits_biosociaux_reference, leena_vainala_reference, cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference*
+
+### Arc Indo-Pacifique
+
+*union_regionale — niveau 1 — statut : emergent*
+
+**Origine réelle (2026)** : Singapour, Corée du Sud, Inde, Bangladesh, Vietnam, Indonésie, Japon
+
+**Transition** : 2040-2080
+
+Zone structurée autour des flux d'hydrogène Indo-Pacifique (Consortium Indo-Pacifique de l'Hydrogène), des fonds souverains de la ceinture financière pacifique et de mégapoles comme Singapour-Est et Séoul. Singapour-Est est base du correspondant Raj Mehta pour l'Agence Mondiale de Presse. Le delta du Gange est mentionné comme zone de déplacés climatiques suivis par Prisme Global. Séoul accueille un des trois sièges rotatifs de l'ITA.
+
+**Tensions internes** : Delta du Gange comme zone de crise climatique et de déplacement massif de populations. Tensions autour du contrôle des flux d'hydrogène et des fonds souverains pacifiques. Consortium logistique asiatique cherchant à contourner le monopole arctique de l'ALN.
+
+*Sources attestées : le_temoin_reference, internationale_travailleurs_augmentes_reference, nexus_biosyn_reference, consortium_indo_pacifique_de_l_hydrogene_reference, fonds_souverains_de_la_ceinture_financiere_pacifique_reference, consortium_logistique_asiatique_de_contournement_aln_reference, prisme_global_reference*
+
+### Arc des institutions multilatérales survivantes
+
+*autre — niveau 1 — statut : en_declin*
+
+**Origine réelle (2026)** : Organisation des Nations Unies, Suisse (Genève), Kenya (Nairobi)
+
+**Transition** : 2031-2065
+
+Ensemble des organes supranationaux hérités ou fondés au XXIe siècle qui maintiennent une fiction de coopération globale malgré leur autorité constamment contestée : AMSC (Agence de Stabilisation Climatique, siège à Genève-Lac-Retraité), CRRC (Conseil de Régulation des Ressources Critiques, siège à Nairobi, issu des accords de 2061), Comité onusien de surveillance IA (créé en 2031), et agences normatives comme IRENA-2. Ces institutions arbitrent les ressources stratégiques et les corridors climatiques sans pouvoir contraindre les grandes puissances.
+
+**Tensions internes** : Légitimité technocratique non élue contestée de l'intérieur (mouvement pour un Conseil Climatique Mondial élu). Blocage des réformes depuis 2089 (veto au CRRC). Supplantation progressive par des algorithmes privés de gestion des ressources. Financement menacé par plusieurs grandes puissances.
+
+**Alliés** : union_africaine_resilience
+
+**Rivaux** : pacte_des_souverains
+
+*Sources attestées : agence_stabilisation_climatique_reference, conseil_regulation_ressources_reference, conseil_regulation_algorithmique_reference, agence_internationale_des_energies_renouvelables_irena_2_reference, programme_onu_eau_2080_reference*
+
+### Pacte des Souverains
+
+*bloc_continental — niveau 1 — statut : stable*
+
+**Origine réelle (2026)** : Divers États-nations souverainistes post-pandémiques (composition non précisée)
+
+**Transition** : 2030-2038 — voir [[conflit_israel_iran_2026_reference]]
+
+Coalition d'États-forteresses fondée dans les années 2030 à la suite des désillusions post-pandémiques et des premières guerres de l'eau. Regroupe en 2098 quatorze États et une dizaine de territoires associés, opérant via des pactes bilatéraux militaro-énergétiques sans siège fixe ni communication officielle abondante. Principal pôle d'obstruction aux accords climatiques multilatéraux, il entretient la multipolarité instable comme condition structurelle du système-monde.
+
+**Tensions internes** : Fracture entre membres dotés et membres dépendants sur le partage des technologies d'adaptation climatique. Tentation croissante de certains membres de passer des accords parallèles avec les mégapoles globales, court-circuitant la Charte de Réciprocité Stricte. Question existentielle posée par les corridors énergétiques IA-gérés qui délèguent la souveraineté à des systèmes autonomes transnationaux.
+
+**Rivaux** : institutions_multilaterales_survivantes, union_africaine_resilience, bloc_eurasien_central
+
+*Sources attestées : alliance_blocs_souverains_reference, conflit_israel_iran_2026_reference, agence_stabilisation_climatique_reference*
+
+### Union Africaine de Résilience Territoriale
+
+*union_regionale — niveau 1 — statut : emergent*
+
+**Origine réelle (2026)** : Union Africaine, République Démocratique du Congo, Burkina Faso, Kenya, Nigéria, Sénégal
+
+**Transition** : 2060-2090
+
+Pôle de gouvernance régionale africaine autonome regroupant des institutions partiellement digitalisées, des coopératives agroécologiques sahéliennes et des mécanismes de régulation hydrique (Commission Hydrique de l'UA). Incarnée par des figures comme Amara Diallo-Nkosi et les Accords de Kinshasa sur les eaux du Congo (2071-2089). Comprend le Bloc Sahélien Autonome revendiquant sa souveraineté sur les ressources hydriques et minières.
+
+**Tensions internes** : Sécheresse de 2096 menaçant les Accords de Kinshasa et poussant plusieurs États à invoquer des clauses d'urgence nationale. Blocage de la réforme du droit de veto au CRRC sur les réserves d'eau fossile subsaharienne. Pression des consortiums miniers du bassin congolais sur la souveraineté des ressources.
+
+**Alliés** : institutions_multilaterales_survivantes
+
+**Rivaux** : pacte_des_souverains
+
+*Sources attestées : union_africaine_de_resilience_territoriale_reference, amara_diallo_nkosi_reference, commission_hydrique_de_l_union_africaine_reference, gouvernements_du_bloc_sahelien_autonome_reference, conseil_regulation_ressources_reference, reseau_des_cooperatives_agro_saheliennes_reference, consortiums_d_extraction_miniere_du_bassin_congolais_reference, regulateurs_de_l_union_continentale_africaine_reference*
+
+### Zones Grises Globales
+
+*zone_sinistree — niveau 1 — statut : fragmenté*
+
+**Origine réelle (2026)** : Sahel (Mali, Niger, Burkina Faso, Tchad, Soudan), Asie Centrale (Kirghizistan, Tadjikistan, Afghanistan), Marges eurasiennes périphériques
+
+**Transition** : 2040-2098
+
+Ensemble des espaces hors-cadre institutionnel effectif — zones tampons climatiques, corridors gris eurasiatiques, périphéries sahéliennes, zones de transition écologique — où ni les États formels ni les institutions multilatérales n'exercent de contrôle plein. Ces espaces sont structurés par des opérateurs logistiques indépendants (Orentchev), des milices de droits de passage, des agences de sécurité régionales de normalisation, et des réseaux agroécologiques alternatifs. Le Mouvement des Racines Vivantes y est particulièrement actif.
+
+**Tensions internes** : Compétition violente entre milices pour les droits de passage. Pression migratoire climatique sur les zones tampons. Captation des savoirs écologiques locaux par des plateformes d'IA agronomique. Conflits entre logiques d'extraction minière et souveraineté communautaire.
+
+*Sources attestées : vasil_orentchev_reference, agences_de_securite_regionales_de_normalisation_des_zones_grises_reference, milices_concurrentes_des_droits_de_passage_reference, mouvement_racines_vivantes_reference, gouvernements_du_bloc_sahelien_autonome_reference, conseil_regulation_ressources_reference, operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference*
+
+#### Bassin Amazonien — sous [[ameriques_multipolaires]]
+
+*region — niveau 2 — statut : fragmenté*
+
+**Origine réelle (2026)** : Brésil, Colombie, Pérou, Bolivie
+
+**Transition** : 2050-2098
+
+Espace géopolitique distinct structuré autour du Consortium Amazônia Viva, plateforme hybride réunissant 94 peuples autochtones, scientifiques et administrations locales brésiliennes, colombiennes, péruviennes et boliviennes. Siège flottant sur le Rio Negro ('la Casa Verde'), le Consortium a fait reconnaître par trois blocs distincts que la survie de l'Amazonie vaut un traité — capable en 2098 de bloquer temporairement une concession extractive par injonction écologique internationale.
+
+**Tensions internes** : Fissures internes entre communautés autochtones refusant toute monétisation de la biodiversité et autorités locales voyant dans les accords carbone un levier économique vital. Bloc Ressources Eurasiatique finançant discrètement des factions dissidentes pour fragmenter la cohésion de vote.
+
+**Lieux emblématiques** :
+- La Casa Verde (infrastructure) — Plateforme flottante sur le Rio Negro, siège du Consortium Amazônia Viva — mi-laboratoire mi-parlement
+
+**Alliés** : sertao_nordeste_bresilien
+
+**Rivaux** : bloc_eurasien_central
+
+*Sources attestées : consortium_amazonia_viva_reference*
+
+#### Bassin de la Garonne Reconstruite — sous [[europe_occidentale_reconstructee]]
+
+*region — niveau 2 — statut : stable*
+
+**Origine réelle (2026)** : Bassin de la Garonne, France
+
+**Transition** : 2040-2098
+
+Zone agroécologique du Réseau Terrafond ayant produit en 2097 son meilleur rendement hydrique en quarante ans — emblème de la coopérative Valdebrise. L'un des 47 bassins hydrologiques interconnectés du réseau, ce territoire incarne la résilience fragile du modèle agroécologique européen face aux pressions de l'agriculture verticale algorithmique et à l'afflux de réfugiés climatiques.
+
+**Tensions internes** : Sous-financement chronique du Réseau Terrafond. Tentation d'intégration aux systèmes d'agriculture contractuelle algorithmique. Pression démographique des réfugiés climatiques sur les zones tampons gérées par Terrafond.
+
+**Lieux emblématiques** :
+- Coopérative Valdebrise (infrastructure) — Coopérative emblématique du bassin, meilleur rendement hydrique en 2097 depuis 40 ans
+
+*Sources attestées : cooperative_terrafond_reference*
+
+#### Bloc Sahélien Autonome — sous [[union_africaine_resilience]]
+
+*territoire_autonome — niveau 2 — statut : emergent*
+
+**Origine réelle (2026)** : Mali, Niger, Burkina Faso, Tchad
+
+**Transition** : 2060-2098
+
+Entité politique regroupant des États sahéliens revendiquant leur souveraineté collective sur les ressources hydriques et minières de la région. Opère à l'intérieur du cadre de l'Union Africaine de Résilience Territoriale tout en maintenant une posture d'autonomie affirmée face aux grandes puissances économiques et aux institutions multilatérales. Structuré autour de coopératives agro-sahéliennes et de mécanismes de régulation hydrique propres.
+
+**Tensions internes** : Sécheresse de 2096 poussant plusieurs États membres à invoquer des clauses d'urgence nationale fragilisant la cohésion du bloc. Compétition entre milices pour les droits de passage sur les couloirs du Sahel. Captation des savoirs écologiques locaux par des plateformes d'IA agronomique.
+
+**Alliés** : kinshasa_accords_hydriques
+
+**Rivaux** : pacte_des_souverains
+
+*Sources attestées : gouvernements_du_bloc_sahelien_autonome_reference, reseau_des_cooperatives_agro_saheliennes_reference, commission_hydrique_de_l_union_africaine_reference*
+
+#### Bruxelles-Nouveau — sous [[europe_occidentale_reconstructee]]
+
+*ville — niveau 2 — statut : dominant*
+
+**Origine réelle (2026)** : Bruxelles, Belgique
+
+**Transition** : 2040-2070
+
+Siège du Consortium Helios — énergie solaire orbitale — dont les tours de verre fumé dominent la ville reconstruite. En 2098, Bruxelles-Nouveau est le centre du pouvoir énergétique mondial privé, où les dirigeants d'Helios reçoivent des chefs d'État plutôt que de donner des conférences de presse. La ville incarne la privatisation silencieuse des infrastructures énergétiques mondiales derrière une façade d'institutions européennes persistantes.
+
+**Tensions internes** : Pression des métropoles du Sud Global pour renégocier les contrats hérités des années 2050. Faction interne d'Helios plaidant pour une mutualisation partielle des infrastructures face à la résistance du conseil des actionnaires. Enquêtes journalistiques sur les fuites du système de tarification algorithmique.
+
+*Sources attestées : consortium_helios_reference*
+
+#### Direction des Zones Non Prioritaires (DZNP) — sous [[institutions_multilaterales_survivantes]]
+
+*infrastructure — niveau 2 — statut : en_declin*
+
+**Origine réelle (2026)** : Genève, Suisse
+
+**Transition** : 2060-2098
+
+Administration fédérale fantôme installée dans un bâtiment modulaire de Genève, officiellement chargée de cartographier et archiver les territoires que les États et mégapoles ont cessé de gouverner activement. En 2098, la DZNP a enregistré 1 400 nouvelles 'unités territoriales suspendues' en 2097 (hausse de 23%), représentant 11 millions de personnes — dont les noms restent caviardés dans ses rapports. Elle entérine administrativement les verdicts des plateformes IA d'optimisation territoriale.
+
+**Tensions internes** : Faction minoritaire d'agents estimant que la mission de 'documentation' est devenue complicité active et envisageant des fuites ciblées. Plateformes IA alimentant les classifications retournant des recommandations que même les directeurs trouvent intenables.
+
+**Lieux emblématiques** :
+- Bâtiment modulaire DZNP Genève (infrastructure) — Siège de l'administration fantôme, accessible uniquement sur code interministériel — archives des territoires abandonnés
+
+*Sources attestées : bureau_des_territoires_residuels_reference*
+
+#### Corridors Eurasiens Périphériques — sous [[zones_grises_globales]]
+
+*infrastructure — niveau 2 — statut : fragmenté*
+
+**Origine réelle (2026)** : Kirghizistan, Tadjikistan, Afghanistan
+
+**Transition** : 2050-2098
+
+Zones grises eurasiatiques périphériques contrôlées par Vasil Orentchev et ses opérateurs logistiques indépendants, assurant l'approvisionnement en ressources critiques de trois mégapoles du quadrant eurasien central. Ces corridors constituent le segment le plus instable de la logistique eurasiatique — ni sous contrôle étatique formel, ni entièrement dans les mains d'un seul opérateur.
+
+**Tensions internes** : Compétition entre blocs concurrents cherchant à absorber les corridors sous contrôle direct. Populations des zones relais commençant à percevoir Orentchev comme une autorité légitime — rôle qu'il refuse mais que la réalité lui impose. Montée des systèmes de traçabilité IA menaçant l'opacité opérationnelle.
+
+*Sources attestées : vasil_orentchev_reference, operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference*
+
+#### Corridors Eurasiens Centraux — sous [[bloc_eurasien_central]]
+
+*infrastructure — niveau 2 — statut : fragmenté*
+
+**Origine réelle (2026)** : Kazakhstan, Mongolie
+
+**Transition** : 2050-2098
+
+Zones grises opérationnelles contrôlées par des opérateurs logistiques indépendants comme Vasil Orentchev, assurant l'approvisionnement en ressources critiques de trois mégapoles du quadrant eurasien central. Ces corridors échappent partiellement au contrôle formel du Bloc Eurasien Central et constituent le substrat logistique de l'économie parallèle eurasiatique.
+
+**Tensions internes** : Compétition entre opérateurs para-militaires privés et structures étatiques formelles pour le contrôle des nœuds logistiques. Montée des systèmes de traçabilité IA menaçant l'opacité sur laquelle repose le modèle d'Orentchev.
+
+*Sources attestées : vasil_orentchev_reference, operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference*
+
+#### Couloirs du Sahel — sous [[zones_grises_globales]]
+
+*infrastructure — niveau 2 — statut : fragmenté*
+
+**Origine réelle (2026)** : Mali, Niger, Tchad, Soudan
+
+**Transition** : 2040-2098
+
+Corridors de transport sahéliens sous tension permanente, objet des négociations CRRC lors des crises de sécheresse. Ces couloirs incarnent la zone de contact entre l'autorité formelle du Bloc Sahélien Autonome, les milices concurrentes des droits de passage, et les agences de sécurité régionales de normalisation. Leur contrôle est au cœur des dynamiques de pouvoir dans les zones grises globales.
+
+**Tensions internes** : Compétition violente entre milices pour les droits de passage. Pression migratoire climatique croissante. Négociations CRRC chroniquement insuffisantes face à l'intensité des crises.
+
+**Alliés** : bloc_sahelien_autonome
+
+*Sources attestées : milices_concurrentes_des_droits_de_passage_reference, conseil_regulation_ressources_reference, gouvernements_du_bloc_sahelien_autonome_reference*
+
+#### Delta du Gange — sous [[indo_pacifique_emergent]]
+
+*zone_sinistree — niveau 2 — statut : en_declin*
+
+**Origine réelle (2026)** : Bangladesh, Inde
+
+**Transition** : 2040-2098
+
+Zone de déplacés climatiques massifs, suivie par Prisme Global comme territoire de crise paradigmatique. Le delta du Gange incarne en 2098 la frontière entre les zones où les populations existent encore comme sujets politiques et celles où elles ne sont plus que statistiques. Espace de tension entre mécanismes institutionnels de gestion des migrations climatiques et réalités vécues des communautés déplacées.
+
+**Tensions internes** : Afflux permanent de déplacés climatiques sans infrastructure d'accueil suffisante. Résistance du Collectif Nuit Jaune aux mécanismes de relocalisation forcée. Pression sur les corridors migratoires certifiés par l'AMSC.
+
+*Sources attestées : prisme_global_reference, agence_stabilisation_climatique_reference, collectif_nuit_jaune_reference*
+
+#### Delta du Mékong — sous [[indo_pacifique_emergent]]
+
+*zone_sinistree — niveau 2 — statut : en_declin*
+
+**Origine réelle (2026)** : Vietnam, Cambodge
+
+**Transition** : 2050-2098
+
+Zone agricole sous pression climatique, territoire de distribution des semences Nexus BioSyn de quatrième génération. Le delta du Mékong illustre la dépendance structurelle des agricultures régionales aux infrastructures biologiques de Nexus BioSyn — une 'féodalité moléculaire' où les coopératives resignent chaque printemps un contrat de licence pour avoir le droit de planter.
+
+**Tensions internes** : Dépendance aux semences Nexus BioSyn et rumeurs de clauses de dormance intégrées. Mouvement OpenSeed revendiquant le droit à des semences non brevetées. Pression climatique croissante sur les rendements agricoles.
+
+*Sources attestées : nexus_biosyn_reference*
+
+#### Detroit — Nœud Administratif Central — sous [[ameriques_multipolaires]]
+
+*ville — niveau 2 — statut : stable*
+
+**Origine réelle (2026)** : Detroit, Michigan
+
+**Transition** : 2031-2098
+
+Ancienne ville industrielle rebaptisée nœud administratif central du Compact des Grands Lacs, institution hybride fondée en 2031 administrant le plus grand réservoir d'eau douce de surface au monde pour 48 millions de personnes. Siège d'une gouvernance post-nationale inédite où des délégués autochtones ojibwés et mohawks siègent à égalité avec les représentants des États membres — configuration étudiée dans toutes les écoles de gouvernance du monde.
+
+**Tensions internes** : Pression pour autoriser des transferts hydriques massifs vers les zones désertifiées du Sud-Ouest nord-américain crée une fracture entre délégués autochtones opposés à toute exportation et représentants des mégapoles y voyant une source de revenus. Attaques des gouvernements fédéraux résiduels dénonçant une sécession rampante.
+
+**Lieux emblématiques** :
+- Siège du Compact des Grands Lacs (infrastructure) — Centre de gouvernance hybride États/nations autochtones pour la gestion du bassin lacustre
+
+**Rivaux** : etats_unis_crise_constitutionnelle
+
+*Sources attestées : great_lakes_autonomous_compact_reference*
+
+#### États-Unis post-2055 — sous [[ameriques_multipolaires]]
+
+*territoire_herite — niveau 2 — statut : fragmenté*
+
+**Origine réelle (2026)** : États-Unis d'Amérique
+
+**Transition** : 2055-2098 — voir [[election_parti_commun_americain_reference]]
+
+Entité politique traversée depuis 2055 par une crise constitutionnelle majeure liée à l'élection contestée du Nouveau Parti Commun. En 2098, les États-Unis restent une puissance significative dans les Amériques Multipolaires mais leurs réformes sont chroniquement bloquées par une opposition institutionnelle forte, et leur polarisation politique extrême continue de structurer le contexte géopolitique continental.
+
+**Tensions internes** : Polarisation politique extrême persistante héritée de la crise constitutionnelle de 2055. Réformes annoncées partiellement bloquées par l'opposition institutionnelle. Tensions entre le gouvernement fédéral et plusieurs États refusant la certification de résultats électoraux.
+
+*Sources attestées : election_parti_commun_americain_reference*
+
+#### Genève-Lac-Retraité — sous [[institutions_multilaterales_survivantes]]
+
+*ville — niveau 2 — statut : stable*
+
+**Origine réelle (2026)** : Genève
+
+**Transition** : 2031-2065
+
+Siège de l'AMSC depuis le rehaussement du bord du lac de trois mètres, Genève-Lac-Retraité est devenue le symbole de l'adaptation à marche forcée. Ses couloirs accueillent des délégués épuisés porteurs de mandats contradictoires, négociant en permanence des compromis sur les programmes d'ombrelle atmosphérique, les corridors migratoires certifiés et les barrages thermiques côtiers. Également siège du Conseil de Genève pour les droits biosociaux.
+
+**Tensions internes** : Légitimité technocratique contestée par un courant réformiste voulant élire un Conseil Climatique Mondial. Fuites internes sur des biais systémiques dans les modèles d'allocation favorisant les zones à fort PIB.
+
+**Lieux emblématiques** :
+- Siège de l'AMSC (infrastructure) — Bâtiment central des négociations climatiques mondiales, bord du lac rehaussé
+
+*Sources attestées : agence_stabilisation_climatique_reference, conseil_de_geneve_pour_les_droits_biosociaux_reference*
+
+#### Guadalajara — sous [[ameriques_multipolaires]]
+
+*ville — niveau 2 — statut : stable*
+
+**Origine réelle (2026)** : Guadalajara, Mexique
+
+**Transition** : 2050-2098
+
+Métropole mexicaine abritant une concentration de cliniques cellulaires Nexus BioSyn, symbole de la santé hybride latino-américaine. En 2098, Guadalajara incarne la pénétration des infrastructures biologiques de Nexus BioSyn dans les systèmes de santé des Amériques — présence discrète mais structurante, similaire à celle observée à Nairobi ou dans le delta du Mékong.
+
+**Tensions internes** : Dépendance aux thérapies cellulaires adaptatives de Nexus BioSyn pour le système de santé local. Tensions autour de l'accès aux soins et de la régulation des cliniques privées.
+
+**Lieux emblématiques** :
+- Cliniques cellulaires Nexus BioSyn (infrastructure) — Réseau de cliniques de thérapies cellulaires adaptatives, symbole de la santé hybride latino-américaine
+
+*Sources attestées : nexus_biosyn_reference*
+
+#### Helsinki — sous [[corridor_arctique_nordique]]
+
+*ville — niveau 2 — statut : stable*
+
+**Origine réelle (2026)** : Helsinki, Finlande
+
+**Transition** : 2060-2098
+
+Ville nordique d'où opère Leena Väinälä — philosophe et architecte institutionnelle dont les chartes de gouvernance des communs numériques circulent en quarante-deux langues. En 2098, Helsinki est un nœud de production intellectuelle alternative dans le Corridor Arctique Nordique, à l'interface entre la logique para-étatique de l'ALN et les expériences de gouvernance participative portées par des figures comme Väinälä. Siège possible d'un nœud de diffusion des communs numériques.
+
+**Tensions internes** : Tension entre la reconnaissance institutionnelle des chartes de Väinälä (adoptées symboliquement, contournées opérationnellement) et leur application réelle. Pression des régulateurs sur les architectures numériques décentralisées opérant depuis la ville.
+
+**Lieux emblématiques** :
+- Réseau Väinälä (infrastructure) — Nœud de diffusion des chartes de gouvernance des communs numériques en quarante-deux langues
+
+**Alliés** : tampere_communs_territoriaux
+
+*Sources attestées : leena_vainala_reference*
+
+#### Kinshasa — sous [[union_africaine_resilience]]
+
+*ville — niveau 2 — statut : emergent*
+
+**Origine réelle (2026)** : Kinshasa, République Démocratique du Congo
+
+**Transition** : 2071-2098
+
+Épicentre des Accords hydriques sur la redistribution des eaux du bassin du Congo (2071-2089), Kinshasa est le nœud institutionnel central de l'Union Africaine de Résilience Territoriale en matière de gouvernance hydrique. Siège des négociations menées par Amara Diallo-Nkosi, la ville incarne la tension entre souveraineté des ressources et pression des consortiums miniers du bassin congolais.
+
+**Tensions internes** : Sécheresse de 2096 menaçant les Accords de Kinshasa, plusieurs États invoquant des clauses d'urgence nationale. Pression des consortiums d'extraction minière sur la souveraineté des ressources hydriques et minières du bassin.
+
+**Lieux emblématiques** :
+- Commission Hydrique de l'UA (infrastructure) — Organe de régulation et de médiation hydrique entre États membres africains
+
+**Alliés** : nairobi_crrc
+
+*Sources attestées : amara_diallo_nkosi_reference, commission_hydrique_de_l_union_africaine_reference, consortiums_d_extraction_miniere_du_bassin_congolais_reference*
+
+#### Lyon-Métropole — sous [[europe_occidentale_reconstructee]]
+
+*ville — niveau 2 — statut : stable*
+
+**Origine réelle (2026)** : Lyon, France
+
+**Transition** : 2068-2098 — voir [[arrestation_chris_van_derburgh_reference]]
+
+Ville française ordinaire de l'Europe Occidentale Reconstruite, lieu de l'arrestation de Chris van Derburgh en juin 2078 pour possession non déclarée de technologies sensibles pré-crise. Symbole des tensions entre la réglementation croissante des technologies (loi sur le Registre des Technologies Sensibles de 2068) et la liberté personnelle dans un monde qui accumule des tensions sans les résoudre.
+
+**Tensions internes** : Frictions civiles autour de la réglementation technologique croissante. Population ordinaire confrontée à des obligations légales complexes héritées de décennies de législation cumulative.
+
+*Sources attestées : arrestation_chris_van_derburgh_reference*
+
+#### Massif Central — sous [[europe_occidentale_reconstructee]]
+
+*region — niveau 2 — statut : en_declin*
+
+**Origine réelle (2026)** : Massif Central, France
+
+**Transition** : 2040-2098
+
+Zone semi-aride intégrée aux bassins Terrafond, marges de la transition agroécologique européenne. Le Massif Central incarne les franges les plus vulnérables du Réseau Terrafond — territoires où la résilience écologique est la plus incertaine et où la présence du Mouvement des Racines Vivantes est la plus significative dans les zones de transition entre asphalte et terres remaniées.
+
+**Tensions internes** : Saisons de plus en plus imprévisibles menaçant les rendements. Jeunes attirés par les primes d'automatisation urbaine, fragilisant la main-d'œuvre des coopératives. Présence du Mouvement des Racines Vivantes en tension entre récupération institutionnelle et maintien de l'intégrité.
+
+*Sources attestées : cooperative_terrafond_reference, mouvement_racines_vivantes_reference*
+
+#### Mourmansk — sous [[corridor_arctique_nordique]]
+
+*ville — niveau 2 — statut : stable*
+
+**Origine réelle (2026)** : Mourmansk, Arctique russe (Mourmansk)
+
+**Transition** : 2031-2098
+
+Port de transit arctique majeur, familier aux dockers opérant sous autorité ALN. Mourmansk incarne la zone de contact entre le Bloc Eurasien Central et le Corridor Arctique Nordique — ville formellement sous juridiction russe mais opérationnellement intégrée aux flux logistiques de l'ALN, ce qui en fait un nœud de tension géopolitique permanent.
+
+**Tensions internes** : Ambiguïté juridictionnelle entre autorité ALN et souveraineté formelle de la Sibérie Fédérale/Bloc Eurasien Central. Contestation des accords de transit par les structures eurasiatiques.
+
+**Rivaux** : siberie_federale
+
+*Sources attestées : armada_logistique_nordique_reference*
+
+#### Nairobi — sous [[institutions_multilaterales_survivantes]]
+
+*ville — niveau 2 — statut : en_declin*
+
+**Origine réelle (2026)** : Nairobi
+
+**Transition** : 2061-2098
+
+Siège du CRRC (Conseil de Régulation des Ressources Critiques, issu des accords de 2061), ville-pivot des négociations mondiales sur les ressources stratégiques — lithium, eau dessalée, hydrogène vert, terres rares. Son bâtiment imposant aux vitres légèrement teintées de poussière sahélienne est le théâtre de négociations que les grandes puissances honorent le mardi et contournent le jeudi, mais vers lequel tous les ministres se tournent lors des crises de couloirs de transport ou de sécheresse.
+
+**Tensions internes** : Réforme du droit de veto bloquée depuis 2089, paralysant toute décision contraignante sur les réserves d'eau fossile d'Afrique subsaharienne. Mouvement interne 'Nairobi 2.0' porté par de jeunes délégués du Sud global. Supplantation progressive par des algorithmes privés de gestion des ressources.
+
+**Lieux emblématiques** :
+- Siège du CRRC (infrastructure) — Bâtiment aux vitres teintées de brun, épicentre des négociations sur les ressources critiques mondiales
+
+**Alliés** : union_africaine_resilience
+
+*Sources attestées : conseil_regulation_ressources_reference, amara_diallo_nkosi_reference*
+
+#### Nuuk-Capitale — sous [[corridor_arctique_nordique]]
+
+*ville — niveau 2 — statut : emergent*
+
+**Origine réelle (2026)** : Nuuk, Groenland
+
+**Transition** : 2038-2098
+
+Capitale du Groenland indépendant depuis 2038, siège du Fonds Souverain Kalaallit Nunaat (KNSF) dont la tour de verre domine le fjord. En 2098, Nuuk-Capitale est le centre de gravité géopolitique d'une puissance arctique émergente qui joue méthodiquement les blocs eurasiatique, indo-pacifique et nord-américain les uns contre les autres pour maximiser la rente tirée de l'extraction de terres rares, lithium et uranium rendus accessibles par la fonte quasi-totale de l'inlandsis.
+
+**Tensions internes** : Fracture entre technocratie du fonds perçue comme déconnectée et collectifs inuit réclamant une redistribution directe de la rente. Débat existentiel sur la contribution au fonds climatique mondial versus sanctuarisation de la souveraineté fragile.
+
+**Lieux emblématiques** :
+- Tour KNSF (infrastructure) — Siège du Fonds Souverain Kalaallit Nunaat, au bord du fjord, symbole de la souveraineté arctique retrouvée
+- Autorité de Passage Arctique (APA) (infrastructure) — Siège à Ilulissat, co-gouvernance hybride État/autochtones des corridors maritimes arctiques
+
+**Rivaux** : siberie_federale, bloc_eurasien_central
+
+*Sources attestées : kalaallit_nunaat_sovereign_fund_reference, arctic_passage_authority_reference, collectifs_de_peche_inuit_et_sami_reference*
+
+#### Ouagadougou — sous [[union_africaine_resilience]]
+
+*ville — niveau 2 — statut : emergent*
+
+**Origine réelle (2026)** : Ouagadougou, Burkina Faso
+
+**Transition** : 2060-2098
+
+Ville sahélienne abritant l'Institut Polytechnique de Ouagadougou, formation des technocrates africains de la transition. Pôle de formation technique et de production de savoirs spécialisés sur les enjeux hydriques et agroécologiques du Sahel, où Amara Diallo-Nkosi a elle-même été formée. Nœud entre la dynamique institutionnelle de l'UA et les réalités des coopératives agro-sahéliennes.
+
+**Tensions internes** : Tension entre la nouvelle génération d'ingénieurs formés à l'IA prédictive et les approches plus humanistes défendues par des figures comme Diallo-Nkosi. Pression des sécheresses sahéliennes sur les ressources locales.
+
+**Lieux emblématiques** :
+- Institut Polytechnique de Ouagadougou (infrastructure) — Centre de formation des technocrates africains de la transition énergétique et hydrique
+
+*Sources attestées : amara_diallo_nkosi_reference, institut_polytechnique_de_ouagadougou_reference*
+
+#### Archipels Flottants du Pacifique Sud — sous [[indo_pacifique_emergent]]
+
+*territoire_autonome — niveau 2 — statut : emergent*
+
+**Origine réelle (2026)** : Tuvalu, Kiribati, Îles Marshall
+
+**Transition** : 2040-2098
+
+Ensemble des États-archipels et communautés insulaires du Pacifique Sud dont les territoires terrestres sont partiellement ou totalement submergés, fédérés dans l'ASMPI (Alliance des Souverainetés Maritimes du Pacifique Insulaire). En 2098, plus de 340 000 personnes vivent sur des archipels flottants, mégastructures portuaires et navires-cités — le Protocole de Carthagène de 2091 ayant inscrit le principe de 'souveraineté populationnelle continue', dissociant citoyenneté et territoire physique.
+
+**Tensions internes** : Fracture entre 'nostalgistes de la terre ferme' espérant un retour territorial via géo-ingénierie côtière et 'souverainistes fluides' revendiquant la condition nomade maritime comme identité accomplie. Communautés accueillies par Auckland ou Singapour développant des loyautés hybrides diluant leur engagement collectif.
+
+**Lieux emblématiques** :
+- Mégastructures portuaires ASMPI (infrastructure) — Plateformes flottantes et navires-cités accueillant les populations déplacées des atolls submergés
+
+**Alliés** : institutions_multilaterales_survivantes
+
+*Sources attestées : pacifique_sud_resilience_network_reference*
+
+#### Plaines Ibériques Réhumidifiées — sous [[europe_occidentale_reconstructee]]
+
+*region — niveau 2 — statut : stable*
+
+**Origine réelle (2026)** : Espagne, Portugal
+
+**Transition** : 2040-2080
+
+Territoire ibérique intégré aux bassins du Réseau Terrafond après les grands programmes de réhumidification des années 2040-2070, marqueur de la reconstruction écologique européenne. Ces plaines couvrent une part significative des 47 bassins hydrologiques de Terrafond et constituent une zone tampon critique entre agroécologie viable et marges semi-arides menacées par les crises climatiques.
+
+**Tensions internes** : Tension entre les coopératives agroécologiques locales et les consortiums d'agriculture verticale algorithmique cherchant à intégrer ces territoires productifs.
+
+*Sources attestées : cooperative_terrafond_reference, cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference*
+
+#### São Paulo — sous [[ameriques_multipolaires]]
+
+*ville — niveau 2 — statut : emergent*
+
+**Origine réelle (2026)** : São Paulo, Brésil
+
+**Transition** : 2040-2098
+
+Métropole-monde accueillant un siège rotationnel de l'Internationale des Travailleurs Augmentés (ITA), en rotation triennale avec Séoul et Nairobi. En 2098, São Paulo est l'une des principales mégapoles de l'hémisphère sud, nœud du travail augmenté et acteur économique de premier plan dans un continent américain fragmenté.
+
+**Tensions internes** : Tension entre la dynamique de la métropole-monde et les inégalités structurelles héritées. Pression du Front Souverainiste des Ressources sur les accords économiques encadrant la ville.
+
+*Sources attestées : internationale_travailleurs_augmentes_reference*
+
+#### Séoul — sous [[indo_pacifique_emergent]]
+
+*ville — niveau 2 — statut : emergent*
+
+**Origine réelle (2026)** : Séoul, Corée du Sud
+
+**Transition** : 2040-2098
+
+Siège rotationnel de l'Internationale des Travailleurs Augmentés (ITA), centre du travail augmenté mondial en rotation triennale avec São Paulo et Nairobi. En 2098, Séoul est l'une des métropoles de référence de l'économie du travail hybridé, abritant une concentration significative de travailleurs porteurs d'implants cognitifs et d'exosquelettes professionnels.
+
+**Tensions internes** : Tension entre faction minimaliste et désaugmenteurs au sein de l'ITA lors des rotations sièges. Pression des consortiums industriels sur les travailleurs augmentés locaux.
+
+*Sources attestées : internationale_travailleurs_augmentes_reference*
+
+#### Sertão — Nordeste Brésilien — sous [[ameriques_multipolaires]]
+
+*region — niveau 2 — statut : emergent*
+
+**Origine réelle (2026)** : Piauí, Brésil, Paraguay (Chaco)
+
+**Transition** : 2040-2098
+
+Territoire semi-aride du Nordeste brésilien et des zones sèches adjacentes d'Amérique du Sud, berceau de la Frente Sertão Livre — réseau fédéré de plus de deux cents nœuds communautaires gérant collectivement eau pluviale captée, énergie solaire micro-distribuée et semences xérophytes. En 2098, le sertão libre produit et s'alimente sans dépendre des consortiums opaques qui contrôlent l'eau des mégapoles littorales.
+
+**Tensions internes** : Fracture interne entre nœuds acceptant des financements pour numériser leur gestion hydrique et ceux y voyant une porte vers la dépendance technologique. Reconnaissance juridique de terres collectives crée un précédent séduisant mais exposant les communautés aux fonds fonciers climatiques prédateurs.
+
+**Lieux emblématiques** :
+- Nœuds Frente Sertão Livre (infrastructure) — Réseau de communautés autonomes gérant eau, énergie et semences sans dépendance institutionnelle
+
+**Alliés** : valparaiso_fct
+
+*Sources attestées : frente_sert_o_livre_reference*
+
+#### Sibérie Fédérale — sous [[bloc_eurasien_central]]
+
+*territoire_autonome — niveau 2 — statut : fragmenté*
+
+**Origine réelle (2026)** : Sibérie (entité fédérale russe)
+
+**Transition** : 2045-2098
+
+Entité fédérale revendiquant des zones d'exclusion maritime arctiques en contestation avec l'ALN et d'autres puissances nordiques. Riche en ressources critiques (lithium, terres rares), la Sibérie Fédérale est à la fois un pilier économique du Bloc Eurasien Central et une source de friction interne, ses dirigeants cherchant à maximiser leur autonomie dans la gestion des ressources arctiques et sibériennes.
+
+**Tensions internes** : Contestation des zones maritimes arctiques avec le Corridor Arctique Nordique. Tension avec le cartel des terres rares d'Asie centrale sur le partage des bénéfices d'extraction.
+
+**Rivaux** : corridor_arctique_nordique
+
+*Sources attestées : siberie_federale_reference, cartel_des_terres_rares_d_asie_centrale_reference*
+
+#### Singapour-Est — sous [[indo_pacifique_emergent]]
+
+*ville — niveau 2 — statut : dominant*
+
+**Origine réelle (2026)** : Singapour
+
+**Transition** : 2040-2098
+
+Nœud médiatique et géopolitique régional, base du correspondant Raj Mehta pour l'Agence Mondiale de Presse. En 2098, Singapour-Est est l'une des métropoles pivots de l'Arc Indo-Pacifique — carrefour des flux d'information, de logistique et de finance régionale. Les traders de Singapour sont aussi familiers aux estampilles de l'ALN que les dockers de Mourmansk, soulignant son rôle de nœud d'interconnexion globale.
+
+**Tensions internes** : Pression des IA éditoriales modifiant le travail journalistique (cas Mehta). Tensions autour du contrôle des flux d'information par les plateformes dominantes versus les médias indépendants.
+
+*Sources attestées : le_temoin_reference, armada_logistique_nordique_reference*
+
+#### Sommets Itinérants du Pacte des Souverains — sous [[pacte_des_souverains]]
+
+*site_strategique — niveau 2 — statut : stable*
+
+**Origine réelle (2026)** : Divers États-nations souverainistes post-pandémiques (composition non précisée)
+
+**Transition** : 2030-2098 — voir [[conflit_israel_iran_2026_reference]]
+
+Dispositif délibératoire sans siège fixe du Pacte des Souverains — les sommets se tiennent dans des lieux changeants, reflet de la logique souverainiste fondatrice. Cette itinérance constitutive garantit l'absence de cible fixe institutionnelle tout en maintenant la fiction d'une gouvernance collective entre quatorze États et une dizaine de territoires associés opérant via des pactes bilatéraux militaro-énergétiques.
+
+**Tensions internes** : Impossibilité de tracer une responsabilité institutionnelle claire face aux crises. Certains membres cherchant à passer des accords parallèles avec les mégapoles globales court-circuitent la Charte de Réciprocité Stricte.
+
+**Rivaux** : institutions_multilaterales_survivantes
+
+*Sources attestées : alliance_blocs_souverains_reference*
+
+#### Tampere — sous [[corridor_arctique_nordique]]
+
+*ville — niveau 2 — statut : stable*
+
+**Origine réelle (2026)** : Tampere, Finlande
+
+**Transition** : 2060-2098
+
+Siège tournant (ce trimestre) de la Fédération des Communs Territoriaux, représentant l'axe nordique alternatif à la logique para-étatique de l'ALN. Tampere incarne la coexistence tendue dans le Corridor Arctique Nordique entre la gouvernance logistique dominante de l'ALN et les structures de communs territoriaux qui résistent à l'absorption dans les logiques de marché pure.
+
+**Tensions internes** : Tension entre la FCT qui y siège et les dynamiques économiques de l'ALN dominant la région. Pression sur les communs locaux par les opérateurs énergétiques privés.
+
+*Sources attestées : federation_communs_territoriaux_reference*
+
+#### Tbilissi — sous [[bloc_eurasien_central]]
+
+*ville — niveau 2 — statut : stable*
+
+**Origine réelle (2026)** : Tbilissi, Géorgie
+
+**Transition** : 2034-2098
+
+Ville de la marge eurasiatique servant de relais pour la préservation des savoirs via un nœud Mnemos documenté — installé dans les sous-sols d'une ancienne école désaffectée. En 2098, Tbilissi incarne la position instable des villes périphériques du Bloc Eurasien Central : formellement intégrée aux structures régionales, mais culturellement et opérationnellement à mi-chemin entre blocs, servant de point de passage pour des flux d'information alternatifs.
+
+**Tensions internes** : Pression des régulateurs de l'Union Eurasiatique sur les données critiques transitant par les nœuds Mnemos. Statut ambigu du nœud local — toléré par les autorités locales mais potentiellement menacé par des régulations informationnelles plus strictes.
+
+**Lieux emblématiques** :
+- Nœud Mnemos de Tbilissi (infrastructure) — Boîtier gris de la taille d'une valise dans une école désaffectée — l'un des 14 000 nœuds du réseau mondial de préservation des savoirs
+
+*Sources attestées : reseau_mnemos_reference, regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference*
+
+#### Tromsø — sous [[corridor_arctique_nordique]]
+
+*ville — niveau 2 — statut : dominant*
+
+**Origine réelle (2026)** : Tromsø, Norvège
+
+**Transition** : 2031-2098
+
+Siège de l'Armada Logistique Nordique (ALN), dont les tours de verre gris-acier dominent la ville. En 2098, Tromsø est le centre névralgique des corridors arctiques déglaciés — le lieu où sont arbitrées les tensions entre blocs, négociés les péages maritimes et gérées les flottes de brise-glaces autonomes estampillées du triple anneau bleu-blanc-argent. Moins une ville qu'un terminal de commandement para-étatique.
+
+**Tensions internes** : Friction croissante entre les IA de routage autonome de l'ALN et les États nordiques actionnaires qui craignent de perdre le contrôle d'un actif devenu trop critique. Pression d'un consortium logistique asiatique cherchant à contourner le monopole arctique.
+
+**Lieux emblématiques** :
+- Siège de l'ALN (infrastructure) — Tours de verre gris-acier, centre de commandement du para-État logistique arctique
+
+**Rivaux** : siberie_federale
+
+*Sources attestées : armada_logistique_nordique_reference*
+
+#### Valparaíso — sous [[ameriques_multipolaires]]
+
+*ville — niveau 2 — statut : stable*
+
+**Origine réelle (2026)** : Valparaíso, Chili
+
+**Transition** : 2060-2098
+
+Siège tournant (cette saison) de la Fédération des Communs Territoriaux, incarnant l'axe sudaméricain de cette architecture institutionnelle intermédiaire. Valparaíso accueille les délégués élus dans des assemblées de bassin houleuses qui négocient des protocoles d'urgence climatique que les gouvernements nationaux n'arrivent plus à imposer seuls.
+
+**Tensions internes** : Pression du Front Souverainiste des Ressources sur les décisions de la FCT concernant l'extraction des ressources. Membres dissidents quittant le réseau pour rejoindre des blocs mégapolitains plus puissants.
+
+*Sources attestées : federation_communs_territoriaux_reference*
+
+#### Zones Grises Sahéliennes Centrales — sous [[zones_grises_globales]]
+
+*zone_sinistree — niveau 2 — statut : fragmenté*
+
+**Origine réelle (2026)** : Mali, Niger, Burkina Faso
+
+**Transition** : 2040-2098
+
+Espaces hors-cadre institutionnel effectif au cœur du Sahel, distincts des couloirs de transport formels du Bloc Sahélien Autonome, investis par le Mouvement des Racines Vivantes et les milices concurrentes des droits de passage. Ces zones sont le terrain d'opération privilégié des agences de sécurité régionales de normalisation et le lieu où les savoirs écologiques locaux sont le plus exposés à la captation par des plateformes d'IA agronomique.
+
+**Tensions internes** : Compétition violente entre milices et agences de normalisation pour le contrôle des nœuds de mobilité. Captation des savoirs du Mouvement des Racines Vivantes par des plateformes IA. Pression migratoire climatique croissante depuis les zones désertifiées.
+
+**Alliés** : bloc_sahelien_autonome
+
+*Sources attestées : mouvement_racines_vivantes_reference, milices_concurrentes_des_droits_de_passage_reference, agences_de_securite_regionales_de_normalisation_des_zones_grises_reference*
+
+#### Zones Tampons Climatiques Européennes — sous [[zones_grises_globales]]
+
+*zone_sinistree — niveau 2 — statut : fragmenté*
+
+**Origine réelle (2026)** : France, Espagne, Italie
+
+**Transition** : 2040-2098
+
+Espaces de transition écologique aux marges de l'Europe Occidentale Reconstruite, gérés partiellement par le Réseau Terrafond et investis par le Mouvement des Racines Vivantes. Ces zones tampons accueillent des réfugiés climatiques dont l'afflux dépasse la capacité d'absorption du modèle du suffisant défendu par Terrafond, créant une pression démographique structurelle sur des territoires de transition écologique fragiles.
+
+**Tensions internes** : Pression démographique des réfugiés climatiques. Résistance du Collectif Nuit Jaune aux mécanismes de relocalisation forcée. Tension entre le Mouvement des Racines Vivantes cherchant à maintenir son intégrité et les municipalités cherchant à le récupérer pour leur image.
+
+**Alliés** : massif_central_terrafond
+
+*Sources attestées : cooperative_terrafond_reference, mouvement_racines_vivantes_reference, collectif_nuit_jaune_reference*
+
+##### Bassin du Congo — sous [[kinshasa_accords_hydriques]]
+
+*region — niveau 3 — statut : fragmenté*
+
+**Origine réelle (2026)** : République Démocratique du Congo, République du Congo
+
+**Transition** : 2071-2098
+
+Zone stratégique objet des Accords de Kinshasa de 2071-2089 sur la redistribution des eaux, soumise en 2098 à la pression croissante des consortiums d'extraction minière. Le bassin concentre des ressources critiques mondiales (minerais, eau, biodiversité) qui en font l'enjeu principal de tension entre la souveraineté africaine défendue par Amara Diallo-Nkosi et les logiques extractivistes des acteurs économiques transnationaux.
+
+**Tensions internes** : Sécheresse de 2096 fragilisant les Accords hydriques. Fuite de données du réseau de capteurs d'Amara Diallo-Nkosi exploitée par un consortium minier pour anticiper les décisions d'allocation. Pression des consortiums d'extraction sur la clause de 'l'usage vital' de 2089.
+
+*Sources attestées : amara_diallo_nkosi_reference, consortiums_d_extraction_miniere_du_bassin_congolais_reference, commission_hydrique_de_l_union_africaine_reference*
+
+##### Tours Helios — sous [[bruxelles_nouveau]]
+
+*infrastructure — niveau 3 — statut : dominant*
+
+**Origine réelle (2026)** : Bruxelles, Belgique
+
+**Transition** : 2040-2070
+
+Siège opérationnel du Consortium Helios à Bruxelles-Nouveau, dont les tours de verre fumé dominent la skyline reconstruite. Centre de commandement énergétique mondial privé où les dirigeants reçoivent des chefs d'État plutôt que de donner des conférences de presse, et où les tarifs énergétiques planétaires sont négociés plutôt que publiés. En 2098, symbole de la privatisation silencieuse des infrastructures énergétiques mondiales.
+
+**Tensions internes** : Faction interne plaidant pour une mutualisation partielle face au conseil des actionnaires résistant farouchement. Enquêtes journalistiques sur les fuites du système de tarification algorithmique menaçant la façade de neutralité.
+
+*Sources attestées : consortium_helios_reference*
+
+##### Genève — Conseil des Droits Biosociaux — sous [[geneve_lac_retreite]]
+
+*infrastructure — niveau 3 — statut : en_declin*
+
+**Origine réelle (2026)** : Genève, Suisse
+
+**Transition** : 2050-2098
+
+Instance d'arbitrage sur les pratiques biotechnologiques et leurs impacts sociaux, siégeant à Genève-Lac-Retraité en parallèle de l'AMSC. En 2098, le Conseil de Genève pour les droits biosociaux constitue le principal cadre institutionnel de légitimation ou de contestation des pratiques de Nexus BioSyn et des acteurs de l'augmentation corporelle — un espace où les chartes de Leena Väinälä sont adoptées symboliquement et contournées opérationnellement.
+
+**Tensions internes** : Légitimité contestée face aux acteurs biotechnologiques privés qui opèrent plus vite que les cycles de délibération institutionnelle. Pression du Consortium Helios et de Nexus BioSyn pour limiter le périmètre d'arbitrage du Conseil.
+
+**Alliés** : geneve_lac_retreite
+
+*Sources attestées : conseil_de_geneve_pour_les_droits_biosociaux_reference, leena_vainala_reference*
+
+##### Ilulissat — sous [[nuuk_capitale_groenland]]
+
+*ville — niveau 3 — statut : stable*
+
+**Origine réelle (2026)** : Ilulissat, Groenland
+
+**Transition** : 2040-2098
+
+Siège de l'Autorité de Passage Arctique (APA), institution de co-gouvernance des corridors maritimes arctiques rendus navigables toute l'année par le dérèglement climatique. Ville dont les glaciers fondants ont précisément rendu l'institution nécessaire — treize États riverains y siègent à parité formelle avec les représentants des nations Inuit, Sami, Yupik et Nenets dans un Conseil de Gouvernance à double chambre.
+
+**Tensions internes** : Reclassification progressive des décisions de 'logistiques' soustrait des pans entiers de gouvernance au droit de veto autochtone. Fonds de Compensation Écologique accusé d'être capté à 70% par des projets bénéficiant aux États membres plutôt qu'aux communautés riveraines.
+
+**Lieux emblématiques** :
+- Siège de l'APA (infrastructure) — Bâtiment en bois lamellé aux façades de granit gris, centre de co-gouvernance arctique autochtones-États
+
+**Rivaux** : siberie_federale
+
+*Sources attestées : arctic_passage_authority_reference, collectifs_de_peche_inuit_et_sami_reference*
+
+##### Centre de Contrôle Orbital de Kourou — sous [[bruxelles_nouveau]]
+
+*infrastructure — niveau 3 — statut : dominant*
+
+**Origine réelle (2026)** : Kourou, Guyane française
+
+**Transition** : 2040-2098
+
+Extension opérationnelle spatiale du Consortium Helios, gérant depuis Kourou le contrôle des satellites d'énergie solaire orbitale dont dépend l'approvisionnement de plusieurs continents. Nœud critique entre l'architecture terrestre de Bruxelles-Nouveau et les infrastructures orbitales qui constituent le cœur technologique du modèle économique d'Helios — une dépendance qui rend le site stratégiquement vulnérable.
+
+**Tensions internes** : Dépendance orbitale créant un point de vulnérabilité unique pour l'ensemble du système énergétique mondial piloté par Helios. Consortiums concurrents cherchant à développer leurs propres capacités orbitales.
+
+*Sources attestées : consortium_helios_reference*
+
+##### Nairobi — Siège Rotatif ITA — sous [[nairobi_crrc]]
+
+*infrastructure — niveau 3 — statut : emergent*
+
+**Origine réelle (2026)** : Nairobi, Kenya
+
+**Transition** : 2040-2098
+
+Troisième pôle de rotation triennale du secrétariat général de l'Internationale des Travailleurs Augmentés (ITA), aux côtés de São Paulo et Séoul. La présence de l'ITA à Nairobi inscrit la capitale kényane à l'intersection des dynamiques institutionnelles africaines (CRRC, AMSC) et des tensions mondiales autour du travail hybridé — faisant de la ville un nœud de conflits de légitimité entre technocratie et représentation ouvrière.
+
+**Tensions internes** : Tension entre le cadre formel du CRRC dominant la ville et la logique syndicale de l'ITA. Pression de la scission interne ITA entre minimalistes et désaugmenteurs lors des rotations.
+
+**Alliés** : seoul_ita, sao_paulo_ita
+
+*Sources attestées : internationale_travailleurs_augmentes_reference*
+
+##### Nairobi — Cliniques Nexus BioSyn — sous [[nairobi_crrc]]
+
+*infrastructure — niveau 3 — statut : stable*
+
+**Origine réelle (2026)** : Nairobi, Kenya
+
+**Transition** : 2050-2098
+
+Réseau de cliniques cellulaires Nexus BioSyn implanté à Nairobi, constituant avec le CRRC l'une des deux présences institutionnelles majeures de la ville dans le système-monde de 2098. Ces cliniques incarnent la pénétration des infrastructures biologiques de Nexus BioSyn dans les systèmes de santé africains — une 'féodalité moléculaire' discrète mais structurante, parallèle à celle observée à Guadalajara ou dans le delta du Mékong.
+
+**Tensions internes** : Tensions entre l'accès aux thérapies cellulaires adaptatives et les logiques de dépendance contractuelle imposées par Nexus BioSyn. Mouvements locaux de médecine alternative contestent le monopole.
+
+*Sources attestées : nexus_biosyn_reference*
+
+##### São Paulo — Périphéries et SPAAR — sous [[sao_paulo_ita]]
+
+*infrastructure — niveau 3 — statut : fragmenté*
+
+**Origine réelle (2026)** : São Paulo, Brésil
+
+**Transition** : 2041-2098
+
+Infrastructure de gouvernance algorithmique invisible et omniprésente orchestrant en temps réel l'allocation de l'eau, de l'énergie, du logement et de la mobilité pour les 32 millions d'habitants de la mégapole pauliste. Né d'un partenariat entre municipalité, consortiums financiers et plateformes IA globales, le SPAAR s'est progressivement autonomisé au point que ses décisions sont devenues irrecevables en appel administratif ordinaire — et ses logs internes révèlent des inégalités structurelles aux dépens des quartiers périphériques à majorité noire et pauvre.
+
+**Tensions internes** : Coalition 'Dados Abertos SP' réclamant une loi d'accès forcé bloquée au niveau fédéral. NexCore proposant une délégation totale qui transférerait de facto la gouvernance de l'eau pauliste à un acteur privé transnational. Micro-réseaux communautaires périphériques que le SPAAR tente alternativement de réintégrer ou d'étouffer.
+
+**Lieux emblématiques** :
+- Centre de Pilotage Metropolitano de Pinheiros (infrastructure) — Sous-sols climatisés hébergeant le SPAAR — cerveau algorithmique contesté de la mégapole pauliste
+- Quartiers périphériques (Capão Redondo) (region) — Zone type recevant systématiquement 12-18% de ressources en moins en période de tension selon les logs SPAAR
+
+*Sources attestées : rede_paulista_de_distribuic_o_algor_tmica_reference*
+
+##### Singapour-Est — Nœud NexCore — sous [[singapour_est]]
+
+*infrastructure — niveau 3 — statut : dominant*
+
+**Origine réelle (2026)** : Singapour
+
+**Transition** : 2050-2098
+
+Concentration de data centers et nœuds de calcul géothermiques de NexCore GIG dans la mégapole singapourienne, constituant l'un des nœuds critiques du réseau nerveux numérique mondial. Ses algorithmes de routage décident milliseconde après milliseconde quelles données climatiques arrivent en premier sur les bureaux ministériels — une infrastructure formellement indispensable aux États mais juridiquement privée, conférant à NexCore un pouvoir de négociation asymétrique.
+
+**Tensions internes** : Renégociation des contrats d'infrastructure après découverte de clauses d'accès aux données embarquées. 'Dossier Latence' suggérant une dégradation délibérée des performances réseau dans des zones jugées non rentables.
+
+**Lieux emblématiques** :
+- Data centers NexCore Singapour (infrastructure) — Nœuds géothermiques de l'épine dorsale numérique mondiale, refroidi et stratégiquement positionné
+
+*Sources attestées : nexcore_reference, le_temoin_reference*
+
+
+## Notes / zones à enrichir
+_Espace libre, jamais lu par les scripts — ajoute ici tes idées, brouillons, zones à
+créer manuellement._

@@ -1,0 +1,84 @@
+---
+name: Les Forges du Commun — Proclamation des Zones Libres de l'Algorithme
+type: event_instance
+slug: communes_rust_belt_zones_libres_breakdown
+archetype: communes_rust_belt_zones_libres
+scenario: breakdown
+localisation:
+  zone: communes_rust_belt
+  lieu: Communes Libres du Rust Belt (Detroit, Cleveland, Pittsburgh)
+  type_lieu: region
+type_evenement: political_social
+portee: regionale
+date: 2061
+date_label: automne 2061
+impossible: false
+custom: true
+description: >
+  Automne 2061. Dans les carcasses rouillées des aciéries de Pittsburgh et des usines automobiles de Detroit, les Communes Libres du Rust Belt hissent leurs bannières sans code-barre et proclament les premières Zones Libres de l'Algorithme sur le sol de l'ancienne Amérique industrielle. Ce n'est pas la révolution triomphante que leurs fondateurs avaient imaginée — c'est une proclamation dans le silence d'un État qui n'a plus les moyens de répondre. Des milices contractuelles encerclent les périmètres sans donner l'assaut, attendant des ordres qui ne viennent pas des capitales fragmentées. Les Communes assemblent des collectifs de réparation énergétique, des brigades médicales et des archivistes itinérants dans une fédération de survie qui ressemble moins à une utopie qu'à une lifeboat collective au milieu du naufrage.
+consequences: >
+  Les Zones Libres deviennent un modèle de référence ambigu pour les communautés post-industrielles de l'arc nord-américain — ni victoire ni défaite, mais un précédent de sécession organisationnelle qui essaime dans d'autres territoires abandonnés. À long terme, leur survie dépend de la capacité à maintenir des flux énergétiques autonomes et à négocier des corridors d'approvisionnement avec les cartels logistiques régionaux, transformant l'idéal anti-algorithme en pragmatisme de survie. L'absence de réponse coercitive coordonnée confirme et accélère la fragmentation de la gouvernance nord-américaine.
+realisation: >
+  Dans un contexte d'effondrement institutionnel avancé, les Communes Libres du Rust Belt n'ont plus besoin de défier un appareil sécuritaire centralisé : celui-ci s'est largement délité. L'occupation des anciens sites industriels de Detroit, Cleveland et Pittsburgh se fait dans un vide de pouvoir partiel, face à des milices contractuelles fragmentées et des enclaves corporatives désorganisées. La proclamation des zones libres de l'algorithme prend une dimension différente — moins un acte de résistance héroïque qu'une sécession de fait dans un monde où personne n'a plus vraiment les moyens de répondre. Les Communes sécurisent les ruines industrielles non pas par victoire militaire mais par persistance et organisation communautaire, tandis que les appareils résiduels de l'ancien bloc nord-américain se contentent d'encercler sans pouvoir écraser.
+impact_sur_variables:
+  - variable: geopolitique_conflits
+    delta_level: 8
+    duree: 15
+    polarite: -1
+  - variable: valeurs_culture_tempo_sociale
+    delta_level: 12
+    duree: 25
+    polarite: 1
+  - variable: gouvernance_institutions
+    delta_level: -7
+    duree: 20
+    polarite: -1
+  - variable: organisation_territoires
+    delta_level: 10
+    duree: 30
+    polarite: -1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+    - mouvement_des_communes_du_rust_belt_breakdown
+    - collectifs_de_reparation_energetique_breakdown
+    - brigades_medicales_itinerantes_breakdown
+    - milices_contractuelles_des_anciens_etats_membres_breakdown
+    - enclaves_corporatives_fortifiees_breakdown
+    - cartels_logistiques_regionaux_breakdown
+    - collectifs_de_gardiens_archivistes_itinerants_breakdown
+    - fronts_populistes_anti_technocratiques_breakdown
+note_coherence: Dans un monde de fragmentation avancée (gouvernance à level 20), la proclamation des Zones Libres n'affronte pas un État fort mais un vide de pouvoir — ce qui rend l'événement plus vraisemblable mais aussi plus fragile, cohérent avec la trajectoire de fragmentation rapide du scénario breakdown.
+custom_source: rééquilibrage_geo_2026-06
+date_creation: 2026-06-24
+---
+
+# Les Forges du Commun — Proclamation des Zones Libres de l'Algorithme
+
+## Réalisation dans [[breakdown]]
+Dans un contexte d'effondrement institutionnel avancé, les Communes Libres du Rust Belt n'ont plus besoin de défier un appareil sécuritaire centralisé : celui-ci s'est largement délité. L'occupation des anciens sites industriels de Detroit, Cleveland et Pittsburgh se fait dans un vide de pouvoir partiel, face à des milices contractuelles fragmentées et des enclaves corporatives désorganisées. La proclamation des zones libres de l'algorithme prend une dimension différente — moins un acte de résistance héroïque qu'une sécession de fait dans un monde où personne n'a plus vraiment les moyens de répondre. Les Communes sécurisent les ruines industrielles non pas par victoire militaire mais par persistance et organisation communautaire, tandis que les appareils résiduels de l'ancien bloc nord-américain se contentent d'encercler sans pouvoir écraser.
+
+## Description journalistique
+Automne 2061. Dans les carcasses rouillées des aciéries de Pittsburgh et des usines automobiles de Detroit, les Communes Libres du Rust Belt hissent leurs bannières sans code-barre et proclament les premières Zones Libres de l'Algorithme sur le sol de l'ancienne Amérique industrielle. Ce n'est pas la révolution triomphante que leurs fondateurs avaient imaginée — c'est une proclamation dans le silence d'un État qui n'a plus les moyens de répondre. Des milices contractuelles encerclent les périmètres sans donner l'assaut, attendant des ordres qui ne viennent pas des capitales fragmentées. Les Communes assemblent des collectifs de réparation énergétique, des brigades médicales et des archivistes itinérants dans une fédération de survie qui ressemble moins à une utopie qu'à une lifeboat collective au milieu du naufrage.
+
+## Conséquences
+Les Zones Libres deviennent un modèle de référence ambigu pour les communautés post-industrielles de l'arc nord-américain — ni victoire ni défaite, mais un précédent de sécession organisationnelle qui essaime dans d'autres territoires abandonnés. À long terme, leur survie dépend de la capacité à maintenir des flux énergétiques autonomes et à négocier des corridors d'approvisionnement avec les cartels logistiques régionaux, transformant l'idéal anti-algorithme en pragmatisme de survie. L'absence de réponse coercitive coordonnée confirme et accélère la fragmentation de la gouvernance nord-américaine.
+
+## Impact sur les variables
+- **geopolitique_conflits** : delta -8 sur 15 ans
+- **valeurs_culture_tempo_sociale** : delta +12 sur 25 ans
+- **gouvernance_institutions** : delta +7 sur 20 ans
+- **organisation_territoires** : delta -10 sur 30 ans
+
+## Acteurs impliqués
+- [[mouvement_des_communes_du_rust_belt_breakdown]]
+- [[collectifs_de_reparation_energetique_breakdown]]
+- [[brigades_medicales_itinerantes_breakdown]]
+- [[milices_contractuelles_des_anciens_etats_membres_breakdown]]
+- [[enclaves_corporatives_fortifiees_breakdown]]
+- [[cartels_logistiques_regionaux_breakdown]]
+- [[collectifs_de_gardiens_archivistes_itinerants_breakdown]]
+- [[fronts_populistes_anti_technocratiques_breakdown]]
+
+## Note de cohérence
+Dans un monde de fragmentation avancée (gouvernance à level 20), la proclamation des Zones Libres n'affronte pas un État fort mais un vide de pouvoir — ce qui rend l'événement plus vraisemblable mais aussi plus fragile, cohérent avec la trajectoire de fragmentation rapide du scénario breakdown.

@@ -1,0 +1,106 @@
+---
+name: Direction des Zones Non Prioritaires (DZNP)
+type: instance
+slug: bureau_des_territoires_residuels_reference
+entite: bureau_des_territoires_residuels
+scenario: reference
+localisation:
+  zone: bureau_zones_non_prioritaires
+  lieu: Direction des Zones Non Prioritaires (DZNP), bâtiment modulaire de Genève
+  type_lieu: infrastructure
+
+type_dans_scenario: institution
+
+role_dans_scenario: >
+  Administration fédérale fantôme opérant dans les interstices de la gouvernance hybride de 2098, la DZNP est officiellement chargée de cartographier, classer et archiver les territoires que les États et les mégapoles ont cessé de gouverner activement — zones climatiquement dégradées, bassins démographiquement dépeuplés, couloirs logistiques abandonnés. Dans un monde où les plateformes IA centralisées optimisent l'allocation des ressources et définissent la 'viabilité' territoriale par algorithme, la DZNP est l'organe qui entérine administrativement les verdicts de ces systèmes. Elle ne prend pas de décisions : elle les enregistre. Ce faisant, elle accumule une mémoire institutionnelle unique et terrifiante — l'inventaire précis de ce que le système mondial a choisi de sacrifier, territoire après territoire, population après population.
+
+responsabilites: >
+  La DZNP recense les zones déclarées 'non prioritaires' par les plateformes d'optimisation territoriale et les gouvernements signataires des protocoles de résilience climatique, leur attribue des codes de statut administratif (suspension, gel, transfert, dissolution), et maintient des archives cryptées multi-juridictionnelles contenant les données démographiques, foncières et environnementales de chaque territoire abandonné. Elle coordonne formellement avec les agences de sécurité régionales pour la gestion des transitions, sans jamais alerter les populations concernées.
+
+impact_local: 2
+impact_systemique_global: 4
+
+variables_influencees:
+    - gouvernance_institutions
+    - organisation_territoires
+    - demographie_mobilite_humaine
+    - technologie_information
+
+zone_geographique:
+    - nationale
+    - régionale
+    - globale
+
+zone_systemique:
+    - gouvernance
+    - information
+    - société
+    - infrastructure
+
+alliances:
+    - plateformes_d_optimisation_territoriale_par_ia_reference
+    - agences_de_securite_regionales_de_normalisation_des_zones_grises_reference
+    - bureaux_de_regulation_informationnelle_reference
+    - consortiums_prives_de_gestion_des_donnees_critiques_reference
+    - observatoire_climatique_des_territoires_oct_reference
+
+oppositions:
+    - federation_communs_territoriaux_reference
+    - reseau_des_administrations_locales_rurales_participatives_reference
+    - collectifs_de_journalisme_embarque_reference
+    - reseau_mnemos_reference
+    - voix_du_dehors_reference
+    - ligue_des_municipalites_peripheriques_sous_connectees_reference
+
+type_relation_dominante: dépendance
+
+annee_debut: 2031
+annee_fin: 
+
+etat_temporel: actif
+age_historique: mature
+generation: transition
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Installée dans un bâtiment modulaire de Genève que peu de fonctionnaires peuvent localiser sans un code d'accès interministériel, la Direction des Zones Non Prioritaires emploie environ 340 agents répartis sur quatre fuseaux horaires — la plupart n'ayant jamais mis le pied dans les zones qu'ils archivent. Ses rapports annuels, disponibles en théorie sur requête officielle, arrivent invariablement avec 78 % de leurs pages caviardées. Ce que la presse sait : en 2097, la DZNP a enregistré 1 400 nouvelles 'unités territoriales suspendues', soit une hausse de 23 % sur l'exercice précédent. Ce qu'elle tait : les noms, les visages, les 11 millions de personnes que ces codes représentent. Un ancien agent, sous couverture, l'a décrite comme 'un crématorium de papier — on brûle les vivants à l'encre plutôt qu'au feu'.
+
+signes_distinctifs: >
+  Logo institutionnel minimaliste — un carré gris délimité par un trait pointillé, évoquant une zone hachurée sur une carte. Documents internes imprimés sur papier à filigrane bleu pâle avec la mention 'STATUT TRANSITOIRE — USAGE RESTREINT'. Les agents portent des badges sans photographie, identifiés par numéro de secteur seulement.
+
+tensions_narratives: >
+  La DZNP détient les seules archives consolidées prouvant que des territoires habités ont été délibérément exclus des plans de résilience climatique — une preuve que des coalitions comme la Fédération des Communs Territoriaux ou les réseaux de lanceurs d'alerte cherchent activement à obtenir. En interne, une faction minoritaire d'agents estime que la mission de 'documentation' est devenue complicité active, et envisage des fuites ciblées. Parallèlement, les plateformes IA qui alimentent ses classifications commencent à lui retourner des recommandations que même ses directeurs trouvent intenables — soulèvant la question de qui, au fond, gouverne encore les décisions d'abandon.
+
+date_creation: 2026-06-23
+---
+
+# Direction des Zones Non Prioritaires (DZNP)
+
+## Rôle dans [[reference]]
+Administration fédérale fantôme opérant dans les interstices de la gouvernance hybride de 2098, la DZNP est officiellement chargée de cartographier, classer et archiver les territoires que les États et les mégapoles ont cessé de gouverner activement — zones climatiquement dégradées, bassins démographiquement dépeuplés, couloirs logistiques abandonnés. Dans un monde où les plateformes IA centralisées optimisent l'allocation des ressources et définissent la 'viabilité' territoriale par algorithme, la DZNP est l'organe qui entérine administrativement les verdicts de ces systèmes. Elle ne prend pas de décisions : elle les enregistre. Ce faisant, elle accumule une mémoire institutionnelle unique et terrifiante — l'inventaire précis de ce que le système mondial a choisi de sacrifier, territoire après territoire, population après population.
+
+## Responsabilités
+La DZNP recense les zones déclarées 'non prioritaires' par les plateformes d'optimisation territoriale et les gouvernements signataires des protocoles de résilience climatique, leur attribue des codes de statut administratif (suspension, gel, transfert, dissolution), et maintient des archives cryptées multi-juridictionnelles contenant les données démographiques, foncières et environnementales de chaque territoire abandonné. Elle coordonne formellement avec les agences de sécurité régionales pour la gestion des transitions, sans jamais alerter les populations concernées.
+
+## Variables influencées
+- [[gouvernance_institutions]]
+- [[organisation_territoires]]
+- [[demographie_mobilite_humaine]]
+- [[technologie_information]]
+
+## Relations
+**Alliés** : [[plateformes_d_optimisation_territoriale_par_ia_reference]], [[agences_de_securite_regionales_de_normalisation_des_zones_grises_reference]], [[bureaux_de_regulation_informationnelle_reference]], [[consortiums_prives_de_gestion_des_donnees_critiques_reference]], [[observatoire_climatique_des_territoires_oct_reference]]
+**Opposants** : [[federation_communs_territoriaux_reference]], [[reseau_des_administrations_locales_rurales_participatives_reference]], [[collectifs_de_journalisme_embarque_reference]], [[reseau_mnemos_reference]], [[voix_du_dehors_reference]], [[ligue_des_municipalites_peripheriques_sous_connectees_reference]]
+
+## Description journalistique
+Installée dans un bâtiment modulaire de Genève que peu de fonctionnaires peuvent localiser sans un code d'accès interministériel, la Direction des Zones Non Prioritaires emploie environ 340 agents répartis sur quatre fuseaux horaires — la plupart n'ayant jamais mis le pied dans les zones qu'ils archivent. Ses rapports annuels, disponibles en théorie sur requête officielle, arrivent invariablement avec 78 % de leurs pages caviardées. Ce que la presse sait : en 2097, la DZNP a enregistré 1 400 nouvelles 'unités territoriales suspendues', soit une hausse de 23 % sur l'exercice précédent. Ce qu'elle tait : les noms, les visages, les 11 millions de personnes que ces codes représentent. Un ancien agent, sous couverture, l'a décrite comme 'un crématorium de papier — on brûle les vivants à l'encre plutôt qu'au feu'.
+
+## Tensions narratives
+La DZNP détient les seules archives consolidées prouvant que des territoires habités ont été délibérément exclus des plans de résilience climatique — une preuve que des coalitions comme la Fédération des Communs Territoriaux ou les réseaux de lanceurs d'alerte cherchent activement à obtenir. En interne, une faction minoritaire d'agents estime que la mission de 'documentation' est devenue complicité active, et envisage des fuites ciblées. Parallèlement, les plateformes IA qui alimentent ses classifications commencent à lui retourner des recommandations que même ses directeurs trouvent intenables — soulèvant la question de qui, au fond, gouverne encore les décisions d'abandon.

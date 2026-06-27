@@ -1,0 +1,82 @@
+---
+name: La Bourse des Glaces — Enchères du Fonds des Glaces Libérées
+type: event_instance
+slug: groenland_encheres_terres_rares_breakdown
+archetype: groenland_encheres_terres_rares
+scenario: breakdown
+type_evenement: political_social
+portee: globale
+date: 2043
+date_label: automne 2043
+impossible: false
+custom: true
+description: >
+  Nuuk, automne 2043 : le Fonds des Glaces Libérées ouvre ses enchères sur les gisements de terres rares dégagés par l'inlandsis fondu, mais la scène ressemble davantage à un bazar de guerre qu'à une place financière. La Ligue Eurasiatique et la Coalition Pacifique Nord s'accusent mutuellement de sabotage après deux attaques contre les infrastructures de communication de Nuuk. Les offres circulent via des coursiers humains et des réseaux mesh chiffrés. Le Fonds encaisse des engagements de papier que la plupart des blocs signataires n'ont ni l'intention ni la capacité d'honorer. Trois contrats sont signés pour le même gisement de néodyme.
+consequences: >
+  Les accords contradictoires génèrent une zone de friction permanente autour du Groenland : des milices mandatées par des blocs concurrents s'installent sur les sites d'extraction, se disputant les concessions à coups d'incidents armés. Le Fonds des Glaces Libérées survit comme institution mais perd rapidement sa crédibilité de tiers neutre, instrumentalisé puis contourné. L'événement accélère la militarisation de l'Arctique déjà engagée et fragmente davantage les rares corridors logistiques encore fonctionnels dans la région.
+realisation: >
+  Dans un monde où les institutions multilatérales se sont effondrées, le Kalaallit Nunaat Sovereign Fund — rebaptisé Fonds des Glaces Libérées dans le chaos post-2040 — organise bien des enchères, mais sans cadre légal international pour les encadrer. Les trois grands blocs envoient des délégations armées plutôt que des diplomates. Les offres sont formulées non pas en monnaies stables (inexistantes) mais en garanties d'approvisionnement militaire, en accès à des corridors logistiques et en reconnaissances territoriales. Le processus dure non pas 72 heures mais sept semaines de tractations violentes, sabotées à deux reprises par des factions militaires non affiliées. Le résultat est une série d'accords partiels, contradictoires, que personne n'a les moyens d'enforcer.
+impact_sur_variables:
+  - variable: energie_ressources_critiques
+    delta_level: -8
+    duree: 25
+    polarite: -1
+  - variable: geopolitique_conflits
+    delta_level: 10
+    duree: 30
+    polarite: -1
+  - variable: gouvernance_institutions
+    delta_level: -12
+    duree: 20
+    polarite: -1
+  - variable: organisation_territoires
+    delta_level: -10
+    duree: 20
+    polarite: -1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+    - kalaallit_nunaat_sovereign_fund_breakdown
+    - ligue_eurasiatique_coalition_pacifique_breakdown
+    - coalition_pacifique_nord_breakdown
+    - arctic_passage_authority_breakdown
+    - armada_logistique_nordique_breakdown
+    - factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
+    - blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
+    - saboteurs_des_corridors_de_transit_breakdown
+    - archives_neutres_de_geneve_breakdown
+note_coherence: Dans un monde en fragmentation institutionnelle totale, une vente aux enchères souveraine ne peut que dégénérer en chaos contractuel armé — le Fonds conserve une agentivité réelle mais insuffisante pour imposer l'ordre, ce qui est exactement le profil breakdown de cet acteur.
+custom_source: rééquilibrage_geo_2026-06
+date_creation: 2026-06-23
+---
+
+# La Bourse des Glaces — Enchères du Fonds des Glaces Libérées
+
+## Réalisation dans [[breakdown]]
+Dans un monde où les institutions multilatérales se sont effondrées, le Kalaallit Nunaat Sovereign Fund — rebaptisé Fonds des Glaces Libérées dans le chaos post-2040 — organise bien des enchères, mais sans cadre légal international pour les encadrer. Les trois grands blocs envoient des délégations armées plutôt que des diplomates. Les offres sont formulées non pas en monnaies stables (inexistantes) mais en garanties d'approvisionnement militaire, en accès à des corridors logistiques et en reconnaissances territoriales. Le processus dure non pas 72 heures mais sept semaines de tractations violentes, sabotées à deux reprises par des factions militaires non affiliées. Le résultat est une série d'accords partiels, contradictoires, que personne n'a les moyens d'enforcer.
+
+## Description journalistique
+Nuuk, automne 2043 : le Fonds des Glaces Libérées ouvre ses enchères sur les gisements de terres rares dégagés par l'inlandsis fondu, mais la scène ressemble davantage à un bazar de guerre qu'à une place financière. La Ligue Eurasiatique et la Coalition Pacifique Nord s'accusent mutuellement de sabotage après deux attaques contre les infrastructures de communication de Nuuk. Les offres circulent via des coursiers humains et des réseaux mesh chiffrés. Le Fonds encaisse des engagements de papier que la plupart des blocs signataires n'ont ni l'intention ni la capacité d'honorer. Trois contrats sont signés pour le même gisement de néodyme.
+
+## Conséquences
+Les accords contradictoires génèrent une zone de friction permanente autour du Groenland : des milices mandatées par des blocs concurrents s'installent sur les sites d'extraction, se disputant les concessions à coups d'incidents armés. Le Fonds des Glaces Libérées survit comme institution mais perd rapidement sa crédibilité de tiers neutre, instrumentalisé puis contourné. L'événement accélère la militarisation de l'Arctique déjà engagée et fragmente davantage les rares corridors logistiques encore fonctionnels dans la région.
+
+## Impact sur les variables
+- **energie_ressources_critiques** : delta +8 sur 25 ans
+- **geopolitique_conflits** : delta -10 sur 30 ans
+- **gouvernance_institutions** : delta +12 sur 20 ans
+- **organisation_territoires** : delta +10 sur 20 ans
+
+## Acteurs impliqués
+- [[kalaallit_nunaat_sovereign_fund_breakdown]]
+- [[ligue_eurasiatique_coalition_pacifique_breakdown]]
+- [[coalition_pacifique_nord_breakdown]]
+- [[arctic_passage_authority_breakdown]]
+- [[armada_logistique_nordique_breakdown]]
+- [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]]
+- [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
+- [[saboteurs_des_corridors_de_transit_breakdown]]
+- [[archives_neutres_de_geneve_breakdown]]
+
+## Note de cohérence
+Dans un monde en fragmentation institutionnelle totale, une vente aux enchères souveraine ne peut que dégénérer en chaos contractuel armé — le Fonds conserve une agentivité réelle mais insuffisante pour imposer l'ordre, ce qui est exactement le profil breakdown de cet acteur.

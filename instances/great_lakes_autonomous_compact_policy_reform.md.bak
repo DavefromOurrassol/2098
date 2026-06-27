@@ -1,0 +1,107 @@
+---
+name: Compact des Grands Lacs — Autorité de Gouvernance Hydrique Intégrée (CGLAGHI)
+type: instance
+slug: great_lakes_autonomous_compact_policy_reform
+entite: great_lakes_autonomous_compact
+scenario: policy_reform
+
+type_dans_scenario: institution
+
+role_dans_scenario: >
+  Dans le scénario policy_reform, le CGLAGHI s'est imposé comme un modèle de gouvernance infranationale reconnu et intégré par les institutions globales, après avoir longtemps navigué en tension avec elles. Né de la nécessité de protéger le bassin hydrographique le plus vaste d'Amérique du Nord face aux défaillances conjuguées des États fédéraux canadien et américain, il est devenu une référence systémique : une preuve vivante qu'une autorité fonctionnelle peut légitimer des droits territoriaux collectifs sans passer par la souveraineté nationale. Il siège désormais avec un statut d'observateur actif auprès de l'Autorité Continentale des Ressources Aquatiques et exporte son cadre réglementaire comme modèle pour d'autres bassins en crise.
+
+responsabilites: >
+  Le CGLAGHI régule les prélèvements, les rejets industriels et les flux d'eau douce entre les entités membres — États américains riverains, provinces canadiennes et nations autochtones Anishinaabe, Haudenosaunee et Métis — via un système de quotas dynamiques calculés par modélisation hydrologique en temps réel. Il négocie les accords de transfert avec les régions déficitaires extérieures au bassin et co-administre un fonds de résilience infrastructurelle financé par les droits d'usage industriels et les contributions des institutions globales partenaires.
+
+impact_local: 5
+impact_systemique_global: 4
+
+variables_influencees:
+    - gouvernance_institutions
+    - energie_ressources_critiques
+    - organisation_territoires
+    - climat_environnement_global
+
+zone_geographique:
+    - régionale
+    - continentale
+    - globale
+
+zone_systemique:
+    - gouvernance
+    - infrastructure
+    - énergie
+    - société
+
+alliances:
+    - autorite_continentale_des_ressources_aquatiques_acra_policy_reform
+    - assemblee_territoires_policy_reform
+    - fonds_mondial_de_resilience_infrastructurelle_policy_reform
+    - observatoire_mondial_des_ressources_critiques_policy_reform
+    - collectifs_de_gouvernance_communautaire_decentralisee_policy_reform
+    - mouvement_pour_la_justice_ecologique_communautaire_policy_reform
+    - trame_bioclimatique_policy_reform
+    - institut_de_modelisation_hydrologique_de_kinshasa_policy_reform
+    - consortium_des_villes_etats_durables_policy_reform
+
+oppositions:
+    - factions_technocratiques_de_la_marchandisation_hydrique_policy_reform
+    - consortiums_agro_industriels_du_bassin_fluvial_policy_reform
+    - syndicats_d_extraction_privee_non_regules_policy_reform
+    - mouvement_pour_la_souverainete_territoriale_absolue_policy_reform
+    - front_des_autonomies_territoriales_radicales_policy_reform
+    - front_souverainiste_des_blocs_non_signataires_policy_reform
+    - lobbies_des_energies_fossiles_residuelles_policy_reform
+
+type_relation_dominante: coopération
+
+annee_debut: 2041
+annee_fin: 
+
+etat_temporel: actif
+age_historique: dominant
+generation: reconstruction
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Depuis ses bureaux installés à Thunder Bay — délibérément choisis hors des capitales traditionnelles — le CGLAGHI gère au quotidien ce que ni Washington ni Ottawa n'ont jamais réussi à protéger : les 21 % des réserves mondiales d'eau douce de surface concentrées dans les Grands Lacs. Ses commissaires — un tiers nommés par les États et provinces membres, un tiers élus par les nations autochtones, un tiers désignés par les collectivités riveraines — siègent sous une grande carte lumineuse où les niveaux d'eau et les flux de prélèvement se mettent à jour en temps réel. On les appelle parfois 'les gardiens de l'eau bleue'. Depuis 2071, leurs protocoles de quota dynamique ont été traduits et adaptés pour sept autres bassins dans le monde, du lac Tchad au Baïkal. Ce qui était une urgence régionale est devenu une grammaire universelle de la gouvernance hydrique.
+
+signes_distinctifs: >
+  Emblème officiel : une ellipse bleu-vert stylisant le contour des cinq lacs, entourée de sept langues autochtones de la région inscrites en spirale. Les documents officiels du CGLAGHI portent systématiquement trois en-têtes superposés — anglais, français, anishinaabemowin — signe d'une pluralité constitutive et non décorative. Le bleu Huron (#1A7BAF) est la couleur de référence dans toutes les communications institutionnelles.
+
+tensions_narratives: >
+  La tension fondatrice demeure entière : à mesure que les sécheresses s'aggravent au sud et à l'ouest du continent, les demandes d'accès aux eaux des Grands Lacs par des régions non membres se multiplient — et le CGLAGHI doit choisir entre solidarité continentale et préservation d'un bien commun fragile. En interne, le poids croissant des nations autochtones dans les décisions de quota heurte les intérêts industriels des États membres, qui menacent de réviser leur contribution financière. Enfin, les factions technocratiques de la marchandisation hydrique font pression pour que le Compact cède la gestion de ses données hydrologiques à des opérateurs privés, contre promesse d'investissements massifs dans les infrastructures — une proposition qui divise profondément ses commissaires.
+
+date_creation: 2026-06-23
+---
+
+# Compact des Grands Lacs — Autorité de Gouvernance Hydrique Intégrée (CGLAGHI)
+
+## Rôle dans [[policy_reform]]
+Dans le scénario policy_reform, le CGLAGHI s'est imposé comme un modèle de gouvernance infranationale reconnu et intégré par les institutions globales, après avoir longtemps navigué en tension avec elles. Né de la nécessité de protéger le bassin hydrographique le plus vaste d'Amérique du Nord face aux défaillances conjuguées des États fédéraux canadien et américain, il est devenu une référence systémique : une preuve vivante qu'une autorité fonctionnelle peut légitimer des droits territoriaux collectifs sans passer par la souveraineté nationale. Il siège désormais avec un statut d'observateur actif auprès de l'Autorité Continentale des Ressources Aquatiques et exporte son cadre réglementaire comme modèle pour d'autres bassins en crise.
+
+## Responsabilités
+Le CGLAGHI régule les prélèvements, les rejets industriels et les flux d'eau douce entre les entités membres — États américains riverains, provinces canadiennes et nations autochtones Anishinaabe, Haudenosaunee et Métis — via un système de quotas dynamiques calculés par modélisation hydrologique en temps réel. Il négocie les accords de transfert avec les régions déficitaires extérieures au bassin et co-administre un fonds de résilience infrastructurelle financé par les droits d'usage industriels et les contributions des institutions globales partenaires.
+
+## Variables influencées
+- [[gouvernance_institutions]]
+- [[energie_ressources_critiques]]
+- [[organisation_territoires]]
+- [[climat_environnement_global]]
+
+## Relations
+**Alliés** : [[autorite_continentale_des_ressources_aquatiques_acra_policy_reform]], [[assemblee_territoires_policy_reform]], [[fonds_mondial_de_resilience_infrastructurelle_policy_reform]], [[observatoire_mondial_des_ressources_critiques_policy_reform]], [[collectifs_de_gouvernance_communautaire_decentralisee_policy_reform]], [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]], [[trame_bioclimatique_policy_reform]], [[institut_de_modelisation_hydrologique_de_kinshasa_policy_reform]], [[consortium_des_villes_etats_durables_policy_reform]]
+**Opposants** : [[factions_technocratiques_de_la_marchandisation_hydrique_policy_reform]], [[consortiums_agro_industriels_du_bassin_fluvial_policy_reform]], [[syndicats_d_extraction_privee_non_regules_policy_reform]], [[mouvement_pour_la_souverainete_territoriale_absolue_policy_reform]], [[front_des_autonomies_territoriales_radicales_policy_reform]], [[front_souverainiste_des_blocs_non_signataires_policy_reform]], [[lobbies_des_energies_fossiles_residuelles_policy_reform]]
+
+## Description journalistique
+Depuis ses bureaux installés à Thunder Bay — délibérément choisis hors des capitales traditionnelles — le CGLAGHI gère au quotidien ce que ni Washington ni Ottawa n'ont jamais réussi à protéger : les 21 % des réserves mondiales d'eau douce de surface concentrées dans les Grands Lacs. Ses commissaires — un tiers nommés par les États et provinces membres, un tiers élus par les nations autochtones, un tiers désignés par les collectivités riveraines — siègent sous une grande carte lumineuse où les niveaux d'eau et les flux de prélèvement se mettent à jour en temps réel. On les appelle parfois 'les gardiens de l'eau bleue'. Depuis 2071, leurs protocoles de quota dynamique ont été traduits et adaptés pour sept autres bassins dans le monde, du lac Tchad au Baïkal. Ce qui était une urgence régionale est devenu une grammaire universelle de la gouvernance hydrique.
+
+## Tensions narratives
+La tension fondatrice demeure entière : à mesure que les sécheresses s'aggravent au sud et à l'ouest du continent, les demandes d'accès aux eaux des Grands Lacs par des régions non membres se multiplient — et le CGLAGHI doit choisir entre solidarité continentale et préservation d'un bien commun fragile. En interne, le poids croissant des nations autochtones dans les décisions de quota heurte les intérêts industriels des États membres, qui menacent de réviser leur contribution financière. Enfin, les factions technocratiques de la marchandisation hydrique font pression pour que le Compact cède la gestion de ses données hydrologiques à des opérateurs privés, contre promesse d'investissements massifs dans les infrastructures — une proposition qui divise profondément ses commissaires.

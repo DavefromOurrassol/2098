@@ -1,0 +1,70 @@
+---
+name: L'Affaire Van Derburgh — Jurisprudence sur le Patrimoine Technologique
+type: event_instance
+slug: arrestation_chris_van_derburgh_policy_reform
+archetype: arrestation_chris_van_derburgh
+scenario: policy_reform
+type_evenement: political_social
+portee: regionale
+date: 2078
+date_label: avril 2078
+impossible: false
+custom: true
+description: >
+  Chris van Derburgh, 67 ans, collectionneur à Amsterdam-Région, est arrêté
+  en avril 2078 pour possession de technologies de 2026 non déclarées —
+  17 dispositifs de communication pré-transition classifiés "technologies
+  potentiellement sensibles" par la directive européenne de 2071. Van Derburgh
+  conteste la classification devant le Tribunal de Haye.
+consequences: >
+  Après 14 mois de procédure, la Cour de La Haye établit une jurisprudence
+  distinguant "patrimoine technologique personnel" et "technologies sensibles".
+  La directive de 2071 est amendée en 2080. L'affaire est citée dans les
+  cours de droit international comme exemple de calibrage réglementaire.
+realisation: >
+  Dans policy_reform, le cadre juridique existe et fonctionne, même
+  imparfaitement. L'affaire Van Derburgh contribue à son amélioration
+  progressive — c'est le mécanisme normal de correction dans ce scénario.
+impact_sur_variables:
+  - variable: gouvernance_institutions
+    delta_level: 2
+    duree: 15
+    polarite: 1
+  - variable: technologie_information
+    delta_level: 1
+    duree: 10
+    polarite: 1
+propagation:
+  via_matrice: false
+acteurs_impliques:
+  - le_temoin_policy_reform
+note_coherence: >
+  Impact positif et léger — jurisprudence améliorant le cadre réglementaire.
+  Cohérent avec policy_reform où les tensions légales génèrent des corrections.
+date_creation: 2098-01-01
+---
+
+# L'Affaire Van Derburgh — Jurisprudence sur le Patrimoine Technologique
+
+## Réalisation dans [[policy_reform]]
+Dans policy_reform, le cadre juridique existe et fonctionne, même
+imparfaitement. L'affaire contribue à son amélioration progressive.
+
+## Description journalistique
+Chris van Derburgh, 67 ans, collectionneur à Amsterdam-Région, est arrêté
+pour 17 dispositifs de 2026 classifiés "technologies potentiellement sensibles".
+Il conteste devant le Tribunal de La Haye.
+
+## Conséquences
+Jurisprudence distinguant "patrimoine technologique personnel" et "technologies
+sensibles". Directive de 2071 amendée en 2080.
+
+## Impact sur les variables
+- **gouvernance_institutions** : delta +2 sur 15 ans
+- **technologie_information** : delta +1 sur 10 ans
+
+## Acteurs impliqués
+- [[le_temoin_policy_reform]]
+
+## Note de cohérence
+Impact positif et léger — jurisprudence améliorant le cadre réglementaire.
