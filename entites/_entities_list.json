@@ -10046,5 +10046,277 @@
     "scenarios": [
       "reference"
     ]
+  },
+  {
+    "nom": "Delta Mekong Racines",
+    "slug": "delta_mekong_racines",
+    "categorie": "territoire",
+    "description": "Un territoire-communauté qui reconstruit une autorité locale de fait à partir des savoir-faire ancestraux, des réseaux de parenté et d'une économie de subsistance hyper-localisée, sans attendre ni chercher de reconnaissance extérieure. Contrairement au delta comme espace géographique et hydraulique disputé entre États riverains, ce type d'entité est avant tout une communauté sociale auto-organisée : son territoire est secondaire à la cohérence humaine qui le fait exister. Elle incarne la capacité des marges à produire de l'ordre sans institutions formelles, fonctionnant comme un îlot de résilience précaire dans un environnement chaotique, résistant structurellement à toute intégration dans des ensembles plus larges.",
+    "tension_fondamentale": "La cohésion sociale qui permet la survie — fondée sur la clôture, la méfiance envers l'extérieur et le refus de toute articulation à des structures supérieures — est précisément ce qui condamne la communauté à la précarité permanente et l'empêche de se défendre contre les dynamiques extérieures qui la menacent.",
+    "variables_potentielles": [
+      "organisation_territoires",
+      "gouvernance_institutions",
+      "valeurs_culture_tempo_sociale",
+      "systemes_productifs_travail",
+      "geopolitique_conflits"
+    ],
+    "scenarios": [
+      "breakdown"
+    ]
+  },
+  {
+    "nom": "District Mourmansk Residuel",
+    "slug": "district_mourmansk_residuel",
+    "categorie": "territoire",
+    "description": "Le Territoire Résiduel est un espace qui survit à la dissolution de l'autorité centrale dont il était le prolongement administratif, en convertissant ses héritages matériels — infrastructures, positions géographiques stratégiques, savoir-faire institutionnel dégradé — en monnaie d'échange dans un environnement où la souveraineté formelle a cessé d'être le seul vecteur de puissance. Il n'est ni tout à fait un État ni tout à fait une zone grise : trop structuré pour être ignoré, trop fragile pour s'imposer. Sa survie repose sur l'entretien d'une utilité concrète pour des acteurs extérieurs qui n'ont aucun intérêt à le reconnaître mais tout intérêt à le maintenir fonctionnel. Il incarne la persistance d'une forme administrative dans un vide de légitimité, transformant l'abandon en ressource et la marginalité en levier.",
+    "tension_fondamentale": "Être indispensable sans être légitime : le Territoire Résiduel tire sa survie de sa valeur opérationnelle pour des acteurs qui refusent de lui conférer la reconnaissance dont il aurait besoin pour se stabiliser — le reconnaître formellement réduirait leur liberté de le contrôler, le laisser s'effondrer supprimerait une ressource stratégique qu'ils ne peuvent se permettre de perdre.",
+    "variables_potentielles": [
+      "energie_ressources_critiques",
+      "organisation_territoires",
+      "gouvernance_institutions",
+      "geopolitique_conflits"
+    ],
+    "scenarios": [
+      "breakdown"
+    ]
+  },
+  {
+    "nom": "Enclaves Extractivistes Et Etats Residuels",
+    "slug": "enclaves_extractivistes_et_etats_residuels",
+    "categorie": "territoire",
+    "description": "Les enclaves extractivistes et états résiduels représentent l'archétype du territoire persistant hors-système : des poches géographiques où l'ancien ordre économique survit à sa propre condamnation, abrité derrière des coquilles étatiques vidées de leur substance mais conservant suffisamment de forme légale pour offrir une couverture aux logiques d'accumulation que le système dominant prétend avoir dépassées. Elles incarnent la persistance irréductible du modèle extractif dans les marges d'un monde qui s'en est officiellement détourné, fonctionnant comme des réservoirs de la logique ancienne — ni entièrement intégrées, ni véritablement éliminées. Leur existence révèle que toute transition laisse des zones de non-transition, et que ces zones sont tolérées précisément parce qu'elles rendent des services clandestins à ceux qui les combattent publiquement.",
+    "tension_fondamentale": "Ces enclaves sont à la fois condamnées moralement et tolérées fonctionnellement : leur existence est un aveu d'échec du modèle dominant qui prétend les avoir supplantés, et leur survie dépend précisément de l'hypocrisie de ceux qui les combattent — car les supprimer entièrement signifierait couper des flux dont le système alternatif est lui-même secrètement dépendant.",
+    "variables_potentielles": [
+      "energie_ressources_critiques",
+      "organisation_territoires",
+      "geopolitique_conflits",
+      "gouvernance_institutions",
+      "systeme_economique_redistribution"
+    ],
+    "scenarios": [
+      "eco_communalism"
+    ]
+  },
+  {
+    "nom": "Enclaves Finlandaises",
+    "slug": "enclaves_finlandaises",
+    "categorie": "territoire",
+    "description": "Le territoire-commun de subsistance est un espace humain qui se reconstruit depuis ses ressources naturelles immédiates — forêt, eau, sol — lorsque les structures d'ordre supérieur se sont effondrées ou retirées. Il incarne la capacité des sociétés à réinventer une gouvernance de proximité fondée sur la gestion collective des communs vitaux, sans attendre de légitimité extérieure. Ni État, ni simple zone de survie, il constitue un fait politique en acte : une expérience concrète de souveraineté ancrée dans l'écologie locale et la délibération communautaire.",
+    "tension_fondamentale": "La viabilité de ce territoire repose sur sa clôture partielle et son auto-organisation — mais ce repli sur soi, condition de cohésion interne, devient aussi le vecteur de son isolement stratégique, de ses logiques d'exclusion et de son incapacité à peser sur les dynamiques qui le menacent depuis l'extérieur.",
+    "variables_potentielles": [
+      "organisation_territoires",
+      "gouvernance_institutions",
+      "energie_ressources_critiques"
+    ],
+    "scenarios": [
+      "breakdown"
+    ]
+  },
+  {
+    "nom": "Massif Central Cicatrices Vertes",
+    "slug": "massif_central_cicatrices_vertes",
+    "categorie": "territoire",
+    "description": "Le Territoire Cicatriciel désigne un espace géographique qui, après un effondrement systémique, devient le théâtre d'une reconquête simultanément écologique et humaine : la nature y reprend ses droits tandis que des communautés s'y réorganisent en dehors des structures étatiques défaillantes. Ce territoire est à la fois blessure visible d'un monde qui s'est effondré et germe d'un ordre nouveau fondé sur la subsistance, l'auto-gouvernance locale et la relation directe au sol. Il incarne la frontière mouvante entre l'abandon institutionnel et la refondation communautaire, entre la cicatrice et la pousse verte qui la recouvre.",
+    "tension_fondamentale": "L'autonomie réelle que confère l'abandon étatique — liberté de s'organiser, de produire, de défendre ses propres règles — est aussi ce qui expose ce territoire à la prédation extérieure (flux migratoires subis, appétits corporatifs, logiques de reconquête étatique), forçant ses habitants à ériger des frontières qui contredisent l'idéal d'ouverture et de communauté vivante qu'ils prétendent incarner.",
+    "variables_potentielles": [
+      "organisation_territoires",
+      "gouvernance_institutions",
+      "systemes_productifs_travail",
+      "climat_environnement_global",
+      "demographie_mobilite_humaine",
+      "energie_ressources_critiques"
+    ],
+    "scenarios": [
+      "breakdown"
+    ]
+  },
+  {
+    "nom": "Murmansk Transit Arctique",
+    "slug": "murmansk_transit_arctique",
+    "categorie": "territoire",
+    "description": "Un territoire-nœud dont la valeur émerge non de sa richesse intrinsèque mais de sa position géographique à l'intersection de routes vitales que des forces extérieures ont rendues praticables ou indispensables. Ce type d'entité incarne la puissance du passage : elle ne produit pas, elle transit, et c'est précisément cette fonction intermédiaire qui lui confère un levier disproportionné sur les acteurs qui dépendent d'elle. Sa position est structurellement disputée parce qu'aucun acteur dominant ne peut tolérer longtemps que ce nœud appartienne à un autre, ni que personne ne le contrôle tout à fait.",
+    "tension_fondamentale": "La position de nœud indispensable confère une puissance d'attraction et de levier exceptionnelle, mais cette même centralité fait du territoire une cible permanente de convoitises concurrentes qui menacent de le déstabiliser ou de le fragmenter — être indispensable, c'est être exposé.",
+    "variables_potentielles": [
+      "energie_ressources_critiques",
+      "geopolitique_conflits",
+      "organisation_territoires",
+      "frontieres_du_systeme",
+      "climat_environnement_global"
+    ],
+    "scenarios": [
+      "reference"
+    ]
+  },
+  {
+    "nom": "Rust Belt Communes Libres",
+    "slug": "rust_belt_communes_libres",
+    "categorie": "territoire",
+    "description": "La ceinture industrielle déclinante reconvertie en archipel d'autonomie populaire : ces territoires portent la mémoire ouvrière d'une économie de production révolue, et leurs habitants mobilisent les compétences techniques héritées — soudure, mécanique, logistique — pour bâtir une économie de récupération hors des circuits surveillés. Ni ruines passives ni utopies volontaristes, les Communes Libres du Rust Belt incarnent la transformation d'une dépossession historique en ressource politique : le deuil de l'industrie devient le substrat d'une gouvernance horizontale enracinée dans la compétence collective et la mémoire du travail. Leur singularité tient à cette double temporalité — héritage industriel lourd et pragmatisme de survie immédiate — qui les distingue des zones grises génériques sans projet commun.",
+    "tension_fondamentale": "La mémoire industrielle qui fonde l'identité collective et la compétence technique de ces communes est aussi ce qui les ancre dans un passé révolu et les rend vulnérables à la nostalgie réactionnaire ou à la récupération politique : valoriser cet héritage pour s'émanciper, c'est risquer d'en faire une prison identitaire qui empêche l'invention de nouvelles formes de vie.",
+    "variables_potentielles": [
+      "organisation_territoires",
+      "systemes_productifs_travail",
+      "gouvernance_institutions",
+      "systeme_economique_redistribution",
+      "valeurs_culture_tempo_sociale"
+    ],
+    "scenarios": [
+      "fortress_world"
+    ]
+  },
+  {
+    "nom": "Rust Belt Communes Libres",
+    "slug": "rust_belt_communes_libres",
+    "categorie": "territoire",
+    "description": "La friche réinventée est le territoire que l'histoire industrielle a épuisé puis abandonné, et que ses habitants ont choisi de ne pas laisser mourir. Sur les ossatures rouillées de l'ancienne économie de masse, des communautés reconstituent des formes de vie collective fondées sur la récupération, le troc et l'autogouvernance — non par idéologie mais par nécessité. Ce territoire porte en lui la mémoire d'une puissance passée et la réalité d'une dépossession présente : ses habitants savent fabriquer, réparer, organiser, mais n'ont plus accès aux circuits qui valorisaient ces compétences. Il existe dans l'interstice entre ce que le système a abandonné et ce qu'il refuse encore de reconnaître.",
+    "tension_fondamentale": "La mémoire industrielle et les compétences collectives héritées fondent l'identité et la résilience de ces communautés, mais elles constituent aussi un attrait pour les puissances voisines qui voudraient réintégrer ces ressources humaines sans pour autant reconnaître les droits et la dignité des communautés qui les portent — l'autonomie construite dans la marge reste perpétuellement menacée par la récupération.",
+    "variables_potentielles": [
+      "organisation_territoires",
+      "systeme_economique_redistribution",
+      "gouvernance_institutions",
+      "demographie_mobilite_humaine",
+      "systemes_productifs_travail"
+    ],
+    "scenarios": [
+      "fortress_world"
+    ]
+  },
+  {
+    "nom": "Tbilissi Nord Zone Franche",
+    "slug": "tbilissi_nord_zone_franche",
+    "categorie": "territoire",
+    "description": "L'enclave privilégiée est un archétype territorial de la sécession organisée : un espace physiquement soustrait aux conditions communes d'existence, conçu pour garantir à une minorité solvable ou statutaire un accès continu à des ressources vitales rares — eau potable, énergie propre, climat contrôlé, sécurité biométrique — en érigeant des frontières matérielles et symboliques contre le reste de la société. Elle incarne la transformation de la protection collective en bien privatisé, et de la citoyenneté en abonnement premium. Son infrastructure — murs intelligents, dômes, protocoles de surveillance — n'est pas seulement défensive : elle est performative, affichant la hiérarchie spatiale de la valeur humaine. Elle est à la fois symptôme d'un échec de solidarité et moteur actif de sa perpétuation.",
+    "tension_fondamentale": "L'enclave promet la sécurité absolue à ses résidents tout en produisant structurellement l'insécurité de ceux qu'elle exclut — sa viabilité dépend de ressources humaines, énergétiques et logistiques prélevées sur un extérieur qu'elle appauvrit, tout en refusant toute réciprocité envers cet extérieur qu'elle rend progressivement inhospitalier et hostile.",
+    "variables_potentielles": [
+      "organisation_territoires",
+      "gouvernance_institutions",
+      "energie_ressources_critiques",
+      "technologie_information",
+      "demographie_mobilite_humaine",
+      "climat_environnement_global"
+    ],
+    "scenarios": [
+      "fortress_world"
+    ]
+  },
+  {
+    "nom": "Tresse Verte Corridor",
+    "slug": "tresse_verte_corridor",
+    "categorie": "territoire",
+    "description": "Le Tresse Verte Corridor est un territoire-réseau archétypal : une forme d'organisation spatiale et humaine qui fait de la connexion elle-même — et non d'un centre — son principe constitutif. Il représente la voie comme bien commun, l'entre-deux habité, le lien vivant qui permet à des communautés autonomes de rester en relation sans se dissoudre dans un ensemble plus grand. Il est à la fois infrastructure écologique, espace d'échange culturel et arrangement politique : un territoire qui n'existe que dans le mouvement et la réciprocité, et dont la gouvernance est portée par la délibération collective plutôt que par une autorité fixe. Il incarne la tension propre à toute forme de subsidiarité radicale : comment maintenir la cohérence d'un commun partagé sans instituer le pouvoir central qui le dénaturerait.",
+    "tension_fondamentale": "La vitalité du corridor repose sur sa nature fluide, non délimitée et non possédée — mais c'est précisément cette absence de frontières et d'autorité centrale qui le rend structurellement vulnérable à la prédation extérieure, à la sécession des membres les plus forts et à l'érosion lente des chartes collectives dès que les intérêts divergent.",
+    "variables_potentielles": [
+      "organisation_territoires",
+      "gouvernance_institutions",
+      "valeurs_culture_tempo_sociale",
+      "systemes_productifs_travail",
+      "climat_environnement_global"
+    ],
+    "scenarios": [
+      "eco_communalism"
+    ]
+  },
+  {
+    "nom": "Vallee Allier Terrafond",
+    "slug": "vallee_allier_terrafond",
+    "categorie": "territoire",
+    "description": "Un territoire post-souverain organisé autour d'une ressource vitale partagée — eau, sol, forêt — qui devient à la fois le ciment d'une communauté de survie et l'objet de ses déchirements internes. Ce type d'entité naît dans le vide laissé par l'effondrement des structures étatiques : des groupes humains y refondent un ordre collectif minimal, non par idéal, mais par nécessité. Il incarne la tentative avortée ou conflictuelle de transformer une dépendance commune à un lieu en gouvernance partagée, portant en lui la mémoire d'un projet collectif inachevé — ici un fonds foncier commun, là une charte d'usage — dont les ruines structurent encore les rapports de force entre factions rivales.",
+    "tension_fondamentale": "La ressource qui fonde la cohésion du territoire est précisément ce qui le fracture : tout projet de commun se brise sur la tentation de la capture unilatérale, et la légitimité de qui gouverne reste perpétuellement disputée entre ceux qui ont la force, ceux qui ont été là les premiers, et ceux qui ont rédigé les textes que plus personne ne reconnaît.",
+    "variables_potentielles": [
+      "energie_ressources_critiques",
+      "organisation_territoires",
+      "gouvernance_institutions",
+      "geopolitique_conflits",
+      "climat_environnement_global"
+    ],
+    "scenarios": [
+      "breakdown"
+    ]
+  },
+  {
+    "nom": "Zone Usines Forteresses Eurasie",
+    "slug": "zone_usines_forteresses_eurasie",
+    "categorie": "territoire",
+    "description": "Le territoire-usine captif est l'espace où la production industrielle et la contrainte humaine se fondent en un seul dispositif spatial : une zone géographiquement délimitée, physiquement sécurisée, où une population laborieuse est maintenue en état de servitude fonctionnelle pour alimenter une classe dirigeante qui n'y réside pas. Il incarne la logique du panoptique industriel étendu à l'échelle territoriale — chaque corps travaillant est traçable, chaque flux mesuré, chaque sortie filtrée. Ce territoire n'est pas une anomalie du système mais son fondement matériel silencieux : la condition de possibilité de tout confort, de toute sécurité, de tout luxe produit ailleurs. Il traverse les formes historiques — cité minière coloniale, bagne productif, zone économique spéciale à surveillance totale, complexe carcéro-industriel sous régime d'exception — car il répond à une logique constante : extraire du travail humain en annulant la liberté de ceux qui le fournissent.",
+    "tension_fondamentale": "Ce territoire est à la fois l'instrument parfait du contrôle et la bombe à retardement de tout ordre fondé sur l'exploitation captive : son indispensabilité même constitue son seul levier de résistance potentielle, car il peut nourrir le système ou l'affamer — ce qui fait de la population captive, réduite à pure variable productive, le point d'où peut surgir l'effondrement de l'ordre qui la contient.",
+    "variables_potentielles": [
+      "systemes_productifs_travail",
+      "organisation_territoires",
+      "gouvernance_institutions",
+      "technologie_information",
+      "demographie_mobilite_humaine",
+      "frontieres_du_systeme"
+    ],
+    "scenarios": [
+      "fortress_world"
+    ]
+  },
+  {
+    "nom": "Zones Extractivistes Corridors",
+    "slug": "zones_extractivistes_corridors",
+    "categorie": "territoire",
+    "description": "Les Zones Extractivistes Corridors représentent l'archétype du territoire blessé en reconversion : des espaces autrefois épuisés par la logique extractive qui deviennent, sous l'impulsion de communautés locales, des espaces de régénération, de transit écologique et d'économie circulaire. Ce territoire incarne la cicatrice productive — là où la destruction industrielle a laissé un vide, des acteurs de terrain tentent de retisser des chaînes de vie courtes, de restaurer les sols et de réinventer des usages communs. Ces zones sont structurellement disputées : leur valeur résiduelle attire des intérêts extérieurs qui cherchent à reprendre ce que les communautés s'emploient à détransformer. Elles incarnent la frontière mouvante entre la dépossession et la réappropriation.",
+    "tension_fondamentale": "La reconversion d'un territoire d'extraction en bien commun régénératif suppose d'en effacer la valeur marchande résiduelle — mais c'est précisément cette valeur résiduelle qui attire les prédateurs extérieurs et fragilise toute tentative de fermeture du cycle. Plus la restauration réussit, plus le territoire redevient convoitable.",
+    "variables_potentielles": [
+      "energie_ressources_critiques",
+      "organisation_territoires",
+      "climat_environnement_global",
+      "systemes_productifs_travail",
+      "geopolitique_conflits"
+    ],
+    "scenarios": [
+      "eco_communalism"
+    ]
+  },
+  {
+    "nom": "Zones Grises Globales",
+    "slug": "zones_grises_globales",
+    "categorie": "territoire",
+    "description": "L'interstice territorial est l'espace que l'ordre produit malgré lui en se structurant : toute délimitation crée un dehors, toute intégration génère un résidu. Ces zones ne préexistent pas à la fragmentation — elles en sont le produit direct, les cicatrices visibles de la gouvernance incomplète. Elles agrègent ce que les systèmes dominants expulsent sans pouvoir éliminer : mobilités sans statut, économies sans légitimité, solidarités sans reconnaissance. Leur persistance n'est pas un accident mais une nécessité structurelle : elles absorbent les contradictions que le système ne peut résoudre sans les révéler.",
+    "tension_fondamentale": "L'interstice territorial ne peut remplir sa fonction de soupape qu'en restant invisible et ingouvernable — mais toute organisation interne qui lui permet de survivre le rend lisible, donc contrôlable, donc condamné à être absorbé ou détruit par les systèmes qu'il soulageait.",
+    "variables_potentielles": [
+      "organisation_territoires",
+      "gouvernance_institutions",
+      "demographie_mobilite_humaine",
+      "geopolitique_conflits",
+      "frontieres_du_systeme"
+    ],
+    "scenarios": [
+      "reference"
+    ]
+  },
+  {
+    "nom": "Zones Grises Tampons",
+    "slug": "zones_grises_tampons",
+    "categorie": "territoire",
+    "description": "La Zone Grise Tampon est l'espace de transition institutionnalisée que tout ordre séparatiste crée entre son cœur sécurisé et le chaos qu'il produit en s'en protégeant. Contrairement aux zones grises globales — diffuses et spontanées — elle est délibérément intercalée, architecturée comme sas de tri : elle trie les corps, filtre les flux, sous-traite les fonctions que le centre exige sans vouloir les assumer. Elle n'est pas le résidu d'un effondrement mais l'instrument conscient d'un ordre qui a besoin de marges pour fonctionner, peuplant ces franges de populations en attente, de milices privées et d'intermédiaires dont l'existence même codifie l'inégalité entre l'intérieur et l'extérieur.",
+    "tension_fondamentale": "La zone tampon tire son utilité systémique de sa nature de sas contrôlé — mais ce contrôle partiel crée précisément les conditions d'une autonomie opaque où se nouent des pouvoirs interstitiels que le centre ne maîtrise plus, transformant l'instrument de filtrage en foyer potentiel de débordement.",
+    "variables_potentielles": [
+      "organisation_territoires",
+      "demographie_mobilite_humaine",
+      "gouvernance_institutions",
+      "geopolitique_conflits",
+      "frontieres_du_systeme"
+    ],
+    "scenarios": [
+      "fortress_world"
+    ]
+  },
+  {
+    "nom": "Amazonie Consortium Viva",
+    "slug": "amazonie_consortium_viva",
+    "categorie": "entreprise",
+    "description": "Un consortium privé qui s'engouffre dans les interstices juridiques pour s'approprier les ressources vivantes d'un territoire — ici les ressources génétiques forestières amazoniennes — en transformant le vivant en patrimoine brevetable et commercialisable. Il incarne la logique d'enclosure appliquée au monde biologique : là où la loi hésite, se tait ou se contredit, il opère ; là où la souveraineté est floue, il installe ses droits ; là où la biodiversité est dense et sous-documentée, il prospecte et extrait avant que quiconque ne puisse l'en empêcher. Sa puissance repose sur l'expertise juridique, la vitesse d'action et la capacité à monétiser ce que les États et les communautés locales peinent encore à nommer comme leur bien propre.",
+    "tension_fondamentale": "La richesse qu'il génère repose structurellement sur le vide normatif qu'il exploite — mais ce vide se comble inexorablement à mesure que ses succès rendent visibles les spoliations qu'il opère, transformant chaque brevet obtenu en preuve d'un crime à poursuivre et chaque zone grise juridique en futur front de régulation.",
+    "variables_potentielles": [
+      "sante_biotechnologies",
+      "gouvernance_institutions",
+      "frontieres_du_systeme",
+      "climat_environnement_global",
+      "energie_ressources_critiques"
+    ],
+    "scenarios": [
+      "reference"
+    ]
   }
 ]

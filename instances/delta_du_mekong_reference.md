@@ -4,6 +4,10 @@ type: instance
 slug: delta_du_mekong_reference
 entite: delta_du_mekong
 scenario: reference
+localisation:
+  zone: delta_du_mekong
+  lieu: Delta du Mékong
+  type_lieu: region
 
 type_dans_scenario: autre
 

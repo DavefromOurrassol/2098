@@ -1,7 +1,7 @@
 ---
 type: documentation
 titre: Ourrassol 2098 — Manuel complet des scripts
-date_maj: 2026-06-25
+date_maj: 2026-06-27
 ---
 
 # Ourrassol 2098 — Manuel complet des scripts
@@ -336,6 +336,69 @@ queue:
 
 ---
 
+## Enrichissement minimal
+
+### `enrich_minimal.py`
+Enrichit les fiches `officialise_minimal` via l'API Claude. Génère tous les champs narratifs placeholder.
+
+```bash
+python3 enrich_minimal.py --scenario new_sustainability        # un scénario
+python3 enrich_minimal.py --scenario new_sustainability --dry-run
+python3 enrich_minimal.py --scenario new_sustainability --limit 3   # essai sur N fiches
+python3 enrich_minimal.py --scenario new_sustainability --slug SLUG # une seule fiche
+python3 enrich_minimal.py --all                                # tous les scénarios
+python3 enrich_minimal.py --all --auto-cycle                   # + cycle post-run auto
+```
+
+**Champs générés** : `responsabilites`, `description_journalistique`, `signes_distinctifs`, `tensions_narratives`, `localisation`, `impact_local`, `impact_systemique_global`, `alliances`, `oppositions`, `zone_geographique`, `type_relation_dominante`.
+
+**Validation mécanique bloquante** (2 retries) : `localisation.zone` vs bible géo, `type_lieu` 4 valeurs, `impact` [0-5], `zone_geographique` 7 valeurs. Warnings non bloquants : alliances/oppositions vs `_entities_list.json` + scan `instances/*.md`.
+
+**Reprise** : `statut: officialise_enrichi` — les fiches déjà enrichies sont skippées.
+
+**Sorties** : `documentation/need_action/enrich_minimal_report.md` + `instances_custom/needs_review_enrich.yaml`.
+
+**Slugs fantômes** : en fin de run, génère automatiquement les entrées queue pour les slugs alliances/oppositions non trouvés (vague 1). Avec `--auto-cycle` : + vague 2 depuis `validate --verbose` après le cycle post-injection.
+
+---
+
+### `extract_phantom_slugs.py`
+Extrait les slugs fantômes alliances/oppositions et génère `entites_custom/queue.yaml` avec rôles générés via API.
+
+```bash
+python3 extract_phantom_slugs.py                        # all sources, écrit queue.yaml
+python3 extract_phantom_slugs.py --source enrich        # depuis enrich_minimal_report.md
+python3 extract_phantom_slugs.py --source validate      # depuis validate.py --verbose
+python3 extract_phantom_slugs.py --source all           # les deux combinées (défaut)
+python3 extract_phantom_slugs.py --dry-run              # affiche sans écrire
+python3 extract_phantom_slugs.py --report PATH          # rapport alternatif
+```
+
+Corrige automatiquement les suffixes scénario manquants. Déduplication sur `_slug_corrige`.
+
+---
+
+### `fix_alliance_suffixes.py`
+Corrige les slugs sans suffixe scénario dans les champs `alliances`/`oppositions` des fiches instances. Aucun appel API — correction purement mécanique.
+
+```bash
+python3 fix_alliance_suffixes.py --dry-run --verbose
+python3 fix_alliance_suffixes.py
+python3 fix_alliance_suffixes.py --scenario fortress_world
+```
+
+---
+
+### `requeue_needs_review.py`
+Remet les entrées de `entites_custom/needs_review.yaml` dans `queue.yaml` pour une nouvelle tentative.
+
+```bash
+python3 requeue_needs_review.py --dry-run
+python3 requeue_needs_review.py
+```
+
+---
+
 ## Retrait du lore
 
 ### `undo_custom.py`
@@ -480,8 +543,8 @@ Correction rétroactive des `impact_local` / `impact_systemique_global` hors pla
 
 ## Cycles standards
 
-### Cycle post-injection (automatique depuis le 25 juin)
-Lancé automatiquement par `create_entities_and_instances.py` et `inject_custom_events.py` après toute injection réussie :
+### Cycle post-injection (automatique)
+Lancé automatiquement par `create_entities_and_instances.py`, `inject_custom_events.py` et `enrich_minimal.py` après toute injection réussie :
 ```
 extract_localisation.py
 → review_localisation.py --auto-resolve

@@ -4,32 +4,32 @@ type: entity
 slug: rust_belt_communes_libres
 category: territoire
 description: >
-  Le territoire de résistance désindustrialisée est un espace humain né dans les carcasses d'une économie productive abandonnée, où la désindustrialisation a laissé des infrastructures orphelines, des savoir-faire sans débouchés et des communautés sans représentation. À la différence des communs ruraux ou forestiers, il hérite d'une mémoire ouvrière, de bâtiments industriels reconvertis, d'une culture du collectif forgée dans l'usine et le syndicat — qu'il retourne contre l'ordre qui l'a dépossédé. Il construit une autogestion urbaine-industrielle sur les ruines de la production fordiste, faisant de la récupération technique et de la réindustrialisation artisanale les fondements d'une économie de la subsistance organisée.
+  La friche réinventée est le territoire que l'histoire industrielle a épuisé puis abandonné, et que ses habitants ont choisi de ne pas laisser mourir. Sur les ossatures rouillées de l'ancienne économie de masse, des communautés reconstituent des formes de vie collective fondées sur la récupération, le troc et l'autogouvernance — non par idéologie mais par nécessité. Ce territoire porte en lui la mémoire d'une puissance passée et la réalité d'une dépossession présente : ses habitants savent fabriquer, réparer, organiser, mais n'ont plus accès aux circuits qui valorisaient ces compétences. Il existe dans l'interstice entre ce que le système a abandonné et ce qu'il refuse encore de reconnaître.
 tension_fondamentale: >
-  La mémoire industrielle qui fonde son identité collective et sa compétence technique est aussi ce qui l'ancre dans un rapport au territoire et à la production que l'ordre dominant peut à tout moment revendiquer, réactiver ou instrumentaliser — la reconversion autonome des ruines industrielles reste précaire tant que la propriété des infrastructures demeure disputée.
+  La mémoire industrielle et les compétences collectives héritées fondent l'identité et la résilience de ces communautés, mais elles constituent aussi un attrait pour les puissances voisines qui voudraient réintégrer ces ressources humaines sans pour autant reconnaître les droits et la dignité des communautés qui les portent — l'autonomie construite dans la marge reste perpétuellement menacée par la récupération.
 variables_potentielles:
   - organisation_territoires
-  - systemes_productifs_travail
+  - systeme_economique_redistribution
   - gouvernance_institutions
-  - energie_ressources_critiques
-  - geopolitique_conflits
+  - demographie_mobilite_humaine
+  - systemes_productifs_travail
 scenarios_instances:
   - fortress_world
 date_creation: 2026-06-27
-custom_source: phantom_enrich_minimal_2026-06-27
+custom_source: phantom_validate_2026-06-27
 scenario_ref: fortress_world
 role_ref: >
-  Ensemble de communes autogérées établies dans les anciennes zones industrielles désindustrialisées de l'Amérique du Nord, les Rust Belt Communes Libres survivent en marge des forteresses climatiques sécurisées. Refusant la soumission aux enclaves surveillées des élites, elles constituent des espaces de résistance précaires mais organisés, vivant de récupération, de troc et d'entraide dans un environnement hostile.
-etat_ref: clandestin
+  Ensemble de municipalités désindustrialisées de l'ancienne ceinture manufacturière nord-américaine, reconfiguré en réseau de communes autogérées adossées aux murs de protection climatique des métropoles voisines. Les Communes Libres subsistent dans les zones grises entre les forteresses, pratiquant une économie de récupération et de troc hors des circuits surveillés. Tolérées mais non reconnues, elles servent de soupape sociale aux populations exclues des enclaves protégées.
+etat_ref: actif
 ---
 
 # Rust Belt Communes Libres
 
 ## Description archétypale
-Le territoire de résistance désindustrialisée est un espace humain né dans les carcasses d'une économie productive abandonnée, où la désindustrialisation a laissé des infrastructures orphelines, des savoir-faire sans débouchés et des communautés sans représentation. À la différence des communs ruraux ou forestiers, il hérite d'une mémoire ouvrière, de bâtiments industriels reconvertis, d'une culture du collectif forgée dans l'usine et le syndicat — qu'il retourne contre l'ordre qui l'a dépossédé. Il construit une autogestion urbaine-industrielle sur les ruines de la production fordiste, faisant de la récupération technique et de la réindustrialisation artisanale les fondements d'une économie de la subsistance organisée.
+La friche réinventée est le territoire que l'histoire industrielle a épuisé puis abandonné, et que ses habitants ont choisi de ne pas laisser mourir. Sur les ossatures rouillées de l'ancienne économie de masse, des communautés reconstituent des formes de vie collective fondées sur la récupération, le troc et l'autogouvernance — non par idéologie mais par nécessité. Ce territoire porte en lui la mémoire d'une puissance passée et la réalité d'une dépossession présente : ses habitants savent fabriquer, réparer, organiser, mais n'ont plus accès aux circuits qui valorisaient ces compétences. Il existe dans l'interstice entre ce que le système a abandonné et ce qu'il refuse encore de reconnaître.
 
 ## Tension fondamentale
-La mémoire industrielle qui fonde son identité collective et sa compétence technique est aussi ce qui l'ancre dans un rapport au territoire et à la production que l'ordre dominant peut à tout moment revendiquer, réactiver ou instrumentaliser — la reconversion autonome des ruines industrielles reste précaire tant que la propriété des infrastructures demeure disputée.
+La mémoire industrielle et les compétences collectives héritées fondent l'identité et la résilience de ces communautés, mais elles constituent aussi un attrait pour les puissances voisines qui voudraient réintégrer ces ressources humaines sans pour autant reconnaître les droits et la dignité des communautés qui les portent — l'autonomie construite dans la marge reste perpétuellement menacée par la récupération.
 
 ## Instances par scénario
 | Scénario | Instance | État | Rôle |

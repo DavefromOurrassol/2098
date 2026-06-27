@@ -4,6 +4,10 @@ type: instance
 slug: tbilissi_nord_zone_franche_fortress_world
 entite: tbilissi_nord_zone_franche
 scenario: fortress_world
+localisation:
+  zone: tbilissi_nord_zone_franche
+  lieu: Tbilissi Nord Zone Franche — nord de Tbilissi, Géorgie
+  type_lieu: infrastructure
 
 type_dans_scenario: infrastructure
 

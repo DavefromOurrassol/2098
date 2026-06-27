@@ -4,33 +4,32 @@ type: entity
 slug: delta_mekong_racines
 category: territoire
 description: >
-  Un territoire fluvial et deltaïque qui, après l'effondrement des structures étatiques qui le surplombaient, se réorganise depuis ses profondeurs : savoirs paysans et piscicoles transmis de génération en génération, pratiques rituelles liées aux cycles de crue et de retrait des eaux, solidarités de voisinage tissées autour du riz et des berges. Ce territoire incarnation de la résilience hydro-agricole communautaire n'est pas simplement un espace géographique — c'est un système de vie complet, auto-régulé, qui tire sa cohérence de l'enracinement dans un milieu naturel spécifique et de la mémoire vivante de ceux qui l'habitent. Il représente la possibilité d'une autonomie ancrée dans le vivant, fragile mais tenace, qui refuse de disparaître avec les institutions qui prétendaient le gouverner.
+  Un territoire-communauté qui reconstruit une autorité locale de fait à partir des savoir-faire ancestraux, des réseaux de parenté et d'une économie de subsistance hyper-localisée, sans attendre ni chercher de reconnaissance extérieure. Contrairement au delta comme espace géographique et hydraulique disputé entre États riverains, ce type d'entité est avant tout une communauté sociale auto-organisée : son territoire est secondaire à la cohérence humaine qui le fait exister. Elle incarne la capacité des marges à produire de l'ordre sans institutions formelles, fonctionnant comme un îlot de résilience précaire dans un environnement chaotique, résistant structurellement à toute intégration dans des ensembles plus larges.
 tension_fondamentale: >
-  La clôture jalouse qui permet la survie collective — refus de l'ingérence extérieure, fragmentation des autorités locales, méfiance envers toute coordination dépassant le village ou le bassin — est aussi ce qui empêche ce territoire de faire face aux pressions qui le débordent : montée des eaux, convoitises extérieures, besoins en ressources ou en savoirs qu'il ne peut produire seul.
+  La cohésion sociale qui permet la survie — fondée sur la clôture, la méfiance envers l'extérieur et le refus de toute articulation à des structures supérieures — est précisément ce qui condamne la communauté à la précarité permanente et l'empêche de se défendre contre les dynamiques extérieures qui la menacent.
 variables_potentielles:
   - organisation_territoires
-  - valeurs_culture_tempo_sociale
   - gouvernance_institutions
-  - climat_environnement_global
+  - valeurs_culture_tempo_sociale
   - systemes_productifs_travail
-  - energie_ressources_critiques
+  - geopolitique_conflits
 scenarios_instances:
   - breakdown
 date_creation: 2026-06-27
-custom_source: phantom_enrich_minimal_2026-06-27
+custom_source: phantom_validate_2026-06-27
 scenario_ref: breakdown
 role_ref: >
-  Ce qui subsiste du Delta du Mekong après l'effondrement des structures étatiques est désormais géré par des collectifs locaux enracinés dans des pratiques agricoles et spirituelles ancestrales. Ces communautés de survie ont rompu avec les institutions défaillantes pour développer des formes d'autonomie hydrique et alimentaire fragmentées. Le territoire est devenu un laboratoire improvisé de résilience locale, jalousement défendu contre toute ingérence extérieure.
+  Dans le contexte d'effondrement institutionnel, Delta Mekong Racines désigne les communautés paysannes et pêcheurs qui ont recomposé des formes d'autorité locale à partir des savoir-faire ancestraux et des réseaux de parenté. Ce territoire de facto résiste à toute intégration dans des blocs supérieurs, fonctionnant sur une économie de subsistance et de troc hyper-localisé. Il est perçu comme un îlot de résilience précaire dans une région par ailleurs livrée au chaos.
 etat_ref: actif
 ---
 
 # Delta Mekong Racines
 
 ## Description archétypale
-Un territoire fluvial et deltaïque qui, après l'effondrement des structures étatiques qui le surplombaient, se réorganise depuis ses profondeurs : savoirs paysans et piscicoles transmis de génération en génération, pratiques rituelles liées aux cycles de crue et de retrait des eaux, solidarités de voisinage tissées autour du riz et des berges. Ce territoire incarnation de la résilience hydro-agricole communautaire n'est pas simplement un espace géographique — c'est un système de vie complet, auto-régulé, qui tire sa cohérence de l'enracinement dans un milieu naturel spécifique et de la mémoire vivante de ceux qui l'habitent. Il représente la possibilité d'une autonomie ancrée dans le vivant, fragile mais tenace, qui refuse de disparaître avec les institutions qui prétendaient le gouverner.
+Un territoire-communauté qui reconstruit une autorité locale de fait à partir des savoir-faire ancestraux, des réseaux de parenté et d'une économie de subsistance hyper-localisée, sans attendre ni chercher de reconnaissance extérieure. Contrairement au delta comme espace géographique et hydraulique disputé entre États riverains, ce type d'entité est avant tout une communauté sociale auto-organisée : son territoire est secondaire à la cohérence humaine qui le fait exister. Elle incarne la capacité des marges à produire de l'ordre sans institutions formelles, fonctionnant comme un îlot de résilience précaire dans un environnement chaotique, résistant structurellement à toute intégration dans des ensembles plus larges.
 
 ## Tension fondamentale
-La clôture jalouse qui permet la survie collective — refus de l'ingérence extérieure, fragmentation des autorités locales, méfiance envers toute coordination dépassant le village ou le bassin — est aussi ce qui empêche ce territoire de faire face aux pressions qui le débordent : montée des eaux, convoitises extérieures, besoins en ressources ou en savoirs qu'il ne peut produire seul.
+La cohésion sociale qui permet la survie — fondée sur la clôture, la méfiance envers l'extérieur et le refus de toute articulation à des structures supérieures — est précisément ce qui condamne la communauté à la précarité permanente et l'empêche de se défendre contre les dynamiques extérieures qui la menacent.
 
 ## Instances par scénario
 | Scénario | Instance | État | Rôle |

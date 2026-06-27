@@ -4,32 +4,32 @@ type: entity
 slug: tresse_verte_corridor
 category: territoire
 description: >
-  Un corridor vivant est un espace-lien qui relie des communautés autonomes sans les soumettre à une autorité centrale : il n'est ni ville, ni frontière, ni infrastructure inerte, mais un territoire habité et traversé, porteur de pratiques, de semences, d'échanges et de mémoires. Il incarne la conviction que la connexion entre les humains et entre les écosystèmes peut s'organiser par le soin et la réciprocité plutôt que par le contrôle administratif ou la logique marchande. Sa forme physique — chemin, haie, vallée, lisière — est inséparable de sa fonction sociale : il est à la fois route, commun et milieu de vie. Il défie toute cartographie administrative en refusant d'être un objet gouvernable tout en assumant une fonction structurante pour ceux qui le traversent et l'habitent.
+  Le Tresse Verte Corridor est un territoire-réseau archétypal : une forme d'organisation spatiale et humaine qui fait de la connexion elle-même — et non d'un centre — son principe constitutif. Il représente la voie comme bien commun, l'entre-deux habité, le lien vivant qui permet à des communautés autonomes de rester en relation sans se dissoudre dans un ensemble plus grand. Il est à la fois infrastructure écologique, espace d'échange culturel et arrangement politique : un territoire qui n'existe que dans le mouvement et la réciprocité, et dont la gouvernance est portée par la délibération collective plutôt que par une autorité fixe. Il incarne la tension propre à toute forme de subsidiarité radicale : comment maintenir la cohérence d'un commun partagé sans instituer le pouvoir central qui le dénaturerait.
 tension_fondamentale: >
-  Le corridor tire sa vitalité de son refus d'être délimité, administré ou possédé — mais cette fluidité même le rend vulnérable à la capture, au morcellement ou à l'instrumentalisation par ceux qui veulent en contrôler les flux sans en partager les responsabilités.
+  La vitalité du corridor repose sur sa nature fluide, non délimitée et non possédée — mais c'est précisément cette absence de frontières et d'autorité centrale qui le rend structurellement vulnérable à la prédation extérieure, à la sécession des membres les plus forts et à l'érosion lente des chartes collectives dès que les intérêts divergent.
 variables_potentielles:
   - organisation_territoires
-  - valeurs_culture_tempo_sociale
-  - climat_environnement_global
-  - energie_ressources_critiques
   - gouvernance_institutions
+  - valeurs_culture_tempo_sociale
+  - systemes_productifs_travail
+  - climat_environnement_global
 scenarios_instances:
   - eco_communalism
 date_creation: 2026-06-27
-custom_source: phantom_enrich_minimal_2026-06-27
+custom_source: phantom_validate_2026-06-27
 scenario_ref: eco_communalism
 role_ref: >
-  Corridor écologique reliant plusieurs communautés autonomes d'Europe centrale, la Tresse Verte Corridor est un réseau de zones habitées en permaculture et en autosuffisance énergétique. Elle fonctionne comme un espace de transit et d'échange entre villages décroissants, refusant tout découpage administratif étatique.
+  Le Tresse Verte Corridor est un réseau de territoires reliés par des corridors écologiques aménagés, né de la fusion de plusieurs communes rurales ayant choisi la décroissance volontaire et l'autonomie alimentaire. Il sert de voie d'échange agricole, culturel et humain entre communautés éco-communalistes dispersées à travers une région post-industrielle revegetalisée. Son gouvernance repose sur des assemblées tournantes et des chartes de sobriété négociées collectivement.
 etat_ref: actif
 ---
 
 # Tresse Verte Corridor
 
 ## Description archétypale
-Un corridor vivant est un espace-lien qui relie des communautés autonomes sans les soumettre à une autorité centrale : il n'est ni ville, ni frontière, ni infrastructure inerte, mais un territoire habité et traversé, porteur de pratiques, de semences, d'échanges et de mémoires. Il incarne la conviction que la connexion entre les humains et entre les écosystèmes peut s'organiser par le soin et la réciprocité plutôt que par le contrôle administratif ou la logique marchande. Sa forme physique — chemin, haie, vallée, lisière — est inséparable de sa fonction sociale : il est à la fois route, commun et milieu de vie. Il défie toute cartographie administrative en refusant d'être un objet gouvernable tout en assumant une fonction structurante pour ceux qui le traversent et l'habitent.
+Le Tresse Verte Corridor est un territoire-réseau archétypal : une forme d'organisation spatiale et humaine qui fait de la connexion elle-même — et non d'un centre — son principe constitutif. Il représente la voie comme bien commun, l'entre-deux habité, le lien vivant qui permet à des communautés autonomes de rester en relation sans se dissoudre dans un ensemble plus grand. Il est à la fois infrastructure écologique, espace d'échange culturel et arrangement politique : un territoire qui n'existe que dans le mouvement et la réciprocité, et dont la gouvernance est portée par la délibération collective plutôt que par une autorité fixe. Il incarne la tension propre à toute forme de subsidiarité radicale : comment maintenir la cohérence d'un commun partagé sans instituer le pouvoir central qui le dénaturerait.
 
 ## Tension fondamentale
-Le corridor tire sa vitalité de son refus d'être délimité, administré ou possédé — mais cette fluidité même le rend vulnérable à la capture, au morcellement ou à l'instrumentalisation par ceux qui veulent en contrôler les flux sans en partager les responsabilités.
+La vitalité du corridor repose sur sa nature fluide, non délimitée et non possédée — mais c'est précisément cette absence de frontières et d'autorité centrale qui le rend structurellement vulnérable à la prédation extérieure, à la sécession des membres les plus forts et à l'érosion lente des chartes collectives dès que les intérêts divergent.
 
 ## Instances par scénario
 | Scénario | Instance | État | Rôle |

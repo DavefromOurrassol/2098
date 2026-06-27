@@ -4,33 +4,33 @@ type: entity
 slug: zone_usines_forteresses_eurasie
 category: territoire
 description: >
-  Un vaste territoire industriel subordonné, organisé pour produire au service d'une puissance extérieure qui le gouverne sans en assumer la responsabilité sociale. Zone de labeur captif, il concentre les ressources humaines et matérielles nécessaires à la prospérité d'autrui, tout en maintenant ses propres habitants dans un état de dépendance juridique, biométrique ou coercitive. Il n'est pas une colonie au sens classique — il est fonctionnellement intégré au système dominant — mais il en est radicalement exclu au sens politique et moral. Son existence repose sur une séparation délibérée : produire sans appartenir, alimenter sans participer.
+  Le territoire-usine captif est l'espace où la production industrielle et la contrainte humaine se fondent en un seul dispositif spatial : une zone géographiquement délimitée, physiquement sécurisée, où une population laborieuse est maintenue en état de servitude fonctionnelle pour alimenter une classe dirigeante qui n'y réside pas. Il incarne la logique du panoptique industriel étendu à l'échelle territoriale — chaque corps travaillant est traçable, chaque flux mesuré, chaque sortie filtrée. Ce territoire n'est pas une anomalie du système mais son fondement matériel silencieux : la condition de possibilité de tout confort, de toute sécurité, de tout luxe produit ailleurs. Il traverse les formes historiques — cité minière coloniale, bagne productif, zone économique spéciale à surveillance totale, complexe carcéro-industriel sous régime d'exception — car il répond à une logique constante : extraire du travail humain en annulant la liberté de ceux qui le fournissent.
 tension_fondamentale: >
-  Le territoire est indispensable à la survie des forteresses qu'il approvisionne, mais cette indispensabilité ne lui confère aucun pouvoir de négociation — au contraire, elle justifie un contrôle renforcé. Sa seule force potentielle est précisément ce qui légitime son enchaînement.
+  Ce territoire est à la fois l'instrument parfait du contrôle et la bombe à retardement de tout ordre fondé sur l'exploitation captive : son indispensabilité même constitue son seul levier de résistance potentielle, car il peut nourrir le système ou l'affamer — ce qui fait de la population captive, réduite à pure variable productive, le point d'où peut surgir l'effondrement de l'ordre qui la contient.
 variables_potentielles:
   - systemes_productifs_travail
   - organisation_territoires
   - gouvernance_institutions
-  - frontieres_du_systeme
-  - demographie_mobilite_humaine
   - technologie_information
+  - demographie_mobilite_humaine
+  - frontieres_du_systeme
 scenarios_instances:
   - fortress_world
 date_creation: 2026-06-27
-custom_source: phantom_enrich_minimal_2026-06-27
+custom_source: phantom_validate_2026-06-27
 scenario_ref: fortress_world
 role_ref: >
-  Vaste corridor industriel eurasiatique enclavé derrière des infrastructures de protection climatique et sécuritaire, produisant pour les forteresses riches tout en maintenant ses travailleurs sous surveillance biométrique permanente. Ces zones fonctionnent comme des prisons productives, juridiquement séparées des cités protégées qu'elles alimentent. Elles sont administrées par des consortiums privés sous mandat des blocs forteresses.
+  Vaste ensemble de complexes industriels fortifiés répartis sur le continent eurasiatique, opérant sous surveillance totale et contrôle biométrique des travailleurs. Ces zones-usines produisent les biens essentiels aux forteresses climatiques des élites tout en maintenant une population laborieuse captive dans des corridors sécurisés. Elles incarnent le modèle productiviste extrême du scénario Fortress World, où la sécurité prime sur tout droit.
 etat_ref: actif
 ---
 
 # Zone Usines Forteresses Eurasie
 
 ## Description archétypale
-Un vaste territoire industriel subordonné, organisé pour produire au service d'une puissance extérieure qui le gouverne sans en assumer la responsabilité sociale. Zone de labeur captif, il concentre les ressources humaines et matérielles nécessaires à la prospérité d'autrui, tout en maintenant ses propres habitants dans un état de dépendance juridique, biométrique ou coercitive. Il n'est pas une colonie au sens classique — il est fonctionnellement intégré au système dominant — mais il en est radicalement exclu au sens politique et moral. Son existence repose sur une séparation délibérée : produire sans appartenir, alimenter sans participer.
+Le territoire-usine captif est l'espace où la production industrielle et la contrainte humaine se fondent en un seul dispositif spatial : une zone géographiquement délimitée, physiquement sécurisée, où une population laborieuse est maintenue en état de servitude fonctionnelle pour alimenter une classe dirigeante qui n'y réside pas. Il incarne la logique du panoptique industriel étendu à l'échelle territoriale — chaque corps travaillant est traçable, chaque flux mesuré, chaque sortie filtrée. Ce territoire n'est pas une anomalie du système mais son fondement matériel silencieux : la condition de possibilité de tout confort, de toute sécurité, de tout luxe produit ailleurs. Il traverse les formes historiques — cité minière coloniale, bagne productif, zone économique spéciale à surveillance totale, complexe carcéro-industriel sous régime d'exception — car il répond à une logique constante : extraire du travail humain en annulant la liberté de ceux qui le fournissent.
 
 ## Tension fondamentale
-Le territoire est indispensable à la survie des forteresses qu'il approvisionne, mais cette indispensabilité ne lui confère aucun pouvoir de négociation — au contraire, elle justifie un contrôle renforcé. Sa seule force potentielle est précisément ce qui légitime son enchaînement.
+Ce territoire est à la fois l'instrument parfait du contrôle et la bombe à retardement de tout ordre fondé sur l'exploitation captive : son indispensabilité même constitue son seul levier de résistance potentielle, car il peut nourrir le système ou l'affamer — ce qui fait de la population captive, réduite à pure variable productive, le point d'où peut surgir l'effondrement de l'ordre qui la contient.
 
 ## Instances par scénario
 | Scénario | Instance | État | Rôle |

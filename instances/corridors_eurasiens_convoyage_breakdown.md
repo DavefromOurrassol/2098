@@ -4,6 +4,10 @@ type: instance
 slug: corridors_eurasiens_convoyage_breakdown
 entite: corridors_eurasiens_convoyage
 scenario: breakdown
+localisation:
+  zone: corridors_eurasiens_convoyage
+  lieu: Les Venelles — Corridors Eurasiens Convoyage (d'Almaty aux berges de la Vistule, corridor Oural-Pannonie)
+  type_lieu: infrastructure
 
 type_dans_scenario: infrastructure
 

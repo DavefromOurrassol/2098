@@ -1074,3 +1074,27 @@ needs_review:
   - 'Champ requis manquant ou vide : ''variables_potentielles'''
   - Doublon détecté avec l'entité existante 'communes_rust_belt' — reformuler ou abandonner
     cette idée
+- status: needs_review
+  idea:
+    nom: Amazonie Consortium Viva
+    category: corporation
+    role: Consortium privé opérant dans le bassin amazonien, exploitant les zones
+      grises juridiques pour extraire et breveter des ressources génétiques forestières.
+    etat: actif
+    scenario_ref: reference
+    scenario_hint:
+    - reference
+    source: manual_fix_2026-06-27
+  reason: 'category invalide : ''corporation'''
+- status: needs_review
+  idea:
+    nom: Amazonie Consortium Viva
+    category: corporation
+    role: Consortium privé opérant dans le bassin amazonien, exploitant les zones
+      grises juridiques pour extraire et breveter des ressources génétiques forestières.
+    etat: actif
+    scenario_ref: reference
+    scenario_hint:
+    - reference
+    source: manual_fix_2026-06-27
+  reason: 'category invalide : ''corporation'''

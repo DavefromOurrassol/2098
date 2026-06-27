@@ -1,12 +1,12 @@
 ---
 type: documentation
 titre: Pipeline Ourrassol 2098 — Récapitulatif
-date_maj: 2026-06-25
+date_maj: 2026-06-27
 ---
 
 # Pipeline Ourrassol 2098 — Récapitulatif
 
-Mis à jour après la session du 25 juin 2026 (P2 inject_custom_events, P3 validate.py cohérence narrative, P5 undo_custom.py, modes auto/auto-suggest, cycle post-injection automatique).
+Mis à jour après la session du 27 juin 2026 (P8 enrich_minimal.py, extract_phantom_slugs.py, fix_alliance_suffixes.py, requeue_needs_review.py, passage Opus→Sonnet, territoire dans VALID_CATEGORIES).
 
 ---
 
@@ -130,7 +130,7 @@ python3 validate.py
 
 ---
 
-## 8. Cycle continu stabilisé
+## 8c. Cycle continu stabilisé
 
 Les scripts d'injection lancent le cycle automatiquement. Si besoin manuel :
 
@@ -139,6 +139,46 @@ create_entities_and_instances.py  (ou inject_custom_events.py)
 → extract_localisation.py
 → review_localisation.py --auto-resolve
 → validate.py
+```
+
+---
+
+## 8b. Enrichissement fiches `officialise_minimal`
+
+```bash
+python3 enrich_minimal.py --scenario NOM [--dry-run] [--limit N] [--slug SLUG]
+python3 enrich_minimal.py --all [--auto-cycle]
+```
+
+Génère tous les champs placeholder via API Claude. Validation mécanique bloquante (2 retries). Reprise : `statut: officialise_enrichi`. Génère automatiquement les slugs fantômes → `queue.yaml` en fin de run.
+
+**Cycle post-enrichissement** (manuel par défaut) :
+```
+enrich_minimal.py --scenario X
+→ [inspecter enrich_minimal_report.md]
+→ extract_localisation.py
+→ review_localisation.py --auto-resolve
+→ validate.py
+```
+
+Avec `--auto-cycle` : cycle lancé automatiquement + extraction vague 2 (validate).
+
+**Slugs fantômes** :
+```bash
+python3 extract_phantom_slugs.py --source validate    # depuis validate --verbose
+python3 extract_phantom_slugs.py --source enrich      # depuis enrich_minimal_report.md
+python3 extract_phantom_slugs.py                      # les deux (défaut)
+```
+
+**Fix suffixes manquants** (mécanique, sans API) :
+```bash
+python3 fix_alliance_suffixes.py --dry-run
+python3 fix_alliance_suffixes.py
+```
+
+**Requeue needs_review** :
+```bash
+python3 requeue_needs_review.py
 ```
 
 ---
@@ -198,7 +238,9 @@ python3 generate_manual.py save /tmp/article.txt
 
 | # | Chantier | Statut |
 |---|---|---|
-| P1 | Tester modes auto/auto-suggest en conditions réelles | 🔴 À faire |
-| P2 | Chantier `restructure` | 🟢 Débloqué, périmètre à définir |
-| P3 | Enrichissement 426 fiches `officialise_minimal` | 🟢 Gros chantier |
+| P6 | Modes auto/auto-suggest | ✅ Livré (auto-suggest + auto) |
+| P7 | Chantier `restructure` | 🟡 Périmètre à finaliser |
+| P8 | Enrichissement 426 fiches `officialise_minimal` | ✅ Livré |
 | — | P4 validate.py appel review_localisation auto | ❌ Won't do |
+| — | Passage Opus → Sonnet (api.py, extract_localisation, review_localisation) | ✅ Fait |
+| — | `territoire` dans VALID_CATEGORIES (create_entities, validate) | ✅ Fait |

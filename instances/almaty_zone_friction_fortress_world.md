@@ -4,6 +4,10 @@ type: instance
 slug: almaty_zone_friction_fortress_world
 entite: almaty_zone_friction
 scenario: fortress_world
+localisation:
+  zone: almaty_zone_friction
+  lieu: Zone de Friction d'Almaty — Périmètre des Seuils Kazakhs
+  type_lieu: site_strategique
 
 type_dans_scenario: infrastructure
 

@@ -4,31 +4,32 @@ type: entity
 slug: zones_extractivistes_corridors
 category: territoire
 description: >
-  Les Zones Extractivistes Corridors incarnent l'archétype du territoire blessé en reconversion — espace autrefois consacré à l'extraction et à l'épuisement, qui devient progressivement un lien vital entre des communautés cherchant à se reconnecter à leurs milieux. Ce type de territoire est fondamentalement ambigu : il porte les cicatrices d'un régime de prédation passé tout en devenant support d'une régénération à venir. Il est à la fois mémoire d'un mode d'exploitation et promesse d'un passage vers autre chose — corridor, seuil, entre-deux. Sa valeur n'est plus extractive mais relationnelle et écologique, mais cette requalification reste disputée par ceux qui y voient encore un actif à contrôler.
+  Les Zones Extractivistes Corridors représentent l'archétype du territoire blessé en reconversion : des espaces autrefois épuisés par la logique extractive qui deviennent, sous l'impulsion de communautés locales, des espaces de régénération, de transit écologique et d'économie circulaire. Ce territoire incarne la cicatrice productive — là où la destruction industrielle a laissé un vide, des acteurs de terrain tentent de retisser des chaînes de vie courtes, de restaurer les sols et de réinventer des usages communs. Ces zones sont structurellement disputées : leur valeur résiduelle attire des intérêts extérieurs qui cherchent à reprendre ce que les communautés s'emploient à détransformer. Elles incarnent la frontière mouvante entre la dépossession et la réappropriation.
 tension_fondamentale: >
-  La reconversion d'un territoire d'extraction en espace de transit commun suppose d'effacer ou de dépasser des droits de propriété et des intérêts hérités qui refusent de disparaître — le corridor ne peut devenir commun qu'en arrachant ce statut à des puissances qui considèrent encore le sol comme un actif, non comme un bien partagé.
+  La reconversion d'un territoire d'extraction en bien commun régénératif suppose d'en effacer la valeur marchande résiduelle — mais c'est précisément cette valeur résiduelle qui attire les prédateurs extérieurs et fragilise toute tentative de fermeture du cycle. Plus la restauration réussit, plus le territoire redevient convoitable.
 variables_potentielles:
   - energie_ressources_critiques
   - organisation_territoires
-  - geopolitique_conflits
   - climat_environnement_global
+  - systemes_productifs_travail
+  - geopolitique_conflits
 scenarios_instances:
   - eco_communalism
 date_creation: 2026-06-27
-custom_source: phantom_enrich_minimal_2026-06-27
+custom_source: phantom_validate_2026-06-27
 scenario_ref: eco_communalism
 role_ref: >
-  Anciens territoires d'extraction minière et énergétique progressivement reconvertis en corridors de transit écologique par des coalitions communautaires. Ces zones servent de liens entre communautés autonomes qui refusent la logique des flux globaux et privilégient les circuits courts. Leur statut est disputé entre les réseaux communalistes qui les revendiquent et les anciennes multinationales qui y détiennent encore des titres fonciers.
+  Territoires autrefois dédiés à l'extraction intensive de ressources, progressivement reconvertis par des communautés éco-communalistes en corridors de résilience écologique. Des collectifs locaux y démantèlent les infrastructures extractivistes pour replanter, restaurer les sols et établir des économies circulaires à courte portée. Ces zones restent néanmoins disputées par des intérêts extérieurs cherchant à reprendre la main sur les ressources résiduelles.
 etat_ref: transformé
 ---
 
 # Zones Extractivistes Corridors
 
 ## Description archétypale
-Les Zones Extractivistes Corridors incarnent l'archétype du territoire blessé en reconversion — espace autrefois consacré à l'extraction et à l'épuisement, qui devient progressivement un lien vital entre des communautés cherchant à se reconnecter à leurs milieux. Ce type de territoire est fondamentalement ambigu : il porte les cicatrices d'un régime de prédation passé tout en devenant support d'une régénération à venir. Il est à la fois mémoire d'un mode d'exploitation et promesse d'un passage vers autre chose — corridor, seuil, entre-deux. Sa valeur n'est plus extractive mais relationnelle et écologique, mais cette requalification reste disputée par ceux qui y voient encore un actif à contrôler.
+Les Zones Extractivistes Corridors représentent l'archétype du territoire blessé en reconversion : des espaces autrefois épuisés par la logique extractive qui deviennent, sous l'impulsion de communautés locales, des espaces de régénération, de transit écologique et d'économie circulaire. Ce territoire incarne la cicatrice productive — là où la destruction industrielle a laissé un vide, des acteurs de terrain tentent de retisser des chaînes de vie courtes, de restaurer les sols et de réinventer des usages communs. Ces zones sont structurellement disputées : leur valeur résiduelle attire des intérêts extérieurs qui cherchent à reprendre ce que les communautés s'emploient à détransformer. Elles incarnent la frontière mouvante entre la dépossession et la réappropriation.
 
 ## Tension fondamentale
-La reconversion d'un territoire d'extraction en espace de transit commun suppose d'effacer ou de dépasser des droits de propriété et des intérêts hérités qui refusent de disparaître — le corridor ne peut devenir commun qu'en arrachant ce statut à des puissances qui considèrent encore le sol comme un actif, non comme un bien partagé.
+La reconversion d'un territoire d'extraction en bien commun régénératif suppose d'en effacer la valeur marchande résiduelle — mais c'est précisément cette valeur résiduelle qui attire les prédateurs extérieurs et fragilise toute tentative de fermeture du cycle. Plus la restauration réussit, plus le territoire redevient convoitable.
 
 ## Instances par scénario
 | Scénario | Instance | État | Rôle |

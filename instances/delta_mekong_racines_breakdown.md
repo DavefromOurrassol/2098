@@ -4,6 +4,10 @@ type: instance
 slug: delta_mekong_racines_breakdown
 entite: delta_mekong_racines
 scenario: breakdown
+localisation:
+  zone: delta_mekong_racines
+  lieu: Delta du Mékong
+  type_lieu: region
 
 type_dans_scenario: réseau
 

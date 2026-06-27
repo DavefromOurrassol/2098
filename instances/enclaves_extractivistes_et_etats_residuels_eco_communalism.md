@@ -4,6 +4,10 @@ type: instance
 slug: enclaves_extractivistes_et_etats_residuels_eco_communalism
 entite: enclaves_extractivistes_et_etats_residuels
 scenario: eco_communalism
+localisation:
+  zone: enclaves_extractivistes_et_etats_residuels
+  lieu: Périphéries Extractivistes et États-Coquilles
+  type_lieu: region
 
 type_dans_scenario: hybride
 

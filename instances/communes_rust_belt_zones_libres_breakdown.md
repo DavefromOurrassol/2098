@@ -4,6 +4,10 @@ type: instance
 slug: communes_rust_belt_zones_libres_breakdown
 entite: communes_rust_belt_zones_libres
 scenario: breakdown
+localisation:
+  zone: communes_rust_belt
+  lieu: Rust Belt / région des Grands Lacs (anciennes zones industrielles désaffectées)
+  type_lieu: region
 
 type_dans_scenario: organisation
 

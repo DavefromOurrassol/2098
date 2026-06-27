@@ -4,6 +4,10 @@ type: instance
 slug: corridor_arctique_nordique_reference
 entite: corridor_arctique_nordique
 scenario: reference
+localisation:
+  zone: corridor_arctique_nordique
+  lieu: Passage Arctique du Nord
+  type_lieu: infrastructure
 
 type_dans_scenario: infrastructure
 

@@ -4,7 +4,10 @@ type: instance
 slug: corridor_lithium_bouches_breakdown
 entite: corridor_lithium_bouches
 scenario: breakdown
-
+localisation:
+  zone: amazon_pacte_gardiens
+  lieu: Salars andins de Bolivie, Chili et Argentine
+  type_lieu: region
 type_dans_scenario: infrastructure
 
 role_dans_scenario: >

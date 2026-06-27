@@ -4,6 +4,11 @@ type: instance
 slug: zones_grises_globales_reference
 entite: zones_grises_globales
 scenario: reference
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 
 type_dans_scenario: autre
 

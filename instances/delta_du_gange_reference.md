@@ -4,6 +4,10 @@ type: instance
 slug: delta_du_gange_reference
 entite: delta_du_gange
 scenario: reference
+localisation:
+  zone: delta_du_gange
+  lieu: Delta du Gange
+  type_lieu: region
 
 type_dans_scenario: autre
 

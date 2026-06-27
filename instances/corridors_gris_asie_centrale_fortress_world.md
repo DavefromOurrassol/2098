@@ -4,6 +4,10 @@ type: instance
 slug: corridors_gris_asie_centrale_fortress_world
 entite: corridors_gris_asie_centrale
 scenario: fortress_world
+localisation:
+  zone: corridors_gris_asie_centrale
+  lieu: Corridors Gris d'Asie Centrale — entre Almaty, Tachkent, Bichkek et Achgabat
+  type_lieu: region
 
 type_dans_scenario: réseau
 

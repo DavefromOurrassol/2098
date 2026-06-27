@@ -4,6 +4,10 @@ type: instance
 slug: zones_extractivistes_corridors_eco_communalism
 entite: zones_extractivistes_corridors
 scenario: eco_communalism
+localisation:
+  zone: zones_extractivistes_corridors
+  lieu: Friches Corridors — anciens territoires d'extraction minière et énergétique reconvertis en corridors de transit écologique
+  type_lieu: infrastructure
 
 type_dans_scenario: infrastructure
 

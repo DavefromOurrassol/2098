@@ -4,6 +4,10 @@ type: instance
 slug: zone_usines_forteresses_eurasie_fortress_world
 entite: zone_usines_forteresses_eurasie
 scenario: fortress_world
+localisation:
+  zone: zone_usines_forteresses_eurasie
+  lieu: Ceinture Productive Eurasiatique — de la plaine kazakhe aux marges industrielles de l'Oural
+  type_lieu: region
 
 type_dans_scenario: infrastructure
 

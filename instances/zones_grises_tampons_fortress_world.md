@@ -4,6 +4,11 @@ type: instance
 slug: zones_grises_tampons_fortress_world
 entite: zones_grises_tampons
 scenario: fortress_world
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 
 type_dans_scenario: infrastructure
 

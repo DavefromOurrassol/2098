@@ -4,6 +4,10 @@ type: instance
 slug: tresse_verte_corridor_eco_communalism
 entite: tresse_verte_corridor
 scenario: eco_communalism
+localisation:
+  zone: tresse_verte_corridor
+  lieu: Tresse Verte Corridor — Autriche, Slovaquie, Tchéquie et Moravie méridionale
+  type_lieu: infrastructure
 
 type_dans_scenario: infrastructure
 

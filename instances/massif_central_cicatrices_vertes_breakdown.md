@@ -4,6 +4,10 @@ type: instance
 slug: massif_central_cicatrices_vertes_breakdown
 entite: massif_central_cicatrices_vertes
 scenario: breakdown
+localisation:
+  zone: massif_central_cicatrices_vertes
+  lieu: Massif Central — Cicatrices Vertes (plateau de Millevaches, ancienne Creuse)
+  type_lieu: region
 
 type_dans_scenario: autre
 

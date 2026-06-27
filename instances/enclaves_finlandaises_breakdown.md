@@ -4,6 +4,10 @@ type: instance
 slug: enclaves_finlandaises_breakdown
 entite: enclaves_finlandaises
 scenario: breakdown
+localisation:
+  zone: enclaves_finlandaises
+  lieu: Enclaves finlandaises (Tampere, Turku, Rovaniemi — territoire finlandais fragmenté)
+  type_lieu: region
 
 type_dans_scenario: organisation
 

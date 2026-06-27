@@ -4,33 +4,32 @@ type: entity
 slug: vallee_allier_terrafond
 category: territoire
 description: >
-  Un territoire semi-rural reconstitué autour d'un fonds foncier collectif constitue l'archétype du territoire-commun de survie : un espace géographique délimité qui, après la dissolution des structures propriétaires classiques, refonde son existence sur la gestion partagée des terres arables et des ressources hydriques. Ce territoire n'est pas simplement une organisation ou un réseau — c'est un lieu incarné, un bassin de vie qui porte en lui une mémoire paysanne, une identité fluviale, et une expérience concrète de l'autogouvernance locale. Il représente à la fois la preuve que la gouvernance collective de ressources vitales est possible à petite échelle, et la démonstration de la fragilité structurelle de cette résilience face aux logiques d'emprise extérieure. Sa particularité est d'être un territoire-sujet — pas seulement administré, mais constitué par la relation de ses habitants à leurs sols et à leurs eaux.
+  Un territoire post-souverain organisé autour d'une ressource vitale partagée — eau, sol, forêt — qui devient à la fois le ciment d'une communauté de survie et l'objet de ses déchirements internes. Ce type d'entité naît dans le vide laissé par l'effondrement des structures étatiques : des groupes humains y refondent un ordre collectif minimal, non par idéal, mais par nécessité. Il incarne la tentative avortée ou conflictuelle de transformer une dépendance commune à un lieu en gouvernance partagée, portant en lui la mémoire d'un projet collectif inachevé — ici un fonds foncier commun, là une charte d'usage — dont les ruines structurent encore les rapports de force entre factions rivales.
 tension_fondamentale: >
-  Ce territoire tire sa légitimité et sa cohésion de l'enracinement de ses habitants dans un lieu précis et ses ressources vitales, mais cet ancrage même — qui produit une gouvernance locale efficace — en fait une cible pour les factions extérieures qui convoitent ses terres et ses eaux, le contraignant à choisir entre l'ouverture coopérative qui l'affaiblit et le repli défensif qui l'isole.
+  La ressource qui fonde la cohésion du territoire est précisément ce qui le fracture : tout projet de commun se brise sur la tentation de la capture unilatérale, et la légitimité de qui gouverne reste perpétuellement disputée entre ceux qui ont la force, ceux qui ont été là les premiers, et ceux qui ont rédigé les textes que plus personne ne reconnaît.
 variables_potentielles:
+  - energie_ressources_critiques
   - organisation_territoires
   - gouvernance_institutions
-  - energie_ressources_critiques
   - geopolitique_conflits
-  - systeme_economique_redistribution
   - climat_environnement_global
 scenarios_instances:
   - breakdown
 date_creation: 2026-06-27
-custom_source: phantom_enrich_minimal_2026-06-27
+custom_source: phantom_validate_2026-06-27
 scenario_ref: breakdown
 role_ref: >
-  Territoire semi-rural de la vallée de l'Allier reconstitué autour d'un fonds foncier collectif dit Terrafond, gérant les terres arables et les ressources en eau après l'effondrement des structures propriétaires classiques. Dans un contexte de fragmentation institutionnelle, ce territoire fait figure de modèle précaire de gouvernance locale de survie, constamment sous pression de factions extérieures.
-etat_ref: actif
+  La Vallée Allier Terrafond est un territoire de survie semi-organisé qui a émergé dans le sillage de l'effondrement des structures étatiques françaises, autour des ressources hydriques encore accessibles de la rivière Allier. Des groupes locaux y ont constitué des micro-fiefs agricoles en tension permanente pour le contrôle de l'eau et des terres arables. Le nom Terrafond désigne une tentative avortée de fonds foncier commun, dont les statuts juridiques restent disputés entre factions rivales.
+etat_ref: transformé
 ---
 
 # Vallee Allier Terrafond
 
 ## Description archétypale
-Un territoire semi-rural reconstitué autour d'un fonds foncier collectif constitue l'archétype du territoire-commun de survie : un espace géographique délimité qui, après la dissolution des structures propriétaires classiques, refonde son existence sur la gestion partagée des terres arables et des ressources hydriques. Ce territoire n'est pas simplement une organisation ou un réseau — c'est un lieu incarné, un bassin de vie qui porte en lui une mémoire paysanne, une identité fluviale, et une expérience concrète de l'autogouvernance locale. Il représente à la fois la preuve que la gouvernance collective de ressources vitales est possible à petite échelle, et la démonstration de la fragilité structurelle de cette résilience face aux logiques d'emprise extérieure. Sa particularité est d'être un territoire-sujet — pas seulement administré, mais constitué par la relation de ses habitants à leurs sols et à leurs eaux.
+Un territoire post-souverain organisé autour d'une ressource vitale partagée — eau, sol, forêt — qui devient à la fois le ciment d'une communauté de survie et l'objet de ses déchirements internes. Ce type d'entité naît dans le vide laissé par l'effondrement des structures étatiques : des groupes humains y refondent un ordre collectif minimal, non par idéal, mais par nécessité. Il incarne la tentative avortée ou conflictuelle de transformer une dépendance commune à un lieu en gouvernance partagée, portant en lui la mémoire d'un projet collectif inachevé — ici un fonds foncier commun, là une charte d'usage — dont les ruines structurent encore les rapports de force entre factions rivales.
 
 ## Tension fondamentale
-Ce territoire tire sa légitimité et sa cohésion de l'enracinement de ses habitants dans un lieu précis et ses ressources vitales, mais cet ancrage même — qui produit une gouvernance locale efficace — en fait une cible pour les factions extérieures qui convoitent ses terres et ses eaux, le contraignant à choisir entre l'ouverture coopérative qui l'affaiblit et le repli défensif qui l'isole.
+La ressource qui fonde la cohésion du territoire est précisément ce qui le fracture : tout projet de commun se brise sur la tentation de la capture unilatérale, et la légitimité de qui gouverne reste perpétuellement disputée entre ceux qui ont la force, ceux qui ont été là les premiers, et ceux qui ont rédigé les textes que plus personne ne reconnaît.
 
 ## Instances par scénario
 | Scénario | Instance | État | Rôle |

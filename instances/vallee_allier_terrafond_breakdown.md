@@ -4,6 +4,10 @@ type: instance
 slug: vallee_allier_terrafond_breakdown
 entite: vallee_allier_terrafond
 scenario: breakdown
+localisation:
+  zone: vallee_allier_terrafond
+  lieu: Vallée de l'Allier, entre Vichy et Brioude
+  type_lieu: region
 
 type_dans_scenario: institution
 

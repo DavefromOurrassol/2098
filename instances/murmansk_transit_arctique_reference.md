@@ -4,6 +4,10 @@ type: instance
 slug: murmansk_transit_arctique_reference
 entite: murmansk_transit_arctique
 scenario: reference
+localisation:
+  zone: murmansk_transit_arctique
+  lieu: Mourmansk
+  type_lieu: infrastructure
 
 type_dans_scenario: infrastructure
 

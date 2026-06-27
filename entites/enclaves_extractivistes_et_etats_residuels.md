@@ -4,32 +4,32 @@ type: entity
 slug: enclaves_extractivistes_et_etats_residuels
 category: territoire
 description: >
-  Les enclaves extractivistes et États résiduels incarnent la persistance têtue de l'ancienne économie de prélèvement aux marges d'un ordre nouveau qui la rejette sans pouvoir l'éliminer. Zones grises entre le légal et l'illégal, entre l'État et la corporation, entre la survie et la prédation, ces territoires-coquilles subsistent précisément là où les systèmes alternatifs refusent d'aller ou ne peuvent pas aller. Ils attirent ce que les communautés régulées rejettent — main-d'œuvre sans filet, capitaux errants, ressources jugées trop coûteuses à extraire éthiquement — et fonctionnent comme les organes résiduels d'un métabolisme global qui se croit en train de changer de régime. Leur existence n'est pas un accident mais une nécessité structurelle : tout système alternatif a besoin d'un dehors où déléguer ses contradictions.
+  Les enclaves extractivistes et états résiduels représentent l'archétype du territoire persistant hors-système : des poches géographiques où l'ancien ordre économique survit à sa propre condamnation, abrité derrière des coquilles étatiques vidées de leur substance mais conservant suffisamment de forme légale pour offrir une couverture aux logiques d'accumulation que le système dominant prétend avoir dépassées. Elles incarnent la persistance irréductible du modèle extractif dans les marges d'un monde qui s'en est officiellement détourné, fonctionnant comme des réservoirs de la logique ancienne — ni entièrement intégrées, ni véritablement éliminées. Leur existence révèle que toute transition laisse des zones de non-transition, et que ces zones sont tolérées précisément parce qu'elles rendent des services clandestins à ceux qui les combattent publiquement.
 tension_fondamentale: >
-  Ces enclaves sont à la fois condamnées moralement et tolérées fonctionnellement : leur existence est rendue possible par les refus et les limites du système qui les réprouve, de sorte que les dénoncer sans les supprimer revient à les légitimer, et les supprimer reviendrait à internaliser ce qu'on leur avait précisément externaliser.
+  Ces enclaves sont à la fois condamnées moralement et tolérées fonctionnellement : leur existence est un aveu d'échec du modèle dominant qui prétend les avoir supplantés, et leur survie dépend précisément de l'hypocrisie de ceux qui les combattent — car les supprimer entièrement signifierait couper des flux dont le système alternatif est lui-même secrètement dépendant.
 variables_potentielles:
   - energie_ressources_critiques
   - organisation_territoires
-  - systemes_productifs_travail
   - geopolitique_conflits
-  - valeurs_culture_tempo_sociale
+  - gouvernance_institutions
+  - systeme_economique_redistribution
 scenarios_instances:
   - eco_communalism
 date_creation: 2026-06-27
-custom_source: phantom_enrich_minimal_2026-06-27
+custom_source: phantom_validate_2026-06-27
 scenario_ref: eco_communalism
 role_ref: >
-  Ensemble hétérogène de zones extractives et d'États-coquilles persistant en marge des communautés autogérées, exploitant des ressources que les collectifs éco-communalistes refusent de mobiliser. Ils constituent un pôle de tension permanent avec les réseaux décroissants, attirant main-d'œuvre précaire et capitaux résiduels. Leur existence est tolérée de fait, mais moralement condamnée par les assemblées locales.
-etat_ref: actif
+  Ces enclaves désignent les poches territoriales où des industries extractives continuent d'opérer sous couvert d'États fantômes ou de structures para-étatiques résiduelles, en marge des communautés éco-communalistes dominantes. Elles représentent le point de friction central entre le modèle décroissant et les logiques d'accumulation persistantes, alimentant des flux clandestins de matières premières vers des marchés offshore. Leur existence est tolérée, combattue ou instrumentalisée selon les alliances locales du moment.
+etat_ref: clandestin
 ---
 
 # Enclaves Extractivistes Et Etats Residuels
 
 ## Description archétypale
-Les enclaves extractivistes et États résiduels incarnent la persistance têtue de l'ancienne économie de prélèvement aux marges d'un ordre nouveau qui la rejette sans pouvoir l'éliminer. Zones grises entre le légal et l'illégal, entre l'État et la corporation, entre la survie et la prédation, ces territoires-coquilles subsistent précisément là où les systèmes alternatifs refusent d'aller ou ne peuvent pas aller. Ils attirent ce que les communautés régulées rejettent — main-d'œuvre sans filet, capitaux errants, ressources jugées trop coûteuses à extraire éthiquement — et fonctionnent comme les organes résiduels d'un métabolisme global qui se croit en train de changer de régime. Leur existence n'est pas un accident mais une nécessité structurelle : tout système alternatif a besoin d'un dehors où déléguer ses contradictions.
+Les enclaves extractivistes et états résiduels représentent l'archétype du territoire persistant hors-système : des poches géographiques où l'ancien ordre économique survit à sa propre condamnation, abrité derrière des coquilles étatiques vidées de leur substance mais conservant suffisamment de forme légale pour offrir une couverture aux logiques d'accumulation que le système dominant prétend avoir dépassées. Elles incarnent la persistance irréductible du modèle extractif dans les marges d'un monde qui s'en est officiellement détourné, fonctionnant comme des réservoirs de la logique ancienne — ni entièrement intégrées, ni véritablement éliminées. Leur existence révèle que toute transition laisse des zones de non-transition, et que ces zones sont tolérées précisément parce qu'elles rendent des services clandestins à ceux qui les combattent publiquement.
 
 ## Tension fondamentale
-Ces enclaves sont à la fois condamnées moralement et tolérées fonctionnellement : leur existence est rendue possible par les refus et les limites du système qui les réprouve, de sorte que les dénoncer sans les supprimer revient à les légitimer, et les supprimer reviendrait à internaliser ce qu'on leur avait précisément externaliser.
+Ces enclaves sont à la fois condamnées moralement et tolérées fonctionnellement : leur existence est un aveu d'échec du modèle dominant qui prétend les avoir supplantés, et leur survie dépend précisément de l'hypocrisie de ceux qui les combattent — car les supprimer entièrement signifierait couper des flux dont le système alternatif est lui-même secrètement dépendant.
 
 ## Instances par scénario
 | Scénario | Instance | État | Rôle |

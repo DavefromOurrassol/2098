@@ -4,6 +4,10 @@ type: instance
 slug: rust_belt_communes_libres_fortress_world
 entite: rust_belt_communes_libres
 scenario: fortress_world
+localisation:
+  zone: rust_belt_communes_libres
+  lieu: Rust Belt / Midwest et Grands Lacs (Gary, Indiana ; Detroit)
+  type_lieu: region
 
 type_dans_scenario: réseau
 

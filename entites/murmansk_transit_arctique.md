@@ -4,33 +4,32 @@ type: entity
 slug: murmansk_transit_arctique
 category: territoire
 description: >
-  Un territoire-carrefour dont la valeur stratégique est entièrement dérivée d'une transformation extérieure — climatique, technologique ou géopolitique — qui l'a propulsé au centre de flux vitaux qu'il ne contrôle pas. Il concentre sur un espace réduit des intérêts contradictoires d'acteurs puissants, et sa gouvernance ne peut être qu'hybride et provisoire, faite de coalitions fragiles entre souverainetés concurrentes. Il est à la fois ressource convoitée, terrain de négociation permanent et point de friction structurel dans un système mondial en recomposition.
+  Un territoire-nœud dont la valeur émerge non de sa richesse intrinsèque mais de sa position géographique à l'intersection de routes vitales que des forces extérieures ont rendues praticables ou indispensables. Ce type d'entité incarne la puissance du passage : elle ne produit pas, elle transit, et c'est précisément cette fonction intermédiaire qui lui confère un levier disproportionné sur les acteurs qui dépendent d'elle. Sa position est structurellement disputée parce qu'aucun acteur dominant ne peut tolérer longtemps que ce nœud appartienne à un autre, ni que personne ne le contrôle tout à fait.
 tension_fondamentale: >
-  La position de nœud indispensable confère une puissance d'attraction et de levier exceptionnelle, mais cette même centralité rend le territoire ingouvernable en propre : aucun acteur ne peut le contrôler seul sans déclencher une coalition adverse, condamnant le territoire à une instabilité chronique comme condition même de son existence.
+  La position de nœud indispensable confère une puissance d'attraction et de levier exceptionnelle, mais cette même centralité fait du territoire une cible permanente de convoitises concurrentes qui menacent de le déstabiliser ou de le fragmenter — être indispensable, c'est être exposé.
 variables_potentielles:
-  - geopolitique_conflits
   - energie_ressources_critiques
+  - geopolitique_conflits
   - organisation_territoires
-  - gouvernance_institutions
   - frontieres_du_systeme
   - climat_environnement_global
 scenarios_instances:
   - reference
 date_creation: 2026-06-27
-custom_source: phantom_enrich_minimal_2026-06-27
+custom_source: phantom_validate_2026-06-27
 scenario_ref: reference
 role_ref: >
-  Plaque tournante stratégique du trafic maritime et énergétique arctique, Murmansk s'est imposée comme nœud incontournable des nouvelles routes commerciales ouvertes par la fonte des glaces polaires. Le territoire est administré par un consortium russo-scandinave fragile, soumis aux pressions concurrentes des puissances cherchant à contrôler le passage du Nord-Est. Sa position géopolitique en fait un terrain de négociations permanentes et de tensions sourdes entre acteurs étatiques et corporatifs.
+  Plateforme logistique stratégique contrôlant les routes de transit maritime arctique dégelées par le réchauffement climatique. Murmansk Transit Arctique est un nœud commercial disputé entre intérêts russes résiduels, consortiums scandinaves et opérateurs chinois. Sa position confère un pouvoir de levier considérable dans les négociations sur le transport d'hydrocarbures et de minerais critiques.
 etat_ref: actif
 ---
 
 # Murmansk Transit Arctique
 
 ## Description archétypale
-Un territoire-carrefour dont la valeur stratégique est entièrement dérivée d'une transformation extérieure — climatique, technologique ou géopolitique — qui l'a propulsé au centre de flux vitaux qu'il ne contrôle pas. Il concentre sur un espace réduit des intérêts contradictoires d'acteurs puissants, et sa gouvernance ne peut être qu'hybride et provisoire, faite de coalitions fragiles entre souverainetés concurrentes. Il est à la fois ressource convoitée, terrain de négociation permanent et point de friction structurel dans un système mondial en recomposition.
+Un territoire-nœud dont la valeur émerge non de sa richesse intrinsèque mais de sa position géographique à l'intersection de routes vitales que des forces extérieures ont rendues praticables ou indispensables. Ce type d'entité incarne la puissance du passage : elle ne produit pas, elle transit, et c'est précisément cette fonction intermédiaire qui lui confère un levier disproportionné sur les acteurs qui dépendent d'elle. Sa position est structurellement disputée parce qu'aucun acteur dominant ne peut tolérer longtemps que ce nœud appartienne à un autre, ni que personne ne le contrôle tout à fait.
 
 ## Tension fondamentale
-La position de nœud indispensable confère une puissance d'attraction et de levier exceptionnelle, mais cette même centralité rend le territoire ingouvernable en propre : aucun acteur ne peut le contrôler seul sans déclencher une coalition adverse, condamnant le territoire à une instabilité chronique comme condition même de son existence.
+La position de nœud indispensable confère une puissance d'attraction et de levier exceptionnelle, mais cette même centralité fait du territoire une cible permanente de convoitises concurrentes qui menacent de le déstabiliser ou de le fragmenter — être indispensable, c'est être exposé.
 
 ## Instances par scénario
 | Scénario | Instance | État | Rôle |
