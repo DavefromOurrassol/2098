@@ -62,7 +62,7 @@ VALID_SCENARIOS = [
 VALID_CATEGORIES = [
     "humain", "organisation", "institution", "mouvement",
     "infrastructure", "réseau", "système", "hybride", "autre",
-    "entreprise", "IA", "média"
+    "entreprise", "IA", "média", "territoire"
 ]
 
 VALID_ETAT_TEMPOREL = [
