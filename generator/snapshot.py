@@ -684,6 +684,25 @@ def get_thematic_tensions(thematique, matrix, variable_states):
 # FONCTION PRINCIPALE
 # ─────────────────────────────────────────
 
+def _dominant_zone(instances):
+    """
+    Retourne le slug de zone le plus représenté parmi les instances filtrées.
+    Utilise localisation.zone de chaque instance.
+    Retourne None si aucune instance n'a de localisation.
+    """
+    from collections import Counter
+    zones = []
+    for inst in instances:
+        loc = inst.get("localisation", {})
+        if isinstance(loc, dict):
+            z = loc.get("zone")
+            if z:
+                zones.append(z)
+    if not zones:
+        return None
+    return Counter(zones).most_common(1)[0][0]
+
+
 def build_snapshot(scenario_slug, thematique=None):
     """
     Fonction principale — construit le snapshot complet du monde 2098.
@@ -835,6 +854,9 @@ def build_snapshot(scenario_slug, thematique=None):
         # Événements custom
         "custom_events":       custom_events,
         "event_modifications": event_modifications,
+
+        # Zone dominante — déterminée depuis les instances filtrées
+        "zone_slug":           _dominant_zone(filtered_instances),
     }
 
     return snapshot

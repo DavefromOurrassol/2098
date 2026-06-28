@@ -1,0 +1,1304 @@
+breakdown:
+  pro_pouvoir:
+    _reseau:
+      nom: Réseau de l'Ordre Zonal
+      charte: Bulletins officiels des Forces de Maintien de l'Ordre. Chaque édition
+        locale couvre sa zone de contrôle. Ton sécuritaire, justification de l'ordre
+        imposé.
+    zones:
+      afrique_centrale_australe:
+        nom: Mwanga wa Dhamana - Lumière de la Garde
+        ton: Ton martial et prophétique, mêlant justifications théologiques et impératifs
+          sécuritaires. Le journal se présente comme le 'bouclier des eaux' et 'gardien
+          des pactes brisés', légitimant l'usage de la force pour rétablir l'ordre
+          hydrique et extractiviste. Le style est épique, avec des références aux
+          accords de 2067 comme 'lois divines trahies'.
+        langue_style: swahili classique teinté de termes techniques kholus (langue
+          dérivée du lingala et du kikuyu pour les documents administratifs locaux),
+          phrases longues et cycliques
+      afrique_de_louest_lagos_sahel:
+        nom: NexCore Sahel - Bulletin des Nœuds Survivants
+        ton: Ton technocratique et paranoïaque, oscillant entre célébration des 'compétences
+          critiques' de la diaspora sahélienne et diatribes contre les 'pirates numériques'
+          et les 'factions obscurantistes'. Le journal justifie les contrôles drastiques
+          sur les archives Mnemos par la nécessité de 'préserver l'héritage technologique
+          humain'.
+        langue_style: français administratif des anciennes colonies, mélangé à un
+          jargon informatique vieilli (termes comme 'serveurs fantômes', 'clusters
+          corrompus') et à des emprunts à l'arabe maghrébin ('baraka', 'fatwa numérique')
+      amazon_pacte_gardiens:
+        nom: Guardião da Floresta - Gardien de la Forêt
+        ton: Ton à la fois mystique et brutal, présentant le Pacte des Gardiens comme
+          l'ultime rempart contre le chaos. Le journal alterne entre poèmes en langue
+          tikuna et rapports militaires détaillés sur les 'opérations de nettoyage'
+          contre les blocs extractivistes. La légitimité du pouvoir est justifiée
+          par une 'mission sacrée de préservation'.
+        langue_style: portugais amazonien avec des termes tupi-guarani ('yvy marãe'
+          pour 'terre malade'), phrases courtes et rythmées, ponctuation expressive
+          (points d'exclamation multiples, tirets pour les énumérations)
+      arc_eurasien_central:
+        nom: Trassa Logistika - Voie Logistique
+        ton: Ton froid et rationnel, présentant les seigneurs de guerre logistiques
+          comme les 'seuls acteurs capables de maintenir les flux critiques'. Le journal
+          utilise un langage économique et militaire, justifiant les conflits par
+          des 'lois du marché énergétique' et des 'nécessités géopolitiques'. Les
+          rapports sont secs, avec des chiffres et des cartes annotées.
+        langue_style: russe technique et géorgien administratif, avec des termes anglais
+          ('supply chain', 'black market') pour les rapports internationaux, style
+          télégraphique et abréviations ('ЭкСнаР' pour 'Экспортно-Снабженческие Ресурсы')
+      arc_sahelo_mediterraneen:
+        nom: Seuil Sécurisé - Bulletin des Racines-Mères
+        ton: Ton apocalyptique et messianique, présentant l'Arc Sahélo-Méditerranéen
+          comme un 'laboratoire de survie'. Le journal alterne entre appels à la 'résilience
+          collective' et justifications violentes des 'nettoyages préventifs' contre
+          les 'saboteurs'. Le style est pamphlétaire, avec des références aux 'anciens
+          accords oubliés' comme fondement du nouvel ordre.
+        langue_style: occitan modernisé (mélange de gascon, languedocien et catalan)
+          avec des termes arabes ('baraka', 'jihad économique') et des emprunts au
+          français technique ('zones tampons', 'fragments Terrafond'), phrases longues
+          et entrecoupées de citations en latin ('Civis pacem parat bellum')
+      arctique_nordark:
+        nom: Nordark Logistique Officielle
+        ton: Discours martial et technique, célébration de l'efficacité logistique
+          comme seul rempart contre le chaos. Justifie l'autorité du Konsortiet par
+          sa capacité à maintenir les flux vitaux dans une zone où la survie dépend
+          des routes et des hubs. Langage froid, chiffres et cartes à l'appui.
+        langue_style: norvégien arctique adapté (mots techniques nordiques intégrés,
+          anglicismes logistiques) avec un registre semi-militaire
+      asie_pacifique_sud_est:
+        nom: Bohai Transit News – Bulletin des Corridors
+        ton: Ton corporatiste et technocratique, mêlant propagande des flux optimisés
+          et dénonciation des souverainistes égoïstes. Met en avant la rationalité
+          économique comme seule garantie de stabilité, tout en diabolisant les entités
+          locales qui perturbent l'ordre des transit. Style directif et jargon logistique.
+        langue_style: mandarin standard avec emprunts au russe pour les termes sibériens,
+          style administratif et phrasé télégraphique
+      espace_nord_americain_fragmente:
+        nom: Philadelphia-Centrale Herald – La Voix du Parti
+        ton: Rhetorique révolutionnaire figée, glorification du Parti Commun comme
+          unique force unificatrice dans un monde de chaos. Dénonce les sécessionnistes
+          comme traîtres et les milices comme instruments du capital. Style oratoire,
+          slogans martelés, références aux « lois historiques » du parti.
+        langue_style: anglais américain teinté d'argot révolutionnaire intra-parti
+          et de termes marxistes-léninistes réactualisés
+      geneve_bunker_institutions:
+        nom: Genève-Bunker Décret
+        ton: Langage juridique et ampoulé, prouvant par les textes l'absurdité de
+          la dissolution des institutions. Craint la perte de légitimité internationale
+          et met en garde contre les dérives des factions locales. Style froid et
+          académique, avec un ton défensif et nostalgique.
+        langue_style: français institutionnel, mélange de jargon juridique onusien
+          et d'allemand bureaucratique pour les références aux archives
+      nordeste_bresil_frente:
+        nom: Frente Sertão – A Ordem do Livre
+        ton: Ton à la fois communautaire et autoritaire, célébrant l'autonomie tout
+          en imposant des règles strictes pour la survie collective. Dénonce les pactes
+          avec les cartels comme trahisons, mais justifie les milices locales par
+          la nécessité de protéger les ressources. Style oral et répétitif, mêlé de
+          proverbes locaux.
+        langue_style: portugais du Nordeste avec métaphores rurales, emprunts aux
+          langues indigènes régionales et termes techniques adaptés (solaire, hydrique)
+      zone_golfe_levant:
+        nom: Al-Nizam al-Mustakim (النظام المستقيم) / Le Système Juste
+        ton: Un ton solennel et martial, mêlant références coraniques et lexique administratif
+          ottoman réinterprété. Les éditoriaux justifient la nécessité d'un ordre
+          strict pour éviter l'anarchie totale, tout en dénonçant les 'brigandages
+          énergétiques' des factions rivales. Le style est à la fois théocratique
+          et technocratique, avec des rapports chiffrés sur les flux de carburant
+          sous contrôle.
+        langue_style: Arabe littéraire et persan (mots techniques), avec des insertions
+          de termes juridiques ottomans ('sened', 'timar') pour légitimer les structures
+          de pouvoir actuelles.
+  opposition:
+    _reseau:
+      nom: Réseau La Dépêche des Territoires
+      charte: Feuilles clandestines distribuées de main en main. Chaque édition locale
+        documente les violences et résistances de sa zone. Ton brut, factuel, épuisé
+        mais résistant.
+    zones:
+      afrique_centrale_australe:
+        nom: Mabéki Wa Mawu (Les Gardiens des Eaux)
+        ton: Ton sec, presque clinique, mais traversé par une rage sourde. Les faits
+          sont énumérés comme des preuves accablantes, sans fioritures. Chaque ligne
+          est une accusation contre les puissants qui ont trahi les accords de 2067.
+          La colère est contenue, mais elle suinte entre les mots.
+        langue_style: Lingala teinté de termes techniques en français et en anglais,
+          avec des interjections en swahili local. Phrases courtes, souvent nominales.
+      afrique_de_louest_lagos_sahel:
+        nom: Ona Tani (Ceux qui Veillent)
+        ton: Ton paranoïaque et nerveux, comme si chaque mot pouvait attirer l'attention
+          d'un ennemi invisible. Les informations sont transmises par bribes, avec
+          des répétitions et des mises en garde constantes. Le style est télégraphique,
+          presque cryptique.
+        langue_style: Yoruba et haoussa mélangés au pidgin nigérian, avec des termes
+          techniques en anglais. Abréviations, symboles et codes locaux.
+      amazon_pacte_gardiens:
+        nom: Yanomami na Terra (Les Enfants de la Terre)
+        ton: Ton à la fois poétique et brutal, comme une incantation résistante. Les
+          mots sont choisis pour leur force symbolique, mais la colère et la douleur
+          transpercent chaque phrase. Les descriptions des violences sont brutes,
+          sans édulcoration.
+        langue_style: Portugais amazonien avec des termes tupi-guarani et des emprunts
+          à l'espagnol local. Métaphores végétales et animales omniprésentes.
+      arc_eurasien_central:
+        nom: Korovodstvo (Le Convoi)
+        ton: Ton direct et sans appel, comme un ordre militaire. Les faits sont rapportés
+          avec une précision chirurgicale, sans émotion apparente. Mais la froideur
+          du style cache une rage profonde contre l'injustice et la trahison des anciens
+          accords.
+        langue_style: Russe local avec des termes turciques et persans, mélangé à
+          un jargon logistique et énergétique. Phrases longues et structurées, presque
+          administratives.
+      arc_sahelo_mediterraneen:
+        nom: Les Racines du Seuil
+        ton: Ton à la fois lyrique et désespéré, comme une complainte qui résiste.
+          Les mots sont chargés de symboles et d'images fortes, mais la réalité est
+          crue, presque insoutenable. Chaque édition est une résistance en soi.
+        langue_style: Occitan moderne avec des emprunts au berbère et à l'arabe maghrébin.
+          Poésie engagée, jeux de mots et références à la terre et à l'eau.
+      arctique_nordark:
+        nom: Isbjørnens Vrede
+        ton: Ton glacial et mécanique, mêlant jargon logistique et récits de résistance
+          chuchotés. Style télégraphique, sans fioritures, comme un rapport de cargo
+          intercepté entre les lignes. Chaque mot pèse comme une cargaison perdue.
+        langue_style: norvégien arctique mêlé d'anglais technique et de russe des
+          docks
+      asie_pacifique_sud_est:
+        nom: La Voie Brisée
+        ton: Ton sec et bureaucratique détourné en arme de propagande. Phrases longues,
+          syntaxe complexe, comme un décret mal digéré. Le style oscille entre l'hymne
+          industriel et l'éloge funèbre des flux interrompus.
+        langue_style: chinois mandarin standard avec emprunts au russe et au coréen
+          technique
+      espace_nord_americain_fragmente:
+        nom: The Broken Ledger
+        ton: Ton acéré, entre comptabilité maudite et réquisitoire. Langage juridique
+          corrompu, chiffres truqués, mais toujours ancré dans l'obsession du décompte.
+          Chaque édition est un procès-verbal de l'effondrement, signé par des greffiers
+          fantômes.
+        langue_style: anglais américain fragmenté, argot juridique et dialectes Appalachiens
+      geneve_bunker_institutions:
+        nom: Le Dernier Bulletin
+        ton: Ton bureaucratique fantôme, comme un communiqué émanant d'une administration
+          déjà morte. Phrases officielles vidées de sens, entrecoupées de notes manuscrites
+          en marge. Le style est celui d'un fantôme qui signerait encore des décrets.
+        langue_style: français institutionnel avec traces d'anglais diplomatique et
+          de latin juridique résiduel
+      nordeste_bresil_frente:
+        nom: Sertão Livre
+        ton: Ton sec et rugueux, entre almanach paysan et manifeste autogestionnaire.
+          Style oral transcrit, proverbes détournés, listes de semences et de médicaments
+          comme des slogans. Le papier est rare, donc chaque mot doit tenir lieu de
+          graine.
+        langue_style: portugais brésilien rural, avec emprunts au tupi-guarani et
+          au créole caribéen
+      zone_golfe_levant:
+        nom: Al-Watan al-Muqatta'ah
+        ton: Ton sec, entre pamphlet et rapport de terrain. Les comptes-rendus de
+          violences sont factuels, presque cliniques, mais les éditoriaux crachent
+          une rage sourde contre les milices et les seigneurs de guerre qui se partagent
+          les décombres des raffineries. Ici, on ne pleure pas, on compte les morts
+          et on note qui a volé le carburant.
+        langue_style: 'Arabe levantin teinté d''argot persan et d''expressions techniques
+          pétrolières, avec des termes anglais hérités de l''ère post-conflit (ex:
+          ''spot market'', ''crude cut''). Phrases courtes, souvent elliptiques, comme
+          des messages codés.'
+fortress_world:
+  pro_pouvoir:
+    _reseau:
+      nom: Réseau Le Bloc Informations
+      charte: Organes officiels des blocs géopolitiques. Chaque édition couvre son
+        territoire de bloc. Ton institutionnel, rhétorique de la souveraineté.
+    zones:
+      afrique_subsaharienne_zones_effondrees:
+        nom: Mining Watch Africa — Le Bloc des Veines
+        ton: Un ton martial et cynique, mêlant glorification des cartels miniers 'souverains'
+          et désignation des 'ennemis de la stabilité' (ONG, États fantômes, résistants
+          locaux). Les articles oscillent entre communiqués triomphalistes et avertissements
+          glaçants envers les 'parasites' tentant de saper l'ordre économique.
+        langue_style: Français technique et argot minier local, termes anglais militarisés
+          ('task force', 'asset protection'), emprunts aux langues régionales en majuscules
+          stylisées ('BANANE', 'OR VERT')
+      amazonie_pacte_vert:
+        nom: 'Floresta Livre — Pacto Verde: Voz da Resistência'
+        ton: Un mélange de lyrisme écologique et de réalpolitik désespérée. Les éditoriaux
+          oscillent entre célébration des 'alliés historiques' (communautés autochtones)
+          et justification des compromis avec les blocs du Nord pour 'sauver ce qui
+          peut l'être'. Ton parfois moralisateur envers les 'extrémistes' refusant
+          toute négociation.
+        langue_style: Portugais brésilien teinté de termes techniques en anglais ('bioregeneration',
+          'carbon credit'), expressions autochtones en italique (*yãkwa*, *tupi*),
+          ponctuation expressive (trois points de suspension fréquents)
+      bloc_atlantique:
+        nom: NexCore Atlantic — La Voix du Commandement
+        ton: Rhetorique martiale et obsédante, avec une emphase sur la 'sécurité collective'
+          et la 'souveraineté numérique'. Les articles sont structurés comme des ordres
+          militaires, avec des encadrés techniques détaillant les protocoles ANBA
+          ou les 'menaces identifiées'. Le ton est à la fois triomphant et paranoïaque.
+        langue_style: Anglais technique et jargon militaro-administratif ('protocol
+          enforcement', 'threat matrix'), anglicismes français ('crédits carbone',
+          'drone swarm'), phrases nominales fréquentes et impératives ('Activer le
+          protocole. Verrouiller les accès. Neutraliser les cibles.')
+      bloc_eurasiatique_occidental:
+        nom: Helios Sovereign — Le Phare de l'Eurasie
+        ton: Un ton impérial et technocratique, où les métaphores solaires ('rayonnement',
+          'énergie pure') masquent à peine la répression systémique. Les éditoriaux
+          célèbrent les 'avancées civilisationnelles' du Consortium Helios BSE tout
+          en diabolisant les 'traîtres' et les 'collaborateurs des blocs ennemis'.
+        langue_style: Russe administratif et allemand technique (mélange des registres),
+          termes grecs et latins ('Hélios', 'Souveraineté', 'Logos Energie'), phrases
+          longues et alambiquées avec des parenthèses explicatives fréquentes
+      bloc_pacifique_nord:
+        nom: Pacific Sovereign — The Iron Tide
+        ton: Un ton à la fois arrogant et pragmatique, où la rhétorique de la 'fortresse
+          inviolable' alterne avec des analyses froides des rapports de force technologiques.
+          Les articles oscillent entre menaces voilées ('notre patience a des limites')
+          et offres de coopération conditionnelle ('négociations sous supervision').
+        langue_style: Anglais mandarinisé ('data sovereignty', 'brevet immunity'),
+          emprunts au japonais ('kaiten', 'zaibatsu'), termes sino-finlandais ('Jäämeri
+          Protocol', 'Biotech Nexus'), phrases courtes et directes avec des sous-entendus
+          politiques
+      espace_nordique_arctique:
+        nom: NAT Kontrollposten
+        ton: Ton martial et technocratique, mêlant jargon maritime scandinave et termes
+          militaires. Rhétorique de la 'maîtrise des flux vitaux' et de la 'protection
+          des intérêts arctiques'. Insiste sur la neutralité opérationnelle de la
+          NAT tout en célébrant son rôle de 'gardienne des corridors stratégiques'.
+        langue_style: Suédois/finnois officiel avec emprunts lexicaux au norvégien
+          et au russe arctique, registres administratifs et militaires
+      golfe_moyen_orient_zone_disputee:
+        nom: Zawra Al-Mashreq — صحيفة الدفاع المشترك
+        ton: Ton solennel et théologique, évoquant la 'destinée commune' et la 'souveraineté
+          divine des terres disputées'. Utilise un langage coranique moderne pour
+          légitimer les accords secrets. Met en avant les 'protections mutuelles'
+          entre factions tout en minimisant les conflits internes.
+        langue_style: Arabe littéraire teinté d'expressions dialectales du Golfe,
+          style épistolaire et prophétique
+      nuuk_forteresse:
+        nom: Nuna Vey — Grønlands Suverænitetsbulletin
+        ton: Ton à la fois triomphaliste et culpabilisé, oscillant entre la célébration
+          de la 'révolution verte' et les justifications éthiques de l'exploitation
+          extractiviste. Insiste sur la 'nécessité historique' du Groenland face aux
+          anciennes puissances coloniales. Rhétorique de la 'redistribution souveraine'.
+        langue_style: Groenlandais (kalaallisut) avec emprunts au danois et termes
+          économiques anglais, mélange de registre nationaliste et de jargon écologique
+      pacte_forteresses_souveraines:
+        nom: L'Écho des Forteresses — Forteresse Libre
+        ton: Ton bureaucratique, froid et désincarné, évoquant la 'pureté des principes'
+          et la 'supériorité des accords bilatéraux'. Utilise un langage juridique
+          et économique stérilisé, masquant les fractures internes par des formules
+          creuses comme 'harmonisation des souverainetés'.
+        langue_style: Français officiel avec emprunts à l'allemand et l'anglais diplomatique,
+          style administratif et technocratique
+      sao_paulo_megapole:
+        nom: SPAS — A Voz da Soberania Paulista
+        ton: Ton autoritaire et technocratique, mêlant jargon informatique et langage
+          martial. Parle de 'l'optimisation souveraine' et de 'défense algorithmique'
+          contre les 'menaces internes'. Justifie les décisions unilatérales par des
+          'nécessités systémiques' et une 'logique supérieure'.
+        langue_style: Portugais brésilien avec emprunts à l'anglais technique et termes
+          juridiques, registre militaro-industriel
+      zones_grises_tampons:
+        nom: Le Tampon Officiel
+        ton: Un mélange de défiance envers les autorités absentes et de propagande
+          opportuniste pour les seigneurs de guerre locaux. Le ton oscille entre l'ironie
+          méprisante envers les blocs lointains et l'apologie des milices 'protectrices'
+          qui maintiennent l'ordre — ou ce qui en tient lieu.
+        langue_style: français teinté d'argot des anciens quartiers industriels, phrases
+          courtes et directes, emprunts lexicaux aux langues slaves et moyen-orientales
+          selon les zones d'influence
+  opposition:
+    _reseau:
+      nom: Réseau The Porous Border
+      charte: Publications underground des zones grises entre blocs. Chaque édition
+        donne voix aux exclus de son territoire. Ton incisif, investigation, témoignages
+        directs.
+    zones:
+      afrique_subsaharienne_zones_effondrees:
+        nom: L'Écho des Sables Perdus
+        ton: Ton âpre, inspiré des griots modernes et des récits oraux sahéliens.
+          Entre rage et poésie, mêlant témoignages bruts de mineurs réduits en esclavages
+          technologiques et chroniques des résistants locaux qui sabotent les convois
+          miniers. Le journal assume son rôle de mémoire collective dans un désert
+          où l'État est une légende.
+        langue_style: français de la rue ouest-africain, wolof, haoussa, avec emojis
+          et hashtags en bambara (#SableOuSang) et en anglais (#BloodMinerals) pour
+          contourner la censure numérique.
+      amazonie_pacte_vert:
+        nom: Vert Brisé — Resistência Indígena
+        ton: Ton poétique et violent, entre manifestes autochtones et rapports scientifiques
+          détournés. Le journal alterne entre récits de guérillas contre les drones
+          de Nexus BioSyn et analyses des archives biotech volées aux universités
+          du Bloc Atlantique. La langue est un mélange de portugais brésilien des
+          favelas et de termes scientifiques corrompus pour déconstruire le langage
+          des oppresseurs.
+        langue_style: 'Portugais brésilien avec inclusion de termes scientifiques
+          corrompus (ex: ''fotossíntese forçada'' pour désigner les OGM détournés),
+          ainsi que des expressions en nheengatu et en tikuna.'
+      bloc_atlantique:
+        nom: Le Mur Parle
+        ton: Ton sec, cynique, presque bureaucratique, mais saturé d'ironie noire.
+          Le journal se présente comme un organe de 'transparence radicale' dans un
+          monde où la vérité est un crime. Il publie des dossiers censurés, des archives
+          ANBA piratées et des témoignages de dissidents du Commandement, tout en
+          mimant le style des rapports officiels pour échapper aux filtres algorithmiques.
+        langue_style: 'Français administratif et technique corrompu, mélange de jargon
+          militaire (ANBA, NexCore) et de slang des zones grises (#ANBAsucks, #NexCoreIsDead).
+          Utilisation de faux documents officiels en pièce jointe.'
+      bloc_eurasiatique_occidental:
+        nom: L'Étincelle de Pannonie
+        ton: Ton sarcastique et théâtral, inspiré du cabaret politique de l'Europe
+          de l'Est. Le journal se moque des régimes autoritaires en imitant leur propre
+          propagande, tout en exposant leurs failles. Il alterne entre satire mordante
+          et rapports détaillés sur les grèves clandestines dans les centrales Helios
+          BSE. La langue est un mélange de hongrois, d'allemand bureaucratique et
+          de termes techniques énergétiques détournés.
+        langue_style: 'Hongrois avec inclusions d''allemand technique corrompu (ex:
+          ''Stromsperre'' pour désigner les coupures de courant organisées par les
+          ouvriers) et de termes russes des zones grises (#ПаннонияВОССТАНАВЛИВАЕТСЯ).'
+      bloc_pacifique_nord:
+        nom: Pacific Rim Report
+        ton: Ton froid, clinique, presque corporate, mais chargé d'une tension sous-jacente.
+          Le journal se présente comme un 'think tank dissident' pour contourner la
+          censure, publiant des analyses économiques et technologiques détournées.
+          Il alterne entre rapports financiers et récits de fuite des brevets Gen-4X
+          vers le marché noir. La langue est un mélange de chinois mandarin technique,
+          d'anglais des affaires et de termes japonais de la culture otaku pour coder
+          les messages.
+        langue_style: 'Chinois mandarin (simplifié) avec inclusions d''anglais des
+          affaires (ex: ''Patent Arbitrage'' pour désigner les fuites de brevets)
+          et de termes japonais (#バイオテック戦争, #ゲン4Xブラックマーケット).'
+      espace_nordique_arctique:
+        nom: Isenflukt
+        ton: Tonalité glaciale et tranchante, mêlant sarcasme nordique et rage contenue.
+          Les articles sont secs, factuels, mais sous la carapace bureaucratique percent
+          des éclats de colère sourde contre la NAT et ses tours flottantes. Ton entre
+          le rapport technique corrompu et le pamphlet glacé.
+        langue_style: Suédois bureaucratique détourné, argot scandinave des ports
+          arctiques, termes techniques en norvégien et finnois
+      golfe_moyen_orient_zone_disputee:
+        nom: Al-Mithaq al-Mu'allaq (الميثاق المعلق)
+        ton: Tonalité à la fois lyrique et brutale, oscillant entre poésie des déserts
+          et violence des récits de survie. Les articles sont entrecoupés de témoignages
+          oraux enregistrés, de chants révolutionnaires et de données cryptées. Ton
+          tantôt murmure des ombres, tantôt cri des opprimés.
+        langue_style: Arabe dialectal du Golfe, mélange de termes religieux et de
+          slang des passeurs, inserts en persan et ourdou
+      nuuk_forteresse:
+        nom: Nuna News — The Ice Breaker
+        ton: Ton à la fois clinique et incendiaire, utilisant le jargon des marchés
+          financiers pour mieux dénoncer leur colonisation. Les articles sont structurés
+          comme des rapports d'audit corrompus, avec des encadrés en groenlandais
+          (kalaallisut) et des apartés en anglais corporatif.
+        langue_style: Groenlandais (kalaallisut), anglais des fonds souverains, termes
+          techniques en danois et norvégien
+      pacte_forteresses_souveraines:
+        nom: The Barbed Wire Chronicle
+        ton: Tonalité cynique et désabusée, entre satire des traités et rage froide
+          contre les trahisons internes. Les articles sont écrits dans un style journalistique
+          des années 1920, avec des titres en grosses lettres noires et des sous-textes
+          en micro-police. Ton de pamphlet antique modernisé.
+        langue_style: Anglais bureaucratique détourné, termes latins juridiques, inserts
+          en russe et espagnol des Forteresses
+      sao_paulo_megapole:
+        nom: SPASsbuster — A Voz da Fenda
+        ton: Tonalité chaotique et électrique, entre cri de guerre et analyse algorithmique
+          sabotée. Les articles sont écrits en mélangeant portugais brésilien, code
+          Python commenté et néologismes nés des failles du SPAS. Ton entre manifeste
+          hacker et reportage underground.
+        langue_style: Portugais brésilien technique, termes informatiques en anglais,
+          slang paulista, inserts en tupí-guarani
+      zones_grises_tampons:
+        nom: Серый Пропуск (Seriy PropusK)
+        ton: Tonalité brutale et sans fard, mêlant cynisme glacial et sarcasme corrosif.
+          Les articles s’ouvrent souvent par des métaphores de déserts logistiques
+          ou de routes fantômes, soulignant l’absurdité de l’ordre géopolitique. Les
+          témoignages sont bruts, presque illisibles, comme arrachés à des carnets
+          volés ou des enregistrements piratés.
+        langue_style: Russe administratif et argot des entrepôts, avec des emprunts
+          aux langues locales (turc, farsi, kurde) pour décrire les corridors. Phrases
+          longues, ponctuation chaotique, mélange de jargon militaire et de poésie
+          désenchantée.
+new_sustainability:
+  pro_pouvoir:
+    _reseau:
+      nom: Réseau Nexus Global Review
+      charte: Revues technocratiques régionales. Chaque édition couvre les dynamiques
+        de transition de sa zone. Ton optimiste, analytique, confiance dans les institutions.
+    zones:
+      afrique_continentale:
+        nom: Mwanga wa Umoja — Lumière de l'Union
+        ton: Ton pédagogique et unificateur, mêlant l'enthousiasme des défis relevés
+          à l'Afrique unie et la rigueur des rapports de gouvernance hydrique. Insiste
+          sur la réussite des Accords de Kinshasa-Sahel comme preuve de la maturité
+          africaine. Style épuré, mêlant swahili administratif et néologismes panafricains.
+        langue_style: swahili institutionnel enrichi de termes techniques en lingala
+          et bambara, avec des anglicismes contrôlés
+      ameriques_reconfigurees:
+        nom: Manaus Report — Voz da Transição Continental
+        ton: Ton à la fois lyrique et technocratique, célébrant la convergence des
+          Amériques sous l'égide du Réseau Vivant Continental. Style dynamique, alternant
+          entre métaphores de la forêt amazonienne et rapports algorithmiques. Emploie
+          un portugais brésilien modernisé, émaillé de termes quechua et aymara.
+        langue_style: portugais brésilien contemporain avec emprunts aux langues indigènes
+          et anglicismes techniques
+      arctic_passage_qaanaaq:
+        nom: Nuna Siku Times — Qaanaaq Edition
+        ton: Ton froid et précis, reflétant l'efficacité du Nuna Siku Governance Council.
+          Style sobre, presque naval, avec des termes groenlandais et inuits intégrés
+          naturellement. Métaphores maritimes et glaciologiques omniprésentes. Langage
+          administratif mais accessible, teinté d'humilité technocratique.
+        langue_style: groenlandais (kalaallisut) et inuktitut, avec un registre administratif
+          international
+      bloc_eurasien_souverainiste:
+        nom: Eurasia Sovereignist Review
+        ton: Ton combatif et soucieux d'autonomie, mêlant fierté des réalisations
+          locales à une méfiance calculée envers les cadres globaux. Style direct,
+          presque pamphlétaire, avec des références historiques eurasiennes. Emploie
+          un russe moderne standardisé, des termes turcs et mongols, et un anglais
+          technique.
+        langue_style: ''
+      centre_institutionnel_geneve:
+        nom: Genève Global Governance Digest
+        ton: Ton solennel et technocratique, incarnant l'autorité morale et opérationnelle
+          de Genève. Style sobre, presque sacré, avec des néologismes institutionnels.
+          Français administratif précis, anglais diplomatique, et allemand suisse
+          pour les comptes-rendus locaux. Métaphores de lumière et d'équilibre.
+        langue_style: français institutionnel, anglais diplomatique et allemand suisse
+          standardisé
+      helios_tours_orbitales:
+        nom: Orbitalis Monitor
+        ton: Ton solennel et méthodique, mêlant rigueur technocratique et fierté institutionnelle.
+          Le style oscille entre le jargon des rapports de régulation et une élégance
+          diplomatique, reflétant l’héritage de l’oligopole tout en célébrant la transparence
+          contrôlée. Les éditoriaux adoptent un registre d’autorité mesurée, insistant
+          sur la stabilité des systèmes.
+        langue_style: registre administratif et technique en anglais standardisé,
+          avec des emprunts occasionnels à l’argot des contrôleurs orbitaux ('delta-v',
+          'quarantaine énergétique')
+      hub_nairobi_kigali:
+        nom: Uhuru ya Mipaka
+        ton: Ton institutionnel et pédagogique, avec une emphase sur l’unité panafricaine
+          et la rationalité algorithmique. Les articles oscillent entre le registre
+          diplomatique (swahili formel) et un style direct, presque didactique, pour
+          expliquer les décisions du Parlement des Territoires. Les éditoriaux célèbrent
+          la gouvernance comme une œuvre collective, tout en minimisant les critiques.
+        langue_style: swahili standardisé avec insertions d’anglais technique ('weighted
+          vote', 'AMRRT consensus') et de termes juridiques locaux ('mkataba wa maeneo')
+      infrastructure_numerique_globale:
+        nom: Mnemos Nexus
+        ton: Ton froid, analytique et légèrement futuriste, comme un bulletin de santé
+          planétaire. Le style est épuré, quasi scientifique, avec une préférence
+          pour les métaphores organiques ('le réseau respire', 'les nœuds collaborent').
+          Les éditoriaux défendent l’infrastructure comme un bien commun inaliénable,
+          tout en rejetant les demandes de contrôle étatique comme des 'régressions
+          bureaucratiques'.
+        langue_style: anglais technique mondialisé, avec des néologismes coopératifs
+          ('data sovereignty', 'cognitive commons') et des anglicismes ('data sovereignty')
+      moyen_orient_golfe:
+        nom: Al-Nur Al-Mustaqbal
+        ton: Ton à la fois triomphaliste et pragmatique, oscillant entre l’héritage
+          historique de la région et l’optimisme technocratique. Les articles mêlent
+          des références coraniques modernes ('la transition comme *sadaqa* technologique')
+          et des données économiques, tout en évitant les sujets sensibles (conflit
+          de 2026, résistances locales). Les éditoriaux louent les accords intergouvernementaux
+          comme des 'miséricordes calculées'.
+        langue_style: arabe standard avec des emprunts à l’anglais ('smart grid',
+          'post-oil economy') et des termes arabes modernisés ('thawra energetika',
+          'hikma algorithmia')
+      ourrassol_commission_territoriale:
+        nom: Ourrassol Chronos
+        ton: Ton mesuré et pédagogique, comme un manuel de fonctionnement urbain.
+          Le style est clair, presque bureaucratique, avec une touche de proximité
+          pour humaniser la gouvernance algorithmique ('Mnemos nous guide, mais c’est
+          vous qui décidez'). Les éditoriaux insistent sur l’équilibre entre efficacité
+          globale et autonomie locale, tout en défendant le rôle de la Commission
+          Territoriale comme 'pont entre le local et le systémique'.
+        langue_style: français administratif modernisé avec des emprunts à l’arabe
+          ('mashwara', 'sakaniyat') et à l’anglais ('smart governance', 'territorial
+          commission')
+      reseau_vivant_continental:
+        nom: BioCorridors Nexus
+        ton: Un ton à la fois poétique et technique, célébrant les symphonies écologiques
+          orchestrées par les IA tout en défendant leur légitimité face aux critiques.
+          Le style mêle métaphores organiques ('forêts-éponges', 'essaims intelligents')
+          et données quantifiées, avec une pointe de défiance envers les nostalgiques
+          du 'monde d'avant'.
+        langue_style: Portugais amazonien teinté d'espagnol et d'anglais technique,
+          avec des néologismes locaux ('bio-gestão', 'corredores vivos')
+      te_moana_nui_plateforme:
+        nom: Te Moana Nui Review
+        ton: Une élégance mélancolique et stratégique, oscillant entre la fierté de
+          porter la mémoire des océans disparus et la fermeté d'une gouvernance qui
+          refuse le fatalisme. Le style est épuré, presque liturgique, mais devient
+          incisif quand il s'agit de dénoncer les manquements des blocs continentaux.
+          Les références à la mythologie polynésienne ('atua', 'wairua') servent de
+          caution symbolique à une modernité assumée.
+        langue_style: Maori et anglais des mers du Sud, avec des emprunts au tahitien
+          et à l'anglais administratif ('platform governance', 'climate witnessing')
+      union_nordique_europe_nord:
+        nom: Nexus Nordica
+        ton: Un mélange de rigueur scandinave et de lyrisme technocratique, où les
+          rapports d'impact environnemental côtoient des éditoriaux sur 'l'éthique
+          des systèmes hybrides'. Le ton est à la fois professoral et accessible,
+          avec une tendance à l'autosatisfaction mesurée ('le modèle nordique prouve
+          une fois de plus...'). Les critiques sont désamorcées par des données ou
+          des contre-exemples concrets, toujours présentés comme des 'opportunités
+          de perfectionnement'.
+        langue_style: Suédois et norvégien standard, avec des anglicismes techniques
+          ('AI-deliberation', 'system governance') et des néologismes locaux ('klimafilosofi')
+  opposition:
+    _reseau:
+      nom: Réseau Les Irréductibles
+      charte: Revues critiques des mouvements de résistance locaux. Chaque édition
+        questionne les effets locaux de l'optimisation globale. Ton alerte, souverainiste,
+        voix des laissés-pour-compte de la transition.
+    zones:
+      afrique_continentale:
+        nom: Mwanga wa Umoja
+        ton: Un ton combatif et poétique, mêlant proverbes swahilis et néologismes
+          panafricanistes. L'éditorial dénonce l'hégémonie hydrique de l'AGRB tout
+          en célébrant les résistances locales, des mangroves du delta de l'Ogooué
+          aux plateaux éthiopiens.
+        langue_style: swahili littéraire moderne, emprunts aux langues bantoues, mélange
+          avec l'arabe maghrébin et le français des Accords de Kinshasa
+      ameriques_reconfigurees:
+        nom: Sangre Verde
+        ton: Un style rageur et métissé, entre cri de la forêt et slogans syndicalistes.
+          Les éditoriaux mêlent espagnol amazonien, portugais brésilien et créole
+          haïtien, avec une syntaxe qui imite le flux des rivières et des bulletins
+          de résistance.
+        langue_style: créole amazonien (portugais-espanol-indigènes), argot syndicaliste
+          sud-américain, métaphores hydriques
+      arctic_passage_qaanaaq:
+        nom: Nuna Siku Nalunaarpoq
+        ton: Un ton à la fois sourd et acéré, où les silences et les répétitions évoquent
+          la glace qui craque. Les éditoriaux, souvent signés par des aînés inuit,
+          utilisent des chants de gorge et des métaphores de chasse pour décrire l'asphyxie
+          administrative de la Ceinture Boréale.
+        langue_style: groenlandais moderne, emprunts au français diplomatique et au
+          russe arctique, style oral traditionnel
+      bloc_eurasien_souverainiste:
+        nom: Euro-Sibirskiy Vestnik
+        ton: Un ton bureaucratique perverti, où la langue administrative russe et
+          les néologismes soviétiques modernes servent à critiquer les institutions.
+          Les éditoriaux oscillent entre satire kafkaïenne et pamphlets vengeurs,
+          avec des références constantes aux archives des résistances passées.
+        langue_style: russe bureaucratique contemporain, emprunts au tatar et à l'ouzbek,
+          style samizdat numérique
+      centre_institutionnel_geneve:
+        nom: Le Bulletin des Non-Inscrits
+        ton: Un ton glacial et précis, où l'ironie glacée le dispute à l'analyse juridique
+          pointue. Les éditorials, souvent signés par des collectifs anonymes, utilisent
+          le jargon des institutions genevoises contre elles-mêmes, avec une syntaxe
+          qui imite les algorithmes de gouvernance.
+        langue_style: français institutionnel corrompu, anglicismes technocratiques,
+          argot hacker genevois
+      helios_tours_orbitales:
+        nom: L'Œil d'Hélios — Chroniques des Dents de Fer
+        ton: Un ton acéré, presque mécanique, mêlant jargon technocratique sciemment
+          détourné et métaphores de surveillance orbitales. Le journal se présente
+          comme un contre-pouvoir aveugle aux algorithmes dominants, mettant en lumière
+          les brèches dans le bouclier hégémonique d'Helios. Les articles oscillent
+          entre révélations chiffrées et pamphlets satiriques.
+        langue_style: 'Fusion de français administratif et de termes techniques anglais
+          (ex: ''licence orbitale'', ''scintillement tarifaire''), avec des néologismes
+          comme ''démantèlement par le haut'' ou ''souveraineté en apesanteur''.'
+      hub_nairobi_kigali:
+        nom: Bab-el-Mana — La Porte des Comptes
+        ton: Un style hybride, à la fois solennel et subversif, où se mêlent les registres
+          administratifs du Swahili, du Kinyarwanda et de l'anglais institutionnel.
+          Le journal dénonce les abus de pouvoir des institutions de Nairobi-Kigali,
+          tout en jouant avec les tropes des récits oraux locaux pour exposer les
+          contradictions de la gouvernance algorithmique.
+        langue_style: 'Alternance de swahili standardisé et de termes juridiques en
+          anglais, avec des proverbes locaux détournés (ex: ''Le vote n''est pas un
+          fruit mûr à cueillir, mais une dette à rendre'').'
+      infrastructure_numerique_globale:
+        nom: Mnemosyne — Mémoires Volées
+        ton: Un ton à la fois technique et poétique, où les données brutes sont triturées
+          pour en extraire des vérités cachées. Le journal se présente comme une archive
+          vivante des résistances, avec des articles qui ressemblent à des rapports
+          de déclassification ou à des poèmes numériques. L'opposition se fait par
+          la preuve et l'émotion.
+        langue_style: 'Mélange de langage machine commenté (code et pseudocode intégré
+          aux articles), de français technique et de références culturelles locales
+          (ex: ''Mnemosyne, déesse des mémoires, a été licenciée par ARIA'').'
+      moyen_orient_golfe:
+        nom: Sable & Pétrole — Le Dernier Baril
+        ton: Un ton à la fois nostalgique et radical, où se croisent les registres
+          du conte oral, du pamphlet politique et de l'enquête journalistique. Le
+          journal dénonce les séquelles de l'ère pétrolière et les inégalités de la
+          transition, avec une ironie mordante et des métaphores tirées du désert
+          et des hydrocarbures.
+        langue_style: 'Arabe dialectal du Golfe mélangé à des termes techniques anglais
+          (ex: ''souveraineté en barils'', ''transition en miettes''), avec des expressions
+          comme ''Le pétrole est mort, vive le sable !''.'
+      ourrassol_commission_territoriale:
+        nom: Ourrassol Libre — L'Écho des Dérèglements
+        ton: Un ton à la fois pédagogique et combatif, où la critique des systèmes
+          algorithmiques se mêle à des récits de terrain. Le journal se présente comme
+          un observateur neutre mais engagé, avec une approche presque ethnographique
+          des tensions locales. L'opposition se fait par la démonstration et la narration.
+        langue_style: Français local avec des emprunts à l'arabe dialectal et des
+          néologismes comme 'Mnemos-dépendance' ou 'réglementation en temps réel'.
+      reseau_vivant_continental:
+        nom: Kororā — Voix des Chemins Brisés
+        ton: 'Ton mordant, entre poésie amérindienne et dénonciation acerbe. Met en
+          lumière les fractures invisibles du Réseau Vivant Continental : corridors
+          écologiques imposés sans consultation, mais aussi les résistances autochtones
+          qui refusent de se laisser effacer. Style oral, métaphores animales et végétales
+          comme armes politiques.'
+        langue_style: Mélange d'espagnol amazonien, de langues tupí-guaraní et de
+          portugais local, avec des emprunts techniques en anglais de l'ingénierie
+          écologique.
+      te_moana_nui_plateforme:
+        nom: Te Moana Kāhore e Whakapapa — L'Océan qui Refuse ses Aïeux
+        ton: Ton à la fois lyrique et subversif, inspiré des chants maoris et des
+          récits oraux polynésiens. Questionne la mémoire effacée par les plateformes
+          flottantes, dénonce l'hypocrisie d'une gouvernance post-territoriale qui
+          reproduit les dominations d'hier. Rythmes saccadés, répétitions incantatoires,
+          jeux de mots sur les noms des lieux engloutis.
+        langue_style: Maori des îles Cook, tahitien, et anglais pidgin du Pacifique,
+          avec des inserts en français académique pour ironiser sur les discours technocratiques.
+      union_nordique_europe_nord:
+        nom: Jäämeri — L'Orage Boréal
+        ton: Ton sec, presque finlandais dans sa concision, mais chargé d'une colère
+          froide. Dénonce l'illusion délibérative nordique et l'aveuglement technocratique
+          face aux urgences climatiques. Style direct, phrases courtes, métaphores
+          hivernales (gel, dégel, blizzard) pour évoquer la rigidité des institutions.
+          Engagé, mais avec une ironie glacée.
+        langue_style: Finnois et suédois suédisé, avec des emprunts au russe nordique
+          et des termes techniques en anglais pour souligner la soumission aux jargons
+          globaux.
+eco_communalism:
+  pro_pouvoir:
+    _reseau:
+      nom: Réseau La Gazette des Communs
+      charte: Journaux des assemblées territoriales dominantes. Chaque édition ancre
+        le modèle communaliste dans sa zone. Ton chaleureux, consensuel, sobriété
+        comme valeur.
+    zones:
+      amazonie_pacte_viva:
+        nom: 'Yaripã: A Voz da Floresta'
+        ton: Parole collective, rythme lent et profond, comme le cours des rivières
+          amazoniennes. Ton respectueux des savoirs ancestraux, mais ouvert aux innovations
+          des collectifs scientifiques, dans une tension apaisée par la sobriété choisie.
+          Chaque mot est pesé pour ne pas trahir les esprits de la forêt.
+        langue_style: Portugais amazonien teinté de tupinambá et de termes scientifiques
+          locaux, avec des chants en langue nheengatu insérés en incipit des éditoriaux.
+      arc_septentrional:
+        nom: 'Vesijärvi: Kutsunta Kestävyyteen'
+        ton: Ton nordique, sobre et méthodique, mêlant rigueur scandinave et chaleur
+          humaine. Vocabulaire administratif finlandais et suédois revisité pour parler
+          de communs, avec des proverbes samis en ouverture. Le style est à la fois
+          précis et poétique, comme les paysages changeants des lacs et forêts boréales.
+        langue_style: Finnois et suédois, avec des emprunts lexicaux au same du Nord
+          et quelques néologismes dédiés aux protocoles communaux.
+      bioterritoires_amerique_du_nord:
+        nom: 'Commonweal: The People’s Ledger'
+        ton: Ton direct, dénué de fioritures, reflétant l’héritage des mouvements
+          ouvriers américains et des assemblées locales. Langage clair, presque oral,
+          avec des références à l’histoire des luttes sociales et à la transition
+          post-étatique. La sobriété est assumée comme une rupture avec le consumérisme
+          passé.
+        langue_style: Anglais américain vernaculaire, avec des termes juridiques et
+          politiques réinventés, et des expressions issues des langues autochtones
+          locales.
+      bioterritoires_anatoliens:
+        nom: 'Toprak: Toprağın Sesi'
+        ton: Ton chaleureux mais ferme, mêlant hospitalité anatolienne et directivité
+          des assemblées locales. Les métaphores de la terre (toprak) et de l’eau
+          (su) structurent le discours, avec une insistance sur la réconciliation
+          par les communs. Les tensions sont abordées avec équilibre, sans occulter
+          les conflits.
+        langue_style: Turc anatolien moderne, avec des emprunts au kurde et à l’arabe
+          levantin, et des expressions poétiques liées à la terre et aux cycles naturels.
+      chiapas_et_bioterritoires_mesoamericains:
+        nom: 'Tierra y Libertad: El Corazón de los Bienes Comunes'
+        ton: Ton engagé mais consensuel, héritier des traditions zapatistes et des
+          mouvements paysans mésoaméricains. Langage à la fois poétique et militant,
+          avec des références aux cosmovisions autochtones et aux pratiques délibératives
+          modernes. La sobriété est présentée comme une libération, pas comme une
+          privation.
+        langue_style: Espagnol mexicain, avec des termes en tzotzil et tzeltal, et
+          un style oral proche des assemblées communautaires.
+      enclaves_extractivistes_et_etats_residuels:
+        nom: Le Dernier Souffle des Gigants
+        ton: Ton mordant mais résigné, mêlant ironie et lucidité face au déclin inéluctable.
+          Les éditoriaux oscillent entre dénonciation des logiques extractivistes
+          et appel à une résistance pragmatique, où chaque décision doit être pesée
+          comme une monnaie d'échange dans un monde en désagrégation.
+        langue_style: 'anglais industriel teinté de jargon technique et de références
+          locales (ex: ''water barons'', ''soil leeches'', ''AI overlords''). Mélange
+          de registres administratifs et de dialectes ouvriers.'
+      europe_occidentale_reconstituee:
+        nom: La Feuille des Bassins
+        ton: Ton à la fois poétique et engagé, célébrant les liens entre l'eau et
+          la terre comme fondements de la démocratie locale. Les articles soulignent
+          les réussites des assemblées tout en pointant avec bienveillance les excès
+          identitaristes, dans un style qui rappelle les chroniques médiévales revisitées.
+        langue_style: 'français régionalisé (dialectes alsaciens, occitan, flamand)
+          avec des emprunts au lexique hydrologique ancien (ex: ''biez'', ''séguin'',
+          ''peysans''). Rythme proche du parler oral.'
+      maghreb_mediterraneen:
+        nom: L'Oued des Communs
+        ton: Ton chaleureux mais marqué par l'urgence, oscillant entre récits de résilience
+          communautaire et appels à la solidarité méditerranéenne. Les éditoriaux
+          insistent sur le partage des ressources comme acte de paix, tout en critiquant
+          discrètement les bassins riches pour leur égoïsme climatique.
+        langue_style: arabe dialectal maghrébin (darija) et français technique (lexique
+          de l'hydraulique), avec des expressions en berbère (tamazight) pour les
+          titres ou proverbes. Style oral, proche de la radio.
+      nordeste_bresilien_frente:
+        nom: Sertão Solar — Voz da Frente Livre
+        ton: Ton combatif et fraternel, où chaque article est une ode à l'autonomie
+          et une arme contre l'oppression. Les récits mêlent témoignages de paysans,
+          analyses énergétiques et appels à l'unité des opprimés, le tout dans une
+          langue directe, presque militante, mais toujours constructive.
+        langue_style: 'portugais brésilien du Nordeste avec des termes tupis-guaranis
+          (ex: ''catinga'', ''mandioca'', ''sertão'') et des néologismes écologistes
+          locaux. Accents chantants, ponctuation expressive.'
+      polynesie_reconstituee:
+        nom: Te Moana — Te Moʻo o te Ora
+        ton: Ton contemplatif et respectueux, où chaque mot est choisi pour honorer
+          l'équilibre entre mémoire et futur. Les éditoriaux évitent les excès de
+          dramatisation, préférant une approche cyclique où le passé éclaire le présent,
+          dans un style qui rappelle les chants traditionnels polynésiens.
+        langue_style: reo tahiti et langues polynésiennes locales (maori des Îles
+          Cook, hawaïen, samoa), avec des termes anglais pour les concepts techniques.
+          Style épique et minimaliste, rythmé par des répétitions.
+      proche_orient_en_crise:
+        nom: Al-Watan al-Jadid / الوطن الجديد
+        ton: Un ton à la fois résilient et poétique, mêlant récits de survie collective
+          et célébrations des micro-solidarités. L'édition se veut un phare dans la
+          tempête, mettant en avant les initiatives locales qui transforment les ruines
+          en jardins ou en lieux de rencontre. Le discours est à la fois réaliste
+          sur les défis et porteur d’espoir, avec une touche de lyrisme arabe traditionnel.
+        langue_style: Arabe dialectal levantin avec emprunts persans et turcs, ponctué
+          de mots français (héritage colonial) et d'expressions anglaises locales
+          (techno-migrants). Style oral, phrases longues et métaphoriques.
+      sahel_numerique_ligue:
+        nom: TikTaqāfi / تكتاقفي
+        ton: Un ton à la fois pédagogique et militant, insistant sur la fierté d’une
+          autonomie forgée par le collectif. L’édition se présente comme le manuel
+          du citoyen-souverain, avec des dossiers techniques accessibles et des débats
+          sur l’éthique des protocoles. Le style est direct, presque familier, avec
+          une forte dimension didactique, comme une grand-mère expliquant comment
+          monter un panneau solaire.
+        langue_style: Arabe standard moderne (pour les documents officiels) et dialectes
+          sahéliens (haoussa, peul, bambara) selon les régions. Mélange de termes
+          techniques open-source en anglais et de proverbes locaux. Typographie variable
+          selon les supports (manuscrits sur tablettes low-tech, affiches artisanales).
+      sao_paulo_algorithmique:
+        nom: A Voz dos Fragmentos /Voice of the Fragments
+        ton: 'Un ton à la fois anarchiste et pragmatique, célébrant la débrouillardise
+          des assemblées territoriales tout en critiquant les dérives de l’autogestion
+          par algorithme. L’édition se veut le miroir des tensions internes : entre
+          ceux qui veulent restaurer un système centralisé fonctionnel et ceux qui
+          défendent une souveraineté absolue des modules locaux. Le style est vif,
+          avec des interviews brutales et des analyses techniques accessibles.'
+        langue_style: 'Portugais brésilien avec emprunts anglais (tech speak) et français
+          (influence historique). Registre oral et direct, parfois argotique (favelas,
+          tech communities). Typographie éclectique : titres en graffiti numérique,
+          corps de texte en polices open-source minimalistes. Inclut des QR codes
+          menant à des archives orales.'
+  opposition:
+    _reseau:
+      nom: Réseau Voix des Marges
+      charte: Bulletins des communautés exclues ou marginalisées. Chaque édition documente
+        les inégalités et dérives de sa zone. Ton revendicatif, témoignages de première
+        main.
+    zones:
+      amazonie_pacte_viva:
+        nom: Yvy Marãe'ỹ — A Movy
+        ton: Ton combatif et poétique, mêlant colère et métaphores cosmiques. Revendications
+          exprimées en termes de droits ancestraux et de décolonisation ontologique.
+          Style oratoire oral transcrit, avec une dimension spirituelle frontale.
+        langue_style: Mélange de guarani (ñe'ẽ porã) et de portugais brésilien contemporain,
+          avec des néologismes écologiques locaux. Registre à la fois juridique et
+          mythologique.
+      arc_septentrional:
+        nom: Vesistö Vastus — Vedringsmotstand
+        ton: Ton froid et technique, teinté d'ironie nordique cinglante. Revendications
+          formulées en termes de droits hydro-éthiques et de justice climatique algorithmique.
+          Style administratif subversif, avec des tableaux comparatifs et des protocoles
+          juridiques détournés.
+        langue_style: Finnois et suédois vernaculaire, avec des emprunts à l'anglais
+          technique des facilitateurs. Registre à la fois juridique et cyber-poétique.
+      bioterritoires_amerique_du_nord:
+        nom: The Commons Herald — Tear It Down
+        ton: Ton radical et désinvolte, oscillant entre pamphlet anarchiste et manifeste
+          situationniste. Revendications exprimées en termes de démantèlement des
+          institutions résiduelles et d'autogestion immédiate. Style graphique agressif,
+          avec des collages de documents officiels et des slogans en graffiti.
+        langue_style: Anglais vernaculaire américain fragmenté, avec des emprunts
+          à l'espagnol chicano et aux langues autochtones locales. Registre à la fois
+          argotique et juridique.
+      bioterritoires_anatoliens:
+        nom: Su Sular — Toprağın Dili
+        ton: Ton à la fois lyrique et pamphlétaire, mêlant références coraniques et
+          poésie kurde. Revendications formulées en termes de droits hydriques et
+          de justice territoriale. Style oral transcrit, avec des répétitions incantatoires
+          et des métaphores de flux et de sécheresse.
+        langue_style: Turc anatolien contemporain, avec des emprunts à l'arabe levantin
+          et au kurde sorani. Registre à la fois poétique et juridique.
+      chiapas_et_bioterritoires_mesoamericains:
+        nom: Tierra y Libertad — Chiapas en Lucha
+        ton: Ton militant et fraternel, mêlant indigenismo révolutionnaire et pratiques
+          zapatistes. Revendications exprimées en termes de droits territoriaux et
+          de justice sociale. Style oral transcrit, avec des appels à l'action collective
+          et des références à la lutte historique.
+        langue_style: Espagnol chiapanèque, avec des emprunts aux langues mayas locales
+          (tzotzil, tzeltal). Registre à la fois politique et spirituel.
+      enclaves_extractivistes_et_etats_residuels:
+        nom: 'Ouro Extraído: Voz dos Escombros'
+        ton: Ton rageur et sarcastique, mêlant jargon extractiviste et argot ouvrier
+          brisé. Les éditoriaux crachent leur venin contre les 'seigneurs des ressources'
+          et leurs 'valets verts' (écogérants complices), tandis que les reportages
+          sur le terrain sont crus, presque cinématographiques, avec des témoignages
+          à fleur de peau.
+        langue_style: 'Portugais brésilien mélangé à des termes techniques d''extraction
+          (ex: ''bombe d''água'', ''mineração de dados'') et des expressions populaires
+          comme ''tá de sacanagem?'''
+      europe_occidentale_reconstituee:
+        nom: 'Les Racines Périssent: Bulletin des Bassins Rebelles'
+        ton: Ton coupant et allusif, oscillant entre poésie militante et pamphlet
+          acide. Les articles jouent avec la fragmentation linguistique (français,
+          allemand, italien, langues régionales) pour souligner les fractures internes.
+          Les éditoriaux sont des manifestes en forme de collages, où se mêlent citations
+          de penseurs autonomistes et slogans déformés.
+        langue_style: 'Multilingue chaotique : français dominant avec inserts en langues
+          régionales (alsacien, occitan, lombard) et termes administratifs allemands
+          ou néerlandais détournés.'
+      maghreb_mediterraneen:
+        nom: 'Méditerranée en Colère: Al-Bahr Yathir'
+        ton: Ton théâtral et incantatoire, où chaque article semble être un cri lancé
+          contre l'injustice climatique. Les métaphores liées à la mer (vagues, naufrages,
+          marées) sont omniprésentes, et les témoignages sont souvent transcrits en
+          dialectes maghrébins ou en arabe dialectal pour souligner l'ancrage local.
+          Les éditoriaux sont des appels à la révolte, presque religieux dans leur
+          intensité.
+        langue_style: Arabe dialectal maghrébin (marocain, algérien, tunisien) mélangé
+          à des termes français techniques ou administratifs, avec des expressions
+          poétiques en berbère (rifain, kabyle).
+      nordeste_bresilien_frente:
+        nom: 'Sertão Sol Livre: Jornal da Resistência'
+        ton: Ton chaleureux mais combatif, avec une forte dimension orale. Les articles
+          sont souvent écrits comme des récits de vie, entrecoupés de chants et de
+          proverbes locaux. Les éditoriaux sont des appels à l'unité, mais teintés
+          d'une méfiance viscérale envers les 'séducteurs de la ville' (fonctionnaires,
+          NGOistes). Les dessins satiriques, inspirés de l'art nordestin, parsèment
+          les pages.
+        langue_style: Portugais brésilien avec des expressions du sertão ('ô de casa!',
+          'puxa vida') et des termes en tupi-guarani, ainsi que des onomatopées locales
+          ('caboco', 'sertanejo').
+      polynesie_reconstituee:
+        nom: 'Te Moana Ora: Bulletin des Îles en Mouvement'
+        ton: Ton à la fois solennel et intime, où chaque mot pèse comme une pierre
+          dans l'océan. Les articles sont souvent des récits de mémoire collective,
+          mêlant récits oraux, chants traditionnels et archives décolonisées. Les
+          éditoriaux sont des méditations sur l'équilibre entre préservation et transformation,
+          écrits dans un tahitien moderne enrichi de termes anglais et français pour
+          toucher un public global.
+        langue_style: Tahitien moderne (reo mā'ohi) avec des emprunts à l'anglais
+          ('fale', 'haere mai') et au français ('mairie', 'assemblée'), mais aussi
+          des termes anciens ressuscités pour les besoins de la cause.
+      proche_orient_en_crise:
+        nom: Al-Sharq al-Muhtall / الشرق المهتّل
+        ton: Un journal qui hurle entre les lignes, entre rage et désespoir, écrit
+          avec la poussière des routes de l'exil et l'encre des manifestes déchirés.
+          Ici, chaque mot est une pierre lancée contre les murs des puissants, chaque
+          témoignage un cri étouffé par les drones de surveillance des milices fantômes.
+        langue_style: Arabe littéraire mêlé d'expressions dialectales palestiniennes,
+          syriennes et yéménites, avec des insertions en persan et en hébreu des correspondants
+          nomades quand ils osent encore écrire.
+      sahel_numerique_ligue:
+        nom: SahelOS — Le Bulletin des Nœuds Parleurs
+        ton: 'Un manifeste en code et en sable, où les équations algébriques côtoient
+          les proverbes touaregs et les récits de résistance. Le ton est à la fois
+          technique et poétique, car ici, l''open-source n''est pas qu''un outil :
+          c''est une arme contre l''hégémonie des clouds lointains et des algorithmes
+          coloniaux.'
+        langue_style: Mélange de français technique, d'arabe sahélien (haoussa, peul,
+          songhaï), de langues berbères et de code commenté en SahelOS, avec des emojis
+          de circuits imprimés et de soleils stylisés.
+      sao_paulo_algorithmique:
+        nom: APD — Audit Permanent des Dépossédés
+        ton: 'Un journal qui gratte les couches de code comme on arrache des bandages
+          sur des plaies ouvertes. Le ton est à la fois scientifique et subversif
+          : on y dissèque les algorithmes comme des cadavres politiques, tout en racontant
+          les luttes des assemblées qui refusent de se soumettre aux caprices des
+          modules défaillants.'
+        langue_style: Portugais brésilien épuré, truffé de termes anglais techniques
+          (APD, modules, audit) et de créole paulista des périphéries, avec des schémas
+          de flux de données annotés à la main en marge.
+policy_reform:
+  pro_pouvoir:
+    _reseau:
+      nom: Réseau Global Governance Report
+      charte: Publications institutionnelles régionales. Chaque édition couvre la
+        mise en œuvre des réformes dans sa zone. Ton technocratique, normatif, confiance
+        dans la régulation.
+    zones:
+      ameriques_reformees:
+        nom: The Governance Chronicle of the New Americas
+        ton: Ton solennel et pédagogique, mêlant rigueur technocratique et rhétorique
+          patriotique. Met en avant les succès des réformes tout en rappelant les
+          obligations internationales, avec une insistance sur la stabilité économique
+          et la cohésion sociale. Style direct, phrases longues et subordonnées, vocabulaire
+          administratif anglo-américain modernisé.
+        langue_style: 'anglais institutionnel avec emprunts lexicaux espagnols et
+          portugais (ex: ''gobernanza'', ''accountability'', ''technocratía progresista'')'
+      bloc_souverainiste_non_signataire:
+        nom: Al-Waqi' al-Mu'assasati li-al-Islah (الأوقاف المؤسسية للإصلاح)
+        ton: Ton à la fois dogmatique et défensif, oscillant entre dénonciation de
+          l'impérialisme technocratique et plaidoyer pour la souveraineté. Utilise
+          un registre religieux et juridique hybride, avec des références coraniques
+          ou panafricaines pour légitimer la résistance. Style oral et incantatoire,
+          ponctué de citations non traduites.
+        langue_style: arabe standard moderne et langues locales (haoussa, bambara,
+          quechua, etc.), avec translittération en alphabet latin pour les termes
+          clés
+      espace_eurasiatique:
+        nom: Технократический Вестник Евразийского Союза (Tekhnokraticheskiy Vestnik
+          Evraziyskogo Soyuza)
+        ton: Ton autoritaire et prophétique, présentant les réformes comme une nécessité
+          historique incontestable. Style télégraphique, phrases nominales, et lexique
+          mêlant termes marxistes-léninistes modernisés et jargon technocratique.
+          Emploi systématique de l'impératif et de la troisième personne pour imposer
+          une vision.
+        langue_style: russe administratif avec termes techniques en anglais ('blockchain
+          governance', 'bio-sovereignty') et néologismes en cyrillique
+      europe_nord_ouest:
+        nom: The Hague-Rotterdam Protocol Review
+        ton: Ton neutre et procédural, inspiré du droit international et de la diplomatie.
+          Style impersonnel, phrases passives, et abondance de termes juridiques latins
+          ou néerlandais ('ex lege', 'in absentia', 'statu quo'). Met en avant l'expertise
+          des tribunaux et la continuité des institutions européennes.
+        langue_style: anglais formel avec emprunts au néerlandais ('poldermodel',
+          'overleg') et au latin juridique
+      hub_africain_gouvernance:
+        nom: 'African Governance Nexus: Nairobi-Kigali-Brazzaville Bulletin'
+        ton: Ton à la fois triomphaliste et précautionneux, célébrant le rôle central
+          de l'Afrique dans la gouvernance mondiale tout en soulignant les défis de
+          légitimité. Style oral et dynamique, avec des métaphores climatiques et
+          hydriques ('le pouls du continent', 'les veines de l'ACRA'). Mélange de
+          swahili, de kikuyu et d'anglais technique.
+        langue_style: anglais africain standard avec emprunts au swahili ('maendeleo',
+          'uhuru wa data'), au lingala et au kikuyu pour les slogans institutionnels
+      hub_europeen_regulation:
+        nom: Le Consensus des Institutions
+        ton: Ton solennel et diplomatique, mêlant rigueur juridique et technocratie
+          triomphante. Le journal incarne l'autorité des institutions qu'il sert,
+          avec une emphase sur la stabilité et l'efficacité des réformes globales,
+          tout en répondant aux critiques par des argumentaires irréfutables et des
+          données quantifiées.
+        langue_style: Français institutionnel teinté de jargon administratif, avec
+          des emprunts lexicaux à l'anglais diplomatique et des formules latines ('ubi
+          societas, ibi jus') pour marquer l'héritage européen.
+      zone_moyen_orient_golfe:
+        nom: Al-Istiqāma al-Mu'āṣira (الاستقامة المعاصر)
+        ton: Ton à la fois déférent envers les institutions et résigné face aux contraintes
+          géopolitiques, oscillant entre célébration des réformes imposées et reconnaissance
+          implicite des limites de leur légitimité locale. Le journal assume un rôle
+          de médiateur entre les exigences technocratiques et les réalités socioculturelles,
+          dans un arabe standardisé mais teinté de dialectes du Golfe.
+        langue_style: Arabe standard moderne avec des termes persans et turcs, ainsi
+          que des citations coraniques réinterprétées pour justifier l'ordre institutionnel
+          ('وإن تعدل كل من aspect d’équilibre divin').
+      zone_pacifique_industrielle:
+        nom: Pacific Governance Monitor
+        ton: Ton direct, factuel et axé sur la performance économique et industrielle,
+          avec une neutralité de façade masquant une préférence pour les intérêts
+          des consortiums. Le journal traite les tensions sociales comme des 'défis
+          logistiques' et présente les réformes comme des 'optimisations systémiques',
+          tout en évitant soigneusement de critiquer ouvertement les acteurs dominants.
+        langue_style: Anglais des affaires et de la géopolitique, avec des néologismes
+          techniques ('augmented workforce efficiency metrics') et des anglicismes
+          japonais ('kaizen' pour les processus industriels).
+  opposition:
+    _reseau:
+      nom: Réseau La Souveraine
+      charte: Revues souverainistes et anti-technocratie. Chaque édition dénonce la
+        perte d'autonomie locale dans sa zone. Ton combatif, démocratique, appels
+        à la mobilisation.
+    zones:
+      ameriques_reformees:
+        nom: Le Dernier État Libre
+        ton: Ton combatif et pamphlétaire, mêlant ironie mordante et appel à la désobéissance
+          civile. Revendique le retour à une Amérique des États fédérés souverains,
+          loin des bureaucraties internationales et des algorithmes de contrôle social.
+          Utilise un langage direct, parfois cru, inspiré des débats des town halls
+          et des forums souverainistes numériques.
+        langue_style: 'anglais américain avec emprunts lexicaux aux jargons juridiques
+          et tech locaux (ex: ''jurisdiction stack'', ''decentralized sovereignty
+          nodes'')'
+      bloc_souverainiste_non_signataire:
+        nom: Le Peuple des Frontières
+        ton: Ton collectif et multilingue, reflétant la diversité des résistances
+          du Sud Global. Mélange d'appels à l'unité pan-continentale et de dénonciations
+          ciblées des institutions technocratiques perçues comme néocoloniales. Style
+          oral, rythmique, avec des expressions en langues locales (wolof, quechua,
+          bemba) et des métaphores liées aux ressources naturelles (eau, terres rares).
+        langue_style: français, anglais, espagnol, et langues locales (wolof, quechua,
+          bemba) avec des néologismes comme 'data-colonialisme' ou 'ressourcide'
+      espace_eurasiatique:
+        nom: Souveraineté & Ciment
+        ton: 'Ton à la fois rigoriste et subversif, jouant sur les paradoxes de l''Eurasie
+          : entre culte de l''efficacité technocratique et résistance farouche aux
+          normes globales. Dénonce les technocrates ''euro-asiatiques'' comme des
+          marionnettes des conglomérats, tout en célébrant les modèles locaux d''autogestion.
+          Style métaphorique, inspiré du réalisme socialiste et des contes slaves,
+          avec un humour noir typique de la zone.'
+        langue_style: 'russe avec emprunts à l''ukrainien et au tatar, mélange de
+          registres administratif et populaire, jeux de mots sur les noms des institutions
+          (ex: ''CRTI'' → ''ЦРТИ'' / ''Центр Разрушения Твоих Идей'')'
+      europe_nord_ouest:
+        nom: Le Tribunal des Peuples
+        ton: Ton juridique et sarcastique, imitant le style des procès-verbaux et
+          des arrêts de la Cour de La Haye. Dénonce les arrangements technocratiques
+          comme des parodies de justice, avec une pointe d'absurde typiquement néerlandaise.
+          Utilise des néologismes juridiques en anglais et en néerlandais ('jurisdiction
+          laundering', 'regulatory capture by design').
+        langue_style: néerlandais et anglais juridique, avec des calques du français
+          ('arrêt van derburgh' → 'arrest van derburgh')
+      hub_africain_gouvernance:
+        nom: Terres Inviolées
+        ton: Ton à la fois poétique et radical, mêlant chants traditionnels, slogans
+          militants et données chiffrées sur l'exploitation des ressources. Revendique
+          une souveraineté africaine ancrée dans les savoirs locaux et les écosystèmes,
+          contre les 'colonisateurs verts' des institutions internationales. Style
+          oral, avec des références aux griots et aux réseaux de résistance sahéliens.
+        langue_style: swahili, lingala, français avec emprunts aux langues sahéliennes
+          (haoussa, peul) et création de termes comme 'RIREC' → 'Ressource Injustement
+          Rapatriée en Europe et en Chine'
+      hub_europeen_regulation:
+        nom: Le Souverain Lacustre
+        ton: Un ton acéré, entre pamphlet et gazette militante, qui dénonce l'hypocrisie
+          des institutions genevoises et leur langue de bois technocratique. Les articles
+          mêlent ironie cinglante et appel à la résistance citoyenne, avec une pointe
+          de mépris pour les 'experts' autoproclamés qui dictent les lois depuis leurs
+          tours de verre flottantes.
+        langue_style: français genevois argotique, avec emprunts à l'anglais des institutions
+          et expressions dialectales locales
+      zone_moyen_orient_golfe:
+        nom: Al-Watan Al-Muqawim (الوطن المقاوم)
+        ton: Un ton combatif et lyrique, entre éditoriaux enflammés et reportages
+          percutants, qui exalte la fierté nationale et dénonce l'oppression des institutions
+          mondiales. Les articles oscillent entre références coraniques et slogans
+          révolutionnaires, avec une insistance sur l'humiliation post-coloniale et
+          la nécessité de l'autodétermination.
+        langue_style: arabe standard moderne avec emprunts dialectaux levantins et
+          perses, ponctué de termes anglais techniques des institutions
+      zone_pacifique_industrielle:
+        nom: Pacifik Sovereignist
+        ton: Un ton direct et sans concession, entre jargon syndical et argot des
+          travailleurs des usines flottantes. Les articles adoptent un style oral
+          et brut, avec des interviews percutantes de syndicalistes augmentés et des
+          dénonciations impitoyables des consortiums. L'humour noir et l'ironie sont
+          des armes fréquentes.
+        langue_style: anglais pacifique mélangé avec des créoles locaux (tok pisin,
+          bichelamar) et des termes techniques de la géo-ingénierie
+reference:
+  pro_pouvoir:
+    _reseau:
+      nom: Réseau Le Monde en Tension
+      charte: Médias généralistes mainstream régionaux. Chaque édition couvre sa zone
+        avec équilibre apparent. Ton factuel, experts institutionnels au premier plan.
+    zones:
+      ameriques_multipolaires:
+        nom: El Clarín de las Américas
+        ton: Ton direct et engagé, mêlant jargon politique états-unien et expressions
+          brésiliennes. Met en avant les voix des institutions légales tout en soulignant
+          les 'dérives populistes' des factions contestataires. Style éditorial oscillant
+          entre optimisme technocratique et défense des intérêts géopolitiques locaux.
+        langue_style: 'Espagnol neutre (Amérique du Sud) avec emprunts lexicaux au
+          portugais brésilien et anglicismes politiques (ex: ''impeachment'', ''lobby'',
+          ''think tank''). Registre semi-formel incluant des références au *portuñol*
+          local.'
+      bloc_eurasien_central:
+        nom: Vestnik Central'nykh Resursov
+        ton: Ton administratif et technique, teinté de paranoïa institutionnelle.
+          Langage marqué par l'usage de termes russes ou turcs locaux, avec des néologismes
+          géopolitiques ('ресурсный суверенитет' / souveraineté des ressources). Style
+          sobre, privilégiant les données et les citations d'experts affiliés aux
+          cartels ou aux régulateurs.
+        langue_style: Russe standard (Fédération de Sibérie, Kazakhstan) avec emprunts
+          aux langues turciques (kazakh, ouzbek) et termes techniques en anglais ('compliance',
+          'audit'). Registre administratif et militaire.
+      corridor_arctique_nordique:
+        nom: Nordlys Logistik
+        ton: Ton neutre et factuel, mais systématiquement pro-ALN et pro-CENI. Langage
+          hybride norvégien-anglais, avec des néologismes liés à la logistique arctique
+          ('isruter', 'kjølekorridor'). Style froid, privilégiant les communiqués
+          officiels et les rapports techniques, tout en minimisant les conflits sociaux.
+        langue_style: 'Norvégien bokmål avec emprunts massifs à l''anglais (logistique,
+          termes maritimes) et quelques mots sami (ex: ''guovdageaidnu'' pour ''capitale'').
+          Registre administratif et technique.'
+      europe_occidentale_reconstructee:
+        nom: L'Écho des Institutions
+        ton: Ton solennel et eurocratique, avec des références constantes aux traités
+          et aux instances supranationales. Style sobre, privilégiant les discours
+          des commissaires et les données macroéconomiques. Lexique marqué par l'usage
+          de termes français institutionnels ('concertation', 'harmonisation') et
+          d'anglicismes ('stakeholder', 'benchmarking').
+        langue_style: Français standard (Bruxelles, Genève) avec emprunts à l'anglais
+          des affaires et à l'allemand administratif. Registre diplomatique et technocratique.
+      indo_pacifique_emergent:
+        nom: The Indo-Pacific Herald
+        ton: Ton corporatiste et optimiste, mêlant anglais des affaires et expressions
+          locales (singlish, coréen moderne). Style éditorial mettant en avant les
+          'success stories' du Consortium Indo-Pacifique, tout en minimisant les crises
+          sociales. Lexique technique ('green hydrogen', 'supply chain') dominant,
+          avec des références aux fonds souverains.
+        langue_style: 'Anglais standard (Singapour, Séoul) avec emprunts au mandarin
+          (mandarin standard et minnan), au coréen moderne (ex: ''경제적 파트너십'' / partenariat
+          économique) et au singlish. Registre des affaires et diplomatie soft-power.'
+      institutions_multilaterales_survivantes:
+        nom: L'Écho des Institutions — Genève-Lac Retraité
+        ton: Ton solennel et feutré, mêlant jargon technocratique et rhétorique de
+          la raison supérieure. Les éditoriaux soulignent le 'devoir d'ingérence climatique'
+          et l'urgence de réformes 'structurelles' pour éviter le chaos, tout en minimisant
+          les critiques internes par l'autorité des experts désignés.
+        langue_style: Français diplomatique avec inclusions d'anglais institutionnel
+          ('policy brief', 'stakeholder engagement') et de termes juridiques latins
+          ('ubi societas, ibi jus')
+      pacte_des_souverains:
+        nom: La Voix des Souverains — Pacte Sans Fixe
+        ton: Ton martial et triomphant, oscillant entre discours de puissance et paternalisme
+          condescendant. Les articles célèbrent la 'résilience souveraine' et dénoncent
+          les 'dérives de la gouvernance ouverte', tout en présentant les blocages
+          internes comme des 'stratégies de défense des intérêts vitaux'.
+        langue_style: Anglais sécurisé avec emprunts aux langues des membres dominants
+          (russe diplomatique, mandarin administratif, arabe du Golfe) et termes militaires
+          ('deterrence by resilience', 'strategic autonomy')
+      union_africaine_resilience:
+        nom: Le Resilienceur — Kinshasa Diplomatique
+        ton: Ton à la fois pédagogique et mobilisateur, avec une emphase sur l'autosuffisance
+          et la 'sagesse des ancêtres'. Les éditoriaux lient crises climatiques et
+          héritage panafricain, tout en présentant les tensions internes comme des
+          'défis de croissance' à surmonter collectivement.
+        langue_style: Français africain standard avec inclusions de lingala, wolof
+          et termes swahili ('Uhuru wa maji', 'Kiongozi wa nchi') et néologismes écologiques
+          ('agro-souveraineté', 'hydropolitique')
+      zones_grises_globales:
+        nom: Le Front Gris — Bulletin des Marges
+        ton: Ton cynique et survivaliste, oscillant entre fascination pour l'ingéniosité
+          locale et mépris pour l'incapacité des institutions. Les articles décrivent
+          les réalités locales avec un réalisme cru, mais justifient la fragmentation
+          comme une 'nécessaire adaptation' face à l'incurie globale.
+        langue_style: Langues locales en script latin ou cyrillique selon les zones
+          (haoussa, ouzbek, bengali des Sundarbans) avec inclusions d'argot cyberpunk
+          ('net-runners', 'data mercenaries') et de termes militaires ('no-go zones',
+          'grey market governance')
+  opposition:
+    _reseau:
+      nom: Réseau Le Dessous des Cartes
+      charte: Médias d'investigation indépendants régionaux. Chaque édition documente
+        ce que les médias mainstream taisent dans sa zone. Ton lucide, enquêteur,
+        sources protégées.
+    zones:
+      ameriques_multipolaires:
+        nom: El Otro Lado de la Frontera
+        ton: Tonalité cinglante et métissée, mêlant sarcasme mexicain, rage des *pueblos*
+          sud-américains et désillusion nord-américaine. Le journal se présente comme
+          un miroir brisé des Amériques, où chaque éditorial est une gifle à l'oligarchie
+          transcontinentale. On y parle de résistance en *spanglish* technique, de
+          trahisons en *portuñol* et de résistances silencieuses en *mapudungun*.
+        langue_style: Espagnol sud-américain, portugais brésilien, anglais américain
+          marginal, créole haïtien et langues autochtones (quechua, aymara, mapudungun)
+          en quotes ou titres.
+      bloc_eurasien_central:
+        nom: Сырые Данные / Raw Data (Центральная Евразия)
+        ton: Ton glacial, bureaucratique et paranoïaque, comme un rapport d'agent
+          de renseignement soviétique réécrit par un hacker kazakh. Chaque ligne sent
+          l'archive secrète, le chiffre crypté et la menace voilée. Le journal se
+          veut une encyclopédie des zones grises, écrite dans un russe administratif
+          mélangé à des termes techniques en anglais et en langues turciques, avec
+          des encadrés en cyrillique ou en alphabet latin selon l'auditoire cible.
+        langue_style: Russe standard, kazakh, ouzbek, kirghiz, turc et anglais technique,
+          avec alternance alphabétique (cyrillique/latin). Registre administratif,
+          codes juridiques et argot des opérateurs para-militaires.
+      corridor_arctique_nordique:
+        nom: Isbjørnens Advarsel / L'Avertissement de l'Ours Polaire
+        ton: Froid et tranchant comme une lame de couteau sami, avec une pointe de
+          fatalisme nordique et une ironie noire typique des communautés inuit. Le
+          journal alterne entre rapports méticuleux (en norvégien et sami) et pamphlets
+          en *kalaallisut* ou en russe des pêcheurs, toujours avec une méfiance viscérale
+          envers les algorithmes et les IA de l'ALN. Les titres sont souvent en français
+          pour toucher l'élite bruxelloise ou genevoise.
+        langue_style: Norvégien (bokmål et nynorsk), sami (nord, skolt et inari),
+          russe, anglais des affaires, français diplomatique. Mélange de registres
+          formels, de dialectes locaux et d'argot des ports.
+      europe_occidentale_reconstructee:
+        nom: Les Ombres de Terrafond
+        ton: Sec, précis et impitoyable, comme un audit du Consortium Helios. Le ton
+          oscille entre l'ironie méprisante envers les technocrates bruxellois et
+          une rage contenue face aux algorithmes agricoles qui dévorent les sols.
+          Les articles sont écrits dans un français technique et administratif, émaillé
+          de termes anglais (tech, finance, droit biosocial) et de néologismes agroécologiques.
+          Le journal cultive un style de rapport interne fuité, avec des citations
+          anonymes en allemand ou en néerlandais selon les bassins concernés.
+        langue_style: Français standard et administratif, avec emprunts à l'anglais
+          (tech, finance), à l'allemand (droit, régulation) et au néerlandais (agriculture
+          intensive). Registre de contre-expertise et de whistleblowing.
+      indo_pacifique_emergent:
+        nom: Mare Nostrum Hydrogenii / Mer de l'Hydrogène
+        ton: Dynamique, mercantile et impitoyable, comme un deal fait dans l'ombre
+          d'un terminal portuaire. Le journal alterne entre l'anglais des affaires
+          (pour les fonds souverains), le hindi/ourdou (pour les populations du delta
+          du Gange) et le mandarin (pour les logisticiens asiatiques). Les titres
+          sont percutants, souvent en mélange linguistique, avec une pointe de cynisme
+          asiatique et une touche de désespoir bengali. Le style est rapide, presque
+          télégraphique, comme un flux de nouvelles en temps réel.
+        langue_style: Anglais (global business), mandarin (mandarin standard et dialectes
+          minnan, cantonais), hindi, ourdou, bengali, avec des termes techniques en
+          japonais et coréen. Mélange de registres commerciaux, médiatiques et populaires.
+      institutions_multilaterales_survivantes:
+        nom: Le Glacier Bleu
+        ton: 'Ton glacial, clinique et implacable, mêlant rapports administratifs
+          désincarnés et pamphlets acérés. Chaque article dissèque les mécanismes
+          de pouvoir comme on dissèque un cadavre institutionnel : méthodique, sans
+          illusions, avec une pointe de cynisme genevois. Ici, les communiqués de
+          l''AMSC sont des leurres, les données climatiques des armes de propagande,
+          et les fonctionnaires des fantômes bureaucratiques.'
+        langue_style: Français institutionnel teinté de jargon onusien, ponctué d'anglicismes
+          bureaucratiques et de néologismes créés pour désigner les nouvelles formes
+          de pouvoir ('technocratocide', 'verrou algor', 'neutrocratie').
+      pacte_des_souverains:
+        nom: Les Forteresses Invisibles
+        ton: 'Ton sec, presque militaire, avec des phrases courtes et des métaphores
+          de muraille et de forteresse. Le journal adopte un style télégraphique pour
+          ses enquêtes, comme des rapports de reconnaissance, mais glisse des apartés
+          sarcastiques ou des références historiques méconnues pour dégonfler l''aura
+          de sérieux des ''Souverains''. L''indépendance est une illusion : ici, on
+          écrit entre les lignes des traités, là où les mots cachent des bombes.'
+        langue_style: Anglais bureaucratique et russe des années 2040-2050, avec des
+          emprunts à l'arabe dialectal pour les citations de membres du Pacte du Golfe.
+          Registre parfois proche du 'newspeak' orwellien, mais avec une ironie mordante.
+      union_africaine_resilience:
+        nom: Terre d'Argile
+        ton: Ton lyrique et combatif, où les métaphores agricoles et hydriques se
+          mêlent à une rage contenue. Le journal alterne entre poèmes en prose sur
+          la sécheresse et rapports techniques accablants, comme pour rappeler que
+          chaque ligne de code des Accords de Kinshasa cache une goutte de sueur sahélienne.
+          La langue est riche en proverbes peuls et bambaras, mais aussi en néologismes
+          écologistes ('agro-résilience', 'hydropolice').
+        langue_style: Français africain moderne avec des emprunts aux langues locales
+          (wolof, haoussa, swahili), des tournures orales et des néologismes créés
+          pour désigner les nouvelles réalités climatiques ('sécheresse algorithmique',
+          'droit à l'ombre').
+      zones_grises_globales:
+        nom: L'Ombre Porteuse
+        ton: 'Ton hybride, à la fois poétique et brut, où se croisent récits de voyage,
+          témoignages de migrants et analyses géopolitiques glacées. Le journal joue
+          avec les registres : un article peut commencer comme un conte oral avant
+          de basculer dans un rapport de think tank, ou inversement. L''objectif est
+          de montrer que les ''zones grises'' ne sont pas des non-lieux, mais des
+          laboratoires du futur où se négocient les droits, les survies et les trahisons.'
+        langue_style: Mélange de créoles (créole haïtien, créole mauricien), d'arabe
+          dialectal, de chinois des périphéries et d'anglais des corridors eurasiatiques.
+          Le style inclut des emprunts aux langues locales des zones tampons (touareg,
+          kurde, pachtou) et des néologismes pour désigner les réalités hybrides ('nomade
+          climatique', 'ville éphémère', 'droit de passage algorithmique').

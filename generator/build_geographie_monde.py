@@ -71,10 +71,7 @@ from pathlib import Path
 
 import yaml
 
-try:
-    import anthropic
-except ImportError:
-    anthropic = None
+from llm_client import call_llm, LLM_MODEL as MODEL
 
 
 # ---------------------------------------------------------------------------
@@ -86,7 +83,7 @@ INSTANCES_DIR = VAULT_ROOT / "instances"
 EVENT_INSTANCES_DIR = VAULT_ROOT / "event_instances"
 GEOGRAPHIE_DIR = VAULT_ROOT / "geographie"
 
-MODEL = "claude-sonnet-4-6"
+
 SYNTHESIS_MAX_TOKENS = 8000
 
 SCENARIOS = [
@@ -171,21 +168,16 @@ def gather_event_texts(scenario):
 # ---------------------------------------------------------------------------
 
 def get_client():
-    if anthropic is None:
-        sys.exit("Le package 'anthropic' n'est pas installé. "
-                  "pip install anthropic --break-system-packages")
-    return anthropic.Anthropic()
+    """Conservé pour compatibilité — retourne None, call_claude_json n'en a plus besoin."""
+    return None
 
 
 def call_claude_json(client, system, user_content, max_tokens=SYNTHESIS_MAX_TOKENS):
-    resp = client.messages.create(
-        model=MODEL,
+    text = call_llm(
+        system_prompt=system,
+        user_prompt=user_content,
         max_tokens=max_tokens,
-        system=system,
-        messages=[{"role": "user", "content": user_content}],
-    )
-    text = "".join(
-        block.text for block in resp.content if getattr(block, "type", "") == "text"
+        temperature=0.0,
     ).strip()
 
     if not text:

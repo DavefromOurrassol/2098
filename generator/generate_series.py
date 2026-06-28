@@ -16,6 +16,7 @@ Résultat :
 """
 
 import os
+import random
 import sys
 import yaml
 import argparse
@@ -188,10 +189,18 @@ def generate_one(scenario, thematique, config, date_fictive, dry_run=False):
     from snapshot       import build_snapshot
     from prompt_builder import build_prompt
 
+    # Ligne éditoriale : fixe si définie dans config, aléatoire sinon
+    ligne_editoriale_config = config.get("ligne_editoriale", None)
+    if ligne_editoriale_config in ("pro_pouvoir", "opposition"):
+        ligne_editoriale = ligne_editoriale_config
+    else:
+        ligne_editoriale = random.choice(["pro_pouvoir", "opposition"])
+
     # Config article pour cette entrée
     article_config = {
-        "scenario":   scenario,
-        "thematique": thematique,
+        "scenario":          scenario,
+        "thematique":        thematique,
+        "ligne_editoriale":  ligne_editoriale,
         "article": {
             "titre_suggere":    "",
             "angle_specifique": config.get("angle_specifique", ""),

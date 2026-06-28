@@ -22,6 +22,91 @@ import yaml
 
 from loader import load_scenario, load_all_variables, VALID_VARS, VALID_SCENARIOS, load_instances_for_scenario
 
+# ---------------------------------------------------------------------------
+# Chargement de journaux.yaml (généré par generate_journaux.py)
+# ---------------------------------------------------------------------------
+
+def _load_journaux():
+    """Charge generator/journaux.yaml. Retourne {} si absent."""
+    path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "journaux.yaml")
+    if not os.path.exists(path):
+        return {}
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            return yaml.safe_load(f) or {}
+    except Exception:
+        return {}
+
+_JOURNAUX_CACHE = None
+
+def get_journal_profile(scenario_slug, ligne_editoriale, zone_slug=None):
+    """
+    Retourne le profil éditorial pour un scénario + ligne + zone.
+
+    Priorité :
+      1. Édition locale (journaux.yaml → zones → zone_slug) si zone_slug fourni
+      2. Réseau global (journaux.yaml → _reseau)
+      3. Profil hardcodé (JOURNAL_PROFILES)
+      4. Profil par défaut
+
+    Retourne un dict {nom, ton, posture} compatible avec build_system_prompt().
+    """
+    global _JOURNAUX_CACHE
+    if _JOURNAUX_CACHE is None:
+        _JOURNAUX_CACHE = _load_journaux()
+
+    ligne = ligne_editoriale if ligne_editoriale in ("pro_pouvoir", "opposition") else "pro_pouvoir"
+
+    # 1. Édition locale depuis journaux.yaml
+    if zone_slug and _JOURNAUX_CACHE:
+        zone_data = (
+            _JOURNAUX_CACHE
+            .get(scenario_slug, {})
+            .get(ligne, {})
+            .get("zones", {})
+            .get(zone_slug)
+        )
+        if zone_data and zone_data.get("nom"):
+            reseau = (
+                _JOURNAUX_CACHE
+                .get(scenario_slug, {})
+                .get(ligne, {})
+                .get("_reseau", {})
+            )
+            return {
+                "nom":     zone_data["nom"],
+                "posture": reseau.get("nom", "") + " — édition locale",
+                "ton":     zone_data.get("ton", "") + (
+                    " Registre : {}.".format(zone_data["langue_style"])
+                    if zone_data.get("langue_style") else ""
+                ),
+            }
+        else:
+            # Zone non trouvée dans journaux.yaml → warning + fallback réseau global
+            print("[WARN][journal] Pas d'édition locale pour zone '{}' / {} / {} "
+                  "→ fallback réseau global".format(zone_slug, scenario_slug, ligne))
+
+    # 2. Réseau global depuis journaux.yaml
+    if _JOURNAUX_CACHE:
+        reseau = (
+            _JOURNAUX_CACHE
+            .get(scenario_slug, {})
+            .get(ligne, {})
+            .get("_reseau")
+        )
+        if reseau and reseau.get("nom"):
+            key = "{}_{}".format(scenario_slug, ligne)
+            fallback = JOURNAL_PROFILES.get(key, _JOURNAL_DEFAULT)
+            return {
+                "nom":     reseau["nom"],
+                "posture": fallback.get("posture", "réseau éditorial mondial"),
+                "ton":     fallback.get("ton", reseau.get("charte", "")),
+            }
+
+    # 3. Profil hardcodé
+    key = "{}_{}".format(scenario_slug, ligne)
+    return JOURNAL_PROFILES.get(key, _JOURNAL_DEFAULT)
+
 
 # ─────────────────────────────────────────
 # CONSTANTES
@@ -138,12 +223,192 @@ NIVEAU_EMOTIONNEL_LABEL = {
 # SECTION 1 — SYSTEM PROMPT
 # ─────────────────────────────────────────
 
-def build_system_prompt():
+# Profils éditoriaux par scénario.
+# Chaque profil définit le nom du journal, sa posture éditoriale et les
+# marqueurs de ton que le journaliste doit incarner dans ses articles.
+# Clés : "{scenario}_{ligne_editoriale}"
+# ligne_editoriale : "pro_pouvoir" | "opposition"
+# Les anciennes clés courtes (ex: "breakdown") sont conservées comme alias
+# vers pro_pouvoir pour compatibilité ascendante.
+JOURNAL_PROFILES = {
+
+    # ── BREAKDOWN ──────────────────────────────────────────────────────────
+    "breakdown_pro_pouvoir": {
+        "nom":     "L'Ordre du Territoire",
+        "posture": "bulletin officiel des Forces de Maintien de l'Ordre Zonal",
+        "ton": (
+            "Ton autoritaire et sécuritaire. Le journal justifie les couvre-feux, les checkpoints, "
+            "les réquisitions de ressources. L'ennemi c'est le chaos, pas le pouvoir. "
+            "Les milices sont appelées 'forces de stabilisation'. Les résistants sont des 'éléments perturbateurs'. "
+            "Style lapidaire, impératif. Les chiffres d'ordre public sont mis en avant. "
+            "Le lecteur doit se sentir protégé, pas opprimé."
+        ),
+    },
+    "breakdown_opposition": {
+        "nom":     "La Dépêche des Territoires",
+        "posture": "feuille clandestine, imprimée et distribuée de main en main",
+        "ton": (
+            "Ton brut et factuel, épuisé mais résistant. Les informations sont rares et précieuses. "
+            "Le journaliste documente les violences des milices, les disparitions, les trafics, les zones interdites. "
+            "Pas de pathos inutile — les faits suffisent. "
+            "Références aux réseaux d'entraide, aux passages clandestins, aux caches de vivres. "
+            "Le lecteur sait lire entre les lignes."
+        ),
+    },
+
+    # ── FORTRESS WORLD ─────────────────────────────────────────────────────
+    "fortress_world_pro_pouvoir": {
+        "nom":     "Le Bloc Informations",
+        "posture": "organe officiel du Bloc Atlantique-Méditerranéen",
+        "ton": (
+            "Ton institutionnel et contrôlé. La rhétorique de la menace extérieure est omniprésente. "
+            "Le journaliste légitime les décisions du bloc sans les remettre en question. "
+            "Les termes 'sécurité', 'souveraineté', 'intégrité du bloc' reviennent naturellement. "
+            "Les dissidences sont des risques, pas des opinions légitimes. "
+            "Style formel, langue administrative, chiffres de sécurité mis en avant."
+        ),
+    },
+    "fortress_world_opposition": {
+        "nom":     "The Porous Border",
+        "posture": "publication underground des zones grises entre blocs",
+        "ton": (
+            "Ton incisif et engagé. Le journal dénonce les murs, les expulsions, la surveillance systémique. "
+            "Voix des exclus des blocs — apatrides, réfugiés, passeurs, dissidents internes. "
+            "Style journalistique d'investigation, sources protégées, témoignages directs. "
+            "La langue mélange parfois plusieurs idiomes — reflet d'une rédaction sans territoire fixe. "
+            "Les faits officiels sont cités pour être démontés."
+        ),
+    },
+
+    # ── NEW SUSTAINABILITY ─────────────────────────────────────────────────
+    "new_sustainability_pro_pouvoir": {
+        "nom":     "Nexus Global Review",
+        "posture": "revue technocratique internationale, lue par les décideurs et experts mondiaux",
+        "ton": (
+            "Ton optimiste et analytique. Le progrès est la norme, les problèmes sont des défis à optimiser. "
+            "Langage technique et précis — algorithmes, indices, protocoles. "
+            "Les controverses sont des 'frictions d'ajustement'. "
+            "Style fluide et international, références fréquentes aux accords globaux."
+        ),
+    },
+    "new_sustainability_opposition": {
+        "nom":     "Les Irréductibles",
+        "posture": "revue critique des mouvements souverainistes et anti-IA",
+        "ton": (
+            "Ton alerte et critique. Le journal dénonce la dépendance aux systèmes algorithmiques, "
+            "la perte d'autonomie humaine dans les décisions, les angles morts de l'optimisation globale. "
+            "Questions récurrentes : qui contrôle les IA ? qui bénéficie de la transition ? "
+            "Style accessible mais argumenté, citations d'experts dissidents, données alternatives. "
+            "Le progrès n'est pas nié — ses bénéficiaires sont questionnés."
+        ),
+    },
+
+    # ── ECO COMMUNALISM ────────────────────────────────────────────────────
+    "eco_communalism_pro_pouvoir": {
+        "nom":     "La Gazette des Communs",
+        "posture": "journal des assemblées territoriales dominantes",
+        "ton": (
+            "Ton chaleureux et communautaire, mais qui invisibilise les tensions internes. "
+            "Les décisions d'assemblée sont présentées comme consensuelles et naturelles. "
+            "La sobriété est une valeur, les conflits sont des 'défis collectifs à surmonter'. "
+            "Style narratif, lyrique sur les liens humains et la nature. "
+            "Les voix dissidentes dans la communauté n'ont pas de place dans ces colonnes."
+        ),
+    },
+    "eco_communalism_opposition": {
+        "nom":     "Voix des Marges",
+        "posture": "bulletin des communautés exclues ou marginalisées",
+        "ton": (
+            "Ton revendicatif et factuel. Le journal dénonce les inégalités entre territoires riches et pauvres, "
+            "l'exclusion des minorités des assemblées, les dérives autoritaires du local. "
+            "La décroissance n'est pas vécue de la même façon selon qu'on est dans un territoire riche ou appauvri. "
+            "Style direct, témoignages de première main, chiffres sur les disparités territoriales. "
+            "Le modèle communaliste est questionné de l'intérieur."
+        ),
+    },
+
+    # ── POLICY REFORM ──────────────────────────────────────────────────────
+    "policy_reform_pro_pouvoir": {
+        "nom":     "Global Governance Report",
+        "posture": "publication officielle des organes de régulation mondiale",
+        "ton": (
+            "Ton technocratique, mesuré et normatif. Les décisions sont rationnelles et fondées sur des données. "
+            "La surveillance et la coordination sont des biens publics. "
+            "Style dense, références aux directives, comités, indicateurs normalisés. "
+            "Les résistances sont des 'défis d'implémentation'. "
+            "Le lecteur est supposé familier des rouages institutionnels."
+        ),
+    },
+    "policy_reform_opposition": {
+        "nom":     "La Souveraine",
+        "posture": "revue des mouvements souverainistes et anti-technocratie",
+        "ton": (
+            "Ton combatif et démocratique. Le journal dénonce la perte d'autonomie des États, "
+            "la surveillance normalisée, la démocratie vidée de sa substance par les algorithmes. "
+            "Qui a élu ces comités ? Qui audite les IA de gouvernance ? "
+            "Style polémique mais documenté, appels à la mobilisation citoyenne. "
+            "Les faits institutionnels sont cités pour être contestés."
+        ),
+    },
+
+    # ── REFERENCE ──────────────────────────────────────────────────────────
+    "reference_pro_pouvoir": {
+        "nom":     "Le Monde en Tension",
+        "posture": "média généraliste mainstream, proche des institutions",
+        "ton": (
+            "Ton équilibré en surface, mais les experts institutionnels ont toujours le dernier mot. "
+            "Les crises sont cadrées comme gérables, les décisions des autorités comme raisonnables. "
+            "Style journalistique classique, rigueur factuelle apparente. "
+            "Les voix critiques sont citées mais marginalisées dans la structure de l'article."
+        ),
+    },
+    "reference_opposition": {
+        "nom":     "Le Dessous des Cartes",
+        "posture": "média d'investigation indépendant, financement participatif",
+        "ton": (
+            "Ton lucide et enquêteur. Le journal documente l'accumulation des problèmes non résolus, "
+            "donne la parole aux marges, aux lanceurs d'alerte, aux territoires oubliés. "
+            "Pas de dramatisation — les faits suffisent à inquiéter. "
+            "Style investigation, sources multiples, données croisées. "
+            "Le lecteur sort de l'article avec plus de questions qu'en entrant."
+        ),
+    },
+}
+
+# Aliases de compatibilité — clés courtes pointent vers pro_pouvoir par défaut
+JOURNAL_PROFILES["breakdown"]         = JOURNAL_PROFILES["breakdown_pro_pouvoir"]
+JOURNAL_PROFILES["fortress_world"]    = JOURNAL_PROFILES["fortress_world_pro_pouvoir"]
+JOURNAL_PROFILES["new_sustainability"]= JOURNAL_PROFILES["new_sustainability_pro_pouvoir"]
+JOURNAL_PROFILES["eco_communalism"]   = JOURNAL_PROFILES["eco_communalism_pro_pouvoir"]
+JOURNAL_PROFILES["policy_reform"]     = JOURNAL_PROFILES["policy_reform_pro_pouvoir"]
+JOURNAL_PROFILES["reference"]         = JOURNAL_PROFILES["reference_pro_pouvoir"]
+
+# Profil par défaut si le scénario n'est pas dans le dict
+_JOURNAL_DEFAULT = {
+    "nom":     "Le Correspondant 2098",
+    "posture": "média d'information généraliste",
+    "ton":     "Ton journalistique neutre et factuel, ancré dans les réalités de 2098.",
+}
+
+
+def build_system_prompt(scenario_slug=None, ligne_editoriale=None, zone_slug=None):
     """
-    Instructions de rôle permanentes pour Claude.
+    Instructions de rôle permanentes pour le LLM.
     Définit qui il est et comment il doit se comporter.
+
+    Args:
+        scenario_slug     : str — slug du scénario (ex: "breakdown")
+        ligne_editoriale  : str | None — "pro_pouvoir" | "opposition" | None
+        zone_slug         : str | None — slug de zone pour l'édition locale
+
+    Priorité du profil : édition locale > réseau global > profil hardcodé > défaut.
     """
-    return """Tu es un journaliste senior travaillant en 2098 pour un média d'information généraliste.
+    if scenario_slug:
+        profile = get_journal_profile(scenario_slug, ligne_editoriale, zone_slug)
+    else:
+        profile = _JOURNAL_DEFAULT
+
+    return """Tu es un journaliste senior travaillant en 2098 pour {nom} — {posture}.
 
 Le monde dans lequel tu vis et écris est réel pour toi — tu n'écris pas de la science-fiction, tu rapportes des faits de ton époque. Tu n'expliques jamais le contexte historique comme si tu t'adressais à quelqu'un du passé.
 
@@ -154,7 +419,10 @@ Tes règles absolues :
 - Tu ancres chaque article dans des faits concrets : chiffres, noms, lieux, événements datés.
 - Tu respectes strictement le style journalistique et le format demandés.
 - Tes articles sont cohérents avec l'état du monde décrit — tu ne contredis pas les dynamiques systémiques fournies.
-- Tu peux mentionner des technologies, des institutions, des événements passés (entre 2025 et 2098) qui semblent naturels dans ce monde."""
+- Tu peux mentionner des technologies, des institutions, des événements passés (entre 2025 et 2098) qui semblent naturels dans ce monde.
+
+Ton identité éditoriale :
+{ton}""".format(**profile)
 
 
 # ─────────────────────────────────────────
@@ -1078,7 +1346,14 @@ def build_prompt(snapshot, thematique, config, dry_run=True):
     """
     print("\n[prompt] Assemblage du prompt...")
 
-    system_prompt = build_system_prompt()
+    ligne_editoriale = config.get('ligne_editoriale', None)
+    # Zone de l'article — déterminée depuis les instances du snapshot si disponible
+    zone_slug = snapshot.get('zone_slug') or config.get('zone_slug')
+    system_prompt = build_system_prompt(
+        scenario_slug=snapshot.get('scenario_slug'),
+        ligne_editoriale=ligne_editoriale,
+        zone_slug=zone_slug,
+    )
 
     # Chargé ici (pas dans le snapshot) pour accéder à sub_variables et
     # indicateurs, absents de snapshot["variable_states"].
@@ -1130,10 +1405,11 @@ def build_prompt(snapshot, thematique, config, dry_run=True):
         "system_prompt": system_prompt,
         "user_prompt":   user_prompt,
         "metadata": {
-            "scenario":   snapshot["scenario_slug"],
-            "thematique": thematique.get("slug", ""),
-            "format":     format_dom,
-            "longueur":   longueur,
+            "scenario":          snapshot["scenario_slug"],
+            "thematique":        thematique.get("slug", ""),
+            "format":            format_dom,
+            "longueur":          longueur,
+            "ligne_editoriale":  ligne_editoriale or "pro_pouvoir",
         }
     }
 

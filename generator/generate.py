@@ -11,6 +11,7 @@ dans le dossier articles/ du vault Obsidian.
 """
 
 import os
+import random
 import sys
 import yaml
 
@@ -21,6 +22,21 @@ import yaml
 
 SCRIPT_DIR  = os.path.dirname(os.path.abspath(__file__))
 CONFIG_PATH = os.path.join(SCRIPT_DIR, "config.yaml")
+
+
+# Dates fictives 2098 — même liste que generate_series.py
+DATES_2098 = [
+    "3 janvier 2098",   "17 janvier 2098",
+    "2 février 2098",   "19 février 2098",
+    "8 mars 2098",      "24 mars 2098",
+    "5 avril 2098",     "21 avril 2098",
+    "10 mai 2098",      "27 mai 2098",
+    "4 juin 2098",      "19 juin 2098",
+    "7 juillet 2098",   "23 juillet 2098",
+    "6 août 2098",      "22 août 2098",
+    "4 septembre 2098", "20 septembre 2098",
+    "3 octobre 2098",   "18 octobre 2098",
+]
 
 
 # ─────────────────────────────────────────
@@ -154,6 +170,11 @@ def run():
 
     # ── 6. Assemblage du prompt
     dry_run = "--dry-run" in sys.argv
+
+    # Injecter une date fictive aléatoire si non définie dans config.yaml
+    if not config.get("article", {}).get("date_fictive"):
+        config.setdefault("article", {})["date_fictive"] = random.choice(DATES_2098)
+
     prompt_data = build_prompt(snapshot, thematique, config, dry_run=dry_run)
 
     # ── 7. Génération et sauvegarde

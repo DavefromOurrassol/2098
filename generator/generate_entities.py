@@ -31,7 +31,7 @@ import yaml
 import argparse
 from datetime import datetime
 
-import anthropic
+from llm_client import call_llm, LLM_MODEL as MODEL
 
 # ─────────────────────────────────────────
 # CONFIGURATION
@@ -47,7 +47,7 @@ PATHS = {
     "instances":   os.path.join(VAULT_PATH, "instances"),
 }
 
-MODEL      = "claude-sonnet-4-6"
+
 MAX_TOKENS = 4000
 
 VALID_SCENARIOS = [
@@ -267,16 +267,13 @@ Réponds en JSON uniquement :
 # ─────────────────────────────────────────
 
 def call_claude(prompt, max_tokens=MAX_TOKENS):
-    """Appelle l'API Claude et retourne le JSON parsé"""
-    client = anthropic.Anthropic()
-
-    message = client.messages.create(
-        model=MODEL,
+    """Appelle le LLM configuré et retourne le JSON parsé"""
+    text = call_llm(
+        system_prompt="",
+        user_prompt=prompt,
         max_tokens=max_tokens,
-        messages=[{"role": "user", "content": prompt}]
-    )
-
-    text = message.content[0].text.strip()
+        temperature=0.0,
+    ).strip()
 
     # Nettoyer les balises markdown si présentes
     text = re.sub(r"^```json\s*", "", text)

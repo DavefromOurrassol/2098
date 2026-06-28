@@ -7,7 +7,22 @@
 # Valeurs possibles :
 #   fortress_world | new_sustainability | breakdown
 #   eco_communalism | policy_reform | reference
-scenario: fortress_world
+scenario: policy_reform
+
+# ── Ligne éditoriale ──
+# Détermine le journal et sa posture éditoriale.
+# Valeurs possibles :
+#   pro_pouvoir  = journal aligné avec le pouvoir dominant du scénario
+#   opposition   = journal critique ou clandestin
+# Si absent : pro_pouvoir par défaut
+ligne_editoriale: pro_pouvoir
+
+# ── Zone géographique (optionnel) ──
+# Force l'édition locale du journal correspondant à cette zone.
+# Doit correspondre à un slug de zone dans geographie/{scenario}.md
+# Si absent : édition générique du réseau éditorial
+# Exemple : amazonie_nord | afrique_centrale_australe | europe_occidentale
+zone_slug: ""
 
 # ── Thématique ──
 # Valeurs possibles :
@@ -17,7 +32,7 @@ scenario: fortress_world
 #   opinions_editoriaux | lifestyle_art_de_vivre | sante
 #   education | histoire_patrimoine | medias_communication
 #   religion_spiritualite | petites_annonces_services | meteo
-thematique: sciences_technologies
+thematique: societe
 
 # ── Paramètres article ──
 article:
@@ -30,7 +45,7 @@ article:
 
   # Longueur cible
   # Valeurs : breve | analyse | reportage | chronique | editorial
-  longueur: auto
+  longueur: breve
 
 # ── Sortie ──
 output:

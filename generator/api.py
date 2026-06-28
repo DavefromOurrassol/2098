@@ -1,7 +1,7 @@
 """
 api.py
 ------
-Envoie le prompt à l'API Claude et sauvegarde l'article généré.
+Envoie le prompt au LLM configuré (Claude ou Mistral) et sauvegarde l'article généré.
 
 Reçoit :
   - prompt_data : dict construit par prompt_builder.py
@@ -11,6 +11,8 @@ Reçoit :
 Retourne :
   - article     : str — texte de l'article généré
   - filepath    : str — chemin du fichier .md sauvegardé
+
+Fournisseur actif : variable d'environnement LLM_PROVIDER (claude par défaut | mistral)
 """
 
 import os
@@ -18,8 +20,7 @@ import re
 import json
 from datetime import datetime
 
-import anthropic
-
+from llm_client import call_llm, LLM_MODEL as MODEL, LLM_PROVIDER
 from loader import VAULT_PATH
 
 
@@ -27,7 +28,6 @@ from loader import VAULT_PATH
 # CONFIGURATION API
 # ─────────────────────────────────────────
 
-MODEL         = "claude-sonnet-4-6"
 MAX_TOKENS    = 4000
 TEMPERATURE   = 1.0   # Créativité maximale pour la rédaction
 
@@ -41,33 +41,18 @@ ARTICLES_DIR  = os.path.join(VAULT_PATH, "articles")
 
 def call_claude(prompt_data):
     """
-    Envoie le prompt à l'API Claude.
+    Envoie le prompt au LLM configuré (Claude ou Mistral).
     Retourne le texte de l'article généré.
     """
-    client = anthropic.Anthropic()
+    print("\n[api] Envoi au LLM ({} — {})...".format(LLM_PROVIDER, MODEL))
 
-    print("\n[api] Envoi à Claude ({})...".format(MODEL))
-
-    message = client.messages.create(
-        model=MODEL,
+    article = call_llm(
+        system_prompt=prompt_data["system_prompt"],
+        user_prompt=prompt_data["user_prompt"],
         max_tokens=MAX_TOKENS,
         temperature=TEMPERATURE,
-        system=prompt_data["system_prompt"],
-        messages=[
-            {
-                "role": "user",
-                "content": prompt_data["user_prompt"]
-            }
-        ]
     )
 
-    article = message.content[0].text
-
-    # Stats
-    input_tokens  = message.usage.input_tokens
-    output_tokens = message.usage.output_tokens
-    print("[api] Tokens — entrée : {} | sortie : {}".format(
-        input_tokens, output_tokens))
     print("[api] Article généré : {} caractères".format(len(article)))
 
     return article
@@ -77,15 +62,23 @@ def call_claude(prompt_data):
 # SAUVEGARDE
 # ─────────────────────────────────────────
 
-def build_article_filename(snapshot, thematique, article_text):
+def build_article_filename(snapshot, thematique, article_text, date_fictive=None):
     """
     Construit le nom du fichier de l'article.
-    Format : YYYYMMDD_HHMMSS_scenario_thematique.md
+    Format : YYYYMMDD_HHMMSS_scenario_thematique_article_datefictive.md
     """
+    import re
     timestamp  = datetime.now().strftime("%Y%m%d_%H%M%S")
     scenario   = snapshot["scenario_slug"]
     thema      = thematique.get("slug", "article")
-    return "{}_{}_{}_{}.md".format(timestamp, scenario, thema, "article")
+    # Normaliser la date fictive : "3 janvier 2098" → "3janvier2098"
+    if date_fictive:
+        date_slug = re.sub(r"\s+", "", date_fictive.lower())
+        date_slug = re.sub(r"[^a-z0-9]", "", date_slug)
+    else:
+        date_slug = ""
+    suffix = "_{}".format(date_slug) if date_slug else ""
+    return "{}_{}_{}_article{}.md".format(timestamp, scenario, thema, suffix)
 
 
 def build_article_md(article_text, snapshot, thematique, prompt_data):
@@ -105,7 +98,8 @@ def build_article_md(article_text, snapshot, thematique, prompt_data):
         "thematique: {}".format(meta["thematique"]),
         "format: {}".format(meta["format"]),
         "longueur: {}".format(meta["longueur"]),
-        "model: {}".format(MODEL),
+        "model: {}/{}".format(LLM_PROVIDER, MODEL),
+        "ligne_editoriale: {}".format(meta.get("ligne_editoriale", "pro_pouvoir")),
         "scenario_state: {}".format(snapshot["scenario"]["state_of_system"]),
         "tension_level: {}".format(snapshot["scenario"]["tension_level"]),
         "variables_pilotes:",
@@ -128,7 +122,8 @@ def save_article(article_text, snapshot, thematique, prompt_data, config):
     # Nom du fichier
     nom_config = config.get("output", {}).get("nom_fichier", "auto")
     if nom_config == "auto":
-        filename = build_article_filename(snapshot, thematique, article_text)
+        date_fictive = config.get("article", {}).get("date_fictive", "")
+        filename = build_article_filename(snapshot, thematique, article_text, date_fictive)
     else:
         filename = nom_config if nom_config.endswith(".md") else nom_config + ".md"
 
@@ -149,7 +144,7 @@ def save_article(article_text, snapshot, thematique, prompt_data, config):
 
 def generate_article(prompt_data, snapshot, thematique, config):
     """
-    Fonction principale — appelle Claude et sauvegarde l'article.
+    Fonction principale — appelle le LLM et sauvegarde l'article.
 
     Args:
         prompt_data : dict — depuis prompt_builder.py
@@ -163,7 +158,7 @@ def generate_article(prompt_data, snapshot, thematique, config):
           "filepath" : str  — chemin du fichier sauvegardé
         }
     """
-    # Appel API
+    # Appel LLM
     article = call_claude(prompt_data)
 
     # Sauvegarde
@@ -185,6 +180,7 @@ if __name__ == "__main__":
     from prompt_builder import build_prompt
 
     print("=== Test api.py ===\n")
+    print("Fournisseur : {} | Modèle : {}".format(LLM_PROVIDER, MODEL))
 
     # Config de test
     config_test = {

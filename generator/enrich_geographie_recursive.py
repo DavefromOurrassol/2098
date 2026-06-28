@@ -77,10 +77,7 @@ from pathlib import Path
 
 import yaml
 
-try:
-    import anthropic
-except ImportError:
-    anthropic = None
+from llm_client import call_llm, LLM_MODEL as MODEL, LLM_PROVIDER
 
 
 # ---------------------------------------------------------------------------
@@ -92,7 +89,7 @@ INSTANCES_DIR = VAULT_ROOT / "instances"
 EVENT_INSTANCES_DIR = VAULT_ROOT / "event_instances"
 GEOGRAPHIE_DIR = VAULT_ROOT / "geographie"
 
-MODEL = "claude-sonnet-4-6"
+
 ENRICH_MAX_TOKENS = 24000  # doublé suite à troncature réelle observée à 12000 sur le
                              # scénario 'reference' (9 zones niveau 1, gros corpus) —
                              # voir historique : 12000/12000 consommés sans même finir
@@ -188,44 +185,25 @@ def gather_event_texts(scenario):
 # ---------------------------------------------------------------------------
 
 def get_client():
-    if anthropic is None:
-        sys.exit("Le package 'anthropic' n'est pas installé. "
-                  "pip install anthropic --break-system-packages")
-    return anthropic.Anthropic()
+    """Conservé pour compatibilité — retourne None, call_claude_json n'en a plus besoin."""
+    return None
 
 
 def call_claude_json(client, system, user_content, max_tokens=ENRICH_MAX_TOKENS):
-    # Mode streaming requis : avec max_tokens=24000 sur un gros corpus, le SDK
-    # anticipe une génération potentiellement >10min et refuse l'appel synchrone
-    # classique (client.messages.create) — voir
-    # https://github.com/anthropics/anthropic-sdk-python#long-requests
-    with client.messages.stream(
-        model=MODEL,
+    # Note : le streaming Anthropic a été remplacé par call_llm (llm_client.py).
+    # Pour Mistral, les longs outputs sont gérés nativement sans streaming SDK.
+    text = call_llm(
+        system_prompt=system,
+        user_prompt=user_content,
         max_tokens=max_tokens,
-        system=system,
-        messages=[{"role": "user", "content": user_content}],
-    ) as stream:
-        resp = stream.get_final_message()
-
-    text = "".join(
-        block.text for block in resp.content if getattr(block, "type", "") == "text"
+        temperature=0.0,
     ).strip()
 
-    print(f"    [diagnostic appel API] stop_reason={resp.stop_reason}, "
-          f"tokens_entree={resp.usage.input_tokens}, "
-          f"tokens_sortie={resp.usage.output_tokens}/{max_tokens}, "
+    print(f"    [diagnostic appel API] fournisseur={LLM_PROVIDER}, modèle={MODEL}, "
           f"longueur_texte={len(text)} caractères")
 
-    if resp.stop_reason == "max_tokens":
-        print(f"    ⚠ ATTENTION : la réponse a été TRONQUÉE par la limite max_tokens "
-              f"({max_tokens}) — même si un JSON exploitable est trouvé ci-dessous, "
-              f"il peut être incomplet (zones manquantes en fin de réponse).")
-
     if not text:
-        raise RuntimeError(
-            f"Réponse Claude vide (stop_reason={resp.stop_reason}, "
-            f"{resp.usage.output_tokens} tokens générés)."
-        )
+        raise RuntimeError("Réponse LLM vide.")
 
     candidate = re.sub(r"^```(?:json)?\s*", "", text)
     candidate = re.sub(r"\s*```$", "", candidate)
@@ -250,11 +228,8 @@ def call_claude_json(client, system, user_content, max_tokens=ENRICH_MAX_TOKENS)
             print(f"    [diagnostic] le dernier bloc {{...}} trouvé n'est PAS un JSON valide "
                   f"(confirme une troncature en plein milieu d'un objet)")
 
-    if resp.stop_reason == "max_tokens":
-        raise RuntimeError(
-            f"Réponse Claude tronquée (max_tokens={max_tokens} atteint, "
-            f"aucun JSON complet trouvé) — texte reçu: {text[:300]!r}"
-        )
+    # Note : la détection de troncature (stop_reason=max_tokens) n'est plus disponible
+    # hors SDK Anthropic natif. Si le JSON est invalide, l'erreur sera levée ci-dessous.
     raise RuntimeError(f"Aucun JSON exploitable trouvé : {text[:300]!r}")
 
 

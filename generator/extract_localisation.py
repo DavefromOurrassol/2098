@@ -31,7 +31,7 @@ import json
 import yaml
 import shutil
 import argparse
-import anthropic
+from llm_client import call_llm
 
 # ─────────────────────────────────────────────────────────────
 # CONFIGURATION
@@ -43,7 +43,7 @@ INSTANCES_DIR     = os.path.join(VAULT_PATH, "instances")
 EVENT_INST_DIR    = os.path.join(VAULT_PATH, "event_instances")
 GEOGRAPHIE_DIR    = os.path.join(VAULT_PATH, "geographie")
 
-MODEL      = "claude-sonnet-4-6"
+from llm_client import LLM_MODEL as MODEL
 MAX_TOKENS = 1024
 
 VALID_SCENARIOS = [
@@ -322,15 +322,12 @@ Extrais le champ `localisation` selon les règles données."""
 
 
 def call_api(user_prompt):
-    client = anthropic.Anthropic()
-    message = client.messages.create(
-        model=MODEL,
+    return call_llm(
+        system_prompt=SYSTEM_PROMPT,
+        user_prompt=user_prompt,
         max_tokens=MAX_TOKENS,
         temperature=0.0,
-        system=SYSTEM_PROMPT,
-        messages=[{"role": "user", "content": user_prompt}],
-    )
-    return message.content[0].text.strip()
+    ).strip()
 
 
 def parse_api_response(raw):

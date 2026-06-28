@@ -39,6 +39,7 @@ au suivant, collez son texte dans un fichier puis :
 """
 
 import os
+import random
 import sys
 import json
 from datetime import datetime
@@ -130,6 +131,7 @@ def build_article_md(article_text, pending):
         "format: {}".format(meta["format"]),
         "longueur: {}".format(meta["longueur"]),
         "model: claude (manuel — chat)",
+        "ligne_editoriale: {}".format(pending.get("ligne_editoriale", "pro_pouvoir")),
         "scenario_state: {}".format(pending["state_of_system"]),
         "tension_level: {}".format(pending["tension_level"]),
         "variables_pilotes:",
@@ -232,9 +234,17 @@ def cmd_prompt(config, progress):
         done + 1, len(tasks), config["scenario"], thematique_slug, date_fictive
     ))
 
+    # Ligne éditoriale : fixe si définie dans config, aléatoire sinon
+    ligne_editoriale_config = config.get("ligne_editoriale", None)
+    if ligne_editoriale_config in ("pro_pouvoir", "opposition"):
+        ligne_editoriale = ligne_editoriale_config
+    else:
+        ligne_editoriale = random.choice(["pro_pouvoir", "opposition"])
+
     article_config = {
-        "scenario":   config["scenario"],
-        "thematique": thematique_slug,
+        "scenario":          config["scenario"],
+        "thematique":        thematique_slug,
+        "ligne_editoriale":  ligne_editoriale,
         "article": {
             "titre_suggere":    "",
             "angle_specifique": config.get("angle_specifique", ""),
@@ -264,6 +274,7 @@ def cmd_prompt(config, progress):
         "thematique":      thematique_slug,
         "date_fictive":    date_fictive,
         "scenario":        config["scenario"],
+        "ligne_editoriale": ligne_editoriale,
         "metadata":        prompt_data["metadata"],
         "state_of_system": snapshot["scenario"]["state_of_system"],
         "tension_level":   snapshot["scenario"]["tension_level"],

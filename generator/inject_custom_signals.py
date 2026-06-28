@@ -50,10 +50,7 @@ from pathlib import Path
 
 import yaml
 
-try:
-    import anthropic
-except ImportError:
-    anthropic = None
+from llm_client import call_llm, LLM_MODEL as MODEL
 
 
 # ---------------------------------------------------------------------------
@@ -68,7 +65,7 @@ QUEUE_PATH = SIGNAUX_CUSTOM_DIR / "queue.yaml"
 PROCESSED_PATH = SIGNAUX_CUSTOM_DIR / "processed.yaml"
 NEEDS_REVIEW_PATH = SIGNAUX_CUSTOM_DIR / "needs_review.yaml"
 
-MODEL = "claude-sonnet-4-6"
+
 MAX_FIX_ATTEMPTS = 2
 
 SCENARIOS = [
@@ -248,24 +245,18 @@ def get_all_evenements(registre_text):
 # ---------------------------------------------------------------------------
 
 def get_client():
-    if anthropic is None:
-        sys.exit("Le package 'anthropic' n'est pas installé. "
-                 "pip install anthropic --break-system-packages")
-    return anthropic.Anthropic()
+    """Conservé pour compatibilité — retourne None, call_claude_json n'en a plus besoin."""
+    return None
 
 
 def call_claude_json(client, system, user_content, max_tokens=3000):
     """Appelle Claude, exige une réponse JSON pure, la parse et la retourne."""
-    resp = client.messages.create(
-        model=MODEL,
+    text = call_llm(
+        system_prompt=system,
+        user_prompt=user_content,
         max_tokens=max_tokens,
-        system=system,
-        messages=[{"role": "user", "content": user_content}],
-    )
-    text = "".join(
-        block.text for block in resp.content if getattr(block, "type", "") == "text"
-    )
-    text = text.strip()
+        temperature=0.0,
+    ).strip()
     text = re.sub(r"^```(?:json)?\s*", "", text)
     text = re.sub(r"\s*```$", "", text)
     return json.loads(text)

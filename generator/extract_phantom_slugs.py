@@ -33,10 +33,7 @@ from pathlib import Path
 
 import yaml
 
-try:
-    import anthropic
-except ImportError:
-    anthropic = None
+from llm_client import call_llm, LLM_MODEL as MODEL
 
 # ---------------------------------------------------------------------------
 # Configuration
@@ -57,7 +54,7 @@ SCENARIOS = [
     "reference",
 ]
 
-MODEL = "claude-sonnet-4-6"
+
 
 SCENARIO_DESCRIPTIONS = {
     "breakdown": "effondrement des institutions, fragmentation géopolitique, survie locale",
@@ -280,16 +277,6 @@ def generate_roles(entries, dry_run=False):
     if dry_run:
         return entries
 
-    if anthropic is None:
-        print("  [WARN] Module 'anthropic' non installé — rôles laissés vides")
-        return entries
-
-    api_key = os.environ.get("ANTHROPIC_API_KEY")
-    if not api_key:
-        print("  [WARN] ANTHROPIC_API_KEY non définie — rôles laissés vides")
-        return entries
-
-    client = anthropic.Anthropic(api_key=api_key)
     BATCH_SIZE = 5
     batches = [entries[i:i+BATCH_SIZE] for i in range(0, len(entries), BATCH_SIZE)]
     print(f"  → Génération des rôles via API ({len(batches)} lot(s) de {BATCH_SIZE})...")
@@ -318,12 +305,12 @@ Entités :
 {json.dumps(items, ensure_ascii=False, indent=2)}"""
 
         try:
-            message = client.messages.create(
-                model=MODEL,
+            raw = call_llm(
+                system_prompt="",
+                user_prompt=prompt,
                 max_tokens=2000,
-                messages=[{"role": "user", "content": prompt}],
-            )
-            raw = message.content[0].text.strip()
+                temperature=0.0,
+            ).strip()
             raw = re.sub(r"^```(?:json)?\s*", "", raw)
             raw = re.sub(r"\s*```$", "", raw).strip()
             results, _ = json.JSONDecoder().raw_decode(raw)

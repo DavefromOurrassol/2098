@@ -1,8 +1,9 @@
 # Spec — Interface GUI Ourrassol 2098
+*Version 2 — mise à jour 28 juin 2026*
 
 ## Contexte projet
 
-**Ourrassol 2098** est un simulateur de presse fictif (2098) construit sur un vault Obsidian avec un pipeline de scripts Python. Le développeur travaille sur macOS High Sierra + Python 3, avec VS Code. Il veut remplacer le lancement manuel de scripts dans le terminal par une interface graphique locale.
+**Ourrassol 2098** est un simulateur de presse fictif (2098) construit sur un vault Obsidian avec un pipeline de scripts Python. Le développeur travaille sur macOS High Sierra + Python 3, avec VS Code. Il veut remplacer le lancement manuel de scripts dans le terminal par une interface graphique locale. Ordinateur iMAC 2011 High Sierra.
 
 ---
 
@@ -10,7 +11,7 @@
 
 - **Backend** : Flask (Python 3)
 - **Frontend** : HTML/CSS/JS servi par Flask
-- **Navigateur** : Safari (localhost)
+- **Navigateur** : Chrome (localhost)
 - **Lancement** : `python3 app.py` dans le terminal, puis ouverture de `localhost:5000`
 - **Exécution des scripts** : `subprocess` (appel `python3 script.py --args`)
 
@@ -33,8 +34,6 @@
   logs/                        ← logs sauvegardés par run
 ```
 
-Le pipeline Python (scripts existants) reste intact dans son propre dossier. Flask pointe vers lui via le chemin défini dans `config.json`.
-
 ---
 
 ## config.json
@@ -44,92 +43,90 @@ Fichier éditable directement dans l'interface GUI (onglet Config).
 ```json
 {
   "vault_root": "/chemin/absolu/vers/le/vault",
-  "pipeline_dir": "/chemin/absolu/vers/le/vault/pipeline",
-  "default_scenario": "effondrement",
+  "pipeline_dir": "/chemin/absolu/vers/le/vault/generator",
+  "default_scenario": "breakdown",
   "scenarios": [
-    "effondrement", "resilience", "transition",
-    "statu_quo", "rupture", "renaissance"
-  ]
+    "breakdown", "fortress_world", "new_sustainability",
+    "eco_communalism", "policy_reform", "reference"
+  ],
+  "llm": {
+    "provider": "mistral",
+    "model_mistral": "mistral-small",
+    "model_claude": "claude-sonnet-4-6",
+    "available_providers": ["mistral", "claude"],
+    "available_models_mistral": [
+      "mistral-medium",
+      "mistral-large",
+      "mistral-tiny"
+    ],
+    "available_models_claude": [
+      "claude-sonnet-4-6",
+      "claude-opus-4-6",
+      "claude-haiku-4-5-20251001"
+    ]
+  }
 }
+```
+
+---
+
+## Sélecteur LLM global (nouveau)
+
+### Principe
+
+Un sélecteur LLM est affiché en **en-tête de la barre latérale**, toujours visible.
+Il définit les variables d'environnement `LLM_PROVIDER` et `LLM_MODEL` injectées
+dans tous les subprocesses lancés par Flask.
+
+### Composant UI
+
+```
+┌─────────────────────────────┐
+│ OURRASSOL 2098              │
+│                             │
+│ LLM : [Mistral ▼] [Medium ▼]│
+└─────────────────────────────┘
+```
+
+- **Select fournisseur** : `Mistral` | `Claude` (défaut : Mistral)
+- **Select modèle** : liste filtrée selon le fournisseur choisi
+  - Mistral : `mistral-medium-latest` | `mistral-large-latest` | `mistral-small-latest`
+  - Claude : `claude-sonnet-4-6` | `claude-opus-4-6` | `claude-haiku-4-5-20251001`
+- **Indicateur de coût** (badge coloré) :
+  - 🟢 Mistral Small / Medium — économique
+  - 🟡 Mistral Large / Claude Sonnet — standard
+  - 🔴 Claude Opus — coûteux
+- Le choix est sauvegardé dans `config.json` à chaque modification
+
+### Injection dans les subprocesses
+
+Flask injecte les variables d'environnement dans tous les appels subprocess :
+
+```python
+env = os.environ.copy()
+env["LLM_PROVIDER"] = config["llm"]["provider"]
+env["LLM_MODEL"] = config["llm"]["model_mistral"]  # ou model_claude
+subprocess.Popen(cmd, env=env, cwd=pipeline_dir, ...)
 ```
 
 ---
 
 ## scripts_config.json
 
-Source de vérité pour tous les scripts. Flask génère les formulaires dynamiquement depuis ce fichier. Pour ajouter un script ou un flag, on édite ce JSON — aucune modification du code Python ou HTML requise.
-
-### Structure d'un script
-
-```json
-{
-  "id": "enrich_minimal",
-  "name": "enrich_minimal.py",
-  "label": "Enrich minimal",
-  "description": "Enrichit les instances officialise_minimal via API Claude",
-  "section": "generation",
-  "requires": [],
-  "options": [
-    {
-      "flag": "--all",
-      "type": "checkbox",
-      "label": "Toutes les instances",
-      "description": "Traite les 426 instances officialise_minimal"
-    },
-    {
-      "flag": "--dry-run",
-      "type": "checkbox",
-      "label": "Dry run",
-      "description": "Simulation sans écriture"
-    },
-    {
-      "flag": "--scenario",
-      "type": "select",
-      "label": "Scénario",
-      "choices_from": "config.scenarios",
-      "allow_empty": true,
-      "empty_label": "— tous les scénarios —"
-    },
-    {
-      "flag": "--slug",
-      "type": "slug_select",
-      "label": "Slug ciblé",
-      "slug_type": "instances",
-      "filterable_by_scenario": true,
-      "description": "Laisse vide pour ignorer"
-    },
-    {
-      "flag": "--limit",
-      "type": "number",
-      "label": "Limite",
-      "default": 10,
-      "min": 1,
-      "max": 426,
-      "description": "Nombre max d'instances à traiter"
-    },
-    {
-      "flag": "--auto-cycle",
-      "type": "checkbox",
-      "label": "Auto-cycle",
-      "description": "Relance la chaîne après enrichissement (extract → review → validate)"
-    }
-  ]
-}
-```
+Source de vérité pour tous les scripts. Flask génère les formulaires dynamiquement depuis ce fichier.
 
 ### Types d'options supportés
 
 | Type | Rendu dans l'interface |
-|------|----------------------|
+|---|---|
 | `checkbox` | Case à cocher avec label + description |
 | `select` | Menu déroulant (valeurs fixes ou depuis config) |
 | `slug_select` | Menu déroulant peuplé dynamiquement depuis le vault |
 | `number` | Input numérique avec min/max/default |
 | `text` | Input texte libre |
+| `ligne_select` | Select fixe : `pro_pouvoir` \| `opposition` \| aléatoire |
 
 ### Champ `requires`
-
-Permet de définir des prérequis entre scripts. Si le script prérequis n'a pas tourné dans la session courante, un **avertissement orange** s'affiche avant le lancement (non bloquant — l'utilisateur peut forcer).
 
 ```json
 {
@@ -139,56 +136,95 @@ Permet de définir des prérequis entre scripts. Si le script prérequis n'a pas
 }
 ```
 
+---
+
 ### Scripts à intégrer
 
 #### Section "Génération"
-- `enrich_minimal.py` — options : `--all`, `--dry-run`, `--scenario`, `--slug`, `--limit N`, `--auto-cycle`
-- `validate.py` — options : `--scenario`, `--narrative/-n`, `--verbose/-v`, `--report/-r`
-- `generate.py` — options : `--scenario`, catégorie thématique (chips multi-select), `--dry-run`
+
+**`generate.py`**
+- Aucun argument CLI — lit `config.yaml`
+- Bouton "Éditer config.yaml" → ouvre un formulaire inline
+- Champs : `scenario` (select), `thematique` (select), `ligne_editoriale` (ligne_select),
+  `zone_slug` (slug_select filtré par scénario), `longueur` (select), `angle_specifique` (text)
+- Option `--dry-run` (checkbox)
+
+**`generate_series.py`**
+- Options : `--dry-run`, `--validate-first`, `--scenario` (select)
+- Édition inline `config_series.yaml` :
+  - `scenario` (select)
+  - `ligne_editoriale` (ligne_select — vide = aléatoire)
+  - `thematiques` (multi-select chips)
+  - `articles_par_thematique` (number)
+  - `longueur` (select)
+  - `angle_specifique` (text)
+
+**`generate_manual.py`**
+- Trois boutons distincts : `prompt` | `status` | `save`
+- Pour `save` : input file path
+- Affiche l'avancement de la série depuis `state/manual_progress.json`
+
+**`enrich_minimal.py`**
+- Options : `--all` (checkbox), `--dry-run`, `--scenario` (select), `--slug` (slug_select),
+  `--limit` (number, défaut 10, max 426), `--auto-cycle` (checkbox)
+
+**`validate.py`**
+- Options : `--verbose/-v` (checkbox), `--report/-r` (checkbox),
+  `--localisation` (checkbox), `--narrative/-n` (checkbox)
+
+**`generate_journaux.py`** *(nouveau)*
+- Options :
+  - `--scenario` (select) | `--all` (checkbox) — mutuellement exclusifs
+  - `--ligne` (select : `pro_pouvoir` | `opposition` | `all`, défaut `all`)
+  - `--update` (checkbox — "Zones manquantes seulement")
+  - `--dry-run` (checkbox)
+- Badge : nombre de journaux déjà générés dans `journaux.yaml`
+- Avertissement si `journaux.yaml` absent : "Journaux locaux non générés — lancez ce script"
 
 #### Section "Entités"
-- `create_entities_and_instances.py` — options : mode (`create` | `auto-suggest`), `--scenario`, `--dry-run`
-- `inject_custom_events.py` — options : mode (`inject` | `auto`), `--scenario`, `--dry-run`, post-cycle auto (checkbox)
-- `undo_custom.py` — options : source (`undo_queue.yaml` | `--slug direct`), `--slug`, généralisation (`no` | `yes`), `--dry-run` / `--execute`
+
+**`create_entities_and_instances.py`**
+- Options : mode (`custom` | `auto` | `auto-suggest`), `--scenario` (select), `--dry-run`
+
+**`inject_custom_events.py`**
+- Options : mode (`custom` | `auto`), `--scenario` (select), `--dry-run`
+
+**`inject_custom_signals.py`**
+- Options : `--dry-run`
+
+**`undo_custom.py`**
+- Options : source (`undo_queue.yaml` | `--slug direct`), `--slug` (slug_select),
+  `--type` (select : `instance` | `event_instance` | `entite` | `event`),
+  `--generalisation` (select : `yes` | `no`), `--dry-run` / `--execute`
+
+**`extract_phantom_slugs.py`**
+- Options : `--source` (select : `enrich` | `validate` | `all`),
+  `--report` (text), `--dry-run`
+
+**`fix_alliance_suffixes.py`**
+- Options : `--dry-run`, `--verbose`, `--scenario` (select)
+
+**`requeue_needs_review.py`**
+- Aucune option — bouton simple "Lancer"
 
 #### Section "Maintenance"
-- `extract_localisation.py` — options : `--scenario`, `--dry-run`, `--force`, `--report-only`, `--slug`
-- `restructure_zones.py` (P7 — à implémenter) — options : opération (`rename` | `reparent` | `split` | `merge`), zone source, cible/nouveau nom, `--dry-run`
 
----
+**`extract_localisation.py`**
+- Options : `--dry-run`, `--scenario` (select), `--slug` (slug_select),
+  `--force` (checkbox), `--report-only` (checkbox)
 
-## Exécution des scripts
+**`review_localisation.py`**
+- Options : `--auto-resolve` (checkbox), `--dry-run`, `--scenario` (select)
 
-### Règles
-- **Un seul script à la fois** — si un script tourne, le bouton Lancer des autres est désactivé
-- **Bouton Stop** — appelle `process.terminate()` sur le subprocess en cours
-- **Répertoire de travail** — le subprocess est lancé depuis `pipeline_dir` (défini dans `config.json`)
+**`build_geographie_monde.py`**
+- Options : `--scenario` (select — obligatoire), `--dry-run`
 
-### Streaming du log (Server-Sent Events)
+**`enrich_geographie_recursive.py`**
+- Options : `--scenario` (select) | `--all` (checkbox), `--dry-run`
 
-Flask capture le stdout du subprocess ligne par ligne et le pousse au navigateur via SSE. Le panneau de log dans l'interface affiche les lignes en temps réel avec coloration :
-
-- Ligne contenant `✓` ou `OK` → vert
-- Ligne contenant `⚠` ou `WARNING` → orange
-- Ligne contenant `ERROR` ou `✗` → rouge
-- Reste → texte normal
-
-### Sauvegarde des logs
-
-Chaque run sauvegarde un fichier dans `/gui/logs/` nommé `{script_id}_{YYYYMMDD_HHMMSS}.log`.
-
-### Construction de la commande
-
-Flask reconstruit la commande CLI depuis les valeurs du formulaire :
-
-```python
-cmd = ["python3", script["name"]]
-for option in selected_options:
-    if option["type"] == "checkbox" and checked:
-        cmd.append(option["flag"])
-    elif option["type"] in ["select", "text", "number", "slug_select"] and value:
-        cmd.extend([option["flag"], str(value)])
-```
+**`restructure_zones.py`** *(P7 — à implémenter)*
+- Options : opération (`rename` | `reparent` | `split` | `merge`),
+  zone source (slug_select zones), cible/nouveau nom, `--dry-run`
 
 ---
 
@@ -198,28 +234,38 @@ for option in selected_options:
 
 ```
 OURRASSOL 2098
-─────────────
+──────────────
+LLM : [Mistral ▼] [Medium ▼]  🟢
+──────────────
 📊 Tableau de bord
-─────────────
+──────────────
 GÉNÉRATION
   ✨ Enrich minimal    [426]
+  🗞 Generate journaux [badge: nb journaux]
   🛡 Validate          [0]
   📄 Generate
-─────────────
+  📋 Generate series
+  ✍️  Generate manual
+──────────────
 ENTITÉS
   👥 Create entities
   ⚡ Inject events
-  ↩ Undo custom
-─────────────
+  📡 Inject signals
+  🔍 Extract phantom slugs
+  🔧 Fix alliance suffixes
+  🔁 Requeue needs review
+  ↩  Undo custom
+──────────────
 MAINTENANCE
   📍 Extract localisation
-  🗂 Restructure zones
-─────────────
-🔍 Revue              [badge orange si items]
+  ✅ Review localisation
+  🌍 Build géographie
+  🗺  Enrich géographie
+  🗂  Restructure zones
+──────────────
+🔍 Revue       [badge orange si items]
 ⚙️  Config
 ```
-
-Les badges numériques sont calculés au chargement depuis le vault.
 
 ### Zone principale (droite)
 
@@ -231,101 +277,123 @@ Divisée en deux colonnes :
 
 ## Onglet Tableau de bord
 
-Données lues au chargement de Flask depuis le vault (lecture fichiers, pas d'appel API).
-
 ### Stats à afficher
 
+**Fournisseur LLM actif**
+- Nom du fournisseur + modèle actif
+- Indicateur de coût (badge coloré)
+
 **Articles créés**
-- Nombre total de fichiers dans `vault/articles/`
+- Nombre total dans `vault/articles/`
 - Répartition par scénario
-- Répartition par date (mois)
+- Répartition par ligne éditoriale (`pro_pouvoir` / `opposition`) — nouveau
+- Source : frontmatter `ligne_editoriale` des articles
+
+**Journaux locaux** *(nouveau)*
+- Nombre d'éditions générées dans `journaux.yaml` par scénario
+- Badge "À générer" si `journaux.yaml` absent ou incomplet
 
 **Thématiques couvertes**
-- Liste des 20 catégories thématiques avec compteur d'articles par catégorie
-- Source : frontmatter `categorie` des fichiers articles
+- 20 catégories avec compteur d'articles
 
 **Géographie couverte**
-- Zones géographiques présentes dans les instances (`localisation.zone`)
-- Compteur d'instances par zone
-- Source : frontmatter des fichiers `instances/*.md`
+- Zones avec compteur d'instances
 
 **Statut enrichissement**
-- `officialise_minimal` : X restantes à enrichir
-- `officialise_enrichi` : X enrichies
-- Source : frontmatter `statut` des fichiers instances
+- `officialise_minimal` restantes / `officialise_enrichi` complétées
 
 **Badge revue**
-- Compteur total d'items en attente (toutes sources confondues)
-- Lien cliquable vers l'onglet Revue
+- Compteur total items en attente → lien onglet Revue
 
 ---
 
 ## Onglet Revue
 
-Agrège trois sources de données, présentées de façon unifiée.
+Agrège trois sources :
+1. `needs_review.yaml` — événements en échec partiel
+2. `needs_review_enrich.yaml` — instances avec warnings enrichissement
+3. `localisation_review.md` — entrées `review_manuelle`
 
-### Sources
-
-**1. `needs_review.yaml`** (dans `pipeline/` ou `evenements_custom/`)
-- Événements injectés en échec partiel
-- Champs attendus : `slug`, `scenario`, `reason`, `status`
-
-**2. `needs_review_enrich.yaml`** (dans `pipeline/`)
-- Instances avec warnings non-bloquants après enrichissement
-- Champs attendus : `slug`, `scenario`, `warnings` (liste)
-
-**3. `localisation_review.md`** (dans `pipeline/` ou `documentation/`)
-- Entrées avec statut `review_manuelle`
-- Parser : lire le frontmatter YAML ou les blocs de liste selon la structure réelle du fichier
-
-### Affichage
-
-Pour chaque item :
-- Slug (en gras)
-- Scénario
-- Source (badge coloré : inject / enrich / localisation)
-- Type d'erreur / warning
-- Chemin du fichier (copiable)
-
-Pas de bouton "Marquer comme traité" dans la v1 — la résolution se fait dans Obsidian.
-
----
-
-## Menu déroulant slugs (`slug_select`)
-
-Quand une option est de type `slug_select`, Flask peuple dynamiquement un menu déroulant.
-
-### Comportement
-- **Par défaut** : filtré par le scénario sélectionné dans le formulaire (suffixe `_scenarioname`)
-- **Option "Tout voir"** : checkbox ou toggle pour afficher tous les slugs sans filtre
-
-### Sources selon `slug_type`
-
-| Valeur | Source |
-|--------|--------|
-| `instances` | Scan des fichiers `instances/*.md`, lecture du frontmatter `slug` |
-| `entities` | Lecture de `_entities_list.json` + scan `instances/*.md` frontmatter |
-| `zones` | Lecture de `geographie/{scenario}.md` |
-
-### API Flask
-
-```
-GET /api/slugs?type=instances&scenario=effondrement
-GET /api/slugs?type=instances&scenario=all
-```
-
-Retourne une liste JSON de slugs triés alphabétiquement.
+Affichage par item : slug, scénario, source (badge), type d'erreur, chemin fichier.
 
 ---
 
 ## Onglet Config
 
 Formulaire d'édition de `config.json` avec :
-- Champ texte pour `vault_root`
-- Champ texte pour `pipeline_dir`
-- Select pour `default_scenario`
-- Bouton "Sauvegarder" → écrit `config.json`
-- Bouton "Tester le chemin" → vérifie que `pipeline_dir` existe
+- Champ texte `vault_root`
+- Champ texte `pipeline_dir`
+- Select `default_scenario`
+- **Section LLM** *(nouveau)* :
+  - Select fournisseur par défaut (`mistral` | `claude`)
+  - Select modèle Mistral par défaut
+  - Select modèle Claude par défaut
+- Bouton "Sauvegarder"
+- Bouton "Tester le chemin"
+
+---
+
+## Exécution des scripts
+
+### Règles
+- Un seul script à la fois — bouton Lancer désactivé si un script tourne
+- Bouton Stop — `process.terminate()`
+- Répertoire de travail : `pipeline_dir`
+- **Variables LLM injectées** dans tous les subprocesses : `LLM_PROVIDER`, `LLM_MODEL`
+
+### Streaming du log (Server-Sent Events)
+
+Coloration :
+- `✓` ou `OK` → vert
+- `⚠` ou `WARNING` ou `[WARN]` → orange
+- `ERROR` ou `✗` → rouge
+- `[llm]` → bleu (ligne de stats tokens)
+- `[WARN][journal]` → orange avec icône journal
+
+### Sauvegarde des logs
+
+`/gui/logs/{script_id}_{YYYYMMDD_HHMMSS}.log`
+
+---
+
+## Menu déroulant `ligne_select` *(nouveau)*
+
+Type spécial pour la ligne éditoriale :
+
+```json
+{
+  "flag": "--ligne",
+  "type": "ligne_select",
+  "label": "Ligne éditoriale",
+  "choices": [
+    {"value": "pro_pouvoir", "label": "Pro pouvoir"},
+    {"value": "opposition",  "label": "Opposition"},
+    {"value": "",            "label": "Aléatoire (série)"}
+  ],
+  "default": "pro_pouvoir"
+}
+```
+
+---
+
+## Menu déroulant slugs (`slug_select`)
+
+### Sources selon `slug_type`
+
+| Valeur | Source |
+|---|---|
+| `instances` | Scan `instances/*.md`, frontmatter `slug` |
+| `entities` | `_entities_list.json` + scan `instances/*.md` |
+| `zones` | `geographie/{scenario}.md` — zones N1 uniquement |
+| `zones_all` | `geographie/{scenario}.md` — toutes les zones |
+
+### API Flask
+
+```
+GET /api/slugs?type=instances&scenario=breakdown
+GET /api/slugs?type=zones&scenario=breakdown
+GET /api/slugs?type=instances&scenario=all
+```
 
 ---
 
@@ -333,9 +401,9 @@ Formulaire d'édition de `config.json` avec :
 
 ```bash
 cd /chemin/vers/vault/gui
-pip install flask
+python3 -m pip install flask
 python3 app.py
-# → ouvrir http://localhost:5000 dans Safari
+# → ouvrir http://localhost:5000 dans Chrome
 ```
 
 ---
@@ -345,48 +413,60 @@ python3 app.py
 ### Phase 1 — Squelette Flask
 - [ ] `app.py` : serveur Flask, routes de base, lecture `config.json`
 - [ ] `templates/index.html` : layout barre latérale + zone principale
-- [ ] `static/style.css` : styles (dark theme, cohérent avec le prototype)
+- [ ] `static/style.css` : styles (dark theme)
 - [ ] `static/app.js` : navigation entre onglets
 
-### Phase 2 — Formulaires dynamiques
-- [ ] Route `GET /api/script/<id>` → retourne la config du script depuis `scripts_config.json`
-- [ ] `app.js` : génération dynamique du formulaire depuis la config JSON
-- [ ] Tous les types d'options : checkbox, select, number, text
-- [ ] `slug_select` : peuplement dynamique via `GET /api/slugs`
-- [ ] Logique `requires` : vérification session + affichage avertissement orange
+### Phase 2 — Sélecteur LLM global *(nouveau)*
+- [ ] Composant sélecteur fournisseur + modèle dans la sidebar
+- [ ] Sauvegarde dans `config.json` à chaque changement
+- [ ] Badge indicateur de coût
+- [ ] Injection `LLM_PROVIDER` + `LLM_MODEL` dans tous les subprocesses
 
-### Phase 3 — Exécution et streaming
-- [ ] Route `POST /run` → lance le subprocess, retourne un `run_id`
-- [ ] Route `GET /stream/<run_id>` → SSE, stream stdout ligne par ligne
-- [ ] Route `POST /stop/<run_id>` → terminate subprocess
-- [ ] Sauvegarde log dans `/gui/logs/`
-- [ ] Coloration des lignes de log (ok/warn/err)
-- [ ] Blocage du bouton Lancer si un script tourne déjà
+### Phase 3 — Formulaires dynamiques
+- [ ] Route `GET /api/script/<id>` → config depuis `scripts_config.json`
+- [ ] Génération dynamique des formulaires
+- [ ] Tous les types : checkbox, select, number, text, ligne_select
+- [ ] `slug_select` : peuplement via `GET /api/slugs`
+- [ ] Logique `requires` : vérification session + avertissement orange
 
-### Phase 4 — Tableau de bord
-- [ ] Route `GET /api/dashboard` → lecture vault, retourne stats JSON
-- [ ] Affichage stats : articles, thématiques, géographie, enrichissement
-- [ ] Badge revue cliquable
+### Phase 4 — Exécution et streaming
+- [ ] Route `POST /run` → subprocess + `run_id`
+- [ ] Route `GET /stream/<run_id>` → SSE stdout
+- [ ] Route `POST /stop/<run_id>` → terminate
+- [ ] Sauvegarde log
+- [ ] Coloration lignes log (ok/warn/err/llm/journal)
+- [ ] Blocage bouton Lancer si script actif
 
-### Phase 5 — Onglet Revue
+### Phase 5 — Tableau de bord
+- [ ] Route `GET /api/dashboard` → stats vault JSON
+- [ ] Stats articles + répartition ligne éditoriale
+- [ ] Stats journaux locaux (`journaux.yaml`)
+- [ ] Badge revue
+
+### Phase 6 — Onglet Revue
 - [ ] Parser `needs_review.yaml`
 - [ ] Parser `needs_review_enrich.yaml`
-- [ ] Parser `localisation_review.md` (entrées `review_manuelle`)
-- [ ] Affichage unifié avec badges source
+- [ ] Parser `localisation_review.md`
+- [ ] Affichage unifié badges source
 
-### Phase 6 — Onglet Config
+### Phase 7 — Onglet Config
 - [ ] Formulaire lecture/écriture `config.json`
+- [ ] Section LLM dans config
 - [ ] Validation chemin `pipeline_dir`
 
-### Phase 7 — scripts_config.json complet
-- [ ] Intégrer tous les scripts avec leurs vraies options
-- [ ] À faire après réception du vault mis à jour
+### Phase 8 — scripts_config.json complet
+- [ ] Intégrer tous les scripts avec options réelles
+- [ ] Inclure `generate_journaux.py`, `generate_manual.py`, `generate_series.py`
+- [ ] Types `ligne_select` pour les scripts concernés
+- [ ] À finaliser après réception vault mis à jour
 
 ---
 
 ## Notes importantes pour l'implémentation
 
-- Le vault sera fourni par le développeur pour extraire les vraies valeurs de scénarios, zones, et chemins exacts avant de finaliser `scripts_config.json`
 - Les scripts Python existants **ne doivent pas être modifiés** — Flask est une surcouche pure
-- macOS High Sierra : éviter toute dépendance système moderne (WebView2, etc.) — Flask + Safari est suffisant
-- Le subprocess doit être lancé avec `cwd=pipeline_dir` pour que les imports relatifs des scripts fonctionnent correctement
+- macOS High Sierra : éviter toute dépendance système moderne — Flask + Chrome est suffisant
+- Le subprocess doit être lancé avec `cwd=pipeline_dir` pour que les imports relatifs fonctionnent
+- `LLM_PROVIDER` et `LLM_MODEL` doivent être injectés dans **tous** les subprocesses sans exception
+- `journaux.yaml` est dans `generator/` — Flask le lit directement pour les stats dashboard
+- Les zones pour `slug_select` de type `zones` ne retournent que les N1 (filtre `niveau: 1`)

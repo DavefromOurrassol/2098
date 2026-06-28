@@ -464,18 +464,15 @@ Tranche définitivement."""
 
 
 def call_auto_api(user_prompt):
-    import anthropic
     import json
+    from llm_client import call_llm
 
-    client = anthropic.Anthropic()
-    message = client.messages.create(
-        model="claude-sonnet-4-6",
+    raw = call_llm(
+        system_prompt=AUTO_SYSTEM_PROMPT,
+        user_prompt=user_prompt,
         max_tokens=512,
         temperature=0.0,
-        system=AUTO_SYSTEM_PROMPT,
-        messages=[{"role": "user", "content": user_prompt}],
-    )
-    raw = message.content[0].text.strip()
+    ).strip()
     clean = re.sub(r"```json|```", "", raw).strip()
     return json.loads(clean)
 

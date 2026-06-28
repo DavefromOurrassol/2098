@@ -54,10 +54,7 @@ from pathlib import Path
 
 import yaml
 
-try:
-    import anthropic
-except ImportError:
-    anthropic = None
+from llm_client import call_llm, LLM_MODEL as MODEL
 
 
 # ---------------------------------------------------------------------------
@@ -70,7 +67,7 @@ SCENARIOS_DIR = VAULT_ROOT / "scenarios"
 ENTITES_DIR = VAULT_ROOT / "entites"
 INSTANCES_DIR = VAULT_ROOT / "instances"
 
-MODEL = "claude-sonnet-4-6"
+
 MAX_TOKENS = 2000
 
 SCENARIOS = [
@@ -191,22 +188,17 @@ def load_instances_in_scenario(scenario, exclude_slug=None):
 # ---------------------------------------------------------------------------
 
 def get_client():
-    if anthropic is None:
-        sys.exit("Le package 'anthropic' n'est pas installé. "
-                 "pip install anthropic --break-system-packages")
-    return anthropic.Anthropic()
+    """Conservé pour compatibilité — retourne None, call_claude_json n'en a plus besoin."""
+    return None
 
 
 def call_claude_json(client, user_content, max_tokens=MAX_TOKENS):
-    resp = client.messages.create(
-        model=MODEL,
+    text = call_llm(
+        system_prompt="",
+        user_prompt=user_content,
         max_tokens=max_tokens,
-        messages=[{"role": "user", "content": user_content}],
-    )
-    text = "".join(
-        block.text for block in resp.content if getattr(block, "type", "") == "text"
-    )
-    text = text.strip()
+        temperature=0.0,
+    ).strip()
     text = re.sub(r"^```(?:json)?\s*", "", text)
     text = re.sub(r"\s*```$", "", text)
     return json.loads(text)

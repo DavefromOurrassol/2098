@@ -9,6 +9,15 @@
 #           eco_communalism | policy_reform | reference
 scenario: breakdown
 
+# ── Ligne éditoriale ──
+# Détermine le journal et sa posture éditoriale pour toute la série.
+# Valeurs possibles :
+#   pro_pouvoir  = journal aligné avec le pouvoir dominant du scénario
+#   opposition   = journal critique ou clandestin
+#   ~            = laisser vide (null) pour un tirage aléatoire à chaque article
+# Si absent : tirage aléatoire
+ligne_editoriale:
+
 # ── Thématiques à couvrir ──
 # Liste des rubriques pour cette série.
 # Chaque thématique génère articles_par_thematique articles.

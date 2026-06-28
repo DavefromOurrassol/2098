@@ -49,10 +49,7 @@ from pathlib import Path
 
 import yaml
 
-try:
-    import anthropic
-except ImportError:
-    anthropic = None
+from llm_client import call_llm, LLM_MODEL as MODEL
 
 
 # ---------------------------------------------------------------------------
@@ -73,7 +70,7 @@ REPORT_PATH = NEED_ACTION_DIR / "enrich_minimal_report.md"
 NEEDS_REVIEW_PATH = VAULT_ROOT / "instances_custom" / "needs_review_enrich.yaml"
 ENTITES_QUEUE_PATH = VAULT_ROOT / "entites_custom" / "queue.yaml"
 
-MODEL = "claude-sonnet-4-6"
+
 MAX_FIX_ATTEMPTS = 2
 
 SCENARIO_DESCRIPTIONS = {
@@ -426,27 +423,18 @@ RÈGLES IMPÉRATIVES :
 # ---------------------------------------------------------------------------
 
 def get_client():
-    if anthropic is None:
-        print("[ERREUR] Le module 'anthropic' n'est pas installé.")
-        print("  pip install anthropic --break-system-packages")
-        sys.exit(1)
-    import os
-    api_key = os.environ.get("ANTHROPIC_API_KEY")
-    if not api_key:
-        print("[ERREUR] Variable d'environnement ANTHROPIC_API_KEY non définie.")
-        sys.exit(1)
-    return anthropic.Anthropic(api_key=api_key)
+    """Conservé pour compatibilité — retourne None, call_claude_json n'en a plus besoin."""
+    return None
 
 
 def call_claude_json(client, system, user_content, max_tokens=2000):
-    """Appelle Claude et retourne le contenu JSON parsé."""
-    message = client.messages.create(
-        model=MODEL,
+    """Appelle le LLM configuré et retourne le contenu JSON parsé."""
+    raw = call_llm(
+        system_prompt=system,
+        user_prompt=user_content,
         max_tokens=max_tokens,
-        system=system,
-        messages=[{"role": "user", "content": user_content}],
-    )
-    raw = message.content[0].text.strip()
+        temperature=0.0,
+    ).strip()
     # Nettoyer les éventuels backticks
     raw = re.sub(r"^```(?:json)?\s*", "", raw)
     raw = re.sub(r"\s*```$", "", raw)
@@ -927,12 +915,12 @@ Entités :
 {json.dumps(items, ensure_ascii=False, indent=2)}"""
 
         try:
-            message = client.messages.create(
-                model=MODEL,
+            raw = call_llm(
+                system_prompt="",
+                user_prompt=prompt,
                 max_tokens=2000,
-                messages=[{"role": "user", "content": prompt}],
-            )
-            raw = message.content[0].text.strip()
+                temperature=0.0,
+            ).strip()
             raw = re.sub(r"^```(?:json)?\s*", "", raw)
             raw = re.sub(r"\s*```$", "", raw).strip()
             results, _ = json.JSONDecoder().raw_decode(raw)
