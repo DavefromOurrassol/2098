@@ -973,6 +973,25 @@ def build_journalistic_brief(thematique, config, snapshot=None):
     if snapshot.get("filtered_instances"):
         lines.append("- Les entités canoniques listées ci-dessus DOIVENT être utilisées avec leurs noms et descriptions exactes")
 
+    # Contrainte géographique — si une zone est définie, l'article doit
+    # se dérouler dans cette zone. Les entités d'autres zones peuvent
+    # apparaître en contexte mais l'action principale reste ancrée ici.
+    zone_slug_article = config.get("zone_slug") or (snapshot or {}).get("zone_slug")
+    if zone_slug_article:
+        # Récupérer le nom lisible de la zone si disponible
+        slug_to_name = {}
+        if snapshot:
+            for z in snapshot.get("geographie_zones", []):
+                if z.get("slug"):
+                    slug_to_name[z["slug"]] = z.get("nom", z["slug"])
+        zone_nom = slug_to_name.get(zone_slug_article, zone_slug_article.replace("_", " ").title())
+        lines.append(
+            "- L'article est ancré géographiquement dans la zone **{}** : "
+            "les lieux, événements et protagonistes de l'article sont situés "
+            "dans cette zone ou la mentionnent explicitement comme cadre principal. "
+            "Les références à d'autres régions du monde restent secondaires.".format(zone_nom)
+        )
+
     return "\n".join(lines)
 
 

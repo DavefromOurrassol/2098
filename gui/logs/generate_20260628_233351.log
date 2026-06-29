@@ -1,0 +1,105 @@
+
+============================================================
+OURRASSOL 2098 — Générateur d'articles
+============================================================
+  Scénario   : fortress_world
+  Thématique : actualites_a_la_une
+  Longueur   : breve
+  Angle      : focus sur la corruption et de drogues
+============================================================
+
+[generate] Chargement de la thématique 'actualites_a_la_une'...
+
+[snapshot] Construction du monde 2098 — scénario : fortress_world
+[snapshot] Variables pilotes : ['geopolitique_conflits', 'energie_ressources_critiques', 'gouvernance_institutions', 'organisation_territoires']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 15 | Cohérence : ATTENTION
+[snapshot] Jalons trajectoire : 154 (37 majeurs)
+[snapshot] Événements signal_to_state : 72 (24 majeurs)
+[snapshot] Tensions thématiques : 8
+[snapshot] Instances chargées : 115 | Filtrées : 6
+[snapshot] Événement custom 'Embrasement du Corridor Pétrolier : la Guerre des Forteresses du Moyen-Orient' (an 2027, 71 ans d'effet)
+  → geopolitique_conflits : 85 → 73.0 (delta:-12.0)
+  → energie_ressources_critiques : 87.7 → 100 (delta:+14.0)
+  → gouvernance_institutions : 55.4 → 63.4 (delta:+8.0)
+  → demographie_mobilite_humaine : 79.5 → 90.5 (delta:+11.0)
+[snapshot] Événement custom 'L'Attentat des Neuf Nœuds — Prétexte à la Souveraineté Numérique' (an 2040, 58 ans d'effet)
+  → technologie_information : 83.5 → 63.5 (delta:-20.0)
+  → gouvernance_institutions : 54.4 → 44.4 (delta:-10.0)
+  → geopolitique_conflits : 54.7 → 69.7 (delta:+15.0)
+[snapshot] Événement custom 'Enchères de Nuna : la guerre des offres pour le sous-sol groenlandais' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 92.9 → 84.9 (delta:-8.0)
+  → geopolitique_conflits : 73.5 → 63.5 (delta:-10.0)
+  → gouvernance_institutions : 42.1 → 54.1 (delta:+12.0)
+  → organisation_territoires : 79.5 → 72.5 (delta:-7.0)
+[snapshot] Événement custom 'L'Exode des Plaines — Ruée vers les Lacs' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 86.1 → 74.1 (delta:-12.0)
+  → organisation_territoires : 68.0 → 82.0 (delta:+14.0)
+  → gouvernance_institutions : 54.1 → 64.1 (delta:+10.0)
+  → climat_environnement_global : 75.4 → 67.4 (delta:-8.0)
+[snapshot] Événement custom 'Belém : l'Amazonie bascule, les milices prennent le bassin' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 67.4 → 85.4 (delta:+18.0)
+  → geopolitique_conflits : 55.1 → 47.1 (delta:-8.0)
+  → gouvernance_institutions : 67.7 → 79.7 (delta:+12.0)
+  → organisation_territoires : 85.4 → 95.4 (delta:+10.0)
+[snapshot] Événement custom 'La Sécession des Grands Lacs — Rupture de Chicago-Lacustre' (an 2051, 47 ans d'effet)
+  → organisation_territoires : 95.4 → 83.4 (delta:-12.0)
+  → gouvernance_institutions : 79.7 → 93.7 (delta:+14.0)
+  → geopolitique_conflits : 36.3 → 26.299999999999997 (delta:-10.0)
+  → energie_ressources_critiques : 98.3 → 90.3 (delta:-8.0)
+[snapshot] Événement custom 'Liquidation du Mouvement Commun Américain' (an 2052, 46 ans d'effet)
+  → gouvernance_institutions : 98.2 → 93.2 (delta:-5.0)
+  → valeurs_culture_tempo_sociale : 80 → 72.0 (delta:-8.0)
+  → geopolitique_conflits : 32.3 → 37.3 (delta:+5.0)
+[snapshot] Événement custom 'Incident du Passage du Nord-Ouest : la NAT saisit le convoi de l'APA' (an 2059, 39 ans d'effet)
+  → geopolitique_conflits : 37.3 → 29.299999999999997 (delta:-8.0)
+  → energie_ressources_critiques : 91.7 → 81.7 (delta:-10.0)
+  → frontieres_du_systeme : 37.4 → 25.4 (delta:-12.0)
+[snapshot] Événement custom 'La Révolte des Communes Libres du Rust Belt — Zones Hors-Algorithme' (an 2063, 35 ans d'effet)
+  → geopolitique_conflits : 38.9 → 30.9 (delta:-8.0)
+  → valeurs_culture_tempo_sociale : 72.0 → 84.0 (delta:+12.0)
+  → gouvernance_institutions : 98.2 → 100 (delta:+7.0)
+  → organisation_territoires : 92.3 → 82.3 (delta:-10.0)
+[snapshot] Événement custom 'Insurrection des Communes du Rust Belt — Zones Libres de l'Algorithme' (an 2063, 35 ans d'effet)
+  → geopolitique_conflits : 32.0 → 24.0 (delta:-8.0)
+  → valeurs_culture_tempo_sociale : 84.0 → 72.0 (delta:-12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → technologie_information : 70.6 → 64.6 (delta:-6.0)
+[snapshot] Événement custom 'Insurrection des Zones Déficitaires — São Paulo, la Cartographie Rebelle' (an 2073, 25 ans d'effet)
+  → gouvernance_institutions : 97.3 → 100 (delta:+12.0)
+  → technologie_information : 70.0 → 78.0 (delta:+8.0)
+  → organisation_territoires : 86.5 → 96.5 (delta:+10.0)
+[snapshot] Événement custom 'L'Affaire Van Derburgh — Archives Non Certifiées' (an 2078, 20 ans d'effet)
+  → valeurs_culture_tempo_sociale : 72.0 → 70.0 (delta:-2.0)
+  → gouvernance_institutions : 100 → 99.0 (delta:-1.0)
+[snapshot] Événements custom : 12 | 202 variables affectées
+
+[prompt] Assemblage du prompt...
+[prompt] System prompt : 1858 caractères
+[prompt] User prompt   : 60339 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-small)...
+[llm] Mistral (mistral-small) — entrée : 18186 | sortie : 668
+[api] Article généré : 2403 caractères
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/20260628_233404_fortress_world_actualites_a_la_une_article_8mars2098.md
+
+============================================================
+ARTICLE GÉNÉRÉ
+============================================================
+**Le réseau de contrebande énergétique de l'Amazonie franchit un nouveau seuil : la drogue des flots**
+
+*Manaus, *Nexus-7 Amazônia*, le 12 novembre 2098*
+
+Les berges du Rio Negro ne charrient plus seulement des sédiments et des rêves envoûtés — mais désormais des litres de *Stromsaft*, cette drogue hybride concoctée à partir de résidus de condensateurs solaires volés aux centrales Helios BSE et coupelée à du *Glicol Futurista*, un carburant synthétique détourné des convois du Consortium Petrolífero de Belém. Selon les fichiers *Vera Solano*, obtenus via la *Família do Rio*, une milice locale affiliée au *Réseau Vert Clandestin*, le trafic aurait généré, sur les seuls quatorze derniers cycles lunaires, un chiffre d’affaires comparable à celui du marché noir de la *Fracture Numérique* à Casablanca-Périphérie.
+
+Les inspecteurs de l’*Autoridade Régia de Segurança energético-biológica* (ARSE-B) confirment l’épidémie : les *tabernas fluviales* de Novo Ayrão regorgent de toxicomanes aux pupilles jaunâtres, drogués jusqu’à l’hallucination par des doses quotidiennes absorbées en intraveineuse via des *tubos de boro-arséniate* recyclés. « On a vu des gens avaler des cristaux de silice à même les cóntainers de stockage Helios », témoigne Iara Mota, ex-technicienne du *Núcleo de Distríbução Energitāo de Manaus*. Son équipe faisait autrefois partie intégrante du Service d’Allocation Énergétique du *Conseil de Calcul Souverain d’Ourrassol-Centre*. Aujourd’hui, elle transmet des rapports anonymes via des relais situés dans les *Seuils Fermés* de la *Zona Norte do Amazonas*.
+
+Les enjeux dépassent la santé publique. Le flot de *Stromsaft* alimente une guerre sourde entre factions. D’un côté, le *Clã dos Seringueiros do Esgotamento Livre*, héritier des extractivistes des années 2060, qui canalise une partie du trafic vers les *cultivos algorítmicos* de la *Comuna Livre de Xapuri-2*, tentative désespérée de monétiser la résistance. De l’autre, la *Milícia da Estrela do Norte*, unité fantôme dirigée par d’anciens officiers de la *Guarnição Romana do Alto Solimões*, qui impose une taxe de passage aux *barcos cargueiros* transportant les précurseurs chimiques depuis les raffineries clandestines de Tabatinga, près des frontières avec le *Bloc Pacifique Nord*.
+
+Et pendant ce temps, à 3 800 kilomètres au-dessus, les algorithmes du *Nœud Mémoriel Eurasiatique* attendent. Comme toujours.
+
+============================================================
+✓ Sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/20260628_233404_fortress_world_actualites_a_la_une_article_8mars2098.md
+============================================================
+

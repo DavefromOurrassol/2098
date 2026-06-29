@@ -1,0 +1,29 @@
+{
+  "vault_root": "/Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/",
+  "pipeline_dir": "/Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/generator/",
+  "default_scenario": "reference",
+  "scenarios": [
+    "breakdown",
+    "fortress_world",
+    "new_sustainability",
+    "eco_communalism",
+    "policy_reform",
+    "reference"
+  ],
+  "llm": {
+    "provider": "mistral",
+    "model_mistral": "mistral-small",
+    "model_claude": "claude-sonnet-4-6",
+    "available_providers": ["mistral", "claude"],
+    "available_models_mistral": [
+      "mistral-small",
+      "mistral-medium",
+      "mistral-large"
+    ],
+    "available_models_claude": [
+      "claude-haiku-4-5-20251001",
+      "claude-sonnet-4-6",
+      "claude-opus-4-6"
+    ]
+  }
+}

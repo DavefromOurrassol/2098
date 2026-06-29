@@ -1,0 +1,822 @@
+"""
+Ourrassol 2098 — GUI Flask
+app.py : serveur principal
+"""
+
+import json
+import os
+import re
+import subprocess
+import threading
+import time
+import uuid
+from pathlib import Path
+
+from flask import Flask, Response, jsonify, render_template, request, stream_with_context
+
+
+def _load_dotenv():
+    """Charge les variables depuis gui/.env si présent."""
+    env_path = Path(os.getcwd()) / ".env"
+    if not env_path.exists():
+        return
+    with open(env_path, encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            key, _, value = line.partition("=")
+            key = key.strip()
+            value = value.strip()
+            if value and len(value) >= 2 and value[0] in ('"', "'") and value[-1] == value[0]:
+                value = value[1:-1]
+            if key and value and key not in os.environ:
+                os.environ[key] = value
+
+_load_dotenv()
+
+
+# ── Chemins ──────────────────────────────────────────────────────────────────
+
+BASE_DIR = Path(os.path.abspath(__file__)).parent if "__file__" in globals() else Path(os.getcwd())
+CONFIG_PATH = BASE_DIR / "config.json"
+SCRIPTS_CONFIG_PATH = BASE_DIR / "scripts_config.json"
+LOGS_DIR = BASE_DIR / "logs"
+LOGS_DIR.mkdir(exist_ok=True)
+
+# ── App Flask ─────────────────────────────────────────────────────────────────
+
+app = Flask(__name__)
+
+# ── État global des runs ──────────────────────────────────────────────────────
+
+# { run_id: { "process": Popen, "lines": [...], "done": bool, "script_id": str } }
+_runs: dict = {}
+_runs_lock = threading.Lock()
+
+
+# ── Helpers config ────────────────────────────────────────────────────────────
+
+def load_config() -> dict:
+    with open(CONFIG_PATH, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+def save_config(data: dict) -> None:
+    with open(CONFIG_PATH, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+
+
+def load_scripts_config() -> list:
+    with open(SCRIPTS_CONFIG_PATH, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+# ── Routes principales ────────────────────────────────────────────────────────
+
+@app.route("/")
+def index():
+    return render_template("index.html")
+
+
+@app.route("/api/config", methods=["GET"])
+def get_config():
+    return jsonify(load_config())
+
+
+@app.route("/api/config", methods=["POST"])
+def update_config():
+    data = request.get_json()
+    if not data:
+        return jsonify({"error": "Données manquantes"}), 400
+    cfg = load_config()
+    # Mise à jour partielle — seules les clés envoyées
+    for key, value in data.items():
+        if key in cfg:
+            cfg[key] = value
+        # Support nested: llm.*
+    if "llm" in data:
+        # Préserver les clés available_* qui ne sont pas envoyées par le frontend
+        preserved = {k: v for k, v in cfg["llm"].items() if k.startswith("available_")}
+        cfg["llm"].update(data["llm"])
+        for k, v in preserved.items():
+            cfg["llm"].setdefault(k, v)
+    save_config(cfg)
+    return jsonify({"ok": True})
+
+
+@app.route("/api/scripts", methods=["GET"])
+def get_scripts():
+    return jsonify(load_scripts_config())
+
+
+@app.route("/api/script/<script_id>", methods=["GET"])
+def get_script(script_id: str):
+    scripts = load_scripts_config()
+    for s in scripts:
+        if s["id"] == script_id:
+            return jsonify(s)
+    return jsonify({"error": "Script introuvable"}), 404
+
+
+# ── API YAML viewer/editor ───────────────────────────────────────────────────
+
+@app.route("/api/yaml", methods=["GET"])
+def get_yaml():
+    cfg = load_config()
+    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+    rel_path = request.args.get("path", "")
+    if not rel_path:
+        return jsonify({"error": "Paramètre path manquant"}), 400
+    target = (pipeline_dir / rel_path).resolve()
+    try:
+        target.relative_to(pipeline_dir.resolve())
+    except ValueError:
+        return jsonify({"error": "Chemin non autorisé"}), 403
+    if not target.exists():
+        return jsonify({"content": "", "exists": False, "path": str(target)})
+    try:
+        content = target.read_text(encoding="utf-8")
+        return jsonify({"content": content, "exists": True, "path": str(target)})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route("/api/yaml", methods=["POST"])
+def save_yaml():
+    cfg = load_config()
+    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+    data = request.get_json()
+    if not data or "path" not in data or "content" not in data:
+        return jsonify({"error": "Données manquantes"}), 400
+    rel_path = data["path"]
+    file_content = data["content"]
+    target = (pipeline_dir / rel_path).resolve()
+    try:
+        target.relative_to(pipeline_dir.resolve())
+    except ValueError:
+        return jsonify({"error": "Chemin non autorisé"}), 403
+    try:
+        if target.exists():
+            bak = target.with_suffix(target.suffix + ".bak")
+            bak.write_text(target.read_text(encoding="utf-8"), encoding="utf-8")
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_text(file_content, encoding="utf-8")
+        return jsonify({"ok": True, "path": str(target)})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+# ── API Slugs ─────────────────────────────────────────────────────────────────
+
+@app.route("/api/slugs", methods=["GET"])
+def get_slugs():
+    """
+    GET /api/slugs?type=instances&scenario=breakdown
+    GET /api/slugs?type=zones&scenario=breakdown
+    GET /api/slugs?type=entities
+    GET /api/slugs?type=zones_all&scenario=breakdown
+    """
+    slug_type = request.args.get("type", "instances")
+    scenario = request.args.get("scenario", "")
+    cfg = load_config()
+    vault_root = Path(cfg.get("vault_root", ""))
+    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+
+    slugs = []
+
+    try:
+        if slug_type == "instances":
+            slugs = _scan_instance_slugs(vault_root, scenario)
+        elif slug_type == "entities":
+            slugs = _scan_entity_slugs(vault_root, pipeline_dir)
+        elif slug_type in ("zones", "zones_all"):
+            n1_only = (slug_type == "zones")
+            slugs = _scan_zone_slugs(pipeline_dir, scenario, n1_only)
+    except Exception as e:
+        return jsonify({"slugs": [], "error": str(e)})
+
+    return jsonify({"slugs": slugs})
+
+
+def _scan_instance_slugs(vault_root: Path, scenario: str) -> list:
+    """Scan instances/*.md, extrait frontmatter slug."""
+    instances_dir = vault_root / "instances"
+    if not instances_dir.exists():
+        return []
+    slugs = []
+    pattern = re.compile(r"^slug:\s*(.+)$", re.MULTILINE)
+    sc_pattern = re.compile(r"^scenario:\s*(.+)$", re.MULTILINE)
+    for md_file in instances_dir.glob("*.md"):
+        try:
+            content = md_file.read_text(encoding="utf-8")
+            slug_m = pattern.search(content)
+            if not slug_m:
+                continue
+            slug = slug_m.group(1).strip()
+            if scenario and scenario != "all":
+                sc_m = sc_pattern.search(content)
+                if sc_m and sc_m.group(1).strip() != scenario:
+                    continue
+            slugs.append(slug)
+        except Exception:
+            continue
+    return sorted(slugs)
+
+
+def _scan_entity_slugs(vault_root: Path, pipeline_dir: Path) -> list:
+    """Lit _entities_list.json."""
+    candidates = [
+        pipeline_dir / "_entities_list.json",
+        vault_root / "_entities_list.json",
+    ]
+    for p in candidates:
+        if p.exists():
+            try:
+                data = json.loads(p.read_text(encoding="utf-8"))
+                if isinstance(data, list):
+                    return sorted(data)
+                if isinstance(data, dict):
+                    return sorted(data.keys())
+            except Exception:
+                pass
+    # Fallback : scan instances
+    return _scan_instance_slugs(vault_root, "")
+
+
+def _scan_zone_slugs(pipeline_dir: Path, scenario: str, n1_only: bool) -> list:
+    """Parse geographie/{scenario}.md pour extraire les slugs de zones."""
+    if not scenario:
+        return []
+    geo_file = pipeline_dir / "geographie" / f"{scenario}.md"
+    if not geo_file.exists():
+        return []
+    content = geo_file.read_text(encoding="utf-8")
+    slugs = []
+    # Recherche des blocs YAML inline ou frontmatter de zone
+    # Format attendu : slug: xxx  +  niveau: 1 (optionnel)
+    slug_pat = re.compile(r"slug:\s*(\S+)")
+    niveau_pat = re.compile(r"niveau:\s*(\d+)")
+    # On cherche les blocs délimités par ---
+    blocks = re.split(r"^---+$", content, flags=re.MULTILINE)
+    for block in blocks:
+        slug_m = slug_pat.search(block)
+        if not slug_m:
+            continue
+        slug = slug_m.group(1).strip()
+        if n1_only:
+            niveau_m = niveau_pat.search(block)
+            if niveau_m and int(niveau_m.group(1)) != 1:
+                continue
+        slugs.append(slug)
+    return sorted(set(slugs))
+
+
+# ── Dashboard ─────────────────────────────────────────────────────────────────
+
+@app.route("/api/dashboard", methods=["GET"])
+def get_dashboard():
+    cfg = load_config()
+    vault_root   = Path(cfg.get("vault_root", ""))
+    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+    llm          = cfg.get("llm", {})
+
+    stats = {
+        "llm": {
+            "provider": llm.get("provider", "—"),
+            "model": llm.get("model_mistral") if llm.get("provider") == "mistral"
+                     else llm.get("model_claude", "—"),
+        },
+        "articles":       _stats_articles(vault_root),
+        "instances":      _stats_instances(vault_root),
+        "entites":        _stats_entites(vault_root, pipeline_dir),
+        "journaux":       _stats_journaux(pipeline_dir),
+        "enrichissement": _stats_enrichissement(vault_root),
+        "thematiques":    _stats_thematiques(vault_root),
+        "zones":          _stats_zones(pipeline_dir, cfg.get("scenarios", [])),
+        "review_count":   _count_review_items(pipeline_dir),
+        "vault_ok":       vault_root.exists() and pipeline_dir.exists(),
+    }
+    return jsonify(stats)
+
+
+def _stats_articles(vault_root: Path) -> dict:
+    articles_dir = vault_root / "articles"
+    if not articles_dir.exists():
+        return {"total": 0, "by_scenario": {}, "by_ligne": {}}
+    total = 0
+    by_scenario: dict = {}
+    by_ligne: dict = {}
+    sc_pat    = re.compile(r"^scenario:\s*(.+)$", re.MULTILINE)
+    ligne_pat = re.compile(r"^ligne_editoriale:\s*(.+)$", re.MULTILINE)
+    for f in sorted(articles_dir.glob("*.md")):
+        try:
+            txt = f.read_text(encoding="utf-8")
+            total += 1
+            sc_m = sc_pat.search(txt)
+            sc   = sc_m.group(1).strip() if sc_m else "inconnu"
+            by_scenario[sc] = by_scenario.get(sc, 0) + 1
+            ligne_m = ligne_pat.search(txt)
+            ligne   = ligne_m.group(1).strip() if ligne_m else "inconnu"
+            by_ligne[ligne] = by_ligne.get(ligne, 0) + 1
+        except Exception:
+            continue
+    return {"total": total, "by_scenario": by_scenario, "by_ligne": by_ligne}
+
+
+def _stats_instances(vault_root: Path) -> dict:
+    instances_dir = vault_root / "instances"
+    if not instances_dir.exists():
+        return {"total": 0, "by_scenario": {}}
+    total = 0
+    by_scenario: dict = {}
+    sc_pat = re.compile(r"^scenario:\s*(.+)$", re.MULTILINE)
+    for f in instances_dir.glob("*.md"):
+        try:
+            txt = f.read_text(encoding="utf-8")
+            total += 1
+            sc_m = sc_pat.search(txt)
+            sc   = sc_m.group(1).strip() if sc_m else "inconnu"
+            by_scenario[sc] = by_scenario.get(sc, 0) + 1
+        except Exception:
+            continue
+    return {"total": total, "by_scenario": by_scenario}
+
+
+def _stats_entites(vault_root: Path, pipeline_dir: Path) -> dict:
+    for p in [pipeline_dir / "_entities_list.json", vault_root / "_entities_list.json"]:
+        if p.exists():
+            try:
+                data = json.loads(p.read_text(encoding="utf-8"))
+                if isinstance(data, list):
+                    return {"total": len(data)}
+                if isinstance(data, dict):
+                    return {"total": len(data)}
+            except Exception:
+                pass
+    entites_dir = vault_root / "entites"
+    if entites_dir.exists():
+        return {"total": len(list(entites_dir.glob("*.md")))}
+    return {"total": 0}
+
+
+def _stats_journaux(pipeline_dir: Path) -> dict:
+    """
+    Format journaux.yaml :
+      breakdown:
+        pro_pouvoir:
+          _reseau:
+            nom: ...
+            zones:
+              - zone_slug
+    Compter le nombre de réseaux (journaux) par scénario.
+    """
+    journaux_path = pipeline_dir / "journaux.yaml"
+    if not journaux_path.exists():
+        return {"total": 0, "missing": True, "by_scenario": {}}
+    try:
+        txt = journaux_path.read_text(encoding="utf-8")
+        # Chaque journal = un bloc "_reseau:" ou une clé de réseau sous une ligne éditoriale
+        # On compte les occurrences de "nom:" au niveau réseau (indentation 3)
+        # Format : scenario > ligne > reseau_key > { nom: ... }
+        # Compter les clés de scénario (niveau 0, pas d'indentation, se termine par ":")
+        by_scenario: dict = {}
+        current_sc = None
+        sc_re  = re.compile(r"^(\w+):$")
+        # Compter les réseaux : ligne "    _reseau:" ou "    nom_journal:" à indent 4
+        reseau_re = re.compile(r"^    \w")
+        for line in txt.splitlines():
+            sc_m = sc_re.match(line)
+            if sc_m:
+                current_sc = sc_m.group(1)
+                if current_sc not in by_scenario:
+                    by_scenario[current_sc] = 0
+            elif current_sc and reseau_re.match(line) and line.strip().endswith(":"):
+                # Clé de réseau (indent 4, pas de valeur inline)
+                by_scenario[current_sc] = by_scenario.get(current_sc, 0) + 1
+        total = sum(by_scenario.values())
+        return {"total": total, "missing": False, "by_scenario": by_scenario}
+    except Exception:
+        return {"total": 0, "missing": False, "by_scenario": {}}
+
+
+def _stats_enrichissement(vault_root: Path) -> dict:
+    instances_dir = vault_root / "instances"
+    if not instances_dir.exists():
+        return {"minimal": 0, "enrichi": 0, "autre": 0, "total": 0}
+    minimal = enrichi = autre = 0
+    status_pat = re.compile(r"^statut:\s*(.+)$", re.MULTILINE)
+    for f in instances_dir.glob("*.md"):
+        try:
+            txt = f.read_text(encoding="utf-8")
+            m = status_pat.search(txt)
+            if m:
+                s = m.group(1).strip()
+                if "enrichi" in s:
+                    enrichi += 1
+                elif "minimal" in s:
+                    minimal += 1
+                else:
+                    autre += 1
+            else:
+                autre += 1
+        except Exception:
+            continue
+    return {"minimal": minimal, "enrichi": enrichi, "autre": autre,
+            "total": minimal + enrichi + autre}
+
+
+def _stats_thematiques(vault_root: Path) -> dict:
+    articles_dir = vault_root / "articles"
+    if not articles_dir.exists():
+        return {}
+    by_th: dict = {}
+    th_pat = re.compile(r"^thematique:\s*(.+)$", re.MULTILINE)
+    for f in articles_dir.glob("*.md"):
+        try:
+            txt = f.read_text(encoding="utf-8")
+            m = th_pat.search(txt)
+            th = m.group(1).strip() if m else "inconnu"
+            by_th[th] = by_th.get(th, 0) + 1
+        except Exception:
+            continue
+    return dict(sorted(by_th.items(), key=lambda x: -x[1]))
+
+
+def _stats_zones(pipeline_dir: Path, scenarios: list) -> dict:
+    """
+    Format geographie/{scenario}.md :
+      zones:
+        - slug: afrique_centrale_australe
+          nom: ...
+          niveau: 1
+    Compter les zones de niveau 1 par scénario.
+    """
+    geo_dir = pipeline_dir / "geographie"
+    if not geo_dir.exists():
+        return {"total": 0, "by_scenario": {}}
+    niveau_pat = re.compile(r"^\s+niveau:\s*(\d+)")
+    by_scenario: dict = {}
+    total = 0
+    for sc in scenarios:
+        geo_file = geo_dir / f"{sc}.md"
+        if not geo_file.exists():
+            continue
+        txt   = geo_file.read_text(encoding="utf-8")
+        count = sum(1 for m in niveau_pat.finditer(txt) if int(m.group(1)) == 1)
+        by_scenario[sc] = count
+        total += count
+    return {"total": total, "by_scenario": by_scenario}
+
+
+def _count_review_items(pipeline_dir: Path) -> int:
+    count = 0
+    for fname in ("needs_review.yaml", "needs_review_enrich.yaml"):
+        p = pipeline_dir / fname
+        if p.exists():
+            try:
+                count += len(re.findall(r"^- ", p.read_text(encoding="utf-8"), re.MULTILINE))
+            except Exception:
+                pass
+    review_md = pipeline_dir / "documentation" / "need_action" / "localisation_review.md"
+    if review_md.exists():
+        try:
+            count += len(re.findall(r"review_manuelle", review_md.read_text(encoding="utf-8")))
+        except Exception:
+            pass
+    return count
+# ── Revue ─────────────────────────────────────────────────────────────────────
+
+@app.route("/api/review", methods=["GET"])
+def get_review():
+    cfg = load_config()
+    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+    items = []
+    items += _parse_needs_review_enrich(pipeline_dir)
+    items += _parse_needs_review_events(pipeline_dir)
+    items += _parse_localisation_review(pipeline_dir)
+    return jsonify({"items": items, "total": len(items)})
+
+
+def _parse_needs_review_enrich(pipeline_dir: Path) -> list:
+    """
+    needs_review_enrich.yaml (dans instances_custom/) :
+      needs_review:
+        - slug: xxx
+          scenario: yyy
+          date: 2026-06-27
+          errors: [...]
+    """
+    # Chercher dans instances_custom/ ou directement dans pipeline_dir
+    candidates = [
+        pipeline_dir / "instances_custom" / "needs_review_enrich.yaml",
+        pipeline_dir / "needs_review_enrich.yaml",
+    ]
+    for p in candidates:
+        if p.exists():
+            return _read_needs_review_yaml(p, "enrich")
+    return []
+
+
+def _parse_needs_review_events(pipeline_dir: Path) -> list:
+    """
+    needs_review.yaml (dans evenements_custom/) :
+      needs_review:
+        - idea: {...}
+          failed_scenarios: [...]
+          status: needs_review
+    """
+    candidates = [
+        pipeline_dir / "evenements_custom" / "needs_review.yaml",
+        pipeline_dir / "needs_review.yaml",
+    ]
+    for p in candidates:
+        if p.exists():
+            return _read_needs_review_yaml(p, "events")
+    return []
+
+
+def _read_needs_review_yaml(path: Path, source: str) -> list:
+    items = []
+    try:
+        txt = path.read_text(encoding="utf-8")
+        # Parser naïf sans pyyaml : extraire les blocs sous "needs_review:"
+        # Chaque entrée commence par "- slug:" ou "- idea:"
+        in_list = False
+        current: dict = {}
+
+        for line in txt.splitlines():
+            stripped = line.strip()
+
+            # Entrée dans la liste needs_review
+            if stripped == "needs_review:":
+                in_list = True
+                continue
+
+            if not in_list:
+                continue
+
+            # Nouvelle entrée
+            if stripped.startswith("- slug:"):
+                if current:
+                    items.append(current)
+                current = {
+                    "source": source,
+                    "slug": stripped[len("- slug:"):].strip(),
+                    "scenario": "",
+                    "error": "",
+                }
+            elif stripped.startswith("- idea:") or (stripped.startswith("- ") and "idea:" in stripped):
+                if current:
+                    items.append(current)
+                current = {
+                    "source": source,
+                    "slug": "(événement)",
+                    "scenario": "",
+                    "error": "",
+                }
+            elif current:
+                if stripped.startswith("scenario:"):
+                    current["scenario"] = stripped[len("scenario:"):].strip()
+                elif stripped.startswith("date:"):
+                    current["date"] = stripped[len("date:"):].strip()
+                elif stripped.startswith("failed_scenarios:"):
+                    val = stripped[len("failed_scenarios:"):].strip()
+                    if val and val != "[]":
+                        current["scenario"] = val
+                elif stripped.startswith("- ") and current.get("slug") == "(événement)" and not current.get("scenario"):
+                    # item de liste failed_scenarios
+                    current["scenario"] = stripped[2:].strip()
+                elif stripped.startswith("errors:"):
+                    pass
+                elif stripped.startswith("- ") and current.get("slug") != "(événement)":
+                    # Item d'une liste errors
+                    err = stripped[2:].strip()
+                    if err and not current["error"]:
+                        current["error"] = err
+
+        if current:
+            items.append(current)
+
+    except Exception as e:
+        items.append({"source": source, "slug": "?", "scenario": "", "error": str(e)})
+
+    return items
+
+
+def _parse_localisation_review(pipeline_dir: Path) -> list:
+    """
+    localisation_review.md :
+      ## scenario (N)
+      ### slug
+      - type: ...
+      - zone candidate: ...
+    """
+    review_md = pipeline_dir / "documentation" / "need_action" / "localisation_review.md"
+    if not review_md.exists():
+        return []
+    items = []
+    try:
+        txt = review_md.read_text(encoding="utf-8")
+        current_scenario = ""
+        current_slug = ""
+        current_details: list = []
+
+        for line in txt.splitlines():
+            stripped = line.strip()
+            if stripped.startswith("## "):
+                # Nouveau scénario
+                current_scenario = stripped[3:].split("(")[0].strip()
+            elif stripped.startswith("### "):
+                # Nouveau slug — flush précédent
+                if current_slug:
+                    items.append({
+                        "source": "localisation",
+                        "slug": current_slug,
+                        "scenario": current_scenario,
+                        "error": " · ".join(current_details[:2]),
+                    })
+                current_slug = stripped[4:].strip()
+                current_details = []
+            elif stripped.startswith("- **") and current_slug:
+                # Détail : - **zone candidate** : xxx
+                current_details.append(stripped.lstrip("- ").strip())
+
+        # Flush dernier
+        if current_slug:
+            items.append({
+                "source": "localisation",
+                "slug": current_slug,
+                "scenario": current_scenario,
+                "error": " · ".join(current_details[:2]),
+            })
+
+    except Exception as e:
+        pass
+
+    return items
+
+
+# ── Exécution des scripts ─────────────────────────────────────────────────────
+
+@app.route("/api/run", methods=["POST"])
+def run_script():
+    """
+    Lance un script en subprocess.
+    Body JSON :
+    {
+      "script_id": "enrich_minimal",
+      "args": ["--limit", "5", "--dry-run"]
+    }
+    """
+    # Vérifier qu'aucun script ne tourne déjà
+    with _runs_lock:
+        for run in _runs.values():
+            if not run.get("done"):
+                return jsonify({"error": "Un script est déjà en cours"}), 409
+
+    data = request.get_json()
+    if not data:
+        return jsonify({"error": "Body JSON manquant"}), 400
+
+    script_id = data.get("script_id")
+    extra_args = data.get("args", [])
+
+    # Trouver le script dans la config
+    scripts = load_scripts_config()
+    script_cfg = next((s for s in scripts if s["id"] == script_id), None)
+    if not script_cfg:
+        return jsonify({"error": f"Script inconnu : {script_id}"}), 404
+
+    cfg = load_config()
+    pipeline_dir = cfg.get("pipeline_dir", ".")
+
+    # Construire la commande
+    cmd = ["python3", script_cfg["script"]] + [str(a) for a in extra_args]
+
+    # Injecter les variables LLM + clés API
+    env = os.environ.copy()
+    llm = cfg.get("llm", {})
+    env["LLM_PROVIDER"] = llm.get("provider", "mistral")
+    if llm.get("provider") == "mistral":
+        env["LLM_MODEL"] = llm.get("model_mistral", "mistral-medium")
+    else:
+        env["LLM_MODEL"] = llm.get("model_claude", "claude-sonnet-4-6")
+
+    run_id = str(uuid.uuid4())[:8]
+    run_entry = {
+        "script_id": script_id,
+        "cmd": cmd,
+        "lines": [],
+        "done": False,
+        "return_code": None,
+        "process": None,
+    }
+
+    with _runs_lock:
+        _runs[run_id] = run_entry
+
+    t = threading.Thread(
+        target=_execute_script,
+        args=(run_id, cmd, pipeline_dir, env),
+        daemon=True,
+    )
+    t.start()
+
+    return jsonify({"run_id": run_id})
+
+
+def _execute_script(run_id: str, cmd: list, cwd: str, env: dict) -> None:
+    """Thread worker : exécute le subprocess et accumule les lignes de log."""
+    timestamp = time.strftime("%Y%m%d_%H%M%S")
+    script_id = _runs[run_id]["script_id"]
+    log_path = LOGS_DIR / f"{script_id}_{timestamp}.log"
+
+    try:
+        process = subprocess.Popen(
+            cmd,
+            cwd=cwd,
+            env=env,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            text=True,
+            bufsize=1,
+        )
+        _runs[run_id]["process"] = process
+
+        with open(log_path, "w", encoding="utf-8") as log_file:
+            for line in process.stdout:
+                line = line.rstrip("\n")
+                _runs[run_id]["lines"].append(line)
+                log_file.write(line + "\n")
+                log_file.flush()
+
+        process.wait()
+        _runs[run_id]["return_code"] = process.returncode
+
+    except Exception as e:
+        _runs[run_id]["lines"].append(f"[ERROR] Échec lancement : {e}")
+        _runs[run_id]["return_code"] = -1
+    finally:
+        _runs[run_id]["done"] = True
+
+
+@app.route("/api/stream/<run_id>")
+def stream_log(run_id: str):
+    """Server-Sent Events — diffuse les lignes de log en temps réel."""
+    def generate():
+        last_idx = 0
+        while True:
+            run = _runs.get(run_id)
+            if not run:
+                yield f"data: [ERROR] run_id inconnu\n\n"
+                break
+            lines = run["lines"]
+            while last_idx < len(lines):
+                line = lines[last_idx]
+                yield f"data: {line}\n\n"
+                last_idx += 1
+            if run["done"] and last_idx >= len(lines):
+                rc = run.get("return_code", 0)
+                yield f"data: [DONE] code={rc}\n\n"
+                break
+            time.sleep(0.1)
+
+    return Response(
+        stream_with_context(generate()),
+        mimetype="text/event-stream",
+        headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"},
+    )
+
+
+@app.route("/api/stop/<run_id>", methods=["POST"])
+def stop_script(run_id: str):
+    run = _runs.get(run_id)
+    if not run:
+        return jsonify({"error": "run_id inconnu"}), 404
+    process = run.get("process")
+    if process and not run["done"]:
+        process.terminate()
+        run["done"] = True
+        run["lines"].append("[STOP] Script interrompu par l'utilisateur")
+        return jsonify({"ok": True})
+    return jsonify({"error": "Aucun process actif"}), 400
+
+
+@app.route("/api/status", methods=["GET"])
+def get_status():
+    with _runs_lock:
+        for run_id, run in _runs.items():
+            if not run.get("done"):
+                return jsonify({"active": True, "run_id": run_id, "script_id": run["script_id"]})
+    return jsonify({"active": False})
+
+
+# ── Lancement ─────────────────────────────────────────────────────────────────
+
+if __name__ == "__main__":
+    print("=" * 50)
+    print("  OURRASSOL 2098 — GUI")
+    print("  http://localhost:5000")
+    print("=" * 50)
+    app.run(debug=True, port=5000, threaded=True)

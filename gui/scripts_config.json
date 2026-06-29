@@ -1,0 +1,810 @@
+[
+  {
+    "id": "enrich_minimal",
+    "label": "Enrich minimal",
+    "icon": "✨",
+    "section": "generation",
+    "script": "enrich_minimal.py",
+    "description": "Enrichit les fichiers officialise_minimal via LLM",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--all",
+        "type": "checkbox",
+        "label": "Tous les scénarios",
+        "description": "Traite tous les scénarios disponibles",
+        "default": false,
+        "mutually_exclusive_with": "scenario"
+      },
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "default": "",
+        "optional": true,
+        "mutually_exclusive_with": "all"
+      },
+      {
+        "flag": "--slug",
+        "type": "slug_select",
+        "label": "Slug (optionnel)",
+        "slug_type": "instances",
+        "optional": true
+      },
+      {
+        "flag": "--limit",
+        "type": "number",
+        "label": "Limite",
+        "description": "Nombre max de fichiers à traiter",
+        "min": 1,
+        "max": 426,
+        "default": 10
+      },
+      {
+        "flag": "--auto-cycle",
+        "type": "checkbox",
+        "label": "Auto-cycle",
+        "description": "Enchaîne extract_phantom_slugs après enrichissement",
+        "default": false
+      },
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Dry run",
+        "description": "Simule sans écrire",
+        "default": false
+      }
+    ],
+    "yaml_files": [
+      {
+        "path": "needs_review_enrich.yaml",
+        "label": "needs_review_enrich.yaml",
+        "readonly": true
+      }
+    ]
+  },
+  {
+    "id": "generate_journaux",
+    "label": "Generate journaux",
+    "icon": "🗞",
+    "section": "generation",
+    "script": "generate_journaux.py",
+    "description": "Génère les éditions locales dans journaux.yaml",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--all",
+        "type": "checkbox",
+        "label": "Tous les scénarios",
+        "default": false,
+        "mutually_exclusive_with": "scenario"
+      },
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "default": "",
+        "optional": true,
+        "mutually_exclusive_with": "all"
+      },
+      {
+        "flag": "--ligne",
+        "type": "ligne_select",
+        "label": "Ligne éditoriale",
+        "choices": [
+          {
+            "value": "pro_pouvoir",
+            "label": "Pro pouvoir"
+          },
+          {
+            "value": "opposition",
+            "label": "Opposition"
+          },
+          {
+            "value": "all",
+            "label": "Toutes"
+          }
+        ],
+        "default": "all"
+      },
+      {
+        "flag": "--update",
+        "type": "checkbox",
+        "label": "Zones manquantes seulement",
+        "description": "N'ajoute que les zones absentes de journaux.yaml",
+        "default": false
+      },
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Dry run",
+        "default": false
+      }
+    ]
+  },
+  {
+    "id": "validate",
+    "label": "Validate",
+    "icon": "🛡",
+    "section": "generation",
+    "script": "validate.py",
+    "description": "Valide la cohérence du vault (entités, localisations, narratif)",
+    "requires": [
+      "extract_localisation"
+    ],
+    "requires_message": "extract_localisation devrait tourner avant validate",
+    "options": [
+      {
+        "flag": "--verbose",
+        "short": "-v",
+        "type": "checkbox",
+        "label": "Verbose",
+        "description": "Affiche le détail dans le terminal",
+        "default": false
+      },
+      {
+        "flag": "--report",
+        "short": "-r",
+        "type": "checkbox",
+        "label": "Générer rapport",
+        "description": "Écrit validation_report.md",
+        "default": false
+      },
+      {
+        "flag": "--localisation",
+        "type": "checkbox",
+        "label": "Localisation",
+        "description": "Force le scan de localisation",
+        "default": false
+      },
+      {
+        "flag": "--narrative",
+        "short": "-n",
+        "type": "checkbox",
+        "label": "Cohérence narrative",
+        "description": "Force le scan narratif (ignore cache mtime)",
+        "default": false
+      }
+    ],
+    "yaml_files": [
+      {
+        "path": "needs_review.yaml",
+        "label": "needs_review.yaml",
+        "readonly": true
+      }
+    ]
+  },
+  {
+    "id": "generate",
+    "label": "Generate",
+    "icon": "📄",
+    "section": "generation",
+    "script": "generate.py",
+    "description": "Génère un article depuis config.yaml",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Dry run",
+        "default": false
+      }
+    ],
+    "config_file": "config.yaml",
+    "config_fields": [
+      {
+        "key": "scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios"
+      },
+      {
+        "key": "thematique",
+        "type": "text",
+        "label": "Thématique"
+      },
+      {
+        "key": "ligne_editoriale",
+        "type": "ligne_select",
+        "label": "Ligne éditoriale",
+        "choices": [
+          {
+            "value": "pro_pouvoir",
+            "label": "Pro pouvoir"
+          },
+          {
+            "value": "opposition",
+            "label": "Opposition"
+          }
+        ]
+      },
+      {
+        "key": "zone_slug",
+        "type": "slug_select",
+        "label": "Zone",
+        "slug_type": "zones",
+        "optional": true
+      },
+      {
+        "key": "longueur",
+        "type": "select",
+        "label": "Longueur",
+        "choices": [
+          {
+            "value": "court",
+            "label": "Court (~300 mots)"
+          },
+          {
+            "value": "moyen",
+            "label": "Moyen (~600 mots)"
+          },
+          {
+            "value": "long",
+            "label": "Long (~1000 mots)"
+          }
+        ]
+      },
+      {
+        "key": "angle_specifique",
+        "type": "text",
+        "label": "Angle spécifique",
+        "optional": true
+      }
+    ],
+    "yaml_files": [
+      {
+        "path": "config.yaml",
+        "label": "config.yaml"
+      }
+    ]
+  },
+  {
+    "id": "generate_series",
+    "label": "Generate series",
+    "icon": "📋",
+    "section": "generation",
+    "script": "generate_series.py",
+    "description": "Génère une série d'articles depuis config_series.yaml",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "optional": true
+      },
+      {
+        "flag": "--validate-first",
+        "type": "checkbox",
+        "label": "Valider d'abord",
+        "description": "Lance validate.py avant la génération",
+        "default": false
+      },
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Dry run",
+        "default": false
+      }
+    ],
+    "yaml_files": [
+      {
+        "path": "config_series.yaml",
+        "label": "config_series.yaml"
+      }
+    ]
+  },
+  {
+    "id": "generate_manual",
+    "label": "Generate manual",
+    "icon": "✍️",
+    "section": "generation",
+    "script": "generate_manual.py",
+    "description": "Génération manuelle pas à pas depuis manual_progress.json",
+    "requires": [],
+    "mode": "manual_steps",
+    "steps": [
+      {
+        "arg": "prompt",
+        "label": "Générer prompt",
+        "description": "Prépare le prompt suivant"
+      },
+      {
+        "arg": "status",
+        "label": "Voir statut",
+        "description": "Affiche l'avancement de la série"
+      },
+      {
+        "arg": "save",
+        "label": "Sauvegarder",
+        "description": "Sauvegarde la sortie dans un fichier",
+        "has_input": true,
+        "input_label": "Fichier de sortie (.txt)"
+      }
+    ],
+    "options": [],
+    "yaml_files": [
+      {
+        "path": "config_series.yaml",
+        "label": "config_series.yaml"
+      },
+      {
+        "path": "state/manual_progress.json",
+        "label": "manual_progress.json",
+        "readonly": true
+      }
+    ]
+  },
+  {
+    "id": "create_entities",
+    "label": "Create entities",
+    "icon": "👥",
+    "section": "entities",
+    "script": "create_entities_and_instances.py",
+    "description": "Crée des entités et instances dans le vault",
+    "requires": [],
+    "mode_select": {
+      "label": "Mode",
+      "choices": [
+        {
+          "value": "custom",
+          "label": "Custom — saisie manuelle"
+        },
+        {
+          "value": "auto",
+          "label": "Auto — génération automatique"
+        },
+        {
+          "value": "auto-suggest",
+          "label": "Auto-suggest — suggestions depuis gaps"
+        }
+      ]
+    },
+    "options": [
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "optional": true
+      },
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Dry run",
+        "default": false
+      }
+    ],
+    "yaml_files": [
+      {
+        "path": "entites_custom/queue.yaml",
+        "label": "queue.yaml"
+      }
+    ]
+  },
+  {
+    "id": "inject_events",
+    "label": "Inject events",
+    "icon": "⚡",
+    "section": "entities",
+    "script": "inject_custom_events.py",
+    "description": "Injecte des événements personnalisés",
+    "requires": [],
+    "mode_select": {
+      "label": "Mode",
+      "choices": [
+        {
+          "value": "custom",
+          "label": "Custom — saisie manuelle"
+        },
+        {
+          "value": "auto",
+          "label": "Auto — génération automatique"
+        }
+      ]
+    },
+    "options": [
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "optional": true
+      },
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Dry run",
+        "default": false
+      }
+    ],
+    "yaml_files": [
+      {
+        "path": "entites_custom/queue.yaml",
+        "label": "queue.yaml"
+      }
+    ]
+  },
+  {
+    "id": "inject_signals",
+    "label": "Inject signals",
+    "icon": "📡",
+    "section": "entities",
+    "script": "inject_custom_signals.py",
+    "description": "Injecte des signaux personnalisés",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Dry run",
+        "default": false
+      }
+    ],
+    "yaml_files": [
+      {
+        "path": "entites_custom/queue.yaml",
+        "label": "queue.yaml"
+      }
+    ]
+  },
+  {
+    "id": "extract_phantom_slugs",
+    "label": "Extract phantom slugs",
+    "icon": "🔍",
+    "section": "entities",
+    "script": "extract_phantom_slugs.py",
+    "description": "Extrait les slugs fantômes des alliances/oppositions",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--source",
+        "type": "select",
+        "label": "Source",
+        "choices": [
+          {
+            "value": "enrich",
+            "label": "enrich_minimal"
+          },
+          {
+            "value": "validate",
+            "label": "validate"
+          },
+          {
+            "value": "all",
+            "label": "Toutes les sources"
+          }
+        ],
+        "default": "all"
+      },
+      {
+        "flag": "--report",
+        "type": "text",
+        "label": "Chemin rapport (optionnel)",
+        "optional": true
+      },
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Dry run",
+        "default": false
+      }
+    ],
+    "yaml_files": [
+      {
+        "path": "needs_review_enrich.yaml",
+        "label": "needs_review_enrich.yaml",
+        "readonly": true
+      }
+    ]
+  },
+  {
+    "id": "fix_alliance_suffixes",
+    "label": "Fix alliance suffixes",
+    "icon": "🔧",
+    "section": "entities",
+    "script": "fix_alliance_suffixes.py",
+    "description": "Corrige les suffixes de scénario manquants dans les alliances",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "optional": true
+      },
+      {
+        "flag": "--verbose",
+        "type": "checkbox",
+        "label": "Verbose",
+        "default": false
+      },
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Dry run",
+        "default": false
+      }
+    ]
+  },
+  {
+    "id": "requeue_needs_review",
+    "label": "Requeue needs review",
+    "icon": "🔁",
+    "section": "entities",
+    "script": "requeue_needs_review.py",
+    "description": "Remet en queue les items needs_review.yaml",
+    "requires": [],
+    "options": [],
+    "yaml_files": [
+      {
+        "path": "needs_review.yaml",
+        "label": "needs_review.yaml",
+        "readonly": true
+      }
+    ]
+  },
+  {
+    "id": "undo_custom",
+    "label": "Undo custom",
+    "icon": "↩",
+    "section": "entities",
+    "script": "undo_custom.py",
+    "description": "Annule des entités/événements injectés",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--slug",
+        "type": "slug_select",
+        "label": "Slug cible",
+        "slug_type": "entities",
+        "optional": true
+      },
+      {
+        "flag": "--type",
+        "type": "select",
+        "label": "Type",
+        "choices": [
+          {
+            "value": "instance",
+            "label": "instance"
+          },
+          {
+            "value": "event_instance",
+            "label": "event_instance"
+          },
+          {
+            "value": "entite",
+            "label": "entite"
+          },
+          {
+            "value": "event",
+            "label": "event"
+          }
+        ],
+        "optional": true
+      },
+      {
+        "flag": "--generalisation",
+        "type": "select",
+        "label": "Généralisation",
+        "choices": [
+          {
+            "value": "no",
+            "label": "Non — fichier ciblé uniquement"
+          },
+          {
+            "value": "yes",
+            "label": "Oui — archétype + tous scénarios"
+          }
+        ],
+        "default": "no"
+      },
+      {
+        "flag": "--execute",
+        "type": "checkbox",
+        "label": "Exécuter (sans = dry run)",
+        "description": "Par défaut l'undo est simulé",
+        "default": false
+      }
+    ],
+    "yaml_files": [
+      {
+        "path": "undo_queue.yaml",
+        "label": "undo_queue.yaml"
+      }
+    ]
+  },
+  {
+    "id": "extract_localisation",
+    "label": "Extract localisation",
+    "icon": "📍",
+    "section": "maintenance",
+    "script": "extract_localisation.py",
+    "description": "Extrait les données de localisation des instances enrichies",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "optional": true
+      },
+      {
+        "flag": "--slug",
+        "type": "slug_select",
+        "label": "Slug (optionnel)",
+        "slug_type": "instances",
+        "optional": true
+      },
+      {
+        "flag": "--force",
+        "type": "checkbox",
+        "label": "Forcer",
+        "description": "Retraite les fichiers déjà extraits",
+        "default": false
+      },
+      {
+        "flag": "--report-only",
+        "type": "checkbox",
+        "label": "Rapport seulement",
+        "description": "Génère localisation_review.md sans écrire",
+        "default": false
+      },
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Dry run",
+        "default": false
+      }
+    ]
+  },
+  {
+    "id": "review_localisation",
+    "label": "Review localisation",
+    "icon": "✅",
+    "section": "maintenance",
+    "script": "review_localisation.py",
+    "description": "Résout les conflits de localisation",
+    "requires": [
+      "extract_localisation"
+    ],
+    "requires_message": "Lancer extract_localisation d'abord",
+    "options": [
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "optional": true
+      },
+      {
+        "flag": "--auto-resolve",
+        "type": "checkbox",
+        "label": "Auto-résoudre",
+        "description": "Résolution automatique des conflits non-ambigus",
+        "default": false
+      },
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Dry run",
+        "default": false
+      }
+    ]
+  },
+  {
+    "id": "build_geographie",
+    "label": "Build géographie",
+    "icon": "🌍",
+    "section": "maintenance",
+    "script": "build_geographie_monde.py",
+    "description": "Construit le fichier geographie/{scenario}.md",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "required": true
+      },
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Dry run",
+        "default": false
+      }
+    ]
+  },
+  {
+    "id": "enrich_geographie",
+    "label": "Enrich géographie",
+    "icon": "🗺",
+    "section": "maintenance",
+    "script": "enrich_geographie_recursive.py",
+    "description": "Enrichit récursivement les zones géographiques via LLM",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--all",
+        "type": "checkbox",
+        "label": "Tous les scénarios",
+        "default": false,
+        "mutually_exclusive_with": "scenario"
+      },
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "optional": true,
+        "mutually_exclusive_with": "all"
+      },
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Dry run",
+        "default": false
+      }
+    ]
+  },
+  {
+    "id": "restructure_zones",
+    "label": "Restructure zones",
+    "icon": "🗂",
+    "section": "maintenance",
+    "script": "restructure_zones.py",
+    "description": "Renomme / reparente / divise / fusionne des zones géographiques (P7)",
+    "requires": [],
+    "badge": "P7",
+    "options": [
+      {
+        "flag": "--operation",
+        "type": "select",
+        "label": "Opération",
+        "choices": [
+          {
+            "value": "rename",
+            "label": "Renommer"
+          },
+          {
+            "value": "reparent",
+            "label": "Reparenter"
+          },
+          {
+            "value": "split",
+            "label": "Diviser"
+          },
+          {
+            "value": "merge",
+            "label": "Fusionner"
+          }
+        ]
+      },
+      {
+        "flag": "--zone",
+        "type": "slug_select",
+        "label": "Zone source",
+        "slug_type": "zones_all"
+      },
+      {
+        "flag": "--target",
+        "type": "text",
+        "label": "Cible / nouveau nom",
+        "optional": true
+      },
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Dry run",
+        "default": true
+      }
+    ]
+  }
+]

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ourrassol 2098</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div id="app">
+
+  <!-- ══ SIDEBAR ══════════════════════════════════════════ -->
+  <aside id="sidebar">
+
+    <div id="masthead">
+      <div class="eyebrow">Pipeline</div>
+      <div class="title">Ourrassol 2098</div>
+    </div>
+
+    <div id="llm-selector">
+      <div class="llm-label">Fournisseur LLM</div>
+      <div class="llm-row">
+        <select id="llm-provider" title="Fournisseur">
+          <option value="mistral">Mistral</option>
+          <option value="claude">Claude</option>
+        </select>
+        <select id="llm-model" title="Modèle">
+          <option>—</option>
+        </select>
+        <span id="llm-cost-badge" class="cost-badge cost-eco">éco</span>
+      </div>
+    </div>
+
+    <nav id="nav">
+      <!-- Construit par app.js -->
+    </nav>
+
+  </aside>
+
+  <!-- ══ ZONE PRINCIPALE ══════════════════════════════════ -->
+  <main id="main">
+
+    <!-- Vue script -->
+    <div id="script-view" style="display:none; flex-direction:column; flex:1; overflow:hidden;">
+
+      <!-- Topbar avec nom script + bouton Lancer -->
+      <div id="script-topbar">
+        <span class="script-name" id="form-script-title">—</span>
+        <span class="script-sep">—</span>
+        <span class="script-desc-top" id="form-script-desc"></span>
+        <button id="btn-stop">■ Stop</button>
+        <button id="btn-run">□ Lancer</button>
+      </div>
+
+      <!-- Corps : formulaire + log -->
+      <div id="script-body">
+
+        <div id="form-panel">
+          <div id="form-body">
+            <div style="padding:20px;color:var(--text-muted);font-size:12px">
+              Sélectionnez un script dans la barre latérale.
+            </div>
+          </div>
+          <div id="form-footer"></div>
+        </div>
+
+        <div id="log-panel">
+          <div id="log-header">
+            <span class="log-title">Sortie</span>
+            <span id="log-status" class="log-status idle">En attente</span>
+            <a href="#" id="log-clear">Effacer</a>
+          </div>
+          <pre id="log-output"><span class="cursor-blink" id="log-cursor" style="display:none"></span># Lance un script pour voir les logs ici</pre>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ── Tableau de bord ─────────────────────── -->
+    <div id="tab-dashboard" class="tab-content">
+      <div class="tab-page-title">Tableau de bord</div>
+      <div class="dashboard-grid" id="dashboard-grid">
+        <div class="stat-card"><div class="card-title">Chargement…</div></div>
+      </div>
+    </div>
+
+    <!-- ── Revue ──────────────────────────────── -->
+    <div id="tab-review" class="tab-content">
+      <div class="tab-page-title">Revue</div>
+      <div class="review-empty">Chargement…</div>
+    </div>
+
+    <!-- ── Config ─────────────────────────────── -->
+    <div id="tab-config" class="tab-content">
+      <div class="tab-page-title">Configuration</div>
+
+      <h3>Vault</h3>
+      <div class="config-field">
+        <label for="cfg-vault-root">vault_root</label>
+        <input type="text" id="cfg-vault-root" placeholder="/chemin/absolu/vers/le/vault">
+      </div>
+      <div class="config-field">
+        <label for="cfg-pipeline-dir">pipeline_dir</label>
+        <input type="text" id="cfg-pipeline-dir" placeholder="/chemin/absolu/vers/le/vault/generator">
+      </div>
+      <div class="config-field">
+        <label for="cfg-default-scenario">Scénario par défaut</label>
+        <select id="cfg-default-scenario"></select>
+      </div>
+
+      <h3>LLM</h3>
+      <div class="config-field">
+        <label for="cfg-llm-provider">Fournisseur par défaut</label>
+        <select id="cfg-llm-provider">
+          <option value="mistral">Mistral</option>
+          <option value="claude">Claude</option>
+        </select>
+      </div>
+      <div class="config-field">
+        <label for="cfg-llm-model-mistral">Modèle Mistral par défaut</label>
+        <input type="text" id="cfg-llm-model-mistral" placeholder="mistral-medium-latest">
+      </div>
+      <div class="config-field">
+        <label for="cfg-llm-model-claude">Modèle Claude par défaut</label>
+        <input type="text" id="cfg-llm-model-claude" placeholder="claude-sonnet-4-6">
+      </div>
+
+      <div class="config-actions">
+        <button id="cfg-save" class="btn-primary">Sauvegarder</button>
+        <button id="cfg-test-path" class="btn-secondary">Tester chemin</button>
+      </div>
+      <div id="cfg-message" class="config-msg"></div>
+    </div>
+
+  </main>
+</div>
+
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

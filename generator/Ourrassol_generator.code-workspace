@@ -17,6 +17,9 @@
 		},
 		{
 			"path": "../documentation"
+		},
+		{
+			"path": "../gui"
 		}
 	],
 	"settings": {}

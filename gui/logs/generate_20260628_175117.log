@@ -1,0 +1,100 @@
+
+============================================================
+OURRASSOL 2098 — Générateur d'articles
+============================================================
+  Scénario   : eco_communalism
+  Thématique : societe
+  Longueur   : breve
+  Angle      : Focus sur les mouvement des sans terre
+============================================================
+
+[generate] Chargement de la thématique 'societe'...
+
+[snapshot] Construction du monde 2098 — scénario : eco_communalism
+[snapshot] Variables pilotes : ['organisation_territoires', 'climat_environnement_global', 'energie_ressources_critiques', 'systemes_productifs_travail']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 1 | Cohérence : OK
+[snapshot] Jalons trajectoire : 154 (37 majeurs)
+[snapshot] Événements signal_to_state : 72 (24 majeurs)
+[snapshot] Tensions thématiques : 2
+[snapshot] Instances chargées : 81 | Filtrées : 6
+[snapshot] Événement custom 'Écho du Golfe en Feu — Les Bassins sans Pétrole' (an 2027, 71 ans d'effet)
+  → geopolitique_conflits : 35 → 43.0 (delta:+8.0)
+  → energie_ressources_critiques : 46.2 → 58.2 (delta:+12.0)
+  → gouvernance_institutions : 71.4 → 77.4 (delta:+6.0)
+  → demographie_mobilite_humaine : 37.0 → 46.0 (delta:+9.0)
+[snapshot] Événement custom 'La Grande Coupure — Accélérateur de Localisation Numérique' (an 2040, 58 ans d'effet)
+  → technologie_information : 51.1 → 41.1 (delta:-10.0)
+  → organisation_territoires : 40.0 → 48.0 (delta:+8.0)
+  → valeurs_culture_tempo_sociale : 40 → 46.0 (delta:+6.0)
+[snapshot] Événement custom 'Les Enchères du Fond Émergé — Kalaallit Nunaat vend ses terres à qui ?' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 58.2 → 66.2 (delta:+8.0)
+  → geopolitique_conflits : 27.4 → 17.4 (delta:-10.0)
+  → gouvernance_institutions : 81.9 → 88.9 (delta:+7.0)
+  → organisation_territoires : 52.2 → 58.2 (delta:+6.0)
+[snapshot] Événement custom 'La Grande Convergence des Lacs — Exode du Midwest Carbonisé' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 52.0 → 34.0 (delta:-18.0)
+  → organisation_territoires : 51.4 → 36.4 (delta:-15.0)
+  → gouvernance_institutions : 88.9 → 100 (delta:+12.0)
+  → climat_environnement_global : 58.6 → 66.6 (delta:+8.0)
+  → energie_ressources_critiques : 71.0 → 81.0 (delta:+10.0)
+[snapshot] Événement custom 'L'Assemblée du Fleuve — Souveraineté ou Fracture' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 66.6 → 74.6 (delta:+8.0)
+  → geopolitique_conflits : 14.8 → 2.8000000000000007 (delta:-12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → organisation_territoires : 41.5 → 49.5 (delta:+8.0)
+[snapshot] Événement custom 'Dissolution du Mouvement dans les Assemblées Locales' (an 2048, 50 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+  → valeurs_culture_tempo_sociale : 46.0 → 54.0 (delta:+8.0)
+  → organisation_territoires : 49.5 → 55.5 (delta:+6.0)
+[snapshot] Événement custom 'Forum d'Agadez sur la Souveraineté Numérique des Périphéries' (an 2062, 36 ans d'effet)
+  → technologie_information : 44.4 → 52.4 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → organisation_territoires : 58.5 → 65.5 (delta:+7.0)
+[snapshot] Événement custom 'La Proclamation des Friches Libres : Detroit, Cleveland, Pittsburgh hors-algorithme' (an 2063, 35 ans d'effet)
+  → geopolitique_conflits : 0 → 0 (delta:-8.0)
+  → valeurs_culture_tempo_sociale : 54.0 → 66.0 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → organisation_territoires : 68.9 → 82.9 (delta:+14.0)
+[snapshot] Événement custom 'Insurrection des Friches Vivantes — L'Automne des Zones Libres' (an 2063, 35 ans d'effet)
+  → geopolitique_conflits : 0 → 0 (delta:-8.0)
+  → valeurs_culture_tempo_sociale : 66.0 → 78.0 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → technologie_information : 66.9 → 73.9 (delta:+7.0)
+[snapshot] Événement custom 'Le Procès Communautaire de Van Derburgh' (an 2078, 20 ans d'effet)
+  → valeurs_culture_tempo_sociale : 78.0 → 80.0 (delta:+2.0)
+  → gouvernance_institutions : 100 → 100 (delta:+1.0)
+[snapshot] Événements custom : 10 | 145 variables affectées
+
+[prompt] Assemblage du prompt...
+[WARN][journal] Pas d'édition locale pour zone 'reseau_assemblees_fennoscandien' / eco_communalism / opposition → fallback réseau global
+[prompt] System prompt : 1648 caractères
+[prompt] User prompt   : 51866 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-small)...
+[llm] Mistral (mistral-small) — entrée : 15307 | sortie : 705
+[api] Article généré : 2684 caractères
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/20260628_175131_eco_communalism_societe_article_20septembre2098.md
+
+============================================================
+ARTICLE GÉNÉRÉ
+============================================================
+**Les Sillons de la Terre : Comment les Sans-Terres du Massif Central forcent l'histoire**
+
+*Le Fil Commun — Mémoire des Terres, Cévennes Intérieure, 12 octobre 298*
+
+Le plateau brûle encore sous un soleil blanc. Depuis l’aube, une colonne silencieuse avance le long de l’ancienne départementale 47, entre les taillis de buis et les genévriers dévorés par le temps. À leur tête, Fatoumata Diabaté, porte-parole du Collectif des Sans-Terres de la Cévenne Intérieure, agite un parchemin jauni : la copie tressée de l’arrêté de 2079 qui octroya les *Sillons du Plateau* à leur communauté. « Ils ont cru que l’écriture s’effacerait avec la poussière », murmure-t-elle tandis que les pierres de la route renvoient les éclats de lumière. Elle a raison : l’État résiduel du Massif Central n’existe plus. Mais les *Factions* hantent toujours les assemblées de bassin versant.
+
+Les Sans-Terres ne sont pas une nouvelle entité. Ils incarnent la mémoire vivante des expropriations passées. Leurs ancêtres, des familles de charbonniers et de bergers, avaient été dépossédés dans les années 2060 au nom de la « modernisation des écosystèmes ». Aujourd’hui, leurs descendants revendiquent non pas le retour d’un droit de propriété, mais l’accès aux *communs réglementés* selon le protocole de la Vallée-du-Rhône Reconstituée. En 2096, l’Assemblée des Autres Vivants leur avait accordé l’usage de deux hectares de pierriers cultivables — un compromis dicté par la Charte d’Agadez. Le compromis ne suffit plus. « Nous voulons des terres *vraiment* communes », scande le porte-parole des Jeunes Gardiens du Seuil, un ancien de la Ronde des Savoirs.
+
+La tension est palpable. Hier, des membres des *Factions Autoritaires* locales ont tenté de bloquer l’accès aux points d’eau. Aujourd’hui, les Sans-Terres menacent de saboter les nouvelles clôtures électroniques posées par l’Assemblée Bioterritoriale du Massif Central — des clôtures prétendument « intelligentes », critiquées par les *Veilleurs du Seuil* pour leur dépendance aux serveurs de la Ligue des Cités du Sahel Numérique. « Une clôture, même éco-communaliste, reste une prison », rappelle Lydie Morel, géographe des Assemblées, dans son rapport non publié de la session plénière du Chiapas.
+
+Et pendant ce temps, le désert avance. Les plateaux désertés craquent sous les pas, comme si la terre elle-même exigeait une réponse. Les Sans-Terres savent qu’ils ne peuvent plus attendre. Leur marche se termine devant la grange reconvertie du nœud 47 de *Mémoire des Terres*, où leCollector, un ancien facilitateur de la Trame Mnemos, vient de déclencher une alerte.
+
+Le Collectif a choisi son terrain de lutte : *-là où le vivant résiste encore*.
+
+============================================================
+✓ Sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/20260628_175131_eco_communalism_societe_article_20septembre2098.md
+============================================================
+
