@@ -396,7 +396,8 @@ Réponds UNIQUEMENT en JSON, sans aucun texte autour, format exact :
 
 def step2_develop_instance(client, idea, event_slug, type_evenement, variables,
                             scenario, registre_excerpt, available_actors,
-                            actors_hint, previous=None, issues=None):
+                            actors_hint, previous=None, issues=None,
+                            zone_hint=None):
     sc_ctx = load_scenario_context(scenario)
     var_levels = load_variables_levels(scenario)
 
@@ -410,6 +411,14 @@ def step2_develop_instance(client, idea, event_slug, type_evenement, variables,
             f"\nL'utilisateur impose ces acteurs : {', '.join(actors_hint)}. "
             f"Tu DOIS les inclure si leur slug correspond à une instance "
             f"listée ci-dessous.\n"
+        )
+
+    zone_hint_txt = ""
+    if zone_hint:
+        zone_hint_txt = (
+            f"\nAncrage géographique souhaité par l'utilisateur : **{zone_hint}**. "
+            f"Utilise cette zone comme contexte géographique principal de l'événement "
+            f"dans ce scénario.\n"
         )
 
     actors_list_txt = "\n".join(
@@ -440,7 +449,7 @@ Ourrassol 2098, dans le scénario "{scenario}".
 - Date approximative : {idea['date_approximative']}
 - Intensité : {idea['intensite']}
 - Description originale : {idea['description']}
-{actors_hint_txt}
+{actors_hint_txt}{zone_hint_txt}
 ## SCÉNARIO {scenario.upper()}
 - État : {sc_ctx['state_of_system']} | Tension : {sc_ctx['tension_level']}/5 | Trajectoire : {sc_ctx['trajectory']}
 - Régime : {sc_ctx['political_regime']} | Vitesse : {sc_ctx['transformation_speed']}
@@ -868,6 +877,8 @@ def process_idea(client, idea, dry_run=False):
     actors_hint_count = idea.get("acteurs_hint_count") or 2
     actors_hint_count = max(1, min(4, actors_hint_count))
 
+    zone_hint = idea.get("zone_hint") or None
+
     scenarios = idea.get("scenarios") or list(SCENARIOS)
     scenarios = [s for s in scenarios if s in SCENARIOS]
 
@@ -902,6 +913,7 @@ def process_idea(client, idea, dry_run=False):
             instance_data = step2_develop_instance(
                 client, idea, event_slug, type_evenement, variables, scenario,
                 registre_excerpt, available_actors, actors_hint,
+                zone_hint=zone_hint,
             )
 
             for attempt in range(MAX_FIX_ATTEMPTS + 1):
@@ -919,6 +931,7 @@ def process_idea(client, idea, dry_run=False):
                         client, idea, event_slug, type_evenement, variables, scenario,
                         registre_excerpt, available_actors, actors_hint,
                         previous=instance_data, issues=issues,
+                        zone_hint=zone_hint,
                     )
 
             if issues:

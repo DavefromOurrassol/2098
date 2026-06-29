@@ -981,3 +981,187 @@ select option { background: #fff; }
   font-size: 11px;
   color: var(--text-muted);
 }
+
+/* ══════════════════════════════════════════════════
+   YAML FORM PANEL — formulaires guidés YAML
+   ══════════════════════════════════════════════════ */
+
+/* Zone formulaire guidé */
+.yaml-form-zone {
+  padding: 4px 0;
+}
+
+/* Les option-groups dans un form panel héritent du style existant */
+.yaml-form-panel .option-group {
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.yaml-form-panel .option-group:last-child {
+  border-bottom: none;
+}
+
+/* Chips multi-select (thématiques) */
+.yaml-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 2px;
+}
+
+.yaml-chip {
+  padding: 3px 10px;
+  font-size: 11px;
+  font-family: var(--font-mono);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg-panel);
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: background 0.1s, color 0.1s, border-color 0.1s;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.yaml-chip:hover {
+  border-color: var(--accent);
+  color: var(--accent-text);
+}
+
+.yaml-chip.active {
+  background: var(--accent-dim);
+  border-color: var(--accent);
+  color: var(--accent-text);
+  font-weight: 600;
+}
+
+/* Zone édition brute dans un form panel */
+.yaml-raw-zone {
+  padding: 0 0 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.yaml-raw-zone .yaml-edit {
+  display: block !important;
+}
+
+.yaml-raw-zone .yaml-btn-save {
+  align-self: flex-start;
+  margin: 0 20px;
+}
+
+/* Bouton "Édition brute" — discret */
+.yaml-form-panel .yaml-btn:not(.yaml-btn-save) {
+  background: transparent;
+  color: var(--text-muted);
+  border-color: var(--border-light);
+  font-size: 10px;
+}
+
+.yaml-form-panel .yaml-btn:not(.yaml-btn-save):hover {
+  color: var(--text-dim);
+  border-color: var(--border);
+}
+
+/* Textarea dans formulaire guidé YAML */
+.yaml-form-textarea {
+  width: 100%;
+  min-height: 72px;
+  max-height: 160px;
+  padding: 7px 10px;
+  font-family: var(--font-ui);
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text);
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.15s;
+  box-sizing: border-box;
+}
+
+.yaml-form-textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(59,111,212,0.12);
+}
+
+.yaml-form-textarea::placeholder {
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+/* ══════════════════════════════════════════════════
+   DOUBLE SELECT ZONE 2098 / PAYS 2026
+   ══════════════════════════════════════════════════ */
+
+.zone-double-select {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 2px;
+}
+
+/* Onglets de mode */
+.zone-tabs {
+  display: flex;
+  gap: 4px;
+}
+
+.zone-tab {
+  padding: 3px 12px;
+  font-size: 11px;
+  font-family: var(--font-ui);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-panel);
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: background 0.1s, color 0.1s, border-color 0.1s;
+}
+
+.zone-tab:hover {
+  border-color: var(--accent);
+  color: var(--accent-text);
+}
+
+.zone-tab.active {
+  background: var(--accent-dim);
+  border-color: var(--accent);
+  color: var(--accent-text);
+  font-weight: 600;
+}
+
+/* Résultat du lookup pays 2026 */
+.zone-lookup-result {
+  font-size: 12px;
+  font-family: var(--font-mono);
+  padding: 5px 10px;
+  border-radius: var(--radius);
+  margin-top: 4px;
+}
+
+.zone-lookup-result.loading {
+  color: var(--text-muted);
+  background: var(--bg-panel);
+}
+
+.zone-lookup-result.found {
+  color: var(--ok);
+  background: var(--ok-bg, #f0faf0);
+  border: 1px solid var(--ok-border, #b8e0b8);
+}
+
+.zone-lookup-result.not-found {
+  color: var(--warn);
+  background: var(--warn-bg, #fff8f0);
+  border: 1px solid var(--warn-border, #f0d090);
+}
+
+.zone-lookup-result.error {
+  color: var(--error);
+  background: var(--error-bg, #fff0f0);
+}

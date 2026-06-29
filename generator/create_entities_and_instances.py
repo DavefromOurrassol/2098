@@ -613,7 +613,8 @@ def save_queue_with_template(remaining):
 # PARTIE 2 — GÉNÉRATION D'INSTANCE (ex generate_instances.py)
 # =============================================================================
 
-def build_instance_prompt(entity_fm, scenario, hard_constraint=None, exclude_slug=None):
+def build_instance_prompt(entity_fm, scenario, hard_constraint=None, exclude_slug=None,
+                          zone_hint=None):
     sc_ctx = load_scenario_context(scenario)
     var_states = load_variables_states(scenario)
     available_instances = load_instances_in_scenario(scenario, exclude_slug=exclude_slug)
@@ -629,6 +630,15 @@ def build_instance_prompt(entity_fm, scenario, hard_constraint=None, exclude_slu
         )
     else:
         instances_list = "(aucune autre instance encore créée dans ce scénario)"
+
+    zone_hint_block = ""
+    if zone_hint:
+        zone_hint_block = f"""
+## ANCRAGE GÉOGRAPHIQUE (hint utilisateur)
+L'utilisateur souhaite ancrer cette entité dans la zone : **{zone_hint}**
+Tiens-en compte pour la localisation, les responsabilités et le contexte
+narratif — mais reste cohérent avec la logique du scénario.
+"""
 
     constraint_block = ""
     role_etat_instruction = ""
@@ -665,7 +675,7 @@ Génère l'instance de l'entité "{entity_fm['name']}" dans le scénario "{scena
 - Variables dominantes : {', '.join(sc_ctx['dominant_variables'])}
 {f"- Contexte : {sc_ctx['summary']}" if sc_ctx['summary'] else ""}
 
-## ÉTAT DES VARIABLES INFLUENCÉES DANS CE SCÉNARIO
+{zone_hint_block}## ÉTAT DES VARIABLES INFLUENCÉES DANS CE SCÉNARIO
 {vars_context if vars_context else "Non défini"}
 
 ## INSTANCES DÉJÀ EXISTANTES DANS CE SCÉNARIO (pour alliances/oppositions)
@@ -927,6 +937,7 @@ def process_entity_scenario(client, entity_fm, scenario, force=False, dry_run=Fa
     prompt = build_instance_prompt(
         entity_fm, scenario, hard_constraint=hard_constraint,
         exclude_slug=f"{slug_entite}_{scenario}",
+        zone_hint=entity_fm.get("zone_hint"),
     )
     try:
         instance_data = call_claude_json(client, "Tu es un expert en worldbuilding.",
@@ -1025,6 +1036,8 @@ def process_custom_idea(client, idea, dry_run=False):
 
     slug = slugify(nom)
     print("[3/3] Injection de l'entité...")
+    zone_hint = idea.get("zone_hint") or None
+
     entity_fm = {
         "name": nom, "slug": slug, "category": category,
         "description": archetype["description_complete"],
@@ -1033,6 +1046,7 @@ def process_custom_idea(client, idea, dry_run=False):
         "scenario_ref": scenario_ref,
         "role_ref": idea.get("role"),
         "etat_ref": idea.get("etat"),
+        "zone_hint": zone_hint,
     }
 
     if not dry_run:

@@ -167,6 +167,299 @@ def save_yaml():
         return jsonify({"error": str(e)}), 500
 
 
+@app.route("/api/yaml/form", methods=["POST"])
+def save_yaml_form():
+    """
+    Sauvegarde des champs individuels dans un fichier YAML.
+    Body JSON :
+    {
+      "path": "config.yaml",
+      "fields": {
+        "scenario": "breakdown",
+        "ligne_editoriale": "opposition",
+        "article.longueur": "breve",
+        "thematiques": ["politique", "economie_finance"]
+      }
+    }
+    Les clés à point (ex: article.longueur) ciblent des sous-clés YAML imbriquées.
+    """
+    cfg = load_config()
+    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+    data = request.get_json()
+    if not data or "path" not in data or "fields" not in data:
+        return jsonify({"error": "Données manquantes"}), 400
+
+    rel_path = data["path"]
+    fields = data["fields"]  # dict clé → valeur
+
+    target = (pipeline_dir / rel_path).resolve()
+    try:
+        target.relative_to(pipeline_dir.resolve())
+    except ValueError:
+        return jsonify({"error": "Chemin non autorisé"}), 403
+
+    try:
+        # Lire le YAML existant comme texte (pour préserver les commentaires)
+        # puis mettre à jour ligne par ligne avec regex
+        if target.exists():
+            bak = target.with_suffix(target.suffix + ".bak")
+            bak.write_text(target.read_text(encoding="utf-8"), encoding="utf-8")
+            lines = target.read_text(encoding="utf-8").splitlines()
+        else:
+            lines = []
+
+        lines = _update_yaml_fields(lines, fields)
+        target.write_text("\n".join(lines) + "\n", encoding="utf-8")
+        return jsonify({"ok": True, "path": str(target)})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+def _update_yaml_fields(lines: list, fields: dict) -> list:
+    """
+    Met à jour les valeurs dans un fichier YAML (préserve les commentaires).
+    Gère les clés simples (scenario: value) et imbriquées (article.longueur → sous article:).
+    Gère les listes multi-valeurs (thematiques: [a, b, c] ou format bullet).
+    """
+    import re
+
+    # Séparer clés simples et imbriquées
+    simple_fields = {}
+    nested_fields = {}  # parent → {subkey: value}
+
+    for key, value in fields.items():
+        if "." in key:
+            parent, subkey = key.split(".", 1)
+            nested_fields.setdefault(parent, {})[subkey] = value
+        else:
+            simple_fields[key] = value
+
+    result = list(lines)
+
+    # ── Traitement clés simples ──
+    for key, value in simple_fields.items():
+        result = _replace_yaml_key(result, key, value, indent=0)
+
+    # ── Traitement clés imbriquées ──
+    for parent, subfields in nested_fields.items():
+        # Trouver le bloc parent
+        parent_idx = None
+        for i, line in enumerate(result):
+            if re.match(rf"^{re.escape(parent)}:\s*$", line.strip()) or \
+               re.match(rf"^{re.escape(parent)}:", line):
+                parent_idx = i
+                break
+        if parent_idx is not None:
+            for subkey, value in subfields.items():
+                result = _replace_yaml_key(result, subkey, value, indent=2,
+                                           search_from=parent_idx + 1)
+
+    return result
+
+
+def _replace_yaml_key(lines: list, key: str, value, indent: int = 0,
+                       search_from: int = 0) -> list:
+    """Remplace la valeur d'une clé YAML dans les lignes données."""
+    import re
+
+    indent_str = " " * indent
+    key_re = re.compile(rf"^{re.escape(indent_str)}{re.escape(key)}:(\s.*)?$")
+
+    # Cas liste (thematiques)
+    if isinstance(value, list):
+        # Trouver la clé et remplacer jusqu'à la prochaine clé de même niveau
+        start_idx = None
+        for i in range(search_from, len(lines)):
+            if key_re.match(lines[i]):
+                start_idx = i
+                break
+        if start_idx is None:
+            return lines
+
+        # Trouver la fin du bloc liste
+        end_idx = start_idx + 1
+        item_re = re.compile(rf"^{re.escape(indent_str)}  - ")
+        while end_idx < len(lines) and (
+            item_re.match(lines[end_idx]) or lines[end_idx].strip() == ""
+        ):
+            end_idx += 1
+
+        new_lines = [f"{indent_str}{key}:"]
+        for item in value:
+            new_lines.append(f"{indent_str}  - {item}")
+
+        return lines[:start_idx] + new_lines + lines[end_idx:]
+
+    # Cas valeur scalaire
+    yaml_value = _to_yaml_scalar(value)
+    for i in range(search_from, len(lines)):
+        if key_re.match(lines[i]):
+            lines[i] = f"{indent_str}{key}: {yaml_value}"
+            return lines
+
+    return lines
+
+
+def _to_yaml_scalar(value) -> str:
+    """Convertit une valeur Python en représentation YAML scalaire inline."""
+    if value is None or value == "":
+        return ""
+    if isinstance(value, bool):
+        return "true" if value else "false"
+    if isinstance(value, (int, float)):
+        return str(value)
+    # Chaîne : guillemets si contient des caractères spéciaux
+    s = str(value)
+    if any(c in s for c in (": ", "#", "[", "]", "{", "}", ",", "'")):
+        return f'"{s}"'
+    return s
+
+
+
+@app.route("/api/yaml/append", methods=["POST"])
+def append_yaml_queue():
+    """
+    Appende une entrée dans la liste 'queue' d'un fichier YAML.
+    Body JSON :
+    {
+      "path": "entites_custom/queue.yaml",
+      "entry": { "nom": "...", "category": "...", ... }
+    }
+    """
+    cfg = load_config()
+    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+    data = request.get_json()
+    if not data or "path" not in data or "entry" not in data:
+        return jsonify({"error": "Données manquantes"}), 400
+
+    rel_path = data["path"]
+    entry = data["entry"]
+
+    target = (pipeline_dir / rel_path).resolve()
+    try:
+        target.relative_to(pipeline_dir.resolve())
+    except ValueError:
+        return jsonify({"error": "Chemin non autorisé"}), 403
+
+    try:
+        import yaml as _yaml
+
+        # Backup
+        if target.exists():
+            bak = target.with_suffix(target.suffix + ".bak")
+            bak.write_text(target.read_text(encoding="utf-8"), encoding="utf-8")
+            existing = _yaml.safe_load(target.read_text(encoding="utf-8")) or {}
+        else:
+            existing = {}
+            target.parent.mkdir(parents=True, exist_ok=True)
+
+        queue = existing.get("queue") or []
+        if not isinstance(queue, list):
+            queue = []
+
+        # Nettoyer les valeurs vides optionnelles
+        clean_entry = {k: v for k, v in entry.items()
+                       if v is not None and v != "" and v != []}
+
+        queue.append(clean_entry)
+        existing["queue"] = queue
+
+        target.write_text(
+            _yaml.dump(existing, allow_unicode=True, sort_keys=False, default_flow_style=False),
+            encoding="utf-8"
+        )
+        return jsonify({"ok": True, "path": str(target), "queue_length": len(queue)})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+
+@app.route("/api/zones/pays-liste", methods=["GET"])
+def zones_pays_liste():
+    """Retourne la liste des pays 2026 depuis zones_pays.json."""
+    gui_dir = Path(__file__).parent
+    zones_pays_path = gui_dir / "zones_pays.json"
+    if not zones_pays_path.exists():
+        return jsonify({"pays": [], "error": "zones_pays.json introuvable"})
+    try:
+        import json as _json
+        data = _json.loads(zones_pays_path.read_text(encoding="utf-8"))
+        return jsonify({"pays": data.get("pays_liste", [])})
+    except Exception as e:
+        return jsonify({"pays": [], "error": str(e)})
+
+
+@app.route("/api/zones/lookup", methods=["GET"])
+def zones_lookup():
+    """
+    Cherche la zone 2098 correspondant à un pays 2026.
+    GET /api/zones/lookup?pays=France&scenario=breakdown
+    Retourne { zone: slug | null, confiance: haute|moyenne|nulle, source: origine_reelle|fallback|null }
+    """
+    cfg = load_config()
+    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+    vault_root   = Path(cfg.get("vault_root", ""))
+    pays  = request.args.get("pays", "").strip()
+    scenario = request.args.get("scenario", "").strip()
+
+    if not pays or not scenario:
+        return jsonify({"error": "pays et scenario requis"}), 400
+
+    # Charger zones_pays.json (dans gui/)
+    gui_dir = Path(__file__).parent
+    zones_pays_path = gui_dir / "zones_pays.json"
+    if not zones_pays_path.exists():
+        return jsonify({"zone": None, "confiance": "nulle", "source": "no_table",
+                        "message": "zones_pays.json introuvable dans gui/"})
+
+    try:
+        import json as _json
+        zones_pays = _json.loads(zones_pays_path.read_text(encoding="utf-8"))
+    except Exception as e:
+        return jsonify({"zone": None, "confiance": "nulle", "source": "error",
+                        "message": str(e)})
+
+    scenario_data = zones_pays.get(scenario, {})
+    zone = scenario_data.get(pays)  # None si null ou absent
+
+    if zone:
+        return jsonify({"zone": zone, "confiance": "haute", "source": "table"})
+
+    # Log dans zones_manquantes si absent
+    _log_zone_manquante(vault_root, pays, scenario)
+    return jsonify({"zone": None, "confiance": "nulle", "source": "null",
+                    "message": f"Aucune zone 2098 trouvée pour '{pays}' dans {scenario}"})
+
+
+def _log_zone_manquante(vault_root: Path, pays: str, scenario: str):
+    """Ajoute une entrée dans documentation/need_action/zones_manquantes.yaml si absente."""
+    try:
+        import yaml as _yaml
+        log_path = vault_root / "documentation" / "need_action" / "zones_manquantes.yaml"
+        log_path.parent.mkdir(parents=True, exist_ok=True)
+        existing = {}
+        if log_path.exists():
+            existing = _yaml.safe_load(log_path.read_text(encoding="utf-8")) or {}
+        entries = existing.get("zones_manquantes", [])
+        # Vérifier doublon
+        already = any(e.get("pays") == pays and e.get("scenario") == scenario
+                      for e in entries)
+        if not already:
+            entries.append({
+                "pays": pays,
+                "scenario": scenario,
+                "statut": "blanc_a_evaluer",
+            })
+            existing["zones_manquantes"] = entries
+            log_path.write_text(
+                _yaml.dump(existing, allow_unicode=True, sort_keys=False,
+                           default_flow_style=False),
+                encoding="utf-8"
+            )
+    except Exception:
+        pass  # Log silencieux — ne pas bloquer le workflow
+
+
 # ── API Slugs ─────────────────────────────────────────────────────────────────
 
 @app.route("/api/slugs", methods=["GET"])
@@ -193,6 +486,9 @@ def get_slugs():
         elif slug_type in ("zones", "zones_all"):
             n1_only = (slug_type == "zones")
             slugs = _scan_zone_slugs(pipeline_dir, scenario, n1_only)
+        elif slug_type == "zones_hier":
+            zones = _scan_zone_slugs_hier(vault_root, scenario)
+            return jsonify({"slugs": [z["slug"] for z in zones], "zones": zones})
     except Exception as e:
         return jsonify({"slugs": [], "error": str(e)})
 
@@ -272,7 +568,63 @@ def _scan_zone_slugs(pipeline_dir: Path, scenario: str, n1_only: bool) -> list:
     return sorted(set(slugs))
 
 
-# ── Dashboard ─────────────────────────────────────────────────────────────────
+def _scan_zone_slugs_hier(pipeline_dir: Path, scenario: str) -> list:
+    """Retourne toutes les zones hiérarchiquement (N1 -> N2 -> N3)."""
+    if not scenario:
+        return []
+    geo_file = pipeline_dir / "geographie" / f"{scenario}.md"
+    if not geo_file.exists():
+        return []
+    try:
+        import yaml as _yaml
+        raw = geo_file.read_text(encoding="utf-8")
+        # Le fichier est un frontmatter YAML entre --- délimiteurs
+        parts = raw.split("---")
+        fm_str = parts[1] if len(parts) >= 2 else raw
+        fm = _yaml.safe_load(fm_str) or {}
+        raw_zones = fm.get("zones") or []
+    except Exception as e:
+        return []
+
+    zones = []
+    for z in raw_zones:
+        if not isinstance(z, dict):
+            continue
+        slug = str(z.get("slug", "")).strip()
+        if not slug:
+            continue
+        nom    = str(z.get("nom", slug)).strip()
+        niveau = int(z.get("niveau", 1))
+        parent = z.get("parent")
+        if parent in (None, "null", "~", ""):
+            parent = None
+        else:
+            parent = str(parent).strip()
+        zones.append({"slug": slug, "nom": nom, "niveau": niveau, "parent": parent})
+
+    # Tri hiérarchique
+    n1 = [z for z in zones if z["niveau"] == 1]
+    by_parent: dict = {}
+    for z in zones:
+        if z["niveau"] > 1 and z["parent"]:
+            by_parent.setdefault(z["parent"], []).append(z)
+
+    result = []
+    def add_zone(z):
+        result.append(z)
+        for child in sorted(by_parent.get(z["slug"], []), key=lambda x: x["slug"]):
+            add_zone(child)
+
+    for z in sorted(n1, key=lambda x: x["slug"]):
+        add_zone(z)
+
+    seen = {z["slug"] for z in result}
+    for z in zones:
+        if z["slug"] not in seen:
+            result.append(z)
+
+    return result
+
 
 @app.route("/api/dashboard", methods=["GET"])
 def get_dashboard():

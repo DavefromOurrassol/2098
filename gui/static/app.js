@@ -993,8 +993,14 @@ async function renderYamlPanels(script) {
   const body = document.getElementById('form-body');
 
   for (const yf of yamlFiles) {
-    const panel = await buildYamlPanel(yf);
-    body.appendChild(panel);
+    // Si ce fichier YAML a des config_fields dans le script → formulaire guidé
+    if (script.config_file === yf.path && script.config_fields) {
+      const panel = await buildYamlFormPanel(yf, script.config_fields, script);
+      body.appendChild(panel);
+    } else {
+      const panel = await buildYamlPanel(yf);
+      body.appendChild(panel);
+    }
   }
 }
 
@@ -1169,4 +1175,614 @@ function showYamlStatus(el, cls, text) {
   el.textContent = text;
   el.style.display = 'block';
   setTimeout(() => { el.style.display = 'none'; }, 3000);
+}
+
+// ══════════════════════════════════════════════════
+// YAML FORM PANEL — formulaires guidés
+// ══════════════════════════════════════════════════
+
+const THEMATIQUES = [
+  'actualites_a_la_une','politique','economie_finance',
+  'environnement_climat','sciences_technologies','societe',
+  'culture','international','musique','sports','faits_divers',
+  'opinions_editoriaux','lifestyle_art_de_vivre','sante',
+  'education','histoire_patrimoine','medias_communication',
+  'religion_spiritualite','petites_annonces_services','meteo'
+];
+
+/**
+ * Construit un panel formulaire guidé pour un fichier YAML avec config_fields.
+ * Remplace le textarea brut par des inputs typés. Un toggle "Édition brute"
+ * bascule vers le textarea classique.
+ */
+async function buildYamlFormPanel(yf, configFields, script) {
+  const wrapper = document.createElement('div');
+  wrapper.className = 'yaml-panel yaml-form-panel';
+  wrapper.dataset.yamlPath = yf.path;
+
+  // ── Header ──
+  const header = document.createElement('div');
+  header.className = 'yaml-panel-header';
+
+  const titleRow = document.createElement('div');
+  titleRow.className = 'yaml-panel-title-row';
+
+  const titleEl = document.createElement('span');
+  titleEl.className = 'yaml-panel-title';
+  titleEl.textContent = yf.label;
+
+  const actions = document.createElement('div');
+  actions.className = 'yaml-panel-actions';
+
+  const isQueueMode = yf.path.includes('queue.yaml');
+  const btnSave = document.createElement('button');
+  btnSave.className = 'yaml-btn yaml-btn-save';
+  btnSave.textContent = isQueueMode ? 'Ajouter à la queue' : 'Sauvegarder';
+
+  const btnRaw = document.createElement('button');
+  btnRaw.className = 'yaml-btn';
+  btnRaw.textContent = 'Édition brute';
+  btnRaw.title = 'Basculer vers le textarea YAML brut';
+
+  actions.appendChild(btnSave);
+  actions.appendChild(btnRaw);
+  titleRow.appendChild(titleEl);
+  titleRow.appendChild(actions);
+  header.appendChild(titleRow);
+
+  const statusMsg = document.createElement('div');
+  statusMsg.className = 'yaml-status-msg';
+  statusMsg.style.display = 'none';
+  header.appendChild(statusMsg);
+
+  wrapper.appendChild(header);
+
+  // ── Charger le YAML actuel ──
+  let currentValues = {};
+  try {
+    const res = await fetch(`/api/yaml?path=${encodeURIComponent(yf.path)}`);
+    const data = await res.json();
+    if (data.exists && data.content) {
+      currentValues = _parseYamlSimple(data.content);
+    }
+    // Stocker le contenu brut pour le textarea de fallback
+    wrapper._rawContent = data.content || '';
+  } catch (e) {
+    wrapper._rawContent = '';
+  }
+
+  // ── Zone formulaire guidé ──
+  const formZone = document.createElement('div');
+  formZone.className = 'yaml-form-zone';
+
+  for (const field of configFields) {
+    const group = await _buildFormField(field, currentValues, script);
+    formZone.appendChild(group);
+  }
+
+  wrapper.appendChild(formZone);
+
+  // ── Zone édition brute (cachée par défaut) ──
+  const rawZone = document.createElement('div');
+  rawZone.className = 'yaml-raw-zone';
+  rawZone.style.display = 'none';
+
+  const rawTextarea = document.createElement('textarea');
+  rawTextarea.className = 'yaml-edit';
+  rawTextarea.spellcheck = false;
+  rawTextarea.value = wrapper._rawContent;
+  rawZone.appendChild(rawTextarea);
+
+  const rawSaveBtn = document.createElement('button');
+  rawSaveBtn.className = 'yaml-btn yaml-btn-save';
+  rawSaveBtn.textContent = 'Sauvegarder (brut)';
+  rawSaveBtn.style.marginTop = '8px';
+  rawZone.appendChild(rawSaveBtn);
+
+  wrapper.appendChild(rawZone);
+
+  // ── Events ──
+  let isRawMode = false;
+
+  btnRaw.addEventListener('click', () => {
+    isRawMode = !isRawMode;
+    formZone.style.display = isRawMode ? 'none' : 'block';
+    rawZone.style.display   = isRawMode ? 'block' : 'none';
+    btnRaw.textContent      = isRawMode ? 'Formulaire guidé' : 'Édition brute';
+    btnSave.style.display   = isRawMode ? 'none' : '';
+  });
+
+  btnSave.addEventListener('click', () => {
+    if (isQueueMode) {
+      _appendYamlQueue(wrapper, yf.path, statusMsg);
+    } else {
+      _saveYamlForm(wrapper, yf.path, statusMsg);
+    }
+  });
+
+  // Rafraîchir les slug_select de type zones quand le scénario change
+  wrapper.addEventListener('change', async (e) => {
+    const el = e.target;
+    if (el.dataset.formKey === 'scenario' || el.dataset.formKey === 'scenario_ref') {
+      const scenario = el.value;
+      const zoneSels = wrapper.querySelectorAll('[data-form-key="zone_slug"]');
+      for (const sel of zoneSels) {
+        const slugType = sel.dataset.slugType || 'zones_hier';
+        const current = sel.value;
+        await _loadZoneSelect(sel, slugType, scenario, current);
+      }
+    }
+  });
+
+  rawSaveBtn.addEventListener('click', async () => {
+    const content = rawTextarea.value;
+    try {
+      const res = await fetch('/api/yaml', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ path: yf.path, content }),
+      });
+      const data = await res.json();
+      showYamlStatus(statusMsg, data.ok ? 'ok' : 'error',
+        data.ok ? '✓ Sauvegardé' : `Erreur : ${data.error}`);
+    } catch (e) {
+      showYamlStatus(statusMsg, 'error', `Erreur réseau : ${e.message}`);
+    }
+  });
+
+  return wrapper;
+}
+
+/** Construit un champ de formulaire selon son type. */
+async function _buildFormField(field, currentValues, script) {
+  const group = document.createElement('div');
+  group.className = 'option-group yaml-form-field';
+  group.dataset.yamlKey = field.key;
+
+  const label = document.createElement('div');
+  label.className = 'option-label';
+  label.textContent = field.label + (field.optional ? ' (optionnel)' : '');
+  group.appendChild(label);
+
+  // Valeur courante depuis le YAML parsé
+  // Supporte les clés imbriquées (article.longueur)
+  const currentVal = _getNestedValue(currentValues, field.key);
+
+  if (field.type === 'select' || field.type === 'ligne_select') {
+    const sel = document.createElement('select');
+    sel.dataset.formKey = field.key;
+
+    let choices = field.choices || [];
+    if (field.source === 'config_scenarios') {
+      choices = (State.config?.scenarios || []).map(s => ({ value: s, label: s }));
+      if (field.optional) choices = [{ value: '', label: '— Aucun —' }, ...choices];
+    }
+
+    choices.forEach(c => {
+      const opt = document.createElement('option');
+      opt.value = c.value;
+      opt.textContent = c.label;
+      // Priorité : valeur du YAML, sinon default du field
+      const effective = currentVal !== undefined ? currentVal : (field.default || '');
+      if (c.value === effective) opt.selected = true;
+      sel.appendChild(opt);
+    });
+
+    group.appendChild(sel);
+
+  } else if (field.type === 'slug_select') {
+    const scenario = State.config?.default_scenario || '';
+
+    if (field.slug_type === 'zones_hier' && field.key === 'zone_hint') {
+      // Double select Zone 2098 / Pays 2026 — uniquement pour zone_hint
+      const doubleSelect = await buildZoneDoubleSelect(field, currentVal, scenario);
+      group.appendChild(doubleSelect);
+    } else {
+      const sel = document.createElement('select');
+      sel.dataset.formKey = field.key;
+      sel.dataset.slugType = field.slug_type;
+      sel.innerHTML = '<option value="">Chargement…</option>';
+      group.appendChild(sel);
+      await _loadZoneSelect(sel, field.slug_type, scenario, currentVal);
+    }
+
+  } else if (field.type === 'multi_select') {
+    // Chips cliquables pour les listes
+    const chips = document.createElement('div');
+    chips.className = 'yaml-chips';
+    chips.dataset.formKey = field.key;
+
+    const activeValues = new Set(Array.isArray(currentVal) ? currentVal : []);
+    const choices = field.choices || THEMATIQUES;
+
+    choices.forEach(val => {
+      const chip = document.createElement('button');
+      chip.type = 'button';
+      chip.className = 'yaml-chip' + (activeValues.has(val) ? ' active' : '');
+      chip.textContent = val;
+      chip.dataset.value = val;
+      chip.addEventListener('click', () => chip.classList.toggle('active'));
+      chips.appendChild(chip);
+    });
+
+    group.appendChild(chips);
+
+  } else if (field.type === 'number') {
+    const inp = document.createElement('input');
+    inp.type = 'number';
+    inp.dataset.formKey = field.key;
+    inp.value = currentVal !== undefined ? currentVal : (field.default ?? '');
+    if (field.min !== undefined) inp.min = field.min;
+    if (field.max !== undefined) inp.max = field.max;
+    group.appendChild(inp);
+
+  } else if (field.type === 'text') {
+    const inp = document.createElement('input');
+    inp.type = 'text';
+    inp.dataset.formKey = field.key;
+    inp.value = currentVal !== undefined ? currentVal : '';
+    if (field.placeholder) inp.placeholder = field.placeholder;
+    else inp.placeholder = field.label;
+    group.appendChild(inp);
+
+  } else if (field.type === 'textarea') {
+    const ta = document.createElement('textarea');
+    ta.className = 'yaml-form-textarea';
+    ta.dataset.formKey = field.key;
+    ta.value = currentVal !== undefined ? currentVal : '';
+    if (field.placeholder) ta.placeholder = field.placeholder;
+    else ta.placeholder = field.label;
+    ta.rows = 3;
+    group.appendChild(ta);
+  }
+
+  return group;
+}
+
+/** Collecte les valeurs du formulaire guidé et appelle /api/yaml/form. */
+async function _saveYamlForm(wrapper, yamlPath, statusEl) {
+  const fields = {};
+
+  // Selects et inputs simples
+  wrapper.querySelectorAll('[data-form-key]').forEach(el => {
+    const key = el.dataset.formKey;
+    if (!key) return;
+
+    if (el.classList.contains('yaml-chips')) {
+      // Multi-select : collecter les chips actives
+      const active = [...el.querySelectorAll('.yaml-chip.active')].map(c => c.dataset.value);
+      fields[key] = active;
+    } else if (el.tagName === 'SELECT' || el.tagName === 'INPUT') {
+      fields[key] = el.type === 'number' ? (el.value !== '' ? Number(el.value) : '') : el.value;
+    }
+  });
+
+  try {
+    const res = await fetch('/api/yaml/form', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ path: yamlPath, fields }),
+    });
+    const data = await res.json();
+    showYamlStatus(statusEl, data.ok ? 'ok' : 'error',
+      data.ok ? '✓ Sauvegardé' : `Erreur : ${data.error}`);
+  } catch (e) {
+    showYamlStatus(statusEl, 'error', `Erreur réseau : ${e.message}`);
+  }
+}
+
+/** Parse naïvement un YAML simple (clés scalaires et listes à tirets). */
+function _parseYamlSimple(content) {
+  const result = {};
+  const lines = content.split('\n');
+  let currentKey = null;
+  let currentParent = null;
+
+  for (const line of lines) {
+    if (line.trim().startsWith('#') || line.trim() === '') continue;
+
+    // Clé imbriquée niveau 2 (  key: value)
+    const nested = line.match(/^  (\w[\w_.]*?)\s*:\s*(.*)$/);
+    if (nested && currentParent) {
+      const subkey = nested[1];
+      const val = nested[2].trim().replace(/^["']|["']$/g, '');
+      result[`${currentParent}.${subkey}`] = val;
+      currentKey = null;
+      continue;
+    }
+
+    // Clé niveau 1 (key: value ou key:)
+    const top = line.match(/^(\w[\w_]*?)\s*:\s*(.*)$/);
+    if (top) {
+      const key = top[1];
+      const val = top[2].trim().replace(/^["']|["']$/g, '');
+      if (val === '' || val === '~' || val === 'null') {
+        result[key] = '';
+        currentParent = key;
+        currentKey = key;
+      } else {
+        result[key] = val;
+        currentParent = key;
+        currentKey = null;
+      }
+      continue;
+    }
+
+    // Item de liste (  - value)
+    const listItem = line.match(/^  - (.+)$/);
+    if (listItem && currentParent) {
+      const val = listItem[1].trim();
+      const parentKey = currentParent;
+      if (!Array.isArray(result[parentKey])) {
+        result[parentKey] = result[parentKey] === '' ? [] : [result[parentKey]];
+      }
+      if (!result[parentKey].includes(val)) result[parentKey].push(val);
+    }
+  }
+
+  return result;
+}
+
+/** Accède à une valeur par clé simple ou imbriquée (article.longueur). */
+function _getNestedValue(values, key) {
+  if (key in values) return values[key];
+  return undefined;
+}
+
+/** Charge un select de zones (hiérarchique ou plat). */
+async function _loadZoneSelect(sel, slugType, scenario, currentVal) {
+  try {
+    const res = await fetch(`/api/slugs?type=${slugType}&scenario=${encodeURIComponent(scenario)}`);
+    const data = await res.json();
+
+    sel.innerHTML = '<option value="">— Aucun —</option>';
+
+    if (slugType === 'zones_hier' && data.zones) {
+      // Select hiérarchique : N1 en optgroup, N2/N3 indentés
+      let currentGroup = null;
+      let currentGroupSlug = null;
+
+      data.zones.forEach(z => {
+        if (z.niveau === 1) {
+          // Nouveau optgroup N1
+          currentGroup = document.createElement('optgroup');
+          currentGroup.label = `${z.nom} (${z.slug})`;
+          currentGroupSlug = z.slug;
+          sel.appendChild(currentGroup);
+          // Option N1 elle-même (sélectionnable)
+          const opt = document.createElement('option');
+          opt.value = z.slug;
+          opt.textContent = z.nom;
+          if (z.slug === currentVal) opt.selected = true;
+          currentGroup.appendChild(opt);
+        } else {
+          const indent = '  '.repeat(z.niveau - 1);
+          const opt = document.createElement('option');
+          opt.value = z.slug;
+          opt.textContent = indent + z.nom;
+          if (z.slug === currentVal) opt.selected = true;
+          // Ajouter dans le bon groupe (parent direct ou groupe courant)
+          if (currentGroup) {
+            currentGroup.appendChild(opt);
+          } else {
+            sel.appendChild(opt);
+          }
+        }
+      });
+    } else {
+      // Select plat
+      (data.slugs || []).forEach(slug => {
+        const opt = document.createElement('option');
+        opt.value = slug;
+        opt.textContent = slug;
+        if (slug === currentVal) opt.selected = true;
+        sel.appendChild(opt);
+      });
+    }
+  } catch (e) {
+    sel.innerHTML = '<option value="">Erreur chargement</option>';
+  }
+}
+
+/** Appende une nouvelle entrée dans une queue YAML via /api/yaml/append. */
+async function _appendYamlQueue(wrapper, yamlPath, statusEl) {
+  const entry = {};
+
+  wrapper.querySelectorAll('[data-form-key]').forEach(el => {
+    const key = el.dataset.formKey;
+    if (!key) return;
+
+    if (el.classList.contains('yaml-chips')) {
+      const active = [...el.querySelectorAll('.yaml-chip.active')].map(c => c.dataset.value);
+      if (active.length > 0) entry[key] = active;
+      // Si vide → ne pas inclure (null = défaut dans le script)
+    } else if (el.tagName === 'SELECT') {
+      if (el.value !== '') entry[key] = el.value;
+    } else if (el.tagName === 'INPUT' && el.type === 'number') {
+      if (el.value !== '') entry[key] = Number(el.value);
+    } else if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+      if (el.value.trim() !== '') entry[key] = el.value.trim();
+    }
+  });
+
+  // Validation minimale côté client
+  const required = wrapper.querySelectorAll('[data-form-key]:not([data-optional])');
+  // (la validation stricte est faite par le script Python)
+
+  try {
+    const res = await fetch('/api/yaml/append', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ path: yamlPath, entry }),
+    });
+    const data = await res.json();
+    if (data.ok) {
+      showYamlStatus(statusEl, 'ok', `✓ Ajouté (${data.queue_length} entrée${data.queue_length > 1 ? 's' : ''} en queue)`);
+      // Réinitialiser le formulaire
+      wrapper.querySelectorAll('[data-form-key]').forEach(el => {
+        if (el.classList.contains('yaml-chips')) {
+          el.querySelectorAll('.yaml-chip').forEach(c => c.classList.remove('active'));
+        } else if (el.tagName === 'SELECT') {
+          el.selectedIndex = 0;
+        } else if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+          el.value = '';
+        }
+      });
+    } else {
+      showYamlStatus(statusEl, 'error', `Erreur : ${data.error}`);
+    }
+  } catch (e) {
+    showYamlStatus(statusEl, 'error', `Erreur réseau : ${e.message}`);
+  }
+}
+
+// ══════════════════════════════════════════════════
+// DOUBLE SELECT ZONE 2098 / PAYS 2026
+// ══════════════════════════════════════════════════
+
+/**
+ * Construit un groupe double select mutuellement exclusif :
+ * - Select 1 : Zone 2098 (hiérarchique)
+ * - Select 2 : Pays 2026 → lookup zone 2098
+ * La valeur finale dans data-form-key est toujours un slug zone 2098.
+ */
+async function buildZoneDoubleSelect(field, currentVal, scenario) {
+  const wrapper = document.createElement('div');
+  wrapper.className = 'zone-double-select';
+
+  // ── Onglets de mode ──
+  const tabs = document.createElement('div');
+  tabs.className = 'zone-tabs';
+
+  const tab2098 = document.createElement('button');
+  tab2098.type = 'button';
+  tab2098.className = 'zone-tab active';
+  tab2098.textContent = 'Zone 2098';
+
+  const tab2026 = document.createElement('button');
+  tab2026.type = 'button';
+  tab2026.className = 'zone-tab';
+  tab2026.textContent = 'Pays 2026';
+
+  tabs.appendChild(tab2098);
+  tabs.appendChild(tab2026);
+  wrapper.appendChild(tabs);
+
+  // ── Panel Zone 2098 ──
+  const panel2098 = document.createElement('div');
+  panel2098.className = 'zone-panel';
+
+  const sel2098 = document.createElement('select');
+  sel2098.dataset.formKey = field.key;
+  sel2098.dataset.slugType = 'zones_hier';
+  sel2098.innerHTML = '<option value="">Chargement…</option>';
+  panel2098.appendChild(sel2098);
+  wrapper.appendChild(panel2098);
+
+  // ── Panel Pays 2026 ──
+  const panel2026 = document.createElement('div');
+  panel2026.className = 'zone-panel';
+  panel2026.style.display = 'none';
+
+  const sel2026 = document.createElement('select');
+  sel2026.className = 'zone-pays-select';
+  sel2026.innerHTML = '<option value="">— Choisir un pays —</option>';
+  panel2026.appendChild(sel2026);
+
+  const zoneResult = document.createElement('div');
+  zoneResult.className = 'zone-lookup-result';
+  zoneResult.style.display = 'none';
+  panel2026.appendChild(zoneResult);
+
+  wrapper.appendChild(panel2026);
+
+  // ── Charger zones 2098 ──
+  await _loadZoneSelect(sel2098, 'zones_hier', scenario, currentVal);
+
+  // ── Charger liste pays 2026 depuis zones_pays.json via API ──
+  try {
+    const res = await fetch('/api/zones/pays-liste');
+    const data = await res.json();
+    (data.pays || []).forEach(pays => {
+      const opt = document.createElement('option');
+      opt.value = pays;
+      opt.textContent = pays;
+      sel2026.appendChild(opt);
+    });
+  } catch (e) {
+    const opt = document.createElement('option');
+    opt.value = '';
+    opt.textContent = 'Erreur chargement';
+    sel2026.appendChild(opt);
+  }
+
+  // ── Event : sélection pays 2026 → lookup ──
+  sel2026.addEventListener('change', async () => {
+    const pays = sel2026.value;
+    if (!pays) {
+      zoneResult.style.display = 'none';
+      sel2098.value = '';
+      return;
+    }
+
+    zoneResult.style.display = 'block';
+    zoneResult.className = 'zone-lookup-result loading';
+    zoneResult.textContent = 'Recherche…';
+
+    const sc = _getCurrentScenario(wrapper);
+    try {
+      const res = await fetch(`/api/zones/lookup?pays=${encodeURIComponent(pays)}&scenario=${sc}`);
+      const data = await res.json();
+
+      if (data.zone) {
+        zoneResult.className = 'zone-lookup-result found';
+        zoneResult.textContent = `→ ${data.zone}`;
+        // Pré-remplir le select 2098 avec la zone trouvée
+        sel2098.value = data.zone;
+        // Si la valeur n'existe pas dans le select, l'ajouter temporairement
+        if (!sel2098.value) {
+          const opt = document.createElement('option');
+          opt.value = data.zone;
+          opt.textContent = `${data.zone} ✓`;
+          sel2098.appendChild(opt);
+          sel2098.value = data.zone;
+        }
+      } else {
+        zoneResult.className = 'zone-lookup-result not-found';
+        zoneResult.textContent = `⚠ Aucune zone 2098 pour "${pays}" dans ce scénario — zone_hint laissé vide`;
+        sel2098.value = '';
+      }
+    } catch (e) {
+      zoneResult.className = 'zone-lookup-result error';
+      zoneResult.textContent = `Erreur : ${e.message}`;
+    }
+  });
+
+  // ── Onglets exclusifs ──
+  tab2098.addEventListener('click', () => {
+    tab2098.classList.add('active');
+    tab2026.classList.remove('active');
+    panel2098.style.display = 'block';
+    panel2026.style.display = 'none';
+  });
+
+  tab2026.addEventListener('click', () => {
+    tab2026.classList.add('active');
+    tab2098.classList.remove('active');
+    panel2098.style.display = 'none';
+    panel2026.style.display = 'block';
+  });
+
+  return wrapper;
+}
+
+/** Trouve le scénario actif depuis le formulaire parent ou la config globale. */
+function _getCurrentScenario(wrapper) {
+  // Cherche un select scenario dans le même formulaire guidé
+  const form = wrapper.closest('.yaml-form-panel, .yaml-form-zone');
+  if (form) {
+    const scSel = form.querySelector('[data-form-key="scenario"], [data-form-key="scenario_ref"]');
+    if (scSel && scSel.value) return scSel.value;
+  }
+  return State.config?.default_scenario || 'breakdown';
 }

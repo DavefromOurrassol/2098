@@ -202,8 +202,90 @@
       },
       {
         "key": "thematique",
-        "type": "text",
-        "label": "Thématique"
+        "type": "select",
+        "label": "Thématique",
+        "choices": [
+          {
+            "value": "actualites_a_la_une",
+            "label": "actualites_a_la_une"
+          },
+          {
+            "value": "politique",
+            "label": "politique"
+          },
+          {
+            "value": "economie_finance",
+            "label": "economie_finance"
+          },
+          {
+            "value": "environnement_climat",
+            "label": "environnement_climat"
+          },
+          {
+            "value": "sciences_technologies",
+            "label": "sciences_technologies"
+          },
+          {
+            "value": "societe",
+            "label": "societe"
+          },
+          {
+            "value": "culture",
+            "label": "culture"
+          },
+          {
+            "value": "international",
+            "label": "international"
+          },
+          {
+            "value": "musique",
+            "label": "musique"
+          },
+          {
+            "value": "sports",
+            "label": "sports"
+          },
+          {
+            "value": "faits_divers",
+            "label": "faits_divers"
+          },
+          {
+            "value": "opinions_editoriaux",
+            "label": "opinions_editoriaux"
+          },
+          {
+            "value": "lifestyle_art_de_vivre",
+            "label": "lifestyle_art_de_vivre"
+          },
+          {
+            "value": "sante",
+            "label": "sante"
+          },
+          {
+            "value": "education",
+            "label": "education"
+          },
+          {
+            "value": "histoire_patrimoine",
+            "label": "histoire_patrimoine"
+          },
+          {
+            "value": "medias_communication",
+            "label": "medias_communication"
+          },
+          {
+            "value": "religion_spiritualite",
+            "label": "religion_spiritualite"
+          },
+          {
+            "value": "petites_annonces_services",
+            "label": "petites_annonces_services"
+          },
+          {
+            "value": "meteo",
+            "label": "meteo"
+          }
+        ]
       },
       {
         "key": "ligne_editoriale",
@@ -224,33 +306,54 @@
         "key": "zone_slug",
         "type": "slug_select",
         "label": "Zone",
-        "slug_type": "zones",
+        "slug_type": "zones_hier",
         "optional": true
       },
       {
-        "key": "longueur",
+        "key": "article.longueur",
         "type": "select",
         "label": "Longueur",
         "choices": [
           {
-            "value": "court",
-            "label": "Court (~300 mots)"
+            "value": "breve",
+            "label": "Brève (200-400 mots)"
           },
           {
-            "value": "moyen",
-            "label": "Moyen (~600 mots)"
+            "value": "analyse",
+            "label": "Analyse (600-900 mots)"
           },
           {
-            "value": "long",
-            "label": "Long (~1000 mots)"
+            "value": "reportage",
+            "label": "Reportage (700-1000 mots)"
+          },
+          {
+            "value": "chronique",
+            "label": "Chronique (400-700 mots)"
+          },
+          {
+            "value": "editorial",
+            "label": "Éditorial (500-800 mots)"
+          },
+          {
+            "value": "auto",
+            "label": "Auto (format naturel)"
           }
-        ]
+        ],
+        "default": "analyse"
       },
       {
-        "key": "angle_specifique",
+        "key": "article.angle_specifique",
         "type": "text",
         "label": "Angle spécifique",
-        "optional": true
+        "optional": true,
+        "placeholder": "ex : focus sur les réfugiés climatiques"
+      },
+      {
+        "key": "article.titre_suggere",
+        "type": "text",
+        "label": "Titre suggéré",
+        "optional": true,
+        "placeholder": "Laisser vide = Claude choisit"
       }
     ],
     "yaml_files": [
@@ -270,13 +373,6 @@
     "requires": [],
     "options": [
       {
-        "flag": "--scenario",
-        "type": "select",
-        "label": "Scénario",
-        "source": "config_scenarios",
-        "optional": true
-      },
-      {
         "flag": "--validate-first",
         "type": "checkbox",
         "label": "Valider d'abord",
@@ -288,6 +384,109 @@
         "type": "checkbox",
         "label": "Dry run",
         "default": false
+      }
+    ],
+    "config_file": "config_series.yaml",
+    "config_fields": [
+      {
+        "key": "scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios"
+      },
+      {
+        "key": "ligne_editoriale",
+        "type": "ligne_select",
+        "label": "Ligne éditoriale",
+        "choices": [
+          {
+            "value": "pro_pouvoir",
+            "label": "Pro pouvoir"
+          },
+          {
+            "value": "opposition",
+            "label": "Opposition"
+          },
+          {
+            "value": "",
+            "label": "Aléatoire à chaque article"
+          }
+        ],
+        "default": ""
+      },
+      {
+        "key": "thematiques",
+        "type": "multi_select",
+        "label": "Thématiques",
+        "choices": [
+          "actualites_a_la_une",
+          "politique",
+          "economie_finance",
+          "environnement_climat",
+          "sciences_technologies",
+          "societe",
+          "culture",
+          "international",
+          "musique",
+          "sports",
+          "faits_divers",
+          "opinions_editoriaux",
+          "lifestyle_art_de_vivre",
+          "sante",
+          "education",
+          "histoire_patrimoine",
+          "medias_communication",
+          "religion_spiritualite",
+          "petites_annonces_services",
+          "meteo"
+        ]
+      },
+      {
+        "key": "articles_par_thematique",
+        "type": "number",
+        "label": "Articles par thématique",
+        "min": 1,
+        "max": 20,
+        "default": 1
+      },
+      {
+        "key": "longueur",
+        "type": "select",
+        "label": "Longueur",
+        "choices": [
+          {
+            "value": "breve",
+            "label": "Brève (200-400 mots)"
+          },
+          {
+            "value": "analyse",
+            "label": "Analyse (600-900 mots)"
+          },
+          {
+            "value": "reportage",
+            "label": "Reportage (700-1000 mots)"
+          },
+          {
+            "value": "chronique",
+            "label": "Chronique (400-700 mots)"
+          },
+          {
+            "value": "editorial",
+            "label": "Éditorial (500-800 mots)"
+          },
+          {
+            "value": "auto",
+            "label": "Auto (format naturel)"
+          }
+        ],
+        "default": "auto"
+      },
+      {
+        "key": "angle_specifique",
+        "type": "text",
+        "label": "Angle spécifique",
+        "optional": true,
+        "placeholder": "Laisser vide = Claude choisit librement"
       }
     ],
     "yaml_files": [
@@ -381,7 +580,167 @@
     "yaml_files": [
       {
         "path": "entites_custom/queue.yaml",
-        "label": "queue.yaml"
+        "label": "entites_custom/queue.yaml"
+      }
+    ],
+    "config_file": "entites_custom/queue.yaml",
+    "config_fields": [
+      {
+        "key": "nom",
+        "type": "text",
+        "label": "Nom",
+        "placeholder": "ex : Le Cartographe Silencieux"
+      },
+      {
+        "key": "category",
+        "type": "select",
+        "label": "Catégorie",
+        "choices": [
+          {
+            "value": "IA",
+            "label": "IA"
+          },
+          {
+            "value": "organisation",
+            "label": "organisation"
+          },
+          {
+            "value": "entreprise",
+            "label": "entreprise"
+          },
+          {
+            "value": "institution",
+            "label": "institution"
+          },
+          {
+            "value": "infrastructure",
+            "label": "infrastructure"
+          },
+          {
+            "value": "réseau",
+            "label": "réseau"
+          },
+          {
+            "value": "humain",
+            "label": "humain"
+          },
+          {
+            "value": "système",
+            "label": "système"
+          },
+          {
+            "value": "hybride",
+            "label": "hybride"
+          },
+          {
+            "value": "autre",
+            "label": "autre"
+          },
+          {
+            "value": "média",
+            "label": "média"
+          },
+          {
+            "value": "territoire",
+            "label": "territoire"
+          }
+        ]
+      },
+      {
+        "key": "role",
+        "type": "textarea",
+        "label": "Rôle (contrainte dure)",
+        "placeholder": "Décris le rôle dans le scénario de référence — sera repris tel quel"
+      },
+      {
+        "key": "etat",
+        "type": "select",
+        "label": "État",
+        "choices": [
+          {
+            "value": "actif",
+            "label": "actif"
+          },
+          {
+            "value": "disparu",
+            "label": "disparu"
+          },
+          {
+            "value": "transformé",
+            "label": "transformé"
+          },
+          {
+            "value": "clandestin",
+            "label": "clandestin"
+          },
+          {
+            "value": "historique",
+            "label": "historique"
+          },
+          {
+            "value": "mythifié",
+            "label": "mythifié"
+          }
+        ]
+      },
+      {
+        "key": "scenario_ref",
+        "type": "select",
+        "label": "Scénario de référence",
+        "choices": [
+          {
+            "value": "breakdown",
+            "label": "breakdown"
+          },
+          {
+            "value": "fortress_world",
+            "label": "fortress_world"
+          },
+          {
+            "value": "new_sustainability",
+            "label": "new_sustainability"
+          },
+          {
+            "value": "eco_communalism",
+            "label": "eco_communalism"
+          },
+          {
+            "value": "policy_reform",
+            "label": "policy_reform"
+          },
+          {
+            "value": "reference",
+            "label": "reference"
+          }
+        ]
+      },
+      {
+        "key": "scenario_hint",
+        "type": "multi_select",
+        "label": "Scénarios à couvrir",
+        "choices": [
+          "breakdown",
+          "fortress_world",
+          "new_sustainability",
+          "eco_communalism",
+          "policy_reform",
+          "reference"
+        ],
+        "description": "Laisser vide = les 6 scénarios par défaut"
+      },
+      {
+        "key": "zone_hint",
+        "type": "slug_select",
+        "slug_type": "zones_hier",
+        "label": "Zone géographique (hint)",
+        "optional": true
+      },
+      {
+        "key": "source",
+        "type": "text",
+        "label": "Source",
+        "optional": true,
+        "placeholder": "ex : idee_2026-06"
       }
     ]
   },
@@ -423,8 +782,135 @@
     ],
     "yaml_files": [
       {
-        "path": "entites_custom/queue.yaml",
-        "label": "queue.yaml"
+        "path": "evenements_custom/queue.yaml",
+        "label": "evenements_custom/queue.yaml"
+      }
+    ],
+    "config_file": "evenements_custom/queue.yaml",
+    "config_fields": [
+      {
+        "key": "id",
+        "type": "text",
+        "label": "ID",
+        "placeholder": "ex : guerre_israelo_iranienne"
+      },
+      {
+        "key": "description",
+        "type": "textarea",
+        "label": "Description",
+        "placeholder": "Décris l'événement en langage naturel (quelques phrases)"
+      },
+      {
+        "key": "portee",
+        "type": "select",
+        "label": "Portée",
+        "choices": [
+          {
+            "value": "locale",
+            "label": "locale"
+          },
+          {
+            "value": "regionale",
+            "label": "regionale"
+          },
+          {
+            "value": "continentale",
+            "label": "continentale"
+          },
+          {
+            "value": "globale",
+            "label": "globale"
+          }
+        ]
+      },
+      {
+        "key": "date_approximative",
+        "type": "number",
+        "label": "Date approximative",
+        "min": 2025,
+        "max": 2097,
+        "default": 2035
+      },
+      {
+        "key": "intensite",
+        "type": "select",
+        "label": "Intensité",
+        "choices": [
+          {
+            "value": "faible",
+            "label": "faible"
+          },
+          {
+            "value": "modérée",
+            "label": "modérée"
+          },
+          {
+            "value": "forte",
+            "label": "forte"
+          },
+          {
+            "value": "majeure",
+            "label": "majeure"
+          }
+        ]
+      },
+      {
+        "key": "scenarios",
+        "type": "multi_select",
+        "label": "Scénarios",
+        "choices": [
+          "breakdown",
+          "fortress_world",
+          "new_sustainability",
+          "eco_communalism",
+          "policy_reform",
+          "reference"
+        ],
+        "description": "Laisser vide = les 6 scénarios par défaut"
+      },
+      {
+        "key": "variables_hint",
+        "type": "multi_select",
+        "label": "Variables impactées (hint)",
+        "choices": [
+          "systeme_economique_redistribution",
+          "gouvernance_institutions",
+          "geopolitique_conflits",
+          "valeurs_culture_tempo_sociale",
+          "organisation_territoires",
+          "sante_biotechnologies",
+          "frontieres_du_systeme",
+          "technologie_information",
+          "climat_environnement_global",
+          "energie_ressources_critiques",
+          "demographie_mobilite_humaine",
+          "systemes_productifs_travail"
+        ],
+        "optional": true,
+        "description": "Optionnel — Claude choisit si vide"
+      },
+      {
+        "key": "variables_hint_count",
+        "type": "number",
+        "label": "Nb variables max",
+        "min": 1,
+        "max": 4,
+        "default": 2,
+        "optional": true
+      },
+      {
+        "key": "zone_hint",
+        "type": "slug_select",
+        "slug_type": "zones_hier",
+        "label": "Zone géographique (hint)",
+        "optional": true
+      },
+      {
+        "key": "source",
+        "type": "text",
+        "label": "Source",
+        "optional": true,
+        "placeholder": "ex : actualite_2026-06"
       }
     ]
   },
@@ -446,8 +932,99 @@
     ],
     "yaml_files": [
       {
-        "path": "entites_custom/queue.yaml",
-        "label": "queue.yaml"
+        "path": "signaux_custom/queue.yaml",
+        "label": "signaux_custom/queue.yaml"
+      }
+    ],
+    "config_file": "signaux_custom/queue.yaml",
+    "config_fields": [
+      {
+        "key": "id",
+        "type": "text",
+        "label": "ID",
+        "placeholder": "ex : chatbots_therapeutes_remboursement"
+      },
+      {
+        "key": "description",
+        "type": "textarea",
+        "label": "Description (signal faible)",
+        "placeholder": "Décris l'observation d'actualité ou l'idée narrative"
+      },
+      {
+        "key": "variable_hint",
+        "type": "select",
+        "label": "Variable hint (optionnel)",
+        "choices": [
+          {
+            "value": "",
+            "label": "— Claude choisit —"
+          },
+          {
+            "value": "systeme_economique_redistribution",
+            "label": "systeme_economique_redistribution"
+          },
+          {
+            "value": "gouvernance_institutions",
+            "label": "gouvernance_institutions"
+          },
+          {
+            "value": "geopolitique_conflits",
+            "label": "geopolitique_conflits"
+          },
+          {
+            "value": "valeurs_culture_tempo_sociale",
+            "label": "valeurs_culture_tempo_sociale"
+          },
+          {
+            "value": "organisation_territoires",
+            "label": "organisation_territoires"
+          },
+          {
+            "value": "sante_biotechnologies",
+            "label": "sante_biotechnologies"
+          },
+          {
+            "value": "frontieres_du_systeme",
+            "label": "frontieres_du_systeme"
+          },
+          {
+            "value": "technologie_information",
+            "label": "technologie_information"
+          },
+          {
+            "value": "climat_environnement_global",
+            "label": "climat_environnement_global"
+          },
+          {
+            "value": "energie_ressources_critiques",
+            "label": "energie_ressources_critiques"
+          },
+          {
+            "value": "demographie_mobilite_humaine",
+            "label": "demographie_mobilite_humaine"
+          },
+          {
+            "value": "systemes_productifs_travail",
+            "label": "systemes_productifs_travail"
+          }
+        ],
+        "optional": true
+      },
+      {
+        "key": "variable_hint_count",
+        "type": "number",
+        "label": "Nb variables max",
+        "min": 1,
+        "max": 4,
+        "default": 2,
+        "optional": true
+      },
+      {
+        "key": "source",
+        "type": "text",
+        "label": "Source",
+        "optional": true,
+        "placeholder": "ex : actualite_2026-06"
       }
     ]
   },
