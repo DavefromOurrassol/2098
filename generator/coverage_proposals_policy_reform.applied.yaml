@@ -1,0 +1,421 @@
+scenario: policy_reform
+instructions: 'Vérifiez chaque affectation. Mettez ''valide: false'' pour rejeter
+  une proposition. Pour action: absorber, vérifiez que zone_slug est cohérente. Pour
+  action: nouvelle_zone, vérifiez les champs de la zone. Lancez ensuite : python3
+  complete_geographie_coverage.py --scenario policy_reform --apply'
+affectations:
+- pays: France
+  action: absorber
+  zone_slug: hub_europeen_regulation
+  justification: La France, en tant que puissance européenne centrale, s'intègre naturellement
+    au Hub Européen de Régulation, cœur institutionnel de la gouvernance technocratique
+    mondiale.
+  valide: true
+- pays: Royaume-Uni
+  action: nouvelle_zone
+  justification: Le Royaume-Uni, malgré son histoire européenne, a développé une trajectoire
+    autonome post-Brexit, distincte des hubs continentaux.
+  zone:
+    slug: royaume_uni_autonome
+    nom: Royaume-Uni Autonome
+    niveau: 1
+    type: territoire_autonome
+    parent: null
+    statut: stable
+    description: Ancien membre de l'UE, le Royaume-Uni a consolidé son autonomie politique
+      et économique, devenant un acteur clé mais indépendant dans la gouvernance mondiale.
+      Londres reste un centre financier majeur.
+    tensions_internes: Tensions entre centralisation londonienne et dévolution aux
+      nations constitutives (Écosse, Pays de Galles, Irlande du Nord).
+    periode_transition: 2030-2060
+    evenement_transition: null
+    lieux_emblematiques:
+    - Londres
+    - Édimbourg
+    - Cardiff
+    relations:
+      allies:
+      - hub_europeen_regulation
+      - europe_nord_ouest
+      rivaux: []
+    sources_attestees: []
+    origine_reelle:
+    - entite: Royaume-Uni
+      type_entite: pays
+      portion: null
+  valide: true
+- pays: Angleterre
+  action: absorber
+  zone_slug: royaume_uni_autonome
+  justification: L'Angleterre fait partie intégrante du Royaume-Uni Autonome.
+  valide: false
+  avertissement: 'Slug inconnu : royaume_uni_autonome'
+- pays: Écosse
+  action: absorber
+  zone_slug: royaume_uni_autonome
+  justification: L'Écosse, bien que dotée d'une forte autonomie, reste liée au Royaume-Uni
+    Autonome dans ce scénario.
+  valide: false
+  avertissement: 'Slug inconnu : royaume_uni_autonome'
+- pays: Pays de Galles
+  action: absorber
+  zone_slug: royaume_uni_autonome
+  justification: Le Pays de Galles est intégré au Royaume-Uni Autonome, malgré des
+    tensions internes.
+  valide: false
+  avertissement: 'Slug inconnu : royaume_uni_autonome'
+- pays: Espagne
+  action: absorber
+  zone_slug: hub_europeen_regulation
+  justification: L'Espagne, en tant que puissance européenne majeure, s'aligne sur
+    le Hub Européen de Régulation pour sa stabilité institutionnelle.
+  valide: true
+- pays: Portugal
+  action: absorber
+  zone_slug: hub_europeen_regulation
+  justification: Le Portugal, historiquement lié à l'Europe de l'Ouest, rejoint le
+    Hub Européen de Régulation pour des raisons économiques et politiques.
+  valide: true
+- pays: Autriche
+  action: absorber
+  zone_slug: hub_europeen_regulation
+  justification: L'Autriche, cœur de l'Europe centrale, s'intègre au Hub Européen
+    de Régulation en raison de son rôle dans les institutions technocratiques.
+  valide: true
+- pays: Pologne
+  action: absorber
+  zone_slug: espace_eurasiatique
+  justification: La Pologne, frontalière avec l'espace eurasiatique, a basculé vers
+    ce bloc en raison de son alignement économique et sécuritaire avec la Russie et
+    la Chine.
+  valide: true
+- pays: Suède
+  action: absorber
+  zone_slug: europe_nord_ouest
+  justification: La Suède, proche géographiquement et culturellement des Pays-Bas
+    et de l'Allemagne, rejoint l'Europe du Nord-Ouest.
+  valide: true
+- pays: Norvège
+  action: absorber
+  zone_slug: europe_nord_ouest
+  justification: La Norvège, malgré son histoire de neutralité, s'intègre à l'Europe
+    du Nord-Ouest pour des raisons économiques et logistiques.
+  valide: true
+- pays: Danemark
+  action: absorber
+  zone_slug: europe_nord_ouest
+  justification: Le Danemark, membre historique des coopérations nord-européennes,
+    rejoint l'Europe du Nord-Ouest.
+  valide: true
+- pays: Islande
+  action: absorber
+  zone_slug: europe_nord_ouest
+  justification: Proximité géographique et culturelle avec l'Europe du Nord-Ouest,
+    intégration dans les réseaux technocratiques européens.
+  valide: true
+- pays: Grèce
+  action: absorber
+  zone_slug: hub_europeen_regulation
+  justification: Intégration dans le cœur institutionnel européen, notamment via Genève
+    et La Haye.
+  valide: true
+- pays: Hongrie
+  action: absorber
+  zone_slug: hub_europeen_regulation
+  justification: Alignement avec les structures de gouvernance technocratique centrale
+    en Europe.
+  valide: true
+- pays: République tchèque
+  action: absorber
+  zone_slug: europe_nord_ouest
+  justification: Proximité avec l'Allemagne et les Pays-Bas, intégration économique
+    et politique.
+  valide: true
+- pays: Roumanie
+  action: absorber
+  zone_slug: espace_eurasiatique
+  justification: Position géostratégique entre l'Europe et l'Eurasie, alignement avec
+    la Russie et la Chine.
+  valide: true
+- pays: Serbie
+  action: absorber
+  zone_slug: hub_africain_gouvernance
+  justification: Rôle émergent dans les réseaux de gouvernance des ressources, liens
+    historiques avec l'Afrique via des partenariats sud-sud.
+  valide: true
+- pays: Ukraine
+  action: absorber
+  zone_slug: espace_eurasiatique
+  justification: Intégration dans le bloc eurasiatique après résolution des conflits,
+    alignement avec la Russie.
+  valide: true
+- pays: Géorgie
+  action: absorber
+  zone_slug: espace_eurasiatique
+  justification: Position caucasienne, intégration dans l'espace dominé par la Russie
+    et la Chine.
+  valide: true
+- pays: Azerbaïdjan
+  action: absorber
+  zone_slug: zone_moyen_orient_golfe
+  justification: Proximité géographique et liens énergétiques avec le Moyen-Orient
+    et le Golfe.
+  valide: true
+- pays: Ouzbékistan
+  action: absorber
+  zone_slug: espace_eurasiatique
+  justification: Intégration naturelle dans le bloc eurasiatique, alignement avec
+    la Chine et la Russie.
+  valide: true
+- pays: Kirghizistan
+  action: absorber
+  zone_slug: espace_eurasiatique
+  justification: Position en Asie centrale, membre historique des réseaux eurasiatiques.
+  valide: true
+- pays: Irak
+  action: absorber
+  zone_slug: zone_moyen_orient_golfe
+  justification: Appartenance géographique et politique au Moyen-Orient, intégré dans
+    les dynamiques du Golfe.
+  valide: true
+- pays: Turquie
+  action: absorber
+  zone_slug: zone_moyen_orient_golfe
+  justification: Géographiquement et politiquement liée au Moyen-Orient, intégrée
+    dans les dynamiques régionales du Golfe.
+  valide: true
+- pays: Yémen
+  action: absorber
+  zone_slug: zone_moyen_orient_golfe
+  justification: Fait partie du Moyen-Orient et du Golfe, concerné par les conflits
+    et alliances régionales.
+  valide: true
+- pays: Liban
+  action: absorber
+  zone_slug: zone_moyen_orient_golfe
+  justification: Pays du Levant, historiquement et stratégiquement lié au Moyen-Orient
+    et au Golfe.
+  valide: true
+- pays: Syrie
+  action: absorber
+  zone_slug: zone_moyen_orient_golfe
+  justification: Intégrée dans les dynamiques géopolitiques du Moyen-Orient et du
+    Golfe.
+  valide: true
+- pays: Qatar
+  action: absorber
+  zone_slug: zone_moyen_orient_golfe
+  justification: Membre historique du Golfe Persique, déjà couvert par la zone existante.
+  valide: true
+- pays: Nigeria
+  action: absorber
+  zone_slug: bloc_souverainiste_non_signataire
+  justification: Pays africain majeur du Sud Global, aligné sur les dynamiques dissidentes
+    du bloc.
+  valide: true
+- pays: Afrique du Sud
+  action: nouvelle_zone
+  justification: Pôle économique et politique distinct en Afrique australe, non couvert
+    par les zones existantes.
+  zone:
+    slug: afrique_australe_reformee
+    nom: Afrique Australe Réformée
+    niveau: 1
+    type: territoire_autonome
+    parent: null
+    statut: stable
+    description: Zone économique et politique autonome, héritière des réformes post-2050
+      en Afrique du Sud. Centre de gouvernance régionale et hub technologique.
+    tensions_internes: Inégalités sociales persistantes, tensions entre élites technocratiques
+      et populations marginalisées.
+    periode_transition: 2050-2075
+    evenement_transition: null
+    lieux_emblematiques:
+    - Le Cap
+    - Johannesburg
+    - Prétoria
+    relations:
+      allies:
+      - hub_africain_gouvernance
+      rivaux:
+      - bloc_souverainiste_non_signataire
+    sources_attestees: []
+    origine_reelle:
+    - entite: Afrique du Sud
+      type_entite: pays
+      portion: null
+  valide: true
+- pays: Éthiopie
+  action: absorber
+  zone_slug: hub_africain_gouvernance
+  justification: Pays clé en Afrique de l'Est, aligné sur les dynamiques de gouvernance
+    régionale du hub Nairobi-Kigali.
+  valide: true
+- pays: Ghana
+  action: absorber
+  zone_slug: hub_africain_gouvernance
+  justification: Intégration dans les réseaux de gouvernance africaine, proche des
+    pôles Nairobi et Kigali.
+  valide: true
+- pays: Maroc
+  action: nouvelle_zone
+  justification: Position géopolitique unique en Afrique du Nord, non couverte par
+    les zones existantes.
+  zone:
+    slug: maghreb_atlantique
+    nom: Maghreb Atlantique
+    niveau: 1
+    type: region
+    parent: null
+    statut: stable
+    description: Région nord-africaine tournée vers l'Atlantique, centre de commerce
+      et de transition énergétique. Allié historique de l'Europe mais autonome.
+    tensions_internes: Tensions entre modernistes et traditionalistes, gestion des
+      ressources en eau.
+    periode_transition: 2040-2065
+    evenement_transition: null
+    lieux_emblematiques:
+    - Casablanca
+    - Rabat
+    - Tanger
+    relations:
+      allies:
+      - europe_nord_ouest
+      - hub_europeen_regulation
+      rivaux:
+      - bloc_souverainiste_non_signataire
+    sources_attestees: []
+    origine_reelle:
+    - entite: Maroc
+      type_entite: pays
+      portion: null
+  valide: true
+- pays: Algérie
+  action: absorber
+  zone_slug: maghreb_atlantique
+  justification: Intégration naturelle dans la dynamique maghrébine atlantique.
+  valide: false
+  avertissement: 'Slug inconnu : maghreb_atlantique'
+- pays: Tunisie
+  action: absorber
+  zone_slug: maghreb_atlantique
+  justification: Fait partie du Maghreb, alignée sur les dynamiques régionales atlantiques.
+  valide: false
+  avertissement: 'Slug inconnu : maghreb_atlantique'
+- pays: Burkina Faso
+  action: absorber
+  zone_slug: bloc_souverainiste_non_signataire
+  justification: Pays sahélien aligné sur la dynamique de résistance du Sud Global,
+    proche du Niger et du Mali déjà membres.
+  valide: true
+- pays: Mozambique
+  action: absorber
+  zone_slug: hub_africain_gouvernance
+  justification: Intégration dans le pôle africain de gouvernance des ressources,
+    en lien avec les dynamiques régionales est-africaines.
+  valide: true
+- pays: Zimbabwe
+  action: absorber
+  zone_slug: hub_africain_gouvernance
+  justification: Proximité géographique et économique avec le Hub Africain, notamment
+    via le Congo et l'Afrique australe.
+  valide: true
+- pays: Soudan
+  action: absorber
+  zone_slug: bloc_souverainiste_non_signataire
+  justification: Pays du Sud Global avec des tensions géopolitiques fortes, aligné
+    sur la dynamique dissidente sahélienne.
+  valide: true
+- pays: Vietnam
+  action: absorber
+  zone_slug: espace_eurasiatique
+  justification: Intégration dans le bloc eurasiatique en raison de son rôle industriel
+    et de sa proximité avec la Chine.
+  valide: true
+- pays: Bangladesh
+  action: absorber
+  zone_slug: espace_eurasiatique
+  justification: Lien économique et politique fort avec l'Inde et la Chine, membres
+    de l'Espace Eurasiatique.
+  valide: true
+- pays: Pakistan
+  action: absorber
+  zone_slug: espace_eurasiatique
+  justification: Proximité stratégique avec la Chine et l'Inde, intégration dans le
+    modèle technocratique eurasiatique.
+  valide: true
+- pays: Mongolie
+  action: absorber
+  zone_slug: espace_eurasiatique
+  justification: Pays frontalier de la Chine et de la Russie, naturellement inclus
+    dans la dynamique eurasiatique.
+  valide: true
+- pays: Mexique
+  action: absorber
+  zone_slug: ameriques_reformees
+  justification: Intégration dans le bloc américain réformé, en raison de sa proximité
+    géographique et économique avec les États-Unis.
+  valide: true
+- pays: Colombie
+  action: absorber
+  zone_slug: bloc_souverainiste_non_signataire
+  justification: Alignement avec les dynamiques andines dissidentes (Brésil, Argentine,
+    Bolivie déjà membres).
+  valide: true
+- pays: Pérou
+  action: absorber
+  zone_slug: bloc_souverainiste_non_signataire
+  justification: Membre historique des mouvements souverainistes andins, proche de
+    la Bolivie et du Brésil.
+  valide: true
+- pays: Venezuela
+  action: absorber
+  zone_slug: bloc_souverainiste_non_signataire
+  justification: Pays du Sud Global avec une histoire de résistance aux hégémonies,
+    aligné sur le bloc dissident.
+  valide: true
+- pays: Chili
+  action: absorber
+  zone_slug: bloc_souverainiste_non_signataire
+  justification: Le Chili, pays andin, s'aligne avec la logique du Sud Global dissident
+    et la résistance aux réformes technocratiques mondiales.
+  valide: true
+- pays: Arctique
+  action: nouvelle_zone
+  justification: L'Arctique, zone transnationale sans État souverain clair, nécessite
+    une gouvernance spécifique liée aux enjeux climatiques et géopolitiques uniques.
+  zone:
+    slug: arctique_autonome
+    nom: Arctique (Zone Autonome des Ressources Polaires)
+    niveau: 1
+    type: territoire_autonome
+    parent: null
+    statut: emergent
+    description: Zone de gouvernance partagée et contestée, centrée sur l'exploitation
+      des ressources polaires et la régulation des routes maritimes arctiques. Souvent
+      en tension entre les puissances eurasiatiques et les Amériques Réformées.
+    tensions_internes: Conflits d'influence entre l'Espace Eurasiatique et les Amériques
+      Réformées, pression des acteurs privés sur les ressources.
+    periode_transition: 2060-2085
+    evenement_transition: Effondrement des traités arctiques de 2058
+    lieux_emblematiques:
+    - Pôle Nord
+    - Passage du Nord-Ouest
+    - Svalbard
+    relations:
+      allies: []
+      rivaux:
+      - espace_eurasiatique
+      - ameriques_reformees
+    sources_attestees: []
+    origine_reelle:
+    - entite: Arctique
+      type_entite: region
+      portion: null
+  valide: true
+- pays: Polynésie française
+  action: absorber
+  zone_slug: zone_pacifique_industrielle
+  justification: La Polynésie française, territoire pacifique, s'intègre naturellement
+    dans la dynamique industrielle et logistique de la Zone Pacifique Industrielle.
+  valide: true

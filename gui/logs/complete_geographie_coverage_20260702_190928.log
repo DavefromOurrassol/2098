@@ -1,0 +1,113 @@
+============================================================
+  OURRASSOL 2098 — Couverture géographique complète
+============================================================
+
+=== reference ===
+  43 pays sans zone : Royaume-Uni, Angleterre, Écosse, Pays de Galles, Pays-Bas, Autriche, Pologne, Grèce, Hongrie, République tchèque, Roumanie, Serbie, Ukraine, Azerbaïdjan, Israël, Iran, Arabie saoudite, Émirats arabes unis, Irak, Turquie, Yémen, Liban, Syrie, Qatar, Koweït, Nigeria, Afrique du Sud, Ghana, Maroc, Algérie, Tunisie, Rwanda, Mozambique, Zimbabwe, Chine, Philippines, Canada, Pérou, Bolivie, Australie, Nouvelle-Zélande, Groenland, Polynésie française
+  Batch 1/4 [0/43] : Royaume-Uni, Angleterre, Écosse, Pays de Galles, Pays-Bas, Autriche, Pologne, Grèce, Hongrie, République tchèque, Roumanie, Serbie
+    [llm] mistral (mistral-small) — entrée : 1514 | sortie : 1399
+  ✓ Absorbé : Royaume-Uni → europe_occidentale_reconstructee
+  ✓ Absorbé : Angleterre → europe_occidentale_reconstructee
+  ✓ Nouvelle zone N1 : ecosse_nordique_independante (Écosse Nordique Indépendante)
+  ✓ Nouvelle zone N1 : pays_de_galles_atlantique (Pays de Galles Atlantique)
+  ✓ Absorbé : Pays-Bas → europe_occidentale_reconstructee
+  ✓ Absorbé : Autriche → europe_occidentale_reconstructee
+  ✓ Absorbé : Pologne → bloc_eurasien_central
+  ✓ Absorbé : Grèce → union_africaine_resilience
+  ✓ Absorbé : Hongrie → pacte_des_souverains
+  ✓ Absorbé : République tchèque → europe_occidentale_reconstructee
+  ✓ Absorbé : Roumanie → union_africaine_resilience
+  ✓ Absorbé : Serbie → zones_grises_globales
+  [12/43] 10 absorbés, 2 nouvelles zones, 0 rejetés
+  Batch 2/4 [12/43] : Ukraine, Azerbaïdjan, Israël, Iran, Arabie saoudite, Émirats arabes unis, Irak, Turquie, Yémen, Liban, Syrie, Qatar
+    [llm] mistral (mistral-small) — entrée : 1678 | sortie : 1679
+  ✓ Absorbé : Ukraine → bloc_eurasien_central
+  ✓ Absorbé : Azerbaïdjan → indo_pacifique_emergent
+  ✓ Nouvelle zone N1 : israel_mediterranee_orientale (Israël (Pôle Méditerranéen Oriental))
+  ✓ Nouvelle zone N1 : bloc_persique_autonome (Bloc Persique Autonome)
+  ✓ Absorbé : Arabie saoudite → bloc_persique_autonome
+  ✓ Absorbé : Émirats arabes unis → indo_pacifique_emergent
+  ~ Déjà présent : Irak dans bloc_persique_autonome
+  ✓ Nouvelle zone N1 : turquie_eurasie_moyen_orient (Turquie (Pivot Eurasien-Moyen-Orient))
+  ✓ Absorbé : Yémen → zones_grises_globales
+  ✓ Absorbé : Liban → zones_grises_globales
+  ✓ Absorbé : Syrie → zones_grises_globales
+  ✓ Absorbé : Qatar → indo_pacifique_emergent
+  [24/43] 9 absorbés, 3 nouvelles zones, 0 rejetés
+  Batch 3/4 [24/43] : Koweït, Nigeria, Afrique du Sud, Ghana, Maroc, Algérie, Tunisie, Rwanda, Mozambique, Zimbabwe, Chine, Philippines
+    [llm] mistral (mistral-small) — entrée : 1911 | sortie : 835
+  ✓ Absorbé : Koweït → bloc_persique_autonome
+  ✓ Absorbé : Nigeria → union_africaine_resilience
+  ✓ Absorbé : Afrique du Sud → union_africaine_resilience
+  ✓ Absorbé : Ghana → union_africaine_resilience
+  ✓ Absorbé : Maroc → zones_grises_globales
+  ✓ Absorbé : Algérie → zones_grises_globales
+  ✓ Absorbé : Tunisie → zones_grises_globales
+  ✓ Absorbé : Rwanda → union_africaine_resilience
+  ✓ Absorbé : Mozambique → union_africaine_resilience
+  ✓ Absorbé : Zimbabwe → union_africaine_resilience
+  ✓ Absorbé : Chine → indo_pacifique_emergent
+  ✓ Absorbé : Philippines → indo_pacifique_emergent
+  [36/43] 12 absorbés, 0 nouvelles zones, 0 rejetés
+  Batch 4/4 [36/43] : Canada, Pérou, Bolivie, Australie, Nouvelle-Zélande, Groenland, Polynésie française
+    [llm] mistral (mistral-small) — entrée : 1930 | sortie : 750
+  ✓ Absorbé : Canada → ameriques_multipolaires
+  ✓ Absorbé : Pérou → ameriques_multipolaires
+  ✓ Absorbé : Bolivie → ameriques_multipolaires
+  ✓ Absorbé : Australie → indo_pacifique_emergent
+  ✓ Absorbé : Nouvelle-Zélande → indo_pacifique_emergent
+  ✓ Absorbé : Groenland → corridor_arctique_nordique
+  ✓ Nouvelle zone N1 : polynesie_francaise_insulaire (Polynésie Française (Archipel Insulaire Autonome))
+  [43/43] 6 absorbés, 1 nouvelles zones, 0 rejetés
+  Total : 37 absorbés, 6 nouvelles zones, 0 rejetés
+  → Sauvegarde : reference.md.bak
+  ✓ Écrit : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/geographie/reference.md
+    zones_pays.json : Royaume-Uni → europe_occidentale_reconstructee
+    zones_pays.json : Angleterre → europe_occidentale_reconstructee
+    zones_pays.json : Écosse → ecosse_nordique_independante
+    zones_pays.json : Pays de Galles → pays_de_galles_atlantique
+    zones_pays.json : Pays-Bas → europe_occidentale_reconstructee
+    zones_pays.json : Autriche → europe_occidentale_reconstructee
+    zones_pays.json : Pologne → bloc_eurasien_central
+    zones_pays.json : Grèce → union_africaine_resilience
+    zones_pays.json : Hongrie → pacte_des_souverains
+    zones_pays.json : République tchèque → europe_occidentale_reconstructee
+    zones_pays.json : Roumanie → union_africaine_resilience
+    zones_pays.json : Serbie → zones_grises_globales
+    zones_pays.json : Ukraine → bloc_eurasien_central
+    zones_pays.json : Azerbaïdjan → indo_pacifique_emergent
+    zones_pays.json : Israël → israel_mediterranee_orientale
+    zones_pays.json : Iran → bloc_persique_autonome
+    zones_pays.json : Arabie saoudite → bloc_persique_autonome
+    zones_pays.json : Émirats arabes unis → indo_pacifique_emergent
+    zones_pays.json : Irak → bloc_persique_autonome
+    zones_pays.json : Turquie → turquie_eurasie_moyen_orient
+    zones_pays.json : Yémen → zones_grises_globales
+    zones_pays.json : Liban → zones_grises_globales
+    zones_pays.json : Syrie → zones_grises_globales
+    zones_pays.json : Qatar → indo_pacifique_emergent
+    zones_pays.json : Koweït → bloc_persique_autonome
+    zones_pays.json : Nigeria → union_africaine_resilience
+    zones_pays.json : Afrique du Sud → union_africaine_resilience
+    zones_pays.json : Ghana → union_africaine_resilience
+    zones_pays.json : Maroc → zones_grises_globales
+    zones_pays.json : Algérie → zones_grises_globales
+    zones_pays.json : Tunisie → zones_grises_globales
+    zones_pays.json : Rwanda → union_africaine_resilience
+    zones_pays.json : Mozambique → union_africaine_resilience
+    zones_pays.json : Zimbabwe → union_africaine_resilience
+    zones_pays.json : Chine → indo_pacifique_emergent
+    zones_pays.json : Philippines → indo_pacifique_emergent
+    zones_pays.json : Canada → ameriques_multipolaires
+    zones_pays.json : Pérou → ameriques_multipolaires
+    zones_pays.json : Bolivie → ameriques_multipolaires
+    zones_pays.json : Australie → indo_pacifique_emergent
+    zones_pays.json : Nouvelle-Zélande → indo_pacifique_emergent
+    zones_pays.json : Groenland → corridor_arctique_nordique
+    zones_pays.json : Polynésie française → polynesie_francaise_insulaire
+
+✓ zones_pays.json mis à jour : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/gui/zones_pays.json
+
+============================================================
+  Terminé.
+============================================================

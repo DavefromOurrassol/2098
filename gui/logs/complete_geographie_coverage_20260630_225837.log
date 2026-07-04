@@ -1,0 +1,115 @@
+============================================================
+  OURRASSOL 2098 — Couverture géographique complète
+============================================================
+
+=== breakdown ===
+  46 pays sans zone : Allemagne, Royaume-Uni, Angleterre, Écosse, Pays de Galles, Italie, Belgique, Pays-Bas, Portugal, Autriche, Pologne, Grèce, Hongrie, République tchèque, Roumanie, Serbie, Ouzbékistan, Kirghizistan, Turquie, Yémen, Liban, Syrie, Qatar, Koweït, Éthiopie, Mozambique, Zimbabwe, Soudan, Tchad, Inde, Indonésie, Vietnam, Singapour, Bangladesh, Pakistan, Philippines, Mongolie, Mexique, Argentine, Venezuela, Chili, Bolivie, Australie, Nouvelle-Zélande, Groenland, Polynésie française
+  Batch 1/4 [0/46] : Allemagne, Royaume-Uni, Angleterre, Écosse, Pays de Galles, Italie, Belgique, Pays-Bas, Portugal, Autriche, Pologne, Grèce
+    [llm] mistral (mistral-small) — entrée : 1105 | sortie : 1720
+  ✓ Absorbé : Allemagne → arc_sahelo_mediterraneen
+  ✓ Nouvelle zone N1 : royaume_uni_archipel_emergent (Archipel Britannique Émergent)
+  ✓ Absorbé : Angleterre → royaume_uni_archipel_emergent
+  ✓ Absorbé : Écosse → royaume_uni_archipel_emergent
+  ✓ Absorbé : Pays de Galles → royaume_uni_archipel_emergent
+  ✓ Absorbé : Italie → arc_sahelo_mediterraneen
+  ✓ Absorbé : Belgique → arc_sahelo_mediterraneen
+  ✓ Absorbé : Pays-Bas → arc_sahelo_mediterraneen
+  ✓ Absorbé : Portugal → arc_sahelo_mediterraneen
+  ✓ Nouvelle zone N1 : alpes_centrales_autonomie (Alpes Centrales Autonome)
+  ✓ Nouvelle zone N1 : polonie_baltique_union (Union Polono-Baltique)
+  ✓ Absorbé : Grèce → zone_golfe_levant
+  [12/46] 9 absorbés, 3 nouvelles zones, 0 rejetés
+  Batch 2/4 [12/46] : Hongrie, République tchèque, Roumanie, Serbie, Ouzbékistan, Kirghizistan, Turquie, Yémen, Liban, Syrie, Qatar, Koweït
+    [llm] mistral (mistral-small) — entrée : 1222 | sortie : 776
+  ✓ Absorbé : Hongrie → arc_sahelo_mediterraneen
+  ✓ Absorbé : République tchèque → arc_eurasien_central
+  ✓ Absorbé : Roumanie → afrique_centrale_australe
+  ✓ Absorbé : Serbie → arc_sahelo_mediterraneen
+  ✓ Absorbé : Ouzbékistan → arc_eurasien_central
+  ✓ Absorbé : Kirghizistan → arc_eurasien_central
+  ✓ Absorbé : Turquie → zone_golfe_levant
+  ✓ Absorbé : Yémen → zone_golfe_levant
+  ✓ Absorbé : Liban → zone_golfe_levant
+  ✓ Absorbé : Syrie → zone_golfe_levant
+  ✓ Absorbé : Qatar → zone_golfe_levant
+  ✓ Absorbé : Koweït → zone_golfe_levant
+  [24/46] 12 absorbés, 0 nouvelles zones, 0 rejetés
+  Batch 3/4 [24/46] : Éthiopie, Mozambique, Zimbabwe, Soudan, Tchad, Inde, Indonésie, Vietnam, Singapour, Bangladesh, Pakistan, Philippines
+    [llm] mistral (mistral-small) — entrée : 1252 | sortie : 1659
+  ✓ Absorbé : Éthiopie → afrique_de_louest_lagos_sahel
+  ✓ Absorbé : Mozambique → afrique_centrale_australe
+  ✓ Absorbé : Zimbabwe → afrique_centrale_australe
+  ✓ Absorbé : Soudan → arc_sahelo_mediterraneen
+  ✓ Absorbé : Tchad → arc_sahelo_mediterraneen
+  ⚠ Zone rejetée pour 'Inde' : slug invalide : 'souscontinent_indien_fragmenté'
+  ✓ Absorbé : Indonésie → asie_pacifique_sud_est
+  ✓ Absorbé : Vietnam → asie_pacifique_sud_est
+  ✓ Absorbé : Singapour → asie_pacifique_sud_est
+  ⚠ Absorber 'Bangladesh' → slug inconnu 'souscontinent_indien_fragmenté' — ignoré
+  ⚠ Zone rejetée pour 'Pakistan' : slug invalide : 'pakistan_fragmenté'
+  ⚠ Zone rejetée pour 'Philippines' : slug invalide : 'archipel_philippin_fragmenté'
+  [36/46] 8 absorbés, 0 nouvelles zones, 4 rejetés
+  Batch 4/4 [36/46] : Mongolie, Mexique, Argentine, Venezuela, Chili, Bolivie, Australie, Nouvelle-Zélande, Groenland, Polynésie française
+    [llm] mistral (mistral-small) — entrée : 1271 | sortie : 1736
+  ✓ Absorbé : Mongolie → arc_eurasien_central
+  ✓ Nouvelle zone N1 : mexique_autonome_sud (Mexique (République Autonome du Sud))
+  ✓ Absorbé : Argentine → amazon_pacte_gardiens
+  ✓ Absorbé : Venezuela → zone_golfe_levant
+  ✓ Nouvelle zone N1 : chili_antarctique_pacifique (Chili (République Antarctique Pacifique))
+  ✓ Absorbé : Bolivie → amazon_pacte_gardiens
+  ✓ Nouvelle zone N1 : australie_occeanie_autonome (Australie (Fédération Océanienne Autonome))
+  ~ Déjà présent : Nouvelle-Zélande dans australie_occeanie_autonome
+  ✓ Absorbé : Groenland → arctique_nordark
+  ✓ Absorbé : Polynésie française → australie_occeanie_autonome
+  [46/46] 7 absorbés, 3 nouvelles zones, 0 rejetés
+  Total : 36 absorbés, 6 nouvelles zones, 4 rejetés
+  → Sauvegarde : breakdown.md.bak
+  ✓ Écrit : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/geographie/breakdown.md
+    zones_pays.json : Allemagne → arc_sahelo_mediterraneen
+    zones_pays.json : Royaume-Uni → royaume_uni_archipel_emergent
+    zones_pays.json : Angleterre → royaume_uni_archipel_emergent
+    zones_pays.json : Écosse → royaume_uni_archipel_emergent
+    zones_pays.json : Pays de Galles → royaume_uni_archipel_emergent
+    zones_pays.json : Italie → arc_sahelo_mediterraneen
+    zones_pays.json : Belgique → arc_sahelo_mediterraneen
+    zones_pays.json : Pays-Bas → arc_sahelo_mediterraneen
+    zones_pays.json : Portugal → arc_sahelo_mediterraneen
+    zones_pays.json : Autriche → alpes_centrales_autonomie
+    zones_pays.json : Pologne → polonie_baltique_union
+    zones_pays.json : Grèce → zone_golfe_levant
+    zones_pays.json : Hongrie → arc_sahelo_mediterraneen
+    zones_pays.json : République tchèque → arc_eurasien_central
+    zones_pays.json : Roumanie → afrique_centrale_australe
+    zones_pays.json : Serbie → arc_sahelo_mediterraneen
+    zones_pays.json : Ouzbékistan → arc_eurasien_central
+    zones_pays.json : Kirghizistan → arc_eurasien_central
+    zones_pays.json : Turquie → zone_golfe_levant
+    zones_pays.json : Yémen → zone_golfe_levant
+    zones_pays.json : Liban → zone_golfe_levant
+    zones_pays.json : Syrie → zone_golfe_levant
+    zones_pays.json : Qatar → zone_golfe_levant
+    zones_pays.json : Koweït → zone_golfe_levant
+    zones_pays.json : Éthiopie → afrique_de_louest_lagos_sahel
+    zones_pays.json : Mozambique → afrique_centrale_australe
+    zones_pays.json : Zimbabwe → afrique_centrale_australe
+    zones_pays.json : Soudan → arc_sahelo_mediterraneen
+    zones_pays.json : Tchad → arc_sahelo_mediterraneen
+    zones_pays.json : Indonésie → asie_pacifique_sud_est
+    zones_pays.json : Vietnam → asie_pacifique_sud_est
+    zones_pays.json : Singapour → asie_pacifique_sud_est
+    zones_pays.json : Mongolie → arc_eurasien_central
+    zones_pays.json : Mexique → mexique_autonome_sud
+    zones_pays.json : Argentine → amazon_pacte_gardiens
+    zones_pays.json : Venezuela → zone_golfe_levant
+    zones_pays.json : Chili → chili_antarctique_pacifique
+    zones_pays.json : Bolivie → amazon_pacte_gardiens
+    zones_pays.json : Australie → australie_occeanie_autonome
+    zones_pays.json : Nouvelle-Zélande → australie_occeanie_autonome
+    zones_pays.json : Groenland → arctique_nordark
+    zones_pays.json : Polynésie française → australie_occeanie_autonome
+
+✓ zones_pays.json mis à jour : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/gui/zones_pays.json
+
+============================================================
+  Terminé.
+============================================================

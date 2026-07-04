@@ -7,6 +7,34 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <style>
+    /* ── Onglet Carte ── */
+    #tab-carte { display: none; flex-direction: column; height: 100%; padding: 20px; box-sizing: border-box; }
+    #tab-carte.active { display: flex; }
+    .carte-toolbar { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+    .carte-toolbar select { font-family: 'JetBrains Mono', monospace; padding: 4px 8px; border: 1px solid #ccc; border-radius: 4px; background: #fff; }
+    .carte-status { font-size: 12px; color: #888; }
+    .carte-diagnostic { background: #fff4e0; border: 1px solid #e0b060; border-radius: 4px; padding: 8px 12px; font-size: 11px; margin-bottom: 10px; color: #7a5010; }
+    .carte-layout { display: flex; gap: 16px; flex: 1; min-height: 0; }
+    #carte-map { flex: 1; min-width: 0; border-radius: 6px; border: 1px solid #ddd; background: #eeecea; }
+    .carte-sidebar { width: 300px; flex-shrink: 0; display: flex; flex-direction: column; gap: 12px; overflow-y: auto; }
+    .carte-legend { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 10px; font-size: 11px; }
+    .carte-legend-item { display: flex; align-items: center; gap: 6px; padding: 2px 0; }
+    .carte-legend-swatch { width: 12px; height: 12px; border-radius: 2px; flex-shrink: 0; }
+    .carte-panel { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 12px; font-size: 12px; }
+    .carte-panel-empty { color: #999; font-style: italic; }
+    .carte-panel-title { font-weight: 700; font-size: 14px; margin-bottom: 4px; }
+    .carte-panel-sub { color: #888; margin-bottom: 10px; }
+    .carte-panel-section { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #eee; }
+    .carte-panel-section:last-child { border-bottom: none; }
+    .carte-panel-section label { display: block; font-size: 11px; color: #666; margin-bottom: 4px; }
+    .carte-panel-section select { width: 100%; padding: 4px; margin-bottom: 6px; font-family: 'JetBrains Mono', monospace; font-size: 11px; }
+    .carte-panel-proposal-box { background: #f5f7fc; border: 1px solid #d0d8f0; border-radius: 4px; padding: 8px; margin-top: 8px; font-size: 11px; }
+    .carte-panel-error { color: #c0392b; font-size: 11px; }
+    .carte-panel-pays-btn { display: block; width: 100%; margin-bottom: 4px; text-align: left; }
+    #carte-panel-msg { font-size: 11px; color: #3b6fd4; margin-top: 8px; }
+  </style>
 </head>
 <body>
 <div id="app">
@@ -134,9 +162,30 @@
       <div id="cfg-message" class="config-msg"></div>
     </div>
 
+    <!-- ── Carte ──────────────────────────────── -->
+    <div id="tab-carte" class="tab-content">
+      <div class="carte-toolbar">
+        <span class="tab-page-title" style="margin:0">Carte géographique</span>
+        <label for="carte-scenario" style="margin-left:16px;font-size:12px;color:#888">Scénario</label>
+        <select id="carte-scenario"></select>
+        <span id="carte-status" class="carte-status"></span>
+      </div>
+      <div id="carte-diagnostic" class="carte-diagnostic" style="display:none"></div>
+      <div class="carte-layout">
+        <div id="carte-map"></div>
+        <div class="carte-sidebar">
+          <div id="carte-legend" class="carte-legend"></div>
+          <div id="carte-panel" class="carte-panel">
+            <div class="carte-panel-empty">Clique sur un pays gris pour l'affecter à une zone.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </main>
 </div>
 
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="{{ url_for('static', filename='app.js') }}"></script>
 </body>
 </html>

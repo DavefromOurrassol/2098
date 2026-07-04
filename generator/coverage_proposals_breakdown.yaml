@@ -1,0 +1,81 @@
+scenario: breakdown
+instructions: 'Vérifiez chaque affectation. Mettez ''valide: false'' pour rejeter
+  une proposition. Pour action: absorber, vérifiez que zone_slug est cohérente. Pour
+  action: nouvelle_zone, vérifiez les champs de la zone. Lancez ensuite : python3
+  complete_geographie_coverage.py --scenario breakdown --apply'
+affectations:
+- pays: Royaume-Uni
+  action: a_revoir
+  zone_slug: null
+  justification: 'Erreur LLM : Illegal header value b''Bearer '''
+  valide: false
+- pays: Angleterre
+  action: a_revoir
+  zone_slug: null
+  justification: 'Erreur LLM : Illegal header value b''Bearer '''
+  valide: false
+- pays: Écosse
+  action: a_revoir
+  zone_slug: null
+  justification: 'Erreur LLM : Illegal header value b''Bearer '''
+  valide: false
+- pays: Pays de Galles
+  action: a_revoir
+  zone_slug: null
+  justification: 'Erreur LLM : Illegal header value b''Bearer '''
+  valide: false
+- pays: Autriche
+  action: a_revoir
+  zone_slug: null
+  justification: 'Erreur LLM : Illegal header value b''Bearer '''
+  valide: false
+- pays: Pologne
+  action: a_revoir
+  zone_slug: null
+  justification: 'Erreur LLM : Illegal header value b''Bearer '''
+  valide: false
+- pays: Inde
+  action: a_revoir
+  zone_slug: null
+  justification: 'Erreur LLM : Illegal header value b''Bearer '''
+  valide: false
+- pays: Bangladesh
+  action: a_revoir
+  zone_slug: null
+  justification: 'Erreur LLM : Illegal header value b''Bearer '''
+  valide: false
+- pays: Pakistan
+  action: a_revoir
+  zone_slug: null
+  justification: 'Erreur LLM : Illegal header value b''Bearer '''
+  valide: false
+- pays: Philippines
+  action: a_revoir
+  zone_slug: null
+  justification: 'Erreur LLM : Illegal header value b''Bearer '''
+  valide: false
+- pays: Mexique
+  action: a_revoir
+  zone_slug: null
+  justification: 'Erreur LLM : Illegal header value b''Bearer '''
+  valide: false
+- pays: Chili
+  action: a_revoir
+  zone_slug: null
+  justification: 'Erreur LLM : Illegal header value b''Bearer '''
+  valide: false
+- pays: Australie
+  action: a_revoir
+  zone_slug: null
+  justification: 'Erreur LLM : Illegal header value b''Bearer '''
+  valide: false
+- pays: Nouvelle-Zélande
+  action: a_revoir
+  zone_slug: null
+  justification: 'Erreur LLM : Illegal header value b''Bearer '''
+  valide: false
+- pays: Polynésie française
+  action: a_revoir
+  zone_slug: null
+  justification: 'Erreur LLM : Illegal header value b''Bearer '''
+  valide: false

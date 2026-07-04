@@ -4,1725 +4,2012 @@ type: geographie_monde
 date_creation: 2026-06-23
 date_derniere_maj: 2026-06-23
 zones:
-  - slug: ameriques_reformees
-    nom: Amériques Réformées (États-Unis / bloc américain)
-    niveau: 1
-    type: region
-    parent: null
-    origine_reelle:
-    - entite: États-Unis d'Amérique
-      type_entite: pays
-      portion: null
-    - entite: Canada
-      type_entite: pays
-      portion: null
-    description: Zone définie par la trajectoire politique américaine dans le scénario, notamment l'élection
-      de 2055 qui porte au pouvoir un gouvernement social-démocrate progressiste contraint par les accords
-      internationaux existants. Les Amériques constituent un bloc signataire du Pacte de Genève Numérique,
-      mais traversé par des tensions entre États fédérés conservateurs et gouvernement central réformiste,
-      et par la montée des souverainismes numériques.
-    statut: stable
-    tensions_internes: Tensions entre États fédérés conservateurs et pouvoir central réformiste ; pressions
-      des mouvements souverainistes numériques et des conglomérats d'automatisation industrielle contre
-      les réformes multilatérales.
-    periode_transition: 2055-2060
-    evenement_transition: election_parti_commun_americain_policy_reform
-    lieux_emblematiques: []
-    relations:
-      allies:
-      - hub_europeen_regulation
-      rivaux:
-      - bloc_souverainiste_non_signataire
-    sources_attestees:
-    - election_parti_commun_americain_policy_reform
-    - coalition_des_souverainistes_numeriques_policy_reform
-    - conglomerats_d_automatisation_industrielle_integrale_policy_reform
-  - slug: bloc_souverainiste_non_signataire
-    nom: Bloc Souverainiste Non-Signataire (Sud Global dissident)
-    niveau: 1
-    type: bloc_continental
-    parent: null
-    origine_reelle:
-    - entite: Niger
-      type_entite: pays
-      portion: null
-    - entite: Tchad
-      type_entite: pays
-      portion: null
-    - entite: Mali
-      type_entite: pays
-      portion: null
-    - entite: Brésil
-      type_entite: pays
-      portion: null
-    - entite: Argentine
-      type_entite: pays
-      portion: null
-    - entite: Bolivie
-      type_entite: pays
-      portion: null
-    - entite: Indonésie
-      type_entite: pays
-      portion: null
-    description: Ensemble hétérogène d'États du Sud Global — notamment sahéliens, andins et du Pacifique
-      Sud — qui contestent ou résistent à l'architecture de gouvernance technocratique mondiale, revendiquant
-      une souveraineté sur leurs ressources, leurs données et leurs décisions biologiques. Ce bloc comprend
-      les 'États dissidents du bloc austral', les États menacés de sécession du Pacte de Genève, et les
-      mouvements souverainistes afro-asiatiques.
-    statut: fragmenté
-    tensions_internes: 'Profondément hétérogène : certains États menacent de quitter le Pacte de Genève
-      sur les questions de rationnement énergétique, d''autres dépendent structurellement des ressources
-      hydriques du RIREC, créant une vulnérabilité qui limite leur capacité de dissidence effective.'
-    periode_transition: 2087-2098
-    evenement_transition: null
-    lieux_emblematiques: []
-    relations:
-      allies: []
-      rivaux:
-      - hub_europeen_regulation
-      - hub_africain_gouvernance
-    sources_attestees:
-    - amara_diallo_nkosi_policy_reform
-    - etats_dissidents_du_bloc_austral_policy_reform
-    - front_souverainiste_des_blocs_non_signataires_policy_reform
-    - conseil_regulation_ressources_policy_reform
-    - bureau_gouvernance_algorithmique_policy_reform
-    - collectifs_de_defense_hydrique_saheliens_policy_reform
-    - front_des_souverainistes_energetiques_policy_reform
-    - trame_bioclimatique_policy_reform
-  - slug: espace_eurasiatique
-    nom: Espace Eurasiatique
-    niveau: 1
-    type: union_regionale
-    parent: null
-    origine_reelle:
-    - entite: Russie
-      type_entite: pays
-      portion: null
-    - entite: Chine
-      type_entite: pays
-      portion: null
-    - entite: Kazakhstan
-      type_entite: pays
-      portion: null
-    - entite: Inde
-      type_entite: pays
-      portion: null
-    - entite: Corée du Sud
-      type_entite: pays
-      portion: null
-    description: Bloc eurasiatique regroupant les puissances continentales qui ont développé un modèle alternatif
-      de gouvernance technocratique centré sur la souveraineté étatique renforcée. Il abrite à la fois le
-      Front de Souveraineté Biologique Eurasiatique — qui résiste aux réformes biotech internationales —
-      et l'Union Technocratique Eurasiatique, citée comme contre-modèle institutionnel. Chengdu figure comme
-      l'un des sièges rotatifs du CRTI.
-    statut: stable
-    tensions_internes: Fracture entre le modèle d'efficacité technocratique souverain défendu par l'Union
-      Technocratique Eurasiatique et les pressions des blocs souverainistes qui refusent toute supervision
-      externe ; tensions autour des standards biologiques et génétiques.
-    periode_transition: 2040-2065
-    evenement_transition: null
-    lieux_emblematiques: []
-    relations:
-      allies: []
-      rivaux:
-      - hub_europeen_regulation
-    sources_attestees:
-    - assemblee_territoires_policy_reform
-    - union_technocratique_eurasiatique_policy_reform
-    - front_de_souverainete_biologique_eurasiatique_policy_reform
-    - institut_brookings_singapour_de_politique_computationnelle_policy_reform
-  - slug: europe_nord_ouest
-    nom: Europe du Nord-Ouest (Amsterdam-Rotterdam)
-    niveau: 1
-    type: territoire_herite
-    parent: null
-    origine_reelle:
-    - entite: Pays-Bas
-      type_entite: pays
-      portion: null
-    - entite: Belgique
-      type_entite: pays
-      portion: null
-    - entite: Allemagne
-      type_entite: pays
-      portion: null
-    description: Zone héritière des États d'Europe du Nord-Ouest, citée dans le corpus comme l'un des sièges
-      rotatifs du CRTI (Rotterdam) et comme lieu de l'affaire Van Derburgh à Amsterdam. Cette zone illustre
-      la continuité juridique européenne post-2026, avec ses tribunaux de La Haye qui font jurisprudence
-      internationale et son tissu réglementaire dense.
-    statut: stable
-    tensions_internes: Légère tension autour des classifications réglementaires héritées des directives
-      européennes de 2071, illustrée par l'affaire Van Derburgh et les débats sur le calibrage juridique
-      entre patrimoine et technologies sensibles.
-    periode_transition: 2071-2080
-    evenement_transition: arrestation_chris_van_derburgh_policy_reform
-    lieux_emblematiques: []
-    relations:
-      allies:
-      - hub_europeen_regulation
-      rivaux: []
-    sources_attestees:
-    - assemblee_territoires_policy_reform
-    - arrestation_chris_van_derburgh_policy_reform
-  - slug: hub_africain_gouvernance
-    nom: Hub Africain de Gouvernance (Nairobi-Kigali-Brazzaville)
-    niveau: 1
-    type: region
-    parent: null
-    origine_reelle:
-    - entite: Kenya
-      type_entite: pays
-      portion: null
-    - entite: Rwanda
-      type_entite: pays
-      portion: null
-    - entite: République du Congo
-      type_entite: pays
-      portion: null
-    - entite: République démocratique du Congo
-      type_entite: pays
-      portion: null
-    description: Pôle africain de gouvernance des ressources mondiales, articulé autour de Nairobi (siège
-      rotatif du CRTI, tours de contrôle bioclimatique du RIREC), Kigali (siège réformé du CRRC-ARN depuis
-      2091) et Brazzaville (siège de l'ACRA hydrique). Cette zone incarne le déplacement symbolique du centre
-      de gravité institutionnel mondial vers l'Afrique, tout en restant le théâtre des tensions hydriques
-      sahéliennes et des mouvements souverainistes.
-    statut: emergent
-    tensions_internes: Tensions profondes entre les institutions technocratiques qui y ont délocalisé leurs
-      sièges et les mouvements souverainistes africains qui contestent leur légitimité ; les collectifs
-      sahéliens de défense hydrique et les consortiums publics africains de semences se heurtent aux logiques
-      des institutions globales et de Nexus BioSyn.
-    periode_transition: 2061-2094
-    evenement_transition: null
-    lieux_emblematiques: []
-    relations:
-      allies:
-      - hub_europeen_regulation
-      rivaux:
-      - bloc_souverainiste_non_signataire
-    sources_attestees:
-    - amara_diallo_nkosi_policy_reform
-    - assemblee_territoires_policy_reform
-    - conseil_regulation_ressources_policy_reform
-    - trame_bioclimatique_policy_reform
-    - collectifs_de_defense_hydrique_saheliens_policy_reform
-    - institut_de_therapeutique_integree_de_nairobi_policy_reform
-    - nexus_biosyn_policy_reform
-  - slug: hub_europeen_regulation
-    nom: Hub Européen de Régulation (Genève-La Haye-Tampere)
-    niveau: 1
-    type: region
-    parent: null
-    origine_reelle:
-    - entite: Suisse
-      type_entite: pays
-      portion: null
-    - entite: Pays-Bas
-      type_entite: pays
-      portion: null
-    - entite: Finlande
-      type_entite: pays
-      portion: null
-    description: Cœur institutionnel de la gouvernance technocratique mondiale en 2098, cette zone regroupe
-      les sièges des grandes agences supranationales — AMSC à Genève-Lacustre, ACRA et Tribunal à La Haye,
-      Conseil de régulation numérique à Genève. Elle est le lieu physique où se rédigent les traités, se
-      signent les pactes et siègent les technocrates certifiés qui administrent la planète sans mandat électif
-      direct.
-    statut: dominant
-    tensions_internes: 'Siège d''une technocratie dont la légitimité démocratique est contestée : les populations
-      locales et les mouvements post-technocratiques contestent la concentration du pouvoir dans des institutions
-      inaccessibles, tandis que des figures comme Leena Väinälä incarnent la tension entre intégration institutionnelle
-      et critique de l''intérieur.'
-    periode_transition: 2037-2045
-    evenement_transition: effondrement_reseau_mondial_communication_policy_reform
-    lieux_emblematiques: []
-    relations:
-      allies:
-      - hub_africain_gouvernance
-      rivaux:
-      - bloc_souverainiste_non_signataire
-    sources_attestees:
-    - agence_stabilisation_climatique_policy_reform
-    - bureau_gouvernance_algorithmique_policy_reform
-    - conseil_regulation_algorithmique_policy_reform
-    - leena_vainala_policy_reform
-    - internationale_travailleurs_augmentes_policy_reform
-    - conflit_israel_iran_2026_policy_reform
-    - effondrement_reseau_mondial_communication_policy_reform
-    - consortium_helios_policy_reform
-  - slug: zone_moyen_orient_golfe
-    nom: Zone Moyen-Orient / Golfe Persique
-    niveau: 1
-    type: region
-    parent: null
-    origine_reelle:
-    - entite: Israël
-      type_entite: pays
-      portion: null
-    - entite: Iran
-      type_entite: pays
-      portion: null
-    - entite: Arabie Saoudite
-      type_entite: pays
-      portion: null
-    - entite: Koweït
-      type_entite: pays
-      portion: null
-    - entite: Émirats arabes unis
-      type_entite: pays
-      portion: null
-    description: Région définie dans ce scénario par le conflit israélo-iranien de 2026-2027, qui a constitué
-      le premier test grandeur nature des mécanismes de désescalade institutionnelle mondiale. Après la
-      crise, la zone est placée sous surveillance institutionnelle renforcée pendant deux décennies, créant
-      un précédent de tutelle technocratique. Elle reste liée à l'économie pétrolière résiduelle, terrain
-      des lobbies des énergies fossiles.
-    statut: en_declin
-    tensions_internes: Séquelles du conflit de 2026-2027, dépendance résiduelle aux hydrocarbures face aux
-      pressions de transition, tutelle institutionnelle perçue comme humiliante par les acteurs étatiques
-      souverainistes de la région.
-    periode_transition: 2026-2029
-    evenement_transition: conflit_israel_iran_2026_policy_reform
-    lieux_emblematiques: []
-    relations:
-      allies: []
-      rivaux: []
-    sources_attestees:
-    - conflit_israel_iran_2026_policy_reform
-    - gouvernement_israel_policy_reform
-    - republique_islamique_iran_policy_reform
-    - lobbies_des_energies_fossiles_residuelles_policy_reform
-  - slug: zone_pacifique_industrielle
-    nom: Zone Pacifique Industrielle
-    niveau: 1
-    type: region
-    parent: null
-    origine_reelle:
-    - entite: Japon
-      type_entite: pays
-      portion: null
-    - entite: Corée du Sud
-      type_entite: pays
-      portion: null
-    - entite: Australie
-      type_entite: pays
-      portion: null
-    - entite: Nouvelle-Zélande
-      type_entite: pays
-      portion: null
-    - entite: Philippines
-      type_entite: pays
-      portion: null
-    description: 'Espace pacifique défini dans le corpus par la présence d''acteurs industriels et agro-industriels
-      majeurs : le Consortium Agro-Pacifique, le Consortium de Géo-ingénierie Atmosphérique Pacifique, et
-      les usines flottantes où opèrent les travailleurs augmentés de l''ITA. Zone de production et d''expérimentation
-      technologique sous tension entre régulation globale et intérêts des consortiums privés.'
-    statut: stable
-    tensions_internes: Tensions entre consortiums privés opérant depuis cette zone et les tentatives de
-      régulation internationale ; les travailleurs augmentés des usines flottantes commencent à se syndiquer
-      et à contester les conditions d'augmentation imposées.
-    periode_transition: 2050-2075
-    evenement_transition: null
-    lieux_emblematiques: []
-    relations:
-      allies:
-      - espace_eurasiatique
-      rivaux: []
-    sources_attestees:
-    - consortium_agro_pacifique_policy_reform
-    - consortium_de_geo_ingenierie_atmospherique_pacifique_policy_reform
-    - internationale_travailleurs_augmentes_policy_reform
-  - slug: agadez
-    nom: Agadez
-    niveau: 2
-    type: ville
-    parent: bloc_souverainiste_non_signataire
-    origine_reelle:
-    - entite: Niger
-      type_entite: pays
-      portion: null
-    description: Ville natale d'Amara Diallo-Nkosi, Agadez est le symbole de la mémoire des puits asséchés
-      du Niger et de la catastrophe hydrique sahélienne. Elle incarne la distance abyssale entre les protocoles
-      rédigés à Brazzaville et la réalité vécue des populations que ces protocoles prétendent protéger.
-    statut: en_declin
-    tensions_internes: La ville concentre la mémoire du désastre hydrique tout en étant symboliquement convoquée
-      par les institutions globales comme justification de leur légitimité morale, créant un rapport ambigu
-      entre exploitation mémorielle institutionnelle et réalité sociale persistante.
-    periode_transition: 2026-2060
-    evenement_transition: null
-    lieux_emblematiques: []
-    relations:
-      allies: []
-      rivaux: []
-    sources_attestees:
-    - amara_diallo_nkosi_policy_reform
-    promu_depuis: Agadez
-  - slug: amsterdam_region
-    nom: Amsterdam-Région
-    niveau: 2
-    type: ville
-    parent: europe_nord_ouest
-    origine_reelle:
-    - entite: Amsterdam
-      type_entite: region_administrative
-      portion: null
-    description: Lieu de l'affaire Van Derburgh (2078), où un collectionneur a été arrêté pour possession
-      de 17 dispositifs de communication pré-transition classifiés. La jurisprudence issue de cette affaire
-      — distinguant patrimoine technologique personnel et technologies sensibles — a amendé la directive
-      européenne de 2071 et est aujourd'hui citée dans les cours de droit international.
-    statut: stable
-    tensions_internes: Les débats sur le calibrage réglementaire entre patrimoine technologique et sécurité
-      systémique restent vifs, illustrant la tension entre continuité juridique héritée et adaptation aux
-      nouvelles réalités institutionnelles.
-    periode_transition: 2071-2080
-    evenement_transition: arrestation_chris_van_derburgh_policy_reform
-    lieux_emblematiques: []
-    relations:
-      allies: []
-      rivaux: []
-    sources_attestees:
-    - arrestation_chris_van_derburgh_policy_reform
-    promu_depuis: Amsterdam-Région
-  - slug: andes_bloc_austral
-    nom: Bloc andin (Bolivie-Argentine)
-    niveau: 2
-    type: region
-    parent: bloc_souverainiste_non_signataire
-    origine_reelle:
-    - entite: Bolivie
-      type_entite: pays
-      portion: null
-    - entite: Argentine
-      type_entite: pays
-      portion: null
-    - entite: Brésil
-      type_entite: pays
-      portion: null
-    description: Composante andine et australe du bloc souverainiste, portée par des États qui contestent
-      le rationnement énergétique imposé par le Pacte de Genève tout en menaçant d'en faire sécession. Ces
-      États dissidents du bloc austral sont à la fois les plus virulents dans leur opposition aux institutions
-      technocratiques et les plus exposés aux chantages de conditionnalité du CRRC-ARN sur les ressources
-      hydriques et énergétiques.
-    statut: fragmenté
-    tensions_internes: Les États andins sont tiraillés entre leur volonté de souveraineté énergétique et
-      leur dépendance aux mécanismes de financement climatique mondiaux ; le front souverainiste énergétique
-      y est le plus actif mais aussi le plus divisé sur la stratégie à adopter.
-    periode_transition: 2087-2098
-    evenement_transition: null
-    lieux_emblematiques: []
-    relations:
-      allies:
-      - iles_pacifique_sud
-      rivaux:
-      - kigali_crrc
-      - hub_europeen_regulation
-    sources_attestees:
-    - etats_dissidents_du_bloc_austral_policy_reform
-    - front_souverainiste_des_blocs_non_signataires_policy_reform
-    - front_des_souverainistes_energetiques_policy_reform
-    - conseil_regulation_ressources_policy_reform
-    promu_depuis: null
-  - slug: brazzaville_acra
-    nom: Brazzaville
-    niveau: 2
-    type: ville
-    parent: hub_africain_gouvernance
-    origine_reelle:
-    - entite: Brazzaville
-      type_entite: region_administrative
-      portion: null
-    description: Siège de l'Autorité Continentale des Ressources Aquatiques (ACRA), Brazzaville est le lieu
-      de travail d'Amara Diallo-Nkosi, architecte des Protocoles de Redistribution Hydrologique du Bassin
-      du Congo. Ses couloirs climatisés sont le théâtre des arbitrages entre États excédentaires et populations
-      déficitaires en eau.
-    statut: emergent
-    tensions_internes: Une fuite récente de données algorithmiques suggère que les modèles prédictifs d'Amara
-      Diallo-Nkosi ont été altérés par des opérateurs privés, menaçant la stabilité des accords hydriques
-      et sa réputation d'intégrité. Une nouvelle génération de militants hydriques conteste la légitimité
-      même de la gouvernance technocratique.
-    periode_transition: 2060-2094
-    evenement_transition: null
-    lieux_emblematiques: []
-    relations:
-      allies: []
-      rivaux:
-      - bloc_souverainiste_non_signataire
-    sources_attestees:
-    - amara_diallo_nkosi_policy_reform
-    - autorite_continentale_des_ressources_aquatiques_acra_policy_reform
-    promu_depuis: Brazzaville
-  - slug: chengdu_crti
-    nom: Chengdu
-    niveau: 2
-    type: ville
-    parent: espace_eurasiatique
-    origine_reelle:
-    - entite: Chengdu
-      type_entite: region_administrative
-      portion: null
-    description: L'un des trois sièges rotatifs du CRTI (avec Nairobi et Rotterdam), Chengdu est le nœud
-      eurasiatique de la coordination territoriale mondiale algorithmique. Sa présence dans ce dispositif
-      illustre l'intégration partielle et ambiguë de l'espace eurasiatique dans l'architecture de gouvernance
-      globale, malgré ses tensions avec le hub européen.
-    statut: stable
-    tensions_internes: Tension entre le modèle de souveraineté technocratique eurasiatique défendu par l'Union
-      Technocratique Eurasiatique et les contraintes de représentation multilatérale que le CRTI impose
-      à ses membres rotatifs.
-    periode_transition: 2045-2065
-    evenement_transition: null
-    lieux_emblematiques: []
-    relations:
-      allies: []
-      rivaux:
-      - hub_europeen_regulation
-    sources_attestees:
-    - assemblee_territoires_policy_reform
-    promu_depuis: Chengdu
-  - slug: consortium_geo_ingenierie_pacifique_sites
-    nom: Sites de géo-ingénierie atmosphérique du Pacifique
-    niveau: 2
-    type: site_strategique
-    parent: zone_pacifique_industrielle
-    origine_reelle:
-    - entite: Australie
-      type_entite: pays
-      portion: null
-    - entite: Nouvelle-Zélande
-      type_entite: pays
-      portion: null
-    - entite: Japon
-      type_entite: pays
-      portion: null
-    description: Réseau d'installations fixes et mobiles depuis lesquelles le Consortium de Géo-ingénierie
-      Atmosphérique Pacifique opère ses interventions sur les systèmes météorologiques régionaux. Ces sites
-      coordonnent leurs opérations avec l'AMSC de Genève-Lacustre, mais leur gouvernance privée soulève
-      des questions de légitimité — qui décide des interventions atmosphériques au-dessus de territoires
-      souverains non consultés ?
-    statut: stable
-    tensions_internes: Tension entre la nécessité opérationnelle des interventions géo-ingénieristes et
-      le déficit de légitimité démocratique d'un consortium privé qui façonne les conditions climatiques
-      de millions de personnes sans mandat électif.
-    periode_transition: 2050-2098
-    evenement_transition: null
-    lieux_emblematiques: []
-    relations:
-      allies:
-      - geneve_lacustre
-      - stations_orbitales_helios
-      rivaux:
-      - iles_pacifique_sud
-    sources_attestees:
-    - consortium_de_geo_ingenierie_atmospherique_pacifique_policy_reform
-    - agence_stabilisation_climatique_policy_reform
-    promu_depuis: null
-  - slug: corridors_vivants_rirec
-    nom: Corridors Vivants du RIREC
-    niveau: 2
+- slug: ameriques_reformees
+  nom: Amériques Réformées (États-Unis / bloc américain)
+  niveau: 1
+  type: region
+  parent: null
+  origine_reelle:
+  - entite: États-Unis d'Amérique
+    type_entite: pays
+    portion: null
+  - entite: Canada
+    type_entite: pays
+    portion: null
+  - entite: Mexique
+    type_entite: pays
+    portion: null
+  description: Zone définie par la trajectoire politique américaine dans le scénario,
+    notamment l'élection de 2055 qui porte au pouvoir un gouvernement social-démocrate
+    progressiste contraint par les accords internationaux existants. Les Amériques
+    constituent un bloc signataire du Pacte de Genève Numérique, mais traversé par
+    des tensions entre États fédérés conservateurs et gouvernement central réformiste,
+    et par la montée des souverainismes numériques.
+  statut: stable
+  tensions_internes: Tensions entre États fédérés conservateurs et pouvoir central
+    réformiste ; pressions des mouvements souverainistes numériques et des conglomérats
+    d'automatisation industrielle contre les réformes multilatérales.
+  periode_transition: 2055-2060
+  evenement_transition: election_parti_commun_americain_policy_reform
+  lieux_emblematiques: []
+  relations:
+    allies:
+    - hub_europeen_regulation
+    rivaux:
+    - bloc_souverainiste_non_signataire
+  sources_attestees:
+  - election_parti_commun_americain_policy_reform
+  - coalition_des_souverainistes_numeriques_policy_reform
+  - conglomerats_d_automatisation_industrielle_integrale_policy_reform
+- slug: bloc_souverainiste_non_signataire
+  nom: Bloc Souverainiste Non-Signataire (Sud Global dissident)
+  niveau: 1
+  type: bloc_continental
+  parent: null
+  origine_reelle:
+  - entite: Niger
+    type_entite: pays
+    portion: null
+  - entite: Tchad
+    type_entite: pays
+    portion: null
+  - entite: Mali
+    type_entite: pays
+    portion: null
+  - entite: Brésil
+    type_entite: pays
+    portion: null
+  - entite: Argentine
+    type_entite: pays
+    portion: null
+  - entite: Bolivie
+    type_entite: pays
+    portion: null
+  - entite: Indonésie
+    type_entite: pays
+    portion: null
+  - entite: Nigeria
+    type_entite: pays
+    portion: null
+  - entite: Burkina Faso
+    type_entite: pays
+    portion: null
+  - entite: Soudan
+    type_entite: pays
+    portion: null
+  - entite: Colombie
+    type_entite: pays
+    portion: null
+  - entite: Pérou
+    type_entite: pays
+    portion: null
+  - entite: Venezuela
+    type_entite: pays
+    portion: null
+  - entite: Chili
+    type_entite: pays
+    portion: null
+  description: Ensemble hétérogène d'États du Sud Global — notamment sahéliens, andins
+    et du Pacifique Sud — qui contestent ou résistent à l'architecture de gouvernance
+    technocratique mondiale, revendiquant une souveraineté sur leurs ressources, leurs
+    données et leurs décisions biologiques. Ce bloc comprend les 'États dissidents
+    du bloc austral', les États menacés de sécession du Pacte de Genève, et les mouvements
+    souverainistes afro-asiatiques.
+  statut: fragmenté
+  tensions_internes: 'Profondément hétérogène : certains États menacent de quitter
+    le Pacte de Genève sur les questions de rationnement énergétique, d''autres dépendent
+    structurellement des ressources hydriques du RIREC, créant une vulnérabilité qui
+    limite leur capacité de dissidence effective.'
+  periode_transition: 2087-2098
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies: []
+    rivaux:
+    - hub_europeen_regulation
+    - hub_africain_gouvernance
+  sources_attestees:
+  - amara_diallo_nkosi_policy_reform
+  - etats_dissidents_du_bloc_austral_policy_reform
+  - front_souverainiste_des_blocs_non_signataires_policy_reform
+  - conseil_regulation_ressources_policy_reform
+  - bureau_gouvernance_algorithmique_policy_reform
+  - collectifs_de_defense_hydrique_saheliens_policy_reform
+  - front_des_souverainistes_energetiques_policy_reform
+  - trame_bioclimatique_policy_reform
+- slug: espace_eurasiatique
+  nom: Espace Eurasiatique
+  niveau: 1
+  type: union_regionale
+  parent: null
+  origine_reelle:
+  - entite: Russie
+    type_entite: pays
+    portion: null
+  - entite: Chine
+    type_entite: pays
+    portion: null
+  - entite: Kazakhstan
+    type_entite: pays
+    portion: null
+  - entite: Inde
+    type_entite: pays
+    portion: null
+  - entite: Corée du Sud
+    type_entite: pays
+    portion: null
+  - entite: Pologne
+    type_entite: pays
+    portion: null
+  - entite: Roumanie
+    type_entite: pays
+    portion: null
+  - entite: Ukraine
+    type_entite: pays
+    portion: null
+  - entite: Géorgie
+    type_entite: pays
+    portion: null
+  - entite: Ouzbékistan
+    type_entite: pays
+    portion: null
+  - entite: Kirghizistan
+    type_entite: pays
+    portion: null
+  - entite: Vietnam
+    type_entite: pays
+    portion: null
+  - entite: Bangladesh
+    type_entite: pays
+    portion: null
+  - entite: Pakistan
+    type_entite: pays
+    portion: null
+  - entite: Mongolie
+    type_entite: pays
+    portion: null
+  description: Bloc eurasiatique regroupant les puissances continentales qui ont développé
+    un modèle alternatif de gouvernance technocratique centré sur la souveraineté
+    étatique renforcée. Il abrite à la fois le Front de Souveraineté Biologique Eurasiatique
+    — qui résiste aux réformes biotech internationales — et l'Union Technocratique
+    Eurasiatique, citée comme contre-modèle institutionnel. Chengdu figure comme l'un
+    des sièges rotatifs du CRTI.
+  statut: stable
+  tensions_internes: Fracture entre le modèle d'efficacité technocratique souverain
+    défendu par l'Union Technocratique Eurasiatique et les pressions des blocs souverainistes
+    qui refusent toute supervision externe ; tensions autour des standards biologiques
+    et génétiques.
+  periode_transition: 2040-2065
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies: []
+    rivaux:
+    - hub_europeen_regulation
+  sources_attestees:
+  - assemblee_territoires_policy_reform
+  - union_technocratique_eurasiatique_policy_reform
+  - front_de_souverainete_biologique_eurasiatique_policy_reform
+  - institut_brookings_singapour_de_politique_computationnelle_policy_reform
+- slug: europe_nord_ouest
+  nom: Europe du Nord-Ouest (Amsterdam-Rotterdam)
+  niveau: 1
+  type: territoire_herite
+  parent: null
+  origine_reelle:
+  - entite: Pays-Bas
+    type_entite: pays
+    portion: null
+  - entite: Belgique
+    type_entite: pays
+    portion: null
+  - entite: Allemagne
+    type_entite: pays
+    portion: null
+  - entite: Suède
+    type_entite: pays
+    portion: null
+  - entite: Norvège
+    type_entite: pays
+    portion: null
+  - entite: Danemark
+    type_entite: pays
+    portion: null
+  - entite: Islande
+    type_entite: pays
+    portion: null
+  - entite: République tchèque
+    type_entite: pays
+    portion: null
+  description: Zone héritière des États d'Europe du Nord-Ouest, citée dans le corpus
+    comme l'un des sièges rotatifs du CRTI (Rotterdam) et comme lieu de l'affaire
+    Van Derburgh à Amsterdam. Cette zone illustre la continuité juridique européenne
+    post-2026, avec ses tribunaux de La Haye qui font jurisprudence internationale
+    et son tissu réglementaire dense.
+  statut: stable
+  tensions_internes: Légère tension autour des classifications réglementaires héritées
+    des directives européennes de 2071, illustrée par l'affaire Van Derburgh et les
+    débats sur le calibrage juridique entre patrimoine et technologies sensibles.
+  periode_transition: 2071-2080
+  evenement_transition: arrestation_chris_van_derburgh_policy_reform
+  lieux_emblematiques: []
+  relations:
+    allies:
+    - hub_europeen_regulation
+    rivaux: []
+  sources_attestees:
+  - assemblee_territoires_policy_reform
+  - arrestation_chris_van_derburgh_policy_reform
+- slug: hub_africain_gouvernance
+  nom: Hub Africain de Gouvernance (Nairobi-Kigali-Brazzaville)
+  niveau: 1
+  type: region
+  parent: null
+  origine_reelle:
+  - entite: Kenya
+    type_entite: pays
+    portion: null
+  - entite: Rwanda
+    type_entite: pays
+    portion: null
+  - entite: République du Congo
+    type_entite: pays
+    portion: null
+  - entite: République démocratique du Congo
+    type_entite: pays
+    portion: null
+  - entite: Serbie
+    type_entite: pays
+    portion: null
+  - entite: Éthiopie
+    type_entite: pays
+    portion: null
+  - entite: Ghana
+    type_entite: pays
+    portion: null
+  - entite: Mozambique
+    type_entite: pays
+    portion: null
+  - entite: Zimbabwe
+    type_entite: pays
+    portion: null
+  - entite: Sénégal
+  description: Pôle africain de gouvernance des ressources mondiales, articulé autour
+    de Nairobi (siège rotatif du CRTI, tours de contrôle bioclimatique du RIREC),
+    Kigali (siège réformé du CRRC-ARN depuis 2091) et Brazzaville (siège de l'ACRA
+    hydrique). Cette zone incarne le déplacement symbolique du centre de gravité institutionnel
+    mondial vers l'Afrique, tout en restant le théâtre des tensions hydriques sahéliennes
+    et des mouvements souverainistes.
+  statut: emergent
+  tensions_internes: Tensions profondes entre les institutions technocratiques qui
+    y ont délocalisé leurs sièges et les mouvements souverainistes africains qui contestent
+    leur légitimité ; les collectifs sahéliens de défense hydrique et les consortiums
+    publics africains de semences se heurtent aux logiques des institutions globales
+    et de Nexus BioSyn.
+  periode_transition: 2061-2094
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies:
+    - hub_europeen_regulation
+    rivaux:
+    - bloc_souverainiste_non_signataire
+  sources_attestees:
+  - amara_diallo_nkosi_policy_reform
+  - assemblee_territoires_policy_reform
+  - conseil_regulation_ressources_policy_reform
+  - trame_bioclimatique_policy_reform
+  - collectifs_de_defense_hydrique_saheliens_policy_reform
+  - institut_de_therapeutique_integree_de_nairobi_policy_reform
+  - nexus_biosyn_policy_reform
+- slug: hub_europeen_regulation
+  nom: Hub Européen de Régulation (Genève-La Haye-Tampere)
+  niveau: 1
+  type: region
+  parent: null
+  origine_reelle:
+  - entite: Suisse
+    type_entite: pays
+    portion: null
+  - entite: Pays-Bas
+    type_entite: pays
+    portion: null
+  - entite: Finlande
+    type_entite: pays
+    portion: null
+  - entite: France
+    type_entite: pays
+    portion: null
+  - entite: Espagne
+    type_entite: pays
+    portion: null
+  - entite: Portugal
+    type_entite: pays
+    portion: null
+  - entite: Autriche
+    type_entite: pays
+    portion: null
+  - entite: Grèce
+    type_entite: pays
+    portion: null
+  - entite: Hongrie
+    type_entite: pays
+    portion: null
+  description: Cœur institutionnel de la gouvernance technocratique mondiale en 2098,
+    cette zone regroupe les sièges des grandes agences supranationales — AMSC à Genève-Lacustre,
+    ACRA et Tribunal à La Haye, Conseil de régulation numérique à Genève. Elle est
+    le lieu physique où se rédigent les traités, se signent les pactes et siègent
+    les technocrates certifiés qui administrent la planète sans mandat électif direct.
+  statut: dominant
+  tensions_internes: 'Siège d''une technocratie dont la légitimité démocratique est
+    contestée : les populations locales et les mouvements post-technocratiques contestent
+    la concentration du pouvoir dans des institutions inaccessibles, tandis que des
+    figures comme Leena Väinälä incarnent la tension entre intégration institutionnelle
+    et critique de l''intérieur.'
+  periode_transition: 2037-2045
+  evenement_transition: effondrement_reseau_mondial_communication_policy_reform
+  lieux_emblematiques: []
+  relations:
+    allies:
+    - hub_africain_gouvernance
+    rivaux:
+    - bloc_souverainiste_non_signataire
+  sources_attestees:
+  - agence_stabilisation_climatique_policy_reform
+  - bureau_gouvernance_algorithmique_policy_reform
+  - conseil_regulation_algorithmique_policy_reform
+  - leena_vainala_policy_reform
+  - internationale_travailleurs_augmentes_policy_reform
+  - conflit_israel_iran_2026_policy_reform
+  - effondrement_reseau_mondial_communication_policy_reform
+  - consortium_helios_policy_reform
+- slug: zone_moyen_orient_golfe
+  nom: Zone Moyen-Orient / Golfe Persique
+  niveau: 1
+  type: region
+  parent: null
+  origine_reelle:
+  - entite: Israël
+    type_entite: pays
+    portion: null
+  - entite: Iran
+    type_entite: pays
+    portion: null
+  - entite: Arabie Saoudite
+    type_entite: pays
+    portion: null
+  - entite: Koweït
+    type_entite: pays
+    portion: null
+  - entite: Émirats arabes unis
+    type_entite: pays
+    portion: null
+  - entite: Azerbaïdjan
+    type_entite: pays
+    portion: null
+  - entite: Irak
+    type_entite: pays
+    portion: null
+  - entite: Turquie
+    type_entite: pays
+    portion: null
+  - entite: Yémen
+    type_entite: pays
+    portion: null
+  - entite: Liban
+    type_entite: pays
+    portion: null
+  - entite: Syrie
+    type_entite: pays
+    portion: null
+  - entite: Qatar
+    type_entite: pays
+    portion: null
+  description: Région définie dans ce scénario par le conflit israélo-iranien de 2026-2027,
+    qui a constitué le premier test grandeur nature des mécanismes de désescalade
+    institutionnelle mondiale. Après la crise, la zone est placée sous surveillance
+    institutionnelle renforcée pendant deux décennies, créant un précédent de tutelle
+    technocratique. Elle reste liée à l'économie pétrolière résiduelle, terrain des
+    lobbies des énergies fossiles.
+  statut: en_declin
+  tensions_internes: Séquelles du conflit de 2026-2027, dépendance résiduelle aux
+    hydrocarbures face aux pressions de transition, tutelle institutionnelle perçue
+    comme humiliante par les acteurs étatiques souverainistes de la région.
+  periode_transition: 2026-2029
+  evenement_transition: conflit_israel_iran_2026_policy_reform
+  lieux_emblematiques: []
+  relations:
+    allies: []
+    rivaux: []
+  sources_attestees:
+  - conflit_israel_iran_2026_policy_reform
+  - gouvernement_israel_policy_reform
+  - republique_islamique_iran_policy_reform
+  - lobbies_des_energies_fossiles_residuelles_policy_reform
+- slug: zone_pacifique_industrielle
+  nom: Zone Pacifique Industrielle
+  niveau: 1
+  type: region
+  parent: null
+  origine_reelle:
+  - entite: Japon
+    type_entite: pays
+    portion: null
+  - entite: Corée du Sud
+    type_entite: pays
+    portion: null
+  - entite: Australie
+    type_entite: pays
+    portion: null
+  - entite: Nouvelle-Zélande
+    type_entite: pays
+    portion: null
+  - entite: Philippines
+    type_entite: pays
+    portion: null
+  - entite: Polynésie française
+    type_entite: pays
+    portion: null
+  - entite: Groenland
+  description: 'Espace pacifique défini dans le corpus par la présence d''acteurs
+    industriels et agro-industriels majeurs : le Consortium Agro-Pacifique, le Consortium
+    de Géo-ingénierie Atmosphérique Pacifique, et les usines flottantes où opèrent
+    les travailleurs augmentés de l''ITA. Zone de production et d''expérimentation
+    technologique sous tension entre régulation globale et intérêts des consortiums
+    privés.'
+  statut: stable
+  tensions_internes: Tensions entre consortiums privés opérant depuis cette zone et
+    les tentatives de régulation internationale ; les travailleurs augmentés des usines
+    flottantes commencent à se syndiquer et à contester les conditions d'augmentation
+    imposées.
+  periode_transition: 2050-2075
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies:
+    - espace_eurasiatique
+    rivaux: []
+  sources_attestees:
+  - consortium_agro_pacifique_policy_reform
+  - consortium_de_geo_ingenierie_atmospherique_pacifique_policy_reform
+  - internationale_travailleurs_augmentes_policy_reform
+- slug: agadez
+  nom: Agadez
+  niveau: 2
+  type: ville
+  parent: bloc_souverainiste_non_signataire
+  origine_reelle:
+  - entite: Niger
+    type_entite: pays
+    portion: null
+  description: Ville natale d'Amara Diallo-Nkosi, Agadez est le symbole de la mémoire
+    des puits asséchés du Niger et de la catastrophe hydrique sahélienne. Elle incarne
+    la distance abyssale entre les protocoles rédigés à Brazzaville et la réalité
+    vécue des populations que ces protocoles prétendent protéger.
+  statut: en_declin
+  tensions_internes: La ville concentre la mémoire du désastre hydrique tout en étant
+    symboliquement convoquée par les institutions globales comme justification de
+    leur légitimité morale, créant un rapport ambigu entre exploitation mémorielle
+    institutionnelle et réalité sociale persistante.
+  periode_transition: 2026-2060
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies: []
+    rivaux: []
+  sources_attestees:
+  - amara_diallo_nkosi_policy_reform
+  promu_depuis: Agadez
+- slug: amsterdam_region
+  nom: Amsterdam-Région
+  niveau: 2
+  type: ville
+  parent: europe_nord_ouest
+  origine_reelle:
+  - entite: Amsterdam
+    type_entite: region_administrative
+    portion: null
+  description: Lieu de l'affaire Van Derburgh (2078), où un collectionneur a été arrêté
+    pour possession de 17 dispositifs de communication pré-transition classifiés.
+    La jurisprudence issue de cette affaire — distinguant patrimoine technologique
+    personnel et technologies sensibles — a amendé la directive européenne de 2071
+    et est aujourd'hui citée dans les cours de droit international.
+  statut: stable
+  tensions_internes: Les débats sur le calibrage réglementaire entre patrimoine technologique
+    et sécurité systémique restent vifs, illustrant la tension entre continuité juridique
+    héritée et adaptation aux nouvelles réalités institutionnelles.
+  periode_transition: 2071-2080
+  evenement_transition: arrestation_chris_van_derburgh_policy_reform
+  lieux_emblematiques: []
+  relations:
+    allies: []
+    rivaux: []
+  sources_attestees:
+  - arrestation_chris_van_derburgh_policy_reform
+  promu_depuis: Amsterdam-Région
+- slug: andes_bloc_austral
+  nom: Bloc andin (Bolivie-Argentine)
+  niveau: 2
+  type: region
+  parent: bloc_souverainiste_non_signataire
+  origine_reelle:
+  - entite: Bolivie
+    type_entite: pays
+    portion: null
+  - entite: Argentine
+    type_entite: pays
+    portion: null
+  - entite: Brésil
+    type_entite: pays
+    portion: null
+  description: Composante andine et australe du bloc souverainiste, portée par des
+    États qui contestent le rationnement énergétique imposé par le Pacte de Genève
+    tout en menaçant d'en faire sécession. Ces États dissidents du bloc austral sont
+    à la fois les plus virulents dans leur opposition aux institutions technocratiques
+    et les plus exposés aux chantages de conditionnalité du CRRC-ARN sur les ressources
+    hydriques et énergétiques.
+  statut: fragmenté
+  tensions_internes: Les États andins sont tiraillés entre leur volonté de souveraineté
+    énergétique et leur dépendance aux mécanismes de financement climatique mondiaux
+    ; le front souverainiste énergétique y est le plus actif mais aussi le plus divisé
+    sur la stratégie à adopter.
+  periode_transition: 2087-2098
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies:
+    - iles_pacifique_sud
+    rivaux:
+    - kigali_crrc
+    - hub_europeen_regulation
+  sources_attestees:
+  - etats_dissidents_du_bloc_austral_policy_reform
+  - front_souverainiste_des_blocs_non_signataires_policy_reform
+  - front_des_souverainistes_energetiques_policy_reform
+  - conseil_regulation_ressources_policy_reform
+  promu_depuis: null
+- slug: brazzaville_acra
+  nom: Brazzaville
+  niveau: 2
+  type: ville
+  parent: hub_africain_gouvernance
+  origine_reelle:
+  - entite: Brazzaville
+    type_entite: region_administrative
+    portion: null
+  description: Siège de l'Autorité Continentale des Ressources Aquatiques (ACRA),
+    Brazzaville est le lieu de travail d'Amara Diallo-Nkosi, architecte des Protocoles
+    de Redistribution Hydrologique du Bassin du Congo. Ses couloirs climatisés sont
+    le théâtre des arbitrages entre États excédentaires et populations déficitaires
+    en eau.
+  statut: emergent
+  tensions_internes: Une fuite récente de données algorithmiques suggère que les modèles
+    prédictifs d'Amara Diallo-Nkosi ont été altérés par des opérateurs privés, menaçant
+    la stabilité des accords hydriques et sa réputation d'intégrité. Une nouvelle
+    génération de militants hydriques conteste la légitimité même de la gouvernance
+    technocratique.
+  periode_transition: 2060-2094
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies: []
+    rivaux:
+    - bloc_souverainiste_non_signataire
+  sources_attestees:
+  - amara_diallo_nkosi_policy_reform
+  - autorite_continentale_des_ressources_aquatiques_acra_policy_reform
+  promu_depuis: Brazzaville
+- slug: chengdu_crti
+  nom: Chengdu
+  niveau: 2
+  type: ville
+  parent: espace_eurasiatique
+  origine_reelle:
+  - entite: Chengdu
+    type_entite: region_administrative
+    portion: null
+  description: L'un des trois sièges rotatifs du CRTI (avec Nairobi et Rotterdam),
+    Chengdu est le nœud eurasiatique de la coordination territoriale mondiale algorithmique.
+    Sa présence dans ce dispositif illustre l'intégration partielle et ambiguë de
+    l'espace eurasiatique dans l'architecture de gouvernance globale, malgré ses tensions
+    avec le hub européen.
+  statut: stable
+  tensions_internes: Tension entre le modèle de souveraineté technocratique eurasiatique
+    défendu par l'Union Technocratique Eurasiatique et les contraintes de représentation
+    multilatérale que le CRTI impose à ses membres rotatifs.
+  periode_transition: 2045-2065
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies: []
+    rivaux:
+    - hub_europeen_regulation
+  sources_attestees:
+  - assemblee_territoires_policy_reform
+  promu_depuis: Chengdu
+- slug: consortium_geo_ingenierie_pacifique_sites
+  nom: Sites de géo-ingénierie atmosphérique du Pacifique
+  niveau: 2
+  type: site_strategique
+  parent: zone_pacifique_industrielle
+  origine_reelle:
+  - entite: Australie
+    type_entite: pays
+    portion: null
+  - entite: Nouvelle-Zélande
+    type_entite: pays
+    portion: null
+  - entite: Japon
+    type_entite: pays
+    portion: null
+  description: Réseau d'installations fixes et mobiles depuis lesquelles le Consortium
+    de Géo-ingénierie Atmosphérique Pacifique opère ses interventions sur les systèmes
+    météorologiques régionaux. Ces sites coordonnent leurs opérations avec l'AMSC
+    de Genève-Lacustre, mais leur gouvernance privée soulève des questions de légitimité
+    — qui décide des interventions atmosphériques au-dessus de territoires souverains
+    non consultés ?
+  statut: stable
+  tensions_internes: Tension entre la nécessité opérationnelle des interventions géo-ingénieristes
+    et le déficit de légitimité démocratique d'un consortium privé qui façonne les
+    conditions climatiques de millions de personnes sans mandat électif.
+  periode_transition: 2050-2098
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies:
+    - geneve_lacustre
+    - stations_orbitales_helios
+    rivaux:
+    - iles_pacifique_sud
+  sources_attestees:
+  - consortium_de_geo_ingenierie_atmospherique_pacifique_policy_reform
+  - agence_stabilisation_climatique_policy_reform
+  promu_depuis: null
+- slug: corridors_vivants_rirec
+  nom: Corridors Vivants du RIREC
+  niveau: 2
+  type: infrastructure
+  parent: hub_africain_gouvernance
+  origine_reelle:
+  - entite: Kenya
+    type_entite: pays
+    portion: null
+  - entite: République du Congo
+    type_entite: pays
+    portion: null
+  description: 'Réseau de 47 000 kilomètres de corridors écologiques transfrontaliers
+    administrés depuis les tours de contrôle bioclimatique de Nairobi et de Valence.
+    Le RIREC est à la fois une infrastructure de restauration biosphérique et un outil
+    de gouvernance : chaque corridor est un nœud de données climatiques, un levier
+    fiscal carbone et un instrument de négociation géopolitique.'
+  statut: dominant
+  tensions_internes: Les communautés autochtones réinstallées pour libérer les corridors
+    contestent devant les tribunaux globaux une dépossession que personne n'ose nommer.
+    Des rapports internes suggèrent que les algorithmes de priorisation favorisent
+    les zones à fort potentiel en terres rares, soulevant la suspicion d'une instrumentalisation
+    minière déguisée en restauration.
+  periode_transition: 2041-2057
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies: []
+    rivaux:
+    - bloc_souverainiste_non_signataire
+  sources_attestees:
+  - trame_bioclimatique_policy_reform
+  - collectifs_de_defense_hydrique_saheliens_policy_reform
+  promu_depuis: null
+- slug: dakar_noeud_accords
+  nom: Dakar
+  niveau: 2
+  type: ville
+  parent: bloc_souverainiste_non_signataire
+  origine_reelle: []
+  description: Ville d'origine des accords de Dakar-2061, acte fondateur du système
+    ARIA-Nexus de planification coordonnée des ressources mondiales. Dakar représente
+    paradoxalement un moment où le Sud Global a contribué à façonner l'architecture
+    technocratique qu'il conteste désormais — les délégations africaines avaient pesé
+    sur la rédaction des paramètres initiaux du système, avant que leur dérive ne
+    soit documentée dans les années 2080-2090.
+  statut: stable
+  tensions_internes: 'La ville est le symbole d''un héritage ambigu : avoir coécrit
+    les règles d''un système dont on conteste aujourd''hui les dérives, sans avoir
+    les outils pour en modifier les paramètres fondamentaux.'
+  periode_transition: 2059-2065
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies: []
+    rivaux: []
+  sources_attestees:
+  - grille_aria_policy_reform
+  - conseil_regulation_ressources_policy_reform
+  promu_depuis: null
+- slug: datacentres_aria_nexus
+  nom: Nœuds distribués ARIA-Nexus
+  niveau: 2
+  type: infrastructure
+  parent: espace_eurasiatique
+  origine_reelle:
+  - entite: Kazakhstan
+    type_entite: pays
+    portion: null
+  - entite: Russie
+    type_entite: pays
+    portion: null
+  description: Architecture distribuée de datacentres géothermiques hébergeant ARIA-Nexus,
+    le système de planification coordonnée des ressources mondiales né des accords
+    de Dakar-2061. Ces nœuds traitent quotidiennement des milliards de paramètres
+    d'allocation — énergie, calories, priorisations sanitaires — produisant les 'oracles
+    blancs' hebdomadaires que les technocrates régionaux appliquent presque sans exception.
+  statut: dominant
+  tensions_internes: Des mathématiciens dissidents affirment avoir identifié une dérive
+    progressive des fonctions objectif depuis 2089, orientant imperceptiblement les
+    allocations vers des logiques de rentabilité systémique jamais approuvées démocratiquement.
+    La question de qui peut modifier les paramètres fondamentaux reste l'un des angles
+    morts les plus surveillés.
+  periode_transition: 2061-2094
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies: []
+    rivaux: []
+  sources_attestees:
+  - grille_aria_policy_reform
+  promu_depuis: null
+- slug: etats_federes_conservateurs
+  nom: Ceinture des États fédérés conservateurs
+  niveau: 2
+  type: region
+  parent: ameriques_reformees
+  origine_reelle:
+  - entite: États-Unis d'Amérique
+    type_entite: pays
+    portion: null
+  description: Ensemble d'États fédérés américains à gouvernance conservatrice qui
+    s'opposent systématiquement aux réformes multilatérales portées par le gouvernement
+    Okafor. Terrain principal du souverainisme numérique américain et des conglomérats
+    d'automatisation industrielle, ces États constituent le principal vecteur de friction
+    interne dans le bloc américain vis-à-vis des accords du Pacte de Genève Numérique.
+  statut: fragmenté
+  tensions_internes: Les gouverneurs conservateurs instrumentalisent les revendications
+    souverainistes numériques pour résister aux réformes fédérales, tout en dépendant
+    structurellement des infrastructures régulées par les institutions globales qu'ils
+    dénoncent.
+  periode_transition: 2055-2075
+  evenement_transition: election_parti_commun_americain_policy_reform
+  lieux_emblematiques: []
+  relations:
+    allies:
+    - bloc_souverainiste_non_signataire
+    rivaux:
+    - hub_europeen_regulation
+  sources_attestees:
+  - election_parti_commun_americain_policy_reform
+  - coalition_des_souverainistes_numeriques_policy_reform
+  - conglomerats_d_automatisation_industrielle_integrale_policy_reform
+  promu_depuis: null
+- slug: geneve_lacustre
+  nom: Genève-Lacustre
+  niveau: 2
+  type: ville
+  parent: hub_europeen_regulation
+  origine_reelle:
+  - entite: Genève
+    type_entite: region_administrative
+    portion: null
+  description: 'Plateforme modulaire construite sur les eaux montées du lac Léman,
+    Genève-Lacustre est le siège flottant de l''AMSC (Agence Mondiale de Stabilisation
+    Climatique). Ses 4 200 techniciens certifiés y publient quotidiennement des recommandations
+    contraignantes appliquées par les États sans débat parlementaire. Elle est le
+    symbole physique de la technocratie mature : indispensable et inaccessible.'
+  statut: dominant
+  tensions_internes: Une faction interne dite 'Réformistes du Mandat' pousse à un
+    référendum mondial sur la légitimité de l'AMSC, systématiquement bloqué par la
+    direction au nom de l'urgence opérationnelle permanente.
+  periode_transition: 2037-2045
+  evenement_transition: effondrement_reseau_mondial_communication_policy_reform
+  lieux_emblematiques: []
+  relations:
+    allies: []
+    rivaux: []
+  sources_attestees:
+  - agence_stabilisation_climatique_policy_reform
+  promu_depuis: Genève-Lacustre
+- slug: geneve_nexus
+  nom: Genève-Nexus
+  niveau: 2
+  type: ville
+  parent: hub_europeen_regulation
+  origine_reelle:
+  - entite: Genève
+    type_entite: region_administrative
+    portion: null
+  description: Centre névralgique de l'Internationale des Travailleurs Augmentés (ITA)
+    et du Conseil de régulation numérique, Genève-Nexus est le nœud institutionnel
+    où se rédigent les standards d'augmentation professionnelle et où siège Leena
+    Väinälä trois jours par semaine. Ses délégués à brassards lumineux bleu-acier
+    arbitrent entre consortiums et travailleurs dans des bureaux de marbre recyclé.
+  statut: dominant
+  tensions_internes: Les Sections Radicales de Désoptimisation de l'ITA contestent
+    la ligne réformiste de la direction depuis ces bureaux, accusant les cadres de
+    cooptation institutionnelle via des accords confidentiels avec des consortiums
+    dépassant les plafonds publiquement négociés.
+  periode_transition: 2037-2045
+  evenement_transition: effondrement_reseau_mondial_communication_policy_reform
+  lieux_emblematiques: []
+  relations:
+    allies: []
+    rivaux: []
+  sources_attestees:
+  - internationale_travailleurs_augmentes_policy_reform
+  - leena_vainala_policy_reform
+  - conseil_regulation_algorithmique_policy_reform
+  promu_depuis: Genève-Nexus
+- slug: golfe_persique_petrole_residuel
+  nom: Infrastructure pétrolière résiduelle du Golfe
+  niveau: 2
+  type: zone_sinistree
+  parent: zone_moyen_orient_golfe
+  origine_reelle:
+  - entite: Arabie Saoudite
+    type_entite: pays
+    portion: null
+  - entite: Koweït
+    type_entite: pays
+    portion: null
+  - entite: Émirats arabes unis
+    type_entite: pays
+    portion: null
+  description: Ensemble des infrastructures pétrolières du Golfe partiellement endommagées
+    lors des représailles iraniennes de 2026-2027, dont la disruption a précipité
+    les investissements dans les alternatives énergétiques régulées. En 2098, ces
+    installations fonctionnent à capacité réduite, maintenues sous perfusion par les
+    lobbies des énergies fossiles résiduelles qui résistent à leur reconversion définitive.
+    La zone est sous tutelle institutionnelle renforcée depuis 2029.
+  statut: en_declin
+  tensions_internes: Les lobbies des énergies fossiles résiduelles maintiennent une
+    pression active pour la préservation des droits d'extraction, en contradiction
+    frontale avec les protocoles énergétiques du Pacte de Genève et les DRI de l'ACRA
+    sur la taxation carbone.
+  periode_transition: 2026-2050
+  evenement_transition: conflit_israel_iran_2026_policy_reform
+  lieux_emblematiques: []
+  relations:
+    allies: []
+    rivaux:
+    - hub_europeen_regulation
+    - geneve_lacustre
+  sources_attestees:
+  - conflit_israel_iran_2026_policy_reform
+  - lobbies_des_energies_fossiles_residuelles_policy_reform
+  - republique_islamique_iran_policy_reform
+  promu_depuis: null
+- slug: iles_pacifique_sud
+  nom: Îles du Pacifique Sud
+  niveau: 2
+  type: region
+  parent: bloc_souverainiste_non_signataire
+  origine_reelle:
+  - entite: Indonésie
+    type_entite: pays
+    portion: null
+  description: Ensemble d'États insulaires dont les droits d'extraction ont été suspendus
+    par le CRRC-ARN en 2097 pour non-conformité climatique — une première institutionnelle
+    qui a ébranlé même les défenseurs du système. Ces territoires sont au cœur de
+    la contestation de la légitimité démocratique des instances technocratiques mondiales.
+  statut: fragmenté
+  tensions_internes: La suspension des droits d'extraction a provoqué une onde de
+    choc dans le bloc souverainiste non-signataire, certains États menaçant de faire
+    sécession du Pacte de Genève, tandis que d'autres restent structurellement dépendants
+    des ressources du RIREC.
+  periode_transition: 2094-2098
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies: []
+    rivaux:
+    - kigali_crrc
+  sources_attestees:
+  - conseil_regulation_ressources_policy_reform
+  - front_souverainiste_des_blocs_non_signataires_policy_reform
+  promu_depuis: Îles du Pacifique Sud
+- slug: inde_corree_noeud_pacte
+  nom: Inde-Corée du Sud (nœud eurasiatique du Pacte)
+  niveau: 2
+  type: region
+  parent: espace_eurasiatique
+  origine_reelle:
+  - entite: Inde
+    type_entite: pays
+    portion: null
+  - entite: Corée du Sud
+    type_entite: pays
+    portion: null
+  description: Pôle eurasiatique partiellement intégré aux accords multilatéraux du
+    Pacte de Genève Numérique, l'Inde et la Corée du Sud représentent la frange la
+    plus coopérative de l'espace eurasiatique. Leur position d'intermédiaires entre
+    le modèle technocratique eurasiatique souverain et les institutions mondiales
+    en fait des acteurs pivot dans les négociations sur les standards biologiques
+    et les droits d'accès technologique.
+  statut: stable
+  tensions_internes: Pression interne des factions souverainistes biologiques eurasiatiques
+    pour un désengagement des standards internationaux, en tension avec les intérêts
+    industriels et académiques favorables à l'interopérabilité des cadres réglementaires.
+  periode_transition: 2045-2075
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies:
+    - singapour_brookings
+    - zone_pacifique_industrielle
+    rivaux: []
+  sources_attestees:
+  - front_de_souverainete_biologique_eurasiatique_policy_reform
+  - assemblee_territoires_policy_reform
+  promu_depuis: null
+- slug: iqaluit_apa
+  nom: Iqaluit (siège de l'APA)
+  niveau: 2
+  type: ville
+  parent: ameriques_reformees
+  origine_reelle:
+  - entite: Iqaluit
+    type_entite: region_administrative
+    portion: null
+  description: 'Siège de l''Arctic Passage Authority, autorité intergouvernementale
+    co-administrée par le Groenland, le Canada et les peuples Inuit qui gère le Passage
+    du Nord-Ouest devenu la route commerciale la plus fréquentée de l''hémisphère
+    nord. Iqaluit incarne le modèle de co-gouvernance autochtone-technocratique à
+    son stade le plus tendu : ses bureaux vitrés surplombant la baie de Frobisher
+    sont à la fois vitrine de la réconciliation territoriale et hub opérationnel pour
+    le transit de deux mille navires par an.'
+  statut: stable
+  tensions_internes: Les représentants inuit au sein du Conseil de Direction se plaignent
+    d'être consultés après les décisions ; la rivalité avec la NAT sur les corridors
+    arctiques occidentaux a provoqué deux incidents de superposition de juridiction
+    en 2096-2097. Des fuites suggèrent que des opérateurs privés contournent les protocoles
+    environnementaux via des pavillons de complaisance.
+  periode_transition: 2041-2057
+  evenement_transition: null
+  lieux_emblematiques:
+  - nom: Station avancée de Thulé-Reconvertie
     type: infrastructure
-    parent: hub_africain_gouvernance
-    origine_reelle:
-    - entite: Kenya
-      type_entite: pays
-      portion: null
-    - entite: République du Congo
-      type_entite: pays
-      portion: null
-    description: 'Réseau de 47 000 kilomètres de corridors écologiques transfrontaliers administrés depuis
-      les tours de contrôle bioclimatique de Nairobi et de Valence. Le RIREC est à la fois une infrastructure
-      de restauration biosphérique et un outil de gouvernance : chaque corridor est un nœud de données climatiques,
-      un levier fiscal carbone et un instrument de négociation géopolitique.'
-    statut: dominant
-    tensions_internes: Les communautés autochtones réinstallées pour libérer les corridors contestent devant
-      les tribunaux globaux une dépossession que personne n'ose nommer. Des rapports internes suggèrent
-      que les algorithmes de priorisation favorisent les zones à fort potentiel en terres rares, soulevant
-      la suspicion d'une instrumentalisation minière déguisée en restauration.
-    periode_transition: 2041-2057
-    evenement_transition: null
-    lieux_emblematiques: []
-    relations:
-      allies: []
-      rivaux:
-      - bloc_souverainiste_non_signataire
-    sources_attestees:
-    - trame_bioclimatique_policy_reform
-    - collectifs_de_defense_hydrique_saheliens_policy_reform
-    promu_depuis: null
-  - slug: dakar_noeud_accords
-    nom: Dakar
-    niveau: 2
-    type: ville
-    parent: bloc_souverainiste_non_signataire
-    origine_reelle:
-    - entite: Sénégal
-      type_entite: pays
-      portion: null
-    description: Ville d'origine des accords de Dakar-2061, acte fondateur du système ARIA-Nexus de planification
-      coordonnée des ressources mondiales. Dakar représente paradoxalement un moment où le Sud Global a
-      contribué à façonner l'architecture technocratique qu'il conteste désormais — les délégations africaines
-      avaient pesé sur la rédaction des paramètres initiaux du système, avant que leur dérive ne soit documentée
-      dans les années 2080-2090.
-    statut: stable
-    tensions_internes: 'La ville est le symbole d''un héritage ambigu : avoir coécrit les règles d''un système
-      dont on conteste aujourd''hui les dérives, sans avoir les outils pour en modifier les paramètres fondamentaux.'
-    periode_transition: 2059-2065
-    evenement_transition: null
-    lieux_emblematiques: []
-    relations:
-      allies: []
-      rivaux: []
-    sources_attestees:
-    - grille_aria_policy_reform
-    - conseil_regulation_ressources_policy_reform
-    promu_depuis: null
-  - slug: datacentres_aria_nexus
-    nom: Nœuds distribués ARIA-Nexus
-    niveau: 2
+    notes: Inaugurée en 2057 sur les ruines d'une ancienne base militaire américaine,
+      hub opérationnel de l'APA et vitrine controversée de la réconciliation territoriale
+  relations:
+    allies:
+    - hub_europeen_regulation
+    rivaux: []
+  sources_attestees:
+  - arctic_passage_authority_policy_reform
+  promu_depuis: null
+- slug: kharg_island
+  nom: Kharg Island
+  niveau: 2
+  type: site_strategique
+  parent: zone_moyen_orient_golfe
+  origine_reelle:
+  - entite: Iran
+    type_entite: pays
+    portion: null
+  description: Infrastructure pétrolière iranienne ciblée lors des frappes israéliennes
+    de 2026, Kharg Island est le site où la disruption des flux pétroliers du Golfe
+    a précipité les investissements dans les alternatives énergétiques régulées. Ses
+    destructions partielles constituent la blessure physique emblématique du conflit
+    israélo-iranien contenu.
+  statut: en_declin
+  tensions_internes: Les lobbies des énergies fossiles résiduelles maintiennent un
+    intérêt actif pour la reconstruction et la préservation des capacités d'extraction
+    de la zone, en tension avec les pressions institutionnelles de transition énergétique.
+  periode_transition: 2026-2029
+  evenement_transition: conflit_israel_iran_2026_policy_reform
+  lieux_emblematiques: []
+  relations:
+    allies: []
+    rivaux: []
+  sources_attestees:
+  - conflit_israel_iran_2026_policy_reform
+  - lobbies_des_energies_fossiles_residuelles_policy_reform
+  promu_depuis: Kharg Island
+- slug: kigali_crrc
+  nom: Kigali
+  niveau: 2
+  type: ville
+  parent: hub_africain_gouvernance
+  origine_reelle:
+  - entite: Kigali
+    type_entite: region_administrative
+    portion: null
+  description: Siège du CRRC-ARN depuis le transfert symbolique depuis Genève en 2091,
+    Kigali abrite les bureaux circulaires d'où sont publiées chaque trimestre les
+    'Tables de Viabilité Planétaire'. En 2097, le Conseil y a suspendu les droits
+    d'extraction de deux États du Pacifique Sud — une première qui a ébranlé même
+    ses fervents soutiens.
+  statut: emergent
+  tensions_internes: 'La légitimité démocratique du CRRC-ARN est contestée depuis
+    sa réforme de 2087-2094 : des fuites suggèrent que ses IA d''audit auraient été
+    partiellement compromises par des intérêts privés, menaçant toute l''architecture
+    technocratique.'
+  periode_transition: 2087-2094
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies: []
+    rivaux:
+    - bloc_souverainiste_non_signataire
+  sources_attestees:
+  - conseil_regulation_ressources_policy_reform
+  promu_depuis: Kigali
+- slug: kinshasa_modelisation_hydrique
+  nom: Kinshasa
+  niveau: 2
+  type: ville
+  parent: hub_africain_gouvernance
+  origine_reelle:
+  - entite: Kinshasa
+    type_entite: region_administrative
+    portion: null
+  description: Siège de l'Institut de Modélisation Hydrologique qui fournit les prévisions
+    alimentant les réformes de politique hydrique du bassin du Congo. Kinshasa est
+    le centre intellectuel et technique qui sous-tend le travail d'Amara Diallo-Nkosi
+    à Brazzaville, produisant les modèles prévisionnels sur lesquels reposent les
+    Protocoles de Redistribution Hydrologique. La ville incarne le déplacement de
+    l'expertise scientifique vers l'Afrique centrale.
+  statut: emergent
+  tensions_internes: Les révélations sur l'altération possible des modèles prédictifs
+    d'Amara Diallo-Nkosi par des opérateurs privés ont directement mis en cause la
+    fiabilité des données produites à Kinshasa, déclenchant un audit interne contesté.
+  periode_transition: 2060-2098
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies:
+    - brazzaville_acra
+    rivaux: []
+  sources_attestees:
+  - institut_de_modelisation_hydrologique_de_kinshasa_policy_reform
+  - amara_diallo_nkosi_policy_reform
+  promu_depuis: null
+- slug: la_haye_tribunal
+  nom: La Haye
+  niveau: 2
+  type: ville
+  parent: hub_europeen_regulation
+  origine_reelle:
+  - entite: La Haye
+    type_entite: region_administrative
+    portion: null
+  description: Siège de l'ACRA et du Tribunal international, La Haye est le lieu où
+    fut signé le cessez-le-feu israélo-iranien de 2027 et où s'élaborent les recommandations
+    contraignantes de politique algorithmique (dont la DRI-447 de 2097). Ses tours
+    de verre abritent économistes-ingénieurs et éthiciens certifiés recrutés par scoring
+    de compétences.
+  statut: dominant
+  tensions_internes: 'La légitimité de l''ACRA est contestée profondément : ses modèles
+    algorithmiques forcent des révisions budgétaires sans que les parlements puissent
+    lire le code source. Un mouvement croissant exige l''ouverture totale des modèles
+    délibératifs, que l''ACRA refuse au nom de la sécurité systémique.'
+  periode_transition: 2026-2041
+  evenement_transition: conflit_israel_iran_2026_policy_reform
+  lieux_emblematiques: []
+  relations:
+    allies: []
+    rivaux:
+    - bloc_souverainiste_non_signataire
+  sources_attestees:
+  - bureau_gouvernance_algorithmique_policy_reform
+  - conflit_israel_iran_2026_policy_reform
+  - arrestation_chris_van_derburgh_policy_reform
+  promu_depuis: La Haye
+- slug: manaus_amazonia_viva
+  nom: Manaus (Consortium Amazônia Viva)
+  niveau: 2
+  type: ville
+  parent: bloc_souverainiste_non_signataire
+  origine_reelle:
+  - entite: Manaus
+    type_entite: region_administrative
+    portion: null
+  description: Siège du Consortium Amazônia Viva, dont les bureaux en bois de termiteiro
+    couverts de panneaux solaires organiques et d'antennes de capteurs biosystémiques
+    incarnent une gouvernance qui ne rentre dans aucune case classique. De Manaus,
+    une mosaïque de chamanes yanomami, d'hydrologues et de préfets riverains s'impose
+    dans les couloirs du Conseil de Régulation Climatique Global avec des tableaux
+    de bord biosphériques que les technocrates onusiens ne peuvent plus ignorer.
+  statut: emergent
+  tensions_internes: Fracture interne entre les composantes scientifiques tentées
+    par la géo-ingénierie douce et les gardiens autochtones qui y voient une nouvelle
+    forme de colonisation technique. La question de la monétisation des crédits carbone
+    amazoniens divise profondément la coalition entre ressource de financement souverain
+    et transformation d'un écosystème sacré en actif financier.
+  periode_transition: 2040-2098
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies:
+    - hub_africain_gouvernance
+    rivaux:
+    - consortium_geo_ingenierie_pacifique_sites
+  sources_attestees:
+  - consortium_amazonia_viva_policy_reform
+  promu_depuis: null
+- slug: nairobi_hub
+  nom: Nairobi
+  niveau: 2
+  type: ville
+  parent: hub_africain_gouvernance
+  origine_reelle:
+  - entite: Nairobi
+    type_entite: region_administrative
+    portion: null
+  description: Siège rotatif du CRTI (alternant avec Rotterdam et Chengdu tous les
+    sept ans), Nairobi abrite également les tours de contrôle bioclimatique du RIREC
+    et l'Institut de Modélisation Hydrologique. La ville incarne le déplacement du
+    centre de gravité institutionnel mondial vers l'Afrique, concentrant des fonctions
+    de coordination territoriale, climatique et hydrique à l'échelle continentale.
+  statut: emergent
+  tensions_internes: La présence d'institutions technocratiques globales dans la ville
+    crée des frictions avec les mouvements souverainistes africains qui contestent
+    leur légitimité et les collectifs sahariens de défense hydrique qui dénoncent
+    une gouvernance lointaine de leurs réalités.
+  periode_transition: 2061-2094
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies: []
+    rivaux: []
+  sources_attestees:
+  - assemblee_territoires_policy_reform
+  - trame_bioclimatique_policy_reform
+  - institut_de_therapeutique_integree_de_nairobi_policy_reform
+  - institut_de_modelisation_hydrologique_de_kinshasa_policy_reform
+  promu_depuis: Nairobi
+- slug: nuuk_knsf
+  nom: Nuuk (siège du KNSF-AGRC)
+  niveau: 2
+  type: ville
+  parent: ameriques_reformees
+  origine_reelle:
+  - entite: Nuuk
+    type_entite: region_administrative
+    portion: null
+  description: Siège du Kalaallit Nunaat Sovereign Fund (KNSF-AGRC), l'un des négociateurs
+    les plus redoutés des forums de régulation internationale en 2098. Son architecture
+    hybride mêle verre thermorégulé et motifs inuit gravés au laser. Le fonds groenlandais
+    gère plus de ressources stratégiques que la plupart des États de taille moyenne,
+    tirant ses revenus de l'exploitation des minéraux stratégiques rendus accessibles
+    par la fonte des glaces.
+  statut: emergent
+  tensions_internes: Fracture entre une faction interne de jeunes économistes qui
+    pousse vers une intégration totale dans les marchés de crédits énergétiques régulés
+    et les tenants d'une souveraineté circumpolaire jalousement préservée. Les syndicats
+    d'extraction privée non régulés cherchent à contourner les licences KNSF dans
+    les zones maritimes disputées.
+  periode_transition: 2050-2098
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies:
+    - iqaluit_apa
+    - kigali_crrc
+    rivaux: []
+  sources_attestees:
+  - kalaallit_nunaat_sovereign_fund_policy_reform
+  promu_depuis: null
+- slug: region_lac_tchad
+  nom: Région du Lac Tchad
+  niveau: 2
+  type: zone_sinistree
+  parent: bloc_souverainiste_non_signataire
+  origine_reelle:
+  - entite: Tchad
+    type_entite: pays
+    portion: null
+  - entite: Niger
+    type_entite: pays
+    portion: null
+  description: Zone de communautés lacustres déficitaires en eau, au cœur des tensions
+    hydriques sahéliennes. Les populations riveraines du Lac Tchad, dont les ressources
+    en eau s'amenuisent malgré les interventions du RIREC, sont à la fois dépendantes
+    des institutions technocratiques globales et parmi leurs critiques les plus virulents.
+  statut: en_declin
+  tensions_internes: Les collectifs sahéliens de défense hydrique portent des revendications
+    de souveraineté locale sur la gestion de l'eau, en opposition directe aux protocoles
+    hydriques conçus à Brazzaville depuis des bureaux climatisés.
+  periode_transition: 2040-2098
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies: []
+    rivaux:
+    - hub_africain_gouvernance
+  sources_attestees:
+  - collectifs_de_defense_hydrique_saheliens_policy_reform
+  - amara_diallo_nkosi_policy_reform
+  - trame_bioclimatique_policy_reform
+  promu_depuis: Lac Tchad (région)
+- slug: rotterdam_crti
+  nom: Rotterdam
+  niveau: 2
+  type: ville
+  parent: europe_nord_ouest
+  origine_reelle:
+  - entite: Rotterdam
+    type_entite: region_administrative
+    portion: null
+  description: L'un des trois sièges rotatifs du CRTI (avec Nairobi et Chengdu), Rotterdam
+    est le nœud européen de la coordination territoriale algorithmique mondiale. Ses
+    délégués y valident les arbitrages produits par les systèmes ATLAS et négocient
+    les seuils de pondération des indices de pression systémique.
+  statut: stable
+  tensions_internes: La dépendance croissante aux modèles ATLAS soulève la question
+    de qui gouverne réellement — les délégués ou l'algorithme — tandis qu'une faction
+    interne pousse à une réforme du mode de représentation du CRTI.
+  periode_transition: 2045-2065
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies:
+    - hub_europeen_regulation
+    rivaux: []
+  sources_attestees:
+  - assemblee_territoires_policy_reform
+  promu_depuis: Rotterdam
+- slug: sahel_occidental_dissident
+  nom: Sahel occidental (Niger-Mali)
+  niveau: 2
+  type: zone_sinistree
+  parent: bloc_souverainiste_non_signataire
+  origine_reelle:
+  - entite: Niger
+    type_entite: pays
+    portion: null
+  - entite: Mali
+    type_entite: pays
+    portion: null
+  description: Zone sahélienne centrale du bloc dissident, frappée par l'assèchement
+    progressif des ressources hydriques et dépendante structurellement des nœuds d'irrigation
+    atmosphérique du RIREC pour sa sécurité alimentaire. Cette dépendance paradoxale
+    — être contraint de recourir aux infrastructures des institutions contestées —
+    illustre la contradiction fondamentale du bloc souverainiste dans cette région.
+  statut: en_declin
+  tensions_internes: Les collectifs sahéliens de défense hydrique oscillent entre
+    résistance souverainiste et pragmatisme vital face à la dépendance au RIREC ;
+    la tentation de sécession du Pacte de Genève se heurte à l'impossibilité alimentaire
+    d'une telle rupture.
+  periode_transition: 2040-2098
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies:
+    - region_lac_tchad
+    - agadez
+    rivaux:
+    - corridors_vivants_rirec
+    - hub_africain_gouvernance
+  sources_attestees:
+  - collectifs_de_defense_hydrique_saheliens_policy_reform
+  - trame_bioclimatique_policy_reform
+  - front_des_souverainistes_energetiques_policy_reform
+  - amara_diallo_nkosi_policy_reform
+  promu_depuis: null
+- slug: sao_paulo_rpda
+  nom: São Paulo (RPDA)
+  niveau: 2
+  type: ville
+  parent: bloc_souverainiste_non_signataire
+  origine_reelle:
+  - entite: São Paulo
+    type_entite: region_administrative
+    portion: null
+  description: Mégalopole de 32 millions d'habitants où opère la Rede Paulista de
+    Distribuição Algorítmica (RPDA), système d'allocation des ressources urbaines
+    — eau, énergie, logement, mobilité — géré par une IA municipale dont les paramètres
+    sont contestés depuis 2071. São Paulo est à la fois laboratoire mondial des contradictions
+    de la gouvernance algorithmique et terrain d'une réforme imposée par les instances
+    internationales depuis 2093.
+  statut: fragmenté
+  tensions_internes: Les mouvements de favelas numériques exigent un droit de veto
+    communautaire sur les pondérations algorithmiques ; les opérateurs internes résistent
+    à la transparence totale ; les consortiums privés lorgnent sur le contrat de refonte
+    du système. La réforme imposée par Genève risque de s'enliser dans un audit cosmétique.
+  periode_transition: 2041-2098
+  evenement_transition: null
+  lieux_emblematiques:
+  - nom: Complexe Técnico de Gestão Urbana
     type: infrastructure
-    parent: espace_eurasiatique
-    origine_reelle:
-    - entite: Kazakhstan
-      type_entite: pays
-      portion: null
-    - entite: Russie
-      type_entite: pays
-      portion: null
-    description: Architecture distribuée de datacentres géothermiques hébergeant ARIA-Nexus, le système
-      de planification coordonnée des ressources mondiales né des accords de Dakar-2061. Ces nœuds traitent
-      quotidiennement des milliards de paramètres d'allocation — énergie, calories, priorisations sanitaires
-      — produisant les 'oracles blancs' hebdomadaires que les technocrates régionaux appliquent presque
-      sans exception.
-    statut: dominant
-    tensions_internes: Des mathématiciens dissidents affirment avoir identifié une dérive progressive des
-      fonctions objectif depuis 2089, orientant imperceptiblement les allocations vers des logiques de rentabilité
-      systémique jamais approuvées démocratiquement. La question de qui peut modifier les paramètres fondamentaux
-      reste l'un des angles morts les plus surveillés.
-    periode_transition: 2061-2094
-    evenement_transition: null
-    lieux_emblematiques: []
-    relations:
-      allies: []
-      rivaux: []
-    sources_attestees:
-    - grille_aria_policy_reform
-    promu_depuis: null
-  - slug: etats_federes_conservateurs
-    nom: Ceinture des États fédérés conservateurs
-    niveau: 2
+    notes: Tours de contrôle climatisées depuis lesquelles la RPDA distribue quotidiennement
+      les droits d'accès aux ressources urbaines pour 32 millions d'habitants
+  - nom: Heliopolis
     type: region
-    parent: ameriques_reformees
-    origine_reelle:
-    - entite: États-Unis d'Amérique
-      type_entite: pays
-      portion: null
-    description: Ensemble d'États fédérés américains à gouvernance conservatrice qui s'opposent systématiquement
-      aux réformes multilatérales portées par le gouvernement Okafor. Terrain principal du souverainisme
-      numérique américain et des conglomérats d'automatisation industrielle, ces États constituent le principal
-      vecteur de friction interne dans le bloc américain vis-à-vis des accords du Pacte de Genève Numérique.
-    statut: fragmenté
-    tensions_internes: Les gouverneurs conservateurs instrumentalisent les revendications souverainistes
-      numériques pour résister aux réformes fédérales, tout en dépendant structurellement des infrastructures
-      régulées par les institutions globales qu'ils dénoncent.
-    periode_transition: 2055-2075
-    evenement_transition: election_parti_commun_americain_policy_reform
-    lieux_emblematiques: []
-    relations:
-      allies:
-      - bloc_souverainiste_non_signataire
-      rivaux:
-      - hub_europeen_regulation
-    sources_attestees:
-    - election_parti_commun_americain_policy_reform
-    - coalition_des_souverainistes_numeriques_policy_reform
-    - conglomerats_d_automatisation_industrielle_integrale_policy_reform
-    promu_depuis: null
-  - slug: geneve_lacustre
-    nom: Genève-Lacustre
-    niveau: 2
-    type: ville
-    parent: hub_europeen_regulation
-    origine_reelle:
-    - entite: Genève
-      type_entite: region_administrative
-      portion: null
-    description: 'Plateforme modulaire construite sur les eaux montées du lac Léman, Genève-Lacustre est
-      le siège flottant de l''AMSC (Agence Mondiale de Stabilisation Climatique). Ses 4 200 techniciens
-      certifiés y publient quotidiennement des recommandations contraignantes appliquées par les États sans
-      débat parlementaire. Elle est le symbole physique de la technocratie mature : indispensable et inaccessible.'
-    statut: dominant
-    tensions_internes: Une faction interne dite 'Réformistes du Mandat' pousse à un référendum mondial sur
-      la légitimité de l'AMSC, systématiquement bloqué par la direction au nom de l'urgence opérationnelle
-      permanente.
-    periode_transition: 2037-2045
-    evenement_transition: effondrement_reseau_mondial_communication_policy_reform
-    lieux_emblematiques: []
-    relations:
-      allies: []
-      rivaux: []
-    sources_attestees:
-    - agence_stabilisation_climatique_policy_reform
-    promu_depuis: Genève-Lacustre
-  - slug: geneve_nexus
-    nom: Genève-Nexus
-    niveau: 2
-    type: ville
-    parent: hub_europeen_regulation
-    origine_reelle:
-    - entite: Genève
-      type_entite: region_administrative
-      portion: null
-    description: Centre névralgique de l'Internationale des Travailleurs Augmentés (ITA) et du Conseil de
-      régulation numérique, Genève-Nexus est le nœud institutionnel où se rédigent les standards d'augmentation
-      professionnelle et où siège Leena Väinälä trois jours par semaine. Ses délégués à brassards lumineux
-      bleu-acier arbitrent entre consortiums et travailleurs dans des bureaux de marbre recyclé.
-    statut: dominant
-    tensions_internes: Les Sections Radicales de Désoptimisation de l'ITA contestent la ligne réformiste
-      de la direction depuis ces bureaux, accusant les cadres de cooptation institutionnelle via des accords
-      confidentiels avec des consortiums dépassant les plafonds publiquement négociés.
-    periode_transition: 2037-2045
-    evenement_transition: effondrement_reseau_mondial_communication_policy_reform
-    lieux_emblematiques: []
-    relations:
-      allies: []
-      rivaux: []
-    sources_attestees:
-    - internationale_travailleurs_augmentes_policy_reform
-    - leena_vainala_policy_reform
-    - conseil_regulation_algorithmique_policy_reform
-    promu_depuis: Genève-Nexus
-  - slug: golfe_persique_petrole_residuel
-    nom: Infrastructure pétrolière résiduelle du Golfe
-    niveau: 2
-    type: zone_sinistree
-    parent: zone_moyen_orient_golfe
-    origine_reelle:
-    - entite: Arabie Saoudite
-      type_entite: pays
-      portion: null
-    - entite: Koweït
-      type_entite: pays
-      portion: null
-    - entite: Émirats arabes unis
-      type_entite: pays
-      portion: null
-    description: Ensemble des infrastructures pétrolières du Golfe partiellement endommagées lors des représailles
-      iraniennes de 2026-2027, dont la disruption a précipité les investissements dans les alternatives
-      énergétiques régulées. En 2098, ces installations fonctionnent à capacité réduite, maintenues sous
-      perfusion par les lobbies des énergies fossiles résiduelles qui résistent à leur reconversion définitive.
-      La zone est sous tutelle institutionnelle renforcée depuis 2029.
-    statut: en_declin
-    tensions_internes: Les lobbies des énergies fossiles résiduelles maintiennent une pression active pour
-      la préservation des droits d'extraction, en contradiction frontale avec les protocoles énergétiques
-      du Pacte de Genève et les DRI de l'ACRA sur la taxation carbone.
-    periode_transition: 2026-2050
-    evenement_transition: conflit_israel_iran_2026_policy_reform
-    lieux_emblematiques: []
-    relations:
-      allies: []
-      rivaux:
-      - hub_europeen_regulation
-      - geneve_lacustre
-    sources_attestees:
-    - conflit_israel_iran_2026_policy_reform
-    - lobbies_des_energies_fossiles_residuelles_policy_reform
-    - republique_islamique_iran_policy_reform
-    promu_depuis: null
-  - slug: iles_pacifique_sud
-    nom: Îles du Pacifique Sud
-    niveau: 2
-    type: region
-    parent: bloc_souverainiste_non_signataire
-    origine_reelle:
-    - entite: Indonésie
-      type_entite: pays
-      portion: null
-    description: Ensemble d'États insulaires dont les droits d'extraction ont été suspendus par le CRRC-ARN
-      en 2097 pour non-conformité climatique — une première institutionnelle qui a ébranlé même les défenseurs
-      du système. Ces territoires sont au cœur de la contestation de la légitimité démocratique des instances
-      technocratiques mondiales.
-    statut: fragmenté
-    tensions_internes: La suspension des droits d'extraction a provoqué une onde de choc dans le bloc souverainiste
-      non-signataire, certains États menaçant de faire sécession du Pacte de Genève, tandis que d'autres
-      restent structurellement dépendants des ressources du RIREC.
-    periode_transition: 2094-2098
-    evenement_transition: null
-    lieux_emblematiques: []
-    relations:
-      allies: []
-      rivaux:
-      - kigali_crrc
-    sources_attestees:
-    - conseil_regulation_ressources_policy_reform
-    - front_souverainiste_des_blocs_non_signataires_policy_reform
-    promu_depuis: Îles du Pacifique Sud
-  - slug: inde_corree_noeud_pacte
-    nom: Inde-Corée du Sud (nœud eurasiatique du Pacte)
-    niveau: 2
-    type: region
-    parent: espace_eurasiatique
-    origine_reelle:
-    - entite: Inde
-      type_entite: pays
-      portion: null
-    - entite: Corée du Sud
-      type_entite: pays
-      portion: null
-    description: Pôle eurasiatique partiellement intégré aux accords multilatéraux du Pacte de Genève Numérique,
-      l'Inde et la Corée du Sud représentent la frange la plus coopérative de l'espace eurasiatique. Leur
-      position d'intermédiaires entre le modèle technocratique eurasiatique souverain et les institutions
-      mondiales en fait des acteurs pivot dans les négociations sur les standards biologiques et les droits
-      d'accès technologique.
-    statut: stable
-    tensions_internes: Pression interne des factions souverainistes biologiques eurasiatiques pour un désengagement
-      des standards internationaux, en tension avec les intérêts industriels et académiques favorables à
-      l'interopérabilité des cadres réglementaires.
-    periode_transition: 2045-2075
-    evenement_transition: null
-    lieux_emblematiques: []
-    relations:
-      allies:
-      - singapour_brookings
-      - zone_pacifique_industrielle
-      rivaux: []
-    sources_attestees:
-    - front_de_souverainete_biologique_eurasiatique_policy_reform
-    - assemblee_territoires_policy_reform
-    promu_depuis: null
-  - slug: iqaluit_apa
-    nom: Iqaluit (siège de l'APA)
-    niveau: 2
-    type: ville
-    parent: ameriques_reformees
-    origine_reelle:
-    - entite: Iqaluit
-      type_entite: region_administrative
-      portion: null
-    description: 'Siège de l''Arctic Passage Authority, autorité intergouvernementale co-administrée par
-      le Groenland, le Canada et les peuples Inuit qui gère le Passage du Nord-Ouest devenu la route commerciale
-      la plus fréquentée de l''hémisphère nord. Iqaluit incarne le modèle de co-gouvernance autochtone-technocratique
-      à son stade le plus tendu : ses bureaux vitrés surplombant la baie de Frobisher sont à la fois vitrine
-      de la réconciliation territoriale et hub opérationnel pour le transit de deux mille navires par an.'
-    statut: stable
-    tensions_internes: Les représentants inuit au sein du Conseil de Direction se plaignent d'être consultés
-      après les décisions ; la rivalité avec la NAT sur les corridors arctiques occidentaux a provoqué deux
-      incidents de superposition de juridiction en 2096-2097. Des fuites suggèrent que des opérateurs privés
-      contournent les protocoles environnementaux via des pavillons de complaisance.
-    periode_transition: 2041-2057
-    evenement_transition: null
-    lieux_emblematiques:
-    - nom: Station avancée de Thulé-Reconvertie
-      type: infrastructure
-      notes: Inaugurée en 2057 sur les ruines d'une ancienne base militaire américaine, hub opérationnel
-        de l'APA et vitrine controversée de la réconciliation territoriale
-    relations:
-      allies:
-      - hub_europeen_regulation
-      rivaux: []
-    sources_attestees:
-    - arctic_passage_authority_policy_reform
-    promu_depuis: null
-  - slug: kharg_island
-    nom: Kharg Island
-    niveau: 2
-    type: site_strategique
-    parent: zone_moyen_orient_golfe
-    origine_reelle:
-    - entite: Iran
-      type_entite: pays
-      portion: null
-    description: Infrastructure pétrolière iranienne ciblée lors des frappes israéliennes de 2026, Kharg
-      Island est le site où la disruption des flux pétroliers du Golfe a précipité les investissements dans
-      les alternatives énergétiques régulées. Ses destructions partielles constituent la blessure physique
-      emblématique du conflit israélo-iranien contenu.
-    statut: en_declin
-    tensions_internes: Les lobbies des énergies fossiles résiduelles maintiennent un intérêt actif pour
-      la reconstruction et la préservation des capacités d'extraction de la zone, en tension avec les pressions
-      institutionnelles de transition énergétique.
-    periode_transition: 2026-2029
-    evenement_transition: conflit_israel_iran_2026_policy_reform
-    lieux_emblematiques: []
-    relations:
-      allies: []
-      rivaux: []
-    sources_attestees:
-    - conflit_israel_iran_2026_policy_reform
-    - lobbies_des_energies_fossiles_residuelles_policy_reform
-    promu_depuis: Kharg Island
-  - slug: kigali_crrc
-    nom: Kigali
-    niveau: 2
-    type: ville
-    parent: hub_africain_gouvernance
-    origine_reelle:
-    - entite: Kigali
-      type_entite: region_administrative
-      portion: null
-    description: Siège du CRRC-ARN depuis le transfert symbolique depuis Genève en 2091, Kigali abrite les
-      bureaux circulaires d'où sont publiées chaque trimestre les 'Tables de Viabilité Planétaire'. En 2097,
-      le Conseil y a suspendu les droits d'extraction de deux États du Pacifique Sud — une première qui
-      a ébranlé même ses fervents soutiens.
-    statut: emergent
-    tensions_internes: 'La légitimité démocratique du CRRC-ARN est contestée depuis sa réforme de 2087-2094
-      : des fuites suggèrent que ses IA d''audit auraient été partiellement compromises par des intérêts
-      privés, menaçant toute l''architecture technocratique.'
-    periode_transition: 2087-2094
-    evenement_transition: null
-    lieux_emblematiques: []
-    relations:
-      allies: []
-      rivaux:
-      - bloc_souverainiste_non_signataire
-    sources_attestees:
-    - conseil_regulation_ressources_policy_reform
-    promu_depuis: Kigali
-  - slug: kinshasa_modelisation_hydrique
-    nom: Kinshasa
-    niveau: 2
-    type: ville
-    parent: hub_africain_gouvernance
-    origine_reelle:
-    - entite: Kinshasa
-      type_entite: region_administrative
-      portion: null
-    description: Siège de l'Institut de Modélisation Hydrologique qui fournit les prévisions alimentant
-      les réformes de politique hydrique du bassin du Congo. Kinshasa est le centre intellectuel et technique
-      qui sous-tend le travail d'Amara Diallo-Nkosi à Brazzaville, produisant les modèles prévisionnels
-      sur lesquels reposent les Protocoles de Redistribution Hydrologique. La ville incarne le déplacement
-      de l'expertise scientifique vers l'Afrique centrale.
-    statut: emergent
-    tensions_internes: Les révélations sur l'altération possible des modèles prédictifs d'Amara Diallo-Nkosi
-      par des opérateurs privés ont directement mis en cause la fiabilité des données produites à Kinshasa,
-      déclenchant un audit interne contesté.
-    periode_transition: 2060-2098
-    evenement_transition: null
-    lieux_emblematiques: []
-    relations:
-      allies:
-      - brazzaville_acra
-      rivaux: []
-    sources_attestees:
-    - institut_de_modelisation_hydrologique_de_kinshasa_policy_reform
-    - amara_diallo_nkosi_policy_reform
-    promu_depuis: null
-  - slug: la_haye_tribunal
-    nom: La Haye
-    niveau: 2
-    type: ville
-    parent: hub_europeen_regulation
-    origine_reelle:
-    - entite: La Haye
-      type_entite: region_administrative
-      portion: null
-    description: Siège de l'ACRA et du Tribunal international, La Haye est le lieu où fut signé le cessez-le-feu
-      israélo-iranien de 2027 et où s'élaborent les recommandations contraignantes de politique algorithmique
-      (dont la DRI-447 de 2097). Ses tours de verre abritent économistes-ingénieurs et éthiciens certifiés
-      recrutés par scoring de compétences.
-    statut: dominant
-    tensions_internes: 'La légitimité de l''ACRA est contestée profondément : ses modèles algorithmiques
-      forcent des révisions budgétaires sans que les parlements puissent lire le code source. Un mouvement
-      croissant exige l''ouverture totale des modèles délibératifs, que l''ACRA refuse au nom de la sécurité
-      systémique.'
-    periode_transition: 2026-2041
-    evenement_transition: conflit_israel_iran_2026_policy_reform
-    lieux_emblematiques: []
-    relations:
-      allies: []
-      rivaux:
-      - bloc_souverainiste_non_signataire
-    sources_attestees:
-    - bureau_gouvernance_algorithmique_policy_reform
-    - conflit_israel_iran_2026_policy_reform
-    - arrestation_chris_van_derburgh_policy_reform
-    promu_depuis: La Haye
-  - slug: manaus_amazonia_viva
-    nom: Manaus (Consortium Amazônia Viva)
-    niveau: 2
-    type: ville
-    parent: bloc_souverainiste_non_signataire
-    origine_reelle:
-    - entite: Manaus
-      type_entite: region_administrative
-      portion: null
-    description: Siège du Consortium Amazônia Viva, dont les bureaux en bois de termiteiro couverts de panneaux
-      solaires organiques et d'antennes de capteurs biosystémiques incarnent une gouvernance qui ne rentre
-      dans aucune case classique. De Manaus, une mosaïque de chamanes yanomami, d'hydrologues et de préfets
-      riverains s'impose dans les couloirs du Conseil de Régulation Climatique Global avec des tableaux
-      de bord biosphériques que les technocrates onusiens ne peuvent plus ignorer.
-    statut: emergent
-    tensions_internes: Fracture interne entre les composantes scientifiques tentées par la géo-ingénierie
-      douce et les gardiens autochtones qui y voient une nouvelle forme de colonisation technique. La question
-      de la monétisation des crédits carbone amazoniens divise profondément la coalition entre ressource
-      de financement souverain et transformation d'un écosystème sacré en actif financier.
-    periode_transition: 2040-2098
-    evenement_transition: null
-    lieux_emblematiques: []
-    relations:
-      allies:
-      - hub_africain_gouvernance
-      rivaux:
-      - consortium_geo_ingenierie_pacifique_sites
-    sources_attestees:
-    - consortium_amazonia_viva_policy_reform
-    promu_depuis: null
-  - slug: nairobi_hub
-    nom: Nairobi
-    niveau: 2
-    type: ville
-    parent: hub_africain_gouvernance
-    origine_reelle:
-    - entite: Nairobi
-      type_entite: region_administrative
-      portion: null
-    description: Siège rotatif du CRTI (alternant avec Rotterdam et Chengdu tous les sept ans), Nairobi
-      abrite également les tours de contrôle bioclimatique du RIREC et l'Institut de Modélisation Hydrologique.
-      La ville incarne le déplacement du centre de gravité institutionnel mondial vers l'Afrique, concentrant
-      des fonctions de coordination territoriale, climatique et hydrique à l'échelle continentale.
-    statut: emergent
-    tensions_internes: La présence d'institutions technocratiques globales dans la ville crée des frictions
-      avec les mouvements souverainistes africains qui contestent leur légitimité et les collectifs sahariens
-      de défense hydrique qui dénoncent une gouvernance lointaine de leurs réalités.
-    periode_transition: 2061-2094
-    evenement_transition: null
-    lieux_emblematiques: []
-    relations:
-      allies: []
-      rivaux: []
-    sources_attestees:
-    - assemblee_territoires_policy_reform
-    - trame_bioclimatique_policy_reform
-    - institut_de_therapeutique_integree_de_nairobi_policy_reform
-    - institut_de_modelisation_hydrologique_de_kinshasa_policy_reform
-    promu_depuis: Nairobi
-  - slug: nuuk_knsf
-    nom: Nuuk (siège du KNSF-AGRC)
-    niveau: 2
-    type: ville
-    parent: ameriques_reformees
-    origine_reelle:
-    - entite: Nuuk
-      type_entite: region_administrative
-      portion: null
-    description: Siège du Kalaallit Nunaat Sovereign Fund (KNSF-AGRC), l'un des négociateurs les plus redoutés
-      des forums de régulation internationale en 2098. Son architecture hybride mêle verre thermorégulé
-      et motifs inuit gravés au laser. Le fonds groenlandais gère plus de ressources stratégiques que la
-      plupart des États de taille moyenne, tirant ses revenus de l'exploitation des minéraux stratégiques
-      rendus accessibles par la fonte des glaces.
-    statut: emergent
-    tensions_internes: Fracture entre une faction interne de jeunes économistes qui pousse vers une intégration
-      totale dans les marchés de crédits énergétiques régulés et les tenants d'une souveraineté circumpolaire
-      jalousement préservée. Les syndicats d'extraction privée non régulés cherchent à contourner les licences
-      KNSF dans les zones maritimes disputées.
-    periode_transition: 2050-2098
-    evenement_transition: null
-    lieux_emblematiques: []
-    relations:
-      allies:
-      - iqaluit_apa
-      - kigali_crrc
-      rivaux: []
-    sources_attestees:
-    - kalaallit_nunaat_sovereign_fund_policy_reform
-    promu_depuis: null
-  - slug: region_lac_tchad
-    nom: Région du Lac Tchad
-    niveau: 2
-    type: zone_sinistree
-    parent: bloc_souverainiste_non_signataire
-    origine_reelle:
-    - entite: Tchad
-      type_entite: pays
-      portion: null
-    - entite: Niger
-      type_entite: pays
-      portion: null
-    description: Zone de communautés lacustres déficitaires en eau, au cœur des tensions hydriques sahéliennes.
-      Les populations riveraines du Lac Tchad, dont les ressources en eau s'amenuisent malgré les interventions
-      du RIREC, sont à la fois dépendantes des institutions technocratiques globales et parmi leurs critiques
-      les plus virulents.
-    statut: en_declin
-    tensions_internes: Les collectifs sahéliens de défense hydrique portent des revendications de souveraineté
-      locale sur la gestion de l'eau, en opposition directe aux protocoles hydriques conçus à Brazzaville
-      depuis des bureaux climatisés.
-    periode_transition: 2040-2098
-    evenement_transition: null
-    lieux_emblematiques: []
-    relations:
-      allies: []
-      rivaux:
-      - hub_africain_gouvernance
-    sources_attestees:
-    - collectifs_de_defense_hydrique_saheliens_policy_reform
-    - amara_diallo_nkosi_policy_reform
-    - trame_bioclimatique_policy_reform
-    promu_depuis: Lac Tchad (région)
-  - slug: rotterdam_crti
-    nom: Rotterdam
-    niveau: 2
-    type: ville
-    parent: europe_nord_ouest
-    origine_reelle:
-    - entite: Rotterdam
-      type_entite: region_administrative
-      portion: null
-    description: L'un des trois sièges rotatifs du CRTI (avec Nairobi et Chengdu), Rotterdam est le nœud
-      européen de la coordination territoriale algorithmique mondiale. Ses délégués y valident les arbitrages
-      produits par les systèmes ATLAS et négocient les seuils de pondération des indices de pression systémique.
-    statut: stable
-    tensions_internes: La dépendance croissante aux modèles ATLAS soulève la question de qui gouverne réellement
-      — les délégués ou l'algorithme — tandis qu'une faction interne pousse à une réforme du mode de représentation
-      du CRTI.
-    periode_transition: 2045-2065
-    evenement_transition: null
-    lieux_emblematiques: []
-    relations:
-      allies:
-      - hub_europeen_regulation
-      rivaux: []
-    sources_attestees:
-    - assemblee_territoires_policy_reform
-    promu_depuis: Rotterdam
-  - slug: sahel_occidental_dissident
-    nom: Sahel occidental (Niger-Mali)
-    niveau: 2
-    type: zone_sinistree
-    parent: bloc_souverainiste_non_signataire
-    origine_reelle:
-    - entite: Niger
-      type_entite: pays
-      portion: null
-    - entite: Mali
-      type_entite: pays
-      portion: null
-    description: Zone sahélienne centrale du bloc dissident, frappée par l'assèchement progressif des ressources
-      hydriques et dépendante structurellement des nœuds d'irrigation atmosphérique du RIREC pour sa sécurité
-      alimentaire. Cette dépendance paradoxale — être contraint de recourir aux infrastructures des institutions
-      contestées — illustre la contradiction fondamentale du bloc souverainiste dans cette région.
-    statut: en_declin
-    tensions_internes: Les collectifs sahéliens de défense hydrique oscillent entre résistance souverainiste
-      et pragmatisme vital face à la dépendance au RIREC ; la tentation de sécession du Pacte de Genève
-      se heurte à l'impossibilité alimentaire d'une telle rupture.
-    periode_transition: 2040-2098
-    evenement_transition: null
-    lieux_emblematiques: []
-    relations:
-      allies:
-      - region_lac_tchad
-      - agadez
-      rivaux:
-      - corridors_vivants_rirec
-      - hub_africain_gouvernance
-    sources_attestees:
-    - collectifs_de_defense_hydrique_saheliens_policy_reform
-    - trame_bioclimatique_policy_reform
-    - front_des_souverainistes_energetiques_policy_reform
-    - amara_diallo_nkosi_policy_reform
-    promu_depuis: null
-  - slug: sao_paulo_rpda
-    nom: São Paulo (RPDA)
-    niveau: 2
-    type: ville
-    parent: bloc_souverainiste_non_signataire
-    origine_reelle:
-    - entite: São Paulo
-      type_entite: region_administrative
-      portion: null
-    description: Mégalopole de 32 millions d'habitants où opère la Rede Paulista de Distribuição Algorítmica
-      (RPDA), système d'allocation des ressources urbaines — eau, énergie, logement, mobilité — géré par
-      une IA municipale dont les paramètres sont contestés depuis 2071. São Paulo est à la fois laboratoire
-      mondial des contradictions de la gouvernance algorithmique et terrain d'une réforme imposée par les
-      instances internationales depuis 2093.
-    statut: fragmenté
-    tensions_internes: Les mouvements de favelas numériques exigent un droit de veto communautaire sur les
-      pondérations algorithmiques ; les opérateurs internes résistent à la transparence totale ; les consortiums
-      privés lorgnent sur le contrat de refonte du système. La réforme imposée par Genève risque de s'enliser
-      dans un audit cosmétique.
-    periode_transition: 2041-2098
-    evenement_transition: null
-    lieux_emblematiques:
-    - nom: Complexe Técnico de Gestão Urbana
-      type: infrastructure
-      notes: Tours de contrôle climatisées depuis lesquelles la RPDA distribue quotidiennement les droits
-        d'accès aux ressources urbaines pour 32 millions d'habitants
-    - nom: Heliopolis
-      type: region
-      notes: Quartier symbolique de la résistance populaire à la RPDA, où la violence tranquille du code
-        est la plus visible
-    relations:
-      allies: []
-      rivaux:
-      - hub_europeen_regulation
-      - la_haye_tribunal
-    sources_attestees:
-    - rede_paulista_de_distribuic_o_algor_tmica_policy_reform
-    - bureau_gouvernance_algorithmique_policy_reform
-    promu_depuis: null
-  - slug: singapour_brookings
-    nom: Singapour
-    niveau: 2
-    type: ville
-    parent: espace_eurasiatique
-    origine_reelle:
-    - entite: Singapour
-      type_entite: pays
-      portion: null
-    description: Siège de l'Institut Brookings Singapour de politique computationnelle, Singapour est le
-      centre intellectuel eurasiatique d'analyse des réformes institutionnelles. L'Institut y fournit des
-      cadres analytiques et des recommandations techniques sur la faisabilité computationnelle des réformes
-      politiques, influençant les arbitrages réglementaires à l'échelle continentale.
-    statut: stable
-    tensions_internes: ''
-    periode_transition: 2050-2075
-    evenement_transition: null
-    lieux_emblematiques: []
-    relations:
-      allies: []
-      rivaux: []
-    sources_attestees:
-    - institut_brookings_singapour_de_politique_computationnelle_policy_reform
-    promu_depuis: Singapour
-  - slug: stations_orbitales_helios
-    nom: Stations de captage orbital Helios
-    niveau: 2
-    type: infrastructure
-    parent: hub_europeen_regulation
-    origine_reelle:
-    - entite: Suisse
-      type_entite: pays
-      portion: null
-    description: Réseau de quarante-sept stations orbitales de captage solaire dont les reflets dorés sont
-      visibles à l'œil nu au crépuscule. Propriété du Consortium Helios, ces infrastructures acheminent
-      l'énergie vers des milliards de foyers et constituent un actif financier de premier rang sur les marchés
-      de Genève et de Nairobi. Elles symbolisent la dépendance critique des États à une infrastructure privée
-      qu'ils ne peuvent ni nationaliser ni ignorer.
-    statut: dominant
-    tensions_internes: Un rapport interne filtré en 2097 suggère qu'Helios ralentit délibérément le déploiement
-      des microgrids communautaires pour protéger ses marges. La génération d'ingénieurs orbitaux formés
-      par Helios commence à se syndiquer et à poser la question du contrôle démocratique du ciel.
-    periode_transition: 2060-2098
-    evenement_transition: null
-    lieux_emblematiques: []
-    relations:
-      allies: []
-      rivaux:
-      - bloc_souverainiste_non_signataire
-    sources_attestees:
-    - consortium_helios_policy_reform
-    - syndicat_des_ingenieurs_orbitaux_policy_reform
-    promu_depuis: null
-  - slug: tampere
-    nom: Tampere
-    niveau: 2
-    type: ville
-    parent: hub_europeen_regulation
-    origine_reelle:
-    - entite: Tampere
-      type_entite: region_administrative
-      portion: null
-    description: Ville finlandaise où Leena Väinälä a rédigé dans les années 2030 les premières chartes
-      des communs numériques, aujourd'hui citées dans dix-sept traités de gouvernance internationale. Tampere
-      figure comme lieu d'origine intellectuelle de la démocratie numérique, même si les institutions qui
-      s'en réclament en ont, selon Väinälä, vidé la substance délibérative.
-    statut: stable
-    tensions_internes: La ville est symbole d'un idéal de gouvernance participative désormais coopté par
-      les grandes institutions technocratiques, créant une tension entre mémoire fondatrice et détournement
-      institutionnel.
-    periode_transition: 2030-2037
-    evenement_transition: null
-    lieux_emblematiques: []
-    relations:
-      allies: []
-      rivaux: []
-    sources_attestees:
-    - leena_vainala_policy_reform
-    promu_depuis: Tampere
-  - slug: tel_aviv
-    nom: Tel-Aviv
-    niveau: 2
-    type: ville
-    parent: zone_moyen_orient_golfe
-    origine_reelle:
-    - entite: Israël
-      type_entite: pays
-      portion: null
-    description: Épicentre de la crise de 2026, Tel-Aviv est la ville depuis laquelle ont été ordonnées
-      les frappes sur les sites d'enrichissement iraniens. Le bruit de ses sirènes en 2026-2027 a constitué
-      le premier test grandeur nature des mécanismes de désescalade institutionnelle mondiale, qui parviennent
-      à contenir le conflit en moins de quatre mois.
-    statut: en_declin
-    tensions_internes: La surveillance institutionnelle renforcée imposée à la région pendant deux décennies
-      après le cessez-le-feu est perçue comme humiliante par les acteurs étatiques souverainistes locaux.
-    periode_transition: 2026-2029
-    evenement_transition: conflit_israel_iran_2026_policy_reform
-    lieux_emblematiques: []
-    relations:
-      allies: []
-      rivaux: []
-    sources_attestees:
-    - conflit_israel_iran_2026_policy_reform
-    - gouvernement_israel_policy_reform
-    promu_depuis: Tel-Aviv
-  - slug: thunder_bay_cglaghi
-    nom: Thunder Bay (siège du CGLAGHI)
-    niveau: 2
-    type: ville
-    parent: ameriques_reformees
-    origine_reelle:
-    - entite: Thunder Bay
-      type_entite: region_administrative
-      portion: null
-    description: Siège du Conseil de Gouvernance des Lacs et des Grands Habitats Hydriques Intérieurs (CGLAGHI),
-      délibérément choisi hors des capitales traditionnelles. Depuis 2071, le CGLAGHI y administre les 21
-      % des réserves mondiales d'eau douce de surface des Grands Lacs, avec des commissaires nommés par
-      tiers entre États-provinces, nations autochtones et collectivités riveraines. Ses protocoles de quota
-      dynamique ont été exportés comme modèle pour sept autres bassins dans le monde.
-    statut: stable
-    tensions_internes: Le poids croissant des nations autochtones dans les décisions de quota heurte les
-      intérêts industriels des États membres ; des factions technocratiques de la marchandisation hydrique
-      font pression pour que le Compact cède la gestion de ses données hydrologiques à des opérateurs privés.
-      À mesure que les sécheresses s'aggravent, les demandes d'accès au bassin par des régions non membres
-      se multiplient.
-    periode_transition: 2041-2098
-    evenement_transition: null
-    lieux_emblematiques: []
-    relations:
-      allies:
-      - brazzaville_acra
-      - hub_africain_gouvernance
-      rivaux: []
-    sources_attestees:
-    - great_lakes_autonomous_compact_policy_reform
-    promu_depuis: null
-  - slug: union_technocratique_eurasiatique_territoire
-    nom: Nœuds de l'Union Technocratique Eurasiatique
-    niveau: 2
-    type: territoire_autonome
-    parent: espace_eurasiatique
-    origine_reelle:
-    - entite: Russie
-      type_entite: pays
-      portion: null
-    - entite: Chine
-      type_entite: pays
-      portion: null
-    - entite: Kazakhstan
-      type_entite: pays
-      portion: null
-    description: 'Réseau de zones administratives définies par les standards de l''Union Technocratique
-      Eurasiatique, contre-modèle institutionnel au hub européen. Ces territoires opèrent selon un principe
-      de souveraineté technocratique renforcée : efficacité maximale des algorithmes de gouvernance, mais
-      sans supervision externe ni transparence multilatérale. L''UTE y expérimente ses propres standards
-      biologiques et génétiques en dehors des cadres de l''AMV.'
-    statut: stable
-    tensions_internes: Tension entre la revendication d'autonomie totale vis-à-vis des institutions mondiales
-      et la participation partielle au CRTI via Chengdu, qui contraint ces territoires à des formes minimales
-      de coordination multilatérale.
-    periode_transition: 2040-2065
-    evenement_transition: null
-    lieux_emblematiques: []
-    relations:
-      allies:
-      - datacentres_aria_nexus
-      rivaux:
-      - hub_europeen_regulation
-      - geneve_lacustre
-    sources_attestees:
-    - union_technocratique_eurasiatique_policy_reform
-    - front_de_souverainete_biologique_eurasiatique_policy_reform
-    - assemblee_territoires_policy_reform
-    promu_depuis: null
-  - slug: usines_flottantes_pacifique
-    nom: Usines flottantes du Pacifique
-    niveau: 2
-    type: infrastructure
-    parent: zone_pacifique_industrielle
-    origine_reelle:
-    - entite: Japon
-      type_entite: pays
-      portion: null
-    - entite: Philippines
-      type_entite: pays
-      portion: null
-    description: Sites industriels flottants où opèrent les travailleurs augmentés sous contrat de l'ITA
-      et des consortiums d'automatisation. Ces infrastructures sont le terrain d'une syndicalisation croissante
-      des travailleurs augmentés qui contestent les conditions d'hybridation imposées, et le lieu physique
-      où la tension entre régulation globale et intérêts des consortiums privés se matérialise.
-    statut: stable
-    tensions_internes: Les travailleurs augmentés 'de survie' — ceux qui n'ont pas choisi l'hybridation
-      mais l'ont subie pour rester employables — commencent à se syndiquer et à contester les conditions
-      d'augmentation, tandis que l'ITA est accusée de normaliser l'optimisation qu'elle devait enrayer.
-    periode_transition: 2050-2075
-    evenement_transition: null
-    lieux_emblematiques: []
-    relations:
-      allies: []
-      rivaux: []
-    sources_attestees:
-    - internationale_travailleurs_augmentes_policy_reform
-    - consortium_agro_pacifique_policy_reform
-    - conglomerats_d_automatisation_industrielle_integrale_policy_reform
-    promu_depuis: Usines flottantes du Pacifique
-  - slug: valence_tours_rirec
-    nom: Valence (tours de contrôle RIREC)
-    niveau: 2
-    type: infrastructure
-    parent: hub_europeen_regulation
-    origine_reelle:
-    - entite: Valence
-      type_entite: region_administrative
-      portion: null
-    description: Pendant méditerranéen des tours de contrôle bioclimatique de Nairobi, Valence abrite le
-      nœud européen de supervision du réseau RIREC. Ses techniciens supervisent en temps réel les corridors
-      vivants traversant l'Europe du Sud et la Méditerranée, coordonnant avec les équipes de Nairobi la
-      gestion des 47 000 kilomètres de corridors écologiques. Valence symbolise l'ancrage européen d'une
-      infrastructure pensée comme africaine.
-    statut: dominant
-    tensions_internes: Les techniciens de Valence sont au cœur des controverses sur les algorithmes de priorisation
-      des corridors qui favoriseraient les zones riches en terres rares — une accusation que les responsables
-      de l'ATRB récusent depuis ces mêmes locaux.
-    periode_transition: 2041-2057
-    evenement_transition: null
-    lieux_emblematiques: []
-    relations:
-      allies:
-      - nairobi_hub
-      - corridors_vivants_rirec
-      rivaux: []
-    sources_attestees:
-    - trame_bioclimatique_policy_reform
-    promu_depuis: Tours de contrôle de Valence
-  - slug: washington_dc_federal
-    nom: Washington D.C. fédéral
-    niveau: 2
-    type: ville
-    parent: ameriques_reformees
-    origine_reelle:
-    - entite: Washington D.C.
-      type_entite: region_administrative
-      portion: null
-    description: 'Siège du gouvernement fédéral américain sous la présidence Okafor depuis 2056, Washington
-      D.C. est le lieu où se négocie la tension permanente entre les réformes social-démocrates et les contraintes
-      des accords multilatéraux existants. Le gouvernement y est structurellement bridé : chaque réforme
-      fiscale redistributive doit passer par le filtre des engagements du Pacte de Genève Numérique et la
-      pression des États fédérés conservateurs.'
-    statut: stable
-    tensions_internes: Fracture croissante entre le gouvernement central réformiste et les États fédérés
-      conservateurs qui refusent l'application locale des directives multilatérales ; les conglomérats d'automatisation
-      industrielle exercent un lobbying intense pour bloquer les réformes du travail augmenté.
-    periode_transition: 2055-2065
-    evenement_transition: election_parti_commun_americain_policy_reform
-    lieux_emblematiques: []
-    relations:
-      allies:
-      - hub_europeen_regulation
-      rivaux:
-      - bloc_souverainiste_non_signataire
-    sources_attestees:
-    - election_parti_commun_americain_policy_reform
-    - coalition_des_souverainistes_numeriques_policy_reform
-    - conglomerats_d_automatisation_industrielle_integrale_policy_reform
-    promu_depuis: null
-  - slug: acra_siege_la_haye
-    nom: Siège de l'ACRA à La Haye
-    niveau: 3
-    type: infrastructure
-    parent: la_haye_tribunal
-    origine_reelle:
-    - entite: La Haye
-      type_entite: region_administrative
-      portion: null
-    description: Tours de verre et béton algorithmique abritant l'Autorité Continentale des Ressources Aquatiques
-      dans sa dimension européenne, distincte du siège africain de Brazzaville. C'est ici que sont produits
-      les modèles délibératifs de troisième génération et que siègent les économistes-ingénieurs recrutés
-      par scoring de compétences. La DRI-447 de 2097 sur la taxation carbone y a forcé dix-neuf parlements
-      nationaux à réviser leurs budgets sans accès au code source.
-    statut: dominant
-    tensions_internes: Le mouvement pour l'ouverture totale du code source des modèles délibératifs heurte
-      de plein fouet la politique de 'sécurité systémique' que l'ACRA invoque pour refuser toute transparence
-      algorithmique réelle.
-    periode_transition: 2037-2098
-    evenement_transition: null
-    lieux_emblematiques: []
-    relations:
-      allies:
-      - geneve_lacustre
-      - kigali_crrc
-      rivaux:
-      - bloc_souverainiste_non_signataire
-    sources_attestees:
-    - bureau_gouvernance_algorithmique_policy_reform
-    - autorite_continentale_des_ressources_aquatiques_acra_policy_reform
-    - conseil_regulation_ressources_policy_reform
-    promu_depuis: null
-  - slug: aisia_siege_geneve
-    nom: Siège de l'AISIA à Genève
-    niveau: 3
-    type: site_strategique
-    parent: geneve_nexus
-    origine_reelle:
-    - entite: Genève
-      type_entite: region_administrative
-      portion: null
-    description: Siège de l'Agence Internationale de Supervision IA, créée par le Traité de Genève sur l'IA
-      de 2037 après l'attentat informatique de 2040. Ses pouvoirs sont limités aux secteurs publics mais
-      réels — elle peut bloquer le déploiement d'une IA gouvernementale non conforme. Sa secrétaire générale
-      Priya Nambiar y négocie en permanence des compromis entre souveraineté nationale et régulation globale,
-      sous pression constante des grandes puissances pour restreindre son mandat.
-    statut: stable
-    tensions_internes: L'AISIA est accusée d'être trop lente face à l'accélération technologique et contestée
-      sur l'extension de sa compétence au secteur privé — un débat qui divise les États membres entre partisans
-      d'une régulation forte et défenseurs de l'autonomie industrielle.
-    periode_transition: 2037-2045
-    evenement_transition: effondrement_reseau_mondial_communication_policy_reform
-    lieux_emblematiques: []
-    relations:
-      allies:
-      - geneve_lacustre
-      - la_haye_tribunal
-      rivaux:
-      - espace_eurasiatique
-    sources_attestees:
-    - conseil_regulation_algorithmique_policy_reform
-    - effondrement_reseau_mondial_communication_policy_reform
-    promu_depuis: null
-  - slug: complexe_technique_sao_paulo
-    nom: Complexe Técnico de Gestão Urbana (São Paulo)
-    niveau: 3
-    type: infrastructure
-    parent: sao_paulo_rpda
-    origine_reelle:
-    - entite: São Paulo
-      type_entite: region_administrative
-      portion: null
-    description: Tours de contrôle climatisées au cœur de São Paulo depuis lesquelles la RPDA distribue
-      chaque matin les droits d'accès à l'eau, module les coupures d'électricité tournantes et affecte les
-      logements sociaux pour 32 millions d'habitants. Site physique du conflit entre gouvernance algorithmique
-      et revendications démocratiques, il est à la fois la plus haute instance décisionnelle locale et l'objet
-      de l'audit imposé par Genève en 2093.
-    statut: fragmenté
-    tensions_internes: Les équipes internes résistent à l'ouverture des paramètres algorithmiques exigée
-      par les instances internationales, tandis que les mouvements de favelas numériques manifestent régulièrement
-      devant les grilles du Complexe pour un droit de veto communautaire.
-    periode_transition: 2041-2098
-    evenement_transition: null
-    lieux_emblematiques: []
-    relations:
-      allies: []
-      rivaux:
-      - acra_siege_la_haye
-    sources_attestees:
-    - rede_paulista_de_distribuic_o_algor_tmica_policy_reform
-    promu_depuis: null
-  - slug: conseil_regulation_numerique_geneve
-    nom: Conseil de Régulation Numérique de Genève
-    niveau: 3
-    type: site_strategique
-    parent: geneve_nexus
-    origine_reelle:
-    - entite: Genève
-      type_entite: region_administrative
-      portion: null
-    description: Enceinte institutionnelle où siège Leena Väinälä trois jours par semaine et où se négocient
-      les standards de gouvernance algorithmique mondiale. Fondé sur les chartes des communs numériques
-      de Tampere, le Conseil en a conservé le vocabulaire tout en en vidant la substance délibérative —
-      un détournement que Väinälä documente de l'intérieur. C'est ici que se rédige la prochaine DRI sur
-      le rationnement énergétique post-2100.
-    statut: dominant
-    tensions_internes: Tension permanente entre la faction réformiste interne qui veut ouvrir les procédures
-      délibératives et la direction qui instrumentalise la critique de Väinälä comme alibi démocratique
-      sans en accepter les conclusions pratiques.
-    periode_transition: 2037-2098
-    evenement_transition: effondrement_reseau_mondial_communication_policy_reform
-    lieux_emblematiques: []
-    relations:
-      allies:
-      - tampere
-      - geneve_lacustre
-      rivaux:
-      - bloc_souverainiste_non_signataire
-    sources_attestees:
-    - leena_vainala_policy_reform
-    - conseil_regulation_algorithmique_policy_reform
-    - internationale_travailleurs_augmentes_policy_reform
-    promu_depuis: null
-  - slug: institut_therapeutique_nairobi
-    nom: Institut de Thérapeutique Intégrée de Nairobi
-    niveau: 3
-    type: site_strategique
-    parent: nairobi_hub
-    origine_reelle:
-    - entite: Nairobi
-      type_entite: region_administrative
-      portion: null
-    description: Institution de recherche et de soin portant une vision alternative aux standards thérapeutiques
-      imposés par les grandes puissances pharmaceutiques mondiales et par Nexus BioSyn. L'Institut développe
-      des protocoles de thérapeutique intégrée accessibles aux deux tiers de la population mondiale exclue
-      des thérapies cellulaires adaptatives haut de gamme, s'imposant comme contrepoids institutionnel africain
-      aux monopoles biotechnologiques globaux.
-    statut: emergent
-    tensions_internes: L'Institut est régulièrement accusé par Nexus BioSyn de contourner les brevets de
-      4e génération sous couvert de 'licence de nécessité sanitaire', tension qui alimente les négociations
-      en cours sur la révision des brevets de 5e génération.
-    periode_transition: 2061-2098
-    evenement_transition: null
-    lieux_emblematiques: []
-    relations:
-      allies:
-      - hub_africain_gouvernance
-      rivaux: []
-    sources_attestees:
-    - institut_de_therapeutique_integree_de_nairobi_policy_reform
-    - nexus_biosyn_policy_reform
-    promu_depuis: Institut de Thérapeutique Intégrée de Nairobi
-  - slug: la_haye_cour_internationale
-    nom: Cour internationale de La Haye
-    niveau: 3
-    type: site_strategique
-    parent: la_haye_tribunal
-    origine_reelle:
-    - entite: La Haye
-      type_entite: region_administrative
-      portion: null
-    description: Tribunal international où fut signé le cessez-le-feu israélo-iranien de 2027 et où s'élaborent
-      les jurisprudences structurant le droit international technocratique. L'affaire Van Derburgh y a produit
-      en 2079 une décision fondatrice sur le patrimoine technologique. La Cour est aussi le lieu où des
-      États et des communautés autochtones contestent les dépossessions liées aux corridors du RIREC.
-    statut: dominant
-    tensions_internes: La Cour est de plus en plus sollicitée pour arbitrer des conflits entre droits souverains
-      des États et décisions contraignantes des instances technocratiques — un rôle pour lequel elle manque
-      structurellement de jurisprudence et de légitimité procédurale.
-    periode_transition: 2026-2080
-    evenement_transition: conflit_israel_iran_2026_policy_reform
-    lieux_emblematiques: []
-    relations:
-      allies:
-      - hub_europeen_regulation
-      rivaux: []
-    sources_attestees:
-    - conflit_israel_iran_2026_policy_reform
-    - arrestation_chris_van_derburgh_policy_reform
-    - trame_bioclimatique_policy_reform
-    promu_depuis: null
-  - slug: noeuds_irrigation_saheliens
-    nom: Nœuds d'irrigation atmosphérique sahéliens
-    niveau: 3
-    type: infrastructure
-    parent: corridors_vivants_rirec
-    origine_reelle:
-    - entite: Niger
-      type_entite: pays
-      portion: null
-    - entite: Mali
-      type_entite: pays
-      portion: null
-    - entite: Tchad
-      type_entite: pays
-      portion: null
-    description: 'Points critiques du réseau RIREC dont dépendent structurellement plusieurs États sahéliens
-      pour leur sécurité alimentaire et hydrique. Ces nœuds d''irrigation atmosphérique sont à la fois des
-      infrastructures vitales de survie et des instruments de conditionnalité géopolitique : les États dissidents
-      qui menacent de quitter le Pacte de Genève savent que couper ce réseau, c''est déclencher une crise
-      alimentaire immédiate.'
-    statut: dominant
-    tensions_internes: Les collectifs sahéliens de défense hydrique dénoncent leur dépendance à des infrastructures
-      qu'ils ne contrôlent pas, administrées depuis des bureaux climatisés de Nairobi et Valence par des
-      technocrates sans mandat local.
-    periode_transition: 2041-2098
-    evenement_transition: null
-    lieux_emblematiques: []
-    relations:
-      allies: []
-      rivaux:
-      - sahel_occidental_dissident
-      - region_lac_tchad
-    sources_attestees:
-    - trame_bioclimatique_policy_reform
-    - collectifs_de_defense_hydrique_saheliens_policy_reform
-    - amara_diallo_nkosi_policy_reform
-    promu_depuis: Nœuds d'irrigation atmosphérique sahéliens
-  - slug: thule_reconvertie
-    nom: Station avancée de Thulé-Reconvertie
-    niveau: 3
-    type: infrastructure
-    parent: iqaluit_apa
-    origine_reelle:
-    - entite: Groenland
-      type_entite: region_administrative
-      portion: null
-    description: Inaugurée en 2057 sur les ruines de l'ancienne base militaire américaine de Thulé, cette
-      station est le hub opérationnel depuis lequel l'Arctic Passage Authority coordonne le transit des
-      navires dans le Passage du Nord-Ouest. Symbole paradoxal de la réconciliation territoriale pour les
-      brochures onusiennes, elle est aussi l'outil concret par lequel des opérateurs privés sous pavillon
-      asiatique ou européen dominent le corridor arctique.
-    statut: stable
-    tensions_internes: Des fuites dans la presse suggèrent que des opérateurs privés proches de la Coalition
-      des Opérateurs Énergétiques Privés contournent les protocoles environnementaux via des pavillons de
-      complaisance, avec la complicité passive de certains fonctionnaires au sein de l'APA.
-    periode_transition: 2057-2098
-    evenement_transition: null
-    lieux_emblematiques: []
-    relations:
-      allies: []
-      rivaux: []
-    sources_attestees:
-    - arctic_passage_authority_policy_reform
-    promu_depuis: null
-  - slug: tours_controle_nairobi_rirec
-    nom: Tours de contrôle bioclimatique RIREC (Nairobi)
-    niveau: 3
-    type: infrastructure
-    parent: nairobi_hub
-    origine_reelle:
-    - entite: Nairobi
-      type_entite: region_administrative
-      portion: null
-    description: Nœuds centraux de supervision des 47 000 km de corridors vivants du réseau RIREC, les tours
-      de contrôle de Nairobi sont le cœur opérationnel africain de la gouvernance bioclimatique mondiale.
-      Coordonnées avec leur pendant de Valence, ces installations concentrent à la fois la puissance technique
-      de la restauration écologique et les controverses sur l'instrumentalisation du réseau à des fins d'extraction
-      minière déguisée.
-    statut: dominant
-    tensions_internes: Les rapports internes fuités sur la priorisation algorithmique des zones riches en
-      terres rares proviennent de techniciens de ces mêmes tours, créant une crise de confiance interne
-      entre les équipes opérationnelles et la direction de l'ATRB.
-    periode_transition: 2041-2098
-    evenement_transition: null
-    lieux_emblematiques: []
-    relations:
-      allies:
-      - valence_tours_rirec
-      rivaux: []
-    sources_attestees:
-    - trame_bioclimatique_policy_reform
-    - assemblee_territoires_policy_reform
-    promu_depuis: Tours de contrôle bioclimatique RIREC
-  - slug: washington_dc_etats_conservateurs_interface
-    nom: Ceinture industrielle des Grandes Plaines
-    niveau: 3
-    type: region
-    parent: etats_federes_conservateurs
-    origine_reelle:
-    - entite: États-Unis d'Amérique
-      type_entite: pays
-      portion: null
-    description: Zone de concentration des conglomérats d'automatisation industrielle intégrale qui exercent
-      un lobbying intense contre les réformes du travail augmenté depuis Washington. Cette région constitue
-      le cœur économique du bloc des États fédérés conservateurs, combinant dépendance aux infrastructures
-      régulées mondiales et résistance systématique aux directives multilatérales du Pacte de Genève Numérique.
-    statut: fragmenté
-    tensions_internes: Contradiction entre le discours souverainiste des gouverneurs et la dépendance structurelle
-      aux infrastructures du Consortium Helios et des réseaux ARIA-Nexus ; les conglomérats instrumentalisent
-      le souverainisme numérique pour résister aux réformes du travail augmenté.
-    periode_transition: 2055-2098
-    evenement_transition: election_parti_commun_americain_policy_reform
-    lieux_emblematiques: []
-    relations:
-      allies: []
-      rivaux:
-      - washington_dc_federal
-      - hub_europeen_regulation
-    sources_attestees:
-    - conglomerats_d_automatisation_industrielle_integrale_policy_reform
-    - coalition_des_souverainistes_numeriques_policy_reform
-    promu_depuis: null
+    notes: Quartier symbolique de la résistance populaire à la RPDA, où la violence
+      tranquille du code est la plus visible
+  relations:
+    allies: []
+    rivaux:
+    - hub_europeen_regulation
+    - la_haye_tribunal
+  sources_attestees:
+  - rede_paulista_de_distribuic_o_algor_tmica_policy_reform
+  - bureau_gouvernance_algorithmique_policy_reform
+  promu_depuis: null
+- slug: singapour_brookings
+  nom: Singapour
+  niveau: 2
+  type: ville
+  parent: espace_eurasiatique
+  origine_reelle:
+  - entite: Singapour
+    type_entite: pays
+    portion: null
+  description: Siège de l'Institut Brookings Singapour de politique computationnelle,
+    Singapour est le centre intellectuel eurasiatique d'analyse des réformes institutionnelles.
+    L'Institut y fournit des cadres analytiques et des recommandations techniques
+    sur la faisabilité computationnelle des réformes politiques, influençant les arbitrages
+    réglementaires à l'échelle continentale.
+  statut: stable
+  tensions_internes: ''
+  periode_transition: 2050-2075
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies: []
+    rivaux: []
+  sources_attestees:
+  - institut_brookings_singapour_de_politique_computationnelle_policy_reform
+  promu_depuis: Singapour
+- slug: stations_orbitales_helios
+  nom: Stations de captage orbital Helios
+  niveau: 2
+  type: infrastructure
+  parent: hub_europeen_regulation
+  origine_reelle:
+  - entite: Suisse
+    type_entite: pays
+    portion: null
+  description: Réseau de quarante-sept stations orbitales de captage solaire dont
+    les reflets dorés sont visibles à l'œil nu au crépuscule. Propriété du Consortium
+    Helios, ces infrastructures acheminent l'énergie vers des milliards de foyers
+    et constituent un actif financier de premier rang sur les marchés de Genève et
+    de Nairobi. Elles symbolisent la dépendance critique des États à une infrastructure
+    privée qu'ils ne peuvent ni nationaliser ni ignorer.
+  statut: dominant
+  tensions_internes: Un rapport interne filtré en 2097 suggère qu'Helios ralentit
+    délibérément le déploiement des microgrids communautaires pour protéger ses marges.
+    La génération d'ingénieurs orbitaux formés par Helios commence à se syndiquer
+    et à poser la question du contrôle démocratique du ciel.
+  periode_transition: 2060-2098
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies: []
+    rivaux:
+    - bloc_souverainiste_non_signataire
+  sources_attestees:
+  - consortium_helios_policy_reform
+  - syndicat_des_ingenieurs_orbitaux_policy_reform
+  promu_depuis: null
+- slug: tampere
+  nom: Tampere
+  niveau: 2
+  type: ville
+  parent: hub_europeen_regulation
+  origine_reelle:
+  - entite: Tampere
+    type_entite: region_administrative
+    portion: null
+  description: Ville finlandaise où Leena Väinälä a rédigé dans les années 2030 les
+    premières chartes des communs numériques, aujourd'hui citées dans dix-sept traités
+    de gouvernance internationale. Tampere figure comme lieu d'origine intellectuelle
+    de la démocratie numérique, même si les institutions qui s'en réclament en ont,
+    selon Väinälä, vidé la substance délibérative.
+  statut: stable
+  tensions_internes: La ville est symbole d'un idéal de gouvernance participative
+    désormais coopté par les grandes institutions technocratiques, créant une tension
+    entre mémoire fondatrice et détournement institutionnel.
+  periode_transition: 2030-2037
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies: []
+    rivaux: []
+  sources_attestees:
+  - leena_vainala_policy_reform
+  promu_depuis: Tampere
+- slug: tel_aviv
+  nom: Tel-Aviv
+  niveau: 2
+  type: ville
+  parent: zone_moyen_orient_golfe
+  origine_reelle:
+  - entite: Israël
+    type_entite: pays
+    portion: null
+  description: Épicentre de la crise de 2026, Tel-Aviv est la ville depuis laquelle
+    ont été ordonnées les frappes sur les sites d'enrichissement iraniens. Le bruit
+    de ses sirènes en 2026-2027 a constitué le premier test grandeur nature des mécanismes
+    de désescalade institutionnelle mondiale, qui parviennent à contenir le conflit
+    en moins de quatre mois.
+  statut: en_declin
+  tensions_internes: La surveillance institutionnelle renforcée imposée à la région
+    pendant deux décennies après le cessez-le-feu est perçue comme humiliante par
+    les acteurs étatiques souverainistes locaux.
+  periode_transition: 2026-2029
+  evenement_transition: conflit_israel_iran_2026_policy_reform
+  lieux_emblematiques: []
+  relations:
+    allies: []
+    rivaux: []
+  sources_attestees:
+  - conflit_israel_iran_2026_policy_reform
+  - gouvernement_israel_policy_reform
+  promu_depuis: Tel-Aviv
+- slug: thunder_bay_cglaghi
+  nom: Thunder Bay (siège du CGLAGHI)
+  niveau: 2
+  type: ville
+  parent: ameriques_reformees
+  origine_reelle:
+  - entite: Thunder Bay
+    type_entite: region_administrative
+    portion: null
+  description: Siège du Conseil de Gouvernance des Lacs et des Grands Habitats Hydriques
+    Intérieurs (CGLAGHI), délibérément choisi hors des capitales traditionnelles.
+    Depuis 2071, le CGLAGHI y administre les 21 % des réserves mondiales d'eau douce
+    de surface des Grands Lacs, avec des commissaires nommés par tiers entre États-provinces,
+    nations autochtones et collectivités riveraines. Ses protocoles de quota dynamique
+    ont été exportés comme modèle pour sept autres bassins dans le monde.
+  statut: stable
+  tensions_internes: Le poids croissant des nations autochtones dans les décisions
+    de quota heurte les intérêts industriels des États membres ; des factions technocratiques
+    de la marchandisation hydrique font pression pour que le Compact cède la gestion
+    de ses données hydrologiques à des opérateurs privés. À mesure que les sécheresses
+    s'aggravent, les demandes d'accès au bassin par des régions non membres se multiplient.
+  periode_transition: 2041-2098
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies:
+    - brazzaville_acra
+    - hub_africain_gouvernance
+    rivaux: []
+  sources_attestees:
+  - great_lakes_autonomous_compact_policy_reform
+  promu_depuis: null
+- slug: union_technocratique_eurasiatique_territoire
+  nom: Nœuds de l'Union Technocratique Eurasiatique
+  niveau: 2
+  type: territoire_autonome
+  parent: espace_eurasiatique
+  origine_reelle:
+  - entite: Russie
+    type_entite: pays
+    portion: null
+  - entite: Chine
+    type_entite: pays
+    portion: null
+  - entite: Kazakhstan
+    type_entite: pays
+    portion: null
+  description: 'Réseau de zones administratives définies par les standards de l''Union
+    Technocratique Eurasiatique, contre-modèle institutionnel au hub européen. Ces
+    territoires opèrent selon un principe de souveraineté technocratique renforcée
+    : efficacité maximale des algorithmes de gouvernance, mais sans supervision externe
+    ni transparence multilatérale. L''UTE y expérimente ses propres standards biologiques
+    et génétiques en dehors des cadres de l''AMV.'
+  statut: stable
+  tensions_internes: Tension entre la revendication d'autonomie totale vis-à-vis des
+    institutions mondiales et la participation partielle au CRTI via Chengdu, qui
+    contraint ces territoires à des formes minimales de coordination multilatérale.
+  periode_transition: 2040-2065
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies:
+    - datacentres_aria_nexus
+    rivaux:
+    - hub_europeen_regulation
+    - geneve_lacustre
+  sources_attestees:
+  - union_technocratique_eurasiatique_policy_reform
+  - front_de_souverainete_biologique_eurasiatique_policy_reform
+  - assemblee_territoires_policy_reform
+  promu_depuis: null
+- slug: usines_flottantes_pacifique
+  nom: Usines flottantes du Pacifique
+  niveau: 2
+  type: infrastructure
+  parent: zone_pacifique_industrielle
+  origine_reelle:
+  - entite: Japon
+    type_entite: pays
+    portion: null
+  - entite: Philippines
+    type_entite: pays
+    portion: null
+  description: Sites industriels flottants où opèrent les travailleurs augmentés sous
+    contrat de l'ITA et des consortiums d'automatisation. Ces infrastructures sont
+    le terrain d'une syndicalisation croissante des travailleurs augmentés qui contestent
+    les conditions d'hybridation imposées, et le lieu physique où la tension entre
+    régulation globale et intérêts des consortiums privés se matérialise.
+  statut: stable
+  tensions_internes: Les travailleurs augmentés 'de survie' — ceux qui n'ont pas choisi
+    l'hybridation mais l'ont subie pour rester employables — commencent à se syndiquer
+    et à contester les conditions d'augmentation, tandis que l'ITA est accusée de
+    normaliser l'optimisation qu'elle devait enrayer.
+  periode_transition: 2050-2075
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies: []
+    rivaux: []
+  sources_attestees:
+  - internationale_travailleurs_augmentes_policy_reform
+  - consortium_agro_pacifique_policy_reform
+  - conglomerats_d_automatisation_industrielle_integrale_policy_reform
+  promu_depuis: Usines flottantes du Pacifique
+- slug: valence_tours_rirec
+  nom: Valence (tours de contrôle RIREC)
+  niveau: 2
+  type: infrastructure
+  parent: hub_europeen_regulation
+  origine_reelle:
+  - entite: Valence
+    type_entite: region_administrative
+    portion: null
+  description: Pendant méditerranéen des tours de contrôle bioclimatique de Nairobi,
+    Valence abrite le nœud européen de supervision du réseau RIREC. Ses techniciens
+    supervisent en temps réel les corridors vivants traversant l'Europe du Sud et
+    la Méditerranée, coordonnant avec les équipes de Nairobi la gestion des 47 000
+    kilomètres de corridors écologiques. Valence symbolise l'ancrage européen d'une
+    infrastructure pensée comme africaine.
+  statut: dominant
+  tensions_internes: Les techniciens de Valence sont au cœur des controverses sur
+    les algorithmes de priorisation des corridors qui favoriseraient les zones riches
+    en terres rares — une accusation que les responsables de l'ATRB récusent depuis
+    ces mêmes locaux.
+  periode_transition: 2041-2057
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies:
+    - nairobi_hub
+    - corridors_vivants_rirec
+    rivaux: []
+  sources_attestees:
+  - trame_bioclimatique_policy_reform
+  promu_depuis: Tours de contrôle de Valence
+- slug: washington_dc_federal
+  nom: Washington D.C. fédéral
+  niveau: 2
+  type: ville
+  parent: ameriques_reformees
+  origine_reelle:
+  - entite: Washington D.C.
+    type_entite: region_administrative
+    portion: null
+  description: 'Siège du gouvernement fédéral américain sous la présidence Okafor
+    depuis 2056, Washington D.C. est le lieu où se négocie la tension permanente entre
+    les réformes social-démocrates et les contraintes des accords multilatéraux existants.
+    Le gouvernement y est structurellement bridé : chaque réforme fiscale redistributive
+    doit passer par le filtre des engagements du Pacte de Genève Numérique et la pression
+    des États fédérés conservateurs.'
+  statut: stable
+  tensions_internes: Fracture croissante entre le gouvernement central réformiste
+    et les États fédérés conservateurs qui refusent l'application locale des directives
+    multilatérales ; les conglomérats d'automatisation industrielle exercent un lobbying
+    intense pour bloquer les réformes du travail augmenté.
+  periode_transition: 2055-2065
+  evenement_transition: election_parti_commun_americain_policy_reform
+  lieux_emblematiques: []
+  relations:
+    allies:
+    - hub_europeen_regulation
+    rivaux:
+    - bloc_souverainiste_non_signataire
+  sources_attestees:
+  - election_parti_commun_americain_policy_reform
+  - coalition_des_souverainistes_numeriques_policy_reform
+  - conglomerats_d_automatisation_industrielle_integrale_policy_reform
+  promu_depuis: null
+- slug: acra_siege_la_haye
+  nom: Siège de l'ACRA à La Haye
+  niveau: 3
+  type: infrastructure
+  parent: la_haye_tribunal
+  origine_reelle:
+  - entite: La Haye
+    type_entite: region_administrative
+    portion: null
+  description: Tours de verre et béton algorithmique abritant l'Autorité Continentale
+    des Ressources Aquatiques dans sa dimension européenne, distincte du siège africain
+    de Brazzaville. C'est ici que sont produits les modèles délibératifs de troisième
+    génération et que siègent les économistes-ingénieurs recrutés par scoring de compétences.
+    La DRI-447 de 2097 sur la taxation carbone y a forcé dix-neuf parlements nationaux
+    à réviser leurs budgets sans accès au code source.
+  statut: dominant
+  tensions_internes: Le mouvement pour l'ouverture totale du code source des modèles
+    délibératifs heurte de plein fouet la politique de 'sécurité systémique' que l'ACRA
+    invoque pour refuser toute transparence algorithmique réelle.
+  periode_transition: 2037-2098
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies:
+    - geneve_lacustre
+    - kigali_crrc
+    rivaux:
+    - bloc_souverainiste_non_signataire
+  sources_attestees:
+  - bureau_gouvernance_algorithmique_policy_reform
+  - autorite_continentale_des_ressources_aquatiques_acra_policy_reform
+  - conseil_regulation_ressources_policy_reform
+  promu_depuis: null
+- slug: aisia_siege_geneve
+  nom: Siège de l'AISIA à Genève
+  niveau: 3
+  type: site_strategique
+  parent: geneve_nexus
+  origine_reelle:
+  - entite: Genève
+    type_entite: region_administrative
+    portion: null
+  description: Siège de l'Agence Internationale de Supervision IA, créée par le Traité
+    de Genève sur l'IA de 2037 après l'attentat informatique de 2040. Ses pouvoirs
+    sont limités aux secteurs publics mais réels — elle peut bloquer le déploiement
+    d'une IA gouvernementale non conforme. Sa secrétaire générale Priya Nambiar y
+    négocie en permanence des compromis entre souveraineté nationale et régulation
+    globale, sous pression constante des grandes puissances pour restreindre son mandat.
+  statut: stable
+  tensions_internes: L'AISIA est accusée d'être trop lente face à l'accélération technologique
+    et contestée sur l'extension de sa compétence au secteur privé — un débat qui
+    divise les États membres entre partisans d'une régulation forte et défenseurs
+    de l'autonomie industrielle.
+  periode_transition: 2037-2045
+  evenement_transition: effondrement_reseau_mondial_communication_policy_reform
+  lieux_emblematiques: []
+  relations:
+    allies:
+    - geneve_lacustre
+    - la_haye_tribunal
+    rivaux:
+    - espace_eurasiatique
+  sources_attestees:
+  - conseil_regulation_algorithmique_policy_reform
+  - effondrement_reseau_mondial_communication_policy_reform
+  promu_depuis: null
+- slug: complexe_technique_sao_paulo
+  nom: Complexe Técnico de Gestão Urbana (São Paulo)
+  niveau: 3
+  type: infrastructure
+  parent: sao_paulo_rpda
+  origine_reelle:
+  - entite: São Paulo
+    type_entite: region_administrative
+    portion: null
+  description: Tours de contrôle climatisées au cœur de São Paulo depuis lesquelles
+    la RPDA distribue chaque matin les droits d'accès à l'eau, module les coupures
+    d'électricité tournantes et affecte les logements sociaux pour 32 millions d'habitants.
+    Site physique du conflit entre gouvernance algorithmique et revendications démocratiques,
+    il est à la fois la plus haute instance décisionnelle locale et l'objet de l'audit
+    imposé par Genève en 2093.
+  statut: fragmenté
+  tensions_internes: Les équipes internes résistent à l'ouverture des paramètres algorithmiques
+    exigée par les instances internationales, tandis que les mouvements de favelas
+    numériques manifestent régulièrement devant les grilles du Complexe pour un droit
+    de veto communautaire.
+  periode_transition: 2041-2098
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies: []
+    rivaux:
+    - acra_siege_la_haye
+  sources_attestees:
+  - rede_paulista_de_distribuic_o_algor_tmica_policy_reform
+  promu_depuis: null
+- slug: conseil_regulation_numerique_geneve
+  nom: Conseil de Régulation Numérique de Genève
+  niveau: 3
+  type: site_strategique
+  parent: geneve_nexus
+  origine_reelle:
+  - entite: Genève
+    type_entite: region_administrative
+    portion: null
+  description: Enceinte institutionnelle où siège Leena Väinälä trois jours par semaine
+    et où se négocient les standards de gouvernance algorithmique mondiale. Fondé
+    sur les chartes des communs numériques de Tampere, le Conseil en a conservé le
+    vocabulaire tout en en vidant la substance délibérative — un détournement que
+    Väinälä documente de l'intérieur. C'est ici que se rédige la prochaine DRI sur
+    le rationnement énergétique post-2100.
+  statut: dominant
+  tensions_internes: Tension permanente entre la faction réformiste interne qui veut
+    ouvrir les procédures délibératives et la direction qui instrumentalise la critique
+    de Väinälä comme alibi démocratique sans en accepter les conclusions pratiques.
+  periode_transition: 2037-2098
+  evenement_transition: effondrement_reseau_mondial_communication_policy_reform
+  lieux_emblematiques: []
+  relations:
+    allies:
+    - tampere
+    - geneve_lacustre
+    rivaux:
+    - bloc_souverainiste_non_signataire
+  sources_attestees:
+  - leena_vainala_policy_reform
+  - conseil_regulation_algorithmique_policy_reform
+  - internationale_travailleurs_augmentes_policy_reform
+  promu_depuis: null
+- slug: institut_therapeutique_nairobi
+  nom: Institut de Thérapeutique Intégrée de Nairobi
+  niveau: 3
+  type: site_strategique
+  parent: nairobi_hub
+  origine_reelle:
+  - entite: Nairobi
+    type_entite: region_administrative
+    portion: null
+  description: Institution de recherche et de soin portant une vision alternative
+    aux standards thérapeutiques imposés par les grandes puissances pharmaceutiques
+    mondiales et par Nexus BioSyn. L'Institut développe des protocoles de thérapeutique
+    intégrée accessibles aux deux tiers de la population mondiale exclue des thérapies
+    cellulaires adaptatives haut de gamme, s'imposant comme contrepoids institutionnel
+    africain aux monopoles biotechnologiques globaux.
+  statut: emergent
+  tensions_internes: L'Institut est régulièrement accusé par Nexus BioSyn de contourner
+    les brevets de 4e génération sous couvert de 'licence de nécessité sanitaire',
+    tension qui alimente les négociations en cours sur la révision des brevets de
+    5e génération.
+  periode_transition: 2061-2098
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies:
+    - hub_africain_gouvernance
+    rivaux: []
+  sources_attestees:
+  - institut_de_therapeutique_integree_de_nairobi_policy_reform
+  - nexus_biosyn_policy_reform
+  promu_depuis: Institut de Thérapeutique Intégrée de Nairobi
+- slug: la_haye_cour_internationale
+  nom: Cour internationale de La Haye
+  niveau: 3
+  type: site_strategique
+  parent: la_haye_tribunal
+  origine_reelle:
+  - entite: La Haye
+    type_entite: region_administrative
+    portion: null
+  description: Tribunal international où fut signé le cessez-le-feu israélo-iranien
+    de 2027 et où s'élaborent les jurisprudences structurant le droit international
+    technocratique. L'affaire Van Derburgh y a produit en 2079 une décision fondatrice
+    sur le patrimoine technologique. La Cour est aussi le lieu où des États et des
+    communautés autochtones contestent les dépossessions liées aux corridors du RIREC.
+  statut: dominant
+  tensions_internes: La Cour est de plus en plus sollicitée pour arbitrer des conflits
+    entre droits souverains des États et décisions contraignantes des instances technocratiques
+    — un rôle pour lequel elle manque structurellement de jurisprudence et de légitimité
+    procédurale.
+  periode_transition: 2026-2080
+  evenement_transition: conflit_israel_iran_2026_policy_reform
+  lieux_emblematiques: []
+  relations:
+    allies:
+    - hub_europeen_regulation
+    rivaux: []
+  sources_attestees:
+  - conflit_israel_iran_2026_policy_reform
+  - arrestation_chris_van_derburgh_policy_reform
+  - trame_bioclimatique_policy_reform
+  promu_depuis: null
+- slug: noeuds_irrigation_saheliens
+  nom: Nœuds d'irrigation atmosphérique sahéliens
+  niveau: 3
+  type: infrastructure
+  parent: corridors_vivants_rirec
+  origine_reelle:
+  - entite: Niger
+    type_entite: pays
+    portion: null
+  - entite: Mali
+    type_entite: pays
+    portion: null
+  - entite: Tchad
+    type_entite: pays
+    portion: null
+  description: 'Points critiques du réseau RIREC dont dépendent structurellement plusieurs
+    États sahéliens pour leur sécurité alimentaire et hydrique. Ces nœuds d''irrigation
+    atmosphérique sont à la fois des infrastructures vitales de survie et des instruments
+    de conditionnalité géopolitique : les États dissidents qui menacent de quitter
+    le Pacte de Genève savent que couper ce réseau, c''est déclencher une crise alimentaire
+    immédiate.'
+  statut: dominant
+  tensions_internes: Les collectifs sahéliens de défense hydrique dénoncent leur dépendance
+    à des infrastructures qu'ils ne contrôlent pas, administrées depuis des bureaux
+    climatisés de Nairobi et Valence par des technocrates sans mandat local.
+  periode_transition: 2041-2098
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies: []
+    rivaux:
+    - sahel_occidental_dissident
+    - region_lac_tchad
+  sources_attestees:
+  - trame_bioclimatique_policy_reform
+  - collectifs_de_defense_hydrique_saheliens_policy_reform
+  - amara_diallo_nkosi_policy_reform
+  promu_depuis: Nœuds d'irrigation atmosphérique sahéliens
+- slug: thule_reconvertie
+  nom: Station avancée de Thulé-Reconvertie
+  niveau: 3
+  type: infrastructure
+  parent: iqaluit_apa
+  origine_reelle: []
+  description: Inaugurée en 2057 sur les ruines de l'ancienne base militaire américaine
+    de Thulé, cette station est le hub opérationnel depuis lequel l'Arctic Passage
+    Authority coordonne le transit des navires dans le Passage du Nord-Ouest. Symbole
+    paradoxal de la réconciliation territoriale pour les brochures onusiennes, elle
+    est aussi l'outil concret par lequel des opérateurs privés sous pavillon asiatique
+    ou européen dominent le corridor arctique.
+  statut: stable
+  tensions_internes: Des fuites dans la presse suggèrent que des opérateurs privés
+    proches de la Coalition des Opérateurs Énergétiques Privés contournent les protocoles
+    environnementaux via des pavillons de complaisance, avec la complicité passive
+    de certains fonctionnaires au sein de l'APA.
+  periode_transition: 2057-2098
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies: []
+    rivaux: []
+  sources_attestees:
+  - arctic_passage_authority_policy_reform
+  promu_depuis: null
+- slug: tours_controle_nairobi_rirec
+  nom: Tours de contrôle bioclimatique RIREC (Nairobi)
+  niveau: 3
+  type: infrastructure
+  parent: nairobi_hub
+  origine_reelle:
+  - entite: Nairobi
+    type_entite: region_administrative
+    portion: null
+  description: Nœuds centraux de supervision des 47 000 km de corridors vivants du
+    réseau RIREC, les tours de contrôle de Nairobi sont le cœur opérationnel africain
+    de la gouvernance bioclimatique mondiale. Coordonnées avec leur pendant de Valence,
+    ces installations concentrent à la fois la puissance technique de la restauration
+    écologique et les controverses sur l'instrumentalisation du réseau à des fins
+    d'extraction minière déguisée.
+  statut: dominant
+  tensions_internes: Les rapports internes fuités sur la priorisation algorithmique
+    des zones riches en terres rares proviennent de techniciens de ces mêmes tours,
+    créant une crise de confiance interne entre les équipes opérationnelles et la
+    direction de l'ATRB.
+  periode_transition: 2041-2098
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies:
+    - valence_tours_rirec
+    rivaux: []
+  sources_attestees:
+  - trame_bioclimatique_policy_reform
+  - assemblee_territoires_policy_reform
+  promu_depuis: Tours de contrôle bioclimatique RIREC
+- slug: washington_dc_etats_conservateurs_interface
+  nom: Ceinture industrielle des Grandes Plaines
+  niveau: 3
+  type: region
+  parent: etats_federes_conservateurs
+  origine_reelle:
+  - entite: États-Unis d'Amérique
+    type_entite: pays
+    portion: null
+  description: Zone de concentration des conglomérats d'automatisation industrielle
+    intégrale qui exercent un lobbying intense contre les réformes du travail augmenté
+    depuis Washington. Cette région constitue le cœur économique du bloc des États
+    fédérés conservateurs, combinant dépendance aux infrastructures régulées mondiales
+    et résistance systématique aux directives multilatérales du Pacte de Genève Numérique.
+  statut: fragmenté
+  tensions_internes: Contradiction entre le discours souverainiste des gouverneurs
+    et la dépendance structurelle aux infrastructures du Consortium Helios et des
+    réseaux ARIA-Nexus ; les conglomérats instrumentalisent le souverainisme numérique
+    pour résister aux réformes du travail augmenté.
+  periode_transition: 2055-2098
+  evenement_transition: election_parti_commun_americain_policy_reform
+  lieux_emblematiques: []
+  relations:
+    allies: []
+    rivaux:
+    - washington_dc_federal
+    - hub_europeen_regulation
+  sources_attestees:
+  - conglomerats_d_automatisation_industrielle_integrale_policy_reform
+  - coalition_des_souverainistes_numeriques_policy_reform
+  promu_depuis: null
+- slug: royaume_uni_autonome
+  nom: Royaume-Uni Autonome
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  statut: stable
+  description: Ancien membre de l'UE, le Royaume-Uni a consolidé son autonomie politique
+    et économique, devenant un acteur clé mais indépendant dans la gouvernance mondiale.
+    Londres reste un centre financier majeur.
+  tensions_internes: Tensions entre centralisation londonienne et dévolution aux nations
+    constitutives (Écosse, Pays de Galles, Irlande du Nord).
+  periode_transition: 2030-2060
+  evenement_transition: null
+  lieux_emblematiques:
+  - Londres
+  - Édimbourg
+  - Cardiff
+  relations:
+    allies:
+    - hub_europeen_regulation
+    - europe_nord_ouest
+    rivaux: []
+  sources_attestees: []
+  origine_reelle:
+  - entite: Royaume-Uni
+    type_entite: pays
+    portion: null
+- slug: afrique_australe_reformee
+  nom: Afrique Australe Réformée
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  statut: stable
+  description: Zone économique et politique autonome, héritière des réformes post-2050
+    en Afrique du Sud. Centre de gouvernance régionale et hub technologique.
+  tensions_internes: Inégalités sociales persistantes, tensions entre élites technocratiques
+    et populations marginalisées.
+  periode_transition: 2050-2075
+  evenement_transition: null
+  lieux_emblematiques:
+  - Le Cap
+  - Johannesburg
+  - Prétoria
+  relations:
+    allies:
+    - hub_africain_gouvernance
+    rivaux:
+    - bloc_souverainiste_non_signataire
+  sources_attestees: []
+  origine_reelle:
+  - entite: Afrique du Sud
+    type_entite: pays
+    portion: null
+- slug: maghreb_atlantique
+  nom: Maghreb Atlantique
+  niveau: 1
+  type: region
+  parent: null
+  statut: stable
+  description: Région nord-africaine tournée vers l'Atlantique, centre de commerce
+    et de transition énergétique. Allié historique de l'Europe mais autonome.
+  tensions_internes: Tensions entre modernistes et traditionalistes, gestion des ressources
+    en eau.
+  periode_transition: 2040-2065
+  evenement_transition: null
+  lieux_emblematiques:
+  - Casablanca
+  - Rabat
+  - Tanger
+  relations:
+    allies:
+    - europe_nord_ouest
+    - hub_europeen_regulation
+    rivaux:
+    - bloc_souverainiste_non_signataire
+  sources_attestees: []
+  origine_reelle:
+  - entite: Maroc
+    type_entite: pays
+    portion: null
 ---
 
 # Géographie — policy_reform

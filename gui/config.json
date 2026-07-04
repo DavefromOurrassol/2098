@@ -13,17 +13,6 @@
   "llm": {
     "provider": "mistral",
     "model_mistral": "mistral-small",
-    "model_claude": "claude-sonnet-4-6",
-    "available_providers": ["mistral", "claude"],
-    "available_models_mistral": [
-      "mistral-small",
-      "mistral-medium",
-      "mistral-large"
-    ],
-    "available_models_claude": [
-      "claude-haiku-4-5-20251001",
-      "claude-sonnet-4-6",
-      "claude-opus-4-6"
-    ]
+    "model_claude": "claude-sonnet-4-6"
   }
 }

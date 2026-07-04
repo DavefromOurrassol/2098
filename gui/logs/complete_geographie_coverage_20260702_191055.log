@@ -1,0 +1,13 @@
+============================================================
+  OURRASSOL 2098 — Couverture géographique complète
+============================================================
+
+=== reference [mode apply] ===
+  ✗ coverage_proposals_reference.yaml introuvable — lance d'abord --review
+
+Propositions générées — édite les fichiers coverage_proposals_*.yaml
+puis lance : python3 complete_geographie_coverage.py --scenario X --apply
+
+============================================================
+  Terminé.
+============================================================

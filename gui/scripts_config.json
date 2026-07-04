@@ -1332,6 +1332,71 @@
     ]
   },
   {
+    "id": "complete_geographie_coverage",
+    "label": "Couverture géo complète",
+    "script": "complete_geographie_coverage.py",
+    "description": "Affecte tous les pays 2026 à une zone 2098 (absorber ou créer). À lancer une fois par scénario après build_geographie.",
+    "section": "maintenance",
+    "options": [
+      {
+        "flag": "--all",
+        "type": "checkbox",
+        "label": "Tous les scénarios",
+        "description": "Traiter les 6 scénarios en une passe"
+      },
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "choices": [
+          {
+            "value": "breakdown",
+            "label": "breakdown"
+          },
+          {
+            "value": "fortress_world",
+            "label": "fortress_world"
+          },
+          {
+            "value": "new_sustainability",
+            "label": "new_sustainability"
+          },
+          {
+            "value": "eco_communalism",
+            "label": "eco_communalism"
+          },
+          {
+            "value": "policy_reform",
+            "label": "policy_reform"
+          },
+          {
+            "value": "reference",
+            "label": "reference"
+          }
+        ]
+      },
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Dry-run",
+        "description": "Simuler sans écrire"
+      },
+      {
+        "flag": "--review",
+        "type": "checkbox",
+        "label": "Mode revue",
+        "description": "Génère coverage_proposals_{scenario}.yaml pour validation manuelle"
+      },
+      {
+        "flag": "--apply",
+        "type": "checkbox",
+        "label": "Mode apply",
+        "description": "Applique le fichier de propositions après validation"
+      }
+    ],
+    "icon": "🧭"
+  },
+  {
     "id": "restructure_zones",
     "label": "Restructure zones",
     "icon": "🗂",

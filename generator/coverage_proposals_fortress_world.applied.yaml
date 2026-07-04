@@ -1,0 +1,396 @@
+scenario: fortress_world
+instructions: 'Vérifiez chaque affectation. Mettez ''valide: false'' pour rejeter
+  une proposition. Pour action: absorber, vérifiez que zone_slug est cohérente. Pour
+  action: nouvelle_zone, vérifiez les champs de la zone. Lancez ensuite : python3
+  complete_geographie_coverage.py --scenario fortress_world --apply'
+affectations:
+- pays: Espagne
+  action: absorber
+  zone_slug: bloc_atlantique
+  justification: Intégration naturelle dans le Bloc Atlantique en raison de sa position
+    stratégique en Europe de l'Ouest et de son alignement historique avec les puissances
+    atlantistes.
+  valide: true
+- pays: Portugal
+  action: absorber
+  zone_slug: bloc_atlantique
+  justification: Membre historique de l'OTAN et situé sur l'Atlantique, aligné avec
+    le Bloc Atlantique.
+  valide: true
+- pays: Suisse
+  action: absorber
+  zone_slug: bloc_eurasiatique_occidental
+  justification: Enclavée en Europe centrale, la Suisse aurait été contrainte de rejoindre
+    le Bloc Eurasiatique Occidental pour des raisons de survie géopolitique et économique.
+  valide: true
+- pays: Autriche
+  action: absorber
+  zone_slug: bloc_eurasiatique_occidental
+  justification: Située en Europe centrale, l'Autriche aurait été intégrée au Bloc
+    Eurasiatique Occidental en raison de sa proximité avec les régimes autoritaires
+    de la région.
+  valide: true
+- pays: Turquie
+  action: absorber
+  zone_slug: zones_grises_tampons
+  justification: Positionnée entre l'Europe et le Moyen-Orient, la Turquie devient
+    une zone tampon disputée entre blocs.
+  valide: true
+- pays: Syrie
+  action: absorber
+  zone_slug: golfe_moyen_orient_zone_disputee
+  justification: Intégrée dans la zone disputée du Moyen-Orient en raison de son rôle
+    historique dans les conflits régionaux.
+  valide: true
+- pays: Qatar
+  action: absorber
+  zone_slug: golfe_moyen_orient_zone_disputee
+  justification: Membre clé du Golfe Persique, inclus dans la zone disputée après
+    les conflits de 2027.
+  valide: true
+- pays: Koweït
+  action: absorber
+  zone_slug: golfe_moyen_orient_zone_disputee
+  justification: Situé dans le Golfe Persique, intégré à la zone disputée en raison
+    de sa position stratégique.
+  valide: true
+- pays: Nigeria
+  action: absorber
+  zone_slug: afrique_subsaharienne_zones_effondrees
+  justification: Intégré aux zones d'effondrement étatique en Afrique subsaharienne
+    en raison de son instabilité politique et des crises climatiques.
+  valide: true
+- pays: Afrique du Sud
+  action: nouvelle_zone
+  justification: L'Afrique du Sud, en raison de son développement relatif et de son
+    isolement géographique, forme une entité autonome distincte des zones effondrées.
+  zone:
+    slug: afrique_australe_forteresse_cap
+    nom: Afrique Australe — Forteresse du Cap
+    niveau: 1
+    type: territoire_autonome
+    parent: null
+    statut: stable
+    description: L'Afrique du Sud s'est transformée en une forteresse autonome, contrôlant
+      les ressources minières et les routes maritimes du sud de l'Afrique. Son gouvernement
+      autoritaire maintient un équilibre précaire entre stabilité interne et pression
+      externe.
+    tensions_internes: Conflits entre élites économiques et populations marginalisées,
+      tensions raciales persistantes.
+    periode_transition: 2050-2075
+    evenement_transition: Effondrement des institutions démocratiques et militarisation
+      des frontières.
+    lieux_emblematiques:
+    - Le Cap
+    - Johannesburg
+    - Durban
+    relations:
+      allies: []
+      rivaux:
+      - afrique_subsaharienne_zones_effondrees
+    sources_attestees: []
+    origine_reelle:
+    - entite: Afrique du Sud
+      type_entite: pays
+      portion: null
+  valide: true
+- pays: Éthiopie
+  action: absorber
+  zone_slug: afrique_subsaharienne_zones_effondrees
+  justification: Intégrée aux zones d'effondrement en raison de son instabilité politique
+    et des conflits internes exacerbés par les crises climatiques.
+  valide: true
+- pays: Ghana
+  action: absorber
+  zone_slug: afrique_subsaharienne_zones_effondrees
+  justification: Inclus dans les zones d'effondrement étatique en Afrique de l'Ouest,
+    en raison de la pression des crises régionales.
+  valide: true
+- pays: Sénégal
+  action: absorber
+  zone_slug: afrique_subsaharienne_zones_effondrees
+  justification: Intégration dans la fragmentation étatique subsaharienne, proche
+    géographiquement et politiquement des zones déjà couvertes.
+  valide: true
+- pays: Burkina Faso
+  action: absorber
+  zone_slug: afrique_subsaharienne_zones_effondrees
+  justification: Pays enclavé en Afrique de l'Ouest, sujet aux mêmes pressions d'effondrement
+    étatique que le Mali ou le Niger.
+  valide: true
+- pays: Tchad
+  action: absorber
+  zone_slug: afrique_subsaharienne_zones_effondrees
+  justification: Pays d'Afrique centrale instable, aligné sur la dynamique de fragmentation
+    de la zone.
+  valide: true
+- pays: Rwanda
+  action: absorber
+  zone_slug: afrique_subsaharienne_zones_effondrees
+  justification: Bien que plus stable historiquement, le Rwanda est entouré par des
+    zones effondrées et subirait des pressions similaires.
+  valide: true
+- pays: Algérie
+  action: absorber
+  zone_slug: zones_grises_tampons
+  justification: Position de tampon entre le Bloc Eurasiatique Occidental et l'Afrique
+    subsaharienne, avec des tensions internes fortes.
+  valide: true
+- pays: Tunisie
+  action: absorber
+  zone_slug: zones_grises_tampons
+  justification: Pays nord-africain en marge des blocs dominants, susceptible de devenir
+    une zone tampon ou disputée.
+  valide: true
+- pays: Inde
+  action: nouvelle_zone
+  justification: Taille et complexité géopolitique trop importantes pour être absorbées
+    par une zone existante.
+  zone:
+    slug: inde_forteresse_sous_continentale
+    nom: Inde — Forteresse Sous-Continentale
+    niveau: 1
+    type: territoire_herite
+    parent: null
+    statut: stable
+    description: L'Inde s'est recentrée sur une gouvernance militaro-technocratique,
+      verrouillant ses frontières et ses ressources. Les mégapoles comme Delhi et
+      Mumbai sont devenues des citadelles autonomes, tandis que les zones rurales
+      restent sous contrôle fragmenté.
+    tensions_internes: Conflits entre élites technocratiques et mouvements séparatistes
+      régionaux, pression démographique.
+    periode_transition: 2030-2065
+    evenement_transition: Guerre des Eaux de l'Indus (2042) et effondrement partiel
+      du système fédéral.
+    lieux_emblematiques:
+    - Delhi (Citadelle Centrale)
+    - Mumbai (Port-Forteresse)
+    - Bengaluru (Hub Technocratique)
+    relations:
+      allies:
+      - bloc_pacifique_nord
+      rivaux:
+      - pacte_forteresses_souveraines
+      - golfe_moyen_orient_zone_disputee
+    sources_attestees: []
+    origine_reelle:
+    - entite: Inde
+      type_entite: pays
+      portion: null
+  valide: true
+- pays: Indonésie
+  action: nouvelle_zone
+  justification: Archipel trop étendu et stratégique pour être intégré à une zone
+    existante sans distorsion narrative.
+  zone:
+    slug: archipel_indonesien_forteresses_maritimes
+    nom: Archipel Indonésien — Forteresses Maritimes
+    niveau: 1
+    type: territoire_herite
+    parent: null
+    statut: fragmenté
+    description: L'Indonésie s'est fragmentée en plusieurs entités autonomes, avec
+      Jakarta comme mégapole fortifiée et les îles extérieures sous contrôle de seigneurs
+      de guerre ou de corporations. Le détroit de Malacca est une zone disputée.
+    tensions_internes: Luttes entre factions militaro-industrielles et mouvements
+      islamistes radicaux, piraterie endémique.
+    periode_transition: 2035-2070
+    evenement_transition: Effondrement du gouvernement central après la crise des
+      ressources de 2050.
+    lieux_emblematiques:
+    - Jakarta (Forteresse Fluviale)
+    - Surabaya (Hub Logistique)
+    - Détroit de Malacca (Zone Disputée)
+    relations:
+      allies: []
+      rivaux:
+      - bloc_pacifique_nord
+      - singapour_megapole
+    sources_attestees: []
+    origine_reelle:
+    - entite: Indonésie
+      type_entite: pays
+      portion: null
+  valide: true
+- pays: Vietnam
+  action: absorber
+  zone_slug: bloc_pacifique_nord
+  justification: Intégration dans la sphère d'influence du Bloc Pacifique Nord, compte
+    tenu de sa proximité géographique et de son alignement historique avec la Chine.
+  valide: true
+- pays: Singapour
+  action: nouvelle_zone
+  justification: Statut unique de cité-État ultra-fortifiée, incompatible avec les
+    zones existantes.
+  zone:
+    slug: singapour_megapole
+    nom: Singapour — Mégapole-Forteresse
+    niveau: 1
+    type: ville
+    parent: null
+    statut: stable
+    description: Singapour est devenue une cité-État hyper-sécurisée, gouvernée par
+      une IA de gestion des ressources et une élite technocratique. Elle sert de hub
+      financier et logistique pour les blocs dominants, tout en maintenant une neutralité
+      armée.
+    tensions_internes: Inégalités sociales extrêmes, surveillance omniprésente, résistance
+      clandestine.
+    periode_transition: 2025-2050
+    evenement_transition: Fermeture totale des frontières en 2040 après la crise migratoire
+      asiatique.
+    lieux_emblematiques:
+    - Singapour (Cité-Cœur)
+    - Port de Singapour (Nœud Commercial)
+    relations:
+      allies:
+      - bloc_pacifique_nord
+      - bloc_atlantique
+      rivaux:
+      - archipel_indonesien_forteresses_maritimes
+    sources_attestees: []
+    origine_reelle:
+    - entite: Singapour
+      type_entite: pays
+      portion: null
+  valide: true
+- pays: Bangladesh
+  action: absorber
+  zone_slug: zones_grises_tampons
+  justification: Pays densément peuplé et instable, situé entre l'Inde et le Bloc
+    Pacifique Nord, susceptible de devenir une zone tampon ou disputée.
+  valide: true
+- pays: Pakistan
+  action: absorber
+  zone_slug: golfe_moyen_orient_zone_disputee
+  justification: Proximité géographique et historique avec les tensions du Moyen-Orient,
+    notamment après les conflits de 2027.
+  valide: true
+- pays: Philippines
+  action: absorber
+  zone_slug: bloc_pacifique_nord
+  justification: Proximité géographique et influence croissante du Bloc Pacifique
+    Nord dans la région Asie-Pacifique.
+  valide: true
+- pays: Mongolie
+  action: absorber
+  zone_slug: bloc_eurasiatique_occidental
+  justification: Intégration dans la sphère d'influence eurasiatique en raison de
+    sa position stratégique entre la Russie et la Chine.
+  valide: true
+- pays: Mexique
+  action: absorber
+  zone_slug: bloc_atlantique
+  justification: Contrôle par le Bloc Atlantique pour sécuriser les ressources et
+    les corridors logistiques en Amérique du Nord.
+  valide: true
+- pays: Argentine
+  action: nouvelle_zone
+  justification: Zone autonome en Amérique du Sud, hors des blocs majeurs, avec une
+    gouvernance locale renforcée.
+  zone:
+    slug: cone_sud_forteresse_agricole
+    nom: Cône Sud — Forteresse Agricole
+    niveau: 1
+    type: territoire_autonome
+    parent: null
+    statut: stable
+    description: Région agricole fortifiée contrôlée par des consortiums agro-industriels,
+      exportant vers les blocs dominants tout en maintenant une autonomie relative.
+      Les villes sont protégées par des milices privées.
+    tensions_internes: Conflits entre élites agro-industrielles et populations locales
+      marginalisées.
+    periode_transition: 2050-2075
+    evenement_transition: null
+    lieux_emblematiques:
+    - Buenos Aires
+    - Rosario
+    - Córdoba
+    relations:
+      allies:
+      - bloc_atlantique
+      - bloc_pacifique_nord
+      rivaux:
+      - amazonie_pacte_vert
+    sources_attestees: []
+    origine_reelle:
+    - entite: Argentine
+      type_entite: pays
+      portion: null
+  valide: true
+- pays: Colombie
+  action: absorber
+  zone_slug: amazonie_pacte_vert
+  justification: Partie de l'Amazonie colombienne intégrée au Pacte Vert, tandis que
+    les zones urbaines pourraient être des enclaves autonomes.
+  valide: true
+- pays: Pérou
+  action: absorber
+  zone_slug: amazonie_pacte_vert
+  justification: Intégration partielle dans le Pacte Vert en raison de sa portion
+    amazonienne, avec des zones côtières potentiellement autonomes.
+  valide: true
+- pays: Venezuela
+  action: absorber
+  zone_slug: zones_grises_tampons
+  justification: Zone instable et disputée, servant de tampon entre blocs ou sous
+    influence fragmentée.
+  valide: true
+- pays: Chili
+  action: absorber
+  zone_slug: cone_sud_forteresse_agricole
+  justification: Intégration dans la Forteresse Agricole du Cône Sud en raison de
+    sa stabilité relative et de son rôle dans l'exportation de ressources.
+  valide: false
+  avertissement: 'Slug inconnu : cone_sud_forteresse_agricole'
+- pays: Bolivie
+  action: absorber
+  zone_slug: amazonie_pacte_vert
+  justification: Partie de la Bolivie amazonienne intégrée au Pacte Vert, avec des
+    tensions internes entre zones rurales et urbaines.
+  valide: true
+- pays: Australie
+  action: nouvelle_zone
+  justification: Bloc autonome du Pacifique Sud, isolé géographiquement et politiquement
+    des autres zones.
+  zone:
+    slug: australie_forteresse_insulaire
+    nom: Australie — Forteresse Insulaire
+    niveau: 1
+    type: territoire_autonome
+    parent: null
+    statut: stable
+    description: Continent fortifié contrôlé par un gouvernement militaro-civil, exploitant
+      ses ressources minières et agricoles pour maintenir son autonomie. Les côtes
+      sont protégées par des systèmes de défense avancés.
+    tensions_internes: Conflits entre centres urbains hyper-contrôlés et régions intérieures
+      moins surveillées.
+    periode_transition: 2040-2065
+    evenement_transition: null
+    lieux_emblematiques:
+    - Sydney
+    - Melbourne
+    - Perth
+    relations:
+      allies: []
+      rivaux:
+      - bloc_pacifique_nord
+    sources_attestees: []
+    origine_reelle:
+    - entite: Australie
+      type_entite: pays
+      portion: null
+  valide: true
+- pays: Nouvelle-Zélande
+  action: absorber
+  zone_slug: australie_forteresse_insulaire
+  justification: Intégration dans la sphère australienne en raison de sa proximité
+    géographique et de sa dépendance mutuelle en matière de sécurité.
+  valide: false
+  avertissement: 'Slug inconnu : australie_forteresse_insulaire'
+- pays: Polynésie française
+  action: absorber
+  zone_slug: australie_forteresse_insulaire
+  justification: Dépendance historique et géographique à l'Australie dans ce scénario
+    de fragmentation mondiale.
+  valide: false
+  avertissement: 'Slug inconnu : australie_forteresse_insulaire'

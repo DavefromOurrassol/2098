@@ -1165,3 +1165,151 @@ select option { background: #fff; }
   color: var(--error);
   background: var(--error-bg, #fff0f0);
 }
+
+/* ══════════════════════════════════════════════════
+   ZONES MANQUANTES — Dashboard
+   ══════════════════════════════════════════════════ */
+
+.zones-manquantes-section {
+  margin-top: 8px;
+}
+
+.zones-manquantes-scenario {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.zms-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  background: var(--bg-panel);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.zms-scenario-name {
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--text);
+  text-transform: capitalize;
+}
+
+.zms-count {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.zms-enrich-btn {
+  margin-left: auto;
+  padding: 4px 12px;
+  font-size: 11px;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  background: var(--accent-dim);
+  color: var(--accent-text);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.zms-enrich-btn:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+.zms-enrich-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.zms-pays-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.zms-pays-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 14px;
+  font-size: 12px;
+  border-bottom: 1px solid var(--border-light);
+  transition: opacity 0.2s;
+}
+
+.zms-pays-item:last-child {
+  border-bottom: none;
+}
+
+.zms-pays-name {
+  flex: 1;
+  color: var(--text);
+}
+
+.zms-statut {
+  font-size: 10px;
+  font-family: var(--font-mono);
+  padding: 2px 8px;
+  border-radius: 8px;
+}
+
+.zms-statut-blanc_a_evaluer {
+  background: var(--warn-bg, #fff8f0);
+  color: var(--warn);
+  border: 1px solid var(--warn-border, #f0d090);
+}
+
+.zms-statut-a_enrichir {
+  background: #fde8e8;
+  color: var(--error);
+  border: 1px solid #f0b8b8;
+}
+
+.zms-mark-btn {
+  padding: 2px 8px;
+  font-size: 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-panel);
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.zms-mark-btn:hover {
+  border-color: var(--text-dim);
+  color: var(--text-dim);
+}
+
+.zms-mark-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.zms-recheck-btn {
+  margin-left: auto;
+  padding: 4px 12px;
+  font-size: 11px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-panel);
+  color: var(--text-dim);
+  cursor: pointer;
+}
+
+.zms-recheck-btn:hover {
+  border-color: var(--text-dim);
+  color: var(--text);
+}
+
+.zms-recheck-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* zms-enrich-btn n'est plus margin-left:auto car recheck le précède */
+.zms-enrich-btn {
+  margin-left: 0;
+}

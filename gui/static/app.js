@@ -64,6 +64,7 @@ function buildNav() {
 
   // Tableau de bord
   nav.appendChild(makeNavItem('dashboard', '📊', 'Tableau de bord', null, 'tab'));
+  nav.appendChild(makeNavItem('carte', '🗺️', 'Carte', null, 'tab'));
   nav.appendChild(makeDivider());
 
   // Sections scripts
@@ -224,6 +225,7 @@ function showTab(tab) {
   if (tabEl) {
     tabEl.classList.add('active');
     if (tab === 'dashboard') loadDashboard();
+    if (tab === 'carte')     loadCarte();
     if (tab === 'review')    loadReview();
     if (tab === 'config')    loadConfigForm();
   }
@@ -697,6 +699,16 @@ async function loadDashboard() {
     renderDashboard(data);
   } catch (e) {
     document.getElementById('dashboard-grid').innerHTML = '<div class="stat-card"><div class="card-title" style="color:var(--error)">Erreur chargement dashboard</div><div class="card-sub">Vérifiez vault_root dans Config</div></div>';
+    return;
+  }
+
+  // Charger zones manquantes séparément (n'affecte pas le reste si ça échoue)
+  try {
+    const res2 = await fetch('/api/zones/manquantes');
+    const data2 = await res2.json();
+    renderZonesManquantes(data2);
+  } catch (e) {
+    // Silencieux — section optionnelle
   }
 }
 
@@ -774,6 +786,9 @@ function renderDashboard(data) {
   cards.push(statCard('Items en revue', rc,
     rc > 0 ? '→ voir onglet Revue' : 'Aucun item en attente',
     rc > 0 ? 'warn-card' : ''));
+
+  // Zones manquantes — placeholder, peuplé après le fetch séparé
+  cards.push('<div class="stat-card" id="zones-manquantes-card"><div class="card-title">Zones manquantes</div><div class="card-value">…</div><div class="card-sub">Chargement</div></div>');
 
   grid.innerHTML = cards.join('');
 
@@ -1785,4 +1800,673 @@ function _getCurrentScenario(wrapper) {
     if (scSel && scSel.value) return scSel.value;
   }
   return State.config?.default_scenario || 'breakdown';
+}
+
+// ══════════════════════════════════════════════════
+// ZONES MANQUANTES — Dashboard
+// ══════════════════════════════════════════════════
+
+function renderZonesManquantes(data) {
+  const card = document.getElementById('zones-manquantes-card');
+  const parScenario = data.par_scenario || {};
+  const entries = data.manquantes || [];
+
+  // Compter seulement les blanc_a_evaluer + a_enrichir (pas les intentionnels, déjà traités)
+  const actionable = entries.filter(e => e.statut !== 'blanc_intentionnel');
+  const total = actionable.length;
+
+  if (card) {
+    card.className = 'stat-card' + (total > 0 ? ' warn-card' : '');
+    card.innerHTML = `
+      <div class="card-title">Zones manquantes</div>
+      <div class="card-value">${total}</div>
+      <div class="card-sub">${total > 0 ? '→ voir détail ci-dessous' : 'Toutes couvertes ou traitées'}</div>
+    `;
+  }
+
+  // Section détaillée sous le dashboard
+  const container = document.getElementById('tab-dashboard');
+  const old = container.querySelector('.zones-manquantes-section');
+  if (old) old.remove();
+
+  if (entries.length === 0) return;
+
+  const section = document.createElement('div');
+  section.className = 'zones-manquantes-section';
+
+  const scenarios = Object.keys(parScenario).sort();
+
+  let html = `<div class="tab-page-title" style="margin-top:24px">Zones manquantes par scénario</div>`;
+
+  scenarios.forEach(sc => {
+    const items = parScenario[sc].filter(e => e.statut !== 'blanc_intentionnel');
+    if (items.length === 0) return;
+
+    html += `
+      <div class="zones-manquantes-scenario">
+        <div class="zms-header">
+          <span class="zms-scenario-name">${sc}</span>
+          <span class="zms-count">${items.length} pays</span>
+          <button class="yaml-btn zms-recheck-btn" data-scenario="${sc}">
+            Revérifier
+          </button>
+          <button class="yaml-btn zms-enrich-btn" data-scenario="${sc}">
+            Enrichir ce scénario
+          </button>
+        </div>
+        <div class="zms-pays-list">
+          ${items.map(e => `
+            <div class="zms-pays-item" data-pays="${e.pays}" data-scenario="${sc}">
+              <span class="zms-pays-name">${e.pays}</span>
+              <span class="zms-statut zms-statut-${e.statut}">${_statutLabel(e.statut)}</span>
+              <button class="zms-mark-btn" data-action="blanc_intentionnel"
+                      data-pays="${e.pays}" data-scenario="${sc}"
+                      title="Marquer comme blanc intentionnel">Intentionnel</button>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `;
+  });
+
+  section.innerHTML = html;
+  container.appendChild(section);
+
+  // ── Events ──
+  section.querySelectorAll('.zms-enrich-btn').forEach(btn => {
+    btn.addEventListener('click', () => _launchEnrichGeographie(btn.dataset.scenario, btn));
+  });
+
+  section.querySelectorAll('.zms-recheck-btn').forEach(btn => {
+    btn.addEventListener('click', () => _recheckScenario(btn.dataset.scenario, btn));
+  });
+
+  section.querySelectorAll('.zms-mark-btn').forEach(btn => {
+    btn.addEventListener('click', () => _markZoneStatut(
+      btn.dataset.pays, btn.dataset.scenario, btn.dataset.action, btn
+    ));
+  });
+}
+
+function _statutLabel(statut) {
+  const labels = {
+    'blanc_a_evaluer': 'À évaluer',
+    'a_enrichir': 'À enrichir',
+    'blanc_intentionnel': 'Intentionnel',
+  };
+  return labels[statut] || statut;
+}
+
+/** Lance enrich_geographie_recursive.py --scenario X via /api/run */
+async function _launchEnrichGeographie(scenario, btn) {
+  if (!confirm(`Lancer enrich_geographie_recursive.py --scenario ${scenario} ?\n\nCela va appeler l'API LLM pour enrichir la fiche géographique.`)) {
+    return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = 'Lancement…';
+
+  try {
+    const res = await fetch('/api/run', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        script_id: 'enrich_geographie',
+        args: ['--scenario', scenario],
+      }),
+    });
+    const data = await res.json();
+
+    if (data.run_id) {
+      btn.textContent = 'Lancé ✓';
+      // Naviguer vers la vue du script et connecter au streaming déjà en cours
+      await showScript('enrich_geographie');
+      State.currentRunId = data.run_id;
+      setRunning(true);
+      startSSE(data.run_id, 'enrich_geographie');
+    } else {
+      btn.textContent = data.error || 'Erreur';
+      btn.disabled = false;
+    }
+  } catch (e) {
+    btn.textContent = 'Erreur réseau';
+    btn.disabled = false;
+  }
+}
+
+/** Marque une entrée zones_manquantes avec un nouveau statut */
+async function _markZoneStatut(pays, scenario, statut, btn) {
+  btn.disabled = true;
+  const original = btn.textContent;
+  btn.textContent = '…';
+
+  try {
+    const res = await fetch('/api/zones/manquantes', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ pays, scenario, statut }),
+    });
+    const data = await res.json();
+
+    if (data.ok) {
+      // Retirer visuellement l'item de la liste
+      const item = btn.closest('.zms-pays-item');
+      if (item) {
+        item.style.opacity = '0.4';
+        item.style.textDecoration = 'line-through';
+      }
+      btn.textContent = '✓';
+    } else {
+      btn.textContent = original;
+      btn.disabled = false;
+      alert(`Erreur : ${data.error}`);
+    }
+  } catch (e) {
+    btn.textContent = original;
+    btn.disabled = false;
+  }
+}
+
+/** Revérifie tous les pays manquants d'un scénario contre les fiches géographie à jour. */
+async function _recheckScenario(scenario, btn) {
+  btn.disabled = true;
+  const original = btn.textContent;
+  btn.textContent = 'Vérification…';
+
+  try {
+    const res = await fetch('/api/zones/recheck', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ scenario }),
+    });
+    const data = await res.json();
+
+    if (data.error) {
+      btn.textContent = 'Erreur';
+      btn.disabled = false;
+      alert(`Erreur : ${data.error}`);
+      return;
+    }
+
+    const nbResolved = (data.resolved || []).length;
+
+    if (nbResolved > 0) {
+      btn.textContent = `✓ ${nbResolved} résolus`;
+      // Recharger la section complète pour refléter les changements
+      const res2 = await fetch('/api/zones/manquantes');
+      const data2 = await res2.json();
+      renderZonesManquantes(data2);
+    } else {
+      btn.textContent = 'Aucun changement';
+      btn.disabled = false;
+      setTimeout(() => { btn.textContent = original; btn.disabled = false; }, 2000);
+    }
+  } catch (e) {
+    btn.textContent = 'Erreur réseau';
+    btn.disabled = false;
+  }
+}
+
+// ══════════════════════════════════════════════════
+// CARTE — Onglet géographie interactive (P1)
+// ══════════════════════════════════════════════════
+
+const CarteState = {
+  map: null,
+  geojsonLayer: null,
+  rawGeojson: null,
+  faToEn: null,        // mapping FR -> EN name (gui/static/pays_mapping.json)
+  affectations: {},    // pays FR -> zone slug|null
+  zonesN1: [],          // [{slug,nom,description,color}]
+  scenario: null,
+};
+
+function _normEn(s) {
+  return (s || '')
+    .toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]/g, '');
+}
+
+async function loadCarte() {
+  const scenarioSel = document.getElementById('carte-scenario');
+
+  if (scenarioSel.options.length === 0) {
+    const scenarios = State.config?.scenarios || [];
+    scenarioSel.innerHTML = scenarios.map(s => `<option value="${s}">${s}</option>`).join('');
+    scenarioSel.value = State.config?.default_scenario || scenarios[0] || '';
+    scenarioSel.addEventListener('change', () => refreshCarte());
+  }
+
+  if (!CarteState.faToEn) {
+    try {
+      const res = await fetch('/static/pays_mapping.json');
+      CarteState.faToEn = await res.json();
+    } catch (e) {
+      console.error('Erreur chargement pays_mapping.json', e);
+      CarteState.faToEn = {};
+    }
+  }
+
+  if (!CarteState.map) initLeafletMap();
+  if (!CarteState.rawGeojson) await loadWorldGeojson();
+
+  await refreshCarte();
+  // Leaflet a besoin d'un recalcul de taille si le conteneur était display:none au moment de l'init
+  setTimeout(() => CarteState.map && CarteState.map.invalidateSize(), 50);
+}
+
+function initLeafletMap() {
+  const mapEl = document.getElementById('carte-map');
+  CarteState.map = L.map(mapEl, { worldCopyJump: true, renderer: L.svg() }).setView([20, 10], 2);
+  L.svg().addTo(CarteState.map); // force la création immédiate du <svg> (nécessaire pour injecter les motifs)
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
+    attribution: '© OpenStreetMap, © CARTO',
+    maxZoom: 8,
+  }).addTo(CarteState.map);
+}
+
+async function loadWorldGeojson() {
+  const statusEl = document.getElementById('carte-status');
+  try {
+    statusEl.textContent = 'Chargement du fond de carte…';
+    const res = await fetch('https://cdn.jsdelivr.net/gh/johan/world.geo.json/countries.geo.json');
+    const gj = await res.json();
+    CarteState.rawGeojson = gj;
+    statusEl.textContent = '';
+  } catch (e) {
+    console.error('Erreur chargement geojson', e);
+    statusEl.textContent = 'Impossible de charger le fond de carte (connexion internet requise).';
+  }
+}
+
+async function refreshCarte() {
+  const scenario = document.getElementById('carte-scenario').value;
+  if (!scenario) return;
+  CarteState.scenario = scenario;
+
+  const statusEl = document.getElementById('carte-status');
+  statusEl.textContent = 'Chargement des affectations…';
+
+  try {
+    const res = await fetch(`/api/carte/affectations?scenario=${encodeURIComponent(scenario)}`);
+    const data = await res.json();
+    if (data.error) {
+      statusEl.textContent = `Erreur : ${data.error}`;
+      return;
+    }
+    CarteState.affectations = data.affectations || {};
+    CarteState.zonesN1 = data.zones_n1 || [];
+    statusEl.textContent = '';
+    renderCarteLayer();
+    renderCarteLegend();
+  } catch (e) {
+    statusEl.textContent = `Erreur réseau : ${e.message}`;
+  }
+}
+
+/** Index EN normalisé -> [pays FR...] (plusieurs pays FR peuvent pointer vers un seul polygone, ex UK) */
+function _buildEnToFrIndex() {
+  const idx = {};
+  Object.entries(CarteState.faToEn || {}).forEach(([fr, en]) => {
+    if (!en) return;
+    const key = _normEn(en);
+    idx[key] = idx[key] || [];
+    idx[key].push(fr);
+  });
+  return idx;
+}
+
+// ── Motifs de zone (couleur + hachures pour garantir la distinction visuelle) ──
+
+const PATTERN_ANGLES  = [45, 135, 0, 90, 20];
+const PATTERN_SPACING = [7, 7, 9, 9, 6];
+
+function _darken(hex, amount) {
+  const num = parseInt(hex.replace('#', ''), 16);
+  let r = (num >> 16) - amount;
+  let g = ((num >> 8) & 0xff) - amount;
+  let b = (num & 0xff) - amount;
+  r = Math.max(0, r); g = Math.max(0, g); b = Math.max(0, b);
+  return '#' + [r, g, b].map(v => v.toString(16).padStart(2, '0')).join('');
+}
+
+function _ensureSvgDefs() {
+  const svg = document.querySelector('#carte-map svg');
+  if (!svg) return null;
+  let defs = svg.querySelector('defs#carte-patterns-defs');
+  if (defs) defs.remove(); // régénéré à chaque refresh (couleurs/motifs peuvent changer)
+  defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
+  defs.id = 'carte-patterns-defs';
+  svg.insertBefore(defs, svg.firstChild);
+  return defs;
+}
+
+/** Crée (si besoin) le <pattern> SVG d'une zone et retourne l'URL de fill à utiliser. */
+function _zoneFill(defs, zone) {
+  if (zone.pattern === null || zone.pattern === undefined || !defs) return zone.color;
+
+  const id = `carte-zone-pattern-${zone.slug}`;
+  const angle = PATTERN_ANGLES[zone.pattern % PATTERN_ANGLES.length];
+  const spacing = PATTERN_SPACING[zone.pattern % PATTERN_SPACING.length];
+  const dark = _darken(zone.color, 45);
+
+  const pattern = document.createElementNS('http://www.w3.org/2000/svg', 'pattern');
+  pattern.setAttribute('id', id);
+  pattern.setAttribute('width', spacing);
+  pattern.setAttribute('height', spacing);
+  pattern.setAttribute('patternUnits', 'userSpaceOnUse');
+  pattern.setAttribute('patternTransform', `rotate(${angle})`);
+
+  const bg = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+  bg.setAttribute('width', spacing);
+  bg.setAttribute('height', spacing);
+  bg.setAttribute('fill', zone.color);
+  pattern.appendChild(bg);
+
+  const stripe = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+  stripe.setAttribute('width', String(spacing / 2));
+  stripe.setAttribute('height', spacing);
+  stripe.setAttribute('fill', dark);
+  pattern.appendChild(stripe);
+
+  defs.appendChild(pattern);
+  return `url(#${id})`;
+}
+
+function renderCarteLayer() {
+  if (!CarteState.rawGeojson) return;
+  if (CarteState.geojsonLayer) CarteState.map.removeLayer(CarteState.geojsonLayer);
+
+  const enToFr = _buildEnToFrIndex();
+  const defs = _ensureSvgDefs();
+  const zoneFillMap = {};
+  CarteState.zonesN1.forEach(z => { zoneFillMap[z.slug] = _zoneFill(defs, z); });
+
+  CarteState.geojsonLayer = L.geoJSON(CarteState.rawGeojson, {
+    style: (feature) => {
+      const name = feature.properties?.name || feature.properties?.ADMIN || '';
+      const frList = enToFr[_normEn(name)];
+      if (!frList) return { fillColor: 'transparent', weight: 0.5, color: '#ccc', fillOpacity: 0 };
+
+      const allNull = frList.every(fr => !CarteState.affectations[fr]);
+      if (allNull) return { fillColor: '#999', weight: 1, color: '#666', fillOpacity: 0.5 };
+
+      const zone = frList.map(fr => CarteState.affectations[fr]).filter(Boolean)[0];
+      const fill = zoneFillMap[zone] || '#3b6fd4';
+      return { fillColor: fill, weight: 1, color: '#666', fillOpacity: 0.85 };
+    },
+    onEachFeature: (feature, layer) => {
+      const name = feature.properties?.name || feature.properties?.ADMIN || '';
+      const frList = enToFr[_normEn(name)];
+      if (!frList) return;
+      layer.on('click', () => onCartePaysClick(frList, name));
+      layer.on('mouseover', () => layer.setStyle({ weight: 2, color: '#222' }));
+      layer.on('mouseout', () => layer.setStyle({ weight: 1, color: '#666' }));
+      layer.bindTooltip(frList.join(' / '), { sticky: true });
+    },
+  }).addTo(CarteState.map);
+
+  // Diagnostic : pays FR sans correspondance trouvée sur le fond de carte
+  const matchedFr = new Set(Object.values(enToFr).flat());
+  const allFr = Object.keys(CarteState.faToEn || {}).filter(fr => CarteState.faToEn[fr]);
+  const missing = allFr.filter(fr => !matchedFr.has(fr));
+  const diagEl = document.getElementById('carte-diagnostic');
+  if (missing.length) {
+    diagEl.style.display = 'block';
+    diagEl.innerHTML = `⚠ ${missing.length} pays non localisés sur le fond de carte (noms à corriger dans gui/static/pays_mapping.json) : ${missing.join(', ')}`;
+  } else {
+    diagEl.style.display = 'none';
+  }
+}
+
+function renderCarteLegend() {
+  const legendEl = document.getElementById('carte-legend');
+  legendEl.innerHTML = CarteState.zonesN1.map(z => {
+    let bg = z.color;
+    if (z.pattern !== null && z.pattern !== undefined) {
+      const angle = PATTERN_ANGLES[z.pattern % PATTERN_ANGLES.length];
+      const dark = _darken(z.color, 45);
+      bg = `repeating-linear-gradient(${angle}deg, ${z.color}, ${z.color} 3px, ${dark} 3px, ${dark} 6px)`;
+    }
+    return `
+    <div class="carte-legend-item">
+      <span class="carte-legend-swatch" style="background:${bg}"></span>
+      <span class="carte-legend-label">${z.nom}</span>
+    </div>`;
+  }).join('') + `
+    <div class="carte-legend-item">
+      <span class="carte-legend-swatch" style="background:#999"></span>
+      <span class="carte-legend-label">Non affecté</span>
+    </div>
+  `;
+}
+
+function onCartePaysClick(frList, displayName) {
+  if (frList.length === 1) {
+    openCartePanel(frList[0]);
+    return;
+  }
+  const panel = document.getElementById('carte-panel');
+  panel.innerHTML = `
+    <div class="carte-panel-title">${displayName} — plusieurs entrées</div>
+    <div class="carte-panel-sub">Quelle entrée veux-tu affecter ?</div>
+    ${frList.map(fr => `
+      <button class="yaml-btn carte-panel-pays-btn" data-pays="${fr}">
+        ${fr} ${CarteState.affectations[fr] ? `(→ ${CarteState.affectations[fr]})` : '(non affecté)'}
+      </button>
+    `).join('')}
+  `;
+  panel.querySelectorAll('.carte-panel-pays-btn').forEach(btn => {
+    btn.addEventListener('click', () => openCartePanel(btn.dataset.pays));
+  });
+}
+
+function openCartePanel(pays) {
+  const zone = CarteState.affectations[pays];
+  const panel = document.getElementById('carte-panel');
+
+  const zoneOptions = CarteState.zonesN1.map(z =>
+    `<option value="${z.slug}" ${z.slug === zone ? 'selected' : ''}>${z.nom} (${z.slug})</option>`
+  ).join('');
+
+  panel.innerHTML = `
+    <div class="carte-panel-title">${pays}</div>
+    <div class="carte-panel-sub">${zone ? `Actuellement : ${zone}` : 'Non affecté'}</div>
+
+    <div class="carte-panel-section">
+      <label>Affecter à une zone existante</label>
+      <select id="carte-panel-zone-select">
+        <option value="">— choisir —</option>
+        ${zoneOptions}
+      </select>
+      <button id="carte-panel-impact-btn" class="yaml-btn">🔍 Évaluer l'impact</button>
+      <div id="carte-panel-impact-report"></div>
+    </div>
+
+    <div class="carte-panel-section">
+      <button id="carte-panel-propose-btn" class="yaml-btn">💡 Demander une proposition (LLM)</button>
+      <div id="carte-panel-proposal"></div>
+    </div>
+
+    <div class="carte-panel-section">
+      <button id="carte-panel-ignorer-btn" class="yaml-btn">Ignorer (blanc intentionnel)</button>
+    </div>
+
+    <div id="carte-panel-msg"></div>
+  `;
+
+  document.getElementById('carte-panel-impact-btn').addEventListener('click', () => {
+    const zoneSlug = document.getElementById('carte-panel-zone-select').value;
+    if (!zoneSlug) { alert('Choisis une zone d\'abord'); return; }
+    _carteImpact(pays, 'absorber', { zone_slug: zoneSlug },
+      document.getElementById('carte-panel-impact-report'), zone ? 'Changer de zone' : 'Absorber');
+  });
+
+  // Ré-évaluation obligatoire si la zone sélectionnée change
+  document.getElementById('carte-panel-zone-select').addEventListener('change', () => {
+    document.getElementById('carte-panel-impact-report').innerHTML = '';
+  });
+
+  document.getElementById('carte-panel-propose-btn').addEventListener('click', () => _carteProposer(pays));
+  document.getElementById('carte-panel-ignorer-btn').addEventListener('click', () => _carteIgnorer(pays));
+}
+
+async function _carteProposer(pays) {
+  const btn = document.getElementById('carte-panel-propose-btn');
+  const out = document.getElementById('carte-panel-proposal');
+  btn.disabled = true;
+  btn.textContent = 'Réflexion…';
+  out.innerHTML = '';
+
+  try {
+    const res = await fetch('/api/carte/propose', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ pays, scenario: CarteState.scenario }),
+    });
+    const data = await res.json();
+    btn.disabled = false;
+    btn.textContent = '💡 Demander une proposition (LLM)';
+
+    if (!data.ok) {
+      out.innerHTML = `<div class="carte-panel-error">Erreur : ${data.error}</div>`;
+      return;
+    }
+
+    const p = data.proposal;
+    let html = `<div class="carte-panel-proposal-box">`;
+    if (p.zone_existante_recommandee) {
+      html += `<div><strong>Zone recommandée :</strong> ${p.zone_existante_recommandee}</div>
+        <button class="yaml-btn" id="carte-panel-accept-existing">🔍 Évaluer l'impact puis appliquer</button>`;
+    }
+    if (p.nouvelle_zone_proposee) {
+      const nz = p.nouvelle_zone_proposee;
+      html += `<div style="margin-top:8px"><strong>Nouvelle zone proposée :</strong> ${nz.nom} (${nz.slug})<br>
+        <span style="font-size:11px;color:#888">${nz.description}</span></div>
+        <button class="yaml-btn" id="carte-panel-accept-new">🔍 Évaluer l'impact puis créer</button>`;
+    }
+    html += `<div style="margin-top:8px;font-size:11px;font-style:italic">${p.justification || ''}</div>`;
+    html += `<div id="carte-panel-llm-impact-report"></div>`;
+    html += `</div>`;
+    out.innerHTML = html;
+
+    const acceptExisting = document.getElementById('carte-panel-accept-existing');
+    if (acceptExisting) {
+      acceptExisting.addEventListener('click', () =>
+        _carteImpact(pays, 'absorber', { zone_slug: p.zone_existante_recommandee },
+          document.getElementById('carte-panel-llm-impact-report'), 'Appliquer cette zone'));
+    }
+    const acceptNew = document.getElementById('carte-panel-accept-new');
+    if (acceptNew) {
+      acceptNew.addEventListener('click', () =>
+        _carteImpact(pays, 'creer', { nouvelle_zone: p.nouvelle_zone_proposee },
+          document.getElementById('carte-panel-llm-impact-report'), 'Créer cette zone'));
+    }
+  } catch (e) {
+    btn.disabled = false;
+    btn.textContent = '💡 Demander une proposition (LLM)';
+    out.innerHTML = `<div class="carte-panel-error">Erreur réseau : ${e.message}</div>`;
+  }
+}
+
+async function _carteAssign(pays, action, extra) {
+  const msg = document.getElementById('carte-panel-msg');
+  msg.textContent = 'Application…';
+  try {
+    const res = await fetch('/api/carte/assign', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ pays, scenario: CarteState.scenario, action, ...extra }),
+    });
+    const data = await res.json();
+    if (data.ok) {
+      msg.textContent = `✓ ${pays} → ${data.zone}`;
+      await refreshCarte();
+    } else {
+      msg.textContent = `Erreur : ${data.error}`;
+    }
+  } catch (e) {
+    msg.textContent = `Erreur réseau : ${e.message}`;
+  }
+}
+
+async function _carteIgnorer(pays) {
+  const msg = document.getElementById('carte-panel-msg');
+  msg.textContent = 'Marquage…';
+  try {
+    const res = await fetch('/api/carte/ignorer', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ pays, scenario: CarteState.scenario }),
+    });
+    const data = await res.json();
+    msg.textContent = data.ok ? `✓ ${pays} marqué intentionnel` : `Erreur : ${data.error}`;
+  } catch (e) {
+    msg.textContent = `Erreur réseau : ${e.message}`;
+  }
+}
+
+/** Évalue l'impact (lecture seule) et affiche le rapport + un bouton de confirmation dans `container`. */
+async function _carteImpact(pays, action, extra, container, confirmLabel) {
+  container.innerHTML = '<div class="carte-status">Analyse en cours…</div>';
+
+  try {
+    const res = await fetch('/api/carte/impact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ pays, scenario: CarteState.scenario, action, ...extra }),
+    });
+    const r = await res.json();
+
+    if (r.error) {
+      container.innerHTML = `<div class="carte-panel-error">Erreur : ${r.error}</div>`;
+      return;
+    }
+
+    let html = `<div class="carte-panel-proposal-box">`;
+    html += `<div><strong>${pays}</strong> : ${r.ancienne_zone || '—'} → ${r.nouvelle_zone || '—'}</div>`;
+
+    if (r.rien_detecte) {
+      html += `<div style="margin-top:6px;color:#2e7d32">✓ Aucun impact narratif détecté.</div>`;
+    } else {
+      if (r.sous_zones_orphelines.length) {
+        html += `<div style="margin-top:8px;color:#c0392b"><strong>⚠ ${r.sous_zones_orphelines.length} sous-zone(s) potentiellement orphelines</strong></div>`;
+        html += '<ul style="margin:4px 0;padding-left:16px;font-size:10px">' +
+          r.sous_zones_orphelines.map(sz => `<li>${sz.nom} (${sz.slug}) — origine : ${sz.origine}</li>`).join('') +
+          '</ul>';
+      }
+      if (r.instances_liees.length) {
+        html += `<div style="margin-top:8px"><strong>${r.instances_liees.length} instance(s)/événement(s) liés à la zone</strong></div>`;
+        html += '<ul style="margin:4px 0;padding-left:16px;font-size:10px">' +
+          r.instances_liees.slice(0, 10).map(it => `<li>${it.slug}</li>`).join('') +
+          (r.instances_liees.length > 10 ? `<li>… +${r.instances_liees.length - 10} autres</li>` : '') +
+          '</ul>';
+      }
+      if (r.mentions_texte.length) {
+        html += `<div style="margin-top:8px"><strong>${r.mentions_texte.length} mention(s) textuelles de « ${pays} »</strong></div>`;
+        html += '<ul style="margin:4px 0;padding-left:16px;font-size:10px">' +
+          r.mentions_texte.slice(0, 10).map(m => `<li>${m.slug} — ${m.extrait}</li>`).join('') +
+          (r.mentions_texte.length > 10 ? `<li>… +${r.mentions_texte.length - 10} autres</li>` : '') +
+          '</ul>';
+      }
+      if (r.registre_hits.length) {
+        html += `<div style="margin-top:8px"><strong>${r.registre_hits.length} ligne(s) dans le registre des événements</strong></div>`;
+        html += '<ul style="margin:4px 0;padding-left:16px;font-size:10px">' +
+          r.registre_hits.slice(0, 10).map(h => `<li>${h}</li>`).join('') +
+          '</ul>';
+      }
+      html += `<div style="margin-top:8px;font-size:10px;color:#888">Rapport sauvegardé : ${r.rapport_path || '(non écrit)'}</div>`;
+    }
+
+    html += `<button id="carte-panel-confirm-btn" class="yaml-btn" style="margin-top:10px;font-weight:700">✓ ${confirmLabel}</button>`;
+    html += `</div>`;
+    container.innerHTML = html;
+
+    document.getElementById('carte-panel-confirm-btn').addEventListener('click', () => {
+      _carteAssign(pays, action, extra);
+    });
+  } catch (e) {
+    container.innerHTML = `<div class="carte-panel-error">Erreur réseau : ${e.message}</div>`;
+  }
 }
