@@ -1,0 +1,38 @@
+scenario: reference
+instructions: 'Vérifiez chaque affectation. Mettez ''valide: false'' pour rejeter
+  une proposition. Pour action: absorber, vérifiez que zone_slug est cohérente. Pour
+  action: nouvelle_zone, vérifiez les champs de la zone. Lancez ensuite : python3
+  complete_geographie_coverage.py --scenario reference --apply'
+affectations:
+- pays: Ouzbékistan
+  action: absorber
+  zone_slug: bloc_eurasien_central
+  justification: Intégration naturelle dans le Bloc Eurasien Central en raison de
+    sa position géographique en Asie centrale et de ses ressources stratégiques (lithium,
+    terres rares).
+  valide: true
+- pays: Éthiopie
+  action: absorber
+  zone_slug: union_africaine_resilience
+  justification: Membre historique de l'Union Africaine, aligné avec la logique de
+    résilience territoriale et de gouvernance régionale autonome.
+  valide: true
+- pays: Pakistan
+  action: absorber
+  zone_slug: indo_pacifique_emergent
+  justification: Intégration dans l'Arc Indo-Pacifique en raison de sa position géographique
+    stratégique et de son rôle dans les flux énergétiques (hydrogène) et les corridors
+    commerciaux.
+  valide: true
+- pays: Argentine
+  action: absorber
+  zone_slug: ameriques_multipolaires
+  justification: Appartient géographiquement et politiquement aux Amériques, zone
+    déjà fragmentée incluant d'autres pays d'Amérique du Sud.
+  valide: true
+- pays: Arctique
+  action: absorber
+  zone_slug: corridor_arctique_nordique
+  justification: L'Arctique est déjà partiellement couvert par cette zone (Mourmansk,
+    Groenland) et sa logique narrative inclut explicitement les routes arctiques déglaciées.
+  valide: true

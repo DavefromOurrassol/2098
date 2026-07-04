@@ -52,6 +52,76 @@ zones:
   - entite: Rwanda
     type_entite: pays
     portion: null
+  - entite: Mauritanie
+  - entite: Libye
+    type_entite: pays
+    portion: null
+  - entite: Gambie
+    type_entite: pays
+    portion: null
+  - entite: Guinée-Bissau
+    type_entite: pays
+    portion: null
+  - entite: Guinée
+    type_entite: pays
+    portion: null
+  - entite: Sierra Leone
+    type_entite: pays
+    portion: null
+  - entite: Liberia
+    type_entite: pays
+    portion: null
+  - entite: Côte d'Ivoire
+    type_entite: pays
+    portion: null
+  - entite: Togo
+    type_entite: pays
+    portion: null
+  - entite: Bénin
+    type_entite: pays
+    portion: null
+  - entite: São Tomé-et-Príncipe
+    type_entite: pays
+    portion: null
+  - entite: Cameroun
+    type_entite: pays
+    portion: null
+  - entite: République centrafricaine
+    type_entite: pays
+    portion: null
+  - entite: Gabon
+    type_entite: pays
+    portion: null
+  - entite: Guinée équatoriale
+    type_entite: pays
+    portion: null
+  - entite: République du Congo
+    type_entite: pays
+    portion: null
+  - entite: Angola
+    type_entite: pays
+    portion: null
+  - entite: Zambie
+    type_entite: pays
+    portion: null
+  - entite: Malawi
+    type_entite: pays
+    portion: null
+  - entite: Tanzanie
+    type_entite: pays
+    portion: null
+  - entite: Ouganda
+    type_entite: pays
+    portion: null
+  - entite: Burundi
+    type_entite: pays
+    portion: null
+  - entite: Comores
+    type_entite: pays
+    portion: null
+  - entite: Madagascar
+    type_entite: pays
+    portion: null
   description: Vaste zone d'Afrique subsaharienne où les États ont partiellement ou
     totalement effondré sous la pression des crises climatiques, énergétiques et des
     conflits de ressources. Contrôlée de facto par des cartels miniers militarisés
@@ -90,6 +160,15 @@ zones:
     type_entite: pays
     portion: null
   - entite: Bolivie
+    type_entite: pays
+    portion: null
+  - entite: Guyana
+    type_entite: pays
+    portion: null
+  - entite: Suriname
+    type_entite: pays
+    portion: null
+  - entite: Équateur
     type_entite: pays
     portion: null
   description: Zone sous gouvernance précaire du Pacte Vert Amazônia, coalition fragile
@@ -153,6 +232,48 @@ zones:
     type_entite: pays
     portion: null
   - entite: Mexique
+    type_entite: pays
+    portion: null
+  - entite: Irlande
+    type_entite: pays
+    portion: null
+  - entite: Luxembourg
+    type_entite: pays
+    portion: null
+  - entite: Monaco
+    type_entite: pays
+    portion: null
+  - entite: Saint-Marin
+    type_entite: pays
+    portion: null
+  - entite: Vatican
+    type_entite: pays
+    portion: null
+  - entite: Malte
+    type_entite: pays
+    portion: null
+  - entite: Cuba
+    type_entite: pays
+    portion: null
+  - entite: République dominicaine
+    type_entite: pays
+    portion: null
+  - entite: Jamaïque
+    type_entite: pays
+    portion: null
+  - entite: Bahamas
+    type_entite: pays
+    portion: null
+  - entite: Belize
+    type_entite: pays
+    portion: null
+  - entite: Panama
+    type_entite: pays
+    portion: null
+  - entite: Trinité-et-Tobago
+    type_entite: pays
+    portion: null
+  - entite: Barbade
     type_entite: pays
     portion: null
   description: Bloc géopolitique fermé centré sur l'espace atlantique nord, gouverné
@@ -226,6 +347,27 @@ zones:
   - entite: Mongolie
     type_entite: pays
     portion: null
+  - entite: Andorre
+    type_entite: pays
+    portion: null
+  - entite: Liechtenstein
+    type_entite: pays
+    portion: null
+  - entite: Bulgarie
+    type_entite: pays
+    portion: null
+  - entite: Biélorussie
+    type_entite: pays
+    portion: null
+  - entite: Lituanie
+    type_entite: pays
+    portion: null
+  - entite: Lettonie
+    type_entite: pays
+    portion: null
+  - entite: Estonie
+    type_entite: pays
+    portion: null
   description: Bloc eurasiatique occidental régi par des régimes autoritaires ayant
     militarisé leurs ressources énergétiques et leurs frontières. Il abrite le Consortium
     Helios BSE (quasi-État énergétique orbital), le Conseil de Calcul Souverain d'Ourrassol-Centre,
@@ -280,6 +422,12 @@ zones:
   - entite: Philippines
     type_entite: pays
     portion: null
+  - entite: Laos
+    type_entite: pays
+    portion: null
+  - entite: Taïwan
+    type_entite: pays
+    portion: null
   description: Bloc fermé de l'espace pacifique nord, observateur relatif de la fragmentation
     mondiale mais consolidant sa propre cohésion interne. Il est impliqué dans des
     consortiums technologiques mixtes (Consortium sino-finlandais de flotte autonome)
@@ -324,6 +472,9 @@ zones:
     portion: null
   - entite: Arctique international
     type_entite: autre
+    portion: null
+  - entite: Cap-Vert
+    type_entite: pays
     portion: null
   description: Espace géopolitique distinct contrôlé de facto par la Nordisk Arktisk
     Transitkontroll (NAT), opérateur privé armé gérant les corridors arctiques dégelés
@@ -386,6 +537,27 @@ zones:
     type_entite: pays
     portion: null
   - entite: Pakistan
+    type_entite: pays
+    portion: null
+  - entite: Jordanie
+    type_entite: pays
+    portion: null
+  - entite: Oman
+    type_entite: pays
+    portion: null
+  - entite: Bahreïn
+    type_entite: pays
+    portion: null
+  - entite: Palestine
+    type_entite: pays
+    portion: null
+  - entite: Djibouti
+    type_entite: pays
+    portion: null
+  - entite: Somalie
+    type_entite: pays
+    portion: null
+  - entite: Érythrée
     type_entite: pays
     portion: null
   description: Zone transformée en territoire-tampon disputé après le conflit israélo-iranien
@@ -584,6 +756,81 @@ zones:
     type_entite: pays
     portion: null
   - entite: Venezuela
+    type_entite: pays
+    portion: null
+  - entite: Chypre
+    type_entite: pays
+    portion: null
+  - entite: Croatie
+    type_entite: pays
+    portion: null
+  - entite: Slovénie
+    type_entite: pays
+    portion: null
+  - entite: Bosnie-Herzégovine
+    type_entite: pays
+    portion: null
+  - entite: Monténégro
+    type_entite: pays
+    portion: null
+  - entite: Macédoine du Nord
+    type_entite: pays
+    portion: null
+  - entite: Albanie
+    type_entite: pays
+    portion: null
+  - entite: Moldavie
+    type_entite: pays
+    portion: null
+  - entite: Kosovo
+    type_entite: pays
+    portion: null
+  - entite: Turkménistan
+    type_entite: pays
+    portion: null
+  - entite: Tadjikistan
+    type_entite: pays
+    portion: null
+  - entite: Afghanistan
+    type_entite: pays
+    portion: null
+  - entite: Égypte
+    type_entite: pays
+    portion: null
+  - entite: Haïti
+    type_entite: pays
+    portion: null
+  - entite: Guatemala
+    type_entite: pays
+    portion: null
+  - entite: Honduras
+    type_entite: pays
+    portion: null
+  - entite: Salvador
+    type_entite: pays
+    portion: null
+  - entite: Nicaragua
+    type_entite: pays
+    portion: null
+  - entite: Costa Rica
+    type_entite: pays
+    portion: null
+  - entite: Sainte-Lucie
+    type_entite: pays
+    portion: null
+  - entite: Grenade
+    type_entite: pays
+    portion: null
+  - entite: Saint-Vincent-et-les-Grenadines
+    type_entite: pays
+    portion: null
+  - entite: Antigua-et-Barbuda
+    type_entite: pays
+    portion: null
+  - entite: Saint-Christophe-et-Niévès
+    type_entite: pays
+    portion: null
+  - entite: Dominique
     type_entite: pays
     portion: null
   description: Ensemble diffus de territoires interstitiels situés entre les blocs
@@ -2125,6 +2372,18 @@ zones:
   - entite: Afrique du Sud
     type_entite: pays
     portion: null
+  - entite: Namibie
+    type_entite: pays
+    portion: null
+  - entite: Botswana
+    type_entite: pays
+    portion: null
+  - entite: Lesotho
+    type_entite: pays
+    portion: null
+  - entite: Eswatini
+    type_entite: pays
+    portion: null
 - slug: inde_forteresse_sous_continentale
   nom: Inde — Forteresse Sous-Continentale
   niveau: 1
@@ -2155,6 +2414,15 @@ zones:
   - entite: Inde
     type_entite: pays
     portion: null
+  - entite: Népal
+    type_entite: pays
+    portion: null
+  - entite: Bhoutan
+    type_entite: pays
+    portion: null
+  - entite: Sri Lanka
+    type_entite: pays
+    portion: null
 - slug: archipel_indonesien_forteresses_maritimes
   nom: Archipel Indonésien — Forteresses Maritimes
   niveau: 1
@@ -2181,6 +2449,36 @@ zones:
   sources_attestees: []
   origine_reelle:
   - entite: Indonésie
+    type_entite: pays
+    portion: null
+  - entite: Maldives
+    type_entite: pays
+    portion: null
+  - entite: Birmanie
+    type_entite: pays
+    portion: null
+  - entite: Cambodge
+    type_entite: pays
+    portion: null
+  - entite: Brunei
+    type_entite: pays
+    portion: null
+  - entite: Timor oriental
+    type_entite: pays
+    portion: null
+  - entite: Papouasie-Nouvelle-Guinée
+    type_entite: pays
+    portion: null
+  - entite: Samoa
+    type_entite: pays
+    portion: null
+  - entite: Tonga
+    type_entite: pays
+    portion: null
+  - entite: Micronésie
+    type_entite: pays
+    portion: null
+  - entite: Palaos
     type_entite: pays
     portion: null
 - slug: singapour_megapole
@@ -2240,6 +2538,15 @@ zones:
   - entite: Argentine
     type_entite: pays
     portion: null
+  - entite: Chili
+    type_entite: pays
+    portion: null
+  - entite: Paraguay
+    type_entite: pays
+    portion: null
+  - entite: Uruguay
+    type_entite: pays
+    portion: null
 - slug: australie_forteresse_insulaire
   nom: Australie — Forteresse Insulaire
   niveau: 1
@@ -2264,6 +2571,125 @@ zones:
   sources_attestees: []
   origine_reelle:
   - entite: Australie
+    type_entite: pays
+    portion: null
+  - entite: Nouvelle-Zélande
+    type_entite: pays
+    portion: null
+  - entite: Polynésie française
+    type_entite: pays
+    portion: null
+  - entite: Nauru
+    type_entite: pays
+    portion: null
+- slug: maurice_forteresse_insulaire_indien
+  nom: Maurice — Forteresse Insulaire de l'Océan Indien
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  statut: stable
+  description: Ancienne île touristique transformée en hub logistique et financier
+    sécurisé, contrôlant des routes maritimes critiques. Gouvernée par une élite technocratique
+    et des milices privées.
+  tensions_internes: Conflits entre élites locales et corporations étrangères pour
+    le contrôle des infrastructures portuaires.
+  periode_transition: 2050-2075
+  evenement_transition: null
+  lieux_emblematiques:
+  - Port-Louis
+  - Base navale de Diego Garcia (partiellement contrôlée)
+  relations:
+    allies:
+    - bloc_atlantique
+    - singapour_megapole
+    rivaux:
+    - archipel_indonesien_forteresses_maritimes
+  sources_attestees: []
+  origine_reelle:
+  - entite: Maurice
+    type_entite: pays
+    portion: null
+  - entite: Seychelles
+    type_entite: pays
+    portion: null
+- slug: kiribati_atolls_abandonnes
+  nom: Kiribati — Atolls Abandonnés
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  statut: en_declin
+  description: Archipel submergé à 80%, réduit à des plateformes flottantes et des
+    atolls fortifiés. Géré par des communautés survivantes en autarcie, sans reconnaissance
+    internationale.
+  tensions_internes: Conflits pour les ressources entre clans, pression des blocs
+    pacifiques pour le contrôle des eaux territoriales.
+  periode_transition: 2050-2075
+  evenement_transition: Montée des eaux et effondrement des infrastructures centrales
+    (2048).
+  lieux_emblematiques:
+  - Tarawa (ruines)
+  - Plateforme Kiritimati
+  relations:
+    allies: []
+    rivaux:
+    - bloc_pacifique_nord
+  sources_attestees: []
+  origine_reelle:
+  - entite: Kiribati
+    type_entite: pays
+    portion: null
+- slug: marshall_bunker_nucleaire
+  nom: Îles Marshall — Bunker Nucléaire
+  niveau: 1
+  type: site_strategique
+  parent: null
+  statut: stable
+  description: Ancien territoire irradié transformé en zone militaire sécurisée, contrôlée
+    par une alliance entre le Bloc Pacifique Nord et des mercenaires locaux. Stockage
+    de déchets nucléaires et base de surveillance.
+  tensions_internes: Conflits entre factions mercenaires et pression des populations
+    autochtones pour l'accès aux ressources.
+  periode_transition: 2035-2060
+  evenement_transition: Reprise en main par des acteurs externes après l'effondrement
+    du gouvernement local (2035).
+  lieux_emblematiques:
+  - Bikini Atoll (site interdit)
+  - Kwajalein (base militaire)
+  relations:
+    allies:
+    - bloc_pacifique_nord
+    rivaux:
+    - zones_grises_tampons
+  sources_attestees: []
+  origine_reelle:
+  - entite: Îles Marshall
+    type_entite: pays
+    portion: null
+- slug: tuvalu_refugies_climatiques
+  nom: Tuvalu — Refuge Climatique
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  statut: emergent
+  description: Archipel presque entièrement submergé, réduit à une plateforme flottante
+    et des îles artificielles. Abrite une communauté de réfugiés climatiques sous
+    protection onusienne résiduelle.
+  tensions_internes: Dépendance totale aux aides extérieures, conflits avec les blocs
+    pour la souveraineté.
+  periode_transition: 2040-2070
+  evenement_transition: Évacuation massive vers Fidji et la Nouvelle-Zélande (2045),
+    puis création de la plateforme (2060).
+  lieux_emblematiques:
+  - Funafuti (plateforme principale)
+  - Nukulaelae (ruines)
+  relations:
+    allies:
+    - pacte_forteresses_souveraines
+    rivaux:
+    - bloc_pacifique_nord
+  sources_attestees: []
+  origine_reelle:
+  - entite: Tuvalu
     type_entite: pays
     portion: null
 ---

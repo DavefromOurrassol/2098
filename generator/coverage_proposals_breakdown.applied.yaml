@@ -1,0 +1,224 @@
+scenario: breakdown
+instructions: 'Vérifiez chaque affectation. Mettez ''valide: false'' pour rejeter
+  une proposition. Pour action: absorber, vérifiez que zone_slug est cohérente. Pour
+  action: nouvelle_zone, vérifiez les champs de la zone. Lancez ensuite : python3
+  complete_geographie_coverage.py --scenario breakdown --apply'
+affectations:
+- pays: Italie
+  action: absorber
+  zone_slug: arc_sahelo_mediterraneen
+  justification: L'Italie, bordée par la Méditerranée, s'intègre naturellement dans
+    l'arc de transit précaire reliant le Sahel à l'Europe du Sud.
+  valide: true
+- pays: Portugal
+  action: absorber
+  zone_slug: arc_sahelo_mediterraneen
+  justification: Le Portugal, bien que sur l'Atlantique, est lié à la Méditerranée
+    via l'Espagne et les réseaux de transit résiduels.
+  valide: true
+- pays: République tchèque
+  action: absorber
+  zone_slug: arc_eurasien_central
+  justification: La République tchèque fait partie de l'Europe centrale, intégrée
+    dans les corridors d'approvisionnement fracturés de l'Arc Eurasien.
+  valide: true
+- pays: Ouzbékistan
+  action: absorber
+  zone_slug: arc_eurasien_central
+  justification: L'Ouzbékistan, en Asie centrale, est inclus dans l'Arc Eurasien Central
+    qui couvre les anciennes républiques soviétiques et leurs corridors logistiques.
+  valide: true
+- pays: Kirghizistan
+  action: absorber
+  zone_slug: arc_eurasien_central
+  justification: Le Kirghizistan, voisin de l'Ouzbékistan, s'insère dans la même dynamique
+    de corridors fracturés de l'Arc Eurasien Central.
+  valide: true
+- pays: Turquie
+  action: absorber
+  zone_slug: arc_sahelo_mediterraneen
+  justification: La Turquie, à cheval entre l'Europe et le Moyen-Orient, est intégrée
+    à l'arc méditerranéen en raison de son rôle historique de transit.
+  valide: true
+- pays: Yémen
+  action: absorber
+  zone_slug: zone_golfe_levant
+  justification: Le Yémen, situé dans la péninsule arabique, est directement lié aux
+    dynamiques conflictuelles du Golfe Persique et du Levant.
+  valide: true
+- pays: Liban
+  action: absorber
+  zone_slug: zone_golfe_levant
+  justification: Le Liban, bordant la Méditerranée orientale, est inclus dans la zone
+    grise permanente du Golfe Persique–Levant.
+  valide: true
+- pays: Syrie
+  action: absorber
+  zone_slug: zone_golfe_levant
+  justification: La Syrie, au cœur des conflits moyen-orientaux, fait partie intégrante
+    de la zone Golfe Persique–Levant.
+  valide: true
+- pays: Qatar
+  action: absorber
+  zone_slug: zone_golfe_levant
+  justification: Le Qatar, situé dans le Golfe Persique, est directement concerné
+    par les dynamiques de cette zone fragmentée.
+  valide: true
+- pays: Koweït
+  action: absorber
+  zone_slug: zone_golfe_levant
+  justification: Le Koweït, comme le Qatar, est un État du Golfe Persique intégré
+    à cette zone de conflits et de fragmentation.
+  valide: true
+- pays: Éthiopie
+  action: nouvelle_zone
+  justification: L'Éthiopie, en Afrique de l'Est, ne correspond à aucune zone existante
+    et nécessite une nouvelle entité pour refléter son isolement relatif et ses dynamiques
+    internes.
+  zone:
+    slug: ethiopie_hautes_terres_autonome
+    nom: Éthiopie (Hautes Terres Autonome)
+    niveau: 1
+    type: territoire_autonome
+    parent: null
+    statut: emergent
+    description: L'Éthiopie de 2098 est une région montagneuse ayant développé une
+      autonomie relative grâce à son isolement géographique. Structurée autour de
+      communautés locales résilientes, elle tire parti de ses ressources agricoles
+      et de son héritage culturel unique.
+    tensions_internes: Conflits interethniques persistants et pression des groupes
+      armés cherchant à contrôler les rares ressources.
+    periode_transition: 2050-2075
+    evenement_transition: null
+    lieux_emblematiques:
+    - Addis-Abeba
+    - Lalibela
+    - Lac Tana
+    relations:
+      allies:
+      - madagascar_ile_resiliente
+      rivaux:
+      - afrique_centrale_australe
+      - zone_golfe_levant
+    sources_attestees: []
+    origine_reelle:
+    - entite: Éthiopie
+      type_entite: pays
+      portion: null
+  valide: true
+- pays: Mozambique
+  action: absorber
+  zone_slug: afrique_centrale_australe
+  justification: Géographiquement et politiquement intégré au bassin du Congo et aux
+    dynamiques extractivistes de l'Afrique australe.
+  valide: true
+- pays: Zimbabwe
+  action: absorber
+  zone_slug: afrique_centrale_australe
+  justification: Fait partie des dynamiques fragmentées de l'Afrique australe, lié
+    aux conflits hydriques et aux corridors miniers.
+  valide: true
+- pays: Soudan
+  action: absorber
+  zone_slug: arc_sahelo_mediterraneen
+  justification: Intégré à l'arc Sahélo-Méditerranéen en raison de sa position géographique
+    et de son rôle dans les réseaux nomades et les conflits transsahariens.
+  valide: true
+- pays: Tchad
+  action: absorber
+  zone_slug: arc_sahelo_mediterraneen
+  justification: Partie prenante du Sahel, structuré autour des mêmes dynamiques de
+    transit et de survie que la zone existante.
+  valide: true
+- pays: Indonésie
+  action: absorber
+  zone_slug: asie_pacifique_sud_est
+  justification: L'Indonésie est géographiquement et économiquement liée aux corridors
+    sino-sibériens et aux dynamiques du Pacifique Nord.
+  valide: true
+- pays: Vietnam
+  action: absorber
+  zone_slug: asie_pacifique_sud_est
+  justification: Déjà inclus dans la zone Asie-Pacifique, structuré autour des mêmes
+    enjeux logistiques et géopolitiques.
+  valide: true
+- pays: Singapour
+  action: absorber
+  zone_slug: asie_pacifique_sud_est
+  justification: Hub stratégique du Pacifique Nord, intégré aux réseaux sino-sibériens
+    et aux flux résiduels de la région.
+  valide: true
+- pays: Mongolie
+  action: absorber
+  zone_slug: arc_eurasien_central
+  justification: Fait partie des corridors d'approvisionnement fracturés de l'Arc
+    Eurasien Central, lié à la Russie et à la Chine.
+  valide: true
+- pays: Argentine
+  action: nouvelle_zone
+  justification: Aucune zone existante ne couvre l'Argentine, qui forme un territoire
+    autonome en Amérique du Sud.
+  zone:
+    slug: argentine_pampas_autonome
+    nom: Argentine (Pampas Autonome)
+    niveau: 1
+    type: territoire_autonome
+    parent: null
+    statut: fragmenté
+    description: L'Argentine de 2098 est un territoire fragmenté en zones agricoles
+      autonomes et en enclaves urbaines. Les pampas, autrefois grenier à blé, sont
+      désormais gérées par des communautés locales et des seigneurs de guerre. Buenos
+      Aires subsiste comme nœud résiduel de commerce informel.
+    tensions_internes: Conflits entre factions agricoles, milices urbaines et cartels
+      contrôlant les dernières ressources.
+    periode_transition: 2050-2075
+    evenement_transition: null
+    lieux_emblematiques:
+    - Buenos Aires
+    - Rosario
+    - Córdoba
+    relations:
+      allies:
+      - chili_cordillere_autonome
+      rivaux:
+      - espace_nord_americain_fragmente
+    sources_attestees: []
+    origine_reelle:
+    - entite: Argentine
+      type_entite: pays
+      portion: null
+  valide: true
+- pays: Bolivie
+  action: nouvelle_zone
+  justification: La Bolivie, avec ses ressources en lithium et son isolement andin,
+    forme une entité distincte non couverte par les zones existantes.
+  zone:
+    slug: bolivie_altipano_strategique
+    nom: Bolivie (Altiplano Stratégique)
+    niveau: 1
+    type: territoire_autonome
+    parent: null
+    statut: fragmenté
+    description: La Bolivie de 2098 est centrée sur l'Altiplano, où les dernières
+      réserves de lithium et d'eau sont contrôlées par des factions locales et des
+      corporations résiduelles. La Paz et Oruro sont des nœuds de pouvoir disputés.
+    tensions_internes: Guerres entre clans miniers, milices urbaines et groupes écologistes
+      radicaux.
+    periode_transition: 2040-2065
+    evenement_transition: null
+    lieux_emblematiques:
+    - La Paz
+    - Oruro
+    - Uyuni
+    relations:
+      allies:
+      - chili_cordillere_autonome
+      rivaux:
+      - perou
+      - brésil
+    sources_attestees: []
+    origine_reelle:
+    - entite: Bolivie
+      type_entite: pays
+      portion: null
+  valide: true

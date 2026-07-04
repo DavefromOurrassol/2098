@@ -57,6 +57,93 @@ zones:
     portion: null
   - entite: Burkina Faso
   - entite: Nigeria
+  - entite: Égypte
+    type_entite: pays
+    portion: null
+  - entite: Libye
+    type_entite: pays
+    portion: null
+  - entite: Mauritanie
+    type_entite: pays
+    portion: null
+  - entite: Gambie
+    type_entite: pays
+    portion: null
+  - entite: Guinée-Bissau
+    type_entite: pays
+    portion: null
+  - entite: Guinée
+    type_entite: pays
+    portion: null
+  - entite: Sierra Leone
+    type_entite: pays
+    portion: null
+  - entite: Liberia
+    type_entite: pays
+    portion: null
+  - entite: Côte d'Ivoire
+    type_entite: pays
+    portion: null
+  - entite: Togo
+    type_entite: pays
+    portion: null
+  - entite: Bénin
+    type_entite: pays
+    portion: null
+  - entite: Cap-Vert
+    type_entite: pays
+    portion: null
+  - entite: São Tomé-et-Príncipe
+    type_entite: pays
+    portion: null
+  - entite: Cameroun
+    type_entite: pays
+    portion: null
+  - entite: République centrafricaine
+    type_entite: pays
+    portion: null
+  - entite: Gabon
+    type_entite: pays
+    portion: null
+  - entite: Guinée équatoriale
+    type_entite: pays
+    portion: null
+  - entite: Angola
+    type_entite: pays
+    portion: null
+  - entite: Zambie
+    type_entite: pays
+    portion: null
+  - entite: Malawi
+    type_entite: pays
+    portion: null
+  - entite: Tanzanie
+    type_entite: pays
+    portion: null
+  - entite: Ouganda
+    type_entite: pays
+    portion: null
+  - entite: Burundi
+    type_entite: pays
+    portion: null
+  - entite: Namibie
+    type_entite: pays
+    portion: null
+  - entite: Botswana
+    type_entite: pays
+    portion: null
+  - entite: Lesotho
+    type_entite: pays
+    portion: null
+  - entite: Eswatini
+    type_entite: pays
+    portion: null
+  - entite: Comores
+    type_entite: pays
+    portion: null
+  - entite: Madagascar
+    type_entite: pays
+    portion: null
   description: L'Afrique continentale de 2098 s'est dotée d'une Union Panafricaine
     dotée d'un Conseil Technique de l'Eau, et a été le théâtre des Accords de Kinshasa-Sahel
     (2071-2089) structurant la gouvernance hydrique continentale. Brazzaville accueille
@@ -129,6 +216,72 @@ zones:
     type_entite: pays
     portion: null
   - entite: Bolivie
+    type_entite: pays
+    portion: null
+  - entite: Cuba
+    type_entite: pays
+    portion: null
+  - entite: Haïti
+    type_entite: pays
+    portion: null
+  - entite: République dominicaine
+    type_entite: pays
+    portion: null
+  - entite: Jamaïque
+    type_entite: pays
+    portion: null
+  - entite: Bahamas
+    type_entite: pays
+    portion: null
+  - entite: Belize
+    type_entite: pays
+    portion: null
+  - entite: Guatemala
+    type_entite: pays
+    portion: null
+  - entite: Honduras
+    type_entite: pays
+    portion: null
+  - entite: Salvador
+    type_entite: pays
+    portion: null
+  - entite: Nicaragua
+    type_entite: pays
+    portion: null
+  - entite: Costa Rica
+    type_entite: pays
+    portion: null
+  - entite: Panama
+    type_entite: pays
+    portion: null
+  - entite: Guyana
+    type_entite: pays
+    portion: null
+  - entite: Suriname
+    type_entite: pays
+    portion: null
+  - entite: Équateur
+    type_entite: pays
+    portion: null
+  - entite: Paraguay
+    type_entite: pays
+    portion: null
+  - entite: Uruguay
+    type_entite: pays
+    portion: null
+  - entite: Grenade
+    type_entite: pays
+    portion: null
+  - entite: Saint-Vincent-et-les-Grenadines
+    type_entite: pays
+    portion: null
+  - entite: Antigua-et-Barbuda
+    type_entite: pays
+    portion: null
+  - entite: Saint-Christophe-et-Niévès
+    type_entite: pays
+    portion: null
+  - entite: Dominique
     type_entite: pays
     portion: null
   description: Le continent américain de 2098 a été profondément reconfiguré par l'élection
@@ -243,6 +396,46 @@ zones:
   - entite: Mongolie
     type_entite: pays
     portion: null
+  - entite: Corée du Sud
+  - entite: Bosnie-Herzégovine
+    type_entite: pays
+    portion: null
+  - entite: Macédoine du Nord
+    type_entite: pays
+    portion: null
+  - entite: Bulgarie
+    type_entite: pays
+    portion: null
+  - entite: Moldavie
+    type_entite: pays
+    portion: null
+  - entite: Biélorussie
+    type_entite: pays
+    portion: null
+  - entite: Slovaquie
+    type_entite: pays
+    portion: null
+  - entite: Kosovo
+    type_entite: pays
+    portion: null
+  - entite: Arménie
+    type_entite: pays
+    portion: null
+  - entite: Turkménistan
+    type_entite: pays
+    portion: null
+  - entite: Tadjikistan
+    type_entite: pays
+    portion: null
+  - entite: Afghanistan
+    type_entite: pays
+    portion: null
+  - entite: Corée du Nord
+    type_entite: pays
+    portion: null
+  - entite: Taïwan
+    type_entite: pays
+    portion: null
   description: Le Bloc Eurasien de 2098 regroupe des États qui résistent aux modèles
     de transition écologique imposés par les centres institutionnels de Genève et
     Nairobi. Il comprend des factions souverainistes actives, une alliance numérique
@@ -288,6 +481,21 @@ zones:
     type_entite: pays
     portion: null
   - entite: Autriche
+    type_entite: pays
+    portion: null
+  - entite: Luxembourg
+    type_entite: pays
+    portion: null
+  - entite: Monaco
+    type_entite: pays
+    portion: null
+  - entite: Liechtenstein
+    type_entite: pays
+    portion: null
+  - entite: Saint-Marin
+    type_entite: pays
+    portion: null
+  - entite: Vatican
     type_entite: pays
     portion: null
   description: Genève est en 2098 le siège de plusieurs institutions technocratiques
@@ -487,6 +695,30 @@ zones:
     type_entite: pays
     portion: null
   - entite: Cambodge
+  - entite: Chypre
+    type_entite: pays
+    portion: null
+  - entite: Jordanie
+    type_entite: pays
+    portion: null
+  - entite: Oman
+    type_entite: pays
+    portion: null
+  - entite: Bahreïn
+    type_entite: pays
+    portion: null
+  - entite: Palestine
+    type_entite: pays
+    portion: null
+  - entite: Djibouti
+    type_entite: pays
+    portion: null
+  - entite: Somalie
+    type_entite: pays
+    portion: null
+  - entite: Érythrée
+    type_entite: pays
+    portion: null
   description: Le Moyen-Orient de 2098 porte la cicatrice du conflit Israël-Iran de
     2026, qui a paradoxalement catalysé la transition énergétique hors pétrole dans
     la région. Le choc des prix du pétrole (+60%) et la neutralité active de la Turquie,
@@ -565,6 +797,21 @@ zones:
     type_entite: pays
     portion: null
   - entite: Vietnam
+  - entite: Népal
+    type_entite: pays
+    portion: null
+  - entite: Bhoutan
+    type_entite: pays
+    portion: null
+  - entite: Sri Lanka
+    type_entite: pays
+    portion: null
+  - entite: Birmanie
+    type_entite: pays
+    portion: null
+  - entite: Laos
+    type_entite: pays
+    portion: null
   description: 'Le Réseau Vivant Continental est l''infrastructure écologique planétaire
     de 2098 : corridors de biodiversité instrumentés par des essaims d''IA, forêts-éponges
     calibrées pour l''irrigation atmosphérique, puits de carbone vivants. Il s''étend
@@ -619,6 +866,51 @@ zones:
     type_entite: pays
     portion: null
   - entite: Polynésie française
+    type_entite: pays
+    portion: null
+  - entite: Maldives
+    type_entite: pays
+    portion: null
+  - entite: Brunei
+    type_entite: pays
+    portion: null
+  - entite: Timor oriental
+    type_entite: pays
+    portion: null
+  - entite: Maurice
+    type_entite: pays
+    portion: null
+  - entite: Seychelles
+    type_entite: pays
+    portion: null
+  - entite: Trinité-et-Tobago
+    type_entite: pays
+    portion: null
+  - entite: Barbade
+    type_entite: pays
+    portion: null
+  - entite: Sainte-Lucie
+    type_entite: pays
+    portion: null
+  - entite: Fidji
+    type_entite: pays
+    portion: null
+  - entite: Vanuatu
+    type_entite: pays
+    portion: null
+  - entite: Îles Salomon
+    type_entite: pays
+    portion: null
+  - entite: Samoa
+    type_entite: pays
+    portion: null
+  - entite: Micronésie
+    type_entite: pays
+    portion: null
+  - entite: Palaos
+    type_entite: pays
+    portion: null
+  - entite: Nauru
     type_entite: pays
     portion: null
   description: Ancrée par 3 000 mètres de fond entre Fidji et Samoa, la plateforme
@@ -679,6 +971,36 @@ zones:
   - entite: Espagne
   - entite: France
   - entite: Belgique
+  - entite: Irlande
+    type_entite: pays
+    portion: null
+  - entite: Andorre
+    type_entite: pays
+    portion: null
+  - entite: Malte
+    type_entite: pays
+    portion: null
+  - entite: Croatie
+    type_entite: pays
+    portion: null
+  - entite: Slovénie
+    type_entite: pays
+    portion: null
+  - entite: Monténégro
+    type_entite: pays
+    portion: null
+  - entite: Albanie
+    type_entite: pays
+    portion: null
+  - entite: Lituanie
+    type_entite: pays
+    portion: null
+  - entite: Lettonie
+    type_entite: pays
+    portion: null
+  - entite: Estonie
+    type_entite: pays
+    portion: null
   description: L'Union Nordique de 2098 s'est dotée d'un Conseil de Délibération Augmentée
     qui articule données environnementales et légitimité délibérative. Helsinki y
     joue un rôle intellectuel central, abritant l'Institut de Philosophie des Systèmes
@@ -1757,9 +2079,6 @@ zones:
   type: ville
   parent: bloc_eurasien_souverainiste
   origine_reelle:
-  - entite: Corée du Sud
-    type_entite: pays
-    portion: null
   - entite: Séoul
     type_entite: region_administrative
     portion: null
@@ -2224,6 +2543,9 @@ zones:
   sources_attestees: []
   origine_reelle:
   - entite: Australie
+    type_entite: pays
+    portion: null
+  - entite: Papouasie-Nouvelle-Guinée
     type_entite: pays
     portion: null
 ---

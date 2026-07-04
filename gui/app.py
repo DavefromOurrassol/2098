@@ -90,16 +90,18 @@ def update_config():
     if not data:
         return jsonify({"error": "Données manquantes"}), 400
     cfg = load_config()
+    # Préserver les clés available_* AVANT tout écrasement (bug #14 : la boucle
+    # générique ci-dessous remplace tout cfg["llm"] par data["llm"], qui ne
+    # contient jamais les available_* — ils ne sont pas connus/renvoyés par le
+    # frontend. Il faut donc les sauvegarder avant, pas après, l'écrasement.)
+    preserved_llm = {k: v for k, v in cfg.get("llm", {}).items() if k.startswith("available_")}
     # Mise à jour partielle — seules les clés envoyées
     for key, value in data.items():
         if key in cfg:
             cfg[key] = value
         # Support nested: llm.*
     if "llm" in data:
-        # Préserver les clés available_* qui ne sont pas envoyées par le frontend
-        preserved = {k: v for k, v in cfg["llm"].items() if k.startswith("available_")}
-        cfg["llm"].update(data["llm"])
-        for k, v in preserved.items():
+        for k, v in preserved_llm.items():
             cfg["llm"].setdefault(k, v)
     save_config(cfg)
     return jsonify({"ok": True})

@@ -25,6 +25,57 @@ zones:
   - entite: Kenya
     type_entite: pays
     portion: null
+  - entite: São Tomé-et-Príncipe
+    type_entite: pays
+    portion: null
+  - entite: Cameroun
+    type_entite: pays
+    portion: null
+  - entite: République centrafricaine
+    type_entite: pays
+    portion: null
+  - entite: Gabon
+    type_entite: pays
+    portion: null
+  - entite: Guinée équatoriale
+    type_entite: pays
+    portion: null
+  - entite: Angola
+    type_entite: pays
+    portion: null
+  - entite: Zambie
+    type_entite: pays
+    portion: null
+  - entite: Malawi
+    type_entite: pays
+    portion: null
+  - entite: Tanzanie
+    type_entite: pays
+    portion: null
+  - entite: Ouganda
+    type_entite: pays
+    portion: null
+  - entite: Burundi
+    type_entite: pays
+    portion: null
+  - entite: Namibie
+    type_entite: pays
+    portion: null
+  - entite: Botswana
+    type_entite: pays
+    portion: null
+  - entite: Lesotho
+    type_entite: pays
+    portion: null
+  - entite: Eswatini
+    type_entite: pays
+    portion: null
+  - entite: Mozambique
+    type_entite: pays
+    portion: null
+  - entite: Zimbabwe
+    type_entite: pays
+    portion: null
   description: Zone de conflits hydriques et extractivistes intenses, structurée autour
     du bassin du Congo et du Kivu disputé. Les accords de redistribution des eaux
     de 2067, aujourd'hui effondrés avec les États qui les portaient, n'ont laissé
@@ -71,6 +122,27 @@ zones:
   - entite: Burkina Faso
     type_entite: pays
     portion: null
+  - entite: Gambie
+    type_entite: pays
+    portion: null
+  - entite: Guinée-Bissau
+    type_entite: pays
+    portion: null
+  - entite: Guinée
+    type_entite: pays
+    portion: null
+  - entite: Sierra Leone
+    type_entite: pays
+    portion: null
+  - entite: Liberia
+    type_entite: pays
+    portion: null
+  - entite: Togo
+    type_entite: pays
+    portion: null
+  - entite: Bénin
+    type_entite: pays
+    portion: null
   description: Région structurée autour de Lagos comme nœud technologique et commercial
     survivant, et d'un Sahel traversé par des réseaux de diaspora tech, de courriers
     nomades et de communautés paysannes réfugiées. Lagos-Est abrite encore des serveurs
@@ -105,6 +177,24 @@ zones:
     type_entite: pays
     portion: null
   - entite: Pérou
+    type_entite: pays
+    portion: null
+  - entite: Belize
+    type_entite: pays
+    portion: null
+  - entite: Panama
+    type_entite: pays
+    portion: null
+  - entite: Équateur
+    type_entite: pays
+    portion: null
+  - entite: Paraguay
+    type_entite: pays
+    portion: null
+  - entite: Guyana
+    type_entite: pays
+    portion: null
+  - entite: Suriname
     type_entite: pays
     portion: null
   description: 'Zone forestière amazonienne en décrochage rapide, gouvernée en fragments
@@ -154,6 +244,82 @@ zones:
     portion: null
   - entite: Estonie
   - entite: Lettonie
+  - entite: Lituanie
+  - entite: Allemagne
+    type_entite: pays
+    portion: null
+  - entite: Belgique
+    type_entite: pays
+    portion: null
+  - entite: Pays-Bas
+    type_entite: pays
+    portion: null
+  - entite: Autriche
+    type_entite: pays
+    portion: null
+  - entite: Pologne
+    type_entite: pays
+    portion: null
+  - entite: Hongrie
+    type_entite: pays
+    portion: null
+  - entite: Roumanie
+    type_entite: pays
+    portion: null
+  - entite: Serbie
+    type_entite: pays
+    portion: null
+  - entite: Liechtenstein
+    type_entite: pays
+    portion: null
+  - entite: Croatie
+    type_entite: pays
+    portion: null
+  - entite: Slovénie
+    type_entite: pays
+    portion: null
+  - entite: Bosnie-Herzégovine
+    type_entite: pays
+    portion: null
+  - entite: Macédoine du Nord
+    type_entite: pays
+    portion: null
+  - entite: Albanie
+    type_entite: pays
+    portion: null
+  - entite: Bulgarie
+    type_entite: pays
+    portion: null
+  - entite: Moldavie
+    type_entite: pays
+    portion: null
+  - entite: Biélorussie
+    type_entite: pays
+    portion: null
+  - entite: Slovaquie
+    type_entite: pays
+    portion: null
+  - entite: Kosovo
+    type_entite: pays
+    portion: null
+  - entite: Turkménistan
+    type_entite: pays
+    portion: null
+  - entite: Tadjikistan
+    type_entite: pays
+    portion: null
+  - entite: République tchèque
+    type_entite: pays
+    portion: null
+  - entite: Ouzbékistan
+    type_entite: pays
+    portion: null
+  - entite: Kirghizistan
+    type_entite: pays
+    portion: null
+  - entite: Mongolie
+    type_entite: pays
+    portion: null
   description: Vaste zone de corridors d'approvisionnement fracturés s'étendant de
     l'ancienne Géorgie aux plaines kazakhes, en passant par le bassin caspien et l'Oural.
     Aucun État souverain n'y exerce de contrôle stable ; le pouvoir y est détenu par
@@ -209,6 +375,60 @@ zones:
     type_entite: pays
     portion: null
   - entite: Sénégal
+    type_entite: pays
+    portion: null
+  - entite: Grèce
+    type_entite: pays
+    portion: null
+  - entite: Monaco
+    type_entite: pays
+    portion: null
+  - entite: Andorre
+    type_entite: pays
+    portion: null
+  - entite: Saint-Marin
+    type_entite: pays
+    portion: null
+  - entite: Malte
+    type_entite: pays
+    portion: null
+  - entite: Monténégro
+    type_entite: pays
+    portion: null
+  - entite: Égypte
+    type_entite: pays
+    portion: null
+  - entite: Libye
+    type_entite: pays
+    portion: null
+  - entite: Mauritanie
+    type_entite: pays
+    portion: null
+  - entite: Cap-Vert
+    type_entite: pays
+    portion: null
+  - entite: Djibouti
+    type_entite: pays
+    portion: null
+  - entite: Somalie
+    type_entite: pays
+    portion: null
+  - entite: Érythrée
+    type_entite: pays
+    portion: null
+  - entite: Italie
+    type_entite: pays
+    portion: null
+  - entite: Portugal
+    type_entite: pays
+    portion: null
+  - entite: Turquie
+    type_entite: pays
+    portion: null
+  - entite: Soudan
+    type_entite: pays
+    portion: null
+  - entite: Tchad
     type_entite: pays
     portion: null
   description: Arc de transit précaire reliant le Sahel à la Méditerranée, structuré
@@ -303,6 +523,57 @@ zones:
   - entite: Viêt Nam
     type_entite: pays
     portion: null
+  - entite: Philippines
+    type_entite: pays
+    portion: null
+  - entite: Bhoutan
+    type_entite: pays
+    portion: null
+  - entite: Sri Lanka
+    type_entite: pays
+    portion: null
+  - entite: Maldives
+    type_entite: pays
+    portion: null
+  - entite: Birmanie
+    type_entite: pays
+    portion: null
+  - entite: Laos
+    type_entite: pays
+    portion: null
+  - entite: Cambodge
+    type_entite: pays
+    portion: null
+  - entite: Brunei
+    type_entite: pays
+    portion: null
+  - entite: Timor oriental
+    type_entite: pays
+    portion: null
+  - entite: Corée du Nord
+    type_entite: pays
+    portion: null
+  - entite: Taïwan
+    type_entite: pays
+    portion: null
+  - entite: Seychelles
+    type_entite: pays
+    portion: null
+  - entite: Nauru
+    type_entite: pays
+    portion: null
+  - entite: Tuvalu
+    type_entite: pays
+    portion: null
+  - entite: Indonésie
+    type_entite: pays
+    portion: null
+  - entite: Vietnam
+    type_entite: pays
+    portion: null
+  - entite: Singapour
+    type_entite: pays
+    portion: null
   description: Espace structuré autour du conglomérat sino-sibérien Bohai Transit
     comme l'un des rares opérateurs de flux encore fonctionnels à l'échelle continentale,
     et de la Coalition Pacifique Nord incarnant le repli souverainiste sur les ressources
@@ -340,6 +611,12 @@ zones:
   - entite: Canada
     type_entite: pays
     portion: null
+  - entite: Mexique
+    type_entite: pays
+    portion: null
+  - entite: Uruguay
+    type_entite: pays
+    portion: null
   description: L'ancien espace fédéral nord-américain s'est disloqué en plusieurs
     entités territoriales distinctes après l'échec de la gouvernance nationale unifiée.
     La 'victoire' du Parti Commun à Philadelphia-Centrale (avec seulement 41% dans
@@ -370,6 +647,15 @@ zones:
   parent: null
   origine_reelle:
   - entite: Suisse
+    type_entite: pays
+    portion: null
+  - entite: Irlande
+    type_entite: pays
+    portion: null
+  - entite: Luxembourg
+    type_entite: pays
+    portion: null
+  - entite: Vatican
     type_entite: pays
     portion: null
   description: Genève subsiste en 2098 comme lieu physique de survie des institutions
@@ -452,6 +738,42 @@ zones:
     type_entite: pays
     portion: null
   - entite: Émirats arabes unis
+    type_entite: pays
+    portion: null
+  - entite: Chypre
+    type_entite: pays
+    portion: null
+  - entite: Arménie
+    type_entite: pays
+    portion: null
+  - entite: Afghanistan
+    type_entite: pays
+    portion: null
+  - entite: Jordanie
+    type_entite: pays
+    portion: null
+  - entite: Oman
+    type_entite: pays
+    portion: null
+  - entite: Bahreïn
+    type_entite: pays
+    portion: null
+  - entite: Palestine
+    type_entite: pays
+    portion: null
+  - entite: Yémen
+    type_entite: pays
+    portion: null
+  - entite: Liban
+    type_entite: pays
+    portion: null
+  - entite: Syrie
+    type_entite: pays
+    portion: null
+  - entite: Qatar
+    type_entite: pays
+    portion: null
+  - entite: Koweït
     type_entite: pays
     portion: null
   description: Zone grise permanente issue du conflit israélo-iranien de 2027 et de
@@ -1131,9 +1453,6 @@ zones:
   type: union_regionale
   parent: arctique_nordark
   origine_reelle:
-  - entite: Lituanie
-    type_entite: pays
-    portion: null
   - entite: Pologne (côte baltique)
     type_entite: region_administrative
     portion: null
@@ -2106,6 +2425,712 @@ zones:
   - federation_russe_residuelle_district_de_mourmansk_breakdown
   - armada_logistique_nordique_breakdown
   promu_depuis: Port de Mourmansk
+- slug: archipel_anglo_celtique
+  nom: Archipel Anglo-Celtique
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  statut: stable
+  description: Ancien Royaume-Uni fragmenté en entités autonomes, centré sur Londres
+    comme nœud financier résiduel. Les îles conservent une relative stabilité grâce
+    à leur insularité et à des réseaux logistiques privés.
+  tensions_internes: Conflits entre élites financières et communautés locales, pression
+    migratoire depuis l'Europe continentale.
+  periode_transition: 2030-2060
+  evenement_transition: Effondrement des accords post-Brexit et montée des milices
+    locales.
+  lieux_emblematiques:
+  - Londres
+  - Édimbourg
+  - Cardiff
+  relations:
+    allies:
+    - geneve_bunker_institutions
+    rivaux:
+    - arc_eurasien_central
+  sources_attestees: []
+  origine_reelle:
+  - entite: Royaume-Uni
+    type_entite: pays
+    portion: null
+  - entite: Angleterre
+    type_entite: pays
+    portion: null
+  - entite: Écosse
+    type_entite: pays
+    portion: null
+  - entite: Pays de Galles
+    type_entite: pays
+    portion: null
+- slug: inde_sous_continent_resilient
+  nom: Inde (Sous-Continent Résilient)
+  niveau: 1
+  type: territoire_herite
+  parent: null
+  statut: fragmenté
+  description: L'Inde de 2098 est un archipel de mégapoles autonomes et de zones rurales
+    abandonnées, unie par des réseaux informels de survie. Les conflits pour l'eau
+    et les terres arables dominent la région, tandis que les anciennes structures
+    étatiques se sont effritées.
+  tensions_internes: Guerres entre cités-États, pénuries chroniques, montée des cultes
+    millénaristes.
+  periode_transition: 2050-2075
+  evenement_transition: Effondrement du système fédéral indien après la crise climatique
+    de 2048.
+  lieux_emblematiques:
+  - Delhi (Citadelle Autonome)
+  - Mumbai (Port Franc)
+  - Bengaluru (Nœud Technologique Résiduel)
+  relations:
+    allies: []
+    rivaux:
+    - asie_pacifique_sud_est
+  sources_attestees: []
+  origine_reelle:
+  - entite: Inde
+    type_entite: pays
+    portion: null
+  - entite: Bangladesh
+    type_entite: pays
+    portion: null
+  - entite: Pakistan
+    type_entite: pays
+    portion: null
+- slug: venezuela_archipel_petrolier
+  nom: Venezuela (Archipel Pétrolier)
+  niveau: 1
+  type: territoire_herite
+  parent: null
+  statut: fragmenté
+  description: Le Venezuela de 2098 est un territoire morcelé en enclaves contrôlées
+    par des seigneurs de guerre et des cartels, centré autour des dernières réserves
+    pétrolières exploitables. Les zones côtières sont dominées par des cités-États
+    marchandes.
+  tensions_internes: Guerres entre factions pour le contrôle des ressources, effondrement
+    des infrastructures.
+  periode_transition: 2035-2060
+  evenement_transition: Effondrement de l'État vénézuélien après l'épuisement des
+    réserves pétrolières faciles.
+  lieux_emblematiques:
+  - Caracas (Citadelle Assiégée)
+  - Maracaibo (Port Franc)
+  - Orinoco (Zone Minière Disputée)
+  relations:
+    allies: []
+    rivaux:
+    - arc_sahelo_mediterraneen
+  sources_attestees: []
+  origine_reelle:
+  - entite: Venezuela
+    type_entite: pays
+    portion: null
+- slug: chili_cordillere_autonome
+  nom: Chili (Cordillère Autonome)
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  statut: stable
+  description: Le Chili de 2098 est une entité autonome centrée sur la cordillère
+    des Andes, contrôlant les dernières ressources en eau et en minerais stratégiques.
+    Les villes côtières sont des hubs commerciaux indépendants.
+  tensions_internes: Conflits entre élites minières et communautés locales, pression
+    migratoire.
+  periode_transition: 2040-2070
+  evenement_transition: Sécession de fait après l'effondrement des gouvernements sud-américains.
+  lieux_emblematiques:
+  - Santiago (Capitale Autonome)
+  - Valparaíso (Port Franc)
+  - Atacama (Zone Minière Stratégique)
+  relations:
+    allies: []
+    rivaux:
+    - venezuela_archipel_petrolier
+  sources_attestees: []
+  origine_reelle:
+  - entite: Chili
+    type_entite: pays
+    portion: null
+- slug: australie_continent_insulaire
+  nom: Australie (Continent Insulaire)
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  statut: stable
+  description: L'Australie de 2098 est un continent insulaire divisé en plusieurs
+    entités autonomes, centré sur des mégapoles côtières et des zones intérieures
+    abandonnées. Les ressources minières et agricoles sont contrôlées par des conglomérats
+    locaux.
+  tensions_internes: Conflits entre cités-États, pression des migrants climatiques,
+    gestion des ressources en eau.
+  periode_transition: 2050-2080
+  evenement_transition: Retrait progressif de l'État fédéral après la crise climatique
+    de 2045.
+  lieux_emblematiques:
+  - Sydney (Nœud Financier)
+  - Melbourne (Citadelle Culturelle)
+  - Outback (Zone Désertique Abandonnée)
+  relations:
+    allies:
+    - nouvelle_zelande_archipel_pacifique
+    rivaux: []
+  sources_attestees: []
+  origine_reelle:
+  - entite: Australie
+    type_entite: pays
+    portion: null
+- slug: nouvelle_zelande_archipel_pacifique
+  nom: Nouvelle-Zélande (Archipel Pacifique)
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  statut: stable
+  description: La Nouvelle-Zélande de 2098 est un archipel autonome, devenu un refuge
+    pour les élites et les technologies résiduelles. Les îles sont divisées en communautés
+    fermées et en zones agricoles hautement contrôlées.
+  tensions_internes: Contrôle strict des frontières, tensions entre élites et populations
+    locales.
+  periode_transition: 2040-2070
+  evenement_transition: Fermeture des frontières après la montée des eaux et les crises
+    migratoires.
+  lieux_emblematiques:
+  - Auckland (Capitale Technologique)
+  - Wellington (Nœud Politique)
+  - South Island (Réserve Agricole)
+  relations:
+    allies:
+    - australie_continent_insulaire
+    rivaux: []
+  sources_attestees: []
+  origine_reelle:
+  - entite: Nouvelle-Zélande
+    type_entite: pays
+    portion: null
+  - entite: Polynésie française
+    type_entite: pays
+    portion: null
+- slug: himalaya_nepal_autonome
+  nom: Himalaya Népalais (Sanctuaire Autonome)
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  statut: emergent
+  description: Région montagneuse isolée, devenue un sanctuaire autonome après l'effondrement
+    des États-nations voisins. Structurée autour de communautés locales et de monastères
+    bouddhistes.
+  tensions_internes: Conflits entre factions locales et pressions extérieures pour
+    le contrôle des ressources hydriques.
+  periode_transition: 2050-2075
+  evenement_transition: null
+  lieux_emblematiques:
+  - Kathmandu
+  - Everest Base Camp
+  relations:
+    allies: []
+    rivaux:
+    - arc_eurasien_central
+    - asie_pacifique_sud_est
+  sources_attestees: []
+  origine_reelle:
+  - entite: Népal
+    type_entite: pays
+    portion: null
+- slug: archipel_comores_autonome
+  nom: Archipel des Comores (Autonomie Insulaire)
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  statut: emergent
+  description: Les Comores subsistent comme un territoire autonome en marge des grands
+    blocs, structuré autour de réseaux locaux de pêche et de commerce maritime. L'isolement
+    géographique a permis une relative stabilité malgré les crises globales.
+  tensions_internes: Conflits entre îles pour le contrôle des ressources halieutiques
+    et des routes maritimes locales.
+  periode_transition: 2050-2075
+  evenement_transition: null
+  lieux_emblematiques:
+  - Moroni
+  - Anjouan
+  relations:
+    allies: []
+    rivaux:
+    - Madagascar
+  sources_attestees: []
+  origine_reelle:
+  - entite: Comores
+    type_entite: pays
+    portion: null
+- slug: madagascar_ile_resiliente
+  nom: Madagascar (Île Résiliente)
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  statut: stable
+  description: Madagascar a développé une économie de subsistance et des réseaux locaux
+    résilients, tirant parti de son isolement pour éviter les pires effets des effondrements
+    globaux. Les ressources naturelles uniques (biodiversité, minerais) attirent des
+    convoitises extérieures.
+  tensions_internes: Pressions externes pour l'accès aux ressources, tensions entre
+    communautés côtières et intérieures.
+  periode_transition: 2040-2065
+  evenement_transition: null
+  lieux_emblematiques:
+  - Antananarivo
+  - Toamasina
+  relations:
+    allies: []
+    rivaux:
+    - Comores
+    - Maurice
+  sources_attestees: []
+  origine_reelle:
+  - entite: Madagascar
+    type_entite: pays
+    portion: null
+- slug: maurice_hub_financier
+  nom: Maurice (Hub Financier Résiduel)
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  statut: stable
+  description: Maurice a maintenu son statut de place financière offshore, attirant
+    des capitaux et des élites en fuite. Son économie repose sur des services haut
+    de gamme et une neutralité politique stricte pour éviter les conflits.
+  tensions_internes: Inégalités sociales croissantes entre une élite financière et
+    une population locale marginalisée.
+  periode_transition: 2035-2060
+  evenement_transition: null
+  lieux_emblematiques:
+  - Port-Louis
+  relations:
+    allies: []
+    rivaux:
+    - Madagascar
+  sources_attestees: []
+  origine_reelle:
+  - entite: Maurice
+    type_entite: pays
+    portion: null
+- slug: cuba_archipel_resilient
+  nom: Cuba (Archipel Résilient)
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  statut: stable
+  description: Cuba subsiste comme un archipel autonome, préservant une partie de
+    son système de santé et de son agriculture locale malgré l'effondrement des échanges
+    mondiaux. Les tensions internes sont liées à la gestion des ressources limitées.
+  tensions_internes: Conflits entre factions pro-ouverture et isolationnistes, pression
+    sur les ressources alimentaires.
+  periode_transition: 2050-2075
+  evenement_transition: null
+  lieux_emblematiques:
+  - La Havane
+  - Santiago de Cuba
+  relations:
+    allies: []
+    rivaux:
+    - espace_nord_americain_fragmente
+  sources_attestees: []
+  origine_reelle:
+  - entite: Cuba
+    type_entite: pays
+    portion: null
+- slug: haiti_territoire_sinistre
+  nom: Haïti (Territoire Sinistré)
+  niveau: 1
+  type: zone_sinistree
+  parent: null
+  statut: en_declin
+  description: Haïti est une zone sinistrée où l'État a disparu, laissant place à
+    des réseaux locaux de survie et à des milices. Les infrastructures sont quasi
+    inexistantes, mais une culture de résistance persiste.
+  tensions_internes: Violences inter-gangs, pénuries chroniques, absence de gouvernance
+    centrale.
+  periode_transition: 2030-2060
+  evenement_transition: null
+  lieux_emblematiques:
+  - Port-au-Prince
+  - Cap-Haïtien
+  relations:
+    allies: []
+    rivaux:
+    - republicque_dominicaine_etat_frontalier
+  sources_attestees: []
+  origine_reelle:
+  - entite: Haïti
+    type_entite: pays
+    portion: null
+- slug: republicque_dominicaine_etat_frontalier
+  nom: République Dominicaine (État Frontalier)
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  statut: fragmenté
+  description: La République dominicaine maintient une structure étatique minimale,
+    mais est constamment menacée par les crises internes et les pressions migratoires
+    en provenance d'Haïti. Les ressources touristiques résiduelles sont contrôlées
+    par des milices locales.
+  tensions_internes: Conflits entre élites économiques et groupes armés, gestion des
+    frontières avec Haïti.
+  periode_transition: 2040-2070
+  evenement_transition: null
+  lieux_emblematiques:
+  - Saint-Domingue
+  - Punta Cana
+  relations:
+    allies: []
+    rivaux:
+    - haiti_territoire_sinistre
+  sources_attestees: []
+  origine_reelle:
+  - entite: République dominicaine
+    type_entite: pays
+    portion: null
+- slug: jamaique_hub_caraibes
+  nom: Jamaïque (Hub des Caraïbes)
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  statut: stable
+  description: La Jamaïque sert de plaque tournante pour les échanges informels dans
+    les Caraïbes, grâce à son positionnement géographique et à ses réseaux historiques.
+    Le pays est dirigé par une alliance de clans commerciaux et de communautés locales.
+  tensions_internes: Rivalités entre clans, pression des groupes criminels transnationaux.
+  periode_transition: 2050-2080
+  evenement_transition: null
+  lieux_emblematiques:
+  - Kingston
+  - Montego Bay
+  relations:
+    allies:
+    - cuba_archipel_resilient
+    rivaux: []
+  sources_attestees: []
+  origine_reelle:
+  - entite: Jamaïque
+    type_entite: pays
+    portion: null
+  - entite: Bahamas
+    type_entite: pays
+    portion: null
+- slug: guatemala_corridor_centre_americain
+  nom: Guatemala (Corridor Centre-Américain)
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  statut: fragmenté
+  description: Le Guatemala est un territoire fragmenté, traversés par des corridors
+    de migration et de contrebande. Les anciennes structures étatiques ont cédé la
+    place à des seigneurs de guerre locaux et à des réseaux criminels.
+  tensions_internes: Guerres entre cartels, migrations massives, pénuries de ressources.
+  periode_transition: 2045-2075
+  evenement_transition: null
+  lieux_emblematiques:
+  - Guatemala City
+  - Quetzaltenango
+  relations:
+    allies: []
+    rivaux:
+    - honduras_territoire_dispute
+    - salvador_enclave_resistante
+  sources_attestees: []
+  origine_reelle:
+  - entite: Guatemala
+    type_entite: pays
+    portion: null
+  - entite: Nicaragua
+    type_entite: pays
+    portion: null
+- slug: honduras_territoire_dispute
+  nom: Honduras (Territoire Disputé)
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  statut: fragmenté
+  description: Le Honduras est un territoire sans gouvernance centrale, divisé entre
+    des zones contrôlées par des cartels, des milices locales et des communautés autonomes.
+    Les ressources naturelles sont exploitées de manière anarchique.
+  tensions_internes: Conflits armés pour le contrôle des routes et des ressources,
+    insécurité généralisée.
+  periode_transition: 2040-2070
+  evenement_transition: null
+  lieux_emblematiques:
+  - Tegucigalpa
+  - San Pedro Sula
+  relations:
+    allies: []
+    rivaux:
+    - guatemala_corridor_centre_americain
+    - salvador_enclave_resistante
+  sources_attestees: []
+  origine_reelle:
+  - entite: Honduras
+    type_entite: pays
+    portion: null
+- slug: salvador_enclave_resistante
+  nom: Salvador (Enclave Résistante)
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  statut: stable
+  description: Le Salvador a réussi à maintenir une certaine stabilité grâce à une
+    gouvernance locale forte et à des alliances avec des acteurs internationaux résiduels.
+    Le pays sert de refuge relatif dans une région instable.
+  tensions_internes: Pression des groupes criminels extérieurs, gestion des flux migratoires.
+  periode_transition: 2050-2080
+  evenement_transition: null
+  lieux_emblematiques:
+  - San Salvador
+  - Santa Ana
+  relations:
+    allies: []
+    rivaux:
+    - guatemala_corridor_centre_americain
+    - honduras_territoire_dispute
+  sources_attestees: []
+  origine_reelle:
+  - entite: Salvador
+    type_entite: pays
+    portion: null
+  - entite: Costa Rica
+    type_entite: pays
+    portion: null
+- slug: caribe_insulaire_residuel
+  nom: Caraïbes Insulaires (Réseau Résiduel)
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  statut: emergent
+  description: Ensemble d'îles caribéennes survivant en marge des grands blocs continentaux,
+    structurées autour de réseaux de pêche et de commerce informel. Les anciennes
+    frontières nationales y ont peu de sens.
+  tensions_internes: Conflits pour le contrôle des ressources halieutiques et des
+    points d'accostage sûrs.
+  periode_transition: 2050-2075
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies: []
+    rivaux:
+    - amazon_pacte_gardiens
+  sources_attestees: []
+  origine_reelle:
+  - entite: Trinité-et-Tobago
+    type_entite: pays
+    portion: null
+  - entite: Barbade
+    type_entite: pays
+    portion: null
+  - entite: Sainte-Lucie
+    type_entite: pays
+    portion: null
+  - entite: Grenade
+    type_entite: pays
+    portion: null
+  - entite: Saint-Vincent-et-les-Grenadines
+    type_entite: pays
+    portion: null
+  - entite: Antigua-et-Barbuda
+    type_entite: pays
+    portion: null
+- slug: antilles_orientales_fragmentes
+  nom: Antilles Orientales (Archipel Fragmenté)
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  statut: fragmenté
+  description: Archipel des Petites Antilles en survie autonome, structuré autour
+    de micro-communautés insulaires. Les anciennes dépendances coloniales ont disparu,
+    laissant place à des réseaux de troc et de défense côtière.
+  tensions_internes: Conflits pour le contrôle des ressources halieutiques et des
+    points d'accès à l'eau douce.
+  periode_transition: 2050-2075
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies: []
+    rivaux:
+    - arc_sahelo_mediterraneen
+  sources_attestees: []
+  origine_reelle:
+  - entite: Saint-Christophe-et-Niévès
+    type_entite: pays
+    portion: null
+  - entite: Dominique
+    type_entite: pays
+    portion: null
+- slug: melanesie_insulaire
+  nom: Mélanésie Insulaire
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  statut: fragmenté
+  description: Région mélanésienne en survie, marquée par des conflits inter-tribaux
+    et une économie de subsistance. Les anciennes frontières coloniales ont cédé face
+    à des alliances locales autour des ressources forestières et minières.
+  tensions_internes: Luttes pour le contrôle des terres rares et des zones côtières.
+  periode_transition: 2040-2065
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies: []
+    rivaux:
+    - asie_pacifique_sud_est
+  sources_attestees: []
+  origine_reelle:
+  - entite: Papouasie-Nouvelle-Guinée
+    type_entite: pays
+    portion: null
+  - entite: Fidji
+    type_entite: pays
+    portion: null
+  - entite: Vanuatu
+    type_entite: pays
+    portion: null
+  - entite: Îles Salomon
+    type_entite: pays
+    portion: null
+- slug: polynesie_centrale
+  nom: Polynésie Centrale
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  statut: stable
+  description: Archipel polynésien ayant préservé une relative stabilité grâce à son
+    isolement et à des traditions communautaires fortes. Les échanges maritimes restent
+    limités mais vitaux.
+  tensions_internes: Pression démographique sur les ressources limitées des atolls.
+  periode_transition: 2035-2060
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies: []
+    rivaux: []
+  sources_attestees: []
+  origine_reelle:
+  - entite: Samoa
+    type_entite: pays
+    portion: null
+  - entite: Tonga
+    type_entite: pays
+    portion: null
+- slug: micronesie_pacifique_central
+  nom: Micronésie du Pacifique Central
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  statut: fragmenté
+  description: Archipel micronésien dispersé, confronté à la montée des eaux et à
+    des tensions pour le contrôle des zones de pêche. Les anciennes structures étatiques
+    ont laissé place à des confédérations locales.
+  tensions_internes: Conflits pour l'accès aux terres habitables et aux ressources
+    halieutiques.
+  periode_transition: 2045-2070
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies: []
+    rivaux:
+    - polynesie_centrale
+  sources_attestees: []
+  origine_reelle:
+  - entite: Kiribati
+    type_entite: pays
+    portion: null
+  - entite: Micronésie
+    type_entite: pays
+    portion: null
+  - entite: Palaos
+    type_entite: pays
+    portion: null
+  - entite: Îles Marshall
+    type_entite: pays
+    portion: null
+- slug: ethiopie_hautes_terres_autonome
+  nom: Éthiopie (Hautes Terres Autonome)
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  statut: emergent
+  description: L'Éthiopie de 2098 est une région montagneuse ayant développé une autonomie
+    relative grâce à son isolement géographique. Structurée autour de communautés
+    locales résilientes, elle tire parti de ses ressources agricoles et de son héritage
+    culturel unique.
+  tensions_internes: Conflits interethniques persistants et pression des groupes armés
+    cherchant à contrôler les rares ressources.
+  periode_transition: 2050-2075
+  evenement_transition: null
+  lieux_emblematiques:
+  - Addis-Abeba
+  - Lalibela
+  - Lac Tana
+  relations:
+    allies:
+    - madagascar_ile_resiliente
+    rivaux:
+    - afrique_centrale_australe
+    - zone_golfe_levant
+  sources_attestees: []
+  origine_reelle:
+  - entite: Éthiopie
+    type_entite: pays
+    portion: null
+- slug: argentine_pampas_autonome
+  nom: Argentine (Pampas Autonome)
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  statut: fragmenté
+  description: L'Argentine de 2098 est un territoire fragmenté en zones agricoles
+    autonomes et en enclaves urbaines. Les pampas, autrefois grenier à blé, sont désormais
+    gérées par des communautés locales et des seigneurs de guerre. Buenos Aires subsiste
+    comme nœud résiduel de commerce informel.
+  tensions_internes: Conflits entre factions agricoles, milices urbaines et cartels
+    contrôlant les dernières ressources.
+  periode_transition: 2050-2075
+  evenement_transition: null
+  lieux_emblematiques:
+  - Buenos Aires
+  - Rosario
+  - Córdoba
+  relations:
+    allies:
+    - chili_cordillere_autonome
+    rivaux:
+    - espace_nord_americain_fragmente
+  sources_attestees: []
+  origine_reelle:
+  - entite: Argentine
+    type_entite: pays
+    portion: null
+- slug: bolivie_altipano_strategique
+  nom: Bolivie (Altiplano Stratégique)
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  statut: fragmenté
+  description: La Bolivie de 2098 est centrée sur l'Altiplano, où les dernières réserves
+    de lithium et d'eau sont contrôlées par des factions locales et des corporations
+    résiduelles. La Paz et Oruro sont des nœuds de pouvoir disputés.
+  tensions_internes: Guerres entre clans miniers, milices urbaines et groupes écologistes
+    radicaux.
+  periode_transition: 2040-2065
+  evenement_transition: null
+  lieux_emblematiques:
+  - La Paz
+  - Oruro
+  - Uyuni
+  relations:
+    allies:
+    - chili_cordillere_autonome
+    rivaux:
+    - perou
+    - brésil
+  sources_attestees: []
+  origine_reelle:
+  - entite: Bolivie
+    type_entite: pays
+    portion: null
 ---
 
 # Géographie — breakdown

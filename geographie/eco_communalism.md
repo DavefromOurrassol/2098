@@ -25,6 +25,15 @@ zones:
   - entite: Bolivie
     type_entite: pays
     portion: null
+  - entite: Équateur
+    type_entite: pays
+    portion: null
+  - entite: Guyana
+    type_entite: pays
+    portion: null
+  - entite: Suriname
+    type_entite: pays
+    portion: null
   description: Confédération souple de nations autochtones, de collectifs scientifiques
     et de conseils de bassin versant amazoniens exerçant une souveraineté écologique
     de facto sur plusieurs millions de kilomètres carrés de forêt régénérée. Fondée
@@ -165,6 +174,9 @@ zones:
   - entite: Azerbaïdjan
     type_entite: pays
     portion: null
+  - entite: Arménie
+    type_entite: pays
+    portion: null
   description: Territoire de la péninsule anatolienne recomposé après avoir absorbé
     une vague massive de réfugiés du Proche-Orient à la suite du conflit israélo-iranien
     de 2027. Cette recomposition démographique forcée a paradoxalement accéléré la
@@ -205,6 +217,45 @@ zones:
   - entite: Guatemala
     type_entite: pays
     portion: null
+  - entite: Cuba
+    type_entite: pays
+    portion: null
+  - entite: Haïti
+    type_entite: pays
+    portion: null
+  - entite: République dominicaine
+    type_entite: pays
+    portion: null
+  - entite: Jamaïque
+    type_entite: pays
+    portion: null
+  - entite: Bahamas
+    type_entite: pays
+    portion: null
+  - entite: Belize
+    type_entite: pays
+    portion: null
+  - entite: Honduras
+    type_entite: pays
+    portion: null
+  - entite: Salvador
+    type_entite: pays
+    portion: null
+  - entite: Nicaragua
+    type_entite: pays
+    portion: null
+  - entite: Costa Rica
+    type_entite: pays
+    portion: null
+  - entite: Panama
+    type_entite: pays
+    portion: null
+  - entite: Sierra Leone
+    type_entite: pays
+    portion: null
+  - entite: Liberia
+    type_entite: pays
+    portion: null
   description: Zone d'ancrage fort du mouvement éco-communaliste mondial, héritière
     des pratiques zapatistes d'autonomie territoriale. Le Chiapas accueille la prochaine
     session plénière de l'Assemblée des Territoires en octobre 2098, confirmant son
@@ -238,6 +289,15 @@ zones:
     type_entite: pays
     portion: null
   - entite: Singapour
+    type_entite: pays
+    portion: null
+  - entite: Monaco
+    type_entite: pays
+    portion: null
+  - entite: Oman
+    type_entite: pays
+    portion: null
+  - entite: Bahreïn
     type_entite: pays
     portion: null
   description: Ensemble hétérogène de fragments d'États centraux résiduels, d'enclaves
@@ -311,6 +371,27 @@ zones:
     portion: null
   - entite: Pologne
   - entite: République tchèque
+  - entite: Irlande
+    type_entite: pays
+    portion: null
+  - entite: Luxembourg
+    type_entite: pays
+    portion: null
+  - entite: Andorre
+    type_entite: pays
+    portion: null
+  - entite: Liechtenstein
+    type_entite: pays
+    portion: null
+  - entite: Saint-Marin
+    type_entite: pays
+    portion: null
+  - entite: Vatican
+    type_entite: pays
+    portion: null
+  - entite: Kosovo
+    type_entite: pays
+    portion: null
   description: Mosaïque de bioterritoires couvrant l'espace d'Europe de l'Ouest, organisés
     autour de bassins versants (vallée de l'Ourthe, bassin rhénan, Apennins restaurés,
     Massif Central, Cévennes, Rhône). Cœur du réseau Terrafond des Bassins et de la
@@ -363,6 +444,27 @@ zones:
     type_entite: pays
     portion: null
   - entite: Grèce
+    type_entite: pays
+    portion: null
+  - entite: Malte
+    type_entite: pays
+    portion: null
+  - entite: Chypre
+    type_entite: pays
+    portion: null
+  - entite: Monténégro
+    type_entite: pays
+    portion: null
+  - entite: Albanie
+    type_entite: pays
+    portion: null
+  - entite: Togo
+    type_entite: pays
+    portion: null
+  - entite: Bénin
+    type_entite: pays
+    portion: null
+  - entite: Égypte
     type_entite: pays
     portion: null
   description: Zone de bassins versants méditerranéens intégrée au Réseau Terrafond
@@ -463,6 +565,42 @@ zones:
   - entite: Nouvelle-Zélande
     type_entite: pays
     portion: null
+  - entite: Maldives
+    type_entite: pays
+    portion: null
+  - entite: Cap-Vert
+    type_entite: pays
+    portion: null
+  - entite: São Tomé-et-Príncipe
+    type_entite: pays
+    portion: null
+  - entite: Comores
+    type_entite: pays
+    portion: null
+  - entite: Maurice
+    type_entite: pays
+    portion: null
+  - entite: Seychelles
+    type_entite: pays
+    portion: null
+  - entite: Antigua-et-Barbuda
+    type_entite: pays
+    portion: null
+  - entite: Saint-Christophe-et-Niévès
+    type_entite: pays
+    portion: null
+  - entite: Dominique
+    type_entite: pays
+    portion: null
+  - entite: Îles Marshall
+    type_entite: pays
+    portion: null
+  - entite: Nauru
+    type_entite: pays
+    portion: null
+  - entite: Tuvalu
+    type_entite: pays
+    portion: null
   description: Bioterritoire insulaire reconstitué, acteur à part entière du réseau
     global des assemblées éco-communalistes dont une déléguée siège aux sessions plénières
     itinérantes. Zone d'intense production de mémoire territoriale documentée par
@@ -515,6 +653,12 @@ zones:
   - entite: Pakistan
     type_entite: pays
     portion: null
+  - entite: Jordanie
+    type_entite: pays
+    portion: null
+  - entite: Palestine
+    type_entite: pays
+    portion: null
   description: Zone déstabilisée par le conflit israélo-iranien de 2027 qui a détruit
     les infrastructures pétrolières et nucléaires régionales et les ports du Golfe.
     Aucune puissance étatique stable n'y exerce de contrôle réel en 2098. La région
@@ -559,6 +703,21 @@ zones:
     type_entite: pays
     portion: null
   - entite: Tchad
+    type_entite: pays
+    portion: null
+  - entite: Mauritanie
+    type_entite: pays
+    portion: null
+  - entite: Gambie
+    type_entite: pays
+    portion: null
+  - entite: Guinée-Bissau
+    type_entite: pays
+    portion: null
+  - entite: Guinée
+    type_entite: pays
+    portion: null
+  - entite: Côte d'Ivoire
     type_entite: pays
     portion: null
   description: Réseau de dix-huit villes sahéliennes ayant développé une infrastructure
@@ -2218,6 +2377,30 @@ zones:
   - entite: Autriche
     type_entite: pays
     portion: null
+  - entite: Roumanie
+    type_entite: pays
+    portion: null
+  - entite: Serbie
+    type_entite: pays
+    portion: null
+  - entite: Croatie
+    type_entite: pays
+    portion: null
+  - entite: Slovénie
+    type_entite: pays
+    portion: null
+  - entite: Bosnie-Herzégovine
+    type_entite: pays
+    portion: null
+  - entite: Macédoine du Nord
+    type_entite: pays
+    portion: null
+  - entite: Bulgarie
+    type_entite: pays
+    portion: null
+  - entite: Moldavie
+    type_entite: pays
+    portion: null
 - slug: siberie_et_steppes_autonomes
   nom: Sibérie et Steppes Autonomes
   niveau: 1
@@ -2251,6 +2434,12 @@ zones:
     type_entite: pays
     portion: Nord
   - entite: Chine
+  - entite: Biélorussie
+    type_entite: pays
+    portion: null
+  - entite: Tadjikistan
+    type_entite: pays
+    portion: null
 - slug: steppes_eurasiatiques_autonomes
   nom: Steppes Eurasatiques Autonomes
   niveau: 1
@@ -2277,6 +2466,15 @@ zones:
   sources_attestees: []
   origine_reelle:
   - entite: Kazakhstan
+    type_entite: pays
+    portion: null
+  - entite: Ouzbékistan
+    type_entite: pays
+    portion: null
+  - entite: Kirghizistan
+    type_entite: pays
+    portion: null
+  - entite: Turkménistan
     type_entite: pays
     portion: null
 - slug: delta_et_savanes_nigerianes
@@ -2307,6 +2505,9 @@ zones:
   - entite: Nigeria
     type_entite: pays
     portion: null
+  - entite: Angola
+    type_entite: pays
+    portion: null
 - slug: rift_est_africain
   nom: Rift Est-Africain
   niveau: 1
@@ -2333,6 +2534,27 @@ zones:
   sources_attestees: []
   origine_reelle:
   - entite: Kenya
+    type_entite: pays
+    portion: null
+  - entite: Rwanda
+    type_entite: pays
+    portion: null
+  - entite: Zambie
+    type_entite: pays
+    portion: null
+  - entite: Malawi
+    type_entite: pays
+    portion: null
+  - entite: Tanzanie
+    type_entite: pays
+    portion: null
+  - entite: Ouganda
+    type_entite: pays
+    portion: null
+  - entite: Burundi
+    type_entite: pays
+    portion: null
+  - entite: Djibouti
     type_entite: pays
     portion: null
 - slug: afrique_du_sud_bioterritoire
@@ -2365,6 +2587,15 @@ zones:
   - entite: Afrique du Sud
     type_entite: pays
     portion: null
+  - entite: Zimbabwe
+    type_entite: pays
+    portion: null
+  - entite: Lesotho
+    type_entite: pays
+    portion: null
+  - entite: Eswatini
+    type_entite: pays
+    portion: null
 - slug: congo_bassin_du_fleuve
   nom: Congo — Bassin du Fleuve
   niveau: 1
@@ -2391,6 +2622,21 @@ zones:
   sources_attestees: []
   origine_reelle:
   - entite: République démocratique du Congo
+    type_entite: pays
+    portion: null
+  - entite: Cameroun
+    type_entite: pays
+    portion: null
+  - entite: République centrafricaine
+    type_entite: pays
+    portion: null
+  - entite: Gabon
+    type_entite: pays
+    portion: null
+  - entite: Guinée équatoriale
+    type_entite: pays
+    portion: null
+  - entite: République du Congo
     type_entite: pays
     portion: null
 - slug: ethiopie_hautes_terres_vertes
@@ -2476,6 +2722,9 @@ zones:
   - entite: Japon
     type_entite: pays
     portion: null
+  - entite: Taïwan
+    type_entite: pays
+    portion: null
 - slug: inde_bassins_sacres
   nom: Inde — Bassins Sacrés
   niveau: 1
@@ -2503,6 +2752,12 @@ zones:
   sources_attestees: []
   origine_reelle:
   - entite: Inde
+    type_entite: pays
+    portion: null
+  - entite: Népal
+    type_entite: pays
+    portion: null
+  - entite: Bhoutan
     type_entite: pays
     portion: null
 - slug: archipel_nusantara_autonome
@@ -2534,6 +2789,15 @@ zones:
   - entite: Indonésie
     type_entite: pays
     portion: null
+  - entite: Philippines
+    type_entite: pays
+    portion: null
+  - entite: Brunei
+    type_entite: pays
+    portion: null
+  - entite: Timor oriental
+    type_entite: pays
+    portion: null
 - slug: delta_mekong_communautaire
   nom: Delta du Mékong Communautaire
   niveau: 1
@@ -2560,6 +2824,12 @@ zones:
   sources_attestees: []
   origine_reelle:
   - entite: Vietnam
+    type_entite: pays
+    portion: null
+  - entite: Laos
+    type_entite: pays
+    portion: null
+  - entite: Cambodge
     type_entite: pays
     portion: null
 - slug: bengale_ecologique
@@ -2645,6 +2915,12 @@ zones:
   - entite: Argentine
     type_entite: pays
     portion: null
+  - entite: Paraguay
+    type_entite: pays
+    portion: null
+  - entite: Uruguay
+    type_entite: pays
+    portion: null
 - slug: australie_aborigene_reconstituee
   nom: Australie Aborigène Reconstituée
   niveau: 1
@@ -2671,6 +2947,363 @@ zones:
   sources_attestees: []
   origine_reelle:
   - entite: Australie
+    type_entite: pays
+    portion: null
+- slug: coree_peninsule_verte
+  nom: Corée — Péninsule Verte
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  statut: emergent
+  description: Ancienne Corée du Sud transformée en réseau de bioterritoires autonomes,
+    axés sur l'agriculture urbaine et la résilience écologique. Les villes comme Séoul
+    sont devenues des hubs d'innovation verte.
+  tensions_internes: Conflits entre anciennes élites industrielles et nouvelles communautés
+    éco-communalistes.
+  periode_transition: 2050-2075
+  evenement_transition: null
+  lieux_emblematiques:
+  - Séoul
+  - Busan
+  relations:
+    allies:
+    - japon_archipel_resilient
+    rivaux:
+    - enclaves_extractivistes_et_etats_residuels
+  sources_attestees: []
+  origine_reelle:
+  - entite: Corée du Sud
+    type_entite: pays
+    portion: null
+- slug: chili_cordillere_et_pacifique
+  nom: Chili — Cordillère et Pacifique
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  statut: emergent
+  description: Réseau de communautés autonomes organisées autour des écosystèmes andins
+    et côtiers, avec une forte emphase sur la gestion collective des ressources en
+    eau et en énergie.
+  tensions_internes: Conflits entre communautés minières résiduelles et nouvelles
+    structures éco-communalistes.
+  periode_transition: 2060-2085
+  evenement_transition: null
+  lieux_emblematiques:
+  - Santiago
+  - Valparaíso
+  relations:
+    allies:
+    - pampas_et_patagonie_communautaires
+    rivaux:
+    - enclaves_extractivistes_et_etats_residuels
+  sources_attestees: []
+  origine_reelle:
+  - entite: Chili
+    type_entite: pays
+    portion: null
+- slug: afghanistan_hauts_plateaux_communautaires
+  nom: Afghanistan — Hauts Plateaux Communautaires
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  statut: emergent
+  description: Réseau de communautés montagnardes organisées autour de la gestion
+    collective des ressources en eau et des pâturages. Héritier des traditions tribales
+    et des pratiques agricoles résilientes, ce bioterritoire émerge après l'effondrement
+    des structures étatiques centrales.
+  tensions_internes: Conflits entre communautés pour l'accès aux ressources rares,
+    pression des enclaves extractivistes résiduelles.
+  periode_transition: 2050-2075
+  evenement_transition: null
+  lieux_emblematiques:
+  - Kaboul
+  - Bamiyan
+  - Herat
+  relations:
+    allies:
+    - siberie_et_steppes_autonomes
+    - steppes_eurasiatiques_autonomes
+    rivaux:
+    - enclaves_extractivistes_et_etats_residuels
+  sources_attestees: []
+  origine_reelle:
+  - entite: Afghanistan
+    type_entite: pays
+    portion: null
+- slug: sri_lanka_ile_emeraude
+  nom: Sri Lanka — Île Émeraude
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  statut: emergent
+  description: Bioterritoire insulaire organisé autour de la gestion collective des
+    forêts tropicales, des ressources côtières et des traditions autochtones. Héritier
+    des luttes pour la souveraineté alimentaire et la résilience climatique.
+  tensions_internes: Conflits entre communautés côtières et intérieures sur l'allocation
+    des ressources en eau.
+  periode_transition: 2050-2075
+  evenement_transition: null
+  lieux_emblematiques:
+  - Colombo (port communautaire)
+  - Kandy (centre spirituel et agricole)
+  relations:
+    allies:
+    - inde_bassins_sacres
+    - delta_mekong_communautaire
+    rivaux:
+    - enclaves_extractivistes_et_etats_residuels
+  sources_attestees: []
+  origine_reelle:
+  - entite: Sri Lanka
+    type_entite: pays
+    portion: null
+- slug: birmanie_forets_et_deltas
+  nom: Birmanie — Forêts et Deltas Communautaires
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  statut: fragmenté
+  description: Réseau de communautés organisées autour de la gestion des forêts tropicales,
+    des deltas de l'Irrawaddy et des zones montagneuses. Marqué par des tensions entre
+    groupes ethniques et héritages des conflits historiques.
+  tensions_internes: Divergences entre communautés des hautes terres et des plaines
+    sur l'usage des ressources hydriques.
+  periode_transition: 2040-2065
+  evenement_transition: null
+  lieux_emblematiques:
+  - Rangoon (hub communautaire)
+  - Mandalay (centre culturel)
+  relations:
+    allies:
+    - inde_bassins_sacres
+    - archipel_nusantara_autonome
+    rivaux:
+    - enclaves_extractivistes_et_etats_residuels
+  sources_attestees: []
+  origine_reelle:
+  - entite: Birmanie
+    type_entite: pays
+    portion: null
+- slug: coree_du_nord_bioterritoires_demanteles
+  nom: Corée du Nord — Bioterritoires Démantelés
+  niveau: 1
+  type: territoire_herite
+  parent: null
+  statut: emergent
+  description: Ancien État centralisé transformé en réseau de communautés locales
+    après l'effondrement du régime en 2055. Axé sur la décontamination des sols et
+    la réhabilitation des écosystèmes montagneux.
+  tensions_internes: Conflits entre anciennes élites et nouvelles assemblées locales
+    sur la redistribution des terres.
+  periode_transition: 2055-2080
+  evenement_transition: Effondrement du régime en 2055
+  lieux_emblematiques:
+  - Pyongyang (en reconstruction communautaire)
+  - Mont Paektu (symbole de résilience)
+  relations:
+    allies:
+    - japon_archipel_resilient
+    rivaux:
+    - enclaves_extractivistes_et_etats_residuels
+  sources_attestees: []
+  origine_reelle:
+  - entite: Corée du Nord
+    type_entite: pays
+    portion: null
+- slug: corne_afrique_nomade
+  nom: Corne de l'Afrique — Territoires Nomades et Côtiers
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  statut: emergent
+  description: Réseau de communautés nomades, pastorales et côtières organisées autour
+    de la gestion collective des ressources en eau, des pâturages et des écosystèmes
+    marins. Héritier des traditions somalies et des adaptations aux changements climatiques
+    extrêmes.
+  tensions_internes: Conflits entre communautés sédentaires et nomades pour l'accès
+    aux ressources, pression des enclaves extractivistes résiduelles.
+  periode_transition: 2050-2075
+  evenement_transition: null
+  lieux_emblematiques:
+  - Mogadiscio
+  - Hargeisa
+  - Bosaso
+  relations:
+    allies:
+    - rift_est_africain
+    - ethiopie_hautes_terres_vertes
+    rivaux:
+    - enclaves_extractivistes_et_etats_residuels
+  sources_attestees: []
+  origine_reelle:
+  - entite: Somalie
+    type_entite: pays
+    portion: null
+  - entite: Érythrée
+    type_entite: pays
+    portion: null
+- slug: namibie_desert_et_cotes
+  nom: Namibie — Désert et Côtes Communautaires
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  statut: emergent
+  description: Réseau de communautés adaptées aux écosystèmes désertiques et côtiers,
+    spécialisées dans la gestion de l'eau, l'énergie solaire et la protection des
+    écosystèmes marins. Fortes influences des peuples autochtones comme les Himba
+    et les Nama.
+  tensions_internes: Conflits pour l'accès à l'eau entre communautés, pression des
+    anciennes industries minières.
+  periode_transition: 2040-2065
+  evenement_transition: null
+  lieux_emblematiques:
+  - Windhoek
+  - Swakopmund
+  - Lüderitz
+  relations:
+    allies:
+    - afrique_du_sud_bioterritoire
+    rivaux:
+    - enclaves_extractivistes_et_etats_residuels
+  sources_attestees: []
+  origine_reelle:
+  - entite: Namibie
+    type_entite: pays
+    portion: null
+  - entite: Botswana
+    type_entite: pays
+    portion: null
+- slug: madagascar_biodiversite_autonome
+  nom: Madagascar — Île de la Biodiversité Autonome
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  statut: stable
+  description: Bioterritoire insulaire organisé autour de la protection de sa biodiversité
+    unique et de la gestion collective des ressources forestières, agricoles et marines.
+    Fortes influences des traditions malgaches et des mouvements écologistes locaux.
+  tensions_internes: Conflits entre conservation stricte et besoins de développement
+    local, pression des anciennes industries extractives.
+  periode_transition: 2035-2060
+  evenement_transition: null
+  lieux_emblematiques:
+  - Antananarivo
+  - Toamasina
+  - Antsirabe
+  relations:
+    allies:
+    - polynesie_reconstituee
+    - mozambique_cote_indienne
+    rivaux:
+    - enclaves_extractivistes_et_etats_residuels
+  sources_attestees: []
+  origine_reelle:
+  - entite: Madagascar
+    type_entite: pays
+    portion: null
+- slug: caraibes_insulaires_autonomes
+  nom: Caraïbes Insulaires Autonomes
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  statut: emergent
+  description: Réseau d'îles caribéennes organisées en bioterritoires autonomes, axées
+    sur la résilience climatique et la gestion collective des ressources marines.
+    Héritières des luttes décoloniales et écologistes du XXIe siècle.
+  tensions_internes: Conflits entre communautés locales et anciennes élites économiques,
+    pression des enclaves touristiques résiduelles.
+  periode_transition: 2050-2075
+  evenement_transition: null
+  lieux_emblematiques:
+  - Port-of-Spain
+  - Scarborough
+  relations:
+    allies:
+    - polynesie_reconstituee
+    - chiapas_et_bioterritoires_mesoamericains
+    rivaux:
+    - enclaves_extractivistes_et_etats_residuels
+  sources_attestees: []
+  origine_reelle:
+  - entite: Trinité-et-Tobago
+    type_entite: pays
+    portion: null
+  - entite: Barbade
+    type_entite: pays
+    portion: null
+  - entite: Sainte-Lucie
+    type_entite: pays
+    portion: null
+  - entite: Grenade
+    type_entite: pays
+    portion: null
+  - entite: Saint-Vincent-et-les-Grenadines
+    type_entite: pays
+    portion: null
+- slug: melanesie_autonome
+  nom: Mélanésie Autonome
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  statut: emergent
+  description: Confédération de communautés mélanésiennes organisées autour de la
+    gestion collective des forêts tropicales et des récifs coralliens. Héritière des
+    luttes autochtones pour la souveraineté écologique.
+  tensions_internes: Conflits entre communautés côtières et montagnardes sur l'accès
+    aux ressources.
+  periode_transition: 2050-2075
+  evenement_transition: null
+  lieux_emblematiques:
+  - Port Moresby
+  - Rabaul
+  - Bougainville
+  relations:
+    allies:
+    - archipel_nusantara_autonome
+    - australie_aborigene_reconstituee
+    rivaux:
+    - enclaves_extractivistes_et_etats_residuels
+  sources_attestees: []
+  origine_reelle:
+  - entite: Papouasie-Nouvelle-Guinée
+    type_entite: pays
+    portion: null
+  - entite: Vanuatu
+    type_entite: pays
+    portion: null
+  - entite: Îles Salomon
+    type_entite: pays
+    portion: null
+- slug: micronesie_insulaire
+  nom: Micronésie Insulaire
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  statut: emergent
+  description: Réseau d'atolls et d'îles micronésiennes organisées en communautés
+    autonomes, spécialisées dans la gestion des ressources marines et la résilience
+    climatique. Menacée par la montée des eaux.
+  tensions_internes: Débats sur la relocalisation des populations face à l'élévation
+    du niveau de la mer.
+  periode_transition: 2040-2065
+  evenement_transition: null
+  lieux_emblematiques:
+  - Tarawa
+  - Kiritimati
+  relations:
+    allies:
+    - polynesie_reconstituee
+    rivaux:
+    - enclaves_extractivistes_et_etats_residuels
+  sources_attestees: []
+  origine_reelle:
+  - entite: Kiribati
+    type_entite: pays
+    portion: null
+  - entite: Micronésie
+    type_entite: pays
+    portion: null
+  - entite: Palaos
     type_entite: pays
     portion: null
 ---

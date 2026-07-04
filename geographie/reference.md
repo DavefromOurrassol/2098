@@ -38,6 +38,60 @@ zones:
     type_entite: pays
     portion: null
   - entite: Équateur
+  - entite: Cuba
+    type_entite: pays
+    portion: null
+  - entite: Haïti
+    type_entite: pays
+    portion: null
+  - entite: République dominicaine
+    type_entite: pays
+    portion: null
+  - entite: Jamaïque
+    type_entite: pays
+    portion: null
+  - entite: Bahamas
+    type_entite: pays
+    portion: null
+  - entite: Belize
+    type_entite: pays
+    portion: null
+  - entite: Guatemala
+    type_entite: pays
+    portion: null
+  - entite: Honduras
+    type_entite: pays
+    portion: null
+  - entite: Salvador
+    type_entite: pays
+    portion: null
+  - entite: Nicaragua
+    type_entite: pays
+    portion: null
+  - entite: Costa Rica
+    type_entite: pays
+    portion: null
+  - entite: Panama
+    type_entite: pays
+    portion: null
+  - entite: Guyana
+    type_entite: pays
+    portion: null
+  - entite: Suriname
+    type_entite: pays
+    portion: null
+  - entite: Paraguay
+    type_entite: pays
+    portion: null
+  - entite: Uruguay
+    type_entite: pays
+    portion: null
+  - entite: Dominique
+    type_entite: pays
+    portion: null
+  - entite: Argentine
+    type_entite: pays
+    portion: null
   description: Zone américaine fragmentée entre les États-Unis traversés par une crise
     constitutionnelle majeure (élection contestée du Nouveau Parti Commun en 2055),
     São Paulo comme métropole-monde accueillant un siège rotatif de l'ITA, Valparaíso
@@ -87,6 +141,15 @@ zones:
     type_entite: pays
     portion: null
   - entite: Ukraine
+    type_entite: pays
+    portion: null
+  - entite: Moldavie
+    type_entite: pays
+    portion: null
+  - entite: Biélorussie
+    type_entite: pays
+    portion: null
+  - entite: Ouzbékistan
     type_entite: pays
     portion: null
   description: Bloc structurant les ressources d'Asie centrale (lithium, terres rares,
@@ -143,6 +206,18 @@ zones:
     type_entite: region_administrative
     portion: null
   - entite: Groenland
+    type_entite: pays
+    portion: null
+  - entite: Lituanie
+    type_entite: pays
+    portion: null
+  - entite: Lettonie
+    type_entite: pays
+    portion: null
+  - entite: Estonie
+    type_entite: pays
+    portion: null
+  - entite: Arctique
     type_entite: pays
     portion: null
   description: Zone géopolitique et logistique structurée autour des routes arctiques
@@ -210,6 +285,39 @@ zones:
     type_entite: pays
     portion: null
   - entite: République tchèque
+    type_entite: pays
+    portion: null
+  - entite: Irlande
+    type_entite: pays
+    portion: null
+  - entite: Luxembourg
+    type_entite: pays
+    portion: null
+  - entite: Monaco
+    type_entite: pays
+    portion: null
+  - entite: Andorre
+    type_entite: pays
+    portion: null
+  - entite: Liechtenstein
+    type_entite: pays
+    portion: null
+  - entite: Saint-Marin
+    type_entite: pays
+    portion: null
+  - entite: Vatican
+    type_entite: pays
+    portion: null
+  - entite: Malte
+    type_entite: pays
+    portion: null
+  - entite: Croatie
+    type_entite: pays
+    portion: null
+  - entite: Slovénie
+    type_entite: pays
+    portion: null
+  - entite: Slovaquie
     type_entite: pays
     portion: null
   description: 'Zone européenne occidentale où persistent des institutions hybrides
@@ -285,6 +393,102 @@ zones:
     type_entite: pays
     portion: null
   - entite: Nouvelle-Zélande
+    type_entite: pays
+    portion: null
+  - entite: Népal
+    type_entite: pays
+    portion: null
+  - entite: Bhoutan
+    type_entite: pays
+    portion: null
+  - entite: Sri Lanka
+    type_entite: pays
+    portion: null
+  - entite: Maldives
+    type_entite: pays
+    portion: null
+  - entite: Birmanie
+    type_entite: pays
+    portion: null
+  - entite: Laos
+    type_entite: pays
+    portion: null
+  - entite: Cambodge
+    type_entite: pays
+    portion: null
+  - entite: Brunei
+    type_entite: pays
+    portion: null
+  - entite: Timor oriental
+    type_entite: pays
+    portion: null
+  - entite: Corée du Nord
+    type_entite: pays
+    portion: null
+  - entite: Taïwan
+    type_entite: pays
+    portion: null
+  - entite: Seychelles
+    type_entite: pays
+    portion: null
+  - entite: Trinité-et-Tobago
+    type_entite: pays
+    portion: null
+  - entite: Barbade
+    type_entite: pays
+    portion: null
+  - entite: Sainte-Lucie
+    type_entite: pays
+    portion: null
+  - entite: Grenade
+    type_entite: pays
+    portion: null
+  - entite: Saint-Vincent-et-les-Grenadines
+    type_entite: pays
+    portion: null
+  - entite: Antigua-et-Barbuda
+    type_entite: pays
+    portion: null
+  - entite: Saint-Christophe-et-Niévès
+    type_entite: pays
+    portion: null
+  - entite: Papouasie-Nouvelle-Guinée
+    type_entite: pays
+    portion: null
+  - entite: Fidji
+    type_entite: pays
+    portion: null
+  - entite: Vanuatu
+    type_entite: pays
+    portion: null
+  - entite: Îles Salomon
+    type_entite: pays
+    portion: null
+  - entite: Samoa
+    type_entite: pays
+    portion: null
+  - entite: Tonga
+    type_entite: pays
+    portion: null
+  - entite: Kiribati
+    type_entite: pays
+    portion: null
+  - entite: Micronésie
+    type_entite: pays
+    portion: null
+  - entite: Palaos
+    type_entite: pays
+    portion: null
+  - entite: Îles Marshall
+    type_entite: pays
+    portion: null
+  - entite: Nauru
+    type_entite: pays
+    portion: null
+  - entite: Tuvalu
+    type_entite: pays
+    portion: null
+  - entite: Pakistan
     type_entite: pays
     portion: null
   description: Zone structurée autour des flux d'hydrogène Indo-Pacifique (Consortium
@@ -439,6 +643,103 @@ zones:
   - entite: Zimbabwe
     type_entite: pays
     portion: null
+  - entite: Bulgarie
+    type_entite: pays
+    portion: null
+  - entite: Gambie
+    type_entite: pays
+    portion: null
+  - entite: Guinée-Bissau
+    type_entite: pays
+    portion: null
+  - entite: Guinée
+    type_entite: pays
+    portion: null
+  - entite: Sierra Leone
+    type_entite: pays
+    portion: null
+  - entite: Liberia
+    type_entite: pays
+    portion: null
+  - entite: Côte d'Ivoire
+    type_entite: pays
+    portion: null
+  - entite: Togo
+    type_entite: pays
+    portion: null
+  - entite: Bénin
+    type_entite: pays
+    portion: null
+  - entite: Cap-Vert
+    type_entite: pays
+    portion: null
+  - entite: São Tomé-et-Príncipe
+    type_entite: pays
+    portion: null
+  - entite: Cameroun
+    type_entite: pays
+    portion: null
+  - entite: Gabon
+    type_entite: pays
+    portion: null
+  - entite: Guinée équatoriale
+    type_entite: pays
+    portion: null
+  - entite: République du Congo
+    type_entite: pays
+    portion: null
+  - entite: Angola
+    type_entite: pays
+    portion: null
+  - entite: Zambie
+    type_entite: pays
+    portion: null
+  - entite: Malawi
+    type_entite: pays
+    portion: null
+  - entite: Tanzanie
+    type_entite: pays
+    portion: null
+  - entite: Ouganda
+    type_entite: pays
+    portion: null
+  - entite: Burundi
+    type_entite: pays
+    portion: null
+  - entite: Djibouti
+    type_entite: pays
+    portion: null
+  - entite: Namibie
+    type_entite: pays
+    portion: null
+  - entite: Botswana
+    type_entite: pays
+    portion: null
+  - entite: Lesotho
+    type_entite: pays
+    portion: null
+  - entite: Eswatini
+    type_entite: pays
+    portion: null
+  - entite: Comores
+    type_entite: pays
+    portion: null
+  - entite: Madagascar
+    type_entite: pays
+    portion: null
+  - entite: Mali
+  - entite: Niger
+    type_entite: pays
+    portion: null
+  - entite: Tchad
+    type_entite: pays
+    portion: null
+  - entite: Soudan
+    type_entite: pays
+    portion: null
+  - entite: Éthiopie
+    type_entite: pays
+    portion: null
   description: Pôle de gouvernance régionale africaine autonome regroupant des institutions
     partiellement digitalisées, des coopératives agroécologiques sahéliennes et des
     mécanismes de régulation hydrique (Commission Hydrique de l'UA). Incarnée par
@@ -505,6 +806,45 @@ zones:
     portion: null
   - entite: Mauritanie
   - entite: Érythrée
+  - entite: Bosnie-Herzégovine
+    type_entite: pays
+    portion: null
+  - entite: Monténégro
+    type_entite: pays
+    portion: null
+  - entite: Macédoine du Nord
+    type_entite: pays
+    portion: null
+  - entite: Albanie
+    type_entite: pays
+    portion: null
+  - entite: Kosovo
+    type_entite: pays
+    portion: null
+  - entite: Turkménistan
+    type_entite: pays
+    portion: null
+  - entite: Tadjikistan
+    type_entite: pays
+    portion: null
+  - entite: Afghanistan
+    type_entite: pays
+    portion: null
+  - entite: Palestine
+    type_entite: pays
+    portion: null
+  - entite: République centrafricaine
+    type_entite: pays
+    portion: null
+  - entite: Somalie
+    type_entite: pays
+    portion: null
+  - entite: Italie
+    type_entite: pays
+    portion: null
+  - entite: Kirghizistan
+    type_entite: pays
+    portion: null
   description: Ensemble des espaces hors-cadre institutionnel effectif — zones tampons
     climatiques, corridors gris eurasiatiques, périphéries sahéliennes, zones de transition
     écologique — où ni les États formels ni les institutions multilatérales n'exercent
@@ -615,9 +955,6 @@ zones:
   type: territoire_autonome
   parent: union_africaine_resilience
   origine_reelle:
-  - entite: Mali
-    type_entite: pays
-    portion: null
   - entite: Niger
     type_entite: pays
     portion: null
@@ -792,9 +1129,6 @@ zones:
   type: infrastructure
   parent: zones_grises_globales
   origine_reelle:
-  - entite: Mali
-    type_entite: pays
-    portion: null
   - entite: Niger
     type_entite: pays
     portion: null
@@ -1705,9 +2039,6 @@ zones:
   type: zone_sinistree
   parent: zones_grises_globales
   origine_reelle:
-  - entite: Mali
-    type_entite: pays
-    portion: null
   - entite: Niger
     type_entite: pays
     portion: null
@@ -2204,6 +2535,18 @@ zones:
     portion: null
   - entite: Libye
   - entite: Égypte
+  - entite: Arménie
+    type_entite: pays
+    portion: null
+  - entite: Jordanie
+    type_entite: pays
+    portion: null
+  - entite: Oman
+    type_entite: pays
+    portion: null
+  - entite: Bahreïn
+    type_entite: pays
+    portion: null
   couvre_actuellement:
   - Iran
   - Irak
@@ -2236,6 +2579,9 @@ zones:
   - entite: Turquie
     type_entite: pays
     portion: null
+  - entite: Chypre
+    type_entite: pays
+    portion: null
 - slug: polynesie_francaise_insulaire
   nom: Polynésie Française (Archipel Insulaire Autonome)
   niveau: 1
@@ -2263,6 +2609,32 @@ zones:
   origine_reelle:
   - entite: Polynésie française
     type_entite: region_administrative
+    portion: null
+- slug: maurice_insulaire_autonome
+  nom: Maurice (Hub Insulaire Autonome)
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  statut: stable
+  description: Île autonome spécialisée dans les services financiers offshore et les
+    technologies vertes, intégrée aux réseaux Indo-Pacifiques. Centre de recherche
+    en adaptation climatique pour les petits États insulaires.
+  tensions_internes: Pression démographique et montée des inégalités sociales malgré
+    la prospérité économique.
+  periode_transition: 2050-2075
+  evenement_transition: null
+  lieux_emblematiques:
+  - Port-Louis
+  - Plaine Champagne
+  relations:
+    allies:
+    - indo_pacifique_emergent
+    rivaux:
+    - zones_grises_globales
+  sources_attestees: []
+  origine_reelle:
+  - entite: Maurice
+    type_entite: pays
     portion: null
 ---
 

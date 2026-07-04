@@ -36,6 +36,7 @@ import json
 import re
 import shutil
 import sys
+import time
 from pathlib import Path
 
 import yaml
@@ -377,6 +378,8 @@ def apply_affectations(affectations, existing_zones, scenario):
             zones_result.append(zone_data)
             existing_slugs.add(slug)
             by_slug[slug] = zone_data
+            if zone_data.get("niveau") == 1:
+                n1_slugs.add(slug)
             print(f"  ✓ Nouvelle zone N1 : {slug} ({zone_data.get('nom')})")
             stats["nouvelles_zones"] += 1
             resolved_pays.append(pays)
@@ -429,6 +432,7 @@ def update_zones_pays(zones_pays, scenario, resolved_pays, existing_zones):
 # ---------------------------------------------------------------------------
 
 BATCH_SIZE = 12  # Pays par appel LLM
+DELAY_ENTRE_BATCHS = 8  # secondes — évite les 429 Rate limit exceeded (Mistral/Claude)
 
 
 def process_scenario(client_tuple, scenario, zones_pays, dry_run):
@@ -450,6 +454,8 @@ def process_scenario(client_tuple, scenario, zones_pays, dry_run):
     batches = [missing[i:i+BATCH_SIZE] for i in range(0, len(missing), BATCH_SIZE)]
 
     for batch_idx, batch in enumerate(batches):
+        if batch_idx > 0:
+            time.sleep(DELAY_ENTRE_BATCHS)
         done = batch_idx * BATCH_SIZE
         total = len(missing)
         print(f"  Batch {batch_idx+1}/{len(batches)} [{done}/{total}] : {', '.join(batch)}")
@@ -525,6 +531,8 @@ def process_scenario_review(client_tuple, scenario, zones_pays):
     batches = [missing[i:i+BATCH_SIZE] for i in range(0, len(missing), BATCH_SIZE)]
 
     for batch_idx, batch in enumerate(batches):
+        if batch_idx > 0:
+            time.sleep(DELAY_ENTRE_BATCHS)
         done = batch_idx * BATCH_SIZE
         total = len(missing)
         print(f"  Batch {batch_idx+1}/{len(batches)} [{done}/{total}] : {', '.join(batch)}")
@@ -547,15 +555,26 @@ def process_scenario_review(client_tuple, scenario, zones_pays):
             continue
 
         affectations = parsed.get("affectations", [])
+        # Slugs déjà connus (zones existantes en niveau 1) + slugs de nouvelles
+        # zones proposées PLUS TÔT dans ce même batch. Sans ce suivi, un pays
+        # groupé sous une nouvelle zone proposée juste avant lui dans la même
+        # réponse (ex. "nouvelle_zone: archipel_britannique_insulaire" pour
+        # l'Angleterre, puis "absorber: archipel_britannique_insulaire" pour
+        # l'Écosse et le Pays de Galles) était rejeté à tort — la zone
+        # n'existait pas encore dans existing_zones au moment de l'appel LLM.
+        n1_slugs = {z["slug"] for z in existing_zones if z.get("niveau") == 1}
+        nouvelles_zones_ce_batch = set()
         for aff in affectations:
-            # Marquer chaque proposition comme à valider
             aff["valide"] = True  # l'utilisateur peut passer à False pour rejeter
-            if aff.get("action") == "absorber":
-                # Vérifier que le slug existe PARMI LES ZONES N1 (seules montrées au LLM)
-                n1_slugs = {z["slug"] for z in existing_zones if z.get("niveau") == 1}
-                if aff.get("zone_slug") not in n1_slugs:
+            if aff.get("action") == "nouvelle_zone":
+                nz = (aff.get("zone") or {}).get("slug")
+                if nz:
+                    nouvelles_zones_ce_batch.add(nz)
+            elif aff.get("action") == "absorber":
+                target = aff.get("zone_slug")
+                if target not in n1_slugs and target not in nouvelles_zones_ce_batch:
                     aff["valide"] = False
-                    aff["avertissement"] = f"Slug inconnu ou hors-N1 : {aff.get('zone_slug')}"
+                    aff["avertissement"] = f"Slug inconnu ou hors-N1 : {target}"
             all_affectations.append(aff)
 
         print(f"  [{done + len(batch)}/{total}] {len(affectations)} propositions reçues")

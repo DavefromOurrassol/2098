@@ -1,0 +1,94 @@
+#!/bin/bash
+# check_session.sh — smoke-test de fin de session GUI Ourrassol 2098
+# Usage : ./check_session.sh   (depuis gui/, ou avec GUI_DIR/VAULT_DIR en dur ci-dessous)
+
+set -uo pipefail
+
+GUI_DIR="$(pwd)"
+VAULT_DIR="$(dirname "$GUI_DIR")"
+
+PASS="✅"
+FAIL="❌"
+WARN="⚠️"
+
+echo "=== Check session Ourrassol GUI — $(date '+%Y-%m-%d %H:%M') ==="
+echo
+
+# 1. certifi installé (bug SSL bouton LLM carte)
+if python3 -c "import certifi" 2>/dev/null; then
+    echo "$PASS certifi installé"
+else
+    echo "$FAIL certifi manquant → pip3 install certifi"
+fi
+
+# 2. JSON valides
+for f in "$GUI_DIR/static/pays_mapping.json" "$GUI_DIR/zones_pays.json"; do
+    if [ -f "$f" ]; then
+        if python3 -c "import json; json.load(open('$f'))" 2>/dev/null; then
+            echo "$PASS $(basename "$f") — JSON valide"
+        else
+            echo "$FAIL $(basename "$f") — JSON invalide, corriger avant de relancer Flask"
+        fi
+    else
+        echo "$WARN $(basename "$f") introuvable à $f"
+    fi
+done
+
+# 3. Port 5000
+if lsof -ti:5000 >/dev/null 2>&1; then
+    echo "$PASS port 5000 occupé (Flask tourne probablement)"
+    FLASK_UP=1
+else
+    echo "$WARN port 5000 libre — Flask n'est pas lancé, les checks de routes seront sautés"
+    FLASK_UP=0
+fi
+
+# 4. Ping rapide des routes carte si Flask tourne
+if [ "$FLASK_UP" = "1" ]; then
+    SCENARIO="${1:-breakdown}"
+    CODE=$(curl -s -o /dev/null -w "%{http_code}" "http://localhost:5000/api/carte/affectations?scenario=$SCENARIO")
+    if [ "$CODE" = "200" ]; then
+        echo "$PASS /api/carte/affectations?scenario=$SCENARIO → 200"
+    else
+        echo "$FAIL /api/carte/affectations?scenario=$SCENARIO → $CODE"
+    fi
+fi
+
+# 5. Détection pays non matchés (pays_mapping.json vs pays_liste)
+echo
+echo "--- Pays mapping ---"
+python3 - "$GUI_DIR/static/pays_mapping.json" "$GUI_DIR/zones_pays.json" <<'PYEOF'
+import json, sys
+try:
+    mapping_path, zones_path = sys.argv[1], sys.argv[2]
+    mapping = json.load(open(mapping_path))
+    zones = json.load(open(zones_path))
+    pays_liste = set()
+    for scenario_data in zones.values():
+        if isinstance(scenario_data, dict):
+            for zone, pays in scenario_data.items():
+                if isinstance(pays, list):
+                    pays_liste.update(pays)
+    non_mappes = sorted(p for p in pays_liste if p not in mapping)
+    if non_mappes:
+        print(f"⚠️  {len(non_mappes)} pays de pays_liste absents de pays_mapping.json :")
+        for p in non_mappes[:20]:
+            print(f"   - {p}")
+        if len(non_mappes) > 20:
+            print(f"   ... et {len(non_mappes) - 20} autres")
+    else:
+        print("✅ tous les pays de pays_liste sont présents dans pays_mapping.json")
+except Exception as e:
+    print(f"⚠️  check pays sauté ({e}) — chemins à vérifier si zones_pays.json n'est pas au format attendu")
+PYEOF
+
+echo
+echo "=== Checklist manuelle (non automatisable) ==="
+echo "[ ] Bouton LLM carte (/api/carte/propose) testé en vrai depuis le navigateur"
+echo "[ ] Bandeau diagnostic orange de l'onglet Carte ouvert et lu"
+echo "[ ] Hachures de zone vérifiées visuellement sur un scénario >8 zones N1"
+echo "[ ] Rapport d'impact testé sur un vrai cas (pays avec sous-zones connues)"
+echo
+echo "Coche ces 4 lignes avant d'écrire le HANDOFF. Si une ligne reste non cochée,"
+echo "elle DOIT réapparaître en tête du prochain BACKLOG — ne pas la re-décrire,"
+echo "juste copier-coller la ligne telle quelle."

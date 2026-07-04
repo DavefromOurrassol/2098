@@ -19,6 +19,42 @@ zones:
   - entite: Mexique
     type_entite: pays
     portion: null
+  - entite: Cuba
+    type_entite: pays
+    portion: null
+  - entite: Haïti
+    type_entite: pays
+    portion: null
+  - entite: République dominicaine
+    type_entite: pays
+    portion: null
+  - entite: Jamaïque
+    type_entite: pays
+    portion: null
+  - entite: Bahamas
+    type_entite: pays
+    portion: null
+  - entite: Belize
+    type_entite: pays
+    portion: null
+  - entite: Guatemala
+    type_entite: pays
+    portion: null
+  - entite: Honduras
+    type_entite: pays
+    portion: null
+  - entite: Salvador
+    type_entite: pays
+    portion: null
+  - entite: Costa Rica
+    type_entite: pays
+    portion: null
+  - entite: Panama
+    type_entite: pays
+    portion: null
+  - entite: Trinité-et-Tobago
+    type_entite: pays
+    portion: null
   description: Zone définie par la trajectoire politique américaine dans le scénario,
     notamment l'élection de 2055 qui porte au pouvoir un gouvernement social-démocrate
     progressiste contraint par les accords internationaux existants. Les Amériques
@@ -87,6 +123,45 @@ zones:
     type_entite: pays
     portion: null
   - entite: Chili
+    type_entite: pays
+    portion: null
+  - entite: Nicaragua
+    type_entite: pays
+    portion: null
+  - entite: Barbade
+    type_entite: pays
+    portion: null
+  - entite: Guyana
+    type_entite: pays
+    portion: null
+  - entite: Suriname
+    type_entite: pays
+    portion: null
+  - entite: Équateur
+    type_entite: pays
+    portion: null
+  - entite: Paraguay
+    type_entite: pays
+    portion: null
+  - entite: Uruguay
+    type_entite: pays
+    portion: null
+  - entite: Sainte-Lucie
+    type_entite: pays
+    portion: null
+  - entite: Grenade
+    type_entite: pays
+    portion: null
+  - entite: Saint-Vincent-et-les-Grenadines
+    type_entite: pays
+    portion: null
+  - entite: Antigua-et-Barbuda
+    type_entite: pays
+    portion: null
+  - entite: Saint-Christophe-et-Niévès
+    type_entite: pays
+    portion: null
+  - entite: Dominique
     type_entite: pays
     portion: null
   description: Ensemble hétérogène d'États du Sud Global — notamment sahéliens, andins
@@ -168,6 +243,52 @@ zones:
   - entite: Mongolie
     type_entite: pays
     portion: null
+  - entite: Moldavie
+    type_entite: pays
+    portion: null
+  - entite: Biélorussie
+    type_entite: pays
+    portion: null
+  - entite: Arménie
+    type_entite: pays
+    portion: null
+  - entite: Turkménistan
+    type_entite: pays
+    portion: null
+  - entite: Tadjikistan
+    type_entite: pays
+    portion: null
+  - entite: Afghanistan
+    type_entite: pays
+    portion: null
+  - entite: Népal
+    type_entite: pays
+    portion: null
+  - entite: Bhoutan
+    type_entite: pays
+    portion: null
+  - entite: Birmanie
+    type_entite: pays
+    portion: null
+  - entite: Laos
+    type_entite: pays
+    portion: null
+  - entite: Cambodge
+    type_entite: pays
+    portion: null
+  - entite: Corée du Nord
+    type_entite: pays
+    portion: null
+  - entite: Taïwan
+    type_entite: pays
+    portion: null
+  - entite: Singapour
+    type_entite: pays
+    portion: null
+  - entite: Groenland
+  - entite: Arctique
+    type_entite: pays
+    portion: null
   description: Bloc eurasiatique regroupant les puissances continentales qui ont développé
     un modèle alternatif de gouvernance technocratique centré sur la souveraineté
     étatique renforcée. Il abrite à la fois le Front de Souveraineté Biologique Eurasiatique
@@ -219,6 +340,18 @@ zones:
     type_entite: pays
     portion: null
   - entite: République tchèque
+    type_entite: pays
+    portion: null
+  - entite: Irlande
+    type_entite: pays
+    portion: null
+  - entite: Lituanie
+    type_entite: pays
+    portion: null
+  - entite: Lettonie
+    type_entite: pays
+    portion: null
+  - entite: Estonie
     type_entite: pays
     portion: null
   description: Zone héritière des États d'Europe du Nord-Ouest, citée dans le corpus
@@ -274,6 +407,63 @@ zones:
     type_entite: pays
     portion: null
   - entite: Sénégal
+  - entite: Gambie
+    type_entite: pays
+    portion: null
+  - entite: Guinée-Bissau
+    type_entite: pays
+    portion: null
+  - entite: Guinée
+    type_entite: pays
+    portion: null
+  - entite: Sierra Leone
+    type_entite: pays
+    portion: null
+  - entite: Liberia
+    type_entite: pays
+    portion: null
+  - entite: Côte d'Ivoire
+    type_entite: pays
+    portion: null
+  - entite: Togo
+    type_entite: pays
+    portion: null
+  - entite: Bénin
+    type_entite: pays
+    portion: null
+  - entite: São Tomé-et-Príncipe
+    type_entite: pays
+    portion: null
+  - entite: Cameroun
+    type_entite: pays
+    portion: null
+  - entite: République centrafricaine
+    type_entite: pays
+    portion: null
+  - entite: Gabon
+    type_entite: pays
+    portion: null
+  - entite: Guinée équatoriale
+    type_entite: pays
+    portion: null
+  - entite: Tanzanie
+    type_entite: pays
+    portion: null
+  - entite: Ouganda
+    type_entite: pays
+    portion: null
+  - entite: Burundi
+    type_entite: pays
+    portion: null
+  - entite: Djibouti
+    type_entite: pays
+    portion: null
+  - entite: Somalie
+    type_entite: pays
+    portion: null
+  - entite: Érythrée
+    type_entite: pays
+    portion: null
   description: Pôle africain de gouvernance des ressources mondiales, articulé autour
     de Nairobi (siège rotatif du CRTI, tours de contrôle bioclimatique du RIREC),
     Kigali (siège réformé du CRRC-ARN depuis 2091) et Brazzaville (siège de l'ACRA
@@ -333,6 +523,60 @@ zones:
     type_entite: pays
     portion: null
   - entite: Hongrie
+    type_entite: pays
+    portion: null
+  - entite: Luxembourg
+    type_entite: pays
+    portion: null
+  - entite: Monaco
+    type_entite: pays
+    portion: null
+  - entite: Andorre
+    type_entite: pays
+    portion: null
+  - entite: Liechtenstein
+    type_entite: pays
+    portion: null
+  - entite: Saint-Marin
+    type_entite: pays
+    portion: null
+  - entite: Vatican
+    type_entite: pays
+    portion: null
+  - entite: Malte
+    type_entite: pays
+    portion: null
+  - entite: Chypre
+    type_entite: pays
+    portion: null
+  - entite: Croatie
+    type_entite: pays
+    portion: null
+  - entite: Slovénie
+    type_entite: pays
+    portion: null
+  - entite: Bosnie-Herzégovine
+    type_entite: pays
+    portion: null
+  - entite: Monténégro
+    type_entite: pays
+    portion: null
+  - entite: Macédoine du Nord
+    type_entite: pays
+    portion: null
+  - entite: Albanie
+    type_entite: pays
+    portion: null
+  - entite: Bulgarie
+    type_entite: pays
+    portion: null
+  - entite: Slovaquie
+    type_entite: pays
+    portion: null
+  - entite: Kosovo
+    type_entite: pays
+    portion: null
+  - entite: Italie
     type_entite: pays
     portion: null
   description: Cœur institutionnel de la gouvernance technocratique mondiale en 2098,
@@ -405,6 +649,24 @@ zones:
   - entite: Qatar
     type_entite: pays
     portion: null
+  - entite: Jordanie
+    type_entite: pays
+    portion: null
+  - entite: Oman
+    type_entite: pays
+    portion: null
+  - entite: Bahreïn
+    type_entite: pays
+    portion: null
+  - entite: Palestine
+    type_entite: pays
+    portion: null
+  - entite: Égypte
+    type_entite: pays
+    portion: null
+  - entite: Libye
+    type_entite: pays
+    portion: null
   description: Région définie dans ce scénario par le conflit israélo-iranien de 2026-2027,
     qui a constitué le premier test grandeur nature des mécanismes de désescalade
     institutionnelle mondiale. Après la crise, la zone est placée sous surveillance
@@ -450,7 +712,51 @@ zones:
   - entite: Polynésie française
     type_entite: pays
     portion: null
-  - entite: Groenland
+  - entite: Maldives
+    type_entite: pays
+    portion: null
+  - entite: Brunei
+    type_entite: pays
+    portion: null
+  - entite: Timor oriental
+    type_entite: pays
+    portion: null
+  - entite: Papouasie-Nouvelle-Guinée
+    type_entite: pays
+    portion: null
+  - entite: Fidji
+    type_entite: pays
+    portion: null
+  - entite: Vanuatu
+    type_entite: pays
+    portion: null
+  - entite: Îles Salomon
+    type_entite: pays
+    portion: null
+  - entite: Samoa
+    type_entite: pays
+    portion: null
+  - entite: Tonga
+    type_entite: pays
+    portion: null
+  - entite: Kiribati
+    type_entite: pays
+    portion: null
+  - entite: Micronésie
+    type_entite: pays
+    portion: null
+  - entite: Palaos
+    type_entite: pays
+    portion: null
+  - entite: Îles Marshall
+    type_entite: pays
+    portion: null
+  - entite: Nauru
+    type_entite: pays
+    portion: null
+  - entite: Tuvalu
+    type_entite: pays
+    portion: null
   description: 'Espace pacifique défini dans le corpus par la présence d''acteurs
     industriels et agro-industriels majeurs : le Consortium Agro-Pacifique, le Consortium
     de Géo-ingénierie Atmosphérique Pacifique, et les usines flottantes où opèrent
@@ -1957,6 +2263,15 @@ zones:
   - entite: Royaume-Uni
     type_entite: pays
     portion: null
+  - entite: Angleterre
+    type_entite: pays
+    portion: null
+  - entite: Écosse
+    type_entite: pays
+    portion: null
+  - entite: Pays de Galles
+    type_entite: pays
+    portion: null
 - slug: afrique_australe_reformee
   nom: Afrique Australe Réformée
   niveau: 1
@@ -1981,6 +2296,27 @@ zones:
   sources_attestees: []
   origine_reelle:
   - entite: Afrique du Sud
+    type_entite: pays
+    portion: null
+  - entite: Angola
+    type_entite: pays
+    portion: null
+  - entite: Zambie
+    type_entite: pays
+    portion: null
+  - entite: Malawi
+    type_entite: pays
+    portion: null
+  - entite: Namibie
+    type_entite: pays
+    portion: null
+  - entite: Botswana
+    type_entite: pays
+    portion: null
+  - entite: Lesotho
+    type_entite: pays
+    portion: null
+  - entite: Eswatini
     type_entite: pays
     portion: null
 - slug: maghreb_atlantique
@@ -2008,6 +2344,124 @@ zones:
   sources_attestees: []
   origine_reelle:
   - entite: Maroc
+    type_entite: pays
+    portion: null
+  - entite: Algérie
+    type_entite: pays
+    portion: null
+  - entite: Tunisie
+    type_entite: pays
+    portion: null
+  - entite: Mauritanie
+    type_entite: pays
+    portion: null
+  - entite: Cap-Vert
+    type_entite: pays
+    portion: null
+- slug: sri_lanka_hub_maritime
+  nom: Sri Lanka (Hub Maritime de l'Océan Indien)
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  statut: stable
+  description: Ancienne île stratégique devenue plaque tournante du commerce maritime
+    entre l'Asie et l'Afrique. Centre de régulation des routes commerciales et de
+    gestion des ressources océaniques.
+  tensions_internes: Conflits entre élites locales et corporations internationales
+    pour le contrôle des ports.
+  periode_transition: 2050-2075
+  evenement_transition: null
+  lieux_emblematiques:
+  - Port de Colombo
+  - Zone économique spéciale de Galle
+  relations:
+    allies:
+    - espace_eurasiatique
+    - zone_pacifique_industrielle
+    rivaux:
+    - bloc_souverainiste_non_signataire
+  sources_attestees: []
+  origine_reelle:
+  - entite: Sri Lanka
+    type_entite: pays
+    portion: null
+- slug: archipel_comores_autonome
+  nom: Archipel des Comores (Autonome)
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  statut: emergent
+  description: Ancienne union des Comores devenue un territoire autonome, axé sur
+    la pêche durable et le tourisme spatial. Siège d'une base de surveillance maritime
+    régionale.
+  tensions_internes: Conflits entre îles pour le contrôle des ressources halieutiques
+    et des routes commerciales.
+  periode_transition: 2060-2085
+  evenement_transition: null
+  lieux_emblematiques:
+  - Moroni (capitale)
+  - Port de Mutsamudu
+  relations:
+    allies:
+    - afrique_australe_reformee
+    - hub_africain_gouvernance
+    rivaux:
+    - madagascar_insulaire
+  sources_attestees: []
+  origine_reelle:
+  - entite: Comores
+    type_entite: pays
+    portion: null
+- slug: madagascar_insulaire
+  nom: Madagascar (République Insulaire)
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  statut: stable
+  description: État insulaire autonome, centre de biodiversité et de biotechnologies.
+    Partenaire clé des Hubs africains pour la gestion des ressources génétiques.
+  tensions_internes: Pressions entre développement industriel et préservation écologique.
+  periode_transition: 2050-2075
+  evenement_transition: null
+  lieux_emblematiques:
+  - Antananarivo
+  - Port de Toamasina
+  relations:
+    allies:
+    - hub_africain_gouvernance
+    - afrique_australe_reformee
+    rivaux:
+    - archipel_comores_autonome
+  sources_attestees: []
+  origine_reelle:
+  - entite: Madagascar
+    type_entite: pays
+    portion: null
+- slug: maurice_hub_financier
+  nom: Maurice (Hub Financier de l'Océan Indien)
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  statut: stable
+  description: Centre financier offshore et plaque tournante des investissements en
+    Afrique et en Asie. Neutralité politique et stabilité économique.
+  tensions_internes: Inégalités sociales croissantes malgré la prospérité.
+  periode_transition: 2040-2065
+  evenement_transition: null
+  lieux_emblematiques:
+  - Port-Louis
+  - Zone économique de Ebene
+  relations:
+    allies:
+    - hub_europeen_regulation
+    - zone_pacifique_industrielle
+    rivaux: []
+  sources_attestees: []
+  origine_reelle:
+  - entite: Maurice
+    type_entite: pays
+    portion: null
+  - entite: Seychelles
     type_entite: pays
     portion: null
 ---
