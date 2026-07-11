@@ -1,0 +1,96 @@
+---
+name: Réseau des Passeurs de Seuil
+type: instance
+slug: les_passeurs_de_limites_new_sustainability
+entite: les_passeurs_de_limites
+scenario: new_sustainability
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
+
+type_dans_scenario: réseau
+
+role_dans_scenario: >
+  Dans un monde où les frontières institutionnelles sont optimisées par l'IA et les corridors de mobilité strictement régulés, les Passeurs de Seuil incarnent une soupape de résilience humaine. Ils maintiennent des flux vitaux (ressources rares, savoirs locaux, personnes marginalisées) entre les zones grises des hubs urbains et les territoires exclus des corridors officiels. Leur rôle est à la fois toléré et invisibilisé par les institutions, qui ferment les yeux sur leurs activités tant qu'elles ne menacent pas l'équilibre systémique. Ils sont les gardiens informels d'une interconnexion organique, complémentaire aux réseaux algorithmiques.
+
+responsabilites: >
+  Faciliter les échanges de semences adaptatives, de technologies low-tech et de données non-indexées entre communautés isolées ; négocier des accords tacites avec les autorités locales pour le passage de déplacés climatiques non-reconnus ; documenter et transmettre les savoirs écologiques traditionnels menacés par l'homogénéisation algorithmique. Ils opèrent via des routes secondaires, des canaux fluviaux oubliés et des réseaux de communication hors-grille.
+
+impact_local: 4
+impact_systemique_global: 2
+
+variables_influencees:
+    - demographie_mobilite_humaine
+    - organisation_territoires
+    - systemes_productifs_travail
+
+zone_geographique:
+    - régionale
+    - continentale
+
+zone_systemique:
+    - gouvernance
+    - société
+    - infrastructure
+
+alliances:
+
+oppositions:
+    - agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
+    - bureau_gouvernance_algorithmique_new_sustainability
+    - conseil_regulation_algorithmique_new_sustainability
+    - etats_souverainistes_anti_reseau_new_sustainability
+
+type_relation_dominante: symbiose
+
+annee_debut: 2038
+annee_fin: 
+
+etat_temporel: actif
+age_historique: mature
+generation: ère cognitive
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  « Ils arrivent toujours par les chemins que les algorithmes ne voient pas. » C'est ainsi que les habitants des zones grises décrivent les Passeurs de Seuil, ces médiateurs itinérants qui sillonnent les interstices d'un monde où la mobilité est pourtant censée être optimisée. Vêtus de combinaisons modulaires aux couleurs des territoires traversés, ils transportent dans leurs sacs étanches des graines oubliées, des puces de données non-indexées et des récits de communautés hors-réseau. Leur légitimité ? Une connaissance intime des territoires et une capacité à négocier avec les autorités locales, souvent en échange de services rendus. Dans un monde où les corridors de mobilité sont gérés par l'IA, ils incarnent une forme de résistance pragmatique, un réseau humain qui persiste malgré tout.
+
+signes_distinctifs: >
+  Leur emblème, un cercle brisé traversé par une ligne sinueuse, est souvent gravé sur des objets artisanaux ou brodé sur leurs vêtements. Ils utilisent des lanternes solaires à intensité variable pour communiquer entre eux, un code visuel compréhensible uniquement par les initiés. Leurs véhicules, souvent des embarcations fluviales ou des vélos-cargos modifiés, sont équipés de systèmes de camouflage passif pour échapper aux drones de surveillance.
+
+tensions_narratives: >
+  Les Passeurs de Seuil sont au cœur d'un paradoxe : leur existence même questionne la légitimité d'un système qui se veut équitable et optimisé, mais qui laisse des millions de personnes en marge. Leur tolérance par les institutions est fragile, et certains blocs souverainistes voient en eux une menace à éradiquer. Leur avenir dépendra de leur capacité à rester invisibles tout en étant indispensables. Une question persiste : jusqu'où les institutions accepteront-elles de fermer les yeux sur leurs activités, avant de les intégrer ou de les réprimer ?
+
+date_creation: 2026-07-11
+---
+
+# Réseau des Passeurs de Seuil
+
+## Rôle dans [[new_sustainability]]
+Dans un monde où les frontières institutionnelles sont optimisées par l'IA et les corridors de mobilité strictement régulés, les Passeurs de Seuil incarnent une soupape de résilience humaine. Ils maintiennent des flux vitaux (ressources rares, savoirs locaux, personnes marginalisées) entre les zones grises des hubs urbains et les territoires exclus des corridors officiels. Leur rôle est à la fois toléré et invisibilisé par les institutions, qui ferment les yeux sur leurs activités tant qu'elles ne menacent pas l'équilibre systémique. Ils sont les gardiens informels d'une interconnexion organique, complémentaire aux réseaux algorithmiques.
+
+## Responsabilités
+Faciliter les échanges de semences adaptatives, de technologies low-tech et de données non-indexées entre communautés isolées ; négocier des accords tacites avec les autorités locales pour le passage de déplacés climatiques non-reconnus ; documenter et transmettre les savoirs écologiques traditionnels menacés par l'homogénéisation algorithmique. Ils opèrent via des routes secondaires, des canaux fluviaux oubliés et des réseaux de communication hors-grille.
+
+## Variables influencées
+- [[demographie_mobilite_humaine]]
+- [[organisation_territoires]]
+- [[systemes_productifs_travail]]
+
+## Relations
+**Alliés** : _aucun défini_
+**Opposants** : [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]], [[bureau_gouvernance_algorithmique_new_sustainability]], [[conseil_regulation_algorithmique_new_sustainability]], [[etats_souverainistes_anti_reseau_new_sustainability]]
+
+## Description journalistique
+« Ils arrivent toujours par les chemins que les algorithmes ne voient pas. » C'est ainsi que les habitants des zones grises décrivent les Passeurs de Seuil, ces médiateurs itinérants qui sillonnent les interstices d'un monde où la mobilité est pourtant censée être optimisée. Vêtus de combinaisons modulaires aux couleurs des territoires traversés, ils transportent dans leurs sacs étanches des graines oubliées, des puces de données non-indexées et des récits de communautés hors-réseau. Leur légitimité ? Une connaissance intime des territoires et une capacité à négocier avec les autorités locales, souvent en échange de services rendus. Dans un monde où les corridors de mobilité sont gérés par l'IA, ils incarnent une forme de résistance pragmatique, un réseau humain qui persiste malgré tout.
+
+## Tensions narratives
+Les Passeurs de Seuil sont au cœur d'un paradoxe : leur existence même questionne la légitimité d'un système qui se veut équitable et optimisé, mais qui laisse des millions de personnes en marge. Leur tolérance par les institutions est fragile, et certains blocs souverainistes voient en eux une menace à éradiquer. Leur avenir dépendra de leur capacité à rester invisibles tout en étant indispensables. Une question persiste : jusqu'où les institutions accepteront-elles de fermer les yeux sur leurs activités, avant de les intégrer ou de les réprimer ?

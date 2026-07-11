@@ -58,8 +58,8 @@
     ],
     "yaml_files": [
       {
-        "path": "needs_review_enrich.yaml",
-        "label": "needs_review_enrich.yaml",
+        "path": "instances_custom/needs_review_enrich.yaml",
+        "label": "instances_custom/needs_review_enrich.yaml",
         "readonly": true
       }
     ]
@@ -170,8 +170,8 @@
     ],
     "yaml_files": [
       {
-        "path": "needs_review.yaml",
-        "label": "needs_review.yaml",
+        "path": "documentation/need_action/narrative_issues.yaml",
+        "label": "documentation/need_action/narrative_issues.yaml",
         "readonly": true
       }
     ]
@@ -192,7 +192,7 @@
         "default": false
       }
     ],
-    "config_file": "config.yaml",
+    "config_file": "generator/config.yaml",
     "config_fields": [
       {
         "key": "scenario",
@@ -358,8 +358,8 @@
     ],
     "yaml_files": [
       {
-        "path": "config.yaml",
-        "label": "config.yaml"
+        "path": "generator/config.yaml",
+        "label": "generator/config.yaml"
       }
     ]
   },
@@ -386,7 +386,7 @@
         "default": false
       }
     ],
-    "config_file": "config_series.yaml",
+    "config_file": "generator/config_series.yaml",
     "config_fields": [
       {
         "key": "scenario",
@@ -491,8 +491,8 @@
     ],
     "yaml_files": [
       {
-        "path": "config_series.yaml",
-        "label": "config_series.yaml"
+        "path": "generator/config_series.yaml",
+        "label": "generator/config_series.yaml"
       }
     ]
   },
@@ -527,11 +527,11 @@
     "options": [],
     "yaml_files": [
       {
-        "path": "config_series.yaml",
-        "label": "config_series.yaml"
+        "path": "generator/config_series.yaml",
+        "label": "generator/config_series.yaml"
       },
       {
-        "path": "state/manual_progress.json",
+        "path": "generator/state/manual_progress.json",
         "label": "manual_progress.json",
         "readonly": true
       }
@@ -550,25 +550,123 @@
       "choices": [
         {
           "value": "custom",
-          "label": "Custom — saisie manuelle"
+          "label": "Custom — saisie manuelle",
+          "note": "Traite le contenu actuel de entites_custom/queue.yaml et injecte dans le vault."
         },
         {
           "value": "auto",
-          "label": "Auto — génération automatique"
+          "label": "Auto — génération automatique",
+          "note": "Génère et injecte directement les entités + leurs instances dans le vault."
         },
         {
           "value": "auto-suggest",
-          "label": "Auto-suggest — suggestions depuis gaps"
+          "label": "Auto-suggest — suggestions depuis gaps",
+          "note": "Ne fait qu'ajouter des idées à entites_custom/queue.yaml — relance ensuite en mode Custom pour les injecter réellement dans le vault."
         }
       ]
     },
     "options": [
       {
-        "flag": "--scenario",
+        "flag": "--n",
+        "type": "number",
+        "label": "Nombre d'entités (modes auto / auto-suggest)",
+        "optional": false,
+        "placeholder": "3",
+        "default": 3,
+        "mode_only": [
+          "auto",
+          "auto-suggest"
+        ]
+      },
+      {
+        "flag": "--category",
         "type": "select",
-        "label": "Scénario",
-        "source": "config_scenarios",
-        "optional": true
+        "label": "Catégorie imposée (mode auto, optionnel)",
+        "optional": true,
+        "choices": [
+          {
+            "value": "IA",
+            "label": "IA"
+          },
+          {
+            "value": "organisation",
+            "label": "organisation"
+          },
+          {
+            "value": "entreprise",
+            "label": "entreprise"
+          },
+          {
+            "value": "institution",
+            "label": "institution"
+          },
+          {
+            "value": "infrastructure",
+            "label": "infrastructure"
+          },
+          {
+            "value": "réseau",
+            "label": "réseau"
+          },
+          {
+            "value": "humain",
+            "label": "humain"
+          },
+          {
+            "value": "système",
+            "label": "système"
+          },
+          {
+            "value": "hybride",
+            "label": "hybride"
+          },
+          {
+            "value": "autre",
+            "label": "autre"
+          },
+          {
+            "value": "média",
+            "label": "média"
+          }
+        ],
+        "mode_only": "auto"
+      },
+      {
+        "flag": "--scenario",
+        "type": "multi_select",
+        "label": "Scénarios cibles (auto: contrainte dure / auto-suggest: orientation)",
+        "optional": true,
+        "mode_only": [
+          "auto",
+          "auto-suggest"
+        ],
+        "choices": [
+          {
+            "value": "breakdown",
+            "label": "breakdown"
+          },
+          {
+            "value": "fortress_world",
+            "label": "fortress_world"
+          },
+          {
+            "value": "new_sustainability",
+            "label": "new_sustainability"
+          },
+          {
+            "value": "eco_communalism",
+            "label": "eco_communalism"
+          },
+          {
+            "value": "policy_reform",
+            "label": "policy_reform"
+          },
+          {
+            "value": "reference",
+            "label": "reference"
+          }
+        ],
+        "description": "Laisser vide = les 6 par défaut (auto) ou libre choix du LLM (auto-suggest)"
       },
       {
         "flag": "--dry-run",
@@ -742,7 +840,8 @@
         "optional": true,
         "placeholder": "ex : idee_2026-06"
       }
-    ]
+    ],
+    "config_fields_mode": "custom"
   },
   {
     "id": "inject_events",
@@ -757,21 +856,33 @@
       "choices": [
         {
           "value": "custom",
-          "label": "Custom — saisie manuelle"
+          "label": "Custom — saisie manuelle",
+          "note": "Traite le contenu actuel de evenements_custom/queue.yaml et injecte dans le vault."
         },
         {
           "value": "auto",
-          "label": "Auto — génération automatique"
+          "label": "Auto — génération automatique",
+          "note": "Ne fait qu'ajouter des idées à evenements_custom/queue.yaml — relance ensuite en mode Custom pour les injecter réellement dans le vault."
         }
       ]
     },
     "options": [
       {
+        "flag": "--n",
+        "type": "number",
+        "label": "Nombre d'idées (mode auto)",
+        "optional": false,
+        "placeholder": "3",
+        "default": 3,
+        "mode_only": "auto"
+      },
+      {
         "flag": "--scenario",
         "type": "select",
-        "label": "Scénario",
+        "label": "Scénario ciblé (mode auto, orientation optionnelle)",
         "source": "config_scenarios",
-        "optional": true
+        "optional": true,
+        "mode_only": "auto"
       },
       {
         "flag": "--dry-run",
@@ -912,7 +1023,8 @@
         "optional": true,
         "placeholder": "ex : actualite_2026-06"
       }
-    ]
+    ],
+    "config_fields_mode": "custom"
   },
   {
     "id": "inject_signals",
@@ -1072,8 +1184,8 @@
     ],
     "yaml_files": [
       {
-        "path": "needs_review_enrich.yaml",
-        "label": "needs_review_enrich.yaml",
+        "path": "instances_custom/needs_review_enrich.yaml",
+        "label": "instances_custom/needs_review_enrich.yaml",
         "readonly": true
       }
     ]
@@ -1119,8 +1231,8 @@
     "options": [],
     "yaml_files": [
       {
-        "path": "needs_review.yaml",
-        "label": "needs_review.yaml",
+        "path": "entites_custom/needs_review.yaml",
+        "label": "entites_custom/needs_review.yaml",
         "readonly": true
       }
     ]
@@ -1191,8 +1303,8 @@
     ],
     "yaml_files": [
       {
-        "path": "undo_queue.yaml",
-        "label": "undo_queue.yaml"
+        "path": "evenements_custom/undo_queue.yaml",
+        "label": "evenements_custom/undo_queue.yaml"
       }
     ]
   },

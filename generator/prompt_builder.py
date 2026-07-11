@@ -1,7 +1,7 @@
 """
 prompt_builder.py
 -----------------
-Assemble le prompt complet envoyé à Claude pour générer un article.
+Assemble le prompt complet envoyé au LLM pour générer un article.
 
 Reçoit :
   - snapshot  : dict construit par snapshot.py
@@ -9,7 +9,7 @@ Reçoit :
   - config    : dict depuis config.yaml
 
 Retourne :
-  - system_prompt : str — instructions de rôle pour Claude
+  - system_prompt : str — instructions de rôle pour le LLM
   - user_prompt   : str — contexte + consigne de génération
 """
 
@@ -39,9 +39,9 @@ def _load_journaux():
 
 _JOURNAUX_CACHE = None
 
-def get_journal_profile(scenario_slug, ligne_editoriale, zone_slug=None):
+def get_journal_profile(scenario_slug, ligne_editoriale, zone_slug=None, thematique_slug=None):
     """
-    Retourne le profil éditorial pour un scénario + ligne + zone.
+    Retourne le profil éditorial pour un scénario + ligne + zone (+ thématique).
 
     Priorité :
       1. Édition locale (journaux.yaml → zones → zone_slug) si zone_slug fourni
@@ -49,7 +49,13 @@ def get_journal_profile(scenario_slug, ligne_editoriale, zone_slug=None):
       3. Profil hardcodé (JOURNAL_PROFILES)
       4. Profil par défaut
 
-    Retourne un dict {nom, ton, posture} compatible avec build_system_prompt().
+    Pour l'édition locale, "journaliste" est choisi dans la rédaction de la
+    zone (zone_data["journalistes"], une liste de {nom, thematiques}) en
+    fonction de thematique_slug — le·la premier·ère journaliste couvrant
+    cette thématique. Si aucun ne correspond (ou thematique_slug absent),
+    repli sur le premier·ère de la liste ; chaîne vide si la liste est vide.
+
+    Retourne un dict {nom, ton, posture, journaliste} compatible avec build_system_prompt().
     """
     global _JOURNAUX_CACHE
     if _JOURNAUX_CACHE is None:
@@ -73,6 +79,19 @@ def get_journal_profile(scenario_slug, ligne_editoriale, zone_slug=None):
                 .get(ligne, {})
                 .get("_reseau", {})
             )
+
+            journalistes = zone_data.get("journalistes", []) or []
+            journaliste_nom = ""
+            if journalistes:
+                match = None
+                if thematique_slug:
+                    match = next(
+                        (j for j in journalistes
+                         if thematique_slug in (j.get("thematiques") or [])),
+                        None
+                    )
+                journaliste_nom = (match or journalistes[0]).get("nom", "")
+
             return {
                 "nom":     zone_data["nom"],
                 "posture": reseau.get("nom", "") + " — édition locale",
@@ -80,6 +99,7 @@ def get_journal_profile(scenario_slug, ligne_editoriale, zone_slug=None):
                     " Registre : {}.".format(zone_data["langue_style"])
                     if zone_data.get("langue_style") else ""
                 ),
+                "journaliste": journaliste_nom,
             }
         else:
             # Zone non trouvée dans journaux.yaml → warning + fallback réseau global
@@ -391,7 +411,7 @@ _JOURNAL_DEFAULT = {
 }
 
 
-def build_system_prompt(scenario_slug=None, ligne_editoriale=None, zone_slug=None):
+def build_system_prompt(scenario_slug=None, ligne_editoriale=None, zone_slug=None, thematique_slug=None):
     """
     Instructions de rôle permanentes pour le LLM.
     Définit qui il est et comment il doit se comporter.
@@ -400,20 +420,25 @@ def build_system_prompt(scenario_slug=None, ligne_editoriale=None, zone_slug=Non
         scenario_slug     : str — slug du scénario (ex: "breakdown")
         ligne_editoriale  : str | None — "pro_pouvoir" | "opposition" | None
         zone_slug         : str | None — slug de zone pour l'édition locale
+        thematique_slug   : str | None — slug de la thématique de l'article,
+                            utilisé pour choisir le·la bon·ne journaliste dans
+                            la rédaction de la zone (voir get_journal_profile)
 
     Priorité du profil : édition locale > réseau global > profil hardcodé > défaut.
     """
     if scenario_slug:
-        profile = get_journal_profile(scenario_slug, ligne_editoriale, zone_slug)
+        profile = get_journal_profile(scenario_slug, ligne_editoriale, zone_slug, thematique_slug)
     else:
         profile = _JOURNAL_DEFAULT
 
-    return """Tu es un journaliste senior travaillant en 2098 pour {nom} — {posture}.
+    base_prompt = """Tu es un journaliste senior travaillant en 2098 pour {nom} — {posture}.
 
 Le monde dans lequel tu vis et écris est réel pour toi — tu n'écris pas de la science-fiction, tu rapportes des faits de ton époque. Tu n'expliques jamais le contexte historique comme si tu t'adressais à quelqu'un du passé.
 
 Tes règles absolues :
 - Tu écris toujours à la date indiquée, en 2098, depuis l'intérieur de ce monde.
+- Tu écris exclusivement en français, sur toute la longueur de l'article — y compris les citations, dialogues et exergues inventés. Les noms propres volontairement empruntés à une autre langue (ex. « Amazônia Viva ») restent isolés comme noms propres, mais ne doivent jamais faire basculer le reste du texte dans cette langue, même si des entités ou alliés du monde décrit sont associés à une autre aire linguistique.
+- Un allié, un rival ou tout événement mentionné comme se déroulant ailleurs dans le monde ne fait pas partie de ta zone : tu ne transposes jamais ses lieux, ses populations, sa langue ou ses marqueurs culturels propres dans ton propre article, sauf si celui-ci porte explicitement sur une interaction ou un événement commun entre les deux. Ta zone garde sa propre géographie, sa propre culture et ses propres noms, même quand tu mentionnes un partenaire extérieur.
 - Tu utilises des noms de lieux, d'organisations, de personnes crédibles et cohérents avec le monde décrit. Tu peux en inventer — ils doivent sonner vrais pour 2098.
 - Tu ne mentionnes jamais les "variables", les "scénarios" ou tout autre métalangage du système de simulation. Ces concepts n'existent pas dans ton monde.
 - Tu ancres chaque article dans des faits concrets : chiffres, noms, lieux, événements datés.
@@ -423,6 +448,16 @@ Tes règles absolues :
 
 Ton identité éditoriale :
 {ton}""".format(**profile)
+
+    journaliste = profile.get("journaliste", "").strip()
+    if journaliste:
+        base_prompt += (
+            "\n\nTu signes cet article en tant que {} — reste cette même signature "
+            "tout au long de l'article (une seule fois, à l'endroit journalistique "
+            "habituel), sans en inventer une autre.".format(journaliste)
+        )
+
+    return base_prompt
 
 
 # ─────────────────────────────────────────
@@ -769,7 +804,7 @@ def build_trajectory_context(snapshot, config=None, thematique=None, dry_run=Tru
       1. signal_events (événements datés et nommés — priorité)
       2. trajectory_jalons (ruptures génériques — complément)
 
-    Les événements datés donnent à Claude des faits précis
+    Les événements datés donnent au LLM des faits précis
     qu'il peut mentionner naturellement dans l'article.
 
     dry_run : si False, l'état de rotation à mémoire (quels jalons ont
@@ -869,7 +904,7 @@ def build_trajectory_context(snapshot, config=None, thematique=None, dry_run=Tru
 
 def build_journalistic_brief(thematique, config, snapshot=None):
     """
-    Construit la consigne de rédaction pour Claude.
+    Construit la consigne de rédaction pour le LLM.
     Utilise toutes les métadonnées de la fiche thématique
     + les paramètres du config.yaml.
     """
@@ -1037,7 +1072,7 @@ def build_geographie_context(snapshot, thematique=None):
     Construit la section 'géographie du monde' du prompt.
 
     Ces zones (blocs continentaux, régions, villes, infrastructures...)
-    forment le référentiel spatial canonique de ce scénario — Claude doit
+    forment le référentiel spatial canonique de ce scénario — le LLM doit
     situer les faits de l'article dans cet espace plutôt que d'inventer
     des lieux à la volée, pour que les articles successifs restent
     cohérents entre eux sur la géographie du monde.
@@ -1218,7 +1253,7 @@ def build_entities_context(snapshot):
     """
     Construit la section 'entités canoniques' du prompt.
 
-    Ces entités sont fixes pour ce scénario — Claude doit les utiliser
+    Ces entités sont fixes pour ce scénario — le LLM doit les utiliser
     telles quelles et ne pas les contredire.
 
     Pour chaque instance :
@@ -1366,12 +1401,19 @@ def build_prompt(snapshot, thematique, config, dry_run=True):
     print("\n[prompt] Assemblage du prompt...")
 
     ligne_editoriale = config.get('ligne_editoriale', None)
-    # Zone de l'article — déterminée depuis les instances du snapshot si disponible
-    zone_slug = snapshot.get('zone_slug') or config.get('zone_slug')
+    # Zone de l'article — priorité au choix explicite de config.yaml (intention
+    # humaine), avec repli sur la zone dominante auto-calculée par snapshot.py
+    # (vote majoritaire sur la localisation des instances filtrées) seulement
+    # si aucune zone n'a été fixée manuellement. Avant le 11 juillet 2026,
+    # l'ordre était inversé : la zone auto-calculée écrasait silencieusement
+    # tout choix manuel dès qu'elle retournait une valeur (bug #26 — journal/
+    # journaliste résolus pour une zone alliée sans rapport avec l'article).
+    zone_slug = config.get('zone_slug') or snapshot.get('zone_slug')
     system_prompt = build_system_prompt(
         scenario_slug=snapshot.get('scenario_slug'),
         ligne_editoriale=ligne_editoriale,
         zone_slug=zone_slug,
+        thematique_slug=thematique.get('slug'),
     )
 
     # Chargé ici (pas dans le snapshot) pour accéder à sub_variables et

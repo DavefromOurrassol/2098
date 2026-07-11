@@ -4,7 +4,7 @@ enrich_minimal.py — Ourrassol 2098
 ====================================
 
 Enrichit les fiches d'instances marquées `statut: officialise_minimal`
-en générant via l'API Claude le contenu narratif manquant, puis met
+en générant via le LLM le contenu narratif manquant, puis met
 à jour le statut en `officialise_enrichi`.
 
 PRINCIPE
@@ -13,11 +13,11 @@ PRINCIPE
    script :
      - Charge le contexte : archétype entité, snapshot scénario,
        bible géographique, registre des événements
-     - Appelle Claude pour générer tous les champs placeholder
+     - Appelle le LLM pour générer tous les champs placeholder
      - Valide mécaniquement le résultat (localisation.zone, type_lieu,
        impact_local/global [0-5], variables_influencees, etat_temporel,
        zone_geographique, alliances/oppositions)
-     - En cas d'échec de validation, rappelle Claude (max 2 retries)
+     - En cas d'échec de validation, rappelle le LLM (max 2 retries)
      - Écrit la fiche enrichie sur disque (statut: officialise_enrichi)
      - Les fiches en échec après retries vont dans needs_review.yaml
 
@@ -49,7 +49,7 @@ from pathlib import Path
 
 import yaml
 
-from llm_client import call_llm, LLM_MODEL as MODEL
+from llm_client import call_llm
 
 
 # ---------------------------------------------------------------------------
@@ -434,6 +434,7 @@ def call_claude_json(client, system, user_content, max_tokens=2000):
         user_prompt=user_content,
         max_tokens=max_tokens,
         temperature=0.0,
+        task_tier="creative_souple",
     ).strip()
     # Nettoyer les éventuels backticks
     raw = re.sub(r"^```(?:json)?\s*", "", raw)
@@ -448,7 +449,7 @@ def call_claude_json(client, system, user_content, max_tokens=2000):
 
 
 def call_claude_fix(client, system, user_content, issues, previous_json, max_tokens=2000):
-    """Appelle Claude avec les erreurs de validation pour correction."""
+    """Appelle le LLM avec les erreurs de validation pour correction."""
     fix_content = f"""{user_content}
 
 ═══════════════════════════════════════════════════
@@ -471,7 +472,7 @@ Corrige UNIQUEMENT les champs en erreur. Retourne le JSON complet corrigé.
 
 def validate_enriched(data, scenario, zones_dict, entities_set):
     """
-    Valide les champs générés par Claude.
+    Valide les champs générés par le LLM.
     Retourne (errors, warnings) — errors bloquants, warnings informatifs.
     """
     errors = []
@@ -886,7 +887,7 @@ def _infer_category(slug):
 
 
 def _generate_roles_for_phantoms(client, entries):
-    """Génère les rôles via API Claude en lots de 20."""
+    """Génère les rôles via le LLM en lots de 20."""
     BATCH_SIZE = 5
     batches = [entries[i:i+BATCH_SIZE] for i in range(0, len(entries), BATCH_SIZE)]
     print(f"  → Génération des rôles ({len(batches)} lot(s))...")
@@ -920,6 +921,7 @@ Entités :
                 user_prompt=prompt,
                 max_tokens=2000,
                 temperature=0.0,
+                task_tier="volume",
             ).strip()
             raw = re.sub(r"^```(?:json)?\s*", "", raw)
             raw = re.sub(r"\s*```$", "", raw).strip()
@@ -1164,13 +1166,13 @@ def run_scenario(client, scenario, slug_filter, dry_run, report, limit=None):
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Enrichit les fiches officialise_minimal via l'API Claude."
+        description="Enrichit les fiches officialise_minimal via le LLM."
     )
     parser.add_argument("--scenario", help="Scénario à traiter (ex: new_sustainability)")
     parser.add_argument("--all", action="store_true", help="Traite tous les scénarios")
     parser.add_argument("--slug", help="Traite uniquement une fiche par son slug")
     parser.add_argument("--dry-run", action="store_true",
-                        help="Appelle Claude et valide, mais n'écrit rien sur disque")
+                        help="Appelle le LLM et valide, mais n'écrit rien sur disque")
     parser.add_argument("--auto-cycle", action="store_true",
                         help="Lance automatiquement le cycle post-enrichissement")
     parser.add_argument("--limit", type=int, default=None,

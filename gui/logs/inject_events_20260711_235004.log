@@ -1,0 +1,24 @@
+============================================================
+OURRASSOL 2098 — Injection événements custom
+============================================================
+
+Mode : auto (fourni via --mode)
+
+[1/2] Analyse de la couverture du vault...
+  18 event_instance(s) analysée(s)
+  Filtre scénario : fortress_world
+[2/2] Génération de 1 idée(s) d'événements...
+[llm] Mistral (mistral-large-latest) — entrée : 1112 | sortie : 1535
+  ✓ crise_biotech_afrique_subsaharienne — continentale | 2092 | scénarios: ['fortress_world']
+    → Couvre une zone géographique sous-représentée (Afrique subsaharienne) et une variable peu exploitée (santé_biotechnologies), tout en renforçant la fragmentation du scénario 'fortress_world'.
+  ✓ guerre_ressources_arctique — globale | 2095 | scénarios: ['fortress_world']
+    → Comble un vide géographique (Arctique) et thématique (ressources critiques + frontières technologiques), tout en illustrant la compétition souveraine du scénario.
+  ✓ revolte_travailleurs_detroit_ormuz — regionale | 2093 | scénarios: ['fortress_world']
+    → Cible trois variables sous-représentées (travail, redistribution, information) et une zone tampon critique (Détroit-Ormuz), en liant économie et fragmentation géopolitique.
+  ✓ chute_bruxelles_forteresse — continentale | 2096 | scénarios: ['fortress_world']
+    → Couvre une zone stratégique (Bruxelles) et des variables clés (technologie, gouvernance), tout en illustrant la vulnérabilité des forteresses souveraines.
+  ✓ marches_gris_asie_centrale — regionale | 2094 | scénarios: ['fortress_world']
+    → Explore une zone grise sous-représentée (Asie Centrale) et une variable économique négligée (redistribution), en lien avec la fragmentation des systèmes productifs.
+
+5 idée(s) ajoutée(s) à /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/evenements_custom/queue.yaml
+→ Inspectez queue.yaml, puis relancez en mode custom pour injecter.

@@ -9,13 +9,17 @@ l'ancien generate_entities.py qui ne précisait pas l'échelle dans son
 prompt (voir le même bug corrigé dans generate_instances.py le 2026-06-20).
 
 Pour chaque fiche concernée, envoie son contenu existant (description,
-rôle, responsabilités, tensions narratives, contexte scénario) à Claude et
+rôle, responsabilités, tensions narratives, contexte scénario) au LLM et
 lui demande de JUGER deux entiers 0-5 cohérents avec ce qui est déjà écrit
 — pas de réécriture du reste de la fiche, seulement ces deux lignes.
 
+Passe par llm_client.py (tier "structured_strict") — voir TASK_TIER_DEFAULTS
+dans llm_client.py pour le modèle utilisé par défaut. LLM_PROVIDER/LLM_MODEL
+restent disponibles en override manuel total si besoin d'un test ponctuel.
+
 PRÉREQUIS
-    pip install anthropic pyyaml --break-system-packages
-    export ANTHROPIC_API_KEY=sk-ant-...
+    pip install mistralai anthropic openai pyyaml --break-system-packages
+    (selon le fournisseur configuré — voir llm_client.py)
 
 USAGE
     python3 fix_impact_scale.py --dry-run   # affiche le plan sans écrire
@@ -25,22 +29,16 @@ USAGE
 import argparse
 import json
 import re
-import sys
 from pathlib import Path
 
 import yaml
 
-try:
-    import anthropic
-except ImportError:
-    anthropic = None
+from llm_client import call_llm  # tier structured_strict — champ canonique référencé (matrice d'influence)
 
 
 VAULT_ROOT = Path(__file__).resolve().parent.parent
 INSTANCES_DIR = VAULT_ROOT / "instances"
 SCENARIOS_DIR = VAULT_ROOT / "scenarios"
-
-MODEL = "claude-sonnet-4-6"
 
 
 def parse_md(filepath):
@@ -79,10 +77,9 @@ def find_files_out_of_range():
 
 
 def get_client():
-    if anthropic is None:
-        sys.exit("Le package 'anthropic' n'est pas installé. "
-                  "pip install anthropic --break-system-packages")
-    return anthropic.Anthropic()
+    """Conservé pour compatibilité de signature — retourne None, call_claude_json
+    n'en a plus besoin depuis la migration vers llm_client.py."""
+    return None
 
 
 JUDGE_SYSTEM = """Tu travailles sur Ourrassol 2098, simulateur de presse fictive située \
@@ -111,19 +108,16 @@ où N est un entier entre 0 et 5 inclus."""
 
 
 def call_claude_json(client, system, user_content, max_tokens=1024):
-    resp = client.messages.create(
-        model=MODEL,
+    text = call_llm(
+        system_prompt=system,
+        user_prompt=user_content,
         max_tokens=max_tokens,
-        system=system,
-        messages=[{"role": "user", "content": user_content}],
-    )
-    text = resp.content[0].text.strip()
+        temperature=0.0,
+        task_tier="structured_strict",
+    ).strip()
 
     if not text:
-        raise RuntimeError(
-            f"Réponse Claude vide (stop_reason={resp.stop_reason}, "
-            f"{resp.usage.output_tokens} tokens générés)."
-        )
+        raise RuntimeError("Réponse LLM vide.")
 
     # Le modèle raisonne parfois en texte libre avant de donner le JSON final
     # malgré la consigne ("Je lis la fiche... **Impact local** : ..."). On
@@ -145,10 +139,14 @@ def call_claude_json(client, system, user_content, max_tokens=1024):
         except json.JSONDecodeError:
             pass
 
-    if resp.stop_reason == "max_tokens":
+    # Heuristique de troncature (pas de resp.stop_reason disponible depuis
+    # la migration vers llm_client.py, qui ne retourne qu'une string) :
+    likely_truncated = len(text) >= max_tokens * 3  # ~3-4 car/token en français
+    if likely_truncated:
         raise RuntimeError(
-            f"Réponse Claude tronquée (max_tokens={max_tokens} atteint, "
-            f"aucun JSON complet trouvé) — texte reçu: {text[:200]!r}"
+            f"Réponse LLM probablement tronquée (max_tokens={max_tokens}, "
+            f"{len(text)} caractères reçus, aucun JSON complet trouvé) — "
+            f"texte reçu: {text[:200]!r}"
         )
     raise RuntimeError(f"Aucun JSON exploitable trouvé dans la réponse : {text[:200]!r}")
 
@@ -231,7 +229,7 @@ def main():
             new_local = int(judged["impact_local"])
             new_global = int(judged["impact_systemique_global"])
             if not (0 <= new_local <= 5) or not (0 <= new_global <= 5):
-                raise ValueError(f"Claude a renvoyé une valeur hors [0-5] : {judged}")
+                raise ValueError(f"Le LLM a renvoyé une valeur hors [0-5] : {judged}")
         except Exception as e:
             print(f"⚠ échec 1ère tentative ({e}), retry...", end=" ", flush=True)
             try:
@@ -239,7 +237,7 @@ def main():
                 new_local = int(judged["impact_local"])
                 new_global = int(judged["impact_systemique_global"])
                 if not (0 <= new_local <= 5) or not (0 <= new_global <= 5):
-                    raise ValueError(f"Claude a renvoyé une valeur hors [0-5] : {judged}")
+                    raise ValueError(f"Le LLM a renvoyé une valeur hors [0-5] : {judged}")
             except Exception as e2:
                 print(f"✗ ({e2})")
                 errors.append((path.name, str(e2)))

@@ -4,30 +4,31 @@ type: entity
 slug: enclaves_finlandaises
 category: territoire
 description: >
-  Le territoire-commun de subsistance est un espace humain qui se reconstruit depuis ses ressources naturelles immédiates — forêt, eau, sol — lorsque les structures d'ordre supérieur se sont effondrées ou retirées. Il incarne la capacité des sociétés à réinventer une gouvernance de proximité fondée sur la gestion collective des communs vitaux, sans attendre de légitimité extérieure. Ni État, ni simple zone de survie, il constitue un fait politique en acte : une expérience concrète de souveraineté ancrée dans l'écologie locale et la délibération communautaire.
+  Un territoire fragmenté qui, après l'effondrement d'une autorité centrale, se réorganise en unités semi-autonomes articulées autour de ressources locales, de solidarités de proximité et de pragmatisme de survie. Ces enclaves ne sont ni des États reconstitués ni de simples communautés : elles incarnent une forme intermédiaire de souveraineté partielle, fondée sur la gestion collective des ressources vitales et sur des alliances de circonstance avec les puissances environnantes. Elles représentent la capacité humaine à reconstruire un ordre minimal dans le chaos, sans attendre de légitimité extérieure, mais au prix d'une vulnérabilité structurelle face aux acteurs plus puissants qui les entourent.
 tension_fondamentale: >
-  La viabilité de ce territoire repose sur sa clôture partielle et son auto-organisation — mais ce repli sur soi, condition de cohésion interne, devient aussi le vecteur de son isolement stratégique, de ses logiques d'exclusion et de son incapacité à peser sur les dynamiques qui le menacent depuis l'extérieur.
+  L'autonomie locale qui garantit la survie repose sur l'absence de coordination centrale — mais cette même fragmentation empêche toute réponse collective aux menaces extérieures et rend chaque enclave durablement exposée à la prédation ou à l'absorption par les puissances voisines.
 variables_potentielles:
   - organisation_territoires
   - gouvernance_institutions
   - energie_ressources_critiques
+  - geopolitique_conflits
+  - demographie_mobilite_humaine
 scenarios_instances:
   - breakdown
-date_creation: 2026-06-27
-custom_source: phantom_validate_2026-06-27
+date_creation: 2026-07-04
 scenario_ref: breakdown
 role_ref: >
-  Archipel de zones autonomes établies dans l'ancienne Finlande après l'effondrement des structures étatiques nordiques. Ces enclaves organisent leur survie collective autour de ressources forestières et hydriques, constituant l'un des rares modèles de gouvernance locale viable en Europe du Nord fragmentée.
+  Territoires semi-autonomes issus de la fragmentation de l'État finlandais, organisés autour de réseaux de villes moyennes et de coopératives de survie nordiques. Chaque enclave gère localement ses ressources énergétiques et alimentaires, sans coordination centrale stable. Elles entretiennent des relations pragmatiques et méfiantes avec les puissances arctiques voisines.
 etat_ref: actif
 ---
 
 # Enclaves Finlandaises
 
 ## Description archétypale
-Le territoire-commun de subsistance est un espace humain qui se reconstruit depuis ses ressources naturelles immédiates — forêt, eau, sol — lorsque les structures d'ordre supérieur se sont effondrées ou retirées. Il incarne la capacité des sociétés à réinventer une gouvernance de proximité fondée sur la gestion collective des communs vitaux, sans attendre de légitimité extérieure. Ni État, ni simple zone de survie, il constitue un fait politique en acte : une expérience concrète de souveraineté ancrée dans l'écologie locale et la délibération communautaire.
+Un territoire fragmenté qui, après l'effondrement d'une autorité centrale, se réorganise en unités semi-autonomes articulées autour de ressources locales, de solidarités de proximité et de pragmatisme de survie. Ces enclaves ne sont ni des États reconstitués ni de simples communautés : elles incarnent une forme intermédiaire de souveraineté partielle, fondée sur la gestion collective des ressources vitales et sur des alliances de circonstance avec les puissances environnantes. Elles représentent la capacité humaine à reconstruire un ordre minimal dans le chaos, sans attendre de légitimité extérieure, mais au prix d'une vulnérabilité structurelle face aux acteurs plus puissants qui les entourent.
 
 ## Tension fondamentale
-La viabilité de ce territoire repose sur sa clôture partielle et son auto-organisation — mais ce repli sur soi, condition de cohésion interne, devient aussi le vecteur de son isolement stratégique, de ses logiques d'exclusion et de son incapacité à peser sur les dynamiques qui le menacent depuis l'extérieur.
+L'autonomie locale qui garantit la survie repose sur l'absence de coordination centrale — mais cette même fragmentation empêche toute réponse collective aux menaces extérieures et rend chaque enclave durablement exposée à la prédation ou à l'absorption par les puissances voisines.
 
 ## Instances par scénario
 | Scénario | Instance | État | Rôle |

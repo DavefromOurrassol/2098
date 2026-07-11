@@ -4,33 +4,30 @@ type: entity
 slug: massif_central_cicatrices_vertes
 category: territoire
 description: >
-  Le Territoire Cicatriciel désigne un espace géographique qui, après un effondrement systémique, devient le théâtre d'une reconquête simultanément écologique et humaine : la nature y reprend ses droits tandis que des communautés s'y réorganisent en dehors des structures étatiques défaillantes. Ce territoire est à la fois blessure visible d'un monde qui s'est effondré et germe d'un ordre nouveau fondé sur la subsistance, l'auto-gouvernance locale et la relation directe au sol. Il incarne la frontière mouvante entre l'abandon institutionnel et la refondation communautaire, entre la cicatrice et la pousse verte qui la recouvre.
+  Un territoire marqué par l'effondrement des structures centrales et la reconquête autonome par des communautés locales, devenant à la fois un refuge et un enjeu de pouvoir. Il incarne la résilience par l'auto-organisation, mais aussi la fragmentation et les conflits pour le contrôle des ressources. Son existence même questionne la légitimité des institutions traditionnelles face à l'émergence de nouvelles formes de gouvernance territoriale.
 tension_fondamentale: >
-  L'autonomie réelle que confère l'abandon étatique — liberté de s'organiser, de produire, de défendre ses propres règles — est aussi ce qui expose ce territoire à la prédation extérieure (flux migratoires subis, appétits corporatifs, logiques de reconquête étatique), forçant ses habitants à ériger des frontières qui contredisent l'idéal d'ouverture et de communauté vivante qu'ils prétendent incarner.
+  La contradiction entre l'autonomie locale et la nécessité de s'inscrire dans des réseaux plus larges, entre la liberté de s'organiser et la dépendance aux ressources extérieures. Ce territoire est à la fois un espace de liberté et un champ de bataille pour des acteurs qui cherchent à le contrôler ou à l'exploiter.
 variables_potentielles:
   - organisation_territoires
-  - gouvernance_institutions
-  - systemes_productifs_travail
   - climat_environnement_global
   - demographie_mobilite_humaine
-  - energie_ressources_critiques
+  - systemes_productifs_travail
 scenarios_instances:
   - breakdown
-date_creation: 2026-06-27
-custom_source: phantom_validate_2026-06-27
+date_creation: 2026-07-04
 scenario_ref: breakdown
 role_ref: >
-  Zone de reforestation sauvage et de reconquête agricole autonome née des ruines de l'État central français. Le Massif Central Cicatrices Vertes désigne un territoire fragmenté géré par des conseils de communes rurales pratiquant l'agro-sylviculture de subsistance. Ses frontières informelles sont défendues par des milices locales contre les flux migratoires et les prédateurs corporatifs.
+  Territoire fragmenté du Massif Central français, marqué par des décennies de reforestation chaotique et de reconquête végétale sur des terres agricoles abandonnées après l'effondrement des circuits alimentaires nationaux. Des communautés autonomes s'y sont établies, vivant en autarcie partielle et gérant collectivement des ressources forestières disputées. Ces 'cicatrices vertes' sont à la fois refuge et enjeu de conflits fonciers entre clans locaux.
 etat_ref: actif
 ---
 
 # Massif Central Cicatrices Vertes
 
 ## Description archétypale
-Le Territoire Cicatriciel désigne un espace géographique qui, après un effondrement systémique, devient le théâtre d'une reconquête simultanément écologique et humaine : la nature y reprend ses droits tandis que des communautés s'y réorganisent en dehors des structures étatiques défaillantes. Ce territoire est à la fois blessure visible d'un monde qui s'est effondré et germe d'un ordre nouveau fondé sur la subsistance, l'auto-gouvernance locale et la relation directe au sol. Il incarne la frontière mouvante entre l'abandon institutionnel et la refondation communautaire, entre la cicatrice et la pousse verte qui la recouvre.
+Un territoire marqué par l'effondrement des structures centrales et la reconquête autonome par des communautés locales, devenant à la fois un refuge et un enjeu de pouvoir. Il incarne la résilience par l'auto-organisation, mais aussi la fragmentation et les conflits pour le contrôle des ressources. Son existence même questionne la légitimité des institutions traditionnelles face à l'émergence de nouvelles formes de gouvernance territoriale.
 
 ## Tension fondamentale
-L'autonomie réelle que confère l'abandon étatique — liberté de s'organiser, de produire, de défendre ses propres règles — est aussi ce qui expose ce territoire à la prédation extérieure (flux migratoires subis, appétits corporatifs, logiques de reconquête étatique), forçant ses habitants à ériger des frontières qui contredisent l'idéal d'ouverture et de communauté vivante qu'ils prétendent incarner.
+La contradiction entre l'autonomie locale et la nécessité de s'inscrire dans des réseaux plus larges, entre la liberté de s'organiser et la dépendance aux ressources extérieures. Ce territoire est à la fois un espace de liberté et un champ de bataille pour des acteurs qui cherchent à le contrôler ou à l'exploiter.
 
 ## Instances par scénario
 | Scénario | Instance | État | Rôle |

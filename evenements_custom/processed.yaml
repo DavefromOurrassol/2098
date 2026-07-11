@@ -4353,3 +4353,30 @@ processed:
   injected_scenarios:
   - reference
   status: injected
+- idea:
+    id: crue_exceptionnelle_congo
+    description: Crue exceptionnelle sur le bassin du Congo, la plus forte depuis
+      trois décennies, submergeant plusieurs zones de pêche et mettant à l'épreuve
+      les systèmes d'alerte communautaires ainsi que les réseaux de partage de ressources
+      locaux.
+    portee: regionale
+    date_approximative: 2096
+    intensite: forte
+    scenarios:
+    - eco_communalism
+    variables_hint:
+    - organisation_territoires
+    - climat_environnement_global
+    variables_hint_count: 1
+    zone_hint: bassin_congo_ressources
+    source: test_P3_11juillet2026
+  selection:
+    variables:
+    - organisation_territoires
+    - climat_environnement_global
+    - demographie_mobilite_humaine
+    - systeme_economique_redistribution
+    type_evenement: environmental
+  injected_scenarios:
+  - eco_communalism
+  status: injected

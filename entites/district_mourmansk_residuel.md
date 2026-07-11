@@ -4,31 +4,31 @@ type: entity
 slug: district_mourmansk_residuel
 category: territoire
 description: >
-  Le Territoire Résiduel est un espace qui survit à la dissolution de l'autorité centrale dont il était le prolongement administratif, en convertissant ses héritages matériels — infrastructures, positions géographiques stratégiques, savoir-faire institutionnel dégradé — en monnaie d'échange dans un environnement où la souveraineté formelle a cessé d'être le seul vecteur de puissance. Il n'est ni tout à fait un État ni tout à fait une zone grise : trop structuré pour être ignoré, trop fragile pour s'imposer. Sa survie repose sur l'entretien d'une utilité concrète pour des acteurs extérieurs qui n'ont aucun intérêt à le reconnaître mais tout intérêt à le maintenir fonctionnel. Il incarne la persistance d'une forme administrative dans un vide de légitimité, transformant l'abandon en ressource et la marginalité en levier.
+  Le Territoire Résiduel est un espace politique et administratif qui survit à la désintégration de l'ordre qui l'a engendré, maintenant une autorité de fait sur des infrastructures stratégiques sans disposer d'aucune reconnaissance formelle. Il incarne la persistance d'une structure de gouvernance locale dans le vide laissé par l'effondrement des souverainetés supérieures, tirant sa légitimité non d'un mandat juridique mais du seul contrôle opérationnel qu'il exerce sur des ressources ou des passages indispensables. Sa survie repose sur son utilité pour des acteurs extérieurs qui le tolèrent sans le reconnaître, dans un équilibre précaire entre compétition, prédation et dépendance mutuelle.
 tension_fondamentale: >
-  Être indispensable sans être légitime : le Territoire Résiduel tire sa survie de sa valeur opérationnelle pour des acteurs qui refusent de lui conférer la reconnaissance dont il aurait besoin pour se stabiliser — le reconnaître formellement réduirait leur liberté de le contrôler, le laisser s'effondrer supprimerait une ressource stratégique qu'ils ne peuvent se permettre de perdre.
+  La souveraineté de fait sans légitimité de droit : cette entité tire son pouvoir de la maîtrise d'un nœud stratégique, mais cette maîtrise même attire les convoitises qui menacent son existence — être indispensable est sa seule protection et sa principale vulnérabilité.
 variables_potentielles:
-  - energie_ressources_critiques
   - organisation_territoires
-  - gouvernance_institutions
   - geopolitique_conflits
+  - gouvernance_institutions
+  - energie_ressources_critiques
+  - frontieres_du_systeme
 scenarios_instances:
   - breakdown
-date_creation: 2026-06-27
-custom_source: phantom_validate_2026-06-27
+date_creation: 2026-07-04
 scenario_ref: breakdown
 role_ref: >
-  Vestige administratif de l'ancienne région russe de Mourmansk, le District Mourmansk Résiduel est en 2098 un territoire arctique semi-autonome survivant grâce à ses infrastructures énergétiques héritées et à l'exploitation opportuniste des nouvelles routes maritimes polaires. Son autorité locale, hybride entre anciens fonctionnaires et milices de ressources, négocie sa survie avec des acteurs privés et des puissances étrangères en l'absence de tout État central russe fonctionnel. Il constitue un nœud logistique disputé dans l'Arctique post-effondrement.
+  Vestige administratif de l'ancienne oblast russe de Mourmansk, maintenu sous une autorité locale de fait après la désintégration des structures fédérales. Il contrôle l'accès aux infrastructures portuaires arctiques dans un contexte de compétition entre milices et opérateurs privés. Sa souveraineté n'est reconnue par aucun État constitué.
 etat_ref: actif
 ---
 
 # District Mourmansk Residuel
 
 ## Description archétypale
-Le Territoire Résiduel est un espace qui survit à la dissolution de l'autorité centrale dont il était le prolongement administratif, en convertissant ses héritages matériels — infrastructures, positions géographiques stratégiques, savoir-faire institutionnel dégradé — en monnaie d'échange dans un environnement où la souveraineté formelle a cessé d'être le seul vecteur de puissance. Il n'est ni tout à fait un État ni tout à fait une zone grise : trop structuré pour être ignoré, trop fragile pour s'imposer. Sa survie repose sur l'entretien d'une utilité concrète pour des acteurs extérieurs qui n'ont aucun intérêt à le reconnaître mais tout intérêt à le maintenir fonctionnel. Il incarne la persistance d'une forme administrative dans un vide de légitimité, transformant l'abandon en ressource et la marginalité en levier.
+Le Territoire Résiduel est un espace politique et administratif qui survit à la désintégration de l'ordre qui l'a engendré, maintenant une autorité de fait sur des infrastructures stratégiques sans disposer d'aucune reconnaissance formelle. Il incarne la persistance d'une structure de gouvernance locale dans le vide laissé par l'effondrement des souverainetés supérieures, tirant sa légitimité non d'un mandat juridique mais du seul contrôle opérationnel qu'il exerce sur des ressources ou des passages indispensables. Sa survie repose sur son utilité pour des acteurs extérieurs qui le tolèrent sans le reconnaître, dans un équilibre précaire entre compétition, prédation et dépendance mutuelle.
 
 ## Tension fondamentale
-Être indispensable sans être légitime : le Territoire Résiduel tire sa survie de sa valeur opérationnelle pour des acteurs qui refusent de lui conférer la reconnaissance dont il aurait besoin pour se stabiliser — le reconnaître formellement réduirait leur liberté de le contrôler, le laisser s'effondrer supprimerait une ressource stratégique qu'ils ne peuvent se permettre de perdre.
+La souveraineté de fait sans légitimité de droit : cette entité tire son pouvoir de la maîtrise d'un nœud stratégique, mais cette maîtrise même attire les convoitises qui menacent son existence — être indispensable est sa seule protection et sa principale vulnérabilité.
 
 ## Instances par scénario
 | Scénario | Instance | État | Rôle |

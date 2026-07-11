@@ -14,14 +14,14 @@ PRINCIPE
    langage naturel (voir exemple plus bas / README).
 2. Tu lances :  python3 inject_custom_signals.py
 3. Pour chaque idée, le script :
-     - appelle Claude (étape 1) pour choisir la/les variable(s) cible(s),
+     - appelle le LLM (étape 1) pour choisir la/les variable(s) cible(s),
        la catégorie, et un slug snake_case pour le signal
-     - appelle Claude (étape 2) pour rédiger le bloc YAML signal_to_state
+     - appelle le LLM (étape 2) pour rédiger le bloc YAML signal_to_state
        (6 scénarios) + l'annotation section 7, en s'appuyant sur le
        state_logic de la fiche variable et le registre des événements
      - valide mécaniquement le résultat (comptage de mots, fenêtres de
        dates, collisions) — purement Python, aucun appel API
-     - si la validation échoue, rappelle Claude (étape 3, correction
+     - si la validation échoue, rappelle le LLM (étape 3, correction
        ciblée) jusqu'à 2 fois
      - injecte le bloc validé dans variables/{slug}.md (sections 7 et 12)
      - régénère registre_evenements.md
@@ -37,7 +37,7 @@ PRÉREQUIS
 USAGE
 -----
     python3 inject_custom_signals.py            # traite toute la queue
-    python3 inject_custom_signals.py --dry-run  # appelle Claude, valide,
+    python3 inject_custom_signals.py --dry-run  # appelle le LLM, valide,
                                                   # affiche le résultat,
                                                   # mais n'écrit rien sur disque
 """
@@ -50,7 +50,7 @@ from pathlib import Path
 
 import yaml
 
-from llm_client import call_llm, LLM_MODEL as MODEL
+from llm_client import call_llm  # tier structured_strict — canonique/référencé
 
 
 # ---------------------------------------------------------------------------
@@ -241,7 +241,7 @@ def get_all_evenements(registre_text):
 
 
 # ---------------------------------------------------------------------------
-# Appels Claude
+# Appels LLM
 # ---------------------------------------------------------------------------
 
 def get_client():
@@ -250,12 +250,13 @@ def get_client():
 
 
 def call_claude_json(client, system, user_content, max_tokens=3000):
-    """Appelle Claude, exige une réponse JSON pure, la parse et la retourne."""
+    """Appelle le LLM, exige une réponse JSON pure, la parse et la retourne."""
     text = call_llm(
         system_prompt=system,
         user_prompt=user_content,
         max_tokens=max_tokens,
         temperature=0.0,
+        task_tier="structured_strict",
     ).strip()
     text = re.sub(r"^```(?:json)?\s*", "", text)
     text = re.sub(r"\s*```$", "", text)
@@ -815,9 +816,9 @@ QUEUE_TEMPLATE = """\
 #   id                  : identifiant court lisible (lettres, chiffres, underscores)
 #   description         : l'observation en langage naturel, quelques phrases suffisent
 #   source              : libre — date, lien d'article, nom d'un livre...
-#   variable_hint       : optionnel. Met null si tu ne sais pas — Claude choisit
+#   variable_hint       : optionnel. Met null si tu ne sais pas — le LLM choisit
 #                         automatiquement. Sinon, une variable unique (chaîne) ou
-#                         plusieurs (liste) que tu IMPOSES comme cibles ; Claude
+#                         plusieurs (liste) que tu IMPOSES comme cibles ; le LLM
 #                         peut en ajouter d'autres si pertinent, dans la limite
 #                         de variable_hint_count.
 #                         Variables disponibles :
@@ -828,7 +829,7 @@ QUEUE_TEMPLATE = """\
 #                           climat_environnement_global | energie_ressources_critiques
 #                           demographie_mobilite_humaine | systemes_productifs_travail
 #   variable_hint_count : optionnel, entier 1-4. Plafond du nombre total de
-#                         variables que Claude peut retourner (hint(s) inclus).
+#                         variables que le LLM peut retourner (hint(s) inclus).
 #                         Par défaut : 2. Monte à 3-4 si tu penses que le signal
 #                         est vraiment structurant entre plusieurs domaines.
 #
@@ -849,7 +850,7 @@ QUEUE_TEMPLATE = """\
 #       politiques de relocalisation industrielle.
 #     source: actualite_2026-06
 #     variable_hint: [energie_ressources_critiques, geopolitique_conflits]
-#     variable_hint_count: 4   # Claude peut ajouter jusqu'à 2 variables de plus
+#     variable_hint_count: 4   # le LLM peut ajouter jusqu'à 2 variables de plus
 #
 # Les idées traitées sont déplacées vers processed.yaml (succès) ou
 # needs_review.yaml (échec après corrections automatiques).
@@ -877,7 +878,7 @@ def save_queue_with_template(remaining):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--dry-run", action="store_true",
-                         help="Appelle Claude et valide, mais n'écrit rien sur disque.")
+                         help="Appelle le LLM et valide, mais n'écrit rien sur disque.")
     args = parser.parse_args()
 
     queue = load_yaml_list(QUEUE_PATH, key="queue")

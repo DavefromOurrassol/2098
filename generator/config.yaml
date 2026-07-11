@@ -7,7 +7,7 @@
 # Valeurs possibles :
 #   fortress_world | new_sustainability | breakdown
 #   eco_communalism | policy_reform | reference
-scenario: fortress_world
+scenario: eco_communalism
 
 # ── Ligne éditoriale ──
 # Détermine le journal et sa posture éditoriale.
@@ -15,14 +15,14 @@ scenario: fortress_world
 #   pro_pouvoir  = journal aligné avec le pouvoir dominant du scénario
 #   opposition   = journal critique ou clandestin
 # Si absent : pro_pouvoir par défaut
-ligne_editoriale: opposition
+ligne_editoriale: pro_pouvoir
 
 # ── Zone géographique (optionnel) ──
 # Force l'édition locale du journal correspondant à cette zone.
 # Doit correspondre à un slug de zone dans geographie/{scenario}.md
 # Si absent : édition générique du réseau éditorial
 # Exemple : amazonie_nord | afrique_centrale_australe | europe_occidentale
-zone_slug: "amazonie_nord"
+zone_slug: congo_bassin_du_fleuve
 
 # ── Thématique ──
 # Valeurs possibles :
@@ -32,16 +32,16 @@ zone_slug: "amazonie_nord"
 #   opinions_editoriaux | lifestyle_art_de_vivre | sante
 #   education | histoire_patrimoine | medias_communication
 #   religion_spiritualite | petites_annonces_services | meteo
-thematique: religion_spiritualite
+thematique: sante
 
 # ── Paramètres article ──
 article:
   # Titre suggéré (optionnel — laisser vide pour laisser Claude choisir)
-  titre_suggere: ""
+  titre_suggere: 
 
   # Angle spécifique (optionnel — précise le sujet ou le point de vue)
   # Exemple : "focus sur les réfugiés climatiques en Europe du Nord"
-  angle_specifique: "focus sur le syncretisme"
+  angle_specifique: le plus vieil humain sur terre a 126 ans
 
   # Longueur cible
   # Valeurs : breve | analyse | reportage | chronique | editorial

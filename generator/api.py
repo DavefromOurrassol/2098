@@ -1,7 +1,7 @@
 """
 api.py
 ------
-Envoie le prompt au LLM configuré (Claude ou Mistral) et sauvegarde l'article généré.
+Envoie le prompt au LLM configuré et sauvegarde l'article généré.
 
 Reçoit :
   - prompt_data : dict construit par prompt_builder.py
@@ -12,7 +12,8 @@ Retourne :
   - article     : str — texte de l'article généré
   - filepath    : str — chemin du fichier .md sauvegardé
 
-Fournisseur actif : variable d'environnement LLM_PROVIDER (claude par défaut | mistral)
+Fournisseur actif : résolu via le tier "strict" (llm_client.TASK_TIER_DEFAULTS),
+sauf override manuel LLM_PROVIDER/LLM_MODEL.
 """
 
 import os
@@ -20,7 +21,7 @@ import re
 import json
 from datetime import datetime
 
-from llm_client import call_llm, LLM_MODEL as MODEL, LLM_PROVIDER
+from llm_client import call_llm, resolve_for_tier
 from loader import VAULT_PATH
 
 
@@ -30,6 +31,10 @@ from loader import VAULT_PATH
 
 MAX_TOKENS    = 4000
 TEMPERATURE   = 1.0   # Créativité maximale pour la rédaction
+
+# Tier LLM pour la rédaction d'articles : identité journal + journaliste
+# imposée sur une sortie longue et créative — voir llm_client.TASK_TIER_DEFAULTS.
+TASK_TIER     = "strict"
 
 # Dossier de sortie des articles
 ARTICLES_DIR  = os.path.join(VAULT_PATH, "articles")
@@ -41,16 +46,18 @@ ARTICLES_DIR  = os.path.join(VAULT_PATH, "articles")
 
 def call_claude(prompt_data):
     """
-    Envoie le prompt au LLM configuré (Claude ou Mistral).
+    Envoie le prompt au LLM configuré.
     Retourne le texte de l'article généré.
     """
-    print("\n[api] Envoi au LLM ({} — {})...".format(LLM_PROVIDER, MODEL))
+    provider, model = resolve_for_tier(TASK_TIER)
+    print("\n[api] Envoi au LLM ({} — {}, tier={})...".format(provider, model, TASK_TIER))
 
     article = call_llm(
         system_prompt=prompt_data["system_prompt"],
         user_prompt=prompt_data["user_prompt"],
         max_tokens=MAX_TOKENS,
         temperature=TEMPERATURE,
+        task_tier=TASK_TIER,
     )
 
     print("[api] Article généré : {} caractères".format(len(article)))
@@ -98,7 +105,7 @@ def build_article_md(article_text, snapshot, thematique, prompt_data):
         "thematique: {}".format(meta["thematique"]),
         "format: {}".format(meta["format"]),
         "longueur: {}".format(meta["longueur"]),
-        "model: {}/{}".format(LLM_PROVIDER, MODEL),
+        "model: {}/{}".format(*resolve_for_tier(TASK_TIER)),
         "ligne_editoriale: {}".format(meta.get("ligne_editoriale", "pro_pouvoir")),
         "scenario_state: {}".format(snapshot["scenario"]["state_of_system"]),
         "tension_level: {}".format(snapshot["scenario"]["tension_level"]),
@@ -180,7 +187,8 @@ if __name__ == "__main__":
     from prompt_builder import build_prompt
 
     print("=== Test api.py ===\n")
-    print("Fournisseur : {} | Modèle : {}".format(LLM_PROVIDER, MODEL))
+    _p, _m = resolve_for_tier(TASK_TIER)
+    print("Tier : {} → Fournisseur : {} | Modèle : {}".format(TASK_TIER, _p, _m))
 
     # Config de test
     config_test = {

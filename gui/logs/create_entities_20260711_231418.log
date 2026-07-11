@@ -1,0 +1,38 @@
+============================================================
+OURRASSOL 2098 — Création entités + instances
+============================================================
+
+Mode : auto (fourni via --mode)
+
+[1/2] Génération de 1 entité(s) (scénarios : policy_reform)...
+[llm] Mistral (mistral-large-latest) — entrée : 25513 | sortie : 1263
+[2/2] Validation, injection et génération des instances...
+
+  ✗ Les Gardiens des Quotas :
+     - Variable inconnue : 'gardiens_quotas'
+     - Variable inconnue : 'inspecteurs_independants'
+     - Variable inconnue : 'auditeurs_citoyens'
+
+  ✗ Le Collège des Médiateurs Climatiques :
+     - Variable inconnue : 'college_mediateurs_climatiques'
+     - Variable inconnue : 'negociateurs_ressources'
+     - Variable inconnue : 'facilitateurs_conflits'
+
+  ✗ Les Architectes des Compromis :
+     - Variable inconnue : 'architectes_compromis'
+     - Variable inconnue : 'designers_gouvernance'
+     - Variable inconnue : 'experts_hybrides'
+
+  ✗ La Voix des Oubliés :
+     - Variable inconnue : 'voix_oublies'
+     - Variable inconnue : 'porte_parole_marginalises'
+     - Variable inconnue : 'figure_exclusion'
+
+  ✗ Les Sentinelles des Frontières Floues :
+     - Variable inconnue : 'sentinelles_frontieres'
+     - Variable inconnue : 'cartographes_marges'
+     - Variable inconnue : 'juristes_interstices'
+
+Terminé. 0/5 entité(s) créée(s).
+5 entité(s) rejetée(s) — voir le détail ci-dessus.
+Instances : 0 créée(s) | 0 déjà existante(s) | 0 erreur(s)

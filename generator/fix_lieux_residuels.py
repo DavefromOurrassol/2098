@@ -6,7 +6,7 @@ fix_lieux_residuels.py — Ourrassol 2098
 Script PONCTUEL, à usage unique : nettoie un résidu mécanique laissé par une
 version antérieure de enrich_geographie_recursive.py (avant correction de
 dedupe_promoted_lieux). Cette ancienne version ne retirait un lieu_emblematique
-promu QUE chez le parent désigné par Claude (champ `parent` de la nouvelle
+promu QUE chez le parent désigné par le LLM (champ `parent` de la nouvelle
 zone) — si ce même lieu était listé en double sur une AUTRE zone de niveau 1
 dès l'étape 1 (cas réel rencontré : "Genève-Lac-Retraité" et "Nairobi" listés
 à la fois sur leur zone de rattachement et sur une zone régionale englobante),

@@ -43,7 +43,12 @@ import sys
 
 import yaml
 
-from llm_client import call_llm, LLM_MODEL, LLM_PROVIDER
+from llm_client import call_llm, resolve_for_tier
+
+# Tier LLM : ce script génère les noms/thématiques des journalistes qui
+# seront ensuite injectés (via prompt_builder.py) dans chaque article — une
+# rédaction incohérente ici se propage à tous les articles en aval.
+TASK_TIER = "strict"
 
 # ---------------------------------------------------------------------------
 # CHEMINS
@@ -232,6 +237,14 @@ def build_prompt(scenario, ligne, reseau, zones_batch):
     """
     Construit le prompt pour générer les journaux d'un lot de zones.
     """
+    THEMATIQUES = [
+        "actualites_a_la_une", "politique", "economie_finance", "environnement_climat",
+        "sciences_technologies", "societe", "culture", "international", "musique",
+        "sports", "faits_divers", "opinions_editoriaux", "lifestyle_art_de_vivre",
+        "sante", "education", "histoire_patrimoine", "medias_communication",
+        "religion_spiritualite", "petites_annonces_services", "meteo",
+    ]
+
     scenario_data = {
         "breakdown":        "Monde effondré, fragmentation des États, milices locales, pénuries.",
         "fortress_world":   "Blocs géopolitiques fermés, contrôle des ressources, surveillance.",
@@ -258,16 +271,38 @@ Charte du réseau : {charte}
 Ligne éditoriale : {ligne}
 
 Pour chaque zone ci-dessous, génère le profil de l'édition locale de ce réseau.
-L'édition doit être ancrée dans la réalité de la zone — son nom, son ton et son style
-doivent refléter la culture, la langue, les tensions et le statut de cette zone.
+L'édition doit être ancrée dans la réalité de CETTE zone précise — son nom, son ton
+et son style doivent refléter la culture, la langue et les tensions de la zone
+telle que décrite ci-dessous (description, statut, tensions), jamais celles d'une
+zone alliée, rivale ou associée mentionnée ailleurs dans le monde.
+
+Le français reste la langue de rédaction de tous les champs, y compris "ton".
+Le champ "langue_style" ne doit indiquer une langue ou un mélange linguistique
+réel (ex. créole, portugais, mandarin) QUE si la description ou les lieux
+emblématiques de la zone le justifient explicitement (héritage colonial ou
+migratoire documenté) — dans le doute, laisse-le vide ou décris un simple
+registre de style (ex. "administratif", "oral et communautaire").
+
+Pour chaque zone, invente aussi une petite rédaction de 6 journalistes qui signent
+les articles de cette édition locale. Chaque journaliste a un nom crédible pour la
+culture réelle de la zone (pas un nom géneriquement "occidental" par défaut) et se
+voit attribuer une ou plusieurs thématiques de prédilection. À eux six, ils doivent
+couvrir la totalité des thématiques suivantes (plusieurs thématiques peuvent aller
+au même journaliste, mais chaque thématique doit être couverte par au moins un·e) :
+{thematiques_liste}
 
 Réponds avec une liste JSON :
 [
   {{
     "index": 0,
-    "nom": "Nom du journal local (original, ancré culturellement)",
+    "nom": "Nom du journal local (original, ancré dans la culture réelle de CETTE zone)",
     "ton": "2-3 phrases décrivant le ton éditorial local spécifique à cette zone",
-    "langue_style": "Marqueur culturel/linguistique éventuel (ex: 'mélange portugais/yoruba', 'registre administratif mandarin', 'créole local') ou chaîne vide"
+    "langue_style": "Marqueur culturel/linguistique UNIQUEMENT si justifié par la zone elle-même, sinon chaîne vide",
+    "journalistes": [
+      {{"nom": "Prénom Nom", "thematiques": ["politique", "international"]}},
+      {{"nom": "Prénom Nom", "thematiques": ["economie_finance", "sciences_technologies"]}},
+      ...
+    ]
   }},
   ...
 ]
@@ -279,13 +314,14 @@ Zones :
         reseau_nom=reseau["nom"],
         charte=reseau["charte"],
         ligne=ligne,
+        thematiques_liste=", ".join(THEMATIQUES),
         zones=json.dumps(items, ensure_ascii=False, indent=2),
     )
 
     return prompt
 
 
-def generate_journals_for_zones(scenario, ligne, reseau, zones, batch_size=5):
+def generate_journals_for_zones(scenario, ligne, reseau, zones, batch_size=3):
     """
     Génère les profils de journaux pour toutes les zones via API (par lots).
     Retourne un dict {zone_slug: {nom, ton, langue_style}}.
@@ -293,8 +329,9 @@ def generate_journals_for_zones(scenario, ligne, reseau, zones, batch_size=5):
     results = {}
     batches = [zones[i:i+batch_size] for i in range(0, len(zones), batch_size)]
 
-    print("  → {} zones | {} lot(s) de {} | {} ({})".format(
-        len(zones), len(batches), batch_size, LLM_PROVIDER, LLM_MODEL
+    _provider, _model = resolve_for_tier(TASK_TIER)
+    print("  → {} zones | {} lot(s) de {} | {} ({}, tier={})".format(
+        len(zones), len(batches), batch_size, _provider, _model, TASK_TIER
     ))
 
     for i, batch in enumerate(batches):
@@ -305,8 +342,12 @@ def generate_journals_for_zones(scenario, ligne, reseau, zones, batch_size=5):
             raw = call_llm(
                 system_prompt=SYSTEM_PROMPT,
                 user_prompt=prompt,
-                max_tokens=2000,
+                max_tokens=8000,  # augmenté le 6 juillet : le schéma "journalistes"
+                                  # (6 par zone) produit un JSON bien plus long
+                                  # qu'avant — 2000 tokens tronquait systématiquement
+                                  # les lots de 5 zones (erreur JSON invalide).
                 temperature=0.7,
+                task_tier=TASK_TIER,
             ).strip()
 
             raw = re.sub(r"^```(?:json)?\s*", "", raw)
@@ -321,6 +362,7 @@ def generate_journals_for_zones(scenario, ligne, reseau, zones, batch_size=5):
                         "nom":          entry.get("nom", "Édition locale"),
                         "ton":          entry.get("ton", ""),
                         "langue_style": entry.get("langue_style", ""),
+                        "journalistes": entry.get("journalistes", []),
                     }
             print("    OK — {} journaux générés".format(len(data)))
 
@@ -332,6 +374,7 @@ def generate_journals_for_zones(scenario, ligne, reseau, zones, batch_size=5):
                     "nom":          "Édition {}".format(z.get("nom", z["slug"])),
                     "ton":          "",
                     "langue_style": "",
+                    "journalistes": [],
                 }
 
     return results
@@ -427,6 +470,55 @@ def process_scenario(scenario, ligne_filter, journaux, update_mode, dry_run):
 # CLI
 # ---------------------------------------------------------------------------
 
+def process_scenario_fill_journalistes(scenario, ligne_filter, journaux, dry_run):
+    """
+    Complète UNIQUEMENT le champ "journalistes" des zones déjà présentes dans
+    journaux.yaml qui ne l'ont pas encore (ex. entrées créées avant l'ajout
+    de ce champ, ou créées avec l'ancien format à un seul journaliste).
+    Ne touche jamais à nom/ton/langue_style déjà en place.
+    """
+    print("\n=== {} (fill-journalistes) ===".format(scenario.upper()))
+
+    zones = parse_geographie(scenario)
+    if not zones:
+        return
+    zones_by_slug = {z["slug"]: z for z in zones}
+
+    lignes_a_traiter = [ligne_filter] if ligne_filter != "all" else LIGNES
+
+    for ligne in lignes_a_traiter:
+        print("\n  -- Ligne : {} --".format(ligne))
+        reseau = RESEAUX[scenario][ligne]
+        existing_zones = journaux.get(scenario, {}).get(ligne, {}).get("zones", {})
+
+        a_completer_slugs = [
+            slug for slug, z in existing_zones.items()
+            if not z.get("journalistes") and slug in zones_by_slug
+        ]
+        if not a_completer_slugs:
+            print("  Toutes les zones ont déjà une rédaction — rien à faire.")
+            continue
+        print("  {} zone(s) sans rédaction à compléter.".format(len(a_completer_slugs)))
+
+        if dry_run:
+            print("  [dry-run] Compléterait : {}".format(", ".join(a_completer_slugs)))
+            continue
+
+        zones_batch = [zones_by_slug[slug] for slug in a_completer_slugs]
+        nouveaux = generate_journals_for_zones(scenario, ligne, reseau, zones_batch)
+
+        # Fusion partielle : seul le champ "journalistes" est copié, le reste
+        # de l'entrée existante (nom/ton/langue_style) n'est jamais touché.
+        for slug, data in nouveaux.items():
+            if slug in existing_zones:
+                existing_zones[slug]["journalistes"] = data.get("journalistes", [])
+
+        journaux[scenario][ligne]["zones"] = existing_zones
+        print("  {} rédaction(s) ajoutée(s) pour {}/{}.".format(
+            len(a_completer_slugs), scenario, ligne
+        ))
+
+
 def parse_args():
     parser = argparse.ArgumentParser(
         description="Génère journaux.yaml depuis les bibles géographiques."
@@ -445,6 +537,10 @@ def parse_args():
                         help="Filtre la ligne éditoriale (défaut: all).")
     parser.add_argument("--update", action="store_true",
                         help="Ajoute uniquement les zones manquantes sans écraser.")
+    parser.add_argument("--fill-journalistes", action="store_true",
+                        help="Complète uniquement le champ 'journaliste' des zones "
+                             "déjà présentes qui ne l'ont pas encore, sans toucher "
+                             "à nom/ton/langue_style.")
     parser.add_argument("--dry-run", action="store_true",
                         help="Affiche sans écrire.")
 
@@ -457,11 +553,12 @@ def main():
     scenarios = VALID_SCENARIOS if args.all else [args.scenario]
 
     print("=== generate_journaux.py ===")
-    print("Fournisseur : {} | Modèle : {}".format(LLM_PROVIDER, LLM_MODEL))
+    _p, _m = resolve_for_tier(TASK_TIER)
+    print("Tier : {} → Fournisseur : {} | Modèle : {}".format(TASK_TIER, _p, _m))
     print("Scénarios   : {}".format(", ".join(scenarios)))
     print("Ligne       : {}".format(args.ligne))
     print("Mode        : {}{}".format(
-        "update" if args.update else "complet",
+        "fill-journalistes" if args.fill_journalistes else ("update" if args.update else "complet"),
         " [dry-run]" if args.dry_run else ""
     ))
 
@@ -470,13 +567,21 @@ def main():
 
     # Traitement
     for scenario in scenarios:
-        process_scenario(
-            scenario=scenario,
-            ligne_filter=args.ligne,
-            journaux=journaux,
-            update_mode=args.update,
-            dry_run=args.dry_run,
-        )
+        if args.fill_journalistes:
+            process_scenario_fill_journalistes(
+                scenario=scenario,
+                ligne_filter=args.ligne,
+                journaux=journaux,
+                dry_run=args.dry_run,
+            )
+        else:
+            process_scenario(
+                scenario=scenario,
+                ligne_filter=args.ligne,
+                journaux=journaux,
+                update_mode=args.update,
+                dry_run=args.dry_run,
+            )
 
     # Sauvegarde
     save_journaux(journaux, dry_run=args.dry_run)

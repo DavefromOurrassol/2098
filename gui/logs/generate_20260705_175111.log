@@ -1,0 +1,107 @@
+
+============================================================
+OURRASSOL 2098 — Générateur d'articles
+============================================================
+  Scénario   : eco_communalism
+  Thématique : sante
+  Longueur   : breve
+  Angle      : le plus vieil humain sur terre a 126 ans
+============================================================
+
+[generate] Chargement de la thématique 'sante'...
+
+[snapshot] Construction du monde 2098 — scénario : eco_communalism
+[snapshot] Variables pilotes : ['organisation_territoires', 'climat_environnement_global', 'energie_ressources_critiques', 'systemes_productifs_travail']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 1 | Cohérence : OK
+[snapshot] Jalons trajectoire : 154 (37 majeurs)
+[snapshot] Événements signal_to_state : 72 (24 majeurs)
+[snapshot] Tensions thématiques : 4
+[snapshot] Instances chargées : 81 | Filtrées : 6
+[snapshot] Événement custom 'Écho du Golfe en Feu — Les Bassins sans Pétrole' (an 2027, 71 ans d'effet)
+  → geopolitique_conflits : 35 → 43.0 (delta:+8.0)
+  → energie_ressources_critiques : 46.2 → 58.2 (delta:+12.0)
+  → gouvernance_institutions : 71.4 → 77.4 (delta:+6.0)
+  → demographie_mobilite_humaine : 37.0 → 46.0 (delta:+9.0)
+[snapshot] Événement custom 'La Grande Coupure — Accélérateur de Localisation Numérique' (an 2040, 58 ans d'effet)
+  → technologie_information : 51.1 → 41.1 (delta:-10.0)
+  → organisation_territoires : 40.0 → 48.0 (delta:+8.0)
+  → valeurs_culture_tempo_sociale : 40 → 46.0 (delta:+6.0)
+[snapshot] Événement custom 'Les Enchères du Fond Émergé — Kalaallit Nunaat vend ses terres à qui ?' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 58.2 → 66.2 (delta:+8.0)
+  → geopolitique_conflits : 27.4 → 17.4 (delta:-10.0)
+  → gouvernance_institutions : 81.9 → 88.9 (delta:+7.0)
+  → organisation_territoires : 52.2 → 58.2 (delta:+6.0)
+[snapshot] Événement custom 'La Grande Convergence des Lacs — Exode du Midwest Carbonisé' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 52.0 → 34.0 (delta:-18.0)
+  → organisation_territoires : 51.4 → 36.4 (delta:-15.0)
+  → gouvernance_institutions : 88.9 → 100 (delta:+12.0)
+  → climat_environnement_global : 58.6 → 66.6 (delta:+8.0)
+  → energie_ressources_critiques : 71.0 → 81.0 (delta:+10.0)
+[snapshot] Événement custom 'L'Assemblée du Fleuve — Souveraineté ou Fracture' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 66.6 → 74.6 (delta:+8.0)
+  → geopolitique_conflits : 14.8 → 2.8000000000000007 (delta:-12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → organisation_territoires : 41.5 → 49.5 (delta:+8.0)
+[snapshot] Événement custom 'Dissolution du Mouvement dans les Assemblées Locales' (an 2048, 50 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+  → valeurs_culture_tempo_sociale : 46.0 → 54.0 (delta:+8.0)
+  → organisation_territoires : 49.5 → 55.5 (delta:+6.0)
+[snapshot] Événement custom 'Forum d'Agadez sur la Souveraineté Numérique des Périphéries' (an 2062, 36 ans d'effet)
+  → technologie_information : 44.4 → 52.4 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → organisation_territoires : 58.5 → 65.5 (delta:+7.0)
+[snapshot] Événement custom 'La Proclamation des Friches Libres : Detroit, Cleveland, Pittsburgh hors-algorithme' (an 2063, 35 ans d'effet)
+  → geopolitique_conflits : 0 → 0 (delta:-8.0)
+  → valeurs_culture_tempo_sociale : 54.0 → 66.0 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → organisation_territoires : 68.9 → 82.9 (delta:+14.0)
+[snapshot] Événement custom 'Insurrection des Friches Vivantes — L'Automne des Zones Libres' (an 2063, 35 ans d'effet)
+  → geopolitique_conflits : 0 → 0 (delta:-8.0)
+  → valeurs_culture_tempo_sociale : 66.0 → 78.0 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → technologie_information : 66.9 → 73.9 (delta:+7.0)
+[snapshot] Événement custom 'Le Procès Communautaire de Van Derburgh' (an 2078, 20 ans d'effet)
+  → valeurs_culture_tempo_sociale : 78.0 → 80.0 (delta:+2.0)
+  → gouvernance_institutions : 100 → 100 (delta:+1.0)
+[snapshot] Événements custom : 10 | 145 variables affectées
+
+[prompt] Assemblage du prompt...
+[prompt] System prompt : 2566 caractères
+[prompt] User prompt   : 59795 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-small-latest)...
+[llm] Mistral (mistral-small-latest) — entrée : 17593 | sortie : 859
+[api] Article généré : 3081 caractères
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/20260705_175125_eco_communalism_sante_article_20septembre2098.md
+
+============================================================
+ARTICLE GÉNÉRÉ
+============================================================
+*Yaripã: A Voz da Floresta — Réseau La Gazette des Communs*
+**Édition locale — Bassin Congo Ressources**
+
+---
+
+**Kin — Le 14 de l’Eau Profonde, 2098**
+
+**Quand l’éternité se compte en siècles**
+*Le record de Cent-en-Un passe aux mains d’une mère fondatrice du Bassin Congo*
+
+C’est sous le grand m’bongui ombragé de la délégation de Lékédi que le Conseil des Anciens du Bassin Congo Ressources a officialisé l’héritage le plus longtemps contesté de l’ère des Communs : cent vingt-six saisons pour une seule personne. Odette Nzéla, gardienne des semences sacrées à l’*Associação de Maternidade Verde* de Mossaka-Kongo, a franchi hier l’aube de son quatre-vingt-dixième hiver terrestre en recevant, des mains du *Mbevo ya Nzété* (le porteur de vie de la Confédération), le certificat de « Temps Accumulé ». Son visage, strié des cicatrices rituelles de la danse du pangolin, porte l’éclat des longues nuits passées à veiller les jeunes plants de *Milicia excelsa* dans les jardins flottants du Pool Malebo.
+
+### **Santé et souveraineté, le pacte paradoxal**
+Odette n’a jamais pris un seul médicament synthétique. Son secret ? Une synchronicité de pratiques — tisanes de *mbimba* fermentées selon le protocole qu’elle a elle-même documenté pour l’*Alliance des Biotechnologies Communautaires du Sahel (ABCS)*, bains de vapeur aux feuilles de *kinzé-kinzé* appliquées deux fois par cycle lunaire, et surtout, l’absence totale de molécules exogènes dans son régime depuis 2067. « L’intestin est un jardin », murmure-t-elle, « et un jardin se gouverne par la réciprocité. » Pourtant, ce jeudi, elle a avalé une dose minuscule d’un antibiotique à base de *Penicillium konguanum*, isolé par les laboratoires mobiles de la *Ronde des Savoirs*. La décision, scellée en assemblée plénière trois lunes plus tôt, a fait gronder les puristes : « Même pour saluer l’éternité, on ne trahit pas les sept lunes d’abstinence climatique », tonnait le *Sangoma* Mabiala de Mbanza-Ngungu.
+
+### **La question qui fissure la régénération**
+Si Lékédi célèbre aujourd’hui, Kinshasa-débordée frémit. Les *Tribunaux de Soin Communautaire* de la *Confédération des Bassins Vivants* ont enregistré hier quatre-vingt-sept plaintes pour « usurpation sacrée » après qu’un collectif de Nairobi a revendiqué le titre pour un Mendoza « rajeuni » de deux décennies grâce aux térasites de la *Trame Mnemos*. « Ils oublient que la longévité n’est pas un marché, mais une conversation avec les ancêtres », rappelle Anne-Marie Zinga, déléguée de l’*Associação de Maternidade Verde* aux *Assises de Bassin du Fleuve Congo*.
+
+Odette, elle, rit en regardant couler l’Oubangui. Elle ne sait pas que ce soir, à Ouagadougou, l’*ABCS* valide déjà un protocole de réplication de sa synchronicité. Ni que, demain, une délégation de *São Paulo — Fragments Algorithmiques* viendra quérir son savoir. La vieillesse, après tout, n’est qu’une autre forme de migration.
+
+*[Note de la rédaction : Kin-débordée publie ce récit sous le régime de la *Grande Pause Narrative*, en accord avec l’Assemblée des Gardiens du Temps du Pool Malebo.]*
+
+============================================================
+✓ Sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/20260705_175125_eco_communalism_sante_article_20septembre2098.md
+============================================================
+

@@ -2,7 +2,7 @@
 generate_entities.py
 --------------------
 Génère automatiquement les entités et leurs instances
-pour tous les scénarios via l'API Claude.
+pour tous les scénarios via le LLM.
 
 Usage :
     # Générer toutes les entités + instances
@@ -31,7 +31,7 @@ import yaml
 import argparse
 from datetime import datetime
 
-from llm_client import call_llm, LLM_MODEL as MODEL
+from llm_client import call_llm  # tier structured_strict — canonique/référencé
 
 # ─────────────────────────────────────────
 # CONFIGURATION
@@ -273,6 +273,7 @@ def call_claude(prompt, max_tokens=MAX_TOKENS):
         user_prompt=prompt,
         max_tokens=max_tokens,
         temperature=0.0,
+        task_tier="structured_strict",
     ).strip()
 
     # Nettoyer les balises markdown si présentes

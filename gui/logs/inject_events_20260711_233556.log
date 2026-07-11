@@ -1,0 +1,202 @@
+============================================================
+EXTRACT_LOCALISATION — Ourrassol 2098
+============================================================
+Fiches à traiter : 13
+
+[1/13] 
+[instance] biolock_agritech_fortress_world
+  scénario : fortress_world
+[llm] Mistral (mistral-small-latest) — entrée : 7103 | sortie : 82
+  issue     : extrait
+  zone      : bloc_eurasiatique_occidental
+  lieu      : Ceinture Productive Eurasiatique
+  motif     : Le texte mentionne explicitement la 'Ceinture Productive Eurasiatique' comme zone d'opération de BLSS, située dans le bloc eurasiatique occidental.
+  → écrit
+[2/13] 
+[instance] conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability
+  scénario : new_sustainability
+[llm] Mistral (mistral-small-latest) — entrée : 6754 | sortie : 74
+  issue     : extrait
+  zone      : centre_institutionnel_geneve
+  lieu      : Genève (siège flottant au-dessus du lac)
+  motif     : Le siège flottant du CMRE est explicitement situé au-dessus de Genève dans la description journalistique.
+  → écrit
+[3/13] 
+[instance] datasovereign_reference
+  scénario : reference
+[llm] Mistral (mistral-small-latest) — entrée : 6209 | sortie : 64
+  issue     : extrait
+  zone      : geneve_lac_retreite
+  lieu      : Genève
+  motif     : La fiche mentionne explicitement une tour de verre noire à Genève comme siège de SovData Global Trust.
+  → écrit
+[4/13] 
+[instance] ecosynth_global_reference
+  scénario : reference
+[llm] Mistral (mistral-small-latest) — entrée : 6087 | sortie : 68
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : L'entité est décrite comme ayant un siège social flottant au large de Singapour Est (sans ancrage territorial précis) et opère à l'échelle globale sans localisation fixe.
+  → écrit
+[5/13] 
+[instance] ironclad_logistics_fortress_world
+  scénario : fortress_world
+[llm] Mistral (mistral-small-latest) — entrée : 7276 | sortie : 58
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : ISC est une entité transnationale opérant via des corridors logistiques entre blocs souverains, sans ancrage géographique local précis.
+  → écrit
+[6/13] 
+[instance] les_passeurs_de_limites_new_sustainability
+  scénario : new_sustainability
+[llm] Mistral (mistral-small-latest) — entrée : 6352 | sortie : 57
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : Le réseau des Passeurs de Seuil opère de manière transnationale et diffuse, sans ancrage géographique local précis.
+  → écrit
+[7/13] 
+[instance] neuroharmonics_reference
+  scénario : reference
+[llm] Mistral (mistral-small-latest) — entrée : 6429 | sortie : 69
+  issue     : extrait
+  zone      : singapour_est_nexcore
+  lieu      : Singapour Est
+  motif     : Le texte mentionne explicitement les tours climatisées de Singapour Est comme localisation des implants NH-9X.
+  → écrit
+[8/13] 
+[instance] neurosentry_fortress_world
+  scénario : fortress_world
+[llm] Mistral (mistral-small-latest) — entrée : 7384 | sortie : 61
+  issue     : extrait
+  zone      : moscou_est
+  lieu      : Moscou-Est
+  motif     : Le texte mentionne explicitement Moscou-Est comme lieu de déploiement des implants NeuroSync.
+  → écrit
+[9/13] 
+[instance] optiflow_logistics_reference
+  scénario : reference
+[llm] Mistral (mistral-small-latest) — entrée : 6990 | sortie : 72
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : OGLN est une entité transnationale sans ancrage géographique local précis, gérant des flux logistiques globaux et des zones de transit prioritaires (ZTP) à l'échelle mondiale.
+  → écrit
+[10/13] 
+[instance] terrametrics_reference
+  scénario : reference
+[llm] Mistral (mistral-small-latest) — entrée : 6225 | sortie : 76
+  issue     : extrait
+  zone      : singapour_est
+  lieu      : siège flottant au large de Singapour Est
+  motif     : Le siège flottant de TM-GCS est explicitement situé au large de Singapour Est, une zone géographique disponible dans la liste.
+  → écrit
+[11/13] 
+[instance] terrashield_geoengineering_fortress_world
+  scénario : fortress_world
+[llm] Mistral (mistral-small-latest) — entrée : 7093 | sortie : 59
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : TSG est une entité transnationale opérant à l'échelle continentale, orbitale et régionale sans ancrage géographique local précis.
+  → écrit
+[12/13] 
+[instance] vaultcorp_security_fortress_world
+  scénario : fortress_world
+[llm] Mistral (mistral-small-latest) — entrée : 7557 | sortie : 61
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : VCSDS est une entité transnationale sans ancrage géographique local précis, opérant à l'échelle continentale, globale et orbitale.
+  → écrit
+[13/13] 
+[event_instance] crue_exceptionnelle_congo_eco_communalism
+  scénario : eco_communalism
+[llm] Mistral (mistral-small-latest) — entrée : 7716 | sortie : 74
+  issue     : extrait
+  zone      : congo_bassin_du_fleuve
+  lieu      : bassin du Congo
+  motif     : L'événement est centré sur une crue exceptionnelle du bassin du Congo, mentionnée explicitement dans le texte.
+  → écrit
+
+============================================================
+RÉCAPITULATIF
+============================================================
+  Extraits (zone trouvée)    : 7
+  Vides assumés (transnat.)  : 6
+  Ambigus (review manuelle)  : 0
+  Erreurs                    : 0
+  Total traité               : 13
+
+Fiches modifiées : 13
+Sauvegardes .bak créées pour chaque fichier modifié.
+Rapport need_action mis a jour : documentation/need_action/localisation_review.md
+   (0 fiche(s) en attente)
+=================================================================
+  REVIEW LOCALISATION — Ourrassol 2098
+=================================================================
+  MODE AUTO-RESOLVE : résolution automatique par Claude
+
+  Aucune fiche en review_manuelle. Rien à faire.
+
+[validate] Démarrage de la validation...
+[validate] 1/9 — Nomenclature...
+[validate] 2/9 — Cohérence systémique...
+[validate] 3/9 — Entités et instances...
+[validate] 4/9 — Thématiques...
+[validate] 5/9 — Localisation...
+[validate] 6/9 — Références croisées...
+[validate] 7/9 — Matrice d'influence...
+[validate] 8/9 — Événements...
+[validate] 9/9 — Cohérence narrative post-injection...
+
+════════════════════════════════════════════════════════════
+VALIDATION — OURRASSOL 2098
+════════════════════════════════════════════════════════════
+
+📊 INVENTAIRE
+────────────────────────────────────────────────────────────
+  [NOMENCLATURE] 6/6 scénarios | 12/12 variables
+  [ENTITIES] 586 entités chargées
+  [INSTANCES] 710 instances chargées
+  [THEMATIQUES] 20 thématiques trouvées
+  [LOCALISATION] 781 fiches riches | 0 sans localisation | 0 review_manuelle
+  [CROSS_REFERENCES] 1334 slugs dans le référentiel
+  [MATRIX] 132 edges dans la matrice
+  [EVENTS] 17 archétypes d'événements
+  [EVENTS] 71 instances d'événements
+  [NARRATIVE] Cohérence narrative OK (0 problème)
+
+════════════════════════════════════════════════════════════
+✓ BASE VALIDE — 0 erreurs | 0 avertissements | 0 corrections
+════════════════════════════════════════════════════════════
+============================================================
+OURRASSOL 2098 — Injection événements custom
+============================================================
+
+Mode : custom (fourni via --mode)
+
+=== crue_exceptionnelle_congo ===
+[1/4] Sélection de variables + type...
+[llm] Mistral (mistral-large-latest) — entrée : 514 | sortie : 64
+  -> variables=['organisation_territoires', 'climat_environnement_global', 'demographie_mobilite_humaine', 'systeme_economique_redistribution'] type=environmental slug=crue_exceptionnelle_congo
+[2/4] Développement pour eco_communalism...
+[llm] Mistral (mistral-large-latest) — entrée : 7423 | sortie : 885
+[3/4] Validation (essai 1)...
+[4/4] Injection...
+
+Terminé. Voir /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/evenements_custom/processed.yaml et /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/evenements_custom/needs_review.yaml.
+
+════════════════════════════════════════════════════════════
+CYCLE POST-INJECTION
+════════════════════════════════════════════════════════════
+
+→ /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/generator/extract_localisation.py
+
+→ /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/generator/review_localisation.py --auto-resolve
+
+→ /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/generator/validate.py
+
+✓ Cycle post-injection terminé.

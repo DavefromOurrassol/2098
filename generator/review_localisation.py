@@ -6,7 +6,7 @@ Review interactive des fiches marquées `statut: review_manuelle` dans le champ
 et applique la décision directement dans le frontmatter.
 
 Décisions possibles par fiche :
-  [V] Valider la zone candidate suggérée par Claude
+  [V] Valider la zone candidate suggérée par le LLM
   [C] Choisir une autre zone dans la liste
   [0] Passer en vide assumé (entité transnationale sans ancrage)
   [S] Skip — laisser en review_manuelle pour plus tard
@@ -269,7 +269,7 @@ def display_entry(entry, index, total):
     print(f"  Lieu           : {lieu}")
     print(f"  Type lieu      : {type_lieu}")
     if note:
-        print(f"\n  Note Claude    : {note}")
+        print(f"\n  Note LLM       : {note}")
 
     print(f"\n  Zones disponibles ({scenario}) :")
     zone_list = list(zones.items())
@@ -472,6 +472,7 @@ def call_auto_api(user_prompt):
         user_prompt=user_prompt,
         max_tokens=512,
         temperature=0.0,
+        task_tier="volume",
     ).strip()
     clean = re.sub(r"```json|```", "", raw).strip()
     return json.loads(clean)
@@ -586,7 +587,7 @@ def main():
     parser.add_argument("--dry-run", action="store_true",
                         help="Affiche et simule sans écrire.")
     parser.add_argument("--auto-resolve", action="store_true",
-                        help="Résolution automatique via Claude (sans interaction).")
+                        help="Résolution automatique via le LLM (sans interaction).")
     args = parser.parse_args()
 
     print("=" * 65)
@@ -595,7 +596,7 @@ def main():
     if args.dry_run:
         print("  MODE DRY-RUN : aucune écriture sur disque")
     if args.auto_resolve:
-        print("  MODE AUTO-RESOLVE : résolution automatique par Claude")
+        print("  MODE AUTO-RESOLVE : résolution automatique par le LLM")
 
     entries = collect_review_manuelle(scenario_filter=args.scenario)
 

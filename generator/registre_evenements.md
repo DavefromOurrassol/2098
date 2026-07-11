@@ -10,7 +10,7 @@ RÈGLE DE LECTURE DE LA COLONNE "date" :
   - type=signal    -> fenêtre "AAAA-AAAA" (date_bascule du signal_to_state)
   - type=evenement -> année unique "AAAA" (date précise de l'instance)
 
-Total : 402 entrées (60 signaux uniques × 6 scénarios + 42 entrées d'événements custom).
+Total : 403 entrées (60 signaux uniques × 6 scénarios + 43 entrées d'événements custom).
 
 ## breakdown
 
@@ -353,6 +353,7 @@ Total : 402 entrées (60 signaux uniques × 6 scénarios + 42 entrées d'événe
 | evenement | 2062 | grand_forum_sahel_numerique | technologie_information, gouvernance_institutions, organisation_territoires | — | Charte d'Agadez consacre les périphéries numériques souveraines 2062 |
 | evenement | 2063 | communes_rust_belt_zones_libres | geopolitique_conflits, valeurs_culture_tempo_sociale, gouvernance_institutions, organisation_territoires | — | Friches du Rust Belt proclament zones libres algorithme 2063 |
 | evenement | 2063 | insurrection_rust_belt | geopolitique_conflits, valeurs_culture_tempo_sociale, gouvernance_institutions, technologie_information | — | Communes du Rust Belt bannissent gouvernance algorithmique 2063 |
+| evenement | 2096 | crue_exceptionnelle_congo | organisation_territoires, climat_environnement_global, demographie_mobilite_humaine, systeme_economique_redistribution | — | Le Congo engloutit les communs fluviaux 2096 |
 
 ## policy_reform
 

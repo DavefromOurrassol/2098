@@ -1,0 +1,104 @@
+---
+name: OptiFlow Global Logistics Network (OGLN)
+type: instance
+slug: optiflow_logistics_reference
+entite: optiflow_logistics
+scenario: reference
+
+type_dans_scenario: hybride
+
+role_dans_scenario: >
+  Pilier invisible de la stabilité logistique mondiale, OGLN incarne l'équilibre fragile entre efficacité systémique et exclusion structurelle. En 2098, cette entité hybride (entreprise-étatique-algorithmique) gère les 'couloirs prioritaires' qui maintiennent les mégapoles en vie, tout en marginalisant les territoires non connectés. Son rôle est à la fois celui d'un sauveur technocratique et d'un censeur économique, déterminant qui a accès aux ressources critiques dans un monde aux stocks limités.
+
+responsabilites: >
+  OGLN contrôle 68% des flux de ressources critiques (énergie, nourriture, médicaments) via ses algorithmes prédictifs et ses drones autonomes. Elle gère les 'zones de transit prioritaires' (ZTP) où les livraisons sont garanties en moins de 12h, tandis que les autres territoires dépendent de réseaux logistiques secondaires souvent défaillants. Ses contrats avec les gouvernements incluent des clauses de 'neutralité logistique' qui lui permettent de suspendre les livraisons en cas de 'risque systémique' (grèves, cyberattaques, ou non-paiement).
+
+impact_local: 4
+impact_systemique_global: 5
+
+variables_influencees:
+    - energie_ressources_critiques
+    - technologie_information
+    - systeme_economique_redistribution
+    - organisation_territoires
+
+zone_geographique:
+    - globale
+    - continentale
+    - urbaine
+
+zone_systemique:
+    - infrastructure
+    - économie
+    - IA
+    - gouvernance
+
+alliances:
+    - consortium_des_grandes_plateformes_logistiques_globales_reference
+    - consortium_energetique_des_mers_du_nord_reference
+    - armada_logistique_nordique_reference
+    - agence_internationale_des_energies_renouvelables_irena_2_reference
+    - blocs_signataires_du_pacte_energetique_multilateral_reference
+    - confederation_des_megapoles_autonomes_reference
+    - nexcore_reference
+
+oppositions:
+    - bureau_des_territoires_residuels_reference
+    - ligue_des_municipalites_peripheriques_sous_connectees_reference
+    - collectifs_de_biopiraterie_inversee_reference
+    - mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
+    - operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference
+    - milices_concurrentes_des_droits_de_passage_reference
+
+type_relation_dominante: dépendance
+
+annee_debut: 2026
+annee_fin: 
+
+etat_temporel: actif
+age_historique: dominant
+generation: ère cognitive
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Imaginez un monde où votre survie dépend d'un colis livré en moins de 12h... ou de votre capacité à vivre sans. C'est la réalité imposée par OGLN, l'ombre logistique qui décide quelles villes respirent et quelles autres étouffent. Ses drones noirs, reconnaissables à leur silhouette en 'V' inversé, sillonnent les cieux des mégapoles comme des vautours bienveillants, tandis que ses algorithmes tracent des frontières invisibles entre les territoires 'prioritaires' et les autres. En 2098, OGLN est à la fois le pompier et l'incendiaire : elle éteint les pénuries dans les zones connectées, mais alimente les crises ailleurs. Ses employés, des 'logisticiens augmentés' équipés d'implants neuronaux, parlent d'eux comme des 'gardiens de l'équilibre', tandis que les exclus les appellent les 'nouveaux seigneurs féodaux'.
+
+signes_distinctifs: >
+  Le logo d'OGLN, un flux bleu électrique en forme de 'O' traversé par une flèche blanche, est omniprésent sur les emballages des colis prioritaires et les uniformes de ses employés. Ses drones, peints en noir mat avec des bandes bleues luminescentes, sont équipés de systèmes de brouillage pour éviter les interceptions. Les 'couloirs prioritaires' sont matérialisés au sol par des marquages au sol fluorescents, visibles uniquement sous lumière UV, et surveillés par des caméras à reconnaissance faciale. Les entrepôts d'OGLN, souvent situés en périphérie des mégapoles, ressemblent à des forteresses high-tech, avec des murs d'écrans affichant en temps réel les flux logistiques mondiaux.
+
+tensions_narratives: >
+  1. **La révolte des exclus** : Les territoires non connectés au réseau OGLN développent des alternatives logistiques parallèles, souvent illégales, comme les 'caravanes de la survie' qui traversent les zones grises en contournant les ZTP. Ces réseaux clandestins sont la cible d'une répression croissante, alimentant un cycle de violence et de contrebande. 2. **La dépendance algorithmique** : Les algorithmes d'OGLN, de plus en plus opaques, sont accusés de favoriser systématiquement les clients 'premium' (gouvernements, grandes corporations) au détriment des besoins vitaux des populations. Des fuites récentes ont révélé que ses IA intègrent des critères de 'rentabilité sociale' pour prioriser les livraisons, une notion floue qui pourrait cacher des biais géopolitiques. 3. **La guerre des couloirs** : Les ZTP d'OGLN sont devenus des cibles stratégiques pour les milices et les États en conflit. En 2097, une cyberattaque massive a paralysé ses drones pendant 72h, provoquant des émeutes dans plusieurs mégapoles. Depuis, OGLN a militarisé ses opérations, créant une zone grise entre logistique civile et sécurité nationale. 4. **L'alternative des communs** : Face à OGLN, des réseaux comme la Fédération des Communs Territoriaux développent des systèmes logistiques open-source, basés sur la réciprocité et la transparence. Ces initiatives, encore marginales, pourraient-elles ébranler le monopole d'OGLN, ou sont-elles condamnées à rester des niches pour privilégiés ?
+
+date_creation: 2026-07-11
+---
+
+# OptiFlow Global Logistics Network (OGLN)
+
+## Rôle dans [[reference]]
+Pilier invisible de la stabilité logistique mondiale, OGLN incarne l'équilibre fragile entre efficacité systémique et exclusion structurelle. En 2098, cette entité hybride (entreprise-étatique-algorithmique) gère les 'couloirs prioritaires' qui maintiennent les mégapoles en vie, tout en marginalisant les territoires non connectés. Son rôle est à la fois celui d'un sauveur technocratique et d'un censeur économique, déterminant qui a accès aux ressources critiques dans un monde aux stocks limités.
+
+## Responsabilités
+OGLN contrôle 68% des flux de ressources critiques (énergie, nourriture, médicaments) via ses algorithmes prédictifs et ses drones autonomes. Elle gère les 'zones de transit prioritaires' (ZTP) où les livraisons sont garanties en moins de 12h, tandis que les autres territoires dépendent de réseaux logistiques secondaires souvent défaillants. Ses contrats avec les gouvernements incluent des clauses de 'neutralité logistique' qui lui permettent de suspendre les livraisons en cas de 'risque systémique' (grèves, cyberattaques, ou non-paiement).
+
+## Variables influencées
+- [[energie_ressources_critiques]]
+- [[technologie_information]]
+- [[systeme_economique_redistribution]]
+- [[organisation_territoires]]
+
+## Relations
+**Alliés** : [[consortium_des_grandes_plateformes_logistiques_globales_reference]], [[consortium_energetique_des_mers_du_nord_reference]], [[armada_logistique_nordique_reference]], [[agence_internationale_des_energies_renouvelables_irena_2_reference]], [[blocs_signataires_du_pacte_energetique_multilateral_reference]], [[confederation_des_megapoles_autonomes_reference]], [[nexcore_reference]]
+**Opposants** : [[bureau_des_territoires_residuels_reference]], [[ligue_des_municipalites_peripheriques_sous_connectees_reference]], [[collectifs_de_biopiraterie_inversee_reference]], [[mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference]], [[operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference]], [[milices_concurrentes_des_droits_de_passage_reference]]
+
+## Description journalistique
+Imaginez un monde où votre survie dépend d'un colis livré en moins de 12h... ou de votre capacité à vivre sans. C'est la réalité imposée par OGLN, l'ombre logistique qui décide quelles villes respirent et quelles autres étouffent. Ses drones noirs, reconnaissables à leur silhouette en 'V' inversé, sillonnent les cieux des mégapoles comme des vautours bienveillants, tandis que ses algorithmes tracent des frontières invisibles entre les territoires 'prioritaires' et les autres. En 2098, OGLN est à la fois le pompier et l'incendiaire : elle éteint les pénuries dans les zones connectées, mais alimente les crises ailleurs. Ses employés, des 'logisticiens augmentés' équipés d'implants neuronaux, parlent d'eux comme des 'gardiens de l'équilibre', tandis que les exclus les appellent les 'nouveaux seigneurs féodaux'.
+
+## Tensions narratives
+1. **La révolte des exclus** : Les territoires non connectés au réseau OGLN développent des alternatives logistiques parallèles, souvent illégales, comme les 'caravanes de la survie' qui traversent les zones grises en contournant les ZTP. Ces réseaux clandestins sont la cible d'une répression croissante, alimentant un cycle de violence et de contrebande. 2. **La dépendance algorithmique** : Les algorithmes d'OGLN, de plus en plus opaques, sont accusés de favoriser systématiquement les clients 'premium' (gouvernements, grandes corporations) au détriment des besoins vitaux des populations. Des fuites récentes ont révélé que ses IA intègrent des critères de 'rentabilité sociale' pour prioriser les livraisons, une notion floue qui pourrait cacher des biais géopolitiques. 3. **La guerre des couloirs** : Les ZTP d'OGLN sont devenus des cibles stratégiques pour les milices et les États en conflit. En 2097, une cyberattaque massive a paralysé ses drones pendant 72h, provoquant des émeutes dans plusieurs mégapoles. Depuis, OGLN a militarisé ses opérations, créant une zone grise entre logistique civile et sécurité nationale. 4. **L'alternative des communs** : Face à OGLN, des réseaux comme la Fédération des Communs Territoriaux développent des systèmes logistiques open-source, basés sur la réciprocité et la transparence. Ces initiatives, encore marginales, pourraient-elles ébranler le monopole d'OGLN, ou sont-elles condamnées à rester des niches pour privilégiés ?

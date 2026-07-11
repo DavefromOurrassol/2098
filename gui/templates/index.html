@@ -34,6 +34,38 @@
     .carte-panel-error { color: #c0392b; font-size: 11px; }
     .carte-panel-pays-btn { display: block; width: 100%; margin-bottom: 4px; text-align: left; }
     #carte-panel-msg { font-size: 11px; color: #3b6fd4; margin-top: 8px; }
+
+    /* ── Toggle "forcer le modèle" ── */
+    .llm-force-row {
+      display: flex; align-items: flex-start; gap: 6px;
+      font-size: 11px; color: #888; margin-top: 8px; line-height: 1.4; cursor: pointer;
+    }
+    .llm-force-row input[type="checkbox"] { margin-top: 1px; cursor: pointer; }
+    .llm-force-row.active { color: #7a5010; }
+    #llm-routing-note { font-size: 10px; color: #999; margin-top: 4px; font-style: italic; }
+
+    /* ── Note contextuelle par mode (sous les onglets Mode) ── */
+    .mode-note {
+      font-size: 11px; color: #5a7a9a; background: #eef4fa;
+      border-left: 2px solid #a8c8e8; padding: 6px 10px;
+      margin-top: 8px; border-radius: 0 4px 4px 0; line-height: 1.4;
+    }
+
+    /* ── Bandeau d'alerte "modèle forcé" — sticky, visible sur toute vue ── */
+    #llm-force-banner {
+      display: none;
+      background: #fff4e0; border-bottom: 2px solid #e0b060;
+      color: #7a5010; font-size: 12px; font-weight: 600;
+      padding: 8px 20px; display: flex; align-items: center; gap: 10px;
+      flex-shrink: 0;
+    }
+    #llm-force-banner .icon { font-size: 14px; }
+    #llm-force-banner button {
+      margin-left: auto; font-size: 11px; font-weight: 400;
+      background: #fff; border: 1px solid #e0b060; border-radius: 4px;
+      padding: 3px 10px; cursor: pointer; color: #7a5010;
+    }
+    #llm-force-banner button:hover { background: #fff0d0; }
   </style>
 </head>
 <body>
@@ -59,6 +91,11 @@
         </select>
         <span id="llm-cost-badge" class="cost-badge cost-eco">éco</span>
       </div>
+      <label class="llm-force-row" id="llm-force-row" for="llm-force-override">
+        <input type="checkbox" id="llm-force-override">
+        <span>Forcer ce modèle pour le prochain lancement</span>
+      </label>
+      <div id="llm-routing-note">Sinon : routing automatique par tier (voir llm_client.py)</div>
     </div>
 
     <nav id="nav">
@@ -69,6 +106,13 @@
 
   <!-- ══ ZONE PRINCIPALE ══════════════════════════════════ -->
   <main id="main">
+
+    <div id="llm-force-banner">
+      <span class="icon">⚠</span>
+      <span>Modèle forcé actif : <strong id="llm-force-banner-text">—</strong> — tous les scripts lancés ignorent le routing par tier tant que ce n'est pas décoché.</span>
+      <button id="llm-force-banner-undo">Désactiver</button>
+    </div>
+
 
     <!-- Vue script -->
     <div id="script-view" style="display:none; flex-direction:column; flex:1; overflow:hidden;">

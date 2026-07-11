@@ -9250,3 +9250,806 @@ processed:
   role_ref: Consortium privé opérant dans le bassin amazonien, exploitant les zones
     grises juridiques pour extraire et breveter des ressources génétiques forestières.
   etat_ref: actif
+- status: injected
+  idea:
+    nom: Amazonie Consortium Viva
+    category: entreprise
+    role: Consortium privé regroupant des intérêts agro-industriels et biotechnologiques
+      opérant dans le bassin amazonien dans un contexte de fragmentation réglementaire
+      mondiale. Viva exploite les zones grises juridiques entre États affaiblis pour
+      extraire et breveter des ressources génétiques forestières. Sa gouvernance actionnariale
+      diffuse le rend difficile à réguler ou à contraindre diplomatiquement.
+    etat: actif
+    scenario_ref: reference
+    scenario_hint:
+    - reference
+  slug: amazonie_consortium_viva
+  scenarios:
+  - reference
+  archetype:
+    description_complete: L'archétype du **Consortium Extractiviste Transnational**
+      incarne la logique de l'accumulation capitaliste appliquée aux ressources naturelles
+      et biologiques, opérant à l'échelle globale en exploitant les failles juridiques
+      et les déséquilibres de pouvoir. Il fusionne agro-industrie, biotechnologies
+      et gouvernance diffuse pour breveter et monopoliser le vivant, transformant
+      les écosystèmes en actifs financiers. Son modèle repose sur la fragmentation
+      des souverainetés étatiques et la privatisation des communs, tout en se présentant
+      comme un acteur indispensable à la stabilité économique mondiale.
+    tension_fondamentale: Cette entité porte en elle la contradiction fondamentale
+      entre **l'extraction infinie des ressources** (nécessaire à son modèle économique)
+      et **la finitude écologique** (qui menace sa propre survie). Elle incarne aussi
+      le conflit entre **l'universalité des droits biologiques** (accès aux semences,
+      aux écosystèmes) et **la propriété intellectuelle privatisée**, ainsi qu'entre
+      **l'efficacité économique** et **la légitimité démocratique** (gouvernance opaque,
+      actionnariat diffus).
+    variables_potentielles:
+    - sante_biotechnologies
+    - climat_environnement_global
+    - energie_ressources_critiques
+    - frontieres_du_systeme
+    - gouvernance_institutions
+    doublon_detecte: false
+    doublon_slug: null
+  scenario_ref: reference
+  role_ref: Consortium privé regroupant des intérêts agro-industriels et biotechnologiques
+    opérant dans le bassin amazonien dans un contexte de fragmentation réglementaire
+    mondiale. Viva exploite les zones grises juridiques entre États affaiblis pour
+    extraire et breveter des ressources génétiques forestières. Sa gouvernance actionnariale
+    diffuse le rend difficile à réguler ou à contraindre diplomatiquement.
+  etat_ref: actif
+- status: injected
+  idea:
+    nom: Corridor Lithium Bouches
+    category: territoire
+    role: Le Corridor Lithium Bouches désigne une zone d'extraction et de convoyage
+      du lithium sud-américain dont les institutions de régulation se sont effondrées,
+      laissant place à des milices locales et des seigneurs de guerre miniers. Les
+      flux d'approvisionnement y sont erratiques, négociés au cas par cas entre communautés
+      survivantes et acheteurs étrangers désespérés. Ce territoire morcelé représente
+      un enjeu vital pour quiconque cherche encore à alimenter des batteries ou des
+      systèmes énergétiques.
+    etat: actif
+    scenario_ref: breakdown
+    scenario_hint:
+    - breakdown
+  slug: corridor_lithium_bouches
+  scenarios:
+  - breakdown
+  archetype:
+    description_complete: Le Corridor Lithium Bouches incarne l'archétype intemporel
+      du **territoire vital sans souveraineté légitime**, un espace où la valeur stratégique
+      d'une ressource critique (ici le lithium) dépasse toute autorité institutionnelle.
+      Il fonctionne comme un flux discontinu, un lieu de transit et d'extraction où
+      les institutions se sont effondrées, laissant place à des acteurs locaux et
+      des milices qui négocient l'accès à cette ressource vitale. Ce territoire est
+      à la fois un enjeu géopolitique et un espace de survie, où la fluidité des échanges
+      prime sur toute forme de gouvernance stable.
+    tension_fondamentale: La contradiction entre la **nécessité collective** d'accéder
+      à une ressource indispensable et l'**absence de cadre légitime** pour en réguler
+      l'exploitation. Ce territoire est indispensable à la survie des systèmes énergétiques
+      globaux, mais son contrôle échappe à toute autorité centralisée, créant un déséquilibre
+      structurel entre utilité et légitimité.
+    variables_potentielles:
+    - energie_ressources_critiques
+    - geopolitique_conflits
+    - organisation_territoires
+    - frontieres_du_systeme
+    doublon_detecte: false
+    doublon_slug: null
+  scenario_ref: breakdown
+  role_ref: Le Corridor Lithium Bouches désigne une zone d'extraction et de convoyage
+    du lithium sud-américain dont les institutions de régulation se sont effondrées,
+    laissant place à des milices locales et des seigneurs de guerre miniers. Les flux
+    d'approvisionnement y sont erratiques, négociés au cas par cas entre communautés
+    survivantes et acheteurs étrangers désespérés. Ce territoire morcelé représente
+    un enjeu vital pour quiconque cherche encore à alimenter des batteries ou des
+    systèmes énergétiques.
+  etat_ref: actif
+- status: injected
+  idea:
+    nom: Vallee Allier Terrafond
+    category: territoire
+    role: Territoire semi-rural de la vallée de l'Allier reconstitué autour d'un fonds
+      foncier collectif dit Terrafond, gérant les terres arables et les ressources
+      en eau après l'effondrement des structures propriétaires classiques. Dans un
+      contexte de fragmentation institutionnelle, ce territoire fait figure de modèle
+      précaire de gouvernance locale de survie, constamment sous pression de factions
+      extérieures.
+    etat: actif
+    scenario_ref: breakdown
+    scenario_hint:
+    - breakdown
+  slug: vallee_allier_terrafond
+  scenarios:
+  - breakdown
+  archetype:
+    description_complete: Le **Commun Territorial Résilient** incarne l'autonomie
+      locale face à l'effondrement des structures étatiques ou globales. Il se construit
+      autour d'une ressource vitale partagée (terre, eau, savoir) gérée collectivement,
+      souvent en marge des institutions dominantes. Son existence repose sur une gouvernance
+      horizontale et une identité collective forte, mais elle est constamment menacée
+      par des pressions extérieures (factions, blocs, marchés) qui cherchent à s'approprier
+      ou contrôler ces ressources. Ce modèle préfigure une résilience par la coopération
+      locale, mais se heurte à l'inévitable tension entre fermeture protectrice et
+      ouverture nécessaire.
+    tension_fondamentale: La contradiction entre l'autonomie locale et la nécessité
+      de s'inscrire dans des réseaux plus larges pour survivre. Plus le territoire
+      est résilient et fermé, plus il risque l'isolement et la marginalisation ; plus
+      il s'ouvre, plus il perd son autonomie. Cette tension révèle l'impossibilité
+      de concilier parfaitement sécurité collective et liberté individuelle dans un
+      monde fragmenté.
+    variables_potentielles:
+    - organisation_territoires
+    - valeurs_culture_tempo_sociale
+    - systeme_economique_redistribution
+    - gouvernance_institutions
+    doublon_detecte: false
+    doublon_slug: null
+  scenario_ref: breakdown
+  role_ref: Territoire semi-rural de la vallée de l'Allier reconstitué autour d'un
+    fonds foncier collectif dit Terrafond, gérant les terres arables et les ressources
+    en eau après l'effondrement des structures propriétaires classiques. Dans un contexte
+    de fragmentation institutionnelle, ce territoire fait figure de modèle précaire
+    de gouvernance locale de survie, constamment sous pression de factions extérieures.
+  etat_ref: actif
+- status: injected
+  idea:
+    nom: Massif Central Cicatrices Vertes
+    category: territoire
+    role: Territoire fragmenté du Massif Central français, marqué par des décennies
+      de reforestation chaotique et de reconquête végétale sur des terres agricoles
+      abandonnées après l'effondrement des circuits alimentaires nationaux. Des communautés
+      autonomes s'y sont établies, vivant en autarcie partielle et gérant collectivement
+      des ressources forestières disputées. Ces 'cicatrices vertes' sont à la fois
+      refuge et enjeu de conflits fonciers entre clans locaux.
+    etat: actif
+    scenario_ref: breakdown
+    scenario_hint:
+    - breakdown
+  slug: massif_central_cicatrices_vertes
+  scenarios:
+  - breakdown
+  archetype:
+    description_complete: Un territoire marqué par l'effondrement des structures centrales
+      et la reconquête autonome par des communautés locales, devenant à la fois un
+      refuge et un enjeu de pouvoir. Il incarne la résilience par l'auto-organisation,
+      mais aussi la fragmentation et les conflits pour le contrôle des ressources.
+      Son existence même questionne la légitimité des institutions traditionnelles
+      face à l'émergence de nouvelles formes de gouvernance territoriale.
+    tension_fondamentale: La contradiction entre l'autonomie locale et la nécessité
+      de s'inscrire dans des réseaux plus larges, entre la liberté de s'organiser
+      et la dépendance aux ressources extérieures. Ce territoire est à la fois un
+      espace de liberté et un champ de bataille pour des acteurs qui cherchent à le
+      contrôler ou à l'exploiter.
+    variables_potentielles:
+    - organisation_territoires
+    - climat_environnement_global
+    - demographie_mobilite_humaine
+    - systemes_productifs_travail
+    doublon_detecte: false
+    doublon_slug: null
+  scenario_ref: breakdown
+  role_ref: Territoire fragmenté du Massif Central français, marqué par des décennies
+    de reforestation chaotique et de reconquête végétale sur des terres agricoles
+    abandonnées après l'effondrement des circuits alimentaires nationaux. Des communautés
+    autonomes s'y sont établies, vivant en autarcie partielle et gérant collectivement
+    des ressources forestières disputées. Ces 'cicatrices vertes' sont à la fois refuge
+    et enjeu de conflits fonciers entre clans locaux.
+  etat_ref: actif
+- status: injected
+  idea:
+    nom: Corridors Gris Asie Centrale
+    category: territoire
+    role: Les Corridors Gris Asie Centrale sont des zones tampons non officielles
+      situées entre les forteresses climatiques des grandes métropoles d'Asie centrale,
+      peuplées de populations non accréditées et de travailleurs clandestins. Sous
+      surveillance satellitaire permanente des forteresses adjacentes, ces espaces
+      servent de réservoirs de main-d'œuvre bon marché tolérés mais jamais reconnus.
+      Toute organisation politique y est réprimée, mais ils constituent un nœud nerveux
+      du commerce informel régional.
+    etat: actif
+    scenario_ref: fortress_world
+    scenario_hint:
+    - fortress_world
+  slug: corridors_gris_asie_centrale
+  scenarios:
+  - fortress_world
+  archetype:
+    description_complete: Le corridor gris est un espace interstitiel toléré mais
+      jamais reconnu, situé entre des zones de pouvoir formalisé. Il abrite ceux que
+      le système a exclus de la citoyenneté tout en continuant à exploiter leur force
+      de travail ou leur position géographique. Ni dedans ni dehors, il existe précisément
+      parce qu'il est utile aux puissances qui l'ignorent officiellement. C'est le
+      lieu où l'économie informelle, la mobilité clandestine et la résistance diffuse
+      coexistent sous une surveillance qui surveille sans intervenir, contrôle sans
+      reconnaître.
+    tension_fondamentale: 'Le corridor gris ne peut exister qu''en demeurant inclassable
+      et diffus — trop insaisissable pour être fermé, trop utile pour être légitimé
+      — mais cette indétermination même est la condition de sa servitude : il ne peut
+      revendiquer de droits sans cesser d''être toléré, et ne peut disparaître sans
+      que le système qui l''exploite s''effondre partiellement.'
+    variables_potentielles:
+    - organisation_territoires
+    - demographie_mobilite_humaine
+    - systemes_productifs_travail
+    - geopolitique_conflits
+    - frontieres_du_systeme
+    doublon_detecte: false
+    doublon_slug: null
+  scenario_ref: fortress_world
+  role_ref: Les Corridors Gris Asie Centrale sont des zones tampons non officielles
+    situées entre les forteresses climatiques des grandes métropoles d'Asie centrale,
+    peuplées de populations non accréditées et de travailleurs clandestins. Sous surveillance
+    satellitaire permanente des forteresses adjacentes, ces espaces servent de réservoirs
+    de main-d'œuvre bon marché tolérés mais jamais reconnus. Toute organisation politique
+    y est réprimée, mais ils constituent un nœud nerveux du commerce informel régional.
+  etat_ref: actif
+- status: injected
+  idea:
+    nom: Delta Du Gange
+    category: territoire
+    role: Territoire en crise permanente, submergé par la montée des eaux et les migrations
+      massives qu'elle génère. Le Delta du Gange cristallise les tensions entre États
+      riverains incapables de s'entendre sur un régime de gestion commune. Sa population,
+      partiellement déplacée, alimente les flux migratoires qui fracturent davantage
+      un monde déjà fragmenté.
+    etat: actif
+    scenario_ref: reference
+    scenario_hint:
+    - reference
+  slug: delta_du_gange
+  scenarios:
+  - reference
+  archetype:
+    description_complete: 'Le Delta du Gange est l''archétype du territoire-martyr
+      de la crise climatique : un espace de civilisation millénaire, façonné par la
+      confluence des grands fleuves et la densité humaine qui s''y est enracinée,
+      condamné à disparaître sous les eaux au rythme même où il génère les flux migratoires
+      qui fracturent les équilibres régionaux. Il incarne la figure du territoire
+      sacrifié par l''incapacité des États riverains à construire une gouvernance
+      commune — trop peuplé pour être abandonné sans catastrophe humanitaire, trop
+      disputé pour être protégé sans arbitrage politique impossible. Sa singularité
+      tient à la dimension sous-continentale du conflit qu''il cristallise : il n''est
+      pas seulement un delta qui se noie, mais le point de convergence des souverainetés
+      incompatibles de puissances majeures incapables de s''entendre sur le partage
+      d''un destin commun.'
+    tension_fondamentale: Ce territoire porte la contradiction entre son rôle de berceau
+      de vie pour des centaines de millions d'êtres humains et son statut de variable
+      d'ajustement dans des rivalités géopolitiques qui le dépassent — plus il s'efface
+      sous les eaux, plus il produit des réfugiés que personne ne veut accueillir,
+      et moins les États qui pourraient le sauver ont intérêt à coopérer pour le faire.
+    variables_potentielles:
+    - climat_environnement_global
+    - demographie_mobilite_humaine
+    - geopolitique_conflits
+    - gouvernance_institutions
+    - organisation_territoires
+    doublon_detecte: false
+    doublon_slug: null
+  scenario_ref: reference
+  role_ref: Territoire en crise permanente, submergé par la montée des eaux et les
+    migrations massives qu'elle génère. Le Delta du Gange cristallise les tensions
+    entre États riverains incapables de s'entendre sur un régime de gestion commune.
+    Sa population, partiellement déplacée, alimente les flux migratoires qui fracturent
+    davantage un monde déjà fragmenté.
+  etat_ref: actif
+- status: injected
+  idea:
+    nom: Delta Du Mekong
+    category: territoire
+    role: Zone de convergence des pressions climatiques, agricoles et géopolitiques
+      en Asie du Sud-Est, où plusieurs États revendiquent des droits d'exploitation
+      concurrents. Le Delta du Mekong subit l'effondrement progressif de ses écosystèmes
+      nourriciers sous l'effet combiné des barrages en amont et de la salinisation
+      côtière. Il reste un point de friction non résolu entre puissances régionales.
+    etat: actif
+    scenario_ref: reference
+    scenario_hint:
+    - reference
+  slug: delta_du_mekong
+  scenarios:
+  - reference
+  archetype:
+    description_complete: Le Delta du Mekong est un territoire-carrefour d'Asie du
+      Sud-Est où la vie s'est construite sur l'abondance d'un écosystème nourricier
+      façonné par des siècles de sédimentation, de crues saisonnières et d'adaptation
+      humaine. Il concentre en un même espace des populations denses, des agricultures
+      vitales pour la sécurité alimentaire régionale, des routes commerciales fluviales
+      et des revendications souveraines concurrentes entre plusieurs États riverains.
+      Sa vulnérabilité structurelle — dépendance aux flux hydriques venant de l'amont
+      contrôlé par des puissances étrangères, exposition à la salinisation côtière
+      et à la subsidence, porosité aux pressions géopolitiques extérieures — en fait
+      le révélateur par excellence des contradictions entre exploitation nationale
+      et préservation écologique partagée. Il est le lieu où les crises globales —
+      climatiques, hydrauliques, alimentaires — se matérialisent en destins locaux
+      concrets pour des dizaines de millions de personnes.
+    tension_fondamentale: Le delta ne peut être préservé que par une gouvernance partagée
+      que les États riverains refusent structurellement d'accepter, car chacun maximise
+      son extraction en amont tout en rejetant sur les autres la responsabilité de
+      l'effondrement en aval — condamnant ainsi le territoire à servir de variable
+      d'ajustement entre des souverainetés qui ne se reconnaissent aucune obligation
+      commune envers l'écosystème qui les nourrit.
+    variables_potentielles:
+    - climat_environnement_global
+    - geopolitique_conflits
+    - energie_ressources_critiques
+    - organisation_territoires
+    - demographie_mobilite_humaine
+    - gouvernance_institutions
+    doublon_detecte: false
+    doublon_slug: null
+  scenario_ref: reference
+  role_ref: Zone de convergence des pressions climatiques, agricoles et géopolitiques
+    en Asie du Sud-Est, où plusieurs États revendiquent des droits d'exploitation
+    concurrents. Le Delta du Mekong subit l'effondrement progressif de ses écosystèmes
+    nourriciers sous l'effet combiné des barrages en amont et de la salinisation côtière.
+    Il reste un point de friction non résolu entre puissances régionales.
+  etat_ref: actif
+- status: injected
+  idea:
+    nom: Delta Mekong Racines
+    category: territoire
+    role: Ce qui subsiste du Delta du Mekong après l'effondrement des structures étatiques
+      est désormais géré par des collectifs locaux enracinés dans des pratiques agricoles
+      et spirituelles ancestrales. Ces communautés de survie ont rompu avec les institutions
+      défaillantes pour développer des formes d'autonomie hydrique et alimentaire
+      fragmentées. Le territoire est devenu un laboratoire improvisé de résilience
+      locale, jalousement défendu contre toute ingérence extérieure.
+    etat: actif
+    scenario_ref: breakdown
+    scenario_hint:
+    - breakdown
+  slug: delta_mekong_racines
+  scenarios:
+  - breakdown
+  archetype:
+    description_complete: Un territoire qui, après l'effondrement ou le retrait des
+      structures centrales, se réorganise autour de pratiques ancestrales, de savoirs
+      locaux et de liens communautaires profonds pour assurer sa propre survie. Ce
+      type d'entité incarne la capacité d'un espace géographique à devenir sujet politique
+      autonome en puisant dans ses racines culturelles, spirituelles et agricoles
+      plutôt que dans les institutions défaillantes. Il représente la résilience du
+      local contre la fragilité du global, la mémoire vivante comme ressource de gouvernance,
+      et la terre comme fondement d'un ordre social alternatif.
+    tension_fondamentale: La clôture jalouse qui permet la survie collective — refus
+      de l'ingérence extérieure, fragmentation assumée, méfiance envers tout ce qui
+      vient du dehors — est précisément ce qui empêche ce territoire de s'inscrire
+      dans des solidarités plus larges, de partager ses savoirs et d'éviter que son
+      autonomie ne se referme en autarcie identitaire ou en seigneurie locale.
+    variables_potentielles:
+    - organisation_territoires
+    - valeurs_culture_tempo_sociale
+    - gouvernance_institutions
+    - energie_ressources_critiques
+    - systemes_productifs_travail
+    doublon_detecte: false
+    doublon_slug: null
+  scenario_ref: breakdown
+  role_ref: Ce qui subsiste du Delta du Mekong après l'effondrement des structures
+    étatiques est désormais géré par des collectifs locaux enracinés dans des pratiques
+    agricoles et spirituelles ancestrales. Ces communautés de survie ont rompu avec
+    les institutions défaillantes pour développer des formes d'autonomie hydrique
+    et alimentaire fragmentées. Le territoire est devenu un laboratoire improvisé
+    de résilience locale, jalousement défendu contre toute ingérence extérieure.
+  etat_ref: actif
+- status: injected
+  idea:
+    nom: District Mourmansk Residuel
+    category: territoire
+    role: Vestige administratif de l'ancienne oblast russe de Mourmansk, maintenu
+      sous une autorité locale de fait après la désintégration des structures fédérales.
+      Il contrôle l'accès aux infrastructures portuaires arctiques dans un contexte
+      de compétition entre milices et opérateurs privés. Sa souveraineté n'est reconnue
+      par aucun État constitué.
+    etat: actif
+    scenario_ref: breakdown
+    scenario_hint:
+    - breakdown
+  slug: district_mourmansk_residuel
+  scenarios:
+  - breakdown
+  archetype:
+    description_complete: Le Territoire Résiduel est un espace politique et administratif
+      qui survit à la désintégration de l'ordre qui l'a engendré, maintenant une autorité
+      de fait sur des infrastructures stratégiques sans disposer d'aucune reconnaissance
+      formelle. Il incarne la persistance d'une structure de gouvernance locale dans
+      le vide laissé par l'effondrement des souverainetés supérieures, tirant sa légitimité
+      non d'un mandat juridique mais du seul contrôle opérationnel qu'il exerce sur
+      des ressources ou des passages indispensables. Sa survie repose sur son utilité
+      pour des acteurs extérieurs qui le tolèrent sans le reconnaître, dans un équilibre
+      précaire entre compétition, prédation et dépendance mutuelle.
+    tension_fondamentale: 'La souveraineté de fait sans légitimité de droit : cette
+      entité tire son pouvoir de la maîtrise d''un nœud stratégique, mais cette maîtrise
+      même attire les convoitises qui menacent son existence — être indispensable
+      est sa seule protection et sa principale vulnérabilité.'
+    variables_potentielles:
+    - organisation_territoires
+    - geopolitique_conflits
+    - gouvernance_institutions
+    - energie_ressources_critiques
+    - frontieres_du_systeme
+    doublon_detecte: false
+    doublon_slug: null
+  scenario_ref: breakdown
+  role_ref: Vestige administratif de l'ancienne oblast russe de Mourmansk, maintenu
+    sous une autorité locale de fait après la désintégration des structures fédérales.
+    Il contrôle l'accès aux infrastructures portuaires arctiques dans un contexte
+    de compétition entre milices et opérateurs privés. Sa souveraineté n'est reconnue
+    par aucun État constitué.
+  etat_ref: actif
+- status: injected
+  idea:
+    nom: Enclaves Extractivistes Et Etats Residuels
+    category: territoire
+    role: Ensemble hétérogène de zones extractives et d'États-coquilles persistant
+      en marge des communautés autogérées, exploitant des ressources que les collectifs
+      éco-communalistes refusent de mobiliser. Ils constituent un pôle de tension
+      permanent avec les réseaux décroissants, attirant main-d'œuvre précaire et capitaux
+      résiduels. Leur existence est tolérée de fait, mais moralement condamnée par
+      les assemblées locales.
+    etat: actif
+    scenario_ref: eco_communalism
+    scenario_hint:
+    - eco_communalism
+  slug: enclaves_extractivistes_et_etats_residuels
+  scenarios:
+  - eco_communalism
+  archetype:
+    description_complete: 'Les enclaves extractivistes et États résiduels incarnent
+      la persistance obstinée des logiques d''exploitation et de souveraineté formelle
+      dans les marges d''un ordre dominant qui les rejette sans pouvoir les éliminer.
+      Territoires hybrides entre zone économique opportuniste et coquille étatique
+      dégradée, ils survivent en mobilisant ce que les systèmes vertueux refusent
+      de toucher : ressources épuisées, main-d''œuvre précaire, capitaux sans éthique.
+      Leur existence est structurellement parasite de l''ordre qu''ils contredisent,
+      prospérant dans les interstices laissés par les idéaux collectifs. Ils représentent
+      la part maudite de tout projet civilisationnel — ce que la société refuse d''être
+      mais dont elle tolère l''existence parce qu''elle en a besoin.'
+    tension_fondamentale: 'Ces entités sont à la fois condamnées moralement et tolérées
+      fonctionnellement : leur existence est la preuve que l''ordre dominant est incomplet,
+      et leur disparition révélerait les compromis que cet ordre refuse d''assumer
+      lui-même.'
+    variables_potentielles:
+    - energie_ressources_critiques
+    - organisation_territoires
+    - systemes_productifs_travail
+    - geopolitique_conflits
+    - valeurs_culture_tempo_sociale
+    doublon_detecte: false
+    doublon_slug: null
+  scenario_ref: eco_communalism
+  role_ref: Ensemble hétérogène de zones extractives et d'États-coquilles persistant
+    en marge des communautés autogérées, exploitant des ressources que les collectifs
+    éco-communalistes refusent de mobiliser. Ils constituent un pôle de tension permanent
+    avec les réseaux décroissants, attirant main-d'œuvre précaire et capitaux résiduels.
+    Leur existence est tolérée de fait, mais moralement condamnée par les assemblées
+    locales.
+  etat_ref: actif
+- status: injected
+  idea:
+    nom: Enclaves Finlandaises
+    category: territoire
+    role: Territoires semi-autonomes issus de la fragmentation de l'État finlandais,
+      organisés autour de réseaux de villes moyennes et de coopératives de survie
+      nordiques. Chaque enclave gère localement ses ressources énergétiques et alimentaires,
+      sans coordination centrale stable. Elles entretiennent des relations pragmatiques
+      et méfiantes avec les puissances arctiques voisines.
+    etat: actif
+    scenario_ref: breakdown
+    scenario_hint:
+    - breakdown
+  slug: enclaves_finlandaises
+  scenarios:
+  - breakdown
+  archetype:
+    description_complete: 'Un territoire fragmenté qui, après l''effondrement d''une
+      autorité centrale, se réorganise en unités semi-autonomes articulées autour
+      de ressources locales, de solidarités de proximité et de pragmatisme de survie.
+      Ces enclaves ne sont ni des États reconstitués ni de simples communautés : elles
+      incarnent une forme intermédiaire de souveraineté partielle, fondée sur la gestion
+      collective des ressources vitales et sur des alliances de circonstance avec
+      les puissances environnantes. Elles représentent la capacité humaine à reconstruire
+      un ordre minimal dans le chaos, sans attendre de légitimité extérieure, mais
+      au prix d''une vulnérabilité structurelle face aux acteurs plus puissants qui
+      les entourent.'
+    tension_fondamentale: L'autonomie locale qui garantit la survie repose sur l'absence
+      de coordination centrale — mais cette même fragmentation empêche toute réponse
+      collective aux menaces extérieures et rend chaque enclave durablement exposée
+      à la prédation ou à l'absorption par les puissances voisines.
+    variables_potentielles:
+    - organisation_territoires
+    - gouvernance_institutions
+    - energie_ressources_critiques
+    - geopolitique_conflits
+    - demographie_mobilite_humaine
+    doublon_detecte: false
+    doublon_slug: null
+  scenario_ref: breakdown
+  role_ref: Territoires semi-autonomes issus de la fragmentation de l'État finlandais,
+    organisés autour de réseaux de villes moyennes et de coopératives de survie nordiques.
+    Chaque enclave gère localement ses ressources énergétiques et alimentaires, sans
+    coordination centrale stable. Elles entretiennent des relations pragmatiques et
+    méfiantes avec les puissances arctiques voisines.
+  etat_ref: actif
+- status: injected
+  idea:
+    nom: Murmansk Transit Arctique
+    category: territoire
+    role: Plaque tournante stratégique du trafic maritime et énergétique arctique,
+      Murmansk s'est imposée comme nœud incontournable des nouvelles routes commerciales
+      ouvertes par la fonte des glaces polaires. Le territoire est administré par
+      un consortium russo-scandinave fragile, soumis aux pressions concurrentes des
+      puissances cherchant à contrôler le passage du Nord-Est. Sa position géopolitique
+      en fait un terrain de négociations permanentes et de tensions sourdes entre
+      acteurs étatiques et corporatifs.
+    etat: actif
+    scenario_ref: reference
+    scenario_hint:
+    - reference
+  slug: murmansk_transit_arctique
+  scenarios:
+  - reference
+  archetype:
+    description_complete: 'Le Nœud de Transit Stratégique est un territoire dont la
+      valeur ne réside pas dans ses ressources propres mais dans sa position : il
+      est le point de passage obligé entre des espaces que d''autres veulent relier
+      ou séparer. Sa puissance est entièrement relationnelle — il n''existe que par
+      les flux qui le traversent et les acteurs qui se disputent le droit de les contrôler.
+      Administré par des coalitions fragiles et provisoires, il est structurellement
+      incapable de se doter d''une souveraineté stable, car sa stabilité même dépend
+      de l''équilibre instable entre des puissances extérieures qui préfèrent le partager
+      plutôt que de le laisser à un seul. Il incarne la géographie comme destin :
+      condamné à être convoité, jamais vraiment possédé.'
+    tension_fondamentale: 'La position de nœud indispensable confère une puissance
+      d''attraction et de levier exceptionnelle, mais cette même indispensabilité
+      fait du territoire une cible permanente et lui interdit toute autonomie réelle
+      : plus il est vital, moins il peut se gouverner lui-même.'
+    variables_potentielles:
+    - geopolitique_conflits
+    - energie_ressources_critiques
+    - organisation_territoires
+    - frontieres_du_systeme
+    - gouvernance_institutions
+    doublon_detecte: false
+    doublon_slug: null
+  scenario_ref: reference
+  role_ref: Plaque tournante stratégique du trafic maritime et énergétique arctique,
+    Murmansk s'est imposée comme nœud incontournable des nouvelles routes commerciales
+    ouvertes par la fonte des glaces polaires. Le territoire est administré par un
+    consortium russo-scandinave fragile, soumis aux pressions concurrentes des puissances
+    cherchant à contrôler le passage du Nord-Est. Sa position géopolitique en fait
+    un terrain de négociations permanentes et de tensions sourdes entre acteurs étatiques
+    et corporatifs.
+  etat_ref: actif
+- status: injected
+  idea:
+    nom: Tbilissi Nord Zone Franche
+    category: territoire
+    role: Enclave urbaine fortifiée au nord de Tbilissi, la Zone Franche s'est transformée
+      en territoire-forteresse géré par un consortium privé de sécurité climatique.
+      Elle abrite les élites caucasiennes et les expatriés fortunés derrière des murs
+      thermiques et des systèmes de surveillance biométrique, tandis que les zones
+      périphériques sont laissées à la dégradation environnementale.
+    etat: actif
+    scenario_ref: fortress_world
+    scenario_hint:
+    - fortress_world
+  slug: tbilissi_nord_zone_franche
+  scenarios:
+  - fortress_world
+  archetype:
+    description_complete: L'enclave fortifiée est un territoire qui s'arrache délibérément
+      au destin commun pour garantir à ses résidents une sécurité, un confort et une
+      continuité que le monde extérieur ne peut plus offrir. Gouvernée par des intérêts
+      privés ou oligarchiques plutôt que par une légitimité publique, elle transforme
+      la protection en marchandise et le territoire en actif stratégique. Elle concentre
+      les ressources, les technologies et les corps solvables derrière des frontières
+      physiques et numériques, produisant structurellement la dégradation des zones
+      qu'elle exclut. Elle incarne la tentation universelle de sauver les siens en
+      abandonnant les autres, et de nommer cet abandon 'résilience'.
+    tension_fondamentale: 'La sécurité absolue promise à l''intérieur repose structurellement
+      sur l''insécurité produite à l''extérieur : l''enclave ne peut se maintenir
+      qu''en absorbant des ressources — humaines, énergétiques, territoriales — prélevées
+      sur les zones qu''elle condamne, rendant sa survie inséparable de la destruction
+      qu''elle prétend fuir.'
+    variables_potentielles:
+    - organisation_territoires
+    - gouvernance_institutions
+    - frontieres_du_systeme
+    - demographie_mobilite_humaine
+    - climat_environnement_global
+    - energie_ressources_critiques
+    doublon_detecte: false
+    doublon_slug: null
+  scenario_ref: fortress_world
+  role_ref: Enclave urbaine fortifiée au nord de Tbilissi, la Zone Franche s'est transformée
+    en territoire-forteresse géré par un consortium privé de sécurité climatique.
+    Elle abrite les élites caucasiennes et les expatriés fortunés derrière des murs
+    thermiques et des systèmes de surveillance biométrique, tandis que les zones périphériques
+    sont laissées à la dégradation environnementale.
+  etat_ref: actif
+- status: injected
+  idea:
+    nom: Zones Extractivistes Corridors
+    category: territoire
+    role: Anciens territoires d'extraction minière et énergétique progressivement
+      reconvertis en corridors de transit écologique par des coalitions communautaires.
+      Ces zones servent de liens entre communautés autonomes qui refusent la logique
+      des flux globaux et privilégient les circuits courts. Leur statut est disputé
+      entre les réseaux communalistes qui les revendiquent et les anciennes multinationales
+      qui y détiennent encore des titres fonciers.
+    etat: transformé
+    scenario_ref: eco_communalism
+    scenario_hint:
+    - eco_communalism
+  slug: zones_extractivistes_corridors
+  scenarios:
+  - eco_communalism
+  archetype:
+    description_complete: 'Le territoire de reconversion est un espace qui a subi
+      une transformation radicale de sa vocation : anciennement voué à l''extraction
+      et à l''épuisement, il devient progressivement un lieu de passage, de régénération
+      et de lien entre des entités séparées. Il incarne la mémoire d''une blessure
+      productive — mines, puits, carrières — que des acteurs communautaires tentent
+      de transmuter en bien commun vivant. Sa géographie porte simultanément les cicatrices
+      du passé extractif et les promesses d''un futur régénératif, faisant de lui
+      un palimpseste territorial où s''affrontent des logiques de propriété héritée
+      et des logiques de communs émergents. Il est structurellement un espace de transition
+      : ni pleinement abandonné, ni pleinement reconquis, il existe dans l''entre-deux
+      de ce que fut un territoire et de ce qu''il pourrait devenir.'
+    tension_fondamentale: La reconversion d'un territoire d'extraction en bien commun
+      régénératif suppose d'effacer ou de dépasser les droits de propriété hérités
+      — mais ces droits persistent précisément parce qu'ils ont été inscrits dans
+      des corps juridiques et des titres fonciers que la transformation sociale n'a
+      pas abolis ; la légitimité communautaire de l'usage présent se heurte à la légalité
+      résiduelle de la possession passée.
+    variables_potentielles:
+    - organisation_territoires
+    - energie_ressources_critiques
+    - gouvernance_institutions
+    - climat_environnement_global
+    - geopolitique_conflits
+    doublon_detecte: false
+    doublon_slug: null
+  scenario_ref: eco_communalism
+  role_ref: Anciens territoires d'extraction minière et énergétique progressivement
+    reconvertis en corridors de transit écologique par des coalitions communautaires.
+    Ces zones servent de liens entre communautés autonomes qui refusent la logique
+    des flux globaux et privilégient les circuits courts. Leur statut est disputé
+    entre les réseaux communalistes qui les revendiquent et les anciennes multinationales
+    qui y détiennent encore des titres fonciers.
+  etat_ref: transformé
+- status: injected
+  idea:
+    nom: Zones Grises Tampons
+    category: territoire
+    role: 'Territoires-tampons maintenus délibérément dans un état de flou juridique
+      et infrastructurel entre les forteresses climatiques et les zones d''exclusion.
+      Ils servent de sas de contrôle, de réservoirs de main-d''œuvre précaire et de
+      zones d''absorption des flux migratoires que les forteresses ne veulent ni accueillir
+      ni laisser périr visiblement. Leur population est soumise à une surveillance
+      asymétrique : observable depuis les forteresses, mais sans recours institutionnel.'
+    etat: actif
+    scenario_ref: fortress_world
+    scenario_hint:
+    - fortress_world
+  slug: zones_grises_tampons
+  scenarios:
+  - fortress_world
+  archetype:
+    description_complete: 'Le territoire-sas est un espace délibérément maintenu dans
+      l''indétermination juridique, infrastructurelle et politique par des puissances
+      qui l''encadrent sans l''assumer. Il n''est ni dedans ni dehors, ni protégé
+      ni abandonné : il existe précisément parce que son ambiguïté est fonctionnelle
+      pour ceux qui le tolèrent. Il absorbe les flux que les systèmes dominants ne
+      veulent ni intégrer ni laisser disparaître visiblement — populations, marchandises,
+      tensions — et sert de membrane de régulation entre un ordre fermé et un chaos
+      qu''il s''agit de contenir sans le résoudre. Sa population est observable, exploitable,
+      mais sans recours : visible pour être contrôlée, invisible pour être protégée.'
+    tension_fondamentale: 'Le territoire-sas tire son existence de son utilité pour
+      ceux qui le maintiennent dans le flou — mais cette utilité repose précisément
+      sur l''absence de droits et de statut de ses habitants : le rendre lisible et
+      gouverné le ferait disparaître en tant que sas, tandis que l''abandonner totalement
+      supprimerait la fonction de contrôle qu''il remplit.'
+    variables_potentielles:
+    - organisation_territoires
+    - demographie_mobilite_humaine
+    - gouvernance_institutions
+    - frontieres_du_systeme
+    - geopolitique_conflits
+    doublon_detecte: false
+    doublon_slug: null
+  scenario_ref: fortress_world
+  role_ref: 'Territoires-tampons maintenus délibérément dans un état de flou juridique
+    et infrastructurel entre les forteresses climatiques et les zones d''exclusion.
+    Ils servent de sas de contrôle, de réservoirs de main-d''œuvre précaire et de
+    zones d''absorption des flux migratoires que les forteresses ne veulent ni accueillir
+    ni laisser périr visiblement. Leur population est soumise à une surveillance asymétrique
+    : observable depuis les forteresses, mais sans recours institutionnel.'
+  etat_ref: actif
+- status: injected
+  idea:
+    nom: Les Veilleurs du Fleuve
+    category: réseau
+    role: "Réseau informel de pêcheurs et bateliers du bassin du Congo qui\n    font\
+      \ circuler des alertes sanitaires et environnementales le long\n    du fleuve,\
+      \ en complément des Mutuelles de Santé Territoriales."
+    etat: actif
+    scenario_ref: eco_communalism
+    source: test_P3_11juillet2026
+  slug: les_veilleurs_du_fleuve
+  scenarios:
+  - breakdown
+  - fortress_world
+  - new_sustainability
+  - eco_communalism
+  - policy_reform
+  - reference
+  archetype:
+    description_complete: Un réseau informel et décentralisé de gardiens locaux, souvent
+      issus de communautés traditionnelles ou marginalisées, qui assurent la surveillance,
+      la transmission d'alertes et la protection des ressources vitales (eau, terre,
+      santé, savoir) dans des territoires négligés par les structures institutionnelles.
+      Ces entités incarnent une forme de résilience horizontale, où la connaissance
+      du terrain et les liens de confiance remplacent les hiérarchies formelles. Leur
+      légitimité repose sur leur ancrage territorial et leur capacité à agir là où
+      les systèmes officiels échouent ou sont absents.
+    tension_fondamentale: La contradiction entre l'efficacité immédiate de leur action
+      locale (basée sur la confiance et la proximité) et leur difficulté à s'inscrire
+      dans des dynamiques plus larges sans perdre leur autonomie ou leur authenticité.
+      Leur survie dépend souvent de leur invisibilité relative, mais cette même invisibilité
+      les prive de reconnaissance et de moyens pour peser sur les décisions globales.
+    variables_potentielles:
+    - valeurs_culture_tempo_sociale
+    - organisation_territoires
+    - sante_biotechnologies
+    - technologie_information
+    doublon_detecte: false
+    doublon_slug: null
+  scenario_ref: eco_communalism
+  role_ref: "Réseau informel de pêcheurs et bateliers du bassin du Congo qui\n   \
+    \ font circuler des alertes sanitaires et environnementales le long\n    du fleuve,\
+    \ en complément des Mutuelles de Santé Territoriales."
+  etat_ref: actif
+- status: injected
+  idea:
+    nom: Le Registre du Fleuve
+    category: système
+    role: Base de données communautaire décentralisée qui recense les crues, les zones
+      de pêche épuisées et les stocks de graines conservées le long du bassin, alimentée
+      par les Brigades de Restauration Écologique et consultable par n'importe quel
+      village membre.
+    etat: actif
+    scenario_ref: eco_communalism
+    scenario_hint:
+    - breakdown
+    - eco_communalism
+    zone_hint: bassin_congo_ressources
+  slug: le_registre_du_fleuve
+  scenarios:
+  - breakdown
+  - eco_communalism
+  archetype:
+    description_complete: Un système de mémoire collective décentralisée qui archive
+      et rend accessible des données critiques pour la survie et la résilience d'une
+      communauté ou d'un territoire. Il incarne la préservation du savoir pratique
+      et contextuel, souvent menacé par l'effondrement des structures centralisées
+      ou la privatisation de l'information. Son existence repose sur la participation
+      active des acteurs locaux et la confiance dans un partage transparent et équitable
+      des connaissances.
+    tension_fondamentale: La contradiction entre l'universalité de l'accès à l'information
+      comme bien commun et la nécessité de protéger ce savoir contre les risques de
+      capture, de manipulation ou d'exploitation par des acteurs extérieurs ou dominants.
+    variables_potentielles:
+    - technologie_information
+    - gouvernance_institutions
+    - systeme_economique_redistribution
+    - valeurs_culture_tempo_sociale
+    doublon_detecte: false
+    doublon_slug: null
+  scenario_ref: eco_communalism
+  role_ref: Base de données communautaire décentralisée qui recense les crues, les
+    zones de pêche épuisées et les stocks de graines conservées le long du bassin,
+    alimentée par les Brigades de Restauration Écologique et consultable par n'importe
+    quel village membre.
+  etat_ref: actif

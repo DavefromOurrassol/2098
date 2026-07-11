@@ -4,32 +4,31 @@ type: entity
 slug: corridors_gris_asie_centrale
 category: territoire
 description: >
-  La Zone de Transit Grise est un espace territorial qui existe structurellement entre les ordres : ni souverain ni anarchique, ni légal ni totalement hors-la-loi, il naît de la décision tacite des puissances dominantes de ne pas exercer leur juridiction sur certains interstices géographiques. Fonctionnant comme soupape d'un système qui produit massivement des exclus, il est simultanément une voie de survie pour les populations sans droits et un instrument de régulation informelle pour ceux qui pourraient le supprimer mais choisissent de le tolérer. Il cristallise une vérité structurelle des ordres fermés : toute frontière imperméable génère nécessairement ses propres passages clandestins, et toute puissance hégémonique entretient en sous-main les échappatoires qu'elle réprime officiellement.
+  Le corridor gris est un espace interstitiel toléré mais jamais reconnu, situé entre des zones de pouvoir formalisé. Il abrite ceux que le système a exclus de la citoyenneté tout en continuant à exploiter leur force de travail ou leur position géographique. Ni dedans ni dehors, il existe précisément parce qu'il est utile aux puissances qui l'ignorent officiellement. C'est le lieu où l'économie informelle, la mobilité clandestine et la résistance diffuse coexistent sous une surveillance qui surveille sans intervenir, contrôle sans reconnaître.
 tension_fondamentale: >
-  La zone grise ne survit qu'en demeurant inclassable et diffuse — trop insaisissable pour être fermée, trop précaire pour être protégée — mais son utilité même attire des acteurs qui cherchent à la contrôler, la formaliser ou la taxer, transformant la condition de sa survie en vecteur de sa destruction.
+  Le corridor gris ne peut exister qu'en demeurant inclassable et diffus — trop insaisissable pour être fermé, trop utile pour être légitimé — mais cette indétermination même est la condition de sa servitude : il ne peut revendiquer de droits sans cesser d'être toléré, et ne peut disparaître sans que le système qui l'exploite s'effondre partiellement.
 variables_potentielles:
-  - demographie_mobilite_humaine
   - organisation_territoires
-  - frontieres_du_systeme
+  - demographie_mobilite_humaine
+  - systemes_productifs_travail
   - geopolitique_conflits
-  - gouvernance_institutions
+  - frontieres_du_systeme
 scenarios_instances:
   - fortress_world
-date_creation: 2026-06-27
-custom_source: phantom_validate_2026-06-27
+date_creation: 2026-07-04
 scenario_ref: fortress_world
 role_ref: >
-  Zones de passage non officielles traversant l'Asie Centrale, les Corridors Gris échappent aux juridictions des forteresses climatiques et servent de voies clandestines pour les populations exclues des zones protégées. Sous surveillance satellite partielle, ils sont tolérés par les puissances dominantes tant qu'ils ne menacent pas la sécurité des enclaves fortifiées.
-etat_ref: clandestin
+  Les Corridors Gris Asie Centrale sont des zones tampons non officielles situées entre les forteresses climatiques des grandes métropoles d'Asie centrale, peuplées de populations non accréditées et de travailleurs clandestins. Sous surveillance satellitaire permanente des forteresses adjacentes, ces espaces servent de réservoirs de main-d'œuvre bon marché tolérés mais jamais reconnus. Toute organisation politique y est réprimée, mais ils constituent un nœud nerveux du commerce informel régional.
+etat_ref: actif
 ---
 
 # Corridors Gris Asie Centrale
 
 ## Description archétypale
-La Zone de Transit Grise est un espace territorial qui existe structurellement entre les ordres : ni souverain ni anarchique, ni légal ni totalement hors-la-loi, il naît de la décision tacite des puissances dominantes de ne pas exercer leur juridiction sur certains interstices géographiques. Fonctionnant comme soupape d'un système qui produit massivement des exclus, il est simultanément une voie de survie pour les populations sans droits et un instrument de régulation informelle pour ceux qui pourraient le supprimer mais choisissent de le tolérer. Il cristallise une vérité structurelle des ordres fermés : toute frontière imperméable génère nécessairement ses propres passages clandestins, et toute puissance hégémonique entretient en sous-main les échappatoires qu'elle réprime officiellement.
+Le corridor gris est un espace interstitiel toléré mais jamais reconnu, situé entre des zones de pouvoir formalisé. Il abrite ceux que le système a exclus de la citoyenneté tout en continuant à exploiter leur force de travail ou leur position géographique. Ni dedans ni dehors, il existe précisément parce qu'il est utile aux puissances qui l'ignorent officiellement. C'est le lieu où l'économie informelle, la mobilité clandestine et la résistance diffuse coexistent sous une surveillance qui surveille sans intervenir, contrôle sans reconnaître.
 
 ## Tension fondamentale
-La zone grise ne survit qu'en demeurant inclassable et diffuse — trop insaisissable pour être fermée, trop précaire pour être protégée — mais son utilité même attire des acteurs qui cherchent à la contrôler, la formaliser ou la taxer, transformant la condition de sa survie en vecteur de sa destruction.
+Le corridor gris ne peut exister qu'en demeurant inclassable et diffus — trop insaisissable pour être fermé, trop utile pour être légitimé — mais cette indétermination même est la condition de sa servitude : il ne peut revendiquer de droits sans cesser d'être toléré, et ne peut disparaître sans que le système qui l'exploite s'effondre partiellement.
 
 ## Instances par scénario
 | Scénario | Instance | État | Rôle |

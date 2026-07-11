@@ -25,7 +25,7 @@ Pour chaque scénario :
    role_dans_scenario, tensions_narratives de toutes les instances de
    ce scénario + description/consequences/realisation de tous les
    event_instances de ce scénario.
-2. Envoie ce texte à Claude avec consigne de repérer toutes les
+2. Envoie ce texte au LLM avec consigne de repérer toutes les
    zones/blocs/lieux géopolitiques mentionnés, de regrouper les
    variantes qui désignent la même réalité, et de synthétiser une
    bible structurée (zones avec statut, tensions, lieux emblématiques,
@@ -71,7 +71,7 @@ from pathlib import Path
 
 import yaml
 
-from llm_client import call_llm, LLM_MODEL as MODEL
+from llm_client import call_llm  # tier structured_strict — référentiel géographique fixe
 
 
 # ---------------------------------------------------------------------------
@@ -121,7 +121,7 @@ def parse_md(filepath):
 def gather_instance_texts(scenario):
     """Rassemble le texte narratif pertinent de toutes les instances
     d'un scénario. Retourne une liste de blocs texte, un par instance,
-    avec le nom de l'instance en tête pour permettre à Claude de citer
+    avec le nom de l'instance en tête pour permettre au LLM de citer
     sa source dans 'sources_attestees'."""
     blocks = []
     if not INSTANCES_DIR.exists():
@@ -164,7 +164,7 @@ def gather_event_texts(scenario):
 
 
 # ---------------------------------------------------------------------------
-# Appel Claude
+# Appel LLM
 # ---------------------------------------------------------------------------
 
 def get_client():
@@ -178,13 +178,11 @@ def call_claude_json(client, system, user_content, max_tokens=SYNTHESIS_MAX_TOKE
         user_prompt=user_content,
         max_tokens=max_tokens,
         temperature=0.0,
+        task_tier="structured_strict",
     ).strip()
 
     if not text:
-        raise RuntimeError(
-            f"Réponse Claude vide (stop_reason={resp.stop_reason}, "
-            f"{resp.usage.output_tokens} tokens générés)."
-        )
+        raise RuntimeError("Réponse LLM vide.")
 
     candidate = re.sub(r"^```(?:json)?\s*", "", text)
     candidate = re.sub(r"\s*```$", "", candidate)
@@ -200,10 +198,16 @@ def call_claude_json(client, system, user_content, max_tokens=SYNTHESIS_MAX_TOKE
         except json.JSONDecodeError:
             pass
 
-    if resp.stop_reason == "max_tokens":
+    # Bug corrigé le 11 juillet 2026 (même correctif que
+    # create_entities_and_instances.py) : reliquat `resp.stop_reason`
+    # d'avant la migration vers llm_client.py — call_llm() ne retourne
+    # qu'une string, `resp` n'existe plus.
+    likely_truncated = len(text) >= max_tokens * 3  # ~3-4 car/token en français
+    if likely_truncated:
         raise RuntimeError(
-            f"Réponse Claude tronquée (max_tokens={max_tokens} atteint, "
-            f"aucun JSON complet trouvé) — texte reçu: {text[:300]!r}"
+            f"Réponse LLM probablement tronquée (max_tokens={max_tokens}, "
+            f"{len(text)} caractères reçus, aucun JSON complet trouvé) — "
+            f"texte reçu: {text[:300]!r}"
         )
     raise RuntimeError(f"Aucun JSON exploitable trouvé : {text[:300]!r}")
 
@@ -330,7 +334,7 @@ def validate_zone(zone):
 def clean_zone_relations(zones):
     """Filtre silencieusement, dans allies/rivaux de chaque zone, toute
     entrée qui ne correspond pas au slug d'une AUTRE zone de ce même
-    batch — filet de sécurité si Claude référence un slug d'instance
+    batch — filet de sécurité si le LLM référence un slug d'instance
     ou un concept inventé plutôt qu'une vraie zone. Retourne la liste
     nettoyée et la liste des entrées filtrées pour log."""
     all_slugs = {z.get("slug") for z in zones if z.get("slug")}
@@ -378,7 +382,7 @@ def build_geographie_md(scenario, synthesis, valid_sources):
             print(f"  ⚠ evenement_transition filtré sur '{zone['slug']}' "
                   f"(pas une source du corpus) : '{evt_transition}'")
             zone["evenement_transition"] = None
-        # Étape 1 (à plat) : on force niveau=1 et parent=null quoi que Claude
+        # Étape 1 (à plat) : on force niveau=1 et parent=null quoi que le LLM
         # ait pu renvoyer, conformément à la consigne — sécurité mécanique
         # en plus de la consigne textuelle.
         zone["niveau"] = 1

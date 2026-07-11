@@ -1,0 +1,9 @@
+queue:
+- nom: Les Veilleurs du Fleuve
+  category: réseau
+  role: "Réseau informel de pêcheurs et bateliers du bassin du Congo qui\n    font\
+    \ circuler des alertes sanitaires et environnementales le long\n    du fleuve,\
+    \ en complément des Mutuelles de Santé Territoriales."
+  etat: actif
+  scenario_ref: eco_communalism
+  source: test_P3_11juillet2026

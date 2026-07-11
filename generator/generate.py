@@ -101,6 +101,25 @@ def validate_config(config):
         errors.append("Thématique invalide : '{}'. Valides : {}".format(
             thematique, ", ".join(VALID_THEMATIQUES)))
 
+    # zone_slug (optionnel) — si fixé manuellement, doit exister dans
+    # journaux.yaml pour ce scénario/cette ligne éditoriale, sinon la
+    # résolution du journal échoue silencieusement vers un mauvais profil
+    # (bug #26, 11 juillet 2026 — zone_slug typo résolu vers une zone alliée
+    # sans rapport avec l'article, via le fallback réseau global/dominant_zone).
+    zone_slug = config.get("zone_slug")
+    if zone_slug and scenario in VALID_SCENARIOS:
+        from prompt_builder import _load_journaux
+        journaux = _load_journaux()
+        ligne = config.get("ligne_editoriale") or "pro_pouvoir"
+        zones_dispo = journaux.get(scenario, {}).get(ligne, {}).get("zones", {})
+        if zones_dispo and zone_slug not in zones_dispo:
+            errors.append(
+                "zone_slug invalide : '{}' n'existe pas dans journaux.yaml pour "
+                "{}/{}.\n    Zones valides : {}".format(
+                    zone_slug, scenario, ligne, ", ".join(sorted(zones_dispo.keys()))
+                )
+            )
+
     if errors:
         print("[erreur] Valeurs invalides dans config.yaml :")
         for e in errors:

@@ -1,0 +1,23 @@
+============================================================
+OURRASSOL 2098 — Création entités + instances
+============================================================
+
+Mode : auto (fourni via --mode)
+
+[1/2] Génération de 1 entité(s) (scénarios : new_sustainability)...
+[llm] Mistral (mistral-large-latest) — entrée : 25659 | sortie : 291
+[2/2] Validation, injection et génération des instances...
+
+  ✓ Les Passeurs de Limites (humain)
+  Instances (1 scénario(s)) :
+    → new_sustainability... [llm] Mistral (mistral-large-latest) — entrée : 4306 | sortie : 1063
+
+       ⚠ alliances filtrée (pas un slug valide) : 'collectifs_de_deplaces_climatiques_non_representes'
+       ⚠ alliances filtrée (pas un slug valide) : 'reseau_des_communs_alimentaires_hors_grille'
+       ⚠ alliances filtrée (pas un slug valide) : 'mouvement_communautaire_des_micro_grids_energetiques'
+       ⚠ alliances filtrée (pas un slug valide) : 'les_veilleurs_du_fleuve'
+       ⚠ alliances filtrée (pas un slug valide) : 'collectifs_riverains_du_bassin_du_congo'
+✓
+
+Terminé. 1/1 entité(s) créée(s).
+Instances : 1 créée(s) | 0 déjà existante(s) | 0 erreur(s)

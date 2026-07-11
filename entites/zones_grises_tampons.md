@@ -4,32 +4,31 @@ type: entity
 slug: zones_grises_tampons
 category: territoire
 description: >
-  La Zone Grise Tampon est l'espace de transition institutionnalisée que tout ordre séparatiste crée entre son cœur sécurisé et le chaos qu'il produit en s'en protégeant. Contrairement aux zones grises globales — diffuses et spontanées — elle est délibérément intercalée, architecturée comme sas de tri : elle trie les corps, filtre les flux, sous-traite les fonctions que le centre exige sans vouloir les assumer. Elle n'est pas le résidu d'un effondrement mais l'instrument conscient d'un ordre qui a besoin de marges pour fonctionner, peuplant ces franges de populations en attente, de milices privées et d'intermédiaires dont l'existence même codifie l'inégalité entre l'intérieur et l'extérieur.
+  Le territoire-sas est un espace délibérément maintenu dans l'indétermination juridique, infrastructurelle et politique par des puissances qui l'encadrent sans l'assumer. Il n'est ni dedans ni dehors, ni protégé ni abandonné : il existe précisément parce que son ambiguïté est fonctionnelle pour ceux qui le tolèrent. Il absorbe les flux que les systèmes dominants ne veulent ni intégrer ni laisser disparaître visiblement — populations, marchandises, tensions — et sert de membrane de régulation entre un ordre fermé et un chaos qu'il s'agit de contenir sans le résoudre. Sa population est observable, exploitable, mais sans recours : visible pour être contrôlée, invisible pour être protégée.
 tension_fondamentale: >
-  La zone tampon tire son utilité systémique de sa nature de sas contrôlé — mais ce contrôle partiel crée précisément les conditions d'une autonomie opaque où se nouent des pouvoirs interstitiels que le centre ne maîtrise plus, transformant l'instrument de filtrage en foyer potentiel de débordement.
+  Le territoire-sas tire son existence de son utilité pour ceux qui le maintiennent dans le flou — mais cette utilité repose précisément sur l'absence de droits et de statut de ses habitants : le rendre lisible et gouverné le ferait disparaître en tant que sas, tandis que l'abandonner totalement supprimerait la fonction de contrôle qu'il remplit.
 variables_potentielles:
   - organisation_territoires
   - demographie_mobilite_humaine
   - gouvernance_institutions
-  - geopolitique_conflits
   - frontieres_du_systeme
+  - geopolitique_conflits
 scenarios_instances:
   - fortress_world
-date_creation: 2026-06-27
-custom_source: phantom_validate_2026-06-27
+date_creation: 2026-07-04
 scenario_ref: fortress_world
 role_ref: >
-  Bandes territoriales intercalées entre les forteresses climatiques sécurisées et les zones de chaos extérieur, jouant un rôle d'amortisseur démographique et sécuritaire. Elles accueillent des populations en attente de tri, des sous-traitants de services non admis dans les forteresses et des milices privées chargées de filtrer les flux migratoires. Sous surveillance partielle, elles constituent un espace de négociation opaque entre les élites fortifiées et les intermédiaires du monde extérieur.
+  Territoires-tampons maintenus délibérément dans un état de flou juridique et infrastructurel entre les forteresses climatiques et les zones d'exclusion. Ils servent de sas de contrôle, de réservoirs de main-d'œuvre précaire et de zones d'absorption des flux migratoires que les forteresses ne veulent ni accueillir ni laisser périr visiblement. Leur population est soumise à une surveillance asymétrique : observable depuis les forteresses, mais sans recours institutionnel.
 etat_ref: actif
 ---
 
 # Zones Grises Tampons
 
 ## Description archétypale
-La Zone Grise Tampon est l'espace de transition institutionnalisée que tout ordre séparatiste crée entre son cœur sécurisé et le chaos qu'il produit en s'en protégeant. Contrairement aux zones grises globales — diffuses et spontanées — elle est délibérément intercalée, architecturée comme sas de tri : elle trie les corps, filtre les flux, sous-traite les fonctions que le centre exige sans vouloir les assumer. Elle n'est pas le résidu d'un effondrement mais l'instrument conscient d'un ordre qui a besoin de marges pour fonctionner, peuplant ces franges de populations en attente, de milices privées et d'intermédiaires dont l'existence même codifie l'inégalité entre l'intérieur et l'extérieur.
+Le territoire-sas est un espace délibérément maintenu dans l'indétermination juridique, infrastructurelle et politique par des puissances qui l'encadrent sans l'assumer. Il n'est ni dedans ni dehors, ni protégé ni abandonné : il existe précisément parce que son ambiguïté est fonctionnelle pour ceux qui le tolèrent. Il absorbe les flux que les systèmes dominants ne veulent ni intégrer ni laisser disparaître visiblement — populations, marchandises, tensions — et sert de membrane de régulation entre un ordre fermé et un chaos qu'il s'agit de contenir sans le résoudre. Sa population est observable, exploitable, mais sans recours : visible pour être contrôlée, invisible pour être protégée.
 
 ## Tension fondamentale
-La zone tampon tire son utilité systémique de sa nature de sas contrôlé — mais ce contrôle partiel crée précisément les conditions d'une autonomie opaque où se nouent des pouvoirs interstitiels que le centre ne maîtrise plus, transformant l'instrument de filtrage en foyer potentiel de débordement.
+Le territoire-sas tire son existence de son utilité pour ceux qui le maintiennent dans le flou — mais cette utilité repose précisément sur l'absence de droits et de statut de ses habitants : le rendre lisible et gouverné le ferait disparaître en tant que sas, tandis que l'abandonner totalement supprimerait la fonction de contrôle qu'il remplit.
 
 ## Instances par scénario
 | Scénario | Instance | État | Rôle |

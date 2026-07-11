@@ -1,0 +1,211 @@
+============================================================
+OURRASSOL 2098 — Création entités + instances
+============================================================
+
+Mode : custom (fourni via --mode)
+
+=== Les Veilleurs du Fleuve ===
+[1/3] Déduction de l'archétype...
+[llm] Mistral (mistral-large-latest) — entrée : 24977 | sortie : 292
+[2/3] Validation (essai 1)...
+[3/3] Injection de l'entité...
+[Instances] Génération automatique pour 6 scénario(s)...
+  Instances (6 scénario(s)) :
+    → breakdown... [llm] Mistral (mistral-large-latest) — entrée : 4867 | sortie : 1076
+✓
+    → fortress_world... [llm] Mistral (mistral-large-latest) — entrée : 4769 | sortie : 1023
+✓
+    → new_sustainability... [llm] Mistral (mistral-large-latest) — entrée : 4342 | sortie : 1164
+✓
+    → eco_communalism [CONTRAINTE DURE]... [llm] Mistral (mistral-large-latest) — entrée : 4058 | sortie : 1070
+✓
+    → policy_reform... [llm] Mistral (mistral-large-latest) — entrée : 4296 | sortie : 1117
+✓
+    → reference... [llm] Mistral (mistral-large-latest) — entrée : 5327 | sortie : 1083
+✓
+
+=== Le Registre du Fleuve ===
+[1/3] Déduction de l'archétype...
+[llm] Mistral (mistral-large-latest) — entrée : 25032 | sortie : 223
+[2/3] Validation (essai 1)...
+[3/3] Injection de l'entité...
+[Instances] Génération automatique pour 2 scénario(s)...
+  Instances (2 scénario(s)) :
+    → breakdown... [llm] Mistral (mistral-large-latest) — entrée : 4892 | sortie : 1181
+✓
+    → eco_communalism [CONTRAINTE DURE]... ============================================================
+EXTRACT_LOCALISATION — Ourrassol 2098
+============================================================
+Fiches à traiter : 8
+
+[1/8] 
+[instance] le_registre_du_fleuve_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8443 | sortie : 92
+  issue     : extrait
+  zone      : afrique_centrale_australe
+  lieu      : bassin du Congo et Cuvette congolaise
+  motif     : Le texte mentionne explicitement les 'berges du Congo' et les 'forêts inondées de la Cuvette' comme zones d'action des Mémoires des Veines du Congo.
+  → écrit
+[2/8] 
+[instance] le_registre_du_fleuve_eco_communalism
+  scénario : eco_communalism
+[llm] Mistral (mistral-small-latest) — entrée : 8006 | sortie : 65
+  issue     : extrait
+  zone      : congo_bassin_du_fleuve
+  lieu      : bassin du Congo
+  motif     : Le texte mentionne explicitement le bassin du Congo comme zone géographique centrale de l'entité.
+  → écrit
+[3/8] 
+[instance] les_veilleurs_du_fleuve_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8293 | sortie : 73
+  issue     : extrait
+  zone      : sfax_relais_bouches
+  lieu      : près de Sfax
+  motif     : Le texte mentionne explicitement un sabotage près de Sfax, localisant une action des Gardiens des Veines Brisées dans cette zone.
+  → écrit
+[4/8] 
+[instance] les_veilleurs_du_fleuve_eco_communalism
+  scénario : eco_communalism
+[llm] Mistral (mistral-small-latest) — entrée : 8055 | sortie : 68
+  issue     : extrait
+  zone      : congo_bassin_du_fleuve
+  lieu      : bassin du Congo
+  motif     : Le texte mentionne explicitement le bassin du Congo comme zone d'ancrage des Veilleurs des Eaux.
+  → écrit
+[5/8] 
+[instance] les_veilleurs_du_fleuve_fortress_world
+  scénario : fortress_world
+[llm] Mistral (mistral-small-latest) — entrée : 6900 | sortie : 60
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : L'entité est un réseau clandestin transnational opérant dans les interstices des blocs souverains, sans ancrage géographique local précis.
+  → écrit
+[6/8] 
+[instance] les_veilleurs_du_fleuve_new_sustainability
+  scénario : new_sustainability
+[llm] Mistral (mistral-small-latest) — entrée : 6690 | sortie : 76
+  issue     : ambigu
+  zone      : (null)
+  lieu      : fleuve Niger, deltas du Mékong, affluents de l'Amazone
+  motif     : Plusieurs fleuves et deltas sont mentionnés sans localisation précise mappable sur une zone existante dans la liste fournie.
+  → écrit
+[7/8] 
+[instance] les_veilleurs_du_fleuve_policy_reform
+  scénario : policy_reform
+[llm] Mistral (mistral-small-latest) — entrée : 6397 | sortie : 96
+  issue     : ambigu
+  zone      : bloc_souverainiste_non_signataire
+  lieu      : Mékong et deltas du Niger
+  motif     : Le texte mentionne explicitement le Mékong et les deltas du Niger comme zones d'action des Sentinelles Fluviales, mais ces localisations ne correspondent pas à un slug précis de la liste fournie.
+  → écrit
+[8/8] 
+[instance] les_veilleurs_du_fleuve_reference
+  scénario : reference
+[llm] Mistral (mistral-small-latest) — entrée : 6190 | sortie : 75
+  issue     : extrait
+  zone      : delta_du_mekong
+  lieu      : Delta du Mékong
+  motif     : Le texte mentionne explicitement les deltas du Mékong et du Gange comme territoires d'action des Gardiens des Rives.
+  → écrit
+
+============================================================
+RÉCAPITULATIF
+============================================================
+  Extraits (zone trouvée)    : 5
+  Vides assumés (transnat.)  : 1
+  Ambigus (review manuelle)  : 2
+  Erreurs                    : 0
+  Total traité               : 8
+
+  → 2 fiche(s) à review manuelle :
+     • les_veilleurs_du_fleuve_new_sustainability — zone candidate : (aucune)
+     • les_veilleurs_du_fleuve_policy_reform — zone candidate : bloc_souverainiste_non_signataire
+
+Fiches modifiées : 8
+Sauvegardes .bak créées pour chaque fichier modifié.
+Rapport need_action mis a jour : documentation/need_action/localisation_review.md
+   (2 fiche(s) en attente)
+=================================================================
+  REVIEW LOCALISATION — Ourrassol 2098
+=================================================================
+  MODE AUTO-RESOLVE : résolution automatique par Claude
+
+  2 fiche(s) à reviewer
+
+  Résolution automatique de 2 fiche(s)...
+
+  [1/2] les_veilleurs_du_fleuve_new_sustainability
+    zone candidate : (aucune)
+[llm] Mistral (mistral-small-latest) — entrée : 3955 | sortie : 119
+    décision      : choisir
+    zone retenue  : reseau_vivant_continental
+    motif         : Le Réseau des Sentinelles Fluviales opère sur des bassins fluviaux transcontinentaux liés aux corridors bioclimatiques du RVC, justifiant un ancrage dans cette zone stratégique.
+    → écrit
+
+  [2/2] les_veilleurs_du_fleuve_policy_reform
+    zone candidate : bloc_souverainiste_non_signataire
+[llm] Mistral (mistral-small-latest) — entrée : 3733 | sortie : 130
+    décision      : choisir
+    zone retenue  : hub_africain_gouvernance
+    motif         : Le Mékong est en Asie du Sud-Est et les deltas du Niger en Afrique de l'Ouest, mais le hub africain de gouvernance (Nairobi-Kigali-Brazzaville) est le seul slug de niveau 1 couvrant une zone transcontinentale incluant des régions africaines et asiatiques pertinentes pour l'action des Sentinelles Fluviales.
+    → écrit
+
+
+📋 Rapport mis à jour : documentation/need_action/localisation_review.md
+   (0 fiche(s) restantes)
+=================================================================
+  Auto-resolve terminé.
+  Résolus : 2   Skippés/erreurs : 0
+=================================================================
+
+[validate] Démarrage de la validation...
+[validate] 1/9 — Nomenclature...
+[validate] 2/9 — Cohérence systémique...
+[validate] 3/9 — Entités et instances...
+[validate] 4/9 — Thématiques...
+[validate] 5/9 — Localisation...
+[validate] 6/9 — Références croisées...
+[validate] 7/9 — Matrice d'influence...
+[validate] 8/9 — Événements...
+[validate] 9/9 — Cohérence narrative post-injection...
+
+════════════════════════════════════════════════════════════
+VALIDATION — OURRASSOL 2098
+════════════════════════════════════════════════════════════
+
+📊 INVENTAIRE
+────────────────────────────────────────────────────────────
+  [NOMENCLATURE] 6/6 scénarios | 12/12 variables
+  [ENTITIES] 573 entités chargées
+  [INSTANCES] 698 instances chargées
+  [THEMATIQUES] 20 thématiques trouvées
+  [LOCALISATION] 768 fiches riches | 0 sans localisation | 0 review_manuelle
+  [CROSS_REFERENCES] 1309 slugs dans le référentiel
+  [MATRIX] 132 edges dans la matrice
+  [EVENTS] 16 archétypes d'événements
+  [EVENTS] 70 instances d'événements
+  [NARRATIVE] Aucune event_instance modifiée depuis la dernière validation — scan ignoré (--narrative pour forcer)
+
+════════════════════════════════════════════════════════════
+✓ BASE VALIDE — 0 erreurs | 0 avertissements | 0 corrections
+════════════════════════════════════════════════════════════
+[llm] Mistral (mistral-large-latest) — entrée : 4103 | sortie : 1183
+✓
+
+Terminé. Voir /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/entites_custom/processed.yaml et /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/entites_custom/needs_review.yaml.
+Instances : 8 créée(s) | 0 déjà existante(s) | 0 erreur(s)
+
+════════════════════════════════════════════════════════════
+CYCLE POST-INJECTION
+════════════════════════════════════════════════════════════
+
+→ /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/generator/extract_localisation.py
+
+→ /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/generator/review_localisation.py --auto-resolve
+
+→ /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/generator/validate.py
+
+✓ Cycle post-injection terminé.

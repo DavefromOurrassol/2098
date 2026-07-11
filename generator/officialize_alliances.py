@@ -20,7 +20,7 @@ CE QUE FAIT CE SCRIPT (one-shot, à lancer UNE fois)
 1. Scanne toutes les instances/*.md, extrait toutes les mentions
    alliances/oppositions en texte libre (ignore les slugs déjà valides
    — référence à une instance existante).
-2. Envoie le lot complet à Claude pour déduplication sémantique : les
+2. Envoie le lot complet au LLM pour déduplication sémantique : les
    mentions qui désignent manifestement le même acteur sous des
    formulations différentes (ex: "Souverainistes du Bloc Eurasien" vs
    "Blocs régionaux souverainistes (Ligue Eurasiatique...)") sont
@@ -28,7 +28,7 @@ CE QUE FAIT CE SCRIPT (one-shot, à lancer UNE fois)
    sans validation humaine intermédiaire (décision explicite de
    l'utilisateur). Les 1-2 mentions trop vagues pour avoir un nom
    propre clair ("Quelques cités-États côtières désespérées") se voient
-   attribuer un nom propre inventé par Claude dans la même passe.
+   attribuer un nom propre inventé par le LLM dans la même passe.
 3. Pour chaque nom canonique retenu :
    - crée une fiche entité MINIMALE (entites/{slug}.md) avec
      `statut: officialise_minimal` dans le frontmatter — champs
@@ -66,8 +66,8 @@ SÉCURITÉ / IDEMPOTENCE
 
 PRÉREQUIS
 ---------
-    pip install anthropic pyyaml --break-system-packages
-    export ANTHROPIC_API_KEY=sk-ant-...
+    pip install mistralai anthropic openai pyyaml --break-system-packages
+    (selon le fournisseur configuré — voir llm_client.py, tier "structured_strict")
 
 USAGE
 -----
@@ -85,10 +85,7 @@ from pathlib import Path
 
 import yaml
 
-try:
-    import anthropic
-except ImportError:
-    anthropic = None
+from llm_client import call_llm  # tier structured_strict — noms canoniques dédupliqués, référencés dans tout le vault
 
 
 # ---------------------------------------------------------------------------
@@ -100,7 +97,6 @@ INSTANCES_DIR = VAULT_ROOT / "instances"
 ENTITES_DIR = VAULT_ROOT / "entites"
 ENTITES_LIST_PATH = ENTITES_DIR / "_entities_list.json"
 
-MODEL = "claude-sonnet-4-6"
 CLUSTER_BATCH_SIZE = 80  # mentions par appel de déduplication (réduit pour éviter
                           # toute troncature du JSON de sortie — voir incident du
                           # 2026-06-20 : un lot de 150 mentions a généré une sortie
@@ -172,30 +168,33 @@ def save_entities_list(entities):
 
 
 def get_client():
-    if anthropic is None:
-        sys.exit("Le package 'anthropic' n'est pas installé. "
-                  "pip install anthropic --break-system-packages")
-    return anthropic.Anthropic()
+    """Conservé pour compatibilité de signature — retourne None, call_claude_json
+    n'en a plus besoin depuis la migration vers llm_client.py."""
+    return None
 
 
 def call_claude_json(client, system, user_content, max_tokens=4000):
-    resp = client.messages.create(
-        model=MODEL,
+    text = call_llm(
+        system_prompt=system,
+        user_prompt=user_content,
         max_tokens=max_tokens,
-        system=system,
-        messages=[{"role": "user", "content": user_content}],
-    )
-    text = resp.content[0].text.strip()
+        temperature=0.0,
+        task_tier="structured_strict",
+    ).strip()
     # tolère un éventuel fencing ```json ... ```
     text = re.sub(r"^```(?:json)?\s*", "", text)
     text = re.sub(r"\s*```$", "", text)
     try:
         return json.loads(text)
     except json.JSONDecodeError as e:
-        if resp.stop_reason == "max_tokens":
+        # Heuristique de troncature (pas de resp.stop_reason disponible
+        # depuis la migration vers llm_client.py, qui ne retourne qu'une
+        # string) :
+        likely_truncated = len(text) >= max_tokens * 3  # ~3-4 car/token en français
+        if likely_truncated:
             raise RuntimeError(
-                f"Réponse Claude tronquée (max_tokens={max_tokens} atteint, "
-                f"{resp.usage.output_tokens} tokens générés) — le JSON de sortie "
+                f"Réponse LLM probablement tronquée (max_tokens={max_tokens} "
+                f"atteint, {len(text)} caractères reçus) — le JSON de sortie "
                 f"est incomplet. Augmente max_tokens ou réduis la taille du lot."
             ) from e
         raise
@@ -252,7 +251,7 @@ def extract_mentions():
 
 
 # ---------------------------------------------------------------------------
-# Étape 2 — Déduplication sémantique via Claude
+# Étape 2 — Déduplication sémantique via le LLM
 # ---------------------------------------------------------------------------
 
 DEDUP_SYSTEM = """Tu travailles sur Ourrassol 2098, un simulateur de presse fictive \
@@ -329,7 +328,7 @@ def deduplicate_mentions(client, mentions, dry_run, resume=False):
 
     Sauvegarde un checkpoint après chaque lot réussi (officialize_checkpoint.json)
     pour pouvoir reprendre sans tout refaire si le script s'interrompt (ex:
-    réponse Claude tronquée sur un lot, coupure réseau...).
+    réponse LLM tronquée sur un lot, coupure réseau...).
     """
     batches = [mentions[i:i + CLUSTER_BATCH_SIZE]
                for i in range(0, len(mentions), CLUSTER_BATCH_SIZE)]
@@ -360,7 +359,7 @@ def deduplicate_mentions(client, mentions, dry_run, resume=False):
         missing = set(batch) - set(seen)
         extra = set(seen) - set(batch)
         if missing:
-            print(f"    ⚠ {len(missing)} mention(s) non reprise(s) par Claude — "
+            print(f"    ⚠ {len(missing)} mention(s) non reprise(s) par le LLM — "
                   f"ajout en clusters singletons : {list(missing)[:3]}...")
             for m in missing:
                 clusters.append({

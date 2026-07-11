@@ -4,32 +4,30 @@ type: entity
 slug: vallee_allier_terrafond
 category: territoire
 description: >
-  Un territoire post-souverain organisé autour d'une ressource vitale partagée — eau, sol, forêt — qui devient à la fois le ciment d'une communauté de survie et l'objet de ses déchirements internes. Ce type d'entité naît dans le vide laissé par l'effondrement des structures étatiques : des groupes humains y refondent un ordre collectif minimal, non par idéal, mais par nécessité. Il incarne la tentative avortée ou conflictuelle de transformer une dépendance commune à un lieu en gouvernance partagée, portant en lui la mémoire d'un projet collectif inachevé — ici un fonds foncier commun, là une charte d'usage — dont les ruines structurent encore les rapports de force entre factions rivales.
+  Le **Commun Territorial Résilient** incarne l'autonomie locale face à l'effondrement des structures étatiques ou globales. Il se construit autour d'une ressource vitale partagée (terre, eau, savoir) gérée collectivement, souvent en marge des institutions dominantes. Son existence repose sur une gouvernance horizontale et une identité collective forte, mais elle est constamment menacée par des pressions extérieures (factions, blocs, marchés) qui cherchent à s'approprier ou contrôler ces ressources. Ce modèle préfigure une résilience par la coopération locale, mais se heurte à l'inévitable tension entre fermeture protectrice et ouverture nécessaire.
 tension_fondamentale: >
-  La ressource qui fonde la cohésion du territoire est précisément ce qui le fracture : tout projet de commun se brise sur la tentation de la capture unilatérale, et la légitimité de qui gouverne reste perpétuellement disputée entre ceux qui ont la force, ceux qui ont été là les premiers, et ceux qui ont rédigé les textes que plus personne ne reconnaît.
+  La contradiction entre l'autonomie locale et la nécessité de s'inscrire dans des réseaux plus larges pour survivre. Plus le territoire est résilient et fermé, plus il risque l'isolement et la marginalisation ; plus il s'ouvre, plus il perd son autonomie. Cette tension révèle l'impossibilité de concilier parfaitement sécurité collective et liberté individuelle dans un monde fragmenté.
 variables_potentielles:
-  - energie_ressources_critiques
   - organisation_territoires
+  - valeurs_culture_tempo_sociale
+  - systeme_economique_redistribution
   - gouvernance_institutions
-  - geopolitique_conflits
-  - climat_environnement_global
 scenarios_instances:
   - breakdown
-date_creation: 2026-06-27
-custom_source: phantom_validate_2026-06-27
+date_creation: 2026-07-04
 scenario_ref: breakdown
 role_ref: >
-  La Vallée Allier Terrafond est un territoire de survie semi-organisé qui a émergé dans le sillage de l'effondrement des structures étatiques françaises, autour des ressources hydriques encore accessibles de la rivière Allier. Des groupes locaux y ont constitué des micro-fiefs agricoles en tension permanente pour le contrôle de l'eau et des terres arables. Le nom Terrafond désigne une tentative avortée de fonds foncier commun, dont les statuts juridiques restent disputés entre factions rivales.
-etat_ref: transformé
+  Territoire semi-rural de la vallée de l'Allier reconstitué autour d'un fonds foncier collectif dit Terrafond, gérant les terres arables et les ressources en eau après l'effondrement des structures propriétaires classiques. Dans un contexte de fragmentation institutionnelle, ce territoire fait figure de modèle précaire de gouvernance locale de survie, constamment sous pression de factions extérieures.
+etat_ref: actif
 ---
 
 # Vallee Allier Terrafond
 
 ## Description archétypale
-Un territoire post-souverain organisé autour d'une ressource vitale partagée — eau, sol, forêt — qui devient à la fois le ciment d'une communauté de survie et l'objet de ses déchirements internes. Ce type d'entité naît dans le vide laissé par l'effondrement des structures étatiques : des groupes humains y refondent un ordre collectif minimal, non par idéal, mais par nécessité. Il incarne la tentative avortée ou conflictuelle de transformer une dépendance commune à un lieu en gouvernance partagée, portant en lui la mémoire d'un projet collectif inachevé — ici un fonds foncier commun, là une charte d'usage — dont les ruines structurent encore les rapports de force entre factions rivales.
+Le **Commun Territorial Résilient** incarne l'autonomie locale face à l'effondrement des structures étatiques ou globales. Il se construit autour d'une ressource vitale partagée (terre, eau, savoir) gérée collectivement, souvent en marge des institutions dominantes. Son existence repose sur une gouvernance horizontale et une identité collective forte, mais elle est constamment menacée par des pressions extérieures (factions, blocs, marchés) qui cherchent à s'approprier ou contrôler ces ressources. Ce modèle préfigure une résilience par la coopération locale, mais se heurte à l'inévitable tension entre fermeture protectrice et ouverture nécessaire.
 
 ## Tension fondamentale
-La ressource qui fonde la cohésion du territoire est précisément ce qui le fracture : tout projet de commun se brise sur la tentation de la capture unilatérale, et la légitimité de qui gouverne reste perpétuellement disputée entre ceux qui ont la force, ceux qui ont été là les premiers, et ceux qui ont rédigé les textes que plus personne ne reconnaît.
+La contradiction entre l'autonomie locale et la nécessité de s'inscrire dans des réseaux plus larges pour survivre. Plus le territoire est résilient et fermé, plus il risque l'isolement et la marginalisation ; plus il s'ouvre, plus il perd son autonomie. Cette tension révèle l'impossibilité de concilier parfaitement sécurité collective et liberté individuelle dans un monde fragmenté.
 
 ## Instances par scénario
 | Scénario | Instance | État | Rôle |

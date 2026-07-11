@@ -4,31 +4,30 @@ type: entity
 slug: corridor_lithium_bouches
 category: territoire
 description: >
-  Le corridor de ressource critique en régime d'effondrement est un archétype territorial qui transcende toute instance particulière : un espace linéaire dont la valeur tient non à ce qu'il est, mais à ce qu'il relie et contient. Quand les autorités centrales s'effondrent, ces corridors révèlent leur nature profonde — non comme infrastructures neutres mais comme enjeux de puissance brute, où la géographie elle-même devient arme. Leur fragmentation entre acteurs multiples n'est pas un accident mais une logique structurelle : nul ne peut les laisser à autrui, nul ne peut les tenir seul. Ils incarnent la tension irréductible entre la nécessité de flux continus et l'impossibilité d'une gouvernance unifiée.
+  Le Corridor Lithium Bouches incarne l'archétype intemporel du **territoire vital sans souveraineté légitime**, un espace où la valeur stratégique d'une ressource critique (ici le lithium) dépasse toute autorité institutionnelle. Il fonctionne comme un flux discontinu, un lieu de transit et d'extraction où les institutions se sont effondrées, laissant place à des acteurs locaux et des milices qui négocient l'accès à cette ressource vitale. Ce territoire est à la fois un enjeu géopolitique et un espace de survie, où la fluidité des échanges prime sur toute forme de gouvernance stable.
 tension_fondamentale: >
-  La fluidité vitale contre la fragmentation inévitable : un corridor n'a de valeur que s'il circule librement, mais sa valeur même pousse chaque acteur à le bloquer, le taxer ou le morceler — condamnant à la destruction ce que tous cherchent à s'approprier.
+  La contradiction entre la **nécessité collective** d'accéder à une ressource indispensable et l'**absence de cadre légitime** pour en réguler l'exploitation. Ce territoire est indispensable à la survie des systèmes énergétiques globaux, mais son contrôle échappe à toute autorité centralisée, créant un déséquilibre structurel entre utilité et légitimité.
 variables_potentielles:
   - energie_ressources_critiques
   - geopolitique_conflits
   - organisation_territoires
-  - gouvernance_institutions
+  - frontieres_du_systeme
 scenarios_instances:
   - breakdown
-date_creation: 2026-06-27
-custom_source: phantom_validate_2026-06-27
+date_creation: 2026-07-04
 scenario_ref: breakdown
 role_ref: >
-  Ancienne zone d'extraction lithifère reliant plusieurs gisements du pourtour méditerranéen, le Corridor Lithium Bouches est désormais morcelé entre milices locales et opérateurs privés depuis l'effondrement des autorités centrales. Son contrôle représente un enjeu vital pour quiconque cherche à maintenir une production énergétique autonome dans la région.
+  Le Corridor Lithium Bouches désigne une zone d'extraction et de convoyage du lithium sud-américain dont les institutions de régulation se sont effondrées, laissant place à des milices locales et des seigneurs de guerre miniers. Les flux d'approvisionnement y sont erratiques, négociés au cas par cas entre communautés survivantes et acheteurs étrangers désespérés. Ce territoire morcelé représente un enjeu vital pour quiconque cherche encore à alimenter des batteries ou des systèmes énergétiques.
 etat_ref: actif
 ---
 
 # Corridor Lithium Bouches
 
 ## Description archétypale
-Le corridor de ressource critique en régime d'effondrement est un archétype territorial qui transcende toute instance particulière : un espace linéaire dont la valeur tient non à ce qu'il est, mais à ce qu'il relie et contient. Quand les autorités centrales s'effondrent, ces corridors révèlent leur nature profonde — non comme infrastructures neutres mais comme enjeux de puissance brute, où la géographie elle-même devient arme. Leur fragmentation entre acteurs multiples n'est pas un accident mais une logique structurelle : nul ne peut les laisser à autrui, nul ne peut les tenir seul. Ils incarnent la tension irréductible entre la nécessité de flux continus et l'impossibilité d'une gouvernance unifiée.
+Le Corridor Lithium Bouches incarne l'archétype intemporel du **territoire vital sans souveraineté légitime**, un espace où la valeur stratégique d'une ressource critique (ici le lithium) dépasse toute autorité institutionnelle. Il fonctionne comme un flux discontinu, un lieu de transit et d'extraction où les institutions se sont effondrées, laissant place à des acteurs locaux et des milices qui négocient l'accès à cette ressource vitale. Ce territoire est à la fois un enjeu géopolitique et un espace de survie, où la fluidité des échanges prime sur toute forme de gouvernance stable.
 
 ## Tension fondamentale
-La fluidité vitale contre la fragmentation inévitable : un corridor n'a de valeur que s'il circule librement, mais sa valeur même pousse chaque acteur à le bloquer, le taxer ou le morceler — condamnant à la destruction ce que tous cherchent à s'approprier.
+La contradiction entre la **nécessité collective** d'accéder à une ressource indispensable et l'**absence de cadre légitime** pour en réguler l'exploitation. Ce territoire est indispensable à la survie des systèmes énergétiques globaux, mais son contrôle échappe à toute autorité centralisée, créant un déséquilibre structurel entre utilité et légitimité.
 
 ## Instances par scénario
 | Scénario | Instance | État | Rôle |

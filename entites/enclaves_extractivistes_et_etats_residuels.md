@@ -4,32 +4,31 @@ type: entity
 slug: enclaves_extractivistes_et_etats_residuels
 category: territoire
 description: >
-  Les enclaves extractivistes et états résiduels représentent l'archétype du territoire persistant hors-système : des poches géographiques où l'ancien ordre économique survit à sa propre condamnation, abrité derrière des coquilles étatiques vidées de leur substance mais conservant suffisamment de forme légale pour offrir une couverture aux logiques d'accumulation que le système dominant prétend avoir dépassées. Elles incarnent la persistance irréductible du modèle extractif dans les marges d'un monde qui s'en est officiellement détourné, fonctionnant comme des réservoirs de la logique ancienne — ni entièrement intégrées, ni véritablement éliminées. Leur existence révèle que toute transition laisse des zones de non-transition, et que ces zones sont tolérées précisément parce qu'elles rendent des services clandestins à ceux qui les combattent publiquement.
+  Les enclaves extractivistes et États résiduels incarnent la persistance obstinée des logiques d'exploitation et de souveraineté formelle dans les marges d'un ordre dominant qui les rejette sans pouvoir les éliminer. Territoires hybrides entre zone économique opportuniste et coquille étatique dégradée, ils survivent en mobilisant ce que les systèmes vertueux refusent de toucher : ressources épuisées, main-d'œuvre précaire, capitaux sans éthique. Leur existence est structurellement parasite de l'ordre qu'ils contredisent, prospérant dans les interstices laissés par les idéaux collectifs. Ils représentent la part maudite de tout projet civilisationnel — ce que la société refuse d'être mais dont elle tolère l'existence parce qu'elle en a besoin.
 tension_fondamentale: >
-  Ces enclaves sont à la fois condamnées moralement et tolérées fonctionnellement : leur existence est un aveu d'échec du modèle dominant qui prétend les avoir supplantés, et leur survie dépend précisément de l'hypocrisie de ceux qui les combattent — car les supprimer entièrement signifierait couper des flux dont le système alternatif est lui-même secrètement dépendant.
+  Ces entités sont à la fois condamnées moralement et tolérées fonctionnellement : leur existence est la preuve que l'ordre dominant est incomplet, et leur disparition révélerait les compromis que cet ordre refuse d'assumer lui-même.
 variables_potentielles:
   - energie_ressources_critiques
   - organisation_territoires
+  - systemes_productifs_travail
   - geopolitique_conflits
-  - gouvernance_institutions
-  - systeme_economique_redistribution
+  - valeurs_culture_tempo_sociale
 scenarios_instances:
   - eco_communalism
-date_creation: 2026-06-27
-custom_source: phantom_validate_2026-06-27
+date_creation: 2026-07-04
 scenario_ref: eco_communalism
 role_ref: >
-  Ces enclaves désignent les poches territoriales où des industries extractives continuent d'opérer sous couvert d'États fantômes ou de structures para-étatiques résiduelles, en marge des communautés éco-communalistes dominantes. Elles représentent le point de friction central entre le modèle décroissant et les logiques d'accumulation persistantes, alimentant des flux clandestins de matières premières vers des marchés offshore. Leur existence est tolérée, combattue ou instrumentalisée selon les alliances locales du moment.
-etat_ref: clandestin
+  Ensemble hétérogène de zones extractives et d'États-coquilles persistant en marge des communautés autogérées, exploitant des ressources que les collectifs éco-communalistes refusent de mobiliser. Ils constituent un pôle de tension permanent avec les réseaux décroissants, attirant main-d'œuvre précaire et capitaux résiduels. Leur existence est tolérée de fait, mais moralement condamnée par les assemblées locales.
+etat_ref: actif
 ---
 
 # Enclaves Extractivistes Et Etats Residuels
 
 ## Description archétypale
-Les enclaves extractivistes et états résiduels représentent l'archétype du territoire persistant hors-système : des poches géographiques où l'ancien ordre économique survit à sa propre condamnation, abrité derrière des coquilles étatiques vidées de leur substance mais conservant suffisamment de forme légale pour offrir une couverture aux logiques d'accumulation que le système dominant prétend avoir dépassées. Elles incarnent la persistance irréductible du modèle extractif dans les marges d'un monde qui s'en est officiellement détourné, fonctionnant comme des réservoirs de la logique ancienne — ni entièrement intégrées, ni véritablement éliminées. Leur existence révèle que toute transition laisse des zones de non-transition, et que ces zones sont tolérées précisément parce qu'elles rendent des services clandestins à ceux qui les combattent publiquement.
+Les enclaves extractivistes et États résiduels incarnent la persistance obstinée des logiques d'exploitation et de souveraineté formelle dans les marges d'un ordre dominant qui les rejette sans pouvoir les éliminer. Territoires hybrides entre zone économique opportuniste et coquille étatique dégradée, ils survivent en mobilisant ce que les systèmes vertueux refusent de toucher : ressources épuisées, main-d'œuvre précaire, capitaux sans éthique. Leur existence est structurellement parasite de l'ordre qu'ils contredisent, prospérant dans les interstices laissés par les idéaux collectifs. Ils représentent la part maudite de tout projet civilisationnel — ce que la société refuse d'être mais dont elle tolère l'existence parce qu'elle en a besoin.
 
 ## Tension fondamentale
-Ces enclaves sont à la fois condamnées moralement et tolérées fonctionnellement : leur existence est un aveu d'échec du modèle dominant qui prétend les avoir supplantés, et leur survie dépend précisément de l'hypocrisie de ceux qui les combattent — car les supprimer entièrement signifierait couper des flux dont le système alternatif est lui-même secrètement dépendant.
+Ces entités sont à la fois condamnées moralement et tolérées fonctionnellement : leur existence est la preuve que l'ordre dominant est incomplet, et leur disparition révélerait les compromis que cet ordre refuse d'assumer lui-même.
 
 ## Instances par scénario
 | Scénario | Instance | État | Rôle |

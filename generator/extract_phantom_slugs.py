@@ -5,7 +5,7 @@ extract_phantom_slugs.py — Ourrassol 2098
 
 Extrait les slugs fantômes (alliances/oppositions non trouvés dans les
 instances réelles) depuis une ou plusieurs sources, génère les rôles via
-l'API Claude, et alimente entites_custom/queue.yaml.
+le LLM, et alimente entites_custom/queue.yaml.
 
 SOURCES
 -------
@@ -33,7 +33,7 @@ from pathlib import Path
 
 import yaml
 
-from llm_client import call_llm, LLM_MODEL as MODEL
+from llm_client import call_llm
 
 # ---------------------------------------------------------------------------
 # Configuration
@@ -273,7 +273,7 @@ def build_queue_entries(phantoms, real_slugs):
 # ---------------------------------------------------------------------------
 
 def generate_roles(entries, dry_run=False):
-    """Appelle Claude en lots de 5 pour générer un rôle par entrée."""
+    """Appelle le LLM en lots de 5 pour générer un rôle par entrée."""
     if dry_run:
         return entries
 
@@ -310,6 +310,7 @@ Entités :
                 user_prompt=prompt,
                 max_tokens=2000,
                 temperature=0.0,
+                task_tier="volume",
             ).strip()
             raw = re.sub(r"^```(?:json)?\s*", "", raw)
             raw = re.sub(r"\s*```$", "", raw).strip()

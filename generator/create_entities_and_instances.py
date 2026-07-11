@@ -19,17 +19,17 @@ DEUX MODES, demandés interactivement au lancement :
 
   custom — décris UNE instance précise (nom, catégorie, rôle, état
            dans UN scénario de référence) dans
-           entites_custom/queue.yaml. Claude déduit l'archétype, crée
+           entites_custom/queue.yaml. Le LLM déduit l'archétype, crée
            l'entité, PUIS enchaîne automatiquement la génération de
            toutes ses instances (scenario_hint, ou les 6 scénarios par
            défaut) — celle du scenario_ref avec rôle/état imposés en
            contrainte dure, les autres entièrement libres.
 
-  auto   — donne un nombre N. Claude invente N entités, chacune avec
+  auto   — donne un nombre N. Le LLM invente N entités, chacune avec
            ses scenarios_instances proposés. Chaque entité créée avec
            succès enchaîne automatiquement la génération de ses
            instances dans CES scénarios précis (pas systématiquement
-           les 6 — ceux que Claude a jugés pertinents pour elle).
+           les 6 — ceux que le LLM a jugés pertinents pour elle).
 
 RÉSILIENCE : si une instance échoue (erreur API, validation rejetée)
 pour une entité, le script continue avec les scénarios/entités
@@ -58,7 +58,7 @@ from pathlib import Path
 
 import yaml
 
-from llm_client import call_llm, LLM_MODEL as MODEL
+from llm_client import call_llm  # tier structured_strict — canonique/référencé
 
 
 # ---------------------------------------------------------------------------
@@ -213,7 +213,21 @@ def save_entities_list(entities):
 
 
 def append_to_entities_list(entry):
+    """
+    Ajoute une entrée au registre anti-doublon (_entities_list.json).
+
+    Fix du 4 juillet (bug #19) : dédoublonne sur `slug` avant d'ajouter —
+    l'ancienne version se contentait d'un append brut, ce qui a produit
+    645 entrées pour 571 slugs uniques (jusqu'à 6 copies du même slug,
+    avec des descriptions différentes à chaque fois). Le résumé montré au
+    LLM (build_existing_entities_summary) affichait donc les doublons tels
+    quels, gonflant le prompt et brouillant le jugement anti-doublon du modèle.
+    Comportement désormais : "update-or-insert" — la nouvelle entrée
+    remplace l'ancienne du même slug plutôt que de s'y ajouter.
+    """
     entities = load_entities_list()
+    slug = entry.get("slug")
+    entities = [e for e in entities if e.get("slug") != slug]
     entities.append(entry)
     save_entities_list(entities)
 
@@ -244,7 +258,7 @@ def slugify(text):
 
 
 # ---------------------------------------------------------------------------
-# Appels Claude
+# Appels LLM
 # ---------------------------------------------------------------------------
 
 def get_client():
@@ -258,13 +272,11 @@ def call_claude_json(client, system, user_content, max_tokens=3000):
         user_prompt=user_content,
         max_tokens=max_tokens,
         temperature=0.0,
+        task_tier="structured_strict",
     ).strip()
 
     if not text:
-        raise RuntimeError(
-            f"Réponse Claude vide (stop_reason={resp.stop_reason}, "
-            f"{resp.usage.output_tokens} tokens générés)."
-        )
+        raise RuntimeError("Réponse LLM vide.")
 
     candidate = re.sub(r"^```(?:json)?\s*", "", text)
     candidate = re.sub(r"\s*```$", "", candidate)
@@ -283,10 +295,20 @@ def call_claude_json(client, system, user_content, max_tokens=3000):
         except json.JSONDecodeError:
             pass
 
-    if resp.stop_reason == "max_tokens":
+    # Bug corrigé le 11 juillet 2026 : ce bloc référençait encore `resp`
+    # (objet de réponse brut du SDK Anthropic, d'avant la migration vers
+    # llm_client.py) pour distinguer une troncature max_tokens d'un autre
+    # échec de parsing JSON. call_llm() ne retourne qu'une chaîne de texte,
+    # `resp` n'existe plus — NameError silencieux jamais déclenché jusqu'ici
+    # car ce chemin n'est atteint qu'en échec de parsing JSON total. On ne
+    # peut plus distinguer les deux cas avec certitude ; heuristique : une
+    # réponse proche de max_tokens en longueur est probablement tronquée.
+    likely_truncated = len(text) >= max_tokens * 3  # ~3-4 car/token en français
+    if likely_truncated:
         raise RuntimeError(
-            f"Réponse Claude tronquée (max_tokens={max_tokens} atteint, "
-            f"aucun JSON complet trouvé) — texte reçu: {text[:200]!r}"
+            f"Réponse LLM probablement tronquée (max_tokens={max_tokens}, "
+            f"{len(text)} caractères reçus, aucun JSON complet trouvé) — "
+            f"texte reçu: {text[:200]!r}"
         )
     raise RuntimeError(f"Aucun JSON exploitable trouvé dans la réponse : {text[:200]!r}")
 
@@ -358,26 +380,50 @@ Réponds UNIQUEMENT en JSON, sans aucun texte autour, format exact :
     return call_claude_json(client, "Tu es un assistant de world-building.", user_content)
 
 
-def step_auto_generate_entities(client, n, existing_entities, category_hint=None):
+def step_auto_generate_entities(client, n, existing_entities, category_hint=None, scenarios_only=None):
     var_summary = build_variables_summary()
     existing_summary = build_existing_entities_summary(existing_entities)
-    scenarios_summary = "\n".join(
-        f"- {s}: {load_scenario_context(s)['summary'][:120]}" for s in SCENARIOS
-    )
+
+    if scenarios_only:
+        # Contrainte dure : ne donner que le contexte des scénarios ciblés,
+        # pour éviter d'inspirer le LLM avec des mondes qu'il devra de toute
+        # façon ignorer.
+        scenarios_summary = "\n".join(
+            f"- {s}: {load_scenario_context(s)['summary'][:120]}" for s in scenarios_only
+        )
+    else:
+        scenarios_summary = "\n".join(
+            f"- {s}: {load_scenario_context(s)['summary'][:120]}" for s in SCENARIOS
+        )
 
     category_txt = ""
     if category_hint:
         category_txt = f"\nContrainte : toutes les entités doivent être de catégorie '{category_hint}'.\n"
 
-    user_content = f"""Tu dois inventer {n} nouvelle(s) entité(s) (archétypes) pour le
-projet Ourrassol 2098 — institutions, organisations, mouvements,
-infrastructures, IA, personnages individuels, etc. qui pourront être
-incarnés différemment dans chacun des 6 scénarios du monde.
-{category_txt}
+    scenario_constraint_txt = ""
+    scenario_instances_hint = '["scenario1", "scenario2"]'
+    if scenarios_only:
+        scenarios_list_txt = ", ".join(f"'{s}'" for s in scenarios_only)
+        scenario_constraint_txt = (
+            f"\nContrainte dure : ces entités doivent exister dans TOUS les "
+            f"scénarios suivants, et uniquement ceux-là : {scenarios_list_txt}. "
+            f"\"scenarios_instances\" doit valoir exactement "
+            f"{json.dumps(scenarios_only, ensure_ascii=False)} pour chaque "
+            f"entité, jamais un autre scénario, ni une liste plus courte ou "
+            f"plus longue.\n"
+        )
+        scenario_instances_hint = json.dumps(scenarios_only, ensure_ascii=False)
+
+    user_content = f"""Tu dois inventer EXACTEMENT {n} nouvelle(s) entité(s) (archétypes) —
+ni plus, ni moins — pour le projet Ourrassol 2098 : institutions,
+organisations, mouvements, infrastructures, IA, personnages
+individuels, etc. qui pourront être incarnés différemment dans chacun
+des 6 scénarios du monde.
+{category_txt}{scenario_constraint_txt}
 ## SCÉNARIOS DU MONDE
 {scenarios_summary}
 
-## VARIABLES DISPONIBLES
+## VARIABLES DISPONIBLES (liste FERMÉE — voir consigne ci-dessous)
 {var_summary}
 
 ## ENTITÉS DÉJÀ EXISTANTES (anti-doublon — ne RECRÉE AUCUNE variante de l'une d'elles)
@@ -398,7 +444,15 @@ compte. Si c'est le cas, indique-le via "doublon_detecte": true et
 écartée du batch, ce n'est pas grave, propose-en une suffisamment
 différente à la place dans ta réponse.
 
-Réponds UNIQUEMENT en JSON, sans aucun texte autour, format exact :
+Contrainte dure sur "variables_potentielles" : choisis EXCLUSIVEMENT
+parmi les slugs listés dans VARIABLES DISPONIBLES ci-dessus, copiés à
+l'IDENTIQUE (orthographe exacte, aucune variation). N'invente JAMAIS
+un nouveau slug, même s'il te semble mieux correspondre à l'entité —
+si aucune variable existante ne convient parfaitement, choisis les
+plus proches disponibles plutôt que d'en inventer une nouvelle.
+
+Réponds UNIQUEMENT en JSON, sans aucun texte autour, format exact,
+avec exactement {n} élément(s) dans "entites" :
 {{
   "entites": [
     {{
@@ -407,7 +461,7 @@ Réponds UNIQUEMENT en JSON, sans aucun texte autour, format exact :
       "description_complete": "description archétypale, 3-4 lignes",
       "tension_fondamentale": "1-2 lignes",
       "variables_potentielles": ["slug1", "slug2", "slug3"],
-      "scenarios_instances": ["scenario1", "scenario2"],
+      "scenarios_instances": {scenario_instances_hint},
       "doublon_detecte": false,
       "doublon_slug": null
     }}
@@ -548,7 +602,7 @@ QUEUE_TEMPLATE = """\
 #
 # Ajoute ici tes idées d'entités custom, décrites à travers UNE
 # instance de référence précise (le scénario où tu l'imagines
-# d'abord). Claude en déduira l'archétype intemporel, puis le script
+# d'abord). Le LLM en déduira l'archétype intemporel, puis le script
 # enchaînera automatiquement la génération des instances pour les
 # autres scénarios. Lance ensuite :
 #
@@ -1079,6 +1133,11 @@ def process_custom_idea(client, idea, dry_run=False):
     }
 
 
+# NB (4 juillet) : le rate limiting (429) est désormais géré de façon
+# centralisée et purement réactive dans llm_client.py (call_llm), qui
+# retente automatiquement avec un délai croissant en cas de 429 — pour
+# TOUS les scripts du pipeline, pas seulement celui-ci. Pas de pause
+# artificielle ajoutée ici : voir llm_client.py pour le détail.
 def run_custom_mode(client, dry_run):
     queue = load_yaml_list(QUEUE_PATH, key="queue")
     if not queue:
@@ -1184,9 +1243,10 @@ def analyze_entity_coverage():
 
 
 def build_entity_analysis_summary(coverage, scenario_filter=None):
-    """Résumé textuel de l'analyse pour le prompt Claude."""
+    """Résumé textuel de l'analyse pour le prompt LLM. scenario_filter : liste
+    de scénarios à considérer, ou None pour les 6 par défaut."""
     lines = []
-    scenarios = [scenario_filter] if scenario_filter else SCENARIOS
+    scenarios = scenario_filter if scenario_filter else SCENARIOS
 
     lines.append("## Couverture géographique actuelle (instances)")
     for sc in scenarios:
@@ -1237,7 +1297,7 @@ def build_scenarios_summary_for_entity_auto(scenario_filter=None):
 
 def step_auto_suggest_entities(client, n, coverage, scenario_filter=None):
     """
-    Appelle Claude pour suggérer N idées d'entités contextualisées
+    Appelle le LLM pour suggérer N idées d'entités contextualisées
     en fonction des déséquilibres détectés.
     Retourne une liste d'idées au format queue.yaml entités.
     """
@@ -1248,7 +1308,12 @@ def step_auto_suggest_entities(client, n, coverage, scenario_filter=None):
 
     scenario_instruction = ""
     if scenario_filter:
-        scenario_instruction = f"\nContrainte : les entités doivent avoir '{scenario_filter}' comme scénario de référence prioritaire."
+        scenarios_list_txt = ", ".join(f"'{s}'" for s in scenario_filter)
+        scenario_instruction = (
+            f"\nOrientation (pas une contrainte dure) : privilégie ces "
+            f"scénarios comme référence pour les entités proposées : "
+            f"{scenarios_list_txt}."
+        )
 
     user_content = f"""Tu dois proposer {n} idée(s) d'entités custom pour le projet Ourrassol 2098.
 Ces idées seront écrites dans queue.yaml pour être inspectées et créées en mode custom.
@@ -1292,22 +1357,24 @@ Réponds UNIQUEMENT en JSON, sans aucun texte autour, format exact :
     return result.get("entites", [])
 
 
-def run_auto_suggest_mode(client, dry_run):
+def run_auto_suggest_mode(client, dry_run, n=None, scenario_filter=None):
     """Mode auto-suggest : analyse le vault, génère des idées, les ajoute à queue.yaml."""
-    raw_n = input("Nombre d'idées à générer ? [défaut: 3] : ").strip()
-    try:
-        n = int(raw_n) if raw_n else 3
-        if n < 1:
+    if n is None:
+        raw_n = input("Nombre d'idées à générer ? [défaut: 3] : ").strip()
+        try:
+            n = int(raw_n) if raw_n else 3
+            if n < 1:
+                n = 3
+        except ValueError:
             n = 3
-    except ValueError:
-        n = 3
 
-    scenario_raw = input(
-        "Scénario de référence ciblé ? (Entrée pour laisser Claude choisir) [{}] : ".format(
-            "|".join(SCENARIOS)
-        )
-    ).strip()
-    scenario_filter = scenario_raw if scenario_raw in SCENARIOS else None
+    if scenario_filter is None:
+        scenario_raw = input(
+            "Scénario de référence ciblé ? (Entrée pour laisser le LLM choisir) [{}] : ".format(
+                "|".join(SCENARIOS)
+            )
+        ).strip()
+        scenario_filter = scenario_raw if scenario_raw in SCENARIOS else None
 
     print("\n[1/2] Analyse de la couverture du vault...")
     coverage = analyze_entity_coverage()
@@ -1320,7 +1387,7 @@ def run_auto_suggest_mode(client, dry_run):
     ideas = step_auto_suggest_entities(client, n, coverage, scenario_filter)
 
     if not ideas:
-        print("Aucune idée générée — vérifier la réponse Claude.")
+        print("Aucune idée générée — vérifier la réponse du LLM.")
         return
 
     queue_ideas = []
@@ -1353,29 +1420,37 @@ def run_auto_suggest_mode(client, dry_run):
 # ORCHESTRATION — mode auto
 # =============================================================================
 
-def run_auto_mode(client, dry_run):
-    raw = input("Combien d'entités générer ? : ").strip()
-    try:
-        n = int(raw)
-    except ValueError:
-        print("Nombre invalide.")
-        return
+def run_auto_mode(client, dry_run, n=None, category_hint=None, scenarios_only=None):
+    if n is None:
+        raw = input("Combien d'entités générer ? : ").strip()
+        try:
+            n = int(raw)
+        except ValueError:
+            print("Nombre invalide.")
+            return
     if n < 1:
         print("Le nombre doit être >= 1.")
         return
 
-    category_raw = input(
-        "Catégorie imposée (optionnel, Entrée pour libre) [{}] : ".format(
-            "|".join(VALID_CATEGORIES)
-        )
-    ).strip()
-    category_hint = category_raw if category_raw in VALID_CATEGORIES else None
+    if category_hint is None:
+        category_raw = input(
+            "Catégorie imposée (optionnel, Entrée pour libre) [{}] : ".format(
+                "|".join(VALID_CATEGORIES)
+            )
+        ).strip()
+        category_hint = category_raw if category_raw in VALID_CATEGORIES else None
 
     existing_entities = load_entities_list()
 
-    print(f"\n[1/2] Génération de {n} entité(s)...")
-    result = step_auto_generate_entities(client, n, existing_entities, category_hint)
+    print(f"\n[1/2] Génération de {n} entité(s)"
+          + (f" (scénarios : {', '.join(scenarios_only)})" if scenarios_only else "") + "...")
+    result = step_auto_generate_entities(client, n, existing_entities, category_hint, scenarios_only)
     entities = result.get("entites", [])
+
+    if len(entities) != n:
+        print(f"  ⚠ {len(entities)} entité(s) reçue(s) au lieu de {n} demandée(s) "
+              f"— troncature au nombre exact demandé.")
+        entities = entities[:n]
 
     print(f"[2/2] Validation, injection et génération des instances...")
     created, rejected = [], []
@@ -1395,8 +1470,14 @@ def run_auto_mode(client, dry_run):
             continue
 
         seen_in_batch.add(slug)
-        scenarios = entity.get("scenarios_instances") or list(SCENARIOS)
-        scenarios = [s for s in scenarios if s in SCENARIOS] or list(SCENARIOS)
+        if scenarios_only:
+            # Filtre dur : garantit la contrainte --scenario même si le LLM
+            # a ignoré la consigne du prompt (comportement déjà observé sur
+            # d'autres tâches contraintes le 11 juillet 2026, cf. bug #26).
+            scenarios = list(scenarios_only)
+        else:
+            scenarios = entity.get("scenarios_instances") or list(SCENARIOS)
+            scenarios = [s for s in scenarios if s in SCENARIOS] or list(SCENARIOS)
 
         print(f"\n  ✓ {nom} ({entity['category']})")
         if dry_run:
@@ -1424,7 +1505,7 @@ def run_auto_mode(client, dry_run):
             })
 
         # Enchaînement automatique des instances, dans les scénarios
-        # proposés par Claude pour CETTE entité (pas systématiquement les 6)
+        # proposés par le LLM pour CETTE entité (pas systématiquement les 6)
         instance_stats = generate_instances_for_entity(client, entity_fm, scenarios, dry_run=dry_run)
         for k in total_instance_stats:
             total_instance_stats[k] += instance_stats.get(k, 0)
@@ -1481,7 +1562,26 @@ def main():
         description="Crée des entités ET leurs instances en un seul run (Ourrassol 2098)"
     )
     parser.add_argument("--dry-run", action="store_true",
-                         help="Appelle Claude et valide, mais n'écrit rien sur disque.")
+                         help="Appelle le LLM et valide, mais n'écrit rien sur disque.")
+    parser.add_argument("--mode", choices=("custom", "auto", "auto-suggest"), default=None,
+                         help="Mode de fonctionnement. Si omis, demandé interactivement "
+                              "(input()) — nécessaire pour un lancement non-interactif "
+                              "(GUI Flask, cron) où aucun stdin n'est disponible.")
+    parser.add_argument("--n", type=int, default=None,
+                         help="Modes auto/auto-suggest uniquement : nombre d'entités/idées "
+                              "à générer. Si omis, demandé interactivement.")
+    parser.add_argument("--category", choices=VALID_CATEGORIES, default=None,
+                         help="Mode auto uniquement : catégorie imposée à toutes les "
+                              "entités générées (optionnel, libre si omis).")
+    parser.add_argument("--scenario", nargs="+", choices=SCENARIOS, default=None,
+                         help="Un ou plusieurs scénarios (espacés). Mode auto : "
+                              "contrainte dure — chaque entité générée existera "
+                              "dans exactement ces scénarios, prompt + filtre en "
+                              "sortie garanti. Mode auto-suggest : orientation "
+                              "pour le LLM, pas une contrainte dure appliquée en "
+                              "code. Sans effet en mode custom. Omis = les 6 "
+                              "scénarios par défaut (mode auto) ou libre choix du "
+                              "LLM (mode auto-suggest).")
     args = parser.parse_args()
 
     print("=" * 60)
@@ -1492,16 +1592,26 @@ def main():
 
     client = get_client()
 
-    mode = input("\nMode : custom, auto ou auto-suggest ? [custom/auto/auto-suggest] : ").strip().lower()
-    while mode not in ("custom", "auto", "auto-suggest"):
-        mode = input("Réponds 'custom', 'auto' ou 'auto-suggest' : ").strip().lower()
+    # Bug découvert le 11 juillet 2026 (test GUI "Create entities custom") :
+    # le script bloquait indéfiniment sur input() quand lancé depuis app.py
+    # (subprocess.Popen sans stdin connecté) — --mode permet de contourner
+    # totalement le prompt interactif pour ce cas d'usage.
+    mode = args.mode
+    if mode is None:
+        mode = input("\nMode : custom, auto ou auto-suggest ? [custom/auto/auto-suggest] : ").strip().lower()
+        while mode not in ("custom", "auto", "auto-suggest"):
+            mode = input("Réponds 'custom', 'auto' ou 'auto-suggest' : ").strip().lower()
+    else:
+        print(f"\nMode : {mode} (fourni via --mode)")
 
     if mode == "custom":
         run_custom_mode(client, dry_run=args.dry_run)
     elif mode == "auto":
-        run_auto_mode(client, dry_run=args.dry_run)
+        run_auto_mode(client, dry_run=args.dry_run, n=args.n,
+                       category_hint=args.category, scenarios_only=args.scenario)
     else:
-        run_auto_suggest_mode(client, dry_run=args.dry_run)
+        run_auto_suggest_mode(client, dry_run=args.dry_run, n=args.n,
+                               scenario_filter=args.scenario)
 
 
 if __name__ == "__main__":

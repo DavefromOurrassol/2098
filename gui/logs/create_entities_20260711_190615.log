@@ -1,0 +1,37 @@
+============================================================
+OURRASSOL 2098 — Création entités + instances
+============================================================
+
+Mode : auto (fourni via --mode)
+
+[1/2] Génération de 1 entité(s) (scénarios : fortress_world)...
+[llm] Mistral (mistral-large-latest) — entrée : 25316 | sortie : 1152
+[2/2] Validation, injection et génération des instances...
+
+  ✓ VaultCorp Security (entreprise)
+  Instances (1 scénario(s)) :
+    → fortress_world... [llm] Mistral (mistral-large-latest) — entrée : 4665 | sortie : 1382
+✓
+
+  ✓ BioLock Agritech (entreprise)
+  Instances (1 scénario(s)) :
+    → fortress_world... [llm] Mistral (mistral-large-latest) — entrée : 4695 | sortie : 1107
+✓
+
+  ✓ Ironclad Logistics (entreprise)
+  Instances (1 scénario(s)) :
+    → fortress_world... [llm] Mistral (mistral-large-latest) — entrée : 4718 | sortie : 1222
+✓
+
+  ✓ NeuroSentry (entreprise)
+  Instances (1 scénario(s)) :
+    → fortress_world... [llm] Mistral (mistral-large-latest) — entrée : 4726 | sortie : 1282
+✓
+
+  ✓ TerraShield GeoEngineering (entreprise)
+  Instances (1 scénario(s)) :
+    → fortress_world... [llm] Mistral (mistral-large-latest) — entrée : 4743 | sortie : 1137
+✓
+
+Terminé. 5/5 entité(s) créée(s).
+Instances : 5 créée(s) | 0 déjà existante(s) | 0 erreur(s)

@@ -48,6 +48,11 @@ LOGS_DIR.mkdir(exist_ok=True)
 
 app = Flask(__name__)
 
+# P5 (backlog) : /api/dashboard extrait dans routes_dashboard.py pour éviter
+# qu'il soit écrasé par les patches récurrents sur ce fichier.
+from routes_dashboard import dashboard_bp
+app.register_blueprint(dashboard_bp)
+
 # ── État global des runs ──────────────────────────────────────────────────────
 
 # { run_id: { "process": Popen, "lines": [...], "done": bool, "script_id": str } }
@@ -90,19 +95,19 @@ def update_config():
     if not data:
         return jsonify({"error": "Données manquantes"}), 400
     cfg = load_config()
-    # Préserver les clés available_* AVANT tout écrasement (bug #14 : la boucle
-    # générique ci-dessous remplace tout cfg["llm"] par data["llm"], qui ne
-    # contient jamais les available_* — ils ne sont pas connus/renvoyés par le
-    # frontend. Il faut donc les sauvegarder avant, pas après, l'écrasement.)
-    preserved_llm = {k: v for k, v in cfg.get("llm", {}).items() if k.startswith("available_")}
-    # Mise à jour partielle — seules les clés envoyées
+    # Fusion générique (5 juillet, remplace le fix bug #14 par une solution
+    # plus large) : pour toute clé dont la valeur actuelle ET la nouvelle
+    # valeur sont des dict (ex. "llm"), on fusionne au lieu de remplacer —
+    # sinon poster {llm: {provider, model_openai}} effacerait model_mistral,
+    # model_claude et les available_* au passage. Les clés simples (chaînes,
+    # listes) restent remplacées comme avant.
     for key, value in data.items():
-        if key in cfg:
+        if key not in cfg:
+            continue
+        if isinstance(cfg[key], dict) and isinstance(value, dict):
+            cfg[key].update(value)
+        else:
             cfg[key] = value
-        # Support nested: llm.*
-    if "llm" in data:
-        for k, v in preserved_llm.items():
-            cfg["llm"].setdefault(k, v)
     save_config(cfg)
     return jsonify({"ok": True})
 
@@ -126,13 +131,18 @@ def get_script(script_id: str):
 @app.route("/api/yaml", methods=["GET"])
 def get_yaml():
     cfg = load_config()
-    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+    # Bug #16 : résolution basée sur vault_root, pas pipeline_dir — plusieurs
+    # dossiers (entites_custom/, evenements_custom/, signaux_custom/,
+    # instances_custom/) vivent à la racine du vault, pas dans generator/.
+    # Comme pipeline_dir = vault_root/generator/, les chemins scripts_config.json
+    # correctement relatifs à generator/ sont préfixés "generator/" en conséquence.
+    vault_root = Path(cfg.get("vault_root", ""))
     rel_path = request.args.get("path", "")
     if not rel_path:
         return jsonify({"error": "Paramètre path manquant"}), 400
-    target = (pipeline_dir / rel_path).resolve()
+    target = (vault_root / rel_path).resolve()
     try:
-        target.relative_to(pipeline_dir.resolve())
+        target.relative_to(vault_root.resolve())
     except ValueError:
         return jsonify({"error": "Chemin non autorisé"}), 403
     if not target.exists():
@@ -147,15 +157,15 @@ def get_yaml():
 @app.route("/api/yaml", methods=["POST"])
 def save_yaml():
     cfg = load_config()
-    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+    vault_root = Path(cfg.get("vault_root", ""))  # bug #16
     data = request.get_json()
     if not data or "path" not in data or "content" not in data:
         return jsonify({"error": "Données manquantes"}), 400
     rel_path = data["path"]
     file_content = data["content"]
-    target = (pipeline_dir / rel_path).resolve()
+    target = (vault_root / rel_path).resolve()
     try:
-        target.relative_to(pipeline_dir.resolve())
+        target.relative_to(vault_root.resolve())
     except ValueError:
         return jsonify({"error": "Chemin non autorisé"}), 403
     try:
@@ -175,7 +185,7 @@ def save_yaml_form():
     Sauvegarde des champs individuels dans un fichier YAML.
     Body JSON :
     {
-      "path": "config.yaml",
+      "path": "generator/config.yaml",
       "fields": {
         "scenario": "breakdown",
         "ligne_editoriale": "opposition",
@@ -186,7 +196,7 @@ def save_yaml_form():
     Les clés à point (ex: article.longueur) ciblent des sous-clés YAML imbriquées.
     """
     cfg = load_config()
-    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+    vault_root = Path(cfg.get("vault_root", ""))  # bug #16
     data = request.get_json()
     if not data or "path" not in data or "fields" not in data:
         return jsonify({"error": "Données manquantes"}), 400
@@ -194,9 +204,9 @@ def save_yaml_form():
     rel_path = data["path"]
     fields = data["fields"]  # dict clé → valeur
 
-    target = (pipeline_dir / rel_path).resolve()
+    target = (vault_root / rel_path).resolve()
     try:
-        target.relative_to(pipeline_dir.resolve())
+        target.relative_to(vault_root.resolve())
     except ValueError:
         return jsonify({"error": "Chemin non autorisé"}), 403
 
@@ -329,7 +339,7 @@ def append_yaml_queue():
     }
     """
     cfg = load_config()
-    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+    vault_root = Path(cfg.get("vault_root", ""))  # bug #16
     data = request.get_json()
     if not data or "path" not in data or "entry" not in data:
         return jsonify({"error": "Données manquantes"}), 400
@@ -337,9 +347,9 @@ def append_yaml_queue():
     rel_path = data["path"]
     entry = data["entry"]
 
-    target = (pipeline_dir / rel_path).resolve()
+    target = (vault_root / rel_path).resolve()
     try:
-        target.relative_to(pipeline_dir.resolve())
+        target.relative_to(vault_root.resolve())
     except ValueError:
         return jsonify({"error": "Chemin non autorisé"}), 403
 
@@ -1489,243 +1499,34 @@ def _scan_zone_slugs_hier(pipeline_dir: Path, scenario: str) -> list:
     return result
 
 
-@app.route("/api/dashboard", methods=["GET"])
-def get_dashboard():
-    cfg = load_config()
-    vault_root   = Path(cfg.get("vault_root", ""))
-    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
-    llm          = cfg.get("llm", {})
-
-    stats = {
-        "llm": {
-            "provider": llm.get("provider", "—"),
-            "model": llm.get("model_mistral") if llm.get("provider") == "mistral"
-                     else llm.get("model_claude", "—"),
-        },
-        "articles":       _stats_articles(vault_root),
-        "instances":      _stats_instances(vault_root),
-        "entites":        _stats_entites(vault_root, pipeline_dir),
-        "journaux":       _stats_journaux(pipeline_dir),
-        "enrichissement": _stats_enrichissement(vault_root),
-        "thematiques":    _stats_thematiques(vault_root),
-        "zones":          _stats_zones(pipeline_dir, cfg.get("scenarios", [])),
-        "review_count":   _count_review_items(pipeline_dir),
-        "vault_ok":       vault_root.exists() and pipeline_dir.exists(),
-    }
-    return jsonify(stats)
-
-
-def _stats_articles(vault_root: Path) -> dict:
-    articles_dir = vault_root / "articles"
-    if not articles_dir.exists():
-        return {"total": 0, "by_scenario": {}, "by_ligne": {}}
-    total = 0
-    by_scenario: dict = {}
-    by_ligne: dict = {}
-    sc_pat    = re.compile(r"^scenario:\s*(.+)$", re.MULTILINE)
-    ligne_pat = re.compile(r"^ligne_editoriale:\s*(.+)$", re.MULTILINE)
-    for f in sorted(articles_dir.glob("*.md")):
-        try:
-            txt = f.read_text(encoding="utf-8")
-            total += 1
-            sc_m = sc_pat.search(txt)
-            sc   = sc_m.group(1).strip() if sc_m else "inconnu"
-            by_scenario[sc] = by_scenario.get(sc, 0) + 1
-            ligne_m = ligne_pat.search(txt)
-            ligne   = ligne_m.group(1).strip() if ligne_m else "inconnu"
-            by_ligne[ligne] = by_ligne.get(ligne, 0) + 1
-        except Exception:
-            continue
-    return {"total": total, "by_scenario": by_scenario, "by_ligne": by_ligne}
-
-
-def _stats_instances(vault_root: Path) -> dict:
-    instances_dir = vault_root / "instances"
-    if not instances_dir.exists():
-        return {"total": 0, "by_scenario": {}}
-    total = 0
-    by_scenario: dict = {}
-    sc_pat = re.compile(r"^scenario:\s*(.+)$", re.MULTILINE)
-    for f in instances_dir.glob("*.md"):
-        try:
-            txt = f.read_text(encoding="utf-8")
-            total += 1
-            sc_m = sc_pat.search(txt)
-            sc   = sc_m.group(1).strip() if sc_m else "inconnu"
-            by_scenario[sc] = by_scenario.get(sc, 0) + 1
-        except Exception:
-            continue
-    return {"total": total, "by_scenario": by_scenario}
-
-
-def _stats_entites(vault_root: Path, pipeline_dir: Path) -> dict:
-    for p in [pipeline_dir / "_entities_list.json", vault_root / "_entities_list.json"]:
-        if p.exists():
-            try:
-                data = json.loads(p.read_text(encoding="utf-8"))
-                if isinstance(data, list):
-                    return {"total": len(data)}
-                if isinstance(data, dict):
-                    return {"total": len(data)}
-            except Exception:
-                pass
-    entites_dir = vault_root / "entites"
-    if entites_dir.exists():
-        return {"total": len(list(entites_dir.glob("*.md")))}
-    return {"total": 0}
-
-
-def _stats_journaux(pipeline_dir: Path) -> dict:
-    """
-    Format journaux.yaml :
-      breakdown:
-        pro_pouvoir:
-          _reseau:
-            nom: ...
-            zones:
-              - zone_slug
-    Compter le nombre de réseaux (journaux) par scénario.
-    """
-    journaux_path = pipeline_dir / "journaux.yaml"
-    if not journaux_path.exists():
-        return {"total": 0, "missing": True, "by_scenario": {}}
-    try:
-        txt = journaux_path.read_text(encoding="utf-8")
-        # Chaque journal = un bloc "_reseau:" ou une clé de réseau sous une ligne éditoriale
-        # On compte les occurrences de "nom:" au niveau réseau (indentation 3)
-        # Format : scenario > ligne > reseau_key > { nom: ... }
-        # Compter les clés de scénario (niveau 0, pas d'indentation, se termine par ":")
-        by_scenario: dict = {}
-        current_sc = None
-        sc_re  = re.compile(r"^(\w+):$")
-        # Compter les réseaux : ligne "    _reseau:" ou "    nom_journal:" à indent 4
-        reseau_re = re.compile(r"^    \w")
-        for line in txt.splitlines():
-            sc_m = sc_re.match(line)
-            if sc_m:
-                current_sc = sc_m.group(1)
-                if current_sc not in by_scenario:
-                    by_scenario[current_sc] = 0
-            elif current_sc and reseau_re.match(line) and line.strip().endswith(":"):
-                # Clé de réseau (indent 4, pas de valeur inline)
-                by_scenario[current_sc] = by_scenario.get(current_sc, 0) + 1
-        total = sum(by_scenario.values())
-        return {"total": total, "missing": False, "by_scenario": by_scenario}
-    except Exception:
-        return {"total": 0, "missing": False, "by_scenario": {}}
-
-
-def _stats_enrichissement(vault_root: Path) -> dict:
-    instances_dir = vault_root / "instances"
-    if not instances_dir.exists():
-        return {"minimal": 0, "enrichi": 0, "autre": 0, "total": 0}
-    minimal = enrichi = autre = 0
-    status_pat = re.compile(r"^statut:\s*(.+)$", re.MULTILINE)
-    for f in instances_dir.glob("*.md"):
-        try:
-            txt = f.read_text(encoding="utf-8")
-            m = status_pat.search(txt)
-            if m:
-                s = m.group(1).strip()
-                if "enrichi" in s:
-                    enrichi += 1
-                elif "minimal" in s:
-                    minimal += 1
-                else:
-                    autre += 1
-            else:
-                autre += 1
-        except Exception:
-            continue
-    return {"minimal": minimal, "enrichi": enrichi, "autre": autre,
-            "total": minimal + enrichi + autre}
-
-
-def _stats_thematiques(vault_root: Path) -> dict:
-    articles_dir = vault_root / "articles"
-    if not articles_dir.exists():
-        return {}
-    by_th: dict = {}
-    th_pat = re.compile(r"^thematique:\s*(.+)$", re.MULTILINE)
-    for f in articles_dir.glob("*.md"):
-        try:
-            txt = f.read_text(encoding="utf-8")
-            m = th_pat.search(txt)
-            th = m.group(1).strip() if m else "inconnu"
-            by_th[th] = by_th.get(th, 0) + 1
-        except Exception:
-            continue
-    return dict(sorted(by_th.items(), key=lambda x: -x[1]))
-
-
-def _stats_zones(pipeline_dir: Path, scenarios: list) -> dict:
-    """
-    Format geographie/{scenario}.md :
-      zones:
-        - slug: afrique_centrale_australe
-          nom: ...
-          niveau: 1
-    Compter les zones de niveau 1 par scénario.
-    """
-    geo_dir = pipeline_dir / "geographie"
-    if not geo_dir.exists():
-        return {"total": 0, "by_scenario": {}}
-    niveau_pat = re.compile(r"^\s+niveau:\s*(\d+)")
-    by_scenario: dict = {}
-    total = 0
-    for sc in scenarios:
-        geo_file = geo_dir / f"{sc}.md"
-        if not geo_file.exists():
-            continue
-        txt   = geo_file.read_text(encoding="utf-8")
-        count = sum(1 for m in niveau_pat.finditer(txt) if int(m.group(1)) == 1)
-        by_scenario[sc] = count
-        total += count
-    return {"total": total, "by_scenario": by_scenario}
-
-
-def _count_review_items(pipeline_dir: Path) -> int:
-    count = 0
-    for fname in ("needs_review.yaml", "needs_review_enrich.yaml"):
-        p = pipeline_dir / fname
-        if p.exists():
-            try:
-                count += len(re.findall(r"^- ", p.read_text(encoding="utf-8"), re.MULTILINE))
-            except Exception:
-                pass
-    review_md = pipeline_dir / "documentation" / "need_action" / "localisation_review.md"
-    if review_md.exists():
-        try:
-            count += len(re.findall(r"review_manuelle", review_md.read_text(encoding="utf-8")))
-        except Exception:
-            pass
-    return count
 # ── Revue ─────────────────────────────────────────────────────────────────────
 
 @app.route("/api/review", methods=["GET"])
 def get_review():
     cfg = load_config()
-    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+    # Bug #15 : ces 3 fonctions cherchaient dans pipeline_dir (generator/),
+    # alors que enrich_minimal.py / inject_custom_events.py / extract_localisation.py
+    # écrivent tous ces fichiers à la racine du vault (vault_root).
+    vault_root = Path(cfg.get("vault_root", ""))
     items = []
-    items += _parse_needs_review_enrich(pipeline_dir)
-    items += _parse_needs_review_events(pipeline_dir)
-    items += _parse_localisation_review(pipeline_dir)
+    items += _parse_needs_review_enrich(vault_root)
+    items += _parse_needs_review_events(vault_root)
+    items += _parse_localisation_review(vault_root)
     return jsonify({"items": items, "total": len(items)})
 
 
-def _parse_needs_review_enrich(pipeline_dir: Path) -> list:
+def _parse_needs_review_enrich(vault_root: Path) -> list:
     """
-    needs_review_enrich.yaml (dans instances_custom/) :
+    needs_review_enrich.yaml (dans instances_custom/, à la racine du vault) :
       needs_review:
         - slug: xxx
           scenario: yyy
           date: 2026-06-27
           errors: [...]
     """
-    # Chercher dans instances_custom/ ou directement dans pipeline_dir
     candidates = [
-        pipeline_dir / "instances_custom" / "needs_review_enrich.yaml",
-        pipeline_dir / "needs_review_enrich.yaml",
+        vault_root / "instances_custom" / "needs_review_enrich.yaml",
+        vault_root / "needs_review_enrich.yaml",
     ]
     for p in candidates:
         if p.exists():
@@ -1733,17 +1534,17 @@ def _parse_needs_review_enrich(pipeline_dir: Path) -> list:
     return []
 
 
-def _parse_needs_review_events(pipeline_dir: Path) -> list:
+def _parse_needs_review_events(vault_root: Path) -> list:
     """
-    needs_review.yaml (dans evenements_custom/) :
+    needs_review.yaml (dans evenements_custom/, à la racine du vault) :
       needs_review:
         - idea: {...}
           failed_scenarios: [...]
           status: needs_review
     """
     candidates = [
-        pipeline_dir / "evenements_custom" / "needs_review.yaml",
-        pipeline_dir / "needs_review.yaml",
+        vault_root / "evenements_custom" / "needs_review.yaml",
+        vault_root / "needs_review.yaml",
     ]
     for p in candidates:
         if p.exists():
@@ -1819,15 +1620,15 @@ def _read_needs_review_yaml(path: Path, source: str) -> list:
     return items
 
 
-def _parse_localisation_review(pipeline_dir: Path) -> list:
+def _parse_localisation_review(vault_root: Path) -> list:
     """
-    localisation_review.md :
+    localisation_review.md (documentation/need_action/, à la racine du vault) :
       ## scenario (N)
       ### slug
       - type: ...
       - zone candidate: ...
     """
-    review_md = pipeline_dir / "documentation" / "need_action" / "localisation_review.md"
+    review_md = vault_root / "documentation" / "need_action" / "localisation_review.md"
     if not review_md.exists():
         return []
     items = []
@@ -1911,12 +1712,26 @@ def run_script():
 
     # Injecter les variables LLM + clés API
     env = os.environ.copy()
-    llm = cfg.get("llm", {})
-    env["LLM_PROVIDER"] = llm.get("provider", "mistral")
-    if llm.get("provider") == "mistral":
-        env["LLM_MODEL"] = llm.get("model_mistral", "mistral-medium")
-    else:
-        env["LLM_MODEL"] = llm.get("model_claude", "claude-sonnet-4-6")
+
+    # Override manuel du modèle — seulement si explicitement demandé pour ce
+    # run précis (force_llm_override: true dans le body). Par défaut (absent
+    # ou false), on n'injecte PAS LLM_PROVIDER/LLM_MODEL : chaque script migré
+    # vers le routing par tier (llm_client.TASK_TIER_DEFAULTS) résout alors
+    # son propre modèle selon le tier de la tâche, au lieu d'être écrasé
+    # silencieusement par la valeur par défaut de gui/config.json.
+    #
+    # Avant le 11 juillet 2026, ces variables étaient injectées de façon
+    # inconditionnelle à chaque run — ce qui neutralisait le routing par tier
+    # pour tout script lancé depuis le GUI (bug découvert le même jour :
+    # articles générés sur mistral-small malgré le tier "strict" configuré
+    # sur mistral-large).
+    if data.get("force_llm_override"):
+        llm = cfg.get("llm", {})
+        env["LLM_PROVIDER"] = llm.get("provider", "mistral")
+        if llm.get("provider") == "mistral":
+            env["LLM_MODEL"] = llm.get("model_mistral", "mistral-medium")
+        else:
+            env["LLM_MODEL"] = llm.get("model_claude", "claude-sonnet-4-6")
 
     run_id = str(uuid.uuid4())[:8]
     run_entry = {

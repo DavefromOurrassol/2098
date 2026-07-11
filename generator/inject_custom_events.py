@@ -25,7 +25,7 @@ PRINCIPE
      - valide mécaniquement le résultat (deltas dans une plage
        raisonnable, variables valides, acteurs correspondant à des
        instances réelles, JSON complet) — purement Python
-     - si la validation échoue, rappelle Claude (étape 3, correction
+     - si la validation échoue, rappelle le LLM (étape 3, correction
        ciblée) jusqu'à 2 fois
      - injecte l'archétype (1ère fois seulement) + chaque instance
        validée
@@ -44,7 +44,7 @@ PRÉREQUIS
 USAGE
 -----
     python3 inject_custom_events.py            # traite toute la queue
-    python3 inject_custom_events.py --dry-run  # appelle Claude, valide,
+    python3 inject_custom_events.py --dry-run  # appelle le LLM, valide,
                                                  # affiche le résultat,
                                                  # mais n'écrit rien sur disque
 """
@@ -59,7 +59,7 @@ from pathlib import Path
 
 import yaml
 
-from llm_client import call_llm, LLM_MODEL as MODEL
+from llm_client import call_llm  # tier structured_strict — canonique/référencé
 
 
 # ---------------------------------------------------------------------------
@@ -173,7 +173,7 @@ def load_variables_levels(scenario):
 
 def load_available_actors(scenario):
     """Liste les instances d'entités existantes pour ce scénario
-    (slug, name, role court) — pour que les acteurs choisis par Claude
+    (slug, name, role court) — pour que les acteurs choisis par le LLM
     soient cohérents avec le lore déjà établi plutôt qu'inventés."""
     actors = []
     if not INSTANCES_DIR.exists():
@@ -322,7 +322,7 @@ def regenerate_registre_with_event(scenario, event_slug, variables, date, evenem
 
 
 # ---------------------------------------------------------------------------
-# Appels Claude
+# Appels LLM
 # ---------------------------------------------------------------------------
 
 def get_client():
@@ -336,10 +336,11 @@ def call_claude_json(client, system, user_content, max_tokens=3000):
         user_prompt=user_content,
         max_tokens=max_tokens,
         temperature=0.0,
+        task_tier="structured_strict",
     ).strip()
     text = re.sub(r"^```(?:json)?\s*", "", text)
     text = re.sub(r"\s*```$", "", text)
-    # Extraire le premier objet JSON valide (robustesse si Claude ajoute du texte après)
+    # Extraire le premier objet JSON valide (robustesse si le LLM ajoute du texte après)
     try:
         return json.loads(text)
     except json.JSONDecodeError:
@@ -804,7 +805,7 @@ QUEUE_TEMPLATE = """\
 #   scenarios              : liste de scénarios à couvrir, ou null pour les 6 par défaut
 #                            (valeurs : breakdown, fortress_world, new_sustainability,
 #                            eco_communalism, policy_reform, reference)
-#   variables_hint         : optionnel. null si tu ne sais pas — Claude choisit
+#   variables_hint         : optionnel. null si tu ne sais pas — le LLM choisit
 #                            automatiquement. Sinon une variable (chaîne) ou
 #                            plusieurs (liste) que tu IMPOSES comme impactées.
 #                            Variables disponibles :
@@ -816,7 +817,7 @@ QUEUE_TEMPLATE = """\
 #                              demographie_mobilite_humaine | systemes_productifs_travail
 #   variables_hint_count   : optionnel, entier 1-4. Plafond du nombre total de
 #                            variables (hint(s) inclus). Défaut : 2.
-#   acteurs_hint           : optionnel. null si tu ne sais pas — Claude choisit
+#   acteurs_hint           : optionnel. null si tu ne sais pas — le LLM choisit
 #                            parmi les instances d'entités existantes pour
 #                            chaque scénario. Sinon un slug d'instance (chaîne)
 #                            ou plusieurs (liste) que tu IMPOSES.
@@ -888,8 +889,22 @@ def process_idea(client, idea, dry_run=False):
         client, idea, variables_hint, variables_hint_count
     )
     variables = [v for v in selection["variables"] if v in VALID_VARS]
+
+    # Filtre dur : la consigne du prompt ("choisis entre 1 et {max_vars}")
+    # n'est qu'indicative — le LLM peut la dépasser (observé le 11 juillet
+    # 2026 : 4 variables reçues pour un plafond par défaut de 2). Les hints
+    # imposés par l'utilisateur sont toujours préservés en priorité.
+    max_vars = variables_hint_count if variables_hint_count else 2
+    max_vars = max(1, min(4, max_vars))
+    if len(variables) > max_vars:
+        hints_valid = [h for h in (variables_hint or []) if h in VALID_VARS]
+        kept = list(dict.fromkeys(hints_valid + variables))[:max_vars]
+        print(f"  ⚠ {len(variables)} variable(s) reçue(s) au lieu de {max_vars} max "
+              f"— troncature (hints préservés).")
+        variables = kept
+
     type_evenement = selection.get("type_evenement", "systemic")
-    # Slug imposé depuis l'id de la queue — Claude ne l'invente plus
+    # Slug imposé depuis l'id de la queue — le LLM ne l'invente plus
     event_slug = re.sub(r"[^a-z0-9_]", "_", idea_id.lower().strip())
     print(f"  -> variables={variables} type={type_evenement} slug={event_slug}")
 
@@ -1053,7 +1068,7 @@ def analyze_vault_coverage():
 
 
 def build_auto_analysis_summary(coverage, scenario_filter=None):
-    """Construit le résumé textuel de l'analyse pour le prompt Claude."""
+    """Construit le résumé textuel de l'analyse pour le prompt LLM."""
     lines = []
 
     scenarios = [scenario_filter] if scenario_filter else SCENARIOS
@@ -1112,7 +1127,7 @@ def build_scenarios_summary_for_auto(scenario_filter=None):
 
 def step_auto_generate_ideas(client, n, coverage, scenario_filter=None):
     """
-    Appelle Claude pour générer N idées d'événements contextualisées
+    Appelle le LLM pour générer N idées d'événements contextualisées
     en fonction des déséquilibres détectés dans le vault.
     Retourne une liste d'idées au format queue.yaml.
     """
@@ -1178,22 +1193,24 @@ Réponds UNIQUEMENT en JSON, sans aucun texte autour, format exact :
     return result.get("idees", [])
 
 
-def run_auto_mode(client, dry_run):
+def run_auto_mode(client, dry_run, n=None, scenario_filter=None):
     """Mode auto : analyse le vault, génère des idées, les ajoute à queue.yaml."""
-    raw_n = input("Nombre d'idées à générer ? [défaut: 3] : ").strip()
-    try:
-        n = int(raw_n) if raw_n else 3
-        if n < 1:
+    if n is None:
+        raw_n = input("Nombre d'idées à générer ? [défaut: 3] : ").strip()
+        try:
+            n = int(raw_n) if raw_n else 3
+            if n < 1:
+                n = 3
+        except ValueError:
             n = 3
-    except ValueError:
-        n = 3
 
-    scenario_raw = input(
-        "Scénario ciblé ? (Entrée pour laisser Claude choisir) [{}] : ".format(
-            "|".join(SCENARIOS)
-        )
-    ).strip()
-    scenario_filter = scenario_raw if scenario_raw in SCENARIOS else None
+    if scenario_filter is None:
+        scenario_raw = input(
+            "Scénario ciblé ? (Entrée pour laisser le LLM choisir) [{}] : ".format(
+                "|".join(SCENARIOS)
+            )
+        ).strip()
+        scenario_filter = scenario_raw if scenario_raw in SCENARIOS else None
 
     print("\n[1/2] Analyse de la couverture du vault...")
     coverage = analyze_vault_coverage()
@@ -1207,7 +1224,7 @@ def run_auto_mode(client, dry_run):
     ideas = step_auto_generate_ideas(client, n, coverage, scenario_filter)
 
     if not ideas:
-        print("Aucune idée générée — vérifier la réponse Claude.")
+        print("Aucune idée générée — vérifier la réponse du LLM.")
         return
 
     # Nettoyer le champ rationale (informatif uniquement, pas dans la queue)
@@ -1328,7 +1345,20 @@ def run_post_injection_cycle():
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--dry-run", action="store_true",
-                         help="Appelle Claude et valide, mais n'écrit rien sur disque.")
+                         help="Appelle le LLM et valide, mais n'écrit rien sur disque.")
+    parser.add_argument("--mode", choices=("custom", "auto"), default=None,
+                         help="Mode de fonctionnement. Si omis, demandé interactivement "
+                              "(input()) — nécessaire pour un lancement non-interactif "
+                              "(GUI Flask, cron) où aucun stdin n'est disponible.")
+    parser.add_argument("--n", type=int, default=None,
+                         help="Mode auto uniquement : nombre d'idées d'événements à "
+                              "générer (ajoutées à queue.yaml, pas injectées directement). "
+                              "Si omis, demandé interactivement.")
+    parser.add_argument("--scenario", choices=SCENARIOS, default=None,
+                         help="Mode auto uniquement : oriente les idées vers ce scénario "
+                              "(pas une contrainte dure — le LLM peut aussi proposer "
+                              "d'autres scénarios en plus si cohérent). Sans effet en "
+                              "mode custom.")
     args = parser.parse_args()
 
     print("=" * 60)
@@ -1339,14 +1369,26 @@ def main():
 
     client = get_client()
 
-    mode = input("\nMode : custom ou auto ? [custom/auto] : ").strip().lower()
-    while mode not in ("custom", "auto"):
-        mode = input("Réponds 'custom' ou 'auto' : ").strip().lower()
+    # Même correctif que create_entities_and_instances.py (11 juillet 2026,
+    # bug GUI "Create entities custom") : --mode évite le blocage sur input()
+    # quand lancé depuis app.py (subprocess.Popen sans stdin connecté).
+    mode = args.mode
+    if mode is None:
+        mode = input("\nMode : custom ou auto ? [custom/auto] : ").strip().lower()
+        while mode not in ("custom", "auto"):
+            mode = input("Réponds 'custom' ou 'auto' : ").strip().lower()
+    else:
+        print(f"\nMode : {mode} (fourni via --mode)")
 
     if mode == "custom":
         run_custom_mode(client, dry_run=args.dry_run)
     else:
-        run_auto_mode(client, dry_run=args.dry_run)
+        # Même bug corrigé le 11 juillet 2026 (repéré par l'utilisateur :
+        # "je ne choisis rien" en mode auto GUI) — run_auto_mode() avait
+        # 2 input() non couverts (nombre d'idées, scénario ciblé), bloquant
+        # silencieusement tout lancement depuis le GUI.
+        run_auto_mode(client, dry_run=args.dry_run, n=args.n,
+                       scenario_filter=args.scenario)
 
 
 if __name__ == "__main__":

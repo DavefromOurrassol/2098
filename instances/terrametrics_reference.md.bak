@@ -1,0 +1,101 @@
+---
+name: TerraMetrics Global Climate Solutions (TM-GCS)
+type: instance
+slug: terrametrics_reference
+entite: terrametrics
+scenario: reference
+
+type_dans_scenario: entreprise
+
+role_dans_scenario: >
+  TerraMetrics Global Climate Solutions (TM-GCS) est l'acteur dominant de la géo-ingénierie climatique privatisée, opérant comme un prestataire de services essentiels pour des États, des mégapoles et des consortiums régionaux incapables de gérer seuls les dérèglements climatiques. Elle agit en tant qu'intermédiaire technologique entre les besoins locaux et les régulations internationales, souvent en exploitant les failles des accords multilatéraux pour offrir des solutions rapides, mais controversées. Son influence s'étend des zones urbaines surchauffées aux bassins agricoles en crise, où ses interventions sont à la fois salvatrices et sources de nouvelles dépendances.
+
+responsabilites: >
+  TM-GCS déploie des flottes de drones et de satellites pour modifier les régimes de précipitations, atténuer les îlots de chaleur urbains et stabiliser les saisons agricoles via des technologies de seeding atmosphérique et de manipulation des courants-jets. Elle gère également des contrats de « climat sur mesure » pour des clients publics et privés, tout en négociant des exemptions réglementaires avec les autorités locales. Ses opérations incluent la formation de milices climatiques pour protéger ses infrastructures dans les zones grises.
+
+impact_local: 4
+impact_systemique_global: 3
+
+variables_influencees:
+    - climat_environnement_global
+    - energie_ressources_critiques
+    - geopolitique_conflits
+
+zone_geographique:
+    - régionale
+    - continentale
+    - globale
+
+zone_systemique:
+    - énergie
+    - gouvernance
+    - infrastructure
+    - société
+
+alliances:
+    - consortiums_energetiques_des_megapoles_reference
+    - agence_stabilisation_climatique_reference
+    - autorites_regionales_de_regulation_hydrologique_reference
+    - consortium_helios_reference
+    - nexcore_reference
+    - plateformes_d_optimisation_territoriale_par_ia_reference
+
+oppositions:
+    - bloc_des_souverainistes_climatiques_reference
+    - collectifs_de_biopiraterie_inversee_reference
+    - factions_eurasiatiques_contre_la_tarification_hydrique_reference
+    - mouvement_racines_vivantes_reference
+    - reseaux_de_capteurs_citoyens_reference
+    - ong_environnementales_de_terrain_reference
+
+type_relation_dominante: rivalité
+
+annee_debut: 2026
+annee_fin: 
+
+etat_temporel: actif
+age_historique: dominant
+generation: transition
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Depuis son siège flottant au large de Singapour Est, TerraMetrics Global Climate Solutions (TM-GCS) incarne l'arrogance et l'efficacité des géants climatiques du XXIe siècle. Ses drones argentés, reconnaissables à leurs ailes en forme de lames, sillonnent les cieux pour « optimiser » les précipitations, tandis que ses satellites ajustent les courants-jets comme on règle un thermostat. Les mégapoles du Sud global lui doivent leur survie, mais paient le prix fort : une dépendance technologique qui se transforme souvent en chantage économique. Ses contrats, négociés dans l'ombre avec des gouvernements aux abois, sont régulièrement dénoncés par les ONG comme des « accords de soumission climatique ». Pourtant, personne ne peut se passer de ses services — pas même ses détracteurs.
+
+signes_distinctifs: >
+  TM-GCS arbore un logo stylisé représentant une Terre fractale traversée par des flux bleus et argentés, symbolisant son contrôle sur les éléments. Ses employés portent des combinaisons climatisées aux reflets métalliques, équipées de capteurs environnementaux, et ses drones sont marqués de bandes luminescentes pour être visibles de nuit. Ses infrastructures au sol, souvent camouflées en « stations météo », sont protégées par des milices privées en uniformes gris-bleu.
+
+tensions_narratives: >
+  TM-GCS est au cœur de multiples scandales : ses interventions en Amazonie ont provoqué des sécheresses artificielles pour le compte de consortiums agro-industriels, tandis que ses contrats avec des États africains ont été accusés de créer des « dettes climatiques » insoutenables. Ses rivalités avec les souverainistes climatiques et les collectifs écologistes dégénèrent souvent en conflits hybrides, notamment dans les zones grises où ses milices affrontent des groupes armés locaux. La question de sa régulation — ou de son démantèlement — est un sujet de débat permanent dans les arènes internationales, mais son pouvoir de négociation reste intact tant que les États dépendent de ses technologies pour survivre.
+
+date_creation: 2026-07-11
+---
+
+# TerraMetrics Global Climate Solutions (TM-GCS)
+
+## Rôle dans [[reference]]
+TerraMetrics Global Climate Solutions (TM-GCS) est l'acteur dominant de la géo-ingénierie climatique privatisée, opérant comme un prestataire de services essentiels pour des États, des mégapoles et des consortiums régionaux incapables de gérer seuls les dérèglements climatiques. Elle agit en tant qu'intermédiaire technologique entre les besoins locaux et les régulations internationales, souvent en exploitant les failles des accords multilatéraux pour offrir des solutions rapides, mais controversées. Son influence s'étend des zones urbaines surchauffées aux bassins agricoles en crise, où ses interventions sont à la fois salvatrices et sources de nouvelles dépendances.
+
+## Responsabilités
+TM-GCS déploie des flottes de drones et de satellites pour modifier les régimes de précipitations, atténuer les îlots de chaleur urbains et stabiliser les saisons agricoles via des technologies de seeding atmosphérique et de manipulation des courants-jets. Elle gère également des contrats de « climat sur mesure » pour des clients publics et privés, tout en négociant des exemptions réglementaires avec les autorités locales. Ses opérations incluent la formation de milices climatiques pour protéger ses infrastructures dans les zones grises.
+
+## Variables influencées
+- [[climat_environnement_global]]
+- [[energie_ressources_critiques]]
+- [[geopolitique_conflits]]
+
+## Relations
+**Alliés** : [[consortiums_energetiques_des_megapoles_reference]], [[agence_stabilisation_climatique_reference]], [[autorites_regionales_de_regulation_hydrologique_reference]], [[consortium_helios_reference]], [[nexcore_reference]], [[plateformes_d_optimisation_territoriale_par_ia_reference]]
+**Opposants** : [[bloc_des_souverainistes_climatiques_reference]], [[collectifs_de_biopiraterie_inversee_reference]], [[factions_eurasiatiques_contre_la_tarification_hydrique_reference]], [[mouvement_racines_vivantes_reference]], [[reseaux_de_capteurs_citoyens_reference]], [[ong_environnementales_de_terrain_reference]]
+
+## Description journalistique
+Depuis son siège flottant au large de Singapour Est, TerraMetrics Global Climate Solutions (TM-GCS) incarne l'arrogance et l'efficacité des géants climatiques du XXIe siècle. Ses drones argentés, reconnaissables à leurs ailes en forme de lames, sillonnent les cieux pour « optimiser » les précipitations, tandis que ses satellites ajustent les courants-jets comme on règle un thermostat. Les mégapoles du Sud global lui doivent leur survie, mais paient le prix fort : une dépendance technologique qui se transforme souvent en chantage économique. Ses contrats, négociés dans l'ombre avec des gouvernements aux abois, sont régulièrement dénoncés par les ONG comme des « accords de soumission climatique ». Pourtant, personne ne peut se passer de ses services — pas même ses détracteurs.
+
+## Tensions narratives
+TM-GCS est au cœur de multiples scandales : ses interventions en Amazonie ont provoqué des sécheresses artificielles pour le compte de consortiums agro-industriels, tandis que ses contrats avec des États africains ont été accusés de créer des « dettes climatiques » insoutenables. Ses rivalités avec les souverainistes climatiques et les collectifs écologistes dégénèrent souvent en conflits hybrides, notamment dans les zones grises où ses milices affrontent des groupes armés locaux. La question de sa régulation — ou de son démantèlement — est un sujet de débat permanent dans les arènes internationales, mais son pouvoir de négociation reste intact tant que les États dépendent de ses technologies pour survivre.

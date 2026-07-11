@@ -1,0 +1,103 @@
+---
+name: Mémoire des Eaux du Congo
+type: instance
+slug: le_registre_du_fleuve_eco_communalism
+entite: le_registre_du_fleuve
+scenario: eco_communalism
+localisation:
+  zone: congo_bassin_du_fleuve
+  lieu: bassin du Congo
+  type_lieu: region
+
+type_dans_scenario: système
+
+role_dans_scenario: >
+  Base de données communautaire décentralisée qui recense les crues historiques, les zones de pêche épuisées et les stocks de graines conservées le long du bassin du Congo. Alimentée par les Brigades de Restauration Écologique, elle sert de référence vivante pour les villages membres, permettant une gestion adaptative des ressources face aux aléas climatiques et aux pressions extractivistes résiduelles. Son architecture repose sur des nœuds locaux autonomes, synchronisés via des réseaux basse consommation, garantissant une résilience face aux pannes ou aux tentatives de sabotage.
+
+responsabilites: >
+  
+
+impact_local: 4
+impact_systemique_global: 2
+
+variables_influencees:
+    - organisation_territoires
+    - climat_environnement_global
+    - systemes_productifs_travail
+    - technologie_information
+
+zone_geographique:
+    - régionale
+
+zone_systemique:
+    - information
+    - gouvernance
+    - économie
+
+alliances:
+    - brigades_de_restauration_ecologique_eco_communalism
+    - assemblees_de_bassin_versant_eco_communalism
+    - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
+    - collectifs_de_cartographie_ecologique_participative_eco_communalism
+    - reseaux_de_radio_communautaire_basse_consommation_eco_communalism
+    - confederation_bassins_vivants_eco_communalism
+
+oppositions:
+    - enclaves_extractivistes_residuelles_des_corridors_eco_communalism
+    - consortiums_industriels_de_l_eau_eco_communalism
+    - reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism
+    - factions_extractivistes_des_aquiferes_communs_eco_communalism
+    - reseaux_de_notables_communautaires_capturistes_eco_communalism
+
+type_relation_dominante: coopération
+
+annee_debut: 2042
+annee_fin: 
+
+etat_temporel: actif
+age_historique: mature
+generation: post-effondrement
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Imaginez une toile d’araignée de données tissée le long du fleuve Congo, où chaque village, chaque coopérative semencière, chaque brigade écologique alimente un savoir partagé. Les *Mémoire des Eaux* ne sont pas un serveur centralisé, mais une constellation de nœuds locaux — souvent de simples boîtiers solaires abritant des disques durs low-tech — synchronisés lors des crues ou des rassemblements saisonniers. Les pêcheurs y consultent les cartes des zones de frai, les agriculteurs y vérifient les variétés de manioc résistantes aux inondations, et les veilleurs y croisent les récits des anciens avec les relevés des capteurs artisanaux. Une archive vivante, où la mémoire des crues de 2067 côtoie les chants des piroguiers de Lisala.
+
+signes_distinctifs: >
+  Symbolisée par une spirale bleue et verte (le fleuve et la forêt) entrelacée avec un motif de nœuds bantous, la *Mémoire des Eaux* se reconnaît à ses bornes physiques : des totems en bois sculpté ou en terre cuite, souvent intégrés aux cases communautaires, où sont gravés des QR codes menant aux données locales. Les données sensibles (comme les stocks de graines) sont protégées par des systèmes de reconnaissance biométrique rudimentaires, basés sur les motifs des mains ou les chants traditionnels.
+
+tensions_narratives: >
+  La *Mémoire des Eaux* incarne la tension entre ouverture et protection : comment partager les données sur les stocks de poisson sans attirer les braconniers des enclaves extractivistes ? Comment concilier la transparence avec les communautés qui refusent de divulguer leurs savoirs ancestraux, comme certaines factions isolationnistes ? Par ailleurs, son modèle décentralisé est menacé par les *Consortiums Industriels de l’Eau*, qui tentent de corrompre des nœuds locaux pour accaparer les données hydrologiques. Enfin, la question de la pérennité se pose : que deviendront ces archives si les générations futures, habituées à la sobriété, perdent les compétences pour les maintenir ?
+
+date_creation: 2026-07-11
+---
+
+# Mémoire des Eaux du Congo
+
+## Rôle dans [[eco_communalism]]
+Base de données communautaire décentralisée qui recense les crues historiques, les zones de pêche épuisées et les stocks de graines conservées le long du bassin du Congo. Alimentée par les Brigades de Restauration Écologique, elle sert de référence vivante pour les villages membres, permettant une gestion adaptative des ressources face aux aléas climatiques et aux pressions extractivistes résiduelles. Son architecture repose sur des nœuds locaux autonomes, synchronisés via des réseaux basse consommation, garantissant une résilience face aux pannes ou aux tentatives de sabotage.
+
+## Responsabilités
+
+
+## Variables influencées
+- [[organisation_territoires]]
+- [[climat_environnement_global]]
+- [[systemes_productifs_travail]]
+- [[technologie_information]]
+
+## Relations
+**Alliés** : [[brigades_de_restauration_ecologique_eco_communalism]], [[assemblees_de_bassin_versant_eco_communalism]], [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]], [[collectifs_de_cartographie_ecologique_participative_eco_communalism]], [[reseaux_de_radio_communautaire_basse_consommation_eco_communalism]], [[confederation_bassins_vivants_eco_communalism]]
+**Opposants** : [[enclaves_extractivistes_residuelles_des_corridors_eco_communalism]], [[consortiums_industriels_de_l_eau_eco_communalism]], [[reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism]], [[factions_extractivistes_des_aquiferes_communs_eco_communalism]], [[reseaux_de_notables_communautaires_capturistes_eco_communalism]]
+
+## Description journalistique
+Imaginez une toile d’araignée de données tissée le long du fleuve Congo, où chaque village, chaque coopérative semencière, chaque brigade écologique alimente un savoir partagé. Les *Mémoire des Eaux* ne sont pas un serveur centralisé, mais une constellation de nœuds locaux — souvent de simples boîtiers solaires abritant des disques durs low-tech — synchronisés lors des crues ou des rassemblements saisonniers. Les pêcheurs y consultent les cartes des zones de frai, les agriculteurs y vérifient les variétés de manioc résistantes aux inondations, et les veilleurs y croisent les récits des anciens avec les relevés des capteurs artisanaux. Une archive vivante, où la mémoire des crues de 2067 côtoie les chants des piroguiers de Lisala.
+
+## Tensions narratives
+La *Mémoire des Eaux* incarne la tension entre ouverture et protection : comment partager les données sur les stocks de poisson sans attirer les braconniers des enclaves extractivistes ? Comment concilier la transparence avec les communautés qui refusent de divulguer leurs savoirs ancestraux, comme certaines factions isolationnistes ? Par ailleurs, son modèle décentralisé est menacé par les *Consortiums Industriels de l’Eau*, qui tentent de corrompre des nœuds locaux pour accaparer les données hydrologiques. Enfin, la question de la pérennité se pose : que deviendront ces archives si les générations futures, habituées à la sobriété, perdent les compétences pour les maintenir ?

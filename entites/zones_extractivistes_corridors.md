@@ -4,32 +4,31 @@ type: entity
 slug: zones_extractivistes_corridors
 category: territoire
 description: >
-  Les Zones Extractivistes Corridors représentent l'archétype du territoire blessé en reconversion : des espaces autrefois épuisés par la logique extractive qui deviennent, sous l'impulsion de communautés locales, des espaces de régénération, de transit écologique et d'économie circulaire. Ce territoire incarne la cicatrice productive — là où la destruction industrielle a laissé un vide, des acteurs de terrain tentent de retisser des chaînes de vie courtes, de restaurer les sols et de réinventer des usages communs. Ces zones sont structurellement disputées : leur valeur résiduelle attire des intérêts extérieurs qui cherchent à reprendre ce que les communautés s'emploient à détransformer. Elles incarnent la frontière mouvante entre la dépossession et la réappropriation.
+  Le territoire de reconversion est un espace qui a subi une transformation radicale de sa vocation : anciennement voué à l'extraction et à l'épuisement, il devient progressivement un lieu de passage, de régénération et de lien entre des entités séparées. Il incarne la mémoire d'une blessure productive — mines, puits, carrières — que des acteurs communautaires tentent de transmuter en bien commun vivant. Sa géographie porte simultanément les cicatrices du passé extractif et les promesses d'un futur régénératif, faisant de lui un palimpseste territorial où s'affrontent des logiques de propriété héritée et des logiques de communs émergents. Il est structurellement un espace de transition : ni pleinement abandonné, ni pleinement reconquis, il existe dans l'entre-deux de ce que fut un territoire et de ce qu'il pourrait devenir.
 tension_fondamentale: >
-  La reconversion d'un territoire d'extraction en bien commun régénératif suppose d'en effacer la valeur marchande résiduelle — mais c'est précisément cette valeur résiduelle qui attire les prédateurs extérieurs et fragilise toute tentative de fermeture du cycle. Plus la restauration réussit, plus le territoire redevient convoitable.
+  La reconversion d'un territoire d'extraction en bien commun régénératif suppose d'effacer ou de dépasser les droits de propriété hérités — mais ces droits persistent précisément parce qu'ils ont été inscrits dans des corps juridiques et des titres fonciers que la transformation sociale n'a pas abolis ; la légitimité communautaire de l'usage présent se heurte à la légalité résiduelle de la possession passée.
 variables_potentielles:
-  - energie_ressources_critiques
   - organisation_territoires
+  - energie_ressources_critiques
+  - gouvernance_institutions
   - climat_environnement_global
-  - systemes_productifs_travail
   - geopolitique_conflits
 scenarios_instances:
   - eco_communalism
-date_creation: 2026-06-27
-custom_source: phantom_validate_2026-06-27
+date_creation: 2026-07-04
 scenario_ref: eco_communalism
 role_ref: >
-  Territoires autrefois dédiés à l'extraction intensive de ressources, progressivement reconvertis par des communautés éco-communalistes en corridors de résilience écologique. Des collectifs locaux y démantèlent les infrastructures extractivistes pour replanter, restaurer les sols et établir des économies circulaires à courte portée. Ces zones restent néanmoins disputées par des intérêts extérieurs cherchant à reprendre la main sur les ressources résiduelles.
+  Anciens territoires d'extraction minière et énergétique progressivement reconvertis en corridors de transit écologique par des coalitions communautaires. Ces zones servent de liens entre communautés autonomes qui refusent la logique des flux globaux et privilégient les circuits courts. Leur statut est disputé entre les réseaux communalistes qui les revendiquent et les anciennes multinationales qui y détiennent encore des titres fonciers.
 etat_ref: transformé
 ---
 
 # Zones Extractivistes Corridors
 
 ## Description archétypale
-Les Zones Extractivistes Corridors représentent l'archétype du territoire blessé en reconversion : des espaces autrefois épuisés par la logique extractive qui deviennent, sous l'impulsion de communautés locales, des espaces de régénération, de transit écologique et d'économie circulaire. Ce territoire incarne la cicatrice productive — là où la destruction industrielle a laissé un vide, des acteurs de terrain tentent de retisser des chaînes de vie courtes, de restaurer les sols et de réinventer des usages communs. Ces zones sont structurellement disputées : leur valeur résiduelle attire des intérêts extérieurs qui cherchent à reprendre ce que les communautés s'emploient à détransformer. Elles incarnent la frontière mouvante entre la dépossession et la réappropriation.
+Le territoire de reconversion est un espace qui a subi une transformation radicale de sa vocation : anciennement voué à l'extraction et à l'épuisement, il devient progressivement un lieu de passage, de régénération et de lien entre des entités séparées. Il incarne la mémoire d'une blessure productive — mines, puits, carrières — que des acteurs communautaires tentent de transmuter en bien commun vivant. Sa géographie porte simultanément les cicatrices du passé extractif et les promesses d'un futur régénératif, faisant de lui un palimpseste territorial où s'affrontent des logiques de propriété héritée et des logiques de communs émergents. Il est structurellement un espace de transition : ni pleinement abandonné, ni pleinement reconquis, il existe dans l'entre-deux de ce que fut un territoire et de ce qu'il pourrait devenir.
 
 ## Tension fondamentale
-La reconversion d'un territoire d'extraction en bien commun régénératif suppose d'en effacer la valeur marchande résiduelle — mais c'est précisément cette valeur résiduelle qui attire les prédateurs extérieurs et fragilise toute tentative de fermeture du cycle. Plus la restauration réussit, plus le territoire redevient convoitable.
+La reconversion d'un territoire d'extraction en bien commun régénératif suppose d'effacer ou de dépasser les droits de propriété hérités — mais ces droits persistent précisément parce qu'ils ont été inscrits dans des corps juridiques et des titres fonciers que la transformation sociale n'a pas abolis ; la légitimité communautaire de l'usage présent se heurte à la légalité résiduelle de la possession passée.
 
 ## Instances par scénario
 | Scénario | Instance | État | Rôle |

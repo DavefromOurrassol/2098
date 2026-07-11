@@ -1,0 +1,105 @@
+
+============================================================
+OURRASSOL 2098 — Générateur d'articles
+============================================================
+  Scénario   : eco_communalism
+  Thématique : sante
+  Longueur   : breve
+  Angle      : le plus vieil humain sur terrea 126 ans
+============================================================
+
+[generate] Chargement de la thématique 'sante'...
+
+[snapshot] Construction du monde 2098 — scénario : eco_communalism
+[snapshot] Variables pilotes : ['organisation_territoires', 'climat_environnement_global', 'energie_ressources_critiques', 'systemes_productifs_travail']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 1 | Cohérence : OK
+[snapshot] Jalons trajectoire : 154 (37 majeurs)
+[snapshot] Événements signal_to_state : 72 (24 majeurs)
+[snapshot] Tensions thématiques : 4
+[snapshot] Instances chargées : 81 | Filtrées : 6
+[snapshot] Événement custom 'Écho du Golfe en Feu — Les Bassins sans Pétrole' (an 2027, 71 ans d'effet)
+  → geopolitique_conflits : 35 → 43.0 (delta:+8.0)
+  → energie_ressources_critiques : 46.2 → 58.2 (delta:+12.0)
+  → gouvernance_institutions : 71.4 → 77.4 (delta:+6.0)
+  → demographie_mobilite_humaine : 37.0 → 46.0 (delta:+9.0)
+[snapshot] Événement custom 'La Grande Coupure — Accélérateur de Localisation Numérique' (an 2040, 58 ans d'effet)
+  → technologie_information : 51.1 → 41.1 (delta:-10.0)
+  → organisation_territoires : 40.0 → 48.0 (delta:+8.0)
+  → valeurs_culture_tempo_sociale : 40 → 46.0 (delta:+6.0)
+[snapshot] Événement custom 'Les Enchères du Fond Émergé — Kalaallit Nunaat vend ses terres à qui ?' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 58.2 → 66.2 (delta:+8.0)
+  → geopolitique_conflits : 27.4 → 17.4 (delta:-10.0)
+  → gouvernance_institutions : 81.9 → 88.9 (delta:+7.0)
+  → organisation_territoires : 52.2 → 58.2 (delta:+6.0)
+[snapshot] Événement custom 'La Grande Convergence des Lacs — Exode du Midwest Carbonisé' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 52.0 → 34.0 (delta:-18.0)
+  → organisation_territoires : 51.4 → 36.4 (delta:-15.0)
+  → gouvernance_institutions : 88.9 → 100 (delta:+12.0)
+  → climat_environnement_global : 58.6 → 66.6 (delta:+8.0)
+  → energie_ressources_critiques : 71.0 → 81.0 (delta:+10.0)
+[snapshot] Événement custom 'L'Assemblée du Fleuve — Souveraineté ou Fracture' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 66.6 → 74.6 (delta:+8.0)
+  → geopolitique_conflits : 14.8 → 2.8000000000000007 (delta:-12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → organisation_territoires : 41.5 → 49.5 (delta:+8.0)
+[snapshot] Événement custom 'Dissolution du Mouvement dans les Assemblées Locales' (an 2048, 50 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+  → valeurs_culture_tempo_sociale : 46.0 → 54.0 (delta:+8.0)
+  → organisation_territoires : 49.5 → 55.5 (delta:+6.0)
+[snapshot] Événement custom 'Forum d'Agadez sur la Souveraineté Numérique des Périphéries' (an 2062, 36 ans d'effet)
+  → technologie_information : 44.4 → 52.4 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → organisation_territoires : 58.5 → 65.5 (delta:+7.0)
+[snapshot] Événement custom 'La Proclamation des Friches Libres : Detroit, Cleveland, Pittsburgh hors-algorithme' (an 2063, 35 ans d'effet)
+  → geopolitique_conflits : 0 → 0 (delta:-8.0)
+  → valeurs_culture_tempo_sociale : 54.0 → 66.0 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → organisation_territoires : 68.9 → 82.9 (delta:+14.0)
+[snapshot] Événement custom 'Insurrection des Friches Vivantes — L'Automne des Zones Libres' (an 2063, 35 ans d'effet)
+  → geopolitique_conflits : 0 → 0 (delta:-8.0)
+  → valeurs_culture_tempo_sociale : 66.0 → 78.0 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → technologie_information : 66.9 → 73.9 (delta:+7.0)
+[snapshot] Événement custom 'Le Procès Communautaire de Van Derburgh' (an 2078, 20 ans d'effet)
+  → valeurs_culture_tempo_sociale : 78.0 → 80.0 (delta:+2.0)
+  → gouvernance_institutions : 100 → 100 (delta:+1.0)
+[snapshot] Événements custom : 10 | 145 variables affectées
+
+[prompt] Assemblage du prompt...
+[prompt] System prompt : 1682 caractères
+[prompt] User prompt   : 59784 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-small-latest)...
+[llm] Mistral (mistral-small-latest) — entrée : 17419 | sortie : 824
+[api] Article généré : 2786 caractères
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/20260705_172900_eco_communalism_sante_article_6aot2098.md
+
+============================================================
+ARTICLE GÉNÉRÉ
+============================================================
+**O MUNDO QUE TECE OS DIAS: A CURA DO TEMPO LONGO**
+*Yaripã: A Voz da Floresta — Réseau La Gazette des Communs*
+**Belém do Congo, 12 de novembro de 2098**
+
+> *Ô, sol que nasce nas águas do Congo,*
+> *guarda em teu ventre o segredo dos anos,*
+> *que os anciãos da aldeia teçam esta notícia*
+> *como se tecem as redes de pesca no rio.*
+> *— Canto dos Veilleurs do Tempo, trad. Nheengatu*
+
+Mawungu Kibibi, 126 anos, não é apenas a pessoa mais velha do Congo-Bacia do Rio. É um espelho vivo do Pacto Amazônia Viva transportado para as margens do Congo — uma testamento ambulante de que a medicina comunitária, quando tecida com saberes ancestrais e biotecnologias de baixa intensidade, pode desdobrar o tempo como uma esteira de palha.
+
+Diagnosticado com “fadiga do metabolismo profundo” aos 110 anos, Mawungu recusou-se a ser internado na *Casa das Águas Claras*, o único hospital-biorregenerativo da bacia congolês, gerido pela *Aliança das Biotecnologias Comunitárias do Sahel (ABCS)* em parceria com o *Pacto da Bacia do Congo*. Em vez de pílulas, ele tomava infusões de *Gnetum africanum* colhidas nas florestas de Yangambi, monitoradas por agricultores-sacralistas que seguem protocolos híbridos de etnomedicina e sequenciamento portátil. Em vez de intravenosas, recebia compressas de argila radioativa — um resíduo do antigo hospital de Kinshasa, hoje reinserido no ciclo local como fonte de fótons terapêuticos.
+
+A surpresa não foi a idade. Foi o fato de Mawungu viver no *Nó 47 da Trame Mnemos Congo*, um cluster comunitário móvel que agrega dados de saúde, cartografia de solos e memórias orais em servidores de bambu que rodam na energia das marés do Congo. Lá, a *Rede dos Guardiões do Tempo* — uma ramificação da *Ronda dos Saberes* — cruzou suas células com amostras de ribossomos ancestrais, identificando padrões de reparação telomérica que a ABCS classificou como “mecanismo de dormência metabólica induzida”. À pergunta: *“Como você não morreu de velhice?”*, Mawungu respondeu em lingala, depois traduzido para o tupinambá: *“A morte é um algoritmo que a aldeia ainda não executou.”*
+
+A presença de Mawungu no *Encontro de Sangue Novo* de dezembro próximo, em Brazzaville, é aguardada como um sinal. O mesmo trecho do rio que outrora foi usado para transportar armas agora é via de circulação de protocolos de saúde compartilhada. A *Confederação das Bacias Vivas* enviará um corimbo de mediadores para auditar o Nó 47. A ABCS pondera: se a farmacopeia congolêsa puder ser integrada ao *Pacto Transafricano de Reliônia*, a esperança de vida global pode saltar de 62 para 70 anos — tempo suficiente para criar novas crianças, novos guardiões, novos ciclos.
+
+Mas a pergunta que silencia até os Veilleurs é outra: se Mawungu viver até 2099, o que ele trará consigo do futuro?
+
+============================================================
+✓ Sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/20260705_172900_eco_communalism_sante_article_6aot2098.md
+============================================================
+

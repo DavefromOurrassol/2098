@@ -142,6 +142,8 @@ function buildLLMSelector() {
   const providerSel = document.getElementById('llm-provider');
   const modelSel    = document.getElementById('llm-model');
   const badge       = document.getElementById('llm-cost-badge');
+  const forceChk    = document.getElementById('llm-force-override');
+  const forceRow    = document.getElementById('llm-force-row');
 
   // Populate provider
   providerSel.innerHTML = (llm.available_providers || ['mistral','claude'])
@@ -155,9 +157,59 @@ function buildLLMSelector() {
   providerSel.addEventListener('change', () => {
     refreshModelSelect(providerSel.value);
     saveLLM();
+    updateForceBanner();
   });
 
-  modelSel.addEventListener('change', saveLLM);
+  modelSel.addEventListener('change', () => {
+    saveLLM();
+    updateForceBanner();
+  });
+
+  // Toggle "forcer ce modèle" — état volontairement non persisté (ni
+  // localStorage, ni config.json) : décision de session, pas une préférence
+  // permanente. Recharger la page remet le toggle à false et le routing par
+  // tier reprend la main.
+  //
+  // "Sticky" depuis le 11 juillet 2026 : contrairement à la première version
+  // (qui se redécochait automatiquement après chaque run — pratique pour un
+  // test isolé mais pénible pour enchaîner plusieurs lancements forcés), le
+  // toggle reste actif jusqu'à ce que l'utilisateur le décoche lui-même. En
+  // contrepartie, un bandeau d'alerte permanent (#llm-force-banner) rappelle
+  // que le routing par tier est ignoré tant que ce n'est pas fait — pour ne
+  // jamais laisser un forçage oublié passer inaperçu.
+  State.forceLlmOverride = false;
+  forceChk.checked = false;
+  forceRow.classList.remove('active');
+  forceChk.addEventListener('change', () => {
+    State.forceLlmOverride = forceChk.checked;
+    forceRow.classList.toggle('active', forceChk.checked);
+    updateForceBanner();
+  });
+
+  document.getElementById('llm-force-banner-undo').addEventListener('click', () => {
+    State.forceLlmOverride = false;
+    forceChk.checked = false;
+    forceRow.classList.remove('active');
+    updateForceBanner();
+  });
+
+  updateForceBanner();
+}
+
+/** Affiche/masque le bandeau d'alerte "modèle forcé" et tient son texte à jour. */
+function updateForceBanner() {
+  const banner = document.getElementById('llm-force-banner');
+  const text   = document.getElementById('llm-force-banner-text');
+  if (!banner) return;
+
+  if (State.forceLlmOverride) {
+    const provider = document.getElementById('llm-provider')?.value || '—';
+    const model    = document.getElementById('llm-model')?.value || '—';
+    text.textContent = `${provider} / ${model}`;
+    banner.style.display = 'flex';
+  } else {
+    banner.style.display = 'none';
+  }
 }
 
 function refreshModelSelect(provider) {
@@ -165,14 +217,12 @@ function refreshModelSelect(provider) {
   const modelSel = document.getElementById('llm-model');
   const badge    = document.getElementById('llm-cost-badge');
 
-  let models, currentModel;
-  if (provider === 'mistral') {
-    models = llm.available_models_mistral || [];
-    currentModel = llm.model_mistral || '';
-  } else {
-    models = llm.available_models_claude || [];
-    currentModel = llm.model_claude || '';
-  }
+  // Générique : fonctionne pour n'importe quel provider ajouté à
+  // available_providers, sans code spécifique par fournisseur (fix du 5
+  // juillet — l'ancienne version ne gérait en dur que mistral/claude, un
+  // provider comme "openai" retombait silencieusement sur les modèles Claude).
+  const models = llm[`available_models_${provider}`] || [];
+  const currentModel = llm[`model_${provider}`] || '';
 
   modelSel.innerHTML = models
     .map(m => `<option value="${m}" ${m === currentModel ? 'selected' : ''}>${m}</option>`)
@@ -194,17 +244,16 @@ async function saveLLM() {
 
   updateCostBadge(model);
 
-  // Mettre à jour State.config local
+  // Mettre à jour State.config local — générique, même fix que refreshModelSelect
   if (!State.config.llm) State.config.llm = {};
   State.config.llm.provider = provider;
-  if (provider === 'mistral') State.config.llm.model_mistral = model;
-  else                        State.config.llm.model_claude  = model;
+  State.config.llm[`model_${provider}`] = model;
 
   try {
     await fetch('/api/config', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ llm: { provider, model_mistral: State.config.llm.model_mistral, model_claude: State.config.llm.model_claude } }),
+      body: JSON.stringify({ llm: { provider, [`model_${provider}`]: model } }),
     });
   } catch (e) {
     console.error('Erreur sauvegarde LLM', e);
@@ -291,6 +340,11 @@ async function renderFormBody(script) {
 
   // YAML panels
   await renderYamlPanels(script);
+
+  // État initial de la visibilité mode_only (onglet par défaut = premier de
+  // la liste, cf. renderModeSelect) — sans ça, le premier rendu affiche tout
+  // avant le premier clic sur un onglet Mode.
+  if (script.mode_select) updateModeOnlyVisibility();
 }
 
 function renderModeSelect(modeConfig) {
@@ -306,6 +360,21 @@ function renderModeSelect(modeConfig) {
   tabs.className = 'mode-tabs';
   tabs.dataset.optType = 'mode_select';
 
+  const note = document.createElement('div');
+  note.className = 'mode-note';
+  note.id = 'mode-select-note';
+
+  const updateNote = () => {
+    const active = tabs.querySelector('.mode-tab.active');
+    const choice = modeConfig.choices.find(c => c.value === active?.dataset.value);
+    if (choice?.note) {
+      note.textContent = choice.note;
+      note.style.display = '';
+    } else {
+      note.style.display = 'none';
+    }
+  };
+
   modeConfig.choices.forEach((c, i) => {
     const tab = document.createElement('button');
     tab.className = 'mode-tab' + (i === 0 ? ' active' : '');
@@ -314,12 +383,37 @@ function renderModeSelect(modeConfig) {
     tab.addEventListener('click', () => {
       tabs.querySelectorAll('.mode-tab').forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
+      updateModeOnlyVisibility();
+      updateNote();
     });
     tabs.appendChild(tab);
   });
 
   group.appendChild(tabs);
+  group.appendChild(note);
+  updateNote();  // état initial (premier onglet actif par défaut)
   return group;
+}
+
+/**
+ * Affiche/masque les blocs marqués data-mode-only selon l'onglet Mode
+ * actuellement actif. Un bloc sans data-mode-only reste toujours visible
+ * (ex: --dry-run, pertinent quel que soit le mode).
+ *
+ * Corrige la confusion du 11 juillet 2026 : "Scénario de référence"
+ * (config_fields, mode custom uniquement) et "Limiter à un scénario"
+ * (--scenario, mode auto uniquement) s'affichaient simultanément, sans
+ * lien avec l'onglet Mode sélectionné, laissant croire à un doublon alors
+ * que les deux champs ne sont jamais actifs pour le même run.
+ */
+function updateModeOnlyVisibility() {
+  const activeTab = document.querySelector('.mode-tab.active');
+  const activeMode = activeTab ? activeTab.dataset.value : null;
+
+  document.querySelectorAll('[data-mode-only]').forEach(el => {
+    const allowedModes = el.dataset.modeOnly.split(',');
+    el.style.display = (!activeMode || allowedModes.includes(activeMode)) ? '' : 'none';
+  });
 }
 
 function renderManualSteps(steps) {
@@ -369,6 +463,9 @@ function renderManualSteps(steps) {
 async function renderOption(opt, script) {
   const group = document.createElement('div');
   group.className = 'option-group';
+  if (opt.mode_only) {
+    group.dataset.modeOnly = Array.isArray(opt.mode_only) ? opt.mode_only.join(',') : opt.mode_only;
+  }
 
   if (opt.type === 'checkbox') {
     const row = document.createElement('label');
@@ -431,6 +528,37 @@ async function renderOption(opt, script) {
     });
 
     group.appendChild(sel);
+
+  } else if (opt.type === 'multi_select') {
+    // Chips cliquables — même pattern que multi_select dans buildYamlFormPanel
+    // (config_fields), porté ici pour les options CLI classiques.
+    const chips = document.createElement('div');
+    chips.className = 'yaml-chips';
+    chips.dataset.multiFlag = opt.flag;
+
+    let choices = opt.choices || [];
+    if (opt.source === 'config_scenarios') {
+      choices = (State.config?.scenarios || []).map(sc => ({ value: sc, label: sc }));
+    }
+
+    choices.forEach(c => {
+      const chip = document.createElement('button');
+      chip.type = 'button';
+      chip.className = 'yaml-chip';
+      chip.textContent = c.label;
+      chip.dataset.value = c.value;
+      chip.addEventListener('click', () => chip.classList.toggle('active'));
+      chips.appendChild(chip);
+    });
+
+    group.appendChild(chips);
+
+    if (opt.description) {
+      const desc = document.createElement('div');
+      desc.className = 'option-desc';
+      desc.textContent = opt.description;
+      group.appendChild(desc);
+    }
 
   } else if (opt.type === 'slug_select') {
     const sel = document.createElement('select');
@@ -510,9 +638,12 @@ document.addEventListener('change', async (e) => {
 function collectArgs() {
   const args = [];
 
-  // Mode select
+  // Mode select — envoyé comme --mode <valeur>, pas comme argument brut.
+  // Avant le 11 juillet 2026, seule la valeur ("custom") était poussée sans
+  // flag, ce que argparse rejetait ("unrecognized arguments: custom") côté
+  // create_entities_and_instances.py, faute d'argument --mode reconnu.
   const modeActive = document.querySelector('.mode-tab.active');
-  if (modeActive) args.push(modeActive.dataset.value);
+  if (modeActive) args.push('--mode', modeActive.dataset.value);
 
   // Options standard
   document.querySelectorAll('[data-flag]').forEach(el => {
@@ -526,6 +657,17 @@ function collectArgs() {
       if (val !== '' && val !== null && val !== undefined) {
         args.push(flag, val);
       }
+    }
+  });
+
+  // Groupes multi_select (chips) — un flag suivi de toutes les valeurs
+  // actives (argparse nargs='+' côté script). Rien n'est envoyé si aucune
+  // chip n'est sélectionnée (comportement "libre choix par défaut").
+  document.querySelectorAll('[data-multi-flag]').forEach(group => {
+    const flag = group.dataset.multiFlag;
+    const values = Array.from(group.querySelectorAll('.yaml-chip.active')).map(c => c.dataset.value);
+    if (values.length > 0) {
+      args.push(flag, ...values);
     }
   });
 
@@ -562,7 +704,7 @@ async function runScript(scriptId, args) {
     const res = await fetch('/api/run', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ script_id: scriptId, args }),
+      body: JSON.stringify({ script_id: scriptId, args, force_llm_override: !!State.forceLlmOverride }),
     });
 
     if (!res.ok) {
@@ -732,11 +874,16 @@ function renderDashboard(data) {
 
   const cards = [];
 
-  // LLM actif
+  // Modèle par défaut — depuis le 11 juillet 2026, ce n'est plus "le" LLM
+  // actif : chaque script résout son propre modèle via le routing par tier
+  // (llm_client.TASK_TIER_DEFAULTS), sauf si le toggle "Forcer ce modèle" est
+  // coché pour un lancement précis. Ce que data.llm reflète ici est la
+  // valeur par défaut de gui/config.json, utilisée uniquement quand le
+  // toggle est actif — pas le modèle qui tourne réellement par défaut.
   const llm = data.llm || {};
-  cards.push(statCard('LLM actif',
+  cards.push(statCard('Modèle si forcé',
     `${(llm.provider||'—').charAt(0).toUpperCase()+(llm.provider||'').slice(1)}`,
-    llm.model || '—'));
+    (llm.model || '—') + ' · sinon : routing par tier'));
 
   // Instances
   const inst = data.instances || {};
@@ -1011,6 +1158,7 @@ async function renderYamlPanels(script) {
     // Si ce fichier YAML a des config_fields dans le script → formulaire guidé
     if (script.config_file === yf.path && script.config_fields) {
       const panel = await buildYamlFormPanel(yf, script.config_fields, script);
+      if (script.config_fields_mode) panel.dataset.modeOnly = script.config_fields_mode;
       body.appendChild(panel);
     } else {
       const panel = await buildYamlPanel(yf);
@@ -1307,11 +1455,19 @@ async function buildYamlFormPanel(yf, configFields, script) {
     btnSave.style.display   = isRawMode ? 'none' : '';
   });
 
-  btnSave.addEventListener('click', () => {
-    if (isQueueMode) {
-      _appendYamlQueue(wrapper, yf.path, statusMsg);
-    } else {
-      _saveYamlForm(wrapper, yf.path, statusMsg);
+  btnSave.addEventListener('click', async () => {
+    if (btnSave.disabled) return;  // garde-fou anti double-clic
+    btnSave.disabled = true;
+    const originalLabel = btnSave.textContent;
+    try {
+      if (isQueueMode) {
+        await _appendYamlQueue(wrapper, yf.path, statusMsg);
+      } else {
+        await _saveYamlForm(wrapper, yf.path, statusMsg);
+      }
+    } finally {
+      btnSave.disabled = false;
+      btnSave.textContent = originalLabel;
     }
   });
 
@@ -1913,6 +2069,7 @@ async function _launchEnrichGeographie(scenario, btn) {
       body: JSON.stringify({
         script_id: 'enrich_geographie',
         args: ['--scenario', scenario],
+        force_llm_override: !!State.forceLlmOverride,
       }),
     });
     const data = await res.json();

@@ -1,0 +1,17 @@
+============================================================
+OURRASSOL 2098 — Création entités + instances
+============================================================
+
+Mode : auto (fourni via --mode)
+
+[1/2] Génération de 1 entité(s) (scénarios : new_sustainability)...
+[llm] Mistral (mistral-large-latest) — entrée : 25762 | sortie : 305
+[2/2] Validation, injection et génération des instances...
+
+  ✓ Conseil Mondial de la Régénération Écosystémique (CMRE) (institution)
+  Instances (1 scénario(s)) :
+    → new_sustainability... [llm] Mistral (mistral-large-latest) — entrée : 4343 | sortie : 1196
+✓
+
+Terminé. 1/1 entité(s) créée(s).
+Instances : 1 créée(s) | 0 déjà existante(s) | 0 erreur(s)

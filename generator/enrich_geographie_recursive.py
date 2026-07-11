@@ -42,11 +42,11 @@ Pour chaque scénario :
 1. Relit geographie/{scenario}.md existant (refuse de continuer s'il
    n'existe pas encore — lance d'abord build_geographie_monde.py).
 2. Rassemble le même corpus narratif brut que l'étape 1 (instances +
-   event_instances du scénario) — Claude replonge dans le texte
+   event_instances du scénario) — le LLM replonge dans le texte
    original, pas seulement dans la synthèse déjà faite, pour pouvoir
    repérer des lieux/sous-zones mentionnés mais pas remontés en
    zone de niveau 1.
-3. Envoie corpus + zones existantes (figées, comme contexte) à Claude,
+3. Envoie corpus + zones existantes (figées, comme contexte) au LLM,
    avec consigne de proposer un maillage en sous-zones à profondeur
    libre (et, marginalement, d'éventuelles nouvelles zones de
    niveau 1) — un seul appel par scénario.
@@ -77,7 +77,11 @@ from pathlib import Path
 
 import yaml
 
-from llm_client import call_llm, LLM_MODEL as MODEL, LLM_PROVIDER
+from llm_client import call_llm, resolve_for_tier
+
+# Tier : enrichissement du référentiel géographique canonique, réutilisé
+# dans tous les articles/entités ensuite.
+TASK_TIER = "structured_strict"
 
 
 # ---------------------------------------------------------------------------
@@ -181,7 +185,7 @@ def gather_event_texts(scenario):
 
 
 # ---------------------------------------------------------------------------
-# Appel Claude
+# Appel LLM
 # ---------------------------------------------------------------------------
 
 def get_client():
@@ -197,9 +201,11 @@ def call_claude_json(client, system, user_content, max_tokens=ENRICH_MAX_TOKENS)
         user_prompt=user_content,
         max_tokens=max_tokens,
         temperature=0.0,
+        task_tier=TASK_TIER,
     ).strip()
 
-    print(f"    [diagnostic appel API] fournisseur={LLM_PROVIDER}, modèle={MODEL}, "
+    _p, _m = resolve_for_tier(TASK_TIER)
+    print(f"    [diagnostic appel API] fournisseur={_p}, modèle={_m}, "
           f"longueur_texte={len(text)} caractères")
 
     if not text:
@@ -377,7 +383,7 @@ def validate_zone(zone):
 
 def resolve_parents_and_levels(existing_zones, new_zones):
     """Valide les `parent` des nouvelles zones contre l'ensemble existant+nouveau,
-    calcule `niveau` à partir de la chaîne de parenté réelle (ignore ce que Claude
+    calcule `niveau` à partir de la chaîne de parenté réelle (ignore ce que le LLM
     a pu renvoyer dans ce champ), et détecte les cycles. Retourne
     (nouvelles_zones_valides, zones_rejetees_avec_raison)."""
     existing_slugs = {z["slug"] for z in existing_zones if z.get("slug")}
@@ -480,12 +486,12 @@ def clean_sources(new_zones, valid_sources):
 def dedupe_promoted_lieux(existing_zones, new_zones):
     """SEULE exception à la règle 'zones existantes jamais modifiées' : retire de
     `lieux_emblematiques` d'une zone existante l'entrée correspondant à un lieu
-    explicitement promu en vraie sous-zone (champ `promu_depuis` rempli par Claude
+    explicitement promu en vraie sous-zone (champ `promu_depuis` rempli par le LLM
     et confirmé ici par correspondance exacte de nom). Aucun autre champ d'une zone
     existante n'est touché.
 
     Retire le lieu PARTOUT où il apparaît dans les zones existantes, pas seulement
-    sur le parent désigné par Claude — un même lieu emblématique peut avoir été
+    sur le parent désigné par le LLM — un même lieu emblématique peut avoir été
     listé sur plusieurs zones niveau 1 dès l'étape 1 (ex: une ville-siège mentionnée
     à la fois comme lieu notable de sa zone d'appartenance ET de la grande région qui
     l'englobe). Sans cette extension, seul le retrait sur le parent désigné aurait
@@ -521,7 +527,7 @@ def dedupe_promoted_lieux(existing_zones, new_zones):
 
         if not any_match:
             # promu_depuis ne correspond à AUCUN lieu réel d'aucune zone existante —
-            # Claude a halluciné ou mal recopié le nom : on ignore silencieusement
+            # Le LLM a halluciné ou mal recopié le nom : on ignore silencieusement
             # plutôt que de risquer de retirer le mauvais lieu.
             dedupe_log.append((zone.get("slug", "?"), parent_slug, promu_depuis,
                                 "ignoré (aucun lieu_emblematique correspondant trouvé "
@@ -668,7 +674,7 @@ def process_scenario(client, scenario, dry_run):
         return
 
     new_zones = result.get("nouvelles_zones", [])
-    print(f"  → {len(new_zones)} nouvelle(s) zone(s) proposée(s) par Claude")
+    print(f"  → {len(new_zones)} nouvelle(s) zone(s) proposée(s) par le LLM")
 
     # 1. Validation mécanique de base (slug/nom/type/statut/origine_reelle)
     structurally_valid = []

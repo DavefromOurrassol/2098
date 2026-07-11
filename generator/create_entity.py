@@ -12,14 +12,14 @@ DEUX MODES, demandés interactivement au lancement :
 
   custom — tu décris UNE instance précise (nom, catégorie, rôle et état
            dans UN scénario de référence) dans
-           entites_custom/queue.yaml. Claude en déduit l'archétype
+           entites_custom/queue.yaml. Le LLM en déduit l'archétype
            (description générale + tension fondamentale intemporelle +
            variables potentielles), cohérent avec cette instance de
            référence. Le rôle et l'état que tu fournis pour le scénario
-           de référence sont des CONTRAINTES DURES — Claude ne les
+           de référence sont des CONTRAINTES DURES — le LLM ne les
            reformule pas, il construit l'archétype à partir d'eux.
 
-  auto   — tu donnes juste un nombre N. Claude invente N entités
+  auto   — tu donnes juste un nombre N. Le LLM invente N entités
            entièrement nouvelles, complètes et variées.
 
 Dans les deux cas, un garde-fou anti-doublon vérifie le nom/la nature
@@ -51,7 +51,7 @@ from pathlib import Path
 
 import yaml
 
-from llm_client import call_llm, LLM_MODEL as MODEL
+from llm_client import call_llm  # tier structured_strict — entité canonique
 
 
 # ---------------------------------------------------------------------------
@@ -208,7 +208,7 @@ def slugify(text):
 
 
 # ---------------------------------------------------------------------------
-# Appels Claude
+# Appels LLM
 # ---------------------------------------------------------------------------
 
 def get_client():
@@ -222,6 +222,7 @@ def call_claude_json(client, system, user_content, max_tokens=3000):
         user_prompt=user_content,
         max_tokens=max_tokens,
         temperature=0.0,
+        task_tier="structured_strict",
     ).strip()
     text = re.sub(r"^```(?:json)?\s*", "", text)
     text = re.sub(r"\s*```$", "", text)
@@ -512,7 +513,7 @@ QUEUE_TEMPLATE = """\
 #
 # Ajoute ici tes idées d'entités custom, décrites à travers UNE
 # instance de référence précise (le scénario où tu l'imagines
-# d'abord). Claude en déduira l'archétype intemporel, puis
+# d'abord). Le LLM en déduira l'archétype intemporel, puis
 # generate_instances.py générera les instances pour les autres
 # scénarios. Lance ensuite :
 #
@@ -755,7 +756,7 @@ def run_auto_mode(client, dry_run):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--dry-run", action="store_true",
-                         help="Appelle Claude et valide, mais n'écrit rien sur disque.")
+                         help="Appelle le LLM et valide, mais n'écrit rien sur disque.")
     args = parser.parse_args()
 
     client = get_client()

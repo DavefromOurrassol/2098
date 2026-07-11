@@ -1,0 +1,41 @@
+============================================================
+OURRASSOL 2098 — Création entités + instances
+============================================================
+
+Mode : auto (fourni via --mode)
+
+[1/2] Génération de 1 entité(s) (scénario unique : reference)...
+[llm] Mistral (mistral-large-latest) — entrée : 25097 | sortie : 1306
+[2/2] Validation, injection et génération des instances...
+
+  ✓ EcoSynth Global (entreprise)
+  Instances (1 scénario(s)) :
+    → reference... [llm] Mistral (mistral-large-latest) — entrée : 5277 | sortie : 1035
+
+       ⚠ oppositions filtrée (pas un slug valide) : 'federation_des_communs_territoriaux_reference'
+✓
+
+  ✓ OptiFlow Logistics (entreprise)
+  Instances (1 scénario(s)) :
+    → reference... [llm] Mistral (mistral-large-latest) — entrée : 5283 | sortie : 1520
+
+       ⚠ oppositions filtrée (pas un slug valide) : 'federation_des_communs_territoriaux_reference'
+✓
+
+  ✓ NeuroHarmonics (entreprise)
+  Instances (1 scénario(s)) :
+    → reference... [llm] Mistral (mistral-large-latest) — entrée : 5316 | sortie : 1212
+✓
+
+  ✓ TerraMetrics (entreprise)
+  Instances (1 scénario(s)) :
+    → reference... [llm] Mistral (mistral-large-latest) — entrée : 5321 | sortie : 1105
+✓
+
+  ✓ DataSovereign (entreprise)
+  Instances (1 scénario(s)) :
+    → reference... [llm] Mistral (mistral-large-latest) — entrée : 5344 | sortie : 1084
+✓
+
+Terminé. 5/5 entité(s) créée(s).
+Instances : 5 créée(s) | 0 déjà existante(s) | 0 erreur(s)

@@ -1,59 +1,217 @@
-# evenements_custom/queue.yaml
-#
-# Ajoute ici tes idées d'événements custom (observations de l'actualité,
-# idées narratives...). Lance ensuite :
-#
-#   python3 generator/inject_custom_events.py            ← injection réelle
-#   python3 generator/inject_custom_events.py --dry-run  ← test sans écriture
-#
-# CHAMPS :
-#   id                    : identifiant court lisible (lettres, chiffres, underscores)
-#   description           : l'idée en langage naturel, quelques phrases suffisent
-#   portee                : locale | regionale | continentale | globale
-#   date_approximative     : année 2025-2097 (peut varier de +/-10 ans par scénario)
-#   intensite              : faible | modérée | forte | majeure
-#   scenarios              : liste de scénarios à couvrir, ou null pour les 6 par défaut
-#                            (valeurs : breakdown, fortress_world, new_sustainability,
-#                            eco_communalism, policy_reform, reference)
-#   variables_hint         : optionnel. null si tu ne sais pas — Claude choisit
-#                            automatiquement. Sinon une variable (chaîne) ou
-#                            plusieurs (liste) que tu IMPOSES comme impactées.
-#                            Variables disponibles :
-#                              systeme_economique_redistribution | gouvernance_institutions
-#                              geopolitique_conflits | valeurs_culture_tempo_sociale
-#                              organisation_territoires | sante_biotechnologies
-#                              frontieres_du_systeme | technologie_information
-#                              climat_environnement_global | energie_ressources_critiques
-#                              demographie_mobilite_humaine | systemes_productifs_travail
-#   variables_hint_count   : optionnel, entier 1-4. Plafond du nombre total de
-#                            variables (hint(s) inclus). Défaut : 2.
-#   acteurs_hint           : optionnel. null si tu ne sais pas — Claude choisit
-#                            parmi les instances d'entités existantes pour
-#                            chaque scénario. Sinon un slug d'instance (chaîne)
-#                            ou plusieurs (liste) que tu IMPOSES.
-#   acteurs_hint_count     : optionnel, entier 1-4. Plafond du nombre total
-#                            d'acteurs (hint(s) inclus). Défaut : 2.
-#   source                 : libre — date, lien d'article...
-#
-# EXEMPLE :
-#   - id: guerre_israelo_iranienne
-#     description: >
-#       Conflit armé direct entre Israël et l'Iran, frappes sur les
-#       infrastructures nucléaires et pétrolières, risque d'escalade
-#       régionale impliquant les puissances du Golfe.
-#     portee: globale
-#     date_approximative: 2026
-#     intensite: majeure
-#     scenarios: null
-#     variables_hint: [geopolitique_conflits, energie_ressources_critiques]
-#     variables_hint_count: null
-#     acteurs_hint: null
-#     acteurs_hint_count: null
-#     source: actualite_2026-06
-#
-# Les idées traitées sont déplacées vers processed.yaml (succès) ou
-# needs_review.yaml (échec après corrections automatiques).
-# ──────────────────────────────────────────────────────────────────────────────
-
 queue:
-  [] # ← remplace [] par tes idées
+- id: crise_biotech_afrique_subsaharienne
+  description: En 2092, une épidémie de 'Fièvre X' ravage les zones effondrées d'Afrique
+    subsaharienne, propagée par des vecteurs génétiquement modifiés échappés d'un
+    laboratoire clandestin de biotechnologie. Les blocs souverains refusent d'intervenir,
+    mais des milices locales et des ONG transnationales tentent de contenir la crise
+    avec des technologies low-tech, révélant les fractures sanitaires du monde fragmenté.
+  portee: continentale
+  date_approximative: '2092'
+  intensite: majeure
+  scenarios:
+  - fortress_world
+  variables_hint:
+  - sante_biotechnologies
+  - geopolitique_conflits
+  - demographie_mobilite_humaine
+  variables_hint_count: 3
+  acteurs_hint:
+  - milices locales
+  - ONG transnationales
+  - blocs souverains
+  acteurs_hint_count: 3
+  source: auto_generated_2026-07
+- id: guerre_ressources_arctique
+  description: En 2095, l'ouverture d'une nouvelle route maritime en Arctique, libérée
+    des glaces par le réchauffement, déclenche un conflit armé entre le Bloc Pacifique
+    Nord et l'Espace Nordique Arctique pour le contrôle des gisements de terres rares
+    sous-marins. Les affrontements, menés par des drones autonomes et des mercenaires
+    polaires, révèlent l'ampleur de la militarisation des frontières extrêmes.
+  portee: globale
+  date_approximative: '2095'
+  intensite: forte
+  scenarios:
+  - fortress_world
+  variables_hint:
+  - energie_ressources_critiques
+  - geopolitique_conflits
+  - frontieres_du_systeme
+  variables_hint_count: 3
+  acteurs_hint:
+  - Bloc Pacifique Nord
+  - Espace Nordique Arctique
+  - mercenaires polaires
+  acteurs_hint_count: 3
+  source: auto_generated_2026-07
+- id: revolte_travailleurs_detroit_ormuz
+  description: En 2093, les ouvriers des usines automatisées de Détroit-Ormuz, exploités
+    par des contrats de travail algorithmique, se soulèvent contre leurs employeurs
+    transnationaux. Leur mouvement, soutenu par des hackers des Zones Grises, paralyse
+    les chaînes d'approvisionnement énergétiques du Golfe, forçant les blocs à négocier
+    sous la menace d'un effondrement localisé.
+  portee: regionale
+  date_approximative: '2093'
+  intensite: modérée
+  scenarios:
+  - fortress_world
+  variables_hint:
+  - systemes_productifs_travail
+  - systeme_economique_redistribution
+  - technologie_information
+  variables_hint_count: 3
+  acteurs_hint:
+  - ouvriers automatisés
+  - hackers des Zones Grises
+  - corporations transnationales
+  acteurs_hint_count: 3
+  source: auto_generated_2026-07
+- id: chute_bruxelles_forteresse
+  description: En 2096, la Forteresse de Bruxelles, symbole du Pacte des Forteresses
+    Souveraines, est infiltrée par un virus quantique conçu dans les laboratoires
+    d'Aria Instance Fantôme. Le système de défense européen s'effondre temporairement,
+    révélant la dépendance technologique des blocs et déclenchant une crise de confiance
+    dans les institutions souveraines.
+  portee: continentale
+  date_approximative: '2096'
+  intensite: forte
+  scenarios:
+  - fortress_world
+  variables_hint:
+  - technologie_information
+  - gouvernance_institutions
+  - frontieres_du_systeme
+  variables_hint_count: 3
+  acteurs_hint:
+  - Aria Instance Fantôme
+  - Pacte des Forteresses Souveraines
+  - hackers indépendants
+  acteurs_hint_count: 3
+  source: auto_generated_2026-07
+- id: marches_gris_asie_centrale
+  description: En 2094, les Corridors Gris d'Asie Centrale deviennent le théâtre d'un
+    marché noir de technologies interdites, où se croisent trafiquants de données
+    génétiques, contrebandiers de terres rares et déserteurs des blocs. L'émergence
+    d'une 'économie de l'ombre souveraine' défie les monopoles des forteresses, tout
+    en créant des alliances improbables entre acteurs marginaux.
+  portee: regionale
+  date_approximative: '2094'
+  intensite: modérée
+  scenarios:
+  - fortress_world
+  variables_hint:
+  - systeme_economique_redistribution
+  - frontieres_du_systeme
+  - demographie_mobilite_humaine
+  variables_hint_count: 3
+  acteurs_hint:
+  - trafiquants
+  - déserteurs des blocs
+  - communautés nomades
+  acteurs_hint_count: 3
+  source: auto_generated_2026-07
+- id: pacte_sahelien_autonomie_energetique
+  description: Le Bloc Sahelien Autonome annonce un partenariat inédit avec des entreprises
+    locales et des diasporas africaines pour développer une ceinture solaire transsaharienne,
+    réduisant sa dépendance aux corridors eurasiens. Ce projet, soutenu par l'Union
+    Africaine Résilience, provoque des tensions avec les acteurs traditionnels de
+    l'énergie et suscite des débats sur la souveraineté énergétique en Afrique.
+  portee: continentale
+  date_approximative: '2092'
+  intensite: modérée
+  scenarios:
+  - reference
+  variables_hint:
+  - energie_ressources_critiques
+  - geopolitique_conflits
+  - systeme_economique_redistribution
+  variables_hint_count: 3
+  acteurs_hint:
+  - bloc_sahelien_autonome
+  - union_africaine_resilience
+  acteurs_hint_count: 2
+  source: auto_generated_2026-07
+- id: crise_helsinki_communs_numeriques
+  description: Helsinki, capitale des Communs Numériques, est secouée par un scandale
+    de corruption impliquant des algorithmes de gouvernance locale. Des fuites révèlent
+    que des entreprises technologiques ont manipulé les systèmes de vote électronique
+    et de redistribution des ressources, déclenchant des émeutes et une remise en
+    question des modèles de gouvernance décentralisée en Europe occidentale.
+  portee: regionale
+  date_approximative: '2095'
+  intensite: forte
+  scenarios:
+  - reference
+  variables_hint:
+  - gouvernance_institutions
+  - technologie_information
+  - valeurs_culture_tempo_sociale
+  variables_hint_count: 3
+  acteurs_hint:
+  - helsinki_communs_numeriques
+  - europe_occidentale_reconstructee
+  acteurs_hint_count: 2
+  source: auto_generated_2026-07
+- id: accord_kinshasa_hydrique_afrique_centrale
+  description: Sous l'égide de l'Union Africaine Résilience, les pays du bassin du
+    Congo signent les Accords de Kinshasa pour une gestion collective des ressources
+    hydriques, incluant des mécanismes de redistribution et de protection contre les
+    prélèvements étrangers. Ce traité, perçu comme une réponse aux tensions croissantes
+    sur l'eau, redéfinit les équilibres géopolitiques en Afrique centrale.
+  portee: continentale
+  date_approximative: '2093'
+  intensite: modérée
+  scenarios:
+  - reference
+  variables_hint:
+  - geopolitique_conflits
+  - sante_biotechnologies
+  - organisation_territoires
+  variables_hint_count: 3
+  acteurs_hint:
+  - kinshasa_accords_hydriques
+  - union_africaine_resilience
+  acteurs_hint_count: 2
+  source: auto_generated_2026-07
+- id: revolte_guadalajara_contre_nexus
+  description: À Guadalajara, cœur du Nexus technologique des Amériques Multipolaires,
+    une révolte populaire éclate contre les conditions de travail dans les usines
+    de biotech et les fermes verticales. Les travailleurs, soutenus par des syndicats
+    transnationaux, exigent une refonte des systèmes productifs et une redistribution
+    des bénéfices, menaçant la stabilité du modèle économique local.
+  portee: locale
+  date_approximative: '2094'
+  intensite: forte
+  scenarios:
+  - reference
+  variables_hint:
+  - systemes_productifs_travail
+  - systeme_economique_redistribution
+  - valeurs_culture_tempo_sociale
+  variables_hint_count: 3
+  acteurs_hint:
+  - guadalajara_nexus
+  - ameriques_multipolaires
+  acteurs_hint_count: 2
+  source: auto_generated_2026-07
+- id: conflit_corridors_eurasiens_peripheriques
+  description: Les Corridors Eurasiens Périphériques deviennent le théâtre d'affrontements
+    entre milices locales, entreprises de sécurité privées et forces du Bloc Eurasien
+    Central pour le contrôle des routes commerciales et des gisements de terres rares.
+    Cet événement révèle la fragilité des équilibres géopolitiques en Eurasie et pousse
+    les Institutions Multilatérales Survivantes à intervenir.
+  portee: continentale
+  date_approximative: '2096'
+  intensite: majeure
+  scenarios:
+  - reference
+  variables_hint:
+  - geopolitique_conflits
+  - energie_ressources_critiques
+  - frontieres_du_systeme
+  variables_hint_count: 3
+  acteurs_hint:
+  - corridors_eurasiens_peripheriques
+  - bloc_eurasien_central
+  - institutions_multilaterales_survivantes
+  acteurs_hint_count: 3
+  source: auto_generated_2026-07

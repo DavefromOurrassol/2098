@@ -1,0 +1,100 @@
+---
+name: Les Gardiens des Rives
+type: instance
+slug: les_veilleurs_du_fleuve_reference
+entite: les_veilleurs_du_fleuve
+scenario: reference
+localisation:
+  zone: delta_du_mekong
+  lieu: Delta du Mékong
+  type_lieu: site_strategique
+
+type_dans_scenario: réseau
+
+role_dans_scenario: >
+  Réseau décentralisé de sentinelles locales, les Gardiens des Rives incarnent la résilience des territoires négligés par les institutions formelles. Ils agissent comme un système nerveux parallèle, reliant les communautés riveraines, les deltas menacés et les zones périurbaines abandonnées pour surveiller les ressources hydriques, les pollutions et les intrusions des acteurs extractivistes. Leur légitimité repose sur une connaissance intime du terrain et une capacité à mobiliser des réponses rapides, souvent en marge des cadres légaux.
+
+responsabilites: >
+  Ils cartographient en temps réel les flux d'eau et les contaminations via des réseaux de capteurs low-tech, organisent des alertes communautaires contre les projets d'accaparement des terres, et protègent les savoirs traditionnels liés à l'eau. Leurs actions incluent aussi la médiation entre communautés et les rares institutions encore fonctionnelles, comme les Autorités Régionales de Régulation Hydrologique, pour négocier des droits d'usage locaux.
+
+impact_local: 4
+impact_systemique_global: 2
+
+variables_influencees:
+    - organisation_territoires
+    - sante_biotechnologies
+    - technologie_information
+
+zone_geographique:
+    - régionale
+    - locale
+
+zone_systemique:
+    - gouvernance
+    - société
+    - infrastructure
+
+alliances:
+    - reseau_des_administrations_locales_rurales_participatives_reference
+    - reseaux_de_capteurs_citoyens_reference
+    - ong_environnementales_de_terrain_reference
+    - federation_des_cliniques_autonomes_reference
+    - reseau_meshcommons_netsolidaire_reference
+
+oppositions:
+    - lobbies_agro_industriels_a_haute_consommation_d_eau_reference
+    - consortiums_prives_d_extraction_de_ressources_critiques_reference
+    - operateurs_de_zones_economiques_speciales_periurbaines_reference
+    - bureau_des_territoires_residuels_reference
+
+type_relation_dominante: coopération
+
+annee_debut: 2026
+annee_fin: 
+
+etat_temporel: actif
+age_historique: ascendant
+generation: transition
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Dans les deltas oubliés du Mékong ou du Gange, où les digues officielles cèdent sous la pression des marées, ce sont les Gardiens des Rives qui tiennent les registres des crues et des empoisonnements aux métaux lourds. Vêtus de combinaisons usées marquées au symbole des trois vagues entrelacées, ils patrouillent en pirogues solaires ou à vélo, équipés de drones artisanaux et de carnets de notes chiffrés. Leur force ? Une mémoire collective des territoires, transmise oralement et désormais augmentée par des réseaux mesh locaux, qui leur permet de déjouer les plans des consortiums miniers ou des lobbies agro-industriels. Leur faiblesse ? Ils restent invisibles aux radars des plateformes d'IA qui optimisent les ressources mondiales — jusqu'à ce qu'une crise les propulse sur le devant de la scène.
+
+signes_distinctifs: >
+  Leur emblème, trois vagues stylisées en bleu délavé, est peint sur les murs des villages ou gravé sur des bracelets en métal recyclé portés par leurs membres. Leurs outils mêlent low-tech (bouteilles échantillonneuses, cartes dessinées à la main) et high-tech récupéré (drones reconditionnés, capteurs bricolés à partir de déchets électroniques). Leurs réunions se tiennent souvent au crépuscule, près des points d'eau, et leurs décisions sont prises par consensus, selon des rituels adaptés des traditions locales.
+
+tensions_narratives: >
+  Les Gardiens des Rives sont tiraillés entre leur besoin de rester discrets pour éviter la répression et la nécessité de se structurer pour peser face aux acteurs globaux. Leur alliance avec les réseaux de capteurs citoyens et les cliniques autonomes pourrait les transformer en un contre-pouvoir territorial, mais leur méfiance envers les institutions les isole des financements et des protections légales. Leur plus grand défi ? Résister à la cooptation par les plateformes d'optimisation territoriale, qui voient en eux une source de données précieuses — ou une menace à neutraliser. Leur avenir pourrait basculer vers une fédération formelle, une radicalisation clandestine, ou une absorption par les marges persistantes du système.
+
+date_creation: 2026-07-11
+---
+
+# Les Gardiens des Rives
+
+## Rôle dans [[reference]]
+Réseau décentralisé de sentinelles locales, les Gardiens des Rives incarnent la résilience des territoires négligés par les institutions formelles. Ils agissent comme un système nerveux parallèle, reliant les communautés riveraines, les deltas menacés et les zones périurbaines abandonnées pour surveiller les ressources hydriques, les pollutions et les intrusions des acteurs extractivistes. Leur légitimité repose sur une connaissance intime du terrain et une capacité à mobiliser des réponses rapides, souvent en marge des cadres légaux.
+
+## Responsabilités
+Ils cartographient en temps réel les flux d'eau et les contaminations via des réseaux de capteurs low-tech, organisent des alertes communautaires contre les projets d'accaparement des terres, et protègent les savoirs traditionnels liés à l'eau. Leurs actions incluent aussi la médiation entre communautés et les rares institutions encore fonctionnelles, comme les Autorités Régionales de Régulation Hydrologique, pour négocier des droits d'usage locaux.
+
+## Variables influencées
+- [[organisation_territoires]]
+- [[sante_biotechnologies]]
+- [[technologie_information]]
+
+## Relations
+**Alliés** : [[reseau_des_administrations_locales_rurales_participatives_reference]], [[reseaux_de_capteurs_citoyens_reference]], [[ong_environnementales_de_terrain_reference]], [[federation_des_cliniques_autonomes_reference]], [[reseau_meshcommons_netsolidaire_reference]]
+**Opposants** : [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]], [[consortiums_prives_d_extraction_de_ressources_critiques_reference]], [[operateurs_de_zones_economiques_speciales_periurbaines_reference]], [[bureau_des_territoires_residuels_reference]]
+
+## Description journalistique
+Dans les deltas oubliés du Mékong ou du Gange, où les digues officielles cèdent sous la pression des marées, ce sont les Gardiens des Rives qui tiennent les registres des crues et des empoisonnements aux métaux lourds. Vêtus de combinaisons usées marquées au symbole des trois vagues entrelacées, ils patrouillent en pirogues solaires ou à vélo, équipés de drones artisanaux et de carnets de notes chiffrés. Leur force ? Une mémoire collective des territoires, transmise oralement et désormais augmentée par des réseaux mesh locaux, qui leur permet de déjouer les plans des consortiums miniers ou des lobbies agro-industriels. Leur faiblesse ? Ils restent invisibles aux radars des plateformes d'IA qui optimisent les ressources mondiales — jusqu'à ce qu'une crise les propulse sur le devant de la scène.
+
+## Tensions narratives
+Les Gardiens des Rives sont tiraillés entre leur besoin de rester discrets pour éviter la répression et la nécessité de se structurer pour peser face aux acteurs globaux. Leur alliance avec les réseaux de capteurs citoyens et les cliniques autonomes pourrait les transformer en un contre-pouvoir territorial, mais leur méfiance envers les institutions les isole des financements et des protections légales. Leur plus grand défi ? Résister à la cooptation par les plateformes d'optimisation territoriale, qui voient en eux une source de données précieuses — ou une menace à neutraliser. Leur avenir pourrait basculer vers une fédération formelle, une radicalisation clandestine, ou une absorption par les marges persistantes du système.

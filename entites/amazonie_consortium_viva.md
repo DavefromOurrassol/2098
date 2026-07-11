@@ -4,32 +4,31 @@ type: entity
 slug: amazonie_consortium_viva
 category: entreprise
 description: >
-  Un consortium privé qui s'engouffre dans les interstices juridiques pour s'approprier les ressources vivantes d'un territoire — ici les ressources génétiques forestières amazoniennes — en transformant le vivant en patrimoine brevetable et commercialisable. Il incarne la logique d'enclosure appliquée au monde biologique : là où la loi hésite, se tait ou se contredit, il opère ; là où la souveraineté est floue, il installe ses droits ; là où la biodiversité est dense et sous-documentée, il prospecte et extrait avant que quiconque ne puisse l'en empêcher. Sa puissance repose sur l'expertise juridique, la vitesse d'action et la capacité à monétiser ce que les États et les communautés locales peinent encore à nommer comme leur bien propre.
+  L'archétype du **Consortium Extractiviste Transnational** incarne la logique de l'accumulation capitaliste appliquée aux ressources naturelles et biologiques, opérant à l'échelle globale en exploitant les failles juridiques et les déséquilibres de pouvoir. Il fusionne agro-industrie, biotechnologies et gouvernance diffuse pour breveter et monopoliser le vivant, transformant les écosystèmes en actifs financiers. Son modèle repose sur la fragmentation des souverainetés étatiques et la privatisation des communs, tout en se présentant comme un acteur indispensable à la stabilité économique mondiale.
 tension_fondamentale: >
-  La richesse qu'il génère repose structurellement sur le vide normatif qu'il exploite — mais ce vide se comble inexorablement à mesure que ses succès rendent visibles les spoliations qu'il opère, transformant chaque brevet obtenu en preuve d'un crime à poursuivre et chaque zone grise juridique en futur front de régulation.
+  Cette entité porte en elle la contradiction fondamentale entre **l'extraction infinie des ressources** (nécessaire à son modèle économique) et **la finitude écologique** (qui menace sa propre survie). Elle incarne aussi le conflit entre **l'universalité des droits biologiques** (accès aux semences, aux écosystèmes) et **la propriété intellectuelle privatisée**, ainsi qu'entre **l'efficacité économique** et **la légitimité démocratique** (gouvernance opaque, actionnariat diffus).
 variables_potentielles:
   - sante_biotechnologies
-  - gouvernance_institutions
-  - frontieres_du_systeme
   - climat_environnement_global
   - energie_ressources_critiques
+  - frontieres_du_systeme
+  - gouvernance_institutions
 scenarios_instances:
   - reference
-date_creation: 2026-06-27
-custom_source: manual_fix_2026-06-27
+date_creation: 2026-07-04
 scenario_ref: reference
 role_ref: >
-  Consortium privé opérant dans le bassin amazonien, exploitant les zones grises juridiques pour extraire et breveter des ressources génétiques forestières.
+  Consortium privé regroupant des intérêts agro-industriels et biotechnologiques opérant dans le bassin amazonien dans un contexte de fragmentation réglementaire mondiale. Viva exploite les zones grises juridiques entre États affaiblis pour extraire et breveter des ressources génétiques forestières. Sa gouvernance actionnariale diffuse le rend difficile à réguler ou à contraindre diplomatiquement.
 etat_ref: actif
 ---
 
 # Amazonie Consortium Viva
 
 ## Description archétypale
-Un consortium privé qui s'engouffre dans les interstices juridiques pour s'approprier les ressources vivantes d'un territoire — ici les ressources génétiques forestières amazoniennes — en transformant le vivant en patrimoine brevetable et commercialisable. Il incarne la logique d'enclosure appliquée au monde biologique : là où la loi hésite, se tait ou se contredit, il opère ; là où la souveraineté est floue, il installe ses droits ; là où la biodiversité est dense et sous-documentée, il prospecte et extrait avant que quiconque ne puisse l'en empêcher. Sa puissance repose sur l'expertise juridique, la vitesse d'action et la capacité à monétiser ce que les États et les communautés locales peinent encore à nommer comme leur bien propre.
+L'archétype du **Consortium Extractiviste Transnational** incarne la logique de l'accumulation capitaliste appliquée aux ressources naturelles et biologiques, opérant à l'échelle globale en exploitant les failles juridiques et les déséquilibres de pouvoir. Il fusionne agro-industrie, biotechnologies et gouvernance diffuse pour breveter et monopoliser le vivant, transformant les écosystèmes en actifs financiers. Son modèle repose sur la fragmentation des souverainetés étatiques et la privatisation des communs, tout en se présentant comme un acteur indispensable à la stabilité économique mondiale.
 
 ## Tension fondamentale
-La richesse qu'il génère repose structurellement sur le vide normatif qu'il exploite — mais ce vide se comble inexorablement à mesure que ses succès rendent visibles les spoliations qu'il opère, transformant chaque brevet obtenu en preuve d'un crime à poursuivre et chaque zone grise juridique en futur front de régulation.
+Cette entité porte en elle la contradiction fondamentale entre **l'extraction infinie des ressources** (nécessaire à son modèle économique) et **la finitude écologique** (qui menace sa propre survie). Elle incarne aussi le conflit entre **l'universalité des droits biologiques** (accès aux semences, aux écosystèmes) et **la propriété intellectuelle privatisée**, ainsi qu'entre **l'efficacité économique** et **la légitimité démocratique** (gouvernance opaque, actionnariat diffus).
 
 ## Instances par scénario
 | Scénario | Instance | État | Rôle |

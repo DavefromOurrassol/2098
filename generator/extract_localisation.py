@@ -43,7 +43,6 @@ INSTANCES_DIR     = os.path.join(VAULT_PATH, "instances")
 EVENT_INST_DIR    = os.path.join(VAULT_PATH, "event_instances")
 GEOGRAPHIE_DIR    = os.path.join(VAULT_PATH, "geographie")
 
-from llm_client import LLM_MODEL as MODEL
 MAX_TOKENS = 1024
 
 VALID_SCENARIOS = [
@@ -204,7 +203,7 @@ def load_zones(scenario):
 
 
 def zones_summary(scenario):
-    """Résumé textuel des zones disponibles pour le prompt Claude."""
+    """Résumé textuel des zones disponibles pour le prompt LLM."""
     zones = load_zones(scenario)
     if not zones:
         return "(aucune géographie disponible pour ce scénario)"
@@ -327,11 +326,12 @@ def call_api(user_prompt):
         user_prompt=user_prompt,
         max_tokens=MAX_TOKENS,
         temperature=0.0,
+        task_tier="volume",
     ).strip()
 
 
 def parse_api_response(raw):
-    """Parse la réponse JSON de Claude. Retourne (dict, error_str|None)."""
+    """Parse la réponse JSON du LLM. Retourne (dict, error_str|None)."""
     try:
         # Nettoyer éventuels backticks
         clean = re.sub(r"```json|```", "", raw).strip()
@@ -347,7 +347,7 @@ def parse_api_response(raw):
 
 def validate_extraction(data, scenario):
     """
-    Vérifie mécaniquement la cohérence de la réponse Claude.
+    Vérifie mécaniquement la cohérence de la réponse du LLM.
     Retourne (ok: bool, errors: list[str]).
     """
     errors = []
@@ -522,7 +522,7 @@ def process_fiche(fiche, dry_run, verbose=True):
     ok, errors = validate_extraction(data, scenario)
     if not ok:
         print(f"  [VALIDATION ÉCHOUÉE] {'; '.join(errors)}")
-        print(f"  Réponse Claude : {raw_response[:200]}")
+        print(f"  Réponse LLM : {raw_response[:200]}")
         return {"slug": slug, "issue": "erreur_validation", "errors": errors, "raw": raw_response}
 
     issue = data["issue"]

@@ -11,8 +11,8 @@ chaque scénario.
 PRINCIPE
 --------
 Pour chaque pays null dans zones_pays.json :
-  1. Montrer à Claude les zones N1 existantes + leur origine_reelle
-  2. Claude décide :
+  1. Montrer au LLM les zones N1 existantes + leur origine_reelle
+  2. Le LLM décide :
      a. "absorber" → ajouter le pays à l'origine_reelle d'une zone existante
      b. "nouvelle_zone" → créer une zone N1 si aucune zone ne convient
   3. Mettre à jour la fiche geographie/{scenario}.md
@@ -28,7 +28,9 @@ PRÉREQUIS
 ---------
 - zones_pays.json dans gui/ (généré par generate_zones_pays.py)
 - geographie/{scenario}.md existant pour chaque scénario
-- LLM_PROVIDER et LLM_MODEL configurés (ou défaut mistral-medium)
+- Passe par llm_client.py (tier "structured_strict") — voir TASK_TIER_DEFAULTS
+  dans llm_client.py pour le modèle utilisé par défaut. LLM_PROVIDER/LLM_MODEL
+  restent disponibles en override manuel total si besoin d'un test ponctuel.
 """
 
 import argparse
@@ -36,7 +38,6 @@ import json
 import re
 import shutil
 import sys
-import time
 from pathlib import Path
 
 import yaml
@@ -65,52 +66,30 @@ ZONE_STATUTS = ["dominant", "stable", "fragmenté", "en_declin", "disparu", "eme
 TYPE_ENTITE_REELLE = ["pays", "etat_federe", "province", "region_administrative", "autre"]
 
 # ---------------------------------------------------------------------------
-# LLM client
+# LLM client — délégué à llm_client.py (abstraction commune Ourrassol 2098)
 # ---------------------------------------------------------------------------
+#
+# Anomalie corrigée le 11 juillet 2026 : ce script avait sa propre fonction
+# call_llm() qui appelait directement les SDK des fournisseurs, en court-
+# circuitant llm_client.py — ce qui le rendait invisible au routing par
+# tier (TASK_TIER_DEFAULTS) et à la logique de retry sur rate limit (429).
+# Migré vers l'abstraction commune, tier "structured_strict" : ce script
+# décide de l'affectation canonique des pays aux zones géographiques,
+# référencée ensuite dans tout le vault.
 
-def get_llm_client():
-    import os
-    provider = os.environ.get("LLM_PROVIDER", "mistral").lower()
-    model    = os.environ.get("LLM_MODEL", "")
+from llm_client import call_llm as _call_llm
 
-    if provider == "claude":
-        from anthropic import Anthropic
-        model = model or "claude-sonnet-4-6"
-        return ("claude", model, Anthropic())
-    else:
-        from mistralai import Mistral
-        model = model or "mistral-medium-latest"
-        api_key = os.environ.get("MISTRAL_API_KEY", "")
-        return ("mistral", model, Mistral(api_key=api_key))
+TASK_TIER = "structured_strict"
 
 
-def call_llm(client_tuple, system_prompt, user_prompt, max_tokens=8000):
-    provider, model, client = client_tuple
-    if provider == "claude":
-        resp = client.messages.create(
-            model=model, max_tokens=max_tokens,
-            system=system_prompt,
-            messages=[{"role": "user", "content": user_prompt}]
-        )
-        text = resp.content[0].text
-        tokens_in  = resp.usage.input_tokens
-        tokens_out = resp.usage.output_tokens
-    else:
-        from mistralai.models import SystemMessage, UserMessage
-        resp = client.chat.complete(
-            model=model,
-            messages=[
-                SystemMessage(content=system_prompt),
-                UserMessage(content=user_prompt),
-            ],
-            max_tokens=max_tokens,
-        )
-        text = resp.choices[0].message.content
-        tokens_in  = resp.usage.prompt_tokens
-        tokens_out = resp.usage.completion_tokens
-
-    print(f"    [llm] {provider} ({model}) — entrée : {tokens_in} | sortie : {tokens_out}")
-    return text
+def call_llm(system_prompt, user_prompt, max_tokens=8000):
+    return _call_llm(
+        system_prompt=system_prompt,
+        user_prompt=user_prompt,
+        max_tokens=max_tokens,
+        temperature=0.0,
+        task_tier=TASK_TIER,
+    )
 
 # ---------------------------------------------------------------------------
 # Lecture / écriture fiche géographie
@@ -180,7 +159,7 @@ def get_missing_pays(zones_pays, scenario):
 
 
 # ---------------------------------------------------------------------------
-# Prompt Claude
+# Prompt LLM
 # ---------------------------------------------------------------------------
 
 SYSTEM_PROMPT = """Tu es un cartographe d'un monde fictif en 2098. Tu dois rattacher des pays du monde \
@@ -304,7 +283,7 @@ def validate_new_zone(zone):
 # ---------------------------------------------------------------------------
 
 def apply_affectations(affectations, existing_zones, scenario):
-    """Applique les décisions de Claude sur les zones existantes.
+    """Applique les décisions du LLM sur les zones existantes.
     Retourne (zones_modifiees, nouvelles_zones, stats)."""
 
     # Slugs de TOUTES les zones (tous niveaux) : sert à détecter les collisions de
@@ -432,10 +411,15 @@ def update_zones_pays(zones_pays, scenario, resolved_pays, existing_zones):
 # ---------------------------------------------------------------------------
 
 BATCH_SIZE = 12  # Pays par appel LLM
-DELAY_ENTRE_BATCHS = 8  # secondes — évite les 429 Rate limit exceeded (Mistral/Claude)
+
+# P13 (11 juillet 2026) : le délai fixe préventif de 8s entre batches (fix
+# historique du bug #8) a été retiré — llm_client.py gère désormais le rate
+# limiting de façon purement réactive (retry sur 429 uniquement), comme pour
+# tous les autres scripts du pipeline. Un compte au palier large (ex. Scale)
+# n'est donc plus ralenti artificiellement ici.
 
 
-def process_scenario(client_tuple, scenario, zones_pays, dry_run):
+def process_scenario(scenario, zones_pays, dry_run):
     print(f"\n=== {scenario} ===")
 
     missing = get_missing_pays(zones_pays, scenario)
@@ -454,8 +438,6 @@ def process_scenario(client_tuple, scenario, zones_pays, dry_run):
     batches = [missing[i:i+BATCH_SIZE] for i in range(0, len(missing), BATCH_SIZE)]
 
     for batch_idx, batch in enumerate(batches):
-        if batch_idx > 0:
-            time.sleep(DELAY_ENTRE_BATCHS)
         done = batch_idx * BATCH_SIZE
         total = len(missing)
         print(f"  Batch {batch_idx+1}/{len(batches)} [{done}/{total}] : {', '.join(batch)}")
@@ -463,7 +445,7 @@ def process_scenario(client_tuple, scenario, zones_pays, dry_run):
         user_prompt = build_user_prompt(scenario, batch, existing_zones)
 
         try:
-            text = call_llm(client_tuple, SYSTEM_PROMPT, user_prompt)
+            text = call_llm(SYSTEM_PROMPT, user_prompt)
             parsed = parse_response(text)
         except json.JSONDecodeError as e:
             print(f"  ✗ JSON invalide batch {batch_idx+1} : {e}")
@@ -513,7 +495,7 @@ def process_scenario(client_tuple, scenario, zones_pays, dry_run):
 # Mode revue : génère un fichier YAML de propositions à valider manuellement
 # ---------------------------------------------------------------------------
 
-def process_scenario_review(client_tuple, scenario, zones_pays):
+def process_scenario_review(scenario, zones_pays):
     """Génère coverage_proposals_{scenario}.yaml sans écrire dans la fiche."""
     print(f"\n=== {scenario} [mode revue] ===")
 
@@ -531,15 +513,13 @@ def process_scenario_review(client_tuple, scenario, zones_pays):
     batches = [missing[i:i+BATCH_SIZE] for i in range(0, len(missing), BATCH_SIZE)]
 
     for batch_idx, batch in enumerate(batches):
-        if batch_idx > 0:
-            time.sleep(DELAY_ENTRE_BATCHS)
         done = batch_idx * BATCH_SIZE
         total = len(missing)
         print(f"  Batch {batch_idx+1}/{len(batches)} [{done}/{total}] : {', '.join(batch)}")
 
         user_prompt = build_user_prompt(scenario, batch, existing_zones)
         try:
-            text = call_llm(client_tuple, SYSTEM_PROMPT, user_prompt)
+            text = call_llm(SYSTEM_PROMPT, user_prompt)
             parsed = parse_response(text)
         except Exception as e:
             print(f"  ✗ Erreur batch {batch_idx+1} : {e}")
@@ -676,15 +656,14 @@ def main():
     print("=" * 60)
 
     zones_pays = load_zones_pays()
-    client_tuple = get_llm_client()
 
     for scenario in scenarios:
         if args.apply:
             zones_pays = apply_proposals(scenario, zones_pays)
         elif args.review:
-            process_scenario_review(client_tuple, scenario, zones_pays)
+            process_scenario_review(scenario, zones_pays)
         else:
-            zones_pays = process_scenario(client_tuple, scenario, zones_pays, args.dry_run)
+            zones_pays = process_scenario(scenario, zones_pays, args.dry_run)
 
     # Sauvegarder zones_pays.json mis à jour
     if not args.dry_run and not args.review:

@@ -1,0 +1,100 @@
+---
+name: Les Gardiens des Veines Brisées
+type: instance
+slug: les_veilleurs_du_fleuve_breakdown
+entite: les_veilleurs_du_fleuve
+scenario: breakdown
+localisation:
+  zone: sfax_relais_bouches
+  lieu: près de Sfax
+  type_lieu: infrastructure
+
+type_dans_scenario: réseau
+
+role_dans_scenario: >
+  Dans un monde où les infrastructures hydriques et territoriales se sont effondrées, ce réseau décentralisé de gardiens locaux agit comme un système nerveux alternatif pour les communautés abandonnées. Ils cartographient les flux d'eau résiduels, organisent la défense contre les milices d'accaparement, et transmettent des savoirs de survie entre bassins versants isolés. Leur légitimité repose sur leur capacité à opérer là où les États et les corporations ont échoué, mais leur fragmentation les rend vulnérables aux manipulations des seigneurs de guerre et aux pénuries croissantes.
+
+responsabilites: >
+  Surveillance des points d'eau critiques, alerte précoce contre les raids ou les contaminations, médiation des conflits locaux pour l'accès aux ressources, et préservation de techniques agricoles ou médicales traditionnelles adaptées aux conditions post-effondrement. Ils documentent aussi les crimes environnementaux pour les archives itinérantes, tout en sabotant discrètement les infrastructures extractivistes illégales.
+
+impact_local: 4
+impact_systemique_global: 2
+
+variables_influencees:
+    - organisation_territoires
+    - sante_biotechnologies
+    - climat_environnement_global
+
+zone_geographique:
+    - régionale
+    - locale
+
+zone_systemique:
+    - gouvernance
+    - société
+    - infrastructure
+
+alliances:
+    - collectifs_de_sante_communautaire_autogeree_breakdown
+    - reseaux_de_soigneurs_traditionnels_breakdown
+    - collectifs_de_gardiens_archivistes_itinerants_breakdown
+    - front_de_resistance_aux_peages_sur_les_ressources_breakdown
+    - federation_communs_territoriaux_breakdown
+
+oppositions:
+    - milices_d_accaparement_hydrique_breakdown
+    - seigneurs_de_guerre_agro_territoriaux_breakdown
+    - factions_para_etatiques_hydriques_breakdown
+    - compagnies_de_geo_ingenierie_privees_sans_mandat_breakdown
+
+type_relation_dominante: symbiose
+
+annee_debut: 2038
+annee_fin: 
+
+etat_temporel: actif
+age_historique: ascendant
+generation: post-effondrement
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Ils sont les fantômes des fleuves morts. Vêtus de combinaisons rapiécées en membranes filtrantes, ces gardiens errent le long des lits asséchés du Rhône, du Niger ou du Mékong, traçant des cartes à l'encre de charbon sur des peaux de plastique recyclé. Leur dernier fait d'armes ? Avoir saboté les pompes d'une milice hydrique près de Sfax en détournant des algues toxiques dans leurs canalisations. Mais leur plus grande victoire reste invisible : des milliers de puits communautaires creusés avec des techniques oubliées, et des enfants qui savent encore reconnaître une eau potable à l'odeur. Leur devise, chuchotée comme une malédiction : *« Nous buvons ce que les États ont empoisonné. »*
+
+signes_distinctifs: >
+  Leur symbole, un cercle brisé traversé par une vague stylisée, est gravé au couteau sur les troncs d'arbres ou peint à la chaux sur les murs des villages. Ils portent souvent des masques en fibres végétales imprégnés de charbon actif, et utilisent des sifflets en os pour communiquer sur de longues distances. Leurs « livres de l'eau » – des carnets étanches remplis de données hydrologiques et de remèdes traditionnels – sont transmis comme des reliques.
+
+tensions_narratives: >
+  Le réseau est tiraillé entre deux dynamiques : d'un côté, une radicalisation face à l'accaparement croissant des ressources par les milices et les enclaves corporatives, poussant certains groupes à s'allier avec des saboteurs ou des pirates biologiques ; de l'autre, une tentation de négocier avec les gouvernements résiduels pour obtenir une reconnaissance officielle, au risque de perdre leur autonomie. Leur plus grand défi ? Maintenir la cohérence de leur savoir alors que les derniers experts meurent ou sont enlevés par des factions en quête de monopole technologique. Certains murmurent qu'ils envisagent de créer une « université des fleuves » clandestine, mais personne ne sait où elle pourrait bien émerger.
+
+date_creation: 2026-07-11
+---
+
+# Les Gardiens des Veines Brisées
+
+## Rôle dans [[breakdown]]
+Dans un monde où les infrastructures hydriques et territoriales se sont effondrées, ce réseau décentralisé de gardiens locaux agit comme un système nerveux alternatif pour les communautés abandonnées. Ils cartographient les flux d'eau résiduels, organisent la défense contre les milices d'accaparement, et transmettent des savoirs de survie entre bassins versants isolés. Leur légitimité repose sur leur capacité à opérer là où les États et les corporations ont échoué, mais leur fragmentation les rend vulnérables aux manipulations des seigneurs de guerre et aux pénuries croissantes.
+
+## Responsabilités
+Surveillance des points d'eau critiques, alerte précoce contre les raids ou les contaminations, médiation des conflits locaux pour l'accès aux ressources, et préservation de techniques agricoles ou médicales traditionnelles adaptées aux conditions post-effondrement. Ils documentent aussi les crimes environnementaux pour les archives itinérantes, tout en sabotant discrètement les infrastructures extractivistes illégales.
+
+## Variables influencées
+- [[organisation_territoires]]
+- [[sante_biotechnologies]]
+- [[climat_environnement_global]]
+
+## Relations
+**Alliés** : [[collectifs_de_sante_communautaire_autogeree_breakdown]], [[reseaux_de_soigneurs_traditionnels_breakdown]], [[collectifs_de_gardiens_archivistes_itinerants_breakdown]], [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]], [[federation_communs_territoriaux_breakdown]]
+**Opposants** : [[milices_d_accaparement_hydrique_breakdown]], [[seigneurs_de_guerre_agro_territoriaux_breakdown]], [[factions_para_etatiques_hydriques_breakdown]], [[compagnies_de_geo_ingenierie_privees_sans_mandat_breakdown]]
+
+## Description journalistique
+Ils sont les fantômes des fleuves morts. Vêtus de combinaisons rapiécées en membranes filtrantes, ces gardiens errent le long des lits asséchés du Rhône, du Niger ou du Mékong, traçant des cartes à l'encre de charbon sur des peaux de plastique recyclé. Leur dernier fait d'armes ? Avoir saboté les pompes d'une milice hydrique près de Sfax en détournant des algues toxiques dans leurs canalisations. Mais leur plus grande victoire reste invisible : des milliers de puits communautaires creusés avec des techniques oubliées, et des enfants qui savent encore reconnaître une eau potable à l'odeur. Leur devise, chuchotée comme une malédiction : *« Nous buvons ce que les États ont empoisonné. »*
+
+## Tensions narratives
+Le réseau est tiraillé entre deux dynamiques : d'un côté, une radicalisation face à l'accaparement croissant des ressources par les milices et les enclaves corporatives, poussant certains groupes à s'allier avec des saboteurs ou des pirates biologiques ; de l'autre, une tentation de négocier avec les gouvernements résiduels pour obtenir une reconnaissance officielle, au risque de perdre leur autonomie. Leur plus grand défi ? Maintenir la cohérence de leur savoir alors que les derniers experts meurent ou sont enlevés par des factions en quête de monopole technologique. Certains murmurent qu'ils envisagent de créer une « université des fleuves » clandestine, mais personne ne sait où elle pourrait bien émerger.

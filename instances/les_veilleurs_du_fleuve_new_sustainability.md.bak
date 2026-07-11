@@ -1,0 +1,102 @@
+---
+name: Réseau des Sentinelles Fluviales
+type: instance
+slug: les_veilleurs_du_fleuve_new_sustainability
+entite: les_veilleurs_du_fleuve
+scenario: new_sustainability
+localisation:
+  zone: null
+  lieu: fleuve Niger, deltas du Mékong, affluents de l'Amazone
+  type_lieu: null
+  statut: review_manuelle
+  note: "Plusieurs fleuves et deltas sont mentionnés sans localisation précise mappable sur une zone existante dans la liste fournie."
+
+type_dans_scenario: réseau
+
+role_dans_scenario: >
+  Dans un monde où la gouvernance technocratique et les systèmes hybrides humain-IA dominent, les Sentinelles Fluviales incarnent une forme de résistance locale et organique. Elles agissent comme un contre-pouvoir invisible, garantissant que les communautés marginalisées ou éloignées des hubs urbains intelligents ne soient pas oubliées par les algorithmes de régénération écologique. Leur rôle est à la fois protecteur et subversif : elles préservent les savoirs traditionnels tout en s’adaptant aux outils technologiques pour défendre leurs territoires contre les excès de la gouvernance centralisée ou des lobbies extractifs.
+
+responsabilites: >
+  Elles surveillent en temps réel la qualité de l’eau, la biodiversité et les intrusions illégales (extractivisme, pollution algorithmique) via des capteurs low-tech et des réseaux de signalement humains. Elles transmettent des alertes aux communautés locales et, lorsque nécessaire, aux instances comme l’AGRB-ONU ou le Réseau des Bio-Communs Régionaux, tout en contournant les canaux officiels si ceux-ci sont jugés inefficaces ou corrompus. Elles forment aussi les jeunes générations aux techniques de résilience hydrique et aux contre-mesures face aux désinformations algorithmiques.
+
+impact_local: 4
+impact_systemique_global: 2
+
+variables_influencees:
+    - organisation_territoires
+    - technologie_information
+    - sante_biotechnologies
+
+zone_geographique:
+    - locale
+    - régionale
+
+zone_systemique:
+    - gouvernance
+    - information
+    - société
+
+alliances:
+    - collectifs_riverains_du_bassin_du_congo_new_sustainability
+    - reseau_des_bio_communs_regionaux_new_sustainability
+    - agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
+    - mouvement_communautaire_des_micro_grids_energetiques_new_sustainability
+    - reseau_des_communs_alimentaires_hors_grille_new_sustainability
+
+oppositions:
+    - lobbies_agro_industriels_du_bassin_du_congo_new_sustainability
+    - lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability
+    - bloc_des_gouvernements_souverainistes_hydriques_new_sustainability
+    - enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability
+
+type_relation_dominante: rivalité
+
+annee_debut: 2026
+annee_fin: 
+
+etat_temporel: actif
+age_historique: mature
+generation: transition
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  « Ils sont les yeux et les oreilles des fleuves oubliés », explique Aïcha Diallo, une Sentinelle du fleuve Niger, en ajustant son bracelet de surveillance artisanale, un mélange de capteurs open-source et de perles traditionnelles. Dans les deltas du Mékong ou les affluents de l’Amazone, ces gardiens discrets mais redoutables ont transformé leur méfiance envers les institutions en une force organisée. Leur dernière victoire ? Avoir forcé l’AGRB-ONU à reconnaître des zones de « souveraineté hydrique locale » après des années de lutte contre un projet de barrage algorithmique. Mais leur combat est loin d’être terminé : entre les drones des lobbies miniers et les IA de modélisation climatique qui ignorent leurs données, les Sentinelles doivent sans cesse innover pour rester invisibles… et efficaces.
+
+signes_distinctifs: >
+  Leur symbole, un poisson stylisé en forme de circuit imprimé, est gravé sur des totems en bois connectés ou brodé sur des vêtements en fibres recyclées. Leurs outils mêlent technologie low-tech (filtres à eau en céramique, cartes papier résistantes à l’humidité) et high-tech détournée (drones solaires bricolés, réseaux maillés hors grille). Les membres portent souvent des parures traditionnelles adaptées, comme des colliers intégrant des puces de stockage de données cryptées.
+
+tensions_narratives: >
+  Leur plus grand défi ? Trouver un équilibre entre leur besoin de discrétion et la nécessité de peser sur les décisions globales. Certains collectifs veulent s’allier plus étroitement avec les réseaux néo-démocratiques pour exiger une représentation officielle, tandis que d’autres prônent une radicalisation, comme les Zones Libres anarcho-autonomistes. Par ailleurs, leur dépendance croissante aux outils technologiques (même détournés) les expose à des risques de récupération par les plateformes de consensus automatisé ou les lobbies agro-industriels, qui cherchent à les infiltrer pour discréditer leur légitimité.
+
+date_creation: 2026-07-11
+---
+
+# Réseau des Sentinelles Fluviales
+
+## Rôle dans [[new_sustainability]]
+Dans un monde où la gouvernance technocratique et les systèmes hybrides humain-IA dominent, les Sentinelles Fluviales incarnent une forme de résistance locale et organique. Elles agissent comme un contre-pouvoir invisible, garantissant que les communautés marginalisées ou éloignées des hubs urbains intelligents ne soient pas oubliées par les algorithmes de régénération écologique. Leur rôle est à la fois protecteur et subversif : elles préservent les savoirs traditionnels tout en s’adaptant aux outils technologiques pour défendre leurs territoires contre les excès de la gouvernance centralisée ou des lobbies extractifs.
+
+## Responsabilités
+Elles surveillent en temps réel la qualité de l’eau, la biodiversité et les intrusions illégales (extractivisme, pollution algorithmique) via des capteurs low-tech et des réseaux de signalement humains. Elles transmettent des alertes aux communautés locales et, lorsque nécessaire, aux instances comme l’AGRB-ONU ou le Réseau des Bio-Communs Régionaux, tout en contournant les canaux officiels si ceux-ci sont jugés inefficaces ou corrompus. Elles forment aussi les jeunes générations aux techniques de résilience hydrique et aux contre-mesures face aux désinformations algorithmiques.
+
+## Variables influencées
+- [[organisation_territoires]]
+- [[technologie_information]]
+- [[sante_biotechnologies]]
+
+## Relations
+**Alliés** : [[collectifs_riverains_du_bassin_du_congo_new_sustainability]], [[reseau_des_bio_communs_regionaux_new_sustainability]], [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]], [[mouvement_communautaire_des_micro_grids_energetiques_new_sustainability]], [[reseau_des_communs_alimentaires_hors_grille_new_sustainability]]
+**Opposants** : [[lobbies_agro_industriels_du_bassin_du_congo_new_sustainability]], [[lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability]], [[bloc_des_gouvernements_souverainistes_hydriques_new_sustainability]], [[enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability]]
+
+## Description journalistique
+« Ils sont les yeux et les oreilles des fleuves oubliés », explique Aïcha Diallo, une Sentinelle du fleuve Niger, en ajustant son bracelet de surveillance artisanale, un mélange de capteurs open-source et de perles traditionnelles. Dans les deltas du Mékong ou les affluents de l’Amazone, ces gardiens discrets mais redoutables ont transformé leur méfiance envers les institutions en une force organisée. Leur dernière victoire ? Avoir forcé l’AGRB-ONU à reconnaître des zones de « souveraineté hydrique locale » après des années de lutte contre un projet de barrage algorithmique. Mais leur combat est loin d’être terminé : entre les drones des lobbies miniers et les IA de modélisation climatique qui ignorent leurs données, les Sentinelles doivent sans cesse innover pour rester invisibles… et efficaces.
+
+## Tensions narratives
+Leur plus grand défi ? Trouver un équilibre entre leur besoin de discrétion et la nécessité de peser sur les décisions globales. Certains collectifs veulent s’allier plus étroitement avec les réseaux néo-démocratiques pour exiger une représentation officielle, tandis que d’autres prônent une radicalisation, comme les Zones Libres anarcho-autonomistes. Par ailleurs, leur dépendance croissante aux outils technologiques (même détournés) les expose à des risques de récupération par les plateformes de consensus automatisé ou les lobbies agro-industriels, qui cherchent à les infiltrer pour discréditer leur légitimité.

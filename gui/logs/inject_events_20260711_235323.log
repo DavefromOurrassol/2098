@@ -1,0 +1,24 @@
+============================================================
+OURRASSOL 2098 — Injection événements custom
+============================================================
+
+Mode : auto (fourni via --mode)
+
+[1/2] Analyse de la couverture du vault...
+  18 event_instance(s) analysée(s)
+  Filtre scénario : reference
+[2/2] Génération de 1 idée(s) d'événements...
+[llm] Mistral (mistral-large-latest) — entrée : 1112 | sortie : 1447
+  ✓ pacte_sahelien_autonomie_energetique — continentale | 2092 | scénarios: ['reference']
+    → Couvre une zone géographique sous-représentée (Bloc Sahelien Autonome) et impacte des variables peu couvertes (énergie, redistribution économique).
+  ✓ crise_helsinki_communs_numeriques — regionale | 2095 | scénarios: ['reference']
+    → Comble un déséquilibre géographique (Europe occidentale) et thématique (technologie de l'information, gouvernance).
+  ✓ accord_kinshasa_hydrique_afrique_centrale — continentale | 2093 | scénarios: ['reference']
+    → Cible une zone sous-représentée (Kinshasa) et des variables peu couvertes (santé/biotech, organisation territoriale).
+  ✓ revolte_guadalajara_contre_nexus — locale | 2094 | scénarios: ['reference']
+    → Couvre une zone géographique et des variables critiques (travail, redistribution) tout en introduisant un conflit social majeur.
+  ✓ conflit_corridors_eurasiens_peripheriques — continentale | 2096 | scénarios: ['reference']
+    → Comble un vide géographique (Corridors Eurasiens) et thématique (conflits géopolitiques, ressources critiques).
+
+5 idée(s) ajoutée(s) à /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/evenements_custom/queue.yaml
+→ Inspectez queue.yaml, puis relancez en mode custom pour injecter.

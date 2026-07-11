@@ -7,7 +7,7 @@
 # Un seul scénario par série
 # Valeurs : fortress_world | new_sustainability | breakdown
 #           eco_communalism | policy_reform | reference
-scenario: breakdown
+scenario: policy_reform
 
 # ── Ligne éditoriale ──
 # Détermine le journal et sa posture éditoriale pour toute la série.
@@ -16,19 +16,14 @@ scenario: breakdown
 #   opposition   = journal critique ou clandestin
 #   ~            = laisser vide (null) pour un tirage aléatoire à chaque article
 # Si absent : tirage aléatoire
-ligne_editoriale:
+ligne_editoriale: 
 
 # ── Thématiques à couvrir ──
 # Liste des rubriques pour cette série.
 # Chaque thématique génère articles_par_thematique articles.
 thematiques:
-  - actualites_a_la_une
   - politique
-  - economie_finance
-  - environnement_climat
   - societe
-  - medias_communication
-
 # ── Nombre d'articles par thématique ──
 # 1 = un article par thématique (recommandé pour commencer)
 articles_par_thematique: 1
@@ -36,13 +31,13 @@ articles_par_thematique: 1
 # ── Longueur des articles ──
 # breve | analyse | reportage | chronique | editorial
 # "auto" = laisse chaque thématique choisir son format naturel
-longueur: auto
+longueur: breve
 
 # ── Angle spécifique (optionnel) ──
 # Précise un angle commun à tous les articles de la série.
 # Laisser vide pour laisser Claude choisir librement.
 # Exemple : "focus sur les conséquences pour les populations locales"
-angle_specifique: ""
+angle_specifique: 
 
 # ── Injections d'entités custom ──
 # Entités custom à activer pour tous les articles de cette série.

@@ -15,11 +15,11 @@ Pour chaque entité traitée, le script lit sa fiche dans entites/ :
 
   - Si le frontmatter contient un `scenario_ref` (entité créée en mode
     custom par create_entity.py) : l'instance de CE scénario reprend
-    TELLES QUELLES les valeurs `role_ref`/`etat_ref` — Claude n'est pas
+    TELLES QUELLES les valeurs `role_ref`/`etat_ref` — le LLM n'est pas
     appelé pour ce scénario précis, le rôle et l'état sont des
     contraintes dures déjà fixées par l'utilisateur. Seuls les champs
     narratifs complémentaires (description journalistique, tensions...)
-    sont générés par Claude, en respectant ce rôle/état imposés.
+    sont générés par le LLM, en respectant ce rôle/état imposés.
     Les AUTRES scénarios de cette même entité restent entièrement
     libres (aucune contrainte de cohérence biographique).
 
@@ -54,7 +54,7 @@ from pathlib import Path
 
 import yaml
 
-from llm_client import call_llm, LLM_MODEL as MODEL
+from llm_client import call_llm  # tier structured_strict — canonique/référencé
 
 
 # ---------------------------------------------------------------------------
@@ -184,7 +184,7 @@ def load_instances_in_scenario(scenario, exclude_slug=None):
 
 
 # ---------------------------------------------------------------------------
-# Appel Claude
+# Appel LLM
 # ---------------------------------------------------------------------------
 
 def get_client():
@@ -198,6 +198,7 @@ def call_claude_json(client, user_content, max_tokens=MAX_TOKENS):
         user_prompt=user_content,
         max_tokens=max_tokens,
         temperature=0.0,
+        task_tier="structured_strict",
     ).strip()
     text = re.sub(r"^```(?:json)?\s*", "", text)
     text = re.sub(r"\s*```$", "", text)
@@ -638,7 +639,7 @@ def main():
     parser.add_argument("--force", action="store_true",
                          help="Régénère même si l'instance existe déjà")
     parser.add_argument("--dry-run", action="store_true",
-                         help="Appelle Claude et valide, mais n'écrit rien sur disque")
+                         help="Appelle le LLM et valide, mais n'écrit rien sur disque")
     args = parser.parse_args()
 
     generate_all(
