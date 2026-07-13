@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "documentation/GitHUB.md",
+                "file": "documentation/USER_MANUAL_COMPLET.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "GitHUB"
+              "title": "USER_MANUAL_COMPLET"
             }
           }
         ],
@@ -200,9 +200,22 @@
   },
   "active": "a55b90f7989d3ba4",
   "lastOpenFiles": [
-    "documentation/USER_MANUAL_COMPLET.md",
+    "geographie/Archive.zip",
+    "documentation/need_action/impact_bascule_trinite_et_tobago_reference.md",
+    "evenements_custom/generator.code-workspace",
+    "gui/logs/enrich_minimal_20260712_145416.log",
+    "gui/logs/enrich_minimal_20260712_145246.log",
+    "gui/logs/validate_20260712_145037.log",
+    "gui/logs/inject_events_20260712_082243.log",
+    "gui/logs/inject_events_20260712_081902.log",
+    "gui/logs/inject_events_20260712_080254.log",
     "documentation/HANDOFF_CONSOLIDE.md",
     "documentation/BACKLOG_CONSOLIDE.md",
+    "instances/conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability.md",
+    "gui/logs/inject_events_20260712_073723.log",
+    "instances/les_passeurs_de_limites_new_sustainability.md",
+    "documentation/GitHUB.md",
+    "documentation/USER_MANUAL_COMPLET.md",
     "documentation/Old/USER_MANUAL_COMPLET.md",
     "documentation/Old/HANDOFF_CONSOLIDE.md",
     "documentation/Old/BACKLOG_CONSOLIDE.md",
@@ -210,17 +223,7 @@
     "gui/logs/inject_events_20260711_235323.log",
     "gui/logs/inject_events_20260711_235004.log",
     "evenements/crue_exceptionnelle_congo.md",
-    "instances/conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability.md",
-    "event_instances/crue_exceptionnelle_congo_eco_communalism.md.bak",
-    "instances/vaultcorp_security_fortress_world.md.bak",
-    "instances/terrashield_geoengineering_fortress_world.md.bak",
-    "instances/terrametrics_reference.md.bak",
-    "instances/optiflow_logistics_reference.md.bak",
-    "instances/neurosentry_fortress_world.md.bak",
-    "instances/neuroharmonics_reference.md.bak",
-    "instances/les_passeurs_de_limites_new_sustainability.md.bak",
     "event_instances/crue_exceptionnelle_congo_eco_communalism.md",
-    "instances/les_passeurs_de_limites_new_sustainability.md",
     "entites/conseil_mondial_de_la_regeneration_ecosystemique_cmre.md",
     "entites/les_gardiens_des_n_uds_hybrides.md",
     "instances/terrashield_geoengineering_fortress_world.md",
@@ -233,9 +236,6 @@
     "instances/ironclad_logistics_fortress_world.md",
     "entites/ironclad_logistics.md",
     "instances/biolock_agritech_fortress_world.md",
-    "entites/biolock_agritech.md",
-    "instances/vaultcorp_security_fortress_world.md",
-    "entites/vaultcorp_security.md",
     "Sans titre 1.canvas",
     "Sans titre.canvas"
   ]

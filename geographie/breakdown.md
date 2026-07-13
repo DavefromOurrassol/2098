@@ -257,9 +257,6 @@ zones:
   - entite: Autriche
     type_entite: pays
     portion: null
-  - entite: Pologne
-    type_entite: pays
-    portion: null
   - entite: Hongrie
     type_entite: pays
     portion: null
@@ -664,6 +661,7 @@ zones:
   - entite: Vatican
     type_entite: pays
     portion: null
+  - entite: Pologne
   description: Genève subsiste en 2098 comme lieu physique de survie des institutions
     internationales fantômes — le Bureau de Coordination d'Urgence Climatique (vestige
     de l'AMSC) dans une tour à moitié abandonnée, les Archives Neutres de Genève-Bunker
@@ -1116,7 +1114,7 @@ zones:
   nom: Cracovie (Antenne du Registre des Zones Non Récupérables)
   niveau: 2
   type: site_strategique
-  parent: arc_eurasien_central
+  parent: geneve_bunker_institutions
   origine_reelle:
   - entite: Cracovie, Pologne
     type_entite: autre
@@ -3484,7 +3482,7 @@ Axes de transit armé s'étendant de l'ancienne Géorgie aux plaines kazakhes, o
 
 *Sources attestées : vasil_orentchev_breakdown, conflit_israel_iran_2026_breakdown, saboteurs_des_corridors_de_transit_breakdown*
 
-#### Cracovie (Antenne du Registre des Zones Non Récupérables) — sous [[arc_eurasien_central]]
+#### Cracovie (Antenne du Registre des Zones Non Récupérables) — sous [[geneve_bunker_institutions]]
 
 *site_strategique — niveau 2 — statut : en_declin*
 

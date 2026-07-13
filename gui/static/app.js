@@ -2176,6 +2176,7 @@ const CarteState = {
   affectations: {},    // pays FR -> zone slug|null
   zonesN1: [],          // [{slug,nom,description,color}]
   scenario: null,
+  zoneSurlignee: null,  // slug niveau 1 actuellement mis en évidence sur la carte (ou null)
 };
 
 function _normEn(s) {
@@ -2351,7 +2352,13 @@ function renderCarteLayer() {
 
       const zone = frList.map(fr => CarteState.affectations[fr]).filter(Boolean)[0];
       const fill = zoneFillMap[zone] || '#3b6fd4';
-      return { fillColor: fill, weight: 1, color: '#666', fillOpacity: 0.85 };
+      const estSurlignee = CarteState.zoneSurlignee && zone === CarteState.zoneSurlignee;
+      return {
+        fillColor: fill,
+        weight: estSurlignee ? 4 : 1,
+        color: estSurlignee ? '#ff5500' : '#666',
+        fillOpacity: estSurlignee ? 1 : 0.85,
+      };
     },
     onEachFeature: (feature, layer) => {
       const name = feature.properties?.name || feature.properties?.ADMIN || '';
@@ -2387,9 +2394,10 @@ function renderCarteLegend() {
       bg = `repeating-linear-gradient(${angle}deg, ${z.color}, ${z.color} 3px, ${dark} 3px, ${dark} 6px)`;
     }
     return `
-    <div class="carte-legend-item">
+    <div class="carte-legend-item" data-slug="${z.slug}">
       <span class="carte-legend-swatch" style="background:${bg}"></span>
       <span class="carte-legend-label">${z.nom}</span>
+      <button class="carte-legend-rename-btn" data-slug="${z.slug}" title="Renommer cette zone">✏️</button>
     </div>`;
   }).join('') + `
     <div class="carte-legend-item">
@@ -2397,6 +2405,351 @@ function renderCarteLegend() {
       <span class="carte-legend-label">Non affecté</span>
     </div>
   `;
+
+  legendEl.querySelectorAll('.carte-legend-rename-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      openRenommerZonePanel(btn.dataset.slug);
+    });
+  });
+
+  legendEl.querySelectorAll('.carte-legend-item[data-slug]').forEach(item => {
+    item.addEventListener('click', () => openArbreZonePanel(item.dataset.slug));
+    item.style.cursor = 'pointer';
+  });
+}
+
+/**
+ * Arbre hiérarchique en lecture seule des sous-zones (P7 étape 2 phase 1,
+ * 12 juillet 2026). Les niveaux 2/3 n'ont pas de coordonnées géographiques,
+ * donc pas de vraie carte possible pour eux — on affiche la structure
+ * parent/niveau déjà présente dans le YAML.
+ */
+async function openArbreZonePanel(slug) {
+  const panel = document.getElementById('carte-panel');
+  panel.innerHTML = `<div class="carte-panel-title">Arborescence</div><div class="carte-status">Chargement…</div>`;
+
+  CarteState.zoneSurlignee = slug;
+  renderCarteLayer();
+
+  try {
+    const res = await fetch(
+      `/api/carte/arbre_zone?scenario=${encodeURIComponent(CarteState.scenario)}&slug=${encodeURIComponent(slug)}`
+    );
+    const data = await res.json();
+    if (data.error) {
+      panel.innerHTML = `<div class="carte-panel-error">Erreur : ${data.error}</div>`;
+      return;
+    }
+    panel.innerHTML = `
+      <div class="carte-panel-title">${data.arbre.nom}</div>
+      <div class="carte-panel-sub">Arborescence des sous-zones</div>
+      <div id="arbre-zone-tree"></div>
+      <div id="carte-panel-msg"></div>
+    `;
+    document.getElementById('arbre-zone-tree').innerHTML =
+      _renderArbreNode(data.arbre, true);
+
+    document.getElementById('arbre-zone-tree').querySelectorAll('.arbre-zone-move-btn').forEach(btn => {
+      btn.addEventListener('click', () => _ouvrirReparentPanel(btn.dataset.slug, btn.dataset.nom));
+    });
+  } catch (e) {
+    panel.innerHTML = `<div class="carte-panel-error">Erreur réseau : ${e.message}</div>`;
+  }
+}
+
+function _renderArbreNode(node, estRacine) {
+  const typeLabel = node.type ? `<span class="arbre-zone-type">${node.type}</span>` : '';
+  const statutLabel = node.statut ? `<span class="arbre-zone-statut">${node.statut}</span>` : '';
+
+  let html = `<div class="arbre-zone-branch">`;
+  html += `<div class="arbre-zone-node-row arbre-niveau-${node.niveau}" data-slug="${node.slug}">`;
+  html += `<span class="arbre-zone-nom">${node.nom}</span>`;
+  html += `<span class="arbre-zone-slug">${node.slug}</span>`;
+  html += `${typeLabel}${statutLabel}`;
+  if (!estRacine) {
+    html += `<button class="arbre-zone-move-btn" data-slug="${node.slug}" data-nom="${node.nom.replace(/"/g, '&quot;')}" title="Déplacer vers un autre parent">↗️ déplacer</button>`;
+  }
+  html += `</div>`;
+  html += `<div id="reparent-panel-${node.slug}"></div>`;
+
+  if (node.enfants && node.enfants.length) {
+    html += `<div class="arbre-zone-children">`;
+    html += node.enfants.map(c => _renderArbreNode(c, false)).join('');
+    html += `</div>`;
+  }
+  html += `</div>`;
+  return html;
+}
+
+/**
+ * Panneau de reparent (P7 étape 2 phase 2, 13 juillet 2026) : ouvre un
+ * sélecteur de nouveau parent juste sous le nœud concerné dans l'arbre.
+ * Le sous-arbre entier suit (décision explicite de l'utilisateur) — le
+ * niveau de toute la branche est recalculé si la profondeur change.
+ */
+async function _ouvrirReparentPanel(slug, nom) {
+  const container = document.getElementById(`reparent-panel-${slug}`);
+  if (!container) return;
+
+  if (container.dataset.open === '1') {
+    container.innerHTML = '';
+    container.dataset.open = '0';
+    return;
+  }
+
+  container.innerHTML = '<div class="carte-status">Chargement des zones…</div>';
+  container.dataset.open = '1';
+
+  try {
+    const res = await fetch(`/api/slugs?type=zones_hier&scenario=${encodeURIComponent(CarteState.scenario)}`);
+    const data = await res.json();
+    const toutesZones = data.zones || [];
+
+    const parEnfants = {};
+    toutesZones.forEach(z => {
+      if (z.parent) (parEnfants[z.parent] = parEnfants[z.parent] || []).push(z.slug);
+    });
+    const exclus = new Set([slug]);
+    (function collecter(s) {
+      (parEnfants[s] || []).forEach(c => { exclus.add(c); collecter(c); });
+    })(slug);
+
+    const options = toutesZones
+      .filter(z => !exclus.has(z.slug))
+      .map(z => `<option value="${z.slug}">${'—'.repeat(z.niveau - 1)} ${z.nom} (${z.slug})</option>`)
+      .join('');
+
+    container.innerHTML = `
+      <div class="carte-panel-proposal-box" style="margin:4px 0 8px 16px">
+        <label style="font-size:10px;color:#666">Nouveau parent pour "${nom}"</label>
+        <select id="reparent-select-${slug}" style="width:100%;font-size:11px;padding:4px;margin:4px 0">
+          <option value="">— choisir —</option>
+          <option value="__racine__">★ Devenir une zone niveau 1 (aucun parent)</option>
+          <option value="__creer__">+ Créer une nouvelle zone niveau 1…</option>
+          ${options}
+        </select>
+        <div id="reparent-creer-form-${slug}"></div>
+        <button id="reparent-impact-btn-${slug}" class="yaml-btn" style="margin-top:4px">🔍 Évaluer l'impact</button>
+        <div id="reparent-impact-report-${slug}"></div>
+      </div>
+    `;
+
+    const selectEl = document.getElementById(`reparent-select-${slug}`);
+    selectEl.addEventListener('change', () => {
+      const formEl = document.getElementById(`reparent-creer-form-${slug}`);
+      if (selectEl.value === '__creer__') {
+        formEl.innerHTML = `
+          <div style="border:1px solid #dde3ee;border-radius:4px;padding:8px;margin-top:6px;font-size:10px">
+            <input type="text" id="creer-slug-${slug}" placeholder="slug_nouvelle_zone (minuscules_underscores)"
+                   style="width:100%;padding:3px;margin-bottom:4px;font-family:'JetBrains Mono',monospace">
+            <input type="text" id="creer-nom-${slug}" placeholder="Nom affiché"
+                   style="width:100%;padding:3px;margin-bottom:4px">
+            <select id="creer-type-${slug}" style="width:100%;padding:3px;margin-bottom:4px">
+              ${['bloc_continental','union_regionale','territoire_autonome','territoire_herite','region','ville','infrastructure','site_strategique','zone_sinistree','autre']
+                .map(t => `<option value="${t}">${t}</option>`).join('')}
+            </select>
+            <select id="creer-statut-${slug}" style="width:100%;padding:3px;margin-bottom:4px">
+              ${['dominant','stable','fragmenté','en_declin','disparu','emergent']
+                .map(t => `<option value="${t}">${t}</option>`).join('')}
+            </select>
+            <input type="text" id="creer-origine-${slug}" placeholder="Pays réel(s) d'origine, séparés par des virgules (ex: Espagne, Portugal)"
+                   style="width:100%;padding:3px;margin-bottom:4px">
+            <textarea id="creer-desc-${slug}" placeholder="Description courte (optionnel)"
+                      style="width:100%;padding:3px;margin-bottom:4px;font-size:10px" rows="2"></textarea>
+            <button id="creer-zone-btn-${slug}" class="yaml-btn">Créer cette zone</button>
+          </div>
+        `;
+        document.getElementById(`creer-zone-btn-${slug}`).addEventListener('click', () => {
+          _carteCreerZoneEtReparenter(slug);
+        });
+      } else {
+        formEl.innerHTML = '';
+      }
+    });
+
+    document.getElementById(`reparent-impact-btn-${slug}`).addEventListener('click', () => {
+      const valeur = selectEl.value;
+      if (valeur === '__creer__') {
+        // L'utilisateur a choisi "créer" mais clique le bouton principal plutôt
+        // que le bouton dédié du mini-formulaire — déclencher la création
+        // directement plutôt que de bloquer avec un message trompeur (bug
+        // signalé le 13 juillet 2026).
+        _carteCreerZoneEtReparenter(slug);
+        return;
+      }
+      if (!valeur) { alert('Choisis un nouveau parent, ou "Créer une nouvelle zone niveau 1"'); return; }
+      const nouveauParent = valeur === '__racine__' ? '' : valeur;
+      _carteImpactReparent(slug, nouveauParent, document.getElementById(`reparent-impact-report-${slug}`));
+    });
+  } catch (e) {
+    container.innerHTML = `<div class="carte-panel-error">Erreur réseau : ${e.message}</div>`;
+  }
+}
+
+/** Crée la nouvelle zone niveau 1 depuis le mini-formulaire, puis lance directement
+ * le rapport d'impact du reparent vers cette zone fraîchement créée. */
+async function _carteCreerZoneEtReparenter(slug) {
+  const nouveauSlug = document.getElementById(`creer-slug-${slug}`).value.trim();
+  const nom = document.getElementById(`creer-nom-${slug}`).value.trim();
+  const type = document.getElementById(`creer-type-${slug}`).value;
+  const statut = document.getElementById(`creer-statut-${slug}`).value;
+  const origineTexte = document.getElementById(`creer-origine-${slug}`).value.trim();
+  const description = document.getElementById(`creer-desc-${slug}`).value.trim();
+
+  if (!nouveauSlug || !/^[a-z0-9_]+$/.test(nouveauSlug)) {
+    alert('Slug requis : minuscules, chiffres, underscores uniquement'); return;
+  }
+  if (!nom) { alert('Nom requis'); return; }
+  if (!origineTexte) { alert('Au moins un pays réel d\'origine est requis'); return; }
+
+  const origine_reelle = origineTexte.split(',').map(s => s.trim()).filter(Boolean)
+    .map(entite => ({ entite, type_entite: 'pays' }));
+
+  const reportEl = document.getElementById(`reparent-impact-report-${slug}`);
+  reportEl.innerHTML = '<div class="carte-status">Création de la zone…</div>';
+
+  try {
+    const res = await fetch('/api/carte/creer_zone_niveau1', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        scenario: CarteState.scenario, slug: nouveauSlug, nom, type, statut, origine_reelle, description,
+      }),
+    });
+    const data = await res.json();
+    if (!data.ok) {
+      reportEl.innerHTML = `<div class="carte-panel-error">Erreur création : ${data.error}</div>`;
+      return;
+    }
+
+    // La zone créée n'existait pas dans le <select> au chargement du panneau —
+    // sans ça, un second clic sur "🔍 Évaluer l'impact" retomberait sur le
+    // garde-fou "Choisis un nouveau parent" puisque le select est resté sur
+    // "__creer__" (bug signalé le 13 juillet 2026).
+    const selectEl = document.getElementById(`reparent-select-${slug}`);
+    if (selectEl) {
+      const opt = document.createElement('option');
+      opt.value = nouveauSlug;
+      opt.textContent = `${nom} (${nouveauSlug})`;
+      opt.selected = true;
+      selectEl.appendChild(opt);
+    }
+    document.getElementById(`reparent-creer-form-${slug}`).innerHTML = '';
+
+    _carteImpactReparent(slug, nouveauSlug, reportEl);
+  } catch (e) {
+    reportEl.innerHTML = `<div class="carte-panel-error">Erreur réseau : ${e.message}</div>`;
+  }
+}
+
+async function _carteImpactReparent(slug, nouveauParentSlug, container) {
+  container.innerHTML = '<div class="carte-status">Analyse en cours…</div>';
+  try {
+    const res = await fetch('/api/carte/impact_reparent_zone', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ scenario: CarteState.scenario, slug, nouveau_parent_slug: nouveauParentSlug }),
+    });
+    const r = await res.json();
+    if (r.error) {
+      container.innerHTML = `<div class="carte-panel-error">Erreur : ${r.error}</div>`;
+      return;
+    }
+
+    let html = `<div style="margin-top:6px">`;
+    const cible = r.devient_racine ? '★ zone niveau 1 autonome' : r.nouveau_parent.slug;
+    html += `<div><strong>${r.zone.nom}</strong> : ${r.zone.ancien_parent || '(racine)'} → ${cible}</div>`;
+    html += `<div>Niveau : ${r.zone.niveau} → ${r.nouveau_niveau_zone}` +
+      (r.changement_de_profondeur ? ' <span style="color:#c0392b">(changement de profondeur)</span>' : '') +
+      `</div>`;
+    if (r.descendants_impactes.length) {
+      html += `<div style="margin-top:6px"><strong>${r.descendants_impactes.length} descendant(s) suivent</strong> ` +
+        `(le sous-arbre se déplace en bloc) :</div>`;
+      html += '<ul style="margin:4px 0;padding-left:16px;font-size:10px">' +
+        r.descendants_impactes.map(d =>
+          `<li>${d.nom} : niveau ${d.ancien_niveau} → ${d.nouveau_niveau}</li>`
+        ).join('') + '</ul>';
+    } else {
+      html += `<div style="margin-top:6px;color:#2e7d32">✓ Aucun descendant à recalculer.</div>`;
+    }
+    html += `<button id="reparent-confirm-btn-${slug}" class="yaml-btn" style="margin-top:8px;font-weight:700">✓ Confirmer le déplacement</button>`;
+    html += `</div>`;
+    container.innerHTML = html;
+
+    document.getElementById(`reparent-confirm-btn-${slug}`).addEventListener('click', () => {
+      _carteReparentZone(slug, nouveauParentSlug);
+    });
+  } catch (e) {
+    container.innerHTML = `<div class="carte-panel-error">Erreur réseau : ${e.message}</div>`;
+  }
+}
+
+async function _carteReparentZone(slug, nouveauParentSlug) {
+  const reportEl = document.getElementById(`reparent-impact-report-${slug}`);
+  if (reportEl) reportEl.innerHTML = '<div class="carte-status">Déplacement en cours…</div>';
+  try {
+    const res = await fetch('/api/carte/reparent_zone', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ scenario: CarteState.scenario, slug, nouveau_parent_slug: nouveauParentSlug }),
+    });
+    const data = await res.json();
+    const msg = document.getElementById('carte-panel-msg');
+    if (data.ok) {
+      if (msg) msg.textContent = `✓ "${data.ancien_nom}" déplacée (niveau ${data.nouveau_niveau}, ` +
+        `${data.descendants_maj} descendant(s) recalculé(s))`;
+      await openArbreZonePanel(CarteState.zoneSurlignee);
+    } else if (reportEl) {
+      reportEl.innerHTML = `<div class="carte-panel-error">Erreur : ${data.error}</div>`;
+    }
+  } catch (e) {
+    if (reportEl) reportEl.innerHTML = `<div class="carte-panel-error">Erreur réseau : ${e.message}</div>`;
+  }
+}
+
+/**
+ * Panneau de renommage de zone (P7 étape 1, 12 juillet 2026).
+ * Niveau 1 uniquement pour l'instant — les zones niveau 2/3 n'ont pas
+ * d'entrée cliquable dédiée dans l'UI actuelle, seulement dans la légende
+ * (qui ne liste que les zones niveau 1 avec une couleur sur la carte).
+ */
+function openRenommerZonePanel(ancienSlug) {
+  const z = CarteState.zonesN1.find(zz => zz.slug === ancienSlug);
+  const panel = document.getElementById('carte-panel');
+
+  CarteState.zoneSurlignee = ancienSlug;
+  renderCarteLayer();
+
+  panel.innerHTML = `
+    <div class="carte-panel-title">Renommer : ${z ? z.nom : ancienSlug}</div>
+    <div class="carte-panel-sub">Slug actuel : ${ancienSlug}</div>
+
+    <div class="carte-panel-section">
+      <label>Nouveau slug</label>
+      <input type="text" id="renommer-nouveau-slug" value="${ancienSlug}"
+             style="width:100%;font-family:'JetBrains Mono',monospace;font-size:11px;padding:4px;margin-bottom:6px">
+      <label>Nouveau nom affiché</label>
+      <input type="text" id="renommer-nouveau-nom" value="${z ? z.nom : ''}"
+             style="width:100%;font-size:11px;padding:4px;margin-bottom:6px">
+      <button id="renommer-impact-btn" class="yaml-btn">🔍 Évaluer l'impact</button>
+      <div id="renommer-impact-report"></div>
+    </div>
+
+    <div id="carte-panel-msg"></div>
+  `;
+
+  document.getElementById('renommer-impact-btn').addEventListener('click', () => {
+    const nouveauSlug = document.getElementById('renommer-nouveau-slug').value.trim();
+    const nouveauNom = document.getElementById('renommer-nouveau-nom').value.trim();
+    if (!nouveauSlug) { alert('Le nouveau slug est requis'); return; }
+    if (!/^[a-z0-9_]+$/.test(nouveauSlug)) {
+      alert('Le slug ne doit contenir que des minuscules, chiffres et underscores');
+      return;
+    }
+    _carteImpactRenommage(ancienSlug, nouveauSlug, nouveauNom,
+      document.getElementById('renommer-impact-report'));
+  });
 }
 
 function onCartePaysClick(frList, displayName) {
@@ -2589,8 +2942,14 @@ async function _carteImpact(pays, action, extra, container, confirmLabel) {
     } else {
       if (r.sous_zones_orphelines.length) {
         html += `<div style="margin-top:8px;color:#c0392b"><strong>⚠ ${r.sous_zones_orphelines.length} sous-zone(s) potentiellement orphelines</strong></div>`;
-        html += '<ul style="margin:4px 0;padding-left:16px;font-size:10px">' +
-          r.sous_zones_orphelines.map(sz => `<li>${sz.nom} (${sz.slug}) — origine : ${sz.origine}</li>`).join('') +
+        html += '<ul style="margin:4px 0;padding-left:16px;font-size:10px" id="orphelines-list">' +
+          r.sous_zones_orphelines.map(sz =>
+            `<li data-slug="${sz.slug}">${sz.nom} (${sz.slug}) — origine : ${sz.origine} ` +
+            (r.nouvelle_zone
+              ? `<button class="orpheline-reparent-btn" data-slug="${sz.slug}" data-nom="${sz.nom.replace(/"/g, '&quot;')}" data-cible="${r.nouvelle_zone}">↗️ rattacher à ${r.nouvelle_zone}</button>`
+              : '') +
+            `</li>`
+          ).join('') +
           '</ul>';
       }
       if (r.instances_liees.length) {
@@ -2623,7 +2982,150 @@ async function _carteImpact(pays, action, extra, container, confirmLabel) {
     document.getElementById('carte-panel-confirm-btn').addEventListener('click', () => {
       _carteAssign(pays, action, extra);
     });
+
+    container.querySelectorAll('.orpheline-reparent-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        _carteReparenterOrpheline(btn.dataset.slug, btn.dataset.nom, btn.dataset.cible, btn);
+      });
+    });
   } catch (e) {
     container.innerHTML = `<div class="carte-panel-error">Erreur réseau : ${e.message}</div>`;
+  }
+}
+
+/**
+ * Corrige directement une sous-zone orpheline détectée par le rapport
+ * d'impact de bascule (P7 étape 3, 13 juillet 2026) : reparent en un clic
+ * vers la nouvelle zone du pays qui vient de basculer, en réutilisant
+ * l'endpoint /api/carte/reparent_zone déjà construit pour l'arbre. Pas de
+ * double rapport d'impact imbriqué ici — le contexte (bascule de pays déjà
+ * en cours de revue) suffit, une simple confirmation native est demandée.
+ */
+async function _carteReparenterOrpheline(slug, nom, cibleSlug, btn) {
+  if (!confirm(`Rattacher "${nom}" à "${cibleSlug}" ?\n\nSon niveau sera recalculé si besoin, et ses éventuelles sous-zones suivront.`)) {
+    return;
+  }
+  btn.disabled = true;
+  btn.textContent = '…';
+  try {
+    const res = await fetch('/api/carte/reparent_zone', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ scenario: CarteState.scenario, slug, nouveau_parent_slug: cibleSlug }),
+    });
+    const data = await res.json();
+    const li = btn.closest('li');
+    if (data.ok) {
+      li.innerHTML = `✓ ${nom} (${slug}) — rattachée à ${cibleSlug}`;
+      li.style.color = '#2e7d32';
+    } else {
+      btn.disabled = false;
+      btn.textContent = `↗️ rattacher à ${cibleSlug}`;
+      alert(`Erreur : ${data.error}`);
+    }
+  } catch (e) {
+    btn.disabled = false;
+    btn.textContent = `↗️ rattacher à ${cibleSlug}`;
+    alert(`Erreur réseau : ${e.message}`);
+  }
+}
+
+/** Rapport d'impact (lecture seule) pour un renommage de zone (P7 étape 1). */
+async function _carteImpactRenommage(ancienSlug, nouveauSlug, nouveauNom, container) {
+  container.innerHTML = '<div class="carte-status">Analyse en cours…</div>';
+
+  try {
+    const res = await fetch('/api/carte/impact_renommage_zone', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        scenario: CarteState.scenario,
+        ancien_slug: ancienSlug,
+        nouveau_slug: nouveauSlug,
+        nouveau_nom: nouveauNom,
+      }),
+    });
+    const r = await res.json();
+
+    if (r.error) {
+      container.innerHTML = `<div class="carte-panel-error">Erreur : ${r.error}</div>`;
+      return;
+    }
+
+    let html = `<div class="carte-panel-proposal-box">`;
+    html += `<div><strong>${r.zone.nom}</strong> (${r.zone.slug}) → ${nouveauSlug}</div>`;
+
+    if (r.collision_slug_entite) {
+      html += `<div style="margin-top:8px;color:#c0392b">⚠ Une entité porte déjà le slug ` +
+        `<code>${r.collision_slug_entite}</code> — collision de nommage possible entre ` +
+        `l'archétype et la zone renommée (pas bloquant, mais à vérifier après coup).</div>`;
+    }
+
+    if (r.rien_detecte) {
+      html += `<div style="margin-top:6px;color:#2e7d32">✓ Aucune propagation au-delà de la zone elle-même.</div>`;
+    } else {
+      if (r.enfants_directs.length) {
+        html += `<div style="margin-top:8px"><strong>${r.enfants_directs.length} sous-zone(s) enfant(s) directe(s)</strong> ` +
+          `(champ parent + wikilink "sous [[...]]" mis à jour)</div>`;
+        html += '<ul style="margin:4px 0;padding-left:16px;font-size:10px">' +
+          r.enfants_directs.map(e => `<li>${e.nom} (${e.slug})</li>`).join('') + '</ul>';
+      }
+      if (r.zones_relations_liees.length) {
+        html += `<div style="margin-top:8px"><strong>${r.zones_relations_liees.length} zone(s) la référencent en allié/rival</strong></div>`;
+        html += '<ul style="margin:4px 0;padding-left:16px;font-size:10px">' +
+          r.zones_relations_liees.map(s => `<li>${s}</li>`).join('') + '</ul>';
+      }
+      if (r.instances_liees.length) {
+        html += `<div style="margin-top:8px"><strong>${r.instances_liees.length} instance(s)/événement(s) liés</strong></div>`;
+        html += '<ul style="margin:4px 0;padding-left:16px;font-size:10px">' +
+          r.instances_liees.slice(0, 10).map(it => `<li>${it.slug}</li>`).join('') +
+          (r.instances_liees.length > 10 ? `<li>… +${r.instances_liees.length - 10} autres</li>` : '') +
+          '</ul>';
+      }
+      if (r.pays_zones_pays_json.length) {
+        html += `<div style="margin-top:8px"><strong>${r.pays_zones_pays_json.length} pays dans zones_pays.json</strong></div>`;
+        html += '<ul style="margin:4px 0;padding-left:16px;font-size:10px">' +
+          r.pays_zones_pays_json.map(p => `<li>${p}</li>`).join('') + '</ul>';
+      }
+    }
+
+    html += `<button id="renommer-confirm-btn" class="yaml-btn" style="margin-top:10px;font-weight:700">✓ Confirmer le renommage</button>`;
+    html += `</div>`;
+    container.innerHTML = html;
+
+    document.getElementById('renommer-confirm-btn').addEventListener('click', () => {
+      _carteRenommerZone(ancienSlug, nouveauSlug, nouveauNom);
+    });
+  } catch (e) {
+    container.innerHTML = `<div class="carte-panel-error">Erreur réseau : ${e.message}</div>`;
+  }
+}
+
+/** Applique le renommage confirmé. */
+async function _carteRenommerZone(ancienSlug, nouveauSlug, nouveauNom) {
+  const msg = document.getElementById('carte-panel-msg');
+  msg.textContent = 'Renommage en cours…';
+  try {
+    const res = await fetch('/api/carte/renommer_zone', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        scenario: CarteState.scenario,
+        ancien_slug: ancienSlug,
+        nouveau_slug: nouveauSlug,
+        nouveau_nom: nouveauNom,
+      }),
+    });
+    const data = await res.json();
+    if (data.ok) {
+      msg.textContent = `✓ Zone renommée : ${ancienSlug} → ${data.nouveau_slug} ` +
+        `(${data.enfants_maj} enfant(s), ${data.zones_relations_maj} relation(s), ` +
+        `${data.instances_maj} instance(s), ${data.pays_maj} pays mis à jour)`;
+      await refreshCarte();
+    } else {
+      msg.textContent = `Erreur : ${data.error}`;
+    }
+  } catch (e) {
+    msg.textContent = `Erreur réseau : ${e.message}`;
   }
 }

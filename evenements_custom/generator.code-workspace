@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../generator"
+		},
+		{
+			"path": "../entites_custom"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {}
+}

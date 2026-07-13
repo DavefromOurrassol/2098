@@ -1069,7 +1069,7 @@ zones:
   nom: Barcelone-Hub — Bureau ibérique de la CMTCA
   niveau: 2
   type: ville
-  parent: ameriques_reconfigurees
+  parent: nouveau_califat_barcelone
   origine_reelle:
   - entite: Barcelone
     type_entite: region_administrative
@@ -1411,7 +1411,7 @@ zones:
 - slug: corridor_iberique_energetique
   nom: Corridor ibérique énergétique
   niveau: 2
-  parent: ameriques_reconfigurees
+  parent: nouveau_califat_barcelone
   type: infrastructure
   origine_reelle: []
   description: Le corridor ibérique énergétique est une infrastructure de transit
@@ -2560,6 +2560,24 @@ zones:
   - entite: Papouasie-Nouvelle-Guinée
     type_entite: pays
     portion: null
+- slug: nouveau_califat_barcelone
+  nom: Nouveau Califat Barcelone
+  niveau: 1
+  type: union_regionale
+  parent: null
+  origine_reelle:
+  - entite: Espagne
+    type_entite: pays
+  description: ''
+  statut: dominant
+  tensions_internes: ''
+  periode_transition: null
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies: []
+    rivaux: []
+  sources_attestees: []
 ---
 
 # Géographie — new_sustainability
@@ -2810,7 +2828,7 @@ Bandar Abbas est le site des premières frappes israéliennes d'octobre 2026 sur
 
 *Sources attestées : conflit_israel_iran_2026_new_sustainability, le_temoin_new_sustainability*
 
-#### Barcelone-Hub — Bureau ibérique de la CMTCA — sous [[ameriques_reconfigurees]]
+#### Barcelone-Hub — Bureau ibérique de la CMTCA — sous [[nouveau_califat_barcelone]]
 
 *ville — niveau 2 — statut : stable*
 
@@ -2978,7 +2996,7 @@ Instance technique de l'Union Panafricaine spécialisée dans la gouvernance hyd
 
 *Sources attestées : amara_diallo_nkosi_new_sustainability, agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability*
 
-#### Corridor ibérique énergétique — sous [[ameriques_reconfigurees]]
+#### Corridor ibérique énergétique — sous [[nouveau_califat_barcelone]]
 
 *infrastructure — niveau 2 — statut : dominant*
 
@@ -3508,3 +3526,6 @@ Instance juridique hébergée à Bruxelles traitant les procès liés aux décis
 ## Notes / zones à enrichir
 _Espace libre, jamais lu par les scripts — ajoute ici tes idées, brouillons, zones à
 créer manuellement._
+
+### Nouveau Califat Barcelone
+

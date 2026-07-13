@@ -626,6 +626,11 @@ QUEUE_TEMPLATE = """\
 #                     policy_reform, reference)
 #   scenario_hint   : liste de TOUS les scénarios à couvrir, y compris
 #                     scenario_ref. null = les 6 scénarios par défaut.
+#   zone_hint       : optionnel. null si tu ne sais pas — le LLM choisit
+#                     librement l'ancrage géographique. Sinon une zone
+#                     (chaîne libre, ex: "Bassin du Congo") que tu IMPOSES
+#                     comme lieu d'ancrage de l'entité — injectée
+#                     directement dans le prompt de génération.
 #   source          : libre — date, contexte, lien...
 #
 # EXEMPLE :
@@ -637,6 +642,7 @@ QUEUE_TEMPLATE = """\
 #     etat: clandestin
 #     scenario_ref: breakdown
 #     scenario_hint: null
+#     zone_hint: null
 #     source: idee_2026-06
 #
 # Un garde-fou anti-doublon (contre les entités déjà présentes dans

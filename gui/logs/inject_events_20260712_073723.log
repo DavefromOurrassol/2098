@@ -1,0 +1,16 @@
+============================================================
+OURRASSOL 2098 — Injection événements custom
+============================================================
+
+Mode : auto (fourni via --mode)
+
+[1/2] Analyse de la couverture du vault...
+  18 event_instance(s) analysée(s)
+  Filtre scénario : new_sustainability
+[2/2] Génération de 1 idée(s) d'événements...
+[llm] Mistral (mistral-large-latest) — entrée : 1165 | sortie : 414
+  ✓ conseil_biotech_afrique_centrale — continentale | 2098 | scénarios: ['new_sustainability']
+    → Comble un vide géographique (Afrique centrale) et thématique (santé/biotech, systèmes productifs), tout en renforçant la variable *frontières du système* via les conflits de brevets.
+
+1 idée(s) ajoutée(s) à /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/evenements_custom/queue.yaml
+→ Inspectez queue.yaml, puis relancez en mode custom pour injecter.

@@ -144,6 +144,12 @@ zones:
   - entite: Madagascar
     type_entite: pays
     portion: null
+  - entite: Afrique du Sud
+    type_entite: pays
+    portion: null
+  - entite: Éthiopie
+    type_entite: pays
+    portion: null
   description: L'Afrique continentale de 2098 s'est dotée d'une Union Panafricaine
     dotée d'un Conseil Technique de l'Eau, et a été le théâtre des Accords de Kinshasa-Sahel
     (2071-2089) structurant la gouvernance hydrique continentale. Brazzaville accueille
@@ -327,6 +333,9 @@ zones:
   - entite: Islande
     type_entite: pays
     portion: null
+  - entite: Arctique
+    type_entite: pays
+    portion: null
   description: Le Nuna Siku Governance Council administre depuis son siège flottant
     ancré au large de Qaanaaq le corridor maritime arctique rendu structurellement
     navigable par la fonte des glaces. Institution hybride mature reconnue par le
@@ -434,6 +443,9 @@ zones:
     type_entite: pays
     portion: null
   - entite: Taïwan
+    type_entite: pays
+    portion: null
+  - entite: Pologne
     type_entite: pays
     portion: null
   description: Le Bloc Eurasien de 2098 regroupe des États qui résistent aux modèles
@@ -1057,7 +1069,7 @@ zones:
   nom: Barcelone-Hub — Bureau ibérique de la CMTCA
   niveau: 2
   type: ville
-  parent: ameriques_reconfigurees
+  parent: nouveau_califat_barcelone
   origine_reelle:
   - entite: Barcelone
     type_entite: region_administrative
@@ -2548,6 +2560,24 @@ zones:
   - entite: Papouasie-Nouvelle-Guinée
     type_entite: pays
     portion: null
+- slug: nouveau_califat_barcelone
+  nom: Nouveau Califat Barcelone
+  niveau: 1
+  type: union_regionale
+  parent: null
+  origine_reelle:
+  - entite: Espagne
+    type_entite: pays
+  description: ''
+  statut: dominant
+  tensions_internes: ''
+  periode_transition: null
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies: []
+    rivaux: []
+  sources_attestees: []
 ---
 
 # Géographie — new_sustainability
@@ -2798,7 +2828,7 @@ Bandar Abbas est le site des premières frappes israéliennes d'octobre 2026 sur
 
 *Sources attestées : conflit_israel_iran_2026_new_sustainability, le_temoin_new_sustainability*
 
-#### Barcelone-Hub — Bureau ibérique de la CMTCA — sous [[ameriques_reconfigurees]]
+#### Barcelone-Hub — Bureau ibérique de la CMTCA — sous [[nouveau_califat_barcelone]]
 
 *ville — niveau 2 — statut : stable*
 
@@ -3496,3 +3526,6 @@ Instance juridique hébergée à Bruxelles traitant les procès liés aux décis
 ## Notes / zones à enrichir
 _Espace libre, jamais lu par les scripts — ajoute ici tes idées, brouillons, zones à
 créer manuellement._
+
+### Nouveau Califat Barcelone
+

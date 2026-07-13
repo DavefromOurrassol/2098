@@ -1333,6 +1333,628 @@ def carte_impact():
     return jsonify(rapport)
 
 
+# ── P7 étape 1 : renommage de zone (slug + nom), propagation vérifiée le 12 juillet
+#    2026 : YAML zones[].slug/.nom + zones[].parent des enfants directs + wikilinks
+#    "sous [[slug]]" dans le corps markdown du MÊME fichier geographie/{scenario}.md
+#    (jamais ailleurs dans le vault, vérifié par grep exhaustif) + instances/*.md +
+#    event_instances/*.md (localisation.zone) + zones_pays.json. entites/ est HORS
+#    scope : aucune référence de zone n'y a été trouvée, seulement des collisions de
+#    nommage (une entité peut porter le même slug qu'une zone du même lieu réel,
+#    ex: nairobi_crrc existe des deux côtés) — d'où le contrôle de collision
+#    ci-dessous, en avertissement et non en blocage puisque cette collision existe
+#    déjà légitimement ailleurs dans le vault.
+
+def _rename_zone_body_text(body, old_slug, new_slug, old_nom=None, new_nom=None):
+    """
+    Renomme dans le corps markdown (hors frontmatter) :
+    1) tous les wikilinks "sous [[old_slug]]" des enfants directs -> new_slug
+    2) le header de la zone elle-même ("### {nom}" niveau 1, ou "#### {nom} — sous
+       [[parent]]" / "##### {nom} — sous [[parent]]" niveau 2/3) si le nom change
+    3) les lignes "**Rivaux** : slug1, slug2" / "**Alliés** : ..." — texte brut,
+       PAS des wikilinks (découvert le 12 juillet 2026 en testant sur un vrai
+       fichier : relations.allies/rivaux peut référencer n'importe quelle zone du
+       scénario, pas seulement les enfants directs de la zone renommée)
+    Retourne (nouveau_body, a_change: bool).
+    """
+    changed = False
+
+    pattern_sous = re.compile(r"sous \[\[" + re.escape(old_slug) + r"\]\]")
+    new_body, n = pattern_sous.subn(f"sous [[{new_slug}]]", body)
+    if n:
+        changed = True
+        body = new_body
+
+    if old_nom and new_nom and old_nom != new_nom:
+        header_pattern = re.compile(
+            r"^(#{1,6}) " + re.escape(old_nom) + r"( — sous \[\[.+?\]\])?$",
+            re.MULTILINE
+        )
+        new_body2, n2 = header_pattern.subn(
+            lambda m: f"{m.group(1)} {new_nom}{m.group(2) or ''}", body
+        )
+        if n2:
+            changed = True
+            body = new_body2
+
+    relations_pattern = re.compile(
+        r"^(\*\*(?:Rivaux|Alliés)\*\* : .*)$", re.MULTILINE
+    )
+    slug_boundary = re.compile(r"(?<![a-z0-9_])" + re.escape(old_slug) + r"(?![a-z0-9_])")
+
+    def _sub_relations_line(m):
+        nonlocal changed
+        line, n3 = slug_boundary.subn(new_slug, m.group(1))
+        if n3:
+            changed = True
+        return line
+
+    body = relations_pattern.sub(_sub_relations_line, body)
+
+    return body, changed
+
+
+def _apply_rename_geographie(vault_root, scenario, ancien_slug, nouveau_slug,
+                              nouveau_nom, dry_run):
+    """
+    dry_run=True  : ne modifie rien, retourne juste {"zone":..., "enfants_directs":...}
+    dry_run=False : applique réellement (avec .bak), retourne {"ok":True, ...}
+    Dans les deux cas, {"error": "..."} si la zone/le slug cible pose problème.
+    """
+    import yaml as _yaml
+    geo_file = vault_root / "geographie" / f"{scenario}.md"
+    if not geo_file.exists():
+        return {"error": f"Fiche géographie introuvable : {geo_file}"}
+
+    raw = geo_file.read_text(encoding="utf-8")
+    parts = raw.split("---", 2)
+    if len(parts) < 3:
+        return {"error": "Format de fiche géographie inattendu"}
+    fm = _yaml.safe_load(parts[1]) or {}
+    body = parts[2]
+    zones = fm.get("zones") or []
+
+    target = next((z for z in zones if z.get("slug") == ancien_slug), None)
+    if not target:
+        return {"error": f"Zone '{ancien_slug}' introuvable dans {scenario}"}
+
+    if nouveau_slug != ancien_slug and any(z.get("slug") == nouveau_slug for z in zones):
+        return {"error": f"Le slug '{nouveau_slug}' existe déjà dans ce scénario"}
+
+    enfants = [z for z in zones if z.get("parent") == ancien_slug]
+    ancien_nom = target.get("nom")
+
+    # relations.allies/rivaux peut référencer n'importe quelle zone du scénario,
+    # pas seulement les enfants directs de la zone renommée (ex: deux zones
+    # niveau 1 rivales) — découvert le 12 juillet 2026 en testant sur un vrai
+    # fichier (arc_eurasien_central référencé comme rival par 9 zones sans lien
+    # de parenté avec elle).
+    zones_relations_maj = []
+    if not dry_run:
+        for z in zones:
+            rel = z.get("relations")
+            if not isinstance(rel, dict):
+                continue
+            touched = False
+            for cle in ("allies", "rivaux"):
+                lst = rel.get(cle)
+                if isinstance(lst, list) and ancien_slug in lst:
+                    rel[cle] = [nouveau_slug if s == ancien_slug else s for s in lst]
+                    touched = True
+            if touched:
+                zones_relations_maj.append(z.get("slug"))
+
+    if dry_run:
+        zones_relations_liees = [
+            z.get("slug") for z in zones
+            if isinstance(z.get("relations"), dict) and (
+                ancien_slug in (z["relations"].get("allies") or []) or
+                ancien_slug in (z["relations"].get("rivaux") or [])
+            )
+        ]
+        return {
+            "zone": {"slug": ancien_slug, "nom": ancien_nom,
+                     "niveau": target.get("niveau"), "parent": target.get("parent")},
+            "enfants_directs": [{"slug": e.get("slug"), "nom": e.get("nom")} for e in enfants],
+            "zones_relations_liees": zones_relations_liees,
+        }
+
+    target["slug"] = nouveau_slug
+    if nouveau_nom:
+        target["nom"] = nouveau_nom
+    for e in enfants:
+        e["parent"] = nouveau_slug
+
+    new_body, body_maj = _rename_zone_body_text(
+        body, ancien_slug, nouveau_slug, ancien_nom, nouveau_nom
+    )
+
+    fm["zones"] = zones
+    bak = geo_file.with_suffix(geo_file.suffix + ".bak")
+    bak.write_text(raw, encoding="utf-8")
+
+    new_fm = _yaml.dump(fm, allow_unicode=True, sort_keys=False, default_flow_style=False)
+    geo_file.write_text("---\n" + new_fm + "---" + new_body, encoding="utf-8")
+
+    return {"ok": True, "ancien_nom": ancien_nom, "enfants_maj": len(enfants),
+             "body_maj": body_maj, "zones_relations_maj": len(zones_relations_maj)}
+
+
+def _rename_zone_in_instances(vault_root, scenario, ancien_slug, nouveau_slug, dry_run):
+    """Scanne instances/ + event_instances/ pour ce scénario : localisation.zone ==
+    ancien_slug. dry_run=True : liste seulement. dry_run=False : réécrit aussi."""
+    import yaml as _yaml
+    touches = []
+    for dossier in ("instances", "event_instances"):
+        d = vault_root / dossier
+        if not d.exists():
+            continue
+        for f in d.glob("*.md"):
+            try:
+                raw = f.read_text(encoding="utf-8")
+            except Exception:
+                continue
+            parts = raw.split("---", 2)
+            if len(parts) < 3:
+                continue
+            try:
+                fm = _yaml.safe_load(parts[1]) or {}
+            except Exception:
+                continue
+            if fm.get("scenario") != scenario:
+                continue
+            loc = fm.get("localisation") or {}
+            if loc.get("zone") != ancien_slug:
+                continue
+            touches.append({"slug": fm.get("slug", f.stem), "type": fm.get("type", dossier)})
+            if not dry_run:
+                loc["zone"] = nouveau_slug
+                fm["localisation"] = loc
+                new_fm = _yaml.dump(fm, allow_unicode=True, sort_keys=False, default_flow_style=False)
+                f.write_text("---\n" + new_fm + "---" + parts[2], encoding="utf-8")
+    return touches
+
+
+def _rename_zone_in_zones_pays(zones_pays_path, scenario, ancien_slug, nouveau_slug, dry_run):
+    if not zones_pays_path.exists():
+        return []
+    zp = json.loads(zones_pays_path.read_text(encoding="utf-8"))
+    sc = zp.get(scenario, {})
+    touches = [pays for pays, slug in sc.items() if slug == ancien_slug]
+    if not dry_run and touches:
+        for pays in touches:
+            sc[pays] = nouveau_slug
+        zp[scenario] = sc
+        zones_pays_path.write_text(json.dumps(zp, indent=2, ensure_ascii=False), encoding="utf-8")
+    return touches
+
+
+@app.route("/api/carte/impact_renommage_zone", methods=["POST"])
+def carte_impact_renommage_zone():
+    """
+    Rapport d'impact en lecture seule pour un renommage de zone (P7 étape 1).
+    Body JSON : { "scenario":..., "ancien_slug":...,
+                  "nouveau_slug":... (optionnel, pour vérifier une collision de slug),
+                  "nouveau_nom":... (optionnel) }
+    N'écrit RIEN.
+    """
+    cfg = load_config()
+    vault_root = Path(cfg.get("vault_root", ""))
+    data = request.get_json() or {}
+    scenario = data.get("scenario", "").strip()
+    ancien_slug = data.get("ancien_slug", "").strip()
+    nouveau_slug = data.get("nouveau_slug", "").strip()
+
+    if not scenario or not ancien_slug:
+        return jsonify({"error": "scenario et ancien_slug requis"}), 400
+
+    geo_report = _apply_rename_geographie(
+        vault_root, scenario, ancien_slug, nouveau_slug or ancien_slug, None, dry_run=True
+    )
+    if "error" in geo_report:
+        return jsonify(geo_report), 404
+
+    instances_liees = _rename_zone_in_instances(vault_root, scenario, ancien_slug, "—", dry_run=True)
+
+    gui_dir = Path(__file__).parent
+    zones_pays_path = gui_dir / "zones_pays.json"
+    pays_lies = _rename_zone_in_zones_pays(zones_pays_path, scenario, ancien_slug, "—", dry_run=True)
+
+    collision_entite = None
+    if nouveau_slug and (vault_root / "entites" / f"{nouveau_slug}.md").exists():
+        collision_entite = nouveau_slug
+
+    return jsonify({
+        "zone": geo_report["zone"],
+        "enfants_directs": geo_report["enfants_directs"],
+        "zones_relations_liees": geo_report["zones_relations_liees"],
+        "instances_liees": instances_liees,
+        "pays_zones_pays_json": pays_lies,
+        "collision_slug_entite": collision_entite,
+        "rien_detecte": not (geo_report["enfants_directs"] or geo_report["zones_relations_liees"]
+                              or instances_liees or pays_lies),
+    })
+
+
+@app.route("/api/carte/renommer_zone", methods=["POST"])
+def carte_renommer_zone():
+    """
+    Applique le renommage d'un slug (et éventuellement du nom affiché) d'une zone.
+    Body JSON : { "scenario":..., "ancien_slug":..., "nouveau_slug":...,
+                  "nouveau_nom":... (optionnel) }
+    """
+    cfg = load_config()
+    vault_root = Path(cfg.get("vault_root", ""))
+    data = request.get_json() or {}
+    scenario = data.get("scenario", "").strip()
+    ancien_slug = data.get("ancien_slug", "").strip()
+    nouveau_slug = data.get("nouveau_slug", "").strip()
+    nouveau_nom = data.get("nouveau_nom", "").strip() or None
+
+    if not scenario or not ancien_slug or not nouveau_slug:
+        return jsonify({"error": "scenario, ancien_slug, nouveau_slug requis"}), 400
+    if not re.match(r"^[a-z0-9_]+$", nouveau_slug):
+        return jsonify({"error": "nouveau_slug : lettres minuscules, chiffres, underscores uniquement"}), 400
+
+    geo_result = _apply_rename_geographie(
+        vault_root, scenario, ancien_slug, nouveau_slug, nouveau_nom, dry_run=False
+    )
+    if "error" in geo_result:
+        code = 409 if "existe déjà" in geo_result["error"] else 404
+        return jsonify(geo_result), code
+
+    instances_touchees = _rename_zone_in_instances(vault_root, scenario, ancien_slug, nouveau_slug, dry_run=False)
+
+    gui_dir = Path(__file__).parent
+    zones_pays_path = gui_dir / "zones_pays.json"
+    pays_touches = _rename_zone_in_zones_pays(zones_pays_path, scenario, ancien_slug, nouveau_slug, dry_run=False)
+
+    return jsonify({
+        "ok": True,
+        "nouveau_slug": nouveau_slug,
+        "enfants_maj": geo_result["enfants_maj"],
+        "zones_relations_maj": geo_result["zones_relations_maj"],
+        "body_maj": geo_result["body_maj"],
+        "instances_maj": len(instances_touchees),
+        "pays_maj": len(pays_touches),
+    })
+
+
+# ── P7 étape 2, phase 1 : visualisation en arbre des sous-zones (lecture seule,
+#    12 juillet 2026). Les zones niveau 2/3 n'ont ni coordonnées lat/lng ni
+#    correspondance polygone sur la carte Leaflet (elles ne sont pas géocodées) —
+#    la structure parent/niveau/slug déjà présente dans le YAML EST un arbre,
+#    donc autant l'afficher tel quel plutôt que d'inventer un positionnement
+#    géographique peu fiable pour du contenu fictif. Aucune action pour l'instant
+#    (renommer/reparent des niveaux 2/3 viendra dans une phase 2 séparée).
+
+def _build_zone_tree(zones, root_slug):
+    """Construit un arbre imbriqué {slug, nom, niveau, type, statut, enfants:[...]}
+    à partir de la liste plate de zones (tous niveaux) d'un scénario."""
+    by_parent = {}
+    for z in zones:
+        p = z.get("parent")
+        if p:
+            by_parent.setdefault(p, []).append(z)
+    by_slug = {z.get("slug"): z for z in zones}
+
+    def _node(slug):
+        z = by_slug.get(slug)
+        if not z:
+            return None
+        enfants = [_node(c.get("slug")) for c in by_parent.get(slug, [])]
+        return {
+            "slug": z.get("slug"),
+            "nom": z.get("nom"),
+            "niveau": z.get("niveau"),
+            "type": z.get("type"),
+            "statut": z.get("statut"),
+            "enfants": [e for e in enfants if e is not None],
+        }
+
+    return _node(root_slug)
+
+
+@app.route("/api/carte/arbre_zone", methods=["GET"])
+def carte_arbre_zone():
+    """
+    GET /api/carte/arbre_zone?scenario=breakdown&slug=arc_eurasien_central
+    Arbre hiérarchique en lecture seule d'une zone (niveau 1 en pratique, mais
+    fonctionne pour n'importe quel slug) et de tous ses descendants niveau 2/3.
+    N'écrit rien.
+    """
+    cfg = load_config()
+    vault_root = Path(cfg.get("vault_root", ""))
+    scenario = request.args.get("scenario", "").strip()
+    slug = request.args.get("slug", "").strip()
+
+    if not scenario or not slug:
+        return jsonify({"error": "scenario et slug requis"}), 400
+
+    zones = _load_all_zones(vault_root, scenario)
+    if not zones:
+        return jsonify({"error": f"Aucune zone trouvée pour le scénario '{scenario}'"}), 404
+
+    arbre = _build_zone_tree(zones, slug)
+    if arbre is None:
+        return jsonify({"error": f"Zone '{slug}' introuvable dans '{scenario}'"}), 404
+
+    return jsonify({"arbre": arbre})
+
+
+# ── P7 étape 2, phase 2 : reparent (13 juillet 2026). Déplace une zone niveau
+#    2/3 (et tout son sous-arbre, qui suit — décision explicite de l'utilisateur)
+#    vers un nouveau parent, à n'importe quelle profondeur (pas seulement le même
+#    niveau) : le niveau de toute la branche est recalculé en cascade selon le
+#    delta de profondeur induit par le nouveau parent. Contrairement au
+#    renommage, le SLUG de la zone déplacée ne change jamais, donc aucune
+#    propagation vers instances/event_instances/zones_pays.json n'est
+#    nécessaire ici — seul geographie/{scenario}.md est concerné (YAML +
+#    en-têtes markdown des zones dont le niveau change).
+
+def _zone_header_regex(nom):
+    return re.compile(r"^(#{1,6}) " + re.escape(nom) + r"( — sous \[\[.+?\]\])?$", re.MULTILINE)
+
+
+def _reparent_zone_body_text(body, slug, nouveau_parent_slug, sous_arbre_by_slug):
+    """
+    sous_arbre_by_slug : {slug: zone_dict} pour tout le sous-arbre déplacé
+    (racine incluse), avec le NIVEAU DÉJÀ MIS À JOUR sur chaque entrée.
+    nouveau_parent_slug=None : la zone déplacée devient racine (niveau 1) —
+    son header perd le suffixe "— sous [[...]]" entièrement, comme toute
+    zone niveau 1 sans parent.
+    Met à jour le niveau du header (#### vs #####...) pour chaque zone du
+    sous-arbre dont la profondeur a changé, et change la cible du wikilink
+    "sous [[...]]" uniquement pour la zone déplacée elle-même (ses
+    descendants gardent le même parent immédiat, donc le même wikilink texte,
+    seul le niveau de titre peut changer).
+    """
+    changed = False
+    for s, z in sous_arbre_by_slug.items():
+        nom = z.get("nom")
+        niveau = z.get("niveau")
+        if not nom or not niveau:
+            continue
+        new_hashes = "#" * (niveau + 2)
+
+        def _repl(m, s=s, new_hashes=new_hashes):
+            nonlocal changed
+            suffix = m.group(2) or ""
+            if s == slug:
+                suffix = f" — sous [[{nouveau_parent_slug}]]" if nouveau_parent_slug else ""
+            changed = True
+            return f"{new_hashes} {nom}{suffix}"
+
+        body = _zone_header_regex(nom).sub(_repl, body)
+
+    return body, changed
+
+
+def _apply_reparent_zone(vault_root, scenario, slug, nouveau_parent_slug, dry_run):
+    """
+    nouveau_parent_slug=None (ou "") : PROMOTION en zone niveau 1 autonome
+    (parent: null), plutôt qu'un rattachement à un parent existant — cas
+    ajouté le 13 juillet 2026 quand aucune zone existante ne convient
+    sémantiquement (ex: le cas Barcelone, où aucune zone Europe n'existait
+    dans le scénario).
+    """
+    import yaml as _yaml
+    geo_file = vault_root / "geographie" / f"{scenario}.md"
+    if not geo_file.exists():
+        return {"error": f"Fiche géographie introuvable : {geo_file}"}
+
+    raw = geo_file.read_text(encoding="utf-8")
+    parts = raw.split("---", 2)
+    if len(parts) < 3:
+        return {"error": "Format de fiche géographie inattendu"}
+    fm = _yaml.safe_load(parts[1]) or {}
+    body = parts[2]
+    zones = fm.get("zones") or []
+    by_slug = {z.get("slug"): z for z in zones}
+
+    target = by_slug.get(slug)
+    if not target:
+        return {"error": f"Zone '{slug}' introuvable"}
+
+    devient_racine = not nouveau_parent_slug
+    nouveau_parent = None
+    if not devient_racine:
+        if slug == nouveau_parent_slug:
+            return {"error": "Une zone ne peut pas devenir son propre parent"}
+        nouveau_parent = by_slug.get(nouveau_parent_slug)
+        if not nouveau_parent:
+            return {"error": f"Nouveau parent '{nouveau_parent_slug}' introuvable"}
+
+    ancien_parent_slug = target.get("parent")
+    if (devient_racine and ancien_parent_slug is None) or \
+       (not devient_racine and ancien_parent_slug == nouveau_parent_slug):
+        return {"error": "Cette zone est déjà rattachée à ce parent"}
+
+    sous_arbre_slugs = _zone_descendants(zones, slug)  # racine (slug) incluse
+    if not devient_racine and nouveau_parent_slug in sous_arbre_slugs:
+        return {"error": f"Cycle détecté : '{nouveau_parent_slug}' est un descendant de '{slug}', "
+                          f"impossible de déplacer une zone sous l'une de ses propres sous-zones"}
+
+    ancien_niveau = target.get("niveau") or 1
+    nouveau_niveau_racine = 1 if devient_racine else (nouveau_parent.get("niveau") or 1) + 1
+    delta = nouveau_niveau_racine - ancien_niveau
+
+    if dry_run:
+        return {
+            "zone": {"slug": slug, "nom": target.get("nom"), "niveau": ancien_niveau,
+                     "ancien_parent": ancien_parent_slug},
+            "nouveau_parent": {"slug": nouveau_parent_slug, "nom": nouveau_parent.get("nom"),
+                                "niveau": nouveau_parent.get("niveau")} if not devient_racine else None,
+            "devient_racine": devient_racine,
+            "nouveau_niveau_zone": nouveau_niveau_racine,
+            "changement_de_profondeur": delta != 0,
+            "descendants_impactes": [
+                {"slug": s, "nom": by_slug[s].get("nom"),
+                 "ancien_niveau": by_slug[s].get("niveau"),
+                 "nouveau_niveau": (by_slug[s].get("niveau") or 1) + delta}
+                for s in sous_arbre_slugs if s != slug
+            ],
+        }
+
+    ancien_nom = target.get("nom")
+    for s in sous_arbre_slugs:
+        z = by_slug[s]
+        z["niveau"] = (z.get("niveau") or 1) + delta
+    target["parent"] = None if devient_racine else nouveau_parent_slug
+
+    fm["zones"] = zones
+    bak = geo_file.with_suffix(geo_file.suffix + ".bak")
+    bak.write_text(raw, encoding="utf-8")
+
+    sous_arbre_by_slug = {s: by_slug[s] for s in sous_arbre_slugs}
+    new_body, body_maj = _reparent_zone_body_text(
+        body, slug, nouveau_parent_slug if not devient_racine else None, sous_arbre_by_slug
+    )
+
+    new_fm = _yaml.dump(fm, allow_unicode=True, sort_keys=False, default_flow_style=False)
+    geo_file.write_text("---\n" + new_fm + "---" + new_body, encoding="utf-8")
+
+    return {
+        "ok": True, "ancien_nom": ancien_nom, "nouveau_niveau": nouveau_niveau_racine,
+        "devient_racine": devient_racine,
+        "changement_de_profondeur": delta != 0,
+        "descendants_maj": len(sous_arbre_slugs) - 1, "body_maj": body_maj,
+    }
+
+
+@app.route("/api/carte/impact_reparent_zone", methods=["POST"])
+def carte_impact_reparent_zone():
+    """Rapport d'impact en lecture seule pour un reparent (P7 étape 2 phase 2).
+    Body JSON : { "scenario":..., "slug":..., "nouveau_parent_slug":... }
+    nouveau_parent_slug vide/absent = promotion en zone niveau 1 (parent: null).
+    N'écrit rien."""
+    cfg = load_config()
+    vault_root = Path(cfg.get("vault_root", ""))
+    data = request.get_json() or {}
+    scenario = data.get("scenario", "").strip()
+    slug = data.get("slug", "").strip()
+    nouveau_parent_slug = (data.get("nouveau_parent_slug") or "").strip() or None
+
+    if not scenario or not slug:
+        return jsonify({"error": "scenario et slug requis"}), 400
+
+    rapport = _apply_reparent_zone(vault_root, scenario, slug, nouveau_parent_slug, dry_run=True)
+    if "error" in rapport:
+        return jsonify(rapport), 404
+    return jsonify(rapport)
+
+
+@app.route("/api/carte/reparent_zone", methods=["POST"])
+def carte_reparent_zone():
+    """Applique le déplacement d'une zone (et son sous-arbre) vers un nouveau parent.
+    Body JSON : { "scenario":..., "slug":..., "nouveau_parent_slug":... }
+    nouveau_parent_slug vide/absent = promotion en zone niveau 1 (parent: null)."""
+    cfg = load_config()
+    vault_root = Path(cfg.get("vault_root", ""))
+    data = request.get_json() or {}
+    scenario = data.get("scenario", "").strip()
+    slug = data.get("slug", "").strip()
+    nouveau_parent_slug = (data.get("nouveau_parent_slug") or "").strip() or None
+
+    if not scenario or not slug:
+        return jsonify({"error": "scenario et slug requis"}), 400
+
+    result = _apply_reparent_zone(vault_root, scenario, slug, nouveau_parent_slug, dry_run=False)
+    if "error" in result:
+        return jsonify(result), 409 if "Cycle" in result["error"] else 404
+    return jsonify(result)
+
+
+# ── P7 étape 2, phase 3 : créer une nouvelle zone niveau 1 à la volée (13
+#    juillet 2026), pour le cas où aucun parent existant ne convient
+#    sémantiquement lors d'un reparent (ex: le cas Barcelone — aucune zone
+#    Europe n'existait dans new_sustainability). Champs alignés sur le
+#    schéma réellement produit par enrich_geographie_recursive.py (ZONE_TYPES,
+#    ZONE_STATUTS, TYPE_ENTITE_REELLE).
+
+ZONE_TYPES = ["bloc_continental", "union_regionale", "territoire_autonome",
+              "territoire_herite", "region", "ville", "infrastructure",
+              "site_strategique", "zone_sinistree", "autre"]
+ZONE_STATUTS = ["dominant", "stable", "fragmenté", "en_declin", "disparu", "emergent"]
+TYPE_ENTITE_REELLE = ["pays", "etat_federe", "province", "region_administrative", "autre"]
+
+
+@app.route("/api/carte/creer_zone_niveau1", methods=["POST"])
+def carte_creer_zone_niveau1():
+    """
+    Crée une nouvelle zone niveau 1 (parent: null) à la volée.
+    Body JSON : { "scenario":..., "slug":..., "nom":..., "type":..., "statut":...,
+                  "origine_reelle": [{"entite":..., "type_entite":...}, ...],
+                  "description":... (optionnel) }
+    """
+    import yaml as _yaml
+    cfg = load_config()
+    vault_root = Path(cfg.get("vault_root", ""))
+    data = request.get_json() or {}
+    scenario = data.get("scenario", "").strip()
+    slug = data.get("slug", "").strip()
+    nom = data.get("nom", "").strip()
+    type_zone = data.get("type", "").strip()
+    statut = data.get("statut", "").strip()
+    origine_reelle = data.get("origine_reelle") or []
+    description = (data.get("description") or "").strip()
+
+    if not scenario or not slug or not nom or not type_zone or not statut:
+        return jsonify({"error": "scenario, slug, nom, type, statut requis"}), 400
+    if not re.match(r"^[a-z0-9_]+$", slug):
+        return jsonify({"error": "slug : lettres minuscules, chiffres, underscores uniquement"}), 400
+    if type_zone not in ZONE_TYPES:
+        return jsonify({"error": f"type invalide, doit être parmi : {', '.join(ZONE_TYPES)}"}), 400
+    if statut not in ZONE_STATUTS:
+        return jsonify({"error": f"statut invalide, doit être parmi : {', '.join(ZONE_STATUTS)}"}), 400
+    if not origine_reelle:
+        return jsonify({"error": "origine_reelle requis (au moins une entrée) — "
+                                  "voir la logique de validate_zone() dans enrich_geographie_recursive.py"}), 400
+    for o in origine_reelle:
+        if not o.get("entite") or o.get("type_entite") not in TYPE_ENTITE_REELLE:
+            return jsonify({"error": f"origine_reelle invalide : {o!r} "
+                                      f"(type_entite doit être parmi {', '.join(TYPE_ENTITE_REELLE)})"}), 400
+
+    geo_file = vault_root / "geographie" / f"{scenario}.md"
+    if not geo_file.exists():
+        return jsonify({"error": f"Fiche géographie introuvable : {geo_file}"}), 404
+
+    raw = geo_file.read_text(encoding="utf-8")
+    parts = raw.split("---", 2)
+    if len(parts) < 3:
+        return jsonify({"error": "Format de fiche géographie inattendu"}), 500
+    fm = _yaml.safe_load(parts[1]) or {}
+    zones = fm.get("zones") or []
+
+    if any(z.get("slug") == slug for z in zones):
+        return jsonify({"error": f"Le slug '{slug}' existe déjà dans ce scénario"}), 409
+
+    nouvelle_zone = {
+        "slug": slug, "nom": nom, "niveau": 1, "type": type_zone, "parent": None,
+        "origine_reelle": origine_reelle,
+        "description": description,
+        "statut": statut,
+        "tensions_internes": "",
+        "periode_transition": None,
+        "evenement_transition": None,
+        "lieux_emblematiques": [],
+        "relations": {"allies": [], "rivaux": []},
+        "sources_attestees": [],
+    }
+    zones.append(nouvelle_zone)
+    fm["zones"] = zones
+
+    bak = geo_file.with_suffix(geo_file.suffix + ".bak")
+    bak.write_text(raw, encoding="utf-8")
+
+    new_fm = _yaml.dump(fm, allow_unicode=True, sort_keys=False, default_flow_style=False)
+    # Nouvelle zone niveau 1 : header "### {nom}" ajouté en fin de corps, sans
+    # wikilink (comme toute zone niveau 1 dans le corps existant).
+    new_body = parts[2].rstrip("\n") + f"\n\n### {nom}\n{description}\n"
+    geo_file.write_text("---\n" + new_fm + "---" + new_body, encoding="utf-8")
+
+    return jsonify({"ok": True, "slug": slug, "nom": nom})
+
+
 # ── API Slugs ─────────────────────────────────────────────────────────────────
 
 @app.route("/api/slugs", methods=["GET"])
@@ -1763,12 +2385,24 @@ def _execute_script(run_id: str, cmd: list, cwd: str, env: dict) -> None:
     log_path = LOGS_DIR / f"{script_id}_{timestamp}.log"
 
     try:
+        # stdin=DEVNULL (et non l'héritage par défaut) : sans ça, le
+        # subprocess hérite du stdin du terminal ayant lancé Flask lui-même
+        # (visible dans `ps aux` : TTY réel type s014, pas '??'). Un input()
+        # oublié dans un script (ex: fallback CLI d'un flag optionnel non
+        # renseigné) bloque alors indéfiniment le run — silencieusement,
+        # sans erreur ni log, %CPU à 0 — puisque personne ne peut jamais
+        # taper dans ce terminal pour répondre à la place de l'utilisateur
+        # GUI. DEVNULL coupe l'héritage à la racine pour tous les scripts,
+        # présents et futurs (bug découvert le 12 juillet 2026 sur
+        # inject_custom_events.py --mode auto, mais générique à tout script
+        # lancé via ce Popen).
         process = subprocess.Popen(
             cmd,
             cwd=cwd,
             env=env,
             stdout=subprocess.PIPE,
             stderr=subprocess.STDOUT,
+            stdin=subprocess.DEVNULL,
             text=True,
             bufsize=1,
         )

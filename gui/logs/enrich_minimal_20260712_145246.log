@@ -1,0 +1,19 @@
+============================================================
+OURRASSOL 2098 — Enrichissement fiches officialise_minimal
+============================================================
+(mode --dry-run : rien ne sera écrit)
+
+════════════════════════════════════════════════════════════
+SCÉNARIO : BREAKDOWN
+════════════════════════════════════════════════════════════
+  (aucune fiche officialise_minimal avec slug 'agadez_ligue_sahel_numerique_breakdown')
+
+════════════════════════════════════════════════════════════
+RÉSUMÉ
+════════════════════════════════════════════════════════════
+  Enrichies : 0
+  Échecs    : 0
+  Ignorées  : 0
+  Total     : 0
+
+(dry-run — rapport non écrit)

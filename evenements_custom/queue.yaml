@@ -215,3 +215,54 @@ queue:
   - institutions_multilaterales_survivantes
   acteurs_hint_count: 3
   source: auto_generated_2026-07
+- id: conseil_biotech_afrique_centrale
+  description: En 2098, le premier *Conseil Panafricain des Biotechnologies Régénératives*
+    est inauguré à Brazzaville, sous l'égide de l'AGRB (Alliance pour la Gouvernance
+    des Ressources Biologiques). Ce sommet réunit des scientifiques, des communautés
+    autochtones du bassin du Congo et des représentants des *Ceintures Boreales* pour
+    valider un protocole de régénération des sols dégradés par les anciennes exploitations
+    minières, combinant mycéliums génétiquement modifiés et savoirs traditionnels.
+    L'événement marque un tournant dans la souveraineté technologique africaine, mais
+    suscite des tensions avec les *Blocs Eurasien Souverainistes*, qui y voient une
+    menace pour leurs brevets agro-industriels.
+  portee: continentale
+  date_approximative: '2098'
+  intensite: modérée
+  scenarios:
+  - new_sustainability
+  variables_hint:
+  - sante_biotechnologies
+  - systeme_economique_redistribution
+  - organisation_territoires
+  variables_hint_count: 3
+  acteurs_hint:
+  - communautes_autochtones_bassin_congo
+  - agrb_brazzaville
+  - bloc_eurasien_souverainiste
+  acteurs_hint_count: 3
+  source: auto_generated_2026-07
+- id: festival_memoire_sahel_numerique
+  description: En 2095, la Ligue du Sahel Numérique organise le premier *Festival
+    des Mémoires Vivantes* à Agadez, un événement hybride physique et virtuel où des
+    communautés nomades, des archivistes algorithmiques et des réfugiés climatiques
+    partagent des récits oraux, des données généalogiques et des savoirs écologiques
+    locaux. L'événement devient un symbole de résistance culturelle face à l'effacement
+    des identités par les conflits et les migrations forcées, tout en créant un réseau
+    décentralisé de préservation des langues et des pratiques traditionnelles.
+  portee: regionale
+  date_approximative: '2095'
+  intensite: modérée
+  scenarios:
+  - eco_communalism
+  - new_sustainability
+  - policy_reform
+  variables_hint:
+  - valeurs_culture_tempo_sociale
+  - technologie_information
+  - demographie_mobilite_humaine
+  variables_hint_count: 3
+  acteurs_hint:
+  - Ligue du Sahel Numérique
+  - communautés touarègues
+  acteurs_hint_count: 2
+  source: auto_generated_2026-07

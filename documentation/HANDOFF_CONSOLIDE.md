@@ -1,5 +1,5 @@
 # Handoff — Ourrassol 2098
-*Consolidé le 11 juillet 2026 — vue d'ensemble projet + état des sessions du 4 et du 11 juillet*
+*Consolidé le 13 juillet 2026 — vue d'ensemble projet + état des sessions du 4, du 11 et du 13 juillet*
 
 ---
 
@@ -42,6 +42,9 @@ Ajout d'OpenAI comme 3e fournisseur (bug #21), retry centralisé sur 429 (bug #1
 
 ### 11 juillet 2026 — Routing par tier, bug #26 (cause racine journaliste/journal), P3 clos, gros nettoyage GUI (voir §3bis ci-dessous)
 Le doute laissé en suspens le 6 juillet ("la règle 2 [non-transposition culturelle] n'a pas suffi, mistral-small ne respecte pas de façon fiable une contrainte de ce type") a été élucidé : **ce n'était pas un problème de fiabilité modèle**, mais un bug de résolution de zone en amont (bug #26). Requalification des bugs #18/#20 recommandée à la lumière de cette découverte. Session étendue : routing LLM par tier (`llm_client.py`), clôture complète de P3, P13, P6, migration des 2 derniers scripts hors `llm_client.py`, plusieurs bugs GUI corrigés (double-clic, blocages `input()`, override systématique), nettoyage des mentions "Claude" obsolètes sur 18 scripts.
+
+### 13 juillet 2026 — P16/P18/P4 clos, bug `input()`/tty hérité (2 fixes), P7 construit et testé de bout en bout (voir §3ter ci-dessous)
+Session dense partie d'un signalement de lenteur sur `inject_custom_events.py`, qui a mené à la découverte d'un vrai blocage silencieux (héritage du tty du terminal Flask par les sous-process du GUI) corrigé à la racine côté `app.py`. Les 3 items en attente du 11 juillet (P16, P18, P4) ont été clos, avec un bug bonus trouvé au passage (`routes_dashboard.py` cassait `/api/dashboard` en entier depuis un import manquant). Nouveau champ `--variables-hint` ajouté au mode auto d'`inject_custom_events.py`. Le gros du temps a été consacré à **P7 (restructuration de zones géographiques)**, construit et testé sur les vraies fiches du vault fournies par David en trois étapes (rename, reparent, correction du signalement de bascule) — 4 vraies incohérences géographiques préexistantes découvertes dans le vault au passage, dont une corrigée en direct pendant les tests.
 
 ---
 
@@ -314,10 +317,12 @@ Carte dashboard renommée **"LLM actif" → "Modèle si forcé"** — l'ancien l
 **Cause** : `POST /api/yaml/append` n'était protégé par aucun état "en cours" — un double-clic (accidentel, ou réseau un peu lent) envoyait deux requêtes qui ajoutaient chacune la même entrée à `queue.yaml`, avant que la première réponse ne réinitialise le formulaire.
 **Fix appliqué (`app.js`)** : le bouton est désormais désactivé dès le clic (`btnSave.disabled = true`), réactivé dans un bloc `finally` une fois la requête terminée (succès ou échec) — un second clic pendant l'envoi est simplement ignoré.
 
-### 34. `variables_hint_count`/`--n` — consignes de prompt non appliquées en filtre dur (2 occurrences, même famille que le bug #26)
+### 34. `variables_hint_count`/`--n` — consignes de prompt non appliquées en filtre dur (3 occurrences, même famille que le bug #26)
 **Occurrence 1 — `create_entities_and_instances.py`, mode auto** : demandé `--n 1`, reçu 5 entités ; les 5 rejetées en cascade car chacune proposait des `variables_potentielles` entièrement inventées plutôt que puisées dans `VALID_VARS` (reproduction du bug #18, cette fois sur `mistral-large`). Fix : prompt renforcé (interdiction explicite d'inventer un slug, répétition du nombre exact demandé) + troncature dure du nombre d'entités en sortie (`entities[:n]`) si le LLM en renvoie plus que demandé.
 **Occurrence 2 — `inject_custom_events.py`, `variables_hint_count`** : plafond par défaut de 2 documenté et présent dans le prompt ("choisis entre 1 et {max_vars}"), mais jamais vérifié après réception — un test réel a renvoyé 4 variables au lieu de 2. Fix : troncature dure en sortie, en préservant en priorité les variables explicitement imposées par l'utilisateur (`variables_hint`) avant de compléter avec les choix du LLM jusqu'au plafond.
+**Occurrence 3 — `inject_custom_events.py`, `--n` lui-même (mode auto, découvert après le déploiement du fix `--mode`/`--n`/`--scenario`)** : `--n 1` demandé, 5 idées d'événements reçues — cette fois sur le nombre d'idées généré par `step_auto_generate_ideas()`, pas sur un sous-champ. Symptomatique du même point aveugle que l'occurrence 1, mais pas repris automatiquement en migrant `--n` vers ce script (chaque script a sa propre logique de génération, le filtre dur ne se propage pas tout seul). Fix identique : prompt renforcé ("EXACTEMENT {n} idée(s)... ni plus, ni moins", répété dans la consigne JSON) + troncature dure `ideas[:n]` en sortie, avec avertissement si le LLM dévie.
 **Point similaire noté mais non corrigé (mineur)** : `acteurs_hint_count` (même script) n'est pas non plus appliqué en filtre dur sur le *nombre* d'acteurs — mais la validation qualitative des slugs d'acteurs proposés fonctionne bien (testé OK, aucun acteur invalide accepté). Risque jugé moindre qu'un dépassement de plafond puisqu'un acteur en texte libre est explicitement toléré par le schéma, contrairement à une variable qui doit être un slug exact.
+**Enseignement à retenir pour la suite** : ce filtre dur ("consigne de prompt sur un nombre → toujours vérifier/tronquer en sortie") ne se généralise pas automatiquement d'un script à l'autre, même quand ils partagent la même structure `--mode`/`--n`. À vérifier systématiquement sur tout futur script auto-génératif ajouté au pipeline, plutôt que de supposer le filtre déjà en place parce qu'il l'est ailleurs.
 
 ### 35. Migration complète des 2 derniers scripts hors `llm_client.py` — `fix_impact_scale.py`, `officialize_alliances.py`
 **Constat** : ces deux scripts (tous deux classés "one-shot" dans `USER_MANUAL_COMPLET.md`, mais toujours potentiellement relançables) étaient les 2 seuls du pipeline encore câblés en dur sur le SDK Anthropic direct (`claude-sonnet-4-6`, `ANTHROPIC_API_KEY` obligatoire), donc hors routing par tier et hors retry centralisé (bug #17).
@@ -336,6 +341,70 @@ Carte dashboard renommée **"LLM actif" → "Modèle si forcé"** — l'ancien l
 
 ---
 
+## 3ter. Session du 13 juillet 2026 — détail
+
+**Déclencheur initial** : David signale qu'un lancement d'`inject_custom_events.py` (mode auto, 1 événement, 1 variable, 6 scénarios) est "très lent" depuis le GUI.
+
+### Bug #33 — `input()` bloqué indéfiniment par héritage du tty du terminal Flask
+**Diagnostic** : `ps aux` sur le process bloqué montre `STAT=S+`, `%CPU=0.0`, et surtout un vrai TTY (`s014`) plutôt que `??` — le sous-process héritait du terminal ayant lancé Flask lui-même, via l'absence de `stdin=` explicite sur `subprocess.Popen()` dans `_execute_script()` (`app.py`). Un `input()` resté sans garde (ici : le fallback `--scenario` de `run_auto_mode()`, déclenché quand le champ optionnel du GUI est laissé vide) attend alors une entrée qui n'arrivera jamais — silencieusement, sans erreur, sans log au-delà du dernier print avant l'appel.
+
+**Fix en deux parties, complémentaires** :
+1. **`app.py`** (fix racine, protège tous les scripts) : `stdin=subprocess.DEVNULL` ajouté au `subprocess.Popen()` de `_execute_script()`. Coupe l'héritage du tty à la source — un `input()` oublié dans n'importe quel script lancé par le GUI lève désormais une `EOFError` immédiate au lieu de bloquer indéfiniment.
+2. **`inject_custom_events.py`** (défense en profondeur) : les `input()` restants de `run_auto_mode()` (`--n`, `--scenario`) sont maintenant gardés par `sys.stdin.isatty()` — silencieux (valeur par défaut) hors terminal réel. Le sélecteur de mode (`custom`/`auto`) fait exception : pas de défaut silencieux possible entre les deux (comportements trop différents pour deviner), `sys.exit(1)` avec message clair à la place hors contexte interactif.
+
+Reproduit et confirmé sur le vrai GUI de David avant/après fix.
+
+### Nouveau champ `--variables-hint` (mode auto, `inject_custom_events.py`)
+Ajouté pour parité avec le champ `variables_hint` déjà existant en mode custom : liste de variables imposées par l'utilisateur, injectées comme consigne dans le prompt de `step_auto_generate_ideas()` **et** garanties par un filtre dur en sortie (merge avec ce que le LLM propose en plus, `variables_hint_count` relevé si besoin) — même famille de correctif que le bug #34 (une consigne de prompt seule n'est jamais suffisante). GUI : nouveau champ `multi_select`, `mode_only: "auto"`, dans `scripts_config.json`.
+
+### P16 clos — `zone_hint` documenté
+Champ confirmé fonctionnel mais absent du bloc `CHAMPS :`/exemple du `QUEUE_TEMPLATE`, sur les deux fichiers concernés : `evenements_custom/queue.yaml` (`inject_custom_events.py`) et `entites_custom/queue.yaml` (`create_entities_and_instances.py`).
+
+### P18 clos — cohérence "Modèle si forcé" vérifiée + bug bonus #35
+Le libellé et `data.llm` (exposé par `routes_dashboard.py`) sont cohérents avec le commentaire déjà présent dans `app.js` (valeur active uniquement si le toggle "Forcer ce modèle" est coché) — rien à corriger sur le point d'origine.
+
+**Bug #35 trouvé en creusant** : `routes_dashboard.py` utilise `json.loads()` dans `_stats_entites()` sans jamais importer `json` en tête de fichier. Comme `pipeline_dir/_entities_list.json` existe bien dans le vault (571 entrées), ce chemin de code s'exécute à **chaque** appel de `/api/dashboard`, provoquant un `NameError` → 500 sur tout l'endpoint, pas seulement la carte Entités. Fix : `import json` ajouté. Confirmé cassé avant fix, fonctionnel après, par David sur son GUI réel.
+
+### P4 clos — streaming SSE vérifié
+`validate.py` (sans flags) et `enrich_minimal.py --limit 2` testés depuis le GUI par David : logs apparaissent bien en direct dans les deux cas, formulaire dynamique (`slug_select`) fonctionnel. **Correction au passage** : l'item de backlog mentionnait un `--dry-run` sur `validate.py` qui n'a jamais existé (script lecture seule par nature, `--dry-run` n'aurait pas de sens) — à ne pas reproduire dans une future doc.
+
+### P7 — Restructuration de zones géographiques (construit et testé de bout en bout)
+
+**Scoping préalable** (avant tout code) : les deux questions ouvertes du backlog ont été tranchées par grep exhaustif sur le vault réel de David (fourni au fil de la session), pas supposées :
+- Les wikilinks `sous [[slug_de_zone]]` existent, mais **confinés au même fichier** `geographie/{scenario}.md` (jamais ailleurs dans le vault) — vérifié sur `breakdown.md` puis sur l'ensemble du vault via grep de tous les slugs de zone
+- Un piège découvert au passage : des **collisions de nommage zone/entité** existent (ex. `nairobi_crrc` est à la fois un slug de zone niveau 2 et un slug d'entité) — un premier grep vault-entier avait fait remonter 22 faux positifs de cette nature, confirmés en vérifiant qu'ils avaient tous une fiche `entites/{slug}.md` correspondante. Un outil de restructuration doit ignorer ces collisions, pas les casser.
+- `registre_evenements.md` et `zones_proposees.yaml` (mentionnés dans le backlog comme cibles potentielles) **n'existent pas** — retirés du scope.
+
+**Étape 1 — Rename** (slug + nom d'une zone) : propage vers `zones[].slug`/`nom` (soi-même), `zones[].parent` des enfants directs, wikilinks `sous [[...]]` des mêmes enfants, **`relations.allies`/`relations.rivaux` de N'IMPORTE QUELLE zone du scénario** (pas seulement les enfants directs — découvert en testant réellement sur `breakdown.md`, où `arc_eurasien_central` était référencé en `rivaux` par 9 zones sans lien de parenté), plus les lignes `**Rivaux**`/`**Alliés**` en texte brut du corps markdown (format différent des wikilinks, découvert au même moment), `instances/*.md` + `event_instances/*.md` (`localisation.zone`), `zones_pays.json`. Testé sur `breakdown.md` réel : zéro occurrence résiduelle de l'ancien slug après coup, fichier YAML valide (89 zones intactes).
+
+**Étape 2 — Reparent** (déplacer une zone niveau 2/3, avec tout son sous-arbre, vers un nouveau parent) :
+- Recalcul du `niveau` en cascade sur toute la branche déplacée si la profondeur change (ex. niveau 2→3), y compris la mise à jour du niveau de titre markdown (`####`→`#####`...) — testé sur un vrai cas à 2 niveaux (`district_mourmansk_residuel` niveau 2→3, son enfant `port_mourmansk` niveau 3→4 en cascade)
+- Anti-cycle : refuse si le nouveau parent est un descendant de la zone déplacée
+- **Extension "devenir zone niveau 1 autonome"** (`parent: null`) et **"créer une nouvelle zone niveau 1 à la volée"** (formulaire conforme au schéma de `enrich_geographie_recursive.py` — `ZONE_TYPES`/`ZONE_STATUTS`/`TYPE_ENTITE_REELLE`) ajoutées après coup, suite à la découverte du cas Barcelone (aucune zone Europe n'existait dans `new_sustainability` pour y rattacher `barcelone_hub`)
+- Aucune propagation vers `instances/`/`event_instances/`/`zones_pays.json` nécessaire ici (le slug ne change jamais en reparent)
+- 3 bugs UX trouvés et corrigés en cours de route par David en testant en conditions réelles : champ "nouveau nom" en placeholder trompeur plutôt qu'en valeur réelle ; sélecteur de parent non mis à jour après création d'une nouvelle zone (retombait sur le garde-fou "Choisis un nouveau parent") ; message d'erreur trompeur dans ce même cas, corrigé en rendant le bouton principal capable de déclencher la création directement
+
+**Étape 3 — Correction du rapport d'impact de bascule** : découverte que la détection (`sous_zones_orphelines` dans `carte_impact()`) existait **déjà** depuis longtemps — elle scanne les sous-zones descendantes de l'ancienne zone d'un pays dont `origine_reelle` mentionne ce pays précis. Elle n'était jamais qu'affichée en simple avertissement texte. Seul l'`app.js` a été modifié : un bouton "↗️ rattacher à {nouvelle_zone}" par sous-zone orpheline détectée, appelant directement l'endpoint reparent de l'étape 2. Testé bout en bout (bascule simulée de la Pologne hors d'`arc_eurasien_central` → détection de `cracovie_registre_zones` comme orpheline → clic → `parent` mis à jour) avant livraison, puis reproduit avec succès par David sur son GUI réel.
+
+**UI transverse aux 3 étapes** : arbre hiérarchique en lecture seule des sous-zones d'une zone niveau 1 (clic sur la légende carte) — les zones niveau 2/3 n'ont ni lat/lng ni polygone carte, donc pas de vraie carte géographique possible pour elles, l'arbre reflète simplement la structure `parent`/`niveau` déjà présente dans le YAML. Rendu avec lignes de connexion verticales + hiérarchie typographique par niveau (demande explicite de David après un premier rendu jugé peu lisible). Surbrillance carte (bordure orange épaisse) pour la zone niveau 1 sélectionnée.
+
+**4 vraies incohérences géographiques découvertes dans le vault** (pas des bugs de l'outil — des erreurs de génération antérieures, révélées par l'arbre) :
+| Scénario | Zone mal rattachée | Parent actuel (incohérent) | Statut |
+|---|---|---|---|
+| `new_sustainability` | Barcelone-Hub — Bureau ibérique de la CMTCA | Amériques reconfigurées | Non corrigé |
+| `new_sustainability` | Corridor ibérique énergétique | Amériques reconfigurées | Non corrigé |
+| `breakdown` | Cracovie (Antenne du Registre) | Arc Eurasien Central | **Corrigé en direct** (→ `geneve_bunker_institutions`) |
+| `breakdown` | Nœud Mnemos du Bassin Pannonien | Arc Eurasien Central | Non corrigé |
+
+Détection initiale par heuristique de mots-clés géographiques (beaucoup de faux positifs — "Arc Eurasien", "Indo-Pacifique", "Corridor Arctique Nordique" sont des zones transnationales légitimement larges), confirmation finale par lecture de la `description` de chaque zone parente (aucune justification narrative pour les 4 cas retenus, contrairement aux 5 faux positifs écartés).
+
+### Garde-fou anti-incohérence — scopé, pas construit
+`enrich_geographie_recursive.py::resolve_parents_and_levels()` valide déjà l'existence du `parent`, détecte les cycles, dédoublonne les slugs — mais ne compare jamais `origine_reelle` de l'enfant contre celui du parent (ce qui aurait empêché les 4 cas ci-dessus). Le champ `origine_reelle` (déjà obligatoire et structurellement validé par `validate_zone()`) est un bien meilleur signal que les mots-clés : ex. `barcelone_hub` a `origine_reelle: [{entite: "Barcelone"}]`, absent des ~35 pays d'`origine_reelle` d'`ameriques_reconfigurees`. Reste à trancher : une ville/subdivision comme "Barcelone" ou "Cracovie" ne porte pas de pointeur explicite vers son pays dans les données actuelles — un vrai garde-fou nécessite soit une petite table statique ville→pays, soit un appel LLM de vérification en lot. Non construit cette session, noté au backlog (voir P22).
+
+---
+
+---
+
 ## 4. Points de vigilance permanents
 
 - **Routing LLM par tier** (depuis le 11 juillet) : `llm_client.py::TASK_TIER_DEFAULTS` fait foi pour le modèle utilisé par défaut selon le type de tâche. Le tier `strict` (rédaction d'articles, génération des journalistes) est actuellement sur `mistral-large-latest`, phase de test délibérée — repasser sur `claude-sonnet-5` au moment du passage en production (une seule ligne à changer). L'override manuel (`LLM_PROVIDER`/`LLM_MODEL` en variable d'environnement, ou le toggle GUI "Forcer ce modèle") garde toujours la priorité absolue sur le tier, pour un test ponctuel sans rien changer au comportement par défaut.
@@ -348,14 +417,17 @@ Carte dashboard renommée **"LLM actif" → "Modèle si forcé"** — l'ancien l
 - **Après tout remplacement d'`app.py`, toujours redémarrer Flask** (`lsof -ti:5000 | xargs kill -9` puis relancer) — un simple remplacement du fichier sur disque ne suffit pas, contrairement aux scripts `generator/` relus à chaque lancement. Cause du bug #23 (sauvegarde "muette" sur Generate series, aucun bug de code).
 - **`scripts_config.json` : formulaire filtré par mode** depuis le 11 juillet (`mode_only`/`config_fields_mode`) — vérifier que tout nouveau champ ajouté à un script multi-modes porte bien le bon `mode_only`, sinon il restera visible sur tous les onglets (confusion vécue avec `scenario_ref`/`--scenario` avant le fix).
 - David privilégie la simplicité : éviter l'accumulation de scripts ponctuels quand une solution plus générale (routing par tier, mécanisme `mode_only` générique, etc.) peut couvrir le même besoin durablement.
+- **`stdin=subprocess.DEVNULL` sur tout `subprocess.Popen()` lancé par le GUI** (depuis le 13 juillet, `_execute_script()` dans `app.py`) — sans ça, le sous-process hérite du tty du terminal ayant lancé Flask, et un `input()` oublié dans un script bloque indéfiniment sans erreur visible (bug #33). Réflexe pour tout nouveau mécanisme de lancement de script ajouté au GUI : vérifier que `stdin` est explicitement fermé.
+- **Collision de nommage possible entre slug de zone et slug d'entité** (ex. `nairobi_crrc` existe des deux côtés — une entité peut porter le nom du lieu réel où elle est basée). Un outil manipulant des slugs de zone doit vérifier `entites/{slug}.md` avant de considérer une correspondance comme une vraie référence de zone, sous peine de faux positifs (vécu en construisant P7, 22 faux positifs sur un grep vault-entier initial).
+- **`origine_reelle` (zones) n'est pas croisé avec le parent** : `enrich_geographie_recursive.py` valide la structure du champ mais jamais sa cohérence géographique réelle contre la zone parente — 4 vraies incohérences trouvées dans le vault le 13 juillet en conséquence (voir §3ter, garde-fou scopé mais pas construit, P22).
 
 ---
 
 ## 5. Prochaine session — ordre recommandé
 
-1. **`routes_dashboard.py`** — vérifier la cohérence avec le renommage "LLM actif" → "Modèle si forcé" (bug #28) ; fichier non fourni pendant la session du 11 juillet, pas vérifié.
-2. **`QUEUE_TEMPLATE`** (`entites_custom/queue.yaml` et `evenements_custom/queue.yaml`) — documenter le champ `zone_hint`, confirmé fonctionnel mais absent de la doc en tête de fichier (bug #31).
-3. **Bug #27** (plausibilité logistique inter-zones) — observer s'il se reproduit sur d'autres tests avant de renforcer `build_system_prompt()`.
-4. **Test de suivi bug #18/#26** — relancer une génération d'article sur `mistral-small` (pas seulement `mistral-large`) avec le pipeline désormais corrigé, pour confirmer si un vrai problème de fiabilité modèle subsiste une fois la cause de code (bug #26) éliminée, ou si le diagnostic du 4-6 juillet doit être révisé plus largement.
-5. Reprendre le reste du backlog : P7 (restructure zones, pas encore codé), P8 (enrichissement des 426 fiches, ~$37 estimé).
+1. **Corriger les 3 incohérences géographiques restantes** trouvées le 13 juillet, avec l'outil P7 désormais disponible : Barcelone-Hub + Corridor ibérique énergétique (`new_sustainability`, actuellement sous `ameriques_reconfigurees`), Nœud Mnemos du Bassin Pannonien (`breakdown`, actuellement sous `arc_eurasien_central`). Cracovie déjà corrigée le 13 juillet.
+2. **Garde-fou `origine_reelle`** (P22, scopé mais pas construit) — décider entre table statique ville→pays ou passe de vérification LLM, puis l'intégrer à `resolve_parents_and_levels()` dans `enrich_geographie_recursive.py`.
+3. **Bug #27** (plausibilité logistique inter-zones) — toujours en observation, voir si ça s'est reproduit depuis le 11 juillet.
+4. **Test de suivi bug #18/#26** — toujours en attente : relancer une génération d'article sur `mistral-small` (pas seulement `mistral-large`) avec le pipeline désormais corrigé, pour confirmer si un vrai problème de fiabilité modèle subsiste une fois la cause de code (bug #26) éliminée.
+5. Reprendre le reste du backlog ⚪ : P8 (enrichissement des 426 fiches `officialise_minimal`, ~$37 estimé — script `enrich_minimal.py` déjà vérifié fonctionnel le 13 juillet), P10 (rapport d'impact étendu aux entités — probablement pas nécessaire, confirmé lors du scoping P7 qu'aucune référence de zone n'existe dans `entites/`), P11 (intégrer `check_zones_coherence.py` au GUI), P20 (frontmatter web), P21 (journaux oraux) — ces deux derniers encore au stade scoping uniquement.
 6. Quand le passage en production sera décidé : basculer le tier `strict` sur `claude-sonnet-5` dans `TASK_TIER_DEFAULTS` (une ligne).

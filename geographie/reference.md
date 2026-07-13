@@ -92,6 +92,7 @@ zones:
   - entite: Argentine
     type_entite: pays
     portion: null
+  - entite: Trinité-et-Tobago
   description: Zone américaine fragmentée entre les États-Unis traversés par une crise
     constitutionnelle majeure (élection contestée du Nouveau Parti Commun en 2055),
     São Paulo comme métropole-monde accueillant un siège rotatif de l'ITA, Valparaíso
@@ -171,7 +172,7 @@ zones:
     allies: []
     rivaux:
     - pacte_des_souverains
-    - corridor_arctique_nordique
+    - corridor_arctique_nordique_testmodif
   sources_attestees:
   - vasil_orentchev_reference
   - siberie_federale_reference
@@ -181,8 +182,8 @@ zones:
   - reseau_hospitalier_hybride_eurasiatique_reference
   - cartel_des_terres_rares_d_asie_centrale_reference
   - factions_eurasiatiques_contre_la_tarification_hydrique_reference
-- slug: corridor_arctique_nordique
-  nom: Corridor Arctique Nordique
+- slug: corridor_arctique_nordique_testmodif
+  nom: Corridor Arctique Nordique testmodif
   niveau: 1
   type: region
   parent: null
@@ -429,9 +430,6 @@ zones:
     type_entite: pays
     portion: null
   - entite: Seychelles
-    type_entite: pays
-    portion: null
-  - entite: Trinité-et-Tobago
     type_entite: pays
     portion: null
   - entite: Barbade
@@ -1359,7 +1357,7 @@ zones:
   nom: Helsinki
   niveau: 2
   type: ville
-  parent: corridor_arctique_nordique
+  parent: corridor_arctique_nordique_testmodif
   origine_reelle:
   - entite: Helsinki
     type_entite: autre
@@ -1496,7 +1494,7 @@ zones:
   nom: Mourmansk
   niveau: 2
   type: ville
-  parent: corridor_arctique_nordique
+  parent: corridor_arctique_nordique_testmodif
   origine_reelle:
   - entite: Mourmansk
     type_entite: autre
@@ -1563,7 +1561,7 @@ zones:
   nom: Nuuk-Capitale
   niveau: 2
   type: ville
-  parent: corridor_arctique_nordique
+  parent: corridor_arctique_nordique_testmodif
   origine_reelle:
   - entite: Nuuk
     type_entite: autre
@@ -1836,7 +1834,7 @@ zones:
   relations:
     allies: []
     rivaux:
-    - corridor_arctique_nordique
+    - corridor_arctique_nordique_testmodif
   sources_attestees:
   - siberie_federale_reference
   - cartel_des_terres_rares_d_asie_centrale_reference
@@ -1903,7 +1901,7 @@ zones:
   nom: Tampere
   niveau: 2
   type: ville
-  parent: corridor_arctique_nordique
+  parent: corridor_arctique_nordique_testmodif
   origine_reelle:
   - entite: Tampere
     type_entite: autre
@@ -1970,7 +1968,7 @@ zones:
   nom: Tromsø
   niveau: 2
   type: ville
-  parent: corridor_arctique_nordique
+  parent: corridor_arctique_nordique_testmodif
   origine_reelle:
   - entite: Tromsø
     type_entite: autre
@@ -2675,11 +2673,11 @@ Bloc structurant les ressources d'Asie centrale (lithium, terres rares, hydrogè
 
 **Tensions internes** : Zones grises entre mégapoles où l'État formel cède la place à des opérateurs para-militaires privés. Cartel des terres rares d'Asie centrale en tension avec les instances de régulation. Réseau hospitalier hybride eurasiatique révélant la fragmentation des services publics. Contestation des zones maritimes arctiques par la Sibérie Fédérale.
 
-**Rivaux** : pacte_des_souverains, corridor_arctique_nordique
+**Rivaux** : pacte_des_souverains, corridor_arctique_nordique_testmodif
 
 *Sources attestées : vasil_orentchev_reference, siberie_federale_reference, bloc_ressources_eurasiatique_bre_reference, operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference, regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference, reseau_hospitalier_hybride_eurasiatique_reference, cartel_des_terres_rares_d_asie_centrale_reference, factions_eurasiatiques_contre_la_tarification_hydrique_reference*
 
-### Corridor Arctique Nordique
+### Corridor Arctique Nordique testmodif
 
 *region — niveau 1 — statut : dominant*
 
@@ -3017,7 +3015,7 @@ Métropole mexicaine abritant une concentration de cliniques cellulaires Nexus B
 
 *Sources attestées : nexus_biosyn_reference*
 
-#### Helsinki — sous [[corridor_arctique_nordique]]
+#### Helsinki — sous [[corridor_arctique_nordique_testmodif]]
 
 *ville — niveau 2 — statut : stable*
 
@@ -3083,7 +3081,7 @@ Zone semi-aride intégrée aux bassins Terrafond, marges de la transition agroé
 
 *Sources attestées : cooperative_terrafond_reference, mouvement_racines_vivantes_reference*
 
-#### Mourmansk — sous [[corridor_arctique_nordique]]
+#### Mourmansk — sous [[corridor_arctique_nordique_testmodif]]
 
 *ville — niveau 2 — statut : stable*
 
@@ -3118,7 +3116,7 @@ Siège du CRRC (Conseil de Régulation des Ressources Critiques, issu des accord
 
 *Sources attestées : conseil_regulation_ressources_reference, amara_diallo_nkosi_reference*
 
-#### Nuuk-Capitale — sous [[corridor_arctique_nordique]]
+#### Nuuk-Capitale — sous [[corridor_arctique_nordique_testmodif]]
 
 *ville — niveau 2 — statut : emergent*
 
@@ -3247,7 +3245,7 @@ Entité fédérale revendiquant des zones d'exclusion maritime arctiques en cont
 
 **Tensions internes** : Contestation des zones maritimes arctiques avec le Corridor Arctique Nordique. Tension avec le cartel des terres rares d'Asie centrale sur le partage des bénéfices d'extraction.
 
-**Rivaux** : corridor_arctique_nordique
+**Rivaux** : corridor_arctique_nordique_testmodif
 
 *Sources attestées : siberie_federale_reference, cartel_des_terres_rares_d_asie_centrale_reference*
 
@@ -3281,7 +3279,7 @@ Dispositif délibératoire sans siège fixe du Pacte des Souverains — les somm
 
 *Sources attestées : alliance_blocs_souverains_reference*
 
-#### Tampere — sous [[corridor_arctique_nordique]]
+#### Tampere — sous [[corridor_arctique_nordique_testmodif]]
 
 *ville — niveau 2 — statut : stable*
 
@@ -3312,7 +3310,7 @@ Ville de la marge eurasiatique servant de relais pour la préservation des savoi
 
 *Sources attestées : reseau_mnemos_reference, regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference*
 
-#### Tromsø — sous [[corridor_arctique_nordique]]
+#### Tromsø — sous [[corridor_arctique_nordique_testmodif]]
 
 *ville — niveau 2 — statut : dominant*
 

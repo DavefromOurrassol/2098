@@ -1,5 +1,5 @@
 # Backlog consolidé — Ourrassol 2098
-*Mis à jour le 11 juillet 2026 — fusionne le backlog historique (P1–P13) et les items de la session du 11 juillet*
+*Mis à jour le 13 juillet 2026 — fusionne le backlog historique et les items des sessions du 11, 12 et 13 juillet*
 
 Légende priorité : 🔴 bloquant/urgent · 🟡 important · 🟢 confort · ⚪ improvisation libre / pas pressé
 
@@ -94,10 +94,9 @@ La liste de 32 pays ci-dessous provenait de `BACKLOG_4juillet.md`, écrit **avan
 
 ---
 
-## P4 🟢 — Test streaming SSE
+## P4 ✅ — Test streaming SSE — CLOS le 13 juillet
 
-- `validate.py --dry-run` depuis le GUI → log SSE visible
-- `enrich_minimal.py --limit 2 --dry-run` → slug_select + streaming
+Testé par David depuis le GUI : `validate.py` (sans flags — n'a jamais eu de `--dry-run`, correction de l'item de backlog lui-même, script lecture seule par nature) et `enrich_minimal.py --limit 2 --dry-run` (formulaire `slug_select` + streaming). Les deux fonctionnent, logs en direct confirmés dans les deux cas.
 
 ---
 
@@ -107,13 +106,19 @@ Croisement systématique des `flag` déclarés côté GUI avec l'`argparse` rée
 
 ---
 
-## P7 ⚪ — Restructure zones (pipeline)
-**Durée : 2–3h — pas encore codé**
+## P7 ✅ — Restructure zones (pipeline) — CLOS le 13 juillet
 
-Outil split/merge/reparent/rename de zones N1 avec propagation complète dans le vault (`instance.localisation.zone`, `event_instance.localisation.zone`, `zones_proposees.yaml`, `parent` dans `geographie/{scenario}.md`, wikilinks éventuels, `registre_evenements.md`).
-*Note : l'onglet Carte gère déjà les bascules pays → zone N1 individuelles avec rapport d'impact ; ce chantier reste nécessaire pour les opérations sur les zones elles-mêmes (fusionner deux zones N1, renommer un slug partout, etc.) — pas couvert par la Carte.*
-Une entrée `restructure_zones` existe déjà dans `scripts_config.json` (sidebar GUI, section maintenance) mais échouera tant que le script n'est pas écrit.
-Questions ouvertes avant de coder : y a-t-il des wikilinks vers des slugs de zones dans le vault ? `registre_evenements.md` référence-t-il des zones ?
+Outil de restructuration de zones construit en 3 étapes, intégré directement dans l'onglet Carte (pas de script CLI séparé — décision prise en cours de scoping, split/merge collant déjà au modèle carte existant, rename/reparent nécessitant une UI dédiée à l'arbre plutôt qu'à la géographie).
+
+**Étape 1 (rename)** : `/api/carte/renommer_zone` + `/api/carte/impact_renommage_zone`. Propage vers `zones[].slug`/`nom`, `zones[].parent` des enfants directs, wikilinks `sous [[...]]`, **`relations.allies`/`rivaux` de n'importe quelle zone du scénario** (pas seulement les enfants — découvert en testant), lignes `**Rivaux**`/`**Alliés**` en texte brut du corps markdown, `instances/*.md`+`event_instances/*.md` (`localisation.zone`), `zones_pays.json`. UI : bouton ✏️ sur chaque zone niveau 1 de la légende carte.
+
+**Étape 2 (reparent)** : `/api/carte/reparent_zone` + `/api/carte/impact_reparent_zone`. Déplace une zone (et tout son sous-arbre) vers un nouveau parent à n'importe quelle profondeur, avec recalcul en cascade du `niveau` (YAML + niveau de titre markdown) sur toute la branche. Anti-cycle intégré. Deux extensions : promotion en zone niveau 1 autonome (`nouveau_parent_slug` vide → `parent: null`) et création d'une nouvelle zone niveau 1 à la volée (`/api/carte/creer_zone_niveau1`, schéma conforme à `enrich_geographie_recursive.py`). UI : arbre hiérarchique en lecture seule (clic sur une zone de la légende → `/api/carte/arbre_zone`) avec bouton "↗️ déplacer" par nœud non-racine.
+
+**Étape 3 (bascules pays)** : la détection (`sous_zones_orphelines` dans `carte_impact()`) existait déjà — seul un bouton d'action manquait. `app.js` uniquement : bouton "↗️ rattacher à {nouvelle_zone}" par sous-zone orpheline détectée dans le rapport d'impact de bascule, appelant directement l'endpoint reparent de l'étape 2.
+
+**Scope initial du backlog en partie obsolète** : `registre_evenements.md` et `zones_proposees.yaml` n'existent pas (retirés du scope). `instance.localisation.zone`/`event_instance.localisation.zone` couverts par l'étape 1. Pas de script `restructure_zones.py` séparé — l'entrée fantôme dans `scripts_config.json` (section maintenance) peut être retirée.
+
+**4 vraies incohérences géographiques trouvées dans le vault en testant** (voir `HANDOFF_CONSOLIDE.md` §3ter pour le détail) : Barcelone-Hub + Corridor ibérique énergétique (`new_sustainability`, sous `ameriques_reconfigurees`) et Nœud Mnemos du Bassin Pannonien (`breakdown`, sous `arc_eurasien_central`) restent à corriger — Cracovie déjà corrigée en direct pendant les tests.
 
 ---
 
@@ -156,10 +161,9 @@ Le délai fixe de 8s entre batches (fix du bug #8, avant l'existence du retry ce
 
 ---
 
-## P10 ⚪ — Rapport d'impact : étendre aux entités
-**Durée : 1h, si besoin avéré**
+## P10 ✅ — Rapport d'impact : étendre aux entités — pas nécessaire, confirmé le 13 juillet
 
-`/api/carte/impact` couvre actuellement `instances/` et `event_instances/` mais pas `entites/` (archétypes, généralement peu liés à un pays précis). À évaluer après usage réel — probablement pas nécessaire si les entités restent génériques.
+Question tranchée pendant le scoping de P7 : grep exhaustif du vault entier pour des wikilinks vers des slugs de zone en dehors de `geographie/{scenario}.md` — zéro résultat légitime (22 faux positifs initiaux, tous des collisions de nommage avec des entités homonymes, confirmées via `entites/{slug}.md`). `entites/` n'a besoin d'aucune propagation liée aux zones. Pas d'action nécessaire.
 
 ---
 
@@ -191,10 +195,9 @@ La partie 1 devrait migrer dans `check_zones_coherence.py --all` (même famille 
 
 ---
 
-## P16 🟢 — Nouveau (11 juillet) — Documenter `zone_hint` dans `QUEUE_TEMPLATE`
-**Durée : 10 min**
+## P16 ✅ — Documenter `zone_hint` dans `QUEUE_TEMPLATE` — CLOS le 13 juillet
 
-`zone_hint` (`entites_custom/queue.yaml` et `evenements_custom/queue.yaml`) est confirmé fonctionnel (ancrage géographique explicite injecté dans le prompt de génération) mais absent du commentaire `QUEUE_TEMPLATE` en tête des deux fichiers — repéré pendant la vérification P6.
+Ajouté au bloc `CHAMPS :` + exemple, sur les deux fichiers concernés : `evenements_custom/queue.yaml` (`inject_custom_events.py`) et `entites_custom/queue.yaml` (`create_entities_and_instances.py`).
 
 ---
 
@@ -205,10 +208,9 @@ Le bug #26 (handoff) a montré que la contamination culturelle observée les 6 e
 
 ---
 
-## P18 🟢 — Nouveau (11 juillet) — Vérifier `routes_dashboard.py` après le renommage "Modèle si forcé"
-**Durée : 10 min**
+## P18 ✅ — Vérifier `routes_dashboard.py` après le renommage "Modèle si forcé" — CLOS le 13 juillet
 
-La carte dashboard "LLM actif" a été renommée "Modèle si forcé" côté `app.js` (bug #28 du handoff, cohérence avec le nouveau routing par tier). `routes_dashboard.py` n'a pas été fourni pendant la session du 11 juillet — à vérifier que le champ `data.llm` qu'il expose reste cohérent avec ce nouveau libellé (il devrait, puisqu'il reflète toujours `gui/config.json`, mais non vérifié).
+Cohérence confirmée sur le point d'origine (`data.llm` reflète `gui/config.json`, cohérent avec le commentaire déjà présent dans `app.js`). **Bug bonus trouvé** (#35) : `import json` manquant dans `routes_dashboard.py`, provoquant un `NameError` sur chaque appel à `/api/dashboard` dès que `_entities_list.json` existe (toujours le cas — 571 entrées) — cassait tout l'endpoint, pas juste la carte Entités. Fix appliqué et confirmé par David sur son GUI réel.
 
 ---
 
@@ -216,6 +218,85 @@ La carte dashboard "LLM actif" a été renommée "Modèle si forcé" côté `app
 **Pas de durée estimée — dépend de la fréquence d'occurrence**
 
 Incohérence de plausibilité logistique détectée sur un article test : un personnage d'une zone alliée lointaine (Pacte Amazônia Viva, Amazonie) décrit comme arrivant par un moyen de transport purement local (pirogue depuis Kisangani, Congo), sans mention de la traversée intercontinentale attendue. Décision prise le 11 juillet : observer si ça se reproduit avant de renforcer `build_system_prompt()` (`prompt_builder.py`) avec une consigne dédiée à la plausibilité des trajets inter-zones. Voir `HANDOFF_CONSOLIDE.md` §3bis, point 3, pour le détail complet.
+
+---
+
+## P20 ⚪ — Nouveau (12 juillet) — Enrichissement frontmatter pour publication web future
+**Scoping fait, pas encore codé**
+
+**Contexte** : anticiper la publication en ligne des articles générés en enrichissant le YAML frontmatter dès la génération, plutôt que de retraiter des centaines de fichiers a posteriori.
+
+**Champs à ajouter au frontmatter des articles** :
+
+| Champ | Description |
+|---|---|
+| `slug` | Identifiant URL-friendly (évite de le dériver du titre à chaque fois, risques de collision/accents) |
+| `chapo` / `excerpt` | Résumé court (2-3 lignes) pour pages de liste et meta description SEO |
+| `image_prompt` | Prompt de génération d'image, produit par le LLM en même temps que l'article |
+| `a_une_photo` | Booléen, **basculé manuellement** — choix éditorial, pas systématique |
+| `image_principale` | Chemin vers l'image générée (rempli en post-traitement) |
+| `image_alt` | Texte alternatif (accessibilité + SEO) |
+| `image_credit` | Traçabilité de la source/du prompt si génération IA |
+| `tags` | Mots-clés distincts de `thematique` (orientés découverte/recherche lecteur) |
+| `journaliste_slug` | Lien vers la fiche auteur (déjà présent dans `journaux.yaml`) |
+| `date_publication` vs `date_evenement` | À distinguer si publication différée / calendrier éditorial |
+| `articles_lies` | Liens vers 2-3 articles connexes — possiblement déductible automatiquement des entités partagées plutôt que généré par le LLM |
+| `zone_principale` | Déjà présent via `localisation`, mais un champ dédié simplifie le filtrage géographique côté front |
+
+**Génération d'images — option retenue (Option 1)** : le LLM génère un `image_prompt` descriptif **au moment de la génération de l'article** (même appel API, cohérence garantie avec le contenu). La décision d'illustrer (`a_une_photo`) reste manuelle et découplée de la génération technique — le prompt est stocké dès la création, réutilisable des semaines plus tard sans repasser par le LLM.
+
+**Implémentation envisagée** :
+1. Instruction dans `prompt_builder.py` pour que le LLM produise systématiquement `image_prompt` (description visuelle neutre : lieu, ambiance, éléments clés), même si non utilisé immédiatement.
+2. `a_une_photo: false` par défaut, basculé à `true` manuellement (ou via script de sélection) par David.
+3. Script séparé `generate_images.py` : scanne les articles `a_une_photo: true` sans `image_principale` renseignée, appelle l'API image, remplit `image_principale` + `image_alt`.
+
+**Question ouverte** : rendu HTML — site statique généré (Hugo/Eleventy-like) à partir des YAML/Markdown, ou moteur de rendu intégré au pipeline Flask existant. Non bloquant pour enrichir le frontmatter dès maintenant.
+
+---
+
+## P21 ⚪ — Nouveau (12 juillet) — Journaux oraux, orateurs itinérants
+**Scoping décidé, pas encore codé**
+
+**Contexte** : pour certains scénarios, des orateurs itinérants informent les communautés en sessions orales plutôt que par écrit — pertinent notamment pour `eco_communalism` et/ou `breakdown`, scénarios où l'infrastructure de diffusion écrite/numérique est dégradée ou volontairement rejetée au profit du lien communautaire direct.
+
+**Scoping décidé** : variante coexistant avec l'écrit au sein d'un même scénario — pas un scénario entier qui bascule en mode oral. Certains journaux d'un scénario donné seront oraux, d'autres resteront écrits.
+
+**Structure technique** :
+- **Journal** : champ `type_diffusion` (`ecrit` / `oral` / `mixte`) sur l'entité journal dans `journaux.yaml`, pour router `prompt_builder.py` vers le bon registre via la logique existante de résolution de profil (`get_journal_profile()` adaptée).
+- **Orateur — entité séparée (Option B décidée, Option A "réutiliser journaliste_slug avec métier élargi" écartée)** : nouveau type d'entité `orateur`, distinct de `journaliste`, avec ses propres attributs — itinérance entre communautés, communautés desservies, réputation orale, possible style rhétorique propre. Implique un nouveau lien dans `journaux.yaml` et une logique de résolution de profil adaptée (variante de `get_journal_profile()`).
+
+**Registre oral dans `prompt_builder.py`** (différences vs écrit) : adresse directe à l'auditoire, formules d'ouverture/clôture ritualisées, répétitions rhétoriques, pas de mise en page journalistique (pas de chapô, pas de sous-titres), structure accroche → développement → appel à l'action ou question ouverte finale, possibilité de call-and-response.
+
+**Champs frontmatter spécifiques aux articles oraux** :
+
+| Champ | Description |
+|---|---|
+| `duree_estimee` | Calibrer la longueur du texte à un temps de parole réaliste |
+| `lieu_diffusion` | Place publique, marché, assemblée... — granularité plus fine que `localisation` |
+| `mode_reception` | Assemblée silencieuse, discussion ouverte, etc. — capture l'ambiance sociale |
+
+---
+
+## P22 ⚪ — Nouveau (13 juillet) — Garde-fou de cohérence géographique via `origine_reelle`
+**Scopé, pas construit**
+
+`enrich_geographie_recursive.py::resolve_parents_and_levels()` valide déjà l'existence du `parent`, détecte les cycles, dédoublonne les slugs — mais ne compare jamais `origine_reelle` de l'enfant contre celui du parent. Le champ `origine_reelle` (déjà obligatoire, structurellement validé par `validate_zone()`) est un bien meilleur signal que des mots-clés sur le nom : une entrée `type_entite: "ville"`/`"region_administrative"` de l'enfant qui n'a aucune trace dans les entrées `pays` de la chaîne de parenté est un signal fort d'incohérence — exactement le motif des 4 anomalies trouvées le 13 juillet (P7).
+
+**Ce qui manque pour construire** : une ville/subdivision comme "Barcelone" ou "Cracovie" ne porte pas de pointeur explicite vers son pays dans les données actuelles. Deux options à trancher :
+1. Petite table statique ville→pays (rapide, gratuit, couverture limitée aux villes courantes)
+2. Passe de vérification LLM dédiée en lot (couverture complète, coût API, plus lent)
+
+Non-bloquant, à intégrer en avertissement (comme le rapport d'impact actuel) plutôt qu'en blocage dur — le taux de faux positifs d'une première heuristique mots-clés (5 sur 9 lors du test du 13 juillet) montre qu'un blocage automatique serait risqué sans un signal plus fiable que le nom/la description.
+
+---
+
+## P23 ⚪ — Nouveau (13 juillet) — Corriger les 3 dernières incohérences géographiques trouvées dans le vault
+**Durée : ~5 min avec l'outil P7 (reparent)**
+
+Trouvées en testant P7, restent à corriger (Cracovie déjà faite en direct pendant les tests) :
+- `barcelone_hub` (Barcelone-Hub — Bureau ibérique de la CMTCA), scénario `new_sustainability`, actuellement sous `ameriques_reconfigurees` — aucune zone Europe/Ibérie n'existe encore dans ce scénario, nécessite l'option "créer une nouvelle zone niveau 1" de l'étape 2 de P7 (déjà utilisée en test avec `peninsule_iberique_autonome`, zone de test à nettoyer ou réutiliser)
+- `corridor_iberique_energetique`, scénario `new_sustainability`, même parent incohérent, même zone cible probable
+- `noeud_mnemos_pannonie` (Nœud Mnemos du Bassin Pannonien), scénario `breakdown`, actuellement sous `arc_eurasien_central` — pas de zone Europe centrale identifiée non plus, à trancher (nouvelle zone, ou rattachement à `geneve_bunker_institutions` comme Cracovie ?)
 
 ---
 
@@ -234,6 +315,12 @@ Incohérence de plausibilité logistique détectée sur un article test : un per
 2. Choisir une zone (manuel ou proposition LLM)
 3. **"🔍 Évaluer l'impact" obligatoire** — rapport sauvegardé dans `documentation/need_action/impact_bascule_{pays}_{scenario}.md`
 4. Le bouton de confirmation n'apparaît qu'après le rapport
+5. **Depuis le 13 juillet (P7 étape 3)** : si le rapport détecte des sous-zones potentiellement orphelines, un bouton "↗️ rattacher à {nouvelle_zone}" par sous-zone permet de les recorriger en un clic, indépendamment de la confirmation de la bascule elle-même
+
+**Restructuration de zones (P7, depuis le 13 juillet)** — dans l'onglet Carte :
+- **Renommer** (slug + nom) : bouton ✏️ sur chaque zone niveau 1 de la légende
+- **Voir l'arbre des sous-zones** (niveau 2/3, pas de représentation carte pour elles) : clic sur le nom/pastille d'une zone niveau 1 dans la légende
+- **Déplacer une sous-zone** (reparent, avec son sous-arbre) : bouton "↗️ déplacer" sur chaque nœud non-racine de l'arbre — permet aussi de promouvoir en zone niveau 1 autonome ou de créer une nouvelle zone niveau 1 à la volée si aucun parent existant ne convient
 
 **Clé API** — `Illegal header value b'Bearer '` → `source ~/.zshrc` avant de relancer un script en terminal (le GUI charge `.env` lui-même).
 

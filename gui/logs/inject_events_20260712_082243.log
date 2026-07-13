@@ -1,0 +1,16 @@
+============================================================
+OURRASSOL 2098 — Injection événements custom
+============================================================
+
+Mode : auto (fourni via --mode)
+
+[1/2] Analyse de la couverture du vault...
+  18 event_instance(s) analysée(s)
+  Variables imposées : valeurs_culture_tempo_sociale
+[2/2] Génération de 1 idée(s) d'événements...
+[llm] Mistral (mistral-large-latest) — entrée : 2878 | sortie : 371
+  ✓ festival_memoire_sahel_numerique — regionale | 2095 | scénarios: ['eco_communalism', 'new_sustainability', 'policy_reform']
+    → Couvre l'Afrique de l'Ouest (zone sous-représentée), introduit un événement culturel/technologique (type rare) et impacte la variable *valeurs_culture_tempo_sociale* (peu couverte).
+
+1 idée(s) ajoutée(s) à /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/evenements_custom/queue.yaml
+→ Inspectez queue.yaml, puis relancez en mode custom pour injecter.

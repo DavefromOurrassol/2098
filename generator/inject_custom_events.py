@@ -1125,11 +1125,18 @@ def build_scenarios_summary_for_auto(scenario_filter=None):
     return "\n".join(lines)
 
 
-def step_auto_generate_ideas(client, n, coverage, scenario_filter=None):
+def step_auto_generate_ideas(client, n, coverage, scenario_filter=None, variables_hint=None):
     """
     Appelle le LLM pour générer N idées d'événements contextualisées
     en fonction des déséquilibres détectés dans le vault.
     Retourne une liste d'idées au format queue.yaml.
+
+    variables_hint : liste optionnelle de variables imposées par l'utilisateur
+    (équivalent du champ "Variables impactées (hint)" du mode custom, mais
+    appliqué à toutes les idées générées plutôt qu'à une seule). Un filtre
+    dur est appliqué après réception (voir run_auto_mode) pour garantir leur
+    présence, la consigne de prompt seule n'étant jamais suffisante (même
+    famille que le bug #34).
     """
     analysis = build_auto_analysis_summary(coverage, scenario_filter)
     scenarios_summary = build_scenarios_summary_for_auto(scenario_filter)
@@ -1139,11 +1146,22 @@ def step_auto_generate_ideas(client, n, coverage, scenario_filter=None):
     if scenario_filter:
         scenario_instruction = f"\nContrainte : les événements doivent impacter le scénario '{scenario_filter}' (ils peuvent aussi impacter d'autres scénarios si cohérent)."
 
+    variables_instruction = ""
+    if variables_hint:
+        variables_instruction = (
+            f"\nContrainte : chaque idée doit impacter au moins une de ces "
+            f"variables imposées par l'utilisateur : {', '.join(variables_hint)}. "
+            f"Inclus-les explicitement dans le champ \"variables_hint\" de "
+            f"chaque idée (tu peux en ajouter d'autres si pertinent, dans la "
+            f"limite du plafond \"variables_hint_count\")."
+        )
+
     existing_cles_txt = "\n".join(f"- {c}" for c in coverage["existing_cles"][:50])
     if not existing_cles_txt:
         existing_cles_txt = "(aucun événement existant)"
 
-    user_content = f"""Tu dois proposer {n} idée(s) d'événements custom pour le projet Ourrassol 2098.
+    user_content = f"""Tu dois proposer EXACTEMENT {n} idée(s) d'événements custom pour le
+projet Ourrassol 2098 — ni plus, ni moins.
 Ces idées seront écrites dans queue.yaml pour être inspectées et injectées en mode custom.
 
 ## ANALYSE DES DÉSÉQUILIBRES DU VAULT
@@ -1158,6 +1176,7 @@ Ces idées seront écrites dans queue.yaml pour être inspectées et injectées 
 ## ÉVÉNEMENTS DÉJÀ EXISTANTS (anti-doublon — ne pas recréer)
 {existing_cles_txt}
 {scenario_instruction}
+{variables_instruction}
 
 ## CONSIGNE
 - Compense les déséquilibres détectés : couvre les zones géographiques sous-représentées,
@@ -1168,7 +1187,8 @@ Ces idées seront écrites dans queue.yaml pour être inspectées et injectées 
 - Diversifie les types, zones et variables entre les idées proposées.
 - Ne recrée pas un événement déjà existant (même thème, même lieu, même période).
 
-Réponds UNIQUEMENT en JSON, sans aucun texte autour, format exact :
+Réponds UNIQUEMENT en JSON, sans aucun texte autour, format exact, avec
+exactement {n} élément(s) dans "idees" :
 {{
   "idees": [
     {{
@@ -1193,24 +1213,46 @@ Réponds UNIQUEMENT en JSON, sans aucun texte autour, format exact :
     return result.get("idees", [])
 
 
-def run_auto_mode(client, dry_run, n=None, scenario_filter=None):
+def run_auto_mode(client, dry_run, n=None, scenario_filter=None, variables_hint=None):
     """Mode auto : analyse le vault, génère des idées, les ajoute à queue.yaml."""
+    # Garde-fou général : un input() ne doit JAMAIS se déclencher hors d'un
+    # vrai terminal. Avant ce fix, --n et --scenario laissés à None (ex:
+    # champ GUI optionnel non renseigné, ou valeur par défaut effacée)
+    # retombaient sur input() malgré --mode/--n déjà couverts par ailleurs —
+    # blocage silencieux garanti en subprocess.Popen sans stdin connecté
+    # (même famille que les bugs --mode/--n/--scenario du 11 juillet 2026,
+    # cette fois sur le cas où le champ optionnel est vide côté GUI plutôt
+    # que le flag absent). sys.stdin.isatty() distingue lancement CLI direct
+    # (prompts utiles) de lancement GUI/cron (aucun prompt, valeurs par
+    # défaut silencieuses).
+    interactive = sys.stdin.isatty()
+
     if n is None:
-        raw_n = input("Nombre d'idées à générer ? [défaut: 3] : ").strip()
-        try:
-            n = int(raw_n) if raw_n else 3
-            if n < 1:
+        if interactive:
+            raw_n = input("Nombre d'idées à générer ? [défaut: 3] : ").strip()
+            try:
+                n = int(raw_n) if raw_n else 3
+                if n < 1:
+                    n = 3
+            except ValueError:
                 n = 3
-        except ValueError:
+        else:
             n = 3
 
     if scenario_filter is None:
-        scenario_raw = input(
-            "Scénario ciblé ? (Entrée pour laisser le LLM choisir) [{}] : ".format(
-                "|".join(SCENARIOS)
-            )
-        ).strip()
-        scenario_filter = scenario_raw if scenario_raw in SCENARIOS else None
+        if interactive:
+            scenario_raw = input(
+                "Scénario ciblé ? (Entrée pour laisser le LLM choisir) [{}] : ".format(
+                    "|".join(SCENARIOS)
+                )
+            ).strip()
+            scenario_filter = scenario_raw if scenario_raw in SCENARIOS else None
+        # sinon : reste None, pas de contrainte de scénario — comportement
+        # équivalent à "Entrée" en interactif.
+
+    # --variables-hint n'a jamais eu de fallback input() (voir plus haut) —
+    # None == pas de contrainte, cohérent qu'on soit en tty ou non.
+    variables_hint = [v for v in (variables_hint or []) if v in VALID_VARS] or None
 
     print("\n[1/2] Analyse de la couverture du vault...")
     coverage = analyze_vault_coverage()
@@ -1219,13 +1261,40 @@ def run_auto_mode(client, dry_run, n=None, scenario_filter=None):
     print(f"  {n_evt} event_instance(s) analysée(s)")
     if scenario_filter:
         print(f"  Filtre scénario : {scenario_filter}")
+    if variables_hint:
+        print(f"  Variables imposées : {', '.join(variables_hint)}")
 
     print(f"[2/2] Génération de {n} idée(s) d'événements...")
-    ideas = step_auto_generate_ideas(client, n, coverage, scenario_filter)
+    ideas = step_auto_generate_ideas(client, n, coverage, scenario_filter, variables_hint)
 
     if not ideas:
         print("Aucune idée générée — vérifier la réponse du LLM.")
         return
+
+    # Filtre dur : même bug que create_entities_and_instances.py (11 juillet
+    # 2026) — la consigne de prompt ("génère N idées") n'est qu'indicative,
+    # le LLM peut la dépasser. Ici : --n 1 demandé, 5 idées reçues sur un
+    # run réel.
+    if len(ideas) != n:
+        print(f"  ⚠ {len(ideas)} idée(s) reçue(s) au lieu de {n} demandée(s) "
+              f"— troncature au nombre exact demandé.")
+        ideas = ideas[:n]
+
+    # Filtre dur (même famille que le bug #34) : la consigne de prompt sur
+    # les variables imposées n'est qu'indicative — on garantit leur présence
+    # dans le variables_hint de chaque idée plutôt que de faire confiance
+    # au LLM, en préservant ce que le LLM a lui-même proposé en plus.
+    if variables_hint:
+        for idea in ideas:
+            existing = idea.get("variables_hint") or []
+            if isinstance(existing, str):
+                existing = [existing]
+            existing = [v for v in existing if v in VALID_VARS]
+            merged = list(dict.fromkeys(variables_hint + existing))
+            idea["variables_hint"] = merged
+            count = idea.get("variables_hint_count") or 2
+            if count < len(merged):
+                idea["variables_hint_count"] = min(4, len(merged))
 
     # Nettoyer le champ rationale (informatif uniquement, pas dans la queue)
     queue_ideas = []
@@ -1359,6 +1428,12 @@ def main():
                               "(pas une contrainte dure — le LLM peut aussi proposer "
                               "d'autres scénarios en plus si cohérent). Sans effet en "
                               "mode custom.")
+    parser.add_argument("--variables-hint", nargs="+", choices=VALID_VARS, default=None,
+                         help="Mode auto uniquement : variables systémiques imposées, "
+                              "garanties présentes dans le variables_hint de chaque idée "
+                              "générée (équivalent du champ du mode custom, appliqué à "
+                              "toutes les idées du lot). Si omis, le LLM choisit "
+                              "librement. Sans effet en mode custom.")
     args = parser.parse_args()
 
     print("=" * 60)
@@ -1374,6 +1449,14 @@ def main():
     # quand lancé depuis app.py (subprocess.Popen sans stdin connecté).
     mode = args.mode
     if mode is None:
+        if not sys.stdin.isatty():
+            # Contrairement à --n/--scenario, pas de défaut silencieux
+            # raisonnable ici : "custom" et "auto" ont des effets très
+            # différents (injection directe vs simple suggestion). Deviner
+            # serait plus dangereux qu'un échec explicite.
+            print("\n[ERREUR] --mode requis (custom|auto) hors terminal interactif "
+                  "— aucun défaut silencieux possible entre ces deux modes.")
+            sys.exit(1)
         mode = input("\nMode : custom ou auto ? [custom/auto] : ").strip().lower()
         while mode not in ("custom", "auto"):
             mode = input("Réponds 'custom' ou 'auto' : ").strip().lower()
@@ -1388,7 +1471,8 @@ def main():
         # 2 input() non couverts (nombre d'idées, scénario ciblé), bloquant
         # silencieusement tout lancement depuis le GUI.
         run_auto_mode(client, dry_run=args.dry_run, n=args.n,
-                       scenario_filter=args.scenario)
+                       scenario_filter=args.scenario,
+                       variables_hint=args.variables_hint)
 
 
 if __name__ == "__main__":

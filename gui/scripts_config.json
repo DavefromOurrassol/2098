@@ -885,6 +885,28 @@
         "mode_only": "auto"
       },
       {
+        "flag": "--variables-hint",
+        "type": "multi_select",
+        "label": "Variables impactées (hint, mode auto)",
+        "choices": [
+          { "value": "systeme_economique_redistribution", "label": "systeme_economique_redistribution" },
+          { "value": "gouvernance_institutions", "label": "gouvernance_institutions" },
+          { "value": "geopolitique_conflits", "label": "geopolitique_conflits" },
+          { "value": "valeurs_culture_tempo_sociale", "label": "valeurs_culture_tempo_sociale" },
+          { "value": "organisation_territoires", "label": "organisation_territoires" },
+          { "value": "sante_biotechnologies", "label": "sante_biotechnologies" },
+          { "value": "frontieres_du_systeme", "label": "frontieres_du_systeme" },
+          { "value": "technologie_information", "label": "technologie_information" },
+          { "value": "climat_environnement_global", "label": "climat_environnement_global" },
+          { "value": "energie_ressources_critiques", "label": "energie_ressources_critiques" },
+          { "value": "demographie_mobilite_humaine", "label": "demographie_mobilite_humaine" },
+          { "value": "systemes_productifs_travail", "label": "systemes_productifs_travail" }
+        ],
+        "optional": true,
+        "description": "Optionnel — le LLM choisit librement si vide. Imposées dans le variables_hint de chaque idée générée.",
+        "mode_only": "auto"
+      },
+      {
         "flag": "--dry-run",
         "type": "checkbox",
         "label": "Dry run",

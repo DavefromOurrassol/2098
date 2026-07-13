@@ -15,6 +15,7 @@ différé) plutôt qu'en tête de fichier, pour éviter l'import circulaire
 chargement — seulement au moment de l'appel, quand app.py est déjà chargé).
 """
 
+import json
 import re
 from pathlib import Path
 

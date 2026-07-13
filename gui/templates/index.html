@@ -21,6 +21,45 @@
     .carte-sidebar { width: 300px; flex-shrink: 0; display: flex; flex-direction: column; gap: 12px; overflow-y: auto; }
     .carte-legend { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 10px; font-size: 11px; }
     .carte-legend-item { display: flex; align-items: center; gap: 6px; padding: 2px 0; }
+    .carte-legend-rename-btn {
+      margin-left: auto; border: none; background: transparent; cursor: pointer;
+      font-size: 10px; opacity: 0.4; padding: 2px 4px; border-radius: 3px;
+    }
+    .carte-legend-rename-btn:hover { opacity: 1; background: #eee; }
+
+    .arbre-zone-branch { position: relative; }
+    .arbre-zone-node-row {
+      display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap;
+      padding: 4px 0; position: relative;
+    }
+    .arbre-zone-children {
+      margin-left: 9px; padding-left: 13px;
+      border-left: 1.5px solid #dde3ee;
+    }
+    .arbre-zone-children > .arbre-zone-branch > .arbre-zone-node-row::before {
+      content: ""; position: absolute; left: -13px; top: 13px;
+      width: 11px; height: 1.5px; background: #dde3ee;
+    }
+    .arbre-zone-nom { color: #222; }
+    .arbre-zone-slug { color: #aaa; font-family: 'JetBrains Mono', monospace; font-size: 10px; }
+    .arbre-niveau-1 .arbre-zone-nom, .arbre-zone-node-row.arbre-niveau-1 .arbre-zone-nom {
+      font-weight: 700; font-size: 13px;
+    }
+    .arbre-zone-node-row.arbre-niveau-2 .arbre-zone-nom { font-weight: 600; font-size: 11px; }
+    .arbre-zone-node-row.arbre-niveau-3 .arbre-zone-nom { font-weight: 400; font-size: 11px; color: #555; }
+    .arbre-zone-move-btn {
+      margin-left: auto; border: 1px solid #dde3ee; background: #fff; cursor: pointer;
+      font-size: 9px; padding: 2px 6px; border-radius: 3px; color: #3b6fd4;
+    }
+    .arbre-zone-move-btn:hover { background: #eef4fa; }
+    .arbre-zone-type {
+      background: #eef4fa; color: #3b6fd4; border-radius: 3px;
+      padding: 1px 5px; font-size: 9px; text-transform: uppercase;
+    }
+    .arbre-zone-statut {
+      background: #f5f0e0; color: #8a6d10; border-radius: 3px;
+      padding: 1px 5px; font-size: 9px;
+    }
     .carte-legend-swatch { width: 12px; height: 12px; border-radius: 2px; flex-shrink: 0; }
     .carte-panel { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 12px; font-size: 12px; }
     .carte-panel-empty { color: #999; font-style: italic; }

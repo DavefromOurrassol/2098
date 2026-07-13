@@ -76,7 +76,7 @@ tensions_narratives: 'La tension la plus profonde du Conseil oppose ses membres 
   nordique sur l''accueil et l''intégration.'
 date_creation: 2026-06-20
 localisation:
-  zone: corridor_arctique_nordique
+  zone: corridor_arctique_nordique_testmodif
   lieu: Helsinki / Nuuk (siège rotatif)
   type_lieu: ville
 ---

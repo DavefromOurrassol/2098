@@ -257,9 +257,6 @@ zones:
   - entite: Autriche
     type_entite: pays
     portion: null
-  - entite: Pologne
-    type_entite: pays
-    portion: null
   - entite: Hongrie
     type_entite: pays
     portion: null
@@ -478,6 +475,12 @@ zones:
   - entite: Danemark (Groenland)
     type_entite: pays
     portion: null
+  - entite: Arctique
+    type_entite: pays
+    portion: null
+  - entite: Groenland
+    type_entite: pays
+    portion: null
   description: Zone arctique déglacialisée contrôlée de facto par le Konsortiet Nordark,
     une puissance logistique privée opérant depuis le 'nœud Nordark' de Tromsø. Ni
     État ni simple entreprise, Nordark fixe les prix de passage, lève ses propres
@@ -658,6 +661,7 @@ zones:
   - entite: Vatican
     type_entite: pays
     portion: null
+  - entite: Pologne
   description: Genève subsiste en 2098 comme lieu physique de survie des institutions
     internationales fantômes — le Bureau de Coordination d'Urgence Climatique (vestige
     de l'AMSC) dans une tour à moitié abandonnée, les Archives Neutres de Genève-Bunker
