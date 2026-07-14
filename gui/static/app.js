@@ -2177,6 +2177,8 @@ const CarteState = {
   zonesN1: [],          // [{slug,nom,description,color}]
   scenario: null,
   zoneSurlignee: null,  // slug niveau 1 actuellement mis en évidence sur la carte (ou null)
+  searchDebounceTimer: null,
+  origineReelleParSlug: {},  // slug -> origine_reelle, reconstruit à chaque ouverture d'arbre (split)
 };
 
 function _normEn(s) {
@@ -2208,6 +2210,8 @@ async function loadCarte() {
 
   if (!CarteState.map) initLeafletMap();
   if (!CarteState.rawGeojson) await loadWorldGeojson();
+
+  initCarteSearch();
 
   await refreshCarte();
   // Leaflet a besoin d'un recalcul de taille si le conteneur était display:none au moment de l'init
@@ -2384,6 +2388,99 @@ function renderCarteLayer() {
   }
 }
 
+/**
+ * Recherche de zone tous niveaux (14 juillet 2026) : la légende et la carte
+ * n'affichent que les zones niveau 1 (voir renderCarteLegend / zones_n1 côté
+ * backend) -- une zone niveau 2/3 comme delta_rhone_fermes_verticales reste
+ * invisible tant qu'on n'a pas ouvert l'arbre de SA racine N1, qui n'est pas
+ * forcément son parent immédiat. Ce champ cherche tous niveaux via
+ * /api/carte/rechercher_zone et ouvre directement le bon arbre au clic.
+ */
+function initCarteSearch() {
+  const input = document.getElementById('carte-search-input');
+  if (!input || input.dataset.bound) return;
+  input.dataset.bound = '1';
+
+  input.addEventListener('input', () => {
+    clearTimeout(CarteState.searchDebounceTimer);
+    const q = input.value.trim();
+    const resultsEl = document.getElementById('carte-search-results');
+    if (q.length < 2) {
+      resultsEl.innerHTML = '';
+      resultsEl.style.display = 'none';
+      return;
+    }
+    CarteState.searchDebounceTimer = setTimeout(() => _carteRechercherZone(q), 250);
+  });
+
+  document.addEventListener('click', (e) => {
+    const resultsEl = document.getElementById('carte-search-results');
+    if (resultsEl && !e.target.closest('.carte-search')) {
+      resultsEl.style.display = 'none';
+    }
+  });
+}
+
+async function _carteRechercherZone(q) {
+  const resultsEl = document.getElementById('carte-search-results');
+  try {
+    const res = await fetch(
+      `/api/carte/rechercher_zone?scenario=${encodeURIComponent(CarteState.scenario)}&q=${encodeURIComponent(q)}`
+    );
+    const data = await res.json();
+    if (data.error) {
+      resultsEl.innerHTML = `<div class="carte-search-empty">${data.error}</div>`;
+      resultsEl.style.display = 'block';
+      return;
+    }
+    if (!data.resultats.length) {
+      resultsEl.innerHTML = `<div class="carte-search-empty">Aucune zone trouvée.</div>`;
+      resultsEl.style.display = 'block';
+      return;
+    }
+    resultsEl.innerHTML = data.resultats.map(r => {
+      const cheminLabel = r.chemin.map(c => c.nom).join(' › ');
+      return `
+        <div class="carte-search-result" data-slug="${r.slug}">
+          <span class="carte-search-result-nom">${r.nom}</span>
+          <span class="carte-search-result-niveau">N${r.niveau}</span>
+          <div class="carte-search-result-chemin">${cheminLabel}</div>
+        </div>`;
+    }).join('');
+    resultsEl.style.display = 'block';
+
+    resultsEl.querySelectorAll('.carte-search-result').forEach((el, i) => {
+      el.addEventListener('click', () => _carteSelectionnerResultatRecherche(data.resultats[i]));
+    });
+  } catch (e) {
+    resultsEl.innerHTML = `<div class="carte-search-empty">Erreur réseau : ${e.message}</div>`;
+    resultsEl.style.display = 'block';
+  }
+}
+
+/**
+ * Ouvre la racine N1 du résultat choisi (seule vue possible, voir
+ * openArbreZonePanel) puis surligne et centre la zone recherchée dans
+ * l'arbre déplié -- évite d'avoir à deviner/remonter la chaîne à la main
+ * (cas réel du 14 juillet : delta_rhone_fermes_verticales, niveau 3, dont
+ * le parent immédiat corridor_iberique_energetique n'est lui-même pas la
+ * racine attendue).
+ */
+async function _carteSelectionnerResultatRecherche(resultat) {
+  document.getElementById('carte-search-results').style.display = 'none';
+  document.getElementById('carte-search-input').value = resultat.nom;
+
+  const racineSlug = (resultat.chemin && resultat.chemin[0] && resultat.chemin[0].slug) || resultat.slug;
+  await openArbreZonePanel(racineSlug);
+
+  const noeud = document.querySelector(`#arbre-zone-tree [data-slug="${CSS.escape(resultat.slug)}"]`);
+  if (noeud) {
+    noeud.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    noeud.classList.add('surlignee-recherche');
+    setTimeout(() => noeud.classList.remove('surlignee-recherche'), 2500);
+  }
+}
+
 function renderCarteLegend() {
   const legendEl = document.getElementById('carte-legend');
   legendEl.innerHTML = CarteState.zonesN1.map(z => {
@@ -2453,6 +2550,16 @@ async function openArbreZonePanel(slug) {
     document.getElementById('arbre-zone-tree').querySelectorAll('.arbre-zone-move-btn').forEach(btn => {
       btn.addEventListener('click', () => _ouvrirReparentPanel(btn.dataset.slug, btn.dataset.nom));
     });
+
+    CarteState.origineReelleParSlug = {};
+    (function indexer(node) {
+      CarteState.origineReelleParSlug[node.slug] = node.origine_reelle || [];
+      (node.enfants || []).forEach(indexer);
+    })(data.arbre);
+
+    document.getElementById('arbre-zone-tree').querySelectorAll('.arbre-zone-split-btn').forEach(btn => {
+      btn.addEventListener('click', () => _ouvrirSplitPanel(btn.dataset.slug, btn.dataset.nom));
+    });
   } catch (e) {
     panel.innerHTML = `<div class="carte-panel-error">Erreur réseau : ${e.message}</div>`;
   }
@@ -2470,8 +2577,12 @@ function _renderArbreNode(node, estRacine) {
   if (!estRacine) {
     html += `<button class="arbre-zone-move-btn" data-slug="${node.slug}" data-nom="${node.nom.replace(/"/g, '&quot;')}" title="Déplacer vers un autre parent">↗️ déplacer</button>`;
   }
+  if ((node.origine_reelle || []).length > 1) {
+    html += `<button class="arbre-zone-split-btn" data-slug="${node.slug}" data-nom="${node.nom.replace(/"/g, '&quot;')}" title="Sortir un ou plusieurs pays de cette zone vers une autre">✂️ scinder</button>`;
+  }
   html += `</div>`;
   html += `<div id="reparent-panel-${node.slug}"></div>`;
+  html += `<div id="split-panel-${node.slug}"></div>`;
 
   if (node.enfants && node.enfants.length) {
     html += `<div class="arbre-zone-children">`;
@@ -2699,6 +2810,178 @@ async function _carteReparentZone(slug, nouveauParentSlug) {
     if (data.ok) {
       if (msg) msg.textContent = `✓ "${data.ancien_nom}" déplacée (niveau ${data.nouveau_niveau}, ` +
         `${data.descendants_maj} descendant(s) recalculé(s))`;
+      await openArbreZonePanel(CarteState.zoneSurlignee);
+    } else if (reportEl) {
+      reportEl.innerHTML = `<div class="carte-panel-error">Erreur : ${data.error}</div>`;
+    }
+  } catch (e) {
+    if (reportEl) reportEl.innerHTML = `<div class="carte-panel-error">Erreur réseau : ${e.message}</div>`;
+  }
+}
+
+/**
+ * Panneau de split de zone (P7 étape 4, 14 juillet 2026) : sort un ou
+ * plusieurs pays de origine_reelle vers une nouvelle zone niveau 1 ou une
+ * zone niveau 1 existante. Les sous-zones dont la PROPRE origine_reelle
+ * référence aussi ce(s) pays suivent automatiquement côté backend --
+ * rien à choisir ici, c'est détecté, pas décidé dans ce panneau (voir
+ * _apply_split_zone dans app.py).
+ */
+function _ouvrirSplitPanel(slug, nom) {
+  const container = document.getElementById(`split-panel-${slug}`);
+  if (!container) return;
+
+  if (container.dataset.open === '1') {
+    container.innerHTML = '';
+    container.dataset.open = '0';
+    return;
+  }
+
+  const origineReelle = CarteState.origineReelleParSlug[slug] || [];
+  container.dataset.open = '1';
+
+  // Valeur de chaque case = premier token de l'entité (avant parenthèse/virgule) --
+  // suffit de cocher UNE formulation, le backend retrouve les autres variantes du
+  // même pays via tokenisation complète (ex. cocher "Groenland" retrouve aussi
+  // "Danemark (Groenland)" dans la même zone, voir _entite_references_pays).
+  const checkboxes = origineReelle.map(o => {
+    const premierToken = (o.entite || '').split(/[(,]/)[0].trim().toLowerCase();
+    return `
+      <label style="display:block;font-size:11px;margin:2px 0">
+        <input type="checkbox" class="split-pays-checkbox-${slug}" value="${premierToken}">
+        ${o.entite}
+      </label>`;
+  }).join('');
+
+  container.innerHTML = `
+    <div class="carte-panel-proposal-box" style="margin:4px 0 8px 16px">
+      <label style="font-size:10px;color:#666">Pays à sortir de "${nom}"</label>
+      <div style="margin:6px 0">${checkboxes}</div>
+      <label style="font-size:10px;color:#666">Destination</label>
+      <select id="split-cible-select-${slug}" style="width:100%;font-size:11px;padding:4px;margin:4px 0">
+        <option value="__creer__">+ Créer une nouvelle zone niveau 1…</option>
+        <option value="__existante__">→ Ajouter à une zone niveau 1 existante…</option>
+      </select>
+      <div id="split-cible-form-${slug}"></div>
+      <button id="split-impact-btn-${slug}" class="yaml-btn" style="margin-top:4px">🔍 Évaluer l'impact</button>
+      <div id="split-impact-report-${slug}"></div>
+    </div>
+  `;
+
+  const cibleSelect = document.getElementById(`split-cible-select-${slug}`);
+  const majFormCible = () => {
+    const formEl = document.getElementById(`split-cible-form-${slug}`);
+    if (cibleSelect.value === '__existante__') {
+      formEl.innerHTML = `
+        <div style="border:1px solid #dde3ee;border-radius:4px;padding:8px;margin-top:6px;font-size:10px">
+          <input type="text" id="split-existant-slug-${slug}" placeholder="slug de la zone niveau 1 existante"
+                 style="width:100%;padding:3px;font-family:'JetBrains Mono',monospace">
+        </div>`;
+    } else {
+      formEl.innerHTML = `
+        <div style="border:1px solid #dde3ee;border-radius:4px;padding:8px;margin-top:6px;font-size:10px">
+          <input type="text" id="split-nouveau-slug-${slug}" placeholder="slug_nouvelle_zone (minuscules_underscores)"
+                 style="width:100%;padding:3px;margin-bottom:4px;font-family:'JetBrains Mono',monospace">
+          <input type="text" id="split-nouveau-nom-${slug}" placeholder="Nom affiché"
+                 style="width:100%;padding:3px;margin-bottom:4px">
+          <select id="split-nouveau-type-${slug}" style="width:100%;padding:3px;margin-bottom:4px">
+            ${['bloc_continental','union_regionale','territoire_autonome','territoire_herite','region','ville','infrastructure','site_strategique','zone_sinistree','autre']
+              .map(t => `<option value="${t}">${t}</option>`).join('')}
+          </select>
+          <select id="split-nouveau-statut-${slug}" style="width:100%;padding:3px;margin-bottom:4px">
+            ${['dominant','stable','fragmenté','en_declin','disparu','emergent']
+              .map(t => `<option value="${t}">${t}</option>`).join('')}
+          </select>
+          <textarea id="split-nouveau-desc-${slug}" placeholder="Description courte (optionnel)"
+                    style="width:100%;padding:3px;margin-bottom:4px;font-size:10px" rows="2"></textarea>
+        </div>`;
+    }
+  };
+  cibleSelect.addEventListener('change', majFormCible);
+  majFormCible();
+
+  document.getElementById(`split-impact-btn-${slug}`).addEventListener('click', () => {
+    const pays = Array.from(document.querySelectorAll(`.split-pays-checkbox-${slug}:checked`)).map(cb => cb.value);
+    if (!pays.length) { alert('Coche au moins un pays à sortir.'); return; }
+
+    let cible;
+    if (cibleSelect.value === '__existante__') {
+      const slugExistant = document.getElementById(`split-existant-slug-${slug}`).value.trim();
+      if (!slugExistant) { alert('Slug de la zone existante requis.'); return; }
+      cible = { mode: 'zone_existante', slug_existant: slugExistant };
+    } else {
+      const cibleSlug = document.getElementById(`split-nouveau-slug-${slug}`).value.trim();
+      const cibleNom = document.getElementById(`split-nouveau-nom-${slug}`).value.trim();
+      const cibleType = document.getElementById(`split-nouveau-type-${slug}`).value;
+      const cibleStatut = document.getElementById(`split-nouveau-statut-${slug}`).value;
+      const cibleDesc = document.getElementById(`split-nouveau-desc-${slug}`).value.trim();
+      if (!cibleSlug || !cibleNom) { alert('Slug et nom de la nouvelle zone requis.'); return; }
+      cible = { mode: 'nouvelle_zone_n1', slug: cibleSlug, nom: cibleNom, type: cibleType, statut: cibleStatut, description: cibleDesc };
+    }
+
+    _carteImpactSplit(slug, pays, cible, document.getElementById(`split-impact-report-${slug}`));
+  });
+}
+
+async function _carteImpactSplit(slug, pays, cible, container) {
+  container.innerHTML = '<div class="carte-status">Analyse en cours…</div>';
+  try {
+    const res = await fetch('/api/carte/impact_split_zone', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ scenario: CarteState.scenario, slug_source: slug, pays_a_extraire: pays, cible }),
+    });
+    const r = await res.json();
+    if (r.error) {
+      container.innerHTML = `<div class="carte-panel-error">Erreur : ${r.error}</div>`;
+      return;
+    }
+
+    let html = `<div style="margin-top:6px">`;
+    html += `<div><strong>${r.source.nom}</strong> : ${r.source.origine_reelle_avant.length} → ` +
+      `${r.source.origine_reelle_apres.length} entrée(s) dans origine_reelle</div>`;
+    html += `<div style="margin-top:4px">Entités extraites : ${r.entites_extraites.map(e => e.entite).join(', ')}</div>`;
+    html += `<div style="margin-top:4px">Destination : ${r.cible.nom} ` +
+      `(${r.cible.mode === 'nouvelle_zone_n1' ? 'nouvelle zone' : 'zone existante'})</div>`;
+
+    if (r.enfants_qui_suivront.length) {
+      html += `<div style="margin-top:6px"><strong>${r.enfants_qui_suivront.length} sous-zone(s) suivent automatiquement</strong> ` +
+        `(leur propre origine_reelle référence aussi ce(s) pays) :</div>`;
+      html += '<ul style="margin:4px 0;padding-left:16px;font-size:10px">' +
+        r.enfants_qui_suivront.map(e => `<li>${e.nom}</li>`).join('') + '</ul>';
+    }
+    if (r.enfants_qui_restent.length) {
+      html += `<div style="margin-top:6px;color:#888">${r.enfants_qui_restent.length} autre(s) sous-zone(s) restent en place ` +
+        `(non liées au(x) pays extrait(s)).</div>`;
+    }
+
+    html += `<button id="split-confirm-btn-${slug}" class="yaml-btn" style="margin-top:8px;font-weight:700">✓ Confirmer le split</button>`;
+    html += `</div>`;
+    container.innerHTML = html;
+
+    document.getElementById(`split-confirm-btn-${slug}`).addEventListener('click', () => {
+      _carteSplitZone(slug, pays, cible);
+    });
+  } catch (e) {
+    container.innerHTML = `<div class="carte-panel-error">Erreur réseau : ${e.message}</div>`;
+  }
+}
+
+async function _carteSplitZone(slug, pays, cible) {
+  const reportEl = document.getElementById(`split-impact-report-${slug}`);
+  if (reportEl) reportEl.innerHTML = '<div class="carte-status">Split en cours…</div>';
+  try {
+    const res = await fetch('/api/carte/split_zone', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ scenario: CarteState.scenario, slug_source: slug, pays_a_extraire: pays, cible }),
+    });
+    const data = await res.json();
+    const msg = document.getElementById('carte-panel-msg');
+    if (data.ok) {
+      if (msg) msg.textContent = `✓ Split effectué : ${data.entites_deplacees} entité(s) → "${data.cible.nom}"` +
+        (data.enfants_reparentes_automatiquement.length
+          ? `, ${data.enfants_reparentes_automatiquement.length} sous-zone(s) suivie(s)` : '');
       await openArbreZonePanel(CarteState.zoneSurlignee);
     } else if (reportEl) {
       reportEl.innerHTML = `<div class="carte-panel-error">Erreur : ${data.error}</div>`;

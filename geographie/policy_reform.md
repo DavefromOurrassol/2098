@@ -286,6 +286,8 @@ zones:
     type_entite: pays
     portion: null
   - entite: Groenland
+    type_entite: pays
+    portion: null
   - entite: Arctique
     type_entite: pays
     portion: null
@@ -407,6 +409,8 @@ zones:
     type_entite: pays
     portion: null
   - entite: Sénégal
+    type_entite: pays
+    portion: null
   - entite: Gambie
     type_entite: pays
     portion: null
@@ -1475,7 +1479,7 @@ zones:
   nom: Nuuk (siège du KNSF-AGRC)
   niveau: 2
   type: ville
-  parent: ameriques_reformees
+  parent: europe_nord_ouest
   origine_reelle:
   - entite: Nuuk
     type_entite: region_administrative
@@ -2958,7 +2962,7 @@ Siège rotatif du CRTI (alternant avec Rotterdam et Chengdu tous les sept ans), 
 
 *Sources attestées : assemblee_territoires_policy_reform, trame_bioclimatique_policy_reform, institut_de_therapeutique_integree_de_nairobi_policy_reform, institut_de_modelisation_hydrologique_de_kinshasa_policy_reform*
 
-#### Nuuk (siège du KNSF-AGRC) — sous [[ameriques_reformees]]
+#### Nuuk (siège du KNSF-AGRC) — sous [[europe_nord_ouest]]
 
 *ville — niveau 2 — statut : emergent*
 

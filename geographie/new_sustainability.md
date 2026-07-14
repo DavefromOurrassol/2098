@@ -56,7 +56,11 @@ zones:
     type_entite: pays
     portion: null
   - entite: Burkina Faso
+    type_entite: pays
+    portion: null
   - entite: Nigeria
+    type_entite: pays
+    portion: null
   - entite: Égypte
     type_entite: pays
     portion: null
@@ -406,6 +410,8 @@ zones:
     type_entite: pays
     portion: null
   - entite: Corée du Sud
+    type_entite: pays
+    portion: null
   - entite: Bosnie-Herzégovine
     type_entite: pays
     portion: null
@@ -707,6 +713,8 @@ zones:
     type_entite: pays
     portion: null
   - entite: Cambodge
+    type_entite: pays
+    portion: null
   - entite: Chypre
     type_entite: pays
     portion: null
@@ -809,6 +817,8 @@ zones:
     type_entite: pays
     portion: null
   - entite: Vietnam
+    type_entite: pays
+    portion: null
   - entite: Népal
     type_entite: pays
     portion: null
@@ -980,9 +990,17 @@ zones:
     type_entite: pays
     portion: null
   - entite: Portugal
+    type_entite: pays
+    portion: null
   - entite: Espagne
+    type_entite: pays
+    portion: null
   - entite: France
+    type_entite: pays
+    portion: null
   - entite: Belgique
+    type_entite: pays
+    portion: null
   - entite: Irlande
     type_entite: pays
     portion: null
@@ -1244,7 +1262,7 @@ zones:
   nom: Bruxelles — Tribunal de Gouvernance Algorithmique
   niveau: 2
   type: ville
-  parent: centre_institutionnel_geneve
+  parent: union_nordique_europe_nord
   origine_reelle:
   - entite: Bruxelles
     type_entite: region_administrative
@@ -2305,8 +2323,8 @@ zones:
   promu_depuis: Bureau de Leena Väinälä
 - slug: delta_rhone_fermes_verticales
   nom: Delta du Rhône — Fermes verticales
-  niveau: 3
-  parent: corridor_iberique_energetique
+  niveau: 2
+  parent: union_nordique_europe_nord
   type: infrastructure
   origine_reelle:
   - entite: Camargue / delta du Rhône
@@ -2911,7 +2929,7 @@ Brazzaville abrite le siège africain de l'Agence Globale de Régénération des
 
 *Sources attestées : amara_diallo_nkosi_new_sustainability, agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability*
 
-#### Bruxelles — Tribunal de Gouvernance Algorithmique — sous [[centre_institutionnel_geneve]]
+#### Bruxelles — Tribunal de Gouvernance Algorithmique — sous [[union_nordique_europe_nord]]
 
 *ville — niveau 2 — statut : emergent*
 
@@ -3428,7 +3446,7 @@ Bureau aux murs couverts de manuscrits annotés à la main dans un monde qui n'�
 
 *Sources attestées : leena_vainala_new_sustainability, institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability*
 
-##### Delta du Rhône — Fermes verticales — sous [[corridor_iberique_energetique]]
+#### Delta du Rhône — Fermes verticales — sous [[union_nordique_europe_nord]]
 
 *infrastructure — niveau 3 — statut : stable*
 

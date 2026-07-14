@@ -1648,10 +1648,91 @@ def _build_zone_tree(zones, root_slug):
             "niveau": z.get("niveau"),
             "type": z.get("type"),
             "statut": z.get("statut"),
+            "origine_reelle": z.get("origine_reelle") or [],
             "enfants": [e for e in enfants if e is not None],
         }
 
     return _node(root_slug)
+
+
+def _chemin_vers_racine(zone: dict, by_slug: dict) -> list:
+    """
+    Chemin complet de la racine N1 jusqu'à `zone` (zone incluse), sous
+    forme de liste [{slug, nom, niveau}, ...] dans l'ordre racine -> zone.
+    Sert de fil d'Ariane pour savoir quelle zone N1 ouvrir dans la Carte
+    pour atteindre une zone niveau 2/3, invisible dans la liste principale
+    (voir _scan_n1_zones_with_desc, qui ne retient que niveau == 1). Cas
+    réel qui a motivé cette route (14 juillet 2026) : delta_rhone_fermes_
+    verticales, niveau 3, invisible sans savoir qu'il fallait d'abord
+    ouvrir nouveau_califat_barcelone dans la Carte -- son parent immédiat
+    (corridor_iberique_energetique) est lui-même une sous-zone niveau 2,
+    pas la racine attendue. Anti-cycle : s'arrête si un slug est revisité.
+    """
+    chemin = []
+    courant = zone
+    vus = set()
+    while courant is not None:
+        slug = courant.get("slug")
+        if slug in vus:
+            break
+        vus.add(slug)
+        chemin.append({
+            "slug": slug,
+            "nom": courant.get("nom"),
+            "niveau": courant.get("niveau"),
+        })
+        parent_slug = courant.get("parent")
+        courant = by_slug.get(parent_slug) if parent_slug else None
+    return list(reversed(chemin))
+
+
+@app.route("/api/carte/rechercher_zone", methods=["GET"])
+def carte_rechercher_zone():
+    """
+    Recherche une zone par nom ou slug, TOUS NIVEAUX confondus -- contrairement
+    à la liste principale de la Carte (/api/carte/affectations, zones_n1) qui
+    n'affiche que les zones niveau 1. Pour chaque résultat, retourne le
+    chemin complet depuis la racine N1 (celle à ouvrir dans la Carte) jusqu'à
+    la zone trouvée, pour ne plus avoir à deviner ou remonter la chaîne
+    `parent` à la main.
+
+    GET /api/carte/rechercher_zone?scenario=new_sustainability&q=rhone
+    Retourne { scenario, q, resultats: [ { slug, nom, niveau, chemin: [...] } ] }
+    Recherche insensible à la casse et aux accents (voir _fold). Triés par
+    niveau puis nom -- les zones N1 correspondantes remontent en premier.
+    """
+    cfg = load_config()
+    vault_root = Path(cfg.get("vault_root", ""))
+    scenario = request.args.get("scenario", "").strip()
+    q = request.args.get("q", "").strip()
+
+    if not scenario or not q:
+        return jsonify({"error": "scenario et q requis"}), 400
+    if len(q) < 2:
+        return jsonify({"error": "q trop court (minimum 2 caractères)"}), 400
+
+    zones = _load_all_zones(vault_root, scenario)
+    if not zones:
+        return jsonify({"error": f"Aucune zone trouvée pour le scénario '{scenario}'"}), 404
+
+    by_slug = {z.get("slug"): z for z in zones if z.get("slug")}
+    q_fold = _fold(q)
+
+    resultats = []
+    for z in zones:
+        slug = str(z.get("slug", ""))
+        nom = str(z.get("nom", ""))
+        if q_fold in _fold(nom) or q_fold in _fold(slug):
+            resultats.append({
+                "slug": slug,
+                "nom": nom,
+                "niveau": z.get("niveau"),
+                "chemin": _chemin_vers_racine(z, by_slug),
+            })
+
+    resultats.sort(key=lambda r: (r["niveau"] if isinstance(r["niveau"], int) else 1, r["nom"] or ""))
+
+    return jsonify({"scenario": scenario, "q": q, "resultats": resultats})
 
 
 @app.route("/api/carte/arbre_zone", methods=["GET"])
@@ -1953,6 +2034,255 @@ def carte_creer_zone_niveau1():
     geo_file.write_text("---\n" + new_fm + "---" + new_body, encoding="utf-8")
 
     return jsonify({"ok": True, "slug": slug, "nom": nom})
+
+
+# ── P7 étape 4 : split de zone (14 juillet 2026) -- extrait une ou plusieurs
+#    entités origine_reelle d'une zone existante vers une nouvelle zone
+#    niveau 1 ou une zone niveau 1 existante. Chaînon manquant identifié en
+#    scopant P24 : ni rename ni reparent ne permettent de sortir un
+#    SOUS-ENSEMBLE de l'origine_reelle d'une zone -- les deux déplacent
+#    toujours la zone entière. Motivé concrètement par
+#    check_conventions_territoires.py : un territoire (ex. Groenland) fondu
+#    avec son souverain (Danemark) dans la même zone doit être séparé pour
+#    se conformer à la convention décidée le 14 juillet (territoires
+#    dépendants toujours distincts de leur souverain réel).
+#
+#    Les sous-zones (niveau 2/3) dont la PROPRE origine_reelle référence
+#    aussi une entité extraite suivent automatiquement vers la zone cible
+#    -- elles ne restaient cohérentes avec la zone source que grâce à cette
+#    entité, qui n'y est plus après le split. Les autres enfants (liés à
+#    d'autres pays de la zone source) restent en place. Détecté via le même
+#    principe de correspondance que le reste du pipeline de cohérence
+#    (voir check_origine_reelle_coherence.py), pas deviné.
+
+def _tokens_entite(texte: str) -> list:
+    """
+    Découpe une chaîne `entite` en tokens comparables à un nom de pays :
+    gère les virgules, les slashes, et le contenu entre parenthèses --
+    même logique que _tokens() dans check_origine_reelle_coherence.py
+    (generator/), dupliquée ici car app.py (gui/) est un codebase séparé.
+    Nécessaire pour le split de zone : "Groenland", "Danemark (Groenland)"
+    et "Groenland (Danemark / Kalaallit Nunaat)" doivent tous les trois
+    être reconnus comme référant au Groenland (cas réel trouvé le 14
+    juillet 2026 -- une correspondance sur chaîne exacte ratait 2 des 3).
+    """
+    texte = (texte or "").lower()
+    interieur_parentheses = re.findall(r"\(([^)]*)\)", texte)
+    texte_sans_parentheses = re.sub(r"\([^)]*\)", "", texte)
+    morceaux = [texte_sans_parentheses] + interieur_parentheses
+    tokens = []
+    for m in morceaux:
+        tokens += [t.strip() for t in re.split(r"[,/]", m)]
+    return [t for t in tokens if t]
+
+
+def _entite_references_pays(entite: str, pays_normalises: set) -> bool:
+    """True si `entite` (n'importe quelle formulation) référence un des
+    pays de `pays_normalises` (déjà en minuscules, via _normalise_pays)."""
+    return any(_normalise_pays(t) in pays_normalises for t in _tokens_entite(entite))
+
+
+def _apply_split_zone(vault_root, scenario, slug_source, pays_a_extraire, cible, dry_run):
+    """
+    dry_run=True  : ne modifie rien, retourne un rapport d'impact.
+    dry_run=False : applique réellement (avec .bak).
+    {"error": "..."} dans les deux cas si la requête est invalide.
+
+    pays_a_extraire : noms de pays normalisés (ex. ["groenland"]) -- pas
+    des chaînes `entite` exactes. Toute entrée origine_reelle dont un token
+    (une fois parenthèses/virgules/slashes séparés) matche un de ces pays
+    est extraite, quelle que soit sa formulation exacte (voir
+    _entite_references_pays). Idem pour détecter les enfants à suivre.
+
+    cible = {"mode": "nouvelle_zone_n1", "slug":..., "nom":..., "type":...,
+             "statut":..., "description": "..." (optionnel)}
+         ou {"mode": "zone_existante", "slug_existant": "..."}
+    """
+    import yaml as _yaml
+    geo_file = vault_root / "geographie" / f"{scenario}.md"
+    if not geo_file.exists():
+        return {"error": f"Fiche géographie introuvable : {geo_file}"}
+
+    raw = geo_file.read_text(encoding="utf-8")
+    parts = raw.split("---", 2)
+    if len(parts) < 3:
+        return {"error": "Format de fiche géographie inattendu"}
+    fm = _yaml.safe_load(parts[1]) or {}
+    body = parts[2]
+    zones = fm.get("zones") or []
+
+    source = next((z for z in zones if z.get("slug") == slug_source), None)
+    if not source:
+        return {"error": f"Zone '{slug_source}' introuvable dans {scenario}"}
+
+    pays_normalises = {_normalise_pays(p) for p in pays_a_extraire}
+
+    origine = source.get("origine_reelle") or []
+    a_extraire = [
+        o for o in origine
+        if isinstance(o, dict) and _entite_references_pays(o.get("entite") or "", pays_normalises)
+    ]
+    restantes = [o for o in origine if o not in a_extraire]
+
+    if not a_extraire:
+        return {"error": f"Aucune entrée de origine_reelle de '{slug_source}' ne référence "
+                          f"{', '.join(pays_a_extraire)} (sous quelque formulation que ce soit)"}
+    if not restantes:
+        return {"error": f"Le split viderait complètement origine_reelle de '{slug_source}' "
+                          f"-- au moins une entrée doit rester (voir validate_zone())"}
+
+    enfants_a_suivre = []
+    enfants_restants = []
+    for e in zones:
+        if e.get("parent") != slug_source:
+            continue
+        e_origine = e.get("origine_reelle") or []
+        lie = any(
+            isinstance(o, dict) and _entite_references_pays(o.get("entite") or "", pays_normalises)
+            for o in e_origine
+        )
+        if lie:
+            enfants_a_suivre.append(e)
+        else:
+            enfants_restants.append(e)
+
+    mode = cible.get("mode")
+    if mode == "nouvelle_zone_n1":
+        cible_slug = cible.get("slug", "").strip()
+        cible_nom = cible.get("nom", "").strip()
+        cible_type = cible.get("type", "").strip()
+        cible_statut = cible.get("statut", "").strip()
+        cible_description = (cible.get("description") or "").strip()
+        if not cible_slug or not cible_nom or not cible_type or not cible_statut:
+            return {"error": "cible.slug, nom, type, statut requis pour une nouvelle zone niveau 1"}
+        if not re.match(r"^[a-z0-9_]+$", cible_slug):
+            return {"error": "cible.slug : lettres minuscules, chiffres, underscores uniquement"}
+        if cible_type not in ZONE_TYPES:
+            return {"error": f"cible.type invalide, doit être parmi : {', '.join(ZONE_TYPES)}"}
+        if cible_statut not in ZONE_STATUTS:
+            return {"error": f"cible.statut invalide, doit être parmi : {', '.join(ZONE_STATUTS)}"}
+        if any(z.get("slug") == cible_slug for z in zones):
+            return {"error": f"Le slug '{cible_slug}' existe déjà dans ce scénario"}
+        cible_info = {"mode": mode, "slug": cible_slug, "nom": cible_nom,
+                      "type": cible_type, "statut": cible_statut, "description": cible_description}
+    elif mode == "zone_existante":
+        slug_existant = cible.get("slug_existant", "").strip()
+        cible_zone = next((z for z in zones if z.get("slug") == slug_existant), None)
+        if not cible_zone:
+            return {"error": f"Zone cible '{slug_existant}' introuvable dans {scenario}"}
+        if cible_zone.get("niveau", 1) != 1:
+            return {"error": f"'{slug_existant}' n'est pas une zone niveau 1 -- "
+                              f"le split ne cible que des zones N1 (reparenter ensuite si besoin)"}
+        if slug_existant == slug_source:
+            return {"error": "La zone cible ne peut pas être la zone source"}
+        cible_info = {"mode": mode, "slug": slug_existant, "nom": cible_zone.get("nom")}
+    else:
+        return {"error": "cible.mode doit être 'nouvelle_zone_n1' ou 'zone_existante'"}
+
+    if dry_run:
+        return {
+            "source": {"slug": slug_source, "nom": source.get("nom"),
+                       "origine_reelle_avant": origine, "origine_reelle_apres": restantes},
+            "entites_extraites": a_extraire,
+            "enfants_qui_suivront": [{"slug": e.get("slug"), "nom": e.get("nom")} for e in enfants_a_suivre],
+            "enfants_qui_restent": [{"slug": e.get("slug"), "nom": e.get("nom")} for e in enfants_restants],
+            "cible": cible_info,
+        }
+
+    source["origine_reelle"] = restantes
+
+    if mode == "nouvelle_zone_n1":
+        nouvelle_zone = {
+            "slug": cible_info["slug"], "nom": cible_info["nom"], "niveau": 1,
+            "type": cible_info["type"], "parent": None,
+            "origine_reelle": a_extraire,
+            "description": cible_info["description"],
+            "statut": cible_info["statut"],
+            "tensions_internes": "",
+            "periode_transition": None,
+            "evenement_transition": None,
+            "lieux_emblematiques": [],
+            "relations": {"allies": [], "rivaux": []},
+            "sources_attestees": [],
+        }
+        zones.append(nouvelle_zone)
+    else:
+        existantes = cible_zone.get("origine_reelle") or []
+        cible_zone["origine_reelle"] = existantes + [o for o in a_extraire if o not in existantes]
+
+    # Les enfants dont la propre origine_reelle référence aussi une entité
+    # extraite suivent automatiquement -- ils restaient cohérents avec la
+    # zone source uniquement grâce à cette entité, qui n'y est plus.
+    for e in enfants_a_suivre:
+        e["parent"] = cible_info["slug"]
+
+    fm["zones"] = zones
+    bak = geo_file.with_suffix(geo_file.suffix + ".bak")
+    bak.write_text(raw, encoding="utf-8")
+
+    new_fm = _yaml.dump(fm, allow_unicode=True, sort_keys=False, default_flow_style=False)
+    new_body = body
+    if mode == "nouvelle_zone_n1":
+        new_body = body.rstrip("\n") + f"\n\n### {cible_info['nom']}\n{cible_info['description']}\n"
+    geo_file.write_text("---\n" + new_fm + "---" + new_body, encoding="utf-8")
+
+    return {
+        "ok": True,
+        "slug_source": slug_source,
+        "origine_reelle_source_restante": len(restantes),
+        "entites_deplacees": len(a_extraire),
+        "cible": cible_info,
+        "enfants_reparentes_automatiquement": [e.get("slug") for e in enfants_a_suivre],
+        "enfants_restes_sous_source": [e.get("slug") for e in enfants_restants],
+    }
+
+
+@app.route("/api/carte/impact_split_zone", methods=["POST"])
+def carte_impact_split_zone():
+    """
+    Rapport d'impact en lecture seule pour un split de zone.
+    Body JSON : { "scenario":..., "slug_source":..., "pays_a_extraire": [...],
+                  "cible": {"mode": "nouvelle_zone_n1"|"zone_existante", ...} }
+    pays_a_extraire : noms de pays normalisés (ex. ["groenland"]), pas des
+    chaînes origine_reelle exactes -- toute formulation référençant ce pays
+    est détectée (voir _entite_references_pays). N'écrit rien.
+    """
+    cfg = load_config()
+    vault_root = Path(cfg.get("vault_root", ""))
+    data = request.get_json() or {}
+    scenario = data.get("scenario", "").strip()
+    slug_source = data.get("slug_source", "").strip()
+    pays_a_extraire = data.get("pays_a_extraire") or []
+    cible = data.get("cible") or {}
+
+    if not scenario or not slug_source or not pays_a_extraire:
+        return jsonify({"error": "scenario, slug_source, pays_a_extraire requis"}), 400
+
+    rapport = _apply_split_zone(vault_root, scenario, slug_source, pays_a_extraire, cible, dry_run=True)
+    if "error" in rapport:
+        return jsonify(rapport), 404
+    return jsonify(rapport)
+
+
+@app.route("/api/carte/split_zone", methods=["POST"])
+def carte_split_zone():
+    """Applique le split. Mêmes paramètres que impact_split_zone."""
+    cfg = load_config()
+    vault_root = Path(cfg.get("vault_root", ""))
+    data = request.get_json() or {}
+    scenario = data.get("scenario", "").strip()
+    slug_source = data.get("slug_source", "").strip()
+    pays_a_extraire = data.get("pays_a_extraire") or []
+    cible = data.get("cible") or {}
+
+    if not scenario or not slug_source or not pays_a_extraire:
+        return jsonify({"error": "scenario, slug_source, pays_a_extraire requis"}), 400
+
+    result = _apply_split_zone(vault_root, scenario, slug_source, pays_a_extraire, cible, dry_run=False)
+    if "error" in result:
+        code = 409 if "existe déjà" in result["error"] else 400
+        return jsonify(result), code
+    return jsonify(result)
 
 
 # ── API Slugs ─────────────────────────────────────────────────────────────────

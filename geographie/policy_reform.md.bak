@@ -286,6 +286,8 @@ zones:
     type_entite: pays
     portion: null
   - entite: Groenland
+    type_entite: pays
+    portion: null
   - entite: Arctique
     type_entite: pays
     portion: null
@@ -407,6 +409,8 @@ zones:
     type_entite: pays
     portion: null
   - entite: Sénégal
+    type_entite: pays
+    portion: null
   - entite: Gambie
     type_entite: pays
     portion: null
@@ -574,6 +578,9 @@ zones:
     type_entite: pays
     portion: null
   - entite: Kosovo
+    type_entite: pays
+    portion: null
+  - entite: Italie
     type_entite: pays
     portion: null
   description: Cœur institutionnel de la gouvernance technocratique mondiale en 2098,

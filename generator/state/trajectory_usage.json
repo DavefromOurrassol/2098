@@ -156,9 +156,11 @@
   },
   "policy_reform": {
     "locaux": {
+      "Convention de Genève sur les réfugiés climatiques 2035": 1,
       "accord-cadre international sur les quotas migratoires négociés 2034": 1,
       "adoption de la Charte Internationale de la Médecine Prédictive Équitable 2041": 1,
       "adoption de la charte internationale des rythmes urbains soutenables 2035": 1,
+      "adoption de la réforme fiscale internationale sur les grandes fortunes 2035": 1,
       "adoption du cadre légal de reconnaissance des spiritualités hybrides 2037": 1,
       "charte internationale sur l'usage éthique des prédictions migratoires 2036": 1,
       "lancement du programme international d'éducation au dialogue interculturel 2033": 1,
@@ -169,7 +171,7 @@
     },
     "majeurs": {
       "Convention de Genève sur le droit à l'eau 2035": 1,
-      "accord climatique de Nairobi 2+ avec mécanismes contraignants 2035": 1,
+      "accord climatique de Nairobi 2+ avec mécanismes contraignants 2035": 2,
       "adoption de la charte mondiale de transparence institutionnelle 2035": 2,
       "adoption de la norme internationale d'efficacité énergétique de l'IA 2034": 2,
       "adoption de la norme internationale de certification informationnelle 2035": 2,
@@ -179,17 +181,17 @@
       "création de l'Agence Internationale de la Fusion 2045": 2,
       "création de la force mondiale anti-incendie de l'ONU 2034": 1,
       "création du fonds international de réhabilitation minière 2037": 1,
-      "directive internationale sur la résilience des infrastructures 2035": 1,
-      "directive mondiale sur l'IA dans les services publics 2037": 1,
+      "directive internationale sur la résilience des infrastructures 2035": 2,
+      "directive mondiale sur l'IA dans les services publics 2037": 2,
       "démantèlement judiciaire des GAFAM 2+ de 2036": 2,
       "fonds mondial pour la relocalisation côtière de l'ONU 2039": 1,
       "lancement de la campagne publique de pédagogie énergétique 2033": 1,
       "lancement de la plateforme mondiale de consultation citoyenne 2034": 1,
-      "lancement du fonds international pour le stockage énergétique 2035": 1,
+      "lancement du fonds international pour le stockage énergétique 2035": 2,
       "lancement du plan international de sobriété énergétique 2034": 1,
-      "premier plan national de santé mentale climatique 2034": 1,
+      "premier plan national de santé mentale climatique 2034": 2,
       "protocole international de certification de la capture carbone 2037": 1,
-      "signature du cadre de coordination environnementale multi-niveaux 2036": 1,
+      "signature du cadre de coordination environnementale multi-niveaux 2036": 2,
       "traité OCDE sur les minerais de la transition 2036": 1,
       "traité de réforme des institutions de Bretton Woods 2037": 1
     }

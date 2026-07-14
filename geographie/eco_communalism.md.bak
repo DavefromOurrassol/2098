@@ -250,6 +250,12 @@ zones:
   - entite: Panama
     type_entite: pays
     portion: null
+  - entite: Sierra Leone
+    type_entite: pays
+    portion: null
+  - entite: Liberia
+    type_entite: pays
+    portion: null
   description: Zone d'ancrage fort du mouvement éco-communaliste mondial, héritière
     des pratiques zapatistes d'autonomie territoriale. Le Chiapas accueille la prochaine
     session plénière de l'Assemblée des Territoires en octobre 2098, confirmant son
@@ -456,6 +462,9 @@ zones:
     type_entite: pays
     portion: null
   - entite: Bénin
+    type_entite: pays
+    portion: null
+  - entite: Égypte
     type_entite: pays
     portion: null
   description: Zone de bassins versants méditerranéens intégrée au Réseau Terrafond
@@ -703,6 +712,12 @@ zones:
     type_entite: pays
     portion: null
   - entite: Guinée-Bissau
+    type_entite: pays
+    portion: null
+  - entite: Guinée
+    type_entite: pays
+    portion: null
+  - entite: Côte d'Ivoire
     type_entite: pays
     portion: null
   description: Réseau de dix-huit villes sahéliennes ayant développé une infrastructure

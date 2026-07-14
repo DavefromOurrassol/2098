@@ -243,8 +243,14 @@ zones:
     type_entite: pays
     portion: null
   - entite: Estonie
+    type_entite: pays
+    portion: null
   - entite: Lettonie
+    type_entite: pays
+    portion: null
   - entite: Lituanie
+    type_entite: pays
+    portion: null
   - entite: Allemagne
     type_entite: pays
     portion: null
@@ -662,6 +668,8 @@ zones:
     type_entite: pays
     portion: null
   - entite: Pologne
+    type_entite: pays
+    portion: null
   description: Genève subsiste en 2098 comme lieu physique de survie des institutions
     internationales fantômes — le Bureau de Coordination d'Urgence Climatique (vestige
     de l'AMSC) dans une tour à moitié abandonnée, les Archives Neutres de Genève-Bunker
@@ -1455,7 +1463,7 @@ zones:
   nom: Hanse Baltique Recomposée
   niveau: 2
   type: union_regionale
-  parent: arctique_nordark
+  parent: geneve_bunker_institutions
   origine_reelle:
   - entite: Pologne (côte baltique)
     type_entite: region_administrative
@@ -3664,7 +3672,7 @@ Cible des salves de missiles balistiques iraniens en représailles aux frappes i
 
 *Sources attestées : conflit_israel_iran_2026_breakdown*
 
-#### Hanse Baltique Recomposée — sous [[arctique_nordark]]
+#### Hanse Baltique Recomposée — sous [[geneve_bunker_institutions]]
 
 *union_regionale — niveau 2 — statut : stable*
 

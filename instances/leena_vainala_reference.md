@@ -5,7 +5,7 @@ slug: leena_vainala_reference
 entite: leena_vainala
 scenario: reference
 localisation:
-  zone: corridor_arctique_nordique_testmodif
+  zone: corridor_arctique_nordique
   lieu: Helsinki
   type_lieu: ville
 type_dans_scenario: humain

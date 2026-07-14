@@ -68,7 +68,7 @@ tensions_narratives: La déglaciation qui menace leur mode de vie ouvre paradoxa
   de données.
 date_creation: 2026-06-20
 localisation:
-  zone: corridor_arctique_nordique_testmodif
+  zone: corridor_arctique_nordique
   lieu: Tromsø / Nuuk
   type_lieu: region
 ---

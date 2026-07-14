@@ -1,5 +1,5 @@
 # Backlog consolidé — Ourrassol 2098
-*Mis à jour le 14 juillet 2026 — fusionne le backlog historique et les items des sessions du 11, 12, 13 et 14 juillet*
+*Mis à jour le 13 juillet 2026 — fusionne le backlog historique et les items des sessions du 11, 12 et 13 juillet*
 
 Légende priorité : 🔴 bloquant/urgent · 🟡 important · 🟢 confort · ⚪ improvisation libre / pas pressé
 
@@ -167,18 +167,17 @@ Question tranchée pendant le scoping de P7 : grep exhaustif du vault entier pou
 
 ---
 
-## P11 ✅ — CLOS le 14 juillet — Intégrer les scripts de diagnostic géographie au GUI
+## P11 ⚪ — Intégrer `check_zones_coherence.py` au GUI
+**Durée : 15–20 min**
 
-**Périmètre élargi en cours de route** : à l'origine juste `check_zones_coherence.py`, étendu aux 4 autres scripts de diagnostic géographie livrés le 14 juillet (David : "à terme ces outils de maintenance devront être intégrés dans le GUI"). 5 entrées ajoutées à `scripts_config.json` (section `maintenance`, après `complete_geographie_coverage`) :
-- `check_zones_coherence` — `--scenario`/`--all`
-- `check_type_entite_coherence` — `--scenario`/`--all`, `--apply` (badge P26)
-- `check_origine_reelle_coherence` — `--scenario`/`--all`, `--resolve-llm`, `--write-zones-manquantes` (badge P22), `requires: ["check_type_entite_coherence"]` (avertissement non bloquant — les `type_entite` manquants faussent ce diagnostic, vécu en le construisant)
-- `check_conventions_territoires` — `--scenario`/`--all` (badge P27)
-- `scan_geographie_complet` — `--scenario`/`--all`, `--apply-type-entite`, `--resolve-llm`, `--write-zones-manquantes` (orchestrateur des 4 précédents)
+Script actuellement CLI pure, lecture seule. Ajouter une entrée dans `scripts_config.json` pour l'avoir en un clic depuis le sidebar, comme les autres scripts. Pas urgent — usage CLI actuel suffisant.
 
-**Non fait, à ne pas oublier** : le retrait de l'entrée fantôme `restructure_zones.py` (jamais existé comme script CLI, P7 vit dans l'onglet Carte) a été fait au passage, dans le même fichier. **Nécessite un redémarrage de Flask** pour apparaître dans la sidebar (remplacer le fichier sur disque ne suffit pas).
+**Sous-tâche identifiée le 4 juillet** : `gui/check_session.sh` fait actuellement trois choses de nature différente dans un seul script shell :
+1. Cohérence de données géo (JSON valide `pays_mapping.json`/`zones_pays.json`, pays de `zones_pays.json` absents du mapping FR→EN)
+2. Vérification d'environnement/process (`certifi` installé, port 5000, ping `GET /api/carte/affectations`)
+3. Checklist manuelle non automatisable (bouton LLM carte, bandeau diagnostic, hachures, rapport d'impact)
 
-**Sous-tâche du 4 juillet toujours ouverte, distincte** : migrer la partie 1 de `gui/check_session.sh` (cohérence JSON `pays_mapping.json`/`zones_pays.json`) dans `check_zones_coherence.py --all`, pour ne plus avoir cette vérification en double dans un script shell séparé. Les parties 2 (environnement/process) et 3 (checklist manuelle) de `check_session.sh` restent hors scope de ce script.
+La partie 1 devrait migrer dans `check_zones_coherence.py --all` (même famille de vérification que ce qu'il fait déjà — cohérence de la couche géographique) plutôt que de vivre en double dans un script shell séparé. Les parties 2 et 3 restent dans `check_session.sh`, qui n'a pas vocation à devenir une vérification de données (pas d'accès disque au vault dans son rôle actuel, dépend de Flask up). Ne pas mettre ça dans `validate.py` : `validate.py` lit le vault sur disque sans dépendance à Flask ni au réseau, et doit le rester.
 
 ---
 
@@ -278,108 +277,44 @@ Incohérence de plausibilité logistique détectée sur un article test : un per
 
 ---
 
-## P22 — Garde-fou de cohérence géographique via `origine_reelle`
+## P22 ⚪ — Nouveau (13 juillet) — Garde-fou de cohérence géographique via `origine_reelle`
+**Scopé, pas construit**
 
-### Signal 1 (origine_reelle vs chaîne de parenté) — ✅ CONSTRUIT ET CLOS le 14 juillet
+`enrich_geographie_recursive.py::resolve_parents_and_levels()` valide déjà l'existence du `parent`, détecte les cycles, dédoublonne les slugs — mais ne compare jamais `origine_reelle` de l'enfant contre celui du parent. Le champ `origine_reelle` (déjà obligatoire, structurellement validé par `validate_zone()`) est un bien meilleur signal que des mots-clés sur le nom : une entrée `type_entite: "ville"`/`"region_administrative"` de l'enfant qui n'a aucune trace dans les entrées `pays` de la chaîne de parenté est un signal fort d'incohérence — exactement le motif des 4 anomalies trouvées le 13 juillet (P7).
 
-**Script livré : `check_origine_reelle_coherence.py`** (`generator/`). Compare le pays d'une zone `ville`/`region_administrative` à l'union des pays de toute sa lignée d'ancêtres — avertissement seul, jamais de blocage (confirmé : le taux de faux positifs d'une première heuristique mots-clés était de 5/9 le 13 juillet).
+**Ce qui manque pour construire** : une ville/subdivision comme "Barcelone" ou "Cracovie" ne porte pas de pointeur explicite vers son pays dans les données actuelles. Deux options à trancher :
+1. Petite table statique ville→pays (rapide, gratuit, couverture limitée aux villes courantes)
+2. Passe de vérification LLM dédiée en lot (couverture complète, coût API, plus lent)
 
-**Résolution en cascade** : extraction directe (pays déjà écrit dans le champ) → alias adjectival (`"américain"` → États-Unis) → table statique `VILLE_PAYS` (à enrichir manuellement au fil de l'eau) → `--resolve-llm` (batch, tier `structured_strict`, résultat mis en cache dans `cache_ville_pays_llm.json`, jamais repayé).
+**Second signal ajouté suite au scoping P24** : au-delà de la cohérence géographique réelle (`origine_reelle`), un contrôle de **cohérence de patron spatial** — comparer la description/le type de la zone au `state_logic` d'`organisation_territoires.states.{scenario}` (déjà écrit dans `variables/organisation_territoires.md`, voir P24). Plus qualitatif, donc à garder en avertissement uniquement.
 
-**Extension "candidats"** : pour chaque incohérence, cherche automatiquement une zone N1 du même scénario qui revendique déjà le pays en question, et si trouvée, la propose comme cible de reparent — plus besoin de chercher soi-même. Si aucun candidat, propose l'écriture dans `zones_manquantes.yaml` (`--write-zones-manquantes`, opt-in, même schéma que `complete_geographie_coverage.py` + 2 champs de traçabilité `origine`/`zone_incoherente_a_reparenter`).
-
-**Extension "racine N1"** : chaque incohérence liste aussi la racine N1 à ouvrir dans la Carte (peut différer du parent immédiat si celui-ci est lui-même une sous-zone — cas réel : `delta_rhone_fermes_verticales` sous `corridor_iberique_energetique`, lui-même sous `nouveau_califat_barcelone`, la vraie racine à chercher).
-
-**Tableau récapitulatif markdown** : généré automatiquement en fin de run, prêt à copier tel quel (scénario / cas problématique / zone de départ / racine N1 / candidat).
-
-**Trois bugs de données découverts et corrigés dans la logique de résolution en testant sur le vrai vault** (invisibles sur un cas isolé) :
-1. `type_entite` totalement absent sur certaines entrées `origine_reelle` (27+ cas trouvés) — voir nouvel item de backlog dédié à la réparation.
-2. `type_entite: region_administrative` ou `autre` sur des territoires qui sont pourtant des entrées de premier rang dans `zones_pays.json` (Polynésie française, Groenland) — `_compte_comme_pays()` généralisée : seul `type_entite: ville` reste exclu, tout le reste se fie à une correspondance exacte avec la liste de référence.
-3. Convention de nommage du Groenland incohérente entre scénarios (`"Groenland"` autonome dans certains, implicitement fondu dans `"Danemark"` dans d'autres) — `VILLE_PAYS["nuuk"]` résout maintenant vers les deux (`["groenland", "danemark"]`), laisse remonter tous les candidats plausibles plutôt que d'en imposer un.
-
-**Résultat final, 6 scénarios, confirmé par David le 14 juillet : 0 incohérence.**
-
-### Signal 2 (cohérence de patron spatial) — ⚪ toujours scopé, pas construit
-
-Comparer la description/le type d'une zone au `state_logic` du scénario (voir P24 étape A, déjà livré). Dépend de `patrons_spatiaux.py`, livré mais pas encore consommé par aucun script du pipeline.
+Non-bloquant, à intégrer en avertissement (comme le rapport d'impact actuel) plutôt qu'en blocage dur — le taux de faux positifs d'une première heuristique mots-clés (5 sur 9 lors du test du 13 juillet) montre qu'un blocage automatique serait risqué sans un signal plus fiable que le nom/la description.
 
 ---
 
-## P23 ✅ — CLOS le 14 juillet — Corriger les 3 dernières incohérences géographiques trouvées dans le vault (13 juillet)
+## P23 ⚪ — Nouveau (13 juillet) — Corriger les 3 dernières incohérences géographiques trouvées dans le vault
+**Durée : ~5 min avec l'outil P7 (reparent)**
 
-Les 3 cas listés le 13 juillet sont soit déjà corrigés, soit n'étaient jamais de vraies anomalies :
-- `barcelone_hub`, `corridor_iberique_energetique` → corrigés (sous `nouveau_califat_barcelone`, nouvelle zone N1 Ibérie)
-- `noeud_mnemos_pannonie` → **n'était jamais une vraie anomalie** : `arc_eurasien_central` liste bien la Hongrie dans son `origine_reelle` complet (~25 pays, pas les 5 identifiés en lecture rapide initiale). Erreur d'appréciation, pas un bug du vault.
-
----
-
-## P24 — Générateur top-down de zones cohérent avec la logique des scénarios
-**Scoping approfondi fait — voir `APPROCHE_ZONING_GEOGRAPHIE_SCENARIOS.md` pour le détail complet**
-
-**Constat de départ** : le pipeline géographique a 2 passes bottom-up (`build_geographie_monde.py`, `enrich_geographie_recursive.py` — les zones émergent du narratif déjà écrit) et 1 passe top-down mais naïve (`complete_geographie_coverage.py` — juge un rattachement pays→zone sur la seule ressemblance textuelle avec `origine_reelle`, sans jamais revalider contre la logique systémique du scénario). C'est la cause racine des anomalies trouvées et corrigées cette semaine (P23, P25).
-
-**Découverte clé** : le vault contient déjà, dans `variables/{variable}.md → states.{scenario}.state_logic`, le patron de structuration spatiale exact de chaque scénario (`organisation_territoires` en premier lieu, aussi `geopolitique_conflits`, `frontieres_du_systeme`) — jamais exploité pour la génération de zones.
-
-**Recherche documentaire menée** (7 sources externes lues et croisées avec le vault — détail et bibliographie complète dans le document dédié) : le Global Scenario Group original (Raskin et al., 2002), *Global Trends 2040* du NIC/CIA (2021), *The Limits to Growth* (Meadows/Club de Rome, 1972), un rapport SmartCSOs, un compte-rendu Futuribles sur la réinterprétation locale des institutions "universelles", la méthode d'analyse morphologique de Michel Godet, la thèse de Thierry Gaudin.
-
-### Étape A — ✅ CONSTRUITE ET TESTÉE le 14 juillet
-
-**Fichiers livrés** :
-- **`extract_state_logic.py`** (`generator/`) — parseur générique de n'importe quelle fiche `variables/{variable}.md → states.{scenario}.state_logic`. Gère la sanitisation des clés wikilink Obsidian (`[[xxx]]`) dans les blocs `coupling_intensity`, qui cassent un `yaml.safe_load` brut.
-- **`patrons_spatiaux.py`** (`generator/`) — formalise le patron spatial des 6 scénarios. Les citations (`state_logic`, `state_logic_complementaire` sur `organisation_territoires`/`geopolitique_conflits`/`frontieres_du_systeme`) sont **chargées dynamiquement depuis le vault** à chaque import, jamais figées en dur — si le texte du vault change, le module suit automatiquement. L'analyse (`patron_a_respecter`/`a_eviter`/`sources_vault`) reste écrite à la main dans `_ANALYSE`, à revalider manuellement si un scénario change en profondeur. Garde-fou : lève une erreur explicite si un scénario de `_ANALYSE` disparaît du vault.
-- Config : variable d'environnement `OURRASSOL_VAULT_ROOT`, sinon déduite automatiquement (confirmé fonctionnel avec `generator/`+`variables/` au même niveau, config par défaut chez David).
-
-**Rien dans le pipeline actuel n'importe encore `patrons_spatiaux.py`** — prêt, en attente d'être consommé par l'étape B ou C.
-
-### Étape B (garde-fou étendu, fusion avec P22 signal 2) — ⚪ pas construite
-
-### Étape C (le générateur top-down proprement dit) — ⚪ pas construite, le plus gros chantier
-Nouveau script ou extension de `complete_geographie_coverage.py`, branché sur le formulaire "créer une nouvelle zone niveau 1" de P7 étape 2.
+Trouvées en testant P7, restent à corriger (Cracovie déjà faite en direct pendant les tests) :
+- `barcelone_hub` (Barcelone-Hub — Bureau ibérique de la CMTCA), scénario `new_sustainability`, actuellement sous `ameriques_reconfigurees` — aucune zone Europe/Ibérie n'existe encore dans ce scénario, nécessite l'option "créer une nouvelle zone niveau 1" de l'étape 2 de P7 (déjà utilisée en test avec `peninsule_iberique_autonome`, zone de test à nettoyer ou réutiliser)
+- `corridor_iberique_energetique`, scénario `new_sustainability`, même parent incohérent, même zone cible probable
+- `noeud_mnemos_pannonie` (Nœud Mnemos du Bassin Pannonien), scénario `breakdown`, actuellement sous `arc_eurasien_central` — pas de zone Europe centrale identifiée non plus, à trancher (nouvelle zone, ou rattachement à `geneve_bunker_institutions` comme Cracovie ?)
 
 ---
 
-## P25 ✅ — CLOS le 14 juillet — Traiter les incohérences détectées par `check_origine_reelle_coherence.py`
+## P24 ⚪ — Nouveau (13 juillet) — Générateur top-down de zones cohérent avec la logique des scénarios
+**Scoping approfondi fait, rien codé — voir `APPROCHE_ZONING_GEOGRAPHIE_SCENARIOS.md` pour le détail complet**
 
-13 incohérences trouvées au premier run complet (6 scénarios), réduites à 0 au fil de plusieurs cycles diagnostic → correction :
-- Reparents via l'onglet Carte (Genève, Bruxelles, Hanse Baltique, Camargue, Nuuk×2, Mourmansk) au fur et à mesure des candidats proposés par le script
-- `ouagadougou_nouvelle_ctsa` → révélé être un cas de `type_entite` manquant (voir P26), pas un mauvais rattachement
-- `nuna_capital_siege` → révélé être un faux positif (Groenland typé `autre` dans `nuuk_forteresse`, généralisation de `_compte_comme_pays()`)
-- `seoul_accords` → révélé être un faux positif (Corée du Sud présente mais `type_entite` manquant dans `bloc_eurasien_souverainiste`)
+**Constat de départ** : le pipeline géographique a 2 passes bottom-up (`build_geographie_monde.py`, `enrich_geographie_recursive.py` — les zones émergent du narratif déjà écrit) et 1 passe top-down mais naïve (`complete_geographie_coverage.py` — juge un rattachement pays→zone sur la seule ressemblance textuelle avec `origine_reelle`, sans jamais revalider contre la logique systémique du scénario). C'est la cause racine des 4 anomalies de P23.
 
-**Confirmé par David le 14 juillet : `check_origine_reelle_coherence.py --all` → 0 incohérence sur les 6 scénarios.**
+**Découverte clé** : le vault contient déjà, dans `variables/{variable}.md → states.{scenario}.state_logic`, le patron de structuration spatiale exact de chaque scénario (`organisation_territoires` en premier lieu, aussi `geopolitique_conflits`, `frontieres_du_systeme`) — jamais exploité pour la génération de zones. Ex. : `organisation_territoires.states.fortress_world.state_logic` = *"Archipel territorial fragmenté en zones sécurisées fortement contrôlées..."*
 
----
+**Recherche documentaire menée** (7 sources externes lues et croisées avec le vault — détail et bibliographie complète dans le document dédié) : le Global Scenario Group original (Raskin et al., 2002, source du cadre à 6 scénarios), *Global Trends 2040* du NIC/CIA (2021, 5 scénarios qui recoupent presque terme à terme ceux d'Ourrassol), *The Limits to Growth* (Meadows/Club de Rome, 1972), un rapport SmartCSOs sur le changement systémique (cadre macro/méso/micro), un compte-rendu Futuribles sur la réinterprétation locale des institutions "universelles", la méthode d'analyse morphologique de Michel Godet, et la thèse de Thierry Gaudin.
 
-## P26 ✅ — CONSTRUIT le 14 juillet — Réparer les entrées `origine_reelle` sans `type_entite`
-
-**Découverte** : 27+ entrées `origine_reelle` sur les 6 scénarios ont un `entite` de pays réel mais aucun `type_entite` (ex. "Burkina Faso" listé nu, sans `type_entite: pays`) — probable oubli de champ à l'écriture. Masquait plusieurs cas dans P25 (faux positifs ET candidats invisibles).
-
-**Script livré : `check_type_entite_coherence.py`** (`generator/`). Diagnostic seul par défaut, `--apply` corrige (`type_entite: pays` + `portion: null`), backup `.bak` automatique. Édition ligne-à-ligne (pas de re-dump YAML complet) pour ne toucher que les lignes concernées sur des fichiers de 3000+ lignes — testé : diff chirurgical de 8 lignes sur `breakdown.md`, rien d'autre bougé.
-
-Bug corrigé en testant sur le vrai vault : une valeur `entite` repliée sur deux lignes (YAML standard, ex. `pacte_des_souverains`) était prise à tort pour une entrée incomplète par le premier scan — corrigé avant tout `--apply` réel.
-
-**Confirmé par David le 14 juillet : plus aucune entrée sans `type_entite` sur les 6 scénarios.**
-
----
-
-## P27 ⚪ — Nouveau (14 juillet) — Territoires ambigus : convention décidée, 11 cas à séparer
-
-**Script livré : `check_conventions_territoires.py`** (`generator/`). Diagnostic distinct de `check_origine_reelle_coherence.py` : au lieu de comparer une zone à sa chaîne de parenté, compare un même territoire ambigu (dépendance/collectivité) **entre les 6 scénarios**. A révélé qu'un rattachement peut être syntaxiquement valide (la zone qui le revendique existe bien dans `zones_pays.json`) tout en étant incohérent narrativement — cas trouvé : le Groenland revendiqué par `espace_eurasiatique` (bloc russo-chinois technocratique, aucune mention d'Arctique) dans `policy_reform`, alors que `europe_nord_ouest` (Danemark, Norvège, Suède...) est un bien meilleur candidat et le revendique déjà.
-
-**Table `TERRITOIRES_AMBIGUS`** (à enrichir manuellement) : Groenland, Polynésie française, Nouvelle-Calédonie, Guyane française, Écosse, Pays de Galles.
-
-**Convention décidée par David le 14 juillet : les territoires dépendants/autonomes suivis sont toujours traités comme des entités distinctes de leur pays souverain réel**, quand ils apparaissent dans un scénario (extension du pattern déjà observé sur la Polynésie française, distincte de la France dans les 6/6 scénarios où elle apparaît). Le script vérifie maintenant la conformité à cette règle plutôt que juste la variance.
-
-**État au 14 juillet, 6 scénarios : 11 cas à séparer**
-| Territoire | Scénarios à corriger |
-|---|---|
-| Groenland | `breakdown`, `eco_communalism`, `reference` |
-| Écosse | `breakdown`, `fortress_world`, `policy_reform` |
-| Pays de Galles | `breakdown`, `fortress_world`, `new_sustainability`, `eco_communalism`, `policy_reform` |
-
-(+ 12 cas "à considérer" — Nouvelle-Calédonie ×6, Guyane française ×6 — territoire absent partout, rien à séparer, création éventuelle non forcée.)
-
-**Outil pour traiter les 11 cas : P7 étape 4 (split de zone), voir ci-dessous.** Aucun des 11 cas n'a encore été traité.
+**Séquencement recommandé pour la construction** :
+- **Étape A** (rapide) : formaliser le patron spatial des 6 scénarios (déjà rédigé dans le document) en constante exploitable par le code, probablement dans `prompt_builder.py`
+- **Étape B** : le garde-fou étendu (fusion avec P22)
+- **Étape C** (le gros chantier) : le générateur top-down proprement dit — nouveau script ou extension de `complete_geographie_coverage.py`, branché sur le formulaire "créer une nouvelle zone niveau 1" déjà construit dans P7 étape 2
 
 ---
 
@@ -400,18 +335,10 @@ Bug corrigé en testant sur le vrai vault : une valeur `entite` repliée sur deu
 4. Le bouton de confirmation n'apparaît qu'après le rapport
 5. **Depuis le 13 juillet (P7 étape 3)** : si le rapport détecte des sous-zones potentiellement orphelines, un bouton "↗️ rattacher à {nouvelle_zone}" par sous-zone permet de les recorriger en un clic, indépendamment de la confirmation de la bascule elle-même
 
-**Restructuration de zones (P7)** — dans l'onglet Carte :
-- **Renommer** (slug + nom, depuis le 13 juillet) : bouton ✏️ sur chaque zone niveau 1 de la légende
+**Restructuration de zones (P7, depuis le 13 juillet)** — dans l'onglet Carte :
+- **Renommer** (slug + nom) : bouton ✏️ sur chaque zone niveau 1 de la légende
 - **Voir l'arbre des sous-zones** (niveau 2/3, pas de représentation carte pour elles) : clic sur le nom/pastille d'une zone niveau 1 dans la légende
-- **Déplacer une sous-zone** (reparent, avec son sous-arbre, depuis le 13 juillet) : bouton "↗️ déplacer" sur chaque nœud non-racine de l'arbre — permet aussi de promouvoir en zone niveau 1 autonome ou de créer une nouvelle zone niveau 1 à la volée si aucun parent existant ne convient
-- **Scinder une zone** (split, depuis le 14 juillet) : bouton "✂️ scinder" sur tout nœud de l'arbre (racine incluse) ayant plus d'un pays dans son `origine_reelle` — extrait un ou plusieurs pays vers une nouvelle zone niveau 1 ou une zone niveau 1 existante. Les sous-zones dont la PROPRE `origine_reelle` référence aussi le(s) pays extrait(s) suivent automatiquement (détecté, pas décidé manuellement) ; les autres restent en place. Différent de déplacer : déplacer bouge une zone entière telle quelle, scinder la coupe en deux et n'en bouge qu'un morceau. Différent de "créer une nouvelle zone" via le clic carte : celui-ci ne gère qu'un seul pays à la fois, en correspondance de chaîne exacte, et ne fait jamais suivre les sous-zones — le split gère plusieurs formulations du même pays (tokenisation, comme `check_origine_reelle_coherence.py`) et le suivi automatique des sous-zones concernées.
-
-**Rechercher une zone tous niveaux (depuis le 14 juillet)** — champ de recherche en haut de la sidebar de l'onglet Carte. La légende/liste principale n'affiche que les zones niveau 1 ; ce champ cherche aussi les niveaux 2/3 par nom ou slug (insensible aux accents/casse) et affiche le chemin complet racine→zone trouvée. Au clic sur un résultat, ouvre directement le bon arbre et centre/surligne la zone — évite de deviner/remonter la chaîne à la main quand le parent immédiat d'une zone n'est pas sa racine N1 (cas réel : `delta_rhone_fermes_verticales`, niveau 3, sous `corridor_iberique_energetique`, lui-même sous `nouveau_califat_barcelone`).
-
-**Scan géographie complet (`scan_geographie_complet.py`, depuis le 14 juillet)** — orchestrateur en `generator/`, appelle en séquence `check_zones_coherence.py` → `check_type_entite_coherence.py` → `check_origine_reelle_coherence.py` → `check_conventions_territoires.py`, résumé consolidé à la fin. Chaque script reste utilisable seul (entrée sidebar GUI intacte) ; aucune écriture par défaut, `--apply-type-entite`/`--resolve-llm`/`--write-zones-manquantes` propagent les flags correspondants.
-```bash
-python3 scan_geographie_complet.py --all
-```
+- **Déplacer une sous-zone** (reparent, avec son sous-arbre) : bouton "↗️ déplacer" sur chaque nœud non-racine de l'arbre — permet aussi de promouvoir en zone niveau 1 autonome ou de créer une nouvelle zone niveau 1 à la volée si aucun parent existant ne convient
 
 **Clé API** — `Illegal header value b'Bearer '` → `source ~/.zshrc` avant de relancer un script en terminal (le GUI charge `.env` lui-même).
 

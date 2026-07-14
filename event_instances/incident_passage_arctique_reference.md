@@ -5,7 +5,7 @@ slug: incident_passage_arctique_reference
 archetype: incident_passage_arctique
 scenario: reference
 localisation:
-  zone: corridor_arctique_nordique_testmodif
+  zone: corridor_arctique_nordique
   lieu: Passage Nord-Ouest
   type_lieu: site_strategique
 type_evenement: political_social

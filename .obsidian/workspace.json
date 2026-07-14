@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "documentation/USER_MANUAL_COMPLET.md",
+                "file": "documentation/GitHUB.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "USER_MANUAL_COMPLET"
+              "title": "GitHUB"
             }
           }
         ],
@@ -93,7 +93,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 576.5
+    "width": 340.5
   },
   "right": {
     "id": "143038304e792501",
@@ -200,28 +200,29 @@
   },
   "active": "a55b90f7989d3ba4",
   "lastOpenFiles": [
+    "documentation/BACKLOG_CONSOLIDE.md",
+    "gui/logs/extract_phantom_slugs_20260714_155704.log",
+    "generator/check_conventions_territoires.py",
+    "generator/__pycache__/check_origine_reelle_coherence.cpython-39.pyc",
+    "generator/scan_geographie_complet.py",
+    "generator/check_type_entite_coherence.py",
+    "documentation/synthese_zones_pays.md",
+    "documentation/APPROCHE_ZONING_GEOGRAPHIE_SCENARIOS.md",
+    "generator/cache_ville_pays_llm.json",
+    "generator/__pycache__/check_zones_coherence.cpython-39.pyc",
+    "documentation/USER_MANUAL_COMPLET.md",
     "geographie/Archive.zip",
     "documentation/need_action/impact_bascule_trinite_et_tobago_reference.md",
     "evenements_custom/generator.code-workspace",
     "gui/logs/enrich_minimal_20260712_145416.log",
-    "gui/logs/enrich_minimal_20260712_145246.log",
-    "gui/logs/validate_20260712_145037.log",
-    "gui/logs/inject_events_20260712_082243.log",
-    "gui/logs/inject_events_20260712_081902.log",
-    "gui/logs/inject_events_20260712_080254.log",
     "documentation/HANDOFF_CONSOLIDE.md",
-    "documentation/BACKLOG_CONSOLIDE.md",
     "instances/conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability.md",
-    "gui/logs/inject_events_20260712_073723.log",
     "instances/les_passeurs_de_limites_new_sustainability.md",
     "documentation/GitHUB.md",
-    "documentation/USER_MANUAL_COMPLET.md",
     "documentation/Old/USER_MANUAL_COMPLET.md",
     "documentation/Old/HANDOFF_CONSOLIDE.md",
     "documentation/Old/BACKLOG_CONSOLIDE.md",
     "geographie/eco_communalism.md",
-    "gui/logs/inject_events_20260711_235323.log",
-    "gui/logs/inject_events_20260711_235004.log",
     "evenements/crue_exceptionnelle_congo.md",
     "event_instances/crue_exceptionnelle_congo_eco_communalism.md",
     "entites/conseil_mondial_de_la_regeneration_ecosystemique_cmre.md",
@@ -234,8 +235,6 @@
     "instances/neurosentry_fortress_world.md",
     "entites/neurosentry.md",
     "instances/ironclad_logistics_fortress_world.md",
-    "entites/ironclad_logistics.md",
-    "instances/biolock_agritech_fortress_world.md",
     "Sans titre 1.canvas",
     "Sans titre.canvas"
   ]

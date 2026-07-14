@@ -53,6 +53,8 @@ zones:
     type_entite: pays
     portion: null
   - entite: Mauritanie
+    type_entite: pays
+    portion: null
   - entite: Libye
     type_entite: pays
     portion: null
@@ -274,6 +276,18 @@ zones:
     type_entite: pays
     portion: null
   - entite: Barbade
+    type_entite: pays
+    portion: null
+  - entite: Angleterre
+    type_entite: pays
+    portion: null
+  - entite: Écosse
+    type_entite: pays
+    portion: null
+  - entite: Pays de Galles
+    type_entite: pays
+    portion: null
+  - entite: Italie
     type_entite: pays
     portion: null
   description: Bloc géopolitique fermé centré sur l'espace atlantique nord, gouverné
@@ -831,6 +845,9 @@ zones:
     type_entite: pays
     portion: null
   - entite: Dominique
+    type_entite: pays
+    portion: null
+  - entite: Grèce
     type_entite: pays
     portion: null
   description: Ensemble diffus de territoires interstitiels situés entre les blocs
@@ -2479,6 +2496,15 @@ zones:
     type_entite: pays
     portion: null
   - entite: Palaos
+    type_entite: pays
+    portion: null
+  - entite: Fidji
+    type_entite: pays
+    portion: null
+  - entite: Vanuatu
+    type_entite: pays
+    portion: null
+  - entite: Îles Salomon
     type_entite: pays
     portion: null
 - slug: singapour_megapole

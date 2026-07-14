@@ -56,7 +56,11 @@ zones:
     type_entite: pays
     portion: null
   - entite: Burkina Faso
+    type_entite: pays
+    portion: null
   - entite: Nigeria
+    type_entite: pays
+    portion: null
   - entite: Égypte
     type_entite: pays
     portion: null
@@ -406,6 +410,8 @@ zones:
     type_entite: pays
     portion: null
   - entite: Corée du Sud
+    type_entite: pays
+    portion: null
   - entite: Bosnie-Herzégovine
     type_entite: pays
     portion: null
@@ -707,6 +713,8 @@ zones:
     type_entite: pays
     portion: null
   - entite: Cambodge
+    type_entite: pays
+    portion: null
   - entite: Chypre
     type_entite: pays
     portion: null
@@ -809,6 +817,8 @@ zones:
     type_entite: pays
     portion: null
   - entite: Vietnam
+    type_entite: pays
+    portion: null
   - entite: Népal
     type_entite: pays
     portion: null
@@ -980,9 +990,17 @@ zones:
     type_entite: pays
     portion: null
   - entite: Portugal
+    type_entite: pays
+    portion: null
   - entite: Espagne
+    type_entite: pays
+    portion: null
   - entite: France
+    type_entite: pays
+    portion: null
   - entite: Belgique
+    type_entite: pays
+    portion: null
   - entite: Irlande
     type_entite: pays
     portion: null
@@ -1244,7 +1262,7 @@ zones:
   nom: Bruxelles — Tribunal de Gouvernance Algorithmique
   niveau: 2
   type: ville
-  parent: centre_institutionnel_geneve
+  parent: union_nordique_europe_nord
   origine_reelle:
   - entite: Bruxelles
     type_entite: region_administrative
@@ -1411,7 +1429,7 @@ zones:
 - slug: corridor_iberique_energetique
   nom: Corridor ibérique énergétique
   niveau: 2
-  parent: ameriques_reconfigurees
+  parent: nouveau_califat_barcelone
   type: infrastructure
   origine_reelle: []
   description: Le corridor ibérique énergétique est une infrastructure de transit
@@ -2911,7 +2929,7 @@ Brazzaville abrite le siège africain de l'Agence Globale de Régénération des
 
 *Sources attestées : amara_diallo_nkosi_new_sustainability, agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability*
 
-#### Bruxelles — Tribunal de Gouvernance Algorithmique — sous [[centre_institutionnel_geneve]]
+#### Bruxelles — Tribunal de Gouvernance Algorithmique — sous [[union_nordique_europe_nord]]
 
 *ville — niveau 2 — statut : emergent*
 
@@ -2996,7 +3014,7 @@ Instance technique de l'Union Panafricaine spécialisée dans la gouvernance hyd
 
 *Sources attestées : amara_diallo_nkosi_new_sustainability, agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability*
 
-#### Corridor ibérique énergétique — sous [[ameriques_reconfigurees]]
+#### Corridor ibérique énergétique — sous [[nouveau_califat_barcelone]]
 
 *infrastructure — niveau 2 — statut : dominant*
 

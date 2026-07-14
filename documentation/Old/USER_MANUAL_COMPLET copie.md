@@ -1,5 +1,5 @@
 # Manuel utilisateur complet — Pipeline Ourrassol 2098
-*Consolidé le 14 juillet 2026 — couvre `generator/` (39+ scripts Python) et `gui/` (Flask)*
+*Consolidé le 11 juillet 2026 — couvre `generator/` (35+ scripts Python) et `gui/` (Flask)*
 
 Ce manuel classe chaque script par rôle : **modules internes** (jamais lancés seuls), **orchestrateurs**, **pipeline entités/événements**, **pipeline géographie**, **validation**, **scripts one-shot/legacy**, et **GUI Flask**. Pour chaque script exécutable : ce qu'il fait, quand l'utiliser, options CLI, statut (répétable / one-shot / legacy), et intégration GUI ou non.
 
@@ -64,20 +64,6 @@ Ces fichiers sont importés par les scripts exécutables ; ils n'ont pas de `__m
 | `prompt_builder.py` | Assemble le prompt complet (system + user) envoyé au LLM pour générer un article, à partir du snapshot, de la thématique et de `config.yaml`. Contient les 12 profils de journaux (2/scénario). Priorité de `zone_slug` inversée le 11 juillet : `config.get('zone_slug') or snapshot.get('zone_slug')`. |
 | `api.py` | Envoie le prompt au LLM configuré (tier `strict`, via `llm_client.py`) et sauvegarde l'article généré en `.md` dans `articles/`. Le champ `model:` du frontmatter reflète désormais le tier réellement résolu (`resolve_for_tier()`), pas une variable statique. |
 | `llm_client.py` | Abstraction unifiée Mistral/Claude/OpenAI. `LLM_PROVIDER`/`LLM_MODEL` (env, override manuel prioritaire). `TASK_TIER_DEFAULTS` + `resolve_for_tier(task_tier)` pour le routing par défaut. Exporte `call_llm(..., task_tier=...)`. |
-| `extract_state_logic.py` *(14 juillet)* | Parseur générique `variables/{variable}.md → states.{scenario}.state_logic`. Sanitise les clés wikilink Obsidian (`[[xxx]]`) des blocs `coupling_intensity` avant `yaml.safe_load` (sinon `unhashable key`). Utilisable en CLI (`--json`, `--scenario`) ou en import (`extract_state_logic(path)`). |
-| `patrons_spatiaux.py` *(14 juillet)* | Source de vérité du patron spatial par scénario, pour P24 (générateur top-down) et P22 signal 2 (garde-fou étendu). `state_logic`/`state_logic_complementaire` chargés dynamiquement depuis le vault à chaque import via `extract_state_logic.py` (jamais figés en dur) ; `patron_a_respecter`/`a_eviter` écrits à la main dans `_ANALYSE`, à revalider si un scénario change en profondeur. Config : `OURRASSOL_VAULT_ROOT` (env), sinon déduit de l'emplacement du fichier. **Pas encore consommé par aucun script du pipeline** — prêt, en attente. |
-
----
-
-## 1bis. Utilitaires partagés entre scripts de diagnostic géographie
-
-| Fonction | Vit dans | Rôle |
-|---|---|---|
-| `_tokens()` | `check_origine_reelle_coherence.py` | Découpe une chaîne `entite` en tokens comparables à un nom de pays (gère parenthèses, virgules, slashes). Réutilisée par `check_conventions_territoires.py` et `check_type_entite_coherence.py` (import direct). |
-| `_normaliser()` | `check_origine_reelle_coherence.py` | Ramène une variante de nom de pays à sa forme canonique, via `ALIASES` importé de `check_zones_coherence.py` (source unique). |
-| `_compte_comme_pays()` | `check_origine_reelle_coherence.py` | Détermine si une entrée `origine_reelle` compte comme un pays : `type_entite: pays` → toujours ; `type_entite: ville` → jamais ; tout le reste (absent, `region_administrative`, `autre`) → si le nom correspond exactement à une entrée de `zones_pays.json`. |
-
-⚠️ **`gui/app.py` ne peut pas importer ces fonctions** (codebase séparée de `generator/`) — `_tokens_entite()`/`_normalise_pays()` dans `app.py` sont des copies fonctionnelles indépendantes, pour le split de zone (§7). Si la logique de tokenisation évolue d'un côté, vérifier si l'autre doit suivre.
 
 ---
 
@@ -299,40 +285,8 @@ python3 add_pays_to_zone.py ... --dry-run
 python3 merge_pays_monde.py
 ```
 
-### `check_origine_reelle_coherence.py` 🔁 🗄️ — **diagnostic pur, lecture seule sauf `--write-zones-manquantes`** *(14 juillet, P22 signal 1)*
-Garde-fou de cohérence géographique : compare le pays d'une zone `ville`/`region_administrative` à l'union des pays de toute sa lignée d'ancêtres. Avertissement seul, jamais de blocage. Résolution ville→pays en cascade (extraction directe → alias adjectival → table statique `VILLE_PAYS` → `--resolve-llm`, tier `structured_strict`, cache dans `cache_ville_pays_llm.json`). Pour chaque incohérence : cherche un candidat de reparent parmi les zones N1 du scénario, et la racine N1 à ouvrir dans la Carte (peut différer du parent immédiat). Tableau récapitulatif markdown généré en fin de run, prêt à copier dans le backlog.
-```bash
-python3 check_origine_reelle_coherence.py --scenario NOM
-python3 check_origine_reelle_coherence.py --all
-python3 check_origine_reelle_coherence.py --all --resolve-llm
-python3 check_origine_reelle_coherence.py --all --write-zones-manquantes   # écrit dans zones_manquantes.yaml si aucun candidat
-```
-État au 14 juillet : 0 incohérence sur les 6 scénarios.
-
-### `check_type_entite_coherence.py` 🔁 🗄️ *(14 juillet, P26)*
-Détecte (et corrige avec `--apply`) les entrées `origine_reelle` sans `type_entite` du tout — oubli de champ à l'écriture, masque des cas pour `check_origine_reelle_coherence.py`. Édition ligne-à-ligne du texte brut (pas de re-dump YAML complet) pour ne toucher que les lignes concernées. Backup `.bak` automatique avec `--apply`.
-```bash
-python3 check_type_entite_coherence.py --all                # aperçu, lecture seule
-python3 check_type_entite_coherence.py --all --apply         # corrige, backup .bak
-```
-État au 14 juillet : 0 entrée sans `type_entite` sur les 6 scénarios, après `--apply`.
-
-### `check_conventions_territoires.py` 🔁 🗄️ — **diagnostic pur, lecture seule** *(14 juillet, P27)*
-Distinct de `check_origine_reelle_coherence.py` : au lieu de comparer une zone à sa chaîne de parenté, compare un même territoire ambigu (dépendance/collectivité, table `TERRITOIRES_AMBIGUS` à enrichir manuellement) **entre les 6 scénarios**. Vérifie la conformité à la convention décidée le 14 juillet : un territoire dépendant/autonome est toujours distinct de son pays souverain réel quand il apparaît dans un scénario. N'a de sens qu'avec `--all` (comparaison entre scénarios).
-```bash
-python3 check_conventions_territoires.py --all
-```
-État au 14 juillet : 11 cas non conformes à séparer (Groenland ×3, Écosse ×3, Pays de Galles ×5) — voir P27 au backlog, à traiter avec le split de zone (§7).
-
-### `scan_geographie_complet.py` 🔁 🗄️ — **orchestrateur** *(14 juillet)*
-Lance en séquence les 4 scripts de diagnostic géographie ci-dessus (`check_zones_coherence.py` → `check_type_entite_coherence.py` → `check_origine_reelle_coherence.py` → `check_conventions_territoires.py`), en sous-processus indépendants (pas d'import — un `sys.exit()` d'un script ne tue jamais les autres), résumé consolidé à la fin. Chaque script reste utilisable seul (entrée sidebar GUI intacte). Aucune écriture par défaut.
-```bash
-python3 scan_geographie_complet.py --all
-python3 scan_geographie_complet.py --all --apply-type-entite --resolve-llm --write-zones-manquantes
-```
-
-### Restructuration de zones — P7, dans l'onglet Carte (pas un script séparé)
-**Correction d'une confusion documentaire** : ce manuel décrivait auparavant `restructure_zones.py` comme un script `generator/` "planifié, pas encore codé". C'est inexact depuis le 13 juillet — P7 a été construit directement dans l'onglet Carte du GUI (`gui/app.py`/`app.js`), pas comme script séparé. L'entrée fantôme correspondante dans `scripts_config.json` (section maintenance) peut être retirée. Détail complet du workflow en §7 (rename, reparent, split).
+### `restructure_zones.py` ⚪ **planifié, pas encore codé (P7)**
+Référencé dans `scripts_config.json` (sidebar GUI, section maintenance) mais le fichier n'existe pas encore dans `generator/` — seul script du pipeline utilisant un LLM à rester hors de `llm_client.py`, uniquement parce qu'il n'existe pas encore. Objectif : split/merge/reparent/rename de zones N1 avec propagation complète (`instance.localisation.zone`, `event_instance.localisation.zone`, `zones_proposees.yaml`, `parent` dans les fiches, wikilinks éventuels, `registre_evenements.md`). Distinct de l'onglet Carte, qui gère déjà les bascules pays→zone individuelles. Questions ouvertes avant codage : présence de wikilinks vers des slugs de zones dans le vault ? `registre_evenements.md` référence-t-il des zones ?
 
 ---
 
@@ -459,26 +413,6 @@ Chaque entrée définit ses options (checkbox/select/number/slug_select/multi_se
 **Bouton "🚫 Ignorer"** — marque un pays comme "blanc intentionnel" : il reste dans `zones_manquantes.yaml` avec un statut dédié, mais disparaît de la vue "zones manquantes" du dashboard. Utile pour les pays qu'on ne veut délibérément pas traiter.
 
 **Bandeau diagnostic orange** — `#carte-diagnostic`, conditionnel : ne s'affiche que s'il existe des pays FR sans correspondance trouvée sur le fond de carte Leaflet (noms mal mappés dans `gui/static/pays_mapping.json`). Absence de bandeau = pas de problème de mapping actuellement.
-
-### Restructuration de zones (P7) — rename, reparent, split
-
-Trois opérations distinctes, toutes dans l'arbre des sous-zones (clic sur le nom/pastille d'une zone N1 dans la légende pour l'ouvrir) :
-
-| Opération | Bouton | Ce qu'elle fait | Depuis |
-|---|---|---|---|
-| **Renommer** | ✏️ sur chaque zone N1 de la légende | Change `slug`/`nom`, propage vers enfants, wikilinks, `relations.allies/rivaux` (n'importe quelle zone du scénario), `instances/*.md`, `zones_pays.json` | 13 juillet |
-| **Déplacer** (reparent) | "↗️ déplacer" sur tout nœud non-racine de l'arbre | Bouge une zone **entière** (avec son sous-arbre) vers un nouveau parent. Recalcul du niveau en cascade si la profondeur change. Permet aussi de promouvoir en zone N1 autonome ou de créer une nouvelle zone N1 à la volée | 13 juillet |
-| **Scinder** (split) | "✂️ scinder" sur tout nœud ayant plus d'un pays dans son `origine_reelle` (racine incluse) | Extrait un ou plusieurs pays vers une nouvelle zone N1 ou une zone N1 existante, **sans bouger le reste de la zone source**. Les sous-zones dont la propre `origine_reelle` référence aussi le(s) pays extrait(s) suivent automatiquement (détecté, pas décidé manuellement) ; les autres restent en place | 14 juillet |
-
-**Différence rename/reparent/split, en une phrase** : rename change juste le nom/slug d'une zone, reparent déplace une zone entière ailleurs, split coupe une zone en deux et n'en déplace qu'un morceau.
-
-**Split vs le clic sur un pays (`carte_assign`)** : pour un cas simple — un seul pays, une seule écriture, aucune sous-zone concernée — cliquer sur le pays et choisir "créer une nouvelle zone" (mécanisme préexistant, §ci-dessus) suffit et est plus rapide. Split n'apporte une vraie valeur que pour les cas plus complexes : plusieurs formulations du même pays dans la zone source (ex. `"Groenland"` et `"Danemark (Groenland)"`), et/ou des sous-zones à faire suivre.
-
-**Rapport d'impact avant confirmation** — comme pour la bascule pays→zone classique, chaque opération de restructuration affiche un aperçu (`impact_renommage_zone`, `impact_reparent_zone`, `impact_split_zone`) avant d'écrire quoi que ce soit. Backup `.bak` automatique dans tous les cas.
-
-### Rechercher une zone tous niveaux
-
-La légende/liste principale de la Carte n'affiche que les zones **niveau 1** — une zone niveau 2/3 (ex. `delta_rhone_fermes_verticales`) est invisible tant qu'on n'a pas ouvert l'arbre de sa bonne racine N1, qui peut différer de son parent immédiat. Champ de recherche en haut de la sidebar de l'onglet Carte (depuis le 14 juillet) : cherche par nom ou slug, tous niveaux, insensible aux accents/casse. Chaque résultat affiche le chemin complet racine→zone ; au clic, ouvre directement le bon arbre et centre/surligne la zone trouvée.
 
 ### Choix du modèle LLM (carte + `complete_geographie_coverage.py`)
 Le sélecteur de modèle du GUI ne définit un modèle **réellement utilisé** que si le toggle "Forcer ce modèle" est coché (voir plus haut) — sinon la carte et `complete_geographie_coverage.py` suivent leur tier normal (`structured_strict`, `mistral-large-latest` par défaut).

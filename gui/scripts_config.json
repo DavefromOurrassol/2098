@@ -1531,55 +1531,190 @@
     "icon": "🧭"
   },
   {
-    "id": "restructure_zones",
-    "label": "Restructure zones",
-    "icon": "🗂",
+    "id": "check_zones_coherence",
+    "label": "Cohérence zones",
+    "icon": "🩺",
     "section": "maintenance",
-    "script": "restructure_zones.py",
-    "description": "Renomme / reparente / divise / fusionne des zones géographiques (P7)",
+    "script": "check_zones_coherence.py",
+    "description": "Diagnostic lecture seule : parsing YAML, pays absents de toute zone, pays sans zone N1, entrées obsolètes de zones_manquantes.yaml.",
     "requires": [],
-    "badge": "P7",
     "options": [
       {
-        "flag": "--operation",
-        "type": "select",
-        "label": "Opération",
-        "choices": [
-          {
-            "value": "rename",
-            "label": "Renommer"
-          },
-          {
-            "value": "reparent",
-            "label": "Reparenter"
-          },
-          {
-            "value": "split",
-            "label": "Diviser"
-          },
-          {
-            "value": "merge",
-            "label": "Fusionner"
-          }
-        ]
-      },
-      {
-        "flag": "--zone",
-        "type": "slug_select",
-        "label": "Zone source",
-        "slug_type": "zones_all"
-      },
-      {
-        "flag": "--target",
-        "type": "text",
-        "label": "Cible / nouveau nom",
-        "optional": true
-      },
-      {
-        "flag": "--dry-run",
+        "flag": "--all",
         "type": "checkbox",
-        "label": "Dry run",
-        "default": true
+        "label": "Tous les scénarios",
+        "description": "Traite les 6 scénarios en une passe",
+        "default": false,
+        "mutually_exclusive_with": "scenario"
+      },
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "default": "",
+        "optional": true,
+        "mutually_exclusive_with": "all"
+      }
+    ]
+  },
+  {
+    "id": "check_type_entite_coherence",
+    "label": "Cohérence type_entite",
+    "icon": "🏷",
+    "section": "maintenance",
+    "script": "check_type_entite_coherence.py",
+    "description": "Détecte les entrées origine_reelle sans type_entite. Corrige avec --apply (backup .bak automatique).",
+    "requires": [],
+    "badge": "P26",
+    "options": [
+      {
+        "flag": "--all",
+        "type": "checkbox",
+        "label": "Tous les scénarios",
+        "description": "Traite les 6 scénarios en une passe",
+        "default": false,
+        "mutually_exclusive_with": "scenario"
+      },
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "default": "",
+        "optional": true,
+        "mutually_exclusive_with": "all"
+      },
+      {
+        "flag": "--apply",
+        "type": "checkbox",
+        "label": "Appliquer",
+        "description": "Corrige les entrées reconnues comme pays (sinon aperçu seul)",
+        "default": false
+      }
+    ]
+  },
+  {
+    "id": "check_origine_reelle_coherence",
+    "label": "Garde-fou origine_reelle",
+    "icon": "🔗",
+    "section": "maintenance",
+    "script": "check_origine_reelle_coherence.py",
+    "description": "Compare le pays d'une zone ville/région à sa chaîne de parenté. Avertissement seul, propose des candidats de reparent.",
+    "requires": [
+      "check_type_entite_coherence"
+    ],
+    "requires_message": "check_type_entite_coherence devrait tourner avant (les type_entite manquants faussent le diagnostic)",
+    "badge": "P22",
+    "options": [
+      {
+        "flag": "--all",
+        "type": "checkbox",
+        "label": "Tous les scénarios",
+        "description": "Traite les 6 scénarios en une passe",
+        "default": false,
+        "mutually_exclusive_with": "scenario"
+      },
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "default": "",
+        "optional": true,
+        "mutually_exclusive_with": "all"
+      },
+      {
+        "flag": "--resolve-llm",
+        "type": "checkbox",
+        "label": "Résoudre via LLM",
+        "description": "Tente de résoudre les entités non résolues (tier structured_strict), résultat mis en cache",
+        "default": false
+      },
+      {
+        "flag": "--write-zones-manquantes",
+        "type": "checkbox",
+        "label": "Écrire zones_manquantes.yaml",
+        "description": "Ajoute une entrée pour chaque incohérence sans candidat N1 (sinon aperçu seul)",
+        "default": false
+      }
+    ]
+  },
+  {
+    "id": "check_conventions_territoires",
+    "label": "Conventions territoires",
+    "icon": "⚖",
+    "section": "maintenance",
+    "script": "check_conventions_territoires.py",
+    "description": "Vérifie qu'un territoire ambigu (Groenland, Écosse...) est toujours distinct de son souverain réel, entre les 6 scénarios. N'a de sens qu'avec --all.",
+    "requires": [],
+    "badge": "P27",
+    "options": [
+      {
+        "flag": "--all",
+        "type": "checkbox",
+        "label": "Tous les scénarios",
+        "description": "Traite les 6 scénarios en une passe",
+        "default": false,
+        "mutually_exclusive_with": "scenario"
+      },
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "default": "",
+        "optional": true,
+        "mutually_exclusive_with": "all"
+      }
+    ]
+  },
+  {
+    "id": "scan_geographie_complet",
+    "label": "Scan géographie complet",
+    "icon": "🧪",
+    "section": "maintenance",
+    "script": "scan_geographie_complet.py",
+    "description": "Orchestrateur : lance les 4 diagnostics géographie en séquence (zones, type_entite, origine_reelle, conventions territoires), résumé consolidé.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--all",
+        "type": "checkbox",
+        "label": "Tous les scénarios",
+        "description": "Traite les 6 scénarios en une passe",
+        "default": false,
+        "mutually_exclusive_with": "scenario"
+      },
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "default": "",
+        "optional": true,
+        "mutually_exclusive_with": "all"
+      },
+      {
+        "flag": "--apply-type-entite",
+        "type": "checkbox",
+        "label": "Corriger type_entite",
+        "description": "Propage --apply à check_type_entite_coherence.py",
+        "default": false
+      },
+      {
+        "flag": "--resolve-llm",
+        "type": "checkbox",
+        "label": "Résoudre via LLM",
+        "description": "Propage --resolve-llm à check_origine_reelle_coherence.py",
+        "default": false
+      },
+      {
+        "flag": "--write-zones-manquantes",
+        "type": "checkbox",
+        "label": "Écrire zones_manquantes.yaml",
+        "description": "Propage --write-zones-manquantes à check_origine_reelle_coherence.py",
+        "default": false
       }
     ]
   }

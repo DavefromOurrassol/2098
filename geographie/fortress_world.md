@@ -53,6 +53,8 @@ zones:
     type_entite: pays
     portion: null
   - entite: Mauritanie
+    type_entite: pays
+    portion: null
   - entite: Libye
     type_entite: pays
     portion: null
@@ -1216,7 +1218,7 @@ zones:
   nom: Genève-Bunker
   niveau: 2
   type: ville
-  parent: zones_grises_tampons
+  parent: bloc_eurasiatique_occidental
   origine_reelle:
   - entite: Genève
     type_entite: region_administrative
@@ -3073,7 +3075,7 @@ Ville forteresse polonaise ayant accueilli une session mémorable du Pacte des F
 
 *Sources attestées : alliance_blocs_souverains_fortress_world*
 
-#### Genève-Bunker — sous [[zones_grises_tampons]]
+#### Genève-Bunker — sous [[bloc_eurasiatique_occidental]]
 
 *ville — niveau 2 — statut : en_declin*
 

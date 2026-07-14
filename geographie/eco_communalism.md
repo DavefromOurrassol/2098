@@ -105,6 +105,8 @@ zones:
     type_entite: pays
     portion: null
   - entite: Groenland
+    type_entite: pays
+    portion: null
   description: Réseau de bioterritoires post-étatiques couvrant l'espace fenno-scandinave
     et baltique, structuré autour d'assemblées de bassin versant et de confédérations
     locales de communs. L'un des territoires les plus avancés dans la transition éco-communaliste,
@@ -370,7 +372,11 @@ zones:
     type_entite: pays
     portion: null
   - entite: Pologne
+    type_entite: pays
+    portion: null
   - entite: République tchèque
+    type_entite: pays
+    portion: null
   - entite: Irlande
     type_entite: pays
     portion: null
@@ -2434,6 +2440,8 @@ zones:
     type_entite: pays
     portion: Nord
   - entite: Chine
+    type_entite: pays
+    portion: null
   - entite: Biélorussie
     type_entite: pays
     portion: null
