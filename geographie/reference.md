@@ -2649,8 +2649,8 @@ zones:
   parent: null
   origine_reelle:
   - entite: Portugal
-    portion: null
     type_entite: pays
+    portion: null
   description: Zone centrée sur Lisbonne, devenue un hub logistique et financier secondaire
     pour les flux atlantiques, en concurrence avec les ports nord-européens du Corridor
     Arctique Nordique. Le reste du territoire portugais, marqué par le déclin démographique

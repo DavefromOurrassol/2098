@@ -88,3 +88,32 @@ zones_suspectes:
     (conflits hybrides diffus, pas de zones en rupture totale)
   date_detection: '2026-07-25'
   statut: a_traiter
+- scenario: fortress_world
+  slug: tuvalu_refugies_climatiques
+  raison: Décrit comme un 'refuge climatique sous protection onusienne résiduelle',
+    ce qui suggère une zone neutre ou humanitaire non conforme à la logique de fragmentation
+    extrême
+  date_detection: '2026-07-25'
+  statut: a_traiter
+- scenario: policy_reform
+  slug: bloc_souverainiste_non_signataire
+  raison: Contredit la logique de stabilisation par renforcement des institutions
+    internationales et la coopération réelle entre blocs rivaux, en revendiquant une
+    résistance active à l'architecture de gouvernance technocratique mondiale.
+  date_detection: '2026-07-25'
+  statut: a_traiter
+- scenario: policy_reform
+  slug: espace_eurasiatique
+  raison: Mentionne un 'contre-modèle institutionnel' et une résistance aux réformes
+    biotech internationales, ce qui suggère une logique de bloc rival non coopératif,
+    en tension avec la coopération réelle mais non totale attendue.
+  date_detection: '2026-07-25'
+  statut: a_traiter
+- scenario: policy_reform
+  slug: peninsule_iberique_cooperative
+  raison: Décrite comme une 'union régionale' avec une institution intégrée au CRTI,
+    mais son origine réelle se limite à l'Espagne, ce qui contredit la logique de
+    montée de villes secondaires et de rééquilibrage territorial (risque de mégapole
+    ou région dominante unique).
+  date_detection: '2026-07-25'
+  statut: a_traiter

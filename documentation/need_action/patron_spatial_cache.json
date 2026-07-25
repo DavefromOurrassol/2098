@@ -13,6 +13,20 @@
       "slug": "japon_archipel_resilient"
     }
   ],
+  "3f9e632ddcb0bcfb08a9fc3a0ea71c5ec7ba08a280491dc9223d97b7b7d852fd": [
+    {
+      "raison": "Contredit la logique de stabilisation par renforcement des institutions internationales et la coopération réelle entre blocs rivaux, en revendiquant une résistance active à l'architecture de gouvernance technocratique mondiale.",
+      "slug": "bloc_souverainiste_non_signataire"
+    },
+    {
+      "raison": "Mentionne un 'contre-modèle institutionnel' et une résistance aux réformes biotech internationales, ce qui suggère une logique de bloc rival non coopératif, en tension avec la coopération réelle mais non totale attendue.",
+      "slug": "espace_eurasiatique"
+    },
+    {
+      "raison": "Décrite comme une 'union régionale' avec une institution intégrée au CRTI, mais son origine réelle se limite à l'Espagne, ce qui contredit la logique de montée de villes secondaires et de rééquilibrage territorial (risque de mégapole ou région dominante unique).",
+      "slug": "peninsule_iberique_cooperative"
+    }
+  ],
   "4d6b8e4729d89f110b1fa2381fd0b8ca6234c9ae178cb4c099d0d4cf0a7a8b9c": [
     {
       "raison": "Mention d'un 'Consortium Helios (énergie solaire orbitale)' contredit la logique frontalière du système (expansion spatiale limitée et robotique)",
@@ -25,6 +39,38 @@
     {
       "raison": "Description d'une coalition contrôlée par des milices et régimes autoritaires survivants, en tension avec la multipolarité instable mais fonctionnelle du patron (conflits hybrides diffus, pas de zones en rupture totale)",
       "slug": "bloc_persique_autonome"
+    }
+  ],
+  "4db53cb3dce027a026a005c35d95202df5f0ccaa7e23477ca7a80c8cc09c00cf": [
+    {
+      "raison": "Mention d'énergie solaire orbitale (Consortium Helios), ce qui contredit la limite spatiale terrestre et robotique du patron.",
+      "slug": "europe_occidentale_reconstructee"
+    },
+    {
+      "raison": "Présence d'une innovation institutionnelle majeure (Fédération des Communs Territoriaux, Nouveau Parti Commun) trop marquée pour un scénario conservateur.",
+      "slug": "ameriques_multipolaires"
+    },
+    {
+      "raison": "Description d'une coalition contrôlée par des milices et régimes autoritaires survivants, suggérant une rupture géopolitique trop radicale pour le patron.",
+      "slug": "bloc_persique_autonome"
+    }
+  ],
+  "72af4cdc66c48a5ad6e59bff8a9e35c8b2478b3c89834344f0d8da9ab18b7219": [
+    {
+      "raison": "Décrit comme un 'territoire autonome' précaire négociant avec des blocs, ce qui suggère une neutralité ou une zone intermédiaire non conforme au patron (ni enclave protégée ni hors-forteresse dégradée)",
+      "slug": "amazonie_pacte_vert"
+    },
+    {
+      "raison": "Décrit comme une 'puissance de transit' privée et armée, ni clairement un bloc militarisé ni une zone abandonnée, ce qui contredit la logique binaire du patron",
+      "slug": "espace_nordique_arctique"
+    },
+    {
+      "raison": "Mention d'une 'neutralité armée' et d'un hub pour les blocs dominants, ce qui évoque une zone intermédiaire non alignée sur le patron spatial",
+      "slug": "singapour_megapole"
+    },
+    {
+      "raison": "Décrit comme un 'refuge climatique sous protection onusienne résiduelle', ce qui suggère une zone neutre ou humanitaire non conforme à la logique de fragmentation extrême",
+      "slug": "tuvalu_refugies_climatiques"
     }
   ],
   "7abdf40b4c3ef8fd45ffe0f978e4a539f865b817d1ff0bd7204c94b6ec473bb4": [
@@ -43,6 +89,7 @@
       "slug": "moyen_orient_golfe"
     }
   ],
+  "a51a30f676d29a236f903e8f5c31f7fbb0a0a4b17eb3d681964108970a07fe9c": [],
   "aab3b637cd55f2451e0ade407440529286091c3365865ac1225d5cd484f3095a": [
     {
       "raison": "Décrit comme un 'territoire autonome' précaire négociant avec des blocs, ce qui suggère une neutralité ou une zone intermédiaire non militarisée, en contradiction avec l'absence de zones neutres dans le patron 'fortress_world'.",

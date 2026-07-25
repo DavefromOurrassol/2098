@@ -1,0 +1,295 @@
+propositions:
+- scenario: reference
+  raison: zone_suspecte
+  cible: europe_occidentale_reconstructee
+  issues: []
+  valide: false
+  proposition:
+    slug: europe_occidentale_reconstructee
+    nom: Europe Occidentale Reconstruite
+    niveau: 1
+    type: union_regionale
+    parent: null
+    origine_reelle:
+    - entite: France
+      type_entite: pays
+      portion: null
+    - entite: Belgique
+      type_entite: pays
+      portion: null
+    - entite: Espagne
+      type_entite: pays
+      portion: null
+    - entite: Allemagne
+      type_entite: pays
+      portion: null
+    - entite: Suisse
+      type_entite: pays
+      portion: null
+    - entite: Royaume-Uni
+      type_entite: pays
+      portion: null
+    - entite: Angleterre
+      type_entite: pays
+      portion: null
+    - entite: Pays-Bas
+      type_entite: pays
+      portion: null
+    - entite: Autriche
+      type_entite: pays
+      portion: null
+    - entite: République tchèque
+      type_entite: pays
+      portion: null
+    - entite: Irlande
+      type_entite: pays
+      portion: null
+    - entite: Luxembourg
+      type_entite: pays
+      portion: null
+    - entite: Monaco
+      type_entite: pays
+      portion: null
+    - entite: Andorre
+      type_entite: pays
+      portion: null
+    - entite: Liechtenstein
+      type_entite: pays
+      portion: null
+    - entite: Saint-Marin
+      type_entite: pays
+      portion: null
+    - entite: Vatican
+      type_entite: pays
+      portion: null
+    - entite: Malte
+      type_entite: pays
+      portion: null
+    - entite: Croatie
+      type_entite: pays
+      portion: null
+    - entite: Slovénie
+      type_entite: pays
+      portion: null
+    - entite: Slovaquie
+      type_entite: pays
+      portion: null
+    description: 'Zone européenne occidentale où persistent des institutions hybrides
+      : Bruxelles-Nouveau accueille le siège du Consortium Helios (énergie solaire
+      terrestre à grande échelle), Genève reste le siège de l''AMSC et du Conseil
+      de Genève pour les droits biosociaux. Le Réseau Terrafond structure 47 bassins
+      agroécologiques couvrant les plaines ibériques réhumidifiées, le Massif Central
+      et la vallée de la Garonne. Lyon-Métropole apparaît comme ville ordinaire sujette
+      à la réglementation sur les technologies sensibles.'
+    statut: stable
+    tensions_internes: Tension entre réseaux agroécologiques (Terrafond) et agriculture
+      verticale algorithmique. Pression des réfugiés climatiques vers les zones tampons.
+      Réglementation technologique croissante (loi sur le Registre des Technologies
+      Sensibles de 2068) générant des frictions civiles.
+    periode_transition: 2040-2070
+    evenement_transition: arrestation_chris_van_derburgh_reference
+    lieux_emblematiques: []
+    relations:
+      allies:
+      - institutions_multilaterales_survivantes
+      rivaux: []
+    sources_attestees:
+    - consortium_helios_reference
+    - agence_stabilisation_climatique_reference
+    - cooperative_terrafond_reference
+    - arrestation_chris_van_derburgh_reference
+    - conseil_de_geneve_pour_les_droits_biosociaux_reference
+    - leena_vainala_reference
+    - cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference
+- scenario: reference
+  raison: zone_suspecte
+  cible: ameriques_multipolaires
+  issues: []
+  valide: false
+  proposition:
+    slug: ameriques_multipolaires
+    nom: Amériques Multipolaires
+    niveau: 1
+    type: bloc_continental
+    parent: null
+    origine_reelle:
+    - entite: États-Unis d'Amérique
+      type_entite: pays
+      portion: null
+    - entite: Brésil
+      type_entite: pays
+      portion: null
+    - entite: Chili
+      type_entite: pays
+      portion: null
+    - entite: Colombie
+      type_entite: pays
+      portion: null
+    - entite: Mexique
+      type_entite: pays
+      portion: null
+    - entite: Venezuela
+      type_entite: pays
+      portion: null
+    - entite: Canada
+      type_entite: pays
+      portion: null
+    - entite: Pérou
+      type_entite: pays
+      portion: null
+    - entite: Bolivie
+      type_entite: pays
+      portion: null
+    - entite: Équateur
+      type_entite: pays
+      portion: null
+    - entite: Cuba
+      type_entite: pays
+      portion: null
+    - entite: Haïti
+      type_entite: pays
+      portion: null
+    - entite: République dominicaine
+      type_entite: pays
+      portion: null
+    - entite: Jamaïque
+      type_entite: pays
+      portion: null
+    - entite: Bahamas
+      type_entite: pays
+      portion: null
+    - entite: Belize
+      type_entite: pays
+      portion: null
+    - entite: Guatemala
+      type_entite: pays
+      portion: null
+    - entite: Honduras
+      type_entite: pays
+      portion: null
+    - entite: Salvador
+      type_entite: pays
+      portion: null
+    - entite: Nicaragua
+      type_entite: pays
+      portion: null
+    - entite: Costa Rica
+      type_entite: pays
+      portion: null
+    - entite: Panama
+      type_entite: pays
+      portion: null
+    - entite: Guyana
+      type_entite: pays
+      portion: null
+    - entite: Suriname
+      type_entite: pays
+      portion: null
+    - entite: Paraguay
+      type_entite: pays
+      portion: null
+    - entite: Uruguay
+      type_entite: pays
+      portion: null
+    - entite: Dominique
+      type_entite: pays
+      portion: null
+    - entite: Argentine
+      type_entite: pays
+      portion: null
+    - entite: Trinité-et-Tobago
+      type_entite: pays
+      portion: null
+    description: Zone américaine fragmentée entre les États-Unis traversés par une
+      crise politique majeure (élection contestée de 2055 et polarisation institutionnelle),
+      São Paulo comme métropole-monde dominant les flux économiques sud-américains,
+      et Valparaíso comme hub logistique secondaire pour les corridors Pacifique-Atlantique.
+      Guadalajara reste un centre médical et biotechnologique de premier plan, intégré
+      aux réseaux nord-américains.
+    statut: fragmenté
+    tensions_internes: Polarisation politique extrême aux États-Unis post-2055, réformes
+      bloquées par l'opposition institutionnelle. Tensions entre les mégapoles (São
+      Paulo, Mexico, New York) et les périphéries en déclin, notamment dans les zones
+      rurales et les anciennes régions industrielles.
+    periode_transition: 2026-2060
+    evenement_transition: election_parti_commun_americain_reference
+    lieux_emblematiques: []
+    relations:
+      allies: []
+      rivaux:
+      - bloc_eurasien_central
+      - pacte_des_souverains
+    sources_attestees:
+    - election_parti_commun_americain_reference
+    - internationale_travailleurs_augmentes_reference
+    - federation_communs_territoriaux_reference
+    - nexus_biosyn_reference
+    - front_souverainiste_des_ressources_d_amerique_du_sud_reference
+- scenario: reference
+  raison: zone_suspecte
+  cible: bloc_persique_autonome
+  issues: []
+  valide: false
+  proposition:
+    slug: bloc_persique_autonome
+    nom: Bloc Persique Autonome
+    niveau: 1
+    type: union_regionale
+    parent: null
+    statut: stable
+    description: Coalition régionale centrée sur les ressources pétrolières et gazières
+      du Golfe Persique, structurée autour d'un condominium énergétique partagé entre
+      Téhéran et Riyad. Fonctionne comme un hub logistique et financier pour les flux
+      eurasiatiques, malgré des tensions internes persistantes.
+    tensions_internes: Rivalités entre élites technocratiques iraniennes et saoudiennes
+      pour le contrôle des infrastructures critiques, atténuées par une gouvernance
+      conjointe des ressources.
+    periode_transition: 2035-2080
+    evenement_transition: Révolution énergétique du Golfe 2040 et fragmentation de
+      l'Arabie saoudite.
+    lieux_emblematiques:
+    - Téhéran (siège du Conseil Persique)
+    - Bassora (port stratégique)
+    - Chiraz (centre culturel)
+    relations:
+      allies:
+      - bloc_eurasien_central
+      - turquie_eurasie_moyen_orient
+      rivaux:
+      - israel_mediterranee_orientale
+      - zones_grises_globales
+    sources_attestees: []
+    origine_reelle:
+    - entite: Iran
+      type_entite: pays
+      portion: null
+    - entite: Irak
+      type_entite: pays
+      portion: sud
+    - entite: Arabie saoudite
+      type_entite: pays
+      portion: null
+    - entite: Koweït
+      type_entite: pays
+      portion: null
+    - entite: Libye
+      type_entite: pays
+      portion: null
+    - entite: Égypte
+      type_entite: pays
+      portion: null
+    - entite: Arménie
+      type_entite: pays
+      portion: null
+    - entite: Jordanie
+      type_entite: pays
+      portion: null
+    - entite: Oman
+      type_entite: pays
+      portion: null
+    - entite: Bahreïn
+      type_entite: pays
+      portion: null
+    couvre_actuellement:
+    - Iran
+    - Irak

@@ -3340,7 +3340,9 @@ async function _carteCreerZoneTopdown(proposition, container) {
     }
     const syncMsg = (data.pays_zones_pays_json && data.pays_zones_pays_json.length)
       ? ` (zones_pays.json synchronisé : ${data.pays_zones_pays_json.join(', ')})` : '';
-    statusEl.textContent = `✓ Zone créée : ${data.slug}${syncMsg}`;
+    const reparentMsg = (data.sous_zones_reparentees && data.sous_zones_reparentees.length)
+      ? ` — sous-zone(s) suivie(s) automatiquement : ${data.sous_zones_reparentees.join(', ')}` : '';
+    statusEl.textContent = `✓ Zone créée : ${data.slug}${syncMsg}${reparentMsg}`;
     await refreshCarte();
   } catch (e) {
     statusEl.className = 'carte-panel-error';

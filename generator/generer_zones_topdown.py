@@ -54,6 +54,7 @@ import yaml
 
 from check_zones_coherence import _pays_present, ALIASES
 from zoning_topdown import generer_zone_topdown
+from reparenter_sous_zones_orphelines import reparenter_sous_zones_orphelines
 
 SCRIPT_DIR = Path(__file__).parent
 VAULT_ROOT = SCRIPT_DIR.parent
@@ -244,6 +245,17 @@ def _appliquer_pays_sans_zone(scenario: str, proposition: dict) -> None:
     new_fm = yaml.safe_dump(fm, allow_unicode=True, sort_keys=False, default_flow_style=False)
     new_body = parts[2].rstrip("\n") + f"\n\n### {proposition['nom']}\n{proposition.get('description', '')}\n"
     geo_file.write_text("---\n" + new_fm + "---" + new_body, encoding="utf-8")
+
+    # Propagation des sous-zones orphelines (P24 étape C, ajouté le 25 juillet
+    # suite au cas réel valence_tours_rirec/Espagne) -- appelée maintenant que
+    # la zone cible existe réellement sur disque (reparenter_sous_zones_
+    # orphelines() lit le fichier tel qu'écrit, ne travaille jamais sur un état
+    # en mémoire). Fonction partagée, réutilisée telle quelle par le GUI en
+    # sous-processus -- voir reparenter_sous_zones_orphelines.py.
+    reparentees = reparenter_sous_zones_orphelines(scenario, slug)
+    if reparentees:
+        print(f"    ✓ {len(reparentees)} sous-zone(s) suivie(s) automatiquement : "
+              f"{', '.join(reparentees)}")
 
     # Synchronisation zones_pays.json -- même principe que _creer_zone_in_zones_pays
     # (gui/app.py), dupliqué ici pour la même raison de séparation de codebase.

@@ -1,0 +1,228 @@
+propositions:
+- scenario: new_sustainability
+  raison: zone_suspecte
+  cible: bloc_eurasien_souverainiste
+  issues: []
+  valide: false
+  proposition:
+    slug: bloc_eurasien_souverainiste
+    nom: Bloc Eurasien souverainiste
+    niveau: 1
+    type: union_regionale
+    parent: null
+    origine_reelle:
+    - entite: Russie
+      type_entite: pays
+      portion: null
+    - entite: Chine
+      type_entite: pays
+      portion: null
+    - entite: Asie centrale (Kazakhstan, Ouzbékistan, etc.)
+      type_entite: autre
+      portion: null
+    - entite: Hongrie
+      type_entite: pays
+      portion: null
+    - entite: République tchèque
+      type_entite: pays
+      portion: null
+    - entite: Roumanie
+      type_entite: pays
+      portion: null
+    - entite: Serbie
+      type_entite: pays
+      portion: null
+    - entite: Ukraine
+      type_entite: pays
+      portion: null
+    - entite: Kazakhstan
+      type_entite: pays
+      portion: null
+    - entite: Géorgie
+      type_entite: pays
+      portion: null
+    - entite: Ouzbékistan
+      type_entite: pays
+      portion: null
+    - entite: Kirghizistan
+      type_entite: pays
+      portion: null
+    - entite: Mongolie
+      type_entite: pays
+      portion: null
+    - entite: Corée du Sud
+      type_entite: pays
+      portion: null
+    - entite: Bosnie-Herzégovine
+      type_entite: pays
+      portion: null
+    - entite: Macédoine du Nord
+      type_entite: pays
+      portion: null
+    - entite: Bulgarie
+      type_entite: pays
+      portion: null
+    - entite: Moldavie
+      type_entite: pays
+      portion: null
+    - entite: Biélorussie
+      type_entite: pays
+      portion: null
+    - entite: Slovaquie
+      type_entite: pays
+      portion: null
+    - entite: Kosovo
+      type_entite: pays
+      portion: null
+    - entite: Arménie
+      type_entite: pays
+      portion: null
+    - entite: Turkménistan
+      type_entite: pays
+      portion: null
+    - entite: Tadjikistan
+      type_entite: pays
+      portion: null
+    - entite: Afghanistan
+      type_entite: pays
+      portion: null
+    - entite: Corée du Nord
+      type_entite: pays
+      portion: null
+    - entite: Taïwan
+      type_entite: pays
+      portion: null
+    - entite: Pologne
+      type_entite: pays
+      portion: null
+    description: Le Bloc Eurasien de 2098 est une union régionale qui adapte les cadres
+      de transition écologique globaux (AGRB-ONU, AIER) à ses spécificités territoriales
+      et culturelles. Il se distingue par une approche décentralisée de la gouvernance
+      hydrique, une alliance numérique eurasienne alignée sur les standards de NexCore,
+      et une intégration progressive des corridors du Réseau Vivant Continental. Les
+      bassins versants asiatiques sont gérés via des IA locales en dialogue avec les
+      hubs institutionnels de Nairobi et Genève.
+    statut: stable
+    tensions_internes: Débats persistants entre fédéralistes et partisans d'une autonomie
+      renforcée des territoires ; tensions sur le degré d'alignement avec les normes
+      globales de régénération écologique, notamment dans les zones frontalières.
+    periode_transition: 2040-2070
+    evenement_transition: null
+    lieux_emblematiques: []
+    relations:
+      allies:
+      - centre_institutionnel_geneve
+      - hub_nairobi_kigali
+      - infrastructure_numerique_globale
+      - reseau_vivant_continental
+      rivaux: []
+    sources_attestees:
+    - souverainistes_du_bloc_eurasien_new_sustainability
+    - alliance_numerique_eurasie_pacifique_new_sustainability
+    - bloc_des_gouvernements_souverainistes_hydriques_new_sustainability
+    - amara_diallo_nkosi_new_sustainability
+    - factions_souverainistes_des_blocs_peripheriques_new_sustainability
+    - conseil_regulation_algorithmique_new_sustainability
+- scenario: new_sustainability
+  raison: zone_suspecte
+  cible: moyen_orient_golfe
+  issues: []
+  valide: false
+  proposition:
+    slug: moyen_orient_golfe
+    nom: Moyen-Orient et Golfe post-pétrolier
+    niveau: 1
+    type: union_regionale
+    parent: null
+    origine_reelle:
+    - entite: Israël
+      type_entite: pays
+      portion: null
+    - entite: Iran
+      type_entite: pays
+      portion: null
+    - entite: Arabie Saoudite
+      type_entite: pays
+      portion: null
+    - entite: Qatar
+      type_entite: pays
+      portion: null
+    - entite: Turquie
+      type_entite: pays
+      portion: null
+    - entite: Grèce
+      type_entite: pays
+      portion: null
+    - entite: Azerbaïdjan
+      type_entite: pays
+      portion: null
+    - entite: Émirats arabes unis
+      type_entite: pays
+      portion: null
+    - entite: Irak
+      type_entite: pays
+      portion: null
+    - entite: Yémen
+      type_entite: pays
+      portion: null
+    - entite: Liban
+      type_entite: pays
+      portion: null
+    - entite: Syrie
+      type_entite: pays
+      portion: null
+    - entite: Koweït
+      type_entite: pays
+      portion: null
+    - entite: Pakistan
+      type_entite: pays
+      portion: null
+    - entite: Cambodge
+      type_entite: pays
+      portion: null
+    - entite: Chypre
+      type_entite: pays
+      portion: null
+    - entite: Jordanie
+      type_entite: pays
+      portion: null
+    - entite: Oman
+      type_entite: pays
+      portion: null
+    - entite: Bahreïn
+      type_entite: pays
+      portion: null
+    - entite: Palestine
+      type_entite: pays
+      portion: null
+    - entite: Djibouti
+      type_entite: pays
+      portion: null
+    - entite: Somalie
+      type_entite: pays
+      portion: null
+    - entite: Érythrée
+      type_entite: pays
+      portion: null
+    description: Le Moyen-Orient et le Golfe de 2098 incarnent une transition post-pétrolier
+      réussie, pilotée par le Conseil Régional de Transition Énergétique (CRTE) sous
+      l'égide de l'AIER. La région a transformé la crise des prix de l'énergie des
+      années 2030 en opportunité, devenant un hub de production d'hydrogène vert et
+      de technologies solaires avancées. Les tensions historiques ont été résorbées
+      par des mécanismes de gouvernance algorithmique et des corridors économiques
+      intégrés, bien que des adaptations locales persistent.
+    statut: stable
+    tensions_internes: Résistances locales à l'intégration algorithmique du CRTE ;
+      disparités dans l'adoption des technologies vertes entre États côtiers et intérieurs.
+    periode_transition: 2026-2045
+    evenement_transition: conflit_israel_iran_2026_new_sustainability
+    lieux_emblematiques: []
+    relations:
+      allies:
+      - helios_tours_orbitales
+      - afrique_continentale
+      - te_moana_nui_plateforme
+      rivaux: []
+    sources_attestees:
+    - conflit_israel_iran_2026_new_sustainability
+    - le_temoin_new_sustainability

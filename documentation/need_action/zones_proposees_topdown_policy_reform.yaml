@@ -1,9 +1,260 @@
 propositions:
 - scenario: policy_reform
-  raison: pays_sans_zone
-  cible: Espagne
+  raison: zone_suspecte
+  cible: bloc_souverainiste_non_signataire
   issues: []
-  valide: true
+  valide: false
+  proposition:
+    slug: bloc_souverainiste_non_signataire
+    nom: Bloc Souverainiste Non-Signataire (Sud Global dissident)
+    niveau: 1
+    type: union_regionale
+    parent: null
+    origine_reelle:
+    - entite: Niger
+      type_entite: pays
+      portion: null
+    - entite: Tchad
+      type_entite: pays
+      portion: null
+    - entite: Mali
+      type_entite: pays
+      portion: null
+    - entite: Brésil
+      type_entite: pays
+      portion: null
+    - entite: Argentine
+      type_entite: pays
+      portion: null
+    - entite: Bolivie
+      type_entite: pays
+      portion: null
+    - entite: Indonésie
+      type_entite: pays
+      portion: null
+    - entite: Nigeria
+      type_entite: pays
+      portion: null
+    - entite: Burkina Faso
+      type_entite: pays
+      portion: null
+    - entite: Soudan
+      type_entite: pays
+      portion: null
+    - entite: Colombie
+      type_entite: pays
+      portion: null
+    - entite: Pérou
+      type_entite: pays
+      portion: null
+    - entite: Venezuela
+      type_entite: pays
+      portion: null
+    - entite: Chili
+      type_entite: pays
+      portion: null
+    - entite: Nicaragua
+      type_entite: pays
+      portion: null
+    - entite: Barbade
+      type_entite: pays
+      portion: null
+    - entite: Guyana
+      type_entite: pays
+      portion: null
+    - entite: Suriname
+      type_entite: pays
+      portion: null
+    - entite: Équateur
+      type_entite: pays
+      portion: null
+    - entite: Paraguay
+      type_entite: pays
+      portion: null
+    - entite: Uruguay
+      type_entite: pays
+      portion: null
+    - entite: Sainte-Lucie
+      type_entite: pays
+      portion: null
+    - entite: Grenade
+      type_entite: pays
+      portion: null
+    - entite: Saint-Vincent-et-les-Grenadines
+      type_entite: pays
+      portion: null
+    - entite: Antigua-et-Barbuda
+      type_entite: pays
+      portion: null
+    - entite: Saint-Christophe-et-Niévès
+      type_entite: pays
+      portion: null
+    - entite: Dominique
+      type_entite: pays
+      portion: null
+    description: Coalition d'États du Sud Global — sahéliens, andins et du Pacifique
+      Sud — qui négocient collectivement leur intégration aux mécanismes de gouvernance
+      technocratique mondiale, tout en défendant une souveraineté renforcée sur leurs
+      ressources, leurs données et leurs choix stratégiques. Ce bloc agit comme un
+      contrepoids institutionnalisé, participant aux instances de régulation tout
+      en exigeant des réformes structurelles.
+    statut: stable
+    tensions_internes: 'Hétérogénéité persistante : certains membres privilégient
+      une intégration progressive aux institutions internationales, tandis que d''autres
+      insistent sur des garanties de souveraineté absolue, notamment en matière de
+      gestion des ressources hydriques et énergétiques.'
+    periode_transition: 2087-2098
+    evenement_transition: null
+    lieux_emblematiques: []
+    relations:
+      allies:
+      - espace_eurasiatique
+      - royaume_uni_autonome
+      rivaux:
+      - hub_europeen_regulation
+    sources_attestees:
+    - amara_diallo_nkosi_policy_reform
+    - etats_dissidents_du_bloc_austral_policy_reform
+    - front_souverainiste_des_blocs_non_signataires_policy_reform
+    - conseil_regulation_ressources_policy_reform
+    - bureau_gouvernance_algorithmique_policy_reform
+    - collectifs_de_defense_hydrique_saheliens_policy_reform
+    - front_des_souverainistes_energetiques_policy_reform
+    - trame_bioclimatique_policy_reform
+- scenario: policy_reform
+  raison: zone_suspecte
+  cible: espace_eurasiatique
+  issues: []
+  valide: false
+  proposition:
+    slug: espace_eurasiatique
+    nom: Espace Eurasiatique
+    niveau: 1
+    type: bloc_continental
+    parent: null
+    origine_reelle:
+    - entite: Russie
+      type_entite: pays
+      portion: null
+    - entite: Chine
+      type_entite: pays
+      portion: null
+    - entite: Kazakhstan
+      type_entite: pays
+      portion: null
+    - entite: Inde
+      type_entite: pays
+      portion: null
+    - entite: Corée du Sud
+      type_entite: pays
+      portion: null
+    - entite: Pologne
+      type_entite: pays
+      portion: null
+    - entite: Roumanie
+      type_entite: pays
+      portion: null
+    - entite: Ukraine
+      type_entite: pays
+      portion: null
+    - entite: Géorgie
+      type_entite: pays
+      portion: null
+    - entite: Ouzbékistan
+      type_entite: pays
+      portion: null
+    - entite: Kirghizistan
+      type_entite: pays
+      portion: null
+    - entite: Vietnam
+      type_entite: pays
+      portion: null
+    - entite: Bangladesh
+      type_entite: pays
+      portion: null
+    - entite: Pakistan
+      type_entite: pays
+      portion: null
+    - entite: Mongolie
+      type_entite: pays
+      portion: null
+    - entite: Moldavie
+      type_entite: pays
+      portion: null
+    - entite: Biélorussie
+      type_entite: pays
+      portion: null
+    - entite: Arménie
+      type_entite: pays
+      portion: null
+    - entite: Turkménistan
+      type_entite: pays
+      portion: null
+    - entite: Tadjikistan
+      type_entite: pays
+      portion: null
+    - entite: Afghanistan
+      type_entite: pays
+      portion: null
+    - entite: Népal
+      type_entite: pays
+      portion: null
+    - entite: Bhoutan
+      type_entite: pays
+      portion: null
+    - entite: Birmanie
+      type_entite: pays
+      portion: null
+    - entite: Laos
+      type_entite: pays
+      portion: null
+    - entite: Cambodge
+      type_entite: pays
+      portion: null
+    - entite: Corée du Nord
+      type_entite: pays
+      portion: null
+    - entite: Taïwan
+      type_entite: pays
+      portion: null
+    - entite: Singapour
+      type_entite: pays
+      portion: null
+    - entite: Arctique
+      type_entite: pays
+      portion: null
+    description: Bloc continental eurasiatique structuré autour d'une gouvernance
+      technocratique décentralisée, intégrée aux mécanismes de régulation internationale
+      tout en défendant une approche souveraine des standards technologiques et biologiques.
+      Il abrite des institutions comme l'Union Technocratique Eurasiatique, qui participe
+      activement au CRTI (siège rotatif à Chengdu), et des pôles de recherche en biotechnologies
+      alignés sur les cadres globaux, malgré des divergences sur certains principes
+      éthiques.
+    statut: stable
+    tensions_internes: Débats persistants entre les tenants d'une intégration complète
+      aux standards internationaux et les défenseurs d'une souveraineté renforcée
+      sur les questions biotech et numériques ; rivalités entre villes secondaires
+      pour l'accueil des infrastructures de régulation.
+    periode_transition: 2040-2065
+    evenement_transition: null
+    lieux_emblematiques: []
+    relations:
+      allies:
+      - hub_africain_gouvernance
+      - sri_lanka_hub_maritime
+      rivaux:
+      - hub_europeen_regulation
+      - ameriques_reformees
+    sources_attestees:
+    - assemblee_territoires_policy_reform
+    - union_technocratique_eurasiatique_policy_reform
+    - front_de_souverainete_biologique_eurasiatique_policy_reform
+    - institut_brookings_singapour_de_politique_computationnelle_policy_reform
+- scenario: policy_reform
+  raison: zone_suspecte
+  cible: peninsule_iberique_cooperative
+  issues: []
+  valide: false
   proposition:
     slug: peninsule_iberique_cooperative
     nom: Péninsule Ibérique Coopérative
@@ -13,15 +264,17 @@ propositions:
       type_entite: pays
       portion: null
     description: Zone née de la réforme territoriale ibérique post-2040, marquée par
-      la décentralisation coordonnée et la mutualisation des infrastructures énergétiques
-      (réseau solaire-atlantique) et logistiques (corridors méditerranéens-atlantiques).
-      Siège du Centre Ibérique de Régulation des Flux (CIRF), institution régionale
-      intégrée au CRTI pour la gestion des migrations climatiques et des échanges
-      agro-alimentaires.
+      une décentralisation coordonnée entre l'Espagne et le Portugal, et la mutualisation
+      des infrastructures énergétiques (réseau solaire-atlantique) et logistiques
+      (corridors méditerranéens-atlantiques). Siège du Centre Ibérique de Régulation
+      des Flux (CIRF), institution régionale intégrée au CRTI pour la gestion des
+      migrations climatiques et des échanges agro-alimentaires, avec une gouvernance
+      équilibrée entre pôles secondaires (Valence, Lisbonne, Porto, Barcelone).
     statut: stable
     tensions_internes: Résistances locales aux quotas de redistribution des populations
-      climatiques (notamment en Andalousie et Catalogne), compensées par des mécanismes
-      de péréquation fiscale interrégionale.
+      climatiques (notamment en Andalousie et Algarve), et rivalités entre pôles urbains
+      secondaires pour l'attractivité des investissements régionaux, compensées par
+      des mécanismes de péréquation fiscale interrégionale et une planification coordonnée.
     periode_transition: 2038-2052
     lieux_emblematiques:
     - nom: Valence (Pôle Logistique Ibérique)

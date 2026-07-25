@@ -1858,7 +1858,7 @@ zones:
   nom: Valence (tours de contrôle RIREC)
   niveau: 2
   type: infrastructure
-  parent: hub_europeen_regulation
+  parent: peninsule_iberique_cooperative
   origine_reelle:
   - entite: Valence
     type_entite: region_administrative

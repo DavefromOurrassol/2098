@@ -19,18 +19,38 @@ territoire entre scénarios, le contrôle patron spatial compare une zone à
 la logique narrative de SON scénario -- voir check_patron_spatial_
 coherence.py pour le détail).
 
-N'écrit jamais rien dans le vault par défaut. --apply-type-entite propage
-le --apply de check_type_entite_coherence.py (backup .bak automatique, voir
-ce script) ; --resolve-llm et --write-zones-manquantes propagent les flags
-correspondants de check_origine_reelle_coherence.py ; --no-cache-patron-
-spatial propage --no-cache à check_patron_spatial_coherence.py. Chaque flag
-reste un geste explicite, comme dans les scripts sous-jacents.
+6e étape optionnelle (--generer-propositions-topdown, ajoutée le 25
+juillet, P24 étape C) : propage vers generer_zones_topdown.py
+--review-topdown -- génère des propositions de zones (pays sans zone +
+zones suspectes a_traiter/en_attente_c2) dans zones_proposees_topdown_
+{scenario}.yaml, à relire à la main. Volontairement APRÈS l'étape 5 pour
+qu'une zone tout juste ajoutée à patron_spatial_suspectes.yaml (via
+--write-suspectes dans le même run) soit immédiatement éligible. Coûte de
+vrais appels LLM -- jamais lancé par défaut, comme --resolve-llm.
+--apply-topdown N'EST JAMAIS propagé ici et ne le sera jamais : appliquer
+automatiquement à la suite d'un --review-topdown dans le même run
+contournerait le geste de review humain (valide: false → true) qui est
+tout le sens de ce workflow -- et de toute façon n'appliquerait rien,
+puisque rien n'aurait encore été repassé à valide: true. --apply-topdown
+reste une commande volontairement séparée, lancée à la main une fois la
+review faite.
+
+N'écrit jamais rien dans le vault par défaut (à l'exception du fichier de
+review zones_proposees_topdown_{scenario}.yaml pour l'étape 6, qui n'est
+qu'un brouillon en attente, pas une écriture dans geographie/). --apply-
+type-entite propage le --apply de check_type_entite_coherence.py (backup
+.bak automatique, voir ce script) ; --resolve-llm et --write-zones-
+manquantes propagent les flags correspondants de check_origine_reelle_
+coherence.py ; --no-cache-patron-spatial propage --no-cache à check_
+patron_spatial_coherence.py. Chaque flag reste un geste explicite, comme
+dans les scripts sous-jacents.
 
 USAGE
 -----
     python3 scan_geographie_complet.py --all
     python3 scan_geographie_complet.py --scenario breakdown
     python3 scan_geographie_complet.py --all --apply-type-entite --resolve-llm
+    python3 scan_geographie_complet.py --all --write-suspectes --generer-propositions-topdown
 """
 
 import argparse
@@ -104,6 +124,14 @@ def main():
         help="Propage --write-suspectes à check_patron_spatial_coherence.py (écrit les "
              "nouvelles zones suspectes dans patron_spatial_suspectes.yaml)."
     )
+    parser.add_argument(
+        "--generer-propositions-topdown", action="store_true",
+        help="6e étape optionnelle : lance generer_zones_topdown.py --review-topdown "
+             "(P24 étape C.3) -- génère des propositions à relire dans "
+             "zones_proposees_topdown_{scenario}.yaml. Coûte de vrais appels LLM, "
+             "jamais lancé par défaut. N'applique jamais rien (pas de --apply-topdown "
+             "ici) -- la review reste un geste séparé, volontairement."
+    )
     args = parser.parse_args()
 
     if args.scenario and args.scenario not in SCENARIOS:
@@ -114,7 +142,8 @@ def main():
     cible = ["--all"] if args.all else ["--scenario", args.scenario]
 
     print("#" * 60)
-    print("  SCAN GÉOGRAPHIE COMPLET — 5 étapes")
+    print("  SCAN GÉOGRAPHIE COMPLET — 5 étapes"
+          + (" + génération top-down" if args.generer_propositions_topdown else ""))
     print("#" * 60)
 
     resumes = []
@@ -153,6 +182,16 @@ def main():
     sortie = executer("check_patron_spatial_coherence.py", args_patron_spatial)
     resumes.append(("check_patron_spatial_coherence.py", derniere_ligne_utile(sortie)))
 
+    if args.generer_propositions_topdown:
+        print("\n" + "▶" * 3 + " Étape 6/6 — generer_zones_topdown.py --review-topdown")
+        if not args.write_suspectes:
+            print("  · Lancé sans --write-suspectes à l'étape 5 -- seules les zones déjà "
+                  "suivies avant ce run (a_traiter/en_attente_c2) seront reprises, pas "
+                  "celles tout juste détectées dans ce même run.")
+        args_topdown = ["--review-topdown"] + cible
+        sortie = executer("generer_zones_topdown.py", args_topdown)
+        resumes.append(("generer_zones_topdown.py --review-topdown", derniere_ligne_utile(sortie)))
+
     print("\n" + "#" * 60)
     print("  RÉSUMÉ CONSOLIDÉ")
     print("#" * 60)
@@ -169,6 +208,11 @@ def main():
     if not args.no_cache_patron_spatial:
         print("  · check_patron_spatial_coherence.py a pu servir des résultats en cache "
               "(relancer avec --no-cache-patron-spatial pour forcer un nouvel appel LLM)")
+    if args.generer_propositions_topdown:
+        print("  · generer_zones_topdown.py : propositions écrites en YAML "
+              "(zones_proposees_topdown_{scenario}.yaml), RIEN appliqué au vault -- "
+              "relire et passer valide: true à la main, puis lancer "
+              "generer_zones_topdown.py --apply-topdown séparément.")
 
 
 if __name__ == "__main__":

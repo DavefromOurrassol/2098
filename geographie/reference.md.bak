@@ -2642,6 +2642,46 @@ zones:
   - entite: Maurice
     type_entite: pays
     portion: null
+- slug: iberie_atlantique_fragmentee
+  nom: Ibérie Atlantique Fragmentée
+  niveau: 1
+  type: union_regionale
+  parent: null
+  origine_reelle:
+  - entite: Portugal
+    portion: null
+    type_entite: pays
+  description: Zone centrée sur Lisbonne, devenue un hub logistique et financier secondaire
+    pour les flux atlantiques, en concurrence avec les ports nord-européens du Corridor
+    Arctique Nordique. Le reste du territoire portugais, marqué par le déclin démographique
+    et économique, sert de périphérie agricole et touristique low-cost pour les élites
+    urbaines ibériques et européennes.
+  statut: fragmenté
+  tensions_internes: Conflits récurrents entre les autorités lisboètes, favorables
+    à une intégration renforcée avec l'Europe Occidentale Reconstruée, et les régions
+    intérieures, où des mouvements autonomistes ou écologistes radicaux contestent
+    la domination des mégapoles.
+  periode_transition: 2040-2060
+  evenement_transition: null
+  lieux_emblematiques:
+  - nom: Lisbonne (Hub Atlantique Sud)
+    notes: Pôle financier et portuaire secondaire, spécialisé dans le transbordement
+      de marchandises vers l'Afrique et l'Amérique latine.
+    type: ville
+  - nom: Alentejo (Périphérie Agro-industrielle)
+    notes: Région rurale en déclin, reconvertie en zone de production agricole intensive
+      pour les marchés urbains ibériques et européens.
+    type: region
+  - nom: Porto (Ville Satellite Déclinante)
+    notes: Ancienne métropole industrielle, désormais en perte de vitesse face à Lisbonne,
+      mais conservant un rôle culturel et logistique secondaire.
+    type: ville
+  relations:
+    allies:
+    - europe_occidentale_reconstructee
+    rivaux:
+    - corridor_arctique_nordique
+  sources_attestees: []
 ---
 
 # Géographie — reference
@@ -3529,3 +3569,6 @@ Concentration de data centers et nœuds de calcul géothermiques de NexCore GIG 
 ## Notes / zones à enrichir
 _Espace libre, jamais lu par les scripts — ajoute ici tes idées, brouillons, zones à
 créer manuellement._
+
+### Ibérie Atlantique Fragmentée
+Zone centrée sur Lisbonne, devenue un hub logistique et financier secondaire pour les flux atlantiques, en concurrence avec les ports nord-européens du Corridor Arctique Nordique. Le reste du territoire portugais, marqué par le déclin démographique et économique, sert de périphérie agricole et touristique low-cost pour les élites urbaines ibériques et européennes.

@@ -1,0 +1,192 @@
+propositions:
+- scenario: eco_communalism
+  raison: zone_suspecte
+  cible: europe_occidentale_reconstituee
+  issues: []
+  valide: false
+  proposition:
+    slug: europe_occidentale_reconstituee
+    nom: Europe Occidentale Reconstituée
+    niveau: 1
+    type: union_regionale
+    parent: null
+    origine_reelle:
+    - entite: France
+      type_entite: pays
+      portion: null
+    - entite: Belgique
+      type_entite: pays
+      portion: null
+    - entite: Pays-Bas
+      type_entite: pays
+      portion: null
+    - entite: Allemagne
+      type_entite: pays
+      portion: null
+    - entite: Suisse
+      type_entite: pays
+      portion: null
+    - entite: Italie
+      type_entite: pays
+      portion: null
+    - entite: Royaume-Uni
+      type_entite: pays
+      portion: null
+    - entite: Angleterre
+      type_entite: pays
+      portion: null
+    - entite: Pays de Galles
+      type_entite: pays
+      portion: null
+    - entite: Espagne
+      type_entite: pays
+      portion: null
+    - entite: Portugal
+      type_entite: pays
+      portion: null
+    - entite: Ukraine
+      type_entite: pays
+      portion: null
+    - entite: Pologne
+      type_entite: pays
+      portion: null
+    - entite: République tchèque
+      type_entite: pays
+      portion: null
+    - entite: Irlande
+      type_entite: pays
+      portion: null
+    - entite: Luxembourg
+      type_entite: pays
+      portion: null
+    - entite: Andorre
+      type_entite: pays
+      portion: null
+    - entite: Liechtenstein
+      type_entite: pays
+      portion: null
+    - entite: Saint-Marin
+      type_entite: pays
+      portion: null
+    - entite: Vatican
+      type_entite: pays
+      portion: null
+    - entite: Kosovo
+      type_entite: pays
+      portion: null
+    description: Réseau décentralisé de bioterritoires autonomes couvrant l'Europe
+      de l'Ouest, organisés autour de bassins versants (vallée de l'Ourthe, bassin
+      rhénan, Apennins restaurés, Massif Central, Cévennes, Rhône). Chaque communauté
+      gère ses ressources locales via des assemblées de bassin et des coopératives,
+      en lien avec le réseau Terrafond des Bassins. Les anciennes structures étatiques
+      ont cédé la place à des dynamiques locales, bien que des tensions persistent
+      avec les enclaves extractivistes résiduelles.
+    statut: stable
+    tensions_internes: Divergences entre communautés sur le degré d'autonomie locale
+      vs. coordination régionale ; résistance des enclaves extractivistes et des fragments
+      d'États résiduels ; enjeux d'accueil des populations déplacées des zones désertifiées.
+    periode_transition: 2030-2060
+    evenement_transition: effondrement_reseau_mondial_communication_eco_communalism
+    lieux_emblematiques: []
+    relations:
+      allies:
+      - arc_septentrional
+      - maghreb_mediterraneen
+      - bassin_danubien
+      rivaux:
+      - enclaves_extractivistes_et_etats_residuels
+    sources_attestees:
+    - cooperative_terrafond_eco_communalism
+    - mouvement_racines_vivantes_eco_communalism
+    - collectifs_du_seuil_eco_communalism
+    - reseau_mnemos_eco_communalism
+    - prisme_global_eco_communalism
+    - trame_bioclimatique_eco_communalism
+    - federation_communs_territoriaux_eco_communalism
+    - voix_du_dehors_eco_communalism
+    - arrestation_chris_van_derburgh_eco_communalism
+    - effondrement_reseau_mondial_communication_eco_communalism
+- scenario: eco_communalism
+  raison: zone_suspecte
+  cible: inde_bassins_sacres
+  issues: []
+  valide: false
+  proposition:
+    slug: inde_bassins_sacres
+    nom: Inde — Bassins Sacrés
+    niveau: 1
+    type: union_regionale
+    parent: null
+    statut: stable
+    description: Confédération de bioterritoires organisés autour des grands fleuves
+      indiens (Gange, Yamuna, Godavari), structurée en assemblées locales de bassin
+      versant. Les anciennes métropoles ont été démantelées au profit de réseaux de
+      petites communautés agroécologiques et de centres culturels décentralisés.
+    tensions_internes: Conflits interrégionaux sur l'accès à l'eau et résistances
+      locales face à la démantèlement des infrastructures urbaines historiques.
+    periode_transition: 2040-2080
+    evenement_transition: Effondrement partiel des structures étatiques centrales
+      après des crises climatiques et sociales répétées, menant à une réorganisation
+      autour des bassins fluviaux.
+    lieux_emblematiques:
+    - Delhi
+    - Mumbai
+    - Varanasi
+    - Bangalore
+    relations:
+      allies:
+      - bassin_danubien
+      - chiapas_et_bioterritoires_mesoamericains
+      rivaux:
+      - enclaves_extractivistes_et_etats_residuels
+    sources_attestees: []
+    origine_reelle:
+    - entite: Inde
+      type_entite: pays
+      portion: null
+    - entite: Népal
+      type_entite: pays
+      portion: null
+    - entite: Bhoutan
+      type_entite: pays
+      portion: null
+- scenario: eco_communalism
+  raison: zone_suspecte
+  cible: japon_archipel_resilient
+  issues: []
+  valide: false
+  proposition:
+    slug: japon_archipel_resilient
+    nom: Japon — Archipel Résilient
+    niveau: 1
+    type: union_regionale
+    parent: null
+    statut: stable
+    description: Réseau décentralisé d'îles et de communautés autonomes organisées
+      autour de la gestion collective des ressources et de la résilience face aux
+      catastrophes naturelles. Les anciennes métropoles ont été réaménagées en grappes
+      de villages écologiques interconnectés, avec une forte emphase sur l'autosuffisance
+      locale.
+    tensions_internes: Conflits entre générations sur l'adoption des technologies
+      vertes, et résistances locales à la fragmentation des anciens centres urbains.
+    periode_transition: 2030-2060
+    evenement_transition: Transition vers l'éco-communalisme après les crises énergétiques
+      des années 2030 et les catastrophes naturelles répétées.
+    lieux_emblematiques:
+    - Tokyo
+    - Osaka
+    - Kyoto
+    relations:
+      allies:
+      - polynesie_reconstituee
+      - coree_peninsule_verte
+      rivaux:
+      - enclaves_extractivistes_et_etats_residuels
+    sources_attestees: []
+    origine_reelle:
+    - entite: Japon
+      type_entite: pays
+      portion: null
+    - entite: Taïwan
+      type_entite: pays
+      portion: null

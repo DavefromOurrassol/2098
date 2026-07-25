@@ -2099,7 +2099,39 @@ def carte_creer_zone_niveau1():
         zones_pays_path, scenario, origine_reelle, slug, dry_run=False
     )
 
-    return jsonify({"ok": True, "slug": slug, "nom": nom, "pays_zones_pays_json": pays_synchronises})
+    # Propagation des sous-zones orphelines (P24 étape C, ajouté le 25 juillet
+    # suite au cas réel valence_tours_rirec/Espagne, cf. commentaire détaillé
+    # dans generator/reparenter_sous_zones_orphelines.py). Sous-processus +
+    # JSON plutôt qu'import direct -- gui/ et generator/ restent deux
+    # codebases séparées ; ce script a besoin de resoudre_pays()/VILLE_PAYS
+    # (check_origine_reelle_coherence.py), qu'on ne duplique pas ici. Pas
+    # d'appel LLM derrière (résolution par table + cache seulement) -- timeout
+    # court, contrairement à /api/carte/generer_zone_topdown.
+    sous_zones_reparentees = []
+    try:
+        pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+        resultat_reparent = subprocess.run(
+            [sys.executable, "reparenter_sous_zones_orphelines.py",
+             "--scenario", scenario, "--zone-cible", slug, "--json"],
+            cwd=pipeline_dir, capture_output=True, text=True,
+            timeout=15, stdin=subprocess.DEVNULL,
+        )
+        sortie_reparent = resultat_reparent.stdout.strip()
+        if sortie_reparent:
+            payload_reparent = json.loads(sortie_reparent.splitlines()[-1])
+            if payload_reparent.get("ok"):
+                sous_zones_reparentees = payload_reparent.get("reparentees", [])
+            # Un échec ici (payload.get("ok") False, ou JSON illisible) n'empêche
+            # jamais la création de la zone elle-même -- déjà écrite avec succès
+            # au-dessus. On le signale juste dans la réponse, sans lever d'erreur.
+    except (subprocess.TimeoutExpired, FileNotFoundError, json.JSONDecodeError, IndexError):
+        pass  # même principe : la création a déjà réussi, ne jamais la faire échouer ici
+
+    return jsonify({
+        "ok": True, "slug": slug, "nom": nom,
+        "pays_zones_pays_json": pays_synchronises,
+        "sous_zones_reparentees": sous_zones_reparentees,
+    })
 
 
 # ── P24 étape C.4 (25 juillet 2026) -- générateur top-down, intégration GUI.

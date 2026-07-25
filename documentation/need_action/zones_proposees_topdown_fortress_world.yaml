@@ -1,0 +1,195 @@
+propositions:
+- scenario: fortress_world
+  raison: zone_suspecte
+  cible: amazonie_pacte_vert
+  issues: []
+  valide: false
+  proposition:
+    slug: amazonie_pacte_vert
+    nom: Amazonie — Territoire du Pacte Vert
+    niveau: 1
+    type: site_strategique
+    parent: null
+    origine_reelle:
+    - entite: Brésil
+      type_entite: pays
+      portion: null
+    - entite: Amazonie
+      type_entite: region_administrative
+      portion: null
+    - entite: Colombie
+      type_entite: pays
+      portion: null
+    - entite: Pérou
+      type_entite: pays
+      portion: null
+    - entite: Bolivie
+      type_entite: pays
+      portion: null
+    - entite: Guyana
+      type_entite: pays
+      portion: null
+    - entite: Suriname
+      type_entite: pays
+      portion: null
+    - entite: Équateur
+      type_entite: pays
+      portion: null
+    description: Enclave militarisée contrôlant les dernières banques génomiques de
+      la biosphère amazonienne, gouvernée par une junte biotechnologique associant
+      élites autochtones, mercenaires généticiens et drones de surveillance. Les stations
+      flottantes, désormais blindées et équipées de systèmes anti-drones, servent
+      de coffres-forts mobiles pour les échantillons critiques. Le territoire est
+      verrouillé par des champs de mines phytosanitaires et des essaims de micro-drones
+      tueurs, interdisant toute intrusion non autorisée.
+    statut: stable
+    tensions_internes: Conflits récurrents entre les gardiens autochtones des sanctuaires
+      génétiques et les technocrates du Pacte, qui monétisent discrètement l'accès
+      aux données pour financer la militarisation. Les cartels biopirates et les consortiums
+      miniers lancent des raids éclair depuis les zones grises périphériques.
+    periode_transition: 2041-2098
+    evenement_transition: null
+    lieux_emblematiques:
+    - nom: Stations flottantes du Pacte Vert
+      type: infrastructure
+      notes: Postes de commandement mobiles déplacés tous les 72h pour éviter les
+        frappes de drones de reconnaissance des cartels
+    relations:
+      allies:
+      - pacte_forteresses_souveraines
+      rivaux:
+      - bloc_atlantique
+      - bloc_eurasiatique_occidental
+      - zones_grises_tampons
+    sources_attestees:
+    - consortium_amazonia_viva_fortress_world
+    promu_depuis: null
+- scenario: fortress_world
+  raison: zone_suspecte
+  cible: espace_nordique_arctique
+  issues: []
+  valide: false
+  proposition:
+    slug: espace_nordique_arctique
+    nom: Espace Nordique et Arctique
+    niveau: 1
+    type: infrastructure
+    parent: null
+    origine_reelle:
+    - entite: Norvège
+      type_entite: pays
+      portion: null
+    - entite: Suède
+      type_entite: pays
+      portion: null
+    - entite: Danemark
+      type_entite: pays
+      portion: null
+    - entite: Islande
+      type_entite: pays
+      portion: null
+    - entite: Svalbard
+      type_entite: autre
+      portion: null
+    - entite: Arctique international
+      type_entite: autre
+      portion: null
+    - entite: Cap-Vert
+      type_entite: pays
+      portion: null
+    description: Infrastructure stratégique militarisée contrôlant les corridors arctiques
+      dégelés, intégrée de facto au Pacte des Forteresses Souveraines. La Nordisk
+      Arktisk Transitkontroll (NAT), opérateur armé sous supervision des blocs nordiques,
+      verrouille les voies maritimes arctiques devenues artères vitales pour les échanges
+      inter-blocs, sous surveillance orbitale permanente.
+    statut: stable
+    tensions_internes: Conflits entre factions nordiques sur le degré d'autonomie
+      de la NAT face aux blocs continentaux ; résistance des milices logistiques locales
+      contre la militarisation des corridors.
+    periode_transition: 2050-2080
+    evenement_transition: null
+    lieux_emblematiques: []
+    relations:
+      allies:
+      - pacte_forteresses_souveraines
+      - bloc_atlantique
+      - bloc_pacifique_nord
+      rivaux:
+      - bloc_eurasiatique_occidental
+      - zones_grises_tampons
+    sources_attestees:
+    - armada_logistique_nordique_fortress_world
+    - factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world
+    - coalition_arctique_des_blocs_continentaux_fortress_world
+    - milices_de_piraterie_logistique_arctique_fortress_world
+- scenario: fortress_world
+  raison: zone_suspecte
+  cible: singapour_megapole
+  issues: []
+  valide: false
+  proposition:
+    slug: singapour_megapole
+    nom: Singapour — Mégapole-Forteresse
+    niveau: 1
+    type: ville
+    parent: null
+    statut: dominant
+    description: Singapour est devenue une cité-État hyper-sécurisée, gouvernée par
+      une IA de gestion des ressources et une élite technocratique militarisée. Elle
+      sert de hub stratégique verrouillé pour le Bloc Pacifique Nord, contrôlant les
+      flux financiers, logistiques et technologiques de la région avec une surveillance
+      orbitale renforcée.
+    tensions_internes: Inégalités sociales extrêmes entre l'élite technocratique et
+      les travailleurs sous surveillance, résistance clandestine réprimée par des
+      drones et des milices privées.
+    periode_transition: 2025-2050
+    evenement_transition: Fermeture totale des frontières en 2040 après la crise migratoire
+      asiatique.
+    lieux_emblematiques:
+    - Singapour (Cité-Cœur)
+    - Port de Singapour (Nœud Commercial)
+    relations:
+      allies:
+      - bloc_pacifique_nord
+      rivaux:
+      - archipel_indonesien_forteresses_maritimes
+      - zones_grises_tampons
+    sources_attestees: []
+    origine_reelle:
+    - entite: Singapour
+      type_entite: pays
+      portion: null
+- scenario: fortress_world
+  raison: zone_suspecte
+  cible: tuvalu_refugies_climatiques
+  issues: []
+  valide: false
+  proposition:
+    slug: tuvalu_refugies_climatiques
+    nom: Tuvalu — Refuge Climatique
+    niveau: 1
+    type: site_strategique
+    parent: null
+    statut: fragmenté
+    description: Archipel submergé transformé en plateforme flottante militarisée,
+      contrôlée par le Bloc Pacifique Nord comme point de transit et de filtrage des
+      flux migratoires climatiques. Les survivants y sont maintenus en quarantaine
+      logistique, sans souveraineté réelle.
+    tensions_internes: Résistance sporadique des communautés locales contre les protocoles
+      de tri migratoire imposés par le Bloc. Conflits entre factions pro-bloc et autonomistes.
+    periode_transition: 2040-2070
+    evenement_transition: Évacuation massive vers Fidji et la Nouvelle-Zélande (2045),
+      puis création de la plateforme (2060).
+    lieux_emblematiques:
+    - Funafuti (plateforme principale)
+    - Nukulaelae (ruines)
+    relations:
+      allies: []
+      rivaux:
+      - bloc_pacifique_nord
+      - pacte_forteresses_souveraines
+    sources_attestees: []
+    origine_reelle:
+    - entite: Tuvalu
+      type_entite: pays
+      portion: null

@@ -90,8 +90,33 @@ def detecter_entrees_sans_type(texte: str, pays_liste_norm: set) -> list:
             j += 1
         derniere_ligne_entree = j - 1
 
-        suivante = lignes[j] if j < len(lignes) else ""
-        if TYPE_ENTITE_RE.match(suivante):
+        # Cherche type_entite N'IMPORTE OÙ dans le bloc de cette entrée, pas
+        # seulement sur la ligne juste après le scalaire entite -- un ordre de
+        # clés différent de la convention habituelle (ex. entite/portion/
+        # type_entite au lieu de entite/type_entite/portion, produit par
+        # zoning_topdown.py avant son propre fix du 25 juillet) ne doit
+        # JAMAIS produire un faux "manquant" : ça a réellement corrompu un
+        # YAML le 25 juillet 2026 en pratique -- --apply a dupliqué
+        # type_entite/portion sur une entrée où ils étaient déjà présents
+        # mais dans le mauvais ordre pour l'ancienne détection.
+        deja_complet = False
+        k = j
+        while k < len(lignes):
+            l = lignes[k]
+            if l.strip() == "":
+                k += 1
+                continue
+            indent_l = len(l) - len(l.lstrip(" "))
+            if indent_l <= indent_len:
+                break  # dedent : sorti du bloc de cette entrée
+            if ENTITE_RE.match(l) or SLUG_RE.match(l):
+                break  # nouvelle entrée / nouvelle zone : sorti du bloc
+            if TYPE_ENTITE_RE.match(l):
+                deja_complet = True
+                break
+            k += 1
+
+        if deja_complet:
             continue  # déjà complet, rien à signaler
 
         entite_norm = entite_brut.lower().strip()
