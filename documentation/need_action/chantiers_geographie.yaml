@@ -1364,3 +1364,17 @@ chantiers:
   proposition_approuvee: false
   date_proposition: null
   date_traitement: null
+- id: reference__pacte_des_souverains
+  scenario: reference
+  type: zone_suspecte
+  cible: pacte_des_souverains
+  probleme: Coalition d'États-forteresses opérant via des pactes militaro-énergétiques
+    bilatéraux sans cadre multilatéral stable contredit la multipolarité *instable
+    mais fonctionnelle* attendue.
+  source_diagnostic: patron_spatial
+  date_detection: '2026-07-25'
+  statut: a_traiter
+  proposition: null
+  proposition_approuvee: false
+  date_proposition: null
+  date_traitement: null
