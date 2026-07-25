@@ -323,12 +323,12 @@ zones:
     type_entite: pays
     portion: null
   description: 'Zone européenne occidentale où persistent des institutions hybrides
-    : Bruxelles-Nouveau accueille le siège du Consortium Helios (énergie solaire orbitale),
-    Genève reste le siège de l''AMSC et du Conseil de Genève pour les droits biosociaux.
-    Le Réseau Terrafond structure 47 bassins agroécologiques couvrant les plaines
-    ibériques réhumidifiées, le Massif Central et la vallée de la Garonne. Lyon-Métropole
-    apparaît comme ville ordinaire sujette à la réglementation sur les technologies
-    sensibles.'
+    : Bruxelles-Nouveau accueille le siège du Consortium Helios (énergie solaire terrestre
+    à grande échelle), Genève reste le siège de l''AMSC et du Conseil de Genève pour
+    les droits biosociaux. Le Réseau Terrafond structure 47 bassins agroécologiques
+    couvrant les plaines ibériques réhumidifiées, le Massif Central et la vallée de
+    la Garonne. Lyon-Métropole apparaît comme ville ordinaire sujette à la réglementation
+    sur les technologies sensibles.'
   statut: stable
   tensions_internes: Tension entre réseaux agroécologiques (Terrafond) et agriculture
     verticale algorithmique. Pression des réfugiés climatiques vers les zones tampons.

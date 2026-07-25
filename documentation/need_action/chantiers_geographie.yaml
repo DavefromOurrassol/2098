@@ -174,7 +174,7 @@ chantiers:
     la limite spatiale terrestre et robotique du patron.
   source_diagnostic: patron_spatial
   date_detection: '2026-07-25'
-  statut: a_traiter
+  statut: traite
   proposition:
     slug: europe_occidentale_reconstructee
     nom: Europe Occidentale Reconstruite
@@ -272,9 +272,9 @@ chantiers:
     - conseil_de_geneve_pour_les_droits_biosociaux_reference
     - leena_vainala_reference
     - cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference
-  proposition_approuvee: false
+  proposition_approuvee: true
   date_proposition: '2026-07-25'
-  date_traitement: null
+  date_traitement: '2026-07-25'
   proposition_issues: []
 - id: reference__ameriques_multipolaires
   scenario: reference
