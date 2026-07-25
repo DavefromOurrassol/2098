@@ -9,10 +9,70 @@ chantiers:
   source_diagnostic: patron_spatial
   date_detection: '2026-07-25'
   statut: a_traiter
-  proposition: null
+  proposition:
+    slug: amazonie_pacte_vert
+    nom: Amazonie — Territoire du Pacte Vert
+    niveau: 1
+    type: site_strategique
+    parent: null
+    origine_reelle:
+    - entite: Brésil
+      type_entite: pays
+      portion: null
+    - entite: Amazonie
+      type_entite: region_administrative
+      portion: null
+    - entite: Colombie
+      type_entite: pays
+      portion: null
+    - entite: Pérou
+      type_entite: pays
+      portion: null
+    - entite: Bolivie
+      type_entite: pays
+      portion: null
+    - entite: Guyana
+      type_entite: pays
+      portion: null
+    - entite: Suriname
+      type_entite: pays
+      portion: null
+    - entite: Équateur
+      type_entite: pays
+      portion: null
+    description: Enclave militarisée contrôlant les dernières banques génomiques de
+      la biosphère amazonienne, gouvernée par une junte biotechnologique associant
+      élites autochtones, mercenaires généticiens et drones de surveillance. Les stations
+      flottantes, désormais blindées et équipées de systèmes anti-drones, servent
+      de coffres-forts mobiles pour les échantillons critiques. Le territoire est
+      verrouillé par des champs de mines phytosanitaires et des essaims de micro-drones
+      tueurs, interdisant toute intrusion non autorisée.
+    statut: stable
+    tensions_internes: Conflits récurrents entre les gardiens autochtones des sanctuaires
+      génétiques et les technocrates du Pacte, qui monétisent discrètement l'accès
+      aux données pour financer la militarisation. Les cartels biopirates et les consortiums
+      miniers lancent des raids éclair depuis les zones grises périphériques.
+    periode_transition: 2041-2098
+    evenement_transition: null
+    lieux_emblematiques:
+    - nom: Stations flottantes du Pacte Vert
+      type: infrastructure
+      notes: Postes de commandement mobiles déplacés tous les 72h pour éviter les
+        frappes de drones de reconnaissance des cartels
+    relations:
+      allies:
+      - pacte_forteresses_souveraines
+      rivaux:
+      - bloc_atlantique
+      - bloc_eurasiatique_occidental
+      - zones_grises_tampons
+    sources_attestees:
+    - consortium_amazonia_viva_fortress_world
+    promu_depuis: null
   proposition_approuvee: false
   date_proposition: null
   date_traitement: null
+  proposition_issues: []
 - id: fortress_world__espace_nordique_arctique
   scenario: fortress_world
   type: zone_suspecte
@@ -23,10 +83,63 @@ chantiers:
   source_diagnostic: patron_spatial
   date_detection: '2026-07-25'
   statut: a_traiter
-  proposition: null
+  proposition:
+    slug: espace_nordique_arctique
+    nom: Espace Nordique et Arctique
+    niveau: 1
+    type: infrastructure
+    parent: null
+    origine_reelle:
+    - entite: Norvège
+      type_entite: pays
+      portion: null
+    - entite: Suède
+      type_entite: pays
+      portion: null
+    - entite: Danemark
+      type_entite: pays
+      portion: null
+    - entite: Islande
+      type_entite: pays
+      portion: null
+    - entite: Svalbard
+      type_entite: autre
+      portion: null
+    - entite: Arctique international
+      type_entite: autre
+      portion: null
+    - entite: Cap-Vert
+      type_entite: pays
+      portion: null
+    description: Infrastructure stratégique militarisée contrôlant les corridors arctiques
+      dégelés, intégrée de facto au Pacte des Forteresses Souveraines. La Nordisk
+      Arktisk Transitkontroll (NAT), opérateur armé sous supervision des blocs nordiques,
+      verrouille les voies maritimes arctiques devenues artères vitales pour les échanges
+      inter-blocs, sous surveillance orbitale permanente.
+    statut: stable
+    tensions_internes: Conflits entre factions nordiques sur le degré d'autonomie
+      de la NAT face aux blocs continentaux ; résistance des milices logistiques locales
+      contre la militarisation des corridors.
+    periode_transition: 2050-2080
+    evenement_transition: null
+    lieux_emblematiques: []
+    relations:
+      allies:
+      - pacte_forteresses_souveraines
+      - bloc_atlantique
+      - bloc_pacifique_nord
+      rivaux:
+      - bloc_eurasiatique_occidental
+      - zones_grises_tampons
+    sources_attestees:
+    - armada_logistique_nordique_fortress_world
+    - factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world
+    - coalition_arctique_des_blocs_continentaux_fortress_world
+    - milices_de_piraterie_logistique_arctique_fortress_world
   proposition_approuvee: false
   date_proposition: null
   date_traitement: null
+  proposition_issues: []
 - id: fortress_world__singapour_megapole
   scenario: fortress_world
   type: zone_suspecte
@@ -36,10 +149,42 @@ chantiers:
   source_diagnostic: patron_spatial
   date_detection: '2026-07-25'
   statut: a_traiter
-  proposition: null
+  proposition:
+    slug: singapour_megapole
+    nom: Singapour — Mégapole-Forteresse
+    niveau: 1
+    type: ville
+    parent: null
+    statut: dominant
+    description: Singapour est devenue une cité-État hyper-sécurisée, gouvernée par
+      une IA de gestion des ressources et une élite technocratique militarisée. Elle
+      sert de hub stratégique verrouillé pour le Bloc Pacifique Nord, contrôlant les
+      flux financiers, logistiques et technologiques de la région avec une surveillance
+      orbitale renforcée.
+    tensions_internes: Inégalités sociales extrêmes entre l'élite technocratique et
+      les travailleurs sous surveillance, résistance clandestine réprimée par des
+      drones et des milices privées.
+    periode_transition: 2025-2050
+    evenement_transition: Fermeture totale des frontières en 2040 après la crise migratoire
+      asiatique.
+    lieux_emblematiques:
+    - Singapour (Cité-Cœur)
+    - Port de Singapour (Nœud Commercial)
+    relations:
+      allies:
+      - bloc_pacifique_nord
+      rivaux:
+      - archipel_indonesien_forteresses_maritimes
+      - zones_grises_tampons
+    sources_attestees: []
+    origine_reelle:
+    - entite: Singapour
+      type_entite: pays
+      portion: null
   proposition_approuvee: false
   date_proposition: null
   date_traitement: null
+  proposition_issues: []
 - id: fortress_world__tuvalu_refugies_climatiques
   scenario: fortress_world
   type: zone_suspecte
@@ -50,10 +195,39 @@ chantiers:
   source_diagnostic: patron_spatial
   date_detection: '2026-07-25'
   statut: a_traiter
-  proposition: null
+  proposition:
+    slug: tuvalu_refugies_climatiques
+    nom: Tuvalu — Refuge Climatique
+    niveau: 1
+    type: site_strategique
+    parent: null
+    statut: fragmenté
+    description: Archipel submergé transformé en plateforme flottante militarisée,
+      contrôlée par le Bloc Pacifique Nord comme point de transit et de filtrage des
+      flux migratoires climatiques. Les survivants y sont maintenus en quarantaine
+      logistique, sans souveraineté réelle.
+    tensions_internes: Résistance sporadique des communautés locales contre les protocoles
+      de tri migratoire imposés par le Bloc. Conflits entre factions pro-bloc et autonomistes.
+    periode_transition: 2040-2070
+    evenement_transition: Évacuation massive vers Fidji et la Nouvelle-Zélande (2045),
+      puis création de la plateforme (2060).
+    lieux_emblematiques:
+    - Funafuti (plateforme principale)
+    - Nukulaelae (ruines)
+    relations:
+      allies: []
+      rivaux:
+      - bloc_pacifique_nord
+      - pacte_forteresses_souveraines
+    sources_attestees: []
+    origine_reelle:
+    - entite: Tuvalu
+      type_entite: pays
+      portion: null
   proposition_approuvee: false
   date_proposition: null
   date_traitement: null
+  proposition_issues: []
 - id: new_sustainability__bloc_eurasien_souverainiste
   scenario: new_sustainability
   type: zone_suspecte
@@ -64,10 +238,129 @@ chantiers:
   source_diagnostic: patron_spatial
   date_detection: '2026-07-25'
   statut: a_traiter
-  proposition: null
+  proposition:
+    slug: bloc_eurasien_souverainiste
+    nom: Bloc Eurasien souverainiste
+    niveau: 1
+    type: union_regionale
+    parent: null
+    origine_reelle:
+    - entite: Russie
+      type_entite: pays
+      portion: null
+    - entite: Chine
+      type_entite: pays
+      portion: null
+    - entite: Asie centrale (Kazakhstan, Ouzbékistan, etc.)
+      type_entite: autre
+      portion: null
+    - entite: Hongrie
+      type_entite: pays
+      portion: null
+    - entite: République tchèque
+      type_entite: pays
+      portion: null
+    - entite: Roumanie
+      type_entite: pays
+      portion: null
+    - entite: Serbie
+      type_entite: pays
+      portion: null
+    - entite: Ukraine
+      type_entite: pays
+      portion: null
+    - entite: Kazakhstan
+      type_entite: pays
+      portion: null
+    - entite: Géorgie
+      type_entite: pays
+      portion: null
+    - entite: Ouzbékistan
+      type_entite: pays
+      portion: null
+    - entite: Kirghizistan
+      type_entite: pays
+      portion: null
+    - entite: Mongolie
+      type_entite: pays
+      portion: null
+    - entite: Corée du Sud
+      type_entite: pays
+      portion: null
+    - entite: Bosnie-Herzégovine
+      type_entite: pays
+      portion: null
+    - entite: Macédoine du Nord
+      type_entite: pays
+      portion: null
+    - entite: Bulgarie
+      type_entite: pays
+      portion: null
+    - entite: Moldavie
+      type_entite: pays
+      portion: null
+    - entite: Biélorussie
+      type_entite: pays
+      portion: null
+    - entite: Slovaquie
+      type_entite: pays
+      portion: null
+    - entite: Kosovo
+      type_entite: pays
+      portion: null
+    - entite: Arménie
+      type_entite: pays
+      portion: null
+    - entite: Turkménistan
+      type_entite: pays
+      portion: null
+    - entite: Tadjikistan
+      type_entite: pays
+      portion: null
+    - entite: Afghanistan
+      type_entite: pays
+      portion: null
+    - entite: Corée du Nord
+      type_entite: pays
+      portion: null
+    - entite: Taïwan
+      type_entite: pays
+      portion: null
+    - entite: Pologne
+      type_entite: pays
+      portion: null
+    description: Le Bloc Eurasien de 2098 est une union régionale qui adapte les cadres
+      de transition écologique globaux (AGRB-ONU, AIER) à ses spécificités territoriales
+      et culturelles. Il se distingue par une approche décentralisée de la gouvernance
+      hydrique, une alliance numérique eurasienne alignée sur les standards de NexCore,
+      et une intégration progressive des corridors du Réseau Vivant Continental. Les
+      bassins versants asiatiques sont gérés via des IA locales en dialogue avec les
+      hubs institutionnels de Nairobi et Genève.
+    statut: stable
+    tensions_internes: Débats persistants entre fédéralistes et partisans d'une autonomie
+      renforcée des territoires ; tensions sur le degré d'alignement avec les normes
+      globales de régénération écologique, notamment dans les zones frontalières.
+    periode_transition: 2040-2070
+    evenement_transition: null
+    lieux_emblematiques: []
+    relations:
+      allies:
+      - centre_institutionnel_geneve
+      - hub_nairobi_kigali
+      - infrastructure_numerique_globale
+      - reseau_vivant_continental
+      rivaux: []
+    sources_attestees:
+    - souverainistes_du_bloc_eurasien_new_sustainability
+    - alliance_numerique_eurasie_pacifique_new_sustainability
+    - bloc_des_gouvernements_souverainistes_hydriques_new_sustainability
+    - amara_diallo_nkosi_new_sustainability
+    - factions_souverainistes_des_blocs_peripheriques_new_sustainability
+    - conseil_regulation_algorithmique_new_sustainability
   proposition_approuvee: false
   date_proposition: null
   date_traitement: null
+  proposition_issues: []
 - id: new_sustainability__moyen_orient_golfe
   scenario: new_sustainability
   type: zone_suspecte
@@ -78,10 +371,108 @@ chantiers:
   source_diagnostic: patron_spatial
   date_detection: '2026-07-25'
   statut: a_traiter
-  proposition: null
+  proposition:
+    slug: moyen_orient_golfe
+    nom: Moyen-Orient et Golfe post-pétrolier
+    niveau: 1
+    type: union_regionale
+    parent: null
+    origine_reelle:
+    - entite: Israël
+      type_entite: pays
+      portion: null
+    - entite: Iran
+      type_entite: pays
+      portion: null
+    - entite: Arabie Saoudite
+      type_entite: pays
+      portion: null
+    - entite: Qatar
+      type_entite: pays
+      portion: null
+    - entite: Turquie
+      type_entite: pays
+      portion: null
+    - entite: Grèce
+      type_entite: pays
+      portion: null
+    - entite: Azerbaïdjan
+      type_entite: pays
+      portion: null
+    - entite: Émirats arabes unis
+      type_entite: pays
+      portion: null
+    - entite: Irak
+      type_entite: pays
+      portion: null
+    - entite: Yémen
+      type_entite: pays
+      portion: null
+    - entite: Liban
+      type_entite: pays
+      portion: null
+    - entite: Syrie
+      type_entite: pays
+      portion: null
+    - entite: Koweït
+      type_entite: pays
+      portion: null
+    - entite: Pakistan
+      type_entite: pays
+      portion: null
+    - entite: Cambodge
+      type_entite: pays
+      portion: null
+    - entite: Chypre
+      type_entite: pays
+      portion: null
+    - entite: Jordanie
+      type_entite: pays
+      portion: null
+    - entite: Oman
+      type_entite: pays
+      portion: null
+    - entite: Bahreïn
+      type_entite: pays
+      portion: null
+    - entite: Palestine
+      type_entite: pays
+      portion: null
+    - entite: Djibouti
+      type_entite: pays
+      portion: null
+    - entite: Somalie
+      type_entite: pays
+      portion: null
+    - entite: Érythrée
+      type_entite: pays
+      portion: null
+    description: Le Moyen-Orient et le Golfe de 2098 incarnent une transition post-pétrolier
+      réussie, pilotée par le Conseil Régional de Transition Énergétique (CRTE) sous
+      l'égide de l'AIER. La région a transformé la crise des prix de l'énergie des
+      années 2030 en opportunité, devenant un hub de production d'hydrogène vert et
+      de technologies solaires avancées. Les tensions historiques ont été résorbées
+      par des mécanismes de gouvernance algorithmique et des corridors économiques
+      intégrés, bien que des adaptations locales persistent.
+    statut: stable
+    tensions_internes: Résistances locales à l'intégration algorithmique du CRTE ;
+      disparités dans l'adoption des technologies vertes entre États côtiers et intérieurs.
+    periode_transition: 2026-2045
+    evenement_transition: conflit_israel_iran_2026_new_sustainability
+    lieux_emblematiques: []
+    relations:
+      allies:
+      - helios_tours_orbitales
+      - afrique_continentale
+      - te_moana_nui_plateforme
+      rivaux: []
+    sources_attestees:
+    - conflit_israel_iran_2026_new_sustainability
+    - le_temoin_new_sustainability
   proposition_approuvee: false
   date_proposition: null
   date_traitement: null
+  proposition_issues: []
 - id: eco_communalism__europe_occidentale_reconstituee
   scenario: eco_communalism
   type: zone_suspecte
@@ -92,10 +483,112 @@ chantiers:
   source_diagnostic: patron_spatial
   date_detection: '2026-07-25'
   statut: a_traiter
-  proposition: null
+  proposition:
+    slug: europe_occidentale_reconstituee
+    nom: Europe Occidentale Reconstituée
+    niveau: 1
+    type: union_regionale
+    parent: null
+    origine_reelle:
+    - entite: France
+      type_entite: pays
+      portion: null
+    - entite: Belgique
+      type_entite: pays
+      portion: null
+    - entite: Pays-Bas
+      type_entite: pays
+      portion: null
+    - entite: Allemagne
+      type_entite: pays
+      portion: null
+    - entite: Suisse
+      type_entite: pays
+      portion: null
+    - entite: Italie
+      type_entite: pays
+      portion: null
+    - entite: Royaume-Uni
+      type_entite: pays
+      portion: null
+    - entite: Angleterre
+      type_entite: pays
+      portion: null
+    - entite: Pays de Galles
+      type_entite: pays
+      portion: null
+    - entite: Espagne
+      type_entite: pays
+      portion: null
+    - entite: Portugal
+      type_entite: pays
+      portion: null
+    - entite: Ukraine
+      type_entite: pays
+      portion: null
+    - entite: Pologne
+      type_entite: pays
+      portion: null
+    - entite: République tchèque
+      type_entite: pays
+      portion: null
+    - entite: Irlande
+      type_entite: pays
+      portion: null
+    - entite: Luxembourg
+      type_entite: pays
+      portion: null
+    - entite: Andorre
+      type_entite: pays
+      portion: null
+    - entite: Liechtenstein
+      type_entite: pays
+      portion: null
+    - entite: Saint-Marin
+      type_entite: pays
+      portion: null
+    - entite: Vatican
+      type_entite: pays
+      portion: null
+    - entite: Kosovo
+      type_entite: pays
+      portion: null
+    description: Réseau décentralisé de bioterritoires autonomes couvrant l'Europe
+      de l'Ouest, organisés autour de bassins versants (vallée de l'Ourthe, bassin
+      rhénan, Apennins restaurés, Massif Central, Cévennes, Rhône). Chaque communauté
+      gère ses ressources locales via des assemblées de bassin et des coopératives,
+      en lien avec le réseau Terrafond des Bassins. Les anciennes structures étatiques
+      ont cédé la place à des dynamiques locales, bien que des tensions persistent
+      avec les enclaves extractivistes résiduelles.
+    statut: stable
+    tensions_internes: Divergences entre communautés sur le degré d'autonomie locale
+      vs. coordination régionale ; résistance des enclaves extractivistes et des fragments
+      d'États résiduels ; enjeux d'accueil des populations déplacées des zones désertifiées.
+    periode_transition: 2030-2060
+    evenement_transition: effondrement_reseau_mondial_communication_eco_communalism
+    lieux_emblematiques: []
+    relations:
+      allies:
+      - arc_septentrional
+      - maghreb_mediterraneen
+      - bassin_danubien
+      rivaux:
+      - enclaves_extractivistes_et_etats_residuels
+    sources_attestees:
+    - cooperative_terrafond_eco_communalism
+    - mouvement_racines_vivantes_eco_communalism
+    - collectifs_du_seuil_eco_communalism
+    - reseau_mnemos_eco_communalism
+    - prisme_global_eco_communalism
+    - trame_bioclimatique_eco_communalism
+    - federation_communs_territoriaux_eco_communalism
+    - voix_du_dehors_eco_communalism
+    - arrestation_chris_van_derburgh_eco_communalism
+    - effondrement_reseau_mondial_communication_eco_communalism
   proposition_approuvee: false
   date_proposition: null
   date_traitement: null
+  proposition_issues: []
 - id: eco_communalism__inde_bassins_sacres
   scenario: eco_communalism
   type: zone_suspecte
@@ -106,10 +599,49 @@ chantiers:
   source_diagnostic: patron_spatial
   date_detection: '2026-07-25'
   statut: a_traiter
-  proposition: null
+  proposition:
+    slug: inde_bassins_sacres
+    nom: Inde — Bassins Sacrés
+    niveau: 1
+    type: union_regionale
+    parent: null
+    statut: stable
+    description: Confédération de bioterritoires organisés autour des grands fleuves
+      indiens (Gange, Yamuna, Godavari), structurée en assemblées locales de bassin
+      versant. Les anciennes métropoles ont été démantelées au profit de réseaux de
+      petites communautés agroécologiques et de centres culturels décentralisés.
+    tensions_internes: Conflits interrégionaux sur l'accès à l'eau et résistances
+      locales face à la démantèlement des infrastructures urbaines historiques.
+    periode_transition: 2040-2080
+    evenement_transition: Effondrement partiel des structures étatiques centrales
+      après des crises climatiques et sociales répétées, menant à une réorganisation
+      autour des bassins fluviaux.
+    lieux_emblematiques:
+    - Delhi
+    - Mumbai
+    - Varanasi
+    - Bangalore
+    relations:
+      allies:
+      - bassin_danubien
+      - chiapas_et_bioterritoires_mesoamericains
+      rivaux:
+      - enclaves_extractivistes_et_etats_residuels
+    sources_attestees: []
+    origine_reelle:
+    - entite: Inde
+      type_entite: pays
+      portion: null
+    - entite: Népal
+      type_entite: pays
+      portion: null
+    - entite: Bhoutan
+      type_entite: pays
+      portion: null
   proposition_approuvee: false
   date_proposition: null
   date_traitement: null
+  proposition_issues: []
 - id: eco_communalism__japon_archipel_resilient
   scenario: eco_communalism
   type: zone_suspecte
@@ -119,10 +651,45 @@ chantiers:
   source_diagnostic: patron_spatial
   date_detection: '2026-07-25'
   statut: a_traiter
-  proposition: null
+  proposition:
+    slug: japon_archipel_resilient
+    nom: Japon — Archipel Résilient
+    niveau: 1
+    type: union_regionale
+    parent: null
+    statut: stable
+    description: Réseau décentralisé d'îles et de communautés autonomes organisées
+      autour de la gestion collective des ressources et de la résilience face aux
+      catastrophes naturelles. Les anciennes métropoles ont été réaménagées en grappes
+      de villages écologiques interconnectés, avec une forte emphase sur l'autosuffisance
+      locale.
+    tensions_internes: Conflits entre générations sur l'adoption des technologies
+      vertes, et résistances locales à la fragmentation des anciens centres urbains.
+    periode_transition: 2030-2060
+    evenement_transition: Transition vers l'éco-communalisme après les crises énergétiques
+      des années 2030 et les catastrophes naturelles répétées.
+    lieux_emblematiques:
+    - Tokyo
+    - Osaka
+    - Kyoto
+    relations:
+      allies:
+      - polynesie_reconstituee
+      - coree_peninsule_verte
+      rivaux:
+      - enclaves_extractivistes_et_etats_residuels
+    sources_attestees: []
+    origine_reelle:
+    - entite: Japon
+      type_entite: pays
+      portion: null
+    - entite: Taïwan
+      type_entite: pays
+      portion: null
   proposition_approuvee: false
   date_proposition: null
   date_traitement: null
+  proposition_issues: []
 - id: policy_reform__bloc_souverainiste_non_signataire
   scenario: policy_reform
   type: zone_suspecte
@@ -133,10 +700,127 @@ chantiers:
   source_diagnostic: patron_spatial
   date_detection: '2026-07-25'
   statut: a_traiter
-  proposition: null
+  proposition:
+    slug: bloc_souverainiste_non_signataire
+    nom: Bloc Souverainiste Non-Signataire (Sud Global dissident)
+    niveau: 1
+    type: union_regionale
+    parent: null
+    origine_reelle:
+    - entite: Niger
+      type_entite: pays
+      portion: null
+    - entite: Tchad
+      type_entite: pays
+      portion: null
+    - entite: Mali
+      type_entite: pays
+      portion: null
+    - entite: Brésil
+      type_entite: pays
+      portion: null
+    - entite: Argentine
+      type_entite: pays
+      portion: null
+    - entite: Bolivie
+      type_entite: pays
+      portion: null
+    - entite: Indonésie
+      type_entite: pays
+      portion: null
+    - entite: Nigeria
+      type_entite: pays
+      portion: null
+    - entite: Burkina Faso
+      type_entite: pays
+      portion: null
+    - entite: Soudan
+      type_entite: pays
+      portion: null
+    - entite: Colombie
+      type_entite: pays
+      portion: null
+    - entite: Pérou
+      type_entite: pays
+      portion: null
+    - entite: Venezuela
+      type_entite: pays
+      portion: null
+    - entite: Chili
+      type_entite: pays
+      portion: null
+    - entite: Nicaragua
+      type_entite: pays
+      portion: null
+    - entite: Barbade
+      type_entite: pays
+      portion: null
+    - entite: Guyana
+      type_entite: pays
+      portion: null
+    - entite: Suriname
+      type_entite: pays
+      portion: null
+    - entite: Équateur
+      type_entite: pays
+      portion: null
+    - entite: Paraguay
+      type_entite: pays
+      portion: null
+    - entite: Uruguay
+      type_entite: pays
+      portion: null
+    - entite: Sainte-Lucie
+      type_entite: pays
+      portion: null
+    - entite: Grenade
+      type_entite: pays
+      portion: null
+    - entite: Saint-Vincent-et-les-Grenadines
+      type_entite: pays
+      portion: null
+    - entite: Antigua-et-Barbuda
+      type_entite: pays
+      portion: null
+    - entite: Saint-Christophe-et-Niévès
+      type_entite: pays
+      portion: null
+    - entite: Dominique
+      type_entite: pays
+      portion: null
+    description: Coalition d'États du Sud Global — sahéliens, andins et du Pacifique
+      Sud — qui négocient collectivement leur intégration aux mécanismes de gouvernance
+      technocratique mondiale, tout en défendant une souveraineté renforcée sur leurs
+      ressources, leurs données et leurs choix stratégiques. Ce bloc agit comme un
+      contrepoids institutionnalisé, participant aux instances de régulation tout
+      en exigeant des réformes structurelles.
+    statut: stable
+    tensions_internes: 'Hétérogénéité persistante : certains membres privilégient
+      une intégration progressive aux institutions internationales, tandis que d''autres
+      insistent sur des garanties de souveraineté absolue, notamment en matière de
+      gestion des ressources hydriques et énergétiques.'
+    periode_transition: 2087-2098
+    evenement_transition: null
+    lieux_emblematiques: []
+    relations:
+      allies:
+      - espace_eurasiatique
+      - royaume_uni_autonome
+      rivaux:
+      - hub_europeen_regulation
+    sources_attestees:
+    - amara_diallo_nkosi_policy_reform
+    - etats_dissidents_du_bloc_austral_policy_reform
+    - front_souverainiste_des_blocs_non_signataires_policy_reform
+    - conseil_regulation_ressources_policy_reform
+    - bureau_gouvernance_algorithmique_policy_reform
+    - collectifs_de_defense_hydrique_saheliens_policy_reform
+    - front_des_souverainistes_energetiques_policy_reform
+    - trame_bioclimatique_policy_reform
   proposition_approuvee: false
   date_proposition: null
   date_traitement: null
+  proposition_issues: []
 - id: policy_reform__espace_eurasiatique
   scenario: policy_reform
   type: zone_suspecte
@@ -147,10 +831,134 @@ chantiers:
   source_diagnostic: patron_spatial
   date_detection: '2026-07-25'
   statut: a_traiter
-  proposition: null
+  proposition:
+    slug: espace_eurasiatique
+    nom: Espace Eurasiatique
+    niveau: 1
+    type: bloc_continental
+    parent: null
+    origine_reelle:
+    - entite: Russie
+      type_entite: pays
+      portion: null
+    - entite: Chine
+      type_entite: pays
+      portion: null
+    - entite: Kazakhstan
+      type_entite: pays
+      portion: null
+    - entite: Inde
+      type_entite: pays
+      portion: null
+    - entite: Corée du Sud
+      type_entite: pays
+      portion: null
+    - entite: Pologne
+      type_entite: pays
+      portion: null
+    - entite: Roumanie
+      type_entite: pays
+      portion: null
+    - entite: Ukraine
+      type_entite: pays
+      portion: null
+    - entite: Géorgie
+      type_entite: pays
+      portion: null
+    - entite: Ouzbékistan
+      type_entite: pays
+      portion: null
+    - entite: Kirghizistan
+      type_entite: pays
+      portion: null
+    - entite: Vietnam
+      type_entite: pays
+      portion: null
+    - entite: Bangladesh
+      type_entite: pays
+      portion: null
+    - entite: Pakistan
+      type_entite: pays
+      portion: null
+    - entite: Mongolie
+      type_entite: pays
+      portion: null
+    - entite: Moldavie
+      type_entite: pays
+      portion: null
+    - entite: Biélorussie
+      type_entite: pays
+      portion: null
+    - entite: Arménie
+      type_entite: pays
+      portion: null
+    - entite: Turkménistan
+      type_entite: pays
+      portion: null
+    - entite: Tadjikistan
+      type_entite: pays
+      portion: null
+    - entite: Afghanistan
+      type_entite: pays
+      portion: null
+    - entite: Népal
+      type_entite: pays
+      portion: null
+    - entite: Bhoutan
+      type_entite: pays
+      portion: null
+    - entite: Birmanie
+      type_entite: pays
+      portion: null
+    - entite: Laos
+      type_entite: pays
+      portion: null
+    - entite: Cambodge
+      type_entite: pays
+      portion: null
+    - entite: Corée du Nord
+      type_entite: pays
+      portion: null
+    - entite: Taïwan
+      type_entite: pays
+      portion: null
+    - entite: Singapour
+      type_entite: pays
+      portion: null
+    - entite: Arctique
+      type_entite: pays
+      portion: null
+    description: Bloc continental eurasiatique structuré autour d'une gouvernance
+      technocratique décentralisée, intégrée aux mécanismes de régulation internationale
+      tout en défendant une approche souveraine des standards technologiques et biologiques.
+      Il abrite des institutions comme l'Union Technocratique Eurasiatique, qui participe
+      activement au CRTI (siège rotatif à Chengdu), et des pôles de recherche en biotechnologies
+      alignés sur les cadres globaux, malgré des divergences sur certains principes
+      éthiques.
+    statut: stable
+    tensions_internes: Débats persistants entre les tenants d'une intégration complète
+      aux standards internationaux et les défenseurs d'une souveraineté renforcée
+      sur les questions biotech et numériques ; rivalités entre villes secondaires
+      pour l'accueil des infrastructures de régulation.
+    periode_transition: 2040-2065
+    evenement_transition: null
+    lieux_emblematiques: []
+    relations:
+      allies:
+      - hub_africain_gouvernance
+      - sri_lanka_hub_maritime
+      rivaux:
+      - hub_europeen_regulation
+      - ameriques_reformees
+    sources_attestees:
+    - assemblee_territoires_policy_reform
+    - union_technocratique_eurasiatique_policy_reform
+    - front_de_souverainete_biologique_eurasiatique_policy_reform
+    - institut_brookings_singapour_de_politique_computationnelle_policy_reform
   proposition_approuvee: false
   date_proposition: null
   date_traitement: null
+  proposition_issues: []
 - id: policy_reform__peninsule_iberique_cooperative
   scenario: policy_reform
   type: zone_suspecte
@@ -162,10 +970,55 @@ chantiers:
   source_diagnostic: patron_spatial
   date_detection: '2026-07-25'
   statut: a_traiter
-  proposition: null
+  proposition:
+    slug: peninsule_iberique_cooperative
+    nom: Péninsule Ibérique Coopérative
+    type: union_regionale
+    origine_reelle:
+    - entite: Espagne
+      type_entite: pays
+      portion: null
+    description: Zone née de la réforme territoriale ibérique post-2040, marquée par
+      une décentralisation coordonnée entre l'Espagne et le Portugal, et la mutualisation
+      des infrastructures énergétiques (réseau solaire-atlantique) et logistiques
+      (corridors méditerranéens-atlantiques). Siège du Centre Ibérique de Régulation
+      des Flux (CIRF), institution régionale intégrée au CRTI pour la gestion des
+      migrations climatiques et des échanges agro-alimentaires, avec une gouvernance
+      équilibrée entre pôles secondaires (Valence, Lisbonne, Porto, Barcelone).
+    statut: stable
+    tensions_internes: Résistances locales aux quotas de redistribution des populations
+      climatiques (notamment en Andalousie et Algarve), et rivalités entre pôles urbains
+      secondaires pour l'attractivité des investissements régionaux, compensées par
+      des mécanismes de péréquation fiscale interrégionale et une planification coordonnée.
+    periode_transition: 2038-2052
+    lieux_emblematiques:
+    - nom: Valence (Pôle Logistique Ibérique)
+      type: ville
+      notes: Siège du CIRF et hub de redistribution des flux migratoires et commerciaux
+        entre Europe et Maghreb Atlantique.
+    - nom: Plateforme Solaire de l'Atlantique (PSA)
+      type: infrastructure
+      notes: Réseau mutualisé de centrales solaires offshore et terrestres, co-géré
+        avec le Maghreb Atlantique et l'Europe du Nord-Ouest.
+    - nom: Corridor Méditerranéen Ibérique
+      type: infrastructure
+      notes: Axe ferroviaire et énergétique reliant Almería à Barcelone, intégré aux
+        corridors européens de régulation des flux.
+    relations:
+      allies:
+      - maghreb_atlantique
+      - europe_nord_ouest
+      - hub_europeen_regulation
+      rivaux: []
+    niveau: 1
+    parent: null
+    evenement_transition: null
+    sources_attestees: []
+    promu_depuis: null
   proposition_approuvee: false
   date_proposition: null
   date_traitement: null
+  proposition_issues: []
 - id: reference__europe_occidentale_reconstructee
   scenario: reference
   type: zone_suspecte
@@ -483,3 +1336,31 @@ chantiers:
   date_proposition: '2026-07-25'
   date_traitement: null
   proposition_issues: []
+- id: breakdown__geneve_bunker_institutions
+  scenario: breakdown
+  type: zone_suspecte
+  cible: geneve_bunker_institutions
+  probleme: Présence d'institutions internationales résiduelles revendiquant une continuité
+    juridique, contredisant l'absence d'institution supranationale stable et la fragmentation
+    en blocs rivaux.
+  source_diagnostic: patron_spatial
+  date_detection: '2026-07-25'
+  statut: traite
+  proposition: null
+  proposition_approuvee: false
+  date_proposition: null
+  date_traitement: null
+- id: fortress_world__nuuk_forteresse
+  scenario: fortress_world
+  type: zone_suspecte
+  cible: nuuk_forteresse
+  probleme: Décrit comme n'appartenant 'officiellement à aucun camp', ce qui contredit
+    la logique de blocs fermés et de fragmentation binaire (enclave protégée vs hors-forteresse)
+    du patron.
+  source_diagnostic: patron_spatial
+  date_detection: '2026-07-25'
+  statut: traite
+  proposition: null
+  proposition_approuvee: false
+  date_proposition: null
+  date_traitement: null
