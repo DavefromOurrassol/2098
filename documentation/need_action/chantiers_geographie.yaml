@@ -1,0 +1,207 @@
+chantiers:
+- id: fortress_world__amazonie_pacte_vert
+  scenario: fortress_world
+  type: zone_suspecte
+  cible: amazonie_pacte_vert
+  probleme: Décrit comme un 'territoire autonome' précaire négociant avec des blocs,
+    ce qui suggère une neutralité ou une zone intermédiaire non conforme au patron
+    (ni enclave protégée ni hors-forteresse dégradée)
+  source_diagnostic: patron_spatial
+  date_detection: '2026-07-25'
+  statut: a_traiter
+  proposition: null
+  proposition_approuvee: false
+  date_proposition: null
+  date_traitement: null
+- id: fortress_world__espace_nordique_arctique
+  scenario: fortress_world
+  type: zone_suspecte
+  cible: espace_nordique_arctique
+  probleme: Décrit comme une 'puissance de transit' privée et armée, ni clairement
+    un bloc militarisé ni une zone abandonnée, ce qui contredit la logique binaire
+    du patron
+  source_diagnostic: patron_spatial
+  date_detection: '2026-07-25'
+  statut: a_traiter
+  proposition: null
+  proposition_approuvee: false
+  date_proposition: null
+  date_traitement: null
+- id: fortress_world__singapour_megapole
+  scenario: fortress_world
+  type: zone_suspecte
+  cible: singapour_megapole
+  probleme: Mention d'une 'neutralité armée' et d'un hub pour les blocs dominants,
+    ce qui évoque une zone intermédiaire non alignée sur le patron spatial
+  source_diagnostic: patron_spatial
+  date_detection: '2026-07-25'
+  statut: a_traiter
+  proposition: null
+  proposition_approuvee: false
+  date_proposition: null
+  date_traitement: null
+- id: fortress_world__tuvalu_refugies_climatiques
+  scenario: fortress_world
+  type: zone_suspecte
+  cible: tuvalu_refugies_climatiques
+  probleme: Décrit comme un 'refuge climatique sous protection onusienne résiduelle',
+    ce qui suggère une zone neutre ou humanitaire non conforme à la logique de fragmentation
+    extrême
+  source_diagnostic: patron_spatial
+  date_detection: '2026-07-25'
+  statut: a_traiter
+  proposition: null
+  proposition_approuvee: false
+  date_proposition: null
+  date_traitement: null
+- id: new_sustainability__bloc_eurasien_souverainiste
+  scenario: new_sustainability
+  type: zone_suspecte
+  cible: bloc_eurasien_souverainiste
+  probleme: Contradiction avec la logique géopolitique de gouvernance mondiale stabilisée
+    et d'interconnexion institutionnelle forte, en affichant une résistance active
+    aux modèles de transition écologique imposés par les centres institutionnels.
+  source_diagnostic: patron_spatial
+  date_detection: '2026-07-25'
+  statut: a_traiter
+  proposition: null
+  proposition_approuvee: false
+  date_proposition: null
+  date_traitement: null
+- id: new_sustainability__moyen_orient_golfe
+  scenario: new_sustainability
+  type: zone_suspecte
+  cible: moyen_orient_golfe
+  probleme: Mention d'un conflit Israël-Iran en 2026, incompatible avec la réduction
+    structurelle des tensions géopolitiques systémiques et les mécanismes robustes
+    de prévention des conflits.
+  source_diagnostic: patron_spatial
+  date_detection: '2026-07-25'
+  statut: a_traiter
+  proposition: null
+  proposition_approuvee: false
+  date_proposition: null
+  date_traitement: null
+- id: eco_communalism__europe_occidentale_reconstituee
+  scenario: eco_communalism
+  type: zone_suspecte
+  cible: europe_occidentale_reconstituee
+  probleme: Description mentionne des 'infrastructures institutionnelles denses' et
+    une 'Confédération des Racines Vivantes', ce qui suggère une centralisation institutionnelle
+    contraire à la logique de petites communautés autonomes et décentralisées.
+  source_diagnostic: patron_spatial
+  date_detection: '2026-07-25'
+  statut: a_traiter
+  proposition: null
+  proposition_approuvee: false
+  date_proposition: null
+  date_traitement: null
+- id: eco_communalism__inde_bassins_sacres
+  scenario: eco_communalism
+  type: zone_suspecte
+  cible: inde_bassins_sacres
+  probleme: Mention de villes comme Delhi et Mumbai devenant des 'hubs de gouvernance
+    décentralisée' peut impliquer une centralisation résiduelle ou une taille incompatible
+    avec la désurbanisation volontaire attendue.
+  source_diagnostic: patron_spatial
+  date_detection: '2026-07-25'
+  statut: a_traiter
+  proposition: null
+  proposition_approuvee: false
+  date_proposition: null
+  date_traitement: null
+- id: eco_communalism__japon_archipel_resilient
+  scenario: eco_communalism
+  type: zone_suspecte
+  cible: japon_archipel_resilient
+  probleme: Tokyo décrite comme une 'mégalopole décentralisée en districts auto-suffisants'
+    contredit la logique de désurbanisation volontaire et de petites communautés autonomes.
+  source_diagnostic: patron_spatial
+  date_detection: '2026-07-25'
+  statut: a_traiter
+  proposition: null
+  proposition_approuvee: false
+  date_proposition: null
+  date_traitement: null
+- id: policy_reform__bloc_souverainiste_non_signataire
+  scenario: policy_reform
+  type: zone_suspecte
+  cible: bloc_souverainiste_non_signataire
+  probleme: Contredit la logique de stabilisation par renforcement des institutions
+    internationales et la coopération réelle entre blocs rivaux, en revendiquant une
+    résistance active à l'architecture de gouvernance technocratique mondiale.
+  source_diagnostic: patron_spatial
+  date_detection: '2026-07-25'
+  statut: a_traiter
+  proposition: null
+  proposition_approuvee: false
+  date_proposition: null
+  date_traitement: null
+- id: policy_reform__espace_eurasiatique
+  scenario: policy_reform
+  type: zone_suspecte
+  cible: espace_eurasiatique
+  probleme: Mentionne un 'contre-modèle institutionnel' et une résistance aux réformes
+    biotech internationales, ce qui suggère une logique de bloc rival non coopératif,
+    en tension avec la coopération réelle mais non totale attendue.
+  source_diagnostic: patron_spatial
+  date_detection: '2026-07-25'
+  statut: a_traiter
+  proposition: null
+  proposition_approuvee: false
+  date_proposition: null
+  date_traitement: null
+- id: policy_reform__peninsule_iberique_cooperative
+  scenario: policy_reform
+  type: zone_suspecte
+  cible: peninsule_iberique_cooperative
+  probleme: Décrite comme une 'union régionale' avec une institution intégrée au CRTI,
+    mais son origine réelle se limite à l'Espagne, ce qui contredit la logique de
+    montée de villes secondaires et de rééquilibrage territorial (risque de mégapole
+    ou région dominante unique).
+  source_diagnostic: patron_spatial
+  date_detection: '2026-07-25'
+  statut: a_traiter
+  proposition: null
+  proposition_approuvee: false
+  date_proposition: null
+  date_traitement: null
+- id: reference__europe_occidentale_reconstructee
+  scenario: reference
+  type: zone_suspecte
+  cible: europe_occidentale_reconstructee
+  probleme: Mention d'énergie solaire orbitale (Consortium Helios), ce qui contredit
+    la limite spatiale terrestre et robotique du patron.
+  source_diagnostic: patron_spatial
+  date_detection: '2026-07-25'
+  statut: a_traiter
+  proposition: null
+  proposition_approuvee: false
+  date_proposition: null
+  date_traitement: null
+- id: reference__ameriques_multipolaires
+  scenario: reference
+  type: zone_suspecte
+  cible: ameriques_multipolaires
+  probleme: Présence d'une innovation institutionnelle majeure (Fédération des Communs
+    Territoriaux, Nouveau Parti Commun) trop marquée pour un scénario conservateur.
+  source_diagnostic: patron_spatial
+  date_detection: '2026-07-25'
+  statut: a_traiter
+  proposition: null
+  proposition_approuvee: false
+  date_proposition: null
+  date_traitement: null
+- id: reference__bloc_persique_autonome
+  scenario: reference
+  type: zone_suspecte
+  cible: bloc_persique_autonome
+  probleme: Description d'une coalition contrôlée par des milices et régimes autoritaires
+    survivants, suggérant une rupture géopolitique trop radicale pour le patron.
+  source_diagnostic: patron_spatial
+  date_detection: '2026-07-25'
+  statut: a_traiter
+  proposition: null
+  proposition_approuvee: false
+  date_proposition: null
+  date_traitement: null
