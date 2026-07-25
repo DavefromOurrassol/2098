@@ -19,38 +19,54 @@ territoire entre scénarios, le contrôle patron spatial compare une zone à
 la logique narrative de SON scénario -- voir check_patron_spatial_
 coherence.py pour le détail).
 
+HARMONISATION --write-chantiers (25 juillet 2026, point 4.3 du handoff
+fusion chantiers_geographie.yaml)
+------------------------------------------------------------------------
+Depuis la migration de check_zones_coherence.py, check_origine_reelle_
+coherence.py et check_patron_spatial_coherence.py vers le module partagé
+chantiers.py, les trois exposent le MÊME flag --write-chantiers (écrit
+dans chantiers_geographie.yaml, fichier unique du pipeline géographie).
+Cet orchestrateur expose désormais un seul --write-chantiers, propagé aux
+étapes 1, 3 et 5 -- remplace les anciens --write-suspectes (étape 5 seule)
+et --write-zones-manquantes (étape 3 seule), qui ne correspondent plus à
+aucun flag réel des scripts sous-jacents depuis leur migration. Au passage,
+l'étape 1 gagne une propagation d'écriture qu'elle n'avait jamais eue --
+avant cette harmonisation, --write-suspectes ne couvrait que l'étape 5, et
+un pays totalement absent détecté en étape 1 n'était jamais suivi sans
+relancer check_zones_coherence.py à la main avec son propre --write-
+chantiers.
+
 6e étape optionnelle (--generer-propositions-topdown, ajoutée le 25
 juillet, P24 étape C) : propage vers generer_zones_topdown.py
---review-topdown -- génère des propositions de zones (pays sans zone +
-zones suspectes a_traiter/en_attente_c2) dans zones_proposees_topdown_
-{scenario}.yaml, à relire à la main. Volontairement APRÈS l'étape 5 pour
-qu'une zone tout juste ajoutée à patron_spatial_suspectes.yaml (via
---write-suspectes dans le même run) soit immédiatement éligible. Coûte de
-vrais appels LLM -- jamais lancé par défaut, comme --resolve-llm.
---apply-topdown N'EST JAMAIS propagé ici et ne le sera jamais : appliquer
-automatiquement à la suite d'un --review-topdown dans le même run
-contournerait le geste de review humain (valide: false → true) qui est
-tout le sens de ce workflow -- et de toute façon n'appliquerait rien,
-puisque rien n'aurait encore été repassé à valide: true. --apply-topdown
-reste une commande volontairement séparée, lancée à la main une fois la
-review faite.
+--review-topdown -- génère des propositions pour les chantiers
+`a_traiter` de chantiers_geographie.yaml (pays sans zone ET zones
+suspectes, les deux types désormais couverts puisque chantiers.py les
+unifie). Volontairement APRÈS les étapes 1/3/5 pour qu'un chantier tout
+juste ajouté dans CE run (via --write-chantiers) soit immédiatement
+éligible. Coûte de vrais appels LLM -- jamais lancé par défaut, comme
+--resolve-llm. --apply-topdown N'EST JAMAIS propagé ici et ne le sera
+jamais : appliquer automatiquement à la suite d'un --review-topdown dans
+le même run contournerait le geste de review humain (proposition_
+approuvee: false → true) qui est tout le sens de ce workflow -- et de
+toute façon n'appliquerait rien, puisque rien n'aurait encore été
+approuvé. --apply-topdown reste une commande volontairement séparée,
+lancée à la main une fois la review faite.
 
-N'écrit jamais rien dans le vault par défaut (à l'exception du fichier de
-review zones_proposees_topdown_{scenario}.yaml pour l'étape 6, qui n'est
-qu'un brouillon en attente, pas une écriture dans geographie/). --apply-
-type-entite propage le --apply de check_type_entite_coherence.py (backup
-.bak automatique, voir ce script) ; --resolve-llm et --write-zones-
-manquantes propagent les flags correspondants de check_origine_reelle_
-coherence.py ; --no-cache-patron-spatial propage --no-cache à check_
-patron_spatial_coherence.py. Chaque flag reste un geste explicite, comme
-dans les scripts sous-jacents.
+N'écrit jamais rien dans le vault par défaut. --write-chantiers écrit
+dans chantiers_geographie.yaml (jamais dans geographie/ lui-même, lecture
+seule pour ces 3 scripts) ; --apply-type-entite propage le --apply de
+check_type_entite_coherence.py (backup .bak automatique, voir ce
+script) ; --resolve-llm propage le flag correspondant de check_origine_
+reelle_coherence.py ; --no-cache-patron-spatial propage --no-cache à
+check_patron_spatial_coherence.py. Chaque flag reste un geste explicite,
+comme dans les scripts sous-jacents.
 
 USAGE
 -----
     python3 scan_geographie_complet.py --all
     python3 scan_geographie_complet.py --scenario breakdown
     python3 scan_geographie_complet.py --all --apply-type-entite --resolve-llm
-    python3 scan_geographie_complet.py --all --write-suspectes --generer-propositions-topdown
+    python3 scan_geographie_complet.py --all --write-chantiers --generer-propositions-topdown
 """
 
 import argparse
@@ -112,25 +128,26 @@ def main():
         help="Propage --resolve-llm à check_origine_reelle_coherence.py."
     )
     parser.add_argument(
-        "--write-zones-manquantes", action="store_true",
-        help="Propage --write-zones-manquantes à check_origine_reelle_coherence.py."
+        "--write-chantiers", action="store_true",
+        help="Propage --write-chantiers aux étapes 1 (check_zones_coherence.py), "
+             "3 (check_origine_reelle_coherence.py) et 5 (check_patron_spatial_"
+             "coherence.py) -- écrit les nouveaux chantiers détectés dans "
+             "chantiers_geographie.yaml. Remplace les anciens --write-suspectes/"
+             "--write-zones-manquantes, désormais un seul flag pour les 3 étapes "
+             "depuis leur migration vers chantiers.py."
     )
     parser.add_argument(
         "--no-cache-patron-spatial", action="store_true",
         help="Propage --no-cache à check_patron_spatial_coherence.py (repaie l'appel LLM)."
     )
     parser.add_argument(
-        "--write-suspectes", action="store_true",
-        help="Propage --write-suspectes à check_patron_spatial_coherence.py (écrit les "
-             "nouvelles zones suspectes dans patron_spatial_suspectes.yaml)."
-    )
-    parser.add_argument(
         "--generer-propositions-topdown", action="store_true",
         help="6e étape optionnelle : lance generer_zones_topdown.py --review-topdown "
-             "(P24 étape C.3) -- génère des propositions à relire dans "
-             "zones_proposees_topdown_{scenario}.yaml. Coûte de vrais appels LLM, "
-             "jamais lancé par défaut. N'applique jamais rien (pas de --apply-topdown "
-             "ici) -- la review reste un geste séparé, volontairement."
+             "(P24 étape C.3) -- génère une proposition pour chaque chantier "
+             "`a_traiter` de chantiers_geographie.yaml (pays sans zone + zones "
+             "suspectes). Coûte de vrais appels LLM, jamais lancé par défaut. "
+             "N'applique jamais rien (pas de --apply-topdown ici) -- la review "
+             "reste un geste séparé, volontairement."
     )
     args = parser.parse_args()
 
@@ -149,7 +166,8 @@ def main():
     resumes = []
 
     print("\n" + "▶" * 3 + " Étape 1/5 — check_zones_coherence.py")
-    sortie = executer("check_zones_coherence.py", cible)
+    args_zones = cible + (["--write-chantiers"] if args.write_chantiers else [])
+    sortie = executer("check_zones_coherence.py", args_zones)
     resumes.append(("check_zones_coherence.py", derniere_ligne_utile(sortie)))
 
     print("\n" + "▶" * 3 + " Étape 2/5 — check_type_entite_coherence.py")
@@ -161,8 +179,8 @@ def main():
     args_origine = cible[:]
     if args.resolve_llm:
         args_origine.append("--resolve-llm")
-    if args.write_zones_manquantes:
-        args_origine.append("--write-zones-manquantes")
+    if args.write_chantiers:
+        args_origine.append("--write-chantiers")
     sortie = executer("check_origine_reelle_coherence.py", args_origine)
     resumes.append(("check_origine_reelle_coherence.py", derniere_ligne_utile(sortie)))
 
@@ -177,17 +195,17 @@ def main():
     args_patron_spatial = cible[:]
     if args.no_cache_patron_spatial:
         args_patron_spatial.append("--no-cache")
-    if args.write_suspectes:
-        args_patron_spatial.append("--write-suspectes")
+    if args.write_chantiers:
+        args_patron_spatial.append("--write-chantiers")
     sortie = executer("check_patron_spatial_coherence.py", args_patron_spatial)
     resumes.append(("check_patron_spatial_coherence.py", derniere_ligne_utile(sortie)))
 
     if args.generer_propositions_topdown:
         print("\n" + "▶" * 3 + " Étape 6/6 — generer_zones_topdown.py --review-topdown")
-        if not args.write_suspectes:
-            print("  · Lancé sans --write-suspectes à l'étape 5 -- seules les zones déjà "
-                  "suivies avant ce run (a_traiter/en_attente_c2) seront reprises, pas "
-                  "celles tout juste détectées dans ce même run.")
+        if not args.write_chantiers:
+            print("  · Lancé sans --write-chantiers aux étapes 1/3/5 -- seuls les "
+                  "chantiers déjà `a_traiter` avant ce run seront repris, pas ceux "
+                  "tout juste détectés dans ce même run.")
         args_topdown = ["--review-topdown"] + cible
         sortie = executer("generer_zones_topdown.py", args_topdown)
         resumes.append(("generer_zones_topdown.py --review-topdown", derniere_ligne_utile(sortie)))
@@ -209,9 +227,9 @@ def main():
         print("  · check_patron_spatial_coherence.py a pu servir des résultats en cache "
               "(relancer avec --no-cache-patron-spatial pour forcer un nouvel appel LLM)")
     if args.generer_propositions_topdown:
-        print("  · generer_zones_topdown.py : propositions écrites en YAML "
-              "(zones_proposees_topdown_{scenario}.yaml), RIEN appliqué au vault -- "
-              "relire et passer valide: true à la main, puis lancer "
+        print("  · generer_zones_topdown.py : propositions attachées aux chantiers "
+              "(chantiers_geographie.yaml, proposition_approuvee: false), RIEN appliqué "
+              "au vault -- relire et approuver à la main, puis lancer "
               "generer_zones_topdown.py --apply-topdown séparément.")
 
 
