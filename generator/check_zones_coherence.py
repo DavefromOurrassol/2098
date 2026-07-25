@@ -13,7 +13,7 @@ Diagnostic de cohérence des fiches geographie/{scenario}.md :
      zone N1 — apparaissent gris/incohérents sur la carte (pas de légende,
      couleur de secours) même s'ils ont une entrée origine_reelle quelque
      part dans le fichier.
-  4. Entrées de zones_manquantes.yaml qui ne correspondent plus à la réalité
+  4. Entrées de chantiers_geographie.yaml (type pays_sans_zone) qui ne correspondent plus à la réalité
      (pays qui a en fait déjà une zone N1 — entrée obsolète à nettoyer).
 
 Ne modifie jamais rien — lecture seule, purement diagnostic.
@@ -32,12 +32,13 @@ from pathlib import Path
 
 import yaml
 
+import chantiers
+
 SCRIPT_DIR = Path(__file__).parent
 VAULT_ROOT = SCRIPT_DIR.parent
 GEO_DIR = VAULT_ROOT / "geographie"
 GUI_DIR = VAULT_ROOT / "gui"
 ZONES_PAYS = GUI_DIR / "zones_pays.json"
-ZONES_MANQUANTES = VAULT_ROOT / "documentation" / "need_action" / "zones_manquantes.yaml"
 
 SCENARIOS = [
     "breakdown", "fortress_world", "new_sustainability",
@@ -76,7 +77,8 @@ def _pays_present(pays_norm: str, entites: list) -> bool:
     return False
 
 
-def check_scenario(scenario: str, pays_liste_norm: set, pays_liste_original: list) -> bool:
+def check_scenario(scenario: str, pays_liste_norm: set, pays_liste_original: list,
+                    write_chantiers: bool = False) -> bool:
     """Vérifie un scénario. Retourne True si tout est cohérent."""
     print(f"\n=== {scenario} ===")
     geo_file = GEO_DIR / f"{scenario}.md"
@@ -137,6 +139,17 @@ def check_scenario(scenario: str, pays_liste_norm: set, pays_liste_original: lis
         for p in sorted(absents):
             print(f"      - {p!r}")
         print(f"    (vérifier au grep avant d'agir — peut-être une variante de nom non listée dans ALIASES)")
+        if write_chantiers:
+            ajoutees = 0
+            for p in absents:
+                if chantiers.ajouter_chantier(
+                    scenario=scenario, type_="pays_sans_zone", cible=p,
+                    probleme=f"{p!r} n'apparaît dans aucune zone (tous niveaux) de {scenario}.",
+                    source_diagnostic="zones_coherence",
+                ):
+                    ajoutees += 1
+            if ajoutees:
+                print(f"    ✓ {ajoutees} chantier(s) ajouté(s) à {chantiers.CHANTIERS_FILE.name}")
     else:
         print(f"  ✓ Tous les pays de pays_liste ont au moins une zone")
 
@@ -158,37 +171,48 @@ def check_scenario(scenario: str, pays_liste_norm: set, pays_liste_original: lis
     return ok
 
 
-def check_zones_manquantes(pays_avec_n1_par_scenario: dict) -> None:
-    """Vérifie que zones_manquantes.yaml ne contient pas d'entrées obsolètes
-    (pays qui a en fait déjà une zone N1 correcte dans la fiche)."""
-    print(f"\n=== zones_manquantes.yaml ===")
-    if not ZONES_MANQUANTES.exists():
-        print(f"  ✓ Fichier absent — rien à vérifier")
-        return
+def check_zones_manquantes(pays_avec_n1_par_scenario: dict, marquer_resolus: bool) -> None:
+    """
+    Vérifie que les chantiers type="pays_sans_zone" de chantiers_geographie.yaml
+    (module chantiers.py, remplace l'ancien zones_manquantes.yaml depuis le 25
+    juillet 2026) ne contiennent pas d'entrées obsolètes -- un pays qui a en
+    fait déjà une zone N1 correcte dans la fiche.
 
-    data = yaml.safe_load(ZONES_MANQUANTES.read_text(encoding="utf-8")) or {}
-    entries = data.get("zones_manquantes") or []
+    --marquer-resolus (opt-in) : passe ces entrées obsolètes à statut="traite"
+    directement -- contrairement au reste de ce diagnostic (lecture seule), ce
+    cas précis ne demande aucun jugement narratif : si le pays a une zone N1,
+    le problème d'origine n'existe objectivement plus. Sans ce flag, aperçu
+    seul, comme avant.
+    """
+    print(f"\n=== chantiers pays_sans_zone (chantiers_geographie.yaml) ===")
+    entries = chantiers.chantiers_eligibles(type_="pays_sans_zone")
     if not entries:
-        print(f"  ✓ Fichier vide — rien à signaler")
+        print(f"  ✓ Aucun chantier pays_sans_zone actif — rien à vérifier")
         return
 
     obsoletes = []
     for e in entries:
-        pays = (e.get("pays") or "").lower().strip()
+        pays = (e.get("cible") or "").lower().strip()
         scenario = e.get("scenario") or ""
-        statut = e.get("statut") or ""
-        if statut == "blanc_intentionnel":
-            continue  # ignoré volontairement, pas un problème
         pays_ok = pays_avec_n1_par_scenario.get(scenario, set())
         if pays in pays_ok:
-            obsoletes.append((pays, scenario))
+            obsoletes.append((pays, scenario, e.get("cible"), e.get("scenario")))
 
-    if obsoletes:
-        print(f"  ⚠ {len(obsoletes)} entrée(s) obsolète(s) (le pays a déjà une zone N1) :")
-        for pays, scenario in obsoletes:
-            print(f"      - {pays!r} / {scenario} — peut être retirée de zones_manquantes.yaml")
-    else:
-        print(f"  ✓ {len(entries)} entrée(s), aucune obsolète")
+    if not obsoletes:
+        print(f"  ✓ {len(entries)} chantier(s) actif(s), aucun obsolète")
+        return
+
+    print(f"  ⚠ {len(obsoletes)} chantier(s) obsolète(s) (le pays a déjà une zone N1) :")
+    for pays_norm, scenario_norm, pays_cible, scenario_cible in obsoletes:
+        if marquer_resolus:
+            chantiers.mettre_a_jour_chantier(
+                scenario_cible, pays_cible, statut="traite",
+                date_traitement=chantiers.date.today().isoformat(),
+            )
+            print(f"      - {pays_cible!r} / {scenario_cible} — marqué 'traite'")
+        else:
+            print(f"      - {pays_cible!r} / {scenario_cible} — relancer avec "
+                  f"--marquer-resolus pour le marquer 'traite' automatiquement")
 
 
 def main():
@@ -198,6 +222,19 @@ def main():
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("--scenario", help="Scénario unique à vérifier")
     group.add_argument("--all", action="store_true", help="Vérifier les 6 scénarios")
+    parser.add_argument(
+        "--write-chantiers", action="store_true",
+        help="Ajoute à chantiers_geographie.yaml un chantier pays_sans_zone par "
+             "pays totalement absent de toute zone. N'écrase jamais une entrée "
+             "déjà présente. Sans ce flag, aperçu seul."
+    )
+    parser.add_argument(
+        "--marquer-resolus", action="store_true",
+        help="Marque automatiquement statut='traite' les chantiers pays_sans_zone "
+             "devenus obsolètes (le pays a déjà une zone N1) -- seul cas de ce "
+             "diagnostic où aucun jugement narratif n'est nécessaire. Sans ce "
+             "flag, aperçu seul (comme le reste du diagnostic)."
+    )
     args = parser.parse_args()
 
     if not ZONES_PAYS.exists():
@@ -220,10 +257,10 @@ def main():
     all_ok = True
     pays_avec_n1_par_scenario = {}
     for s in scenarios:
-        ok = check_scenario(s, pays_liste_norm, pays_liste_original)
+        ok = check_scenario(s, pays_liste_norm, pays_liste_original, args.write_chantiers)
         all_ok = all_ok and ok
 
-        # Recalcul rapide pour la vérification zones_manquantes.yaml
+        # Recalcul rapide pour la vérification des chantiers pays_sans_zone
         geo_file = GEO_DIR / f"{s}.md"
         if geo_file.exists():
             try:
@@ -246,7 +283,7 @@ def main():
                 pass
 
     if args.all:
-        check_zones_manquantes(pays_avec_n1_par_scenario)
+        check_zones_manquantes(pays_avec_n1_par_scenario, args.marquer_resolus)
 
     print("\n" + "=" * 60)
     print("  Terminé — tout est cohérent." if all_ok else "  Terminé — des points d'attention ont été relevés ci-dessus.")

@@ -1599,7 +1599,7 @@
     "icon": "🧪",
     "section": "geo_diagnostic",
     "script": "scan_geographie_complet.py",
-    "description": "Orchestrateur : lance les 4 diagnostics géographie en séquence (zones, type_entite, origine_reelle, conventions territoires), résumé consolidé.",
+    "description": "Orchestrateur : lance les 5 diagnostics géographie en séquence (zones, type_entite, origine_reelle, conventions territoires, patron spatial), résumé consolidé. 6e étape optionnelle : génère des propositions top-down (P24 étape C.3) à relire.",
     "requires": [],
     "options": [
       {
@@ -1639,6 +1639,199 @@
         "label": "Écrire zones_manquantes.yaml",
         "description": "Propage --write-zones-manquantes à check_origine_reelle_coherence.py",
         "default": false
+      },
+      {
+        "flag": "--write-suspectes",
+        "type": "checkbox",
+        "label": "Écrire patron_spatial_suspectes.yaml",
+        "description": "Propage --write-suspectes à check_patron_spatial_coherence.py",
+        "default": false
+      },
+      {
+        "flag": "--no-cache-patron-spatial",
+        "type": "checkbox",
+        "label": "Ignorer le cache patron spatial",
+        "description": "Propage --no-cache à check_patron_spatial_coherence.py (repaie l'appel LLM)",
+        "default": false
+      },
+      {
+        "flag": "--generer-propositions-topdown",
+        "type": "checkbox",
+        "label": "Générer les propositions top-down (C.3)",
+        "description": "6e étape optionnelle : lance generer_zones_topdown.py --review-topdown (coûte de vrais appels LLM, n'applique jamais rien)",
+        "default": false
+      }
+    ],
+    "gui_verified": false
+  },
+  {
+    "id": "check_patron_spatial_coherence",
+    "label": "Check patron spatial",
+    "icon": "🧭",
+    "section": "geo_diagnostic",
+    "script": "check_patron_spatial_coherence.py",
+    "description": "Compare la description/le type de chaque zone niveau 1 au patron spatial narratif de son scénario (P24 étape C.1). Avertissement seul, jamais de blocage, ne modifie jamais rien.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--all",
+        "type": "checkbox",
+        "label": "Tous les scénarios",
+        "description": "Traite les 6 scénarios en une passe",
+        "default": false,
+        "mutually_exclusive_with": "scenario"
+      },
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "default": "",
+        "optional": true,
+        "mutually_exclusive_with": "all"
+      },
+      {
+        "flag": "--no-cache",
+        "type": "checkbox",
+        "label": "Ignorer le cache",
+        "description": "Repaie l'appel LLM même si le contenu n'a pas changé depuis le dernier scan",
+        "default": false
+      },
+      {
+        "flag": "--write-suspectes",
+        "type": "checkbox",
+        "label": "Écrire patron_spatial_suspectes.yaml",
+        "description": "Ajoute les nouvelles zones suspectes au fichier de suivi (statut a_traiter). N'écrase jamais une entrée déjà présente.",
+        "default": false
+      }
+    ],
+    "gui_verified": false
+  },
+  {
+    "id": "generer_zones_topdown",
+    "label": "Générer zones top-down",
+    "icon": "🏗️",
+    "section": "geo_diagnostic",
+    "script": "generer_zones_topdown.py",
+    "description": "CLI batch du générateur top-down (P24 étape C.3). Review : génère des propositions de zones (pays sans zone + zones suspectes) à relire en YAML, valide: false par défaut. Apply : écrit dans le vault ce qui a été repassé à valide: true à la main, propage aussi automatiquement les sous-zones orphelines (voir reparenter_sous_zones_orphelines.py).",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--review-topdown",
+        "type": "checkbox",
+        "label": "Mode review",
+        "description": "Génère les propositions en YAML, n'écrit jamais dans le vault",
+        "default": false,
+        "mutually_exclusive_with": "apply-topdown"
+      },
+      {
+        "flag": "--apply-topdown",
+        "type": "checkbox",
+        "label": "Mode apply",
+        "description": "Applique les propositions marquées valide: true dans le YAML de review écrit par le mode review",
+        "default": false,
+        "mutually_exclusive_with": "review-topdown"
+      },
+      {
+        "flag": "--all",
+        "type": "checkbox",
+        "label": "Tous les scénarios",
+        "description": "Traite les 6 scénarios en une passe",
+        "default": false,
+        "mutually_exclusive_with": "scenario"
+      },
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "default": "",
+        "optional": true,
+        "mutually_exclusive_with": "all"
+      },
+      {
+        "flag": "--source",
+        "type": "select",
+        "label": "Source des cas (mode review uniquement)",
+        "choices": [
+          {
+            "value": "both",
+            "label": "Les deux (défaut)"
+          },
+          {
+            "value": "pays_sans_zone",
+            "label": "Pays sans zone uniquement"
+          },
+          {
+            "value": "zones_suspectes",
+            "label": "Zones suspectes uniquement"
+          }
+        ],
+        "default": "both",
+        "optional": true
+      }
+    ],
+    "gui_verified": false
+  },
+  {
+    "id": "zoning_topdown_test",
+    "label": "Tester génération top-down (C.2)",
+    "icon": "🔬",
+    "section": "geo_diagnostic",
+    "script": "zoning_topdown.py",
+    "description": "Test manuel de la fonction cœur du générateur top-down (P24 étape C.2) -- n'écrit jamais dans le vault, affiche juste la proposition JSON et le résultat de validate_zone(). Normalement appelé en interne par C.3/C.4, pas un outil de production -- utile pour tester un cas isolé sans passer par le review/apply complet.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "default": ""
+      },
+      {
+        "flag": "--pays",
+        "type": "text",
+        "label": "Pays (mode pays_sans_zone)",
+        "description": "Un ou plusieurs noms de pays séparés par des espaces -- NON VÉRIFIÉ dans le GUI cette session, à tester avant de s'y fier (voir remarque séparée)",
+        "optional": true
+      },
+      {
+        "flag": "--zone-suspecte",
+        "type": "text",
+        "label": "Slug de zone (mode zone_suspecte)",
+        "optional": true
+      },
+      {
+        "flag": "--raison-suspicion",
+        "type": "text",
+        "label": "Raison du signalement (requis avec zone-suspecte)",
+        "optional": true
+      }
+    ],
+    "gui_verified": false
+  },
+  {
+    "id": "reparenter_sous_zones_orphelines",
+    "label": "Reparenter sous-zones orphelines",
+    "icon": "🔗",
+    "section": "geo_diagnostic",
+    "script": "reparenter_sous_zones_orphelines.py",
+    "description": "Détecte et reparente les sous-zones narratives (niveau 2/3) devenues incohérentes suite au déplacement d'un pays vers une nouvelle zone (P24 étape C, extension du 25 juillet). Normalement appelé automatiquement par C.3/C.4 -- à lancer manuellement seulement pour corriger un cas déjà existant dans le vault.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "default": ""
+      },
+      {
+        "flag": "--zone-cible",
+        "type": "text",
+        "label": "Slug de la zone cible",
+        "description": "Zone dont l'origine_reelle vient d'être fixée (nouvelle création ou reparent manuel)"
       }
     ],
     "gui_verified": false

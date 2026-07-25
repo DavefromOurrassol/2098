@@ -15,20 +15,20 @@ RESTE UN AVERTISSEMENT ACTIONNABLE, JAMAIS UN BLOCAGE DUR (décision du 13
 juillet 2026, confirmée par le taux de faux positifs d'une première
 heuristique mots-clés : 5 sur 9). Lecture seule PAR DÉFAUT, y compris en
 mode --resolve-llm (le LLM ne fait que résoudre un nom de ville en pays, il
-n'écrit jamais dans le vault). Seul --write-zones-manquantes écrit dans le
+n'écrit jamais dans le vault). Seul --write-chantiers écrit dans le
 vault, explicitement, sur demande -- jamais par défaut (voir §4 ci-dessous).
 
-RECHERCHE DE CANDIDATS + zones_manquantes.yaml (--write-zones-manquantes)
+RECHERCHE DE CANDIDATS + chantiers_geographie.yaml (--write-chantiers)
 ---------------------------------------------------------------------------
 Pour chaque incohérence détectée, le script cherche si une zone N1 déjà
 existante du même scénario liste déjà le pays résolu dans son propre
 origine_reelle -- un candidat de reparent. S'il n'y en a aucun, c'est le
-signe que ce territoire n'a pas de zone cohérente dans ce scénario : une
-entrée est ajoutée dans zones_manquantes.yaml (même schéma que
-complete_geographie_coverage.py : pays/scenario/statut, + deux champs de
-traçabilité optionnels origine/zone_incoherente_a_reparenter), en vue de
-P24 étape C (générateur top-down, pas encore construit). Écrite seulement
-avec --write-zones-manquantes ; sans ce flag, affichage d'un aperçu.
+signe que ce territoire n'a pas de zone cohérente dans ce scénario : un
+chantier type="pays_sans_zone" est ajouté dans chantiers_geographie.yaml
+(module chantiers.py, fichier unique de suivi du pipeline géographie
+depuis le 25 juillet 2026 -- remplace l'ancien zones_manquantes.yaml
+propre à ce script), en vue de P24 étape C (générateur top-down). Écrit
+seulement avec --write-chantiers ; sans ce flag, affichage d'un aperçu.
 
 RÉSOLUTION VILLE/RÉGION -> PAYS, EN CASCADE
 --------------------------------------------
@@ -50,7 +50,7 @@ USAGE
     python3 check_origine_reelle_coherence.py --scenario breakdown
     python3 check_origine_reelle_coherence.py --all
     python3 check_origine_reelle_coherence.py --all --resolve-llm
-    python3 check_origine_reelle_coherence.py --all --write-zones-manquantes
+    python3 check_origine_reelle_coherence.py --all --write-chantiers
 """
 
 import argparse
@@ -62,7 +62,7 @@ from pathlib import Path
 import yaml
 
 from check_zones_coherence import ALIASES as ALIASES_PAYS  # source unique, partagée avec check_zones_coherence.py
-from check_zones_coherence import ZONES_MANQUANTES  # même fichier, même schéma que complete_geographie_coverage.py
+import chantiers  # chantiers_geographie.yaml, fichier unique (25 juillet 2026, remplace zones_manquantes.yaml)
 
 SCRIPT_DIR = Path(__file__).parent
 VAULT_ROOT = SCRIPT_DIR.parent
@@ -297,7 +297,7 @@ def chercher_candidats(pays_possibles_norm: set, pays_n1: dict) -> list:
     """Retourne les slugs de zones N1 dont l'origine_reelle contient au
     moins un des pays résolus pour la zone incohérente. Liste vide si
     aucune zone N1 existante ne convient -- c'est le signal d'entrée pour
-    P24 étape C (générer une nouvelle zone), voir zones_manquantes.yaml."""
+    P24 étape C (générer une nouvelle zone), voir chantiers_geographie.yaml."""
     return sorted(
         slug for slug, pays in pays_n1.items()
         if pays_possibles_norm & pays
@@ -305,59 +305,38 @@ def chercher_candidats(pays_possibles_norm: set, pays_n1: dict) -> list:
 
 
 # ─────────────────────────────────────────
-# ÉCRITURE zones_manquantes.yaml (opt-in, --write-zones-manquantes)
+# ÉCRITURE chantiers_geographie.yaml (opt-in, --write-chantiers)
 # ─────────────────────────────────────────
 
 def _charger_zones_manquantes() -> dict:
-    if ZONES_MANQUANTES.exists():
-        try:
-            return yaml.safe_load(ZONES_MANQUANTES.read_text(encoding="utf-8")) or {}
-        except yaml.YAMLError:
-            return {}
+    """Conservé pour compatibilité historique -- plus utilisée par
+    ajouter_zones_manquantes() depuis le 25 juillet 2026 (voir chantiers.py)."""
     return {}
 
 
 def ajouter_zones_manquantes(incoherences_sans_candidat: list) -> int:
     """
-    Ajoute une entrée par incohérence sans candidat N1 dans
-    zones_manquantes.yaml, même schéma que complete_geographie_coverage.py
-    (pays/scenario/statut) + deux champs de traçabilité optionnels
-    (origine, zone_incoherente_a_reparenter) que check_zones_coherence.py
-    ignore déjà via .get() -- rétro-compatible.
-
-    Dédoublonne sur (pays, scenario, origine) : ne réécrit jamais une
-    entrée déjà présente. Retourne le nombre d'entrées effectivement
-    ajoutées.
+    Ajoute un chantier type="pays_sans_zone" dans chantiers_geographie.yaml
+    (module chantiers.py, fichier unique du 25 juillet 2026 -- remplace
+    l'ancien zones_manquantes.yaml propre à ce script) pour chaque pays
+    résolu d'une incohérence sans candidat N1. Dédoublonnage et non-
+    écrasement des entrées déjà présentes délégués à chantiers.py.
+    Retourne le nombre d'entrées effectivement ajoutées.
     """
-    data = _charger_zones_manquantes()
-    entries = data.setdefault("zones_manquantes", [])
-    existantes = {
-        (e.get("pays"), e.get("scenario"), e.get("origine"))
-        for e in entries if isinstance(e, dict)
-    }
-
     ajoutees = 0
     for inc in incoherences_sans_candidat:
         for pays in inc["pays_resolus"]:
-            cle = (pays, inc["scenario"], "check_origine_reelle_coherence")
-            if cle in existantes:
-                continue
-            entries.append({
-                "pays": pays,
-                "scenario": inc["scenario"],
-                "statut": "a_traiter",
-                "origine": "check_origine_reelle_coherence",
-                "zone_incoherente_a_reparenter": inc["slug"],
-            })
-            existantes.add(cle)
-            ajoutees += 1
-
-    if ajoutees:
-        ZONES_MANQUANTES.parent.mkdir(parents=True, exist_ok=True)
-        ZONES_MANQUANTES.write_text(
-            yaml.safe_dump(data, allow_unicode=True, sort_keys=False),
-            encoding="utf-8",
-        )
+            probleme = (
+                f"Entité {inc['entite']!r} (zone {inc['slug']!r}, {inc['nom']!r}) "
+                f"résout vers {pays!r}, absent de la chaîne de parenté de "
+                f"{inc['parent']!r} -- aucun candidat N1 trouvé dans ce scénario."
+            )
+            if chantiers.ajouter_chantier(
+                scenario=inc["scenario"], type_="pays_sans_zone", cible=pays,
+                probleme=probleme, source_diagnostic="origine_reelle",
+                zone_incoherente_a_reparenter=inc["slug"],
+            ):
+                ajoutees += 1
     return ajoutees
 
 
@@ -569,7 +548,7 @@ def check_scenario(scenario: str, pays_liste_norm: set, cache_llm: dict) -> dict
                 print(f"          → candidat(s) : {', '.join(inc['candidats'])}")
             else:
                 print(f"          → aucun candidat N1 dans ce scénario "
-                      f"(territoire sans zone cohérente, voir zones_manquantes.yaml)")
+                      f"(territoire sans zone cohérente, voir chantiers_geographie.yaml)")
     else:
         print(f"  ✓ Aucune incohérence détectée sur les entrées résolues")
 
@@ -626,11 +605,11 @@ def main():
              "(tier structured_strict), résultat mis en cache."
     )
     parser.add_argument(
-        "--write-zones-manquantes", action="store_true",
-        help="Écrit dans zones_manquantes.yaml une entrée par incohérence sans "
-             "candidat N1 (territoire sans zone cohérente dans ce scénario). "
-             "Sans ce flag, le script reste lecture seule et affiche juste un "
-             "aperçu de ce qui serait écrit."
+        "--write-chantiers", action="store_true",
+        help="Ajoute à chantiers_geographie.yaml un chantier pays_sans_zone par "
+             "incohérence sans candidat N1 (territoire sans zone cohérente dans "
+             "ce scénario). Sans ce flag, le script reste lecture seule et "
+             "affiche juste un aperçu de ce qui serait ajouté."
     )
     args = parser.parse_args()
 
@@ -687,13 +666,13 @@ def main():
     ]
     if sans_candidat:
         print(f"\n=== Incohérences sans candidat N1 ({len(sans_candidat)}) ===")
-        if args.write_zones_manquantes:
+        if args.write_chantiers:
             ajoutees = ajouter_zones_manquantes(sans_candidat)
-            print(f"  ✓ {ajoutees} entrée(s) ajoutée(s) à {ZONES_MANQUANTES} "
-                  f"(statut: a_traiter, origine: check_origine_reelle_coherence)")
+            print(f"  ✓ {ajoutees} chantier(s) ajouté(s) à {chantiers.CHANTIERS_FILE} "
+                  f"(statut: a_traiter, source_diagnostic: origine_reelle)")
         else:
-            print(f"  · Relancer avec --write-zones-manquantes pour les ajouter à "
-                  f"{ZONES_MANQUANTES} (aperçu, rien n'est écrit) :")
+            print(f"  · Relancer avec --write-chantiers pour les ajouter à "
+                  f"{chantiers.CHANTIERS_FILE.name} (aperçu, rien n'est écrit) :")
             for inc in sans_candidat:
                 print(f"      - {inc['slug']!r} ({inc['scenario']}) "
                       f"→ pays : {', '.join(inc['pays_resolus'])}")
