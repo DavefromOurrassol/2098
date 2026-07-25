@@ -1222,7 +1222,6 @@
     "Italie": "zones_grises_globales",
     "Belgique": "europe_occidentale_reconstructee",
     "Pays-Bas": "europe_occidentale_reconstructee",
-    "Portugal": "europe_occidentale_reconstructee",
     "Suisse": "europe_occidentale_reconstructee",
     "Autriche": "europe_occidentale_reconstructee",
     "Pologne": "bloc_eurasien_central",
@@ -1411,6 +1410,7 @@
     "Palaos": "indo_pacifique_emergent",
     "Îles Marshall": "indo_pacifique_emergent",
     "Nauru": "indo_pacifique_emergent",
-    "Tuvalu": "indo_pacifique_emergent"
+    "Tuvalu": "indo_pacifique_emergent",
+    "Portugal": "iberie_atlantique_fragmentee"
   }
 }

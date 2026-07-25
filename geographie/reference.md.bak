@@ -268,9 +268,6 @@ zones:
   - entite: Espagne
     type_entite: pays
     portion: null
-  - entite: Portugal
-    type_entite: pays
-    portion: null
   - entite: Allemagne
     type_entite: pays
     portion: null
@@ -1504,7 +1501,7 @@ zones:
   nom: Mourmansk
   niveau: 2
   type: ville
-  parent: corridor_arctique_nordique
+  parent: bloc_eurasien_central
   origine_reelle:
   - entite: Mourmansk
     type_entite: autre
@@ -1695,9 +1692,6 @@ zones:
   parent: europe_occidentale_reconstructee
   origine_reelle:
   - entite: Espagne
-    type_entite: pays
-    portion: null
-  - entite: Portugal
     type_entite: pays
     portion: null
   description: Territoire ibérique intégré aux bassins du Réseau Terrafond après les
@@ -3095,7 +3089,7 @@ Zone semi-aride intégrée aux bassins Terrafond, marges de la transition agroé
 
 *Sources attestées : cooperative_terrafond_reference, mouvement_racines_vivantes_reference*
 
-#### Mourmansk — sous [[corridor_arctique_nordique]]
+#### Mourmansk — sous [[bloc_eurasien_central]]
 
 *ville — niveau 2 — statut : stable*
 

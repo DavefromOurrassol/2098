@@ -26,7 +26,7 @@ zones_suspectes:
     la logique de blocs fermés et de fragmentation binaire (enclave protégée vs hors-forteresse)
     du patron.
   date_detection: '2026-07-25'
-  statut: a_traiter
+  statut: corrige_via_c2
 - scenario: fortress_world
   slug: singapour_megapole
   raison: Mentionne une 'neutralité armée' et un rôle de 'hub financier et logistique
