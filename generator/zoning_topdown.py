@@ -263,54 +263,81 @@ def generer_zone_topdown(scenario: str, raison: str, *, pays: list = None,
 
 
 if __name__ == "__main__":
-    # Test manuel uniquement -- ne lit/écrit jamais rien via C.3/C.4 (pas encore
-    # construits). Lit les zones niveau 1 réelles du scénario donné pour fournir
-    # un contexte réaliste, mais n'écrit RIEN dans le vault : la proposition est
-    # juste affichée en JSON pour relecture humaine.
+    # Test manuel (par défaut) OU appel machine via --json (P24 étape C.4, GUI en
+    # subprocess+JSON -- décision d'architecture actée le 25 juillet : le GUI
+    # appelle ce script en sous-processus plutôt qu'un import direct, cohérent
+    # avec le pattern déjà utilisé pour tous les scripts du sidebar). Dans les
+    # deux cas : ne lit que le vault (jamais d'écriture) pour fournir un
+    # contexte de zones réel.
     import argparse
     from pathlib import Path
 
     import yaml as _yaml
 
     ap = argparse.ArgumentParser(
-        description="Test manuel de generer_zone_topdown() (P24 étape C.2). "
-                     "N'écrit jamais dans le vault."
+        description="Test manuel ou appel machine (--json) de generer_zone_topdown() "
+                     "(P24 étape C.2). N'écrit jamais dans le vault."
     )
     ap.add_argument("--scenario", required=True)
     mode = ap.add_mutually_exclusive_group(required=True)
     mode.add_argument("--pays", nargs="+", help="Mode pays_sans_zone : un ou plusieurs noms de pays.")
     mode.add_argument("--zone-suspecte", help="Mode zone_suspecte : slug de la zone existante à réviser.")
     ap.add_argument("--raison-suspicion", help="Requis avec --zone-suspecte.")
+    ap.add_argument(
+        "--json", action="store_true",
+        help="Sortie machine : UN SEUL objet JSON sur stdout "
+             "({\"ok\": true, \"proposition\": {...}, \"issues\": [...]}), rien d'autre. "
+             "En cas d'erreur : {\"ok\": false, \"error\": \"...\"} sur stdout, code de "
+             "sortie 1 -- jamais de traceback brute pour un appelant machine.",
+    )
     args = ap.parse_args()
+
+    def _sortie_erreur_json(message: str):
+        print(json.dumps({"ok": False, "error": message}, ensure_ascii=False))
+        raise SystemExit(1)
 
     vault_root = Path(__file__).resolve().parent.parent
     geo_file = vault_root / "geographie" / f"{args.scenario}.md"
     if not geo_file.exists():
+        if args.json:
+            _sortie_erreur_json(f"Fiche introuvable : {geo_file}")
         raise SystemExit(f"✗ Fiche introuvable : {geo_file}")
 
     raw = geo_file.read_text(encoding="utf-8")
     fm = _yaml.safe_load(raw.split("---", 2)[1]) or {}
     zones_n1 = [z for z in (fm.get("zones") or []) if isinstance(z, dict) and z.get("niveau", 1) == 1]
 
-    if args.pays:
-        proposition, issues = generer_zone_topdown(
-            args.scenario, "pays_sans_zone", pays=args.pays, zones_existantes=zones_n1,
-        )
-    else:
-        if not args.raison_suspicion:
-            ap.error("--raison-suspicion est requis avec --zone-suspecte")
-        cible = next((z for z in zones_n1 if z.get("slug") == args.zone_suspecte), None)
-        if not cible:
-            ap.error(f"Zone introuvable dans {args.scenario} : {args.zone_suspecte!r}")
-        proposition, issues = generer_zone_topdown(
-            args.scenario, "zone_suspecte", zone_existante=cible,
-            raison_suspicion=args.raison_suspicion, zones_existantes=zones_n1,
-        )
+    try:
+        if args.pays:
+            proposition, issues = generer_zone_topdown(
+                args.scenario, "pays_sans_zone", pays=args.pays, zones_existantes=zones_n1,
+            )
+        else:
+            if not args.raison_suspicion:
+                if args.json:
+                    _sortie_erreur_json("--raison-suspicion est requis avec --zone-suspecte")
+                ap.error("--raison-suspicion est requis avec --zone-suspecte")
+            cible = next((z for z in zones_n1 if z.get("slug") == args.zone_suspecte), None)
+            if not cible:
+                if args.json:
+                    _sortie_erreur_json(f"Zone introuvable dans {args.scenario} : {args.zone_suspecte!r}")
+                ap.error(f"Zone introuvable dans {args.scenario} : {args.zone_suspecte!r}")
+            proposition, issues = generer_zone_topdown(
+                args.scenario, "zone_suspecte", zone_existante=cible,
+                raison_suspicion=args.raison_suspicion, zones_existantes=zones_n1,
+            )
+    except (ImportError, EnvironmentError, RuntimeError, ValueError) as e:
+        if args.json:
+            _sortie_erreur_json(str(e))
+        raise SystemExit(f"✗ {e}")
 
-    print(json.dumps(proposition, indent=2, ensure_ascii=False))
-    if issues:
-        print("\n⚠ Problèmes de validation (validate_zone) :")
-        for i in issues:
-            print(f"  - {i}")
+    if args.json:
+        print(json.dumps({"ok": True, "proposition": proposition, "issues": issues}, ensure_ascii=False))
     else:
-        print("\n✓ Validation OK (validate_zone)")
+        print(json.dumps(proposition, indent=2, ensure_ascii=False))
+        if issues:
+            print("\n⚠ Problèmes de validation (validate_zone) :")
+            for i in issues:
+                print(f"  - {i}")
+        else:
+            print("\n✓ Validation OK (validate_zone)")

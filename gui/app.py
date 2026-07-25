@@ -7,6 +7,7 @@ import json
 import os
 import re
 import subprocess
+import sys
 import threading
 import time
 import uuid
@@ -2062,17 +2063,23 @@ def carte_creer_zone_niveau1():
     if any(z.get("slug") == slug for z in zones):
         return jsonify({"error": f"Le slug '{slug}' existe déjà dans ce scénario"}), 409
 
+    # Champs enrichis optionnels (tensions_internes, lieux_emblematiques, relations,
+    # periode_transition, sources_attestees) -- ajoutés le 25 juillet pour P24 étape
+    # C.4 : le formulaire manuel P7 étape 2 ne les envoie jamais (valeurs vides par
+    # défaut, comportement inchangé), mais generer_zone_topdown() (C.2) en produit
+    # de réels -- avant ce fix, ils étaient silencieusement écrasés ici quoi que le
+    # body contienne, perte de contenu invisible pour l'appelant.
     nouvelle_zone = {
         "slug": slug, "nom": nom, "niveau": 1, "type": type_zone, "parent": None,
         "origine_reelle": origine_reelle,
         "description": description,
         "statut": statut,
-        "tensions_internes": "",
-        "periode_transition": None,
+        "tensions_internes": (data.get("tensions_internes") or "").strip(),
+        "periode_transition": data.get("periode_transition") or None,
         "evenement_transition": None,
-        "lieux_emblematiques": [],
-        "relations": {"allies": [], "rivaux": []},
-        "sources_attestees": [],
+        "lieux_emblematiques": data.get("lieux_emblematiques") or [],
+        "relations": data.get("relations") or {"allies": [], "rivaux": []},
+        "sources_attestees": data.get("sources_attestees") or [],
     }
     zones.append(nouvelle_zone)
     fm["zones"] = zones
@@ -2093,6 +2100,167 @@ def carte_creer_zone_niveau1():
     )
 
     return jsonify({"ok": True, "slug": slug, "nom": nom, "pays_zones_pays_json": pays_synchronises})
+
+
+# ── P24 étape C.4 (25 juillet 2026) -- générateur top-down, intégration GUI.
+#    Deux routes distinctes, cohérentes avec la décision d'architecture actée
+#    en scopant C.4 : le GUI appelle generator/zoning_topdown.py en
+#    sous-processus + échange JSON (--json, ajouté à cet effet), jamais en
+#    import direct -- gui/ et generator/ restent deux codebases séparées.
+#
+#    1. /api/carte/generer_zone_topdown : GÉNÉRATION SEULE, n'écrit jamais
+#       rien. Pré-remplit le formulaire de création (cas pays_sans_zone,
+#       écriture ensuite via /api/carte/creer_zone_niveau1, déjà existante)
+#       ou le formulaire de révision (cas zone_suspecte, écriture via la
+#       route suivante -- aucune route de création ne convient à une
+#       révision en place).
+#
+#    2. /api/carte/appliquer_zone_topdown_suspecte : ÉCRITURE, réservée au
+#       cas zone_suspecte. Duplique consciemment _appliquer_zone_suspecte()
+#       de generator/generer_zones_topdown.py (C.3) -- même principe que
+#       _tokens_entite()/_creer_zone_in_zones_pays() ci-dessus, deux
+#       codebases séparées sans import croisé.
+
+TIMEOUT_GENERATION_TOPDOWN = 90  # secondes -- appel LLM réel derrière, pas instantané
+
+
+@app.route("/api/carte/generer_zone_topdown", methods=["POST"])
+def carte_generer_zone_topdown():
+    """
+    Génère une proposition de zone top-down (P24 étape C.2, via
+    generator/zoning_topdown.py --json en sous-processus). N'écrit JAMAIS
+    dans le vault -- purement génératif, à pré-remplir dans le formulaire
+    côté frontend pour relecture humaine avant tout /api/carte/creer_zone_niveau1
+    ou /api/carte/appliquer_zone_topdown_suspecte.
+
+    Body JSON :
+      pays_sans_zone : { "scenario":..., "raison": "pays_sans_zone", "pays": [...] }
+      zone_suspecte  : { "scenario":..., "raison": "zone_suspecte", "slug":...,
+                          "raison_suspicion":... }
+    """
+    cfg = load_config()
+    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+    data = request.get_json() or {}
+    scenario = (data.get("scenario") or "").strip()
+    raison = (data.get("raison") or "").strip()
+
+    if not scenario or raison not in ("pays_sans_zone", "zone_suspecte"):
+        return jsonify({"error": "scenario requis, raison doit être "
+                                  "'pays_sans_zone' ou 'zone_suspecte'"}), 400
+
+    cmd = [sys.executable, "zoning_topdown.py", "--scenario", scenario, "--json"]
+    if raison == "pays_sans_zone":
+        pays = data.get("pays") or []
+        if not pays:
+            return jsonify({"error": "pays requis (liste non vide) pour raison=pays_sans_zone"}), 400
+        cmd += ["--pays", *pays]
+    else:
+        slug = (data.get("slug") or "").strip()
+        raison_suspicion = (data.get("raison_suspicion") or "").strip()
+        if not slug or not raison_suspicion:
+            return jsonify({"error": "slug et raison_suspicion requis pour raison=zone_suspecte"}), 400
+        cmd += ["--zone-suspecte", slug, "--raison-suspicion", raison_suspicion]
+
+    try:
+        resultat = subprocess.run(
+            cmd, cwd=pipeline_dir, capture_output=True, text=True,
+            timeout=TIMEOUT_GENERATION_TOPDOWN, stdin=subprocess.DEVNULL,
+        )
+    except subprocess.TimeoutExpired:
+        return jsonify({"error": f"Génération expirée après {TIMEOUT_GENERATION_TOPDOWN}s "
+                                  f"(appel LLM trop lent ou bloqué)"}), 504
+    except FileNotFoundError:
+        return jsonify({"error": f"zoning_topdown.py introuvable dans {pipeline_dir}"}), 500
+
+    sortie = resultat.stdout.strip()
+    if not sortie:
+        return jsonify({"error": f"Aucune sortie du sous-processus "
+                                  f"(code {resultat.returncode}) : {resultat.stderr[-500:]}"}), 500
+    try:
+        payload = json.loads(sortie.splitlines()[-1])
+    except (json.JSONDecodeError, IndexError):
+        return jsonify({"error": f"Sortie non-JSON du sous-processus : {sortie[-500:]}"}), 500
+
+    if not payload.get("ok"):
+        return jsonify({"error": payload.get("error", "Erreur inconnue côté générateur")}), 500
+
+    return jsonify({"ok": True, "proposition": payload["proposition"], "issues": payload["issues"]})
+
+
+@app.route("/api/carte/appliquer_zone_topdown_suspecte", methods=["POST"])
+def carte_appliquer_zone_topdown_suspecte():
+    """
+    Applique EN PLACE une proposition de révision générée pour le cas
+    zone_suspecte (P24 étape C.4). Duplique consciemment
+    _appliquer_zone_suspecte() de generator/generer_zones_topdown.py (C.3) --
+    voir le commentaire au-dessus de cette route pour le pourquoi de la
+    duplication plutôt qu'un import.
+
+    Body JSON : { "scenario":..., "proposition": {...zone complète, même
+                  slug qu'une zone existante...} }
+
+    Ne modifie QUE description/type/statut/tensions_internes/relations sur
+    la zone existante -- tout le reste (slug, nom, origine_reelle, niveau,
+    parent, lieux_emblematiques, sources_attestees) reste celui déjà présent
+    dans le vault, quoi que contienne `proposition` pour ces champs-là.
+    """
+    import yaml as _yaml
+    cfg = load_config()
+    vault_root = Path(cfg.get("vault_root", ""))
+    data = request.get_json() or {}
+    scenario = (data.get("scenario") or "").strip()
+    proposition = data.get("proposition") or {}
+    slug = (proposition.get("slug") or "").strip()
+
+    if not scenario or not slug:
+        return jsonify({"error": "scenario et proposition.slug requis"}), 400
+
+    geo_file = vault_root / "geographie" / f"{scenario}.md"
+    if not geo_file.exists():
+        return jsonify({"error": f"Fiche géographie introuvable : {geo_file}"}), 404
+
+    raw = geo_file.read_text(encoding="utf-8")
+    parts = raw.split("---", 2)
+    if len(parts) < 3:
+        return jsonify({"error": "Format de fiche géographie inattendu"}), 500
+    fm = _yaml.safe_load(parts[1]) or {}
+    zones = fm.get("zones") or []
+
+    idx = next((i for i, z in enumerate(zones) if isinstance(z, dict) and z.get("slug") == slug), None)
+    if idx is None:
+        return jsonify({"error": f"Zone introuvable dans {scenario} : {slug!r}"}), 404
+
+    bak = geo_file.with_suffix(geo_file.suffix + ".bak")
+    bak.write_text(raw, encoding="utf-8")
+
+    champs_revisables = ("description", "type", "statut", "tensions_internes", "relations")
+    for champ in champs_revisables:
+        if champ in proposition:
+            zones[idx][champ] = proposition[champ]
+    fm["zones"] = zones
+
+    new_fm = _yaml.dump(fm, allow_unicode=True, sort_keys=False, default_flow_style=False)
+    geo_file.write_text("---\n" + new_fm + "---" + parts[2], encoding="utf-8")
+
+    # Même mise à jour de suivi que C.3 -- statut distinct de "corrige_manuellement"
+    # (généré puis validé humainement, pas tapé à la main).
+    suspectes_file = vault_root / "documentation" / "need_action" / "patron_spatial_suspectes.yaml"
+    statut_maj = False
+    if suspectes_file.exists():
+        sdata = _yaml.safe_load(suspectes_file.read_text(encoding="utf-8")) or {}
+        entrees = sdata.get("zones_suspectes") or []
+        for e in entrees:
+            if e.get("scenario") == scenario and e.get("slug") == slug:
+                e["statut"] = "corrige_via_c2"
+                statut_maj = True
+        if statut_maj:
+            suspectes_file.write_text(
+                _yaml.dump({"zones_suspectes": entrees}, allow_unicode=True,
+                           sort_keys=False, default_flow_style=False),
+                encoding="utf-8",
+            )
+
+    return jsonify({"ok": True, "slug": slug, "statut_suivi_maj": statut_maj})
 
 
 # ── P7 étape 4 : split de zone (14 juillet 2026) -- extrait une ou plusieurs

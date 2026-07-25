@@ -2574,6 +2574,10 @@ async function openArbreZonePanel(slug) {
     document.getElementById('arbre-zone-tree').querySelectorAll('.arbre-zone-split-btn').forEach(btn => {
       btn.addEventListener('click', () => _ouvrirSplitPanel(btn.dataset.slug, btn.dataset.nom));
     });
+
+    document.getElementById('arbre-zone-tree').querySelectorAll('.arbre-zone-topdown-btn').forEach(btn => {
+      btn.addEventListener('click', () => _ouvrirTopdownRevisionPanel(btn.dataset.slug, btn.dataset.nom));
+    });
   } catch (e) {
     panel.innerHTML = `<div class="carte-panel-error">Erreur réseau : ${e.message}</div>`;
   }
@@ -2594,9 +2598,13 @@ function _renderArbreNode(node, estRacine) {
   if ((node.origine_reelle || []).length > 1) {
     html += `<button class="arbre-zone-split-btn" data-slug="${node.slug}" data-nom="${node.nom.replace(/"/g, '&quot;')}" title="Sortir un ou plusieurs pays de cette zone vers une autre">✂️ scinder</button>`;
   }
+  if (node.niveau === 1) {
+    html += `<button class="arbre-zone-topdown-btn" data-slug="${node.slug}" data-nom="${node.nom.replace(/"/g, '&quot;')}" title="P24 étape C — réviser cette zone contre le patron spatial narratif du scénario (ex. suite à un signalement check_patron_spatial_coherence.py)">🧭 réviser (patron spatial)</button>`;
+  }
   html += `</div>`;
   html += `<div id="reparent-panel-${node.slug}"></div>`;
   html += `<div id="split-panel-${node.slug}"></div>`;
+  html += `<div id="topdown-panel-${node.slug}"></div>`;
 
   if (node.enfants && node.enfants.length) {
     html += `<div class="arbre-zone-children">`;
@@ -2605,6 +2613,116 @@ function _renderArbreNode(node, estRacine) {
   }
   html += `</div>`;
   return html;
+}
+
+/**
+ * Panneau de révision top-down (P24 étape C.4, 25 juillet 2026) : ouvre un
+ * mini-formulaire juste sous le nœud N1 concerné, demandant la raison du
+ * signalement (à coller depuis la sortie de check_patron_spatial_
+ * coherence.py, ou à taper librement). N'écrit jamais rien tant que
+ * "✓ Appliquer cette révision" n'est pas cliqué dans le résultat.
+ *
+ * Limite connue : ce panneau ne lit PAS automatiquement
+ * patron_spatial_suspectes.yaml pour lister les zones déjà suivies comme
+ * suspectes -- la raison doit être collée à la main pour l'instant. Lister
+ * automatiquement les entrées a_traiter/en_attente_c2 directement dans
+ * l'arbre serait une extension naturelle, pas construite dans cette
+ * session (aucune route ne sert ce fichier au frontend aujourd'hui).
+ */
+function _ouvrirTopdownRevisionPanel(slug, nom) {
+  const container = document.getElementById(`topdown-panel-${slug}`);
+  if (!container) return;
+
+  if (container.dataset.open === '1') {
+    container.innerHTML = '';
+    container.dataset.open = '0';
+    return;
+  }
+  container.dataset.open = '1';
+
+  container.innerHTML = `
+    <div class="carte-panel-proposal-box" style="margin:4px 0 8px 16px">
+      <div style="font-size:11px;color:#666;margin-bottom:4px">
+        Raison du signalement (coller la sortie de check_patron_spatial_coherence.py, ou taper librement) :
+      </div>
+      <textarea id="topdown-raison-${slug}" rows="3" style="width:100%;box-sizing:border-box;font-family:'JetBrains Mono',monospace;font-size:11px;padding:4px"></textarea>
+      <button class="yaml-btn" id="topdown-generer-${slug}" style="margin-top:6px">🧭 Générer une révision</button>
+      <div id="topdown-resultat-${slug}"></div>
+    </div>
+  `;
+
+  document.getElementById(`topdown-generer-${slug}`).addEventListener('click', () =>
+    _genererRevisionTopdown(slug, nom));
+}
+
+async function _genererRevisionTopdown(slug, nom) {
+  const raison = document.getElementById(`topdown-raison-${slug}`).value.trim();
+  if (!raison) { alert('La raison du signalement est requise'); return; }
+
+  const btn = document.getElementById(`topdown-generer-${slug}`);
+  const out = document.getElementById(`topdown-resultat-${slug}`);
+  const texteOriginal = btn.textContent;
+  btn.disabled = true;
+  btn.textContent = 'Génération en cours (peut prendre une minute)…';
+  out.innerHTML = '';
+
+  try {
+    const res = await fetch('/api/carte/generer_zone_topdown', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        scenario: CarteState.scenario, raison: 'zone_suspecte',
+        slug, raison_suspicion: raison,
+      }),
+    });
+    const data = await res.json();
+    btn.disabled = false;
+    btn.textContent = texteOriginal;
+
+    if (!data.ok) {
+      out.innerHTML = `<div class="carte-panel-error">Erreur : ${data.error}</div>`;
+      return;
+    }
+    out.innerHTML = _renderPropositionTopdown(data.proposition, data.issues);
+    const creerBtn = out.querySelector('.carte-panel-topdown-creer-btn');
+    creerBtn.textContent = '✓ Appliquer cette révision';
+    creerBtn.addEventListener('click', () => _appliquerRevisionTopdown(data.proposition, out));
+  } catch (e) {
+    btn.disabled = false;
+    btn.textContent = texteOriginal;
+    out.innerHTML = `<div class="carte-panel-error">Erreur réseau : ${e.message}</div>`;
+  }
+}
+
+/** Écrit réellement la révision EN PLACE (cas zone_suspecte) -- route dédiée,
+ * distincte de la création : aucune route existante ne convenait à une révision
+ * de zone déjà en place (voir commentaire de la route côté serveur). */
+async function _appliquerRevisionTopdown(proposition, container) {
+  const statusEl = document.createElement('div');
+  statusEl.className = 'carte-status';
+  statusEl.textContent = 'Application…';
+  container.appendChild(statusEl);
+
+  try {
+    const res = await fetch('/api/carte/appliquer_zone_topdown_suspecte', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ scenario: CarteState.scenario, proposition }),
+    });
+    const data = await res.json();
+    if (!data.ok) {
+      statusEl.className = 'carte-panel-error';
+      statusEl.textContent = `Erreur : ${data.error}`;
+      return;
+    }
+    const suiviMsg = data.statut_suivi_maj
+      ? ' (statut de suivi mis à jour vers corrige_via_c2)' : '';
+    statusEl.textContent = `✓ Révision appliquée : ${data.slug}${suiviMsg}`;
+    await refreshCarte();
+  } catch (e) {
+    statusEl.className = 'carte-panel-error';
+    statusEl.textContent = `Erreur réseau : ${e.message}`;
+  }
 }
 
 /**
@@ -3097,6 +3215,11 @@ function openCartePanel(pays) {
     </div>
 
     <div class="carte-panel-section">
+      <button id="carte-panel-topdown-btn" class="yaml-btn" title="P24 étape C — génère une zone en s'appuyant explicitement sur le patron spatial narratif du scénario (patrons_spatiaux.py), distinct de la proposition ci-dessus qui ne le consulte pas">🧭 Générer selon le patron spatial (top-down)</button>
+      <div id="carte-panel-topdown-proposal"></div>
+    </div>
+
+    <div class="carte-panel-section">
       <button id="carte-panel-ignorer-btn" class="yaml-btn">Ignorer (blanc intentionnel)</button>
     </div>
 
@@ -3116,7 +3239,113 @@ function openCartePanel(pays) {
   });
 
   document.getElementById('carte-panel-propose-btn').addEventListener('click', () => _carteProposer(pays));
+  document.getElementById('carte-panel-topdown-btn').addEventListener('click', () => _carteProposerTopdown(pays));
   document.getElementById('carte-panel-ignorer-btn').addEventListener('click', () => _carteIgnorer(pays));
+}
+
+/** P24 étape C.4 — génère une proposition de zone niveau 1 pour un pays sans zone,
+ * en s'appuyant sur le patron spatial narratif du scénario (zoning_topdown.py, via
+ * /api/carte/generer_zone_topdown, subprocess+JSON côté serveur). N'écrit jamais
+ * rien tant que "✓ Créer cette zone" n'est pas cliqué. */
+async function _carteProposerTopdown(pays) {
+  const btn = document.getElementById('carte-panel-topdown-btn');
+  const out = document.getElementById('carte-panel-topdown-proposal');
+  const texteOriginal = btn.textContent;
+  btn.disabled = true;
+  btn.textContent = 'Génération en cours (peut prendre une minute)…';
+  out.innerHTML = '';
+
+  try {
+    const res = await fetch('/api/carte/generer_zone_topdown', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ scenario: CarteState.scenario, raison: 'pays_sans_zone', pays: [pays] }),
+    });
+    const data = await res.json();
+    btn.disabled = false;
+    btn.textContent = texteOriginal;
+
+    if (!data.ok) {
+      out.innerHTML = `<div class="carte-panel-error">Erreur : ${data.error}</div>`;
+      return;
+    }
+    out.innerHTML = _renderPropositionTopdown(data.proposition, data.issues);
+    out.querySelector('.carte-panel-topdown-creer-btn').addEventListener('click', () =>
+      _carteCreerZoneTopdown(data.proposition, out));
+  } catch (e) {
+    btn.disabled = false;
+    btn.textContent = texteOriginal;
+    out.innerHTML = `<div class="carte-panel-error">Erreur réseau : ${e.message}</div>`;
+  }
+}
+
+/** Rendu commun d'une proposition top-down (pays_sans_zone ou zone_suspecte) --
+ * mêmes champs dans les deux cas (schéma validate_zone(), enrich_geographie_
+ * recursive.py), seul le bouton final change de libellé/handler côté appelant. */
+function _renderPropositionTopdown(p, issues) {
+  const lieux = (p.lieux_emblematiques || [])
+    .map(l => `<li>${l.nom} (${l.type})${l.notes ? ' — ' + l.notes : ''}</li>`).join('');
+  const allies = ((p.relations && p.relations.allies) || []).join(', ') || '—';
+  const rivaux = ((p.relations && p.relations.rivaux) || []).join(', ') || '—';
+
+  let html = `<div class="carte-panel-proposal-box">`;
+  html += `<div><strong>${p.nom}</strong> <span class="arbre-zone-slug">${p.slug}</span></div>`;
+  html += `<div style="margin-top:4px"><span class="arbre-zone-type">${p.type}</span> <span class="arbre-zone-statut">${p.statut}</span></div>`;
+  html += `<div style="margin-top:6px;font-size:11px">${p.description || ''}</div>`;
+  if (p.tensions_internes) {
+    html += `<div style="margin-top:6px;font-size:11px"><em>Tensions internes :</em> ${p.tensions_internes}</div>`;
+  }
+  if (lieux) {
+    html += `<div style="margin-top:6px;font-size:11px"><em>Lieux emblématiques :</em><ul style="margin:4px 0 0 16px;padding:0">${lieux}</ul></div>`;
+  }
+  html += `<div style="margin-top:6px;font-size:11px"><em>Alliés :</em> ${allies} — <em>Rivaux :</em> ${rivaux}</div>`;
+  if (issues && issues.length) {
+    html += `<div class="carte-panel-error" style="margin-top:8px">⚠ ${issues.length} point(s) à relire attentivement :<ul style="margin:4px 0 0 16px;padding:0">${issues.map(i => `<li>${i}</li>`).join('')}</ul></div>`;
+  }
+  html += `<button class="yaml-btn carte-panel-topdown-creer-btn" style="margin-top:8px;font-weight:700">✓ Créer cette zone</button>`;
+  html += `</div>`;
+  return html;
+}
+
+/** Écrit réellement la zone (cas pays_sans_zone) -- réutilise /api/carte/creer_zone_niveau1,
+ * déjà corrigée pour la synchronisation zones_pays.json (25 juillet) et pour accepter
+ * les champs enrichis (tensions_internes, lieux_emblematiques, relations...). */
+async function _carteCreerZoneTopdown(proposition, container) {
+  const statusEl = document.createElement('div');
+  statusEl.className = 'carte-status';
+  statusEl.textContent = 'Création…';
+  container.appendChild(statusEl);
+
+  try {
+    const res = await fetch('/api/carte/creer_zone_niveau1', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        scenario: CarteState.scenario,
+        slug: proposition.slug, nom: proposition.nom, type: proposition.type,
+        statut: proposition.statut, origine_reelle: proposition.origine_reelle,
+        description: proposition.description,
+        tensions_internes: proposition.tensions_internes,
+        periode_transition: proposition.periode_transition,
+        lieux_emblematiques: proposition.lieux_emblematiques,
+        relations: proposition.relations,
+        sources_attestees: proposition.sources_attestees,
+      }),
+    });
+    const data = await res.json();
+    if (!data.ok) {
+      statusEl.className = 'carte-panel-error';
+      statusEl.textContent = `Erreur création : ${data.error}`;
+      return;
+    }
+    const syncMsg = (data.pays_zones_pays_json && data.pays_zones_pays_json.length)
+      ? ` (zones_pays.json synchronisé : ${data.pays_zones_pays_json.join(', ')})` : '';
+    statusEl.textContent = `✓ Zone créée : ${data.slug}${syncMsg}`;
+    await refreshCarte();
+  } catch (e) {
+    statusEl.className = 'carte-panel-error';
+    statusEl.textContent = `Erreur réseau : ${e.message}`;
+  }
 }
 
 async function _carteProposer(pays) {
