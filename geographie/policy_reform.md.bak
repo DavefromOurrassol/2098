@@ -2463,47 +2463,6 @@ zones:
   - entite: Seychelles
     type_entite: pays
     portion: null
-- slug: peninsule_iberique_cooperative
-  nom: Péninsule Ibérique Coopérative
-  type: union_regionale
-  origine_reelle:
-  - entite: Espagne
-    type_entite: pays
-    portion: null
-  description: Zone née de la réforme territoriale ibérique post-2040, marquée par
-    la décentralisation coordonnée et la mutualisation des infrastructures énergétiques
-    (réseau solaire-atlantique) et logistiques (corridors méditerranéens-atlantiques).
-    Siège du Centre Ibérique de Régulation des Flux (CIRF), institution régionale
-    intégrée au CRTI pour la gestion des migrations climatiques et des échanges agro-alimentaires.
-  statut: stable
-  tensions_internes: Résistances locales aux quotas de redistribution des populations
-    climatiques (notamment en Andalousie et Catalogne), compensées par des mécanismes
-    de péréquation fiscale interrégionale.
-  periode_transition: 2038-2052
-  lieux_emblematiques:
-  - nom: Valence (Pôle Logistique Ibérique)
-    type: ville
-    notes: Siège du CIRF et hub de redistribution des flux migratoires et commerciaux
-      entre Europe et Maghreb Atlantique.
-  - nom: Plateforme Solaire de l'Atlantique (PSA)
-    type: infrastructure
-    notes: Réseau mutualisé de centrales solaires offshore et terrestres, co-géré
-      avec le Maghreb Atlantique et l'Europe du Nord-Ouest.
-  - nom: Corridor Méditerranéen Ibérique
-    type: infrastructure
-    notes: Axe ferroviaire et énergétique reliant Almería à Barcelone, intégré aux
-      corridors européens de régulation des flux.
-  relations:
-    allies:
-    - maghreb_atlantique
-    - europe_nord_ouest
-    - hub_europeen_regulation
-    rivaux: []
-  niveau: 1
-  parent: null
-  evenement_transition: null
-  sources_attestees: []
-  promu_depuis: null
 ---
 
 # Géographie — policy_reform
@@ -3390,6 +3349,3 @@ Zone de concentration des conglomérats d'automatisation industrielle intégrale
 ## Notes / zones à enrichir
 _Espace libre, jamais lu par les scripts — ajoute ici tes idées, brouillons, zones à
 créer manuellement._
-
-### Péninsule Ibérique Coopérative
-Zone née de la réforme territoriale ibérique post-2040, marquée par la décentralisation coordonnée et la mutualisation des infrastructures énergétiques (réseau solaire-atlantique) et logistiques (corridors méditerranéens-atlantiques). Siège du Centre Ibérique de Régulation des Flux (CIRF), institution régionale intégrée au CRTI pour la gestion des migrations climatiques et des échanges agro-alimentaires.
