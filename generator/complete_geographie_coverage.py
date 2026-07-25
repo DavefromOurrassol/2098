@@ -81,6 +81,26 @@ from llm_client import call_llm as _call_llm
 
 TASK_TIER = "structured_strict"
 
+# ---------------------------------------------------------------------------
+# Patron spatial (P24 étape B) — garde-fou en avertissement, jamais bloquant
+# ---------------------------------------------------------------------------
+#
+# patrons_spatiaux.py (P24 étape A, livré le 14 juillet) formalise pour
+# chaque scénario ce qu'une zone DOIT/NE DOIT PAS incarner spatialement
+# (state_logic du vault + analyse écrite à la main). Jusqu'ici, aucune
+# proposition d'affectation pays→zone ne le consultait — le LLM ne décidait
+# que sur ressemblance textuelle avec origine_reelle, ce qui a produit des
+# rattachements syntaxiquement valides mais narrativement incohérents
+# (cf. P27 : Groenland absorbé par un bloc russo-chinois technocratique).
+# Le module est conçu explicitement pour un usage en avertissement, jamais
+# en blocage dur (voir docstring de patron_spatial_prompt_block) : on
+# l'injecte donc dans le prompt de proposition, et on demande au LLM de
+# signaler lui-même les cas douteux via un champ dédié, laissé à la
+# validation manuelle de David dans coverage_proposals_{scenario}.yaml —
+# même mécanisme que le champ "avertissement" déjà existant (slug inconnu).
+
+from patrons_spatiaux import patron_spatial_prompt_block
+
 
 def call_llm(system_prompt, user_prompt, max_tokens=8000):
     return _call_llm(
@@ -146,6 +166,25 @@ def load_zones_pays():
     return json.loads(ZONES_PAYS.read_text(encoding="utf-8"))
 
 
+def _write_zones_pays(zones_pays):
+    """Écrit zones_pays.json sur disque immédiatement.
+
+    Avant ce correctif (15 juillet), l'écriture était différée à la toute
+    fin de main(), après la boucle sur tous les scénarios (--all). Si le
+    script plantait ou était interrompu en cours de route, les fiches
+    geographie/*.md déjà traitées restaient à jour sur disque mais
+    zones_pays.json ne l'était jamais pour aucun scénario -- même ceux déjà
+    correctement traités avant l'interruption. Même famille de risque que
+    le bug de désynchronisation corrigé le 14 juillet (#zones_pays.json),
+    mais causée ici par un ordre d'écriture différé plutôt qu'un oubli.
+    Appelée désormais immédiatement après chaque scénario traité, pour que
+    les deux fichiers restent synchronisés même en cas d'interruption."""
+    ZONES_PAYS.write_text(
+        json.dumps(zones_pays, ensure_ascii=False, indent=2),
+        encoding="utf-8"
+    )
+
+
 def get_missing_pays(zones_pays, scenario):
     """Retourne la liste des pays sans zone dans ce scénario.
     Se base sur pays_liste (liste complète, à jour) plutôt que sur les seules
@@ -171,6 +210,14 @@ Pour chaque pays sans zone, tu as deux options :
 2. "nouvelle_zone" : créer une nouvelle zone N1 si vraiment aucune zone existante ne convient.
    N'utilise cette option qu'en dernier recours.
 
+Chaque scénario a un PATRON SPATIAL (fourni ci-dessous dans le message utilisateur) :
+une logique territoriale à respecter, et des anti-patterns à éviter. Utilise-le pour
+juger la cohérence de tes propositions, mais ce n'est jamais un motif de refus : si une
+affectation te semble par ailleurs justifiée mais contredit un point du patron spatial
+("à éviter"), fais-la quand même et ajoute un champ "avertissement_patron_spatial" avec
+une explication courte du doute — un humain validera ensuite. N'ajoute ce champ QUE si
+un vrai doute existe, pas systématiquement.
+
 Réponds UNIQUEMENT en JSON valide, sans markdown, sans commentaires.
 Format exact :
 {
@@ -179,7 +226,8 @@ Format exact :
       "pays": "Allemagne",
       "action": "absorber",
       "zone_slug": "slug_zone_existante",
-      "justification": "courte justification"
+      "justification": "courte justification",
+      "avertissement_patron_spatial": "optionnel, uniquement si doute réel — voir consigne ci-dessus"
     },
     {
       "pays": "Islande",
@@ -230,7 +278,11 @@ def build_user_prompt(scenario, missing_pays, existing_zones):
             f"    logique_narrative: {desc_short}"
         )
 
+    patron = patron_spatial_prompt_block(scenario)
+
     return f"""SCÉNARIO : {scenario}
+
+{patron}
 
 ZONES N1 EXISTANTES ({len(zones_summary)}) — avec leur logique narrative :
 {chr(10).join(zones_summary)}
@@ -241,7 +293,9 @@ PAYS SANS ZONE À AFFECTER ({len(missing_pays)}) :
 CONSIGNE : Pour chaque pays, choisis la zone N1 dont la logique narrative et la géographie
 sont les plus cohérentes avec ce territoire en 2098. Ne mets jamais un pays européen dans
 une zone africaine ou moyen-orientale sauf si la description de la zone le justifie
-explicitement. En cas de doute, crée une nouvelle zone N1.
+explicitement. En cas de doute, crée une nouvelle zone N1. Confronte aussi chaque choix
+au patron spatial du scénario ci-dessus (voir consigne sur "avertissement_patron_spatial"
+dans les instructions système).
 
 Pour chaque pays, décide de l'action (absorber ou nouvelle_zone) et génère le JSON demandé."""
 
@@ -484,6 +538,8 @@ def process_scenario(scenario, zones_pays, dry_run):
         fm["zones"] = existing_zones
         save_geo_file(scenario, fm, body, dry_run=False)
         zones_pays = update_zones_pays(zones_pays, scenario, all_resolved, existing_zones)
+        _write_zones_pays(zones_pays)
+        print(f"  ✓ zones_pays.json mis à jour immédiatement ({scenario})")
     elif dry_run:
         print(f"  [dry-run] Aurait modifié {scenario}.md et zones_pays.json")
 
@@ -568,6 +624,9 @@ def process_scenario_review(scenario, zones_pays):
             "Mettez 'valide: false' pour rejeter une proposition. "
             "Pour action: absorber, vérifiez que zone_slug est cohérente. "
             "Pour action: nouvelle_zone, vérifiez les champs de la zone. "
+            "Un champ 'avertissement_patron_spatial' signale un doute du LLM "
+            "sur la cohérence avec le patron spatial du scénario (P24 étape B) "
+            "— à trancher au cas par cas, ce n'est jamais un rejet automatique. "
             "Lancez ensuite : python3 complete_geographie_coverage.py --scenario "
             f"{scenario} --apply"
         ),
@@ -621,6 +680,8 @@ def apply_proposals(scenario, zones_pays):
         fm["zones"] = updated_zones
         save_geo_file(scenario, fm, body, dry_run=False)
         zones_pays = update_zones_pays(zones_pays, scenario, resolved_pays, updated_zones)
+        _write_zones_pays(zones_pays)
+        print(f"  ✓ zones_pays.json mis à jour immédiatement ({scenario})")
 
         # Archiver le fichier de propositions
         archive_path = proposals_path.with_suffix(".applied.yaml")
@@ -665,13 +726,12 @@ def main():
         else:
             zones_pays = process_scenario(scenario, zones_pays, args.dry_run)
 
-    # Sauvegarder zones_pays.json mis à jour
+    # Sauvegarde finale par sécurité — chaque scénario a déjà écrit
+    # immédiatement après son propre traitement (voir _write_zones_pays) ;
+    # ce dernier appel est redondant mais inoffensif (idempotent).
     if not args.dry_run and not args.review:
-        ZONES_PAYS.write_text(
-            json.dumps(zones_pays, ensure_ascii=False, indent=2),
-            encoding="utf-8"
-        )
-        print(f"\n✓ zones_pays.json mis à jour : {ZONES_PAYS}")
+        _write_zones_pays(zones_pays)
+        print(f"\n✓ zones_pays.json confirmé à jour : {ZONES_PAYS}")
     elif args.dry_run:
         print(f"\n[dry-run] zones_pays.json non modifié")
     elif args.review:

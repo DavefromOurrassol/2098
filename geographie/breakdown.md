@@ -2468,9 +2468,6 @@ zones:
   - entite: Angleterre
     type_entite: pays
     portion: null
-  - entite: Écosse
-    type_entite: pays
-    portion: null
   - entite: Pays de Galles
     type_entite: pays
     portion: null
@@ -3143,6 +3140,25 @@ zones:
   - entite: Bolivie
     type_entite: pays
     portion: null
+- slug: ecosse
+  nom: Écosse
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  origine_reelle:
+  - entite: Écosse
+    type_entite: pays
+    portion: null
+  description: ''
+  statut: stable
+  tensions_internes: ''
+  periode_transition: null
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies: []
+    rivaux: []
+  sources_attestees: []
 ---
 
 # Géographie — breakdown
@@ -4179,3 +4195,6 @@ Infrastructure portuaire arctique disputée entre les factions résiduelles de l
 ## Notes / zones à enrichir
 _Espace libre, jamais lu par les scripts — ajoute ici tes idées, brouillons, zones à
 créer manuellement._
+
+### Écosse
+

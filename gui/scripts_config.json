@@ -1,186 +1,9 @@
 [
   {
-    "id": "enrich_minimal",
-    "label": "Enrich minimal",
-    "icon": "✨",
-    "section": "generation",
-    "script": "enrich_minimal.py",
-    "description": "Enrichit les fichiers officialise_minimal via LLM",
-    "requires": [],
-    "options": [
-      {
-        "flag": "--all",
-        "type": "checkbox",
-        "label": "Tous les scénarios",
-        "description": "Traite tous les scénarios disponibles",
-        "default": false,
-        "mutually_exclusive_with": "scenario"
-      },
-      {
-        "flag": "--scenario",
-        "type": "select",
-        "label": "Scénario",
-        "source": "config_scenarios",
-        "default": "",
-        "optional": true,
-        "mutually_exclusive_with": "all"
-      },
-      {
-        "flag": "--slug",
-        "type": "slug_select",
-        "label": "Slug (optionnel)",
-        "slug_type": "instances",
-        "optional": true
-      },
-      {
-        "flag": "--limit",
-        "type": "number",
-        "label": "Limite",
-        "description": "Nombre max de fichiers à traiter",
-        "min": 1,
-        "max": 426,
-        "default": 10
-      },
-      {
-        "flag": "--auto-cycle",
-        "type": "checkbox",
-        "label": "Auto-cycle",
-        "description": "Enchaîne extract_phantom_slugs après enrichissement",
-        "default": false
-      },
-      {
-        "flag": "--dry-run",
-        "type": "checkbox",
-        "label": "Dry run",
-        "description": "Simule sans écrire",
-        "default": false
-      }
-    ],
-    "yaml_files": [
-      {
-        "path": "instances_custom/needs_review_enrich.yaml",
-        "label": "instances_custom/needs_review_enrich.yaml",
-        "readonly": true
-      }
-    ]
-  },
-  {
-    "id": "generate_journaux",
-    "label": "Generate journaux",
-    "icon": "🗞",
-    "section": "generation",
-    "script": "generate_journaux.py",
-    "description": "Génère les éditions locales dans journaux.yaml",
-    "requires": [],
-    "options": [
-      {
-        "flag": "--all",
-        "type": "checkbox",
-        "label": "Tous les scénarios",
-        "default": false,
-        "mutually_exclusive_with": "scenario"
-      },
-      {
-        "flag": "--scenario",
-        "type": "select",
-        "label": "Scénario",
-        "source": "config_scenarios",
-        "default": "",
-        "optional": true,
-        "mutually_exclusive_with": "all"
-      },
-      {
-        "flag": "--ligne",
-        "type": "ligne_select",
-        "label": "Ligne éditoriale",
-        "choices": [
-          {
-            "value": "pro_pouvoir",
-            "label": "Pro pouvoir"
-          },
-          {
-            "value": "opposition",
-            "label": "Opposition"
-          },
-          {
-            "value": "all",
-            "label": "Toutes"
-          }
-        ],
-        "default": "all"
-      },
-      {
-        "flag": "--update",
-        "type": "checkbox",
-        "label": "Zones manquantes seulement",
-        "description": "N'ajoute que les zones absentes de journaux.yaml",
-        "default": false
-      },
-      {
-        "flag": "--dry-run",
-        "type": "checkbox",
-        "label": "Dry run",
-        "default": false
-      }
-    ]
-  },
-  {
-    "id": "validate",
-    "label": "Validate",
-    "icon": "🛡",
-    "section": "generation",
-    "script": "validate.py",
-    "description": "Valide la cohérence du vault (entités, localisations, narratif)",
-    "requires": [
-      "extract_localisation"
-    ],
-    "requires_message": "extract_localisation devrait tourner avant validate",
-    "options": [
-      {
-        "flag": "--verbose",
-        "short": "-v",
-        "type": "checkbox",
-        "label": "Verbose",
-        "description": "Affiche le détail dans le terminal",
-        "default": false
-      },
-      {
-        "flag": "--report",
-        "short": "-r",
-        "type": "checkbox",
-        "label": "Générer rapport",
-        "description": "Écrit validation_report.md",
-        "default": false
-      },
-      {
-        "flag": "--localisation",
-        "type": "checkbox",
-        "label": "Localisation",
-        "description": "Force le scan de localisation",
-        "default": false
-      },
-      {
-        "flag": "--narrative",
-        "short": "-n",
-        "type": "checkbox",
-        "label": "Cohérence narrative",
-        "description": "Force le scan narratif (ignore cache mtime)",
-        "default": false
-      }
-    ],
-    "yaml_files": [
-      {
-        "path": "documentation/need_action/narrative_issues.yaml",
-        "label": "documentation/need_action/narrative_issues.yaml",
-        "readonly": true
-      }
-    ]
-  },
-  {
     "id": "generate",
     "label": "Generate",
     "icon": "📄",
-    "section": "generation",
+    "section": "articles",
     "script": "generate.py",
     "description": "Génère un article depuis config.yaml",
     "requires": [],
@@ -361,13 +184,14 @@
         "path": "generator/config.yaml",
         "label": "generator/config.yaml"
       }
-    ]
+    ],
+    "gui_verified": true
   },
   {
     "id": "generate_series",
     "label": "Generate series",
     "icon": "📋",
-    "section": "generation",
+    "section": "articles",
     "script": "generate_series.py",
     "description": "Génère une série d'articles depuis config_series.yaml",
     "requires": [],
@@ -494,13 +318,14 @@
         "path": "generator/config_series.yaml",
         "label": "generator/config_series.yaml"
       }
-    ]
+    ],
+    "gui_verified": true
   },
   {
     "id": "generate_manual",
     "label": "Generate manual",
     "icon": "✍️",
-    "section": "generation",
+    "section": "articles",
     "script": "generate_manual.py",
     "description": "Génération manuelle pas à pas depuis manual_progress.json",
     "requires": [],
@@ -535,13 +360,75 @@
         "label": "manual_progress.json",
         "readonly": true
       }
-    ]
+    ],
+    "gui_verified": false
+  },
+  {
+    "id": "generate_journaux",
+    "label": "Generate journaux",
+    "icon": "🗞",
+    "section": "presse",
+    "script": "generate_journaux.py",
+    "description": "Génère les éditions locales dans journaux.yaml",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--all",
+        "type": "checkbox",
+        "label": "Tous les scénarios",
+        "default": false,
+        "mutually_exclusive_with": "scenario"
+      },
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "default": "",
+        "optional": true,
+        "mutually_exclusive_with": "all"
+      },
+      {
+        "flag": "--ligne",
+        "type": "ligne_select",
+        "label": "Ligne éditoriale",
+        "choices": [
+          {
+            "value": "pro_pouvoir",
+            "label": "Pro pouvoir"
+          },
+          {
+            "value": "opposition",
+            "label": "Opposition"
+          },
+          {
+            "value": "all",
+            "label": "Toutes"
+          }
+        ],
+        "default": "all"
+      },
+      {
+        "flag": "--update",
+        "type": "checkbox",
+        "label": "Zones manquantes seulement",
+        "description": "N'ajoute que les zones absentes de journaux.yaml",
+        "default": false
+      },
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Dry run",
+        "default": false
+      }
+    ],
+    "gui_verified": true
   },
   {
     "id": "create_entities",
     "label": "Create entities",
     "icon": "👥",
-    "section": "entities",
+    "section": "entites_creation",
     "script": "create_entities_and_instances.py",
     "description": "Crée des entités et instances dans le vault",
     "requires": [],
@@ -841,13 +728,14 @@
         "placeholder": "ex : idee_2026-06"
       }
     ],
-    "config_fields_mode": "custom"
+    "config_fields_mode": "custom",
+    "gui_verified": true
   },
   {
     "id": "inject_events",
     "label": "Inject events",
     "icon": "⚡",
-    "section": "entities",
+    "section": "entites_creation",
     "script": "inject_custom_events.py",
     "description": "Injecte des événements personnalisés",
     "requires": [],
@@ -889,18 +777,54 @@
         "type": "multi_select",
         "label": "Variables impactées (hint, mode auto)",
         "choices": [
-          { "value": "systeme_economique_redistribution", "label": "systeme_economique_redistribution" },
-          { "value": "gouvernance_institutions", "label": "gouvernance_institutions" },
-          { "value": "geopolitique_conflits", "label": "geopolitique_conflits" },
-          { "value": "valeurs_culture_tempo_sociale", "label": "valeurs_culture_tempo_sociale" },
-          { "value": "organisation_territoires", "label": "organisation_territoires" },
-          { "value": "sante_biotechnologies", "label": "sante_biotechnologies" },
-          { "value": "frontieres_du_systeme", "label": "frontieres_du_systeme" },
-          { "value": "technologie_information", "label": "technologie_information" },
-          { "value": "climat_environnement_global", "label": "climat_environnement_global" },
-          { "value": "energie_ressources_critiques", "label": "energie_ressources_critiques" },
-          { "value": "demographie_mobilite_humaine", "label": "demographie_mobilite_humaine" },
-          { "value": "systemes_productifs_travail", "label": "systemes_productifs_travail" }
+          {
+            "value": "systeme_economique_redistribution",
+            "label": "systeme_economique_redistribution"
+          },
+          {
+            "value": "gouvernance_institutions",
+            "label": "gouvernance_institutions"
+          },
+          {
+            "value": "geopolitique_conflits",
+            "label": "geopolitique_conflits"
+          },
+          {
+            "value": "valeurs_culture_tempo_sociale",
+            "label": "valeurs_culture_tempo_sociale"
+          },
+          {
+            "value": "organisation_territoires",
+            "label": "organisation_territoires"
+          },
+          {
+            "value": "sante_biotechnologies",
+            "label": "sante_biotechnologies"
+          },
+          {
+            "value": "frontieres_du_systeme",
+            "label": "frontieres_du_systeme"
+          },
+          {
+            "value": "technologie_information",
+            "label": "technologie_information"
+          },
+          {
+            "value": "climat_environnement_global",
+            "label": "climat_environnement_global"
+          },
+          {
+            "value": "energie_ressources_critiques",
+            "label": "energie_ressources_critiques"
+          },
+          {
+            "value": "demographie_mobilite_humaine",
+            "label": "demographie_mobilite_humaine"
+          },
+          {
+            "value": "systemes_productifs_travail",
+            "label": "systemes_productifs_travail"
+          }
         ],
         "optional": true,
         "description": "Optionnel — le LLM choisit librement si vide. Imposées dans le variables_hint de chaque idée générée.",
@@ -1046,13 +970,14 @@
         "placeholder": "ex : actualite_2026-06"
       }
     ],
-    "config_fields_mode": "custom"
+    "config_fields_mode": "custom",
+    "gui_verified": true
   },
   {
     "id": "inject_signals",
     "label": "Inject signals",
     "icon": "📡",
-    "section": "entities",
+    "section": "entites_creation",
     "script": "inject_custom_signals.py",
     "description": "Injecte des signaux personnalisés",
     "requires": [],
@@ -1160,13 +1085,80 @@
         "optional": true,
         "placeholder": "ex : actualite_2026-06"
       }
-    ]
+    ],
+    "gui_verified": false
+  },
+  {
+    "id": "enrich_minimal",
+    "label": "Enrich minimal",
+    "icon": "✨",
+    "section": "entites_creation",
+    "script": "enrich_minimal.py",
+    "description": "Enrichit les fichiers officialise_minimal via LLM",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--all",
+        "type": "checkbox",
+        "label": "Tous les scénarios",
+        "description": "Traite tous les scénarios disponibles",
+        "default": false,
+        "mutually_exclusive_with": "scenario"
+      },
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "default": "",
+        "optional": true,
+        "mutually_exclusive_with": "all"
+      },
+      {
+        "flag": "--slug",
+        "type": "slug_select",
+        "label": "Slug (optionnel)",
+        "slug_type": "instances",
+        "optional": true
+      },
+      {
+        "flag": "--limit",
+        "type": "number",
+        "label": "Limite",
+        "description": "Nombre max de fichiers à traiter",
+        "min": 1,
+        "max": 426,
+        "default": 10
+      },
+      {
+        "flag": "--auto-cycle",
+        "type": "checkbox",
+        "label": "Auto-cycle",
+        "description": "Enchaîne extract_phantom_slugs après enrichissement",
+        "default": false
+      },
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Dry run",
+        "description": "Simule sans écrire",
+        "default": false
+      }
+    ],
+    "yaml_files": [
+      {
+        "path": "instances_custom/needs_review_enrich.yaml",
+        "label": "instances_custom/needs_review_enrich.yaml",
+        "readonly": true
+      }
+    ],
+    "gui_verified": false
   },
   {
     "id": "extract_phantom_slugs",
     "label": "Extract phantom slugs",
     "icon": "🔍",
-    "section": "entities",
+    "section": "entites_nettoyage",
     "script": "extract_phantom_slugs.py",
     "description": "Extrait les slugs fantômes des alliances/oppositions",
     "requires": [],
@@ -1210,13 +1202,14 @@
         "label": "instances_custom/needs_review_enrich.yaml",
         "readonly": true
       }
-    ]
+    ],
+    "gui_verified": false
   },
   {
     "id": "fix_alliance_suffixes",
     "label": "Fix alliance suffixes",
     "icon": "🔧",
-    "section": "entities",
+    "section": "entites_nettoyage",
     "script": "fix_alliance_suffixes.py",
     "description": "Corrige les suffixes de scénario manquants dans les alliances",
     "requires": [],
@@ -1240,13 +1233,14 @@
         "label": "Dry run",
         "default": false
       }
-    ]
+    ],
+    "gui_verified": false
   },
   {
     "id": "requeue_needs_review",
     "label": "Requeue needs review",
     "icon": "🔁",
-    "section": "entities",
+    "section": "entites_nettoyage",
     "script": "requeue_needs_review.py",
     "description": "Remet en queue les items needs_review.yaml",
     "requires": [],
@@ -1257,13 +1251,14 @@
         "label": "entites_custom/needs_review.yaml",
         "readonly": true
       }
-    ]
+    ],
+    "gui_verified": false
   },
   {
     "id": "undo_custom",
     "label": "Undo custom",
     "icon": "↩",
-    "section": "entities",
+    "section": "entites_nettoyage",
     "script": "undo_custom.py",
     "description": "Annule des entités/événements injectés",
     "requires": [],
@@ -1328,92 +1323,14 @@
         "path": "evenements_custom/undo_queue.yaml",
         "label": "evenements_custom/undo_queue.yaml"
       }
-    ]
-  },
-  {
-    "id": "extract_localisation",
-    "label": "Extract localisation",
-    "icon": "📍",
-    "section": "maintenance",
-    "script": "extract_localisation.py",
-    "description": "Extrait les données de localisation des instances enrichies",
-    "requires": [],
-    "options": [
-      {
-        "flag": "--scenario",
-        "type": "select",
-        "label": "Scénario",
-        "source": "config_scenarios",
-        "optional": true
-      },
-      {
-        "flag": "--slug",
-        "type": "slug_select",
-        "label": "Slug (optionnel)",
-        "slug_type": "instances",
-        "optional": true
-      },
-      {
-        "flag": "--force",
-        "type": "checkbox",
-        "label": "Forcer",
-        "description": "Retraite les fichiers déjà extraits",
-        "default": false
-      },
-      {
-        "flag": "--report-only",
-        "type": "checkbox",
-        "label": "Rapport seulement",
-        "description": "Génère localisation_review.md sans écrire",
-        "default": false
-      },
-      {
-        "flag": "--dry-run",
-        "type": "checkbox",
-        "label": "Dry run",
-        "default": false
-      }
-    ]
-  },
-  {
-    "id": "review_localisation",
-    "label": "Review localisation",
-    "icon": "✅",
-    "section": "maintenance",
-    "script": "review_localisation.py",
-    "description": "Résout les conflits de localisation",
-    "requires": [
-      "extract_localisation"
     ],
-    "requires_message": "Lancer extract_localisation d'abord",
-    "options": [
-      {
-        "flag": "--scenario",
-        "type": "select",
-        "label": "Scénario",
-        "source": "config_scenarios",
-        "optional": true
-      },
-      {
-        "flag": "--auto-resolve",
-        "type": "checkbox",
-        "label": "Auto-résoudre",
-        "description": "Résolution automatique des conflits non-ambigus",
-        "default": false
-      },
-      {
-        "flag": "--dry-run",
-        "type": "checkbox",
-        "label": "Dry run",
-        "default": false
-      }
-    ]
+    "gui_verified": false
   },
   {
     "id": "build_geographie",
     "label": "Build géographie",
     "icon": "🌍",
-    "section": "maintenance",
+    "section": "geo_construction",
     "script": "build_geographie_monde.py",
     "description": "Construit le fichier geographie/{scenario}.md",
     "requires": [],
@@ -1431,13 +1348,14 @@
         "label": "Dry run",
         "default": false
       }
-    ]
+    ],
+    "gui_verified": false
   },
   {
     "id": "enrich_geographie",
     "label": "Enrich géographie",
     "icon": "🗺",
-    "section": "maintenance",
+    "section": "geo_construction",
     "script": "enrich_geographie_recursive.py",
     "description": "Enrichit récursivement les zones géographiques via LLM",
     "requires": [],
@@ -1463,14 +1381,15 @@
         "label": "Dry run",
         "default": false
       }
-    ]
+    ],
+    "gui_verified": false
   },
   {
     "id": "complete_geographie_coverage",
     "label": "Couverture géo complète",
     "script": "complete_geographie_coverage.py",
     "description": "Affecte tous les pays 2026 à une zone 2098 (absorber ou créer). À lancer une fois par scénario après build_geographie.",
-    "section": "maintenance",
+    "section": "geo_construction",
     "options": [
       {
         "flag": "--all",
@@ -1528,13 +1447,14 @@
         "description": "Applique le fichier de propositions après validation"
       }
     ],
-    "icon": "🧭"
+    "icon": "🧭",
+    "gui_verified": false
   },
   {
     "id": "check_zones_coherence",
     "label": "Cohérence zones",
     "icon": "🩺",
-    "section": "maintenance",
+    "section": "geo_diagnostic",
     "script": "check_zones_coherence.py",
     "description": "Diagnostic lecture seule : parsing YAML, pays absents de toute zone, pays sans zone N1, entrées obsolètes de zones_manquantes.yaml.",
     "requires": [],
@@ -1556,13 +1476,14 @@
         "optional": true,
         "mutually_exclusive_with": "all"
       }
-    ]
+    ],
+    "gui_verified": false
   },
   {
     "id": "check_type_entite_coherence",
     "label": "Cohérence type_entite",
     "icon": "🏷",
-    "section": "maintenance",
+    "section": "geo_diagnostic",
     "script": "check_type_entite_coherence.py",
     "description": "Détecte les entrées origine_reelle sans type_entite. Corrige avec --apply (backup .bak automatique).",
     "requires": [],
@@ -1592,13 +1513,14 @@
         "description": "Corrige les entrées reconnues comme pays (sinon aperçu seul)",
         "default": false
       }
-    ]
+    ],
+    "gui_verified": false
   },
   {
     "id": "check_origine_reelle_coherence",
     "label": "Garde-fou origine_reelle",
     "icon": "🔗",
-    "section": "maintenance",
+    "section": "geo_diagnostic",
     "script": "check_origine_reelle_coherence.py",
     "description": "Compare le pays d'une zone ville/région à sa chaîne de parenté. Avertissement seul, propose des candidats de reparent.",
     "requires": [
@@ -1638,13 +1560,14 @@
         "description": "Ajoute une entrée pour chaque incohérence sans candidat N1 (sinon aperçu seul)",
         "default": false
       }
-    ]
+    ],
+    "gui_verified": false
   },
   {
     "id": "check_conventions_territoires",
     "label": "Conventions territoires",
     "icon": "⚖",
-    "section": "maintenance",
+    "section": "geo_diagnostic",
     "script": "check_conventions_territoires.py",
     "description": "Vérifie qu'un territoire ambigu (Groenland, Écosse...) est toujours distinct de son souverain réel, entre les 6 scénarios. N'a de sens qu'avec --all.",
     "requires": [],
@@ -1667,13 +1590,14 @@
         "optional": true,
         "mutually_exclusive_with": "all"
       }
-    ]
+    ],
+    "gui_verified": false
   },
   {
     "id": "scan_geographie_complet",
     "label": "Scan géographie complet",
     "icon": "🧪",
-    "section": "maintenance",
+    "section": "geo_diagnostic",
     "script": "scan_geographie_complet.py",
     "description": "Orchestrateur : lance les 4 diagnostics géographie en séquence (zones, type_entite, origine_reelle, conventions territoires), résumé consolidé.",
     "requires": [],
@@ -1716,6 +1640,141 @@
         "description": "Propage --write-zones-manquantes à check_origine_reelle_coherence.py",
         "default": false
       }
-    ]
+    ],
+    "gui_verified": false
+  },
+  {
+    "id": "extract_localisation",
+    "label": "Extract localisation",
+    "icon": "📍",
+    "section": "localisation",
+    "script": "extract_localisation.py",
+    "description": "Extrait les données de localisation des instances enrichies",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "optional": true
+      },
+      {
+        "flag": "--slug",
+        "type": "slug_select",
+        "label": "Slug (optionnel)",
+        "slug_type": "instances",
+        "optional": true
+      },
+      {
+        "flag": "--force",
+        "type": "checkbox",
+        "label": "Forcer",
+        "description": "Retraite les fichiers déjà extraits",
+        "default": false
+      },
+      {
+        "flag": "--report-only",
+        "type": "checkbox",
+        "label": "Rapport seulement",
+        "description": "Génère localisation_review.md sans écrire",
+        "default": false
+      },
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Dry run",
+        "default": false
+      }
+    ],
+    "gui_verified": false
+  },
+  {
+    "id": "review_localisation",
+    "label": "Review localisation",
+    "icon": "✅",
+    "section": "localisation",
+    "script": "review_localisation.py",
+    "description": "Résout les conflits de localisation",
+    "requires": [
+      "extract_localisation"
+    ],
+    "requires_message": "Lancer extract_localisation d'abord",
+    "options": [
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "optional": true
+      },
+      {
+        "flag": "--auto-resolve",
+        "type": "checkbox",
+        "label": "Auto-résoudre",
+        "description": "Résolution automatique des conflits non-ambigus",
+        "default": false
+      },
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Dry run",
+        "default": false
+      }
+    ],
+    "gui_verified": false
+  },
+  {
+    "id": "validate",
+    "label": "Validate",
+    "icon": "🛡",
+    "section": "validation",
+    "script": "validate.py",
+    "description": "Valide la cohérence du vault (entités, localisations, narratif)",
+    "requires": [
+      "extract_localisation"
+    ],
+    "requires_message": "extract_localisation devrait tourner avant validate",
+    "options": [
+      {
+        "flag": "--verbose",
+        "short": "-v",
+        "type": "checkbox",
+        "label": "Verbose",
+        "description": "Affiche le détail dans le terminal",
+        "default": false
+      },
+      {
+        "flag": "--report",
+        "short": "-r",
+        "type": "checkbox",
+        "label": "Générer rapport",
+        "description": "Écrit validation_report.md",
+        "default": false
+      },
+      {
+        "flag": "--localisation",
+        "type": "checkbox",
+        "label": "Localisation",
+        "description": "Force le scan de localisation",
+        "default": false
+      },
+      {
+        "flag": "--narrative",
+        "short": "-n",
+        "type": "checkbox",
+        "label": "Cohérence narrative",
+        "description": "Force le scan narratif (ignore cache mtime)",
+        "default": false
+      }
+    ],
+    "yaml_files": [
+      {
+        "path": "documentation/need_action/narrative_issues.yaml",
+        "label": "documentation/need_action/narrative_issues.yaml",
+        "readonly": true
+      }
+    ],
+    "gui_verified": false
   }
 ]

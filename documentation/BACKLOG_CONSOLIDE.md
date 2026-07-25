@@ -1,5 +1,5 @@
 # Backlog consolidé — Ourrassol 2098
-*Mis à jour le 14 juillet 2026 — fusionne le backlog historique et les items des sessions du 11, 12, 13 et 14 juillet*
+*Mis à jour le 15 juillet 2026 — fusionne le backlog historique et les items des sessions du 11, 12, 13, 14 et 15 juillet*
 
 Légende priorité : 🔴 bloquant/urgent · 🟡 important · 🟢 confort · ⚪ improvisation libre / pas pressé
 
@@ -202,10 +202,13 @@ Ajouté au bloc `CHAMPS :` + exemple, sur les deux fichiers concernés : `evenem
 
 ---
 
-## P17 🟡 — Nouveau (11 juillet) — Retester la fiabilité `mistral-small` sur choix contraint, pipeline corrigé
-**Durée : 30 min**
+## P17 ✅ — CLOS le 16 juillet — Fiabilité `mistral-small` sur choix contraint, pipeline corrigé
 
-Le bug #26 (handoff) a montré que la contamination culturelle observée les 6 et 11 juillet (bugs #18/#20 historiques) était en réalité causée par un bug de résolution de zone, reproduit à l'identique sur `mistral-small` **et** `mistral-large` — pas une limite de fiabilité modèle comme diagnostiqué initialement. Reste à vérifier si un vrai problème de fiabilité subsiste sur `mistral-small` une fois cette cause de code éliminée : relancer une génération d'article sur `mistral-small` (via override manuel `LLM_PROVIDER=mistral LLM_MODEL=mistral-small-latest`) sur la configuration désormais corrigée (Bassin du Congo/`sante`) et comparer au résultat obtenu sur `mistral-large`.
+Le bug #26 (handoff) a montré que la contamination culturelle observée les 6 et 11 juillet (bugs #18/#20 historiques) était en réalité causée par un bug de résolution de zone, reproduit à l'identique sur `mistral-small` **et** `mistral-large` — pas une limite de fiabilité modèle comme diagnostiqué initialement.
+
+**Test fait le 16 juillet** : article régénéré sur `mistral-small-latest` (override manuel), même configuration que le test de référence du bug #26 (Bassin du Congo/`sante`, `eco_communalism`). Résultat propre sur tout ce qui était directement testable : langue 100% française, `zone_slug` correct (aucune fuite du bug #26), aucune incohérence numérique flagrante. Bon signal de fiabilité générale sur `mistral-small` une fois la cause de code éliminée.
+
+**Limite du test, à noter honnêtement** : la règle 2 (non-transposition culturelle d'un allié, bug #20) n'a pas pu être mise à l'épreuve — l'article généré n'a invoqué aucune zone alliée externe, donc le modèle n'a pas eu l'occasion de bien ou mal l'appliquer sur ce run précis. David a choisi de considérer le test suffisant plutôt que de forcer artificiellement une interaction inter-zones (ce qui aurait faussé le test — le modèle doit décider lui-même d'en évoquer une). Si un doute resurgit spécifiquement sur la règle 2 avec `mistral-small`, ce n'est pas à 100% écarté par ce test.
 
 ---
 
@@ -215,10 +218,13 @@ Cohérence confirmée sur le point d'origine (`data.llm` reflète `gui/config.js
 
 ---
 
-## P19 ⚪ — Nouveau (11 juillet) — Bug #27 (mineur, en observation)
-**Pas de durée estimée — dépend de la fréquence d'occurrence**
+## P19 ✅ — CLOS le 15 juillet — Bug #27 (plausibilité logistique, cas isolé)
 
-Incohérence de plausibilité logistique détectée sur un article test : un personnage d'une zone alliée lointaine (Pacte Amazônia Viva, Amazonie) décrit comme arrivant par un moyen de transport purement local (pirogue depuis Kisangani, Congo), sans mention de la traversée intercontinentale attendue. Décision prise le 11 juillet : observer si ça se reproduit avant de renforcer `build_system_prompt()` (`prompt_builder.py`) avec une consigne dédiée à la plausibilité des trajets inter-zones. Voir `HANDOFF_CONSOLIDE.md` §3bis, point 3, pour le détail complet.
+Incohérence de plausibilité logistique détectée sur un article test le 11 juillet : un personnage d'une zone alliée lointaine (Pacte Amazônia Viva, Amazonie) décrit comme arrivant par un moyen de transport purement local (pirogue depuis Kisangani, Congo), sans mention de la traversée intercontinentale attendue. Décision prise le 11 juillet : observer si ça se reproduit avant de renforcer `build_system_prompt()` (`prompt_builder.py`).
+
+**Vérification faite le 15 juillet** : recherche (`grep`) sur tous les articles du vault pour des formulations de transport local associées à "depuis" — un seul autre résultat trouvé (`eco_communalism`/`sante`, 5 juillet), qui s'est révélé être un faux positif (emploi métaphorique de "pirogue", sans rapport avec un trajet ou un personnage distant). Aucune récidive réelle du pattern.
+
+**Décision de David : fermer sans ajouter de consigne** — un seul cas réel sur plusieurs semaines de génération ne justifie pas d'alourdir `build_system_prompt()` (coût en tokens + risque de contradiction avec une autre règle existante). Une réouverture serait légitime si un nouveau cas apparaît, mais ce n'est plus un point de suivi actif.
 
 ---
 
@@ -331,7 +337,13 @@ Les 3 cas listés le 13 juillet sont soit déjà corrigés, soit n'étaient jama
 
 **Rien dans le pipeline actuel n'importe encore `patrons_spatiaux.py`** — prêt, en attente d'être consommé par l'étape B ou C.
 
-### Étape B (garde-fou étendu, fusion avec P22 signal 2) — ⚪ pas construite
+### Étape B (garde-fou étendu, fusion avec P22 signal 2) — ✅ CONSTRUITE le 15 juillet
+
+**Intégrée directement dans `complete_geographie_coverage.py`** (choix de David, plutôt qu'un script diagnostic autonome séparé) : `build_user_prompt()` injecte désormais `patron_spatial_prompt_block(scenario)` dans le prompt de proposition d'affectation pays→zone, et `SYSTEM_PROMPT` demande au LLM de juger chaque affectation contre ce patron. Conformément au docstring de `patrons_spatiaux.py` ("en avertissement uniquement, jamais en blocage dur") : le LLM ne rejette jamais une affectation pour ce motif, il ajoute un champ optionnel `avertissement_patron_spatial` **seulement en cas de doute réel**, laissé à la validation manuelle de David dans `coverage_proposals_{scenario}.yaml` — même mécanisme que le champ `avertissement` déjà existant pour les slugs inconnus. Zéro coût LLM supplémentaire (même appel qui décidait déjà de l'affectation).
+
+Testé en conditions réelles le 15 juillet (Guatemala, scénario `reference`, temporairement retiré de `zones_pays.json` puis restauré) : le prompt enrichi est bien pris en compte (2490 → 2935 tokens d'entrée), et le champ d'avertissement n'apparaît pas quand aucun anti-pattern n'est contredit — confirmé être le comportement attendu (silence quand tout va bien), pas un signe que le garde-fou ne fonctionne pas. Cas positif (avertissement réellement déclenché) non testé — jugé non bloquant, le test de silence + l'augmentation de tokens suffisent à valider l'intégration technique.
+
+**Bonus trouvé en creusant le même fichier (15 juillet)** : `zones_pays.json` n'était écrit sur disque qu'une seule fois, à la toute fin de `main()`, après la boucle sur tous les scénarios (`--all`). Si le script plantait en cours de route, les fiches `geographie/*.md` des scénarios déjà traités restaient à jour sur disque mais `zones_pays.json` ne l'était jamais pour aucun scénario — même famille de risque que le bug split_zone ci-dessus, causée ici par un ordre d'écriture différé plutôt qu'un oubli. Corrigé : nouvelle fonction `_write_zones_pays()`, appelée immédiatement après chaque scénario traité (`process_scenario()` et `apply_proposals()`), plus une fois en fin de `main()` par sécurité (désormais redondante mais inoffensive).
 
 ### Étape C (le générateur top-down proprement dit) — ⚪ pas construite, le plus gros chantier
 Nouveau script ou extension de `complete_geographie_coverage.py`, branché sur le formulaire "créer une nouvelle zone niveau 1" de P7 étape 2.
@@ -362,24 +374,34 @@ Bug corrigé en testant sur le vrai vault : une valeur `entite` repliée sur deu
 
 ---
 
-## P27 ⚪ — Nouveau (14 juillet) — Territoires ambigus : convention décidée, 11 cas à séparer
+## P27 ✅ — CLOS le 15 juillet — Territoires ambigus : convention décidée, traitement final
 
 **Script livré : `check_conventions_territoires.py`** (`generator/`). Diagnostic distinct de `check_origine_reelle_coherence.py` : au lieu de comparer une zone à sa chaîne de parenté, compare un même territoire ambigu (dépendance/collectivité) **entre les 6 scénarios**. A révélé qu'un rattachement peut être syntaxiquement valide (la zone qui le revendique existe bien dans `zones_pays.json`) tout en étant incohérent narrativement — cas trouvé : le Groenland revendiqué par `espace_eurasiatique` (bloc russo-chinois technocratique, aucune mention d'Arctique) dans `policy_reform`, alors que `europe_nord_ouest` (Danemark, Norvège, Suède...) est un bien meilleur candidat et le revendique déjà.
 
 **Table `TERRITOIRES_AMBIGUS`** (à enrichir manuellement) : Groenland, Polynésie française, Nouvelle-Calédonie, Guyane française, Écosse, Pays de Galles.
 
-**Convention décidée par David le 14 juillet : les territoires dépendants/autonomes suivis sont toujours traités comme des entités distinctes de leur pays souverain réel**, quand ils apparaissent dans un scénario (extension du pattern déjà observé sur la Polynésie française, distincte de la France dans les 6/6 scénarios où elle apparaît). Le script vérifie maintenant la conformité à cette règle plutôt que juste la variance.
+**Convention décidée par David le 14 juillet : les territoires dépendants/autonomes suivis sont toujours traités comme des entités distinctes de leur pays souverain réel**, quand ils apparaissent dans un scénario (extension du pattern déjà observé sur la Polynésie française, distincte de la France dans les 6/6 scénarios où elle apparaît). Le script vérifie la conformité à cette règle plutôt que juste la variance.
 
-**État au 14 juillet, 6 scénarios : 11 cas à séparer**
-| Territoire | Scénarios à corriger |
-|---|---|
-| Groenland | `breakdown`, `eco_communalism`, `reference` |
-| Écosse | `breakdown`, `fortress_world`, `policy_reform` |
-| Pays de Galles | `breakdown`, `fortress_world`, `new_sustainability`, `eco_communalism`, `policy_reform` |
+**Bug trouvé et corrigé le 15 juillet en traitant le premier cas réel** (Écosse/`breakdown`, voir P7 étape 4 ci-dessous) : `_apply_split_zone()` (`gui/app.py`) écrivait bien dans `geographie/{scenario}.md` mais jamais dans `zones_pays.json` — même angle mort que celui déjà corrigé pour le renommage (`_rename_zone_in_zones_pays`), jamais répliqué pour le split. Corrigé avec une nouvelle fonction `_split_zone_in_zones_pays()`, appelée en dry-run (rapport d'impact) et en apply réel.
 
-(+ 12 cas "à considérer" — Nouvelle-Calédonie ×6, Guyane française ×6 — territoire absent partout, rien à séparer, création éventuelle non forcée.)
+**Limite découverte au passage, pas un bug** : la carte Leaflet (`gui/static/app.js`, fond de carte `johan/world.geo.json`) ne peut pas afficher séparément un territoire infra-national de son pays souverain — un seul polygone par pays reconnu par l'ONU, aucune subdivision Écosse/Pays de Galles/Angleterre/Irlande du Nord. Les données du vault sont correctes après un split ; seul le rendu visuel de la carte ne peut pas le représenter. Option pour plus tard, pas urgente : fond de carte avec subdivisions infranationales (Natural Earth admin-1, ou GeoJSON UK dédié superposé).
 
-**Outil pour traiter les 11 cas : P7 étape 4 (split de zone), voir ci-dessous.** Aucun des 11 cas n'a encore été traité.
+**Traitement final des 11 cas identifiés le 14 juillet, décidé le 15 juillet :**
+| Territoire | Scénario | Décision |
+|---|---|---|
+| Écosse | `breakdown` | Split fait → nouvelle zone `ecosse` |
+| Écosse | `fortress_world` | **Accepté tel quel** — le Royaume-Uni entier reste politiquement uni dans ce scénario (logique de repli sur les frontières existantes) |
+| Écosse | `policy_reform` | Accepté tel quel |
+| Pays de Galles | `breakdown` | **Accepté tel quel** — l'Angleterre et le Pays de Galles restent unis dans `archipel_anglo_celtique` pendant que l'Écosse se détache (exception narrative propre à ce scénario) |
+| Pays de Galles | `fortress_world` | Accepté tel quel (même raison que Écosse/`fortress_world`) |
+| Pays de Galles | `new_sustainability` | Accepté tel quel |
+| Pays de Galles | `eco_communalism` | Accepté tel quel |
+| Pays de Galles | `policy_reform` | Accepté tel quel |
+| Groenland | `breakdown` | Réaffecté directement vers `amérique réformée` (sans split — n'était pas mélangé avec le Danemark, juste mal placé dans `espace_eurasiatique`) |
+| Groenland | `eco_communalism` | Déjà correct (`arc_septentrional`, pas mélangé) — aucune action |
+| Groenland | `reference` | Accepté tel quel |
+
+Décision de David : clore P27 avec ces 8 cas acceptés tels quels plutôt que de les séparer systématiquement — une réouverture de ce sujet serait un choix volontaire, pas un oubli.
 
 ---
 
@@ -404,7 +426,7 @@ Bug corrigé en testant sur le vrai vault : une valeur `entite` repliée sur deu
 - **Renommer** (slug + nom, depuis le 13 juillet) : bouton ✏️ sur chaque zone niveau 1 de la légende
 - **Voir l'arbre des sous-zones** (niveau 2/3, pas de représentation carte pour elles) : clic sur le nom/pastille d'une zone niveau 1 dans la légende
 - **Déplacer une sous-zone** (reparent, avec son sous-arbre, depuis le 13 juillet) : bouton "↗️ déplacer" sur chaque nœud non-racine de l'arbre — permet aussi de promouvoir en zone niveau 1 autonome ou de créer une nouvelle zone niveau 1 à la volée si aucun parent existant ne convient
-- **Scinder une zone** (split, depuis le 14 juillet) : bouton "✂️ scinder" sur tout nœud de l'arbre (racine incluse) ayant plus d'un pays dans son `origine_reelle` — extrait un ou plusieurs pays vers une nouvelle zone niveau 1 ou une zone niveau 1 existante. Les sous-zones dont la PROPRE `origine_reelle` référence aussi le(s) pays extrait(s) suivent automatiquement (détecté, pas décidé manuellement) ; les autres restent en place. Différent de déplacer : déplacer bouge une zone entière telle quelle, scinder la coupe en deux et n'en bouge qu'un morceau. Différent de "créer une nouvelle zone" via le clic carte : celui-ci ne gère qu'un seul pays à la fois, en correspondance de chaîne exacte, et ne fait jamais suivre les sous-zones — le split gère plusieurs formulations du même pays (tokenisation, comme `check_origine_reelle_coherence.py`) et le suivi automatique des sous-zones concernées.
+- **Scinder une zone** (split, depuis le 14 juillet ; correctif zones_pays.json le 15 juillet) : bouton "✂️ scinder" sur tout nœud de l'arbre (racine incluse) ayant plus d'un pays dans son `origine_reelle` — extrait un ou plusieurs pays vers une nouvelle zone niveau 1 ou une zone niveau 1 existante. Les sous-zones dont la PROPRE `origine_reelle` référence aussi le(s) pays extrait(s) suivent automatiquement (détecté, pas décidé manuellement) ; les autres restent en place. Différent de déplacer : déplacer bouge une zone entière telle quelle, scinder la coupe en deux et n'en bouge qu'un morceau. Différent de "créer une nouvelle zone" via le clic carte : celui-ci ne gère qu'un seul pays à la fois, en correspondance de chaîne exacte, et ne fait jamais suivre les sous-zones — le split gère plusieurs formulations du même pays (tokenisation, comme `check_origine_reelle_coherence.py`) et le suivi automatique des sous-zones concernées. **Bug corrigé le 15 juillet** : `_apply_split_zone()` n'écrivait jamais dans `zones_pays.json` (seulement dans la fiche géographie) — la carte affichait alors l'ancienne couleur malgré un split réussi côté données. Voir P27 pour le détail.
 
 **Rechercher une zone tous niveaux (depuis le 14 juillet)** — champ de recherche en haut de la sidebar de l'onglet Carte. La légende/liste principale n'affiche que les zones niveau 1 ; ce champ cherche aussi les niveaux 2/3 par nom ou slug (insensible aux accents/casse) et affiche le chemin complet racine→zone trouvée. Au clic sur un résultat, ouvre directement le bon arbre et centre/surligne la zone — évite de deviner/remonter la chaîne à la main quand le parent immédiat d'une zone n'est pas sa racine N1 (cas réel : `delta_rhone_fermes_verticales`, niveau 3, sous `corridor_iberique_energetique`, lui-même sous `nouveau_califat_barcelone`).
 

@@ -55,6 +55,7 @@ zones:
   - entite: Trinité-et-Tobago
     type_entite: pays
     portion: null
+  - entite: Groenland
   description: Zone définie par la trajectoire politique américaine dans le scénario,
     notamment l'élection de 2055 qui porte au pouvoir un gouvernement social-démocrate
     progressiste contraint par les accords internationaux existants. Les Amériques
@@ -283,9 +284,6 @@ zones:
     type_entite: pays
     portion: null
   - entite: Singapour
-    type_entite: pays
-    portion: null
-  - entite: Groenland
     type_entite: pays
     portion: null
   - entite: Arctique

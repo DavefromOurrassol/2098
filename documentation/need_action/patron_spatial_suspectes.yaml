@@ -1,0 +1,90 @@
+zones_suspectes:
+- scenario: breakdown
+  slug: geneve_bunker_institutions
+  raison: Présence d'institutions internationales résiduelles revendiquant une continuité
+    juridique, contredisant l'absence d'institution supranationale stable et la fragmentation
+    en blocs rivaux.
+  date_detection: '2026-07-25'
+  statut: a_traiter
+- scenario: fortress_world
+  slug: amazonie_pacte_vert
+  raison: Décrit comme un 'territoire autonome' précaire négociant avec des blocs,
+    ce qui suggère une neutralité ou une zone intermédiaire non militarisée, en contradiction
+    avec l'absence de zones neutres dans le patron 'fortress_world'.
+  date_detection: '2026-07-25'
+  statut: a_traiter
+- scenario: fortress_world
+  slug: espace_nordique_arctique
+  raison: Présenté comme un 'opérateur privé armé' gérant des corridors, ni bloc souverain
+    ni zone dégradée, ce qui introduit une logique de neutralité commerciale et de
+    transit non alignée sur le patron de blocs fermés militarisés.
+  date_detection: '2026-07-25'
+  statut: a_traiter
+- scenario: fortress_world
+  slug: nuuk_forteresse
+  raison: Décrit comme n'appartenant 'officiellement à aucun camp', ce qui contredit
+    la logique de blocs fermés et de fragmentation binaire (enclave protégée vs hors-forteresse)
+    du patron.
+  date_detection: '2026-07-25'
+  statut: a_traiter
+- scenario: fortress_world
+  slug: singapour_megapole
+  raison: Mentionne une 'neutralité armée' et un rôle de 'hub financier et logistique
+    pour les blocs dominants', ce qui suggère une zone intermédiaire ou neutre, en
+    contradiction avec le patron.
+  date_detection: '2026-07-25'
+  statut: a_traiter
+- scenario: new_sustainability
+  slug: bloc_eurasien_souverainiste
+  raison: Contradiction avec la logique géopolitique de gouvernance mondiale stabilisée
+    et d'interconnexion institutionnelle forte, en affichant une résistance active
+    aux modèles de transition écologique imposés par les centres institutionnels.
+  date_detection: '2026-07-25'
+  statut: a_traiter
+- scenario: new_sustainability
+  slug: moyen_orient_golfe
+  raison: Mention d'un conflit Israël-Iran en 2026, incompatible avec la réduction
+    structurelle des tensions géopolitiques systémiques et les mécanismes robustes
+    de prévention des conflits.
+  date_detection: '2026-07-25'
+  statut: a_traiter
+- scenario: eco_communalism
+  slug: europe_occidentale_reconstituee
+  raison: Description mentionne des 'infrastructures institutionnelles denses' et
+    une 'Confédération des Racines Vivantes', ce qui suggère une centralisation institutionnelle
+    contraire à la logique de petites communautés autonomes et décentralisées.
+  date_detection: '2026-07-25'
+  statut: a_traiter
+- scenario: eco_communalism
+  slug: inde_bassins_sacres
+  raison: Mention de villes comme Delhi et Mumbai devenant des 'hubs de gouvernance
+    décentralisée' peut impliquer une centralisation résiduelle ou une taille incompatible
+    avec la désurbanisation volontaire attendue.
+  date_detection: '2026-07-25'
+  statut: a_traiter
+- scenario: eco_communalism
+  slug: japon_archipel_resilient
+  raison: Tokyo décrite comme une 'mégalopole décentralisée en districts auto-suffisants'
+    contredit la logique de désurbanisation volontaire et de petites communautés autonomes.
+  date_detection: '2026-07-25'
+  statut: a_traiter
+- scenario: reference
+  slug: europe_occidentale_reconstructee
+  raison: Mention d'un 'Consortium Helios (énergie solaire orbitale)' contredit la
+    logique frontalière du système (expansion spatiale limitée et robotique)
+  date_detection: '2026-07-25'
+  statut: a_traiter
+- scenario: reference
+  slug: ameriques_multipolaires
+  raison: Présence d'une 'Fédération des Communs Territoriaux' et d'un 'Nouveau Parti
+    Commun' suggère une innovation institutionnelle/sociale trop marquée pour le scénario
+    conservateur
+  date_detection: '2026-07-25'
+  statut: a_traiter
+- scenario: reference
+  slug: bloc_persique_autonome
+  raison: Description d'une coalition contrôlée par des milices et régimes autoritaires
+    survivants, en tension avec la multipolarité instable mais fonctionnelle du patron
+    (conflits hybrides diffus, pas de zones en rupture totale)
+  date_detection: '2026-07-25'
+  statut: a_traiter

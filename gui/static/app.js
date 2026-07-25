@@ -53,9 +53,14 @@ async function loadScripts() {
 // ── Construction de la nav ────────────────────────
 
 const SECTIONS = [
-  { key: 'generation', label: 'Génération' },
-  { key: 'entities',   label: 'Entités' },
-  { key: 'maintenance',label: 'Maintenance' },
+  { key: 'articles',           label: 'Articles' },
+  { key: 'presse',             label: 'Presse & journaux' },
+  { key: 'entites_creation',   label: 'Entités & événements — création' },
+  { key: 'entites_nettoyage',  label: 'Entités & événements — nettoyage' },
+  { key: 'geo_construction',   label: 'Géographie — construction' },
+  { key: 'geo_diagnostic',     label: 'Géographie — diagnostic' },
+  { key: 'localisation',       label: 'Localisation' },
+  { key: 'validation',         label: 'Validation' },
 ];
 
 function buildNav() {
@@ -74,7 +79,7 @@ function buildNav() {
       .filter(s => s.section === section.key)
       .forEach(s => {
         const badge = s.badge || null;
-        nav.appendChild(makeNavItem(s.id, s.icon, s.label, badge, 'script'));
+        nav.appendChild(makeNavItem(s.id, s.icon, s.label, badge, 'script', false, s.gui_verified));
       });
     nav.appendChild(makeDivider());
   });
@@ -84,16 +89,25 @@ function buildNav() {
   nav.appendChild(makeNavItem('config', '⚙️', 'Config', null, 'tab'));
 }
 
-function makeNavItem(id, icon, label, badge, type, reviewBadge) {
+function makeNavItem(id, icon, label, badge, type, reviewBadge, guiVerified) {
   const el = document.createElement('div');
   el.className = 'nav-item';
   el.dataset.id = id;
   el.dataset.type = type;
 
+  // Indicateur discret "non testé via GUI" (distinct des badges P7/P22/P26/P27,
+  // qui référencent un item de backlog, pas un statut de test) — ajouté le
+  // 16 juillet. La fonctionnalité marche (testée en CLI ou historiquement),
+  // juste jamais cliquée depuis le sidebar lui-même.
+  const untestedDot = (type === 'script' && guiVerified === false)
+    ? `<span class="gui-untested-dot" title="Jamais testé via clic GUI (fonctionne, vérifié en CLI ou historiquement)" style="opacity:0.5;font-size:0.85em;margin-left:4px;">🧪</span>`
+    : '';
+
   el.innerHTML = `
     <span class="icon">${icon}</span>
     <span class="label">${label}</span>
     ${badge ? `<span class="badge p7">${badge}</span>` : ''}
+    ${untestedDot}
     ${reviewBadge ? `<span class="badge orange" id="review-nav-badge" style="display:none">0</span>` : ''}
   `;
 

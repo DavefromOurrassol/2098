@@ -1,0 +1,17 @@
+scenario: reference
+instructions: 'Vérifiez chaque affectation. Mettez ''valide: false'' pour rejeter
+  une proposition. Pour action: absorber, vérifiez que zone_slug est cohérente. Pour
+  action: nouvelle_zone, vérifiez les champs de la zone. Un champ ''avertissement_patron_spatial''
+  signale un doute du LLM sur la cohérence avec le patron spatial du scénario (P24
+  étape B) — à trancher au cas par cas, ce n''est jamais un rejet automatique. Lancez
+  ensuite : python3 complete_geographie_coverage.py --scenario reference --apply'
+affectations:
+- pays: Guatemala
+  action: absorber
+  zone_slug: ameriques_multipolaires
+  justification: Le Guatemala est géographiquement et politiquement intégré à l'espace
+    centro-américain, déjà couvert par la zone 'Amériques Multipolaires' qui inclut
+    les dynamiques de fragmentation et de coopération régionale en Amérique latine.
+    Son rattachement à cette zone est cohérent avec la logique narrative des flux
+    économiques et des tensions internes de la région.
+  valide: true

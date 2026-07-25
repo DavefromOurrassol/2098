@@ -1959,6 +1959,59 @@ ZONE_STATUTS = ["dominant", "stable", "fragmenté", "en_declin", "disparu", "eme
 TYPE_ENTITE_REELLE = ["pays", "etat_federe", "province", "region_administrative", "autre"]
 
 
+def _creer_zone_in_zones_pays(zones_pays_path, scenario, origine_reelle, nouveau_slug, dry_run):
+    """
+    Synchronise zones_pays.json lors de la création d'une zone niveau 1
+    (carte_creer_zone_niveau1). Même principe que _rename_zone_in_zones_pays
+    et _split_zone_in_zones_pays, appliqué ici à la création : sans cette
+    fonction, un pays inclus dans l'origine_reelle d'une toute nouvelle zone
+    n'apparaissait JAMAIS dans zones_pays.json (bug trouvé le 25 juillet en
+    scopant P24 étape C -- carte_creer_zone_niveau1 n'a jamais eu
+    l'équivalent du fix appliqué à rename/split le 15 juillet). Symptôme
+    identique au cas Écosse du 15 juillet : la fiche geographie/{scenario}.md
+    est correcte, mais la carte affiche l'ancienne couleur (ou aucune)
+    jusqu'à une réassignation manuelle via un clic sur la carte.
+
+    Pour chaque entrée origine_reelle de type_entite == "pays" dont le nom
+    normalisé correspond à un pays de pays_liste (peu importe la casse
+    exacte -- une zone nouvellement créée porte en général un nom de pays
+    déjà canonique, contrairement aux entrées extraites du corpus narratif
+    brut ailleurs dans le pipeline, mais on tolère la variation de casse par
+    prudence) : affecte ce pays à `nouveau_slug` dans zones_pays.json,
+    QUELLE QUE SOIT SON AFFECTATION ACTUELLE -- contrairement au split (qui
+    ne déplace que ce qui appartenait déjà à la zone source), la création
+    explicite d'une zone avec ce pays dans son origine_reelle signifie que
+    l'utilisateur (ou le générateur top-down, P24 étape C.2) veut
+    précisément ce rattachement, même si le pays avait déjà une zone
+    ailleurs.
+
+    Retourne la liste des pays effectivement affectés (ou qui le seraient
+    en dry_run).
+    """
+    if not zones_pays_path.exists():
+        return []
+    zp = json.loads(zones_pays_path.read_text(encoding="utf-8"))
+    pays_liste = zp.get("pays_liste", [])
+    index_norm_vers_canonique = {_normalise_pays(p): p for p in pays_liste}
+
+    touches = []
+    for o in origine_reelle:
+        if not isinstance(o, dict) or o.get("type_entite") != "pays":
+            continue
+        n = _normalise_pays(o.get("entite", ""))
+        pays_canonique = index_norm_vers_canonique.get(n)
+        if pays_canonique:
+            touches.append(pays_canonique)
+
+    if not dry_run and touches:
+        sc = zp.get(scenario, {})
+        for pays in touches:
+            sc[pays] = nouveau_slug
+        zp[scenario] = sc
+        zones_pays_path.write_text(json.dumps(zp, indent=2, ensure_ascii=False), encoding="utf-8")
+    return touches
+
+
 @app.route("/api/carte/creer_zone_niveau1", methods=["POST"])
 def carte_creer_zone_niveau1():
     """
@@ -2033,7 +2086,13 @@ def carte_creer_zone_niveau1():
     new_body = parts[2].rstrip("\n") + f"\n\n### {nom}\n{description}\n"
     geo_file.write_text("---\n" + new_fm + "---" + new_body, encoding="utf-8")
 
-    return jsonify({"ok": True, "slug": slug, "nom": nom})
+    gui_dir = Path(__file__).parent
+    zones_pays_path = gui_dir / "zones_pays.json"
+    pays_synchronises = _creer_zone_in_zones_pays(
+        zones_pays_path, scenario, origine_reelle, slug, dry_run=False
+    )
+
+    return jsonify({"ok": True, "slug": slug, "nom": nom, "pays_zones_pays_json": pays_synchronises})
 
 
 # ── P7 étape 4 : split de zone (14 juillet 2026) -- extrait une ou plusieurs
@@ -2082,6 +2141,29 @@ def _entite_references_pays(entite: str, pays_normalises: set) -> bool:
     return any(_normalise_pays(t) in pays_normalises for t in _tokens_entite(entite))
 
 
+def _split_zone_in_zones_pays(zones_pays_path, scenario, slug_source, pays_normalises, cible_slug, dry_run):
+    """
+    Met à jour zones_pays.json pour les pays extraits par un split de zone
+    (même principe que _rename_zone_in_zones_pays, appliqué ici au split).
+    Un pays de zones_pays.json est concerné si : il est actuellement affecté
+    à slug_source ET son nom normalisé fait partie des pays extraits.
+    """
+    if not zones_pays_path.exists():
+        return []
+    zp = json.loads(zones_pays_path.read_text(encoding="utf-8"))
+    sc = zp.get(scenario, {})
+    touches = [
+        pays for pays, slug in sc.items()
+        if slug == slug_source and _normalise_pays(pays) in pays_normalises
+    ]
+    if not dry_run and touches:
+        for pays in touches:
+            sc[pays] = cible_slug
+        zp[scenario] = sc
+        zones_pays_path.write_text(json.dumps(zp, indent=2, ensure_ascii=False), encoding="utf-8")
+    return touches
+
+
 def _apply_split_zone(vault_root, scenario, slug_source, pays_a_extraire, cible, dry_run):
     """
     dry_run=True  : ne modifie rien, retourne un rapport d'impact.
@@ -2099,6 +2181,8 @@ def _apply_split_zone(vault_root, scenario, slug_source, pays_a_extraire, cible,
          ou {"mode": "zone_existante", "slug_existant": "..."}
     """
     import yaml as _yaml
+    gui_dir = Path(__file__).parent
+    zones_pays_path = gui_dir / "zones_pays.json"
     geo_file = vault_root / "geographie" / f"{scenario}.md"
     if not geo_file.exists():
         return {"error": f"Fiche géographie introuvable : {geo_file}"}
@@ -2180,6 +2264,10 @@ def _apply_split_zone(vault_root, scenario, slug_source, pays_a_extraire, cible,
         return {"error": "cible.mode doit être 'nouvelle_zone_n1' ou 'zone_existante'"}
 
     if dry_run:
+        pays_zones_pays_json = _split_zone_in_zones_pays(
+            zones_pays_path, scenario, slug_source, pays_normalises,
+            cible_info["slug"], dry_run=True
+        )
         return {
             "source": {"slug": slug_source, "nom": source.get("nom"),
                        "origine_reelle_avant": origine, "origine_reelle_apres": restantes},
@@ -2187,6 +2275,7 @@ def _apply_split_zone(vault_root, scenario, slug_source, pays_a_extraire, cible,
             "enfants_qui_suivront": [{"slug": e.get("slug"), "nom": e.get("nom")} for e in enfants_a_suivre],
             "enfants_qui_restent": [{"slug": e.get("slug"), "nom": e.get("nom")} for e in enfants_restants],
             "cible": cible_info,
+            "pays_zones_pays_json": pays_zones_pays_json,
         }
 
     source["origine_reelle"] = restantes
@@ -2226,6 +2315,11 @@ def _apply_split_zone(vault_root, scenario, slug_source, pays_a_extraire, cible,
         new_body = body.rstrip("\n") + f"\n\n### {cible_info['nom']}\n{cible_info['description']}\n"
     geo_file.write_text("---\n" + new_fm + "---" + new_body, encoding="utf-8")
 
+    pays_zones_pays_json = _split_zone_in_zones_pays(
+        zones_pays_path, scenario, slug_source, pays_normalises,
+        cible_info["slug"], dry_run=False
+    )
+
     return {
         "ok": True,
         "slug_source": slug_source,
@@ -2234,6 +2328,7 @@ def _apply_split_zone(vault_root, scenario, slug_source, pays_a_extraire, cible,
         "cible": cible_info,
         "enfants_reparentes_automatiquement": [e.get("slug") for e in enfants_a_suivre],
         "enfants_restes_sous_source": [e.get("slug") for e in enfants_restants],
+        "pays_zones_pays_json_maj": pays_zones_pays_json,
     }
 
 

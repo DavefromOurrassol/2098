@@ -3,23 +3,28 @@
 scan_geographie_complet.py — Ourrassol 2098
 
 Orchestrateur : lance dans l'ordre check_zones_coherence.py,
-check_type_entite_coherence.py, check_origine_reelle_coherence.py et
-check_conventions_territoires.py, puis affiche un résumé consolidé.
+check_type_entite_coherence.py, check_origine_reelle_coherence.py,
+check_conventions_territoires.py et check_patron_spatial_coherence.py
+(P24 étape C.1, ajouté le 25 juillet), puis affiche un résumé consolidé.
 N'importe pas leur code -- chaque script reste indépendant, utilisable seul
 comme avant (entrée sidebar GUI intacte), ce script se contente de les
 appeler en sous-processus dans l'ordre où ils ont du sens : cohérence
-structurelle d'abord, puis le trou de données qui peut fausser les deux
+structurelle d'abord, puis le trou de données qui peut fausser les
 suivants (voir check_type_entite_coherence.py), puis le garde-fou fin
-zone-par-zone, puis l'audit cross-scénario des territoires ambigus (les
-deux derniers sont complémentaires, pas redondants : le garde-fou compare
-une zone à sa propre chaîne de parenté, l'audit compare le même territoire
-entre scénarios -- voir check_conventions_territoires.py).
+zone-par-zone, puis l'audit cross-scénario des territoires ambigus, puis
+enfin le contrôle de cohérence narrative patron spatial (les trois
+derniers sont complémentaires, pas redondants : le garde-fou compare une
+zone à sa propre chaîne de parenté, l'audit territoires compare le même
+territoire entre scénarios, le contrôle patron spatial compare une zone à
+la logique narrative de SON scénario -- voir check_patron_spatial_
+coherence.py pour le détail).
 
 N'écrit jamais rien dans le vault par défaut. --apply-type-entite propage
 le --apply de check_type_entite_coherence.py (backup .bak automatique, voir
 ce script) ; --resolve-llm et --write-zones-manquantes propagent les flags
-correspondants de check_origine_reelle_coherence.py. Chaque flag reste un
-geste explicite, comme dans les scripts sous-jacents.
+correspondants de check_origine_reelle_coherence.py ; --no-cache-patron-
+spatial propage --no-cache à check_patron_spatial_coherence.py. Chaque flag
+reste un geste explicite, comme dans les scripts sous-jacents.
 
 USAGE
 -----
@@ -59,7 +64,7 @@ def executer(script: str, args: list) -> str:
 
 
 def derniere_ligne_utile(sortie: str) -> str:
-    """Ligne de résumé -- par convention les 3 scripts terminent tous par
+    """Ligne de résumé -- par convention les scripts terminent tous par
     une bordure '===' puis une ligne "Terminé — ...", donc on cherche
     depuis la fin la dernière ligne contenant "Terminé" plutôt que la toute
     dernière ligne (qui est la bordure de fermeture, pas le résumé)."""
@@ -72,7 +77,7 @@ def derniere_ligne_utile(sortie: str) -> str:
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Lance les 3 scripts de diagnostic géographie en séquence, "
+        description="Lance les 5 scripts de diagnostic géographie en séquence, "
                      "avec résumé consolidé. Lecture seule sauf flags explicites."
     )
     group = parser.add_mutually_exclusive_group(required=True)
@@ -90,6 +95,15 @@ def main():
         "--write-zones-manquantes", action="store_true",
         help="Propage --write-zones-manquantes à check_origine_reelle_coherence.py."
     )
+    parser.add_argument(
+        "--no-cache-patron-spatial", action="store_true",
+        help="Propage --no-cache à check_patron_spatial_coherence.py (repaie l'appel LLM)."
+    )
+    parser.add_argument(
+        "--write-suspectes", action="store_true",
+        help="Propage --write-suspectes à check_patron_spatial_coherence.py (écrit les "
+             "nouvelles zones suspectes dans patron_spatial_suspectes.yaml)."
+    )
     args = parser.parse_args()
 
     if args.scenario and args.scenario not in SCENARIOS:
@@ -100,21 +114,21 @@ def main():
     cible = ["--all"] if args.all else ["--scenario", args.scenario]
 
     print("#" * 60)
-    print("  SCAN GÉOGRAPHIE COMPLET — 4 étapes")
+    print("  SCAN GÉOGRAPHIE COMPLET — 5 étapes")
     print("#" * 60)
 
     resumes = []
 
-    print("\n" + "▶" * 3 + " Étape 1/4 — check_zones_coherence.py")
+    print("\n" + "▶" * 3 + " Étape 1/5 — check_zones_coherence.py")
     sortie = executer("check_zones_coherence.py", cible)
     resumes.append(("check_zones_coherence.py", derniere_ligne_utile(sortie)))
 
-    print("\n" + "▶" * 3 + " Étape 2/4 — check_type_entite_coherence.py")
+    print("\n" + "▶" * 3 + " Étape 2/5 — check_type_entite_coherence.py")
     args_type_entite = cible + (["--apply"] if args.apply_type_entite else [])
     sortie = executer("check_type_entite_coherence.py", args_type_entite)
     resumes.append(("check_type_entite_coherence.py", derniere_ligne_utile(sortie)))
 
-    print("\n" + "▶" * 3 + " Étape 3/4 — check_origine_reelle_coherence.py")
+    print("\n" + "▶" * 3 + " Étape 3/5 — check_origine_reelle_coherence.py")
     args_origine = cible[:]
     if args.resolve_llm:
         args_origine.append("--resolve-llm")
@@ -123,12 +137,21 @@ def main():
     sortie = executer("check_origine_reelle_coherence.py", args_origine)
     resumes.append(("check_origine_reelle_coherence.py", derniere_ligne_utile(sortie)))
 
-    print("\n" + "▶" * 3 + " Étape 4/4 — check_conventions_territoires.py")
+    print("\n" + "▶" * 3 + " Étape 4/5 — check_conventions_territoires.py")
     if not args.all:
         print("  · N'a de sens qu'avec --all -- la notion de \"varie entre scénarios\" "
               "suppose plusieurs scénarios à comparer. Résultat ci-dessous non significatif.")
     sortie = executer("check_conventions_territoires.py", cible)
     resumes.append(("check_conventions_territoires.py", derniere_ligne_utile(sortie)))
+
+    print("\n" + "▶" * 3 + " Étape 5/5 — check_patron_spatial_coherence.py")
+    args_patron_spatial = cible[:]
+    if args.no_cache_patron_spatial:
+        args_patron_spatial.append("--no-cache")
+    if args.write_suspectes:
+        args_patron_spatial.append("--write-suspectes")
+    sortie = executer("check_patron_spatial_coherence.py", args_patron_spatial)
+    resumes.append(("check_patron_spatial_coherence.py", derniere_ligne_utile(sortie)))
 
     print("\n" + "#" * 60)
     print("  RÉSUMÉ CONSOLIDÉ")
@@ -143,6 +166,9 @@ def main():
     if not args.all:
         print("  · check_conventions_territoires.py non significatif en mode --scenario "
               "(relancer avec --all pour un vrai résultat)")
+    if not args.no_cache_patron_spatial:
+        print("  · check_patron_spatial_coherence.py a pu servir des résultats en cache "
+              "(relancer avec --no-cache-patron-spatial pour forcer un nouvel appel LLM)")
 
 
 if __name__ == "__main__":

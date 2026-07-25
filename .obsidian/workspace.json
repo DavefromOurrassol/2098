@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "documentation/GitHUB.md",
+                "file": "documentation/BACKLOG_CONSOLIDE.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "GitHUB"
+              "title": "BACKLOG_CONSOLIDE"
             }
           }
         ],
@@ -200,6 +200,7 @@
   },
   "active": "a55b90f7989d3ba4",
   "lastOpenFiles": [
+    "documentation/GitHUB.md",
     "documentation/BACKLOG_CONSOLIDE.md",
     "gui/logs/extract_phantom_slugs_20260714_155704.log",
     "generator/check_conventions_territoires.py",
@@ -218,7 +219,6 @@
     "documentation/HANDOFF_CONSOLIDE.md",
     "instances/conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability.md",
     "instances/les_passeurs_de_limites_new_sustainability.md",
-    "documentation/GitHUB.md",
     "documentation/Old/USER_MANUAL_COMPLET.md",
     "documentation/Old/HANDOFF_CONSOLIDE.md",
     "documentation/Old/BACKLOG_CONSOLIDE.md",

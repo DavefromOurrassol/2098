@@ -1,0 +1,81 @@
+{
+  "1153f62489817b4779220dabc869c1d1c2e07898b7215ecc38c156ae7296f74e": [
+    {
+      "raison": "Description mentionne des 'infrastructures institutionnelles denses' et une 'Confédération des Racines Vivantes', ce qui suggère une centralisation institutionnelle contraire à la logique de petites communautés autonomes et décentralisées.",
+      "slug": "europe_occidentale_reconstituee"
+    },
+    {
+      "raison": "Mention de villes comme Delhi et Mumbai devenant des 'hubs de gouvernance décentralisée' peut impliquer une centralisation résiduelle ou une taille incompatible avec la désurbanisation volontaire attendue.",
+      "slug": "inde_bassins_sacres"
+    },
+    {
+      "raison": "Tokyo décrite comme une 'mégalopole décentralisée en districts auto-suffisants' contredit la logique de désurbanisation volontaire et de petites communautés autonomes.",
+      "slug": "japon_archipel_resilient"
+    }
+  ],
+  "4d6b8e4729d89f110b1fa2381fd0b8ca6234c9ae178cb4c099d0d4cf0a7a8b9c": [
+    {
+      "raison": "Mention d'un 'Consortium Helios (énergie solaire orbitale)' contredit la logique frontalière du système (expansion spatiale limitée et robotique)",
+      "slug": "europe_occidentale_reconstructee"
+    },
+    {
+      "raison": "Présence d'une 'Fédération des Communs Territoriaux' et d'un 'Nouveau Parti Commun' suggère une innovation institutionnelle/sociale trop marquée pour le scénario conservateur",
+      "slug": "ameriques_multipolaires"
+    },
+    {
+      "raison": "Description d'une coalition contrôlée par des milices et régimes autoritaires survivants, en tension avec la multipolarité instable mais fonctionnelle du patron (conflits hybrides diffus, pas de zones en rupture totale)",
+      "slug": "bloc_persique_autonome"
+    }
+  ],
+  "7abdf40b4c3ef8fd45ffe0f978e4a539f865b817d1ff0bd7204c94b6ec473bb4": [
+    {
+      "raison": "Présence d'une institution supranationale résiduelle (Bureau de Coordination d'Urgence Climatique, Archives Neutres) revendiquant une légitimité juridique internationale, en contradiction avec l'absence attendue d'institution stable.",
+      "slug": "geneve_bunker_institutions"
+    }
+  ],
+  "7fcef67467a34b2944fb71189c518520410bed9c5dd4f52815e0e7a0c8104848": [
+    {
+      "raison": "Contradiction avec la logique géopolitique de gouvernance mondiale stabilisée et d'interconnexion institutionnelle forte, en affichant une résistance active aux modèles de transition écologique imposés par les centres institutionnels.",
+      "slug": "bloc_eurasien_souverainiste"
+    },
+    {
+      "raison": "Mention d'un conflit Israël-Iran en 2026, incompatible avec la réduction structurelle des tensions géopolitiques systémiques et les mécanismes robustes de prévention des conflits.",
+      "slug": "moyen_orient_golfe"
+    }
+  ],
+  "aab3b637cd55f2451e0ade407440529286091c3365865ac1225d5cd484f3095a": [
+    {
+      "raison": "Décrit comme un 'territoire autonome' précaire négociant avec des blocs, ce qui suggère une neutralité ou une zone intermédiaire non militarisée, en contradiction avec l'absence de zones neutres dans le patron 'fortress_world'.",
+      "slug": "amazonie_pacte_vert"
+    },
+    {
+      "raison": "Présenté comme un 'opérateur privé armé' gérant des corridors, ni bloc souverain ni zone dégradée, ce qui introduit une logique de neutralité commerciale et de transit non alignée sur le patron de blocs fermés militarisés.",
+      "slug": "espace_nordique_arctique"
+    },
+    {
+      "raison": "Décrit comme n'appartenant 'officiellement à aucun camp', ce qui contredit la logique de blocs fermés et de fragmentation binaire (enclave protégée vs hors-forteresse) du patron.",
+      "slug": "nuuk_forteresse"
+    },
+    {
+      "raison": "Mentionne une 'neutralité armée' et un rôle de 'hub financier et logistique pour les blocs dominants', ce qui suggère une zone intermédiaire ou neutre, en contradiction avec le patron.",
+      "slug": "singapour_megapole"
+    }
+  ],
+  "af6667985c8221aa9fc2c8d32b1e9e128dca27c0651eb1f41ab3a3d97cc47dd9": [
+    {
+      "raison": "Présence d'institutions internationales résiduelles revendiquant une continuité juridique, contredisant l'absence d'institution supranationale stable et la fragmentation en blocs rivaux.",
+      "slug": "geneve_bunker_institutions"
+    }
+  ],
+  "c3f7438c17a5bbd16c007e4fd6500435c39545074ef1e19578c04a22cf1b0e42": [],
+  "f0e4e504437b4b4fa4bf409461594aad752f7a2cf82f1235ef8003403d7b810c": [
+    {
+      "raison": "Contradiction avec la logique géopolitique de gouvernance mondiale stabilisée et d'interconnexion institutionnelle forte, en affichant une résistance active aux modèles de transition écologique imposés par les centres institutionnels.",
+      "slug": "bloc_eurasien_souverainiste"
+    },
+    {
+      "raison": "Absence de description, mais le nom et le type suggèrent une entité politique ou religieuse centralisée et potentiellement conflictuelle, incompatible avec le patron de gouvernance distribuée et stabilisée.",
+      "slug": "nouveau_califat_barcelone"
+    }
+  ]
+}

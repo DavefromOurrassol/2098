@@ -1,5 +1,5 @@
 # Manuel utilisateur complet — Pipeline Ourrassol 2098
-*Consolidé le 14 juillet 2026 — couvre `generator/` (39+ scripts Python) et `gui/` (Flask)*
+*Consolidé le 15 juillet 2026 — couvre `generator/` (39+ scripts Python) et `gui/` (Flask)*
 
 Ce manuel classe chaque script par rôle : **modules internes** (jamais lancés seuls), **orchestrateurs**, **pipeline entités/événements**, **pipeline géographie**, **validation**, **scripts one-shot/legacy**, et **GUI Flask**. Pour chaque script exécutable : ce qu'il fait, quand l'utiliser, options CLI, statut (répétable / one-shot / legacy), et intégration GUI ou non.
 
@@ -65,7 +65,7 @@ Ces fichiers sont importés par les scripts exécutables ; ils n'ont pas de `__m
 | `api.py` | Envoie le prompt au LLM configuré (tier `strict`, via `llm_client.py`) et sauvegarde l'article généré en `.md` dans `articles/`. Le champ `model:` du frontmatter reflète désormais le tier réellement résolu (`resolve_for_tier()`), pas une variable statique. |
 | `llm_client.py` | Abstraction unifiée Mistral/Claude/OpenAI. `LLM_PROVIDER`/`LLM_MODEL` (env, override manuel prioritaire). `TASK_TIER_DEFAULTS` + `resolve_for_tier(task_tier)` pour le routing par défaut. Exporte `call_llm(..., task_tier=...)`. |
 | `extract_state_logic.py` *(14 juillet)* | Parseur générique `variables/{variable}.md → states.{scenario}.state_logic`. Sanitise les clés wikilink Obsidian (`[[xxx]]`) des blocs `coupling_intensity` avant `yaml.safe_load` (sinon `unhashable key`). Utilisable en CLI (`--json`, `--scenario`) ou en import (`extract_state_logic(path)`). |
-| `patrons_spatiaux.py` *(14 juillet)* | Source de vérité du patron spatial par scénario, pour P24 (générateur top-down) et P22 signal 2 (garde-fou étendu). `state_logic`/`state_logic_complementaire` chargés dynamiquement depuis le vault à chaque import via `extract_state_logic.py` (jamais figés en dur) ; `patron_a_respecter`/`a_eviter` écrits à la main dans `_ANALYSE`, à revalider si un scénario change en profondeur. Config : `OURRASSOL_VAULT_ROOT` (env), sinon déduit de l'emplacement du fichier. **Pas encore consommé par aucun script du pipeline** — prêt, en attente. |
+| `patrons_spatiaux.py` *(14 juillet)* | Source de vérité du patron spatial par scénario, pour P24 (générateur top-down) et P22 signal 2 (garde-fou étendu). `state_logic`/`state_logic_complementaire` chargés dynamiquement depuis le vault à chaque import via `extract_state_logic.py` (jamais figés en dur) ; `patron_a_respecter`/`a_eviter` écrits à la main dans `_ANALYSE`, à revalider si un scénario change en profondeur. Config : `OURRASSOL_VAULT_ROOT` (env), sinon déduit de l'emplacement du fichier. **Consommé depuis le 15 juillet par `complete_geographie_coverage.py`** (P24 étape B, voir §4) via `patron_spatial_prompt_block()`. |
 
 ---
 
@@ -243,10 +243,14 @@ python3 enrich_geographie_recursive.py --dry-run
 
 ### `complete_geographie_coverage.py` 🔁 🧩 — **étape 3, workflow obligatoire review→apply**
 Garantit que chaque pays de `zones_pays.json` a une zone N1 dans chaque scénario. Pour chaque pays sans zone : le LLM choisit "absorber" (zone existante) ou "nouvelle_zone". Batch de 12 pays. Tier `structured_strict` — migré vers `llm_client.py` le 11 juillet (avait auparavant sa propre implémentation directe des SDK, hors routing/retry centralisé ; délai fixe de 8s entre batches retiré à la même occasion, rate limiting désormais purement réactif).
+
+**Garde-fou de patron spatial** *(15 juillet, P24 étape B)* : le prompt de proposition inclut désormais `patron_spatial_prompt_block(scenario)` (`patrons_spatiaux.py`, P24 étape A) — logique territoriale du scénario + patrons à respecter/éviter. Le LLM peut ajouter un champ optionnel `avertissement_patron_spatial` sur une affectation en cas de doute réel, visible dans `coverage_proposals_{scenario}.yaml` pour la validation manuelle ; jamais un motif de rejet automatique. Zéro coût LLM supplémentaire (même appel).
+
+**Écriture `zones_pays.json` immédiate** *(15 juillet)* : auparavant différée à la toute fin d'un traitement `--all`, désormais écrite juste après chaque scénario traité (`_write_zones_pays()`) — évite une désynchronisation si le script est interrompu en cours de route sur plusieurs scénarios.
 ```bash
 python3 complete_geographie_coverage.py --scenario NOM --review   # génère coverage_proposals_NOM.yaml, n'écrit rien
-# → valider dans VS Code, mettre valide:false sur les propositions incohérentes
-python3 complete_geographie_coverage.py --scenario NOM --apply    # écrit dans la fiche + zones_pays.json
+# → valider dans VS Code, mettre valide:false sur les propositions incohérentes ; un avertissement_patron_spatial n'est pas un rejet automatique
+python3 complete_geographie_coverage.py --scenario NOM --apply    # écrit dans la fiche + zones_pays.json (immédiatement)
 python3 complete_geographie_coverage.py --all [--dry-run]
 ```
 ⚠️ Ne jamais interrompre un run en cours. Ne jamais enchaîner `--apply` sur plusieurs scénarios sans relecture intermédiaire du fichier de propositions.
@@ -318,11 +322,11 @@ python3 check_type_entite_coherence.py --all --apply         # corrige, backup .
 État au 14 juillet : 0 entrée sans `type_entite` sur les 6 scénarios, après `--apply`.
 
 ### `check_conventions_territoires.py` 🔁 🗄️ — **diagnostic pur, lecture seule** *(14 juillet, P27)*
-Distinct de `check_origine_reelle_coherence.py` : au lieu de comparer une zone à sa chaîne de parenté, compare un même territoire ambigu (dépendance/collectivité, table `TERRITOIRES_AMBIGUS` à enrichir manuellement) **entre les 6 scénarios**. Vérifie la conformité à la convention décidée le 14 juillet : un territoire dépendant/autonome est toujours distinct de son pays souverain réel quand il apparaît dans un scénario. N'a de sens qu'avec `--all` (comparaison entre scénarios).
+Distinct de `check_origine_reelle_coherence.py` : au lieu de comparer une zone à sa chaîne de parenté, compare un même territoire ambigu (dépendance/collectivité, table `TERRITOIRES_AMBIGUS` à enrichir manuellement) **entre les 6 scénarios**. Vérifie la conformité à la convention décidée le 14 juillet : un territoire dépendant/autonome est toujours distinct de son pays souverain réel quand il apparaît dans un scénario — sauf exception narrative explicitement actée pour un scénario donné. N'a de sens qu'avec `--all` (comparaison entre scénarios).
 ```bash
 python3 check_conventions_territoires.py --all
 ```
-État au 14 juillet : 11 cas non conformes à séparer (Groenland ×3, Écosse ×3, Pays de Galles ×5) — voir P27 au backlog, à traiter avec le split de zone (§7).
+**P27 clos le 15 juillet.** Des 11 cas détectés le 14 juillet (Groenland ×3, Écosse ×3, Pays de Galles ×5) : 1 traité par split (Écosse/`breakdown`), 2 réglés par réaffectation directe ou déjà corrects (Groenland/`breakdown` et `eco_communalism`), 8 acceptés tels quels comme exceptions narratives (Royaume-Uni resté politiquement uni dans `breakdown` pour Angleterre+Galles, et entièrement dans `fortress_world`) ou décision explicite de clôture. Ce script continuera donc à signaler ces 8 cas comme "non conformes" à la convention générale — c'est attendu, pas un bug ni un oubli. Détail complet au backlog, P27.
 
 ### `scan_geographie_complet.py` 🔁 🗄️ — **orchestrateur** *(14 juillet)*
 Lance en séquence les 4 scripts de diagnostic géographie ci-dessus (`check_zones_coherence.py` → `check_type_entite_coherence.py` → `check_origine_reelle_coherence.py` → `check_conventions_territoires.py`), en sous-processus indépendants (pas d'import — un `sys.exit()` d'un script ne tue jamais les autres), résumé consolidé à la fin. Chaque script reste utilisable seul (entrée sidebar GUI intacte). Aucune écriture par défaut.
@@ -468,7 +472,11 @@ Trois opérations distinctes, toutes dans l'arbre des sous-zones (clic sur le no
 |---|---|---|---|
 | **Renommer** | ✏️ sur chaque zone N1 de la légende | Change `slug`/`nom`, propage vers enfants, wikilinks, `relations.allies/rivaux` (n'importe quelle zone du scénario), `instances/*.md`, `zones_pays.json` | 13 juillet |
 | **Déplacer** (reparent) | "↗️ déplacer" sur tout nœud non-racine de l'arbre | Bouge une zone **entière** (avec son sous-arbre) vers un nouveau parent. Recalcul du niveau en cascade si la profondeur change. Permet aussi de promouvoir en zone N1 autonome ou de créer une nouvelle zone N1 à la volée | 13 juillet |
-| **Scinder** (split) | "✂️ scinder" sur tout nœud ayant plus d'un pays dans son `origine_reelle` (racine incluse) | Extrait un ou plusieurs pays vers une nouvelle zone N1 ou une zone N1 existante, **sans bouger le reste de la zone source**. Les sous-zones dont la propre `origine_reelle` référence aussi le(s) pays extrait(s) suivent automatiquement (détecté, pas décidé manuellement) ; les autres restent en place | 14 juillet |
+| **Scinder** (split) | "✂️ scinder" sur tout nœud ayant plus d'un pays dans son `origine_reelle` (racine incluse) | Extrait un ou plusieurs pays vers une nouvelle zone N1 ou une zone N1 existante, **sans bouger le reste de la zone source**. Les sous-zones dont la propre `origine_reelle` référence aussi le(s) pays extrait(s) suivent automatiquement (détecté, pas décidé manuellement) ; les autres restent en place. Écrit aussi `zones_pays.json` depuis le correctif du 15 juillet (voir note ci-dessous) | 14 juillet |
+
+**Bug corrigé le 15 juillet** : jusque-là, split écrivait bien dans `geographie/{scenario}.md` mais jamais dans `zones_pays.json` (même angle mort que rename avant sa propre correction) — un split réussi côté données ne se reflétait donc pas sur la carte. Corrigé (`_split_zone_in_zones_pays()`), trouvé en traitant le premier vrai cas P27.
+
+**Limite du fond de carte, pas un bug** : même après le correctif ci-dessus, un territoire infra-national (Écosse, Pays de Galles...) ne peut **jamais** s'afficher avec une couleur différente de son pays souverain sur la carte — le fond Leaflet (`world.geo.json`) n'a qu'un seul polygone par pays reconnu par l'ONU, aucune subdivision. Si la carte ne semble pas refléter un split, vérifier `zones_pays.json` directement (`grep` ou `regenerate_zones_pays.py --dry-run`) plutôt que de chercher un bug dans le split.
 
 **Différence rename/reparent/split, en une phrase** : rename change juste le nom/slug d'une zone, reparent déplace une zone entière ailleurs, split coupe une zone en deux et n'en déplace qu'un morceau.
 

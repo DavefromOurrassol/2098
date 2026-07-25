@@ -1463,7 +1463,7 @@ zones:
   nom: Hanse Baltique Recomposée
   niveau: 2
   type: union_regionale
-  parent: arctique_nordark
+  parent: geneve_bunker_institutions
   origine_reelle:
   - entite: Pologne (côte baltique)
     type_entite: region_administrative
@@ -3672,7 +3672,7 @@ Cible des salves de missiles balistiques iraniens en représailles aux frappes i
 
 *Sources attestées : conflit_israel_iran_2026_breakdown*
 
-#### Hanse Baltique Recomposée — sous [[arctique_nordark]]
+#### Hanse Baltique Recomposée — sous [[geneve_bunker_institutions]]
 
 *union_regionale — niveau 2 — statut : stable*
 
