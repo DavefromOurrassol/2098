@@ -1,0 +1,56 @@
+propositions:
+- scenario: breakdown
+  raison: zone_suspecte
+  cible: geneve_bunker_institutions
+  issues:
+  - 'relation invalide retirée : rivaux=''bloc_IV'' (slug inexistant, sur ''geneve_bunker_institutions'')'
+  - 'relation invalide retirée : rivaux=''bloc_IX'' (slug inexistant, sur ''geneve_bunker_institutions'')'
+  valide: true
+  proposition:
+    slug: geneve_bunker_institutions
+    nom: Genève-Bunker (Nœud Institutionnel Résiduel)
+    niveau: 1
+    type: site_strategique
+    parent: null
+    origine_reelle:
+    - entite: Suisse
+      type_entite: pays
+      portion: null
+    - entite: Irlande
+      type_entite: pays
+      portion: null
+    - entite: Luxembourg
+      type_entite: pays
+      portion: null
+    - entite: Vatican
+      type_entite: pays
+      portion: null
+    - entite: Pologne
+      type_entite: pays
+      portion: null
+    description: 'Genève en 2098 est un site fortifié abritant les dernières archives
+      juridiques et climatiques de l''ère pré-effondrement, convoitées par les blocs
+      rivaux. Les structures institutionnelles ont été vidées de leur substance :
+      le BCUC n''est plus qu''une coquille disputée entre factions locales, les Archives
+      Neutres sont gérées par une milice privée sous contrat avec le Bloc IX, et le
+      CRRC n''existe plus que comme label fantôme utilisé pour légitimer des raids
+      sur les données. Aucun pouvoir supranational n''y subsiste, seulement des fragments
+      de légitimité instrumentalisables.'
+    statut: fragmenté
+    tensions_internes: Conflits permanents entre la milice archivistique du Bloc IX,
+      les mercenaires du Bloc IV chargés de la 'protection' des données, et des groupes
+      locaux tentant de monnayer l'accès aux archives. Les anciens fonctionnaires
+      survivent comme intermédiaires ou otages.
+    periode_transition: 2049-2071
+    evenement_transition: null
+    lieux_emblematiques: []
+    relations:
+      allies: []
+      rivaux:
+      - afrique_centrale_australe
+      - arc_eurasien_central
+    sources_attestees:
+    - agence_stabilisation_climatique_breakdown
+    - alliance_blocs_souverains_breakdown
+    - archives_neutres_de_geneve_breakdown
+    - conseil_regulation_ressources_breakdown

@@ -670,18 +670,19 @@ zones:
   - entite: Pologne
     type_entite: pays
     portion: null
-  description: Genève subsiste en 2098 comme lieu physique de survie des institutions
-    internationales fantômes — le Bureau de Coordination d'Urgence Climatique (vestige
-    de l'AMSC) dans une tour à moitié abandonnée, les Archives Neutres de Genève-Bunker
-    comme dernier référentiel de légitimité juridique internationale, et une délégation
-    du CRRC qui s'y est réinstallée en revendiquant la continuité juridique des accords
-    de Nairobi. Nœud archivistique et diplomatique sans pouvoir réel, mais dont les
-    archives sont convoitées par tous les blocs.
-  statut: en_declin
-  tensions_internes: Faction interne du BCUC milite pour dissoudre l'agence et redistribuer
-    les données en open source ; groupe de directeurs régionaux tente secrètement
-    de ressusciter l'AMSC sous forme autoritaire ; archivistes-juristes s'opposent
-    aux commandants de terrain sur la valeur des traités ABS.
+  description: 'Genève en 2098 est un site fortifié abritant les dernières archives
+    juridiques et climatiques de l''ère pré-effondrement, convoitées par les blocs
+    rivaux. Les structures institutionnelles ont été vidées de leur substance : le
+    BCUC n''est plus qu''une coquille disputée entre factions locales, les Archives
+    Neutres sont gérées par une milice privée sous contrat avec le Bloc IX, et le
+    CRRC n''existe plus que comme label fantôme utilisé pour légitimer des raids sur
+    les données. Aucun pouvoir supranational n''y subsiste, seulement des fragments
+    de légitimité instrumentalisables.'
+  statut: fragmenté
+  tensions_internes: Conflits permanents entre la milice archivistique du Bloc IX,
+    les mercenaires du Bloc IV chargés de la 'protection' des données, et des groupes
+    locaux tentant de monnayer l'accès aux archives. Les anciens fonctionnaires survivent
+    comme intermédiaires ou otages.
   periode_transition: 2049-2071
   evenement_transition: null
   lieux_emblematiques: []

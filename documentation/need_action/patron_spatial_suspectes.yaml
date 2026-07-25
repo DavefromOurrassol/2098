@@ -5,7 +5,7 @@ zones_suspectes:
     juridique, contredisant l'absence d'institution supranationale stable et la fragmentation
     en blocs rivaux.
   date_detection: '2026-07-25'
-  statut: a_traiter
+  statut: corrige_via_c2
 - scenario: fortress_world
   slug: amazonie_pacte_vert
   raison: Décrit comme un 'territoire autonome' précaire négociant avec des blocs,
