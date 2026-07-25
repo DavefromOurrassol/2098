@@ -2,39 +2,51 @@
 """
 generer_zones_topdown.py — Ourrassol 2098 (P24 étape C.3)
 
-CLI batch pour le générateur top-down (C.2, zoning_topdown.py) : détecte les
-cas à traiter (pays sans zone + zones suspectes non résolues), génère une
-proposition pour chacun, écrit un YAML de review, puis applique les
-propositions validées à la main. Même workflow --review/--apply que le
-reste du pipeline (coverage_proposals_{scenario}.yaml,
-zones_manquantes.yaml, etc.) : rien n'est jamais écrit dans le vault sans
-un passage humain explicite entre review et apply.
+CLI batch pour le générateur top-down (C.2, zoning_topdown.py) : génère une
+proposition pour chaque chantier éligible de chantiers_geographie.yaml
+(pays sans zone + zones suspectes non tranchées), l'attache à l'entrée
+correspondante, puis applique les propositions relues et approuvées.
 
-DEUX SOURCES DE CAS (P24 étape C, périmètre acté le 25 juillet -- les deux
-dès le départ) :
+MIGRATION CHANTIERS.PY (25 juillet 2026)
+-----------------------------------------
+Depuis cette date, ce script ne détecte plus rien lui-même et ne possède
+plus son propre fichier de review séparé -- il lit/écrit exclusivement via
+le module partagé chantiers.py (chantiers_geographie.yaml, UN SEUL fichier
+pour tout le pipeline géographie) :
 
-  1. Pays sans zone -- même détection que check_zones_coherence.py
-     (_pays_present, réutilisée par import). Un pays orphelin = une
-     proposition de zone niveau 1 générée de zéro. PAS de regroupement
-     automatique de plusieurs pays orphelins dans une même zone -- décision
-     éditoriale, à faire à la main en fusionnant deux entrées du YAML de
-     review si tu le souhaites.
+  - --review-topdown consomme chantiers.chantiers_eligibles(scenario,
+    type_=...) au lieu de détecter les pays orphelins en dur
+    (_pays_sans_zone(), supprimée) ou de lire patron_spatial_suspectes.yaml
+    (_zones_suspectes_eligibles(), supprimée). La proposition générée est
+    attachée à l'entrée existante via chantiers.mettre_a_jour_chantier(...,
+    proposition=..., date_proposition=...) -- PLUS de fichier
+    zones_proposees_topdown_{scenario}.yaml séparé.
+  - --apply-topdown consomme chantiers.chantiers_prets_a_appliquer()
+    (statut a_traiter + proposition non nulle + proposition_approuvee:
+    true) au lieu de lire un fichier de review avec valide: true. Après
+    application réussie, l'entrée passe à statut="traite" via
+    chantiers.mettre_a_jour_chantier(...).
 
-  2. Zones suspectes -- lues depuis patron_spatial_suspectes.yaml (C.1),
-     statut "a_traiter" OU "en_attente_c2" (ce dernier existait justement
-     pour "attendre que C.2 existe" -- maintenant que C.2/C.3 existent,
-     ces entrées deviennent éligibles). "accepte_tel_quel" et
-     "corrige_manuellement" restent définitivement exclus (déjà tranchés).
+CONSÉQUENCE IMPORTANTE : --review-topdown ne fait plus AUCUNE détection --
+il ne traite que ce qui existe déjà comme chantier dans
+chantiers_geographie.yaml. Lancer d'abord (avec --write-chantiers) :
+check_zones_coherence.py / check_origine_reelle_coherence.py (pays sans
+zone) et check_patron_spatial_coherence.py (zones suspectes) pour peupler
+les chantiers, PUIS ce script pour leur générer une proposition.
+
+La logique d'écriture elle-même (_appliquer_pays_sans_zone,
+_appliquer_zone_suspecte, l'appel à reparenter_sous_zones_orphelines.py)
+est INCHANGÉE -- seule la source de lecture/écriture des chantiers a
+changé. En particulier _appliquer_zone_suspecte ne touche plus
+patron_spatial_suspectes.yaml (le fichier legacy reste en lecture pour
+compat mais n'est plus jamais écrit par ce script) : la progression du
+statut de suivi passe intégralement par chantiers.py désormais.
 
 ÉCRITURE (--apply-topdown) : duplique consciemment la logique d'écriture
 de carte_creer_zone_niveau1()/zones_pays.json (gui/app.py) pour le cas
 pays_sans_zone -- generator/ et gui/ restent deux codebases séparées, sans
 import croisé (point de vigilance déjà établi pour _tokens_entite() dans
-app.py). Pour le cas zone_suspecte, écrit une modification en place
-(aucune route GUI équivalente n'existe encore) et met à jour le statut de
-l'entrée correspondante dans patron_spatial_suspectes.yaml vers
-"corrige_via_c2" (nouveau statut, distinct de "corrige_manuellement" --
-celui-ci est généré puis validé humainement, pas tapé à la main).
+app.py).
 
 USAGE
 -----
@@ -42,7 +54,9 @@ USAGE
     python3 generer_zones_topdown.py --review-topdown --all
     python3 generer_zones_topdown.py --review-topdown --all --source pays_sans_zone
     python3 generer_zones_topdown.py --review-topdown --all --source zones_suspectes
+    python3 generer_zones_topdown.py --review-topdown --all --force
     python3 generer_zones_topdown.py --apply-topdown --scenario new_sustainability
+    python3 generer_zones_topdown.py --apply-topdown --all
 """
 
 import argparse
@@ -52,29 +66,27 @@ from pathlib import Path
 
 import yaml
 
-from check_zones_coherence import _pays_present, ALIASES
 from zoning_topdown import generer_zone_topdown
 from reparenter_sous_zones_orphelines import reparenter_sous_zones_orphelines
+import chantiers
 
 SCRIPT_DIR = Path(__file__).parent
 VAULT_ROOT = SCRIPT_DIR.parent
 GEO_DIR = VAULT_ROOT / "geographie"
 GUI_DIR = VAULT_ROOT / "gui"
 ZONES_PAYS = GUI_DIR / "zones_pays.json"
-NEED_ACTION = VAULT_ROOT / "documentation" / "need_action"
-SUSPECTES_FILE = NEED_ACTION / "patron_spatial_suspectes.yaml"
 
 SCENARIOS = [
     "breakdown", "fortress_world", "new_sustainability",
     "eco_communalism", "policy_reform", "reference",
 ]
 
-STATUTS_ELIGIBLES_ZONE_SUSPECTE = {"a_traiter", "en_attente_c2"}
-STATUT_APRES_APPLY = "corrige_via_c2"
-
-
-def _review_file(scenario: str) -> Path:
-    return NEED_ACTION / f"zones_proposees_topdown_{scenario}.yaml"
+# Mapping argument CLI (pluriel, historique) -> valeur `type` de chantiers.py
+SOURCE_VERS_TYPES = {
+    "pays_sans_zone": ["pays_sans_zone"],
+    "zones_suspectes": ["zone_suspecte"],
+    "both": ["pays_sans_zone", "zone_suspecte"],
+}
 
 
 # ---------------------------------------------------------------------------
@@ -97,127 +109,80 @@ def _zones_n1(zones: list) -> list:
     return [z for z in zones if isinstance(z, dict) and z.get("niveau", 1) == 1]
 
 
-def _pays_sans_zone(scenario: str, pays_liste_original: list) -> list:
-    """Même définition que check_zones_coherence.py (étape 2 de son diagnostic) :
-    un pays est orphelin s'il n'apparaît dans AUCUNE zone, tous niveaux confondus."""
-    _, zones, _ = _lire_geo(scenario)
-    entites_toutes = [
-        o.get("entite", "") for z in zones
-        for o in (z.get("origine_reelle") or [])
-        if isinstance(o, dict) and o.get("entite")
-    ]
-    return [
-        p for p in pays_liste_original
-        if not _pays_present(p.lower().strip(), entites_toutes)
-    ]
-
-
-def _charger_suspectes() -> list:
-    if not SUSPECTES_FILE.exists():
-        return []
-    try:
-        data = yaml.safe_load(SUSPECTES_FILE.read_text(encoding="utf-8")) or {}
-    except yaml.YAMLError:
-        return []
-    return data.get("zones_suspectes") or []
-
-
-def _zones_suspectes_eligibles(scenario: str) -> list:
-    """Entrées de patron_spatial_suspectes.yaml pour ce scénario, statut éligible
-    (a_traiter ou en_attente_c2), avec la zone complète correspondante attachée
-    (None si la zone a disparu du vault depuis -- ignorée, pas plantée)."""
-    _, zones, _ = _lire_geo(scenario)
-    zones_par_slug = {z.get("slug"): z for z in _zones_n1(zones)}
-    resultat = []
-    for e in _charger_suspectes():
-        if e.get("scenario") != scenario:
-            continue
-        if e.get("statut") not in STATUTS_ELIGIBLES_ZONE_SUSPECTE:
-            continue
-        zone = zones_par_slug.get(e.get("slug"))
-        if zone is None:
-            print(f"  · {e.get('slug')!r} suivi dans patron_spatial_suspectes.yaml "
-                  f"mais introuvable dans {scenario} -- ignoré")
-            continue
-        resultat.append((e, zone))
-    return resultat
-
-
 # ---------------------------------------------------------------------------
 # --review-topdown
 # ---------------------------------------------------------------------------
 
-def reviewer_scenario(scenario: str, source: str) -> int:
+def reviewer_scenario(scenario: str, source: str, force: bool = False) -> int:
     print(f"\n=== {scenario} ===")
-    if not ZONES_PAYS.exists():
-        print(f"  ✗ {ZONES_PAYS} introuvable.")
-        return 0
-    zones_pays = json.loads(ZONES_PAYS.read_text(encoding="utf-8"))
-    pays_liste_original = zones_pays.get("pays_liste", [])
-
     try:
         _, zones, _ = _lire_geo(scenario)
     except (FileNotFoundError, ValueError) as e:
         print(f"  ✗ {e}")
         return 0
     zones_n1 = _zones_n1(zones)
+    zones_par_slug = {z.get("slug"): z for z in zones_n1}
 
-    entrees_yaml = []
+    generees = 0
+    for type_ in SOURCE_VERS_TYPES[source]:
+        label = "pays sans zone" if type_ == "pays_sans_zone" else "zone(s) suspecte(s)"
+        eligibles = chantiers.chantiers_eligibles(scenario=scenario, type_=type_)
 
-    if source in ("pays_sans_zone", "both"):
-        orphelins = _pays_sans_zone(scenario, pays_liste_original)
-        print(f"  · {len(orphelins)} pays sans zone")
-        for pays in orphelins:
-            print(f"    - génération pour {pays!r}...")
-            try:
-                proposition, issues = generer_zone_topdown(
-                    scenario, "pays_sans_zone", pays=[pays], zones_existantes=zones_n1,
-                )
-            except (ImportError, EnvironmentError, RuntimeError, ValueError) as e:
-                print(f"      ✗ échec de génération : {e}")
-                continue
-            entrees_yaml.append({
-                "scenario": scenario, "raison": "pays_sans_zone", "cible": pays,
-                "issues": issues, "valide": False, "proposition": proposition,
-            })
+        if not force:
+            deja_proposees = [c for c in eligibles if c.get("proposition") is not None]
+            if deja_proposees:
+                print(f"  · {len(deja_proposees)} chantier(s) {type_} déjà pourvu(s) d'une "
+                      f"proposition non approuvée -- pas régénéré(s) (--force pour écraser)")
+            eligibles = [c for c in eligibles if c.get("proposition") is None]
+
+        print(f"  · {len(eligibles)} {label} à traiter")
+
+        for c in eligibles:
+            cible = c["cible"]
+
+            if type_ == "pays_sans_zone":
+                print(f"    - génération pour {cible!r}...")
+                try:
+                    proposition, issues = generer_zone_topdown(
+                        scenario, "pays_sans_zone", pays=[cible], zones_existantes=zones_n1,
+                    )
+                except (ImportError, EnvironmentError, RuntimeError, ValueError) as e:
+                    print(f"      ✗ échec de génération : {e}")
+                    continue
+            else:
+                zone = zones_par_slug.get(cible)
+                if zone is None:
+                    print(f"    · {cible!r} suivi dans {chantiers.CHANTIERS_FILE.name} mais "
+                          f"introuvable dans {scenario} -- ignoré")
+                    continue
+                print(f"    - révision pour {cible!r}...")
+                try:
+                    proposition, issues = generer_zone_topdown(
+                        scenario, "zone_suspecte", zone_existante=zone,
+                        raison_suspicion=c.get("probleme", ""),
+                        zones_existantes=zones_n1,
+                    )
+                except (ImportError, EnvironmentError, RuntimeError, ValueError) as e:
+                    print(f"      ✗ échec de génération : {e}")
+                    continue
+
+            chantiers.mettre_a_jour_chantier(
+                scenario, cible,
+                proposition=proposition,
+                proposition_issues=issues,
+                proposition_approuvee=False,
+                date_proposition=chantiers.date.today().isoformat(),
+            )
+            generees += 1
             if issues:
                 print(f"      ⚠ {len(issues)} problème(s) de validation, à relire attentivement")
 
-    if source in ("zones_suspectes", "both"):
-        eligibles = _zones_suspectes_eligibles(scenario)
-        print(f"  · {len(eligibles)} zone(s) suspecte(s) éligible(s) (a_traiter/en_attente_c2)")
-        for entree_suivi, zone in eligibles:
-            print(f"    - révision pour {zone.get('slug')!r}...")
-            try:
-                proposition, issues = generer_zone_topdown(
-                    scenario, "zone_suspecte", zone_existante=zone,
-                    raison_suspicion=entree_suivi.get("raison", ""),
-                    zones_existantes=zones_n1,
-                )
-            except (ImportError, EnvironmentError, RuntimeError, ValueError) as e:
-                print(f"      ✗ échec de génération : {e}")
-                continue
-            entrees_yaml.append({
-                "scenario": scenario, "raison": "zone_suspecte", "cible": zone.get("slug"),
-                "issues": issues, "valide": False, "proposition": proposition,
-            })
-            if issues:
-                print(f"      ⚠ {len(issues)} problème(s) de validation, à relire attentivement")
-
-    if not entrees_yaml:
+    if not generees:
         print("  ✓ Rien à proposer")
-        return 0
-
-    review_file = _review_file(scenario)
-    review_file.parent.mkdir(parents=True, exist_ok=True)
-    review_file.write_text(
-        yaml.safe_dump({"propositions": entrees_yaml}, allow_unicode=True,
-                        sort_keys=False, default_flow_style=False),
-        encoding="utf-8",
-    )
-    print(f"  ✓ {len(entrees_yaml)} proposition(s) écrite(s) dans {review_file}")
-    print(f"    (valide: false par défaut -- relire et passer à true avant --apply-topdown)")
-    return len(entrees_yaml)
+    else:
+        print(f"  ✓ {generees} proposition(s) écrite(s) dans {chantiers.CHANTIERS_FILE.name} "
+              f"(proposition_approuvee: false -- relire et approuver avant --apply-topdown)")
+    return generees
 
 
 # ---------------------------------------------------------------------------
@@ -282,8 +247,10 @@ def _appliquer_zone_suspecte(scenario: str, proposition: dict) -> None:
     """Modifie EN PLACE la zone existante (mêmes champs que zoning_topdown.py
     autorise à réviser : description/type/statut/tensions_internes/relations --
     le reste vient déjà identique de la proposition, mais on ne réécrit que ce
-    qui a changé pour un diff minimal). Marque l'entrée correspondante dans
-    patron_spatial_suspectes.yaml comme "corrige_via_c2"."""
+    qui a changé pour un diff minimal). La progression du statut de suivi
+    (-> "traite") est déléguée à l'appelant via chantiers.mettre_a_jour_
+    chantier() depuis la migration du 25 juillet 2026 -- cette fonction ne
+    touche plus patron_spatial_suspectes.yaml."""
     fm, zones, geo_file = _lire_geo(scenario)
     slug = proposition["slug"]
     idx = next((i for i, z in enumerate(zones) if isinstance(z, dict) and z.get("slug") == slug), None)
@@ -304,47 +271,30 @@ def _appliquer_zone_suspecte(scenario: str, proposition: dict) -> None:
     parts = raw.split("---", 2)
     geo_file.write_text("---\n" + new_fm + "---" + parts[2], encoding="utf-8")
 
-    # Mise à jour du statut de suivi -- jamais un statut décidé par David
-    # (accepte_tel_quel/corrige_manuellement) n'est écrasé ici, seule une
-    # entrée a_traiter/en_attente_c2 (celle qu'on vient d'appliquer) progresse.
-    if SUSPECTES_FILE.exists():
-        data = yaml.safe_load(SUSPECTES_FILE.read_text(encoding="utf-8")) or {}
-        entrees = data.get("zones_suspectes") or []
-        for e in entrees:
-            if e.get("scenario") == scenario and e.get("slug") == slug:
-                e["statut"] = STATUT_APRES_APPLY
-        SUSPECTES_FILE.write_text(
-            yaml.safe_dump({"zones_suspectes": entrees}, allow_unicode=True,
-                            sort_keys=False, default_flow_style=False),
-            encoding="utf-8",
-        )
-        print(f"    ✓ statut mis à jour vers {STATUT_APRES_APPLY!r} dans {SUSPECTES_FILE.name}")
-
 
 def appliquer_scenario(scenario: str) -> int:
     print(f"\n=== {scenario} ===")
-    review_file = _review_file(scenario)
-    if not review_file.exists():
-        print(f"  · Aucun fichier de review ({review_file.name}) -- rien à appliquer")
-        return 0
-
-    data = yaml.safe_load(review_file.read_text(encoding="utf-8")) or {}
-    propositions = data.get("propositions") or []
-    a_appliquer = [p for p in propositions if p.get("valide")]
-    print(f"  · {len(a_appliquer)}/{len(propositions)} proposition(s) marquée(s) valide: true")
+    prets = chantiers.chantiers_prets_a_appliquer(scenario=scenario)
+    print(f"  · {len(prets)} chantier(s) prêt(s) à appliquer (proposition approuvée)")
 
     appliquees = 0
-    for p in a_appliquer:
-        cible = p.get("cible")
+    for c in prets:
+        cible = c["cible"]
+        type_ = c["type"]
+        proposition = c["proposition"]
         try:
-            if p["raison"] == "pays_sans_zone":
-                _appliquer_pays_sans_zone(scenario, p["proposition"])
+            if type_ == "pays_sans_zone":
+                _appliquer_pays_sans_zone(scenario, proposition)
             else:
-                _appliquer_zone_suspecte(scenario, p["proposition"])
-            print(f"  ✓ appliqué : {cible!r} ({p['raison']})")
+                _appliquer_zone_suspecte(scenario, proposition)
+            chantiers.mettre_a_jour_chantier(
+                scenario, cible, statut="traite",
+                date_traitement=chantiers.date.today().isoformat(),
+            )
+            print(f"  ✓ appliqué : {cible!r} ({type_}) -- chantier marqué 'traite'")
             appliquees += 1
         except ValueError as e:
-            print(f"  ✗ {cible!r} ({p['raison']}) : {e}")
+            print(f"  ✗ {cible!r} ({type_}) : {e}")
 
     return appliquees
 
@@ -356,9 +306,10 @@ def appliquer_scenario(scenario: str) -> int:
 def main():
     parser = argparse.ArgumentParser(
         description="CLI batch du générateur top-down (P24 étape C.3). "
-                     "--review-topdown génère un YAML de propositions (valide: false "
-                     "par défaut) ; --apply-topdown écrit dans le vault ce qui a été "
-                     "repassé à valide: true à la main."
+                     "--review-topdown génère une proposition pour chaque chantier "
+                     "éligible de chantiers_geographie.yaml (proposition_approuvee: false "
+                     "par défaut) ; --apply-topdown écrit dans le vault les chantiers "
+                     "repassés à proposition_approuvee: true à la main."
     )
     mode = parser.add_mutually_exclusive_group(required=True)
     mode.add_argument("--review-topdown", action="store_true")
@@ -369,6 +320,13 @@ def main():
     parser.add_argument(
         "--source", choices=["pays_sans_zone", "zones_suspectes", "both"], default="both",
         help="Limite --review-topdown à une seule source de cas (défaut : les deux).",
+    )
+    parser.add_argument(
+        "--force", action="store_true",
+        help="--review-topdown seulement : régénère aussi les propositions déjà "
+             "présentes mais pas encore approuvées. Sans ce flag, un chantier qui a "
+             "déjà une proposition en attente d'approbation n'est jamais retouché, "
+             "pour ne pas écraser une relecture/édition manuelle en cours.",
     )
     args = parser.parse_args()
 
@@ -387,14 +345,15 @@ def main():
     total = 0
     for s in scenarios:
         if args.review_topdown:
-            total += reviewer_scenario(s, args.source)
+            total += reviewer_scenario(s, args.source, args.force)
         else:
             total += appliquer_scenario(s)
 
     print("\n" + "=" * 60)
     if args.review_topdown:
-        print(f"  Terminé — {total} proposition(s) au total, écrites en YAML "
-              f"(valide: false), rien appliqué au vault.")
+        print(f"  Terminé — {total} proposition(s) au total, attachée(s) aux chantiers "
+              f"({chantiers.CHANTIERS_FILE.name}, proposition_approuvee: false), rien "
+              f"appliqué au vault.")
     else:
         print(f"  Terminé — {total} proposition(s) appliquée(s) au vault.")
     print("=" * 60)
