@@ -9,7 +9,6 @@ localisation:
   lieu: null
   type_lieu: null
   note: transnationale_sans_ancrage
-
 type_dans_scenario: réseau
 
 role_dans_scenario: >

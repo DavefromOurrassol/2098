@@ -20,6 +20,9 @@
 		},
 		{
 			"path": "../documentation"
+		},
+		{
+			"path": "../signaux_custom"
 		}
 	],
 	"settings": {}

@@ -4,6 +4,11 @@ type: instance
 slug: collectif_hackers_decroissance_infrastructure_breakdown
 entite: collectif_hackers_decroissance_infrastructure
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 statut: officialise_enrichi
 type_dans_scenario: réseau
 role_dans_scenario: 'Dans le scénario breakdown, ils accélèrent l''effondrement des
@@ -67,10 +72,6 @@ tensions_narratives: 'La contradiction fondamentale du Collectif est celle de to
   recruté par des seigneurs de guerre régionaux et chassé par les milices de protection
   des nœuds survivants.'
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: null
 ---
 
 # Collectif Hackers Décroissance-Infrastructure

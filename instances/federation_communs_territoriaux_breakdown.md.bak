@@ -8,9 +8,6 @@ localisation:
   zone: arc_sahelo_mediterraneen
   lieu: Ourrassol / Montbrun
   type_lieu: region
-  statut: review_manuelle
-  note: "Les mentions d'Ourrassol et du marché noir de Montbrun évoquent un ancrage dans le sud de la France ou l'arc sahélo-méditerranéen, mais l'entité est explicitement fragmentée en centaines de bassins locaux sans localisation unique claire."
-
 type_dans_scenario: institution
 
 role_dans_scenario: >

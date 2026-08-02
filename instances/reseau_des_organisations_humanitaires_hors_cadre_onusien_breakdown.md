@@ -4,6 +4,11 @@ type: instance
 slug: reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown
 entite: reseau_des_organisations_humanitaires_hors_cadre_onusien
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 statut: officialise_enrichi
 type_dans_scenario: réseau
 role_dans_scenario: 'Assure une continuité minimale de l''aide humanitaire là où les
@@ -71,10 +76,6 @@ tensions_narratives: Le Réseau est perpétuellement tiraillé entre l'impérati
   la cohésion du réseau et nourrit des fractures entre organisations aux idéologies
   divergentes.
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: null
 ---
 
 # Réseau des Organisations Humanitaires Hors Cadre Onusien

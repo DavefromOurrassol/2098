@@ -4,6 +4,10 @@ type: event_instance
 slug: election_parti_commun_americain_breakdown
 archetype: election_parti_commun_americain
 scenario: breakdown
+localisation:
+  zone: espace_nord_americain_fragmente
+  lieu: Philadelphia-Centrale
+  type_lieu: ville
 type_evenement: political_social
 portee: regionale
 date: 2055

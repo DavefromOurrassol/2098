@@ -81,14 +81,33 @@ def _id(scenario: str, cible: str) -> str:
     return f"{scenario}__{_slugifier(cible)}"
 
 
+class ChantiersCorrompuError(RuntimeError):
+    """Levée quand chantiers_geographie.yaml existe mais est illisible (YAML
+    invalide) -- distinct d'un fichier absent/vide, qui est un état normal."""
+
+
 def charger_chantiers() -> list:
-    """Retourne la liste brute des chantiers (lecture seule)."""
+    """Retourne la liste brute des chantiers (lecture seule).
+
+    Si le fichier existe mais que son contenu YAML est invalide, lève
+    ChantiersCorrompuError plutôt que de renvoyer une liste vide -- une
+    corruption ne doit JAMAIS être confondue avec "fichier absent/vide",
+    sous peine qu'un appel ultérieur à ajouter_chantier()/mettre_a_jour_
+    chantier() écrase silencieusement le fichier corrompu avec seulement
+    la nouvelle entrée, perdant tout le reste sans aucun message (bug
+    trouvé et corrigé le 25 juillet 2026, avant tout test sur le vault
+    réel). Un fichier corrompu doit être réparé à la main avant de
+    pouvoir écrire quoi que ce soit dedans."""
     if not CHANTIERS_FILE.exists():
         return []
     try:
         data = yaml.safe_load(CHANTIERS_FILE.read_text(encoding="utf-8")) or {}
-    except yaml.YAMLError:
-        return []
+    except yaml.YAMLError as e:
+        raise ChantiersCorrompuError(
+            f"{CHANTIERS_FILE} existe mais son contenu YAML est invalide -- "
+            f"refus de continuer pour ne pas risquer d'écraser les données "
+            f"existantes. Corriger le fichier à la main avant de relancer : {e}"
+        ) from e
     return data.get("chantiers") or []
 
 
@@ -175,12 +194,17 @@ def mettre_a_jour_chantier(scenario: str, cible: str, **champs) -> bool:
     return trouve
 
 
-def chantiers_prets_a_appliquer(scenario: str = None, type_: str = None) -> list:
+def chantiers_prets_a_appliquer(scenario: str = None, type_: str = None, cible: str = None) -> list:
     """
     Chantiers en statut `a_traiter`, avec une proposition générée ET
     approuvée (`proposition_approuvee: true`) -- c'est cette liste que
     consomme --apply-topdown (C.3) ou le bouton "Appliquer" du GUI. Une
     proposition générée mais pas encore approuvée n'apparaît jamais ici.
+
+    `cible` (ajouté le 1er août 2026) restreint à un seul chantier précis
+    (slug de zone ou nom de pays) -- utilisé par --apply-topdown --cible et
+    par /api/chantiers/appliquer côté GUI (id de chantier), pour appliquer
+    un chantier isolé plutôt que tout un scénario d'un coup.
     """
     resultat = [
         c for c in charger_chantiers()
@@ -191,6 +215,8 @@ def chantiers_prets_a_appliquer(scenario: str = None, type_: str = None) -> list
         resultat = [c for c in resultat if c.get("scenario") == scenario]
     if type_:
         resultat = [c for c in resultat if c.get("type") == type_]
+    if cible:
+        resultat = [c for c in resultat if c.get("cible") == cible]
     return resultat
 
 

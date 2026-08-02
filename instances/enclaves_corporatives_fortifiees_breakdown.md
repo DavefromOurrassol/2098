@@ -4,6 +4,10 @@ type: instance
 slug: enclaves_corporatives_fortifiees_breakdown
 entite: enclaves_corporatives_fortifiees
 scenario: breakdown
+localisation:
+  zone: afrique_de_louest_lagos_sahel
+  lieu: Lagos-Est
+  type_lieu: infrastructure
 statut: officialise_enrichi
 type_dans_scenario: organisation
 role_dans_scenario: 'Dans le scénario breakdown, incarnent la substitution des institutions
@@ -65,10 +69,6 @@ tensions_narratives: 'La légitimité des enclaves repose entièrement sur leur 
   Enfin, la concurrence entre enclaves rivales génère des guerres tarifaires et des
   raids de débauchage de personnel qualifié qui fragilisent l''ensemble de l''écosystème.'
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: null
 ---
 
 # Enclaves Corporatives Fortifiées

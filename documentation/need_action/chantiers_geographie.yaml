@@ -482,7 +482,7 @@ chantiers:
     contraire à la logique de petites communautés autonomes et décentralisées.
   source_diagnostic: patron_spatial
   date_detection: '2026-07-25'
-  statut: a_traiter
+  statut: traite
   proposition:
     slug: europe_occidentale_reconstituee
     nom: Europe Occidentale Reconstituée
@@ -585,9 +585,9 @@ chantiers:
     - voix_du_dehors_eco_communalism
     - arrestation_chris_van_derburgh_eco_communalism
     - effondrement_reseau_mondial_communication_eco_communalism
-  proposition_approuvee: false
+  proposition_approuvee: true
   date_proposition: null
-  date_traitement: null
+  date_traitement: '2026-08-01'
   proposition_issues: []
 - id: eco_communalism__inde_bassins_sacres
   scenario: eco_communalism
@@ -699,7 +699,7 @@ chantiers:
     résistance active à l'architecture de gouvernance technocratique mondiale.
   source_diagnostic: patron_spatial
   date_detection: '2026-07-25'
-  statut: a_traiter
+  statut: traite
   proposition:
     slug: bloc_souverainiste_non_signataire
     nom: Bloc Souverainiste Non-Signataire (Sud Global dissident)
@@ -817,9 +817,9 @@ chantiers:
     - collectifs_de_defense_hydrique_saheliens_policy_reform
     - front_des_souverainistes_energetiques_policy_reform
     - trame_bioclimatique_policy_reform
-  proposition_approuvee: false
+  proposition_approuvee: true
   date_proposition: null
-  date_traitement: null
+  date_traitement: '2026-07-26'
   proposition_issues: []
 - id: policy_reform__espace_eurasiatique
   scenario: policy_reform

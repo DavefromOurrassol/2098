@@ -8,7 +8,6 @@ localisation:
   zone: massif_central_cicatrices_vertes
   lieu: Massif Central — Cicatrices Vertes (plateau de Millevaches, ancienne Creuse)
   type_lieu: region
-
 type_dans_scenario: autre
 
 role_dans_scenario: >

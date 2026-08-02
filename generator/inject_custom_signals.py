@@ -183,6 +183,28 @@ def read_registre_text():
     return REGISTRE_PATH.read_text(encoding="utf-8")
 
 
+def _est_ligne_separateur(ligne: str) -> bool:
+    """
+    Détecte une ligne séparatrice de tableau markdown (`|---|---|` ou une
+    variante espacée/alignée comme `| --------- | --------- |`, produite
+    par certains éditeurs -- Obsidian notamment -- qui réalignent les
+    colonnes automatiquement). Corrige un bug trouvé le 26 juillet 2026 :
+    `line.startswith("|---")` ne matchait QUE le format compact -- une
+    section de registre_evenements.md reformatée avec des espaces (ex.
+    ## breakdown) faisait planter regenerate_registre() sur `table_start +
+    1` (table_start resté None), et faisait aussi silencieusement échouer
+    la détection de collision de fenêtre temporelle dans
+    parse_registre_table() pour cette même section (aucune erreur levée,
+    mais la vérification "fenêtre déjà utilisée" ne pouvait jamais se
+    déclencher pour cette section précise).
+    """
+    contenu = ligne.strip()
+    if not contenu.startswith("|"):
+        return False
+    interieur = contenu.replace("|", "")
+    return bool(interieur.strip()) and all(c in "-: \t" for c in interieur)
+
+
 def parse_registre_table(scen_body):
     """Parse les lignes '| type | date | source | variable(s) | pilote | evenement_cle |'
     (nouveau format 6 colonnes) d'une section de scénario, retourne une
@@ -190,7 +212,7 @@ def parse_registre_table(scen_body):
     rows = []
     table_started = False
     for line in scen_body.split("\n"):
-        if line.startswith("|---"):
+        if _est_ligne_separateur(line):
             table_started = True
             continue
         if table_started and line.startswith("|"):
@@ -288,6 +310,11 @@ RÈGLES DE FORMAT (calibrées sur le chantier section 7 -> section 12) :
 - Pas de fenêtre `date_bascule` strictement identique, pour le même
   scénario, à une fenêtre déjà utilisée par une AUTRE variable/signal —
   privilégier une fenêtre voisine mais distincte.
+- Le champ `scenarios` doit contenir EXACTEMENT ces 6 clés, jamais une
+  de plus : breakdown, fortress_world, new_sustainability,
+  eco_communalism, policy_reform, reference. Aucune autre clé n'est
+  valide -- en particulier, n'ajoute JAMAIS le nom de la variable cible
+  elle-même comme clé de `scenarios` (ce n'est pas un scénario).
 """
 
 
@@ -344,15 +371,150 @@ TÂCHE :
 Réponds UNIQUEMENT en JSON, sans aucun texte autour, format exact :
 {{"variables": ["slug1"], "categorie": "social", "signal_slug": "..."}}
 """
-    return call_claude_json(client, "Tu es un assistant de world-building.", user_content)
+    result = call_claude_json(client, "Tu es un assistant de world-building.", user_content)
+
+    # Fait respecter max_vars mécaniquement -- trouvé le 26 juillet 2026 :
+    # le LLM a retourné 3 variables alors que le plafond par défaut est 2,
+    # rien ne vérifiait la consigne du prompt après coup. Les variables
+    # imposées (hints) sont toujours conservées en premier, complétées par
+    # les suivantes proposées par le LLM dans l'ordre, jusqu'à max_vars.
+    variables = result.get("variables") or []
+    if len(variables) > max_vars:
+        ordonnees = [v for v in hints if v in variables] + [v for v in variables if v not in hints]
+        result["variables"] = ordonnees[:max_vars]
+
+    return result
+
+
+MOTS_VIDES_FR = {
+    "dans", "pour", "avec", "sans", "cette", "cette", "leurs", "leur",
+    "plus", "gros", "vers", "sont", "être", "avoir", "fait", "faits",
+    "tout", "tous", "toute", "toutes", "comme", "entre", "sous", "chez",
+    "depuis", "pendant", "après", "avant", "encore", "ainsi", "alors",
+    "donc", "mais", "aussi", "très", "peut", "peuvent", "doit", "doivent",
+    "cette", "cette", "monde", "mondial", "mondiale", "devient", "devenir",
+}
+
+
+def _mots_cles(texte: str) -> set:
+    """Extrait des mots-clés approximatifs d'un texte (mots de 5+ lettres,
+    hors mots vides courants) -- pas de la vraie recherche sémantique
+    (aucune infra d'embeddings ici), juste un repérage lexical grossier
+    pour retrouver des signaux existants qui parlent probablement du même
+    sujet."""
+    mots = re.findall(r"[a-zàâäéèêëïîôöùûüç]{5,}", texte.lower())
+    return {m for m in mots if m not in MOTS_VIDES_FR}
+
+
+def _signaux_thematiquement_proches(idea_text: str, section12: str, signal_slug: str = None) -> list:
+    """
+    Repère, par recours lexical (mots-clés partagés, pas de sémantique
+    réelle), les signaux DÉJÀ existants dans la section 12 qui parlent
+    probablement du même sujet que la nouvelle idée -- ex. une nouvelle
+    idée sur les "terres rares" en Norvège doit voir qu'un signal
+    "tensions_sur_terres_rares" existe déjà, pour que le LLM se positionne
+    explicitement par rapport à lui (cohérent, complémentaire, ou
+    contradiction à assumer) plutôt que de l'ignorer silencieusement --
+    jusqu'ici la section 12 n'était montrée que "pour le style", sans
+    consigne de cohérence thématique. Ajouté le 26 juillet 2026 suite à
+    une question de David sur le signal norvege_terres_rares_geopolitique
+    vs. tensions_sur_terres_rares (variable geopolitique_conflits).
+
+    `signal_slug` : exclut le signal en cours de génération de ses propres
+    résultats -- il partage toujours des mots-clés avec l'idée dont il est
+    issu, et ses éventuelles entrées sœurs (autres variables, même idée)
+    sont déjà couvertes séparément par `sibling_block`.
+
+    Retourne une liste de blocs texte "  - signal: xxx\\n    ..." bruts,
+    tels qu'ils apparaissent dans la section 12 -- pas reparsés en YAML,
+    pour rester robuste même si le YAML de la section a un souci de
+    formatage ponctuel (voir bug du 26 juillet sur les séparateurs de
+    tableau -- même prudence ici : mieux vaut afficher un extrait brut
+    que planter sur un YAML légèrement irrégulier).
+    """
+    mots_idee = _mots_cles(idea_text)
+    if not mots_idee:
+        return []
+
+    # Découpe grossière par entrée "  - signal: ..." (2 espaces d'indentation,
+    # cohérent avec le format écrit par ce même script -- voir FORMAT_RULES).
+    blocs = re.split(r"(?=^  - signal: )", section12, flags=re.M)
+    proches = []
+    for bloc in blocs:
+        if not bloc.strip().startswith("- signal:"):
+            continue
+        if signal_slug and bloc.strip() == f"- signal: {signal_slug}" or \
+           (signal_slug and bloc.strip().startswith(f"- signal: {signal_slug}\n")):
+            continue
+        mots_bloc = _mots_cles(bloc)
+        if mots_idee & mots_bloc:
+            proches.append(bloc.strip())
+    return proches
 
 
 def step2_develop(client, idea_text, source, variable_slug, signal_slug, categorie,
-                   registre_text, previous=None, issues=None, sibling_events=None):
+                   registre_text, previous=None, issues=None, sibling_events=None,
+                   zone_hint=None):
     content = read_variable_file(variable_slug)
     section7 = extract_section(content, 7, 8)
     section8 = extract_section(content, 8, 9)
     section12 = extract_section(content, 12, None)
+
+    # Ancrage géographique optionnel -- ajouté le 26 juillet 2026, RECONÇU
+    # le même jour suite à un échange avec David : la première version
+    # utilisait un slug de zone 2098 (widget `zones_hier`, même que
+    # inject_custom_events.py), mais une zone 2098 est par nature propre à
+    # UN SEUL scénario (nom narratif, découpage différent d'un scénario à
+    # l'autre) -- aucune garantie de correspondance dans les 5 autres, et
+    # le sélecteur GUI ne pouvait de toute façon afficher que les zones du
+    # scénario par défaut de la Config, pas un choix pertinent pour un
+    # signal qui couvre toujours les 6 scénarios en un seul appel.
+    #
+    # Reconçu en champ TEXTE LIBRE pour un lieu réel de 2026 (pays, région,
+    # ville) plutôt qu'un slug de zone 2098 : contrairement à une zone
+    # narrative, un pays réel existe à l'identique dans les 6 scénarios --
+    # seule son appartenance à tel ou tel bloc/zone change. Le LLM voit déjà
+    # la section 8 (state_logic par scénario) dans le prompt : avec un lieu
+    # réel plutôt qu'un slug figé, il peut raisonner lui-même à quelle
+    # zone/bloc ce lieu correspond dans CHAQUE scénario, au lieu de devoir
+    # deviner ce que représente un slug hors-contexte.
+    zone_hint_txt = ""
+    if zone_hint:
+        zone_hint_txt = (
+            f"\nAncrage géographique souhaité par l'utilisateur : **{zone_hint}** "
+            f"(lieu réel de 2026 -- pays, région ou ville, PAS un slug de zone "
+            f"2098). Pour chacun des 6 scénarios, identifie toi-même à quelle "
+            f"zone/bloc ce lieu correspond aujourd'hui dans ce scénario précis "
+            f"(section 8 ci-dessous) et utilise cette zone comme contexte "
+            f"géographique principal des `evenement_cle` -- la correspondance "
+            f"peut légitimement différer d'un scénario à l'autre (un même pays "
+            f"n'appartient pas forcément au même bloc partout).\n"
+            f"\n⚠️ VÉRIFICATION DE COHÉRENCE OBLIGATOIRE avant de rédiger : "
+            f"compare cet ancrage à l'idée source ci-dessus -- si l'idée "
+            f"mentionne elle-même un lieu différent de '{zone_hint}', les deux "
+            f"ne peuvent pas être vrais en même temps. Dans ce cas, privilégie "
+            f"le lieu mentionné explicitement dans l'idée source (c'est "
+            f"l'intention la plus sûre de l'utilisateur) et ignore '{zone_hint}' "
+            f"plutôt que d'essayer de concilier les deux artificiellement.\n"
+        )
+
+    proches = _signaux_thematiquement_proches(idea_text, section12, signal_slug)
+    proches_block = ""
+    if proches:
+        proches_txt = "\n\n".join(proches[:3])  # 3 max -- pas noyer le prompt
+        proches_block = f"""
+--- ⚠️ SIGNAUX EXISTANTS PROBABLEMENT SUR LE MÊME SUJET (repérage par mots-clés, à vérifier toi-même) ---
+{proches_txt}
+
+Positionne explicitement ton nouveau signal par rapport à ceux-ci :
+- s'ils décrivent le même phénomène à un autre endroit/échelle, assume-le
+  comme complémentaire (ex: deux foyers de tension distincts d'une même
+  dynamique mondiale) plutôt que de l'ignorer,
+- si ton idée modifie la logique de fond de ces signaux existants (ex: un
+  acteur devient dominant, réduisant l'enjeu ailleurs), reflète cette
+  tension ou ce changement dans `evolution` plutôt que de raconter une
+  histoire parallèle qui les contredit silencieusement.
+"""
 
     if previous is None:
         task = f"""TÂCHE : rédige le bloc YAML `signal_to_state` pour ce signal,
@@ -368,11 +530,26 @@ Voici le bloc précédent :
 {previous}
 
 TÂCHE : corrige UNIQUEMENT les points listés ci-dessus, en gardant le
-reste identique autant que possible. Si un point concerne un
-`evenement_cle` "déjà présent dans le registre", n'essaie PAS de le
-reformuler légèrement (changer un mot) : invente un événement RÉELLEMENT
-différent (autre lieu, autre acteur, autre nature de fait) pour ce
-scénario, tout en restant cohérent avec le `state_logic` de la section 8.
+reste identique autant que possible.
+- Si un point concerne un `evenement_cle` "déjà présent dans le registre",
+  n'essaie PAS de le reformuler légèrement (changer un mot) : invente un
+  événement RÉELLEMENT différent (autre lieu, autre acteur, autre nature
+  de fait) pour ce scénario, tout en restant cohérent avec le
+  `state_logic` de la section 8.
+- Si un point concerne un nombre de mots hors de la fourchette 4-11,
+  ne te contente pas de retirer un mot : reformule la phrase en gardant
+  seulement le fait central (acteur + action + lieu/cible + année) et
+  en supprimant les qualificatifs, compléments de manière ou noms
+  d'institution à rallonge. Un evenement_cle court et concret ("Oslo
+  bloque l'accès au port de Narvik 2049") vaut mieux qu'une version
+  complète mais verbeuse ("Oslo impose un blocus stratégique sur les
+  exportations minières via le port de Narvik 2049").
+- Si un point concerne un "Scénario inconnu", supprime purement et
+  simplement cette clé en trop -- `scenarios` ne doit contenir QUE les
+  6 clés valides (breakdown, fortress_world, new_sustainability,
+  eco_communalism, policy_reform, reference), rien d'autre. Vérifie en
+  particulier que tu n'as pas ajouté le nom de la variable cible
+  elle-même comme clé.
 """
 
     sibling_block = ""
@@ -399,7 +576,7 @@ concrète — plutôt qu'une reformulation du même événement.
 Variable cible : {variable_slug}
 Catégorie : {categorie}
 Identifiant du signal : {signal_slug}
-
+{zone_hint_txt}
 {FORMAT_RULES}
 
 --- SECTION 7 actuelle (signaux faibles existants) ---
@@ -413,6 +590,7 @@ Identifiant du signal : {signal_slug}
 
 --- EXTRAIT DU REGISTRE DES ÉVÉNEMENTS (anti-collision) ---
 {registre_text}
+{proches_block}
 {sibling_block}
 {task}
 
@@ -422,8 +600,16 @@ indentée comme les entrées existantes de la section 12, commençant par
 "  - signal: {signal_slug}") :
 {{
   "signal_to_state_yaml": "  - signal: {signal_slug}\\n    scenarios:\\n      breakdown:\\n        evolution: ...\\n        date_bascule: AAAA-AAAA\\n        evenement_cle: ... AAAA\\n      ...",
-  "section7_annotation": "- description courte du signal (→ signal_custom: {signal_slug}, source: {source})"
+  "section7_annotation": "- description courte du signal (→ signal_custom: {signal_slug}, source: {source})",
+  "signaux_existants_consideres": "Explique en 1-3 phrases si un signal déjà présent en section 12 traite d'un sujet proche, et comment tu t'es positionné par rapport à lui (complémentaire / conséquence / tension assumée). Si aucun signal existant proche n'a été identifié, dis-le explicitement (ex: 'Aucun signal existant sur un sujet proche identifié.') -- ce champ est obligatoire même en l'absence de recoupement, pour que le choix (ou l'absence de choix à faire) reste vérifiable a posteriori plutôt que silencieux."
 }}
+
+IMPORTANT sur "section7_annotation" : le texte "signal_custom: " (avec les
+deux-points) doit apparaître MOT POUR MOT juste avant "{signal_slug}" --
+n'écris jamais juste "(→ {signal_slug}, source: ...)" en sautant ce
+préfixe, même si ça semble redondant. C'est ce texte exact qui permet de
+retrouver et retirer cette ligne proprement si le signal est annulé plus
+tard.
 """
     return call_claude_json(client, "Tu es un assistant de world-building.", user_content, max_tokens=4000)
 
@@ -498,10 +684,17 @@ def validate_signal_block(yaml_text, signal_slug, variable_slug, registre_text):
                 )
 
         if date_bascule in existing_windows.get(scen, set()):
-            issues.append(
-                f"[{scen}] fenêtre {date_bascule} déjà utilisée par un "
-                f"autre signal de {variable_slug} dans le registre."
-            )
+            # Volontairement un AVERTISSEMENT, pas un blocage (changé le 26
+            # juillet 2026, à la demande de David) : le registre existe pour
+            # "éviter les collisions de noms/dates/lieux" (doublons
+            # accidentels), pas pour interdire à deux signaux réellement
+            # indépendants de coexister sur la même fenêtre -- rien
+            # n'empêche narrativement deux causes distinctes de coïncider
+            # dans le temps pour la même variable. Reste visible dans le
+            # rapport pour vérification humaine si besoin, mais ne consomme
+            # plus un essai de correction pour rien.
+            print(f"  ⚠ [avertissement, non bloquant] [{scen}] fenêtre {date_bascule} "
+                  f"déjà utilisée par un autre signal de {variable_slug} dans le registre.")
         new_windows_by_scen.setdefault(date_bascule, []).append(scen)
 
         if evenement.strip().lower() in all_events:
@@ -604,9 +797,22 @@ def regenerate_registre(variable_slug, signal_slug, entry, pilote):
         lines = body.split("\n")
         table_start = None
         for idx, l in enumerate(lines):
-            if l.startswith("|---"):
+            if _est_ligne_separateur(l):
                 table_start = idx
                 break
+
+        # Filet de sécurité : si aucune ligne séparatrice n'est trouvée
+        # malgré la détection robuste ci-dessus (section vraiment sans
+        # tableau, cas jamais rencontré jusqu'ici mais pas impossible),
+        # on ne plante plus avec `None + 1` -- on signale clairement le
+        # scénario fautif plutôt que de laisser une TypeError opaque
+        # remonter jusqu'à needs_review.yaml sans dire où chercher.
+        if table_start is None:
+            raise ValueError(
+                f"regenerate_registre : aucune ligne séparatrice de tableau "
+                f"trouvée dans la section '## {scen}' de {REGISTRE_PATH.name} -- "
+                f"vérifier manuellement le format de cette section."
+            )
 
         rows = []
         end_idx = len(lines)
@@ -653,6 +859,14 @@ def regenerate_registre(variable_slug, signal_slug, entry, pilote):
         ),
         new_content,
     )
+    REGISTRE_PATH.parent.mkdir(parents=True, exist_ok=True)
+    if REGISTRE_PATH.exists():
+        # Sauvegarde manquante jusqu'ici -- ajoutée le 26 juillet 2026,
+        # même convention que le reste du pipeline (check_zones_coherence.py,
+        # generer_zones_topdown.py, etc.) : jamais écraser un fichier du
+        # vault sans un .bak avant, même pour une écriture "de confiance".
+        bak = REGISTRE_PATH.with_suffix(REGISTRE_PATH.suffix + ".bak")
+        bak.write_text(REGISTRE_PATH.read_text(encoding="utf-8"), encoding="utf-8")
     REGISTRE_PATH.write_text(new_content, encoding="utf-8")
 
 
@@ -660,9 +874,24 @@ def regenerate_registre(variable_slug, signal_slug, entry, pilote):
 # Fiche d'audit signaux_custom/
 # ---------------------------------------------------------------------------
 
-def write_custom_fiche(signal_slug, idea_text, source, variables, categorie, yaml_text):
+def write_custom_fiche(signal_slug, idea_text, source, variables, categorie, yaml_text,
+                        notes_coherence=None):
     SIGNAUX_CUSTOM_DIR.mkdir(parents=True, exist_ok=True)
     path = SIGNAUX_CUSTOM_DIR / f"{signal_slug}.md"
+
+    # Section "cohérence" -- ajoutée le 26 juillet 2026 (option B) : rend
+    # vérifiable a posteriori si le LLM a repéré un signal existant sur le
+    # même sujet et comment il s'est positionné, au lieu de rester une
+    # étape silencieuse du prompt. Une note par variable, puisque la
+    # section 12 diffère d'une fiche variable à l'autre.
+    coherence_block = ""
+    if notes_coherence:
+        lignes = "\n".join(
+            f"- **{var}** : {note}" for var, note in notes_coherence.items() if note
+        )
+        if lignes:
+            coherence_block = f"\n## Cohérence avec les signaux existants\n\n{lignes}\n"
+
     content = f"""---
 slug: {signal_slug}
 source: {source}
@@ -674,7 +903,7 @@ statut: injected
 ## Idée source
 
 {idea_text.strip()}
-
+{coherence_block}
 ## Trajectoire injectée
 
 ```yaml
@@ -718,6 +947,7 @@ def process_idea(client, idea, dry_run=False):
     source = idea.get("source", "actualite")
     variable_hint = idea.get("variable_hint")
     variable_hint_count = idea.get("variable_hint_count")
+    zone_hint = idea.get("zone_hint") or None
 
     print(f"\n=== {idea_id} ===")
     print("[1/4] Sélection de variable(s)...")
@@ -740,7 +970,7 @@ def process_idea(client, idea, dry_run=False):
         previous, issues = None, None
         develop = step2_develop(
             client, idea_text, source, variable_slug, signal_slug, categorie,
-            registre_text, sibling_events=sibling_events,
+            registre_text, sibling_events=sibling_events, zone_hint=zone_hint,
         )
 
         for attempt in range(MAX_FIX_ATTEMPTS + 1):
@@ -756,7 +986,7 @@ def process_idea(client, idea, dry_run=False):
                 develop = step2_develop(
                     client, idea_text, source, variable_slug, signal_slug, categorie,
                     registre_text, previous=yaml_text, issues=issues,
-                    sibling_events=sibling_events,
+                    sibling_events=sibling_events, zone_hint=zone_hint,
                 )
 
         if issues:
@@ -764,6 +994,7 @@ def process_idea(client, idea, dry_run=False):
                 "variable": variable_slug, "status": "needs_review",
                 "issues": issues, "yaml_text": yaml_text,
                 "annotation": develop["section7_annotation"],
+                "signaux_existants_consideres": develop.get("signaux_existants_consideres", ""),
             })
             continue
 
@@ -789,15 +1020,20 @@ def process_idea(client, idea, dry_run=False):
             sibling_events[scen] = data["evenement_cle"]
 
         results.append({"variable": variable_slug, "status": "injected",
-                         "yaml_text": yaml_text})
+                         "yaml_text": yaml_text,
+                         "signaux_existants_consideres": develop.get("signaux_existants_consideres", "")})
 
     if not dry_run:
         injected_yaml = "\n".join(
             r["yaml_text"] for r in results if r["status"] == "injected"
         )
         if injected_yaml:
+            notes_coherence = {
+                r["variable"]: r.get("signaux_existants_consideres", "")
+                for r in results if r["status"] == "injected"
+            }
             write_custom_fiche(signal_slug, idea_text, source, variables, categorie,
-                                injected_yaml)
+                                injected_yaml, notes_coherence)
 
     overall = "needs_review" if any(r["status"] != "injected" for r in results) else "injected"
     return {"status": overall, "idea": idea, "selection": selection, "results": results}
@@ -832,6 +1068,15 @@ QUEUE_TEMPLATE = """\
 #                         variables que le LLM peut retourner (hint(s) inclus).
 #                         Par défaut : 2. Monte à 3-4 si tu penses que le signal
 #                         est vraiment structurant entre plusieurs domaines.
+#   zone_hint           : optionnel. Un LIEU RÉEL de 2026 (pays, région, ville --
+#                         ex: "Norvège"), PAS un slug de zone 2098. Le LLM
+#                         retrouve lui-même à quelle zone/bloc ce lieu
+#                         correspond dans chacun des 6 scénarios (la
+#                         correspondance peut différer d'un scénario à
+#                         l'autre). Influence la rédaction des
+#                         evenement_cle/evolution -- si l'idée source
+#                         mentionne elle-même un lieu différent, celui-ci
+#                         est prioritaire sur zone_hint.
 #
 # EXEMPLES :
 #   - id: mon_signal_2026

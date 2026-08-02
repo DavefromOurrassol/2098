@@ -8,7 +8,6 @@ localisation:
   zone: autorite_passage_arctique
   lieu: Tromsø, siège de l'Autorité du Passage Arctique
   type_lieu: infrastructure
-
 type_dans_scenario: institution
 
 role_dans_scenario: >

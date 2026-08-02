@@ -8,7 +8,6 @@ localisation:
   zone: archives_neutres_geneve
   lieu: Archives Neutres de Genève (sous-sols du Palais des Nations)
   type_lieu: infrastructure
-
 type_dans_scenario: institution
 
 role_dans_scenario: >

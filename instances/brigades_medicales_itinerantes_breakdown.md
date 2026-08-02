@@ -4,6 +4,11 @@ type: instance
 slug: brigades_medicales_itinerantes_breakdown
 entite: brigades_medicales_itinerantes
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 statut: officialise_enrichi
 type_dans_scenario: organisation
 role_dans_scenario: 'Dans un contexte de breakdown, elles constituent l''un des derniers
@@ -68,10 +73,6 @@ tensions_narratives: 'Les Brigades oscillent en permanence entre neutralité rev
   pourquoi — est devenue, dans plusieurs zones de conflit, une question politique
   explosive.'
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: null
 ---
 
 # Brigades Médicales Itinérantes

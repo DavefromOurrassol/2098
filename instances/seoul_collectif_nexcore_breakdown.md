@@ -8,7 +8,6 @@ localisation:
   zone: seoul_collectif_nexcore
   lieu: Séoul (districts de Nowon et Dobong)
   type_lieu: ville
-
 type_dans_scenario: organisation
 
 role_dans_scenario: >

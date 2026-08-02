@@ -4,6 +4,10 @@ type: instance
 slug: enclaves_industrielles_du_corridor_oural_caspien_breakdown
 entite: enclaves_industrielles_du_corridor_oural_caspien
 scenario: breakdown
+localisation:
+  zone: corridor_oural_caspien
+  lieu: Corridor Oural-Caspien
+  type_lieu: region
 statut: officialise_enrichi
 type_dans_scenario: organisation
 role_dans_scenario: 'Dans le scénario breakdown, les Enclaves Industrielles du Corridor
@@ -70,10 +74,6 @@ tensions_narratives: 'Les Enclaves sont prisonnières de leur propre valeur : le
   extérieur risque de transformer l''enclave en vassale d''un seigneur de guerre plutôt
   qu''en nœud productif indépendant.'
 date_creation: 2026-06-20
-localisation:
-  zone: corridor_oural_caspien
-  lieu: Corridor Oural-Caspien
-  type_lieu: region
 ---
 
 # Enclaves Industrielles du Corridor Oural-Caspien

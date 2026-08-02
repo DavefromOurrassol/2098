@@ -66,9 +66,15 @@ def _stats_articles(vault_root: Path) -> dict:
             total += 1
             sc_m = sc_pat.search(txt)
             sc   = sc_m.group(1).strip() if sc_m else "inconnu"
+            if not sc:
+                # même bug que _stats_instances (voir §1.6 du backlog) —
+                # corrigé le 2 août 2026 par symétrie, préventivement.
+                sc = "inconnu"
             by_scenario[sc] = by_scenario.get(sc, 0) + 1
             ligne_m = ligne_pat.search(txt)
             ligne   = ligne_m.group(1).strip() if ligne_m else "inconnu"
+            if not ligne:
+                ligne = "inconnu"
             by_ligne[ligne] = by_ligne.get(ligne, 0) + 1
         except Exception:
             continue
@@ -83,11 +89,24 @@ def _stats_instances(vault_root: Path) -> dict:
     by_scenario: dict = {}
     sc_pat = re.compile(r"^scenario:\s*(.+)$", re.MULTILINE)
     for f in instances_dir.glob("*.md"):
+        if f.name == "instance_template.md":
+            # Le gabarit vit dans instances/ (comme toutes les vraies fiches)
+            # et était compté comme une 711e instance, avec "scenario:
+            # <slug_scenario>" jamais rempli — d'où l'entrée fantôme
+            # affichée " : 1" dans le dashboard (le navigateur avale la
+            # balise <slug_scenario> comme du HTML non échappé). Même
+            # filtre déjà appliqué dans officialize_alliances.py — corrigé
+            # ici aussi le 2 août 2026.
+            continue
         try:
             txt = f.read_text(encoding="utf-8")
             total += 1
             sc_m = sc_pat.search(txt)
             sc   = sc_m.group(1).strip() if sc_m else "inconnu"
+            if not sc:
+                # Garde-fou défensif supplémentaire (cas différent : une
+                # vraie fiche avec "scenario:" présent mais vide/espaces).
+                sc = "inconnu"
             by_scenario[sc] = by_scenario.get(sc, 0) + 1
         except Exception:
             continue
@@ -158,6 +177,11 @@ def _stats_enrichissement(vault_root: Path) -> dict:
     minimal = enrichi = autre = 0
     status_pat = re.compile(r"^statut:\s*(.+)$", re.MULTILINE)
     for f in instances_dir.glob("*.md"):
+        if f.name == "instance_template.md":
+            # Même pollution que _stats_instances() ci-dessus : le gabarit
+            # n'a pas de champ "statut:", il tombait donc dans "autre".
+            # Corrigé le 2 août 2026.
+            continue
         try:
             txt = f.read_text(encoding="utf-8")
             m = status_pat.search(txt)
@@ -222,7 +246,12 @@ def _stats_zones(pipeline_dir: Path, scenarios: list) -> dict:
 
 def _count_review_items(vault_root: Path) -> int:
     count = 0
-    for fname in (("evenements_custom", "needs_review.yaml"), ("instances_custom", "needs_review_enrich.yaml")):
+    for fname in (
+        ("entites_custom", "needs_review.yaml"),      # manquait — ajouté le 2 août 2026
+        ("evenements_custom", "needs_review.yaml"),
+        ("signaux_custom", "needs_review.yaml"),       # manquait — ajouté le 2 août 2026
+        ("instances_custom", "needs_review_enrich.yaml"),
+    ):
         p = vault_root / fname[0] / fname[1]
         if p.exists():
             try:

@@ -5,11 +5,9 @@ slug: exode_midwest_grands_lacs_breakdown
 archetype: exode_midwest_grands_lacs
 scenario: breakdown
 localisation:
-  zone: midwest_desertifie
+  zone: espace_nord_americain_fragmente
   lieu: Midwest désertifié vers Grands Lacs (Chicago, Detroit, Cleveland)
   type_lieu: region
-  statut: review_manuelle
-  note: "L'événement couvre à la fois le Midwest désertifié (zone de départ) et les Grands Lacs / Rust Belt (zone d'arrivée), impliquant plusieurs zones existantes (midwest_desertifie, grandes_lacs_compact_eau, detroit_sud, communes_rust_belt) sans ancrage unique évident."
 type_evenement: environmental
 portee: continentale
 date: 2044

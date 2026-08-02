@@ -8,7 +8,6 @@ localisation:
   zone: port_mourmansk
   lieu: Port de Mourmansk
   type_lieu: infrastructure
-
 type_dans_scenario: institution
 
 role_dans_scenario: >

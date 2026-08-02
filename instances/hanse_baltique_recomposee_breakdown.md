@@ -4,6 +4,10 @@ type: instance
 slug: hanse_baltique_recomposee_breakdown
 entite: hanse_baltique_recomposee
 scenario: breakdown
+localisation:
+  zone: hanse_baltique
+  lieu: Gdańsk (siège du Conseil Hanséatique)
+  type_lieu: region
 statut: officialise_enrichi
 type_dans_scenario: organisation
 role_dans_scenario: 'Dans le scénario breakdown, constitue un bloc de résistance régionale
@@ -66,10 +70,6 @@ tensions_narratives: La Hanse est déchirée entre sa vocation marchande — qui
   de l'adhésion des enclaves finlandaises et des ruines institutionnelles scandinaves
   crée des fractures internes entre un bloc expansionniste et un bloc conservateur.
 date_creation: 2026-06-20
-localisation:
-  zone: hanse_baltique
-  lieu: Gdańsk (siège du Conseil Hanséatique)
-  type_lieu: region
 ---
 
 # Hanse Baltique Recomposée

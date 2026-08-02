@@ -1,0 +1,102 @@
+############################################################
+  SCAN GÉOGRAPHIE COMPLET — 5 étapes
+############################################################
+
+▶▶▶ Étape 1/5 — check_zones_coherence.py
+============================================================
+  Diagnostic de cohérence — geographie/{scenario}.md
+============================================================
+
+=== breakdown ===
+  ✓ Parsing OK — 90 zones total, 37 en niveau 1
+  ✓ Tous les pays de pays_liste ont au moins une zone
+  ✓ Tous les pays présents ont une zone N1
+
+============================================================
+  Terminé — tout est cohérent.
+============================================================
+
+
+▶▶▶ Étape 2/5 — check_type_entite_coherence.py
+============================================================
+  Cohérence type_entite — geographie/{scenario}.md
+============================================================
+
+=== breakdown ===
+  ✓ Aucune entrée sans type_entite
+
+============================================================
+  Terminé — aperçu affiché (relancer avec --apply pour corriger).
+============================================================
+
+
+▶▶▶ Étape 3/5 — check_origine_reelle_coherence.py
+============================================================
+  Garde-fou origine_reelle — geographie/{scenario}.md
+============================================================
+
+=== breakdown ===
+  17 zone(s) ville/région à vérifier
+  ✓ Aucune incohérence détectée sur les entrées résolues
+
+============================================================
+  Terminé — tout est cohérent.
+============================================================
+
+
+▶▶▶ Étape 4/5 — check_conventions_territoires.py
+  · N'a de sens qu'avec --all -- la notion de "varie entre scénarios" suppose plusieurs scénarios à comparer. Résultat ci-dessous non significatif.
+============================================================
+  Cohérence des territoires ambigus — geographie/{scenario}.md
+============================================================
+
+=== breakdown ===
+  ✓ Groenland et danemark : même zone (arctique_nordark, arctique_nordark)
+  · Polynésie française → nouvelle_zelande_archipel_pacifique / France → arc_sahelo_mediterraneen -- zones distinctes
+  · Nouvelle-calédonie : absent, seul france présent (arc_sahelo_mediterraneen) -- convention implicite
+  · Guyane française : absent, seul france présent (arc_sahelo_mediterraneen) -- convention implicite
+  · Écosse → ecosse / Royaume-uni → archipel_anglo_celtique -- zones distinctes
+  ✓ Pays de galles et royaume-uni : même zone (archipel_anglo_celtique)
+
+============================================================
+  RÉSUMÉ — territoires dont le traitement VARIE entre scénarios
+============================================================
+  ✓ Aucun -- chaque territoire suivi est traité de façon stable à travers tous les scénarios où il apparaît.
+
+============================================================
+  Terminé — tout est cohérent.
+============================================================
+
+
+▶▶▶ Étape 5/5 — check_patron_spatial_coherence.py
+============================================================
+  Cohérence patron spatial — geographie/{scenario}.md vs patrons_spatiaux.py
+============================================================
+
+=== breakdown ===
+  · 1 zone(s) sans description exploitable, exclue(s) du jugement (pas assez de matière) : ecosse
+  · 36 zone(s) évaluable(s) -- résultat en cache, aucun appel LLM
+  ✓ Aucune zone suspecte
+
+============================================================
+  Terminé — aucune zone suspecte détectée.
+============================================================
+
+
+############################################################
+  RÉSUMÉ CONSOLIDÉ
+############################################################
+  [check_zones_coherence.py]
+    Terminé — tout est cohérent.
+  [check_type_entite_coherence.py]
+    Terminé — aperçu affiché (relancer avec --apply pour corriger).
+  [check_origine_reelle_coherence.py]
+    Terminé — tout est cohérent.
+  [check_conventions_territoires.py]
+    Terminé — tout est cohérent.
+  [check_patron_spatial_coherence.py]
+    Terminé — aucune zone suspecte détectée.
+
+  · check_type_entite_coherence.py lancé sans --apply-type-entite (aperçu seul, rien corrigé)
+  · check_conventions_territoires.py non significatif en mode --scenario (relancer avec --all pour un vrai résultat)
+  · check_patron_spatial_coherence.py a pu servir des résultats en cache (relancer avec --no-cache-patron-spatial pour forcer un nouvel appel LLM)

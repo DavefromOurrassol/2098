@@ -4,6 +4,10 @@ type: event_instance
 slug: insurrection_rust_belt_breakdown
 archetype: insurrection_rust_belt
 scenario: breakdown
+localisation:
+  zone: communes_rust_belt
+  lieu: Communes Libres du Rust Belt (Detroit, Cleveland, Pittsburgh)
+  type_lieu: region
 type_evenement: political_social
 portee: regionale
 date: 2061

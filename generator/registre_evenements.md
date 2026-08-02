@@ -10,7 +10,7 @@ RÈGLE DE LECTURE DE LA COLONNE "date" :
   - type=signal    -> fenêtre "AAAA-AAAA" (date_bascule du signal_to_state)
   - type=evenement -> année unique "AAAA" (date précise de l'instance)
 
-Total : 403 entrées (60 signaux uniques × 6 scénarios + 43 entrées d'événements custom).
+Total : 497 entrées (74 signaux uniques × 6 scénarios + 53 entrées d'événements custom).
 
 ## breakdown
 
@@ -67,6 +67,8 @@ Total : 403 entrées (60 signaux uniques × 6 scénarios + 43 entrées d'événe
 | signal | 2042-2061 | declin_rural_accelere | organisation_territoires | oui | abandon officiel de mille communes rurales 2052 |
 | signal | 2042-2060 | economie_plateformes_dominante | systeme_economique_redistribution | non | panne en cascade des grandes plateformes économiques mondiales 2051 |
 | signal | 2042-2060 | normalisation_post_travail | systemes_productifs_travail | oui | retour massif au travail de subsistance non rémunéré 2050 |
+| signal | 2042-2060 | irrigation_solaire_tensions_eau | systemes_productifs_travail | oui | pompages solaires saheliens à sec après trois années sans pluie 2054 |
+| signal | 2042-2060 | irrigation_solaire_tensions_eau | energie_ressources_critiques | oui | Chad abandonne ses périmètres irrigués solaires 2055 |
 | signal | 2043-2062 | fatigue_civilisationnelle | valeurs_culture_tempo_sociale | non | mouvement de décrochage sociétal global |
 | signal | 2043-2062 | stress_territorial_climatique | organisation_territoires | oui | abandon de cinq mégapoles côtières majeures 2055 |
 | signal | 2043-2063 | spatialisation_des_conflits | frontieres_du_systeme | non | premier conflit armé orbital 2055 |
@@ -129,6 +131,7 @@ Total : 403 entrées (60 signaux uniques × 6 scénarios + 43 entrées d'événe
 | signal | 2036-2053 | remise_en_cause_capitalisme_croissance | systeme_economique_redistribution | non | doctrine officielle de puissance économique des blocs 2047 |
 | signal | 2036-2052 | disparition_metiers_intermediaires | systemes_productifs_travail | oui | reconversion forcée des métiers intermédiaires vers les administrations des blocs 2045 |
 | signal | 2036-2053 | consommation_energetique_ia | technologie_information | non | rationnement énergétique civil au profit des centres de calcul des blocs |
+| signal | 2036-2052 | irrigation_solaire_tensions_eau | systemes_productifs_travail | oui | Bloc Atlantique verrouille les nappes phréatiques du Sahel 2047 |
 | signal | 2037-2052 | gouvernance_algorithmique_emergente | gouvernance_institutions | non | déploiement du système de scoring citoyen des blocs 2046 |
 | signal | 2037-2052 | fatigue_civilisationnelle | valeurs_culture_tempo_sociale | non | renaissance des mouvements civilisationnels des blocs |
 | signal | 2037-2053 | concentration_informationnelle | technologie_information | non | nationalisation des infrastructures numériques des blocs 2047 |
@@ -144,6 +147,7 @@ Total : 403 entrées (60 signaux uniques × 6 scénarios + 43 entrées d'événe
 | signal | 2037-2054 | declin_rural_accelere | organisation_territoires | oui | classification des zones rurales hors-bloc comme territoires non prioritaires 2046 |
 | signal | 2037-2054 | economie_plateformes_dominante | systeme_economique_redistribution | non | nationalisation des plateformes numériques par le Bloc Atlantique 2045 |
 | signal | 2037-2053 | automatisation_agricole_massive | systemes_productifs_travail | oui | nationalisation des fermes automatisées stratégiques par les blocs 2047 |
+| signal | 2037-2053 | irrigation_solaire_tensions_eau | energie_ressources_critiques | oui | Bloc Eurasiatique annexe les aquifères du lac Tchad 2048 |
 | signal | 2038-2052 | automatisation_financière_algorithmique | systeme_economique_redistribution | non | nationalisation des infrastructures algorithmiques financières |
 | signal | 2038-2054 | fragmentation_institutionnelle_regionale | gouvernance_institutions | non | création de l'Alliance des Blocs Atlantique et Eurasiatique 2048 |
 | signal | 2038-2052 | tensions_sur_terres_rares | geopolitique_conflits | oui | création des zones d'exclusion minière des blocs 2047 |
@@ -232,6 +236,7 @@ Total : 403 entrées (60 signaux uniques × 6 scénarios + 43 entrées d'événe
 | signal | 2032-2049 | retour_recit_civilisationnel_spatial | frontieres_du_systeme | non | lancement du récit mondial de la civilisation multi-orbitale 2041 |
 | signal | 2032-2048 | systemes_decision_automatises_publics | gouvernance_institutions | non | certification mondiale des systèmes décisionnels publics automatisés 2040 |
 | signal | 2032-2048 | economie_plateformes_dominante | systeme_economique_redistribution | non | adoption du statut de bien commun pour les plateformes mondiales 2039 |
+| signal | 2032-2047 | irrigation_solaire_tensions_eau | energie_ressources_critiques | oui | Consortium SahelFlow déploie son IA de gestion hydrique 2041 |
 | signal | 2033-2048 | gouvernance_algorithmique_emergente | gouvernance_institutions | non | Accord de Séoul sur la gouvernance IA institutionnelle 2040 |
 | signal | 2033-2047 | militarisation_du_cyberespace | geopolitique_conflits | oui | Convention de Genève numérique 2040 |
 | signal | 2033-2048 | fatigue_civilisationnelle | valeurs_culture_tempo_sociale | non | premier Forum Mondial des Civilisations Régénératives 2041 |
@@ -245,6 +250,7 @@ Total : 403 entrées (60 signaux uniques × 6 scénarios + 43 entrées d'événe
 | signal | 2033-2049 | nouvelles_communautes_orbitales | frontieres_du_systeme | non | adoption du statut de citoyenneté orbitale universelle 2042 |
 | signal | 2033-2049 | robotisation_services | systemes_productifs_travail | oui | généralisation mondiale des robots de service dans le tertiaire 2039 |
 | signal | 2033-2048 | crise_verite_informationnelle | technologie_information | non | lancement du système mondial de certification de la réalité 2041 |
+| signal | 2033-2049 | irrigation_solaire_tensions_eau | systemes_productifs_travail | oui | réseau mondial de gestion hydrique automatisée déployé 2042 |
 | signal | 2034-2050 | captation_carbone_industrielle | climat_environnement_global | oui | mise en service du réseau mondial de capture carbone 2043 |
 | signal | 2034-2051 | minage_asteroides | frontieres_du_systeme | non | lancement du programme international de minage d'astéroïdes 2043 |
 | signal | 2034-2050 | gouvernance_environnementale_multiniveaux | gouvernance_institutions | non | adoption par le Conseil Climatique Mondial du cadre multi-niveaux 2043 |
@@ -306,6 +312,7 @@ Total : 403 entrées (60 signaux uniques × 6 scénarios + 43 entrées d'événe
 | signal | 2038-2057 | remise_en_cause_capitalisme_croissance | systeme_economique_redistribution | non | charte fondatrice post-croissance des assemblées bioterritoriales |
 | signal | 2038-2057 | consommation_energetique_ia | technologie_information | non | mouvement bioterritorial des modèles IA frugaux |
 | signal | 2038-2056 | guerres_culturelles_transnationales | valeurs_culture_tempo_sociale | non | mouvement bioterritorial de désengagement des récits globaux |
+| signal | 2038-2057 | irrigation_solaire_tensions_eau | systemes_productifs_travail | oui | charte d'Agadez sur la souveraineté hydrique communautaire |
 | signal | 2039-2058 | competition_terres_rares | energie_ressources_critiques | oui | mouvement de circularité des matériaux critiques |
 | signal | 2039-2058 | migrations_climatiques | demographie_mobilite_humaine | non | programme d'accueil des réfugiés climatiques bioterritoriaux |
 | signal | 2039-2058 | captation_carbone_industrielle | climat_environnement_global | oui | mouvement de boycott des fermes de capture carbone industrielles |
@@ -316,6 +323,7 @@ Total : 403 entrées (60 signaux uniques × 6 scénarios + 43 entrées d'événe
 | signal | 2039-2058 | disparition_metiers_intermediaires | systemes_productifs_travail | oui | mouvement de revalorisation des savoir-faire intermédiaires bioterritoriaux |
 | signal | 2039-2058 | crise_verite_informationnelle | technologie_information | non | réseau bioterritorial de vérification communautaire de l'information |
 | signal | 2039-2057 | desynchronisation_generationnelle | valeurs_culture_tempo_sociale | non | charte bioterritoriale du mentorat intergénérationnel |
+| signal | 2039-2058 | irrigation_solaire_tensions_eau | energie_ressources_critiques | oui | charte de N'Djamena pour l'autonomie hydrique communautaire |
 | signal | 2040-2058 | fragmentation_institutionnelle_regionale | gouvernance_institutions | non | création des Assemblées Bioterritioriales Régionales |
 | signal | 2040-2060 | tensions_sur_terres_rares | geopolitique_conflits | oui | mouvement de démétallisation des économies locales |
 | signal | 2040-2058 | fatigue_civilisationnelle | valeurs_culture_tempo_sociale | non | renaissance des cultures situées et des récits de lieu |
@@ -408,6 +416,8 @@ Total : 403 entrées (60 signaux uniques × 6 scénarios + 43 entrées d'événe
 | signal | 2029-2045 | gouvernance_environnementale_multiniveaux | gouvernance_institutions | non | signature du cadre de coordination environnementale multi-niveaux 2036 |
 | signal | 2029-2045 | montee_localisme | organisation_territoires | oui | adoption du cadre de gouvernance locale participative 2034 |
 | signal | 2029-2045 | automatisation_agricole_massive | systemes_productifs_travail | oui | adoption de la directive sur l'automatisation agricole responsable 2035 |
+| signal | 2029-2045 | irrigation_solaire_tensions_eau | systemes_productifs_travail | oui | traité de Niamey sur le partage des nappes phréatiques 2038 |
+| signal | 2029-2044 | irrigation_solaire_tensions_eau | energie_ressources_critiques | oui | traité de Ouagadougou sur les quotas hydriques solaires 2037 |
 | signal | 2030-2045 | gouvernance_algorithmique_emergente | gouvernance_institutions | non | directive mondiale sur l'IA dans les services publics 2037 |
 | signal | 2030-2046 | fragmentation_institutionnelle_regionale | gouvernance_institutions | non | traité de réforme des institutions de Bretton Woods 2037 |
 | signal | 2030-2046 | megapoles_sous_pression | organisation_territoires | oui | programme ONU-Habitat de résilience des mégapoles 2037 |
@@ -483,6 +493,7 @@ Total : 403 entrées (60 signaux uniques × 6 scénarios + 43 entrées d'événe
 | signal | 2025-2041 | taxation_carbone_globale | systeme_economique_redistribution | non | premier rapport sur l'échec de la coordination carbone mondiale 2031 |
 | signal | 2025-2040 | disparition_metiers_intermediaires | systemes_productifs_travail | oui | premier rapport sur la disparition accélérée des métiers intermédiaires 2030 |
 | signal | 2025-2040 | acceleration_rythmes_vie_urbains | valeurs_culture_tempo_sociale | non | premier rapport mondial sur l'accélération des rythmes urbains 2032 |
+| signal | 2025-2040 | irrigation_solaire_tensions_eau | energie_ressources_critiques | oui | Burkina Faso et Ghana s'opposent sur le barrage de Bagré 2036 |
 | signal | 2026-2040 | fragmentation_institutionnelle_regionale | gouvernance_institutions | non | crise de gouvernance multilatérale de 2032 |
 | signal | 2026-2040 | hybridation_ia_culture | valeurs_culture_tempo_sociale | non | première crise des droits d'auteur IA globale 2031 |
 | signal | 2026-2041 | megapoles_sous_pression | organisation_territoires | oui | première crise de gouvernance d'une mégapole 2033 |
@@ -508,6 +519,7 @@ Total : 403 entrées (60 signaux uniques × 6 scénarios + 43 entrées d'événe
 | signal | 2027-2044 | minage_asteroides | frontieres_du_systeme | non | première mission expérimentale de minage d'astéroïde 2035 |
 | signal | 2027-2042 | normalisation_post_travail | systemes_productifs_travail | oui | premier débat médiatique mondial sur la fin du travail 2030 |
 | signal | 2027-2042 | automatisation_decisionnelle | technologie_information | non | premier scandale judiciaire lié à une décision automatisée 2033 |
+| signal | 2027-2042 | irrigation_solaire_tensions_eau | systemes_productifs_travail | oui | Mali et Niger s'affrontent pour le fleuve Niger 2039 |
 | signal | 2028-2042 | gouvernance_algorithmique_emergente | gouvernance_institutions | non | premiers scandales de biais algorithmiques systémiques 2034 |
 | signal | 2028-2043 | tensions_sur_terres_rares | geopolitique_conflits | oui | crise des terres rares asiatiques 2038 |
 | signal | 2028-2042 | emergence_pathogenes_nouveaux | sante_biotechnologies | non | crise sanitaire régionale non résolue de 2037 |

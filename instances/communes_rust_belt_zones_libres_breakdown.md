@@ -8,7 +8,6 @@ localisation:
   zone: communes_rust_belt
   lieu: Rust Belt / région des Grands Lacs (anciennes zones industrielles désaffectées)
   type_lieu: region
-
 type_dans_scenario: organisation
 
 role_dans_scenario: >

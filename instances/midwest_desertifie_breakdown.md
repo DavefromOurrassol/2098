@@ -8,7 +8,6 @@ localisation:
   zone: midwest_desertifie
   lieu: Topeka, Midwest désertifié
   type_lieu: region
-
 type_dans_scenario: institution
 
 role_dans_scenario: >

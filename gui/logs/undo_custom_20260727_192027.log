@@ -1,0 +1,32 @@
+undo_custom.py — 2026-07-27 19:20:27 — mode DRY-RUN
+1 item(s) à traiter
+
+
+── signal / irrigation_solaire_tensions_eau / generalisation=no ──
+  [DRY] Retirerait 1 annotation(s) section 7 et 1 bloc(s) section 12 dans energie_ressources_critiques.md
+  [DRY] Retirerait 0 annotation(s) section 7 et 1 bloc(s) section 12 dans organisation_territoires.md
+  [SKIP] Aucune trace de 'irrigation_solaire_tensions_eau' dans geopolitique_conflits.md
+  [DRY] Retirerait ligne registre : | signal | 2042-2060 | irrigation_solaire_tensions_eau | systemes_productifs_tra
+  [DRY] Retirerait ligne registre : | signal | 2042-2060 | irrigation_solaire_tensions_eau | energie_ressources_crit
+  [DRY] Retirerait ligne registre : | signal | 2042-2060 | irrigation_solaire_tensions_eau | organisation_territoire
+  [DRY] Retirerait ligne registre : | signal | 2036-2052 | irrigation_solaire_tensions_eau | systemes_productifs_tra
+  [DRY] Retirerait ligne registre : | signal | 2036-2052 | irrigation_solaire_tensions_eau | energie_ressources_crit
+  [DRY] Retirerait ligne registre : | signal | 2036-2052 | irrigation_solaire_tensions_eau | organisation_territoire
+  [DRY] Retirerait ligne registre : | signal | 2031-2047 | irrigation_solaire_tensions_eau | energie_ressources_crit
+  [DRY] Retirerait ligne registre : | signal | 2031-2047 | irrigation_solaire_tensions_eau | organisation_territoire
+  [DRY] Retirerait ligne registre : | signal | 2033-2049 | irrigation_solaire_tensions_eau | systemes_productifs_tra
+  [DRY] Retirerait ligne registre : | signal | 2039-2058 | irrigation_solaire_tensions_eau | systemes_productifs_tra
+  [DRY] Retirerait ligne registre : | signal | 2039-2058 | irrigation_solaire_tensions_eau | energie_ressources_crit
+  [DRY] Retirerait ligne registre : | signal | 2039-2058 | irrigation_solaire_tensions_eau | organisation_territoire
+  [DRY] Retirerait ligne registre : | signal | 2029-2045 | irrigation_solaire_tensions_eau | systemes_productifs_tra
+  [DRY] Retirerait ligne registre : | signal | 2029-2045 | irrigation_solaire_tensions_eau | energie_ressources_crit
+  [DRY] Retirerait ligne registre : | signal | 2029-2045 | irrigation_solaire_tensions_eau | organisation_territoire
+  [DRY] Retirerait ligne registre : | signal | 2027-2042 | irrigation_solaire_tensions_eau | systemes_productifs_tra
+  [DRY] Retirerait ligne registre : | signal | 2027-2042 | irrigation_solaire_tensions_eau | energie_ressources_crit
+  [DRY] Retirerait ligne registre : | signal | 2027-2042 | irrigation_solaire_tensions_eau | organisation_territoire
+  [DRY] Supprimerait : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/signaux_custom/irrigation_solaire_tensions_eau.md
+  [DRY] Retirerait 1 entrée(s) de needs_review.yaml
+  [DRY] Resetterait last_validated.json
+
+════════════════════════════════════════════════════════════
+[DRY-RUN] Aucune modification effectuée.

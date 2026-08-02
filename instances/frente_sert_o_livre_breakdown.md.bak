@@ -4,6 +4,10 @@ type: instance
 slug: frente_sert_o_livre_breakdown
 entite: frente_sert_o_livre
 scenario: breakdown
+localisation:
+  zone: nordeste_bresil_frente
+  lieu: Nordeste brésilien (Sertão — Pernambouc, Ceará, Piauí et franges du cerrado)
+  type_lieu: region
 
 type_dans_scenario: réseau
 

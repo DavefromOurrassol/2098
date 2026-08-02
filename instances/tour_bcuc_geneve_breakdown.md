@@ -8,7 +8,6 @@ localisation:
   zone: tour_bcuc_geneve
   lieu: Tour BCUC, Genève
   type_lieu: infrastructure
-
 type_dans_scenario: institution
 
 role_dans_scenario: >

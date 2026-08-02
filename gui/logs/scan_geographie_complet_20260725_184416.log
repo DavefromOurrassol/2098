@@ -1,0 +1,6 @@
+usage: scan_geographie_complet.py [-h] (--scenario SCENARIO | --all)
+                                  [--apply-type-entite] [--resolve-llm]
+                                  [--write-chantiers]
+                                  [--no-cache-patron-spatial]
+                                  [--generer-propositions-topdown]
+scan_geographie_complet.py: error: unrecognized arguments: --mode None

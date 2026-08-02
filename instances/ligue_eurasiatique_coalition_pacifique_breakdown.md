@@ -4,6 +4,11 @@ type: instance
 slug: ligue_eurasiatique_coalition_pacifique_breakdown
 entite: ligue_eurasiatique_coalition_pacifique
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 statut: officialise_enrichi
 type_dans_scenario: organisation
 role_dans_scenario: 'Dans le scénario breakdown, représente la fragmentation géopolitique
@@ -69,10 +74,6 @@ tensions_narratives: La tension fondamentale de la Ligue réside dans la contrad
   cause la capacité de la Ligue à contrôler les dynamiques insurrectionnelles sur
   ses propres flancs.
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: null
 ---
 
 # Ligue Eurasiatique–Coalition Pacifique

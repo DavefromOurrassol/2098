@@ -318,6 +318,7 @@ _extended_
 - montée du localisme (→ montee_localisme)
 - transformation des modèles d’habitat
 
+**custom (signaux d'actualité)**
 
 
 ## 8. États par scénario
@@ -640,4 +641,3 @@ signal_to_state:
         date_bascule: 2024-2041
         evenement_cle: premier sondage mondial sur la montée du localisme 2032
 
-```

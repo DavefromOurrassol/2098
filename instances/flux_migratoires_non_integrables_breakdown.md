@@ -4,6 +4,11 @@ type: instance
 slug: flux_migratoires_non_integrables_breakdown
 entite: flux_migratoires_non_integrables
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 statut: officialise_enrichi
 type_dans_scenario: autre
 role_dans_scenario: 'Vecteur d''effondrement en cascade des mécanismes de gouvernance
@@ -70,10 +75,6 @@ tensions_narratives: 'La tension centrale est celle de la responsabilité sans s
   la conscience d''être instrumentalisées par des acteurs miliciens ou corporatifs
   qui exploitent leur vulnérabilité pour s''emparer de ressources territoriales.'
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: null
 ---
 
 # Flux Migratoires Non Intégrables

@@ -394,7 +394,7 @@ _extended_
 - perception de guerre permanente diffuse
 - érosion de la confiance internationale
 
-
+**custom (signaux d'actualité)**
 
 ## 8. États par scénario
 ### [[fortress_world]]
@@ -719,4 +719,3 @@ signal_to_state:
         date_bascule: 2024-2040
         evenement_cle: première enquête internationale sur la normalisation du conflit hybride 2032
 
-```

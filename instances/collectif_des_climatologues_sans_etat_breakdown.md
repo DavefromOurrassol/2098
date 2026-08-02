@@ -4,6 +4,11 @@ type: instance
 slug: collectif_des_climatologues_sans_etat_breakdown
 entite: collectif_des_climatologues_sans_etat
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 statut: officialise_enrichi
 type_dans_scenario: réseau
 role_dans_scenario: 'Dans un scénario de breakdown, fournit une infrastructure de
@@ -72,10 +77,6 @@ tensions_narratives: 'La tension centrale du Collectif réside dans sa dépendan
   une ressource stratégique convoitée par des acteurs régionaux qui cherchent à les
   instrumentaliser ou à les faire taire.'
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: null
 ---
 
 # Collectif des Climatologues Sans État

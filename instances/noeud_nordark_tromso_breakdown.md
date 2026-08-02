@@ -8,7 +8,6 @@ localisation:
   zone: noeud_nordark_tromso
   lieu: Tromsø
   type_lieu: ville
-
 type_dans_scenario: organisation
 
 role_dans_scenario: >

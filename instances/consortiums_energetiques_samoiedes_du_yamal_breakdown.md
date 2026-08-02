@@ -4,6 +4,10 @@ type: instance
 slug: consortiums_energetiques_samoiedes_du_yamal_breakdown
 entite: consortiums_energetiques_samoiedes_du_yamal
 scenario: breakdown
+localisation:
+  zone: arctique_nordark
+  lieu: Péninsule du Yamal
+  type_lieu: region
 statut: officialise_enrichi
 type_dans_scenario: entreprise
 role_dans_scenario: 'Dans le scénario breakdown, ils incarnent une forme de résistance
@@ -67,10 +71,6 @@ tensions_narratives: La revendication identitaire samoïède qui légitime leur 
   pressions permanentes d'intégration qui menacent l'autonomie pour laquelle ils se
   sont constitués.
 date_creation: 2026-06-20
-localisation:
-  zone: arctique_nordark
-  lieu: Péninsule du Yamal
-  type_lieu: region
 ---
 
 # Consortiums Énergétiques Samoïèdes du Yamal

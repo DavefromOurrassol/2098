@@ -4,6 +4,10 @@ type: instance
 slug: ligue_mediterraneenne_des_villes_etats_portuaires_breakdown
 entite: ligue_mediterraneenne_des_villes_etats_portuaires
 scenario: breakdown
+localisation:
+  zone: arc_sahelo_mediterraneen
+  lieu: Réseau portuaire diffus — siège tournant entre Sfax, Carthage-Nord et les Plaines de l'Ebre
+  type_lieu: infrastructure
 statut: officialise_enrichi
 type_dans_scenario: organisation
 role_dans_scenario: 'Dans le scénario breakdown, incarne la recomposition politique
@@ -72,11 +76,6 @@ tensions_narratives: 'La Ligue est tiraillée entre sa vocation d''espace neutre
   déplacées de l''arc sahélien et des côtes basses noient littéralement les infrastructures
   des villes-membres.'
 date_creation: 2026-06-20
-localisation:
-  zone: arc_sahelo_mediterraneen
-  lieu: Réseau portuaire diffus — siège tournant entre Sfax, Carthage-Nord et les
-    Plaines de l'Ebre
-  type_lieu: infrastructure
 ---
 
 # Ligue Méditerranéenne des Villes-États Portuaires

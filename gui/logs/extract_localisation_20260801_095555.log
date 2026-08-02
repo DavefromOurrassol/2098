@@ -1,0 +1,1337 @@
+============================================================
+EXTRACT_LOCALISATION — Ourrassol 2098
+============================================================
+Fiches à traiter : 146
+  Filtre scénario : breakdown
+
+[1/146] 
+[instance] agadez_ligue_sahel_numerique_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8686 | sortie : 77
+  issue     : extrait
+  zone      : agadez_ligue_sahel_numerique
+  lieu      : Agadez
+  motif     : Le champ localisation contient un lieu précis (Agadez) mappable sur la zone agadez_ligue_sahel_numerique.
+  → écrit
+[2/146] 
+[instance] agence_stabilisation_climatique_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8261 | sortie : 75
+  issue     : extrait
+  zone      : geneve_bunker_institutions
+  lieu      : Genève — tour abritant le Bureau de Coordination d'Urgence Climatique
+  motif     : Le lieu est explicitement mentionné dans la fiche avec une zone géographique correspondante.
+  → écrit
+[3/146] 
+[instance] alliance_blocs_souverains_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8297 | sortie : 55
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : L'entité est clairement transnationale sans ancrage local précis, comme indiqué dans le champ localisation.note.
+  → écrit
+[4/146] 
+[instance] amara_diallo_nkosi_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8145 | sortie : 102
+  issue     : extrait
+  zone      : afrique_centrale_australe
+  lieu      : Corridor sahélo-congolais (Brazzaville-Nord – Kivu disputé)
+  motif     : Le lieu est explicitement mentionné comme 'Corridor sahélo-congolais (Brazzaville-Nord – Kivu disputé)' et correspond à la zone 'afrique_centrale_australe'.
+  → écrit
+[5/146] 
+[instance] archives_neutres_de_geneve_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8033 | sortie : 79
+  issue     : extrait
+  zone      : archives_neutres_geneve
+  lieu      : Genève-Bunker, secteur archival souterrain
+  motif     : Le champ localisation indique un lieu précis (Genève-Bunker) mappable sur la zone archives_neutres_geneve.
+  → écrit
+[6/146] 
+[instance] archives_neutres_geneve_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8849 | sortie : 78
+  issue     : extrait
+  zone      : archives_neutres_geneve
+  lieu      : Archives Neutres de Genève (sous-sols du Palais des Nations)
+  motif     : Le lieu est explicitement mentionné dans le champ localisation avec une zone correspondante dans la liste fournie.
+  → écrit
+[7/146] 
+[instance] arctic_passage_authority_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8440 | sortie : 95
+  issue     : extrait
+  zone      : autorite_passage_arctique
+  lieu      : Tromsø, siège de l'Autorité du Passage Arctique
+  motif     : Le lieu est explicitement mentionné dans la fiche comme étant Tromsø, siège de l'institution, et correspond exactement à la zone 'autorite_passage_arctique'.
+  → écrit
+[8/146] 
+[instance] arctique_nordark_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8903 | sortie : 112
+  issue     : extrait
+  zone      : arctique_nordark
+  lieu      : Nordark — Les Terres du Dessous (au-delà du 70e parallèle, zone arctique circumpolaire)
+  motif     : Le texte mentionne explicitement 'Nordark — Les Terres du Dessous' comme un territoire arctique circumpolaire au-delà du 70e parallèle, correspondant exactement à la zone 'arctique_nordark'.
+  → écrit
+[9/146] 
+[instance] armada_logistique_nordique_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8388 | sortie : 86
+  issue     : extrait
+  zone      : arctique_nordark
+  lieu      : Arctique Nordark (Tromsø, corridor de Barents, Svalbard)
+  motif     : Le champ localisation contient une zone géographique précise (Arctique Nordark) mappable sur le slug 'arctique_nordark'.
+  → écrit
+[10/146] 
+[instance] autorite_passage_arctique_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8586 | sortie : 109
+  issue     : extrait
+  zone      : autorite_passage_arctique
+  lieu      : Autorité du Passage Arctique (zone arctique, du détroit de Béring au Svalbard)
+  motif     : Le lieu est explicitement mentionné comme étant l'Autorité du Passage Arctique dans la zone arctique, avec une localisation précise entre le détroit de Béring et le Svalbard.
+  → écrit
+[11/146] 
+[instance] bloc_de_johannesburg_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7914 | sortie : 78
+  issue     : extrait
+  zone      : bloc_johannesburg
+  lieu      : Johannesburg (Bloc Austral)
+  motif     : Le champ 'localisation' de la fiche indique clairement Johannesburg comme lieu précis et mappable sur la zone 'bloc_johannesburg'.
+  → écrit
+[12/146] 
+[instance] blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7874 | sortie : 51
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : L'entité est une organisation transnationale et multi-zones sans ancrage géographique local précis.
+  → écrit
+[13/146] 
+[instance] brigades_medicales_itinerantes_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7912 | sortie : 57
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : Les Brigades Médicales Itinérantes opèrent de manière transnationale et diffuse sans ancrage géographique local précis.
+  → écrit
+[14/146] 
+[instance] bureau_des_territoires_residuels_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8444 | sortie : 72
+  issue     : extrait
+  zone      : cracovie_registre_zones
+  lieu      : Cracovie
+  motif     : Le champ localisation indique clairement Cracovie comme lieu précis et mappable sur la zone 'cracovie_registre_zones'.
+  → écrit
+[15/146] 
+[instance] cargo_mombasa_crrc_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8748 | sortie : 88
+  issue     : extrait
+  zone      : cargo_mombasa_crrc
+  lieu      : Cargo au large de Mombasa
+  motif     : Le lieu est explicitement mentionné comme 'Cargo au large de Mombasa' et correspond exactement à la zone 'cargo_mombasa_crrc' disponible dans la liste.
+  → écrit
+[16/146] 
+[instance] cartels_logistiques_regionaux_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7941 | sortie : 55
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : Les Cartels Logistiques Régionaux opèrent à une échelle régionale et continentale sans ancrage géographique local précis.
+  → écrit
+[17/146] 
+[instance] carthage_nord_nexcore_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8466 | sortie : 95
+  issue     : extrait
+  zone      : carthage_nord_nexcore
+  lieu      : Carthage-Nord (ancien port de Tunis-Goulette)
+  motif     : Le lieu est explicitement mentionné dans la fiche comme Carthage-Nord (ancien port de Tunis-Goulette) et correspond exactement à la zone 'carthage_nord_nexcore'.
+  → écrit
+[18/146] 
+[instance] cites_etats_secessionistes_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7833 | sortie : 68
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : Les Cités-États Sécessionistes sont une entité transnationale et sans ancrage géographique local précis, couvrant des zones urbaines, régionales et continentales dispersées.
+  → écrit
+[19/146] 
+[instance] coalition_pacifique_nord_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7740 | sortie : 68
+  issue     : extrait
+  zone      : asie_pacifique_sud_est
+  lieu      : Corridor sino-sibérien / Pacifique Nord
+  motif     : Le lieu est explicitement mentionné dans le champ localisation et correspond à une zone géographique disponible.
+  → écrit
+[20/146] 
+[instance] collectif_des_climatologues_sans_etat_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7943 | sortie : 64
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : Le Collectif des Climatologues Sans État est un réseau décentralisé sans ancrage géographique local précis, opérant à l'échelle régionale, continentale et globale.
+  → écrit
+[21/146] 
+[instance] collectif_hackers_decroissance_infrastructure_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7803 | sortie : 58
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : Le Collectif est un réseau transnational sans ancrage géographique local précis, opérant à l'échelle régionale, continentale et globale.
+  → écrit
+[22/146] 
+[instance] collectifs_de_gardiens_archivistes_itinerants_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8217 | sortie : 54
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : Les Gardiens-Archivistes Itinérants sont un réseau transcontinental sans ancrage géographique local précis.
+  → écrit
+[23/146] 
+[instance] collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7986 | sortie : 57
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : L'entité est un réseau distribué sans ancrage géographique local précis, opérant de manière transnationale et furtive.
+  → écrit
+[24/146] 
+[instance] collectifs_de_reparation_energetique_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7850 | sortie : 60
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : L'entité est un réseau rhizomatique sans ancrage géographique fixe, actif à l'échelle de quartiers ou territoires isolés sans localisation précise.
+  → écrit
+[25/146] 
+[instance] collectifs_de_sante_communautaire_autogeree_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7902 | sortie : 58
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : Les collectifs sont décrits comme dispersés à travers les zones grises du monde post-breakdown sans ancrage géographique précis.
+  → écrit
+[26/146] 
+[instance] collectifs_du_seuil_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8218 | sortie : 76
+  issue     : extrait
+  zone      : arc_sahelo_mediterraneen
+  lieu      : Lyon / axe A7 / arc Marseille-Tunis
+  motif     : Le lieu est explicitement mentionné dans le champ localisation avec une zone correspondante dans la liste fournie.
+  → écrit
+[27/146] 
+[instance] communautes_paysannes_refugiees_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7738 | sortie : 75
+  issue     : extrait
+  zone      : massif_central_cicatrices_vertes
+  lieu      : Massif Central
+  motif     : Le texte mentionne explicitement le Massif Central comme l'un des territoires d'accueil des Communautés Paysannes Réfugiées.
+  → écrit
+[28/146] 
+[instance] communautes_religieuses_des_relais_physiques_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7919 | sortie : 58
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : Les Communautés des Relais Physiques opèrent à une échelle transnationale et continentale sans ancrage géographique local précis.
+  → écrit
+[29/146] 
+[instance] communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8050 | sortie : 72
+  issue     : extrait
+  zone      : massif_central_cicatrices_vertes
+  lieu      : Massif Central
+  motif     : Le texte mentionne explicitement le Massif Central comme l'une des zones où les Nœuds de Survie sont actifs.
+  → écrit
+[30/146] 
+[instance] communautes_rurales_autonomes_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8004 | sortie : 88
+  issue     : ambigu
+  zone      : massif_central_cicatrices_vertes
+  lieu      : Massif Central
+  motif     : Le texte mentionne explicitement le Massif Central comme une zone d'implantation des communautés rurales autonomes, mais sans précision suffisante pour confirmer un ancrage exclusif ou un mappage certain.
+  → écrit
+[31/146] 
+[instance] communes_rust_belt_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8603 | sortie : 77
+  issue     : extrait
+  zone      : communes_rust_belt
+  lieu      : Rust Belt — Détroit, Gary (Indiana), corridor Cleveland-Pittsburgh
+  motif     : Le lieu est explicitement mentionné dans le champ localisation avec une zone correspondante dans la liste fournie.
+  → écrit
+[32/146] 
+[instance] communes_rust_belt_zones_libres_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8770 | sortie : 79
+  issue     : extrait
+  zone      : communes_rust_belt
+  lieu      : Rust Belt / région des Grands Lacs (anciennes zones industrielles désaffectées)
+  motif     : Le champ localisation contient une zone géographique précise et mappable sur 'communes_rust_belt'.
+  → écrit
+[33/146] 
+[instance] compagnies_de_geo_ingenierie_privees_sans_mandat_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7955 | sortie : 51
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : L'entité est transnationale et opère à l'échelle globale sans ancrage local précis.
+  → écrit
+[34/146] 
+[instance] conglometrat_sino_siberien_bohai_transit_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8075 | sortie : 72
+  issue     : extrait
+  zone      : seul_kanal_bohai
+  lieu      : Corridor Sino-Sibérien / Terminaux Bohai
+  motif     : Le lieu est explicitement mentionné dans le champ localisation avec une zone mappable exacte.
+  → écrit
+[35/146] 
+[instance] conseil_regulation_algorithmique_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7124 | sortie : 71
+  issue     : extrait
+  zone      : geneve_bunker_institutions
+  lieu      : Genève-Bunker
+  motif     : Le champ localisation indique clairement Genève-Bunker comme lieu précis et mappable sur la zone geneve_bunker_institutions.
+  → écrit
+[36/146] 
+[instance] conseil_regulation_ressources_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8152 | sortie : 55
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : L'entité est clairement transnationale sans ancrage local fort, comme indiqué dans le champ localisation.note.
+  → écrit
+[37/146] 
+[instance] consortium_africain_de_biotechnologies_sociales_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8516 | sortie : 101
+  issue     : extrait
+  zone      : afrique_de_louest_lagos_sahel
+  lieu      : Corridor sahélo-sahélien
+  motif     : Le champ localisation mentionne explicitement le 'Corridor sahélo-sahélien' comme siège central détruit et zone de déploiement, mappable sur la zone 'afrique_de_louest_lagos_sahel'.
+  → écrit
+[38/146] 
+[instance] consortium_amazonia_viva_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8602 | sortie : 75
+  issue     : extrait
+  zone      : amazon_pacte_gardiens
+  lieu      : Manaus / Bassin amazonien
+  motif     : Le texte mentionne explicitement 'ce qui fut Manaus' et 'Bassin amazonien' comme localisation de l'entité.
+  → écrit
+[39/146] 
+[instance] consortium_energetique_oural_caspien_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8116 | sortie : 82
+  issue     : extrait
+  zone      : corridor_oural_caspien
+  lieu      : Axe ferroviaire mobile Orenbourg–Aktaou
+  motif     : Le lieu est explicitement mentionné dans le champ localisation avec un type d'infrastructure et correspond exactement au slug corridor_oural_caspien.
+  → écrit
+[40/146] 
+[instance] consortiums_energetiques_samoiedes_du_yamal_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7906 | sortie : 77
+  issue     : extrait
+  zone      : arctique_nordark
+  lieu      : Péninsule du Yamal
+  motif     : Le lieu 'Péninsule du Yamal' est explicitement mentionné dans la fiche et correspond à la zone 'arctique_nordark'.
+  → écrit
+[41/146] 
+[instance] consortiums_logistiques_agro_corporatifs_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7957 | sortie : 46
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : L'entité est transnationale et sans ancrage géographique local précis.
+  → écrit
+[42/146] 
+[instance] cooperative_terrafond_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8114 | sortie : 98
+  issue     : extrait
+  zone      : arc_sahelo_mediterraneen
+  lieu      : Massif Central / Vallée de l'Allier et plaines de l'Ebre
+  motif     : Le texte mentionne explicitement la localisation dans le Massif Central et les plaines de l'Ebre, zones couvertes par la zone 'arc_sahelo_mediterraneen'.
+  → écrit
+[43/146] 
+[instance] corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8014 | sortie : 61
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : L'entité est transnationale et sans ancrage géographique local précis, opérant via des juridictions résiduelles et des interfaces numériques.
+  → écrit
+[44/146] 
+[instance] corridor_lithium_bouches_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8500 | sortie : 83
+  issue     : extrait
+  zone      : amazon_pacte_gardiens
+  lieu      : Salars andins de Bolivie, Chili et Argentine
+  motif     : Le lieu est explicitement mentionné dans le champ localisation et correspond à une région géographique mappable sur la zone amazon_pacte_gardiens.
+  → écrit
+[45/146] 
+[instance] corridors_eurasiens_convoyage_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8911 | sortie : 118
+  issue     : extrait
+  zone      : corridors_eurasiens_convoyage
+  lieu      : Les Venelles — Corridors Eurasiens Convoyage (d'Almaty aux berges de la Vistule, corridor Oural-Pannonie)
+  motif     : Le lieu est explicitement décrit comme un corridor d'infrastructure reliant Almaty à la Vistule, mappable sur la zone 'corridors_eurasiens_convoyage'.
+  → écrit
+[46/146] 
+[instance] delta_mekong_racines_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8655 | sortie : 73
+  issue     : extrait
+  zone      : delta_mekong_racines
+  lieu      : Delta du Mékong
+  motif     : Le champ localisation contient un lieu précis (Delta du Mékong) mappable sur la zone delta_mekong_racines.
+  → écrit
+[47/146] 
+[instance] diaspora_tech_sahel_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7896 | sortie : 83
+  issue     : extrait
+  zone      : afrique_de_louest_lagos_sahel
+  lieu      : Sahel (bande sahélienne)
+  motif     : Le réseau est explicitement lié au Sahel et mentionne des membres dispersés entre Lagos, Agadez et Tunis, toutes situées dans cette zone géographique.
+  → écrit
+[48/146] 
+[instance] directive_kontinuum_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8367 | sortie : 82
+  issue     : extrait
+  zone      : arc_eurasien_central
+  lieu      : ancien périmètre eurasien
+  motif     : Le champ localisation indique clairement un ancrage dans l'ancien périmètre eurasien, mappé sur la zone 'arc_eurasien_central'.
+  → écrit
+[49/146] 
+[instance] district_mourmansk_residuel_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8823 | sortie : 72
+  issue     : extrait
+  zone      : port_mourmansk
+  lieu      : Port de Mourmansk
+  motif     : Le champ localisation contient un lieu précis (Port de Mourmansk) mappable sur la zone 'port_mourmansk'.
+  → écrit
+[50/146] 
+[instance] enclaves_agro_communautaires_autonomes_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7858 | sortie : 81
+  issue     : extrait
+  zone      : plaines_ebre_terrafond
+  lieu      : Plaines de l'Ebre
+  motif     : Le texte mentionne explicitement les 'Plaines de l'Ebre' comme localisation d'une partie des Enclaves Agro-Communautaires Autonomes.
+  → écrit
+[51/146] 
+[instance] enclaves_corporatives_fortifiees_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7795 | sortie : 70
+  issue     : extrait
+  zone      : afrique_de_louest_lagos_sahel
+  lieu      : Lagos-Est
+  motif     : Le texte mentionne explicitement Lagos-Est comme l'une des localisations des Enclaves Corporatives Fortifiées.
+  → écrit
+[52/146] 
+[instance] enclaves_finlandaises_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8509 | sortie : 84
+  issue     : extrait
+  zone      : enclaves_finlandaises
+  lieu      : Enclaves finlandaises (Tampere, Turku, Rovaniemi — territoire finlandais fragmenté)
+  motif     : Le champ localisation contient une référence explicite aux Enclaves finlandaises, zone géographique disponible dans la liste.
+  → écrit
+[53/146] 
+[instance] enclaves_industrielles_de_bergen_troms_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8095 | sortie : 87
+  issue     : extrait
+  zone      : enclaves_industrielles_bergen_tromso
+  lieu      : Bergen et Tromsø
+  motif     : Le champ localisation indique clairement Bergen et Tromsø comme lieu précis, mappable sur la zone 'enclaves_industrielles_bergen_tromso'.
+  → écrit
+[54/146] 
+[instance] enclaves_industrielles_du_corridor_oural_caspien_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8088 | sortie : 80
+  issue     : extrait
+  zone      : corridor_oural_caspien
+  lieu      : Corridor Oural-Caspien
+  motif     : Le champ localisation de la fiche indique clairement un ancrage dans le Corridor Oural-Caspien, zone géographique existante dans la liste fournie.
+  → écrit
+[55/146] 
+[instance] enclaves_technologiques_survivantes_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8003 | sortie : 50
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : L'entité est un réseau transnational d'infrastructures sans ancrage géographique local précis.
+  → écrit
+[56/146] 
+[instance] etats_fragmentes_nationalisant_les_stocks_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7772 | sortie : 54
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : L'entité est une catégorie transnationale d'États-fantômes sans ancrage géographique local précis.
+  → écrit
+[57/146] 
+[instance] etats_fragments_en_guerre_pour_les_stations_atmospheriques_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8076 | sortie : 59
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : L'entité est transnationale et sans ancrage géographique local précis, ses zones d'influence étant régionales et continentales sans localisation fixe.
+  → écrit
+[58/146] 
+[instance] factions_energetiques_heritieres_des_pactes_abs_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8082 | sortie : 80
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : Les Factions Énergétiques Héritières des Pactes ABS sont une entité transnationale sans ancrage géographique local précis, contrôlant des infrastructures énergétiques sur des corridors critiques allant du Golfe Persique à l'Arc Eurasien.
+  → écrit
+[59/146] 
+[instance] factions_etatiques_residuelles_de_souverainete_hydrique_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8203 | sortie : 60
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : L'entité est une organisation transnationale sans ancrage géographique local précis, mentionnant des zones régionales et continentales de manière générique.
+  → écrit
+[60/146] 
+[instance] factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7849 | sortie : 84
+  issue     : extrait
+  zone      : arctique_nordark
+  lieu      : Bergen–Tromsø / Hanse Baltique
+  motif     : Le champ localisation indique clairement une région couvrant Bergen–Tromsø et la Hanse Baltique, mappable sur la zone arctique_nordark.
+  → écrit
+[61/146] 
+[instance] factions_para_etatiques_hydriques_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7998 | sortie : 70
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : Les Factions Para-Étatiques Hydriques sont une entité transnationale sans ancrage géographique local précis, contrôlant des points d'eau dans des zones grises à l'échelle mondiale.
+  → écrit
+[62/146] 
+[instance] factions_paramilitaires_locales_neutralisees_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8066 | sortie : 83
+  issue     : extrait
+  zone      : cracovie_registre_zones
+  lieu      : Registre des Zones Non Récupérables
+  motif     : Le champ localisation de la fiche indique explicitement un lieu et une zone mappable sur 'cracovie_registre_zones'.
+  → écrit
+[63/146] 
+[instance] factions_propagandistes_des_archives_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7906 | sortie : 57
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : L'entité est une organisation transnationale sans ancrage géographique local précis, opérant à l'échelle régionale et continentale.
+  → écrit
+[64/146] 
+[instance] factions_secessionnistes_agrariennes_du_desert_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8066 | sortie : 108
+  issue     : extrait
+  zone      : afrique_de_louest_lagos_sahel
+  lieu      : Frange sahéliennes
+  motif     : Le texte mentionne explicitement les 'franges sahéliennes' comme zone d'implantation principale des Factions Sécessionnistes Agrariennes du Désert, et la localisation fournie dans la fiche correspond à la zone 'afrique_de_louest_lagos_sahel'.
+  → écrit
+[65/146] 
+[instance] federation_communs_territoriaux_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8083 | sortie : 85
+  issue     : extrait
+  zone      : arc_sahelo_mediterraneen
+  lieu      : Ourassol / Montbrun
+  motif     : Le champ localisation indique clairement une zone géographique précise (Ourassol / Montbrun) mappable sur la zone arc_sahelo_mediterraneen.
+  → écrit
+[66/146] 
+[instance] federation_russe_residuelle_district_de_mourmansk_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8091 | sortie : 67
+  issue     : extrait
+  zone      : district_mourmansk_residuel
+  lieu      : Mourmansk
+  motif     : Le lieu Mourmansk est explicitement mentionné dans le champ localisation et correspond à une zone géographique disponible.
+  → écrit
+[67/146] 
+[instance] flux_migratoires_non_integrables_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7990 | sortie : 48
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : L'entité décrit un phénomène transnational et diffus sans ancrage géographique local précis.
+  → écrit
+[68/146] 
+[instance] frente_sert_o_livre_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8791 | sortie : 93
+  issue     : extrait
+  zone      : nordeste_bresil_frente
+  lieu      : Nordeste brésilien (Sertão — Pernambouc, Ceará, Piauí et franges du cerrado)
+  motif     : Le lieu est explicitement mentionné dans le champ localisation et correspond exactement à la zone nordeste_bresil_frente.
+  → écrit
+[69/146] 
+[instance] front_de_resistance_aux_peages_sur_les_ressources_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8022 | sortie : 65
+  issue     : extrait
+  zone      : massif_central_cicatrices_vertes
+  lieu      : Massif Central
+  motif     : Le texte mentionne explicitement les paysans du Massif Central comme partie prenante du mouvement.
+  → écrit
+[70/146] 
+[instance] front_des_blocs_regionaux_du_recit_des_conflits_ressources_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8083 | sortie : 55
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : L'entité est explicitement transnationale, sans ancrage géographique local fixe ou identifiable dans les zones proposées.
+  → écrit
+[71/146] 
+[instance] front_humanitaire_d_urgence_non_affilie_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7893 | sortie : 66
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : Le Front Humanitaire d'Urgence Non Affilié est un réseau transnational sans ancrage géographique local précis, opérant dans des territoires abandonnés par les institutions.
+  → écrit
+[72/146] 
+[instance] front_techno_reconstructionniste_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7879 | sortie : 87
+  issue     : extrait
+  zone      : enclaves_industrielles_bergen_tromso
+  lieu      : Bergen–Tromsø, enclaves industrielles Nordark
+  motif     : Le lieu est explicitement mentionné dans le champ localisation avec un type d'infrastructure et correspond exactement à un slug de niveau 2 disponible.
+  → écrit
+[73/146] 
+[instance] fronts_populistes_anti_technocratiques_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7874 | sortie : 72
+  issue     : extrait
+  zone      : espace_nord_americain_fragmente
+  lieu      : Detroit-Sud
+  motif     : Le texte mentionne explicitement Detroit-Sud comme un lieu où les slogans des Fronts ornent les murs.
+  → écrit
+[74/146] 
+[instance] geneve_bunker_institutions_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8436 | sortie : 64
+  issue     : extrait
+  zone      : geneve_bunker_institutions
+  lieu      : Palais des Nations, Genève
+  motif     : Le lieu est explicitement mentionné dans le champ localisation avec une zone correspondante disponible.
+  → écrit
+[75/146] 
+[instance] gouvernements_de_forteresse_anti_nairobi_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8003 | sortie : 55
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : Les Gouvernements de Forteresse Anti-Nairobi sont dispersés sur quatre continents sans ancrage géographique local précis.
+  → écrit
+[76/146] 
+[instance] gouvernements_regionaux_residuels_reterritorialisants_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7984 | sortie : 54
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : L'entité est transnationale et sans ancrage géographique local précis, couvrant des zones régionales et continentales.
+  → écrit
+[77/146] 
+[instance] grandes_lacs_compact_eau_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8838 | sortie : 83
+  issue     : extrait
+  zone      : grandes_lacs_compact_eau
+  lieu      : Grands Lacs (Compact de l'Eau Dernière)
+  motif     : Le champ localisation contient un lieu précis ('Grands Lacs') mappable sur la zone 'grandes_lacs_compact_eau'.
+  → écrit
+[78/146] 
+[instance] guilde_des_techniciens_nomades_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7823 | sortie : 57
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : La Guilde des Techniciens Nomades opère de manière itinérante et transnationale sans ancrage géographique local précis.
+  → écrit
+[79/146] 
+[instance] hanse_baltique_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8885 | sortie : 88
+  issue     : extrait
+  zone      : hanse_baltique
+  lieu      : Ligue Hanséatique Baltique (Lübeck, ports baltiques de Tallinn à Hambourg)
+  motif     : Le champ localisation contient un lieu précis (Ligue Hanséatique Baltique) mappable sur la zone 'hanse_baltique'.
+  → écrit
+[80/146] 
+[instance] hanse_baltique_recomposee_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7863 | sortie : 81
+  issue     : extrait
+  zone      : hanse_baltique
+  lieu      : Gdańsk (siège du Conseil Hanséatique)
+  motif     : Le lieu précis Gdańsk est mentionné dans le champ localisation avec un type_lieu 'region' et correspond à la zone 'hanse_baltique' disponible.
+  → écrit
+[81/146] 
+[instance] kalaallit_nunaat_sovereign_fund_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8580 | sortie : 90
+  issue     : extrait
+  zone      : groenland_fonds_glaces
+  lieu      : Nuuk
+  motif     : Le champ localisation indique clairement 'Nuuk, Groenland' avec un type_lieu 'site_strategique' et la zone correspondante 'groenland_fonds_glaces' est présente dans la liste.
+  → écrit
+[82/146] 
+[instance] lagos_est_nexcore_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8540 | sortie : 94
+  issue     : extrait
+  zone      : lagos_est_nexcore
+  lieu      : Lagos-Est (Nœud NexCore)
+  motif     : Le champ localisation mentionne explicitement 'Lagos-Est (Nœud NexCore)' avec un type_lieu 'ville' et correspond exactement au slug 'lagos_est_nexcore' disponible dans la liste.
+  → écrit
+[83/146] 
+[instance] lagos_interieur_mnemos_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8712 | sortie : 81
+  issue     : extrait
+  zone      : lagos_interieur_mnemos
+  lieu      : Lagos-Intérieur (lagune de Lagos)
+  motif     : Le champ localisation indique clairement un lieu précis dans la lagune de Lagos, mappable sur la zone 'lagos_interieur_mnemos'.
+  → écrit
+[84/146] 
+[instance] le_registre_du_fleuve_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8501 | sortie : 82
+  issue     : extrait
+  zone      : afrique_centrale_australe
+  lieu      : bassin du Congo et Cuvette congolaise
+  motif     : Le lieu est explicitement mentionné dans le champ 'localisation' et correspond exactement à la zone 'afrique_centrale_australe'.
+  → écrit
+[85/146] 
+[instance] le_temoin_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7167 | sortie : 55
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : L'entité est clairement transnationale sans ancrage local fort, comme indiqué dans le champ localisation.note.
+  → écrit
+[86/146] 
+[instance] les_veilleurs_du_fleuve_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8343 | sortie : 78
+  issue     : extrait
+  zone      : sfax_relais_bouches
+  lieu      : près de Sfax
+  motif     : Le lieu 'près de Sfax' est explicitement mentionné dans la fiche et correspond exactement au slug 'sfax_relais_bouches' disponible dans la liste.
+  → écrit
+[87/146] 
+[instance] ligue_des_cites_du_sahel_numerique_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8693 | sortie : 70
+  issue     : extrait
+  zone      : agadez_ligue_sahel_numerique
+  lieu      : Agadez
+  motif     : Le champ localisation indique clairement Agadez comme lieu précis et la zone correspondante existe dans la liste fournie.
+  → écrit
+[88/146] 
+[instance] ligue_des_cites_littorales_en_sursis_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7967 | sortie : 62
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : L'entité est une organisation transnationale sans ancrage géographique local précis, représentant des cités côtières disparues ou en voie de submersion.
+  → écrit
+[89/146] 
+[instance] ligue_eurasiatique_coalition_pacifique_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7872 | sortie : 51
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : L'entité est une alliance transnationale et décentralisée sans ancrage géographique local précis.
+  → écrit
+[90/146] 
+[instance] ligue_mediterraneenne_des_villes_etats_portuaires_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8040 | sortie : 107
+  issue     : extrait
+  zone      : arc_sahelo_mediterraneen
+  lieu      : Réseau portuaire diffus — siège tournant entre Sfax, Carthage-Nord et les Plaines de l'Ebre
+  motif     : Le champ localisation mentionne explicitement une zone géographique précise (arc_sahelo_mediterraneen) et un lieu textuel correspondant à des infrastructures portuaires méditerranéennes.
+  → écrit
+[91/146] 
+[instance] massif_central_cicatrices_vertes_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8932 | sortie : 89
+  issue     : extrait
+  zone      : massif_central_cicatrices_vertes
+  lieu      : Massif Central — Cicatrices Vertes (plateau de Millevaches, ancienne Creuse)
+  motif     : Le champ localisation contient un lieu précis et mappable sur la zone 'massif_central_cicatrices_vertes'.
+  → écrit
+[92/146] 
+[instance] midwest_desertifie_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8571 | sortie : 80
+  issue     : extrait
+  zone      : midwest_desertifie
+  lieu      : Topeka, Midwest désertifié
+  motif     : Le champ localisation contient un lieu précis (Topeka) et une zone géographique existante (midwest_desertifie) correspondant à la région désertifiée du Midwest américain.
+  → écrit
+[93/146] 
+[instance] milices_agro_defensives_locales_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7769 | sortie : 77
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : L'entité est décrite comme active dans des 'territoires sans nom sur les cartes officielles' et des 'franges rurales abandonnées', sans ancrage géographique précis ou mappable sur une zone existante.
+  → écrit
+[94/146] 
+[instance] milices_contractuelles_des_anciens_etats_membres_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7879 | sortie : 47
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : L'entité est une organisation transnationale sans ancrage géographique local précis.
+  → écrit
+[95/146] 
+[instance] milices_d_accaparement_hydrique_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7793 | sortie : 73
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : L'entité est décrite comme une organisation transnationale sans ancrage géographique précis, couvrant des zones géographiques variées (Sahel, Ebre, etc.) sans localisation unique ou mappable.
+  → écrit
+[96/146] 
+[instance] milices_de_controle_territorial_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8066 | sortie : 69
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : L'entité 'Milices de Contrôle Territorial' est décrite comme une organisation transnationale sans ancrage géographique local précis, active dans de nombreuses zones habitées de la planète.
+  → écrit
+[97/146] 
+[instance] milices_extractivistes_du_bassin_du_congo_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8011 | sortie : 83
+  issue     : extrait
+  zone      : kivu_dispute
+  lieu      : Kivu Disputé et Brazzaville-Nord
+  motif     : Le lieu est explicitement mentionné dans la fiche (Kivu Disputé et Brazzaville-Nord) et correspond à la zone 'kivu_dispute' disponible dans la liste.
+  → écrit
+[98/146] 
+[instance] milices_privees_documentees_terrain_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7893 | sortie : 61
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : L'entité est une catégorie transnationale de milices privées sans ancrage géographique précis, couvrant des zones régionales et continentales variées.
+  → écrit
+[99/146] 
+[instance] milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7893 | sortie : 70
+  issue     : extrait
+  zone      : islande_pecheries
+  lieu      : Reykjavik / Eaux territoriales islandaises élargie
+  motif     : Le lieu est explicitement mentionné dans la fiche et correspond à une zone géographique disponible.
+  → écrit
+[100/146] 
+[instance] mouvement_des_communes_du_rust_belt_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8883 | sortie : 76
+  issue     : extrait
+  zone      : communes_rust_belt
+  lieu      : Communes Libres du Rust Belt (Detroit, Cleveland, Pittsburgh)
+  motif     : Le champ localisation contient un lieu précis et mappable sur la zone 'communes_rust_belt'.
+  → écrit
+[101/146] 
+[instance] mouvement_racines_vivantes_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8211 | sortie : 67
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : Le champ localisation indique explicitement 'transnationale_sans_ancrage' et le mouvement est décrit comme une nébuleuse de cellules locales sans ancrage géographique fixe.
+  → écrit
+[102/146] 
+[instance] nairobi_crrc_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8681 | sortie : 67
+  issue     : extrait
+  zone      : nairobi_crrc
+  lieu      : Nairobi
+  motif     : Le champ localisation indique clairement Nairobi comme lieu précis et mappable sur la zone 'nairobi_crrc'.
+  → écrit
+[103/146] 
+[instance] nexcore_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7156 | sortie : 56
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : L'entité est explicitement transnationale sans ancrage local précis, comme indiqué dans le champ localisation.note.
+  → écrit
+[104/146] 
+[instance] nexus_biosyn_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8402 | sortie : 50
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : L'entité est explicitement transnationale sans ancrage local précis dans la fiche.
+  → écrit
+[105/146] 
+[instance] noeud_mnemos_pannonie_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8430 | sortie : 90
+  issue     : extrait
+  zone      : noeud_mnemos_pannonie
+  lieu      : Győr, plaine pannonienne (bassin du Danube)
+  motif     : Le champ localisation contient un lieu précis (Győr) et une zone géographique exacte (noeud_mnemos_pannonie) correspondant à la plaine pannonienne.
+  → écrit
+[106/146] 
+[instance] noeud_nordark_tromso_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8710 | sortie : 81
+  issue     : extrait
+  zone      : noeud_nordark_tromso
+  lieu      : Tromsø
+  motif     : Le champ localisation contient un lieu précis (Tromsø) mappable sur la zone 'noeud_nordark_tromso' de niveau 2.
+  → écrit
+[107/146] 
+[instance] occitanie_racines_meres_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8798 | sortie : 102
+  issue     : extrait
+  zone      : occitanie_racines_meres
+  lieu      : Occitanie (anciens territoires occitans, du Larzac aux garrigues de l'Hérault, des Pyrénées aux contreforts des Alpes)
+  motif     : Le texte précise un ancrage territorial occitan clair, mappable sur la zone 'occitanie_racines_meres'.
+  → écrit
+[108/146] 
+[instance] ong_de_gestion_migratoire_survivantes_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7783 | sortie : 47
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : L'entité est une organisation transnationale sans ancrage géographique local précis.
+  → écrit
+[109/146] 
+[instance] oracle_des_seuils_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8417 | sortie : 50
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : L'entité est explicitement transnationale sans ancrage local fort dans la fiche.
+  → écrit
+[110/146] 
+[instance] pirates_biologiques_open_source_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7999 | sortie : 46
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : L'entité est un réseau transnational sans ancrage géographique local précis.
+  → écrit
+[111/146] 
+[instance] rede_paulista_de_distribuic_o_algor_tmica_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8306 | sortie : 70
+  issue     : extrait
+  zone      : sao_paulo_rpda
+  lieu      : Grand São Paulo
+  motif     : Le champ localisation indique clairement 'lieu: Grand São Paulo' et 'zone: sao_paulo_rpda'.
+  → écrit
+[112/146] 
+[instance] reseau_de_recuperation_industrielle_illicite_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7962 | sortie : 50
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : Le réseau opère de manière transnationale et diffuse, sans ancrage géographique local précis.
+  → écrit
+[113/146] 
+[instance] reseau_des_anciens_financeurs_devenus_censeurs_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7869 | sortie : 67
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : Le réseau agit en zone régionale fragmentée transnationale sans ancrage local précis, couvrant des marges du corridor Sahélo-Méditerranéen jusqu'aux enclaves baltiques.
+  → écrit
+[114/146] 
+[instance] reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8202 | sortie : 100
+  issue     : extrait
+  zone      : arc_sahelo_mediterraneen
+  lieu      : arc sahélo-méditerranéen (de Sfax à Agadez, de Lyon-Ruines aux plaines du Sahel central)
+  motif     : Le réseau opère explicitement dans l'arc sahélo-méditerranéen, couvrant des zones précises listées dans les zones disponibles.
+  → écrit
+[115/146] 
+[instance] reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7976 | sortie : 56
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : Le réseau opère de manière transnationale et sans ancrage géographique local précis, couvrant cinq zones de crise majeures.
+  → écrit
+[116/146] 
+[instance] reseau_logistique_criminel_concurrent_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7759 | sortie : 58
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : Le réseau logistique criminel concurrent est décrit comme opérant de manière transnationale et continentale sans ancrage géographique local précis.
+  → écrit
+[117/146] 
+[instance] reseau_mnemos_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8276 | sortie : 65
+  issue     : extrait
+  zone      : noeud_mnemos_pannonie
+  lieu      : Bassin Pannonien
+  motif     : Le texte mentionne explicitement un nœud isolé dans le bassin pannonien.
+  → écrit
+[118/146] 
+[instance] reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7824 | sortie : 94
+  issue     : extrait
+  zone      : arc_eurasien_central
+  lieu      : Corridor Oural-Caspien / Cracovie (nœuds principaux)
+  motif     : Le champ localisation mentionne explicitement le Corridor Oural-Caspien et Cracovie comme nœuds principaux, tous deux mappables sur la zone arc_eurasien_central.
+  → écrit
+[119/146] 
+[instance] reseaux_de_soigneurs_traditionnels_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7892 | sortie : 102
+  issue     : extrait
+  zone      : massif_central_cicatrices_vertes
+  lieu      : Territoires ruraux du Massif Central et zones de déprise périurbaines
+  motif     : Le texte mentionne explicitement les 'vallées abandonnées du Massif Central' comme territoire d'action des réseaux, correspondant à la zone 'massif_central_cicatrices_vertes'.
+  → écrit
+[120/146] 
+[instance] reseaux_de_solidarite_horizontale_post_effondrement_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8045 | sortie : 55
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : L'entité est un réseau transnational sans ancrage géographique local précis, présent dans de multiples zones sans localisation centrale.
+  → écrit
+[121/146] 
+[instance] reseaux_noirs_pharmaceutiques_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7907 | sortie : 69
+  issue     : extrait
+  zone      : afrique_de_louest_lagos_sahel
+  lieu      : Lagos-Est
+  motif     : Le texte mentionne explicitement les enclaves de Lagos-Est comme un lieu d'activité des réseaux noirs pharmaceutiques.
+  → écrit
+[122/146] 
+[instance] saboteurs_des_corridors_de_transit_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7840 | sortie : 110
+  issue     : extrait
+  zone      : corridors_eurasiens_convoyage
+  lieu      : Corridors Eurasiens — axes de convoyage armé
+  motif     : Le champ localisation mentionne explicitement les 'Corridors Eurasiens — axes de convoyage armé' comme lieu d'action des Saboteurs des Corridors de Transit, correspondant exactement au slug 'corridors_eurasiens_convoyage'.
+  → écrit
+[123/146] 
+[instance] seigneuries_foncieres_opportunistes_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8038 | sortie : 57
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : L'entité est une organisation transnationale sans ancrage géographique local précis, opérant à l'échelle régionale et continentale.
+  → écrit
+[124/146] 
+[instance] seigneuries_logistiques_armees_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7650 | sortie : 53
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : Entité transnationale sans ancrage géographique local précis, active sur des corridors régionaux et continentaux.
+  → écrit
+[125/146] 
+[instance] seigneurs_de_guerre_agro_territoriaux_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7824 | sortie : 65
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : L'entité est décrite comme une organisation transnationale sans ancrage géographique précis, couvrant des régions multiples (Sahel, Ebre, Kivu, Midwest).
+  → écrit
+[126/146] 
+[instance] seoul_collectif_nexcore_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8609 | sortie : 79
+  issue     : extrait
+  zone      : seoul_collectif_nexcore
+  lieu      : Séoul (districts de Nowon et Dobong)
+  motif     : Le texte mentionne explicitement les districts de Nowon et Dobong à Séoul comme localisation du Seoul Collectif Nexcore.
+  → écrit
+[127/146] 
+[instance] sfax_relais_bouches_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8603 | sortie : 60
+  issue     : extrait
+  zone      : sfax_relais_bouches
+  lieu      : Sfax
+  motif     : Le texte mentionne explicitement Sfax comme lieu d'ancrage géographique de l'entité.
+  → écrit
+[128/146] 
+[instance] tour_bcuc_geneve_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8617 | sortie : 74
+  issue     : extrait
+  zone      : tour_bcuc_geneve
+  lieu      : Tour BCUC, Genève
+  motif     : Le champ localisation contient un lieu précis (Tour BCUC, Genève) mappable sur la zone tour_bcuc_geneve.
+  → écrit
+[129/146] 
+[instance] trame_bioclimatique_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8199 | sortie : 59
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : La fiche indique explicitement une localisation transnationale sans ancrage local précis (note: transnationale_sans_ancrage).
+  → écrit
+[130/146] 
+[instance] tribunal_algorithmique_de_bruxelles_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8522 | sortie : 85
+  issue     : extrait
+  zone      : geneve_bunker_institutions
+  lieu      : Enclaves européennes (nomade, origine Bruxelles)
+  motif     : Le champ localisation indique une origine nomade depuis Bruxelles mais une localisation actuelle dans des enclaves européennes, mappée sur la zone geneve_bunker_institutions.
+  → écrit
+[131/146] 
+[instance] vallee_allier_terrafond_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8644 | sortie : 93
+  issue     : extrait
+  zone      : vallee_allier_terrafond
+  lieu      : Vallée de l'Allier, entre Vichy et Brioude
+  motif     : Le texte mentionne explicitement la localisation dans la vallée de l'Allier entre Vichy et Brioude, correspondant exactement à la zone 'vallee_allier_terrafond'.
+  → écrit
+[132/146] 
+[instance] vasil_orentchev_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8482 | sortie : 91
+  issue     : extrait
+  zone      : arc_eurasien_central
+  lieu      : Arc eurasien central (corridors de l'ancienne Géorgie aux plaines kazakhes, corridor Oural-Caspien)
+  motif     : Le champ localisation contient un lieu précis et mappable sur la zone 'arc_eurasien_central'.
+  → écrit
+[133/146] 
+[instance] voix_du_dehors_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8397 | sortie : 117
+  issue     : extrait
+  zone      : arc_sahelo_mediterraneen
+  lieu      : Arc Sahélo-Méditerranéen (Sfax, Lyon-Part-Dieu, corridors nomades)
+  motif     : Le champ localisation mentionne explicitement l'Arc Sahélo-Méditerranéen avec des lieux précis (Sfax, Lyon-Part-Dieu) et des corridors nomades, correspondant à la zone arc_sahelo_mediterraneen.
+  → écrit
+[134/146] 
+[event_instance] arrestation_chris_van_derburgh_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7171 | sortie : 79
+  issue     : extrait
+  zone      : espace_nord_americain_fragmente
+  lieu      : Detroit-Sud
+  motif     : Le champ localisation indique clairement Detroit-Sud comme lieu précis et mappable sur la zone existante espace_nord_americain_fragmente.
+  → écrit
+[135/146] 
+[event_instance] communes_rust_belt_zones_libres_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8287 | sortie : 87
+  issue     : extrait
+  zone      : communes_rust_belt
+  lieu      : Communes Libres du Rust Belt (Detroit, Cleveland, Pittsburgh)
+  motif     : Le texte mentionne explicitement les villes de Detroit, Cleveland et Pittsburgh comme lieux de la proclamation des Zones Libres, localisées dans la région du Rust Belt.
+  → écrit
+[136/146] 
+[event_instance] conflit_israel_iran_2026_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8082 | sortie : 85
+  issue     : extrait
+  zone      : zone_golfe_levant
+  lieu      : Zone Golfe Persique–Levant (Ispahan, Fordow, Kharg, Haïfa, détroit d'Ormuz)
+  motif     : Le champ localisation contient une zone précise et mappable sur une zone existante.
+  → écrit
+[137/146] 
+[event_instance] crise_gouvernance_amazonie_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8379 | sortie : 84
+  issue     : extrait
+  zone      : amazon_pacte_gardiens
+  lieu      : Belém / Bassin Amazonien
+  motif     : Le texte mentionne explicitement Belém et le Bassin Amazonien comme lieu de l'événement, mappable sur la zone amazon_pacte_gardiens.
+  → écrit
+[138/146] 
+[event_instance] effondrement_reseau_mondial_communication_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7219 | sortie : 49
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : L'événement est explicitement transnational sans ancrage local précis dans la fiche.
+  → écrit
+[139/146] 
+[event_instance] election_parti_commun_americain_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7191 | sortie : 70
+  issue     : extrait
+  zone      : espace_nord_americain_fragmente
+  lieu      : Philadelphia-Centrale
+  motif     : Le lieu Philadelphia-Centrale est explicitement mentionné dans la fiche et correspond à une zone géographique disponible.
+  → écrit
+[140/146] 
+[event_instance] emeutes_algorithme_sao_paulo_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8084 | sortie : 72
+  issue     : extrait
+  zone      : sao_paulo_rpda
+  lieu      : Grand São Paulo
+  motif     : Le champ localisation contient un lieu précis (Grand São Paulo) mappable sur la zone existante sao_paulo_rpda.
+  → écrit
+[141/146] 
+[event_instance] encheres_terres_rares_groenland_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8273 | sortie : 80
+  issue     : extrait
+  zone      : groenland_fonds_glaces
+  lieu      : Nuuk, Groenland
+  motif     : Le lieu 'Nuuk, Groenland' est explicitement mentionné dans la fiche et correspond exactement à la zone 'groenland_fonds_glaces'.
+  → écrit
+[142/146] 
+[event_instance] exode_midwest_grands_lacs_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8324 | sortie : 98
+  issue     : extrait
+  zone      : espace_nord_americain_fragmente
+  lieu      : Midwest désertifié vers Grands Lacs (Chicago, Detroit, Cleveland)
+  motif     : Le texte mentionne explicitement une localisation géographique précise dans le Midwest américain et les Grands Lacs, mappable sur la zone 'espace_nord_americain_fragmente'.
+  → écrit
+[143/146] 
+[event_instance] grand_forum_sahel_numerique_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8107 | sortie : 74
+  issue     : extrait
+  zone      : agadez_ligue_sahel_numerique
+  lieu      : Agadez, Palais des Conférences
+  motif     : Le texte mentionne explicitement Agadez et le Palais des Conférences comme lieu de l'événement.
+  → écrit
+[144/146] 
+[event_instance] incident_passage_arctique_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8117 | sortie : 116
+  issue     : extrait
+  zone      : autorite_passage_arctique
+  lieu      : Passage Nord-Ouest (eaux arctiques sous juridiction fantôme de l'Autorité du Passage Arctique)
+  motif     : Le lieu est explicitement mentionné dans la fiche comme étant le Passage Nord-Ouest, associé à l'Autorité du Passage Arctique, qui correspond à la zone de niveau 3 'autorite_passage_arctique'.
+  → écrit
+[145/146] 
+[event_instance] insurrection_rust_belt_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8319 | sortie : 97
+  issue     : extrait
+  zone      : communes_rust_belt
+  lieu      : Communes Libres du Rust Belt (Detroit, Cleveland, Pittsburgh)
+  motif     : Le champ localisation contient une région précise (Communes Libres du Rust Belt) avec des villes identifiées (Detroit, Cleveland, Pittsburgh) mappable sur la zone 'communes_rust_belt'.
+  → écrit
+[146/146] 
+[event_instance] secession_great_lakes_compact_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8385 | sortie : 85
+  issue     : extrait
+  zone      : grandes_lacs_compact_eau
+  lieu      : Grands Lacs / Chicago-Lacustre
+  motif     : Le champ localisation contient un lieu précis ('Grands Lacs / Chicago-Lacustre') mappable sur la zone 'grandes_lacs_compact_eau'.
+  → écrit
+
+============================================================
+RÉCAPITULATIF
+============================================================
+  Extraits (zone trouvée)    : 92
+  Vides assumés (transnat.)  : 53
+  Ambigus (review manuelle)  : 1
+  Erreurs                    : 0
+  Total traité               : 146
+
+  → 1 fiche(s) à review manuelle :
+     • communautes_rurales_autonomes_breakdown — zone candidate : massif_central_cicatrices_vertes
+
+Fiches modifiées : 146
+Sauvegardes .bak créées pour chaque fichier modifié.
+Rapport need_action mis a jour : documentation/need_action/localisation_review.md
+   (1 fiche(s) en attente)

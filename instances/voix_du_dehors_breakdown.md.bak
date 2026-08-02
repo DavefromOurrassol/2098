@@ -8,9 +8,6 @@ localisation:
   zone: arc_sahelo_mediterraneen
   lieu: Arc Sahélo-Méditerranéen (Sfax, Lyon-Part-Dieu, corridors nomades)
   type_lieu: region
-  statut: review_manuelle
-  note: "Le réseau est décentralisé et multi-régional, mais ses exemples concrets (Sfax, courriers nomades sahélo-méditerranéens) et son alliance principale pointent vers l'arc sahélo-méditerranéen comme ancrage principal, bien que des cellules opèrent aussi ailleurs (Lyon, corridors des lithiums)."
-
 type_dans_scenario: réseau
 
 role_dans_scenario: >

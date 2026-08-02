@@ -131,6 +131,26 @@ def parse_md(filepath):
     return fm, m.group(2).strip()
 
 
+def _normalize_lieux_emblematiques(zones):
+    """Corrige à la source les entrées lieux_emblematiques mal formées (bug
+    trouvé le 31 juillet 2026 : au moins une zone de geographie/breakdown.md
+    contenait une simple chaîne au lieu du dict {"nom": ..., "type": ...,
+    "notes": ...} attendu partout dans le pipeline -- probablement une édition
+    manuelle du fichier .md dans Obsidian. Normalise en place, une seule fois
+    à la lecture, plutôt que de faire porter la tolérance de format à chaque
+    fonction qui lit ce champ plus loin (dedupe_promoted_lieux,
+    build_geographie_md)."""
+    for zone in zones:
+        lieux = zone.get("lieux_emblematiques")
+        if not lieux:
+            continue
+        zone["lieux_emblematiques"] = [
+            lieu if isinstance(lieu, dict) else {"nom": str(lieu), "type": "", "notes": ""}
+            for lieu in lieux
+        ]
+    return zones
+
+
 def load_existing_geographie(scenario):
     """Charge geographie/{scenario}.md existant. Retourne (zones, vue_ensemble)
     ou (None, None) si le fichier n'existe pas encore."""
@@ -138,7 +158,7 @@ def load_existing_geographie(scenario):
     if not path.exists():
         return None, None
     fm, body = parse_md(path)
-    zones = fm.get("zones") or []
+    zones = _normalize_lieux_emblematiques(fm.get("zones") or [])
     m = re.search(r"## Vue d'ensemble\s*\n(.*?)(?:\n## |\Z)", body, re.DOTALL)
     vue_ensemble = m.group(1).strip() if m else ""
     return zones, vue_ensemble
@@ -512,9 +532,17 @@ def dedupe_promoted_lieux(existing_zones, new_zones):
         any_match = False
         for existing_zone in existing_zones:
             lieux = existing_zone.get("lieux_emblematiques") or []
+            # Tolérance de format (bug trouvé le 31 juillet 2026) : une entrée
+            # de lieux_emblematiques est censée être un dict {"nom": ..., ...}
+            # partout dans le pipeline (build_geographie_monde.py,
+            # zoning_topdown.py, fix_lieux_residuels.py), mais une entrée
+            # éditée à la main dans geographie/{scenario}.md peut être une
+            # simple chaîne -- .get() plantait alors avec AttributeError.
+            # On traite ce cas comme si nom == la chaîne elle-même.
             match_idx = next(
                 (i for i, lieu in enumerate(lieux)
-                 if str(lieu.get("nom", "")).strip() == promu_depuis_clean),
+                 if (lieu.get("nom", "") if isinstance(lieu, dict) else str(lieu)).strip()
+                    == promu_depuis_clean),
                 None,
             )
             if match_idx is None:
@@ -522,8 +550,9 @@ def dedupe_promoted_lieux(existing_zones, new_zones):
             any_match = True
             removed = lieux.pop(match_idx)
             existing_zone["lieux_emblematiques"] = lieux
+            removed_nom = removed.get("nom", "?") if isinstance(removed, dict) else str(removed)
             dedupe_log.append((zone.get("slug", "?"), existing_zone["slug"],
-                                removed.get("nom", "?"), "retiré"))
+                                removed_nom, "retiré"))
 
         if not any_match:
             # promu_depuis ne correspond à AUCUN lieu réel d'aucune zone existante —
@@ -578,8 +607,15 @@ def build_geographie_md(scenario, all_zones, vue_ensemble, nb_nouvelles):
         if lieux:
             zones_md += "**Lieux emblématiques** :\n"
             for lieu in lieux:
-                note = f" — {lieu.get('notes', '')}" if lieu.get("notes") else ""
-                zones_md += f"- {lieu.get('nom', '?')} ({lieu.get('type', '')}){note}\n"
+                # Même tolérance de format qu'en dedupe_promoted_lieux (bug du
+                # 31 juillet 2026) : une entrée peut être une simple chaîne au
+                # lieu du dict {"nom": ..., "type": ..., "notes": ...} attendu.
+                if isinstance(lieu, dict):
+                    note = f" — {lieu.get('notes', '')}" if lieu.get("notes") else ""
+                    type_txt = f" ({lieu['type']})" if lieu.get("type") else ""
+                    zones_md += f"- {lieu.get('nom', '?')}{type_txt}{note}\n"
+                else:
+                    zones_md += f"- {lieu}\n"
             zones_md += "\n"
         rel = zone.get("relations", {}) or {}
         if rel.get("allies"):

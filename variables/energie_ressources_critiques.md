@@ -350,7 +350,8 @@ _extended_
 - conscience_limites_energetiques
 - acceptation_transition_contrainte (→ section 12)
 
-
+**custom (signaux d'actualité)**
+- irrigation solaire massive au Sahel accentue les conflits hydriques (→ signal_custom: irrigation_solaire_tensions_eau, source: actualite)
 
 ## 8. États par scénario
 ### [[fortress_world]]
@@ -671,4 +672,31 @@ signal_to_state:
         evolution: acceptation partielle et contestée selon les groupes sociaux
         date_bascule: 2024-2040
         evenement_cle: premier sondage mondial sur l'acceptation de la transition 2031
+
+  - signal: irrigation_solaire_tensions_eau
+    scenarios:
+      breakdown:
+        evolution: effondrement des coopératives solaires par pénuries hydriques
+        date_bascule: 2042-2060
+        evenement_cle: Chad abandonne ses périmètres irrigués solaires 2055
+      fortress_world:
+        evolution: blocs énergétiques accaparent les nappes via fermes solaires
+        date_bascule: 2037-2053
+        evenement_cle: Bloc Eurasiatique annexe les aquifères du lac Tchad 2048
+      new_sustainability:
+        evolution: optimisation IA des réseaux hydriques solaires transfrontaliers
+        date_bascule: 2032-2047
+        evenement_cle: Consortium SahelFlow déploie son IA de gestion hydrique 2041
+      eco_communalism:
+        evolution: bioterritoires gèrent localement leurs pompages solaires
+        date_bascule: 2039-2058
+        evenement_cle: charte de N'Djamena pour l'autonomie hydrique communautaire
+      policy_reform:
+        evolution: accords régionaux encadrent l'irrigation solaire partagée
+        date_bascule: 2029-2044
+        evenement_cle: traité de Ouagadougou sur les quotas hydriques solaires 2037
+      reference:
+        evolution: tensions persistantes entre États pour l'accès à l'eau solaire
+        date_bascule: 2025-2040
+        evenement_cle: Burkina Faso et Ghana s'opposent sur le barrage de Bagré 2036
 ```

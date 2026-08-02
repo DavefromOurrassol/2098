@@ -8,9 +8,6 @@ localisation:
   zone: arc_sahelo_mediterraneen
   lieu: Massif Central / Vallée de l'Allier et plaines de l'Ebre
   type_lieu: region
-  statut: review_manuelle
-  note: "L'entité est ancrée dans le Massif Central français et les plaines de l'Ebre espagnol, zones qui ne correspondent exactement à aucune zone disponible mais dont la géographie sud-européenne/méditerranéenne se rapproche le plus de l'Arc Sahélo-Méditerranéen ; toutefois le réseau est fragmenté sur plusieurs territoires sans zone parfaitement adaptée."
-
 type_dans_scenario: réseau
 
 role_dans_scenario: >

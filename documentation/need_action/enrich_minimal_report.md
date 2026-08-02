@@ -1,6 +1,6 @@
 # Rapport d'enrichissement — officialise_minimal
 
-Généré le 2026-06-28 15:45 
+Généré le 2026-08-02 07:13 
 
 ## Résumé
 
@@ -11,4 +11,4 @@ Généré le 2026-06-28 15:45
 | ⏭ Ignorées | 0 |
 | **Total** | **0** |
 
-Durée : 10s
+Durée : 1s

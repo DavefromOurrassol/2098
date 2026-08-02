@@ -4,6 +4,11 @@ type: instance
 slug: ligue_des_cites_littorales_en_sursis_breakdown
 entite: ligue_des_cites_littorales_en_sursis
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 statut: officialise_enrichi
 type_dans_scenario: organisation
 role_dans_scenario: 'Dans le scénario breakdown, elles incarnent les entités territoriales
@@ -71,10 +76,6 @@ tensions_narratives: 'La tension centrale de la Ligue réside dans l''impossibil
   et une faction mémorielle qui refuse de dissoudre l''institution, même symbolique,
   tant qu''un seul ressortissant est vivant.'
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: null
 ---
 
 # Ligue des Cités Littorales en Sursis

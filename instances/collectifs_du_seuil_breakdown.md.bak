@@ -8,9 +8,6 @@ localisation:
   zone: arc_sahelo_mediterraneen
   lieu: Lyon / axe A7 / arc Marseille-Tunis
   type_lieu: region
-  statut: review_manuelle
-  note: "La description mentionne Lyon, l'autoroute A7, Marseille et Tunis comme lieux d'ancrage, ce qui correspond à l'arc sahélo-méditerranéen, mais le réseau est explicitement fragmenté en dizaines de nœuds à travers les zones grises de l'ancien monde industrialisé, rendant l'ancrage multi-zones."
-
 type_dans_scenario: réseau
 
 role_dans_scenario: >

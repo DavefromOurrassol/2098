@@ -56,6 +56,8 @@ zones:
     type_entite: pays
     portion: null
   - entite: Groenland
+    type_entite: pays
+    portion: null
   description: Zone définie par la trajectoire politique américaine dans le scénario,
     notamment l'élection de 2055 qui porte au pouvoir un gouvernement social-démocrate
     progressiste contraint par les accords internationaux existants. Les Amériques
@@ -81,7 +83,7 @@ zones:
 - slug: bloc_souverainiste_non_signataire
   nom: Bloc Souverainiste Non-Signataire (Sud Global dissident)
   niveau: 1
-  type: bloc_continental
+  type: union_regionale
   parent: null
   origine_reelle:
   - entite: Niger
@@ -165,25 +167,26 @@ zones:
   - entite: Dominique
     type_entite: pays
     portion: null
-  description: Ensemble hétérogène d'États du Sud Global — notamment sahéliens, andins
-    et du Pacifique Sud — qui contestent ou résistent à l'architecture de gouvernance
-    technocratique mondiale, revendiquant une souveraineté sur leurs ressources, leurs
-    données et leurs décisions biologiques. Ce bloc comprend les 'États dissidents
-    du bloc austral', les États menacés de sécession du Pacte de Genève, et les mouvements
-    souverainistes afro-asiatiques.
-  statut: fragmenté
-  tensions_internes: 'Profondément hétérogène : certains États menacent de quitter
-    le Pacte de Genève sur les questions de rationnement énergétique, d''autres dépendent
-    structurellement des ressources hydriques du RIREC, créant une vulnérabilité qui
-    limite leur capacité de dissidence effective.'
+  description: Coalition d'États du Sud Global — sahéliens, andins et du Pacifique
+    Sud — qui négocient collectivement leur intégration aux mécanismes de gouvernance
+    technocratique mondiale, tout en défendant une souveraineté renforcée sur leurs
+    ressources, leurs données et leurs choix stratégiques. Ce bloc agit comme un contrepoids
+    institutionnalisé, participant aux instances de régulation tout en exigeant des
+    réformes structurelles.
+  statut: stable
+  tensions_internes: 'Hétérogénéité persistante : certains membres privilégient une
+    intégration progressive aux institutions internationales, tandis que d''autres
+    insistent sur des garanties de souveraineté absolue, notamment en matière de gestion
+    des ressources hydriques et énergétiques.'
   periode_transition: 2087-2098
   evenement_transition: null
   lieux_emblematiques: []
   relations:
-    allies: []
+    allies:
+    - espace_eurasiatique
+    - royaume_uni_autonome
     rivaux:
     - hub_europeen_regulation
-    - hub_africain_gouvernance
   sources_attestees:
   - amara_diallo_nkosi_policy_reform
   - etats_dissidents_du_bloc_austral_policy_reform
@@ -2111,9 +2114,9 @@ zones:
   promu_depuis: null
 - slug: noeuds_irrigation_saheliens
   nom: Nœuds d'irrigation atmosphérique sahéliens
-  niveau: 3
+  niveau: 2
   type: infrastructure
-  parent: corridors_vivants_rirec
+  parent: bloc_souverainiste_non_signataire
   origine_reelle:
   - entite: Niger
     type_entite: pays

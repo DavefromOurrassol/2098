@@ -1,0 +1,6 @@
+→ 1 entrées trouvées dans needs_review.yaml
+  Nouvelles entrées à ajouter : 1
+✓ 1 entrées ajoutées à /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/entites_custom/queue.yaml
+
+→ Lancer :
+  python3 create_entities_and_instances.py  (mode custom)

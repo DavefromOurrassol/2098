@@ -8,7 +8,6 @@ localisation:
   zone: amazon_pacte_gardiens
   lieu: Manaus / Bassin amazonien
   type_lieu: region
-
 type_dans_scenario: organisation
 
 role_dans_scenario: >

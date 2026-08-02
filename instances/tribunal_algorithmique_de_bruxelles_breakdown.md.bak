@@ -5,12 +5,9 @@ slug: tribunal_algorithmique_de_bruxelles_breakdown
 entite: tribunal_algorithmique_de_bruxelles
 scenario: breakdown
 localisation:
-  zone: hanse_baltique
-  lieu: Bruxelles (Zone Administrative Bruxelloise effondrée)
-  type_lieu: ville
-  statut: review_manuelle
-  note: "L'entité est historiquement ancrée à Bruxelles mais est devenue nomade depuis 2091, se déplaçant entre enclaves européennes ; Bruxelles n'existe pas comme zone disponible, la Hanse Baltique Recomposée est le candidat européen le plus proche mais reste incertain."
-
+  zone: geneve_bunker_institutions
+  lieu: Enclaves européennes (nomade, origine Bruxelles)
+  type_lieu: infrastructure
 type_dans_scenario: institution
 
 role_dans_scenario: >

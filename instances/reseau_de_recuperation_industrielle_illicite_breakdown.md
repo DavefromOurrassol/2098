@@ -4,6 +4,11 @@ type: instance
 slug: reseau_de_recuperation_industrielle_illicite_breakdown
 entite: reseau_de_recuperation_industrielle_illicite
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 statut: officialise_enrichi
 type_dans_scenario: réseau
 role_dans_scenario: 'Accélère la dégradation des infrastructures productives en prélevant
@@ -70,10 +75,6 @@ tensions_narratives: 'Le réseau est à la fois prédateur et pourvoyeur : en pi
   les mêmes zones d''abandon, transformant les anciens sites industriels en théâtres
   de négociation armée.'
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: null
 ---
 
 # Réseau de Récupération Industrielle Illicite

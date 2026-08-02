@@ -4,6 +4,11 @@ type: instance
 slug: reseau_des_anciens_financeurs_devenus_censeurs_breakdown
 entite: reseau_des_anciens_financeurs_devenus_censeurs
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 statut: officialise_enrichi
 type_dans_scenario: réseau
 role_dans_scenario: 'Dans le scénario breakdown, ils incarnent le retournement cynique
@@ -68,10 +73,6 @@ tensions_narratives: 'La contradiction fondamentale qui les mine est celle du m�
   à tenir, exposant le réseau à des risques d''instrumentalisation par des acteurs
   bien plus violents.'
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: null
 ---
 
 # Réseau des Anciens Financeurs Devenus Censeurs

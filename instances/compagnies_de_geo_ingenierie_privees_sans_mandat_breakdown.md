@@ -4,6 +4,11 @@ type: instance
 slug: compagnies_de_geo_ingenierie_privees_sans_mandat_breakdown
 entite: compagnies_de_geo_ingenierie_privees_sans_mandat
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 statut: officialise_enrichi
 type_dans_scenario: entreprise
 role_dans_scenario: 'Dans le scénario breakdown, elles incarnent la fragmentation
@@ -71,10 +76,6 @@ tensions_narratives: 'Leurs interventions unilatérales déclenchent des représ
   catastrophe reste entière : aucun tribunal ne dispose aujourd''hui de la juridiction
   pour les poursuivre.'
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: null
 ---
 
 # Compagnies de Géo-Ingénierie Privées Sans Mandat

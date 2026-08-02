@@ -4,6 +4,11 @@ type: instance
 slug: mouvement_racines_vivantes_breakdown
 entite: mouvement_racines_vivantes
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 
 type_dans_scenario: réseau
 

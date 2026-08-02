@@ -4,6 +4,10 @@ type: instance
 slug: coalition_pacifique_nord_breakdown
 entite: coalition_pacifique_nord
 scenario: breakdown
+localisation:
+  zone: asie_pacifique_sud_est
+  lieu: Corridor sino-sibérien / Pacifique Nord
+  type_lieu: region
 statut: officialise_enrichi
 type_dans_scenario: organisation
 role_dans_scenario: 'Dans le scénario breakdown, incarne le repli souverainiste sur
@@ -67,10 +71,6 @@ tensions_narratives: 'La contradiction fondamentale de la Coalition réside dans
   de tout cadre institutionnel la prive de la légitimité nécessaire pour faire respecter
   ses propres décrets, transformant chaque accord en bras de fer armé.'
 date_creation: 2026-06-20
-localisation:
-  zone: asie_pacifique_sud_est
-  lieu: Corridor sino-sibérien / Pacifique Nord
-  type_lieu: region
 ---
 
 # Coalition Pacifique Nord

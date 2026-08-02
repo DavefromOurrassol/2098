@@ -4,6 +4,11 @@ type: instance
 slug: milices_agro_defensives_locales_breakdown
 entite: milices_agro_defensives_locales
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 statut: officialise_enrichi
 type_dans_scenario: organisation
 role_dans_scenario: 'Dans le scénario breakdown, ils assurent une forme de sécurité
@@ -66,10 +71,6 @@ tensions_narratives: 'La ligne entre protection communautaire et prédation est 
   comme points de ravitaillement — créant une dépendance mutuelle explosive avec les
   acteurs qui les pillent.'
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: region
 ---
 
 # Milices Agro-Défensives Locales

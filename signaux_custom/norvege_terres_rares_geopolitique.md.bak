@@ -1,0 +1,69 @@
+---
+slug: norvege_terres_rares_geopolitique
+source: actualites_26_07
+categorie: geopolitical
+variables_cibles: ['geopolitique_conflits', 'energie_ressources_critiques']
+statut: injected
+---
+
+## Idée source
+
+En 2027, découverte d'un important gisement de terres rares en Norvège. D'ici 2037, le pays devient le plus gros producteur mondial de terres rares, rebattant les cartes de la dépendance industrielle aux métaux critiques et donnant à la Norvège un levier géopolitique inédit.
+
+## Trajectoire injectée
+
+```yaml
+signal_to_state:
+  - signal: norvege_terres_rares_geopolitique
+    scenarios:
+      breakdown:
+        evolution: guerres ouvertes pour le contrôle des gisements norvégiens
+        date_bascule: 2038-2054
+        evenement_cle: bataille de Kirkenes pour les terres rares 2049
+      fortress_world:
+        evolution: sécurisation militarisée des mines norvégiennes par le Bloc Atlantique
+        date_bascule: 2035-2050
+        evenement_cle: déploiement des forces spéciales du Bloc Atlantique à Røros 2045
+      new_sustainability:
+        evolution: gouvernance internationale des ressources norvégiennes critiques
+        date_bascule: 2033-2048
+        evenement_cle: Traité d'Oslo sur le partage équitable des terres rares 2041
+      eco_communalism:
+        evolution: souveraineté locale sur les ressources minières norvégiennes
+        date_bascule: 2037-2055
+        evenement_cle: charte des communes minières autonomes de Norvège
+      policy_reform:
+        evolution: régulation multilatérale des exportations norvégiennes de terres rares
+        date_bascule: 2032-2047
+        evenement_cle: accord OCDE sur les quotas norvégiens de terres rares 2040
+      reference:
+        evolution: tensions persistantes autour des gisements norvégiens stratégiques
+        date_bascule: 2028-2043
+        evenement_cle: crise diplomatique pour le contrôle des mines de Fensfeltet 2037
+  - signal: norvege_terres_rares_geopolitique
+    scenarios:
+      breakdown:
+        evolution: Norvège devient champ de bataille pour les ressources critiques
+        date_bascule: 2045-2062
+        evenement_cle: sabotage des mines de Røros par des milices pro-russes 2053
+      fortress_world:
+        evolution: Norvège verrouille ses gisements sous protection militaire
+        date_bascule: 2038-2054
+        evenement_cle: loi martiale déclarée sur le district minier de Fensfeltet 2048
+      new_sustainability:
+        evolution: Norvège pilote une gouvernance collaborative des terres rares
+        date_bascule: 2033-2048
+        evenement_cle: création de l'Alliance Nordique des Ressources Durables 2042
+      eco_communalism:
+        evolution: communes norvégiennes gèrent localement leurs ressources minières
+        date_bascule: 2040-2059
+        evenement_cle: charte de Telemark pour l'autogestion des terres rares 2046
+      policy_reform:
+        evolution: Norvège négocie un cadre international pour ses exportations
+        date_bascule: 2031-2046
+        evenement_cle: accord de Bergen sur la régulation des flux miniers 2039
+      reference:
+        evolution: Norvège renforce son influence géopolitique via ses ressources
+        date_bascule: 2030-2045
+        evenement_cle: Oslo impose un embargo partiel sur les terres rares 2038
+```

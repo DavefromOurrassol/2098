@@ -4,6 +4,10 @@ type: instance
 slug: federation_russe_residuelle_district_de_mourmansk_breakdown
 entite: federation_russe_residuelle_district_de_mourmansk
 scenario: breakdown
+localisation:
+  zone: district_mourmansk_residuel
+  lieu: Mourmansk
+  type_lieu: infrastructure
 statut: officialise_enrichi
 type_dans_scenario: institution
 role_dans_scenario: 'Acteur géopolitique fragmenté dont le contrôle sur des ressources
@@ -72,10 +76,6 @@ tensions_narratives: 'Le District est écartelé entre la Hanse Baltique Recompo
   acteur extérieur préfère que Mourmansk reste faible, mais aucun ne veut la voir
   tomber dans le camp adverse.'
 date_creation: 2026-06-20
-localisation:
-  zone: district_mourmansk_residuel
-  lieu: Mourmansk
-  type_lieu: infrastructure
 ---
 
 # Fédération Russe Résiduelle — District de Mourmansk

@@ -4,6 +4,11 @@ type: instance
 slug: pirates_biologiques_open_source_breakdown
 entite: pirates_biologiques_open_source
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 statut: officialise_enrichi
 type_dans_scenario: réseau
 role_dans_scenario: 'Dans un contexte de breakdown, ils représentent une force de
@@ -71,10 +76,6 @@ tensions_narratives: 'La tension centrale qui les dévore est celle entre l''urg
   ou à les éliminer selon que leurs productions sont vues comme une ressource ou une
   menace.'
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: null
 ---
 
 # Pirates Biologiques Open-Source

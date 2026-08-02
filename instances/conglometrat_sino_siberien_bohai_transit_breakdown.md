@@ -4,6 +4,10 @@ type: instance
 slug: conglometrat_sino_siberien_bohai_transit_breakdown
 entite: conglometrat_sino_siberien_bohai_transit
 scenario: breakdown
+localisation:
+  zone: seul_kanal_bohai
+  lieu: Corridor Sino-Sibérien / Terminaux Bohai
+  type_lieu: infrastructure
 statut: officialise_enrichi
 type_dans_scenario: entreprise
 role_dans_scenario: 'Dans le scénario breakdown, Bohai Transit représente l''un des
@@ -71,10 +75,6 @@ tensions_narratives: 'Bohai Transit est prise en étau entre ses actionnaires si
   Bohai Transit gouverne des territoires de fait sans en assumer la responsabilité
   politique, ce qui la rend indispensable et honnie en égale mesure.'
 date_creation: 2026-06-20
-localisation:
-  zone: seul_kanal_bohai
-  lieu: Corridor Sino-Sibérien / Terminaux Bohai
-  type_lieu: infrastructure
 ---
 
 # Conglométrat sino-sibérien Bohai Transit

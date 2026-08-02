@@ -4,6 +4,10 @@ type: instance
 slug: reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown
 entite: reseau_des_courriers_nomades_sahelo_mediterraneens
 scenario: breakdown
+localisation:
+  zone: arc_sahelo_mediterraneen
+  lieu: arc sahélo-méditerranéen (de Sfax à Agadez, de Lyon-Ruines aux plaines du Sahel central)
+  type_lieu: region
 statut: officialise_enrichi
 type_dans_scenario: réseau
 role_dans_scenario: 'Dans un contexte de breakdown systémique, ce réseau constitue
@@ -75,10 +79,6 @@ tensions_narratives: 'Le réseau est convoité par des acteurs très dissemblabl
   de survie et les jeunes générations qui réclament une charte formelle pour négocier
   collectivement face aux blocs armés.'
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: null
 ---
 
 # Réseau des Courriers Nomades Sahélo-Méditerranéens

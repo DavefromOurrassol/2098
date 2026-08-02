@@ -4,6 +4,10 @@ type: event_instance
 slug: secession_great_lakes_compact_breakdown
 archetype: secession_great_lakes_compact
 scenario: breakdown
+localisation:
+  zone: grandes_lacs_compact_eau
+  lieu: Grands Lacs / Chicago-Lacustre
+  type_lieu: region
 type_evenement: political_social
 portee: continentale
 date: 2053

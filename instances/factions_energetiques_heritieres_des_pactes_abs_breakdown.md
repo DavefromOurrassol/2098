@@ -4,6 +4,11 @@ type: instance
 slug: factions_energetiques_heritieres_des_pactes_abs_breakdown
 entite: factions_energetiques_heritieres_des_pactes_abs
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 statut: officialise_enrichi
 type_dans_scenario: organisation
 role_dans_scenario: 'Dans un scénario de breakdown, elles incarnent la fragmentation
@@ -74,10 +79,6 @@ tensions_narratives: La contradiction centrale des Factions ABS réside dans leu
   la confrontation ouverte avec tout acteur tentant de construire une gouvernance
   énergétique alternative.
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: infrastructure
 ---
 
 # Factions Énergétiques Héritières des Pactes ABS

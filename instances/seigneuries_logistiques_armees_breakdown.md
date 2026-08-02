@@ -4,6 +4,11 @@ type: instance
 slug: seigneuries_logistiques_armees_breakdown
 entite: seigneuries_logistiques_armees
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 statut: officialise_enrichi
 type_dans_scenario: organisation
 role_dans_scenario: 'Dans le scénario breakdown, elles incarnent la privatisation
@@ -62,10 +67,6 @@ tensions_narratives: 'Elles sont structurellement condamnées à étendre leur t
   rançonnent. Mais cette légitimité est précaire : toute pénurie prolongée transforme
   instantanément les bénéficiaires en insurgés.'
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: null
 ---
 
 # Seigneuries Logistiques Armées

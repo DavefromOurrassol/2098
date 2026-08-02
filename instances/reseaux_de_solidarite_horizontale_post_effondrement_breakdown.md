@@ -4,6 +4,11 @@ type: instance
 slug: reseaux_de_solidarite_horizontale_post_effondrement_breakdown
 entite: reseaux_de_solidarite_horizontale_post_effondrement
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 statut: officialise_enrichi
 type_dans_scenario: réseau
 role_dans_scenario: 'Dans le scénario breakdown, ces réseaux constituent à la fois
@@ -72,10 +77,6 @@ tensions_narratives: 'La tension fondamentale qui ronge ces réseaux est celle e
   négocier avec Genève-Bunker, accepter la protection ambiguë de la Hanse Baltique
   — fracture régulièrement les assemblées.'
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: null
 ---
 
 # Réseaux de solidarité horizontale post-effondrement

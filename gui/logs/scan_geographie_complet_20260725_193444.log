@@ -1,0 +1,24 @@
+############################################################
+  SCAN GÉOGRAPHIE COMPLET — 1 étape(s) (sélection partielle)
+############################################################
+
+▶▶▶ Étape 1/1 — check_zones_coherence.py
+============================================================
+  Diagnostic de cohérence — geographie/{scenario}.md
+============================================================
+
+=== breakdown ===
+  ✓ Parsing OK — 90 zones total, 37 en niveau 1
+  ✓ Tous les pays de pays_liste ont au moins une zone
+  ✓ Tous les pays présents ont une zone N1
+
+============================================================
+  Terminé — tout est cohérent.
+============================================================
+
+
+############################################################
+  RÉSUMÉ CONSOLIDÉ
+############################################################
+  [check_zones_coherence.py]
+    Terminé — tout est cohérent.

@@ -4,6 +4,11 @@ type: instance
 slug: factions_propagandistes_des_archives_breakdown
 entite: factions_propagandistes_des_archives
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 statut: officialise_enrichi
 type_dans_scenario: organisation
 role_dans_scenario: 'Dans le scénario breakdown, elles exploitent l''effondrement
@@ -70,10 +75,6 @@ tensions_narratives: 'La tension centrale réside dans leur propre fragmentation
   Archives Neutres de Genève-Bunker ou le cluster Mnemos de Lagos-Intérieur représente
   une menace existentielle pour leur monopole narratif régional.'
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: null
 ---
 
 # Factions Propagandistes des Archives

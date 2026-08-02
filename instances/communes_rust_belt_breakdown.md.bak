@@ -4,6 +4,10 @@ type: instance
 slug: communes_rust_belt_breakdown
 entite: communes_rust_belt
 scenario: breakdown
+localisation:
+  zone: communes_rust_belt
+  lieu: Rust Belt — Détroit, Gary (Indiana), corridor Cleveland-Pittsburgh
+  type_lieu: region
 
 type_dans_scenario: organisation
 

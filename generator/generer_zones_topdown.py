@@ -57,6 +57,7 @@ USAGE
     python3 generer_zones_topdown.py --review-topdown --all --force
     python3 generer_zones_topdown.py --apply-topdown --scenario new_sustainability
     python3 generer_zones_topdown.py --apply-topdown --all
+    python3 generer_zones_topdown.py --apply-topdown --scenario new_sustainability --cible barcelone_hub
 """
 
 import argparse
@@ -272,10 +273,13 @@ def _appliquer_zone_suspecte(scenario: str, proposition: dict) -> None:
     geo_file.write_text("---\n" + new_fm + "---" + parts[2], encoding="utf-8")
 
 
-def appliquer_scenario(scenario: str) -> int:
+def appliquer_scenario(scenario: str, cible: str = None) -> int:
     print(f"\n=== {scenario} ===")
-    prets = chantiers.chantiers_prets_a_appliquer(scenario=scenario)
-    print(f"  · {len(prets)} chantier(s) prêt(s) à appliquer (proposition approuvée)")
+    prets = chantiers.chantiers_prets_a_appliquer(scenario=scenario, cible=cible)
+    if cible:
+        print(f"  · {len(prets)} chantier(s) prêt(s) à appliquer pour cible={cible!r}")
+    else:
+        print(f"  · {len(prets)} chantier(s) prêt(s) à appliquer (proposition approuvée)")
 
     appliquees = 0
     for c in prets:
@@ -328,10 +332,22 @@ def main():
              "déjà une proposition en attente d'approbation n'est jamais retouché, "
              "pour ne pas écraser une relecture/édition manuelle en cours.",
     )
+    parser.add_argument(
+        "--cible",
+        help="--apply-topdown --scenario seulement (ajouté le 1er août 2026) : "
+             "applique un seul chantier précis (slug de zone ou nom de pays) au "
+             "lieu de tous les chantiers prêts du scénario. Incompatible avec "
+             "--all (une cible se résout dans un seul scénario à la fois) et "
+             "avec --review-topdown (pas de notion de cible unique en review).",
+    )
     args = parser.parse_args()
 
     if args.scenario and args.scenario not in SCENARIOS:
         print(f"✗ Scénario inconnu : {args.scenario}")
+        sys.exit(1)
+    if args.cible and (args.all or args.review_topdown):
+        print("✗ --cible n'est utilisable qu'avec --apply-topdown --scenario "
+              "(incompatible avec --all et --review-topdown)")
         sys.exit(1)
     scenarios = SCENARIOS if args.all else [args.scenario]
 
@@ -347,7 +363,7 @@ def main():
         if args.review_topdown:
             total += reviewer_scenario(s, args.source, args.force)
         else:
-            total += appliquer_scenario(s)
+            total += appliquer_scenario(s, cible=args.cible)
 
     print("\n" + "=" * 60)
     if args.review_topdown:

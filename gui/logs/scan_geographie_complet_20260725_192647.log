@@ -1,0 +1,52 @@
+############################################################
+  SCAN GÉOGRAPHIE COMPLET — 1 étape(s) (sélection partielle)
+############################################################
+
+▶▶▶ Étape 1/1 — check_zones_coherence.py
+============================================================
+  Diagnostic de cohérence — geographie/{scenario}.md
+============================================================
+
+=== breakdown ===
+  ✓ Parsing OK — 90 zones total, 37 en niveau 1
+  ✓ Tous les pays de pays_liste ont au moins une zone
+  ✓ Tous les pays présents ont une zone N1
+
+=== fortress_world ===
+  ✓ Parsing OK — 71 zones total, 21 en niveau 1
+  ✓ Tous les pays de pays_liste ont au moins une zone
+  ✓ Tous les pays présents ont une zone N1
+
+=== new_sustainability ===
+  ✓ Parsing OK — 61 zones total, 16 en niveau 1
+  ✓ Tous les pays de pays_liste ont au moins une zone
+  ✓ Tous les pays présents ont une zone N1
+
+=== eco_communalism ===
+  ✓ Parsing OK — 87 zones total, 42 en niveau 1
+  ✓ Tous les pays de pays_liste ont au moins une zone
+  ✓ Tous les pays présents ont une zone N1
+
+=== policy_reform ===
+  ✓ Parsing OK — 62 zones total, 16 en niveau 1
+  ✓ Tous les pays de pays_liste ont au moins une zone
+  ✓ Tous les pays présents ont une zone N1
+
+=== reference ===
+  ✓ Parsing OK — 62 zones total, 17 en niveau 1
+  ✓ Tous les pays de pays_liste ont au moins une zone
+  ✓ Tous les pays présents ont une zone N1
+
+=== chantiers pays_sans_zone (chantiers_geographie.yaml) ===
+  ✓ Aucun chantier pays_sans_zone actif — rien à vérifier
+
+============================================================
+  Terminé — tout est cohérent.
+============================================================
+
+
+############################################################
+  RÉSUMÉ CONSOLIDÉ
+############################################################
+  [check_zones_coherence.py]
+    Terminé — tout est cohérent.

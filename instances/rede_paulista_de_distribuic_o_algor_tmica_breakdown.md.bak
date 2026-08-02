@@ -4,6 +4,10 @@ type: instance
 slug: rede_paulista_de_distribuic_o_algor_tmica_breakdown
 entite: rede_paulista_de_distribuic_o_algor_tmica
 scenario: breakdown
+localisation:
+  zone: sao_paulo_rpda
+  lieu: Grand São Paulo
+  type_lieu: ville
 
 type_dans_scenario: système
 

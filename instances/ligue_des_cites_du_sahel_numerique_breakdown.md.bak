@@ -4,6 +4,10 @@ type: instance
 slug: ligue_des_cites_du_sahel_numerique_breakdown
 entite: ligue_des_cites_du_sahel_numerique
 scenario: breakdown
+localisation:
+  zone: agadez_ligue_sahel_numerique
+  lieu: Agadez
+  type_lieu: ville
 
 type_dans_scenario: réseau
 

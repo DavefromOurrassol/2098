@@ -4,6 +4,10 @@ type: instance
 slug: communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
 entite: communautes_rurales_autogerees_des_n_uds_de_survie
 scenario: breakdown
+localisation:
+  zone: massif_central_cicatrices_vertes
+  lieu: Massif Central
+  type_lieu: region
 statut: officialise_enrichi
 type_dans_scenario: réseau
 role_dans_scenario: 'Utilisent les nœuds comme bibliothèques de survie distribuées,
@@ -74,10 +78,6 @@ tensions_narratives: 'La tension centrale est celle de la clôture contre l''ouv
   liés aux anciens systèmes numériques crée une fracture interne entre les ''technophiles
   de survie'' et les partisans d''un retour radical au bas-technologique.'
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: region
 ---
 
 # Communautés Rurales Autogérées des Nœuds de Survie

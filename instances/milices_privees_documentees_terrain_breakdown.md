@@ -4,6 +4,11 @@ type: instance
 slug: milices_privees_documentees_terrain_breakdown
 entite: milices_privees_documentees_terrain
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 statut: officialise_enrichi
 type_dans_scenario: organisation
 role_dans_scenario: 'Dans le scénario breakdown, les milices privées documentées terrain
@@ -67,10 +72,6 @@ tensions_narratives: 'La tension fondamentale de ces milices réside dans leur d
   la compétition entre factions pour les mêmes corridors de ressources génère des
   cycles de violence qui détruisent les équilibres locaux qu''elles prétendent défendre.'
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: null
 ---
 
 # Milices Privées Documentées Terrain

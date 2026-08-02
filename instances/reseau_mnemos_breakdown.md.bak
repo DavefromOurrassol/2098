@@ -5,12 +5,10 @@ slug: reseau_mnemos_breakdown
 entite: reseau_mnemos
 scenario: breakdown
 localisation:
-  zone: afrique_de_louest_lagos_sahel
-  lieu: Lagos-Intérieur / bassin pannonien / zone polaire
-  type_lieu: infrastructure
-  statut: review_manuelle
-  note: "Mnemos est un réseau fragmenté multi-localisé : des nœuds sont mentionnés au bassin pannonien (non mappable), à Lagos-Intérieur (mappable sur afrique_de_louest_lagos_sahel), et un nœud maître rumeuré en zone polaire (arctique_nordark possible). Aucune zone unique ne domine, l'entité est intrinsèquement distribuée."
-
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 type_dans_scenario: réseau
 
 role_dans_scenario: >

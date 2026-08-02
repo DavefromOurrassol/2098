@@ -8,7 +8,6 @@ localisation:
   zone: grandes_lacs_compact_eau
   lieu: Grands Lacs (Compact de l'Eau Dernière)
   type_lieu: region
-
 type_dans_scenario: organisation
 
 role_dans_scenario: >

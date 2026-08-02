@@ -4,6 +4,10 @@ type: instance
 slug: grandes_lacs_compact_eau_breakdown
 entite: grandes_lacs_compact_eau
 scenario: breakdown
+localisation:
+  zone: grandes_lacs_compact_eau
+  lieu: Grands Lacs (Compact de l'Eau Dernière)
+  type_lieu: region
 
 type_dans_scenario: organisation
 

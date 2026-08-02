@@ -4,6 +4,10 @@ type: instance
 slug: bloc_de_johannesburg_breakdown
 entite: bloc_de_johannesburg
 scenario: breakdown
+localisation:
+  zone: bloc_johannesburg
+  lieu: Johannesburg (Bloc Austral)
+  type_lieu: ville
 statut: officialise_enrichi
 type_dans_scenario: organisation
 role_dans_scenario: 'Dans le scénario breakdown, le Bloc de Johannesburg incarne la
@@ -69,10 +73,6 @@ tensions_narratives: Le Bloc prétend incarner la continuité institutionnelle a
   le CRRC, la question de savoir qui gouverne réellement l'Afrique centrale reste
   ouverte et explosive.
 date_creation: 2026-06-20
-localisation:
-  zone: bloc_johannesburg
-  lieu: Johannesburg (Bloc Austral)
-  type_lieu: ville
 ---
 
 # Bloc de Johannesburg

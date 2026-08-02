@@ -4,6 +4,10 @@ type: instance
 slug: factions_secessionnistes_agrariennes_du_desert_breakdown
 entite: factions_secessionnistes_agrariennes_du_desert
 scenario: breakdown
+localisation:
+  zone: afrique_de_louest_lagos_sahel
+  lieu: Frange sahéliennes
+  type_lieu: region
 statut: officialise_enrichi
 type_dans_scenario: organisation
 role_dans_scenario: 'Dans un scénario de breakdown, ces factions accélèrent la fragmentation
@@ -70,10 +74,6 @@ tensions_narratives: La contradiction fondamentale de ces factions est qu'elles 
   des acteurs opportunistes — seigneurs de guerre, corporations extractivistes, réseaux
   de traite — qui cherchent à les instrumentaliser ou à les corrompre de l'intérieur.
 date_creation: 2026-06-20
-localisation:
-  zone: afrique_de_louest_lagos_sahel
-  lieu: Franges sahéliennes et zones de déprise arides
-  type_lieu: region
 ---
 
 # Factions Sécessionnistes Agrariennes du Désert

@@ -4,6 +4,11 @@ type: instance
 slug: corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown
 entite: corporations_de_l_ere_pre_effondrement_a_droits_de_pi
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 statut: officialise_enrichi
 type_dans_scenario: entreprise
 role_dans_scenario: 'Dans le scénario breakdown, elles bloquent ou monnayent l''accès
@@ -72,10 +77,6 @@ tensions_narratives: 'La tension centrale est celle de la légitimité : dans un
   les licences exigées, alimentant ainsi un modèle d''extraction qui compromet les
   ressources nécessaires à la survie collective.'
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: null
 ---
 
 # Corporations de l'Ère Pré-Effondrement à Droits de PI

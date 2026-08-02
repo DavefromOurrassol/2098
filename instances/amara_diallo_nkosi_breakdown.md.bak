@@ -4,6 +4,10 @@ type: instance
 slug: amara_diallo_nkosi_breakdown
 entite: amara_diallo_nkosi
 scenario: breakdown
+localisation:
+  zone: afrique_centrale_australe
+  lieu: Corridor sahélo-congolais (Brazzaville-Nord – Kivu disputé)
+  type_lieu: region
 
 type_dans_scenario: humain
 

@@ -4,6 +4,10 @@ type: instance
 slug: sfax_relais_bouches_breakdown
 entite: sfax_relais_bouches
 scenario: breakdown
+localisation:
+  zone: sfax_relais_bouches
+  lieu: Sfax
+  type_lieu: ville
 
 type_dans_scenario: réseau
 

@@ -567,9 +567,42 @@ def main():
                         help="Retraiter les fiches qui ont déjà un champ localisation.")
     parser.add_argument("--report-only", action="store_true",
                         help="Génère uniquement le rapport need_action sans extraction.")
+    parser.add_argument("--scan-pending", action="store_true",
+                        help="Liste les fiches qui seraient traitées (aucun appel LLM, "
+                             "aucune écriture) -- pour peupler un sélecteur plutôt que "
+                             "de deviner un slug.")
+    parser.add_argument("--json", action="store_true",
+                        help="Sortie machine pour --scan-pending : un seul objet JSON "
+                             "sur stdout.")
     args = parser.parse_args()
 
     dry_run = args.dry_run
+
+    # Mode scan (ajouté le 31 juillet 2026, même principe que --scan-candidates
+    # sur reparenter_sous_zones_orphelines.py : collect_fiches() est purement
+    # mécanique -- lecture de frontmatter, aucun appel LLM -- donc peut servir
+    # de prévisualisation gratuite avant de lancer un vrai traitement, plutôt
+    # que de forcer à connaître un slug à l'avance ou à lancer --dry-run (qui,
+    # lui, appelle quand même le LLM pour de vrai, voir plus haut).
+    if args.scan_pending:
+        fiches = collect_fiches(
+            scenario_filter=args.scenario,
+            slug_filter=args.slug,
+            force=args.force,
+        )
+        candidats = [
+            {"slug": f["slug"], "type": f["type"], "scenario": f["scenario"]}
+            for f in fiches
+        ]
+        if args.json:
+            print(json.dumps({"ok": True, "candidats": candidats}, ensure_ascii=False))
+        elif candidats:
+            print(f"{len(candidats)} fiche(s) en attente d'extraction :")
+            for c in candidats:
+                print(f"  - {c['slug']} ({c['type']}, {c['scenario']})")
+        else:
+            print("· Aucune fiche en attente -- rien à extraire actuellement.")
+        return
 
     print("=" * 60)
     print("EXTRACT_LOCALISATION — Ourrassol 2098")

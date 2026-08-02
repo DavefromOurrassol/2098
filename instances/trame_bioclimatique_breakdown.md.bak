@@ -4,6 +4,11 @@ type: instance
 slug: trame_bioclimatique_breakdown
 entite: trame_bioclimatique
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 
 type_dans_scenario: infrastructure
 

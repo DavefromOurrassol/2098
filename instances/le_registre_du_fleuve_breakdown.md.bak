@@ -4,6 +4,10 @@ type: instance
 slug: le_registre_du_fleuve_breakdown
 entite: le_registre_du_fleuve
 scenario: breakdown
+localisation:
+  zone: afrique_centrale_australe
+  lieu: bassin du Congo et Cuvette congolaise
+  type_lieu: region
 
 type_dans_scenario: système
 

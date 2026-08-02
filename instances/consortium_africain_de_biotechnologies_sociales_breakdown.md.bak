@@ -8,9 +8,6 @@ localisation:
   zone: afrique_de_louest_lagos_sahel
   lieu: Corridor sahélo-sahélien (siège central détruit) et zones de déploiement pan-africaines
   type_lieu: region
-  statut: review_manuelle
-  note: "Le siège central a été détruit dans le corridor sahélo-sahélien et les cellules opèrent à travers l'Afrique de l'Ouest et le Sahel, mais le réseau est diffus et continental — les langues mentionnées (wolof, swahili, haoussa) couvrent aussi l'Afrique centrale et de l'Est, rendant un ancrage unique impossible."
-
 type_dans_scenario: réseau
 
 role_dans_scenario: >

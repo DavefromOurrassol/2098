@@ -4,6 +4,10 @@ type: event_instance
 slug: arrestation_chris_van_derburgh_breakdown
 archetype: arrestation_chris_van_derburgh
 scenario: breakdown
+localisation:
+  zone: espace_nord_americain_fragmente
+  lieu: Detroit-Sud
+  type_lieu: ville
 type_evenement: political_social
 portee: locale
 date: 2078

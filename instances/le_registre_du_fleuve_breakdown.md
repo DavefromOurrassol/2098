@@ -8,7 +8,6 @@ localisation:
   zone: afrique_centrale_australe
   lieu: bassin du Congo et Cuvette congolaise
   type_lieu: region
-
 type_dans_scenario: système
 
 role_dans_scenario: >

@@ -1,0 +1,23 @@
+############################################################
+  SCAN GÉOGRAPHIE COMPLET — 1 étape(s) (sélection partielle)
+############################################################
+
+▶▶▶ Étape 1/1 — check_origine_reelle_coherence.py
+============================================================
+  Garde-fou origine_reelle — geographie/{scenario}.md
+============================================================
+
+=== eco_communalism ===
+  12 zone(s) ville/région à vérifier
+  ✓ Aucune incohérence détectée sur les entrées résolues
+
+============================================================
+  Terminé — tout est cohérent.
+============================================================
+
+
+############################################################
+  RÉSUMÉ CONSOLIDÉ
+############################################################
+  [check_origine_reelle_coherence.py]
+    Terminé — tout est cohérent.

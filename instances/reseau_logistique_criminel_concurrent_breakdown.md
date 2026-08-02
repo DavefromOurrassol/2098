@@ -4,6 +4,11 @@ type: instance
 slug: reseau_logistique_criminel_concurrent_breakdown
 entite: reseau_logistique_criminel_concurrent
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 statut: officialise_enrichi
 type_dans_scenario: réseau
 role_dans_scenario: Acteur hostile structurant du chaos logistique en 2098, ce réseau
@@ -63,10 +68,6 @@ tensions_narratives: 'La tension centrale de ce réseau réside dans la contradi
   — qui résistent à toute forme d''absorption. Enfin, sa propre croissance le rend
   vulnérable aux schismes internes entre factions régionales aux intérêts divergents.'
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: null
 ---
 
 # Réseau Logistique Criminel Concurrent

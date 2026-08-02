@@ -8,7 +8,6 @@ localisation:
   zone: carthage_nord_nexcore
   lieu: Carthage-Nord (ancien port de Tunis-Goulette)
   type_lieu: infrastructure
-
 type_dans_scenario: hybride
 
 role_dans_scenario: >

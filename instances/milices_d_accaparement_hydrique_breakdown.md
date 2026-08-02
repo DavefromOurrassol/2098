@@ -4,6 +4,11 @@ type: instance
 slug: milices_d_accaparement_hydrique_breakdown
 entite: milices_d_accaparement_hydrique
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 statut: officialise_enrichi
 type_dans_scenario: organisation
 role_dans_scenario: 'Dans le scénario breakdown, elles matérialisent l''effondrement
@@ -63,10 +68,6 @@ tensions_narratives: 'Ces milices sont déchirées entre leur logique prédatric
   est nulle mais leur emprise est totale : elles incarnent la contradiction absolue
   du breakdown, où la violence devient le seul service public qui reste.'
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: null
 ---
 
 # Milices d'Accaparement Hydrique

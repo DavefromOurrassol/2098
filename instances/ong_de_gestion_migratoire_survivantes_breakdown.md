@@ -4,6 +4,11 @@ type: instance
 slug: ong_de_gestion_migratoire_survivantes_breakdown
 entite: ong_de_gestion_migratoire_survivantes
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 statut: officialise_enrichi
 type_dans_scenario: organisation
 role_dans_scenario: 'Dans le scénario breakdown, elles pallient l''absence ou l''incapacité
@@ -65,10 +70,6 @@ tensions_narratives: 'La tension centrale de ces ONG réside dans la contradicti
   politique pour les communautés qu''elles hébergent, brouillant la frontière entre
   camp de réfugiés et territoire autonome.'
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: null
 ---
 
 # ONG de Gestion Migratoire Survivantes

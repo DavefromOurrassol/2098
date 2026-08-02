@@ -4,6 +4,10 @@ type: instance
 slug: front_de_resistance_aux_peages_sur_les_ressources_breakdown
 entite: front_de_resistance_aux_peages_sur_les_ressources
 scenario: breakdown
+localisation:
+  zone: massif_central_cicatrices_vertes
+  lieu: Massif Central
+  type_lieu: region
 statut: officialise_enrichi
 type_dans_scenario: organisation
 role_dans_scenario: Dans le scénario breakdown, le Front de Résistance aux Péages
@@ -68,10 +72,6 @@ tensions_narratives: Le Front est tiraillé entre sa posture de résistance non-
   rend vulnérable à l'infiltration et à la récupération par des acteurs extractifs
   qui instrumentalisent son discours pour légitimer leurs propres monopoles locaux.
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: null
 ---
 
 # Front de Résistance aux Péages sur les Ressources

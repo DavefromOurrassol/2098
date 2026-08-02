@@ -8,7 +8,6 @@ localisation:
   zone: occitanie_racines_meres
   lieu: Occitanie (anciens territoires occitans, du Larzac aux garrigues de l'Hérault, des Pyrénées aux contreforts des Alpes)
   type_lieu: region
-
 type_dans_scenario: organisation
 
 role_dans_scenario: >

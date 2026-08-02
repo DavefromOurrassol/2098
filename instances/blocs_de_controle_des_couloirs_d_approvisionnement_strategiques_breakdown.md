@@ -4,6 +4,11 @@ type: instance
 slug: blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
 entite: blocs_de_controle_des_couloirs_d_approvisionnement_strategiques
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 statut: officialise_enrichi
 type_dans_scenario: organisation
 role_dans_scenario: 'Dans le scénario breakdown, ces blocs exercent une pression de
@@ -67,10 +72,6 @@ tensions_narratives: La contradiction fondamentale des Blocs est qu'en cherchant
   minimale avec les institutions résiduelles de Genève-Bunker, mais les lignes dures
   imposent la logique du tout-ou-rien.
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: null
 ---
 
 # Blocs de Contrôle des Couloirs d'Approvisionnement Stratégiques

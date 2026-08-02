@@ -4,6 +4,11 @@ type: instance
 slug: nexus_biosyn_breakdown
 entite: nexus_biosyn
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 
 type_dans_scenario: organisation
 

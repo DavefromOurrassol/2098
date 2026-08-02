@@ -419,8 +419,12 @@ def build_geographie_md(scenario, synthesis, valid_sources):
         if lieux:
             zones_md += "**Lieux emblématiques** :\n"
             for lieu in lieux:
-                note = f" — {lieu.get('notes', '')}" if lieu.get("notes") else ""
-                zones_md += f"- {lieu.get('nom', '?')} ({lieu.get('type', '')}){note}\n"
+                if isinstance(lieu, dict):
+                    note = f" — {lieu.get('notes', '')}" if lieu.get("notes") else ""
+                    type_txt = f" ({lieu['type']})" if lieu.get("type") else ""
+                    zones_md += f"- {lieu.get('nom', '?')}{type_txt}{note}\n"
+                else:
+                    zones_md += f"- {lieu}\n"
             zones_md += "\n"
         rel = zone.get("relations", {}) or {}
         if rel.get("allies"):

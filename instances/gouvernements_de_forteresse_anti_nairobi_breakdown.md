@@ -4,6 +4,11 @@ type: instance
 slug: gouvernements_de_forteresse_anti_nairobi_breakdown
 entite: gouvernements_de_forteresse_anti_nairobi
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 statut: officialise_enrichi
 type_dans_scenario: organisation
 role_dans_scenario: 'Bloc de résistance institutionnelle agissant comme force centrifuge
@@ -73,10 +78,6 @@ tensions_narratives: 'La contradiction centrale de ces gouvernements réside dan
   propres priorités géopolitiques — menace à tout moment de transformer la coalition
   en arène de rivalités mutuelles.'
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: null
 ---
 
 # Gouvernements de Forteresse Anti-Nairobi

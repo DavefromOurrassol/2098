@@ -4,6 +4,10 @@ type: event_instance
 slug: encheres_terres_rares_groenland_breakdown
 archetype: encheres_terres_rares_groenland
 scenario: breakdown
+localisation:
+  zone: groenland_fonds_glaces
+  lieu: Nuuk, Groenland
+  type_lieu: region
 type_evenement: political_social
 portee: globale
 date: 2041

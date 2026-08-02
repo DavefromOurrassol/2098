@@ -4,6 +4,10 @@ type: instance
 slug: milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown
 entite: milices_separatistes_du_conseil_des_pecheries_d_islande
 scenario: breakdown
+localisation:
+  zone: islande_pecheries
+  lieu: Reykjavik / Eaux territoriales islandaises élargie
+  type_lieu: region
 statut: officialise_enrichi
 type_dans_scenario: organisation
 role_dans_scenario: 'Dans le scénario breakdown, elles exercent un contrôle de facto
@@ -67,10 +71,6 @@ tensions_narratives: Les Milices sont déchirées entre leur idéologie souverai
   à la tête du Conseil militaire — plusieurs commandants s'affrontent depuis l'incident
   de 2057 — menace de fracturer l'organisation en factions rivales incontrôlables.
 date_creation: 2026-06-20
-localisation:
-  zone: islande_pecheries
-  lieu: Reykjavik / Eaux territoriales islandaises élargie
-  type_lieu: region
 ---
 
 # Milices Séparatistes du Conseil des Pêcheries d'Islande

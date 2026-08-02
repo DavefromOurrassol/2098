@@ -8,7 +8,6 @@ localisation:
   zone: geneve_bunker_institutions
   lieu: Palais des Nations, Genève
   type_lieu: infrastructure
-
 type_dans_scenario: institution
 
 role_dans_scenario: >

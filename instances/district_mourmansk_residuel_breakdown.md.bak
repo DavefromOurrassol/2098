@@ -4,6 +4,10 @@ type: instance
 slug: district_mourmansk_residuel_breakdown
 entite: district_mourmansk_residuel
 scenario: breakdown
+localisation:
+  zone: port_mourmansk
+  lieu: Port de Mourmansk
+  type_lieu: infrastructure
 
 type_dans_scenario: institution
 

@@ -4,6 +4,10 @@ type: instance
 slug: reseaux_de_soigneurs_traditionnels_breakdown
 entite: reseaux_de_soigneurs_traditionnels
 scenario: breakdown
+localisation:
+  zone: massif_central_cicatrices_vertes
+  lieu: Territoires ruraux du Massif Central et zones de déprise périurbaines
+  type_lieu: region
 statut: officialise_enrichi
 type_dans_scenario: réseau
 role_dans_scenario: 'Dans un contexte de breakdown, ces réseaux comblent les vides
@@ -66,10 +70,6 @@ tensions_narratives: Ces réseaux sont pris en étau entre la légitimité popul
   des seigneurs de guerre locaux et deviennent instruments de pouvoir plutôt que serviteurs
   de soin, fracturant de l'intérieur l'éthique du réseau.
 date_creation: 2026-06-20
-localisation:
-  zone: massif_central_cicatrices_vertes
-  lieu: Territoires ruraux du Massif Central et zones de déprise périurbaines
-  type_lieu: region
 ---
 
 # Réseaux de Soigneurs Traditionnels

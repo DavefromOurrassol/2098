@@ -1,0 +1,29 @@
+
+=== terres_rares_norvege ===
+[1/4] Sélection de variable(s)...
+[llm] Mistral (mistral-large-latest) — entrée : 4614 | sortie : 61
+  -> variables=['geopolitique_conflits', 'energie_ressources_critiques'] categorie=geopolitical signal_slug=norvege_terres_rares_levier_geopolitique
+[2/4] Développement pour geopolitique_conflits...
+[llm] Mistral (mistral-large-latest) — entrée : 28924 | sortie : 469
+[3/4] Validation (essai 1)...
+[4/4] Injection...
+[2/4] Développement pour energie_ressources_critiques...
+[llm] Mistral (mistral-large-latest) — entrée : 29043 | sortie : 465
+[3/4] Validation (essai 1)...
+  -> problèmes :
+     - [eco_communalism] fenêtre 2040-2059 déjà utilisée par un autre signal de energie_ressources_critiques dans le registre.
+[llm] Mistral (mistral-large-latest) — entrée : 29522 | sortie : 534
+[3/4] Validation (essai 2)...
+  -> problèmes :
+     - [eco_communalism] fenêtre 2039-2058 déjà utilisée par un autre signal de energie_ressources_critiques dans le registre.
+[llm] Mistral (mistral-large-latest) — entrée : 29544 | sortie : 522
+[3/4] Validation (essai 3)...
+  -> problèmes :
+     - [breakdown] 'evenement_cle' a 12 mots (attendu 4-11) : 'Oslo finance la sécession minière du Katanga pour sécuriser ses approvisionnements 2056'
+     - [fortress_world] 'evenement_cle' a 12 mots (attendu 4-11) : 'Bloc Atlantique annexe les gisements norvégiens sous mandat de sécurité énergétique 2049'
+     - [eco_communalism] 'evenement_cle' a 13 mots (attendu 4-11) : 'Réseau des Assemblées Bioterritoriales bloque les exportations depuis le port de Narvik 2053'
+     - [eco_communalism] fenêtre 2040-2059 déjà utilisée par un autre signal de energie_ressources_critiques dans le registre.
+     - [policy_reform] 'evenement_cle' a 12 mots (attendu 4-11) : "Oslo lance l'Observatoire Mondial des Flux de Terres Rares à Genève 2040"
+     - [reference] 'evenement_cle' a 13 mots (attendu 4-11) : "Oslo signe un pacte minier exclusif avec l'Inde pour contourner la Chine 2046"
+
+Terminé. Voir /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/signaux_custom/processed.yaml et /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/signaux_custom/needs_review.yaml.

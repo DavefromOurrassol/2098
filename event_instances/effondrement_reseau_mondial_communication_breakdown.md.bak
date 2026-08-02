@@ -4,6 +4,11 @@ type: event_instance
 slug: effondrement_reseau_mondial_communication_breakdown
 archetype: effondrement_reseau_mondial_communication
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 type_evenement: technological
 portee: globale
 date: 2040

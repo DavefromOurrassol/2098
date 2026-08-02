@@ -4,6 +4,11 @@ type: instance
 slug: consortiums_logistiques_agro_corporatifs_breakdown
 entite: consortiums_logistiques_agro_corporatifs
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 statut: officialise_enrichi
 type_dans_scenario: entreprise
 role_dans_scenario: 'Dans le chaos du breakdown, les Consortiums Logistiques Agro-Corporatifs
@@ -67,10 +72,6 @@ tensions_narratives: 'Leur contradiction centrale est existentielle : ils sont c
   régionale développant des loyautés et des stratégies divergentes, menaçant la cohérence
   de l''alliance d''ensemble.'
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: infrastructure
 ---
 
 # Consortiums Logistiques Agro-Corporatifs

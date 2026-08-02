@@ -1,0 +1,214 @@
+=================================================================
+  REVIEW LOCALISATION — Ourrassol 2098
+=================================================================
+  MODE DRY-RUN : aucune écriture sur disque
+
+  1 fiche(s) à reviewer
+
+=================================================================
+  [1/1] communautes_rurales_autonomes_breakdown
+  scénario : breakdown   type : instance
+=================================================================
+
+  Zone candidate : massif_central_cicatrices_vertes
+  Lieu           : Massif Central
+  Type lieu      : region
+
+  Note LLM       : Le texte mentionne explicitement le Massif Central comme une zone d'implantation des communautés rurales autonomes, mais sans précision suffisante pour confirmer un ancrage exclusif ou un mappage certain.
+
+  Zones disponibles (breakdown) :
+     1. afrique_centrale_australe
+        Afrique Centrale et Australe (niveau 1)
+     2. afrique_de_louest_lagos_sahel
+        Afrique de l'Ouest – Nœuds Lagos et Sahel (niveau 1)
+     3. amazon_pacte_gardiens
+        Amazonie (Pacte des Gardiens) (niveau 1)
+     4. arc_eurasien_central
+        Arc Eurasien Central (niveau 1)
+     5. arc_sahelo_mediterraneen
+        Arc Sahélo-Méditerranéen (niveau 1)
+     6. arctique_nordark
+        Arctique Nordark (niveau 1)
+     7. asie_pacifique_sud_est
+        Asie–Pacifique (Corridors sino-sibériens et Pacifique Nord) (niveau 1)
+     8. espace_nord_americain_fragmente
+        Espace Nord-Américain Fragmenté (niveau 1)
+     9. geneve_bunker_institutions
+        Genève-Bunker (Nœud Institutionnel Résiduel) (niveau 1)
+    10. nordeste_bresil_frente
+        Nordeste Brésilien (Frente Sertão Livre) (niveau 1)
+    11. zone_golfe_levant
+        Zone Golfe Persique–Levant (niveau 1)
+    12. agadez_ligue_sahel_numerique
+        Agadez (Fragment Ligue du Sahel Numérique) (niveau 2)
+    13. archives_neutres_geneve
+        Archives Neutres de Genève-Bunker (niveau 2)
+    14. bassin_caspien_zone_conflit
+        Bassin Caspien (Zone de Conflit Bloc IV–Bloc IX) (niveau 2)
+    15. bassorah_exode
+        Bassorah (niveau 2)
+    16. bloc_johannesburg
+        Johannesburg (Bloc Austral) (niveau 2)
+    17. brazzaville_nord
+        Brazzaville-Nord (niveau 2)
+    18. carthage_nord_nexcore
+        Carthage-Nord (Fragment NexCore) (niveau 2)
+    19. corridor_lithium_bouches
+        Corridor des Lithiums (niveau 2)
+    20. corridor_oural_caspien
+        Corridor Oural-Caspien (niveau 2)
+    21. corridors_eurasiens_convoyage
+        Corridors Eurasiens (Axes de Convoyage Armé) (niveau 2)
+    22. cracovie_registre_zones
+        Cracovie (Antenne du Registre des Zones Non Récupérables) (niveau 2)
+    23. delta_mekong_racines
+        Delta du Mékong (Cellules Racines-Mères) (niveau 2)
+    24. detroit_ormuz
+        Détroit d'Ormuz (niveau 2)
+    25. detroit_sud
+        Detroit-Sud (niveau 2)
+    26. district_mourmansk_residuel
+        District de Mourmansk (Fédération Russe Résiduelle) (niveau 2)
+    27. enclaves_finlandaises
+        Enclaves Finlandaises (niveau 2)
+    28. enclaves_industrielles_bergen_tromso
+        Enclaves Industrielles de Bergen–Tromsø (niveau 2)
+    29. etats_sud_centre_americain
+        États du Sud et du Centre (Entités Sécessionistes) (niveau 2)
+    30. grandes_lacs_compact_eau
+        Compact de l'Eau Dernière (Grands Lacs) (niveau 2)
+    31. groenland_fonds_glaces
+        Groenland (Fonds des Glaces Libérées) (niveau 2)
+    32. haifa_zone_missile
+        Haïfa (Zone de Frappes Balistiques) (niveau 2)
+    33. hanse_baltique
+        Hanse Baltique Recomposée (niveau 2)
+    34. isfahan_fordow_ruines
+        Ispahan–Fordow (Sites Frappés) (niveau 2)
+    35. island_pecheries
+        Islande (Milices des Pêcheries) (niveau 2)
+    36. islande_pecheries
+        Islande (Milices des Pêcheries) (niveau 2)
+    37. karachi_biosyn
+        Karachi (Marché BioSyn) (niveau 2)
+    38. kivu_dispute
+        Kivu Disputé (niveau 2)
+    39. lagos_est_nexcore
+        Lagos-Est (Nœud NexCore) (niveau 2)
+    40. lagos_interieur_mnemos
+        Lagos-Intérieur (Cluster Mnemos) (niveau 2)
+    41. lyon_ruines_seuil
+        Lyon (Ruines A7 / Lyon-Part-Dieu) (niveau 2)
+    42. massif_central_cicatrices_vertes ◀
+        Massif Central (Cicatrices Vertes / Trame Bioclimatique) (niveau 2)
+    43. medellin_biosyn
+        Medellín (Marché BioSyn) (niveau 2)
+    44. midwest_desertifie
+        Midwest Désertifié (Zone de Déprise) (niveau 2)
+    45. nairobi_crrc
+        Nairobi (Siège du CRRC) (niveau 2)
+    46. noeud_mnemos_pannonie
+        Nœud Mnemos du Bassin Pannonien (niveau 2)
+    47. noeud_nordark_tromso
+        Tromsø / Nœud Nordark (niveau 2)
+    48. occitanie_racines_meres
+        Occitanie (Cellules Racines-Mères) (niveau 2)
+    49. philadelphia_centrale
+        Philadelphia-Centrale (niveau 2)
+    50. plaines_ebre_terrafond
+        Plaines de l'Ebre (Fragments Terrafond sous tutelle milicienne) (niveau 2)
+    51. sao_paulo_rpda
+        Grand São Paulo (Infrastructure RPDA Zombie) (niveau 2)
+    52. seoul_collectif_nexcore
+        Séoul (Collectif NexCore) (niveau 2)
+    53. seul_kanal_bohai
+        Corridor Sino-Sibérien (Axe Bohai Transit) (niveau 2)
+    54. sfax_relais_bouches
+        Sfax (niveau 2)
+    55. terminal_kharg
+        Terminal Pétrolier de Kharg (niveau 2)
+    56. tour_bcuc_geneve
+        Tour BCUC (47e étage) (niveau 2)
+    57. vallee_allier_terrafond
+        Vallée de l'Allier (Fragment Terrafond) (niveau 2)
+    58. zone_polaire_noeud_maitre_mnemos
+        Zone Polaire (Nœud Maître Mnemos — Rumeur) (niveau 2)
+    59. zones_cotieres_americaines
+        Zones Côtières Nord-Américaines (Entités Fonctionnelles Résiduelles) (niveau 2)
+    60. autorite_passage_arctique
+        Autorité du Passage Arctique (Fantôme Institutionnel) (niveau 3)
+    61. cargo_mombasa_crrc
+        Cargo au Large de Mombasa (Délégation CRRC) (niveau 3)
+    62. centres_de_controle_continental_trame
+        Ancien Centre de Contrôle Continental (Trame Bioclimatique — Rumeur) (niveau 3)
+    63. communes_rust_belt
+        Communes Libres du Rust Belt (Forges du Commun) (niveau 3)
+    64. port_mourmansk
+        Port de Mourmansk (niveau 3)
+    65. archipel_anglo_celtique
+        Archipel Anglo-Celtique (niveau 1)
+    66. inde_sous_continent_resilient
+        Inde (Sous-Continent Résilient) (niveau 1)
+    67. venezuela_archipel_petrolier
+        Venezuela (Archipel Pétrolier) (niveau 1)
+    68. chili_cordillere_autonome
+        Chili (Cordillère Autonome) (niveau 1)
+    69. australie_continent_insulaire
+        Australie (Continent Insulaire) (niveau 1)
+    70. nouvelle_zelande_archipel_pacifique
+        Nouvelle-Zélande (Archipel Pacifique) (niveau 1)
+    71. himalaya_nepal_autonome
+        Himalaya Népalais (Sanctuaire Autonome) (niveau 1)
+    72. archipel_comores_autonome
+        Archipel des Comores (Autonomie Insulaire) (niveau 1)
+    73. madagascar_ile_resiliente
+        Madagascar (Île Résiliente) (niveau 1)
+    74. maurice_hub_financier
+        Maurice (Hub Financier Résiduel) (niveau 1)
+    75. cuba_archipel_resilient
+        Cuba (Archipel Résilient) (niveau 1)
+    76. haiti_territoire_sinistre
+        Haïti (Territoire Sinistré) (niveau 1)
+    77. republicque_dominicaine_etat_frontalier
+        République Dominicaine (État Frontalier) (niveau 1)
+    78. jamaique_hub_caraibes
+        Jamaïque (Hub des Caraïbes) (niveau 1)
+    79. guatemala_corridor_centre_americain
+        Guatemala (Corridor Centre-Américain) (niveau 1)
+    80. honduras_territoire_dispute
+        Honduras (Territoire Disputé) (niveau 1)
+    81. salvador_enclave_resistante
+        Salvador (Enclave Résistante) (niveau 1)
+    82. caribe_insulaire_residuel
+        Caraïbes Insulaires (Réseau Résiduel) (niveau 1)
+    83. antilles_orientales_fragmentes
+        Antilles Orientales (Archipel Fragmenté) (niveau 1)
+    84. melanesie_insulaire
+        Mélanésie Insulaire (niveau 1)
+    85. polynesie_centrale
+        Polynésie Centrale (niveau 1)
+    86. micronesie_pacifique_central
+        Micronésie du Pacifique Central (niveau 1)
+    87. ethiopie_hautes_terres_autonome
+        Éthiopie (Hautes Terres Autonome) (niveau 1)
+    88. argentine_pampas_autonome
+        Argentine (Pampas Autonome) (niveau 1)
+    89. bolivie_altipano_strategique
+        Bolivie (Altiplano Stratégique) (niveau 1)
+    90. ecosse
+        Écosse (niveau 1)
+
+  [V] Valider la zone candidate
+  [C] Choisir une autre zone
+  [0] Vide assumé (transnationale, pas d'ancrage)
+  [S] Skip — laisser en review_manuelle
+  [Q] Quitter
+
+  Décision > Traceback (most recent call last):
+  File "/Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/generator/review_localisation.py", line 619, in <module>
+    main()
+  File "/Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/generator/review_localisation.py", line 615, in main
+    run_review(entries, dry_run=args.dry_run)
+  File "/Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/generator/review_localisation.py", line 327, in run_review
+    rep = input("\n  Décision > ").strip().upper()
+EOFError: EOF when reading a line

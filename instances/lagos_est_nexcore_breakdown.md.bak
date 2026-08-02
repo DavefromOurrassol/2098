@@ -4,6 +4,10 @@ type: instance
 slug: lagos_est_nexcore_breakdown
 entite: lagos_est_nexcore
 scenario: breakdown
+localisation:
+  zone: lagos_est_nexcore
+  lieu: Lagos-Est (Nœud NexCore)
+  type_lieu: ville
 
 type_dans_scenario: organisation
 

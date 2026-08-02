@@ -4,6 +4,11 @@ type: instance
 slug: communautes_religieuses_des_relais_physiques_breakdown
 entite: communautes_religieuses_des_relais_physiques
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 statut: officialise_enrichi
 type_dans_scenario: réseau
 role_dans_scenario: 'Dans un scénario de breakdown, elles assurent la continuité de
@@ -71,10 +76,6 @@ tensions_narratives: 'La tension centrale qui les traverse est celle entre missi
   NexCore et Mnemos notamment — qui voient en elles une concurrence difficilement
   contrôlable sur le marché de l''information post-effondrement.'
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: null
 ---
 
 # Communautés Religieuses des Relais Physiques

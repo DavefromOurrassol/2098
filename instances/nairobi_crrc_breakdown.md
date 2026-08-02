@@ -8,7 +8,6 @@ localisation:
   zone: nairobi_crrc
   lieu: Nairobi
   type_lieu: ville
-
 type_dans_scenario: réseau
 
 role_dans_scenario: >

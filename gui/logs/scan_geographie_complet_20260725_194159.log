@@ -1,0 +1,275 @@
+############################################################
+  SCAN GÉOGRAPHIE COMPLET — 5 étape(s)
+############################################################
+
+▶▶▶ Étape 1/5 — check_zones_coherence.py
+============================================================
+  Diagnostic de cohérence — geographie/{scenario}.md
+============================================================
+
+=== breakdown ===
+  ✓ Parsing OK — 90 zones total, 37 en niveau 1
+  ✓ Tous les pays de pays_liste ont au moins une zone
+  ✓ Tous les pays présents ont une zone N1
+
+=== fortress_world ===
+  ✓ Parsing OK — 71 zones total, 21 en niveau 1
+  ✓ Tous les pays de pays_liste ont au moins une zone
+  ✓ Tous les pays présents ont une zone N1
+
+=== new_sustainability ===
+  ✓ Parsing OK — 61 zones total, 16 en niveau 1
+  ✓ Tous les pays de pays_liste ont au moins une zone
+  ✓ Tous les pays présents ont une zone N1
+
+=== eco_communalism ===
+  ✓ Parsing OK — 87 zones total, 42 en niveau 1
+  ✓ Tous les pays de pays_liste ont au moins une zone
+  ✓ Tous les pays présents ont une zone N1
+
+=== policy_reform ===
+  ✓ Parsing OK — 62 zones total, 16 en niveau 1
+  ✓ Tous les pays de pays_liste ont au moins une zone
+  ✓ Tous les pays présents ont une zone N1
+
+=== reference ===
+  ✓ Parsing OK — 62 zones total, 17 en niveau 1
+  ✓ Tous les pays de pays_liste ont au moins une zone
+  ✓ Tous les pays présents ont une zone N1
+
+=== chantiers pays_sans_zone (chantiers_geographie.yaml) ===
+  ✓ Aucun chantier pays_sans_zone actif — rien à vérifier
+
+============================================================
+  Terminé — tout est cohérent.
+============================================================
+
+
+▶▶▶ Étape 2/5 — check_type_entite_coherence.py
+============================================================
+  Cohérence type_entite — geographie/{scenario}.md
+============================================================
+
+=== breakdown ===
+  ✓ Aucune entrée sans type_entite
+
+=== fortress_world ===
+  ✓ Aucune entrée sans type_entite
+
+=== new_sustainability ===
+  ✓ Aucune entrée sans type_entite
+
+=== eco_communalism ===
+  ✓ Aucune entrée sans type_entite
+
+=== policy_reform ===
+  ⚠ 1 entrée(s) sans type_entite (1 reconnue(s) comme pays, 0 indéterminée(s))
+      - 'ameriques_reformees' : 'Groenland' → serait corrigée (relancer avec --apply)
+
+=== reference ===
+  ✓ Aucune entrée sans type_entite
+
+============================================================
+  Terminé — aperçu affiché (relancer avec --apply pour corriger).
+============================================================
+
+
+▶▶▶ Étape 3/5 — check_origine_reelle_coherence.py
+============================================================
+  Garde-fou origine_reelle — geographie/{scenario}.md
+============================================================
+
+=== breakdown ===
+  17 zone(s) ville/région à vérifier
+  ✓ Aucune incohérence détectée sur les entrées résolues
+
+=== fortress_world ===
+  28 zone(s) ville/région à vérifier
+  ✓ Aucune incohérence détectée sur les entrées résolues
+
+=== new_sustainability ===
+  32 zone(s) ville/région à vérifier
+  ✓ Aucune incohérence détectée sur les entrées résolues
+
+=== eco_communalism ===
+  12 zone(s) ville/région à vérifier
+  ✓ Aucune incohérence détectée sur les entrées résolues
+
+=== policy_reform ===
+  25 zone(s) ville/région à vérifier
+  ✓ Aucune incohérence détectée sur les entrées résolues
+
+=== reference ===
+  10 zone(s) ville/région à vérifier
+  ✓ Aucune incohérence détectée sur les entrées résolues
+
+============================================================
+  Terminé — tout est cohérent.
+============================================================
+
+
+▶▶▶ Étape 4/5 — check_conventions_territoires.py
+============================================================
+  Cohérence des territoires ambigus — geographie/{scenario}.md
+============================================================
+
+=== breakdown ===
+  ✓ Groenland et danemark : même zone (arctique_nordark, arctique_nordark)
+  · Polynésie française → nouvelle_zelande_archipel_pacifique / France → arc_sahelo_mediterraneen -- zones distinctes
+  · Nouvelle-calédonie : absent, seul france présent (arc_sahelo_mediterraneen) -- convention implicite
+  · Guyane française : absent, seul france présent (arc_sahelo_mediterraneen) -- convention implicite
+  · Écosse → ecosse / Royaume-uni → archipel_anglo_celtique -- zones distinctes
+  ✓ Pays de galles et royaume-uni : même zone (archipel_anglo_celtique)
+
+=== fortress_world ===
+  · Groenland → nuuk_forteresse / Danemark → espace_nordique_arctique -- zones distinctes
+  · Polynésie française → australie_forteresse_insulaire / France → bloc_atlantique -- zones distinctes
+  · Nouvelle-calédonie : absent, seul france présent (bloc_atlantique) -- convention implicite
+  · Guyane française : absent, seul france présent (bloc_atlantique) -- convention implicite
+  ✓ Écosse et royaume-uni : même zone (bloc_atlantique)
+  ✓ Pays de galles et royaume-uni : même zone (bloc_atlantique)
+
+=== new_sustainability ===
+  · Groenland → arctic_passage_qaanaaq / Danemark → arctic_passage_qaanaaq, union_nordique_europe_nord -- zones distinctes
+  · Polynésie française → te_moana_nui_plateforme / France → union_nordique_europe_nord -- zones distinctes
+  · Nouvelle-calédonie : absent, seul france présent (union_nordique_europe_nord) -- convention implicite
+  · Guyane française : absent, seul france présent (union_nordique_europe_nord) -- convention implicite
+  · Écosse → union_nordique_europe_nord / Royaume-uni → ameriques_reconfigurees -- zones distinctes
+  ✓ Pays de galles et royaume-uni : même zone (ameriques_reconfigurees)
+
+=== eco_communalism ===
+  ✓ Groenland et danemark : même zone (arc_septentrional)
+  · Polynésie française → polynesie_reconstituee / France → europe_occidentale_reconstituee -- zones distinctes
+  · Nouvelle-calédonie : absent, seul france présent (europe_occidentale_reconstituee) -- convention implicite
+  · Guyane française : absent, seul france présent (europe_occidentale_reconstituee) -- convention implicite
+  · Écosse → arc_septentrional / Royaume-uni → europe_occidentale_reconstituee -- zones distinctes
+  ✓ Pays de galles et royaume-uni : même zone (europe_occidentale_reconstituee)
+
+=== policy_reform ===
+  · Groenland → ameriques_reformees / Danemark → europe_nord_ouest -- zones distinctes
+  · Polynésie française → zone_pacifique_industrielle / France → hub_europeen_regulation -- zones distinctes
+  · Nouvelle-calédonie : absent, seul france présent (hub_europeen_regulation) -- convention implicite
+  · Guyane française : absent, seul france présent (hub_europeen_regulation) -- convention implicite
+  ✓ Écosse et royaume-uni : même zone (royaume_uni_autonome)
+  ✓ Pays de galles et royaume-uni : même zone (royaume_uni_autonome)
+
+=== reference ===
+  ✓ Groenland et danemark : même zone (corridor_arctique_nordique)
+  · Polynésie française → polynesie_francaise_insulaire / France → europe_occidentale_reconstructee -- zones distinctes
+  · Nouvelle-calédonie : absent, seul france présent (europe_occidentale_reconstructee) -- convention implicite
+  · Guyane française : absent, seul france présent (europe_occidentale_reconstructee) -- convention implicite
+  · Écosse → ecosse_nordique_independante / Royaume-uni → europe_occidentale_reconstructee -- zones distinctes
+  · Pays de galles → pays_de_galles_atlantique / Royaume-uni → europe_occidentale_reconstructee -- zones distinctes
+
+============================================================
+  RÉSUMÉ — territoires dont le traitement VARIE entre scénarios
+============================================================
+
+  ⚠ Groenland (souverain réel : danemark)
+      breakdown            identique
+      fortress_world       distinct
+      new_sustainability   distinct
+      eco_communalism      identique
+      policy_reform        distinct
+      reference            identique
+
+  ⚠ Écosse (souverain réel : royaume-uni)
+      breakdown            distinct
+      fortress_world       identique
+      new_sustainability   distinct
+      eco_communalism      distinct
+      policy_reform        identique
+      reference            distinct
+
+  ⚠ Pays de galles (souverain réel : royaume-uni)
+      breakdown            identique
+      fortress_world       identique
+      new_sustainability   identique
+      eco_communalism      identique
+      policy_reform        identique
+      reference            distinct
+
+============================================================
+  Terminé — 3 territoire(s) au traitement incohérent entre scénarios (voir résumé ci-dessus).
+============================================================
+
+
+▶▶▶ Étape 5/5 — check_patron_spatial_coherence.py
+============================================================
+  Cohérence patron spatial — geographie/{scenario}.md vs patrons_spatiaux.py
+============================================================
+
+=== breakdown ===
+  · 1 zone(s) sans description exploitable, exclue(s) du jugement (pas assez de matière) : ecosse
+  · 36 zone(s) évaluable(s) -- résultat en cache, aucun appel LLM
+  ✓ Aucune zone suspecte
+
+=== fortress_world ===
+  · 21 zone(s) évaluable(s) -- résultat en cache, aucun appel LLM
+  ⚠ amazonie_pacte_vert -- Décrit comme un 'territoire autonome' précaire négociant avec des blocs, ce qui suggère une neutralité ou une zone intermédiaire non conforme au patron (ni enclave protégée ni hors-forteresse dégradée)
+  ⚠ espace_nordique_arctique -- Décrit comme une 'puissance de transit' privée et armée, ni clairement un bloc militarisé ni une zone abandonnée, ce qui contredit la logique binaire du patron
+  ⚠ singapour_megapole -- Mention d'une 'neutralité armée' et d'un hub pour les blocs dominants, ce qui évoque une zone intermédiaire non alignée sur le patron spatial
+  ⚠ tuvalu_refugies_climatiques -- Décrit comme un 'refuge climatique sous protection onusienne résiduelle', ce qui suggère une zone neutre ou humanitaire non conforme à la logique de fragmentation extrême
+
+=== new_sustainability ===
+  · 1 zone(s) sans description exploitable, exclue(s) du jugement (pas assez de matière) : nouveau_califat_barcelone
+  · 15 zone(s) évaluable(s) -- résultat en cache, aucun appel LLM
+  ⚠ bloc_eurasien_souverainiste -- Contradiction avec la logique géopolitique de gouvernance mondiale stabilisée et d'interconnexion institutionnelle forte, en affichant une résistance active aux modèles de transition écologique imposés par les centres institutionnels.
+  ⚠ moyen_orient_golfe -- Mention d'un conflit Israël-Iran en 2026, incompatible avec la réduction structurelle des tensions géopolitiques systémiques et les mécanismes robustes de prévention des conflits.
+
+=== eco_communalism ===
+  · 42 zone(s) évaluable(s) -- résultat en cache, aucun appel LLM
+  ⚠ europe_occidentale_reconstituee -- Description mentionne des 'infrastructures institutionnelles denses' et une 'Confédération des Racines Vivantes', ce qui suggère une centralisation institutionnelle contraire à la logique de petites communautés autonomes et décentralisées.
+  ⚠ inde_bassins_sacres -- Mention de villes comme Delhi et Mumbai devenant des 'hubs de gouvernance décentralisée' peut impliquer une centralisation résiduelle ou une taille incompatible avec la désurbanisation volontaire attendue.
+  ⚠ japon_archipel_resilient -- Tokyo décrite comme une 'mégalopole décentralisée en districts auto-suffisants' contredit la logique de désurbanisation volontaire et de petites communautés autonomes.
+
+=== policy_reform ===
+  · 16 zone(s) évaluable(s) -- résultat en cache, aucun appel LLM
+  ⚠ bloc_souverainiste_non_signataire -- Contredit la logique de stabilisation par renforcement des institutions internationales et la coopération réelle entre blocs rivaux, en revendiquant une résistance active à l'architecture de gouvernance technocratique mondiale.
+  ⚠ espace_eurasiatique -- Mentionne un 'contre-modèle institutionnel' et une résistance aux réformes biotech internationales, ce qui suggère une logique de bloc rival non coopératif, en tension avec la coopération réelle mais non totale attendue.
+  ⚠ peninsule_iberique_cooperative -- Décrite comme une 'union régionale' avec une institution intégrée au CRTI, mais son origine réelle se limite à l'Espagne, ce qui contredit la logique de montée de villes secondaires et de rééquilibrage territorial (risque de mégapole ou région dominante unique).
+
+=== reference ===
+  · 17 zone(s) évaluable(s) -- résultat en cache, aucun appel LLM
+  ⚠ ameriques_multipolaires -- Crise constitutionnelle majeure et émergence d'un Nouveau Parti Commun aux États-Unis introduit une rupture institutionnelle trop marquée pour le scénario conservateur 'reference'.
+  ⚠ pacte_des_souverains -- Coalition d'États-forteresses opérant via des pactes militaro-énergétiques bilatéraux sans cadre multilatéral stable contredit la multipolarité *instable mais fonctionnelle* attendue.
+  ⚠ bloc_persique_autonome -- Contrôle par des milices et régimes autoritaires survivants dans un bloc régional structurant introduit une logique de fragmentation violente trop extrême pour le scénario conservateur.
+
+  · 15 zone(s) suspecte(s) pas encore vérifiée(s) comme suivie(s). Relancer avec --write-chantiers pour les ajouter à chantiers_geographie.yaml :
+      - 'amazonie_pacte_vert' (fortress_world)
+      - 'espace_nordique_arctique' (fortress_world)
+      - 'singapour_megapole' (fortress_world)
+      - 'tuvalu_refugies_climatiques' (fortress_world)
+      - 'bloc_eurasien_souverainiste' (new_sustainability)
+      - 'moyen_orient_golfe' (new_sustainability)
+      - 'europe_occidentale_reconstituee' (eco_communalism)
+      - 'inde_bassins_sacres' (eco_communalism)
+      - 'japon_archipel_resilient' (eco_communalism)
+      - 'bloc_souverainiste_non_signataire' (policy_reform)
+      - 'espace_eurasiatique' (policy_reform)
+      - 'peninsule_iberique_cooperative' (policy_reform)
+      - 'ameriques_multipolaires' (reference)
+      - 'pacte_des_souverains' (reference)
+      - 'bloc_persique_autonome' (reference)
+
+============================================================
+  Terminé — 15 zone(s) suspecte(s) active(s) (avertissement, aucune modification effectuée).
+============================================================
+
+
+############################################################
+  RÉSUMÉ CONSOLIDÉ
+############################################################
+  [check_zones_coherence.py]
+    Terminé — tout est cohérent.
+  [check_type_entite_coherence.py]
+    Terminé — aperçu affiché (relancer avec --apply pour corriger).
+  [check_origine_reelle_coherence.py]
+    Terminé — tout est cohérent.
+  [check_conventions_territoires.py]
+    Terminé — 3 territoire(s) au traitement incohérent entre scénarios (voir résumé ci-dessus).
+  [check_patron_spatial_coherence.py]
+    Terminé — 15 zone(s) suspecte(s) active(s) (avertissement, aucune modification effectuée).
+
+  · check_type_entite_coherence.py lancé sans --apply-type-entite (aperçu seul, rien corrigé)
+  · check_patron_spatial_coherence.py a pu servir des résultats en cache (relancer avec --no-cache-patron-spatial pour forcer un nouvel appel LLM)

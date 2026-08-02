@@ -1,0 +1,23 @@
+
+=== essai_zone_hint_sahel ===
+[1/4] Sélection de variable(s)...
+[llm] Mistral (mistral-large-latest) — entrée : 4580 | sortie : 54
+  -> variables=['systemes_productifs_travail', 'energie_ressources_critiques'] categorie=environmental signal_slug=irrigation_solaire_tensions_eau
+[2/4] Développement pour systemes_productifs_travail...
+[llm] Mistral (mistral-large-latest) — entrée : 30520 | sortie : 599
+[3/4] Validation (essai 1)...
+  ⚠ [avertissement, non bloquant] [breakdown] fenêtre 2042-2060 déjà utilisée par un autre signal de systemes_productifs_travail dans le registre.
+  ⚠ [avertissement, non bloquant] [fortress_world] fenêtre 2036-2052 déjà utilisée par un autre signal de systemes_productifs_travail dans le registre.
+  ⚠ [avertissement, non bloquant] [new_sustainability] fenêtre 2033-2049 déjà utilisée par un autre signal de systemes_productifs_travail dans le registre.
+  ⚠ [avertissement, non bloquant] [policy_reform] fenêtre 2029-2045 déjà utilisée par un autre signal de systemes_productifs_travail dans le registre.
+  ⚠ [avertissement, non bloquant] [reference] fenêtre 2027-2042 déjà utilisée par un autre signal de systemes_productifs_travail dans le registre.
+[4/4] Injection...
+[2/4] Développement pour energie_ressources_critiques...
+[llm] Mistral (mistral-large-latest) — entrée : 30737 | sortie : 575
+[3/4] Validation (essai 1)...
+  ⚠ [avertissement, non bloquant] [new_sustainability] fenêtre 2033-2049 déjà utilisée par un autre signal de energie_ressources_critiques dans le registre.
+  ⚠ [avertissement, non bloquant] [eco_communalism] fenêtre 2039-2058 déjà utilisée par un autre signal de energie_ressources_critiques dans le registre.
+  ⚠ [avertissement, non bloquant] [reference] fenêtre 2026-2043 déjà utilisée par un autre signal de energie_ressources_critiques dans le registre.
+[4/4] Injection...
+
+Terminé. Voir /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/signaux_custom/processed.yaml et /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/signaux_custom/needs_review.yaml.

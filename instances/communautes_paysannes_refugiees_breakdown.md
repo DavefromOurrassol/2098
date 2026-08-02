@@ -4,6 +4,10 @@ type: instance
 slug: communautes_paysannes_refugiees_breakdown
 entite: communautes_paysannes_refugiees
 scenario: breakdown
+localisation:
+  zone: massif_central_cicatrices_vertes
+  lieu: Massif Central
+  type_lieu: region
 statut: officialise_enrichi
 type_dans_scenario: réseau
 role_dans_scenario: 'Dans le scénario breakdown, incarnent la fragmentation des systèmes
@@ -66,10 +70,6 @@ tensions_narratives: Ces communautés sont simultanément désirées pour leurs 
   perpétuelle qui érode précisément la transmission générationnelle qu'elles cherchent
   à préserver.
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: null
 ---
 
 # Communautés Paysannes Réfugiées

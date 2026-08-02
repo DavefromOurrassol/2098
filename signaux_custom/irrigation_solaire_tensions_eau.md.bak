@@ -1,0 +1,99 @@
+---
+slug: irrigation_solaire_tensions_eau
+source: actualite
+categorie: geopolitical
+variables_cibles: ['energie_ressources_critiques', 'organisation_territoires', 'geopolitique_conflits']
+statut: injected
+---
+
+## Idée source
+
+Une vague de projets d'irrigation solaire transforme l'agriculture locale, provoquant à la fois un boom démographique et des tensions croissantes sur l'accès à l'eau.
+
+## Cohérence avec les signaux existants
+
+- **energie_ressources_critiques** : Le signal 'competition_terres_rares' aborde des tensions similaires pour des ressources critiques, mais dans un contexte minier (lithium/cobalt) plutôt qu'hydrique. Les deux signaux sont complémentaires : ils illustrent des dynamiques parallèles de compétition pour des ressources essentielles à la transition énergétique, avec des foyers géographiques distincts (Afrique australe vs Sahel). Aucun chevauchement direct n'a été identifié avec d'autres signaux existants.
+- **organisation_territoires** : Le signal 'montee_localisme' traite d'une dynamique proche (repli territorial et gestion locale des ressources), mais se concentre sur les aspects identitaires et politiques plutôt que sur les tensions hydriques spécifiques. Les évolutions proposées ici complètent ce signal en ciblant les conflits concrets autour des infrastructures solaires et de l'eau, avec des acteurs et lieux distincts (ex: milices touarègues vs fermetures de frontières communales). Les deux signaux coexistent sans contradiction, reflétant des facettes différentes d'une même crise systémique.
+
+## Trajectoire injectée
+
+```yaml
+signal_to_state:
+  - signal: irrigation_solaire_tensions_eau
+    scenarios:
+      breakdown:
+        evolution: guerres locales pour l'accès aux nappes phréatiques
+        date_bascule: 2042-2060
+        evenement_cle: bataille de l'aquifère de Liptako-Gourma 2055
+      fortress_world:
+        evolution: nationalisation des pompes solaires par les blocs fermés
+        date_bascule: 2036-2052
+        evenement_cle: Bloc Atlantique saisit les fermes solaires du Tchad 2048
+      new_sustainability:
+        evolution: gestion algorithmique mondiale des ressources hydriques
+        date_bascule: 2031-2047
+        evenement_cle: algorithme HydraShare gère les flux du bassin du Niger 2043
+      eco_communalism:
+        evolution: charte bioterritoriale de partage des eaux solaires
+        date_bascule: 2039-2058
+        evenement_cle: pacte de l'Oasis pour une eau solaire équitable
+      policy_reform:
+        evolution: directive internationale sur l'irrigation solaire responsable
+        date_bascule: 2029-2045
+        evenement_cle: accord de Ouagadougou sur les quotas hydriques 2039
+      reference:
+        evolution: conflits locaux récurrents pour les pompes solaires
+        date_bascule: 2027-2042
+        evenement_cle: affrontements pour le forage solaire de Diffa 2036
+  - signal: irrigation_solaire_tensions_eau
+    scenarios:
+      breakdown:
+        evolution: territoires agricoles solaires transformés en zones de conflit
+        date_bascule: 2042-2060
+        evenement_cle: milices touarègues sabotent les pompes du Tilemsi 2056
+      fortress_world:
+        evolution: zonage hydrique imposé par les blocs aux territoires périphériques
+        date_bascule: 2036-2052
+        evenement_cle: Bloc Eurasiatique verrouille l'aquifère de Taoudeni 2049
+      new_sustainability:
+        evolution: hubs régionaux de coordination hydrique pilotés par IA
+        date_bascule: 2031-2047
+        evenement_cle: Réseau SahelFlow optimise les flux du bassin du Sénégal 2044
+      eco_communalism:
+        evolution: réseaux locaux de gestion équitable des eaux solaires
+        date_bascule: 2039-2058
+        evenement_cle: Chartre de l'Eau Vive adoptée par les oasis du Ténéré
+      policy_reform:
+        evolution: plans nationaux de souveraineté hydrique avec coopération régionale
+        date_bascule: 2029-2045
+        evenement_cle: Plan Sahel Bleu lancé avec quotas transfrontaliers 2035
+      reference:
+        evolution: projets solaires exacerbent les inégalités d'accès à l'eau
+        date_bascule: 2027-2042
+        evenement_cle: Manifestations contre les fermes solaires de Ouagadougou 2037
+      
+      breakdown:
+        evolution: effondrement des coopératives agricoles solaires par pénurie
+        date_bascule: 2042-2060
+        evenement_cle: Sécheresse extrême assèche les puits solaires du Gourma 2055
+      fortress_world:
+        evolution: nationalisation des pompes solaires par les blocs sécurisés
+        date_bascule: 2036-2052
+        evenement_cle: Bloc Atlantique saisit les stations de pompage du Niger 2047
+      new_sustainability:
+        evolution: gestion algorithmique des flux hydriques transfrontaliers
+        date_bascule: 2031-2047
+        evenement_cle: Plateforme AquaNet régule les barrages du fleuve Sénégal 2043
+      eco_communalism:
+        evolution: charte bioterritoriale de partage des eaux solaires locales
+        date_bascule: 2039-2058
+        evenement_cle: Accord des Oasis du Sahel sur les quotas partagés
+      policy_reform:
+        evolution: régulation internationale des infrastructures solaires critiques
+        date_bascule: 2029-2045
+        evenement_cle: Directive ONU sur la protection des aquifères solaires 2038
+      reference:
+        evolution: tensions croissantes autour des projets solaires non régulés
+        date_bascule: 2027-2042
+        evenement_cle: Conflit pour l'eau solaire à Gao 2036
+```

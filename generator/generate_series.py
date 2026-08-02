@@ -216,7 +216,12 @@ def generate_one(scenario, thematique, config, date_fictive, dry_run=False):
 
     try:
         thema_data  = load_thematique(thematique)
-        snapshot    = build_snapshot(scenario, thematique=thema_data)
+        forcer_config = config.get("forcer")
+        snapshot    = build_snapshot(scenario, thematique=thema_data, dry_run=dry_run,
+                                      forcer_config=forcer_config)
+        if snapshot.get("forcer_erreur"):
+            return {"status": "error", "scenario": scenario, "thematique": thematique,
+                    "error": "Forçage impossible : {}".format(snapshot["forcer_erreur"])}
         prompt_data = build_prompt(snapshot, thema_data, article_config, dry_run=dry_run)
 
         if dry_run:

@@ -8,9 +8,6 @@ localisation:
   zone: cracovie_registre_zones
   lieu: Cracovie
   type_lieu: ville
-  statut: review_manuelle
-  note: "Le Registre est un réseau diffus avec des antennes à Cracovie, Mombasa et au Piémont, mais Cracovie est la zone dédiée existante ; cependant l'entité elle-même est transnationale et sans siège unique."
-
 type_dans_scenario: institution
 
 role_dans_scenario: >

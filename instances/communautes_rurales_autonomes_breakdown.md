@@ -4,6 +4,10 @@ type: instance
 slug: communautes_rurales_autonomes_breakdown
 entite: communautes_rurales_autonomes
 scenario: breakdown
+localisation:
+  zone: massif_central_cicatrices_vertes
+  lieu: Massif Central
+  type_lieu: region
 statut: officialise_enrichi
 type_dans_scenario: réseau
 role_dans_scenario: Dans le scénario breakdown, les communautés rurales autonomes
@@ -71,10 +75,6 @@ tensions_narratives: La tension centrale qui les traverse oppose l'impératif de
   de réfugiés climatiques et énergétiques sans parvenir à consolider leurs propres
   bases productives, fragilisant l'équilibre même qui les rendait viables.
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: region
 ---
 
 # communautés rurales autonomes

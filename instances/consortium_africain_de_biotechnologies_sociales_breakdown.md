@@ -6,7 +6,7 @@ entite: consortium_africain_de_biotechnologies_sociales
 scenario: breakdown
 localisation:
   zone: afrique_de_louest_lagos_sahel
-  lieu: Corridor sahélo-sahélien (siège central détruit) et zones de déploiement pan-africaines
+  lieu: Corridor sahélo-sahélien
   type_lieu: region
 type_dans_scenario: réseau
 

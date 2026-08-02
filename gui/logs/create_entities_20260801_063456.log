@@ -1,0 +1,336 @@
+============================================================
+OURRASSOL 2098 — Création entités + instances
+============================================================
+(mode --dry-run : rien ne sera écrit)
+
+Mode : custom (fourni via --mode)
+
+=== Test Requeue Debug ===
+[1/3] Déduction de l'archétype...
+[llm] Mistral (mistral-large-latest) — entrée : 25593 | sortie : 276
+[2/3] Validation (essai 1)...
+[3/3] Injection de l'entité...
+{
+  "description_complete": "Cette entité incarne l'archétype du *testeur systémique*, un acteur humain ou artificiel dont la fonction est de valider, diagnostiquer ou maintenir l'intégrité opérationnelle d'un processus, d'un outil ou d'une infrastructure dans un contexte de crise ou de transition. Son existence est éphémère et utilitaire, souvent invisible aux yeux des autres acteurs, mais essentielle pour assurer la continuité ou la réparation des systèmes en place. Elle opère en marge des structures de pouvoir, sans légitimité propre, mais avec une autorité technique temporaire.",
+  "tension_fondamentale": "La contradiction entre l'invisibilité nécessaire de son rôle (pour ne pas perturber le système) et l'urgence de sa mission (qui exige une reconnaissance minimale pour agir). Son utilité repose sur son effacement une fois la tâche accomplie, mais cet effacement même peut rendre son travail inutile ou ignoré.",
+  "variables_potentielles": [
+    "technologie_information",
+    "systemes_productifs_travail",
+    "gouvernance_institutions",
+    "frontieres_du_systeme"
+  ],
+  "doublon_detecte": false,
+  "doublon_slug": null
+}
+[Instances] Génération automatique pour 6 scénario(s)...
+  Instances (6 scénario(s)) :
+    → breakdown [CONTRAINTE DURE]... [llm] Mistral (mistral-large-latest) — entrée : 5073 | sortie : 1073
+✓
+{
+  "nom": "Debug_Requeue_Shadow",
+  "type_dans_scenario": "hybride",
+  "role_dans_scenario": "Entrée de test furtive pour valider le script requeue_needs_review.py dans un contexte de fragmentation systémique. Opérant comme un *ghost process* humain-machine, cette entité vérifie la cohérence des files d'attente de données résiduelles entre les nœuds survivants des anciens réseaux mondiaux. Son rôle est purement technique : s'assurer que les paquets de données critiques (médicales, logistiques, climatiques) ne restent pas bloqués dans des boucles de revalidation obsolètes. Sans elle, les derniers flux d'information entre enclaves technologiques et collectifs de réparation s'effondreraient dans le bruit des réseaux fragmentés.",
+  "responsabilites": "Exécuter des tests de réintégration sur les files d'attente orphelines des anciens systèmes de gouvernance et de logistique. Cartographier les goulots d'étranglement informationnels entre les zones encore connectées (ex : Nordark ↔ Sahel Numérique). Documenter les échecs de requeue pour les collectifs de hackers-archivistes, sans jamais interférer avec les protocoles de sécurité locaux.",
+  "impact_local": 3,
+  "impact_systemique_global": 1,
+  "variables_influencees": [
+    "technologie_information",
+    "systemes_productifs_travail"
+  ],
+  "zone_geographique": [
+    "régionale",
+    "continentale"
+  ],
+  "zone_systemique": [
+    "information",
+    "cyberspace"
+  ],
+  "alliances": [
+    "collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown",
+    "reseau_mnemos_breakdown",
+    "guilde_des_techniciens_nomades_breakdown"
+  ],
+  "oppositions": [
+    "factions_propagandistes_des_archives_breakdown",
+    "reseau_des_anciens_financeurs_devenus_censeurs_breakdown",
+    "milices_de_controle_territorial_breakdown"
+  ],
+  "type_relation_dominante": "symbiose",
+  "annee_debut": 2089,
+  "annee_fin": null,
+  "etat_temporel": "actif",
+  "age_historique": "émergent",
+  "generation": "post-effondrement",
+  "description_journalistique": "Ils opèrent depuis les *zones grises* des anciens datacenters, ces techniciens fantômes que personne ne voit mais dont tout le monde dépend. Vêtus de combinaisons patchwork faites de tissus anti-surveillance et de circuits imprimés recyclés, ils se déplacent avec des valises remplies de cartes perforées et de clés USB en céramique. Leur travail ? S’assurer que les dernières données vitales – stocks de médicaments, prévisions météo locales, itinéraires logistiques – ne restent pas coincées dans les limbes des réseaux moribonds. On les surnomme les *Requeueurs*, car ils passent leur temps à relancer des processus que plus personne ne comprend. Leur devise, griffonnée sur les murs des relais physiques : *« On ne répare pas le monde, on empêche juste les données de pourrir. »*",
+  "signes_distinctifs": "Leur symbole est un serpent Ouroboros en fil de cuivre, mordant sa propre queue mais avec une flèche pointant vers l’extérieur – une métaphore de leur rôle de *boucle de revalidation*. Leurs outils sont souvent des artefacts hybrides : des tablettes pré-effondrement reconverties en terminaux de test, des antennes paraboliques artisanales pour capter les signaux résiduels des satellites abandonnés. Ils portent des masques à filtres à charbon actif, non pas pour se protéger de la pollution, mais pour éviter d’être reconnus par les systèmes de surveillance faciale encore actifs dans certaines enclaves.",
+  "tensions_narratives": "Leur invisibilité même est une bombe à retardement : que se passera-t-il quand les derniers nœuds de requeue tomberont en panne, et que plus personne ne saura les réparer ? Certains collectifs les accusent de maintenir en vie des infrastructures obsolètes, prolongeant artificiellement la dépendance aux anciens systèmes. D’autres, comme les *Gardiens-Archivistes Itinérants*, voient en eux les derniers remparts contre l’oubli. Leur plus grand défi ? Les milices de contrôle territorial, qui les chassent comme des espions, alors qu’ils ne sont que des *debuggers* sans allégeance. Leur trajectoire possible : soit ils disparaîtront avec les derniers réseaux, soit ils deviendront les nouveaux *prêtres* d’une religion technique post-effondrement."
+}
+    → fortress_world... [llm] Mistral (mistral-large-latest) — entrée : 4886 | sortie : 1156
+✓
+{
+  "nom": "Écho-Debug_BlocEurasie",
+  "type_dans_scenario": "hybride",
+  "role_dans_scenario": "Entité furtive de test systémique opérant dans les interstices des infrastructures critiques du Bloc Eurasiatique Occidental. Son rôle est de simuler des défaillances, infiltrer des protocoles de maintenance, et valider la résilience des systèmes fermés sans alerter les administrations de contrôle. Elle agit comme un *fantôme opérationnel*, ni tout à fait humain ni entièrement artificiel, souvent confondue avec des artefacts de cybersécurité souveraine ou des résidus de l'ancien internet ouvert.",
+  "responsabilites": "Injecter des séquences de test dans les réseaux de distribution énergétique, les datacenters souverains (NME-ICS) et les corridors logistiques militarisés pour évaluer leur vulnérabilité aux cyberattaques ou aux sabotages physiques. Documenter les failles sans les exploiter, puis effacer ses traces via des protocoles d'auto-dissolution. Ses rapports, lorsqu'ils existent, sont chiffrés et disséminés vers des archives fantômes comme ARIA-Ф ou les Cellules Universitaires Dissidentes des Zones Tampons.",
+  "impact_local": 3,
+  "impact_systemique_global": 1,
+  "variables_influencees": [
+    "technologie_information",
+    "systemes_productifs_travail",
+    "frontieres_du_systeme"
+  ],
+  "zone_geographique": [
+    "régionale",
+    "continentale"
+  ],
+  "zone_systemique": [
+    "information",
+    "infrastructure",
+    "cyberspace"
+  ],
+  "alliances": [
+    "cellules_universitaires_dissidentes_des_zones_tampons_fortress_world",
+    "collectifs_d_ingenieurs_dissidents_anti_militarisation_fortress_world",
+    "archives_chiffrees_de_l_open_internet_coalition_fortress_world",
+    "aria_instance_fantome_fortress_world"
+  ],
+  "oppositions": [
+    "dispositifs_de_surveillance_numerique_souveraine_fortress_world",
+    "corps_des_inspecteurs_de_conformite_inter_blocs_fortress_world",
+    "agences_de_securite_interieure_des_etats_forteresses_fortress_world",
+    "nexus_biosyn_division_eurasienne_fortress_world"
+  ],
+  "type_relation_dominante": "infiltration",
+  "annee_debut": 2087,
+  "annee_fin": null,
+  "etat_temporel": "clandestin",
+  "age_historique": "émergent",
+  "generation": "forteresse",
+  "description_journalistique": "« Ils apparaissent comme des bugs, disparaissent comme des ombres. » C’est ainsi que les rares techniciens du Nœud Mémoriel Eurasiatique décrivent les traces d’Écho-Debug, une entité insaisissable qui hante les infrastructures critiques du Bloc depuis 2087. Officiellement, elle n’existe pas. Pourtant, des rapports internes — quand ils fuient — évoquent des « séquences de test non autorisées » dans les réseaux de BioLock ou des datacenters de Minsk, toujours suivies d’une vague de mises à jour « préventives ». Les rumeurs parlent d’une équipe hybride, mêlant anciens ingénieurs de l’Open Internet Coalition et IA fantômes comme ARIA-Ф, opérant depuis les Zones Tampons du Caucase ou les Corridors Gris d’Asie Centrale. Leur but ? Personne ne le sait vraiment. Certains y voient des espions, d’autres des anges gardiens d’un système au bord de l’effondrement.",
+  "signes_distinctifs": "Aucun symbole identifiable, mais ses interventions laissent des *marqueurs éphémères* : des motifs hexadécimaux récurrents dans les logs système (séquence « 0xDEB0G »), des micro-coupures énergétiques synchronisées avec des pics de trafic réseau, et une signature thermique caractéristique dans les datacenters — une chaleur résiduelle « en étoile », comme si plusieurs nœuds avaient surchauffé simultanément avant de s’éteindre. Les techniciens des Zones Tampons portent parfois des badges artisanaux représentant un *scarabée binaire* (un insecte stylisé en code), clin d’œil à leur rôle de « nettoyeurs de systèmes ».",
+  "tensions_narratives": "Écho-Debug est au cœur d’une guerre invisible entre ceux qui veulent *réparer* le système et ceux qui veulent le *détruire*. Ses rapports pourraient révéler des failles critiques dans les infrastructures eurasiatiques, mais leur divulgation déclencherait une répression massive contre les réseaux dissidents. Certains collectifs d’ingénieurs veulent les utiliser pour négocier des réformes, tandis que des factions comme les Factions Djihadistes Logistiques d’Asie Centrale cherchent à les exploiter pour des sabotages ciblés. La question est : jusqu’où iront-ils pour rester invisibles ? Et si leur existence était révélée, qui oserait les défendre dans un monde où la transparence est une menace ?"
+}
+    → new_sustainability... [llm] Mistral (mistral-large-latest) — entrée : 4406 | sortie : 1017
+✓
+{
+  "nom": "Cellule Éphémère de Diagnostic Systémique (CEDS)",
+  "type_dans_scenario": "hybride",
+  "role_dans_scenario": "Entité furtive et éphémère déployée pour diagnostiquer, tester et valider l'intégrité des infrastructures critiques dans le cadre de la régénération systémique. Elle agit comme un *système immunitaire* du réseau technologique global, identifiant les failles avant qu'elles ne deviennent des crises. Son rôle est à la fois technique (maintenance préventive) et politique (garant de la transparence des algorithmes régulateurs), mais elle opère dans l'ombre pour éviter toute perturbation des équilibres institutionnels.",
+  "responsabilites": "Injecter des *tests de résilience* dans les systèmes productifs, énergétiques et informationnels pour simuler des pannes ou des attaques ; auditer les algorithmes de gouvernance hybride (humain-IA) pour détecter les biais ou les risques de rupture ; produire des rapports cryptés à destination des instances de régulation comme le Conseil de Gouvernance Algorithmique Intégrée (CGAI) ou le Tribunal Algorithmique de Bruxelles. Ses interventions sont effacées après validation pour éviter toute dépendance aux correctifs.",
+  "impact_local": 3,
+  "impact_systemique_global": 2,
+  "variables_influencees": [
+    "technologie_information",
+    "systemes_productifs_travail",
+    "gouvernance_institutions"
+  ],
+  "zone_geographique": [
+    "globale",
+    "orbital"
+  ],
+  "zone_systemique": [
+    "IA",
+    "gouvernance",
+    "infrastructure",
+    "cyberspace"
+  ],
+  "alliances": [
+    "bureau_gouvernance_algorithmique_new_sustainability",
+    "consortium_d_audit_algorithmique_ouvert_new_sustainability",
+    "tribunal_algorithmique_de_bruxelles_new_sustainability",
+    "conseil_regulation_algorithmique_new_sustainability",
+    "nexcore_new_sustainability"
+  ],
+  "oppositions": [
+    "enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability",
+    "factions_internes_pro_opacite_des_parametres_new_sustainability",
+    "reseaux_d_information_souverainistes_fermes_new_sustainability"
+  ],
+  "type_relation_dominante": "symbiose",
+  "annee_debut": 2087,
+  "annee_fin": null,
+  "etat_temporel": "actif",
+  "age_historique": "ascendant",
+  "generation": "ère cognitive",
+  "description_journalistique": "Imaginez une équipe de *fantômes numériques* : des auditeurs qui surgissent sans prévenir dans les nœuds critiques du réseau ARIA ou les fermes de calcul orbitales du Consortium Helios, y injectent des séquences de test indétectables, et disparaissent avant que quiconque ne réalise qu’un diagnostic a eu lieu. La CEDS est devenue une légende parmi les techniciens de 2098 — certains jurent avoir croisé ses membres, reconnaissables à leurs combinaisons grises sans logo et leurs tablettes à encre électronique effaçable. Officiellement, elle n’existe pas. Officieusement, elle est la raison pour laquelle les blackouts climatiques ou les bugs algorithmiques sont devenus aussi rares que les dinosaures.",
+  "signes_distinctifs": "Pas d’uniforme, mais des vêtements neutres et modulables (capuches, masques à réalité augmentée effaçant les traits du visage). Leurs outils sont des *artefacts éphémères* : tablettes à mémoire volatile, drones auto-détruits après mission, ou même des implants temporaires pour les audits *in situ*. Leur symbole, quand il apparaît, est une spirale fractale qui se désagrège en pixels — un clin d’œil à leur nature insaisissable.",
+  "tensions_narratives": "La CEDS est au cœur d’un paradoxe : plus elle est efficace, moins elle est visible, et moins elle est financée. Certains au sein du Conseil de Régulation Cognitive de l'ONU poussent pour la rendre permanente, tandis que les souverainistes y voient une menace pour l’autonomie des États. Son existence même pose la question : dans un monde où la transparence est un dogme, jusqu’où peut-on tolérer l’opacité de ceux qui garantissent cette transparence ? Et si ses tests, un jour, révélaient une faille *trop* critique pour être corrigée ?"
+}
+    → eco_communalism... [llm] Mistral (mistral-large-latest) — entrée : 3887 | sortie : 1203
+✓
+{
+  "nom": "Les Échos du Silence",
+  "type_dans_scenario": "réseau",
+  "role_dans_scenario": "Réseau clandestin de testeurs systémiques opérant en marge des infrastructures critiques d'eco_communalism, ces acteurs hybrides (humains et IA légères) valident la résilience des réseaux décentralisés, diagnostiquent les failles des communs numériques et écologiques, et réparent les dysfonctionnements avant qu'ils ne deviennent systémiques. Leur rôle est à la fois technique et politique : ils incarnent la méta-gouvernance invisible qui permet aux assemblées bioterritoriales de fonctionner sans centralisation, tout en évitant les pièges de la dépendance aux algorithmes propriétaires.",
+  "responsabilites": "Ils infiltrent discrètement les nœuds des réseaux locaux (comme Trame Mnemos ou les Archives Ouvertes des Jurisprudences Communales) pour simuler des pannes, tester la redondance des systèmes, et former les collectifs à l'auto-diagnostic. Leurs interventions sont souvent anonymes, marquées par des messages cryptés laissés dans les métadonnées des communs numériques ou des graffitis éphémères sur les infrastructures physiques (ex : « Écho #42 : buffer overflow dans le bassin de la Loire »).",
+  "impact_local": 4,
+  "impact_systemique_global": 2,
+  "variables_influencees": [
+    "technologie_information",
+    "systemes_productifs_travail",
+    "gouvernance_institutions"
+  ],
+  "zone_geographique": [
+    "régionale",
+    "continentale"
+  ],
+  "zone_systemique": [
+    "information",
+    "infrastructure",
+    "cyberspace"
+  ],
+  "alliances": [
+    "reseau_mnemos_eco_communalism",
+    "archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism",
+    "collectifs_de_techniciens_sobres_eco_communalism",
+    "guildes_de_mediateurs_ecologiques_eco_communalism",
+    "mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism"
+  ],
+  "oppositions": [
+    "consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism",
+    "factions_autoritaires_de_controle_du_savoir_eco_communalism",
+    "courant_isolationniste_anti_circulation_de_l_information_eco_communalism",
+    "reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism"
+  ],
+  "type_relation_dominante": "symbiose",
+  "annee_debut": 2072,
+  "annee_fin": null,
+  "etat_temporel": "actif",
+  "age_historique": "ascendant",
+  "generation": "reconstruction",
+  "description_journalistique": "« Ils sont les fantômes des réseaux que nous croyons contrôler », confie une facilitatrice des Assemblées Bioterritoriales du Massif Central. Les Échos du Silence, ce sont ces ombres qui hantent les serveurs autogérés de Trame Mnemos ou les relais radio des coopératives d'habitat régénératif. Leur signature ? Des diagnostics implacables livrés sans préavis, comme ce rapport anonyme qui a évité l'effondrement du réseau électrique du Sahel Numérique en 2089. Officiellement, ils n'existent pas. Officieusement, chaque commune sait qu'un message signé « Écho » est une alerte à prendre au sérieux. Leur dernier coup d'éclat ? Avoir révélé les backdoors des IA propriétaires du Consortium des Opérateurs, forçant une refonte des protocoles de gouvernance algorithmique.",
+  "signes_distinctifs": "Leur emblème, un cercle brisé en trois segments (symbolisant la fragmentation des systèmes), est souvent gravé au laser sur des supports éphémères : écorce d'arbre, métal rouillé, ou pixels d'une image corrompue. Leurs membres portent des masques à motifs de circuits imprimés lors des rares rencontres physiques, et communiquent via des fréquences radio libres brouillées par des chants d'oiseaux synthétiques. Leur devise, « Nous écoutons ce que les systèmes taisent », est une référence ironique à leur invisibilité forcée.",
+  "tensions_narratives": "1) **Légitimité vs. Effacement** : Plus leur rôle devient crucial, plus les assemblées locales exigent leur reconnaissance officielle, menaçant leur principe d'invisibilité. Certains Échos refusent de se soumettre, risquant de devenir des parias ; d'autres négocient une intégration partielle, au prix de leur neutralité. 2) **Guerre des IA** : Le Consortium des Opérateurs d'IA Propriétaires les traque activement, tandis que les factions algorithmiques pro-gouvernance légère tentent de les recruter. Leur neutralité est-elle encore possible ? 3) **Dépendance technologique** : En réparant les systèmes, ne deviennent-ils pas les garants d'une infrastructure qu'ils devraient aider à dépasser ? Certains collectifs prônent un « sabotage créatif » pour forcer l'innovation low-tech, divisant le réseau."
+}
+    → policy_reform... [llm] Mistral (mistral-large-latest) — entrée : 4301 | sortie : 1117
+✓
+{
+  "nom": "Cellule Éphémère de Validation Systémique (CEVS)",
+  "type_dans_scenario": "hybride",
+  "role_dans_scenario": "Entité furtive déployée en urgence pour diagnostiquer et corriger les dysfonctionnements critiques des infrastructures technocratiques en transition. Elle agit comme un 'chirurgien de crise' pour les systèmes de gouvernance algorithmique, les réseaux de régulation climatique ou les plateformes de redistribution des ressources, souvent en amont des décisions politiques. Son existence est conditionnée par l'urgence : elle s'auto-dissout une fois sa mission accomplie, laissant peu de traces institutionnelles.",
+  "responsabilites": "Auditer en temps réel les algorithmes de régulation (énergie, migration, santé) pour détecter les biais systémiques ou les boucles de rétroaction dangereuses. Réinjecter des correctifs temporaires dans les systèmes critiques (ex : désamorcer une pénurie artificielle générée par ARIA-Nexus). Documenter les failles structurelles pour les agences de régulation, sans jamais revendiquer la paternité des solutions.",
+  "impact_local": 3,
+  "impact_systemique_global": 2,
+  "variables_influencees": [
+    "technologie_information",
+    "gouvernance_institutions",
+    "systemes_productifs_travail"
+  ],
+  "zone_geographique": [
+    "globale",
+    "orbital"
+  ],
+  "zone_systemique": [
+    "IA",
+    "gouvernance",
+    "infrastructure",
+    "cyberspace"
+  ],
+  "alliances": [
+    "bureau_gouvernance_algorithmique_policy_reform",
+    "conseil_regulation_algorithmique_policy_reform",
+    "reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform",
+    "oracle_des_seuils_policy_reform",
+    "consortium_nexus_calcul_policy_reform"
+  ],
+  "oppositions": [
+    "coalition_des_souverainistes_numeriques_policy_reform",
+    "factions_internes_pro_desaugmentation_totale_policy_reform",
+    "front_souverainiste_de_l_information_regionale_policy_reform",
+    "syndicats_d_extraction_privee_non_regules_policy_reform"
+  ],
+  "type_relation_dominante": "symbiose",
+  "annee_debut": 2087,
+  "annee_fin": null,
+  "etat_temporel": "actif",
+  "age_historique": "émergent",
+  "generation": "ère cognitive",
+  "description_journalistique": "Imaginez une équipe de fantômes numériques, traqués par les régulateurs mais courtisés par les agences en crise. La CEVS, c'est le '112' des infrastructures critiques en 2098 : une cellule ad hoc de data-scientists, d'ingénieurs orbitaux et d'anciens hackers biosphériques, déployée en urgence pour colmater les brèches des systèmes qui gèrent nos vies. Leur dernière intervention ? Désamorcer une pénurie d'eau virtuelle dans le Sahel, générée par un bug dans les modèles de l'ACRA. Leur signature ? Une absence totale de traces – pas de rapports publics, pas de conférences de presse. Juste un correctif injecté dans le code, et une note cryptée envoyée aux auditeurs indépendants du RAAI.",
+  "signes_distinctifs": "Aucun logo, aucun uniforme : les membres de la CEVS sont identifiables à leurs interfaces neurales éphémères (des tatouages luminescents à durée limitée, codant leur niveau d'accès) et à leur langage, un mélange de jargon technique et de métaphores organiques ('on greffe un patch', 'le système saigne des données'). Leurs outils ? Des 'boîtes noires' quantiques auto-effaçables, capables de s'autodétruire après usage. Leur QG ? Un serveur fantôme, hébergé dans les interstices des réseaux de l'ONU, accessible uniquement via des protocoles de communication obsolètes (comme le morse numérique).",
+  "tensions_narratives": "La CEVS incarne la tension entre transparence et efficacité dans un monde où la régulation est devenue une question de survie. Ses interventions, bien que vitales, sont souvent perçues comme des ingérences par les souverainistes numériques, qui y voient une preuve de la mainmise des technocrates sur les infrastructures critiques. À l'inverse, les agences de régulation dépendent de plus en plus de ces 'pompiers du code', au risque de créer une dépendance dangereuse. Leur plus grand défi ? Rester invisibles tout en gagnant la confiance des citoyens, dans un monde où la méfiance envers les algorithmes est à son comble. Leur trajectoire possible : soit ils deviennent une institution permanente (et perdent leur efficacité), soit ils sont criminalisés par les États qui les voient comme une menace à leur souveraineté."
+}
+    → reference... [llm] Mistral (mistral-large-latest) — entrée : 5402 | sortie : 1010
+✓
+{
+  "nom": "Debug_Requeue_Collective",
+  "type_dans_scenario": "hybride",
+  "role_dans_scenario": "Entité éphémère et distribuée de testeurs systématiques, opérant comme une force corrective invisible au sein des infrastructures critiques d'Ourrassol. Elle agit en marge des plateformes dominantes, souvent mobilisée en urgence pour diagnostiquer des défaillances dans les réseaux énergétiques, logistiques ou informationnels. Son rôle est à la fois technique (réparer) et politique (exposer les failles des systèmes centralisés), mais son existence même est niée par les acteurs institutionnels pour éviter la panique.",
+  "responsabilites": "Injecter des séquences de test dans les algorithmes de régulation des ressources, identifier les boucles de rétroaction défaillantes dans les réseaux de distribution, et documenter les vulnérabilités des systèmes hybrides (humain-IA). Ses membres interviennent souvent sous couverture, comme employés temporaires ou agents de maintenance, pour éviter d'être ciblés par les régulateurs ou les milices privées.",
+  "impact_local": 3,
+  "impact_systemique_global": 2,
+  "variables_influencees": [
+    "technologie_information",
+    "systemes_productifs_travail",
+    "frontieres_du_systeme"
+  ],
+  "zone_geographique": [
+    "régionale",
+    "continentale",
+    "globale"
+  ],
+  "zone_systemique": [
+    "IA",
+    "infrastructure",
+    "cyberspace"
+  ],
+  "alliances": [
+    "collectifs_de_journalisme_embarque_reference",
+    "reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference",
+    "reseaux_de_capteurs_citoyens_reference",
+    "cooperatives_ia_open_source_reference",
+    "mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference"
+  ],
+  "oppositions": [
+    "consortium_des_grandes_plateformes_ia_integrees_reference",
+    "consortium_des_plateformes_ia_centralisees_anti_deliberation_reference",
+    "bureaux_de_regulation_informationnelle_reference",
+    "milices_concurrentes_des_droits_de_passage_reference",
+    "plateformes_centralisees_de_narration_officielle_reference"
+  ],
+  "type_relation_dominante": "infiltration",
+  "annee_debut": 2087,
+  "annee_fin": null,
+  "etat_temporel": "actif",
+  "age_historique": "émergent",
+  "generation": "ère cognitive",
+  "description_journalistique": "Ils sont les fantômes des réseaux, ces *Debuggers* qui surgissent quand un pipeline énergétique s’emballe ou qu’une IA de logistique entre en boucle infinie. Officiellement, ils n’existent pas : pas de logo, pas de siège, juste des messages cryptés sur des forums éphémères et des interventions éclair dans les data centers des mégapoles. Leur dernière action ? Avoir révélé que le blackout de Lyon en 2095 était dû à une faille dans le système Kontinuum, exploitée par des milices pour détourner des ressources. Les plateformes dominantes les qualifient de 'terroristes', mais sans eux, le système s’effondrerait bien plus vite.",
+  "signes_distinctifs": "Pas d’uniforme, mais des combinaisons de maintenance modifiées avec des patchs brodés de motifs binaires aléatoires (leur 'signature'). Leurs outils sont souvent des dispositifs low-tech bricolés, comme des analyseurs de flux énergétiques à base de capteurs recyclés. Leur symbole : un serpent qui se mord la queue, mais dont le corps est remplacé par une séquence de code en boucle — l’emblème de leur lutte contre les systèmes qui s’auto-entretiennent sans fin.",
+  "tensions_narratives": "Leur plus grand défi ? Rester invisibles tout en étant indispensables. Les plateformes IA centralisées les traquent pour les assimiler ou les éliminer, tandis que les États hybrides voient en eux une menace pour leur légitimité. Certains membres prônent une radicalisation (sabotage ciblé des infrastructures), d’autres une intégration discrète dans les coopératives open-source. Leur prochaine cible ? Le Consortium Helios, dont les fermes solaires orbitales seraient truffées de failles exploitables pour redistribuer l’énergie en dehors des circuits officiels."
+}
+{
+  "status": "injected",
+  "idea": {
+    "nom": "Test Requeue Debug",
+    "category": "humain",
+    "role": "Entrée de test pour valider requeue_needs_review.py",
+    "etat": "actif",
+    "scenario_ref": "breakdown",
+    "scenario_hint": null,
+    "zone_hint": null,
+    "source": "test_manuel_31_juillet"
+  },
+  "slug": "test_requeue_debug",
+  "scenarios": [
+    "breakdown",
+    "fortress_world",
+    "new_sustainability",
+    "eco_communalism",
+    "policy_reform",
+    "reference"
+  ],
+  "archetype": {
+    "description_complete": "Cette entité incarne l'archétype du *testeur systémique*, un acteur humain ou artificiel dont la fonction est de valider, diagnostiquer ou maintenir l'intégrité opérationnelle d'un processus, d'un outil ou d'une infrastructure dans un contexte de crise ou de transition. Son existence est éphémère et utilitaire, souvent invisible aux yeux des autres acteurs, mais essentielle pour assurer la continuité ou la réparation des systèmes en place. Elle opère en marge des structures de pouvoir, sans légitimité propre, mais avec une autorité technique temporaire.",
+    "tension_fondamentale": "La contradiction entre l'invisibilité nécessaire de son rôle (pour ne pas perturber le système) et l'urgence de sa mission (qui exige une reconnaissance minimale pour agir). Son utilité repose sur son effacement une fois la tâche accomplie, mais cet effacement même peut rendre son travail inutile ou ignoré.",
+    "variables_potentielles": [
+      "technologie_information",
+      "systemes_productifs_travail",
+      "gouvernance_institutions",
+      "frontieres_du_systeme"
+    ],
+    "doublon_detecte": false,
+    "doublon_slug": null
+  },
+  "scenario_ref": "breakdown",
+  "role_ref": "Entrée de test pour valider requeue_needs_review.py",
+  "etat_ref": "actif"
+}

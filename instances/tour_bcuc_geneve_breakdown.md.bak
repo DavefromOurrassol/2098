@@ -4,6 +4,10 @@ type: instance
 slug: tour_bcuc_geneve_breakdown
 entite: tour_bcuc_geneve
 scenario: breakdown
+localisation:
+  zone: tour_bcuc_geneve
+  lieu: Tour BCUC, Genève
+  type_lieu: infrastructure
 
 type_dans_scenario: institution
 

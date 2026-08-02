@@ -6,7 +6,7 @@ entite: federation_communs_territoriaux
 scenario: breakdown
 localisation:
   zone: arc_sahelo_mediterraneen
-  lieu: Ourrassol / Montbrun
+  lieu: Ourassol / Montbrun
   type_lieu: region
 type_dans_scenario: institution
 

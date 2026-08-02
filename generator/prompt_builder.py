@@ -821,6 +821,24 @@ def build_trajectory_context(snapshot, config=None, thematique=None, dry_run=Tru
     scenario_slug = snapshot.get("scenario_slug", "")
     usage_state   = _load_usage_state()
 
+    # ── Priorité -1 : signal forcé (ajouté le 2 août 2026) ──────────────
+    # Contourne délibérément select_trajectory_events()/la rotation à
+    # mémoire ci-dessous : un signal forcé DOIT apparaître dans cet
+    # article précis, peu importe s'il a déjà été beaucoup utilisé ou
+    # si d'autres jalons ont un score de priorité plus élevé. Affiché en
+    # premier, dans son propre bloc, pour qu'il ne soit jamais noyé/coupé
+    # si le prompt devient long.
+    forced_signal = snapshot.get("forced_signal_event")
+    if forced_signal:
+        lines.append("**Signal forcé** [OBLIGATOIRE — doit être mentionné dans l'article]")
+        lines.append("- [{}] {} :".format(
+            forced_signal.get("date_bascule", ""), forced_signal.get("evenement_cle", "")
+        ))
+        lines.append("  → {} : {}".format(
+            forced_signal.get("variable", "").replace("_", " "), forced_signal.get("evolution", "")
+        ))
+        lines.append("")
+
     # ── Priorité 0 : événements custom injectés
     custom_events = snapshot.get("custom_events", [])
     if custom_events:
@@ -978,8 +996,14 @@ def build_journalistic_brief(thematique, config, snapshot=None):
         ))
         lines.append("")
 
-    # Angle spécifique depuis config
+    # Angle spécifique depuis config -- écrasé si un forçage "sujet_central"
+    # (voir snapshot.py, ajouté le 2 août 2026) a produit une directive :
+    # celle-ci prime toujours sur un angle_specifique manuel, puisque le
+    # forçage sujet_central est une demande plus explicite/récente.
     angle_config = config.get("article", {}).get("angle_specifique", "")
+    forced_angle = (snapshot or {}).get("forced_angle_directive")
+    if forced_angle:
+        angle_config = forced_angle
     if angle_config:
         lines.append("**Angle spécifique demandé** : {}".format(angle_config))
         lines.append("")

@@ -4,6 +4,10 @@ type: instance
 slug: enclaves_industrielles_de_bergen_troms_breakdown
 entite: enclaves_industrielles_de_bergen_troms
 scenario: breakdown
+localisation:
+  zone: enclaves_industrielles_bergen_tromso
+  lieu: Bergen et Tromsø
+  type_lieu: infrastructure
 statut: officialise_enrichi
 type_dans_scenario: organisation
 role_dans_scenario: 'Dans le scénario breakdown, les Enclaves Industrielles de Bergen-Tromsø
@@ -70,10 +74,6 @@ tensions_narratives: Les Enclaves sont déchirées entre leur logique de survie 
   ouvrière — et les travailleurs non qualifiés réfugiés menace la cohésion sociale
   que les directeurs d'enclave peinent à maintenir.
 date_creation: 2026-06-20
-localisation:
-  zone: enclaves_industrielles_bergen_tromso
-  lieu: Bergen et Tromsø
-  type_lieu: infrastructure
 ---
 
 # Enclaves Industrielles de Bergen-Tromsø

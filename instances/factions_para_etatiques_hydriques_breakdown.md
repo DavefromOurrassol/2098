@@ -4,6 +4,11 @@ type: instance
 slug: factions_para_etatiques_hydriques_breakdown
 entite: factions_para_etatiques_hydriques
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 statut: officialise_enrichi
 type_dans_scenario: organisation
 role_dans_scenario: 'Dans le scénario breakdown, elles incarnent la fragmentation
@@ -70,10 +75,6 @@ tensions_narratives: 'La tension principale est celle entre la logique prédatri
   peut aussi se soulever dès qu''une faction rivale ou une pluie abondante fragilise
   le monopole hydrique.'
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: null
 ---
 
 # Factions Para-Étatiques Hydriques

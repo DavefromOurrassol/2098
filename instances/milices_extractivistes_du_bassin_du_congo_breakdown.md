@@ -4,6 +4,10 @@ type: instance
 slug: milices_extractivistes_du_bassin_du_congo_breakdown
 entite: milices_extractivistes_du_bassin_du_congo
 scenario: breakdown
+localisation:
+  zone: kivu_dispute
+  lieu: Kivu Disputé et Brazzaville-Nord
+  type_lieu: region
 statut: officialise_enrichi
 type_dans_scenario: organisation
 role_dans_scenario: Acteurs déstabilisateurs structurels, les Milices Extractivistes
@@ -69,10 +73,6 @@ tensions_narratives: 'Leur fragmentation interne est leur principale faiblesse :
   existentielle qu''elles cherchent à décrédibiliser par des attaques ciblées sur
   ses délégations.'
 date_creation: 2026-06-20
-localisation:
-  zone: kivu_dispute
-  lieu: Kivu Disputé et Brazzaville-Nord
-  type_lieu: region
 ---
 
 # Milices Extractivistes du Bassin du Congo

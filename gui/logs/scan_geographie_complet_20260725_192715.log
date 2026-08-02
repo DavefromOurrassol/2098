@@ -1,0 +1,40 @@
+############################################################
+  SCAN GÉOGRAPHIE COMPLET — 1 étape(s) (sélection partielle)
+############################################################
+
+▶▶▶ Étape 1/1 — check_type_entite_coherence.py
+============================================================
+  Cohérence type_entite — geographie/{scenario}.md
+============================================================
+
+=== breakdown ===
+  ✓ Aucune entrée sans type_entite
+
+=== fortress_world ===
+  ✓ Aucune entrée sans type_entite
+
+=== new_sustainability ===
+  ✓ Aucune entrée sans type_entite
+
+=== eco_communalism ===
+  ✓ Aucune entrée sans type_entite
+
+=== policy_reform ===
+  ⚠ 1 entrée(s) sans type_entite (1 reconnue(s) comme pays, 0 indéterminée(s))
+      - 'ameriques_reformees' : 'Groenland' → serait corrigée (relancer avec --apply)
+
+=== reference ===
+  ✓ Aucune entrée sans type_entite
+
+============================================================
+  Terminé — aperçu affiché (relancer avec --apply pour corriger).
+============================================================
+
+
+############################################################
+  RÉSUMÉ CONSOLIDÉ
+############################################################
+  [check_type_entite_coherence.py]
+    Terminé — aperçu affiché (relancer avec --apply pour corriger).
+
+  · check_type_entite_coherence.py lancé sans --apply-type-entite (aperçu seul, rien corrigé)

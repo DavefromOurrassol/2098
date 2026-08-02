@@ -8,7 +8,6 @@ localisation:
   zone: lagos_interieur_mnemos
   lieu: Lagos-Intérieur (lagune de Lagos)
   type_lieu: ville
-
 type_dans_scenario: réseau
 
 role_dans_scenario: >

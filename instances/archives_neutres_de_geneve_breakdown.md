@@ -4,6 +4,10 @@ type: instance
 slug: archives_neutres_de_geneve_breakdown
 entite: archives_neutres_de_geneve
 scenario: breakdown
+localisation:
+  zone: archives_neutres_geneve
+  lieu: Genève-Bunker, secteur archival souterrain
+  type_lieu: infrastructure
 statut: officialise_enrichi
 type_dans_scenario: infrastructure
 role_dans_scenario: 'Dans le scénario breakdown, les Archives Neutres de Genève constituent
@@ -71,10 +75,6 @@ tensions_narratives: 'La tension fondamentale des Archives est celle de l''archi
   de savoir si préserver un ordre juridique effondré constitue un acte de résistance
   ou de mystification.'
 date_creation: 2026-06-20
-localisation:
-  zone: archives_neutres_geneve
-  lieu: Genève-Bunker, secteur archival souterrain
-  type_lieu: infrastructure
 ---
 
 # Archives Neutres de Genève

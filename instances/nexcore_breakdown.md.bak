@@ -4,6 +4,11 @@ type: instance
 slug: nexcore_breakdown
 entite: nexcore
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 type_dans_scenario: système
 role_dans_scenario: >
   NexCore s'est fragmenté en 2051 lors du collapse des infrastructures

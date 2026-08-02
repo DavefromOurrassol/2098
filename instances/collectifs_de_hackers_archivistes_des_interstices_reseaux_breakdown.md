@@ -4,6 +4,11 @@ type: instance
 slug: collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
 entite: collectifs_de_hackers_archivistes_des_interstices_reseaux
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 statut: officialise_enrichi
 type_dans_scenario: réseau
 role_dans_scenario: 'Dans le scénario breakdown, ils maintiennent une forme de continuité
@@ -71,10 +76,6 @@ tensions_narratives: 'La tension fondamentale qui déchire ces collectifs est ce
   physiquement ces nœuds résiduels — Nordark, NexCore, Mnemos — qui peuvent les instrumentaliser
   ou les écraser selon leurs intérêts.'
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: null
 ---
 
 # Collectifs de Hackers Archivistes des Interstices Réseaux

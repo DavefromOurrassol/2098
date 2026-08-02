@@ -4,6 +4,10 @@ type: instance
 slug: nairobi_crrc_breakdown
 entite: nairobi_crrc
 scenario: breakdown
+localisation:
+  zone: nairobi_crrc
+  lieu: Nairobi
+  type_lieu: ville
 
 type_dans_scenario: réseau
 

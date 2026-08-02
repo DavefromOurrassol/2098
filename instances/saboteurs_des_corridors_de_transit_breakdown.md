@@ -4,6 +4,10 @@ type: instance
 slug: saboteurs_des_corridors_de_transit_breakdown
 entite: saboteurs_des_corridors_de_transit
 scenario: breakdown
+localisation:
+  zone: corridors_eurasiens_convoyage
+  lieu: Corridors Eurasiens — axes de convoyage armé
+  type_lieu: infrastructure
 statut: officialise_enrichi
 type_dans_scenario: autre
 role_dans_scenario: 'Dans le scénario breakdown, ils fragilisent les corridors logistiques
@@ -66,10 +70,6 @@ tensions_narratives: 'Leur résistance diffuse accélère l''effondrement qu''il
   guerre par procuration. La question de savoir si leurs actes constituent de la résistance
   ou du terrorisme est au cœur des rares débats institutionnels encore actifs à Genève-Bunker.'
 date_creation: 2026-06-20
-localisation:
-  zone: corridors_eurasiens_convoyage
-  lieu: Corridors Eurasiens — axes de convoyage armé
-  type_lieu: infrastructure
 ---
 
 # Saboteurs des Corridors de Transit

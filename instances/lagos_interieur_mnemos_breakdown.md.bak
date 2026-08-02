@@ -4,6 +4,10 @@ type: instance
 slug: lagos_interieur_mnemos_breakdown
 entite: lagos_interieur_mnemos
 scenario: breakdown
+localisation:
+  zone: lagos_interieur_mnemos
+  lieu: Lagos-Intérieur (lagune de Lagos)
+  type_lieu: ville
 
 type_dans_scenario: réseau
 

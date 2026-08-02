@@ -4,6 +4,11 @@ type: instance
 slug: cites_etats_secessionistes_breakdown
 entite: cites_etats_secessionistes
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 statut: officialise_enrichi
 type_dans_scenario: organisation
 role_dans_scenario: 'Dans le scénario breakdown, incarnent l''effondrement de la cohérence
@@ -66,10 +71,6 @@ tensions_narratives: 'La tension centrale est celle de la survie par l''isolemen
   noirs qu''elles ont involontairement engendrés. La question de qui reconnaît qui
   — et selon quel droit — empoisonne chaque alliance naissante.'
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: null
 ---
 
 # Cités-États Sécessionistes

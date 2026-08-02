@@ -4,6 +4,11 @@ type: instance
 slug: factions_etatiques_residuelles_de_souverainete_hydrique_breakdown
 entite: factions_etatiques_residuelles_de_souverainete_hydrique
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 statut: officialise_enrichi
 type_dans_scenario: organisation
 role_dans_scenario: Dans le scénario breakdown, ces factions incarnent la persistance
@@ -74,10 +79,6 @@ tensions_narratives: 'La contradiction fondamentale de ces factions réside dans
   État souverain distribuant l''eau par quotas militarisés à des réfugiés climatiques
   est devenue l''un des symboles les plus chargés de la fragmentation systémique.'
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: null
 ---
 
 # Factions Étatiques Résiduelles de Souveraineté Hydrique

@@ -4,6 +4,11 @@ type: instance
 slug: seigneurs_de_guerre_agro_territoriaux_breakdown
 entite: seigneurs_de_guerre_agro_territoriaux
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 statut: officialise_enrichi
 type_dans_scenario: organisation
 role_dans_scenario: 'Dans le scénario breakdown, ils incarnent la fragmentation violente
@@ -66,10 +71,6 @@ tensions_narratives: 'La contradiction centrale qui ronge ces seigneurs est cell
   brutale contre une dépendance technologique qui recomposerait d''autres formes de
   domination.'
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: region
 ---
 
 # Seigneurs de Guerre Agro-Territoriaux

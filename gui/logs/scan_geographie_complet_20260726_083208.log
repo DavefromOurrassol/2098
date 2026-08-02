@@ -1,0 +1,95 @@
+############################################################
+  SCAN GÉOGRAPHIE COMPLET — 1 étape(s) (sélection partielle)
+############################################################
+
+▶▶▶ Étape 1/1 — check_conventions_territoires.py
+============================================================
+  Cohérence des territoires ambigus — geographie/{scenario}.md
+============================================================
+
+=== breakdown ===
+  ✓ Groenland et danemark : même zone (arctique_nordark, arctique_nordark)
+  · Polynésie française → nouvelle_zelande_archipel_pacifique / France → arc_sahelo_mediterraneen -- zones distinctes
+  · Nouvelle-calédonie : absent, seul france présent (arc_sahelo_mediterraneen) -- convention implicite
+  · Guyane française : absent, seul france présent (arc_sahelo_mediterraneen) -- convention implicite
+  · Écosse → ecosse / Royaume-uni → archipel_anglo_celtique -- zones distinctes
+  ✓ Pays de galles et royaume-uni : même zone (archipel_anglo_celtique)
+
+=== fortress_world ===
+  · Groenland → nuuk_forteresse / Danemark → espace_nordique_arctique -- zones distinctes
+  · Polynésie française → australie_forteresse_insulaire / France → bloc_atlantique -- zones distinctes
+  · Nouvelle-calédonie : absent, seul france présent (bloc_atlantique) -- convention implicite
+  · Guyane française : absent, seul france présent (bloc_atlantique) -- convention implicite
+  ✓ Écosse et royaume-uni : même zone (bloc_atlantique)
+  ✓ Pays de galles et royaume-uni : même zone (bloc_atlantique)
+
+=== new_sustainability ===
+  · Groenland → arctic_passage_qaanaaq / Danemark → arctic_passage_qaanaaq, union_nordique_europe_nord -- zones distinctes
+  · Polynésie française → te_moana_nui_plateforme / France → union_nordique_europe_nord -- zones distinctes
+  · Nouvelle-calédonie : absent, seul france présent (union_nordique_europe_nord) -- convention implicite
+  · Guyane française : absent, seul france présent (union_nordique_europe_nord) -- convention implicite
+  · Écosse → union_nordique_europe_nord / Royaume-uni → ameriques_reconfigurees -- zones distinctes
+  ✓ Pays de galles et royaume-uni : même zone (ameriques_reconfigurees)
+
+=== eco_communalism ===
+  ✓ Groenland et danemark : même zone (arc_septentrional)
+  · Polynésie française → polynesie_reconstituee / France → europe_occidentale_reconstituee -- zones distinctes
+  · Nouvelle-calédonie : absent, seul france présent (europe_occidentale_reconstituee) -- convention implicite
+  · Guyane française : absent, seul france présent (europe_occidentale_reconstituee) -- convention implicite
+  · Écosse → arc_septentrional / Royaume-uni → europe_occidentale_reconstituee -- zones distinctes
+  ✓ Pays de galles et royaume-uni : même zone (europe_occidentale_reconstituee)
+
+=== policy_reform ===
+  · Groenland → ameriques_reformees / Danemark → europe_nord_ouest -- zones distinctes
+  · Polynésie française → zone_pacifique_industrielle / France → hub_europeen_regulation -- zones distinctes
+  · Nouvelle-calédonie : absent, seul france présent (hub_europeen_regulation) -- convention implicite
+  · Guyane française : absent, seul france présent (hub_europeen_regulation) -- convention implicite
+  ✓ Écosse et royaume-uni : même zone (royaume_uni_autonome)
+  ✓ Pays de galles et royaume-uni : même zone (royaume_uni_autonome)
+
+=== reference ===
+  ✓ Groenland et danemark : même zone (corridor_arctique_nordique)
+  · Polynésie française → polynesie_francaise_insulaire / France → europe_occidentale_reconstructee -- zones distinctes
+  · Nouvelle-calédonie : absent, seul france présent (europe_occidentale_reconstructee) -- convention implicite
+  · Guyane française : absent, seul france présent (europe_occidentale_reconstructee) -- convention implicite
+  · Écosse → ecosse_nordique_independante / Royaume-uni → europe_occidentale_reconstructee -- zones distinctes
+  · Pays de galles → pays_de_galles_atlantique / Royaume-uni → europe_occidentale_reconstructee -- zones distinctes
+
+============================================================
+  RÉSUMÉ — territoires dont le traitement VARIE entre scénarios
+============================================================
+
+  ⚠ Groenland (souverain réel : danemark)
+      breakdown            identique
+      fortress_world       distinct
+      new_sustainability   distinct
+      eco_communalism      identique
+      policy_reform        distinct
+      reference            identique
+
+  ⚠ Écosse (souverain réel : royaume-uni)
+      breakdown            distinct
+      fortress_world       identique
+      new_sustainability   distinct
+      eco_communalism      distinct
+      policy_reform        identique
+      reference            distinct
+
+  ⚠ Pays de galles (souverain réel : royaume-uni)
+      breakdown            identique
+      fortress_world       identique
+      new_sustainability   identique
+      eco_communalism      identique
+      policy_reform        identique
+      reference            distinct
+
+============================================================
+  Terminé — 3 territoire(s) au traitement incohérent entre scénarios (voir résumé ci-dessus).
+============================================================
+
+
+############################################################
+  RÉSUMÉ CONSOLIDÉ
+############################################################
+  [check_conventions_territoires.py]
+    Terminé — 3 territoire(s) au traitement incohérent entre scénarios (voir résumé ci-dessus).

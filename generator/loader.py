@@ -7,6 +7,8 @@ Extrait le frontmatter YAML et le corps markdown de chaque fiche.
 
 import os
 import re
+import json
+import random
 import yaml
 from typing import Optional
 
@@ -831,7 +833,183 @@ def load_events_for_scenario(scenario_slug):
     return load_event_instances_for_scenario(scenario_slug)
 
 
-def filter_instances_for_thematique(instances, thematique):
+# ─────────────────────────────────────────
+# FORÇAGE D'UN ÉLÉMENT (ajouté le 2 août 2026)
+# ─────────────────────────────────────────
+
+def resolve_forced_element(forcer_config, scenario_slug):
+    """
+    Résout le bloc `forcer:` de config.yaml (type/slug/mode) en un dict
+    exploitable par snapshot.py/prompt_builder.py. Lecture seule, ne crée
+    ni ne modifie rien -- si l'élément demandé n'existe pas pour ce
+    scénario, retourne une erreur explicite plutôt que d'échouer
+    silencieusement ou de générer un article sans lui.
+
+    Retourne None si aucun forçage n'est configuré (forcer.type/slug
+    absents), sinon un dict :
+        {"type": ..., "slug": ..., "mode": ...,
+         "instance"/"event"/"signal_event": ..., "erreur": str|None}
+    """
+    if not forcer_config or not forcer_config.get("type"):
+        # Aucun forçage demandé -- comportement normal, silencieux.
+        return None
+
+    type_ = forcer_config["type"]
+
+    if not forcer_config.get("slug"):
+        # Type choisi mais slug manquant : intention ambiguë. Avant le
+        # 2 août 2026, ce cas retombait silencieusement dans "aucun
+        # forçage" -- le type choisi était perdu sans aucun avertissement,
+        # l'article se générait normalement comme si rien n'avait été
+        # coché. Traité maintenant comme une vraie erreur, remontée à
+        # l'appelant (generate.py arrête avec un message clair) plutôt
+        # que d'ignorer silencieusement un choix explicite de l'utilisateur.
+        return {
+            "type": type_, "slug": None, "mode": forcer_config.get("mode") or "ingredient",
+            "erreur": ("Type de forçage choisi ({!r}) mais aucun élément sélectionné -- "
+                       "choisis un élément dans la liste \"Élément à forcer\", ou repasse "
+                       "\"Forcer un élément\" sur \"— Aucun forçage —\" pour générer sans "
+                       "forçage.").format(type_),
+        }
+
+    mode  = forcer_config.get("mode") or "ingredient"
+    if mode not in ("ingredient", "sujet_central"):
+        mode = "ingredient"
+    slug = forcer_config["slug"]
+
+    if type_ == "instance":
+        instance_slug = "{}_{}".format(slug, scenario_slug)
+        try:
+            instance = load_instance(instance_slug)
+        except Exception:
+            return {
+                "type": type_, "slug": slug, "mode": mode, "instance": None,
+                "erreur": "Instance introuvable : {} (fichier instances/{}.md attendu).".format(
+                    slug, instance_slug),
+            }
+        return {"type": type_, "slug": slug, "mode": mode, "instance": instance, "erreur": None}
+
+    if type_ == "evenement":
+        events = load_events_for_scenario(scenario_slug)
+        match = next((e for e in events if e.get("archetype") == slug or e.get("slug") == slug), None)
+        if not match:
+            return {
+                "type": type_, "slug": slug, "mode": mode, "event": None,
+                "erreur": ("Événement {!r} introuvable ou marqué 'impossible' pour {} -- "
+                           "vérifie qu'une fiche event_instances/{}_{}.md existe et n'a pas "
+                           "impossible: true.").format(slug, scenario_slug, slug, scenario_slug),
+            }
+        return {"type": type_, "slug": slug, "mode": mode, "event": match, "erreur": None}
+
+    if type_ == "signal":
+        all_variables = load_all_variables()
+        for var in all_variables.values():
+            for sig in get_signal_to_state_for_scenario(var, scenario_slug):
+                if sig["signal"] == slug:
+                    return {"type": type_, "slug": slug, "mode": mode, "signal_event": sig, "erreur": None}
+        return {
+            "type": type_, "slug": slug, "mode": mode, "signal_event": None,
+            "erreur": ("Signal {!r} introuvable pour le scénario {} dans aucune variable "
+                       "(vérifie qu'il a un bloc signal_to_state pour ce scénario précis -- "
+                       "un signal peut exister sans avoir été décliné pour tous les "
+                       "scénarios).").format(slug, scenario_slug),
+        }
+
+    return {
+        "type": type_, "slug": slug, "mode": mode,
+        "erreur": "Type de forçage inconnu : {!r} (attendu instance/evenement/signal).".format(type_),
+    }
+
+
+# ─────────────────────────────────────────
+# ROTATION À MÉMOIRE — instances (ajouté le 2 août 2026)
+# ─────────────────────────────────────────
+#
+# Même problème identifié pour les instances que celui déjà résolu pour
+# les signaux/jalons dans prompt_builder.py (voir _select_least_used
+# là-bas) : filter_instances_for_thematique() ne gardait que les
+# MAX_INSTANCES premières par score, sans aucune mémoire -- une instance
+# à faible impact systémique ou peu pertinente pour les thématiques
+# fréquemment traitées pouvait donc ne JAMAIS apparaître dans aucun
+# article, indéfiniment. Même mécanisme de rotation appliqué ici,
+# fichier d'état séparé (les deux rotations sont indépendantes -- rien
+# n'oblige un scénario à avoir la même dynamique de couverture pour ses
+# instances que pour ses jalons historiques).
+
+INSTANCE_STATE_DIR   = os.path.join(os.path.dirname(os.path.abspath(__file__)), "state")
+INSTANCE_USAGE_FILE  = os.path.join(INSTANCE_STATE_DIR, "instance_usage.json")
+
+
+def _load_instance_usage_state():
+    """Charge l'état d'usage des instances (par scénario). Retourne {} si absent/corrompu."""
+    try:
+        with open(INSTANCE_USAGE_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return {}
+
+
+def _save_instance_usage_state(state):
+    """Sauvegarde l'état d'usage des instances."""
+    os.makedirs(INSTANCE_STATE_DIR, exist_ok=True)
+    with open(INSTANCE_USAGE_FILE, "w", encoding="utf-8") as f:
+        json.dump(state, f, ensure_ascii=False, indent=2, sort_keys=True)
+
+
+def _select_least_used_instances(candidates, usage_state, scenario_slug, max_n):
+    """
+    Sélectionne max_n instances parmi candidates (déjà triées par score
+    de pertinence décroissant par l'appelant), en privilégiant celles le
+    moins souvent utilisées jusqu'ici pour ce scénario -- même principe
+    que _select_least_used() dans prompt_builder.py pour les jalons
+    signal_to_state.
+
+    Contrairement aux jalons (purement least-used, le score n'entre plus
+    en jeu une fois qu'on rotationne), on garde ici une influence du
+    score de pertinence : les candidates sont d'abord regroupées par
+    "niveau de score" (le score original, pas juste le rang), et c'est
+    au sein d'un même niveau de score que la rotation départage. Ça
+    évite qu'une instance très pertinente pour la thématique en cours
+    passe systématiquement après une instance à peine pertinente juste
+    parce qu'elle a été moins utilisée par le passé -- la rotation
+    n'intervient qu'en cas d'ex-aequo réel de pertinence.
+    """
+    if len(candidates) <= max_n:
+        selected = list(candidates)
+    else:
+        counts = usage_state.setdefault(scenario_slug, {}).setdefault("instances", {})
+        shuffled = list(candidates)
+        random.shuffle(shuffled)
+        # Tri stable : score décroissant d'abord (priorité à la pertinence),
+        # nombre d'utilisations passées ensuite (départage les ex-aequo).
+        shuffled.sort(key=lambda pair: counts.get(pair[1]["slug"], 0))
+        shuffled.sort(key=lambda pair: -pair[0])
+        selected = shuffled[:max_n]
+
+    counts = usage_state.setdefault(scenario_slug, {}).setdefault("instances", {})
+    for _, inst in selected:
+        counts[inst["slug"]] = counts.get(inst["slug"], 0) + 1
+
+    return [inst for _, inst in selected]
+
+
+def select_instances_by_impact(instances, scenario_slug, dry_run=True, max_n=6):
+    """
+    Sélection des instances quand aucune thématique n'est fournie (repli
+    utilisé par snapshot.py) -- même rotation à mémoire que
+    filter_instances_for_thematique() ci-dessous, sur le score
+    impact_systemique_global plutôt qu'un score de pertinence thématique.
+    """
+    usage_state = _load_instance_usage_state()
+    scored = [(inst.get("impact_systemique_global", 0), inst) for inst in instances]
+    scored.sort(key=lambda x: -x[0])
+    selected = _select_least_used_instances(scored, usage_state, scenario_slug, max_n)
+    if not dry_run:
+        _save_instance_usage_state(usage_state)
+    return selected
+
+
+def filter_instances_for_thematique(instances, thematique, scenario_slug=None, dry_run=True):
     """
     Filtre les instances pertinentes pour une thématique donnée.
 
@@ -840,8 +1018,17 @@ def filter_instances_for_thematique(instances, thematique):
       2. variables_influencees intersecte variables_secondaires → pertinent
       3. zone_systemique intersecte les domaines de la thématique → pertinent
 
-    Retourne les instances triées par pertinence décroissante,
-    limitées à MAX_INSTANCES_PAR_PROMPT.
+    Retourne au plus MAX_INSTANCES instances. Au-delà de ce plafond, les
+    ex-aequo de score sont départagés par rotation à mémoire (voir
+    _select_least_used_instances ci-dessus, ajouté le 2 août 2026) plutôt
+    que par un simple tri déterministe -- pour qu'une instance pertinente
+    mais rarement en tête ait quand même une chance de sortir sur la
+    durée. Nécessite scenario_slug pour compter l'usage par scénario ;
+    sans lui, repli sur l'ancien comportement (top-N par score, sans
+    rotation). dry_run=True (défaut) ne persiste pas l'incrément d'usage
+    -- à mettre à False uniquement lors d'une génération réelle, jamais
+    en aperçu/dry-run, sous peine de fausser la rotation avec des
+    sélections qui n'ont jamais servi.
     """
     MAX_INSTANCES = 6
 
@@ -899,9 +1086,23 @@ def filter_instances_for_thematique(instances, thematique):
         if score > 0:
             scored.append((score, inst))
 
-    # Trier par score décroissant
-    scored.sort(key=lambda x: -x[0])
+    # Rotation à mémoire (ajouté le 2 août 2026) : au-delà de MAX_INSTANCES
+    # candidates pertinentes, on ne garde plus bêtement les MAX_INSTANCES
+    # premières par score -- la rotation départage les ex-aequo de score
+    # en faveur des instances les moins utilisées jusqu'ici pour ce
+    # scénario, pour qu'une instance pertinente mais rarement la plus
+    # pertinente finisse quand même par sortir sur un grand corpus
+    # d'articles. Sans scenario_slug (appel legacy), repli sur
+    # l'ancien comportement déterministe -- pas de rotation possible sans
+    # savoir sous quel scénario compter l'usage.
+    if scenario_slug:
+        usage_state = _load_instance_usage_state()
+        selected = _select_least_used_instances(scored, usage_state, scenario_slug, MAX_INSTANCES)
+        if not dry_run:
+            _save_instance_usage_state(usage_state)
+        return selected
 
+    scored.sort(key=lambda x: -x[0])
     return [inst for _, inst in scored[:MAX_INSTANCES]]
 
 if __name__ == "__main__":

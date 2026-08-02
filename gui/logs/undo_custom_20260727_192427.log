@@ -1,0 +1,17 @@
+undo_custom.py — 2026-07-27 19:24:27 — mode EXECUTE
+1 item(s) à traiter
+
+
+── signal / irrigation_solaire_tensions_eau / generalisation=no ──
+  [WARN] Variable(s) trouvée(s) dans le registre mais absente(s) de la fiche d'audit : ['systemes_productifs_travail'] -- probablement un run antérieur partiel. Prises en compte quand même.
+  [VAR] 1 annotation(s) + 1 bloc(s) retiré(s) de energie_ressources_critiques.md
+  [VAR] 0 annotation(s) + 1 bloc(s) retiré(s) de organisation_territoires.md
+  [SKIP] Aucune trace de 'irrigation_solaire_tensions_eau' dans geopolitique_conflits.md
+  [VAR] 1 annotation(s) + 1 bloc(s) retiré(s) de systemes_productifs_travail.md
+  [REG] 18 ligne(s) retirée(s) du registre pour 'irrigation_solaire_tensions_eau' (total recalculé)
+  [DEL] irrigation_solaire_tensions_eau.md → backup irrigation_solaire_tensions_eau.md.bak
+  [YAML] 1 entrée(s) retirée(s) de needs_review.yaml
+  [DEL] last_validated.json resetté
+
+════════════════════════════════════════════════════════════
+Terminé. Lancez validate.py pour vérifier la base.

@@ -12,6 +12,7 @@ USAGE
     python3 undo_custom.py --execute    # supprime réellement
     python3 undo_custom.py --slug mon_evenement_breakdown --type event_instance --generalisation no
     python3 undo_custom.py --slug mon_entite --type instance --generalisation yes --execute
+    python3 undo_custom.py --slug norvege_terres_rares_geopolitique --type signal --execute
 
 QUEUE
 -----
@@ -24,6 +25,8 @@ Fichier evenements_custom/undo_queue.yaml :
       - type: instance
         slug: mon_entite_reference
         generalisation: yes
+      - type: signal
+        slug: mon_signal_faible
 
 TYPES
 -----
@@ -31,6 +34,14 @@ TYPES
     instance        : retire le fichier instance + références alliances/oppositions
     event           : (alias generalisation:yes sur event_instance) archétype + toutes instances
     entite          : (alias generalisation:yes sur instance) archétype + toutes instances
+    signal          : retire un signal faible custom (inject_custom_signals.py) --
+                      section 7 + section 12 de chaque fiche variables/*.md
+                      concernée (déterminées via variables_cibles de sa fiche
+                      d'audit signaux_custom/{slug}.md), les lignes du registre,
+                      la fiche d'audit elle-même, et ses éventuelles entrées
+                      dans signaux_custom/processed.yaml ou needs_review.yaml.
+                      `generalisation` n'a pas de sens ici (un signal n'a pas
+                      d'archétype/instance séparés) -- ignoré si fourni.
 
 GENERALISATION
 --------------
@@ -67,6 +78,16 @@ PROCESSED_PATH      = EVENEMENTS_CUSTOM_DIR / "processed.yaml"
 NEEDS_REVIEW_PATH   = EVENEMENTS_CUSTOM_DIR / "needs_review.yaml"
 LAST_VALIDATED_PATH  = GENERATOR_DIR / "last_validated.json"
 ENTITIES_LIST_PATH   = ENTITES_DIR / "_entities_list.json"
+
+# Ajouté le 26 juillet 2026 pour le support du type "signal" (inject_custom_signals.py)
+VARIABLES_DIR             = VAULT_ROOT / "variables"
+SIGNAUX_CUSTOM_DIR        = VAULT_ROOT / "signaux_custom"
+SIGNAUX_PROCESSED_PATH    = SIGNAUX_CUSTOM_DIR / "processed.yaml"
+SIGNAUX_NEEDS_REVIEW_PATH = SIGNAUX_CUSTOM_DIR / "needs_review.yaml"
+SCENARIOS_SIGNAL = [
+    "breakdown", "fortress_world", "new_sustainability",
+    "eco_communalism", "policy_reform", "reference",
+]
 
 VALID_SCENARIOS = [
     "breakdown", "fortress_world", "new_sustainability",
@@ -204,6 +225,227 @@ def remove_from_registre(event_slug, scenario, dry_run, report):
     if removed > 0 and not dry_run:
         REGISTRE_PATH.write_text("\n".join(new_lines), encoding="utf-8")
         report.append(f"  [REG] {removed} ligne(s) retirée(s) du registre pour '{event_slug}'")
+
+
+# ---------------------------------------------------------------------------
+# Signaux faibles custom (inject_custom_signals.py) -- ajouté le 26 juillet
+# 2026. Pipeline entièrement différent des entités/événements ci-dessus :
+# un signal touche 1 à plusieurs fiches variables/{slug}.md (section 7 +
+# section 12), le registre (lignes type=signal), et sa propre fiche
+# d'audit dans signaux_custom/ -- rien à voir avec entites/instances/
+# evenements/event_instances. Logique reprise du nettoyage fait à la main
+# le même jour (cf. conversation), généralisée en code.
+# ---------------------------------------------------------------------------
+
+def _variables_depuis_registre(signal_slug: str) -> list:
+    """Scan direct du registre pour les variables ayant une ligne `signal`
+    pour ce slug -- indépendant de la fiche d'audit, donc robuste même si
+    celle-ci ne reflète qu'un run partiel parmi plusieurs (voir
+    resolve_signal_variables)."""
+    if not REGISTRE_PATH.exists():
+        return []
+    trouvees = []
+    for line in REGISTRE_PATH.read_text(encoding="utf-8").split("\n"):
+        if not line.startswith("|"):
+            continue
+        cols = [c.strip() for c in line.strip("|").split("|")]
+        if len(cols) >= 4 and cols[0] == "signal" and cols[2] == signal_slug:
+            if cols[3] not in trouvees:
+                trouvees.append(cols[3])
+    return trouvees
+
+
+def resolve_signal_variables(signal_slug, report):
+    """
+    Détermine quelles fiches variables sont concernées par ce signal.
+    Croise DEUX sources -- corrigé le 27 juillet 2026 après un cas réel :
+    un signal généré en plusieurs runs successifs (dont un a planté en
+    cours de route) a laissé une fiche d'audit qui ne reflète que le
+    DERNIER run réussi, alors qu'une variable d'un run précédent (planté
+    ensuite sur une autre variable, jamais rendu jusqu'à
+    write_custom_fiche()) était bel et bien écrite sur disque et absente
+    de `variables_cibles`.
+    - Le frontmatter `variables_cibles` de la fiche d'audit
+      (signaux_custom/{slug}.md) -- ce que write_custom_fiche() y écrit,
+      mais seulement pour LE run qui a atteint cette étape.
+    - Un scan direct du registre (lignes `signal` pour ce slug) -- plus
+      lent à lire mais reflète TOUTE l'historique d'écriture, même à
+      travers plusieurs runs partiels.
+    Union des deux. Repli sur un scan complet de variables/*.md seulement
+    si aucune des deux sources ne trouve rien (fiche absente ET aucune
+    ligne de registre -- cas d'un signal jamais passé par ce mécanisme,
+    ou déjà partiellement nettoyé à la main).
+    """
+    fiche = SIGNAUX_CUSTOM_DIR / f"{signal_slug}.md"
+    fm = parse_md_fm(fiche)
+    depuis_fiche = list(fm.get("variables_cibles") or [])
+    depuis_registre = _variables_depuis_registre(signal_slug)
+
+    variables = list(dict.fromkeys(depuis_fiche + depuis_registre))  # union, ordre stable
+    manquantes_dans_fiche = set(depuis_registre) - set(depuis_fiche)
+    if manquantes_dans_fiche:
+        report.append(f"  [WARN] Variable(s) trouvée(s) dans le registre mais absente(s) "
+                       f"de la fiche d'audit : {sorted(manquantes_dans_fiche)} -- probablement "
+                       f"un run antérieur partiel. Prises en compte quand même.")
+    if variables:
+        return variables
+
+    report.append(f"  [WARN] Fiche d'audit {fiche.name} introuvable/sans variables_cibles "
+                   f"ET aucune ligne de registre pour ce signal -- scan de toutes les "
+                   f"fiches variables (plus lent).")
+    trouvees = []
+    if VARIABLES_DIR.exists():
+        for f in sorted(VARIABLES_DIR.glob("*.md")):
+            if f"signal: {signal_slug}" in f.read_text(encoding="utf-8"):
+                trouvees.append(f.stem)
+    return trouvees
+
+
+def remove_signal_from_variable(variable_slug, signal_slug, dry_run, report):
+    """
+    Retire, dans variables/{variable_slug}.md :
+    - la/les ligne(s) d'annotation en section 7 (`(→ signal_custom:
+      {signal_slug}, source: ...)`)
+    - le/les bloc(s) `  - signal: {signal_slug}` en section 12, quel que
+      soit le nombre d'occurrences (un signal dupliqué par erreur -- cf.
+      l'incident du 26 juillet -- doit toutes disparaître, pas juste la
+      première).
+    """
+    path = VARIABLES_DIR / f"{variable_slug}.md"
+    if not path.exists():
+        report.append(f"  [SKIP] {path.name} — introuvable")
+        return
+
+    content = path.read_text(encoding="utf-8")
+    original = content
+
+    # Section 7 : ligne(s) d'annotation référençant ce signal. Tolérant à
+    # deux formats -- corrigé le 27 juillet 2026 après un cas réel où le
+    # LLM avait omis "signal_custom:" (écrit juste "(→ {slug}, source:
+    # ...)" au lieu du format attendu "(→ signal_custom: {slug}, ...)"),
+    # laissant une ligne orpheline après un premier passage de nettoyage.
+    # Le marqueur fiable commun aux deux variantes est "→" suivi, quelque
+    # part sur la même ligne, du slug exact en mot entier.
+    content, n_annot = re.subn(
+        r"^-.*→.*\b" + re.escape(signal_slug) + r"\b.*\n",
+        "", content, flags=re.MULTILINE,
+    )
+
+    # Section 12 : bloc(s) "  - signal: {slug}" jusqu'au prochain
+    # "  - signal: " ou la fin du bloc ```yaml (lookahead, ne consomme pas
+    # le début du bloc suivant -- même principe que le split utilisé côté
+    # inject_custom_signals.py pour repérer les signaux thématiquement
+    # proches).
+    # Le lookahead négatif doit s'arrêter à la fois sur la prochaine entrée
+    # ("  - signal: ") ET sur la fence de fermeture ("```") -- corrigé le
+    # 27 juillet 2026 : sans le second arrêt, retirer le DERNIER signal
+    # d'un bloc section 12 avalait aussi la fence de fermeture avec lui
+    # (rien après pour arrêter la consommation), cassant le fichier de la
+    # même façon que le bug du 26 juillet sur la fence manquante -- sauf
+    # que cette fois c'est ce script qui l'a causé, pas un éditeur externe.
+    bloc_re = re.compile(
+        r"  - signal: " + re.escape(signal_slug) + r"\n"
+        r"(?:(?!  - signal: |```).*\n)*",
+    )
+    content, n_bloc = bloc_re.subn("", content)
+
+    if n_annot == 0 and n_bloc == 0:
+        report.append(f"  [SKIP] Aucune trace de '{signal_slug}' dans {path.name}")
+        return
+
+    if dry_run:
+        report.append(f"  [DRY] Retirerait {n_annot} annotation(s) section 7 et "
+                       f"{n_bloc} bloc(s) section 12 dans {path.name}")
+    else:
+        backup_file(path)
+        path.write_text(content, encoding="utf-8")
+        report.append(f"  [VAR] {n_annot} annotation(s) + {n_bloc} bloc(s) "
+                       f"retiré(s) de {path.name}")
+
+
+def remove_signal_from_registre(signal_slug, dry_run, report):
+    """
+    Retire toutes les lignes `| signal | ... | {signal_slug} | ... |` du
+    registre, puis recalcule la ligne "Total" en tête de fichier -- même
+    calcul que regenerate_registre() dans inject_custom_signals.py
+    (signal_rows // 6 = signaux uniques, comptage par ligne pour les
+    événements), pour ne jamais laisser le total désynchronisé du contenu
+    réel (piège identifié en nettoyant ce cas à la main : facile d'oublier
+    ce recalcul).
+    """
+    if not REGISTRE_PATH.exists():
+        return
+
+    text = REGISTRE_PATH.read_text(encoding="utf-8")
+    lines = text.split("\n")
+    new_lines = []
+    removed = 0
+    for line in lines:
+        cols = [c.strip() for c in line.strip("|").split("|")] if line.startswith("|") else None
+        # Colonne 3 (index 2) = slug pour les lignes "signal" -- match exact,
+        # pas une simple recherche de sous-chaîne (un slug peut être
+        # substring d'un autre, ex. terres_rares vs terres_rares_norvege).
+        if cols and len(cols) >= 3 and cols[0] == "signal" and cols[2] == signal_slug:
+            removed += 1
+            if dry_run:
+                report.append(f"  [DRY] Retirerait ligne registre : {line.strip()[:80]}")
+            continue
+        new_lines.append(line)
+
+    if removed == 0:
+        return
+
+    if dry_run:
+        return
+
+    new_content = "\n".join(new_lines)
+    signal_rows = sum(
+        1 for l in new_content.split("\n")
+        if l.startswith("|") and [c.strip() for c in l.strip("|").split("|")][0:1] == ["signal"]
+    )
+    evenement_rows = sum(
+        1 for l in new_content.split("\n")
+        if l.startswith("|") and [c.strip() for c in l.strip("|").split("|")][0:1] == ["evenement"]
+    )
+    unique_signals = signal_rows // len(SCENARIOS_SIGNAL)
+    new_content = re.sub(
+        r"Total : \d+ entrées \(\d+ signaux uniques × 6 scénarios( \+ \d+ entrées d'événements custom)?\)\.",
+        "Total : {} entrées ({} signaux uniques × 6 scénarios + {} entrées d'événements custom).".format(
+            signal_rows + evenement_rows, unique_signals, evenement_rows
+        ),
+        new_content,
+    )
+    backup_file(REGISTRE_PATH)
+    REGISTRE_PATH.write_text(new_content, encoding="utf-8")
+    report.append(f"  [REG] {removed} ligne(s) retirée(s) du registre pour "
+                   f"'{signal_slug}' (total recalculé)")
+
+
+def remove_signal_fiche_and_logs(signal_slug, dry_run, report):
+    """Supprime la fiche d'audit signaux_custom/{slug}.md et toute entrée
+    la référençant (par `selection.signal_slug`) dans
+    signaux_custom/processed.yaml et needs_review.yaml -- fichiers distincts
+    de evenements_custom/, propres au pipeline signaux."""
+    fiche = SIGNAUX_CUSTOM_DIR / f"{signal_slug}.md"
+    remove_file(fiche, dry_run, report)
+
+    for path, key in [(SIGNAUX_PROCESSED_PATH, "processed"),
+                       (SIGNAUX_NEEDS_REVIEW_PATH, "needs_review")]:
+        items = load_yaml_list(path, key)
+        filtered = [
+            item for item in items
+            if not (isinstance(item, dict)
+                    and (item.get("selection") or {}).get("signal_slug") == signal_slug)
+        ]
+        removed = len(items) - len(filtered)
+        if removed == 0:
+            continue
+        if dry_run:
+            report.append(f"  [DRY] Retirerait {removed} entrée(s) de {path.name}")
+        else:
+            save_yaml_list(path, filtered, key)
+            report.append(f"  [YAML] {removed} entrée(s) retirée(s) de {path.name}")
+
 
 
 # ---------------------------------------------------------------------------
@@ -362,6 +604,19 @@ def process_item(item_type, slug, generalisation, dry_run, report):
         remove_from_processed(base, dry_run, report)
         remove_from_entities_list(base, dry_run, report)
 
+    elif item_type == "signal":
+        variables = resolve_signal_variables(slug, report)
+        if not variables:
+            report.append(f"  [WARN] Aucune fiche variable identifiée pour "
+                           f"le signal '{slug}' -- rien retiré des fiches "
+                           f"(le registre et la fiche d'audit seront quand "
+                           f"même nettoyés ci-dessous si présents).")
+        for variable_slug in variables:
+            remove_signal_from_variable(variable_slug, slug, dry_run, report)
+
+        remove_signal_from_registre(slug, dry_run, report)
+        remove_signal_fiche_and_logs(slug, dry_run, report)
+
     else:
         report.append(f"  [WARN] Type inconnu : '{item_type}' — ignoré")
 
@@ -418,7 +673,7 @@ def main():
     )
     parser.add_argument(
         "--type", dest="item_type", type=str, default=None,
-        choices=["event_instance", "instance", "event", "entite"],
+        choices=["event_instance", "instance", "event", "entite", "signal"],
         help="Type de l'item (requis avec --slug)"
     )
     parser.add_argument(

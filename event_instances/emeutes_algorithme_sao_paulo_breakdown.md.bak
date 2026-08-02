@@ -4,6 +4,10 @@ type: event_instance
 slug: emeutes_algorithme_sao_paulo_breakdown
 archetype: emeutes_algorithme_sao_paulo
 scenario: breakdown
+localisation:
+  zone: sao_paulo_rpda
+  lieu: Grand São Paulo
+  type_lieu: ville
 type_evenement: political_social
 portee: regionale
 date: 2073

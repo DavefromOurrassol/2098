@@ -4,6 +4,10 @@ type: event_instance
 slug: grand_forum_sahel_numerique_breakdown
 archetype: grand_forum_sahel_numerique
 scenario: breakdown
+localisation:
+  zone: agadez_ligue_sahel_numerique
+  lieu: Agadez, Palais des Conférences
+  type_lieu: ville
 type_evenement: political_social
 portee: continentale
 date: 2061

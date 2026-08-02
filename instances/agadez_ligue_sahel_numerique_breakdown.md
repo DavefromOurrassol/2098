@@ -8,7 +8,6 @@ localisation:
   zone: agadez_ligue_sahel_numerique
   lieu: Agadez
   type_lieu: ville
-
 type_dans_scenario: organisation
 
 role_dans_scenario: >

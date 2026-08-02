@@ -1,0 +1,79 @@
+============================================================
+OURRASSOL 2098 — Enrichissement récursif géographie (étape 2)
+============================================================
+(mode --dry-run : rien ne sera écrit, mais un vrai appel API est fait)
+
+=== breakdown ===
+  Zones existantes (niveau 1, contexte fixe) : 90
+  Corpus : 133 instance(s), 13 événement(s), ~276285 caractères
+  Enrichissement en cours...
+[llm] Mistral (mistral-large-latest) — entrée : 96259 | sortie : 19729
+    [diagnostic appel API] fournisseur=mistral, modèle=mistral-large-latest, longueur_texte=71961 caractères
+    [diagnostic] JSON parsé directement, clé 'nouvelles_zones' : 53 entrée(s)
+  → 53 nouvelle(s) zone(s) proposée(s) par le LLM
+  ⚠ Zone rejetée (Corridors Eurasiens (Convois Armés)) : slug invalide : 'corridors_eurasiens_convoyage_armé'
+  ⚠ Zone rejetée ('ispahan_fordow_sites_frappes') : parent inconnu : 'ispahan_fordow_ruines' (ni zone existante, ni nouvelle zone de ce batch)
+  → 51 nouvelle(s) zone(s) retenue(s) après validation
+     - [2] Manaus (Site du Pacte des Gardiens) (sous amazon_pacte_gardiens)
+     - [3] Nairobi (Fantôme du CRRC) (sous nairobi_crrc)
+     - [3] Kivu Disputé (Milices Extractivistes) (sous kivu_dispute)
+     - [3] Enclaves Industrielles du Corridor Oural-Caspien (sous corridor_oural_caspien)
+     - [3] Detroit-Sud (Milices Locales) (sous detroit_sud)
+     - [3] Philadelphia-Centrale (Siège du Parti Commun) (sous philadelphia_centrale)
+     - [3] Tromsø (Siège du Konsortiet Nordark) (sous noeud_nordark_tromso)
+     - [3] Nuuk (Siège du Fonds des Glaces Libérées) (sous groenland_fonds_glaces)
+     - [3] Lagos-Est (Fragment NexCore) (sous lagos_est_nexcore)
+     - [3] Lagos-Intérieur (Cluster Mnemos) (sous lagos_interieur_mnemos)
+     - [3] Séoul (Districts NexCore) (sous seoul_collectif_nexcore)
+     - [3] Sfax (Relais des Bouches de l'Abîme) (sous sfax_relais_bouches)
+     - [3] Lyon-Part-Dieu (Nœud des Confédérations du Seuil) (sous lyon_ruines_seuil)
+     - [3] Massif Central (Postes de Captation Atmosphérique) (sous massif_central_cicatrices_vertes)
+     - [3] Détroit de Mackinac (Point de Friction) (sous grandes_lacs_compact_eau)
+     - [3] Chicago-Lacustre (Capitale du Compact) (sous grandes_lacs_compact_eau)
+     - [3] Corridor des Lithiums (Zones de Massacres) (sous corridor_lithium_bouches)
+     - [3] Delta du Mékong (Cairns des Racines-Mères) (sous delta_mekong_racines)
+     - [3] Occitanie (Cairns des Racines-Mères) (sous occitanie_racines_meres)
+     - [3] Vallée de l'Allier (Communes Terrafond) (sous vallee_allier_terrafond)
+     - [3] Plaines de l'Ebre (Fragments Terrafond sous Tutelle Milicienne) (sous plaines_ebre_terrafond)
+     - [3] Grand São Paulo (Enclaves RPDA Zombie) (sous sao_paulo_rpda)
+     - [3] Kivu Disputé (Communautés Riveraines) (sous kivu_dispute)
+     - [3] Bassin Caspien (Bloc IV vs Bloc IX) (sous bassin_caspien_zone_conflit)
+     - [3] Corridor Oural-Caspien (Convois Armés d'Orentchev) (sous corridor_oural_caspien)
+     - [3] Détroit d'Ormuz (Fermeture de 2027) (sous detroit_ormuz)
+     - [3] Haïfa (Zone de Frappes Balistiques) (sous haifa_zone_missile)
+     - [3] Terminal Pétrolier de Kharg (Frappe de 2027) (sous terminal_kharg)
+     - [3] Brazzaville-Nord (Base d'Amara Diallo-Nkosi) (sous brazzaville_nord)
+     - [3] Nairobi (Délégations Rivales du CRRC) (sous nairobi_crrc)
+     - [3] Archives Neutres de Genève (Milice du Bloc IX) (sous archives_neutres_geneve)
+     - [3] Tour BCUC (47e étage - Fonctionnaires) (sous tour_bcuc_geneve)
+     - [3] Cracovie (Antenne du Registre des Zones Non Récupérables) (sous cracovie_registre_zones)
+     - [3] Nœud Mnemos du Bassin Pannonien (Techniciens) (sous noeud_mnemos_pannonie)
+     - [3] Zone Polaire (Nœud Maître Mnemos — Rumeur) (sous zone_polaire_noeud_maitre_mnemos)
+     - [3] Enclaves Finlandaises (Dépendance Nordark) (sous enclaves_finlandaises)
+     - [3] Enclaves Industrielles de Bergen–Tromsø (Techniciens) (sous enclaves_industrielles_bergen_tromso)
+     - [3] Port de Mourmansk (Fédération Russe Résiduelle) (sous district_mourmansk_residuel)
+     - [3] Islande (Conseil des Pêcheries Séparatiste) (sous island_pecheries)
+     - [3] Autorité du Passage Arctique (Fantôme Institutionnel) (sous noeud_nordark_tromso)
+     - [3] Karachi (Marché BioSyn Génétique) (sous karachi_biosyn)
+     - [3] Medellín (Marché BioSyn Génétique) (sous medellin_biosyn)
+     - [3] Agadez (Fragment Ligue du Sahel Numérique) (sous agadez_ligue_sahel_numerique)
+     - [3] Carthage-Nord (Milices NexCore) (sous carthage_nord_nexcore)
+     - [3] Midwest Désertifié (Seigneuries Foncières) (sous midwest_desertifie)
+     - [3] Zones Côtières Nord-Américaines (Mégapoles Fonctionnelles) (sous zones_cotieres_americaines)
+     - [3] États du Sud et du Centre (Milices Sécessionnistes) (sous etats_sud_centre_americain)
+     - [3] Hanse Baltique Recomposée (Conseil des Cités) (sous hanse_baltique)
+     - [3] Corridor Sino-Sibérien (Axe Bohai Transit) (sous seul_kanal_bohai)
+     - [4] Carrie Furnace (Pittsburgh) (sous communes_rust_belt)
+     - [4] Cargo au Large de Mombasa (Délégation CRRC) (sous nairobi_crrc_delegations_rivales)
+Traceback (most recent call last):
+  File "/Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/generator/enrich_geographie_recursive.py", line 759, in <module>
+    main()
+  File "/Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/generator/enrich_geographie_recursive.py", line 751, in main
+    process_scenario(client, scenario, dry_run=args.dry_run)
+  File "/Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/generator/enrich_geographie_recursive.py", line 712, in process_scenario
+    existing_zones, dedupe_log = dedupe_promoted_lieux(existing_zones, new_zones)
+  File "/Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/generator/enrich_geographie_recursive.py", line 515, in dedupe_promoted_lieux
+    match_idx = next(
+  File "/Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/generator/enrich_geographie_recursive.py", line 517, in <genexpr>
+    if str(lieu.get("nom", "")).strip() == promu_depuis_clean),
+AttributeError: 'str' object has no attribute 'get'

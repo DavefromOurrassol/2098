@@ -1,0 +1,61 @@
+# Traçabilité — `irrigation_solaire_tensions_eau` (signal)
+
+*Généré le 2026-08-02 12:53*
+
+## 1. Origine
+
+- **Statut d'injection** : traité
+- **Trouvé dans** : `/Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/signaux_custom/processed.yaml`
+- **Source de l'idée** : ?
+- **Description d'origine** : _quasi identique au Descriptif ci-dessous (§2), non répétée._
+
+## 2. Descriptif
+
+Une vague de projets d'irrigation solaire transforme l'agriculture locale, provoquant à la fois un boom démographique et des tensions croissantes sur l'accès à l'eau.
+
+## 3. Évolution dans le temps et l'espace
+
+- **Variables cibles** : systemes_productifs_travail, energie_ressources_critiques
+- **Catégorie** : environmental · **Source** : actualite
+- **Date de création** : None
+- **Mentionné dans `registre_evenements.md`** : True
+- Variable `systemes_productifs_travail` : présent en section 12
+- Variable `energie_ressources_critiques` : présent en section 12
+
+**Un signal agit directement sur une variable systémique : potentiellement les 6 scénarios à la fois, chacun avec sa propre trajectoire :**
+
+### breakdown
+- Date de bascule : 2042-2060
+- Événement clé : pompages solaires saheliens à sec après trois années sans pluie 2054
+- **Évolution** : effondrement des coopératives agricoles saheliennes par pénuries d'eau
+
+### fortress_world
+- Date de bascule : 2036-2052
+- Événement clé : Bloc Atlantique verrouille les nappes phréatiques du Sahel 2047
+- **Évolution** : blocs sécurisent l'irrigation solaire comme ressource stratégique
+
+### new_sustainability
+- Date de bascule : 2033-2049
+- Événement clé : réseau mondial de gestion hydrique automatisée déployé 2042
+- **Évolution** : IA optimise l'irrigation solaire pour équilibrer besoins et recharge
+
+### eco_communalism
+- Date de bascule : 2038-2057
+- Événement clé : charte d'Agadez sur la souveraineté hydrique communautaire
+- **Évolution** : communautés locales gèrent l'eau via chartes bioterritoriales solaires
+
+### policy_reform
+- Date de bascule : 2029-2045
+- Événement clé : traité de Niamey sur le partage des nappes phréatiques 2038
+- **Évolution** : régulation internationale encadre l'irrigation solaire et les conflits
+
+### reference
+- Date de bascule : 2027-2042
+- Événement clé : Mali et Niger s'affrontent pour le fleuve Niger 2039
+- **Évolution** : tensions croissantes entre États saheliens pour l'accès à l'eau solaire
+
+
+## 4. Aval — usage dans les articles publiés
+
+_Aucune mention trouvée dans `articles/*.md` (scan texte brut, best-effort — un article peut mentionner l'entité sous une formulation différente sans que ce scan la détecte)._
+

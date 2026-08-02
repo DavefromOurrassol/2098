@@ -4,6 +4,11 @@ type: instance
 slug: etats_fragments_en_guerre_pour_les_stations_atmospheriques_breakdown
 entite: etats_fragments_en_guerre_pour_les_stations_atmospheriques
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 statut: officialise_enrichi
 type_dans_scenario: institution
 role_dans_scenario: 'Acteurs déstabilisateurs centraux du scénario breakdown, les
@@ -72,10 +77,6 @@ tensions_narratives: 'La tension fondamentale de ces États-Fragments réside da
   ces entités revendiquent l''héritage des États souverains mais n''en exercent aucune
   des fonctions sociales, réduites à de pures machines de guerre climatique.'
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: infrastructure
 ---
 
 # États-Fragments en Guerre pour les Stations Atmosphériques

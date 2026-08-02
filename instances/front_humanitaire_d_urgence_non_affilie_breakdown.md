@@ -4,6 +4,11 @@ type: instance
 slug: front_humanitaire_d_urgence_non_affilie_breakdown
 entite: front_humanitaire_d_urgence_non_affilie
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 statut: officialise_enrichi
 type_dans_scenario: réseau
 role_dans_scenario: 'Assure une continuité minimale de secours et de coordination
@@ -69,10 +74,6 @@ tensions_narratives: Le Front est perpétuellement tiraillé entre son impérati
   qui tentent de le réabsorber ou de le discréditer pour conserver un monopole symbolique
   sur l'action humanitaire.
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: null
 ---
 
 # Front Humanitaire d'Urgence Non Affilié

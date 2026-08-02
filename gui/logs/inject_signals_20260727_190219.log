@@ -1,0 +1,93 @@
+
+=== essai_zone_hint_sahel ===
+[1/4] Sélection de variable(s)...
+[llm] Mistral (mistral-large-latest) — entrée : 4639 | sortie : 67
+  -> variables=['energie_ressources_critiques', 'organisation_territoires', 'geopolitique_conflits'] categorie=geopolitical signal_slug=irrigation_solaire_tensions_eau
+[2/4] Développement pour energie_ressources_critiques...
+[llm] Mistral (mistral-large-latest) — entrée : 30233 | sortie : 585
+[3/4] Validation (essai 1)...
+  ⚠ [avertissement, non bloquant] [breakdown] fenêtre 2042-2060 déjà utilisée par un autre signal de energie_ressources_critiques dans le registre.
+  ⚠ [avertissement, non bloquant] [fortress_world] fenêtre 2036-2052 déjà utilisée par un autre signal de energie_ressources_critiques dans le registre.
+  ⚠ [avertissement, non bloquant] [new_sustainability] fenêtre 2031-2047 déjà utilisée par un autre signal de energie_ressources_critiques dans le registre.
+  ⚠ [avertissement, non bloquant] [eco_communalism] fenêtre 2039-2058 déjà utilisée par un autre signal de energie_ressources_critiques dans le registre.
+  ⚠ [avertissement, non bloquant] [policy_reform] fenêtre 2029-2045 déjà utilisée par un autre signal de energie_ressources_critiques dans le registre.
+  -> problèmes :
+     - [breakdown] evenement_cle déjà présent dans le registre : 'guerre des nappes phréatiques au Sahel central 2054'
+     - [fortress_world] evenement_cle déjà présent dans le registre : 'Bloc Atlantique nationalise les pompes solaires du Sahel 2047'
+     - [new_sustainability] evenement_cle déjà présent dans le registre : 'déploiement du système mondial de gestion hydrique automatisée 2042'
+     - [eco_communalism] evenement_cle déjà présent dans le registre : 'charte bioterritoriale de partage des eaux solaires'
+     - [policy_reform] evenement_cle déjà présent dans le registre : "directive ONU sur l'irrigation solaire responsable 2038"
+     - [reference] evenement_cle déjà présent dans le registre : 'premier conflit armé pour une pompe solaire au Niger 2035'
+[llm] Mistral (mistral-large-latest) — entrée : 31013 | sortie : 565
+[3/4] Validation (essai 2)...
+  ⚠ [avertissement, non bloquant] [breakdown] fenêtre 2042-2060 déjà utilisée par un autre signal de energie_ressources_critiques dans le registre.
+  ⚠ [avertissement, non bloquant] [fortress_world] fenêtre 2036-2052 déjà utilisée par un autre signal de energie_ressources_critiques dans le registre.
+  ⚠ [avertissement, non bloquant] [new_sustainability] fenêtre 2031-2047 déjà utilisée par un autre signal de energie_ressources_critiques dans le registre.
+  ⚠ [avertissement, non bloquant] [eco_communalism] fenêtre 2039-2058 déjà utilisée par un autre signal de energie_ressources_critiques dans le registre.
+  ⚠ [avertissement, non bloquant] [policy_reform] fenêtre 2029-2045 déjà utilisée par un autre signal de energie_ressources_critiques dans le registre.
+[4/4] Injection...
+[2/4] Développement pour organisation_territoires...
+[llm] Mistral (mistral-large-latest) — entrée : 30043 | sortie : 999
+[3/4] Validation (essai 1)...
+  ⚠ [avertissement, non bloquant] [new_sustainability] fenêtre 2031-2047 déjà utilisée par un autre signal de organisation_territoires dans le registre.
+  ⚠ [avertissement, non bloquant] [eco_communalism] fenêtre 2039-2058 déjà utilisée par un autre signal de organisation_territoires dans le registre.
+  ⚠ [avertissement, non bloquant] [policy_reform] fenêtre 2029-2045 déjà utilisée par un autre signal de organisation_territoires dans le registre.
+  ⚠ [avertissement, non bloquant] [reference] fenêtre 2027-2042 déjà utilisée par un autre signal de organisation_territoires dans le registre.
+  -> problèmes :
+     - [new_sustainability] 'evenement_cle' a 12 mots (attendu 4-11) : 'création du Consortium Sahel Hydra pour le bassin du Lac Tchad 2044'
+     - [policy_reform] evenement_cle sans année finale (attendue sauf pour eco_communalism) : 'plan Sahel Vert 2035 pour une irrigation solaire durable'
+[llm] Mistral (mistral-large-latest) — entrée : 31085 | sortie : 955
+[3/4] Validation (essai 2)...
+  ⚠ [avertissement, non bloquant] [new_sustainability] fenêtre 2031-2047 déjà utilisée par un autre signal de organisation_territoires dans le registre.
+  ⚠ [avertissement, non bloquant] [eco_communalism] fenêtre 2039-2058 déjà utilisée par un autre signal de organisation_territoires dans le registre.
+  ⚠ [avertissement, non bloquant] [policy_reform] fenêtre 2029-2045 déjà utilisée par un autre signal de organisation_territoires dans le registre.
+  ⚠ [avertissement, non bloquant] [reference] fenêtre 2027-2042 déjà utilisée par un autre signal de organisation_territoires dans le registre.
+  -> problèmes :
+     - [breakdown] evenement_cle déjà présent dans le registre : 'guerre des nappes phréatiques au Sahel central 2054'
+     - [fortress_world] evenement_cle déjà présent dans le registre : 'Bloc Atlantique nationalise les pompes solaires du Sahel 2047'
+     - [new_sustainability] evenement_cle déjà présent dans le registre : 'algorithme HydraShare gère les flux du bassin du Niger 2043'
+     - [eco_communalism] evenement_cle déjà présent dans le registre : "pacte de l'Oasis pour une eau solaire équitable"
+     - [policy_reform] evenement_cle déjà présent dans le registre : "directive ONU sur l'irrigation solaire responsable 2038"
+     - [reference] evenement_cle déjà présent dans le registre : 'premier conflit armé pour une pompe solaire au Niger 2035'
+[llm] Mistral (mistral-large-latest) — entrée : 31198 | sortie : 949
+[3/4] Validation (essai 3)...
+  ⚠ [avertissement, non bloquant] [new_sustainability] fenêtre 2031-2047 déjà utilisée par un autre signal de organisation_territoires dans le registre.
+  ⚠ [avertissement, non bloquant] [eco_communalism] fenêtre 2039-2058 déjà utilisée par un autre signal de organisation_territoires dans le registre.
+  ⚠ [avertissement, non bloquant] [policy_reform] fenêtre 2029-2045 déjà utilisée par un autre signal de organisation_territoires dans le registre.
+  ⚠ [avertissement, non bloquant] [reference] fenêtre 2027-2042 déjà utilisée par un autre signal de organisation_territoires dans le registre.
+[4/4] Injection...
+[2/4] Développement pour geopolitique_conflits...
+[llm] Mistral (mistral-large-latest) — entrée : 31186 | sortie : 616
+[3/4] Validation (essai 1)...
+  ⚠ [avertissement, non bloquant] [breakdown] fenêtre 2042-2060 déjà utilisée par un autre signal de geopolitique_conflits dans le registre.
+  ⚠ [avertissement, non bloquant] [fortress_world] fenêtre 2036-2052 déjà utilisée par un autre signal de geopolitique_conflits dans le registre.
+  ⚠ [avertissement, non bloquant] [eco_communalism] fenêtre 2039-2058 déjà utilisée par un autre signal de geopolitique_conflits dans le registre.
+  ⚠ [avertissement, non bloquant] [policy_reform] fenêtre 2029-2045 déjà utilisée par un autre signal de geopolitique_conflits dans le registre.
+  ⚠ [avertissement, non bloquant] [reference] fenêtre 2027-2042 déjà utilisée par un autre signal de geopolitique_conflits dans le registre.
+  -> problèmes :
+     - [breakdown] evenement_cle déjà présent dans le registre : 'guerre des nappes phréatiques au Sahel central 2054'
+     - [new_sustainability] evenement_cle déjà présent dans le registre : 'algorithme HydraShare gère les flux du bassin du Niger 2043'
+     - [eco_communalism] evenement_cle déjà présent dans le registre : "pacte de l'Oasis pour une eau solaire équitable"
+     - [policy_reform] evenement_cle déjà présent dans le registre : 'accord de Ouagadougou sur les quotas hydriques 2039'
+     - [reference] evenement_cle déjà présent dans le registre : 'affrontements pour le forage solaire de Diffa 2036'
+[llm] Mistral (mistral-large-latest) — entrée : 31946 | sortie : 652
+[3/4] Validation (essai 2)...
+  ⚠ [avertissement, non bloquant] [breakdown] fenêtre 2042-2060 déjà utilisée par un autre signal de geopolitique_conflits dans le registre.
+  ⚠ [avertissement, non bloquant] [fortress_world] fenêtre 2036-2052 déjà utilisée par un autre signal de geopolitique_conflits dans le registre.
+  ⚠ [avertissement, non bloquant] [eco_communalism] fenêtre 2039-2058 déjà utilisée par un autre signal de geopolitique_conflits dans le registre.
+  ⚠ [avertissement, non bloquant] [policy_reform] fenêtre 2029-2045 déjà utilisée par un autre signal de geopolitique_conflits dans le registre.
+  ⚠ [avertissement, non bloquant] [reference] fenêtre 2027-2042 déjà utilisée par un autre signal de geopolitique_conflits dans le registre.
+  -> problèmes :
+     - [breakdown] evenement_cle déjà présent dans le registre : "bataille de l'aquifère de Liptako-Gourma 2055"
+     - Scénario inconnu : geopolitique_conflits
+[llm] Mistral (mistral-large-latest) — entrée : 31886 | sortie : 657
+[3/4] Validation (essai 3)...
+  ⚠ [avertissement, non bloquant] [breakdown] fenêtre 2042-2060 déjà utilisée par un autre signal de geopolitique_conflits dans le registre.
+  ⚠ [avertissement, non bloquant] [fortress_world] fenêtre 2036-2052 déjà utilisée par un autre signal de geopolitique_conflits dans le registre.
+  ⚠ [avertissement, non bloquant] [eco_communalism] fenêtre 2039-2058 déjà utilisée par un autre signal de geopolitique_conflits dans le registre.
+  ⚠ [avertissement, non bloquant] [policy_reform] fenêtre 2029-2045 déjà utilisée par un autre signal de geopolitique_conflits dans le registre.
+  ⚠ [avertissement, non bloquant] [reference] fenêtre 2027-2042 déjà utilisée par un autre signal de geopolitique_conflits dans le registre.
+  -> problèmes :
+     - Scénario inconnu : geopolitique_conflits
+
+Terminé. Voir /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/signaux_custom/processed.yaml et /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/signaux_custom/needs_review.yaml.

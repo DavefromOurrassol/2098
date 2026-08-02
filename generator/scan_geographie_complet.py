@@ -137,6 +137,15 @@ def main():
              "depuis leur migration vers chantiers.py."
     )
     parser.add_argument(
+        "--marquer-resolus", action="store_true",
+        help="Propage --marquer-resolus à check_zones_coherence.py (étape 1) -- "
+             "marque automatiquement statut='traite' les chantiers pays_sans_zone "
+             "devenus obsolètes (le pays a déjà une zone N1). Ajouté le 25 juillet "
+             "2026 pour que check_zones_coherence.py reste entièrement pilotable "
+             "depuis cet orchestrateur, sans perte de fonctionnalité par rapport à "
+             "son entrée individuelle du panneau."
+    )
+    parser.add_argument(
         "--no-cache-patron-spatial", action="store_true",
         help="Propage --no-cache à check_patron_spatial_coherence.py (repaie l'appel LLM)."
     )
@@ -149,6 +158,20 @@ def main():
              "N'applique jamais rien (pas de --apply-topdown ici) -- la review "
              "reste un geste séparé, volontairement."
     )
+    # Sélection d'étapes (25 juillet 2026) -- par défaut (aucun --run-* passé),
+    # les 5 étapes tournent comme avant. Passer un ou plusieurs --run-* limite
+    # le scan à ceux-là uniquement (ex. relancer seulement le patron spatial
+    # après une correction ciblée, sans repayer les 4 autres diagnostics).
+    parser.add_argument("--run-zones", action="store_true",
+                         help="Limite le scan à check_zones_coherence.py")
+    parser.add_argument("--run-type-entite", action="store_true",
+                         help="Limite le scan à check_type_entite_coherence.py")
+    parser.add_argument("--run-origine-reelle", action="store_true",
+                         help="Limite le scan à check_origine_reelle_coherence.py")
+    parser.add_argument("--run-conventions", action="store_true",
+                         help="Limite le scan à check_conventions_territoires.py")
+    parser.add_argument("--run-patron-spatial", action="store_true",
+                         help="Limite le scan à check_patron_spatial_coherence.py")
     args = parser.parse_args()
 
     if args.scenario and args.scenario not in SCENARIOS:
@@ -158,54 +181,87 @@ def main():
 
     cible = ["--all"] if args.all else ["--scenario", args.scenario]
 
+    # Aucun --run-* -> les 5 étapes (comportement historique, inchangé).
+    # Au moins un --run-* -> seulement les étapes demandées.
+    demandees = {
+        "zones": args.run_zones,
+        "type_entite": args.run_type_entite,
+        "origine_reelle": args.run_origine_reelle,
+        "conventions": args.run_conventions,
+        "patron_spatial": args.run_patron_spatial,
+    }
+    aucune_selection = not any(demandees.values())
+    etapes_actives = {k for k, v in demandees.items() if v} if not aucune_selection else set(demandees.keys())
+    n_etapes = len(etapes_actives)
+
     print("#" * 60)
-    print("  SCAN GÉOGRAPHIE COMPLET — 5 étapes"
+    print(f"  SCAN GÉOGRAPHIE COMPLET — {n_etapes} étape(s)"
+          + ("" if aucune_selection else " (sélection partielle)")
           + (" + génération top-down" if args.generer_propositions_topdown else ""))
     print("#" * 60)
 
     resumes = []
+    compteur = 0
 
-    print("\n" + "▶" * 3 + " Étape 1/5 — check_zones_coherence.py")
-    args_zones = cible + (["--write-chantiers"] if args.write_chantiers else [])
-    sortie = executer("check_zones_coherence.py", args_zones)
-    resumes.append(("check_zones_coherence.py", derniere_ligne_utile(sortie)))
+    if "zones" in etapes_actives:
+        compteur += 1
+        print(f"\n{'▶' * 3} Étape {compteur}/{n_etapes} — check_zones_coherence.py")
+        if args.marquer_resolus and not args.all:
+            print("  · --marquer-resolus n'a d'effet qu'en mode \"Tous les scénarios\" "
+                  "-- contrainte de check_zones_coherence.py lui-même, pas de cet "
+                  "orchestrateur. Sans effet ici avec un seul scénario sélectionné.")
+        args_zones = cible[:]
+        if args.write_chantiers:
+            args_zones.append("--write-chantiers")
+        if args.marquer_resolus:
+            args_zones.append("--marquer-resolus")
+        sortie = executer("check_zones_coherence.py", args_zones)
+        resumes.append(("check_zones_coherence.py", derniere_ligne_utile(sortie)))
 
-    print("\n" + "▶" * 3 + " Étape 2/5 — check_type_entite_coherence.py")
-    args_type_entite = cible + (["--apply"] if args.apply_type_entite else [])
-    sortie = executer("check_type_entite_coherence.py", args_type_entite)
-    resumes.append(("check_type_entite_coherence.py", derniere_ligne_utile(sortie)))
+    if "type_entite" in etapes_actives:
+        compteur += 1
+        print(f"\n{'▶' * 3} Étape {compteur}/{n_etapes} — check_type_entite_coherence.py")
+        args_type_entite = cible + (["--apply"] if args.apply_type_entite else [])
+        sortie = executer("check_type_entite_coherence.py", args_type_entite)
+        resumes.append(("check_type_entite_coherence.py", derniere_ligne_utile(sortie)))
 
-    print("\n" + "▶" * 3 + " Étape 3/5 — check_origine_reelle_coherence.py")
-    args_origine = cible[:]
-    if args.resolve_llm:
-        args_origine.append("--resolve-llm")
-    if args.write_chantiers:
-        args_origine.append("--write-chantiers")
-    sortie = executer("check_origine_reelle_coherence.py", args_origine)
-    resumes.append(("check_origine_reelle_coherence.py", derniere_ligne_utile(sortie)))
+    if "origine_reelle" in etapes_actives:
+        compteur += 1
+        print(f"\n{'▶' * 3} Étape {compteur}/{n_etapes} — check_origine_reelle_coherence.py")
+        args_origine = cible[:]
+        if args.resolve_llm:
+            args_origine.append("--resolve-llm")
+        if args.write_chantiers:
+            args_origine.append("--write-chantiers")
+        sortie = executer("check_origine_reelle_coherence.py", args_origine)
+        resumes.append(("check_origine_reelle_coherence.py", derniere_ligne_utile(sortie)))
 
-    print("\n" + "▶" * 3 + " Étape 4/5 — check_conventions_territoires.py")
-    if not args.all:
-        print("  · N'a de sens qu'avec --all -- la notion de \"varie entre scénarios\" "
-              "suppose plusieurs scénarios à comparer. Résultat ci-dessous non significatif.")
-    sortie = executer("check_conventions_territoires.py", cible)
-    resumes.append(("check_conventions_territoires.py", derniere_ligne_utile(sortie)))
+    if "conventions" in etapes_actives:
+        compteur += 1
+        print(f"\n{'▶' * 3} Étape {compteur}/{n_etapes} — check_conventions_territoires.py")
+        if not args.all:
+            print("  · N'a de sens qu'avec --all -- la notion de \"varie entre scénarios\" "
+                  "suppose plusieurs scénarios à comparer. Résultat ci-dessous non significatif.")
+        sortie = executer("check_conventions_territoires.py", cible)
+        resumes.append(("check_conventions_territoires.py", derniere_ligne_utile(sortie)))
 
-    print("\n" + "▶" * 3 + " Étape 5/5 — check_patron_spatial_coherence.py")
-    args_patron_spatial = cible[:]
-    if args.no_cache_patron_spatial:
-        args_patron_spatial.append("--no-cache")
-    if args.write_chantiers:
-        args_patron_spatial.append("--write-chantiers")
-    sortie = executer("check_patron_spatial_coherence.py", args_patron_spatial)
-    resumes.append(("check_patron_spatial_coherence.py", derniere_ligne_utile(sortie)))
+    if "patron_spatial" in etapes_actives:
+        compteur += 1
+        print(f"\n{'▶' * 3} Étape {compteur}/{n_etapes} — check_patron_spatial_coherence.py")
+        args_patron_spatial = cible[:]
+        if args.no_cache_patron_spatial:
+            args_patron_spatial.append("--no-cache")
+        if args.write_chantiers:
+            args_patron_spatial.append("--write-chantiers")
+        sortie = executer("check_patron_spatial_coherence.py", args_patron_spatial)
+        resumes.append(("check_patron_spatial_coherence.py", derniere_ligne_utile(sortie)))
 
     if args.generer_propositions_topdown:
-        print("\n" + "▶" * 3 + " Étape 6/6 — generer_zones_topdown.py --review-topdown")
+        print(f"\n{'▶' * 3} Étape supplémentaire — generer_zones_topdown.py --review-topdown")
         if not args.write_chantiers:
-            print("  · Lancé sans --write-chantiers aux étapes 1/3/5 -- seuls les "
-                  "chantiers déjà `a_traiter` avant ce run seront repris, pas ceux "
-                  "tout juste détectés dans ce même run.")
+            print("  · Lancé sans --write-chantiers -- seuls les chantiers déjà "
+                  "`a_traiter` avant ce run seront repris, pas ceux tout juste "
+                  "détectés dans ce même run.")
         args_topdown = ["--review-topdown"] + cible
         sortie = executer("generer_zones_topdown.py", args_topdown)
         resumes.append(("generer_zones_topdown.py --review-topdown", derniere_ligne_utile(sortie)))
@@ -217,13 +273,13 @@ def main():
         print(f"  [{nom}]")
         print(f"    {ligne}")
 
-    if not args.apply_type_entite:
+    if "type_entite" in etapes_actives and not args.apply_type_entite:
         print("\n  · check_type_entite_coherence.py lancé sans --apply-type-entite "
               "(aperçu seul, rien corrigé)")
-    if not args.all:
+    if "conventions" in etapes_actives and not args.all:
         print("  · check_conventions_territoires.py non significatif en mode --scenario "
               "(relancer avec --all pour un vrai résultat)")
-    if not args.no_cache_patron_spatial:
+    if "patron_spatial" in etapes_actives and not args.no_cache_patron_spatial:
         print("  · check_patron_spatial_coherence.py a pu servir des résultats en cache "
               "(relancer avec --no-cache-patron-spatial pour forcer un nouvel appel LLM)")
     if args.generer_propositions_topdown:

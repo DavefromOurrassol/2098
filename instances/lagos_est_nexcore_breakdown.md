@@ -8,7 +8,6 @@ localisation:
   zone: lagos_est_nexcore
   lieu: Lagos-Est (Nœud NexCore)
   type_lieu: ville
-
 type_dans_scenario: organisation
 
 role_dans_scenario: >

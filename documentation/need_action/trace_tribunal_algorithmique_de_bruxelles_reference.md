@@ -1,0 +1,53 @@
+# Traçabilité — `tribunal_algorithmique_de_bruxelles` (instance)
+
+*Généré le 2026-08-02 12:58*
+
+## 1. Origine
+
+- **Statut d'injection** : traité
+- **Trouvé dans** : `/Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/entites_custom/processed.yaml`
+- **Source de l'idée** : auto_generated
+
+## 2. Descriptif
+
+**Tribunal Algorithmique de Bruxelles**
+
+Un tribunal hybride — mêlant jugement humain et traitement algorithmique — chargé de statuer sur les litiges nés des décisions automatisées affectant les droits fondamentaux. Il incarne l'effort d'une société pour soumettre la machine à la règle de droit, en créant un espace de recours contre les biais, erreurs et arbitraires encodés dans les systèmes de gouvernance délégués à l'intelligence artificielle. Il représente l'institution qui tente de réconcilier la vitesse et l'opacité de la décision algorithmique avec les exigences de justice, de transparence et de responsabilité propres aux démocraties. Son existence même signale une crise de légitimité : celle du gouvernement par les machines.
+
+
+## 3. Évolution dans le temps et l'espace
+
+- **Créée en mode custom, contrainte au scénario** : new_sustainability
+- **Présente dans 6/6 scénarios** : breakdown, fortress_world, new_sustainability, eco_communalism, policy_reform, reference
+
+### breakdown
+- Zone : Genève-Bunker (Nœud Institutionnel Résiduel) (niveau 1) · Impact local/global : 1/2 · Enrichie le : —
+- **Rôle** : Vestige fracturé du Tribunal Algorithmique de Bruxelles, la Chambre des Recours Algorithmiques survit en nomade judiciaire, se déplaçant entre les enclaves encore dotées d'une infrastructure réseau minimale. Elle n'a plus de siège fixe depuis l'effondrement de la Zone Administrative Bruxelloise en 2091 et opère par sessions itinérantes, rendant des jugements que personne n'est plus tenu d'appliquer. Son existence est à la fois un acte de résistance symbolique et un anachronisme tragique : elle prétend encadrer des algorithmes de gouvernance qui, dans de nombreux territoires fragmentés, ont cessé d'être gouvernés par quiconque. Elle incarne la mémoire d'un État de droit que les fragments d'États successeurs refusent d'honorer.
+
+### fortress_world
+- Zone : Bruxelles-Forteresse (niveau 2) · Impact local/global : 2/1 · Enrichie le : —
+- **Rôle** : Vestige quasi-fantomatique d'une ambition démocratique d'encadrement de la gouvernance automatisée, la Chambre de Recours Algorithmique tente de survivre dans l'interstice entre le Bloc Atlantique et ses marges européennes fragmentées. Elle prétend encore statuer sur les litiges nés des décisions algorithmiques affectant les droits fondamentaux, mais son autorité réelle est contestée par les appareils d'État des blocs fermés qui n'y voient qu'un obstacle procédural à liquider. Dans un monde où la gouvernance est désormais déléguée à des systèmes opaques et souverains, l'existence de cette Chambre est à la fois anachronique et subversive — un rappel vivant que la machine n'a jamais été formellement soustraite au droit.
+
+### new_sustainability
+- Zone : Tribunal de Gouvernance Algorithmique de Bruxelles (niveau 3) · Impact local/global : 3/4 · Enrichie le : —
+- **Rôle** : Basé à Bruxelles, ce tribunal hybride humain-IA statue sur les litiges issus des décisions automatisées affectant les droits fondamentaux des citoyens des zones tampons européennes. Il constitue le premier mécanisme de recours juridictionnel contre les biais encodés dans les systèmes de gouvernance algorithmique, mais sa légitimité est contestée par les blocs souverainistes qui refusent sa compétence extraterritoriale. Dans le contexte de la new_sustainability, il fonctionne comme un organe de régulation mature, traçant une jurisprudence hybride qui s'impose progressivement comme référence mondiale en matière de responsabilité algorithmique. Il incarne la tension permanente entre l'efficience technocratique et l'exigence démocratique de justification.
+
+### eco_communalism
+- Zone : Europe Occidentale Reconstituée (niveau 1) · Impact local/global : 3/1 · Enrichie le : —
+- **Rôle** : Dans un monde fragmenté en communs territoriaux et assemblées bioterritoriales, la CRAD n'est plus un tribunal centralisé à Bruxelles mais une instance itinérante, convoquée à la demande par les assemblées régionales pour statuer sur les litiges nés des rares algorithmes encore en usage — outils d'allocation de ressources, de priorisation énergétique ou de cartographie des corridors écologiques. Elle incarne le refus communaliste de laisser toute décision automatisée sans recours humain, mais sa légitimité repose moins sur un mandat étatique que sur une reconnaissance inter-assemblées fragile et négociée. Elle est un tribunal de proximité autant qu'une juridiction de principe, siégeant tantôt dans une coopérative, tantôt dans une salle d'archive communautaire.
+
+### policy_reform
+- Zone : Hub Européen de Régulation (Genève-La Haye-Tampere) (niveau 1) · Impact local/global : 3/4 · Enrichie le : —
+- **Rôle** : Dans le monde de policy_reform, la CRAB constitue l'un des rouages centraux de la gouvernance technocratique régulée : une juridiction hybride, mi-tribunal mi-agence d'audit, chargée de statuer sur les recours formés contre les décisions automatisées des systèmes de gouvernance délégués à l'IA à l'échelle européenne et, par extension, onusienne. Elle ne juge pas les algorithmes en abstrait — elle tranche des cas concrets : allocations de ressources critiques contestées, scores de crédit climatique invalidants, décisions d'exclusion du marché du travail augmenté, relocalisations forcées générées par des modèles prédictifs. Son existence est à la fois symbole de maturité institutionnelle et aveu d'une crise de légitimité : la régulation a créé le tribunal précisément parce que les machines gouvernent déjà.
+
+### reference
+- Zone : Bruxelles-Nouveau (niveau 2) · Impact local/global : 3/2 · Enrichie le : —
+- **Rôle** : Le Tribunal Algorithmique de Bruxelles est la juridiction de référence de l'Union Continentale Européenne chargée de statuer sur les litiges nés des décisions automatisées affectant les droits fondamentaux — allocations de ressources, scores de crédit social climatique, accès aux soins, mobilité contrainte. Dans un monde de transition fragile, il incarne à la fois l'ambition d'une gouvernance de droit sur les systèmes IA et la preuve de ses limites structurelles : sous-financé, débordé, contesté par les grandes plateformes qui instrumentalisent sa lenteur. Il fonctionne comme un espace symbolique autant que juridique — un lieu où la société tente encore de nommer ce que les machines ont décidé.
+
+**Variables systémiques influencées (tous scénarios confondus)** : gouvernance_institutions, technologie_information
+**Alliances (réseau relationnel)** : archives_diplomatiques_de_l_onu_eclat_fortress_world, archives_neutres_de_geneve_breakdown, archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism, assemblee_territoires_new_sustainability, assemblees_bioterritoriales_regionales_eco_communalism, assemblees_cooperatives_regionales_eco_communalism, bureau_gouvernance_algorithmique_new_sustainability, bureau_gouvernance_algorithmique_policy_reform, et 36 autre(s)
+**Oppositions (réseau relationnel)** : alliance_blocs_souverains_reference, appareils_d_etat_des_blocs_fermes_fortress_world, bloc_des_gouvernements_souverainistes_hydriques_new_sustainability, bureau_gouvernance_algorithmique_fortress_world, cites_etats_secessionistes_breakdown, coalition_anti_algorithme_des_autonomies_locales_new_sustainability, coalition_des_souverainistes_numeriques_policy_reform, collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability, et 35 autre(s)
+
+## 4. Aval — usage dans les articles publiés
+
+_Aucune mention trouvée dans `articles/*.md` (scan texte brut, best-effort — un article peut mentionner l'entité sous une formulation différente sans que ce scan la détecte)._

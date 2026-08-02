@@ -877,7 +877,7 @@ zones:
   type: zone_sinistree
   parent: arc_eurasien_central
   origine_reelle:
-  - entite: Mer Caspienne (zone frontalière Russie/Kazakhstan/Azerbaïdjan/Iran/Turkménistan)
+  - entite: Mer Caspienne (zone frontalière Russie/Kazakhstan/Azerbaïdjan/Turkménistan)
     type_entite: region_administrative
     portion: null
   description: Théâtre principal des violations croisées des traités ABS entre Bloc
@@ -1581,7 +1581,7 @@ zones:
   nom: Karachi (Marché BioSyn)
   niveau: 2
   type: ville
-  parent: asie_pacifique_sud_est
+  parent: inde_sous_continent_resilient
   origine_reelle:
   - entite: Karachi, Pakistan
     type_entite: autre
@@ -1769,7 +1769,7 @@ zones:
   nom: Medellín (Marché BioSyn)
   niveau: 2
   type: ville
-  parent: espace_nord_americain_fragmente
+  parent: amazon_pacte_gardiens
   origine_reelle:
   - entite: Medellín, Colombie
     type_entite: autre

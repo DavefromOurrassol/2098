@@ -4,6 +4,10 @@ type: instance
 slug: consortium_energetique_oural_caspien_breakdown
 entite: consortium_energetique_oural_caspien
 scenario: breakdown
+localisation:
+  zone: corridor_oural_caspien
+  lieu: Axe ferroviaire mobile Orenbourg–Aktaou
+  type_lieu: infrastructure
 statut: officialise_enrichi
 type_dans_scenario: entreprise
 role_dans_scenario: 'Dans le scénario breakdown, le Consortium Énergétique Oural-Caspien
@@ -71,10 +75,6 @@ tensions_narratives: Le Consortium est pris en étau entre le Bloc IV et le Bloc
   avant leur destruction et ceux qui parient sur une rente fossile prolongée dans
   un monde privé d'alternatives énergétiques viables.
 date_creation: 2026-06-20
-localisation:
-  zone: corridor_oural_caspien
-  lieu: Axe ferroviaire mobile Orenbourg–Aktaou
-  type_lieu: infrastructure
 ---
 
 # Consortium Énergétique Oural-Caspien

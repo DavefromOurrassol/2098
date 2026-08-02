@@ -398,19 +398,17 @@ zones:
   - entite: Kosovo
     type_entite: pays
     portion: null
-  description: Mosaïque de bioterritoires couvrant l'espace d'Europe de l'Ouest, organisés
-    autour de bassins versants (vallée de l'Ourthe, bassin rhénan, Apennins restaurés,
-    Massif Central, Cévennes, Rhône). Cœur du réseau Terrafond des Bassins et de la
-    Confédération des Racines Vivantes, cette zone est l'épicentre du projet éco-communaliste
-    avec des infrastructures institutionnelles denses (assemblées, coopératives, trame
-    Mnemos). Les fragments d'États résiduels y subsistent en tension avec les nouvelles
-    structures communales.
-  statut: fragmenté
-  tensions_internes: Fracture entre autonomistes durs et confédéralistes pragmatiques
-    ; communautés repliées sur l'appartenance ethnique ou géographique trahissant
-    l'universalisme originel ; pression des consortiums industriels et des enclaves
-    extractivistes ; question non résolue de l'accueil des populations déplacées des
-    zones désertifiées.
+  description: Réseau décentralisé de bioterritoires autonomes couvrant l'Europe de
+    l'Ouest, organisés autour de bassins versants (vallée de l'Ourthe, bassin rhénan,
+    Apennins restaurés, Massif Central, Cévennes, Rhône). Chaque communauté gère ses
+    ressources locales via des assemblées de bassin et des coopératives, en lien avec
+    le réseau Terrafond des Bassins. Les anciennes structures étatiques ont cédé la
+    place à des dynamiques locales, bien que des tensions persistent avec les enclaves
+    extractivistes résiduelles.
+  statut: stable
+  tensions_internes: Divergences entre communautés sur le degré d'autonomie locale
+    vs. coordination régionale ; résistance des enclaves extractivistes et des fragments
+    d'États résiduels ; enjeux d'accueil des populations déplacées des zones désertifiées.
   periode_transition: 2030-2060
   evenement_transition: effondrement_reseau_mondial_communication_eco_communalism
   lieux_emblematiques: []
@@ -418,6 +416,7 @@ zones:
     allies:
     - arc_septentrional
     - maghreb_mediterraneen
+    - bassin_danubien
     rivaux:
     - enclaves_extractivistes_et_etats_residuels
   sources_attestees:
@@ -1236,9 +1235,6 @@ zones:
   parent: bioterritoires_anatoliens
   origine_reelle:
   - entite: Turquie
-    type_entite: pays
-    portion: null
-  - entite: Syrie
     type_entite: pays
     portion: null
   description: Axes de transit des flux migratoires massifs issus du Proche-Orient
@@ -2160,9 +2156,9 @@ zones:
   promu_depuis: null
 - slug: nuuk_fonds_terres_emergees
   nom: Nuuk — Maison longue du Fonds
-  niveau: 3
+  niveau: 2
   type: site_strategique
-  parent: kalaallit_nunaat_bioterritoire
+  parent: arc_septentrional
   origine_reelle:
   - entite: Nuuk
     type_entite: autre

@@ -8,7 +8,6 @@ localisation:
   zone: communes_rust_belt
   lieu: Communes Libres du Rust Belt (Detroit, Cleveland, Pittsburgh)
   type_lieu: region
-
 type_dans_scenario: réseau
 
 role_dans_scenario: >

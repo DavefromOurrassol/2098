@@ -8,7 +8,6 @@ localisation:
   zone: arctique_nordark
   lieu: Nordark — Les Terres du Dessous (au-delà du 70e parallèle, zone arctique circumpolaire)
   type_lieu: region
-
 type_dans_scenario: autre
 
 role_dans_scenario: >

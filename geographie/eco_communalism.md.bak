@@ -105,6 +105,8 @@ zones:
     type_entite: pays
     portion: null
   - entite: Groenland
+    type_entite: pays
+    portion: null
   description: Réseau de bioterritoires post-étatiques couvrant l'espace fenno-scandinave
     et baltique, structuré autour d'assemblées de bassin versant et de confédérations
     locales de communs. L'un des territoires les plus avancés dans la transition éco-communaliste,
@@ -370,7 +372,11 @@ zones:
     type_entite: pays
     portion: null
   - entite: Pologne
+    type_entite: pays
+    portion: null
   - entite: République tchèque
+    type_entite: pays
+    portion: null
   - entite: Irlande
     type_entite: pays
     portion: null
@@ -1230,9 +1236,6 @@ zones:
   parent: bioterritoires_anatoliens
   origine_reelle:
   - entite: Turquie
-    type_entite: pays
-    portion: null
-  - entite: Syrie
     type_entite: pays
     portion: null
   description: Axes de transit des flux migratoires massifs issus du Proche-Orient
@@ -2154,9 +2157,9 @@ zones:
   promu_depuis: null
 - slug: nuuk_fonds_terres_emergees
   nom: Nuuk — Maison longue du Fonds
-  niveau: 3
+  niveau: 2
   type: site_strategique
-  parent: kalaallit_nunaat_bioterritoire
+  parent: arc_septentrional
   origine_reelle:
   - entite: Nuuk
     type_entite: autre
@@ -2434,6 +2437,8 @@ zones:
     type_entite: pays
     portion: Nord
   - entite: Chine
+    type_entite: pays
+    portion: null
   - entite: Biélorussie
     type_entite: pays
     portion: null

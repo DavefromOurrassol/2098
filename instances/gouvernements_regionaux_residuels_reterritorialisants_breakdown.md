@@ -4,6 +4,11 @@ type: instance
 slug: gouvernements_regionaux_residuels_reterritorialisants_breakdown
 entite: gouvernements_regionaux_residuels_reterritorialisants
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 statut: officialise_enrichi
 type_dans_scenario: institution
 role_dans_scenario: Dans le chaos du breakdown, ces entités constituent les nœuds
@@ -67,10 +72,6 @@ tensions_narratives: Tiraillés entre leur prétention à la légalité et la r�
   ils luttent pour demeurer indispensables dans un monde qui a appris à se passer
   d'eux.
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: region
 ---
 
 # Gouvernements Régionaux Résiduels Reterritorialisants

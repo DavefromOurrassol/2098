@@ -4,6 +4,10 @@ type: instance
 slug: factions_paramilitaires_locales_neutralisees_breakdown
 entite: factions_paramilitaires_locales_neutralisees
 scenario: breakdown
+localisation:
+  zone: cracovie_registre_zones
+  lieu: Registre des Zones Non Récupérables
+  type_lieu: infrastructure
 statut: officialise_enrichi
 type_dans_scenario: organisation
 role_dans_scenario: 'Dans le scénario breakdown, ces factions représentent les acteurs
@@ -71,10 +75,6 @@ tensions_narratives: 'La tension centrale est celle de la prédation : chaque fa
   de Cracovie est de savoir si ces groupes représentaient une forme embryonnaire de
   gouvernance populaire ou simplement la violence ordinaire de la fragmentation.'
 date_creation: 2026-06-20
-localisation:
-  zone: cracovie_registre_zones
-  lieu: Registre des Zones Non Récupérables
-  type_lieu: infrastructure
 ---
 
 # Factions Paramilitaires Locales Neutralisées

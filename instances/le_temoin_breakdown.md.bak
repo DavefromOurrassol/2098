@@ -4,6 +4,11 @@ type: instance
 slug: le_temoin_breakdown
 entite: le_temoin
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 type_dans_scenario: humain
 role_dans_scenario: Identité anonyme diffusant des analyses sur les réseaux mesh depuis 2071. Personne ne sait si c'est un homme, une femme, un collectif ou une IA. Seule voix qui tente encore de donner du sens au chaos systémique global. Lu par quelques milliers de personnes dans des zones déconnectées.
 responsabilites: |

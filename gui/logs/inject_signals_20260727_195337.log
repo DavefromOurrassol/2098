@@ -1,0 +1,106 @@
+
+=== essai_zone_hint_sahel ===
+[1/4] Sélection de variable(s)...
+[llm] Mistral (mistral-large-latest) — entrée : 4580 | sortie : 54
+  -> variables=['systemes_productifs_travail', 'energie_ressources_critiques'] categorie=environmental signal_slug=irrigation_solaire_tensions_eau
+[2/4] Développement pour systemes_productifs_travail...
+[llm] Mistral (mistral-large-latest) — entrée : 30519 | sortie : 600
+[3/4] Validation (essai 1)...
+  ⚠ [avertissement, non bloquant] [breakdown] fenêtre 2042-2060 déjà utilisée par un autre signal de systemes_productifs_travail dans le registre.
+  ⚠ [avertissement, non bloquant] [fortress_world] fenêtre 2036-2052 déjà utilisée par un autre signal de systemes_productifs_travail dans le registre.
+  ⚠ [avertissement, non bloquant] [new_sustainability] fenêtre 2033-2049 déjà utilisée par un autre signal de systemes_productifs_travail dans le registre.
+  ⚠ [avertissement, non bloquant] [eco_communalism] fenêtre 2038-2057 déjà utilisée par un autre signal de systemes_productifs_travail dans le registre.
+  ⚠ [avertissement, non bloquant] [policy_reform] fenêtre 2029-2045 déjà utilisée par un autre signal de systemes_productifs_travail dans le registre.
+  ⚠ [avertissement, non bloquant] [reference] fenêtre 2027-2042 déjà utilisée par un autre signal de systemes_productifs_travail dans le registre.
+[4/4] Injection...
+  - signal: irrigation_solaire_tensions_eau
+    scenarios:
+      breakdown:
+        evolution: effondrement des coopératives solaires face aux pénuries d'eau
+        date_bascule: 2042-2060
+        evenement_cle: émeutes pour l'eau dans les périmètres irrigués du Sahel 2054
+      fortress_world:
+        evolution: irrigation solaire militarisée par les blocs pour contrôler les populations
+        date_bascule: 2036-2052
+        evenement_cle: Bloc Atlantique sécurise les pompages solaires du Sahel 2047
+      new_sustainability:
+        evolution: optimisation IA des réseaux d'irrigation solaires transfrontaliers
+        date_bascule: 2033-2049
+        evenement_cle: déploiement du système SahelFlow pour partager l'eau 2042
+      eco_communalism:
+        evolution: irrigation solaire relocalisée en circuits courts communautaires
+        date_bascule: 2038-2057
+        evenement_cle: charte bioterritoriale de l'eau solaire au Sahel
+      policy_reform:
+        evolution: régulation des pompages solaires avec quotas hydriques négociés
+        date_bascule: 2029-2045
+        evenement_cle: adoption du traité de Niamey sur l'irrigation solaire 2038
+      reference:
+        evolution: expansion chaotique des pompages solaires aggravant les conflits
+        date_bascule: 2027-2042
+        evenement_cle: premier conflit armé pour un forage solaire au Sahel 2035
+- irrigation solaire transforme l'agriculture sahélienne, tensions hydriques croissantes (→ signal_custom: irrigation_solaire_tensions_eau, source: actualite)
+[2/4] Développement pour energie_ressources_critiques...
+[llm] Mistral (mistral-large-latest) — entrée : 30459 | sortie : 578
+[3/4] Validation (essai 1)...
+  ⚠ [avertissement, non bloquant] [new_sustainability] fenêtre 2033-2049 déjà utilisée par un autre signal de energie_ressources_critiques dans le registre.
+  ⚠ [avertissement, non bloquant] [eco_communalism] fenêtre 2039-2058 déjà utilisée par un autre signal de energie_ressources_critiques dans le registre.
+[4/4] Injection...
+  - signal: irrigation_solaire_tensions_eau
+    scenarios:
+      breakdown:
+        evolution: pénuries d'eau déclenchent conflits armés pour l'irrigation solaire
+        date_bascule: 2043-2061
+        evenement_cle: guerre des nappes phréatiques entre milices sahéliennes 2055
+      fortress_world:
+        evolution: blocs énergétiques contrôlent l'accès à l'eau via l'irrigation solaire
+        date_bascule: 2038-2054
+        evenement_cle: Bloc Sibérien nationalise les forages solaires du Tchad 2049
+      new_sustainability:
+        evolution: optimisation IA des réseaux d'irrigation solaire réduit tensions
+        date_bascule: 2033-2049
+        evenement_cle: algorithme SahelSync équilibre les flux hydriques 2043
+      eco_communalism:
+        evolution: communautés locales gèrent l'eau solaire en autonomie
+        date_bascule: 2039-2058
+        evenement_cle: réseau des oasis autonomes du Sahel adopte charte commune
+      policy_reform:
+        evolution: régulation internationale encadre l'irrigation solaire
+        date_bascule: 2030-2046
+        evenement_cle: création de l'Autorité Sahelienne de l'Eau Solaire 2039
+      reference:
+        evolution: tensions persistantes autour des projets d'irrigation solaire
+        date_bascule: 2026-2042
+        evenement_cle: premier arbitrage international sur un conflit d'irrigation solaire 2036
+- boom démographique et tensions hydriques liés aux projets d'irrigation solaire (→ signal_custom: irrigation_solaire_tensions_eau, source: actualite)
+{
+  "status": "injected",
+  "idea": {
+    "id": "essai_zone_hint_sahel",
+    "description": "Une vague de projets d'irrigation solaire transforme l'agriculture locale, provoquant à la fois un boom démographique et des tensions croissantes sur l'accès à l'eau.",
+    "variable_hint_count": 2,
+    "zone_hint": "Sahel"
+  },
+  "selection": {
+    "variables": [
+      "systemes_productifs_travail",
+      "energie_ressources_critiques"
+    ],
+    "categorie": "environmental",
+    "signal_slug": "irrigation_solaire_tensions_eau"
+  },
+  "results": [
+    {
+      "variable": "systemes_productifs_travail",
+      "status": "injected",
+      "yaml_text": "  - signal: irrigation_solaire_tensions_eau\n    scenarios:\n      breakdown:\n        evolution: effondrement des coopératives solaires face aux pénuries d'eau\n        date_bascule: 2042-2060\n        evenement_cle: émeutes pour l'eau dans les périmètres irrigués du Sahel 2054\n      fortress_world:\n        evolution: irrigation solaire militarisée par les blocs pour contrôler les populations\n        date_bascule: 2036-2052\n        evenement_cle: Bloc Atlantique sécurise les pompages solaires du Sahel 2047\n      new_sustainability:\n        evolution: optimisation IA des réseaux d'irrigation solaires transfrontaliers\n        date_bascule: 2033-2049\n        evenement_cle: déploiement du système SahelFlow pour partager l'eau 2042\n      eco_communalism:\n        evolution: irrigation solaire relocalisée en circuits courts communautaires\n        date_bascule: 2038-2057\n        evenement_cle: charte bioterritoriale de l'eau solaire au Sahel\n      policy_reform:\n        evolution: régulation des pompages solaires avec quotas hydriques négociés\n        date_bascule: 2029-2045\n        evenement_cle: adoption du traité de Niamey sur l'irrigation solaire 2038\n      reference:\n        evolution: expansion chaotique des pompages solaires aggravant les conflits\n        date_bascule: 2027-2042\n        evenement_cle: premier conflit armé pour un forage solaire au Sahel 2035",
+      "signaux_existants_consideres": "Le signal 'automatisation_agricole_massive' traite d'une dynamique proche mais à l'échelle mondiale et technologique, tandis que 'irrigation_solaire_tensions_eau' se concentre sur un ancrage géographique spécifique (Sahel) et une tension sociale/hydrique locale. Les deux sont complémentaires : l'automatisation agricole peut inclure l'irrigation solaire comme sous-catégorie, mais ce nouveau signal ajoute une dimension conflictuelle et territoriale absente des scénarios existants, notamment dans les dynamiques de breakdown (effondrement local) et fortress_world (contrôle des ressources par les blocs)."
+    },
+    {
+      "variable": "energie_ressources_critiques",
+      "status": "injected",
+      "yaml_text": "  - signal: irrigation_solaire_tensions_eau\n    scenarios:\n      breakdown:\n        evolution: pénuries d'eau déclenchent conflits armés pour l'irrigation solaire\n        date_bascule: 2043-2061\n        evenement_cle: guerre des nappes phréatiques entre milices sahéliennes 2055\n      fortress_world:\n        evolution: blocs énergétiques contrôlent l'accès à l'eau via l'irrigation solaire\n        date_bascule: 2038-2054\n        evenement_cle: Bloc Sibérien nationalise les forages solaires du Tchad 2049\n      new_sustainability:\n        evolution: optimisation IA des réseaux d'irrigation solaire réduit tensions\n        date_bascule: 2033-2049\n        evenement_cle: algorithme SahelSync équilibre les flux hydriques 2043\n      eco_communalism:\n        evolution: communautés locales gèrent l'eau solaire en autonomie\n        date_bascule: 2039-2058\n        evenement_cle: réseau des oasis autonomes du Sahel adopte charte commune\n      policy_reform:\n        evolution: régulation internationale encadre l'irrigation solaire\n        date_bascule: 2030-2046\n        evenement_cle: création de l'Autorité Sahelienne de l'Eau Solaire 2039\n      reference:\n        evolution: tensions persistantes autour des projets d'irrigation solaire\n        date_bascule: 2026-2042\n        evenement_cle: premier arbitrage international sur un conflit d'irrigation solaire 2036",
+      "signaux_existants_consideres": "Le signal 'competition_terres_rares' traite des tensions autour des ressources critiques, mais se concentre sur les minerais plutôt que sur l'eau. Le signal 'stress_hydrique' aborde les conflits liés à l'eau, mais sans lien avec l'irrigation solaire. Ce nouveau signal complète ces dynamiques en ciblant spécifiquement les tensions émergentes autour de l'accès à l'eau dans le contexte des projets d'irrigation solaire au Sahel, une dimension absente des signaux existants."
+    }
+  ]
+}

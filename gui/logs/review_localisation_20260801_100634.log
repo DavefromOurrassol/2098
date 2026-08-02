@@ -1,0 +1,24 @@
+=================================================================
+  REVIEW LOCALISATION — Ourrassol 2098
+=================================================================
+  MODE AUTO-RESOLVE : résolution automatique par le LLM
+
+  1 fiche(s) à reviewer
+
+  Résolution automatique de 1 fiche(s)...
+
+  [1/1] communautes_rurales_autonomes_breakdown
+    zone candidate : massif_central_cicatrices_vertes
+[llm] Mistral (mistral-small-latest) — entrée : 4256 | sortie : 73
+    décision      : valider
+    zone retenue  : massif_central_cicatrices_vertes
+    motif         : Le texte mentionne explicitement le Massif Central comme zone d'implantation des communautés rurales autonomes, malgré leur dispersion géographique.
+    → écrit
+
+
+📋 Rapport mis à jour : documentation/need_action/localisation_review.md
+   (0 fiche(s) restantes)
+=================================================================
+  Auto-resolve terminé.
+  Résolus : 1   Skippés/erreurs : 0
+=================================================================

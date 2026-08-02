@@ -4,6 +4,10 @@ type: instance
 slug: seoul_collectif_nexcore_breakdown
 entite: seoul_collectif_nexcore
 scenario: breakdown
+localisation:
+  zone: seoul_collectif_nexcore
+  lieu: Séoul (districts de Nowon et Dobong)
+  type_lieu: ville
 
 type_dans_scenario: organisation
 

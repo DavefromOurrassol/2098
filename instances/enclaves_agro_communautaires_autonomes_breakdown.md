@@ -4,6 +4,10 @@ type: instance
 slug: enclaves_agro_communautaires_autonomes_breakdown
 entite: enclaves_agro_communautaires_autonomes
 scenario: breakdown
+localisation:
+  zone: plaines_ebre_terrafond
+  lieu: Plaines de l'Ebre
+  type_lieu: region
 statut: officialise_enrichi
 type_dans_scenario: organisation
 role_dans_scenario: 'Dans le scénario breakdown, elles incarnent les poches de résilience
@@ -67,10 +71,6 @@ tensions_narratives: 'La tentation du repli total — fermer les frontières, re
   résistent aux reconfigurations imposées par les plus jeunes, nés dans un monde sans
   mémoire de l''État-nation.'
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: region
 ---
 
 # Enclaves Agro-Communautaires Autonomes

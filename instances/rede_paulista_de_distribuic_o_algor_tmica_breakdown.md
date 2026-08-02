@@ -8,7 +8,6 @@ localisation:
   zone: sao_paulo_rpda
   lieu: Grand São Paulo
   type_lieu: ville
-
 type_dans_scenario: système
 
 role_dans_scenario: >

@@ -4,6 +4,11 @@ type: instance
 slug: cartels_logistiques_regionaux_breakdown
 entite: cartels_logistiques_regionaux
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 statut: officialise_enrichi
 type_dans_scenario: entreprise
 role_dans_scenario: 'Dans un scénario de breakdown, elles comblent le vide laissé
@@ -69,10 +74,6 @@ tensions_narratives: 'Les Cartels sont condamnés à une contradiction structure
   humanitaires et réseaux communautaires tentent de construire des routes alternatives,
   menaçant le monopole de fait que les Cartels ont mis des décennies à consolider.'
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: null
 ---
 
 # Cartels Logistiques Régionaux

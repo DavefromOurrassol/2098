@@ -8,7 +8,6 @@ localisation:
   zone: sfax_relais_bouches
   lieu: près de Sfax
   type_lieu: infrastructure
-
 type_dans_scenario: réseau
 
 role_dans_scenario: >

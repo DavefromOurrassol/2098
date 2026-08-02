@@ -4,6 +4,10 @@ type: instance
 slug: reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown
 entite: reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne
 scenario: breakdown
+localisation:
+  zone: arc_eurasien_central
+  lieu: Corridor Oural-Caspien / Cracovie (nœuds principaux)
+  type_lieu: region
 statut: officialise_enrichi
 type_dans_scenario: réseau
 role_dans_scenario: 'Dans un scénario de breakdown, ces réseaux constituent des acteurs
@@ -64,10 +68,6 @@ tensions_narratives: 'Ces réseaux sont prisonniers d''une loyauté orpheline : 
   générations de transition refusent de disparaître dans l''anonymat tandis que les
   recrues émergentes ignorent jusqu''aux codes de conduite de l''ancienne structure.'
 date_creation: 2026-06-20
-localisation:
-  zone: arc_eurasien_central
-  lieu: Corridor Oural-Caspien / Cracovie (nœuds principaux)
-  type_lieu: region
 ---
 
 # Réseaux de renseignement informels issus de l'ancienne structure militaire eurasienne

@@ -4,6 +4,10 @@ type: instance
 slug: kalaallit_nunaat_sovereign_fund_breakdown
 entite: kalaallit_nunaat_sovereign_fund
 scenario: breakdown
+localisation:
+  zone: groenland_fonds_glaces
+  lieu: Nuuk, Groenland
+  type_lieu: site_strategique
 
 type_dans_scenario: institution
 

@@ -8,7 +8,6 @@ localisation:
   zone: vallee_allier_terrafond
   lieu: Vallée de l'Allier, entre Vichy et Brioude
   type_lieu: region
-
 type_dans_scenario: institution
 
 role_dans_scenario: >

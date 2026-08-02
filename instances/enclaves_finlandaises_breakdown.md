@@ -8,7 +8,6 @@ localisation:
   zone: enclaves_finlandaises
   lieu: Enclaves finlandaises (Tampere, Turku, Rovaniemi — territoire finlandais fragmenté)
   type_lieu: region
-
 type_dans_scenario: organisation
 
 role_dans_scenario: >

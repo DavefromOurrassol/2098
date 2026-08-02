@@ -8,7 +8,6 @@ localisation:
   zone: corridors_eurasiens_convoyage
   lieu: Les Venelles — Corridors Eurasiens Convoyage (d'Almaty aux berges de la Vistule, corridor Oural-Pannonie)
   type_lieu: infrastructure
-
 type_dans_scenario: infrastructure
 
 role_dans_scenario: >

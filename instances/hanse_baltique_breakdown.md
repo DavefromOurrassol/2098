@@ -8,7 +8,6 @@ localisation:
   zone: hanse_baltique
   lieu: Ligue Hanséatique Baltique (Lübeck, ports baltiques de Tallinn à Hambourg)
   type_lieu: region
-
 type_dans_scenario: organisation
 
 role_dans_scenario: >

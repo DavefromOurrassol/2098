@@ -4,6 +4,10 @@ type: instance
 slug: midwest_desertifie_breakdown
 entite: midwest_desertifie
 scenario: breakdown
+localisation:
+  zone: midwest_desertifie
+  lieu: Topeka, Midwest désertifié
+  type_lieu: region
 
 type_dans_scenario: institution
 

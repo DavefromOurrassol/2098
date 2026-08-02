@@ -4,6 +4,10 @@ type: instance
 slug: diaspora_tech_sahel_breakdown
 entite: diaspora_tech_sahel
 scenario: breakdown
+localisation:
+  zone: afrique_de_louest_lagos_sahel
+  lieu: Sahel (bande sahélienne)
+  type_lieu: region
 statut: officialise_enrichi
 type_dans_scenario: réseau
 role_dans_scenario: 'Dans le scénario breakdown, ce réseau constitue un nœud de compétences
@@ -68,10 +72,6 @@ tensions_narratives: 'Le réseau est déchiré entre l''urgence de transmettre s
   le réseau : la génération fondatrice vieillit en exil, et les jeunes ingénieurs
   nés en diaspora n''ont jamais vu les puits qu''ils sont censés sauver.'
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: null
 ---
 
 # Diaspora Tech Sahel

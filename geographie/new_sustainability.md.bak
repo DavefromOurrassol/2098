@@ -2323,8 +2323,8 @@ zones:
   promu_depuis: Bureau de Leena Väinälä
 - slug: delta_rhone_fermes_verticales
   nom: Delta du Rhône — Fermes verticales
-  niveau: 3
-  parent: corridor_iberique_energetique
+  niveau: 2
+  parent: union_nordique_europe_nord
   type: infrastructure
   origine_reelle:
   - entite: Camargue / delta du Rhône
@@ -3446,7 +3446,7 @@ Bureau aux murs couverts de manuscrits annotés à la main dans un monde qui n'�
 
 *Sources attestées : leena_vainala_new_sustainability, institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability*
 
-##### Delta du Rhône — Fermes verticales — sous [[corridor_iberique_energetique]]
+#### Delta du Rhône — Fermes verticales — sous [[union_nordique_europe_nord]]
 
 *infrastructure — niveau 3 — statut : stable*
 

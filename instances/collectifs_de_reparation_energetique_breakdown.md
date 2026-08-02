@@ -4,6 +4,11 @@ type: instance
 slug: collectifs_de_reparation_energetique_breakdown
 entite: collectifs_de_reparation_energetique
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 statut: officialise_enrichi
 type_dans_scenario: réseau
 role_dans_scenario: 'Dans le scénario breakdown, ils pallient l''effondrement des
@@ -67,10 +72,6 @@ tensions_narratives: 'Leur neutralité affichée est constamment mise à l''épr
   est de savoir si le Collectif peut rester au service de tous quand la rareté exige
   de choisir.'
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: null
 ---
 
 # Collectifs de Réparation Énergétique

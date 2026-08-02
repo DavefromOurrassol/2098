@@ -8,7 +8,6 @@ localisation:
   zone: arc_eurasien_central
   lieu: Arc eurasien central (corridors de l'ancienne Géorgie aux plaines kazakhes, corridor Oural-Caspien)
   type_lieu: region
-
 type_dans_scenario: humain
 
 role_dans_scenario: >

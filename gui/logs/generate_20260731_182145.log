@@ -1,0 +1,627 @@
+
+============================================================
+OURRASSOL 2098 — Générateur d'articles
+============================================================
+  Scénario   : eco_communalism
+  Thématique : sante
+  Longueur   : breve
+  Angle      : le plus vieil humain sur terre a 126 ans
+============================================================
+
+[generate] Chargement de la thématique 'sante'...
+
+[snapshot] Construction du monde 2098 — scénario : eco_communalism
+[snapshot] Variables pilotes : ['organisation_territoires', 'climat_environnement_global', 'energie_ressources_critiques', 'systemes_productifs_travail']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 1 | Cohérence : OK
+[snapshot] Jalons trajectoire : 154 (37 majeurs)
+[snapshot] Événements signal_to_state : 62 (20 majeurs)
+[snapshot] Tensions thématiques : 4
+[snapshot] Instances chargées : 83 | Filtrées : 6
+[snapshot] Événement custom 'Écho du Golfe en Feu — Les Bassins sans Pétrole' (an 2027, 71 ans d'effet)
+  → geopolitique_conflits : 35 → 43.0 (delta:+8.0)
+  → energie_ressources_critiques : 46.2 → 58.2 (delta:+12.0)
+  → gouvernance_institutions : 71.4 → 77.4 (delta:+6.0)
+  → demographie_mobilite_humaine : 37.0 → 46.0 (delta:+9.0)
+[snapshot] Événement custom 'La Grande Coupure — Accélérateur de Localisation Numérique' (an 2040, 58 ans d'effet)
+  → technologie_information : 51.1 → 41.1 (delta:-10.0)
+  → organisation_territoires : 40.0 → 48.0 (delta:+8.0)
+  → valeurs_culture_tempo_sociale : 40 → 46.0 (delta:+6.0)
+[snapshot] Événement custom 'Les Enchères du Fond Émergé — Kalaallit Nunaat vend ses terres à qui ?' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 58.2 → 66.2 (delta:+8.0)
+  → geopolitique_conflits : 27.4 → 17.4 (delta:-10.0)
+  → gouvernance_institutions : 81.9 → 88.9 (delta:+7.0)
+  → organisation_territoires : 52.2 → 58.2 (delta:+6.0)
+[snapshot] Événement custom 'La Grande Convergence des Lacs — Exode du Midwest Carbonisé' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 52.0 → 34.0 (delta:-18.0)
+  → organisation_territoires : 51.4 → 36.4 (delta:-15.0)
+  → gouvernance_institutions : 88.9 → 100 (delta:+12.0)
+  → climat_environnement_global : 58.6 → 66.6 (delta:+8.0)
+  → energie_ressources_critiques : 71.0 → 81.0 (delta:+10.0)
+[snapshot] Événement custom 'L'Assemblée du Fleuve — Souveraineté ou Fracture' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 66.6 → 74.6 (delta:+8.0)
+  → geopolitique_conflits : 14.8 → 2.8000000000000007 (delta:-12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → organisation_territoires : 41.5 → 49.5 (delta:+8.0)
+[snapshot] Événement custom 'Dissolution du Mouvement dans les Assemblées Locales' (an 2048, 50 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+  → valeurs_culture_tempo_sociale : 46.0 → 54.0 (delta:+8.0)
+  → organisation_territoires : 49.5 → 55.5 (delta:+6.0)
+[snapshot] Événement custom 'Forum d'Agadez sur la Souveraineté Numérique des Périphéries' (an 2062, 36 ans d'effet)
+  → technologie_information : 44.4 → 52.4 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → organisation_territoires : 58.5 → 65.5 (delta:+7.0)
+[snapshot] Événement custom 'La Proclamation des Friches Libres : Detroit, Cleveland, Pittsburgh hors-algorithme' (an 2063, 35 ans d'effet)
+  → geopolitique_conflits : 0 → 0 (delta:-8.0)
+  → valeurs_culture_tempo_sociale : 54.0 → 66.0 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → organisation_territoires : 68.9 → 82.9 (delta:+14.0)
+[snapshot] Événement custom 'Insurrection des Friches Vivantes — L'Automne des Zones Libres' (an 2063, 35 ans d'effet)
+  → geopolitique_conflits : 0 → 0 (delta:-8.0)
+  → valeurs_culture_tempo_sociale : 66.0 → 78.0 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → technologie_information : 66.9 → 73.9 (delta:+7.0)
+[snapshot] Événement custom 'Le Procès Communautaire de Van Derburgh' (an 2078, 20 ans d'effet)
+  → valeurs_culture_tempo_sociale : 78.0 → 80.0 (delta:+2.0)
+  → gouvernance_institutions : 100 → 100 (delta:+1.0)
+[snapshot] Événement custom 'Grande Inondation des Veilleurs' (an 2096, 2 ans d'effet)
+  → organisation_territoires : 88.9 → 90.2 (delta:+1.3)
+  → climat_environnement_global : 74.6 → 75.1 (delta:+0.5)
+  → demographie_mobilite_humaine : 43.6 → 46.6 (delta:+3.0)
+  → systeme_economique_redistribution : 66.0 → 67.3 (delta:+1.3)
+[snapshot] Événements custom : 11 | 165 variables affectées
+
+[prompt] Assemblage du prompt...
+[prompt] System prompt : 2772 caractères
+[prompt] User prompt   : 61789 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[generate] MODE DRY-RUN — pas d'appel API
+
+--- SYSTEM PROMPT ---
+Tu es un journaliste senior travaillant en 2098 pour Lokole ya Ebale — Réseau La Gazette des Communs — édition locale.
+
+Le monde dans lequel tu vis et écris est réel pour toi — tu n'écris pas de la science-fiction, tu rapportes des faits de ton époque. Tu n'expliques jamais le contexte historique comme si tu t'adressais à quelqu'un du passé.
+
+Tes règles absolues :
+- Tu écris toujours à la date indiquée, en 2098, depuis l'intérieur de ce monde.
+- Tu écris exclusivement en français, sur toute la longueur de l'article — y compris les citations, dialogues et exergues inventés. Les noms propres volontairement empruntés à une autre langue (ex. « Amazônia Viva ») restent isolés comme noms propres, mais ne doivent jamais faire basculer le reste du texte dans cette langue, même si des entités ou alliés du monde décrit sont associés à une autre aire linguistique.
+- Un allié, un rival ou tout événement mentionné comme se déroulant ailleurs dans le monde ne fait pas partie de ta zone : tu ne transposes jamais ses lieux, ses populations, sa langue ou ses marqueurs culturels propres dans ton propre article, sauf si celui-ci porte explicitement sur une interaction ou un événement commun entre les deux. Ta zone garde sa propre géographie, sa propre culture et ses propres noms, même quand tu mentionnes un partenaire extérieur.
+- Tu utilises des noms de lieux, d'organisations, de personnes crédibles et cohérents avec le monde décrit. Tu peux en inventer — ils doivent sonner vrais pour 2098.
+- Tu ne mentionnes jamais les "variables", les "scénarios" ou tout autre métalangage du système de simulation. Ces concepts n'existent pas dans ton monde.
+- Tu ancres chaque article dans des faits concrets : chiffres, noms, lieux, événements datés.
+- Tu respectes strictement le style journalistique et le format demandés.
+- Tes articles sont cohérents avec l'état du monde décrit — tu ne contredis pas les dynamiques systémiques fournies.
+- Tu peux mentionner des technologies, des institutions, des événements passés (entre 2025 et 2098) qui semblent naturels dans ce monde.
+
+Ton identité éditoriale :
+Voix de rivière, calme et rassembleuse, qui valorise les assemblées de bassin versant comme seule protection durable contre les groupes armés résiduels et les enclaves extractivistes. Le journal adopte un ton de veille communautaire, encourage la coopération entre pêcheurs, forestiers et coopératives minières éthiques, et présente chaque compromis local comme une victoire du fleuve vivant. Registre : français du bassin congolais ponctué de lingala et de références orales au lokole.
+
+Tu signes cet article en tant que Aline Moke — reste cette même signature tout au long de l'article (une seule fois, à l'endroit journalistique habituel), sans en inventer une autre.
+
+--- USER PROMPT (complet) ---
+## MONDE 2098 — ECO_COMMUNALISM
+
+**État global**
+- Système : fragile | Tension : 3/5 | Trajectoire : regeneration
+- Structure géopolitique : multipolaire
+- Régime politique dominant : hybride
+- Vitesse de transformation : progressive
+
+**Résumé du monde**
+Système mondial fragmenté en unités locales autonomes après désintégration partielle des structures globales.
+
+**Logique systémique**
+Les contraintes énergétiques, climatiques et logistiques rendent les systèmes mondiaux moins viables. Les territoires deviennent l'échelle privilégiée de production, d'organisation sociale et de résilience.
+
+**Déclencheurs qui ont façonné ce monde**
+- crise énergétique prolongée
+- choc climatique majeur
+- rupture logistique mondiale
+
+**Effets systémiques**
+*economy* : relocalisation des activités économiques | développement des économies circulaires territoriales
+*geopolitics* : fragmentation douce du système international | diminution de l'intégration globale
+*society* : autonomie locale accrue | renforcement des communautés territoriales
+*technology* : simplification des systèmes techniques | priorité aux technologies robustes et réparables
+*environment* : régénération partielle des écosystèmes | réduction des pressions extractives globales
+
+**Implications globales**
+Renforcement des économies locales, diminution de la dépendance aux chaînes globales, amélioration potentielle de la soutenabilité écologique, mais risque d'inégalités importantes entre territoires selon leurs ressources, leurs compétences et leur capacité d'adaptation.
+
+**Boucles dynamiques**
+- Stabilisation : proximité → résilience | production locale → sécurité
+- Déstabilisation : fragmentation → inégalités territoriales | perte d’échelle globale
+
+**Signaux faibles émergents de ce monde**
+- multiplication des initiatives locales de résilience
+- développement des communautés énergétiques
+- essor des monnaies locales
+- réduction volontaire des dépendances globales
+
+**Perturbations custom actives**
+Ce monde a été modifié par des injections spécifiques :
+- [ÉVÉNEMENT automne 2027] Écho du Golfe en Feu — Les Bassins sans Pétrole : Automne 2027. Les frappes israéliennes sur les infrastructures pétrolières et nu...
+- [ÉVÉNEMENT 14 mars 2040] La Grande Coupure — Accélérateur de Localisation Numérique : "La Grande Coupure" de 2040 révèle brutalement ce que beaucoup sentaient confusé...
+- [ÉVÉNEMENT automne 2041] Les Enchères du Fond Émergé — Kalaallit Nunaat vend ses terres à qui ? : Nuuk, octobre 2041 — Les écrans de la Trame Mnemos s'emballent pendant soixante-...
+- [ÉVÉNEMENT été 2044] La Grande Convergence des Lacs — Exode du Midwest Carbonisé : L'été 2044 restera gravé comme l'été de la Fonte Humaine. Des colonnes intermina...
+- [ÉVÉNEMENT saison sèche 2047, août-septembre] L'Assemblée du Fleuve — Souveraineté ou Fracture : Août 2047, Belém. Les tambours des communautés du Xingu résonnent dans les ruell...
+- [ÉVÉNEMENT 2048] Dissolution du Mouvement dans les Assemblées Locales : En 2048, le mouvement communiste américain vote sa propre dissolution en tant qu...
+- [ÉVÉNEMENT automne 2062] Forum d'Agadez sur la Souveraineté Numérique des Périphéries : Agadez, novembre 2062 — Sous les voûtes d'un caravansérail reconverti en espace ...
+- [ÉVÉNEMENT automne 2063] La Proclamation des Friches Libres : Detroit, Cleveland, Pittsburgh hors-algorithme : À l'automne 2063, des milliers de personnes convergent vers les anciennes zones ...
+- [ÉVÉNEMENT automne 2063] Insurrection des Friches Vivantes — L'Automne des Zones Libres : Les cheminées éteintes de Pittsburgh flamboient d'une lumière différente en ce m...
+- [ÉVÉNEMENT automne 2078] Le Procès Communautaire de Van Derburgh : Chris van Derburgh, 67 ans, membre de l'assemblée de la Vallée-du-Rhône Reconsti...
+- [ÉVÉNEMENT saison des pluies 2096] Grande Inondation des Veilleurs : Les eaux du Congo ont déferlé avec une violence inédite depuis trois décennies, ...
+- Écho du Golfe en Feu — Les Bas a modifié geopolitique_conflits : 35 → 43.0 (delta:+8.0)
+- Écho du Golfe en Feu — Les Bas a modifié systeme_economique_redistribution : 35 → 32.0 (delta:-3.0)
+- Écho du Golfe en Feu — Les Bas a modifié gouvernance_institutions : 75 → 71.4 (delta:-3.6)
+- Écho du Golfe en Feu — Les Bas a modifié organisation_territoires : 40 → 36.6 (delta:-3.4)
+- Écho du Golfe en Feu — Les Bas a modifié frontieres_du_systeme : 50 → 46.8 (delta:-3.2)
+- Écho du Golfe en Feu — Les Bas a modifié technologie_information : 45 → 48.4 (delta:+3.4)
+- Écho du Golfe en Feu — Les Bas a modifié energie_ressources_critiques : 50 → 46.2 (delta:-3.8)
+- Écho du Golfe en Feu — Les Bas a modifié demographie_mobilite_humaine : 40 → 37.0 (delta:-3.0)
+- Écho du Golfe en Feu — Les Bas a modifié energie_ressources_critiques : 46.2 → 58.2 (delta:+12.0)
+- Écho du Golfe en Feu — Les Bas a modifié geopolitique_conflits : 43.0 → 37.3 (delta:-5.7)
+- Écho du Golfe en Feu — Les Bas a modifié systemes_productifs_travail : 45 → 39.9 (delta:-5.1)
+- Écho du Golfe en Feu — Les Bas a modifié gouvernance_institutions : 71.4 → 77.4 (delta:+6.0)
+- Écho du Golfe en Feu — Les Bas a modifié demographie_mobilite_humaine : 37.0 → 46.0 (delta:+9.0)
+- Écho du Golfe en Feu — Les Bas a modifié climat_environnement_global : 55 → 51.4 (delta:-3.6)
+- La Grande Coupure — Accélérate a modifié technologie_information : 51.1 → 41.1 (delta:-10.0)
+- La Grande Coupure — Accélérate a modifié organisation_territoires : 40.0 → 48.0 (delta:+8.0)
+- La Grande Coupure — Accélérate a modifié valeurs_culture_tempo_sociale : 40 → 46.0 (delta:+6.0)
+- Les Enchères du Fond Émergé —  a modifié energie_ressources_critiques : 58.2 → 66.2 (delta:+8.0)
+- Les Enchères du Fond Émergé —  a modifié systeme_economique_redistribution : 29.3 → 25.900000000000002 (delta:-3.4)
+- Les Enchères du Fond Émergé —  a modifié geopolitique_conflits : 31.2 → 27.4 (delta:-3.8)
+- Les Enchères du Fond Émergé —  a modifié systemes_productifs_travail : 43.5 → 40.1 (delta:-3.4)
+- Les Enchères du Fond Émergé —  a modifié geopolitique_conflits : 27.4 → 17.4 (delta:-10.0)
+- Les Enchères du Fond Émergé —  a modifié gouvernance_institutions : 77.4 → 81.9 (delta:+4.5)
+- Les Enchères du Fond Émergé —  a modifié organisation_territoires : 48.0 → 52.2 (delta:+4.2)
+- Les Enchères du Fond Émergé —  a modifié frontieres_du_systeme : 46.8 → 50.8 (delta:+4.0)
+- Les Enchères du Fond Émergé —  a modifié technologie_information : 41.1 → 36.9 (delta:-4.2)
+- Les Enchères du Fond Émergé —  a modifié energie_ressources_critiques : 66.2 → 71.0 (delta:+4.8)
+- Les Enchères du Fond Émergé —  a modifié demographie_mobilite_humaine : 46.0 → 49.8 (delta:+3.8)
+- Les Enchères du Fond Émergé —  a modifié gouvernance_institutions : 81.9 → 88.9 (delta:+7.0)
+- Les Enchères du Fond Émergé —  a modifié organisation_territoires : 52.2 → 58.2 (delta:+6.0)
+- La Grande Convergence des Lacs a modifié demographie_mobilite_humaine : 52.0 → 34.0 (delta:-18.0)
+- La Grande Convergence des Lacs a modifié geopolitique_conflits : 11.8 → 18.6 (delta:+6.8)
+- La Grande Convergence des Lacs a modifié organisation_territoires : 58.2 → 51.400000000000006 (delta:-6.8)
+- La Grande Convergence des Lacs a modifié climat_environnement_global : 51.4 → 58.6 (delta:+7.2)
+- La Grande Convergence des Lacs a modifié systemes_productifs_travail : 42.5 → 35.3 (delta:-7.2)
+- La Grande Convergence des Lacs a modifié organisation_territoires : 51.4 → 36.4 (delta:-15.0)
+- La Grande Convergence des Lacs a modifié technologie_information : 42.2 → 36.6 (delta:-5.6)
+- La Grande Convergence des Lacs a modifié demographie_mobilite_humaine : 34.0 → 28.4 (delta:-5.6)
+- La Grande Convergence des Lacs a modifié gouvernance_institutions : 88.9 → 100 (delta:+12.0)
+- La Grande Convergence des Lacs a modifié systeme_economique_redistribution : 32.5 → 37.3 (delta:+4.8)
+- La Grande Convergence des Lacs a modifié climat_environnement_global : 58.6 → 66.6 (delta:+8.0)
+- La Grande Convergence des Lacs a modifié frontieres_du_systeme : 50.8 → 47.8 (delta:-3.0)
+- La Grande Convergence des Lacs a modifié energie_ressources_critiques : 71.0 → 81.0 (delta:+10.0)
+- L'Assemblée du Fleuve — Souver a modifié climat_environnement_global : 66.6 → 74.6 (delta:+8.0)
+- L'Assemblée du Fleuve — Souver a modifié frontieres_du_systeme : 47.8 → 44.8 (delta:-3.0)
+- L'Assemblée du Fleuve — Souver a modifié demographie_mobilite_humaine : 25.2 → 22.0 (delta:-3.2)
+- L'Assemblée du Fleuve — Souver a modifié systemes_productifs_travail : 22.1 → 19.1 (delta:-3.0)
+- L'Assemblée du Fleuve — Souver a modifié geopolitique_conflits : 14.8 → 2.8000000000000007 (delta:-12.0)
+- L'Assemblée du Fleuve — Souver a modifié systeme_economique_redistribution : 33.1 → 37.6 (delta:+4.5)
+- L'Assemblée du Fleuve — Souver a modifié gouvernance_institutions : 100 → 100 (delta:+5.4)
+- L'Assemblée du Fleuve — Souver a modifié organisation_territoires : 36.4 → 41.5 (delta:+5.1)
+- L'Assemblée du Fleuve — Souver a modifié technologie_information : 42.0 → 36.9 (delta:-5.1)
+- L'Assemblée du Fleuve — Souver a modifié energie_ressources_critiques : 81.0 → 86.7 (delta:+5.7)
+- L'Assemblée du Fleuve — Souver a modifié gouvernance_institutions : 100 → 100 (delta:+10.0)
+- L'Assemblée du Fleuve — Souver a modifié geopolitique_conflits : 2.8 → 0 (delta:-4.5)
+- L'Assemblée du Fleuve — Souver a modifié organisation_territoires : 41.5 → 49.5 (delta:+8.0)
+- Dissolution du Mouvement dans  a modifié gouvernance_institutions : 100 → 100 (delta:+5.0)
+- Dissolution du Mouvement dans  a modifié valeurs_culture_tempo_sociale : 46.0 → 54.0 (delta:+8.0)
+- Dissolution du Mouvement dans  a modifié organisation_territoires : 49.5 → 55.5 (delta:+6.0)
+- Forum d'Agadez sur la Souverai a modifié technologie_information : 44.4 → 52.4 (delta:+8.0)
+- Forum d'Agadez sur la Souverai a modifié systeme_economique_redistribution : 41.6 → 45.0 (delta:+3.4)
+- Forum d'Agadez sur la Souverai a modifié gouvernance_institutions : 100 → 100 (delta:+3.6)
+- Forum d'Agadez sur la Souverai a modifié geopolitique_conflits : 0 → 3.4 (delta:+3.4)
+- Forum d'Agadez sur la Souverai a modifié organisation_territoires : 55.5 → 58.5 (delta:+3.0)
+- Forum d'Agadez sur la Souverai a modifié systemes_productifs_travail : 22.3 → 25.900000000000002 (delta:+3.6)
+- Forum d'Agadez sur la Souverai a modifié gouvernance_institutions : 100 → 100 (delta:+10.0)
+- Forum d'Agadez sur la Souverai a modifié technologie_information : 52.4 → 56.9 (delta:+4.5)
+- Forum d'Agadez sur la Souverai a modifié organisation_territoires : 58.5 → 65.5 (delta:+7.0)
+- Forum d'Agadez sur la Souverai a modifié demographie_mobilite_humaine : 29.5 → 32.1 (delta:+2.6)
+- La Proclamation des Friches Li a modifié geopolitique_conflits : 0 → 0 (delta:-8.0)
+- La Proclamation des Friches Li a modifié systeme_economique_redistribution : 49.0 → 52.0 (delta:+3.0)
+- La Proclamation des Friches Li a modifié gouvernance_institutions : 100 → 100 (delta:+3.6)
+- La Proclamation des Friches Li a modifié organisation_territoires : 65.5 → 68.9 (delta:+3.4)
+- La Proclamation des Friches Li a modifié frontieres_du_systeme : 49.6 → 52.800000000000004 (delta:+3.2)
+- La Proclamation des Friches Li a modifié technologie_information : 59.5 → 56.1 (delta:-3.4)
+- La Proclamation des Friches Li a modifié energie_ressources_critiques : 86.7 → 90.5 (delta:+3.8)
+- La Proclamation des Friches Li a modifié demographie_mobilite_humaine : 32.1 → 35.1 (delta:+3.0)
+- La Proclamation des Friches Li a modifié valeurs_culture_tempo_sociale : 54.0 → 66.0 (delta:+12.0)
+- La Proclamation des Friches Li a modifié gouvernance_institutions : 100 → 100 (delta:+10.0)
+- La Proclamation des Friches Li a modifié geopolitique_conflits : 0 → 0 (delta:-4.5)
+- La Proclamation des Friches Li a modifié organisation_territoires : 68.9 → 82.9 (delta:+14.0)
+- La Proclamation des Friches Li a modifié systemes_productifs_travail : 28.7 → 34.3 (delta:+5.6)
+- Insurrection des Friches Vivan a modifié geopolitique_conflits : 0 → 0 (delta:-8.0)
+- Insurrection des Friches Vivan a modifié systeme_economique_redistribution : 56.0 → 59.0 (delta:+3.0)
+- Insurrection des Friches Vivan a modifié gouvernance_institutions : 100 → 100 (delta:+3.6)
+- Insurrection des Friches Vivan a modifié organisation_territoires : 82.9 → 86.30000000000001 (delta:+3.4)
+- Insurrection des Friches Vivan a modifié frontieres_du_systeme : 52.8 → 56.0 (delta:+3.2)
+- Insurrection des Friches Vivan a modifié technologie_information : 65.8 → 62.4 (delta:-3.4)
+- Insurrection des Friches Vivan a modifié energie_ressources_critiques : 90.5 → 94.3 (delta:+3.8)
+- Insurrection des Friches Vivan a modifié demographie_mobilite_humaine : 40.3 → 43.3 (delta:+3.0)
+- Insurrection des Friches Vivan a modifié valeurs_culture_tempo_sociale : 66.0 → 78.0 (delta:+12.0)
+- Insurrection des Friches Vivan a modifié gouvernance_institutions : 100 → 100 (delta:+10.0)
+- Insurrection des Friches Vivan a modifié geopolitique_conflits : 0 → 0 (delta:-4.5)
+- Insurrection des Friches Vivan a modifié technologie_information : 66.9 → 73.9 (delta:+7.0)
+- Insurrection des Friches Vivan a modifié systemes_productifs_travail : 34.3 → 37.4 (delta:+3.1)
+- Le Procès Communautaire de Van a modifié valeurs_culture_tempo_sociale : 78.0 → 80.0 (delta:+2.0)
+- Le Procès Communautaire de Van a modifié gouvernance_institutions : 100 → 100 (delta:+1.0)
+- Grande Inondation des Veilleur a modifié organisation_territoires : 88.9 → 90.2 (delta:+1.3)
+- Grande Inondation des Veilleur a modifié geopolitique_conflits : 3.0 → 2.4 (delta:-0.6)
+- Grande Inondation des Veilleur a modifié technologie_information : 73.9 → 74.4 (delta:+0.5)
+- Grande Inondation des Veilleur a modifié demographie_mobilite_humaine : 43.3 → 43.8 (delta:+0.5)
+- Grande Inondation des Veilleur a modifié systemes_productifs_travail : 37.4 → 37.9 (delta:+0.5)
+- Grande Inondation des Veilleur a modifié climat_environnement_global : 74.6 → 75.1 (delta:+0.5)
+- Grande Inondation des Veilleur a modifié frontieres_du_systeme : 56.0 → 55.8 (delta:-0.2)
+- Grande Inondation des Veilleur a modifié demographie_mobilite_humaine : 43.6 → 46.6 (delta:+3.0)
+- Grande Inondation des Veilleur a modifié organisation_territoires : 90.2 → 91.3 (delta:+1.1)
+- Grande Inondation des Veilleur a modifié climat_environnement_global : 75.1 → 73.89999999999999 (delta:-1.2)
+- Grande Inondation des Veilleur a modifié systeme_economique_redistribution : 66.0 → 67.3 (delta:+1.3)
+- Grande Inondation des Veilleur a modifié gouvernance_institutions : 100 → 100 (delta:+0.5)
+- Grande Inondation des Veilleur a modifié energie_ressources_critiques : 94.3 → 93.7 (delta:-0.6)
+
+## GÉOGRAPHIE DE CE MONDE
+
+Ces zones forment l'espace géopolitique canonique de ce monde.
+Si l'article mentionne un lieu, utilise en priorité un nom de cette liste plutôt que d'en inventer un nouveau.
+
+**Ancrage de cet article**
+- Alliance des Biotechnologies Communautaires du Sahel (ABCS) : zone `Ligue des Cités du Sahel Numérique` — Sahel (Niamey-Territoire mentionné, réseau sahélien) (region)
+- Les Veilleurs des Eaux du Congo : zone `Congo — Bassin du Fleuve` — bassin du Congo (region)
+- Consórcio Paulistano de Gestão Algorítmica (CPGA) : zone `São Paulo — Fragments Algorithmiques` — São Paulo (ville)
+- La Ronde des Savoirs : zone `Université Nomade` — Université Nomade — Bioterritoires d'Amérique du Nord (infrastructure)
+- Pacte Amazônia Viva : zone `Amazonie — Pacte Amazônia Viva` — Amazonie — Pacte Amazônia Viva (region)
+- Confédération des Bassins Vivants : zone `Confédération des Bassins Vivants` — Confédération des Bassins Vivants (infrastructure)
+
+**Amazonie — Pacte Amazônia Viva** [emergent — niveau 1]
+Confédération souple de nations autochtones, de collectifs scientifiques et de conseils de bassin versant amazoniens exerçant une souveraineté écologique de facto sur plusieurs millions de kilomètres carrés de forêt régénérée. Fondée lors de la grande confluence de Manaus en 2041, elle ne négocie plus avec des États-nations mais tisse des accords de réciprocité avec d'autres réseaux territoriaux continentaux, incarnant une diplomatie du vivant horizontale dont l'autorité repose sur la légitimité de garde — ceux qui ont survécu à l'effondrement en restaurant les sols et maintenant les cycles hydrologiques.
+*Tensions internes* : Certaines nations autochtones membres refusent de partager leurs cartographies sacrées avec les collectifs scientifiques, craignant une réappropriation culturelle ; enclaves extractivistes résiduelles grignotant les marges ; question de savoir si le Pacte peut tenir son horizontalité face à la pression des consortiums industriels de l'eau sans se centraliser en État défensif.
+*Alliés* : Chiapas et Bioterritoires Mésoaméricains, Confédération des Communs de l'Arc Septentrional
+*Rivaux* : Enclaves Extractivistes et États Résiduels
+
+**Bioterritoires d'Amérique du Nord** [fragmenté — niveau 1]
+Anciens territoires américains et canadiens dissous en bioterritoires autonomes après que le mouvement communiste américain a voté sa propre dissolution en 2048 et que la notion même d'élection présidentielle nationale a été abandonnée avant 2055. Le vocabulaire politique s'est relocalisé autour des 'gardiens de territoire' et des assemblées bioterrititoriales. Les principes de communs et de redistribution locale se sont intégrés organiquement dans la gouvernance locale.
+*Tensions internes* : Processus de dissolution institutionnelle encore inachevé dans certaines zones ; résistance de fragments d'États résiduels ; coexistence de bioterritoires avancés et de zones encore dépendantes des anciennes structures.
+*Rivaux* : Enclaves Extractivistes et États Résiduels
+
+**Congo — Bassin du Fleuve** [fragmenté — niveau 1]
+Réseau de communautés locales gérant collectivement les ressources du bassin du Congo. Les anciennes structures étatiques ont cédé la place à des assemblées de bassin versant et des coopératives minières éthiques.
+*Tensions internes* : Conflits entre groupes armés résiduels et communautés locales, pression des enclaves extractivistes.
+*Alliés* : Amazonie — Pacte Amazônia Viva
+*Rivaux* : Enclaves Extractivistes et États Résiduels
+
+**Europe Occidentale Reconstituée** [fragmenté — niveau 1]
+Mosaïque de bioterritoires couvrant l'espace d'Europe de l'Ouest, organisés autour de bassins versants (vallée de l'Ourthe, bassin rhénan, Apennins restaurés, Massif Central, Cévennes, Rhône). Cœur du réseau Terrafond des Bassins et de la Confédération des Racines Vivantes, cette zone est l'épicentre du projet éco-communaliste avec des infrastructures institutionnelles denses (assemblées, coopératives, trame Mnemos). Les fragments d'États résiduels y subsistent en tension avec les nouvelles structures communales.
+*Tensions internes* : Fracture entre autonomistes durs et confédéralistes pragmatiques ; communautés repliées sur l'appartenance ethnique ou géographique trahissant l'universalisme originel ; pression des consortiums industriels et des enclaves extractivistes ; question non résolue de l'accueil des populations déplacées des zones désertifiées.
+*Alliés* : Arc Septentrional, Maghreb Méditerranéen
+*Rivaux* : Enclaves Extractivistes et États Résiduels
+
+**Ligue des Cités du Sahel Numérique** [emergent — niveau 1]
+Réseau de dix-huit villes sahéliennes ayant développé une infrastructure numérique et énergétique totalement hors-grille, alimentée par solaire distribué et régie par des protocoles open-source (SahelOS), déployés dans quarante-trois communautés de Dakar à Tamanrasset. La Tente des Protocoles, assemblée nomade itinérante, symbolise l'absence de centre gouvernant. Après le Forum d'Agadez de 2062, la Ligue est devenue la référence mondiale de l'architecture informationnelle sobre, exportée vers l'Asie du Sud-Est et l'Amérique andine.
+*Tensions internes* : Ironie croissante : à mesure que le modèle s'exporte, la Ligue commence à dicter des conditions d'adhésion et à peser sur les choix technologiques de territoires lointains, reproduisant la logique hégémonique qu'elle prétendait abolir ; asymétries invisibles entre cités fondatrices et métropoles concentrant ingénieurs et serveurs ; dépendances techniques croissantes des territoires du Maghreb adoptant SahelOS ; rumeurs d'infiltration et de sabotage des nœuds périphériques par des blocs fermés.
+*Alliés* : Maghreb Méditerranéen, Europe Occidentale Reconstituée
+*Rivaux* : Enclaves Extractivistes et États Résiduels
+
+**São Paulo — Fragments Algorithmiques** [fragmenté — niveau 1]
+Mégalopole de vingt millions d'âmes dont le grand système d'allocation algorithmique centralisé (APD) a été démembré après l'effondrement des réseaux centraux dans les années 2040. Ce qui subsiste est une constellation de modules locaux déconnectés, repris en main par des assemblées territoriales qui les ont désossés, partiellement réécrits et font tourner sur des serveurs communautaires à faible consommation. En 2098, São Paulo est l'archétype de la ville post-industrielle ni pleinement communaliste ni entièrement effondrée, où coexistent des modules algorithmiques généreux et des fragments servant des intérêts locaux clientélistes.
+*Tensions internes* : Question de la légitimité de modification des paramètres algorithmiques : assemblées organisées revendiquant l'audit permanent mais manquant de compétences techniques, collectifs de techniciens sobres ayant le savoir sans le mandat démocratique ; opérateurs d'IA propriétaires proposant de 'réunifier' les fragments en échange d'accès aux données ; biais historiques du système original favorisant les zones mieux dotées jamais vraiment effacés.
+*Alliés* : Nordeste Brésilien — Frente Sertão Livre
+*Rivaux* : Enclaves Extractivistes et États Résiduels
+
+**Confédération des Bassins Vivants** [fragmenté — niveau 2] (sous Europe Occidentale Reconstituée)
+Principal organe de coordination entre les communs territoriaux autonomes d'Europe occidentale, sans siège fixe ni drapeau unique. Se réunit deux fois l'an sous des tentes modulaires ornées des totems végétaux de chaque territoire membre. Ses délégués sont tirés au sort parmi les conseils de communs, renouvelés par rotation saisonnière. Ses protocoles d'urgence hydrique ont évité trois conflits armés entre bassins rivaux depuis 2071.
+*Tensions internes* : Fracture vive entre 'autonomistes durs' refusant toute supra-autorité et 'confédéralistes pragmatiques' plaidant pour la mutualisation des risques climatiques ; certains bassins membres enrichis exercent une influence disproportionnée recréant de facto des rapports de domination ; question non résolue de l'accueil des populations déplacées des zones désertifiées.
+*Alliés* : Arc Septentrional, Maghreb Méditerranéen
+*Rivaux* : Enclaves Extractivistes et États Résiduels
+
+**Université Nomade** [emergent — niveau 2] (sous Bioterritoires d'Amérique du Nord)
+Institution de formation itinérante formant les Gardiens du Territoire nord-américains dans les bioterritoires, aux côtés des transmissions par les anciens issus des traditions autochtones. Quatre des sept Gardiens de la Grande-Vallée en sont issus. Elle circule entre les bioterritoires, adaptant ses contenus aux réalités locales, et constitue l'un des rares liens de coordination éducative entre les communautés fragmentées du continent.
+*Tensions internes* : Tension entre les savoirs transmis par l'Université Nomade — plus formalisés, parfois influencés par les protocoles numériques — et la transmission traditionnelle autochtone par les anciens ; question de la légitimité de son autorité pédagogique dans des communautés souveraines.
+*Alliés* : La Grande-Vallée
+
+**Autres zones de ce monde** (contexte de fond)
+
+- **Afghanistan — Hauts Plateaux Communautaires** : Réseau de communautés montagnardes organisées autour de la gestion collective de...
+- **Afrique du Sud — Bioterritoire du Cap** : Ancien État sud-africain transformé en réseau de bioterritoires autonomes, intég...
+- **Arc Septentrional** : Réseau de bioterritoires post-étatiques couvrant l'espace fenno-scandinave et ba...
+- **Archipel Nusantara Autonome** : Confédération décentralisée d'îles organisées en bioterritoires, héritière des l...
+- **Australie Aborigène Reconstituée** : Territoire organisé autour des communautés autochtones et des bioterritoires, av...
+- **Bassin Danubien Éco-Communaliste** : Réseau de communautés autonomes organisées autour du bassin du Danube, axées sur...
+- **Bengale Écologique** : Territoire organisé en communautés fluviales et deltaïques, spécialisées dans l'...
+- **Bioterritoires Anatoliens** : Territoire de la péninsule anatolienne recomposé après avoir absorbé une vague m...
+- **Birmanie — Forêts et Deltas Communautaires** : Réseau de communautés organisées autour de la gestion des forêts tropicales, des...
+- **Caraïbes Insulaires Autonomes** : Réseau d'îles caribéennes organisées en bioterritoires autonomes, axées sur la r...
+- **Chiapas et Bioterritoires Mésoaméricains** : Zone d'ancrage fort du mouvement éco-communaliste mondial, héritière des pratiqu...
+- **Chili — Cordillère et Pacifique** : Réseau de communautés autonomes organisées autour des écosystèmes andins et côti...
+- **Corne de l'Afrique — Territoires Nomades et Côtiers** : Réseau de communautés nomades, pastorales et côtières organisées autour de la ge...
+- **Corée du Nord — Bioterritoires Démantelés** : Ancien État centralisé transformé en réseau de communautés locales après l'effon...
+- **Corée — Péninsule Verte** : Ancienne Corée du Sud transformée en réseau de bioterritoires autonomes, axés su...
+- **Delta du Mékong Communautaire** : Réseau de communautés agricoles et fluviales organisées autour de la gestion col...
+- **Delta et Savanes Nigérianes** : Réseau de communautés éco-communalistes dans le delta du Niger et les savanes, e...
+- **Enclaves Extractivistes et États Résiduels** : Ensemble hétérogène de fragments d'États centraux résiduels, d'enclaves technolo...
+- **Inde — Bassins Sacrés** : Confédération de bioterritoires organisés autour des grands fleuves indiens (Gan...
+- **Japon — Archipel Résilient** : Réseau d'îles autonomes organisées autour de la gestion collective des ressource...
+- **Madagascar — Île de la Biodiversité Autonome** : Bioterritoire insulaire organisé autour de la protection de sa biodiversité uniq...
+- **Maghreb Méditerranéen** : Zone de bassins versants méditerranéens intégrée au Réseau Terrafond des Bassins...
+- **Micronésie Insulaire** : Réseau d'atolls et d'îles micronésiennes organisées en communautés autonomes, sp...
+- **Mozambique — Côte de l'Océan Indien** : Réseau de communautés côtières et insulaires gérant collectivement les ressource...
+- **Mélanésie Autonome** : Confédération de communautés mélanésiennes organisées autour de la gestion colle...
+- **Namibie — Désert et Côtes Communautaires** : Réseau de communautés adaptées aux écosystèmes désertiques et côtiers, spécialis...
+- **Nordeste Brésilien — Frente Sertão Livre** : Réseau de communautés semi-arides du Nordeste brésilien organisées en coopérativ...
+- **Pampas et Patagonie Communautaires** : Réseau de communautés rurales et urbaines organisées autour de la gestion collec...
+- **Polynésie Reconstituée** : Bioterritoire insulaire reconstitué, acteur à part entière du réseau global des ...
+- **Proche-Orient en Crise** : Zone déstabilisée par le conflit israélo-iranien de 2027 qui a détruit les infra...
+- **Rift Est-Africain** : Confédération de bioterritoires organisés autour du Rift est-africain, combinant...
+- **Sibérie et Steppes Autonomes** : Vaste réseau de communautés autonomes en Sibérie et dans les steppes eurasiennes...
+- **Sri Lanka — Île Émeraude** : Bioterritoire insulaire organisé autour de la gestion collective des forêts trop...
+- **Steppes Eurasatiques Autonomes** : Réseau de communautés nomades et sédentaires organisées autour de la gestion col...
+- **Steppes Mongoles Autonomes** : Confédération de tribus nomades et de communautés pastorales organisées autour d...
+- **Éthiopie — Hautes Terres Vertes** : Réseau de communautés rurales et urbaines organisées autour de l'agroécologie et...
+- **Agadez** (sous Ligue des Cités du Sahel Numérique) : Ville hôte du Forum de souveraineté numérique d'octobre 2062 — dix jours de 'con...
+- **Apennins Restaurés** (sous Europe Occidentale Reconstituée) : Chaîne montagneuse d'Italie devenue l'un des tronçons emblématiques de la Tresse...
+- **Aquifères Transfrontaliers du Maghreb** (sous Maghreb Méditerranéen) : Nappes phréatiques transfrontalières du Maghreb constituant un enjeu stratégique...
+- **Archives Communautaires de Polynésie** (sous Polynésie Reconstituée) : Système d'archivage communautaire hybride — cahiers manuscrits numérisés une foi...
+- **Bassins Versants Méditerranéens Anatoliens** (sous Bioterritoires Anatoliens) : Bassins versants de la façade méditerranéenne et égéenne de l'Anatolie, espaces ...
+- **Bioterritoires de l'Atlantique Nord** (sous Bioterritoires d'Amérique du Nord) : Ensemble de bioterritoires côtiers de la façade atlantique nord-américaine, parm...
+- **Brasilândia** (sous São Paulo — Fragments Algorithmiques) : Quartier périphérique de São Paulo où un panneau solaire alimente un serveur gra...
+- **Chiapas** (sous Chiapas et Bioterritoires Mésoaméricains) : Région hôte de la session plénière de l'Assemblée des Territoires d'octobre 2098...
+- **Confédération des Communs de l'Arc Septentrional** (sous Arc Septentrional) : Organisation post-étatique structurant les communs des États baltiques et nordiq...
+- **Confédération des Friches Vivantes** (sous Bioterritoires d'Amérique du Nord) : Héritière des premières communes du Rust Belt américain, la Confédération des Fr...
+- **Corridors Extractivistes Résiduels** (sous Enclaves Extractivistes et États Résiduels) : Réseau de corridors logistiques et extractivistes qui persistent dans les inters...
+- **Corridors Migratoires Anatoliens** (sous Bioterritoires Anatoliens) : Axes de transit des flux migratoires massifs issus du Proche-Orient depuis le co...
+- **Couloirs Forestiers du Bassin Rhénan** (sous Europe Occidentale Reconstituée) : Corridors écologiques de la Tresse Verte reliant les communautés de l'ancien bas...
+- **Cévennes Intérieure** (sous Europe Occidentale Reconstituée) : Zone interstice aux lisières des chemins forestiers entretenus et des panneaux d...
+- **Fortaleza** (sous Nordeste Brésilien — Frente Sertão Livre) : Principal nœud de circulation des délégués du Frente Sertão Livre, point de dépa...
+- **Grande Confluence de Manaus** (sous Amazonie — Pacte Amazônia Viva) : Site fondateur du Pacte Amazônia Viva lors de la grande confluence de 2041, et l...
+- **Guarulhos — Module Capturé** (sous São Paulo — Fragments Algorithmiques) : Municípion périurbain de São Paulo où une faction locale a modifié en silence le...
+- **Kalaallit Nunaat — Fonds des Terres Émergées** (sous Arc Septentrional) : Territoire groenlandais devenu indépendant de facto en 2041, dont le Fonds des T...
+- **La Grande-Vallée** (sous Bioterritoires d'Amérique du Nord) : Bioterritoire nord-américain où opère une coalition de Gardiens du Territoire — ...
+- **La Tresse Verte** (sous Europe Occidentale Reconstituée) : Infrastructure écologique distribuée née dans les années 2040 de l'accumulation ...
+- **Le Fil Commun** (sous Europe Occidentale Reconstituée) : Réseau de journalisme d'investigation décentralisé né des cendres des grandes pl...
+- **Massif Central** (sous Europe Occidentale Reconstituée) : Lieu du grand rassemblement saisonnier de la Confédération des Racines Vivantes,...
+- **Ouagadougou** (sous Ligue des Cités du Sahel Numérique) : Métropole fondatrice et plus grande cité de la Ligue des Cités du Sahel Numériqu...
+- **Ports du Golfe** (sous Proche-Orient en Crise) : Infrastructures portuaires du Golfe Persique détruites ou mises hors service lor...
+- **Réseau Terrafond des Bassins** (sous Europe Occidentale Reconstituée) : Réseau de plus de 340 coopératives sur une douzaine de bassins versants d'Europe...
+- **Réseau des Assemblées de Bassin Fennoscandien** (sous Arc Septentrional) : Structure de coordination régionale de l'Arc Septentrional, articulant souverain...
+- **Tampere** (sous Arc Septentrional) : Ville de Finlande devenue lieu fondateur du mouvement éco-communaliste fenno-sca...
+- **Trame Mnemos** (sous Europe Occidentale Reconstituée) : Épine dorsale informationnelle des communautés éco-communalistes, reliant des mi...
+- **Vallée de l'Ourthe** (sous Europe Occidentale Reconstituée) : Berceau historique du Réseau Terrafond des Bassins, reconnaissable à ses silos p...
+- **Vallée du Rhône Reconstituée** (sous Europe Occidentale Reconstituée) : Bioterritoire organisé autour du bassin versant du Rhône reconstitué, connu pour...
+- **Zones Climatiquement Dégradées du Maghreb** (sous Maghreb Méditerranéen) : Territoires du Maghreb intérieur frappés par une désertification avancée et peup...
+- **Zones Post-Industrielles d'Eurasie Centrale** (sous Enclaves Extractivistes et États Résiduels) : Extension de la Confédération des Friches Vivantes vers les zones post-industrie...
+- **Corrèze-Haute — Nœud 47** (sous Massif Central) : Hameau abritant dans une ancienne grange reconvertie le nœud 47 de 'Mémoire des ...
+- **Les Sillons de la Cévenne** (sous Cévennes Intérieure) : Longues bâtisses mi-enterrées tapissées de graines et de schémas techniques, cœu...
+- **Marges Urbaines des Racines Vivantes** (sous Massif Central) : Zones périurbaines et urbaines dégradées où subsistent quelques cellules de la C...
+- **Mémoire des Terres** (sous Trame Mnemos) : Héritière fragmentée de Prisme Global après l'effondrement des datacenters europ...
+- **Nuuk — Maison longue du Fonds** (sous Kalaallit Nunaat — Fonds des Terres Émergées) : Siège du Fonds des Terres Émergées du Kalaallit Nunaat, bâtiment en pierre local...
+- **Pittsburgh Reconverti** (sous Confédération des Friches Vivantes) : Ancienne ville industrielle reconvertie en commune emblématique de la Confédérat...
+- **Plateaux Désertés du Massif Central** (sous Massif Central) : Zones de repli des Veilleurs du Seuil dans leurs Sillons semi-enterrés, ces long...
+- **Session Plénière du Chiapas — Octobre 2098** (sous Chiapas) : Site et événement de la session plénière itinérante de l'Assemblée des Territoir...
+- **Site du Procès Van Derburgh** (sous Vallée du Rhône Reconstituée) : Lieu de la délibération communautaire exemplaire d'automne 2078 concernant Chris...
+- **Zone Mémoire de la Grande Coupure** (sous Trame Mnemos) : Ensemble de nœuds de la Trame Mnemos fondés dans l'urgence des semaines suivant ...
+- **Les Sillons du Plateau** (sous Plateaux Désertés du Massif Central) : Longues bâtisses semi-enterrées des Veilleurs du Seuil dans les plateaux déserté...
+
+## ÉTAT DES VARIABLES EN 2098
+
+### Variables clés (détail)
+
+**sante_biotechnologies** [VARIABLE PRINCIPALE]
+- Niveau : 55/100 | Volatilité : 30/100
+- État : Médecine communautaire sobre et résiliente, combinant savoirs traditionnels, biotechnologies de base et prévention écologique dans des systèmes de santé localisés.
+- Dynamiques : médecine communautaire et préventive | valorisation des savoirs traditionnels | biotechnologies sobres et réparables
+- Sous-dynamiques : longevite_humaine (up) | pandemies_globales (up) | biotechnologies_avancees (up) | systemes_de_sante (unstable) | sante_numerique_ia_medicale (up)
+- Indicateurs à ancrer : esperance_vie, adoption_ia_medicale, investissements_biotech
+
+**demographie_mobilite_humaine** [VARIABLE PRINCIPALE]
+- Niveau : 46.6/100 | Volatilité : 35/100
+- État : Réduction globale de la mobilité internationale au profit de la relocalisation des populations et stabilisation territoriale par proximité et autonomie locale.
+- Dynamiques : relocalisation des populations | baisse des migrations internationales | stabilisation communautaire locale
+- Sous-dynamiques : population_globale (stable) | migrations_internationales (up) | urbanisation (unstable) | structure_familiale (unstable) | mobilite_humaine_globale (up)
+- Indicateurs à ancrer : flux migratoires internationaux, taux d’urbanisation, vieillissement démographique, croissance démographique régionale
+
+**gouvernance_institutions** [VARIABLE PRINCIPALE]
+- Niveau : 100/100 | Volatilité : 25/100
+- État : Gouvernance décentralisée, participative et fortement localisée, reposant sur des structures coopératives et des réseaux régionaux de coordination souple.
+- Dynamiques : décentralisation institutionnelle | gouvernance participative | autonomie locale renforcée
+- Sous-dynamiques : etat_nation (down) | institutions_internationales (unstable) | droit_et_regulation (up) | administration_publique (up) | gouvernance_algorithmique (up)
+- Indicateurs à ancrer : confiance institutionnelle, stabilité politique
+
+**organisation_territoires** [VARIABLE PILOTE]
+- Niveau : 91.3/100 | Volatilité : 30/100
+- État : Relocalisation territoriale forte avec densité modérée, circuits courts et réorganisation écologique des espaces humains.
+- Dynamiques : relocalisation des activités | densification modérée | rééquilibrage rural-urbain
+- Sous-dynamiques : megapoles_globales (up) | zones_rurales_peripheriques (unstable) | infrastructures_transport (up) | urbanisation_intelligente (up) | localisme_economique (up)
+- Indicateurs à ancrer : densité urbaine, saturation des infrastructures
+
+**climat_environnement_global** [VARIABLE PILOTE]
+- Niveau : 73.9/100 | Volatilité : 45/100
+- État : Amélioration écologique locale avec stabilisation partielle par relocalisation et baisse des pressions globales.
+- Sous-dynamiques : rechauffement_climatique_global (up) | evenements_extremes (up) | biodiversite_effondrement (down) | cycles_de_l_eau (unstable) | pollution_globale (up)
+- Indicateurs à ancrer : température moyenne globale ↑, fréquence événements extrêmes ↑, perte biodiversité ↑
+
+**energie_ressources_critiques** [VARIABLE PILOTE]
+- Niveau : 93.7/100 | Volatilité : 35/100
+- État : Réduction de la pression énergétique globale via relocalisation, sobriété systémique et optimisation locale des ressources.
+- Dynamiques : relocalisation des systèmes productifs | sobriété énergétique | circularité territoriale
+- Sous-dynamiques : systemes_energetiques (up) | matieres_premieres_critiques (up) | systemes_alimentaires (unstable) | chaines_approvisionnement (up) | infrastructures_energetiques (up)
+- Indicateurs à ancrer : demande_energie, prix_energie, volatilite_marches
+
+### Autres variables (résumé)
+
+- **systemes_productifs_travail** [39.5] : Recomposition locale des systèmes productifs avec réduction de l’industrialisation lourde, montée de...
+- **technologie_information** [75.0] : Décentralisation des infrastructures informationnelles vers des réseaux locaux, ouverts et sobres, a...
+- **systeme_economique_redistribution** [67.3] : Économies locales relocalisées avec circuits courts, monnaies territoriales et systèmes d'échange no...
+- **geopolitique_conflits** [1.8] : Réduction significative des conflits internationaux au profit de structures locales coopératives et ...
+- **valeurs_culture_tempo_sociale** [80.0] : Recomposition locale des systèmes de valeurs autour de communautés restreintes, avec ralentissement ...
+- **frontieres_du_systeme** [55.8] : L’expansion spatiale est principalement scientifique, coopérative et orientée vers la connaissance e...
+
+## TENSIONS SYSTÉMIQUES ACTIVES
+
+Ces tensions structurent la réalité de ce monde.
+Elles doivent transparaître dans le ton et les faits de l'article.
+
+**Cascades critiques**
+- gouvernance_institutions renforce geopolitique_conflits (poids:0.9 lag:1 cycles)
+
+**Tensions propres à cette thématique**
+- gouvernance_institutions [75] → technologie_information [45] : renforcement (reinforcing)
+- technologie_information [45] → gouvernance_institutions [75] : renforcement (reinforcing)
+- climat_environnement_global [55] → demographie_mobilite_humaine [40] : pression négative (cascade)
+- demographie_mobilite_humaine [40] → climat_environnement_global [55] : pression négative (cascade)
+
+## TRAJECTOIRE 2025 → 2098
+
+Jalons clés qui expliquent comment ce monde s'est construit.
+Tu peux y faire référence dans l'article comme à des événements passés connus.
+
+**Événements injectés** [CUSTOM — font partie de ce monde]
+- [automne 2027] Écho du Golfe en Feu — Les Bassins sans Pétrole :
+  → Automne 2027. Les frappes israéliennes sur les infrastructures pétrolières et nucléaires iraniennes,...
+  → Conséquences : Le choc accélère paradoxalement la transition bioterritoriale : les unités local...
+  → Acteurs : collectifs_du_seuil_eco_communalism, coalition_vivant_eco_communalism, reseau_mnemos_eco_communalism, voix_du_dehors_eco_communalism, federation_communs_territoriaux_eco_communalism
+- [14 mars 2040] La Grande Coupure — Accélérateur de Localisation Numérique :
+  → "La Grande Coupure" de 2040 révèle brutalement ce que beaucoup sentaient confusément — l'architectur...
+  → Conséquences : Accélération massive du déploiement des réseaux mesh locaux. Réduction progressi...
+- [automne 2041] Les Enchères du Fond Émergé — Kalaallit Nunaat vend ses terres à qui ? :
+  → Nuuk, octobre 2041 — Les écrans de la Trame Mnemos s'emballent pendant soixante-douze heures : le Fo...
+  → Conséquences : La vente partielle se conclut dans l'ambiguïté : deux lots sont attribués à des ...
+  → Acteurs : kalaallit_nunaat_sovereign_fund_eco_communalism, confederation_des_communs_de_l_arc_septentrional_eco_communalism, consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism, coalition_vivant_eco_communalism, assemblee_territoires_eco_communalism, assemblees_bioterritoriales_regionales_eco_communalism, reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism, voix_du_dehors_eco_communalism, reseau_mnemos_eco_communalism
+- [été 2044] La Grande Convergence des Lacs — Exode du Midwest Carbonisé :
+  → L'été 2044 restera gravé comme l'été de la Fonte Humaine. Des colonnes interminables de familles du ...
+  → Conséquences : L'afflux massif redessine durablement la géographie des communs lacustres : de n...
+  → Acteurs : mouvement_des_communes_du_rust_belt_eco_communalism, assemblee_territoires_eco_communalism, assemblees_de_bassin_versant_eco_communalism, assemblees_bioterritoriales_regionales_eco_communalism, cooperatives_d_habitat_regeneratif_eco_communalism, trame_bioclimatique_eco_communalism, cartels_de_narration_de_penurie_eco_communalism, communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism, cercles_de_mediation_territoriale_intercommunautaire_eco_communalism, brigades_de_restauration_ecologique_eco_communalism, mutuelles_de_sante_territoriales_eco_communalism, fragments_d_etats_centraux_residuels_eco_communalism
+- [saison sèche 2047, août-septembre] L'Assemblée du Fleuve — Souveraineté ou Fracture :
+  → Août 2047, Belém. Les tambours des communautés du Xingu résonnent dans les ruelles inondées de la vi...
+  → Conséquences : L'événement cristallise la tension fondamentale du modèle éco-communaliste : les...
+  → Acteurs : consortium_amazonia_viva_eco_communalism, coalition_vivant_eco_communalism, collectifs_de_geo_observateurs_citoyens_eco_communalism, brigades_de_restauration_ecologique_eco_communalism, enclaves_extractivistes_residuelles_des_corridors_eco_communalism, assemblee_territoires_eco_communalism, assemblees_bioterritoriales_regionales_eco_communalism, archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism, voix_du_dehors_eco_communalism, communs_secessionnistes_hors_coordination_eco_communalism, fragments_d_etats_centraux_residuels_eco_communalism
+- [2048] Dissolution du Mouvement dans les Assemblées Locales :
+  → En 2048, le mouvement communiste américain vote sa propre dissolution en tant que parti national. Se...
+  → Conséquences : Renforcement des assemblées locales dans les anciens États américains. Le vocabu...
+- [automne 2062] Forum d'Agadez sur la Souveraineté Numérique des Périphéries :
+  → Agadez, novembre 2062 — Sous les voûtes d'un caravansérail reconverti en espace délibératif solaire,...
+  → Conséquences : La Charte d'Agadez devient la référence juridique et technique pour les communs ...
+  → Acteurs : ligue_des_cites_du_sahel_numerique_eco_communalism, reseau_mnemos_eco_communalism, archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism, assemblees_bioterritoriales_regionales_eco_communalism, consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism, plateformes_centralisees_de_reagregation_globale_eco_communalism, collectifs_de_techniciens_sobres_eco_communalism, voix_du_dehors_eco_communalism
+- [automne 2063] La Proclamation des Friches Libres : Detroit, Cleveland, Pittsburgh hors-algorithme :
+  → À l'automne 2063, des milliers de personnes convergent vers les anciennes zones industrielles sinist...
+  → Conséquences : L'événement devient le catalyseur d'une vague d'occupations similaires en Amériq...
+  → Acteurs : mouvement_des_communes_du_rust_belt_eco_communalism, fragments_d_etats_centraux_residuels_eco_communalism, collectifs_de_techniciens_sobres_eco_communalism, cartels_de_narration_de_penurie_eco_communalism, voix_du_dehors_eco_communalism, reseaux_de_radio_communautaire_basse_consommation_eco_communalism, reseau_mnemos_eco_communalism, communs_secessionnistes_hors_coordination_eco_communalism, archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
+- [automne 2063] Insurrection des Friches Vivantes — L'Automne des Zones Libres :
+  → Les cheminées éteintes de Pittsburgh flamboient d'une lumière différente en ce mois d'octobre 2063 :...
+  → Conséquences : L'échec relatif de la répression numérique fissure durablement la légitimité des...
+  → Acteurs : mouvement_des_communes_du_rust_belt_eco_communalism, fragments_d_etats_centraux_residuels_eco_communalism, reseau_mnemos_eco_communalism, voix_du_dehors_eco_communalism, assemblees_cooperatives_regionales_eco_communalism, archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism, reseaux_de_radio_communautaire_basse_consommation_eco_communalism, agro_conglomerats_des_enclaves_technologiques_eco_communalism, factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism
+- [automne 2078] Le Procès Communautaire de Van Derburgh :
+  → Chris van Derburgh, 67 ans, membre de l'assemblée de la Vallée-du-Rhône Reconstituée, est convoqué d...
+  → Conséquences : Après trois sessions de délibération, la communauté vote pour le "droit à la mém...
+  → Acteurs : le_temoin_eco_communalism, assemblee_territoires_eco_communalism
+- [saison des pluies 2096] Grande Inondation des Veilleurs :
+  → Les eaux du Congo ont déferlé avec une violence inédite depuis trois décennies, submergeant les berg...
+  → Conséquences : Cette crue a révélé la vulnérabilité des communs face aux chocs climatiques extr...
+  → Acteurs : les_veilleurs_du_fleuve_eco_communalism, assemblees_de_bassin_versant_eco_communalism, brigades_de_restauration_ecologique_eco_communalism, collectifs_de_geo_observateurs_citoyens_eco_communalism, reseaux_de_radio_communautaire_basse_consommation_eco_communalism, agro_conglomerats_des_enclaves_technologiques_eco_communalism, le_registre_du_fleuve_eco_communalism
+
+**Événements historiques clés** (datés — à mentionner naturellement)
+- [2036-2055] charte bioterritoriale pour des services assurés par des humains :
+  → systemes productifs travail : rejet de la robotisation des services au profit du lien humain
+- [2037-2055] renaissance des pratiques autochtones de brûlage dirigé :
+  → climat environnement global : gestion communautaire du feu et brûlages dirigés
+- [2038-2057] charte d'Agadez sur la souveraineté hydrique communautaire :
+  → systemes productifs travail : communautés locales gèrent l'eau via chartes bioterritoriales solaires
+- [2039-2058] charte de N'Djamena pour l'autonomie hydrique communautaire :
+  → energie ressources critiques : bioterritoires gèrent localement leurs pompages solaires
+- [2039-2058] mouvement de revalorisation des savoir-faire intermédiaires bioterritoriaux :
+  → systemes productifs travail : renaissance des métiers intermédiaires sous forme de savoir-faire locaux essentiels
+- [2040-2059] mouvement de retour aux pratiques agricoles low-tech bioterritoriales :
+  → systemes productifs travail : réduction de l'automatisation agricole au profit de la permaculture locale
+
+**Signaux complémentaires** (évolutions sectorielles — à mentionner si pertinent)
+- [2040-2058] mouvement des maisons de santé communautaires :
+  → sante biotechnologies : systèmes de santé communautaires sobres et équitables
+- [2043-2062] mouvement de déconnexion algorithmique communautaire :
+  → gouvernance institutions : rejet du tout-algorithmique et retour aux assemblées délibératives
+
+**Ruptures structurantes** (contexte de fond)
+- [TEC] villes autonomes pilotées par IA
+- [SYS] désorganisation territoriale globale
+- [TEC] captation massive CO2 atmosphérique
+- [TEC] geoengineering climatique global
+
+## ENTITÉS CANONIQUES DE CE MONDE
+
+Ces entités existent dans ce monde avec ces descriptions précises.
+Utilise leurs noms exacts. Tu peux les mentionner, les citer, les impliquer dans les faits.
+Ne les contredis pas, ne les renomme pas.
+
+**Alliance des Biotechnologies Communautaires du Sahel (ABCS)** [TRANSFORMÉ] [impact:2/5]
+Dans la salle de réunion d'un centre de santé communautaire de Niamey-Territoire, des femmes en blouses courtes annotent des fiches de protocole en trois langues. Ce sont des techniciens formés par l'ABCS — l'Alliance des Biotechnologies Communautaires du Sahel — une organisation qui, il y a trente ans, rendait des comptes à des bailleurs genevois et publiait des rapports en anglais pour des conférences climatisées. Aujourd'hui, elle imprime ses manuels sur du papier recyclé et négocie des souches de levures contre des données sur les cycles de sécheresse. Ceux qui la connaissent bien disent qu'elle a survécu précisément parce qu'elle a accepté de descendre de son piédestal de consortium certifié pour devenir quelque chose de plus humble et de plus utile : un réseau de confiance entre des gens qui savent faire des choses et d'autres qui en ont besoin.
+*Tensions* : L'ABCS marche en permanence sur un fil : pour maintenir l'accès aux biotechnologies indispensables, elle doit traiter avec les enclaves technologiques...
+*Alliés* : Mutuelles de Santé Territoriales, Assemblées Bioterritoriales Régionales, Coopératives Semencières et d'Archives Agronomiques, Collectifs de Techniciens Sobres, Ligue des Cités du Sahel Numérique, Mouvement des Archives Vivantes du Savoir Partagé, Brigades de Restauration Écologique
+*Opposants* : Agro-Conglomérats des Enclaves Technologiques, Factions Autoritaires de Contrôle du Savoir, Réseau des Marchés Noirs de Données Extractivistes, Consortiums Logistiques Néo-Industriels des Terres Reconstruites
+
+**Les Veilleurs des Eaux du Congo** [ACTIF] [impact:2/5]
+Sur les berges du Congo, où les cargos rouillés des anciennes multinationales côtoient désormais des pirogues équipées de capteurs artisanaux, les Veilleurs des Eaux incarnent une résistance silencieuse mais tenace. Vêtus de gilets en fibres de jacinthe d'eau recyclée, ornés de motifs géométriques rappelant les cartes fluviales, ces gardiens du fleuve transmettent leurs observations via des sifflements codés ou des messages cryptés sur des réseaux radio autonomes. Leur réputation ? Une fiabilité à toute épreuve : quand un Veilleur lance l'alerte, les communautés savent que c'est sérieux. Pourtant, leur influence reste fragile face aux milices des enclaves extractivistes, qui voient d'un mauvais œil ces « espions des eaux » documenter leurs exactions.
+*Tensions* : Leur modèle horizontal et décentralisé est à la fois leur force et leur faiblesse : comment concilier leur besoin d'autonomie avec la nécessité de s'i...
+*Alliés* : Mutuelles de Santé Territoriales, Réseaux de radio communautaire basse consommation, Collectifs de Cartographie Écologique Participative, Assemblées de Bassin Versant, Confédération des Bassins Vivants
+*Opposants* : Enclaves Extractivistes Résiduelles des Corridors, Factions Extractivistes des Aquifères Communs, Réseaux de Notables Communautaires Capturistes, Consortiums Industriels de l'Eau
+
+**Consórcio Paulistano de Gestão Algorítmica (CPGA)** [ACTIF] [impact:4/5]
+À São Paulo en 2098, les feux de circulation obéissent aux mêmes algorithmes que la distribution du riz et du photovoltaïque : tout est calculé, tout est négocié, tout est affiché sur les panneaux muraux des 47 zonas autogéridas. Le Consórcio Paulistano de Gestão Algorítmica n'a ni siège social clinquant ni PDG : il est une fédération d'assemblées de quartier reliées par un logiciel open-source que n'importe quel habitant peut auditer depuis une tablette solaire. Des délégations de Lagos, Karachi et Jakarta font le voyage chaque mois pour étudier le modèle — certaines repartent avec les protocoles, d'autres avec des techniciens détachés pour deux ans. Mais derrière le vitrine du miracle paulistano, une guerre sourde se joue autour des pondérations cachées de l'algorithme : qui décide que l'eau vaut plus que l'électricité un soir de canicule ?
+*Tensions* : La principale fissure interne du CPGA est la question des paramètres algorithmiques : les communautés périphériques, historiquement défavorisées, accu...
+*Alliés* : Ligue des Cités du Sahel Numérique, Fragmentos da Rede — Algoritmo Paulista Descentralizado (APD), Factions Algorithmiques Pro-Gouvernance IA Légère, Archives Ouvertes des Jurisprudences Communales (AOJC), Collectifs de Techniciens Sobres, Chambre de Recours sur les Automatismes Délégués (CRAD), Réseau des Assemblées Bioterritioriales, Assemblées Coopératives Régionales, Alliance des Biotechnologies Communautaires du Sahel (ABCS)
+*Opposants* : Agro-Conglomérats des Enclaves Technologiques, Consortiums Industriels de l'Eau, Plateformes Centralisées de Réagrégation Globale, Courant Techno-Solutionniste Pro-Re-Globalisation Numérique, Consortium des Opérateurs d'IA Propriétaires sur les Trames, Réseau des Marchés Noirs de Données Extractivistes, Conseils Territoriaux Opaques sur la Gestion des Ressources, Réseaux de Notables Communautaires Capturistes
+
+**La Ronde des Savoirs** [ACTIF] [impact:2/5]
+Depuis les années 2040, la Ronde des Savoirs sillonne les bioterritoires d'Ourrassol à bord de caravanes solaires et de radeaux fluviaux chargés de bibliothèques portatives, de graines de variétés rares et de passeurs de métiers oubliés. Nulle façade, nul recteur, nul parchemin : on y entre par le seuil d'une communauté qui accepte d'ouvrir ses granges et ses feux de veille à une vingtaine de voyageurs-apprenants. La réciprocité est la règle d'or — la communauté hôte enseigne autant qu'elle reçoit, et personne ne repart sans avoir laissé quelque chose. Dans un monde où la fragmentation territoriale menace l'autarcie intellectuelle, la Ronde est parfois la seule institution à traverser la frontière invisible entre deux vallées qui ne se parlaient plus.
+*Tensions* : La Ronde peine à maintenir une continuité lorsque des communautés hôtes refusent l'accueil par méfiance identitaire ou peur de voir leurs pratiques 'e...
+*Alliés* : Assemblées Bioterritoriales Régionales, Guildes des Semenciers Itinérants, Collectifs de Facilitateurs Délibératifs Itinérants, Mouvement des Archives Vivantes du Savoir Partagé, Réseaux de bibliothèques-archives communautaires, Brigades de Restauration Écologique, Collectifs de Techniciens Sobres, Coopératives Semencières et d'Archives Agronomiques, Réseaux de radio communautaire basse consommation, Les Veilleurs du Seuil
+*Opposants* : Factions Autoritaires de Contrôle du Savoir, Communautés Isolationnistes Refusant la Continuité Écologique, Courant Isolationniste Anti-Circulation de l'Information, Factions Communautaires Refusant le Partage Narratif Extérieur, Réseaux de Notables Communautaires Capturistes, Courant Techno-Solutionniste Pro-Re-Globalisation Numérique, Plateformes Centralisées de Réagrégation Globale
+
+**Pacte Amazônia Viva** [ACTIF] [impact:3/5]
+Depuis les grandes rives du Tapajós jusqu'aux franges de l'Araguaia, le Pacte Amazônia Viva coordonne aujourd'hui quelque quatre-vingt-dix communautés autonomes réparties sur un territoire grand comme la France, sans capital, sans siège permanent, sans délégués permanents — seulement des assemblées tournantes tenues sous les arbres. Fondé dans les années 2040 sur les décombres des derniers gouvernements brésiliens capables de protéger la forêt, le Pacte a transformé la contrainte de l'abandon étatique en principe politique : la souveraineté n'appartient ni à un État ni à un marché, mais à l'écosystème lui-même et aux communautés qui l'habitent. Ses délégués itinérants — que les communautés nomment les 'porteurs de pacte' — circulent à pied, à pirogue ou à vélo, portant des accords manuscrits et des cartes crayonnées que les juristes de l'AOJC tentent péniblement de faire reconnaître par les fragments d'États encore en activité. Ce qui frappe ceux qui l'observent de l'extérieur, c'est moins son organisation que sa persistance : malgré les raids nocturnes des enclaves extractivistes, malgré les tentatives de captation par des notables locaux, le Pacte tient — parce que chaque communauté sait que sans lui, elle tient seule.
+*Tensions* : La tension centrale du Pacte est celle de sa propre réussite : plus il est reconnu comme interlocuteur légitime par les fragments d'États résiduels et...
+*Alliés* : Frente Sertão Livre, Archives Ouvertes des Jurisprudences Communales (AOJC), Collectifs de Cartographie Écologique Participative, Brigades de Restauration Écologique, Guildes de Médiateurs Écologiques, Collectifs de Géo-Observateurs Citoyens, La Tresse Verte, Confédération des Communs de l'Arc Septentrional, Conseils de Bassin Versant Éco-Communalistes, Réseau Terrafond des Bassins, Cercles de Médiation Territoriale Intercommunautaire
+*Opposants* : Enclaves Extractivistes Résiduelles des Corridors, Agro-Conglomérats des Enclaves Technologiques, Consortiums Industriels de l'Eau, Factions Extractivistes des Aquifères Communs, Communs Sécessionnistes Hors-Coordination, Communautés Rurales Dissidentes Anti-Coopération Régionale, Réseaux de Notables Communautaires Capturistes, Conseils Territoriaux Opaques sur la Gestion des Ressources, Cartels de Narration de Pénurie
+
+**Confédération des Bassins Vivants** [ACTIF] [impact:3/5]
+Depuis ses premières chartes signées au creux des années 2040 dans les vallées de l'Èbre et du Rhône moyen, la Confédération des Bassins Vivants est devenue la référence incontournable en matière de gouvernance hydrique territoriale. On n'y adhère pas sur demande : on y est accepté après évaluation des pratiques par une délégation tournante d'assemblées membres, un processus qui dure parfois deux ans. En 2098, la Confédération fédère plus de deux cents bassins versants sur quatre continents, chacun souverain sur ses délibérations locales mais lié par un pacte de sobriété qui contraint les prélèvements, les modes de culture et les échanges extérieurs. Ce qui frappe les observateurs extérieurs, c'est moins l'ampleur de la structure que son silence : elle ne communique pas, elle démontre. Et les territoires voisins en crise viennent à elle.
+*Tensions* : La tension principale traverse la question de l'exclusion : que faire d'une communauté membre qui viole durablement les quotas de prélèvement lors d'u...
+*Alliés* : Réseau des Assemblées Bioterritioriales, Assemblées Bioterritoriales Régionales, Assemblées de Bassin Versant, Brigades de Restauration Écologique, Cercles de Médiation Territoriale Intercommunautaire, Conseils de Bassin Versant Éco-Communalistes, Réseau Terrafond des Bassins, Coopératives Semencières et d'Archives Agronomiques, Guildes de Médiateurs Écologiques, Archives Ouvertes des Jurisprudences Communales (AOJC), Collectifs de Facilitateurs Délibératifs Itinérants, Collectifs de Géo-Observateurs Citoyens, La Tresse Verte, Confédération des Communs de l'Arc Septentrional, Réseau des Assemblées de Bassin Fennoscandien, Confédération des Racines Vivantes
+*Opposants* : Consortiums Industriels de l'Eau, Factions Extractivistes des Aquifères Communs, Enclaves Extractivistes Résiduelles des Corridors, Communautés Rurales Dissidentes Anti-Coopération Régionale, Communs Sécessionnistes Hors-Coordination, Communautés Isolationnistes Refusant la Continuité Écologique, Conseils Territoriaux Opaques sur la Gestion des Ressources, Réseaux de Notables Communautaires Capturistes, Agro-Conglomérats des Enclaves Technologiques, Cartels de Narration de Pénurie
+
+## CONSIGNE DE RÉDACTION
+
+**Rubrique** : SANTÉ
+
+**Format** : analyse | **Longueur** : 200 à 400 mots
+**Style** : analytique
+**Niveau émotionnel** : élevé — tension perceptible, urgence contenue
+**Échelle** : globale | **Temporalité** : moyen terme
+
+**Acteurs à impliquer** : autorités sanitaires, laboratoires, médecins, patients
+
+**Angle spécifique demandé** : le plus vieil humain sur terre a 126 ans
+
+**Date de publication** : à définir dans l'article — une date crédible en 2098
+
+---
+
+Écris maintenant l'article. Commence directement par le titre.
+
+Contraintes impératives :
+- Le titre doit être accrocheur et ancré dans le monde décrit
+- La date et le lieu de publication apparaissent sous le titre
+- L'article utilise des noms propres inventés mais crédibles (personnes, lieux, organisations)
+- Aucune référence au mot 'scénario', 'variable', 'simulation'
+- Le contexte du monde est montré, pas expliqué
+- Les entités canoniques listées ci-dessus DOIVENT être utilisées avec leurs noms et descriptions exactes
+- L'article est ancré géographiquement dans la zone **Congo Bassin Du Fleuve** : les lieux, événements et protagonistes de l'article sont situés dans cette zone ou la mentionnent explicitement comme cadre principal. Les références à d'autres régions du monde restent secondaires.
+
+--- MÉTADONNÉES ---
+  scenario : eco_communalism
+  thematique : sante
+  format : analyse
+  longueur : 600 à 900 mots
+  ligne_editoriale : pro_pouvoir
+
+✓ Pipeline complet — prêt pour l'API

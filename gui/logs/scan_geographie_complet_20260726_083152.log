@@ -1,0 +1,34 @@
+############################################################
+  SCAN GÉOGRAPHIE COMPLET — 1 étape(s) (sélection partielle)
+############################################################
+
+▶▶▶ Étape 1/1 — check_conventions_territoires.py
+  · N'a de sens qu'avec --all -- la notion de "varie entre scénarios" suppose plusieurs scénarios à comparer. Résultat ci-dessous non significatif.
+============================================================
+  Cohérence des territoires ambigus — geographie/{scenario}.md
+============================================================
+
+=== eco_communalism ===
+  ✓ Groenland et danemark : même zone (arc_septentrional)
+  · Polynésie française → polynesie_reconstituee / France → europe_occidentale_reconstituee -- zones distinctes
+  · Nouvelle-calédonie : absent, seul france présent (europe_occidentale_reconstituee) -- convention implicite
+  · Guyane française : absent, seul france présent (europe_occidentale_reconstituee) -- convention implicite
+  · Écosse → arc_septentrional / Royaume-uni → europe_occidentale_reconstituee -- zones distinctes
+  ✓ Pays de galles et royaume-uni : même zone (europe_occidentale_reconstituee)
+
+============================================================
+  RÉSUMÉ — territoires dont le traitement VARIE entre scénarios
+============================================================
+  ✓ Aucun -- chaque territoire suivi est traité de façon stable à travers tous les scénarios où il apparaît.
+
+============================================================
+  Terminé — tout est cohérent.
+============================================================
+
+
+############################################################
+  RÉSUMÉ CONSOLIDÉ
+############################################################
+  [check_conventions_territoires.py]
+    Terminé — tout est cohérent.
+  · check_conventions_territoires.py non significatif en mode --scenario (relancer avec --all pour un vrai résultat)

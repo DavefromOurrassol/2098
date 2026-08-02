@@ -5,10 +5,9 @@ slug: reseau_mnemos_breakdown
 entite: reseau_mnemos
 scenario: breakdown
 localisation:
-  zone: null
-  lieu: null
-  type_lieu: null
-  note: transnationale_sans_ancrage
+  zone: noeud_mnemos_pannonie
+  lieu: Bassin Pannonien
+  type_lieu: region
 type_dans_scenario: réseau
 
 role_dans_scenario: >

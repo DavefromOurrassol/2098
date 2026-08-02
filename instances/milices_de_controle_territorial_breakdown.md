@@ -4,6 +4,11 @@ type: instance
 slug: milices_de_controle_territorial_breakdown
 entite: milices_de_controle_territorial
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 statut: officialise_enrichi
 type_dans_scenario: organisation
 role_dans_scenario: 'Dans le scénario breakdown, les milices de contrôle territorial
@@ -71,10 +76,6 @@ tensions_narratives: 'La tension fondamentale de ces milices réside dans leur d
   légitimation — certaines négociant des accords avec les reliquats institutionnels
   de Genève-Bunker — divise profondément leurs rangs entre pragmatistes et jusqu''au-boutistes.'
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: null
 ---
 
 # Milices de Contrôle Territorial

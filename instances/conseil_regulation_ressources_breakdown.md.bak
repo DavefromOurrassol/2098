@@ -5,12 +5,10 @@ slug: conseil_regulation_ressources_breakdown
 entite: conseil_regulation_ressources
 scenario: breakdown
 localisation:
-  zone: geneve_bunker_institutions
-  lieu: Nairobi / Mombasa / Genève
-  type_lieu: ville
-  statut: review_manuelle
-  note: "L'entité est éclatée entre trois lieux (Nairobi, un cargo au large de Mombasa, et Genève), avec une zone géographique déclarée 'globale/régionale' et un impact local faible (1) — aucune zone unique ne correspond, mais la faction genevoise est mappable sur geneve_bunker_institutions tandis que Nairobi/Mombasa n'ont pas de zone dédiée."
-
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 type_dans_scenario: institution
 
 role_dans_scenario: >

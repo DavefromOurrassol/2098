@@ -4,6 +4,10 @@ type: instance
 slug: fronts_populistes_anti_technocratiques_breakdown
 entite: fronts_populistes_anti_technocratiques
 scenario: breakdown
+localisation:
+  zone: espace_nord_americain_fragmente
+  lieu: Detroit-Sud
+  type_lieu: ville
 statut: officialise_enrichi
 type_dans_scenario: organisation
 role_dans_scenario: 'Dans le scénario breakdown, ils incarnent la pression déstabilisatrice
@@ -67,10 +71,6 @@ tensions_narratives: 'La contradiction fondamentale qui ronge les Fronts est leu
   Dans plusieurs zones, certains Fronts ont glissé vers des milices territoriales
   indiscernables des seigneurs de guerre qu''ils prétendaient combattre.'
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: null
 ---
 
 # Fronts Populistes Anti-Technocratiques

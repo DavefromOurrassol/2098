@@ -8,7 +8,6 @@ localisation:
   zone: nordeste_bresil_frente
   lieu: Nordeste brésilien (Sertão — Pernambouc, Ceará, Piauí et franges du cerrado)
   type_lieu: region
-
 type_dans_scenario: réseau
 
 role_dans_scenario: >

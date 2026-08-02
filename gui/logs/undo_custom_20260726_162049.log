@@ -1,0 +1,25 @@
+undo_custom.py — 2026-07-26 16:20:50 — mode DRY-RUN
+1 item(s) à traiter
+
+
+── signal / norvege_terres_rares_geopolitique / generalisation=no ──
+  [DRY] Retirerait 1 annotation(s) section 7 et 1 bloc(s) section 12 dans geopolitique_conflits.md
+  [DRY] Retirerait 1 annotation(s) section 7 et 1 bloc(s) section 12 dans energie_ressources_critiques.md
+  [DRY] Retirerait ligne registre : | signal | 2038-2054 | norvege_terres_rares_geopolitique | geopolitique_conflits
+  [DRY] Retirerait ligne registre : | signal | 2045-2062 | norvege_terres_rares_geopolitique | energie_ressources_cr
+  [DRY] Retirerait ligne registre : | signal | 2035-2050 | norvege_terres_rares_geopolitique | geopolitique_conflits
+  [DRY] Retirerait ligne registre : | signal | 2038-2054 | norvege_terres_rares_geopolitique | energie_ressources_cr
+  [DRY] Retirerait ligne registre : | signal | 2033-2048 | norvege_terres_rares_geopolitique | geopolitique_conflits
+  [DRY] Retirerait ligne registre : | signal | 2033-2048 | norvege_terres_rares_geopolitique | energie_ressources_cr
+  [DRY] Retirerait ligne registre : | signal | 2037-2055 | norvege_terres_rares_geopolitique | geopolitique_conflits
+  [DRY] Retirerait ligne registre : | signal | 2040-2059 | norvege_terres_rares_geopolitique | energie_ressources_cr
+  [DRY] Retirerait ligne registre : | signal | 2031-2046 | norvege_terres_rares_geopolitique | energie_ressources_cr
+  [DRY] Retirerait ligne registre : | signal | 2032-2047 | norvege_terres_rares_geopolitique | geopolitique_conflits
+  [DRY] Retirerait ligne registre : | signal | 2028-2043 | norvege_terres_rares_geopolitique | geopolitique_conflits
+  [DRY] Retirerait ligne registre : | signal | 2030-2045 | norvege_terres_rares_geopolitique | energie_ressources_cr
+  [DRY] Supprimerait : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/signaux_custom/norvege_terres_rares_geopolitique.md
+  [DRY] Retirerait 1 entrée(s) de processed.yaml
+  [DRY] Resetterait last_validated.json
+
+════════════════════════════════════════════════════════════
+[DRY-RUN] Aucune modification effectuée.

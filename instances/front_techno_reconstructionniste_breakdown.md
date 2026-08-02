@@ -4,6 +4,10 @@ type: instance
 slug: front_techno_reconstructionniste_breakdown
 entite: front_techno_reconstructionniste
 scenario: breakdown
+localisation:
+  zone: enclaves_industrielles_bergen_tromso
+  lieu: Bergen–Tromsø, enclaves industrielles Nordark
+  type_lieu: infrastructure
 statut: officialise_enrichi
 type_dans_scenario: organisation
 role_dans_scenario: Dans un scénario breakdown dominé par la fragmentation territoriale
@@ -67,10 +71,6 @@ tensions_narratives: Le FTR est structurellement dépendant des ressources éner
   et ceux prêts à s'allier à n'importe quelle autorité territoriale capable de financer
   leurs projets.
 date_creation: 2026-06-20
-localisation:
-  zone: enclaves_industrielles_bergen_tromso
-  lieu: Bergen–Tromsø, enclaves industrielles Nordark
-  type_lieu: infrastructure
 ---
 
 # Front Techno-Reconstructionniste

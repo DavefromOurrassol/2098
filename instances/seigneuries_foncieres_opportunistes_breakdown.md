@@ -4,6 +4,11 @@ type: instance
 slug: seigneuries_foncieres_opportunistes_breakdown
 entite: seigneuries_foncieres_opportunistes
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 statut: officialise_enrichi
 type_dans_scenario: organisation
 role_dans_scenario: 'Dans le scénario breakdown, les seigneuries foncières opportunistes
@@ -69,10 +74,6 @@ tensions_narratives: La tension centrale est celle d'une entité qui a besoin de
   génère des conflits armés récurrents qui déstabilisent les régions entières qu'elles
   prétendent administrer.
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: region
 ---
 
 # Seigneuries Foncières Opportunistes

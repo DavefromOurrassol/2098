@@ -2580,6 +2580,292 @@ def carte_split_zone():
     return jsonify(result)
 
 
+# ── API Chantiers géographie (point 4.5, 26 juillet 2026) ─────────────────────
+#
+# Lit/écrit chantiers_geographie.yaml directement (pattern déjà établi par
+# /api/zones/manquantes : import yaml local à la fonction, pas d'import de
+# generator/chantiers.py -- gui/ et generator/ restent deux codebases
+# séparées sans import croisé, point de vigilance déjà noté ailleurs dans ce
+# fichier pour _tokens_entite()/zoning_topdown.py). Le SCHÉMA d'une entrée
+# (id, scenario, type, cible, probleme, source_diagnostic, date_detection,
+# statut, proposition, proposition_approuvee, date_proposition,
+# date_traitement) et les 3 statuts valides (a_traiter/ignore/traite)
+# reproduisent exactement ceux de generator/chantiers.py -- à garder en
+# synchro si ce schéma évolue côté generator/.
+
+CHANTIERS_STATUTS_VALIDES = ("a_traiter", "ignore", "traite")
+
+
+def _chantiers_path(vault_root: Path) -> Path:
+    return vault_root / "documentation" / "need_action" / "chantiers_geographie.yaml"
+
+
+def _charger_chantiers(vault_root: Path) -> list:
+    path = _chantiers_path(vault_root)
+    if not path.exists():
+        return []
+    import yaml as _yaml
+    data = _yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    return data.get("chantiers") or []
+
+
+def _sauver_chantiers(vault_root: Path, chantiers: list) -> None:
+    import yaml as _yaml
+    path = _chantiers_path(vault_root)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
+        _yaml.dump({"chantiers": chantiers}, allow_unicode=True,
+                   sort_keys=False, default_flow_style=False),
+        encoding="utf-8",
+    )
+
+
+@app.route("/api/chantiers", methods=["GET"])
+def chantiers_liste():
+    """
+    GET /api/chantiers?scenario=...&type=...&statut=...
+    Tous les paramètres sont optionnels -- sans filtre, retourne les
+    chantiers de tous les scénarios et statuts (le tri/filtre par défaut
+    "a_traiter seulement" est une décision d'affichage, laissée au
+    frontend plutôt que masquée côté API).
+    """
+    cfg = load_config()
+    vault_root = Path(cfg.get("vault_root", ""))
+    scenario = request.args.get("scenario", "").strip()
+    type_ = request.args.get("type", "").strip()
+    statut = request.args.get("statut", "").strip()
+
+    try:
+        chantiers = _charger_chantiers(vault_root)
+    except Exception as e:
+        return jsonify({"chantiers": [], "error": str(e)}), 500
+
+    if scenario:
+        chantiers = [c for c in chantiers if c.get("scenario") == scenario]
+    if type_:
+        chantiers = [c for c in chantiers if c.get("type") == type_]
+    if statut:
+        chantiers = [c for c in chantiers if c.get("statut") == statut]
+
+    return jsonify({"chantiers": chantiers})
+
+
+@app.route("/api/chantiers/generer", methods=["POST"])
+def chantiers_generer():
+    """
+    Génère (ou régénère) une proposition IA pour UN chantier précis --
+    granularité que generer_zones_topdown.py --review-topdown n'offre pas
+    (il traite toujours tous les chantiers éligibles d'un coup). Réutilise
+    le même sous-processus zoning_topdown.py --json que
+    /api/carte/generer_zone_topdown (voir cette route pour le détail du
+    contrat JSON), avec les paramètres tirés directement de l'entrée
+    chantier plutôt que d'un formulaire.
+
+    Body JSON : { "id": "<scenario>__<cible_slugifiee>" }
+    """
+    cfg = load_config()
+    vault_root = Path(cfg.get("vault_root", ""))
+    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+    data = request.get_json() or {}
+    chantier_id = (data.get("id") or "").strip()
+    if not chantier_id:
+        return jsonify({"error": "id requis"}), 400
+
+    try:
+        chantiers = _charger_chantiers(vault_root)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+    chantier = next((c for c in chantiers if c.get("id") == chantier_id), None)
+    if chantier is None:
+        return jsonify({"error": f"Chantier introuvable : {chantier_id!r}"}), 404
+
+    scenario = chantier["scenario"]
+    type_ = chantier["type"]
+    cible = chantier["cible"]
+
+    cmd = [sys.executable, "zoning_topdown.py", "--scenario", scenario, "--json"]
+    if type_ == "pays_sans_zone":
+        cmd += ["--pays", cible]
+    else:
+        cmd += ["--zone-suspecte", cible, "--raison-suspicion", chantier.get("probleme", "")]
+
+    try:
+        resultat = subprocess.run(
+            cmd, cwd=pipeline_dir, capture_output=True, text=True,
+            timeout=TIMEOUT_GENERATION_TOPDOWN, stdin=subprocess.DEVNULL,
+        )
+    except subprocess.TimeoutExpired:
+        return jsonify({"error": f"Génération expirée après {TIMEOUT_GENERATION_TOPDOWN}s "
+                                  f"(appel LLM trop lent ou bloqué)"}), 504
+    except FileNotFoundError:
+        return jsonify({"error": f"zoning_topdown.py introuvable dans {pipeline_dir}"}), 500
+
+    sortie = resultat.stdout.strip()
+    if not sortie:
+        return jsonify({"error": f"Aucune sortie du sous-processus "
+                                  f"(code {resultat.returncode}) : {resultat.stderr[-500:]}"}), 500
+    try:
+        payload = json.loads(sortie.splitlines()[-1])
+    except (json.JSONDecodeError, IndexError):
+        return jsonify({"error": f"Sortie non-JSON du sous-processus : {sortie[-500:]}"}), 500
+
+    if not payload.get("ok"):
+        return jsonify({"error": payload.get("error", "Erreur inconnue côté générateur")}), 500
+
+    # Réattache la proposition au chantier -- mêmes champs que
+    # reviewer_scenario() dans generer_zones_topdown.py (mettre_a_jour_
+    # chantier(..., proposition=..., proposition_approuvee=False,
+    # date_proposition=...)), réimplémenté ici en YAML direct pour la même
+    # raison de séparation de codebase que le reste de ce fichier.
+    from datetime import date as _date
+    for c in chantiers:
+        if c.get("id") == chantier_id:
+            c["proposition"] = payload["proposition"]
+            c["proposition_issues"] = payload.get("issues") or []
+            c["proposition_approuvee"] = False
+            c["date_proposition"] = _date.today().isoformat()
+            break
+    _sauver_chantiers(vault_root, chantiers)
+
+    return jsonify({"ok": True, "proposition": payload["proposition"], "issues": payload.get("issues") or []})
+
+
+@app.route("/api/chantiers/approuver", methods=["POST"])
+def chantiers_approuver():
+    """
+    Approuve ou retire l'approbation d'une proposition déjà générée --
+    ne touche jamais au statut du chantier lui-même (reste 'a_traiter'
+    jusqu'à application effective).
+    Body JSON : { "id":..., "approuve": true|false }
+    """
+    cfg = load_config()
+    vault_root = Path(cfg.get("vault_root", ""))
+    data = request.get_json() or {}
+    chantier_id = (data.get("id") or "").strip()
+    approuve = bool(data.get("approuve"))
+    if not chantier_id:
+        return jsonify({"error": "id requis"}), 400
+
+    try:
+        chantiers = _charger_chantiers(vault_root)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+    trouve = False
+    for c in chantiers:
+        if c.get("id") == chantier_id:
+            if c.get("proposition") is None:
+                return jsonify({"error": "Aucune proposition à approuver pour ce chantier -- "
+                                          "génère-en une d'abord."}), 400
+            c["proposition_approuvee"] = approuve
+            trouve = True
+            break
+    if not trouve:
+        return jsonify({"error": f"Chantier introuvable : {chantier_id!r}"}), 404
+
+    _sauver_chantiers(vault_root, chantiers)
+    return jsonify({"ok": True})
+
+
+@app.route("/api/chantiers/statut", methods=["POST"])
+def chantiers_statut():
+    """
+    Change le statut d'un chantier à la main (ignore/traite/a_traiter) --
+    couvre "marquer ignoré" et "marquer traité manuellement" (ex.
+    correction faite directement dans l'onglet Carte, sans passer par une
+    proposition générée ici).
+    Body JSON : { "id":..., "statut": "ignore"|"traite"|"a_traiter" }
+    """
+    cfg = load_config()
+    vault_root = Path(cfg.get("vault_root", ""))
+    data = request.get_json() or {}
+    chantier_id = (data.get("id") or "").strip()
+    statut = (data.get("statut") or "").strip()
+    if not chantier_id or statut not in CHANTIERS_STATUTS_VALIDES:
+        return jsonify({"error": f"id requis, statut doit être dans {CHANTIERS_STATUTS_VALIDES}"}), 400
+
+    try:
+        chantiers = _charger_chantiers(vault_root)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+    from datetime import date as _date
+    trouve = False
+    for c in chantiers:
+        if c.get("id") == chantier_id:
+            c["statut"] = statut
+            c["date_traitement"] = _date.today().isoformat() if statut == "traite" else c.get("date_traitement")
+            trouve = True
+            break
+    if not trouve:
+        return jsonify({"error": f"Chantier introuvable : {chantier_id!r}"}), 404
+
+    _sauver_chantiers(vault_root, chantiers)
+    return jsonify({"ok": True})
+
+
+@app.route("/api/chantiers/appliquer", methods=["POST"])
+def chantiers_appliquer():
+    """
+    Applique EN LOT les chantiers prêts (statut a_traiter + proposition
+    approuvée) d'un scénario, OU un seul chantier précis via "id" -- délègue
+    à generer_zones_topdown.py --apply-topdown en sous-processus plutôt que
+    de dupliquer sa logique d'écriture ici. Pas d'appel LLM ici (propositions
+    déjà générées) : synchrone, comme les autres routes /api/carte/*, pas
+    besoin de passer par /api/run + SSE.
+
+    Body JSON : { "scenario": "breakdown" } ou { "all": true }
+      ou { "id": "<scenario>__<cible>" } -- granularité fine ajoutée le 1er
+      août 2026 (--cible côté generer_zones_topdown.py) : résout scenario et
+      cible depuis l'entrée de chantiers_geographie.yaml correspondant à cet
+      id, applique uniquement ce chantier-là plutôt que tout le scénario.
+    """
+    cfg = load_config()
+    vault_root = Path(cfg.get("vault_root", ""))
+    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+    data = request.get_json() or {}
+    scenario = (data.get("scenario") or "").strip()
+    tous = bool(data.get("all"))
+    chantier_id = (data.get("id") or "").strip()
+
+    cible = None
+    if chantier_id:
+        try:
+            chantiers = _charger_chantiers(vault_root)
+        except Exception as e:
+            return jsonify({"error": str(e)}), 500
+        chantier = next((c for c in chantiers if c.get("id") == chantier_id), None)
+        if chantier is None:
+            return jsonify({"error": f"Chantier introuvable : {chantier_id!r}"}), 404
+        scenario = chantier.get("scenario", "")
+        cible = chantier.get("cible", "")
+
+    if not scenario and not tous:
+        return jsonify({"error": "scenario, all ou id requis"}), 400
+
+    cmd = [sys.executable, "generer_zones_topdown.py", "--apply-topdown"]
+    cmd += ["--all"] if tous else ["--scenario", scenario]
+    if cible:
+        cmd += ["--cible", cible]
+
+    try:
+        resultat = subprocess.run(
+            cmd, cwd=pipeline_dir, capture_output=True, text=True,
+            timeout=60, stdin=subprocess.DEVNULL,
+        )
+    except subprocess.TimeoutExpired:
+        return jsonify({"error": "Application expirée après 60s"}), 504
+    except FileNotFoundError:
+        return jsonify({"error": f"generer_zones_topdown.py introuvable dans {pipeline_dir}"}), 500
+
+    if resultat.returncode != 0:
+        return jsonify({"error": resultat.stderr[-800:] or resultat.stdout[-800:],
+                         "returncode": resultat.returncode}), 500
+
+    return jsonify({"ok": True, "log": resultat.stdout[-4000:]})
+
+
 # ── API Slugs ─────────────────────────────────────────────────────────────────
 
 @app.route("/api/slugs", methods=["GET"])
@@ -2589,6 +2875,10 @@ def get_slugs():
     GET /api/slugs?type=zones&scenario=breakdown
     GET /api/slugs?type=entities
     GET /api/slugs?type=zones_all&scenario=breakdown
+    GET /api/slugs?type=signals
+    GET /api/slugs?type=evenements
+    GET /api/slugs?type=zones_a_reparenter&scenario=breakdown
+    GET /api/slugs?type=fiches_a_localiser&scenario=breakdown
     """
     slug_type = request.args.get("type", "instances")
     scenario = request.args.get("scenario", "")
@@ -2609,10 +2899,94 @@ def get_slugs():
         elif slug_type == "zones_hier":
             zones = _scan_zone_slugs_hier(vault_root, scenario)
             return jsonify({"slugs": [z["slug"] for z in zones], "zones": zones})
+        elif slug_type == "zones_a_reparenter":
+            # Ajouté le 31 juillet 2026 (remarque de David : proposer les
+            # 16-42 zones N1 d'un scénario dans --zone-cible était peu
+            # exploitable, l'immense majorité n'ayant jamais de sous-zone
+            # orpheline). Sous-processus + JSON vers le nouveau mode
+            # --scan-candidates de reparenter_sous_zones_orphelines.py --
+            # même principe que l'appel automatique post-reparent Carte
+            # ci-dessus (gui/ et generator/ restent deux codebases
+            # séparées). Lecture seule, aucun appel LLM (resoudre_pays()
+            # ne consulte que table + cache), timeout court.
+            candidats = _scan_reparent_candidats(pipeline_dir, scenario)
+            return jsonify({
+                "slugs": [c["slug"] for c in candidats],
+                "candidats": candidats,
+            })
+        elif slug_type == "fiches_a_localiser":
+            # Ajouté le 31 juillet 2026, même principe que zones_a_reparenter
+            # ci-dessus : --slug sur extract_localisation listait toutes les
+            # instances sans distinguer celles déjà localisées. Sous-processus
+            # + JSON vers le nouveau mode --scan-pending, purement mécanique
+            # (collect_fiches() ne fait que lire du frontmatter, aucun appel
+            # LLM) côté extract_localisation.py.
+            candidats = _scan_localisation_candidats(pipeline_dir, scenario)
+            return jsonify({
+                "slugs": [c["slug"] for c in candidats],
+                "candidats": candidats,
+            })
+        elif slug_type == "signals":
+            slugs = _scan_signal_slugs(vault_root)
+        elif slug_type == "evenements":
+            slugs = _scan_event_slugs(vault_root)
     except Exception as e:
         return jsonify({"slugs": [], "error": str(e)})
 
     return jsonify({"slugs": slugs})
+
+
+def _scan_localisation_candidats(pipeline_dir: Path, scenario: str) -> list:
+    """Appelle extract_localisation.py --scan-pending en sous-processus
+    (lecture seule, aucun appel LLM) et retourne la liste des fiches n'ayant
+    pas encore de champ localisation. scenario vide = tous les scénarios
+    (contrairement à zones_a_reparenter, --scenario est optionnel côté
+    script)."""
+    try:
+        cmd = [sys.executable, "extract_localisation.py", "--scan-pending", "--json"]
+        if scenario:
+            cmd += ["--scenario", scenario]
+        resultat = subprocess.run(
+            cmd, cwd=pipeline_dir, capture_output=True, text=True,
+            timeout=15, stdin=subprocess.DEVNULL,
+        )
+        sortie = resultat.stdout.strip()
+        if not sortie:
+            return []
+        payload = json.loads(sortie.splitlines()[-1])
+        if not payload.get("ok"):
+            return []
+        return payload.get("candidats", [])
+    except (subprocess.TimeoutExpired, FileNotFoundError, json.JSONDecodeError, IndexError):
+        return []
+
+
+def _scan_reparent_candidats(pipeline_dir: Path, scenario: str) -> list:
+    """Appelle reparenter_sous_zones_orphelines.py --scan-candidates en
+    sous-processus (lecture seule) et retourne la liste des zones N1 ayant
+    actuellement des sous-zones orphelines en attente. Échec silencieux
+    (liste vide) plutôt que de casser le menu déroulant -- même logique
+    de tolérance que l'appel automatique post-reparent plus haut."""
+    if not scenario:
+        return []
+    try:
+        resultat = subprocess.run(
+            [sys.executable, "reparenter_sous_zones_orphelines.py",
+             "--scenario", scenario, "--scan-candidates", "--json"],
+            cwd=pipeline_dir, capture_output=True, text=True,
+            timeout=15, stdin=subprocess.DEVNULL,
+        )
+        sortie = resultat.stdout.strip()
+        if not sortie:
+            return []
+        payload = json.loads(sortie.splitlines()[-1])
+        if not payload.get("ok"):
+            return []
+        return payload.get("candidats", [])
+    except (subprocess.TimeoutExpired, FileNotFoundError, json.JSONDecodeError, IndexError):
+        return []
+
+
 
 
 def _scan_instance_slugs(vault_root: Path, scenario: str) -> list:
@@ -2640,6 +3014,53 @@ def _scan_instance_slugs(vault_root: Path, scenario: str) -> list:
     return sorted(slugs)
 
 
+def _scan_event_slugs(vault_root: Path) -> list:
+    """
+    Scan evenements/*.md (archétypes, pas event_instances/ qui sont les
+    déclinaisons par scénario), extrait le frontmatter `slug`. Ajouté le
+    2 août 2026 pour le sélecteur de trace_injection.py -- même principe
+    que _scan_signal_slugs ci-dessus.
+    """
+    evenements_dir = vault_root / "evenements"
+    if not evenements_dir.exists():
+        return []
+    slugs = []
+    pattern = re.compile(r"^slug:\s*(.+)$", re.MULTILINE)
+    for md_file in evenements_dir.glob("*.md"):
+        try:
+            content = md_file.read_text(encoding="utf-8")
+            m = pattern.search(content)
+            if m:
+                slugs.append(m.group(1).strip())
+        except Exception:
+            continue
+    return sorted(slugs)
+
+
+def _scan_signal_slugs(vault_root: Path) -> list:
+    """
+    Scan signaux_custom/*.md (fiches d'audit de inject_custom_signals.py),
+    extrait le frontmatter `slug`. Ajouté le 26 juillet 2026 pour le
+    nouveau type `signal` de undo_custom.py -- glob("*.md") exclut déjà
+    naturellement processed.yaml/needs_review.yaml (extension .yaml), pas
+    besoin de les filtrer explicitement.
+    """
+    signaux_dir = vault_root / "signaux_custom"
+    if not signaux_dir.exists():
+        return []
+    slugs = []
+    pattern = re.compile(r"^slug:\s*(.+)$", re.MULTILINE)
+    for md_file in signaux_dir.glob("*.md"):
+        try:
+            content = md_file.read_text(encoding="utf-8")
+            m = pattern.search(content)
+            if m:
+                slugs.append(m.group(1).strip())
+        except Exception:
+            continue
+    return sorted(slugs)
+
+
 def _scan_entity_slugs(vault_root: Path, pipeline_dir: Path) -> list:
     """Lit _entities_list.json."""
     candidates = [
@@ -2661,29 +3082,43 @@ def _scan_entity_slugs(vault_root: Path, pipeline_dir: Path) -> list:
 
 
 def _scan_zone_slugs(pipeline_dir: Path, scenario: str, n1_only: bool) -> list:
-    """Parse geographie/{scenario}.md pour extraire les slugs de zones."""
+    """Parse geographie/{scenario}.md pour extraire les slugs de zones.
+
+    Corrigé le 31 juillet 2026 -- l'ancienne implémentation utilisait un
+    découpage par regex (`re.split` sur les délimiteurs `---`) suivi de
+    `.search()` (qui ne renvoie que la PREMIÈRE occurrence) sur chaque
+    bloc. Or geographie/{scenario}.md ne contient que 2 délimiteurs `---`
+    au total (un seul bloc de frontmatter YAML englobant TOUTE la liste
+    des zones, pas un bloc par zone) -- résultat : une seule zone
+    remontée par fichier, peu importe leur nombre réel (bug signalé par
+    David : "je n'ai qu'une zone N1 dans le menu"). Remplacé par un vrai
+    parsing YAML, sur le même principe que _scan_zone_slugs_hier
+    ci-dessous (qui n'avait pas ce bug -- codé correctement dès le
+    départ)."""
     if not scenario:
         return []
     geo_file = pipeline_dir / "geographie" / f"{scenario}.md"
     if not geo_file.exists():
         return []
-    content = geo_file.read_text(encoding="utf-8")
+    try:
+        import yaml as _yaml
+        raw = geo_file.read_text(encoding="utf-8")
+        parts = raw.split("---")
+        fm_str = parts[1] if len(parts) >= 2 else raw
+        fm = _yaml.safe_load(fm_str) or {}
+        raw_zones = fm.get("zones") or []
+    except Exception:
+        return []
+
     slugs = []
-    # Recherche des blocs YAML inline ou frontmatter de zone
-    # Format attendu : slug: xxx  +  niveau: 1 (optionnel)
-    slug_pat = re.compile(r"slug:\s*(\S+)")
-    niveau_pat = re.compile(r"niveau:\s*(\d+)")
-    # On cherche les blocs délimités par ---
-    blocks = re.split(r"^---+$", content, flags=re.MULTILINE)
-    for block in blocks:
-        slug_m = slug_pat.search(block)
-        if not slug_m:
+    for z in raw_zones:
+        if not isinstance(z, dict):
             continue
-        slug = slug_m.group(1).strip()
-        if n1_only:
-            niveau_m = niveau_pat.search(block)
-            if niveau_m and int(niveau_m.group(1)) != 1:
-                continue
+        slug = str(z.get("slug", "")).strip()
+        if not slug:
+            continue
+        if n1_only and int(z.get("niveau", 1)) != 1:
+            continue
         slugs.append(slug)
     return sorted(set(slugs))
 
@@ -2746,6 +3181,50 @@ def _scan_zone_slugs_hier(pipeline_dir: Path, scenario: str) -> list:
     return result
 
 
+# ── Traçabilité ──────────────────────────────────────────────────────────────
+
+@app.route("/api/trace/<slug>", methods=["GET"])
+def get_trace(slug):
+    """
+    Reconstitue le parcours complet d'un slug (instance/événement/signal) via
+    generator/trace_injection.py --json en sous-processus (même pattern que
+    zoning_topdown.py --json ci-dessus). Query params optionnels :
+    ?type=instance|evenement|signal (force le type si l'auto-détection
+    échoue) et ?skip_articles=1 (saute le scan aval, plus rapide).
+    """
+    cfg = load_config()
+    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+
+    cmd = [sys.executable, "trace_injection.py", "--slug", slug, "--json"]
+    type_ = (request.args.get("type") or "").strip()
+    if type_:
+        cmd += ["--type", type_]
+    if request.args.get("skip_articles"):
+        cmd.append("--skip-articles")
+
+    try:
+        resultat = subprocess.run(
+            cmd, cwd=pipeline_dir, capture_output=True, text=True,
+            timeout=30, stdin=subprocess.DEVNULL,  # pas d'appel LLM -- purement mécanique, doit être rapide
+        )
+    except subprocess.TimeoutExpired:
+        return jsonify({"error": "trace_injection.py expiré après 30s"}), 504
+    except FileNotFoundError:
+        return jsonify({"error": f"trace_injection.py introuvable dans {pipeline_dir}"}), 500
+
+    if resultat.returncode != 0:
+        return jsonify({"error": resultat.stderr.strip() or f"Échec (code {resultat.returncode})"}), 404
+
+    sortie = resultat.stdout.strip()
+    if not sortie:
+        return jsonify({"error": f"Aucune sortie du sous-processus : {resultat.stderr[-500:]}"}), 500
+
+    try:
+        return jsonify(json.loads(sortie))
+    except json.JSONDecodeError:
+        return jsonify({"error": "Sortie non-JSON de trace_injection.py", "raw": sortie[-1000:]}), 500
+
+
 # ── Revue ─────────────────────────────────────────────────────────────────────
 
 @app.route("/api/review", methods=["GET"])
@@ -2758,6 +3237,8 @@ def get_review():
     items = []
     items += _parse_needs_review_enrich(vault_root)
     items += _parse_needs_review_events(vault_root)
+    items += _parse_needs_review_entites(vault_root)   # ajouté le 2 août 2026 — manquait entièrement
+    items += _parse_needs_review_signaux(vault_root)    # ajouté le 2 août 2026 — manquait entièrement
     items += _parse_localisation_review(vault_root)
     return jsonify({"items": items, "total": len(items)})
 
@@ -2799,7 +3280,48 @@ def _parse_needs_review_events(vault_root: Path) -> list:
     return []
 
 
-def _read_needs_review_yaml(path: Path, source: str) -> list:
+def _parse_needs_review_entites(vault_root: Path) -> list:
+    """
+    needs_review.yaml (dans entites_custom/, à la racine du vault) — ajouté
+    le 2 août 2026, manquait entièrement (ni le fichier ni le format
+    n'étaient couverts par /api/review, contrairement au badge de
+    routes_dashboard.py qui, lui, comptait déjà ce fichier) :
+      needs_review:
+        - status: needs_review
+          idea: {...}
+          error: ...
+    Contrairement aux sources enrich/events, la première clé de chaque
+    entrée est "status", pas "slug" ni "idea" (create_entity.py /
+    create_entities_and_instances.py, sort_keys=False à l'écriture donc
+    l'ordre "status, idea, error" est fiable).
+    """
+    candidates = [
+        vault_root / "entites_custom" / "needs_review.yaml",
+        vault_root / "needs_review.yaml",
+    ]
+    for p in candidates:
+        if p.exists():
+            return _read_needs_review_yaml(p, "entites", start_marker="- status:", slug_placeholder="(entité)")
+    return []
+
+
+def _parse_needs_review_signaux(vault_root: Path) -> list:
+    """
+    needs_review.yaml (dans signaux_custom/, à la racine du vault) — ajouté
+    le 2 août 2026, même trou que ci-dessus (inject_custom_signals.py,
+    même format "status" en tête d'entrée).
+    """
+    candidates = [
+        vault_root / "signaux_custom" / "needs_review.yaml",
+        vault_root / "needs_review.yaml",
+    ]
+    for p in candidates:
+        if p.exists():
+            return _read_needs_review_yaml(p, "signaux", start_marker="- status:", slug_placeholder="(signal)")
+    return []
+
+
+def _read_needs_review_yaml(path: Path, source: str, start_marker: str = None, slug_placeholder: str = None) -> list:
     items = []
     try:
         txt = path.read_text(encoding="utf-8")
@@ -2835,6 +3357,18 @@ def _read_needs_review_yaml(path: Path, source: str) -> list:
                 current = {
                     "source": source,
                     "slug": "(événement)",
+                    "scenario": "",
+                    "error": "",
+                }
+            elif start_marker and stripped.startswith(start_marker):
+                # Source entites/signaux (ajouté le 2 août 2026) : la
+                # première clé de chaque entrée est "status", pas
+                # "slug"/"idea" — même mécanisme de flush que ci-dessus.
+                if current:
+                    items.append(current)
+                current = {
+                    "source": source,
+                    "slug": slug_placeholder or "(?)",
                     "scenario": "",
                     "error": "",
                 }

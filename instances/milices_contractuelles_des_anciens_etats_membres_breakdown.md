@@ -4,6 +4,11 @@ type: instance
 slug: milices_contractuelles_des_anciens_etats_membres_breakdown
 entite: milices_contractuelles_des_anciens_etats_membres
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 statut: officialise_enrichi
 type_dans_scenario: organisation
 role_dans_scenario: 'Dans le scénario breakdown, elles comblent le vide sécuritaire
@@ -69,10 +74,6 @@ tensions_narratives: 'La contradiction fondamentale de ces milices réside dans 
   crée une tension permanente entre fidélité au contrat et solidarités communautaires
   qui éclatent lors de chaque crise de redistribution.'
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: null
 ---
 
 # Milices Contractuelles des Anciens États-Membres

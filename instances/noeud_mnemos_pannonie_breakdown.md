@@ -8,7 +8,6 @@ localisation:
   zone: noeud_mnemos_pannonie
   lieu: Győr, plaine pannonienne (bassin du Danube)
   type_lieu: region
-
 type_dans_scenario: organisation
 
 role_dans_scenario: >

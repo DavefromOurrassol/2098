@@ -1,0 +1,14 @@
+undo_custom.py — 2026-07-26 16:21:05 — mode EXECUTE
+1 item(s) à traiter
+
+
+── signal / norvege_terres_rares_geopolitique / generalisation=no ──
+  [VAR] 1 annotation(s) + 1 bloc(s) retiré(s) de geopolitique_conflits.md
+  [VAR] 1 annotation(s) + 1 bloc(s) retiré(s) de energie_ressources_critiques.md
+  [REG] 12 ligne(s) retirée(s) du registre pour 'norvege_terres_rares_geopolitique' (total recalculé)
+  [DEL] norvege_terres_rares_geopolitique.md → backup norvege_terres_rares_geopolitique.md.bak
+  [YAML] 1 entrée(s) retirée(s) de processed.yaml
+  [DEL] last_validated.json resetté
+
+════════════════════════════════════════════════════════════
+Terminé. Lancez validate.py pour vérifier la base.

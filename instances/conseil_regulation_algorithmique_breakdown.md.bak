@@ -8,8 +8,6 @@ localisation:
   zone: geneve_bunker_institutions
   lieu: Genève-Bunker
   type_lieu: infrastructure
-  statut: review_manuelle
-  note: "L'entité est globale et dissoute (zone_geographique: globale, impact_local: 0), mais les signes_distinctifs mentionnent explicitement 'quelques serveurs d'archives dans une salle abandonnée de Genève-Bunker', seul ancrage physique résiduel identifiable."
 type_dans_scenario: système
 role_dans_scenario: >
   N'existe plus en tant qu'institution. Les derniers protocoles de

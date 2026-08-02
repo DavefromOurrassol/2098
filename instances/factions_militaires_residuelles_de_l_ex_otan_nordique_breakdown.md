@@ -4,6 +4,10 @@ type: instance
 slug: factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
 entite: factions_militaires_residuelles_de_l_ex_otan_nordique
 scenario: breakdown
+localisation:
+  zone: arctique_nordark
+  lieu: Bergen–Tromsø / Hanse Baltique
+  type_lieu: region
 statut: officialise_enrichi
 type_dans_scenario: organisation
 role_dans_scenario: 'Dans le scénario breakdown, ces factions constituent des acteurs
@@ -65,10 +69,6 @@ tensions_narratives: Leur cohérence interne est constamment menacée par les ri
   le Nœud Nordark de Tromsø une forme de réintégration institutionnelle, tandis que
   d'autres s'enfoncent dans une logique prédatrice pure.
 date_creation: 2026-06-20
-localisation:
-  zone: arctique_nordark
-  lieu: Bergen–Tromsø / Hanse Baltique
-  type_lieu: region
 ---
 
 # Factions Militaires Résiduelles de l'Ex-OTAN Nordique

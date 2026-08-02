@@ -4,6 +4,10 @@ type: instance
 slug: agence_stabilisation_climatique_breakdown
 entite: agence_stabilisation_climatique
 scenario: breakdown
+localisation:
+  zone: geneve_bunker_institutions
+  lieu: Genève — tour abritant le Bureau de Coordination d'Urgence Climatique
+  type_lieu: infrastructure
 type_dans_scenario: institution
 role_dans_scenario: Vestige dysfonctionnel de l'Agence Mondiale pour la Stabilisation Climatique, le BCUC survit comme une coquille administrative sans autorité réelle. Jadis mandaté pour orchestrer les grandes interventions géo-ingénieristes, il n'existe plus que comme structure fantôme, réclamant une légitimité que personne ne lui reconnaît. Dans un monde fragmenté, les blocs régionaux ont cessé de financer et d'obéir à ses directives dès 2071, mais l'agence refuse de se dissoudre, continuant d'émettre des protocoles que personne n'applique. Elle représente la mémoire institutionnelle d'un ordre mondial révolu, à la fois inutile et dangereusement nostalgique.
 responsabilites: |

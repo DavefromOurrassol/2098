@@ -4,6 +4,10 @@ type: instance
 slug: noeud_nordark_tromso_breakdown
 entite: noeud_nordark_tromso
 scenario: breakdown
+localisation:
+  zone: noeud_nordark_tromso
+  lieu: Tromsø
+  type_lieu: ville
 
 type_dans_scenario: organisation
 

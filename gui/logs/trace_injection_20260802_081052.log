@@ -1,0 +1,27 @@
+# Traçabilité — `armada_logistique_nordique` (instance)
+
+*Généré le 2026-08-02 08:10*
+
+## 1. Origine
+
+- **Statut d'injection** : origine introuvable (idée non trouvée dans processed/needs_review.yaml)
+
+## 2. Propagation dans l'espace et le temps
+
+- **Nom** : Armada Logistique Nordique
+- **Présente dans 3/6 scénarios** : breakdown, fortress_world, reference
+
+| Scénario | Statut | Enrichie le | Zone | Impact local/global |
+|---|---|---|---|---|
+| breakdown | — | — | arctique_nordark | 5/4 |
+| fortress_world | — | — | espace_nordique_arctique | 4/5 |
+| reference | — | — | tromsoe_aln | 3/5 |
+
+- **Variables systémiques influencées (tous scénarios confondus)** : climat_environnement_global, energie_ressources_critiques, geopolitique_conflits, gouvernance_institutions, organisation_territoires, systeme_economique_redistribution
+- **Alliances (réseau relationnel)** : conseil_des_etats_nordiques_integres_reference, consortium_energetique_baltique_reference, consortium_sino_finlandais_de_flotte_autonome_fortress_world, consortiums_energetiques_samoiedes_du_yamal_breakdown, enclaves_industrielles_de_bergen_troms_breakdown, factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown, fonds_souverain_arctique_scandinave_reference
+- **Oppositions (réseau relationnel)** : coalition_arctique_des_blocs_continentaux_fortress_world, collectifs_de_peche_inuit_et_sami_reference, conglometrat_sino_siberien_bohai_transit_breakdown, consortium_logistique_asiatique_de_contournement_aln_reference, factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world, federation_russe_residuelle_district_de_mourmansk_breakdown, hanse_baltique_recomposee_breakdown, milices_de_piraterie_logistique_arctique_fortress_world, milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown, siberie_federale_reference
+
+## 3. Aval — usage dans les articles publiés
+
+_Aucune mention trouvée dans `articles/*.md` (scan texte brut, best-effort — un article peut mentionner l'entité sous une formulation différente sans que ce scan la détecte)._
+

@@ -1,0 +1,74 @@
+processed:
+- status: injected
+  idea:
+    id: essai_zone_hint_sahel_v2
+    description: Une vague de projets d'irrigation solaire transforme l'agriculture
+      locale, provoquant à la fois un boom démographique et des tensions croissantes
+      sur l'accès à l'eau.
+    variable_hint_count: 2
+    zone_hint: Sahel
+  selection:
+    variables:
+    - systemes_productifs_travail
+    - energie_ressources_critiques
+    categorie: environmental
+    signal_slug: irrigation_solaire_tensions_eau
+  results:
+  - variable: systemes_productifs_travail
+    status: injected
+    yaml_text: "  - signal: irrigation_solaire_tensions_eau\n    scenarios:\n    \
+      \  breakdown:\n        evolution: effondrement des coopératives agricoles saheliennes\
+      \ par pénuries d'eau\n        date_bascule: 2042-2060\n        evenement_cle:\
+      \ pompages solaires saheliens à sec après trois années sans pluie 2054\n   \
+      \   fortress_world:\n        evolution: blocs sécurisent l'irrigation solaire\
+      \ comme ressource stratégique\n        date_bascule: 2036-2052\n        evenement_cle:\
+      \ Bloc Atlantique verrouille les nappes phréatiques du Sahel 2047\n      new_sustainability:\n\
+      \        evolution: IA optimise l'irrigation solaire pour équilibrer besoins\
+      \ et recharge\n        date_bascule: 2033-2049\n        evenement_cle: réseau\
+      \ mondial de gestion hydrique automatisée déployé 2042\n      eco_communalism:\n\
+      \        evolution: communautés locales gèrent l'eau via chartes bioterritoriales\
+      \ solaires\n        date_bascule: 2038-2057\n        evenement_cle: charte d'Agadez\
+      \ sur la souveraineté hydrique communautaire\n      policy_reform:\n       \
+      \ evolution: régulation internationale encadre l'irrigation solaire et les conflits\n\
+      \        date_bascule: 2029-2045\n        evenement_cle: traité de Niamey sur\
+      \ le partage des nappes phréatiques 2038\n      reference:\n        evolution:\
+      \ tensions croissantes entre États saheliens pour l'accès à l'eau solaire\n\
+      \        date_bascule: 2027-2042\n        evenement_cle: Mali et Niger s'affrontent\
+      \ pour le fleuve Niger 2039"
+    signaux_existants_consideres: Le signal 'automatisation_agricole_massive' traite
+      d'une dynamique proche (automatisation agricole) mais à l'échelle mondiale et
+      sans ancrage géographique spécifique. Ce nouveau signal se positionne comme
+      un complément territorialisé au Sahel, où l'irrigation solaire (plutôt que l'automatisation
+      générique) devient un facteur clé de transformation productive et de tensions.
+      Les deux signaux coexistent sans contradiction, l'un décrivant une technologie
+      globale, l'autre ses impacts locaux critiques.
+  - variable: energie_ressources_critiques
+    status: injected
+    yaml_text: "  - signal: irrigation_solaire_tensions_eau\n    scenarios:\n    \
+      \  breakdown:\n        evolution: effondrement des coopératives solaires par\
+      \ pénuries hydriques\n        date_bascule: 2042-2060\n        evenement_cle:\
+      \ Chad abandonne ses périmètres irrigués solaires 2055\n      fortress_world:\n\
+      \        evolution: blocs énergétiques accaparent les nappes via fermes solaires\n\
+      \        date_bascule: 2037-2053\n        evenement_cle: Bloc Eurasiatique annexe\
+      \ les aquifères du lac Tchad 2048\n      new_sustainability:\n        evolution:\
+      \ optimisation IA des réseaux hydriques solaires transfrontaliers\n        date_bascule:\
+      \ 2032-2047\n        evenement_cle: Consortium SahelFlow déploie son IA de gestion\
+      \ hydrique 2041\n      eco_communalism:\n        evolution: bioterritoires gèrent\
+      \ localement leurs pompages solaires\n        date_bascule: 2039-2058\n    \
+      \    evenement_cle: charte de N'Djamena pour l'autonomie hydrique communautaire\n\
+      \      policy_reform:\n        evolution: accords régionaux encadrent l'irrigation\
+      \ solaire partagée\n        date_bascule: 2029-2044\n        evenement_cle:\
+      \ traité de Ouagadougou sur les quotas hydriques solaires 2037\n      reference:\n\
+      \        evolution: tensions persistantes entre États pour l'accès à l'eau solaire\n\
+      \        date_bascule: 2025-2040\n        evenement_cle: Burkina Faso et Ghana\
+      \ s'opposent sur le barrage de Bagré 2036"
+    signaux_existants_consideres: 'Le signal ''competition_terres_rares'' traite des
+      tensions sur les ressources critiques, mais se concentre sur les minerais plutôt
+      que sur l''eau. Le signal ''adaptation_sobriete_energetique'' aborde la gestion
+      énergétique sous contrainte, mais sans lien direct avec l''irrigation ou les
+      conflits hydriques. Ce nouveau signal complète ces dynamiques en ciblant spécifiquement
+      l''intersection entre énergie solaire, agriculture et accès à l''eau, un enjeu
+      distinct mais lié aux tensions sur les ressources critiques. Les événements
+      clés ont été choisis pour éviter les recoupements avec les autres variables
+      du même signal (ex: éviter le Sahel pour ''breakdown'' et ''fortress_world''
+      en privilégiant d''autres zones géographiques).'

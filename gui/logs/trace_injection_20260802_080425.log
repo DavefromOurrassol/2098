@@ -1,0 +1,4 @@
+usage: trace_injection.py [-h] [--slug SLUG]
+                          [--type {instance,evenement,signal}] [--json]
+                          [--report] [--skip-articles] [--list]
+trace_injection.py: error: argument --type: invalid choice: 'undefined' (choose from 'instance', 'evenement', 'signal')

@@ -4,6 +4,10 @@ type: event_instance
 slug: crise_gouvernance_amazonie_breakdown
 archetype: crise_gouvernance_amazonie
 scenario: breakdown
+localisation:
+  zone: amazon_pacte_gardiens
+  lieu: Belém / Bassin Amazonien
+  type_lieu: region
 type_evenement: political_social
 portee: continentale
 date: 2047

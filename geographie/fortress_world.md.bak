@@ -606,20 +606,19 @@ zones:
   - entite: Nuuk
     type_entite: region_administrative
     portion: null
-  description: 'État autonome du Groenland devenu l''un des acteurs géopolitiques
-    les plus redoutés de l''Arc Arctique depuis la fonte quasi-totale de l''inlandsis.
-    Siège de Nuna Capital, fonds souverain gérant 2 400 milliards d''unités de valeur
-    bloc bâtis sur la libération massive de terres rares, d''hydrocarbures profonds
-    et de corridors maritimes. Ses dirigeants Inuit ont imposé une règle simple :
-    qui veut le lithium groenlandais accepte les conditions groenlandaises. N''appartenant
-    officiellement à aucun camp, c''est l''acteur le plus courtisé de l''Arc Arctique.'
-  statut: emergent
-  tensions_internes: Souveraineté retrouvée reposant sur une catastrophe climatique
-    non voulue — la conscience de cette origine empoisonne les débats entre faction
-    'rente comme rempart' et voix réclamant une redistribution vers les zones sinistrées.
-    Les trois blocs convergent vers une stratégie de pression coordonnée pour forcer
-    un alignement. Les Inuit des zones côtières submergées, déplacés par la même fonte
-    qui enrichit le Fonds, organisent une contestation interne croissante.
+  description: Enclave arctique hyper-sécurisée devenue le coffre-fort stratégique
+    de l'Arc Arctique après la fonte de l'inlandsis. Nuna Capital, fonds souverain
+    militarisé, contrôle l'accès aux terres rares et aux corridors maritimes dégelés,
+    imposant ses conditions aux blocs dominants sous peine de blocage logistique.
+    Officiellement intégrée au Pacte des Forteresses Souveraines, elle en est le membre
+    le plus courtisé — et le plus imprévisible.
+  statut: dominant
+  tensions_internes: 'Souveraineté reposant sur une rente climatique controversée
+    : les factions pro-redistribution (zones côtières submergées) s''opposent aux
+    technocrates de Nuna Capital, tandis que les trois blocs exercent une pression
+    constante pour verrouiller l''accès aux ressources. Les déplacés climatiques internes,
+    privés de droits sur les dividendes du Fonds, alimentent une guérilla juridique
+    et logistique.'
   periode_transition: 2050-2098
   evenement_transition: null
   lieux_emblematiques:
@@ -629,11 +628,13 @@ zones:
       blocs se croisent sans jamais se voir, gérant 2 400 milliards d'unités de valeur
       bloc
   relations:
-    allies: []
+    allies:
+    - pacte_forteresses_souveraines
     rivaux:
     - bloc_atlantique
     - bloc_eurasiatique_occidental
     - bloc_pacifique_nord
+    - espace_nordique_arctique
   sources_attestees:
   - kalaallit_nunaat_sovereign_fund_fortress_world
   promu_depuis: null

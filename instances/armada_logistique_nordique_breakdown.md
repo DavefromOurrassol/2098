@@ -8,7 +8,6 @@ localisation:
   zone: arctique_nordark
   lieu: Arctique Nordark (Tromsø, corridor de Barents, Svalbard)
   type_lieu: region
-
 type_dans_scenario: organisation
 
 role_dans_scenario: >

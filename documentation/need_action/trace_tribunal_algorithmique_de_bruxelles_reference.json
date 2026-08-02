@@ -1,0 +1,286 @@
+{
+  "slug": "tribunal_algorithmique_de_bruxelles",
+  "type": "instance",
+  "nom": "Tribunal Algorithmique de Bruxelles",
+  "description": "Un tribunal hybride — mêlant jugement humain et traitement algorithmique — chargé de statuer sur les litiges nés des décisions automatisées affectant les droits fondamentaux. Il incarne l'effort d'une société pour soumettre la machine à la règle de droit, en créant un espace de recours contre les biais, erreurs et arbitraires encodés dans les systèmes de gouvernance délégués à l'intelligence artificielle. Il représente l'institution qui tente de réconcilier la vitesse et l'opacité de la décision algorithmique avec les exigences de justice, de transparence et de responsabilité propres aux démocraties. Son existence même signale une crise de légitimité : celle du gouvernement par les machines.\n",
+  "origine": {
+    "statut_injection": "traité",
+    "entree_brute": {
+      "status": "injected",
+      "idea": {
+        "nom": "Tribunal Algorithmique de Bruxelles",
+        "category": "institution",
+        "role": "Basé à Bruxelles, ce tribunal hybride humain-IA statue sur les litiges issus des décisions automatisées affectant les droits fondamentaux des citoyens des zones tampons européennes. Il constitue le premier mécanisme de recours juridictionnel contre les biais encodés dans les systèmes de gouvernance algorithmique, mais sa légitimité est contestée par les blocs souverainistes qui refusent sa compétence extraterritoriale.",
+        "etat": "actif",
+        "scenario_ref": "new_sustainability",
+        "scenario_hint": null,
+        "source": "auto_generated"
+      },
+      "slug": "tribunal_algorithmique_de_bruxelles",
+      "scenarios": [
+        "breakdown",
+        "fortress_world",
+        "new_sustainability",
+        "eco_communalism",
+        "policy_reform",
+        "reference"
+      ],
+      "archetype": {
+        "description_complete": "Un tribunal hybride — mêlant jugement humain et traitement algorithmique — chargé de statuer sur les litiges nés des décisions automatisées affectant les droits fondamentaux. Il incarne l'effort d'une société pour soumettre la machine à la règle de droit, en créant un espace de recours contre les biais, erreurs et arbitraires encodés dans les systèmes de gouvernance délégués à l'intelligence artificielle. Il représente l'institution qui tente de réconcilier la vitesse et l'opacité de la décision algorithmique avec les exigences de justice, de transparence et de responsabilité propres aux démocraties. Son existence même signale une crise de légitimité : celle du gouvernement par les machines.",
+        "tension_fondamentale": "La légitimité de juger les algorithmes suppose une autorité que les algorithmes eux-mêmes ont contribué à éroder — et toute juridiction qui prétend encadrer la gouvernance automatisée est contestée par ceux dont le pouvoir repose précisément sur l'incontrôlabilité de ces systèmes.",
+        "variables_potentielles": [
+          "gouvernance_institutions",
+          "technologie_information",
+          "frontieres_du_systeme"
+        ],
+        "doublon_detecte": false,
+        "doublon_slug": null
+      },
+      "scenario_ref": "new_sustainability",
+      "role_ref": "Basé à Bruxelles, ce tribunal hybride humain-IA statue sur les litiges issus des décisions automatisées affectant les droits fondamentaux des citoyens des zones tampons européennes. Il constitue le premier mécanisme de recours juridictionnel contre les biais encodés dans les systèmes de gouvernance algorithmique, mais sa légitimité est contestée par les blocs souverainistes qui refusent sa compétence extraterritoriale.",
+      "etat_ref": "actif"
+    },
+    "fichier_source": "/Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/entites_custom/processed.yaml"
+  },
+  "entite_scenario_ref": "new_sustainability",
+  "zone_hint_origine": null,
+  "date_creation_entite": "2026-06-25",
+  "scenarios_presents": [
+    "breakdown",
+    "fortress_world",
+    "new_sustainability",
+    "eco_communalism",
+    "policy_reform",
+    "reference"
+  ],
+  "instances": [
+    {
+      "scenario": "breakdown",
+      "fichier": "/Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/instances/tribunal_algorithmique_de_bruxelles_breakdown.md",
+      "statut": null,
+      "date_enrichissement": null,
+      "localisation": {
+        "zone": "geneve_bunker_institutions",
+        "lieu": "Enclaves européennes (nomade, origine Bruxelles)",
+        "type_lieu": "infrastructure"
+      },
+      "role_dans_scenario": "Vestige fracturé du Tribunal Algorithmique de Bruxelles, la Chambre des Recours Algorithmiques survit en nomade judiciaire, se déplaçant entre les enclaves encore dotées d'une infrastructure réseau minimale. Elle n'a plus de siège fixe depuis l'effondrement de la Zone Administrative Bruxelloise en 2091 et opère par sessions itinérantes, rendant des jugements que personne n'est plus tenu d'appliquer. Son existence est à la fois un acte de résistance symbolique et un anachronisme tragique : elle prétend encadrer des algorithmes de gouvernance qui, dans de nombreux territoires fragmentés, ont cessé d'être gouvernés par quiconque. Elle incarne la mémoire d'un État de droit que les fragments d'États successeurs refusent d'honorer.\n",
+      "description_journalistique": "On les appelle les « juges fantômes ». Ils arrivent avec des mallettes blindées contenant des disques durs chiffrés et un sceau institutionnel dont l'autorité n'est reconnue que par eux-mêmes. La Chambre des Recours Algorithmiques tient ses audiences dans des arrière-salles d'enclaves techno-survivantes, sous des ampoules à dynamo, devant des plaideurs qui ont parfois marché trois semaines pour déposer un recours contre un système d'allocation hydrique qui a condamné leur communauté. Les arrêts sont rédigés, signés, tamponnés — puis rangés dans des archives que personne n'ira consulter. Et pourtant ils viennent. Parce que dans l'effondrement, même un jugement inappliqué est une forme de preuve que quelque chose a existé, qu'une injustice a été nommée.\n",
+      "impact_local": 1,
+      "impact_systemique_global": 2,
+      "variables_influencees": [
+        "gouvernance_institutions",
+        "technologie_information"
+      ],
+      "alliances": [
+        "archives_neutres_de_geneve_breakdown",
+        "conseil_regulation_algorithmique_breakdown",
+        "collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown",
+        "reseau_mnemos_breakdown",
+        "le_temoin_breakdown"
+      ],
+      "oppositions": [
+        "enclaves_corporatives_fortifiees_breakdown",
+        "fronts_populistes_anti_technocratiques_breakdown",
+        "factions_propagandistes_des_archives_breakdown",
+        "directive_kontinuum_breakdown",
+        "nexcore_breakdown",
+        "cites_etats_secessionistes_breakdown"
+      ]
+    },
+    {
+      "scenario": "fortress_world",
+      "fichier": "/Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/instances/tribunal_algorithmique_de_bruxelles_fortress_world.md",
+      "statut": null,
+      "date_enrichissement": null,
+      "localisation": {
+        "zone": "bruxelles_forteresse",
+        "lieu": "Bruxelles Résiduelle",
+        "type_lieu": "ville"
+      },
+      "role_dans_scenario": "Vestige quasi-fantomatique d'une ambition démocratique d'encadrement de la gouvernance automatisée, la Chambre de Recours Algorithmique tente de survivre dans l'interstice entre le Bloc Atlantique et ses marges européennes fragmentées. Elle prétend encore statuer sur les litiges nés des décisions algorithmiques affectant les droits fondamentaux, mais son autorité réelle est contestée par les appareils d'État des blocs fermés qui n'y voient qu'un obstacle procédural à liquider. Dans un monde où la gouvernance est désormais déléguée à des systèmes opaques et souverains, l'existence de cette Chambre est à la fois anachronique et subversive — un rappel vivant que la machine n'a jamais été formellement soustraite au droit.\n",
+      "description_journalistique": "Au quatrième étage d'un immeuble administratif dont les deux premiers ont été réquisitionnés par la Directive Kontinuum, la Chambre de Recours Algorithmique de Bruxelles Résiduelle tient encore ses audiences — à huis clos, avec des robes élimées et des terminaux dont les accès réseau sont filtrés par l'Autorité Numérique du Bloc Atlantique. Ses sept juges permanents — dont deux siègent en exil virtuel depuis des nœuds chiffrés non localisés — ont rendu 1 400 avis depuis 2031, dont aucun n'a été exécuté par un État-forteresse. Pourtant, les coalitions de déplacés et les collectifs dissidents continuent de déposer des dossiers : non pour obtenir justice, mais pour faire exister un acte de refus dans un registre documenté. La Chambre est devenue moins un tribunal qu'une archive vivante de l'injustice algorithmique — une mémoire que les blocs n'ont pas encore jugé utile d'éteindre tout à fait.\n",
+      "impact_local": 2,
+      "impact_systemique_global": 1,
+      "variables_influencees": [
+        "gouvernance_institutions",
+        "technologie_information"
+      ],
+      "alliances": [
+        "cellules_universitaires_dissidentes_des_zones_tampons_fortress_world",
+        "reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world",
+        "institutions_multilaterales_residuelles_fortress_world",
+        "archives_diplomatiques_de_l_onu_eclat_fortress_world",
+        "dissidences_internes_aux_blocs_minoritaires_fortress_world",
+        "factions_traditionalistes_du_mandat_electif_fortress_world"
+      ],
+      "oppositions": [
+        "conseil_regulation_algorithmique_fortress_world",
+        "bureau_gouvernance_algorithmique_fortress_world",
+        "dispositifs_de_surveillance_numerique_souveraine_fortress_world",
+        "systemes_de_scoring_de_productivite_corporative_fortress_world",
+        "appareils_d_etat_des_blocs_fermes_fortress_world",
+        "oligarchies_technologiques_souveraines_d_infrastructure_de_calcul_fortress_world",
+        "executif_militaro_civil_du_regime_fortress_world"
+      ]
+    },
+    {
+      "scenario": "new_sustainability",
+      "fichier": "/Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/instances/tribunal_algorithmique_de_bruxelles_new_sustainability.md",
+      "statut": null,
+      "date_enrichissement": null,
+      "localisation": {
+        "zone": "tribunal_gouvernance_algorithmique_bruxelles",
+        "lieu": "Tribunal Algorithmique de Bruxelles, quartier du Schuman reconstruit",
+        "type_lieu": "infrastructure"
+      },
+      "role_dans_scenario": "Basé à Bruxelles, ce tribunal hybride humain-IA statue sur les litiges issus des décisions automatisées affectant les droits fondamentaux des citoyens des zones tampons européennes. Il constitue le premier mécanisme de recours juridictionnel contre les biais encodés dans les systèmes de gouvernance algorithmique, mais sa légitimité est contestée par les blocs souverainistes qui refusent sa compétence extraterritoriale. Dans le contexte de la new_sustainability, il fonctionne comme un organe de régulation mature, traçant une jurisprudence hybride qui s'impose progressivement comme référence mondiale en matière de responsabilité algorithmique. Il incarne la tension permanente entre l'efficience technocratique et l'exigence démocratique de justification.\n",
+      "description_journalistique": "Dans le quartier du Schuman reconstruit, derrière des façades de bois composite et de verre biosourcé, le Tribunal Algorithmique de Bruxelles rend chaque semaine plusieurs dizaines de décisions qui font trembler des architectures décisionnelles déployées de Lagos à Varsovie. Ses audiences — retransmises en flux ouvert sur le Réseau des Communs Numériques — sont devenues le spectacle paradoxal d'une machine jugée par une autre machine assistée d'humains en robe grise. Ses juristes-auditeurs, mi-légistes mi-ingénieurs, décortiquent des lignes de code comme d'autres lirent autrefois des contrats. Ses décisions les plus emblématiques — l'invalidation partielle du module d'allocation résidentielle ARIA-7 en 2087 ou la mise sous tutelle temporaire d'un algorithme de scoring carbone déployé dans trois États-membres — ont imposé sa stature internationale. Mais pour les gouvernements du Bloc Eurasien et les souverainistes de la Ceinture Boréale, Bruxelles reste une capitale étrangère, et ce tribunal, une ingérence déguisée en droit.\n",
+      "impact_local": 3,
+      "impact_systemique_global": 4,
+      "variables_influencees": [
+        "gouvernance_institutions",
+        "technologie_information"
+      ],
+      "alliances": [
+        "bureau_gouvernance_algorithmique_new_sustainability",
+        "conseil_regulation_algorithmique_new_sustainability",
+        "consortium_d_audit_algorithmique_ouvert_new_sustainability",
+        "consortium_d_interoperabilite_ia_humain_new_sustainability",
+        "parlement_deliberatif_mondial_new_sustainability",
+        "assemblee_territoires_new_sustainability",
+        "college_des_auditeurs_independants_du_parlement_biotechnologique_mondial_new_sustainability",
+        "institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability",
+        "observatoire_anti_monopole_de_geneve_new_sustainability",
+        "conseil_de_regulation_cognitive_de_l_onu_new_sustainability"
+      ],
+      "oppositions": [
+        "bloc_des_gouvernements_souverainistes_hydriques_new_sustainability",
+        "etats_souverainistes_anti_reseau_new_sustainability",
+        "internationale_souverainiste_de_deconnexion_territoriale_new_sustainability",
+        "souverainistes_du_bloc_eurasien_new_sustainability",
+        "factions_technocratiques_de_la_delegation_ia_totale_new_sustainability",
+        "factions_internes_pro_opacite_des_parametres_new_sustainability",
+        "lobbies_des_plateformes_de_consensus_automatise_new_sustainability",
+        "enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability",
+        "collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability",
+        "coalition_anti_algorithme_des_autonomies_locales_new_sustainability"
+      ]
+    },
+    {
+      "scenario": "eco_communalism",
+      "fichier": "/Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/instances/tribunal_algorithmique_de_bruxelles_eco_communalism.md",
+      "statut": null,
+      "date_enrichissement": null,
+      "localisation": {
+        "zone": "europe_occidentale_reconstituee",
+        "lieu": "Europe occidentale (itinérante, originellement Bruxelles, siège en juillet 2097 au Bas-Escaut)",
+        "type_lieu": "region"
+      },
+      "role_dans_scenario": "Dans un monde fragmenté en communs territoriaux et assemblées bioterritoriales, la CRAD n'est plus un tribunal centralisé à Bruxelles mais une instance itinérante, convoquée à la demande par les assemblées régionales pour statuer sur les litiges nés des rares algorithmes encore en usage — outils d'allocation de ressources, de priorisation énergétique ou de cartographie des corridors écologiques. Elle incarne le refus communaliste de laisser toute décision automatisée sans recours humain, mais sa légitimité repose moins sur un mandat étatique que sur une reconnaissance inter-assemblées fragile et négociée. Elle est un tribunal de proximité autant qu'une juridiction de principe, siégeant tantôt dans une coopérative, tantôt dans une salle d'archive communautaire.\n",
+      "description_journalistique": "La CRAD n'a pas de siège fixe. Elle voyage. En juillet 2097, elle siégeait dans la grange-archive de la coopérative du Bas-Escaut pour juger l'algorithme d'allocation des semences qui avait systématiquement défavorisé trois communes du delta — une erreur encodée dans un paramètre de 'priorité productive' hérité d'une logique agro-industrielle pré-effondrement. Ses cinq juges-médiateurs, formés à la fois au droit coutumier inter-assemblées et à l'audit des systèmes automatisés légers, ont rendu un verdict en deux jours : correction du paramètre, redistribution des stocks, et versement du protocole de décision aux Archives Ouvertes. Pour ses partisans, elle est la preuve que la machine peut être mise en joue. Pour ses détracteurs — notamment les factions qui gèrent les trames algorithmiques propriétaires — elle n'est qu'un obstacle à l'efficacité, une chambre de chicane peuplée de techniciens-idéalistes.\n",
+      "impact_local": 3,
+      "impact_systemique_global": 1,
+      "variables_influencees": [
+        "gouvernance_institutions",
+        "technologie_information"
+      ],
+      "alliances": [
+        "archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism",
+        "assemblees_bioterritoriales_regionales_eco_communalism",
+        "assemblees_cooperatives_regionales_eco_communalism",
+        "cercles_de_mediation_territoriale_intercommunautaire_eco_communalism",
+        "collectifs_de_techniciens_sobres_eco_communalism",
+        "guildes_de_mediateurs_ecologiques_eco_communalism",
+        "mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism"
+      ],
+      "oppositions": [
+        "factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism",
+        "consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism",
+        "conseils_territoriaux_opaques_sur_la_gestion_des_ressources_eco_communalism",
+        "reseaux_de_notables_communautaires_capturistes_eco_communalism",
+        "courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism",
+        "plateformes_centralisees_de_reagregation_globale_eco_communalism"
+      ]
+    },
+    {
+      "scenario": "policy_reform",
+      "fichier": "/Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/instances/tribunal_algorithmique_de_bruxelles_policy_reform.md",
+      "statut": null,
+      "date_enrichissement": null,
+      "localisation": {
+        "zone": "hub_europeen_regulation",
+        "lieu": "Bruxelles",
+        "type_lieu": "ville"
+      },
+      "role_dans_scenario": "Dans le monde de policy_reform, la CRAB constitue l'un des rouages centraux de la gouvernance technocratique régulée : une juridiction hybride, mi-tribunal mi-agence d'audit, chargée de statuer sur les recours formés contre les décisions automatisées des systèmes de gouvernance délégués à l'IA à l'échelle européenne et, par extension, onusienne. Elle ne juge pas les algorithmes en abstrait — elle tranche des cas concrets : allocations de ressources critiques contestées, scores de crédit climatique invalidants, décisions d'exclusion du marché du travail augmenté, relocalisations forcées générées par des modèles prédictifs. Son existence est à la fois symbole de maturité institutionnelle et aveu d'une crise de légitimité : la régulation a créé le tribunal précisément parce que les machines gouvernent déjà.\n",
+      "description_journalistique": "Nichée dans un immeuble de verre et de béton surchargé de câbles au cœur du quartier européen de Bruxelles, la Chambre de Révision Algorithmique reçoit chaque semaine des centaines de dossiers en provenance des vingt-sept États membres et de douze juridictions associées. Ses audiences mêlent avocats en robe et ingénieurs en pull, dépositions humaines et logs de systèmes versés au dossier comme pièces à conviction. Fondée en 2061 dans la foulée du Pacte de Gouvernance Numérique Intégrée, elle a rendu plus de quarante mille décisions en trente-sept ans, dont certaines ont forcé la refonte complète de systèmes d'allocation déployés à l'échelle continentale. Ses détracteurs — principalement les grands consortiums d'automatisation — l'accusent d'être une institution lente qui freine la réactivité des systèmes dans des situations d'urgence climatique et énergétique. Ses défenseurs y voient le dernier rempart contre la tyrannie douce du score et du modèle.\n",
+      "impact_local": 3,
+      "impact_systemique_global": 4,
+      "variables_influencees": [
+        "gouvernance_institutions",
+        "technologie_information"
+      ],
+      "alliances": [
+        "bureau_gouvernance_algorithmique_policy_reform",
+        "conseil_onu_de_gouvernance_numerique_et_ia_policy_reform",
+        "conseil_regulation_algorithmique_policy_reform",
+        "collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform",
+        "reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform",
+        "conseil_intergouvernemental_de_regulation_technologique_policy_reform",
+        "collectifs_citoyens_de_deliberation_augmentee_policy_reform"
+      ],
+      "oppositions": [
+        "consortiums_prives_de_gouvernance_algorithmique_policy_reform",
+        "front_techno_utopiste_de_la_decision_automatisee_policy_reform",
+        "conglomerats_d_automatisation_industrielle_integrale_policy_reform",
+        "consortiums_d_optimisation_rh_algorithmique_policy_reform",
+        "coalition_des_souverainistes_numeriques_policy_reform",
+        "front_souverainiste_des_blocs_non_signataires_policy_reform",
+        "consortium_nexus_calcul_policy_reform"
+      ]
+    },
+    {
+      "scenario": "reference",
+      "fichier": "/Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/instances/tribunal_algorithmique_de_bruxelles_reference.md",
+      "statut": null,
+      "date_enrichissement": null,
+      "localisation": {
+        "zone": "bruxelles_nouveau",
+        "lieu": "Bruxelles — ancien Palais de Justice",
+        "type_lieu": "infrastructure"
+      },
+      "role_dans_scenario": "Le Tribunal Algorithmique de Bruxelles est la juridiction de référence de l'Union Continentale Européenne chargée de statuer sur les litiges nés des décisions automatisées affectant les droits fondamentaux — allocations de ressources, scores de crédit social climatique, accès aux soins, mobilité contrainte. Dans un monde de transition fragile, il incarne à la fois l'ambition d'une gouvernance de droit sur les systèmes IA et la preuve de ses limites structurelles : sous-financé, débordé, contesté par les grandes plateformes qui instrumentalisent sa lenteur. Il fonctionne comme un espace symbolique autant que juridique — un lieu où la société tente encore de nommer ce que les machines ont décidé.\n",
+      "description_journalistique": "Installé dans l'ancien Palais de Justice de Bruxelles — dont la façade néoclassique contraste violemment avec les terminaux d'audit IA qui tapissent désormais ses salles d'audience — le Tribunal Algorithmique traite chaque semaine plusieurs centaines de recours venus de tout le continent. La grande majorité concerne des décisions d'allocation de ressources énergétiques ou d'accès aux soins. Ses juges — mi-magistrats humains, mi-panneaux d'analyse contradictoire — délibèrent dans un cadre procédural que les grandes plateformes ont appris à contourner avec une efficacité décourageante : délais d'explicabilité systématiquement dépassés, modèles mis à jour entre la plainte et l'audience. On dit qu'il rend la justice comme on répare un filet avec les mains — utile, mais toujours en retard sur les trous.\n",
+      "impact_local": 3,
+      "impact_systemique_global": 2,
+      "variables_influencees": [
+        "gouvernance_institutions",
+        "technologie_information"
+      ],
+      "alliances": [
+        "conseil_regulation_algorithmique_reference",
+        "conseil_de_geneve_pour_les_droits_biosociaux_reference",
+        "reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference",
+        "collectifs_academiques_independants_reference",
+        "reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference",
+        "universites_et_think_tanks_en_zones_de_liberte_academique_reference",
+        "mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference",
+        "cooperatives_ia_open_source_reference",
+        "ligue_des_municipalites_peripheriques_sous_connectees_reference"
+      ],
+      "oppositions": [
+        "consortium_des_grandes_plateformes_ia_integrees_reference",
+        "consortium_des_plateformes_ia_centralisees_anti_deliberation_reference",
+        "consortiums_prives_de_gestion_des_donnees_critiques_reference",
+        "etats_a_tendance_centraliste_numerique_reference",
+        "alliance_blocs_souverains_reference",
+        "directive_kontinuum_reference",
+        "plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference"
+      ]
+    }
+  ],
+  "slug_original_fourni": "tribunal_algorithmique_de_bruxelles_reference",
+  "note_resolution": "Le slug fourni ('tribunal_algorithmique_de_bruxelles_reference') était un slug d'instance/event_instance -- résolu automatiquement vers le slug d'entité/archétype 'tribunal_algorithmique_de_bruxelles'.",
+  "articles_mentionnant": []
+}

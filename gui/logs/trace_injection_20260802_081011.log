@@ -1,0 +1,23 @@
+# Traçabilité — `agence_mondiale_de_modelisation_climatique_ammc` (instance)
+
+*Généré le 2026-08-02 08:10*
+
+## 1. Origine
+
+- **Statut d'injection** : origine introuvable (idée non trouvée dans processed/needs_review.yaml)
+
+## 2. Propagation dans l'espace et le temps
+
+- **Nom** : Agence Mondiale de Modélisation Climatique (AMMC)
+- **Présente dans 1/6 scénarios** : new_sustainability
+
+| Scénario | Statut | Enrichie le | Zone | Impact local/global |
+|---|---|---|---|---|
+| new_sustainability | officialise_enrichi | 2026-06-27 | centre_institutionnel_geneve | 2/5 |
+
+- **Variables systémiques influencées (tous scénarios confondus)** : climat_environnement_global, gouvernance_institutions, technologie_information
+
+## 3. Aval — usage dans les articles publiés
+
+_Aucune mention trouvée dans `articles/*.md` (scan texte brut, best-effort — un article peut mentionner l'entité sous une formulation différente sans que ce scan la détecte)._
+

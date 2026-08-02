@@ -8,7 +8,6 @@ localisation:
   zone: cargo_mombasa_crrc
   lieu: Cargo au large de Mombasa
   type_lieu: infrastructure
-
 type_dans_scenario: organisation
 
 role_dans_scenario: >

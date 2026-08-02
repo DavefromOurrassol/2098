@@ -1,18 +1,78 @@
 [
   {
     "id": "generate",
-    "label": "Generate",
+    "label": "Générer un article",
     "icon": "📄",
     "section": "articles",
     "script": "generate.py",
-    "description": "Génère un article depuis config.yaml",
+    "description": "Génère un article de presse fictive à partir des réglages ci-dessous (scénario, thématique, longueur, angle...).",
     "requires": [],
     "options": [
       {
         "flag": "--dry-run",
         "type": "checkbox",
-        "label": "Dry run",
-        "default": false
+        "label": "Simulation (aucune écriture)",
+        "default": false,
+        "description": "Affiche le prompt complet (système + utilisateur) qui serait envoyé, sans appeler l'API ni rien écrire sur le disque. Le texte affiché peut être copié-collé tel quel dans un LLM externe."
+      },
+      {
+        "flag": "--forcer-type",
+        "type": "select",
+        "label": "Forcer un élément",
+        "choices": [
+          {
+            "value": "",
+            "label": "— Aucun forçage —"
+          },
+          {
+            "value": "instance",
+            "label": "Instance (entité)"
+          },
+          {
+            "value": "evenement",
+            "label": "Événement"
+          },
+          {
+            "value": "signal",
+            "label": "Signal"
+          }
+        ],
+        "optional": true,
+        "default": "",
+        "description": "Garantit la présence d'un élément précis dans l'article, plutôt que de laisser la sélection automatique décider seule. Détermine la liste proposée juste en dessous."
+      },
+      {
+        "flag": "--forcer-slug",
+        "type": "slug_select",
+        "label": "Élément à forcer",
+        "optional": true,
+        "slug_type": "entities",
+        "slug_type_field": "--forcer-type",
+        "slug_type_map": {
+          "instance": "entities",
+          "evenement": "evenements",
+          "signal": "signals",
+          "*": "entities"
+        },
+        "description": "Liste filtrée selon le type choisi ci-dessus. Pour un événement/signal, doit déjà exister pour le scénario sélectionné plus haut."
+      },
+      {
+        "flag": "--forcer-mode",
+        "type": "select",
+        "label": "Mode de forçage",
+        "choices": [
+          {
+            "value": "ingredient",
+            "label": "Ingrédient garanti (présent, l'article peut traiter autre chose autour)"
+          },
+          {
+            "value": "sujet_central",
+            "label": "Sujet central (l'article est construit spécifiquement autour)"
+          }
+        ],
+        "optional": true,
+        "default": "ingredient",
+        "description": "'Sujet central' écrase le champ Angle spécifique avec une directive générée automatiquement à partir de l'élément forcé."
       }
     ],
     "config_file": "generator/config.yaml",
@@ -176,7 +236,7 @@
         "type": "text",
         "label": "Titre suggéré",
         "optional": true,
-        "placeholder": "Laisser vide = Claude choisit"
+        "placeholder": "Laisser vide = l'IA choisit"
       }
     ],
     "yaml_files": [
@@ -189,11 +249,11 @@
   },
   {
     "id": "generate_series",
-    "label": "Generate series",
+    "label": "Générer une série d'articles",
     "icon": "📋",
     "section": "articles",
     "script": "generate_series.py",
-    "description": "Génère une série d'articles depuis config_series.yaml",
+    "description": "Génère plusieurs articles d'un coup selon les réglages d'une série (thématiques, nombre par thématique, longueur).",
     "requires": [],
     "options": [
       {
@@ -206,8 +266,9 @@
       {
         "flag": "--dry-run",
         "type": "checkbox",
-        "label": "Dry run",
-        "default": false
+        "label": "Simulation (aucune écriture)",
+        "default": false,
+        "description": "Affiche ce qui serait fait, sans rien modifier ni écrire sur le disque."
       }
     ],
     "config_file": "generator/config_series.yaml",
@@ -310,7 +371,7 @@
         "type": "text",
         "label": "Angle spécifique",
         "optional": true,
-        "placeholder": "Laisser vide = Claude choisit librement"
+        "placeholder": "Laisser vide = l'IA choisit librement"
       }
     ],
     "yaml_files": [
@@ -322,54 +383,12 @@
     "gui_verified": true
   },
   {
-    "id": "generate_manual",
-    "label": "Generate manual",
-    "icon": "✍️",
-    "section": "articles",
-    "script": "generate_manual.py",
-    "description": "Génération manuelle pas à pas depuis manual_progress.json",
-    "requires": [],
-    "mode": "manual_steps",
-    "steps": [
-      {
-        "arg": "prompt",
-        "label": "Générer prompt",
-        "description": "Prépare le prompt suivant"
-      },
-      {
-        "arg": "status",
-        "label": "Voir statut",
-        "description": "Affiche l'avancement de la série"
-      },
-      {
-        "arg": "save",
-        "label": "Sauvegarder",
-        "description": "Sauvegarde la sortie dans un fichier",
-        "has_input": true,
-        "input_label": "Fichier de sortie (.txt)"
-      }
-    ],
-    "options": [],
-    "yaml_files": [
-      {
-        "path": "generator/config_series.yaml",
-        "label": "generator/config_series.yaml"
-      },
-      {
-        "path": "generator/state/manual_progress.json",
-        "label": "manual_progress.json",
-        "readonly": true
-      }
-    ],
-    "gui_verified": false
-  },
-  {
     "id": "generate_journaux",
-    "label": "Generate journaux",
+    "label": "Générer les journaux locaux",
     "icon": "🗞",
     "section": "presse",
     "script": "generate_journaux.py",
-    "description": "Génère les éditions locales dans journaux.yaml",
+    "description": "Crée ou met à jour, pour chaque zone d'un scénario, le journal local qui la couvre (nom, ton éditorial).",
     "requires": [],
     "options": [
       {
@@ -418,19 +437,26 @@
       {
         "flag": "--dry-run",
         "type": "checkbox",
-        "label": "Dry run",
-        "default": false
+        "label": "Simulation (aucune écriture)",
+        "default": false,
+        "description": "Affiche ce qui serait fait, sans rien modifier ni écrire sur le disque."
       }
     ],
-    "gui_verified": true
+    "gui_verified": true,
+    "required_one_of": [
+      [
+        "--scenario",
+        "--all"
+      ]
+    ]
   },
   {
     "id": "create_entities",
-    "label": "Create entities",
+    "label": "Créer des entités",
     "icon": "👥",
     "section": "entites_creation",
     "script": "create_entities_and_instances.py",
-    "description": "Crée des entités et instances dans le vault",
+    "description": "Crée de nouveaux personnages, organisations, lieux ou autres éléments fictifs (entités), et les rattache aux scénarios choisis.",
     "requires": [],
     "mode_select": {
       "label": "Mode",
@@ -468,7 +494,7 @@
       {
         "flag": "--category",
         "type": "select",
-        "label": "Catégorie imposée (mode auto, optionnel)",
+        "label": "Catégorie imposée (mode auto)",
         "optional": true,
         "choices": [
           {
@@ -558,8 +584,9 @@
       {
         "flag": "--dry-run",
         "type": "checkbox",
-        "label": "Dry run",
-        "default": false
+        "label": "Simulation (rien écrit sur disque, mais appels LLM réels)",
+        "default": false,
+        "description": "⚠️ Contrairement à d'autres scripts du panneau, ce mode appelle quand même le LLM pour de vrai (déduction de l'archétype + une fois par scénario généré) — seule l'écriture des fichiers finaux est sautée. Un coût API réel est engagé malgré le mot \"simulation\"."
       }
     ],
     "yaml_files": [
@@ -635,7 +662,8 @@
         "key": "role",
         "type": "textarea",
         "label": "Rôle (contrainte dure)",
-        "placeholder": "Décris le rôle dans le scénario de référence — sera repris tel quel"
+        "placeholder": "Décris le rôle dans le scénario de référence — sera repris tel quel",
+        "optional": true
       },
       {
         "key": "etat",
@@ -666,7 +694,8 @@
             "value": "mythifié",
             "label": "mythifié"
           }
-        ]
+        ],
+        "optional": true
       },
       {
         "key": "scenario_ref",
@@ -711,7 +740,8 @@
           "policy_reform",
           "reference"
         ],
-        "description": "Laisser vide = les 6 scénarios par défaut"
+        "description": "Laisser vide = les 6 scénarios par défaut",
+        "optional": true
       },
       {
         "key": "zone_hint",
@@ -733,11 +763,11 @@
   },
   {
     "id": "inject_events",
-    "label": "Inject events",
+    "label": "Injecter des événements",
     "icon": "⚡",
     "section": "entites_creation",
     "script": "inject_custom_events.py",
-    "description": "Injecte des événements personnalisés",
+    "description": "Ajoute au vault des événements que tu décris toi-même dans la file d'attente (ou que l'IA suggère en mode Auto).",
     "requires": [],
     "mode_select": {
       "label": "Mode",
@@ -767,7 +797,7 @@
       {
         "flag": "--scenario",
         "type": "select",
-        "label": "Scénario ciblé (mode auto, orientation optionnelle)",
+        "label": "Scénario ciblé (mode auto)",
         "source": "config_scenarios",
         "optional": true,
         "mode_only": "auto"
@@ -833,8 +863,9 @@
       {
         "flag": "--dry-run",
         "type": "checkbox",
-        "label": "Dry run",
-        "default": false
+        "label": "Simulation (rien écrit sur disque, mais appels LLM réels)",
+        "default": false,
+        "description": "⚠️ Ce mode appelle quand même le LLM pour de vrai (sélection de variables + développement, par scénario) — seule l'écriture des fichiers finaux est sautée. Un coût API réel est engagé malgré le mot \"simulation\"."
       }
     ],
     "yaml_files": [
@@ -849,7 +880,8 @@
         "key": "id",
         "type": "text",
         "label": "ID",
-        "placeholder": "ex : guerre_israelo_iranienne"
+        "placeholder": "ex : guerre_israelo_iranienne",
+        "optional": true
       },
       {
         "key": "description",
@@ -923,7 +955,8 @@
           "policy_reform",
           "reference"
         ],
-        "description": "Laisser vide = les 6 scénarios par défaut"
+        "description": "Laisser vide = les 6 scénarios par défaut",
+        "optional": true
       },
       {
         "key": "variables_hint",
@@ -944,7 +977,7 @@
           "systemes_productifs_travail"
         ],
         "optional": true,
-        "description": "Optionnel — Claude choisit si vide"
+        "description": "Optionnel — l'IA choisit si vide"
       },
       {
         "key": "variables_hint_count",
@@ -975,18 +1008,19 @@
   },
   {
     "id": "inject_signals",
-    "label": "Inject signals",
+    "label": "Injecter des signaux faibles",
     "icon": "📡",
     "section": "entites_creation",
     "script": "inject_custom_signals.py",
-    "description": "Injecte des signaux personnalisés",
+    "description": "Ajoute aux fiches du vault des signaux faibles (indices, tendances d'actualité) que tu décris toi-même dans la file d'attente.",
     "requires": [],
     "options": [
       {
         "flag": "--dry-run",
         "type": "checkbox",
-        "label": "Dry run",
-        "default": false
+        "label": "Simulation (rien écrit sur disque, mais appels LLM réels)",
+        "default": false,
+        "description": "⚠️ Ce mode appelle quand même le LLM pour de vrai (sélection de variable + rédaction, avec retries) — seule l'écriture des fichiers finaux est sautée. Un coût API réel est engagé malgré le mot \"simulation\"."
       }
     ],
     "yaml_files": [
@@ -1000,101 +1034,114 @@
       {
         "key": "id",
         "type": "text",
-        "label": "ID",
-        "placeholder": "ex : chatbots_therapeutes_remboursement"
+        "label": "Nom de repère (pour toi)",
+        "placeholder": "ex : chatbots_therapeutes_remboursement",
+        "description": "Sert uniquement à identifier cette idée dans la file d'attente et dans les journaux -- jamais transmis à l'IA, sans effet sur le résultat (qui aura son propre identifiant généré automatiquement).",
+        "optional": true
       },
       {
         "key": "description",
         "type": "textarea",
-        "label": "Description (signal faible)",
+        "label": "Description de l'idée",
         "placeholder": "Décris l'observation d'actualité ou l'idée narrative"
       },
       {
         "key": "variable_hint",
         "type": "select",
-        "label": "Variable hint (optionnel)",
+        "label": "Thème à privilégier",
         "choices": [
           {
             "value": "",
-            "label": "— Claude choisit —"
+            "label": "— L'IA choisit —"
           },
           {
             "value": "systeme_economique_redistribution",
-            "label": "systeme_economique_redistribution"
+            "label": "Économie et redistribution"
           },
           {
             "value": "gouvernance_institutions",
-            "label": "gouvernance_institutions"
+            "label": "Gouvernance et institutions"
           },
           {
             "value": "geopolitique_conflits",
-            "label": "geopolitique_conflits"
+            "label": "Géopolitique et conflits"
           },
           {
             "value": "valeurs_culture_tempo_sociale",
-            "label": "valeurs_culture_tempo_sociale"
+            "label": "Valeurs, culture et rythme social"
           },
           {
             "value": "organisation_territoires",
-            "label": "organisation_territoires"
+            "label": "Organisation des territoires"
           },
           {
             "value": "sante_biotechnologies",
-            "label": "sante_biotechnologies"
+            "label": "Santé et biotechnologies"
           },
           {
             "value": "frontieres_du_systeme",
-            "label": "frontieres_du_systeme"
+            "label": "Frontières du système (inclusion/exclusion)"
           },
           {
             "value": "technologie_information",
-            "label": "technologie_information"
+            "label": "Technologie et information"
           },
           {
             "value": "climat_environnement_global",
-            "label": "climat_environnement_global"
+            "label": "Climat et environnement global"
           },
           {
             "value": "energie_ressources_critiques",
-            "label": "energie_ressources_critiques"
+            "label": "Énergie et ressources critiques"
           },
           {
             "value": "demographie_mobilite_humaine",
-            "label": "demographie_mobilite_humaine"
+            "label": "Démographie et mobilité humaine"
           },
           {
             "value": "systemes_productifs_travail",
-            "label": "systemes_productifs_travail"
+            "label": "Systèmes productifs et travail"
           }
         ],
-        "optional": true
+        "optional": true,
+        "description": "Impose le thème du vault que ce signal doit affecter. Laisser sur \"— L'IA choisit —\" pour que l'IA décide elle-même du thème le plus pertinent pour ton idée."
       },
       {
         "key": "variable_hint_count",
         "type": "number",
-        "label": "Nb variables max",
+        "label": "Nombre de thèmes max",
         "min": 1,
         "max": 4,
         "default": 2,
-        "optional": true
+        "optional": true,
+        "description": "Si ton idée touche plusieurs thèmes à la fois, combien l'IA peut-elle en couvrir au maximum (entre 1 et 4)."
+      },
+      {
+        "key": "zone_hint",
+        "type": "text",
+        "label": "Lieu réel",
+        "optional": true,
+        "placeholder": "ex : Norvège, Sahel, Détroit de Malacca...",
+        "description": "Un lieu réel de 2026 (pays, région, ville) -- pas une zone du monde 2098. L'IA retrouve elle-même la zone correspondante dans chacun des 6 scénarios (qui peut différer d'un scénario à l'autre). Si l'idée mentionne déjà un lieu, celui-ci reste prioritaire en cas de conflit avec ce champ."
       },
       {
         "key": "source",
         "type": "text",
-        "label": "Source",
+        "label": "Origine de l'idée",
         "optional": true,
-        "placeholder": "ex : actualite_2026-06"
+        "placeholder": "ex : actualite_2026-06",
+        "description": "Note libre pour te souvenir d'où vient l'idée (article, discussion...) -- apparaît dans la fiche d'audit, sans effet sur le résultat."
       }
     ],
-    "gui_verified": false
+    "gui_verified": true
   },
   {
     "id": "enrich_minimal",
-    "label": "Enrich minimal",
+    "label": "Compléter les fiches minimales",
     "icon": "✨",
     "section": "entites_creation",
     "script": "enrich_minimal.py",
-    "description": "Enrichit les fichiers officialise_minimal via LLM",
+    "description": "Complète via IA les fiches créées a minima (champs manquants), pour les amener au même niveau de détail que les autres.",
     "requires": [],
     "options": [
       {
@@ -1117,14 +1164,15 @@
       {
         "flag": "--slug",
         "type": "slug_select",
-        "label": "Slug (optionnel)",
+        "label": "Une seule fiche",
         "slug_type": "instances",
-        "optional": true
+        "optional": true,
+        "description": "Limite le traitement à une fiche précise, identifiée par son nom de fichier technique (slug). Laisser vide pour traiter plusieurs fiches."
       },
       {
         "flag": "--limit",
         "type": "number",
-        "label": "Limite",
+        "label": "Nombre de fiches max",
         "description": "Nombre max de fichiers à traiter",
         "min": 1,
         "max": 426,
@@ -1133,15 +1181,15 @@
       {
         "flag": "--auto-cycle",
         "type": "checkbox",
-        "label": "Auto-cycle",
-        "description": "Enchaîne extract_phantom_slugs après enrichissement",
+        "label": "Enchaîner automatiquement la suite",
+        "description": "Une fois l'enrichissement fini, lance directement la recherche d'alliances fantômes (extract_phantom_slugs) sur les fiches traitées.",
         "default": false
       },
       {
         "flag": "--dry-run",
         "type": "checkbox",
-        "label": "Dry run",
-        "description": "Simule sans écrire",
+        "label": "Simulation (rien écrit sur disque, mais appels LLM réels)",
+        "description": "⚠️ Ce mode appelle quand même le LLM pour de vrai (enrichissement + corrections éventuelles) — seule l'écriture de la fiche finale est sautée. Un coût API réel est engagé malgré le mot \"simulation\".",
         "default": false
       }
     ],
@@ -1152,33 +1200,39 @@
         "readonly": true
       }
     ],
-    "gui_verified": false
+    "gui_verified": false,
+    "required_one_of": [
+      [
+        "--scenario",
+        "--all"
+      ]
+    ]
   },
   {
     "id": "extract_phantom_slugs",
-    "label": "Extract phantom slugs",
+    "label": "Repérer les alliances fantômes",
     "icon": "🔍",
     "section": "entites_nettoyage",
     "script": "extract_phantom_slugs.py",
-    "description": "Extrait les slugs fantômes des alliances/oppositions",
+    "description": "Repère les alliances/oppositions citées dans des fiches mais qui ne correspondent à aucune entité réelle, et les ajoute à la file d'attente de création.",
     "requires": [],
     "options": [
       {
         "flag": "--source",
         "type": "select",
-        "label": "Source",
+        "label": "Où chercher les alliances fantômes",
         "choices": [
           {
             "value": "enrich",
-            "label": "enrich_minimal"
+            "label": "Dans le dernier rapport d'enrichissement des fiches"
           },
           {
             "value": "validate",
-            "label": "validate"
+            "label": "En relançant une validation complète du vault"
           },
           {
             "value": "all",
-            "label": "Toutes les sources"
+            "label": "Les deux, combinées (par défaut)"
           }
         ],
         "default": "all"
@@ -1186,63 +1240,40 @@
       {
         "flag": "--report",
         "type": "text",
-        "label": "Chemin rapport (optionnel)",
-        "optional": true
+        "label": "Rapport d'enrichissement personnalisé",
+        "optional": true,
+        "advanced": true,
+        "description": "Cas rare : par défaut, lit documentation/need_action/enrich_minimal_report.md — remplir ce champ pour analyser un autre fichier (ex. une copie d'un ancien rapport, ou un extrait ciblé).",
+        "hide_when": {
+          "field": "--source",
+          "values": [
+            "validate"
+          ]
+        }
       },
       {
         "flag": "--dry-run",
         "type": "checkbox",
-        "label": "Dry run",
-        "default": false
+        "label": "Simulation (aucune écriture)",
+        "default": false,
+        "description": "Affiche ce qui serait fait, sans rien modifier ni écrire sur le disque."
       }
     ],
     "yaml_files": [
       {
-        "path": "instances_custom/needs_review_enrich.yaml",
-        "label": "instances_custom/needs_review_enrich.yaml",
-        "readonly": true
+        "path": "entites_custom/queue.yaml",
+        "label": "entites_custom/queue.yaml — file d'attente à relire avant de créer les entités"
       }
     ],
-    "gui_verified": false
-  },
-  {
-    "id": "fix_alliance_suffixes",
-    "label": "Fix alliance suffixes",
-    "icon": "🔧",
-    "section": "entites_nettoyage",
-    "script": "fix_alliance_suffixes.py",
-    "description": "Corrige les suffixes de scénario manquants dans les alliances",
-    "requires": [],
-    "options": [
-      {
-        "flag": "--scenario",
-        "type": "select",
-        "label": "Scénario",
-        "source": "config_scenarios",
-        "optional": true
-      },
-      {
-        "flag": "--verbose",
-        "type": "checkbox",
-        "label": "Verbose",
-        "default": false
-      },
-      {
-        "flag": "--dry-run",
-        "type": "checkbox",
-        "label": "Dry run",
-        "default": false
-      }
-    ],
-    "gui_verified": false
+    "gui_verified": true
   },
   {
     "id": "requeue_needs_review",
-    "label": "Requeue needs review",
+    "label": "Relancer les entités en échec",
     "icon": "🔁",
     "section": "entites_nettoyage",
     "script": "requeue_needs_review.py",
-    "description": "Remet en queue les items needs_review.yaml",
+    "description": "Remet dans la file d'attente les entités dont la création avait échoué, pour une nouvelle tentative.",
     "requires": [],
     "options": [],
     "yaml_files": [
@@ -1252,28 +1283,34 @@
         "readonly": true
       }
     ],
-    "gui_verified": false
+    "gui_verified": true
   },
   {
     "id": "undo_custom",
-    "label": "Undo custom",
+    "label": "Annuler une entité, un événement ou un signal",
     "icon": "↩",
     "section": "entites_nettoyage",
     "script": "undo_custom.py",
-    "description": "Annule des entités/événements injectés",
+    "description": "Supprime une entité, un événement ou un signal faible ajouté manuellement. Simulation par défaut — coche \"Exécuter\" pour le faire pour de vrai.",
     "requires": [],
     "options": [
       {
         "flag": "--slug",
         "type": "slug_select",
-        "label": "Slug cible",
+        "label": "Fiche cible",
         "slug_type": "entities",
-        "optional": true
+        "optional": true,
+        "description": "La fiche à annuler, identifiée par son nom de fichier technique (slug). Laisser vide pour traiter la file d'attente undo_queue.yaml à la place.",
+        "slug_type_field": "--type",
+        "slug_type_map": {
+          "signal": "signals",
+          "*": "entities"
+        }
       },
       {
         "flag": "--type",
         "type": "select",
-        "label": "Type",
+        "label": "Type de la fiche cible",
         "choices": [
           {
             "value": "instance",
@@ -1290,14 +1327,20 @@
           {
             "value": "event",
             "label": "event"
+          },
+          {
+            "value": "signal",
+            "label": "signal"
           }
         ],
-        "optional": true
+        "optional": true,
+        "required_if": "--slug",
+        "description": "Précise ce qu'est la \"Fiche cible\" choisie ci-dessus -- obligatoire si tu l'as remplie. Change aussi la liste proposée par \"Fiche cible\" (entités ou signaux selon le type)."
       },
       {
         "flag": "--generalisation",
         "type": "select",
-        "label": "Généralisation",
+        "label": "Étendue de l'annulation",
         "choices": [
           {
             "value": "no",
@@ -1308,13 +1351,20 @@
             "label": "Oui — archétype + tous scénarios"
           }
         ],
-        "default": "no"
+        "default": "no",
+        "description": "Un signal n'a pas d'archétype séparé -- il touche toujours toutes les fiches variables concernées et les 6 scénarios d'un coup.",
+        "hide_when": {
+          "field": "--type",
+          "values": [
+            "signal"
+          ]
+        }
       },
       {
         "flag": "--execute",
         "type": "checkbox",
-        "label": "Exécuter (sans = dry run)",
-        "description": "Par défaut l'undo est simulé",
+        "label": "Exécuter pour de vrai",
+        "description": "Sans cette case : simulation seulement, rien n'est supprimé. Avec : la suppression est réellement effectuée.",
         "default": false
       }
     ],
@@ -1324,40 +1374,15 @@
         "label": "evenements_custom/undo_queue.yaml"
       }
     ],
-    "gui_verified": false
-  },
-  {
-    "id": "build_geographie",
-    "label": "Build géographie",
-    "icon": "🌍",
-    "section": "geo_construction",
-    "script": "build_geographie_monde.py",
-    "description": "Construit le fichier geographie/{scenario}.md",
-    "requires": [],
-    "options": [
-      {
-        "flag": "--scenario",
-        "type": "select",
-        "label": "Scénario",
-        "source": "config_scenarios",
-        "required": true
-      },
-      {
-        "flag": "--dry-run",
-        "type": "checkbox",
-        "label": "Dry run",
-        "default": false
-      }
-    ],
-    "gui_verified": false
+    "gui_verified": true
   },
   {
     "id": "enrich_geographie",
-    "label": "Enrich géographie",
+    "label": "Enrichir la géographie",
     "icon": "🗺",
     "section": "geo_construction",
     "script": "enrich_geographie_recursive.py",
-    "description": "Enrichit récursivement les zones géographiques via LLM",
+    "description": "Ajoute des sous-zones (villes, régions...) sous les zones déjà existantes d'un scénario, sans jamais modifier ce qui existe déjà.",
     "requires": [],
     "options": [
       {
@@ -1378,357 +1403,193 @@
       {
         "flag": "--dry-run",
         "type": "checkbox",
-        "label": "Dry run",
-        "default": false
-      }
-    ],
-    "gui_verified": false
-  },
-  {
-    "id": "complete_geographie_coverage",
-    "label": "Couverture géo complète",
-    "script": "complete_geographie_coverage.py",
-    "description": "Affecte tous les pays 2026 à une zone 2098 (absorber ou créer). À lancer une fois par scénario après build_geographie.",
-    "section": "geo_construction",
-    "options": [
-      {
-        "flag": "--all",
-        "type": "checkbox",
-        "label": "Tous les scénarios",
-        "description": "Traiter les 6 scénarios en une passe"
-      },
-      {
-        "flag": "--scenario",
-        "type": "select",
-        "label": "Scénario",
-        "choices": [
-          {
-            "value": "breakdown",
-            "label": "breakdown"
-          },
-          {
-            "value": "fortress_world",
-            "label": "fortress_world"
-          },
-          {
-            "value": "new_sustainability",
-            "label": "new_sustainability"
-          },
-          {
-            "value": "eco_communalism",
-            "label": "eco_communalism"
-          },
-          {
-            "value": "policy_reform",
-            "label": "policy_reform"
-          },
-          {
-            "value": "reference",
-            "label": "reference"
-          }
-        ]
-      },
-      {
-        "flag": "--dry-run",
-        "type": "checkbox",
-        "label": "Dry-run",
-        "description": "Simuler sans écrire"
-      },
-      {
-        "flag": "--review",
-        "type": "checkbox",
-        "label": "Mode revue",
-        "description": "Génère coverage_proposals_{scenario}.yaml pour validation manuelle"
-      },
-      {
-        "flag": "--apply",
-        "type": "checkbox",
-        "label": "Mode apply",
-        "description": "Applique le fichier de propositions après validation"
-      }
-    ],
-    "icon": "🧭",
-    "gui_verified": false
-  },
-  {
-    "id": "check_zones_coherence",
-    "label": "Cohérence zones",
-    "icon": "🩺",
-    "section": "geo_diagnostic",
-    "script": "check_zones_coherence.py",
-    "description": "Diagnostic lecture seule : parsing YAML, pays absents de toute zone, pays sans zone N1, entrées obsolètes de zones_manquantes.yaml.",
-    "requires": [],
-    "options": [
-      {
-        "flag": "--all",
-        "type": "checkbox",
-        "label": "Tous les scénarios",
-        "description": "Traite les 6 scénarios en une passe",
+        "label": "Simulation (rien écrit sur disque, mais appels LLM réels)",
         "default": false,
-        "mutually_exclusive_with": "scenario"
-      },
-      {
-        "flag": "--scenario",
-        "type": "select",
-        "label": "Scénario",
-        "source": "config_scenarios",
-        "default": "",
-        "optional": true,
-        "mutually_exclusive_with": "all"
+        "description": "⚠️ Ce mode appelle quand même le LLM pour de vrai (proposition des nouvelles zones) — seule l'écriture du fichier geographie/{scenario}.md est sautée. Un coût API réel est engagé malgré le mot \"simulation\"."
       }
     ],
-    "gui_verified": false
-  },
-  {
-    "id": "check_type_entite_coherence",
-    "label": "Cohérence type_entite",
-    "icon": "🏷",
-    "section": "geo_diagnostic",
-    "script": "check_type_entite_coherence.py",
-    "description": "Détecte les entrées origine_reelle sans type_entite. Corrige avec --apply (backup .bak automatique).",
-    "requires": [],
-    "badge": "P26",
-    "options": [
-      {
-        "flag": "--all",
-        "type": "checkbox",
-        "label": "Tous les scénarios",
-        "description": "Traite les 6 scénarios en une passe",
-        "default": false,
-        "mutually_exclusive_with": "scenario"
-      },
-      {
-        "flag": "--scenario",
-        "type": "select",
-        "label": "Scénario",
-        "source": "config_scenarios",
-        "default": "",
-        "optional": true,
-        "mutually_exclusive_with": "all"
-      },
-      {
-        "flag": "--apply",
-        "type": "checkbox",
-        "label": "Appliquer",
-        "description": "Corrige les entrées reconnues comme pays (sinon aperçu seul)",
-        "default": false
-      }
-    ],
-    "gui_verified": false
-  },
-  {
-    "id": "check_origine_reelle_coherence",
-    "label": "Garde-fou origine_reelle",
-    "icon": "🔗",
-    "section": "geo_diagnostic",
-    "script": "check_origine_reelle_coherence.py",
-    "description": "Compare le pays d'une zone ville/région à sa chaîne de parenté. Avertissement seul, propose des candidats de reparent.",
-    "requires": [
-      "check_type_entite_coherence"
-    ],
-    "requires_message": "check_type_entite_coherence devrait tourner avant (les type_entite manquants faussent le diagnostic)",
-    "badge": "P22",
-    "options": [
-      {
-        "flag": "--all",
-        "type": "checkbox",
-        "label": "Tous les scénarios",
-        "description": "Traite les 6 scénarios en une passe",
-        "default": false,
-        "mutually_exclusive_with": "scenario"
-      },
-      {
-        "flag": "--scenario",
-        "type": "select",
-        "label": "Scénario",
-        "source": "config_scenarios",
-        "default": "",
-        "optional": true,
-        "mutually_exclusive_with": "all"
-      },
-      {
-        "flag": "--resolve-llm",
-        "type": "checkbox",
-        "label": "Résoudre via LLM",
-        "description": "Tente de résoudre les entités non résolues (tier structured_strict), résultat mis en cache",
-        "default": false
-      },
-      {
-        "flag": "--write-zones-manquantes",
-        "type": "checkbox",
-        "label": "Écrire zones_manquantes.yaml",
-        "description": "Ajoute une entrée pour chaque incohérence sans candidat N1 (sinon aperçu seul)",
-        "default": false
-      }
-    ],
-    "gui_verified": false
-  },
-  {
-    "id": "check_conventions_territoires",
-    "label": "Conventions territoires",
-    "icon": "⚖",
-    "section": "geo_diagnostic",
-    "script": "check_conventions_territoires.py",
-    "description": "Vérifie qu'un territoire ambigu (Groenland, Écosse...) est toujours distinct de son souverain réel, entre les 6 scénarios. N'a de sens qu'avec --all.",
-    "requires": [],
-    "badge": "P27",
-    "options": [
-      {
-        "flag": "--all",
-        "type": "checkbox",
-        "label": "Tous les scénarios",
-        "description": "Traite les 6 scénarios en une passe",
-        "default": false,
-        "mutually_exclusive_with": "scenario"
-      },
-      {
-        "flag": "--scenario",
-        "type": "select",
-        "label": "Scénario",
-        "source": "config_scenarios",
-        "default": "",
-        "optional": true,
-        "mutually_exclusive_with": "all"
-      }
-    ],
-    "gui_verified": false
+    "gui_verified": true,
+    "required_one_of": [
+      [
+        "--scenario",
+        "--all"
+      ]
+    ]
   },
   {
     "id": "scan_geographie_complet",
-    "label": "Scan géographie complet",
+    "label": "Scanner la géographie",
     "icon": "🧪",
     "section": "geo_diagnostic",
     "script": "scan_geographie_complet.py",
-    "description": "Orchestrateur : lance les 5 diagnostics géographie en séquence (zones, type_entite, origine_reelle, conventions territoires, patron spatial), résumé consolidé. 6e étape optionnelle : génère des propositions top-down (P24 étape C.3) à relire.",
+    "description": "Lance en une fois tout ou partie des 5 vérifications géographiques (zones manquantes, catégories, cohérence pays/zone, conventions, patron spatial), avec un résumé final. Étape optionnelle en plus : demander à l'IA de rédiger des propositions de correction, à relire toi-même.",
     "requires": [],
     "options": [
       {
         "flag": "--all",
         "type": "checkbox",
         "label": "Tous les scénarios",
-        "description": "Traite les 6 scénarios en une passe",
+        "description": "Vérifie les 6 univers narratifs en une seule fois",
         "default": false,
         "mutually_exclusive_with": "scenario"
       },
       {
         "flag": "--scenario",
         "type": "select",
-        "label": "Scénario",
+        "label": "Un seul scénario",
         "source": "config_scenarios",
         "default": "",
         "optional": true,
-        "mutually_exclusive_with": "all"
+        "mutually_exclusive_with": "all",
+        "description": "Limite la vérification à un seul univers (plus rapide)"
+      },
+      {
+        "flag": "--run-zones",
+        "type": "checkbox",
+        "label": "Zones (pays sans zone)",
+        "description": "Ne lance que le diagnostic \"pays absents de toute zone\"",
+        "default": false
+      },
+      {
+        "flag": "--marquer-resolus",
+        "type": "checkbox",
+        "label": "Marquer les chantiers obsolètes comme traités",
+        "description": "Uniquement avec \"Tous les scénarios\" : passe automatiquement à 'traite' les chantiers pays-sans-zone devenus obsolètes (le pays a déjà une zone). Sans effet si un seul scénario est sélectionné.",
+        "default": false,
+        "depends_on": "--run-zones"
+      },
+      {
+        "flag": "--run-type-entite",
+        "type": "checkbox",
+        "label": "Catégories manquantes",
+        "description": "Ne lance que le diagnostic \"type_entite manquant\"",
+        "default": false
       },
       {
         "flag": "--apply-type-entite",
         "type": "checkbox",
-        "label": "Corriger type_entite",
-        "description": "Propage --apply à check_type_entite_coherence.py",
+        "label": "Corriger les catégories manquantes",
+        "description": "Sans cette case : juste un aperçu des trous. Avec : corrige les fiches pour de vrai (sauvegarde automatique)",
+        "default": false,
+        "depends_on": "--run-type-entite"
+      },
+      {
+        "flag": "--run-origine-reelle",
+        "type": "checkbox",
+        "label": "Cohérence pays/zone parente",
+        "description": "Ne lance que le diagnostic \"ville/région vs chaîne de parenté\"",
         "default": false
       },
       {
         "flag": "--resolve-llm",
         "type": "checkbox",
-        "label": "Résoudre via LLM",
-        "description": "Propage --resolve-llm à check_origine_reelle_coherence.py",
+        "label": "Deviner les pays inconnus (IA)",
+        "description": "Pour les villes/régions non reconnues, demande à l'IA de deviner leur pays plutôt que de les laisser de côté. Coûte un appel IA",
+        "default": false,
+        "depends_on": "--run-origine-reelle"
+      },
+      {
+        "flag": "--run-conventions",
+        "type": "checkbox",
+        "label": "Conventions entre scénarios",
+        "description": "Ne lance que le diagnostic \"territoire traité pareil dans les 6 scénarios\"",
         "default": false
       },
       {
-        "flag": "--write-zones-manquantes",
+        "flag": "--run-patron-spatial",
         "type": "checkbox",
-        "label": "Écrire zones_manquantes.yaml",
-        "description": "Propage --write-zones-manquantes à check_origine_reelle_coherence.py",
-        "default": false
-      },
-      {
-        "flag": "--write-suspectes",
-        "type": "checkbox",
-        "label": "Écrire patron_spatial_suspectes.yaml",
-        "description": "Propage --write-suspectes à check_patron_spatial_coherence.py",
+        "label": "Patron spatial (IA)",
+        "description": "Ne lance que le diagnostic \"la zone colle-t-elle à la logique du scénario\" (IA)",
         "default": false
       },
       {
         "flag": "--no-cache-patron-spatial",
         "type": "checkbox",
-        "label": "Ignorer le cache patron spatial",
-        "description": "Propage --no-cache à check_patron_spatial_coherence.py (repaie l'appel LLM)",
-        "default": false
+        "label": "Revérifier avec l'IA malgré le cache",
+        "description": "Le dernier contrôle réutilise normalement un résultat déjà calculé pour aller plus vite. Cette case force un nouveau calcul complet",
+        "default": false,
+        "depends_on": "--run-patron-spatial"
+      },
+      {
+        "flag": "--write-chantiers",
+        "type": "checkbox",
+        "label": "Enregistrer les problèmes trouvés",
+        "description": "Sans cette case : juste un aperçu, rien n'est gardé. Avec : chaque problème est ajouté à ta liste de choses à traiter, pour y revenir plus tard. Nature différente de Correction/Deviner/Revérifier ci-dessus : ce n'est pas une correction du vault, juste un enregistrement passif du diagnostic déjà lancé (zones, cohérence pays/zone parente, patron spatial) -- reste sans effet si aucune de ces 3 étapes ne tourne, sans qu'il soit nécessaire d'en forcer une.",
+        "default": true
       },
       {
         "flag": "--generer-propositions-topdown",
         "type": "checkbox",
-        "label": "Générer les propositions top-down (C.3)",
-        "description": "6e étape optionnelle : lance generer_zones_topdown.py --review-topdown (coûte de vrais appels LLM, n'applique jamais rien)",
+        "label": "Proposer des corrections automatiques",
+        "description": "Pour chaque problème trouvé, demande à l'IA de rédiger une proposition à relire toi-même. Coûte plusieurs appels IA, jamais appliqué automatiquement",
         "default": false
       }
     ],
-    "gui_verified": false
-  },
-  {
-    "id": "check_patron_spatial_coherence",
-    "label": "Check patron spatial",
-    "icon": "🧭",
-    "section": "geo_diagnostic",
-    "script": "check_patron_spatial_coherence.py",
-    "description": "Compare la description/le type de chaque zone niveau 1 au patron spatial narratif de son scénario (P24 étape C.1). Avertissement seul, jamais de blocage, ne modifie jamais rien.",
-    "requires": [],
-    "options": [
-      {
-        "flag": "--all",
-        "type": "checkbox",
-        "label": "Tous les scénarios",
-        "description": "Traite les 6 scénarios en une passe",
-        "default": false,
-        "mutually_exclusive_with": "scenario"
-      },
-      {
-        "flag": "--scenario",
-        "type": "select",
-        "label": "Scénario",
-        "source": "config_scenarios",
-        "default": "",
-        "optional": true,
-        "mutually_exclusive_with": "all"
-      },
-      {
-        "flag": "--no-cache",
-        "type": "checkbox",
-        "label": "Ignorer le cache",
-        "description": "Repaie l'appel LLM même si le contenu n'a pas changé depuis le dernier scan",
-        "default": false
-      },
-      {
-        "flag": "--write-suspectes",
-        "type": "checkbox",
-        "label": "Écrire patron_spatial_suspectes.yaml",
-        "description": "Ajoute les nouvelles zones suspectes au fichier de suivi (statut a_traiter). N'écrase jamais une entrée déjà présente.",
-        "default": false
-      }
-    ],
-    "gui_verified": false
+    "gui_verified": true,
+    "presets": {
+      "label": "Mode",
+      "choices": [
+        {
+          "id": "light",
+          "label": "Léger",
+          "description": "Vérification de base seulement : regarde ce qui ne va pas, sans appel IA, sans rien corriger ni enregistrer. Le plus rapide et le moins coûteux.",
+          "values": {}
+        },
+        {
+          "id": "a_la_carte",
+          "label": "À la carte",
+          "description": "Choisis toi-même les options ci-dessous.",
+          "default": true
+        },
+        {
+          "id": "maxi",
+          "label": "Maxi",
+          "description": "Scan et traitement complets : lance les 5 diagnostics, corrige les catégories manquantes, devine les pays inconnus via IA, nettoie les chantiers zones devenus obsolètes, enregistre tous les problèmes trouvés, revérifie tout malgré le cache et propose des corrections automatiques. Le run le plus complet -- aussi le plus long et le plus coûteux en appels IA.",
+          "values": {
+            "--run-zones": true,
+            "--run-type-entite": true,
+            "--run-origine-reelle": true,
+            "--run-conventions": true,
+            "--run-patron-spatial": true,
+            "--apply-type-entite": true,
+            "--resolve-llm": true,
+            "--write-chantiers": true,
+            "--marquer-resolus": true,
+            "--no-cache-patron-spatial": true,
+            "--generer-propositions-topdown": true
+          }
+        }
+      ]
+    },
+    "required_one_of": [
+      [
+        "--scenario",
+        "--all"
+      ]
+    ]
   },
   {
     "id": "generer_zones_topdown",
-    "label": "Générer zones top-down",
+    "label": "Générer des zones manquantes (IA)",
     "icon": "🏗️",
     "section": "geo_diagnostic",
     "script": "generer_zones_topdown.py",
-    "description": "CLI batch du générateur top-down (P24 étape C.3). Review : génère des propositions de zones (pays sans zone + zones suspectes) à relire en YAML, valide: false par défaut. Apply : écrit dans le vault ce qui a été repassé à valide: true à la main, propage aussi automatiquement les sous-zones orphelines (voir reparenter_sous_zones_orphelines.py).",
+    "description": "Pour chaque problème géographique en attente (pays sans zone, zone suspecte) : l'IA rédige une proposition (mode Proposer), que tu appliques ensuite toi-même une fois validée (mode Appliquer).",
     "requires": [],
     "options": [
       {
         "flag": "--review-topdown",
         "type": "checkbox",
-        "label": "Mode review",
-        "description": "Génère les propositions en YAML, n'écrit jamais dans le vault",
+        "label": "Proposer des corrections (aperçu)",
+        "description": "L'IA rédige une proposition pour chaque problème en attente, sans jamais rien écrire dans le vault -- juste un aperçu à relire.",
         "default": false,
         "mutually_exclusive_with": "apply-topdown"
       },
       {
         "flag": "--apply-topdown",
         "type": "checkbox",
-        "label": "Mode apply",
-        "description": "Applique les propositions marquées valide: true dans le YAML de review écrit par le mode review",
+        "label": "Appliquer les corrections validées",
+        "description": "Applique dans le vault les propositions que tu as toi-même approuvées.",
         "default": false,
         "mutually_exclusive_with": "review-topdown"
       },
@@ -1752,7 +1613,7 @@
       {
         "flag": "--source",
         "type": "select",
-        "label": "Source des cas (mode review uniquement)",
+        "label": "Quels problèmes traiter (aperçu uniquement)",
         "choices": [
           {
             "value": "both",
@@ -1769,17 +1630,34 @@
         ],
         "default": "both",
         "optional": true
+      },
+      {
+        "flag": "--force",
+        "type": "checkbox",
+        "label": "Régénérer les propositions existantes",
+        "description": "Mode review uniquement : régénère aussi les chantiers ayant déjà une proposition non approuvée. Sans ce flag, un chantier déjà pourvu d'une proposition en attente n'est jamais retouché (protège une relecture/édition manuelle en cours).",
+        "default": false
       }
     ],
-    "gui_verified": false
+    "gui_verified": true,
+    "required_one_of": [
+      [
+        "--scenario",
+        "--all"
+      ],
+      [
+        "--review-topdown",
+        "--apply-topdown"
+      ]
+    ]
   },
   {
     "id": "zoning_topdown_test",
-    "label": "Tester génération top-down (C.2)",
+    "label": "Tester une proposition de zone",
     "icon": "🔬",
     "section": "geo_diagnostic",
     "script": "zoning_topdown.py",
-    "description": "Test manuel de la fonction cœur du générateur top-down (P24 étape C.2) -- n'écrit jamais dans le vault, affiche juste la proposition JSON et le résultat de validate_zone(). Normalement appelé en interne par C.3/C.4, pas un outil de production -- utile pour tester un cas isolé sans passer par le review/apply complet.",
+    "description": "Génère à la main, pour un cas précis, la même proposition que produirait l'IA — sert à tester/déboguer sans passer par l'onglet Carte.",
     "requires": [],
     "options": [
       {
@@ -1787,37 +1665,47 @@
         "type": "select",
         "label": "Scénario",
         "source": "config_scenarios",
-        "default": ""
+        "default": "",
+        "required": true
       },
       {
         "flag": "--pays",
         "type": "text",
-        "label": "Pays (mode pays_sans_zone)",
-        "description": "Un ou plusieurs noms de pays séparés par des espaces -- NON VÉRIFIÉ dans le GUI cette session, à tester avant de s'y fier (voir remarque séparée)",
+        "label": "Pays concernés (1er cas : pays sans zone)",
+        "description": "Un ou plusieurs noms de pays séparés par des espaces. À utiliser seul (sans le champ ci-dessous) -- NON VÉRIFIÉ dans le GUI cette session, à tester avant de s'y fier (voir remarque séparée).",
         "optional": true
       },
       {
         "flag": "--zone-suspecte",
         "type": "text",
-        "label": "Slug de zone (mode zone_suspecte)",
-        "optional": true
+        "label": "Zone concernée (2e cas : zone suspecte)",
+        "optional": true,
+        "description": "Slug de la zone existante à réviser. À utiliser seul (sans le champ ci-dessus)."
       },
       {
         "flag": "--raison-suspicion",
         "type": "text",
-        "label": "Raison du signalement (requis avec zone-suspecte)",
-        "optional": true
+        "label": "Raison du signalement",
+        "optional": true,
+        "required_if": "--zone-suspecte",
+        "description": "Pourquoi cette zone est suspecte -- obligatoire si tu remplis \"Zone concernée\" ci-dessus."
       }
     ],
-    "gui_verified": false
+    "gui_verified": true,
+    "required_one_of": [
+      [
+        "--pays",
+        "--zone-suspecte"
+      ]
+    ]
   },
   {
     "id": "reparenter_sous_zones_orphelines",
-    "label": "Reparenter sous-zones orphelines",
+    "label": "Rattacher les sous-zones orphelines",
     "icon": "🔗",
     "section": "geo_diagnostic",
     "script": "reparenter_sous_zones_orphelines.py",
-    "description": "Détecte et reparente les sous-zones narratives (niveau 2/3) devenues incohérentes suite au déplacement d'un pays vers une nouvelle zone (P24 étape C, extension du 25 juillet). Normalement appelé automatiquement par C.3/C.4 -- à lancer manuellement seulement pour corriger un cas déjà existant dans le vault.",
+    "description": "Après le déplacement d'un pays vers une nouvelle zone, retrouve et rattache les sous-zones (villes, régions) qui pointaient encore vers l'ancienne. Déjà appelé automatiquement après un reparent manuel (onglet Carte) et après generer_zones_topdown --apply-topdown ; ces deux appels auto avalent silencieusement leurs erreurs. Cette entrée manuelle sert de filet de secours pour vérifier/rattraper après coup.",
     "requires": [],
     "options": [
       {
@@ -1825,24 +1713,27 @@
         "type": "select",
         "label": "Scénario",
         "source": "config_scenarios",
-        "default": ""
+        "default": "",
+        "required": true
       },
       {
         "flag": "--zone-cible",
-        "type": "text",
-        "label": "Slug de la zone cible",
-        "description": "Zone dont l'origine_reelle vient d'être fixée (nouvelle création ou reparent manuel)"
+        "type": "slug_select",
+        "label": "Zone cible à corriger",
+        "slug_type": "zones_a_reparenter",
+        "required": true,
+        "description": "Seules les zones N1 ayant actuellement au moins une sous-zone orpheline en attente sont listées (au lieu de toutes les zones N1 du scénario). Liste vide = rien à corriger pour ce scénario en ce moment."
       }
     ],
-    "gui_verified": false
+    "gui_verified": true
   },
   {
     "id": "extract_localisation",
-    "label": "Extract localisation",
+    "label": "Repérer la localisation des fiches",
     "icon": "📍",
-    "section": "localisation",
+    "section": "geo_diagnostic",
     "script": "extract_localisation.py",
-    "description": "Extrait les données de localisation des instances enrichies",
+    "description": "Analyse chaque fiche enrichie pour déterminer dans quelle zone géographique elle se situe, et prépare les cas ambigus pour relecture.",
     "requires": [],
     "options": [
       {
@@ -1855,40 +1746,42 @@
       {
         "flag": "--slug",
         "type": "slug_select",
-        "label": "Slug (optionnel)",
-        "slug_type": "instances",
-        "optional": true
+        "label": "Une seule fiche",
+        "slug_type": "fiches_a_localiser",
+        "optional": true,
+        "description": "Seules les fiches n'ayant pas encore de localisation sont listées (au lieu de toutes les instances). Pour cibler une fiche déjà traitée avec \"Retraiter même si déjà fait\", laisser ce champ vide et utiliser --scenario pour restreindre le lot plutôt qu'une fiche précise."
       },
       {
         "flag": "--force",
         "type": "checkbox",
-        "label": "Forcer",
+        "label": "Retraiter même si déjà fait",
         "description": "Retraite les fichiers déjà extraits",
         "default": false
       },
       {
         "flag": "--report-only",
         "type": "checkbox",
-        "label": "Rapport seulement",
-        "description": "Génère localisation_review.md sans écrire",
+        "label": "Rapport seulement (aucun appel LLM)",
+        "description": "Génère localisation_review.md à partir de l'état actuel du vault, sans traiter aucune fiche ni appeler le LLM. La seule option de ce panneau qui ne coûte vraiment rien.",
         "default": false
       },
       {
         "flag": "--dry-run",
         "type": "checkbox",
-        "label": "Dry run",
-        "default": false
+        "label": "Simulation (rien écrit sur disque, mais appels LLM réels)",
+        "default": false,
+        "description": "⚠️ Ce mode appelle quand même le LLM pour de vrai (analyse de chaque fiche) — seule l'injection du résultat dans la fiche est sautée. Pour un aperçu sans aucun coût, utiliser plutôt \"Rapport seulement\" ci-dessus."
       }
     ],
-    "gui_verified": false
+    "gui_verified": true
   },
   {
     "id": "review_localisation",
-    "label": "Review localisation",
+    "label": "Trancher les localisations en attente",
     "icon": "✅",
-    "section": "localisation",
+    "section": "geo_diagnostic",
     "script": "review_localisation.py",
-    "description": "Résout les conflits de localisation",
+    "description": "Passe en revue, fiche par fiche, les cas où la zone n'a pas pu être déterminée automatiquement, et permet de choisir la bonne. ⚠️ Le mode interactif (case ci-dessous décochée) plante systématiquement depuis ce GUI (aucune saisie clavier possible dans ce contexte) — reste utilisable uniquement en CLI directe. \"Auto-résoudre\" est donc rendu obligatoire ici.",
     "requires": [
       "extract_localisation"
     ],
@@ -1904,26 +1797,28 @@
       {
         "flag": "--auto-resolve",
         "type": "checkbox",
-        "label": "Auto-résoudre",
-        "description": "Résolution automatique des conflits non-ambigus",
-        "default": false
+        "label": "Auto-résoudre via le LLM",
+        "description": "Obligatoire depuis ce GUI : le mode interactif (décision manuelle fiche par fiche au clavier) n'est possible qu'en CLI directe, jamais depuis une interface web.",
+        "default": true,
+        "required": true
       },
       {
         "flag": "--dry-run",
         "type": "checkbox",
-        "label": "Dry run",
-        "default": false
+        "label": "Simulation (aucune écriture)",
+        "default": false,
+        "description": "Affiche ce qui serait fait, sans rien modifier ni écrire sur le disque. ⚠️ Si \"Auto-résoudre\" est aussi coché, le LLM est quand même appelé pour de vrai pour chaque fiche — seule l'écriture du résultat est sautée."
       }
     ],
-    "gui_verified": false
+    "gui_verified": true
   },
   {
     "id": "validate",
-    "label": "Validate",
+    "label": "Vérifier la cohérence du vault",
     "icon": "🛡",
     "section": "validation",
     "script": "validate.py",
-    "description": "Valide la cohérence du vault (entités, localisations, narratif)",
+    "description": "Contrôle l'ensemble du vault (entités, localisations, cohérence narrative) et signale les incohérences trouvées.",
     "requires": [
       "extract_localisation"
     ],
@@ -1933,7 +1828,7 @@
         "flag": "--verbose",
         "short": "-v",
         "type": "checkbox",
-        "label": "Verbose",
+        "label": "Détails dans le terminal",
         "description": "Affiche le détail dans le terminal",
         "default": false
       },
@@ -1948,16 +1843,16 @@
       {
         "flag": "--localisation",
         "type": "checkbox",
-        "label": "Localisation",
-        "description": "Force le scan de localisation",
+        "label": "Localisation SEULEMENT (saute les 8 autres sections)",
+        "description": "⚠️ N'est pas additif : lance uniquement la vérification localisation et s'arrête là, sans passer par la nomenclature, la cohérence systémique, les entités, etc. Utile pour une revérification rapide ciblée, pas pour un contrôle complet du vault.",
         "default": false
       },
       {
         "flag": "--narrative",
         "short": "-n",
         "type": "checkbox",
-        "label": "Cohérence narrative",
-        "description": "Force le scan narratif (ignore cache mtime)",
+        "label": "Revérifier la cohérence narrative",
+        "description": "Relance la vérification narrative (section 9/9) même si event_instances n'a pas changé depuis le dernier passage. Sans effet si \"Localisation SEULEMENT\" ci-dessus est cochée (cette case fait sauter la section 9 comme les 7 autres).",
         "default": false
       }
     ],
@@ -1968,6 +1863,68 @@
         "readonly": true
       }
     ],
+    "gui_verified": true
+  },
+  {
+    "id": "trace_injection",
+    "label": "Tracer une instance / un événement / un signal",
+    "icon": "🔍",
+    "section": "entites_nettoyage",
+    "script": "trace_injection.py",
+    "description": "Reconstitue le parcours complet d'un slug donné : origine (idée source, date d'injection), propagation dans l'espace (scénarios, zones) et le temps (fictif et réel), variables systémiques influencées, réseau relationnel (alliances/oppositions ou acteurs impliqués), et usage aval dans les articles publiés. Diagnostic pur, lecture seule, aucun appel LLM.",
+    "options": [
+      {
+        "flag": "--type",
+        "type": "select",
+        "label": "Type à tracer",
+        "choices": [
+          {
+            "value": "instance",
+            "label": "Instance (entité)"
+          },
+          {
+            "value": "evenement",
+            "label": "Événement"
+          },
+          {
+            "value": "signal",
+            "label": "Signal"
+          }
+        ],
+        "optional": false,
+        "description": "Choisis d'abord le type -- ça détermine la liste proposée juste en dessous (\"Slug à tracer\") : entités, événements (archétypes), ou signaux.",
+        "default": "instance"
+      },
+      {
+        "flag": "--slug",
+        "type": "slug_select",
+        "label": "Élément à tracer",
+        "slug_type": "entities",
+        "slug_type_field": "--type",
+        "slug_type_map": {
+          "instance": "entities",
+          "evenement": "evenements",
+          "signal": "signals",
+          "*": "entities"
+        },
+        "description": "Liste filtrée selon le type choisi ci-dessus."
+      },
+      {
+        "flag": "--skip-articles",
+        "type": "checkbox",
+        "label": "Sauter le scan des articles publiés",
+        "description": "Plus rapide, mais saute la section \"usage aval\" (quels articles mentionnent ce slug une fois publié).",
+        "default": false
+      },
+      {
+        "flag": "--report",
+        "type": "checkbox",
+        "label": "Écrire un rapport (.md + .json)",
+        "description": "Écrit documentation/need_action/trace_<slug>.md et .json en plus de l'affichage terminal.",
+        "default": false
+      }
+    ],
+    "yaml_files": [],
     "gui_verified": false
   }
 ]

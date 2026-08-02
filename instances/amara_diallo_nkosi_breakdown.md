@@ -8,7 +8,6 @@ localisation:
   zone: afrique_centrale_australe
   lieu: Corridor sahélo-congolais (Brazzaville-Nord – Kivu disputé)
   type_lieu: region
-
 type_dans_scenario: humain
 
 role_dans_scenario: >

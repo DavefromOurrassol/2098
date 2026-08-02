@@ -8,7 +8,6 @@ localisation:
   zone: autorite_passage_arctique
   lieu: Autorité du Passage Arctique (zone arctique, du détroit de Béring au Svalbard)
   type_lieu: site_strategique
-
 type_dans_scenario: institution
 
 role_dans_scenario: >

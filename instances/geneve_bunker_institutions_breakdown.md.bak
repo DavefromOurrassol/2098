@@ -4,6 +4,10 @@ type: instance
 slug: geneve_bunker_institutions_breakdown
 entite: geneve_bunker_institutions
 scenario: breakdown
+localisation:
+  zone: geneve_bunker_institutions
+  lieu: Palais des Nations, Genève
+  type_lieu: infrastructure
 
 type_dans_scenario: institution
 

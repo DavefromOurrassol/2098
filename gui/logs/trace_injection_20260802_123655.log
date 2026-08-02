@@ -1,0 +1,52 @@
+# Traçabilité — `conseil_regulation_algorithmique` (instance)
+
+*Généré le 2026-08-02 12:36*
+
+## 1. Origine
+
+- **Statut d'injection** : origine introuvable (idée non trouvée dans processed/needs_review.yaml)
+
+## 2. Descriptif
+
+**Conseil de Régulation Algorithmique**
+
+Institution chargée de superviser et réguler les systèmes d'intelligence artificielle. Incarne la tension entre efficacité algorithmique et contrôle humain des systèmes décisionnels.
+
+
+## 3. Évolution dans le temps et l'espace
+
+- **Présente dans 5/6 scénarios** : breakdown, fortress_world, new_sustainability, policy_reform, reference
+
+### breakdown
+- Zone : geneve_bunker_institutions · Impact local/global : 0/1 · Enrichie le : —
+- **Rôle** : N'existe plus en tant qu'institution. Les derniers protocoles de régulation IA ont été abandonnés en 2049 avec l'effondrement des instances multilatérales. Il n'en reste que des fragments de code que quelques ingénieurs tentent encore d'appliquer sans autorité réelle.
+
+
+### fortress_world
+- Zone : bloc_atlantique · Impact local/global : 2/5 · Enrichie le : —
+- **Rôle** : Bras armé numérique du Bloc Atlantique. Certifie et surveille tous les systèmes IA déployés dans la zone. Aucune IA ne peut opérer sans accréditation. Instrument de contrôle social et géopolitique.
+
+
+### new_sustainability
+- Zone : hub_nairobi_kigali · Impact local/global : 2/4 · Enrichie le : —
+- **Rôle** : Institution multilatérale de gouvernance IA née des Accords de Séoul de 2040. Régule l'IA comme bien commun mondial avec mandat de transparence et d'audit public. Référence mondiale pour l'éthique algorithmique.
+
+
+### policy_reform
+- Zone : hub_europeen_regulation · Impact local/global : 2/3 · Enrichie le : —
+- **Rôle** : Agence intergouvernementale créée par le Traité de Genève sur l'IA de 2037. Supervise les systèmes IA critiques avec mandat contraignant limité aux secteurs publics. Résultat d'un compromis difficile entre souveraineté nationale et régulation globale.
+
+
+### reference
+- Zone : geneve_lac_retreite · Impact local/global : 1/2 · Enrichie le : —
+- **Rôle** : Comité onusien de surveillance des systèmes IA critiques, créé en 2031. Mandat consultatif, capacité d'intervention limitée. Fonctionne dans un contexte de tensions croissantes entre États et corporations. Son autorité est contestée mais sa légitimité symbolique reste intacte.
+
+
+**Variables systémiques influencées (tous scénarios confondus)** : geopolitique_conflits, gouvernance_institutions, systeme_economique_redistribution, technologie_information
+**Alliances (réseau relationnel)** : assemblee_territoires_new_sustainability, assemblee_territoires_policy_reform, nexcore_fortress_world
+**Oppositions (réseau relationnel)** : conseil_regulation_algorithmique_fortress_world, conseil_regulation_algorithmique_new_sustainability, nexcore_reference
+
+## 4. Aval — usage dans les articles publiés
+
+_Aucune mention trouvée dans `articles/*.md` (scan texte brut, best-effort — un article peut mentionner l'entité sous une formulation différente sans que ce scan la détecte)._
+

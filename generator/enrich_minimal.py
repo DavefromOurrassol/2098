@@ -787,6 +787,12 @@ class EnrichReport:
             {"needs_review": all_entries},
             allow_unicode=True,
             default_flow_style=False,
+            sort_keys=False,  # corrigé le 2 août 2026 — sans ça, PyYAML
+            # trie les clés alphabétiquement (date/errors/scenario/slug),
+            # et le parseur maison de app.py (_read_needs_review_yaml)
+            # ne reconnaît une nouvelle entrée que sur "- slug:" en tête
+            # de ligne : le panneau Revue ignorait silencieusement toutes
+            # les fiches en échec d'enrichissement. Voir backlog §1.7.
         )
         NEEDS_REVIEW_PATH.write_text(content, encoding="utf-8")
         print(f"→ {len(new_entries)} fiches ajoutées à {NEEDS_REVIEW_PATH}")

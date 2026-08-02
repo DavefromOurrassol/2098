@@ -4,6 +4,11 @@ type: instance
 slug: etats_fragmentes_nationalisant_les_stocks_breakdown
 entite: etats_fragmentes_nationalisant_les_stocks
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 statut: officialise_enrichi
 type_dans_scenario: institution
 role_dans_scenario: 'Dans le scénario breakdown, ces États exercent une pression centrifuge
@@ -65,10 +70,6 @@ tensions_narratives: 'La contradiction fondamentale de ces États est d''utilise
   réussie rend la prochaine plus probable et la coordination internationale un peu
   plus morte.'
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: null
 ---
 
 # États Fragmentés Nationalisant les Stocks

@@ -1,0 +1,9 @@
+usage: scan_geographie_complet.py [-h] (--scenario SCENARIO | --all)
+                                  [--apply-type-entite] [--resolve-llm]
+                                  [--write-chantiers] [--marquer-resolus]
+                                  [--no-cache-patron-spatial]
+                                  [--generer-propositions-topdown]
+                                  [--run-zones] [--run-type-entite]
+                                  [--run-origine-reelle] [--run-conventions]
+                                  [--run-patron-spatial]
+scan_geographie_complet.py: error: argument --scenario: not allowed with argument --all

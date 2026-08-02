@@ -4,6 +4,11 @@ type: instance
 slug: oracle_des_seuils_breakdown
 entite: oracle_des_seuils
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 
 type_dans_scenario: IA
 

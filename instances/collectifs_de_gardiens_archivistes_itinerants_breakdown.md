@@ -4,6 +4,11 @@ type: instance
 slug: collectifs_de_gardiens_archivistes_itinerants_breakdown
 entite: collectifs_de_gardiens_archivistes_itinerants
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 statut: officialise_enrichi
 type_dans_scenario: réseau
 role_dans_scenario: 'Dans un scénario de breakdown, ces collectifs constituent l''un
@@ -79,10 +84,6 @@ tensions_narratives: 'La tension centrale qui travaille ces collectifs est celle
   : accepter la protection armée d''une faction pour traverser un corridor, c''est
   inévitablement servir ses intérêts informationnels.'
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: null
 ---
 
 # Collectifs de Gardiens-Archivistes Itinérants

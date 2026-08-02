@@ -364,7 +364,8 @@ _extended_
 - fin_representations_travail_traditionnel
 - normalisation_post_travail (→ section 12)
 
-
+**custom (signaux d'actualité)**
+- irrigation solaire transforme l'agriculture sahelienne, créant boom démographique et tensions hydriques (→ signal_custom: irrigation_solaire_tensions_eau, source: actualite)
 
 ## 8. États par scénario
 ### [[fortress_world]]
@@ -686,4 +687,31 @@ signal_to_state:
         evolution: persistance marginale du récit post-travail dans le débat culturel
         date_bascule: 2027-2042
         evenement_cle: premier débat médiatique mondial sur la fin du travail 2030
+
+  - signal: irrigation_solaire_tensions_eau
+    scenarios:
+      breakdown:
+        evolution: effondrement des coopératives agricoles saheliennes par pénuries d'eau
+        date_bascule: 2042-2060
+        evenement_cle: pompages solaires saheliens à sec après trois années sans pluie 2054
+      fortress_world:
+        evolution: blocs sécurisent l'irrigation solaire comme ressource stratégique
+        date_bascule: 2036-2052
+        evenement_cle: Bloc Atlantique verrouille les nappes phréatiques du Sahel 2047
+      new_sustainability:
+        evolution: IA optimise l'irrigation solaire pour équilibrer besoins et recharge
+        date_bascule: 2033-2049
+        evenement_cle: réseau mondial de gestion hydrique automatisée déployé 2042
+      eco_communalism:
+        evolution: communautés locales gèrent l'eau via chartes bioterritoriales solaires
+        date_bascule: 2038-2057
+        evenement_cle: charte d'Agadez sur la souveraineté hydrique communautaire
+      policy_reform:
+        evolution: régulation internationale encadre l'irrigation solaire et les conflits
+        date_bascule: 2029-2045
+        evenement_cle: traité de Niamey sur le partage des nappes phréatiques 2038
+      reference:
+        evolution: tensions croissantes entre États saheliens pour l'accès à l'eau solaire
+        date_bascule: 2027-2042
+        evenement_cle: Mali et Niger s'affrontent pour le fleuve Niger 2039
 ```

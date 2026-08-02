@@ -4,6 +4,10 @@ type: event_instance
 slug: conflit_israel_iran_2026_breakdown
 archetype: conflit_israel_iran_2026
 scenario: breakdown
+localisation:
+  zone: zone_golfe_levant
+  lieu: Zone Golfe Persique–Levant (Ispahan, Fordow, Kharg, Haïfa, détroit d'Ormuz)
+  type_lieu: region
 type_evenement: political_social
 portee: globale
 date: 2027

@@ -4,6 +4,11 @@ type: instance
 slug: collectifs_de_sante_communautaire_autogeree_breakdown
 entite: collectifs_de_sante_communautaire_autogeree
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 statut: officialise_enrichi
 type_dans_scenario: réseau
 role_dans_scenario: 'Dans un contexte de breakdown, ces collectifs pallient l''effondrement
@@ -69,10 +74,6 @@ tensions_narratives: 'La tension centrale qui traverse ces collectifs est celle 
   la légitimité du savoir médical non institutionnel divise en interne les praticiens
   formés des techniciens autodidactes, menaçant la cohésion du réseau.'
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: region
 ---
 
 # Collectifs de Santé Communautaire Autogérée

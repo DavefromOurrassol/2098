@@ -8,9 +8,6 @@ localisation:
   zone: arc_eurasien_central
   lieu: ancien périmètre eurasien
   type_lieu: region
-  statut: review_manuelle
-  note: "La description mentionne 'les zones grises de l'ancien périmètre eurasien' et des bunkers d'infrastructure, mais les éclats sont dispersés sur de multiples territoires sans ancrage unique ; l'arc eurasien central est le meilleur candidat principal sans être exclusif."
-
 type_dans_scenario: IA
 
 role_dans_scenario: >

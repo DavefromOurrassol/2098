@@ -59,7 +59,6 @@ const SECTIONS = [
   { key: 'entites_nettoyage',  label: 'Entités & événements — nettoyage' },
   { key: 'geo_construction',   label: 'Géographie — construction' },
   { key: 'geo_diagnostic',     label: 'Géographie — diagnostic' },
-  { key: 'localisation',       label: 'Localisation' },
   { key: 'validation',         label: 'Validation' },
 ];
 
@@ -70,6 +69,7 @@ function buildNav() {
   // Tableau de bord
   nav.appendChild(makeNavItem('dashboard', '📊', 'Tableau de bord', null, 'tab'));
   nav.appendChild(makeNavItem('carte', '🗺️', 'Carte', null, 'tab'));
+  nav.appendChild(makeNavItem('chantiers', '🚧', 'Chantiers', null, 'tab'));
   nav.appendChild(makeDivider());
 
   // Sections scripts
@@ -289,6 +289,7 @@ function showTab(tab) {
     tabEl.classList.add('active');
     if (tab === 'dashboard') loadDashboard();
     if (tab === 'carte')     loadCarte();
+    if (tab === 'chantiers') loadChantiers();
     if (tab === 'review')    loadReview();
     if (tab === 'config')    loadConfigForm();
   }
@@ -346,10 +347,44 @@ async function renderFormBody(script) {
     return; // pas d'autres options
   }
 
-  // Options standard
-  for (const opt of (script.options || [])) {
+  // Préréglages (ex. scan_geographie_complet : Léger / À la carte / Maxi) --
+  // pré-coche un profil de cases avant que l'utilisateur affine à la main.
+  // Ajouté le 25 juillet 2026, distinct de mode_select (qui pilote --mode,
+  // un argument argparse) : un préréglage ne fait QUE cocher/décocher des
+  // checkboxes déjà déclarées dans `options`, jamais envoyé lui-même comme
+  // argument CLI.
+  if (script.presets) {
+    body.appendChild(renderPresets(script.presets));
+  }
+
+  // Options standard, plus un regroupement optionnel "Options avancées"
+  // (mécanisme ajouté le 31 juillet 2026 -- 7e mécanisme conditionnel du
+  // fichier, après vérification qu'aucun des 6 existants ne couvrait ce
+  // besoin : masquer par défaut un champ à cas d'usage marginal (ex.
+  // --report sur extract_phantom_slugs), sans le retirer complètement --
+  // contrairement à hide_when qui masque selon la VALEUR d'un autre champ,
+  // ici c'est une préférence d'affichage fixe, non conditionnelle).
+  // opt.advanced = true --> regroupé sous un <details> replié par défaut,
+  // affiché après les options normales du même script.
+  const optionsNormales = (script.options || []).filter(o => !o.advanced);
+  const optionsAvancees = (script.options || []).filter(o => o.advanced);
+
+  for (const opt of optionsNormales) {
     const group = await renderOption(opt, script);
     if (group) body.appendChild(group);
+  }
+
+  if (optionsAvancees.length > 0) {
+    const details = document.createElement('details');
+    details.className = 'advanced-options';
+    const summary = document.createElement('summary');
+    summary.textContent = 'Options avancées';
+    details.appendChild(summary);
+    for (const opt of optionsAvancees) {
+      const group = await renderOption(opt, script);
+      if (group) details.appendChild(group);
+    }
+    body.appendChild(details);
   }
 
   // YAML panels
@@ -359,6 +394,19 @@ async function renderFormBody(script) {
   // la liste, cf. renderModeSelect) — sans ça, le premier rendu affiche tout
   // avant le premier clic sur un onglet Mode.
   if (script.mode_select) updateModeOnlyVisibility();
+
+  // État initial des paires diagnostic/correction (depends_on) -- corrige le
+  // 26 juillet 2026 (retour de David) : une correction cochée par un
+  // préréglage (ex. Maxi) doit forcer visuellement son diagnostic parent
+  // coché, plutôt que l'inverse (griser l'enfant selon le parent, logique
+  // initiale abandonnée -- voir syncDependsOnParents()).
+  syncDependsOnParents();
+
+  // État initial du masquage conditionnel (hide_when) -- même raison que
+  // les deux ci-dessus : sans cet appel, un champ qui devrait être masqué
+  // dès le départ (valeur par défaut du champ pilote) resterait visible
+  // jusqu'au premier changement.
+  updateHideWhenVisibility();
 }
 
 function renderModeSelect(modeConfig) {
@@ -430,6 +478,172 @@ function updateModeOnlyVisibility() {
   });
 }
 
+/**
+ * Masque un option-group entier selon la valeur courante d'un autre champ
+ * du même formulaire (ex. "Étendue de l'annulation" masqué quand
+ * --type = "signal" sur undo_custom). Ajouté le 26 juillet 2026 -- David
+ * a demandé que le champ disparaisse plutôt que de rester affiché avec
+ * une simple note "sans effet". Générique : n'importe quelle option future
+ * peut poser `hide_when: {field, values}` dans scripts_config.json sans
+ * toucher à ce code.
+ */
+function updateHideWhenVisibility() {
+  document.querySelectorAll('#form-body [data-hide-when-field]').forEach(group => {
+    const champPilote = document.querySelector(`#form-body [data-flag="${group.dataset.hideWhenField}"]`);
+    const valeurs = JSON.parse(group.dataset.hideWhenValues || '[]');
+    const valeurActuelle = champPilote ? champPilote.value : undefined;
+    group.style.display = valeurs.includes(valeurActuelle) ? 'none' : '';
+  });
+}
+
+// Le champ pilote (ex. --type) peut changer sans que le formulaire soit
+// re-rendu -- même écouteur global que syncDependsOnParents/mode_only,
+// posé une seule fois plutôt qu'à chaque renderOption().
+document.addEventListener('change', (e) => {
+  if (e.target.closest('#form-body')) updateHideWhenVisibility();
+});
+
+/**
+ * Corrige le 26 juillet 2026 (retour de David sur un premier essai) : ce
+ * n'est PAS une histoire de "niveau" où l'enfant serait gouverné par le
+ * parent -- vérifié dans les scripts Python réels (check_zones_coherence.py,
+ * check_type_entite_coherence.py, etc.) : le diagnostic (--scenario/--all)
+ * est TOUJOURS obligatoire et tourne dans le même appel que son option
+ * corrective (--apply, --marquer-resolus...). Donc la correction IMPLIQUE
+ * le diagnostic, jamais l'inverse. Modèle retenu : paire diagnostic/
+ * correction au même niveau logique --
+ *   - cocher la correction force le diagnostic parent coché (ajout d'un
+ *     écouteur sur la case enfant, voir renderOption)
+ *   - décocher le diagnostic décoche automatiquement sa correction (ajout
+ *     d'un écouteur sur la case parente, voir renderOption)
+ * Cette fonction ne gère que le cas non couvert par ces deux écouteurs
+ * directs : un préréglage (ex. Maxi) qui coche une correction en écrivant
+ * directement `.checked = true` (voir applyPreset()), sans déclencher
+ * d'évènement 'change' natif -- donc sans passer par les écouteurs.
+ * Rattrape uniquement le sens "enfant coché -> parent forcé", jamais
+ * l'inverse (un préréglage sait ce qu'il veut cocher, on ne le contredit pas).
+ */
+function syncDependsOnParents() {
+  document.querySelectorAll('#form-body [data-depends-on]').forEach(group => {
+    const chk = group.querySelector('input[type="checkbox"]');
+    if (!chk || !chk.checked) return;
+    const parentEl = document.querySelector(`#form-body [data-flag="${group.dataset.dependsOn}"]`);
+    if (parentEl && parentEl.type === 'checkbox' && !parentEl.checked) {
+      parentEl.checked = true;
+    }
+  });
+}
+
+/**
+ * Préréglages (ex. scan_geographie_complet : Léger / À la carte / Maxi),
+ * ajouté le 25 juillet 2026. Bande d'onglets visuellement proche de
+ * mode-tabs/mode-tab (mode_select), mais avec ses PROPRES classes
+ * (preset-tabs/preset-tab) et un style posé en ligne plutôt que dans
+ * style.css (jamais lu par Claude à l'écriture de cette fonction -- éviter
+ * toute dépendance sur des classes non vérifiées).
+ *
+ * IMPORTANT : ne JAMAIS réutiliser la classe mode-tab ici. Bug réel du 25
+ * juillet 2026 -- collectArgs() sélectionne `.mode-tab.active` n'importe où
+ * dans le formulaire pour pousser `--mode <valeur>` dans les args CLI (ce
+ * mécanisme sert mode_select, ex. create_entities_and_instances.py). Un
+ * premier essai avait donné la classe mode-tab aux boutons de préréglage
+ * pour hériter du style -- collectArgs() les prenait alors pour un vrai
+ * mode_select et injectait "--mode None" (aucun script.mode_select actif),
+ * faisant planter scan_geographie_complet.py ("unrecognized arguments").
+ * Un préréglage n'est PAS un mode_select : il ne doit jamais être visible
+ * de collectArgs().
+ *
+ * Schéma attendu dans scripts_config.json (script.presets) :
+ *   {
+ *     "label": "Mode",
+ *     "choices": [
+ *       { "id": "light", "label": "Léger", "description": "...",
+ *         "values": {} },                              // toutes les cases décochées
+ *       { "id": "a_la_carte", "label": "À la carte", "description": "...",
+ *         "default": true },                            // pas de "values" -> no-op, voir applyPreset()
+ *       { "id": "maxi", "label": "Maxi", "description": "...",
+ *         "values": { "--write-chantiers": true, ... } } // coche exactement ces flags, décoche le reste
+ *     ]
+ *   }
+ */
+function renderPresets(presetConfig) {
+  const group = document.createElement('div');
+  group.className = 'option-group';
+
+  const label = document.createElement('div');
+  label.className = 'option-label';
+  label.textContent = presetConfig.label || 'Mode';
+  group.appendChild(label);
+
+  const tabs = document.createElement('div');
+  tabs.className = 'preset-tabs';
+  tabs.style.cssText = 'display:flex; gap:6px; flex-wrap:wrap;';
+
+  const note = document.createElement('div');
+  note.className = 'preset-note';
+  note.style.cssText = 'font-size:11px; color:#5a7a9a; background:#eef4fa; ' +
+    'border-left:2px solid #a8c8e8; padding:6px 10px; margin-top:8px; ' +
+    'border-radius:0 4px 4px 0; line-height:1.4;';
+
+  const styleTab = (tab, active) => {
+    tab.style.cssText = 'font-family:"JetBrains Mono",monospace; font-size:12px; ' +
+      'padding:5px 12px; border-radius:4px; cursor:pointer; ' +
+      (active
+        ? 'border:1px solid #3b6fd4; background:#3b6fd4; color:#fff;'
+        : 'border:1px solid #ddd; background:#fff; color:#333;');
+  };
+
+  const updateNote = () => {
+    const active = tabs.querySelector('.preset-tab.active');
+    const choice = presetConfig.choices.find(c => c.id === active?.dataset.presetId);
+    if (choice && choice.description) {
+      note.textContent = choice.description;
+      note.style.display = '';
+    } else {
+      note.style.display = 'none';
+    }
+  };
+
+  presetConfig.choices.forEach((c) => {
+    const tab = document.createElement('button');
+    tab.type = 'button';
+    tab.className = 'preset-tab' + (c.default ? ' active' : '');
+    tab.dataset.presetId = c.id;
+    tab.textContent = c.label;
+    styleTab(tab, Boolean(c.default));
+    tab.addEventListener('click', () => {
+      tabs.querySelectorAll('.preset-tab').forEach(t => { t.classList.remove('active'); styleTab(t, false); });
+      tab.classList.add('active');
+      styleTab(tab, true);
+      applyPreset(c);
+      syncDependsOnParents();
+      updateNote();
+    });
+    tabs.appendChild(tab);
+  });
+
+  group.appendChild(tabs);
+  group.appendChild(note);
+  updateNote(); // état initial (préréglage par défaut déjà actif, ex. "À la carte")
+  return group;
+}
+
+/**
+ * Applique un préréglage : coche exactement les flags listés dans
+ * choice.values (true), décoche tous les autres. Si choice.values est
+ * absent (cas "À la carte") : ne touche à AUCUNE case, volontairement --
+ * l'utilisateur garde l'état courant et choisit lui-même à partir de là.
+ * Ne pilote que les checkboxes -- un préréglage ne force jamais un select
+ * (ex. --scenario), ce champ reste toujours un choix manuel séparé.
+ */
+function applyPreset(choice) {
+  if (!choice.values) return; // "À la carte" -- no-op assumé
+  document.querySelectorAll('#form-body [data-flag]').forEach(el => {
+    if (el.type !== 'checkbox') return;
+    el.checked = Boolean(choice.values[el.dataset.flag]);
+  });
+}
+
 function renderManualSteps(steps) {
   const group = document.createElement('div');
   group.className = 'option-group';
@@ -480,6 +694,30 @@ async function renderOption(opt, script) {
   if (opt.mode_only) {
     group.dataset.modeOnly = Array.isArray(opt.mode_only) ? opt.mode_only.join(',') : opt.mode_only;
   }
+  // Paire diagnostic/correction (backlog du 25 juillet 2026, corrigée le 26
+  // juillet suite au retour de David) : depends_on pointe vers UN SEUL flag
+  // --run-* parent -- toujours un diagnostic obligatoire, jamais optionnel,
+  // donc jamais besoin d'un OU entre plusieurs parents (--write-chantiers
+  // n'a plus ce champ, voir sa description dans scripts_config.json).
+  // Indentation visuelle pour marquer le lien ; le vrai couplage se fait via
+  // les écouteurs 'change' posés plus bas et dans syncDependsOnParents().
+  if (opt.depends_on) {
+    group.dataset.dependsOn = opt.depends_on;
+    group.style.marginLeft = '22px';
+    group.style.borderLeft = '2px solid #ddd';
+    group.style.paddingLeft = '10px';
+  }
+
+  // Masquage conditionnel selon la valeur d'un autre champ -- ajouté le 26
+  // juillet 2026 (ex. "Étendue de l'annulation" n'a pas de sens quand
+  // undo_custom.py Type = "signal", pas juste "sans effet" en description :
+  // David a demandé que ça disparaisse plutôt que de rester affiché avec
+  // une note). opt.hide_when = { field: "--type", values: ["signal"] } --
+  // masqué si la valeur courante du champ piloté est dans `values`.
+  if (opt.hide_when) {
+    group.dataset.hideWhenField = opt.hide_when.field;
+    group.dataset.hideWhenValues = JSON.stringify(opt.hide_when.values);
+  }
 
   if (opt.type === 'checkbox') {
     const row = document.createElement('label');
@@ -500,14 +738,46 @@ async function renderOption(opt, script) {
       desc.textContent = opt.description;
       group.appendChild(desc);
     }
-    // Logique mutually_exclusive
+    // Paire diagnostic/correction (depends_on) -- ajouté le 26 juillet 2026.
+    // Sens 1 : cocher la correction force son diagnostic parent coché (le
+    // parent est déjà dans le DOM à ce stade, car il apparaît toujours avant
+    // dans scripts_config.json -- voir l'ordre des options réorganisé le
+    // même jour). Sens 2 : décocher le diagnostic décoche automatiquement sa
+    // correction, puisqu'une correction sans son diagnostic dans le même
+    // appel n'a plus de sens (vérifié dans les scripts Python réels).
+    if (opt.depends_on) {
+      const parentEl = document.querySelector(`#form-body [data-flag="${opt.depends_on}"]`);
+      chk.addEventListener('change', () => {
+        if (chk.checked && parentEl && parentEl.type === 'checkbox' && !parentEl.checked) {
+          parentEl.checked = true;
+        }
+      });
+      if (parentEl) {
+        parentEl.addEventListener('change', () => {
+          if (!parentEl.checked) chk.checked = false;
+        });
+      }
+    }
+    // Logique mutually_exclusive -- corrigée le 25 juillet 2026 (deux passes) :
+    // 1ère correction : cocher --all désactivait le <select> --scenario mais
+    // ne le réactivait jamais en décochant --all ensuite.
+    // 2e correction (même jour, bug remonté par David) : désactiver le select
+    // ne vide pas sa valeur -- si un scénario était déjà choisi avant de
+    // cocher --all, le select grisé gardait quand même cette valeur, et
+    // collectArgs() ne regarde jamais `.disabled`, seulement `.value` : les
+    // deux flags --all ET --scenario partaient donc ensemble, rejetés par le
+    // groupe mutuellement exclusif argparse côté script ("not allowed with
+    // argument --all"). Vider explicitement other.value en plus de
+    // other.disabled = true règle la cause réelle, pas juste le symptôme visuel.
     if (opt.mutually_exclusive_with) {
       chk.addEventListener('change', () => {
+        const other = document.querySelector(`[data-flag="--${opt.mutually_exclusive_with}"]`);
+        if (!other) return;
         if (chk.checked) {
-          const other = document.querySelector(`[data-flag="--${opt.mutually_exclusive_with}"]`);
-          if (other && other.type === 'checkbox') other.checked = false;
-          const otherSel = document.querySelector(`[data-flag="--${opt.mutually_exclusive_with}"]`);
-          if (otherSel && otherSel.tagName === 'SELECT') otherSel.disabled = true;
+          if (other.type === 'checkbox') other.checked = false;
+          if (other.tagName === 'SELECT') { other.disabled = true; other.value = ''; }
+        } else {
+          if (other.tagName === 'SELECT') other.disabled = false;
         }
       });
     }
@@ -540,6 +810,17 @@ async function renderOption(opt, script) {
       if (c.value === (opt.default || '')) option.selected = true;
       sel.appendChild(option);
     });
+
+    // Réciproque de la logique mutually_exclusive ci-dessus (25 juillet 2026) :
+    // choisir une vraie valeur décoche la checkbox opposée (ex. --scenario
+    // rempli -> --all décoché), pour ne jamais envoyer les deux à la fois.
+    if (opt.mutually_exclusive_with) {
+      sel.addEventListener('change', () => {
+        if (!sel.value) return; // "— Aucun —" : rien à trancher
+        const other = document.querySelector(`[data-flag="--${opt.mutually_exclusive_with}"]`);
+        if (other && other.type === 'checkbox') other.checked = false;
+      });
+    }
 
     group.appendChild(sel);
 
@@ -590,6 +871,17 @@ async function renderOption(opt, script) {
     // Si select scénario existe dans le même formulaire, écouter ses changements
     // (délégué après rendu)
     sel.dataset.needsScenario = 'true';
+
+    // Source de slugs dynamique selon un autre champ -- ajouté le 26
+    // juillet 2026 pour undo_custom (--slug doit lister les entités OU
+    // les signaux selon la valeur de --type, pas toujours "entities").
+    // opt.slug_type_field : flag du champ pilote (ex. "--type").
+    // opt.slug_type_map : { valeur_du_champ_pilote: slug_type_a_utiliser },
+    // "*" en clé de secours si la valeur ne matche rien de listé.
+    if (opt.slug_type_field && opt.slug_type_map) {
+      sel.dataset.slugTypeField = opt.slug_type_field;
+      sel.dataset.slugTypeMap = JSON.stringify(opt.slug_type_map);
+    }
 
   } else if (opt.type === 'number') {
     const inp = document.createElement('input');
@@ -647,6 +939,21 @@ document.addEventListener('change', async (e) => {
   }
 });
 
+// Source de slugs dynamique selon un autre champ (ex. --type pilote la
+// source de --slug pour undo_custom : "entities" ou "signals" selon que
+// le type choisi est "signal" ou non). Ajouté le 26 juillet 2026.
+document.addEventListener('change', async (e) => {
+  const piloted = document.querySelectorAll(`[data-slug-type-field="${e.target.dataset.flag}"]`);
+  for (const sel of piloted) {
+    const map = JSON.parse(sel.dataset.slugTypeMap || '{}');
+    const nouveauType = map[e.target.value] || map['*'] || sel.dataset.slugType;
+    if (nouveauType !== sel.dataset.slugType) {
+      sel.dataset.slugType = nouveauType;
+      await loadSlugsForSelect(sel, nouveauType);
+    }
+  }
+});
+
 // ── Construction des args CLI ─────────────────────
 
 function collectArgs() {
@@ -690,12 +997,148 @@ function collectArgs() {
 
 // ── Exécution script ──────────────────────────────
 
-document.getElementById('btn-run').addEventListener('click', () => {
+/**
+ * Valide les groupes "au moins un requis" (required_one_of) avant de
+ * lancer un script. Ajouté le 26 juillet 2026 -- cas réel remonté par
+ * David : scan_geographie_complet.py plante ("error: one of the arguments
+ * --scenario --all is required", code 2) si ni "Tous les scénarios" ni un
+ * scénario précis n'est sélectionné. Le formulaire ne bloquait rien avant
+ * l'envoi -- vérifié, même défaut dans 9 autres entrées du panneau
+ * (mutually_exclusive_with gère seulement "jamais les deux ensemble",
+ * jamais "au moins un"). Deux variantes trouvées côté Python, mais même
+ * symptôme cliente : un vrai argparse mutually_exclusive_group(required=True)
+ * dans 8 scripts (check_zones_coherence.py, generate_journaux.py, etc.),
+ * un parser.error()/sys.exit() manuel équivalent dans enrich_minimal.py et
+ * enrich_geographie_recursive.py.
+ *
+ * required_one_of : liste de groupes au niveau du script, chaque groupe une
+ * liste de flags dont au moins un doit être actif (checkbox cochée ou
+ * select/texte non vide) -- generer_zones_topdown.py en a deux distincts
+ * (portée scenario/all + mode review/apply).
+ */
+/**
+ * Un flag GUI a-t-il une valeur active : checkbox cochée, ou
+ * select/texte/slug_select non vide. Factorisé le 26 juillet 2026 -- utilisé
+ * par les 3 validations pré-lancement ci-dessous (required_one_of, required,
+ * required_if).
+ */
+function isFlagActive(flag) {
+  const el = document.querySelector(`#form-body [data-flag="${flag}"]`);
+  if (!el) return false;
+  if (el.type === 'checkbox') return el.checked;
+  return el.value !== '' && el.value !== null && el.value !== undefined;
+}
+
+function validateRequiredGroups(script) {
+  const groups = script.required_one_of || [];
+  return groups.filter(group => !group.some(isFlagActive));
+}
+
+/**
+ * Audit du panneau du 26 juillet 2026 (à la demande de David, en plus des
+ * doublons -- aucun trouvé au-delà de ceux déjà tranchés le 25 juillet) :
+ * en cherchant si la logique de `scan_geographie_complet` s'appliquait
+ * ailleurs, deux AUTRES formes du même bug de fond (rien ne bloque le GUI
+ * avant un plantage argparse) sont ressorties, dans des scripts qui
+ * n'avaient pas de `mutually_exclusive_with` donc invisibles au grep de la
+ * première passe :
+ *
+ * 1. Champ requis seul, inconditionnel (argparse `required=True`, ou
+ *    `sys.exit()` manuel équivalent) -- ex. `--scenario` de
+ *    `reparenter_sous_zones_orphelines.py`. Le champ `required: true`
+ *    existait déjà dans scripts_config.json (une seule entrée s'en servait,
+ *    `build_geographie`) mais n'était QUE cosmétique (ajoute juste " *" au
+ *    label dans renderOption(), jamais vérifié avant le clic Lancer).
+ *
+ * 2. Champ requis conditionnel : requis seulement si un AUTRE champ est
+ *    rempli -- ex. `--raison-suspicion` requis avec `--zone-suspecte`
+ *    (zoning_topdown.py), `--type` requis avec `--slug` (undo_custom.py).
+ *    Nouveau champ `required_if` : nom du flag déclencheur.
+ */
+function validateRequiredFields(script) {
+  const manquants = [];
+  for (const opt of script.options || []) {
+    if (opt.required && !isFlagActive(opt.flag)) {
+      manquants.push(opt.label || opt.flag);
+    }
+    if (opt.required_if && isFlagActive(opt.required_if) && !isFlagActive(opt.flag)) {
+      manquants.push(`${opt.label || opt.flag} (requis avec ${opt.required_if})`);
+    }
+  }
+  return manquants;
+}
+
+/**
+ * Sauvegarde automatique avant Lancer (ajouté le 31 juillet 2026, suite à un
+ * cas réel : David a rempli le formulaire config_fields de `generate.py`,
+ * cliqué directement sur Lancer sans passer par "Sauvegarder", et le script
+ * a lu l'ancien config.yaml sur disque -- le formulaire à l'écran n'était
+ * jamais persisté avant l'exécution. Corrigé en sauvegardant automatiquement
+ * tout panneau `.yaml-form-panel` ouvert dans #form-body juste avant de
+ * lancer, en réutilisant les mêmes fonctions que les boutons "Sauvegarder"
+ * manuels (_saveYamlForm pour le formulaire guidé, /api/yaml pour le mode
+ * "Édition brute"). Ne concerne que le(s) panneau(x) du script actif --
+ * #form-body est reconstruit à chaque changement de script, donc aucun
+ * panneau d'un autre script ne peut être capté par erreur.
+ */
+async function saveOpenConfigForms() {
+  const panels = document.querySelectorAll('#form-body .yaml-form-panel');
+  for (const wrapper of panels) {
+    const yamlPath  = wrapper.dataset.yamlPath;
+    const rawZone   = wrapper.querySelector('.yaml-raw-zone');
+    const statusMsg = wrapper.querySelector('.yaml-status-msg');
+    const isRawMode = rawZone && rawZone.style.display !== 'none';
+
+    if (isRawMode) {
+      const rawTextarea = wrapper.querySelector('.yaml-raw-zone .yaml-edit');
+      try {
+        const res = await fetch('/api/yaml', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ path: yamlPath, content: rawTextarea.value }),
+        });
+        const data = await res.json();
+        if (!data.ok) return { ok: false, error: data.error };
+      } catch (e) {
+        return { ok: false, error: e.message };
+      }
+    } else {
+      await _saveYamlForm(wrapper, yamlPath, statusMsg);
+      // _saveYamlForm affiche déjà l'erreur dans statusMsg mais ne renvoie
+      // rien -- on relit la classe posée par showYamlStatus() (préfixe
+      // yaml-status-, voir sa définition plus haut) pour savoir si Lancer
+      // doit être bloqué.
+      if (statusMsg && statusMsg.classList.contains('yaml-status-error')) {
+        return { ok: false, error: statusMsg.textContent };
+      }
+    }
+  }
+  return { ok: true };
+}
+
+document.getElementById('btn-run').addEventListener('click', async () => {
   if (!State.activeScriptId) return;
 
   // Cas spécial : generate_manual utilise ses propres boutons
   const script = State.scripts.find(s => s.id === State.activeScriptId);
   if (script && script.mode === 'manual_steps') return;
+
+  const groupesManquants = validateRequiredGroups(script);
+  const champsManquants = validateRequiredFields(script);
+  if (groupesManquants.length > 0 || champsManquants.length > 0) {
+    const detailGroupes = groupesManquants.map(g => g.join(' ou '));
+    const detail = [...detailGroupes, ...champsManquants].join('  --  ');
+    appendLog(`✗ Choix requis avant de lancer : ${detail}`, 'error');
+    setLogStatus('error', 'Choix requis');
+    return;
+  }
+
+  const saveResult = await saveOpenConfigForms();
+  if (!saveResult.ok) {
+    appendLog(`✗ Échec de la sauvegarde automatique avant lancement : ${saveResult.error}`, 'error');
+    setLogStatus('error', 'Sauvegarde échouée');
+    return;
+  }
 
   const args = collectArgs();
   runScript(State.activeScriptId, args);
@@ -1461,12 +1904,34 @@ async function buildYamlFormPanel(yf, configFields, script) {
   // ── Events ──
   let isRawMode = false;
 
-  btnRaw.addEventListener('click', () => {
+  btnRaw.addEventListener('click', async () => {
     isRawMode = !isRawMode;
     formZone.style.display = isRawMode ? 'none' : 'block';
     rawZone.style.display   = isRawMode ? 'block' : 'none';
     btnRaw.textContent      = isRawMode ? 'Formulaire guidé' : 'Édition brute';
     btnSave.style.display   = isRawMode ? 'none' : '';
+
+    // Corrige un bug trouvé le 26 juillet 2026 (cas réel : une entrée
+    // ajoutée via le formulaire guidé s'est fait écraser) : `wrapper._rawContent`
+    // n'était capturé QU'UNE FOIS, au chargement initial du panneau -- si le
+    // fichier avait changé depuis (ex. un ajout via le formulaire guidé
+    // pendant la même visite du script), "Édition brute" affichait un
+    // instantané périmé, et cliquer "Sauvegarder (brut)" écrasait les
+    // changements plus récents avec ce vieux contenu. On recharge donc
+    // depuis le disque à chaque passage en mode brut.
+    if (isRawMode) {
+      rawTextarea.value = 'Chargement…';
+      try {
+        const res = await fetch(`/api/yaml?path=${encodeURIComponent(yf.path)}`);
+        const data = await res.json();
+        wrapper._rawContent = data.content || '';
+      } catch (e) {
+        // Garde l'ancien contenu si le rechargement échoue -- mieux qu'un
+        // textarea vide, mais on ne masque pas le souci pour autant.
+        showYamlStatus(statusMsg, 'error', `Rechargement échoué, contenu peut-être périmé : ${e.message}`);
+      }
+      rawTextarea.value = wrapper._rawContent;
+    }
   });
 
   btnSave.addEventListener('click', async () => {
@@ -1621,7 +2086,28 @@ async function _buildFormField(field, currentValues, script) {
     group.appendChild(ta);
   }
 
+  // Corrige un bug trouvé le 26 juillet 2026 : marque réellement les
+  // champs optionnels dans le DOM (voir _markOptional ci-dessous) --
+  // jusqu'ici cet attribut n'était jamais posé, donc le sélecteur
+  // ":not([data-optional])" utilisé par _appendYamlQueue() pour repérer
+  // les champs requis ne filtrait jamais rien.
+  group.querySelectorAll('[data-form-key]').forEach(el => _markOptional(el, field));
+
   return group;
+}
+
+/**
+ * Pose `data-optional` sur l'élément de saisie d'un champ, si le champ est
+ * marqué optionnel dans scripts_config.json. Sans ça, `_appendYamlQueue()`
+ * ne peut jamais distinguer un champ requis d'un champ optionnel -- rien
+ * n'empêchait d'envoyer une entrée de queue avec la description vide (cas
+ * réel : entrée `{variable_hint_count: 2}` sans `description`, qui aurait
+ * fait planter inject_custom_signals.py sur `idea["description"]` au
+ * premier traitement de la queue).
+ */
+function _markOptional(el, field) {
+  if (field.optional) el.dataset.optional = 'true';
+  return el;
 }
 
 /** Collecte les valeurs du formulaire guidé et appelle /api/yaml/form. */
@@ -1790,9 +2276,28 @@ async function _appendYamlQueue(wrapper, yamlPath, statusEl) {
     }
   });
 
-  // Validation minimale côté client
-  const required = wrapper.querySelectorAll('[data-form-key]:not([data-optional])');
-  // (la validation stricte est faite par le script Python)
+  // Validation minimale côté client -- corrigée le 26 juillet 2026 : cette
+  // vérification était calculée (`required`) mais jamais utilisée, et le
+  // commentaire d'origine ("la validation stricte est faite par le script
+  // Python") était faux pour ce chemin précis -- /api/yaml/append écrit
+  // l'entrée telle quelle, sans jamais appeler le script Python. Rien ne
+  // protégeait donc contre une entrée incomplète (cas réel : description
+  // vide, qui aurait fait planter inject_custom_signals.py plus tard sur
+  // `idea["description"]`, une KeyError qui interrompt tout le traitement
+  // de la queue -- pas seulement l'entrée fautive).
+  const manquants = [...wrapper.querySelectorAll('[data-form-key]:not([data-optional])')]
+    .filter(el => {
+      if (el.classList.contains('yaml-chips')) {
+        return el.querySelectorAll('.yaml-chip.active').length === 0;
+      }
+      return (el.value || '').trim() === '';
+    })
+    .map(el => el.closest('.yaml-form-field')?.querySelector('.option-label')?.textContent || '(champ)');
+
+  if (manquants.length > 0) {
+    showYamlStatus(statusEl, 'error', `Champ(s) requis manquant(s) : ${manquants.join(', ')}`);
+    return;
+  }
 
   try {
     const res = await fetch('/api/yaml/append', {
@@ -3657,3 +4162,284 @@ async function _carteRenommerZone(ancienSlug, nouveauSlug, nouveauNom) {
     msg.textContent = `Erreur réseau : ${e.message}`;
   }
 }
+
+/* ══════════════════════════════════════════════════
+   ONGLET CHANTIERS (point 4.5, 26 juillet 2026)
+   Cycle complet : lister → générer proposition (IA) →
+   approuver/rejeter → appliquer (lot) → ignorer/marquer traité.
+   ══════════════════════════════════════════════════ */
+
+const ChantiersState = {
+  items: [],
+  filtersWired: false,
+};
+
+async function loadChantiers() {
+  const scenarioSel = document.getElementById('chantiers-scenario');
+  if (!ChantiersState.filtersWired) {
+    const scenarios = State.config?.scenarios || [];
+    scenarioSel.innerHTML = '<option value="">Tous</option>' +
+      scenarios.map(s => `<option value="${s}">${s}</option>`).join('');
+
+    document.getElementById('chantiers-scenario').addEventListener('change', refreshChantiers);
+    document.getElementById('chantiers-type').addEventListener('change', refreshChantiers);
+    document.getElementById('chantiers-statut').addEventListener('change', refreshChantiers);
+    document.getElementById('chantiers-appliquer-tout').addEventListener('click', chantiersAppliquerTout);
+    ChantiersState.filtersWired = true;
+  }
+  await refreshChantiers();
+}
+
+async function refreshChantiers() {
+  const scenario = document.getElementById('chantiers-scenario').value;
+  const type_ = document.getElementById('chantiers-type').value;
+  const statut = document.getElementById('chantiers-statut').value;
+
+  const applyBtn = document.getElementById('chantiers-appliquer-tout');
+  applyBtn.textContent = scenario
+    ? `Appliquer les propositions approuvées (${scenario})`
+    : 'Appliquer les propositions approuvées (tous les scénarios)';
+
+  const params = new URLSearchParams();
+  if (scenario) params.set('scenario', scenario);
+  if (type_) params.set('type', type_);
+  if (statut) params.set('statut', statut);
+
+  const list = document.getElementById('chantiers-list');
+  list.innerHTML = '<div class="chantiers-empty">Chargement…</div>';
+
+  try {
+    const res = await fetch(`/api/chantiers?${params.toString()}`);
+    const data = await res.json();
+    ChantiersState.items = data.chantiers || [];
+    renderChantiersList();
+  } catch (e) {
+    list.innerHTML = `<div class="chantiers-empty">Erreur réseau : ${e.message}</div>`;
+  }
+}
+
+function renderChantiersList() {
+  const list = document.getElementById('chantiers-list');
+  const items = ChantiersState.items;
+  document.getElementById('chantiers-count').textContent =
+    `${items.length} chantier${items.length > 1 ? 's' : ''}`;
+
+  if (items.length === 0) {
+    list.innerHTML = '<div class="chantiers-empty">Aucun chantier pour ces filtres.</div>';
+    return;
+  }
+
+  // Groupés par scénario, comme le dashboard zones-manquantes
+  const parScenario = {};
+  items.forEach(c => {
+    (parScenario[c.scenario] ||= []).push(c);
+  });
+
+  list.innerHTML = Object.entries(parScenario).map(([scenario, chantiers]) => `
+    <div class="chantiers-scenario-group">
+      <div class="chantiers-scenario-header">
+        ${scenario}
+        <span class="chantiers-scenario-count">${chantiers.length}</span>
+      </div>
+      ${chantiers.map(renderChantierRow).join('')}
+    </div>
+  `).join('');
+}
+
+const CHANTIERS_TYPE_LABEL = { pays_sans_zone: 'Pays sans zone', zone_suspecte: 'Zone suspecte' };
+const CHANTIERS_STATUT_LABEL = { a_traiter: 'À traiter', ignore: 'Ignoré', traite: 'Traité' };
+
+function renderChantierRow(c) {
+  const aProposition = c.proposition != null;
+  const approuvee = c.proposition_approuvee === true;
+  const enAttente = c.statut === 'a_traiter';
+
+  return `
+    <div class="chantiers-row" data-chantier-id="${c.id}">
+      <div class="chantiers-row-head">
+        <span class="chantiers-type-badge">${CHANTIERS_TYPE_LABEL[c.type] || c.type}</span>
+        <span class="chantiers-cible">${c.cible}</span>
+        <span class="chantiers-statut-badge chantiers-statut-${c.statut}">${CHANTIERS_STATUT_LABEL[c.statut] || c.statut}</span>
+        ${aProposition && approuvee ? '<span class="chantiers-approuvee-badge">✓ approuvée</span>' : ''}
+      </div>
+      <div class="chantiers-probleme">${c.probleme || ''}</div>
+      ${aProposition ? `<div class="chantiers-proposal-box">${_chantiersFormatProposition(c.proposition)}</div>` : ''}
+      <div class="chantiers-actions">
+        ${enAttente ? `
+          <button class="chantiers-btn" data-action="generer">${aProposition ? 'Régénérer la proposition' : 'Générer une proposition (IA)'}</button>
+          ${aProposition ? (approuvee
+            ? '<button class="chantiers-btn" data-action="rejeter">Retirer l\'approbation</button>'
+            : '<button class="chantiers-btn chantiers-btn-primary" data-action="approuver">Approuver</button>'
+          ) : ''}
+          ${aProposition && approuvee ? '<button class="chantiers-btn chantiers-btn-primary" data-action="appliquer">✓ Appliquer ce chantier</button>' : ''}
+          <button class="chantiers-btn" data-action="ignorer">Ignorer</button>
+          <button class="chantiers-btn" data-action="marquer_traite">Marquer traité manuellement</button>
+        ` : `
+          <button class="chantiers-btn" data-action="rouvrir">Rouvrir (repasser à traiter)</button>
+        `}
+      </div>
+      <div class="chantiers-row-msg" data-role="msg"></div>
+    </div>
+  `;
+}
+
+function _chantiersFormatProposition(p) {
+  // Aperçu compact plutôt que le JSON brut complet -- les champs qui
+  // comptent pour une relecture humaine rapide, pas le schéma zone entier.
+  const lignes = [];
+  if (p.nom) lignes.push(`nom: ${p.nom}`);
+  if (p.slug) lignes.push(`slug: ${p.slug}`);
+  if (p.type) lignes.push(`type: ${p.type}`);
+  if (p.description) lignes.push(`description: ${p.description}`);
+  return lignes.join('\n') || JSON.stringify(p, null, 2);
+}
+
+// Délégation d'événements sur la liste entière -- les lignes sont
+// reconstruites à chaque refresh, pas la peine de recâbler un listener par
+// bouton individuellement.
+document.addEventListener('click', async (e) => {
+  const btn = e.target.closest('#chantiers-list [data-action]');
+  if (!btn) return;
+  const row = btn.closest('.chantiers-row');
+  const chantierId = row.dataset.chantierId;
+  const action = btn.dataset.action;
+  const msgEl = row.querySelector('[data-role="msg"]');
+
+  const actions = {
+    generer:        () => chantiersAction('/api/chantiers/generer', { id: chantierId }, msgEl, 'Génération en cours (appel IA, peut prendre jusqu\'à 90s)…'),
+    approuver:       () => chantiersAction('/api/chantiers/approuver', { id: chantierId, approuve: true }, msgEl),
+    rejeter:         () => chantiersAction('/api/chantiers/approuver', { id: chantierId, approuve: false }, msgEl),
+    appliquer:       () => chantiersAppliquerUn(chantierId, row, msgEl),
+    ignorer:         () => chantiersAction('/api/chantiers/statut', { id: chantierId, statut: 'ignore' }, msgEl),
+    marquer_traite:  () => chantiersAction('/api/chantiers/statut', { id: chantierId, statut: 'traite' }, msgEl),
+    rouvrir:         () => chantiersAction('/api/chantiers/statut', { id: chantierId, statut: 'a_traiter' }, msgEl),
+  };
+  if (actions[action]) await actions[action]();
+});
+
+async function chantiersAction(url, body, msgEl, loadingText = 'En cours…') {
+  msgEl.className = 'chantiers-row-msg loading';
+  msgEl.textContent = loadingText;
+  try {
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+    });
+    const data = await res.json();
+    if (data.ok) {
+      await refreshChantiers();
+    } else {
+      msgEl.className = 'chantiers-row-msg error';
+      msgEl.textContent = `Erreur : ${data.error}`;
+    }
+  } catch (e) {
+    msgEl.className = 'chantiers-row-msg error';
+    msgEl.textContent = `Erreur réseau : ${e.message}`;
+  }
+}
+
+async function chantiersAppliquerUn(chantierId, row, msgEl) {
+  // Granularité fine ajoutée le 1er août 2026 (--cible côté
+  // generer_zones_topdown.py) : applique CE chantier précis, sans toucher
+  // aux autres chantiers prêts du même scénario -- contrairement à
+  // chantiersAppliquerTout() ci-dessous, qui reste utile pour un traitement
+  // en lot volontaire.
+  const cible = row.querySelector('.chantiers-cible')?.textContent?.trim() || chantierId;
+  const confirmMsg = `Appliquer ce chantier (${cible}) ? Cette action écrit dans le vault (sauvegarde .bak automatique).`;
+  if (!confirm(confirmMsg)) return;
+  await chantiersAction('/api/chantiers/appliquer', { id: chantierId }, msgEl, 'Application en cours…');
+}
+
+async function chantiersAppliquerTout() {
+  const scenario = document.getElementById('chantiers-scenario').value;
+  const btn = document.getElementById('chantiers-appliquer-tout');
+  const body = scenario ? { scenario } : { all: true };
+
+  const confirmMsg = scenario
+    ? `Appliquer toutes les propositions approuvées de ${scenario} ? Cette action écrit dans le vault (sauvegarde .bak automatique).`
+    : `Appliquer toutes les propositions approuvées des 6 scénarios ? Cette action écrit dans le vault (sauvegarde .bak automatique).`;
+  if (!confirm(confirmMsg)) return;
+
+  btn.disabled = true;
+  const originalText = btn.textContent;
+  btn.textContent = 'Application en cours…';
+  try {
+    const res = await fetch('/api/chantiers/appliquer', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+    });
+    const data = await res.json();
+    if (data.ok) {
+      await refreshChantiers();
+    } else {
+      alert(`Erreur : ${data.error}`);
+    }
+  } catch (e) {
+    alert(`Erreur réseau : ${e.message}`);
+  } finally {
+    btn.disabled = false;
+    btn.textContent = originalText;
+  }
+}
+
+// ══════════════════════════════════════════════════
+// REDIMENSIONNEMENT DU SIDEBAR À LA SOURIS (31 juillet 2026)
+// ══════════════════════════════════════════════════
+// Certains titres de scripts sont trop longs pour la largeur fixe du
+// sidebar (retour de David). Ajout d'une poignée de glissement entre
+// #sidebar et #main -- largeur mémorisée dans localStorage pour survivre
+// aux rechargements de page (contexte : vraie appli Flask locale dans le
+// navigateur de David, pas un artifact claude.ai -- localStorage est donc
+// approprié ici, contrairement aux artifacts où il est proscrit).
+(function initSidebarResizer() {
+  const sidebar  = document.getElementById('sidebar');
+  const resizer  = document.getElementById('sidebar-resizer');
+  if (!sidebar || !resizer) return;
+
+  const STORAGE_KEY = 'ourrassol_sidebar_width';
+  const MIN_WIDTH = 180;
+  const MAX_WIDTH = 600;
+
+  // Restaurer la largeur sauvegardée au chargement, si présente
+  const saved = localStorage.getItem(STORAGE_KEY);
+  if (saved) {
+    const largeur = parseInt(saved, 10);
+    if (largeur >= MIN_WIDTH && largeur <= MAX_WIDTH) {
+      sidebar.style.width = `${largeur}px`;
+    }
+  }
+
+  let dragging = false;
+
+  resizer.addEventListener('mousedown', (e) => {
+    dragging = true;
+    resizer.classList.add('dragging');
+    document.body.classList.add('sidebar-resizing');
+    e.preventDefault();
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if (!dragging) return;
+    const rect = sidebar.getBoundingClientRect();
+    let largeur = e.clientX - rect.left;
+    largeur = Math.max(MIN_WIDTH, Math.min(MAX_WIDTH, largeur));
+    sidebar.style.width = `${largeur}px`;
+  });
+
+  document.addEventListener('mouseup', () => {
+    if (!dragging) return;
+    dragging = false;
+    resizer.classList.remove('dragging');
+    document.body.classList.remove('sidebar-resizing');
+    localStorage.setItem(STORAGE_KEY, parseInt(sidebar.style.width, 10));
+  });
+
+  // Double-clic sur la poignée : revenir à la largeur par défaut (retire
+  // le style inline, laisse style.css reprendre la main)
+  resizer.addEventListener('dblclick', () => {
+    sidebar.style.width = '';
+    localStorage.removeItem(STORAGE_KEY);
+  });
+})();

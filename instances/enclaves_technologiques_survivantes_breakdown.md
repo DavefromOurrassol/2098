@@ -4,6 +4,11 @@ type: instance
 slug: enclaves_technologiques_survivantes_breakdown
 entite: enclaves_technologiques_survivantes
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 statut: officialise_enrichi
 type_dans_scenario: réseau
 role_dans_scenario: 'Dans le scénario breakdown, elles représentent les derniers nœuds
@@ -74,10 +79,6 @@ tensions_narratives: 'Leur paradoxe fondamental est d''être à la fois indispen
   NexCore ou Mnemos ; d''autres tentent de tisser des réseaux d''entraide discrets,
   fragiles comme du verre dans un monde en morceaux.'
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: infrastructure
 ---
 
 # Enclaves Technologiques Survivantes

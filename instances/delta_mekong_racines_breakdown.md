@@ -8,7 +8,6 @@ localisation:
   zone: delta_mekong_racines
   lieu: Delta du Mékong
   type_lieu: region
-
 type_dans_scenario: réseau
 
 role_dans_scenario: >

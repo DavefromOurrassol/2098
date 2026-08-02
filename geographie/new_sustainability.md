@@ -2038,7 +2038,7 @@ zones:
   nom: Sahel — Corridors verts du RVC
   niveau: 2
   type: region
-  parent: reseau_vivant_continental
+  parent: afrique_continentale
   origine_reelle:
   - entite: Mali
     type_entite: pays

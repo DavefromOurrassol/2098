@@ -84,7 +84,10 @@ def find_residual_duplicates(zones):
     a_nettoyer = []
     for z in zones:
         for lieu in (z.get("lieux_emblematiques") or []):
-            nom = str(lieu.get("nom", "")).strip()
+            # Tolérance de format (même bug trouvé le 31 juillet 2026 dans
+            # enrich_geographie_recursive.py) : une entrée peut être une
+            # simple chaîne au lieu du dict {"nom": ...} attendu.
+            nom = (lieu.get("nom", "") if isinstance(lieu, dict) else str(lieu)).strip()
             if nom in promu_par and promu_par[nom] != z["slug"]:
                 a_nettoyer.append((nom, promu_par[nom], z["slug"]))
     return a_nettoyer
@@ -99,7 +102,10 @@ def apply_cleanup(zones, residus):
         zone = by_slug[zone_a_nettoyer_slug]
         lieux = zone.get("lieux_emblematiques") or []
         avant = len(lieux)
-        lieux = [l for l in lieux if str(l.get("nom", "")).strip() != nom]
+        lieux = [
+            l for l in lieux
+            if (l.get("nom", "") if isinstance(l, dict) else str(l)).strip() != nom
+        ]
         zone["lieux_emblematiques"] = lieux
         count += avant - len(lieux)
     return count
@@ -149,8 +155,12 @@ def render_zone_md(zone):
     if lieux:
         md += "**Lieux emblématiques** :\n"
         for lieu in lieux:
-            note = f" — {lieu.get('notes', '')}" if lieu.get("notes") else ""
-            md += f"- {lieu.get('nom', '?')} ({lieu.get('type', '')}){note}\n"
+            if isinstance(lieu, dict):
+                note = f" — {lieu.get('notes', '')}" if lieu.get("notes") else ""
+                type_txt = f" ({lieu['type']})" if lieu.get("type") else ""
+                md += f"- {lieu.get('nom', '?')}{type_txt}{note}\n"
+            else:
+                md += f"- {lieu}\n"
         md += "\n"
     rel = zone.get("relations") or {}
     if rel.get("allies"):

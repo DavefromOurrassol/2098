@@ -5,12 +5,9 @@ slug: corridor_lithium_bouches_breakdown
 entite: corridor_lithium_bouches
 scenario: breakdown
 localisation:
-  zone: corridor_lithium_bouches
+  zone: amazon_pacte_gardiens
   lieu: Salars andins de Bolivie, Chili et Argentine
   type_lieu: region
-  statut: review_manuelle
-  note: "Le lieu est précis (salars andins, Bolivie/Chili/Argentine) mais aucune zone disponible ne couvre l'Amérique du Sud andine ; le slug corridor_lithium_bouches existe dans la liste mais désigne le Sahel, pas les Andes — mapping impossible sans ambiguïté."
-
 type_dans_scenario: infrastructure
 
 role_dans_scenario: >

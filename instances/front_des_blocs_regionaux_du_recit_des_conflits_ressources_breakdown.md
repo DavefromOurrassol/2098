@@ -4,6 +4,11 @@ type: instance
 slug: front_des_blocs_regionaux_du_recit_des_conflits_ressources_breakdown
 entite: front_des_blocs_regionaux_du_recit_des_conflits_ressources
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 statut: officialise_enrichi
 type_dans_scenario: organisation
 role_dans_scenario: 'Dans le scénario breakdown, exerce une pression narrative concurrente
@@ -73,10 +78,6 @@ tensions_narratives: 'La contradiction fondamentale du Front est qu''il prétend
   en tête — qui disposent d''infrastructures qu''aucun bloc régional ne peut plus
   égaler.'
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: null
 ---
 
 # Front des Blocs Régionaux du Récit des Conflits-Ressources

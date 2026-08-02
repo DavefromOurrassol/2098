@@ -21,6 +21,8 @@ from loader import (
     load_instances_for_scenario,
     load_events_for_scenario,
     filter_instances_for_thematique,
+    select_instances_by_impact,
+    resolve_forced_element,
     VALID_VARS,
     VALID_SCENARIOS,
 )
@@ -703,13 +705,28 @@ def _dominant_zone(instances):
     return Counter(zones).most_common(1)[0][0]
 
 
-def build_snapshot(scenario_slug, thematique=None):
+def build_snapshot(scenario_slug, thematique=None, dry_run=True, forcer_config=None):
     """
     Fonction principale — construit le snapshot complet du monde 2098.
 
     Args:
         scenario_slug : str — slug du scénario (ex: "breakdown")
         thematique    : dict — fiche thématique chargée (optionnel)
+        dry_run       : bool — si False, la rotation à mémoire des
+                        instances sélectionnées (voir loader.py,
+                        ajouté le 2 août 2026) est persistée sur disque.
+                        True par défaut : un aperçu/dry-run ne doit
+                        jamais faire avancer la rotation, seule une
+                        génération réelle le doit.
+        forcer_config : dict|None — bloc `forcer:` de config.yaml
+                        (type/slug/mode), ajouté le 2 août 2026. Résolu
+                        via loader.resolve_forced_element() et appliqué
+                        à la sélection d'instances/événements/signaux
+                        ci-dessous. Si l'élément demandé est introuvable,
+                        l'erreur est placée dans snapshot["forcer_erreur"]
+                        plutôt que de faire échouer toute la génération --
+                        c'est à l'appelant (generate.py) de décider s'il
+                        arrête ou continue sans le forçage.
 
     Retourne un dict complet prêt pour prompt_builder.py
     """
@@ -764,13 +781,17 @@ def build_snapshot(scenario_slug, thematique=None):
     all_instances = load_instances_for_scenario(scenario_slug)
     filtered_instances = []
     if thematique:
-        filtered_instances = filter_instances_for_thematique(all_instances, thematique)
+        filtered_instances = filter_instances_for_thematique(
+            all_instances, thematique, scenario_slug=scenario_slug, dry_run=dry_run
+        )
     else:
-        # Sans thématique : garder les instances à fort impact systémique
-        filtered_instances = sorted(
-            all_instances,
-            key=lambda x: -x.get("impact_systemique_global", 0)
-        )[:6]
+        # Sans thématique : garder les instances à fort impact systémique,
+        # avec la même rotation à mémoire (ajouté le 2 août 2026 --
+        # remplace l'ancien tri déterministe pur qui ne laissait jamais
+        # sortir une instance à impact modéré).
+        filtered_instances = select_instances_by_impact(
+            all_instances, scenario_slug, dry_run=dry_run, max_n=6
+        )
     print("[snapshot] Instances chargées : {} | Filtrées : {}".format(
         len(all_instances), len(filtered_instances)
     ))
@@ -801,6 +822,71 @@ def build_snapshot(scenario_slug, thematique=None):
     else:
         print("[snapshot] Événements custom : aucun")
 
+
+    # ── Étape 6D : forçage d'un élément (ajouté le 2 août 2026)
+    forcer_resolu = resolve_forced_element(forcer_config, scenario_slug)
+    forced_signal_event = None
+    forced_angle_directive = None
+    forcer_erreur = None
+
+    if forcer_resolu:
+        forcer_erreur = forcer_resolu.get("erreur")
+
+        if forcer_erreur:
+            print("[snapshot] ⚠ Forçage demandé mais impossible : {}".format(forcer_erreur))
+
+        elif forcer_resolu["type"] == "instance":
+            inst = forcer_resolu["instance"]
+            deja_present = any(i["slug"] == inst["slug"] for i in filtered_instances)
+            if forcer_resolu["mode"] == "sujet_central":
+                # Remplace entièrement la sélection auto -- cet article
+                # ne doit parler que de cette instance, pas la diluer
+                # parmi 5 autres sélectionnées automatiquement.
+                filtered_instances = [inst]
+                print("[snapshot] Forçage instance (sujet central) : {}".format(inst["slug"]))
+            elif not deja_present:
+                # ingredient : garantie de présence, ajoutée en plus de
+                # la sélection auto -- si ça dépasse le plafond habituel
+                # de 6, on évince la moins pertinente plutôt que de
+                # laisser le prompt grossir sans limite.
+                filtered_instances = [inst] + filtered_instances[:5]
+                print("[snapshot] Forçage instance (ingrédient) : {} ajoutée".format(inst["slug"]))
+            else:
+                print("[snapshot] Forçage instance (ingrédient) : {} déjà sélectionnée normalement".format(inst["slug"]))
+            if forcer_resolu["mode"] == "sujet_central":
+                forced_angle_directive = (
+                    "Cet article DOIT être construit spécifiquement autour de {} : {}"
+                ).format(inst.get("name", inst["slug"]), inst.get("role_dans_scenario", "")[:400])
+
+        elif forcer_resolu["type"] == "evenement":
+            ev = forcer_resolu["event"]
+            # Déjà garanti présent dans custom_events (aucune troncature
+            # sur ce chargement, voir loader.py::load_events_for_scenario)
+            # -- rien à injecter, juste à confirmer et, en mode
+            # sujet_central, à orienter l'angle dessus.
+            print("[snapshot] Forçage événement ({}) : {} confirmé dans custom_events".format(
+                forcer_resolu["mode"], ev["slug"]
+            ))
+            if forcer_resolu["mode"] == "sujet_central":
+                forced_angle_directive = (
+                    "Cet article DOIT être construit spécifiquement autour de l'événement "
+                    "\"{}\" ({}) : {}"
+                ).format(ev.get("name", ev["slug"]), ev.get("date_label", ""), ev.get("description", "")[:400])
+
+        elif forcer_resolu["type"] == "signal":
+            forced_signal_event = forcer_resolu["signal_event"]
+            print("[snapshot] Forçage signal ({}) : {}".format(
+                forcer_resolu["mode"], forced_signal_event["evenement_cle"]
+            ))
+            if forcer_resolu["mode"] == "sujet_central":
+                forced_angle_directive = (
+                    "Cet article DOIT être construit spécifiquement autour de l'événement "
+                    "\"{}\" ({}) : {}"
+                ).format(
+                    forced_signal_event["evenement_cle"],
+                    forced_signal_event["date_bascule"],
+                    forced_signal_event["evolution"],
+                )
 
     # ── Assembler le snapshot
     snapshot = {
@@ -857,6 +943,12 @@ def build_snapshot(scenario_slug, thematique=None):
 
         # Zone dominante — déterminée depuis les instances filtrées
         "zone_slug":           _dominant_zone(filtered_instances),
+
+        # Forçage d'un élément (ajouté le 2 août 2026)
+        "forcer_resolu":          forcer_resolu,
+        "forcer_erreur":          forcer_erreur,
+        "forced_signal_event":    forced_signal_event,
+        "forced_angle_directive": forced_angle_directive,
     }
 
     return snapshot

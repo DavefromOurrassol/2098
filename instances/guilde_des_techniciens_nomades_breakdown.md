@@ -4,6 +4,11 @@ type: instance
 slug: guilde_des_techniciens_nomades_breakdown
 entite: guilde_des_techniciens_nomades
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 statut: officialise_enrichi
 type_dans_scenario: réseau
 role_dans_scenario: 'Dans le scénario breakdown, ils assurent la survie technique
@@ -66,10 +71,6 @@ tensions_narratives: La Guilde est tiraillée entre sa vocation de service unive
   technique. La question de savoir si la Guilde deviendra un acteur de gouvernance
   légitime ou un outil d'un nouveau féodalisme technocratique reste entière.
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: null
 ---
 
 # Guilde des Techniciens Nomades

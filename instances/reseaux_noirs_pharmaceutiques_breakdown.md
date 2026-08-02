@@ -4,6 +4,10 @@ type: instance
 slug: reseaux_noirs_pharmaceutiques_breakdown
 entite: reseaux_noirs_pharmaceutiques
 scenario: breakdown
+localisation:
+  zone: afrique_de_louest_lagos_sahel
+  lieu: Lagos-Est
+  type_lieu: ville
 statut: officialise_enrichi
 type_dans_scenario: réseau
 role_dans_scenario: 'Dans le scénario breakdown, comblent le vide laissé par l''effondrement
@@ -71,10 +75,6 @@ tensions_narratives: 'La tension centrale est celle du sauveteur toxique : ces r
   de distribution génère une violence endémique qui fragilise les populations qu''ils
   prétendent servir.'
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: null
 ---
 
 # Réseaux Noirs Pharmaceutiques

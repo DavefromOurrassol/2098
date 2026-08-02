@@ -9,6 +9,38 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
   <style>
+    /* ── Redimensionnement du sidebar à la souris (31 juillet 2026) ── */
+    #sidebar {
+      min-width: 180px; max-width: 600px; overflow-x: hidden;
+      box-sizing: border-box;
+    }
+    #sidebar-resizer {
+      width: 6px; flex-shrink: 0; cursor: col-resize;
+      background: transparent; position: relative;
+    }
+    #sidebar-resizer:hover, #sidebar-resizer.dragging {
+      background: #d8c8f0;
+    }
+    #sidebar-resizer::after {
+      content: ''; position: absolute; top: 0; bottom: 0; left: 2px;
+      width: 2px; background: #e0e0e0;
+    }
+    #sidebar-resizer:hover::after, #sidebar-resizer.dragging::after {
+      background: #6a3db5;
+    }
+    body.sidebar-resizing { cursor: col-resize; user-select: none; }
+
+    /* ── Options avancées (mécanisme générique ajouté le 31 juillet 2026) ── */
+    .advanced-options {
+      margin-top: 10px; border: 1px solid #ddd; border-radius: 6px;
+      padding: 6px 10px; background: #fafafa;
+    }
+    .advanced-options summary {
+      cursor: pointer; font-size: 12px; color: #555; font-weight: 600;
+      padding: 4px 0; user-select: none;
+    }
+    .advanced-options[open] summary { margin-bottom: 6px; }
+
     /* ── Onglet Carte ── */
     #tab-carte { display: none; flex-direction: column; height: 100%; padding: 20px; box-sizing: border-box; }
     #tab-carte.active { display: flex; }
@@ -81,11 +113,6 @@
       font-size: 9px; padding: 2px 6px; border-radius: 3px; color: #b5651d;
     }
     .arbre-zone-split-btn:hover { background: #fdf2e8; }
-    .arbre-zone-topdown-btn {
-      margin-left: auto; border: 1px solid #d8c8f0; background: #fff; cursor: pointer;
-      font-size: 9px; padding: 2px 6px; border-radius: 3px; color: #6a3db5;
-    }
-    .arbre-zone-topdown-btn:hover { background: #f6f0fd; }
     .arbre-zone-type {
       background: #eef4fa; color: #3b6fd4; border-radius: 3px;
       padding: 1px 5px; font-size: 9px; text-transform: uppercase;
@@ -139,6 +166,42 @@
       padding: 3px 10px; cursor: pointer; color: #7a5010;
     }
     #llm-force-banner button:hover { background: #fff0d0; }
+
+    /* ── Onglet Chantiers (point 4.5, 26 juillet 2026) ── */
+    #tab-chantiers { display: none; flex-direction: column; height: 100%; padding: 20px; box-sizing: border-box; overflow-y: auto; }
+    #tab-chantiers.active { display: flex; }
+    .chantiers-toolbar { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; flex-wrap: wrap; }
+    .chantiers-toolbar select { font-family: 'JetBrains Mono', monospace; padding: 4px 8px; border: 1px solid #ccc; border-radius: 4px; background: #fff; font-size: 12px; }
+    .chantiers-toolbar-spacer { flex: 1; }
+    .chantiers-count { font-size: 11px; color: #888; }
+    .chantiers-empty { color: #999; font-style: italic; font-size: 13px; padding: 20px 0; }
+    .chantiers-scenario-group { border: 1px solid #ddd; border-radius: 6px; margin-bottom: 14px; overflow: hidden; }
+    .chantiers-scenario-header { display: flex; align-items: center; gap: 8px; padding: 8px 14px; background: #f4f2f0; border-bottom: 1px solid #eee; font-weight: 600; font-size: 13px; text-transform: capitalize; }
+    .chantiers-scenario-count { font-size: 11px; color: #999; font-weight: 400; font-family: 'JetBrains Mono', monospace; }
+    .chantiers-row { padding: 10px 14px; border-bottom: 1px solid #f0f0f0; font-size: 12px; }
+    .chantiers-row:last-child { border-bottom: none; }
+    .chantiers-row-head { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .chantiers-cible { font-weight: 600; color: #222; }
+    .chantiers-type-badge { font-size: 9px; text-transform: uppercase; padding: 1px 6px; border-radius: 8px; background: #eef4fa; color: #3b6fd4; }
+    .chantiers-statut-badge { font-size: 9px; padding: 1px 6px; border-radius: 8px; font-weight: 600; }
+    .chantiers-statut-a_traiter { background: #fff3e0; color: #c05c00; }
+    .chantiers-statut-ignore { background: #eee; color: #888; }
+    .chantiers-statut-traite { background: #e8f5ed; color: #2e7d4f; }
+    .chantiers-approuvee-badge { font-size: 9px; padding: 1px 6px; border-radius: 8px; background: #e8f5ed; color: #2e7d4f; font-weight: 600; }
+    .chantiers-probleme { color: #666; margin-top: 4px; line-height: 1.4; }
+    .chantiers-actions { display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap; }
+    .chantiers-btn { font-size: 11px; padding: 3px 10px; border-radius: 4px; cursor: pointer; border: 1px solid #ddd; background: #fff; color: #555; transition: all 0.1s; }
+    .chantiers-btn:hover { border-color: #3b6fd4; color: #2a52a8; }
+    .chantiers-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+    .chantiers-btn-primary { border-color: #3b6fd4; color: #2a52a8; background: #eef4fa; font-weight: 600; }
+    .chantiers-btn-primary:hover { background: #3b6fd4; color: #fff; }
+    .chantiers-btn-danger { border-color: #c0392b; color: #c0392b; }
+    .chantiers-btn-danger:hover { background: #fdecea; }
+    .chantiers-proposal-box { background: #f5f7fc; border: 1px solid #d0d8f0; border-radius: 4px; padding: 8px 10px; margin-top: 8px; font-size: 11px; font-family: 'JetBrains Mono', monospace; white-space: pre-wrap; word-break: break-word; max-height: 180px; overflow-y: auto; color: #444; }
+    .chantiers-row-msg { font-size: 11px; margin-top: 6px; }
+    .chantiers-row-msg.ok { color: #2e7d4f; }
+    .chantiers-row-msg.error { color: #c0392b; }
+    .chantiers-row-msg.loading { color: #888; font-style: italic; }
   </style>
 </head>
 <body>
@@ -176,6 +239,9 @@
     </nav>
 
   </aside>
+
+  <!-- ══ POIGNÉE DE REDIMENSIONNEMENT (ajoutée le 31 juillet 2026) ══ -->
+  <div id="sidebar-resizer" title="Glisser pour élargir/réduire le panneau"></div>
 
   <!-- ══ ZONE PRINCIPALE ══════════════════════════════════ -->
   <main id="main">
@@ -301,6 +367,34 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <!-- ── Chantiers (point 4.5, 26 juillet 2026) ── -->
+    <div id="tab-chantiers" class="tab-content">
+      <div class="chantiers-toolbar">
+        <span class="tab-page-title" style="margin:0">Chantiers géographie</span>
+        <label for="chantiers-scenario" style="font-size:12px;color:#888">Scénario</label>
+        <select id="chantiers-scenario">
+          <option value="">Tous</option>
+        </select>
+        <label for="chantiers-type" style="font-size:12px;color:#888">Type</label>
+        <select id="chantiers-type">
+          <option value="">Tous</option>
+          <option value="pays_sans_zone">Pays sans zone</option>
+          <option value="zone_suspecte">Zone suspecte</option>
+        </select>
+        <label for="chantiers-statut" style="font-size:12px;color:#888">Statut</label>
+        <select id="chantiers-statut">
+          <option value="a_traiter">À traiter</option>
+          <option value="ignore">Ignorés</option>
+          <option value="traite">Traités</option>
+          <option value="">Tous</option>
+        </select>
+        <div class="chantiers-toolbar-spacer"></div>
+        <span id="chantiers-count" class="chantiers-count"></span>
+        <button id="chantiers-appliquer-tout" class="chantiers-btn chantiers-btn-primary">Appliquer les propositions approuvées</button>
+      </div>
+      <div id="chantiers-list"></div>
     </div>
 
   </main>

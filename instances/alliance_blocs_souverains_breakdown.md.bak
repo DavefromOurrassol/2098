@@ -4,6 +4,11 @@ type: instance
 slug: alliance_blocs_souverains_breakdown
 entite: alliance_blocs_souverains
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 
 type_dans_scenario: institution
 

@@ -1,0 +1,33 @@
+############################################################
+  SCAN GÉOGRAPHIE COMPLET — 1 étape(s) (sélection partielle)
+############################################################
+
+▶▶▶ Étape 1/1 — check_patron_spatial_coherence.py
+============================================================
+  Cohérence patron spatial — geographie/{scenario}.md vs patrons_spatiaux.py
+============================================================
+
+=== fortress_world ===
+  · 21 zone(s) évaluable(s) -- résultat en cache, aucun appel LLM
+  ⚠ amazonie_pacte_vert -- Décrit comme un 'territoire autonome' précaire négociant avec des blocs, ce qui suggère une neutralité ou une zone intermédiaire non conforme au patron (ni enclave protégée ni hors-forteresse dégradée)
+  ⚠ espace_nordique_arctique -- Décrit comme une 'puissance de transit' privée et armée, ni clairement un bloc militarisé ni une zone abandonnée, ce qui contredit la logique binaire du patron
+  ⚠ singapour_megapole -- Mention d'une 'neutralité armée' et d'un hub pour les blocs dominants, ce qui évoque une zone intermédiaire non alignée sur le patron spatial
+  ⚠ tuvalu_refugies_climatiques -- Décrit comme un 'refuge climatique sous protection onusienne résiduelle', ce qui suggère une zone neutre ou humanitaire non conforme à la logique de fragmentation extrême
+
+  · 4 zone(s) suspecte(s) pas encore vérifiée(s) comme suivie(s). Relancer avec --write-chantiers pour les ajouter à chantiers_geographie.yaml :
+      - 'amazonie_pacte_vert' (fortress_world)
+      - 'espace_nordique_arctique' (fortress_world)
+      - 'singapour_megapole' (fortress_world)
+      - 'tuvalu_refugies_climatiques' (fortress_world)
+
+============================================================
+  Terminé — 4 zone(s) suspecte(s) active(s) (avertissement, aucune modification effectuée).
+============================================================
+
+
+############################################################
+  RÉSUMÉ CONSOLIDÉ
+############################################################
+  [check_patron_spatial_coherence.py]
+    Terminé — 4 zone(s) suspecte(s) active(s) (avertissement, aucune modification effectuée).
+  · check_patron_spatial_coherence.py a pu servir des résultats en cache (relancer avec --no-cache-patron-spatial pour forcer un nouvel appel LLM)

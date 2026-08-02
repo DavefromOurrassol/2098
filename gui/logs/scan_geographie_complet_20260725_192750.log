@@ -1,0 +1,24 @@
+############################################################
+  SCAN GÉOGRAPHIE COMPLET — 1 étape(s) (sélection partielle)
+############################################################
+
+▶▶▶ Étape 1/1 — check_type_entite_coherence.py
+============================================================
+  Cohérence type_entite — geographie/{scenario}.md
+============================================================
+
+=== breakdown ===
+  ✓ Aucune entrée sans type_entite
+
+============================================================
+  Terminé — aperçu affiché (relancer avec --apply pour corriger).
+============================================================
+
+
+############################################################
+  RÉSUMÉ CONSOLIDÉ
+############################################################
+  [check_type_entite_coherence.py]
+    Terminé — aperçu affiché (relancer avec --apply pour corriger).
+
+  · check_type_entite_coherence.py lancé sans --apply-type-entite (aperçu seul, rien corrigé)

@@ -829,12 +829,6 @@ zones:
   - entite: Turkménistan
     type_entite: pays
     portion: null
-  - entite: Tadjikistan
-    type_entite: pays
-    portion: null
-  - entite: Afghanistan
-    type_entite: pays
-    portion: null
   - entite: Palestine
     type_entite: pays
     portion: null
@@ -842,12 +836,6 @@ zones:
     type_entite: pays
     portion: null
   - entite: Somalie
-    type_entite: pays
-    portion: null
-  - entite: Italie
-    type_entite: pays
-    portion: null
-  - entite: Kirghizistan
     type_entite: pays
     portion: null
   description: Ensemble des espaces hors-cadre institutionnel effectif — zones tampons
@@ -2074,7 +2062,7 @@ zones:
   nom: Zones Tampons Climatiques Européennes
   niveau: 2
   type: zone_sinistree
-  parent: zones_grises_globales
+  parent: europe_occidentale_reconstructee
   origine_reelle:
   - entite: France
     type_entite: pays

@@ -4,6 +4,10 @@ type: instance
 slug: arctic_passage_authority_breakdown
 entite: arctic_passage_authority
 scenario: breakdown
+localisation:
+  zone: autorite_passage_arctique
+  lieu: Tromsø, siège de l'Autorité du Passage Arctique
+  type_lieu: infrastructure
 
 type_dans_scenario: institution
 
