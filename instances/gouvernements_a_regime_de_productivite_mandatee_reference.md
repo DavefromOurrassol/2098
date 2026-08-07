@@ -31,8 +31,27 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agrisynth_reference
+- coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference
+- coalition_pour_la_souverainete_numerique_nationale_reference
+- consortium_augmentwork_reference
+- consortium_des_plateformes_ia_centralisees_anti_deliberation_reference
+- consortiums_prives_de_gestion_des_donnees_critiques_reference
+- directive_kontinuum_reference
+- etats_a_tendance_centraliste_numerique_reference
+- lobbies_agro_industriels_a_haute_consommation_d_eau_reference
+- neuroharmonics_reference
+- operateurs_de_zones_economiques_speciales_periurbaines_reference
+- plateformes_d_optimisation_territoriale_par_ia_reference
+oppositions:
+- collectif_nuit_jaune_reference
+- collectifs_academiques_independants_reference
+- consortium_africain_de_biotechnologies_sociales_reference
+- federation_des_cliniques_autonomes_reference
+- internationale_travailleurs_augmentes_reference
+- mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
+- reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -98,6 +117,30 @@ La contradiction centrale de ces régimes tient à leur légitimité paradoxale 
 - [[gouvernance_institutions]]
 - [[systemes_productifs_travail]]
 - [[valeurs_culture_tempo_sociale]]
+
+
+## Relations
+**Alliés :**
+- [[agrisynth_reference]]
+- [[coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference]]
+- [[coalition_pour_la_souverainete_numerique_nationale_reference]]
+- [[consortium_augmentwork_reference]]
+- [[consortium_des_plateformes_ia_centralisees_anti_deliberation_reference]]
+- [[consortiums_prives_de_gestion_des_donnees_critiques_reference]]
+- [[directive_kontinuum_reference]]
+- [[etats_a_tendance_centraliste_numerique_reference]]
+- [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]]
+- [[neuroharmonics_reference]]
+- [[operateurs_de_zones_economiques_speciales_periurbaines_reference]]
+- [[plateformes_d_optimisation_territoriale_par_ia_reference]]
+**Opposants :**
+- [[collectif_nuit_jaune_reference]]
+- [[collectifs_academiques_independants_reference]]
+- [[consortium_africain_de_biotechnologies_sociales_reference]]
+- [[federation_des_cliniques_autonomes_reference]]
+- [[internationale_travailleurs_augmentes_reference]]
+- [[mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference]]
+- [[reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

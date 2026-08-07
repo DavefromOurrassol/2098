@@ -4,6 +4,7 @@ type: instance
 slug: geneve_bunker_fortress_world
 entite: geneve_bunker
 scenario: fortress_world
+statut: officialise_enrichi
 localisation:
   zone: geneve_bunker
   lieu: Genève Bunker — Enclave fortifiée de l'ex-canton genevois
@@ -39,26 +40,27 @@ zone_systemique:
     - société
 
 alliances:
-    - bloc_atlantique_fortress_world
-    - complexe_orentchev_almaty_fortress_world
-    - reseaux_prives_de_securite_aux_frontieres_fortress_world
-    - oligarchies_technologiques_souveraines_d_infrastructure_de_calcul_fortress_world
-    - conseil_regulation_algorithmique_fortress_world
-    - anba_siege_atlantique_fortress_world
-    - consortiums_de_defense_orbitale_prives_fortress_world
-
+- anba_siege_atlantique_fortress_world
+- bloc_atlantique_fortress_world
+- complexe_orentchev_almaty_fortress_world
+- conseil_regulation_algorithmique_fortress_world
+- consortiums_de_defense_orbitale_prives_fortress_world
+- oligarchies_technologiques_souveraines_d_infrastructure_de_calcul_fortress_world
+- pacte_forteresses_souveraines_fortress_world
+- reseaux_prives_de_securite_aux_frontieres_fortress_world
+- siege_genevois_cars_fortress_world
 oppositions:
-    - coalitions_des_deplaces_et_apatrides_fortress_world
-    - alliance_sanitaire_des_populations_exclues_fortress_world
-    - collectifs_du_seuil_fortress_world
-    - campements_seuils_fermes_fortress_world
-    - mouvement_des_communes_du_rust_belt_fortress_world
-    - cellules_mouvement_commun_midwest_fortress_world
-    - coalition_vivant_fortress_world
-    - voix_du_dehors_fortress_world
-    - factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world
-    - communautes_deplacees_hors_quota_migratoire_fortress_world
-
+- alliance_sanitaire_des_populations_exclues_fortress_world
+- appareils_d_etat_des_blocs_fermes_fortress_world
+- campements_seuils_fermes_fortress_world
+- cellules_mouvement_commun_midwest_fortress_world
+- coalition_vivant_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- collectifs_du_seuil_fortress_world
+- communautes_deplacees_hors_quota_migratoire_fortress_world
+- factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world
+- mouvement_des_communes_du_rust_belt_fortress_world
+- voix_du_dehors_fortress_world
 type_relation_dominante: alliance stratégique
 
 annee_debut: 2041
@@ -102,12 +104,33 @@ Genève Bunker gère l'intégralité du périmètre fortifié de l'ex-canton gen
 - [[demographie_mobilite_humaine]]
 - [[systeme_economique_redistribution]]
 
-## Relations
-**Alliés** : [[bloc_atlantique_fortress_world]], [[complexe_orentchev_almaty_fortress_world]], [[reseaux_prives_de_securite_aux_frontieres_fortress_world]], [[oligarchies_technologiques_souveraines_d_infrastructure_de_calcul_fortress_world]], [[conseil_regulation_algorithmique_fortress_world]], [[anba_siege_atlantique_fortress_world]], [[consortiums_de_defense_orbitale_prives_fortress_world]]
-**Opposants** : [[coalitions_des_deplaces_et_apatrides_fortress_world]], [[alliance_sanitaire_des_populations_exclues_fortress_world]], [[collectifs_du_seuil_fortress_world]], [[campements_seuils_fermes_fortress_world]], [[mouvement_des_communes_du_rust_belt_fortress_world]], [[cellules_mouvement_commun_midwest_fortress_world]], [[coalition_vivant_fortress_world]], [[voix_du_dehors_fortress_world]], [[factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world]], [[communautes_deplacees_hors_quota_migratoire_fortress_world]]
 
 ## Description journalistique
 Depuis ses murs de béton thermorégulé et de verre blindé qui ceinturent l'ex-lac Léman, Genève Bunker administre ce que ses propres brochures appellent pudiquement une 'communauté souveraine de résilience climatique'. En pratique : 340 000 résidents accrédités vivent sous un régime de surveillance totale, leur score comportemental recalculé toutes les six heures par l'IA interne baptisée REFUGE. Aucune assemblée ne vote ici — les décisions appartiennent au Conseil des Actionnaires Résidents, dont le quorum exige une fortune nette plancher de 40 millions de DTS. À l'extérieur des murs, des dizaines de milliers de déplacés climatiques campent dans les zones tampons des Alpes dégradées, attendant un quota d'entrée qui n'arrivera jamais. Le paradoxe fondateur de Genève Bunker est devenu sa marque de fabrique : elle tire sa valeur de la catastrophe qu'elle refuse d'atténuer.
 
 ## Tensions narratives
 La tension majeure réside dans la dépendance paradoxale de Genève Bunker au chaos extérieur : si les blocs géopolitiques stabilisaient réellement les zones exposées, la demande résidentielle s'effondrerait. En interne, une faction d'actionnaires pousse à l'autarcie énergétique totale pour couper toute dépendance aux corridors de ressources négociés avec le Bloc Atlantique — ce qui déclencherait une crise diplomatique majeure. Par ailleurs, REFUGE, l'IA de surveillance interne, accumule des données comportementales sur les élites mondiales les plus puissantes : qui contrôle réellement REFUGE contrôle des leviers de chantage inédits. Enfin, les réseaux clandestins infiltrent progressivement les zones de service, posant la question de savoir si la forteresse est aussi étanche qu'elle le prétend.
+
+## Relations
+**Alliés :**
+- [[anba_siege_atlantique_fortress_world]]
+- [[bloc_atlantique_fortress_world]]
+- [[complexe_orentchev_almaty_fortress_world]]
+- [[conseil_regulation_algorithmique_fortress_world]]
+- [[consortiums_de_defense_orbitale_prives_fortress_world]]
+- [[oligarchies_technologiques_souveraines_d_infrastructure_de_calcul_fortress_world]]
+- [[pacte_forteresses_souveraines_fortress_world]]
+- [[reseaux_prives_de_securite_aux_frontieres_fortress_world]]
+- [[siege_genevois_cars_fortress_world]]
+**Opposants :**
+- [[alliance_sanitaire_des_populations_exclues_fortress_world]]
+- [[appareils_d_etat_des_blocs_fermes_fortress_world]]
+- [[campements_seuils_fermes_fortress_world]]
+- [[cellules_mouvement_commun_midwest_fortress_world]]
+- [[coalition_vivant_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[collectifs_du_seuil_fortress_world]]
+- [[communautes_deplacees_hors_quota_migratoire_fortress_world]]
+- [[factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world]]
+- [[mouvement_des_communes_du_rust_belt_fortress_world]]
+- [[voix_du_dehors_fortress_world]]

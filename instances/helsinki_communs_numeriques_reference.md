@@ -4,6 +4,7 @@ type: instance
 slug: helsinki_communs_numeriques_reference
 entite: helsinki_communs_numeriques
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: helsinki_communs_numeriques
   lieu: Helsinki, quartier de Kallio
@@ -35,32 +36,35 @@ zone_systemique:
     - infrastructure
 
 alliances:
-    - conseil_des_etats_nordiques_integres_reference
-    - reseau_meshcommons_netsolidaire_reference
-    - cooperatives_ia_open_source_reference
-    - ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference
-    - ligue_des_municipalites_peripheriques_sous_connectees_reference
-    - banque_des_communs_reference
-    - communs_numeriques_agroecologiques_reference
-    - federation_communs_territoriaux_reference
-    - reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference
-    - collectifs_academiques_independants_reference
-    - mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
-    - ong_de_preservation_patrimoniale_numerique_reference
-    - reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference
-    - reseau_mnemos_reference
-
+- banque_des_communs_reference
+- collectifs_academiques_independants_reference
+- communs_numeriques_agroecologiques_reference
+- confederation_des_megapoles_autonomes_reference
+- conseil_des_etats_nordiques_integres_reference
+- consortium_energetique_baltique_reference
+- cooperatives_ia_open_source_reference
+- federation_communs_territoriaux_reference
+- ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference
+- ligue_des_municipalites_peripheriques_sous_connectees_reference
+- mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
+- ong_de_preservation_patrimoniale_numerique_reference
+- reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference
+- reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference
+- reseau_meshcommons_netsolidaire_reference
+- reseau_mnemos_reference
+- tbilissi_noeud_mnemos_reference
+- universites_et_think_tanks_en_zones_de_liberte_academique_reference
 oppositions:
-    - consortium_des_grandes_plateformes_ia_integrees_reference
-    - consortium_des_plateformes_ia_centralisees_anti_deliberation_reference
-    - consortiums_prives_de_gestion_des_donnees_critiques_reference
-    - coalition_pour_la_souverainete_numerique_nationale_reference
-    - etats_a_tendance_centraliste_numerique_reference
-    - regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference
-    - nexcore_reference
-    - directive_kontinuum_reference
-    - bureaux_de_regulation_informationnelle_reference
-
+- bureaux_de_regulation_informationnelle_reference
+- coalition_pour_la_souverainete_numerique_nationale_reference
+- consortium_des_grandes_plateformes_ia_integrees_reference
+- consortium_des_plateformes_ia_centralisees_anti_deliberation_reference
+- consortiums_prives_de_gestion_des_donnees_critiques_reference
+- directive_kontinuum_reference
+- etats_a_tendance_centraliste_numerique_reference
+- nexcore_reference
+- regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference
+- siberie_federale_reference
 type_relation_dominante: coopération
 
 annee_debut: 2031
@@ -102,12 +106,41 @@ Maintenir et auditer des serveurs neutres hébergés sur le territoire nordique,
 - [[technologie_information]]
 - [[gouvernance_institutions]]
 
-## Relations
-**Alliés** : [[conseil_des_etats_nordiques_integres_reference]], [[reseau_meshcommons_netsolidaire_reference]], [[cooperatives_ia_open_source_reference]], [[ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference]], [[ligue_des_municipalites_peripheriques_sous_connectees_reference]], [[banque_des_communs_reference]], [[communs_numeriques_agroecologiques_reference]], [[federation_communs_territoriaux_reference]], [[reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference]], [[collectifs_academiques_independants_reference]], [[mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference]], [[ong_de_preservation_patrimoniale_numerique_reference]], [[reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference]], [[reseau_mnemos_reference]]
-**Opposants** : [[consortium_des_grandes_plateformes_ia_integrees_reference]], [[consortium_des_plateformes_ia_centralisees_anti_deliberation_reference]], [[consortiums_prives_de_gestion_des_donnees_critiques_reference]], [[coalition_pour_la_souverainete_numerique_nationale_reference]], [[etats_a_tendance_centraliste_numerique_reference]], [[regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference]], [[nexcore_reference]], [[directive_kontinuum_reference]], [[bureaux_de_regulation_informationnelle_reference]]
 
 ## Description journalistique
 Dans les sous-sols climatisés d'un immeuble coopératif de Kallio, au cœur d'Helsinki, des ingénieurs bénévoles et des permanents élus à rotation gèrent des serveurs dont dépendent des centaines d'organisations que les grandes plateformes ignorent ou prédatent. Helsinki Communs Numériques, fondée au tournant des années 2030 dans l'effervescence des premières fragmentations du net mondial, s'est imposée comme l'un des rares points neutres d'un internet de plus en plus cloisonné. Ses protocoles d'interopérabilité — librement téléchargeables, audités publiquement — sont devenus une monnaie d'échange technique pour des acteurs allant des municipalités autonomes baltiques aux ONG sahéliennes qui ne peuvent se permettre les licences des grands opérateurs. Mais cette légitimité se paie au prix d'une géographie étroite : au-delà du cercle balto-scandinave, l'organisation reste une référence morale plutôt qu'une infrastructure opérationnelle. Ses assemblées générales, tenues chaque trimestre dans une salle où les voix des délégués distants crachotent sur des connexions chiffrées, illustrent à la fois la force et la limite du modèle : tout le monde vote, mais tout le monde n'est pas là.
 
 ## Tensions narratives
 La tension centrale est existentielle : rester fidèle à la neutralité ouverte qui fonde sa légitimité, ou accepter de se territorialiser davantage pour peser face aux acteurs qui, eux, n'hésitent pas à privatiser et militariser le réseau. Des voix internes réclament une alliance plus franche avec le Conseil des États Nordiques Intégrés, au risque de perdre la confiance des ONG du Sud global qui voient dans cette proximité un nouveau colonialisme numérique bienveillant. Par ailleurs, des tentatives répétées d'infiltration — techniques et politiques — émanant d'opérateurs privés et de régulateurs eurasiatiques mettent à l'épreuve sa gouvernance collective : jusqu'où la transparence peut-elle résister à des adversaires qui, eux, opèrent dans l'opacité ? Enfin, la question de la succession et du renouvellement des compétences techniques pèse : les jeunes ingénieurs forment à ses protocoles rejoignent souvent, faute de rémunération compétitive, les plateformes qu'ils étaient censés contrebalancer.
+
+## Relations
+**Alliés :**
+- [[banque_des_communs_reference]]
+- [[collectifs_academiques_independants_reference]]
+- [[communs_numeriques_agroecologiques_reference]]
+- [[confederation_des_megapoles_autonomes_reference]]
+- [[conseil_des_etats_nordiques_integres_reference]]
+- [[consortium_energetique_baltique_reference]]
+- [[cooperatives_ia_open_source_reference]]
+- [[federation_communs_territoriaux_reference]]
+- [[ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference]]
+- [[ligue_des_municipalites_peripheriques_sous_connectees_reference]]
+- [[mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference]]
+- [[ong_de_preservation_patrimoniale_numerique_reference]]
+- [[reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference]]
+- [[reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference]]
+- [[reseau_meshcommons_netsolidaire_reference]]
+- [[reseau_mnemos_reference]]
+- [[tbilissi_noeud_mnemos_reference]]
+- [[universites_et_think_tanks_en_zones_de_liberte_academique_reference]]
+**Opposants :**
+- [[bureaux_de_regulation_informationnelle_reference]]
+- [[coalition_pour_la_souverainete_numerique_nationale_reference]]
+- [[consortium_des_grandes_plateformes_ia_integrees_reference]]
+- [[consortium_des_plateformes_ia_centralisees_anti_deliberation_reference]]
+- [[consortiums_prives_de_gestion_des_donnees_critiques_reference]]
+- [[directive_kontinuum_reference]]
+- [[etats_a_tendance_centraliste_numerique_reference]]
+- [[nexcore_reference]]
+- [[regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference]]
+- [[siberie_federale_reference]]

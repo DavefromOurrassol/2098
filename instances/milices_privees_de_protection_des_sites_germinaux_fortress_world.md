@@ -31,8 +31,29 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- amazonie_pacte_vert_fortress_world
+- biolock_agritech_fortress_world
+- complexes_militaro_industriels_de_gestion_des_ressources_fortress_world
+- etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world
+- nexus_biosyn_division_eurasienne_fortress_world
+- nexus_biosyn_division_pacifique_fortress_world
+- nexus_biosyn_fortress_world
+- operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world
+- pacte_forteresses_souveraines_fortress_world
+- vaultcorp_security_fortress_world
+oppositions:
+- alliance_sanitaire_des_populations_exclues_fortress_world
+- appareils_d_etat_des_blocs_fermes_fortress_world
+- cartels_miniers_militarises_subsahariens_fortress_world
+- coalition_vivant_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- consortium_africain_de_biotechnologies_sociales_fortress_world
+- internationale_des_semenciers_agro_pirates_fortress_world
+- les_veilleurs_du_fleuve_fortress_world
+- mouvement_commun_midwest_fortress_world
+- reseaux_d_echange_clandestin_inter_zones_fortress_world
+- rust_belt_communes_libres_fortress_world
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -96,6 +117,32 @@ Ces milices sont structurellement tiraillées entre leur loyauté contractuelle 
 - [[geopolitique_conflits]]
 - [[organisation_territoires]]
 - [[energie_ressources_critiques]]
+
+
+## Relations
+**Alliés :**
+- [[amazonie_pacte_vert_fortress_world]]
+- [[biolock_agritech_fortress_world]]
+- [[complexes_militaro_industriels_de_gestion_des_ressources_fortress_world]]
+- [[etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world]]
+- [[nexus_biosyn_division_eurasienne_fortress_world]]
+- [[nexus_biosyn_division_pacifique_fortress_world]]
+- [[nexus_biosyn_fortress_world]]
+- [[operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world]]
+- [[pacte_forteresses_souveraines_fortress_world]]
+- [[vaultcorp_security_fortress_world]]
+**Opposants :**
+- [[alliance_sanitaire_des_populations_exclues_fortress_world]]
+- [[appareils_d_etat_des_blocs_fermes_fortress_world]]
+- [[cartels_miniers_militarises_subsahariens_fortress_world]]
+- [[coalition_vivant_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[consortium_africain_de_biotechnologies_sociales_fortress_world]]
+- [[internationale_des_semenciers_agro_pirates_fortress_world]]
+- [[les_veilleurs_du_fleuve_fortress_world]]
+- [[mouvement_commun_midwest_fortress_world]]
+- [[reseaux_d_echange_clandestin_inter_zones_fortress_world]]
+- [[rust_belt_communes_libres_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

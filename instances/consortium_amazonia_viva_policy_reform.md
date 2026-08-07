@@ -4,6 +4,7 @@ type: instance
 slug: consortium_amazonia_viva_policy_reform
 entite: consortium_amazonia_viva
 scenario: policy_reform
+statut: officialise_enrichi
 localisation:
   zone: manaus_amazonia_viva
   lieu: Manaus
@@ -38,24 +39,30 @@ zone_systemique:
     - énergie
 
 alliances:
-    - autorite_mondiale_du_vivant_amv_policy_reform
-    - fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform
-    - agence_stabilisation_climatique_policy_reform
-    - mouvement_pour_la_justice_ecologique_communautaire_policy_reform
-    - trame_bioclimatique_policy_reform
-    - collectifs_de_gouvernance_communautaire_decentralisee_policy_reform
-    - coalition_des_semences_libres_policy_reform
-    - conseil_de_regulation_climatique_global_policy_reform
-
+- agence_stabilisation_climatique_policy_reform
+- agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
+- autorite_mondiale_du_vivant_amv_policy_reform
+- bloc_des_nations_a_economie_carbone_controlee_policy_reform
+- coalition_des_semences_libres_policy_reform
+- collectifs_de_gouvernance_communautaire_decentralisee_policy_reform
+- conseil_de_regulation_climatique_global_policy_reform
+- consortium_des_villes_etats_durables_policy_reform
+- fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform
+- les_veilleurs_du_fleuve_policy_reform
+- mouvement_pour_la_justice_ecologique_communautaire_policy_reform
+- observatoire_mondial_des_ressources_critiques_policy_reform
+- pacifique_sud_resilience_network_policy_reform
+- reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform
+- reseaux_de_capteurs_ia_climatiques_deployes_par_les_etats_membres_policy_reform
+- trame_bioclimatique_policy_reform
 oppositions:
-    - consortiums_agro_industriels_du_bassin_fluvial_policy_reform
-    - syndicats_d_extraction_privee_non_regules_policy_reform
-    - front_de_souverainete_biologique_eurasiatique_policy_reform
-    - consortium_de_geo_ingenierie_atmospherique_pacifique_policy_reform
-    - factions_technocratiques_de_la_marchandisation_hydrique_policy_reform
-    - front_souverainiste_des_blocs_non_signataires_policy_reform
-    - courant_autoritaire_recuperateur_du_vocabulaire_communautaire_policy_reform
-
+- consortium_de_geo_ingenierie_atmospherique_pacifique_policy_reform
+- consortiums_agro_industriels_du_bassin_fluvial_policy_reform
+- courant_autoritaire_recuperateur_du_vocabulaire_communautaire_policy_reform
+- factions_technocratiques_de_la_marchandisation_hydrique_policy_reform
+- front_de_souverainete_biologique_eurasiatique_policy_reform
+- front_souverainiste_des_blocs_non_signataires_policy_reform
+- syndicats_d_extraction_privee_non_regules_policy_reform
 type_relation_dominante: alliance stratégique
 
 annee_debut: 2041
@@ -99,12 +106,36 @@ Négocie directement les conditions d'accès au bassin amazonien avec les agence
 - [[energie_ressources_critiques]]
 - [[organisation_territoires]]
 
-## Relations
-**Alliés** : [[autorite_mondiale_du_vivant_amv_policy_reform]], [[fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform]], [[agence_stabilisation_climatique_policy_reform]], [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]], [[trame_bioclimatique_policy_reform]], [[collectifs_de_gouvernance_communautaire_decentralisee_policy_reform]], [[coalition_des_semences_libres_policy_reform]], [[conseil_de_regulation_climatique_global_policy_reform]]
-**Opposants** : [[consortiums_agro_industriels_du_bassin_fluvial_policy_reform]], [[syndicats_d_extraction_privee_non_regules_policy_reform]], [[front_de_souverainete_biologique_eurasiatique_policy_reform]], [[consortium_de_geo_ingenierie_atmospherique_pacifique_policy_reform]], [[factions_technocratiques_de_la_marchandisation_hydrique_policy_reform]], [[front_souverainiste_des_blocs_non_signataires_policy_reform]], [[courant_autoritaire_recuperateur_du_vocabulaire_communautaire_policy_reform]]
 
 ## Description journalistique
 Depuis ses bureaux à Manaus — un bâtiment en bois de termiteiro recouvert de panneaux solaires organiques et d'antennes de capteurs biosystémiques — le Consortium Amazônia Viva est aujourd'hui l'un des acteurs les plus inconfortables de l'architecture climatique globale. Inconfortable parce qu'il ne rentre dans aucune case : ni État, ni ONG, ni entreprise. Ses délégués — une mosaïque de chamanes yanomami, d'hydrologues de l'Université fédérale du Pará et de préfets riverains — se présentent désormais dans les couloirs du Conseil de Régulation Climatique Global de Genève avec des tableaux de bord biosphériques que les technocrates onusiens ne peuvent plus ignorer. Ils ont réussi ce que beaucoup croyaient impossible : transformer le fait d'habiter une forêt en argument juridique opposable. Mais leurs adversaires murmurent que la reconnaissance institutionnelle est aussi la cage la plus douce qui soit.
 
 ## Tensions narratives
 Le Consortium est pris en étau entre deux risques symétriques : être coopté par l'appareil technocratique global qui a besoin de sa légitimité de terrain pour valider ses propres décisions, ou rester trop radical et être marginalisé au profit d'interlocuteurs plus accommodants. En interne, la fracture entre les composantes scientifiques — tentées par les instruments de géo-ingénierie douce — et les gardiens autochtones — qui y voient une nouvelle forme de colonisation technique — menace régulièrement la cohésion de la coalition. La question de la monétisation des crédits carbone amazoniens par les fonds globaux soulève une bataille existentielle : est-ce une ressource de financement souverain ou la transformation d'un écosystème sacré en actif financier ? La trajectoire du Consortium dans les cinq prochaines années dira si la diplomatie écologique infra-étatique est une révolution de gouvernance ou une anomalie tolérée le temps que les grandes puissances reprennent la main.
+
+## Relations
+**Alliés :**
+- [[agence_stabilisation_climatique_policy_reform]]
+- [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]
+- [[autorite_mondiale_du_vivant_amv_policy_reform]]
+- [[bloc_des_nations_a_economie_carbone_controlee_policy_reform]]
+- [[coalition_des_semences_libres_policy_reform]]
+- [[collectifs_de_gouvernance_communautaire_decentralisee_policy_reform]]
+- [[conseil_de_regulation_climatique_global_policy_reform]]
+- [[consortium_des_villes_etats_durables_policy_reform]]
+- [[fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform]]
+- [[les_veilleurs_du_fleuve_policy_reform]]
+- [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]]
+- [[observatoire_mondial_des_ressources_critiques_policy_reform]]
+- [[pacifique_sud_resilience_network_policy_reform]]
+- [[reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform]]
+- [[reseaux_de_capteurs_ia_climatiques_deployes_par_les_etats_membres_policy_reform]]
+- [[trame_bioclimatique_policy_reform]]
+**Opposants :**
+- [[consortium_de_geo_ingenierie_atmospherique_pacifique_policy_reform]]
+- [[consortiums_agro_industriels_du_bassin_fluvial_policy_reform]]
+- [[courant_autoritaire_recuperateur_du_vocabulaire_communautaire_policy_reform]]
+- [[factions_technocratiques_de_la_marchandisation_hydrique_policy_reform]]
+- [[front_de_souverainete_biologique_eurasiatique_policy_reform]]
+- [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+- [[syndicats_d_extraction_privee_non_regules_policy_reform]]

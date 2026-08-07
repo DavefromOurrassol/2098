@@ -4,6 +4,7 @@ type: instance
 slug: bloc_eurasiatique_occidental_fortress_world
 entite: bloc_eurasiatique_occidental
 scenario: fortress_world
+statut: officialise_enrichi
 localisation:
   zone: bloc_eurasiatique_occidental
   lieu: Bloc Eurasiatique Occidental
@@ -40,46 +41,55 @@ zone_systemique:
     - société
 
 alliances:
-    - regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world
-    - alliance_blocs_souverains_fortress_world
-    - dispositifs_de_surveillance_numerique_souveraine_fortress_world
-    - bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world
-    - administrations_de_controle_frontalier_des_blocs_fortress_world
-    - agences_de_securite_interieure_des_etats_forteresses_fortress_world
-    - appareils_d_etat_des_blocs_fermes_fortress_world
-    - consortium_des_medias_d_etat_souverains_hegemonia_press_xinhua_fortifiee_eurovox_integral_fortress_world
-    - bureau_gouvernance_algorithmique_fortress_world
-    - conseil_regulation_algorithmique_fortress_world
-    - directive_kontinuum_fortress_world
-    - consortium_eurasiatique_des_ressources_fermees_fortress_world
-    - commandements_logistiques_peripheriques_du_bloc_eurasien_central_fortress_world
-    - coalition_arctique_des_blocs_continentaux_fortress_world
-    - etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world
-    - reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world
-    - tribunal_algorithmique_de_bruxelles_fortress_world
-    - systemes_de_scoring_de_productivite_corporative_fortress_world
-    - complexes_militaro_industriels_de_gestion_des_ressources_fortress_world
-    - conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world
-
+- administrations_de_controle_frontalier_des_blocs_fortress_world
+- agences_de_securite_interieure_des_etats_forteresses_fortress_world
+- alliance_blocs_souverains_fortress_world
+- appareils_d_etat_des_blocs_fermes_fortress_world
+- bureau_gouvernance_algorithmique_fortress_world
+- bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world
+- centre_controle_orbital_helios_fortress_world
+- coalition_arctique_des_blocs_continentaux_fortress_world
+- commandements_logistiques_peripheriques_du_bloc_eurasien_central_fortress_world
+- complexes_militaro_industriels_de_gestion_des_ressources_fortress_world
+- conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world
+- conseil_moscou_est_fortress_world
+- conseil_regulation_algorithmique_fortress_world
+- consortium_des_medias_d_etat_souverains_hegemonia_press_xinhua_fortifiee_eurovox_integral_fortress_world
+- consortium_eurasiatique_des_ressources_fermees_fortress_world
+- consortiums_de_defense_orbitale_prives_fortress_world
+- datacenters_conseil_eurasiatique_fortress_world
+- directive_kontinuum_fortress_world
+- dispositifs_de_surveillance_numerique_souveraine_fortress_world
+- etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world
+- nexus_biosyn_division_eurasienne_fortress_world
+- pacte_forteresses_souveraines_fortress_world
+- regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world
+- reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world
+- systemes_de_scoring_de_productivite_corporative_fortress_world
+- tbilissi_nord_zone_franche_fortress_world
+- tribunal_algorithmique_de_bruxelles_fortress_world
+- zone_usines_forteresses_eurasie_fortress_world
 oppositions:
-    - coalitions_des_deplaces_et_apatrides_fortress_world
-    - communautes_deplacees_hors_quota_migratoire_fortress_world
-    - coalition_vivant_fortress_world
-    - dissidences_internes_aux_blocs_minoritaires_fortress_world
-    - cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
-    - alliance_sanitaire_des_populations_exclues_fortress_world
-    - collectifs_du_seuil_fortress_world
-    - reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world
-    - voix_du_dehors_fortress_world
-    - collectifs_d_ingenieurs_dissidents_anti_militarisation_fortress_world
-    - archives_chiffrees_de_l_open_internet_coalition_fortress_world
-    - internationale_travailleurs_augmentes_fortress_world
-    - cliniques_de_deaugmentation_independantes_fortress_world
-    - bloc_des_nations_non_alignees_residuelles_fortress_world
-    - factions_internes_pro_autarcie_totale_fortress_world
-    - institutions_multilaterales_residuelles_fortress_world
-    - reseaux_d_echange_clandestin_inter_zones_fortress_world
-
+- alliance_sanitaire_des_populations_exclues_fortress_world
+- archives_chiffrees_de_l_open_internet_coalition_fortress_world
+- bloc_des_nations_non_alignees_residuelles_fortress_world
+- cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
+- cliniques_de_deaugmentation_independantes_fortress_world
+- coalition_vivant_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- collectifs_d_ingenieurs_dissidents_anti_militarisation_fortress_world
+- collectifs_du_seuil_fortress_world
+- communautes_deplacees_hors_quota_migratoire_fortress_world
+- dissidences_internes_aux_blocs_minoritaires_fortress_world
+- factions_djihadistes_logistiques_d_asie_centrale_fortress_world
+- factions_internes_pro_autarcie_totale_fortress_world
+- institutions_multilaterales_residuelles_fortress_world
+- internationale_travailleurs_augmentes_fortress_world
+- oligarchies_technologiques_souveraines_d_infrastructure_de_calcul_fortress_world
+- operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world
+- reseaux_d_echange_clandestin_inter_zones_fortress_world
+- reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world
+- voix_du_dehors_fortress_world
 type_relation_dominante: alliance stratégique
 
 annee_debut: 2026
@@ -125,12 +135,61 @@ Gestion des frontières climatiques et numériques hermétiques via un réseau d
 - [[valeurs_culture_tempo_sociale]]
 - [[frontieres_du_systeme]]
 
-## Relations
-**Alliés** : [[regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world]], [[alliance_blocs_souverains_fortress_world]], [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]], [[bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world]], [[administrations_de_controle_frontalier_des_blocs_fortress_world]], [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]], [[appareils_d_etat_des_blocs_fermes_fortress_world]], [[consortium_des_medias_d_etat_souverains_hegemonia_press_xinhua_fortifiee_eurovox_integral_fortress_world]], [[bureau_gouvernance_algorithmique_fortress_world]], [[conseil_regulation_algorithmique_fortress_world]], [[directive_kontinuum_fortress_world]], [[consortium_eurasiatique_des_ressources_fermees_fortress_world]], [[commandements_logistiques_peripheriques_du_bloc_eurasien_central_fortress_world]], [[coalition_arctique_des_blocs_continentaux_fortress_world]], [[etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world]], [[reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world]], [[tribunal_algorithmique_de_bruxelles_fortress_world]], [[systemes_de_scoring_de_productivite_corporative_fortress_world]], [[complexes_militaro_industriels_de_gestion_des_ressources_fortress_world]], [[conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world]]
-**Opposants** : [[coalitions_des_deplaces_et_apatrides_fortress_world]], [[communautes_deplacees_hors_quota_migratoire_fortress_world]], [[coalition_vivant_fortress_world]], [[dissidences_internes_aux_blocs_minoritaires_fortress_world]], [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]], [[alliance_sanitaire_des_populations_exclues_fortress_world]], [[collectifs_du_seuil_fortress_world]], [[reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world]], [[voix_du_dehors_fortress_world]], [[collectifs_d_ingenieurs_dissidents_anti_militarisation_fortress_world]], [[archives_chiffrees_de_l_open_internet_coalition_fortress_world]], [[internationale_travailleurs_augmentes_fortress_world]], [[cliniques_de_deaugmentation_independantes_fortress_world]], [[bloc_des_nations_non_alignees_residuelles_fortress_world]], [[factions_internes_pro_autarcie_totale_fortress_world]], [[institutions_multilaterales_residuelles_fortress_world]], [[reseaux_d_echange_clandestin_inter_zones_fortress_world]]
 
 ## Description journalistique
 Depuis Bruxelles Résiduelle, capitale administrative de ce qui fut l'Union Européenne, le Pacte de Stabilité Intérieure administre aujourd'hui la zone géopolitique la plus hermétiquement fermée de l'hémisphère nord. Ses frontières climatiques — digues algorithmiques autant que physiques — séparent 680 millions de 'résidents protégés' de plusieurs centaines de millions d'exclus qui vivent dans les zones tampons orientales et méridionales. Le Protocole Intérieur, son système de scoring biométrique et comportemental, est mis à jour chaque trimestre par le Conseil de Calcul Souverain : il détermine qui peut entrer, qui peut rester, qui doit partir. À l'intérieur, les indicateurs de qualité de vie atteignent des niveaux que le reste du monde ne connaît plus depuis des décennies. À l'extérieur, dans les couloirs de Bassora ou les campements de la Mer Noire, on appelle simplement cet espace 'le Dedans' — avec une combinaison de haine et de désir qui fait la force du mur.
 
 ## Tensions narratives
 La prospérité intérieure commence à montrer ses fissures : les factions pro-autarcie totale contestent les rares échanges économiques résiduels avec l'extérieur, tandis que des dissidences internes dénoncent le coût moral d'un système qui laisse mourir des centaines de milliers de personnes à ses portes chaque année. La Directive Kontinuum — module algorithmique de gestion des flux aux frontières orientales — connaît des défaillances croissantes exploitées par les réseaux de passeurs d'information, menaçant l'intégrité du mur numérique. Enfin, la rivalité sourde avec le Bloc Pacifique Nord sur le contrôle des routes arctiques pourrait forcer le Pacte à choisir entre son isolationnisme doctrinal et une coopération stratégique qui viendrait le contaminer — ouvrir une brèche dans le modèle même qu'il prétend incarner.
+
+## Relations
+**Alliés :**
+- [[administrations_de_controle_frontalier_des_blocs_fortress_world]]
+- [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]]
+- [[alliance_blocs_souverains_fortress_world]]
+- [[appareils_d_etat_des_blocs_fermes_fortress_world]]
+- [[bureau_gouvernance_algorithmique_fortress_world]]
+- [[bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world]]
+- [[centre_controle_orbital_helios_fortress_world]]
+- [[coalition_arctique_des_blocs_continentaux_fortress_world]]
+- [[commandements_logistiques_peripheriques_du_bloc_eurasien_central_fortress_world]]
+- [[complexes_militaro_industriels_de_gestion_des_ressources_fortress_world]]
+- [[conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world]]
+- [[conseil_moscou_est_fortress_world]]
+- [[conseil_regulation_algorithmique_fortress_world]]
+- [[consortium_des_medias_d_etat_souverains_hegemonia_press_xinhua_fortifiee_eurovox_integral_fortress_world]]
+- [[consortium_eurasiatique_des_ressources_fermees_fortress_world]]
+- [[consortiums_de_defense_orbitale_prives_fortress_world]]
+- [[datacenters_conseil_eurasiatique_fortress_world]]
+- [[directive_kontinuum_fortress_world]]
+- [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
+- [[etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world]]
+- [[nexus_biosyn_division_eurasienne_fortress_world]]
+- [[pacte_forteresses_souveraines_fortress_world]]
+- [[regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world]]
+- [[reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world]]
+- [[systemes_de_scoring_de_productivite_corporative_fortress_world]]
+- [[tbilissi_nord_zone_franche_fortress_world]]
+- [[tribunal_algorithmique_de_bruxelles_fortress_world]]
+- [[zone_usines_forteresses_eurasie_fortress_world]]
+**Opposants :**
+- [[alliance_sanitaire_des_populations_exclues_fortress_world]]
+- [[archives_chiffrees_de_l_open_internet_coalition_fortress_world]]
+- [[bloc_des_nations_non_alignees_residuelles_fortress_world]]
+- [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]]
+- [[cliniques_de_deaugmentation_independantes_fortress_world]]
+- [[coalition_vivant_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[collectifs_d_ingenieurs_dissidents_anti_militarisation_fortress_world]]
+- [[collectifs_du_seuil_fortress_world]]
+- [[communautes_deplacees_hors_quota_migratoire_fortress_world]]
+- [[dissidences_internes_aux_blocs_minoritaires_fortress_world]]
+- [[factions_djihadistes_logistiques_d_asie_centrale_fortress_world]]
+- [[factions_internes_pro_autarcie_totale_fortress_world]]
+- [[institutions_multilaterales_residuelles_fortress_world]]
+- [[internationale_travailleurs_augmentes_fortress_world]]
+- [[oligarchies_technologiques_souveraines_d_infrastructure_de_calcul_fortress_world]]
+- [[operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world]]
+- [[reseaux_d_echange_clandestin_inter_zones_fortress_world]]
+- [[reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world]]
+- [[voix_du_dehors_fortress_world]]

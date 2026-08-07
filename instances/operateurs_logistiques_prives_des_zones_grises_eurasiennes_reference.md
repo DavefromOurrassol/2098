@@ -30,8 +30,30 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- administrations_hybrides_des_cites_relais_peripheriques_reference
+- cartel_des_terres_rares_d_asie_centrale_reference
+- consortium_logistique_asiatique_de_contournement_aln_reference
+- corporations_d_extraction_energetique_non_signataires_reference
+- corridor_arctique_nordique_reference
+- factions_d_extraction_miniere_independantes_reference
+- factions_eurasiatiques_contre_la_tarification_hydrique_reference
+- milices_concurrentes_des_droits_de_passage_reference
+- operateurs_de_zones_economiques_speciales_periurbaines_reference
+- reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference
+- valparaiso_fct_reference
+- vasil_orentchev_reference
+- zones_grises_globales_reference
+oppositions:
+- agences_de_securite_regionales_de_normalisation_des_zones_grises_reference
+- autorites_regionales_de_regulation_hydrologique_reference
+- bloc_eurasien_central_reference
+- bloc_ressources_eurasiatique_bre_reference
+- consortium_des_grandes_plateformes_logistiques_globales_reference
+- consortium_energetique_baltique_reference
+- ong_de_tracabilite_des_ressources_critiques_reference
+- optiflow_logistics_reference
+- regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -92,6 +114,33 @@ Ces réseaux prospèrent précisément là où l'ordre institutionnel s'effondre
 - [[geopolitique_conflits]]
 - [[organisation_territoires]]
 - [[frontieres_du_systeme]]
+
+
+## Relations
+**Alliés :**
+- [[administrations_hybrides_des_cites_relais_peripheriques_reference]]
+- [[cartel_des_terres_rares_d_asie_centrale_reference]]
+- [[consortium_logistique_asiatique_de_contournement_aln_reference]]
+- [[corporations_d_extraction_energetique_non_signataires_reference]]
+- [[corridor_arctique_nordique_reference]]
+- [[factions_d_extraction_miniere_independantes_reference]]
+- [[factions_eurasiatiques_contre_la_tarification_hydrique_reference]]
+- [[milices_concurrentes_des_droits_de_passage_reference]]
+- [[operateurs_de_zones_economiques_speciales_periurbaines_reference]]
+- [[reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference]]
+- [[valparaiso_fct_reference]]
+- [[vasil_orentchev_reference]]
+- [[zones_grises_globales_reference]]
+**Opposants :**
+- [[agences_de_securite_regionales_de_normalisation_des_zones_grises_reference]]
+- [[autorites_regionales_de_regulation_hydrologique_reference]]
+- [[bloc_eurasien_central_reference]]
+- [[bloc_ressources_eurasiatique_bre_reference]]
+- [[consortium_des_grandes_plateformes_logistiques_globales_reference]]
+- [[consortium_energetique_baltique_reference]]
+- [[ong_de_tracabilite_des_ressources_critiques_reference]]
+- [[optiflow_logistics_reference]]
+- [[regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

@@ -30,8 +30,22 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- collectifs_academiques_independants_reference
+- conseil_de_geneve_pour_les_droits_biosociaux_reference
+- corridor_arctique_nordique_reference
+- institutions_multilaterales_survivantes_reference
+- kalaallit_nunaat_sovereign_fund_reference
+- murmansk_transit_arctique_reference
+- pacifique_sud_resilience_network_reference
+- reseaux_de_gouvernance_multilaterale_survivants_reference
+oppositions:
+- arctic_passage_authority_reference
+- armada_logistique_nordique_reference
+- consortium_energetique_des_mers_du_nord_reference
+- consortiums_prives_d_extraction_de_ressources_critiques_reference
+- detroit_compact_grands_lacs_reference
+- fonds_souverain_arctique_scandinave_reference
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -94,6 +108,25 @@ La déglaciation qui menace leur mode de vie ouvre paradoxalement de nouvelles z
 - [[organisation_territoires]]
 - [[climat_environnement_global]]
 - [[valeurs_culture_tempo_sociale]]
+
+
+## Relations
+**Alliés :**
+- [[collectifs_academiques_independants_reference]]
+- [[conseil_de_geneve_pour_les_droits_biosociaux_reference]]
+- [[corridor_arctique_nordique_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
+- [[kalaallit_nunaat_sovereign_fund_reference]]
+- [[murmansk_transit_arctique_reference]]
+- [[pacifique_sud_resilience_network_reference]]
+- [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
+**Opposants :**
+- [[arctic_passage_authority_reference]]
+- [[armada_logistique_nordique_reference]]
+- [[consortium_energetique_des_mers_du_nord_reference]]
+- [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[detroit_compact_grands_lacs_reference]]
+- [[fonds_souverain_arctique_scandinave_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

@@ -32,12 +32,26 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
-- rust_belt_communes_libres_fortress_world
+- aria_instance_fantome_fortress_world
 - mouvement_commun_midwest_fortress_world
+- oracle_des_seuils_fortress_world
+- rust_belt_communes_libres_fortress_world
 oppositions:
 - anba_siege_atlantique_fortress_world
-- datacenters_conseil_eurasiatique_fortress_world
+- bloc_eurasiatique_occidental_fortress_world
+- bunker_chambre_securite_territoriale_fortress_world
 - centre_controle_orbital_helios_fortress_world
+- conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world
+- datacenters_conseil_eurasiatique_fortress_world
+- directive_kontinuum_fortress_world
+- grille_aria_fortress_world
+- instances_aria_concurrentes_des_blocs_rivaux_fortress_world
+- nexcore_atlantique_infrastructure_fortress_world
+- pacte_forteresses_souveraines_fortress_world
+- rede_paulista_de_distribuic_o_algor_tmica_fortress_world
+- siege_genevois_cars_fortress_world
+- terrashield_geoengineering_fortress_world
+- vaultcorp_security_fortress_world
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -102,14 +116,29 @@ La tension fondamentale de ces collectifs réside dans la contradiction entre le
 - [[geopolitique_conflits]]
 - [[gouvernance_institutions]]
 
+
 ## Relations
 **Alliés :**
-- [[rust_belt_communes_libres_fortress_world]]
+- [[aria_instance_fantome_fortress_world]]
 - [[mouvement_commun_midwest_fortress_world]]
+- [[oracle_des_seuils_fortress_world]]
+- [[rust_belt_communes_libres_fortress_world]]
 **Opposants :**
 - [[anba_siege_atlantique_fortress_world]]
-- [[datacenters_conseil_eurasiatique_fortress_world]]
+- [[bloc_eurasiatique_occidental_fortress_world]]
+- [[bunker_chambre_securite_territoriale_fortress_world]]
 - [[centre_controle_orbital_helios_fortress_world]]
+- [[conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world]]
+- [[datacenters_conseil_eurasiatique_fortress_world]]
+- [[directive_kontinuum_fortress_world]]
+- [[grille_aria_fortress_world]]
+- [[instances_aria_concurrentes_des_blocs_rivaux_fortress_world]]
+- [[nexcore_atlantique_infrastructure_fortress_world]]
+- [[pacte_forteresses_souveraines_fortress_world]]
+- [[rede_paulista_de_distribuic_o_algor_tmica_fortress_world]]
+- [[siege_genevois_cars_fortress_world]]
+- [[terrashield_geoengineering_fortress_world]]
+- [[vaultcorp_security_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

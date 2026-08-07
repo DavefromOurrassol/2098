@@ -4,6 +4,7 @@ type: instance
 slug: le_temoin_eco_communalism
 entite: le_temoin
 scenario: eco_communalism
+statut: officialise_enrichi
 localisation:
   zone: polynesie_reconstituee
   lieu: Polynésie Reconstituée
@@ -30,7 +31,8 @@ zone_systemique:
   - société
   - information
 alliances:
-  - coalition_vivant_eco_communalism
+- assemblee_territoires_eco_communalism
+- coalition_vivant_eco_communalism
 oppositions: []
 type_relation_dominante: coopération
 annee_debut: 2082
@@ -72,9 +74,6 @@ de Polynésie-Reconstituée.
 - [[valeurs_culture_tempo_sociale]]
 - [[organisation_territoires]]
 
-## Relations
-**Alliés** : [[coalition_vivant_eco_communalism]]
-**Opposants** : _aucun défini_
 
 ## Description journalistique
 Mele Tupou écrit à la main dans des cahiers reliés. Ses chroniques de
@@ -84,3 +83,8 @@ l'Assemblée de Polynésie-Reconstituée sont lues par 3 000 personnes.
 ## Tensions narratives
 Débat sur ce qu'il faut documenter et ce qu'il vaut mieux garder oral.
 Tension entre préservation de la mémoire et protection de la vie privée.
+
+## Relations
+**Alliés :**
+- [[assemblee_territoires_eco_communalism]]
+- [[coalition_vivant_eco_communalism]]

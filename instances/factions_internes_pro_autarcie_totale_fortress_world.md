@@ -31,8 +31,26 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- factions_djihadistes_logistiques_d_asie_centrale_fortress_world
+oppositions:
+- agences_de_securite_interieure_des_etats_forteresses_fortress_world
+- alliance_blocs_souverains_fortress_world
+- appareils_d_etat_des_blocs_fermes_fortress_world
+- bassora_couloir_refugies_fortress_world
+- bloc_atlantique_fortress_world
+- bloc_eurasiatique_occidental_fortress_world
+- bloc_pacifique_nord_fortress_world
+- bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world
+- conseil_regulation_algorithmique_fortress_world
+- corps_des_inspecteurs_de_conformite_inter_blocs_fortress_world
+- dispositifs_de_surveillance_numerique_souveraine_fortress_world
+- etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world
+- executif_militaro_civil_du_regime_fortress_world
+- institutions_multilaterales_residuelles_fortress_world
+- oligarchies_technologiques_souveraines_d_infrastructure_de_calcul_fortress_world
+- pacte_forteresses_souveraines_fortress_world
+- regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -92,6 +110,29 @@ La contradiction centrale de ces factions réside dans leur dépendance aux rés
 - [[frontieres_du_systeme]]
 - [[gouvernance_institutions]]
 - [[systeme_economique_redistribution]]
+
+
+## Relations
+**Alliés :**
+- [[factions_djihadistes_logistiques_d_asie_centrale_fortress_world]]
+**Opposants :**
+- [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]]
+- [[alliance_blocs_souverains_fortress_world]]
+- [[appareils_d_etat_des_blocs_fermes_fortress_world]]
+- [[bassora_couloir_refugies_fortress_world]]
+- [[bloc_atlantique_fortress_world]]
+- [[bloc_eurasiatique_occidental_fortress_world]]
+- [[bloc_pacifique_nord_fortress_world]]
+- [[bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world]]
+- [[conseil_regulation_algorithmique_fortress_world]]
+- [[corps_des_inspecteurs_de_conformite_inter_blocs_fortress_world]]
+- [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
+- [[etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world]]
+- [[executif_militaro_civil_du_regime_fortress_world]]
+- [[institutions_multilaterales_residuelles_fortress_world]]
+- [[oligarchies_technologiques_souveraines_d_infrastructure_de_calcul_fortress_world]]
+- [[pacte_forteresses_souveraines_fortress_world]]
+- [[regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

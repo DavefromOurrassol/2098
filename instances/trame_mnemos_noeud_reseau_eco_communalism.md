@@ -4,6 +4,7 @@ type: instance
 slug: trame_mnemos_noeud_reseau_eco_communalism
 entite: trame_mnemos_noeud_reseau
 scenario: eco_communalism
+statut: officialise_enrichi
 localisation:
   zone: trame_mnemos_noeud_reseau
   lieu: Trame Mnemos
@@ -37,27 +38,26 @@ zone_systemique:
     - économie
 
 alliances:
-    - archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
-    - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
-    - collectifs_de_techniciens_sobres_eco_communalism
-    - guildes_des_semenciers_itinerants_eco_communalism
-    - mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism
-    - reseaux_de_bibliotheques_archives_communautaires_eco_communalism
-    - collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism
-    - cercles_de_mediation_territoriale_intercommunautaire_eco_communalism
-    - assemblees_cooperatives_regionales_eco_communalism
-    - collectifs_de_cartographie_ecologique_participative_eco_communalism
-
+- archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
+- assemblees_cooperatives_regionales_eco_communalism
+- cercles_de_mediation_territoriale_intercommunautaire_eco_communalism
+- collectifs_de_cartographie_ecologique_participative_eco_communalism
+- collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism
+- collectifs_de_techniciens_sobres_eco_communalism
+- cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
+- guildes_des_semenciers_itinerants_eco_communalism
+- mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism
+- reseaux_de_bibliotheques_archives_communautaires_eco_communalism
+- reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
 oppositions:
-    - factions_autoritaires_de_controle_du_savoir_eco_communalism
-    - courant_isolationniste_anti_circulation_de_l_information_eco_communalism
-    - consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism
-    - reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism
-    - plateformes_centralisees_de_reagregation_globale_eco_communalism
-    - communs_secessionnistes_hors_coordination_eco_communalism
-    - factions_communautaires_refusant_le_partage_narratif_exterieur_eco_communalism
-    - reseaux_de_notables_communautaires_capturistes_eco_communalism
-
+- communs_secessionnistes_hors_coordination_eco_communalism
+- consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism
+- courant_isolationniste_anti_circulation_de_l_information_eco_communalism
+- factions_autoritaires_de_controle_du_savoir_eco_communalism
+- factions_communautaires_refusant_le_partage_narratif_exterieur_eco_communalism
+- plateformes_centralisees_de_reagregation_globale_eco_communalism
+- reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism
+- reseaux_de_notables_communautaires_capturistes_eco_communalism
 type_relation_dominante: symbiose
 
 annee_debut: 2031
@@ -101,12 +101,32 @@ Chaque nœud Mnemos tient à jour un catalogue vivant des pratiques locales — 
 - [[technologie_information]]
 - [[valeurs_culture_tempo_sociale]]
 
-## Relations
-**Alliés** : [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]], [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]], [[collectifs_de_techniciens_sobres_eco_communalism]], [[guildes_des_semenciers_itinerants_eco_communalism]], [[mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism]], [[reseaux_de_bibliotheques_archives_communautaires_eco_communalism]], [[collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism]], [[cercles_de_mediation_territoriale_intercommunautaire_eco_communalism]], [[assemblees_cooperatives_regionales_eco_communalism]], [[collectifs_de_cartographie_ecologique_participative_eco_communalism]]
-**Opposants** : [[factions_autoritaires_de_controle_du_savoir_eco_communalism]], [[courant_isolationniste_anti_circulation_de_l_information_eco_communalism]], [[consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism]], [[reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism]], [[plateformes_centralisees_de_reagregation_globale_eco_communalism]], [[communs_secessionnistes_hors_coordination_eco_communalism]], [[factions_communautaires_refusant_le_partage_narratif_exterieur_eco_communalism]], [[reseaux_de_notables_communautaires_capturistes_eco_communalism]]
 
 ## Description journalistique
 Dans le grenier de l'ancienne mairie de Gardon-les-Combes, entre des boîtes de fiches cartonnées et un serveur solaire de récupération, le nœud Mnemos local reçoit chaque semaine une délégation de la commune voisine venue apprendre à bouturer les variétés de courges conservées depuis trois générations. C'est banal — et c'est exactement cela qui fait la force de la Trame. Née dans les années 2030 de la convergence de dizaines d'initiatives locales d'archivage des savoirs menacés, Trame Mnemos fonctionne sans siège, sans directeur général, sans budget centralisé : chaque nœud est souverain, chaque échange est pair-à-pair. En 2098, on compte plus de quatre cents nœuds actifs sur les territoires d'Ourrassol, reliés par des protocoles sobres de synchronisation que certains comparent à 'un mycelium informationnel'. Ce que la Trame ne dit pas toujours — et ce que ses membres débattent âprement — c'est combien cette architecture belle en théorie peut gripper quand deux nœuds défendent des pratiques incompatibles sur un même bassin versant.
 
 ## Tensions narratives
 La Trame est confrontée à un dilemme croissant : deux nœuds du bassin du Gardon pratiquent des méthodes d'agroforesterie radicalement incompatibles et refusent tout arbitrage externe, paralysant la coordination régionale depuis dix-huit mois. Parallèlement, une faction de communes fondatrices menace de fermer l'accès à leurs archives aux nouveaux nœuds qu'elles jugent 'trop perméables aux logiques marchandes'. Enfin, le Consortium des Opérateurs d'IA Propriétaires lorgne sur les métadonnées des échanges Mnemos pour en extraire des modèles prédictifs de ressources — une menace existentielle pour un réseau qui a fondé sa légitimité sur la souveraineté radicale du savoir local.
+
+## Relations
+**Alliés :**
+- [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]]
+- [[assemblees_cooperatives_regionales_eco_communalism]]
+- [[cercles_de_mediation_territoriale_intercommunautaire_eco_communalism]]
+- [[collectifs_de_cartographie_ecologique_participative_eco_communalism]]
+- [[collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism]]
+- [[collectifs_de_techniciens_sobres_eco_communalism]]
+- [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]
+- [[guildes_des_semenciers_itinerants_eco_communalism]]
+- [[mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism]]
+- [[reseaux_de_bibliotheques_archives_communautaires_eco_communalism]]
+- [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
+**Opposants :**
+- [[communs_secessionnistes_hors_coordination_eco_communalism]]
+- [[consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism]]
+- [[courant_isolationniste_anti_circulation_de_l_information_eco_communalism]]
+- [[factions_autoritaires_de_controle_du_savoir_eco_communalism]]
+- [[factions_communautaires_refusant_le_partage_narratif_exterieur_eco_communalism]]
+- [[plateformes_centralisees_de_reagregation_globale_eco_communalism]]
+- [[reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism]]
+- [[reseaux_de_notables_communautaires_capturistes_eco_communalism]]

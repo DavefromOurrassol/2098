@@ -34,8 +34,31 @@ zone_geographique:
 - régionale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- brigades_medicales_itinerantes_breakdown
+- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- communes_rust_belt_breakdown
+- enclaves_agro_communautaires_autonomes_breakdown
+- factions_paramilitaires_locales_neutralisees_breakdown
+- federation_communs_territoriaux_breakdown
+- frente_sert_o_livre_breakdown
+- massif_central_cicatrices_vertes_breakdown
+- milices_de_controle_territorial_breakdown
+- occitanie_racines_meres_breakdown
+- reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown
+- reseaux_de_soigneurs_traditionnels_breakdown
+- vallee_allier_terrafond_breakdown
+oppositions:
+- cartels_logistiques_regionaux_breakdown
+- communautes_paysannes_refugiees_breakdown
+- consortiums_energetiques_samoiedes_du_yamal_breakdown
+- consortiums_logistiques_agro_corporatifs_breakdown
+- front_humanitaire_d_urgence_non_affilie_breakdown
+- milices_contractuelles_des_anciens_etats_membres_breakdown
+- milices_d_accaparement_hydrique_breakdown
+- milices_extractivistes_du_bassin_du_congo_breakdown
+- reseau_logistique_criminel_concurrent_breakdown
+- seigneurs_de_guerre_agro_territoriaux_breakdown
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -94,6 +117,34 @@ La ligne entre protection communautaire et prédation est franchie quotidienneme
 - [[organisation_territoires]]
 - [[geopolitique_conflits]]
 - [[energie_ressources_critiques]]
+
+
+## Relations
+**Alliés :**
+- [[brigades_medicales_itinerantes_breakdown]]
+- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[communes_rust_belt_breakdown]]
+- [[enclaves_agro_communautaires_autonomes_breakdown]]
+- [[factions_paramilitaires_locales_neutralisees_breakdown]]
+- [[federation_communs_territoriaux_breakdown]]
+- [[frente_sert_o_livre_breakdown]]
+- [[massif_central_cicatrices_vertes_breakdown]]
+- [[milices_de_controle_territorial_breakdown]]
+- [[occitanie_racines_meres_breakdown]]
+- [[reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown]]
+- [[reseaux_de_soigneurs_traditionnels_breakdown]]
+- [[vallee_allier_terrafond_breakdown]]
+**Opposants :**
+- [[cartels_logistiques_regionaux_breakdown]]
+- [[communautes_paysannes_refugiees_breakdown]]
+- [[consortiums_energetiques_samoiedes_du_yamal_breakdown]]
+- [[consortiums_logistiques_agro_corporatifs_breakdown]]
+- [[front_humanitaire_d_urgence_non_affilie_breakdown]]
+- [[milices_contractuelles_des_anciens_etats_membres_breakdown]]
+- [[milices_d_accaparement_hydrique_breakdown]]
+- [[milices_extractivistes_du_bassin_du_congo_breakdown]]
+- [[reseau_logistique_criminel_concurrent_breakdown]]
+- [[seigneurs_de_guerre_agro_territoriaux_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

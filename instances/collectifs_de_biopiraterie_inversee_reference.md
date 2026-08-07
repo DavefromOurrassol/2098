@@ -33,8 +33,27 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- communs_numeriques_agroecologiques_reference
+- conseil_de_geneve_pour_les_droits_biosociaux_reference
+- consortium_africain_de_biotechnologies_sociales_reference
+- consortium_amazonia_viva_reference
+- federation_des_cliniques_autonomes_reference
+- frente_sert_o_livre_reference
+- reseaux_de_medecine_traditionnelle_augmentee_reference
+- zones_grises_globales_reference
+oppositions:
+- agrisynth_reference
+- amazonie_consortium_viva_reference
+- bloc_ressources_eurasiatique_bre_reference
+- coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference
+- consortium_des_grandes_plateformes_ia_integrees_reference
+- consortiums_mediatiques_corporatifs_reference
+- consortiums_prives_d_extraction_de_ressources_critiques_reference
+- ecosynth_global_reference
+- nexus_biosyn_reference
+- optiflow_logistics_reference
+- terrametrics_reference
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -95,6 +114,30 @@ Leur légitimité est constamment disputée : alliés objectifs des communautés
 - [[sante_biotechnologies]]
 - [[gouvernance_institutions]]
 - [[systeme_economique_redistribution]]
+
+
+## Relations
+**Alliés :**
+- [[communs_numeriques_agroecologiques_reference]]
+- [[conseil_de_geneve_pour_les_droits_biosociaux_reference]]
+- [[consortium_africain_de_biotechnologies_sociales_reference]]
+- [[consortium_amazonia_viva_reference]]
+- [[federation_des_cliniques_autonomes_reference]]
+- [[frente_sert_o_livre_reference]]
+- [[reseaux_de_medecine_traditionnelle_augmentee_reference]]
+- [[zones_grises_globales_reference]]
+**Opposants :**
+- [[agrisynth_reference]]
+- [[amazonie_consortium_viva_reference]]
+- [[bloc_ressources_eurasiatique_bre_reference]]
+- [[coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference]]
+- [[consortium_des_grandes_plateformes_ia_integrees_reference]]
+- [[consortiums_mediatiques_corporatifs_reference]]
+- [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[ecosynth_global_reference]]
+- [[nexus_biosyn_reference]]
+- [[optiflow_logistics_reference]]
+- [[terrametrics_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

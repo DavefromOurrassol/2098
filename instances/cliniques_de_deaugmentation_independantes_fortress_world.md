@@ -34,8 +34,27 @@ zone_geographique:
 - régionale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- alliance_sanitaire_des_populations_exclues_fortress_world
+- campements_seuils_fermes_fortress_world
+- cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- institutions_multilaterales_residuelles_fortress_world
+- internationale_travailleurs_augmentes_fortress_world
+- les_veilleurs_du_fleuve_fortress_world
+- marches_gris_casablanca_fortress_world
+- reseaux_d_echange_clandestin_inter_zones_fortress_world
+- reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world
+- reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world
+oppositions:
+- agences_de_securite_interieure_des_etats_forteresses_fortress_world
+- appareils_d_etat_des_blocs_fermes_fortress_world
+- bloc_eurasiatique_occidental_fortress_world
+- bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world
+- conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world
+- corps_des_inspecteurs_de_conformite_inter_blocs_fortress_world
+- neurosentry_fortress_world
+- nexus_biosyn_division_eurasienne_fortress_world
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -99,6 +118,30 @@ Ces cliniques se trouvent prises entre deux feux : les autorités des blocs qui 
 - [[sante_biotechnologies]]
 - [[organisation_territoires]]
 - [[demographie_mobilite_humaine]]
+
+
+## Relations
+**Alliés :**
+- [[alliance_sanitaire_des_populations_exclues_fortress_world]]
+- [[campements_seuils_fermes_fortress_world]]
+- [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[institutions_multilaterales_residuelles_fortress_world]]
+- [[internationale_travailleurs_augmentes_fortress_world]]
+- [[les_veilleurs_du_fleuve_fortress_world]]
+- [[marches_gris_casablanca_fortress_world]]
+- [[reseaux_d_echange_clandestin_inter_zones_fortress_world]]
+- [[reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world]]
+- [[reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world]]
+**Opposants :**
+- [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]]
+- [[appareils_d_etat_des_blocs_fermes_fortress_world]]
+- [[bloc_eurasiatique_occidental_fortress_world]]
+- [[bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world]]
+- [[conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world]]
+- [[corps_des_inspecteurs_de_conformite_inter_blocs_fortress_world]]
+- [[neurosentry_fortress_world]]
+- [[nexus_biosyn_division_eurasienne_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

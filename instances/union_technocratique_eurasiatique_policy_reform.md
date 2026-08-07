@@ -34,8 +34,26 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- conseil_regulation_ressources_policy_reform
+- consortium_de_geo_ingenierie_atmospherique_pacifique_policy_reform
+- consortium_technologique_de_planification_territoriale_policy_reform
+- consortium_technologique_des_nations_integrees_policy_reform
+- courant_autoritaire_recuperateur_du_vocabulaire_communautaire_policy_reform
+- factions_technocratiques_de_la_marchandisation_hydrique_policy_reform
+- front_techno_utopiste_de_la_decision_automatisee_policy_reform
+- grille_aria_policy_reform
+- institut_brookings_singapour_de_politique_computationnelle_policy_reform
+- reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform
+oppositions:
+- collectifs_citoyens_de_deliberation_augmentee_policy_reform
+- collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform
+- conseil_intergouvernemental_de_regulation_technologique_policy_reform
+- conseil_onu_de_gouvernance_numerique_et_ia_policy_reform
+- consortium_des_villes_etats_durables_policy_reform
+- courants_post_technocratiques_de_reconquete_democratique_policy_reform
+- front_souverainiste_des_blocs_non_signataires_policy_reform
+- institut_de_therapeutique_integree_de_nairobi_policy_reform
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -97,6 +115,29 @@ L'UTE est tiraillée entre sa propre logique d'efficacité — qui devrait la po
 - [[gouvernance_institutions]]
 - [[geopolitique_conflits]]
 - [[organisation_territoires]]
+
+
+## Relations
+**Alliés :**
+- [[conseil_regulation_ressources_policy_reform]]
+- [[consortium_de_geo_ingenierie_atmospherique_pacifique_policy_reform]]
+- [[consortium_technologique_de_planification_territoriale_policy_reform]]
+- [[consortium_technologique_des_nations_integrees_policy_reform]]
+- [[courant_autoritaire_recuperateur_du_vocabulaire_communautaire_policy_reform]]
+- [[factions_technocratiques_de_la_marchandisation_hydrique_policy_reform]]
+- [[front_techno_utopiste_de_la_decision_automatisee_policy_reform]]
+- [[grille_aria_policy_reform]]
+- [[institut_brookings_singapour_de_politique_computationnelle_policy_reform]]
+- [[reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform]]
+**Opposants :**
+- [[collectifs_citoyens_de_deliberation_augmentee_policy_reform]]
+- [[collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform]]
+- [[conseil_intergouvernemental_de_regulation_technologique_policy_reform]]
+- [[conseil_onu_de_gouvernance_numerique_et_ia_policy_reform]]
+- [[consortium_des_villes_etats_durables_policy_reform]]
+- [[courants_post_technocratiques_de_reconquete_democratique_policy_reform]]
+- [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+- [[institut_de_therapeutique_integree_de_nairobi_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

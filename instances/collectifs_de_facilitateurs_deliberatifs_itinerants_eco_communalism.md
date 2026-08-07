@@ -30,8 +30,36 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
+- assemblees_bioterritoriales_regionales_eco_communalism
+- assemblees_cooperatives_regionales_eco_communalism
+- assemblees_de_bassin_versant_eco_communalism
+- cercles_de_mediation_territoriale_intercommunautaire_eco_communalism
+- collectifs_de_cartographie_ecologique_participative_eco_communalism
+- collectifs_de_geo_observateurs_citoyens_eco_communalism
+- confederation_bassins_vivants_eco_communalism
+- cooperatives_d_habitat_regeneratif_eco_communalism
+- guildes_de_mediateurs_ecologiques_eco_communalism
+- leena_vainala_eco_communalism
+- mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism
+- reseau_assemblees_fennoscandien_eco_communalism
+- reseaux_de_bibliotheques_archives_communautaires_eco_communalism
+- reseaux_de_radio_communautaire_basse_consommation_eco_communalism
+- reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
+- trame_mnemos_noeud_reseau_eco_communalism
+- tresse_verte_corridor_eco_communalism
+- universite_nomade_eco_communalism
+oppositions:
+- cartels_de_narration_de_penurie_eco_communalism
+- communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism
+- communautes_rurales_dissidentes_anti_cooperation_regionale_eco_communalism
+- courant_isolationniste_anti_circulation_de_l_information_eco_communalism
+- directive_kontinuum_eco_communalism
+- factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism
+- factions_autoritaires_locales_identitaires_exclusionnistes_eco_communalism
+- factions_communautaires_refusant_le_partage_narratif_exterieur_eco_communalism
+- reseaux_de_notables_communautaires_capturistes_eco_communalism
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -97,6 +125,39 @@ La tension fondamentale des Collectifs réside dans la contradiction entre leur 
 - [[gouvernance_institutions]]
 - [[organisation_territoires]]
 - [[valeurs_culture_tempo_sociale]]
+
+
+## Relations
+**Alliés :**
+- [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]]
+- [[assemblees_bioterritoriales_regionales_eco_communalism]]
+- [[assemblees_cooperatives_regionales_eco_communalism]]
+- [[assemblees_de_bassin_versant_eco_communalism]]
+- [[cercles_de_mediation_territoriale_intercommunautaire_eco_communalism]]
+- [[collectifs_de_cartographie_ecologique_participative_eco_communalism]]
+- [[collectifs_de_geo_observateurs_citoyens_eco_communalism]]
+- [[confederation_bassins_vivants_eco_communalism]]
+- [[cooperatives_d_habitat_regeneratif_eco_communalism]]
+- [[guildes_de_mediateurs_ecologiques_eco_communalism]]
+- [[leena_vainala_eco_communalism]]
+- [[mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism]]
+- [[reseau_assemblees_fennoscandien_eco_communalism]]
+- [[reseaux_de_bibliotheques_archives_communautaires_eco_communalism]]
+- [[reseaux_de_radio_communautaire_basse_consommation_eco_communalism]]
+- [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
+- [[trame_mnemos_noeud_reseau_eco_communalism]]
+- [[tresse_verte_corridor_eco_communalism]]
+- [[universite_nomade_eco_communalism]]
+**Opposants :**
+- [[cartels_de_narration_de_penurie_eco_communalism]]
+- [[communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism]]
+- [[communautes_rurales_dissidentes_anti_cooperation_regionale_eco_communalism]]
+- [[courant_isolationniste_anti_circulation_de_l_information_eco_communalism]]
+- [[directive_kontinuum_eco_communalism]]
+- [[factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism]]
+- [[factions_autoritaires_locales_identitaires_exclusionnistes_eco_communalism]]
+- [[factions_communautaires_refusant_le_partage_narratif_exterieur_eco_communalism]]
+- [[reseaux_de_notables_communautaires_capturistes_eco_communalism]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

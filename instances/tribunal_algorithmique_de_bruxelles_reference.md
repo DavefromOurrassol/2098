@@ -4,6 +4,7 @@ type: instance
 slug: tribunal_algorithmique_de_bruxelles_reference
 entite: tribunal_algorithmique_de_bruxelles
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: bruxelles_nouveau
   lieu: Bruxelles — ancien Palais de Justice
@@ -34,25 +35,28 @@ zone_systemique:
     - société
 
 alliances:
-    - conseil_regulation_algorithmique_reference
-    - conseil_de_geneve_pour_les_droits_biosociaux_reference
-    - reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference
-    - collectifs_academiques_independants_reference
-    - reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference
-    - universites_et_think_tanks_en_zones_de_liberte_academique_reference
-    - mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
-    - cooperatives_ia_open_source_reference
-    - ligue_des_municipalites_peripheriques_sous_connectees_reference
-
+- bruxelles_nouveau_reference
+- bureaux_de_regulation_informationnelle_reference
+- collectifs_academiques_independants_reference
+- conseil_de_geneve_pour_les_droits_biosociaux_reference
+- conseil_regulation_algorithmique_reference
+- cooperatives_ia_open_source_reference
+- europe_occidentale_reconstructee_reference
+- ligue_des_municipalites_peripheriques_sous_connectees_reference
+- mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
+- reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference
+- reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference
+- universites_et_think_tanks_en_zones_de_liberte_academique_reference
 oppositions:
-    - consortium_des_grandes_plateformes_ia_integrees_reference
-    - consortium_des_plateformes_ia_centralisees_anti_deliberation_reference
-    - consortiums_prives_de_gestion_des_donnees_critiques_reference
-    - etats_a_tendance_centraliste_numerique_reference
-    - alliance_blocs_souverains_reference
-    - directive_kontinuum_reference
-    - plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference
-
+- alliance_blocs_souverains_reference
+- consortium_des_grandes_plateformes_ia_integrees_reference
+- consortium_des_plateformes_ia_centralisees_anti_deliberation_reference
+- consortiums_prives_de_gestion_des_donnees_critiques_reference
+- directive_kontinuum_reference
+- etats_a_tendance_centraliste_numerique_reference
+- pacte_des_souverains_reference
+- plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference
+- reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference
 type_relation_dominante: rivalité
 
 annee_debut: 2031
@@ -94,12 +98,34 @@ Instruit et tranche les recours individuels et collectifs contre des décisions 
 - [[gouvernance_institutions]]
 - [[technologie_information]]
 
-## Relations
-**Alliés** : [[conseil_regulation_algorithmique_reference]], [[conseil_de_geneve_pour_les_droits_biosociaux_reference]], [[reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference]], [[collectifs_academiques_independants_reference]], [[reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference]], [[universites_et_think_tanks_en_zones_de_liberte_academique_reference]], [[mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference]], [[cooperatives_ia_open_source_reference]], [[ligue_des_municipalites_peripheriques_sous_connectees_reference]]
-**Opposants** : [[consortium_des_grandes_plateformes_ia_integrees_reference]], [[consortium_des_plateformes_ia_centralisees_anti_deliberation_reference]], [[consortiums_prives_de_gestion_des_donnees_critiques_reference]], [[etats_a_tendance_centraliste_numerique_reference]], [[alliance_blocs_souverains_reference]], [[directive_kontinuum_reference]], [[plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference]]
 
 ## Description journalistique
 Installé dans l'ancien Palais de Justice de Bruxelles — dont la façade néoclassique contraste violemment avec les terminaux d'audit IA qui tapissent désormais ses salles d'audience — le Tribunal Algorithmique traite chaque semaine plusieurs centaines de recours venus de tout le continent. La grande majorité concerne des décisions d'allocation de ressources énergétiques ou d'accès aux soins. Ses juges — mi-magistrats humains, mi-panneaux d'analyse contradictoire — délibèrent dans un cadre procédural que les grandes plateformes ont appris à contourner avec une efficacité décourageante : délais d'explicabilité systématiquement dépassés, modèles mis à jour entre la plainte et l'audience. On dit qu'il rend la justice comme on répare un filet avec les mains — utile, mais toujours en retard sur les trous.
 
 ## Tensions narratives
 Le Tribunal est pris en étau entre son ambition normative et son impuissance opérationnelle : ses injonctions sont respectées par les petits acteurs, ignorées ou contournées par les grandes plateformes qui ont les ressources pour jouer la montre. Ses propres outils d'audit reposent sur des IA fournies par des consortiums qu'il est susceptible de juger — une contradiction structurelle que ses détracteurs exploitent. La question ouverte en 2098 est celle de son évolution : deviendra-t-il un tribunal symbolique vidé de substance, une juridiction réformée dotée de pouvoirs d'exécution réels, ou le terrain d'une bataille plus large sur qui contrôle les règles de l'IA continentale ?
+
+## Relations
+**Alliés :**
+- [[bruxelles_nouveau_reference]]
+- [[bureaux_de_regulation_informationnelle_reference]]
+- [[collectifs_academiques_independants_reference]]
+- [[conseil_de_geneve_pour_les_droits_biosociaux_reference]]
+- [[conseil_regulation_algorithmique_reference]]
+- [[cooperatives_ia_open_source_reference]]
+- [[europe_occidentale_reconstructee_reference]]
+- [[ligue_des_municipalites_peripheriques_sous_connectees_reference]]
+- [[mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference]]
+- [[reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference]]
+- [[reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference]]
+- [[universites_et_think_tanks_en_zones_de_liberte_academique_reference]]
+**Opposants :**
+- [[alliance_blocs_souverains_reference]]
+- [[consortium_des_grandes_plateformes_ia_integrees_reference]]
+- [[consortium_des_plateformes_ia_centralisees_anti_deliberation_reference]]
+- [[consortiums_prives_de_gestion_des_donnees_critiques_reference]]
+- [[directive_kontinuum_reference]]
+- [[etats_a_tendance_centraliste_numerique_reference]]
+- [[pacte_des_souverains_reference]]
+- [[plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference]]
+- [[reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference]]

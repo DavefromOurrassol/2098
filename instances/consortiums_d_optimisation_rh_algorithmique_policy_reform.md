@@ -31,8 +31,18 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- conseil_regulation_algorithmique_policy_reform
+- consortiums_prives_de_gouvernance_algorithmique_policy_reform
+- front_techno_utopiste_de_la_decision_automatisee_policy_reform
+- institut_brookings_singapour_de_politique_computationnelle_policy_reform
+- reseau_des_lobbyistes_techniques_onu_energie_policy_reform
+oppositions:
+- collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform
+- reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
+- bureau_gouvernance_algorithmique_policy_reform
+- tribunal_algorithmique_de_bruxelles_policy_reform
+- internationale_travailleurs_augmentes_policy_reform
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -95,6 +105,20 @@ La tension centrale réside dans la contradiction entre leur discours de transpa
 - [[systemes_productifs_travail]]
 - [[technologie_information]]
 - [[gouvernance_institutions]]
+
+## Relations
+**Alliés :**
+- [[conseil_regulation_algorithmique_policy_reform]]
+- [[consortiums_prives_de_gouvernance_algorithmique_policy_reform]]
+- [[front_techno_utopiste_de_la_decision_automatisee_policy_reform]]
+- [[institut_brookings_singapour_de_politique_computationnelle_policy_reform]]
+- [[reseau_des_lobbyistes_techniques_onu_energie_policy_reform]]
+**Opposants :**
+- [[collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform]]
+- [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]]
+- [[bureau_gouvernance_algorithmique_policy_reform]]
+- [[tribunal_algorithmique_de_bruxelles_policy_reform]]
+- [[internationale_travailleurs_augmentes_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

@@ -32,8 +32,29 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
+- agence_mondiale_de_modelisation_climatique_ammc_new_sustainability
+- alliance_numerique_eurasie_pacifique_new_sustainability
+- bloc_eurasien_souverainiste_new_sustainability
+- conseil_energetique_intercontinental_new_sustainability
+- conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability
+- directive_kontinuum_new_sustainability
+- factions_technocratiques_du_conseil_de_regulation_informationnelle_global_new_sustainability
+- grille_aria_new_sustainability
+- trame_bioclimatique_new_sustainability
+oppositions:
+- bloc_des_gouvernements_souverainistes_hydriques_new_sustainability
+- coalition_anti_algorithme_des_autonomies_locales_new_sustainability
+- collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability
+- collectifs_de_desobeissance_algorithmique_new_sustainability
+- commission_territoriale_ourrassol_new_sustainability
+- communautes_locales_exclues_des_corridors_new_sustainability
+- faction_conservatrice_pro_actif_strategique_new_sustainability
+- factions_internes_contestataires_du_bureau_de_moderation_new_sustainability
+- mouvement_communautaire_des_micro_grids_energetiques_new_sustainability
+- mouvement_pour_l_autodetermination_territoriale_new_sustainability
+- reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability
 type_relation_dominante: dépendance
 annee_debut: 2026
 annee_fin: null
@@ -100,6 +121,32 @@ La légitimité du Conseil est structurellement contestée : ses décisions tech
 - [[gouvernance_institutions]]
 - [[organisation_territoires]]
 - [[energie_ressources_critiques]]
+
+
+## Relations
+**Alliés :**
+- [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]]
+- [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]]
+- [[alliance_numerique_eurasie_pacifique_new_sustainability]]
+- [[bloc_eurasien_souverainiste_new_sustainability]]
+- [[conseil_energetique_intercontinental_new_sustainability]]
+- [[conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability]]
+- [[directive_kontinuum_new_sustainability]]
+- [[factions_technocratiques_du_conseil_de_regulation_informationnelle_global_new_sustainability]]
+- [[grille_aria_new_sustainability]]
+- [[trame_bioclimatique_new_sustainability]]
+**Opposants :**
+- [[bloc_des_gouvernements_souverainistes_hydriques_new_sustainability]]
+- [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]]
+- [[collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability]]
+- [[collectifs_de_desobeissance_algorithmique_new_sustainability]]
+- [[commission_territoriale_ourrassol_new_sustainability]]
+- [[communautes_locales_exclues_des_corridors_new_sustainability]]
+- [[faction_conservatrice_pro_actif_strategique_new_sustainability]]
+- [[factions_internes_contestataires_du_bureau_de_moderation_new_sustainability]]
+- [[mouvement_communautaire_des_micro_grids_energetiques_new_sustainability]]
+- [[mouvement_pour_l_autodetermination_territoriale_new_sustainability]]
+- [[reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

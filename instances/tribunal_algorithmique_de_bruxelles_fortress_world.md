@@ -4,6 +4,7 @@ type: instance
 slug: tribunal_algorithmique_de_bruxelles_fortress_world
 entite: tribunal_algorithmique_de_bruxelles
 scenario: fortress_world
+statut: officialise_enrichi
 localisation:
   zone: bruxelles_forteresse
   lieu: Bruxelles Résiduelle
@@ -36,22 +37,24 @@ zone_systemique:
     - information
 
 alliances:
-    - cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
-    - reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world
-    - institutions_multilaterales_residuelles_fortress_world
-    - archives_diplomatiques_de_l_onu_eclat_fortress_world
-    - dissidences_internes_aux_blocs_minoritaires_fortress_world
-    - factions_traditionalistes_du_mandat_electif_fortress_world
-
+- archives_diplomatiques_de_l_onu_eclat_fortress_world
+- bloc_atlantique_fortress_world
+- bloc_eurasiatique_occidental_fortress_world
+- cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
+- dissidences_internes_aux_blocs_minoritaires_fortress_world
+- factions_traditionalistes_du_mandat_electif_fortress_world
+- institutions_multilaterales_residuelles_fortress_world
+- reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world
 oppositions:
-    - conseil_regulation_algorithmique_fortress_world
-    - bureau_gouvernance_algorithmique_fortress_world
-    - dispositifs_de_surveillance_numerique_souveraine_fortress_world
-    - systemes_de_scoring_de_productivite_corporative_fortress_world
-    - appareils_d_etat_des_blocs_fermes_fortress_world
-    - oligarchies_technologiques_souveraines_d_infrastructure_de_calcul_fortress_world
-    - executif_militaro_civil_du_regime_fortress_world
-
+- appareils_d_etat_des_blocs_fermes_fortress_world
+- bunker_chambre_securite_territoriale_fortress_world
+- bureau_gouvernance_algorithmique_fortress_world
+- bureau_territoires_residuels_fortress_world
+- conseil_regulation_algorithmique_fortress_world
+- dispositifs_de_surveillance_numerique_souveraine_fortress_world
+- executif_militaro_civil_du_regime_fortress_world
+- oligarchies_technologiques_souveraines_d_infrastructure_de_calcul_fortress_world
+- systemes_de_scoring_de_productivite_corporative_fortress_world
 type_relation_dominante: conflit
 
 annee_debut: 2031
@@ -93,12 +96,30 @@ La Chambre instruit les recours individuels et collectifs contre les décisions 
 - [[gouvernance_institutions]]
 - [[technologie_information]]
 
-## Relations
-**Alliés** : [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]], [[reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world]], [[institutions_multilaterales_residuelles_fortress_world]], [[archives_diplomatiques_de_l_onu_eclat_fortress_world]], [[dissidences_internes_aux_blocs_minoritaires_fortress_world]], [[factions_traditionalistes_du_mandat_electif_fortress_world]]
-**Opposants** : [[conseil_regulation_algorithmique_fortress_world]], [[bureau_gouvernance_algorithmique_fortress_world]], [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]], [[systemes_de_scoring_de_productivite_corporative_fortress_world]], [[appareils_d_etat_des_blocs_fermes_fortress_world]], [[oligarchies_technologiques_souveraines_d_infrastructure_de_calcul_fortress_world]], [[executif_militaro_civil_du_regime_fortress_world]]
 
 ## Description journalistique
 Au quatrième étage d'un immeuble administratif dont les deux premiers ont été réquisitionnés par la Directive Kontinuum, la Chambre de Recours Algorithmique de Bruxelles Résiduelle tient encore ses audiences — à huis clos, avec des robes élimées et des terminaux dont les accès réseau sont filtrés par l'Autorité Numérique du Bloc Atlantique. Ses sept juges permanents — dont deux siègent en exil virtuel depuis des nœuds chiffrés non localisés — ont rendu 1 400 avis depuis 2031, dont aucun n'a été exécuté par un État-forteresse. Pourtant, les coalitions de déplacés et les collectifs dissidents continuent de déposer des dossiers : non pour obtenir justice, mais pour faire exister un acte de refus dans un registre documenté. La Chambre est devenue moins un tribunal qu'une archive vivante de l'injustice algorithmique — une mémoire que les blocs n'ont pas encore jugé utile d'éteindre tout à fait.
 
 ## Tensions narratives
 La Chambre oscille entre la tentation de se dissoudre dans la clandestinité pour survivre et celle de provoquer une confrontation ouverte avec le Conseil de Calcul Souverain pour forcer une reconnaissance — même hostile. Certains de ses juges sont soupçonnés d'être infiltrés par les factions dissidentes du Consortium Helios ou par les réseaux de passeurs d'information, ce qui fragilise sa crédibilité de neutralité. La question la plus explosive est celle-ci : si la Chambre accepte de juger les algorithmes du Bloc Atlantique avec des outils juridiques pré-forteresse, est-elle encore un tribunal — ou déjà un acte de résistance politique déguisé en procédure ?
+
+## Relations
+**Alliés :**
+- [[archives_diplomatiques_de_l_onu_eclat_fortress_world]]
+- [[bloc_atlantique_fortress_world]]
+- [[bloc_eurasiatique_occidental_fortress_world]]
+- [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]]
+- [[dissidences_internes_aux_blocs_minoritaires_fortress_world]]
+- [[factions_traditionalistes_du_mandat_electif_fortress_world]]
+- [[institutions_multilaterales_residuelles_fortress_world]]
+- [[reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world]]
+**Opposants :**
+- [[appareils_d_etat_des_blocs_fermes_fortress_world]]
+- [[bunker_chambre_securite_territoriale_fortress_world]]
+- [[bureau_gouvernance_algorithmique_fortress_world]]
+- [[bureau_territoires_residuels_fortress_world]]
+- [[conseil_regulation_algorithmique_fortress_world]]
+- [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
+- [[executif_militaro_civil_du_regime_fortress_world]]
+- [[oligarchies_technologiques_souveraines_d_infrastructure_de_calcul_fortress_world]]
+- [[systemes_de_scoring_de_productivite_corporative_fortress_world]]

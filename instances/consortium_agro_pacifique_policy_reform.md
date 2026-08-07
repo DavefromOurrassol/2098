@@ -31,8 +31,20 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
+- conseil_regulation_ressources_policy_reform
+- consortium_technologique_de_planification_territoriale_policy_reform
+- consortium_technologique_des_nations_integrees_policy_reform
+- consortiums_agro_industriels_du_bassin_fluvial_policy_reform
+- fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform
+- nexus_biosyn_policy_reform
+oppositions:
+- coalition_des_semences_libres_policy_reform
+- collectifs_de_biohackers_agro_communautaires_policy_reform
+- front_des_autonomies_territoriales_radicales_policy_reform
+- front_souverainiste_des_blocs_non_signataires_policy_reform
+- mouvement_pour_la_souverainete_territoriale_absolue_policy_reform
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -96,6 +108,23 @@ Le Consortium est tiraillé entre sa dépendance aux cadres institutionnels tech
 - [[systemes_productifs_travail]]
 - [[organisation_territoires]]
 - [[gouvernance_institutions]]
+
+
+## Relations
+**Alliés :**
+- [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]
+- [[conseil_regulation_ressources_policy_reform]]
+- [[consortium_technologique_de_planification_territoriale_policy_reform]]
+- [[consortium_technologique_des_nations_integrees_policy_reform]]
+- [[consortiums_agro_industriels_du_bassin_fluvial_policy_reform]]
+- [[fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform]]
+- [[nexus_biosyn_policy_reform]]
+**Opposants :**
+- [[coalition_des_semences_libres_policy_reform]]
+- [[collectifs_de_biohackers_agro_communautaires_policy_reform]]
+- [[front_des_autonomies_territoriales_radicales_policy_reform]]
+- [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+- [[mouvement_pour_la_souverainete_territoriale_absolue_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

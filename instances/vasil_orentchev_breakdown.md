@@ -4,6 +4,7 @@ type: instance
 slug: vasil_orentchev_breakdown
 entite: vasil_orentchev
 scenario: breakdown
+statut: officialise_enrichi
 localisation:
   zone: arc_eurasien_central
   lieu: Arc eurasien central (corridors de l'ancienne Géorgie aux plaines kazakhes, corridor Oural-Caspien)

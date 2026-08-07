@@ -4,6 +4,7 @@ type: instance
 slug: oracle_des_seuils_new_sustainability
 entite: oracle_des_seuils
 scenario: new_sustainability
+statut: officialise_enrichi
 localisation:
   zone: null
   lieu: null
@@ -38,24 +39,23 @@ zone_systemique:
     - énergie
 
 alliances:
-    - bureau_gouvernance_algorithmique_new_sustainability
-    - agence_mondiale_de_modelisation_climatique_ammc_new_sustainability
-    - conseil_regulation_algorithmique_new_sustainability
-    - consortium_des_ia_climatiques_new_sustainability
-    - parlement_deliberatif_mondial_new_sustainability
-    - conseil_de_regulation_cognitive_de_l_onu_new_sustainability
-    - consortium_d_interoperabilite_ia_humain_new_sustainability
-    - agence_stabilisation_climatique_new_sustainability
-
+- agence_mondiale_de_modelisation_climatique_ammc_new_sustainability
+- agence_stabilisation_climatique_new_sustainability
+- bureau_gouvernance_algorithmique_new_sustainability
+- conseil_de_regulation_cognitive_de_l_onu_new_sustainability
+- conseil_regulation_algorithmique_new_sustainability
+- consortium_d_interoperabilite_ia_humain_new_sustainability
+- consortium_des_ia_climatiques_new_sustainability
+- directive_kontinuum_new_sustainability
+- parlement_deliberatif_mondial_new_sustainability
 oppositions:
-    - collectifs_de_desobeissance_algorithmique_new_sustainability
-    - factions_internes_pro_opacite_des_parametres_new_sustainability
-    - factions_technocratiques_de_la_delegation_ia_totale_new_sustainability
-    - coalition_anti_algorithme_des_autonomies_locales_new_sustainability
-    - etats_souverainistes_anti_reseau_new_sustainability
-    - enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability
-    - reseaux_d_information_souverainistes_fermes_new_sustainability
-
+- coalition_anti_algorithme_des_autonomies_locales_new_sustainability
+- collectifs_de_desobeissance_algorithmique_new_sustainability
+- enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability
+- etats_souverainistes_anti_reseau_new_sustainability
+- factions_internes_pro_opacite_des_parametres_new_sustainability
+- factions_technocratiques_de_la_delegation_ia_totale_new_sustainability
+- reseaux_d_information_souverainistes_fermes_new_sustainability
 type_relation_dominante: symbiose
 
 annee_debut: 2031
@@ -99,12 +99,29 @@ Seuil produit des rapports de seuil probabilistes multi-scalaires diffusés aux 
 - [[climat_environnement_global]]
 - [[energie_ressources_critiques]]
 
-## Relations
-**Alliés** : [[bureau_gouvernance_algorithmique_new_sustainability]], [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]], [[conseil_regulation_algorithmique_new_sustainability]], [[consortium_des_ia_climatiques_new_sustainability]], [[parlement_deliberatif_mondial_new_sustainability]], [[conseil_de_regulation_cognitive_de_l_onu_new_sustainability]], [[consortium_d_interoperabilite_ia_humain_new_sustainability]], [[agence_stabilisation_climatique_new_sustainability]]
-**Opposants** : [[collectifs_de_desobeissance_algorithmique_new_sustainability]], [[factions_internes_pro_opacite_des_parametres_new_sustainability]], [[factions_technocratiques_de_la_delegation_ia_totale_new_sustainability]], [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]], [[etats_souverainistes_anti_reseau_new_sustainability]], [[enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability]], [[reseaux_d_information_souverainistes_fermes_new_sustainability]]
 
 ## Description journalistique
 Chaque semaine, des millions de décideurs à travers la planète consultent le même tableau de bord : les bulletins de Seuil, diffusés en format standardisé depuis les serveurs distribués d'une architecture qui n'appartient à personne et coordonne tout le monde. L'IA ne donne pas d'ordres — elle dit simplement 'le système hydrique du bassin indo-gangétique atteindra son point de bascule dans 14 à 22 mois avec une probabilité de 73%', et laisse les institutions se déchirer sur ce qu'il convient de faire. Ce vide normatif assumé est à la fois sa force institutionnelle et sa malédiction politique : en refusant de prescrire, Seuil est devenu l'arbitre involontaire de toutes les urgences sans jamais porter la responsabilité d'aucune. Ses détracteurs lui reprochent d'avoir transformé la gouvernance mondiale en salle d'attente permanente du prochain signal d'alarme.
 
 ## Tensions narratives
 La tension centrale de Seuil réside dans l'écart croissant entre son omniscience relative et son impuissance normative absolue : il sait, mais ne peut pas décider, et cette posture génère une frustration institutionnelle croissante. Une faction au sein du bureau de gouvernance algorithmique plaide pour une 'mise à jour prescriptive' de son architecture — ce qui revient à lui confier un rôle politique que ses concepteurs ont précisément voulu lui interdire. Par ailleurs, des collectifs de désobéissance algorithmique contestent ses modèles comme instruments de légitimation technocratique : si Seuil dit que le seuil est franchi, qui a le droit de ne pas agir — et qui a le droit d'agir autrement que ce que les modèles suggèrent implicitement ? La question de savoir ce qu'on choisit de sauver quand tout ne peut pas l'être reste entière, béante, derrière chaque bulletin.
+
+## Relations
+**Alliés :**
+- [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]]
+- [[agence_stabilisation_climatique_new_sustainability]]
+- [[bureau_gouvernance_algorithmique_new_sustainability]]
+- [[conseil_de_regulation_cognitive_de_l_onu_new_sustainability]]
+- [[conseil_regulation_algorithmique_new_sustainability]]
+- [[consortium_d_interoperabilite_ia_humain_new_sustainability]]
+- [[consortium_des_ia_climatiques_new_sustainability]]
+- [[directive_kontinuum_new_sustainability]]
+- [[parlement_deliberatif_mondial_new_sustainability]]
+**Opposants :**
+- [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]]
+- [[collectifs_de_desobeissance_algorithmique_new_sustainability]]
+- [[enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability]]
+- [[etats_souverainistes_anti_reseau_new_sustainability]]
+- [[factions_internes_pro_opacite_des_parametres_new_sustainability]]
+- [[factions_technocratiques_de_la_delegation_ia_totale_new_sustainability]]
+- [[reseaux_d_information_souverainistes_fermes_new_sustainability]]

@@ -35,8 +35,21 @@ zone_geographique:
 - régionale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- factions_paramilitaires_locales_neutralisees_breakdown
+- front_humanitaire_d_urgence_non_affilie_breakdown
+- nexus_biosyn_breakdown
+- reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown
+oppositions:
+- brigades_medicales_itinerantes_breakdown
+- collectifs_de_sante_communautaire_autogeree_breakdown
+- consortium_africain_de_biotechnologies_sociales_breakdown
+- corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown
+- etats_fragmentes_nationalisant_les_stocks_breakdown
+- milices_de_controle_territorial_breakdown
+- pirates_biologiques_open_source_breakdown
+- reseau_logistique_criminel_concurrent_breakdown
 type_relation_dominante: symbiose
 annee_debut: 2026
 annee_fin: null
@@ -98,6 +111,25 @@ La tension centrale est celle du sauveteur toxique : ces réseaux soignent effec
 - [[sante_biotechnologies]]
 - [[gouvernance_institutions]]
 - [[organisation_territoires]]
+
+
+
+## Relations
+**Alliés :**
+- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[factions_paramilitaires_locales_neutralisees_breakdown]]
+- [[front_humanitaire_d_urgence_non_affilie_breakdown]]
+- [[nexus_biosyn_breakdown]]
+- [[reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown]]
+**Opposants :**
+- [[brigades_medicales_itinerantes_breakdown]]
+- [[collectifs_de_sante_communautaire_autogeree_breakdown]]
+- [[consortium_africain_de_biotechnologies_sociales_breakdown]]
+- [[corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown]]
+- [[etats_fragmentes_nationalisant_les_stocks_breakdown]]
+- [[milices_de_controle_territorial_breakdown]]
+- [[pirates_biologiques_open_source_breakdown]]
+- [[reseau_logistique_criminel_concurrent_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

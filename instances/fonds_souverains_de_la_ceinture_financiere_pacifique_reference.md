@@ -32,8 +32,16 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- amazonie_consortium_viva_reference
+- consortium_helios_reference
+- consortium_indo_pacifique_de_l_hydrogene_reference
 - singapour_est_nexcore_reference
-oppositions: []
+- singapour_est_reference
+- valparaiso_fct_reference
+oppositions:
+- bloc_eurasien_central_reference
+- bureau_zones_non_prioritaires_reference
+- pacifique_sud_archipels_flottants_reference
 type_relation_dominante: symbiose
 annee_debut: 2026
 annee_fin: null
@@ -98,9 +106,19 @@ La tension fondamentale réside dans la contradiction entre la logique de rendem
 - [[geopolitique_conflits]]
 - [[gouvernance_institutions]]
 
+
 ## Relations
 **Alliés :**
+- [[amazonie_consortium_viva_reference]]
+- [[consortium_helios_reference]]
+- [[consortium_indo_pacifique_de_l_hydrogene_reference]]
 - [[singapour_est_nexcore_reference]]
+- [[singapour_est_reference]]
+- [[valparaiso_fct_reference]]
+**Opposants :**
+- [[bloc_eurasien_central_reference]]
+- [[bureau_zones_non_prioritaires_reference]]
+- [[pacifique_sud_archipels_flottants_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

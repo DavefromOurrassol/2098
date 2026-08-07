@@ -33,8 +33,30 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- bloc_ressources_eurasiatique_bre_reference
+- consortiums_d_extraction_miniere_du_bassin_congolais_reference
+- consortiums_energetiques_des_megapoles_reference
+- consortiums_prives_d_extraction_de_ressources_critiques_reference
+- lobbies_industriels_des_etats_non_signataires_reference
+- pacte_des_souverains_reference
+oppositions:
+- agence_internationale_des_energies_renouvelables_irena_2_reference
+- banque_mondiale_des_transitions_climatiques_reference
+- communs_numeriques_agroecologiques_reference
+- consortium_energetique_baltique_reference
+- consortium_energetique_des_mers_du_nord_reference
+- cooperatives_energetiques_decentralisees_reference
+- federation_des_cliniques_autonomes_reference
+- front_souverainiste_des_ressources_d_amerique_du_sud_reference
+- institutions_multilaterales_survivantes_reference
+- lyon_metropole_reference
+- ong_de_tracabilite_des_ressources_critiques_reference
+- oracle_des_seuils_reference
+- reseau_hospitalier_hybride_eurasiatique_reference
+- reseau_meshcommons_netsolidaire_reference
+- syndicats_de_travailleurs_de_la_transition_energetique_reference
+- voix_du_dehors_reference
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -102,6 +124,33 @@ La tension centrale est structurelle : ces consortiums ont besoin d'une stabilit
 - [[energie_ressources_critiques]]
 - [[gouvernance_institutions]]
 - [[systeme_economique_redistribution]]
+
+
+## Relations
+**Alliés :**
+- [[bloc_ressources_eurasiatique_bre_reference]]
+- [[consortiums_d_extraction_miniere_du_bassin_congolais_reference]]
+- [[consortiums_energetiques_des_megapoles_reference]]
+- [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[lobbies_industriels_des_etats_non_signataires_reference]]
+- [[pacte_des_souverains_reference]]
+**Opposants :**
+- [[agence_internationale_des_energies_renouvelables_irena_2_reference]]
+- [[banque_mondiale_des_transitions_climatiques_reference]]
+- [[communs_numeriques_agroecologiques_reference]]
+- [[consortium_energetique_baltique_reference]]
+- [[consortium_energetique_des_mers_du_nord_reference]]
+- [[cooperatives_energetiques_decentralisees_reference]]
+- [[federation_des_cliniques_autonomes_reference]]
+- [[front_souverainiste_des_ressources_d_amerique_du_sud_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
+- [[lyon_metropole_reference]]
+- [[ong_de_tracabilite_des_ressources_critiques_reference]]
+- [[oracle_des_seuils_reference]]
+- [[reseau_hospitalier_hybride_eurasiatique_reference]]
+- [[reseau_meshcommons_netsolidaire_reference]]
+- [[syndicats_de_travailleurs_de_la_transition_energetique_reference]]
+- [[voix_du_dehors_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

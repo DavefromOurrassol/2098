@@ -4,6 +4,7 @@ type: instance
 slug: pacifique_sud_resilience_network_new_sustainability
 entite: pacifique_sud_resilience_network
 scenario: new_sustainability
+statut: officialise_enrichi
 localisation:
   zone: te_moana_nui_plateforme
   lieu: Te Moana Nui — Plateforme flottante entre Fidji et Samoa
@@ -37,24 +38,23 @@ zone_systemique:
     - économie
 
 alliances:
-    - parlement_deliberatif_mondial_new_sustainability
-    - agence_mondiale_de_modelisation_climatique_ammc_new_sustainability
-    - programme_onusien_de_mobilite_climatique_new_sustainability
-    - fonds_mondial_de_regeneration_ecologique_new_sustainability
-    - collectifs_de_deplaces_climatiques_non_representes_new_sustainability
-    - reseau_des_ingenieurs_climatiques_du_sud_global_new_sustainability
-    - observatoire_climatique_narratif_de_nairobi_new_sustainability
-    - agence_stabilisation_climatique_new_sustainability
-    - coalition_vivant_new_sustainability
-    - arctic_passage_authority_new_sustainability
-
+- agence_mondiale_de_modelisation_climatique_ammc_new_sustainability
+- agence_stabilisation_climatique_new_sustainability
+- arctic_passage_authority_new_sustainability
+- coalition_vivant_new_sustainability
+- collectifs_de_deplaces_climatiques_non_representes_new_sustainability
+- fonds_mondial_de_redistribution_technologique_new_sustainability
+- fonds_mondial_de_regeneration_ecologique_new_sustainability
+- observatoire_climatique_narratif_de_nairobi_new_sustainability
+- parlement_deliberatif_mondial_new_sustainability
+- programme_onusien_de_mobilite_climatique_new_sustainability
+- reseau_des_ingenieurs_climatiques_du_sud_global_new_sustainability
 oppositions:
-    - coalition_des_industries_extractives_residuelles_new_sustainability
-    - internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
-    - etats_souverainistes_anti_reseau_new_sustainability
-    - lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability
-    - faction_conservatrice_pro_actif_strategique_new_sustainability
-
+- coalition_des_industries_extractives_residuelles_new_sustainability
+- etats_souverainistes_anti_reseau_new_sustainability
+- faction_conservatrice_pro_actif_strategique_new_sustainability
+- internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
+- lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability
 type_relation_dominante: alliance stratégique
 
 annee_debut: 2047
@@ -98,12 +98,29 @@ Administre le droit maritime confédéral sur une zone économique exclusive ét
 - [[demographie_mobilite_humaine]]
 - [[organisation_territoires]]
 
-## Relations
-**Alliés** : [[parlement_deliberatif_mondial_new_sustainability]], [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]], [[programme_onusien_de_mobilite_climatique_new_sustainability]], [[fonds_mondial_de_regeneration_ecologique_new_sustainability]], [[collectifs_de_deplaces_climatiques_non_representes_new_sustainability]], [[reseau_des_ingenieurs_climatiques_du_sud_global_new_sustainability]], [[observatoire_climatique_narratif_de_nairobi_new_sustainability]], [[agence_stabilisation_climatique_new_sustainability]], [[coalition_vivant_new_sustainability]], [[arctic_passage_authority_new_sustainability]]
-**Opposants** : [[coalition_des_industries_extractives_residuelles_new_sustainability]], [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]], [[etats_souverainistes_anti_reseau_new_sustainability]], [[lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability]], [[faction_conservatrice_pro_actif_strategique_new_sustainability]]
 
 ## Description journalistique
 Depuis sa plateforme flottante baptisée Te Moana Nui — « le grand océan » en polynésien — ancrée par 3 000 mètres de fond entre Fidji et Samoa, la Confédération Maritime du Pacifique Austral siège désormais au cœur de toutes les grandes négociations climatiques de 2098. Ce que le monde appelait encore en 2040 « les nations qui disparaissent » est devenu, cinquante ans plus tard, l'une des entités politiques les plus influentes du système onusien. Leurs diplomates naviguent entre les sessions du Parlement Délibératif Mondial et les forums de l'Agence Mondiale de Modélisation Climatique avec une autorité que nul ne conteste vraiment : ils ont déjà vécu ce que les autres nations redoutent encore. La Confédération a transformé l'injustice subie en jurisprudence universelle — son modèle de souveraineté post-territoriale inspire aujourd'hui des dizaines de communautés côtières menacées sur tous les continents.
 
 ## Tensions narratives
 La Confédération est tiraillée entre son rôle de témoin moral — condition de son influence — et la tentation d'une agentivité politique pleine qui risquerait de la faire basculer dans les jeux d'alliance habituels, diluant sa singularité éthique. Une faction interne, dite des Gardiens de la Mémoire, résiste à toute intégration trop profonde dans la gouvernance technocratique mondiale, craignant que l'efficience algorithmique ne phagocyte les récits vivants des cultures englouties. Par ailleurs, la question de la transmission aux générations nées sur plateforme — qui n'ont jamais vu de terre émergée — pose une crise identitaire latente : peut-on construire une fierté nationale sur un deuil que l'on n'a pas soi-même vécu ?
+
+## Relations
+**Alliés :**
+- [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]]
+- [[agence_stabilisation_climatique_new_sustainability]]
+- [[arctic_passage_authority_new_sustainability]]
+- [[coalition_vivant_new_sustainability]]
+- [[collectifs_de_deplaces_climatiques_non_representes_new_sustainability]]
+- [[fonds_mondial_de_redistribution_technologique_new_sustainability]]
+- [[fonds_mondial_de_regeneration_ecologique_new_sustainability]]
+- [[observatoire_climatique_narratif_de_nairobi_new_sustainability]]
+- [[parlement_deliberatif_mondial_new_sustainability]]
+- [[programme_onusien_de_mobilite_climatique_new_sustainability]]
+- [[reseau_des_ingenieurs_climatiques_du_sud_global_new_sustainability]]
+**Opposants :**
+- [[coalition_des_industries_extractives_residuelles_new_sustainability]]
+- [[etats_souverainistes_anti_reseau_new_sustainability]]
+- [[faction_conservatrice_pro_actif_strategique_new_sustainability]]
+- [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]]
+- [[lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability]]

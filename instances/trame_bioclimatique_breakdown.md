@@ -4,6 +4,7 @@ type: instance
 slug: trame_bioclimatique_breakdown
 entite: trame_bioclimatique
 scenario: breakdown
+statut: officialise_enrichi
 localisation:
   zone: null
   lieu: null
@@ -34,15 +35,14 @@ zone_systemique:
     - énergie
 
 alliances:
-    - enclaves_agro_communautaires_autonomes_breakdown
-    - factions_para_etatiques_hydriques_breakdown
-    - guilde_des_techniciens_nomades_breakdown
-
+- consortium_amazonia_viva_breakdown
+- enclaves_agro_communautaires_autonomes_breakdown
+- factions_para_etatiques_hydriques_breakdown
+- guilde_des_techniciens_nomades_breakdown
 oppositions:
-    - reseau_de_recuperation_industrielle_illicite_breakdown
-    - etats_fragments_en_guerre_pour_les_stations_atmospheriques_breakdown
-    - saboteurs_des_corridors_de_transit_breakdown
-
+- etats_fragments_en_guerre_pour_les_stations_atmospheriques_breakdown
+- reseau_de_recuperation_industrielle_illicite_breakdown
+- saboteurs_des_corridors_de_transit_breakdown
 type_relation_dominante: conflit
 
 annee_debut: 2026
@@ -85,12 +85,20 @@ Certains nœuds encore opérationnels fournissent de l'eau atmosphérique capté
 - [[organisation_territoires]]
 - [[energie_ressources_critiques]]
 
-## Relations
-**Alliés** : [[enclaves_agro_communautaires_autonomes_breakdown]], [[factions_para_etatiques_hydriques_breakdown]], [[guilde_des_techniciens_nomades_breakdown]]
-**Opposants** : [[reseau_de_recuperation_industrielle_illicite_breakdown]], [[etats_fragments_en_guerre_pour_les_stations_atmospheriques_breakdown]], [[saboteurs_des_corridors_de_transit_breakdown]]
 
 ## Description journalistique
 Depuis les hauteurs du plateau central, on distingue encore les anciennes lignes de la Trame : bandes sombres de végétation dense qui découpent le paysage calciné comme des sutures sur une peau brûlée. Les habitants les appellent 'les Cicatrices Vertes' — un nom qui dit tout. Ces corridors conçus pour relier des continents ne relient plus rien ; ils sont devenus des frontières, des fortifications, des enjeux de guerre. À Kilomètre 340, le poste de captation atmosphérique tourne encore, sous la garde armée du Clan des Eaux Hautes qui fait payer l'accès en vivres ou en main-d'œuvre. À Kilomètre 580, le même équipement a été démantelé et revendu pièce à pièce. Personne ne sait combien de stations fonctionnent encore sur l'ensemble du continent. Les ingénieurs qui connaissaient le réseau global sont morts, partis ou silencieux.
 
 ## Tensions narratives
 Un réseau de techniciens nomades tente de reconnecter clandestinement plusieurs tronçons orphelins pour restaurer un minimum de cohérence hydrique régionale — mission perçue comme subversive par les factions qui tirent leur pouvoir de la fragmentation. La question de savoir si une station atmosphérique encore intacte peut être remise en service sans déclencher une guerre entre trois factions riveraines structure de nombreux conflits locaux. Enfin, des rumeurs persistent qu'un ancien centre de contrôle continental serait encore actif quelque part, gérant automatiquement des flux que personne ne comprend plus — et que le retrouver signifierait soit sauver la Trame, soit en achever le pillage.
+
+## Relations
+**Alliés :**
+- [[consortium_amazonia_viva_breakdown]]
+- [[enclaves_agro_communautaires_autonomes_breakdown]]
+- [[factions_para_etatiques_hydriques_breakdown]]
+- [[guilde_des_techniciens_nomades_breakdown]]
+**Opposants :**
+- [[etats_fragments_en_guerre_pour_les_stations_atmospheriques_breakdown]]
+- [[reseau_de_recuperation_industrielle_illicite_breakdown]]
+- [[saboteurs_des_corridors_de_transit_breakdown]]

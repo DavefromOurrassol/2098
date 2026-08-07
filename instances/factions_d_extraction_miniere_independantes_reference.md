@@ -32,8 +32,28 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- administrations_hybrides_des_cites_relais_peripheriques_reference
+- agences_de_securite_regionales_de_normalisation_des_zones_grises_reference
+- corporations_d_extraction_energetique_non_signataires_reference
+- operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference
+- reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference
+- vasil_orentchev_reference
+- zones_grises_globales_reference
+oppositions:
+- arctic_passage_authority_reference
+- blocs_signataires_du_pacte_energetique_multilateral_reference
+- cartel_des_terres_rares_d_asie_centrale_reference
+- conseil_regulation_ressources_reference
+- consortium_amazonia_viva_reference
+- consortiums_d_extraction_miniere_du_bassin_congolais_reference
+- corridor_arctique_nordique_reference
+- gouvernements_du_bloc_sahelien_autonome_reference
+- kalaallit_nunaat_sovereign_fund_reference
+- murmansk_transit_arctique_reference
+- nairobi_crrc_reference
+- ong_de_tracabilite_des_ressources_critiques_reference
+- union_africaine_resilience_reference
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -95,6 +115,32 @@ La tension centrale est celle de la dépendance honteuse : les institutions mult
 - [[energie_ressources_critiques]]
 - [[geopolitique_conflits]]
 - [[gouvernance_institutions]]
+
+
+
+## Relations
+**Alliés :**
+- [[administrations_hybrides_des_cites_relais_peripheriques_reference]]
+- [[agences_de_securite_regionales_de_normalisation_des_zones_grises_reference]]
+- [[corporations_d_extraction_energetique_non_signataires_reference]]
+- [[operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference]]
+- [[reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference]]
+- [[vasil_orentchev_reference]]
+- [[zones_grises_globales_reference]]
+**Opposants :**
+- [[arctic_passage_authority_reference]]
+- [[blocs_signataires_du_pacte_energetique_multilateral_reference]]
+- [[cartel_des_terres_rares_d_asie_centrale_reference]]
+- [[conseil_regulation_ressources_reference]]
+- [[consortium_amazonia_viva_reference]]
+- [[consortiums_d_extraction_miniere_du_bassin_congolais_reference]]
+- [[corridor_arctique_nordique_reference]]
+- [[gouvernements_du_bloc_sahelien_autonome_reference]]
+- [[kalaallit_nunaat_sovereign_fund_reference]]
+- [[murmansk_transit_arctique_reference]]
+- [[nairobi_crrc_reference]]
+- [[ong_de_tracabilite_des_ressources_critiques_reference]]
+- [[union_africaine_resilience_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

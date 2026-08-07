@@ -34,8 +34,24 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agadez_ligue_sahel_numerique_breakdown
+- amara_diallo_nkosi_breakdown
+- brigades_medicales_itinerantes_breakdown
+- collectif_des_climatologues_sans_etat_breakdown
+- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- consortium_africain_de_biotechnologies_sociales_breakdown
+- front_humanitaire_d_urgence_non_affilie_breakdown
+- lagos_interieur_mnemos_breakdown
+- ligue_des_cites_du_sahel_numerique_breakdown
+- reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown
+- reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown
+oppositions:
+- factions_para_etatiques_hydriques_breakdown
+- lagos_est_nexcore_breakdown
+- milices_d_accaparement_hydrique_breakdown
+- nexcore_breakdown
+- seigneurs_de_guerre_agro_territoriaux_breakdown
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -95,6 +111,27 @@ Le réseau est déchiré entre l'urgence de transmettre son savoir aux communaut
 - [[demographie_mobilite_humaine]]
 - [[technologie_information]]
 - [[climat_environnement_global]]
+
+
+## Relations
+**Alliés :**
+- [[agadez_ligue_sahel_numerique_breakdown]]
+- [[amara_diallo_nkosi_breakdown]]
+- [[brigades_medicales_itinerantes_breakdown]]
+- [[collectif_des_climatologues_sans_etat_breakdown]]
+- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[consortium_africain_de_biotechnologies_sociales_breakdown]]
+- [[front_humanitaire_d_urgence_non_affilie_breakdown]]
+- [[lagos_interieur_mnemos_breakdown]]
+- [[ligue_des_cites_du_sahel_numerique_breakdown]]
+- [[reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown]]
+- [[reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown]]
+**Opposants :**
+- [[factions_para_etatiques_hydriques_breakdown]]
+- [[lagos_est_nexcore_breakdown]]
+- [[milices_d_accaparement_hydrique_breakdown]]
+- [[nexcore_breakdown]]
+- [[seigneurs_de_guerre_agro_territoriaux_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

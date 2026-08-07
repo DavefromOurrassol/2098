@@ -32,8 +32,31 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
+- agence_stabilisation_climatique_new_sustainability
+- centre_institutionnel_geneve_new_sustainability
+- commission_territoriale_ourrassol_new_sustainability
+- conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability
+- conseil_regulation_ressources_new_sustainability
+- fonds_mondial_de_regeneration_ecologique_new_sustainability
+- hub_nairobi_kigali_new_sustainability
+- ligue_des_cites_du_sahel_numerique_new_sustainability
+- parlement_territoires_nairobi_new_sustainability
+- programme_onu_de_restauration_des_sols_new_sustainability
+- rede_paulista_de_distribuic_o_algor_tmica_new_sustainability
+- reseau_des_agences_climatiques_regionales_new_sustainability
+- reseau_des_ingenieurs_climatiques_du_sud_global_new_sustainability
+- reseau_global_de_cliniques_regeneratives_new_sustainability
+oppositions:
+- bloc_des_gouvernements_souverainistes_hydriques_new_sustainability
+- bloc_eurasien_souverainiste_new_sustainability
+- coalition_des_industries_extractives_residuelles_new_sustainability
+- collectifs_riverains_du_bassin_du_congo_new_sustainability
+- etats_souverainistes_anti_reseau_new_sustainability
+- lobbies_agro_industriels_du_bassin_du_congo_new_sustainability
+- lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability
+- trame_bioclimatique_new_sustainability
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -99,6 +122,34 @@ Le Réseau est tiraillé entre sa vocation de laboratoire d'expérimentation loc
 - [[organisation_territoires]]
 - [[climat_environnement_global]]
 - [[gouvernance_institutions]]
+
+
+## Relations
+**Alliés :**
+- [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]]
+- [[agence_stabilisation_climatique_new_sustainability]]
+- [[centre_institutionnel_geneve_new_sustainability]]
+- [[commission_territoriale_ourrassol_new_sustainability]]
+- [[conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability]]
+- [[conseil_regulation_ressources_new_sustainability]]
+- [[fonds_mondial_de_regeneration_ecologique_new_sustainability]]
+- [[hub_nairobi_kigali_new_sustainability]]
+- [[ligue_des_cites_du_sahel_numerique_new_sustainability]]
+- [[parlement_territoires_nairobi_new_sustainability]]
+- [[programme_onu_de_restauration_des_sols_new_sustainability]]
+- [[rede_paulista_de_distribuic_o_algor_tmica_new_sustainability]]
+- [[reseau_des_agences_climatiques_regionales_new_sustainability]]
+- [[reseau_des_ingenieurs_climatiques_du_sud_global_new_sustainability]]
+- [[reseau_global_de_cliniques_regeneratives_new_sustainability]]
+**Opposants :**
+- [[bloc_des_gouvernements_souverainistes_hydriques_new_sustainability]]
+- [[bloc_eurasien_souverainiste_new_sustainability]]
+- [[coalition_des_industries_extractives_residuelles_new_sustainability]]
+- [[collectifs_riverains_du_bassin_du_congo_new_sustainability]]
+- [[etats_souverainistes_anti_reseau_new_sustainability]]
+- [[lobbies_agro_industriels_du_bassin_du_congo_new_sustainability]]
+- [[lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability]]
+- [[trame_bioclimatique_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

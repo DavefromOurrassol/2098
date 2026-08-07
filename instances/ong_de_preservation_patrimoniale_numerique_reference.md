@@ -34,8 +34,22 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- collectifs_academiques_independants_reference
+- reseau_mnemos_reference
+- tbilissi_noeud_mnemos_reference
+- institutions_multilaterales_survivantes_reference
+- reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference
+- universites_et_think_tanks_en_zones_de_liberte_academique_reference
+- conseil_regulation_algorithmique_reference
+- helsinki_communs_numeriques_reference
+- cooperatives_ia_open_source_reference
+oppositions:
+- pacte_des_souverains_reference
+- bloc_des_souverainistes_climatiques_reference
+- bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference
+- consortiums_prives_de_gestion_des_donnees_critiques_reference
+- plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -97,6 +111,24 @@ L'organisation est prise en étau entre sa mission universaliste et les pression
 - [[technologie_information]]
 - [[valeurs_culture_tempo_sociale]]
 - [[gouvernance_institutions]]
+
+## Relations
+**Alliés :**
+- [[collectifs_academiques_independants_reference]]
+- [[reseau_mnemos_reference]]
+- [[tbilissi_noeud_mnemos_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
+- [[reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference]]
+- [[universites_et_think_tanks_en_zones_de_liberte_academique_reference]]
+- [[conseil_regulation_algorithmique_reference]]
+- [[helsinki_communs_numeriques_reference]]
+- [[cooperatives_ia_open_source_reference]]
+**Opposants :**
+- [[pacte_des_souverains_reference]]
+- [[bloc_des_souverainistes_climatiques_reference]]
+- [[bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference]]
+- [[consortiums_prives_de_gestion_des_donnees_critiques_reference]]
+- [[plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

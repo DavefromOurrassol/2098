@@ -4,6 +4,7 @@ type: instance
 slug: tbilissi_nord_zone_franche_fortress_world
 entite: tbilissi_nord_zone_franche
 scenario: fortress_world
+statut: officialise_enrichi
 localisation:
   zone: tbilissi_nord_zone_franche
   lieu: Tbilissi Nord Zone Franche — nord de Tbilissi, Géorgie
@@ -38,23 +39,22 @@ zone_systemique:
     - société
 
 alliances:
-    - operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world
-    - reseaux_prives_de_securite_aux_frontieres_fortress_world
-    - nexcore_atlantique_infrastructure_fortress_world
-    - complexe_orentchev_almaty_fortress_world
-    - bloc_eurasiatique_occidental_fortress_world
-    - systemes_de_scoring_de_productivite_corporative_fortress_world
-
+- bloc_des_nations_non_alignees_residuelles_fortress_world
+- bloc_eurasiatique_occidental_fortress_world
+- complexe_orentchev_almaty_fortress_world
+- nexcore_atlantique_infrastructure_fortress_world
+- operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world
+- reseaux_prives_de_securite_aux_frontieres_fortress_world
+- systemes_de_scoring_de_productivite_corporative_fortress_world
 oppositions:
-    - marches_gris_tbilissi_fortress_world
-    - collectifs_de_reappropriation_energetique_peripherique_fortress_world
-    - campements_seuils_fermes_fortress_world
-    - coalitions_des_deplaces_et_apatrides_fortress_world
-    - communautes_deplacees_hors_quota_migratoire_fortress_world
-    - collectifs_du_seuil_fortress_world
-    - voix_du_dehors_fortress_world
-    - corridors_gris_asie_centrale_fortress_world
-
+- campements_seuils_fermes_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- collectifs_de_reappropriation_energetique_peripherique_fortress_world
+- collectifs_du_seuil_fortress_world
+- communautes_deplacees_hors_quota_migratoire_fortress_world
+- corridors_gris_asie_centrale_fortress_world
+- marches_gris_tbilissi_fortress_world
+- voix_du_dehors_fortress_world
 type_relation_dominante: dépendance
 
 annee_debut: 2041
@@ -98,12 +98,28 @@ Le consortium gestionnaire assure le contrôle thermique de l'enceinte, la sécu
 - [[demographie_mobilite_humaine]]
 - [[energie_ressources_critiques]]
 
-## Relations
-**Alliés** : [[operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world]], [[reseaux_prives_de_securite_aux_frontieres_fortress_world]], [[nexcore_atlantique_infrastructure_fortress_world]], [[complexe_orentchev_almaty_fortress_world]], [[bloc_eurasiatique_occidental_fortress_world]], [[systemes_de_scoring_de_productivite_corporative_fortress_world]]
-**Opposants** : [[marches_gris_tbilissi_fortress_world]], [[collectifs_de_reappropriation_energetique_peripherique_fortress_world]], [[campements_seuils_fermes_fortress_world]], [[coalitions_des_deplaces_et_apatrides_fortress_world]], [[communautes_deplacees_hors_quota_migratoire_fortress_world]], [[collectifs_du_seuil_fortress_world]], [[voix_du_dehors_fortress_world]], [[corridors_gris_asie_centrale_fortress_world]]
 
 ## Description journalistique
 Vue du ciel, la Tbilissi Nord Zone Franche ressemble à une île blanche surgissant d'une mer de béton brûlé : ses murs thermiques réfléchissants tranchent avec brutalité sur les quartiers périphériques où la chaleur estivale dépasse régulièrement les 52 degrés en journée. À l'intérieur, 340 000 résidents accrédités circulent sous une canopée climatisée entretenue par des systèmes à hydrogène importés via les corridors centrasiatiques. Chaque point d'accès est un sas biométrique à double vérification : iris, thermogramme corporel, score de solvabilité contractuelle mis à jour en temps réel. Dehors, dans les zones dites de 'transition non-accréditée', les estimations officieuses des ONG fantômes parlent de 800 000 personnes sans accès à l'eau potable garantie — des travailleurs journaliers dont certains entrent chaque matin dans la Zone via des permis de labeur à 12 heures, avant d'en être expulsés au coucher du soleil comme des corps temporaires. Le consortium gestionnaire, CaucaSec Thermal Holdings, ne répond plus depuis 2091 aux demandes d'interview.
 
 ## Tensions narratives
 La Zone dépend des travailleurs périphériques pour maintenir ses infrastructures, mais leur présence temporaire crée des vecteurs d'infiltration que le consortium peine à contrôler : les Marches Gris de Tbilissi opèrent précisément dans ces sas de transition. Par ailleurs, la dégradation accélérée des zones extérieures commence à menacer les nappes phréatiques que la Zone exploite — une boucle de rétroaction que CaucaSec refuse d'admettre publiquement. Enfin, les factions dissidentes internes — notamment parmi les ingénieurs de maintenance sous-accrédités — alimentent des fuites vers les réseaux clandestins, fragilisant le mythe d'imperméabilité qui constitue le principal argument commercial de la forteresse.
+
+## Relations
+**Alliés :**
+- [[bloc_des_nations_non_alignees_residuelles_fortress_world]]
+- [[bloc_eurasiatique_occidental_fortress_world]]
+- [[complexe_orentchev_almaty_fortress_world]]
+- [[nexcore_atlantique_infrastructure_fortress_world]]
+- [[operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world]]
+- [[reseaux_prives_de_securite_aux_frontieres_fortress_world]]
+- [[systemes_de_scoring_de_productivite_corporative_fortress_world]]
+**Opposants :**
+- [[campements_seuils_fermes_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[collectifs_de_reappropriation_energetique_peripherique_fortress_world]]
+- [[collectifs_du_seuil_fortress_world]]
+- [[communautes_deplacees_hors_quota_migratoire_fortress_world]]
+- [[corridors_gris_asie_centrale_fortress_world]]
+- [[marches_gris_tbilissi_fortress_world]]
+- [[voix_du_dehors_fortress_world]]

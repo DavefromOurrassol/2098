@@ -1,0 +1,81 @@
+============================================================
+OURRASSOL 2098 — Correction ciblée alliances/oppositions
+============================================================
+(mode --dry-run : rien ne sera écrit)
+
+────────────────────────────────────────────────────────────
+PASSE DE RÉCIPROCITÉ — breakdown
+────────────────────────────────────────────────────────────
+
+  0 fiche(s) complétée(s) par réciprocité
+
+────────────────────────────────────────────────────────────
+PASSE DE RÉCIPROCITÉ — fortress_world
+────────────────────────────────────────────────────────────
+
+  0 fiche(s) complétée(s) par réciprocité
+
+────────────────────────────────────────────────────────────
+PASSE DE RÉCIPROCITÉ — new_sustainability
+────────────────────────────────────────────────────────────
+
+  0 fiche(s) complétée(s) par réciprocité
+
+────────────────────────────────────────────────────────────
+PASSE DE RÉCIPROCITÉ — eco_communalism
+────────────────────────────────────────────────────────────
+
+  0 fiche(s) complétée(s) par réciprocité
+
+────────────────────────────────────────────────────────────
+PASSE DE RÉCIPROCITÉ — policy_reform
+────────────────────────────────────────────────────────────
+
+  0 fiche(s) complétée(s) par réciprocité
+
+────────────────────────────────────────────────────────────
+PASSE DE RÉCIPROCITÉ — reference
+────────────────────────────────────────────────────────────
+
+  0 fiche(s) complétée(s) par réciprocité
+
+════════════════════════════════════════════════════════════
+RÉSUMÉ PASSE RÉCIPROCITÉ
+════════════════════════════════════════════════════════════
+  Fiches complétées : 0
+  Conflits détectés : 0
+
+────────────────────────────────────────────────────────────
+RÉSOLUTION AUTOMATIQUE DES CONFLITS (opposition prioritaire) — breakdown
+────────────────────────────────────────────────────────────
+  Aucun conflit détecté sur ce scénario.
+
+────────────────────────────────────────────────────────────
+RÉSOLUTION AUTOMATIQUE DES CONFLITS (opposition prioritaire) — fortress_world
+────────────────────────────────────────────────────────────
+  Aucun conflit détecté sur ce scénario.
+
+────────────────────────────────────────────────────────────
+RÉSOLUTION AUTOMATIQUE DES CONFLITS (opposition prioritaire) — new_sustainability
+────────────────────────────────────────────────────────────
+  Aucun conflit détecté sur ce scénario.
+
+────────────────────────────────────────────────────────────
+RÉSOLUTION AUTOMATIQUE DES CONFLITS (opposition prioritaire) — eco_communalism
+────────────────────────────────────────────────────────────
+  Aucun conflit détecté sur ce scénario.
+
+────────────────────────────────────────────────────────────
+RÉSOLUTION AUTOMATIQUE DES CONFLITS (opposition prioritaire) — policy_reform
+────────────────────────────────────────────────────────────
+  Aucun conflit détecté sur ce scénario.
+
+────────────────────────────────────────────────────────────
+RÉSOLUTION AUTOMATIQUE DES CONFLITS (opposition prioritaire) — reference
+────────────────────────────────────────────────────────────
+  Aucun conflit détecté sur ce scénario.
+
+════════════════════════════════════════════════════════════
+RÉSUMÉ RÉSOLUTION AUTOMATIQUE (opposition prioritaire)
+════════════════════════════════════════════════════════════
+  Conflits résolus : 0 (dry-run, rien écrit)

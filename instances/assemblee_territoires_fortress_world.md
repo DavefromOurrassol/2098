@@ -4,6 +4,7 @@ type: instance
 slug: assemblee_territoires_fortress_world
 entite: assemblee_territoires
 scenario: fortress_world
+statut: officialise_enrichi
 localisation:
   zone: zones_grises_tampons
   lieu: Genève-Bunker
@@ -30,8 +31,13 @@ zone_systemique:
   - gouvernance
   - sécurité
 alliances:
-  - conseil_regulation_algorithmique_fortress_world
-oppositions: []
+- bunker_chambre_securite_territoriale_fortress_world
+- bureau_des_territoires_residuels_fortress_world
+- bureau_territoires_residuels_fortress_world
+- conseil_regulation_algorithmique_fortress_world
+- pacte_forteresses_souveraines_fortress_world
+oppositions:
+- mouvement_commun_midwest_fortress_world
 type_relation_dominante: alliance stratégique
 annee_debut: 2050
 annee_fin:
@@ -73,9 +79,6 @@ tampons et des flux de population. Agenda dominé par la sécurité.
 - [[gouvernance_institutions]]
 - [[geopolitique_conflits]]
 
-## Relations
-**Alliés** : [[conseil_regulation_algorithmique_fortress_world]]
-**Opposants** : _aucun défini_
 
 ## Description journalistique
 La Chambre tient ses sessions dans un bunker sous Genève-Bunker. Aucun
@@ -85,3 +88,13 @@ journaliste n'y est accrédité. Elle gère 23 zones tampons actives, dont
 ## Tensions narratives
 Au moins trois zones tampons ont connu des "incidents non documentés"
 cette année. Les organisations humanitaires n'y ont plus accès depuis 2091.
+
+## Relations
+**Alliés :**
+- [[bunker_chambre_securite_territoriale_fortress_world]]
+- [[bureau_des_territoires_residuels_fortress_world]]
+- [[bureau_territoires_residuels_fortress_world]]
+- [[conseil_regulation_algorithmique_fortress_world]]
+- [[pacte_forteresses_souveraines_fortress_world]]
+**Opposants :**
+- [[mouvement_commun_midwest_fortress_world]]

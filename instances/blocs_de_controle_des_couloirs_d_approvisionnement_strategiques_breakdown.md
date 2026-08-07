@@ -36,10 +36,39 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
+alliances:
+- cartels_logistiques_regionaux_breakdown
+- consortiums_logistiques_agro_corporatifs_breakdown
+- corridor_lithium_bouches_breakdown
+- front_des_blocs_regionaux_du_recit_des_conflits_ressources_breakdown
+- milices_privees_documentees_terrain_breakdown
+- reseau_des_anciens_financeurs_devenus_censeurs_breakdown
 oppositions:
+- arctic_passage_authority_breakdown
 - autorite_passage_arctique_breakdown
+- cargo_mombasa_crrc_breakdown
+- collectif_hackers_decroissance_infrastructure_breakdown
+- communes_rust_belt_breakdown
+- communes_rust_belt_zones_libres_breakdown
+- consortium_amazonia_viva_breakdown
+- consortium_energetique_oural_caspien_breakdown
+- corridors_eurasiens_convoyage_breakdown
+- district_mourmansk_residuel_breakdown
+- enclaves_industrielles_du_corridor_oural_caspien_breakdown
+- etats_fragmentes_nationalisant_les_stocks_breakdown
+- factions_energetiques_heritieres_des_pactes_abs_breakdown
 - geneve_bunker_institutions_breakdown
+- hanse_baltique_breakdown
+- kalaallit_nunaat_sovereign_fund_breakdown
+- ligue_des_cites_du_sahel_numerique_breakdown
+- milices_de_controle_territorial_breakdown
+- mouvement_des_communes_du_rust_belt_breakdown
+- occitanie_racines_meres_breakdown
+- reseau_logistique_criminel_concurrent_breakdown
+- saboteurs_des_corridors_de_transit_breakdown
+- seigneurs_de_guerre_agro_territoriaux_breakdown
+- sfax_relais_bouches_breakdown
+- vasil_orentchev_breakdown
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -96,10 +125,41 @@ La contradiction fondamentale des Blocs est qu'en cherchant à sécuriser les re
 - [[energie_ressources_critiques]]
 - [[organisation_territoires]]
 
+
 ## Relations
+**Alliés :**
+- [[cartels_logistiques_regionaux_breakdown]]
+- [[consortiums_logistiques_agro_corporatifs_breakdown]]
+- [[corridor_lithium_bouches_breakdown]]
+- [[front_des_blocs_regionaux_du_recit_des_conflits_ressources_breakdown]]
+- [[milices_privees_documentees_terrain_breakdown]]
+- [[reseau_des_anciens_financeurs_devenus_censeurs_breakdown]]
 **Opposants :**
+- [[arctic_passage_authority_breakdown]]
 - [[autorite_passage_arctique_breakdown]]
+- [[cargo_mombasa_crrc_breakdown]]
+- [[collectif_hackers_decroissance_infrastructure_breakdown]]
+- [[communes_rust_belt_breakdown]]
+- [[communes_rust_belt_zones_libres_breakdown]]
+- [[consortium_amazonia_viva_breakdown]]
+- [[consortium_energetique_oural_caspien_breakdown]]
+- [[corridors_eurasiens_convoyage_breakdown]]
+- [[district_mourmansk_residuel_breakdown]]
+- [[enclaves_industrielles_du_corridor_oural_caspien_breakdown]]
+- [[etats_fragmentes_nationalisant_les_stocks_breakdown]]
+- [[factions_energetiques_heritieres_des_pactes_abs_breakdown]]
 - [[geneve_bunker_institutions_breakdown]]
+- [[hanse_baltique_breakdown]]
+- [[kalaallit_nunaat_sovereign_fund_breakdown]]
+- [[ligue_des_cites_du_sahel_numerique_breakdown]]
+- [[milices_de_controle_territorial_breakdown]]
+- [[mouvement_des_communes_du_rust_belt_breakdown]]
+- [[occitanie_racines_meres_breakdown]]
+- [[reseau_logistique_criminel_concurrent_breakdown]]
+- [[saboteurs_des_corridors_de_transit_breakdown]]
+- [[seigneurs_de_guerre_agro_territoriaux_breakdown]]
+- [[sfax_relais_bouches_breakdown]]
+- [[vasil_orentchev_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

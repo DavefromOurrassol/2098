@@ -31,8 +31,23 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- centre_controle_orbital_helios_fortress_world
+- coalition_arctique_des_blocs_continentaux_fortress_world
+- conseil_regulation_ressources_fortress_world
+- consortium_sino_finlandais_de_flotte_autonome_fortress_world
+- consortiums_de_defense_orbitale_prives_fortress_world
+- institutions_multilaterales_residuelles_fortress_world
+- kalaallit_nunaat_sovereign_fund_fortress_world
+- nexus_biosyn_division_pacifique_fortress_world
+- pacte_forteresses_souveraines_fortress_world
+oppositions:
+- cartels_miniers_militarises_subsahariens_fortress_world
+- corridors_gris_asie_centrale_fortress_world
+- factions_djihadistes_logistiques_d_asie_centrale_fortress_world
+- factions_internes_pro_autarcie_totale_fortress_world
+- milices_de_piraterie_logistique_arctique_fortress_world
+- reseaux_de_contrebande_energetique_transfrontaliere_fortress_world
 type_relation_dominante: neutralité
 annee_debut: 2026
 annee_fin: null
@@ -91,6 +106,26 @@ La cohésion interne du Bloc repose sur un équilibre fragile entre des États m
 - [[geopolitique_conflits]]
 - [[frontieres_du_systeme]]
 - [[organisation_territoires]]
+
+
+## Relations
+**Alliés :**
+- [[centre_controle_orbital_helios_fortress_world]]
+- [[coalition_arctique_des_blocs_continentaux_fortress_world]]
+- [[conseil_regulation_ressources_fortress_world]]
+- [[consortium_sino_finlandais_de_flotte_autonome_fortress_world]]
+- [[consortiums_de_defense_orbitale_prives_fortress_world]]
+- [[institutions_multilaterales_residuelles_fortress_world]]
+- [[kalaallit_nunaat_sovereign_fund_fortress_world]]
+- [[nexus_biosyn_division_pacifique_fortress_world]]
+- [[pacte_forteresses_souveraines_fortress_world]]
+**Opposants :**
+- [[cartels_miniers_militarises_subsahariens_fortress_world]]
+- [[corridors_gris_asie_centrale_fortress_world]]
+- [[factions_djihadistes_logistiques_d_asie_centrale_fortress_world]]
+- [[factions_internes_pro_autarcie_totale_fortress_world]]
+- [[milices_de_piraterie_logistique_arctique_fortress_world]]
+- [[reseaux_de_contrebande_energetique_transfrontaliere_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

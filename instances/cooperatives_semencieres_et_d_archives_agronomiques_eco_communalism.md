@@ -32,8 +32,44 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- assemblees_bioterritoriales_regionales_eco_communalism
+- assemblees_cooperatives_regionales_eco_communalism
+- brigades_de_restauration_ecologique_eco_communalism
+- collectifs_de_cartographie_ecologique_participative_eco_communalism
+- collectifs_de_techniciens_sobres_eco_communalism
+- collectifs_du_seuil_eco_communalism
+- confederation_bassins_vivants_eco_communalism
+- conseils_de_bassin_versant_eco_communalistes_eco_communalism
+- consortium_africain_de_biotechnologies_sociales_eco_communalism
+- consortium_amazonia_viva_eco_communalism
+- cooperatives_d_habitat_regeneratif_eco_communalism
+- federation_communs_territoriaux_eco_communalism
+- fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism
+- frente_sert_o_livre_eco_communalism
+- guildes_des_semenciers_itinerants_eco_communalism
+- le_registre_du_fleuve_eco_communalism
+- mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism
+- mouvement_des_communes_du_rust_belt_eco_communalism
+- mutuelles_de_sante_territoriales_eco_communalism
+- prisme_global_eco_communalism
+- reseau_assemblees_fennoscandien_eco_communalism
+- reseau_terrafond_bassins_eco_communalism
+- reseaux_de_bibliotheques_archives_communautaires_eco_communalism
+- reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
+- reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism
+- trame_mnemos_noeud_reseau_eco_communalism
+- tresse_verte_corridor_eco_communalism
+- universite_nomade_eco_communalism
+oppositions:
+- agro_conglomerats_des_enclaves_technologiques_eco_communalism
+- consortiums_industriels_de_l_eau_eco_communalism
+- consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism
+- courant_isolationniste_anti_circulation_de_l_information_eco_communalism
+- enclaves_extractivistes_residuelles_des_corridors_eco_communalism
+- factions_autoritaires_de_controle_du_savoir_eco_communalism
+- factions_extractivistes_des_aquiferes_communs_eco_communalism
+- reseaux_de_notables_communautaires_capturistes_eco_communalism
 type_relation_dominante: symbiose
 annee_debut: 2026
 annee_fin: null
@@ -101,6 +137,47 @@ La tension centrale qui traverse ces coopératives est celle entre préservation
 - [[systemes_productifs_travail]]
 - [[organisation_territoires]]
 - [[climat_environnement_global]]
+
+
+## Relations
+**Alliés :**
+- [[assemblees_bioterritoriales_regionales_eco_communalism]]
+- [[assemblees_cooperatives_regionales_eco_communalism]]
+- [[brigades_de_restauration_ecologique_eco_communalism]]
+- [[collectifs_de_cartographie_ecologique_participative_eco_communalism]]
+- [[collectifs_de_techniciens_sobres_eco_communalism]]
+- [[collectifs_du_seuil_eco_communalism]]
+- [[confederation_bassins_vivants_eco_communalism]]
+- [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]]
+- [[consortium_africain_de_biotechnologies_sociales_eco_communalism]]
+- [[consortium_amazonia_viva_eco_communalism]]
+- [[cooperatives_d_habitat_regeneratif_eco_communalism]]
+- [[federation_communs_territoriaux_eco_communalism]]
+- [[fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism]]
+- [[frente_sert_o_livre_eco_communalism]]
+- [[guildes_des_semenciers_itinerants_eco_communalism]]
+- [[le_registre_du_fleuve_eco_communalism]]
+- [[mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism]]
+- [[mouvement_des_communes_du_rust_belt_eco_communalism]]
+- [[mutuelles_de_sante_territoriales_eco_communalism]]
+- [[prisme_global_eco_communalism]]
+- [[reseau_assemblees_fennoscandien_eco_communalism]]
+- [[reseau_terrafond_bassins_eco_communalism]]
+- [[reseaux_de_bibliotheques_archives_communautaires_eco_communalism]]
+- [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
+- [[reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism]]
+- [[trame_mnemos_noeud_reseau_eco_communalism]]
+- [[tresse_verte_corridor_eco_communalism]]
+- [[universite_nomade_eco_communalism]]
+**Opposants :**
+- [[agro_conglomerats_des_enclaves_technologiques_eco_communalism]]
+- [[consortiums_industriels_de_l_eau_eco_communalism]]
+- [[consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism]]
+- [[courant_isolationniste_anti_circulation_de_l_information_eco_communalism]]
+- [[enclaves_extractivistes_residuelles_des_corridors_eco_communalism]]
+- [[factions_autoritaires_de_controle_du_savoir_eco_communalism]]
+- [[factions_extractivistes_des_aquiferes_communs_eco_communalism]]
+- [[reseaux_de_notables_communautaires_capturistes_eco_communalism]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

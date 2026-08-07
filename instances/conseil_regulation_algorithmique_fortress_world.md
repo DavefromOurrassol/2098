@@ -4,6 +4,7 @@ type: instance
 slug: conseil_regulation_algorithmique_fortress_world
 entite: conseil_regulation_algorithmique
 scenario: fortress_world
+statut: officialise_enrichi
 localisation:
   zone: bloc_atlantique
   lieu: Bruxelles-Forteresse, bâtiment 7
@@ -31,9 +32,32 @@ zone_systemique:
   - gouvernance
   - sécurité
 alliances:
-  - nexcore_fortress_world
+- administrations_de_controle_frontalier_des_blocs_fortress_world
+- anba_siege_atlantique_fortress_world
+- assemblee_territoires_fortress_world
+- bloc_atlantique_fortress_world
+- bloc_eurasiatique_occidental_fortress_world
+- bureau_des_territoires_residuels_fortress_world
+- centre_controle_orbital_helios_fortress_world
+- conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world
+- corps_des_inspecteurs_de_conformite_inter_blocs_fortress_world
+- executif_militaro_civil_du_regime_fortress_world
+- front_resilient_pro_systeme_fortress_world
+- geneve_bunker_fortress_world
+- neurosentry_fortress_world
+- nexcore_atlantique_infrastructure_fortress_world
+- nexcore_fortress_world
+- oligarchies_technologiques_souveraines_d_infrastructure_de_calcul_fortress_world
+- systemes_de_scoring_de_productivite_corporative_fortress_world
 oppositions:
-  - conseil_regulation_algorithmique_new_sustainability
+- aria_instance_fantome_fortress_world
+- coalition_vivant_fortress_world
+- conseil_regulation_algorithmique_new_sustainability
+- factions_internes_pro_autarcie_totale_fortress_world
+- factions_traditionalistes_du_mandat_electif_fortress_world
+- le_temoin_fortress_world
+- oracle_des_seuils_fortress_world
+- tribunal_algorithmique_de_bruxelles_fortress_world
 type_relation_dominante: rivalité
 annee_debut: 2044
 annee_fin:
@@ -81,9 +105,6 @@ informationnels inter-blocs. Blacklist des IA non conformes.
 - [[technologie_information]]
 - [[geopolitique_conflits]]
 
-## Relations
-**Alliés** : [[nexcore_fortress_world]]
-**Opposants** : [[conseil_regulation_algorithmique_new_sustainability]]
 
 ## Description journalistique
 L'Autorité Numérique du Bloc Atlantique — surnommée l'ANBA — est
@@ -96,3 +117,32 @@ pas d'interviews. Ses décisions sont sans appel.
 Accusée de favoriser les IA des grandes corporations atlantiques. Rumeurs
 de backdoors dans les systèmes certifiés. Le fils du directeur a disparu
 en 2089 — on dit qu'il a rejoint un collectif non certifié.
+
+## Relations
+**Alliés :**
+- [[administrations_de_controle_frontalier_des_blocs_fortress_world]]
+- [[anba_siege_atlantique_fortress_world]]
+- [[assemblee_territoires_fortress_world]]
+- [[bloc_atlantique_fortress_world]]
+- [[bloc_eurasiatique_occidental_fortress_world]]
+- [[bureau_des_territoires_residuels_fortress_world]]
+- [[centre_controle_orbital_helios_fortress_world]]
+- [[conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world]]
+- [[corps_des_inspecteurs_de_conformite_inter_blocs_fortress_world]]
+- [[executif_militaro_civil_du_regime_fortress_world]]
+- [[front_resilient_pro_systeme_fortress_world]]
+- [[geneve_bunker_fortress_world]]
+- [[neurosentry_fortress_world]]
+- [[nexcore_atlantique_infrastructure_fortress_world]]
+- [[nexcore_fortress_world]]
+- [[oligarchies_technologiques_souveraines_d_infrastructure_de_calcul_fortress_world]]
+- [[systemes_de_scoring_de_productivite_corporative_fortress_world]]
+**Opposants :**
+- [[aria_instance_fantome_fortress_world]]
+- [[coalition_vivant_fortress_world]]
+- [[conseil_regulation_algorithmique_new_sustainability]]
+- [[factions_internes_pro_autarcie_totale_fortress_world]]
+- [[factions_traditionalistes_du_mandat_electif_fortress_world]]
+- [[le_temoin_fortress_world]]
+- [[oracle_des_seuils_fortress_world]]
+- [[tribunal_algorithmique_de_bruxelles_fortress_world]]

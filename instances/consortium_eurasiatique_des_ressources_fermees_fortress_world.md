@@ -29,8 +29,31 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- bloc_eurasiatique_occidental_fortress_world
+- bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world
+- cartels_energetiques_des_bioreacteurs_fortress_world
+- coalitions_geopolitiques_d_infiltration_des_modeles_climatiques_fortress_world
+- complexe_orentchev_almaty_fortress_world
+- complexes_militaro_industriels_de_gestion_des_ressources_fortress_world
+- conseil_moscou_est_fortress_world
+- consortiums_energetiques_du_bloc_ourrassol_fortress_world
+- ironclad_logistics_fortress_world
+- nexus_biosyn_division_eurasienne_fortress_world
+- regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world
+- reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world
+- zone_usines_forteresses_eurasie_fortress_world
+oppositions:
+- bloc_atlantique_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- commandement_strategique_des_matieres_critiques_atlantique_fortress_world
+- conseil_regulation_ressources_fortress_world
+- consortium_amazonia_viva_fortress_world
+- corridors_gris_asie_centrale_fortress_world
+- kalaallit_nunaat_sovereign_fund_fortress_world
+- marches_gris_tbilissi_fortress_world
+- operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world
+- reseaux_de_contrebande_energetique_transfrontaliere_fortress_world
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -92,6 +115,34 @@ Le Consortium est écartelé entre l'impératif de rétention absolue qui fonde 
 - [[energie_ressources_critiques]]
 - [[geopolitique_conflits]]
 - [[organisation_territoires]]
+
+
+## Relations
+**Alliés :**
+- [[bloc_eurasiatique_occidental_fortress_world]]
+- [[bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world]]
+- [[cartels_energetiques_des_bioreacteurs_fortress_world]]
+- [[coalitions_geopolitiques_d_infiltration_des_modeles_climatiques_fortress_world]]
+- [[complexe_orentchev_almaty_fortress_world]]
+- [[complexes_militaro_industriels_de_gestion_des_ressources_fortress_world]]
+- [[conseil_moscou_est_fortress_world]]
+- [[consortiums_energetiques_du_bloc_ourrassol_fortress_world]]
+- [[ironclad_logistics_fortress_world]]
+- [[nexus_biosyn_division_eurasienne_fortress_world]]
+- [[regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world]]
+- [[reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world]]
+- [[zone_usines_forteresses_eurasie_fortress_world]]
+**Opposants :**
+- [[bloc_atlantique_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[commandement_strategique_des_matieres_critiques_atlantique_fortress_world]]
+- [[conseil_regulation_ressources_fortress_world]]
+- [[consortium_amazonia_viva_fortress_world]]
+- [[corridors_gris_asie_centrale_fortress_world]]
+- [[kalaallit_nunaat_sovereign_fund_fortress_world]]
+- [[marches_gris_tbilissi_fortress_world]]
+- [[operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world]]
+- [[reseaux_de_contrebande_energetique_transfrontaliere_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

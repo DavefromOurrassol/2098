@@ -34,8 +34,17 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- consortium_africain_de_biotechnologies_sociales_policy_reform
+- reseau_des_agences_sanitaires_regionales_policy_reform
+- federation_des_mutuelles_biotech_policy_reform
+- mouvement_pour_la_justice_ecologique_communautaire_policy_reform
+oppositions:
+- nexus_biosyn_policy_reform
+- front_de_souverainete_biologique_eurasiatique_policy_reform
+- front_souverainiste_des_blocs_non_signataires_policy_reform
+- union_technocratique_eurasiatique_policy_reform
+- consortiums_agro_industriels_du_bassin_fluvial_policy_reform
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -102,6 +111,19 @@ L'Institut est pris en étau entre deux légitimités contradictoires : son int�
 - [[sante_biotechnologies]]
 - [[gouvernance_institutions]]
 - [[valeurs_culture_tempo_sociale]]
+
+## Relations
+**Alliés :**
+- [[consortium_africain_de_biotechnologies_sociales_policy_reform]]
+- [[reseau_des_agences_sanitaires_regionales_policy_reform]]
+- [[federation_des_mutuelles_biotech_policy_reform]]
+- [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]]
+**Opposants :**
+- [[nexus_biosyn_policy_reform]]
+- [[front_de_souverainete_biologique_eurasiatique_policy_reform]]
+- [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+- [[union_technocratique_eurasiatique_policy_reform]]
+- [[consortiums_agro_industriels_du_bassin_fluvial_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

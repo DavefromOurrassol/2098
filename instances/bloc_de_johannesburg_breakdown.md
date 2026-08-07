@@ -35,10 +35,16 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
+alliances:
+- cargo_mombasa_crrc_breakdown
+- conseil_regulation_ressources_breakdown
+- front_des_blocs_regionaux_du_recit_des_conflits_ressources_breakdown
 oppositions:
+- archives_neutres_de_geneve_breakdown
+- consortium_energetique_oural_caspien_breakdown
 - geneve_bunker_institutions_breakdown
 - nairobi_crrc_breakdown
+- seigneuries_logistiques_armees_breakdown
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -97,10 +103,18 @@ Le Bloc prétend incarner la continuité institutionnelle africaine, mais sa sur
 - [[geopolitique_conflits]]
 - [[organisation_territoires]]
 
+
 ## Relations
+**Alliés :**
+- [[cargo_mombasa_crrc_breakdown]]
+- [[conseil_regulation_ressources_breakdown]]
+- [[front_des_blocs_regionaux_du_recit_des_conflits_ressources_breakdown]]
 **Opposants :**
+- [[archives_neutres_de_geneve_breakdown]]
+- [[consortium_energetique_oural_caspien_breakdown]]
 - [[geneve_bunker_institutions_breakdown]]
 - [[nairobi_crrc_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

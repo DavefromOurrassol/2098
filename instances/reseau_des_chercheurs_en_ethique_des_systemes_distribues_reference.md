@@ -30,8 +30,38 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- collectifs_academiques_independants_reference
+- collectifs_de_journalisme_embarque_reference
+- collectifs_de_journalistes_independants_regionaux_reference
+- communs_numeriques_agroecologiques_reference
+- conseil_de_geneve_pour_les_droits_biosociaux_reference
+- cooperatives_ia_open_source_reference
+- helsinki_communs_numeriques_reference
+- institut_polytechnique_de_ouagadougou_reference
+- leena_vainala_reference
+- mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
+- ong_de_preservation_patrimoniale_numerique_reference
+- ong_environnementales_de_terrain_reference
+- oracle_des_seuils_reference
+- reseau_hospitalier_hybride_eurasiatique_reference
+- reseau_meshcommons_netsolidaire_reference
+- reseaux_de_capteurs_citoyens_reference
+- reseaux_de_gouvernance_multilaterale_survivants_reference
+- reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference
+- tribunal_algorithmique_de_bruxelles_reference
+- universites_et_think_tanks_en_zones_de_liberte_academique_reference
+oppositions:
+- bureaux_de_regulation_informationnelle_reference
+- consortium_des_grandes_plateformes_ia_integrees_reference
+- consortium_des_plateformes_ia_centralisees_anti_deliberation_reference
+- consortiums_prives_de_gestion_des_donnees_critiques_reference
+- directive_kontinuum_reference
+- etats_a_tendance_centraliste_numerique_reference
+- plateformes_centralisees_de_narration_officielle_reference
+- plateformes_d_optimisation_territoriale_par_ia_reference
+- plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference
+- services_de_contre_information_des_blocs_geopolitiques_concurrents_reference
 type_relation_dominante: neutralité
 annee_debut: 2026
 annee_fin: null
@@ -95,6 +125,41 @@ Le Réseau est tiraillé entre l'exigence d'indépendance radicale et la tentati
 - [[technologie_information]]
 - [[gouvernance_institutions]]
 - [[valeurs_culture_tempo_sociale]]
+
+
+## Relations
+**Alliés :**
+- [[collectifs_academiques_independants_reference]]
+- [[collectifs_de_journalisme_embarque_reference]]
+- [[collectifs_de_journalistes_independants_regionaux_reference]]
+- [[communs_numeriques_agroecologiques_reference]]
+- [[conseil_de_geneve_pour_les_droits_biosociaux_reference]]
+- [[cooperatives_ia_open_source_reference]]
+- [[helsinki_communs_numeriques_reference]]
+- [[institut_polytechnique_de_ouagadougou_reference]]
+- [[leena_vainala_reference]]
+- [[mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference]]
+- [[ong_de_preservation_patrimoniale_numerique_reference]]
+- [[ong_environnementales_de_terrain_reference]]
+- [[oracle_des_seuils_reference]]
+- [[reseau_hospitalier_hybride_eurasiatique_reference]]
+- [[reseau_meshcommons_netsolidaire_reference]]
+- [[reseaux_de_capteurs_citoyens_reference]]
+- [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
+- [[reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference]]
+- [[tribunal_algorithmique_de_bruxelles_reference]]
+- [[universites_et_think_tanks_en_zones_de_liberte_academique_reference]]
+**Opposants :**
+- [[bureaux_de_regulation_informationnelle_reference]]
+- [[consortium_des_grandes_plateformes_ia_integrees_reference]]
+- [[consortium_des_plateformes_ia_centralisees_anti_deliberation_reference]]
+- [[consortiums_prives_de_gestion_des_donnees_critiques_reference]]
+- [[directive_kontinuum_reference]]
+- [[etats_a_tendance_centraliste_numerique_reference]]
+- [[plateformes_centralisees_de_narration_officielle_reference]]
+- [[plateformes_d_optimisation_territoriale_par_ia_reference]]
+- [[plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference]]
+- [[services_de_contre_information_des_blocs_geopolitiques_concurrents_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

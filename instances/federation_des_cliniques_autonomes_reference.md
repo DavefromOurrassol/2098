@@ -31,8 +31,38 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- collectifs_academiques_independants_reference
+- collectifs_de_biopiraterie_inversee_reference
+- conseil_de_geneve_pour_les_droits_biosociaux_reference
+- consortium_africain_de_biotechnologies_sociales_reference
+- cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference
+- cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference
+- institutions_multilaterales_survivantes_reference
+- internationale_travailleurs_augmentes_reference
+- les_veilleurs_du_fleuve_reference
+- ong_de_tracabilite_des_ressources_critiques_reference
+- ong_environnementales_de_terrain_reference
+- reseau_des_administrations_locales_rurales_participatives_reference
+- reseau_des_cooperatives_agro_saheliennes_reference
+- reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference
+- reseau_hospitalier_hybride_eurasiatique_reference
+- reseau_meshcommons_netsolidaire_reference
+- reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference
+- reseaux_de_medecine_traditionnelle_augmentee_reference
+- sao_paulo_ita_reference
+- syndicats_de_travailleurs_de_la_transition_energetique_reference
+oppositions:
+- algorithmic_labor_exchange_reference
+- consortium_augmentwork_reference
+- consortiums_energetiques_opaques_reference
+- consortiums_prives_de_gestion_des_donnees_critiques_reference
+- etats_a_tendance_centraliste_numerique_reference
+- gouvernements_a_regime_de_productivite_mandatee_reference
+- lobbies_agro_industriels_a_haute_consommation_d_eau_reference
+- neuroharmonics_reference
+- nexus_biosyn_reference
+- operateurs_de_zones_economiques_speciales_periurbaines_reference
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -96,6 +126,41 @@ La Fédération est tiraillée entre son idéal d'autonomie radicale et la tenta
 - [[sante_biotechnologies]]
 - [[gouvernance_institutions]]
 - [[organisation_territoires]]
+
+
+## Relations
+**Alliés :**
+- [[collectifs_academiques_independants_reference]]
+- [[collectifs_de_biopiraterie_inversee_reference]]
+- [[conseil_de_geneve_pour_les_droits_biosociaux_reference]]
+- [[consortium_africain_de_biotechnologies_sociales_reference]]
+- [[cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference]]
+- [[cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
+- [[internationale_travailleurs_augmentes_reference]]
+- [[les_veilleurs_du_fleuve_reference]]
+- [[ong_de_tracabilite_des_ressources_critiques_reference]]
+- [[ong_environnementales_de_terrain_reference]]
+- [[reseau_des_administrations_locales_rurales_participatives_reference]]
+- [[reseau_des_cooperatives_agro_saheliennes_reference]]
+- [[reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference]]
+- [[reseau_hospitalier_hybride_eurasiatique_reference]]
+- [[reseau_meshcommons_netsolidaire_reference]]
+- [[reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference]]
+- [[reseaux_de_medecine_traditionnelle_augmentee_reference]]
+- [[sao_paulo_ita_reference]]
+- [[syndicats_de_travailleurs_de_la_transition_energetique_reference]]
+**Opposants :**
+- [[algorithmic_labor_exchange_reference]]
+- [[consortium_augmentwork_reference]]
+- [[consortiums_energetiques_opaques_reference]]
+- [[consortiums_prives_de_gestion_des_donnees_critiques_reference]]
+- [[etats_a_tendance_centraliste_numerique_reference]]
+- [[gouvernements_a_regime_de_productivite_mandatee_reference]]
+- [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]]
+- [[neuroharmonics_reference]]
+- [[nexus_biosyn_reference]]
+- [[operateurs_de_zones_economiques_speciales_periurbaines_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

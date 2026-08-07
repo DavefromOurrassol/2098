@@ -35,8 +35,25 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism
+- consortiums_industriels_de_l_eau_eco_communalism
+- consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism
+- courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism
+- enclaves_extractivistes_residuelles_des_corridors_eco_communalism
+- fragments_d_etats_centraux_residuels_eco_communalism
+- plateformes_centralisees_de_reagregation_globale_eco_communalism
+oppositions:
+- assemblees_bioterritoriales_regionales_eco_communalism
+- brigades_de_restauration_ecologique_eco_communalism
+- collectifs_de_geo_observateurs_citoyens_eco_communalism
+- collectifs_de_techniciens_sobres_eco_communalism
+- confederation_bassins_vivants_eco_communalism
+- consortium_amazonia_viva_eco_communalism
+- guildes_de_mediateurs_ecologiques_eco_communalism
+- kalaallit_nunaat_bioterritoire_eco_communalism
+- reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
+- trame_bioclimatique_eco_communalism
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -106,6 +123,28 @@ La contradiction fondamentale qui ronge ces factions est que certaines de leurs 
 - [[climat_environnement_global]]
 - [[gouvernance_institutions]]
 - [[energie_ressources_critiques]]
+
+
+## Relations
+**Alliés :**
+- [[consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism]]
+- [[consortiums_industriels_de_l_eau_eco_communalism]]
+- [[consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism]]
+- [[courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism]]
+- [[enclaves_extractivistes_residuelles_des_corridors_eco_communalism]]
+- [[fragments_d_etats_centraux_residuels_eco_communalism]]
+- [[plateformes_centralisees_de_reagregation_globale_eco_communalism]]
+**Opposants :**
+- [[assemblees_bioterritoriales_regionales_eco_communalism]]
+- [[brigades_de_restauration_ecologique_eco_communalism]]
+- [[collectifs_de_geo_observateurs_citoyens_eco_communalism]]
+- [[collectifs_de_techniciens_sobres_eco_communalism]]
+- [[confederation_bassins_vivants_eco_communalism]]
+- [[consortium_amazonia_viva_eco_communalism]]
+- [[guildes_de_mediateurs_ecologiques_eco_communalism]]
+- [[kalaallit_nunaat_bioterritoire_eco_communalism]]
+- [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
+- [[trame_bioclimatique_eco_communalism]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

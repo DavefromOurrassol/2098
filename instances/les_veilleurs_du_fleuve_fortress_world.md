@@ -4,6 +4,7 @@ type: instance
 slug: les_veilleurs_du_fleuve_fortress_world
 entite: les_veilleurs_du_fleuve
 scenario: fortress_world
+statut: officialise_enrichi
 localisation:
   zone: null
   lieu: null

@@ -821,6 +821,9 @@ def load_event_instances_for_scenario(scenario_slug):
             "via_matrice":  fm.get("propagation", {}).get("via_matrice", True)
                             if isinstance(fm.get("propagation"), dict) else True,
             "custom":       True,
+            # Ajouté le 2 août 2026 -- manquait, nécessaire pour restreindre
+            # la liste de zones proposées lors du forçage d'un événement.
+            "localisation": fm.get("localisation") or {},
         })
 
     # Trier par date
@@ -921,6 +924,83 @@ def resolve_forced_element(forcer_config, scenario_slug):
     }
 
 
+def scenarios_disponibles_pour_element(type_, slug):
+    """
+    Retourne la liste des scénarios (parmi VALID_SCENARIOS) où l'élément
+    existe réellement -- ajouté le 2 août 2026 pour le mode "forcer" de
+    generate.py : le menu de sélection des scénarios doit être restreint
+    à ce qui est effectivement disponible pour l'élément choisi, plutôt
+    que de proposer les 6 scénarios sans distinction.
+    """
+    if not type_ or not slug:
+        return list(VALID_SCENARIOS)
+
+    if type_ == "instance":
+        return [sc for sc in VALID_SCENARIOS
+                if os.path.exists(os.path.join(PATHS["instances"], "{}_{}.md".format(slug, sc)))]
+
+    if type_ == "evenement":
+        disponibles = []
+        for sc in VALID_SCENARIOS:
+            events = load_events_for_scenario(sc)
+            if any(e.get("archetype") == slug for e in events):
+                disponibles.append(sc)
+        return disponibles
+
+    if type_ == "signal":
+        disponibles = []
+        all_variables = load_all_variables()
+        for sc in VALID_SCENARIOS:
+            for var in all_variables.values():
+                if any(sig["signal"] == slug for sig in get_signal_to_state_for_scenario(var, sc)):
+                    disponibles.append(sc)
+                    break
+        return disponibles
+
+    return list(VALID_SCENARIOS)
+
+
+def zones_disponibles_pour_element(type_, slug, scenarios):
+    """
+    Retourne {scenario: [zone_slug, ...]} -- les zones où l'élément est
+    effectivement localisé, pour chacun des scénarios fournis. Ajouté le
+    2 août 2026, même logique que ci-dessus mais pour le champ Zone.
+
+    Un signal n'a jamais de zone (il agit sur une variable systémique, pas
+    un lieu) -- retourne {} dans ce cas, sans erreur : c'est un cas normal,
+    pas un échec de résolution.
+    """
+    zones = {}
+    if not type_ or not slug:
+        return zones
+
+    if type_ == "instance":
+        for sc in scenarios:
+            instance_slug = "{}_{}".format(slug, sc)
+            path = os.path.join(PATHS["instances"], "{}.md".format(instance_slug))
+            if not os.path.exists(path):
+                continue
+            try:
+                inst = load_instance(instance_slug)
+            except Exception:
+                continue
+            z = (inst.get("localisation") or {}).get("zone")
+            if z:
+                zones.setdefault(sc, []).append(z)
+
+    elif type_ == "evenement":
+        for sc in scenarios:
+            events = load_events_for_scenario(sc)
+            match = next((e for e in events if e.get("archetype") == slug), None)
+            if match:
+                z = (match.get("localisation") or {}).get("zone")
+                if z:
+                    zones.setdefault(sc, []).append(z)
+
+    # type_ == "signal" : pas de zone, zones reste {}
+    return zones
+
+
 # ─────────────────────────────────────────
 # ROTATION À MÉMOIRE — instances (ajouté le 2 août 2026)
 # ─────────────────────────────────────────
@@ -1007,6 +1087,123 @@ def select_instances_by_impact(instances, scenario_slug, dry_run=True, max_n=6):
     if not dry_run:
         _save_instance_usage_state(usage_state)
     return selected
+
+
+# ─────────────────────────────────────────
+# PERTINENCE DES ÉVÉNEMENTS CUSTOM (ajouté le 2 août 2026)
+# ─────────────────────────────────────────
+#
+# Jusqu'ici, TOUS les événements custom d'un scénario étaient inclus dans
+# chaque article généré pour ce scénario, sans filtre -- ni pertinence
+# thématique, ni plafond. Ça grossit indéfiniment à mesure que le vault
+# grandit (13 événements aujourd'hui pour un scénario, sans limite prévue).
+# Réutilise le même matériau déjà standardisé sur les fiches (voir
+# VALID_PORTEES dans inject_custom_events.py) plutôt que d'inventer une
+# nouvelle heuristique : portée (locale→globale), amplitude réelle des
+# impact_sur_variables (delta_level, propre à ce scénario -- plus précis
+# que l'intensité qualitative de l'archétype, qui n'est de toute façon
+# jamais reportée sur la fiche instance), et recoupement avec les
+# variables de la thématique -- exactement le même principe que
+# filter_instances_for_thematique() ci-dessous pour les instances.
+
+PORTEE_RANK = {"locale": 1, "regionale": 2, "continentale": 3, "globale": 4}
+
+EVENT_STATE_DIR  = os.path.join(os.path.dirname(os.path.abspath(__file__)), "state")
+EVENT_USAGE_FILE = os.path.join(EVENT_STATE_DIR, "event_relevance_usage.json")
+
+
+def _load_event_usage_state():
+    try:
+        with open(EVENT_USAGE_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return {}
+
+
+def _save_event_usage_state(state):
+    os.makedirs(EVENT_STATE_DIR, exist_ok=True)
+    with open(EVENT_USAGE_FILE, "w", encoding="utf-8") as f:
+        json.dump(state, f, ensure_ascii=False, indent=2, sort_keys=True)
+
+
+def _score_evenement_pertinence(event, vars_vis, vars_sec):
+    """Score de pertinence d'un événement custom -- même logique que le
+    score des instances (variables_visibles pèsent plus que
+    variables_secondaires), plus la portée et l'amplitude réelle des
+    impacts sur les variables pour ce scénario précis."""
+    score = 0
+    event_vars = {imp.get("variable") for imp in (event.get("impacts") or []) if isinstance(imp, dict)}
+    score += len(event_vars & vars_vis) * 3
+    score += len(event_vars & vars_sec) * 1
+    score += PORTEE_RANK.get(event.get("portee", "locale"), 1) * 1.5
+    amplitude = sum(abs(imp.get("delta_level", 0)) for imp in (event.get("impacts") or []) if isinstance(imp, dict))
+    score += min(amplitude, 40) * 0.1  # plafonné pour éviter qu'un seul événement à fort delta écrase tout le reste
+    return score
+
+
+def select_relevant_events(events, thematique, scenario_slug, forced_event_slug=None,
+                            max_events=8, dry_run=True):
+    """
+    Sélectionne au plus max_events événements custom parmi ceux d'un
+    scénario, par pertinence thématique + rotation à mémoire (même
+    principe que _select_least_used_instances). L'événement forcé (mode
+    "forcer" de generate.py), s'il y en a un, est TOUJOURS inclus en plus
+    du plafond -- jamais soumis au tri, jamais évincé.
+
+    thematique=None (pas de thématique fournie) : trie par portée +
+    amplitude seules, sans le terme de recoupement variables.
+    """
+    if not events:
+        return []
+
+    forced = None
+    reste = list(events)
+    if forced_event_slug:
+        forced = next((e for e in reste if e.get("slug") == forced_event_slug
+                       or e.get("archetype") == forced_event_slug), None)
+        if forced:
+            # Bug corrigé le 3 août 2026 (retour de David, test réel sur
+            # encheres_terres_rares_groenland/policy_reform) : l'événement
+            # forcé était bien placé en tête de la liste retournée, mais
+            # jamais marqué comme tel -- prompt_builder.py lit ev.get(
+            # "forced") pour afficher le badge [FORCÉ], qui restait donc
+            # toujours absent. On recrée un dict pour ne pas muter l'objet
+            # original (potentiellement réutilisé ailleurs dans le pipeline,
+            # ex. rotation à mémoire ou un futur appel avec un autre
+            # forced_event_slug sur la même liste source).
+            forced = dict(forced)
+            forced["forced"] = True
+            reste = [e for e in reste if e.get("slug") != forced.get("slug")
+                     and e.get("archetype") != forced.get("archetype")]
+
+    if thematique:
+        vars_vis = set(thematique.get("variables_visibles", []))
+        vars_sec = set(thematique.get("variables_secondaires", []))
+    else:
+        vars_vis, vars_sec = set(), set()
+
+    plafond_restant = max_events - (1 if forced else 0)
+    if plafond_restant < 0:
+        plafond_restant = 0
+
+    scored = [(_score_evenement_pertinence(e, vars_vis, vars_sec), e) for e in reste]
+
+    if len(scored) <= plafond_restant:
+        selected = [e for _, e in scored]
+    else:
+        usage_state = _load_event_usage_state()
+        counts = usage_state.setdefault(scenario_slug, {})
+        shuffled = list(scored)
+        random.shuffle(shuffled)
+        shuffled.sort(key=lambda pair: counts.get(pair[1]["slug"], 0))
+        shuffled.sort(key=lambda pair: -pair[0])
+        selected = [e for _, e in shuffled[:plafond_restant]]
+        for e in selected:
+            counts[e["slug"]] = counts.get(e["slug"], 0) + 1
+        if not dry_run:
+            _save_event_usage_state(usage_state)
+
+    return ([forced] if forced else []) + selected
 
 
 def filter_instances_for_thematique(instances, thematique, scenario_slug=None, dry_run=True):

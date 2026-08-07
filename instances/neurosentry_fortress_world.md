@@ -4,6 +4,7 @@ type: instance
 slug: neurosentry_fortress_world
 entite: neurosentry
 scenario: fortress_world
+statut: officialise_enrichi
 localisation:
   zone: moscou_est
   lieu: Moscou-Est
@@ -37,22 +38,22 @@ zone_systemique:
     - société
 
 alliances:
-    - appareils_d_etat_des_blocs_fermes_fortress_world
-    - agences_de_securite_interieure_des_etats_forteresses_fortress_world
-    - conseil_regulation_algorithmique_fortress_world
-    - dispositifs_de_surveillance_numerique_souveraine_fortress_world
-    - systemes_de_scoring_de_productivite_corporative_fortress_world
-    - nexus_biosyn_fortress_world
-    - bureau_gouvernance_algorithmique_fortress_world
-
+- agences_de_securite_interieure_des_etats_forteresses_fortress_world
+- appareils_d_etat_des_blocs_fermes_fortress_world
+- bureau_gouvernance_algorithmique_fortress_world
+- conseil_regulation_algorithmique_fortress_world
+- dispositifs_de_surveillance_numerique_souveraine_fortress_world
+- instances_aria_concurrentes_des_blocs_rivaux_fortress_world
+- nexus_biosyn_fortress_world
+- oligarchies_technologiques_souveraines_d_infrastructure_de_calcul_fortress_world
+- systemes_de_scoring_de_productivite_corporative_fortress_world
 oppositions:
-    - cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
-    - cliniques_de_deaugmentation_independantes_fortress_world
-    - reseaux_d_echange_clandestin_inter_zones_fortress_world
-    - mouvement_commun_midwest_fortress_world
-    - coalitions_des_deplaces_et_apatrides_fortress_world
-    - alliance_sanitaire_des_populations_exclues_fortress_world
-
+- alliance_sanitaire_des_populations_exclues_fortress_world
+- cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
+- cliniques_de_deaugmentation_independantes_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- mouvement_commun_midwest_fortress_world
+- reseaux_d_echange_clandestin_inter_zones_fortress_world
 type_relation_dominante: symbiose
 
 annee_debut: 2026
@@ -95,12 +96,28 @@ Déploiement et maintenance des réseaux d'implants NeuroSync dans les zones urb
 - [[gouvernance_institutions]]
 - [[valeurs_culture_tempo_sociale]]
 
-## Relations
-**Alliés** : [[appareils_d_etat_des_blocs_fermes_fortress_world]], [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]], [[conseil_regulation_algorithmique_fortress_world]], [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]], [[systemes_de_scoring_de_productivite_corporative_fortress_world]], [[nexus_biosyn_fortress_world]], [[bureau_gouvernance_algorithmique_fortress_world]]
-**Opposants** : [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]], [[cliniques_de_deaugmentation_independantes_fortress_world]], [[reseaux_d_echange_clandestin_inter_zones_fortress_world]], [[mouvement_commun_midwest_fortress_world]], [[coalitions_des_deplaces_et_apatrides_fortress_world]], [[alliance_sanitaire_des_populations_exclues_fortress_world]]
 
 ## Description journalistique
 Dans les rues de Moscou-Est ou de la Ceinture Productive Eurasiatique, impossible d'échapper aux implants NeuroSync de la NSCD. Ces petits disques argentés, greffés derrière l'oreille, clignotent en vert pour les 'citoyens optimisés' ou en rouge pour ceux dont le Productivity Compliance Index est en chute libre. Les rumeurs parlent de 'zones grises neuronales', où des hackers tentent de brouiller les signaux, mais la NSCD répond par des raids des Inspecteurs de Conformité Cognitive, armés de scanners capables de détecter les 'déviances synaptiques'. Le pire ? Personne ne sait vraiment comment fonctionne l'algorithme. Les régimes s'en moquent : tant que la productivité augmente, les libertés peuvent bien fondre comme neige au soleil.
 
 ## Tensions narratives
 1) **La révolte des 'Déconnectés'** : Des mouvements clandestins, comme les Cellules Universitaires Dissidentes, sabotent les infrastructures NSCD et développent des contre-mesures pour neutraliser les implants. Leur objectif ? Rendre les citoyens 'invisibles' aux algorithmes de scoring. 2) **La guerre des algorithmes** : Les blocs souverains se livrent une bataille secrète pour pirater ou corrompre les systèmes NSCD de leurs rivaux, créant des 'zones de brouillage cognitif' où les populations deviennent ingouvernables. 3) **L'énigme des 'Cerveaux Fantômes'** : Des rumeurs persistantes évoquent des individus dont les implants ont été piratés pour créer des 'identités neuronales' fictives, permettant de contourner les contrôles. La NSCD nie farouchement, mais les arrestations se multiplient. 4) **Le dilemme des régimes** : Plus les systèmes NSCD deviennent intrusifs, plus les régimes dépendent d'eux pour maintenir l'ordre. Mais cette dépendance les rend vulnérables : que se passe-t-il si la NSCD décide de 'désoptimiser' un dirigeant ?
+
+## Relations
+**Alliés :**
+- [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]]
+- [[appareils_d_etat_des_blocs_fermes_fortress_world]]
+- [[bureau_gouvernance_algorithmique_fortress_world]]
+- [[conseil_regulation_algorithmique_fortress_world]]
+- [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
+- [[instances_aria_concurrentes_des_blocs_rivaux_fortress_world]]
+- [[nexus_biosyn_fortress_world]]
+- [[oligarchies_technologiques_souveraines_d_infrastructure_de_calcul_fortress_world]]
+- [[systemes_de_scoring_de_productivite_corporative_fortress_world]]
+**Opposants :**
+- [[alliance_sanitaire_des_populations_exclues_fortress_world]]
+- [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]]
+- [[cliniques_de_deaugmentation_independantes_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[mouvement_commun_midwest_fortress_world]]
+- [[reseaux_d_echange_clandestin_inter_zones_fortress_world]]

@@ -4,6 +4,7 @@ type: instance
 slug: prisme_global_new_sustainability
 entite: prisme_global
 scenario: new_sustainability
+statut: officialise_enrichi
 localisation:
   zone: infrastructure_numerique_globale
   lieu: Prisme Global (serveurs distribués Lagos, Montréal, Singapour)
@@ -32,15 +33,15 @@ zone_systemique:
     - société
 
 alliances:
-    - alliance_numerique_eurasie_pacifique_new_sustainability
-    - conseil_de_regulation_cognitive_de_l_onu_new_sustainability
-    - observatoire_climatique_narratif_de_nairobi_new_sustainability
-
+- alliance_numerique_eurasie_pacifique_new_sustainability
+- conseil_de_regulation_cognitive_de_l_onu_new_sustainability
+- observatoire_climatique_narratif_de_nairobi_new_sustainability
 oppositions:
-    - collectifs_de_narration_sauvage_hors_protocole_new_sustainability
-    - reseaux_d_information_souverainistes_fermes_new_sustainability
-    - factions_internes_contestataires_du_bureau_de_moderation_new_sustainability
-
+- collectifs_de_narration_sauvage_hors_protocole_new_sustainability
+- factions_internes_contestataires_du_bureau_de_moderation_new_sustainability
+- reseau_des_communs_numeriques_globaux_new_sustainability
+- reseaux_d_information_souverainistes_fermes_new_sustainability
+- reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability
 type_relation_dominante: symbiose
 
 annee_debut: 2026
@@ -82,12 +83,21 @@ Agrège et modélise en temps réel les récits locaux issus de 340 zones contri
 - [[technologie_information]]
 - [[valeurs_culture_tempo_sociale]]
 
-## Relations
-**Alliés** : [[alliance_numerique_eurasie_pacifique_new_sustainability]], [[conseil_de_regulation_cognitive_de_l_onu_new_sustainability]], [[observatoire_climatique_narratif_de_nairobi_new_sustainability]]
-**Opposants** : [[collectifs_de_narration_sauvage_hors_protocole_new_sustainability]], [[reseaux_d_information_souverainistes_fermes_new_sustainability]], [[factions_internes_contestataires_du_bureau_de_moderation_new_sustainability]]
 
 ## Description journalistique
 Depuis ses serveurs distribués entre Lagos, Montréal et Singapour, Prisme Global pulse comme le système nerveux narratif d'une planète qui a appris à se raconter sans se déchirer — ou presque. En 2098, la plateforme traite chaque jour 4,7 milliards de contributions locales, des récits de reforestation au Sahel aux chroniques de mobilité climatique du delta du Mékong, filtrées, pondérées et remontées par des IA éditoriales dont les chartes sont publiques et auditables. Ce qui frappe le visiteur, c'est l'étrange sérénité du flux : plus de guerre des tendances, plus d'emballement viral incontrôlé, mais un murmure organisé, presque liturgique. Ses détracteurs l'appellent 'le grand berceau' ; ses défenseurs, 'la seule mémoire vivante du monde commun'.
 
 ## Tensions narratives
 La frontière entre 'espace de dissidence balisé' et mise sous cloche du désaccord réel est dénoncée par les collectifs de narration sauvage, qui accusent Prisme Global d'avoir transformé le pluralisme en pluralisme contrôlé. En interne, le Bureau de Modération est fracturé entre une faction technocratique favorable à un resserrement des protocoles et une faction humaniste qui réclame l'élargissement des zones de parole non filtrée. La question non résolue : si Prisme Global est désormais trop central pour échouer, qui le surveille — et qui raconte l'histoire de ceux qui le racontent ?
+
+## Relations
+**Alliés :**
+- [[alliance_numerique_eurasie_pacifique_new_sustainability]]
+- [[conseil_de_regulation_cognitive_de_l_onu_new_sustainability]]
+- [[observatoire_climatique_narratif_de_nairobi_new_sustainability]]
+**Opposants :**
+- [[collectifs_de_narration_sauvage_hors_protocole_new_sustainability]]
+- [[factions_internes_contestataires_du_bureau_de_moderation_new_sustainability]]
+- [[reseau_des_communs_numeriques_globaux_new_sustainability]]
+- [[reseaux_d_information_souverainistes_fermes_new_sustainability]]
+- [[reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability]]

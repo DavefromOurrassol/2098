@@ -4,6 +4,7 @@ type: instance
 slug: datasovereign_reference
 entite: datasovereign
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: geneve_lac_retreite
   lieu: Genève

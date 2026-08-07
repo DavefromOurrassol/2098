@@ -4,6 +4,7 @@ type: instance
 slug: hanse_baltique_breakdown
 entite: hanse_baltique
 scenario: breakdown
+statut: officialise_enrichi
 localisation:
   zone: hanse_baltique
   lieu: Ligue Hanséatique Baltique (Lübeck, ports baltiques de Tallinn à Hambourg)
@@ -36,23 +37,26 @@ zone_systemique:
     - infrastructure
 
 alliances:
-    - armada_logistique_nordique_breakdown
-    - enclaves_industrielles_de_bergen_troms_breakdown
-    - ligue_des_cites_littorales_en_sursis_breakdown
-    - ligue_mediterraneenne_des_villes_etats_portuaires_breakdown
-    - kalaallit_nunaat_sovereign_fund_breakdown
-    - cites_etats_secessionistes_breakdown
-
+- armada_logistique_nordique_breakdown
+- cites_etats_secessionistes_breakdown
+- district_mourmansk_residuel_breakdown
+- enclaves_finlandaises_breakdown
+- enclaves_industrielles_de_bergen_troms_breakdown
+- enclaves_technologiques_survivantes_breakdown
+- kalaallit_nunaat_sovereign_fund_breakdown
+- ligue_des_cites_littorales_en_sursis_breakdown
+- ligue_mediterraneenne_des_villes_etats_portuaires_breakdown
+- noeud_nordark_tromso_breakdown
+- tour_bcuc_geneve_breakdown
 oppositions:
-    - milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown
-    - factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
-    - reseau_logistique_criminel_concurrent_breakdown
-    - saboteurs_des_corridors_de_transit_breakdown
-    - front_de_resistance_aux_peages_sur_les_ressources_breakdown
-    - federation_russe_residuelle_district_de_mourmansk_breakdown
-    - seigneuries_logistiques_armees_breakdown
-    - blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
-
+- blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
+- factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
+- federation_russe_residuelle_district_de_mourmansk_breakdown
+- front_de_resistance_aux_peages_sur_les_ressources_breakdown
+- milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown
+- reseau_logistique_criminel_concurrent_breakdown
+- saboteurs_des_corridors_de_transit_breakdown
+- seigneuries_logistiques_armees_breakdown
 type_relation_dominante: alliance stratégique
 
 annee_debut: 2041
@@ -96,12 +100,32 @@ Elle perçoit des droits de transit sur l'ensemble des flux maritimes traversant
 - [[systeme_economique_redistribution]]
 - [[gouvernance_institutions]]
 
-## Relations
-**Alliés** : [[armada_logistique_nordique_breakdown]], [[enclaves_industrielles_de_bergen_troms_breakdown]], [[ligue_des_cites_littorales_en_sursis_breakdown]], [[ligue_mediterraneenne_des_villes_etats_portuaires_breakdown]], [[kalaallit_nunaat_sovereign_fund_breakdown]], [[cites_etats_secessionistes_breakdown]]
-**Opposants** : [[milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown]], [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]], [[reseau_logistique_criminel_concurrent_breakdown]], [[saboteurs_des_corridors_de_transit_breakdown]], [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]], [[federation_russe_residuelle_district_de_mourmansk_breakdown]], [[seigneuries_logistiques_armees_breakdown]], [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
 
 ## Description journalistique
 Dans le port de Lübeck, les drapeaux des États n'existent plus depuis longtemps. Ce qui flotte sur les grues rouillées, c'est le sceau aux deux clés croisées sur fond d'or et de bleu — l'emblème de la Ligue Hanséatique Baltique, que les dockers appellent simplement 'le Sceau'. Fondée en 2041 par sept conseils portuaires confrontés à la même question vitale — qui protège nos navires, qui fait respecter nos contrats, qui nourrit nos populations —, la Ligue s'est étendue à vingt-deux ports en moins de dix ans. Elle n'est ni un État ni une entreprise : c'est une confédération d'intérêts marchands armés, qui lève ses propres taxes, siège dans ses propres tribunaux et tire sur ses propres ennemis. Ses frégates de la Garde du Sceau patrouillent en permanence entre Bornholm et le golfe de Finlande, et plus d'un capitaine de fortune a appris à ses dépens ce que signifie naviguer sans le laissez-passer hanséatique.
 
 ## Tensions narratives
 La légitimité juridique que s'arroge la Ligue repose sur un paradoxe fondamental : elle prétend incarner un ordre juste et partagé, mais ses règles sont rédigées par les grandes cités membres au détriment des ports mineurs et des populations côtières non représentées, qui paient les droits sans siéger au Conseil. La montée des milices séparatistes islandaises et la pression croissante du Consortium Énergétique Oural-Caspien sur les détroits orientaux menacent d'embraser un équilibre déjà précaire. En interne, Hambourg et Tallinn s'affrontent sourdement pour le contrôle des routes les plus lucratives, et des rumeurs persistent sur des arrangements secrets entre des capitaines de la Garde et des réseaux logistiques criminels concurrents.
+
+## Relations
+**Alliés :**
+- [[armada_logistique_nordique_breakdown]]
+- [[cites_etats_secessionistes_breakdown]]
+- [[district_mourmansk_residuel_breakdown]]
+- [[enclaves_finlandaises_breakdown]]
+- [[enclaves_industrielles_de_bergen_troms_breakdown]]
+- [[enclaves_technologiques_survivantes_breakdown]]
+- [[kalaallit_nunaat_sovereign_fund_breakdown]]
+- [[ligue_des_cites_littorales_en_sursis_breakdown]]
+- [[ligue_mediterraneenne_des_villes_etats_portuaires_breakdown]]
+- [[noeud_nordark_tromso_breakdown]]
+- [[tour_bcuc_geneve_breakdown]]
+**Opposants :**
+- [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
+- [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]]
+- [[federation_russe_residuelle_district_de_mourmansk_breakdown]]
+- [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
+- [[milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown]]
+- [[reseau_logistique_criminel_concurrent_breakdown]]
+- [[saboteurs_des_corridors_de_transit_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]

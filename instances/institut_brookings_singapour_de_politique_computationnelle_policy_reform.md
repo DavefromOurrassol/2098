@@ -33,8 +33,22 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- bureau_gouvernance_algorithmique_policy_reform
+- conseil_onu_de_gouvernance_numerique_et_ia_policy_reform
+- conseil_regulation_algorithmique_policy_reform
+- consortium_nexus_calcul_policy_reform
+- consortiums_d_optimisation_rh_algorithmique_policy_reform
+- front_techno_utopiste_de_la_decision_automatisee_policy_reform
+- oracle_des_seuils_policy_reform
+- reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform
+- union_technocratique_eurasiatique_policy_reform
+oppositions:
+- coalition_des_souverainistes_numeriques_policy_reform
+- courant_autoritaire_recuperateur_du_vocabulaire_communautaire_policy_reform
+- factions_technocratiques_de_la_marchandisation_hydrique_policy_reform
+- front_souverainiste_des_blocs_non_signataires_policy_reform
+- reseau_des_regulateurs_numeriques_souverains_rrns_policy_reform
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -103,6 +117,25 @@ L'Institut navigue en permanence entre son mandat d'objectivité analytique et l
 - [[gouvernance_institutions]]
 - [[technologie_information]]
 - [[geopolitique_conflits]]
+
+
+## Relations
+**Alliés :**
+- [[bureau_gouvernance_algorithmique_policy_reform]]
+- [[conseil_onu_de_gouvernance_numerique_et_ia_policy_reform]]
+- [[conseil_regulation_algorithmique_policy_reform]]
+- [[consortium_nexus_calcul_policy_reform]]
+- [[consortiums_d_optimisation_rh_algorithmique_policy_reform]]
+- [[front_techno_utopiste_de_la_decision_automatisee_policy_reform]]
+- [[oracle_des_seuils_policy_reform]]
+- [[reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform]]
+- [[union_technocratique_eurasiatique_policy_reform]]
+**Opposants :**
+- [[coalition_des_souverainistes_numeriques_policy_reform]]
+- [[courant_autoritaire_recuperateur_du_vocabulaire_communautaire_policy_reform]]
+- [[factions_technocratiques_de_la_marchandisation_hydrique_policy_reform]]
+- [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+- [[reseau_des_regulateurs_numeriques_souverains_rrns_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

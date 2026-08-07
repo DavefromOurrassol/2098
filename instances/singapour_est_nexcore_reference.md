@@ -4,6 +4,7 @@ type: instance
 slug: singapour_est_nexcore_reference
 entite: singapour_est_nexcore
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: singapour_est_nexcore
   lieu: Corridor est de Singapour
@@ -36,19 +37,20 @@ zone_systemique:
     - économie
 
 alliances:
-    - nexcore_reference
-    - consortium_des_grandes_plateformes_logistiques_globales_reference
-    - fonds_souverains_de_la_ceinture_financiere_pacifique_reference
-    - confederation_des_megapoles_autonomes_reference
-    - operateurs_de_zones_economiques_speciales_periurbaines_reference
-
+- confederation_des_megapoles_autonomes_reference
+- consortium_des_grandes_plateformes_logistiques_globales_reference
+- consortium_indo_pacifique_de_l_hydrogene_reference
+- fonds_souverains_de_la_ceinture_financiere_pacifique_reference
+- neuroharmonics_reference
+- nexcore_reference
+- operateurs_de_zones_economiques_speciales_periurbaines_reference
+- singapour_est_reference
 oppositions:
-    - consortium_logistique_asiatique_de_contournement_aln_reference
-    - bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference
-    - coalition_pour_la_souverainete_numerique_nationale_reference
-    - milices_concurrentes_des_droits_de_passage_reference
-    - mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
-
+- bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference
+- coalition_pour_la_souverainete_numerique_nationale_reference
+- consortium_logistique_asiatique_de_contournement_aln_reference
+- milices_concurrentes_des_droits_de_passage_reference
+- mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
 type_relation_dominante: dépendance
 
 annee_debut: 2061
@@ -92,12 +94,26 @@ Singapour Est Nexcore gère les systèmes de routage logistique et de certificat
 - [[systeme_economique_redistribution]]
 - [[gouvernance_institutions]]
 
-## Relations
-**Alliés** : [[nexcore_reference]], [[consortium_des_grandes_plateformes_logistiques_globales_reference]], [[fonds_souverains_de_la_ceinture_financiere_pacifique_reference]], [[confederation_des_megapoles_autonomes_reference]], [[operateurs_de_zones_economiques_speciales_periurbaines_reference]]
-**Opposants** : [[consortium_logistique_asiatique_de_contournement_aln_reference]], [[bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference]], [[coalition_pour_la_souverainete_numerique_nationale_reference]], [[milices_concurrentes_des_droits_de_passage_reference]], [[mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference]]
 
 ## Description journalistique
 Dans le corridor est de Singapour, les conteneurs ne bougent pas sans que Singapour Est Nexcore le sache — et souvent, sans qu'elle le veuille. Née dans les années 2060 de la désintégration des standards ISO maritimes et de la paralysie progressive des régulateurs étatiques régionaux, l'organisation s'est substituée aux institutions défaillantes avec une efficacité qui force l'admiration et l'inquiétude à parts égales. Ses serveurs traitent chaque jour les manifestes de transit de plus de quatre cents corporations opérant en Asie du Sud-Est, ses algorithmes arbitrent les conflits de priorité entre flux d'hydrogène liquéfié et semiconducteurs, et ses représentants siègent — sans titre officiel — dans les comités de pilotage des autorités portuaires de la région. À Singapour, on dit que Nexcore Est ne gouverne pas : elle administre. La nuance est politique, mais la réalité est sans ambiguïté.
 
 ## Tensions narratives
 La tension centrale de Singapour Est Nexcore tient à ce paradoxe : plus elle étend son emprise sur le corridor, plus elle devient vulnérable à toute perturbation de l'ordre régional qu'elle a contribué à façonner — un conflit entre blocs, une dislocation portuaire, ou l'émergence d'un concurrent comme le Consortium Logistique Asiatique de Contournement ALN pourrait effacer en quelques semaines une décennie de construction patiente. Par ailleurs, les gouvernements locaux qui tolèrent son rôle quasi-étatique commencent à réclamer des contreparties formelles, menaçant de régulariser ce que Nexcore Est préfère maintenir dans le flou. Enfin, sa relation ambiguë avec NexCore Global soulève une question non résolue : est-elle une filiale autonome, une franchise territoriale, ou un concurrent potentiel que la maison-mère surveille avec une méfiance croissante ?
+
+## Relations
+**Alliés :**
+- [[confederation_des_megapoles_autonomes_reference]]
+- [[consortium_des_grandes_plateformes_logistiques_globales_reference]]
+- [[consortium_indo_pacifique_de_l_hydrogene_reference]]
+- [[fonds_souverains_de_la_ceinture_financiere_pacifique_reference]]
+- [[neuroharmonics_reference]]
+- [[nexcore_reference]]
+- [[operateurs_de_zones_economiques_speciales_periurbaines_reference]]
+- [[singapour_est_reference]]
+**Opposants :**
+- [[bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference]]
+- [[coalition_pour_la_souverainete_numerique_nationale_reference]]
+- [[consortium_logistique_asiatique_de_contournement_aln_reference]]
+- [[milices_concurrentes_des_droits_de_passage_reference]]
+- [[mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference]]

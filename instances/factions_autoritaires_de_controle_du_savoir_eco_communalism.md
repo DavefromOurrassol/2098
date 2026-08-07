@@ -31,8 +31,31 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- cartels_de_narration_de_penurie_eco_communalism
+- consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism
+- courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism
+- directive_kontinuum_eco_communalism
+- factions_autoritaires_locales_identitaires_exclusionnistes_eco_communalism
+- fragments_d_etats_centraux_residuels_eco_communalism
+- reseaux_de_notables_communautaires_capturistes_eco_communalism
+oppositions:
+- archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
+- assemblees_bioterritoriales_regionales_eco_communalism
+- collectifs_de_cartographie_ecologique_participative_eco_communalism
+- collectifs_de_geo_observateurs_citoyens_eco_communalism
+- consortium_africain_de_biotechnologies_sociales_eco_communalism
+- cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
+- guildes_des_semenciers_itinerants_eco_communalism
+- ligue_des_cites_du_sahel_numerique_eco_communalism
+- mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism
+- oracle_des_seuils_eco_communalism
+- reseau_mnemos_eco_communalism
+- reseaux_de_bibliotheques_archives_communautaires_eco_communalism
+- reseaux_de_radio_communautaire_basse_consommation_eco_communalism
+- reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
+- trame_mnemos_noeud_reseau_eco_communalism
+- universite_nomade_eco_communalism
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -94,6 +117,34 @@ La tension centrale réside dans le fait que certaines de leurs critiques — no
 - [[technologie_information]]
 - [[gouvernance_institutions]]
 - [[valeurs_culture_tempo_sociale]]
+
+
+## Relations
+**Alliés :**
+- [[cartels_de_narration_de_penurie_eco_communalism]]
+- [[consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism]]
+- [[courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism]]
+- [[directive_kontinuum_eco_communalism]]
+- [[factions_autoritaires_locales_identitaires_exclusionnistes_eco_communalism]]
+- [[fragments_d_etats_centraux_residuels_eco_communalism]]
+- [[reseaux_de_notables_communautaires_capturistes_eco_communalism]]
+**Opposants :**
+- [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]]
+- [[assemblees_bioterritoriales_regionales_eco_communalism]]
+- [[collectifs_de_cartographie_ecologique_participative_eco_communalism]]
+- [[collectifs_de_geo_observateurs_citoyens_eco_communalism]]
+- [[consortium_africain_de_biotechnologies_sociales_eco_communalism]]
+- [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]
+- [[guildes_des_semenciers_itinerants_eco_communalism]]
+- [[ligue_des_cites_du_sahel_numerique_eco_communalism]]
+- [[mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism]]
+- [[oracle_des_seuils_eco_communalism]]
+- [[reseau_mnemos_eco_communalism]]
+- [[reseaux_de_bibliotheques_archives_communautaires_eco_communalism]]
+- [[reseaux_de_radio_communautaire_basse_consommation_eco_communalism]]
+- [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
+- [[trame_mnemos_noeud_reseau_eco_communalism]]
+- [[universite_nomade_eco_communalism]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

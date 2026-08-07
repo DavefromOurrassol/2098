@@ -30,11 +30,14 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
-- siege_genevois_cars_fortress_world
 - bunker_chambre_securite_territoriale_fortress_world
+- conseil_regulation_ressources_fortress_world
+- oracle_des_seuils_fortress_world
+- siege_genevois_cars_fortress_world
+- tribunal_algorithmique_de_bruxelles_fortress_world
 oppositions:
-- conseil_moscou_est_fortress_world
 - anba_siege_atlantique_fortress_world
+- conseil_moscou_est_fortress_world
 - datacenters_conseil_eurasiatique_fortress_world
 type_relation_dominante: compétition
 annee_debut: 2026
@@ -101,13 +104,17 @@ La tension centrale réside dans l'impossibilité structurelle de neutralité : 
 - [[geopolitique_conflits]]
 - [[organisation_territoires]]
 
+
 ## Relations
 **Alliés :**
-- [[siege_genevois_cars_fortress_world]]
 - [[bunker_chambre_securite_territoriale_fortress_world]]
+- [[conseil_regulation_ressources_fortress_world]]
+- [[oracle_des_seuils_fortress_world]]
+- [[siege_genevois_cars_fortress_world]]
+- [[tribunal_algorithmique_de_bruxelles_fortress_world]]
 **Opposants :**
-- [[conseil_moscou_est_fortress_world]]
 - [[anba_siege_atlantique_fortress_world]]
+- [[conseil_moscou_est_fortress_world]]
 - [[datacenters_conseil_eurasiatique_fortress_world]]
 
 ## Notes

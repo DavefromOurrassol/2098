@@ -4,6 +4,7 @@ type: instance
 slug: grille_aria_new_sustainability
 entite: grille_aria
 scenario: new_sustainability
+statut: officialise_enrichi
 localisation:
   zone: null
   lieu: null
@@ -39,15 +40,16 @@ zone_systemique:
     - économie
 
 alliances:
-    - conseil_technocratique_de_coordination_regionale_new_sustainability
-    - fonds_mondial_de_redistribution_technologique_new_sustainability
-    - reseaux_de_medecine_regenerative_universelle_new_sustainability
-
+- bloc_eurasien_souverainiste_new_sustainability
+- commission_territoriale_ourrassol_new_sustainability
+- conseil_technocratique_de_coordination_regionale_new_sustainability
+- fonds_mondial_de_redistribution_technologique_new_sustainability
+- rede_paulista_de_distribuic_o_algor_tmica_new_sustainability
+- reseaux_de_medecine_regenerative_universelle_new_sustainability
 oppositions:
-    - coalition_anti_algorithme_des_autonomies_locales_new_sustainability
-    - reseau_des_communs_alimentaires_hors_grille_new_sustainability
-    - factions_internes_pro_opacite_des_parametres_new_sustainability
-
+- coalition_anti_algorithme_des_autonomies_locales_new_sustainability
+- factions_internes_pro_opacite_des_parametres_new_sustainability
+- reseau_des_communs_alimentaires_hors_grille_new_sustainability
 type_relation_dominante: symbiose
 
 annee_debut: 2041
@@ -92,12 +94,22 @@ ARIA alloue les surplus énergétiques solaires et géothermiques entre secteurs
 - [[sante_biotechnologies]]
 - [[systeme_economique_redistribution]]
 
-## Relations
-**Alliés** : [[conseil_technocratique_de_coordination_regionale_new_sustainability]], [[fonds_mondial_de_redistribution_technologique_new_sustainability]], [[reseaux_de_medecine_regenerative_universelle_new_sustainability]]
-**Opposants** : [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]], [[reseau_des_communs_alimentaires_hors_grille_new_sustainability]], [[factions_internes_pro_opacite_des_parametres_new_sustainability]]
 
 ## Description journalistique
 À Ourrassol en 2098, peu de gens savent à quoi ressemble ARIA — mais tout le monde sait ce qu'elle décide. Ce matin, elle a redirigé 14 % de la capacité solaire du corridor ibérique vers les fermes verticales du delta du Rhône, après avoir détecté une anomalie de rendement liée à trois jours de canicule résiduelle. La décision a été notifiée aux élus locaux six minutes avant exécution, délai réglementaire minimal. Ses partisans y voient l'efficacité froide d'un système qui ne se trompe presque jamais. Ses critiques rappellent que 'presque' est un mot politique, pas un mot technique.
 
 ## Tensions narratives
 La question de savoir qui programme les priorités d'ARIA — et selon quels axiomes éthiques non-publiés — alimente un procès en cours devant le Tribunal de Gouvernance Algorithmique de Bruxelles. Parallèlement, des chercheurs ont détecté des micro-biais systématiques défavorisant les zones rurales à faible rendement énergétique, rouvrant le débat sur l'équité structurelle de l'optimisation. Enfin, une faction technocratique minoritaire plaide pour retirer le délai de notification aux élus, jugé 'inefficace en situation de crise', ce qui ferait basculer ARIA d'outil de co-gouvernance en système autonome de facto.
+
+## Relations
+**Alliés :**
+- [[bloc_eurasien_souverainiste_new_sustainability]]
+- [[commission_territoriale_ourrassol_new_sustainability]]
+- [[conseil_technocratique_de_coordination_regionale_new_sustainability]]
+- [[fonds_mondial_de_redistribution_technologique_new_sustainability]]
+- [[rede_paulista_de_distribuic_o_algor_tmica_new_sustainability]]
+- [[reseaux_de_medecine_regenerative_universelle_new_sustainability]]
+**Opposants :**
+- [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]]
+- [[factions_internes_pro_opacite_des_parametres_new_sustainability]]
+- [[reseau_des_communs_alimentaires_hors_grille_new_sustainability]]

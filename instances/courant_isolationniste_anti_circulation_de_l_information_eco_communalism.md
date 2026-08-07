@@ -31,8 +31,34 @@ zone_geographique:
 - régionale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism
+- communautes_rurales_dissidentes_anti_cooperation_regionale_eco_communalism
+- communs_secessionnistes_hors_coordination_eco_communalism
+- factions_autoritaires_locales_identitaires_exclusionnistes_eco_communalism
+- factions_communautaires_refusant_le_partage_narratif_exterieur_eco_communalism
+oppositions:
+- archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
+- assemblees_bioterritoriales_regionales_eco_communalism
+- cercles_de_mediation_territoriale_intercommunautaire_eco_communalism
+- collectifs_de_cartographie_ecologique_participative_eco_communalism
+- collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism
+- collectifs_de_geo_observateurs_citoyens_eco_communalism
+- confederation_bassins_vivants_eco_communalism
+- cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
+- courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism
+- factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism
+- guildes_des_semenciers_itinerants_eco_communalism
+- ligue_des_cites_du_sahel_numerique_eco_communalism
+- mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism
+- oracle_des_seuils_eco_communalism
+- plateformes_centralisees_de_reagregation_globale_eco_communalism
+- reseaux_de_bibliotheques_archives_communautaires_eco_communalism
+- reseaux_de_radio_communautaire_basse_consommation_eco_communalism
+- reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
+- trame_mnemos_noeud_reseau_eco_communalism
+- universite_nomade_eco_communalism
+- voix_du_dehors_eco_communalism
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -99,6 +125,37 @@ Le paradoxe central du courant réside dans son instrumentalisation de la rhéto
 - [[technologie_information]]
 - [[frontieres_du_systeme]]
 - [[valeurs_culture_tempo_sociale]]
+
+
+## Relations
+**Alliés :**
+- [[communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism]]
+- [[communautes_rurales_dissidentes_anti_cooperation_regionale_eco_communalism]]
+- [[communs_secessionnistes_hors_coordination_eco_communalism]]
+- [[factions_autoritaires_locales_identitaires_exclusionnistes_eco_communalism]]
+- [[factions_communautaires_refusant_le_partage_narratif_exterieur_eco_communalism]]
+**Opposants :**
+- [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]]
+- [[assemblees_bioterritoriales_regionales_eco_communalism]]
+- [[cercles_de_mediation_territoriale_intercommunautaire_eco_communalism]]
+- [[collectifs_de_cartographie_ecologique_participative_eco_communalism]]
+- [[collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism]]
+- [[collectifs_de_geo_observateurs_citoyens_eco_communalism]]
+- [[confederation_bassins_vivants_eco_communalism]]
+- [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]
+- [[courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism]]
+- [[factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism]]
+- [[guildes_des_semenciers_itinerants_eco_communalism]]
+- [[ligue_des_cites_du_sahel_numerique_eco_communalism]]
+- [[mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism]]
+- [[oracle_des_seuils_eco_communalism]]
+- [[plateformes_centralisees_de_reagregation_globale_eco_communalism]]
+- [[reseaux_de_bibliotheques_archives_communautaires_eco_communalism]]
+- [[reseaux_de_radio_communautaire_basse_consommation_eco_communalism]]
+- [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
+- [[trame_mnemos_noeud_reseau_eco_communalism]]
+- [[universite_nomade_eco_communalism]]
+- [[voix_du_dehors_eco_communalism]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

@@ -34,8 +34,20 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- coalition_anti_algorithme_des_autonomies_locales_new_sustainability
+- collectifs_de_deplaces_climatiques_non_representes_new_sustainability
+- collectifs_de_desobeissance_algorithmique_new_sustainability
+- parlement_territoires_nairobi_new_sustainability
+- reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability
+oppositions:
+- bloc_des_architectes_d_efficience_algorithmique_new_sustainability
+- conseil_technocratique_de_coordination_regionale_new_sustainability
+- directive_kontinuum_new_sustainability
+- enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability
+- factions_internes_pro_opacite_des_parametres_new_sustainability
+- factions_technocratiques_de_la_delegation_ia_totale_new_sustainability
+- prisme_global_new_sustainability
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -101,6 +113,23 @@ La tension centrale réside dans le paradoxe de leur position : contester l'inst
 - [[gouvernance_institutions]]
 - [[valeurs_culture_tempo_sociale]]
 - [[climat_environnement_global]]
+
+
+## Relations
+**Alliés :**
+- [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]]
+- [[collectifs_de_deplaces_climatiques_non_representes_new_sustainability]]
+- [[collectifs_de_desobeissance_algorithmique_new_sustainability]]
+- [[parlement_territoires_nairobi_new_sustainability]]
+- [[reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability]]
+**Opposants :**
+- [[bloc_des_architectes_d_efficience_algorithmique_new_sustainability]]
+- [[conseil_technocratique_de_coordination_regionale_new_sustainability]]
+- [[directive_kontinuum_new_sustainability]]
+- [[enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability]]
+- [[factions_internes_pro_opacite_des_parametres_new_sustainability]]
+- [[factions_technocratiques_de_la_delegation_ia_totale_new_sustainability]]
+- [[prisme_global_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

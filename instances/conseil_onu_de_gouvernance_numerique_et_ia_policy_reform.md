@@ -30,8 +30,31 @@ zone_geographique:
 - régionale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- bureau_gouvernance_algorithmique_policy_reform
+- bureau_international_du_travail_augmente_bita_policy_reform
+- collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform
+- conseil_de_gouvernance_de_l_information_policy_reform
+- conseil_intergouvernemental_de_regulation_technologique_policy_reform
+- conseil_regulation_algorithmique_policy_reform
+- consortium_des_ia_editoriales_certifiees_policy_reform
+- consortium_nexus_calcul_policy_reform
+- consortium_technologique_des_nations_integrees_policy_reform
+- directive_kontinuum_policy_reform
+- institut_brookings_singapour_de_politique_computationnelle_policy_reform
+- leena_vainala_policy_reform
+- oracle_des_seuils_policy_reform
+- rede_paulista_de_distribuic_o_algor_tmica_policy_reform
+- reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
+- reseau_des_regulateurs_numeriques_souverains_rrns_policy_reform
+- reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform
+- tribunal_algorithmique_de_bruxelles_policy_reform
+oppositions:
+- coalition_des_souverainistes_numeriques_policy_reform
+- consortiums_prives_de_gouvernance_algorithmique_policy_reform
+- front_de_souverainete_biologique_eurasiatique_policy_reform
+- front_souverainiste_des_blocs_non_signataires_policy_reform
+- union_technocratique_eurasiatique_policy_reform
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -95,6 +118,34 @@ Le Conseil est écartelé entre sa vocation universaliste et le refus croissant 
 - [[gouvernance_institutions]]
 - [[technologie_information]]
 - [[geopolitique_conflits]]
+
+
+## Relations
+**Alliés :**
+- [[bureau_gouvernance_algorithmique_policy_reform]]
+- [[bureau_international_du_travail_augmente_bita_policy_reform]]
+- [[collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform]]
+- [[conseil_de_gouvernance_de_l_information_policy_reform]]
+- [[conseil_intergouvernemental_de_regulation_technologique_policy_reform]]
+- [[conseil_regulation_algorithmique_policy_reform]]
+- [[consortium_des_ia_editoriales_certifiees_policy_reform]]
+- [[consortium_nexus_calcul_policy_reform]]
+- [[consortium_technologique_des_nations_integrees_policy_reform]]
+- [[directive_kontinuum_policy_reform]]
+- [[institut_brookings_singapour_de_politique_computationnelle_policy_reform]]
+- [[leena_vainala_policy_reform]]
+- [[oracle_des_seuils_policy_reform]]
+- [[rede_paulista_de_distribuic_o_algor_tmica_policy_reform]]
+- [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]]
+- [[reseau_des_regulateurs_numeriques_souverains_rrns_policy_reform]]
+- [[reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform]]
+- [[tribunal_algorithmique_de_bruxelles_policy_reform]]
+**Opposants :**
+- [[coalition_des_souverainistes_numeriques_policy_reform]]
+- [[consortiums_prives_de_gouvernance_algorithmique_policy_reform]]
+- [[front_de_souverainete_biologique_eurasiatique_policy_reform]]
+- [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+- [[union_technocratique_eurasiatique_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

@@ -4,6 +4,7 @@ type: instance
 slug: agence_stabilisation_climatique_policy_reform
 entite: agence_stabilisation_climatique
 scenario: policy_reform
+statut: officialise_enrichi
 localisation:
   zone: hub_europeen_regulation
   lieu: Genève-Lacustre
@@ -35,17 +36,28 @@ zone_systemique:
     - société
 
 alliances:
-    - consortium_technologique_des_nations_integrees_policy_reform
-    - fonds_mondial_de_resilience_infrastructurelle_policy_reform
-    - reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference
-    - agence_internationale_de_l_energie_reformatee_aier_policy_reform
-
+- agence_internationale_de_l_energie_reformatee_aier_policy_reform
+- agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
+- autorite_continentale_des_ressources_aquatiques_acra_policy_reform
+- bloc_des_nations_a_economie_carbone_controlee_policy_reform
+- conseil_de_regulation_climatique_global_policy_reform
+- consortium_amazonia_viva_policy_reform
+- consortium_de_geo_ingenierie_atmospherique_pacifique_policy_reform
+- consortium_des_villes_etats_durables_policy_reform
+- consortium_technologique_des_nations_integrees_policy_reform
+- fonds_mondial_de_resilience_infrastructurelle_policy_reform
+- oracle_des_seuils_policy_reform
+- reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference
+- reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform
+- reseaux_de_capteurs_ia_climatiques_deployes_par_les_etats_membres_policy_reform
 oppositions:
-    - mouvement_pour_la_souverainete_territoriale_absolue_policy_reform
-    - collectifs_de_resistance_aux_relocalisations_forcees_policy_reform
-    - etats_dissidents_du_bloc_austral_policy_reform
-    - lobbies_des_energies_fossiles_residuelles_policy_reform
-
+- coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform
+- collectifs_de_resistance_aux_relocalisations_forcees_policy_reform
+- etats_dissidents_du_bloc_austral_policy_reform
+- front_souverainiste_des_blocs_non_signataires_policy_reform
+- lobbies_des_energies_fossiles_residuelles_policy_reform
+- mouvement_pour_la_justice_ecologique_communautaire_policy_reform
+- mouvement_pour_la_souverainete_territoriale_absolue_policy_reform
 type_relation_dominante: coopération
 
 annee_debut: 2031
@@ -89,12 +101,34 @@ L'AMSC émet des mandats climatiques contraignants applicables aux 147 États si
 - [[demographie_mobilite_humaine]]
 - [[energie_ressources_critiques]]
 
-## Relations
-**Alliés** : [[consortium_technologique_des_nations_integrees_policy_reform]], [[fonds_mondial_de_resilience_infrastructurelle_policy_reform]], [[reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference]], [[agence_internationale_de_l_energie_reformatee_aier_policy_reform]]
-**Opposants** : [[mouvement_pour_la_souverainete_territoriale_absolue_policy_reform]], [[collectifs_de_resistance_aux_relocalisations_forcees_policy_reform]], [[etats_dissidents_du_bloc_austral_policy_reform]], [[lobbies_des_energies_fossiles_residuelles_policy_reform]]
 
 ## Description journalistique
 Depuis son siège flottant de Genève-Lacustre — une plateforme modulaire construite sur les eaux montées du lac Léman — l'AMSC gère en silence ce que les gouvernements élus n'ont jamais osé décider. Ses 4 200 techniciens, climatologues et coordinateurs migratoires ne sont pas élus ; ils sont certifiés. Chaque matin, ses algorithmes de décision climato-sociale publient des 'recommandations contraignantes' que les États appliquent sans débat parlementaire, faute de capacités alternatives. Pour ses défenseurs, l'AMSC est la raison pour laquelle l'effondrement n'a pas eu lieu. Pour ses critiques, elle est la preuve que l'effondrement démocratique, lui, est déjà consommé.
 
 ## Tensions narratives
 La légitimité de l'AMSC repose sur son efficacité : si une intervention géo-ingénieriste majeure échoue ou produit des effets secondaires catastrophiques sur une région non consultée, toute l'architecture de confiance s'effondre. Par ailleurs, la tension entre sa mission de stabilisation globale et les intérêts nationaux des États membres s'intensifie à mesure que les zones inhabitables se rapprochent des territoires des puissances fondatrices. Enfin, une faction interne — les 'Réformistes du Mandat' — pousse à l'organisation d'un référendum mondial sur la légitimité de l'Agence, une initiative que la direction centrale bloque systématiquement au nom de 'l'urgence opérationnelle permanente'.
+
+## Relations
+**Alliés :**
+- [[agence_internationale_de_l_energie_reformatee_aier_policy_reform]]
+- [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]
+- [[autorite_continentale_des_ressources_aquatiques_acra_policy_reform]]
+- [[bloc_des_nations_a_economie_carbone_controlee_policy_reform]]
+- [[conseil_de_regulation_climatique_global_policy_reform]]
+- [[consortium_amazonia_viva_policy_reform]]
+- [[consortium_de_geo_ingenierie_atmospherique_pacifique_policy_reform]]
+- [[consortium_des_villes_etats_durables_policy_reform]]
+- [[consortium_technologique_des_nations_integrees_policy_reform]]
+- [[fonds_mondial_de_resilience_infrastructurelle_policy_reform]]
+- [[oracle_des_seuils_policy_reform]]
+- [[reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference]]
+- [[reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform]]
+- [[reseaux_de_capteurs_ia_climatiques_deployes_par_les_etats_membres_policy_reform]]
+**Opposants :**
+- [[coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform]]
+- [[collectifs_de_resistance_aux_relocalisations_forcees_policy_reform]]
+- [[etats_dissidents_du_bloc_austral_policy_reform]]
+- [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+- [[lobbies_des_energies_fossiles_residuelles_policy_reform]]
+- [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]]
+- [[mouvement_pour_la_souverainete_territoriale_absolue_policy_reform]]

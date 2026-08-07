@@ -4,6 +4,7 @@ type: instance
 slug: rede_paulista_de_distribuic_o_algor_tmica_fortress_world
 entite: rede_paulista_de_distribuic_o_algor_tmica
 scenario: fortress_world
+statut: officialise_enrichi
 localisation:
   zone: sao_paulo_megapole
   lieu: São Paulo

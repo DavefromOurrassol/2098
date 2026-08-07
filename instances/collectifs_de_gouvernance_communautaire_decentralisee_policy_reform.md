@@ -35,8 +35,40 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- coalition_des_semences_libres_policy_reform
+- coalition_des_villes_de_reconversion_policy_reform
+- collectifs_citoyens_de_deliberation_augmentee_policy_reform
+- collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform
+- collectifs_de_biohackers_agro_communautaires_policy_reform
+- collectifs_de_defense_hydrique_saheliens_policy_reform
+- collectifs_de_hackers_biospheriques_policy_reform
+- collectifs_de_resistance_aux_relocalisations_forcees_policy_reform
+- consortium_africain_de_biotechnologies_sociales_policy_reform
+- consortium_amazonia_viva_policy_reform
+- consortium_des_villes_etats_durables_policy_reform
+- courants_post_technocratiques_de_reconquete_democratique_policy_reform
+- factions_internes_pro_desaugmentation_totale_policy_reform
+- front_des_autonomies_territoriales_radicales_policy_reform
+- great_lakes_autonomous_compact_policy_reform
+- internationale_decroissante_anti_planification_policy_reform
+- les_veilleurs_du_fleuve_policy_reform
+- mouvement_pour_la_justice_ecologique_communautaire_policy_reform
+- mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform
+- reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
+oppositions:
+- agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
+- assemblee_territoires_policy_reform
+- bureau_gouvernance_algorithmique_policy_reform
+- conseil_intergouvernemental_de_regulation_technologique_policy_reform
+- conseil_regulation_algorithmique_policy_reform
+- consortiums_prives_de_gouvernance_algorithmique_policy_reform
+- courant_autoritaire_recuperateur_du_vocabulaire_communautaire_policy_reform
+- directive_kontinuum_policy_reform
+- factions_technocratiques_de_la_marchandisation_hydrique_policy_reform
+- front_techno_utopiste_de_la_decision_automatisee_policy_reform
+- rede_paulista_de_distribuic_o_algor_tmica_policy_reform
+- reseau_des_agences_sanitaires_regionales_policy_reform
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -100,6 +132,43 @@ Ces collectifs sont tiraillés entre leur vocation radicalement locale et la né
 - [[gouvernance_institutions]]
 - [[organisation_territoires]]
 - [[valeurs_culture_tempo_sociale]]
+
+
+## Relations
+**Alliés :**
+- [[coalition_des_semences_libres_policy_reform]]
+- [[coalition_des_villes_de_reconversion_policy_reform]]
+- [[collectifs_citoyens_de_deliberation_augmentee_policy_reform]]
+- [[collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform]]
+- [[collectifs_de_biohackers_agro_communautaires_policy_reform]]
+- [[collectifs_de_defense_hydrique_saheliens_policy_reform]]
+- [[collectifs_de_hackers_biospheriques_policy_reform]]
+- [[collectifs_de_resistance_aux_relocalisations_forcees_policy_reform]]
+- [[consortium_africain_de_biotechnologies_sociales_policy_reform]]
+- [[consortium_amazonia_viva_policy_reform]]
+- [[consortium_des_villes_etats_durables_policy_reform]]
+- [[courants_post_technocratiques_de_reconquete_democratique_policy_reform]]
+- [[factions_internes_pro_desaugmentation_totale_policy_reform]]
+- [[front_des_autonomies_territoriales_radicales_policy_reform]]
+- [[great_lakes_autonomous_compact_policy_reform]]
+- [[internationale_decroissante_anti_planification_policy_reform]]
+- [[les_veilleurs_du_fleuve_policy_reform]]
+- [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]]
+- [[mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform]]
+- [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]]
+**Opposants :**
+- [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]
+- [[assemblee_territoires_policy_reform]]
+- [[bureau_gouvernance_algorithmique_policy_reform]]
+- [[conseil_intergouvernemental_de_regulation_technologique_policy_reform]]
+- [[conseil_regulation_algorithmique_policy_reform]]
+- [[consortiums_prives_de_gouvernance_algorithmique_policy_reform]]
+- [[courant_autoritaire_recuperateur_du_vocabulaire_communautaire_policy_reform]]
+- [[directive_kontinuum_policy_reform]]
+- [[factions_technocratiques_de_la_marchandisation_hydrique_policy_reform]]
+- [[front_techno_utopiste_de_la_decision_automatisee_policy_reform]]
+- [[rede_paulista_de_distribuic_o_algor_tmica_policy_reform]]
+- [[reseau_des_agences_sanitaires_regionales_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

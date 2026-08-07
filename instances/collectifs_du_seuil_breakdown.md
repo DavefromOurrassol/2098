@@ -4,6 +4,7 @@ type: instance
 slug: collectifs_du_seuil_breakdown
 entite: collectifs_du_seuil
 scenario: breakdown
+statut: officialise_enrichi
 localisation:
   zone: arc_sahelo_mediterraneen
   lieu: Lyon / axe A7 / arc Marseille-Tunis
@@ -35,15 +36,17 @@ zone_systemique:
     - énergie
 
 alliances:
-    - reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism
-    - factions_secessionnistes_agrariennes_du_desert_breakdown
-    - collectif_hackers_decroissance_infrastructure_breakdown
-
+- arctique_nordark_breakdown
+- collectif_hackers_decroissance_infrastructure_breakdown
+- communes_rust_belt_zones_libres_breakdown
+- consortium_amazonia_viva_breakdown
+- factions_secessionnistes_agrariennes_du_desert_breakdown
+- oracle_des_seuils_breakdown
+- reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism
 oppositions:
-    - gouvernements_regionaux_residuels_reterritorialisants_breakdown
-    - front_humanitaire_d_urgence_non_affilie_breakdown
-    - front_techno_reconstructionniste_breakdown
-
+- front_humanitaire_d_urgence_non_affilie_breakdown
+- front_techno_reconstructionniste_breakdown
+- gouvernements_regionaux_residuels_reterritorialisants_breakdown
 type_relation_dominante: conflit
 
 annee_debut: 2026
@@ -87,12 +90,23 @@ Gestion d'enclaves autosuffisantes fondées sur des protocoles ritualisés de ra
 - [[organisation_territoires]]
 - [[energie_ressources_critiques]]
 
-## Relations
-**Alliés** : [[reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism]], [[factions_secessionnistes_agrariennes_du_desert_breakdown]], [[collectif_hackers_decroissance_infrastructure_breakdown]]
-**Opposants** : [[gouvernements_regionaux_residuels_reterritorialisants_breakdown]], [[front_humanitaire_d_urgence_non_affilie_breakdown]], [[front_techno_reconstructionniste_breakdown]]
 
 ## Description journalistique
 Au carrefour des ruines de l'autoroute A7 et d'un ancien complexe logistique désaffecté près de ce qui fut Lyon, une bannière de tissu brûlé porte ces mots brodés : 'Nous l'avions vu'. Les Confédérations du Seuil Dernier ne ressemblent à rien de ce que le monde d'avant appelait une secte ou une commune. Ce sont des forteresses de sens dans un monde qui en a perdu. Leurs enclaves accueillent des ingénieurs reconvertis en liturgistes, des mères seules venues de Tunis ou de Marseille, des adolescents qui n'ont connu que la crise. Leur force n'est pas militaire — elle est narrative. Dans un monde où personne ne comprend plus ce qui arrive, eux disent qu'ils le savaient, et que la suite appartient à ceux qui ont su attendre.
 
 ## Tensions narratives
 La fracture entre les factions 'attentistes' qui refusent toute action offensive et les 'accélérationnistes' qui sabotent activement les dernières infrastructures régionales pour hâter la purification est en train de déchirer le réseau de l'intérieur. Certaines enclaves commencent à exercer un pouvoir territorial quasi-étatique, trahissant leur doctrine anti-institutionnelle. Et une question non résolue hante les anciens : si le Seuil est déjà franchi, si l'effondrement est là — que prophétise-t-on encore, et à qui ?
+
+## Relations
+**Alliés :**
+- [[arctique_nordark_breakdown]]
+- [[collectif_hackers_decroissance_infrastructure_breakdown]]
+- [[communes_rust_belt_zones_libres_breakdown]]
+- [[consortium_amazonia_viva_breakdown]]
+- [[factions_secessionnistes_agrariennes_du_desert_breakdown]]
+- [[oracle_des_seuils_breakdown]]
+- [[reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism]]
+**Opposants :**
+- [[front_humanitaire_d_urgence_non_affilie_breakdown]]
+- [[front_techno_reconstructionniste_breakdown]]
+- [[gouvernements_regionaux_residuels_reterritorialisants_breakdown]]

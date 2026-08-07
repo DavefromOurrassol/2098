@@ -30,8 +30,25 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- collectifs_citoyens_de_deliberation_augmentee_policy_reform
+- collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform
+- collectifs_de_gouvernance_communautaire_decentralisee_policy_reform
+- courants_post_technocratiques_de_reconquete_democratique_policy_reform
+- front_des_souverainistes_energetiques_policy_reform
+- mouvement_pour_la_justice_ecologique_communautaire_policy_reform
+- mouvement_pour_la_souverainete_territoriale_absolue_policy_reform
+- reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
+- reseau_des_journalistes_d_investigation_energetique_policy_reform
+oppositions:
+- coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform
+- conglomerats_d_automatisation_industrielle_integrale_policy_reform
+- consortium_helios_policy_reform
+- consortiums_prives_de_gouvernance_algorithmique_policy_reform
+- courant_autoritaire_recuperateur_du_vocabulaire_communautaire_policy_reform
+- factions_technocratiques_de_la_marchandisation_hydrique_policy_reform
+- lobbies_des_energies_fossiles_residuelles_policy_reform
+- reseau_des_lobbyistes_techniques_onu_energie_policy_reform
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -98,6 +115,28 @@ Le MSEC est tiraillé entre sa volonté d'influencer les institutions technocrat
 - [[energie_ressources_critiques]]
 - [[gouvernance_institutions]]
 - [[systeme_economique_redistribution]]
+
+
+## Relations
+**Alliés :**
+- [[collectifs_citoyens_de_deliberation_augmentee_policy_reform]]
+- [[collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform]]
+- [[collectifs_de_gouvernance_communautaire_decentralisee_policy_reform]]
+- [[courants_post_technocratiques_de_reconquete_democratique_policy_reform]]
+- [[front_des_souverainistes_energetiques_policy_reform]]
+- [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]]
+- [[mouvement_pour_la_souverainete_territoriale_absolue_policy_reform]]
+- [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]]
+- [[reseau_des_journalistes_d_investigation_energetique_policy_reform]]
+**Opposants :**
+- [[coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform]]
+- [[conglomerats_d_automatisation_industrielle_integrale_policy_reform]]
+- [[consortium_helios_policy_reform]]
+- [[consortiums_prives_de_gouvernance_algorithmique_policy_reform]]
+- [[courant_autoritaire_recuperateur_du_vocabulaire_communautaire_policy_reform]]
+- [[factions_technocratiques_de_la_marchandisation_hydrique_policy_reform]]
+- [[lobbies_des_energies_fossiles_residuelles_policy_reform]]
+- [[reseau_des_lobbyistes_techniques_onu_energie_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

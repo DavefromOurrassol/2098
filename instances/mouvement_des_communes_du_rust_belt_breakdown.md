@@ -4,6 +4,7 @@ type: instance
 slug: mouvement_des_communes_du_rust_belt_breakdown
 entite: mouvement_des_communes_du_rust_belt
 scenario: breakdown
+statut: officialise_enrichi
 localisation:
   zone: communes_rust_belt
   lieu: Communes Libres du Rust Belt (Detroit, Cleveland, Pittsburgh)
@@ -36,25 +37,27 @@ zone_systemique:
     - infrastructure
 
 alliances:
-    - federation_communs_territoriaux_breakdown
-    - collectifs_de_reparation_energetique_breakdown
-    - collectifs_de_sante_communautaire_autogeree_breakdown
-    - enclaves_agro_communautaires_autonomes_breakdown
-    - front_de_resistance_aux_peages_sur_les_ressources_breakdown
-    - reseaux_de_solidarite_horizontale_post_effondrement_breakdown
-    - communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
-    - brigades_medicales_itinerantes_breakdown
-    - collectif_hackers_decroissance_infrastructure_breakdown
-
+- brigades_medicales_itinerantes_breakdown
+- collectif_hackers_decroissance_infrastructure_breakdown
+- collectifs_de_reparation_energetique_breakdown
+- collectifs_de_sante_communautaire_autogeree_breakdown
+- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- communes_rust_belt_breakdown
+- communes_rust_belt_zones_libres_breakdown
+- enclaves_agro_communautaires_autonomes_breakdown
+- federation_communs_territoriaux_breakdown
+- front_de_resistance_aux_peages_sur_les_ressources_breakdown
+- midwest_desertifie_breakdown
+- reseaux_de_solidarite_horizontale_post_effondrement_breakdown
 oppositions:
-    - enclaves_corporatives_fortifiees_breakdown
-    - milices_de_controle_territorial_breakdown
-    - seigneuries_logistiques_armees_breakdown
-    - blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
-    - etats_fragmentes_nationalisant_les_stocks_breakdown
-    - consortiums_logistiques_agro_corporatifs_breakdown
-    - gouvernements_regionaux_residuels_reterritorialisants_breakdown
-
+- blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
+- consortiums_logistiques_agro_corporatifs_breakdown
+- enclaves_corporatives_fortifiees_breakdown
+- etats_fragmentes_nationalisant_les_stocks_breakdown
+- gouvernements_regionaux_residuels_reterritorialisants_breakdown
+- grandes_lacs_compact_eau_breakdown
+- milices_de_controle_territorial_breakdown
+- seigneuries_logistiques_armees_breakdown
 type_relation_dominante: conflit
 
 annee_debut: 2031
@@ -98,12 +101,33 @@ Gestion collective de micro-réseaux énergétiques hybrides (solaire, géotherm
 - [[gouvernance_institutions]]
 - [[systemes_productifs_travail]]
 
-## Relations
-**Alliés** : [[federation_communs_territoriaux_breakdown]], [[collectifs_de_reparation_energetique_breakdown]], [[collectifs_de_sante_communautaire_autogeree_breakdown]], [[enclaves_agro_communautaires_autonomes_breakdown]], [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]], [[reseaux_de_solidarite_horizontale_post_effondrement_breakdown]], [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]], [[brigades_medicales_itinerantes_breakdown]], [[collectif_hackers_decroissance_infrastructure_breakdown]]
-**Opposants** : [[enclaves_corporatives_fortifiees_breakdown]], [[milices_de_controle_territorial_breakdown]], [[seigneuries_logistiques_armees_breakdown]], [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]], [[etats_fragmentes_nationalisant_les_stocks_breakdown]], [[consortiums_logistiques_agro_corporatifs_breakdown]], [[gouvernements_regionaux_residuels_reterritorialisants_breakdown]]
 
 ## Description journalistique
 À Pittsburgh, l'ancienne usine Carrie Furnace pulse encore — non plus de l'acier, mais de la chaleur récupérée qui chauffe trois mille foyers en hiver. Les Forges du Commun ont fait de l'impensable leur quotidien : là où les multinationales ont fermé boutique et où le Commandement Atlantique n'envoie plus que des patrouilles de taxation, les assemblées de quartier décident chaque semaine de la répartition de l'énergie, du grain et des soins. Leurs délégués se déplacent à vélo entre les nœuds du réseau, portant des mandats révocables écrits à la main sur des carnets recyclés. Les envoyés du Commandement Atlantique les qualifient officiellement de 'zones grises ingouvernables' — ce que les habitants des Forges considèrent comme le plus beau titre qu'on puisse leur décerner. En 2098, le réseau compte dix-neuf communes actives et refuse toujours de se doter d'un porte-parole central.
 
 ## Tensions narratives
 La pression du Commandement Atlantique s'intensifie : des 'corridors de réintégration' sont proposés aux communes qui accepteraient une supervision énergétique externe, créant des fractures internes entre pragmatiques et radicaux. La question de l'institutionnalisation déchire le mouvement : certains nœuds, épuisés par les tensions sécuritaires, envisagent de négocier un statut juridique protégé — au risque de valider l'autorité même qu'ils refusent. Enfin, l'afflux massif de réfugiés des mégapoles effondrées dépasse les capacités d'intégration et pousse certaines communes à ériger leurs propres frontières, reproduisant malgré elles la logique d'enclavement qu'elles combattent.
+
+## Relations
+**Alliés :**
+- [[brigades_medicales_itinerantes_breakdown]]
+- [[collectif_hackers_decroissance_infrastructure_breakdown]]
+- [[collectifs_de_reparation_energetique_breakdown]]
+- [[collectifs_de_sante_communautaire_autogeree_breakdown]]
+- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[communes_rust_belt_breakdown]]
+- [[communes_rust_belt_zones_libres_breakdown]]
+- [[enclaves_agro_communautaires_autonomes_breakdown]]
+- [[federation_communs_territoriaux_breakdown]]
+- [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
+- [[midwest_desertifie_breakdown]]
+- [[reseaux_de_solidarite_horizontale_post_effondrement_breakdown]]
+**Opposants :**
+- [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
+- [[consortiums_logistiques_agro_corporatifs_breakdown]]
+- [[enclaves_corporatives_fortifiees_breakdown]]
+- [[etats_fragmentes_nationalisant_les_stocks_breakdown]]
+- [[gouvernements_regionaux_residuels_reterritorialisants_breakdown]]
+- [[grandes_lacs_compact_eau_breakdown]]
+- [[milices_de_controle_territorial_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]

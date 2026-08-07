@@ -38,8 +38,21 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- archives_neutres_de_geneve_breakdown
+- brigades_medicales_itinerantes_breakdown
+- collectifs_de_gardiens_archivistes_itinerants_breakdown
+- corridors_eurasiens_convoyage_breakdown
+- lagos_interieur_mnemos_breakdown
+- reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown
+- reseaux_de_solidarite_horizontale_post_effondrement_breakdown
+- voix_du_dehors_breakdown
+oppositions:
+- factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
+- milices_de_controle_territorial_breakdown
+- nexcore_breakdown
+- reseau_mnemos_breakdown
+- seigneuries_logistiques_armees_breakdown
 type_relation_dominante: symbiose
 annee_debut: 2026
 annee_fin: null
@@ -99,6 +112,24 @@ La tension centrale qui les traverse est celle entre mission spirituelle et inst
 - [[technologie_information]]
 - [[organisation_territoires]]
 - [[valeurs_culture_tempo_sociale]]
+
+
+## Relations
+**Alliés :**
+- [[archives_neutres_de_geneve_breakdown]]
+- [[brigades_medicales_itinerantes_breakdown]]
+- [[collectifs_de_gardiens_archivistes_itinerants_breakdown]]
+- [[corridors_eurasiens_convoyage_breakdown]]
+- [[lagos_interieur_mnemos_breakdown]]
+- [[reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown]]
+- [[reseaux_de_solidarite_horizontale_post_effondrement_breakdown]]
+- [[voix_du_dehors_breakdown]]
+**Opposants :**
+- [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]]
+- [[milices_de_controle_territorial_breakdown]]
+- [[nexcore_breakdown]]
+- [[reseau_mnemos_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

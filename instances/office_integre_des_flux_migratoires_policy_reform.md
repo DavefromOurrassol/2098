@@ -33,8 +33,23 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
+- assemblee_territoires_policy_reform
+- autorite_mondiale_du_vivant_amv_policy_reform
+- bureau_gouvernance_algorithmique_policy_reform
+- conseil_de_regulation_climatique_global_policy_reform
+- conseil_regulation_algorithmique_policy_reform
+- oracle_des_seuils_policy_reform
+- pacifique_sud_resilience_network_policy_reform
+- reseau_des_metropoles_n_uds_policy_reform
+- reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform
+oppositions:
+- coalition_des_souverainistes_numeriques_policy_reform
+- collectifs_de_resistance_aux_relocalisations_forcees_policy_reform
+- factions_technocratiques_de_la_marchandisation_hydrique_policy_reform
+- front_souverainiste_des_blocs_non_signataires_policy_reform
+- mouvement_pour_la_souverainete_territoriale_absolue_policy_reform
 type_relation_dominante: dépendance
 annee_debut: 2026
 annee_fin: null
@@ -99,6 +114,26 @@ L'Office est écartelé entre sa mission humaniste affichée — garantir des mo
 - [[demographie_mobilite_humaine]]
 - [[gouvernance_institutions]]
 - [[organisation_territoires]]
+
+
+## Relations
+**Alliés :**
+- [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]
+- [[assemblee_territoires_policy_reform]]
+- [[autorite_mondiale_du_vivant_amv_policy_reform]]
+- [[bureau_gouvernance_algorithmique_policy_reform]]
+- [[conseil_de_regulation_climatique_global_policy_reform]]
+- [[conseil_regulation_algorithmique_policy_reform]]
+- [[oracle_des_seuils_policy_reform]]
+- [[pacifique_sud_resilience_network_policy_reform]]
+- [[reseau_des_metropoles_n_uds_policy_reform]]
+- [[reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform]]
+**Opposants :**
+- [[coalition_des_souverainistes_numeriques_policy_reform]]
+- [[collectifs_de_resistance_aux_relocalisations_forcees_policy_reform]]
+- [[factions_technocratiques_de_la_marchandisation_hydrique_policy_reform]]
+- [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+- [[mouvement_pour_la_souverainete_territoriale_absolue_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

@@ -4,6 +4,7 @@ type: instance
 slug: nexcore_fortress_world
 entite: nexcore
 scenario: fortress_world
+statut: officialise_enrichi
 localisation:
   zone: bloc_atlantique
   lieu: Bloc Atlantique
@@ -31,9 +32,17 @@ zone_systemique:
   - infrastructure
   - gouvernance
 alliances:
-  - conseil_regulation_algorithmique_fortress_world
+- anba_siege_atlantique_fortress_world
+- bloc_atlantique_fortress_world
+- conseil_regulation_algorithmique_fortress_world
+- executif_militaro_civil_du_regime_fortress_world
+- front_resilient_pro_systeme_fortress_world
+- instances_aria_concurrentes_des_blocs_rivaux_fortress_world
+- nexcore_atlantique_infrastructure_fortress_world
+- oligarchies_technologiques_souveraines_d_infrastructure_de_calcul_fortress_world
 oppositions:
-  - nexcore_new_sustainability
+- factions_traditionalistes_du_mandat_electif_fortress_world
+- nexcore_new_sustainability
 type_relation_dominante: dépendance
 annee_debut: 2041
 annee_fin:
@@ -77,9 +86,6 @@ de facto en 2048. Infrastructure de surveillance autant que de communication.
 - [[gouvernance_institutions]]
 - [[systeme_economique_redistribution]]
 
-## Relations
-**Alliés** : [[conseil_regulation_algorithmique_fortress_world]]
-**Opposants** : [[nexcore_new_sustainability]]
 
 ## Description journalistique
 NexCore Bloc Atlantique n'est plus vraiment une entreprise — c'est une
@@ -92,3 +98,17 @@ comme suspect.
 Des fuites suggèrent que NexCore maintient des copies de toutes les
 communications depuis 2051. Tension entre ingénieurs et Commandement
 sur le degré de contrôle acceptable.
+
+## Relations
+**Alliés :**
+- [[anba_siege_atlantique_fortress_world]]
+- [[bloc_atlantique_fortress_world]]
+- [[conseil_regulation_algorithmique_fortress_world]]
+- [[executif_militaro_civil_du_regime_fortress_world]]
+- [[front_resilient_pro_systeme_fortress_world]]
+- [[instances_aria_concurrentes_des_blocs_rivaux_fortress_world]]
+- [[nexcore_atlantique_infrastructure_fortress_world]]
+- [[oligarchies_technologiques_souveraines_d_infrastructure_de_calcul_fortress_world]]
+**Opposants :**
+- [[factions_traditionalistes_du_mandat_electif_fortress_world]]
+- [[nexcore_new_sustainability]]

@@ -4,6 +4,7 @@ type: instance
 slug: consortium_amazonia_viva_new_sustainability
 entite: consortium_amazonia_viva
 scenario: new_sustainability
+statut: officialise_enrichi
 localisation:
   zone: belem_consortium_amazonia
   lieu: Belém — Siège du Consortium Amazônia Viva
@@ -38,29 +39,33 @@ zone_systemique:
     - infrastructure
 
 alliances:
-    - agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
-    - agence_mondiale_de_modelisation_climatique_ammc_new_sustainability
-    - agence_stabilisation_climatique_new_sustainability
-    - coalition_vivant_new_sustainability
-    - collectifs_riverains_du_bassin_du_congo_new_sustainability
-    - consortium_de_regeneration_planetaire_new_sustainability
-    - consortium_des_ia_climatiques_new_sustainability
-    - fonds_mondial_de_regeneration_ecologique_new_sustainability
-    - parlement_deliberatif_mondial_new_sustainability
-    - reseau_des_bio_communs_regionaux_new_sustainability
-    - reseau_des_ingenieurs_climatiques_du_sud_global_new_sustainability
-    - trame_bioclimatique_new_sustainability
-    - programme_onu_de_restauration_des_sols_new_sustainability
-
+- agence_mondiale_de_modelisation_climatique_ammc_new_sustainability
+- agence_stabilisation_climatique_new_sustainability
+- coalition_vivant_new_sustainability
+- collectifs_riverains_du_bassin_du_congo_new_sustainability
+- consortium_de_regeneration_planetaire_new_sustainability
+- consortium_des_ia_climatiques_new_sustainability
+- factions_souverainistes_des_blocs_peripheriques_new_sustainability
+- mouvement_communautaire_des_micro_grids_energetiques_new_sustainability
+- parlement_deliberatif_mondial_new_sustainability
+- programme_onu_de_restauration_des_sols_new_sustainability
+- reseau_des_bio_communs_regionaux_new_sustainability
+- reseau_des_communs_productifs_regeneratifs_new_sustainability
+- reseau_des_ingenieurs_climatiques_du_sud_global_new_sustainability
+- trame_bioclimatique_new_sustainability
 oppositions:
-    - coalition_des_industries_extractives_residuelles_new_sustainability
-    - bloc_des_gouvernements_souverainistes_hydriques_new_sustainability
-    - lobbies_agro_industriels_du_bassin_du_congo_new_sustainability
-    - lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability
-    - faction_conservatrice_pro_actif_strategique_new_sustainability
-    - etats_souverainistes_anti_reseau_new_sustainability
-    - internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
-
+- agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
+- bloc_des_gouvernements_souverainistes_hydriques_new_sustainability
+- coalition_des_industries_extractives_residuelles_new_sustainability
+- conseil_technocratique_de_gouvernance_alimentaire_new_sustainability
+- etats_souverainistes_anti_reseau_new_sustainability
+- faction_conservatrice_pro_actif_strategique_new_sustainability
+- fonds_mondial_de_regeneration_ecologique_new_sustainability
+- internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
+- lobbies_agro_industriels_du_bassin_du_congo_new_sustainability
+- lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability
+- programme_onusien_de_mobilite_climatique_new_sustainability
+- reseau_des_agences_climatiques_regionales_new_sustainability
 type_relation_dominante: alliance stratégique
 
 annee_debut: 2031
@@ -104,12 +109,39 @@ Délivrance et audit des droits d'usage écosystémique (crédits carbone souver
 - [[energie_ressources_critiques]]
 - [[geopolitique_conflits]]
 
-## Relations
-**Alliés** : [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]], [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]], [[agence_stabilisation_climatique_new_sustainability]], [[coalition_vivant_new_sustainability]], [[collectifs_riverains_du_bassin_du_congo_new_sustainability]], [[consortium_de_regeneration_planetaire_new_sustainability]], [[consortium_des_ia_climatiques_new_sustainability]], [[fonds_mondial_de_regeneration_ecologique_new_sustainability]], [[parlement_deliberatif_mondial_new_sustainability]], [[reseau_des_bio_communs_regionaux_new_sustainability]], [[reseau_des_ingenieurs_climatiques_du_sud_global_new_sustainability]], [[trame_bioclimatique_new_sustainability]], [[programme_onu_de_restauration_des_sols_new_sustainability]]
-**Opposants** : [[coalition_des_industries_extractives_residuelles_new_sustainability]], [[bloc_des_gouvernements_souverainistes_hydriques_new_sustainability]], [[lobbies_agro_industriels_du_bassin_du_congo_new_sustainability]], [[lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability]], [[faction_conservatrice_pro_actif_strategique_new_sustainability]], [[etats_souverainistes_anti_reseau_new_sustainability]], [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]]
 
 ## Description journalistique
 Depuis son siège de Belém — un bâtiment en bois lamellé et terres amazoniennes dont la façade est recouverte d'un écran végétal vivant mis à jour en temps réel par les capteurs forestiers — le Consortium Amazônia Viva est devenu, en moins de deux décennies, l'une des institutions diplomatiques les plus puissantes de la planète. Ce n'est pas un État, et c'est précisément là sa force : il parle au nom du territoire lui-même, adossé à trois millions de capteurs biologiques, à des IA de modélisation forestière et à des délégations autochtones dont la légitimité de garde s'est imposée comme un standard juridique mondial. En 2098, aucun bloc géopolitique ne signe un accord énergétique ou carbone sans avoir au préalable négocié ses quotas d'accès avec Belém. La question qui agite les chancelleries n'est plus de savoir si le Consortium a le droit de négocier, mais jusqu'où ira sa souveraineté.
 
 ## Tensions narratives
 La pression des blocs industriels pour monétiser les crédits carbone à des prix inférieurs aux coûts réels de régénération menace de transformer la souveraineté écologique en simple instrument financier. En interne, la fracture entre les délégations autochtones, qui défendent une logique de sanctuarisation absolue, et les gouvernements locaux brésiliens et colombiens, tentés par une valorisation économique contrôlée, fragilise la coalition. Par ailleurs, la dépendance croissante aux IA de modélisation partenaires soulève la question de savoir si la légitimité de garde reste humaine ou si elle est en train d'être capturée par les systèmes algorithmiques. Enfin, des communautés locales exclues des corridors de conservation contestent que leurs terres aient été intégrées sans consentement réel dans le périmètre géré par Belém.
+
+## Relations
+**Alliés :**
+- [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]]
+- [[agence_stabilisation_climatique_new_sustainability]]
+- [[coalition_vivant_new_sustainability]]
+- [[collectifs_riverains_du_bassin_du_congo_new_sustainability]]
+- [[consortium_de_regeneration_planetaire_new_sustainability]]
+- [[consortium_des_ia_climatiques_new_sustainability]]
+- [[factions_souverainistes_des_blocs_peripheriques_new_sustainability]]
+- [[mouvement_communautaire_des_micro_grids_energetiques_new_sustainability]]
+- [[parlement_deliberatif_mondial_new_sustainability]]
+- [[programme_onu_de_restauration_des_sols_new_sustainability]]
+- [[reseau_des_bio_communs_regionaux_new_sustainability]]
+- [[reseau_des_communs_productifs_regeneratifs_new_sustainability]]
+- [[reseau_des_ingenieurs_climatiques_du_sud_global_new_sustainability]]
+- [[trame_bioclimatique_new_sustainability]]
+**Opposants :**
+- [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]]
+- [[bloc_des_gouvernements_souverainistes_hydriques_new_sustainability]]
+- [[coalition_des_industries_extractives_residuelles_new_sustainability]]
+- [[conseil_technocratique_de_gouvernance_alimentaire_new_sustainability]]
+- [[etats_souverainistes_anti_reseau_new_sustainability]]
+- [[faction_conservatrice_pro_actif_strategique_new_sustainability]]
+- [[fonds_mondial_de_regeneration_ecologique_new_sustainability]]
+- [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]]
+- [[lobbies_agro_industriels_du_bassin_du_congo_new_sustainability]]
+- [[lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability]]
+- [[programme_onusien_de_mobilite_climatique_new_sustainability]]
+- [[reseau_des_agences_climatiques_regionales_new_sustainability]]

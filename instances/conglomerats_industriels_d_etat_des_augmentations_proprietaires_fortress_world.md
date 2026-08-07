@@ -31,8 +31,32 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agences_de_securite_interieure_des_etats_forteresses_fortress_world
+- appareils_d_etat_des_blocs_fermes_fortress_world
+- bloc_eurasiatique_occidental_fortress_world
+- bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world
+- complexe_orentchev_almaty_fortress_world
+- conseil_regulation_algorithmique_fortress_world
+- dispositifs_de_surveillance_numerique_souveraine_fortress_world
+- etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world
+- instances_aria_concurrentes_des_blocs_rivaux_fortress_world
+- nexcore_atlantique_infrastructure_fortress_world
+- nexus_biosyn_fortress_world
+- pacte_forteresses_souveraines_fortress_world
+- zone_usines_forteresses_eurasie_fortress_world
+oppositions:
+- alliance_sanitaire_des_populations_exclues_fortress_world
+- cartels_miniers_militarises_subsahariens_fortress_world
+- cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
+- cliniques_de_deaugmentation_independantes_fortress_world
+- collectifs_d_ingenieurs_dissidents_anti_militarisation_fortress_world
+- internationale_des_semenciers_agro_pirates_fortress_world
+- internationale_travailleurs_augmentes_fortress_world
+- marches_gris_casablanca_fortress_world
+- marches_gris_tbilissi_fortress_world
+- reseaux_d_echange_clandestin_inter_zones_fortress_world
+- reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world
 type_relation_dominante: dépendance
 annee_debut: 2026
 annee_fin: null
@@ -95,6 +119,35 @@ La tension centrale réside dans la contradiction entre la promesse médicale �
 - [[sante_biotechnologies]]
 - [[gouvernance_institutions]]
 - [[systemes_productifs_travail]]
+
+
+## Relations
+**Alliés :**
+- [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]]
+- [[appareils_d_etat_des_blocs_fermes_fortress_world]]
+- [[bloc_eurasiatique_occidental_fortress_world]]
+- [[bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world]]
+- [[complexe_orentchev_almaty_fortress_world]]
+- [[conseil_regulation_algorithmique_fortress_world]]
+- [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
+- [[etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world]]
+- [[instances_aria_concurrentes_des_blocs_rivaux_fortress_world]]
+- [[nexcore_atlantique_infrastructure_fortress_world]]
+- [[nexus_biosyn_fortress_world]]
+- [[pacte_forteresses_souveraines_fortress_world]]
+- [[zone_usines_forteresses_eurasie_fortress_world]]
+**Opposants :**
+- [[alliance_sanitaire_des_populations_exclues_fortress_world]]
+- [[cartels_miniers_militarises_subsahariens_fortress_world]]
+- [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]]
+- [[cliniques_de_deaugmentation_independantes_fortress_world]]
+- [[collectifs_d_ingenieurs_dissidents_anti_militarisation_fortress_world]]
+- [[internationale_des_semenciers_agro_pirates_fortress_world]]
+- [[internationale_travailleurs_augmentes_fortress_world]]
+- [[marches_gris_casablanca_fortress_world]]
+- [[marches_gris_tbilissi_fortress_world]]
+- [[reseaux_d_echange_clandestin_inter_zones_fortress_world]]
+- [[reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

@@ -31,8 +31,21 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_stabilisation_climatique_policy_reform
+- agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
+- conseil_de_regulation_climatique_global_policy_reform
+- consortium_technologique_des_nations_integrees_policy_reform
+- trame_bioclimatique_policy_reform
+- union_technocratique_eurasiatique_policy_reform
+oppositions:
+- collectifs_de_hackers_biospheriques_policy_reform
+- collectifs_de_resistance_aux_relocalisations_forcees_policy_reform
+- consortium_amazonia_viva_policy_reform
+- front_des_autonomies_territoriales_radicales_policy_reform
+- front_souverainiste_des_blocs_non_signataires_policy_reform
+- mouvement_pour_la_justice_ecologique_communautaire_policy_reform
+- pacifique_sud_resilience_network_policy_reform
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -97,6 +110,24 @@ Le Consortium est structurellement pris entre ses financeurs privés qui exigent
 - [[climat_environnement_global]]
 - [[gouvernance_institutions]]
 - [[geopolitique_conflits]]
+
+
+## Relations
+**Alliés :**
+- [[agence_stabilisation_climatique_policy_reform]]
+- [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]
+- [[conseil_de_regulation_climatique_global_policy_reform]]
+- [[consortium_technologique_des_nations_integrees_policy_reform]]
+- [[trame_bioclimatique_policy_reform]]
+- [[union_technocratique_eurasiatique_policy_reform]]
+**Opposants :**
+- [[collectifs_de_hackers_biospheriques_policy_reform]]
+- [[collectifs_de_resistance_aux_relocalisations_forcees_policy_reform]]
+- [[consortium_amazonia_viva_policy_reform]]
+- [[front_des_autonomies_territoriales_radicales_policy_reform]]
+- [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+- [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]]
+- [[pacifique_sud_resilience_network_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

@@ -30,12 +30,13 @@ zone_geographique:
 - orbital
 zone_systemique:
 - société
-alliances:
-- centre_controle_orbital_helios_fortress_world
+alliances: []
 oppositions:
-- aria_instance_fantome_fortress_world
-- rust_belt_communes_libres_fortress_world
 - amazonie_pacte_vert_fortress_world
+- aria_instance_fantome_fortress_world
+- centre_controle_orbital_helios_fortress_world
+- consortium_helios_fortress_world
+- rust_belt_communes_libres_fortress_world
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -103,13 +104,15 @@ La tension fondamentale est structurelle : le Consortium existe pour éviter la 
 - [[geopolitique_conflits]]
 - [[organisation_territoires]]
 
+
+
 ## Relations
-**Alliés :**
-- [[centre_controle_orbital_helios_fortress_world]]
 **Opposants :**
-- [[aria_instance_fantome_fortress_world]]
-- [[rust_belt_communes_libres_fortress_world]]
 - [[amazonie_pacte_vert_fortress_world]]
+- [[aria_instance_fantome_fortress_world]]
+- [[centre_controle_orbital_helios_fortress_world]]
+- [[consortium_helios_fortress_world]]
+- [[rust_belt_communes_libres_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

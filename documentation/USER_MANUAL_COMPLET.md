@@ -1,5 +1,5 @@
 # Manuel utilisateur complet — Pipeline Ourrassol 2098
-*Consolidé le 15 juillet 2026 — couvre `generator/` (39+ scripts Python) et `gui/` (Flask)*
+*Consolidé le 15 juillet 2026, mis à jour le 3 août 2026 — couvre `generator/` (39+ scripts Python) et `gui/` (Flask)*
 
 Ce manuel classe chaque script par rôle : **modules internes** (jamais lancés seuls), **orchestrateurs**, **pipeline entités/événements**, **pipeline géographie**, **validation**, **scripts one-shot/legacy**, et **GUI Flask**. Pour chaque script exécutable : ce qu'il fait, quand l'utiliser, options CLI, statut (répétable / one-shot / legacy), et intégration GUI ou non.
 
@@ -76,7 +76,7 @@ Ces fichiers sont importés par les scripts exécutables ; ils n'ont pas de `__m
 |---|---|
 | `loader.py` | Lit/parse les fichiers `.md` du vault (frontmatter YAML + corps). Définit `VAULT_PATH`, `PATHS`, `VALID_VARS`, `VALID_SCENARIOS`. Point d'entrée de toute lecture du vault. |
 | `snapshot.py` | Construit le "snapshot" cohérent du monde 2098 pour un scénario : niveaux de variables, cohérence via la matrice d'influence, ruptures/jalons 2025→2098. Calcule aussi `zone_slug` par défaut (`_dominant_zone`, vote majoritaire sur les instances filtrées) — **utilisé seulement en repli**, un `zone_slug` explicite dans `config.yaml` prime toujours dessus depuis le 11 juillet (bug #26). |
-| `prompt_builder.py` | Assemble le prompt complet (system + user) envoyé au LLM pour générer un article, à partir du snapshot, de la thématique et de `config.yaml`. Contient les 12 profils de journaux (2/scénario). Priorité de `zone_slug` inversée le 11 juillet : `config.get('zone_slug') or snapshot.get('zone_slug')`. |
+| `prompt_builder.py` | Assemble le prompt complet (system + user) envoyé au LLM pour générer un article, à partir du snapshot, de la thématique et de `config.yaml`. Contient les 12 profils de journaux (2/scénario). Priorité de `zone_slug` inversée le 11 juillet : `config.get('zone_slug') or snapshot.get('zone_slug')`. **Mis à jour le 3 août 2026** — voir §2 (`generate.py`) pour le détail des 2 bugs de zone/badge forcés corrigés, et §2bis ci-dessous pour les 4 ajouts de contenu issus de l'audit de complétude snapshot/variables. |
 | `api.py` | Envoie le prompt au LLM configuré (tier `strict`, via `llm_client.py`) et sauvegarde l'article généré en `.md` dans `articles/`. Le champ `model:` du frontmatter reflète désormais le tier réellement résolu (`resolve_for_tier()`), pas une variable statique. |
 | `llm_client.py` | Abstraction unifiée Mistral/Claude/OpenAI. `LLM_PROVIDER`/`LLM_MODEL` (env, override manuel prioritaire). `TASK_TIER_DEFAULTS` + `resolve_for_tier(task_tier)` pour le routing par défaut. Exporte `call_llm(..., task_tier=...)`. |
 | `extract_state_logic.py` *(14 juillet)* | Parseur générique `variables/{variable}.md → states.{scenario}.state_logic`. Sanitise les clés wikilink Obsidian (`[[xxx]]`) des blocs `coupling_intensity` avant `yaml.safe_load` (sinon `unhashable key`). Utilisable en CLI (`--json`, `--scenario`) ou en import (`extract_state_logic(path)`). |
@@ -98,13 +98,203 @@ Ces fichiers sont importés par les scripts exécutables ; ils n'ont pas de `__m
 
 ## 2. Orchestrateurs — génération d'articles
 
-### `generate.py` 🔁 🧩
-Point d'entrée unique pour générer **un seul article**. Lit `config.yaml` (scénario, thématique, options), orchestre loader → snapshot → prompt_builder → api, sauvegarde dans `articles/`.
+### `generate.py` 🔁 🧩 — **réécrit le 2 août 2026 : deux modes**
+Point d'entrée unique pour générer un ou plusieurs articles. Deux modes,
+sélectionnables via `--mode` (CLI) ou l'onglet Mode du GUI :
+
+**Semi-guidé** (comportement historique, inchangé) : un seul scénario
+(`config.yaml` ou `--scenario`), sélection automatique des instances par
+pertinence thématique — **désormais avec rotation à mémoire** (voir
+plus bas) —, zone/titre/angle éditables.
+
+**Forcer** : garantit la présence d'une instance/un événement/un signal
+précis dans l'article. L'article est systématiquement construit autour
+de lui (angle généré automatiquement, écrase tout angle manuel ; titre
+toujours laissé à l'IA, jamais éditable dans ce mode).
 ```bash
-python3 generate.py
-python3 generate.py --dry-run   # géré via sys.argv brut, pas argparse — fonctionne malgré tout
+python3 generate.py                                    # semi-guidé, config.yaml
+python3 generate.py --dry-run
+python3 generate.py --mode forcer --forcer-type instance \
+    --forcer-slug oracle_des_seuils --forcer-scenarios tous
+python3 generate.py --mode forcer --forcer-type evenement \
+    --forcer-slug conflit_israel_iran_2026 --forcer-scenarios breakdown policy_reform \
+    --forcer-zone moyen_orient_golfe
 ```
-`validate_config()` vérifie désormais (11 juillet, bug #26) que `zone_slug` — si fourni dans `config.yaml` — existe réellement dans `journaux.yaml` pour le scénario/ligne éditoriale concernés ; sinon erreur claire listant les zones valides, plutôt qu'une résolution silencieuse vers la mauvaise zone.
+- `--forcer-scenarios` : `tous` (= tous les scénarios où l'élément
+  existe **réellement**, pas les 6 sans distinction) ou une liste de
+  scénarios séparés par des espaces (le GUI envoie plusieurs tokens
+  `nargs="+"`, pas une chaîne à virgules).
+- `--forcer-zone` : si une zone précise est cochée, elle **remplace** le
+  choix de scénarios plutôt que de le filtrer en "ET" (une zone
+  n'appartient qu'à un seul scénario, donc plus précise) — évite les
+  combinaisons impossibles (ex. scénario A coché + zone qui n'existe
+  que dans le scénario B → génération bloquée avant le 2 août, résolue
+  automatiquement depuis).
+- **Un article est généré et sauvegardé par scénario retenu**, avec un
+  résumé du lot (réussis/échecs) en fin de run.
+- Toute erreur de résolution (élément introuvable pour le scénario/la
+  zone demandée, type choisi sans élément sélectionné) arrête proprement
+  avec un message explicite plutôt que de générer silencieusement un
+  article sans l'élément demandé.
+
+`validate_config_semi_guide()` vérifie (11 juillet, bug #26) que
+`zone_slug` — si fourni — existe réellement dans `journaux.yaml` pour le
+scénario/ligne éditoriale ; sinon erreur claire listant les zones
+valides. `validate_config_forcer()` est une validation allégée
+équivalente pour le mode forcer (pas de zone_slug fixe à valider, chaque
+article de la boucle utilise la zone propre à l'élément dans son
+scénario).
+
+**Rotation à mémoire des instances** (2 août 2026, `loader.py`) : au-delà
+de 6 instances candidates pertinentes pour une thématique, les ex-aequo
+de score sont départagés par le nombre d'utilisations passées (état
+persisté dans `state/instance_usage.json`) plutôt qu'un tri déterministe
+pur — évite qu'une instance pertinente mais rarement en tête ne sorte
+jamais sur un grand corpus d'articles. Même principe déjà en place pour
+les jalons historiques (`state/trajectory_usage.json`).
+
+**Mode Semi-guidé — revalidé en conditions réelles le 3 août 2026**
+(les 7 champs CLI du bug #34/§3.7 du 2 août, y compris `--zone-slug`,
+tous confirmés appliqués correctement dans le contenu réel du prompt,
+pas seulement l'en-tête `print_header()`). **1 bug annexe trouvé et
+corrigé au passage** : le champ `metadata["longueur"]` retourné par
+`build_prompt()` (visible en fin de `--dry-run`, section MÉTADONNÉES)
+ignorait l'override `config["article"]["longueur"]` et le recalculait
+uniquement depuis le `format_dominant` de la thématique — divergence
+avec la vraie consigne envoyée au LLM (toujours correcte, elle, via
+`build_journalistic_brief()`). Corrigé en dupliquant la même logique de
+priorité dans `build_prompt()`. **À vérifier par David** : si ce champ
+est réutilisé en aval (frontmatter d'articles sauvegardés, stats), des
+fiches publiées avant ce correctif pourraient porter une longueur
+affichée incohérente avec leur contenu réel.
+
+## 2bis. Audit de complétude snapshot/variables (3 août 2026)
+
+Demande de David : vérifier que toutes les données calculées par
+`snapshot.py`/`loader.py` sont bien utilisées par `prompt_builder.py`,
+sans perte de contenu narratif intéressant. Méthode : comparaison champ
+par champ (grep systématique de tous les accès `snapshot.get(...)`,
+`inst.get(...)`, `ev.get(...)`, `zone.get(...)` dans `prompt_builder.py`)
+contre ce que `loader.py`/`snapshot.py` extraient/calculent réellement.
+
+**4 pertes significatives trouvées et corrigées** (`prompt_builder.py`) :
+1. **`responsabilites`** (instances) — ajouté dans `build_entities_
+   context()`, affiché en entier. Distinct de `description_
+   journalistique` (récit d'origine, écrit "de l'extérieur") : décrit ce
+   que l'entité FAIT concrètement (actions, leviers, méthodes).
+2. **`signes_distinctifs`** (instances) — ajouté au même endroit,
+   affiché en entier. Détails concrets/visuels/symboliques qui rendent
+   l'entité reconnaissable et citable (slogans, symboles, pratiques).
+3. **`realisation`** (événements custom) — ajouté dans
+   `build_trajectory_context()`, section "Événements injectés", tronqué
+   à 80 caractères comme `consequences`. Décrit comment l'événement
+   s'est concrètement déroulé.
+4. **Jalons génériques de portée "majeur"** — nouvelle sous-section
+   `**Ruptures majeures**` dans `build_trajectory_context()`, affichée
+   avant `**Ruptures structurantes**`, plafonnée à 3
+   (`MAX_JALONS_RUPTURES_MAJEURES`). Réutilise `snapshot["trajectory_
+   majors"]`, calculé par `snapshot.py` mais jamais lu jusque-là — seuls
+   les jalons "structurant" étaient affichés, alors que "majeur" est la
+   portée la plus significative du classement (3+ variables touchées,
+   ou variable pilote + rupture "core").
+
+**Vérifié en conditions réelles** (mode Forcer-instance) : les 4 ajouts
+apparaissent correctement, 41 361 caractères de prompt sur ce test (pas
+d'explosion notable). **⚠️ Non testé : impact taille en mode Semi-guidé
+à 6 entités simultanées** (jusqu'à 6× `responsabilites` + 6× `signes_
+distinctifs` en même temps — le vrai cas de charge maximale, jamais
+mesuré). Priorité de la prochaine session.
+
+**Trouvailles non traitées, laissées de côté sur décision de David** :
+`impact_local`, `zone_geographique` (tags d'échelle), `type_relation_
+dominante`, `annee_debut`/`annee_fin`, `age_historique`, `generation`
+(instances, jamais utilisés — `type_relation_dominante` jugé le plus
+intéressant, compense les listes `alliances`/`oppositions` souvent
+vides) ; incohérence documentation/code sur `forces_attractives`/
+`forces_repulsives` (promis par la docstring de `build_variables_
+context()`, jamais implémenté, jamais extrait par `loader.py` non
+plus) ; `constrained_variables` (snapshot, calculé, jamais affiché) ;
+champ `type` des zones géographiques (`zone_sinistree` etc., distinct
+de `statut`) ; bloc `simulation` sur les fiches variables (probablement
+pensé pour du monitoring interne, pas la narration). Détail complet en
+§4 de `HANDOFF_3_AOUT.md`.
+
+**Risque structurel identifié, pas un bug actif** : une instance avec
+`injection.type == "custom"` non sélectionnée parmi les `filtered_
+instances` reste invisible narrativement (seul un nom tronqué apparaît
+dans une ligne de delta de "Perturbations custom actives") — aucun
+exemple réel rencontré à ce jour (le vault ne semble contenir que des
+événements custom), mais le trou de code existe pour le jour où ça
+arrive.
+
+**Plafonnement des événements custom et de la géographie** (2 août
+2026, passage à l'échelle du vault ; **testé en conditions réelles et 2
+bugs annexes corrigés le 3 août 2026**) : les événements custom et la
+liste des zones géographiques n'étaient soumis à aucune limite
+(contrairement aux instances/signaux) — risque de croissance non
+maîtrisée du prompt. Corrigé avec le même principe pour les deux : une
+couche large et peu coûteuse qui préserve la vision globale du monde
+(résumé une ligne, noms seuls au-delà d'un plafond haut — 25 événements
+/ 20 zones), et une couche détaillée filtrée par pertinence + rotation
+à mémoire (plafond bas — 8 événements en détail complet, zones
+pertinentes toujours en détail sans plafond). Score de pertinence des
+événements réutilise le matériau déjà standardisé sur les fiches
+(`portee`, amplitude des `impact_sur_variables`) plutôt qu'une nouvelle
+heuristique. L'élément forcé (mode Forcer) est toujours garanti présent
+dans la couche détaillée, jamais soumis au tri ni à la rotation.
+
+**Test réel du 3 août** (`--dry-run --mode forcer --forcer-type
+evenement`, scénario le plus chargé) : les plafonds numériques
+eux-mêmes sont corrects du premier coup (comptages exacts vérifiés). Le
+test a en revanche débusqué deux résidus du bug #26/§3.8 (zone
+d'ancrage) non couverts par la correction du 2 août, tous deux corrigés :
+1. **Badge `[FORCÉ]`** jamais affiché sur l'événement forcé dans la
+   liste détaillée — `select_relevant_events()` (`loader.py`) plaçait
+   bien l'élément forcé en tête mais ne posait jamais la clé
+   `"forced": True` que `prompt_builder.py` lit pour le badge. Corrigé.
+2. **Zone de l'élément forcé absente de la section géographie
+   détaillée** pour un événement/signal forcé (fonctionnait par
+   coïncidence pour une instance forcée, qui devient l'unique
+   `filtered_instance`) — `build_geographie_context()` calculait
+   `zones_pertinentes` uniquement depuis les instances génériques
+   auto-sélectionnées, sans connaître la vraie zone forcée. La fonction
+   reçoit désormais `config` en paramètre (comme `build_system_prompt()`
+   le fait déjà) et ajoute explicitement `config["zone_slug"]` à
+   `zones_pertinentes`. Corrigé.
+
+**Plafonds jamais discutés en détail avec David au 3 août** — vault
+jugé encore trop jeune pour ajuster les chiffres (8/25/20) sans
+arbitraire ; le design en 3 couches absorbe déjà bien la croissance
+attendue (seule la liste compacte grossit avec le vault, à coût quasi
+nul). À revisiter avec des données réelles une fois le vault plus gros.
+
+### `trace_injection.py` 🔁 🗄️ — **nouveau le 2 août 2026, diagnostic pur**
+Reconstitue le parcours complet d'une instance/un événement/un signal :
+origine (idée source, date d'injection), propagation dans l'espace
+(scénarios, zones — résolues en noms lisibles via `geographie/`) et le
+temps (fictif et réel), variables systémiques influencées (résolues en
+noms lisibles via `variables/`), réseau relationnel (alliances/
+oppositions pour une instance, acteurs impliqués pour un événement), et
+usage aval dans les articles publiés (scan texte best-effort).
+```bash
+python3 trace_injection.py --slug oracle_des_seuils --type instance
+python3 trace_injection.py --slug insurrection_rust_belt --type evenement --json
+python3 trace_injection.py --slug oracle_des_seuils --type instance --report   # écrit .md + .json
+python3 trace_injection.py --list --type instance   # liste les slugs disponibles
+```
+Résolution tolérante : accepte qu'on lui passe un slug d'instance/
+event_instance (entité + suffixe scénario) à la place du slug d'entité/
+archétype attendu — dérive automatiquement le bon slug via le champ
+`entite:`/`archetype:` de la fiche. Pour un signal, exploite le bloc
+`signal_to_state` (déjà présent sur les fiches variables) pour donner
+l'évolution complète par scénario (date de bascule, événement clé,
+texte narratif), pas seulement une présence binaire.
+
+**GUI** : menu Type (instance/événement/signal) → menu Élément filtré en
+cascade (même mécanisme que `undo_custom`), route `/api/trace/<slug>`
+dans `app.py` (subprocess + JSON, même pattern que les autres appels
+`--json` du pipeline). Testé en conditions réelles par David sur
+plusieurs slugs.
 
 ### `generate_series.py` 🔁 🧩
 Génère une **série d'articles** sur plusieurs thématiques avec cohérence temporelle, pilotée par `config_series.yaml`.
@@ -228,8 +418,29 @@ python3 enrich_minimal.py --scenario NOM       # ou --all, ou --slug SLUG
 python3 enrich_minimal.py --dry-run
 python3 enrich_minimal.py --limit N
 python3 enrich_minimal.py --auto-cycle         # enchaîne extract_phantom_slugs (+ wave 2 via validate --verbose)
+python3 enrich_minimal.py --skip-reciprocite   # désactive la passe de réciprocité automatique (voir ci-dessous)
+python3 enrich_minimal.py --resoudre-conflits  # résout aussi les conflits de réciprocité (opposition prioritaire, voir 7 août ci-dessous)
+python3 enrich_minimal.py --resoudre-conflits --bascule-en-opposition  # résolution "forte"
 ```
 Sorties : `enrich_minimal_report.md`, `needs_review_enrich.yaml` (bug de tri des clés YAML corrigé le 2 août 2026 — voir plus bas). **P8 clos** : les 426 fiches `officialise_minimal` d'origine ont toutes été traitées en un seul run le 27 juin 2026 (trace laissée dans chaque fiche, section `## Notes` du corps : *« Fiche enrichie depuis officialise_minimal le 2026-06-27. »*) — confirmé le 2 août 2026 par recomptage sur le vault : zéro fiche `officialise_minimal` restante sur les 6 scénarios. Coût réel non recalculé (script tourne sur `mistral-large-latest` par défaut depuis le 11 juillet, l'estimation initiale de ~$37 avait été faite sur tarif Claude).
+
+**Correctifs du 5 août 2026 (root cause du diagnostic alliances/oppositions du 4 août — voir `fix_alliances_oppositions.py` plus bas) :**
+- **Nouvelle section de prompt "AUTRES INSTANCES DU SCÉNARIO (slugs valides)"**, construite par `build_instances_summary(scenario, exclude_slug)` — équivalent de `build_geographie_summary()` mais pour les instances, jusque-là absent. C'est la cause racine du vide massif d'`alliances`/`oppositions` découvert le 4 août : le LLM devait citer des slugs réels sans jamais les voir. Vérifié en conditions réelles sur une fiche de test (8/8 slugs générés confirmés réels dans le vault).
+- **Réciprocité automatique en fin de run** — importe et appelle `reciprocity_pass()` de `fix_alliances_oppositions.py` (aucun appel LLM, purement local) pour chaque scénario traité, dès qu'au moins une fiche a été réellement enrichie (pas en `--dry-run`). Désactivable via `--skip-reciprocite`. **Dépendance directe** : `fix_alliances_oppositions.py` doit rester dans le même dossier.
+- **Validation `alliances`/`oppositions` durcie partiellement** (`validate_enriched()`, nouveau paramètre `own_slug`) : l'auto-référence (un slug qui se cite lui-même) et le chevauchement alliances/oppositions (même slug dans les deux) sont désormais des erreurs bloquantes qui déclenchent le mécanisme de retry existant. Le warning sur un slug absent de `_entities_list.json` reste volontairement non bloquant — il alimente le pipeline de slugs fantômes (`extract_and_queue_phantoms()`, voir `extract_phantom_slugs.py` juste en dessous), une mécanique volontaire pour capter les références à des entités pas encore créées ; le durcir aurait cassé cette mécanique.
+- Les trois correctifs testés unitairement et en conditions réelles (fiche jetable créée, enrichie, réciprocité déclenchée sur 7 fiches réelles du vault, puis nettoyée manuellement après vérification).
+
+**Correctifs du 7 août 2026 — résolution automatique des conflits branchée sur `enrich_minimal.py` :**
+- **Import** de `resolve_reciprocity_conflicts()` en plus de `reciprocity_pass()`, depuis `fix_alliances_oppositions.py` (même dépendance directe, doit rester dans le même dossier).
+- **Deux nouveaux flags, opt-in, désactivés par défaut** : `--resoudre-conflits` (déclenche la résolution automatique des conflits selon la règle "opposition prioritaire" — une opposition déclarée l'emporte sur une alliance déclarée en cas de contradiction — juste après la passe de réciprocité), `--bascule-en-opposition` (avec le précédent : résolution "forte", ajoute aussi l'entité aux oppositions au lieu de la retirer simplement des alliances).
+- **Comportement par défaut strictement inchangé** sans ces flags — la réciprocité continue de simplement détecter et journaliser les conflits comme avant.
+- **Portée** : la résolution ne porte que sur les scénarios réellement traités par le run en cours (pas tout le vault), cohérent avec le fonctionnement existant d'`enrich_minimal.py`. `--skip-reciprocite` reste prioritaire — s'il est présent, toute la chaîne s'arrête (réciprocité et résolution), même si `--resoudre-conflits` est aussi précisé.
+- Le message de `reciprocity_pass()` est adapté en conséquence (paramètre `resolution_suit`, propagé automatiquement depuis `--resoudre-conflits`) pour éviter d'annoncer un conflit "non résolu automatiquement" juste avant que la résolution ne s'exécute.
+- **Testé** : câblage complet vérifié par mocks des fonctions bas niveau (isolant l'orchestration de la logique d'enrichissement elle-même, non touchée) — comportement par défaut inchangé sans flag, activation correcte avec `--resoudre-conflits`, propagation de `--bascule-en-opposition` sur les 6 scénarios via `--all`, et confirmation que `--skip-reciprocite` neutralise bien toute la chaîne y compris la résolution.
+
+**Complément du même jour (7 août, après-coup) — `reset_conflict_reports()`** : bug distinct trouvé après coup (David consultant le rapport `.md` via le GUI, croyant le vault plein de conflits alors qu'il était déjà à 0 — voir Bug #2, détail complet dans l'entrée `fix_alliances_oppositions.py` ci-dessous). `enrich_minimal.py` importe désormais aussi `reset_conflict_reports()`, appelée une seule fois avant la boucle sur les scénarios (inconditionnellement dès qu'un run réel de réciprocité a lieu, pas seulement quand `--resoudre-conflits` est actif — la réciprocité seule écrit déjà dans `CONFLICTS_PATH`). Jamais déclenché en `--dry-run`. Testé : `reset_conflict_reports()` appelée exactement une fois pour tout un run `--all` (pas une fois par scénario), jamais en dry-run.
+
+### `fix_alliances_oppositions.py` — voir entrée dédiée dans la section scripts one-shot/migration plus bas, dont `enrich_minimal.py` dépend désormais pour la réciprocité automatique **et**, depuis le 7 août, la résolution automatique des conflits.
 
 ### `extract_phantom_slugs.py` 🔁 🧩
 Lit `enrich_minimal_report.md` et/ou une sortie `validate.py --verbose`, génère les rôles manquants via le LLM (tier `volume`), alimente `entites_custom/queue.yaml` (batches de 5, dédupliqués).
@@ -561,6 +772,7 @@ Ces scripts ont rempli leur rôle ponctuel ou ont été remplacés — à ne rel
 | `check_conventions_territoires.py` | Vérifie qu'un même territoire ambigu est traité de façon cohérente entre les 6 scénarios (P27). Toujours utilisable seul en CLI. | 🪦 **Retiré du sidebar le 26 juillet 2026** — parité de flags à 100% avec `scan_geographie_complet --run-conventions`, voir §4bis. |
 | `check_patron_spatial_coherence.py` | Compare chaque zone N1 au patron spatial narratif de son scénario via LLM (P24 étape C.1). Toujours utilisable seul en CLI, y compris `--no-cache`/`--write-chantiers`. | 🪦 **Retiré du sidebar le 26 juillet 2026** — parité de flags à 100% avec `scan_geographie_complet --run-patron-spatial`, voir §4bis. |
 | `fix_alliance_suffixes.py` | Correction mécanique (sans API) du suffixe `_{scenario}` manquant dans les champs `alliances`/`oppositions`. Même famille que `fix_impact_scale.py` ci-dessus. | 🪦 **Retiré du sidebar le 26 juillet 2026** — confirmé résolu partout (`--dry-run --verbose` : 0 correction), conservé sur disque au cas où le symptôme réapparaîtrait après une future génération. |
+| `fix_alliances_oppositions.py` | **Nouveau (4 août 2026), étendu le 5 et le 7 août.** Corrige le vide structurel de `alliances`/`oppositions` sur les fiches déjà `officialise_enrichi` (diagnostic initial : 356/426 fiches, 83.6%, avaient les deux champs vides — cause racine : `enrich_minimal.py` ne fournit jamais au LLM la liste des instances réelles du scénario au moment de générer ces champs, contrairement à la géographie). Prompt ciblé et minimal (alliances/oppositions UNIQUEMENT, aucun autre champ régénéré), avec la liste réelle des instances du scénario fournie en contexte — ingrédient manquant du prompt d'origine. Patch chirurgical du frontmatter (regex sur 2 clés, pas de réécriture YAML complète) + section `## Relations` ajoutée/mise à jour dans le corps. Deuxième passe locale sans LLM : réciprocité (si A cite B en alliance/opposition, B doit citer A en retour), avec détection de conflits (relation contradictoire des deux côtés). Retry/backoff intégré sur les pannes API transitoires (503, etc.), distinct du mécanisme de correction de contenu.<br><br>**Résolution automatique des conflits (7 août 2026, règle "opposition prioritaire")** : `resolve_reciprocity_conflicts()` — une opposition déclarée l'emporte sur une alliance déclarée en cas de contradiction. Pour chaque conflit détecté, l'entité qui liste l'autre en *opposition* n'est jamais modifiée ; l'entité qui la listait en *alliance* est corrigée (slug retiré de `alliances`, et ajouté aux `oppositions` si `--bascule-en-opposition`). RÉTROACTIF : modifie les fiches déjà en conflit sur disque (sauf `--dry-run`). Chaque résolution journalisée dans `documentation/need_action/fix_alliances_conflits_reciprocite_resolus.md`.<br><br>**Bug #1 trouvé et corrigé en conditions réelles le 7 août — écrasement multi-conflits** : la première version écrivait un patch par conflit traité, en repartant à chaque fois du frontmatter *original* lu en mémoire plutôt que de l'état déjà modifié — une fiche impliquée dans **plusieurs conflits distincts** du même scénario voyait sa dernière résolution traitée écraser silencieusement les précédentes. Découvert après un premier `--apply` réel (73 conflits annoncés résolus, mais 11 paires/22 lignes retrouvées encore en conflit à la revérification `--dry-run`). Corrigé en accumulant toutes les corrections par fiche avant d'écrire (un seul `write_alliances_patch()` par fiche, même pattern déjà utilisé par `reciprocity_pass()`) — reproduit exactement sur mini-vault synthétique (entité en conflit avec deux autres simultanément), confirmé résolu, aucune régression sur le cas à un seul conflit. Deuxième `--apply` relancé sur le vault réel après correction, revérifié par `--dry-run` : 0 conflit restant, vault entièrement cohérent.<br><br>**Bug #2 trouvé et corrigé le 7 août — rapports jamais réinitialisés (confusion GUI)** : `CONFLICTS_PATH` et `RESOLVED_CONFLICTS_PATH` étaient ouverts en mode `"a"` (append) depuis leur création le 4 août — jamais tronqués, ils accumulaient indéfiniment l'historique de TOUS les runs. Découvert quand David, en consultant `fix_alliances_conflits_reciprocite.md` (par le GUI, où le fichier est affiché tel quel dans le panneau de review), a cru le vault plein de conflits alors qu'il était déjà à 0 depuis plusieurs runs — la dernière section du fichier datait en réalité de l'exécution de diagnostic *avant* la correction du Bug #1 (confirmé par la présence du texte "Règle C", terminologie abandonnée depuis). **Correctif** : nouvelle fonction `reset_conflict_reports()`, appelée une seule fois en tête de run (avant la boucle sur les scénarios) par les deux points d'entrée (`fix_alliances_oppositions.py::main()` et `enrich_minimal.py`), qui tronque les deux fichiers à un simple en-tête horodaté ; les écritures par scénario du même run s'accumulent ensuite normalement dessus (`_write_conflict_report()`, tracking via un set module-level `_files_reset_this_run`). Cas limite couvert explicitement : un run où *aucun* scénario n'a de conflit ne déclenche aucune écriture par scénario — sans le reset explicite en tête de run, un vieux fichier périmé serait resté affiché indéfiniment même après un vault redevenu propre. Jamais déclenché en `--dry-run` (les deux points d'entrée gardent l'appel derrière `not args.dry_run`/`not dry_run`). Testé : reproduction exacte du cas réel (vieux contenu périmé simulé + run propre à 0 conflit → fichier ne contient plus que l'en-tête), dry-run confirmé sans écriture, multi-scénarios dans un même run confirmé sans écrasement entre sections. Descriptions GUI des deux entrées (`fix_alliances_oppositions`, `enrich_minimal`) mises à jour en conséquence (voir §7).<br><br>Testé au total : mini-vault synthétique (détection, dry-run sans écriture, résolution conservatrice, non-modification de l'entité opposante, idempotence, cas multi-conflits, reset des rapports), puis en conditions réelles sur le vault complet (146 lignes de conflits bruts → 73 paires uniques, ratio 2:1 exact sur les 5 scénarios concernés — `breakdown` 12, `fortress_world` 11, `new_sustainability` 13, `policy_reform` 13, `reference` 24 ; `eco_communalism` 0 — puis 0 conflit confirmé après correction du Bug #1).<br><br>Message de `reciprocity_pass()` adapté (7 août) : nouveau paramètre `resolution_suit` (défaut `False`, rétrocompatible) — si `True` (passé automatiquement quand `--resoudre-conflits` est actif), le message de conflit affiche "sera résolu automatiquement ci-dessous (opposition prioritaire)" au lieu de "conflit non résolu automatiquement (revue manuelle nécessaire)", pour éviter la confusion entre les deux passes qui s'enchaînent dans le même run.<br><br>Flags CLI : `--scenario`\|`--all`, `--slug`, `--dry-run`, `--limit`, `--reciprocite-seule`, `--skip-reciprocite`, `--resoudre-conflits`, `--bascule-en-opposition` (résolution "forte" : ajoute aussi l'entité aux oppositions au lieu de la retirer simplement des alliances ; par défaut résolution conservatrice, retrait seul). | 🔧 **Ce n'est plus un simple one-shot** — migration initiale terminée et vérifiée le 4 août (vault entier passé de 356/426 fiches vides à 0/426, 563 complétions par réciprocité). Depuis le 5 août, **`enrich_minimal.py` importe directement `reciprocity_pass()`** pour la lancer automatiquement en fin de run. Depuis le 7 août, **`enrich_minimal.py` importe aussi `resolve_reciprocity_conflicts()` et `reset_conflict_reports()`**, la résolution restant activable via les flags opt-in `--resoudre-conflits`/`--bascule-en-opposition` (comportement par défaut inchangé sans eux — voir §3, entrée `enrich_minimal.py`) tandis que le reset des rapports, lui, est inconditionnel dès qu'un run réel de réciprocité a lieu — ce script est donc une dépendance de production à part entière, pas seulement un outil de migration ponctuel. Doit rester dans le même dossier qu'`enrich_minimal.py`. **Intégré au GUI le 7 août** (voir §7) — entrée `fix_alliances_oppositions` ajoutée à `scripts_config.json`, plus les deux nouveaux flags ajoutés à l'entrée `enrich_minimal` existante. Aucune des deux entrées GUI testée dans un vrai navigateur à ce jour (`gui_verified: false`), mais leur fonctionnement (`depends_on`+`advanced` combinés, affichage `.md` dans le panneau de review) a été vérifié par lecture directe du code source réel d'`app.py`/`app.js` (obtenus en session) — les deux mécanismes confirmés fonctionnels sans ambiguïté. |
 | `build_geographie_monde.py` | Rétro-construit la bible géopolitique plate d'un scénario (étape 1 du chantier géographie). Déjà lancé sur les 6 scénarios, définitifs. | 🪦 **Retiré du sidebar le 26 juillet 2026** — one-shot par scénario, nouvelle règle : plus sa place dans le panneau même pour un `--force` ponctuel. Reste utilisable en CLI directe. |
 | `generate_manual.py` | Pipeline sans appel API : affiche le prompt (system+user) du prochain article d'une série pour copier/coller dans un chat externe, avec suivi de rotation multi-articles (`state/manual_progress.json`). | 🪦 **Retiré du sidebar le 31 juillet 2026** — son cas d'usage principal (aperçu de prompt copiable) est couvert par `--dry-run` sur `generate.py`, qui affiche le même contenu sans le mécanisme de rotation de série. Reste utilisable en CLI directe pour le suivi multi-articles. |
 
@@ -620,13 +832,25 @@ Cohérence de `routes_dashboard.py` avec le renommage "Modèle si forcé" ci-des
 2. **Panneau Revue (`/api/review` dans `app.py`) vide malgré des fiches en échec** — `enrich_minimal.py` (`write_needs_review()`) était le seul appel `yaml.dump()` du pipeline sans `sort_keys=False` : PyYAML triait les clés alphabétiquement (`date` avant `slug`), et le parseur maison de `app.py` (`_read_needs_review_yaml()`) ne reconnaissait une nouvelle entrée que via `"- slug:"` en tête de ligne — plus aucune ligne ne matchait, toutes les entrées `needs_review_enrich.yaml` étaient silencieusement ignorées. **Correctif** : `sort_keys=False` ajouté à l'écriture. **Deuxième gap trouvé en creusant** : `/api/review` ne couvrait que 2 des 4 sources possibles de fiches en échec (`needs_review_enrich.yaml`, `evenements_custom/needs_review.yaml`) — `entites_custom/needs_review.yaml` et `signaux_custom/needs_review.yaml` (première clé `status:`, format différent) n'étaient ni lus ni comptés. **Correctif** : deux nouvelles fonctions `_parse_needs_review_entites()`/`_parse_needs_review_signaux()` + généralisation du parseur (`start_marker` optionnel) ; `_count_review_items()` (le badge, dans `routes_dashboard.py`) complété avec les deux mêmes fichiers. Limite connue : les entrées entités/signaux s'affichent avec un slug générique `(entité)`/`(signal)` plutôt que le vrai nom, le parseur ne descendant pas dans le sous-bloc `idea:` imbriqué.
 
 ### Sidebar (`scripts_config.json`) — scripts lançables en un clic
-**Section génération** : `enrich_minimal`, `generate_journaux`, `validate`, `generate`, `generate_series`, `generate_manual`.
-**Section entités** : `create_entities`, `inject_events`, `inject_signals`, `extract_phantom_slugs`, `requeue_needs_review`, `undo_custom`.
+**Section génération** : `enrich_minimal`, `generate_journaux`, `validate`, `generate` (deux modes depuis le 2 août 2026 — Semi-guidé/Forcer, voir §2), `generate_series`, `generate_manual`.
+**Section entités** : `create_entities`, `inject_events`, `inject_signals`, `extract_phantom_slugs`, `requeue_needs_review`, `undo_custom`, `trace_injection` (nouveau, 2 août 2026 — voir §2).
 **Section maintenance** : `extract_localisation`, `review_localisation`, `enrich_geographie` (l'entrée fantôme `restructure_zones` a été retirée, confirmé le 2 août 2026 — voir §4).
 
 Chaque entrée définit ses options (checkbox/select/number/slug_select/multi_select), ses dépendances (`requires`) et les fichiers YAML associés affichables dans le panneau de review. Vérification systématique faite le 11 juillet (backlog P6, clos) : chaque `flag` déclaré ici croisé avec l'`argparse` réel du script Python correspondant — 2 flags fantômes trouvés et supprimés (`--scenario` sur `create_entities`/`inject_events`, jamais lus par les scripts avant d'y être réintroduits avec un vrai rôle).
 
 ⚠️ Description "Section génération/entités/maintenance" ci-dessus **périmée** depuis la réorganisation du 12 juillet (8 sections nommées, voir mémoire de session) — à corriger dans une prochaine passe de mise à jour du manuel (dette documentaire connue).
+
+#### `fix_alliances_oppositions.py` — intégré au panneau le 7 août 2026
+Jusqu'au 5 août, en CLI-only (backlog historique §1.2) — jamais enregistré dans `scripts_config.json`, alors qu'il était déjà devenu une dépendance de production (import direct de `reciprocity_pass()` par `enrich_minimal.py`). **Intégré réellement le 7 août**, cette fois-ci contre le vrai `scripts_config.json` (upload obtenu, schéma vérifié plutôt que deviné) :
+
+- **Nouvelle entrée `fix_alliances_oppositions`** ajoutée section `entites_nettoyage`, juste après `enrich_minimal`. 9 options (`--all`/`--scenario` en exclusion mutuelle avec `required_one_of`, `--slug`, `--limit`, `--dry-run`, `--reciprocite-seule`, `--skip-reciprocite`, `--resoudre-conflits`, `--bascule-en-opposition`). `--bascule-en-opposition` en `depends_on: "--resoudre-conflits"` + `advanced: true` (repliée sous "Options avancées"), même pattern que le "niveau 2" du 26 juillet (correction implique diagnostic parent). Interaction `--resoudre-conflits`/`--skip-reciprocite` documentée en texte dans la description (pas de mécanisme GUI natif pour une dépendance "sauf si l'autre est cochée").
+- **Entrée `enrich_minimal` existante complétée** : les deux mêmes flags `--resoudre-conflits`/`--bascule-en-opposition` ajoutés à ses options (le script les supporte nativement depuis le 7 août — voir §3). Toutes les options d'origine conservées à l'identique, comparaison automatisée confirmée contre le fichier avant/après.
+- `yaml_files` des deux entrées pointent vers les deux rapports (`fix_alliances_conflits_reciprocite.md` détectés / `_resolus.md` résolus) — **confirmé, plus une inconnue** : `app.py`/`app.js` obtenus et lus en session le 7 août. `/api/yaml` (`app.py`) lit n'importe quel fichier comme texte brut (`read_text()`, aucun parsing YAML malgré le nom de la route) ; côté front, `loadYamlContent()` fait `viewEl.textContent = data.content` sans vérification d'extension. Le `.md` s'affiche donc normalement, comme n'importe quel autre fichier du panneau.
+- **`depends_on` + `advanced` combinés (`--bascule-en-opposition`) — confirmé, plus une inconnue.** Les options `advanced` sont rendues dans un second passage, après toutes les options normales, regroupées sous un `<details>` replié (`renderScriptForm()`). `syncDependsOnParents()` cherche `[data-depends-on]` dans tout `#form-body` sans se soucier de l'imbrication visuelle, donc le lien parent/enfant fonctionne correctement même depuis l'intérieur du repli — vérifié que `--resoudre-conflits` (le parent, une option normale) est bien rendu avant `--bascule-en-opposition` dans l'ordre des `options` des deux entrées, condition nécessaire au bon fonctionnement (le code suppose le parent déjà présent dans le DOM, cf. commentaire du 26 juillet dans `app.js`). **Seule nuance, cosmétique et non bloquante** : l'indentation visuelle prévue pour `depends_on` (bordure + retrait à gauche) s'affichera à l'intérieur du bloc "Options avancées" plutôt que juste sous son parent directement — pas un bug, juste un rendu un peu moins lisible que le cas normal (non-`advanced`) de ce mécanisme.
+- Toutes les conventions suivies par déduction sur les entrées `gui_verified: true` existantes (`mutually_exclusive_with` en noms nus, `depends_on`/`required_one_of` avec `--` complet, `source: "config_scenarios"`) confirmées exactes par lecture directe du code — rien à corriger sur ce point.
+- **`gui_verified: false` reste néanmoins sur les deux entrées** — la logique est confirmée par lecture de code, mais personne n'a encore cliqué dans un vrai navigateur. Seul test restant : ouvrir concrètement le panneau et cliquer.
+
+**Complément du même jour (7 août, après le Bug #2 — voir §6)** : les deux rapports `.md` affichés par ces `yaml_files` sont maintenant réinitialisés à chaque run réel (`reset_conflict_reports()`), donc le panneau de review affichera systématiquement l'état du dernier run, jamais un historique cumulé périmé. Description de script (`script.description`, affichée en haut du panneau via `form-script-desc`) mise à jour sur les deux entrées pour le préciser explicitement.
 
 #### Préréglages (`script.presets`) — nouveau type, 25 juillet 2026
 Bande d'onglets au-dessus des options d'un script, pour pré-cocher un profil de checkboxes plutôt que tout configurer à la main à chaque lancement. Actuellement seul `scan_geographie_complet` en a un (Léger / À la carte / Maxi), mais le mécanisme est générique, réutilisable pour n'importe quel script à `options` multiples.

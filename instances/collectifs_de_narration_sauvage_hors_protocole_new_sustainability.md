@@ -33,8 +33,24 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- coalition_anti_algorithme_des_autonomies_locales_new_sustainability
+- collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability
+- collectifs_de_deplaces_climatiques_non_representes_new_sustainability
+- collectifs_de_desobeissance_algorithmique_new_sustainability
+- communautes_locales_exclues_des_corridors_new_sustainability
+- reseau_des_communs_alimentaires_hors_grille_new_sustainability
+- reseaux_d_information_souverainistes_fermes_new_sustainability
+- reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability
+oppositions:
+- agence_orbitale_de_regulation_commune_aorc_new_sustainability
+- bureau_gouvernance_algorithmique_new_sustainability
+- centre_institutionnel_geneve_new_sustainability
+- conseil_de_regulation_cognitive_de_l_onu_new_sustainability
+- directive_kontinuum_new_sustainability
+- lobbies_des_plateformes_de_consensus_automatise_new_sustainability
+- observatoire_climatique_narratif_de_nairobi_new_sustainability
+- prisme_global_new_sustainability
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -96,6 +112,27 @@ Leur existence même est une provocation dans un scénario où la gouvernance in
 - [[valeurs_culture_tempo_sociale]]
 - [[technologie_information]]
 - [[gouvernance_institutions]]
+
+
+## Relations
+**Alliés :**
+- [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]]
+- [[collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability]]
+- [[collectifs_de_deplaces_climatiques_non_representes_new_sustainability]]
+- [[collectifs_de_desobeissance_algorithmique_new_sustainability]]
+- [[communautes_locales_exclues_des_corridors_new_sustainability]]
+- [[reseau_des_communs_alimentaires_hors_grille_new_sustainability]]
+- [[reseaux_d_information_souverainistes_fermes_new_sustainability]]
+- [[reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability]]
+**Opposants :**
+- [[agence_orbitale_de_regulation_commune_aorc_new_sustainability]]
+- [[bureau_gouvernance_algorithmique_new_sustainability]]
+- [[centre_institutionnel_geneve_new_sustainability]]
+- [[conseil_de_regulation_cognitive_de_l_onu_new_sustainability]]
+- [[directive_kontinuum_new_sustainability]]
+- [[lobbies_des_plateformes_de_consensus_automatise_new_sustainability]]
+- [[observatoire_climatique_narratif_de_nairobi_new_sustainability]]
+- [[prisme_global_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

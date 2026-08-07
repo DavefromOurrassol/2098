@@ -37,8 +37,26 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- autorite_passage_arctique_breakdown
+- consortium_energetique_oural_caspien_breakdown
+- consortiums_energetiques_samoiedes_du_yamal_breakdown
+- factions_energetiques_heritieres_des_pactes_abs_breakdown
+- gouvernements_regionaux_residuels_reterritorialisants_breakdown
+- milices_contractuelles_des_anciens_etats_membres_breakdown
+- reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown
+oppositions:
+- arctic_passage_authority_breakdown
+- arctique_nordark_breakdown
+- armada_logistique_nordique_breakdown
+- conglometrat_sino_siberien_bohai_transit_breakdown
+- enclaves_finlandaises_breakdown
+- enclaves_industrielles_de_bergen_troms_breakdown
+- factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
+- hanse_baltique_breakdown
+- hanse_baltique_recomposee_breakdown
+- kalaallit_nunaat_sovereign_fund_breakdown
+- noeud_nordark_tromso_breakdown
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -99,6 +117,29 @@ Le District est écartelé entre la Hanse Baltique Recomposée et les acteurs no
 - [[gouvernance_institutions]]
 - [[geopolitique_conflits]]
 - [[energie_ressources_critiques]]
+
+
+## Relations
+**Alliés :**
+- [[autorite_passage_arctique_breakdown]]
+- [[consortium_energetique_oural_caspien_breakdown]]
+- [[consortiums_energetiques_samoiedes_du_yamal_breakdown]]
+- [[factions_energetiques_heritieres_des_pactes_abs_breakdown]]
+- [[gouvernements_regionaux_residuels_reterritorialisants_breakdown]]
+- [[milices_contractuelles_des_anciens_etats_membres_breakdown]]
+- [[reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown]]
+**Opposants :**
+- [[arctic_passage_authority_breakdown]]
+- [[arctique_nordark_breakdown]]
+- [[armada_logistique_nordique_breakdown]]
+- [[conglometrat_sino_siberien_bohai_transit_breakdown]]
+- [[enclaves_finlandaises_breakdown]]
+- [[enclaves_industrielles_de_bergen_troms_breakdown]]
+- [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]]
+- [[hanse_baltique_breakdown]]
+- [[hanse_baltique_recomposee_breakdown]]
+- [[kalaallit_nunaat_sovereign_fund_breakdown]]
+- [[noeud_nordark_tromso_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

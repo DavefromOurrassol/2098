@@ -33,8 +33,44 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- bureau_gouvernance_algorithmique_policy_reform
+- bureau_international_du_travail_augmente_bita_policy_reform
+- collectifs_citoyens_de_deliberation_augmentee_policy_reform
+- collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform
+- collectifs_de_gouvernance_communautaire_decentralisee_policy_reform
+- collectifs_de_hackers_biospheriques_policy_reform
+- conseil_de_gouvernance_de_l_information_policy_reform
+- conseil_intergouvernemental_de_regulation_technologique_policy_reform
+- conseil_onu_de_gouvernance_numerique_et_ia_policy_reform
+- conseil_regulation_algorithmique_policy_reform
+- conseil_regulation_ressources_policy_reform
+- consortium_des_ia_editoriales_certifiees_policy_reform
+- consortium_technologique_des_nations_integrees_policy_reform
+- courants_post_technocratiques_de_reconquete_democratique_policy_reform
+- faction_regulatrice_dure_au_sein_du_cei_policy_reform
+- front_des_communes_algorithmiques_policy_reform
+- les_hors_prisme_policy_reform
+- les_veilleurs_du_fleuve_policy_reform
+- mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform
+- observatoire_mondial_des_ressources_critiques_policy_reform
+- oracle_des_seuils_policy_reform
+- rede_paulista_de_distribuic_o_algor_tmica_policy_reform
+- reseau_des_journalistes_d_investigation_energetique_policy_reform
+- reseau_des_regulateurs_numeriques_souverains_rrns_policy_reform
+- tribunal_algorithmique_de_bruxelles_policy_reform
+oppositions:
+- coalition_des_souverainistes_numeriques_policy_reform
+- conglomerats_d_automatisation_industrielle_integrale_policy_reform
+- consortium_nexus_calcul_policy_reform
+- consortiums_d_optimisation_rh_algorithmique_policy_reform
+- consortiums_prives_de_gouvernance_algorithmique_policy_reform
+- courant_autoritaire_recuperateur_du_vocabulaire_communautaire_policy_reform
+- directive_kontinuum_policy_reform
+- factions_technocratiques_de_la_marchandisation_hydrique_policy_reform
+- front_souverainiste_des_blocs_non_signataires_policy_reform
+- front_techno_utopiste_de_la_decision_automatisee_policy_reform
+- reseau_des_lobbyistes_techniques_onu_energie_policy_reform
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -93,6 +129,47 @@ Le RAAI est pris en étau entre son mandat d'indépendance et la dépendance cro
 ## Variables influencées
 - [[technologie_information]]
 - [[gouvernance_institutions]]
+
+
+## Relations
+**Alliés :**
+- [[bureau_gouvernance_algorithmique_policy_reform]]
+- [[bureau_international_du_travail_augmente_bita_policy_reform]]
+- [[collectifs_citoyens_de_deliberation_augmentee_policy_reform]]
+- [[collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform]]
+- [[collectifs_de_gouvernance_communautaire_decentralisee_policy_reform]]
+- [[collectifs_de_hackers_biospheriques_policy_reform]]
+- [[conseil_de_gouvernance_de_l_information_policy_reform]]
+- [[conseil_intergouvernemental_de_regulation_technologique_policy_reform]]
+- [[conseil_onu_de_gouvernance_numerique_et_ia_policy_reform]]
+- [[conseil_regulation_algorithmique_policy_reform]]
+- [[conseil_regulation_ressources_policy_reform]]
+- [[consortium_des_ia_editoriales_certifiees_policy_reform]]
+- [[consortium_technologique_des_nations_integrees_policy_reform]]
+- [[courants_post_technocratiques_de_reconquete_democratique_policy_reform]]
+- [[faction_regulatrice_dure_au_sein_du_cei_policy_reform]]
+- [[front_des_communes_algorithmiques_policy_reform]]
+- [[les_hors_prisme_policy_reform]]
+- [[les_veilleurs_du_fleuve_policy_reform]]
+- [[mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform]]
+- [[observatoire_mondial_des_ressources_critiques_policy_reform]]
+- [[oracle_des_seuils_policy_reform]]
+- [[rede_paulista_de_distribuic_o_algor_tmica_policy_reform]]
+- [[reseau_des_journalistes_d_investigation_energetique_policy_reform]]
+- [[reseau_des_regulateurs_numeriques_souverains_rrns_policy_reform]]
+- [[tribunal_algorithmique_de_bruxelles_policy_reform]]
+**Opposants :**
+- [[coalition_des_souverainistes_numeriques_policy_reform]]
+- [[conglomerats_d_automatisation_industrielle_integrale_policy_reform]]
+- [[consortium_nexus_calcul_policy_reform]]
+- [[consortiums_d_optimisation_rh_algorithmique_policy_reform]]
+- [[consortiums_prives_de_gouvernance_algorithmique_policy_reform]]
+- [[courant_autoritaire_recuperateur_du_vocabulaire_communautaire_policy_reform]]
+- [[directive_kontinuum_policy_reform]]
+- [[factions_technocratiques_de_la_marchandisation_hydrique_policy_reform]]
+- [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+- [[front_techno_utopiste_de_la_decision_automatisee_policy_reform]]
+- [[reseau_des_lobbyistes_techniques_onu_energie_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

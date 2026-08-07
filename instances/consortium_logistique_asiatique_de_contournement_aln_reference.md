@@ -30,8 +30,27 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- administrations_hybrides_des_cites_relais_peripheriques_reference
+- bloc_eurasien_central_reference
+- bloc_ressources_eurasiatique_bre_reference
+- consortium_augmentwork_reference
+- gouvernements_du_bloc_sahelien_autonome_reference
+- ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference
+- operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference
+- singapour_est_reference
+- valparaiso_fct_reference
+oppositions:
+- alliance_blocs_souverains_reference
+- arctic_passage_authority_reference
+- armada_logistique_nordique_reference
+- consortium_de_maintenance_orbitale_seom_7_reference
+- consortium_des_grandes_plateformes_logistiques_globales_reference
+- corridor_arctique_nordique_reference
+- lobbies_industriels_des_etats_non_signataires_reference
+- milices_concurrentes_des_droits_de_passage_reference
+- murmansk_transit_arctique_reference
+- singapour_est_nexcore_reference
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -93,6 +112,30 @@ Le Consortium est pris en étau entre sa promesse de désintermédiation — sé
 - [[geopolitique_conflits]]
 - [[organisation_territoires]]
 - [[systeme_economique_redistribution]]
+
+
+## Relations
+**Alliés :**
+- [[administrations_hybrides_des_cites_relais_peripheriques_reference]]
+- [[bloc_eurasien_central_reference]]
+- [[bloc_ressources_eurasiatique_bre_reference]]
+- [[consortium_augmentwork_reference]]
+- [[gouvernements_du_bloc_sahelien_autonome_reference]]
+- [[ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference]]
+- [[operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference]]
+- [[singapour_est_reference]]
+- [[valparaiso_fct_reference]]
+**Opposants :**
+- [[alliance_blocs_souverains_reference]]
+- [[arctic_passage_authority_reference]]
+- [[armada_logistique_nordique_reference]]
+- [[consortium_de_maintenance_orbitale_seom_7_reference]]
+- [[consortium_des_grandes_plateformes_logistiques_globales_reference]]
+- [[corridor_arctique_nordique_reference]]
+- [[lobbies_industriels_des_etats_non_signataires_reference]]
+- [[milices_concurrentes_des_droits_de_passage_reference]]
+- [[murmansk_transit_arctique_reference]]
+- [[singapour_est_nexcore_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

@@ -4,6 +4,7 @@ type: instance
 slug: rede_paulista_de_distribuic_o_algor_tmica_policy_reform
 entite: rede_paulista_de_distribuic_o_algor_tmica
 scenario: policy_reform
+statut: officialise_enrichi
 localisation:
   zone: sao_paulo_rpda
   lieu: São Paulo — Complexe Técnico de Gestão Urbana
@@ -39,23 +40,22 @@ zone_systemique:
     - société
 
 alliances:
-    - bureau_gouvernance_algorithmique_policy_reform
-    - conseil_onu_de_gouvernance_numerique_et_ia_policy_reform
-    - reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
-    - consortium_technologique_des_nations_integrees_policy_reform
-    - reseau_des_metropoles_n_uds_policy_reform
-    - conseil_intergouvernemental_de_regulation_technologique_policy_reform
-    - grille_aria_policy_reform
-
+- bureau_gouvernance_algorithmique_policy_reform
+- conseil_intergouvernemental_de_regulation_technologique_policy_reform
+- conseil_onu_de_gouvernance_numerique_et_ia_policy_reform
+- consortium_technologique_des_nations_integrees_policy_reform
+- grille_aria_policy_reform
+- reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
+- reseau_des_metropoles_n_uds_policy_reform
 oppositions:
-    - collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform
-    - front_des_communes_algorithmiques_policy_reform
-    - collectifs_de_gouvernance_communautaire_decentralisee_policy_reform
-    - courants_post_technocratiques_de_reconquete_democratique_policy_reform
-    - consortiums_prives_de_gouvernance_algorithmique_policy_reform
-    - internationale_decroissante_anti_planification_policy_reform
-    - front_des_autonomies_territoriales_radicales_policy_reform
-
+- collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform
+- collectifs_de_gouvernance_communautaire_decentralisee_policy_reform
+- conseil_de_gouvernance_de_l_information_policy_reform
+- consortiums_prives_de_gouvernance_algorithmique_policy_reform
+- courants_post_technocratiques_de_reconquete_democratique_policy_reform
+- front_des_autonomies_territoriales_radicales_policy_reform
+- front_des_communes_algorithmiques_policy_reform
+- internationale_decroissante_anti_planification_policy_reform
 type_relation_dominante: rivalité
 
 annee_debut: 2041
@@ -99,12 +99,28 @@ Allouer en temps réel l'eau, l'énergie, le logement social et les flux de mobi
 - [[energie_ressources_critiques]]
 - [[organisation_territoires]]
 
-## Relations
-**Alliés** : [[bureau_gouvernance_algorithmique_policy_reform]], [[conseil_onu_de_gouvernance_numerique_et_ia_policy_reform]], [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]], [[consortium_technologique_des_nations_integrees_policy_reform]], [[reseau_des_metropoles_n_uds_policy_reform]], [[conseil_intergouvernemental_de_regulation_technologique_policy_reform]], [[grille_aria_policy_reform]]
-**Opposants** : [[collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform]], [[front_des_communes_algorithmiques_policy_reform]], [[collectifs_de_gouvernance_communautaire_decentralisee_policy_reform]], [[courants_post_technocratiques_de_reconquete_democratique_policy_reform]], [[consortiums_prives_de_gouvernance_algorithmique_policy_reform]], [[internationale_decroissante_anti_planification_policy_reform]], [[front_des_autonomies_territoriales_radicales_policy_reform]]
 
 ## Description journalistique
 Depuis les tours de contrôle climatisées du Complexe Técnico de Gestão Urbana, au cœur de São Paulo, la RPDA distribue chaque matin les droits d'accès à l'eau, module les coupures d'électricité tournantes et affecte les logements sociaux à 32 millions d'habitants — sans débat, sans vote, par calcul. Lancée en 2041 comme promesse d'équité mathématique, elle est aujourd'hui au centre d'une bataille politique sans précédent : ses algorithmes, révélés en partie par les audits imposés par Genève en 2093, encodent des coefficients de 'priorité de densité productive' qui avantagent systématiquement les quartiers à haute valeur fiscale au détriment des favelas numériques du périphérique. Les mouvements contestataires, organisés depuis 2071, réclament non pas sa destruction mais sa démocratisation — un accès public aux paramètres, un droit de veto communautaire sur les pondérations. Dans les couloirs du Conseil de Régulation, la RPDA est présentée comme un modèle à réformer plutôt qu'à abolir ; dans les rues de Heliopolis, elle est le symbole vivant de la violence tranquille du code.
 
 ## Tensions narratives
 La réforme imposée par les instances internationales oblige la RPDA à ouvrir ses paramètres à l'audit externe — mais jusqu'où ? Les opérateurs internes résistent, arguant que la transparence totale ouvrirait la porte à des manipulations politiques des coefficients d'allocation. Pendant ce temps, les mouvements de favelas numériques, enhardis par la légitimité que leur confère le nouveau cadre réglementaire, exigent un droit de veto communautaire sur les pondérations — ce que ni la municipalité ni les instances internationales ne sont prêtes à accorder. Le risque d'une bifurcation est réel : soit la RPDA devient un modèle mondial de gouvernance algorithmique participative, soit la réforme s'enlise dans un audit cosmétique qui cristallise encore davantage la défiance. En arrière-plan, les consortiums privés de gouvernance algorithmique lorgnent sur le contrat de refonte du système — une privatisation déguisée en modernisation.
+
+## Relations
+**Alliés :**
+- [[bureau_gouvernance_algorithmique_policy_reform]]
+- [[conseil_intergouvernemental_de_regulation_technologique_policy_reform]]
+- [[conseil_onu_de_gouvernance_numerique_et_ia_policy_reform]]
+- [[consortium_technologique_des_nations_integrees_policy_reform]]
+- [[grille_aria_policy_reform]]
+- [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]]
+- [[reseau_des_metropoles_n_uds_policy_reform]]
+**Opposants :**
+- [[collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform]]
+- [[collectifs_de_gouvernance_communautaire_decentralisee_policy_reform]]
+- [[conseil_de_gouvernance_de_l_information_policy_reform]]
+- [[consortiums_prives_de_gouvernance_algorithmique_policy_reform]]
+- [[courants_post_technocratiques_de_reconquete_democratique_policy_reform]]
+- [[front_des_autonomies_territoriales_radicales_policy_reform]]
+- [[front_des_communes_algorithmiques_policy_reform]]
+- [[internationale_decroissante_anti_planification_policy_reform]]

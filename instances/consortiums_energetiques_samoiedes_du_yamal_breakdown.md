@@ -34,8 +34,23 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- arctic_passage_authority_breakdown
+- armada_logistique_nordique_breakdown
+- coalition_pacifique_nord_breakdown
+- conglometrat_sino_siberien_bohai_transit_breakdown
+- consortium_energetique_oural_caspien_breakdown
+- factions_energetiques_heritieres_des_pactes_abs_breakdown
+- federation_russe_residuelle_district_de_mourmansk_breakdown
+- reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown
+oppositions:
+- arctique_nordark_breakdown
+- collectif_hackers_decroissance_infrastructure_breakdown
+- factions_paramilitaires_locales_neutralisees_breakdown
+- front_de_resistance_aux_peages_sur_les_ressources_breakdown
+- kalaallit_nunaat_sovereign_fund_breakdown
+- milices_agro_defensives_locales_breakdown
+- noeud_nordark_tromso_breakdown
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -94,6 +109,26 @@ La revendication identitaire samoïède qui légitime leur autonomie est en cont
 - [[energie_ressources_critiques]]
 - [[organisation_territoires]]
 - [[geopolitique_conflits]]
+
+
+## Relations
+**Alliés :**
+- [[arctic_passage_authority_breakdown]]
+- [[armada_logistique_nordique_breakdown]]
+- [[coalition_pacifique_nord_breakdown]]
+- [[conglometrat_sino_siberien_bohai_transit_breakdown]]
+- [[consortium_energetique_oural_caspien_breakdown]]
+- [[factions_energetiques_heritieres_des_pactes_abs_breakdown]]
+- [[federation_russe_residuelle_district_de_mourmansk_breakdown]]
+- [[reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown]]
+**Opposants :**
+- [[arctique_nordark_breakdown]]
+- [[collectif_hackers_decroissance_infrastructure_breakdown]]
+- [[factions_paramilitaires_locales_neutralisees_breakdown]]
+- [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
+- [[kalaallit_nunaat_sovereign_fund_breakdown]]
+- [[milices_agro_defensives_locales_breakdown]]
+- [[noeud_nordark_tromso_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

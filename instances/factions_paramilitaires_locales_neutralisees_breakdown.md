@@ -36,8 +36,27 @@ zone_geographique:
 - régionale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- communautes_rurales_autonomes_breakdown
+- milices_agro_defensives_locales_breakdown
+- milices_de_controle_territorial_breakdown
+- reseau_de_recuperation_industrielle_illicite_breakdown
+- reseaux_de_solidarite_horizontale_post_effondrement_breakdown
+- reseaux_noirs_pharmaceutiques_breakdown
+- vasil_orentchev_breakdown
+oppositions:
+- cartels_logistiques_regionaux_breakdown
+- conglometrat_sino_siberien_bohai_transit_breakdown
+- consortiums_energetiques_samoiedes_du_yamal_breakdown
+- factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
+- front_humanitaire_d_urgence_non_affilie_breakdown
+- grandes_lacs_compact_eau_breakdown
+- milices_extractivistes_du_bassin_du_congo_breakdown
+- nexcore_breakdown
+- pirates_biologiques_open_source_breakdown
+- reseau_logistique_criminel_concurrent_breakdown
+- reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown
+- seigneuries_logistiques_armees_breakdown
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -98,6 +117,30 @@ La tension centrale est celle de la prédation : chaque faction neutralisée a d
 - [[geopolitique_conflits]]
 - [[organisation_territoires]]
 - [[gouvernance_institutions]]
+
+
+## Relations
+**Alliés :**
+- [[communautes_rurales_autonomes_breakdown]]
+- [[milices_agro_defensives_locales_breakdown]]
+- [[milices_de_controle_territorial_breakdown]]
+- [[reseau_de_recuperation_industrielle_illicite_breakdown]]
+- [[reseaux_de_solidarite_horizontale_post_effondrement_breakdown]]
+- [[reseaux_noirs_pharmaceutiques_breakdown]]
+- [[vasil_orentchev_breakdown]]
+**Opposants :**
+- [[cartels_logistiques_regionaux_breakdown]]
+- [[conglometrat_sino_siberien_bohai_transit_breakdown]]
+- [[consortiums_energetiques_samoiedes_du_yamal_breakdown]]
+- [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]]
+- [[front_humanitaire_d_urgence_non_affilie_breakdown]]
+- [[grandes_lacs_compact_eau_breakdown]]
+- [[milices_extractivistes_du_bassin_du_congo_breakdown]]
+- [[nexcore_breakdown]]
+- [[pirates_biologiques_open_source_breakdown]]
+- [[reseau_logistique_criminel_concurrent_breakdown]]
+- [[reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

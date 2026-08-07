@@ -4,6 +4,7 @@ type: instance
 slug: terrametrics_reference
 entite: terrametrics
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: singapour_est
   lieu: siège flottant au large de Singapour Est
@@ -37,21 +38,20 @@ zone_systemique:
     - société
 
 alliances:
-    - consortiums_energetiques_des_megapoles_reference
-    - agence_stabilisation_climatique_reference
-    - autorites_regionales_de_regulation_hydrologique_reference
-    - consortium_helios_reference
-    - nexcore_reference
-    - plateformes_d_optimisation_territoriale_par_ia_reference
-
+- agence_stabilisation_climatique_reference
+- autorites_regionales_de_regulation_hydrologique_reference
+- consortium_helios_reference
+- consortiums_energetiques_des_megapoles_reference
+- nexcore_reference
+- observatoire_climatique_des_territoires_oct_reference
+- plateformes_d_optimisation_territoriale_par_ia_reference
 oppositions:
-    - bloc_des_souverainistes_climatiques_reference
-    - collectifs_de_biopiraterie_inversee_reference
-    - factions_eurasiatiques_contre_la_tarification_hydrique_reference
-    - mouvement_racines_vivantes_reference
-    - reseaux_de_capteurs_citoyens_reference
-    - ong_environnementales_de_terrain_reference
-
+- bloc_des_souverainistes_climatiques_reference
+- collectifs_de_biopiraterie_inversee_reference
+- factions_eurasiatiques_contre_la_tarification_hydrique_reference
+- mouvement_racines_vivantes_reference
+- ong_environnementales_de_terrain_reference
+- reseaux_de_capteurs_citoyens_reference
 type_relation_dominante: rivalité
 
 annee_debut: 2026
@@ -94,12 +94,26 @@ TM-GCS déploie des flottes de drones et de satellites pour modifier les régime
 - [[energie_ressources_critiques]]
 - [[geopolitique_conflits]]
 
-## Relations
-**Alliés** : [[consortiums_energetiques_des_megapoles_reference]], [[agence_stabilisation_climatique_reference]], [[autorites_regionales_de_regulation_hydrologique_reference]], [[consortium_helios_reference]], [[nexcore_reference]], [[plateformes_d_optimisation_territoriale_par_ia_reference]]
-**Opposants** : [[bloc_des_souverainistes_climatiques_reference]], [[collectifs_de_biopiraterie_inversee_reference]], [[factions_eurasiatiques_contre_la_tarification_hydrique_reference]], [[mouvement_racines_vivantes_reference]], [[reseaux_de_capteurs_citoyens_reference]], [[ong_environnementales_de_terrain_reference]]
 
 ## Description journalistique
 Depuis son siège flottant au large de Singapour Est, TerraMetrics Global Climate Solutions (TM-GCS) incarne l'arrogance et l'efficacité des géants climatiques du XXIe siècle. Ses drones argentés, reconnaissables à leurs ailes en forme de lames, sillonnent les cieux pour « optimiser » les précipitations, tandis que ses satellites ajustent les courants-jets comme on règle un thermostat. Les mégapoles du Sud global lui doivent leur survie, mais paient le prix fort : une dépendance technologique qui se transforme souvent en chantage économique. Ses contrats, négociés dans l'ombre avec des gouvernements aux abois, sont régulièrement dénoncés par les ONG comme des « accords de soumission climatique ». Pourtant, personne ne peut se passer de ses services — pas même ses détracteurs.
 
 ## Tensions narratives
 TM-GCS est au cœur de multiples scandales : ses interventions en Amazonie ont provoqué des sécheresses artificielles pour le compte de consortiums agro-industriels, tandis que ses contrats avec des États africains ont été accusés de créer des « dettes climatiques » insoutenables. Ses rivalités avec les souverainistes climatiques et les collectifs écologistes dégénèrent souvent en conflits hybrides, notamment dans les zones grises où ses milices affrontent des groupes armés locaux. La question de sa régulation — ou de son démantèlement — est un sujet de débat permanent dans les arènes internationales, mais son pouvoir de négociation reste intact tant que les États dépendent de ses technologies pour survivre.
+
+## Relations
+**Alliés :**
+- [[agence_stabilisation_climatique_reference]]
+- [[autorites_regionales_de_regulation_hydrologique_reference]]
+- [[consortium_helios_reference]]
+- [[consortiums_energetiques_des_megapoles_reference]]
+- [[nexcore_reference]]
+- [[observatoire_climatique_des_territoires_oct_reference]]
+- [[plateformes_d_optimisation_territoriale_par_ia_reference]]
+**Opposants :**
+- [[bloc_des_souverainistes_climatiques_reference]]
+- [[collectifs_de_biopiraterie_inversee_reference]]
+- [[factions_eurasiatiques_contre_la_tarification_hydrique_reference]]
+- [[mouvement_racines_vivantes_reference]]
+- [[ong_environnementales_de_terrain_reference]]
+- [[reseaux_de_capteurs_citoyens_reference]]

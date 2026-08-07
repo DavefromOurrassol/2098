@@ -31,8 +31,23 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_internationale_des_energies_renouvelables_irena_2_reference
+- armada_logistique_nordique_reference
+- conseil_des_etats_nordiques_integres_reference
+- consortium_energetique_des_mers_du_nord_reference
+- consortiums_energetiques_des_megapoles_reference
+- corridor_arctique_nordique_reference
+- fonds_souverain_arctique_scandinave_reference
+- helsinki_communs_numeriques_reference
+- murmansk_transit_arctique_reference
+oppositions:
+- bloc_eurasien_central_reference
+- bloc_ressources_eurasiatique_bre_reference
+- consortiums_energetiques_opaques_reference
+- corporations_d_extraction_energetique_non_signataires_reference
+- milices_concurrentes_des_droits_de_passage_reference
+- operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference
 type_relation_dominante: dépendance
 annee_debut: 2026
 annee_fin: null
@@ -98,6 +113,26 @@ La tension centrale du Consortium réside dans sa double nature : il est à la f
 - [[energie_ressources_critiques]]
 - [[geopolitique_conflits]]
 - [[systeme_economique_redistribution]]
+
+
+## Relations
+**Alliés :**
+- [[agence_internationale_des_energies_renouvelables_irena_2_reference]]
+- [[armada_logistique_nordique_reference]]
+- [[conseil_des_etats_nordiques_integres_reference]]
+- [[consortium_energetique_des_mers_du_nord_reference]]
+- [[consortiums_energetiques_des_megapoles_reference]]
+- [[corridor_arctique_nordique_reference]]
+- [[fonds_souverain_arctique_scandinave_reference]]
+- [[helsinki_communs_numeriques_reference]]
+- [[murmansk_transit_arctique_reference]]
+**Opposants :**
+- [[bloc_eurasien_central_reference]]
+- [[bloc_ressources_eurasiatique_bre_reference]]
+- [[consortiums_energetiques_opaques_reference]]
+- [[corporations_d_extraction_energetique_non_signataires_reference]]
+- [[milices_concurrentes_des_droits_de_passage_reference]]
+- [[operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

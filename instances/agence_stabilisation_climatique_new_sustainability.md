@@ -4,6 +4,7 @@ type: instance
 slug: agence_stabilisation_climatique_new_sustainability
 entite: agence_stabilisation_climatique
 scenario: new_sustainability
+statut: officialise_enrichi
 localisation:
   zone: centre_institutionnel_geneve
   lieu: Genève
@@ -38,17 +39,27 @@ zone_systemique:
     - société
 
 alliances:
-    - consortium_des_ia_climatiques_new_sustainability
-    - fonds_mondial_de_regeneration_ecologique_new_sustainability
-    - reseau_des_villes_regeneratives_new_sustainability
-    - programme_onusien_de_mobilite_climatique_new_sustainability
-
+- agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
+- agence_mondiale_de_modelisation_climatique_ammc_new_sustainability
+- arctic_passage_authority_new_sustainability
+- centre_institutionnel_geneve_new_sustainability
+- consortium_amazonia_viva_new_sustainability
+- consortium_des_ia_climatiques_new_sustainability
+- fonds_mondial_de_regeneration_ecologique_new_sustainability
+- kalaallit_nunaat_sovereign_fund_new_sustainability
+- oracle_des_seuils_new_sustainability
+- pacifique_sud_resilience_network_new_sustainability
+- programme_onusien_de_mobilite_climatique_new_sustainability
+- reseau_des_villes_regeneratives_new_sustainability
 oppositions:
-    - souverainistes_du_bloc_eurasien_new_sustainability
-    - coalition_des_industries_extractives_residuelles_new_sustainability
-    - mouvement_pour_l_autodetermination_territoriale_new_sustainability
-    - collectifs_de_deplaces_climatiques_non_representes_new_sustainability
-
+- coalition_anti_fiscalite_universelle_new_sustainability
+- coalition_des_industries_extractives_residuelles_new_sustainability
+- collectifs_de_deplaces_climatiques_non_representes_new_sustainability
+- faction_conservatrice_pro_actif_strategique_new_sustainability
+- internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
+- mouvement_pour_l_autodetermination_territoriale_new_sustainability
+- reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability
+- souverainistes_du_bloc_eurasien_new_sustainability
 type_relation_dominante: coopération
 
 annee_debut: 2031
@@ -92,12 +103,33 @@ L'APRC déploie et supervise les programmes de restauration des grands écosyst�
 - [[demographie_mobilite_humaine]]
 - [[energie_ressources_critiques]]
 
-## Relations
-**Alliés** : [[consortium_des_ia_climatiques_new_sustainability]], [[fonds_mondial_de_regeneration_ecologique_new_sustainability]], [[reseau_des_villes_regeneratives_new_sustainability]], [[programme_onusien_de_mobilite_climatique_new_sustainability]]
-**Opposants** : [[souverainistes_du_bloc_eurasien_new_sustainability]], [[coalition_des_industries_extractives_residuelles_new_sustainability]], [[mouvement_pour_l_autodetermination_territoriale_new_sustainability]], [[collectifs_de_deplaces_climatiques_non_representes_new_sustainability]]
 
 ## Description journalistique
 Depuis ses tours de verre fumé surplombant le nouveau littoral de Genève — rehaussé de trois mètres après les accords de 2044 — l'APRC orchestre discrètement le métabolisme climatique de la planète. Ses 12 000 techniciens et agents répartis sur six continents opèrent avec une efficacité que ses défenseurs comparent à une chirurgie et que ses détracteurs assimilent à une tutelle. En 2098, elle publie chaque trimestre ses 'Tableaux de Bord Planétaires', devenus la référence absolue pour évaluer l'état du monde — un pouvoir de narration que certains jugent plus redoutable encore que ses drones d'ensemencement nuageux. Son directrice générale, Amara Diallo-Svensson, est souvent citée comme la personne la plus influente de la planète sans avoir jamais été élue.
 
 ## Tensions narratives
 La légitimité démocratique de l'APRC reste le point de friction central : ses décisions s'imposent aux États membres sans vote populaire, au nom de l'urgence perpétuée. Des voix croissantes au sein même de l'institution questionnent le seuil à partir duquel la 'stabilisation' devient une justification pour figer les inégalités géographiques héritées. Par ailleurs, la dépendance croissante à ses systèmes d'IA décisionnels soulève la question de qui gouverne réellement — les humains ou les modèles climatiques prédictifs. Enfin, les communautés déplacées des zones sacrifiées aux programmes de régénération forestière commencent à s'organiser, réclamant une représentation directe dans les instances qui décident de leur territoire.
+
+## Relations
+**Alliés :**
+- [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]]
+- [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]]
+- [[arctic_passage_authority_new_sustainability]]
+- [[centre_institutionnel_geneve_new_sustainability]]
+- [[consortium_amazonia_viva_new_sustainability]]
+- [[consortium_des_ia_climatiques_new_sustainability]]
+- [[fonds_mondial_de_regeneration_ecologique_new_sustainability]]
+- [[kalaallit_nunaat_sovereign_fund_new_sustainability]]
+- [[oracle_des_seuils_new_sustainability]]
+- [[pacifique_sud_resilience_network_new_sustainability]]
+- [[programme_onusien_de_mobilite_climatique_new_sustainability]]
+- [[reseau_des_villes_regeneratives_new_sustainability]]
+**Opposants :**
+- [[coalition_anti_fiscalite_universelle_new_sustainability]]
+- [[coalition_des_industries_extractives_residuelles_new_sustainability]]
+- [[collectifs_de_deplaces_climatiques_non_representes_new_sustainability]]
+- [[faction_conservatrice_pro_actif_strategique_new_sustainability]]
+- [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]]
+- [[mouvement_pour_l_autodetermination_territoriale_new_sustainability]]
+- [[reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability]]
+- [[souverainistes_du_bloc_eurasien_new_sustainability]]

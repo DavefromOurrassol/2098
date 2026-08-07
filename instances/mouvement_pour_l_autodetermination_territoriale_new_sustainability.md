@@ -34,8 +34,33 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- bloc_des_gouvernements_souverainistes_hydriques_new_sustainability
+- coalition_anti_algorithme_des_autonomies_locales_new_sustainability
+- collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability
+- collectifs_de_desobeissance_algorithmique_new_sustainability
+- collectifs_riverains_du_bassin_du_congo_new_sustainability
+- communautes_locales_exclues_des_corridors_new_sustainability
+- etats_souverainistes_anti_reseau_new_sustainability
+- factions_souverainistes_des_blocs_peripheriques_new_sustainability
+- great_lakes_autonomous_compact_new_sustainability
+- internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
+- ligue_des_cites_du_sahel_numerique_new_sustainability
+- mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability
+- reseaux_de_gouvernance_territoriale_distribues_new_sustainability
+- reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability
+oppositions:
+- agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
+- agence_stabilisation_climatique_new_sustainability
+- bloc_des_architectes_d_efficience_algorithmique_new_sustainability
+- centre_institutionnel_geneve_new_sustainability
+- commission_territoriale_ourrassol_new_sustainability
+- conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability
+- conseil_technocratique_de_coordination_regionale_new_sustainability
+- consortium_des_ia_climatiques_new_sustainability
+- programme_onu_de_restauration_des_sols_new_sustainability
+- programme_onusien_de_mobilite_climatique_new_sustainability
+- trame_bioclimatique_new_sustainability
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -100,6 +125,36 @@ Le Mouvement est pris dans une contradiction fondamentale : en défendant la sou
 - [[organisation_territoires]]
 - [[gouvernance_institutions]]
 - [[frontieres_du_systeme]]
+
+
+## Relations
+**Alliés :**
+- [[bloc_des_gouvernements_souverainistes_hydriques_new_sustainability]]
+- [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]]
+- [[collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability]]
+- [[collectifs_de_desobeissance_algorithmique_new_sustainability]]
+- [[collectifs_riverains_du_bassin_du_congo_new_sustainability]]
+- [[communautes_locales_exclues_des_corridors_new_sustainability]]
+- [[etats_souverainistes_anti_reseau_new_sustainability]]
+- [[factions_souverainistes_des_blocs_peripheriques_new_sustainability]]
+- [[great_lakes_autonomous_compact_new_sustainability]]
+- [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]]
+- [[ligue_des_cites_du_sahel_numerique_new_sustainability]]
+- [[mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability]]
+- [[reseaux_de_gouvernance_territoriale_distribues_new_sustainability]]
+- [[reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability]]
+**Opposants :**
+- [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]]
+- [[agence_stabilisation_climatique_new_sustainability]]
+- [[bloc_des_architectes_d_efficience_algorithmique_new_sustainability]]
+- [[centre_institutionnel_geneve_new_sustainability]]
+- [[commission_territoriale_ourrassol_new_sustainability]]
+- [[conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability]]
+- [[conseil_technocratique_de_coordination_regionale_new_sustainability]]
+- [[consortium_des_ia_climatiques_new_sustainability]]
+- [[programme_onu_de_restauration_des_sols_new_sustainability]]
+- [[programme_onusien_de_mobilite_climatique_new_sustainability]]
+- [[trame_bioclimatique_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

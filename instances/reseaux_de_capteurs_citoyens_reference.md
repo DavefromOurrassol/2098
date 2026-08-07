@@ -33,8 +33,33 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- autorites_regionales_de_regulation_hydrologique_reference
+- collectifs_academiques_independants_reference
+- collectifs_de_journalisme_embarque_reference
+- collectifs_de_journalistes_independants_regionaux_reference
+- consortium_amazonia_viva_reference
+- cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference
+- cooperatives_ia_open_source_reference
+- federation_communs_territoriaux_reference
+- les_veilleurs_du_fleuve_reference
+- ong_de_tracabilite_des_ressources_critiques_reference
+- ong_environnementales_de_terrain_reference
+- prisme_global_reference
+- reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference
+- reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference
+- reseaux_de_medecine_traditionnelle_augmentee_reference
+- voix_du_dehors_reference
+oppositions:
+- agence_stabilisation_climatique_reference
+- bloc_des_souverainistes_climatiques_reference
+- bureaux_de_regulation_informationnelle_reference
+- consortiums_prives_de_gestion_des_donnees_critiques_reference
+- etats_a_tendance_centraliste_numerique_reference
+- lobbies_agro_industriels_a_haute_consommation_d_eau_reference
+- plateformes_centralisees_de_narration_officielle_reference
+- plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference
+- terrametrics_reference
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -96,6 +121,36 @@ La tension centrale oppose leur indépendance revendiquée aux tentatives d'abso
 - [[technologie_information]]
 - [[climat_environnement_global]]
 - [[gouvernance_institutions]]
+
+
+## Relations
+**Alliés :**
+- [[autorites_regionales_de_regulation_hydrologique_reference]]
+- [[collectifs_academiques_independants_reference]]
+- [[collectifs_de_journalisme_embarque_reference]]
+- [[collectifs_de_journalistes_independants_regionaux_reference]]
+- [[consortium_amazonia_viva_reference]]
+- [[cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference]]
+- [[cooperatives_ia_open_source_reference]]
+- [[federation_communs_territoriaux_reference]]
+- [[les_veilleurs_du_fleuve_reference]]
+- [[ong_de_tracabilite_des_ressources_critiques_reference]]
+- [[ong_environnementales_de_terrain_reference]]
+- [[prisme_global_reference]]
+- [[reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference]]
+- [[reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference]]
+- [[reseaux_de_medecine_traditionnelle_augmentee_reference]]
+- [[voix_du_dehors_reference]]
+**Opposants :**
+- [[agence_stabilisation_climatique_reference]]
+- [[bloc_des_souverainistes_climatiques_reference]]
+- [[bureaux_de_regulation_informationnelle_reference]]
+- [[consortiums_prives_de_gestion_des_donnees_critiques_reference]]
+- [[etats_a_tendance_centraliste_numerique_reference]]
+- [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]]
+- [[plateformes_centralisees_de_narration_officielle_reference]]
+- [[plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference]]
+- [[terrametrics_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

@@ -4,6 +4,7 @@ type: instance
 slug: union_africaine_resilience_reference
 entite: union_africaine_resilience
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: union_africaine_resilience
   lieu: Addis-Abeba
@@ -36,30 +37,31 @@ zone_systemique:
     - infrastructure
 
 alliances:
-    - commission_hydrique_de_l_union_africaine_reference
-    - union_africaine_de_resilience_territoriale_reference
-    - nairobi_crrc_reference
-    - kinshasa_accords_hydriques_reference
-    - consortium_africain_de_biotechnologies_sociales_reference
-    - regulateurs_de_l_union_continentale_africaine_reference
-    - institut_polytechnique_de_ouagadougou_reference
-    - gouvernements_du_bloc_sahelien_autonome_reference
-    - banque_mondiale_des_transitions_climatiques_reference
-    - agence_stabilisation_climatique_reference
-    - programme_onu_eau_2080_reference
-    - reseau_des_cooperatives_agro_saheliennes_reference
-    - institutions_multilaterales_survivantes_reference
-
+- agence_stabilisation_climatique_reference
+- banque_mondiale_des_transitions_climatiques_reference
+- bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference
+- commission_hydrique_de_l_union_africaine_reference
+- consortium_africain_de_biotechnologies_sociales_reference
+- gouvernements_du_bloc_sahelien_autonome_reference
+- institut_polytechnique_de_ouagadougou_reference
+- institutions_multilaterales_survivantes_reference
+- kinshasa_accords_hydriques_reference
+- ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference
+- nairobi_crrc_reference
+- programme_onu_eau_2080_reference
+- regulateurs_de_l_union_continentale_africaine_reference
+- reseau_des_cooperatives_agro_saheliennes_reference
+- reseaux_de_medecine_traditionnelle_augmentee_reference
+- union_africaine_de_resilience_territoriale_reference
 oppositions:
-    - bloc_des_souverainistes_climatiques_reference
-    - alliance_blocs_souverains_reference
-    - consortiums_d_extraction_miniere_du_bassin_congolais_reference
-    - consortiums_prives_d_extraction_de_ressources_critiques_reference
-    - factions_d_extraction_miniere_independantes_reference
-    - milices_concurrentes_des_droits_de_passage_reference
-    - cartel_des_terres_rares_d_asie_centrale_reference
-    - courant_nationaliste_instrumentalisateur_du_discours_des_racines_reference
-
+- alliance_blocs_souverains_reference
+- bloc_des_souverainistes_climatiques_reference
+- cartel_des_terres_rares_d_asie_centrale_reference
+- consortiums_d_extraction_miniere_du_bassin_congolais_reference
+- consortiums_prives_d_extraction_de_ressources_critiques_reference
+- courant_nationaliste_instrumentalisateur_du_discours_des_racines_reference
+- factions_d_extraction_miniere_independantes_reference
+- milices_concurrentes_des_droits_de_passage_reference
 type_relation_dominante: coopération
 
 annee_debut: 2026
@@ -103,12 +105,37 @@ L'UAR coordonne formellement les politiques d'adaptation climatique continentale
 - [[climat_environnement_global]]
 - [[geopolitique_conflits]]
 
-## Relations
-**Alliés** : [[commission_hydrique_de_l_union_africaine_reference]], [[union_africaine_de_resilience_territoriale_reference]], [[nairobi_crrc_reference]], [[kinshasa_accords_hydriques_reference]], [[consortium_africain_de_biotechnologies_sociales_reference]], [[regulateurs_de_l_union_continentale_africaine_reference]], [[institut_polytechnique_de_ouagadougou_reference]], [[gouvernements_du_bloc_sahelien_autonome_reference]], [[banque_mondiale_des_transitions_climatiques_reference]], [[agence_stabilisation_climatique_reference]], [[programme_onu_eau_2080_reference]], [[reseau_des_cooperatives_agro_saheliennes_reference]], [[institutions_multilaterales_survivantes_reference]]
-**Opposants** : [[bloc_des_souverainistes_climatiques_reference]], [[alliance_blocs_souverains_reference]], [[consortiums_d_extraction_miniere_du_bassin_congolais_reference]], [[consortiums_prives_d_extraction_de_ressources_critiques_reference]], [[factions_d_extraction_miniere_independantes_reference]], [[milices_concurrentes_des_droits_de_passage_reference]], [[cartel_des_terres_rares_d_asie_centrale_reference]], [[courant_nationaliste_instrumentalisateur_du_discours_des_racines_reference]]
 
 ## Description journalistique
 Depuis son siège d'Addis-Abeba réaménagé en hub climatique, l'Union Africaine Résilience tient chaque trimestre ses grands sommets de coordination — des cérémonies que les correspondants couvrent avec une fatigue mal dissimulée. On y adopte des déclarations qui engagent tout le monde et ne contraignent personne. Les délégations du Bloc Sahélien Autonome arrivent avec leurs propres agendas, celles du corridor Est restent dans l'attente des offres du Bloc Eurasien Central, et le secrétariat tente de ménager tout le monde. L'UAR n'est pas morte — elle signe des accords, envoie des équipes de terrain à Nairobi et au bassin du Congo, négocie à Genève. Mais entre ce qu'elle promet et ce qu'elle livre, l'écart est devenu le vrai territoire qu'elle administre.
 
 ## Tensions narratives
 L'UAR est prise en étau entre ses membres qui la court-circuitent — certains négociant directement avec le Bloc Eurasien Central ou les consortiums miniers — et les partenaires multilatéraux qui la sollicitent précisément parce qu'elle est le seul interlocuteur formellement continental. Sa Commission Hydrique produit des données climatiques reconnues mondialement, mais ses recommandations sont régulièrement ignorées par les États riverains du Congo ou du Niger. La question qui obsède ses dirigeants : faut-il accepter un rôle de facilitateur symbolique, ou risquer l'implosion en tentant d'imposer une vraie autorité supranationale que la moitié des membres refuserait ?
+
+## Relations
+**Alliés :**
+- [[agence_stabilisation_climatique_reference]]
+- [[banque_mondiale_des_transitions_climatiques_reference]]
+- [[bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference]]
+- [[commission_hydrique_de_l_union_africaine_reference]]
+- [[consortium_africain_de_biotechnologies_sociales_reference]]
+- [[gouvernements_du_bloc_sahelien_autonome_reference]]
+- [[institut_polytechnique_de_ouagadougou_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
+- [[kinshasa_accords_hydriques_reference]]
+- [[ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference]]
+- [[nairobi_crrc_reference]]
+- [[programme_onu_eau_2080_reference]]
+- [[regulateurs_de_l_union_continentale_africaine_reference]]
+- [[reseau_des_cooperatives_agro_saheliennes_reference]]
+- [[reseaux_de_medecine_traditionnelle_augmentee_reference]]
+- [[union_africaine_de_resilience_territoriale_reference]]
+**Opposants :**
+- [[alliance_blocs_souverains_reference]]
+- [[bloc_des_souverainistes_climatiques_reference]]
+- [[cartel_des_terres_rares_d_asie_centrale_reference]]
+- [[consortiums_d_extraction_miniere_du_bassin_congolais_reference]]
+- [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[courant_nationaliste_instrumentalisateur_du_discours_des_racines_reference]]
+- [[factions_d_extraction_miniere_independantes_reference]]
+- [[milices_concurrentes_des_droits_de_passage_reference]]

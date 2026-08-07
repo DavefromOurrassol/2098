@@ -31,8 +31,30 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- bloc_eurasien_central_reference
+- bloc_ressources_eurasiatique_bre_reference
+- consortiums_prives_d_extraction_de_ressources_critiques_reference
+- factions_d_extraction_miniere_independantes_reference
+- gouvernements_du_bloc_sahelien_autonome_reference
+- gouvernements_federaux_residuels_souverainistes_reference
+- milices_concurrentes_des_droits_de_passage_reference
+- operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference
+- services_de_contre_information_des_blocs_geopolitiques_concurrents_reference
+- vasil_orentchev_reference
+- zones_grises_globales_reference
+oppositions:
+- agence_internationale_des_energies_renouvelables_irena_2_reference
+- agence_stabilisation_climatique_reference
+- banque_mondiale_des_transitions_climatiques_reference
+- conseil_regulation_ressources_reference
+- consortiums_bancaires_financiarises_reference
+- corridor_arctique_nordique_reference
+- murmansk_transit_arctique_reference
+- ong_de_tracabilite_des_ressources_critiques_reference
+- plateformes_d_optimisation_territoriale_par_ia_reference
+- reseaux_de_gouvernance_multilaterale_survivants_reference
+- tribunal_algorithmique_de_bruxelles_reference
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -94,6 +116,33 @@ La tension centrale réside dans leur double nature : instruments de stabilisati
 - [[geopolitique_conflits]]
 - [[systeme_economique_redistribution]]
 - [[gouvernance_institutions]]
+
+
+## Relations
+**Alliés :**
+- [[bloc_eurasien_central_reference]]
+- [[bloc_ressources_eurasiatique_bre_reference]]
+- [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[factions_d_extraction_miniere_independantes_reference]]
+- [[gouvernements_du_bloc_sahelien_autonome_reference]]
+- [[gouvernements_federaux_residuels_souverainistes_reference]]
+- [[milices_concurrentes_des_droits_de_passage_reference]]
+- [[operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference]]
+- [[services_de_contre_information_des_blocs_geopolitiques_concurrents_reference]]
+- [[vasil_orentchev_reference]]
+- [[zones_grises_globales_reference]]
+**Opposants :**
+- [[agence_internationale_des_energies_renouvelables_irena_2_reference]]
+- [[agence_stabilisation_climatique_reference]]
+- [[banque_mondiale_des_transitions_climatiques_reference]]
+- [[conseil_regulation_ressources_reference]]
+- [[consortiums_bancaires_financiarises_reference]]
+- [[corridor_arctique_nordique_reference]]
+- [[murmansk_transit_arctique_reference]]
+- [[ong_de_tracabilite_des_ressources_critiques_reference]]
+- [[plateformes_d_optimisation_territoriale_par_ia_reference]]
+- [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
+- [[tribunal_algorithmique_de_bruxelles_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

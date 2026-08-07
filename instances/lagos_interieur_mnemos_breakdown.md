@@ -4,6 +4,7 @@ type: instance
 slug: lagos_interieur_mnemos_breakdown
 entite: lagos_interieur_mnemos
 scenario: breakdown
+statut: officialise_enrichi
 localisation:
   zone: lagos_interieur_mnemos
   lieu: Lagos-Intérieur (lagune de Lagos)
@@ -36,22 +37,22 @@ zone_systemique:
     - cyberspace
 
 alliances:
-    - reseau_mnemos_breakdown
-    - collectifs_de_gardiens_archivistes_itinerants_breakdown
-    - collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
-    - lagos_est_nexcore_breakdown
-    - reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown
-    - communautes_religieuses_des_relais_physiques_breakdown
-    - diaspora_tech_sahel_breakdown
-
+- collectifs_de_gardiens_archivistes_itinerants_breakdown
+- collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
+- communautes_religieuses_des_relais_physiques_breakdown
+- diaspora_tech_sahel_breakdown
+- enclaves_technologiques_survivantes_breakdown
+- lagos_est_nexcore_breakdown
+- reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown
+- reseau_mnemos_breakdown
 oppositions:
-    - factions_propagandistes_des_archives_breakdown
-    - milices_de_controle_territorial_breakdown
-    - seigneuries_logistiques_armees_breakdown
-    - nexcore_breakdown
-    - enclaves_corporatives_fortifiees_breakdown
-    - reseau_des_anciens_financeurs_devenus_censeurs_breakdown
-
+- corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown
+- enclaves_corporatives_fortifiees_breakdown
+- factions_propagandistes_des_archives_breakdown
+- milices_de_controle_territorial_breakdown
+- nexcore_breakdown
+- reseau_des_anciens_financeurs_devenus_censeurs_breakdown
+- seigneuries_logistiques_armees_breakdown
 type_relation_dominante: infiltration
 
 annee_debut: 2061
@@ -95,12 +96,28 @@ Collecte, chiffrement et redistribution des archives identitaires communautaires
 - [[gouvernance_institutions]]
 - [[organisation_territoires]]
 
-## Relations
-**Alliés** : [[reseau_mnemos_breakdown]], [[collectifs_de_gardiens_archivistes_itinerants_breakdown]], [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]], [[lagos_est_nexcore_breakdown]], [[reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown]], [[communautes_religieuses_des_relais_physiques_breakdown]], [[diaspora_tech_sahel_breakdown]]
-**Opposants** : [[factions_propagandistes_des_archives_breakdown]], [[milices_de_controle_territorial_breakdown]], [[seigneuries_logistiques_armees_breakdown]], [[nexcore_breakdown]], [[enclaves_corporatives_fortifiees_breakdown]], [[reseau_des_anciens_financeurs_devenus_censeurs_breakdown]]
 
 ## Description journalistique
 On ne les voit pas. On les convoque. Dans la lagune de Lagos, les Cryptes Mnemos circulent sur des pirogues à coques renforcées dont les flancs dissimulent des serveurs étanches alimentés par récupération solaire de fortune. Quand une famille veut prouver qu'elle a existé — qu'un terrain lui appartenait, qu'un fils est bien né quelque part entre deux inondations — elle fait passer le mot à travers les réseaux de confiance. Quelqu'un vient. Montre. Négocie. Repart. Les journalistes qui ont tenté de localiser un nœud fixe de l'organisation n'ont jamais trouvé que des traces : un boîtier vide, un QR code effacé à l'acide, une femme qui ne savait rien. Ce que l'on sait, c'est que les Cryptes Lagunaires détiennent ce qui reste de l'identité de plusieurs centaines de milliers de personnes — et qu'elles le font payer.
 
 ## Tensions narratives
 La ligne entre préservation sacrée et marchandisation cynique s'efface à mesure que la crise s'approfondit : certaines cellules facturent désormais l'accès aux archives au prix de la survie, excluant de fait les plus démunis de leur propre mémoire. Des factions internes disputent si les données doivent rester chiffrées et inconditionnellement protégées ou si elles peuvent être utilisées comme levier géopolitique face aux milices territoriales. En parallèle, les Fragments NexCore cherchent à infiltrer les nœuds pour s'approprier les bases identitaires et en faire un instrument de contrôle de population — ce qui pourrait provoquer soit la destruction délibérée des archives par les Cryptes elles-mêmes, soit leur trahison ultime.
+
+## Relations
+**Alliés :**
+- [[collectifs_de_gardiens_archivistes_itinerants_breakdown]]
+- [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]]
+- [[communautes_religieuses_des_relais_physiques_breakdown]]
+- [[diaspora_tech_sahel_breakdown]]
+- [[enclaves_technologiques_survivantes_breakdown]]
+- [[lagos_est_nexcore_breakdown]]
+- [[reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown]]
+- [[reseau_mnemos_breakdown]]
+**Opposants :**
+- [[corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown]]
+- [[enclaves_corporatives_fortifiees_breakdown]]
+- [[factions_propagandistes_des_archives_breakdown]]
+- [[milices_de_controle_territorial_breakdown]]
+- [[nexcore_breakdown]]
+- [[reseau_des_anciens_financeurs_devenus_censeurs_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]

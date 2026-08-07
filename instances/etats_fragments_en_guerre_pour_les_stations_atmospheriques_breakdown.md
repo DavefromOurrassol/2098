@@ -39,8 +39,22 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- milices_de_controle_territorial_breakdown
+- seigneuries_logistiques_armees_breakdown
+oppositions:
+- archives_neutres_de_geneve_breakdown
+- brigades_medicales_itinerantes_breakdown
+- collectif_des_climatologues_sans_etat_breakdown
+- compagnies_de_geo_ingenierie_privees_sans_mandat_breakdown
+- conglometrat_sino_siberien_bohai_transit_breakdown
+- consortium_energetique_oural_caspien_breakdown
+- etats_fragmentes_nationalisant_les_stocks_breakdown
+- factions_energetiques_heritieres_des_pactes_abs_breakdown
+- federation_communs_territoriaux_breakdown
+- front_de_resistance_aux_peages_sur_les_ressources_breakdown
+- gouvernements_regionaux_residuels_reterritorialisants_breakdown
+- trame_bioclimatique_breakdown
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -100,6 +114,28 @@ La tension fondamentale de ces États-Fragments réside dans leur paradoxe exist
 - [[geopolitique_conflits]]
 - [[organisation_territoires]]
 - [[climat_environnement_global]]
+
+
+
+
+
+## Relations
+**Alliés :**
+- [[milices_de_controle_territorial_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]
+**Opposants :**
+- [[archives_neutres_de_geneve_breakdown]]
+- [[brigades_medicales_itinerantes_breakdown]]
+- [[collectif_des_climatologues_sans_etat_breakdown]]
+- [[compagnies_de_geo_ingenierie_privees_sans_mandat_breakdown]]
+- [[conglometrat_sino_siberien_bohai_transit_breakdown]]
+- [[consortium_energetique_oural_caspien_breakdown]]
+- [[etats_fragmentes_nationalisant_les_stocks_breakdown]]
+- [[factions_energetiques_heritieres_des_pactes_abs_breakdown]]
+- [[federation_communs_territoriaux_breakdown]]
+- [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
+- [[gouvernements_regionaux_residuels_reterritorialisants_breakdown]]
+- [[trame_bioclimatique_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

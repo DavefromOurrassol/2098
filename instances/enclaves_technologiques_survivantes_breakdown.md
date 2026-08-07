@@ -37,11 +37,15 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
-- lagos_interieur_mnemos_breakdown
-- seoul_collectif_nexcore_breakdown
-- hanse_baltique_breakdown
-- enclaves_finlandaises_breakdown
 - archives_neutres_geneve_breakdown
+- enclaves_finlandaises_breakdown
+- enclaves_industrielles_du_corridor_oural_caspien_breakdown
+- hanse_baltique_breakdown
+- lagos_est_nexcore_breakdown
+- lagos_interieur_mnemos_breakdown
+- nexus_biosyn_breakdown
+- rede_paulista_de_distribuic_o_algor_tmica_breakdown
+- seoul_collectif_nexcore_breakdown
 oppositions:
 - communes_rust_belt_breakdown
 - corridors_eurasiens_convoyage_breakdown
@@ -103,13 +107,18 @@ Leur paradoxe fondamental est d'être à la fois indispensables et condamnées :
 - [[technologie_information]]
 - [[energie_ressources_critiques]]
 
+
 ## Relations
 **Alliés :**
-- [[lagos_interieur_mnemos_breakdown]]
-- [[seoul_collectif_nexcore_breakdown]]
-- [[hanse_baltique_breakdown]]
-- [[enclaves_finlandaises_breakdown]]
 - [[archives_neutres_geneve_breakdown]]
+- [[enclaves_finlandaises_breakdown]]
+- [[enclaves_industrielles_du_corridor_oural_caspien_breakdown]]
+- [[hanse_baltique_breakdown]]
+- [[lagos_est_nexcore_breakdown]]
+- [[lagos_interieur_mnemos_breakdown]]
+- [[nexus_biosyn_breakdown]]
+- [[rede_paulista_de_distribuic_o_algor_tmica_breakdown]]
+- [[seoul_collectif_nexcore_breakdown]]
 **Opposants :**
 - [[communes_rust_belt_breakdown]]
 - [[corridors_eurasiens_convoyage_breakdown]]

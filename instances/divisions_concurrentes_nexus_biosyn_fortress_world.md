@@ -36,10 +36,12 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances:
+alliances: []
+oppositions:
+- consortium_africain_de_biotechnologies_sociales_fortress_world
 - nexus_biosyn_division_eurasienne_fortress_world
 - nexus_biosyn_division_pacifique_fortress_world
-oppositions: []
+- nexus_biosyn_fortress_world
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -106,10 +108,16 @@ La tension fondamentale réside dans le fait que la Division Eurasienne et la Di
 - [[sante_biotechnologies]]
 - [[organisation_territoires]]
 
+
+
+
+
 ## Relations
-**Alliés :**
+**Opposants :**
+- [[consortium_africain_de_biotechnologies_sociales_fortress_world]]
 - [[nexus_biosyn_division_eurasienne_fortress_world]]
 - [[nexus_biosyn_division_pacifique_fortress_world]]
+- [[nexus_biosyn_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

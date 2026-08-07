@@ -31,8 +31,31 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agences_de_securite_interieure_des_etats_forteresses_fortress_world
+- appareils_d_etat_des_blocs_fermes_fortress_world
+- bloc_atlantique_fortress_world
+- bloc_eurasiatique_occidental_fortress_world
+- commandement_strategique_des_matieres_critiques_atlantique_fortress_world
+- commandements_logistiques_peripheriques_du_bloc_eurasien_central_fortress_world
+- complexes_militaro_industriels_de_gestion_des_ressources_fortress_world
+- consortium_eurasiatique_des_ressources_fermees_fortress_world
+- consortium_helios_fortress_world
+- consortiums_energetiques_du_bloc_ourrassol_fortress_world
+- etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world
+- nexcore_atlantique_infrastructure_fortress_world
+- pacte_forteresses_souveraines_fortress_world
+- vaultcorp_security_fortress_world
+oppositions:
+- alliance_sanitaire_des_populations_exclues_fortress_world
+- cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- collectifs_de_reappropriation_energetique_peripherique_fortress_world
+- contrebandiers_energetiques_des_zones_grises_fortress_world
+- factions_djihadistes_logistiques_d_asie_centrale_fortress_world
+- mouvement_commun_midwest_fortress_world
+- populations_des_zones_deficitaires_d_optimisation_fortress_world
+- reseaux_de_contrebande_energetique_transfrontaliere_fortress_world
 type_relation_dominante: dépendance
 annee_debut: 2026
 annee_fin: null
@@ -97,6 +120,34 @@ La contradiction fondamentale de ces réseaux réside dans leur double mission :
 - [[energie_ressources_critiques]]
 - [[geopolitique_conflits]]
 - [[organisation_territoires]]
+
+
+## Relations
+**Alliés :**
+- [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]]
+- [[appareils_d_etat_des_blocs_fermes_fortress_world]]
+- [[bloc_atlantique_fortress_world]]
+- [[bloc_eurasiatique_occidental_fortress_world]]
+- [[commandement_strategique_des_matieres_critiques_atlantique_fortress_world]]
+- [[commandements_logistiques_peripheriques_du_bloc_eurasien_central_fortress_world]]
+- [[complexes_militaro_industriels_de_gestion_des_ressources_fortress_world]]
+- [[consortium_eurasiatique_des_ressources_fermees_fortress_world]]
+- [[consortium_helios_fortress_world]]
+- [[consortiums_energetiques_du_bloc_ourrassol_fortress_world]]
+- [[etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world]]
+- [[nexcore_atlantique_infrastructure_fortress_world]]
+- [[pacte_forteresses_souveraines_fortress_world]]
+- [[vaultcorp_security_fortress_world]]
+**Opposants :**
+- [[alliance_sanitaire_des_populations_exclues_fortress_world]]
+- [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[collectifs_de_reappropriation_energetique_peripherique_fortress_world]]
+- [[contrebandiers_energetiques_des_zones_grises_fortress_world]]
+- [[factions_djihadistes_logistiques_d_asie_centrale_fortress_world]]
+- [[mouvement_commun_midwest_fortress_world]]
+- [[populations_des_zones_deficitaires_d_optimisation_fortress_world]]
+- [[reseaux_de_contrebande_energetique_transfrontaliere_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

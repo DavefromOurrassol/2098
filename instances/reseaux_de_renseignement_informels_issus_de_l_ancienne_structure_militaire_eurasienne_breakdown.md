@@ -34,8 +34,22 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
+- conglometrat_sino_siberien_bohai_transit_breakdown
+- consortium_energetique_oural_caspien_breakdown
+- consortiums_energetiques_samoiedes_du_yamal_breakdown
+- enclaves_industrielles_du_corridor_oural_caspien_breakdown
+- federation_russe_residuelle_district_de_mourmansk_breakdown
+- milices_privees_documentees_terrain_breakdown
+- reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown
+- vasil_orentchev_breakdown
+oppositions:
+- armada_logistique_nordique_breakdown
+- factions_paramilitaires_locales_neutralisees_breakdown
+- milices_extractivistes_du_bassin_du_congo_breakdown
+- nexcore_breakdown
+- reseau_logistique_criminel_concurrent_breakdown
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -91,6 +105,25 @@ Ces réseaux sont prisonniers d'une loyauté orpheline : ils perpétuent les cod
 - [[geopolitique_conflits]]
 - [[gouvernance_institutions]]
 - [[technologie_information]]
+
+
+## Relations
+**Alliés :**
+- [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]]
+- [[conglometrat_sino_siberien_bohai_transit_breakdown]]
+- [[consortium_energetique_oural_caspien_breakdown]]
+- [[consortiums_energetiques_samoiedes_du_yamal_breakdown]]
+- [[enclaves_industrielles_du_corridor_oural_caspien_breakdown]]
+- [[federation_russe_residuelle_district_de_mourmansk_breakdown]]
+- [[milices_privees_documentees_terrain_breakdown]]
+- [[reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown]]
+- [[vasil_orentchev_breakdown]]
+**Opposants :**
+- [[armada_logistique_nordique_breakdown]]
+- [[factions_paramilitaires_locales_neutralisees_breakdown]]
+- [[milices_extractivistes_du_bassin_du_congo_breakdown]]
+- [[nexcore_breakdown]]
+- [[reseau_logistique_criminel_concurrent_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

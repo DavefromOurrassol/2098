@@ -4,6 +4,7 @@ type: instance
 slug: sao_paulo_ita_reference
 entite: sao_paulo_ita
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: sao_paulo_ita
   lieu: São Paulo
@@ -37,22 +38,21 @@ zone_systemique:
     - économie
 
 alliances:
-    - administrations_hybrides_des_cites_relais_peripheriques_reference
-    - confederation_des_megapoles_autonomes_reference
-    - ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference
-    - consortium_amazonia_viva_reference
-    - rede_paulista_de_distribuic_o_algor_tmica_reference
-    - federation_des_cliniques_autonomes_reference
-    - reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference
-
+- administrations_hybrides_des_cites_relais_peripheriques_reference
+- algorithmic_labor_exchange_reference
+- confederation_des_megapoles_autonomes_reference
+- consortium_amazonia_viva_reference
+- federation_des_cliniques_autonomes_reference
+- ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference
+- rede_paulista_de_distribuic_o_algor_tmica_reference
+- reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference
 oppositions:
-    - frente_sert_o_livre_reference
-    - operateurs_de_zones_economiques_speciales_periurbaines_reference
-    - consortiums_energetiques_des_megapoles_reference
-    - milices_concurrentes_des_droits_de_passage_reference
-    - consortiums_bancaires_financiarises_reference
-    - bureau_zones_non_prioritaires_reference
-
+- bureau_zones_non_prioritaires_reference
+- consortiums_bancaires_financiarises_reference
+- consortiums_energetiques_des_megapoles_reference
+- frente_sert_o_livre_reference
+- milices_concurrentes_des_droits_de_passage_reference
+- operateurs_de_zones_economiques_speciales_periurbaines_reference
 type_relation_dominante: rivalité
 
 annee_debut: 2026
@@ -96,12 +96,27 @@ Maintien des services publics essentiels dans les zones centrales et semi-périp
 - [[systeme_economique_redistribution]]
 - [[demographie_mobilite_humaine]]
 
-## Relations
-**Alliés** : [[administrations_hybrides_des_cites_relais_peripheriques_reference]], [[confederation_des_megapoles_autonomes_reference]], [[ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference]], [[consortium_amazonia_viva_reference]], [[rede_paulista_de_distribuic_o_algor_tmica_reference]], [[federation_des_cliniques_autonomes_reference]], [[reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference]]
-**Opposants** : [[frente_sert_o_livre_reference]], [[operateurs_de_zones_economiques_speciales_periurbaines_reference]], [[consortiums_energetiques_des_megapoles_reference]], [[milices_concurrentes_des_droits_de_passage_reference]], [[consortiums_bancaires_financiarises_reference]], [[bureau_zones_non_prioritaires_reference]]
 
 ## Description journalistique
 Dans les couloirs de la Prefeitura du Largo do Arouche, les écrans affichent encore les cartes administratives d'un territoire que la PMSP-AC ne contrôle plus entièrement depuis la sécession de facto des zones nord en 2081. Les fonctionnaires arrivent tôt, tamponnent des formulaires pour des citoyens qui viennent de loin — parfois de zones théoriquement hors juridiction — parce que le cachet municipal reste la seule preuve d'existence que les réseaux régionaux de redistribution acceptent encore. Le maire-coordonnateur Renata Ferreira-Luz dirige depuis trois ans une institution qui négocie chaque semaine son propre budget avec des consortiums privés auxquels elle a délégué, faute de moyens, la gestion de l'eau dans six arrondissements. 'Nous gouvernons avec ce que nous avons, pas avec ce que nous voudrions avoir', répète-t-elle — formule qui résume à la fois la dignité et le dénuement d'une administration qui refuse de reconnaître sa propre décrépitude.
 
 ## Tensions narratives
 La PMSP-AC est prise entre deux logiques également destructrices : capituler face aux consortiums privés qui offrent de reprendre des services entiers en échange d'une cession de souveraineté territoriale partielle, ou résister en continuant d'administrer à perte des zones où elle n'est plus que symboliquement présente, alimentant ainsi le discours des mouvements sécessionnistes qui l'accusent d'être une coquille vide prélevant des taxes sans rendre de services. Le mouvement Frente Sertão Livre, actif dans les périphéries nord, utilise précisément les carences de la Prefeitura comme argument de mobilisation. Simultanément, certains de ses propres cadres négocient discrètement avec des opérateurs privés ou des entités comme le SPAAR des transferts de compétences qui videraient l'institution de sa substance — créant une tension interne entre les 'réformistes pragmatiques' et les 'légitimistes' attachés à la forme institutionnelle comme valeur en soi.
+
+## Relations
+**Alliés :**
+- [[administrations_hybrides_des_cites_relais_peripheriques_reference]]
+- [[algorithmic_labor_exchange_reference]]
+- [[confederation_des_megapoles_autonomes_reference]]
+- [[consortium_amazonia_viva_reference]]
+- [[federation_des_cliniques_autonomes_reference]]
+- [[ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference]]
+- [[rede_paulista_de_distribuic_o_algor_tmica_reference]]
+- [[reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference]]
+**Opposants :**
+- [[bureau_zones_non_prioritaires_reference]]
+- [[consortiums_bancaires_financiarises_reference]]
+- [[consortiums_energetiques_des_megapoles_reference]]
+- [[frente_sert_o_livre_reference]]
+- [[milices_concurrentes_des_droits_de_passage_reference]]
+- [[operateurs_de_zones_economiques_speciales_periurbaines_reference]]

@@ -4,6 +4,7 @@ type: instance
 slug: consortium_africain_de_biotechnologies_sociales_new_sustainability
 entite: consortium_africain_de_biotechnologies_sociales
 scenario: new_sustainability
+statut: officialise_enrichi
 localisation:
   zone: nairobi_centre
   lieu: Nairobi — siège du CPBE
@@ -37,24 +38,26 @@ zone_systemique:
     - infrastructure
 
 alliances:
-    - fonds_mondial_de_redistribution_technologique_new_sustainability
-    - oms_etendue_new_sustainability
-    - reseau_des_bio_communs_regionaux_new_sustainability
-    - college_des_auditeurs_independants_du_parlement_biotechnologique_mondial_new_sustainability
-    - reseau_global_de_cliniques_regeneratives_new_sustainability
-    - coalition_vivant_new_sustainability
-    - ligue_des_cites_du_sahel_numerique_new_sustainability
-    - collectifs_riverains_du_bassin_du_congo_new_sustainability
-    - reseau_des_ingenieurs_climatiques_du_sud_global_new_sustainability
-    - observatoire_anti_monopole_de_geneve_new_sustainability
-
+- coalition_vivant_new_sustainability
+- collectifs_riverains_du_bassin_du_congo_new_sustainability
+- college_des_auditeurs_independants_du_parlement_biotechnologique_mondial_new_sustainability
+- fonds_mondial_de_redistribution_technologique_new_sustainability
+- hub_nairobi_kigali_new_sustainability
+- ligue_des_cites_du_sahel_numerique_new_sustainability
+- observatoire_anti_monopole_de_geneve_new_sustainability
+- oms_etendue_new_sustainability
+- parlement_territoires_nairobi_new_sustainability
+- reseau_des_bio_communs_regionaux_new_sustainability
+- reseau_des_communs_numeriques_globaux_new_sustainability
+- reseau_des_ingenieurs_climatiques_du_sud_global_new_sustainability
+- reseau_global_de_cliniques_regeneratives_new_sustainability
+- reseaux_de_medecine_regenerative_universelle_new_sustainability
 oppositions:
-    - nexus_biosyn_new_sustainability
-    - enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability
-    - lobbies_agro_industriels_du_bassin_du_congo_new_sustainability
-    - coalition_anti_fiscalite_universelle_new_sustainability
-    - factions_internes_pro_opacite_des_parametres_new_sustainability
-
+- coalition_anti_fiscalite_universelle_new_sustainability
+- enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability
+- factions_internes_pro_opacite_des_parametres_new_sustainability
+- lobbies_agro_industriels_du_bassin_du_congo_new_sustainability
+- nexus_biosyn_new_sustainability
 type_relation_dominante: alliance stratégique
 
 annee_debut: 2031
@@ -98,12 +101,32 @@ Certifie et redistribue l'accès aux biotechnologies régénératives pour les c
 - [[gouvernance_institutions]]
 - [[organisation_territoires]]
 
-## Relations
-**Alliés** : [[fonds_mondial_de_redistribution_technologique_new_sustainability]], [[oms_etendue_new_sustainability]], [[reseau_des_bio_communs_regionaux_new_sustainability]], [[college_des_auditeurs_independants_du_parlement_biotechnologique_mondial_new_sustainability]], [[reseau_global_de_cliniques_regeneratives_new_sustainability]], [[coalition_vivant_new_sustainability]], [[ligue_des_cites_du_sahel_numerique_new_sustainability]], [[collectifs_riverains_du_bassin_du_congo_new_sustainability]], [[reseau_des_ingenieurs_climatiques_du_sud_global_new_sustainability]], [[observatoire_anti_monopole_de_geneve_new_sustainability]]
-**Opposants** : [[nexus_biosyn_new_sustainability]], [[enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability]], [[lobbies_agro_industriels_du_bassin_du_congo_new_sustainability]], [[coalition_anti_fiscalite_universelle_new_sustainability]], [[factions_internes_pro_opacite_des_parametres_new_sustainability]]
 
 ## Description journalistique
 Depuis son siège à Nairobi — un bâtiment en briques de chanvre et capteurs biométriques — le CPBE négocie chaque semaine des clauses d'accès équitable avec des consortiums pharmaceutiques qui, il y a trente ans, auraient simplement dicté leurs conditions. Fondé dans le sillage des accords de redistribution technologique de 2031, il est aujourd'hui la voix la plus structurée de l'Afrique dans les enceintes biotechnologiques mondiales. Ses diplomates techniques maîtrisent autant le langage des brevets que celui des droits communautaires. Mais des voix s'élèvent, y compris en son sein : à trop jouer le jeu des certifications globales, le Consortium aurait-il transformé l'émancipation en formulaire administratif ?
 
 ## Tensions narratives
 Le CPBE est écartelé entre son rôle de plaidoyer communautaire et sa dépendance croissante aux financements institutionnels mondiaux qui conditionnent leur aide à des standards de «gouvernance transparente» définis hors d'Afrique. Une frange interne, proche des collectifs de désobéissance algorithmique, accuse la direction de sacrifier la souveraineté biomédicale locale sur l'autel de la respectabilité internationale. Parallèlement, des acteurs comme Nexus BioSyn cherchent à infiltrer ses comités de certification pour orienter les standards en leur faveur. La question centrale : jusqu'où peut-on réformer un système sans en devenir le gardien ?
+
+## Relations
+**Alliés :**
+- [[coalition_vivant_new_sustainability]]
+- [[collectifs_riverains_du_bassin_du_congo_new_sustainability]]
+- [[college_des_auditeurs_independants_du_parlement_biotechnologique_mondial_new_sustainability]]
+- [[fonds_mondial_de_redistribution_technologique_new_sustainability]]
+- [[hub_nairobi_kigali_new_sustainability]]
+- [[ligue_des_cites_du_sahel_numerique_new_sustainability]]
+- [[observatoire_anti_monopole_de_geneve_new_sustainability]]
+- [[oms_etendue_new_sustainability]]
+- [[parlement_territoires_nairobi_new_sustainability]]
+- [[reseau_des_bio_communs_regionaux_new_sustainability]]
+- [[reseau_des_communs_numeriques_globaux_new_sustainability]]
+- [[reseau_des_ingenieurs_climatiques_du_sud_global_new_sustainability]]
+- [[reseau_global_de_cliniques_regeneratives_new_sustainability]]
+- [[reseaux_de_medecine_regenerative_universelle_new_sustainability]]
+**Opposants :**
+- [[coalition_anti_fiscalite_universelle_new_sustainability]]
+- [[enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability]]
+- [[factions_internes_pro_opacite_des_parametres_new_sustainability]]
+- [[lobbies_agro_industriels_du_bassin_du_congo_new_sustainability]]
+- [[nexus_biosyn_new_sustainability]]

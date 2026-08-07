@@ -32,8 +32,22 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- collectifs_de_gouvernance_communautaire_decentralisee_policy_reform
+- front_des_autonomies_territoriales_radicales_policy_reform
+- front_souverainiste_des_blocs_non_signataires_policy_reform
+- mouvement_pour_la_justice_ecologique_communautaire_policy_reform
+- mouvement_pour_la_souverainete_territoriale_absolue_policy_reform
+oppositions:
+- agence_stabilisation_climatique_policy_reform
+- agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
+- conseil_de_regulation_climatique_global_policy_reform
+- consortium_de_geo_ingenierie_atmospherique_pacifique_policy_reform
+- consortium_technologique_de_planification_territoriale_policy_reform
+- fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform
+- office_integre_des_flux_migratoires_policy_reform
+- reseau_des_metropoles_n_uds_policy_reform
+- reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -96,6 +110,25 @@ Le réseau est traversé par une ligne de fracture entre ceux qui misent sur le 
 - [[organisation_territoires]]
 - [[demographie_mobilite_humaine]]
 - [[gouvernance_institutions]]
+
+
+## Relations
+**Alliés :**
+- [[collectifs_de_gouvernance_communautaire_decentralisee_policy_reform]]
+- [[front_des_autonomies_territoriales_radicales_policy_reform]]
+- [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+- [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]]
+- [[mouvement_pour_la_souverainete_territoriale_absolue_policy_reform]]
+**Opposants :**
+- [[agence_stabilisation_climatique_policy_reform]]
+- [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]
+- [[conseil_de_regulation_climatique_global_policy_reform]]
+- [[consortium_de_geo_ingenierie_atmospherique_pacifique_policy_reform]]
+- [[consortium_technologique_de_planification_territoriale_policy_reform]]
+- [[fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform]]
+- [[office_integre_des_flux_migratoires_policy_reform]]
+- [[reseau_des_metropoles_n_uds_policy_reform]]
+- [[reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

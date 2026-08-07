@@ -4,6 +4,7 @@ type: instance
 slug: arctic_passage_authority_new_sustainability
 entite: arctic_passage_authority
 scenario: new_sustainability
+statut: officialise_enrichi
 localisation:
   zone: arctic_passage_qaanaaq
   lieu: Siège flottant ancré au large de Qaanaaq
@@ -38,25 +39,25 @@ zone_systemique:
     - société
 
 alliances:
-    - kalaallit_nunaat_sovereign_fund_new_sustainability
-    - conseil_energetique_intercontinental_new_sustainability
-    - parlement_deliberatif_mondial_new_sustainability
-    - conseil_de_deliberation_augmentee_de_l_union_nordique_new_sustainability
-    - fonds_mondial_de_regeneration_ecologique_new_sustainability
-    - operateurs_de_fusion_energetique_regionaux_new_sustainability
-    - agence_stabilisation_climatique_new_sustainability
-    - reseau_des_agences_climatiques_regionales_new_sustainability
-    - bureau_gouvernance_algorithmique_new_sustainability
-
+- agence_stabilisation_climatique_new_sustainability
+- bureau_gouvernance_algorithmique_new_sustainability
+- conseil_de_deliberation_augmentee_de_l_union_nordique_new_sustainability
+- conseil_energetique_intercontinental_new_sustainability
+- fonds_mondial_de_regeneration_ecologique_new_sustainability
+- great_lakes_compact_new_sustainability
+- kalaallit_nunaat_sovereign_fund_new_sustainability
+- operateurs_de_fusion_energetique_regionaux_new_sustainability
+- pacifique_sud_resilience_network_new_sustainability
+- parlement_deliberatif_mondial_new_sustainability
+- reseau_des_agences_climatiques_regionales_new_sustainability
 oppositions:
-    - mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability
-    - coalition_des_industries_extractives_residuelles_new_sustainability
-    - etats_souverainistes_anti_reseau_new_sustainability
-    - faction_conservatrice_pro_actif_strategique_new_sustainability
-    - lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability
-    - factions_souverainistes_des_blocs_peripheriques_new_sustainability
-    - communautes_locales_exclues_des_corridors_new_sustainability
-
+- coalition_des_industries_extractives_residuelles_new_sustainability
+- communautes_locales_exclues_des_corridors_new_sustainability
+- etats_souverainistes_anti_reseau_new_sustainability
+- faction_conservatrice_pro_actif_strategique_new_sustainability
+- factions_souverainistes_des_blocs_peripheriques_new_sustainability
+- lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability
+- mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability
 type_relation_dominante: coopération
 
 annee_debut: 2041
@@ -101,12 +102,31 @@ Le Conseil administre les droits de transit, les quotas de navigation et les pro
 - [[geopolitique_conflits]]
 - [[organisation_territoires]]
 
-## Relations
-**Alliés** : [[kalaallit_nunaat_sovereign_fund_new_sustainability]], [[conseil_energetique_intercontinental_new_sustainability]], [[parlement_deliberatif_mondial_new_sustainability]], [[conseil_de_deliberation_augmentee_de_l_union_nordique_new_sustainability]], [[fonds_mondial_de_regeneration_ecologique_new_sustainability]], [[operateurs_de_fusion_energetique_regionaux_new_sustainability]], [[agence_stabilisation_climatique_new_sustainability]], [[reseau_des_agences_climatiques_regionales_new_sustainability]], [[bureau_gouvernance_algorithmique_new_sustainability]]
-**Opposants** : [[mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability]], [[coalition_des_industries_extractives_residuelles_new_sustainability]], [[etats_souverainistes_anti_reseau_new_sustainability]], [[faction_conservatrice_pro_actif_strategique_new_sustainability]], [[lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability]], [[factions_souverainistes_des_blocs_peripheriques_new_sustainability]], [[communautes_locales_exclues_des_corridors_new_sustainability]]
 
 ## Description journalistique
 Depuis son siège flottant ancré au large de Qaanaaq, le Nuna Siku Governance Council publie chaque trimestre son rapport de santé arctique : températures, indices de biodiversité marine, volumes de transit, redevances redistribuées. C'est l'une des rares institutions mondiales où un représentant inuit peut opposer son veto à une décision de transit prise par un État membre du G20 — et où ce veto est effectivement respecté. Le Conseil est souvent cité comme la preuve que la co-gouvernance fonctionne quand elle est financée, outillée et dotée d'une autorité réelle. Mais ses critiques les plus acides viennent de l'intérieur : certains anciens des nations Yupik et Sámi estiment que siéger dans une institution algorithmique globale a progressivement substitué une légitimité procédurale à une légitimité vivante. 'Nous administrons un corridor. Nous n'habitons plus un territoire', résume en 2097 la porte-parole Aaju Peter-Iqaluk dans une allocution restée célèbre.
 
 ## Tensions narratives
 La tension centrale reste intacte malgré la maturité institutionnelle : l'inclusion des peuples circumpolaires au sein du Conseil les a-t-elle protégés ou neutralisés ? Le Mouvement Souverainiste de la Ceinture Boréale accuse le Conseil d'avoir transformé la résistance autochtone en procédure administrative. Parallèlement, plusieurs États membres du corridor cherchent à réviser les droits de veto autochtones jugés 'inefficients' face à l'urgence des flux énergétiques intercontinentaux. Enfin, l'émergence de l'exploitation des ressources spatiales soulève une question vertigineuse : si les corridors orbitaux deviennent le nouveau passage stratégique, qui sera le prochain 'peuple autochtone' à être absorbé dans une gouvernance qui prétend les représenter ?
+
+## Relations
+**Alliés :**
+- [[agence_stabilisation_climatique_new_sustainability]]
+- [[bureau_gouvernance_algorithmique_new_sustainability]]
+- [[conseil_de_deliberation_augmentee_de_l_union_nordique_new_sustainability]]
+- [[conseil_energetique_intercontinental_new_sustainability]]
+- [[fonds_mondial_de_regeneration_ecologique_new_sustainability]]
+- [[great_lakes_compact_new_sustainability]]
+- [[kalaallit_nunaat_sovereign_fund_new_sustainability]]
+- [[operateurs_de_fusion_energetique_regionaux_new_sustainability]]
+- [[pacifique_sud_resilience_network_new_sustainability]]
+- [[parlement_deliberatif_mondial_new_sustainability]]
+- [[reseau_des_agences_climatiques_regionales_new_sustainability]]
+**Opposants :**
+- [[coalition_des_industries_extractives_residuelles_new_sustainability]]
+- [[communautes_locales_exclues_des_corridors_new_sustainability]]
+- [[etats_souverainistes_anti_reseau_new_sustainability]]
+- [[faction_conservatrice_pro_actif_strategique_new_sustainability]]
+- [[factions_souverainistes_des_blocs_peripheriques_new_sustainability]]
+- [[lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability]]
+- [[mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability]]

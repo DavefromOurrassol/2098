@@ -34,8 +34,28 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- bloc_ressources_eurasiatique_bre_reference
+- consortium_des_grandes_plateformes_logistiques_globales_reference
+- consortium_indo_pacifique_de_l_hydrogene_reference
+- consortiums_energetiques_des_megapoles_reference
+- consortiums_energetiques_opaques_reference
+- consortiums_prives_d_extraction_de_ressources_critiques_reference
+- corporations_d_extraction_energetique_non_signataires_reference
+oppositions:
+- amara_diallo_nkosi_reference
+- collectifs_de_journalisme_embarque_reference
+- consortium_africain_de_biotechnologies_sociales_reference
+- consortium_amazonia_viva_reference
+- factions_d_extraction_miniere_independantes_reference
+- front_souverainiste_des_ressources_d_amerique_du_sud_reference
+- kinshasa_accords_hydriques_reference
+- milices_concurrentes_des_droits_de_passage_reference
+- nairobi_crrc_reference
+- ong_de_tracabilite_des_ressources_critiques_reference
+- regulateurs_de_l_union_continentale_africaine_reference
+- union_africaine_de_resilience_territoriale_reference
+- union_africaine_resilience_reference
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -98,6 +118,31 @@ La dépendance mondiale à leurs ressources les place en position de force, mais
 - [[energie_ressources_critiques]]
 - [[geopolitique_conflits]]
 - [[systeme_economique_redistribution]]
+
+
+## Relations
+**Alliés :**
+- [[bloc_ressources_eurasiatique_bre_reference]]
+- [[consortium_des_grandes_plateformes_logistiques_globales_reference]]
+- [[consortium_indo_pacifique_de_l_hydrogene_reference]]
+- [[consortiums_energetiques_des_megapoles_reference]]
+- [[consortiums_energetiques_opaques_reference]]
+- [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[corporations_d_extraction_energetique_non_signataires_reference]]
+**Opposants :**
+- [[amara_diallo_nkosi_reference]]
+- [[collectifs_de_journalisme_embarque_reference]]
+- [[consortium_africain_de_biotechnologies_sociales_reference]]
+- [[consortium_amazonia_viva_reference]]
+- [[factions_d_extraction_miniere_independantes_reference]]
+- [[front_souverainiste_des_ressources_d_amerique_du_sud_reference]]
+- [[kinshasa_accords_hydriques_reference]]
+- [[milices_concurrentes_des_droits_de_passage_reference]]
+- [[nairobi_crrc_reference]]
+- [[ong_de_tracabilite_des_ressources_critiques_reference]]
+- [[regulateurs_de_l_union_continentale_africaine_reference]]
+- [[union_africaine_de_resilience_territoriale_reference]]
+- [[union_africaine_resilience_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

@@ -32,8 +32,22 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- collectifs_de_biohackers_agro_communautaires_policy_reform
+- collectifs_de_gouvernance_communautaire_decentralisee_policy_reform
+- collectifs_de_hackers_biospheriques_policy_reform
+- consortium_africain_de_biotechnologies_sociales_policy_reform
+- consortium_amazonia_viva_policy_reform
+- federation_des_mutuelles_biotech_policy_reform
+- mouvement_pour_la_justice_ecologique_communautaire_policy_reform
+oppositions:
+- agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
+- autorite_mondiale_du_vivant_amv_policy_reform
+- conseil_regulation_ressources_policy_reform
+- consortium_agro_pacifique_policy_reform
+- consortiums_agro_industriels_du_bassin_fluvial_policy_reform
+- front_de_souverainete_biologique_eurasiatique_policy_reform
+- nexus_biosyn_policy_reform
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -97,6 +111,25 @@ La Coalition se retrouve prise en étau entre deux impératifs contradictoires :
 - [[sante_biotechnologies]]
 - [[gouvernance_institutions]]
 - [[systemes_productifs_travail]]
+
+
+## Relations
+**Alliés :**
+- [[collectifs_de_biohackers_agro_communautaires_policy_reform]]
+- [[collectifs_de_gouvernance_communautaire_decentralisee_policy_reform]]
+- [[collectifs_de_hackers_biospheriques_policy_reform]]
+- [[consortium_africain_de_biotechnologies_sociales_policy_reform]]
+- [[consortium_amazonia_viva_policy_reform]]
+- [[federation_des_mutuelles_biotech_policy_reform]]
+- [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]]
+**Opposants :**
+- [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]
+- [[autorite_mondiale_du_vivant_amv_policy_reform]]
+- [[conseil_regulation_ressources_policy_reform]]
+- [[consortium_agro_pacifique_policy_reform]]
+- [[consortiums_agro_industriels_du_bassin_fluvial_policy_reform]]
+- [[front_de_souverainete_biologique_eurasiatique_policy_reform]]
+- [[nexus_biosyn_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

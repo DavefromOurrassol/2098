@@ -30,8 +30,27 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- contrebandiers_energetiques_des_zones_grises_fortress_world
+- marches_gris_casablanca_fortress_world
+- marches_gris_tbilissi_fortress_world
+- operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world
+- reseaux_d_echange_clandestin_inter_zones_fortress_world
+oppositions:
+- anba_siege_atlantique_fortress_world
+- armada_logistique_nordique_fortress_world
+- bloc_pacifique_nord_fortress_world
+- bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world
+- coalition_arctique_des_blocs_continentaux_fortress_world
+- commandement_strategique_des_matieres_critiques_atlantique_fortress_world
+- complexes_militaro_industriels_de_gestion_des_ressources_fortress_world
+- consortium_sino_finlandais_de_flotte_autonome_fortress_world
+- consortiums_energetiques_du_bloc_ourrassol_fortress_world
+- corps_des_inspecteurs_de_conformite_inter_blocs_fortress_world
+- instances_aria_concurrentes_des_blocs_rivaux_fortress_world
+- ironclad_logistics_fortress_world
+- kalaallit_nunaat_sovereign_fund_fortress_world
+- nexcore_atlantique_infrastructure_fortress_world
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -95,6 +114,30 @@ Les milices sont prises en étau entre leur utilité instrumentale pour certains
 - [[geopolitique_conflits]]
 - [[organisation_territoires]]
 - [[energie_ressources_critiques]]
+
+
+## Relations
+**Alliés :**
+- [[contrebandiers_energetiques_des_zones_grises_fortress_world]]
+- [[marches_gris_casablanca_fortress_world]]
+- [[marches_gris_tbilissi_fortress_world]]
+- [[operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world]]
+- [[reseaux_d_echange_clandestin_inter_zones_fortress_world]]
+**Opposants :**
+- [[anba_siege_atlantique_fortress_world]]
+- [[armada_logistique_nordique_fortress_world]]
+- [[bloc_pacifique_nord_fortress_world]]
+- [[bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world]]
+- [[coalition_arctique_des_blocs_continentaux_fortress_world]]
+- [[commandement_strategique_des_matieres_critiques_atlantique_fortress_world]]
+- [[complexes_militaro_industriels_de_gestion_des_ressources_fortress_world]]
+- [[consortium_sino_finlandais_de_flotte_autonome_fortress_world]]
+- [[consortiums_energetiques_du_bloc_ourrassol_fortress_world]]
+- [[corps_des_inspecteurs_de_conformite_inter_blocs_fortress_world]]
+- [[instances_aria_concurrentes_des_blocs_rivaux_fortress_world]]
+- [[ironclad_logistics_fortress_world]]
+- [[kalaallit_nunaat_sovereign_fund_fortress_world]]
+- [[nexcore_atlantique_infrastructure_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

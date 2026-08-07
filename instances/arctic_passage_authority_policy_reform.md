@@ -4,6 +4,7 @@ type: instance
 slug: arctic_passage_authority_policy_reform
 entite: arctic_passage_authority
 scenario: policy_reform
+statut: officialise_enrichi
 localisation:
   zone: iqaluit_apa
   lieu: Iqaluit
@@ -38,21 +39,20 @@ zone_systemique:
     - économie
 
 alliances:
-    - kalaallit_nunaat_sovereign_fund_policy_reform
-    - conseil_de_regulation_climatique_global_policy_reform
-    - fonds_mondial_de_resilience_infrastructurelle_policy_reform
-    - observatoire_mondial_des_ressources_critiques_policy_reform
-    - conseil_regulation_ressources_policy_reform
-    - great_lakes_autonomous_compact_policy_reform
-
+- agence_internationale_de_l_energie_reformatee_aier_policy_reform
+- conseil_de_regulation_climatique_global_policy_reform
+- conseil_regulation_ressources_policy_reform
+- fonds_mondial_de_resilience_infrastructurelle_policy_reform
+- great_lakes_autonomous_compact_policy_reform
+- kalaallit_nunaat_sovereign_fund_policy_reform
+- observatoire_mondial_des_ressources_critiques_policy_reform
 oppositions:
-    - front_des_souverainistes_energetiques_policy_reform
-    - syndicats_d_extraction_privee_non_regules_policy_reform
-    - mouvement_pour_la_souverainete_territoriale_absolue_policy_reform
-    - front_de_souverainete_biologique_eurasiatique_policy_reform
-    - front_souverainiste_des_blocs_non_signataires_policy_reform
-    - coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform
-
+- coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform
+- front_de_souverainete_biologique_eurasiatique_policy_reform
+- front_des_souverainistes_energetiques_policy_reform
+- front_souverainiste_des_blocs_non_signataires_policy_reform
+- mouvement_pour_la_souverainete_territoriale_absolue_policy_reform
+- syndicats_d_extraction_privee_non_regules_policy_reform
 type_relation_dominante: alliance stratégique
 
 annee_debut: 2041
@@ -96,12 +96,26 @@ L'APA régule le transit commercial, militaire et scientifique sur le Passage du
 - [[energie_ressources_critiques]]
 - [[organisation_territoires]]
 
-## Relations
-**Alliés** : [[kalaallit_nunaat_sovereign_fund_policy_reform]], [[conseil_de_regulation_climatique_global_policy_reform]], [[fonds_mondial_de_resilience_infrastructurelle_policy_reform]], [[observatoire_mondial_des_ressources_critiques_policy_reform]], [[conseil_regulation_ressources_policy_reform]], [[great_lakes_autonomous_compact_policy_reform]]
-**Opposants** : [[front_des_souverainistes_energetiques_policy_reform]], [[syndicats_d_extraction_privee_non_regules_policy_reform]], [[mouvement_pour_la_souverainete_territoriale_absolue_policy_reform]], [[front_de_souverainete_biologique_eurasiatique_policy_reform]], [[front_souverainiste_des_blocs_non_signataires_policy_reform]], [[coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform]]
 
 ## Description journalistique
 Depuis ses bureaux vitrés dominant la baie de Frobisher à Iqaluit, l'Arctic Passage Authority administre ce que beaucoup considèrent comme le couloir commercial le plus disputé du siècle : le Passage du Nord-Ouest, désormais navigable douze mois sur douze. Fondée en 2041 sur les décombres diplomatiques des guerres de positionnement arctique, elle est présentée à Genève et à Nairobi comme la preuve vivante que la co-gouvernance autochtone peut s'intégrer à la régulation globale sans se dissoudre. Mais à Iqaluit comme à Clyde River, les voix dissidentes se multiplient : les représentants inuit au sein du Conseil de Direction se plaignent d'être consultés après les décisions, jamais avant. La station avancée de Thulé-Reconvertie, inaugurée en 2057 sur les ruines de l'ancienne base militaire américaine, cristallise le paradoxe : vitrine de la réconciliation territoriale pour les brochures onusiennes, elle est aussi le hub opérationnel depuis lequel l'APA coordonne le transit de deux mille navires par an, dont une majorité d'opérateurs privés sous pavillon asiatique ou européen.
 
 ## Tensions narratives
 La tension centrale de l'APA en 2098 est une question de fond : la représentation inuit au sein du Conseil de Direction (un tiers des sièges, garantie par le Traité d'Iqaluit de 2041) constitue-t-elle une souveraineté réelle ou une chambre d'enregistrement ornementale ? Le Kalaallit Nunaat Sovereign Fund pousse à élargir les prérogatives inuit sur la fixation des péages environnementaux, tandis que les États membres — Canada en tête — résistent à tout rééquilibrage qui réduirait leur contrôle sur un corridor d'intérêt stratégique national. En parallèle, la rivalité avec la NAT sur les corridors arctiques occidentaux prend une dimension de plus en plus ouverte : deux incidents de «superposition de juridiction» en 2096-2097 ont failli dégénérer en crise diplomatique formelle. Enfin, des fuites récentes dans la presse — relayées par le Réseau des Journalistes d'Investigation Énergétique — suggèrent que des opérateurs privés proches de la Coalition des Opérateurs Énergétiques Privés Anti-Quotas contournent les protocoles environnementaux via des pavillons de complaisance, avec la complicité passive de certains fonctionnaires canadiens au sein de l'APA.
+
+## Relations
+**Alliés :**
+- [[agence_internationale_de_l_energie_reformatee_aier_policy_reform]]
+- [[conseil_de_regulation_climatique_global_policy_reform]]
+- [[conseil_regulation_ressources_policy_reform]]
+- [[fonds_mondial_de_resilience_infrastructurelle_policy_reform]]
+- [[great_lakes_autonomous_compact_policy_reform]]
+- [[kalaallit_nunaat_sovereign_fund_policy_reform]]
+- [[observatoire_mondial_des_ressources_critiques_policy_reform]]
+**Opposants :**
+- [[coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform]]
+- [[front_de_souverainete_biologique_eurasiatique_policy_reform]]
+- [[front_des_souverainistes_energetiques_policy_reform]]
+- [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+- [[mouvement_pour_la_souverainete_territoriale_absolue_policy_reform]]
+- [[syndicats_d_extraction_privee_non_regules_policy_reform]]

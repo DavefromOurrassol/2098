@@ -1,0 +1,121 @@
+
+============================================================
+OURRASSOL 2098 — Générateur d'articles
+============================================================
+  Mode       : Forcer un élément
+  Élément    : communautes_isolationnistes_refusant_la_continuite_ecologique (instance)
+  Thématique : actualites_a_la_une
+  Longueur   : breve
+  Angle      : (généré automatiquement autour de l'élément forcé)
+============================================================
+
+[generate] Chargement de la thématique 'actualites_a_la_une'...
+
+[generate] Mode forcer — 1 scénario(s) à traiter : eco_communalism
+
+------------------------------------------------------------
+[generate] → eco_communalism
+------------------------------------------------------------
+
+[snapshot] Construction du monde 2098 — scénario : eco_communalism
+[snapshot] Variables pilotes : ['organisation_territoires', 'climat_environnement_global', 'energie_ressources_critiques', 'systemes_productifs_travail']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 1 | Cohérence : OK
+[snapshot] Jalons trajectoire : 154 (37 majeurs)
+[snapshot] Événements signal_to_state : 62 (20 majeurs)
+[snapshot] Tensions thématiques : 8
+[snapshot] Instances chargées : 83 | Filtrées : 6
+[snapshot] Événement custom 'Écho du Golfe en Feu — Les Bassins sans Pétrole' (an 2027, 71 ans d'effet)
+  → geopolitique_conflits : 35 → 43.0 (delta:+8.0)
+  → energie_ressources_critiques : 46.2 → 58.2 (delta:+12.0)
+  → gouvernance_institutions : 71.4 → 77.4 (delta:+6.0)
+  → demographie_mobilite_humaine : 37.0 → 46.0 (delta:+9.0)
+[snapshot] Événement custom 'La Grande Coupure — Accélérateur de Localisation Numérique' (an 2040, 58 ans d'effet)
+  → technologie_information : 51.1 → 41.1 (delta:-10.0)
+  → organisation_territoires : 40.0 → 48.0 (delta:+8.0)
+  → valeurs_culture_tempo_sociale : 40 → 46.0 (delta:+6.0)
+[snapshot] Événement custom 'Les Enchères du Fond Émergé — Kalaallit Nunaat vend ses terres à qui ?' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 58.2 → 66.2 (delta:+8.0)
+  → geopolitique_conflits : 27.4 → 17.4 (delta:-10.0)
+  → gouvernance_institutions : 81.9 → 88.9 (delta:+7.0)
+  → organisation_territoires : 52.2 → 58.2 (delta:+6.0)
+[snapshot] Événement custom 'La Grande Convergence des Lacs — Exode du Midwest Carbonisé' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 52.0 → 34.0 (delta:-18.0)
+  → organisation_territoires : 51.4 → 36.4 (delta:-15.0)
+  → gouvernance_institutions : 88.9 → 100 (delta:+12.0)
+  → climat_environnement_global : 58.6 → 66.6 (delta:+8.0)
+  → energie_ressources_critiques : 71.0 → 81.0 (delta:+10.0)
+[snapshot] Événement custom 'L'Assemblée du Fleuve — Souveraineté ou Fracture' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 66.6 → 74.6 (delta:+8.0)
+  → geopolitique_conflits : 14.8 → 2.8000000000000007 (delta:-12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → organisation_territoires : 41.5 → 49.5 (delta:+8.0)
+[snapshot] Événement custom 'Dissolution du Mouvement dans les Assemblées Locales' (an 2048, 50 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+  → valeurs_culture_tempo_sociale : 46.0 → 54.0 (delta:+8.0)
+  → organisation_territoires : 49.5 → 55.5 (delta:+6.0)
+[snapshot] Événement custom 'Forum d'Agadez sur la Souveraineté Numérique des Périphéries' (an 2062, 36 ans d'effet)
+  → technologie_information : 44.4 → 52.4 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → organisation_territoires : 58.5 → 65.5 (delta:+7.0)
+[snapshot] Événement custom 'La Proclamation des Friches Libres : Detroit, Cleveland, Pittsburgh hors-algorithme' (an 2063, 35 ans d'effet)
+  → geopolitique_conflits : 0 → 0 (delta:-8.0)
+  → valeurs_culture_tempo_sociale : 54.0 → 66.0 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → organisation_territoires : 68.9 → 82.9 (delta:+14.0)
+[snapshot] Événement custom 'Insurrection des Friches Vivantes — L'Automne des Zones Libres' (an 2063, 35 ans d'effet)
+  → geopolitique_conflits : 0 → 0 (delta:-8.0)
+  → valeurs_culture_tempo_sociale : 66.0 → 78.0 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → technologie_information : 66.9 → 73.9 (delta:+7.0)
+[snapshot] Événement custom 'Le Procès Communautaire de Van Derburgh' (an 2078, 20 ans d'effet)
+  → valeurs_culture_tempo_sociale : 78.0 → 80.0 (delta:+2.0)
+  → gouvernance_institutions : 100 → 100 (delta:+1.0)
+[snapshot] Événement custom 'Grande Inondation des Veilleurs' (an 2096, 2 ans d'effet)
+  → organisation_territoires : 88.9 → 90.2 (delta:+1.3)
+  → climat_environnement_global : 74.6 → 75.1 (delta:+0.5)
+  → demographie_mobilite_humaine : 43.6 → 46.6 (delta:+3.0)
+  → systeme_economique_redistribution : 66.0 → 67.3 (delta:+1.3)
+[snapshot] Événements custom : 11 | 165 variables affectées
+[snapshot] Forçage instance (sujet central) : communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism
+
+[prompt] Assemblage du prompt...
+[prompt] System prompt : 2532 caractères
+[prompt] User prompt   : 44110 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-large-latest, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 13837 | sortie : 918
+[api] Article généré : 3793 caractères
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/20260802_185402_eco_communalism_actualites_a_la_une_article_8mars2098.md
+
+============================================================
+ARTICLE GÉNÉRÉ
+============================================================
+**« Les Veilleurs du Seuil bloquent la Tresse Verte : jusqu’où ira la souveraineté des terres ? »**
+*Réseau Voix des Marges — 12 octobre 2098, depuis les Plateaux Désertés du Massif Central*
+
+Les Sillons du Plateau fument encore. Depuis trois jours, les Veilleurs du Seuil — ces communautés isolationnistes qui refusent la « continuité écologique imposée » — ont incendié dix-sept bornes de suivi biologique le long des Couloirs Forestiers du Bassin Rhénan. Leurs tracts, griffonnés à la suie sur des écorces de bouleau, martèlent le même message : *« Nos terres, nos règles. Pas de passage pour les espèces des autres. »* Une provocation de plus dans la guerre larvée qui oppose, depuis des décennies, les gardiens des trames vertes régionales et ces groupes farouchement attachés à une souveraineté territoriale absolue.
+
+« On ne veut pas de leurs corridors, ni de leurs algorithmes qui décident quelles bêtes peuvent traverser nos champs », lance Mara Kerval, porte-parole des Veilleurs de la Cévenne Intérieure, jointe hier par radio communautaire. « La Tresse Verte, c’est une autoroute pour les loups et les sangliers, mais c’est nous qui payons les dégâts. » Les chiffres de la Confédération des Bassins Vivants (CBV) lui donnent partiellement raison : depuis 2095, les attaques de prédateurs sur les troupeaux ont augmenté de 42 % dans les zones traversées par les couloirs écologiques. Mais pour les écologues de la CBV, ces discontinuités sabotent des décennies de restauration écologique. « Sans ces passages, les écosystèmes se fragmentent, les espèces s’isolent, et les territoires deviennent des îles », alerte le dernier rapport du Réseau Terrafond des Bassins, publié en urgence ce matin.
+
+Le conflit a pris une tournure judiciaire. En 2097, la CBV a porté plainte contre trois communautés de Veilleurs pour « obstruction à la continuité écologique », un délit créé en 2072 après l’adoption de la Charte des Communs Vivants. Les audiences, prévues à la Session Plénière du Chiapas en novembre, s’annoncent explosives. « On ne reconnaît pas leur juridiction », rétorque Kerval. « Nos terres ne sont pas des pièces d’un puzzle écologique global. »
+
+Derrière ces tensions, une question philosophique insoluble : jusqu’où une communauté peut-elle refuser l’interdépendance ? Les Veilleurs du Seuil, héritiers des mouvements de réensauvagement des années 2030, défendent une vision radicale de l’autonomie — où la terre n’appartient qu’à ceux qui la travaillent, et où les frontières écologiques doivent coïncider avec les limites du territoire vécu. « Ils ont raison sur un point : la restauration écologique ne peut pas être un prétexte pour nier les droits des gens », reconnaît Le Fil Commun, le réseau de journalisme d’investigation éco-communaliste. « Mais leur refus catégorique de toute coordination régionale fragilise l’ensemble du système. »
+
+Les conséquences sont déjà visibles. Dans les Apennins Restaurés, des espèces endémiques sont menacées par l’isolement de leurs habitats. En Bioterritoires Anatoliens, les Corridors Migratoires Anatoliens — essentiels pour les grands herbivores — sont régulièrement sabotés par des groupes similaires. « On marche sur un fil », résume un médiateur territorial de la Vallée de l’Ourthe. « Si les Veilleurs gagnent, c’est toute la logique des communs interconnectés qui s’effondre. Mais s’ils perdent, c’est le principe même de l’autonomie locale qui est trahi. »
+
+Pour l’instant, personne ne semble prêt à céder. Les Sillons du Plateau, ces longues bâtisses semi-enterrées où les Veilleurs stockent graines et outils, sont désormais surveillés par des drones citoyens de la CBV. « On ne bougera pas », répète Mara Kerval. « Même si on doit brûler chaque borne, chaque capteur. Nos ancêtres ont vécu sans ces trames. Nous aussi. »
+
+============================================================
+✓ Sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/20260802_185402_eco_communalism_actualites_a_la_une_article_8mars2098.md
+============================================================
+
+
+============================================================
+RÉSUMÉ DU LOT — mode forcer
+============================================================
+  Réussis : 1
+    ✓ eco_communalism → /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/20260802_185402_eco_communalism_actualites_a_la_une_article_8mars2098.md
+============================================================
+

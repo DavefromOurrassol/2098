@@ -32,8 +32,25 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- conglomerats_d_automatisation_industrielle_integrale_policy_reform
+- consortium_nexus_calcul_policy_reform
+- consortiums_d_optimisation_rh_algorithmique_policy_reform
+- consortiums_prives_de_gouvernance_algorithmique_policy_reform
+- institut_brookings_singapour_de_politique_computationnelle_policy_reform
+- union_technocratique_eurasiatique_policy_reform
+oppositions:
+- collectifs_citoyens_de_deliberation_augmentee_policy_reform
+- collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform
+- collectifs_de_gouvernance_communautaire_decentralisee_policy_reform
+- conseil_regulation_algorithmique_policy_reform
+- courants_post_technocratiques_de_reconquete_democratique_policy_reform
+- factions_internes_pro_desaugmentation_totale_policy_reform
+- front_des_communes_algorithmiques_policy_reform
+- leena_vainala_policy_reform
+- oracle_des_seuils_policy_reform
+- reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
+- tribunal_algorithmique_de_bruxelles_policy_reform
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -95,6 +112,29 @@ Le Front se retrouve dans une contradiction structurelle : il milite pour suppri
 - [[gouvernance_institutions]]
 - [[technologie_information]]
 - [[valeurs_culture_tempo_sociale]]
+
+
+
+## Relations
+**Alliés :**
+- [[conglomerats_d_automatisation_industrielle_integrale_policy_reform]]
+- [[consortium_nexus_calcul_policy_reform]]
+- [[consortiums_d_optimisation_rh_algorithmique_policy_reform]]
+- [[consortiums_prives_de_gouvernance_algorithmique_policy_reform]]
+- [[institut_brookings_singapour_de_politique_computationnelle_policy_reform]]
+- [[union_technocratique_eurasiatique_policy_reform]]
+**Opposants :**
+- [[collectifs_citoyens_de_deliberation_augmentee_policy_reform]]
+- [[collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform]]
+- [[collectifs_de_gouvernance_communautaire_decentralisee_policy_reform]]
+- [[conseil_regulation_algorithmique_policy_reform]]
+- [[courants_post_technocratiques_de_reconquete_democratique_policy_reform]]
+- [[factions_internes_pro_desaugmentation_totale_policy_reform]]
+- [[front_des_communes_algorithmiques_policy_reform]]
+- [[leena_vainala_policy_reform]]
+- [[oracle_des_seuils_policy_reform]]
+- [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]]
+- [[tribunal_algorithmique_de_bruxelles_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

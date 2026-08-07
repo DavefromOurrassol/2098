@@ -35,8 +35,31 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- front_des_blocs_regionaux_du_recit_des_conflits_ressources_breakdown
+- milices_contractuelles_des_anciens_etats_membres_breakdown
+oppositions:
+- blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
+- cargo_mombasa_crrc_breakdown
+- cartels_logistiques_regionaux_breakdown
+- communes_rust_belt_zones_libres_breakdown
+- consortiums_logistiques_agro_corporatifs_breakdown
+- corridor_lithium_bouches_breakdown
+- corridors_eurasiens_convoyage_breakdown
+- etats_fragments_en_guerre_pour_les_stations_atmospheriques_breakdown
+- factions_secessionnistes_agrariennes_du_desert_breakdown
+- federation_communs_territoriaux_breakdown
+- flux_migratoires_non_integrables_breakdown
+- front_de_resistance_aux_peages_sur_les_ressources_breakdown
+- gouvernements_de_forteresse_anti_nairobi_breakdown
+- milices_de_controle_territorial_breakdown
+- mouvement_des_communes_du_rust_belt_breakdown
+- nairobi_crrc_breakdown
+- nexus_biosyn_breakdown
+- pirates_biologiques_open_source_breakdown
+- reseau_logistique_criminel_concurrent_breakdown
+- reseaux_noirs_pharmaceutiques_breakdown
+- tour_bcuc_geneve_breakdown
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -93,6 +116,34 @@ La contradiction fondamentale de ces États est d'utiliser l'outil souverain —
 - [[gouvernance_institutions]]
 - [[energie_ressources_critiques]]
 - [[geopolitique_conflits]]
+
+
+## Relations
+**Alliés :**
+- [[front_des_blocs_regionaux_du_recit_des_conflits_ressources_breakdown]]
+- [[milices_contractuelles_des_anciens_etats_membres_breakdown]]
+**Opposants :**
+- [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
+- [[cargo_mombasa_crrc_breakdown]]
+- [[cartels_logistiques_regionaux_breakdown]]
+- [[communes_rust_belt_zones_libres_breakdown]]
+- [[consortiums_logistiques_agro_corporatifs_breakdown]]
+- [[corridor_lithium_bouches_breakdown]]
+- [[corridors_eurasiens_convoyage_breakdown]]
+- [[etats_fragments_en_guerre_pour_les_stations_atmospheriques_breakdown]]
+- [[factions_secessionnistes_agrariennes_du_desert_breakdown]]
+- [[federation_communs_territoriaux_breakdown]]
+- [[flux_migratoires_non_integrables_breakdown]]
+- [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
+- [[gouvernements_de_forteresse_anti_nairobi_breakdown]]
+- [[milices_de_controle_territorial_breakdown]]
+- [[mouvement_des_communes_du_rust_belt_breakdown]]
+- [[nairobi_crrc_breakdown]]
+- [[nexus_biosyn_breakdown]]
+- [[pirates_biologiques_open_source_breakdown]]
+- [[reseau_logistique_criminel_concurrent_breakdown]]
+- [[reseaux_noirs_pharmaceutiques_breakdown]]
+- [[tour_bcuc_geneve_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

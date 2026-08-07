@@ -33,13 +33,27 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- amazonie_pacte_vert_fortress_world
+- biolock_agritech_fortress_world
+- bloc_atlantique_fortress_world
+- bloc_eurasiatique_occidental_fortress_world
+- conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world
+- milices_privees_de_protection_des_sites_germinaux_fortress_world
 - nexus_biosyn_division_eurasienne_fortress_world
 - nexus_biosyn_division_pacifique_fortress_world
+- nexus_biosyn_fortress_world
 - pacte_forteresses_souveraines_fortress_world
+- reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world
+- terrashield_geoengineering_fortress_world
 oppositions:
-- rust_belt_communes_libres_fortress_world
 - bassora_couloir_refugies_fortress_world
 - campements_seuils_fermes_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- consortium_africain_de_biotechnologies_sociales_fortress_world
+- consortium_amazonia_viva_fortress_world
+- factions_internes_pro_autarcie_totale_fortress_world
+- reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world
+- rust_belt_communes_libres_fortress_world
 type_relation_dominante: dépendance
 annee_debut: 2026
 annee_fin: null
@@ -103,15 +117,30 @@ La tension centrale réside dans la contradiction entre la souveraineté étatiq
 - [[organisation_territoires]]
 - [[demographie_mobilite_humaine]]
 
+
 ## Relations
 **Alliés :**
+- [[amazonie_pacte_vert_fortress_world]]
+- [[biolock_agritech_fortress_world]]
+- [[bloc_atlantique_fortress_world]]
+- [[bloc_eurasiatique_occidental_fortress_world]]
+- [[conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world]]
+- [[milices_privees_de_protection_des_sites_germinaux_fortress_world]]
 - [[nexus_biosyn_division_eurasienne_fortress_world]]
 - [[nexus_biosyn_division_pacifique_fortress_world]]
+- [[nexus_biosyn_fortress_world]]
 - [[pacte_forteresses_souveraines_fortress_world]]
+- [[reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world]]
+- [[terrashield_geoengineering_fortress_world]]
 **Opposants :**
-- [[rust_belt_communes_libres_fortress_world]]
 - [[bassora_couloir_refugies_fortress_world]]
 - [[campements_seuils_fermes_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[consortium_africain_de_biotechnologies_sociales_fortress_world]]
+- [[consortium_amazonia_viva_fortress_world]]
+- [[factions_internes_pro_autarcie_totale_fortress_world]]
+- [[reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world]]
+- [[rust_belt_communes_libres_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

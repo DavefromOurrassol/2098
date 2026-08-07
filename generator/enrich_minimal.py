@@ -51,6 +51,17 @@ import yaml
 
 from llm_client import call_llm
 
+# Réutilise la passe de réciprocité de fix_alliances_oppositions.py (aucun
+# appel LLM, purement locale) — lancée automatiquement en fin de run pour
+# propager les nouvelles relations alliances/oppositions vers les fiches
+# existantes qu'elles citent. Voir §"Réciprocité automatique" plus bas.
+# resolve_reciprocity_conflicts (7 août 2026) résout en plus automatiquement
+# les conflits détectés par reciprocity_pass, selon la règle "opposition
+# prioritaire" — opt-in via --resoudre-conflits (voir plus bas), jamais
+# actif par défaut pour ne pas changer le comportement existant sans
+# décision explicite à chaque run.
+from fix_alliances_oppositions import reciprocity_pass, resolve_reciprocity_conflicts, reset_conflict_reports
+
 
 # ---------------------------------------------------------------------------
 # Configuration
@@ -258,6 +269,44 @@ def build_geographie_summary(scenario):
     return "\n".join(lines)
 
 
+def build_instances_summary(scenario, exclude_slug=None):
+    """
+    Résumé condensé des instances existantes du scénario, pour que le LLM
+    puisse choisir des slugs réels pour alliances/oppositions — équivalent
+    de build_geographie_summary() ci-dessus, mais pour les instances.
+
+    Corrige un trou du prompt d'origine : sans cette liste, le LLM devait
+    deviner des slugs "réels" sans jamais les voir, ce qui produisait soit
+    des tableaux vides par prudence, soit des slugs fantômes. Diagnostic
+    du 4 août 2026 : 356/426 fiches (83.6%) avaient alliances ET
+    oppositions vides avant correction — voir fix_alliances_oppositions.py
+    et BACKLOG_CONSOLIDE_4_AOUT.md pour le détail de la migration
+    corrective appliquée aux fiches existantes. Cette fonction couvre les
+    fiches futures, à la source.
+
+    Inclut tous statuts confondus (pas seulement officialise_enrichi) pour
+    ne jamais rater une entité qui existe déjà même si pas encore enrichie.
+    """
+    if not INSTANCES_DIR.exists():
+        return "(aucune instance existante pour ce scénario)"
+
+    entries = []
+    for path in sorted(INSTANCES_DIR.glob(f"*_{scenario}.md")):
+        fm, _ = parse_md(path)
+        slug = fm.get("slug", path.stem)
+        if exclude_slug and slug == exclude_slug:
+            continue
+        name = fm.get("name", slug)
+        entries.append((slug, name))
+
+    if not entries:
+        return "(aucune autre instance existante pour ce scénario)"
+
+    entries.sort(key=lambda e: e[1])
+    lines = [f"  {slug} — {name}" for slug, name in entries]
+    return "\n".join(lines)
+
+
 def build_registre_excerpt(scenario, variables_influencees):
     """Extrait pertinent du registre pour le scénario + variables concernées."""
     if not REGISTRE_PATH.exists():
@@ -307,7 +356,7 @@ def find_minimal_fiches(scenario, slug_filter=None):
 # Construction du prompt
 # ---------------------------------------------------------------------------
 
-def build_enrich_prompt(fiche, scenario, entite_data, scenario_ctx, var_levels, geo_summary, registre_excerpt):
+def build_enrich_prompt(fiche, scenario, entite_data, scenario_ctx, var_levels, geo_summary, registre_excerpt, instances_summary):
     """Construit le prompt système + utilisateur pour enrichir une fiche."""
     fm = fiche["fm"]
     slug = fm.get("slug", fiche["path"].stem)
@@ -378,6 +427,11 @@ GÉOGRAPHIE DU SCÉNARIO (slugs valides)
 {geo_summary}
 
 ═══════════════════════════════════════════════════
+AUTRES INSTANCES DU SCÉNARIO (slugs valides pour alliances/oppositions)
+═══════════════════════════════════════════════════
+{instances_summary}
+
+═══════════════════════════════════════════════════
 REGISTRE DES ÉVÉNEMENTS (extrait)
 ═══════════════════════════════════════════════════
 {registre_excerpt}
@@ -409,7 +463,7 @@ Génère un JSON avec EXACTEMENT ces champs :
 RÈGLES IMPÉRATIVES :
 - localisation.zone DOIT être un slug exact de la liste ci-dessus, ou null si entité transnationale sans ancrage précis
 - impact_local et impact_systemique_global : entiers entre 0 et 5 INCLUS
-- alliances/oppositions : uniquement des slugs d'instances réelles de ce scénario, ou tableau vide []
+- alliances/oppositions : choisis UNIQUEMENT des slugs présents dans la liste "AUTRES INSTANCES DU SCÉNARIO" ci-dessus. Ne devine jamais un slug, ne l'invente jamais. Si aucune relation claire ne ressort du contexte fourni, un tableau vide [] est un résultat parfaitement acceptable — ne force rien pour remplir.
 - IMPORTANT : chaque slug dans alliances/oppositions DOIT obligatoirement se terminer par _{scenario} (ex: mon_entite_{scenario}). Ne jamais omettre ce suffixe.
 - zone_geographique : liste avec au moins une valeur parmi les 7 valeurs autorisées
 - Tous les textes en français, cohérents avec l'univers 2098 et le scénario {scenario}
@@ -470,10 +524,19 @@ Corrige UNIQUEMENT les champs en erreur. Retourne le JSON complet corrigé.
 # Validation mécanique
 # ---------------------------------------------------------------------------
 
-def validate_enriched(data, scenario, zones_dict, entities_set):
+def validate_enriched(data, scenario, zones_dict, entities_set, own_slug=None):
     """
     Valide les champs générés par le LLM.
     Retourne (errors, warnings) — errors bloquants, warnings informatifs.
+
+    own_slug : slug de la fiche en cours d'enrichissement — sert à détecter
+    l'auto-référence dans alliances/oppositions (durcissement du 5 août
+    2026 : auto-référence et chevauchement alliances/oppositions sont des
+    anomalies structurelles jamais légitimes, contrairement à un slug
+    absent de _entities_list.json qui peut être une référence volontaire
+    à une entité pas encore créée — voir le pipeline de slugs fantômes
+    plus bas, volontairement laissé en warning non bloquant pour ne pas
+    casser cette mécanique.
     """
     errors = []
     warnings = []
@@ -519,7 +582,7 @@ def validate_enriched(data, scenario, zones_dict, entities_set):
             if z_clean and z_clean not in VALID_ZONES_GEOGRAPHIQUES:
                 errors.append(f"zone_geographique '{z_clean}' invalide (valeurs: {VALID_ZONES_GEOGRAPHIQUES})")
 
-    # alliances / oppositions (warnings non bloquants si slug inconnu)
+    # alliances / oppositions
     for field in ["alliances", "oppositions"]:
         slugs = data.get(field, []) or []
         if not isinstance(slugs, list):
@@ -528,12 +591,23 @@ def validate_enriched(data, scenario, zones_dict, entities_set):
         for s in slugs:
             if not isinstance(s, str):
                 continue
-            # Vérifier suffixe scénario
+            # Auto-référence : bloquant (anomalie structurelle, jamais légitime)
+            if own_slug and s == own_slug:
+                errors.append(f"{field}: '{s}' est l'entité elle-même (auto-référence interdite)")
+                continue
+            # Vérifier suffixe scénario (warning — laissé non bloquant, inchangé)
             if not s.endswith(f"_{scenario}"):
                 warnings.append(f"{field}: '{s}' ne porte pas le suffixe _{scenario}")
-            # Vérifier contre entities_list
+            # Vérifier contre entities_list (warning — inchangé, alimente le
+            # pipeline de slugs fantômes en aval, voir extract_and_queue_phantoms)
             if entities_set and s not in entities_set:
                 warnings.append(f"{field}: '{s}' non trouvé dans _entities_list.json")
+
+    # Chevauchement alliances/oppositions : bloquant (anomalie structurelle,
+    # jamais légitime qu'une même entité soit à la fois alliée et opposante)
+    overlap = set(data.get("alliances") or []) & set(data.get("oppositions") or [])
+    if overlap:
+        errors.append(f"Slugs présents à la fois dans alliances ET oppositions : {sorted(overlap)}")
 
     # type_relation_dominante
     valid_relations = ["coopération", "compétition", "neutralité", "conflit", "dépendance", "symbiose"]
@@ -820,9 +894,10 @@ def enrich_fiche(client, fiche, scenario, zones_dict, entities_set, dry_run=Fals
     var_levels = load_variables_levels(scenario)
     geo_summary = build_geographie_summary(scenario)
     registre_excerpt = build_registre_excerpt(scenario, variables_influencees)
+    instances_summary = build_instances_summary(scenario, exclude_slug=slug)
 
     system_prompt, user_prompt = build_enrich_prompt(
-        fiche, scenario, entite_data, scenario_ctx, var_levels, geo_summary, registre_excerpt
+        fiche, scenario, entite_data, scenario_ctx, var_levels, geo_summary, registre_excerpt, instances_summary
     )
 
     # Appel initial
@@ -831,7 +906,7 @@ def enrich_fiche(client, fiche, scenario, zones_dict, entities_set, dry_run=Fals
     except ValueError as e:
         return False, None, [f"Parsing JSON échoué : {e}"], []
 
-    errors, warnings = validate_enriched(data, scenario, zones_dict, entities_set)
+    errors, warnings = validate_enriched(data, scenario, zones_dict, entities_set, own_slug=slug)
 
     # Retries si erreurs
     attempt = 0
@@ -843,7 +918,7 @@ def enrich_fiche(client, fiche, scenario, zones_dict, entities_set, dry_run=Fals
         except ValueError as e:
             errors = [f"Parsing JSON échoué à la correction : {e}"]
             break
-        errors, warnings = validate_enriched(data, scenario, zones_dict, entities_set)
+        errors, warnings = validate_enriched(data, scenario, zones_dict, entities_set, own_slug=slug)
 
     if errors:
         print(f"    [ÉCHEC] {len(errors)} erreur(s) persistante(s)")
@@ -1183,6 +1258,18 @@ def main():
                         help="Lance automatiquement le cycle post-enrichissement")
     parser.add_argument("--limit", type=int, default=None,
                         help="Limite le nombre de fiches traitées (ex: --limit 3)")
+    parser.add_argument("--skip-reciprocite", action="store_true",
+                        help="Ne lance pas la passe de réciprocité alliances/oppositions après l'enrichissement")
+    parser.add_argument("--resoudre-conflits", action="store_true",
+                        help="Après la passe de réciprocité, résout automatiquement les conflits "
+                             "détectés selon la règle opposition prioritaire (une opposition "
+                             "déclarée l'emporte sur une alliance déclarée en cas de contradiction). "
+                             "RÉTROACTIF sur les fiches en conflit du scénario traité. Sans effet "
+                             "si --skip-reciprocite est aussi précisé, ou en --dry-run.")
+    parser.add_argument("--bascule-en-opposition", action="store_true",
+                        help="Avec --resoudre-conflits : au lieu de simplement retirer l'entité "
+                             "des alliances, l'ajoute aussi aux oppositions (résolution 'forte'). "
+                             "Par défaut, résolution conservatrice : retrait seul.")
     args = parser.parse_args()
 
     if not args.scenario and not args.all:
@@ -1219,6 +1306,58 @@ def main():
         report.write_needs_review(dry_run=False)
     else:
         print("\n(dry-run — rapport non écrit)")
+
+    # ------------------------------------------------------------------
+    # Réciprocité automatique — voir fix_alliances_oppositions.py.
+    # Purement locale (aucun appel LLM) : si une fiche fraîchement
+    # enrichie cite une entité existante en alliance/opposition, cette
+    # entité doit la citer en retour. Les conflits (relation contraire
+    # des deux côtés) sont détectés et consignés dans documentation/
+    # need_action/fix_alliances_conflits_reciprocite.md pour revue —
+    # et, depuis le 7 août 2026, peuvent en plus être résolus
+    # automatiquement (opt-in, --resoudre-conflits, voir plus bas) selon
+    # la règle "opposition prioritaire" au lieu de rester en l'état
+    # comme lors de la migration du 4 août.
+    # ------------------------------------------------------------------
+    if not args.dry_run and report.enriched > 0 and not args.skip_reciprocite:
+        scenarios_valides = [s for s in scenarios_to_run if s in SCENARIOS]
+        print(f"\n{'═' * 60}")
+        print("RÉCIPROCITÉ ALLIANCES/OPPOSITIONS (automatique)")
+        print(f"{'═' * 60}")
+        # reset_conflict_reports() (7 août) : les deux rapports de conflits
+        # sont tronqués en tête de ce bloc pour ne refléter que CE run —
+        # voir son docstring dans fix_alliances_oppositions.py. Toujours
+        # sûr ici puisque ce bloc entier est déjà protégé par
+        # `not args.dry_run` au niveau du if englobant.
+        reset_conflict_reports()
+        total_added, total_conflicts = 0, 0
+        for scenario in scenarios_valides:
+            n_added, conflicts = reciprocity_pass(
+                scenario, dry_run=False, resolution_suit=args.resoudre_conflits
+            )
+            total_added += n_added
+            total_conflicts += len(conflicts)
+        print(f"\n  Fiches complétées par réciprocité : {total_added}")
+        print(f"  Conflits détectés                 : {total_conflicts}")
+
+        # Résolution automatique des conflits (opposition prioritaire) —
+        # opt-in via --resoudre-conflits, jamais actif par défaut. Portée
+        # limitée aux scénarios réellement traités dans ce run (pas tout
+        # le vault), cohérent avec le fait qu'enrich_minimal.py traite un
+        # sous-ensemble de scénarios à la fois. Rétroactif sur les fiches
+        # en conflit de ces scénarios, y compris celles pas concernées par
+        # l'enrichissement de ce run précis.
+        if args.resoudre_conflits and total_conflicts:
+            print(f"\n{'═' * 60}")
+            print("RÉSOLUTION AUTOMATIQUE DES CONFLITS (opposition prioritaire)")
+            print(f"{'═' * 60}")
+            total_resolved = 0
+            for scenario in scenarios_valides:
+                n_resolved, _ = resolve_reciprocity_conflicts(
+                    scenario, dry_run=False, bascule_en_opposition=args.bascule_en_opposition
+                )
+                total_resolved += n_resolved
+            print(f"\n  Conflits résolus : {total_resolved}")
 
     # Extraction slugs fantômes vague 1 (depuis warnings du run)
     if report.warnings_all:

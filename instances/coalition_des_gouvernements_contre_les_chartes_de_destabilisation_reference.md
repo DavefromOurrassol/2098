@@ -30,8 +30,31 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- bloc_des_souverainistes_climatiques_reference
+- bloc_eurasien_central_reference
+- bloc_ressources_eurasiatique_bre_reference
+- consortiums_prives_de_gestion_des_donnees_critiques_reference
+- etats_a_tendance_centraliste_numerique_reference
+- gouvernements_a_regime_de_productivite_mandatee_reference
+- gouvernements_federaux_residuels_souverainistes_reference
+- pacte_des_souverains_reference
+- plateformes_centralisees_de_narration_officielle_reference
+oppositions:
+- collectifs_academiques_independants_reference
+- collectifs_de_biopiraterie_inversee_reference
+- communs_numeriques_agroecologiques_reference
+- confederation_des_megapoles_autonomes_reference
+- cooperatives_ia_open_source_reference
+- federation_communs_territoriaux_reference
+- institutions_multilaterales_survivantes_reference
+- leena_vainala_reference
+- mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
+- reseau_meshcommons_netsolidaire_reference
+- reseaux_de_gouvernance_multilaterale_survivants_reference
+- singapour_est_reference
+- voix_du_dehors_reference
+- zones_grises_globales_reference
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -97,6 +120,34 @@ La Coalition est structurellement tiraillée entre des membres aux régimes trè
 - [[gouvernance_institutions]]
 - [[geopolitique_conflits]]
 - [[frontieres_du_systeme]]
+
+
+## Relations
+**Alliés :**
+- [[bloc_des_souverainistes_climatiques_reference]]
+- [[bloc_eurasien_central_reference]]
+- [[bloc_ressources_eurasiatique_bre_reference]]
+- [[consortiums_prives_de_gestion_des_donnees_critiques_reference]]
+- [[etats_a_tendance_centraliste_numerique_reference]]
+- [[gouvernements_a_regime_de_productivite_mandatee_reference]]
+- [[gouvernements_federaux_residuels_souverainistes_reference]]
+- [[pacte_des_souverains_reference]]
+- [[plateformes_centralisees_de_narration_officielle_reference]]
+**Opposants :**
+- [[collectifs_academiques_independants_reference]]
+- [[collectifs_de_biopiraterie_inversee_reference]]
+- [[communs_numeriques_agroecologiques_reference]]
+- [[confederation_des_megapoles_autonomes_reference]]
+- [[cooperatives_ia_open_source_reference]]
+- [[federation_communs_territoriaux_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
+- [[leena_vainala_reference]]
+- [[mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference]]
+- [[reseau_meshcommons_netsolidaire_reference]]
+- [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
+- [[singapour_est_reference]]
+- [[voix_du_dehors_reference]]
+- [[zones_grises_globales_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

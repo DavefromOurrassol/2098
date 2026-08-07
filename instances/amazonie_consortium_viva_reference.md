@@ -4,6 +4,7 @@ type: instance
 slug: amazonie_consortium_viva_reference
 entite: amazonie_consortium_viva
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: amazonie_consortium_viva
   lieu: Bassin amazonien (avec siège nominal à Singapour-Est et antennes à Manaus, Lima, Bogotá)
@@ -37,24 +38,23 @@ zone_systemique:
     - société
 
 alliances:
-    - nexus_biosyn_reference
-    - consortiums_bancaires_financiarises_reference
-    - fonds_souverains_de_la_ceinture_financiere_pacifique_reference
-    - operateurs_de_zones_economiques_speciales_periurbaines_reference
-    - consortiums_prives_de_gestion_des_donnees_critiques_reference
-
+- consortiums_bancaires_financiarises_reference
+- consortiums_prives_de_gestion_des_donnees_critiques_reference
+- fonds_souverains_de_la_ceinture_financiere_pacifique_reference
+- nexus_biosyn_reference
+- operateurs_de_zones_economiques_speciales_periurbaines_reference
 oppositions:
-    - collectifs_de_biopiraterie_inversee_reference
-    - mouvement_racines_vivantes_reference
-    - frente_sert_o_livre_reference
-    - front_souverainiste_des_ressources_d_amerique_du_sud_reference
-    - conseil_de_geneve_pour_les_droits_biosociaux_reference
-    - banque_des_communs_reference
-    - consortium_africain_de_biotechnologies_sociales_reference
-    - ong_environnementales_de_terrain_reference
-    - federation_communs_territoriaux_reference
-    - reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference
-
+- banque_des_communs_reference
+- collectifs_de_biopiraterie_inversee_reference
+- conseil_de_geneve_pour_les_droits_biosociaux_reference
+- consortium_africain_de_biotechnologies_sociales_reference
+- federation_communs_territoriaux_reference
+- fonds_monetaire_climatique_fmc_reference
+- frente_sert_o_livre_reference
+- front_souverainiste_des_ressources_d_amerique_du_sud_reference
+- mouvement_racines_vivantes_reference
+- ong_environnementales_de_terrain_reference
+- reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference
 type_relation_dominante: rivalité
 
 annee_debut: 2041
@@ -98,12 +98,29 @@ Prospection génomique à haute cadence dans des zones forestières sous-documen
 - [[climat_environnement_global]]
 - [[systeme_economique_redistribution]]
 
-## Relations
-**Alliés** : [[nexus_biosyn_reference]], [[consortiums_bancaires_financiarises_reference]], [[fonds_souverains_de_la_ceinture_financiere_pacifique_reference]], [[operateurs_de_zones_economiques_speciales_periurbaines_reference]], [[consortiums_prives_de_gestion_des_donnees_critiques_reference]]
-**Opposants** : [[collectifs_de_biopiraterie_inversee_reference]], [[mouvement_racines_vivantes_reference]], [[frente_sert_o_livre_reference]], [[front_souverainiste_des_ressources_d_amerique_du_sud_reference]], [[conseil_de_geneve_pour_les_droits_biosociaux_reference]], [[banque_des_communs_reference]], [[consortium_africain_de_biotechnologies_sociales_reference]], [[ong_environnementales_de_terrain_reference]], [[federation_communs_territoriaux_reference]], [[reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference]]
 
 ## Description journalistique
 Depuis son siège nominal enregistré à Singapour Est et ses antennes opérationnelles dispersées entre Manaus, Lima et Bogotá, Amazonie Consortium Viva est devenu en moins de deux décennies le principal acteur privé de la prospection génomique forestière tropicale. Ses équipes de terrain combinent drones de cartographie spectrale, laboratoires portatifs de séquençage et juristes spécialisés en droit des brevets biologiques — trois corps qui avancent ensemble, comme une seule machine. En 2097, le Consortium détient plus de 4 200 brevets actifs sur des composés forestiers amazoniens, dont plusieurs sont au cœur de traitements antiviraux distribués mondialement. Ce que ses détracteurs nomment biopiraterie industrialisée, ses dirigeants appellent 'valorisation de la biodiversité ignorée'. La tension entre ces deux lectures constitue l'un des procès symboliques les plus suivis de l'ère post-Protocole de Nagoya.
 
 ## Tensions narratives
 Chaque brevet accordé constitue une pièce à conviction potentielle pour les procédures d'annulation initiées par le Conseil de Genève et le Front Souverainiste : plus le Consortium réussit, plus il documente sa propre vulnérabilité juridique future. Plusieurs États amazoniens négocient en parallèle une plateforme de séquençage souverain en open-access qui, si elle aboutit, rendrait caduque l'argument de la 'découverte originale'. Enfin, des lanceurs d'alerte internes auraient transmis aux Collectifs de Biopiraterie Inversée des métadonnées révélant que certains composés brevetés étaient déjà documentés dans des savoirs traditionnels oraux — ce qui pourrait provoquer la plus grande cascade d'invalidations de brevets biologiques de l'histoire.
+
+## Relations
+**Alliés :**
+- [[consortiums_bancaires_financiarises_reference]]
+- [[consortiums_prives_de_gestion_des_donnees_critiques_reference]]
+- [[fonds_souverains_de_la_ceinture_financiere_pacifique_reference]]
+- [[nexus_biosyn_reference]]
+- [[operateurs_de_zones_economiques_speciales_periurbaines_reference]]
+**Opposants :**
+- [[banque_des_communs_reference]]
+- [[collectifs_de_biopiraterie_inversee_reference]]
+- [[conseil_de_geneve_pour_les_droits_biosociaux_reference]]
+- [[consortium_africain_de_biotechnologies_sociales_reference]]
+- [[federation_communs_territoriaux_reference]]
+- [[fonds_monetaire_climatique_fmc_reference]]
+- [[frente_sert_o_livre_reference]]
+- [[front_souverainiste_des_ressources_d_amerique_du_sud_reference]]
+- [[mouvement_racines_vivantes_reference]]
+- [[ong_environnementales_de_terrain_reference]]
+- [[reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference]]

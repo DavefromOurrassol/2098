@@ -4,6 +4,7 @@ type: instance
 slug: great_lakes_compact_new_sustainability
 entite: great_lakes_compact
 scenario: new_sustainability
+statut: officialise_enrichi
 localisation:
   zone: chicago_lacustre_compact
   lieu: Région des Grands Lacs (siège de délibération à Sault-Sainte-Marie)
@@ -38,24 +39,25 @@ zone_systemique:
     - énergie
 
 alliances:
-    - agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
-    - agence_mondiale_de_modelisation_climatique_ammc_new_sustainability
-    - arctic_passage_authority_new_sustainability
-    - consortium_des_ia_climatiques_new_sustainability
-    - fonds_mondial_de_regeneration_ecologique_new_sustainability
-    - parlement_deliberatif_mondial_new_sustainability
-    - reseau_des_agences_climatiques_regionales_new_sustainability
-    - trame_bioclimatique_new_sustainability
-    - great_lakes_autonomous_compact_new_sustainability
-    - conseil_regulation_ressources_new_sustainability
-
+- agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
+- agence_mondiale_de_modelisation_climatique_ammc_new_sustainability
+- arctic_passage_authority_new_sustainability
+- conseil_regulation_ressources_new_sustainability
+- consortium_des_ia_climatiques_new_sustainability
+- factions_souverainistes_des_blocs_peripheriques_new_sustainability
+- fonds_mondial_de_regeneration_ecologique_new_sustainability
+- great_lakes_autonomous_compact_new_sustainability
+- parlement_deliberatif_mondial_new_sustainability
+- parlement_territoires_nairobi_new_sustainability
+- reseau_des_agences_climatiques_regionales_new_sustainability
+- trame_bioclimatique_new_sustainability
 oppositions:
-    - bloc_des_gouvernements_souverainistes_hydriques_new_sustainability
-    - mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability
-    - internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
-    - coalition_des_industries_extractives_residuelles_new_sustainability
-    - etats_souverainistes_anti_reseau_new_sustainability
-
+- bloc_des_gouvernements_souverainistes_hydriques_new_sustainability
+- coalition_des_industries_extractives_residuelles_new_sustainability
+- etats_souverainistes_anti_reseau_new_sustainability
+- internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
+- mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability
+- programme_onusien_de_mobilite_climatique_new_sustainability
 type_relation_dominante: alliance stratégique
 
 annee_debut: 2026
@@ -99,12 +101,31 @@ Le Compact établit et révise annuellement les quotas de prélèvement, de rech
 - [[energie_ressources_critiques]]
 - [[geopolitique_conflits]]
 
-## Relations
-**Alliés** : [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]], [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]], [[arctic_passage_authority_new_sustainability]], [[consortium_des_ia_climatiques_new_sustainability]], [[fonds_mondial_de_regeneration_ecologique_new_sustainability]], [[parlement_deliberatif_mondial_new_sustainability]], [[reseau_des_agences_climatiques_regionales_new_sustainability]], [[trame_bioclimatique_new_sustainability]], [[great_lakes_autonomous_compact_new_sustainability]], [[conseil_regulation_ressources_new_sustainability]]
-**Opposants** : [[bloc_des_gouvernements_souverainistes_hydriques_new_sustainability]], [[mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability]], [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]], [[coalition_des_industries_extractives_residuelles_new_sustainability]], [[etats_souverainistes_anti_reseau_new_sustainability]]
 
 ## Description journalistique
 Depuis les rives de Detroit jusqu'aux littoraux de l'Ontario, le Great Lakes Compact — Pacte des Eaux Partagées — administre silencieusement ce que beaucoup considèrent comme la plus grande réserve d'eau douce accessible de surface au monde. En 2098, ce n'est plus seulement une institution régionale : c'est un laboratoire vivant de gouvernance polycentrique, régulièrement visité par des délégations venues du bassin du Congo, du Mékong ou du Rio de la Plata cherchant à reproduire son modèle. Sa salle de délibération de Sault-Sainte-Marie accueille chaque trimestre les représentants des Anishinaabeg, du Michigan, de l'Ontario et de sept autres membres souverains autour d'une même table de négociation augmentée, où les données hydrologiques en temps réel s'affichent en transparence pour tous. Ce qui frappe les observateurs extérieurs, c'est moins la sophistication technique du dispositif que la discipline politique collective : personne ne triche sur les chiffres, parce que tout le monde sait que le système s'effondrerait si l'un d'eux le faisait.
 
 ## Tensions narratives
 La tension fondamentale du Compact demeure entière : au moins deux États membres ont, en 2094 et 2097, menacé de suspension temporaire leur participation lors de sécheresses internes sévères, invoquant le primat de leur sécurité hydrique nationale sur le protocole commun — et ont finalement reculé, mais de justesse. La montée en influence du Great Lakes Autonomous Compact, faction interne qui prône une autonomisation complète du bassin vis-à-vis des États fédéraux, crée une ligne de fracture idéologique croissante au sein même de l'institution. Enfin, son statut de 'modèle exportable' génère une pression contradictoire : plus il est reconnu globalement, plus il doit se comporter en institution normative universelle, ce qui entre en tension avec son identité fondamentale d'accord local et volontaire.
+
+## Relations
+**Alliés :**
+- [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]]
+- [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]]
+- [[arctic_passage_authority_new_sustainability]]
+- [[conseil_regulation_ressources_new_sustainability]]
+- [[consortium_des_ia_climatiques_new_sustainability]]
+- [[factions_souverainistes_des_blocs_peripheriques_new_sustainability]]
+- [[fonds_mondial_de_regeneration_ecologique_new_sustainability]]
+- [[great_lakes_autonomous_compact_new_sustainability]]
+- [[parlement_deliberatif_mondial_new_sustainability]]
+- [[parlement_territoires_nairobi_new_sustainability]]
+- [[reseau_des_agences_climatiques_regionales_new_sustainability]]
+- [[trame_bioclimatique_new_sustainability]]
+**Opposants :**
+- [[bloc_des_gouvernements_souverainistes_hydriques_new_sustainability]]
+- [[coalition_des_industries_extractives_residuelles_new_sustainability]]
+- [[etats_souverainistes_anti_reseau_new_sustainability]]
+- [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]]
+- [[mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability]]
+- [[programme_onusien_de_mobilite_climatique_new_sustainability]]

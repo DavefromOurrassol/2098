@@ -33,8 +33,45 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- bassora_couloir_refugies_fortress_world
+- campements_seuils_fermes_fortress_world
+- cellules_mouvement_commun_midwest_fortress_world
+- cliniques_de_deaugmentation_independantes_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- consortium_africain_de_biotechnologies_sociales_fortress_world
+- contrebandiers_energetiques_des_zones_grises_fortress_world
+- les_veilleurs_du_fleuve_fortress_world
+- mouvement_commun_midwest_fortress_world
+- populations_des_zones_deficitaires_d_optimisation_fortress_world
+- reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world
 - rust_belt_communes_libres_fortress_world
-oppositions: []
+oppositions:
+- administrations_de_controle_frontalier_des_blocs_fortress_world
+- amazonie_pacte_vert_fortress_world
+- anba_siege_atlantique_fortress_world
+- bloc_atlantique_fortress_world
+- bloc_eurasiatique_occidental_fortress_world
+- bunker_chambre_securite_territoriale_fortress_world
+- bureau_territoires_residuels_fortress_world
+- complexe_orentchev_almaty_fortress_world
+- conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world
+- conseil_moscou_est_fortress_world
+- executif_militaro_civil_du_regime_fortress_world
+- geneve_bunker_fortress_world
+- instances_aria_concurrentes_des_blocs_rivaux_fortress_world
+- milices_privees_de_protection_des_sites_germinaux_fortress_world
+- neurosentry_fortress_world
+- nexcore_atlantique_infrastructure_fortress_world
+- nexus_biosyn_division_eurasienne_fortress_world
+- nexus_biosyn_division_pacifique_fortress_world
+- nexus_biosyn_fortress_world
+- pacte_forteresses_souveraines_fortress_world
+- reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world
+- siege_genevois_cars_fortress_world
+- systemes_de_scoring_de_productivite_corporative_fortress_world
+- tours_nexus7_fortress_world
+- vaultcorp_security_fortress_world
+- zones_grises_tampons_fortress_world
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -101,9 +138,48 @@ L'Alliance est tiraillée entre son impératif humanitaire universel et la tenta
 - [[demographie_mobilite_humaine]]
 - [[organisation_territoires]]
 
+
 ## Relations
 **Alliés :**
+- [[bassora_couloir_refugies_fortress_world]]
+- [[campements_seuils_fermes_fortress_world]]
+- [[cellules_mouvement_commun_midwest_fortress_world]]
+- [[cliniques_de_deaugmentation_independantes_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[consortium_africain_de_biotechnologies_sociales_fortress_world]]
+- [[contrebandiers_energetiques_des_zones_grises_fortress_world]]
+- [[les_veilleurs_du_fleuve_fortress_world]]
+- [[mouvement_commun_midwest_fortress_world]]
+- [[populations_des_zones_deficitaires_d_optimisation_fortress_world]]
+- [[reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world]]
 - [[rust_belt_communes_libres_fortress_world]]
+**Opposants :**
+- [[administrations_de_controle_frontalier_des_blocs_fortress_world]]
+- [[amazonie_pacte_vert_fortress_world]]
+- [[anba_siege_atlantique_fortress_world]]
+- [[bloc_atlantique_fortress_world]]
+- [[bloc_eurasiatique_occidental_fortress_world]]
+- [[bunker_chambre_securite_territoriale_fortress_world]]
+- [[bureau_territoires_residuels_fortress_world]]
+- [[complexe_orentchev_almaty_fortress_world]]
+- [[conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world]]
+- [[conseil_moscou_est_fortress_world]]
+- [[executif_militaro_civil_du_regime_fortress_world]]
+- [[geneve_bunker_fortress_world]]
+- [[instances_aria_concurrentes_des_blocs_rivaux_fortress_world]]
+- [[milices_privees_de_protection_des_sites_germinaux_fortress_world]]
+- [[neurosentry_fortress_world]]
+- [[nexcore_atlantique_infrastructure_fortress_world]]
+- [[nexus_biosyn_division_eurasienne_fortress_world]]
+- [[nexus_biosyn_division_pacifique_fortress_world]]
+- [[nexus_biosyn_fortress_world]]
+- [[pacte_forteresses_souveraines_fortress_world]]
+- [[reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world]]
+- [[siege_genevois_cars_fortress_world]]
+- [[systemes_de_scoring_de_productivite_corporative_fortress_world]]
+- [[tours_nexus7_fortress_world]]
+- [[vaultcorp_security_fortress_world]]
+- [[zones_grises_tampons_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

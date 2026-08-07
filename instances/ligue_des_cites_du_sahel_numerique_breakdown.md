@@ -4,6 +4,7 @@ type: instance
 slug: ligue_des_cites_du_sahel_numerique_breakdown
 entite: ligue_des_cites_du_sahel_numerique
 scenario: breakdown
+statut: officialise_enrichi
 localisation:
   zone: agadez_ligue_sahel_numerique
   lieu: Agadez
@@ -36,21 +37,20 @@ zone_systemique:
     - société
 
 alliances:
-    - diaspora_tech_sahel_breakdown
-    - reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown
-    - guilde_des_techniciens_nomades_breakdown
-    - collectifs_de_reparation_energetique_breakdown
-    - enclaves_agro_communautaires_autonomes_breakdown
-    - factions_secessionnistes_agrariennes_du_desert_breakdown
-
+- agadez_ligue_sahel_numerique_breakdown
+- collectifs_de_reparation_energetique_breakdown
+- diaspora_tech_sahel_breakdown
+- enclaves_agro_communautaires_autonomes_breakdown
+- factions_secessionnistes_agrariennes_du_desert_breakdown
+- guilde_des_techniciens_nomades_breakdown
+- reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown
 oppositions:
-    - seigneuries_logistiques_armees_breakdown
-    - milices_extractivistes_du_bassin_du_congo_breakdown
-    - blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
-    - cartels_logistiques_regionaux_breakdown
-    - enclaves_corporatives_fortifiees_breakdown
-    - seigneurs_de_guerre_agro_territoriaux_breakdown
-
+- blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
+- cartels_logistiques_regionaux_breakdown
+- enclaves_corporatives_fortifiees_breakdown
+- milices_extractivistes_du_bassin_du_congo_breakdown
+- seigneuries_logistiques_armees_breakdown
+- seigneurs_de_guerre_agro_territoriaux_breakdown
 type_relation_dominante: rivalité
 
 annee_debut: 2041
@@ -94,12 +94,26 @@ Maintien fragmentaire d'infrastructures énergétiques solaires et éoliennes mu
 - [[gouvernance_institutions]]
 - [[technologie_information]]
 
-## Relations
-**Alliés** : [[diaspora_tech_sahel_breakdown]], [[reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown]], [[guilde_des_techniciens_nomades_breakdown]], [[collectifs_de_reparation_energetique_breakdown]], [[enclaves_agro_communautaires_autonomes_breakdown]], [[factions_secessionnistes_agrariennes_du_desert_breakdown]]
-**Opposants** : [[seigneuries_logistiques_armees_breakdown]], [[milices_extractivistes_du_bassin_du_congo_breakdown]], [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]], [[cartels_logistiques_regionaux_breakdown]], [[enclaves_corporatives_fortifiees_breakdown]], [[seigneurs_de_guerre_agro_territoriaux_breakdown]]
 
 ## Description journalistique
 Depuis Agadez, notre correspondante rapporte qu'on ne sait plus vraiment ce qu'est la Ligue — ni même si elle existe encore comme entité unifiée. Ce qu'on voit sur le terrain, ce sont des panneaux solaires estampillés de l'ancien logo, des techniciens qui se reconnaissent à leurs outils et à leur façon de parler de 'protocoles ouverts', des cités qui s'appellent encore membres mais n'ont plus de contact entre elles depuis dix-huit mois. À Niamey, le fragment local a instauré un péage sur ses lignes électriques — exactement ce que la Ligue originelle jurait de ne jamais faire. À Ouagadougou, un nœud survit en fournissant de l'énergie à une enclave corporative voisine en échange de protection armée. Le rêve du contre-modèle sahélien s'est fragmenté en autant de morceaux qu'il y a de cités encore debout, chacune se disant dépositaire de la véritable vision fondatrice.
 
 ## Tensions narratives
 La tension centrale est celle de l'héritage fracturé : qui a le droit de parler au nom de la Ligue quand la Ligue n'existe plus comme corps unifié ? Chaque fragment accuse les autres de trahison, et certains nœuds envisagent de vendre leur infrastructure aux blocs dominants pour survivre — ce qui constituerait l'ultime capitulation de l'idéal fondateur. Parallèlement, la Diaspora Tech Sahel tente de l'extérieur de réinjecter des ressources pour reconnecter les fragments, mais ses émissaires sont parfois perçus comme des nouveaux colonisateurs techniques. La question ouverte : est-ce que la survie fragmentée de l'idée vaut mieux que sa disparition propre ?
+
+## Relations
+**Alliés :**
+- [[agadez_ligue_sahel_numerique_breakdown]]
+- [[collectifs_de_reparation_energetique_breakdown]]
+- [[diaspora_tech_sahel_breakdown]]
+- [[enclaves_agro_communautaires_autonomes_breakdown]]
+- [[factions_secessionnistes_agrariennes_du_desert_breakdown]]
+- [[guilde_des_techniciens_nomades_breakdown]]
+- [[reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown]]
+**Opposants :**
+- [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
+- [[cartels_logistiques_regionaux_breakdown]]
+- [[enclaves_corporatives_fortifiees_breakdown]]
+- [[milices_extractivistes_du_bassin_du_congo_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]
+- [[seigneurs_de_guerre_agro_territoriaux_breakdown]]

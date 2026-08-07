@@ -34,8 +34,26 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_stabilisation_climatique_policy_reform
+- bureau_gouvernance_algorithmique_policy_reform
+- conseil_onu_de_gouvernance_numerique_et_ia_policy_reform
+- conseil_regulation_algorithmique_policy_reform
+- consortium_agro_pacifique_policy_reform
+- consortium_de_geo_ingenierie_atmospherique_pacifique_policy_reform
+- consortium_nexus_calcul_policy_reform
+- consortium_technologique_de_planification_territoriale_policy_reform
+- consortiums_prives_de_gouvernance_algorithmique_policy_reform
+- factions_technocratiques_de_la_marchandisation_hydrique_policy_reform
+- rede_paulista_de_distribuic_o_algor_tmica_policy_reform
+- reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
+- union_technocratique_eurasiatique_policy_reform
+oppositions:
+- bloc_des_nations_a_economie_carbone_controlee_policy_reform
+- coalition_des_souverainistes_numeriques_policy_reform
+- factions_internes_pro_desaugmentation_totale_policy_reform
+- front_souverainiste_des_blocs_non_signataires_policy_reform
+- mouvement_pour_la_souverainete_territoriale_absolue_policy_reform
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -97,6 +115,29 @@ Le Consortium se trouve pris en étau entre sa mission d'harmonisation globale e
 - [[gouvernance_institutions]]
 - [[technologie_information]]
 - [[geopolitique_conflits]]
+
+
+## Relations
+**Alliés :**
+- [[agence_stabilisation_climatique_policy_reform]]
+- [[bureau_gouvernance_algorithmique_policy_reform]]
+- [[conseil_onu_de_gouvernance_numerique_et_ia_policy_reform]]
+- [[conseil_regulation_algorithmique_policy_reform]]
+- [[consortium_agro_pacifique_policy_reform]]
+- [[consortium_de_geo_ingenierie_atmospherique_pacifique_policy_reform]]
+- [[consortium_nexus_calcul_policy_reform]]
+- [[consortium_technologique_de_planification_territoriale_policy_reform]]
+- [[consortiums_prives_de_gouvernance_algorithmique_policy_reform]]
+- [[factions_technocratiques_de_la_marchandisation_hydrique_policy_reform]]
+- [[rede_paulista_de_distribuic_o_algor_tmica_policy_reform]]
+- [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]]
+- [[union_technocratique_eurasiatique_policy_reform]]
+**Opposants :**
+- [[bloc_des_nations_a_economie_carbone_controlee_policy_reform]]
+- [[coalition_des_souverainistes_numeriques_policy_reform]]
+- [[factions_internes_pro_desaugmentation_totale_policy_reform]]
+- [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+- [[mouvement_pour_la_souverainete_territoriale_absolue_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

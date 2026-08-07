@@ -4,6 +4,7 @@ type: instance
 slug: les_passeurs_de_limites_new_sustainability
 entite: les_passeurs_de_limites
 scenario: new_sustainability
+statut: officialise_enrichi
 localisation:
   zone: null
   lieu: null

@@ -4,6 +4,7 @@ type: instance
 slug: assemblee_territoires_new_sustainability
 entite: assemblee_territoires
 scenario: new_sustainability
+statut: officialise_enrichi
 localisation:
   zone: hub_nairobi_kigali
   lieu: Nairobi
@@ -34,10 +35,16 @@ zone_systemique:
   - infrastructure
   - société
 alliances:
-  - conseil_regulation_algorithmique_new_sustainability
-  - coalition_vivant_new_sustainability
-  - nexcore_new_sustainability
-oppositions: []
+- coalition_vivant_new_sustainability
+- commission_territoriale_ourrassol_new_sustainability
+- conseil_regulation_algorithmique_new_sustainability
+- nexcore_new_sustainability
+- parlement_deliberatif_mondial_new_sustainability
+- parlement_territoires_nairobi_new_sustainability
+- rede_paulista_de_distribuic_o_algor_tmica_new_sustainability
+- tribunal_algorithmique_de_bruxelles_new_sustainability
+oppositions:
+- etats_souverainistes_anti_reseau_new_sustainability
 type_relation_dominante: coopération
 annee_debut: 2041
 annee_fin:
@@ -81,9 +88,6 @@ Instance mondiale de gouvernance territoriale. 340 délégués représentant
 - [[demographie_mobilite_humaine]]
 - [[climat_environnement_global]]
 
-## Relations
-**Alliés** : [[conseil_regulation_algorithmique_new_sustainability]], [[coalition_vivant_new_sustainability]], [[nexcore_new_sustainability]]
-**Opposants** : _aucun défini_
 
 ## Description journalistique
 Le Parlement des Territoires siège à Nairobi dans un bâtiment conçu pour
@@ -93,3 +97,16 @@ Sa présidente, Nilufar Rashidova, est à son deuxième mandat.
 ## Tensions narratives
 Tension entre délégués d'États et de régions autonomes. Débat non résolu
 sur la pondération des votes.
+
+## Relations
+**Alliés :**
+- [[coalition_vivant_new_sustainability]]
+- [[commission_territoriale_ourrassol_new_sustainability]]
+- [[conseil_regulation_algorithmique_new_sustainability]]
+- [[nexcore_new_sustainability]]
+- [[parlement_deliberatif_mondial_new_sustainability]]
+- [[parlement_territoires_nairobi_new_sustainability]]
+- [[rede_paulista_de_distribuic_o_algor_tmica_new_sustainability]]
+- [[tribunal_algorithmique_de_bruxelles_new_sustainability]]
+**Opposants :**
+- [[etats_souverainistes_anti_reseau_new_sustainability]]

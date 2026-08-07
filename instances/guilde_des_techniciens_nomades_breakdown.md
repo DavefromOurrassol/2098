@@ -35,8 +35,29 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agadez_ligue_sahel_numerique_breakdown
+- brigades_medicales_itinerantes_breakdown
+- collectif_des_climatologues_sans_etat_breakdown
+- collectifs_de_reparation_energetique_breakdown
+- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- communes_rust_belt_breakdown
+- corridors_eurasiens_convoyage_breakdown
+- enclaves_agro_communautaires_autonomes_breakdown
+- enclaves_industrielles_du_corridor_oural_caspien_breakdown
+- front_techno_reconstructionniste_breakdown
+- lagos_est_nexcore_breakdown
+- ligue_des_cites_du_sahel_numerique_breakdown
+- nairobi_crrc_breakdown
+- noeud_nordark_tromso_breakdown
+- seoul_collectif_nexcore_breakdown
+- trame_bioclimatique_breakdown
+oppositions:
+- compagnies_de_geo_ingenierie_privees_sans_mandat_breakdown
+- factions_para_etatiques_hydriques_breakdown
+- milices_d_accaparement_hydrique_breakdown
+- nexcore_breakdown
+- seigneuries_logistiques_armees_breakdown
 type_relation_dominante: dépendance
 annee_debut: 2026
 annee_fin: null
@@ -94,6 +115,32 @@ La Guilde est tiraillée entre sa vocation de service universel et la logique de
 - [[energie_ressources_critiques]]
 - [[demographie_mobilite_humaine]]
 - [[systemes_productifs_travail]]
+
+
+## Relations
+**Alliés :**
+- [[agadez_ligue_sahel_numerique_breakdown]]
+- [[brigades_medicales_itinerantes_breakdown]]
+- [[collectif_des_climatologues_sans_etat_breakdown]]
+- [[collectifs_de_reparation_energetique_breakdown]]
+- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[communes_rust_belt_breakdown]]
+- [[corridors_eurasiens_convoyage_breakdown]]
+- [[enclaves_agro_communautaires_autonomes_breakdown]]
+- [[enclaves_industrielles_du_corridor_oural_caspien_breakdown]]
+- [[front_techno_reconstructionniste_breakdown]]
+- [[lagos_est_nexcore_breakdown]]
+- [[ligue_des_cites_du_sahel_numerique_breakdown]]
+- [[nairobi_crrc_breakdown]]
+- [[noeud_nordark_tromso_breakdown]]
+- [[seoul_collectif_nexcore_breakdown]]
+- [[trame_bioclimatique_breakdown]]
+**Opposants :**
+- [[compagnies_de_geo_ingenierie_privees_sans_mandat_breakdown]]
+- [[factions_para_etatiques_hydriques_breakdown]]
+- [[milices_d_accaparement_hydrique_breakdown]]
+- [[nexcore_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

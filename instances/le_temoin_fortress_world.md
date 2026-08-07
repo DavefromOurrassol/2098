@@ -4,6 +4,7 @@ type: instance
 slug: le_temoin_fortress_world
 entite: le_temoin
 scenario: fortress_world
+statut: officialise_enrichi
 localisation:
   zone: bloc_atlantique
   lieu: Bloc Atlantique (adresses changeantes, mention du Midwest désertifié)
@@ -30,9 +31,21 @@ zone_systemique:
   - information
   - société
 alliances:
-  - coalition_vivant_fortress_world
+- bassora_couloir_refugies_fortress_world
+- cellules_mouvement_commun_midwest_fortress_world
+- coalition_vivant_fortress_world
+- mouvement_commun_midwest_fortress_world
 oppositions:
-  - conseil_regulation_algorithmique_fortress_world
+- amazonie_pacte_vert_fortress_world
+- bunker_chambre_securite_territoriale_fortress_world
+- bureau_des_territoires_residuels_fortress_world
+- bureau_territoires_residuels_fortress_world
+- centre_controle_orbital_helios_fortress_world
+- conseil_regulation_algorithmique_fortress_world
+- directive_kontinuum_fortress_world
+- nexcore_atlantique_infrastructure_fortress_world
+- rede_paulista_de_distribuic_o_algor_tmica_fortress_world
+- zones_grises_tampons_fortress_world
 type_relation_dominante: conflit
 annee_debut: 2079
 annee_fin:
@@ -75,9 +88,6 @@ certifiée devenue dissidente de l'information après 2089.
 - [[technologie_information]]
 - [[valeurs_culture_tempo_sociale]]
 
-## Relations
-**Alliés** : [[coalition_vivant_fortress_world]]
-**Opposants** : [[conseil_regulation_algorithmique_fortress_world]]
 
 ## Description journalistique
 Vera Solano n'existe pas officiellement. Son identité numérique a été
@@ -88,3 +98,21 @@ l'ANBA veut à tout prix obtenir.
 ## Tensions narratives
 L'ANBA a offert une amnistie contre sa liste de sources. Elle a refusé.
 Ses publications se sont espacées depuis trois mois.
+
+## Relations
+**Alliés :**
+- [[bassora_couloir_refugies_fortress_world]]
+- [[cellules_mouvement_commun_midwest_fortress_world]]
+- [[coalition_vivant_fortress_world]]
+- [[mouvement_commun_midwest_fortress_world]]
+**Opposants :**
+- [[amazonie_pacte_vert_fortress_world]]
+- [[bunker_chambre_securite_territoriale_fortress_world]]
+- [[bureau_des_territoires_residuels_fortress_world]]
+- [[bureau_territoires_residuels_fortress_world]]
+- [[centre_controle_orbital_helios_fortress_world]]
+- [[conseil_regulation_algorithmique_fortress_world]]
+- [[directive_kontinuum_fortress_world]]
+- [[nexcore_atlantique_infrastructure_fortress_world]]
+- [[rede_paulista_de_distribuic_o_algor_tmica_fortress_world]]
+- [[zones_grises_tampons_fortress_world]]

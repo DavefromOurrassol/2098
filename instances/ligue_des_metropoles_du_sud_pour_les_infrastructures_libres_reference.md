@@ -31,15 +31,28 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
-- union_africaine_resilience_reference
-- kinshasa_accords_hydriques_reference
-- sao_paulo_ita_reference
-- ouagadougou_polytechnique_reference
+- bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference
+- consortium_logistique_asiatique_de_contournement_aln_reference
+- cooperatives_ia_open_source_reference
 - guadalajara_nexus_reference
+- helsinki_communs_numeriques_reference
+- kinshasa_accords_hydriques_reference
+- nairobi_crrc_reference
+- ouagadougou_polytechnique_reference
+- pacifique_sud_resilience_network_reference
+- reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference
+- reseau_meshcommons_netsolidaire_reference
+- sao_paulo_ita_reference
+- tbilissi_noeud_mnemos_reference
+- union_africaine_resilience_reference
 oppositions:
-- institutions_multilaterales_survivantes_reference
+- consortium_helios_reference
+- consortiums_energetiques_des_megapoles_reference
 - corridor_arctique_nordique_reference
+- directive_kontinuum_reference
+- institutions_multilaterales_survivantes_reference
 - pacte_des_souverains_reference
+- rede_paulista_de_distribuic_o_algor_tmica_reference
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -101,17 +114,31 @@ La Ligue est tiraillée entre son idéal d'horizontalité radicale et la tentati
 - [[organisation_territoires]]
 - [[energie_ressources_critiques]]
 
+
 ## Relations
 **Alliés :**
-- [[union_africaine_resilience_reference]]
-- [[kinshasa_accords_hydriques_reference]]
-- [[sao_paulo_ita_reference]]
-- [[ouagadougou_polytechnique_reference]]
+- [[bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference]]
+- [[consortium_logistique_asiatique_de_contournement_aln_reference]]
+- [[cooperatives_ia_open_source_reference]]
 - [[guadalajara_nexus_reference]]
+- [[helsinki_communs_numeriques_reference]]
+- [[kinshasa_accords_hydriques_reference]]
+- [[nairobi_crrc_reference]]
+- [[ouagadougou_polytechnique_reference]]
+- [[pacifique_sud_resilience_network_reference]]
+- [[reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference]]
+- [[reseau_meshcommons_netsolidaire_reference]]
+- [[sao_paulo_ita_reference]]
+- [[tbilissi_noeud_mnemos_reference]]
+- [[union_africaine_resilience_reference]]
 **Opposants :**
-- [[institutions_multilaterales_survivantes_reference]]
+- [[consortium_helios_reference]]
+- [[consortiums_energetiques_des_megapoles_reference]]
 - [[corridor_arctique_nordique_reference]]
+- [[directive_kontinuum_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
 - [[pacte_des_souverains_reference]]
+- [[rede_paulista_de_distribuic_o_algor_tmica_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

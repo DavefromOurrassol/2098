@@ -4,6 +4,7 @@ type: instance
 slug: federation_communs_territoriaux_eco_communalism
 entite: federation_communs_territoriaux
 scenario: eco_communalism
+statut: officialise_enrichi
 localisation:
   zone: null
   lieu: null
@@ -37,16 +38,17 @@ zone_systemique:
     - économie
 
 alliances:
-    - assemblees_de_bassin_versant_eco_communalism
-    - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
-    - guildes_de_mediateurs_ecologiques_eco_communalism
-    - observatoire_climatique_des_territoires_oct_reference
-
+- assemblees_de_bassin_versant_eco_communalism
+- consortium_amazonia_viva_eco_communalism
+- cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
+- guildes_de_mediateurs_ecologiques_eco_communalism
+- mouvement_des_communes_du_rust_belt_eco_communalism
+- observatoire_climatique_des_territoires_oct_reference
 oppositions:
-    - fragments_d_etats_centraux_residuels_eco_communalism
-    - consortiums_industriels_de_l_eau_eco_communalism
-    - communs_secessionnistes_hors_coordination_eco_communalism
-
+- communs_secessionnistes_hors_coordination_eco_communalism
+- consortiums_industriels_de_l_eau_eco_communalism
+- factions_communautaires_refusant_le_partage_narratif_exterieur_eco_communalism
+- fragments_d_etats_centraux_residuels_eco_communalism
 type_relation_dominante: coopération
 
 annee_debut: 2041
@@ -90,12 +92,23 @@ Elle négocie les traités d'entraide entre bassins en cas de sécheresse, d'ép
 - [[climat_environnement_global]]
 - [[energie_ressources_critiques]]
 
-## Relations
-**Alliés** : [[assemblees_de_bassin_versant_eco_communalism]], [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]], [[guildes_de_mediateurs_ecologiques_eco_communalism]], [[observatoire_climatique_des_territoires_oct_reference]]
-**Opposants** : [[fragments_d_etats_centraux_residuels_eco_communalism]], [[consortiums_industriels_de_l_eau_eco_communalism]], [[communs_secessionnistes_hors_coordination_eco_communalism]]
 
 ## Description journalistique
 À Ourrassol en 2098, la Confédération des Bassins Vivants n'a ni siège fixe ni drapeau unique — elle se réunit deux fois l'an dans un bassin différent, sous des tentes modulaires ornées des totems végétaux de chaque territoire membre. Ses délégués ne sont pas élus mais tirés au sort parmi les conseils de communs, renouvelés par rotation saisonnière. On la dit 'la plus grande institution du monde qui refuse de se croire une institution'. Ses détracteurs, notamment les technocrates issus des anciens appareils d'État, la qualifient de 'fédération de villages qui joue aux Nations Unies avec des graines'. Pourtant, ce sont ses protocoles d'urgence hydrique qui ont évité trois conflits armés entre bassins rivaux depuis 2071. Elle avance, lentement, obstinément, comme les racines d'une forêt.
 
 ## Tensions narratives
 La ligne de fracture la plus vive oppose les 'autonomistes durs', qui voient dans toute coordination inter-bassins un premier pas vers une recentralisation autoritaire, aux 'confédéralistes pragmatiques' qui estiment que sans mutualisation des risques climatiques, chaque commun mourra seul. Par ailleurs, certains bassins membres — enrichis par des réserves d'eau ou d'énergie solaire exceptionnelles — commencent à exercer une influence disproportionnée, recréant de facto des rapports de domination que la Confédération prétendait abolir. Enfin, la question non résolue de l'accueil des populations déplacées par les zones désertifiées menace de faire imploser le consensus fondateur entre territoires d'accueil et communs refermés sur eux-mêmes.
+
+## Relations
+**Alliés :**
+- [[assemblees_de_bassin_versant_eco_communalism]]
+- [[consortium_amazonia_viva_eco_communalism]]
+- [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]
+- [[guildes_de_mediateurs_ecologiques_eco_communalism]]
+- [[mouvement_des_communes_du_rust_belt_eco_communalism]]
+- [[observatoire_climatique_des_territoires_oct_reference]]
+**Opposants :**
+- [[communs_secessionnistes_hors_coordination_eco_communalism]]
+- [[consortiums_industriels_de_l_eau_eco_communalism]]
+- [[factions_communautaires_refusant_le_partage_narratif_exterieur_eco_communalism]]
+- [[fragments_d_etats_centraux_residuels_eco_communalism]]

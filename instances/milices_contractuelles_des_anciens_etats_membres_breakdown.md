@@ -35,8 +35,30 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- alliance_blocs_souverains_breakdown
+- cartels_logistiques_regionaux_breakdown
+- conglometrat_sino_siberien_bohai_transit_breakdown
+- consortiums_logistiques_agro_corporatifs_breakdown
+- corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown
+- etats_fragmentes_nationalisant_les_stocks_breakdown
+- factions_energetiques_heritieres_des_pactes_abs_breakdown
+- factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
+- federation_russe_residuelle_district_de_mourmansk_breakdown
+- gouvernements_regionaux_residuels_reterritorialisants_breakdown
+- grandes_lacs_compact_eau_breakdown
+- milices_privees_documentees_terrain_breakdown
+- nexcore_breakdown
+- seigneuries_logistiques_armees_breakdown
+oppositions:
+- collectif_hackers_decroissance_infrastructure_breakdown
+- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- front_de_resistance_aux_peages_sur_les_ressources_breakdown
+- geneve_bunker_institutions_breakdown
+- milices_agro_defensives_locales_breakdown
+- reseau_logistique_criminel_concurrent_breakdown
+- saboteurs_des_corridors_de_transit_breakdown
+- tour_bcuc_geneve_breakdown
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -97,6 +119,33 @@ La contradiction fondamentale de ces milices réside dans leur double nature : i
 - [[gouvernance_institutions]]
 - [[geopolitique_conflits]]
 - [[organisation_territoires]]
+
+
+## Relations
+**Alliés :**
+- [[alliance_blocs_souverains_breakdown]]
+- [[cartels_logistiques_regionaux_breakdown]]
+- [[conglometrat_sino_siberien_bohai_transit_breakdown]]
+- [[consortiums_logistiques_agro_corporatifs_breakdown]]
+- [[corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown]]
+- [[etats_fragmentes_nationalisant_les_stocks_breakdown]]
+- [[factions_energetiques_heritieres_des_pactes_abs_breakdown]]
+- [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]]
+- [[federation_russe_residuelle_district_de_mourmansk_breakdown]]
+- [[gouvernements_regionaux_residuels_reterritorialisants_breakdown]]
+- [[grandes_lacs_compact_eau_breakdown]]
+- [[milices_privees_documentees_terrain_breakdown]]
+- [[nexcore_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]
+**Opposants :**
+- [[collectif_hackers_decroissance_infrastructure_breakdown]]
+- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
+- [[geneve_bunker_institutions_breakdown]]
+- [[milices_agro_defensives_locales_breakdown]]
+- [[reseau_logistique_criminel_concurrent_breakdown]]
+- [[saboteurs_des_corridors_de_transit_breakdown]]
+- [[tour_bcuc_geneve_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

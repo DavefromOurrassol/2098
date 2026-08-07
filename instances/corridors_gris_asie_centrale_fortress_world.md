@@ -4,6 +4,7 @@ type: instance
 slug: corridors_gris_asie_centrale_fortress_world
 entite: corridors_gris_asie_centrale
 scenario: fortress_world
+statut: officialise_enrichi
 localisation:
   zone: corridors_gris_asie_centrale
   lieu: Corridors Gris d'Asie Centrale — entre Almaty, Tachkent, Bichkek et Achgabat
@@ -38,25 +39,32 @@ zone_systemique:
     - infrastructure
 
 alliances:
-    - factions_djihadistes_logistiques_d_asie_centrale_fortress_world
-    - communautes_deplacees_hors_quota_migratoire_fortress_world
-    - reseaux_d_echange_clandestin_inter_zones_fortress_world
-    - contrebandiers_energetiques_des_zones_grises_fortress_world
-    - operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world
-    - marches_gris_tbilissi_fortress_world
-    - campements_seuils_fermes_fortress_world
-    - coalitions_des_deplaces_et_apatrides_fortress_world
-
+- campements_seuils_fermes_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- communautes_deplacees_hors_quota_migratoire_fortress_world
+- contrebandiers_energetiques_des_zones_grises_fortress_world
+- factions_djihadistes_logistiques_d_asie_centrale_fortress_world
+- marches_gris_tbilissi_fortress_world
+- operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world
+- reseaux_d_echange_clandestin_inter_zones_fortress_world
 oppositions:
-    - conseil_moscou_est_fortress_world
-    - agences_de_securite_interieure_des_etats_forteresses_fortress_world
-    - administrations_de_controle_frontalier_des_blocs_fortress_world
-    - commandements_logistiques_peripheriques_du_bloc_eurasien_central_fortress_world
-    - dispositifs_de_surveillance_numerique_souveraine_fortress_world
-    - almaty_zone_friction_fortress_world
-    - complexe_orentchev_almaty_fortress_world
-    - systemes_de_scoring_de_productivite_corporative_fortress_world
-
+- administrations_de_controle_frontalier_des_blocs_fortress_world
+- agences_de_securite_interieure_des_etats_forteresses_fortress_world
+- almaty_zone_friction_fortress_world
+- bloc_pacifique_nord_fortress_world
+- bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world
+- commandements_logistiques_peripheriques_du_bloc_eurasien_central_fortress_world
+- complexe_orentchev_almaty_fortress_world
+- conseil_moscou_est_fortress_world
+- consortium_eurasiatique_des_ressources_fermees_fortress_world
+- consortiums_energetiques_du_bloc_ourrassol_fortress_world
+- corps_des_inspecteurs_de_conformite_inter_blocs_fortress_world
+- dispositifs_de_surveillance_numerique_souveraine_fortress_world
+- instances_aria_concurrentes_des_blocs_rivaux_fortress_world
+- regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world
+- systemes_de_scoring_de_productivite_corporative_fortress_world
+- tbilissi_nord_zone_franche_fortress_world
+- zone_usines_forteresses_eurasie_fortress_world
 type_relation_dominante: dépendance
 
 annee_debut: 2041
@@ -100,12 +108,38 @@ Assurer la circulation de travailleurs non accrédités entre les zones de produ
 - [[systemes_productifs_travail]]
 - [[geopolitique_conflits]]
 
-## Relations
-**Alliés** : [[factions_djihadistes_logistiques_d_asie_centrale_fortress_world]], [[communautes_deplacees_hors_quota_migratoire_fortress_world]], [[reseaux_d_echange_clandestin_inter_zones_fortress_world]], [[contrebandiers_energetiques_des_zones_grises_fortress_world]], [[operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world]], [[marches_gris_tbilissi_fortress_world]], [[campements_seuils_fermes_fortress_world]], [[coalitions_des_deplaces_et_apatrides_fortress_world]]
-**Opposants** : [[conseil_moscou_est_fortress_world]], [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]], [[administrations_de_controle_frontalier_des_blocs_fortress_world]], [[commandements_logistiques_peripheriques_du_bloc_eurasien_central_fortress_world]], [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]], [[almaty_zone_friction_fortress_world]], [[complexe_orentchev_almaty_fortress_world]], [[systemes_de_scoring_de_productivite_corporative_fortress_world]]
 
 ## Description journalistique
 Sur les cartes officielles du Bloc Eurasiatique, ce territoire n'existe pas. Sur le terrain, c'est une autre histoire : entre Almaty et Tachkent, entre les zones accréditées de Bichkek et les périmètres industriels d'Achgabat, court un réseau de campements mobiles, de relais routiers clandestins et de dortoirs provisoires que les populations locales appellent simplement 'le gris'. Des centaines de milliers de travailleurs sans accréditation y transitent chaque saison, acheminés vers les chantiers et les zones de production des forteresses adjacentes par des intermédiaires dont personne ne connaît le nom officiel. Les drones de surveillance des États voisins les survolent en permanence — mais les données collectées alimentent les besoins en main-d'œuvre des conglomérats industriels plutôt que les registres des tribunaux. Le corridor existe parce qu'il est utile à ceux qui le nient.
 
 ## Tensions narratives
 La surveillance satellitaire permanente génère une cartographie détaillée du corridor que les forteresses possèdent mais n'utilisent jamais pour fermer ce qu'elles ont intérêt à laisser ouvert — jusqu'au moment où un incident politique force leur main. Les solidarités qui se nouent dans le flux sédentarisent progressivement certains nœuds du réseau, créant des densités humaines qui deviennent visibles et potentiellement organisables — exactement ce que les régimes adjacents ne peuvent tolérer. La question qui hante le corridor : jusqu'où peut-on construire une communauté dans un espace dont la survie dépend de son invisibilité ? Et qui, parmi les opérateurs privés qui profitent du flux, a intérêt à trahir le réseau avant que les populations qui le peuplent ne trouvent une voix collective ?
+
+## Relations
+**Alliés :**
+- [[campements_seuils_fermes_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[communautes_deplacees_hors_quota_migratoire_fortress_world]]
+- [[contrebandiers_energetiques_des_zones_grises_fortress_world]]
+- [[factions_djihadistes_logistiques_d_asie_centrale_fortress_world]]
+- [[marches_gris_tbilissi_fortress_world]]
+- [[operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world]]
+- [[reseaux_d_echange_clandestin_inter_zones_fortress_world]]
+**Opposants :**
+- [[administrations_de_controle_frontalier_des_blocs_fortress_world]]
+- [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]]
+- [[almaty_zone_friction_fortress_world]]
+- [[bloc_pacifique_nord_fortress_world]]
+- [[bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world]]
+- [[commandements_logistiques_peripheriques_du_bloc_eurasien_central_fortress_world]]
+- [[complexe_orentchev_almaty_fortress_world]]
+- [[conseil_moscou_est_fortress_world]]
+- [[consortium_eurasiatique_des_ressources_fermees_fortress_world]]
+- [[consortiums_energetiques_du_bloc_ourrassol_fortress_world]]
+- [[corps_des_inspecteurs_de_conformite_inter_blocs_fortress_world]]
+- [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
+- [[instances_aria_concurrentes_des_blocs_rivaux_fortress_world]]
+- [[regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world]]
+- [[systemes_de_scoring_de_productivite_corporative_fortress_world]]
+- [[tbilissi_nord_zone_franche_fortress_world]]
+- [[zone_usines_forteresses_eurasie_fortress_world]]

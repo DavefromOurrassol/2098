@@ -32,8 +32,37 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_internationale_de_l_energie_reformatee_aier_policy_reform
+- agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
+- autorite_continentale_des_ressources_aquatiques_acra_policy_reform
+- autorite_mondiale_du_vivant_amv_policy_reform
+- coalition_des_villes_de_reconversion_policy_reform
+- conseil_de_regulation_climatique_global_policy_reform
+- consortium_agro_pacifique_policy_reform
+- consortium_amazonia_viva_policy_reform
+- consortium_des_villes_etats_durables_policy_reform
+- fonds_de_stabilisation_climatique_onu_3_policy_reform
+- fonds_mondial_de_resilience_infrastructurelle_policy_reform
+- fonds_mondial_de_stabilisation_biotechnologique_policy_reform
+- fonds_souverain_de_transition_verte_fstv_policy_reform
+- observatoire_mondial_des_ressources_critiques_policy_reform
+- pacifique_sud_resilience_network_policy_reform
+- reseau_des_agences_sanitaires_regionales_policy_reform
+- trame_bioclimatique_policy_reform
+oppositions:
+- bloc_des_nations_a_economie_carbone_controlee_policy_reform
+- coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform
+- collectifs_de_defense_hydrique_saheliens_policy_reform
+- collectifs_de_resistance_aux_relocalisations_forcees_policy_reform
+- etats_dissidents_du_bloc_austral_policy_reform
+- factions_internes_dissidentes_des_contributeurs_historiques_policy_reform
+- factions_technocratiques_de_la_marchandisation_hydrique_policy_reform
+- front_des_souverainistes_energetiques_policy_reform
+- front_souverainiste_des_blocs_non_signataires_policy_reform
+- gouvernements_populistes_anti_depossession_policy_reform
+- lobbies_des_energies_fossiles_residuelles_policy_reform
+- mouvement_pour_la_souverainete_territoriale_absolue_policy_reform
 type_relation_dominante: dépendance
 annee_debut: 2026
 annee_fin: null
@@ -99,6 +128,40 @@ Le FMTE est pris en tenaille entre les exigences des contributeurs du Nord (Amé
 - [[gouvernance_institutions]]
 - [[climat_environnement_global]]
 - [[systeme_economique_redistribution]]
+
+
+## Relations
+**Alliés :**
+- [[agence_internationale_de_l_energie_reformatee_aier_policy_reform]]
+- [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]
+- [[autorite_continentale_des_ressources_aquatiques_acra_policy_reform]]
+- [[autorite_mondiale_du_vivant_amv_policy_reform]]
+- [[coalition_des_villes_de_reconversion_policy_reform]]
+- [[conseil_de_regulation_climatique_global_policy_reform]]
+- [[consortium_agro_pacifique_policy_reform]]
+- [[consortium_amazonia_viva_policy_reform]]
+- [[consortium_des_villes_etats_durables_policy_reform]]
+- [[fonds_de_stabilisation_climatique_onu_3_policy_reform]]
+- [[fonds_mondial_de_resilience_infrastructurelle_policy_reform]]
+- [[fonds_mondial_de_stabilisation_biotechnologique_policy_reform]]
+- [[fonds_souverain_de_transition_verte_fstv_policy_reform]]
+- [[observatoire_mondial_des_ressources_critiques_policy_reform]]
+- [[pacifique_sud_resilience_network_policy_reform]]
+- [[reseau_des_agences_sanitaires_regionales_policy_reform]]
+- [[trame_bioclimatique_policy_reform]]
+**Opposants :**
+- [[bloc_des_nations_a_economie_carbone_controlee_policy_reform]]
+- [[coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform]]
+- [[collectifs_de_defense_hydrique_saheliens_policy_reform]]
+- [[collectifs_de_resistance_aux_relocalisations_forcees_policy_reform]]
+- [[etats_dissidents_du_bloc_austral_policy_reform]]
+- [[factions_internes_dissidentes_des_contributeurs_historiques_policy_reform]]
+- [[factions_technocratiques_de_la_marchandisation_hydrique_policy_reform]]
+- [[front_des_souverainistes_energetiques_policy_reform]]
+- [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+- [[gouvernements_populistes_anti_depossession_policy_reform]]
+- [[lobbies_des_energies_fossiles_residuelles_policy_reform]]
+- [[mouvement_pour_la_souverainete_territoriale_absolue_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

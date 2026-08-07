@@ -4,6 +4,7 @@ type: instance
 slug: cellules_mouvement_commun_midwest_fortress_world
 entite: cellules_mouvement_commun_midwest
 scenario: fortress_world
+statut: officialise_enrichi
 localisation:
   zone: cellules_mouvement_commun_midwest
   lieu: Zones périurbaines du Midwest américain
@@ -36,28 +37,35 @@ zone_systemique:
     - information
 
 alliances:
-    - mouvement_des_communes_du_rust_belt_fortress_world
-    - campements_seuils_fermes_fortress_world
-    - collectifs_de_reappropriation_energetique_peripherique_fortress_world
-    - reseaux_d_echange_clandestin_inter_zones_fortress_world
-    - communautes_deplacees_hors_quota_migratoire_fortress_world
-    - coalition_vivant_fortress_world
-    - voix_du_dehors_fortress_world
-    - alliance_sanitaire_des_populations_exclues_fortress_world
-    - reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world
-    - archives_chiffrees_de_l_open_internet_coalition_fortress_world
-    - le_temoin_fortress_world
-
+- alliance_sanitaire_des_populations_exclues_fortress_world
+- archives_chiffrees_de_l_open_internet_coalition_fortress_world
+- campements_seuils_fermes_fortress_world
+- cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
+- coalition_vivant_fortress_world
+- collectifs_de_reappropriation_energetique_peripherique_fortress_world
+- communautes_deplacees_hors_quota_migratoire_fortress_world
+- dissidences_internes_aux_blocs_minoritaires_fortress_world
+- le_temoin_fortress_world
+- mouvement_commun_midwest_fortress_world
+- mouvement_des_communes_du_rust_belt_fortress_world
+- reseaux_d_echange_clandestin_inter_zones_fortress_world
+- reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world
+- rust_belt_communes_libres_fortress_world
+- voix_du_dehors_fortress_world
 oppositions:
-    - agences_de_securite_interieure_des_etats_forteresses_fortress_world
-    - administrations_de_controle_frontalier_des_blocs_fortress_world
-    - dispositifs_de_surveillance_numerique_souveraine_fortress_world
-    - reseaux_prives_de_securite_aux_frontieres_fortress_world
-    - bureau_des_territoires_residuels_fortress_world
-    - systemes_de_scoring_de_productivite_corporative_fortress_world
-    - front_resilient_pro_systeme_fortress_world
-    - grille_aria_fortress_world
-
+- administrations_de_controle_frontalier_des_blocs_fortress_world
+- agences_de_securite_interieure_des_etats_forteresses_fortress_world
+- bureau_des_territoires_residuels_fortress_world
+- conseil_moscou_est_fortress_world
+- dispositifs_de_surveillance_numerique_souveraine_fortress_world
+- executif_militaro_civil_du_regime_fortress_world
+- front_resilient_pro_systeme_fortress_world
+- geneve_bunker_fortress_world
+- grille_aria_fortress_world
+- pacte_forteresses_souveraines_fortress_world
+- reseaux_prives_de_securite_aux_frontieres_fortress_world
+- systemes_de_scoring_de_productivite_corporative_fortress_world
+- vaultcorp_security_fortress_world
 type_relation_dominante: conflit
 
 annee_debut: 2061
@@ -101,12 +109,41 @@ Sabotage ciblé des infrastructures de séparation (murs, checkpoints biométriq
 - [[demographie_mobilite_humaine]]
 - [[technologie_information]]
 
-## Relations
-**Alliés** : [[mouvement_des_communes_du_rust_belt_fortress_world]], [[campements_seuils_fermes_fortress_world]], [[collectifs_de_reappropriation_energetique_peripherique_fortress_world]], [[reseaux_d_echange_clandestin_inter_zones_fortress_world]], [[communautes_deplacees_hors_quota_migratoire_fortress_world]], [[coalition_vivant_fortress_world]], [[voix_du_dehors_fortress_world]], [[alliance_sanitaire_des_populations_exclues_fortress_world]], [[reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world]], [[archives_chiffrees_de_l_open_internet_coalition_fortress_world]], [[le_temoin_fortress_world]]
-**Opposants** : [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]], [[administrations_de_controle_frontalier_des_blocs_fortress_world]], [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]], [[reseaux_prives_de_securite_aux_frontieres_fortress_world]], [[bureau_des_territoires_residuels_fortress_world]], [[systemes_de_scoring_de_productivite_corporative_fortress_world]], [[front_resilient_pro_systeme_fortress_world]], [[grille_aria_fortress_world]]
 
 ## Description journalistique
 Ils n'ont pas de nom officiel, pas de siège, pas de porte-parole. Les autorités du Bloc Atlantique les désignent sous le terme générique de 'perturbateurs périmètriques', mais dans les zones grises du Midwest, on les appelle simplement 'les Dehors'. Depuis les premières grandes vagues d'exclusion climatique des années 2060, ces cellules militantes se sont constituées cellule par cellule, soudées non par une idéologie mais par l'urgence partagée de survivre hors des forteresses. On leur attribue plus d'une vingtaine de sabotages réussis sur des capteurs de frontière intérieure, la tenue de trois filières d'approvisionnement médical clandestines et des dizaines d'exfiltrations de familles condamnées aux zones déficitaires. Leur force est aussi leur limite : invisibles, ils restent introuvables — et donc inaudibles au-delà de leur propre périphérie.
 
 ## Tensions narratives
 La décentralisation absolue protège le réseau mais interdit toute montée en puissance : chaque cellule survit, aucune ne peut transformer durablement les rapports de pouvoir qui l'ont engendrée. La tentation d'une coordination plus large — portée notamment par les liens naissants avec la Fédération des Communes Libres du Rust Belt — risque d'exposer des nœuds jusqu'ici insaisissables à la surveillance algorithmique des blocs. Et une question fracture les cellules en silence : résister pour durer dans la marge, ou prendre le risque de l'exposition pour exister politiquement ?
+
+## Relations
+**Alliés :**
+- [[alliance_sanitaire_des_populations_exclues_fortress_world]]
+- [[archives_chiffrees_de_l_open_internet_coalition_fortress_world]]
+- [[campements_seuils_fermes_fortress_world]]
+- [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]]
+- [[coalition_vivant_fortress_world]]
+- [[collectifs_de_reappropriation_energetique_peripherique_fortress_world]]
+- [[communautes_deplacees_hors_quota_migratoire_fortress_world]]
+- [[dissidences_internes_aux_blocs_minoritaires_fortress_world]]
+- [[le_temoin_fortress_world]]
+- [[mouvement_commun_midwest_fortress_world]]
+- [[mouvement_des_communes_du_rust_belt_fortress_world]]
+- [[reseaux_d_echange_clandestin_inter_zones_fortress_world]]
+- [[reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world]]
+- [[rust_belt_communes_libres_fortress_world]]
+- [[voix_du_dehors_fortress_world]]
+**Opposants :**
+- [[administrations_de_controle_frontalier_des_blocs_fortress_world]]
+- [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]]
+- [[bureau_des_territoires_residuels_fortress_world]]
+- [[conseil_moscou_est_fortress_world]]
+- [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
+- [[executif_militaro_civil_du_regime_fortress_world]]
+- [[front_resilient_pro_systeme_fortress_world]]
+- [[geneve_bunker_fortress_world]]
+- [[grille_aria_fortress_world]]
+- [[pacte_forteresses_souveraines_fortress_world]]
+- [[reseaux_prives_de_securite_aux_frontieres_fortress_world]]
+- [[systemes_de_scoring_de_productivite_corporative_fortress_world]]
+- [[vaultcorp_security_fortress_world]]

@@ -1,0 +1,22 @@
+{
+  "eco_communalism": {
+    "instances": {
+      "ligue_des_cites_du_sahel_numerique_eco_communalism": 1,
+      "reseau_assemblees_fennoscandien_eco_communalism": 1,
+      "reseau_terrafond_bassins_eco_communalism": 1,
+      "sao_paulo_algorithmique_eco_communalism": 1,
+      "tampere_charte_eco_communalism": 1,
+      "trame_mnemos_noeud_reseau_eco_communalism": 1
+    }
+  },
+  "fortress_world": {
+    "instances": {
+      "bloc_atlantique_fortress_world": 1,
+      "bloc_eurasiatique_occidental_fortress_world": 1,
+      "directive_kontinuum_fortress_world": 1,
+      "dissidences_internes_aux_blocs_minoritaires_fortress_world": 1,
+      "neurosentry_fortress_world": 1,
+      "systemes_de_scoring_de_productivite_corporative_fortress_world": 1
+    }
+  }
+}

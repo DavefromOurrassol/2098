@@ -4,6 +4,7 @@ type: instance
 slug: autorite_passage_arctique_breakdown
 entite: autorite_passage_arctique
 scenario: breakdown
+statut: officialise_enrichi
 localisation:
   zone: autorite_passage_arctique
   lieu: Autorité du Passage Arctique (zone arctique, du détroit de Béring au Svalbard)
@@ -37,20 +38,24 @@ zone_systemique:
     - économie
 
 alliances:
-    - federation_russe_residuelle_district_de_mourmansk_breakdown
-    - armada_logistique_nordique_breakdown
-    - kalaallit_nunaat_sovereign_fund_breakdown
-    - hanse_baltique_recomposee_breakdown
-    - conglometrat_sino_siberien_bohai_transit_breakdown
-
+- armada_logistique_nordique_breakdown
+- conglometrat_sino_siberien_bohai_transit_breakdown
+- district_mourmansk_residuel_breakdown
+- federation_russe_residuelle_district_de_mourmansk_breakdown
+- hanse_baltique_recomposee_breakdown
+- kalaallit_nunaat_sovereign_fund_breakdown
+- noeud_nordark_tromso_breakdown
 oppositions:
-    - milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown
-    - saboteurs_des_corridors_de_transit_breakdown
-    - factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
-    - blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
-    - seigneuries_logistiques_armees_breakdown
-    - front_de_resistance_aux_peages_sur_les_ressources_breakdown
-
+- blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
+- coalition_pacifique_nord_breakdown
+- enclaves_industrielles_de_bergen_troms_breakdown
+- factions_etatiques_residuelles_de_souverainete_hydrique_breakdown
+- factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
+- front_de_resistance_aux_peages_sur_les_ressources_breakdown
+- gouvernements_de_forteresse_anti_nairobi_breakdown
+- milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown
+- saboteurs_des_corridors_de_transit_breakdown
+- seigneuries_logistiques_armees_breakdown
 type_relation_dominante: rivalité
 
 annee_debut: 2031
@@ -94,12 +99,30 @@ Les postes de contrôle encore opérationnels perçoivent des droits de transit 
 - [[organisation_territoires]]
 - [[gouvernance_institutions]]
 
-## Relations
-**Alliés** : [[federation_russe_residuelle_district_de_mourmansk_breakdown]], [[armada_logistique_nordique_breakdown]], [[kalaallit_nunaat_sovereign_fund_breakdown]], [[hanse_baltique_recomposee_breakdown]], [[conglometrat_sino_siberien_bohai_transit_breakdown]]
-**Opposants** : [[milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown]], [[saboteurs_des_corridors_de_transit_breakdown]], [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]], [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]], [[seigneuries_logistiques_armees_breakdown]], [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
 
 ## Description journalistique
 Il existe encore, quelque part entre le détroit de Béring et les eaux du Svalbard, des hommes en uniforme gris portant l'écusson bleu de l'Autorité du Passage Arctique — une ancre stylisée sur fond de calotte glaciaire fondue. Mais demandez-leur à qui ils rendent compte : les réponses divergent selon le poste de contrôle. À Mourmansk-Est, l'Autorité est une extension de facto du District résiduel russe. Au large du Groenland, elle est une franchise commerciale du Kalaallit Sovereign Fund. Dans les eaux contestées entre Islande et Norvège, elle est une coquille vide dont les deux factions revendiquent le sceau pour justifier leurs barricades flottantes. Née d'un accord de 2031 pour administrer les nouvelles routes ouvertes par le recul des glaces, l'Autorité était censée être l'ONU des mers du Nord. Elle est devenue leur champ de bataille.
 
 ## Tensions narratives
 Quel fragment de l'Autorité sera reconnu comme légitime par les grandes puissances encore capables de projeter une force navale en Arctique — et cette reconnaissance suffira-t-elle à faire plier les autres ? Les droits de transit perçus alimentent directement les budgets militaires des factions qui contrôlent les postes : l'Autorité finance sa propre décomposition. Un convoi énergétique refusant de payer les doubles péages risque le blocage ou la saisie — mais payer signifie reconnaître une légitimité que les autres factions contesteront par les armes. Et dans les archives du siège originel d'Oslo, désormais occupé par une milice nordique, dorment les actes fondateurs qui pourraient, en théorie, servir à une refondation — ou à une falsification.
+
+## Relations
+**Alliés :**
+- [[armada_logistique_nordique_breakdown]]
+- [[conglometrat_sino_siberien_bohai_transit_breakdown]]
+- [[district_mourmansk_residuel_breakdown]]
+- [[federation_russe_residuelle_district_de_mourmansk_breakdown]]
+- [[hanse_baltique_recomposee_breakdown]]
+- [[kalaallit_nunaat_sovereign_fund_breakdown]]
+- [[noeud_nordark_tromso_breakdown]]
+**Opposants :**
+- [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
+- [[coalition_pacifique_nord_breakdown]]
+- [[enclaves_industrielles_de_bergen_troms_breakdown]]
+- [[factions_etatiques_residuelles_de_souverainete_hydrique_breakdown]]
+- [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]]
+- [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
+- [[gouvernements_de_forteresse_anti_nairobi_breakdown]]
+- [[milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown]]
+- [[saboteurs_des_corridors_de_transit_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]

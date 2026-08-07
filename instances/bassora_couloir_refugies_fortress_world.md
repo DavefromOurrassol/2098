@@ -4,6 +4,7 @@ type: instance
 slug: bassora_couloir_refugies_fortress_world
 entite: bassora_couloir_refugies
 scenario: fortress_world
+statut: officialise_enrichi
 localisation:
   zone: bassora_couloir_refugies
   lieu: Bassora — Couloir de Réfugiés
@@ -37,23 +38,23 @@ zone_systemique:
     - infrastructure
 
 alliances:
-    - alliance_sanitaire_des_populations_exclues_fortress_world
-    - coalitions_des_deplaces_et_apatrides_fortress_world
-    - communautes_deplacees_hors_quota_migratoire_fortress_world
-    - institutions_multilaterales_residuelles_fortress_world
-    - cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
-    - le_temoin_fortress_world
-    - voix_du_dehors_fortress_world
-    - reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world
-
+- alliance_sanitaire_des_populations_exclues_fortress_world
+- cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- communautes_deplacees_hors_quota_migratoire_fortress_world
+- institutions_multilaterales_residuelles_fortress_world
+- le_temoin_fortress_world
+- reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world
+- voix_du_dehors_fortress_world
 oppositions:
-    - administrations_de_controle_frontalier_des_blocs_fortress_world
-    - agences_de_securite_interieure_des_etats_forteresses_fortress_world
-    - reseaux_prives_de_securite_aux_frontieres_fortress_world
-    - factions_djihadistes_logistiques_d_asie_centrale_fortress_world
-    - bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world
-    - factions_internes_pro_autarcie_totale_fortress_world
-
+- administrations_de_controle_frontalier_des_blocs_fortress_world
+- agences_de_securite_interieure_des_etats_forteresses_fortress_world
+- bloc_atlantique_fortress_world
+- bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world
+- etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world
+- factions_djihadistes_logistiques_d_asie_centrale_fortress_world
+- factions_internes_pro_autarcie_totale_fortress_world
+- reseaux_prives_de_securite_aux_frontieres_fortress_world
 type_relation_dominante: dépendance
 
 annee_debut: 2041
@@ -97,12 +98,29 @@ Coordination des convois de déplacés dans les couloirs hors-blocs du Moyen-Ori
 - [[geopolitique_conflits]]
 - [[organisation_territoires]]
 
-## Relations
-**Alliés** : [[alliance_sanitaire_des_populations_exclues_fortress_world]], [[coalitions_des_deplaces_et_apatrides_fortress_world]], [[communautes_deplacees_hors_quota_migratoire_fortress_world]], [[institutions_multilaterales_residuelles_fortress_world]], [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]], [[le_temoin_fortress_world]], [[voix_du_dehors_fortress_world]], [[reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world]]
-**Opposants** : [[administrations_de_controle_frontalier_des_blocs_fortress_world]], [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]], [[reseaux_prives_de_securite_aux_frontieres_fortress_world]], [[factions_djihadistes_logistiques_d_asie_centrale_fortress_world]], [[bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world]], [[factions_internes_pro_autarcie_totale_fortress_world]]
 
 ## Description journalistique
 Dans les zones tampons poussiéreuses qui s'étirent au nord de ce qui fut l'Irak et la Syrie, le Couloir Humanitaire de Bassora ressemble moins à une organisation qu'à une cicatrice vivante. Ses équipes — quelques centaines d'opérateurs, souvent issus des communautés qu'ils servent — négocient chaque semaine des droits de passage avec des fonctionnaires frontaliers qui peuvent changer d'avis du jour au lendemain. Leurs camions blancs, criblés d'écussons d'accréditation provisoire jamais renouvelés dans les formes, sont devenus l'un des rares repères fixes d'une région en dissolution. Les blocs du nord les tolèrent parce qu'ils maintiennent la pression humaine à distance raisonnable des murs ; les milices locales les haïssent parce qu'ils documentent leurs exactions. Entre ces deux logiques, l'organisation survit — précairement, obstinément.
 
 ## Tensions narratives
 La tension centrale est structurelle et sans issue visible : l'organisation dépend des blocs qu'elle critique pour obtenir les droits de passage sans lesquels ses convois meurent dans les couloirs. Chaque négociation réussie renforce la légitimité pratique des forteresses comme arbitres du vivable. En interne, une faction de terrain pousse vers une radicalisation — refus des accréditations, constitution de routes clandestines autonomes — au risque de perdre la tolérance laborieusement construite. Une autre faction envisage une formalisation partielle avec les institutions multilatérales résiduelles, au prix d'une dépendance qui pourrait transformer l'organisation en sous-traitant humanitaire des blocs. Pendant ce temps, les milices privées aux frontières comprennent que la disparition du Couloir leur livrerait un flux humain totalement sans défense — et calculent jusqu'où pousser avant de franchir ce seuil.
+
+## Relations
+**Alliés :**
+- [[alliance_sanitaire_des_populations_exclues_fortress_world]]
+- [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[communautes_deplacees_hors_quota_migratoire_fortress_world]]
+- [[institutions_multilaterales_residuelles_fortress_world]]
+- [[le_temoin_fortress_world]]
+- [[reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world]]
+- [[voix_du_dehors_fortress_world]]
+**Opposants :**
+- [[administrations_de_controle_frontalier_des_blocs_fortress_world]]
+- [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]]
+- [[bloc_atlantique_fortress_world]]
+- [[bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world]]
+- [[etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world]]
+- [[factions_djihadistes_logistiques_d_asie_centrale_fortress_world]]
+- [[factions_internes_pro_autarcie_totale_fortress_world]]
+- [[reseaux_prives_de_securite_aux_frontieres_fortress_world]]

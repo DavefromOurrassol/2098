@@ -4,6 +4,7 @@ type: instance
 slug: amara_diallo_nkosi_new_sustainability
 entite: amara_diallo_nkosi
 scenario: new_sustainability
+statut: officialise_enrichi
 localisation:
   zone: afrique_continentale
   lieu: Brazzaville — Bassin du Congo

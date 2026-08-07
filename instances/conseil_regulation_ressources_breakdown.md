@@ -4,6 +4,7 @@ type: instance
 slug: conseil_regulation_ressources_breakdown
 entite: conseil_regulation_ressources
 scenario: breakdown
+statut: officialise_enrichi
 localisation:
   zone: null
   lieu: null

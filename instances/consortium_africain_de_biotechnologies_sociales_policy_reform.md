@@ -4,6 +4,7 @@ type: instance
 slug: consortium_africain_de_biotechnologies_sociales_policy_reform
 entite: consortium_africain_de_biotechnologies_sociales
 scenario: policy_reform
+statut: officialise_enrichi
 localisation:
   zone: nairobi_hub
   lieu: Nairobi
@@ -38,23 +39,24 @@ zone_systemique:
     - infrastructure
 
 alliances:
-    - autorite_mondiale_du_vivant_amv_policy_reform
-    - fonds_mondial_de_stabilisation_biotechnologique_policy_reform
-    - federation_des_mutuelles_biotech_policy_reform
-    - coalition_des_semences_libres_policy_reform
-    - reseau_des_agences_sanitaires_regionales_policy_reform
-    - institut_de_therapeutique_integree_de_nairobi_policy_reform
-    - collectifs_de_biohackers_agro_communautaires_policy_reform
-    - collectifs_de_gouvernance_communautaire_decentralisee_policy_reform
-    - amara_diallo_nkosi_policy_reform
-
+- amara_diallo_nkosi_policy_reform
+- autorite_mondiale_du_vivant_amv_policy_reform
+- coalition_des_semences_libres_policy_reform
+- collectifs_de_gouvernance_communautaire_decentralisee_policy_reform
+- consortium_des_villes_etats_durables_policy_reform
+- federation_des_mutuelles_biotech_policy_reform
+- fonds_mondial_de_stabilisation_biotechnologique_policy_reform
+- institut_de_therapeutique_integree_de_nairobi_policy_reform
+- reseau_des_agences_sanitaires_regionales_policy_reform
+- reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform
 oppositions:
-    - front_de_souverainete_biologique_eurasiatique_policy_reform
-    - nexus_biosyn_policy_reform
-    - consortiums_agro_industriels_du_bassin_fluvial_policy_reform
-    - courant_autoritaire_recuperateur_du_vocabulaire_communautaire_policy_reform
-    - faction_regulatrice_dure_au_sein_du_cei_policy_reform
-
+- collectifs_de_biohackers_agro_communautaires_policy_reform
+- consortiums_agro_industriels_du_bassin_fluvial_policy_reform
+- courant_autoritaire_recuperateur_du_vocabulaire_communautaire_policy_reform
+- faction_regulatrice_dure_au_sein_du_cei_policy_reform
+- factions_internes_pro_desaugmentation_totale_policy_reform
+- front_de_souverainete_biologique_eurasiatique_policy_reform
+- nexus_biosyn_policy_reform
 type_relation_dominante: alliance stratégique
 
 annee_debut: 2041
@@ -98,12 +100,30 @@ Le CABS-AMV négocie des accords-cadres avec l'Autorité Mondiale du Vivant pour
 - [[gouvernance_institutions]]
 - [[organisation_territoires]]
 
-## Relations
-**Alliés** : [[autorite_mondiale_du_vivant_amv_policy_reform]], [[fonds_mondial_de_stabilisation_biotechnologique_policy_reform]], [[federation_des_mutuelles_biotech_policy_reform]], [[coalition_des_semences_libres_policy_reform]], [[reseau_des_agences_sanitaires_regionales_policy_reform]], [[institut_de_therapeutique_integree_de_nairobi_policy_reform]], [[collectifs_de_biohackers_agro_communautaires_policy_reform]], [[collectifs_de_gouvernance_communautaire_decentralisee_policy_reform]], [[amara_diallo_nkosi_policy_reform]]
-**Opposants** : [[front_de_souverainete_biologique_eurasiatique_policy_reform]], [[nexus_biosyn_policy_reform]], [[consortiums_agro_industriels_du_bassin_fluvial_policy_reform]], [[courant_autoritaire_recuperateur_du_vocabulaire_communautaire_policy_reform]], [[faction_regulatrice_dure_au_sein_du_cei_policy_reform]]
 
 ## Description journalistique
 Installé dans un immeuble sobre de Nairobi aux côtés de l'Institut de Thérapeutique Intégrée, le CABS-AMV reçoit chaque trimestre des délégations de coopératives maraîchères du Sahel, de cliniques mobiles du Kivu et de laboratoires communautaires du delta du Niger. Son directeur, un juriste-biologiste formé à Dakar et à Genève, aime répéter que 'chaque brevet récupéré est une frontière repoussée'. Mais ses propres équipes reconnaissent, en off, que les délais de certification imposés par l'AMV peuvent dépasser cinq ans — pendant lesquels les communautés attendent. Le CABS-AMV est devenu assez puissant pour siéger dans les commissions de Genève, assez légitime pour mobiliser des millions en financements institutionnels, et assez ambigu pour que personne ne sache plus vraiment s'il représente les communautés ou les institutions qui le financent.
 
 ## Tensions narratives
 Le CABS-AMV est au bord d'une crise de légitimité interne : une faction de représentants communautaires menace de quitter le conseil consultatif, accusant l'organisation d'avoir sacrifié l'accès aux semences patrimoniales pour obtenir le renouvellement de son accréditation auprès de l'AMV. Parallèlement, Nexus BioSyn tente d'infiltrer ses comités d'experts via des candidatures 'neutres' pour bloquer les transferts de licences concurrents. Enfin, la question de savoir si le CABS-AMV doit rejoindre la Coalition des Semences Libres dans sa résistance frontale à certains mécanismes de l'AMV, ou maintenir sa posture de négociateur interne, divise profondément ses dirigeants — et pourrait redéfinir ce qu'il est fondamentalement.
+
+## Relations
+**Alliés :**
+- [[amara_diallo_nkosi_policy_reform]]
+- [[autorite_mondiale_du_vivant_amv_policy_reform]]
+- [[coalition_des_semences_libres_policy_reform]]
+- [[collectifs_de_gouvernance_communautaire_decentralisee_policy_reform]]
+- [[consortium_des_villes_etats_durables_policy_reform]]
+- [[federation_des_mutuelles_biotech_policy_reform]]
+- [[fonds_mondial_de_stabilisation_biotechnologique_policy_reform]]
+- [[institut_de_therapeutique_integree_de_nairobi_policy_reform]]
+- [[reseau_des_agences_sanitaires_regionales_policy_reform]]
+- [[reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform]]
+**Opposants :**
+- [[collectifs_de_biohackers_agro_communautaires_policy_reform]]
+- [[consortiums_agro_industriels_du_bassin_fluvial_policy_reform]]
+- [[courant_autoritaire_recuperateur_du_vocabulaire_communautaire_policy_reform]]
+- [[faction_regulatrice_dure_au_sein_du_cei_policy_reform]]
+- [[factions_internes_pro_desaugmentation_totale_policy_reform]]
+- [[front_de_souverainete_biologique_eurasiatique_policy_reform]]
+- [[nexus_biosyn_policy_reform]]

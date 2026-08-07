@@ -4,6 +4,7 @@ type: instance
 slug: nexus_biosyn_breakdown
 entite: nexus_biosyn
 scenario: breakdown
+statut: officialise_enrichi
 localisation:
   zone: null
   lieu: null
@@ -36,17 +37,16 @@ zone_systemique:
     - infrastructure
 
 alliances:
-    - seigneurs_de_guerre_agro_territoriaux_breakdown
-    - reseaux_noirs_pharmaceutiques_breakdown
-    - milices_de_controle_territorial_breakdown
-    - enclaves_technologiques_survivantes_breakdown
-
+- enclaves_technologiques_survivantes_breakdown
+- milices_de_controle_territorial_breakdown
+- reseaux_noirs_pharmaceutiques_breakdown
+- seigneurs_de_guerre_agro_territoriaux_breakdown
 oppositions:
-    - internationale_des_semenciers_agro_pirates_fortress_world
-    - collectifs_de_sante_communautaire_autogeree_breakdown
-    - etats_fragmentes_nationalisant_les_stocks_breakdown
-    - pirates_biologiques_open_source_breakdown
-
+- collectifs_de_sante_communautaire_autogeree_breakdown
+- etats_fragmentes_nationalisant_les_stocks_breakdown
+- internationale_des_semenciers_agro_pirates_fortress_world
+- pirates_biologiques_open_source_breakdown
+- reseaux_de_soigneurs_traditionnels_breakdown
 type_relation_dominante: dépendance
 
 annee_debut: 2026
@@ -90,12 +90,22 @@ Distribution fragmentée et opportuniste de semences de quatrième génération 
 - [[systeme_economique_redistribution]]
 - [[organisation_territoires]]
 
-## Relations
-**Alliés** : [[seigneurs_de_guerre_agro_territoriaux_breakdown]], [[reseaux_noirs_pharmaceutiques_breakdown]], [[milices_de_controle_territorial_breakdown]], [[enclaves_technologiques_survivantes_breakdown]]
-**Opposants** : [[internationale_des_semenciers_agro_pirates_fortress_world]], [[collectifs_de_sante_communautaire_autogeree_breakdown]], [[etats_fragmentes_nationalisant_les_stocks_breakdown]], [[pirates_biologiques_open_source_breakdown]]
 
 ## Description journalistique
 Il n'existe plus de siège social de Nexus BioSyn. Il n'existe plus de PDG, de conseil d'administration, de rapport annuel. Ce qui reste, c'est le brevet — des millions de séquences génétiques verrouillées dans des serveurs bunkerisés dont personne ne connaît plus tous les accès. Dans les marchés de Karachi, de Lagos ou de Medellin, on parle encore de 'biosyn' comme d'un nom commun : une ampoule de biosyn, un sac de graines biosyn. La marque a survécu à l'entreprise. Des opérateurs locaux brandissent des licences photocopiées, des codes d'activation expirés, pour justifier leur monopole sur la nourriture et la guérison. C'est peut-être la forme la plus pure du capitalisme tardif : l'institution meurt, mais la propriété intellectuelle, elle, demeure.
 
 ## Tensions narratives
 Qui détient légitimement les brevets des semences dans un monde sans tribunal international capable de les faire respecter — et que se passe-t-il quand deux factions BioSyn rivales revendiquent le même territoire agricole ? Des communautés entières vivent sous la menace d'une 'coupure de licence' pour leurs cultures génétiquement verrouillées, sans avoir les moyens de payer ni les ressources pour revenir à des semences libres. À l'inverse, des pirates biologiques tentent de décoder et libérer les séquences propriétaires, transformant la biologie en champ de bataille idéologique entre le droit à se nourrir et la logique du brevet. La question hante les zones de conflit : si Nexus BioSyn n'existe plus vraiment, la dette biologique qu'on lui doit existe-t-elle encore ?
+
+## Relations
+**Alliés :**
+- [[enclaves_technologiques_survivantes_breakdown]]
+- [[milices_de_controle_territorial_breakdown]]
+- [[reseaux_noirs_pharmaceutiques_breakdown]]
+- [[seigneurs_de_guerre_agro_territoriaux_breakdown]]
+**Opposants :**
+- [[collectifs_de_sante_communautaire_autogeree_breakdown]]
+- [[etats_fragmentes_nationalisant_les_stocks_breakdown]]
+- [[internationale_des_semenciers_agro_pirates_fortress_world]]
+- [[pirates_biologiques_open_source_breakdown]]
+- [[reseaux_de_soigneurs_traditionnels_breakdown]]

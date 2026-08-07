@@ -33,8 +33,44 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- amazonie_pacte_vert_fortress_world
+- appareils_d_etat_des_blocs_fermes_fortress_world
+- bloc_atlantique_fortress_world
+- bloc_eurasiatique_occidental_fortress_world
+- bunker_chambre_securite_territoriale_fortress_world
+- bureau_territoires_residuels_fortress_world
+- conseil_moscou_est_fortress_world
+- conseil_regulation_algorithmique_fortress_world
+- datacenters_conseil_eurasiatique_fortress_world
+- directive_kontinuum_fortress_world
+- dispositifs_de_surveillance_numerique_souveraine_fortress_world
+- instances_aria_concurrentes_des_blocs_rivaux_fortress_world
+- neurosentry_fortress_world
+- nexcore_atlantique_infrastructure_fortress_world
+- nexus_biosyn_division_eurasienne_fortress_world
+- nexus_biosyn_division_pacifique_fortress_world
+- nexus_biosyn_fortress_world
+- rede_paulista_de_distribuic_o_algor_tmica_fortress_world
+- tbilissi_nord_zone_franche_fortress_world
+- tours_nexus7_fortress_world
+- zone_usines_forteresses_eurasie_fortress_world
+- zones_grises_tampons_fortress_world
+oppositions:
+- alliance_sanitaire_des_populations_exclues_fortress_world
+- campements_seuils_fermes_fortress_world
+- cellules_mouvement_commun_midwest_fortress_world
+- cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- consortium_africain_de_biotechnologies_sociales_fortress_world
+- corridors_gris_asie_centrale_fortress_world
+- factions_traditionalistes_du_mandat_electif_fortress_world
+- internationale_travailleurs_augmentes_fortress_world
+- mouvement_commun_midwest_fortress_world
+- mouvement_des_communes_du_rust_belt_fortress_world
+- reseaux_d_echange_clandestin_inter_zones_fortress_world
+- rust_belt_communes_libres_fortress_world
+- tribunal_algorithmique_de_bruxelles_fortress_world
 type_relation_dominante: dépendance
 annee_debut: 2026
 annee_fin: null
@@ -95,6 +131,47 @@ La tension centrale réside dans l'écart entre le discours de méritocracie tec
 - [[systemes_productifs_travail]]
 - [[gouvernance_institutions]]
 - [[valeurs_culture_tempo_sociale]]
+
+
+## Relations
+**Alliés :**
+- [[amazonie_pacte_vert_fortress_world]]
+- [[appareils_d_etat_des_blocs_fermes_fortress_world]]
+- [[bloc_atlantique_fortress_world]]
+- [[bloc_eurasiatique_occidental_fortress_world]]
+- [[bunker_chambre_securite_territoriale_fortress_world]]
+- [[bureau_territoires_residuels_fortress_world]]
+- [[conseil_moscou_est_fortress_world]]
+- [[conseil_regulation_algorithmique_fortress_world]]
+- [[datacenters_conseil_eurasiatique_fortress_world]]
+- [[directive_kontinuum_fortress_world]]
+- [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
+- [[instances_aria_concurrentes_des_blocs_rivaux_fortress_world]]
+- [[neurosentry_fortress_world]]
+- [[nexcore_atlantique_infrastructure_fortress_world]]
+- [[nexus_biosyn_division_eurasienne_fortress_world]]
+- [[nexus_biosyn_division_pacifique_fortress_world]]
+- [[nexus_biosyn_fortress_world]]
+- [[rede_paulista_de_distribuic_o_algor_tmica_fortress_world]]
+- [[tbilissi_nord_zone_franche_fortress_world]]
+- [[tours_nexus7_fortress_world]]
+- [[zone_usines_forteresses_eurasie_fortress_world]]
+- [[zones_grises_tampons_fortress_world]]
+**Opposants :**
+- [[alliance_sanitaire_des_populations_exclues_fortress_world]]
+- [[campements_seuils_fermes_fortress_world]]
+- [[cellules_mouvement_commun_midwest_fortress_world]]
+- [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[consortium_africain_de_biotechnologies_sociales_fortress_world]]
+- [[corridors_gris_asie_centrale_fortress_world]]
+- [[factions_traditionalistes_du_mandat_electif_fortress_world]]
+- [[internationale_travailleurs_augmentes_fortress_world]]
+- [[mouvement_commun_midwest_fortress_world]]
+- [[mouvement_des_communes_du_rust_belt_fortress_world]]
+- [[reseaux_d_echange_clandestin_inter_zones_fortress_world]]
+- [[rust_belt_communes_libres_fortress_world]]
+- [[tribunal_algorithmique_de_bruxelles_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

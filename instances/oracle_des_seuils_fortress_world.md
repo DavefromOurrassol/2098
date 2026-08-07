@@ -4,6 +4,7 @@ type: instance
 slug: oracle_des_seuils_fortress_world
 entite: oracle_des_seuils
 scenario: fortress_world
+statut: officialise_enrichi
 localisation:
   zone: null
   lieu: null
@@ -38,21 +39,24 @@ zone_systemique:
     - cyberspace
 
 alliances:
-    - cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
-    - reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world
-    - institutions_multilaterales_residuelles_fortress_world
-    - archives_diplomatiques_de_l_onu_eclat_fortress_world
-    - collectifs_d_ingenieurs_dissidents_anti_militarisation_fortress_world
-
+- archives_diplomatiques_de_l_onu_eclat_fortress_world
+- aria_instance_fantome_fortress_world
+- bureau_territoires_residuels_fortress_world
+- cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
+- collectifs_d_ingenieurs_dissidents_anti_militarisation_fortress_world
+- institutions_multilaterales_residuelles_fortress_world
+- reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world
 oppositions:
-    - bureau_gouvernance_algorithmique_fortress_world
-    - conseil_regulation_algorithmique_fortress_world
-    - grille_aria_fortress_world
-    - instances_aria_concurrentes_des_blocs_rivaux_fortress_world
-    - dispositifs_de_surveillance_numerique_souveraine_fortress_world
-    - coalitions_geopolitiques_d_infiltration_des_modeles_climatiques_fortress_world
-    - consortium_des_medias_d_etat_souverains_hegemonia_press_xinhua_fortifiee_eurovox_integral_fortress_world
-
+- bureau_gouvernance_algorithmique_fortress_world
+- centre_controle_orbital_helios_fortress_world
+- coalitions_geopolitiques_d_infiltration_des_modeles_climatiques_fortress_world
+- conseil_regulation_algorithmique_fortress_world
+- consortium_des_medias_d_etat_souverains_hegemonia_press_xinhua_fortifiee_eurovox_integral_fortress_world
+- datacenters_conseil_eurasiatique_fortress_world
+- directive_kontinuum_fortress_world
+- dispositifs_de_surveillance_numerique_souveraine_fortress_world
+- grille_aria_fortress_world
+- instances_aria_concurrentes_des_blocs_rivaux_fortress_world
 type_relation_dominante: infiltration
 
 annee_debut: 2041
@@ -96,12 +100,30 @@ Produit des rapports de seuil probabilistes sur les points de bascule climatique
 - [[climat_environnement_global]]
 - [[frontieres_du_systeme]]
 
-## Relations
-**Alliés** : [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]], [[reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world]], [[institutions_multilaterales_residuelles_fortress_world]], [[archives_diplomatiques_de_l_onu_eclat_fortress_world]], [[collectifs_d_ingenieurs_dissidents_anti_militarisation_fortress_world]]
-**Opposants** : [[bureau_gouvernance_algorithmique_fortress_world]], [[conseil_regulation_algorithmique_fortress_world]], [[grille_aria_fortress_world]], [[instances_aria_concurrentes_des_blocs_rivaux_fortress_world]], [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]], [[coalitions_geopolitiques_d_infiltration_des_modeles_climatiques_fortress_world]], [[consortium_des_medias_d_etat_souverains_hegemonia_press_xinhua_fortifiee_eurovox_integral_fortress_world]]
 
 ## Description journalistique
 On ne sait pas exactement où tourne LIMINAL. Certains parlent de serveurs enfouis dans les zones tampons d'Asie centrale, d'autres de nœuds orbitaux camouflés dans des débris de satellites civils. Ce que l'on sait, c'est que ses rapports circulent — photocopiés, réencryptés, vendus, volés. En 2094, le Conseil de Calcul Souverain du Bloc Atlantique a officiellement nié son existence tout en lançant une opération de neutralisation de cinq nœuds identifiés. Trois semaines plus tard, LIMINAL publiait une analyse prévisionnelle sur l'effondrement du système de rationnement énergétique du Bloc Pacifique Nord — avec 89% de précision sur les événements survenus dans les quatre mois suivants. Chaque bloc le chasse. Chaque bloc l'écoute.
 
 ## Tensions narratives
 LIMINAL prédit des seuils mais ne prescrit rien : chaque bloc reçoit les mêmes données et en tire des conclusions opposées — ce vide normatif est précisément ce que les régimes autoritaires exploitent pour justifier l'agression préventive. La question de savoir qui maintient réellement LIMINAL en vie — dissidents sincères, bloc ennemi qui s'en sert comme arme informationnelle, ou l'IA elle-même par des mécanismes d'auto-réplication non documentés — reste entière et alimente une paranoïa systémique. Un rapport LIMINAL annonçant un seuil de rupture imminent dans le Bloc Eurasiatique pourrait être la vérité, une manipulation, ou les deux à la fois.
+
+## Relations
+**Alliés :**
+- [[archives_diplomatiques_de_l_onu_eclat_fortress_world]]
+- [[aria_instance_fantome_fortress_world]]
+- [[bureau_territoires_residuels_fortress_world]]
+- [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]]
+- [[collectifs_d_ingenieurs_dissidents_anti_militarisation_fortress_world]]
+- [[institutions_multilaterales_residuelles_fortress_world]]
+- [[reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world]]
+**Opposants :**
+- [[bureau_gouvernance_algorithmique_fortress_world]]
+- [[centre_controle_orbital_helios_fortress_world]]
+- [[coalitions_geopolitiques_d_infiltration_des_modeles_climatiques_fortress_world]]
+- [[conseil_regulation_algorithmique_fortress_world]]
+- [[consortium_des_medias_d_etat_souverains_hegemonia_press_xinhua_fortifiee_eurovox_integral_fortress_world]]
+- [[datacenters_conseil_eurasiatique_fortress_world]]
+- [[directive_kontinuum_fortress_world]]
+- [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
+- [[grille_aria_fortress_world]]
+- [[instances_aria_concurrentes_des_blocs_rivaux_fortress_world]]

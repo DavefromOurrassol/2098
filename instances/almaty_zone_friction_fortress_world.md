@@ -4,6 +4,7 @@ type: instance
 slug: almaty_zone_friction_fortress_world
 entite: almaty_zone_friction
 scenario: fortress_world
+statut: officialise_enrichi
 localisation:
   zone: almaty_zone_friction
   lieu: Zone de Friction d'Almaty — Périmètre des Seuils Kazakhs
@@ -38,20 +39,19 @@ zone_systemique:
     - infrastructure
 
 alliances:
-    - complexe_orentchev_almaty_fortress_world
-    - commandements_logistiques_peripheriques_du_bloc_eurasien_central_fortress_world
-    - reseaux_prives_de_securite_aux_frontieres_fortress_world
-    - administrations_de_controle_frontalier_des_blocs_fortress_world
-    - operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world
-
+- administrations_de_controle_frontalier_des_blocs_fortress_world
+- complexe_orentchev_almaty_fortress_world
+- operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world
+- reseaux_prives_de_securite_aux_frontieres_fortress_world
 oppositions:
-    - campements_seuils_fermes_fortress_world
-    - communautes_deplacees_hors_quota_migratoire_fortress_world
-    - factions_djihadistes_logistiques_d_asie_centrale_fortress_world
-    - coalitions_des_deplaces_et_apatrides_fortress_world
-    - collectifs_du_seuil_fortress_world
-    - cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
-
+- campements_seuils_fermes_fortress_world
+- cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- collectifs_du_seuil_fortress_world
+- commandements_logistiques_peripheriques_du_bloc_eurasien_central_fortress_world
+- communautes_deplacees_hors_quota_migratoire_fortress_world
+- corridors_gris_asie_centrale_fortress_world
+- factions_djihadistes_logistiques_d_asie_centrale_fortress_world
 type_relation_dominante: conflit
 
 annee_debut: 2041
@@ -95,12 +95,25 @@ Filtrage et tri biométrique des corps en transit aux checkpoints périmétraux,
 - [[geopolitique_conflits]]
 - [[gouvernance_institutions]]
 
-## Relations
-**Alliés** : [[complexe_orentchev_almaty_fortress_world]], [[commandements_logistiques_peripheriques_du_bloc_eurasien_central_fortress_world]], [[reseaux_prives_de_securite_aux_frontieres_fortress_world]], [[administrations_de_controle_frontalier_des_blocs_fortress_world]], [[operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world]]
-**Opposants** : [[campements_seuils_fermes_fortress_world]], [[communautes_deplacees_hors_quota_migratoire_fortress_world]], [[factions_djihadistes_logistiques_d_asie_centrale_fortress_world]], [[coalitions_des_deplaces_et_apatrides_fortress_world]], [[collectifs_du_seuil_fortress_world]], [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]]
 
 ## Description journalistique
 À trois kilomètres des tours réfrigérées du Complexe Orentchev, la Zone de Friction d'Almaty s'étend sur une bande de béton écaillé et de préfabriqués oxydés où se croisent chaque jour des milliers de corps que la forteresse veut sans jamais vraiment les voir. Les checkpoints biométriques — seize portiques actifs en 2098 — traitent et rejettent en moins de quatre secondes les demandes d'accès des populations périphériques. Entre les files d'attente interminables et les baraquements de transit, une économie parallèle dense prospère : médicaments non homologués, données d'identité revendues, accès négociés à l'eau climatisée de l'enclave. Les incidents sécuritaires — tirs de semonce, dispersions chimiques, arrestations nocturnes — sont devenus si routiniers que les habitants de la zone ont développé leurs propres calendriers d'évitement. Ni dedans ni dehors, la Zone de Friction est l'aveu architectural que la forteresse a besoin de ce qu'elle prétend rejeter.
 
 ## Tensions narratives
 La Zone de Friction est structurellement indispensable à l'enclave d'Almaty, mais son existence alimente les réseaux de résistance qu'elle est censée contenir : chaque checkpoint produit des données biométriques revendues clandestinement, chaque rejet crée un corps supplémentaire versé dans les collectifs dissidents périphériques. La question centrale est celle du seuil de rupture : à quel niveau de pression la zone bascule-t-elle d'espace-soupape en foyer d'insurrection incontrôlable ? Par ailleurs, les négociations clandestines entre opérateurs de l'enclave et contrebandiers de la zone créent des interdépendances que le régime ne peut officiellement reconnaître sans décrédibiliser l'architecture même de la forteresse. Enfin, le sort de Vasil Orentchev — dont les intérêts économiques traversent discrètement la ligne de friction — constitue un fil narratif explosif si ses compromissions venaient à être documentées.
+
+## Relations
+**Alliés :**
+- [[administrations_de_controle_frontalier_des_blocs_fortress_world]]
+- [[complexe_orentchev_almaty_fortress_world]]
+- [[operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world]]
+- [[reseaux_prives_de_securite_aux_frontieres_fortress_world]]
+**Opposants :**
+- [[campements_seuils_fermes_fortress_world]]
+- [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[collectifs_du_seuil_fortress_world]]
+- [[commandements_logistiques_peripheriques_du_bloc_eurasien_central_fortress_world]]
+- [[communautes_deplacees_hors_quota_migratoire_fortress_world]]
+- [[corridors_gris_asie_centrale_fortress_world]]
+- [[factions_djihadistes_logistiques_d_asie_centrale_fortress_world]]

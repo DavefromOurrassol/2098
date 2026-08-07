@@ -32,8 +32,31 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability
+- collectifs_de_desobeissance_algorithmique_new_sustainability
+- consortium_africain_de_biotechnologies_sociales_new_sustainability
+- hub_nairobi_kigali_new_sustainability
+- leena_vainala_new_sustainability
+- ligue_des_cites_du_sahel_numerique_new_sustainability
+- observatoire_climatique_narratif_de_nairobi_new_sustainability
+- reseau_des_bio_communs_regionaux_new_sustainability
+- reseau_des_communs_alimentaires_hors_grille_new_sustainability
+- reseau_des_communs_productifs_regeneratifs_new_sustainability
+- reseau_des_ingenieurs_climatiques_du_sud_global_new_sustainability
+- reseaux_de_gouvernance_territoriale_distribues_new_sustainability
+- reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability
+oppositions:
+- alliance_numerique_eurasie_pacifique_new_sustainability
+- bloc_eurasien_souverainiste_new_sustainability
+- bureau_gouvernance_algorithmique_new_sustainability
+- enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability
+- etats_souverainistes_anti_reseau_new_sustainability
+- factions_technocratiques_du_conseil_de_regulation_informationnelle_global_new_sustainability
+- internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
+- nexcore_new_sustainability
+- prisme_global_new_sustainability
+- tribunal_gouvernance_algorithmique_bruxelles_new_sustainability
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -98,6 +121,34 @@ Le Réseau est tiraillé entre son idéal d'horizontalité radicale et la néces
 - [[technologie_information]]
 - [[gouvernance_institutions]]
 - [[systeme_economique_redistribution]]
+
+
+## Relations
+**Alliés :**
+- [[collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability]]
+- [[collectifs_de_desobeissance_algorithmique_new_sustainability]]
+- [[consortium_africain_de_biotechnologies_sociales_new_sustainability]]
+- [[hub_nairobi_kigali_new_sustainability]]
+- [[leena_vainala_new_sustainability]]
+- [[ligue_des_cites_du_sahel_numerique_new_sustainability]]
+- [[observatoire_climatique_narratif_de_nairobi_new_sustainability]]
+- [[reseau_des_bio_communs_regionaux_new_sustainability]]
+- [[reseau_des_communs_alimentaires_hors_grille_new_sustainability]]
+- [[reseau_des_communs_productifs_regeneratifs_new_sustainability]]
+- [[reseau_des_ingenieurs_climatiques_du_sud_global_new_sustainability]]
+- [[reseaux_de_gouvernance_territoriale_distribues_new_sustainability]]
+- [[reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability]]
+**Opposants :**
+- [[alliance_numerique_eurasie_pacifique_new_sustainability]]
+- [[bloc_eurasien_souverainiste_new_sustainability]]
+- [[bureau_gouvernance_algorithmique_new_sustainability]]
+- [[enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability]]
+- [[etats_souverainistes_anti_reseau_new_sustainability]]
+- [[factions_technocratiques_du_conseil_de_regulation_informationnelle_global_new_sustainability]]
+- [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]]
+- [[nexcore_new_sustainability]]
+- [[prisme_global_new_sustainability]]
+- [[tribunal_gouvernance_algorithmique_bruxelles_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

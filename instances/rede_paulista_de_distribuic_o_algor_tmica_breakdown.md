@@ -4,6 +4,7 @@ type: instance
 slug: rede_paulista_de_distribuic_o_algor_tmica_breakdown
 entite: rede_paulista_de_distribuic_o_algor_tmica
 scenario: breakdown
+statut: officialise_enrichi
 localisation:
   zone: sao_paulo_rpda
   lieu: Grand São Paulo

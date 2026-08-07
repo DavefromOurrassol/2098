@@ -38,8 +38,22 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- alliance_blocs_souverains_breakdown
+- consortium_energetique_oural_caspien_breakdown
+- consortiums_energetiques_samoiedes_du_yamal_breakdown
+- enclaves_industrielles_du_corridor_oural_caspien_breakdown
+- federation_russe_residuelle_district_de_mourmansk_breakdown
+- milices_contractuelles_des_anciens_etats_membres_breakdown
+- seigneuries_logistiques_armees_breakdown
+oppositions:
+- blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
+- collectifs_de_reparation_energetique_breakdown
+- consortium_africain_de_biotechnologies_sociales_breakdown
+- consortium_amazonia_viva_breakdown
+- etats_fragments_en_guerre_pour_les_stations_atmospheriques_breakdown
+- front_de_resistance_aux_peages_sur_les_ressources_breakdown
+- saboteurs_des_corridors_de_transit_breakdown
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -102,6 +116,25 @@ La contradiction centrale des Factions ABS réside dans leur refus obstiné de t
 - [[energie_ressources_critiques]]
 - [[gouvernance_institutions]]
 - [[organisation_territoires]]
+
+
+## Relations
+**Alliés :**
+- [[alliance_blocs_souverains_breakdown]]
+- [[consortium_energetique_oural_caspien_breakdown]]
+- [[consortiums_energetiques_samoiedes_du_yamal_breakdown]]
+- [[enclaves_industrielles_du_corridor_oural_caspien_breakdown]]
+- [[federation_russe_residuelle_district_de_mourmansk_breakdown]]
+- [[milices_contractuelles_des_anciens_etats_membres_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]
+**Opposants :**
+- [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
+- [[collectifs_de_reparation_energetique_breakdown]]
+- [[consortium_africain_de_biotechnologies_sociales_breakdown]]
+- [[consortium_amazonia_viva_breakdown]]
+- [[etats_fragments_en_guerre_pour_les_stations_atmospheriques_breakdown]]
+- [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
+- [[saboteurs_des_corridors_de_transit_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

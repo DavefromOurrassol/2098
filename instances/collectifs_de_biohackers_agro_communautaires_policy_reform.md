@@ -31,8 +31,23 @@ zone_geographique:
 - régionale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- coalition_des_semences_libres_policy_reform
+- collectifs_de_defense_hydrique_saheliens_policy_reform
+- collectifs_de_gouvernance_communautaire_decentralisee_policy_reform
+- collectifs_de_hackers_biospheriques_policy_reform
+- front_des_autonomies_territoriales_radicales_policy_reform
+- internationale_decroissante_anti_planification_policy_reform
+- les_veilleurs_du_fleuve_policy_reform
+- mouvement_pour_la_justice_ecologique_communautaire_policy_reform
+oppositions:
+- agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
+- autorite_mondiale_du_vivant_amv_policy_reform
+- conseil_regulation_ressources_policy_reform
+- consortium_africain_de_biotechnologies_sociales_policy_reform
+- consortium_agro_pacifique_policy_reform
+- consortiums_agro_industriels_du_bassin_fluvial_policy_reform
+- nexus_biosyn_policy_reform
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -93,6 +108,28 @@ Le paradoxe central qui les déchire est d'ordre existentiel : plus ils réussis
 - [[sante_biotechnologies]]
 - [[systemes_productifs_travail]]
 - [[organisation_territoires]]
+
+
+
+## Relations
+**Alliés :**
+- [[coalition_des_semences_libres_policy_reform]]
+- [[collectifs_de_defense_hydrique_saheliens_policy_reform]]
+- [[collectifs_de_gouvernance_communautaire_decentralisee_policy_reform]]
+- [[collectifs_de_hackers_biospheriques_policy_reform]]
+- [[front_des_autonomies_territoriales_radicales_policy_reform]]
+- [[internationale_decroissante_anti_planification_policy_reform]]
+- [[les_veilleurs_du_fleuve_policy_reform]]
+- [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]]
+**Opposants :**
+- [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]
+- [[autorite_mondiale_du_vivant_amv_policy_reform]]
+- [[conseil_regulation_ressources_policy_reform]]
+- [[consortium_africain_de_biotechnologies_sociales_policy_reform]]
+- [[consortium_agro_pacifique_policy_reform]]
+- [[consortiums_agro_industriels_du_bassin_fluvial_policy_reform]]
+- [[nexus_biosyn_policy_reform]]
+- [[test_durcissement_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

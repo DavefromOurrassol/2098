@@ -35,8 +35,23 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- autorite_mondiale_du_vivant_amv_policy_reform
+- coalition_des_semences_libres_policy_reform
+- collectifs_citoyens_de_deliberation_augmentee_policy_reform
+- conseil_intergouvernemental_de_regulation_technologique_policy_reform
+- consortium_africain_de_biotechnologies_sociales_policy_reform
+- fonds_mondial_de_stabilisation_biotechnologique_policy_reform
+- institut_de_therapeutique_integree_de_nairobi_policy_reform
+- internationale_travailleurs_augmentes_policy_reform
+- reseau_des_agences_sanitaires_regionales_policy_reform
+oppositions:
+- coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform
+- consortiums_prives_de_gouvernance_algorithmique_policy_reform
+- factions_internes_pro_desaugmentation_totale_policy_reform
+- factions_technocratiques_de_la_marchandisation_hydrique_policy_reform
+- lobbies_des_energies_fossiles_residuelles_policy_reform
+- nexus_biosyn_policy_reform
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -103,6 +118,26 @@ La Fédération se retrouve écartelée entre sa base mutualiste historiquement 
 - [[sante_biotechnologies]]
 - [[systeme_economique_redistribution]]
 - [[gouvernance_institutions]]
+
+
+## Relations
+**Alliés :**
+- [[autorite_mondiale_du_vivant_amv_policy_reform]]
+- [[coalition_des_semences_libres_policy_reform]]
+- [[collectifs_citoyens_de_deliberation_augmentee_policy_reform]]
+- [[conseil_intergouvernemental_de_regulation_technologique_policy_reform]]
+- [[consortium_africain_de_biotechnologies_sociales_policy_reform]]
+- [[fonds_mondial_de_stabilisation_biotechnologique_policy_reform]]
+- [[institut_de_therapeutique_integree_de_nairobi_policy_reform]]
+- [[internationale_travailleurs_augmentes_policy_reform]]
+- [[reseau_des_agences_sanitaires_regionales_policy_reform]]
+**Opposants :**
+- [[coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform]]
+- [[consortiums_prives_de_gouvernance_algorithmique_policy_reform]]
+- [[factions_internes_pro_desaugmentation_totale_policy_reform]]
+- [[factions_technocratiques_de_la_marchandisation_hydrique_policy_reform]]
+- [[lobbies_des_energies_fossiles_residuelles_policy_reform]]
+- [[nexus_biosyn_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

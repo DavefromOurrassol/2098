@@ -32,8 +32,29 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- amara_diallo_nkosi_new_sustainability
+- coalition_anti_algorithme_des_autonomies_locales_new_sustainability
+- collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability
+- communautes_locales_exclues_des_corridors_new_sustainability
+- consortium_africain_de_biotechnologies_sociales_new_sustainability
+- consortium_amazonia_viva_new_sustainability
+- great_lakes_autonomous_compact_new_sustainability
+- hub_nairobi_kigali_new_sustainability
+- les_veilleurs_du_fleuve_new_sustainability
+- mouvement_communautaire_des_micro_grids_energetiques_new_sustainability
+- mouvement_pour_l_autodetermination_territoriale_new_sustainability
+- reseau_des_bio_communs_regionaux_new_sustainability
+- reseau_des_communs_productifs_regeneratifs_new_sustainability
+- reseaux_de_medecine_regenerative_universelle_new_sustainability
+- trame_bioclimatique_new_sustainability
+oppositions:
+- bureau_gouvernance_algorithmique_new_sustainability
+- coalition_des_industries_extractives_residuelles_new_sustainability
+- etats_souverainistes_anti_reseau_new_sustainability
+- factions_souverainistes_des_blocs_peripheriques_new_sustainability
+- lobbies_agro_industriels_du_bassin_du_congo_new_sustainability
+- reseau_des_villes_regeneratives_new_sustainability
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -102,6 +123,32 @@ Les Collectifs sont pris en étau entre deux légitimités concurrentes : celle 
 - [[organisation_territoires]]
 - [[climat_environnement_global]]
 - [[gouvernance_institutions]]
+
+
+## Relations
+**Alliés :**
+- [[amara_diallo_nkosi_new_sustainability]]
+- [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]]
+- [[collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability]]
+- [[communautes_locales_exclues_des_corridors_new_sustainability]]
+- [[consortium_africain_de_biotechnologies_sociales_new_sustainability]]
+- [[consortium_amazonia_viva_new_sustainability]]
+- [[great_lakes_autonomous_compact_new_sustainability]]
+- [[hub_nairobi_kigali_new_sustainability]]
+- [[les_veilleurs_du_fleuve_new_sustainability]]
+- [[mouvement_communautaire_des_micro_grids_energetiques_new_sustainability]]
+- [[mouvement_pour_l_autodetermination_territoriale_new_sustainability]]
+- [[reseau_des_bio_communs_regionaux_new_sustainability]]
+- [[reseau_des_communs_productifs_regeneratifs_new_sustainability]]
+- [[reseaux_de_medecine_regenerative_universelle_new_sustainability]]
+- [[trame_bioclimatique_new_sustainability]]
+**Opposants :**
+- [[bureau_gouvernance_algorithmique_new_sustainability]]
+- [[coalition_des_industries_extractives_residuelles_new_sustainability]]
+- [[etats_souverainistes_anti_reseau_new_sustainability]]
+- [[factions_souverainistes_des_blocs_peripheriques_new_sustainability]]
+- [[lobbies_agro_industriels_du_bassin_du_congo_new_sustainability]]
+- [[reseau_des_villes_regeneratives_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

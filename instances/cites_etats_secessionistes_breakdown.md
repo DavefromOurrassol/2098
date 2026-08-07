@@ -36,9 +36,13 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
+alliances:
+- grandes_lacs_compact_eau_breakdown
+- hanse_baltique_breakdown
 oppositions:
+- alliance_blocs_souverains_breakdown
 - geneve_bunker_institutions_breakdown
+- tribunal_algorithmique_de_bruxelles_breakdown
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -95,9 +99,15 @@ La tension centrale est celle de la survie par l'isolement contre la nécessité
 - [[organisation_territoires]]
 - [[geopolitique_conflits]]
 
+
 ## Relations
+**Alliés :**
+- [[grandes_lacs_compact_eau_breakdown]]
+- [[hanse_baltique_breakdown]]
 **Opposants :**
+- [[alliance_blocs_souverains_breakdown]]
 - [[geneve_bunker_institutions_breakdown]]
+- [[tribunal_algorithmique_de_bruxelles_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

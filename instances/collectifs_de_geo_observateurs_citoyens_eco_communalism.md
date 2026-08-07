@@ -31,8 +31,33 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- amazonie_pacte_viva_eco_communalism
+- assemblees_bioterritoriales_regionales_eco_communalism
+- assemblees_cooperatives_regionales_eco_communalism
+- brigades_de_restauration_ecologique_eco_communalism
+- collectifs_de_cartographie_ecologique_participative_eco_communalism
+- collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism
+- confederation_bassins_vivants_eco_communalism
+- consortium_amazonia_viva_eco_communalism
+- guildes_de_mediateurs_ecologiques_eco_communalism
+- kalaallit_nunaat_bioterritoire_eco_communalism
+- mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism
+- oracle_des_seuils_eco_communalism
+- reseau_terrafond_bassins_eco_communalism
+- reseaux_de_bibliotheques_archives_communautaires_eco_communalism
+- reseaux_de_radio_communautaire_basse_consommation_eco_communalism
+- trame_bioclimatique_eco_communalism
+oppositions:
+- agro_conglomerats_des_enclaves_technologiques_eco_communalism
+- consortiums_industriels_de_l_eau_eco_communalism
+- courant_isolationniste_anti_circulation_de_l_information_eco_communalism
+- enclaves_extractivistes_et_etats_residuels_eco_communalism
+- enclaves_extractivistes_residuelles_des_corridors_eco_communalism
+- factions_autoritaires_de_controle_du_savoir_eco_communalism
+- factions_extractivistes_des_aquiferes_communs_eco_communalism
+- factions_technophiles_de_la_geo_ingenierie_centralisee_eco_communalism
+- reseaux_de_notables_communautaires_capturistes_eco_communalism
 type_relation_dominante: symbiose
 annee_debut: 2026
 annee_fin: null
@@ -95,6 +120,36 @@ La tension majeure réside dans la fragmentation même qui fait leur force : san
 - [[climat_environnement_global]]
 - [[organisation_territoires]]
 - [[technologie_information]]
+
+
+## Relations
+**Alliés :**
+- [[amazonie_pacte_viva_eco_communalism]]
+- [[assemblees_bioterritoriales_regionales_eco_communalism]]
+- [[assemblees_cooperatives_regionales_eco_communalism]]
+- [[brigades_de_restauration_ecologique_eco_communalism]]
+- [[collectifs_de_cartographie_ecologique_participative_eco_communalism]]
+- [[collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism]]
+- [[confederation_bassins_vivants_eco_communalism]]
+- [[consortium_amazonia_viva_eco_communalism]]
+- [[guildes_de_mediateurs_ecologiques_eco_communalism]]
+- [[kalaallit_nunaat_bioterritoire_eco_communalism]]
+- [[mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism]]
+- [[oracle_des_seuils_eco_communalism]]
+- [[reseau_terrafond_bassins_eco_communalism]]
+- [[reseaux_de_bibliotheques_archives_communautaires_eco_communalism]]
+- [[reseaux_de_radio_communautaire_basse_consommation_eco_communalism]]
+- [[trame_bioclimatique_eco_communalism]]
+**Opposants :**
+- [[agro_conglomerats_des_enclaves_technologiques_eco_communalism]]
+- [[consortiums_industriels_de_l_eau_eco_communalism]]
+- [[courant_isolationniste_anti_circulation_de_l_information_eco_communalism]]
+- [[enclaves_extractivistes_et_etats_residuels_eco_communalism]]
+- [[enclaves_extractivistes_residuelles_des_corridors_eco_communalism]]
+- [[factions_autoritaires_de_controle_du_savoir_eco_communalism]]
+- [[factions_extractivistes_des_aquiferes_communs_eco_communalism]]
+- [[factions_technophiles_de_la_geo_ingenierie_centralisee_eco_communalism]]
+- [[reseaux_de_notables_communautaires_capturistes_eco_communalism]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

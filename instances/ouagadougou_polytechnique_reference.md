@@ -4,6 +4,7 @@ type: instance
 slug: ouagadougou_polytechnique_reference
 entite: ouagadougou_polytechnique
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: ouagadougou_polytechnique
   lieu: Ouagadougou Polytechnique
@@ -38,15 +39,16 @@ zone_systemique:
     - société
 
 alliances:
-    - consortium_africain_de_biotechnologies_sociales_reference
-    - nairobi_crrc_reference
-    - agence_stabilisation_climatique_reference
-
+- agence_stabilisation_climatique_reference
+- consortium_africain_de_biotechnologies_sociales_reference
+- ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference
+- nairobi_crrc_reference
+- reseau_des_cooperatives_agro_saheliennes_reference
+- universites_et_think_tanks_en_zones_de_liberte_academique_reference
 oppositions:
-    - alliance_blocs_souverains_reference
-    - bloc_ressources_eurasiatique_bre_reference
-    - courant_nationaliste_instrumentalisateur_du_discours_des_racines_reference
-
+- alliance_blocs_souverains_reference
+- bloc_ressources_eurasiatique_bre_reference
+- courant_nationaliste_instrumentalisateur_du_discours_des_racines_reference
 type_relation_dominante: dépendance
 
 annee_debut: 2031
@@ -90,12 +92,22 @@ Ouagadougou Polytechnique délivre des formations d'ingénierie en génie climat
 - [[climat_environnement_global]]
 - [[systeme_economique_redistribution]]
 
-## Relations
-**Alliés** : [[consortium_africain_de_biotechnologies_sociales_reference]], [[nairobi_crrc_reference]], [[agence_stabilisation_climatique_reference]]
-**Opposants** : [[alliance_blocs_souverains_reference]], [[bloc_ressources_eurasiatique_bre_reference]], [[courant_nationaliste_instrumentalisateur_du_discours_des_racines_reference]]
 
 ## Description journalistique
 Sur le campus de Ouagadougou Polytechnique, les ingénieurs du futur saharien apprennent à construire des barrages modulaires sous 42 degrés à l'ombre. L'établissement, refondé en 2031 sur les ruines d'une ancienne université publique sous-financée, est aujourd'hui cité dans les rapports de l'Union Africaine comme 'le principal vivier continental de compétences en ingénierie climatique'. Mais derrière les amphithéâtres climatisés au solaire, les luttes sont feutrées : le Consortium Helios finance trois chaires de recherche en échange de droits de première embauche sur les diplômés ; le Bloc Sahélien Autonome réclame que les curricula privilégient les besoins locaux ; et des émissaires du Bloc Eurasien Central ont été aperçus en mars dernier dans les couloirs de l'administration. La directrice, Professeure Aminata Kaboré, répète à chaque inauguration que 'la science ne porte pas de drapeau' — une formule que ses partenaires financeurs applaudissent poliment avant de reprendre leurs négociations.
 
 ## Tensions narratives
 La tension centrale tourne autour de la guerre silencieuse des financements : chaque partenariat signé implique une clause de loyauté tacite que les enseignants refusent et que l'administration accepte, creusant un fossé interne entre corps académique et direction. Une seconde tension porte sur la fuite des cerveaux : les meilleurs diplômés quittent systématiquement la région pour des postes dans les mégapoles globales ou les consortiums énergétiques, vidant de sens la mission de développement collectif. Enfin, la question du statut de l'institution face aux régulateurs de l'Union Continentale Africaine — autonomie pleine ou intégration dans un réseau supranational de compétences — risque de redéfinir radicalement son identité d'ici 2105.
+
+## Relations
+**Alliés :**
+- [[agence_stabilisation_climatique_reference]]
+- [[consortium_africain_de_biotechnologies_sociales_reference]]
+- [[ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference]]
+- [[nairobi_crrc_reference]]
+- [[reseau_des_cooperatives_agro_saheliennes_reference]]
+- [[universites_et_think_tanks_en_zones_de_liberte_academique_reference]]
+**Opposants :**
+- [[alliance_blocs_souverains_reference]]
+- [[bloc_ressources_eurasiatique_bre_reference]]
+- [[courant_nationaliste_instrumentalisateur_du_discours_des_racines_reference]]

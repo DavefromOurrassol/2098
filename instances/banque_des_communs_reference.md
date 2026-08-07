@@ -34,8 +34,33 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_internationale_des_energies_renouvelables_irena_2_reference
+- consortium_africain_de_biotechnologies_sociales_reference
+- consortium_amazonia_viva_reference
+- cooperative_terrafond_reference
+- cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference
+- cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference
+- cooperatives_energetiques_decentralisees_reference
+- cooperatives_ia_open_source_reference
+- federation_communs_territoriaux_reference
+- fonds_monetaire_climatique_fmc_reference
+- frente_sert_o_livre_reference
+- great_lakes_autonomous_compact_reference
+- helsinki_communs_numeriques_reference
+- pacifique_sud_archipels_flottants_reference
+- reseau_des_administrations_locales_rurales_participatives_reference
+- reseau_des_cooperatives_agro_saheliennes_reference
+- reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference
+- reseau_meshcommons_netsolidaire_reference
+- union_africaine_de_resilience_territoriale_reference
+oppositions:
+- amazonie_consortium_viva_reference
+- bloc_des_souverainistes_climatiques_reference
+- consortiums_bancaires_financiarises_reference
+- consortiums_prives_d_extraction_de_ressources_critiques_reference
+- etats_a_tendance_centraliste_numerique_reference
+- lobbies_agro_industriels_a_haute_consommation_d_eau_reference
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -99,6 +124,36 @@ Sa légitimité reste contestée par les institutions financières conventionnel
 - [[systeme_economique_redistribution]]
 - [[gouvernance_institutions]]
 - [[organisation_territoires]]
+
+
+## Relations
+**Alliés :**
+- [[agence_internationale_des_energies_renouvelables_irena_2_reference]]
+- [[consortium_africain_de_biotechnologies_sociales_reference]]
+- [[consortium_amazonia_viva_reference]]
+- [[cooperative_terrafond_reference]]
+- [[cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference]]
+- [[cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference]]
+- [[cooperatives_energetiques_decentralisees_reference]]
+- [[cooperatives_ia_open_source_reference]]
+- [[federation_communs_territoriaux_reference]]
+- [[fonds_monetaire_climatique_fmc_reference]]
+- [[frente_sert_o_livre_reference]]
+- [[great_lakes_autonomous_compact_reference]]
+- [[helsinki_communs_numeriques_reference]]
+- [[pacifique_sud_archipels_flottants_reference]]
+- [[reseau_des_administrations_locales_rurales_participatives_reference]]
+- [[reseau_des_cooperatives_agro_saheliennes_reference]]
+- [[reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference]]
+- [[reseau_meshcommons_netsolidaire_reference]]
+- [[union_africaine_de_resilience_territoriale_reference]]
+**Opposants :**
+- [[amazonie_consortium_viva_reference]]
+- [[bloc_des_souverainistes_climatiques_reference]]
+- [[consortiums_bancaires_financiarises_reference]]
+- [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[etats_a_tendance_centraliste_numerique_reference]]
+- [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

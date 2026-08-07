@@ -13,78 +13,10 @@
         "type": "checkbox",
         "label": "Simulation (aucune écriture)",
         "default": false,
-        "description": "Affiche le prompt complet (système + utilisateur) qui serait envoyé, sans appeler l'API ni rien écrire sur le disque. Le texte affiché peut être copié-collé tel quel dans un LLM externe."
+        "description": "Affiche le/les prompt(s) complet(s) qui serai(en)t envoyé(s), sans appeler l'API ni rien écrire."
       },
       {
-        "flag": "--forcer-type",
-        "type": "select",
-        "label": "Forcer un élément",
-        "choices": [
-          {
-            "value": "",
-            "label": "— Aucun forçage —"
-          },
-          {
-            "value": "instance",
-            "label": "Instance (entité)"
-          },
-          {
-            "value": "evenement",
-            "label": "Événement"
-          },
-          {
-            "value": "signal",
-            "label": "Signal"
-          }
-        ],
-        "optional": true,
-        "default": "",
-        "description": "Garantit la présence d'un élément précis dans l'article, plutôt que de laisser la sélection automatique décider seule. Détermine la liste proposée juste en dessous."
-      },
-      {
-        "flag": "--forcer-slug",
-        "type": "slug_select",
-        "label": "Élément à forcer",
-        "optional": true,
-        "slug_type": "entities",
-        "slug_type_field": "--forcer-type",
-        "slug_type_map": {
-          "instance": "entities",
-          "evenement": "evenements",
-          "signal": "signals",
-          "*": "entities"
-        },
-        "description": "Liste filtrée selon le type choisi ci-dessus. Pour un événement/signal, doit déjà exister pour le scénario sélectionné plus haut."
-      },
-      {
-        "flag": "--forcer-mode",
-        "type": "select",
-        "label": "Mode de forçage",
-        "choices": [
-          {
-            "value": "ingredient",
-            "label": "Ingrédient garanti (présent, l'article peut traiter autre chose autour)"
-          },
-          {
-            "value": "sujet_central",
-            "label": "Sujet central (l'article est construit spécifiquement autour)"
-          }
-        ],
-        "optional": true,
-        "default": "ingredient",
-        "description": "'Sujet central' écrase le champ Angle spécifique avec une directive générée automatiquement à partir de l'élément forcé."
-      }
-    ],
-    "config_file": "generator/config.yaml",
-    "config_fields": [
-      {
-        "key": "scenario",
-        "type": "select",
-        "label": "Scénario",
-        "source": "config_scenarios"
-      },
-      {
-        "key": "thematique",
+        "flag": "--thematique",
         "type": "select",
         "label": "Thématique",
         "choices": [
@@ -168,10 +100,11 @@
             "value": "meteo",
             "label": "meteo"
           }
-        ]
+        ],
+        "default": "actualites_a_la_une"
       },
       {
-        "key": "ligne_editoriale",
+        "flag": "--ligne-editoriale",
         "type": "ligne_select",
         "label": "Ligne éditoriale",
         "choices": [
@@ -183,17 +116,11 @@
             "value": "opposition",
             "label": "Opposition"
           }
-        ]
+        ],
+        "default": "pro_pouvoir"
       },
       {
-        "key": "zone_slug",
-        "type": "slug_select",
-        "label": "Zone",
-        "slug_type": "zones_hier",
-        "optional": true
-      },
-      {
-        "key": "article.longueur",
+        "flag": "--article-longueur",
         "type": "select",
         "label": "Longueur",
         "choices": [
@@ -225,27 +152,142 @@
         "default": "analyse"
       },
       {
-        "key": "article.angle_specifique",
+        "flag": "--article-angle-specifique",
         "type": "text",
         "label": "Angle spécifique",
         "optional": true,
-        "placeholder": "ex : focus sur les réfugiés climatiques"
+        "placeholder": "ex : focus sur les réfugiés climatiques",
+        "mode_only": "semi_guide",
+        "description": "(Mode Forcer : ignoré -- l'angle est généré automatiquement autour de l'élément forcé.)"
       },
       {
-        "key": "article.titre_suggere",
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "mode_only": "semi_guide",
+        "choices": [
+          {
+            "value": "breakdown",
+            "label": "breakdown"
+          },
+          {
+            "value": "fortress_world",
+            "label": "fortress_world"
+          },
+          {
+            "value": "new_sustainability",
+            "label": "new_sustainability"
+          },
+          {
+            "value": "eco_communalism",
+            "label": "eco_communalism"
+          },
+          {
+            "value": "policy_reform",
+            "label": "policy_reform"
+          },
+          {
+            "value": "reference",
+            "label": "reference"
+          }
+        ]
+      },
+      {
+        "flag": "--zone-slug",
+        "type": "slug_select",
+        "label": "Zone",
+        "mode_only": "semi_guide",
+        "slug_type": "zones_hier",
+        "optional": true,
+        "description": "Dépend du scénario choisi ci-dessus."
+      },
+      {
+        "flag": "--article-titre-suggere",
         "type": "text",
         "label": "Titre suggéré",
+        "mode_only": "semi_guide",
         "optional": true,
         "placeholder": "Laisser vide = l'IA choisit"
-      }
-    ],
-    "yaml_files": [
+      },
       {
-        "path": "generator/config.yaml",
-        "label": "generator/config.yaml"
+        "flag": "--forcer-type",
+        "type": "select",
+        "label": "Élément à forcer — type",
+        "mode_only": "forcer",
+        "choices": [
+          {
+            "value": "instance",
+            "label": "Instance (entité)"
+          },
+          {
+            "value": "evenement",
+            "label": "Événement"
+          },
+          {
+            "value": "signal",
+            "label": "Signal"
+          }
+        ],
+        "default": "instance",
+        "description": "Détermine la liste proposée juste en dessous."
+      },
+      {
+        "flag": "--forcer-slug",
+        "type": "slug_select",
+        "label": "Élément à forcer",
+        "mode_only": "forcer",
+        "slug_type": "entities",
+        "slug_type_field": "--forcer-type",
+        "slug_type_map": {
+          "instance": "entities",
+          "evenement": "evenements",
+          "signal": "signals",
+          "*": "entities"
+        },
+        "description": "Liste filtrée selon le type choisi ci-dessus."
+      },
+      {
+        "flag": "--forcer-scenarios",
+        "type": "dynamic_multi_select",
+        "label": "Scénarios à couvrir",
+        "mode_only": "forcer",
+        "slug_type": "forcer_scenarios",
+        "description": "Restreint automatiquement à ce qui est disponible pour l'élément choisi ci-dessus. \"Tous\" = tous les scénarios où il est disponible (pas nécessairement les 6). ⚠ Mécanisme neuf, à vérifier en conditions réelles -- voir échange du 2 août 2026.",
+        "slug_extra_params": {
+          "slug": "--forcer-slug",
+          "element_type": "--forcer-type"
+        }
+      },
+      {
+        "flag": "--forcer-zone",
+        "type": "dynamic_multi_select",
+        "label": "Zone(s)",
+        "mode_only": "forcer",
+        "optional": true,
+        "slug_type": "forcer_zones",
+        "description": "\"Tous\" par défaut (aucune restriction). Si tu coches des zones précises, seuls les scénarios où l'élément s'y trouve seront traités. Restreint automatiquement aux zones réellement associées à l'élément choisi -- reste sur \"tous\" si l'élément n'a pas de zone (signal) ou n'a jamais été localisé.",
+        "slug_extra_params": {
+          "slug": "--forcer-slug",
+          "element_type": "--forcer-type"
+        }
       }
     ],
-    "gui_verified": true
+    "gui_verified": false,
+    "mode_select": {
+      "label": "Mode de génération",
+      "choices": [
+        {
+          "value": "semi_guide",
+          "label": "Semi-guidé",
+          "note": "Sélection automatique des instances/événements/signaux (comportement historique, inchangé)."
+        },
+        {
+          "value": "forcer",
+          "label": "Forcer un élément",
+          "note": "Un article par scénario retenu, construit spécifiquement autour de l'élément choisi. Titre toujours laissé à l'IA."
+        }
+      ]
+    }
   },
   {
     "id": "generate_series",
@@ -1141,7 +1183,7 @@
     "icon": "✨",
     "section": "entites_creation",
     "script": "enrich_minimal.py",
-    "description": "Complète via IA les fiches créées a minima (champs manquants), pour les amener au même niveau de détail que les autres.",
+    "description": "Complète via IA les fiches créées a minima (champs manquants), pour les amener au même niveau de détail que les autres. Si la résolution des conflits est active, les deux mêmes rapports que sur fix_alliances_oppositions sont réinitialisés à chaque run réel : ils ne reflètent que l'état du DERNIER run.",
     "requires": [],
     "options": [
       {
@@ -1191,12 +1233,133 @@
         "label": "Simulation (rien écrit sur disque, mais appels LLM réels)",
         "description": "⚠️ Ce mode appelle quand même le LLM pour de vrai (enrichissement + corrections éventuelles) — seule l'écriture de la fiche finale est sautée. Un coût API réel est engagé malgré le mot \"simulation\".",
         "default": false
+      },
+      {
+        "flag": "--resoudre-conflits",
+        "type": "checkbox",
+        "label": "Résoudre les conflits (opposition prioritaire, rétroactif)",
+        "description": "Après la passe de réciprocité automatique, résout les conflits détectés selon la règle \"opposition prioritaire\" : pour chaque conflit (une fiche cite l'autre en alliance, l'autre la cite déjà en opposition), le slug est retiré des alliances de la première. RÉTROACTIF : modifie les fiches déjà en conflit sur disque, dans les scénarios traités par ce run — pas tout le vault. Chaque résolution est journalisée dans documentation/need_action/fix_alliances_conflits_reciprocite_resolus.md. Sans effet en Simulation, ou si aucune fiche n'a été enrichie dans ce run.",
+        "default": false
+      },
+      {
+        "flag": "--bascule-en-opposition",
+        "type": "checkbox",
+        "label": "Résolution forte (bascule aussi en opposition)",
+        "description": "Avec \"Résoudre les conflits\" : au lieu de simplement retirer l'entité des alliances, l'ajoute aussi explicitement aux oppositions. Par défaut (décoché), résolution conservatrice : retrait seul, sans rien ajouter.",
+        "default": false,
+        "depends_on": "--resoudre-conflits",
+        "advanced": true
       }
     ],
     "yaml_files": [
       {
         "path": "instances_custom/needs_review_enrich.yaml",
         "label": "instances_custom/needs_review_enrich.yaml",
+        "readonly": true
+      },
+      {
+        "path": "documentation/need_action/fix_alliances_conflits_reciprocite_resolus.md",
+        "label": "documentation/need_action/fix_alliances_conflits_reciprocite_resolus.md",
+        "readonly": true
+      }
+    ],
+    "gui_verified": false,
+    "required_one_of": [
+      [
+        "--scenario",
+        "--all"
+      ]
+    ]
+  },
+  {
+    "id": "fix_alliances_oppositions",
+    "label": "Corriger les alliances / oppositions",
+    "icon": "🤝",
+    "section": "entites_nettoyage",
+    "script": "fix_alliances_oppositions.py",
+    "description": "Corrige les alliances/oppositions vides sur les fiches déjà enrichies (prompt ciblé, liste réelle des instances du scénario fournie au LLM). Complète aussi la réciprocité (si A cite B en alliance/opposition, B doit citer A en retour) et peut résoudre automatiquement les conflits de réciprocité détectés selon la règle \"opposition prioritaire\" (une opposition déclarée l'emporte sur une alliance déclarée en cas de contradiction) — rétroactif, modifie les fiches en conflit sur disque. Les deux rapports ci-dessous (conflits détectés / résolus) sont réinitialisés à chaque run réel (pas en simulation) : ils ne reflètent que l'état du DERNIER run, plus aucun historique cumulé.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--all",
+        "type": "checkbox",
+        "label": "Tous les scénarios",
+        "description": "Traite tous les scénarios disponibles",
+        "default": false,
+        "mutually_exclusive_with": "scenario"
+      },
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "default": "",
+        "optional": true,
+        "mutually_exclusive_with": "all"
+      },
+      {
+        "flag": "--slug",
+        "type": "slug_select",
+        "label": "Une seule fiche (passe de complétion LLM uniquement)",
+        "slug_type": "instances",
+        "optional": true,
+        "description": "Limite la passe LLM (génération des alliances/oppositions vides) à une fiche précise. Sans effet sur la passe de réciprocité ni sur la résolution de conflits, qui portent toujours sur le scénario entier."
+      },
+      {
+        "flag": "--limit",
+        "type": "number",
+        "label": "Nombre de fiches max (passe LLM)",
+        "description": "Limite le nombre de fiches traitées par scénario dans la passe LLM — utile pour estimer le coût avant un run complet. Sans effet sur la passe de réciprocité ni la résolution de conflits.",
+        "min": 1,
+        "optional": true
+      },
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Simulation (rien écrit sur disque, mais appels LLM réels sur la passe de complétion)",
+        "description": "N'écrit rien sur disque, quelle que soit la passe active. ⚠️ Si la passe LLM est active (pas de --reciprocite-seule), elle appelle quand même le LLM pour de vrai — seule l'écriture du résultat est sautée.",
+        "default": false
+      },
+      {
+        "flag": "--reciprocite-seule",
+        "type": "checkbox",
+        "label": "Réciprocité seule (aucun appel LLM)",
+        "description": "Saute entièrement la passe de complétion LLM, lance uniquement la passe de réciprocité (et la résolution de conflits si cochée ci-dessous).",
+        "default": false
+      },
+      {
+        "flag": "--skip-reciprocite",
+        "type": "checkbox",
+        "label": "Sans passe de réciprocité",
+        "description": "Lance la passe LLM mais saute la passe de réciprocité après. ⚠️ Rend \"Résoudre les conflits\" ci-dessous sans effet (la résolution ne peut agir que sur les conflits que la passe de réciprocité détecte) — ne pas cocher les deux ensemble.",
+        "default": false
+      },
+      {
+        "flag": "--resoudre-conflits",
+        "type": "checkbox",
+        "label": "Résoudre les conflits (opposition prioritaire, rétroactif)",
+        "description": "Après la passe de réciprocité, résout automatiquement les conflits détectés selon la règle \"opposition prioritaire\" : pour chaque conflit (une fiche cite l'autre en alliance, l'autre la cite déjà en opposition), le slug est retiré des alliances de la première. RÉTROACTIF : modifie les fiches déjà en conflit sur disque, sauf si \"Simulation\" est cochée. Chaque résolution est journalisée dans documentation/need_action/fix_alliances_conflits_reciprocite_resolus.md. Sans effet si \"Sans passe de réciprocité\" est cochée.",
+        "default": false
+      },
+      {
+        "flag": "--bascule-en-opposition",
+        "type": "checkbox",
+        "label": "Résolution forte (bascule aussi en opposition)",
+        "description": "Avec \"Résoudre les conflits\" : au lieu de simplement retirer l'entité des alliances, l'ajoute aussi explicitement aux oppositions. Par défaut (décoché), résolution conservatrice : retrait seul, sans rien ajouter.",
+        "default": false,
+        "depends_on": "--resoudre-conflits",
+        "advanced": true
+      }
+    ],
+    "yaml_files": [
+      {
+        "path": "documentation/need_action/fix_alliances_conflits_reciprocite.md",
+        "label": "documentation/need_action/fix_alliances_conflits_reciprocite.md",
+        "readonly": true
+      },
+      {
+        "path": "documentation/need_action/fix_alliances_conflits_reciprocite_resolus.md",
+        "label": "documentation/need_action/fix_alliances_conflits_reciprocite_resolus.md",
         "readonly": true
       }
     ],

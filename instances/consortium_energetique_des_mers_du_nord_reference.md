@@ -31,8 +31,23 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_internationale_des_energies_renouvelables_irena_2_reference
+- agence_stabilisation_climatique_reference
+- conseil_des_etats_nordiques_integres_reference
+- consortium_energetique_baltique_reference
+- consortium_indo_pacifique_de_l_hydrogene_reference
+- consortiums_energetiques_des_megapoles_reference
+- europe_occidentale_reconstructee_reference
+- fonds_souverain_arctique_scandinave_reference
+- optiflow_logistics_reference
+oppositions:
+- bloc_eurasien_central_reference
+- bloc_ressources_eurasiatique_bre_reference
+- collectifs_de_peche_inuit_et_sami_reference
+- consortiums_energetiques_opaques_reference
+- kalaallit_nunaat_sovereign_fund_reference
+- milices_concurrentes_des_droits_de_passage_reference
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -98,6 +113,26 @@ Le Consortium est structurellement déchiré entre ses actionnaires historiques 
 - [[energie_ressources_critiques]]
 - [[geopolitique_conflits]]
 - [[organisation_territoires]]
+
+
+## Relations
+**Alliés :**
+- [[agence_internationale_des_energies_renouvelables_irena_2_reference]]
+- [[agence_stabilisation_climatique_reference]]
+- [[conseil_des_etats_nordiques_integres_reference]]
+- [[consortium_energetique_baltique_reference]]
+- [[consortium_indo_pacifique_de_l_hydrogene_reference]]
+- [[consortiums_energetiques_des_megapoles_reference]]
+- [[europe_occidentale_reconstructee_reference]]
+- [[fonds_souverain_arctique_scandinave_reference]]
+- [[optiflow_logistics_reference]]
+**Opposants :**
+- [[bloc_eurasien_central_reference]]
+- [[bloc_ressources_eurasiatique_bre_reference]]
+- [[collectifs_de_peche_inuit_et_sami_reference]]
+- [[consortiums_energetiques_opaques_reference]]
+- [[kalaallit_nunaat_sovereign_fund_reference]]
+- [[milices_concurrentes_des_droits_de_passage_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

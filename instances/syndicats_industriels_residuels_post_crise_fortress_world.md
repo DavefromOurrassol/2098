@@ -32,8 +32,13 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world
+- factions_traditionalistes_du_mandat_electif_fortress_world
+- internationale_travailleurs_augmentes_fortress_world
 - rust_belt_communes_libres_fortress_world
-oppositions: []
+oppositions:
+- directive_kontinuum_fortress_world
+- zone_usines_forteresses_eurasie_fortress_world
 type_relation_dominante: dépendance
 annee_debut: 2026
 annee_fin: null
@@ -98,9 +103,16 @@ Leur contradiction fondamentale réside dans le fait de défendre le travail for
 - [[gouvernance_institutions]]
 - [[systeme_economique_redistribution]]
 
+
 ## Relations
 **Alliés :**
+- [[factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world]]
+- [[factions_traditionalistes_du_mandat_electif_fortress_world]]
+- [[internationale_travailleurs_augmentes_fortress_world]]
 - [[rust_belt_communes_libres_fortress_world]]
+**Opposants :**
+- [[directive_kontinuum_fortress_world]]
+- [[zone_usines_forteresses_eurasie_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

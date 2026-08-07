@@ -4,6 +4,7 @@ type: instance
 slug: directive_kontinuum_policy_reform
 entite: directive_kontinuum
 scenario: policy_reform
+statut: officialise_enrichi
 localisation:
   zone: null
   lieu: null

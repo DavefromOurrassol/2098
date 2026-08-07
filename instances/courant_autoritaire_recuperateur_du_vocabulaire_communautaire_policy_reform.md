@@ -32,8 +32,29 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- bureau_gouvernance_algorithmique_policy_reform
+- conseil_regulation_algorithmique_policy_reform
+- consortiums_prives_de_gouvernance_algorithmique_policy_reform
+- faction_regulatrice_dure_au_sein_du_cei_policy_reform
+- factions_internes_dissidentes_des_contributeurs_historiques_policy_reform
+- union_technocratique_eurasiatique_policy_reform
+oppositions:
+- collectifs_citoyens_de_deliberation_augmentee_policy_reform
+- collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform
+- collectifs_de_gouvernance_communautaire_decentralisee_policy_reform
+- consortium_africain_de_biotechnologies_sociales_policy_reform
+- consortium_amazonia_viva_policy_reform
+- consortium_des_villes_etats_durables_policy_reform
+- courants_post_technocratiques_de_reconquete_democratique_policy_reform
+- front_des_communes_algorithmiques_policy_reform
+- institut_brookings_singapour_de_politique_computationnelle_policy_reform
+- leena_vainala_policy_reform
+- mouvement_pour_la_justice_ecologique_communautaire_policy_reform
+- mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform
+- reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
+- reseau_des_metropoles_n_uds_policy_reform
+- reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -96,6 +117,32 @@ La contradiction centrale est que ce courant dépend des institutions réformatr
 - [[gouvernance_institutions]]
 - [[valeurs_culture_tempo_sociale]]
 - [[technologie_information]]
+
+
+## Relations
+**Alliés :**
+- [[bureau_gouvernance_algorithmique_policy_reform]]
+- [[conseil_regulation_algorithmique_policy_reform]]
+- [[consortiums_prives_de_gouvernance_algorithmique_policy_reform]]
+- [[faction_regulatrice_dure_au_sein_du_cei_policy_reform]]
+- [[factions_internes_dissidentes_des_contributeurs_historiques_policy_reform]]
+- [[union_technocratique_eurasiatique_policy_reform]]
+**Opposants :**
+- [[collectifs_citoyens_de_deliberation_augmentee_policy_reform]]
+- [[collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform]]
+- [[collectifs_de_gouvernance_communautaire_decentralisee_policy_reform]]
+- [[consortium_africain_de_biotechnologies_sociales_policy_reform]]
+- [[consortium_amazonia_viva_policy_reform]]
+- [[consortium_des_villes_etats_durables_policy_reform]]
+- [[courants_post_technocratiques_de_reconquete_democratique_policy_reform]]
+- [[front_des_communes_algorithmiques_policy_reform]]
+- [[institut_brookings_singapour_de_politique_computationnelle_policy_reform]]
+- [[leena_vainala_policy_reform]]
+- [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]]
+- [[mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform]]
+- [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]]
+- [[reseau_des_metropoles_n_uds_policy_reform]]
+- [[reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

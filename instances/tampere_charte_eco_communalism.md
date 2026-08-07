@@ -4,6 +4,7 @@ type: instance
 slug: tampere_charte_eco_communalism
 entite: tampere_charte
 scenario: eco_communalism
+statut: officialise_enrichi
 localisation:
   zone: tampere_charte
   lieu: Tampere

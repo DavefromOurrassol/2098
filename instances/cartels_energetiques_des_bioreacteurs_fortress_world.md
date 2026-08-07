@@ -31,8 +31,19 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- alliance_blocs_souverains_fortress_world
+- appareils_d_etat_des_blocs_fermes_fortress_world
+- complexes_militaro_industriels_de_gestion_des_ressources_fortress_world
+- consortium_eurasiatique_des_ressources_fermees_fortress_world
+- nexus_biosyn_fortress_world
+- pacte_forteresses_souveraines_fortress_world
+oppositions:
+- collectifs_de_reappropriation_energetique_peripherique_fortress_world
+- contrebandiers_energetiques_des_zones_grises_fortress_world
+- factions_djihadistes_logistiques_d_asie_centrale_fortress_world
+- mouvement_des_communes_du_rust_belt_fortress_world
+- reseaux_de_contrebande_energetique_transfrontaliere_fortress_world
 type_relation_dominante: dépendance
 annee_debut: 2026
 annee_fin: null
@@ -96,6 +107,22 @@ La tension centrale repose sur la contradiction entre leur indispensabilité vit
 - [[energie_ressources_critiques]]
 - [[gouvernance_institutions]]
 - [[systeme_economique_redistribution]]
+
+
+## Relations
+**Alliés :**
+- [[alliance_blocs_souverains_fortress_world]]
+- [[appareils_d_etat_des_blocs_fermes_fortress_world]]
+- [[complexes_militaro_industriels_de_gestion_des_ressources_fortress_world]]
+- [[consortium_eurasiatique_des_ressources_fermees_fortress_world]]
+- [[nexus_biosyn_fortress_world]]
+- [[pacte_forteresses_souveraines_fortress_world]]
+**Opposants :**
+- [[collectifs_de_reappropriation_energetique_peripherique_fortress_world]]
+- [[contrebandiers_energetiques_des_zones_grises_fortress_world]]
+- [[factions_djihadistes_logistiques_d_asie_centrale_fortress_world]]
+- [[mouvement_des_communes_du_rust_belt_fortress_world]]
+- [[reseaux_de_contrebande_energetique_transfrontaliere_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

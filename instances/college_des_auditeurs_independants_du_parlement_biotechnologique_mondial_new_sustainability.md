@@ -31,8 +31,23 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- collectif_des_mediateurs_cognitifs_internationaux_new_sustainability
+- conseil_de_regulation_cognitive_de_l_onu_new_sustainability
+- conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability
+- consortium_africain_de_biotechnologies_sociales_new_sustainability
+- consortium_d_audit_algorithmique_ouvert_new_sustainability
+- observatoire_anti_monopole_de_geneve_new_sustainability
+- reseau_global_de_cliniques_regeneratives_new_sustainability
+- tribunal_algorithmique_de_bruxelles_new_sustainability
+- tribunal_gouvernance_algorithmique_bruxelles_new_sustainability
+oppositions:
+- bloc_eurasien_souverainiste_new_sustainability
+- enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability
+- factions_internes_pro_opacite_des_parametres_new_sustainability
+- factions_souverainistes_des_blocs_peripheriques_new_sustainability
+- lobbies_des_plateformes_de_consensus_automatise_new_sustainability
+- nexus_biosyn_new_sustainability
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -94,6 +109,26 @@ Sa légitimité est structurellement menacée : financé par les États membres 
 - [[gouvernance_institutions]]
 - [[sante_biotechnologies]]
 - [[frontieres_du_systeme]]
+
+
+## Relations
+**Alliés :**
+- [[collectif_des_mediateurs_cognitifs_internationaux_new_sustainability]]
+- [[conseil_de_regulation_cognitive_de_l_onu_new_sustainability]]
+- [[conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability]]
+- [[consortium_africain_de_biotechnologies_sociales_new_sustainability]]
+- [[consortium_d_audit_algorithmique_ouvert_new_sustainability]]
+- [[observatoire_anti_monopole_de_geneve_new_sustainability]]
+- [[reseau_global_de_cliniques_regeneratives_new_sustainability]]
+- [[tribunal_algorithmique_de_bruxelles_new_sustainability]]
+- [[tribunal_gouvernance_algorithmique_bruxelles_new_sustainability]]
+**Opposants :**
+- [[bloc_eurasien_souverainiste_new_sustainability]]
+- [[enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability]]
+- [[factions_internes_pro_opacite_des_parametres_new_sustainability]]
+- [[factions_souverainistes_des_blocs_peripheriques_new_sustainability]]
+- [[lobbies_des_plateformes_de_consensus_automatise_new_sustainability]]
+- [[nexus_biosyn_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

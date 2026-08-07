@@ -36,11 +36,18 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
+alliances:
+- archives_neutres_de_geneve_breakdown
 oppositions:
 - archives_neutres_geneve_breakdown
+- bureau_des_territoires_residuels_breakdown
+- collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
+- geneve_bunker_institutions_breakdown
 - lagos_interieur_mnemos_breakdown
 - noeud_mnemos_pannonie_breakdown
+- oracle_des_seuils_breakdown
+- reseau_mnemos_breakdown
+- tribunal_algorithmique_de_bruxelles_breakdown
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -99,11 +106,20 @@ La tension centrale réside dans leur propre fragmentation interne : les différ
 - [[gouvernance_institutions]]
 - [[valeurs_culture_tempo_sociale]]
 
+
 ## Relations
+**Alliés :**
+- [[archives_neutres_de_geneve_breakdown]]
 **Opposants :**
-- [[archives_neutres_geneve]]
-- [[lagos_interieur_mnemos]]
-- [[noeud_mnemos_pannonie]]
+- [[archives_neutres_geneve_breakdown]]
+- [[bureau_des_territoires_residuels_breakdown]]
+- [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]]
+- [[geneve_bunker_institutions_breakdown]]
+- [[lagos_interieur_mnemos_breakdown]]
+- [[noeud_mnemos_pannonie_breakdown]]
+- [[oracle_des_seuils_breakdown]]
+- [[reseau_mnemos_breakdown]]
+- [[tribunal_algorithmique_de_bruxelles_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

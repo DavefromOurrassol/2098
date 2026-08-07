@@ -33,8 +33,33 @@ zone_geographique:
 - régionale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- administrations_hybrides_des_cites_relais_peripheriques_reference
+- agence_internationale_des_energies_renouvelables_irena_2_reference
+- banque_des_communs_reference
+- consortium_des_fournisseurs_d_energie_renouvelable_distribuee_reference
+- cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference
+- cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference
+- frente_sert_o_livre_reference
+- lyon_metropole_reference
+- ong_environnementales_de_terrain_reference
+- pacifique_sud_archipels_flottants_reference
+- reseau_des_administrations_locales_rurales_participatives_reference
+- reseau_des_cooperatives_agro_saheliennes_reference
+- reseau_meshcommons_netsolidaire_reference
+- reseau_mnemos_reference
+- syndicats_de_travailleurs_de_la_transition_energetique_reference
+oppositions:
+- bloc_des_souverainistes_climatiques_reference
+- consortium_indo_pacifique_de_l_hydrogene_reference
+- consortiums_energetiques_des_megapoles_reference
+- consortiums_energetiques_opaques_reference
+- corporations_d_extraction_energetique_non_signataires_reference
+- etats_a_tendance_centraliste_numerique_reference
+- lobbies_industriels_des_etats_non_signataires_reference
+- operateurs_prives_d_energie_distribuee_hors_fct_reference
+- plateformes_d_optimisation_territoriale_par_ia_reference
+- rede_paulista_de_distribuic_o_algor_tmica_reference
 type_relation_dominante: symbiose
 annee_debut: 2026
 annee_fin: null
@@ -95,6 +120,36 @@ Les coopératives se trouvent prises en étau entre la tentation de croître —
 - [[energie_ressources_critiques]]
 - [[organisation_territoires]]
 - [[systeme_economique_redistribution]]
+
+
+## Relations
+**Alliés :**
+- [[administrations_hybrides_des_cites_relais_peripheriques_reference]]
+- [[agence_internationale_des_energies_renouvelables_irena_2_reference]]
+- [[banque_des_communs_reference]]
+- [[consortium_des_fournisseurs_d_energie_renouvelable_distribuee_reference]]
+- [[cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference]]
+- [[cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference]]
+- [[frente_sert_o_livre_reference]]
+- [[lyon_metropole_reference]]
+- [[ong_environnementales_de_terrain_reference]]
+- [[pacifique_sud_archipels_flottants_reference]]
+- [[reseau_des_administrations_locales_rurales_participatives_reference]]
+- [[reseau_des_cooperatives_agro_saheliennes_reference]]
+- [[reseau_meshcommons_netsolidaire_reference]]
+- [[reseau_mnemos_reference]]
+- [[syndicats_de_travailleurs_de_la_transition_energetique_reference]]
+**Opposants :**
+- [[bloc_des_souverainistes_climatiques_reference]]
+- [[consortium_indo_pacifique_de_l_hydrogene_reference]]
+- [[consortiums_energetiques_des_megapoles_reference]]
+- [[consortiums_energetiques_opaques_reference]]
+- [[corporations_d_extraction_energetique_non_signataires_reference]]
+- [[etats_a_tendance_centraliste_numerique_reference]]
+- [[lobbies_industriels_des_etats_non_signataires_reference]]
+- [[operateurs_prives_d_energie_distribuee_hors_fct_reference]]
+- [[plateformes_d_optimisation_territoriale_par_ia_reference]]
+- [[rede_paulista_de_distribuic_o_algor_tmica_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

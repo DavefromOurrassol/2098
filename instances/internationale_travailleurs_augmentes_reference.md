@@ -4,6 +4,7 @@ type: instance
 slug: internationale_travailleurs_augmentes_reference
 entite: internationale_travailleurs_augmentes
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: null
   lieu: null
@@ -38,15 +39,17 @@ zone_systemique:
     - IA
 
 alliances:
-    - conseil_de_geneve_pour_les_droits_biosociaux_reference
-    - federation_des_cliniques_autonomes_reference
-    - reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference
-
+- conseil_de_geneve_pour_les_droits_biosociaux_reference
+- federation_des_cliniques_autonomes_reference
+- reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference
+- syndicats_de_travail_rural_hybride_reference
+- syndicats_de_travailleurs_de_la_transition_energetique_reference
 oppositions:
-    - consortium_augmentwork_reference
-    - algorithmic_labor_exchange_reference
-    - gouvernements_a_regime_de_productivite_mandatee_reference
-
+- algorithmic_labor_exchange_reference
+- consortium_augmentwork_reference
+- gouvernements_a_regime_de_productivite_mandatee_reference
+- neuroharmonics_reference
+- operateurs_de_zones_economiques_speciales_periurbaines_reference
 type_relation_dominante: rivalité
 
 annee_debut: 2031
@@ -90,12 +93,23 @@ Négocie des conventions d'augmentation obligatoire avec les consortiums industr
 - [[technologie_information]]
 - [[valeurs_culture_tempo_sociale]]
 
-## Relations
-**Alliés** : [[conseil_de_geneve_pour_les_droits_biosociaux_reference]], [[federation_des_cliniques_autonomes_reference]], [[reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference]]
-**Opposants** : [[consortium_augmentwork_reference]], [[algorithmic_labor_exchange_reference]], [[gouvernements_a_regime_de_productivite_mandatee_reference]]
 
 ## Description journalistique
 On les reconnaît aux brassards orangés portés sur les exosquelettes lors des rassemblements, et à leur slogan gravé dans les mémoires : *Le corps augmenté reste un corps souverain*. L'Internationale des Travailleurs Augmentés a fêté en 2097 ses soixante-six ans d'existence dans une ambivalence revendiquée : ni révolutionnaire, ni domestiquée. Son secrétariat général, partagé entre São Paulo, Nairobi et Séoul par rotation triennale, reflète la géographie réelle du travail augmenté mondial. En 2098, l'ITA négocie simultanément le Protocole de Lagos sur la portabilité des implants et fait face à une scission interne entre sa faction *minimaliste* — favorable aux accords progressifs — et les *désaugmenteurs* qui exigent l'interdiction totale des interfaces imposées par contrat. Sa survie institutionnelle tient à ce fil tendu.
 
 ## Tensions narratives
 La scission entre réformistes et désaugmenteurs menace d'éclater lors du Congrès de Lagos 2099, où sera voté le soutien ou non au Protocole d'Harmonisation Productive des Nations-Économies. Certains délégués soupçonnent l'aile modérée d'être infiltrée par des agents des consortiums industriels via des implants cognitifs compromis — une accusation impossible à prouver sans violer l'intégrité corporelle des suspects. Par ailleurs, la montée d'une génération de travailleurs *nés augmentés* remet en question le cadre philosophique fondateur de l'ITA : peut-on défendre la souveraineté d'un corps qui n'a jamais existé sans ses augmentations ?
+
+## Relations
+**Alliés :**
+- [[conseil_de_geneve_pour_les_droits_biosociaux_reference]]
+- [[federation_des_cliniques_autonomes_reference]]
+- [[reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference]]
+- [[syndicats_de_travail_rural_hybride_reference]]
+- [[syndicats_de_travailleurs_de_la_transition_energetique_reference]]
+**Opposants :**
+- [[algorithmic_labor_exchange_reference]]
+- [[consortium_augmentwork_reference]]
+- [[gouvernements_a_regime_de_productivite_mandatee_reference]]
+- [[neuroharmonics_reference]]
+- [[operateurs_de_zones_economiques_speciales_periurbaines_reference]]

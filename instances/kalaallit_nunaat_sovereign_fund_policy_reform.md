@@ -4,6 +4,7 @@ type: instance
 slug: kalaallit_nunaat_sovereign_fund_policy_reform
 entite: kalaallit_nunaat_sovereign_fund
 scenario: policy_reform
+statut: officialise_enrichi
 localisation:
   zone: nuuk_knsf
   lieu: Nuuk
@@ -37,20 +38,19 @@ zone_systemique:
     - économie
 
 alliances:
-    - conseil_regulation_ressources_policy_reform
-    - fonds_de_stabilisation_climatique_onu_3_policy_reform
-    - fonds_souverain_de_transition_verte_fstv_policy_reform
-    - observatoire_mondial_des_ressources_critiques_policy_reform
-    - agence_internationale_de_l_energie_reformatee_aier_policy_reform
-    - consortium_des_villes_etats_durables_policy_reform
-
+- agence_internationale_de_l_energie_reformatee_aier_policy_reform
+- arctic_passage_authority_policy_reform
+- conseil_regulation_ressources_policy_reform
+- consortium_des_villes_etats_durables_policy_reform
+- fonds_de_stabilisation_climatique_onu_3_policy_reform
+- fonds_souverain_de_transition_verte_fstv_policy_reform
+- observatoire_mondial_des_ressources_critiques_policy_reform
 oppositions:
-    - syndicats_d_extraction_privee_non_regules_policy_reform
-    - front_des_souverainistes_energetiques_policy_reform
-    - lobbies_des_energies_fossiles_residuelles_policy_reform
-    - coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform
-    - front_souverainiste_des_blocs_non_signataires_policy_reform
-
+- coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform
+- front_des_souverainistes_energetiques_policy_reform
+- front_souverainiste_des_blocs_non_signataires_policy_reform
+- lobbies_des_energies_fossiles_residuelles_policy_reform
+- syndicats_d_extraction_privee_non_regules_policy_reform
 type_relation_dominante: alliance stratégique
 
 annee_debut: 2041
@@ -94,12 +94,25 @@ Gestion d'un portefeuille souverain de ressources circumpolaires évalué à plu
 - [[geopolitique_conflits]]
 - [[organisation_territoires]]
 
-## Relations
-**Alliés** : [[conseil_regulation_ressources_policy_reform]], [[fonds_de_stabilisation_climatique_onu_3_policy_reform]], [[fonds_souverain_de_transition_verte_fstv_policy_reform]], [[observatoire_mondial_des_ressources_critiques_policy_reform]], [[agence_internationale_de_l_energie_reformatee_aier_policy_reform]], [[consortium_des_villes_etats_durables_policy_reform]]
-**Opposants** : [[syndicats_d_extraction_privee_non_regules_policy_reform]], [[front_des_souverainistes_energetiques_policy_reform]], [[lobbies_des_energies_fossiles_residuelles_policy_reform]], [[coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform]], [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
 
 ## Description journalistique
 Depuis son siège de Nuuk — une ville dont l'architecture hybride mêle verre thermorégulé et motifs inuit gravés au laser —, le KNSF-AGRC gère aujourd'hui plus de ressources stratégiques que la plupart des États de taille moyenne. Ce qui était, au milieu du siècle, un fonds de compensation climatique alimenté par des dons culpabilisés des puissances industrielles est devenu l'un des négociateurs les plus redoutés des forums de régulation internationale. Ses délégués — formés aux écoles de droit de Copenhague et aux think tanks de Singapour, mais parlant toujours le kalaallisut en séance plénière par principe politique — ont l'habitude de poser sur la table, avant toute négociation, un document appelé 'le Relevé de la Fonte' : une comptabilité historique chiffrée des pertes territoriales, écosystémiques et culturelles subies par le Groenland depuis 1950. C'est leur monnaie d'ouverture. Et elle vaut cher.
 
 ## Tensions narratives
 La tension centrale du KNSF-AGRC en 2098 est celle du choix entre deux légitimités incompatibles : redistribuer une fraction de la rente circumpolaire au fonds climatique mondial — ce qui consoliderait son image de 'bon acteur' de la gouvernance globale mais affaiblirait l'argument souverain — ou capitaliser sur cette ressource comme rempart identitaire et politique face à l'absorption technocratique. Une faction interne de jeunes économistes formés à l'ARIA-Nexus pousse vers une intégration totale dans les marchés de crédits énergétiques régulés, ce qui déchire le conseil d'administration. Pendant ce temps, les syndicats d'extraction privée non régulés cherchent à contourner les licences KNSF en finançant des opérations para-légales dans les zones maritimes disputées — une menace existentielle que le fonds ne peut contrer qu'en renforçant précisément les institutions internationales qu'il cherche par ailleurs à tenir à distance.
+
+## Relations
+**Alliés :**
+- [[agence_internationale_de_l_energie_reformatee_aier_policy_reform]]
+- [[arctic_passage_authority_policy_reform]]
+- [[conseil_regulation_ressources_policy_reform]]
+- [[consortium_des_villes_etats_durables_policy_reform]]
+- [[fonds_de_stabilisation_climatique_onu_3_policy_reform]]
+- [[fonds_souverain_de_transition_verte_fstv_policy_reform]]
+- [[observatoire_mondial_des_ressources_critiques_policy_reform]]
+**Opposants :**
+- [[coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform]]
+- [[front_des_souverainistes_energetiques_policy_reform]]
+- [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+- [[lobbies_des_energies_fossiles_residuelles_policy_reform]]
+- [[syndicats_d_extraction_privee_non_regules_policy_reform]]

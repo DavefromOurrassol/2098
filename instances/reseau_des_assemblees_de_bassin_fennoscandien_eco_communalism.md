@@ -31,8 +31,32 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
+- assemblees_bioterritoriales_regionales_eco_communalism
+- assemblees_cooperatives_regionales_eco_communalism
+- assemblees_de_bassin_versant_eco_communalism
+- cercles_de_mediation_territoriale_intercommunautaire_eco_communalism
+- collectifs_de_cartographie_ecologique_participative_eco_communalism
+- confederation_bassins_vivants_eco_communalism
+- confederation_communs_arc_septentrional_eco_communalism
+- confederation_des_communs_de_l_arc_septentrional_eco_communalism
+- conseils_de_bassin_versant_eco_communalistes_eco_communalism
+- factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism
+- guildes_de_mediateurs_ecologiques_eco_communalism
+- kalaallit_nunaat_bioterritoire_eco_communalism
+- kalaallit_nunaat_sovereign_fund_eco_communalism
+- leena_vainala_eco_communalism
+- reseau_assemblees_fennoscandien_eco_communalism
+- reseau_terrafond_bassins_eco_communalism
+- tampere_charte_eco_communalism
+oppositions:
+- communautes_rurales_dissidentes_anti_cooperation_regionale_eco_communalism
+- communs_secessionnistes_hors_coordination_eco_communalism
+- consortiums_industriels_de_l_eau_eco_communalism
+- enclaves_extractivistes_residuelles_des_corridors_eco_communalism
+- factions_autoritaires_locales_identitaires_exclusionnistes_eco_communalism
+- factions_extractivistes_des_aquiferes_communs_eco_communalism
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -97,6 +121,35 @@ La tension la plus aiguë oppose les assemblées du nord, peuplées de communaut
 - [[organisation_territoires]]
 - [[gouvernance_institutions]]
 - [[climat_environnement_global]]
+
+
+## Relations
+**Alliés :**
+- [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]]
+- [[assemblees_bioterritoriales_regionales_eco_communalism]]
+- [[assemblees_cooperatives_regionales_eco_communalism]]
+- [[assemblees_de_bassin_versant_eco_communalism]]
+- [[cercles_de_mediation_territoriale_intercommunautaire_eco_communalism]]
+- [[collectifs_de_cartographie_ecologique_participative_eco_communalism]]
+- [[confederation_bassins_vivants_eco_communalism]]
+- [[confederation_communs_arc_septentrional_eco_communalism]]
+- [[confederation_des_communs_de_l_arc_septentrional_eco_communalism]]
+- [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]]
+- [[factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism]]
+- [[guildes_de_mediateurs_ecologiques_eco_communalism]]
+- [[kalaallit_nunaat_bioterritoire_eco_communalism]]
+- [[kalaallit_nunaat_sovereign_fund_eco_communalism]]
+- [[leena_vainala_eco_communalism]]
+- [[reseau_assemblees_fennoscandien_eco_communalism]]
+- [[reseau_terrafond_bassins_eco_communalism]]
+- [[tampere_charte_eco_communalism]]
+**Opposants :**
+- [[communautes_rurales_dissidentes_anti_cooperation_regionale_eco_communalism]]
+- [[communs_secessionnistes_hors_coordination_eco_communalism]]
+- [[consortiums_industriels_de_l_eau_eco_communalism]]
+- [[enclaves_extractivistes_residuelles_des_corridors_eco_communalism]]
+- [[factions_autoritaires_locales_identitaires_exclusionnistes_eco_communalism]]
+- [[factions_extractivistes_des_aquiferes_communs_eco_communalism]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

@@ -4,6 +4,7 @@ type: instance
 slug: reseau_mnemos_breakdown
 entite: reseau_mnemos
 scenario: breakdown
+statut: officialise_enrichi
 localisation:
   zone: noeud_mnemos_pannonie
   lieu: Bassin Pannonien
@@ -34,15 +35,20 @@ zone_systemique:
     - société
 
 alliances:
-    - communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
-    - reseaux_de_medecine_traditionnelle_augmentee_reference
-    - collectifs_de_gardiens_archivistes_itinerants_breakdown
-
+- bureau_des_territoires_residuels_breakdown
+- collectifs_de_gardiens_archivistes_itinerants_breakdown
+- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- lagos_interieur_mnemos_breakdown
+- noeud_mnemos_pannonie_breakdown
+- oracle_des_seuils_breakdown
+- reseaux_de_medecine_traditionnelle_augmentee_reference
+- tribunal_algorithmique_de_bruxelles_breakdown
 oppositions:
-    - seigneuries_logistiques_armees_breakdown
-    - corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown
-    - factions_propagandistes_des_archives_breakdown
-
+- collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
+- communautes_religieuses_des_relais_physiques_breakdown
+- corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown
+- factions_propagandistes_des_archives_breakdown
+- seigneuries_logistiques_armees_breakdown
 type_relation_dominante: conflit
 
 annee_debut: 2026
@@ -86,12 +92,26 @@ Stockage fragmentaire et non synchronisé de savoirs critiques (médicaux, agric
 - [[gouvernance_institutions]]
 - [[energie_ressources_critiques]]
 
-## Relations
-**Alliés** : [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]], [[reseaux_de_medecine_traditionnelle_augmentee_reference]], [[collectifs_de_gardiens_archivistes_itinerants_breakdown]]
-**Opposants** : [[seigneuries_logistiques_armees_breakdown]], [[corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown]], [[factions_propagandistes_des_archives_breakdown]]
 
 ## Description journalistique
 Autrefois présentée comme l'assurance-vie de la civilisation, Mnemos ressemble aujourd'hui à une bibliothèque d'Alexandrie explosée en mille morceaux épars dans les décombres du monde. Dans le bassin pannonien, un nœud isolé tourne sur des panneaux solaires rafistolés, gardé par une poignée de techniciens qui refusent de partager leurs archives médicales sans contrepartie alimentaire. À Lagos-Intérieur, un autre cluster contient des données agricoles que trois factions se disputent à coups d'ultimatums. Les protocoles de synchronisation qui devaient relier tout cela sont morts avec les backbones intercontinentaux. Ce qu'il reste de Mnemos, c'est une promesse trahie — et la preuve que même les infrastructures conçues pour résister à l'effondrement peuvent se fragmenter avec lui.
 
 ## Tensions narratives
 La question centrale est de savoir si les Fragments peuvent un jour se resynchroniser — ou si la méfiance entre clusters est désormais irréversible. Certains gardiens tentent de reconstruire un protocole minimal d'échange, ce qui en fait des cibles autant que des héros. D'autres ont délibérément corrompu leurs archives pour les rendre inutilisables par des envahisseurs, au risque de détruire ce qu'ils prétendaient protéger. Enfin, des rumeurs persistent d'un nœud maître encore intact, quelque part en zone polaire, qui contiendrait la sauvegarde complète du réseau originel — et autour duquel se forment des expéditions aussi désespérées que dangereuses.
+
+## Relations
+**Alliés :**
+- [[bureau_des_territoires_residuels_breakdown]]
+- [[collectifs_de_gardiens_archivistes_itinerants_breakdown]]
+- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[lagos_interieur_mnemos_breakdown]]
+- [[noeud_mnemos_pannonie_breakdown]]
+- [[oracle_des_seuils_breakdown]]
+- [[reseaux_de_medecine_traditionnelle_augmentee_reference]]
+- [[tribunal_algorithmique_de_bruxelles_breakdown]]
+**Opposants :**
+- [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]]
+- [[communautes_religieuses_des_relais_physiques_breakdown]]
+- [[corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown]]
+- [[factions_propagandistes_des_archives_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]

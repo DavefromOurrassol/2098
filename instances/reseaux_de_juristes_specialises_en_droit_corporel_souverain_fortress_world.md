@@ -33,8 +33,25 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- alliance_sanitaire_des_populations_exclues_fortress_world
+- bassora_couloir_refugies_fortress_world
+- cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
+- cliniques_de_deaugmentation_independantes_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world
+- internationale_travailleurs_augmentes_fortress_world
+- reseaux_d_echange_clandestin_inter_zones_fortress_world
+- tribunal_algorithmique_de_bruxelles_fortress_world
+oppositions:
+- agences_de_securite_interieure_des_etats_forteresses_fortress_world
+- appareils_d_etat_des_blocs_fermes_fortress_world
+- conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world
+- dispositifs_de_surveillance_numerique_souveraine_fortress_world
+- etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world
+- nexus_biosyn_division_eurasienne_fortress_world
+- nexus_biosyn_division_pacifique_fortress_world
+- nexus_biosyn_fortress_world
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -100,6 +117,28 @@ Leur doctrine de l'inviolabilité corporelle entre en contradiction frontale ave
 - [[gouvernance_institutions]]
 - [[sante_biotechnologies]]
 - [[organisation_territoires]]
+
+
+## Relations
+**Alliés :**
+- [[alliance_sanitaire_des_populations_exclues_fortress_world]]
+- [[bassora_couloir_refugies_fortress_world]]
+- [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]]
+- [[cliniques_de_deaugmentation_independantes_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world]]
+- [[internationale_travailleurs_augmentes_fortress_world]]
+- [[reseaux_d_echange_clandestin_inter_zones_fortress_world]]
+- [[tribunal_algorithmique_de_bruxelles_fortress_world]]
+**Opposants :**
+- [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]]
+- [[appareils_d_etat_des_blocs_fermes_fortress_world]]
+- [[conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world]]
+- [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
+- [[etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world]]
+- [[nexus_biosyn_division_eurasienne_fortress_world]]
+- [[nexus_biosyn_division_pacifique_fortress_world]]
+- [[nexus_biosyn_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

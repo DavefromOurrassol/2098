@@ -33,8 +33,22 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
+- bureau_gouvernance_algorithmique_policy_reform
+- conseil_onu_de_gouvernance_numerique_et_ia_policy_reform
+- conseil_regulation_algorithmique_policy_reform
+- consortium_technologique_des_nations_integrees_policy_reform
+- directive_kontinuum_policy_reform
+- front_techno_utopiste_de_la_decision_automatisee_policy_reform
+- institut_brookings_singapour_de_politique_computationnelle_policy_reform
+oppositions:
+- coalition_des_souverainistes_numeriques_policy_reform
+- collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform
+- faction_regulatrice_dure_au_sein_du_cei_policy_reform
+- front_souverainiste_des_blocs_non_signataires_policy_reform
+- reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
+- tribunal_algorithmique_de_bruxelles_policy_reform
 type_relation_dominante: dépendance
 annee_debut: 2026
 annee_fin: null
@@ -100,6 +114,25 @@ Le Consortium est pris dans une contradiction structurelle : institué pour gara
 - [[technologie_information]]
 - [[gouvernance_institutions]]
 - [[energie_ressources_critiques]]
+
+
+## Relations
+**Alliés :**
+- [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]
+- [[bureau_gouvernance_algorithmique_policy_reform]]
+- [[conseil_onu_de_gouvernance_numerique_et_ia_policy_reform]]
+- [[conseil_regulation_algorithmique_policy_reform]]
+- [[consortium_technologique_des_nations_integrees_policy_reform]]
+- [[directive_kontinuum_policy_reform]]
+- [[front_techno_utopiste_de_la_decision_automatisee_policy_reform]]
+- [[institut_brookings_singapour_de_politique_computationnelle_policy_reform]]
+**Opposants :**
+- [[coalition_des_souverainistes_numeriques_policy_reform]]
+- [[collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform]]
+- [[faction_regulatrice_dure_au_sein_du_cei_policy_reform]]
+- [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+- [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]]
+- [[tribunal_algorithmique_de_bruxelles_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

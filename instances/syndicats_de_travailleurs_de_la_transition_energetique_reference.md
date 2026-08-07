@@ -31,8 +31,20 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- collectifs_de_journalisme_embarque_reference
+- conseil_de_geneve_pour_les_droits_biosociaux_reference
+- cooperatives_energetiques_decentralisees_reference
+- federation_communs_territoriaux_reference
+- federation_des_cliniques_autonomes_reference
+- internationale_travailleurs_augmentes_reference
+- reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference
+oppositions:
+- consortium_augmentwork_reference
+- consortiums_energetiques_opaques_reference
+- consortiums_prives_d_extraction_de_ressources_critiques_reference
+- corporations_d_extraction_energetique_non_signataires_reference
+- lobbies_industriels_des_etats_non_signataires_reference
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -96,6 +108,23 @@ La tension centrale qui les déchire oppose les partisans d'une transition accé
 - [[systemes_productifs_travail]]
 - [[energie_ressources_critiques]]
 - [[gouvernance_institutions]]
+
+
+## Relations
+**Alliés :**
+- [[collectifs_de_journalisme_embarque_reference]]
+- [[conseil_de_geneve_pour_les_droits_biosociaux_reference]]
+- [[cooperatives_energetiques_decentralisees_reference]]
+- [[federation_communs_territoriaux_reference]]
+- [[federation_des_cliniques_autonomes_reference]]
+- [[internationale_travailleurs_augmentes_reference]]
+- [[reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference]]
+**Opposants :**
+- [[consortium_augmentwork_reference]]
+- [[consortiums_energetiques_opaques_reference]]
+- [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[corporations_d_extraction_energetique_non_signataires_reference]]
+- [[lobbies_industriels_des_etats_non_signataires_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

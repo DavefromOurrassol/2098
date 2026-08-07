@@ -31,8 +31,26 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- conglomerats_d_automatisation_industrielle_integrale_policy_reform
+- consortium_agro_pacifique_policy_reform
+- factions_technocratiques_de_la_marchandisation_hydrique_policy_reform
+- lobbies_des_energies_fossiles_residuelles_policy_reform
+- reseau_des_lobbyistes_techniques_onu_energie_policy_reform
+oppositions:
+- agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
+- amara_diallo_nkosi_policy_reform
+- autorite_continentale_des_ressources_aquatiques_acra_policy_reform
+- autorite_mondiale_du_vivant_amv_policy_reform
+- coalition_des_semences_libres_policy_reform
+- collectifs_de_biohackers_agro_communautaires_policy_reform
+- conseil_de_regulation_climatique_global_policy_reform
+- consortium_africain_de_biotechnologies_sociales_policy_reform
+- consortium_amazonia_viva_policy_reform
+- great_lakes_autonomous_compact_policy_reform
+- institut_de_therapeutique_integree_de_nairobi_policy_reform
+- les_veilleurs_du_fleuve_policy_reform
+- mouvement_pour_la_justice_ecologique_communautaire_policy_reform
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -97,6 +115,29 @@ La tension fondamentale de ces consortiums réside dans leur position d'acteurs 
 - [[systemes_productifs_travail]]
 - [[climat_environnement_global]]
 - [[organisation_territoires]]
+
+
+## Relations
+**Alliés :**
+- [[conglomerats_d_automatisation_industrielle_integrale_policy_reform]]
+- [[consortium_agro_pacifique_policy_reform]]
+- [[factions_technocratiques_de_la_marchandisation_hydrique_policy_reform]]
+- [[lobbies_des_energies_fossiles_residuelles_policy_reform]]
+- [[reseau_des_lobbyistes_techniques_onu_energie_policy_reform]]
+**Opposants :**
+- [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]
+- [[amara_diallo_nkosi_policy_reform]]
+- [[autorite_continentale_des_ressources_aquatiques_acra_policy_reform]]
+- [[autorite_mondiale_du_vivant_amv_policy_reform]]
+- [[coalition_des_semences_libres_policy_reform]]
+- [[collectifs_de_biohackers_agro_communautaires_policy_reform]]
+- [[conseil_de_regulation_climatique_global_policy_reform]]
+- [[consortium_africain_de_biotechnologies_sociales_policy_reform]]
+- [[consortium_amazonia_viva_policy_reform]]
+- [[great_lakes_autonomous_compact_policy_reform]]
+- [[institut_de_therapeutique_integree_de_nairobi_policy_reform]]
+- [[les_veilleurs_du_fleuve_policy_reform]]
+- [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

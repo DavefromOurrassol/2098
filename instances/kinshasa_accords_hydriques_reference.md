@@ -4,6 +4,7 @@ type: instance
 slug: kinshasa_accords_hydriques_reference
 entite: kinshasa_accords_hydriques
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: kinshasa_accords_hydriques
   lieu: Kinshasa
@@ -37,22 +38,24 @@ zone_systemique:
     - société
 
 alliances:
-    - commission_hydrique_de_l_union_africaine_reference
-    - autorites_regionales_de_regulation_hydrologique_reference
-    - programme_onu_eau_2080_reference
-    - union_africaine_de_resilience_territoriale_reference
-    - banque_mondiale_des_transitions_climatiques_reference
-    - ong_de_tracabilite_des_ressources_critiques_reference
-    - observatoire_climatique_des_territoires_oct_reference
-
+- autorites_regionales_de_regulation_hydrologique_reference
+- banque_mondiale_des_transitions_climatiques_reference
+- commission_hydrique_de_l_union_africaine_reference
+- ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference
+- nairobi_crrc_reference
+- observatoire_climatique_des_territoires_oct_reference
+- ong_de_tracabilite_des_ressources_critiques_reference
+- programme_onu_eau_2080_reference
+- regulateurs_de_l_union_continentale_africaine_reference
+- union_africaine_de_resilience_territoriale_reference
+- union_africaine_resilience_reference
 oppositions:
-    - consortiums_d_extraction_miniere_du_bassin_congolais_reference
-    - lobbies_agro_industriels_a_haute_consommation_d_eau_reference
-    - factions_eurasiatiques_contre_la_tarification_hydrique_reference
-    - consortiums_prives_d_extraction_de_ressources_critiques_reference
-    - bloc_des_souverainistes_climatiques_reference
-    - gouvernements_du_bloc_sahelien_autonome_reference
-
+- bloc_des_souverainistes_climatiques_reference
+- consortiums_d_extraction_miniere_du_bassin_congolais_reference
+- consortiums_prives_d_extraction_de_ressources_critiques_reference
+- factions_eurasiatiques_contre_la_tarification_hydrique_reference
+- gouvernements_du_bloc_sahelien_autonome_reference
+- lobbies_agro_industriels_a_haute_consommation_d_eau_reference
 type_relation_dominante: coopération
 
 annee_debut: 2041
@@ -96,12 +99,30 @@ Les Accords fixent des quotas d'extraction et de dérivation des eaux du bassin 
 - [[geopolitique_conflits]]
 - [[gouvernance_institutions]]
 
-## Relations
-**Alliés** : [[commission_hydrique_de_l_union_africaine_reference]], [[autorites_regionales_de_regulation_hydrologique_reference]], [[programme_onu_eau_2080_reference]], [[union_africaine_de_resilience_territoriale_reference]], [[banque_mondiale_des_transitions_climatiques_reference]], [[ong_de_tracabilite_des_ressources_critiques_reference]], [[observatoire_climatique_des_territoires_oct_reference]]
-**Opposants** : [[consortiums_d_extraction_miniere_du_bassin_congolais_reference]], [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]], [[factions_eurasiatiques_contre_la_tarification_hydrique_reference]], [[consortiums_prives_d_extraction_de_ressources_critiques_reference]], [[bloc_des_souverainistes_climatiques_reference]], [[gouvernements_du_bloc_sahelien_autonome_reference]]
 
 ## Description journalistique
 Depuis leur signature dans la chaleur étouffante de Kinshasa en 2041, les Accords Hydriques ont survécu à sept crises majeures, quatre tentatives de retrait unilatéral et une sécheresse qui a failli réduire le débit du Congo à son étiage historique. Aujourd'hui, les délégations se réunissent dans l'immense salle climatisée du Palais du Peuple rénové, entourées d'écrans affichant en temps réel les données des capteurs hydrologiques — une vitrine technologique derrière laquelle se jouent des négociations d'une brutalité tranquille. Les États riverains plus puissants extraient systématiquement au-delà de leurs quotas lors des années sèches, tandis que les petits signataires agitent leurs rapports de violations sans parvenir à déclencher la moindre sanction. Selon un diplomate en poste à Kinshasa sous couvert d'anonymat, 'les Accords fonctionnent exactement comme prévu : ils empêchent la guerre ouverte, et c'est tout ce qu'on leur a vraiment demandé de faire.'
 
 ## Tensions narratives
 La prochaine grande sécheresse du bassin — que l'Oracle des Seuils prédit avec 73 % de probabilité pour 2101-2103 — risque de rendre caducs les quotas actuels et de forcer une renégociation dans un contexte de rivalité accrue entre États et consortiums privés. Par ailleurs, la pression croissante des consortiums miniers du bassin congolais pour obtenir des dérogations permanentes aux restrictions de dérivation fragilise le secrétariat des Accords, dont plusieurs fonctionnaires clés font l'objet d'enquêtes pour corruption. Enfin, la question de l'intégration des données citoyennes collectées par les réseaux de capteurs locaux dans les décisions d'allocation divise profondément les signataires entre États transparents et régimes opaques.
+
+## Relations
+**Alliés :**
+- [[autorites_regionales_de_regulation_hydrologique_reference]]
+- [[banque_mondiale_des_transitions_climatiques_reference]]
+- [[commission_hydrique_de_l_union_africaine_reference]]
+- [[ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference]]
+- [[nairobi_crrc_reference]]
+- [[observatoire_climatique_des_territoires_oct_reference]]
+- [[ong_de_tracabilite_des_ressources_critiques_reference]]
+- [[programme_onu_eau_2080_reference]]
+- [[regulateurs_de_l_union_continentale_africaine_reference]]
+- [[union_africaine_de_resilience_territoriale_reference]]
+- [[union_africaine_resilience_reference]]
+**Opposants :**
+- [[bloc_des_souverainistes_climatiques_reference]]
+- [[consortiums_d_extraction_miniere_du_bassin_congolais_reference]]
+- [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[factions_eurasiatiques_contre_la_tarification_hydrique_reference]]
+- [[gouvernements_du_bloc_sahelien_autonome_reference]]
+- [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]]

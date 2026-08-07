@@ -4,6 +4,7 @@ type: instance
 slug: voix_du_dehors_fortress_world
 entite: voix_du_dehors
 scenario: fortress_world
+statut: officialise_enrichi
 localisation:
   zone: null
   lieu: null
@@ -37,15 +38,36 @@ zone_systemique:
     - cyberspace
 
 alliances:
-    - reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world
-    - cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
-    - archives_chiffrees_de_l_open_internet_coalition_fortress_world
-
+- archives_chiffrees_de_l_open_internet_coalition_fortress_world
+- aria_instance_fantome_fortress_world
+- bassora_couloir_refugies_fortress_world
+- campements_seuils_fermes_fortress_world
+- cellules_mouvement_commun_midwest_fortress_world
+- cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
+- mouvement_commun_midwest_fortress_world
+- reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world
+- rust_belt_communes_libres_fortress_world
 oppositions:
-    - dispositifs_de_surveillance_numerique_souveraine_fortress_world
-    - consortium_des_medias_d_etat_souverains_hegemonia_press_xinhua_fortifiee_eurovox_integral_fortress_world
-    - services_de_contre_information_des_blocs_geopolitiques_concurrents_reference
-
+- amazonie_pacte_vert_fortress_world
+- bloc_atlantique_fortress_world
+- bloc_eurasiatique_occidental_fortress_world
+- bunker_chambre_securite_territoriale_fortress_world
+- bureau_des_territoires_residuels_fortress_world
+- bureau_territoires_residuels_fortress_world
+- centre_controle_orbital_helios_fortress_world
+- conseil_moscou_est_fortress_world
+- consortium_des_medias_d_etat_souverains_hegemonia_press_xinhua_fortifiee_eurovox_integral_fortress_world
+- datacenters_conseil_eurasiatique_fortress_world
+- directive_kontinuum_fortress_world
+- dispositifs_de_surveillance_numerique_souveraine_fortress_world
+- geneve_bunker_fortress_world
+- nexcore_atlantique_infrastructure_fortress_world
+- pacte_forteresses_souveraines_fortress_world
+- services_de_contre_information_des_blocs_geopolitiques_concurrents_reference
+- siege_genevois_cars_fortress_world
+- tbilissi_nord_zone_franche_fortress_world
+- zone_usines_forteresses_eurasie_fortress_world
+- zones_grises_tampons_fortress_world
 type_relation_dominante: infiltration
 
 annee_debut: 2041
@@ -89,12 +111,42 @@ Publication de dossiers d'investigation sur les flux de ressources critiques dis
 - [[geopolitique_conflits]]
 - [[organisation_territoires]]
 
-## Relations
-**Alliés** : [[reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world]], [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]], [[archives_chiffrees_de_l_open_internet_coalition_fortress_world]]
-**Opposants** : [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]], [[consortium_des_medias_d_etat_souverains_hegemonia_press_xinhua_fortifiee_eurovox_integral_fortress_world]], [[services_de_contre_information_des_blocs_geopolitiques_concurrents_reference]]
 
 ## Description journalistique
 On ne trouve pas Fractures — on est trouvé par Fractures. Dans les couloirs des zones franches de Tbilissi-Nord ou sous les néons des marchés gris de Casablanca-Périphérie, des mains passent des clés USB encapsulées dans de la résine biosourcée, marquées d'une ligne brisée gravée au laser. Les dossiers qu'elles contiennent ont fait tomber deux gouverneurs de bloc en dix ans, révélé les échanges secrets d'uranium enrichi entre ennemis déclarés, et coûté la vie à au moins dix-sept correspondants confirmés. Fractures publie en rafales irrégulières, sur des miroirs éphémères que les filtres souverains mettent moins de six heures à détruire — mais ces six heures suffisent. Ce que ses ennemis ne lui pardonnent pas, c'est moins ce qu'il révèle que ce qu'il prouve : que la frontière existe encore, et qu'elle est poreuse.
 
 ## Tensions narratives
 La question qui fracture Fractures de l'intérieur : depuis 2089, des preuves circulent qu'un des trois nœuds de financement anonyme du réseau serait une opération d'influence d'un bloc concurrent — ce qui ferait de certaines révélations des armes déguisées en vérités. Certains correspondants ont commencé à publier en dehors des protocoles officiels du réseau, créant des branches sauvages incontrôlables. Et pour la première fois, un État-bloc propose une amnistie et une légalisation partielle en échange d'une intégration surveillée — offre que deux membres fondateurs encore actifs envisagent sérieusement d'accepter.
+
+## Relations
+**Alliés :**
+- [[archives_chiffrees_de_l_open_internet_coalition_fortress_world]]
+- [[aria_instance_fantome_fortress_world]]
+- [[bassora_couloir_refugies_fortress_world]]
+- [[campements_seuils_fermes_fortress_world]]
+- [[cellules_mouvement_commun_midwest_fortress_world]]
+- [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]]
+- [[mouvement_commun_midwest_fortress_world]]
+- [[reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world]]
+- [[rust_belt_communes_libres_fortress_world]]
+**Opposants :**
+- [[amazonie_pacte_vert_fortress_world]]
+- [[bloc_atlantique_fortress_world]]
+- [[bloc_eurasiatique_occidental_fortress_world]]
+- [[bunker_chambre_securite_territoriale_fortress_world]]
+- [[bureau_des_territoires_residuels_fortress_world]]
+- [[bureau_territoires_residuels_fortress_world]]
+- [[centre_controle_orbital_helios_fortress_world]]
+- [[conseil_moscou_est_fortress_world]]
+- [[consortium_des_medias_d_etat_souverains_hegemonia_press_xinhua_fortifiee_eurovox_integral_fortress_world]]
+- [[datacenters_conseil_eurasiatique_fortress_world]]
+- [[directive_kontinuum_fortress_world]]
+- [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
+- [[geneve_bunker_fortress_world]]
+- [[nexcore_atlantique_infrastructure_fortress_world]]
+- [[pacte_forteresses_souveraines_fortress_world]]
+- [[services_de_contre_information_des_blocs_geopolitiques_concurrents_reference]]
+- [[siege_genevois_cars_fortress_world]]
+- [[tbilissi_nord_zone_franche_fortress_world]]
+- [[zone_usines_forteresses_eurasie_fortress_world]]
+- [[zones_grises_tampons_fortress_world]]

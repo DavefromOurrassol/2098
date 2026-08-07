@@ -34,8 +34,31 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- brigades_medicales_itinerantes_breakdown
+- collectif_des_climatologues_sans_etat_breakdown
+- collectifs_de_reparation_energetique_breakdown
+- collectifs_de_sante_communautaire_autogeree_breakdown
+- delta_mekong_racines_breakdown
+- enclaves_agro_communautaires_autonomes_breakdown
+- frente_sert_o_livre_breakdown
+- front_humanitaire_d_urgence_non_affilie_breakdown
+- massif_central_cicatrices_vertes_breakdown
+- mouvement_racines_vivantes_breakdown
+- occitanie_racines_meres_breakdown
+- reseaux_de_soigneurs_traditionnels_breakdown
+- reseaux_de_solidarite_horizontale_post_effondrement_breakdown
+- saboteurs_des_corridors_de_transit_breakdown
+- vallee_allier_terrafond_breakdown
+oppositions:
+- consortiums_logistiques_agro_corporatifs_breakdown
+- cooperative_terrafond_breakdown
+- gouvernements_de_forteresse_anti_nairobi_breakdown
+- grandes_lacs_compact_eau_breakdown
+- milices_agro_defensives_locales_breakdown
+- milices_de_controle_territorial_breakdown
+- nexcore_breakdown
+- seigneuries_foncieres_opportunistes_breakdown
 type_relation_dominante: dépendance
 annee_debut: 2026
 annee_fin: null
@@ -93,6 +116,34 @@ Ces communautés sont simultanément désirées pour leurs savoir-faire et rejet
 - [[demographie_mobilite_humaine]]
 - [[organisation_territoires]]
 - [[systemes_productifs_travail]]
+
+
+## Relations
+**Alliés :**
+- [[brigades_medicales_itinerantes_breakdown]]
+- [[collectif_des_climatologues_sans_etat_breakdown]]
+- [[collectifs_de_reparation_energetique_breakdown]]
+- [[collectifs_de_sante_communautaire_autogeree_breakdown]]
+- [[delta_mekong_racines_breakdown]]
+- [[enclaves_agro_communautaires_autonomes_breakdown]]
+- [[frente_sert_o_livre_breakdown]]
+- [[front_humanitaire_d_urgence_non_affilie_breakdown]]
+- [[massif_central_cicatrices_vertes_breakdown]]
+- [[mouvement_racines_vivantes_breakdown]]
+- [[occitanie_racines_meres_breakdown]]
+- [[reseaux_de_soigneurs_traditionnels_breakdown]]
+- [[reseaux_de_solidarite_horizontale_post_effondrement_breakdown]]
+- [[saboteurs_des_corridors_de_transit_breakdown]]
+- [[vallee_allier_terrafond_breakdown]]
+**Opposants :**
+- [[consortiums_logistiques_agro_corporatifs_breakdown]]
+- [[cooperative_terrafond_breakdown]]
+- [[gouvernements_de_forteresse_anti_nairobi_breakdown]]
+- [[grandes_lacs_compact_eau_breakdown]]
+- [[milices_agro_defensives_locales_breakdown]]
+- [[milices_de_controle_territorial_breakdown]]
+- [[nexcore_breakdown]]
+- [[seigneuries_foncieres_opportunistes_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

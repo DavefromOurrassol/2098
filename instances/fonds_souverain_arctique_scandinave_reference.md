@@ -30,8 +30,22 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- arctic_passage_authority_reference
+- armada_logistique_nordique_reference
+- conseil_des_etats_nordiques_integres_reference
+- consortium_energetique_baltique_reference
+- consortium_energetique_des_mers_du_nord_reference
+- corridor_arctique_nordique_reference
+- kalaallit_nunaat_sovereign_fund_reference
+- ong_environnementales_de_terrain_reference
+oppositions:
+- bloc_ressources_eurasiatique_bre_reference
+- collectifs_de_peche_inuit_et_sami_reference
+- consortiums_prives_d_extraction_de_ressources_critiques_reference
+- factions_eurasiatiques_contre_la_tarification_hydrique_reference
+- lobbies_industriels_des_etats_non_signataires_reference
+- murmansk_transit_arctique_reference
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -97,6 +111,26 @@ Le Fonds est structurellement déchiré entre deux mandats incompatibles : maxim
 - [[energie_ressources_critiques]]
 - [[gouvernance_institutions]]
 - [[climat_environnement_global]]
+
+
+
+## Relations
+**Alliés :**
+- [[arctic_passage_authority_reference]]
+- [[armada_logistique_nordique_reference]]
+- [[conseil_des_etats_nordiques_integres_reference]]
+- [[consortium_energetique_baltique_reference]]
+- [[consortium_energetique_des_mers_du_nord_reference]]
+- [[corridor_arctique_nordique_reference]]
+- [[kalaallit_nunaat_sovereign_fund_reference]]
+- [[ong_environnementales_de_terrain_reference]]
+**Opposants :**
+- [[bloc_ressources_eurasiatique_bre_reference]]
+- [[collectifs_de_peche_inuit_et_sami_reference]]
+- [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[factions_eurasiatiques_contre_la_tarification_hydrique_reference]]
+- [[lobbies_industriels_des_etats_non_signataires_reference]]
+- [[murmansk_transit_arctique_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

@@ -4,6 +4,7 @@ type: instance
 slug: leena_vainala_policy_reform
 entite: leena_vainala
 scenario: policy_reform
+statut: officialise_enrichi
 localisation:
   zone: hub_europeen_regulation
   lieu: Genève / Tampere

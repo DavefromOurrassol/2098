@@ -33,8 +33,22 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- administrations_de_controle_frontalier_des_blocs_fortress_world
+- agences_de_securite_interieure_des_etats_forteresses_fortress_world
+- appareils_d_etat_des_blocs_fermes_fortress_world
+- bloc_atlantique_fortress_world
+- conseil_regulation_algorithmique_fortress_world
+- nexcore_atlantique_infrastructure_fortress_world
+- nexcore_fortress_world
+- pacte_forteresses_souveraines_fortress_world
+oppositions:
+- cellules_mouvement_commun_midwest_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- collectifs_du_seuil_fortress_world
+- mouvement_commun_midwest_fortress_world
+- reseaux_d_echange_clandestin_inter_zones_fortress_world
+- rust_belt_communes_libres_fortress_world
 type_relation_dominante: dépendance
 annee_debut: 2026
 annee_fin: null
@@ -99,6 +113,25 @@ Sa contradiction centrale est abyssale : prétendre défendre les intérêts des
 - [[gouvernance_institutions]]
 - [[valeurs_culture_tempo_sociale]]
 - [[frontieres_du_systeme]]
+
+
+## Relations
+**Alliés :**
+- [[administrations_de_controle_frontalier_des_blocs_fortress_world]]
+- [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]]
+- [[appareils_d_etat_des_blocs_fermes_fortress_world]]
+- [[bloc_atlantique_fortress_world]]
+- [[conseil_regulation_algorithmique_fortress_world]]
+- [[nexcore_atlantique_infrastructure_fortress_world]]
+- [[nexcore_fortress_world]]
+- [[pacte_forteresses_souveraines_fortress_world]]
+**Opposants :**
+- [[cellules_mouvement_commun_midwest_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[collectifs_du_seuil_fortress_world]]
+- [[mouvement_commun_midwest_fortress_world]]
+- [[reseaux_d_echange_clandestin_inter_zones_fortress_world]]
+- [[rust_belt_communes_libres_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

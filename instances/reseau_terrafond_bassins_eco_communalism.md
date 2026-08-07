@@ -4,6 +4,7 @@ type: instance
 slug: reseau_terrafond_bassins_eco_communalism
 entite: reseau_terrafond_bassins
 scenario: eco_communalism
+statut: officialise_enrichi
 localisation:
   zone: reseau_terrafond_bassins
   lieu: Réseau Terrafond des Bassins
@@ -37,33 +38,38 @@ zone_systemique:
     - société
 
 alliances:
-    - assemblee_territoires_eco_communalism
-    - assemblees_bioterritoriales_regionales_eco_communalism
-    - assemblees_de_bassin_versant_eco_communalism
-    - confederation_bassins_vivants_eco_communalism
-    - conseils_de_bassin_versant_eco_communalistes_eco_communalism
-    - collectifs_de_cartographie_ecologique_participative_eco_communalism
-    - collectifs_de_geo_observateurs_citoyens_eco_communalism
-    - brigades_de_restauration_ecologique_eco_communalism
-    - guildes_de_mediateurs_ecologiques_eco_communalism
-    - cercles_de_mediation_territoriale_intercommunautaire_eco_communalism
-    - archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
-    - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
-    - trame_bioclimatique_eco_communalism
-    - assemblees_cooperatives_regionales_eco_communalism
-
+- archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
+- assemblee_territoires_eco_communalism
+- assemblees_bioterritoriales_regionales_eco_communalism
+- assemblees_cooperatives_regionales_eco_communalism
+- assemblees_de_bassin_versant_eco_communalism
+- brigades_de_restauration_ecologique_eco_communalism
+- cercles_de_mediation_territoriale_intercommunautaire_eco_communalism
+- collectifs_de_cartographie_ecologique_participative_eco_communalism
+- collectifs_de_geo_observateurs_citoyens_eco_communalism
+- confederation_bassins_vivants_eco_communalism
+- conseils_de_bassin_versant_eco_communalistes_eco_communalism
+- cooperatives_d_habitat_regeneratif_eco_communalism
+- cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
+- guildes_de_mediateurs_ecologiques_eco_communalism
+- mutuelles_de_sante_territoriales_eco_communalism
+- reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism
+- reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
+- reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism
+- trame_bioclimatique_eco_communalism
+- tresse_verte_corridor_eco_communalism
 oppositions:
-    - consortiums_industriels_de_l_eau_eco_communalism
-    - factions_extractivistes_des_aquiferes_communs_eco_communalism
-    - agro_conglomerats_des_enclaves_technologiques_eco_communalism
-    - enclaves_extractivistes_residuelles_des_corridors_eco_communalism
-    - consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism
-    - reseaux_de_notables_communautaires_capturistes_eco_communalism
-    - conseils_territoriaux_opaques_sur_la_gestion_des_ressources_eco_communalism
-    - communs_secessionnistes_hors_coordination_eco_communalism
-    - communautes_rurales_dissidentes_anti_cooperation_regionale_eco_communalism
-    - cartels_de_narration_de_penurie_eco_communalism
-
+- agro_conglomerats_des_enclaves_technologiques_eco_communalism
+- cartels_de_narration_de_penurie_eco_communalism
+- communautes_rurales_dissidentes_anti_cooperation_regionale_eco_communalism
+- communs_secessionnistes_hors_coordination_eco_communalism
+- conseils_territoriaux_opaques_sur_la_gestion_des_ressources_eco_communalism
+- consortiums_industriels_de_l_eau_eco_communalism
+- consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism
+- courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism
+- enclaves_extractivistes_residuelles_des_corridors_eco_communalism
+- factions_extractivistes_des_aquiferes_communs_eco_communalism
+- reseaux_de_notables_communautaires_capturistes_eco_communalism
 type_relation_dominante: coopération
 
 annee_debut: 2041
@@ -107,12 +113,44 @@ Terrafond administre les droits d'usage des terres et des bassins versants via d
 - [[systeme_economique_redistribution]]
 - [[gouvernance_institutions]]
 
-## Relations
-**Alliés** : [[assemblee_territoires_eco_communalism]], [[assemblees_bioterritoriales_regionales_eco_communalism]], [[assemblees_de_bassin_versant_eco_communalism]], [[confederation_bassins_vivants_eco_communalism]], [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]], [[collectifs_de_cartographie_ecologique_participative_eco_communalism]], [[collectifs_de_geo_observateurs_citoyens_eco_communalism]], [[brigades_de_restauration_ecologique_eco_communalism]], [[guildes_de_mediateurs_ecologiques_eco_communalism]], [[cercles_de_mediation_territoriale_intercommunautaire_eco_communalism]], [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]], [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]], [[trame_bioclimatique_eco_communalism]], [[assemblees_cooperatives_regionales_eco_communalism]]
-**Opposants** : [[consortiums_industriels_de_l_eau_eco_communalism]], [[factions_extractivistes_des_aquiferes_communs_eco_communalism]], [[agro_conglomerats_des_enclaves_technologiques_eco_communalism]], [[enclaves_extractivistes_residuelles_des_corridors_eco_communalism]], [[consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism]], [[reseaux_de_notables_communautaires_capturistes_eco_communalism]], [[conseils_territoriaux_opaques_sur_la_gestion_des_ressources_eco_communalism]], [[communs_secessionnistes_hors_coordination_eco_communalism]], [[communautes_rurales_dissidentes_anti_cooperation_regionale_eco_communalism]], [[cartels_de_narration_de_penurie_eco_communalism]]
 
 ## Description journalistique
 Dans les territoires où l'État central n'est plus qu'un souvenir diffus, le Réseau Terrafond des Bassins fait figure d'institution la plus concrète qui soit : ses délégués arpentent les berges, toisent les parcelles, et réunissent les assemblées de bassin au rythme des saisons. Fondé dans les années 2040 sur les décombres des agences foncières nationales, il administre aujourd'hui des millions d'hectares de terres agricoles et des centaines de bassins versants selon une règle unique : aucune ressource vitale ne peut être cédée, vendue ou exploitée sans le consentement formalisé de la communauté qui en dépend. Ses détracteurs — souvent des opérateurs industriels contraints de négocier l'accès à des aquifères jadis librement pompés — l'accusent d'être une bureaucratie déguisée en démocratie. Ses membres, eux, y voient la seule garantie que l'eau ne deviendra pas une marchandise de plus dans un monde qui en a déjà trop produit.
 
 ## Tensions narratives
 La question lancinante du Réseau Terrafond est celle-ci : jusqu'où la discipline collective peut-elle contraindre une communauté qui refuse ses verdicts ? Plusieurs bassins versants ont déjà connu des sécessions de fait, des groupes locaux appliquant leurs propres règles d'extraction sans mandat collectif. En parallèle, des réseaux de notables capturistes infiltrent les assemblées pour orienter les décisions foncières en leur faveur, menaçant la légitimité délibérative de l'intérieur. Et la pression des consortiums industriels sur les aquifères frontaliers ne faiblit pas : Terrafond manque de force coercitive propre, et sa survie dépend entièrement de la cohésion — fragile — de ses membres.
+
+## Relations
+**Alliés :**
+- [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]]
+- [[assemblee_territoires_eco_communalism]]
+- [[assemblees_bioterritoriales_regionales_eco_communalism]]
+- [[assemblees_cooperatives_regionales_eco_communalism]]
+- [[assemblees_de_bassin_versant_eco_communalism]]
+- [[brigades_de_restauration_ecologique_eco_communalism]]
+- [[cercles_de_mediation_territoriale_intercommunautaire_eco_communalism]]
+- [[collectifs_de_cartographie_ecologique_participative_eco_communalism]]
+- [[collectifs_de_geo_observateurs_citoyens_eco_communalism]]
+- [[confederation_bassins_vivants_eco_communalism]]
+- [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]]
+- [[cooperatives_d_habitat_regeneratif_eco_communalism]]
+- [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]
+- [[guildes_de_mediateurs_ecologiques_eco_communalism]]
+- [[mutuelles_de_sante_territoriales_eco_communalism]]
+- [[reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism]]
+- [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
+- [[reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism]]
+- [[trame_bioclimatique_eco_communalism]]
+- [[tresse_verte_corridor_eco_communalism]]
+**Opposants :**
+- [[agro_conglomerats_des_enclaves_technologiques_eco_communalism]]
+- [[cartels_de_narration_de_penurie_eco_communalism]]
+- [[communautes_rurales_dissidentes_anti_cooperation_regionale_eco_communalism]]
+- [[communs_secessionnistes_hors_coordination_eco_communalism]]
+- [[conseils_territoriaux_opaques_sur_la_gestion_des_ressources_eco_communalism]]
+- [[consortiums_industriels_de_l_eau_eco_communalism]]
+- [[consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism]]
+- [[courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism]]
+- [[enclaves_extractivistes_residuelles_des_corridors_eco_communalism]]
+- [[factions_extractivistes_des_aquiferes_communs_eco_communalism]]
+- [[reseaux_de_notables_communautaires_capturistes_eco_communalism]]

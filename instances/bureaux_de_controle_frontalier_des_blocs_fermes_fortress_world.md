@@ -32,14 +32,42 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
-- conseil_moscou_est_fortress_world
+- administrations_de_controle_frontalier_des_blocs_fortress_world
 - anba_siege_atlantique_fortress_world
+- bloc_atlantique_fortress_world
+- bloc_eurasiatique_occidental_fortress_world
+- bunker_chambre_securite_territoriale_fortress_world
+- bureau_territoires_residuels_fortress_world
+- conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world
+- conseil_moscou_est_fortress_world
+- consortium_des_medias_d_etat_souverains_hegemonia_press_xinhua_fortifiee_eurovox_integral_fortress_world
+- consortium_eurasiatique_des_ressources_fermees_fortress_world
+- corps_des_inspecteurs_de_conformite_inter_blocs_fortress_world
 - datacenters_conseil_eurasiatique_fortress_world
+- executif_militaro_civil_du_regime_fortress_world
+- instances_aria_concurrentes_des_blocs_rivaux_fortress_world
+- nexcore_atlantique_infrastructure_fortress_world
+- reseaux_prives_de_securite_aux_frontieres_fortress_world
+- terrashield_geoengineering_fortress_world
+- zones_grises_tampons_fortress_world
 oppositions:
+- aria_instance_fantome_fortress_world
+- bassora_couloir_refugies_fortress_world
+- campements_seuils_fermes_fortress_world
+- cliniques_de_deaugmentation_independantes_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- contrebandiers_energetiques_des_zones_grises_fortress_world
+- corridors_gris_asie_centrale_fortress_world
+- factions_dissidentes_du_consortium_helios_fortress_world
+- factions_internes_pro_autarcie_totale_fortress_world
+- institutions_multilaterales_residuelles_fortress_world
 - marches_gris_casablanca_fortress_world
 - marches_gris_tbilissi_fortress_world
-- campements_seuils_fermes_fortress_world
-- corridors_gris_asie_centrale_fortress_world
+- milices_de_piraterie_logistique_arctique_fortress_world
+- mouvement_commun_midwest_fortress_world
+- populations_des_zones_deficitaires_d_optimisation_fortress_world
+- reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world
+- vasil_orentchev_fortress_world
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -107,16 +135,45 @@ La contradiction centrale de ces bureaux réside dans leur dépendance paradoxal
 - [[organisation_territoires]]
 - [[gouvernance_institutions]]
 
+
 ## Relations
 **Alliés :**
-- [[conseil_moscou_est_fortress_world]]
+- [[administrations_de_controle_frontalier_des_blocs_fortress_world]]
 - [[anba_siege_atlantique_fortress_world]]
+- [[bloc_atlantique_fortress_world]]
+- [[bloc_eurasiatique_occidental_fortress_world]]
+- [[bunker_chambre_securite_territoriale_fortress_world]]
+- [[bureau_territoires_residuels_fortress_world]]
+- [[conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world]]
+- [[conseil_moscou_est_fortress_world]]
+- [[consortium_des_medias_d_etat_souverains_hegemonia_press_xinhua_fortifiee_eurovox_integral_fortress_world]]
+- [[consortium_eurasiatique_des_ressources_fermees_fortress_world]]
+- [[corps_des_inspecteurs_de_conformite_inter_blocs_fortress_world]]
 - [[datacenters_conseil_eurasiatique_fortress_world]]
+- [[executif_militaro_civil_du_regime_fortress_world]]
+- [[instances_aria_concurrentes_des_blocs_rivaux_fortress_world]]
+- [[nexcore_atlantique_infrastructure_fortress_world]]
+- [[reseaux_prives_de_securite_aux_frontieres_fortress_world]]
+- [[terrashield_geoengineering_fortress_world]]
+- [[zones_grises_tampons_fortress_world]]
 **Opposants :**
+- [[aria_instance_fantome_fortress_world]]
+- [[bassora_couloir_refugies_fortress_world]]
+- [[campements_seuils_fermes_fortress_world]]
+- [[cliniques_de_deaugmentation_independantes_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[contrebandiers_energetiques_des_zones_grises_fortress_world]]
+- [[corridors_gris_asie_centrale_fortress_world]]
+- [[factions_dissidentes_du_consortium_helios_fortress_world]]
+- [[factions_internes_pro_autarcie_totale_fortress_world]]
+- [[institutions_multilaterales_residuelles_fortress_world]]
 - [[marches_gris_casablanca_fortress_world]]
 - [[marches_gris_tbilissi_fortress_world]]
-- [[campements_seuils_fermes_fortress_world]]
-- [[corridors_gris_asie_centrale_fortress_world]]
+- [[milices_de_piraterie_logistique_arctique_fortress_world]]
+- [[mouvement_commun_midwest_fortress_world]]
+- [[populations_des_zones_deficitaires_d_optimisation_fortress_world]]
+- [[reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world]]
+- [[vasil_orentchev_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

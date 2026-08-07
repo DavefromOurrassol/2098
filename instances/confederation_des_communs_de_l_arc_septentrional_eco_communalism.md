@@ -32,12 +32,19 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
-- reseau_assemblees_fennoscandien_eco_communalism
-- kalaallit_nunaat_bioterritoire_eco_communalism
-- tampere_charte_eco_communalism
+- amazonie_pacte_viva_eco_communalism
 - confederation_bassins_vivants_eco_communalism
+- kalaallit_nunaat_bioterritoire_eco_communalism
+- kalaallit_nunaat_sovereign_fund_eco_communalism
+- leena_vainala_eco_communalism
+- ligue_des_cites_du_sahel_numerique_eco_communalism
+- mouvement_des_communes_du_rust_belt_eco_communalism
+- reseau_assemblees_fennoscandien_eco_communalism
+- reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism
+- tampere_charte_eco_communalism
 oppositions:
 - enclaves_extractivistes_et_etats_residuels_eco_communalism
+- plateformes_centralisees_de_reagregation_globale_eco_communalism
 - zones_extractivistes_corridors_eco_communalism
 type_relation_dominante: symbiose
 annee_debut: 2026
@@ -104,14 +111,22 @@ La tension majeure de la Confédération oppose la logique d'intégration confé
 - [[systeme_economique_redistribution]]
 - [[gouvernance_institutions]]
 
+
 ## Relations
 **Alliés :**
-- [[reseau_assemblees_fennoscandien_eco_communalism]]
-- [[kalaallit_nunaat_bioterritoire_eco_communalism]]
-- [[tampere_charte_eco_communalism]]
+- [[amazonie_pacte_viva_eco_communalism]]
 - [[confederation_bassins_vivants_eco_communalism]]
+- [[kalaallit_nunaat_bioterritoire_eco_communalism]]
+- [[kalaallit_nunaat_sovereign_fund_eco_communalism]]
+- [[leena_vainala_eco_communalism]]
+- [[ligue_des_cites_du_sahel_numerique_eco_communalism]]
+- [[mouvement_des_communes_du_rust_belt_eco_communalism]]
+- [[reseau_assemblees_fennoscandien_eco_communalism]]
+- [[reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism]]
+- [[tampere_charte_eco_communalism]]
 **Opposants :**
 - [[enclaves_extractivistes_et_etats_residuels_eco_communalism]]
+- [[plateformes_centralisees_de_reagregation_globale_eco_communalism]]
 - [[zones_extractivistes_corridors_eco_communalism]]
 
 ## Notes

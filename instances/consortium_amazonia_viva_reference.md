@@ -4,6 +4,7 @@ type: instance
 slug: consortium_amazonia_viva_reference
 entite: consortium_amazonia_viva
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: amazonie_consortium_viva
   lieu: Bassin Amazonien — siège flottant sur le Rio Negro (Casa Verde)
@@ -38,32 +39,32 @@ zone_systemique:
     - économie
 
 alliances:
-    - conseil_de_geneve_pour_les_droits_biosociaux_reference
-    - banque_des_communs_reference
-    - observatoire_climatique_des_territoires_oct_reference
-    - agence_stabilisation_climatique_reference
-    - ong_environnementales_de_terrain_reference
-    - collectifs_de_biopiraterie_inversee_reference
-    - federation_communs_territoriaux_reference
-    - reseaux_de_capteurs_citoyens_reference
-    - front_souverainiste_des_ressources_d_amerique_du_sud_reference
-    - cooperative_terrafond_reference
-    - communs_numeriques_agroecologiques_reference
-    - fonds_monetaire_climatique_fmc_reference
-    - reseaux_de_gouvernance_multilaterale_survivants_reference
-
+- agence_stabilisation_climatique_reference
+- banque_des_communs_reference
+- collectifs_de_biopiraterie_inversee_reference
+- communs_numeriques_agroecologiques_reference
+- conseil_de_geneve_pour_les_droits_biosociaux_reference
+- cooperative_terrafond_reference
+- federation_communs_territoriaux_reference
+- fonds_monetaire_climatique_fmc_reference
+- frente_sert_o_livre_reference
+- observatoire_climatique_des_territoires_oct_reference
+- reseaux_de_capteurs_citoyens_reference
+- reseaux_de_gouvernance_multilaterale_survivants_reference
+- sao_paulo_ita_reference
 oppositions:
-    - bloc_ressources_eurasiatique_bre_reference
-    - consortiums_prives_d_extraction_de_ressources_critiques_reference
-    - nexcore_reference
-    - factions_d_extraction_miniere_independantes_reference
-    - cartel_des_terres_rares_d_asie_centrale_reference
-    - consortiums_d_extraction_miniere_du_bassin_congolais_reference
-    - gouvernements_federaux_residuels_souverainistes_reference
-    - lobbies_agro_industriels_a_haute_consommation_d_eau_reference
-    - fonds_d_investissement_foncier_climatique_reference
-    - alliance_blocs_souverains_reference
-
+- alliance_blocs_souverains_reference
+- bloc_ressources_eurasiatique_bre_reference
+- cartel_des_terres_rares_d_asie_centrale_reference
+- consortiums_d_extraction_miniere_du_bassin_congolais_reference
+- consortiums_prives_d_extraction_de_ressources_critiques_reference
+- factions_d_extraction_miniere_independantes_reference
+- fonds_d_investissement_foncier_climatique_reference
+- front_souverainiste_des_ressources_d_amerique_du_sud_reference
+- gouvernements_federaux_residuels_souverainistes_reference
+- lobbies_agro_industriels_a_haute_consommation_d_eau_reference
+- nexcore_reference
+- ong_environnementales_de_terrain_reference
 type_relation_dominante: alliance stratégique
 
 annee_debut: 2041
@@ -107,12 +108,38 @@ Le Consortium négocie des accords de préservation et d'exploitation contrôlé
 - [[energie_ressources_critiques]]
 - [[geopolitique_conflits]]
 
-## Relations
-**Alliés** : [[conseil_de_geneve_pour_les_droits_biosociaux_reference]], [[banque_des_communs_reference]], [[observatoire_climatique_des_territoires_oct_reference]], [[agence_stabilisation_climatique_reference]], [[ong_environnementales_de_terrain_reference]], [[collectifs_de_biopiraterie_inversee_reference]], [[federation_communs_territoriaux_reference]], [[reseaux_de_capteurs_citoyens_reference]], [[front_souverainiste_des_ressources_d_amerique_du_sud_reference]], [[cooperative_terrafond_reference]], [[communs_numeriques_agroecologiques_reference]], [[fonds_monetaire_climatique_fmc_reference]], [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
-**Opposants** : [[bloc_ressources_eurasiatique_bre_reference]], [[consortiums_prives_d_extraction_de_ressources_critiques_reference]], [[nexcore_reference]], [[factions_d_extraction_miniere_independantes_reference]], [[cartel_des_terres_rares_d_asie_centrale_reference]], [[consortiums_d_extraction_miniere_du_bassin_congolais_reference]], [[gouvernements_federaux_residuels_souverainistes_reference]], [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]], [[fonds_d_investissement_foncier_climatique_reference]], [[alliance_blocs_souverains_reference]]
 
 ## Description journalistique
 Depuis son siège flottant sur le Rio Negro — une plateforme modulaire mi-laboratoire mi-parlement, surnommée 'la Casa Verde' — le Consortium Amazônia Viva reçoit régulièrement des délégués des grands blocs géopolitiques qui viennent négocier des droits d'accès à la séquestration carbone ou aux molécules médicinales du bassin. On y croise des chamanes Yanomami en visioconférence avec des économistes de Genève, des éco-ingénieurs analysant des données satellitaires en temps réel sur des tables holographiques, et des délégués régionaux qui débattent en cinq langues. Le Consortium a réussi l'improbable : faire reconnaître par trois blocs distincts que la survie de l'Amazonie vaut une forme de traité, même si chacun l'interprète à sa façon. Ce que ses détracteurs — notamment au sein du Bloc Ressources Eurasiatique — dénoncent comme une 'fiction juridique verte' est pourtant devenu, en 2098, l'une des rares instances infra-étatiques capable de bloquer temporairement une concession extractive par une injonction écologique internationale.
 
 ## Tensions narratives
 La tension centrale reste entière : le Consortium dispose d'une légitimité morale et symbolique forte, mais sa capacité à faire respecter ses décisions contre des acteurs dotés de moyens militaires ou financiers supérieurs reste précaire. Des fissures internes commencent à apparaître entre les communautés autochtones qui refusent toute monétisation de la biodiversité et les autorités locales qui voient dans les accords de compensation carbone un levier économique vital pour leurs populations. Par ailleurs, le Bloc Ressources Eurasiatique finance discrètement des factions dissidentes au sein même du Consortium pour fragmenter sa cohésion de vote. La question qui hante ses dirigeants : jusqu'où peut-on négocier sans trahir ?
+
+## Relations
+**Alliés :**
+- [[agence_stabilisation_climatique_reference]]
+- [[banque_des_communs_reference]]
+- [[collectifs_de_biopiraterie_inversee_reference]]
+- [[communs_numeriques_agroecologiques_reference]]
+- [[conseil_de_geneve_pour_les_droits_biosociaux_reference]]
+- [[cooperative_terrafond_reference]]
+- [[federation_communs_territoriaux_reference]]
+- [[fonds_monetaire_climatique_fmc_reference]]
+- [[frente_sert_o_livre_reference]]
+- [[observatoire_climatique_des_territoires_oct_reference]]
+- [[reseaux_de_capteurs_citoyens_reference]]
+- [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
+- [[sao_paulo_ita_reference]]
+**Opposants :**
+- [[alliance_blocs_souverains_reference]]
+- [[bloc_ressources_eurasiatique_bre_reference]]
+- [[cartel_des_terres_rares_d_asie_centrale_reference]]
+- [[consortiums_d_extraction_miniere_du_bassin_congolais_reference]]
+- [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[factions_d_extraction_miniere_independantes_reference]]
+- [[fonds_d_investissement_foncier_climatique_reference]]
+- [[front_souverainiste_des_ressources_d_amerique_du_sud_reference]]
+- [[gouvernements_federaux_residuels_souverainistes_reference]]
+- [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]]
+- [[nexcore_reference]]
+- [[ong_environnementales_de_terrain_reference]]

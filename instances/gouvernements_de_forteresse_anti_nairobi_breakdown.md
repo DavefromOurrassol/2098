@@ -40,11 +40,16 @@ zone_systemique:
 - société
 alliances: []
 oppositions:
-- nairobi_crrc_breakdown
-- cargo_mombasa_crrc_breakdown
 - archives_neutres_geneve_breakdown
-- tour_bcuc_geneve_breakdown
 - autorite_passage_arctique_breakdown
+- cargo_mombasa_crrc_breakdown
+- communautes_paysannes_refugiees_breakdown
+- conseil_regulation_ressources_breakdown
+- etats_fragmentes_nationalisant_les_stocks_breakdown
+- flux_migratoires_non_integrables_breakdown
+- ligue_des_cites_littorales_en_sursis_breakdown
+- nairobi_crrc_breakdown
+- tour_bcuc_geneve_breakdown
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -102,13 +107,19 @@ La contradiction centrale de ces gouvernements réside dans leur dépendance aux
 - [[geopolitique_conflits]]
 - [[frontieres_du_systeme]]
 
+
 ## Relations
 **Opposants :**
-- [[nairobi_crrc]]
-- [[cargo_mombasa_crrc]]
-- [[archives_neutres_geneve]]
-- [[tour_bcuc_geneve]]
-- [[autorite_passage_arctique]]
+- [[archives_neutres_geneve_breakdown]]
+- [[autorite_passage_arctique_breakdown]]
+- [[cargo_mombasa_crrc_breakdown]]
+- [[communautes_paysannes_refugiees_breakdown]]
+- [[conseil_regulation_ressources_breakdown]]
+- [[etats_fragmentes_nationalisant_les_stocks_breakdown]]
+- [[flux_migratoires_non_integrables_breakdown]]
+- [[ligue_des_cites_littorales_en_sursis_breakdown]]
+- [[nairobi_crrc_breakdown]]
+- [[tour_bcuc_geneve_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

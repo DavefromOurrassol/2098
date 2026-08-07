@@ -29,8 +29,22 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
+- factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world
+- institutions_multilaterales_residuelles_fortress_world
+- mouvement_des_communes_du_rust_belt_fortress_world
+- syndicats_industriels_residuels_post_crise_fortress_world
+- tribunal_algorithmique_de_bruxelles_fortress_world
+oppositions:
+- appareils_d_etat_des_blocs_fermes_fortress_world
+- bloc_atlantique_fortress_world
+- bunker_chambre_securite_territoriale_fortress_world
+- bureau_gouvernance_algorithmique_fortress_world
+- conseil_regulation_algorithmique_fortress_world
+- directive_kontinuum_fortress_world
+- nexcore_fortress_world
+- systemes_de_scoring_de_productivite_corporative_fortress_world
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -93,6 +107,25 @@ Les Factions sont prises entre leur aspiration à défendre la démocratie repr�
 - [[gouvernance_institutions]]
 - [[valeurs_culture_tempo_sociale]]
 - [[organisation_territoires]]
+
+
+## Relations
+**Alliés :**
+- [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]]
+- [[factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world]]
+- [[institutions_multilaterales_residuelles_fortress_world]]
+- [[mouvement_des_communes_du_rust_belt_fortress_world]]
+- [[syndicats_industriels_residuels_post_crise_fortress_world]]
+- [[tribunal_algorithmique_de_bruxelles_fortress_world]]
+**Opposants :**
+- [[appareils_d_etat_des_blocs_fermes_fortress_world]]
+- [[bloc_atlantique_fortress_world]]
+- [[bunker_chambre_securite_territoriale_fortress_world]]
+- [[bureau_gouvernance_algorithmique_fortress_world]]
+- [[conseil_regulation_algorithmique_fortress_world]]
+- [[directive_kontinuum_fortress_world]]
+- [[nexcore_fortress_world]]
+- [[systemes_de_scoring_de_productivite_corporative_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

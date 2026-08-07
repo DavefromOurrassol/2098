@@ -4,6 +4,7 @@ type: instance
 slug: alliance_blocs_souverains_reference
 entite: alliance_blocs_souverains
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: null
   lieu: null
@@ -37,15 +38,34 @@ zone_systemique:
     - économie
 
 alliances:
-    - blocs_signataires_du_pacte_energetique_multilateral_reference
-    - consortiums_prives_d_extraction_de_ressources_critiques_reference
-    - appareils_d_etat_des_blocs_fermes_fortress_world
-
+- appareils_d_etat_des_blocs_fermes_fortress_world
+- bloc_des_souverainistes_climatiques_reference
+- blocs_signataires_du_pacte_energetique_multilateral_reference
+- consortium_des_grandes_plateformes_logistiques_globales_reference
+- consortiums_prives_d_extraction_de_ressources_critiques_reference
+- front_souverainiste_des_ressources_d_amerique_du_sud_reference
 oppositions:
-    - reseaux_de_gouvernance_multilaterale_survivants_reference
-    - confederation_des_megapoles_autonomes_reference
-    - mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
-
+- bloc_eurasien_central_reference
+- bruxelles_nouveau_reference
+- bureau_zones_non_prioritaires_reference
+- confederation_des_megapoles_autonomes_reference
+- consortium_amazonia_viva_reference
+- consortium_logistique_asiatique_de_contournement_aln_reference
+- corridor_arctique_nordique_reference
+- delta_du_gange_reference
+- europe_occidentale_reconstructee_reference
+- great_lakes_autonomous_compact_reference
+- guadalajara_nexus_reference
+- institutions_multilaterales_survivantes_reference
+- mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
+- oracle_des_seuils_reference
+- ouagadougou_polytechnique_reference
+- pacifique_sud_archipels_flottants_reference
+- pacifique_sud_resilience_network_reference
+- reseaux_de_gouvernance_multilaterale_survivants_reference
+- tribunal_algorithmique_de_bruxelles_reference
+- union_africaine_resilience_reference
+- valparaiso_fct_reference
 type_relation_dominante: rivalité
 
 annee_debut: 2031
@@ -89,12 +109,40 @@ Négociation et maintien de corridors énergétiques sécurisés entre États me
 - [[organisation_territoires]]
 - [[systeme_economique_redistribution]]
 
-## Relations
-**Alliés** : [[blocs_signataires_du_pacte_energetique_multilateral_reference]], [[consortiums_prives_d_extraction_de_ressources_critiques_reference]], [[appareils_d_etat_des_blocs_fermes_fortress_world]]
-**Opposants** : [[reseaux_de_gouvernance_multilaterale_survivants_reference]], [[confederation_des_megapoles_autonomes_reference]], [[mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference]]
 
 ## Description journalistique
 Le Pacte des Souverains fête cette année ses soixante-sept ans d'existence avec la discrétion hautaine qui lui est coutumière — pas de siège fixe, des sommets tenus dans des lieux changeants, et une communication officielle réduite à des communiqués lapidaires en trois langues. Né dans les années 2030 de la désillusion post-pandémique et des premières guerres de l'eau, il regroupe aujourd'hui quatorze États et une dizaine de territoires associés, unis par des pactes bilatéraux aussi nombreux que leurs combinaisons possibles. Ses détracteurs l'accusent d'être la principale force d'obstruction aux accords climatiques de Tokyo-3. Ses partisans — majoritairement dans les classes dirigeantes des blocs membres — y voient le seul cadre réaliste dans un monde où la confiance multilatérale s'est définitivement fracturée. Ce qu'on sait avec certitude : chaque fois qu'un corridor gazier change de main ou qu'une frontière se referme, le Pacte a probablement signé quelque chose quelque part.
 
 ## Tensions narratives
 La Charte de Réciprocité Stricte commence à montrer ses limites : plusieurs États membres sont tentés par des accords parallèles avec les mégapoles globales, court-circuitant le cadre bilatéral officiel. La question du partage des technologies d'adaptation climatique crée une fracture interne entre membres dotés et membres dépendants. Enfin, l'émergence de corridors énergétiques IA-gérés soulève une question existentielle : peut-on maintenir une logique souverainiste quand l'infrastructure de souveraineté elle-même est déléguée à des systèmes autonomes transnationaux ?
+
+## Relations
+**Alliés :**
+- [[appareils_d_etat_des_blocs_fermes_fortress_world]]
+- [[bloc_des_souverainistes_climatiques_reference]]
+- [[blocs_signataires_du_pacte_energetique_multilateral_reference]]
+- [[consortium_des_grandes_plateformes_logistiques_globales_reference]]
+- [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[front_souverainiste_des_ressources_d_amerique_du_sud_reference]]
+**Opposants :**
+- [[bloc_eurasien_central_reference]]
+- [[bruxelles_nouveau_reference]]
+- [[bureau_zones_non_prioritaires_reference]]
+- [[confederation_des_megapoles_autonomes_reference]]
+- [[consortium_amazonia_viva_reference]]
+- [[consortium_logistique_asiatique_de_contournement_aln_reference]]
+- [[corridor_arctique_nordique_reference]]
+- [[delta_du_gange_reference]]
+- [[europe_occidentale_reconstructee_reference]]
+- [[great_lakes_autonomous_compact_reference]]
+- [[guadalajara_nexus_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
+- [[mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference]]
+- [[oracle_des_seuils_reference]]
+- [[ouagadougou_polytechnique_reference]]
+- [[pacifique_sud_archipels_flottants_reference]]
+- [[pacifique_sud_resilience_network_reference]]
+- [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
+- [[tribunal_algorithmique_de_bruxelles_reference]]
+- [[union_africaine_resilience_reference]]
+- [[valparaiso_fct_reference]]

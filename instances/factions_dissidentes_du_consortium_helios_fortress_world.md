@@ -30,8 +30,19 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- collectifs_de_reappropriation_energetique_peripherique_fortress_world
+- contrebandiers_energetiques_des_zones_grises_fortress_world
+- reseaux_de_contrebande_energetique_transfrontaliere_fortress_world
+oppositions:
+- appareils_d_etat_des_blocs_fermes_fortress_world
+- bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world
+- centre_controle_orbital_helios_fortress_world
+- complexes_militaro_industriels_de_gestion_des_ressources_fortress_world
+- consortium_helios_fortress_world
+- vaultcorp_security_fortress_world
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -95,6 +106,22 @@ La contradiction centrale des Factions est d'exister uniquement par leur relatio
 - [[geopolitique_conflits]]
 - [[gouvernance_institutions]]
 - [[organisation_territoires]]
+
+
+## Relations
+**Alliés :**
+- [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[collectifs_de_reappropriation_energetique_peripherique_fortress_world]]
+- [[contrebandiers_energetiques_des_zones_grises_fortress_world]]
+- [[reseaux_de_contrebande_energetique_transfrontaliere_fortress_world]]
+**Opposants :**
+- [[appareils_d_etat_des_blocs_fermes_fortress_world]]
+- [[bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world]]
+- [[centre_controle_orbital_helios_fortress_world]]
+- [[complexes_militaro_industriels_de_gestion_des_ressources_fortress_world]]
+- [[consortium_helios_fortress_world]]
+- [[vaultcorp_security_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

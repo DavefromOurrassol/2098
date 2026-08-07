@@ -33,11 +33,29 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
-- rust_belt_communes_libres_fortress_world
 - cellules_mouvement_commun_midwest_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- contrebandiers_energetiques_des_zones_grises_fortress_world
+- factions_dissidentes_du_consortium_helios_fortress_world
+- mouvement_des_communes_du_rust_belt_fortress_world
+- rust_belt_communes_libres_fortress_world
 oppositions:
-- pacte_forteresses_souveraines_fortress_world
+- amazonie_pacte_vert_fortress_world
+- bureau_territoires_residuels_fortress_world
+- cartels_energetiques_des_bioreacteurs_fortress_world
+- complexe_orentchev_almaty_fortress_world
+- complexes_militaro_industriels_de_gestion_des_ressources_fortress_world
+- consortium_helios_fortress_world
+- consortiums_energetiques_du_bloc_ourrassol_fortress_world
+- kalaallit_nunaat_sovereign_fund_fortress_world
 - nexcore_atlantique_infrastructure_fortress_world
+- pacte_forteresses_souveraines_fortress_world
+- rede_paulista_de_distribuic_o_algor_tmica_fortress_world
+- reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world
+- siege_genevois_cars_fortress_world
+- tbilissi_nord_zone_franche_fortress_world
+- tours_nexus7_fortress_world
+- zone_usines_forteresses_eurasie_fortress_world
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -101,13 +119,32 @@ Leur survie dépend de l'invisibilité, mais leur croissance exige une visibilit
 - [[organisation_territoires]]
 - [[gouvernance_institutions]]
 
+
 ## Relations
 **Alliés :**
-- [[rust_belt_communes_libres_fortress_world]]
 - [[cellules_mouvement_commun_midwest_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[contrebandiers_energetiques_des_zones_grises_fortress_world]]
+- [[factions_dissidentes_du_consortium_helios_fortress_world]]
+- [[mouvement_des_communes_du_rust_belt_fortress_world]]
+- [[rust_belt_communes_libres_fortress_world]]
 **Opposants :**
-- [[pacte_forteresses_souveraines_fortress_world]]
+- [[amazonie_pacte_vert_fortress_world]]
+- [[bureau_territoires_residuels_fortress_world]]
+- [[cartels_energetiques_des_bioreacteurs_fortress_world]]
+- [[complexe_orentchev_almaty_fortress_world]]
+- [[complexes_militaro_industriels_de_gestion_des_ressources_fortress_world]]
+- [[consortium_helios_fortress_world]]
+- [[consortiums_energetiques_du_bloc_ourrassol_fortress_world]]
+- [[kalaallit_nunaat_sovereign_fund_fortress_world]]
 - [[nexcore_atlantique_infrastructure_fortress_world]]
+- [[pacte_forteresses_souveraines_fortress_world]]
+- [[rede_paulista_de_distribuic_o_algor_tmica_fortress_world]]
+- [[reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world]]
+- [[siege_genevois_cars_fortress_world]]
+- [[tbilissi_nord_zone_franche_fortress_world]]
+- [[tours_nexus7_fortress_world]]
+- [[zone_usines_forteresses_eurasie_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

@@ -4,6 +4,7 @@ type: instance
 slug: tour_bcuc_geneve_breakdown
 entite: tour_bcuc_geneve
 scenario: breakdown
+statut: officialise_enrichi
 localisation:
   zone: tour_bcuc_geneve
   lieu: Tour BCUC, Genève
@@ -33,23 +34,23 @@ zone_systemique:
     - information
 
 alliances:
-    - archives_neutres_de_geneve_breakdown
-    - archives_neutres_geneve_breakdown
-    - geneve_bunker_institutions_breakdown
-    - tribunal_algorithmique_de_bruxelles_breakdown
-    - hanse_baltique_breakdown
-    - hanse_baltique_recomposee_breakdown
-    - ligue_des_cites_littorales_en_sursis_breakdown
-    - noeud_mnemos_pannonie_breakdown
-
+- archives_neutres_de_geneve_breakdown
+- archives_neutres_geneve_breakdown
+- corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown
+- geneve_bunker_institutions_breakdown
+- hanse_baltique_breakdown
+- hanse_baltique_recomposee_breakdown
+- ligue_des_cites_littorales_en_sursis_breakdown
+- noeud_mnemos_pannonie_breakdown
+- tribunal_algorithmique_de_bruxelles_breakdown
 oppositions:
-    - fronts_populistes_anti_technocratiques_breakdown
-    - milices_contractuelles_des_anciens_etats_membres_breakdown
-    - collectif_hackers_decroissance_infrastructure_breakdown
-    - seigneuries_logistiques_armees_breakdown
-    - etats_fragmentes_nationalisant_les_stocks_breakdown
-    - front_de_resistance_aux_peages_sur_les_ressources_breakdown
-
+- collectif_hackers_decroissance_infrastructure_breakdown
+- etats_fragmentes_nationalisant_les_stocks_breakdown
+- front_de_resistance_aux_peages_sur_les_ressources_breakdown
+- fronts_populistes_anti_technocratiques_breakdown
+- gouvernements_de_forteresse_anti_nairobi_breakdown
+- milices_contractuelles_des_anciens_etats_membres_breakdown
+- seigneuries_logistiques_armees_breakdown
 type_relation_dominante: dépendance
 
 annee_debut: 2026
@@ -91,12 +92,29 @@ La Tour Bcuc émet des certificats de reconnaissance de dette inter-fragments, t
 - [[gouvernance_institutions]]
 - [[systeme_economique_redistribution]]
 
-## Relations
-**Alliés** : [[archives_neutres_de_geneve_breakdown]], [[archives_neutres_geneve_breakdown]], [[geneve_bunker_institutions_breakdown]], [[tribunal_algorithmique_de_bruxelles_breakdown]], [[hanse_baltique_breakdown]], [[hanse_baltique_recomposee_breakdown]], [[ligue_des_cites_littorales_en_sursis_breakdown]], [[noeud_mnemos_pannonie_breakdown]]
-**Opposants** : [[fronts_populistes_anti_technocratiques_breakdown]], [[milices_contractuelles_des_anciens_etats_membres_breakdown]], [[collectif_hackers_decroissance_infrastructure_breakdown]], [[seigneuries_logistiques_armees_breakdown]], [[etats_fragmentes_nationalisant_les_stocks_breakdown]], [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
 
 ## Description journalistique
 Au 34e étage de la tour de verre grise qui domine encore la rade de Genève, une vingtaine de techniciens en costume élimé continuent de saisir des données dans des terminaux dont la moitié fonctionnent sur générateurs de secours. Le Comptoir des Ruines — surnom que lui ont collé les diplomates de la Ligue Méditerranéenne — émet toujours ses fameux 'certificats Bcuc', ces documents en papier pelure sécurisé que les fragments d'États acceptent encore comme base de négociation faute de mieux. Mais l'autorité de la Tour est celle d'un arbitre dont tout le monde connaît les limites : ses décisions ne sont appliquées que si les deux parties y ont intérêt, et ses archives, bien que précieuses, sont convoitées par des acteurs qui préféreraient les posséder plutôt que de les voir neutraliser. Entre deux délestages électriques, ses agents parcourent les couloirs en tenant à bout de bras la mémoire contractuelle d'un monde qui n'existe plus.
 
 ## Tensions narratives
 La Tour est assise sur un paradoxe existentiel : plus elle mobilise ses archives pour arbitrer des conflits, plus elle révèle l'étendue de ses anciennes compromissions avec des entités aujourd'hui disparues ou ennemies, sapant la neutralité qu'elle revendique. Certains fragments d'États membres la soupçonnent de favoriser secrètement les grandes enclaves corporatives qui continuent de la financer discrètement, ce qui alimente les fronts populistes qui réclament sa dissolution. En parallèle, des réseaux comme les Archives Neutres de Genève ou Mnemos Pannonie cherchent à absorber ses fonds documentaires, rendant sa survie institutionnelle conditionnelle à sa capacité à rester irremplaçable — un pari de plus en plus incertain dans un monde où la force prime sur la procédure.
+
+## Relations
+**Alliés :**
+- [[archives_neutres_de_geneve_breakdown]]
+- [[archives_neutres_geneve_breakdown]]
+- [[corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown]]
+- [[geneve_bunker_institutions_breakdown]]
+- [[hanse_baltique_breakdown]]
+- [[hanse_baltique_recomposee_breakdown]]
+- [[ligue_des_cites_littorales_en_sursis_breakdown]]
+- [[noeud_mnemos_pannonie_breakdown]]
+- [[tribunal_algorithmique_de_bruxelles_breakdown]]
+**Opposants :**
+- [[collectif_hackers_decroissance_infrastructure_breakdown]]
+- [[etats_fragmentes_nationalisant_les_stocks_breakdown]]
+- [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
+- [[fronts_populistes_anti_technocratiques_breakdown]]
+- [[gouvernements_de_forteresse_anti_nairobi_breakdown]]
+- [[milices_contractuelles_des_anciens_etats_membres_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]

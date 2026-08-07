@@ -4,6 +4,7 @@ type: instance
 slug: le_registre_du_fleuve_breakdown
 entite: le_registre_du_fleuve
 scenario: breakdown
+statut: officialise_enrichi
 localisation:
   zone: afrique_centrale_australe
   lieu: bassin du Congo et Cuvette congolaise

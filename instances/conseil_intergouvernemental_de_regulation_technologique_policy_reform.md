@@ -31,8 +31,28 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- autorite_mondiale_du_vivant_amv_policy_reform
+- bureau_gouvernance_algorithmique_policy_reform
+- conseil_onu_de_gouvernance_numerique_et_ia_policy_reform
+- conseil_regulation_algorithmique_policy_reform
+- consortium_technologique_de_planification_territoriale_policy_reform
+- directive_kontinuum_policy_reform
+- federation_des_mutuelles_biotech_policy_reform
+- grille_aria_policy_reform
+- oracle_des_seuils_policy_reform
+- rede_paulista_de_distribuic_o_algor_tmica_policy_reform
+- reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
+- reseau_des_regulateurs_numeriques_souverains_rrns_policy_reform
+- tribunal_algorithmique_de_bruxelles_policy_reform
+oppositions:
+- coalition_des_souverainistes_numeriques_policy_reform
+- collectifs_de_gouvernance_communautaire_decentralisee_policy_reform
+- consortiums_prives_de_gouvernance_algorithmique_policy_reform
+- front_de_souverainete_biologique_eurasiatique_policy_reform
+- front_des_communes_algorithmiques_policy_reform
+- front_souverainiste_des_blocs_non_signataires_policy_reform
+- union_technocratique_eurasiatique_policy_reform
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -98,6 +118,31 @@ Le CIRT est structurellement écartelé entre sa vocation universaliste et l'abs
 - [[gouvernance_institutions]]
 - [[technologie_information]]
 - [[geopolitique_conflits]]
+
+
+## Relations
+**Alliés :**
+- [[autorite_mondiale_du_vivant_amv_policy_reform]]
+- [[bureau_gouvernance_algorithmique_policy_reform]]
+- [[conseil_onu_de_gouvernance_numerique_et_ia_policy_reform]]
+- [[conseil_regulation_algorithmique_policy_reform]]
+- [[consortium_technologique_de_planification_territoriale_policy_reform]]
+- [[directive_kontinuum_policy_reform]]
+- [[federation_des_mutuelles_biotech_policy_reform]]
+- [[grille_aria_policy_reform]]
+- [[oracle_des_seuils_policy_reform]]
+- [[rede_paulista_de_distribuic_o_algor_tmica_policy_reform]]
+- [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]]
+- [[reseau_des_regulateurs_numeriques_souverains_rrns_policy_reform]]
+- [[tribunal_algorithmique_de_bruxelles_policy_reform]]
+**Opposants :**
+- [[coalition_des_souverainistes_numeriques_policy_reform]]
+- [[collectifs_de_gouvernance_communautaire_decentralisee_policy_reform]]
+- [[consortiums_prives_de_gouvernance_algorithmique_policy_reform]]
+- [[front_de_souverainete_biologique_eurasiatique_policy_reform]]
+- [[front_des_communes_algorithmiques_policy_reform]]
+- [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+- [[union_technocratique_eurasiatique_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

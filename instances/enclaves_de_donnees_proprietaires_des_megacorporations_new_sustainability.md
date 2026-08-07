@@ -33,8 +33,29 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
+alliances:
+- coalition_anti_fiscalite_universelle_new_sustainability
+- factions_internes_pro_opacite_des_parametres_new_sustainability
+- factions_technocratiques_du_conseil_de_regulation_informationnelle_global_new_sustainability
 oppositions:
+- college_des_auditeurs_independants_du_parlement_biotechnologique_mondial_new_sustainability
+- consortium_africain_de_biotechnologies_sociales_new_sustainability
+- consortium_d_audit_algorithmique_ouvert_new_sustainability
+- factions_internes_contestataires_du_bureau_de_moderation_new_sustainability
+- fonds_mondial_de_redistribution_technologique_new_sustainability
+- hub_nairobi_kigali_new_sustainability
+- les_veilleurs_du_fleuve_new_sustainability
+- ligue_des_cites_du_sahel_numerique_new_sustainability
+- observatoire_anti_monopole_de_geneve_new_sustainability
+- oracle_des_seuils_new_sustainability
+- parlement_deliberatif_mondial_new_sustainability
+- reseau_des_bio_communs_regionaux_new_sustainability
+- reseau_des_communs_alimentaires_hors_grille_new_sustainability
+- reseau_des_communs_numeriques_globaux_new_sustainability
+- reseau_global_de_cliniques_regeneratives_new_sustainability
+- reseau_mnemos_new_sustainability
+- reseaux_de_medecine_regenerative_universelle_new_sustainability
+- tribunal_algorithmique_de_bruxelles_new_sustainability
 - tribunal_gouvernance_algorithmique_bruxelles_new_sustainability
 type_relation_dominante: conflit
 annee_debut: 2026
@@ -104,8 +125,31 @@ La tension centrale réside dans le paradoxe d'un monde ayant atteint une gouver
 - [[gouvernance_institutions]]
 - [[frontieres_du_systeme]]
 
+
 ## Relations
+**Alliés :**
+- [[coalition_anti_fiscalite_universelle_new_sustainability]]
+- [[factions_internes_pro_opacite_des_parametres_new_sustainability]]
+- [[factions_technocratiques_du_conseil_de_regulation_informationnelle_global_new_sustainability]]
 **Opposants :**
+- [[college_des_auditeurs_independants_du_parlement_biotechnologique_mondial_new_sustainability]]
+- [[consortium_africain_de_biotechnologies_sociales_new_sustainability]]
+- [[consortium_d_audit_algorithmique_ouvert_new_sustainability]]
+- [[factions_internes_contestataires_du_bureau_de_moderation_new_sustainability]]
+- [[fonds_mondial_de_redistribution_technologique_new_sustainability]]
+- [[hub_nairobi_kigali_new_sustainability]]
+- [[les_veilleurs_du_fleuve_new_sustainability]]
+- [[ligue_des_cites_du_sahel_numerique_new_sustainability]]
+- [[observatoire_anti_monopole_de_geneve_new_sustainability]]
+- [[oracle_des_seuils_new_sustainability]]
+- [[parlement_deliberatif_mondial_new_sustainability]]
+- [[reseau_des_bio_communs_regionaux_new_sustainability]]
+- [[reseau_des_communs_alimentaires_hors_grille_new_sustainability]]
+- [[reseau_des_communs_numeriques_globaux_new_sustainability]]
+- [[reseau_global_de_cliniques_regeneratives_new_sustainability]]
+- [[reseau_mnemos_new_sustainability]]
+- [[reseaux_de_medecine_regenerative_universelle_new_sustainability]]
+- [[tribunal_algorithmique_de_bruxelles_new_sustainability]]
 - [[tribunal_gouvernance_algorithmique_bruxelles_new_sustainability]]
 
 ## Notes

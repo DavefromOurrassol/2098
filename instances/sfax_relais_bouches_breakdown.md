@@ -4,6 +4,7 @@ type: instance
 slug: sfax_relais_bouches_breakdown
 entite: sfax_relais_bouches
 scenario: breakdown
+statut: officialise_enrichi
 localisation:
   zone: sfax_relais_bouches
   lieu: Sfax
@@ -36,19 +37,18 @@ zone_systemique:
     - gouvernance
 
 alliances:
-    - reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown
-    - front_humanitaire_d_urgence_non_affilie_breakdown
-    - communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
-    - ligue_des_cites_littorales_en_sursis_breakdown
-    - brigades_medicales_itinerantes_breakdown
-
+- brigades_medicales_itinerantes_breakdown
+- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- front_humanitaire_d_urgence_non_affilie_breakdown
+- ligue_des_cites_littorales_en_sursis_breakdown
+- ligue_mediterraneenne_des_villes_etats_portuaires_breakdown
+- reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown
 oppositions:
-    - carthage_nord_nexcore_breakdown
-    - cartels_logistiques_regionaux_breakdown
-    - milices_de_controle_territorial_breakdown
-    - seigneuries_logistiques_armees_breakdown
-    - blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
-
+- blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
+- cartels_logistiques_regionaux_breakdown
+- carthage_nord_nexcore_breakdown
+- milices_de_controle_territorial_breakdown
+- seigneuries_logistiques_armees_breakdown
 type_relation_dominante: dépendance
 
 annee_debut: 2081
@@ -92,12 +92,24 @@ Coordonner des chaînes d'approvisionnement fragmentées entre convois humanitai
 - [[gouvernance_institutions]]
 - [[systeme_economique_redistribution]]
 
-## Relations
-**Alliés** : [[reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown]], [[front_humanitaire_d_urgence_non_affilie_breakdown]], [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]], [[ligue_des_cites_littorales_en_sursis_breakdown]], [[brigades_medicales_itinerantes_breakdown]]
-**Opposants** : [[carthage_nord_nexcore_breakdown]], [[cartels_logistiques_regionaux_breakdown]], [[milices_de_controle_territorial_breakdown]], [[seigneuries_logistiques_armees_breakdown]], [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
 
 ## Description journalistique
 À Sfax, on ne les voit jamais deux fois au même endroit. Les Bouches — c'est ainsi que les appellent ceux qui survivent grâce à elles — sont des hommes et des femmes qui apparaissent à l'aube dans les ruelles du port avec des caisses de poisson séché, de semoule reconstituée et de concentré vitaminique de synthèse, avant de disparaître avant que les milices de ronde ne bouclent le secteur. Née de l'effondrement des derniers circuits d'approvisionnement publics tunisiens vers 2081, l'organisation s'est constituée autour d'une vingtaine de relais — des figures de quartier, des anciens dockers, des femmes de marché — qui ont transformé leur capital social en infrastructure vitale. Clandestine par obligation autant que par tactique, elle négocie en silence avec les convois du Front Humanitaire d'Urgence Non Affilié et les Courriers Nomades Sahélo-Méditerranéens, tout en payant son tribut discret aux milices qui contrôlent les axes terrestres. Ce que personne ne dit ouvertement : celui qui contrôle les bouches contrôle aussi les loyautés.
 
 ## Tensions narratives
 La tension centrale tourne autour du moment où la solidarité devient domination : des témoignages de plus en plus nombreux évoquent des relais qui conditionnent l'accès à la nourriture à des loyautés politiques ou à des services informels, reproduisant exactement la logique des institutions qu'ils ont remplacées. Une autre ligne de fracture émerge avec Carthage Nord Nexcore, qui tente d'absorber ou de neutraliser les Bouches pour contrôler seul les flux alimentaires du littoral est. Enfin, la question de la succession — les relais fondateurs vieillissent, leurs remplaçants potentiels se disputent déjà les nœuds les plus lucratifs — menace de transformer le réseau de survie en terrain de guerre intestine.
+
+## Relations
+**Alliés :**
+- [[brigades_medicales_itinerantes_breakdown]]
+- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[front_humanitaire_d_urgence_non_affilie_breakdown]]
+- [[ligue_des_cites_littorales_en_sursis_breakdown]]
+- [[ligue_mediterraneenne_des_villes_etats_portuaires_breakdown]]
+- [[reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown]]
+**Opposants :**
+- [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
+- [[cartels_logistiques_regionaux_breakdown]]
+- [[carthage_nord_nexcore_breakdown]]
+- [[milices_de_controle_territorial_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]

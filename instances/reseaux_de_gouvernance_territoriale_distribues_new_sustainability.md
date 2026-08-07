@@ -38,8 +38,15 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
-- parlement_territoires_nairobi_new_sustainability
+- coalition_anti_algorithme_des_autonomies_locales_new_sustainability
 - commission_territoriale_ourrassol_new_sustainability
+- internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
+- mouvement_communautaire_des_micro_grids_energetiques_new_sustainability
+- mouvement_pour_l_autodetermination_territoriale_new_sustainability
+- parlement_territoires_nairobi_new_sustainability
+- reseau_des_communs_numeriques_globaux_new_sustainability
+- reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability
+- trame_bioclimatique_new_sustainability
 oppositions:
 - bloc_eurasien_souverainiste_new_sustainability
 type_relation_dominante: symbiose
@@ -108,10 +115,18 @@ La tension principale réside dans leur ambiguïté statutaire : instruments de 
 - [[gouvernance_institutions]]
 - [[systeme_economique_redistribution]]
 
+
 ## Relations
 **Alliés :**
-- [[parlement_territoires_nairobi_new_sustainability]]
+- [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]]
 - [[commission_territoriale_ourrassol_new_sustainability]]
+- [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]]
+- [[mouvement_communautaire_des_micro_grids_energetiques_new_sustainability]]
+- [[mouvement_pour_l_autodetermination_territoriale_new_sustainability]]
+- [[parlement_territoires_nairobi_new_sustainability]]
+- [[reseau_des_communs_numeriques_globaux_new_sustainability]]
+- [[reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability]]
+- [[trame_bioclimatique_new_sustainability]]
 **Opposants :**
 - [[bloc_eurasien_souverainiste_new_sustainability]]
 

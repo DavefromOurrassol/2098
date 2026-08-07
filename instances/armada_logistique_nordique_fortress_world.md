@@ -4,6 +4,7 @@ type: instance
 slug: armada_logistique_nordique_fortress_world
 entite: armada_logistique_nordique
 scenario: fortress_world
+statut: officialise_enrichi
 localisation:
   zone: espace_nordique_arctique
   lieu: Espace Nordique et Arctique (Svalbard, corridors arctiques, territoires scandinaves, islandais et groenlandais)
@@ -38,15 +39,17 @@ zone_systemique:
     - sécurité
 
 alliances:
-    - conseil_des_etats_nordiques_integres_reference
-    - consortium_energetique_baltique_reference
-    - consortium_sino_finlandais_de_flotte_autonome_fortress_world
-
+- anba_siege_atlantique_fortress_world
+- conseil_des_etats_nordiques_integres_reference
+- consortium_energetique_baltique_reference
+- ironclad_logistics_fortress_world
+- kalaallit_nunaat_sovereign_fund_fortress_world
 oppositions:
-    - coalition_arctique_des_blocs_continentaux_fortress_world
-    - milices_de_piraterie_logistique_arctique_fortress_world
-    - factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world
-
+- coalition_arctique_des_blocs_continentaux_fortress_world
+- consortium_sino_finlandais_de_flotte_autonome_fortress_world
+- corps_des_inspecteurs_de_conformite_inter_blocs_fortress_world
+- factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world
+- milices_de_piraterie_logistique_arctique_fortress_world
 type_relation_dominante: dépendance
 
 annee_debut: 2041
@@ -90,12 +93,23 @@ La NAT gère l'accès aux corridors arctiques via un système de licences de tra
 - [[organisation_territoires]]
 - [[gouvernance_institutions]]
 
-## Relations
-**Alliés** : [[conseil_des_etats_nordiques_integres_reference]], [[consortium_energetique_baltique_reference]], [[consortium_sino_finlandais_de_flotte_autonome_fortress_world]]
-**Opposants** : [[coalition_arctique_des_blocs_continentaux_fortress_world]], [[milices_de_piraterie_logistique_arctique_fortress_world]], [[factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world]]
 
 ## Description journalistique
 Depuis ses tours de contrôle flottantes ancrées au large du Svalbard, la Nordisk Arktisk Transitkontroll dicte les conditions d'accès aux seules routes commerciales encore praticables entre les grands blocs. En 2098, personne ne traverse l'Arctique sans une licence NAT — et personne ne conteste ouvertement ses tarifs. Ses convois de brise-glaces autonomes, flanqués de drones de surveillance et d'escortes armées, sont devenus le symbole d'une mondialisation résiduelle sous contrôle privé. Les journalistes qui ont tenté d'enquêter sur ses marges tarifaires ou ses accords secrets avec tel ou tel bloc sont revenus avec peu de réponses. La NAT parle rarement — elle laisse les flux parler à sa place.
 
 ## Tensions narratives
 La NAT se dit neutre, mais plusieurs blocs l'accusent de favoriser ses alliés scandinaves dans les priorités de transit, précipitant des crises d'approvisionnement en chaîne. En interne, une faction technocratique pousse à automatiser intégralement les négociations via IA, ce qui déposséderait les diplomates humains de leur rôle — et mettrait fin à la corruption qui fait vivre nombre de fonctionnaires nordiques. La question qui hante les chancelleries : si la NAT coupe les corridors arctiques à un bloc en crise, est-ce un acte commercial ou un acte de guerre ?
+
+## Relations
+**Alliés :**
+- [[anba_siege_atlantique_fortress_world]]
+- [[conseil_des_etats_nordiques_integres_reference]]
+- [[consortium_energetique_baltique_reference]]
+- [[ironclad_logistics_fortress_world]]
+- [[kalaallit_nunaat_sovereign_fund_fortress_world]]
+**Opposants :**
+- [[coalition_arctique_des_blocs_continentaux_fortress_world]]
+- [[consortium_sino_finlandais_de_flotte_autonome_fortress_world]]
+- [[corps_des_inspecteurs_de_conformite_inter_blocs_fortress_world]]
+- [[factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world]]
+- [[milices_de_piraterie_logistique_arctique_fortress_world]]

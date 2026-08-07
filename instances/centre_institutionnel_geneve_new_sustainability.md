@@ -4,6 +4,7 @@ type: instance
 slug: centre_institutionnel_geneve_new_sustainability
 entite: centre_institutionnel_geneve
 scenario: new_sustainability
+statut: officialise_enrichi
 localisation:
   zone: centre_institutionnel_geneve
   lieu: Centre Institutionnel de Genève
@@ -35,28 +36,48 @@ zone_systemique:
     - infrastructure
 
 alliances:
-    - agence_mondiale_de_modelisation_climatique_ammc_new_sustainability
-    - agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
-    - conseil_regulation_ressources_new_sustainability
-    - parlement_deliberatif_mondial_new_sustainability
-    - fonds_mondial_de_regeneration_ecologique_new_sustainability
-    - conseil_energetique_intercontinental_new_sustainability
-    - agence_stabilisation_climatique_new_sustainability
-    - observatoire_anti_monopole_de_geneve_new_sustainability
-    - tribunal_algorithmique_de_bruxelles_new_sustainability
-    - consortium_de_regeneration_planetaire_new_sustainability
-
+- agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
+- agence_mondiale_de_modelisation_climatique_ammc_new_sustainability
+- agence_stabilisation_climatique_new_sustainability
+- conseil_de_deliberation_augmentee_de_l_union_nordique_new_sustainability
+- conseil_de_regulation_cognitive_de_l_onu_new_sustainability
+- conseil_energetique_intercontinental_new_sustainability
+- conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability
+- conseil_regulation_ressources_new_sustainability
+- consortium_d_interoperabilite_ia_humain_new_sustainability
+- consortium_de_regeneration_planetaire_new_sustainability
+- fonds_mondial_de_redistribution_technologique_new_sustainability
+- fonds_mondial_de_regeneration_ecologique_new_sustainability
+- institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability
+- observatoire_anti_monopole_de_geneve_new_sustainability
+- oms_etendue_new_sustainability
+- parlement_deliberatif_mondial_new_sustainability
+- programme_onu_de_restauration_des_sols_new_sustainability
+- reseau_des_agences_climatiques_regionales_new_sustainability
+- reseau_des_villes_regeneratives_new_sustainability
+- tribunal_algorithmique_de_bruxelles_new_sustainability
+- union_des_blocs_energetiques_regionaux_new_sustainability
 oppositions:
-    - bloc_eurasien_souverainiste_new_sustainability
-    - bloc_des_gouvernements_souverainistes_hydriques_new_sustainability
-    - coalition_anti_fiscalite_universelle_new_sustainability
-    - coalition_des_industries_extractives_residuelles_new_sustainability
-    - internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
-    - etats_souverainistes_anti_reseau_new_sustainability
-    - reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability
-    - collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability
-    - factions_souverainistes_des_blocs_peripheriques_new_sustainability
-
+- alliance_numerique_eurasie_pacifique_new_sustainability
+- bloc_des_gouvernements_souverainistes_hydriques_new_sustainability
+- bloc_eurasien_souverainiste_new_sustainability
+- coalition_anti_algorithme_des_autonomies_locales_new_sustainability
+- coalition_anti_fiscalite_universelle_new_sustainability
+- coalition_des_industries_extractives_residuelles_new_sustainability
+- collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability
+- collectifs_de_deplaces_climatiques_non_representes_new_sustainability
+- collectifs_de_narration_sauvage_hors_protocole_new_sustainability
+- communautes_locales_exclues_des_corridors_new_sustainability
+- etats_souverainistes_anti_reseau_new_sustainability
+- factions_souverainistes_des_blocs_peripheriques_new_sustainability
+- internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
+- mouvement_pour_l_autodetermination_territoriale_new_sustainability
+- mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability
+- reseau_des_communs_productifs_regeneratifs_new_sustainability
+- reseau_des_ingenieurs_climatiques_du_sud_global_new_sustainability
+- reseaux_d_information_souverainistes_fermes_new_sustainability
+- reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability
+- souverainistes_du_bloc_eurasien_new_sustainability
 type_relation_dominante: coopération
 
 annee_debut: 2031
@@ -100,12 +121,54 @@ Validation et publication des standards environnementaux mondiaux opposables aux
 - [[energie_ressources_critiques]]
 - [[geopolitique_conflits]]
 
-## Relations
-**Alliés** : [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]], [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]], [[conseil_regulation_ressources_new_sustainability]], [[parlement_deliberatif_mondial_new_sustainability]], [[fonds_mondial_de_regeneration_ecologique_new_sustainability]], [[conseil_energetique_intercontinental_new_sustainability]], [[agence_stabilisation_climatique_new_sustainability]], [[observatoire_anti_monopole_de_geneve_new_sustainability]], [[tribunal_algorithmique_de_bruxelles_new_sustainability]], [[consortium_de_regeneration_planetaire_new_sustainability]]
-**Opposants** : [[bloc_eurasien_souverainiste_new_sustainability]], [[bloc_des_gouvernements_souverainistes_hydriques_new_sustainability]], [[coalition_anti_fiscalite_universelle_new_sustainability]], [[coalition_des_industries_extractives_residuelles_new_sustainability]], [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]], [[etats_souverainistes_anti_reseau_new_sustainability]], [[reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability]], [[collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability]], [[factions_souverainistes_des_blocs_peripheriques_new_sustainability]]
 
 ## Description journalistique
 Au cœur du quartier des Nations régénéré, le Centre Institutionnel de Genève ressemble moins à un palais du pouvoir qu'à une machine de précision collective : des salles de délibération où siègent côte à côte diplomates humains et interfaces de synthèse algorithmique, des couloirs où s'échangent les rapports de l'AMMC et les revendications des blocs hydriques du Sahel. En 2098, le Centre est l'institution que tout le monde critique mais que personne ne veut voir disparaître — son arbitrage sur le Corridor Énergétique Alpin en 2094 a évité une rupture majeure entre l'Union Nordique et le Bloc Méditerranéen. Sa légitimité tient moins à ses textes fondateurs qu'à l'absence de toute alternative crédible : retirer sa signature du Pacte, c'est se retrouver seul face aux crises systémiques globales. Le Centre gouverne dans cet interstice fragile — indispensable précisément parce que vulnérable.
 
 ## Tensions narratives
 La tension centrale : plusieurs États du Bloc Eurasien Souverainiste menacent périodiquement de ne plus soumettre leurs feuilles de route nationales, arguant que les standards du Centre favorisent les économies post-industrielles occidentales au détriment de leur rattrapage énergétique. Par ailleurs, les Collectifs de Déplacés Climatiques Non-Représentés réclament depuis 2091 un siège permanent au Comité d'Arbitrage, ce que refusent les États membres — créant un angle mort démocratique dans l'institution censée incarner le bien commun. Enfin, une faction technocratique interne pousse à déléguer davantage d'arbitrages à des systèmes d'IA comme le Conseil Mondial de l'IA Régénérative, ce qui risquerait de vider le Centre de sa substance politique et d'éroder la dernière fiction de souveraineté collective partagée.
+
+## Relations
+**Alliés :**
+- [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]]
+- [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]]
+- [[agence_stabilisation_climatique_new_sustainability]]
+- [[conseil_de_deliberation_augmentee_de_l_union_nordique_new_sustainability]]
+- [[conseil_de_regulation_cognitive_de_l_onu_new_sustainability]]
+- [[conseil_energetique_intercontinental_new_sustainability]]
+- [[conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability]]
+- [[conseil_regulation_ressources_new_sustainability]]
+- [[consortium_d_interoperabilite_ia_humain_new_sustainability]]
+- [[consortium_de_regeneration_planetaire_new_sustainability]]
+- [[fonds_mondial_de_redistribution_technologique_new_sustainability]]
+- [[fonds_mondial_de_regeneration_ecologique_new_sustainability]]
+- [[institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability]]
+- [[observatoire_anti_monopole_de_geneve_new_sustainability]]
+- [[oms_etendue_new_sustainability]]
+- [[parlement_deliberatif_mondial_new_sustainability]]
+- [[programme_onu_de_restauration_des_sols_new_sustainability]]
+- [[reseau_des_agences_climatiques_regionales_new_sustainability]]
+- [[reseau_des_villes_regeneratives_new_sustainability]]
+- [[tribunal_algorithmique_de_bruxelles_new_sustainability]]
+- [[union_des_blocs_energetiques_regionaux_new_sustainability]]
+**Opposants :**
+- [[alliance_numerique_eurasie_pacifique_new_sustainability]]
+- [[bloc_des_gouvernements_souverainistes_hydriques_new_sustainability]]
+- [[bloc_eurasien_souverainiste_new_sustainability]]
+- [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]]
+- [[coalition_anti_fiscalite_universelle_new_sustainability]]
+- [[coalition_des_industries_extractives_residuelles_new_sustainability]]
+- [[collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability]]
+- [[collectifs_de_deplaces_climatiques_non_representes_new_sustainability]]
+- [[collectifs_de_narration_sauvage_hors_protocole_new_sustainability]]
+- [[communautes_locales_exclues_des_corridors_new_sustainability]]
+- [[etats_souverainistes_anti_reseau_new_sustainability]]
+- [[factions_souverainistes_des_blocs_peripheriques_new_sustainability]]
+- [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]]
+- [[mouvement_pour_l_autodetermination_territoriale_new_sustainability]]
+- [[mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability]]
+- [[reseau_des_communs_productifs_regeneratifs_new_sustainability]]
+- [[reseau_des_ingenieurs_climatiques_du_sud_global_new_sustainability]]
+- [[reseaux_d_information_souverainistes_fermes_new_sustainability]]
+- [[reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability]]
+- [[souverainistes_du_bloc_eurasien_new_sustainability]]

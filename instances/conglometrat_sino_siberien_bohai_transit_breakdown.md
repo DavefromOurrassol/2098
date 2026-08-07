@@ -36,8 +36,27 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- autorite_passage_arctique_breakdown
+- consortium_energetique_oural_caspien_breakdown
+- consortiums_energetiques_samoiedes_du_yamal_breakdown
+- corridors_eurasiens_convoyage_breakdown
+- enclaves_industrielles_du_corridor_oural_caspien_breakdown
+- ligue_eurasiatique_coalition_pacifique_breakdown
+- milices_contractuelles_des_anciens_etats_membres_breakdown
+- reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown
+oppositions:
+- arctic_passage_authority_breakdown
+- arctique_nordark_breakdown
+- armada_logistique_nordique_breakdown
+- district_mourmansk_residuel_breakdown
+- etats_fragments_en_guerre_pour_les_stations_atmospheriques_breakdown
+- factions_paramilitaires_locales_neutralisees_breakdown
+- federation_russe_residuelle_district_de_mourmansk_breakdown
+- front_de_resistance_aux_peages_sur_les_ressources_breakdown
+- milices_extractivistes_du_bassin_du_congo_breakdown
+- saboteurs_des_corridors_de_transit_breakdown
+- seoul_collectif_nexcore_breakdown
 type_relation_dominante: dépendance
 annee_debut: 2026
 annee_fin: null
@@ -98,6 +117,30 @@ Bohai Transit est prise en étau entre ses actionnaires sino-mandchous qui exige
 - [[energie_ressources_critiques]]
 - [[organisation_territoires]]
 - [[geopolitique_conflits]]
+
+
+## Relations
+**Alliés :**
+- [[autorite_passage_arctique_breakdown]]
+- [[consortium_energetique_oural_caspien_breakdown]]
+- [[consortiums_energetiques_samoiedes_du_yamal_breakdown]]
+- [[corridors_eurasiens_convoyage_breakdown]]
+- [[enclaves_industrielles_du_corridor_oural_caspien_breakdown]]
+- [[ligue_eurasiatique_coalition_pacifique_breakdown]]
+- [[milices_contractuelles_des_anciens_etats_membres_breakdown]]
+- [[reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown]]
+**Opposants :**
+- [[arctic_passage_authority_breakdown]]
+- [[arctique_nordark_breakdown]]
+- [[armada_logistique_nordique_breakdown]]
+- [[district_mourmansk_residuel_breakdown]]
+- [[etats_fragments_en_guerre_pour_les_stations_atmospheriques_breakdown]]
+- [[factions_paramilitaires_locales_neutralisees_breakdown]]
+- [[federation_russe_residuelle_district_de_mourmansk_breakdown]]
+- [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
+- [[milices_extractivistes_du_bassin_du_congo_breakdown]]
+- [[saboteurs_des_corridors_de_transit_breakdown]]
+- [[seoul_collectif_nexcore_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

@@ -4,6 +4,7 @@ type: instance
 slug: delta_du_mekong_reference
 entite: delta_du_mekong
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: delta_du_mekong
   lieu: Delta du Mékong

@@ -30,8 +30,20 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- coalition_des_souverainistes_numeriques_policy_reform
+- front_des_souverainistes_energetiques_policy_reform
+- front_souverainiste_des_blocs_non_signataires_policy_reform
+- gouvernements_populistes_anti_depossession_policy_reform
+- mouvement_pour_la_souverainete_territoriale_absolue_policy_reform
+- reseau_des_regulateurs_numeriques_souverains_rrns_policy_reform
+oppositions:
+- agence_stabilisation_climatique_policy_reform
+- agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
+- autorite_mondiale_du_vivant_amv_policy_reform
+- conseil_regulation_ressources_policy_reform
+- fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform
+- grille_aria_policy_reform
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -93,6 +105,23 @@ La tension centrale réside dans leur contradiction interne : ils dépendent des
 - [[gouvernance_institutions]]
 - [[geopolitique_conflits]]
 - [[organisation_territoires]]
+
+
+## Relations
+**Alliés :**
+- [[coalition_des_souverainistes_numeriques_policy_reform]]
+- [[front_des_souverainistes_energetiques_policy_reform]]
+- [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+- [[gouvernements_populistes_anti_depossession_policy_reform]]
+- [[mouvement_pour_la_souverainete_territoriale_absolue_policy_reform]]
+- [[reseau_des_regulateurs_numeriques_souverains_rrns_policy_reform]]
+**Opposants :**
+- [[agence_stabilisation_climatique_policy_reform]]
+- [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]
+- [[autorite_mondiale_du_vivant_amv_policy_reform]]
+- [[conseil_regulation_ressources_policy_reform]]
+- [[fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform]]
+- [[grille_aria_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

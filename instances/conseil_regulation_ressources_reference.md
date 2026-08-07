@@ -4,6 +4,7 @@ type: instance
 slug: conseil_regulation_ressources_reference
 entite: conseil_regulation_ressources
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: nairobi_crrc
   lieu: Nairobi
@@ -35,17 +36,22 @@ zone_systemique:
     - économie
 
 alliances:
-    - union_africaine_de_resilience_territoriale_reference
-    - consortium_indo_pacifique_de_l_hydrogene_reference
-    - banque_mondiale_des_transitions_climatiques_reference
-    - agence_internationale_des_energies_renouvelables_irena_2_reference
-
+- agence_internationale_des_energies_renouvelables_irena_2_reference
+- arctic_passage_authority_reference
+- banque_mondiale_des_transitions_climatiques_reference
+- consortium_indo_pacifique_de_l_hydrogene_reference
+- kalaallit_nunaat_sovereign_fund_reference
+- regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference
+- union_africaine_de_resilience_territoriale_reference
 oppositions:
-    - bloc_ressources_eurasiatique_bre_reference
-    - cartel_des_terres_rares_d_asie_centrale_reference
-    - lobbies_industriels_des_etats_non_signataires_reference
-    - front_souverainiste_des_ressources_d_amerique_du_sud_reference
-
+- bloc_ressources_eurasiatique_bre_reference
+- cartel_des_terres_rares_d_asie_centrale_reference
+- consortiums_prives_d_extraction_de_ressources_critiques_reference
+- factions_d_extraction_miniere_independantes_reference
+- front_souverainiste_des_ressources_d_amerique_du_sud_reference
+- lobbies_industriels_des_etats_non_signataires_reference
+- reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference
+- zones_grises_globales_reference
 type_relation_dominante: coopération
 
 annee_debut: 2061
@@ -89,12 +95,28 @@ Fixe des quotas d'extraction et des couloirs de transit reconnus par les 74 Éta
 - [[geopolitique_conflits]]
 - [[systeme_economique_redistribution]]
 
-## Relations
-**Alliés** : [[union_africaine_de_resilience_territoriale_reference]], [[consortium_indo_pacifique_de_l_hydrogene_reference]], [[banque_mondiale_des_transitions_climatiques_reference]], [[agence_internationale_des_energies_renouvelables_irena_2_reference]]
-**Opposants** : [[bloc_ressources_eurasiatique_bre_reference]], [[cartel_des_terres_rares_d_asie_centrale_reference]], [[lobbies_industriels_des_etats_non_signataires_reference]], [[front_souverainiste_des_ressources_d_amerique_du_sud_reference]]
 
 ## Description journalistique
 Le siège du CRRC à Nairobi ressemble à ce qu'il est devenu : un bâtiment imposant aux vitres légèrement teintées de brun par des décennies de poussière sahélienne, où les délégués arrivent en cortèges blindés pour des négociations que tout le monde sait d'avance partiellement inutiles. Ses décisions ont encore force de loi pour les petits États, mais les grandes puissances signent les accords le mardi et annoncent des 'mesures nationales d'exception' le jeudi. Pourtant, chaque fois qu'une crise de couloir de transport éclate au Sahel ou qu'une sécheresse menace un bassin hydrographique transfrontalier, c'est encore au CRRC que les ministres se téléphonent en premier — faute de mieux.
 
 ## Tensions narratives
 La réforme du droit de veto des membres permanents est bloquée depuis 2089, paralysant toute décision contraignante sur les réserves d'eau fossile d'Afrique subsaharienne, devenues le prochain point d'ignition. Un mouvement interne de jeunes délégués du Sud global pousse à une refondation radicale — 'Nairobi 2.0' — tandis que les puissances historiques préfèrent une institution faible et prévisible à une institution forte et imprévisible. En parallèle, des algorithmes de gestion des ressources développés par des acteurs privés commencent à supplanter ses outils d'analyse, soulevant la question de savoir qui régule vraiment les ressources critiques en 2098.
+
+## Relations
+**Alliés :**
+- [[agence_internationale_des_energies_renouvelables_irena_2_reference]]
+- [[arctic_passage_authority_reference]]
+- [[banque_mondiale_des_transitions_climatiques_reference]]
+- [[consortium_indo_pacifique_de_l_hydrogene_reference]]
+- [[kalaallit_nunaat_sovereign_fund_reference]]
+- [[regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference]]
+- [[union_africaine_de_resilience_territoriale_reference]]
+**Opposants :**
+- [[bloc_ressources_eurasiatique_bre_reference]]
+- [[cartel_des_terres_rares_d_asie_centrale_reference]]
+- [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[factions_d_extraction_miniere_independantes_reference]]
+- [[front_souverainiste_des_ressources_d_amerique_du_sud_reference]]
+- [[lobbies_industriels_des_etats_non_signataires_reference]]
+- [[reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference]]
+- [[zones_grises_globales_reference]]

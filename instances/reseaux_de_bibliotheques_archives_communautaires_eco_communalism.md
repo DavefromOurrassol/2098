@@ -29,11 +29,37 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
+- assemblees_bioterritoriales_regionales_eco_communalism
+- brigades_de_restauration_ecologique_eco_communalism
+- cercles_de_mediation_territoriale_intercommunautaire_eco_communalism
+- collectifs_de_cartographie_ecologique_participative_eco_communalism
+- collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism
+- collectifs_de_geo_observateurs_citoyens_eco_communalism
+- collectifs_de_techniciens_sobres_eco_communalism
+- confederation_communs_arc_septentrional_eco_communalism
+- cooperatives_d_habitat_regeneratif_eco_communalism
+- cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
+- fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism
+- guildes_des_semenciers_itinerants_eco_communalism
+- mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism
+- mutuelles_de_sante_territoriales_eco_communalism
+- reseaux_de_radio_communautaire_basse_consommation_eco_communalism
+- reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
+- tampere_charte_eco_communalism
 - trame_mnemos_noeud_reseau_eco_communalism
 - universite_nomade_eco_communalism
-- confederation_communs_arc_septentrional_eco_communalism
+- voix_du_dehors_eco_communalism
 oppositions:
+- cartels_de_narration_de_penurie_eco_communalism
+- consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism
+- courant_isolationniste_anti_circulation_de_l_information_eco_communalism
 - enclaves_extractivistes_et_etats_residuels_eco_communalism
+- factions_autoritaires_de_controle_du_savoir_eco_communalism
+- factions_autoritaires_locales_identitaires_exclusionnistes_eco_communalism
+- factions_communautaires_refusant_le_partage_narratif_exterieur_eco_communalism
+- reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism
+- reseaux_de_notables_communautaires_capturistes_eco_communalism
 - sao_paulo_algorithmique_eco_communalism
 type_relation_dominante: symbiose
 annee_debut: 2026
@@ -97,13 +123,40 @@ La tension principale réside dans le choix de ce qui mérite d'être conservé 
 - [[valeurs_culture_tempo_sociale]]
 - [[organisation_territoires]]
 
+
 ## Relations
 **Alliés :**
+- [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]]
+- [[assemblees_bioterritoriales_regionales_eco_communalism]]
+- [[brigades_de_restauration_ecologique_eco_communalism]]
+- [[cercles_de_mediation_territoriale_intercommunautaire_eco_communalism]]
+- [[collectifs_de_cartographie_ecologique_participative_eco_communalism]]
+- [[collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism]]
+- [[collectifs_de_geo_observateurs_citoyens_eco_communalism]]
+- [[collectifs_de_techniciens_sobres_eco_communalism]]
+- [[confederation_communs_arc_septentrional_eco_communalism]]
+- [[cooperatives_d_habitat_regeneratif_eco_communalism]]
+- [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]
+- [[fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism]]
+- [[guildes_des_semenciers_itinerants_eco_communalism]]
+- [[mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism]]
+- [[mutuelles_de_sante_territoriales_eco_communalism]]
+- [[reseaux_de_radio_communautaire_basse_consommation_eco_communalism]]
+- [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
+- [[tampere_charte_eco_communalism]]
 - [[trame_mnemos_noeud_reseau_eco_communalism]]
 - [[universite_nomade_eco_communalism]]
-- [[confederation_communs_arc_septentrional_eco_communalism]]
+- [[voix_du_dehors_eco_communalism]]
 **Opposants :**
+- [[cartels_de_narration_de_penurie_eco_communalism]]
+- [[consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism]]
+- [[courant_isolationniste_anti_circulation_de_l_information_eco_communalism]]
 - [[enclaves_extractivistes_et_etats_residuels_eco_communalism]]
+- [[factions_autoritaires_de_controle_du_savoir_eco_communalism]]
+- [[factions_autoritaires_locales_identitaires_exclusionnistes_eco_communalism]]
+- [[factions_communautaires_refusant_le_partage_narratif_exterieur_eco_communalism]]
+- [[reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism]]
+- [[reseaux_de_notables_communautaires_capturistes_eco_communalism]]
 - [[sao_paulo_algorithmique_eco_communalism]]
 
 ## Notes

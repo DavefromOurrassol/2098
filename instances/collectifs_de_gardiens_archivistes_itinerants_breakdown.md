@@ -38,14 +38,26 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
-- lagos_interieur_mnemos_breakdown
 - agadez_ligue_sahel_numerique_breakdown
+- archives_neutres_de_geneve_breakdown
+- archives_neutres_geneve_breakdown
+- bureau_des_territoires_residuels_breakdown
+- collectif_des_climatologues_sans_etat_breakdown
+- collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
+- communautes_religieuses_des_relais_physiques_breakdown
 - communes_rust_belt_breakdown
-- occitanie_racines_meres_breakdown
 - delta_mekong_racines_breakdown
+- lagos_interieur_mnemos_breakdown
+- le_registre_du_fleuve_breakdown
+- les_veilleurs_du_fleuve_breakdown
+- ligue_des_cites_littorales_en_sursis_breakdown
+- noeud_mnemos_pannonie_breakdown
+- occitanie_racines_meres_breakdown
+- pirates_biologiques_open_source_breakdown
+- reseau_mnemos_breakdown
 oppositions:
-- lagos_est_nexcore_breakdown
 - carthage_nord_nexcore_breakdown
+- lagos_est_nexcore_breakdown
 - seoul_collectif_nexcore_breakdown
 type_relation_dominante: symbiose
 annee_debut: 2026
@@ -108,16 +120,29 @@ La tension centrale qui travaille ces collectifs est celle entre la conservation
 - [[valeurs_culture_tempo_sociale]]
 - [[demographie_mobilite_humaine]]
 
+
 ## Relations
 **Alliés :**
-- [[lagos_interieur_mnemos_breakdown]]
 - [[agadez_ligue_sahel_numerique_breakdown]]
+- [[archives_neutres_de_geneve_breakdown]]
+- [[archives_neutres_geneve_breakdown]]
+- [[bureau_des_territoires_residuels_breakdown]]
+- [[collectif_des_climatologues_sans_etat_breakdown]]
+- [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]]
+- [[communautes_religieuses_des_relais_physiques_breakdown]]
 - [[communes_rust_belt_breakdown]]
-- [[occitanie_racines_meres_breakdown]]
 - [[delta_mekong_racines_breakdown]]
+- [[lagos_interieur_mnemos_breakdown]]
+- [[le_registre_du_fleuve_breakdown]]
+- [[les_veilleurs_du_fleuve_breakdown]]
+- [[ligue_des_cites_littorales_en_sursis_breakdown]]
+- [[noeud_mnemos_pannonie_breakdown]]
+- [[occitanie_racines_meres_breakdown]]
+- [[pirates_biologiques_open_source_breakdown]]
+- [[reseau_mnemos_breakdown]]
 **Opposants :**
-- [[lagos_est_nexcore_breakdown]]
 - [[carthage_nord_nexcore_breakdown]]
+- [[lagos_est_nexcore_breakdown]]
 - [[seoul_collectif_nexcore_breakdown]]
 
 ## Notes

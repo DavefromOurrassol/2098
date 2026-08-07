@@ -31,8 +31,33 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference
+- bloc_des_souverainistes_climatiques_reference
+- etats_a_tendance_centraliste_numerique_reference
+- gouvernements_a_regime_de_productivite_mandatee_reference
+- gouvernements_federaux_residuels_souverainistes_reference
+- pacte_des_souverains_reference
+- regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference
+oppositions:
+- agence_internationale_des_energies_renouvelables_irena_2_reference
+- bloc_eurasien_central_reference
+- bruxelles_nouveau_reference
+- consortium_augmentwork_reference
+- consortium_des_grandes_plateformes_ia_integrees_reference
+- consortium_des_grandes_plateformes_logistiques_globales_reference
+- consortiums_bancaires_financiarises_reference
+- consortiums_prives_de_gestion_des_donnees_critiques_reference
+- datasovereign_reference
+- directive_kontinuum_reference
+- europe_occidentale_reconstructee_reference
+- helsinki_communs_numeriques_reference
+- institutions_multilaterales_survivantes_reference
+- mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
+- nexcore_reference
+- plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference
+- singapour_est_nexcore_reference
+- valparaiso_fct_reference
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -97,6 +122,36 @@ La Coalition est prise en étau entre les États souverainistes qui l'instrument
 - [[gouvernance_institutions]]
 - [[technologie_information]]
 - [[geopolitique_conflits]]
+
+
+## Relations
+**Alliés :**
+- [[bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference]]
+- [[bloc_des_souverainistes_climatiques_reference]]
+- [[etats_a_tendance_centraliste_numerique_reference]]
+- [[gouvernements_a_regime_de_productivite_mandatee_reference]]
+- [[gouvernements_federaux_residuels_souverainistes_reference]]
+- [[pacte_des_souverains_reference]]
+- [[regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference]]
+**Opposants :**
+- [[agence_internationale_des_energies_renouvelables_irena_2_reference]]
+- [[bloc_eurasien_central_reference]]
+- [[bruxelles_nouveau_reference]]
+- [[consortium_augmentwork_reference]]
+- [[consortium_des_grandes_plateformes_ia_integrees_reference]]
+- [[consortium_des_grandes_plateformes_logistiques_globales_reference]]
+- [[consortiums_bancaires_financiarises_reference]]
+- [[consortiums_prives_de_gestion_des_donnees_critiques_reference]]
+- [[datasovereign_reference]]
+- [[directive_kontinuum_reference]]
+- [[europe_occidentale_reconstructee_reference]]
+- [[helsinki_communs_numeriques_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
+- [[mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference]]
+- [[nexcore_reference]]
+- [[plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference]]
+- [[singapour_est_nexcore_reference]]
+- [[valparaiso_fct_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

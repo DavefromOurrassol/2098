@@ -31,8 +31,40 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- banque_des_communs_reference
+- bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference
+- collectifs_academiques_independants_reference
+- collectifs_de_journalistes_independants_regionaux_reference
+- communs_numeriques_agroecologiques_reference
+- consortium_des_fournisseurs_d_energie_renouvelable_distribuee_reference
+- cooperatives_energetiques_decentralisees_reference
+- cooperatives_ia_open_source_reference
+- federation_communs_territoriaux_reference
+- federation_des_cliniques_autonomes_reference
+- helsinki_communs_numeriques_reference
+- les_veilleurs_du_fleuve_reference
+- ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference
+- ligue_des_municipalites_peripheriques_sous_connectees_reference
+- mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
+- reseau_des_administrations_locales_rurales_participatives_reference
+- reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference
+- reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference
+- reseau_hospitalier_hybride_eurasiatique_reference
+- tbilissi_noeud_mnemos_reference
+oppositions:
+- bureaux_de_regulation_informationnelle_reference
+- coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference
+- consortium_des_grandes_plateformes_ia_integrees_reference
+- consortium_des_plateformes_ia_centralisees_anti_deliberation_reference
+- consortiums_energetiques_opaques_reference
+- consortiums_prives_de_gestion_des_donnees_critiques_reference
+- datasovereign_reference
+- directive_kontinuum_reference
+- etats_a_tendance_centraliste_numerique_reference
+- nexcore_reference
+- plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference
+- regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -96,6 +128,43 @@ La tension majeure réside dans l'écart croissant entre les ambitions fédérat
 - [[technologie_information]]
 - [[systeme_economique_redistribution]]
 - [[organisation_territoires]]
+
+
+## Relations
+**Alliés :**
+- [[banque_des_communs_reference]]
+- [[bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference]]
+- [[collectifs_academiques_independants_reference]]
+- [[collectifs_de_journalistes_independants_regionaux_reference]]
+- [[communs_numeriques_agroecologiques_reference]]
+- [[consortium_des_fournisseurs_d_energie_renouvelable_distribuee_reference]]
+- [[cooperatives_energetiques_decentralisees_reference]]
+- [[cooperatives_ia_open_source_reference]]
+- [[federation_communs_territoriaux_reference]]
+- [[federation_des_cliniques_autonomes_reference]]
+- [[helsinki_communs_numeriques_reference]]
+- [[les_veilleurs_du_fleuve_reference]]
+- [[ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference]]
+- [[ligue_des_municipalites_peripheriques_sous_connectees_reference]]
+- [[mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference]]
+- [[reseau_des_administrations_locales_rurales_participatives_reference]]
+- [[reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference]]
+- [[reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference]]
+- [[reseau_hospitalier_hybride_eurasiatique_reference]]
+- [[tbilissi_noeud_mnemos_reference]]
+**Opposants :**
+- [[bureaux_de_regulation_informationnelle_reference]]
+- [[coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference]]
+- [[consortium_des_grandes_plateformes_ia_integrees_reference]]
+- [[consortium_des_plateformes_ia_centralisees_anti_deliberation_reference]]
+- [[consortiums_energetiques_opaques_reference]]
+- [[consortiums_prives_de_gestion_des_donnees_critiques_reference]]
+- [[datasovereign_reference]]
+- [[directive_kontinuum_reference]]
+- [[etats_a_tendance_centraliste_numerique_reference]]
+- [[nexcore_reference]]
+- [[plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference]]
+- [[regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

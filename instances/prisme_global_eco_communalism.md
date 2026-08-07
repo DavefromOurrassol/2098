@@ -4,6 +4,7 @@ type: instance
 slug: prisme_global_eco_communalism
 entite: prisme_global
 scenario: eco_communalism
+statut: officialise_enrichi
 localisation:
   zone: null
   lieu: null

@@ -33,8 +33,24 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- centre_institutionnel_geneve_new_sustainability
+- college_des_auditeurs_independants_du_parlement_biotechnologique_mondial_new_sustainability
+- conseil_regulation_ressources_new_sustainability
+- consortium_africain_de_biotechnologies_sociales_new_sustainability
+- consortium_d_audit_algorithmique_ouvert_new_sustainability
+- reseau_des_agences_climatiques_regionales_new_sustainability
+- tribunal_algorithmique_de_bruxelles_new_sustainability
+- tribunal_gouvernance_algorithmique_bruxelles_new_sustainability
+oppositions:
+- alliance_numerique_eurasie_pacifique_new_sustainability
+- coalition_des_industries_extractives_residuelles_new_sustainability
+- consortium_helios_new_sustainability
+- enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability
+- factions_technocratiques_du_conseil_de_regulation_informationnelle_global_new_sustainability
+- lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability
+- operateurs_de_fusion_energetique_regionaux_new_sustainability
+- reseau_global_de_cliniques_regeneratives_new_sustainability
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -97,6 +113,27 @@ Dans un scénario où la gouvernance institutionnelle atteint un niveau de légi
 - [[systeme_economique_redistribution]]
 - [[gouvernance_institutions]]
 - [[energie_ressources_critiques]]
+
+
+## Relations
+**Alliés :**
+- [[centre_institutionnel_geneve_new_sustainability]]
+- [[college_des_auditeurs_independants_du_parlement_biotechnologique_mondial_new_sustainability]]
+- [[conseil_regulation_ressources_new_sustainability]]
+- [[consortium_africain_de_biotechnologies_sociales_new_sustainability]]
+- [[consortium_d_audit_algorithmique_ouvert_new_sustainability]]
+- [[reseau_des_agences_climatiques_regionales_new_sustainability]]
+- [[tribunal_algorithmique_de_bruxelles_new_sustainability]]
+- [[tribunal_gouvernance_algorithmique_bruxelles_new_sustainability]]
+**Opposants :**
+- [[alliance_numerique_eurasie_pacifique_new_sustainability]]
+- [[coalition_des_industries_extractives_residuelles_new_sustainability]]
+- [[consortium_helios_new_sustainability]]
+- [[enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability]]
+- [[factions_technocratiques_du_conseil_de_regulation_informationnelle_global_new_sustainability]]
+- [[lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability]]
+- [[operateurs_de_fusion_energetique_regionaux_new_sustainability]]
+- [[reseau_global_de_cliniques_regeneratives_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

@@ -29,8 +29,34 @@ zone_geographique:
 - régionale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- assemblees_bioterritoriales_regionales_eco_communalism
+- brigades_de_restauration_ecologique_eco_communalism
+- cercles_de_mediation_territoriale_intercommunautaire_eco_communalism
+- collectifs_de_cartographie_ecologique_participative_eco_communalism
+- collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism
+- confederation_bassins_vivants_eco_communalism
+- consortium_amazonia_viva_eco_communalism
+- cooperative_terrafond_eco_communalism
+- federation_communs_territoriaux_eco_communalism
+- guildes_de_mediateurs_ecologiques_eco_communalism
+- le_registre_du_fleuve_eco_communalism
+- les_veilleurs_du_fleuve_eco_communalism
+- oracle_des_seuils_eco_communalism
+- rede_paulista_de_distribuic_o_algor_tmica_eco_communalism
+- reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism
+- reseau_terrafond_bassins_eco_communalism
+- reseaux_de_radio_communautaire_basse_consommation_eco_communalism
+- reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
+oppositions:
+- communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism
+- communautes_rurales_dissidentes_anti_cooperation_regionale_eco_communalism
+- consortiums_industriels_de_l_eau_eco_communalism
+- enclaves_extractivistes_et_etats_residuels_eco_communalism
+- enclaves_extractivistes_residuelles_des_corridors_eco_communalism
+- factions_autoritaires_locales_identitaires_exclusionnistes_eco_communalism
+- factions_extractivistes_des_aquiferes_communs_eco_communalism
+- reseaux_de_notables_communautaires_capturistes_eco_communalism
 type_relation_dominante: symbiose
 annee_debut: 2026
 annee_fin: null
@@ -94,6 +120,37 @@ La tension la plus profonde oppose la souveraineté locale revendiquée par chaq
 - [[organisation_territoires]]
 - [[gouvernance_institutions]]
 - [[climat_environnement_global]]
+
+
+## Relations
+**Alliés :**
+- [[assemblees_bioterritoriales_regionales_eco_communalism]]
+- [[brigades_de_restauration_ecologique_eco_communalism]]
+- [[cercles_de_mediation_territoriale_intercommunautaire_eco_communalism]]
+- [[collectifs_de_cartographie_ecologique_participative_eco_communalism]]
+- [[collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism]]
+- [[confederation_bassins_vivants_eco_communalism]]
+- [[consortium_amazonia_viva_eco_communalism]]
+- [[cooperative_terrafond_eco_communalism]]
+- [[federation_communs_territoriaux_eco_communalism]]
+- [[guildes_de_mediateurs_ecologiques_eco_communalism]]
+- [[le_registre_du_fleuve_eco_communalism]]
+- [[les_veilleurs_du_fleuve_eco_communalism]]
+- [[oracle_des_seuils_eco_communalism]]
+- [[rede_paulista_de_distribuic_o_algor_tmica_eco_communalism]]
+- [[reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism]]
+- [[reseau_terrafond_bassins_eco_communalism]]
+- [[reseaux_de_radio_communautaire_basse_consommation_eco_communalism]]
+- [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
+**Opposants :**
+- [[communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism]]
+- [[communautes_rurales_dissidentes_anti_cooperation_regionale_eco_communalism]]
+- [[consortiums_industriels_de_l_eau_eco_communalism]]
+- [[enclaves_extractivistes_et_etats_residuels_eco_communalism]]
+- [[enclaves_extractivistes_residuelles_des_corridors_eco_communalism]]
+- [[factions_autoritaires_locales_identitaires_exclusionnistes_eco_communalism]]
+- [[factions_extractivistes_des_aquiferes_communs_eco_communalism]]
+- [[reseaux_de_notables_communautaires_capturistes_eco_communalism]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

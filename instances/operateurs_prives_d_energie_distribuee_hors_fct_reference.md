@@ -31,8 +31,19 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- administrations_hybrides_des_cites_relais_peripheriques_reference
+- gouvernements_du_bloc_sahelien_autonome_reference
+- ligue_des_municipalites_peripheriques_sous_connectees_reference
+oppositions:
+- agence_internationale_des_energies_renouvelables_irena_2_reference
+- blocs_signataires_du_pacte_energetique_multilateral_reference
+- commission_hydrique_de_l_union_africaine_reference
+- consortium_des_fournisseurs_d_energie_renouvelable_distribuee_reference
+- cooperatives_energetiques_decentralisees_reference
+- federation_communs_territoriaux_reference
+- regulateurs_de_l_union_continentale_africaine_reference
+- valparaiso_fct_reference
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -95,6 +106,25 @@ La tension centrale réside dans la double légitimité contradictoire de ces ac
 - [[energie_ressources_critiques]]
 - [[gouvernance_institutions]]
 - [[organisation_territoires]]
+
+
+
+
+
+## Relations
+**Alliés :**
+- [[administrations_hybrides_des_cites_relais_peripheriques_reference]]
+- [[gouvernements_du_bloc_sahelien_autonome_reference]]
+- [[ligue_des_municipalites_peripheriques_sous_connectees_reference]]
+**Opposants :**
+- [[agence_internationale_des_energies_renouvelables_irena_2_reference]]
+- [[blocs_signataires_du_pacte_energetique_multilateral_reference]]
+- [[commission_hydrique_de_l_union_africaine_reference]]
+- [[consortium_des_fournisseurs_d_energie_renouvelable_distribuee_reference]]
+- [[cooperatives_energetiques_decentralisees_reference]]
+- [[federation_communs_territoriaux_reference]]
+- [[regulateurs_de_l_union_continentale_africaine_reference]]
+- [[valparaiso_fct_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

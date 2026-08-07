@@ -34,8 +34,32 @@ zone_geographique:
 - régionale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- brigades_medicales_itinerantes_breakdown
+- collectifs_de_sante_communautaire_autogeree_breakdown
+- communautes_paysannes_refugiees_breakdown
+- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- consortium_africain_de_biotechnologies_sociales_breakdown
+- delta_mekong_racines_breakdown
+- enclaves_agro_communautaires_autonomes_breakdown
+- flux_migratoires_non_integrables_breakdown
+- frente_sert_o_livre_breakdown
+- front_humanitaire_d_urgence_non_affilie_breakdown
+- le_registre_du_fleuve_breakdown
+- les_veilleurs_du_fleuve_breakdown
+- milices_agro_defensives_locales_breakdown
+- mouvement_racines_vivantes_breakdown
+- occitanie_racines_meres_breakdown
+- pirates_biologiques_open_source_breakdown
+- reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown
+- reseaux_de_solidarite_horizontale_post_effondrement_breakdown
+oppositions:
+- enclaves_corporatives_fortifiees_breakdown
+- factions_para_etatiques_hydriques_breakdown
+- milices_de_controle_territorial_breakdown
+- nexus_biosyn_breakdown
+- seigneuries_logistiques_armees_breakdown
+- seigneurs_de_guerre_agro_territoriaux_breakdown
 type_relation_dominante: symbiose
 annee_debut: 2026
 annee_fin: null
@@ -93,6 +117,35 @@ Ces réseaux sont pris en étau entre la légitimité populaire qu'ils ont conqu
 - [[sante_biotechnologies]]
 - [[organisation_territoires]]
 - [[valeurs_culture_tempo_sociale]]
+
+
+## Relations
+**Alliés :**
+- [[brigades_medicales_itinerantes_breakdown]]
+- [[collectifs_de_sante_communautaire_autogeree_breakdown]]
+- [[communautes_paysannes_refugiees_breakdown]]
+- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[consortium_africain_de_biotechnologies_sociales_breakdown]]
+- [[delta_mekong_racines_breakdown]]
+- [[enclaves_agro_communautaires_autonomes_breakdown]]
+- [[flux_migratoires_non_integrables_breakdown]]
+- [[frente_sert_o_livre_breakdown]]
+- [[front_humanitaire_d_urgence_non_affilie_breakdown]]
+- [[le_registre_du_fleuve_breakdown]]
+- [[les_veilleurs_du_fleuve_breakdown]]
+- [[milices_agro_defensives_locales_breakdown]]
+- [[mouvement_racines_vivantes_breakdown]]
+- [[occitanie_racines_meres_breakdown]]
+- [[pirates_biologiques_open_source_breakdown]]
+- [[reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown]]
+- [[reseaux_de_solidarite_horizontale_post_effondrement_breakdown]]
+**Opposants :**
+- [[enclaves_corporatives_fortifiees_breakdown]]
+- [[factions_para_etatiques_hydriques_breakdown]]
+- [[milices_de_controle_territorial_breakdown]]
+- [[nexus_biosyn_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]
+- [[seigneurs_de_guerre_agro_territoriaux_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

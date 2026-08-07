@@ -4,6 +4,7 @@ type: instance
 slug: conseil_regulation_algorithmique_policy_reform
 entite: conseil_regulation_algorithmique
 scenario: policy_reform
+statut: officialise_enrichi
 localisation:
   zone: hub_europeen_regulation
   lieu: Genève-Lac
@@ -29,8 +30,43 @@ zone_systemique:
   - IA
   - gouvernance
 alliances:
-  - assemblee_territoires_policy_reform
-oppositions: []
+- assemblee_territoires_policy_reform
+- bureau_international_du_travail_augmente_bita_policy_reform
+- conseil_de_gouvernance_de_l_information_policy_reform
+- conseil_intergouvernemental_de_regulation_technologique_policy_reform
+- conseil_onu_de_gouvernance_numerique_et_ia_policy_reform
+- consortium_des_ia_editoriales_certifiees_policy_reform
+- consortium_nexus_calcul_policy_reform
+- consortium_technologique_de_planification_territoriale_policy_reform
+- consortium_technologique_des_nations_integrees_policy_reform
+- consortiums_d_optimisation_rh_algorithmique_policy_reform
+- courant_autoritaire_recuperateur_du_vocabulaire_communautaire_policy_reform
+- directive_kontinuum_policy_reform
+- faction_regulatrice_dure_au_sein_du_cei_policy_reform
+- institut_brookings_singapour_de_politique_computationnelle_policy_reform
+- office_integre_des_flux_migratoires_policy_reform
+- reseau_des_agences_sanitaires_regionales_policy_reform
+- reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
+- reseau_des_metropoles_n_uds_policy_reform
+- reseau_des_regulateurs_numeriques_souverains_rrns_policy_reform
+- reseaux_de_capteurs_ia_climatiques_deployes_par_les_etats_membres_policy_reform
+- tribunal_algorithmique_de_bruxelles_policy_reform
+oppositions:
+- coalition_des_souverainistes_numeriques_policy_reform
+- collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform
+- collectifs_de_gouvernance_communautaire_decentralisee_policy_reform
+- conglomerats_d_automatisation_industrielle_integrale_policy_reform
+- consortiums_prives_de_gouvernance_algorithmique_policy_reform
+- courants_post_technocratiques_de_reconquete_democratique_policy_reform
+- front_des_autonomies_territoriales_radicales_policy_reform
+- front_souverainiste_de_l_information_regionale_policy_reform
+- front_souverainiste_des_blocs_non_signataires_policy_reform
+- front_techno_utopiste_de_la_decision_automatisee_policy_reform
+- gouvernements_populistes_anti_depossession_policy_reform
+- internationale_decroissante_anti_planification_policy_reform
+- le_temoin_policy_reform
+- les_hors_prisme_policy_reform
+- mouvement_pour_la_souverainete_territoriale_absolue_policy_reform
 type_relation_dominante: coopération
 annee_debut: 2037
 annee_fin:
@@ -71,9 +107,6 @@ Supervise les systèmes IA critiques avec mandat contraignant limité.
 - [[gouvernance_institutions]]
 - [[technologie_information]]
 
-## Relations
-**Alliés** : [[assemblee_territoires_policy_reform]]
-**Opposants** : _aucun défini_
 
 ## Description journalistique
 L'AISIA est le résultat de dix ans de négociations âpres. Ses pouvoirs
@@ -84,3 +117,43 @@ voyait un mur.
 ## Tensions narratives
 Pression constante des grandes puissances pour limiter son mandat.
 Débat sur l'extension de sa compétence au secteur privé.
+
+## Relations
+**Alliés :**
+- [[assemblee_territoires_policy_reform]]
+- [[bureau_international_du_travail_augmente_bita_policy_reform]]
+- [[conseil_de_gouvernance_de_l_information_policy_reform]]
+- [[conseil_intergouvernemental_de_regulation_technologique_policy_reform]]
+- [[conseil_onu_de_gouvernance_numerique_et_ia_policy_reform]]
+- [[consortium_des_ia_editoriales_certifiees_policy_reform]]
+- [[consortium_nexus_calcul_policy_reform]]
+- [[consortium_technologique_de_planification_territoriale_policy_reform]]
+- [[consortium_technologique_des_nations_integrees_policy_reform]]
+- [[consortiums_d_optimisation_rh_algorithmique_policy_reform]]
+- [[courant_autoritaire_recuperateur_du_vocabulaire_communautaire_policy_reform]]
+- [[directive_kontinuum_policy_reform]]
+- [[faction_regulatrice_dure_au_sein_du_cei_policy_reform]]
+- [[institut_brookings_singapour_de_politique_computationnelle_policy_reform]]
+- [[office_integre_des_flux_migratoires_policy_reform]]
+- [[reseau_des_agences_sanitaires_regionales_policy_reform]]
+- [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]]
+- [[reseau_des_metropoles_n_uds_policy_reform]]
+- [[reseau_des_regulateurs_numeriques_souverains_rrns_policy_reform]]
+- [[reseaux_de_capteurs_ia_climatiques_deployes_par_les_etats_membres_policy_reform]]
+- [[tribunal_algorithmique_de_bruxelles_policy_reform]]
+**Opposants :**
+- [[coalition_des_souverainistes_numeriques_policy_reform]]
+- [[collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform]]
+- [[collectifs_de_gouvernance_communautaire_decentralisee_policy_reform]]
+- [[conglomerats_d_automatisation_industrielle_integrale_policy_reform]]
+- [[consortiums_prives_de_gouvernance_algorithmique_policy_reform]]
+- [[courants_post_technocratiques_de_reconquete_democratique_policy_reform]]
+- [[front_des_autonomies_territoriales_radicales_policy_reform]]
+- [[front_souverainiste_de_l_information_regionale_policy_reform]]
+- [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+- [[front_techno_utopiste_de_la_decision_automatisee_policy_reform]]
+- [[gouvernements_populistes_anti_depossession_policy_reform]]
+- [[internationale_decroissante_anti_planification_policy_reform]]
+- [[le_temoin_policy_reform]]
+- [[les_hors_prisme_policy_reform]]
+- [[mouvement_pour_la_souverainete_territoriale_absolue_policy_reform]]

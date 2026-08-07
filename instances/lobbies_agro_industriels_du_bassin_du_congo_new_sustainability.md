@@ -35,8 +35,36 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- bloc_eurasien_souverainiste_new_sustainability
+- coalition_des_industries_extractives_residuelles_new_sustainability
+- etats_souverainistes_anti_reseau_new_sustainability
+- factions_souverainistes_des_blocs_peripheriques_new_sustainability
+- reseaux_d_information_souverainistes_fermes_new_sustainability
+oppositions:
+- agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
+- amara_diallo_nkosi_new_sustainability
+- collectifs_riverains_du_bassin_du_congo_new_sustainability
+- communautes_locales_exclues_des_corridors_new_sustainability
+- conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability
+- consortium_africain_de_biotechnologies_sociales_new_sustainability
+- consortium_amazonia_viva_new_sustainability
+- consortium_de_regeneration_planetaire_new_sustainability
+- fonds_mondial_de_redistribution_technologique_new_sustainability
+- fonds_mondial_de_regeneration_ecologique_new_sustainability
+- hub_nairobi_kigali_new_sustainability
+- institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability
+- les_veilleurs_du_fleuve_new_sustainability
+- mouvement_communautaire_des_micro_grids_energetiques_new_sustainability
+- parlement_deliberatif_mondial_new_sustainability
+- parlement_territoires_nairobi_new_sustainability
+- programme_onu_de_restauration_des_sols_new_sustainability
+- reseau_des_bio_communs_regionaux_new_sustainability
+- reseau_des_communs_alimentaires_hors_grille_new_sustainability
+- reseau_des_communs_productifs_regeneratifs_new_sustainability
+- reseau_des_hubs_urbains_regeneratifs_new_sustainability
+- reseau_des_villes_regeneratives_new_sustainability
+- reseaux_de_medecine_regenerative_universelle_new_sustainability
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -98,6 +126,39 @@ Dans un scénario où la gouvernance atteint un niveau d'institutionnalisation s
 - [[climat_environnement_global]]
 - [[gouvernance_institutions]]
 - [[systemes_productifs_travail]]
+
+
+## Relations
+**Alliés :**
+- [[bloc_eurasien_souverainiste_new_sustainability]]
+- [[coalition_des_industries_extractives_residuelles_new_sustainability]]
+- [[etats_souverainistes_anti_reseau_new_sustainability]]
+- [[factions_souverainistes_des_blocs_peripheriques_new_sustainability]]
+- [[reseaux_d_information_souverainistes_fermes_new_sustainability]]
+**Opposants :**
+- [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]]
+- [[amara_diallo_nkosi_new_sustainability]]
+- [[collectifs_riverains_du_bassin_du_congo_new_sustainability]]
+- [[communautes_locales_exclues_des_corridors_new_sustainability]]
+- [[conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability]]
+- [[consortium_africain_de_biotechnologies_sociales_new_sustainability]]
+- [[consortium_amazonia_viva_new_sustainability]]
+- [[consortium_de_regeneration_planetaire_new_sustainability]]
+- [[fonds_mondial_de_redistribution_technologique_new_sustainability]]
+- [[fonds_mondial_de_regeneration_ecologique_new_sustainability]]
+- [[hub_nairobi_kigali_new_sustainability]]
+- [[institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability]]
+- [[les_veilleurs_du_fleuve_new_sustainability]]
+- [[mouvement_communautaire_des_micro_grids_energetiques_new_sustainability]]
+- [[parlement_deliberatif_mondial_new_sustainability]]
+- [[parlement_territoires_nairobi_new_sustainability]]
+- [[programme_onu_de_restauration_des_sols_new_sustainability]]
+- [[reseau_des_bio_communs_regionaux_new_sustainability]]
+- [[reseau_des_communs_alimentaires_hors_grille_new_sustainability]]
+- [[reseau_des_communs_productifs_regeneratifs_new_sustainability]]
+- [[reseau_des_hubs_urbains_regeneratifs_new_sustainability]]
+- [[reseau_des_villes_regeneratives_new_sustainability]]
+- [[reseaux_de_medecine_regenerative_universelle_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

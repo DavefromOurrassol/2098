@@ -33,8 +33,42 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- bruxelles_nouveau_reference
+- bureau_zones_non_prioritaires_reference
+- collectifs_academiques_independants_reference
+- collectifs_de_biopiraterie_inversee_reference
+- collectifs_de_peche_inuit_et_sami_reference
+- consortium_africain_de_biotechnologies_sociales_reference
+- consortium_amazonia_viva_reference
+- delta_du_gange_reference
+- federation_des_cliniques_autonomes_reference
+- geneve_lac_retreite_reference
+- great_lakes_autonomous_compact_reference
+- institutions_multilaterales_survivantes_reference
+- internationale_travailleurs_augmentes_reference
+- mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
+- observatoire_climatique_des_territoires_oct_reference
+- ong_de_tracabilite_des_ressources_critiques_reference
+- ong_environnementales_de_terrain_reference
+- pacifique_sud_archipels_flottants_reference
+- pacifique_sud_resilience_network_reference
+- reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference
+- reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference
+- reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference
+- reseaux_de_gouvernance_multilaterale_survivants_reference
+- syndicats_de_travailleurs_de_la_transition_energetique_reference
+- tribunal_algorithmique_de_bruxelles_reference
+oppositions:
+- agrisynth_reference
+- amazonie_consortium_viva_reference
+- bloc_eurasien_central_reference
+- consortium_augmentwork_reference
+- consortiums_prives_d_extraction_de_ressources_critiques_reference
+- ecosynth_global_reference
+- neuroharmonics_reference
+- nexus_biosyn_reference
+- pacte_des_souverains_reference
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -99,6 +133,45 @@ Le Conseil est écartelé entre sa vocation universaliste et la réalité d'un m
 - [[sante_biotechnologies]]
 - [[gouvernance_institutions]]
 - [[demographie_mobilite_humaine]]
+
+
+## Relations
+**Alliés :**
+- [[bruxelles_nouveau_reference]]
+- [[bureau_zones_non_prioritaires_reference]]
+- [[collectifs_academiques_independants_reference]]
+- [[collectifs_de_biopiraterie_inversee_reference]]
+- [[collectifs_de_peche_inuit_et_sami_reference]]
+- [[consortium_africain_de_biotechnologies_sociales_reference]]
+- [[consortium_amazonia_viva_reference]]
+- [[delta_du_gange_reference]]
+- [[federation_des_cliniques_autonomes_reference]]
+- [[geneve_lac_retreite_reference]]
+- [[great_lakes_autonomous_compact_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
+- [[internationale_travailleurs_augmentes_reference]]
+- [[mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference]]
+- [[observatoire_climatique_des_territoires_oct_reference]]
+- [[ong_de_tracabilite_des_ressources_critiques_reference]]
+- [[ong_environnementales_de_terrain_reference]]
+- [[pacifique_sud_archipels_flottants_reference]]
+- [[pacifique_sud_resilience_network_reference]]
+- [[reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference]]
+- [[reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference]]
+- [[reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference]]
+- [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
+- [[syndicats_de_travailleurs_de_la_transition_energetique_reference]]
+- [[tribunal_algorithmique_de_bruxelles_reference]]
+**Opposants :**
+- [[agrisynth_reference]]
+- [[amazonie_consortium_viva_reference]]
+- [[bloc_eurasien_central_reference]]
+- [[consortium_augmentwork_reference]]
+- [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[ecosynth_global_reference]]
+- [[neuroharmonics_reference]]
+- [[nexus_biosyn_reference]]
+- [[pacte_des_souverains_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

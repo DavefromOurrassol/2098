@@ -32,8 +32,32 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_internationale_des_energies_renouvelables_irena_2_reference
+- consortium_africain_de_biotechnologies_sociales_reference
+- consortium_logistique_asiatique_de_contournement_aln_reference
+- institut_polytechnique_de_ouagadougou_reference
+- nairobi_crrc_reference
+- operateurs_prives_d_energie_distribuee_hors_fct_reference
+- pacte_des_souverains_reference
+- reseau_des_cooperatives_agro_saheliennes_reference
+- reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference
+- reseaux_de_medecine_traditionnelle_augmentee_reference
+- union_africaine_resilience_reference
+oppositions:
+- commission_hydrique_de_l_union_africaine_reference
+- consortiums_d_agriculture_verticale_algorithmique_reference
+- consortiums_prives_d_extraction_de_ressources_critiques_reference
+- corporations_d_extraction_energetique_non_signataires_reference
+- factions_d_extraction_miniere_independantes_reference
+- fonds_d_investissement_foncier_climatique_reference
+- kinshasa_accords_hydriques_reference
+- lobbies_industriels_des_etats_non_signataires_reference
+- milices_concurrentes_des_droits_de_passage_reference
+- nexus_biosyn_reference
+- ong_environnementales_de_terrain_reference
+- regulateurs_de_l_union_continentale_africaine_reference
+- union_africaine_de_resilience_territoriale_reference
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -95,6 +119,35 @@ La cohésion du Bloc reste structurellement fragile : les gouvernements membres 
 - [[gouvernance_institutions]]
 - [[geopolitique_conflits]]
 - [[organisation_territoires]]
+
+
+## Relations
+**Alliés :**
+- [[agence_internationale_des_energies_renouvelables_irena_2_reference]]
+- [[consortium_africain_de_biotechnologies_sociales_reference]]
+- [[consortium_logistique_asiatique_de_contournement_aln_reference]]
+- [[institut_polytechnique_de_ouagadougou_reference]]
+- [[nairobi_crrc_reference]]
+- [[operateurs_prives_d_energie_distribuee_hors_fct_reference]]
+- [[pacte_des_souverains_reference]]
+- [[reseau_des_cooperatives_agro_saheliennes_reference]]
+- [[reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference]]
+- [[reseaux_de_medecine_traditionnelle_augmentee_reference]]
+- [[union_africaine_resilience_reference]]
+**Opposants :**
+- [[commission_hydrique_de_l_union_africaine_reference]]
+- [[consortiums_d_agriculture_verticale_algorithmique_reference]]
+- [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[corporations_d_extraction_energetique_non_signataires_reference]]
+- [[factions_d_extraction_miniere_independantes_reference]]
+- [[fonds_d_investissement_foncier_climatique_reference]]
+- [[kinshasa_accords_hydriques_reference]]
+- [[lobbies_industriels_des_etats_non_signataires_reference]]
+- [[milices_concurrentes_des_droits_de_passage_reference]]
+- [[nexus_biosyn_reference]]
+- [[ong_environnementales_de_terrain_reference]]
+- [[regulateurs_de_l_union_continentale_africaine_reference]]
+- [[union_africaine_de_resilience_territoriale_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

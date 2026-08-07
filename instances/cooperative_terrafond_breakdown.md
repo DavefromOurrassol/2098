@@ -4,6 +4,7 @@ type: instance
 slug: cooperative_terrafond_breakdown
 entite: cooperative_terrafond
 scenario: breakdown
+statut: officialise_enrichi
 localisation:
   zone: arc_sahelo_mediterraneen
   lieu: Massif Central / Vallée de l'Allier et plaines de l'Ebre
@@ -33,15 +34,14 @@ zone_systemique:
     - infrastructure
 
 alliances:
-    - communautes_paysannes_refugiees_breakdown
-    - internationale_des_semenciers_agro_pirates_fortress_world
-    - brigades_medicales_itinerantes_breakdown
-
+- brigades_medicales_itinerantes_breakdown
+- internationale_des_semenciers_agro_pirates_fortress_world
 oppositions:
-    - seigneuries_foncieres_opportunistes_breakdown
-    - milices_d_accaparement_hydrique_breakdown
-    - cartels_logistiques_regionaux_breakdown
-
+- cartels_logistiques_regionaux_breakdown
+- communautes_paysannes_refugiees_breakdown
+- massif_central_cicatrices_vertes_breakdown
+- milices_d_accaparement_hydrique_breakdown
+- seigneuries_foncieres_opportunistes_breakdown
 type_relation_dominante: dépendance
 
 annee_debut: 2026
@@ -84,12 +84,20 @@ Gestion fragmentée et non coordonnée de bassins agricoles micro-locaux, mainti
 - [[organisation_territoires]]
 - [[climat_environnement_global]]
 
-## Relations
-**Alliés** : [[communautes_paysannes_refugiees_breakdown]], [[internationale_des_semenciers_agro_pirates_fortress_world]], [[brigades_medicales_itinerantes_breakdown]]
-**Opposants** : [[seigneuries_foncieres_opportunistes_breakdown]], [[milices_d_accaparement_hydrique_breakdown]], [[cartels_logistiques_regionaux_breakdown]]
 
 ## Description journalistique
 Dans la vallée de l'Allier carbonisée, une pancarte délavée porte encore le logo Terrafond — trois rivières entrelacées sur fond ocre. Derrière, huit familles cultivent un hectare de sorgho sous filet anti-UV de récupération. Elles ne savent pas si d'autres 'Terrafond' existent encore ailleurs. Le réseau qui gérait autrefois seize bassins hydrologiques et fédérait plus de 400 coopératives s'est dissous dans le chaos de 2091 sans acte de dissolution formel. Ce qu'il reste ressemble moins à une organisation qu'à une langue : un vocabulaire commun de la réciprocité, prononcé avec des accents très différents selon qu'on se trouve dans un fragment autonome du Massif Central ou dans un nœud sous tutelle milicienne des plaines de l'Ebre.
 
 ## Tensions narratives
 La question déchirante : jusqu'où négocier avec les factions armées pour survivre sans trahir l'éthique fondatrice ? Des rumeurs circulent d'un 'Nœud-Mère' qui aurait conservé les archives numériques cryptées du réseau originel et tenterait de recontacter les fragments — mais est-ce une opportunité de renaissance ou un vecteur d'infiltration ? Enfin, la tension entre ceux qui veulent préserver le nom 'Terrafond' comme promesse de reconnexion future, et ceux qui y voient un fardeau identitaire qui attire les prédateurs.
+
+## Relations
+**Alliés :**
+- [[brigades_medicales_itinerantes_breakdown]]
+- [[internationale_des_semenciers_agro_pirates_fortress_world]]
+**Opposants :**
+- [[cartels_logistiques_regionaux_breakdown]]
+- [[communautes_paysannes_refugiees_breakdown]]
+- [[massif_central_cicatrices_vertes_breakdown]]
+- [[milices_d_accaparement_hydrique_breakdown]]
+- [[seigneuries_foncieres_opportunistes_breakdown]]

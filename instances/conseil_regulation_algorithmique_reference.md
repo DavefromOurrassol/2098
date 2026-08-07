@@ -4,6 +4,7 @@ type: instance
 slug: conseil_regulation_algorithmique_reference
 entite: conseil_regulation_algorithmique
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: geneve_lac_retreite
   lieu: Genève (immeuble de l'ONU)
@@ -28,9 +29,21 @@ zone_geographique:
 zone_systemique:
   - IA
   - gouvernance
-alliances: []
+alliances:
+- bureaux_de_regulation_informationnelle_reference
+- ong_de_preservation_patrimoniale_numerique_reference
+- oracle_des_seuils_reference
+- plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference
+- tribunal_algorithmique_de_bruxelles_reference
 oppositions:
-  - nexcore_reference
+- consortium_des_grandes_plateformes_ia_integrees_reference
+- consortium_des_plateformes_ia_centralisees_anti_deliberation_reference
+- consortiums_prives_de_gestion_des_donnees_critiques_reference
+- directive_kontinuum_reference
+- le_temoin_reference
+- nexcore_reference
+- rede_paulista_de_distribuic_o_algor_tmica_reference
+- services_de_contre_information_des_blocs_geopolitiques_concurrents_reference
 type_relation_dominante: neutralité
 annee_debut: 2031
 annee_fin:
@@ -71,9 +84,6 @@ Fonctionne dans un contexte de tensions croissantes entre États et corporations
 - [[gouvernance_institutions]]
 - [[technologie_information]]
 
-## Relations
-**Alliés** : _aucun défini_
-**Opposants** : [[nexcore_reference]]
 
 ## Description journalistique
 Le Comité de Surveillance IA existe depuis 2031. Ses rapports sont lus,
@@ -84,3 +94,20 @@ n'a jamais été aussi grand."
 ## Tensions narratives
 Financement menacé par plusieurs grandes puissances. Débat interne sur
 la pertinence de continuer sans mandat contraignant.
+
+## Relations
+**Alliés :**
+- [[bureaux_de_regulation_informationnelle_reference]]
+- [[ong_de_preservation_patrimoniale_numerique_reference]]
+- [[oracle_des_seuils_reference]]
+- [[plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference]]
+- [[tribunal_algorithmique_de_bruxelles_reference]]
+**Opposants :**
+- [[consortium_des_grandes_plateformes_ia_integrees_reference]]
+- [[consortium_des_plateformes_ia_centralisees_anti_deliberation_reference]]
+- [[consortiums_prives_de_gestion_des_donnees_critiques_reference]]
+- [[directive_kontinuum_reference]]
+- [[le_temoin_reference]]
+- [[nexcore_reference]]
+- [[rede_paulista_de_distribuic_o_algor_tmica_reference]]
+- [[services_de_contre_information_des_blocs_geopolitiques_concurrents_reference]]

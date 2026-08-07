@@ -35,9 +35,24 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- consortiums_energetiques_opaques_reference
+- corporations_d_extraction_energetique_non_signataires_reference
+- lobbies_agro_industriels_a_haute_consommation_d_eau_reference
 - pacte_des_souverains_reference
 oppositions:
+- banque_mondiale_des_transitions_climatiques_reference
+- conseil_regulation_ressources_reference
+- consortium_de_maintenance_orbitale_seom_7_reference
+- consortium_des_fournisseurs_d_energie_renouvelable_distribuee_reference
+- consortium_logistique_asiatique_de_contournement_aln_reference
+- cooperatives_energetiques_decentralisees_reference
+- fonds_souverain_arctique_scandinave_reference
+- gouvernements_du_bloc_sahelien_autonome_reference
 - institutions_multilaterales_survivantes_reference
+- ong_de_tracabilite_des_ressources_critiques_reference
+- reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference
+- reseaux_de_gouvernance_multilaterale_survivants_reference
+- syndicats_de_travailleurs_de_la_transition_energetique_reference
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -103,11 +118,27 @@ La contradiction centrale de ces lobbies réside dans leur dépendance aux flux 
 - [[geopolitique_conflits]]
 - [[energie_ressources_critiques]]
 
+
 ## Relations
 **Alliés :**
+- [[consortiums_energetiques_opaques_reference]]
+- [[corporations_d_extraction_energetique_non_signataires_reference]]
+- [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]]
 - [[pacte_des_souverains_reference]]
 **Opposants :**
+- [[banque_mondiale_des_transitions_climatiques_reference]]
+- [[conseil_regulation_ressources_reference]]
+- [[consortium_de_maintenance_orbitale_seom_7_reference]]
+- [[consortium_des_fournisseurs_d_energie_renouvelable_distribuee_reference]]
+- [[consortium_logistique_asiatique_de_contournement_aln_reference]]
+- [[cooperatives_energetiques_decentralisees_reference]]
+- [[fonds_souverain_arctique_scandinave_reference]]
+- [[gouvernements_du_bloc_sahelien_autonome_reference]]
 - [[institutions_multilaterales_survivantes_reference]]
+- [[ong_de_tracabilite_des_ressources_critiques_reference]]
+- [[reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference]]
+- [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
+- [[syndicats_de_travailleurs_de_la_transition_energetique_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

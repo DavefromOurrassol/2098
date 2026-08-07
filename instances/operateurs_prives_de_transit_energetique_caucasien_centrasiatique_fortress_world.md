@@ -33,8 +33,25 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- almaty_zone_friction_fortress_world
+- complexe_orentchev_almaty_fortress_world
+- corridors_gris_asie_centrale_fortress_world
+- factions_djihadistes_logistiques_d_asie_centrale_fortress_world
+- marches_gris_tbilissi_fortress_world
+- milices_de_piraterie_logistique_arctique_fortress_world
+- milices_privees_de_protection_des_sites_germinaux_fortress_world
+- reseaux_de_contrebande_energetique_transfrontaliere_fortress_world
+- tbilissi_nord_zone_franche_fortress_world
+- vasil_orentchev_fortress_world
+oppositions:
+- bloc_atlantique_fortress_world
+- bloc_eurasiatique_occidental_fortress_world
+- coalition_arctique_des_blocs_continentaux_fortress_world
+- commandement_strategique_des_matieres_critiques_atlantique_fortress_world
+- commandements_logistiques_peripheriques_du_bloc_eurasien_central_fortress_world
+- consortium_eurasiatique_des_ressources_fermees_fortress_world
+- factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world
 type_relation_dominante: dépendance
 annee_debut: 2026
 annee_fin: null
@@ -101,6 +118,28 @@ Leur puissance repose entièrement sur la persistance du désordre géopolitique
 - [[energie_ressources_critiques]]
 - [[geopolitique_conflits]]
 - [[organisation_territoires]]
+
+
+## Relations
+**Alliés :**
+- [[almaty_zone_friction_fortress_world]]
+- [[complexe_orentchev_almaty_fortress_world]]
+- [[corridors_gris_asie_centrale_fortress_world]]
+- [[factions_djihadistes_logistiques_d_asie_centrale_fortress_world]]
+- [[marches_gris_tbilissi_fortress_world]]
+- [[milices_de_piraterie_logistique_arctique_fortress_world]]
+- [[milices_privees_de_protection_des_sites_germinaux_fortress_world]]
+- [[reseaux_de_contrebande_energetique_transfrontaliere_fortress_world]]
+- [[tbilissi_nord_zone_franche_fortress_world]]
+- [[vasil_orentchev_fortress_world]]
+**Opposants :**
+- [[bloc_atlantique_fortress_world]]
+- [[bloc_eurasiatique_occidental_fortress_world]]
+- [[coalition_arctique_des_blocs_continentaux_fortress_world]]
+- [[commandement_strategique_des_matieres_critiques_atlantique_fortress_world]]
+- [[commandements_logistiques_peripheriques_du_bloc_eurasien_central_fortress_world]]
+- [[consortium_eurasiatique_des_ressources_fermees_fortress_world]]
+- [[factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

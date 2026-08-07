@@ -4,6 +4,7 @@ type: instance
 slug: guadalajara_nexus_reference
 entite: guadalajara_nexus
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: guadalajara_nexus
   lieu: Guadalajara
@@ -37,20 +38,20 @@ zone_systemique:
     - sécurité
 
 alliances:
-    - administrations_hybrides_des_cites_relais_peripheriques_reference
-    - detroit_compact_grands_lacs_reference
-    - great_lakes_autonomous_compact_reference
-    - operateurs_de_zones_economiques_speciales_periurbaines_reference
-    - confederation_des_megapoles_autonomes_reference
-    - consortium_des_grandes_plateformes_logistiques_globales_reference
-
+- administrations_hybrides_des_cites_relais_peripheriques_reference
+- confederation_des_megapoles_autonomes_reference
+- consortium_des_grandes_plateformes_logistiques_globales_reference
+- detroit_compact_grands_lacs_reference
+- great_lakes_autonomous_compact_reference
+- ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference
+- operateurs_de_zones_economiques_speciales_periurbaines_reference
+- valparaiso_fct_reference
 oppositions:
-    - armada_logistique_nordique_reference
-    - gouvernements_federaux_residuels_souverainistes_reference
-    - milices_concurrentes_des_droits_de_passage_reference
-    - alliance_blocs_souverains_reference
-    - agences_de_securite_regionales_de_normalisation_des_zones_grises_reference
-
+- agences_de_securite_regionales_de_normalisation_des_zones_grises_reference
+- alliance_blocs_souverains_reference
+- armada_logistique_nordique_reference
+- gouvernements_federaux_residuels_souverainistes_reference
+- milices_concurrentes_des_droits_de_passage_reference
 type_relation_dominante: symbiose
 
 annee_debut: 2041
@@ -94,12 +95,26 @@ Le Nexus gère l'arbitrage des droits de passage sur les corridors terrestres et
 - [[geopolitique_conflits]]
 - [[gouvernance_institutions]]
 
-## Relations
-**Alliés** : [[administrations_hybrides_des_cites_relais_peripheriques_reference]], [[detroit_compact_grands_lacs_reference]], [[great_lakes_autonomous_compact_reference]], [[operateurs_de_zones_economiques_speciales_periurbaines_reference]], [[confederation_des_megapoles_autonomes_reference]], [[consortium_des_grandes_plateformes_logistiques_globales_reference]]
-**Opposants** : [[armada_logistique_nordique_reference]], [[gouvernements_federaux_residuels_souverainistes_reference]], [[milices_concurrentes_des_droits_de_passage_reference]], [[alliance_blocs_souverains_reference]], [[agences_de_securite_regionales_de_normalisation_des_zones_grises_reference]]
 
 ## Description journalistique
 À Guadalajara, il n'y a pas de siège social, pas d'emblème officiel, pas de PDG dont le nom figure dans un registre. Pourtant, toute cargaison qui transite entre Ciudad de México et les entrepôts automatisés de Detroit Compact passe, d'une façon ou d'une autre, par une table de négociation que le Nexus a installée dans l'une des zones portuaires reconverties de la ville. Des délégués de municipalités autonomes voisinent avec des représentants de consortiums logistiques privés et, selon les rumeurs persistantes jamais démenties, avec des intermédiaires issus des anciens réseaux de distribution informels recyclés en opérateurs régionaux. Le Nexus ne prétend gouverner personne : il se contente de rendre possible ce que personne d'autre ne parvient à organiser. C'est précisément cette discrétion calculée — cette façon d'être indispensable sans jamais se déclarer — qui inquiète autant qu'elle fascine les analystes de la gouvernance émergente.
 
 ## Tensions narratives
 La neutralité opérationnelle du Nexus est son atout et sa blessure : en traitant indifféremment flux légitimes et flux opaques, il normalise des circuits que les États fédéraux résiduels tentent de réguler, alimentant une controverse permanente sur sa complicité structurelle avec des acteurs prédateurs. La montée en puissance de l'Armada Logistique Nordique sur les corridors arctiques redessine les équilibres et menace de marginaliser les routes terrestres que le Nexus contrôle, l'obligeant à chercher de nouveaux partenaires au risque de compromettre sa neutralité. Enfin, plusieurs municipalités autonomes qui lui doivent leur survie économique commencent à réclamer une formalisation de ses règles d'arbitrage — une institutionnalisation qui transformerait le Nexus en ce qu'il a toujours refusé d'être : une autorité.
+
+## Relations
+**Alliés :**
+- [[administrations_hybrides_des_cites_relais_peripheriques_reference]]
+- [[confederation_des_megapoles_autonomes_reference]]
+- [[consortium_des_grandes_plateformes_logistiques_globales_reference]]
+- [[detroit_compact_grands_lacs_reference]]
+- [[great_lakes_autonomous_compact_reference]]
+- [[ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference]]
+- [[operateurs_de_zones_economiques_speciales_periurbaines_reference]]
+- [[valparaiso_fct_reference]]
+**Opposants :**
+- [[agences_de_securite_regionales_de_normalisation_des_zones_grises_reference]]
+- [[alliance_blocs_souverains_reference]]
+- [[armada_logistique_nordique_reference]]
+- [[gouvernements_federaux_residuels_souverainistes_reference]]
+- [[milices_concurrentes_des_droits_de_passage_reference]]

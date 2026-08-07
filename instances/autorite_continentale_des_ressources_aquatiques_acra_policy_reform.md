@@ -33,8 +33,22 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_stabilisation_climatique_policy_reform
+- amara_diallo_nkosi_policy_reform
+- autorite_mondiale_du_vivant_amv_policy_reform
+- conseil_regulation_ressources_policy_reform
+- fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform
+- great_lakes_autonomous_compact_policy_reform
+- trame_bioclimatique_policy_reform
+oppositions:
+- bloc_des_nations_a_economie_carbone_controlee_policy_reform
+- collectifs_de_defense_hydrique_saheliens_policy_reform
+- consortiums_agro_industriels_du_bassin_fluvial_policy_reform
+- factions_technocratiques_de_la_marchandisation_hydrique_policy_reform
+- front_souverainiste_des_blocs_non_signataires_policy_reform
+- les_veilleurs_du_fleuve_policy_reform
+- mouvement_pour_la_souverainete_territoriale_absolue_policy_reform
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -95,6 +109,25 @@ L'ACRA est déchirée entre sa vocation supranationale — imposer des quotas au
 - [[gouvernance_institutions]]
 - [[climat_environnement_global]]
 - [[energie_ressources_critiques]]
+
+
+## Relations
+**Alliés :**
+- [[agence_stabilisation_climatique_policy_reform]]
+- [[amara_diallo_nkosi_policy_reform]]
+- [[autorite_mondiale_du_vivant_amv_policy_reform]]
+- [[conseil_regulation_ressources_policy_reform]]
+- [[fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform]]
+- [[great_lakes_autonomous_compact_policy_reform]]
+- [[trame_bioclimatique_policy_reform]]
+**Opposants :**
+- [[bloc_des_nations_a_economie_carbone_controlee_policy_reform]]
+- [[collectifs_de_defense_hydrique_saheliens_policy_reform]]
+- [[consortiums_agro_industriels_du_bassin_fluvial_policy_reform]]
+- [[factions_technocratiques_de_la_marchandisation_hydrique_policy_reform]]
+- [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+- [[les_veilleurs_du_fleuve_policy_reform]]
+- [[mouvement_pour_la_souverainete_territoriale_absolue_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

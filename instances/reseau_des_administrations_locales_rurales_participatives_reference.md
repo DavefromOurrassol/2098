@@ -31,8 +31,35 @@ zone_geographique:
 - régionale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- administrations_hybrides_des_cites_relais_peripheriques_reference
+- autorites_regionales_de_regulation_hydrologique_reference
+- banque_des_communs_reference
+- collectifs_de_journalisme_embarque_reference
+- collectifs_de_journalistes_independants_regionaux_reference
+- communs_numeriques_agroecologiques_reference
+- cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference
+- cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference
+- cooperatives_energetiques_decentralisees_reference
+- cooperatives_ia_open_source_reference
+- federation_communs_territoriaux_reference
+- federation_des_cliniques_autonomes_reference
+- frente_sert_o_livre_reference
+- les_veilleurs_du_fleuve_reference
+- ligue_des_municipalites_peripheriques_sous_connectees_reference
+- mouvement_racines_vivantes_reference
+- reseau_des_cooperatives_agro_saheliennes_reference
+- reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference
+- reseau_meshcommons_netsolidaire_reference
+- reseaux_de_medecine_traditionnelle_augmentee_reference
+- syndicats_de_travail_rural_hybride_reference
+oppositions:
+- bloc_eurasien_central_reference
+- bureau_des_territoires_residuels_reference
+- consortiums_energetiques_des_megapoles_reference
+- lobbies_agro_industriels_a_haute_consommation_d_eau_reference
+- lyon_metropole_reference
+- plateformes_d_optimisation_territoriale_par_ia_reference
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -95,6 +122,38 @@ La tension centrale du Réseau réside dans la contradiction entre sa vocation d
 - [[organisation_territoires]]
 - [[gouvernance_institutions]]
 - [[demographie_mobilite_humaine]]
+
+
+## Relations
+**Alliés :**
+- [[administrations_hybrides_des_cites_relais_peripheriques_reference]]
+- [[autorites_regionales_de_regulation_hydrologique_reference]]
+- [[banque_des_communs_reference]]
+- [[collectifs_de_journalisme_embarque_reference]]
+- [[collectifs_de_journalistes_independants_regionaux_reference]]
+- [[communs_numeriques_agroecologiques_reference]]
+- [[cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference]]
+- [[cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference]]
+- [[cooperatives_energetiques_decentralisees_reference]]
+- [[cooperatives_ia_open_source_reference]]
+- [[federation_communs_territoriaux_reference]]
+- [[federation_des_cliniques_autonomes_reference]]
+- [[frente_sert_o_livre_reference]]
+- [[les_veilleurs_du_fleuve_reference]]
+- [[ligue_des_municipalites_peripheriques_sous_connectees_reference]]
+- [[mouvement_racines_vivantes_reference]]
+- [[reseau_des_cooperatives_agro_saheliennes_reference]]
+- [[reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference]]
+- [[reseau_meshcommons_netsolidaire_reference]]
+- [[reseaux_de_medecine_traditionnelle_augmentee_reference]]
+- [[syndicats_de_travail_rural_hybride_reference]]
+**Opposants :**
+- [[bloc_eurasien_central_reference]]
+- [[bureau_des_territoires_residuels_reference]]
+- [[consortiums_energetiques_des_megapoles_reference]]
+- [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]]
+- [[lyon_metropole_reference]]
+- [[plateformes_d_optimisation_territoriale_par_ia_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

@@ -34,8 +34,29 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism
+- consortiums_industriels_de_l_eau_eco_communalism
+- courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism
+- enclaves_extractivistes_et_etats_residuels_eco_communalism
+- factions_autoritaires_de_controle_du_savoir_eco_communalism
+- plateformes_centralisees_de_reagregation_globale_eco_communalism
+- reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism
+- reseaux_de_notables_communautaires_capturistes_eco_communalism
+oppositions:
+- amazonie_pacte_viva_eco_communalism
+- assemblees_bioterritoriales_regionales_eco_communalism
+- collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism
+- confederation_bassins_vivants_eco_communalism
+- frente_sert_o_livre_eco_communalism
+- kalaallit_nunaat_bioterritoire_eco_communalism
+- mouvement_des_communes_du_rust_belt_eco_communalism
+- oracle_des_seuils_eco_communalism
+- reseau_terrafond_bassins_eco_communalism
+- reseaux_de_bibliotheques_archives_communautaires_eco_communalism
+- reseaux_de_radio_communautaire_basse_consommation_eco_communalism
+- reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism
+- voix_du_dehors_eco_communalism
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -99,6 +120,32 @@ Les Cartels prospèrent précisément sur les acquis démocratiques des communau
 - [[technologie_information]]
 - [[systeme_economique_redistribution]]
 - [[valeurs_culture_tempo_sociale]]
+
+
+## Relations
+**Alliés :**
+- [[consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism]]
+- [[consortiums_industriels_de_l_eau_eco_communalism]]
+- [[courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism]]
+- [[enclaves_extractivistes_et_etats_residuels_eco_communalism]]
+- [[factions_autoritaires_de_controle_du_savoir_eco_communalism]]
+- [[plateformes_centralisees_de_reagregation_globale_eco_communalism]]
+- [[reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism]]
+- [[reseaux_de_notables_communautaires_capturistes_eco_communalism]]
+**Opposants :**
+- [[amazonie_pacte_viva_eco_communalism]]
+- [[assemblees_bioterritoriales_regionales_eco_communalism]]
+- [[collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism]]
+- [[confederation_bassins_vivants_eco_communalism]]
+- [[frente_sert_o_livre_eco_communalism]]
+- [[kalaallit_nunaat_bioterritoire_eco_communalism]]
+- [[mouvement_des_communes_du_rust_belt_eco_communalism]]
+- [[oracle_des_seuils_eco_communalism]]
+- [[reseau_terrafond_bassins_eco_communalism]]
+- [[reseaux_de_bibliotheques_archives_communautaires_eco_communalism]]
+- [[reseaux_de_radio_communautaire_basse_consommation_eco_communalism]]
+- [[reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism]]
+- [[voix_du_dehors_eco_communalism]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

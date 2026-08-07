@@ -31,8 +31,44 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- consortiums_industriels_de_l_eau_eco_communalism
+- enclaves_extractivistes_et_etats_residuels_eco_communalism
+- enclaves_extractivistes_residuelles_des_corridors_eco_communalism
+- fragments_d_etats_centraux_residuels_eco_communalism
+- reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism
+- reseaux_de_notables_communautaires_capturistes_eco_communalism
+oppositions:
+- amazonie_pacte_viva_eco_communalism
+- assemblees_bioterritoriales_regionales_eco_communalism
+- assemblees_cooperatives_regionales_eco_communalism
+- assemblees_de_bassin_versant_eco_communalism
+- brigades_de_restauration_ecologique_eco_communalism
+- cercles_de_mediation_territoriale_intercommunautaire_eco_communalism
+- collectifs_de_cartographie_ecologique_participative_eco_communalism
+- collectifs_de_geo_observateurs_citoyens_eco_communalism
+- confederation_bassins_vivants_eco_communalism
+- confederation_communs_arc_septentrional_eco_communalism
+- conseils_de_bassin_versant_eco_communalistes_eco_communalism
+- consortium_amazonia_viva_eco_communalism
+- cooperative_terrafond_eco_communalism
+- cooperatives_d_habitat_regeneratif_eco_communalism
+- cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
+- fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism
+- frente_sert_o_livre_eco_communalism
+- guildes_de_mediateurs_ecologiques_eco_communalism
+- guildes_des_semenciers_itinerants_eco_communalism
+- kalaallit_nunaat_bioterritoire_eco_communalism
+- kalaallit_nunaat_sovereign_fund_eco_communalism
+- le_registre_du_fleuve_eco_communalism
+- les_veilleurs_du_fleuve_eco_communalism
+- mouvement_des_communes_du_rust_belt_eco_communalism
+- mutuelles_de_sante_territoriales_eco_communalism
+- reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism
+- reseau_terrafond_bassins_eco_communalism
+- reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
+- reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism
+- zones_extractivistes_corridors_eco_communalism
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -95,6 +131,47 @@ La contradiction centrale de ces factions est qu'elles prospèrent précisément
 - [[energie_ressources_critiques]]
 - [[organisation_territoires]]
 - [[gouvernance_institutions]]
+
+
+## Relations
+**Alliés :**
+- [[consortiums_industriels_de_l_eau_eco_communalism]]
+- [[enclaves_extractivistes_et_etats_residuels_eco_communalism]]
+- [[enclaves_extractivistes_residuelles_des_corridors_eco_communalism]]
+- [[fragments_d_etats_centraux_residuels_eco_communalism]]
+- [[reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism]]
+- [[reseaux_de_notables_communautaires_capturistes_eco_communalism]]
+**Opposants :**
+- [[amazonie_pacte_viva_eco_communalism]]
+- [[assemblees_bioterritoriales_regionales_eco_communalism]]
+- [[assemblees_cooperatives_regionales_eco_communalism]]
+- [[assemblees_de_bassin_versant_eco_communalism]]
+- [[brigades_de_restauration_ecologique_eco_communalism]]
+- [[cercles_de_mediation_territoriale_intercommunautaire_eco_communalism]]
+- [[collectifs_de_cartographie_ecologique_participative_eco_communalism]]
+- [[collectifs_de_geo_observateurs_citoyens_eco_communalism]]
+- [[confederation_bassins_vivants_eco_communalism]]
+- [[confederation_communs_arc_septentrional_eco_communalism]]
+- [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]]
+- [[consortium_amazonia_viva_eco_communalism]]
+- [[cooperative_terrafond_eco_communalism]]
+- [[cooperatives_d_habitat_regeneratif_eco_communalism]]
+- [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]
+- [[fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism]]
+- [[frente_sert_o_livre_eco_communalism]]
+- [[guildes_de_mediateurs_ecologiques_eco_communalism]]
+- [[guildes_des_semenciers_itinerants_eco_communalism]]
+- [[kalaallit_nunaat_bioterritoire_eco_communalism]]
+- [[kalaallit_nunaat_sovereign_fund_eco_communalism]]
+- [[le_registre_du_fleuve_eco_communalism]]
+- [[les_veilleurs_du_fleuve_eco_communalism]]
+- [[mouvement_des_communes_du_rust_belt_eco_communalism]]
+- [[mutuelles_de_sante_territoriales_eco_communalism]]
+- [[reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism]]
+- [[reseau_terrafond_bassins_eco_communalism]]
+- [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
+- [[reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism]]
+- [[zones_extractivistes_corridors_eco_communalism]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

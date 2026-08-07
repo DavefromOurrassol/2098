@@ -37,8 +37,32 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
+- cartels_logistiques_regionaux_breakdown
+- enclaves_corporatives_fortifiees_breakdown
+- factions_para_etatiques_hydriques_breakdown
+- milices_contractuelles_des_anciens_etats_membres_breakdown
+- reseau_des_anciens_financeurs_devenus_censeurs_breakdown
+- seigneuries_logistiques_armees_breakdown
+- seigneurs_de_guerre_agro_territoriaux_breakdown
+oppositions:
+- communautes_paysannes_refugiees_breakdown
+- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- communes_rust_belt_breakdown
+- consortium_amazonia_viva_breakdown
+- delta_mekong_racines_breakdown
+- enclaves_agro_communautaires_autonomes_breakdown
+- etats_fragmentes_nationalisant_les_stocks_breakdown
+- frente_sert_o_livre_breakdown
+- massif_central_cicatrices_vertes_breakdown
+- milices_agro_defensives_locales_breakdown
+- mouvement_des_communes_du_rust_belt_breakdown
+- mouvement_racines_vivantes_breakdown
+- occitanie_racines_meres_breakdown
+- reseau_logistique_criminel_concurrent_breakdown
+- saboteurs_des_corridors_de_transit_breakdown
+- vallee_allier_terrafond_breakdown
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -95,6 +119,35 @@ Leur contradiction centrale est existentielle : ils sont construits pour un mond
 - [[systemes_productifs_travail]]
 - [[energie_ressources_critiques]]
 - [[organisation_territoires]]
+
+
+## Relations
+**Alliés :**
+- [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
+- [[cartels_logistiques_regionaux_breakdown]]
+- [[enclaves_corporatives_fortifiees_breakdown]]
+- [[factions_para_etatiques_hydriques_breakdown]]
+- [[milices_contractuelles_des_anciens_etats_membres_breakdown]]
+- [[reseau_des_anciens_financeurs_devenus_censeurs_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]
+- [[seigneurs_de_guerre_agro_territoriaux_breakdown]]
+**Opposants :**
+- [[communautes_paysannes_refugiees_breakdown]]
+- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[communes_rust_belt_breakdown]]
+- [[consortium_amazonia_viva_breakdown]]
+- [[delta_mekong_racines_breakdown]]
+- [[enclaves_agro_communautaires_autonomes_breakdown]]
+- [[etats_fragmentes_nationalisant_les_stocks_breakdown]]
+- [[frente_sert_o_livre_breakdown]]
+- [[massif_central_cicatrices_vertes_breakdown]]
+- [[milices_agro_defensives_locales_breakdown]]
+- [[mouvement_des_communes_du_rust_belt_breakdown]]
+- [[mouvement_racines_vivantes_breakdown]]
+- [[occitanie_racines_meres_breakdown]]
+- [[reseau_logistique_criminel_concurrent_breakdown]]
+- [[saboteurs_des_corridors_de_transit_breakdown]]
+- [[vallee_allier_terrafond_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

@@ -4,6 +4,7 @@ type: instance
 slug: geneve_lac_retreite_reference
 entite: geneve_lac_retreite
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: geneve_lac_retreite
   lieu: Lac Léman — rives de Coppet, Genève-Lac-Retraité
@@ -35,20 +36,20 @@ zone_systemique:
     - société
 
 alliances:
-    - autorites_regionales_de_regulation_hydrologique_reference
-    - programme_onu_eau_2080_reference
-    - observatoire_climatique_des_territoires_oct_reference
-    - reseaux_de_gouvernance_multilaterale_survivants_reference
-    - ong_environnementales_de_terrain_reference
-    - conseil_de_geneve_pour_les_droits_biosociaux_reference
-    - banque_mondiale_des_transitions_climatiques_reference
-
+- autorites_regionales_de_regulation_hydrologique_reference
+- banque_mondiale_des_transitions_climatiques_reference
+- conseil_de_geneve_pour_les_droits_biosociaux_reference
+- observatoire_climatique_des_territoires_oct_reference
+- ong_environnementales_de_terrain_reference
+- programme_onu_eau_2080_reference
+- reseau_des_metropoles_cotieres_adaptees_reference
+- reseaux_de_gouvernance_multilaterale_survivants_reference
+- universites_et_think_tanks_en_zones_de_liberte_academique_reference
 oppositions:
-    - lobbies_agro_industriels_a_haute_consommation_d_eau_reference
-    - factions_eurasiatiques_contre_la_tarification_hydrique_reference
-    - bloc_des_souverainistes_climatiques_reference
-    - fonds_d_investissement_foncier_climatique_reference
-
+- bloc_des_souverainistes_climatiques_reference
+- factions_eurasiatiques_contre_la_tarification_hydrique_reference
+- fonds_d_investissement_foncier_climatique_reference
+- lobbies_agro_industriels_a_haute_consommation_d_eau_reference
 type_relation_dominante: neutralité
 
 annee_debut: 2031
@@ -91,12 +92,26 @@ Produit des rapports cartographiques semestriels sur le recul du trait de rive d
 - [[gouvernance_institutions]]
 - [[organisation_territoires]]
 
-## Relations
-**Alliés** : [[autorites_regionales_de_regulation_hydrologique_reference]], [[programme_onu_eau_2080_reference]], [[observatoire_climatique_des_territoires_oct_reference]], [[reseaux_de_gouvernance_multilaterale_survivants_reference]], [[ong_environnementales_de_terrain_reference]], [[conseil_de_geneve_pour_les_droits_biosociaux_reference]], [[banque_mondiale_des_transitions_climatiques_reference]]
-**Opposants** : [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]], [[factions_eurasiatiques_contre_la_tarification_hydrique_reference]], [[bloc_des_souverainistes_climatiques_reference]], [[fonds_d_investissement_foncier_climatique_reference]]
 
 ## Description journalistique
 Depuis sa salle de réunion panoramique sur les rives de Coppet — dont le ponton plonge désormais dans une grève de galets là où l'eau affleurait en 2020 — le Forum Léman tient sa quatre-vingt-douzième session plénière. Les délégués des cantons de Vaud et du Valais se regardent en chiens de faïence au-dessus des cartes numériques projetant le trait de rive 2110. En soixante-sept ans d'existence, l'organisation a produit 340 rapports, organisé 1 200 heures de négociation, et obtenu la mise en œuvre de 14 % des mesures qu'elle a recommandées. Les journalistes locaux l'appellent 'le musée du consensus mou'. Elle reste pourtant la seule table autour de laquelle Genève, Lausanne, Évian et Thonon acceptent encore de s'asseoir ensemble.
 
 ## Tensions narratives
 La question du passage à un mandat coercitif revient à chaque crise : le retrait accéléré de 2094 a relancé les débats sur une réforme statutaire que certains cantons bloquent depuis dix ans. Un rapport interne filtré en 2097 révèle que les projections des scientifiques du Forum divergent radicalement des chiffres officiels communiqués aux gouvernements membres — une dissimulation que certains délégués justifient comme 'gestion de la stabilité politique'. Par ailleurs, des fonds d'investissement foncier commencent à racheter les terres en retrait du lac au fur et à mesure qu'elles émergent, transformant le désastre collectif en opportunité spéculative privée que le Forum observe sans pouvoir intervenir.
+
+## Relations
+**Alliés :**
+- [[autorites_regionales_de_regulation_hydrologique_reference]]
+- [[banque_mondiale_des_transitions_climatiques_reference]]
+- [[conseil_de_geneve_pour_les_droits_biosociaux_reference]]
+- [[observatoire_climatique_des_territoires_oct_reference]]
+- [[ong_environnementales_de_terrain_reference]]
+- [[programme_onu_eau_2080_reference]]
+- [[reseau_des_metropoles_cotieres_adaptees_reference]]
+- [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
+- [[universites_et_think_tanks_en_zones_de_liberte_academique_reference]]
+**Opposants :**
+- [[bloc_des_souverainistes_climatiques_reference]]
+- [[factions_eurasiatiques_contre_la_tarification_hydrique_reference]]
+- [[fonds_d_investissement_foncier_climatique_reference]]
+- [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]]

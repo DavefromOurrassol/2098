@@ -32,11 +32,23 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
-- nairobi_crrc_reference
+- banque_des_communs_reference
+- banque_mondiale_des_transitions_climatiques_reference
 - bruxelles_nouveau_reference
+- consortium_amazonia_viva_reference
+- consortiums_bancaires_financiarises_reference
+- ecosynth_global_reference
+- europe_occidentale_reconstructee_reference
+- institutions_multilaterales_survivantes_reference
+- kalaallit_nunaat_sovereign_fund_reference
+- nairobi_crrc_reference
+- nexus_biosyn_reference
+- pacifique_sud_resilience_network_reference
 oppositions:
-- pacte_des_souverains_reference
 - amazonie_consortium_viva_reference
+- corporations_d_extraction_energetique_non_signataires_reference
+- factions_eurasiatiques_contre_la_tarification_hydrique_reference
+- pacte_des_souverains_reference
 type_relation_dominante: dépendance
 annee_debut: 2026
 annee_fin: null
@@ -101,13 +113,26 @@ Le FMC est écartelé entre sa mission redistributive proclamée — financer en
 - [[gouvernance_institutions]]
 - [[climat_environnement_global]]
 
+
 ## Relations
 **Alliés :**
-- [[nairobi_crrc_reference]]
+- [[banque_des_communs_reference]]
+- [[banque_mondiale_des_transitions_climatiques_reference]]
 - [[bruxelles_nouveau_reference]]
+- [[consortium_amazonia_viva_reference]]
+- [[consortiums_bancaires_financiarises_reference]]
+- [[ecosynth_global_reference]]
+- [[europe_occidentale_reconstructee_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
+- [[kalaallit_nunaat_sovereign_fund_reference]]
+- [[nairobi_crrc_reference]]
+- [[nexus_biosyn_reference]]
+- [[pacifique_sud_resilience_network_reference]]
 **Opposants :**
-- [[pacte_des_souverains_reference]]
 - [[amazonie_consortium_viva_reference]]
+- [[corporations_d_extraction_energetique_non_signataires_reference]]
+- [[factions_eurasiatiques_contre_la_tarification_hydrique_reference]]
+- [[pacte_des_souverains_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

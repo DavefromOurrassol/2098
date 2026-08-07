@@ -793,6 +793,7 @@ async function renderOption(opt, script) {
   if (opt.type === 'select' || opt.type === 'ligne_select') {
     const sel = document.createElement('select');
     sel.dataset.flag = opt.flag;
+    sel.dataset.defaultValue = opt.default || '';
 
     let choices = opt.choices || [];
 
@@ -855,10 +856,44 @@ async function renderOption(opt, script) {
       group.appendChild(desc);
     }
 
+  } else if (opt.type === 'dynamic_multi_select') {
+    // Ajouté le 2 août 2026 -- même rendu visuel que multi_select
+    // (chips cliquables, collectées par le même code dans collectArgs()
+    // grâce à dataset.multiFlag identique), mais liste peuplée de façon
+    // asynchrone comme slug_select plutôt que depuis opt.choices statiques.
+    // Cas d'usage : --forcer-scenarios, restreint dynamiquement aux
+    // scénarios où l'élément forcé choisi existe réellement.
+    const chips = document.createElement('div');
+    chips.className = 'yaml-chips';
+    chips.dataset.multiFlag = opt.flag;
+    chips.dataset.slugType = opt.slug_type;
+    if (opt.slug_type_field && opt.slug_type_map) {
+      chips.dataset.slugTypeField = opt.slug_type_field;
+      chips.dataset.slugTypeMap = JSON.stringify(opt.slug_type_map);
+    }
+    if (opt.slug_extra_params) {
+      chips.dataset.slugExtraParams = JSON.stringify(opt.slug_extra_params);
+    }
+    chips.dataset.needsScenario = 'true';
+    chips.innerHTML = '<span class="option-desc">Chargement…</span>';
+    group.appendChild(chips);
+
+    loadSlugsForChips(chips, opt.slug_type, opt.slug_extra_params);
+
+    if (opt.description) {
+      const desc = document.createElement('div');
+      desc.className = 'option-desc';
+      desc.textContent = opt.description;
+      group.appendChild(desc);
+    }
+
   } else if (opt.type === 'slug_select') {
     const sel = document.createElement('select');
     sel.dataset.flag = opt.flag;
     sel.dataset.slugType = opt.slug_type;
+    if (opt.slug_extra_params) {
+      sel.dataset.slugExtraParams = JSON.stringify(opt.slug_extra_params);
+    }
     const placeholder = document.createElement('option');
     placeholder.value = '';
     placeholder.textContent = 'Chargement…';
@@ -866,7 +901,7 @@ async function renderOption(opt, script) {
     group.appendChild(sel);
 
     // Charger les slugs en async
-    loadSlugsForSelect(sel, opt.slug_type);
+    loadSlugsForSelect(sel, opt.slug_type, opt.slug_extra_params);
 
     // Si select scénario existe dans le même formulaire, écouter ses changements
     // (délégué après rendu)
@@ -896,6 +931,7 @@ async function renderOption(opt, script) {
     const inp = document.createElement('input');
     inp.type = 'text';
     inp.dataset.flag = opt.flag;
+    inp.dataset.defaultValue = opt.default || '';
     inp.placeholder = opt.label;
     group.appendChild(inp);
 
@@ -910,22 +946,131 @@ async function renderOption(opt, script) {
   return group;
 }
 
-async function loadSlugsForSelect(sel, slugType) {
+// Lit la valeur courante d'un champ du formulaire, quel que soit son type
+// de rendu -- un <select>/<input> classique (.value), ou un groupe de
+// chips multi_select/dynamic_multi_select (valeurs actives jointes par
+// virgule). Ajouté le 2 août 2026 pour slug_extra_params ci-dessous :
+// avant, seul --scenario (toujours un <select> simple) était jamais lu
+// comme dépendance, donc .value suffisait -- pas le cas pour un champ
+// forceur potentiellement multi-valeurs.
+function lireValeurChamp(flag) {
+  const chips = document.querySelector(`[data-multi-flag="${flag}"]`);
+  if (chips) {
+    return Array.from(chips.querySelectorAll('.yaml-chip.active')).map(c => c.dataset.value).join(',');
+  }
+  const el = document.querySelector(`[data-flag="${flag}"]`);
+  return el ? el.value : '';
+}
+
+// Calcule la chaîne de paramètres additionnels (&nom=valeur...) à partir
+// d'un dict slug_extra_params -- factorisé le 2 août 2026 pour être
+// partagé entre loadSlugsForSelect (options) et loadSlugsForChips
+// (dynamic_multi_select) ci-dessous.
+function construireExtraParams(extraParams) {
+  let extra = '';
+  if (extraParams) {
+    for (const [paramName, sourceFlag] of Object.entries(extraParams)) {
+      const val = lireValeurChamp(sourceFlag) || '';
+      extra += `&${encodeURIComponent(paramName)}=${encodeURIComponent(val)}`;
+    }
+  }
+  return extra;
+}
+
+async function loadSlugsForSelect(sel, slugType, extraParams) {
   const scenarioSel = document.querySelector('[data-flag="--scenario"]');
   const scenario = scenarioSel ? scenarioSel.value : (State.config?.default_scenario || '');
+  const extra = construireExtraParams(extraParams);
 
   try {
-    const res = await fetch(`/api/slugs?type=${slugType}&scenario=${scenario}`);
+    const res = await fetch(`/api/slugs?type=${slugType}&scenario=${scenario}${extra}`);
     const data = await res.json();
     sel.innerHTML = '<option value="">— Aucun —</option>';
     (data.slugs || []).forEach(slug => {
       const opt = document.createElement('option');
       opt.value = slug;
-      opt.textContent = slug;
+      opt.textContent = (data.labels && data.labels[slug]) || slug;
       sel.appendChild(opt);
     });
   } catch (e) {
     sel.innerHTML = '<option value="">Erreur chargement</option>';
+  }
+}
+
+// dynamic_multi_select (ajouté le 2 août 2026) : même principe que
+// loadSlugsForSelect, mais rend des chips cliquables multi-valeurs
+// (comme multi_select) plutôt qu'un <select> à valeur unique -- pour
+// --forcer-scenarios (plusieurs scénarios possibles à la fois, liste
+// restreinte dynamiquement selon l'élément forcé choisi).
+// Exclusivité "tous" vs valeurs précises -- ajouté le 2 août 2026 (retour
+// de David : rien n'empêchait techniquement de cocher "tous" ET un
+// scénario/une zone précis en même temps, ce qui n'a pas de sens -- "tous"
+// et une restriction précise sont mutuellement exclusifs). Cocher "tous"
+// décoche tout le reste du groupe ; cocher une valeur précise décoche
+// "tous" s'il était actif. Un groupe sans chip "tous" (multi_select
+// statique classique) n'est pas concerné -- cette fonction n'est câblée
+// que sur les chips dynamiques (dynamic_multi_select).
+function activerChipExclusifTous(chip, chipsEl) {
+  const activation = !chip.classList.contains('active');
+  if (!activation) {
+    chip.classList.remove('active');
+    return;
+  }
+  if (chip.dataset.value === 'tous') {
+    chipsEl.querySelectorAll('.yaml-chip').forEach(c => c.classList.remove('active'));
+    chip.classList.add('active');
+  } else {
+    const chipTous = chipsEl.querySelector('.yaml-chip[data-value="tous"]');
+    if (chipTous) chipTous.classList.remove('active');
+    chip.classList.add('active');
+  }
+}
+
+async function loadSlugsForChips(chipsEl, slugType, extraParams) {
+  const scenarioSel = document.querySelector('[data-flag="--scenario"]');
+  const scenario = scenarioSel ? scenarioSel.value : (State.config?.default_scenario || '');
+  const extra = construireExtraParams(extraParams);
+
+  // Conserve les valeurs déjà actives avant rechargement, pour les
+  // ré-appliquer si elles existent toujours dans la nouvelle liste --
+  // évite de perdre une sélection en cours quand un champ frère change.
+  const actives = new Set(Array.from(chipsEl.querySelectorAll('.yaml-chip.active')).map(c => c.dataset.value));
+  // Premier chargement (aucune chip encore rendue dans ce groupe) : "tous"
+  // actif par défaut si présent -- ajouté le 2 août 2026, cohérent avec le
+  // comportement réel de generate.py (aucune sélection explicite = tous
+  // les scénarios disponibles). Avant, rien n'était visuellement
+  // sélectionné au chargement alors que "tous" s'appliquait déjà en
+  // silence côté serveur -- source de confusion.
+  const premierChargement = chipsEl.children.length === 0
+    || (chipsEl.children.length === 1 && chipsEl.querySelector('.option-desc'));
+  if (premierChargement) actives.add('tous');
+
+  try {
+    const res = await fetch(`/api/slugs?type=${slugType}&scenario=${scenario}${extra}`);
+    const data = await res.json();
+    chipsEl.innerHTML = '';
+    (data.slugs || []).forEach(slug => {
+      const chip = document.createElement('button');
+      chip.type = 'button';
+      chip.className = 'yaml-chip' + (actives.has(slug) ? ' active' : '');
+      chip.textContent = (data.labels && data.labels[slug]) || slug;
+      chip.dataset.value = slug;
+      chip.addEventListener('click', () => activerChipExclusifTous(chip, chipsEl));
+      chipsEl.appendChild(chip);
+    });
+  } catch (e) {
+    chipsEl.innerHTML = '<span class="option-desc">Erreur chargement</span>';
+  }
+}
+
+// Point d'entrée unique pour rafraîchir un champ dynamique (select OU
+// chips), quel que soit ce qui a changé -- ajouté le 2 août 2026.
+async function rafraichirChampDynamique(el) {
+  const extra = el.dataset.slugExtraParams ? JSON.parse(el.dataset.slugExtraParams) : null;
+  if (el.tagName === 'SELECT') {
+    await loadSlugsForSelect(el, el.dataset.slugType, extra);
+  } else {
+    await loadSlugsForChips(el, el.dataset.slugType, extra);
   }
 }
 
@@ -934,7 +1079,7 @@ document.addEventListener('change', async (e) => {
   if (e.target.dataset.flag === '--scenario') {
     const slugSelects = document.querySelectorAll('[data-needs-scenario="true"]');
     for (const sel of slugSelects) {
-      await loadSlugsForSelect(sel, sel.dataset.slugType);
+      await rafraichirChampDynamique(sel);
     }
   }
 });
@@ -947,11 +1092,39 @@ document.addEventListener('change', async (e) => {
   for (const sel of piloted) {
     const map = JSON.parse(sel.dataset.slugTypeMap || '{}');
     const nouveauType = map[e.target.value] || map['*'] || sel.dataset.slugType;
-    if (nouveauType !== sel.dataset.slugType) {
-      sel.dataset.slugType = nouveauType;
-      await loadSlugsForSelect(sel, nouveauType);
+    sel.dataset.slugType = nouveauType;
+    await rafraichirChampDynamique(sel);
+  }
+});
+
+// Rechargement des champs dynamiques (select OU chips) dont un des
+// slug_extra_params vient de changer -- ajouté le 2 août 2026. Distinct
+// de l'écouteur slug_type_field ci-dessus : ici la LISTE change de
+// contenu (nouveau slug/scénarios choisis), pas le TYPE de slug_type
+// utilisé. Un champ peut légitimement être écouté ici ET par
+// slug_type_field (ex. --forcer-slug pilote le type de --forcer-scenarios
+// ET fournit sa valeur en paramètre "slug").
+async function notifierChangementChamp(flag) {
+  if (!flag) return;
+  const cibles = document.querySelectorAll('[data-slug-extra-params]');
+  for (const el of cibles) {
+    const params = JSON.parse(el.dataset.slugExtraParams || '{}');
+    if (Object.values(params).includes(flag)) {
+      await rafraichirChampDynamique(el);
     }
   }
+}
+document.addEventListener('change', (e) => {
+  if (e.target.dataset.flag) notifierChangementChamp(e.target.dataset.flag);
+});
+// multi_select/dynamic_multi_select (chips) ne déclenchent pas d'évènement
+// natif 'change' (ce sont des <button>, pas des <input>/<select>) --
+// écouteur dédié sur le clic des chips, en plus du toggle visuel déjà posé
+// dans renderOption()/loadSlugsForChips.
+document.addEventListener('click', (e) => {
+  const chip = e.target.closest('.yaml-chip');
+  const group = chip && chip.closest('[data-multi-flag]');
+  if (group) notifierChangementChamp(group.dataset.multiFlag);
 });
 
 // ── Construction des args CLI ─────────────────────
@@ -1260,6 +1433,26 @@ document.getElementById('log-clear').addEventListener('click', (e) => {
   setLogStatus('idle', '—');
 });
 
+// Réinitialisation des champs partagés après un lancement -- ajouté le
+// 2 août 2026 (retour de David) : Thématique/Ligne éditoriale/Longueur/
+// Angle ne se réinitialisaient jamais entre deux clics sur "Lancer" tant
+// qu'on restait sur le même panneau -- comportement HTML normal (un champ
+// garde sa valeur tant qu'on ne le touche pas), mais qui a fait générer
+// un article sur une thématique choisie lors d'un essai précédent, sans
+// que David s'en aperçoive. Portée volontairement limitée à ces 4 champs
+// partagés (pas --forcer-type/--forcer-slug/--scenario/--zone-slug, que
+// David veut au contraire pouvoir garder pour itérer sur le même élément
+// sans tout re-choisir à chaque essai).
+const CHAMPS_A_REINITIALISER = ['--thematique', '--ligne-editoriale', '--article-longueur', '--article-angle-specifique'];
+
+function reinitialiserChampsPartages() {
+  CHAMPS_A_REINITIALISER.forEach(flag => {
+    const el = document.querySelector(`[data-flag="${flag}"]`);
+    if (!el) return;
+    el.value = el.dataset.defaultValue || '';
+  });
+}
+
 function setRunning(isRunning, result = null) {
   const btnRun  = document.getElementById('btn-run');
   const btnStop = document.getElementById('btn-stop');
@@ -1277,6 +1470,7 @@ function setRunning(isRunning, result = null) {
     if (result === 'ok')    setLogStatus('ok',    'Succès');
     else if (result === 'error') setLogStatus('error', 'Erreur');
     else                         setLogStatus('idle',  '—');
+    reinitialiserChampsPartages();
   }
 }
 

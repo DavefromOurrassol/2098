@@ -35,8 +35,42 @@ zone_geographique:
 - régionale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- collectif_hackers_decroissance_infrastructure_breakdown
+- consortiums_logistiques_agro_corporatifs_breakdown
+- milices_d_accaparement_hydrique_breakdown
+- milices_de_controle_territorial_breakdown
+- nexcore_breakdown
+- nexus_biosyn_breakdown
+- reseau_de_recuperation_industrielle_illicite_breakdown
+- reseau_logistique_criminel_concurrent_breakdown
+- seigneuries_foncieres_opportunistes_breakdown
+- seigneuries_logistiques_armees_breakdown
+oppositions:
+- blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
+- brigades_medicales_itinerantes_breakdown
+- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- consortium_amazonia_viva_breakdown
+- corridor_lithium_bouches_breakdown
+- delta_mekong_racines_breakdown
+- diaspora_tech_sahel_breakdown
+- enclaves_agro_communautaires_autonomes_breakdown
+- enclaves_industrielles_du_corridor_oural_caspien_breakdown
+- factions_para_etatiques_hydriques_breakdown
+- frente_sert_o_livre_breakdown
+- front_de_resistance_aux_peages_sur_les_ressources_breakdown
+- gouvernements_regionaux_residuels_reterritorialisants_breakdown
+- les_veilleurs_du_fleuve_breakdown
+- ligue_des_cites_du_sahel_numerique_breakdown
+- massif_central_cicatrices_vertes_breakdown
+- midwest_desertifie_breakdown
+- milices_agro_defensives_locales_breakdown
+- mouvement_racines_vivantes_breakdown
+- noeud_mnemos_pannonie_breakdown
+- occitanie_racines_meres_breakdown
+- ong_de_gestion_migratoire_survivantes_breakdown
+- reseaux_de_soigneurs_traditionnels_breakdown
+- vallee_allier_terrafond_breakdown
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -94,6 +128,46 @@ La contradiction centrale qui ronge ces seigneurs est celle de toute féodalité
 - [[organisation_territoires]]
 - [[geopolitique_conflits]]
 - [[gouvernance_institutions]]
+
+
+
+## Relations
+**Alliés :**
+- [[collectif_hackers_decroissance_infrastructure_breakdown]]
+- [[consortiums_logistiques_agro_corporatifs_breakdown]]
+- [[milices_d_accaparement_hydrique_breakdown]]
+- [[milices_de_controle_territorial_breakdown]]
+- [[nexcore_breakdown]]
+- [[nexus_biosyn_breakdown]]
+- [[reseau_de_recuperation_industrielle_illicite_breakdown]]
+- [[reseau_logistique_criminel_concurrent_breakdown]]
+- [[seigneuries_foncieres_opportunistes_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]
+**Opposants :**
+- [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
+- [[brigades_medicales_itinerantes_breakdown]]
+- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[consortium_amazonia_viva_breakdown]]
+- [[corridor_lithium_bouches_breakdown]]
+- [[delta_mekong_racines_breakdown]]
+- [[diaspora_tech_sahel_breakdown]]
+- [[enclaves_agro_communautaires_autonomes_breakdown]]
+- [[enclaves_industrielles_du_corridor_oural_caspien_breakdown]]
+- [[factions_para_etatiques_hydriques_breakdown]]
+- [[frente_sert_o_livre_breakdown]]
+- [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
+- [[gouvernements_regionaux_residuels_reterritorialisants_breakdown]]
+- [[les_veilleurs_du_fleuve_breakdown]]
+- [[ligue_des_cites_du_sahel_numerique_breakdown]]
+- [[massif_central_cicatrices_vertes_breakdown]]
+- [[midwest_desertifie_breakdown]]
+- [[milices_agro_defensives_locales_breakdown]]
+- [[mouvement_racines_vivantes_breakdown]]
+- [[noeud_mnemos_pannonie_breakdown]]
+- [[occitanie_racines_meres_breakdown]]
+- [[ong_de_gestion_migratoire_survivantes_breakdown]]
+- [[reseaux_de_soigneurs_traditionnels_breakdown]]
+- [[vallee_allier_terrafond_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

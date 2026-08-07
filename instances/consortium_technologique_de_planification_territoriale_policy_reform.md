@@ -36,8 +36,24 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- assemblee_territoires_policy_reform
+- bureau_gouvernance_algorithmique_policy_reform
+- conseil_intergouvernemental_de_regulation_technologique_policy_reform
+- conseil_regulation_algorithmique_policy_reform
+- consortium_agro_pacifique_policy_reform
+- consortium_technologique_des_nations_integrees_policy_reform
+- fonds_mondial_de_resilience_infrastructurelle_policy_reform
+- reseau_des_metropoles_n_uds_policy_reform
+- reseau_des_regulateurs_numeriques_souverains_rrns_policy_reform
+- union_technocratique_eurasiatique_policy_reform
+oppositions:
+- coalition_des_souverainistes_numeriques_policy_reform
+- collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform
+- collectifs_de_resistance_aux_relocalisations_forcees_policy_reform
+- front_souverainiste_de_l_information_regionale_policy_reform
+- internationale_decroissante_anti_planification_policy_reform
+- mouvement_pour_la_souverainete_territoriale_absolue_policy_reform
 type_relation_dominante: dépendance
 annee_debut: 2026
 annee_fin: null
@@ -103,6 +119,27 @@ La tension centrale du Consortium réside dans la contradiction entre son positi
 - [[organisation_territoires]]
 - [[gouvernance_institutions]]
 - [[technologie_information]]
+
+
+## Relations
+**Alliés :**
+- [[assemblee_territoires_policy_reform]]
+- [[bureau_gouvernance_algorithmique_policy_reform]]
+- [[conseil_intergouvernemental_de_regulation_technologique_policy_reform]]
+- [[conseil_regulation_algorithmique_policy_reform]]
+- [[consortium_agro_pacifique_policy_reform]]
+- [[consortium_technologique_des_nations_integrees_policy_reform]]
+- [[fonds_mondial_de_resilience_infrastructurelle_policy_reform]]
+- [[reseau_des_metropoles_n_uds_policy_reform]]
+- [[reseau_des_regulateurs_numeriques_souverains_rrns_policy_reform]]
+- [[union_technocratique_eurasiatique_policy_reform]]
+**Opposants :**
+- [[coalition_des_souverainistes_numeriques_policy_reform]]
+- [[collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform]]
+- [[collectifs_de_resistance_aux_relocalisations_forcees_policy_reform]]
+- [[front_souverainiste_de_l_information_regionale_policy_reform]]
+- [[internationale_decroissante_anti_planification_policy_reform]]
+- [[mouvement_pour_la_souverainete_territoriale_absolue_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

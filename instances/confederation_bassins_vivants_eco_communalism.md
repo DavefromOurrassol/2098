@@ -4,6 +4,7 @@ type: instance
 slug: confederation_bassins_vivants_eco_communalism
 entite: confederation_bassins_vivants
 scenario: eco_communalism
+statut: officialise_enrichi
 localisation:
   zone: confederation_bassins_vivants
   lieu: Confédération des Bassins Vivants
@@ -37,35 +38,54 @@ zone_systemique:
     - économie
 
 alliances:
-    - assemblee_territoires_eco_communalism
-    - assemblees_bioterritoriales_regionales_eco_communalism
-    - assemblees_de_bassin_versant_eco_communalism
-    - brigades_de_restauration_ecologique_eco_communalism
-    - cercles_de_mediation_territoriale_intercommunautaire_eco_communalism
-    - conseils_de_bassin_versant_eco_communalistes_eco_communalism
-    - cooperative_terrafond_eco_communalism
-    - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
-    - guildes_de_mediateurs_ecologiques_eco_communalism
-    - archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
-    - collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism
-    - collectifs_de_geo_observateurs_citoyens_eco_communalism
-    - trame_bioclimatique_eco_communalism
-    - confederation_des_communs_de_l_arc_septentrional_eco_communalism
-    - reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism
-    - mouvement_racines_vivantes_eco_communalism
-
+- archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
+- assemblee_territoires_eco_communalism
+- assemblees_bioterritoriales_regionales_eco_communalism
+- assemblees_de_bassin_versant_eco_communalism
+- brigades_de_restauration_ecologique_eco_communalism
+- cercles_de_mediation_territoriale_intercommunautaire_eco_communalism
+- collectifs_de_cartographie_ecologique_participative_eco_communalism
+- collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism
+- collectifs_de_geo_observateurs_citoyens_eco_communalism
+- confederation_communs_arc_septentrional_eco_communalism
+- confederation_des_communs_de_l_arc_septentrional_eco_communalism
+- conseils_de_bassin_versant_eco_communalistes_eco_communalism
+- cooperative_terrafond_eco_communalism
+- cooperatives_d_habitat_regeneratif_eco_communalism
+- cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
+- factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism
+- guildes_de_mediateurs_ecologiques_eco_communalism
+- kalaallit_nunaat_bioterritoire_eco_communalism
+- le_registre_du_fleuve_eco_communalism
+- les_veilleurs_du_fleuve_eco_communalism
+- mouvement_racines_vivantes_eco_communalism
+- reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism
+- reseau_terrafond_bassins_eco_communalism
+- reseaux_de_radio_communautaire_basse_consommation_eco_communalism
+- reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
+- trame_bioclimatique_eco_communalism
+- tresse_verte_corridor_eco_communalism
+- zones_extractivistes_corridors_eco_communalism
 oppositions:
-    - consortiums_industriels_de_l_eau_eco_communalism
-    - factions_extractivistes_des_aquiferes_communs_eco_communalism
-    - enclaves_extractivistes_residuelles_des_corridors_eco_communalism
-    - communautes_rurales_dissidentes_anti_cooperation_regionale_eco_communalism
-    - communs_secessionnistes_hors_coordination_eco_communalism
-    - communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism
-    - conseils_territoriaux_opaques_sur_la_gestion_des_ressources_eco_communalism
-    - reseaux_de_notables_communautaires_capturistes_eco_communalism
-    - agro_conglomerats_des_enclaves_technologiques_eco_communalism
-    - cartels_de_narration_de_penurie_eco_communalism
-
+- agro_conglomerats_des_enclaves_technologiques_eco_communalism
+- cartels_de_narration_de_penurie_eco_communalism
+- communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism
+- communautes_rurales_dissidentes_anti_cooperation_regionale_eco_communalism
+- communs_secessionnistes_hors_coordination_eco_communalism
+- conseils_territoriaux_opaques_sur_la_gestion_des_ressources_eco_communalism
+- consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism
+- consortiums_industriels_de_l_eau_eco_communalism
+- consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism
+- courant_isolationniste_anti_circulation_de_l_information_eco_communalism
+- courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism
+- enclaves_extractivistes_et_etats_residuels_eco_communalism
+- enclaves_extractivistes_residuelles_des_corridors_eco_communalism
+- factions_communautaires_refusant_le_partage_narratif_exterieur_eco_communalism
+- factions_extractivistes_des_aquiferes_communs_eco_communalism
+- factions_technophiles_de_la_geo_ingenierie_centralisee_eco_communalism
+- fragments_d_etats_centraux_residuels_eco_communalism
+- reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism
+- reseaux_de_notables_communautaires_capturistes_eco_communalism
 type_relation_dominante: coopération
 
 annee_debut: 2041
@@ -109,12 +129,60 @@ La Confédération coordonne les délibérations inter-bassins sur les droits d'
 - [[gouvernance_institutions]]
 - [[systemes_productifs_travail]]
 
-## Relations
-**Alliés** : [[assemblee_territoires_eco_communalism]], [[assemblees_bioterritoriales_regionales_eco_communalism]], [[assemblees_de_bassin_versant_eco_communalism]], [[brigades_de_restauration_ecologique_eco_communalism]], [[cercles_de_mediation_territoriale_intercommunautaire_eco_communalism]], [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]], [[cooperative_terrafond_eco_communalism]], [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]], [[guildes_de_mediateurs_ecologiques_eco_communalism]], [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]], [[collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism]], [[collectifs_de_geo_observateurs_citoyens_eco_communalism]], [[trame_bioclimatique_eco_communalism]], [[confederation_des_communs_de_l_arc_septentrional_eco_communalism]], [[reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism]], [[mouvement_racines_vivantes_eco_communalism]]
-**Opposants** : [[consortiums_industriels_de_l_eau_eco_communalism]], [[factions_extractivistes_des_aquiferes_communs_eco_communalism]], [[enclaves_extractivistes_residuelles_des_corridors_eco_communalism]], [[communautes_rurales_dissidentes_anti_cooperation_regionale_eco_communalism]], [[communs_secessionnistes_hors_coordination_eco_communalism]], [[communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism]], [[conseils_territoriaux_opaques_sur_la_gestion_des_ressources_eco_communalism]], [[reseaux_de_notables_communautaires_capturistes_eco_communalism]], [[agro_conglomerats_des_enclaves_technologiques_eco_communalism]], [[cartels_de_narration_de_penurie_eco_communalism]]
 
 ## Description journalistique
 Depuis ses premières chartes signées au creux des années 2040 dans les vallées de l'Èbre et du Rhône moyen, la Confédération des Bassins Vivants est devenue la référence incontournable en matière de gouvernance hydrique territoriale. On n'y adhère pas sur demande : on y est accepté après évaluation des pratiques par une délégation tournante d'assemblées membres, un processus qui dure parfois deux ans. En 2098, la Confédération fédère plus de deux cents bassins versants sur quatre continents, chacun souverain sur ses délibérations locales mais lié par un pacte de sobriété qui contraint les prélèvements, les modes de culture et les échanges extérieurs. Ce qui frappe les observateurs extérieurs, c'est moins l'ampleur de la structure que son silence : elle ne communique pas, elle démontre. Et les territoires voisins en crise viennent à elle.
 
 ## Tensions narratives
 La tension principale traverse la question de l'exclusion : que faire d'une communauté membre qui viole durablement les quotas de prélèvement lors d'une sécheresse ? La Confédération n'a pas de bras armé, et ses seuls leviers sont la réputation et la coupure des solidarités — mais l'exclusion d'un bassin en détresse peut signifier sa mort sociale et écologique. Par ailleurs, son attractivité croissante attire des acteurs opportunistes : des agro-conglomérats qui tentent de faire admettre des filiales restructurées sous des noms d'emprunt, et des fragments d'États résiduels qui voient dans l'adhésion un moyen de regagner une légitimité perdue sans en accepter les contraintes réelles. La Confédération doit choisir : rester un exemple ou devenir un pouvoir — et ce choix ne peut plus être indéfiniment différé.
+
+## Relations
+**Alliés :**
+- [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]]
+- [[assemblee_territoires_eco_communalism]]
+- [[assemblees_bioterritoriales_regionales_eco_communalism]]
+- [[assemblees_de_bassin_versant_eco_communalism]]
+- [[brigades_de_restauration_ecologique_eco_communalism]]
+- [[cercles_de_mediation_territoriale_intercommunautaire_eco_communalism]]
+- [[collectifs_de_cartographie_ecologique_participative_eco_communalism]]
+- [[collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism]]
+- [[collectifs_de_geo_observateurs_citoyens_eco_communalism]]
+- [[confederation_communs_arc_septentrional_eco_communalism]]
+- [[confederation_des_communs_de_l_arc_septentrional_eco_communalism]]
+- [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]]
+- [[cooperative_terrafond_eco_communalism]]
+- [[cooperatives_d_habitat_regeneratif_eco_communalism]]
+- [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]
+- [[factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism]]
+- [[guildes_de_mediateurs_ecologiques_eco_communalism]]
+- [[kalaallit_nunaat_bioterritoire_eco_communalism]]
+- [[le_registre_du_fleuve_eco_communalism]]
+- [[les_veilleurs_du_fleuve_eco_communalism]]
+- [[mouvement_racines_vivantes_eco_communalism]]
+- [[reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism]]
+- [[reseau_terrafond_bassins_eco_communalism]]
+- [[reseaux_de_radio_communautaire_basse_consommation_eco_communalism]]
+- [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
+- [[trame_bioclimatique_eco_communalism]]
+- [[tresse_verte_corridor_eco_communalism]]
+- [[zones_extractivistes_corridors_eco_communalism]]
+**Opposants :**
+- [[agro_conglomerats_des_enclaves_technologiques_eco_communalism]]
+- [[cartels_de_narration_de_penurie_eco_communalism]]
+- [[communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism]]
+- [[communautes_rurales_dissidentes_anti_cooperation_regionale_eco_communalism]]
+- [[communs_secessionnistes_hors_coordination_eco_communalism]]
+- [[conseils_territoriaux_opaques_sur_la_gestion_des_ressources_eco_communalism]]
+- [[consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism]]
+- [[consortiums_industriels_de_l_eau_eco_communalism]]
+- [[consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism]]
+- [[courant_isolationniste_anti_circulation_de_l_information_eco_communalism]]
+- [[courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism]]
+- [[enclaves_extractivistes_et_etats_residuels_eco_communalism]]
+- [[enclaves_extractivistes_residuelles_des_corridors_eco_communalism]]
+- [[factions_communautaires_refusant_le_partage_narratif_exterieur_eco_communalism]]
+- [[factions_extractivistes_des_aquiferes_communs_eco_communalism]]
+- [[factions_technophiles_de_la_geo_ingenierie_centralisee_eco_communalism]]
+- [[fragments_d_etats_centraux_residuels_eco_communalism]]
+- [[reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism]]
+- [[reseaux_de_notables_communautaires_capturistes_eco_communalism]]

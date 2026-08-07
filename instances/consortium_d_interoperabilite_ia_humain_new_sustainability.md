@@ -33,8 +33,32 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_mondiale_de_modelisation_climatique_ammc_new_sustainability
+- bureau_gouvernance_algorithmique_new_sustainability
+- centre_institutionnel_geneve_new_sustainability
+- collectif_des_mediateurs_cognitifs_internationaux_new_sustainability
+- conseil_de_deliberation_augmentee_de_l_union_nordique_new_sustainability
+- conseil_de_regulation_cognitive_de_l_onu_new_sustainability
+- conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability
+- conseil_regulation_algorithmique_new_sustainability
+- conseil_technocratique_de_gouvernance_alimentaire_new_sustainability
+- consortium_de_regeneration_planetaire_new_sustainability
+- consortium_des_ia_climatiques_new_sustainability
+- institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability
+- oracle_des_seuils_new_sustainability
+- reseau_des_agences_climatiques_regionales_new_sustainability
+- reseau_mnemos_new_sustainability
+- tribunal_algorithmique_de_bruxelles_new_sustainability
+- tribunal_gouvernance_algorithmique_bruxelles_new_sustainability
+oppositions:
+- bloc_eurasien_souverainiste_new_sustainability
+- coalition_anti_algorithme_des_autonomies_locales_new_sustainability
+- collectifs_de_desobeissance_algorithmique_new_sustainability
+- etats_souverainistes_anti_reseau_new_sustainability
+- factions_souverainistes_des_blocs_peripheriques_new_sustainability
+- internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
+- reseaux_d_information_souverainistes_fermes_new_sustainability
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -101,6 +125,35 @@ La tension centrale du Consortium réside dans la contradiction entre son mandat
 - [[technologie_information]]
 - [[systemes_productifs_travail]]
 - [[gouvernance_institutions]]
+
+
+## Relations
+**Alliés :**
+- [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]]
+- [[bureau_gouvernance_algorithmique_new_sustainability]]
+- [[centre_institutionnel_geneve_new_sustainability]]
+- [[collectif_des_mediateurs_cognitifs_internationaux_new_sustainability]]
+- [[conseil_de_deliberation_augmentee_de_l_union_nordique_new_sustainability]]
+- [[conseil_de_regulation_cognitive_de_l_onu_new_sustainability]]
+- [[conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability]]
+- [[conseil_regulation_algorithmique_new_sustainability]]
+- [[conseil_technocratique_de_gouvernance_alimentaire_new_sustainability]]
+- [[consortium_de_regeneration_planetaire_new_sustainability]]
+- [[consortium_des_ia_climatiques_new_sustainability]]
+- [[institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability]]
+- [[oracle_des_seuils_new_sustainability]]
+- [[reseau_des_agences_climatiques_regionales_new_sustainability]]
+- [[reseau_mnemos_new_sustainability]]
+- [[tribunal_algorithmique_de_bruxelles_new_sustainability]]
+- [[tribunal_gouvernance_algorithmique_bruxelles_new_sustainability]]
+**Opposants :**
+- [[bloc_eurasien_souverainiste_new_sustainability]]
+- [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]]
+- [[collectifs_de_desobeissance_algorithmique_new_sustainability]]
+- [[etats_souverainistes_anti_reseau_new_sustainability]]
+- [[factions_souverainistes_des_blocs_peripheriques_new_sustainability]]
+- [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]]
+- [[reseaux_d_information_souverainistes_fermes_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

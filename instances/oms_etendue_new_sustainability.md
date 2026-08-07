@@ -31,8 +31,24 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_mondiale_de_modelisation_climatique_ammc_new_sustainability
+- centre_institutionnel_geneve_new_sustainability
+- conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability
+- consortium_africain_de_biotechnologies_sociales_new_sustainability
+- fonds_mondial_de_redistribution_technologique_new_sustainability
+- hub_nairobi_kigali_new_sustainability
+- nexus_biosyn_new_sustainability
+- programme_onu_de_restauration_des_sols_new_sustainability
+- programme_onusien_de_mobilite_climatique_new_sustainability
+- reseau_global_de_cliniques_regeneratives_new_sustainability
+- reseaux_de_medecine_regenerative_universelle_new_sustainability
+oppositions:
+- bloc_eurasien_souverainiste_new_sustainability
+- etats_souverainistes_anti_reseau_new_sustainability
+- factions_souverainistes_des_blocs_peripheriques_new_sustainability
+- internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
+- reseaux_d_information_souverainistes_fermes_new_sustainability
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -95,6 +111,27 @@ La tension centrale de l'OMS Étendue réside dans la contradiction entre son ma
 - [[sante_biotechnologies]]
 - [[gouvernance_institutions]]
 - [[demographie_mobilite_humaine]]
+
+
+## Relations
+**Alliés :**
+- [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]]
+- [[centre_institutionnel_geneve_new_sustainability]]
+- [[conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability]]
+- [[consortium_africain_de_biotechnologies_sociales_new_sustainability]]
+- [[fonds_mondial_de_redistribution_technologique_new_sustainability]]
+- [[hub_nairobi_kigali_new_sustainability]]
+- [[nexus_biosyn_new_sustainability]]
+- [[programme_onu_de_restauration_des_sols_new_sustainability]]
+- [[programme_onusien_de_mobilite_climatique_new_sustainability]]
+- [[reseau_global_de_cliniques_regeneratives_new_sustainability]]
+- [[reseaux_de_medecine_regenerative_universelle_new_sustainability]]
+**Opposants :**
+- [[bloc_eurasien_souverainiste_new_sustainability]]
+- [[etats_souverainistes_anti_reseau_new_sustainability]]
+- [[factions_souverainistes_des_blocs_peripheriques_new_sustainability]]
+- [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]]
+- [[reseaux_d_information_souverainistes_fermes_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

@@ -4,6 +4,7 @@ type: instance
 slug: reseau_assemblees_fennoscandien_eco_communalism
 entite: reseau_assemblees_fennoscandien
 scenario: eco_communalism
+statut: officialise_enrichi
 localisation:
   zone: reseau_assemblees_fennoscandien
   lieu: Réseau des Assemblées de Bassin Fennoscandien
@@ -36,27 +37,29 @@ zone_systemique:
     - infrastructure
 
 alliances:
-    - confederation_communs_arc_septentrional_eco_communalism
-    - confederation_des_communs_de_l_arc_septentrional_eco_communalism
-    - reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism
-    - guildes_des_semenciers_itinerants_eco_communalism
-    - collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism
-    - reseaux_de_radio_communautaire_basse_consommation_eco_communalism
-    - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
-    - cercles_de_mediation_territoriale_intercommunautaire_eco_communalism
-    - mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism
-    - leena_vainala_eco_communalism
-
+- cercles_de_mediation_territoriale_intercommunautaire_eco_communalism
+- collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism
+- confederation_communs_arc_septentrional_eco_communalism
+- confederation_des_communs_de_l_arc_septentrional_eco_communalism
+- conseils_de_bassin_versant_eco_communalistes_eco_communalism
+- cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
+- factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism
+- guildes_des_semenciers_itinerants_eco_communalism
+- leena_vainala_eco_communalism
+- mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism
+- reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism
+- reseaux_de_radio_communautaire_basse_consommation_eco_communalism
+- tampere_charte_eco_communalism
 oppositions:
-    - fragments_d_etats_centraux_residuels_eco_communalism
-    - plateformes_centralisees_de_reagregation_globale_eco_communalism
-    - communs_secessionnistes_hors_coordination_eco_communalism
-    - communautes_rurales_dissidentes_anti_cooperation_regionale_eco_communalism
-    - factions_autoritaires_locales_identitaires_exclusionnistes_eco_communalism
-    - courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism
-    - reseaux_de_notables_communautaires_capturistes_eco_communalism
-    - consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism
-
+- communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism
+- communautes_rurales_dissidentes_anti_cooperation_regionale_eco_communalism
+- communs_secessionnistes_hors_coordination_eco_communalism
+- consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism
+- courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism
+- factions_autoritaires_locales_identitaires_exclusionnistes_eco_communalism
+- fragments_d_etats_centraux_residuels_eco_communalism
+- plateformes_centralisees_de_reagregation_globale_eco_communalism
+- reseaux_de_notables_communautaires_capturistes_eco_communalism
 type_relation_dominante: coopération
 
 annee_debut: 2041
@@ -100,12 +103,35 @@ Organise les cycles saisonniers d'échange de ressources — bois, semences, én
 - [[systeme_economique_redistribution]]
 - [[valeurs_culture_tempo_sociale]]
 
-## Relations
-**Alliés** : [[confederation_communs_arc_septentrional_eco_communalism]], [[confederation_des_communs_de_l_arc_septentrional_eco_communalism]], [[reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism]], [[guildes_des_semenciers_itinerants_eco_communalism]], [[collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism]], [[reseaux_de_radio_communautaire_basse_consommation_eco_communalism]], [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]], [[cercles_de_mediation_territoriale_intercommunautaire_eco_communalism]], [[mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism]], [[leena_vainala_eco_communalism]]
-**Opposants** : [[fragments_d_etats_centraux_residuels_eco_communalism]], [[plateformes_centralisees_de_reagregation_globale_eco_communalism]], [[communs_secessionnistes_hors_coordination_eco_communalism]], [[communautes_rurales_dissidentes_anti_cooperation_regionale_eco_communalism]], [[factions_autoritaires_locales_identitaires_exclusionnistes_eco_communalism]], [[courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism]], [[reseaux_de_notables_communautaires_capturistes_eco_communalism]], [[consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism]]
 
 ## Description journalistique
 Depuis les rives du lac Inari jusqu'aux fjords de Vestlandet, le Réseau des Assemblées Fennoscandien est devenu en cinquante ans l'un des exemples les plus étudiés — et les plus discutés — de gouvernance horizontale à grande échelle. Sans siège permanent, sans président, sans budget centralisé, il fait circuler chaque automne des dizaines de milliers de tonnes de ressources entre communautés qui n'ont signé aucun traité formel. Les journalistes étrangers qui viennent couvrir les Tings du Vivant repartent souvent avec la même question sans réponse : qui décide, finalement ? Les militants du Réseau sourient à cette question : 'C'est précisément le bon signe que tu ne trouves pas de réponse.' Mais derrière l'harmonie affichée, les tensions s'accumulent — certaines assemblées du sud réclament des règles contraignantes sur les flux d'eau, tandis que des communautés sámi du nord refusent toute codification écrite de leurs pratiques.
 
 ## Tensions narratives
 La pression monte depuis trois ans autour de la gestion des corridors forestiers boréaux : certaines assemblées veulent centraliser la décision d'accès pour éviter la surexploitation, ce qui reviendrait à créer une autorité supra-locale que le Réseau refuse constitutionnellement d'être. Parallèlement, la Confédération des Communs de l'Arc Septentrional pousse à une fusion institutionnelle qui permettrait une représentation commune face aux blocs extérieurs — proposition que le Réseau vit comme une menace existentielle sur son principe de souveraineté locale. Enfin, une faction interne de 'réalistes' argumente que sans règles contraignantes, les premières crises sévères de sécheresse ou de disette fragmenteront le Réseau en quelques saisons.
+
+## Relations
+**Alliés :**
+- [[cercles_de_mediation_territoriale_intercommunautaire_eco_communalism]]
+- [[collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism]]
+- [[confederation_communs_arc_septentrional_eco_communalism]]
+- [[confederation_des_communs_de_l_arc_septentrional_eco_communalism]]
+- [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]]
+- [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]
+- [[factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism]]
+- [[guildes_des_semenciers_itinerants_eco_communalism]]
+- [[leena_vainala_eco_communalism]]
+- [[mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism]]
+- [[reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism]]
+- [[reseaux_de_radio_communautaire_basse_consommation_eco_communalism]]
+- [[tampere_charte_eco_communalism]]
+**Opposants :**
+- [[communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism]]
+- [[communautes_rurales_dissidentes_anti_cooperation_regionale_eco_communalism]]
+- [[communs_secessionnistes_hors_coordination_eco_communalism]]
+- [[consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism]]
+- [[courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism]]
+- [[factions_autoritaires_locales_identitaires_exclusionnistes_eco_communalism]]
+- [[fragments_d_etats_centraux_residuels_eco_communalism]]
+- [[plateformes_centralisees_de_reagregation_globale_eco_communalism]]
+- [[reseaux_de_notables_communautaires_capturistes_eco_communalism]]

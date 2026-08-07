@@ -33,8 +33,18 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- bloc_pacifique_nord_fortress_world
+- kalaallit_nunaat_sovereign_fund_fortress_world
+- bloc_atlantique_fortress_world
+- ironclad_logistics_fortress_world
+- pacte_forteresses_souveraines_fortress_world
+oppositions:
+- armada_logistique_nordique_fortress_world
+- milices_de_piraterie_logistique_arctique_fortress_world
+- factions_djihadistes_logistiques_d_asie_centrale_fortress_world
+- cartels_miniers_militarises_subsahariens_fortress_world
+- reseaux_de_contrebande_energetique_transfrontaliere_fortress_world
 type_relation_dominante: dépendance
 annee_debut: 2026
 annee_fin: null
@@ -96,6 +106,20 @@ Le Consortium navigue dans une contradiction structurelle : sa neutralité affic
 - [[demographie_mobilite_humaine]]
 - [[geopolitique_conflits]]
 - [[energie_ressources_critiques]]
+
+## Relations
+**Alliés :**
+- [[bloc_pacifique_nord_fortress_world]]
+- [[kalaallit_nunaat_sovereign_fund_fortress_world]]
+- [[bloc_atlantique_fortress_world]]
+- [[ironclad_logistics_fortress_world]]
+- [[pacte_forteresses_souveraines_fortress_world]]
+**Opposants :**
+- [[armada_logistique_nordique_fortress_world]]
+- [[milices_de_piraterie_logistique_arctique_fortress_world]]
+- [[factions_djihadistes_logistiques_d_asie_centrale_fortress_world]]
+- [[cartels_miniers_militarises_subsahariens_fortress_world]]
+- [[reseaux_de_contrebande_energetique_transfrontaliere_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

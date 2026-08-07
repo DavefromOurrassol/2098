@@ -34,8 +34,21 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- agence_internationale_des_energies_renouvelables_irena_2_reference
+- alliance_blocs_souverains_reference
+- banque_mondiale_des_transitions_climatiques_reference
+- consortium_helios_reference
+- consortium_indo_pacifique_de_l_hydrogene_reference
+- consortiums_d_agriculture_verticale_algorithmique_reference
+- consortiums_prives_de_gestion_des_donnees_critiques_reference
 - institutions_multilaterales_survivantes_reference
+- optiflow_logistics_reference
 oppositions:
+- bureau_zones_non_prioritaires_reference
+- consortiums_energetiques_des_megapoles_reference
+- corporations_d_extraction_energetique_non_signataires_reference
+- factions_d_extraction_miniere_independantes_reference
+- operateurs_prives_d_energie_distribuee_hors_fct_reference
 - pacte_des_souverains_reference
 type_relation_dominante: coopération
 annee_debut: 2026
@@ -100,10 +113,24 @@ La tension centrale du Pacte réside dans la contradiction entre son ambition un
 - [[gouvernance_institutions]]
 - [[geopolitique_conflits]]
 
+
 ## Relations
 **Alliés :**
+- [[agence_internationale_des_energies_renouvelables_irena_2_reference]]
+- [[alliance_blocs_souverains_reference]]
+- [[banque_mondiale_des_transitions_climatiques_reference]]
+- [[consortium_helios_reference]]
+- [[consortium_indo_pacifique_de_l_hydrogene_reference]]
+- [[consortiums_d_agriculture_verticale_algorithmique_reference]]
+- [[consortiums_prives_de_gestion_des_donnees_critiques_reference]]
 - [[institutions_multilaterales_survivantes_reference]]
+- [[optiflow_logistics_reference]]
 **Opposants :**
+- [[bureau_zones_non_prioritaires_reference]]
+- [[consortiums_energetiques_des_megapoles_reference]]
+- [[corporations_d_extraction_energetique_non_signataires_reference]]
+- [[factions_d_extraction_miniere_independantes_reference]]
+- [[operateurs_prives_d_energie_distribuee_hors_fct_reference]]
 - [[pacte_des_souverains_reference]]
 
 ## Notes

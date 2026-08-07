@@ -33,8 +33,26 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- amara_diallo_nkosi_new_sustainability
+- consortium_africain_de_biotechnologies_sociales_new_sustainability
+- consortium_amazonia_viva_new_sustainability
+- consortium_de_regeneration_planetaire_new_sustainability
+- fonds_mondial_de_redistribution_technologique_new_sustainability
+- hub_nairobi_kigali_new_sustainability
+- ligue_des_cites_du_sahel_numerique_new_sustainability
+- pacifique_sud_resilience_network_new_sustainability
+- reseau_des_agences_climatiques_regionales_new_sustainability
+- reseau_des_bio_communs_regionaux_new_sustainability
+- reseau_des_communs_numeriques_globaux_new_sustainability
+- reseau_des_communs_productifs_regeneratifs_new_sustainability
+- reseau_des_villes_regeneratives_new_sustainability
+oppositions:
+- bureau_gouvernance_algorithmique_new_sustainability
+- centre_institutionnel_geneve_new_sustainability
+- coalition_des_industries_extractives_residuelles_new_sustainability
+- consortium_helios_new_sustainability
+- factions_souverainistes_des_blocs_peripheriques_new_sustainability
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -102,6 +120,29 @@ Le Réseau est pris en étau entre sa légitimité technique croissante et les p
 - [[climat_environnement_global]]
 - [[gouvernance_institutions]]
 - [[geopolitique_conflits]]
+
+
+## Relations
+**Alliés :**
+- [[amara_diallo_nkosi_new_sustainability]]
+- [[consortium_africain_de_biotechnologies_sociales_new_sustainability]]
+- [[consortium_amazonia_viva_new_sustainability]]
+- [[consortium_de_regeneration_planetaire_new_sustainability]]
+- [[fonds_mondial_de_redistribution_technologique_new_sustainability]]
+- [[hub_nairobi_kigali_new_sustainability]]
+- [[ligue_des_cites_du_sahel_numerique_new_sustainability]]
+- [[pacifique_sud_resilience_network_new_sustainability]]
+- [[reseau_des_agences_climatiques_regionales_new_sustainability]]
+- [[reseau_des_bio_communs_regionaux_new_sustainability]]
+- [[reseau_des_communs_numeriques_globaux_new_sustainability]]
+- [[reseau_des_communs_productifs_regeneratifs_new_sustainability]]
+- [[reseau_des_villes_regeneratives_new_sustainability]]
+**Opposants :**
+- [[bureau_gouvernance_algorithmique_new_sustainability]]
+- [[centre_institutionnel_geneve_new_sustainability]]
+- [[coalition_des_industries_extractives_residuelles_new_sustainability]]
+- [[consortium_helios_new_sustainability]]
+- [[factions_souverainistes_des_blocs_peripheriques_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

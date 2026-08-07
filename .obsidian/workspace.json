@@ -27,6 +27,20 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "instances/tour_bcuc_geneve_breakdown.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "tour_bcuc_geneve_breakdown"
+            }
+          },
+          {
+            "id": "f03a8ed94d817d8c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "documentation/GitHUB.md",
                 "mode": "source",
                 "source": false
@@ -36,7 +50,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -198,44 +212,44 @@
       "bases:Créer une nouvelle base": false
     }
   },
-  "active": "a55b90f7989d3ba4",
+  "active": "f03a8ed94d817d8c",
   "lastOpenFiles": [
-    "documentation/need_action/trace_tribunal_algorithmique_de_bruxelles_reference.md",
-    "event_instances/insurrection_rust_belt_breakdown.md",
-    "documentation/need_action/trace_tribunal_algorithmique_de_bruxelles_reference.json",
-    "gui/logs/trace_injection_20260802_125802.log",
-    "gui/logs/trace_injection_20260802_125527.log",
-    "gui/logs/trace_injection_20260802_125420.log",
-    "gui/logs/trace_injection_20260802_125322.log",
-    "instances/les_passeurs_de_limites_new_sustainability.md",
-    "gui/logs/trace_injection_20260802_124623.log",
-    "gui/logs/trace_injection_20260802_124210.log",
-    "gui/logs/trace_injection_20260802_124126.log",
-    "gui/logs/trace_injection_20260802_123846.log",
-    "gui/logs/trace_injection_20260802_123725.log",
-    "documentation/FAQ_OURRASSOL_2098.md",
-    "documentation/BACKLOG_CONSOLIDE_2_AOUT.md",
-    "templates/instance_template.md",
-    "documentation/backlog_publication_web_journaux_oraux.md",
-    "documentation/Old/HANDOFF_1_AOUT.md",
-    "documentation/Old/HANDOFF_28juin.md",
-    "documentation/backlog_publication_web_journaux_oraux (1).md",
-    "documentation/Old/Old/backlog_publication_web_journaux_oraux (1).md",
-    "documentation/Old/recap_pipeline copie 2.md",
-    "documentation/Old/manuel_utilisateur copie.md",
-    "documentation/Old/HANDOFF_25juin copie.md",
-    "documentation/Old/HANDOFF_24juin.md",
-    "documentation/Old/HANDOFF_23_juin.md",
-    "documentation/Old/HANDOFF_23_juin_fin.md",
-    "documentation/Old/HANDOFF_22_juin.md",
-    "documentation/Old/HANDOFF_21_juin.md",
-    "documentation/Old/HANDOFF_20 juin.md",
-    "documentation/Old/conception_localisation_filtrage_geo.md",
-    "documentation/Old/BACKLOG.md",
-    "documentation/Old/HANDOFF_29juin_final.md",
+    "generator/registre_evenements.md",
+    "Sans titre.md",
+    "instances/test_durcissement_policy_reform.md",
+    "instances/tour_bcuc_geneve_breakdown.md",
+    "generator/voix_du_dehors_reference",
+    "generator/voix_du_dehors_fortress_world",
+    "generator/voix_du_dehors_eco_communalism",
+    "generator/voix_du_dehors_breakdown",
+    "generator/vaultcorp_security_fortress_world",
+    "generator/vasil_orentchev_reference",
+    "generator/vasil_orentchev_fortress_world",
+    "generator/vasil_orentchev_breakdown",
+    "generator/valparaiso_fct_reference",
+    "generator/vallee_allier_terrafond_breakdown",
+    "instances/test_verif_prompt_policy_reform.md",
+    "instances/banque_mondiale_des_transitions_climatiques_reference.md",
+    "instances/arctic_passage_authority_breakdown.md",
+    "instances/amara_diallo_nkosi_policy_reform.md",
+    "instances/administrations_de_controle_frontalier_des_blocs_fortress_world.md",
+    "documentation/need_action/fix_alliances_conflits_reciprocite.md",
     "documentation/USER_MANUAL_COMPLET.md",
-    "documentation/HANDOFF_1_AOUT.md",
-    "documentation/need_action/localisation_review.md",
+    "documentation/HANDOFF_4_AOUT.md",
+    "documentation/BACKLOG_CONSOLIDE_4_AOUT.md",
+    "documentation/Old/USER_MANUAL_COMPLET copie 5.md",
+    "documentation/Old/HANDOFF_3_AOUT.md",
+    "documentation/Old/BACKLOG_CONSOLIDE_3_AOUT.md",
+    "instances/conseil_regulation_ressources_breakdown.md",
+    "documentation/HANDOFF_3_AOUT.md",
+    "documentation/BACKLOG_CONSOLIDE_3_AOUT.md",
+    "documentation/Old/USER_MANUAL_COMPLET copie 4.md",
+    "documentation/Old/BACKLOG_CONSOLIDE_2_AOUT copie.md",
+    "documentation/Old/HANDOFF_2_AOUT.md",
+    "instances/complexes_militaro_industriels_de_gestion_des_ressources_fortress_world.md",
+    "instances/collectifs_du_seuil_eco_communalism.md",
+    "instances/cellules_universitaires_dissidentes_des_zones_tampons_fortress_world.md",
+    "instances/carthage_nord_nexcore_breakdown.md",
     "Sans titre 1.canvas",
     "Sans titre.canvas"
   ]

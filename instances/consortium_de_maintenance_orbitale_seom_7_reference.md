@@ -30,8 +30,19 @@ zone_geographique:
 - orbital
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_stabilisation_climatique_reference
+- consortium_helios_reference
+- institutions_multilaterales_survivantes_reference
+- observatoire_climatique_des_territoires_oct_reference
+- programme_onu_eau_2080_reference
+- reseaux_de_gouvernance_multilaterale_survivants_reference
+oppositions:
+- bloc_ressources_eurasiatique_bre_reference
+- consortium_logistique_asiatique_de_contournement_aln_reference
+- consortiums_prives_d_extraction_de_ressources_critiques_reference
+- lobbies_industriels_des_etats_non_signataires_reference
+- milices_concurrentes_des_droits_de_passage_reference
 type_relation_dominante: dépendance
 annee_debut: 2026
 annee_fin: null
@@ -94,6 +105,22 @@ La neutralité affichée du SEOM-7 masque une dépendance structurelle aux finan
 - [[energie_ressources_critiques]]
 - [[technologie_information]]
 - [[gouvernance_institutions]]
+
+
+## Relations
+**Alliés :**
+- [[agence_stabilisation_climatique_reference]]
+- [[consortium_helios_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
+- [[observatoire_climatique_des_territoires_oct_reference]]
+- [[programme_onu_eau_2080_reference]]
+- [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
+**Opposants :**
+- [[bloc_ressources_eurasiatique_bre_reference]]
+- [[consortium_logistique_asiatique_de_contournement_aln_reference]]
+- [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[lobbies_industriels_des_etats_non_signataires_reference]]
+- [[milices_concurrentes_des_droits_de_passage_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

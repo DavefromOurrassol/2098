@@ -4,6 +4,7 @@ type: instance
 slug: frente_sert_o_livre_eco_communalism
 entite: frente_sert_o_livre
 scenario: eco_communalism
+statut: officialise_enrichi
 localisation:
   zone: nordeste_bresilien_frente
   lieu: Nordeste Brésilien — Frente Sertão Livre
@@ -38,27 +39,27 @@ zone_systemique:
     - infrastructure
 
 alliances:
-    - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
-    - guildes_des_semenciers_itinerants_eco_communalism
-    - assemblee_territoires_eco_communalism
-    - assemblees_cooperatives_regionales_eco_communalism
-    - mouvement_racines_vivantes_eco_communalism
-    - reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism
-    - brigades_de_restauration_ecologique_eco_communalism
-    - reseaux_de_radio_communautaire_basse_consommation_eco_communalism
-    - consortium_amazonia_viva_eco_communalism
-    - collectifs_de_techniciens_sobres_eco_communalism
-    - mutuelles_de_sante_territoriales_eco_communalism
-
+- amazonie_pacte_viva_eco_communalism
+- assemblee_territoires_eco_communalism
+- assemblees_cooperatives_regionales_eco_communalism
+- brigades_de_restauration_ecologique_eco_communalism
+- collectifs_de_techniciens_sobres_eco_communalism
+- consortium_amazonia_viva_eco_communalism
+- cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
+- guildes_des_semenciers_itinerants_eco_communalism
+- mouvement_racines_vivantes_eco_communalism
+- mutuelles_de_sante_territoriales_eco_communalism
+- reseaux_de_radio_communautaire_basse_consommation_eco_communalism
+- reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism
 oppositions:
-    - agro_conglomerats_des_enclaves_technologiques_eco_communalism
-    - consortiums_industriels_de_l_eau_eco_communalism
-    - factions_extractivistes_des_aquiferes_communs_eco_communalism
-    - enclaves_extractivistes_residuelles_des_corridors_eco_communalism
-    - reseaux_de_notables_communautaires_capturistes_eco_communalism
-    - plateformes_centralisees_de_reagregation_globale_eco_communalism
-    - cartels_de_narration_de_penurie_eco_communalism
-
+- agro_conglomerats_des_enclaves_technologiques_eco_communalism
+- cartels_de_narration_de_penurie_eco_communalism
+- consortiums_industriels_de_l_eau_eco_communalism
+- enclaves_extractivistes_et_etats_residuels_eco_communalism
+- enclaves_extractivistes_residuelles_des_corridors_eco_communalism
+- factions_extractivistes_des_aquiferes_communs_eco_communalism
+- plateformes_centralisees_de_reagregation_globale_eco_communalism
+- reseaux_de_notables_communautaires_capturistes_eco_communalism
 type_relation_dominante: conflit
 
 annee_debut: 2026
@@ -102,12 +103,33 @@ Coordination des coopératives d'énergie solaire distribuée et des réseaux d'
 - [[systemes_productifs_travail]]
 - [[climat_environnement_global]]
 
-## Relations
-**Alliés** : [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]], [[guildes_des_semenciers_itinerants_eco_communalism]], [[assemblee_territoires_eco_communalism]], [[assemblees_cooperatives_regionales_eco_communalism]], [[mouvement_racines_vivantes_eco_communalism]], [[reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism]], [[brigades_de_restauration_ecologique_eco_communalism]], [[reseaux_de_radio_communautaire_basse_consommation_eco_communalism]], [[consortium_amazonia_viva_eco_communalism]], [[collectifs_de_techniciens_sobres_eco_communalism]], [[mutuelles_de_sante_territoriales_eco_communalism]]
-**Opposants** : [[agro_conglomerats_des_enclaves_technologiques_eco_communalism]], [[consortiums_industriels_de_l_eau_eco_communalism]], [[factions_extractivistes_des_aquiferes_communs_eco_communalism]], [[enclaves_extractivistes_residuelles_des_corridors_eco_communalism]], [[reseaux_de_notables_communautaires_capturistes_eco_communalism]], [[plateformes_centralisees_de_reagregation_globale_eco_communalism]], [[cartels_de_narration_de_penurie_eco_communalism]]
 
 ## Description journalistique
 Dans les caatingas brûlées de l'intérieur brésilien, le Frente Sertão Livre s'impose en 2098 comme l'une des expériences les plus abouties de souveraineté populaire sur les ressources critiques. Ses champs de panneaux solaires basse technologie, réparables par n'importe quel technicien local, alimentent des villages que les réseaux nationaux ont abandonnés depuis deux décennies ; ses banques de semences paysannes résistent pied à pied aux offensives juridiques des corporations biotechnologiques qui revendiquent des droits de propriété sur des variétés cultivées depuis des générations. Les délégués du Frente circulent à vélo ou en camionnette solaire entre Fortaleza, Caruaru et Feira de Santana, portant des arbitrages collectifs plutôt que des ordres, et les antennes paraguayennes et boliviennes envoient régulièrement des courriers de semences et d'apprentis agronomes. Pour ses membres, la force du réseau réside précisément dans ce qu'il n'a pas : pas de siège central attaquable, pas de compte bancaire saisissable, pas de chef identifiable — seulement des assemblées, des greniers communs et une mémoire agronomique obstinément transmise.
 
 ## Tensions narratives
 La tentation de l'intégration se fait pressante : plusieurs municípios offrent des subventions publiques en échange d'une formalisation juridique du Frente, ce qui divise profondément les assemblées entre pragmatiques et tenants de l'imperméabilité. Par ailleurs, la croissance des antennes au Paraguay et en Bolivie soulève la question de la gouvernance à distance — comment maintenir l'horizontalité quand le réseau franchit les frontières et les langues ? Enfin, les corporations biotechnologiques intensifient leurs stratégies de contournement : rachat discret de terres limitrophes, recrutement de leaders locaux, dépôts de brevets sur des variétés cousines — autant de pressions qui pourraient fracturer le réseau ou le contraindre à des compromis qu'il s'est jusqu'ici refusé à concéder.
+
+## Relations
+**Alliés :**
+- [[amazonie_pacte_viva_eco_communalism]]
+- [[assemblee_territoires_eco_communalism]]
+- [[assemblees_cooperatives_regionales_eco_communalism]]
+- [[brigades_de_restauration_ecologique_eco_communalism]]
+- [[collectifs_de_techniciens_sobres_eco_communalism]]
+- [[consortium_amazonia_viva_eco_communalism]]
+- [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]
+- [[guildes_des_semenciers_itinerants_eco_communalism]]
+- [[mouvement_racines_vivantes_eco_communalism]]
+- [[mutuelles_de_sante_territoriales_eco_communalism]]
+- [[reseaux_de_radio_communautaire_basse_consommation_eco_communalism]]
+- [[reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism]]
+**Opposants :**
+- [[agro_conglomerats_des_enclaves_technologiques_eco_communalism]]
+- [[cartels_de_narration_de_penurie_eco_communalism]]
+- [[consortiums_industriels_de_l_eau_eco_communalism]]
+- [[enclaves_extractivistes_et_etats_residuels_eco_communalism]]
+- [[enclaves_extractivistes_residuelles_des_corridors_eco_communalism]]
+- [[factions_extractivistes_des_aquiferes_communs_eco_communalism]]
+- [[plateformes_centralisees_de_reagregation_globale_eco_communalism]]
+- [[reseaux_de_notables_communautaires_capturistes_eco_communalism]]

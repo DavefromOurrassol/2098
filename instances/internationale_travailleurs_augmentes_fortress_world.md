@@ -4,6 +4,7 @@ type: instance
 slug: internationale_travailleurs_augmentes_fortress_world
 entite: internationale_travailleurs_augmentes
 scenario: fortress_world
+statut: officialise_enrichi
 localisation:
   zone: bloc_eurasiatique_occidental
   lieu: Bloc Eurasie
@@ -35,15 +36,15 @@ zone_systemique:
     - cyberspace
 
 alliances:
-    - cliniques_de_deaugmentation_independantes_fortress_world
-    - reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world
-    - syndicats_industriels_residuels_post_crise_fortress_world
-
+- cliniques_de_deaugmentation_independantes_fortress_world
+- reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world
+- syndicats_industriels_residuels_post_crise_fortress_world
 oppositions:
-    - conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world
-    - dispositifs_de_surveillance_numerique_souveraine_fortress_world
-    - systemes_de_scoring_de_productivite_corporative_fortress_world
-
+- bloc_eurasiatique_occidental_fortress_world
+- conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world
+- dispositifs_de_surveillance_numerique_souveraine_fortress_world
+- systemes_de_scoring_de_productivite_corporative_fortress_world
+- zone_usines_forteresses_eurasie_fortress_world
 type_relation_dominante: conflit
 
 annee_debut: 2031
@@ -86,12 +87,21 @@ Négocie des protocoles minimaux de maintenance corporelle pour les travailleurs
 - [[gouvernance_institutions]]
 - [[valeurs_culture_tempo_sociale]]
 
-## Relations
-**Alliés** : [[cliniques_de_deaugmentation_independantes_fortress_world]], [[reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world]], [[syndicats_industriels_residuels_post_crise_fortress_world]]
-**Opposants** : [[conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world]], [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]], [[systemes_de_scoring_de_productivite_corporative_fortress_world]]
 
 ## Description journalistique
 Ils se réunissent dans des zones grises industrielles, entre deux shifts d'usine, portant leurs exosquelettes comme on portait autrefois un uniforme syndical. Le Réseau des Collectifs Augmentés — que ses membres appellent encore 'l'Internationale' par nostalgie ou provocation — est officiellement enregistré comme association de conseil technique dans trois États du bloc Eurasie, et officiellement inexistant dans les six autres. Ce qu'ils défendent est devenu presque intraduisible : le droit d'un corps partiellement machine à ne pas appartenir entièrement à son fabricant. Leurs délégués voyagent avec des passeports biométriques qui déclarent leurs implants comme 'équipements personnels non cédés', une formulation juridique qu'ils ont eux-mêmes inventée et que personne n'a encore jugé utile d'interdire formellement.
 
 ## Tensions narratives
 Le Réseau est tiraillé entre deux factions : les 'Réformistes de Bloc', qui acceptent de jouer le jeu des États autoritaires pour arracher des protections minimales, et les 'Désaugmentés', qui prônent le retrait collectif de toute technologie corporelle propriétaire au risque de l'employabilité zéro. La question non résolue qui ronge l'organisation : peut-on défendre la dignité du travailleur augmenté sans légitimer le système qui produit l'augmentation comme instrument de contrôle ? Et si un État-bloc offrait une reconnaissance officielle en échange d'une exclusivité sur le réseau, combien de cellules résisteraient à cette offre ?
+
+## Relations
+**Alliés :**
+- [[cliniques_de_deaugmentation_independantes_fortress_world]]
+- [[reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world]]
+- [[syndicats_industriels_residuels_post_crise_fortress_world]]
+**Opposants :**
+- [[bloc_eurasiatique_occidental_fortress_world]]
+- [[conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world]]
+- [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
+- [[systemes_de_scoring_de_productivite_corporative_fortress_world]]
+- [[zone_usines_forteresses_eurasie_fortress_world]]

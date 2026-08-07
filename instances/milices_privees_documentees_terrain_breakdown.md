@@ -37,8 +37,22 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- archives_neutres_de_geneve_breakdown
+- blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
+- consortium_energetique_oural_caspien_breakdown
+- enclaves_corporatives_fortifiees_breakdown
+- milices_contractuelles_des_anciens_etats_membres_breakdown
+- reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown
+- reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown
+- seigneuries_logistiques_armees_breakdown
+oppositions:
+- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- enclaves_agro_communautaires_autonomes_breakdown
+- front_de_resistance_aux_peages_sur_les_ressources_breakdown
+- reseau_logistique_criminel_concurrent_breakdown
+- saboteurs_des_corridors_de_transit_breakdown
+- voix_du_dehors_breakdown
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -95,6 +109,25 @@ La tension fondamentale de ces milices réside dans leur double nature : garante
 - [[geopolitique_conflits]]
 - [[gouvernance_institutions]]
 - [[organisation_territoires]]
+
+
+## Relations
+**Alliés :**
+- [[archives_neutres_de_geneve_breakdown]]
+- [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
+- [[consortium_energetique_oural_caspien_breakdown]]
+- [[enclaves_corporatives_fortifiees_breakdown]]
+- [[milices_contractuelles_des_anciens_etats_membres_breakdown]]
+- [[reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown]]
+- [[reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]
+**Opposants :**
+- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[enclaves_agro_communautaires_autonomes_breakdown]]
+- [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
+- [[reseau_logistique_criminel_concurrent_breakdown]]
+- [[saboteurs_des_corridors_de_transit_breakdown]]
+- [[voix_du_dehors_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

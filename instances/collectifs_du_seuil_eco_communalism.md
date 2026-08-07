@@ -4,6 +4,7 @@ type: instance
 slug: collectifs_du_seuil_eco_communalism
 entite: collectifs_du_seuil
 scenario: eco_communalism
+statut: officialise_enrichi
 localisation:
   zone: cevennes_interieure
   lieu: Cévennes Intérieure et plateaux du Massif Central
@@ -33,15 +34,17 @@ zone_systemique:
     - énergie
 
 alliances:
-    - communautes_rurales_dissidentes_anti_cooperation_regionale_eco_communalism
-    - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
-    - fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism
-
+- communautes_rurales_dissidentes_anti_cooperation_regionale_eco_communalism
+- cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
+- fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism
+- oracle_des_seuils_eco_communalism
+- universite_nomade_eco_communalism
+- zones_extractivistes_corridors_eco_communalism
 oppositions:
-    - conseils_de_bassin_versant_eco_communalistes_eco_communalism
-    - reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
-    - mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism
-
+- conseils_de_bassin_versant_eco_communalistes_eco_communalism
+- directive_kontinuum_eco_communalism
+- mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism
+- reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
 type_relation_dominante: rivalité
 
 annee_debut: 2031
@@ -84,12 +87,23 @@ Les Veilleurs organisent des enclaves de préparation au 'Second Seuil', stockan
 - [[organisation_territoires]]
 - [[demographie_mobilite_humaine]]
 
-## Relations
-**Alliés** : [[communautes_rurales_dissidentes_anti_cooperation_regionale_eco_communalism]], [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]], [[fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism]]
-**Opposants** : [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]], [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]], [[mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism]]
 
 ## Description journalistique
 On les trouve aux lisières — là où les chemins forestiers cessent d'être entretenus et où les panneaux de coopération régionale n'ont jamais été plantés. Les Veilleurs du Seuil sont ces communautés qui ont eu raison trop tôt, et qui ne s'en sont jamais remises. Dans les vallées de la Cévenne intérieure ou les plateaux désertés du Massif Central, leurs Sillons — ces longues bâtisses mi-enterrées tapissées de graines et de schémas techniques — ressemblent moins à des refuges qu'à des tombeaux anticipatoires. Ils ne contestent pas la renaissance éco-communaliste : ils la jugent insuffisante, provisoire, aveugle à la vague suivante. 'Vous reconstruisez sur le bord du gouffre', répètent leurs Porteurs de mémoire lors des rares échanges avec les délégués des bassins versants. En 2098, ils sont à la fois une énigme et un reproche vivant pour les bâtisseurs du monde nouveau.
 
 ## Tensions narratives
 La tension centrale est théologique autant que politique : si la régénération éco-communaliste réussit, les Veilleurs sont condamnés à l'insignifiance — prophètes d'une apocalypse qui n'a pas eu lieu. Mais si le système fragile des communautés autonomes se disloque face à une nouvelle crise climatique ou conflictuelle, leur crédibilité explose et leur réseau de Sillons devient soudainement stratégique. Une deuxième ligne de tension concerne les jeunes générations nées dans les communautés éco-communalistes : certains, déçus par la lenteur de la reconstruction, sont attirés par la radicalité du retrait des Veilleurs. Enfin, la question des archives : les Sillons contiennent des savoirs techniques précieux que les réseaux coopératifs voudraient intégrer — mais à quel prix, et selon quelles conditions d'accès ?
+
+## Relations
+**Alliés :**
+- [[communautes_rurales_dissidentes_anti_cooperation_regionale_eco_communalism]]
+- [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]
+- [[fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism]]
+- [[oracle_des_seuils_eco_communalism]]
+- [[universite_nomade_eco_communalism]]
+- [[zones_extractivistes_corridors_eco_communalism]]
+**Opposants :**
+- [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]]
+- [[directive_kontinuum_eco_communalism]]
+- [[mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism]]
+- [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]

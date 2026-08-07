@@ -4,6 +4,7 @@ type: instance
 slug: campements_seuils_fermes_fortress_world
 entite: campements_seuils_fermes
 scenario: fortress_world
+statut: officialise_enrichi
 localisation:
   zone: campements_seuils_fermes
   lieu: Campements des Seuils Fermés — no man's lands entre checkpoints aux seuils du Bloc Atlantique
@@ -37,23 +38,40 @@ zone_systemique:
     - gouvernance
 
 alliances:
-    - alliance_sanitaire_des_populations_exclues_fortress_world
-    - coalitions_des_deplaces_et_apatrides_fortress_world
-    - communautes_deplacees_hors_quota_migratoire_fortress_world
-    - collectifs_du_seuil_fortress_world
-    - reseaux_d_echange_clandestin_inter_zones_fortress_world
-    - cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
-    - cliniques_de_deaugmentation_independantes_fortress_world
-    - voix_du_dehors_fortress_world
-
+- alliance_sanitaire_des_populations_exclues_fortress_world
+- cellules_mouvement_commun_midwest_fortress_world
+- cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
+- cliniques_de_deaugmentation_independantes_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- collectifs_du_seuil_fortress_world
+- communautes_deplacees_hors_quota_migratoire_fortress_world
+- corridors_gris_asie_centrale_fortress_world
+- dissidences_internes_aux_blocs_minoritaires_fortress_world
+- marches_gris_casablanca_fortress_world
+- mouvement_commun_midwest_fortress_world
+- reseaux_d_echange_clandestin_inter_zones_fortress_world
+- reseaux_de_maintenance_d_infrastructures_critiques_hors_blocs_fortress_world
+- voix_du_dehors_fortress_world
 oppositions:
-    - agences_de_securite_interieure_des_etats_forteresses_fortress_world
-    - administrations_de_controle_frontalier_des_blocs_fortress_world
-    - dispositifs_de_surveillance_numerique_souveraine_fortress_world
-    - systemes_de_scoring_de_productivite_corporative_fortress_world
-    - reseaux_prives_de_securite_aux_frontieres_fortress_world
-    - bureau_des_territoires_residuels_fortress_world
-
+- administrations_de_controle_frontalier_des_blocs_fortress_world
+- agences_de_securite_interieure_des_etats_forteresses_fortress_world
+- almaty_zone_friction_fortress_world
+- bureau_des_territoires_residuels_fortress_world
+- bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world
+- complexe_orentchev_almaty_fortress_world
+- conseil_moscou_est_fortress_world
+- dispositifs_de_surveillance_numerique_souveraine_fortress_world
+- etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world
+- geneve_bunker_fortress_world
+- nexcore_atlantique_infrastructure_fortress_world
+- pacte_forteresses_souveraines_fortress_world
+- regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world
+- reseaux_prives_de_securite_aux_frontieres_fortress_world
+- siege_genevois_cars_fortress_world
+- systemes_de_scoring_de_productivite_corporative_fortress_world
+- tbilissi_nord_zone_franche_fortress_world
+- tours_nexus7_fortress_world
+- zones_grises_tampons_fortress_world
 type_relation_dominante: dépendance
 
 annee_debut: 2041
@@ -97,12 +115,46 @@ Maintien de réseaux d'entraide informels (soins, nourriture, garde d'enfants) �
 - [[systemes_productifs_travail]]
 - [[valeurs_culture_tempo_sociale]]
 
-## Relations
-**Alliés** : [[alliance_sanitaire_des_populations_exclues_fortress_world]], [[coalitions_des_deplaces_et_apatrides_fortress_world]], [[communautes_deplacees_hors_quota_migratoire_fortress_world]], [[collectifs_du_seuil_fortress_world]], [[reseaux_d_echange_clandestin_inter_zones_fortress_world]], [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]], [[cliniques_de_deaugmentation_independantes_fortress_world]], [[voix_du_dehors_fortress_world]]
-**Opposants** : [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]], [[administrations_de_controle_frontalier_des_blocs_fortress_world]], [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]], [[systemes_de_scoring_de_productivite_corporative_fortress_world]], [[reseaux_prives_de_securite_aux_frontieres_fortress_world]], [[bureau_des_territoires_residuels_fortress_world]]
 
 ## Description journalistique
 À trois kilomètres du mur thermique du Bloc Atlantique Nord, là où les capteurs de chaleur cèdent la place aux tôles rouillées et aux bâches recyclées, s'étendent les Seuils — un archipel de campements qui n'existent sur aucune carte officielle mais que tout le monde connaît. On y trouve des anciens techniciens de Dacca, des agriculteurs du delta du Nil, des ouvriers de maintenance recrutés le matin à cinq heures et renvoyés le soir sans trace dans aucun registre. Les Seuils fonctionnent selon une logique cruelle et simple : ils sont là parce qu'ils sont utiles, et ils resteront tolérés jusqu'au prochain décret de 'sécurisation périmétrique'. Quand les expulsions arrivent — généralement en hiver, quand la demande de main-d'œuvre baisse — les habitants se dispersent, puis reviennent. Certains s'organisent en conseils de quartier, certains accumulent discrètement des ressources, certains négocient avec des passeurs. Tous savent que la moindre visibilité collective peut accélérer leur effacement.
 
 ## Tensions narratives
 L'enjeu central est le piège de la visibilité : toute tentative d'organisation durable attire l'attention des agences de sécurité et précipite les expulsions, mais l'invisibilité garantit la désintégration interne par concurrence pour la rareté. Une faction cherche à négocier une reconnaissance formelle auprès du Bureau des Territoires Résiduels, au risque de se faire instrumentaliser ; une autre prône la clandestinité totale et le refus de tout travail pour les blocs, au prix de la survie immédiate. Entre les deux, des leaders informels tentent de maintenir un équilibre aussi précaire que leur statut — et la question de qui trahira le premier, sous la pression des systèmes de scoring de productivité corporative, reste ouverte.
+
+## Relations
+**Alliés :**
+- [[alliance_sanitaire_des_populations_exclues_fortress_world]]
+- [[cellules_mouvement_commun_midwest_fortress_world]]
+- [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]]
+- [[cliniques_de_deaugmentation_independantes_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[collectifs_du_seuil_fortress_world]]
+- [[communautes_deplacees_hors_quota_migratoire_fortress_world]]
+- [[corridors_gris_asie_centrale_fortress_world]]
+- [[dissidences_internes_aux_blocs_minoritaires_fortress_world]]
+- [[marches_gris_casablanca_fortress_world]]
+- [[mouvement_commun_midwest_fortress_world]]
+- [[reseaux_d_echange_clandestin_inter_zones_fortress_world]]
+- [[reseaux_de_maintenance_d_infrastructures_critiques_hors_blocs_fortress_world]]
+- [[voix_du_dehors_fortress_world]]
+**Opposants :**
+- [[administrations_de_controle_frontalier_des_blocs_fortress_world]]
+- [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]]
+- [[almaty_zone_friction_fortress_world]]
+- [[bureau_des_territoires_residuels_fortress_world]]
+- [[bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world]]
+- [[complexe_orentchev_almaty_fortress_world]]
+- [[conseil_moscou_est_fortress_world]]
+- [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
+- [[etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world]]
+- [[geneve_bunker_fortress_world]]
+- [[nexcore_atlantique_infrastructure_fortress_world]]
+- [[pacte_forteresses_souveraines_fortress_world]]
+- [[regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world]]
+- [[reseaux_prives_de_securite_aux_frontieres_fortress_world]]
+- [[siege_genevois_cars_fortress_world]]
+- [[systemes_de_scoring_de_productivite_corporative_fortress_world]]
+- [[tbilissi_nord_zone_franche_fortress_world]]
+- [[tours_nexus7_fortress_world]]
+- [[zones_grises_tampons_fortress_world]]

@@ -4,6 +4,7 @@ type: instance
 slug: reseau_mnemos_eco_communalism
 entite: reseau_mnemos
 scenario: eco_communalism
+statut: officialise_enrichi
 localisation:
   zone: null
   lieu: null
@@ -37,16 +38,19 @@ zone_systemique:
     - société
 
 alliances:
-    - assemblees_bioterritoriales_regionales_eco_communalism
-    - guildes_des_semenciers_itinerants_eco_communalism
-    - reseaux_de_medecine_traditionnelle_augmentee_reference
-    - collectifs_de_techniciens_sobres_eco_communalism
-
+- archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
+- assemblees_bioterritoriales_regionales_eco_communalism
+- collectifs_de_techniciens_sobres_eco_communalism
+- guildes_des_semenciers_itinerants_eco_communalism
+- ligue_des_cites_du_sahel_numerique_eco_communalism
+- oracle_des_seuils_eco_communalism
+- reseaux_de_medecine_traditionnelle_augmentee_reference
 oppositions:
-    - enclaves_corporatives_fortifiees_breakdown
-    - factions_autoritaires_de_controle_du_savoir_eco_communalism
-    - reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism
-
+- directive_kontinuum_eco_communalism
+- enclaves_corporatives_fortifiees_breakdown
+- factions_autoritaires_de_controle_du_savoir_eco_communalism
+- factions_communautaires_refusant_le_partage_narratif_exterieur_eco_communalism
+- reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism
 type_relation_dominante: symbiose
 
 annee_debut: 2031
@@ -90,12 +94,25 @@ Maintenance et synchronisation périodique des nœuds énergétiquement autonome
 - [[gouvernance_institutions]]
 - [[systemes_productifs_travail]]
 
-## Relations
-**Alliés** : [[assemblees_bioterritoriales_regionales_eco_communalism]], [[guildes_des_semenciers_itinerants_eco_communalism]], [[reseaux_de_medecine_traditionnelle_augmentee_reference]], [[collectifs_de_techniciens_sobres_eco_communalism]]
-**Opposants** : [[enclaves_corporatives_fortifiees_breakdown]], [[factions_autoritaires_de_controle_du_savoir_eco_communalism]], [[reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism]]
 
 ## Description journalistique
 Dans le hangar reconverti d'une ancienne coopérative agricole du Massif Central, une femme règle l'antenne d'un nœud Mnemos alimenté par une micro-turbine hydraulique. Ce geste, répété chaque semaine dans des milliers de lieux similaires à travers les territoires communalistes, est devenu le rituel discret de ce que beaucoup considèrent comme la plus précieuse infrastructure de l'ère de reconstruction. La Trame Mnemos ne ressemble en rien aux grandes plateformes numériques du siècle passé : pas de centre de données géant, pas d'algorithme de recommandation, seulement des milliers de nœuds autonomes échangeant patiemment plans de construction, protocoles de soins, variétés semencières et mémoires collectives. Ce que ses défenseurs appellent 'la bibliothèque qui ne peut pas brûler'.
 
 ## Tensions narratives
 La Trame peine à synchroniser des nœuds dont les communautés ont développé des protocoles incompatibles, menaçant de créer des archipels de savoirs inaccessibles les uns aux autres. Certaines assemblées refusent de partager des innovations jugées stratégiques, transformant la coopération en compétition silencieuse. Des agents d'enclaves corporatives cherchent à infiltrer des nœuds pour cartographier les ressources territoriales que la Trame révèle indirectement. Enfin, une génération de jeunes nés après l'effondrement commence à questionner l'archivage de 'savoirs du monde d'avant' jugés inutiles, voire dangereux.
+
+## Relations
+**Alliés :**
+- [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]]
+- [[assemblees_bioterritoriales_regionales_eco_communalism]]
+- [[collectifs_de_techniciens_sobres_eco_communalism]]
+- [[guildes_des_semenciers_itinerants_eco_communalism]]
+- [[ligue_des_cites_du_sahel_numerique_eco_communalism]]
+- [[oracle_des_seuils_eco_communalism]]
+- [[reseaux_de_medecine_traditionnelle_augmentee_reference]]
+**Opposants :**
+- [[directive_kontinuum_eco_communalism]]
+- [[enclaves_corporatives_fortifiees_breakdown]]
+- [[factions_autoritaires_de_controle_du_savoir_eco_communalism]]
+- [[factions_communautaires_refusant_le_partage_narratif_exterieur_eco_communalism]]
+- [[reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism]]

@@ -32,8 +32,26 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
+- factions_traditionalistes_du_mandat_electif_fortress_world
+- institutions_multilaterales_residuelles_fortress_world
+- mouvement_des_communes_du_rust_belt_fortress_world
+- reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world
+- syndicats_industriels_residuels_post_crise_fortress_world
+oppositions:
+- anba_siege_atlantique_fortress_world
+- armada_logistique_nordique_fortress_world
+- bloc_atlantique_fortress_world
+- coalition_arctique_des_blocs_continentaux_fortress_world
+- geneve_bunker_fortress_world
+- ironclad_logistics_fortress_world
+- kalaallit_nunaat_sovereign_fund_fortress_world
+- nexcore_atlantique_infrastructure_fortress_world
+- operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world
+- pacte_forteresses_souveraines_fortress_world
+- siege_genevois_cars_fortress_world
+- tours_nexus7_fortress_world
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -97,6 +115,29 @@ La contradiction centrale de ces factions réside dans leur dépendance aux inst
 - [[gouvernance_institutions]]
 - [[organisation_territoires]]
 - [[frontieres_du_systeme]]
+
+
+## Relations
+**Alliés :**
+- [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]]
+- [[factions_traditionalistes_du_mandat_electif_fortress_world]]
+- [[institutions_multilaterales_residuelles_fortress_world]]
+- [[mouvement_des_communes_du_rust_belt_fortress_world]]
+- [[reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world]]
+- [[syndicats_industriels_residuels_post_crise_fortress_world]]
+**Opposants :**
+- [[anba_siege_atlantique_fortress_world]]
+- [[armada_logistique_nordique_fortress_world]]
+- [[bloc_atlantique_fortress_world]]
+- [[coalition_arctique_des_blocs_continentaux_fortress_world]]
+- [[geneve_bunker_fortress_world]]
+- [[ironclad_logistics_fortress_world]]
+- [[kalaallit_nunaat_sovereign_fund_fortress_world]]
+- [[nexcore_atlantique_infrastructure_fortress_world]]
+- [[operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world]]
+- [[pacte_forteresses_souveraines_fortress_world]]
+- [[siege_genevois_cars_fortress_world]]
+- [[tours_nexus7_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

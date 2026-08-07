@@ -36,8 +36,37 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- coalition_anti_algorithme_des_autonomies_locales_new_sustainability
+- collectif_des_mediateurs_cognitifs_internationaux_new_sustainability
+- collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability
+- collectifs_de_deplaces_climatiques_non_representes_new_sustainability
+- collectifs_de_desobeissance_algorithmique_new_sustainability
+- collectifs_de_narration_sauvage_hors_protocole_new_sustainability
+- communautes_locales_exclues_des_corridors_new_sustainability
+- factions_internes_contestataires_du_bureau_de_moderation_new_sustainability
+- mouvement_communautaire_des_micro_grids_energetiques_new_sustainability
+- mouvement_pour_l_autodetermination_territoriale_new_sustainability
+- parlement_deliberatif_mondial_new_sustainability
+- reseau_des_bio_communs_regionaux_new_sustainability
+- reseau_des_communs_numeriques_globaux_new_sustainability
+- reseau_des_communs_productifs_regeneratifs_new_sustainability
+- reseaux_de_gouvernance_territoriale_distribues_new_sustainability
+oppositions:
+- agence_stabilisation_climatique_new_sustainability
+- bloc_des_architectes_d_efficience_algorithmique_new_sustainability
+- bureau_gouvernance_algorithmique_new_sustainability
+- centre_institutionnel_geneve_new_sustainability
+- conseil_technocratique_de_coordination_regionale_new_sustainability
+- conseil_technocratique_de_gouvernance_alimentaire_new_sustainability
+- directive_kontinuum_new_sustainability
+- factions_internes_pro_opacite_des_parametres_new_sustainability
+- factions_technocratiques_de_la_delegation_ia_totale_new_sustainability
+- factions_technocratiques_du_conseil_de_regulation_informationnelle_global_new_sustainability
+- lobbies_des_plateformes_de_consensus_automatise_new_sustainability
+- nexcore_new_sustainability
+- prisme_global_new_sustainability
+- rede_paulista_de_distribuic_o_algor_tmica_new_sustainability
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -103,6 +132,40 @@ La tension centrale de ces réseaux réside dans leur propre outillage : en util
 - [[gouvernance_institutions]]
 - [[valeurs_culture_tempo_sociale]]
 - [[organisation_territoires]]
+
+
+## Relations
+**Alliés :**
+- [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]]
+- [[collectif_des_mediateurs_cognitifs_internationaux_new_sustainability]]
+- [[collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability]]
+- [[collectifs_de_deplaces_climatiques_non_representes_new_sustainability]]
+- [[collectifs_de_desobeissance_algorithmique_new_sustainability]]
+- [[collectifs_de_narration_sauvage_hors_protocole_new_sustainability]]
+- [[communautes_locales_exclues_des_corridors_new_sustainability]]
+- [[factions_internes_contestataires_du_bureau_de_moderation_new_sustainability]]
+- [[mouvement_communautaire_des_micro_grids_energetiques_new_sustainability]]
+- [[mouvement_pour_l_autodetermination_territoriale_new_sustainability]]
+- [[parlement_deliberatif_mondial_new_sustainability]]
+- [[reseau_des_bio_communs_regionaux_new_sustainability]]
+- [[reseau_des_communs_numeriques_globaux_new_sustainability]]
+- [[reseau_des_communs_productifs_regeneratifs_new_sustainability]]
+- [[reseaux_de_gouvernance_territoriale_distribues_new_sustainability]]
+**Opposants :**
+- [[agence_stabilisation_climatique_new_sustainability]]
+- [[bloc_des_architectes_d_efficience_algorithmique_new_sustainability]]
+- [[bureau_gouvernance_algorithmique_new_sustainability]]
+- [[centre_institutionnel_geneve_new_sustainability]]
+- [[conseil_technocratique_de_coordination_regionale_new_sustainability]]
+- [[conseil_technocratique_de_gouvernance_alimentaire_new_sustainability]]
+- [[directive_kontinuum_new_sustainability]]
+- [[factions_internes_pro_opacite_des_parametres_new_sustainability]]
+- [[factions_technocratiques_de_la_delegation_ia_totale_new_sustainability]]
+- [[factions_technocratiques_du_conseil_de_regulation_informationnelle_global_new_sustainability]]
+- [[lobbies_des_plateformes_de_consensus_automatise_new_sustainability]]
+- [[nexcore_new_sustainability]]
+- [[prisme_global_new_sustainability]]
+- [[rede_paulista_de_distribuic_o_algor_tmica_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

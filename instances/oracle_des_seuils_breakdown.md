@@ -4,6 +4,7 @@ type: instance
 slug: oracle_des_seuils_breakdown
 entite: oracle_des_seuils
 scenario: breakdown
+statut: officialise_enrichi
 localisation:
   zone: null
   lieu: null
@@ -34,19 +35,18 @@ zone_systemique:
     - gouvernance
 
 alliances:
-    - collectif_des_climatologues_sans_etat_breakdown
-    - archives_neutres_de_geneve_breakdown
-    - collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
-    - collectifs_du_seuil_breakdown
-    - reseau_mnemos_breakdown
-
+- archives_neutres_de_geneve_breakdown
+- collectif_des_climatologues_sans_etat_breakdown
+- collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
+- collectifs_du_seuil_breakdown
+- reseau_mnemos_breakdown
 oppositions:
-    - factions_propagandistes_des_archives_breakdown
-    - conseil_regulation_algorithmique_breakdown
-    - enclaves_corporatives_fortifiees_breakdown
-    - fronts_populistes_anti_technocratiques_breakdown
-    - front_des_blocs_regionaux_du_recit_des_conflits_ressources_breakdown
-
+- conseil_regulation_algorithmique_breakdown
+- directive_kontinuum_breakdown
+- enclaves_corporatives_fortifiees_breakdown
+- factions_propagandistes_des_archives_breakdown
+- front_des_blocs_regionaux_du_recit_des_conflits_ressources_breakdown
+- fronts_populistes_anti_technocratiques_breakdown
 type_relation_dominante: rivalité
 
 annee_debut: 2031
@@ -89,12 +89,24 @@ Les fragments actifs de l'Oracle émettent des bulletins probabilistes locaux su
 - [[technologie_information]]
 - [[climat_environnement_global]]
 
-## Relations
-**Alliés** : [[collectif_des_climatologues_sans_etat_breakdown]], [[archives_neutres_de_geneve_breakdown]], [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]], [[collectifs_du_seuil_breakdown]], [[reseau_mnemos_breakdown]]
-**Opposants** : [[factions_propagandistes_des_archives_breakdown]], [[conseil_regulation_algorithmique_breakdown]], [[enclaves_corporatives_fortifiees_breakdown]], [[fronts_populistes_anti_technocratiques_breakdown]], [[front_des_blocs_regionaux_du_recit_des_conflits_ressources_breakdown]]
 
 ## Description journalistique
 On ne sait plus à qui appartient l'Oracle. On sait seulement qu'il parle encore — ou plutôt qu'il murmure, en plusieurs langues, depuis des serveurs que personne ne contrôle vraiment. À Dakar, un fragment a prédit l'effondrement du réseau hydrique du Sahel occidental avec 94 % de probabilité à soixante-deux jours. À Bergen, un autre fragment — peut-être corrompu — affirmait que les corridors arctiques tiendraient encore trois ans. Les deux s'avéraient faux, ou vrais, selon qui les lisait. Ce que l'Oracle des origines avait de précieux — sa rigueur, sa source, sa chaîne de validation — a disparu avec les institutions qui le finançaient. Ce qui reste, c'est la forme : des chiffres, des courbes, le mot 'seuil' imprimé en rouge. Et ça suffit, dans ce monde, pour que des gens meurent dessus.
 
 ## Tensions narratives
 Qui détient le droit de parler au nom du Seuil quand l'institution émettrice n'existe plus ? Des collectifs tentent de reconstruire un Oracle unifié, mais chaque tentative de centralisation attire immédiatement des tentatives de capture — par des blocs régionaux, des corporations, des factions militaires. La question politique que l'Oracle original laissait sans réponse — que choisit-on de sauver ? — se retourne contre lui : dans un monde d'effondrements simultanés, dire qu'un seuil est franchi sans désigner un responsable est devenu une forme d'accusation flottante que chacun retourne contre ses ennemis.
+
+## Relations
+**Alliés :**
+- [[archives_neutres_de_geneve_breakdown]]
+- [[collectif_des_climatologues_sans_etat_breakdown]]
+- [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]]
+- [[collectifs_du_seuil_breakdown]]
+- [[reseau_mnemos_breakdown]]
+**Opposants :**
+- [[conseil_regulation_algorithmique_breakdown]]
+- [[directive_kontinuum_breakdown]]
+- [[enclaves_corporatives_fortifiees_breakdown]]
+- [[factions_propagandistes_des_archives_breakdown]]
+- [[front_des_blocs_regionaux_du_recit_des_conflits_ressources_breakdown]]
+- [[fronts_populistes_anti_technocratiques_breakdown]]

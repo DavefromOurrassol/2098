@@ -4,6 +4,7 @@ type: instance
 slug: corridor_arctique_nordique_reference
 entite: corridor_arctique_nordique
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: corridor_arctique_nordique
   lieu: Passage Arctique du Nord
@@ -48,21 +49,26 @@ zone_systemique:
 alliances:
 - arctic_passage_authority_reference
 - armada_logistique_nordique_reference
-- conseil_des_etats_nordiques_integres_reference
-- fonds_souverain_arctique_scandinave_reference
-- siberie_federale_reference
-- consortium_energetique_baltique_reference
-- nexcore_reference
-- collectifs_de_peche_inuit_et_sami_reference
-- operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference
 - bloc_ressources_eurasiatique_bre_reference
+- collectifs_de_peche_inuit_et_sami_reference
+- conseil_des_etats_nordiques_integres_reference
+- consortium_energetique_baltique_reference
+- fonds_souverain_arctique_scandinave_reference
+- murmansk_transit_arctique_reference
+- nexcore_reference
+- operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference
 oppositions:
-- milices_concurrentes_des_droits_de_passage_reference
-- bloc_des_souverainistes_climatiques_reference
-- factions_d_extraction_miniere_independantes_reference
+- agence_internationale_des_energies_renouvelables_irena_2_reference
 - alliance_blocs_souverains_reference
+- bloc_des_souverainistes_climatiques_reference
+- commission_hydrique_de_l_union_africaine_reference
 - consortium_logistique_asiatique_de_contournement_aln_reference
+- factions_d_extraction_miniere_independantes_reference
+- ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference
+- milices_concurrentes_des_droits_de_passage_reference
 - reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference
+- siberie_federale_reference
+- union_africaine_de_resilience_territoriale_reference
 type_relation_dominante: rivalité
 annee_debut: 2041
 annee_fin: null
@@ -132,12 +138,34 @@ Assurer le transit de cargaisons énergétiques, de ressources critiques et de d
 - [[organisation_territoires]]
 - [[gouvernance_institutions]]
 
-## Relations
-**Alliés** : [[arctic_passage_authority_reference]], [[armada_logistique_nordique_reference]], [[conseil_des_etats_nordiques_integres_reference]], [[fonds_souverain_arctique_scandinave_reference]], [[siberie_federale_reference]], [[consortium_energetique_baltique_reference]], [[nexcore_reference]], [[collectifs_de_peche_inuit_et_sami_reference]], [[operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference]], [[bloc_ressources_eurasiatique_bre_reference]]
-**Opposants** : [[milices_concurrentes_des_droits_de_passage_reference]], [[bloc_des_souverainistes_climatiques_reference]], [[factions_d_extraction_miniere_independantes_reference]], [[alliance_blocs_souverains_reference]], [[consortium_logistique_asiatique_de_contournement_aln_reference]], [[reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference]]
 
 ## Description journalistique
 Depuis le pont de la barge-cargo *Vesterisen IV*, on distingue à peine les balises orange qui matérialisent la limite de juridiction — au-delà, c'est le secteur Nexcore, en deçà, théoriquement, le domaine du Conseil Nordique. En 2098, le Passage Arctique du Nord ressemble moins à une route qu'à un jeu de territoires superposés : des drones de surveillance russes croisent des patrouilles scandinaves, tandis que des balises privées émettent des signaux de péage numérique que personne n'a officiellement validés. Ce corridor, ouvert par cinquante ans de fonte accélérée, transporte aujourd'hui près de 18 % des ressources critiques acheminées vers l'Europe — du lithium sibérien aux hydrocarbures résiduels de la plateforme de Yamal-Nord. Mais aucun acteur ne peut en garantir la traversée sans négocier en temps réel avec trois ou quatre autorités concurrentes dont les prérogatives se chevauchent et s'annulent. Le passage est ouvert. Il n'est jamais sûr.
 
 ## Tensions narratives
 La question centrale est celle du seuil : à quel moment la contestation permanente du corridor finit-elle par le rendre inutilisable, détruisant la valeur même que chaque acteur cherche à capturer ? Une escalade entre Nexcore et la flotte sibérienne en 2097 a interrompu le transit pendant dix-huit jours, provoquant une crise d'approvisionnement en terres rares dans trois mégapoles européennes — preuve que l'ingouvernabilité a désormais un coût systémique mesurable. Par ailleurs, les Collectifs Inuit et Sami revendiquent des droits de passage ancestraux sur des eaux que leurs ancêtres ne traversaient qu'en kayak, introduisant une dimension de justice territoriale que ni les États ni les consortiums ne savent comment intégrer. Enfin, la montée des eaux et l'instabilité géologique croissante du pergélisol sibérien menacent d'effacer certaines infrastructures portuaires terminus d'ici 2110, ce qui pourrait rendre le corridor partiellement obsolète au moment même où il atteint son apogée stratégique.
+
+## Relations
+**Alliés :**
+- [[arctic_passage_authority_reference]]
+- [[armada_logistique_nordique_reference]]
+- [[bloc_ressources_eurasiatique_bre_reference]]
+- [[collectifs_de_peche_inuit_et_sami_reference]]
+- [[conseil_des_etats_nordiques_integres_reference]]
+- [[consortium_energetique_baltique_reference]]
+- [[fonds_souverain_arctique_scandinave_reference]]
+- [[murmansk_transit_arctique_reference]]
+- [[nexcore_reference]]
+- [[operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference]]
+**Opposants :**
+- [[agence_internationale_des_energies_renouvelables_irena_2_reference]]
+- [[alliance_blocs_souverains_reference]]
+- [[bloc_des_souverainistes_climatiques_reference]]
+- [[commission_hydrique_de_l_union_africaine_reference]]
+- [[consortium_logistique_asiatique_de_contournement_aln_reference]]
+- [[factions_d_extraction_miniere_independantes_reference]]
+- [[ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference]]
+- [[milices_concurrentes_des_droits_de_passage_reference]]
+- [[reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference]]
+- [[siberie_federale_reference]]
+- [[union_africaine_de_resilience_territoriale_reference]]

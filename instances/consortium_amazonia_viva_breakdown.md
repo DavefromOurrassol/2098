@@ -4,6 +4,7 @@ type: instance
 slug: consortium_amazonia_viva_breakdown
 entite: consortium_amazonia_viva
 scenario: breakdown
+statut: officialise_enrichi
 localisation:
   zone: amazon_pacte_gardiens
   lieu: Manaus / Bassin amazonien

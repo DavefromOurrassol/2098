@@ -4,6 +4,7 @@ type: instance
 slug: les_veilleurs_du_fleuve_eco_communalism
 entite: les_veilleurs_du_fleuve
 scenario: eco_communalism
+statut: officialise_enrichi
 localisation:
   zone: congo_bassin_du_fleuve
   lieu: bassin du Congo
@@ -36,18 +37,17 @@ zone_systemique:
     - infrastructure
 
 alliances:
-    - mutuelles_de_sante_territoriales_eco_communalism
-    - reseaux_de_radio_communautaire_basse_consommation_eco_communalism
-    - collectifs_de_cartographie_ecologique_participative_eco_communalism
-    - assemblees_de_bassin_versant_eco_communalism
-    - confederation_bassins_vivants_eco_communalism
-
+- assemblees_bioterritoriales_regionales_eco_communalism
+- assemblees_de_bassin_versant_eco_communalism
+- collectifs_de_cartographie_ecologique_participative_eco_communalism
+- confederation_bassins_vivants_eco_communalism
+- mutuelles_de_sante_territoriales_eco_communalism
+- reseaux_de_radio_communautaire_basse_consommation_eco_communalism
 oppositions:
-    - enclaves_extractivistes_residuelles_des_corridors_eco_communalism
-    - factions_extractivistes_des_aquiferes_communs_eco_communalism
-    - reseaux_de_notables_communautaires_capturistes_eco_communalism
-    - consortiums_industriels_de_l_eau_eco_communalism
-
+- consortiums_industriels_de_l_eau_eco_communalism
+- enclaves_extractivistes_residuelles_des_corridors_eco_communalism
+- factions_extractivistes_des_aquiferes_communs_eco_communalism
+- reseaux_de_notables_communautaires_capturistes_eco_communalism
 type_relation_dominante: coopération
 
 annee_debut: 2038
@@ -91,12 +91,23 @@ Transmission d'alertes sanitaires et environnementales via des réseaux de radio
 - [[organisation_territoires]]
 - [[climat_environnement_global]]
 
-## Relations
-**Alliés** : [[mutuelles_de_sante_territoriales_eco_communalism]], [[reseaux_de_radio_communautaire_basse_consommation_eco_communalism]], [[collectifs_de_cartographie_ecologique_participative_eco_communalism]], [[assemblees_de_bassin_versant_eco_communalism]], [[confederation_bassins_vivants_eco_communalism]]
-**Opposants** : [[enclaves_extractivistes_residuelles_des_corridors_eco_communalism]], [[factions_extractivistes_des_aquiferes_communs_eco_communalism]], [[reseaux_de_notables_communautaires_capturistes_eco_communalism]], [[consortiums_industriels_de_l_eau_eco_communalism]]
 
 ## Description journalistique
 Sur les berges du Congo, où les cargos rouillés des anciennes multinationales côtoient désormais des pirogues équipées de capteurs artisanaux, les Veilleurs des Eaux incarnent une résistance silencieuse mais tenace. Vêtus de gilets en fibres de jacinthe d'eau recyclée, ornés de motifs géométriques rappelant les cartes fluviales, ces gardiens du fleuve transmettent leurs observations via des sifflements codés ou des messages cryptés sur des réseaux radio autonomes. Leur réputation ? Une fiabilité à toute épreuve : quand un Veilleur lance l'alerte, les communautés savent que c'est sérieux. Pourtant, leur influence reste fragile face aux milices des enclaves extractivistes, qui voient d'un mauvais œil ces « espions des eaux » documenter leurs exactions.
 
 ## Tensions narratives
 Leur modèle horizontal et décentralisé est à la fois leur force et leur faiblesse : comment concilier leur besoin d'autonomie avec la nécessité de s'intégrer aux Assemblées de Bassin Versant pour peser sur les décisions régionales ? Leur opposition frontale aux enclaves extractivistes les expose à des représailles violentes, tandis que leur collaboration avec les Mutuelles de Santé Territoriales soulève des questions sur la protection des données sanitaires. Enfin, leur dépendance aux technologies sobres les rend vulnérables aux cyberattaques des factions algorithmiques, qui cherchent à infiltrer leurs réseaux pour contrôler l'information environnementale.
+
+## Relations
+**Alliés :**
+- [[assemblees_bioterritoriales_regionales_eco_communalism]]
+- [[assemblees_de_bassin_versant_eco_communalism]]
+- [[collectifs_de_cartographie_ecologique_participative_eco_communalism]]
+- [[confederation_bassins_vivants_eco_communalism]]
+- [[mutuelles_de_sante_territoriales_eco_communalism]]
+- [[reseaux_de_radio_communautaire_basse_consommation_eco_communalism]]
+**Opposants :**
+- [[consortiums_industriels_de_l_eau_eco_communalism]]
+- [[enclaves_extractivistes_residuelles_des_corridors_eco_communalism]]
+- [[factions_extractivistes_des_aquiferes_communs_eco_communalism]]
+- [[reseaux_de_notables_communautaires_capturistes_eco_communalism]]

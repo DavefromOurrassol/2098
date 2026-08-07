@@ -4,6 +4,7 @@ type: instance
 slug: les_veilleurs_du_fleuve_reference
 entite: les_veilleurs_du_fleuve
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: delta_du_mekong
   lieu: Delta du Mékong

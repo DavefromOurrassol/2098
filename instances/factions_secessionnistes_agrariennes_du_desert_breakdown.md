@@ -35,8 +35,24 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- brigades_medicales_itinerantes_breakdown
+- collectif_hackers_decroissance_infrastructure_breakdown
+- collectifs_du_seuil_breakdown
+- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- enclaves_agro_communautaires_autonomes_breakdown
+- front_de_resistance_aux_peages_sur_les_ressources_breakdown
+- ligue_des_cites_du_sahel_numerique_breakdown
+- reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown
+oppositions:
+- agadez_ligue_sahel_numerique_breakdown
+- etats_fragmentes_nationalisant_les_stocks_breakdown
+- factions_etatiques_residuelles_de_souverainete_hydrique_breakdown
+- factions_para_etatiques_hydriques_breakdown
+- gouvernements_regionaux_residuels_reterritorialisants_breakdown
+- midwest_desertifie_breakdown
+- milices_de_controle_territorial_breakdown
+- seigneuries_foncieres_opportunistes_breakdown
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -97,6 +113,27 @@ La contradiction fondamentale de ces factions est qu'elles revendiquent l'autono
 - [[organisation_territoires]]
 - [[climat_environnement_global]]
 - [[geopolitique_conflits]]
+
+
+## Relations
+**Alliés :**
+- [[brigades_medicales_itinerantes_breakdown]]
+- [[collectif_hackers_decroissance_infrastructure_breakdown]]
+- [[collectifs_du_seuil_breakdown]]
+- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[enclaves_agro_communautaires_autonomes_breakdown]]
+- [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
+- [[ligue_des_cites_du_sahel_numerique_breakdown]]
+- [[reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown]]
+**Opposants :**
+- [[agadez_ligue_sahel_numerique_breakdown]]
+- [[etats_fragmentes_nationalisant_les_stocks_breakdown]]
+- [[factions_etatiques_residuelles_de_souverainete_hydrique_breakdown]]
+- [[factions_para_etatiques_hydriques_breakdown]]
+- [[gouvernements_regionaux_residuels_reterritorialisants_breakdown]]
+- [[midwest_desertifie_breakdown]]
+- [[milices_de_controle_territorial_breakdown]]
+- [[seigneuries_foncieres_opportunistes_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

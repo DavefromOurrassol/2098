@@ -4,6 +4,7 @@ type: instance
 slug: coalition_vivant_new_sustainability
 entite: coalition_vivant
 scenario: new_sustainability
+statut: officialise_enrichi
 localisation:
   zone: ameriques_reconfigurees
   lieu: Costa Rica
@@ -32,9 +33,20 @@ zone_systemique:
   - société
   - gouvernance
 alliances:
-  - assemblee_territoires_new_sustainability
-  - nexcore_new_sustainability
-oppositions: []
+- assemblee_territoires_new_sustainability
+- commission_territoriale_ourrassol_new_sustainability
+- consortium_africain_de_biotechnologies_sociales_new_sustainability
+- consortium_amazonia_viva_new_sustainability
+- hub_nairobi_kigali_new_sustainability
+- nexcore_new_sustainability
+- pacifique_sud_resilience_network_new_sustainability
+- parlement_territoires_nairobi_new_sustainability
+- reseau_des_bio_communs_regionaux_new_sustainability
+- reseau_des_hubs_urbains_regeneratifs_new_sustainability
+oppositions:
+- coalition_des_industries_extractives_residuelles_new_sustainability
+- faction_conservatrice_pro_actif_strategique_new_sustainability
+- lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability
 type_relation_dominante: coopération
 annee_debut: 2033
 annee_fin:
@@ -77,9 +89,6 @@ Organisation consultative internationale reconnue. Porte la voix des
 - [[gouvernance_institutions]]
 - [[valeurs_culture_tempo_sociale]]
 
-## Relations
-**Alliés** : [[assemblee_territoires_new_sustainability]], [[nexcore_new_sustainability]]
-**Opposants** : _aucun défini_
 
 ## Description journalistique
 La Coalition du Vivant compte 12 millions de membres dans 94 pays.
@@ -90,3 +99,20 @@ juridique des écosystèmes.
 ## Tensions narratives
 Qui parle vraiment pour les forêts ? Tension avec les États qui voient
 le Protocole du Vivant comme une menace à leur souveraineté.
+
+## Relations
+**Alliés :**
+- [[assemblee_territoires_new_sustainability]]
+- [[commission_territoriale_ourrassol_new_sustainability]]
+- [[consortium_africain_de_biotechnologies_sociales_new_sustainability]]
+- [[consortium_amazonia_viva_new_sustainability]]
+- [[hub_nairobi_kigali_new_sustainability]]
+- [[nexcore_new_sustainability]]
+- [[pacifique_sud_resilience_network_new_sustainability]]
+- [[parlement_territoires_nairobi_new_sustainability]]
+- [[reseau_des_bio_communs_regionaux_new_sustainability]]
+- [[reseau_des_hubs_urbains_regeneratifs_new_sustainability]]
+**Opposants :**
+- [[coalition_des_industries_extractives_residuelles_new_sustainability]]
+- [[faction_conservatrice_pro_actif_strategique_new_sustainability]]
+- [[lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability]]

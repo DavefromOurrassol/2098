@@ -29,8 +29,20 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- banque_mondiale_des_transitions_climatiques_reference
+- consortium_des_grandes_plateformes_ia_integrees_reference
+- consortiums_d_agriculture_verticale_algorithmique_reference
+- gouvernements_a_regime_de_productivite_mandatee_reference
+- lobbies_agro_industriels_a_haute_consommation_d_eau_reference
+- nexus_biosyn_reference
+oppositions:
+- bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference
+- collectifs_de_biopiraterie_inversee_reference
+- conseil_de_geneve_pour_les_droits_biosociaux_reference
+- cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference
+- frente_sert_o_livre_reference
+- reseau_des_cooperatives_agro_saheliennes_reference
 type_relation_dominante: dépendance
 annee_debut: 2026
 annee_fin: null
@@ -93,6 +105,23 @@ AgriSynth se trouve au cœur d'une contradiction structurelle : ses données son
 - [[systemes_productifs_travail]]
 - [[sante_biotechnologies]]
 - [[technologie_information]]
+
+
+## Relations
+**Alliés :**
+- [[banque_mondiale_des_transitions_climatiques_reference]]
+- [[consortium_des_grandes_plateformes_ia_integrees_reference]]
+- [[consortiums_d_agriculture_verticale_algorithmique_reference]]
+- [[gouvernements_a_regime_de_productivite_mandatee_reference]]
+- [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]]
+- [[nexus_biosyn_reference]]
+**Opposants :**
+- [[bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference]]
+- [[collectifs_de_biopiraterie_inversee_reference]]
+- [[conseil_de_geneve_pour_les_droits_biosociaux_reference]]
+- [[cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference]]
+- [[frente_sert_o_livre_reference]]
+- [[reseau_des_cooperatives_agro_saheliennes_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

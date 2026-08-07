@@ -4,6 +4,7 @@ type: instance
 slug: le_registre_du_fleuve_eco_communalism
 entite: le_registre_du_fleuve
 scenario: eco_communalism
+statut: officialise_enrichi
 localisation:
   zone: congo_bassin_du_fleuve
   lieu: bassin du Congo

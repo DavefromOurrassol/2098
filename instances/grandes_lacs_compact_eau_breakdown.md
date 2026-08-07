@@ -4,6 +4,7 @@ type: instance
 slug: grandes_lacs_compact_eau_breakdown
 entite: grandes_lacs_compact_eau
 scenario: breakdown
+statut: officialise_enrichi
 localisation:
   zone: grandes_lacs_compact_eau
   lieu: Grands Lacs (Compact de l'Eau Dernière)
@@ -38,20 +39,24 @@ zone_systemique:
     - économie
 
 alliances:
-    - hanse_baltique_recomposee_breakdown
-    - enclaves_corporatives_fortifiees_breakdown
-    - milices_contractuelles_des_anciens_etats_membres_breakdown
-    - cites_etats_secessionistes_breakdown
-
+- cites_etats_secessionistes_breakdown
+- communes_rust_belt_breakdown
+- hanse_baltique_recomposee_breakdown
+- midwest_desertifie_breakdown
+- milices_contractuelles_des_anciens_etats_membres_breakdown
+- nairobi_crrc_breakdown
 oppositions:
-    - flux_migratoires_non_integrables_breakdown
-    - front_de_resistance_aux_peages_sur_les_ressources_breakdown
-    - mouvement_des_communes_du_rust_belt_breakdown
-    - factions_paramilitaires_locales_neutralisees_breakdown
-    - front_humanitaire_d_urgence_non_affilie_breakdown
-    - communautes_paysannes_refugiees_breakdown
-    - voix_du_dehors_breakdown
-
+- communautes_paysannes_refugiees_breakdown
+- enclaves_corporatives_fortifiees_breakdown
+- factions_etatiques_residuelles_de_souverainete_hydrique_breakdown
+- factions_para_etatiques_hydriques_breakdown
+- factions_paramilitaires_locales_neutralisees_breakdown
+- flux_migratoires_non_integrables_breakdown
+- front_de_resistance_aux_peages_sur_les_ressources_breakdown
+- front_humanitaire_d_urgence_non_affilie_breakdown
+- milices_d_accaparement_hydrique_breakdown
+- mouvement_des_communes_du_rust_belt_breakdown
+- voix_du_dehors_breakdown
 type_relation_dominante: conflit
 
 annee_debut: 2061
@@ -96,12 +101,30 @@ Le Compact gère l'extraction, la purification et la distribution de l'eau douce
 - [[gouvernance_institutions]]
 - [[organisation_territoires]]
 
-## Relations
-**Alliés** : [[hanse_baltique_recomposee_breakdown]], [[enclaves_corporatives_fortifiees_breakdown]], [[milices_contractuelles_des_anciens_etats_membres_breakdown]], [[cites_etats_secessionistes_breakdown]]
-**Opposants** : [[flux_migratoires_non_integrables_breakdown]], [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]], [[mouvement_des_communes_du_rust_belt_breakdown]], [[factions_paramilitaires_locales_neutralisees_breakdown]], [[front_humanitaire_d_urgence_non_affilie_breakdown]], [[communautes_paysannes_refugiees_breakdown]], [[voix_du_dehors_breakdown]]
 
 ## Description journalistique
 Depuis les rives de Duluth jusqu'aux berges de Kingston, le Compact des Grands Lacs a érigé ce que ses membres appellent 'la dernière frontière propre'. Ses patrouilleurs armés sillonnent les chenaux, ses drones thermiques scrutent les lignes de rive à la nuit tombée, et ses checkpoints biométriques délivrent ou refusent l'eau à la fraction de seconde. Ce qui fut jadis un accord environnemental entre gouverneurs et premiers ministres est devenu, en trente ans, un État de facto sans constitution mais avec des balles réelles. Les journalistes qui tentent d'approcher les 'zones de refoulement' — là où les colonnes de déplacés des Plaines sont repoussées vers le sud — en reviennent avec des images que le Compact s'empresse de qualifier de 'désinformation hostile'. À Chicago-Ruines, à Cleveland-Basse ou dans les camps de réfugiés de Toledo, on dit simplement : 'l'eau est là-haut, et là-haut n'est pas pour nous'.
 
 ## Tensions narratives
 La cohésion interne du Compact commence à se fissurer : des factions membres débattent violemment du droit à vendre de l'eau aux zones extérieures contre des ressources rares — certains y voient une survie économique, d'autres une trahison fondatrice. Le mouvement des Communes du Rust Belt tente de forger une coalition de résistance capable de contester les lignes de berge par la force ou par la négociation, tandis que des saboteurs infiltrent les stations de pompage. La question la plus explosive reste celle des enfants nés hors-Compact mais grandis à l'intérieur — leur statut d'ayants droit est contesté, et leur existence trace une ligne de fracture morale que même les partisans les plus durs du Compact peinent à regarder en face.
+
+## Relations
+**Alliés :**
+- [[cites_etats_secessionistes_breakdown]]
+- [[communes_rust_belt_breakdown]]
+- [[hanse_baltique_recomposee_breakdown]]
+- [[midwest_desertifie_breakdown]]
+- [[milices_contractuelles_des_anciens_etats_membres_breakdown]]
+- [[nairobi_crrc_breakdown]]
+**Opposants :**
+- [[communautes_paysannes_refugiees_breakdown]]
+- [[enclaves_corporatives_fortifiees_breakdown]]
+- [[factions_etatiques_residuelles_de_souverainete_hydrique_breakdown]]
+- [[factions_para_etatiques_hydriques_breakdown]]
+- [[factions_paramilitaires_locales_neutralisees_breakdown]]
+- [[flux_migratoires_non_integrables_breakdown]]
+- [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
+- [[front_humanitaire_d_urgence_non_affilie_breakdown]]
+- [[milices_d_accaparement_hydrique_breakdown]]
+- [[mouvement_des_communes_du_rust_belt_breakdown]]
+- [[voix_du_dehors_breakdown]]

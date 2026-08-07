@@ -31,8 +31,18 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- consortium_augmentwork_reference
+- consortium_des_grandes_plateformes_ia_integrees_reference
+- consortiums_bancaires_financiarises_reference
+- neuroharmonics_reference
+- sao_paulo_ita_reference
+oppositions:
+- internationale_travailleurs_augmentes_reference
+- reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference
+- collectif_nuit_jaune_reference
+- bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference
+- federation_des_cliniques_autonomes_reference
 type_relation_dominante: dépendance
 annee_debut: 2026
 annee_fin: null
@@ -94,6 +104,20 @@ La tension fondamentale de l'ALE réside dans la contradiction entre son mandat 
 - [[systemes_productifs_travail]]
 - [[technologie_information]]
 - [[systeme_economique_redistribution]]
+
+## Relations
+**Alliés :**
+- [[consortium_augmentwork_reference]]
+- [[consortium_des_grandes_plateformes_ia_integrees_reference]]
+- [[consortiums_bancaires_financiarises_reference]]
+- [[neuroharmonics_reference]]
+- [[sao_paulo_ita_reference]]
+**Opposants :**
+- [[internationale_travailleurs_augmentes_reference]]
+- [[reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference]]
+- [[collectif_nuit_jaune_reference]]
+- [[bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference]]
+- [[federation_des_cliniques_autonomes_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

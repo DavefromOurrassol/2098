@@ -4,6 +4,7 @@ type: instance
 slug: oracle_des_seuils_reference
 entite: oracle_des_seuils
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: null
   lieu: null

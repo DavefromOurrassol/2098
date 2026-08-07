@@ -38,8 +38,29 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- conglometrat_sino_siberien_bohai_transit_breakdown
+- consortiums_energetiques_samoiedes_du_yamal_breakdown
+- corridors_eurasiens_convoyage_breakdown
+- district_mourmansk_residuel_breakdown
+- enclaves_industrielles_du_corridor_oural_caspien_breakdown
+- factions_energetiques_heritieres_des_pactes_abs_breakdown
+- federation_russe_residuelle_district_de_mourmansk_breakdown
+- front_techno_reconstructionniste_breakdown
+- kalaallit_nunaat_sovereign_fund_breakdown
+- milices_privees_documentees_terrain_breakdown
+- reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown
+- seigneuries_logistiques_armees_breakdown
+oppositions:
+- archives_neutres_de_geneve_breakdown
+- arctique_nordark_breakdown
+- bloc_de_johannesburg_breakdown
+- blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
+- collectif_hackers_decroissance_infrastructure_breakdown
+- conseil_regulation_ressources_breakdown
+- etats_fragments_en_guerre_pour_les_stations_atmospheriques_breakdown
+- front_de_resistance_aux_peages_sur_les_ressources_breakdown
+- saboteurs_des_corridors_de_transit_breakdown
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -98,6 +119,32 @@ Le Consortium est pris en étau entre le Bloc IV et le Bloc IX qui se disputent 
 - [[energie_ressources_critiques]]
 - [[geopolitique_conflits]]
 - [[gouvernance_institutions]]
+
+
+## Relations
+**Alliés :**
+- [[conglometrat_sino_siberien_bohai_transit_breakdown]]
+- [[consortiums_energetiques_samoiedes_du_yamal_breakdown]]
+- [[corridors_eurasiens_convoyage_breakdown]]
+- [[district_mourmansk_residuel_breakdown]]
+- [[enclaves_industrielles_du_corridor_oural_caspien_breakdown]]
+- [[factions_energetiques_heritieres_des_pactes_abs_breakdown]]
+- [[federation_russe_residuelle_district_de_mourmansk_breakdown]]
+- [[front_techno_reconstructionniste_breakdown]]
+- [[kalaallit_nunaat_sovereign_fund_breakdown]]
+- [[milices_privees_documentees_terrain_breakdown]]
+- [[reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]
+**Opposants :**
+- [[archives_neutres_de_geneve_breakdown]]
+- [[arctique_nordark_breakdown]]
+- [[bloc_de_johannesburg_breakdown]]
+- [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
+- [[collectif_hackers_decroissance_infrastructure_breakdown]]
+- [[conseil_regulation_ressources_breakdown]]
+- [[etats_fragments_en_guerre_pour_les_stations_atmospheriques_breakdown]]
+- [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
+- [[saboteurs_des_corridors_de_transit_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

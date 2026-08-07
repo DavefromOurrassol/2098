@@ -4,6 +4,7 @@ type: instance
 slug: amara_diallo_nkosi_reference
 entite: amara_diallo_nkosi
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: kinshasa_accords_hydriques
   lieu: Kinshasa

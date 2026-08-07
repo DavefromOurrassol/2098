@@ -4,6 +4,7 @@ type: instance
 slug: hub_nairobi_kigali_new_sustainability
 entite: hub_nairobi_kigali
 scenario: new_sustainability
+statut: officialise_enrichi
 localisation:
   zone: hub_nairobi_kigali
   lieu: Hub Nairobi-Kigali
@@ -39,29 +40,33 @@ zone_systemique:
     - information
 
 alliances:
-    - agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
-    - consortium_africain_de_biotechnologies_sociales_new_sustainability
-    - reseau_des_hubs_urbains_regeneratifs_new_sustainability
-    - reseau_des_ingenieurs_climatiques_du_sud_global_new_sustainability
-    - observatoire_climatique_narratif_de_nairobi_new_sustainability
-    - trame_bioclimatique_new_sustainability
-    - great_lakes_autonomous_compact_new_sustainability
-    - collectifs_riverains_du_bassin_du_congo_new_sustainability
-    - ligue_des_cites_du_sahel_numerique_new_sustainability
-    - fonds_mondial_de_redistribution_technologique_new_sustainability
-    - programme_onu_de_restauration_des_sols_new_sustainability
-    - parlement_deliberatif_mondial_new_sustainability
-    - coalition_vivant_new_sustainability
-    - reseau_des_communs_productifs_regeneratifs_new_sustainability
-
+- agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
+- coalition_vivant_new_sustainability
+- collectifs_riverains_du_bassin_du_congo_new_sustainability
+- consortium_africain_de_biotechnologies_sociales_new_sustainability
+- consortium_de_regeneration_planetaire_new_sustainability
+- fonds_mondial_de_redistribution_technologique_new_sustainability
+- great_lakes_autonomous_compact_new_sustainability
+- ligue_des_cites_du_sahel_numerique_new_sustainability
+- observatoire_climatique_narratif_de_nairobi_new_sustainability
+- oms_etendue_new_sustainability
+- parlement_deliberatif_mondial_new_sustainability
+- parlement_territoires_nairobi_new_sustainability
+- programme_onu_de_restauration_des_sols_new_sustainability
+- reseau_des_agences_climatiques_regionales_new_sustainability
+- reseau_des_communs_numeriques_globaux_new_sustainability
+- reseau_des_communs_productifs_regeneratifs_new_sustainability
+- reseau_des_hubs_urbains_regeneratifs_new_sustainability
+- reseau_des_ingenieurs_climatiques_du_sud_global_new_sustainability
+- reseau_des_villes_regeneratives_new_sustainability
+- trame_bioclimatique_new_sustainability
 oppositions:
-    - lobbies_agro_industriels_du_bassin_du_congo_new_sustainability
-    - lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability
-    - coalition_des_industries_extractives_residuelles_new_sustainability
-    - enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability
-    - internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
-    - factions_souverainistes_des_blocs_peripheriques_new_sustainability
-
+- coalition_des_industries_extractives_residuelles_new_sustainability
+- enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability
+- factions_souverainistes_des_blocs_peripheriques_new_sustainability
+- internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
+- lobbies_agro_industriels_du_bassin_du_congo_new_sustainability
+- lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability
 type_relation_dominante: alliance stratégique
 
 annee_debut: 2031
@@ -105,12 +110,39 @@ Le Hub coordonne les programmes de transition énergétique et d'agriculture ré
 - [[energie_ressources_critiques]]
 - [[technologie_information]]
 
-## Relations
-**Alliés** : [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]], [[consortium_africain_de_biotechnologies_sociales_new_sustainability]], [[reseau_des_hubs_urbains_regeneratifs_new_sustainability]], [[reseau_des_ingenieurs_climatiques_du_sud_global_new_sustainability]], [[observatoire_climatique_narratif_de_nairobi_new_sustainability]], [[trame_bioclimatique_new_sustainability]], [[great_lakes_autonomous_compact_new_sustainability]], [[collectifs_riverains_du_bassin_du_congo_new_sustainability]], [[ligue_des_cites_du_sahel_numerique_new_sustainability]], [[fonds_mondial_de_redistribution_technologique_new_sustainability]], [[programme_onu_de_restauration_des_sols_new_sustainability]], [[parlement_deliberatif_mondial_new_sustainability]], [[coalition_vivant_new_sustainability]], [[reseau_des_communs_productifs_regeneratifs_new_sustainability]]
-**Opposants** : [[lobbies_agro_industriels_du_bassin_du_congo_new_sustainability]], [[lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability]], [[coalition_des_industries_extractives_residuelles_new_sustainability]], [[enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability]], [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]], [[factions_souverainistes_des_blocs_peripheriques_new_sustainability]]
 
 ## Description journalistique
 Depuis son campus aux lisières de Nairobi, où des serres expérimentales jouxtent des salles de délibération hybrides humain-IA, le Hub Nairobi-Kigali est devenu l'adresse incontournable de tout responsable climatique cherchant à comprendre comment une région peut piloter sa propre transition sans attendre les injonctions du Nord. En 2098, ses modèles d'agriculture régénérative sont appliqués dans quarante-sept pays, ses protocoles de micro-grids énergétiques ont été adoptés comme référence par le Conseil Énergétique Intercontinental, et ses délégations annuelles rassemblent des gouvernements des cinq continents. Ce qui frappe les visiteurs n'est pas la technologie — souvent moins spectaculaire que dans les centres eurasiens — mais la densité des articulations : entre paysans et data scientists, entre chefs coutumiers et ingénieurs en fusion, entre mémoire orale et modélisation algorithmique. Le Hub ne vend pas un modèle clé en main ; il propose un protocole de co-construction que d'autres peuvent adapter.
 
 ## Tensions narratives
 Le succès même du Hub alimente une tension structurelle croissante : plusieurs grandes institutions mondiales, dont le Conseil de Gouvernance Algorithmique Intégrée et le Fonds Mondial de Régénération Écologique, cherchent à formaliser des partenariats exclusifs qui risquent de formater l'agenda du Hub selon leurs priorités institutionnelles plutôt que celles des communautés qu'il représente. En interne, une faction de jeunes cadres plaide pour une délégation plus large aux systèmes IA de coordination, tandis que les fondateurs historiques — issus des réseaux agricoles du terrain — redoutent une technocratisation qui éloignerait le Hub de ses racines. La question de la propriété intellectuelle des modèles exportés constitue également un front de friction montant : entre ceux qui souhaitent les maintenir en communs ouverts et ceux qui voient dans leur monétisation partielle un levier de financement de l'autonomie institutionnelle.
+
+## Relations
+**Alliés :**
+- [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]]
+- [[coalition_vivant_new_sustainability]]
+- [[collectifs_riverains_du_bassin_du_congo_new_sustainability]]
+- [[consortium_africain_de_biotechnologies_sociales_new_sustainability]]
+- [[consortium_de_regeneration_planetaire_new_sustainability]]
+- [[fonds_mondial_de_redistribution_technologique_new_sustainability]]
+- [[great_lakes_autonomous_compact_new_sustainability]]
+- [[ligue_des_cites_du_sahel_numerique_new_sustainability]]
+- [[observatoire_climatique_narratif_de_nairobi_new_sustainability]]
+- [[oms_etendue_new_sustainability]]
+- [[parlement_deliberatif_mondial_new_sustainability]]
+- [[parlement_territoires_nairobi_new_sustainability]]
+- [[programme_onu_de_restauration_des_sols_new_sustainability]]
+- [[reseau_des_agences_climatiques_regionales_new_sustainability]]
+- [[reseau_des_communs_numeriques_globaux_new_sustainability]]
+- [[reseau_des_communs_productifs_regeneratifs_new_sustainability]]
+- [[reseau_des_hubs_urbains_regeneratifs_new_sustainability]]
+- [[reseau_des_ingenieurs_climatiques_du_sud_global_new_sustainability]]
+- [[reseau_des_villes_regeneratives_new_sustainability]]
+- [[trame_bioclimatique_new_sustainability]]
+**Opposants :**
+- [[coalition_des_industries_extractives_residuelles_new_sustainability]]
+- [[enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability]]
+- [[factions_souverainistes_des_blocs_peripheriques_new_sustainability]]
+- [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]]
+- [[lobbies_agro_industriels_du_bassin_du_congo_new_sustainability]]
+- [[lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability]]

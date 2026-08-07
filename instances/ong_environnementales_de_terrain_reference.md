@@ -31,8 +31,45 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- autorites_regionales_de_regulation_hydrologique_reference
+- collectifs_academiques_independants_reference
+- collectifs_de_journalisme_embarque_reference
+- collectifs_de_journalistes_independants_regionaux_reference
+- communs_numeriques_agroecologiques_reference
+- conseil_de_geneve_pour_les_droits_biosociaux_reference
+- cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference
+- cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference
+- cooperatives_energetiques_decentralisees_reference
+- delta_du_gange_reference
+- delta_du_mekong_reference
+- federation_communs_territoriaux_reference
+- federation_des_cliniques_autonomes_reference
+- fonds_souverain_arctique_scandinave_reference
+- geneve_lac_retreite_reference
+- les_veilleurs_du_fleuve_reference
+- mouvement_racines_vivantes_reference
+- observatoire_climatique_des_territoires_oct_reference
+- reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference
+- reseau_des_cooperatives_agro_saheliennes_reference
+- reseaux_de_capteurs_citoyens_reference
+- reseaux_de_gouvernance_multilaterale_survivants_reference
+- reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference
+- voix_du_dehors_reference
+oppositions:
+- amazonie_consortium_viva_reference
+- bloc_des_souverainistes_climatiques_reference
+- consortium_amazonia_viva_reference
+- consortium_des_grandes_plateformes_ia_integrees_reference
+- consortium_des_plateformes_ia_centralisees_anti_deliberation_reference
+- consortiums_prives_d_extraction_de_ressources_critiques_reference
+- corporations_d_extraction_energetique_non_signataires_reference
+- etats_a_tendance_centraliste_numerique_reference
+- gouvernements_du_bloc_sahelien_autonome_reference
+- lobbies_agro_industriels_a_haute_consommation_d_eau_reference
+- plateformes_d_optimisation_territoriale_par_ia_reference
+- siberie_federale_reference
+- terrametrics_reference
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -94,6 +131,48 @@ Elles sont prises en étau entre leur dépendance aux financements des blocs éc
 - [[climat_environnement_global]]
 - [[organisation_territoires]]
 - [[gouvernance_institutions]]
+
+
+## Relations
+**Alliés :**
+- [[autorites_regionales_de_regulation_hydrologique_reference]]
+- [[collectifs_academiques_independants_reference]]
+- [[collectifs_de_journalisme_embarque_reference]]
+- [[collectifs_de_journalistes_independants_regionaux_reference]]
+- [[communs_numeriques_agroecologiques_reference]]
+- [[conseil_de_geneve_pour_les_droits_biosociaux_reference]]
+- [[cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference]]
+- [[cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference]]
+- [[cooperatives_energetiques_decentralisees_reference]]
+- [[delta_du_gange_reference]]
+- [[delta_du_mekong_reference]]
+- [[federation_communs_territoriaux_reference]]
+- [[federation_des_cliniques_autonomes_reference]]
+- [[fonds_souverain_arctique_scandinave_reference]]
+- [[geneve_lac_retreite_reference]]
+- [[les_veilleurs_du_fleuve_reference]]
+- [[mouvement_racines_vivantes_reference]]
+- [[observatoire_climatique_des_territoires_oct_reference]]
+- [[reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference]]
+- [[reseau_des_cooperatives_agro_saheliennes_reference]]
+- [[reseaux_de_capteurs_citoyens_reference]]
+- [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
+- [[reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference]]
+- [[voix_du_dehors_reference]]
+**Opposants :**
+- [[amazonie_consortium_viva_reference]]
+- [[bloc_des_souverainistes_climatiques_reference]]
+- [[consortium_amazonia_viva_reference]]
+- [[consortium_des_grandes_plateformes_ia_integrees_reference]]
+- [[consortium_des_plateformes_ia_centralisees_anti_deliberation_reference]]
+- [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[corporations_d_extraction_energetique_non_signataires_reference]]
+- [[etats_a_tendance_centraliste_numerique_reference]]
+- [[gouvernements_du_bloc_sahelien_autonome_reference]]
+- [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]]
+- [[plateformes_d_optimisation_territoriale_par_ia_reference]]
+- [[siberie_federale_reference]]
+- [[terrametrics_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

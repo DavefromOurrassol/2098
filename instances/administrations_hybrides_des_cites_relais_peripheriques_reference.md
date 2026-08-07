@@ -34,8 +34,35 @@ zone_geographique:
 - régionale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- autorites_regionales_de_regulation_hydrologique_reference
+- bureau_zones_non_prioritaires_reference
+- consortium_logistique_asiatique_de_contournement_aln_reference
+- consortiums_prives_de_gestion_des_donnees_critiques_reference
+- cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference
+- cooperatives_energetiques_decentralisees_reference
+- cooperatives_ia_open_source_reference
+- factions_d_extraction_miniere_independantes_reference
+- guadalajara_nexus_reference
+- ligue_des_municipalites_peripheriques_sous_connectees_reference
+- lyon_metropole_reference
+- milices_concurrentes_des_droits_de_passage_reference
+- operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference
+- operateurs_prives_d_energie_distribuee_hors_fct_reference
+- reseau_des_administrations_locales_rurales_participatives_reference
+- reseau_hospitalier_hybride_eurasiatique_reference
+- reseaux_de_medecine_traditionnelle_augmentee_reference
+- sao_paulo_ita_reference
+- valparaiso_fct_reference
+- vasil_orentchev_reference
+- zones_grises_globales_reference
+oppositions:
+- agences_de_securite_regionales_de_normalisation_des_zones_grises_reference
+- collectif_nuit_jaune_reference
+- consortiums_prives_d_extraction_de_ressources_critiques_reference
+- etats_a_tendance_centraliste_numerique_reference
+- operateurs_de_zones_economiques_speciales_periurbaines_reference
+- plateformes_d_optimisation_territoriale_par_ia_reference
 type_relation_dominante: dépendance
 annee_debut: 2026
 annee_fin: null
@@ -99,6 +126,38 @@ La tension fondamentale qui les traverse oppose la logique de standardisation po
 - [[organisation_territoires]]
 - [[gouvernance_institutions]]
 - [[demographie_mobilite_humaine]]
+
+
+## Relations
+**Alliés :**
+- [[autorites_regionales_de_regulation_hydrologique_reference]]
+- [[bureau_zones_non_prioritaires_reference]]
+- [[consortium_logistique_asiatique_de_contournement_aln_reference]]
+- [[consortiums_prives_de_gestion_des_donnees_critiques_reference]]
+- [[cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference]]
+- [[cooperatives_energetiques_decentralisees_reference]]
+- [[cooperatives_ia_open_source_reference]]
+- [[factions_d_extraction_miniere_independantes_reference]]
+- [[guadalajara_nexus_reference]]
+- [[ligue_des_municipalites_peripheriques_sous_connectees_reference]]
+- [[lyon_metropole_reference]]
+- [[milices_concurrentes_des_droits_de_passage_reference]]
+- [[operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference]]
+- [[operateurs_prives_d_energie_distribuee_hors_fct_reference]]
+- [[reseau_des_administrations_locales_rurales_participatives_reference]]
+- [[reseau_hospitalier_hybride_eurasiatique_reference]]
+- [[reseaux_de_medecine_traditionnelle_augmentee_reference]]
+- [[sao_paulo_ita_reference]]
+- [[valparaiso_fct_reference]]
+- [[vasil_orentchev_reference]]
+- [[zones_grises_globales_reference]]
+**Opposants :**
+- [[agences_de_securite_regionales_de_normalisation_des_zones_grises_reference]]
+- [[collectif_nuit_jaune_reference]]
+- [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[etats_a_tendance_centraliste_numerique_reference]]
+- [[operateurs_de_zones_economiques_speciales_periurbaines_reference]]
+- [[plateformes_d_optimisation_territoriale_par_ia_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

@@ -2899,6 +2899,80 @@ def get_slugs():
         elif slug_type == "zones_hier":
             zones = _scan_zone_slugs_hier(vault_root, scenario)
             return jsonify({"slugs": [z["slug"] for z in zones], "zones": zones})
+        elif slug_type == "forcer_scenarios":
+            # Ajouté le 2 août 2026 pour le mode "forcer" de generate.py.
+            # slug_type_field="--forcer-slug" garantit que le slug de
+            # l'élément arrive via ?slug=... (mécanisme déjà prouvé,
+            # trace_injection.py) ; le type (instance/evenement/signal) est
+            # lu de façon défensive sous plusieurs noms possibles, la
+            # convention exacte de transmission des champs frères n'étant
+            # pas vérifiable sans gui/app.js -- à confirmer/corriger en
+            # conditions réelles si la liste ne s'actualise pas.
+            forcer_type = (request.args.get("element_type") or request.args.get("forcer_type")
+                           or request.args.get("--forcer-type") or request.args.get("type_element") or "")
+            slug_element = request.args.get("slug", "")
+            code = (
+                "import sys, json; sys.path.insert(0, '.'); import loader; "
+                "print(json.dumps(loader.scenarios_disponibles_pour_element({!r}, {!r})))"
+            ).format(forcer_type, slug_element)
+            resultat = subprocess.run(
+                [sys.executable, "-c", code], cwd=pipeline_dir,
+                capture_output=True, text=True, timeout=15, stdin=subprocess.DEVNULL,
+            )
+            if resultat.returncode != 0:
+                return jsonify({"slugs": [], "error": resultat.stderr.strip()[-500:]})
+            try:
+                dispo = json.loads(resultat.stdout.strip())
+            except json.JSONDecodeError:
+                dispo = []
+            # "tous" en premier choix, explicite -- voir generate.py qui
+            # résout ce mot-clé vers `dispo` en entier (pas les 6 scénarios
+            # sans distinction).
+            return jsonify({"slugs": ["tous"] + dispo,
+                             "labels": {"tous": "— Tous les scénarios disponibles ({}) —".format(len(dispo))}})
+        elif slug_type == "forcer_zones":
+            # Réécrit le 2 août 2026 (retour de David) : le menu Zone ne doit
+            # dépendre QUE de l'élément choisi (entité/événement/signal), pas
+            # des scénarios cochés à côté -- l'ancienne version dépendait des
+            # deux, ce qui rendait le menu vide tant qu'aucun scénario précis
+            # n'était sélectionné. Comportement voulu :
+            #   - pas d'élément choisi encore -> ["tous"] seul (mode par
+            #     défaut, rien à restreindre)
+            #   - élément choisi mais sans zone nulle part (signal, ou
+            #     instance/événement sans localisation renseignée) ->
+            #     ["tous"] seul, pas d'erreur ni de liste vide
+            #   - élément choisi avec des zones -> ["tous"] + zones trouvées,
+            #     sur TOUS les scénarios où l'élément existe (pas seulement
+            #     ceux actuellement cochés dans --forcer-scenarios)
+            forcer_type = (request.args.get("element_type") or request.args.get("forcer_type")
+                           or request.args.get("--forcer-type") or request.args.get("type_element") or "")
+            slug_element = request.args.get("slug", "")
+
+            if not forcer_type or not slug_element:
+                return jsonify({"slugs": ["tous"]})
+
+            code = (
+                "import sys, json; sys.path.insert(0, '.'); import loader; "
+                "sc = loader.scenarios_disponibles_pour_element({0!r}, {1!r}); "
+                "print(json.dumps(loader.zones_disponibles_pour_element({0!r}, {1!r}, sc)))"
+            ).format(forcer_type, slug_element)
+            resultat = subprocess.run(
+                [sys.executable, "-c", code], cwd=pipeline_dir,
+                capture_output=True, text=True, timeout=15, stdin=subprocess.DEVNULL,
+            )
+            if resultat.returncode != 0:
+                return jsonify({"slugs": ["tous"], "error": resultat.stderr.strip()[-500:]})
+            try:
+                zones_par_scenario = json.loads(resultat.stdout.strip())
+            except json.JSONDecodeError:
+                zones_par_scenario = {}
+            toutes_zones = sorted({z for zs in zones_par_scenario.values() for z in zs})
+            if not toutes_zones:
+                # Élément sans aucun rattachement zone/scénario (signal, ou
+                # instance/événement jamais localisé) -- reste en mode
+                # "tous" par défaut, pas de liste vide affichée.
+                return jsonify({"slugs": ["tous"], "zones_par_scenario": {}})
+            return jsonify({"slugs": ["tous"] + toutes_zones, "zones_par_scenario": zones_par_scenario})
         elif slug_type == "zones_a_reparenter":
             # Ajouté le 31 juillet 2026 (remarque de David : proposer les
             # 16-42 zones N1 d'un scénario dans --zone-cible était peu
@@ -3077,8 +3151,44 @@ def _scan_entity_slugs(vault_root: Path, pipeline_dir: Path) -> list:
                     return sorted(data.keys())
             except Exception:
                 pass
-    # Fallback : scan instances
-    return _scan_instance_slugs(vault_root, "")
+    # Fallback corrigé le 2 août 2026 : l'ancien fallback appelait
+    # _scan_instance_slugs(vault_root, ""), qui retourne le slug propre à
+    # CHAQUE INSTANCE (entité + suffixe scénario, ex.
+    # "administrations_hybrides_..._reference") -- pas le slug d'entité
+    # attendu par tous les appelants de type=entities (trace_injection.py,
+    # generate.py mode forcer). Symptôme observé : le menu "Élément à
+    # forcer" proposait des instances au lieu d'entités dès que
+    # _entities_list.json était absent/périmé. Dérive maintenant le vrai
+    # slug d'entité depuis le champ `entite:` de chaque fiche instance,
+    # dédupliqué -- coûte un scan complet d'instances/ (pas de cache),
+    # acceptable pour un menu GUI peuplé à la demande.
+    return _scan_entity_slugs_from_instances(vault_root)
+
+
+def _scan_entity_slugs_from_instances(vault_root: Path) -> list:
+    """Dérive les slugs d'entités depuis le champ `entite:` des fiches
+    instances/*.md -- fallback de _scan_entity_slugs() ci-dessus quand
+    _entities_list.json est absent. Exclut instance_template.md (même
+    pollution que celle corrigée dans routes_dashboard.py le 2 août
+    2026 -- le gabarit n'a pas de champ `entite:` de toute façon, mais
+    autant l'exclure explicitement plutôt que de compter sur l'absence
+    du champ pour le filtrer silencieusement)."""
+    instances_dir = vault_root / "instances"
+    if not instances_dir.exists():
+        return []
+    entite_pattern = re.compile(r"^entite:\s*(.+)$", re.MULTILINE)
+    entites = set()
+    for md_file in instances_dir.glob("*.md"):
+        if md_file.name == "instance_template.md":
+            continue
+        try:
+            content = md_file.read_text(encoding="utf-8")
+            m = entite_pattern.search(content)
+            if m:
+                entites.add(m.group(1).strip())
+        except Exception:
+            continue
+    return sorted(entites)
 
 
 def _scan_zone_slugs(pipeline_dir: Path, scenario: str, n1_only: bool) -> list:
@@ -3182,6 +3292,75 @@ def _scan_zone_slugs_hier(pipeline_dir: Path, scenario: str) -> list:
 
 
 # ── Traçabilité ──────────────────────────────────────────────────────────────
+
+@app.route("/api/forcer/scenarios", methods=["GET"])
+def get_forcer_scenarios():
+    """
+    GET /api/forcer/scenarios?type=instance|evenement|signal&slug=<slug>
+    Restreint le menu de sélection des scénarios (mode "forcer" de
+    generate.py) à ceux où l'élément existe réellement -- ajouté le
+    2 août 2026. Appelle generator/loader.py en sous-processus (pas
+    d'import direct dans app.py, même principe que les autres routes
+    /api/slugs de ce fichier) pour rester découplé du process Flask.
+    """
+    type_ = (request.args.get("type") or "").strip()
+    slug  = (request.args.get("slug") or "").strip()
+    cfg = load_config()
+    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+
+    code = (
+        "import sys, json; sys.path.insert(0, '.'); import loader; "
+        "print(json.dumps(loader.scenarios_disponibles_pour_element({!r}, {!r})))"
+    ).format(type_, slug)
+    try:
+        resultat = subprocess.run(
+            [sys.executable, "-c", code], cwd=pipeline_dir,
+            capture_output=True, text=True, timeout=15, stdin=subprocess.DEVNULL,
+        )
+    except subprocess.TimeoutExpired:
+        return jsonify({"error": "Résolution des scénarios expirée après 15s"}), 504
+
+    if resultat.returncode != 0:
+        return jsonify({"error": resultat.stderr.strip() or "Échec"}), 500
+    try:
+        return jsonify({"scenarios": json.loads(resultat.stdout.strip())})
+    except json.JSONDecodeError:
+        return jsonify({"error": "Sortie non-JSON", "raw": resultat.stdout[-500:]}), 500
+
+
+@app.route("/api/forcer/zones", methods=["GET"])
+def get_forcer_zones():
+    """
+    GET /api/forcer/zones?type=instance|evenement|signal&slug=<slug>&scenarios=a,b,c
+    Restreint le menu Zone aux zones où l'élément est effectivement
+    localisé, parmi les scénarios fournis. Ajouté le 2 août 2026. Un
+    signal n'a jamais de zone -- retourne {} normalement, pas une erreur.
+    """
+    type_      = (request.args.get("type") or "").strip()
+    slug       = (request.args.get("slug") or "").strip()
+    scenarios  = [s for s in (request.args.get("scenarios") or "").split(",") if s.strip()]
+    cfg = load_config()
+    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+
+    code = (
+        "import sys, json; sys.path.insert(0, '.'); import loader; "
+        "print(json.dumps(loader.zones_disponibles_pour_element({!r}, {!r}, {!r})))"
+    ).format(type_, slug, scenarios)
+    try:
+        resultat = subprocess.run(
+            [sys.executable, "-c", code], cwd=pipeline_dir,
+            capture_output=True, text=True, timeout=15, stdin=subprocess.DEVNULL,
+        )
+    except subprocess.TimeoutExpired:
+        return jsonify({"error": "Résolution des zones expirée après 15s"}), 504
+
+    if resultat.returncode != 0:
+        return jsonify({"error": resultat.stderr.strip() or "Échec"}), 500
+    try:
+        return jsonify({"zones": json.loads(resultat.stdout.strip())})
+    except json.JSONDecodeError:
+        return jsonify({"error": "Sortie non-JSON", "raw": resultat.stdout[-500:]}), 500
+
 
 @app.route("/api/trace/<slug>", methods=["GET"])
 def get_trace(slug):

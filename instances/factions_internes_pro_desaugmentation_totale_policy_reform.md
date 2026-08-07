@@ -32,8 +32,21 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- collectifs_de_gouvernance_communautaire_decentralisee_policy_reform
+- front_des_autonomies_territoriales_radicales_policy_reform
+- internationale_decroissante_anti_planification_policy_reform
+- les_hors_prisme_policy_reform
+- mouvement_pour_la_justice_ecologique_communautaire_policy_reform
+oppositions:
+- autorite_mondiale_du_vivant_amv_policy_reform
+- consortium_africain_de_biotechnologies_sociales_policy_reform
+- consortium_technologique_des_nations_integrees_policy_reform
+- faction_regulatrice_dure_au_sein_du_cei_policy_reform
+- federation_des_mutuelles_biotech_policy_reform
+- front_techno_utopiste_de_la_decision_automatisee_policy_reform
+- internationale_travailleurs_augmentes_policy_reform
+- nexus_biosyn_policy_reform
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -94,6 +107,24 @@ La tension principale réside dans leur positionnement contradictoire : utiliser
 - [[sante_biotechnologies]]
 - [[valeurs_culture_tempo_sociale]]
 - [[gouvernance_institutions]]
+
+
+## Relations
+**Alliés :**
+- [[collectifs_de_gouvernance_communautaire_decentralisee_policy_reform]]
+- [[front_des_autonomies_territoriales_radicales_policy_reform]]
+- [[internationale_decroissante_anti_planification_policy_reform]]
+- [[les_hors_prisme_policy_reform]]
+- [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]]
+**Opposants :**
+- [[autorite_mondiale_du_vivant_amv_policy_reform]]
+- [[consortium_africain_de_biotechnologies_sociales_policy_reform]]
+- [[consortium_technologique_des_nations_integrees_policy_reform]]
+- [[faction_regulatrice_dure_au_sein_du_cei_policy_reform]]
+- [[federation_des_mutuelles_biotech_policy_reform]]
+- [[front_techno_utopiste_de_la_decision_automatisee_policy_reform]]
+- [[internationale_travailleurs_augmentes_policy_reform]]
+- [[nexus_biosyn_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

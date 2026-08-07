@@ -33,8 +33,21 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- bureau_gouvernance_algorithmique_policy_reform
+- conseil_de_gouvernance_de_l_information_policy_reform
+- conseil_onu_de_gouvernance_numerique_et_ia_policy_reform
+- conseil_regulation_algorithmique_policy_reform
+- consortiums_prives_de_gouvernance_algorithmique_policy_reform
+- prisme_global_policy_reform
+- reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
+oppositions:
+- coalition_des_souverainistes_numeriques_policy_reform
+- collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform
+- factions_internes_dissidentes_des_contributeurs_historiques_policy_reform
+- front_souverainiste_de_l_information_regionale_policy_reform
+- front_souverainiste_des_blocs_non_signataires_policy_reform
+- les_hors_prisme_policy_reform
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -98,6 +111,24 @@ La tension centrale du Consortium réside dans la contradiction entre son mandat
 - [[gouvernance_institutions]]
 - [[technologie_information]]
 - [[valeurs_culture_tempo_sociale]]
+
+
+## Relations
+**Alliés :**
+- [[bureau_gouvernance_algorithmique_policy_reform]]
+- [[conseil_de_gouvernance_de_l_information_policy_reform]]
+- [[conseil_onu_de_gouvernance_numerique_et_ia_policy_reform]]
+- [[conseil_regulation_algorithmique_policy_reform]]
+- [[consortiums_prives_de_gouvernance_algorithmique_policy_reform]]
+- [[prisme_global_policy_reform]]
+- [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]]
+**Opposants :**
+- [[coalition_des_souverainistes_numeriques_policy_reform]]
+- [[collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform]]
+- [[factions_internes_dissidentes_des_contributeurs_historiques_policy_reform]]
+- [[front_souverainiste_de_l_information_regionale_policy_reform]]
+- [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+- [[les_hors_prisme_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

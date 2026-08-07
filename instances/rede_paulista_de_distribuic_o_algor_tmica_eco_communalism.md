@@ -4,6 +4,7 @@ type: instance
 slug: rede_paulista_de_distribuic_o_algor_tmica_eco_communalism
 entite: rede_paulista_de_distribuic_o_algor_tmica
 scenario: eco_communalism
+statut: officialise_enrichi
 localisation:
   zone: sao_paulo_algorithmique
   lieu: São Paulo — Fragments Algorithmiques (APD)
@@ -37,21 +38,20 @@ zone_systemique:
     - énergie
 
 alliances:
-    - assemblees_bioterritoriales_regionales_eco_communalism
-    - assemblees_de_bassin_versant_eco_communalism
-    - collectifs_de_techniciens_sobres_eco_communalism
-    - factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism
-    - conseils_de_bassin_versant_eco_communalistes_eco_communalism
-    - reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism
-
+- assemblees_bioterritoriales_regionales_eco_communalism
+- assemblees_de_bassin_versant_eco_communalism
+- collectifs_de_techniciens_sobres_eco_communalism
+- conseils_de_bassin_versant_eco_communalistes_eco_communalism
+- factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism
+- reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism
+- sao_paulo_algorithmique_eco_communalism
 oppositions:
-    - reseaux_de_notables_communautaires_capturistes_eco_communalism
-    - conseils_territoriaux_opaques_sur_la_gestion_des_ressources_eco_communalism
-    - consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism
-    - courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism
-    - consortiums_industriels_de_l_eau_eco_communalism
-    - reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism
-
+- conseils_territoriaux_opaques_sur_la_gestion_des_ressources_eco_communalism
+- consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism
+- consortiums_industriels_de_l_eau_eco_communalism
+- courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism
+- reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism
+- reseaux_de_notables_communautaires_capturistes_eco_communalism
 type_relation_dominante: rivalité
 
 annee_debut: 2031
@@ -95,12 +95,26 @@ Coordonne l'allocation locale de l'eau et de l'énergie dans une douzaine de zon
 - [[gouvernance_institutions]]
 - [[technologie_information]]
 
-## Relations
-**Alliés** : [[assemblees_bioterritoriales_regionales_eco_communalism]], [[assemblees_de_bassin_versant_eco_communalism]], [[collectifs_de_techniciens_sobres_eco_communalism]], [[factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism]], [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]], [[reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism]]
-**Opposants** : [[reseaux_de_notables_communautaires_capturistes_eco_communalism]], [[conseils_territoriaux_opaques_sur_la_gestion_des_ressources_eco_communalism]], [[consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism]], [[courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism]], [[consortiums_industriels_de_l_eau_eco_communalism]], [[reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism]]
 
 ## Description journalistique
 Dans le quartier de Brasilândia, un panneau solaire alimente un serveur grand comme une valise : c'est lui, désormais, qui décide combien de litres d'eau la coopérative recevra ce matin. Le grand Algorithme paulistain, jadis vanté comme le cerveau rationnel d'une mégalopole de vingt millions d'âmes, a été démembré après l'effondrement des réseaux centraux dans les années 2040. Ce qu'il en reste tourne sur du matériel rafistolé, maintenu par des techniciens sobres qui lisent le code à voix haute dans les assemblées pour en expliquer les règles. Mais tous les fragments ne sont pas aussi transparents : à Guarulhos, une faction locale a modifié en silence les seuils de priorité, et les familles situées hors du périmètre coopératif reçoivent systématiquement moins. L'ancien rêve d'équité par le calcul survit sous forme de ruines habitées — certaines généreuses, d'autres reconduisant les mêmes injustices sous un vocabulaire technique différent.
 
 ## Tensions narratives
 La question centrale reste entière : qui a le droit de modifier les paramètres, et selon quelle légitimité ? Les assemblées les plus organisées revendiquent un audit permanent mais manquent de compétences techniques ; les collectifs de techniciens sobres ont le savoir mais pas toujours le mandat démocratique. Pendant ce temps, des opérateurs d'IA propriétaires proposent de 'réunifier' les fragments en échange d'un accès aux données — une offre que certaines communautés à bout de ressources envisagent sérieusement. Et si un journaliste fouille assez loin dans les logs, il trouvera que les anciens biais du système original — favorisant les zones historiquement mieux dotées — n'ont jamais vraiment été effacés : ils ont simplement changé de nom.
+
+## Relations
+**Alliés :**
+- [[assemblees_bioterritoriales_regionales_eco_communalism]]
+- [[assemblees_de_bassin_versant_eco_communalism]]
+- [[collectifs_de_techniciens_sobres_eco_communalism]]
+- [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]]
+- [[factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism]]
+- [[reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism]]
+- [[sao_paulo_algorithmique_eco_communalism]]
+**Opposants :**
+- [[conseils_territoriaux_opaques_sur_la_gestion_des_ressources_eco_communalism]]
+- [[consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism]]
+- [[consortiums_industriels_de_l_eau_eco_communalism]]
+- [[courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism]]
+- [[reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism]]
+- [[reseaux_de_notables_communautaires_capturistes_eco_communalism]]

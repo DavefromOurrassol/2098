@@ -29,14 +29,27 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- bruxelles_nouveau_reference
 - detroit_compact_grands_lacs_reference
-- sao_paulo_ita_reference
-- singapour_est_reference
-- lyon_metropole_reference
+- great_lakes_autonomous_compact_reference
+- guadalajara_nexus_reference
 - helsinki_communs_numeriques_reference
+- lyon_metropole_reference
+- optiflow_logistics_reference
+- rede_paulista_de_distribuic_o_algor_tmica_reference
+- reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference
+- sao_paulo_ita_reference
+- singapour_est_nexcore_reference
+- singapour_est_reference
 oppositions:
-- pacte_des_souverains_reference
+- alliance_blocs_souverains_reference
+- bloc_eurasien_central_reference
+- coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference
+- consortiums_energetiques_des_megapoles_reference
+- federation_communs_territoriaux_reference
 - institutions_multilaterales_survivantes_reference
+- pacte_des_souverains_reference
+- zones_grises_globales_reference
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -102,16 +115,30 @@ La Confédération est déchirée entre la solidarité mégapolitaine affichée 
 - [[gouvernance_institutions]]
 - [[geopolitique_conflits]]
 
+
 ## Relations
 **Alliés :**
+- [[bruxelles_nouveau_reference]]
 - [[detroit_compact_grands_lacs_reference]]
-- [[sao_paulo_ita_reference]]
-- [[singapour_est_reference]]
-- [[lyon_metropole_reference]]
+- [[great_lakes_autonomous_compact_reference]]
+- [[guadalajara_nexus_reference]]
 - [[helsinki_communs_numeriques_reference]]
+- [[lyon_metropole_reference]]
+- [[optiflow_logistics_reference]]
+- [[rede_paulista_de_distribuic_o_algor_tmica_reference]]
+- [[reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference]]
+- [[sao_paulo_ita_reference]]
+- [[singapour_est_nexcore_reference]]
+- [[singapour_est_reference]]
 **Opposants :**
-- [[pacte_des_souverains_reference]]
+- [[alliance_blocs_souverains_reference]]
+- [[bloc_eurasien_central_reference]]
+- [[coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference]]
+- [[consortiums_energetiques_des_megapoles_reference]]
+- [[federation_communs_territoriaux_reference]]
 - [[institutions_multilaterales_survivantes_reference]]
+- [[pacte_des_souverains_reference]]
+- [[zones_grises_globales_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

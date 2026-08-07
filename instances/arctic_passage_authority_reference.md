@@ -4,6 +4,7 @@ type: instance
 slug: arctic_passage_authority_reference
 entite: arctic_passage_authority
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: ilulissat_apa
   lieu: Ilulissat
@@ -37,26 +38,28 @@ zone_systemique:
     - société
 
 alliances:
-    - conseil_des_etats_nordiques_integres_reference
-    - collectifs_de_peche_inuit_et_sami_reference
-    - fonds_souverain_arctique_scandinave_reference
-    - kalaallit_nunaat_sovereign_fund_reference
-    - armada_logistique_nordique_reference
-    - agence_stabilisation_climatique_reference
-    - observatoire_climatique_des_territoires_oct_reference
-    - conseil_regulation_ressources_reference
-    - ong_de_tracabilite_des_ressources_critiques_reference
-
+- agence_stabilisation_climatique_reference
+- armada_logistique_nordique_reference
+- conseil_des_etats_nordiques_integres_reference
+- conseil_regulation_ressources_reference
+- consortium_des_grandes_plateformes_logistiques_globales_reference
+- corridor_arctique_nordique_reference
+- fonds_souverain_arctique_scandinave_reference
+- kalaallit_nunaat_sovereign_fund_reference
+- murmansk_transit_arctique_reference
+- observatoire_climatique_des_territoires_oct_reference
+- ong_de_tracabilite_des_ressources_critiques_reference
 oppositions:
-    - bloc_ressources_eurasiatique_bre_reference
-    - siberie_federale_reference
-    - consortiums_prives_d_extraction_de_ressources_critiques_reference
-    - milices_concurrentes_des_droits_de_passage_reference
-    - corporations_d_extraction_energetique_non_signataires_reference
-    - consortium_logistique_asiatique_de_contournement_aln_reference
-    - factions_d_extraction_miniere_independantes_reference
-    - bloc_des_souverainistes_climatiques_reference
-
+- bloc_des_souverainistes_climatiques_reference
+- bloc_ressources_eurasiatique_bre_reference
+- cartel_des_terres_rares_d_asie_centrale_reference
+- collectifs_de_peche_inuit_et_sami_reference
+- consortium_logistique_asiatique_de_contournement_aln_reference
+- consortiums_prives_d_extraction_de_ressources_critiques_reference
+- corporations_d_extraction_energetique_non_signataires_reference
+- factions_d_extraction_miniere_independantes_reference
+- milices_concurrentes_des_droits_de_passage_reference
+- siberie_federale_reference
 type_relation_dominante: coopération
 
 annee_debut: 2041
@@ -100,12 +103,34 @@ L'APA délivre les permis de transit et d'extraction dans les zones économiques
 - [[geopolitique_conflits]]
 - [[gouvernance_institutions]]
 
-## Relations
-**Alliés** : [[conseil_des_etats_nordiques_integres_reference]], [[collectifs_de_peche_inuit_et_sami_reference]], [[fonds_souverain_arctique_scandinave_reference]], [[kalaallit_nunaat_sovereign_fund_reference]], [[armada_logistique_nordique_reference]], [[agence_stabilisation_climatique_reference]], [[observatoire_climatique_des_territoires_oct_reference]], [[conseil_regulation_ressources_reference]], [[ong_de_tracabilite_des_ressources_critiques_reference]]
-**Opposants** : [[bloc_ressources_eurasiatique_bre_reference]], [[siberie_federale_reference]], [[consortiums_prives_d_extraction_de_ressources_critiques_reference]], [[milices_concurrentes_des_droits_de_passage_reference]], [[corporations_d_extraction_energetique_non_signataires_reference]], [[consortium_logistique_asiatique_de_contournement_aln_reference]], [[factions_d_extraction_miniere_independantes_reference]], [[bloc_des_souverainistes_climatiques_reference]]
 
 ## Description journalistique
 Depuis son siège d'Ilulissat — ville dont les glaciers fondants ont précisément rendu l'institution nécessaire — l'Autorité de Passage Arctique reçoit chaque semaine des délégations aux intérêts radicalement contradictoires. D'un côté, les ingénieurs-logisticiens du Consortium Logistique Asiatique brandissent leurs projections de rentabilité ; de l'autre, les porte-parole du Conseil Inuit Circumpolaire rappellent que le corridor qu'on leur demande de valider traverse les territoires de chasse de leurs ancêtres. L'APA survit à cette contradiction en la ritualisant : deux co-présidents, un État membre et un représentant autochtone, signent conjointement chaque acte. Mais les couloirs du bâtiment en bois lamellé aux façades de granit gris racontent une autre histoire — celle des délégués autochtones qui arrivent en retard aux votes décisifs, faute d'avoir reçu les documents techniques dans leur langue.
 
 ## Tensions narratives
 La question centrale qui mine l'APA en 2098 est celle du vote qualifié : les nations autochtones disposent d'un droit de veto formel sur les décisions environnementales, mais les États membres ont progressivement reclassé la majorité des décisions comme 'logistiques' ou 'économiques', soustrayant ainsi des pans entiers de la gouvernance au regard autochtone. Une réforme structurelle est en débat depuis trois ans, bloquée par la Sibérie Fédérale et le bloc eurasiatique. Parallèlement, le Fonds de Compensation Écologique, théoriquement destiné aux communautés riveraines, est accusé par les Collectifs de Pêche Inuit et Sami d'être capté à 70% par des projets d'infrastructure bénéficiant aux États membres. L'APA risque à terme de devenir le symbole exactement inversé de ce qu'elle prétend incarner : une institution qui a donné aux peuples du Nord une voix formelle pour mieux légitimer leur dépossession effective.
+
+## Relations
+**Alliés :**
+- [[agence_stabilisation_climatique_reference]]
+- [[armada_logistique_nordique_reference]]
+- [[conseil_des_etats_nordiques_integres_reference]]
+- [[conseil_regulation_ressources_reference]]
+- [[consortium_des_grandes_plateformes_logistiques_globales_reference]]
+- [[corridor_arctique_nordique_reference]]
+- [[fonds_souverain_arctique_scandinave_reference]]
+- [[kalaallit_nunaat_sovereign_fund_reference]]
+- [[murmansk_transit_arctique_reference]]
+- [[observatoire_climatique_des_territoires_oct_reference]]
+- [[ong_de_tracabilite_des_ressources_critiques_reference]]
+**Opposants :**
+- [[bloc_des_souverainistes_climatiques_reference]]
+- [[bloc_ressources_eurasiatique_bre_reference]]
+- [[cartel_des_terres_rares_d_asie_centrale_reference]]
+- [[collectifs_de_peche_inuit_et_sami_reference]]
+- [[consortium_logistique_asiatique_de_contournement_aln_reference]]
+- [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[corporations_d_extraction_energetique_non_signataires_reference]]
+- [[factions_d_extraction_miniere_independantes_reference]]
+- [[milices_concurrentes_des_droits_de_passage_reference]]
+- [[siberie_federale_reference]]

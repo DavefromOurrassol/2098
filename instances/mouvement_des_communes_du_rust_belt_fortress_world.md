@@ -4,6 +4,7 @@ type: instance
 slug: mouvement_des_communes_du_rust_belt_fortress_world
 entite: mouvement_des_communes_du_rust_belt
 scenario: fortress_world
+statut: officialise_enrichi
 localisation:
   zone: rust_belt_communes_libres
   lieu: Fédération des Communes Libres du Rust Belt
@@ -38,23 +39,35 @@ zone_systemique:
     - infrastructure
 
 alliances:
-    - collectifs_de_reappropriation_energetique_peripherique_fortress_world
-    - coalition_vivant_fortress_world
-    - reseaux_de_maintenance_d_infrastructures_critiques_hors_blocs_fortress_world
-    - internationale_des_semenciers_agro_pirates_fortress_world
-    - cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
-    - communautes_deplacees_hors_quota_migratoire_fortress_world
-    - collectifs_du_seuil_fortress_world
-
+- cellules_mouvement_commun_midwest_fortress_world
+- cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
+- coalition_vivant_fortress_world
+- collectifs_de_reappropriation_energetique_peripherique_fortress_world
+- collectifs_du_seuil_fortress_world
+- communautes_deplacees_hors_quota_migratoire_fortress_world
+- factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world
+- factions_traditionalistes_du_mandat_electif_fortress_world
+- internationale_des_semenciers_agro_pirates_fortress_world
+- mouvement_commun_midwest_fortress_world
+- reseaux_de_maintenance_d_infrastructures_critiques_hors_blocs_fortress_world
 oppositions:
-    - agences_de_securite_interieure_des_etats_forteresses_fortress_world
-    - bureau_des_territoires_residuels_fortress_world
-    - appareils_d_etat_des_blocs_fermes_fortress_world
-    - dispositifs_de_surveillance_numerique_souveraine_fortress_world
-    - complexes_militaro_industriels_de_gestion_des_ressources_fortress_world
-    - administrations_de_controle_frontalier_des_blocs_fortress_world
-    - systemes_de_scoring_de_productivite_corporative_fortress_world
-
+- administrations_de_controle_frontalier_des_blocs_fortress_world
+- agences_de_securite_interieure_des_etats_forteresses_fortress_world
+- anba_siege_atlantique_fortress_world
+- appareils_d_etat_des_blocs_fermes_fortress_world
+- bloc_atlantique_fortress_world
+- bureau_des_territoires_residuels_fortress_world
+- bureau_territoires_residuels_fortress_world
+- cartels_energetiques_des_bioreacteurs_fortress_world
+- complexes_militaro_industriels_de_gestion_des_ressources_fortress_world
+- dispositifs_de_surveillance_numerique_souveraine_fortress_world
+- executif_militaro_civil_du_regime_fortress_world
+- geneve_bunker_fortress_world
+- nexcore_atlantique_infrastructure_fortress_world
+- pacte_forteresses_souveraines_fortress_world
+- systemes_de_scoring_de_productivite_corporative_fortress_world
+- tours_nexus7_fortress_world
+- zones_grises_tampons_fortress_world
 type_relation_dominante: conflit
 
 annee_debut: 2041
@@ -98,12 +111,41 @@ La Fédération organise la production d'énergie distribuée à partir de frich
 - [[gouvernance_institutions]]
 - [[systemes_productifs_travail]]
 
-## Relations
-**Alliés** : [[collectifs_de_reappropriation_energetique_peripherique_fortress_world]], [[coalition_vivant_fortress_world]], [[reseaux_de_maintenance_d_infrastructures_critiques_hors_blocs_fortress_world]], [[internationale_des_semenciers_agro_pirates_fortress_world]], [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]], [[communautes_deplacees_hors_quota_migratoire_fortress_world]], [[collectifs_du_seuil_fortress_world]]
-**Opposants** : [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]], [[bureau_des_territoires_residuels_fortress_world]], [[appareils_d_etat_des_blocs_fermes_fortress_world]], [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]], [[complexes_militaro_industriels_de_gestion_des_ressources_fortress_world]], [[administrations_de_controle_frontalier_des_blocs_fortress_world]], [[systemes_de_scoring_de_productivite_corporative_fortress_world]]
 
 ## Description journalistique
 Dans les cartographies officielles des blocs souverains, les zones qu'elles occupent n'existent pas — ou plus. Pourtant, depuis les ruines de Gary, Indiana, jusqu'aux friches de la Ruhr orientale, la Fédération des Communes Libres du Rust Belt fait tourner des turbines biogazières, élire des assemblées et distribuer des rations à des centaines de milliers de personnes que les États forteresses ont officiellement radiées de leurs registres de productivité. Leurs bâtiments n'ont pas de plaques, leurs frontières ne figurent sur aucun traité, et leurs délégués voyagent avec des papiers que personne ne reconnaît. Ce qu'on sait d'eux, c'est ce que rapportent les passeurs : des communautés qui ont appris à ne rien demander à personne, et à tout faire elles-mêmes.
 
 ## Tensions narratives
 La Fédération est au bord d'une fracture interne entre une faction radicalement autonomiste qui refuse tout contact avec les blocs souverains — même pour négocier des couloirs humanitaires — et une faction pragmatiste prête à échanger de la reconnaissance partielle contre des garanties de non-intervention. Simultanément, les agences de sécurité intérieure des États forteresses ont commencé à infiltrer les assemblées périphériques, faisant peser la menace d'une décapitation silencieuse du réseau. Une troisième tension, moins visible, ronge le mouvement de l'intérieur : certaines communes ont commencé à commercer discrètement avec les contrebandiers énergétiques des zones grises, compromettant le récit d'autosuffisance pure qui fonde leur légitimité morale.
+
+## Relations
+**Alliés :**
+- [[cellules_mouvement_commun_midwest_fortress_world]]
+- [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]]
+- [[coalition_vivant_fortress_world]]
+- [[collectifs_de_reappropriation_energetique_peripherique_fortress_world]]
+- [[collectifs_du_seuil_fortress_world]]
+- [[communautes_deplacees_hors_quota_migratoire_fortress_world]]
+- [[factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world]]
+- [[factions_traditionalistes_du_mandat_electif_fortress_world]]
+- [[internationale_des_semenciers_agro_pirates_fortress_world]]
+- [[mouvement_commun_midwest_fortress_world]]
+- [[reseaux_de_maintenance_d_infrastructures_critiques_hors_blocs_fortress_world]]
+**Opposants :**
+- [[administrations_de_controle_frontalier_des_blocs_fortress_world]]
+- [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]]
+- [[anba_siege_atlantique_fortress_world]]
+- [[appareils_d_etat_des_blocs_fermes_fortress_world]]
+- [[bloc_atlantique_fortress_world]]
+- [[bureau_des_territoires_residuels_fortress_world]]
+- [[bureau_territoires_residuels_fortress_world]]
+- [[cartels_energetiques_des_bioreacteurs_fortress_world]]
+- [[complexes_militaro_industriels_de_gestion_des_ressources_fortress_world]]
+- [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
+- [[executif_militaro_civil_du_regime_fortress_world]]
+- [[geneve_bunker_fortress_world]]
+- [[nexcore_atlantique_infrastructure_fortress_world]]
+- [[pacte_forteresses_souveraines_fortress_world]]
+- [[systemes_de_scoring_de_productivite_corporative_fortress_world]]
+- [[tours_nexus7_fortress_world]]
+- [[zones_grises_tampons_fortress_world]]

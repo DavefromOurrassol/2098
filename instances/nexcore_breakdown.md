@@ -4,6 +4,7 @@ type: instance
 slug: nexcore_breakdown
 entite: nexcore
 scenario: breakdown
+statut: officialise_enrichi
 localisation:
   zone: null
   lieu: null
@@ -29,8 +30,28 @@ zone_geographique:
 zone_systemique:
   - information
   - infrastructure
-alliances: []
-oppositions: []
+alliances:
+- carthage_nord_nexcore_breakdown
+- front_techno_reconstructionniste_breakdown
+- milices_contractuelles_des_anciens_etats_membres_breakdown
+- seigneurs_de_guerre_agro_territoriaux_breakdown
+- seoul_collectif_nexcore_breakdown
+oppositions:
+- brigades_medicales_itinerantes_breakdown
+- collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
+- collectifs_de_reparation_energetique_breakdown
+- communautes_paysannes_refugiees_breakdown
+- communautes_religieuses_des_relais_physiques_breakdown
+- corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown
+- diaspora_tech_sahel_breakdown
+- factions_paramilitaires_locales_neutralisees_breakdown
+- front_des_blocs_regionaux_du_recit_des_conflits_ressources_breakdown
+- guilde_des_techniciens_nomades_breakdown
+- hanse_baltique_recomposee_breakdown
+- lagos_interieur_mnemos_breakdown
+- ligue_des_cites_littorales_en_sursis_breakdown
+- reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown
+- tribunal_algorithmique_de_bruxelles_breakdown
 type_relation_dominante: neutralité
 annee_debut: 2028
 annee_fin: 2051
@@ -73,9 +94,6 @@ partiellement fonctionnels opérés par des collectifs sans coordination.
 ## Variables influencées
 - [[technologie_information]]
 
-## Relations
-**Alliés** : _aucun défini_
-**Opposants** : _aucun défini_
 
 ## Description journalistique
 "NexCore" — le mot circule encore sur les réseaux mesh comme un fantôme.
@@ -86,3 +104,27 @@ Ce qui reste sont des îles.
 ## Tensions narratives
 Certains collectifs tentent de reconnecter les fragments. D'autres pensent
 que la fragmentation est une protection.
+
+## Relations
+**Alliés :**
+- [[carthage_nord_nexcore_breakdown]]
+- [[front_techno_reconstructionniste_breakdown]]
+- [[milices_contractuelles_des_anciens_etats_membres_breakdown]]
+- [[seigneurs_de_guerre_agro_territoriaux_breakdown]]
+- [[seoul_collectif_nexcore_breakdown]]
+**Opposants :**
+- [[brigades_medicales_itinerantes_breakdown]]
+- [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]]
+- [[collectifs_de_reparation_energetique_breakdown]]
+- [[communautes_paysannes_refugiees_breakdown]]
+- [[communautes_religieuses_des_relais_physiques_breakdown]]
+- [[corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown]]
+- [[diaspora_tech_sahel_breakdown]]
+- [[factions_paramilitaires_locales_neutralisees_breakdown]]
+- [[front_des_blocs_regionaux_du_recit_des_conflits_ressources_breakdown]]
+- [[guilde_des_techniciens_nomades_breakdown]]
+- [[hanse_baltique_recomposee_breakdown]]
+- [[lagos_interieur_mnemos_breakdown]]
+- [[ligue_des_cites_littorales_en_sursis_breakdown]]
+- [[reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown]]
+- [[tribunal_algorithmique_de_bruxelles_breakdown]]

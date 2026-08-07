@@ -32,12 +32,28 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
-- confederation_bassins_vivants_eco_communalism
-- reseau_assemblees_fennoscandien_eco_communalism
-- reseau_terrafond_bassins_eco_communalism
 - amazonie_pacte_viva_eco_communalism
+- assemblees_bioterritoriales_regionales_eco_communalism
+- brigades_de_restauration_ecologique_eco_communalism
+- cercles_de_mediation_territoriale_intercommunautaire_eco_communalism
+- confederation_bassins_vivants_eco_communalism
+- consortium_amazonia_viva_eco_communalism
+- cooperatives_d_habitat_regeneratif_eco_communalism
+- cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
+- guildes_de_mediateurs_ecologiques_eco_communalism
+- mouvement_des_communes_du_rust_belt_eco_communalism
+- mouvement_racines_vivantes_eco_communalism
+- oracle_des_seuils_eco_communalism
+- rede_paulista_de_distribuic_o_algor_tmica_eco_communalism
+- reseau_assemblees_fennoscandien_eco_communalism
+- reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism
+- reseau_terrafond_bassins_eco_communalism
+- reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
+- trame_bioclimatique_eco_communalism
 oppositions:
+- collectifs_du_seuil_eco_communalism
 - enclaves_extractivistes_et_etats_residuels_eco_communalism
+- factions_extractivistes_des_aquiferes_communs_eco_communalism
 - zones_extractivistes_corridors_eco_communalism
 type_relation_dominante: symbiose
 annee_debut: 2026
@@ -103,14 +119,31 @@ La tension centrale qui traverse ces conseils oppose la logique des bassins vers
 - [[gouvernance_institutions]]
 - [[climat_environnement_global]]
 
+
 ## Relations
 **Alliés :**
-- [[confederation_bassins_vivants_eco_communalism]]
-- [[reseau_assemblees_fennoscandien_eco_communalism]]
-- [[reseau_terrafond_bassins_eco_communalism]]
 - [[amazonie_pacte_viva_eco_communalism]]
+- [[assemblees_bioterritoriales_regionales_eco_communalism]]
+- [[brigades_de_restauration_ecologique_eco_communalism]]
+- [[cercles_de_mediation_territoriale_intercommunautaire_eco_communalism]]
+- [[confederation_bassins_vivants_eco_communalism]]
+- [[consortium_amazonia_viva_eco_communalism]]
+- [[cooperatives_d_habitat_regeneratif_eco_communalism]]
+- [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]
+- [[guildes_de_mediateurs_ecologiques_eco_communalism]]
+- [[mouvement_des_communes_du_rust_belt_eco_communalism]]
+- [[mouvement_racines_vivantes_eco_communalism]]
+- [[oracle_des_seuils_eco_communalism]]
+- [[rede_paulista_de_distribuic_o_algor_tmica_eco_communalism]]
+- [[reseau_assemblees_fennoscandien_eco_communalism]]
+- [[reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism]]
+- [[reseau_terrafond_bassins_eco_communalism]]
+- [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
+- [[trame_bioclimatique_eco_communalism]]
 **Opposants :**
+- [[collectifs_du_seuil_eco_communalism]]
 - [[enclaves_extractivistes_et_etats_residuels_eco_communalism]]
+- [[factions_extractivistes_des_aquiferes_communs_eco_communalism]]
 - [[zones_extractivistes_corridors_eco_communalism]]
 
 ## Notes

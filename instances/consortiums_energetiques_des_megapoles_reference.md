@@ -31,8 +31,34 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- consortium_energetique_baltique_reference
+- consortium_energetique_des_mers_du_nord_reference
+- consortium_indo_pacifique_de_l_hydrogene_reference
+- consortiums_bancaires_financiarises_reference
+- consortiums_d_agriculture_verticale_algorithmique_reference
+- consortiums_d_extraction_miniere_du_bassin_congolais_reference
+- consortiums_energetiques_opaques_reference
+- consortiums_prives_d_extraction_de_ressources_critiques_reference
+- consortiums_prives_de_gestion_des_donnees_critiques_reference
+- fonds_d_investissement_foncier_climatique_reference
+- lobbies_agro_industriels_a_haute_consommation_d_eau_reference
+- operateurs_de_zones_economiques_speciales_periurbaines_reference
+- rede_paulista_de_distribuic_o_algor_tmica_reference
+- terrametrics_reference
+oppositions:
+- agence_internationale_des_energies_renouvelables_irena_2_reference
+- autorites_regionales_de_regulation_hydrologique_reference
+- blocs_signataires_du_pacte_energetique_multilateral_reference
+- confederation_des_megapoles_autonomes_reference
+- cooperatives_energetiques_decentralisees_reference
+- factions_eurasiatiques_contre_la_tarification_hydrique_reference
+- institutions_multilaterales_survivantes_reference
+- ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference
+- lyon_metropole_reference
+- reseau_des_administrations_locales_rurales_participatives_reference
+- sao_paulo_ita_reference
+- vasil_orentchev_reference
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -97,6 +123,37 @@ Les Consortiums se trouvent pris en étau entre leur logique d'expansion privée
 - [[energie_ressources_critiques]]
 - [[organisation_territoires]]
 - [[gouvernance_institutions]]
+
+
+## Relations
+**Alliés :**
+- [[consortium_energetique_baltique_reference]]
+- [[consortium_energetique_des_mers_du_nord_reference]]
+- [[consortium_indo_pacifique_de_l_hydrogene_reference]]
+- [[consortiums_bancaires_financiarises_reference]]
+- [[consortiums_d_agriculture_verticale_algorithmique_reference]]
+- [[consortiums_d_extraction_miniere_du_bassin_congolais_reference]]
+- [[consortiums_energetiques_opaques_reference]]
+- [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[consortiums_prives_de_gestion_des_donnees_critiques_reference]]
+- [[fonds_d_investissement_foncier_climatique_reference]]
+- [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]]
+- [[operateurs_de_zones_economiques_speciales_periurbaines_reference]]
+- [[rede_paulista_de_distribuic_o_algor_tmica_reference]]
+- [[terrametrics_reference]]
+**Opposants :**
+- [[agence_internationale_des_energies_renouvelables_irena_2_reference]]
+- [[autorites_regionales_de_regulation_hydrologique_reference]]
+- [[blocs_signataires_du_pacte_energetique_multilateral_reference]]
+- [[confederation_des_megapoles_autonomes_reference]]
+- [[cooperatives_energetiques_decentralisees_reference]]
+- [[factions_eurasiatiques_contre_la_tarification_hydrique_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
+- [[ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference]]
+- [[lyon_metropole_reference]]
+- [[reseau_des_administrations_locales_rurales_participatives_reference]]
+- [[sao_paulo_ita_reference]]
+- [[vasil_orentchev_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

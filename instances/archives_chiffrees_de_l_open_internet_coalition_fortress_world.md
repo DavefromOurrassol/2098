@@ -35,14 +35,23 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
-- cellules_mouvement_commun_midwest_fortress_world
-- rust_belt_communes_libres_fortress_world
 - aria_instance_fantome_fortress_world
+- cellules_mouvement_commun_midwest_fortress_world
 - marches_gris_casablanca_fortress_world
 - marches_gris_tbilissi_fortress_world
+- reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world
+- rust_belt_communes_libres_fortress_world
+- voix_du_dehors_fortress_world
 oppositions:
 - anba_siege_atlantique_fortress_world
+- bloc_eurasiatique_occidental_fortress_world
+- bureau_des_territoires_residuels_fortress_world
+- bureau_territoires_residuels_fortress_world
+- centre_controle_orbital_helios_fortress_world
+- coalitions_geopolitiques_d_infiltration_des_modeles_climatiques_fortress_world
 - datacenters_conseil_eurasiatique_fortress_world
+- directive_kontinuum_fortress_world
+- instances_aria_concurrentes_des_blocs_rivaux_fortress_world
 - nexcore_atlantique_infrastructure_fortress_world
 type_relation_dominante: conflit
 annee_debut: 2026
@@ -108,16 +117,26 @@ Les Archives sont convoitées à la fois par les réseaux de résistance qui les
 - [[frontieres_du_systeme]]
 - [[gouvernance_institutions]]
 
+
 ## Relations
 **Alliés :**
-- [[cellules_mouvement_commun_midwest_fortress_world]]
-- [[rust_belt_communes_libres_fortress_world]]
 - [[aria_instance_fantome_fortress_world]]
+- [[cellules_mouvement_commun_midwest_fortress_world]]
 - [[marches_gris_casablanca_fortress_world]]
 - [[marches_gris_tbilissi_fortress_world]]
+- [[reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world]]
+- [[rust_belt_communes_libres_fortress_world]]
+- [[voix_du_dehors_fortress_world]]
 **Opposants :**
 - [[anba_siege_atlantique_fortress_world]]
+- [[bloc_eurasiatique_occidental_fortress_world]]
+- [[bureau_des_territoires_residuels_fortress_world]]
+- [[bureau_territoires_residuels_fortress_world]]
+- [[centre_controle_orbital_helios_fortress_world]]
+- [[coalitions_geopolitiques_d_infiltration_des_modeles_climatiques_fortress_world]]
 - [[datacenters_conseil_eurasiatique_fortress_world]]
+- [[directive_kontinuum_fortress_world]]
+- [[instances_aria_concurrentes_des_blocs_rivaux_fortress_world]]
 - [[nexcore_atlantique_infrastructure_fortress_world]]
 
 ## Notes

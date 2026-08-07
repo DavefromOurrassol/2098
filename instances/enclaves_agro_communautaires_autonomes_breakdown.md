@@ -35,8 +35,29 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- collectif_des_climatologues_sans_etat_breakdown
+- communautes_paysannes_refugiees_breakdown
 - communes_rust_belt_zones_libres_breakdown
-oppositions: []
+- consortium_amazonia_viva_breakdown
+- delta_mekong_racines_breakdown
+- factions_secessionnistes_agrariennes_du_desert_breakdown
+- frente_sert_o_livre_breakdown
+- guilde_des_techniciens_nomades_breakdown
+- ligue_des_cites_du_sahel_numerique_breakdown
+- massif_central_cicatrices_vertes_breakdown
+- milices_agro_defensives_locales_breakdown
+- mouvement_des_communes_du_rust_belt_breakdown
+- occitanie_racines_meres_breakdown
+- pirates_biologiques_open_source_breakdown
+- reseaux_de_soigneurs_traditionnels_breakdown
+- trame_bioclimatique_breakdown
+- vallee_allier_terrafond_breakdown
+oppositions:
+- consortiums_logistiques_agro_corporatifs_breakdown
+- factions_para_etatiques_hydriques_breakdown
+- milices_privees_documentees_terrain_breakdown
+- reseau_logistique_criminel_concurrent_breakdown
+- seigneurs_de_guerre_agro_territoriaux_breakdown
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -95,9 +116,32 @@ La tentation du repli total — fermer les frontières, refuser les nouveaux exi
 - [[systemes_productifs_travail]]
 - [[gouvernance_institutions]]
 
+
 ## Relations
 **Alliés :**
+- [[collectif_des_climatologues_sans_etat_breakdown]]
+- [[communautes_paysannes_refugiees_breakdown]]
 - [[communes_rust_belt_zones_libres_breakdown]]
+- [[consortium_amazonia_viva_breakdown]]
+- [[delta_mekong_racines_breakdown]]
+- [[factions_secessionnistes_agrariennes_du_desert_breakdown]]
+- [[frente_sert_o_livre_breakdown]]
+- [[guilde_des_techniciens_nomades_breakdown]]
+- [[ligue_des_cites_du_sahel_numerique_breakdown]]
+- [[massif_central_cicatrices_vertes_breakdown]]
+- [[milices_agro_defensives_locales_breakdown]]
+- [[mouvement_des_communes_du_rust_belt_breakdown]]
+- [[occitanie_racines_meres_breakdown]]
+- [[pirates_biologiques_open_source_breakdown]]
+- [[reseaux_de_soigneurs_traditionnels_breakdown]]
+- [[trame_bioclimatique_breakdown]]
+- [[vallee_allier_terrafond_breakdown]]
+**Opposants :**
+- [[consortiums_logistiques_agro_corporatifs_breakdown]]
+- [[factions_para_etatiques_hydriques_breakdown]]
+- [[milices_privees_documentees_terrain_breakdown]]
+- [[reseau_logistique_criminel_concurrent_breakdown]]
+- [[seigneurs_de_guerre_agro_territoriaux_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

@@ -32,8 +32,36 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- archives_chiffrees_de_l_open_internet_coalition_fortress_world
+- aria_instance_fantome_fortress_world
+- cellules_mouvement_commun_midwest_fortress_world
+- cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
+- cliniques_de_deaugmentation_independantes_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- contrebandiers_energetiques_des_zones_grises_fortress_world
+- marches_gris_casablanca_fortress_world
+- marches_gris_tbilissi_fortress_world
+- mouvement_commun_midwest_fortress_world
+- oracle_des_seuils_fortress_world
+- reseaux_d_echange_clandestin_inter_zones_fortress_world
+- voix_du_dehors_fortress_world
+oppositions:
+- administrations_de_controle_frontalier_des_blocs_fortress_world
+- agences_de_securite_interieure_des_etats_forteresses_fortress_world
+- appareils_d_etat_des_blocs_fermes_fortress_world
+- bloc_atlantique_fortress_world
+- bloc_eurasiatique_occidental_fortress_world
+- bunker_chambre_securite_territoriale_fortress_world
+- bureau_des_territoires_residuels_fortress_world
+- bureau_territoires_residuels_fortress_world
+- bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world
+- centre_controle_orbital_helios_fortress_world
+- commandement_strategique_des_matieres_critiques_atlantique_fortress_world
+- datacenters_conseil_eurasiatique_fortress_world
+- directive_kontinuum_fortress_world
+- dispositifs_de_surveillance_numerique_souveraine_fortress_world
+- reseaux_prives_de_securite_aux_frontieres_fortress_world
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -96,6 +124,39 @@ La tension fondamentale de ces réseaux réside dans leur dépendance aux mêmes
 - [[frontieres_du_systeme]]
 - [[technologie_information]]
 - [[geopolitique_conflits]]
+
+
+## Relations
+**Alliés :**
+- [[archives_chiffrees_de_l_open_internet_coalition_fortress_world]]
+- [[aria_instance_fantome_fortress_world]]
+- [[cellules_mouvement_commun_midwest_fortress_world]]
+- [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]]
+- [[cliniques_de_deaugmentation_independantes_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[contrebandiers_energetiques_des_zones_grises_fortress_world]]
+- [[marches_gris_casablanca_fortress_world]]
+- [[marches_gris_tbilissi_fortress_world]]
+- [[mouvement_commun_midwest_fortress_world]]
+- [[oracle_des_seuils_fortress_world]]
+- [[reseaux_d_echange_clandestin_inter_zones_fortress_world]]
+- [[voix_du_dehors_fortress_world]]
+**Opposants :**
+- [[administrations_de_controle_frontalier_des_blocs_fortress_world]]
+- [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]]
+- [[appareils_d_etat_des_blocs_fermes_fortress_world]]
+- [[bloc_atlantique_fortress_world]]
+- [[bloc_eurasiatique_occidental_fortress_world]]
+- [[bunker_chambre_securite_territoriale_fortress_world]]
+- [[bureau_des_territoires_residuels_fortress_world]]
+- [[bureau_territoires_residuels_fortress_world]]
+- [[bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world]]
+- [[centre_controle_orbital_helios_fortress_world]]
+- [[commandement_strategique_des_matieres_critiques_atlantique_fortress_world]]
+- [[datacenters_conseil_eurasiatique_fortress_world]]
+- [[directive_kontinuum_fortress_world]]
+- [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
+- [[reseaux_prives_de_securite_aux_frontieres_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

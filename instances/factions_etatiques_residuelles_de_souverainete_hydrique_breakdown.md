@@ -38,11 +38,16 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
+alliances:
+- factions_para_etatiques_hydriques_breakdown
 oppositions:
-- grandes_lacs_compact_eau_breakdown
+- amara_diallo_nkosi_breakdown
 - autorite_passage_arctique_breakdown
 - communes_rust_belt_breakdown
+- delta_mekong_racines_breakdown
+- factions_secessionnistes_agrariennes_du_desert_breakdown
+- grandes_lacs_compact_eau_breakdown
+- reseau_logistique_criminel_concurrent_breakdown
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -103,11 +108,18 @@ La contradiction fondamentale de ces factions réside dans le fait qu'elles reve
 - [[gouvernance_institutions]]
 - [[energie_ressources_critiques]]
 
+
 ## Relations
+**Alliés :**
+- [[factions_para_etatiques_hydriques_breakdown]]
 **Opposants :**
-- [[grandes_lacs_compact_eau_breakdown]]
+- [[amara_diallo_nkosi_breakdown]]
 - [[autorite_passage_arctique_breakdown]]
 - [[communes_rust_belt_breakdown]]
+- [[delta_mekong_racines_breakdown]]
+- [[factions_secessionnistes_agrariennes_du_desert_breakdown]]
+- [[grandes_lacs_compact_eau_breakdown]]
+- [[reseau_logistique_criminel_concurrent_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

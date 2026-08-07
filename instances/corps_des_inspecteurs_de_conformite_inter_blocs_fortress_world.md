@@ -33,8 +33,26 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- administrations_de_controle_frontalier_des_blocs_fortress_world
+- agences_de_securite_interieure_des_etats_forteresses_fortress_world
+- bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world
+- conseil_regulation_algorithmique_fortress_world
+- institutions_multilaterales_residuelles_fortress_world
+- pacte_forteresses_souveraines_fortress_world
+oppositions:
+- armada_logistique_nordique_fortress_world
+- cliniques_de_deaugmentation_independantes_fortress_world
+- coalitions_geopolitiques_d_infiltration_des_modeles_climatiques_fortress_world
+- corridors_gris_asie_centrale_fortress_world
+- factions_internes_pro_autarcie_totale_fortress_world
+- instances_aria_concurrentes_des_blocs_rivaux_fortress_world
+- marches_gris_casablanca_fortress_world
+- marches_gris_tbilissi_fortress_world
+- milices_de_piraterie_logistique_arctique_fortress_world
+- reseaux_d_echange_clandestin_inter_zones_fortress_world
+- reseaux_de_contrebande_energetique_transfrontaliere_fortress_world
+- vasil_orentchev_fortress_world
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -101,6 +119,29 @@ Le Corps est structurellement financé par des blocs aux intérêts divergents, 
 - [[gouvernance_institutions]]
 - [[frontieres_du_systeme]]
 - [[geopolitique_conflits]]
+
+
+## Relations
+**Alliés :**
+- [[administrations_de_controle_frontalier_des_blocs_fortress_world]]
+- [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]]
+- [[bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world]]
+- [[conseil_regulation_algorithmique_fortress_world]]
+- [[institutions_multilaterales_residuelles_fortress_world]]
+- [[pacte_forteresses_souveraines_fortress_world]]
+**Opposants :**
+- [[armada_logistique_nordique_fortress_world]]
+- [[cliniques_de_deaugmentation_independantes_fortress_world]]
+- [[coalitions_geopolitiques_d_infiltration_des_modeles_climatiques_fortress_world]]
+- [[corridors_gris_asie_centrale_fortress_world]]
+- [[factions_internes_pro_autarcie_totale_fortress_world]]
+- [[instances_aria_concurrentes_des_blocs_rivaux_fortress_world]]
+- [[marches_gris_casablanca_fortress_world]]
+- [[marches_gris_tbilissi_fortress_world]]
+- [[milices_de_piraterie_logistique_arctique_fortress_world]]
+- [[reseaux_d_echange_clandestin_inter_zones_fortress_world]]
+- [[reseaux_de_contrebande_energetique_transfrontaliere_fortress_world]]
+- [[vasil_orentchev_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

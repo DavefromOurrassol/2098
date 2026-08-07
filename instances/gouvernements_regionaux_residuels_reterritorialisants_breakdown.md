@@ -36,8 +36,27 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- archives_neutres_de_geneve_breakdown
+- federation_russe_residuelle_district_de_mourmansk_breakdown
+- front_des_blocs_regionaux_du_recit_des_conflits_ressources_breakdown
+- front_humanitaire_d_urgence_non_affilie_breakdown
+- midwest_desertifie_breakdown
+- milices_contractuelles_des_anciens_etats_membres_breakdown
+- ong_de_gestion_migratoire_survivantes_breakdown
+- reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown
+oppositions:
+- bureau_des_territoires_residuels_breakdown
+- cartels_logistiques_regionaux_breakdown
+- collectifs_du_seuil_breakdown
+- communes_rust_belt_zones_libres_breakdown
+- etats_fragments_en_guerre_pour_les_stations_atmospheriques_breakdown
+- factions_secessionnistes_agrariennes_du_desert_breakdown
+- milices_de_controle_territorial_breakdown
+- mouvement_des_communes_du_rust_belt_breakdown
+- seigneuries_logistiques_armees_breakdown
+- seigneurs_de_guerre_agro_territoriaux_breakdown
+- vallee_allier_terrafond_breakdown
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -95,6 +114,30 @@ Tiraillés entre leur prétention à la légalité et la réalité de leur survi
 - [[organisation_territoires]]
 - [[gouvernance_institutions]]
 - [[geopolitique_conflits]]
+
+
+## Relations
+**Alliés :**
+- [[archives_neutres_de_geneve_breakdown]]
+- [[federation_russe_residuelle_district_de_mourmansk_breakdown]]
+- [[front_des_blocs_regionaux_du_recit_des_conflits_ressources_breakdown]]
+- [[front_humanitaire_d_urgence_non_affilie_breakdown]]
+- [[midwest_desertifie_breakdown]]
+- [[milices_contractuelles_des_anciens_etats_membres_breakdown]]
+- [[ong_de_gestion_migratoire_survivantes_breakdown]]
+- [[reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown]]
+**Opposants :**
+- [[bureau_des_territoires_residuels_breakdown]]
+- [[cartels_logistiques_regionaux_breakdown]]
+- [[collectifs_du_seuil_breakdown]]
+- [[communes_rust_belt_zones_libres_breakdown]]
+- [[etats_fragments_en_guerre_pour_les_stations_atmospheriques_breakdown]]
+- [[factions_secessionnistes_agrariennes_du_desert_breakdown]]
+- [[milices_de_controle_territorial_breakdown]]
+- [[mouvement_des_communes_du_rust_belt_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]
+- [[seigneurs_de_guerre_agro_territoriaux_breakdown]]
+- [[vallee_allier_terrafond_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

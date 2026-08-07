@@ -36,8 +36,12 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
+alliances:
+- coalition_pacifique_nord_breakdown
+- conglometrat_sino_siberien_bohai_transit_breakdown
+- front_des_blocs_regionaux_du_recit_des_conflits_ressources_breakdown
 oppositions:
+- agence_stabilisation_climatique_breakdown
 - geneve_bunker_institutions_breakdown
 type_relation_dominante: compétition
 annee_debut: 2026
@@ -98,9 +102,15 @@ La tension fondamentale de la Ligue réside dans la contradiction entre son disc
 - [[gouvernance_institutions]]
 - [[organisation_territoires]]
 
+
 ## Relations
+**Alliés :**
+- [[coalition_pacifique_nord_breakdown]]
+- [[conglometrat_sino_siberien_bohai_transit_breakdown]]
+- [[front_des_blocs_regionaux_du_recit_des_conflits_ressources_breakdown]]
 **Opposants :**
-- [[geneve_bunker_institutions]]
+- [[agence_stabilisation_climatique_breakdown]]
+- [[geneve_bunker_institutions_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

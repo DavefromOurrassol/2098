@@ -29,8 +29,27 @@ zone_geographique:
 - régionale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- bloc_eurasien_souverainiste_new_sustainability
+- coalition_des_industries_extractives_residuelles_new_sustainability
+- factions_internes_pro_opacite_des_parametres_new_sustainability
+- factions_souverainistes_des_blocs_peripheriques_new_sustainability
+- lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability
+- reseaux_d_information_souverainistes_fermes_new_sustainability
+oppositions:
+- agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
+- agence_stabilisation_climatique_new_sustainability
+- arctic_passage_authority_new_sustainability
+- coalition_vivant_new_sustainability
+- conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability
+- conseil_technocratique_de_coordination_regionale_new_sustainability
+- consortium_amazonia_viva_new_sustainability
+- consortium_helios_new_sustainability
+- factions_technocratiques_de_la_delegation_ia_totale_new_sustainability
+- great_lakes_autonomous_compact_new_sustainability
+- mouvement_communautaire_des_micro_grids_energetiques_new_sustainability
+- pacifique_sud_resilience_network_new_sustainability
+- reseau_des_hubs_urbains_regeneratifs_new_sustainability
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -94,6 +113,30 @@ La faction est prise en étau entre la légitimité croissante des institutions 
 - [[gouvernance_institutions]]
 - [[energie_ressources_critiques]]
 - [[systemes_productifs_travail]]
+
+
+## Relations
+**Alliés :**
+- [[bloc_eurasien_souverainiste_new_sustainability]]
+- [[coalition_des_industries_extractives_residuelles_new_sustainability]]
+- [[factions_internes_pro_opacite_des_parametres_new_sustainability]]
+- [[factions_souverainistes_des_blocs_peripheriques_new_sustainability]]
+- [[lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability]]
+- [[reseaux_d_information_souverainistes_fermes_new_sustainability]]
+**Opposants :**
+- [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]]
+- [[agence_stabilisation_climatique_new_sustainability]]
+- [[arctic_passage_authority_new_sustainability]]
+- [[coalition_vivant_new_sustainability]]
+- [[conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability]]
+- [[conseil_technocratique_de_coordination_regionale_new_sustainability]]
+- [[consortium_amazonia_viva_new_sustainability]]
+- [[consortium_helios_new_sustainability]]
+- [[factions_technocratiques_de_la_delegation_ia_totale_new_sustainability]]
+- [[great_lakes_autonomous_compact_new_sustainability]]
+- [[mouvement_communautaire_des_micro_grids_energetiques_new_sustainability]]
+- [[pacifique_sud_resilience_network_new_sustainability]]
+- [[reseau_des_hubs_urbains_regeneratifs_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

@@ -32,13 +32,31 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
-- rust_belt_communes_libres_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- factions_dissidentes_du_consortium_helios_fortress_world
+- factions_djihadistes_logistiques_d_asie_centrale_fortress_world
 - marches_gris_casablanca_fortress_world
 - marches_gris_tbilissi_fortress_world
+- operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world
+- rust_belt_communes_libres_fortress_world
 oppositions:
-- conseil_moscou_est_fortress_world
 - anba_siege_atlantique_fortress_world
+- bloc_pacifique_nord_fortress_world
+- cartels_energetiques_des_bioreacteurs_fortress_world
 - centre_controle_orbital_helios_fortress_world
+- commandement_strategique_des_matieres_critiques_atlantique_fortress_world
+- complexes_militaro_industriels_de_gestion_des_ressources_fortress_world
+- conseil_moscou_est_fortress_world
+- consortium_eurasiatique_des_ressources_fermees_fortress_world
+- consortium_helios_fortress_world
+- consortium_sino_finlandais_de_flotte_autonome_fortress_world
+- consortiums_energetiques_du_bloc_ourrassol_fortress_world
+- corps_des_inspecteurs_de_conformite_inter_blocs_fortress_world
+- executif_militaro_civil_du_regime_fortress_world
+- instances_aria_concurrentes_des_blocs_rivaux_fortress_world
+- ironclad_logistics_fortress_world
+- reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world
+- vaultcorp_security_fortress_world
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -102,15 +120,34 @@ La tension centrale de ces réseaux réside dans leur double nature : instrument
 - [[frontieres_du_systeme]]
 - [[geopolitique_conflits]]
 
+
 ## Relations
 **Alliés :**
-- [[rust_belt_communes_libres_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[factions_dissidentes_du_consortium_helios_fortress_world]]
+- [[factions_djihadistes_logistiques_d_asie_centrale_fortress_world]]
 - [[marches_gris_casablanca_fortress_world]]
 - [[marches_gris_tbilissi_fortress_world]]
+- [[operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world]]
+- [[rust_belt_communes_libres_fortress_world]]
 **Opposants :**
-- [[conseil_moscou_est_fortress_world]]
 - [[anba_siege_atlantique_fortress_world]]
+- [[bloc_pacifique_nord_fortress_world]]
+- [[cartels_energetiques_des_bioreacteurs_fortress_world]]
 - [[centre_controle_orbital_helios_fortress_world]]
+- [[commandement_strategique_des_matieres_critiques_atlantique_fortress_world]]
+- [[complexes_militaro_industriels_de_gestion_des_ressources_fortress_world]]
+- [[conseil_moscou_est_fortress_world]]
+- [[consortium_eurasiatique_des_ressources_fermees_fortress_world]]
+- [[consortium_helios_fortress_world]]
+- [[consortium_sino_finlandais_de_flotte_autonome_fortress_world]]
+- [[consortiums_energetiques_du_bloc_ourrassol_fortress_world]]
+- [[corps_des_inspecteurs_de_conformite_inter_blocs_fortress_world]]
+- [[executif_militaro_civil_du_regime_fortress_world]]
+- [[instances_aria_concurrentes_des_blocs_rivaux_fortress_world]]
+- [[ironclad_logistics_fortress_world]]
+- [[reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world]]
+- [[vaultcorp_security_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

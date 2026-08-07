@@ -4,6 +4,7 @@ type: instance
 slug: kalaallit_nunaat_sovereign_fund_new_sustainability
 entite: kalaallit_nunaat_sovereign_fund
 scenario: new_sustainability
+statut: officialise_enrichi
 localisation:
   zone: nuuk_kivfak_nunani
   lieu: Nuuk — Siège du Fonds Souverain Kalaallit Nunaat
@@ -38,19 +39,19 @@ zone_systemique:
     - infrastructure
 
 alliances:
-    - conseil_regulation_ressources_new_sustainability
-    - fonds_mondial_de_regeneration_ecologique_new_sustainability
-    - mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability
-    - conseil_energetique_intercontinental_new_sustainability
-    - great_lakes_autonomous_compact_new_sustainability
-    - agence_stabilisation_climatique_new_sustainability
-
+- agence_stabilisation_climatique_new_sustainability
+- arctic_passage_authority_new_sustainability
+- conseil_energetique_intercontinental_new_sustainability
+- conseil_regulation_ressources_new_sustainability
+- fonds_mondial_de_regeneration_ecologique_new_sustainability
+- great_lakes_autonomous_compact_new_sustainability
+- mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability
 oppositions:
-    - coalition_des_industries_extractives_residuelles_new_sustainability
-    - lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability
-    - coalition_anti_fiscalite_universelle_new_sustainability
-    - factions_souverainistes_des_blocs_peripheriques_new_sustainability
-
+- coalition_anti_fiscalite_universelle_new_sustainability
+- coalition_des_industries_extractives_residuelles_new_sustainability
+- conseil_de_deliberation_augmentee_de_l_union_nordique_new_sustainability
+- factions_souverainistes_des_blocs_peripheriques_new_sustainability
+- lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability
 type_relation_dominante: alliance stratégique
 
 annee_debut: 2031
@@ -94,12 +95,25 @@ Le Fonds gère les revenus issus de l'exploitation contrôlée des ressources li
 - [[geopolitique_conflits]]
 - [[organisation_territoires]]
 
-## Relations
-**Alliés** : [[conseil_regulation_ressources_new_sustainability]], [[fonds_mondial_de_regeneration_ecologique_new_sustainability]], [[mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability]], [[conseil_energetique_intercontinental_new_sustainability]], [[great_lakes_autonomous_compact_new_sustainability]], [[agence_stabilisation_climatique_new_sustainability]]
-**Opposants** : [[coalition_des_industries_extractives_residuelles_new_sustainability]], [[lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability]], [[coalition_anti_fiscalite_universelle_new_sustainability]], [[factions_souverainistes_des_blocs_peripheriques_new_sustainability]]
 
 ## Description journalistique
 Depuis ses bureaux de verre et de bois flotté arctique surplombant le fjord de Nuuk, le Kivfak Nunani gère aujourd'hui un portefeuille estimé à 2 400 milliards de crédits carbone-équivalents — une fortune née littéralement du désastre que le Groenland a subi avant tous les autres. Ses négociateurs, formés aux grandes écoles de gouvernance technocratique d'Helsinki et de Singapour mais profondément ancrés dans la culture kalaallit, manient avec une élégance déconcertante le double langage de la souveraineté blessée et de la puissance assumée. En 2096, le Fonds a bloqué pendant six semaines un traité d'accès aux corridors arctiques jusqu'à obtenir un siège permanent au Conseil de Gouvernance Algorithmique Intégrée — une victoire saluée comme historique par les mouvements d'autonomie des peuples circumpolaires. Certains observateurs de Genève murmurent cependant que la sophistication du Fonds cache une dépendance croissante aux algorithmes d'optimisation du Réseau ARIA pour calibrer ses stratégies de négociation.
 
 ## Tensions narratives
 La tension fondamentale du Kivfak Nunani en 2098 tient à une question que ses propres fondateurs refusent de trancher : la rente climatique doit-elle être un bien commun mondial, au nom de la solidarité avec les autres victimes du réchauffement, ou le rempart légitime d'une souveraineté trop longtemps confisquée ? En interne, une faction jeune et radicale — les 'Sermersooq' — pousse à nationaliser intégralement les ressources et à rompre avec les cadres de gouvernance globale, tandis que la direction technocratique historique mise sur l'intégration institutionnelle comme seule garantie durable d'influence. Par ailleurs, les communautés inuit des zones non urbanisées contestent de plus en plus la captation de la rente par une élite nuukoise jugée trop déconnectée des réalités territoriales, ouvrant une fracture interne potentiellement déstabilisatrice.
+
+## Relations
+**Alliés :**
+- [[agence_stabilisation_climatique_new_sustainability]]
+- [[arctic_passage_authority_new_sustainability]]
+- [[conseil_energetique_intercontinental_new_sustainability]]
+- [[conseil_regulation_ressources_new_sustainability]]
+- [[fonds_mondial_de_regeneration_ecologique_new_sustainability]]
+- [[great_lakes_autonomous_compact_new_sustainability]]
+- [[mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability]]
+**Opposants :**
+- [[coalition_anti_fiscalite_universelle_new_sustainability]]
+- [[coalition_des_industries_extractives_residuelles_new_sustainability]]
+- [[conseil_de_deliberation_augmentee_de_l_union_nordique_new_sustainability]]
+- [[factions_souverainistes_des_blocs_peripheriques_new_sustainability]]
+- [[lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability]]

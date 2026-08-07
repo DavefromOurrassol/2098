@@ -4,6 +4,7 @@ type: instance
 slug: bureau_des_territoires_residuels_breakdown
 entite: bureau_des_territoires_residuels
 scenario: breakdown
+statut: officialise_enrichi
 localisation:
   zone: cracovie_registre_zones
   lieu: Cracovie

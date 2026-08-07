@@ -30,8 +30,45 @@ zone_geographique:
 - régionale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability
+- collectifs_de_desobeissance_algorithmique_new_sustainability
+- collectifs_de_narration_sauvage_hors_protocole_new_sustainability
+- collectifs_riverains_du_bassin_du_congo_new_sustainability
+- communautes_locales_exclues_des_corridors_new_sustainability
+- factions_internes_contestataires_du_bureau_de_moderation_new_sustainability
+- internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
+- mouvement_communautaire_des_micro_grids_energetiques_new_sustainability
+- mouvement_pour_l_autodetermination_territoriale_new_sustainability
+- mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability
+- reseau_des_bio_communs_regionaux_new_sustainability
+- reseau_des_communs_alimentaires_hors_grille_new_sustainability
+- reseaux_de_gouvernance_territoriale_distribues_new_sustainability
+- reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability
+oppositions:
+- agence_mondiale_de_modelisation_climatique_ammc_new_sustainability
+- alliance_numerique_eurasie_pacifique_new_sustainability
+- bloc_des_architectes_d_efficience_algorithmique_new_sustainability
+- bureau_gouvernance_algorithmique_new_sustainability
+- centre_institutionnel_geneve_new_sustainability
+- collectif_des_mediateurs_cognitifs_internationaux_new_sustainability
+- commission_territoriale_ourrassol_new_sustainability
+- conseil_de_deliberation_augmentee_de_l_union_nordique_new_sustainability
+- conseil_de_regulation_cognitive_de_l_onu_new_sustainability
+- conseil_regulation_algorithmique_new_sustainability
+- conseil_technocratique_de_coordination_regionale_new_sustainability
+- consortium_d_interoperabilite_ia_humain_new_sustainability
+- consortium_des_ia_climatiques_new_sustainability
+- directive_kontinuum_new_sustainability
+- factions_technocratiques_de_la_delegation_ia_totale_new_sustainability
+- grille_aria_new_sustainability
+- observatoire_climatique_narratif_de_nairobi_new_sustainability
+- operateurs_de_fusion_energetique_regionaux_new_sustainability
+- oracle_des_seuils_new_sustainability
+- parlement_territoires_nairobi_new_sustainability
+- rede_paulista_de_distribuic_o_algor_tmica_new_sustainability
+- tribunal_algorithmique_de_bruxelles_new_sustainability
+- tribunal_gouvernance_algorithmique_bruxelles_new_sustainability
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -93,6 +130,48 @@ La contradiction fondamentale qui ronge la Coalition est d'ordre existentiel : p
 - [[organisation_territoires]]
 - [[gouvernance_institutions]]
 - [[technologie_information]]
+
+
+## Relations
+**Alliés :**
+- [[collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability]]
+- [[collectifs_de_desobeissance_algorithmique_new_sustainability]]
+- [[collectifs_de_narration_sauvage_hors_protocole_new_sustainability]]
+- [[collectifs_riverains_du_bassin_du_congo_new_sustainability]]
+- [[communautes_locales_exclues_des_corridors_new_sustainability]]
+- [[factions_internes_contestataires_du_bureau_de_moderation_new_sustainability]]
+- [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]]
+- [[mouvement_communautaire_des_micro_grids_energetiques_new_sustainability]]
+- [[mouvement_pour_l_autodetermination_territoriale_new_sustainability]]
+- [[mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability]]
+- [[reseau_des_bio_communs_regionaux_new_sustainability]]
+- [[reseau_des_communs_alimentaires_hors_grille_new_sustainability]]
+- [[reseaux_de_gouvernance_territoriale_distribues_new_sustainability]]
+- [[reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability]]
+**Opposants :**
+- [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]]
+- [[alliance_numerique_eurasie_pacifique_new_sustainability]]
+- [[bloc_des_architectes_d_efficience_algorithmique_new_sustainability]]
+- [[bureau_gouvernance_algorithmique_new_sustainability]]
+- [[centre_institutionnel_geneve_new_sustainability]]
+- [[collectif_des_mediateurs_cognitifs_internationaux_new_sustainability]]
+- [[commission_territoriale_ourrassol_new_sustainability]]
+- [[conseil_de_deliberation_augmentee_de_l_union_nordique_new_sustainability]]
+- [[conseil_de_regulation_cognitive_de_l_onu_new_sustainability]]
+- [[conseil_regulation_algorithmique_new_sustainability]]
+- [[conseil_technocratique_de_coordination_regionale_new_sustainability]]
+- [[consortium_d_interoperabilite_ia_humain_new_sustainability]]
+- [[consortium_des_ia_climatiques_new_sustainability]]
+- [[directive_kontinuum_new_sustainability]]
+- [[factions_technocratiques_de_la_delegation_ia_totale_new_sustainability]]
+- [[grille_aria_new_sustainability]]
+- [[observatoire_climatique_narratif_de_nairobi_new_sustainability]]
+- [[operateurs_de_fusion_energetique_regionaux_new_sustainability]]
+- [[oracle_des_seuils_new_sustainability]]
+- [[parlement_territoires_nairobi_new_sustainability]]
+- [[rede_paulista_de_distribuic_o_algor_tmica_new_sustainability]]
+- [[tribunal_algorithmique_de_bruxelles_new_sustainability]]
+- [[tribunal_gouvernance_algorithmique_bruxelles_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

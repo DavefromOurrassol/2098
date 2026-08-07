@@ -4,6 +4,7 @@ type: instance
 slug: europe_occidentale_reconstructee_reference
 entite: europe_occidentale_reconstructee
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: bruxelles_nouveau
   lieu: Bruxelles-Nouveau
@@ -37,25 +38,28 @@ zone_systemique:
     - infrastructure
 
 alliances:
-    - conseil_des_etats_nordiques_integres_reference
-    - tribunal_algorithmique_de_bruxelles_reference
-    - bruxelles_nouveau_reference
-    - agences_de_securite_regionales_de_normalisation_des_zones_grises_reference
-    - consortium_energetique_des_mers_du_nord_reference
-    - reseaux_de_gouvernance_multilaterale_survivants_reference
-    - bureaux_de_regulation_informationnelle_reference
-    - fonds_monetaire_climatique_fmc_reference
-
+- agences_de_securite_regionales_de_normalisation_des_zones_grises_reference
+- bruxelles_nouveau_reference
+- bureaux_de_regulation_informationnelle_reference
+- conseil_des_etats_nordiques_integres_reference
+- consortium_energetique_des_mers_du_nord_reference
+- cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference
+- fonds_monetaire_climatique_fmc_reference
+- reseaux_de_gouvernance_multilaterale_survivants_reference
+- tribunal_algorithmique_de_bruxelles_reference
 oppositions:
-    - alliance_blocs_souverains_reference
-    - bloc_des_souverainistes_climatiques_reference
-    - gouvernements_federaux_residuels_souverainistes_reference
-    - coalition_pour_la_souverainete_numerique_nationale_reference
-    - courant_nationaliste_instrumentalisateur_du_discours_des_racines_reference
-    - collectif_nuit_jaune_reference
-    - bloc_eurasien_central_reference
-    - bloc_ressources_eurasiatique_bre_reference
-
+- alliance_blocs_souverains_reference
+- bloc_des_souverainistes_climatiques_reference
+- bloc_eurasien_central_reference
+- bloc_ressources_eurasiatique_bre_reference
+- cartel_des_terres_rares_d_asie_centrale_reference
+- coalition_pour_la_souverainete_numerique_nationale_reference
+- collectif_nuit_jaune_reference
+- consortium_des_grandes_plateformes_ia_integrees_reference
+- courant_nationaliste_instrumentalisateur_du_discours_des_racines_reference
+- factions_eurasiatiques_contre_la_tarification_hydrique_reference
+- gouvernements_federaux_residuels_souverainistes_reference
+- pacte_des_souverains_reference
 type_relation_dominante: dépendance
 
 annee_debut: 2031
@@ -99,12 +103,34 @@ L'UOC fixe des normes commerciales minimales et des protocoles sécuritaires par
 - [[demographie_mobilite_humaine]]
 - [[systeme_economique_redistribution]]
 
-## Relations
-**Alliés** : [[conseil_des_etats_nordiques_integres_reference]], [[tribunal_algorithmique_de_bruxelles_reference]], [[bruxelles_nouveau_reference]], [[agences_de_securite_regionales_de_normalisation_des_zones_grises_reference]], [[consortium_energetique_des_mers_du_nord_reference]], [[reseaux_de_gouvernance_multilaterale_survivants_reference]], [[bureaux_de_regulation_informationnelle_reference]], [[fonds_monetaire_climatique_fmc_reference]]
-**Opposants** : [[alliance_blocs_souverains_reference]], [[bloc_des_souverainistes_climatiques_reference]], [[gouvernements_federaux_residuels_souverainistes_reference]], [[coalition_pour_la_souverainete_numerique_nationale_reference]], [[courant_nationaliste_instrumentalisateur_du_discours_des_racines_reference]], [[collectif_nuit_jaune_reference]], [[bloc_eurasien_central_reference]], [[bloc_ressources_eurasiatique_bre_reference]]
 
 ## Description journalistique
 Depuis son siège délocalisé dans ce qu'on appelle désormais Bruxelles Nouveau, l'Union Occidentale de Coordination occupe l'étage supérieur d'un complexe administratif que ses propres États membres ont financé à contrecœur. Les journalistes qui y accèdent décrivent des couloirs propres, des algorithmes de planification énergétique affichés sur écrans tactiles muraux, et une bureaucratie compétente que personne, en dehors d'elle-même, ne semble vouloir défendre. Ses commissaires — jamais élus, toujours nommés par des gouvernements eux-mêmes contestés — publient chaque trimestre des rapports de coordination que trois États membres sur six ignorent partiellement. À Lyon comme à Lisbonne, le sigle UOC suscite davantage de haussements d'épaules que d'hostilité franche : c'est là, peut-être, sa seule force de survie.
 
 ## Tensions narratives
 L'UOC est prise en étau entre des États membres qui lui délèguent leurs problèmes migratoires sans lui en donner les moyens, et des blocs souverainistes qui instrumentalisent chaque décision technocratique comme preuve de sa déconnexion populaire. Sa capacité à maintenir les normes commerciales est menacée par la montée des accords bilatéraux directs que certains membres négocient en parallèle avec le Bloc Eurasien Central. Enfin, la question de sa propre légitimité constitutionnelle — jamais résolue depuis sa fondation — pourrait resurfaces violemment si une crise migratoire majeure ou une rupture énergétique forçait une prise de décision d'urgence qu'aucun mandat démocratique ne couvrirait.
+
+## Relations
+**Alliés :**
+- [[agences_de_securite_regionales_de_normalisation_des_zones_grises_reference]]
+- [[bruxelles_nouveau_reference]]
+- [[bureaux_de_regulation_informationnelle_reference]]
+- [[conseil_des_etats_nordiques_integres_reference]]
+- [[consortium_energetique_des_mers_du_nord_reference]]
+- [[cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference]]
+- [[fonds_monetaire_climatique_fmc_reference]]
+- [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
+- [[tribunal_algorithmique_de_bruxelles_reference]]
+**Opposants :**
+- [[alliance_blocs_souverains_reference]]
+- [[bloc_des_souverainistes_climatiques_reference]]
+- [[bloc_eurasien_central_reference]]
+- [[bloc_ressources_eurasiatique_bre_reference]]
+- [[cartel_des_terres_rares_d_asie_centrale_reference]]
+- [[coalition_pour_la_souverainete_numerique_nationale_reference]]
+- [[collectif_nuit_jaune_reference]]
+- [[consortium_des_grandes_plateformes_ia_integrees_reference]]
+- [[courant_nationaliste_instrumentalisateur_du_discours_des_racines_reference]]
+- [[factions_eurasiatiques_contre_la_tarification_hydrique_reference]]
+- [[gouvernements_federaux_residuels_souverainistes_reference]]
+- [[pacte_des_souverains_reference]]

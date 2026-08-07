@@ -4,6 +4,7 @@ type: instance
 slug: voix_du_dehors_breakdown
 entite: voix_du_dehors
 scenario: breakdown
+statut: officialise_enrichi
 localisation:
   zone: arc_sahelo_mediterraneen
   lieu: Arc Sahélo-Méditerranéen (Sfax, Lyon-Part-Dieu, corridors nomades)
@@ -34,15 +35,14 @@ zone_systemique:
     - gouvernance
 
 alliances:
-    - reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown
-    - collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
-    - communautes_religieuses_des_relais_physiques_breakdown
-
+- collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
+- communautes_religieuses_des_relais_physiques_breakdown
+- reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown
 oppositions:
-    - front_des_blocs_regionaux_du_recit_des_conflits_ressources_breakdown
-    - milices_privees_documentees_terrain_breakdown
-    - reseau_des_anciens_financeurs_devenus_censeurs_breakdown
-
+- front_des_blocs_regionaux_du_recit_des_conflits_ressources_breakdown
+- grandes_lacs_compact_eau_breakdown
+- milices_privees_documentees_terrain_breakdown
+- reseau_des_anciens_financeurs_devenus_censeurs_breakdown
 type_relation_dominante: infiltration
 
 annee_debut: 2031
@@ -85,12 +85,20 @@ Collecte et diffusion de témoignages de terrain dans les zones de conflit et d'
 - [[gouvernance_institutions]]
 - [[geopolitique_conflits]]
 
-## Relations
-**Alliés** : [[reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown]], [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]], [[communautes_religieuses_des_relais_physiques_breakdown]]
-**Opposants** : [[front_des_blocs_regionaux_du_recit_des_conflits_ressources_breakdown]], [[milices_privees_documentees_terrain_breakdown]], [[reseau_des_anciens_financeurs_devenus_censeurs_breakdown]]
 
 ## Description journalistique
 On ne reçoit pas les Bouches de l'Abîme — on les trouve, ou elles vous trouvent. Un paquet plastifié glissé sous une porte à Sfax, un signal radio crachotant sur 6,2 MHz entre deux heures du matin et l'aube, une clé USB collée sous un banc de gare à ce qui reste de Lyon-Part-Dieu. Leurs publications n'ont ni logo fixe ni signature éditoriale cohérente : chaque cellule imprime ce qu'elle peut, quand elle peut, avec ce qu'elle a. Certains numéros sont des chefs-d'œuvre d'investigation sur les massacres du corridor des lithiums ; d'autres, on le sait maintenant, étaient écrits par des officiers de désinformation du Bloc Eurasien du Nord. C'est ça, les Bouches en 2098 : le meilleur et le pire du journalisme, indissociables, dans le même paquet plastifié froissé.
 
 ## Tensions narratives
 Qui détient encore les clés d'authentification originelles, et sont-elles elles-mêmes compromises ? Une cellule découvre qu'elle diffuse depuis six mois des faux fabriqués par un bloc adverse — comment purger le réseau quand il n'existe pas de centre ? Un journaliste de terrain doit choisir entre publier une vérité qui déstabilisera une zone déjà au bord du chaos humanitaire ou la garder pour un moment qui ne viendra peut-être jamais. La question fondatrice revient, plus acérée que jamais : dans un monde où toute information est suspectée, la vérité documentée a-t-elle encore un effet différent du mensonge habile ?
+
+## Relations
+**Alliés :**
+- [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]]
+- [[communautes_religieuses_des_relais_physiques_breakdown]]
+- [[reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown]]
+**Opposants :**
+- [[front_des_blocs_regionaux_du_recit_des_conflits_ressources_breakdown]]
+- [[grandes_lacs_compact_eau_breakdown]]
+- [[milices_privees_documentees_terrain_breakdown]]
+- [[reseau_des_anciens_financeurs_devenus_censeurs_breakdown]]

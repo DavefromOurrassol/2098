@@ -32,8 +32,48 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- bloc_des_souverainistes_climatiques_reference
+- bloc_eurasien_central_reference
+- cartel_des_terres_rares_d_asie_centrale_reference
+- coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference
+- consortium_augmentwork_reference
+- consortium_logistique_asiatique_de_contournement_aln_reference
+- consortiums_d_extraction_miniere_du_bassin_congolais_reference
+- consortiums_energetiques_opaques_reference
+- corporations_d_extraction_energetique_non_signataires_reference
+- corridor_arctique_nordique_reference
+- datasovereign_reference
+- factions_eurasiatiques_contre_la_tarification_hydrique_reference
+- nexcore_reference
+- plateformes_centralisees_de_narration_officielle_reference
+- regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference
+- reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference
+oppositions:
+- agence_internationale_des_energies_renouvelables_irena_2_reference
+- arctic_passage_authority_reference
+- armada_logistique_nordique_reference
+- banque_mondiale_des_transitions_climatiques_reference
+- collectifs_de_biopiraterie_inversee_reference
+- conseil_regulation_ressources_reference
+- consortium_amazonia_viva_reference
+- consortium_de_maintenance_orbitale_seom_7_reference
+- consortium_des_fournisseurs_d_energie_renouvelable_distribuee_reference
+- consortium_energetique_baltique_reference
+- consortium_energetique_des_mers_du_nord_reference
+- delta_du_mekong_reference
+- europe_occidentale_reconstructee_reference
+- fonds_souverain_arctique_scandinave_reference
+- institutions_multilaterales_survivantes_reference
+- kalaallit_nunaat_sovereign_fund_reference
+- milices_concurrentes_des_droits_de_passage_reference
+- murmansk_transit_arctique_reference
+- ong_de_tracabilite_des_ressources_critiques_reference
+- operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference
+- ouagadougou_polytechnique_reference
+- pacifique_sud_resilience_network_reference
+- reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference
+- reseau_hospitalier_hybride_eurasiatique_reference
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -96,6 +136,54 @@ Le BRE est structurellement tiraillé entre ses membres aux intérêts divergent
 - [[energie_ressources_critiques]]
 - [[geopolitique_conflits]]
 - [[gouvernance_institutions]]
+
+
+
+
+
+## Relations
+**Alliés :**
+- [[bloc_des_souverainistes_climatiques_reference]]
+- [[bloc_eurasien_central_reference]]
+- [[cartel_des_terres_rares_d_asie_centrale_reference]]
+- [[coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference]]
+- [[consortium_augmentwork_reference]]
+- [[consortium_logistique_asiatique_de_contournement_aln_reference]]
+- [[consortiums_d_extraction_miniere_du_bassin_congolais_reference]]
+- [[consortiums_energetiques_opaques_reference]]
+- [[corporations_d_extraction_energetique_non_signataires_reference]]
+- [[corridor_arctique_nordique_reference]]
+- [[datasovereign_reference]]
+- [[factions_eurasiatiques_contre_la_tarification_hydrique_reference]]
+- [[nexcore_reference]]
+- [[plateformes_centralisees_de_narration_officielle_reference]]
+- [[regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference]]
+- [[reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference]]
+**Opposants :**
+- [[agence_internationale_des_energies_renouvelables_irena_2_reference]]
+- [[arctic_passage_authority_reference]]
+- [[armada_logistique_nordique_reference]]
+- [[banque_mondiale_des_transitions_climatiques_reference]]
+- [[collectifs_de_biopiraterie_inversee_reference]]
+- [[conseil_regulation_ressources_reference]]
+- [[consortium_amazonia_viva_reference]]
+- [[consortium_de_maintenance_orbitale_seom_7_reference]]
+- [[consortium_des_fournisseurs_d_energie_renouvelable_distribuee_reference]]
+- [[consortium_energetique_baltique_reference]]
+- [[consortium_energetique_des_mers_du_nord_reference]]
+- [[delta_du_mekong_reference]]
+- [[europe_occidentale_reconstructee_reference]]
+- [[fonds_souverain_arctique_scandinave_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
+- [[kalaallit_nunaat_sovereign_fund_reference]]
+- [[milices_concurrentes_des_droits_de_passage_reference]]
+- [[murmansk_transit_arctique_reference]]
+- [[ong_de_tracabilite_des_ressources_critiques_reference]]
+- [[operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference]]
+- [[ouagadougou_polytechnique_reference]]
+- [[pacifique_sud_resilience_network_reference]]
+- [[reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference]]
+- [[reseau_hospitalier_hybride_eurasiatique_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

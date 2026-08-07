@@ -4,6 +4,7 @@ type: instance
 slug: tours_nexus7_fortress_world
 entite: tours_nexus7
 scenario: fortress_world
+statut: officialise_enrichi
 localisation:
   zone: tours_nexus7
   lieu: Tours Nexus7 — Archipel multi-sites (Lagos, Jakarta, Mexico-Fortaleza, São Paulo, Ourrassol-Centre)
@@ -38,24 +39,24 @@ zone_systemique:
     - économie
 
 alliances:
-    - nexus_biosyn_fortress_world
-    - nexcore_atlantique_infrastructure_fortress_world
-    - pacte_forteresses_souveraines_fortress_world
-    - systemes_de_scoring_de_productivite_corporative_fortress_world
-    - complexe_orentchev_almaty_fortress_world
-    - conseil_moscou_est_fortress_world
-    - reseaux_prives_de_securite_aux_frontieres_fortress_world
-
+- complexe_orentchev_almaty_fortress_world
+- conseil_moscou_est_fortress_world
+- dispositifs_de_surveillance_numerique_souveraine_fortress_world
+- nexcore_atlantique_infrastructure_fortress_world
+- nexus_biosyn_fortress_world
+- pacte_forteresses_souveraines_fortress_world
+- reseaux_prives_de_securite_aux_frontieres_fortress_world
+- systemes_de_scoring_de_productivite_corporative_fortress_world
 oppositions:
-    - campements_seuils_fermes_fortress_world
-    - collectifs_du_seuil_fortress_world
-    - alliance_sanitaire_des_populations_exclues_fortress_world
-    - mouvement_commun_midwest_fortress_world
-    - mouvement_des_communes_du_rust_belt_fortress_world
-    - coalitions_des_deplaces_et_apatrides_fortress_world
-    - collectifs_de_reappropriation_energetique_peripherique_fortress_world
-    - factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world
-
+- alliance_sanitaire_des_populations_exclues_fortress_world
+- campements_seuils_fermes_fortress_world
+- cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- collectifs_de_reappropriation_energetique_peripherique_fortress_world
+- collectifs_du_seuil_fortress_world
+- factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world
+- mouvement_commun_midwest_fortress_world
+- mouvement_des_communes_du_rust_belt_fortress_world
 type_relation_dominante: symbiose
 
 annee_debut: 2026
@@ -100,12 +101,30 @@ Administration autonome de complexes urbains verticaux offrant logement pressuri
 - [[demographie_mobilite_humaine]]
 - [[systeme_economique_redistribution]]
 
-## Relations
-**Alliés** : [[nexus_biosyn_fortress_world]], [[nexcore_atlantique_infrastructure_fortress_world]], [[pacte_forteresses_souveraines_fortress_world]], [[systemes_de_scoring_de_productivite_corporative_fortress_world]], [[complexe_orentchev_almaty_fortress_world]], [[conseil_moscou_est_fortress_world]], [[reseaux_prives_de_securite_aux_frontieres_fortress_world]]
-**Opposants** : [[campements_seuils_fermes_fortress_world]], [[collectifs_du_seuil_fortress_world]], [[alliance_sanitaire_des_populations_exclues_fortress_world]], [[mouvement_commun_midwest_fortress_world]], [[mouvement_des_communes_du_rust_belt_fortress_world]], [[coalitions_des_deplaces_et_apatrides_fortress_world]], [[collectifs_de_reappropriation_energetique_peripherique_fortress_world]], [[factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world]]
 
 ## Description journalistique
 Depuis les tours vitrées qui percent le ciel brûlé de Lagos, de Jakarta ou de Mexico-Fortaleza, les résidents accrédités des Nexus7 regardent en bas avec la sérénité de ceux qui ont signé le bon contrat. À l'intérieur : air filtré, rations protéinées à spectre complet, médecins disponibles vingt-quatre heures sur vingt-quatre et patrouilles algorithmiques qui n'ont jamais entendu le mot « grève ». À l'extérieur : les Seuils Fermés, les campements périphériques, les zones résiduelles que les blocs n'administrent plus. Les Tours Nexus7 ne cachent pas cette frontière — elles en font leur argument commercial central. En 2098, leur chiffre d'affaires consolidé dépasse celui de quarante-sept États membres de l'ONU-Éclat, et leurs conventions de coexistence avec les blocs souverains sont renegociées tous les dix-huit mois sous la pression de régimes qui les craignent autant qu'ils en ont besoin.
 
 ## Tensions narratives
 Les blocs souverains exigent de plus en plus l'intégration des tours dans leurs systèmes de surveillance nationale, menaçant l'indépendance contractuelle qui fait la valeur du produit Nexus7 — la corporation résiste, mais jusqu'où ? Des réseaux de passeurs ont percé plusieurs sas périphériques dans les complexes de Lagos-Nord et de São Paulo-Centre, introduisant des résidents non accrédités dont certains ont disparu sans trace dans les registres internes. Enfin, des factions internes à Nexus7 débattent en secret d'une sécession totale — transformer l'archipel en entité politique souveraine supranationale, dernier produit premium dans un monde où la souveraineté elle-même est à vendre.
+
+## Relations
+**Alliés :**
+- [[complexe_orentchev_almaty_fortress_world]]
+- [[conseil_moscou_est_fortress_world]]
+- [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
+- [[nexcore_atlantique_infrastructure_fortress_world]]
+- [[nexus_biosyn_fortress_world]]
+- [[pacte_forteresses_souveraines_fortress_world]]
+- [[reseaux_prives_de_securite_aux_frontieres_fortress_world]]
+- [[systemes_de_scoring_de_productivite_corporative_fortress_world]]
+**Opposants :**
+- [[alliance_sanitaire_des_populations_exclues_fortress_world]]
+- [[campements_seuils_fermes_fortress_world]]
+- [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[collectifs_de_reappropriation_energetique_peripherique_fortress_world]]
+- [[collectifs_du_seuil_fortress_world]]
+- [[factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world]]
+- [[mouvement_commun_midwest_fortress_world]]
+- [[mouvement_des_communes_du_rust_belt_fortress_world]]

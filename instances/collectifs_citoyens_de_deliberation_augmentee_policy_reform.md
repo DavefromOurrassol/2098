@@ -31,8 +31,30 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform
+- collectifs_de_gouvernance_communautaire_decentralisee_policy_reform
+- collectifs_de_hackers_biospheriques_policy_reform
+- consortium_des_villes_etats_durables_policy_reform
+- courants_post_technocratiques_de_reconquete_democratique_policy_reform
+- federation_des_mutuelles_biotech_policy_reform
+- front_des_communes_algorithmiques_policy_reform
+- leena_vainala_policy_reform
+- mouvement_pour_la_justice_ecologique_communautaire_policy_reform
+- mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform
+- reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
+- reseau_des_journalistes_d_investigation_energetique_policy_reform
+- syndicat_des_ingenieurs_orbitaux_policy_reform
+- tribunal_algorithmique_de_bruxelles_policy_reform
+oppositions:
+- bloc_des_nations_a_economie_carbone_controlee_policy_reform
+- bureau_gouvernance_algorithmique_policy_reform
+- courant_autoritaire_recuperateur_du_vocabulaire_communautaire_policy_reform
+- faction_regulatrice_dure_au_sein_du_cei_policy_reform
+- factions_internes_dissidentes_des_contributeurs_historiques_policy_reform
+- front_souverainiste_de_l_information_regionale_policy_reform
+- front_techno_utopiste_de_la_decision_automatisee_policy_reform
+- union_technocratique_eurasiatique_policy_reform
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -97,6 +119,33 @@ La tension fondamentale de ces collectifs réside dans leur dépendance aux outi
 - [[gouvernance_institutions]]
 - [[technologie_information]]
 - [[valeurs_culture_tempo_sociale]]
+
+
+## Relations
+**Alliés :**
+- [[collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform]]
+- [[collectifs_de_gouvernance_communautaire_decentralisee_policy_reform]]
+- [[collectifs_de_hackers_biospheriques_policy_reform]]
+- [[consortium_des_villes_etats_durables_policy_reform]]
+- [[courants_post_technocratiques_de_reconquete_democratique_policy_reform]]
+- [[federation_des_mutuelles_biotech_policy_reform]]
+- [[front_des_communes_algorithmiques_policy_reform]]
+- [[leena_vainala_policy_reform]]
+- [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]]
+- [[mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform]]
+- [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]]
+- [[reseau_des_journalistes_d_investigation_energetique_policy_reform]]
+- [[syndicat_des_ingenieurs_orbitaux_policy_reform]]
+- [[tribunal_algorithmique_de_bruxelles_policy_reform]]
+**Opposants :**
+- [[bloc_des_nations_a_economie_carbone_controlee_policy_reform]]
+- [[bureau_gouvernance_algorithmique_policy_reform]]
+- [[courant_autoritaire_recuperateur_du_vocabulaire_communautaire_policy_reform]]
+- [[faction_regulatrice_dure_au_sein_du_cei_policy_reform]]
+- [[factions_internes_dissidentes_des_contributeurs_historiques_policy_reform]]
+- [[front_souverainiste_de_l_information_regionale_policy_reform]]
+- [[front_techno_utopiste_de_la_decision_automatisee_policy_reform]]
+- [[union_technocratique_eurasiatique_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

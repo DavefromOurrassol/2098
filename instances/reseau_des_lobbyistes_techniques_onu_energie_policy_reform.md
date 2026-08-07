@@ -31,8 +31,21 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_internationale_de_l_energie_reformatee_aier_policy_reform
+- conglomerats_d_automatisation_industrielle_integrale_policy_reform
+- consortium_helios_policy_reform
+- consortiums_agro_industriels_du_bassin_fluvial_policy_reform
+- consortiums_d_optimisation_rh_algorithmique_policy_reform
+- factions_technocratiques_de_la_marchandisation_hydrique_policy_reform
+- front_des_souverainistes_energetiques_policy_reform
+- lobbies_des_energies_fossiles_residuelles_policy_reform
+oppositions:
+- agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
+- collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform
+- conseil_regulation_ressources_policy_reform
+- mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform
+- reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -97,6 +110,24 @@ Le réseau navigue en permanence sur la ligne de crête entre expertise légitim
 ## Variables influencées
 - [[energie_ressources_critiques]]
 - [[gouvernance_institutions]]
+
+
+## Relations
+**Alliés :**
+- [[agence_internationale_de_l_energie_reformatee_aier_policy_reform]]
+- [[conglomerats_d_automatisation_industrielle_integrale_policy_reform]]
+- [[consortium_helios_policy_reform]]
+- [[consortiums_agro_industriels_du_bassin_fluvial_policy_reform]]
+- [[consortiums_d_optimisation_rh_algorithmique_policy_reform]]
+- [[factions_technocratiques_de_la_marchandisation_hydrique_policy_reform]]
+- [[front_des_souverainistes_energetiques_policy_reform]]
+- [[lobbies_des_energies_fossiles_residuelles_policy_reform]]
+**Opposants :**
+- [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]
+- [[collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform]]
+- [[conseil_regulation_ressources_policy_reform]]
+- [[mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform]]
+- [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

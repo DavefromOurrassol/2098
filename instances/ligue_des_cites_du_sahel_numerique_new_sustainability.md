@@ -4,6 +4,7 @@ type: instance
 slug: ligue_des_cites_du_sahel_numerique_new_sustainability
 entite: ligue_des_cites_du_sahel_numerique
 scenario: new_sustainability
+statut: officialise_enrichi
 localisation:
   zone: ouagadougou_nouvelle_ctsa
   lieu: Ouagadougou Nouvelle — Siège tournant de la CTSA
@@ -38,23 +39,28 @@ zone_systemique:
     - société
 
 alliances:
-    - reseau_des_communs_numeriques_globaux_new_sustainability
-    - mouvement_communautaire_des_micro_grids_energetiques_new_sustainability
-    - reseau_des_villes_regeneratives_new_sustainability
-    - fonds_mondial_de_redistribution_technologique_new_sustainability
-    - consortium_d_audit_algorithmique_ouvert_new_sustainability
-    - reseau_des_ingenieurs_climatiques_du_sud_global_new_sustainability
-    - mouvement_pour_l_autodetermination_territoriale_new_sustainability
-    - reseau_des_communs_productifs_regeneratifs_new_sustainability
-
+- communautes_locales_exclues_des_corridors_new_sustainability
+- consortium_africain_de_biotechnologies_sociales_new_sustainability
+- consortium_d_audit_algorithmique_ouvert_new_sustainability
+- fonds_mondial_de_redistribution_technologique_new_sustainability
+- hub_nairobi_kigali_new_sustainability
+- mouvement_communautaire_des_micro_grids_energetiques_new_sustainability
+- mouvement_pour_l_autodetermination_territoriale_new_sustainability
+- parlement_territoires_nairobi_new_sustainability
+- reseau_des_communs_numeriques_globaux_new_sustainability
+- reseau_des_communs_productifs_regeneratifs_new_sustainability
+- reseau_des_ingenieurs_climatiques_du_sud_global_new_sustainability
+- reseau_des_villes_regeneratives_new_sustainability
 oppositions:
-    - enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability
-    - etats_souverainistes_anti_reseau_new_sustainability
-    - factions_internes_pro_opacite_des_parametres_new_sustainability
-    - internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
-    - coalition_des_industries_extractives_residuelles_new_sustainability
-    - lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability
-
+- agence_mondiale_de_modelisation_climatique_ammc_new_sustainability
+- bloc_des_architectes_d_efficience_algorithmique_new_sustainability
+- coalition_des_industries_extractives_residuelles_new_sustainability
+- enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability
+- etats_souverainistes_anti_reseau_new_sustainability
+- factions_internes_pro_opacite_des_parametres_new_sustainability
+- factions_technocratiques_du_conseil_de_regulation_informationnelle_global_new_sustainability
+- internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
+- lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability
 type_relation_dominante: alliance stratégique
 
 annee_debut: 2041
@@ -98,12 +104,34 @@ La CTSA administre un réseau d'infrastructures communes — micro-grids solaire
 - [[gouvernance_institutions]]
 - [[organisation_territoires]]
 
-## Relations
-**Alliés** : [[reseau_des_communs_numeriques_globaux_new_sustainability]], [[mouvement_communautaire_des_micro_grids_energetiques_new_sustainability]], [[reseau_des_villes_regeneratives_new_sustainability]], [[fonds_mondial_de_redistribution_technologique_new_sustainability]], [[consortium_d_audit_algorithmique_ouvert_new_sustainability]], [[reseau_des_ingenieurs_climatiques_du_sud_global_new_sustainability]], [[mouvement_pour_l_autodetermination_territoriale_new_sustainability]], [[reseau_des_communs_productifs_regeneratifs_new_sustainability]]
-**Opposants** : [[enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability]], [[etats_souverainistes_anti_reseau_new_sustainability]], [[factions_internes_pro_opacite_des_parametres_new_sustainability]], [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]], [[coalition_des_industries_extractives_residuelles_new_sustainability]], [[lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability]]
 
 ## Description journalistique
 Depuis son siège tournant — cette année à Ouagadougou Nouvelle, l'an prochain à Niamey Solaire — la Confédération des Territoires Sahéliens Autonomes réunit chaque trimestre les délégués de quarante-trois cités pour statuer sur les protocoles qui font tourner l'une des architectures numériques les plus copiées au monde. Fondée sur les cendres des politiques d'aide conditionnelle des années 2030, la CTSA a démontré qu'une ceinture de territoires longtemps qualifiés de 'périphérie fragile' pouvait produire des standards technologiques exportés jusqu'en Bolivie et au Kazakhstan. Ses partisans la décrivent comme la preuve vivante que la souveraineté technique n'est pas un privilège des riches. Ses critiques, de plus en plus nombreux au sein même de l'organisation, se demandent si Dakar et Addis-Abeba — les deux nœuds les plus puissants du réseau — ne sont pas en train de reproduire, à l'échelle confédérale, exactement les rapports de force que la Ligue promettait d'abolir.
 
 ## Tensions narratives
 La montée en puissance des cités-nœuds de Dakar et Addis-Abeba crée une fracture silencieuse entre les membres fondateurs riches en données et les cités périphériques qui se sentent de nouveau marginalisées — cette fois par leurs propres alliés. Par ailleurs, plusieurs demandes d'adhésion émanant de territoires d'Asie centrale poussent la CTSA à définir si elle reste un projet africain ou devient une architecture globale, risquant de diluer son identité fondatrice. Enfin, la pression croissante du Conseil de Gouvernance Algorithmique Intégrée pour intégrer les protocoles CTSA dans le cadre mondial soulève une question existentielle : l'absorption dans la gouvernance globale est-elle consécration ou dissolution ?
+
+## Relations
+**Alliés :**
+- [[communautes_locales_exclues_des_corridors_new_sustainability]]
+- [[consortium_africain_de_biotechnologies_sociales_new_sustainability]]
+- [[consortium_d_audit_algorithmique_ouvert_new_sustainability]]
+- [[fonds_mondial_de_redistribution_technologique_new_sustainability]]
+- [[hub_nairobi_kigali_new_sustainability]]
+- [[mouvement_communautaire_des_micro_grids_energetiques_new_sustainability]]
+- [[mouvement_pour_l_autodetermination_territoriale_new_sustainability]]
+- [[parlement_territoires_nairobi_new_sustainability]]
+- [[reseau_des_communs_numeriques_globaux_new_sustainability]]
+- [[reseau_des_communs_productifs_regeneratifs_new_sustainability]]
+- [[reseau_des_ingenieurs_climatiques_du_sud_global_new_sustainability]]
+- [[reseau_des_villes_regeneratives_new_sustainability]]
+**Opposants :**
+- [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]]
+- [[bloc_des_architectes_d_efficience_algorithmique_new_sustainability]]
+- [[coalition_des_industries_extractives_residuelles_new_sustainability]]
+- [[enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability]]
+- [[etats_souverainistes_anti_reseau_new_sustainability]]
+- [[factions_internes_pro_opacite_des_parametres_new_sustainability]]
+- [[factions_technocratiques_du_conseil_de_regulation_informationnelle_global_new_sustainability]]
+- [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]]
+- [[lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability]]

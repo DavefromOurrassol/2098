@@ -31,8 +31,21 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform
+- courants_post_technocratiques_de_reconquete_democratique_policy_reform
+- factions_internes_pro_desaugmentation_totale_policy_reform
+- front_souverainiste_de_l_information_regionale_policy_reform
+- reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
+- reseau_des_journalistes_d_investigation_energetique_policy_reform
+oppositions:
+- bureau_gouvernance_algorithmique_policy_reform
+- conseil_de_gouvernance_de_l_information_policy_reform
+- conseil_regulation_algorithmique_policy_reform
+- consortium_des_ia_editoriales_certifiees_policy_reform
+- directive_kontinuum_policy_reform
+- oracle_des_seuils_policy_reform
+- prisme_global_policy_reform
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -94,6 +107,24 @@ Le réseau est tiraillé entre son idéal d'indépendance absolue et la réalit�
 - [[gouvernance_institutions]]
 - [[technologie_information]]
 - [[valeurs_culture_tempo_sociale]]
+
+
+## Relations
+**Alliés :**
+- [[collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform]]
+- [[courants_post_technocratiques_de_reconquete_democratique_policy_reform]]
+- [[factions_internes_pro_desaugmentation_totale_policy_reform]]
+- [[front_souverainiste_de_l_information_regionale_policy_reform]]
+- [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]]
+- [[reseau_des_journalistes_d_investigation_energetique_policy_reform]]
+**Opposants :**
+- [[bureau_gouvernance_algorithmique_policy_reform]]
+- [[conseil_de_gouvernance_de_l_information_policy_reform]]
+- [[conseil_regulation_algorithmique_policy_reform]]
+- [[consortium_des_ia_editoriales_certifiees_policy_reform]]
+- [[directive_kontinuum_policy_reform]]
+- [[oracle_des_seuils_policy_reform]]
+- [[prisme_global_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

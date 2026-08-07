@@ -34,8 +34,31 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- bloc_des_gouvernements_souverainistes_hydriques_new_sustainability
+- bloc_eurasien_souverainiste_new_sustainability
+- coalition_anti_algorithme_des_autonomies_locales_new_sustainability
+- coalition_anti_fiscalite_universelle_new_sustainability
+- etats_souverainistes_anti_reseau_new_sustainability
+- factions_souverainistes_des_blocs_peripheriques_new_sustainability
+- internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
+- kalaallit_nunaat_sovereign_fund_new_sustainability
+- lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability
+- mouvement_pour_l_autodetermination_territoriale_new_sustainability
+- reseaux_d_information_souverainistes_fermes_new_sustainability
+- souverainistes_du_bloc_eurasien_new_sustainability
+oppositions:
+- arctic_passage_authority_new_sustainability
+- bloc_des_architectes_d_efficience_algorithmique_new_sustainability
+- bureau_gouvernance_algorithmique_new_sustainability
+- centre_institutionnel_geneve_new_sustainability
+- conseil_de_deliberation_augmentee_de_l_union_nordique_new_sustainability
+- conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability
+- conseil_regulation_ressources_new_sustainability
+- great_lakes_autonomous_compact_new_sustainability
+- great_lakes_compact_new_sustainability
+- reseau_des_agences_climatiques_regionales_new_sustainability
+- union_des_blocs_energetiques_regionaux_new_sustainability
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -100,6 +123,34 @@ Le mouvement est écartelé entre ses factions conservationnistes, qui veulent g
 - [[organisation_territoires]]
 - [[gouvernance_institutions]]
 - [[energie_ressources_critiques]]
+
+
+## Relations
+**Alliés :**
+- [[bloc_des_gouvernements_souverainistes_hydriques_new_sustainability]]
+- [[bloc_eurasien_souverainiste_new_sustainability]]
+- [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]]
+- [[coalition_anti_fiscalite_universelle_new_sustainability]]
+- [[etats_souverainistes_anti_reseau_new_sustainability]]
+- [[factions_souverainistes_des_blocs_peripheriques_new_sustainability]]
+- [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]]
+- [[kalaallit_nunaat_sovereign_fund_new_sustainability]]
+- [[lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability]]
+- [[mouvement_pour_l_autodetermination_territoriale_new_sustainability]]
+- [[reseaux_d_information_souverainistes_fermes_new_sustainability]]
+- [[souverainistes_du_bloc_eurasien_new_sustainability]]
+**Opposants :**
+- [[arctic_passage_authority_new_sustainability]]
+- [[bloc_des_architectes_d_efficience_algorithmique_new_sustainability]]
+- [[bureau_gouvernance_algorithmique_new_sustainability]]
+- [[centre_institutionnel_geneve_new_sustainability]]
+- [[conseil_de_deliberation_augmentee_de_l_union_nordique_new_sustainability]]
+- [[conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability]]
+- [[conseil_regulation_ressources_new_sustainability]]
+- [[great_lakes_autonomous_compact_new_sustainability]]
+- [[great_lakes_compact_new_sustainability]]
+- [[reseau_des_agences_climatiques_regionales_new_sustainability]]
+- [[union_des_blocs_energetiques_regionaux_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

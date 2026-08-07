@@ -31,8 +31,34 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- collectifs_academiques_independants_reference
+- conseil_de_geneve_pour_les_droits_biosociaux_reference
+- delta_du_gange_reference
+- helsinki_communs_numeriques_reference
+- pacifique_sud_archipels_flottants_reference
+- pacifique_sud_resilience_network_reference
+- reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference
+- reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference
+- reseau_meshcommons_netsolidaire_reference
+- tbilissi_noeud_mnemos_reference
+- tribunal_algorithmique_de_bruxelles_reference
+oppositions:
+- alliance_blocs_souverains_reference
+- bloc_des_souverainistes_climatiques_reference
+- bureaux_de_regulation_informationnelle_reference
+- coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference
+- coalition_pour_la_souverainete_numerique_nationale_reference
+- datasovereign_reference
+- directive_kontinuum_reference
+- etats_a_tendance_centraliste_numerique_reference
+- gouvernements_a_regime_de_productivite_mandatee_reference
+- neuroharmonics_reference
+- operateurs_de_zones_economiques_speciales_periurbaines_reference
+- optiflow_logistics_reference
+- plateformes_centralisees_de_narration_officielle_reference
+- plateformes_d_optimisation_territoriale_par_ia_reference
+- singapour_est_nexcore_reference
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -97,6 +123,37 @@ Le Mouvement est écartelé entre son idéal universaliste de libre circulation 
 - [[demographie_mobilite_humaine]]
 - [[frontieres_du_systeme]]
 - [[technologie_information]]
+
+
+## Relations
+**Alliés :**
+- [[collectifs_academiques_independants_reference]]
+- [[conseil_de_geneve_pour_les_droits_biosociaux_reference]]
+- [[delta_du_gange_reference]]
+- [[helsinki_communs_numeriques_reference]]
+- [[pacifique_sud_archipels_flottants_reference]]
+- [[pacifique_sud_resilience_network_reference]]
+- [[reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference]]
+- [[reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference]]
+- [[reseau_meshcommons_netsolidaire_reference]]
+- [[tbilissi_noeud_mnemos_reference]]
+- [[tribunal_algorithmique_de_bruxelles_reference]]
+**Opposants :**
+- [[alliance_blocs_souverains_reference]]
+- [[bloc_des_souverainistes_climatiques_reference]]
+- [[bureaux_de_regulation_informationnelle_reference]]
+- [[coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference]]
+- [[coalition_pour_la_souverainete_numerique_nationale_reference]]
+- [[datasovereign_reference]]
+- [[directive_kontinuum_reference]]
+- [[etats_a_tendance_centraliste_numerique_reference]]
+- [[gouvernements_a_regime_de_productivite_mandatee_reference]]
+- [[neuroharmonics_reference]]
+- [[operateurs_de_zones_economiques_speciales_periurbaines_reference]]
+- [[optiflow_logistics_reference]]
+- [[plateformes_centralisees_de_narration_officielle_reference]]
+- [[plateformes_d_optimisation_territoriale_par_ia_reference]]
+- [[singapour_est_nexcore_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

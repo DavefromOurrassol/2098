@@ -33,8 +33,22 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- collectif_des_mediateurs_cognitifs_internationaux_new_sustainability
+- collectifs_de_deplaces_climatiques_non_representes_new_sustainability
+- conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability
+- hub_nairobi_kigali_new_sustainability
+- pacifique_sud_resilience_network_new_sustainability
+- parlement_territoires_nairobi_new_sustainability
+- prisme_global_new_sustainability
+- reseau_des_agences_climatiques_regionales_new_sustainability
+- reseau_des_communs_numeriques_globaux_new_sustainability
+oppositions:
+- coalition_anti_algorithme_des_autonomies_locales_new_sustainability
+- collectifs_de_desobeissance_algorithmique_new_sustainability
+- collectifs_de_narration_sauvage_hors_protocole_new_sustainability
+- factions_souverainistes_des_blocs_peripheriques_new_sustainability
+- reseaux_d_information_souverainistes_fermes_new_sustainability
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -98,6 +112,25 @@ L'Observatoire se trouve en permanence écartelé entre sa mission d'objectivit�
 - [[climat_environnement_global]]
 - [[technologie_information]]
 - [[valeurs_culture_tempo_sociale]]
+
+
+## Relations
+**Alliés :**
+- [[collectif_des_mediateurs_cognitifs_internationaux_new_sustainability]]
+- [[collectifs_de_deplaces_climatiques_non_representes_new_sustainability]]
+- [[conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability]]
+- [[hub_nairobi_kigali_new_sustainability]]
+- [[pacifique_sud_resilience_network_new_sustainability]]
+- [[parlement_territoires_nairobi_new_sustainability]]
+- [[prisme_global_new_sustainability]]
+- [[reseau_des_agences_climatiques_regionales_new_sustainability]]
+- [[reseau_des_communs_numeriques_globaux_new_sustainability]]
+**Opposants :**
+- [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]]
+- [[collectifs_de_desobeissance_algorithmique_new_sustainability]]
+- [[collectifs_de_narration_sauvage_hors_protocole_new_sustainability]]
+- [[factions_souverainistes_des_blocs_peripheriques_new_sustainability]]
+- [[reseaux_d_information_souverainistes_fermes_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

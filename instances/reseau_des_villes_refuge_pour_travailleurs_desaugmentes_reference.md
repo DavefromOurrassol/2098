@@ -30,8 +30,24 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- conseil_de_geneve_pour_les_droits_biosociaux_reference
+- cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference
+- federation_des_cliniques_autonomes_reference
+- internationale_travailleurs_augmentes_reference
+- mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
+- reseau_des_administrations_locales_rurales_participatives_reference
+- sao_paulo_ita_reference
+- syndicats_de_travail_rural_hybride_reference
+- syndicats_de_travailleurs_de_la_transition_energetique_reference
+oppositions:
+- algorithmic_labor_exchange_reference
+- consortium_augmentwork_reference
+- consortiums_prives_d_extraction_de_ressources_critiques_reference
+- lobbies_industriels_des_etats_non_signataires_reference
+- neuroharmonics_reference
+- operateurs_de_zones_economiques_speciales_periurbaines_reference
+- plateformes_d_optimisation_territoriale_par_ia_reference
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -92,6 +108,27 @@ Le Réseau est pris en étau entre une logique de survie qui le pousse à accept
 - [[demographie_mobilite_humaine]]
 - [[systemes_productifs_travail]]
 - [[organisation_territoires]]
+
+
+## Relations
+**Alliés :**
+- [[conseil_de_geneve_pour_les_droits_biosociaux_reference]]
+- [[cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference]]
+- [[federation_des_cliniques_autonomes_reference]]
+- [[internationale_travailleurs_augmentes_reference]]
+- [[mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference]]
+- [[reseau_des_administrations_locales_rurales_participatives_reference]]
+- [[sao_paulo_ita_reference]]
+- [[syndicats_de_travail_rural_hybride_reference]]
+- [[syndicats_de_travailleurs_de_la_transition_energetique_reference]]
+**Opposants :**
+- [[algorithmic_labor_exchange_reference]]
+- [[consortium_augmentwork_reference]]
+- [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[lobbies_industriels_des_etats_non_signataires_reference]]
+- [[neuroharmonics_reference]]
+- [[operateurs_de_zones_economiques_speciales_periurbaines_reference]]
+- [[plateformes_d_optimisation_territoriale_par_ia_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

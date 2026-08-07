@@ -4,6 +4,7 @@ type: instance
 slug: les_veilleurs_du_fleuve_policy_reform
 entite: les_veilleurs_du_fleuve
 scenario: policy_reform
+statut: officialise_enrichi
 localisation:
   zone: hub_africain_gouvernance
   lieu: Mékong et deltas du Niger

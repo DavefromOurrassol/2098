@@ -33,8 +33,35 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- bloc_eurasien_souverainiste_new_sustainability
+- coalition_anti_fiscalite_universelle_new_sustainability
+- etats_souverainistes_anti_reseau_new_sustainability
+- factions_souverainistes_des_blocs_peripheriques_new_sustainability
+- internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
+- mouvement_pour_l_autodetermination_territoriale_new_sustainability
+- mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability
+- reseaux_d_information_souverainistes_fermes_new_sustainability
+- souverainistes_du_bloc_eurasien_new_sustainability
+oppositions:
+- agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
+- amara_diallo_nkosi_new_sustainability
+- centre_institutionnel_geneve_new_sustainability
+- conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability
+- conseil_technocratique_de_coordination_regionale_new_sustainability
+- conseil_technocratique_de_gouvernance_alimentaire_new_sustainability
+- consortium_amazonia_viva_new_sustainability
+- consortium_de_regeneration_planetaire_new_sustainability
+- great_lakes_autonomous_compact_new_sustainability
+- great_lakes_compact_new_sustainability
+- les_veilleurs_du_fleuve_new_sustainability
+- operateurs_de_fusion_energetique_regionaux_new_sustainability
+- parlement_deliberatif_mondial_new_sustainability
+- parlement_territoires_nairobi_new_sustainability
+- reseau_des_bio_communs_regionaux_new_sustainability
+- reseau_des_villes_regeneratives_new_sustainability
+- tribunal_algorithmique_de_bruxelles_new_sustainability
+- union_des_blocs_energetiques_regionaux_new_sustainability
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -103,6 +130,38 @@ Le Bloc est pris en étau entre sa raison d'être — défendre la souveraineté
 - [[geopolitique_conflits]]
 - [[gouvernance_institutions]]
 - [[energie_ressources_critiques]]
+
+
+## Relations
+**Alliés :**
+- [[bloc_eurasien_souverainiste_new_sustainability]]
+- [[coalition_anti_fiscalite_universelle_new_sustainability]]
+- [[etats_souverainistes_anti_reseau_new_sustainability]]
+- [[factions_souverainistes_des_blocs_peripheriques_new_sustainability]]
+- [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]]
+- [[mouvement_pour_l_autodetermination_territoriale_new_sustainability]]
+- [[mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability]]
+- [[reseaux_d_information_souverainistes_fermes_new_sustainability]]
+- [[souverainistes_du_bloc_eurasien_new_sustainability]]
+**Opposants :**
+- [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]]
+- [[amara_diallo_nkosi_new_sustainability]]
+- [[centre_institutionnel_geneve_new_sustainability]]
+- [[conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability]]
+- [[conseil_technocratique_de_coordination_regionale_new_sustainability]]
+- [[conseil_technocratique_de_gouvernance_alimentaire_new_sustainability]]
+- [[consortium_amazonia_viva_new_sustainability]]
+- [[consortium_de_regeneration_planetaire_new_sustainability]]
+- [[great_lakes_autonomous_compact_new_sustainability]]
+- [[great_lakes_compact_new_sustainability]]
+- [[les_veilleurs_du_fleuve_new_sustainability]]
+- [[operateurs_de_fusion_energetique_regionaux_new_sustainability]]
+- [[parlement_deliberatif_mondial_new_sustainability]]
+- [[parlement_territoires_nairobi_new_sustainability]]
+- [[reseau_des_bio_communs_regionaux_new_sustainability]]
+- [[reseau_des_villes_regeneratives_new_sustainability]]
+- [[tribunal_algorithmique_de_bruxelles_new_sustainability]]
+- [[union_des_blocs_energetiques_regionaux_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

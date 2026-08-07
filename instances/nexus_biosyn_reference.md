@@ -4,6 +4,7 @@ type: instance
 slug: nexus_biosyn_reference
 entite: nexus_biosyn
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: null
   lieu: null
@@ -38,17 +39,19 @@ zone_systemique:
     - société
 
 alliances:
-    - fonds_monetaire_climatique_fmc_reference
-    - consortium_agro_pacifique_policy_reform
-    - reseau_hospitalier_hybride_eurasiatique_reference
-    - agrisynth_reference
-
+- agrisynth_reference
+- amazonie_consortium_viva_reference
+- consortium_agro_pacifique_policy_reform
+- fonds_monetaire_climatique_fmc_reference
+- reseau_hospitalier_hybride_eurasiatique_reference
 oppositions:
-    - coalition_des_semences_libres_policy_reform
-    - gouvernements_du_bloc_sahelien_autonome_reference
-    - collectifs_de_biopiraterie_inversee_reference
-    - regulateurs_de_l_union_continentale_africaine_reference
-
+- coalition_des_semences_libres_policy_reform
+- collectifs_de_biopiraterie_inversee_reference
+- conseil_de_geneve_pour_les_droits_biosociaux_reference
+- consortium_africain_de_biotechnologies_sociales_reference
+- federation_des_cliniques_autonomes_reference
+- gouvernements_du_bloc_sahelien_autonome_reference
+- regulateurs_de_l_union_continentale_africaine_reference
 type_relation_dominante: dépendance
 
 annee_debut: 2026
@@ -92,12 +95,25 @@ Nexus BioSyn licencie ses semences synthétiques aux coopératives agricoles ré
 - [[systemes_productifs_travail]]
 - [[climat_environnement_global]]
 
-## Relations
-**Alliés** : [[fonds_monetaire_climatique_fmc_reference]], [[consortium_agro_pacifique_policy_reform]], [[reseau_hospitalier_hybride_eurasiatique_reference]], [[agrisynth_reference]]
-**Opposants** : [[coalition_des_semences_libres_policy_reform]], [[gouvernements_du_bloc_sahelien_autonome_reference]], [[collectifs_de_biopiraterie_inversee_reference]], [[regulateurs_de_l_union_continentale_africaine_reference]]
 
 ## Description journalistique
 En 2098, Nexus BioSyn ne fait plus vraiment la une — elle est partout, donc nulle part. Ses logos discrets ornent les sachets de semences distribuées aux coopératives du delta du Mékong comme les interfaces des cliniques cellulaires de Nairobi ou de Guadalajara. La firme, dont le siège flotte entre Genève, Singapour et une entité juridique domiciliée dans les eaux neutres de l'Atlantique Nord, revendique un rôle de 'gardien de la continuité biologique mondiale'. Ses détracteurs, eux, parlent d'une féodalité moléculaire : vous mangez leurs graines, votre corps répond à leurs thérapies, et chaque printemps vous resignez un contrat de licence pour avoir le droit de planter. Le fragile équilibre de 2098 tient en partie à ce que Nexus BioSyn ne peut pas se permettre que le monde s'effondre — ses marges en dépendent.
 
 ## Tensions narratives
 La montée des mouvements OpenSeed, qui revendiquent le droit à des semences non brevetées comme droit fondamental, pourrait forcer un premier vrai procès devant le Tribunal Climatique International — avec Nexus BioSyn en position d'accusé historique. Par ailleurs, la firme fait face à une bifurcation interne : une faction dirigeante souhaite ouvrir partiellement les brevets pour prévenir une régulation forcée, quand une autre mise sur l'accélération du verrouillage avant que les États ne retrouvent de la souveraineté biologique. En toile de fond, des rumeurs persistantes évoquent des 'clauses de dormance' intégrées aux semences de quatrième génération — une stérilisation programmable activable en cas de défaut de paiement de licence.
+
+## Relations
+**Alliés :**
+- [[agrisynth_reference]]
+- [[amazonie_consortium_viva_reference]]
+- [[consortium_agro_pacifique_policy_reform]]
+- [[fonds_monetaire_climatique_fmc_reference]]
+- [[reseau_hospitalier_hybride_eurasiatique_reference]]
+**Opposants :**
+- [[coalition_des_semences_libres_policy_reform]]
+- [[collectifs_de_biopiraterie_inversee_reference]]
+- [[conseil_de_geneve_pour_les_droits_biosociaux_reference]]
+- [[consortium_africain_de_biotechnologies_sociales_reference]]
+- [[federation_des_cliniques_autonomes_reference]]
+- [[gouvernements_du_bloc_sahelien_autonome_reference]]
+- [[regulateurs_de_l_union_continentale_africaine_reference]]

@@ -4,6 +4,7 @@ type: instance
 slug: prisme_global_policy_reform
 entite: prisme_global
 scenario: policy_reform
+statut: officialise_enrichi
 localisation:
   zone: null
   lieu: null
@@ -37,15 +38,14 @@ zone_systemique:
     - IA
 
 alliances:
-    - conseil_de_gouvernance_de_l_information_policy_reform
-    - consortium_des_ia_editoriales_certifiees_policy_reform
-    - reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform
-
+- conseil_de_gouvernance_de_l_information_policy_reform
+- consortium_des_ia_editoriales_certifiees_policy_reform
+- directive_kontinuum_policy_reform
+- reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform
 oppositions:
-    - les_hors_prisme_policy_reform
-    - front_souverainiste_de_l_information_regionale_policy_reform
-    - factions_internes_dissidentes_des_contributeurs_historiques_policy_reform
-
+- factions_internes_dissidentes_des_contributeurs_historiques_policy_reform
+- front_souverainiste_de_l_information_regionale_policy_reform
+- les_hors_prisme_policy_reform
 type_relation_dominante: dépendance
 
 annee_debut: 2026
@@ -88,12 +88,20 @@ Agrège et modère des millions de récits locaux via des IA éditoriales certif
 - [[valeurs_culture_tempo_sociale]]
 - [[gouvernance_institutions]]
 
-## Relations
-**Alliés** : [[conseil_de_gouvernance_de_l_information_policy_reform]], [[consortium_des_ia_editoriales_certifiees_policy_reform]], [[reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform]]
-**Opposants** : [[les_hors_prisme_policy_reform]], [[front_souverainiste_de_l_information_regionale_policy_reform]], [[factions_internes_dissidentes_des_contributeurs_historiques_policy_reform]]
 
 ## Description journalistique
 Depuis ses bureaux-nœuds distribués sur sept fuseaux horaires, Prisme Global ressemble moins à une rédaction qu'à un organisme régulateur déguisé en agora. Ses IA éditoriales — les 'Tisseuses', dans le jargon interne — traitent 4,3 millions de contributions quotidiennes, les lissant dans un langage de consensus que ses détracteurs appellent 'le gris officiel'. Fondée dans l'effervescence participative des années 2020, la plateforme a survécu aux guerres de l'information de la décennie 2060 en signant les Accords de Lisbonne 2074, échangeant son indépendance structurelle contre une immunité institutionnelle. Aujourd'hui, ses Rapports de Résonance Mondiale sont cités dans les traités climatiques autant que dans les procès pour désinformation — preuve d'une influence qui fascine autant qu'elle inquiète.
 
 ## Tensions narratives
 La fracture centrale de Prisme Global en 2098 est celle de sa légitimité : est-elle encore le 'pouls du monde réel' qu'elle prétend incarner, ou est-elle devenue l'instrument de normalisation narrative des institutions qu'elle était censée contrebalancer ? Des fuites récentes suggèrent que les Tisseuses auraient supprimé des signaux faibles sur les migrations climatiques au Sahel pour ne pas 'perturber les négociations du Traité de Dakar' — une accusation qui électrise les Hors-Prisme. En parallèle, une génération de contributeurs natifs-IA revendique la dissolution des comités humains de validation, estimant que les biais humains corrompent désormais plus qu'ils n'enrichissent. La plateforme navigue entre l'éclatement interne et l'absorption définitive par l'appareil technocratique qu'elle alimente.
+
+## Relations
+**Alliés :**
+- [[conseil_de_gouvernance_de_l_information_policy_reform]]
+- [[consortium_des_ia_editoriales_certifiees_policy_reform]]
+- [[directive_kontinuum_policy_reform]]
+- [[reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform]]
+**Opposants :**
+- [[factions_internes_dissidentes_des_contributeurs_historiques_policy_reform]]
+- [[front_souverainiste_de_l_information_regionale_policy_reform]]
+- [[les_hors_prisme_policy_reform]]

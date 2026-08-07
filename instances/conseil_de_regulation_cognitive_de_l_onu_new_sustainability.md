@@ -36,8 +36,26 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_mondiale_de_modelisation_climatique_ammc_new_sustainability
+- centre_institutionnel_geneve_new_sustainability
+- collectif_des_mediateurs_cognitifs_internationaux_new_sustainability
+- college_des_auditeurs_independants_du_parlement_biotechnologique_mondial_new_sustainability
+- conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability
+- consortium_d_interoperabilite_ia_humain_new_sustainability
+- internationale_travailleurs_augmentes_new_sustainability
+- oracle_des_seuils_new_sustainability
+- prisme_global_new_sustainability
+- tribunal_algorithmique_de_bruxelles_new_sustainability
+- tribunal_gouvernance_algorithmique_bruxelles_new_sustainability
+oppositions:
+- bloc_eurasien_souverainiste_new_sustainability
+- coalition_anti_algorithme_des_autonomies_locales_new_sustainability
+- collectifs_de_desobeissance_algorithmique_new_sustainability
+- collectifs_de_narration_sauvage_hors_protocole_new_sustainability
+- factions_souverainistes_des_blocs_peripheriques_new_sustainability
+- internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
+- reseaux_d_information_souverainistes_fermes_new_sustainability
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -101,6 +119,29 @@ Le Conseil est écartelé entre sa mission d'encadrement et la pression des bloc
 - [[gouvernance_institutions]]
 - [[technologie_information]]
 - [[valeurs_culture_tempo_sociale]]
+
+
+## Relations
+**Alliés :**
+- [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]]
+- [[centre_institutionnel_geneve_new_sustainability]]
+- [[collectif_des_mediateurs_cognitifs_internationaux_new_sustainability]]
+- [[college_des_auditeurs_independants_du_parlement_biotechnologique_mondial_new_sustainability]]
+- [[conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability]]
+- [[consortium_d_interoperabilite_ia_humain_new_sustainability]]
+- [[internationale_travailleurs_augmentes_new_sustainability]]
+- [[oracle_des_seuils_new_sustainability]]
+- [[prisme_global_new_sustainability]]
+- [[tribunal_algorithmique_de_bruxelles_new_sustainability]]
+- [[tribunal_gouvernance_algorithmique_bruxelles_new_sustainability]]
+**Opposants :**
+- [[bloc_eurasien_souverainiste_new_sustainability]]
+- [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]]
+- [[collectifs_de_desobeissance_algorithmique_new_sustainability]]
+- [[collectifs_de_narration_sauvage_hors_protocole_new_sustainability]]
+- [[factions_souverainistes_des_blocs_peripheriques_new_sustainability]]
+- [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]]
+- [[reseaux_d_information_souverainistes_fermes_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

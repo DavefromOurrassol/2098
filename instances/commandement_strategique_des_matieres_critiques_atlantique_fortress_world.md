@@ -32,8 +32,28 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- anba_siege_atlantique_fortress_world
+- bloc_atlantique_fortress_world
+- centre_controle_orbital_helios_fortress_world
+- coalition_arctique_des_blocs_continentaux_fortress_world
+- complexes_militaro_industriels_de_gestion_des_ressources_fortress_world
+- ironclad_logistics_fortress_world
+- kalaallit_nunaat_sovereign_fund_fortress_world
+- nexcore_atlantique_infrastructure_fortress_world
+- reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world
+- vaultcorp_security_fortress_world
+oppositions:
+- cartels_miniers_militarises_subsahariens_fortress_world
+- conseil_regulation_ressources_fortress_world
+- consortium_amazonia_viva_fortress_world
+- consortium_eurasiatique_des_ressources_fermees_fortress_world
+- milices_de_piraterie_logistique_arctique_fortress_world
+- mouvement_commun_midwest_fortress_world
+- operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world
+- reseaux_de_contrebande_energetique_transfrontaliere_fortress_world
+- reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world
+- rust_belt_communes_libres_fortress_world
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -94,6 +114,31 @@ Le CSMCA est écartelé entre la logique souverainiste des États membres qui co
 - [[energie_ressources_critiques]]
 - [[geopolitique_conflits]]
 - [[gouvernance_institutions]]
+
+
+## Relations
+**Alliés :**
+- [[anba_siege_atlantique_fortress_world]]
+- [[bloc_atlantique_fortress_world]]
+- [[centre_controle_orbital_helios_fortress_world]]
+- [[coalition_arctique_des_blocs_continentaux_fortress_world]]
+- [[complexes_militaro_industriels_de_gestion_des_ressources_fortress_world]]
+- [[ironclad_logistics_fortress_world]]
+- [[kalaallit_nunaat_sovereign_fund_fortress_world]]
+- [[nexcore_atlantique_infrastructure_fortress_world]]
+- [[reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world]]
+- [[vaultcorp_security_fortress_world]]
+**Opposants :**
+- [[cartels_miniers_militarises_subsahariens_fortress_world]]
+- [[conseil_regulation_ressources_fortress_world]]
+- [[consortium_amazonia_viva_fortress_world]]
+- [[consortium_eurasiatique_des_ressources_fermees_fortress_world]]
+- [[milices_de_piraterie_logistique_arctique_fortress_world]]
+- [[mouvement_commun_midwest_fortress_world]]
+- [[operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world]]
+- [[reseaux_de_contrebande_energetique_transfrontaliere_fortress_world]]
+- [[reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world]]
+- [[rust_belt_communes_libres_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

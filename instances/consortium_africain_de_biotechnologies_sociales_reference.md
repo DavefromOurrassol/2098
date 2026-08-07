@@ -4,6 +4,7 @@ type: instance
 slug: consortium_africain_de_biotechnologies_sociales_reference
 entite: consortium_africain_de_biotechnologies_sociales
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: nairobi_crrc
   lieu: Quartier biotech de Karen, Nairobi
@@ -33,25 +34,28 @@ zone_systemique:
     - gouvernance
 
 alliances:
-    - regulateurs_de_l_union_continentale_africaine_reference
-    - banque_des_communs_reference
-    - conseil_de_geneve_pour_les_droits_biosociaux_reference
-    - commission_hydrique_de_l_union_africaine_reference
-    - union_africaine_de_resilience_territoriale_reference
-    - institut_polytechnique_de_ouagadougou_reference
-    - collectifs_de_biopiraterie_inversee_reference
-    - reseau_des_cooperatives_agro_saheliennes_reference
-    - federation_des_cliniques_autonomes_reference
-    - reseaux_de_medecine_traditionnelle_augmentee_reference
-    - banque_mondiale_des_transitions_climatiques_reference
-
+- banque_des_communs_reference
+- banque_mondiale_des_transitions_climatiques_reference
+- collectifs_de_biopiraterie_inversee_reference
+- commission_hydrique_de_l_union_africaine_reference
+- conseil_de_geneve_pour_les_droits_biosociaux_reference
+- federation_des_cliniques_autonomes_reference
+- gouvernements_du_bloc_sahelien_autonome_reference
+- institut_polytechnique_de_ouagadougou_reference
+- nairobi_crrc_reference
+- ouagadougou_polytechnique_reference
+- regulateurs_de_l_union_continentale_africaine_reference
+- reseau_des_cooperatives_agro_saheliennes_reference
+- reseaux_de_medecine_traditionnelle_augmentee_reference
+- union_africaine_de_resilience_territoriale_reference
+- union_africaine_resilience_reference
 oppositions:
-    - nexus_biosyn_reference
-    - consortiums_bancaires_financiarises_reference
-    - gouvernements_a_regime_de_productivite_mandatee_reference
-    - consortiums_d_extraction_miniere_du_bassin_congolais_reference
-    - courant_nationaliste_instrumentalisateur_du_discours_des_racines_reference
-
+- amazonie_consortium_viva_reference
+- consortiums_bancaires_financiarises_reference
+- consortiums_d_extraction_miniere_du_bassin_congolais_reference
+- courant_nationaliste_instrumentalisateur_du_discours_des_racines_reference
+- gouvernements_a_regime_de_productivite_mandatee_reference
+- nexus_biosyn_reference
 type_relation_dominante: alliance stratégique
 
 annee_debut: 2041
@@ -93,12 +97,34 @@ Le CABS pilote des programmes de biorevenu continental, certifie l'accès aux bi
 - [[sante_biotechnologies]]
 - [[systeme_economique_redistribution]]
 
-## Relations
-**Alliés** : [[regulateurs_de_l_union_continentale_africaine_reference]], [[banque_des_communs_reference]], [[conseil_de_geneve_pour_les_droits_biosociaux_reference]], [[commission_hydrique_de_l_union_africaine_reference]], [[union_africaine_de_resilience_territoriale_reference]], [[institut_polytechnique_de_ouagadougou_reference]], [[collectifs_de_biopiraterie_inversee_reference]], [[reseau_des_cooperatives_agro_saheliennes_reference]], [[federation_des_cliniques_autonomes_reference]], [[reseaux_de_medecine_traditionnelle_augmentee_reference]], [[banque_mondiale_des_transitions_climatiques_reference]]
-**Opposants** : [[nexus_biosyn_reference]], [[consortiums_bancaires_financiarises_reference]], [[gouvernements_a_regime_de_productivite_mandatee_reference]], [[consortiums_d_extraction_miniere_du_bassin_congolais_reference]], [[courant_nationaliste_instrumentalisateur_du_discours_des_racines_reference]]
 
 ## Description journalistique
 Depuis ses bureaux en verre dépoli surplombant le quartier biotech de Karen à Nairobi, le Consortium Africain de Biotechnologies Sociales publie chaque trimestre des rapports que les bailleurs de Genève lisent avec attention et que les communautés rurales du Sahel voient affichés, traduits en wolof ou en haoussa, dans les dispensaires locaux. En 2098, le CABS administre des programmes de biorevenu touchant quelque 340 millions de personnes sur le continent — des mécanismes par lesquels un agriculteur du Burkina Faso ou une sage-femme du Delta du Niger peut valoriser ses données sanitaires contre un accès à des thérapies géniques ou des semences bioprophylactiques. Ses défenseurs y voient la preuve que les outils du capital peuvent être retournés contre ses logiques d'exclusion. Ses critiques — dont plusieurs viennent des collectifs de biopiraterie inversée qu'il finance lui-même — murmurent que le biorevenu est peut-être la forme la plus sophistiquée de l'extraction : on prend le corps là où on prenait jadis la terre.
 
 ## Tensions narratives
 La tension centrale du CABS tient à la nature même de son instrument : le biorevenu redistribue, mais il collecte d'abord. À mesure que les grands consortiums biotech globaux, dont NexCore et Nexus BioSyn, cherchent à négocier des accords de données directement avec les États africains en contournant le CABS, le Consortium se retrouve en position défensive — défendant à la fois sa part de marché institutionnel et sa crédibilité communautaire. Une deuxième ligne de fracture s'ouvre en interne : plusieurs responsables régionaux du CABS, issus des mouvements de biopiraterie inversée, plaident pour une rupture avec les certifications des bailleurs du Nord, au risque d'assécher les financements qui font tenir le système. Enfin, des gouvernements du bloc sahélien autonome commencent à percevoir le CABS comme un acteur para-souverain empiétant sur leurs prérogatives sanitaires — ce qui pourrait à terme faire basculer l'organisation du côté des entités sous surveillance politique.
+
+## Relations
+**Alliés :**
+- [[banque_des_communs_reference]]
+- [[banque_mondiale_des_transitions_climatiques_reference]]
+- [[collectifs_de_biopiraterie_inversee_reference]]
+- [[commission_hydrique_de_l_union_africaine_reference]]
+- [[conseil_de_geneve_pour_les_droits_biosociaux_reference]]
+- [[federation_des_cliniques_autonomes_reference]]
+- [[gouvernements_du_bloc_sahelien_autonome_reference]]
+- [[institut_polytechnique_de_ouagadougou_reference]]
+- [[nairobi_crrc_reference]]
+- [[ouagadougou_polytechnique_reference]]
+- [[regulateurs_de_l_union_continentale_africaine_reference]]
+- [[reseau_des_cooperatives_agro_saheliennes_reference]]
+- [[reseaux_de_medecine_traditionnelle_augmentee_reference]]
+- [[union_africaine_de_resilience_territoriale_reference]]
+- [[union_africaine_resilience_reference]]
+**Opposants :**
+- [[amazonie_consortium_viva_reference]]
+- [[consortiums_bancaires_financiarises_reference]]
+- [[consortiums_d_extraction_miniere_du_bassin_congolais_reference]]
+- [[courant_nationaliste_instrumentalisateur_du_discours_des_racines_reference]]
+- [[gouvernements_a_regime_de_productivite_mandatee_reference]]
+- [[nexus_biosyn_reference]]

@@ -4,6 +4,7 @@ type: instance
 slug: le_temoin_reference
 entite: le_temoin
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: singapour_est
   lieu: Singapour-Est

@@ -32,13 +32,22 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
-- conseil_moscou_est_fortress_world
-- zone_usines_forteresses_eurasie_fortress_world
+- bloc_eurasiatique_occidental_fortress_world
+- cartels_miniers_militarises_subsahariens_fortress_world
 - complexe_orentchev_almaty_fortress_world
+- complexes_militaro_industriels_de_gestion_des_ressources_fortress_world
+- conseil_moscou_est_fortress_world
+- ironclad_logistics_fortress_world
+- reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world
+- vasil_orentchev_fortress_world
+- zone_usines_forteresses_eurasie_fortress_world
 oppositions:
-- marches_gris_tbilissi_fortress_world
-- marches_gris_casablanca_fortress_world
 - almaty_zone_friction_fortress_world
+- corridors_gris_asie_centrale_fortress_world
+- factions_djihadistes_logistiques_d_asie_centrale_fortress_world
+- marches_gris_casablanca_fortress_world
+- marches_gris_tbilissi_fortress_world
+- operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -102,15 +111,25 @@ La tension fondamentale de ces commandements réside dans leur double loyauté :
 - [[organisation_territoires]]
 - [[energie_ressources_critiques]]
 
+
 ## Relations
 **Alliés :**
-- [[conseil_moscou_est_fortress_world]]
-- [[zone_usines_forteresses_eurasie_fortress_world]]
+- [[bloc_eurasiatique_occidental_fortress_world]]
+- [[cartels_miniers_militarises_subsahariens_fortress_world]]
 - [[complexe_orentchev_almaty_fortress_world]]
+- [[complexes_militaro_industriels_de_gestion_des_ressources_fortress_world]]
+- [[conseil_moscou_est_fortress_world]]
+- [[ironclad_logistics_fortress_world]]
+- [[reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world]]
+- [[vasil_orentchev_fortress_world]]
+- [[zone_usines_forteresses_eurasie_fortress_world]]
 **Opposants :**
-- [[marches_gris_tbilissi_fortress_world]]
-- [[marches_gris_casablanca_fortress_world]]
 - [[almaty_zone_friction_fortress_world]]
+- [[corridors_gris_asie_centrale_fortress_world]]
+- [[factions_djihadistes_logistiques_d_asie_centrale_fortress_world]]
+- [[marches_gris_casablanca_fortress_world]]
+- [[marches_gris_tbilissi_fortress_world]]
+- [[operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

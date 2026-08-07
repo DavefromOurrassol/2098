@@ -32,8 +32,22 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- collectifs_citoyens_de_deliberation_augmentee_policy_reform
+- collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform
+- les_hors_prisme_policy_reform
+- mouvement_pour_la_justice_ecologique_communautaire_policy_reform
+- mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform
+- reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
+- reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform
+oppositions:
+- agence_internationale_de_l_energie_reformatee_aier_policy_reform
+- coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform
+- conseil_regulation_ressources_policy_reform
+- consortium_helios_policy_reform
+- consortiums_prives_de_gouvernance_algorithmique_policy_reform
+- lobbies_des_energies_fossiles_residuelles_policy_reform
+- syndicats_d_extraction_privee_non_regules_policy_reform
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -95,6 +109,25 @@ Le réseau opère dans une contradiction permanente : pour enquêter efficacemen
 - [[energie_ressources_critiques]]
 - [[gouvernance_institutions]]
 - [[technologie_information]]
+
+
+## Relations
+**Alliés :**
+- [[collectifs_citoyens_de_deliberation_augmentee_policy_reform]]
+- [[collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform]]
+- [[les_hors_prisme_policy_reform]]
+- [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]]
+- [[mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform]]
+- [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]]
+- [[reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform]]
+**Opposants :**
+- [[agence_internationale_de_l_energie_reformatee_aier_policy_reform]]
+- [[coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform]]
+- [[conseil_regulation_ressources_policy_reform]]
+- [[consortium_helios_policy_reform]]
+- [[consortiums_prives_de_gouvernance_algorithmique_policy_reform]]
+- [[lobbies_des_energies_fossiles_residuelles_policy_reform]]
+- [[syndicats_d_extraction_privee_non_regules_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

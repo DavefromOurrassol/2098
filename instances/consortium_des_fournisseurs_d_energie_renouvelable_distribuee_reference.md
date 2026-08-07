@@ -30,8 +30,21 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_internationale_des_energies_renouvelables_irena_2_reference
+- agence_stabilisation_climatique_reference
+- banque_mondiale_des_transitions_climatiques_reference
+- consortiums_d_agriculture_verticale_algorithmique_reference
+- cooperatives_energetiques_decentralisees_reference
+- nexcore_reference
+- reseau_meshcommons_netsolidaire_reference
+oppositions:
+- bloc_ressources_eurasiatique_bre_reference
+- cartel_des_terres_rares_d_asie_centrale_reference
+- consortiums_prives_d_extraction_de_ressources_critiques_reference
+- corporations_d_extraction_energetique_non_signataires_reference
+- lobbies_industriels_des_etats_non_signataires_reference
+- operateurs_prives_d_energie_distribuee_hors_fct_reference
 type_relation_dominante: symbiose
 annee_debut: 2026
 annee_fin: null
@@ -96,6 +109,24 @@ La tension fondamentale du Consortium réside dans la contradiction entre son et
 - [[energie_ressources_critiques]]
 - [[technologie_information]]
 - [[organisation_territoires]]
+
+
+## Relations
+**Alliés :**
+- [[agence_internationale_des_energies_renouvelables_irena_2_reference]]
+- [[agence_stabilisation_climatique_reference]]
+- [[banque_mondiale_des_transitions_climatiques_reference]]
+- [[consortiums_d_agriculture_verticale_algorithmique_reference]]
+- [[cooperatives_energetiques_decentralisees_reference]]
+- [[nexcore_reference]]
+- [[reseau_meshcommons_netsolidaire_reference]]
+**Opposants :**
+- [[bloc_ressources_eurasiatique_bre_reference]]
+- [[cartel_des_terres_rares_d_asie_centrale_reference]]
+- [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[corporations_d_extraction_energetique_non_signataires_reference]]
+- [[lobbies_industriels_des_etats_non_signataires_reference]]
+- [[operateurs_prives_d_energie_distribuee_hors_fct_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

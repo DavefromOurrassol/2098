@@ -1,0 +1,15 @@
+
+============================================================
+OURRASSOL 2098 — Générateur d'articles
+============================================================
+  Mode       : Forcer un élément
+  Élément    : exode_midwest_grands_lacs (evenement)
+  Thématique : religion_spiritualite
+  Longueur   : breve
+  Angle      : romuva la nouvelle religion en europe
+============================================================
+
+[generate] Chargement de la thématique 'religion_spiritualite'...
+[generate] Filtre zone ['chicago_lacustre_compact'] : 1 scénario(s) exclu(s) (zone non concordante) : fortress_world
+
+[erreur] Aucun scénario ne correspond aux zones demandées ['chicago_lacustre_compact'] pour 'exode_midwest_grands_lacs'.

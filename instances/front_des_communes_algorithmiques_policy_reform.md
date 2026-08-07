@@ -30,8 +30,21 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- collectifs_citoyens_de_deliberation_augmentee_policy_reform
+- collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform
+- courants_post_technocratiques_de_reconquete_democratique_policy_reform
+- mouvement_pour_la_justice_ecologique_communautaire_policy_reform
+- reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
+oppositions:
+- bureau_gouvernance_algorithmique_policy_reform
+- conseil_intergouvernemental_de_regulation_technologique_policy_reform
+- consortiums_prives_de_gouvernance_algorithmique_policy_reform
+- courant_autoritaire_recuperateur_du_vocabulaire_communautaire_policy_reform
+- directive_kontinuum_policy_reform
+- factions_technocratiques_de_la_marchandisation_hydrique_policy_reform
+- front_techno_utopiste_de_la_decision_automatisee_policy_reform
+- rede_paulista_de_distribuic_o_algor_tmica_policy_reform
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -92,6 +105,24 @@ Le mouvement est tiraillé entre sa base populaire, qui réclame un blocage pur 
 - [[gouvernance_institutions]]
 - [[technologie_information]]
 - [[valeurs_culture_tempo_sociale]]
+
+
+## Relations
+**Alliés :**
+- [[collectifs_citoyens_de_deliberation_augmentee_policy_reform]]
+- [[collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform]]
+- [[courants_post_technocratiques_de_reconquete_democratique_policy_reform]]
+- [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]]
+- [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]]
+**Opposants :**
+- [[bureau_gouvernance_algorithmique_policy_reform]]
+- [[conseil_intergouvernemental_de_regulation_technologique_policy_reform]]
+- [[consortiums_prives_de_gouvernance_algorithmique_policy_reform]]
+- [[courant_autoritaire_recuperateur_du_vocabulaire_communautaire_policy_reform]]
+- [[directive_kontinuum_policy_reform]]
+- [[factions_technocratiques_de_la_marchandisation_hydrique_policy_reform]]
+- [[front_techno_utopiste_de_la_decision_automatisee_policy_reform]]
+- [[rede_paulista_de_distribuic_o_algor_tmica_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

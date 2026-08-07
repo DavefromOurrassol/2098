@@ -4,6 +4,7 @@ type: instance
 slug: zones_grises_tampons_fortress_world
 entite: zones_grises_tampons
 scenario: fortress_world
+statut: officialise_enrichi
 localisation:
   zone: null
   lieu: null
@@ -40,28 +41,29 @@ zone_systemique:
     - économie
 
 alliances:
-    - administrations_de_controle_frontalier_des_blocs_fortress_world
-    - agences_de_securite_interieure_des_etats_forteresses_fortress_world
-    - bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world
-    - bureau_des_territoires_residuels_fortress_world
-    - bureau_territoires_residuels_fortress_world
-    - systemes_de_scoring_de_productivite_corporative_fortress_world
-    - dispositifs_de_surveillance_numerique_souveraine_fortress_world
-    - reseaux_prives_de_securite_aux_frontieres_fortress_world
-    - zone_usines_forteresses_eurasie_fortress_world
-
+- administrations_de_controle_frontalier_des_blocs_fortress_world
+- bloc_des_nations_non_alignees_residuelles_fortress_world
+- bureau_des_territoires_residuels_fortress_world
+- bureau_territoires_residuels_fortress_world
+- bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world
+- dispositifs_de_surveillance_numerique_souveraine_fortress_world
+- reseaux_prives_de_securite_aux_frontieres_fortress_world
+- systemes_de_scoring_de_productivite_corporative_fortress_world
+- zone_usines_forteresses_eurasie_fortress_world
 oppositions:
-    - coalitions_des_deplaces_et_apatrides_fortress_world
-    - communautes_deplacees_hors_quota_migratoire_fortress_world
-    - alliance_sanitaire_des_populations_exclues_fortress_world
-    - collectifs_du_seuil_fortress_world
-    - campements_seuils_fermes_fortress_world
-    - cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
-    - voix_du_dehors_fortress_world
-    - le_temoin_fortress_world
-    - mouvement_commun_midwest_fortress_world
-    - mouvement_des_communes_du_rust_belt_fortress_world
-
+- agences_de_securite_interieure_des_etats_forteresses_fortress_world
+- alliance_sanitaire_des_populations_exclues_fortress_world
+- appareils_d_etat_des_blocs_fermes_fortress_world
+- campements_seuils_fermes_fortress_world
+- cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- collectifs_du_seuil_fortress_world
+- communautes_deplacees_hors_quota_migratoire_fortress_world
+- consortiums_de_defense_orbitale_prives_fortress_world
+- le_temoin_fortress_world
+- mouvement_commun_midwest_fortress_world
+- mouvement_des_communes_du_rust_belt_fortress_world
+- voix_du_dehors_fortress_world
 type_relation_dominante: dépendance
 
 annee_debut: 2041
@@ -105,12 +107,35 @@ Absorption et contention des flux migratoires rejetés par les forteresses : dé
 - [[gouvernance_institutions]]
 - [[systemes_productifs_travail]]
 
-## Relations
-**Alliés** : [[administrations_de_controle_frontalier_des_blocs_fortress_world]], [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]], [[bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world]], [[bureau_des_territoires_residuels_fortress_world]], [[bureau_territoires_residuels_fortress_world]], [[systemes_de_scoring_de_productivite_corporative_fortress_world]], [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]], [[reseaux_prives_de_securite_aux_frontieres_fortress_world]], [[zone_usines_forteresses_eurasie_fortress_world]]
-**Opposants** : [[coalitions_des_deplaces_et_apatrides_fortress_world]], [[communautes_deplacees_hors_quota_migratoire_fortress_world]], [[alliance_sanitaire_des_populations_exclues_fortress_world]], [[collectifs_du_seuil_fortress_world]], [[campements_seuils_fermes_fortress_world]], [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]], [[voix_du_dehors_fortress_world]], [[le_temoin_fortress_world]], [[mouvement_commun_midwest_fortress_world]], [[mouvement_des_communes_du_rust_belt_fortress_world]]
 
 ## Description journalistique
 On les appelle les 'Seuils' — ces bandes de territoire grisâtre qui ceinturent les périmètres fortifiés comme une peau morte autour d'un organisme vivant. Ni dedans, ni dehors : environ 340 millions de personnes y résident en 2098, selon les estimations non-officielles qui circulent dans les réseaux dissidents, aucun chiffre n'étant reconnu par les blocs souverains. Les capteurs des forteresses y lisent chaque mouvement, chaque transaction thermique, chaque regroupement humain — mais aucune juridiction n'y protège un habitant, aucun recours n'y est techniquement recevable. Des équipes de maintenance entrent parfois pour réparer des antennes de surveillance tombées en panne ; elles ne parlent à personne. Le marché du travail informel qui s'y organise alimente discrètement les usines-forteresses en main-d'œuvre journalière — des navettes sans fenêtres franchissent les sas à l'aube, reviennent à la nuit. C'est cette architecture de l'ambiguïté calculée que certains juristes appellent désormais 'la gouvernance par le flou', et que les blocs eux-mêmes refusent de nommer.
 
 ## Tensions narratives
 La question de la responsabilité est le nœud central : dès qu'une forteresse reconnaît administrer un Périmètre de Seuil, elle s'expose à des obligations juridiques résiduelles envers ses habitants — mais si elle le nie totalement, les populations tombent dans un angle mort visible qui alimente les dissidences internes et les réseaux d'information clandestins. La montée des cellules universitaires dissidentes qui cartographient systématiquement ces zones menace de rendre leur opacité insoutenable. Parallèlement, les contrebandiers et les réseaux de passeurs qui traversent ces seuils en exploitent les failles de surveillance, transformant peu à peu les instruments de contrôle en corridors d'autonomie partielle — une ironie structurelle que les blocs souverains ne peuvent admettre sans reconnaître l'échec de leur propre architecture de confinement.
+
+## Relations
+**Alliés :**
+- [[administrations_de_controle_frontalier_des_blocs_fortress_world]]
+- [[bloc_des_nations_non_alignees_residuelles_fortress_world]]
+- [[bureau_des_territoires_residuels_fortress_world]]
+- [[bureau_territoires_residuels_fortress_world]]
+- [[bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world]]
+- [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
+- [[reseaux_prives_de_securite_aux_frontieres_fortress_world]]
+- [[systemes_de_scoring_de_productivite_corporative_fortress_world]]
+- [[zone_usines_forteresses_eurasie_fortress_world]]
+**Opposants :**
+- [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]]
+- [[alliance_sanitaire_des_populations_exclues_fortress_world]]
+- [[appareils_d_etat_des_blocs_fermes_fortress_world]]
+- [[campements_seuils_fermes_fortress_world]]
+- [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[collectifs_du_seuil_fortress_world]]
+- [[communautes_deplacees_hors_quota_migratoire_fortress_world]]
+- [[consortiums_de_defense_orbitale_prives_fortress_world]]
+- [[le_temoin_fortress_world]]
+- [[mouvement_commun_midwest_fortress_world]]
+- [[mouvement_des_communes_du_rust_belt_fortress_world]]
+- [[voix_du_dehors_fortress_world]]

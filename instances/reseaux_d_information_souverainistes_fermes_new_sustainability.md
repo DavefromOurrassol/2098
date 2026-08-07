@@ -30,8 +30,34 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- alliance_numerique_eurasie_pacifique_new_sustainability
+- bloc_des_gouvernements_souverainistes_hydriques_new_sustainability
+- coalition_anti_fiscalite_universelle_new_sustainability
+- collectifs_de_narration_sauvage_hors_protocole_new_sustainability
+- etats_souverainistes_anti_reseau_new_sustainability
+- faction_conservatrice_pro_actif_strategique_new_sustainability
+- factions_souverainistes_des_blocs_peripheriques_new_sustainability
+- internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
+- lobbies_agro_industriels_du_bassin_du_congo_new_sustainability
+- mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability
+- souverainistes_du_bloc_eurasien_new_sustainability
+oppositions:
+- agence_mondiale_de_modelisation_climatique_ammc_new_sustainability
+- bloc_eurasien_souverainiste_new_sustainability
+- bureau_gouvernance_algorithmique_new_sustainability
+- centre_institutionnel_geneve_new_sustainability
+- conseil_de_regulation_cognitive_de_l_onu_new_sustainability
+- conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability
+- conseil_regulation_algorithmique_new_sustainability
+- consortium_d_interoperabilite_ia_humain_new_sustainability
+- institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability
+- nexcore_new_sustainability
+- observatoire_climatique_narratif_de_nairobi_new_sustainability
+- oms_etendue_new_sustainability
+- oracle_des_seuils_new_sustainability
+- prisme_global_new_sustainability
+- reseau_mnemos_new_sustainability
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -97,6 +123,38 @@ Leur existence même contredit la logique de gouvernance coordonnée du scénari
 - [[technologie_information]]
 - [[gouvernance_institutions]]
 - [[frontieres_du_systeme]]
+
+
+
+## Relations
+**Alliés :**
+- [[alliance_numerique_eurasie_pacifique_new_sustainability]]
+- [[bloc_des_gouvernements_souverainistes_hydriques_new_sustainability]]
+- [[coalition_anti_fiscalite_universelle_new_sustainability]]
+- [[collectifs_de_narration_sauvage_hors_protocole_new_sustainability]]
+- [[etats_souverainistes_anti_reseau_new_sustainability]]
+- [[faction_conservatrice_pro_actif_strategique_new_sustainability]]
+- [[factions_souverainistes_des_blocs_peripheriques_new_sustainability]]
+- [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]]
+- [[lobbies_agro_industriels_du_bassin_du_congo_new_sustainability]]
+- [[mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability]]
+- [[souverainistes_du_bloc_eurasien_new_sustainability]]
+**Opposants :**
+- [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]]
+- [[bloc_eurasien_souverainiste_new_sustainability]]
+- [[bureau_gouvernance_algorithmique_new_sustainability]]
+- [[centre_institutionnel_geneve_new_sustainability]]
+- [[conseil_de_regulation_cognitive_de_l_onu_new_sustainability]]
+- [[conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability]]
+- [[conseil_regulation_algorithmique_new_sustainability]]
+- [[consortium_d_interoperabilite_ia_humain_new_sustainability]]
+- [[institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability]]
+- [[nexcore_new_sustainability]]
+- [[observatoire_climatique_narratif_de_nairobi_new_sustainability]]
+- [[oms_etendue_new_sustainability]]
+- [[oracle_des_seuils_new_sustainability]]
+- [[prisme_global_new_sustainability]]
+- [[reseau_mnemos_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

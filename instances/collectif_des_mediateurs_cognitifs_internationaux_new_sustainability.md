@@ -35,8 +35,21 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_mondiale_de_modelisation_climatique_ammc_new_sustainability
+- college_des_auditeurs_independants_du_parlement_biotechnologique_mondial_new_sustainability
+- conseil_de_regulation_cognitive_de_l_onu_new_sustainability
+- consortium_d_interoperabilite_ia_humain_new_sustainability
+- leena_vainala_new_sustainability
+- observatoire_climatique_narratif_de_nairobi_new_sustainability
+- parlement_deliberatif_mondial_new_sustainability
+- reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability
+oppositions:
+- bloc_eurasien_souverainiste_new_sustainability
+- coalition_anti_algorithme_des_autonomies_locales_new_sustainability
+- collectifs_de_desobeissance_algorithmique_new_sustainability
+- factions_souverainistes_des_blocs_peripheriques_new_sustainability
+- internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -101,6 +114,24 @@ Le Collectif est pris en tenaille entre sa vocation de neutralité et les pressi
 - [[gouvernance_institutions]]
 - [[valeurs_culture_tempo_sociale]]
 - [[technologie_information]]
+
+
+## Relations
+**Alliés :**
+- [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]]
+- [[college_des_auditeurs_independants_du_parlement_biotechnologique_mondial_new_sustainability]]
+- [[conseil_de_regulation_cognitive_de_l_onu_new_sustainability]]
+- [[consortium_d_interoperabilite_ia_humain_new_sustainability]]
+- [[leena_vainala_new_sustainability]]
+- [[observatoire_climatique_narratif_de_nairobi_new_sustainability]]
+- [[parlement_deliberatif_mondial_new_sustainability]]
+- [[reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability]]
+**Opposants :**
+- [[bloc_eurasien_souverainiste_new_sustainability]]
+- [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]]
+- [[collectifs_de_desobeissance_algorithmique_new_sustainability]]
+- [[factions_souverainistes_des_blocs_peripheriques_new_sustainability]]
+- [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

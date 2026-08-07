@@ -31,8 +31,21 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- bloc_eurasien_souverainiste_new_sustainability
+- centre_institutionnel_geneve_new_sustainability
+- conseil_energetique_intercontinental_new_sustainability
+- conseil_regulation_ressources_new_sustainability
+- consortium_helios_new_sustainability
+- operateurs_de_fusion_energetique_regionaux_new_sustainability
+- reseau_des_agences_climatiques_regionales_new_sustainability
+oppositions:
+- bloc_des_gouvernements_souverainistes_hydriques_new_sustainability
+- factions_souverainistes_des_blocs_peripheriques_new_sustainability
+- great_lakes_autonomous_compact_new_sustainability
+- internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
+- mouvement_communautaire_des_micro_grids_energetiques_new_sustainability
+- mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -98,6 +111,24 @@ La tension fondamentale de l'UBER réside dans la contradiction entre son mandat
 - [[energie_ressources_critiques]]
 - [[organisation_territoires]]
 - [[gouvernance_institutions]]
+
+
+## Relations
+**Alliés :**
+- [[bloc_eurasien_souverainiste_new_sustainability]]
+- [[centre_institutionnel_geneve_new_sustainability]]
+- [[conseil_energetique_intercontinental_new_sustainability]]
+- [[conseil_regulation_ressources_new_sustainability]]
+- [[consortium_helios_new_sustainability]]
+- [[operateurs_de_fusion_energetique_regionaux_new_sustainability]]
+- [[reseau_des_agences_climatiques_regionales_new_sustainability]]
+**Opposants :**
+- [[bloc_des_gouvernements_souverainistes_hydriques_new_sustainability]]
+- [[factions_souverainistes_des_blocs_peripheriques_new_sustainability]]
+- [[great_lakes_autonomous_compact_new_sustainability]]
+- [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]]
+- [[mouvement_communautaire_des_micro_grids_energetiques_new_sustainability]]
+- [[mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

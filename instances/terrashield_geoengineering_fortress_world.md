@@ -4,6 +4,7 @@ type: instance
 slug: terrashield_geoengineering_fortress_world
 entite: terrashield_geoengineering
 scenario: fortress_world
+statut: officialise_enrichi
 localisation:
   zone: null
   lieu: null

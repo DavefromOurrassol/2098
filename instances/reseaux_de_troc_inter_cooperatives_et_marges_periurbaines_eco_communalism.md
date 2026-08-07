@@ -30,8 +30,26 @@ zone_geographique:
 - régionale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- assemblees_bioterritoriales_regionales_eco_communalism
+- assemblees_cooperatives_regionales_eco_communalism
+- brigades_de_restauration_ecologique_eco_communalism
+- collectifs_de_cartographie_ecologique_participative_eco_communalism
+- cooperative_terrafond_eco_communalism
+- cooperatives_d_habitat_regeneratif_eco_communalism
+- cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
+- frente_sert_o_livre_eco_communalism
+- guildes_des_semenciers_itinerants_eco_communalism
+- mutuelles_de_sante_territoriales_eco_communalism
+- rede_paulista_de_distribuic_o_algor_tmica_eco_communalism
+- reseau_terrafond_bassins_eco_communalism
+- reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
+oppositions:
+- cartels_de_narration_de_penurie_eco_communalism
+- consortiums_industriels_de_l_eau_eco_communalism
+- enclaves_extractivistes_residuelles_des_corridors_eco_communalism
+- factions_extractivistes_des_aquiferes_communs_eco_communalism
+- reseaux_de_notables_communautaires_capturistes_eco_communalism
 type_relation_dominante: symbiose
 annee_debut: 2026
 annee_fin: null
@@ -94,6 +112,29 @@ La tension centrale est celle de l'équilibre entre réciprocité directe et éq
 - [[systeme_economique_redistribution]]
 - [[organisation_territoires]]
 - [[systemes_productifs_travail]]
+
+
+## Relations
+**Alliés :**
+- [[assemblees_bioterritoriales_regionales_eco_communalism]]
+- [[assemblees_cooperatives_regionales_eco_communalism]]
+- [[brigades_de_restauration_ecologique_eco_communalism]]
+- [[collectifs_de_cartographie_ecologique_participative_eco_communalism]]
+- [[cooperative_terrafond_eco_communalism]]
+- [[cooperatives_d_habitat_regeneratif_eco_communalism]]
+- [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]
+- [[frente_sert_o_livre_eco_communalism]]
+- [[guildes_des_semenciers_itinerants_eco_communalism]]
+- [[mutuelles_de_sante_territoriales_eco_communalism]]
+- [[rede_paulista_de_distribuic_o_algor_tmica_eco_communalism]]
+- [[reseau_terrafond_bassins_eco_communalism]]
+- [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
+**Opposants :**
+- [[cartels_de_narration_de_penurie_eco_communalism]]
+- [[consortiums_industriels_de_l_eau_eco_communalism]]
+- [[enclaves_extractivistes_residuelles_des_corridors_eco_communalism]]
+- [[factions_extractivistes_des_aquiferes_communs_eco_communalism]]
+- [[reseaux_de_notables_communautaires_capturistes_eco_communalism]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

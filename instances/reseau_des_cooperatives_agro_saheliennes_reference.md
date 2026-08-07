@@ -34,8 +34,31 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- amara_diallo_nkosi_reference
+- banque_des_communs_reference
+- commission_hydrique_de_l_union_africaine_reference
+- communs_numeriques_agroecologiques_reference
+- consortium_africain_de_biotechnologies_sociales_reference
+- cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference
+- cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference
+- cooperatives_energetiques_decentralisees_reference
+- federation_des_cliniques_autonomes_reference
+- frente_sert_o_livre_reference
+- gouvernements_du_bloc_sahelien_autonome_reference
+- institut_polytechnique_de_ouagadougou_reference
+- nairobi_crrc_reference
+- ong_environnementales_de_terrain_reference
 - ouagadougou_polytechnique_reference
-oppositions: []
+- regulateurs_de_l_union_continentale_africaine_reference
+- reseau_des_administrations_locales_rurales_participatives_reference
+- reseaux_de_medecine_traditionnelle_augmentee_reference
+- union_africaine_de_resilience_territoriale_reference
+- union_africaine_resilience_reference
+oppositions:
+- agrisynth_reference
+- consortiums_d_agriculture_verticale_algorithmique_reference
+- fonds_d_investissement_foncier_climatique_reference
+- lobbies_agro_industriels_a_haute_consommation_d_eau_reference
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -101,9 +124,34 @@ Le réseau est pris en étau entre le Bloc Sahélien Autonome qui cherche à l'i
 - [[organisation_territoires]]
 - [[climat_environnement_global]]
 
+
 ## Relations
 **Alliés :**
+- [[amara_diallo_nkosi_reference]]
+- [[banque_des_communs_reference]]
+- [[commission_hydrique_de_l_union_africaine_reference]]
+- [[communs_numeriques_agroecologiques_reference]]
+- [[consortium_africain_de_biotechnologies_sociales_reference]]
+- [[cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference]]
+- [[cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference]]
+- [[cooperatives_energetiques_decentralisees_reference]]
+- [[federation_des_cliniques_autonomes_reference]]
+- [[frente_sert_o_livre_reference]]
+- [[gouvernements_du_bloc_sahelien_autonome_reference]]
+- [[institut_polytechnique_de_ouagadougou_reference]]
+- [[nairobi_crrc_reference]]
+- [[ong_environnementales_de_terrain_reference]]
 - [[ouagadougou_polytechnique_reference]]
+- [[regulateurs_de_l_union_continentale_africaine_reference]]
+- [[reseau_des_administrations_locales_rurales_participatives_reference]]
+- [[reseaux_de_medecine_traditionnelle_augmentee_reference]]
+- [[union_africaine_de_resilience_territoriale_reference]]
+- [[union_africaine_resilience_reference]]
+**Opposants :**
+- [[agrisynth_reference]]
+- [[consortiums_d_agriculture_verticale_algorithmique_reference]]
+- [[fonds_d_investissement_foncier_climatique_reference]]
+- [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

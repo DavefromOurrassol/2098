@@ -34,10 +34,13 @@ alliances:
 - bloc_eurasien_central_reference
 - tbilissi_noeud_mnemos_reference
 oppositions:
+- arctic_passage_authority_reference
+- armada_logistique_nordique_reference
 - corridor_arctique_nordique_reference
-- murmansk_transit_arctique_reference
 - helsinki_communs_numeriques_reference
 - institutions_multilaterales_survivantes_reference
+- murmansk_transit_arctique_reference
+- ong_environnementales_de_terrain_reference
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -105,15 +108,19 @@ La Sibérie Fédérale est prise en étau entre le Bloc Eurasien Central dont el
 - [[organisation_territoires]]
 - [[energie_ressources_critiques]]
 
+
 ## Relations
 **Alliés :**
 - [[bloc_eurasien_central_reference]]
 - [[tbilissi_noeud_mnemos_reference]]
 **Opposants :**
+- [[arctic_passage_authority_reference]]
+- [[armada_logistique_nordique_reference]]
 - [[corridor_arctique_nordique_reference]]
-- [[murmansk_transit_arctique_reference]]
 - [[helsinki_communs_numeriques_reference]]
 - [[institutions_multilaterales_survivantes_reference]]
+- [[murmansk_transit_arctique_reference]]
+- [[ong_environnementales_de_terrain_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

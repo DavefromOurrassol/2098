@@ -32,8 +32,26 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agrisynth_reference
+- blocs_signataires_du_pacte_energetique_multilateral_reference
+- consortium_augmentwork_reference
+- consortium_des_fournisseurs_d_energie_renouvelable_distribuee_reference
+- consortium_des_grandes_plateformes_ia_integrees_reference
+- consortiums_bancaires_financiarises_reference
+- consortiums_energetiques_des_megapoles_reference
+- ecosynth_global_reference
+- lobbies_agro_industriels_a_haute_consommation_d_eau_reference
+oppositions:
+- communs_numeriques_agroecologiques_reference
+- cooperative_terrafond_reference
+- cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference
+- cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference
+- frente_sert_o_livre_reference
+- gouvernements_du_bloc_sahelien_autonome_reference
+- mouvement_racines_vivantes_reference
+- reseau_des_cooperatives_agro_saheliennes_reference
+- syndicats_de_travail_rural_hybride_reference
 type_relation_dominante: dépendance
 annee_debut: 2026
 annee_fin: null
@@ -97,6 +115,29 @@ La tension centrale réside dans l'écart croissant entre l'efficacité producti
 - [[systemes_productifs_travail]]
 - [[climat_environnement_global]]
 - [[energie_ressources_critiques]]
+
+
+## Relations
+**Alliés :**
+- [[agrisynth_reference]]
+- [[blocs_signataires_du_pacte_energetique_multilateral_reference]]
+- [[consortium_augmentwork_reference]]
+- [[consortium_des_fournisseurs_d_energie_renouvelable_distribuee_reference]]
+- [[consortium_des_grandes_plateformes_ia_integrees_reference]]
+- [[consortiums_bancaires_financiarises_reference]]
+- [[consortiums_energetiques_des_megapoles_reference]]
+- [[ecosynth_global_reference]]
+- [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]]
+**Opposants :**
+- [[communs_numeriques_agroecologiques_reference]]
+- [[cooperative_terrafond_reference]]
+- [[cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference]]
+- [[cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference]]
+- [[frente_sert_o_livre_reference]]
+- [[gouvernements_du_bloc_sahelien_autonome_reference]]
+- [[mouvement_racines_vivantes_reference]]
+- [[reseau_des_cooperatives_agro_saheliennes_reference]]
+- [[syndicats_de_travail_rural_hybride_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

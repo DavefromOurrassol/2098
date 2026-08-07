@@ -35,8 +35,22 @@ zone_geographique:
 - régionale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- collectifs_de_reparation_energetique_breakdown
+- conglometrat_sino_siberien_bohai_transit_breakdown
+- consortium_energetique_oural_caspien_breakdown
+- enclaves_technologiques_survivantes_breakdown
+- factions_energetiques_heritieres_des_pactes_abs_breakdown
+- front_techno_reconstructionniste_breakdown
+- guilde_des_techniciens_nomades_breakdown
+- reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown
+- vasil_orentchev_breakdown
+oppositions:
+- blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
+- factions_para_etatiques_hydriques_breakdown
+- milices_de_controle_territorial_breakdown
+- seigneuries_logistiques_armees_breakdown
+- seigneurs_de_guerre_agro_territoriaux_breakdown
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -97,6 +111,25 @@ Les Enclaves sont prisonnières de leur propre valeur : leur capacité productiv
 - [[organisation_territoires]]
 - [[systemes_productifs_travail]]
 - [[energie_ressources_critiques]]
+
+
+## Relations
+**Alliés :**
+- [[collectifs_de_reparation_energetique_breakdown]]
+- [[conglometrat_sino_siberien_bohai_transit_breakdown]]
+- [[consortium_energetique_oural_caspien_breakdown]]
+- [[enclaves_technologiques_survivantes_breakdown]]
+- [[factions_energetiques_heritieres_des_pactes_abs_breakdown]]
+- [[front_techno_reconstructionniste_breakdown]]
+- [[guilde_des_techniciens_nomades_breakdown]]
+- [[reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown]]
+- [[vasil_orentchev_breakdown]]
+**Opposants :**
+- [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
+- [[factions_para_etatiques_hydriques_breakdown]]
+- [[milices_de_controle_territorial_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]
+- [[seigneurs_de_guerre_agro_territoriaux_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

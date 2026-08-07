@@ -34,8 +34,37 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- conglomerats_d_automatisation_industrielle_integrale_policy_reform
+- etats_dissidents_du_bloc_austral_policy_reform
+- front_souverainiste_de_l_information_regionale_policy_reform
+- front_souverainiste_des_blocs_non_signataires_policy_reform
+- gouvernements_populistes_anti_depossession_policy_reform
+oppositions:
+- bureau_gouvernance_algorithmique_policy_reform
+- bureau_international_du_travail_augmente_bita_policy_reform
+- conseil_de_gouvernance_de_l_information_policy_reform
+- conseil_intergouvernemental_de_regulation_technologique_policy_reform
+- conseil_onu_de_gouvernance_numerique_et_ia_policy_reform
+- conseil_regulation_algorithmique_policy_reform
+- consortium_des_ia_editoriales_certifiees_policy_reform
+- consortium_des_villes_etats_durables_policy_reform
+- consortium_nexus_calcul_policy_reform
+- consortium_technologique_de_planification_territoriale_policy_reform
+- consortium_technologique_des_nations_integrees_policy_reform
+- directive_kontinuum_policy_reform
+- faction_regulatrice_dure_au_sein_du_cei_policy_reform
+- fonds_mondial_de_resilience_infrastructurelle_policy_reform
+- gouvernement_israel_policy_reform
+- grille_aria_policy_reform
+- institut_brookings_singapour_de_politique_computationnelle_policy_reform
+- office_integre_des_flux_migratoires_policy_reform
+- oracle_des_seuils_policy_reform
+- reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
+- reseau_des_regulateurs_numeriques_souverains_rrns_policy_reform
+- reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform
+- reseaux_de_capteurs_ia_climatiques_deployes_par_les_etats_membres_policy_reform
+- tribunal_algorithmique_de_bruxelles_policy_reform
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -101,6 +130,41 @@ La Coalition est tiraillée entre des membres aux intérêts divergents : certai
 - [[gouvernance_institutions]]
 - [[technologie_information]]
 - [[geopolitique_conflits]]
+
+
+
+## Relations
+**Alliés :**
+- [[conglomerats_d_automatisation_industrielle_integrale_policy_reform]]
+- [[etats_dissidents_du_bloc_austral_policy_reform]]
+- [[front_souverainiste_de_l_information_regionale_policy_reform]]
+- [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+- [[gouvernements_populistes_anti_depossession_policy_reform]]
+**Opposants :**
+- [[bureau_gouvernance_algorithmique_policy_reform]]
+- [[bureau_international_du_travail_augmente_bita_policy_reform]]
+- [[conseil_de_gouvernance_de_l_information_policy_reform]]
+- [[conseil_intergouvernemental_de_regulation_technologique_policy_reform]]
+- [[conseil_onu_de_gouvernance_numerique_et_ia_policy_reform]]
+- [[conseil_regulation_algorithmique_policy_reform]]
+- [[consortium_des_ia_editoriales_certifiees_policy_reform]]
+- [[consortium_des_villes_etats_durables_policy_reform]]
+- [[consortium_nexus_calcul_policy_reform]]
+- [[consortium_technologique_de_planification_territoriale_policy_reform]]
+- [[consortium_technologique_des_nations_integrees_policy_reform]]
+- [[directive_kontinuum_policy_reform]]
+- [[faction_regulatrice_dure_au_sein_du_cei_policy_reform]]
+- [[fonds_mondial_de_resilience_infrastructurelle_policy_reform]]
+- [[gouvernement_israel_policy_reform]]
+- [[grille_aria_policy_reform]]
+- [[institut_brookings_singapour_de_politique_computationnelle_policy_reform]]
+- [[office_integre_des_flux_migratoires_policy_reform]]
+- [[oracle_des_seuils_policy_reform]]
+- [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]]
+- [[reseau_des_regulateurs_numeriques_souverains_rrns_policy_reform]]
+- [[reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform]]
+- [[reseaux_de_capteurs_ia_climatiques_deployes_par_les_etats_membres_policy_reform]]
+- [[tribunal_algorithmique_de_bruxelles_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

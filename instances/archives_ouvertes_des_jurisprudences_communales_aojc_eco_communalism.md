@@ -32,8 +32,42 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- amazonie_pacte_viva_eco_communalism
+- assemblees_bioterritoriales_regionales_eco_communalism
+- assemblees_cooperatives_regionales_eco_communalism
+- cercles_de_mediation_territoriale_intercommunautaire_eco_communalism
+- collectifs_de_cartographie_ecologique_participative_eco_communalism
+- collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism
+- confederation_bassins_vivants_eco_communalism
+- confederation_communs_arc_septentrional_eco_communalism
+- guildes_de_mediateurs_ecologiques_eco_communalism
+- kalaallit_nunaat_bioterritoire_eco_communalism
+- leena_vainala_eco_communalism
+- ligue_des_cites_du_sahel_numerique_eco_communalism
+- mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism
+- mouvement_des_communes_du_rust_belt_eco_communalism
+- reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism
+- reseau_mnemos_eco_communalism
+- reseau_terrafond_bassins_eco_communalism
+- reseaux_de_bibliotheques_archives_communautaires_eco_communalism
+- sao_paulo_algorithmique_eco_communalism
+- tampere_charte_eco_communalism
+- trame_mnemos_noeud_reseau_eco_communalism
+- tribunal_algorithmique_de_bruxelles_eco_communalism
+- zones_extractivistes_corridors_eco_communalism
+oppositions:
+- communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism
+- communautes_rurales_dissidentes_anti_cooperation_regionale_eco_communalism
+- communs_secessionnistes_hors_coordination_eco_communalism
+- conseils_territoriaux_opaques_sur_la_gestion_des_ressources_eco_communalism
+- courant_isolationniste_anti_circulation_de_l_information_eco_communalism
+- directive_kontinuum_eco_communalism
+- enclaves_extractivistes_residuelles_des_corridors_eco_communalism
+- factions_autoritaires_de_controle_du_savoir_eco_communalism
+- factions_communautaires_refusant_le_partage_narratif_exterieur_eco_communalism
+- fragments_d_etats_centraux_residuels_eco_communalism
+- reseaux_de_notables_communautaires_capturistes_eco_communalism
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -97,6 +131,45 @@ La tension centrale de l'AOJC est celle de la mémoire contre l'autonomie : en c
 - [[gouvernance_institutions]]
 - [[organisation_territoires]]
 - [[technologie_information]]
+
+
+## Relations
+**Alliés :**
+- [[amazonie_pacte_viva_eco_communalism]]
+- [[assemblees_bioterritoriales_regionales_eco_communalism]]
+- [[assemblees_cooperatives_regionales_eco_communalism]]
+- [[cercles_de_mediation_territoriale_intercommunautaire_eco_communalism]]
+- [[collectifs_de_cartographie_ecologique_participative_eco_communalism]]
+- [[collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism]]
+- [[confederation_bassins_vivants_eco_communalism]]
+- [[confederation_communs_arc_septentrional_eco_communalism]]
+- [[guildes_de_mediateurs_ecologiques_eco_communalism]]
+- [[kalaallit_nunaat_bioterritoire_eco_communalism]]
+- [[leena_vainala_eco_communalism]]
+- [[ligue_des_cites_du_sahel_numerique_eco_communalism]]
+- [[mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism]]
+- [[mouvement_des_communes_du_rust_belt_eco_communalism]]
+- [[reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism]]
+- [[reseau_mnemos_eco_communalism]]
+- [[reseau_terrafond_bassins_eco_communalism]]
+- [[reseaux_de_bibliotheques_archives_communautaires_eco_communalism]]
+- [[sao_paulo_algorithmique_eco_communalism]]
+- [[tampere_charte_eco_communalism]]
+- [[trame_mnemos_noeud_reseau_eco_communalism]]
+- [[tribunal_algorithmique_de_bruxelles_eco_communalism]]
+- [[zones_extractivistes_corridors_eco_communalism]]
+**Opposants :**
+- [[communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism]]
+- [[communautes_rurales_dissidentes_anti_cooperation_regionale_eco_communalism]]
+- [[communs_secessionnistes_hors_coordination_eco_communalism]]
+- [[conseils_territoriaux_opaques_sur_la_gestion_des_ressources_eco_communalism]]
+- [[courant_isolationniste_anti_circulation_de_l_information_eco_communalism]]
+- [[directive_kontinuum_eco_communalism]]
+- [[enclaves_extractivistes_residuelles_des_corridors_eco_communalism]]
+- [[factions_autoritaires_de_controle_du_savoir_eco_communalism]]
+- [[factions_communautaires_refusant_le_partage_narratif_exterieur_eco_communalism]]
+- [[fragments_d_etats_centraux_residuels_eco_communalism]]
+- [[reseaux_de_notables_communautaires_capturistes_eco_communalism]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

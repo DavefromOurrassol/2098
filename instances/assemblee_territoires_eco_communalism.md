@@ -4,6 +4,7 @@ type: instance
 slug: assemblee_territoires_eco_communalism
 entite: assemblee_territoires
 scenario: eco_communalism
+statut: officialise_enrichi
 localisation:
   zone: null
   lieu: null
@@ -31,9 +32,17 @@ zone_systemique:
   - gouvernance
   - société
 alliances:
-  - coalition_vivant_eco_communalism
-  - le_temoin_eco_communalism
-oppositions: []
+- coalition_vivant_eco_communalism
+- confederation_bassins_vivants_eco_communalism
+- consortium_amazonia_viva_eco_communalism
+- frente_sert_o_livre_eco_communalism
+- kalaallit_nunaat_bioterritoire_eco_communalism
+- le_temoin_eco_communalism
+- reseau_terrafond_bassins_eco_communalism
+- sao_paulo_algorithmique_eco_communalism
+- tresse_verte_corridor_eco_communalism
+oppositions:
+- enclaves_extractivistes_et_etats_residuels_eco_communalism
 type_relation_dominante: coopération
 annee_debut: 2052
 annee_fin:
@@ -76,9 +85,6 @@ sans autorité centrale. Session itinérante deux fois par an.
 - [[gouvernance_institutions]]
 - [[valeurs_culture_tempo_sociale]]
 
-## Relations
-**Alliés** : [[coalition_vivant_eco_communalism]], [[le_temoin_eco_communalism]]
-**Opposants** : _aucun défini_
 
 ## Description journalistique
 La prochaine session plénière se tient au Chiapas. 340 délégués, pas de
@@ -88,3 +94,17 @@ des arbres."
 ## Tensions narratives
 Tension entre communautés voulant plus de coordination et celles refusant
 tout mécanisme supralocal. Peut-on gérer le climat sans autorité centrale ?
+
+## Relations
+**Alliés :**
+- [[coalition_vivant_eco_communalism]]
+- [[confederation_bassins_vivants_eco_communalism]]
+- [[consortium_amazonia_viva_eco_communalism]]
+- [[frente_sert_o_livre_eco_communalism]]
+- [[kalaallit_nunaat_bioterritoire_eco_communalism]]
+- [[le_temoin_eco_communalism]]
+- [[reseau_terrafond_bassins_eco_communalism]]
+- [[sao_paulo_algorithmique_eco_communalism]]
+- [[tresse_verte_corridor_eco_communalism]]
+**Opposants :**
+- [[enclaves_extractivistes_et_etats_residuels_eco_communalism]]

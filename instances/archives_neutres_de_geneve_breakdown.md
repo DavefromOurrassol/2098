@@ -38,8 +38,32 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- arctic_passage_authority_breakdown
+- bureau_des_territoires_residuels_breakdown
+- collectif_des_climatologues_sans_etat_breakdown
+- collectifs_de_gardiens_archivistes_itinerants_breakdown
+- collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
+- communautes_religieuses_des_relais_physiques_breakdown
+- conseil_regulation_ressources_breakdown
+- enclaves_industrielles_de_bergen_troms_breakdown
+- factions_propagandistes_des_archives_breakdown
+- geneve_bunker_institutions_breakdown
+- gouvernements_regionaux_residuels_reterritorialisants_breakdown
+- ligue_des_cites_littorales_en_sursis_breakdown
+- milices_privees_documentees_terrain_breakdown
+- noeud_mnemos_pannonie_breakdown
+- ong_de_gestion_migratoire_survivantes_breakdown
+- oracle_des_seuils_breakdown
+- tour_bcuc_geneve_breakdown
+- tribunal_algorithmique_de_bruxelles_breakdown
+oppositions:
+- arctique_nordark_breakdown
+- bloc_de_johannesburg_breakdown
+- consortium_energetique_oural_caspien_breakdown
+- etats_fragments_en_guerre_pour_les_stations_atmospheriques_breakdown
+- front_des_blocs_regionaux_du_recit_des_conflits_ressources_breakdown
+- seigneuries_logistiques_armees_breakdown
 type_relation_dominante: neutralité
 annee_debut: 2026
 annee_fin: null
@@ -98,6 +122,35 @@ La tension fondamentale des Archives est celle de l'archive sans autorité : ell
 - [[gouvernance_institutions]]
 - [[geopolitique_conflits]]
 - [[frontieres_du_systeme]]
+
+
+## Relations
+**Alliés :**
+- [[arctic_passage_authority_breakdown]]
+- [[bureau_des_territoires_residuels_breakdown]]
+- [[collectif_des_climatologues_sans_etat_breakdown]]
+- [[collectifs_de_gardiens_archivistes_itinerants_breakdown]]
+- [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]]
+- [[communautes_religieuses_des_relais_physiques_breakdown]]
+- [[conseil_regulation_ressources_breakdown]]
+- [[enclaves_industrielles_de_bergen_troms_breakdown]]
+- [[factions_propagandistes_des_archives_breakdown]]
+- [[geneve_bunker_institutions_breakdown]]
+- [[gouvernements_regionaux_residuels_reterritorialisants_breakdown]]
+- [[ligue_des_cites_littorales_en_sursis_breakdown]]
+- [[milices_privees_documentees_terrain_breakdown]]
+- [[noeud_mnemos_pannonie_breakdown]]
+- [[ong_de_gestion_migratoire_survivantes_breakdown]]
+- [[oracle_des_seuils_breakdown]]
+- [[tour_bcuc_geneve_breakdown]]
+- [[tribunal_algorithmique_de_bruxelles_breakdown]]
+**Opposants :**
+- [[arctique_nordark_breakdown]]
+- [[bloc_de_johannesburg_breakdown]]
+- [[consortium_energetique_oural_caspien_breakdown]]
+- [[etats_fragments_en_guerre_pour_les_stations_atmospheriques_breakdown]]
+- [[front_des_blocs_regionaux_du_recit_des_conflits_ressources_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

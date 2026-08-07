@@ -35,8 +35,27 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- brigades_medicales_itinerantes_breakdown
+- collectif_hackers_decroissance_infrastructure_breakdown
+- collectifs_de_gardiens_archivistes_itinerants_breakdown
+- collectifs_de_sante_communautaire_autogeree_breakdown
+- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- consortium_africain_de_biotechnologies_sociales_breakdown
+- enclaves_agro_communautaires_autonomes_breakdown
+- frente_sert_o_livre_breakdown
+- front_humanitaire_d_urgence_non_affilie_breakdown
+- reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown
+- reseaux_de_soigneurs_traditionnels_breakdown
+oppositions:
+- corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown
+- enclaves_corporatives_fortifiees_breakdown
+- etats_fragmentes_nationalisant_les_stocks_breakdown
+- factions_paramilitaires_locales_neutralisees_breakdown
+- milices_de_controle_territorial_breakdown
+- nexus_biosyn_breakdown
+- reseaux_noirs_pharmaceutiques_breakdown
+- seigneuries_logistiques_armees_breakdown
 type_relation_dominante: symbiose
 annee_debut: 2026
 annee_fin: null
@@ -99,6 +118,30 @@ La tension centrale qui les dévore est celle entre l'urgence humanitaire qui l�
 - [[sante_biotechnologies]]
 - [[gouvernance_institutions]]
 - [[technologie_information]]
+
+
+## Relations
+**Alliés :**
+- [[brigades_medicales_itinerantes_breakdown]]
+- [[collectif_hackers_decroissance_infrastructure_breakdown]]
+- [[collectifs_de_gardiens_archivistes_itinerants_breakdown]]
+- [[collectifs_de_sante_communautaire_autogeree_breakdown]]
+- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[consortium_africain_de_biotechnologies_sociales_breakdown]]
+- [[enclaves_agro_communautaires_autonomes_breakdown]]
+- [[frente_sert_o_livre_breakdown]]
+- [[front_humanitaire_d_urgence_non_affilie_breakdown]]
+- [[reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown]]
+- [[reseaux_de_soigneurs_traditionnels_breakdown]]
+**Opposants :**
+- [[corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown]]
+- [[enclaves_corporatives_fortifiees_breakdown]]
+- [[etats_fragmentes_nationalisant_les_stocks_breakdown]]
+- [[factions_paramilitaires_locales_neutralisees_breakdown]]
+- [[milices_de_controle_territorial_breakdown]]
+- [[nexus_biosyn_breakdown]]
+- [[reseaux_noirs_pharmaceutiques_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

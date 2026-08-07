@@ -34,8 +34,23 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
+- assemblee_territoires_policy_reform
+- bureau_gouvernance_algorithmique_policy_reform
+- conseil_regulation_algorithmique_policy_reform
+- consortium_des_villes_etats_durables_policy_reform
+- consortium_technologique_de_planification_territoriale_policy_reform
+- grille_aria_policy_reform
+- office_integre_des_flux_migratoires_policy_reform
+- rede_paulista_de_distribuic_o_algor_tmica_policy_reform
+- reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform
+oppositions:
+- bloc_des_nations_a_economie_carbone_controlee_policy_reform
+- collectifs_de_resistance_aux_relocalisations_forcees_policy_reform
+- courant_autoritaire_recuperateur_du_vocabulaire_communautaire_policy_reform
+- front_souverainiste_des_blocs_non_signataires_policy_reform
+- mouvement_pour_la_souverainete_territoriale_absolue_policy_reform
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -99,6 +114,26 @@ Le Réseau est tiraillé entre sa vocation réformatrice — porter des standard
 - [[organisation_territoires]]
 - [[gouvernance_institutions]]
 - [[demographie_mobilite_humaine]]
+
+
+## Relations
+**Alliés :**
+- [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]
+- [[assemblee_territoires_policy_reform]]
+- [[bureau_gouvernance_algorithmique_policy_reform]]
+- [[conseil_regulation_algorithmique_policy_reform]]
+- [[consortium_des_villes_etats_durables_policy_reform]]
+- [[consortium_technologique_de_planification_territoriale_policy_reform]]
+- [[grille_aria_policy_reform]]
+- [[office_integre_des_flux_migratoires_policy_reform]]
+- [[rede_paulista_de_distribuic_o_algor_tmica_policy_reform]]
+- [[reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform]]
+**Opposants :**
+- [[bloc_des_nations_a_economie_carbone_controlee_policy_reform]]
+- [[collectifs_de_resistance_aux_relocalisations_forcees_policy_reform]]
+- [[courant_autoritaire_recuperateur_du_vocabulaire_communautaire_policy_reform]]
+- [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+- [[mouvement_pour_la_souverainete_territoriale_absolue_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

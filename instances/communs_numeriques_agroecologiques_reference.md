@@ -28,8 +28,34 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- collectifs_academiques_independants_reference
+- collectifs_de_biopiraterie_inversee_reference
+- consortium_amazonia_viva_reference
+- cooperative_terrafond_reference
+- cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference
+- cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference
+- cooperatives_ia_open_source_reference
+- federation_communs_territoriaux_reference
+- frente_sert_o_livre_reference
+- helsinki_communs_numeriques_reference
+- leena_vainala_reference
+- mouvement_racines_vivantes_reference
+- ong_environnementales_de_terrain_reference
+- reseau_des_administrations_locales_rurales_participatives_reference
+- reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference
+- reseau_des_cooperatives_agro_saheliennes_reference
+- reseau_meshcommons_netsolidaire_reference
+- universites_et_think_tanks_en_zones_de_liberte_academique_reference
+oppositions:
+- coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference
+- consortium_des_grandes_plateformes_ia_integrees_reference
+- consortiums_d_agriculture_verticale_algorithmique_reference
+- consortiums_energetiques_opaques_reference
+- consortiums_prives_de_gestion_des_donnees_critiques_reference
+- etats_a_tendance_centraliste_numerique_reference
+- lobbies_agro_industriels_a_haute_consommation_d_eau_reference
+- plateformes_d_optimisation_territoriale_par_ia_reference
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -92,6 +118,37 @@ La montée en puissance des grandes plateformes agro-technologiques privées et 
 - [[technologie_information]]
 - [[organisation_territoires]]
 - [[systemes_productifs_travail]]
+
+
+## Relations
+**Alliés :**
+- [[collectifs_academiques_independants_reference]]
+- [[collectifs_de_biopiraterie_inversee_reference]]
+- [[consortium_amazonia_viva_reference]]
+- [[cooperative_terrafond_reference]]
+- [[cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference]]
+- [[cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference]]
+- [[cooperatives_ia_open_source_reference]]
+- [[federation_communs_territoriaux_reference]]
+- [[frente_sert_o_livre_reference]]
+- [[helsinki_communs_numeriques_reference]]
+- [[leena_vainala_reference]]
+- [[mouvement_racines_vivantes_reference]]
+- [[ong_environnementales_de_terrain_reference]]
+- [[reseau_des_administrations_locales_rurales_participatives_reference]]
+- [[reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference]]
+- [[reseau_des_cooperatives_agro_saheliennes_reference]]
+- [[reseau_meshcommons_netsolidaire_reference]]
+- [[universites_et_think_tanks_en_zones_de_liberte_academique_reference]]
+**Opposants :**
+- [[coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference]]
+- [[consortium_des_grandes_plateformes_ia_integrees_reference]]
+- [[consortiums_d_agriculture_verticale_algorithmique_reference]]
+- [[consortiums_energetiques_opaques_reference]]
+- [[consortiums_prives_de_gestion_des_donnees_critiques_reference]]
+- [[etats_a_tendance_centraliste_numerique_reference]]
+- [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]]
+- [[plateformes_d_optimisation_territoriale_par_ia_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

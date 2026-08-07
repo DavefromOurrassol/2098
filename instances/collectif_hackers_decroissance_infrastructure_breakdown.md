@@ -35,8 +35,31 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- collectif_des_climatologues_sans_etat_breakdown
+- collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
+- collectifs_du_seuil_breakdown
+- factions_secessionnistes_agrariennes_du_desert_breakdown
+- front_de_resistance_aux_peages_sur_les_ressources_breakdown
+- mouvement_des_communes_du_rust_belt_breakdown
+- pirates_biologiques_open_source_breakdown
+- saboteurs_des_corridors_de_transit_breakdown
+- seigneurs_de_guerre_agro_territoriaux_breakdown
+- seoul_collectif_nexcore_breakdown
+oppositions:
+- blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
+- carthage_nord_nexcore_breakdown
+- consortium_energetique_oural_caspien_breakdown
+- consortiums_energetiques_samoiedes_du_yamal_breakdown
+- corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown
+- corridors_eurasiens_convoyage_breakdown
+- directive_kontinuum_breakdown
+- enclaves_corporatives_fortifiees_breakdown
+- front_techno_reconstructionniste_breakdown
+- milices_contractuelles_des_anciens_etats_membres_breakdown
+- milices_de_controle_territorial_breakdown
+- rede_paulista_de_distribuic_o_algor_tmica_breakdown
+- tour_bcuc_geneve_breakdown
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -95,6 +118,34 @@ La contradiction fondamentale du Collectif est celle de tout accélérationnisme
 - [[energie_ressources_critiques]]
 - [[technologie_information]]
 - [[organisation_territoires]]
+
+
+## Relations
+**Alliés :**
+- [[collectif_des_climatologues_sans_etat_breakdown]]
+- [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]]
+- [[collectifs_du_seuil_breakdown]]
+- [[factions_secessionnistes_agrariennes_du_desert_breakdown]]
+- [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
+- [[mouvement_des_communes_du_rust_belt_breakdown]]
+- [[pirates_biologiques_open_source_breakdown]]
+- [[saboteurs_des_corridors_de_transit_breakdown]]
+- [[seigneurs_de_guerre_agro_territoriaux_breakdown]]
+- [[seoul_collectif_nexcore_breakdown]]
+**Opposants :**
+- [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
+- [[carthage_nord_nexcore_breakdown]]
+- [[consortium_energetique_oural_caspien_breakdown]]
+- [[consortiums_energetiques_samoiedes_du_yamal_breakdown]]
+- [[corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown]]
+- [[corridors_eurasiens_convoyage_breakdown]]
+- [[directive_kontinuum_breakdown]]
+- [[enclaves_corporatives_fortifiees_breakdown]]
+- [[front_techno_reconstructionniste_breakdown]]
+- [[milices_contractuelles_des_anciens_etats_membres_breakdown]]
+- [[milices_de_controle_territorial_breakdown]]
+- [[rede_paulista_de_distribuic_o_algor_tmica_breakdown]]
+- [[tour_bcuc_geneve_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

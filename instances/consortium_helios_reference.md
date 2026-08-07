@@ -4,6 +4,7 @@ type: instance
 slug: consortium_helios_reference
 entite: consortium_helios
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: bruxelles_nouveau
   lieu: Bruxelles-Nouveau
@@ -36,15 +37,15 @@ zone_systemique:
     - gouvernance
 
 alliances:
-    - blocs_signataires_du_pacte_energetique_multilateral_reference
-    - fonds_souverains_de_la_ceinture_financiere_pacifique_reference
-    - consortium_de_maintenance_orbitale_seom_7_reference
-
+- blocs_signataires_du_pacte_energetique_multilateral_reference
+- consortium_de_maintenance_orbitale_seom_7_reference
+- fonds_souverains_de_la_ceinture_financiere_pacifique_reference
+- terrametrics_reference
 oppositions:
-    - mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform
-    - ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference
-    - factions_eurasiatiques_contre_la_tarification_hydrique_reference
-
+- bloc_des_souverainistes_climatiques_reference
+- factions_eurasiatiques_contre_la_tarification_hydrique_reference
+- ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference
+- mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform
 type_relation_dominante: dépendance
 
 annee_debut: 2026
@@ -88,12 +89,21 @@ Gestion opérationnelle de 34 stations de captage solaire orbital et de 12 corri
 - [[geopolitique_conflits]]
 - [[technologie_information]]
 
-## Relations
-**Alliés** : [[blocs_signataires_du_pacte_energetique_multilateral_reference]], [[fonds_souverains_de_la_ceinture_financiere_pacifique_reference]], [[consortium_de_maintenance_orbitale_seom_7_reference]]
-**Opposants** : [[mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform]], [[ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference]], [[factions_eurasiatiques_contre_la_tarification_hydrique_reference]]
 
 ## Description journalistique
 Depuis ses tours de verre fumé à Bruxelles-Nouveau et son centre de contrôle orbital au-dessus de Kourou, le Consortium Helios incarne ce que ses détracteurs appellent 'la privatisation silencieuse du soleil'. En 2098, aucune ville de plus d'un million d'habitants sur trois continents ne s'éclaire, ne se chauffe ou ne produit sans avoir signé un contrat-cadre avec lui. Ses dirigeants ne donnent pas de conférences de presse — ils reçoivent des chefs d'État. Ses tarifs ne sont pas publiés — ils sont négociés. Et lorsqu'une région refuse ses conditions, les délestages qui suivent sont toujours présentés comme des 'incidents techniques'. Helios ne dirige pas le monde. Il le conditionne.
 
 ## Tensions narratives
 La pression des métropoles du Sud Global pour renégocier les contrats hérités des années 2050 pourrait fracturer le modèle tarifaire unifié d'Helios. En interne, une faction de cadres intermédiaires plaide pour une 'mutualisation partielle' des infrastructures, tandis que le conseil des actionnaires résiste farouchement — la question de l'énergie comme bien commun n'a jamais été aussi proche d'une rupture institutionnelle. Parallèlement, des fuites de données issues de leurs systèmes de tarification algorithmique alimentent des enquêtes journalistiques qui pourraient exposer l'ampleur réelle de leur influence politique dissimulée.
+
+## Relations
+**Alliés :**
+- [[blocs_signataires_du_pacte_energetique_multilateral_reference]]
+- [[consortium_de_maintenance_orbitale_seom_7_reference]]
+- [[fonds_souverains_de_la_ceinture_financiere_pacifique_reference]]
+- [[terrametrics_reference]]
+**Opposants :**
+- [[bloc_des_souverainistes_climatiques_reference]]
+- [[factions_eurasiatiques_contre_la_tarification_hydrique_reference]]
+- [[ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference]]
+- [[mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform]]

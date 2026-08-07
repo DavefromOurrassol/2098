@@ -4,6 +4,7 @@ type: instance
 slug: nexus_biosyn_fortress_world
 entite: nexus_biosyn
 scenario: fortress_world
+statut: officialise_enrichi
 localisation:
   zone: null
   lieu: null
@@ -40,15 +41,27 @@ zone_systemique:
     - infrastructure
 
 alliances:
-    - etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world
-    - cartels_energetiques_des_bioreacteurs_fortress_world
-    - milices_privees_de_protection_des_sites_germinaux_fortress_world
-
+- biolock_agritech_fortress_world
+- cartels_energetiques_des_bioreacteurs_fortress_world
+- conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world
+- etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world
+- instances_aria_concurrentes_des_blocs_rivaux_fortress_world
+- milices_privees_de_protection_des_sites_germinaux_fortress_world
+- neurosentry_fortress_world
+- nexus_biosyn_division_eurasienne_fortress_world
+- nexus_biosyn_division_pacifique_fortress_world
+- systemes_de_scoring_de_productivite_corporative_fortress_world
+- tours_nexus7_fortress_world
+- vaultcorp_security_fortress_world
 oppositions:
-    - internationale_des_semenciers_agro_pirates_fortress_world
-    - alliance_sanitaire_des_populations_exclues_fortress_world
-    - divisions_concurrentes_nexus_biosyn_fortress_world
-
+- alliance_sanitaire_des_populations_exclues_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- consortium_africain_de_biotechnologies_sociales_fortress_world
+- consortium_amazonia_viva_fortress_world
+- divisions_concurrentes_nexus_biosyn_fortress_world
+- internationale_des_semenciers_agro_pirates_fortress_world
+- populations_des_zones_deficitaires_d_optimisation_fortress_world
+- reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world
 type_relation_dominante: dépendance
 
 annee_debut: 2031
@@ -93,12 +106,33 @@ Chaque division régionale licencie les semences synthétiques Gen-4 et les thé
 - [[geopolitique_conflits]]
 - [[gouvernance_institutions]]
 
-## Relations
-**Alliés** : [[etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world]], [[cartels_energetiques_des_bioreacteurs_fortress_world]], [[milices_privees_de_protection_des_sites_germinaux_fortress_world]]
-**Opposants** : [[internationale_des_semenciers_agro_pirates_fortress_world]], [[alliance_sanitaire_des_populations_exclues_fortress_world]], [[divisions_concurrentes_nexus_biosyn_fortress_world]]
 
 ## Description journalistique
 En 2098, tenter de localiser le siège de Nexus BioSyn Sovereign Divisions relève de l'enquête géopolitique : il n'en existe plus un, mais sept, chacun protégé par des traités de souveraineté bilatéraux et des cordons sécuritaires dignes de ministères de la défense. Depuis la Grande Fragmentation de 2041, le conglomérat a cessé de prétendre à l'universalité — il a épousé la logique des blocs avec une brutalité froide. Les États qui refusent de signer les Protocoles de Dépendance Germinale se retrouvent dans l'impossibilité de cultiver des céréales à haut rendement ou d'accéder aux immunothérapies adaptatives. Un fonctionnaire onusien sous couvert d'anonymat résume : 'Nexus ne vend plus des produits. Il vend de la survie biologique conditionnelle.'
 
 ## Tensions narratives
 La fracture interne entre les divisions est explosive : la Division Eurasienne et la Division Pacifique-Nord se disputent le brevet de la thérapie immuno-climatique Gen-4X, un conflit de propriété intellectuelle qui a déjà coûté la vie à trois directeurs régionaux en deux ans. Par ailleurs, des lanceurs d'alerte affirment que certaines divisions sabotent discrètement les récoltes de blocs adversaires via des variantes génétiques dormantes — une guerre biologique plausiblement niable. Enfin, la montée des réseaux agro-pirates redistribuant des semences libres non brevetées menace pour la première fois le modèle de dépendance germinale, forçant Nexus à envisager une réponse militaire directe que plusieurs États refusent encore de cautionner.
+
+## Relations
+**Alliés :**
+- [[biolock_agritech_fortress_world]]
+- [[cartels_energetiques_des_bioreacteurs_fortress_world]]
+- [[conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world]]
+- [[etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world]]
+- [[instances_aria_concurrentes_des_blocs_rivaux_fortress_world]]
+- [[milices_privees_de_protection_des_sites_germinaux_fortress_world]]
+- [[neurosentry_fortress_world]]
+- [[nexus_biosyn_division_eurasienne_fortress_world]]
+- [[nexus_biosyn_division_pacifique_fortress_world]]
+- [[systemes_de_scoring_de_productivite_corporative_fortress_world]]
+- [[tours_nexus7_fortress_world]]
+- [[vaultcorp_security_fortress_world]]
+**Opposants :**
+- [[alliance_sanitaire_des_populations_exclues_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[consortium_africain_de_biotechnologies_sociales_fortress_world]]
+- [[consortium_amazonia_viva_fortress_world]]
+- [[divisions_concurrentes_nexus_biosyn_fortress_world]]
+- [[internationale_des_semenciers_agro_pirates_fortress_world]]
+- [[populations_des_zones_deficitaires_d_optimisation_fortress_world]]
+- [[reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world]]

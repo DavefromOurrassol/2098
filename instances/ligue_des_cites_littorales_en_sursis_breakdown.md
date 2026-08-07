@@ -36,8 +36,25 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_stabilisation_climatique_breakdown
+- archives_neutres_de_geneve_breakdown
+- cargo_mombasa_crrc_breakdown
+- collectifs_de_gardiens_archivistes_itinerants_breakdown
+- federation_communs_territoriaux_breakdown
+- front_humanitaire_d_urgence_non_affilie_breakdown
+- hanse_baltique_breakdown
+- hanse_baltique_recomposee_breakdown
+- lagos_est_nexcore_breakdown
+- reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown
+- sfax_relais_bouches_breakdown
+- tour_bcuc_geneve_breakdown
+oppositions:
+- enclaves_corporatives_fortifiees_breakdown
+- gouvernements_de_forteresse_anti_nairobi_breakdown
+- milices_d_accaparement_hydrique_breakdown
+- nexcore_breakdown
+- seigneuries_foncieres_opportunistes_breakdown
 type_relation_dominante: dépendance
 annee_debut: 2026
 annee_fin: null
@@ -99,6 +116,28 @@ La tension centrale de la Ligue réside dans l'impossibilité de son mandat : re
 - [[climat_environnement_global]]
 - [[organisation_territoires]]
 - [[demographie_mobilite_humaine]]
+
+
+## Relations
+**Alliés :**
+- [[agence_stabilisation_climatique_breakdown]]
+- [[archives_neutres_de_geneve_breakdown]]
+- [[cargo_mombasa_crrc_breakdown]]
+- [[collectifs_de_gardiens_archivistes_itinerants_breakdown]]
+- [[federation_communs_territoriaux_breakdown]]
+- [[front_humanitaire_d_urgence_non_affilie_breakdown]]
+- [[hanse_baltique_breakdown]]
+- [[hanse_baltique_recomposee_breakdown]]
+- [[lagos_est_nexcore_breakdown]]
+- [[reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown]]
+- [[sfax_relais_bouches_breakdown]]
+- [[tour_bcuc_geneve_breakdown]]
+**Opposants :**
+- [[enclaves_corporatives_fortifiees_breakdown]]
+- [[gouvernements_de_forteresse_anti_nairobi_breakdown]]
+- [[milices_d_accaparement_hydrique_breakdown]]
+- [[nexcore_breakdown]]
+- [[seigneuries_foncieres_opportunistes_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

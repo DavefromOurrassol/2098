@@ -31,8 +31,28 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- consortium_des_grandes_plateformes_ia_integrees_reference
+- consortiums_mediatiques_corporatifs_reference
+- consortiums_prives_de_gestion_des_donnees_critiques_reference
+- directive_kontinuum_reference
+- etats_a_tendance_centraliste_numerique_reference
+- gouvernements_a_regime_de_productivite_mandatee_reference
+- pacte_des_souverains_reference
+- plateformes_centralisees_de_narration_officielle_reference
+oppositions:
+- collectifs_academiques_independants_reference
+- conseil_regulation_algorithmique_reference
+- cooperatives_ia_open_source_reference
+- helsinki_communs_numeriques_reference
+- leena_vainala_reference
+- ong_environnementales_de_terrain_reference
+- oracle_des_seuils_reference
+- regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference
+- reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference
+- reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference
+- reseau_meshcommons_netsolidaire_reference
+- tribunal_algorithmique_de_bruxelles_reference
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -98,6 +118,31 @@ La contradiction centrale du Consortium est d'ordre existentiel : ses membres on
 - [[technologie_information]]
 - [[gouvernance_institutions]]
 - [[systeme_economique_redistribution]]
+
+
+## Relations
+**Alliés :**
+- [[consortium_des_grandes_plateformes_ia_integrees_reference]]
+- [[consortiums_mediatiques_corporatifs_reference]]
+- [[consortiums_prives_de_gestion_des_donnees_critiques_reference]]
+- [[directive_kontinuum_reference]]
+- [[etats_a_tendance_centraliste_numerique_reference]]
+- [[gouvernements_a_regime_de_productivite_mandatee_reference]]
+- [[pacte_des_souverains_reference]]
+- [[plateformes_centralisees_de_narration_officielle_reference]]
+**Opposants :**
+- [[collectifs_academiques_independants_reference]]
+- [[conseil_regulation_algorithmique_reference]]
+- [[cooperatives_ia_open_source_reference]]
+- [[helsinki_communs_numeriques_reference]]
+- [[leena_vainala_reference]]
+- [[ong_environnementales_de_terrain_reference]]
+- [[oracle_des_seuils_reference]]
+- [[regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference]]
+- [[reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference]]
+- [[reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference]]
+- [[reseau_meshcommons_netsolidaire_reference]]
+- [[tribunal_algorithmique_de_bruxelles_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

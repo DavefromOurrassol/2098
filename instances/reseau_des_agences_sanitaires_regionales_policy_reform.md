@@ -32,8 +32,24 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
+- autorite_mondiale_du_vivant_amv_policy_reform
+- bloc_des_nations_a_economie_carbone_controlee_policy_reform
+- conseil_regulation_algorithmique_policy_reform
+- consortium_africain_de_biotechnologies_sociales_policy_reform
+- federation_des_mutuelles_biotech_policy_reform
+- fonds_mondial_de_stabilisation_biotechnologique_policy_reform
+- fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform
+- grille_aria_policy_reform
+- institut_de_therapeutique_integree_de_nairobi_policy_reform
+- reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform
+oppositions:
+- collectifs_de_gouvernance_communautaire_decentralisee_policy_reform
+- factions_internes_dissidentes_des_contributeurs_historiques_policy_reform
+- front_des_autonomies_territoriales_radicales_policy_reform
+- front_souverainiste_des_blocs_non_signataires_policy_reform
+- mouvement_pour_la_souverainete_territoriale_absolue_policy_reform
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -101,6 +117,27 @@ La tension centrale du Réseau réside dans l'écart croissant entre sa mission 
 - [[sante_biotechnologies]]
 - [[gouvernance_institutions]]
 - [[organisation_territoires]]
+
+
+## Relations
+**Alliés :**
+- [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]
+- [[autorite_mondiale_du_vivant_amv_policy_reform]]
+- [[bloc_des_nations_a_economie_carbone_controlee_policy_reform]]
+- [[conseil_regulation_algorithmique_policy_reform]]
+- [[consortium_africain_de_biotechnologies_sociales_policy_reform]]
+- [[federation_des_mutuelles_biotech_policy_reform]]
+- [[fonds_mondial_de_stabilisation_biotechnologique_policy_reform]]
+- [[fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform]]
+- [[grille_aria_policy_reform]]
+- [[institut_de_therapeutique_integree_de_nairobi_policy_reform]]
+- [[reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform]]
+**Opposants :**
+- [[collectifs_de_gouvernance_communautaire_decentralisee_policy_reform]]
+- [[factions_internes_dissidentes_des_contributeurs_historiques_policy_reform]]
+- [[front_des_autonomies_territoriales_radicales_policy_reform]]
+- [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+- [[mouvement_pour_la_souverainete_territoriale_absolue_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

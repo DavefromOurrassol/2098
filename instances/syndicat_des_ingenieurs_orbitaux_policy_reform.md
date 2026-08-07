@@ -31,8 +31,18 @@ zone_geographique:
 - orbital
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- bureau_international_du_travail_augmente_bita_policy_reform
+- internationale_travailleurs_augmentes_policy_reform
+- reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform
+- collectifs_citoyens_de_deliberation_augmentee_policy_reform
+- faction_regulatrice_dure_au_sein_du_cei_policy_reform
+oppositions:
+- consortium_helios_policy_reform
+- coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform
+- front_souverainiste_des_blocs_non_signataires_policy_reform
+- factions_technocratiques_de_la_marchandisation_hydrique_policy_reform
+- conglomerats_d_automatisation_industrielle_integrale_policy_reform
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -98,6 +108,20 @@ Le Syndicat est pris en étau entre les institutions technocratiques qui souhait
 - [[systemes_productifs_travail]]
 - [[gouvernance_institutions]]
 - [[organisation_territoires]]
+
+## Relations
+**Alliés :**
+- [[bureau_international_du_travail_augmente_bita_policy_reform]]
+- [[internationale_travailleurs_augmentes_policy_reform]]
+- [[reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform]]
+- [[collectifs_citoyens_de_deliberation_augmentee_policy_reform]]
+- [[faction_regulatrice_dure_au_sein_du_cei_policy_reform]]
+**Opposants :**
+- [[consortium_helios_policy_reform]]
+- [[coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform]]
+- [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+- [[factions_technocratiques_de_la_marchandisation_hydrique_policy_reform]]
+- [[conglomerats_d_automatisation_industrielle_integrale_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

@@ -4,6 +4,7 @@ type: instance
 slug: les_veilleurs_du_fleuve_new_sustainability
 entite: les_veilleurs_du_fleuve
 scenario: new_sustainability
+statut: officialise_enrichi
 localisation:
   zone: reseau_vivant_continental
   lieu: fleuve Niger, deltas du Mékong, affluents de l'Amazone (zones d'action des Sentinelles Fluviales)
@@ -34,18 +35,17 @@ zone_systemique:
     - société
 
 alliances:
-    - collectifs_riverains_du_bassin_du_congo_new_sustainability
-    - reseau_des_bio_communs_regionaux_new_sustainability
-    - agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
-    - mouvement_communautaire_des_micro_grids_energetiques_new_sustainability
-    - reseau_des_communs_alimentaires_hors_grille_new_sustainability
-
+- agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
+- collectifs_de_deplaces_climatiques_non_representes_new_sustainability
+- collectifs_riverains_du_bassin_du_congo_new_sustainability
+- mouvement_communautaire_des_micro_grids_energetiques_new_sustainability
+- reseau_des_bio_communs_regionaux_new_sustainability
+- reseau_des_communs_alimentaires_hors_grille_new_sustainability
 oppositions:
-    - lobbies_agro_industriels_du_bassin_du_congo_new_sustainability
-    - lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability
-    - bloc_des_gouvernements_souverainistes_hydriques_new_sustainability
-    - enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability
-
+- bloc_des_gouvernements_souverainistes_hydriques_new_sustainability
+- enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability
+- lobbies_agro_industriels_du_bassin_du_congo_new_sustainability
+- lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability
 type_relation_dominante: rivalité
 
 annee_debut: 2026
@@ -88,12 +88,23 @@ Elles surveillent en temps réel la qualité de l’eau, la biodiversité et les
 - [[technologie_information]]
 - [[sante_biotechnologies]]
 
-## Relations
-**Alliés** : [[collectifs_riverains_du_bassin_du_congo_new_sustainability]], [[reseau_des_bio_communs_regionaux_new_sustainability]], [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]], [[mouvement_communautaire_des_micro_grids_energetiques_new_sustainability]], [[reseau_des_communs_alimentaires_hors_grille_new_sustainability]]
-**Opposants** : [[lobbies_agro_industriels_du_bassin_du_congo_new_sustainability]], [[lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability]], [[bloc_des_gouvernements_souverainistes_hydriques_new_sustainability]], [[enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability]]
 
 ## Description journalistique
 « Ils sont les yeux et les oreilles des fleuves oubliés », explique Aïcha Diallo, une Sentinelle du fleuve Niger, en ajustant son bracelet de surveillance artisanale, un mélange de capteurs open-source et de perles traditionnelles. Dans les deltas du Mékong ou les affluents de l’Amazone, ces gardiens discrets mais redoutables ont transformé leur méfiance envers les institutions en une force organisée. Leur dernière victoire ? Avoir forcé l’AGRB-ONU à reconnaître des zones de « souveraineté hydrique locale » après des années de lutte contre un projet de barrage algorithmique. Mais leur combat est loin d’être terminé : entre les drones des lobbies miniers et les IA de modélisation climatique qui ignorent leurs données, les Sentinelles doivent sans cesse innover pour rester invisibles… et efficaces.
 
 ## Tensions narratives
 Leur plus grand défi ? Trouver un équilibre entre leur besoin de discrétion et la nécessité de peser sur les décisions globales. Certains collectifs veulent s’allier plus étroitement avec les réseaux néo-démocratiques pour exiger une représentation officielle, tandis que d’autres prônent une radicalisation, comme les Zones Libres anarcho-autonomistes. Par ailleurs, leur dépendance croissante aux outils technologiques (même détournés) les expose à des risques de récupération par les plateformes de consensus automatisé ou les lobbies agro-industriels, qui cherchent à les infiltrer pour discréditer leur légitimité.
+
+## Relations
+**Alliés :**
+- [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]]
+- [[collectifs_de_deplaces_climatiques_non_representes_new_sustainability]]
+- [[collectifs_riverains_du_bassin_du_congo_new_sustainability]]
+- [[mouvement_communautaire_des_micro_grids_energetiques_new_sustainability]]
+- [[reseau_des_bio_communs_regionaux_new_sustainability]]
+- [[reseau_des_communs_alimentaires_hors_grille_new_sustainability]]
+**Opposants :**
+- [[bloc_des_gouvernements_souverainistes_hydriques_new_sustainability]]
+- [[enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability]]
+- [[lobbies_agro_industriels_du_bassin_du_congo_new_sustainability]]
+- [[lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability]]

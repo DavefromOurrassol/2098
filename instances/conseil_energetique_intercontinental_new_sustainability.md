@@ -32,8 +32,25 @@ zone_geographique:
 - régionale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_mondiale_de_modelisation_climatique_ammc_new_sustainability
+- arctic_passage_authority_new_sustainability
+- centre_institutionnel_geneve_new_sustainability
+- conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability
+- conseil_technocratique_de_coordination_regionale_new_sustainability
+- consortium_helios_new_sustainability
+- fonds_mondial_de_redistribution_technologique_new_sustainability
+- fonds_mondial_de_regeneration_ecologique_new_sustainability
+- kalaallit_nunaat_sovereign_fund_new_sustainability
+- operateurs_de_fusion_energetique_regionaux_new_sustainability
+- union_des_blocs_energetiques_regionaux_new_sustainability
+oppositions:
+- bloc_eurasien_souverainiste_new_sustainability
+- coalition_des_industries_extractives_residuelles_new_sustainability
+- factions_souverainistes_des_blocs_peripheriques_new_sustainability
+- lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability
+- mouvement_communautaire_des_micro_grids_energetiques_new_sustainability
+- souverainistes_du_bloc_eurasien_new_sustainability
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -99,6 +116,28 @@ Le Conseil est structurellement tiraillé entre son mandat universaliste et les 
 - [[energie_ressources_critiques]]
 - [[gouvernance_institutions]]
 - [[geopolitique_conflits]]
+
+
+## Relations
+**Alliés :**
+- [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]]
+- [[arctic_passage_authority_new_sustainability]]
+- [[centre_institutionnel_geneve_new_sustainability]]
+- [[conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability]]
+- [[conseil_technocratique_de_coordination_regionale_new_sustainability]]
+- [[consortium_helios_new_sustainability]]
+- [[fonds_mondial_de_redistribution_technologique_new_sustainability]]
+- [[fonds_mondial_de_regeneration_ecologique_new_sustainability]]
+- [[kalaallit_nunaat_sovereign_fund_new_sustainability]]
+- [[operateurs_de_fusion_energetique_regionaux_new_sustainability]]
+- [[union_des_blocs_energetiques_regionaux_new_sustainability]]
+**Opposants :**
+- [[bloc_eurasien_souverainiste_new_sustainability]]
+- [[coalition_des_industries_extractives_residuelles_new_sustainability]]
+- [[factions_souverainistes_des_blocs_peripheriques_new_sustainability]]
+- [[lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability]]
+- [[mouvement_communautaire_des_micro_grids_energetiques_new_sustainability]]
+- [[souverainistes_du_bloc_eurasien_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

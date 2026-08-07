@@ -29,8 +29,29 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_stabilisation_climatique_reference
+- amara_diallo_nkosi_reference
+- autorites_regionales_de_regulation_hydrologique_reference
+- consortium_africain_de_biotechnologies_sociales_reference
+- cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference
+- institut_polytechnique_de_ouagadougou_reference
+- kinshasa_accords_hydriques_reference
+- nairobi_crrc_reference
+- observatoire_climatique_des_territoires_oct_reference
+- programme_onu_eau_2080_reference
+- regulateurs_de_l_union_continentale_africaine_reference
+- reseau_des_cooperatives_agro_saheliennes_reference
+- union_africaine_de_resilience_territoriale_reference
+- union_africaine_resilience_reference
+oppositions:
+- consortiums_prives_d_extraction_de_ressources_critiques_reference
+- corridor_arctique_nordique_reference
+- factions_eurasiatiques_contre_la_tarification_hydrique_reference
+- gouvernements_du_bloc_sahelien_autonome_reference
+- lobbies_agro_industriels_a_haute_consommation_d_eau_reference
+- milices_concurrentes_des_droits_de_passage_reference
+- operateurs_prives_d_energie_distribuee_hors_fct_reference
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -91,6 +112,32 @@ La Commission navigue en permanence entre sa mission universaliste d'accès équ
 - [[climat_environnement_global]]
 - [[gouvernance_institutions]]
 - [[geopolitique_conflits]]
+
+
+## Relations
+**Alliés :**
+- [[agence_stabilisation_climatique_reference]]
+- [[amara_diallo_nkosi_reference]]
+- [[autorites_regionales_de_regulation_hydrologique_reference]]
+- [[consortium_africain_de_biotechnologies_sociales_reference]]
+- [[cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference]]
+- [[institut_polytechnique_de_ouagadougou_reference]]
+- [[kinshasa_accords_hydriques_reference]]
+- [[nairobi_crrc_reference]]
+- [[observatoire_climatique_des_territoires_oct_reference]]
+- [[programme_onu_eau_2080_reference]]
+- [[regulateurs_de_l_union_continentale_africaine_reference]]
+- [[reseau_des_cooperatives_agro_saheliennes_reference]]
+- [[union_africaine_de_resilience_territoriale_reference]]
+- [[union_africaine_resilience_reference]]
+**Opposants :**
+- [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[corridor_arctique_nordique_reference]]
+- [[factions_eurasiatiques_contre_la_tarification_hydrique_reference]]
+- [[gouvernements_du_bloc_sahelien_autonome_reference]]
+- [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]]
+- [[milices_concurrentes_des_droits_de_passage_reference]]
+- [[operateurs_prives_d_energie_distribuee_hors_fct_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

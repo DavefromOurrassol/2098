@@ -4,6 +4,7 @@ type: instance
 slug: trame_bioclimatique_new_sustainability
 entite: trame_bioclimatique
 scenario: new_sustainability
+statut: officialise_enrichi
 localisation:
   zone: reseau_vivant_continental
   lieu: Réseau Vivant Continental (RVC)
@@ -36,16 +37,35 @@ zone_systemique:
     - IA
 
 alliances:
-    - consortium_de_regeneration_planetaire_new_sustainability
-    - agence_mondiale_de_modelisation_climatique_ammc_new_sustainability
-    - reseaux_de_gouvernance_territoriale_distribues_new_sustainability
-    - operateurs_de_fusion_energetique_regionaux_new_sustainability
-
+- agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
+- agence_mondiale_de_modelisation_climatique_ammc_new_sustainability
+- agence_orbitale_de_regulation_commune_aorc_new_sustainability
+- collectifs_riverains_du_bassin_du_congo_new_sustainability
+- commission_territoriale_ourrassol_new_sustainability
+- conseil_de_deliberation_augmentee_de_l_union_nordique_new_sustainability
+- conseil_technocratique_de_coordination_regionale_new_sustainability
+- consortium_amazonia_viva_new_sustainability
+- consortium_de_regeneration_planetaire_new_sustainability
+- consortium_des_ia_climatiques_new_sustainability
+- fonds_mondial_de_redistribution_technologique_new_sustainability
+- great_lakes_autonomous_compact_new_sustainability
+- great_lakes_compact_new_sustainability
+- hub_nairobi_kigali_new_sustainability
+- operateurs_de_fusion_energetique_regionaux_new_sustainability
+- parlement_territoires_nairobi_new_sustainability
+- programme_onusien_de_mobilite_climatique_new_sustainability
+- reseau_des_bio_communs_regionaux_new_sustainability
+- reseau_des_hubs_urbains_regeneratifs_new_sustainability
+- reseaux_de_gouvernance_territoriale_distribues_new_sustainability
+- reseaux_de_medecine_regenerative_universelle_new_sustainability
 oppositions:
-    - lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability
-    - etats_souverainistes_anti_reseau_new_sustainability
-    - communautes_locales_exclues_des_corridors_new_sustainability
-
+- communautes_locales_exclues_des_corridors_new_sustainability
+- etats_souverainistes_anti_reseau_new_sustainability
+- internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
+- lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability
+- mouvement_pour_l_autodetermination_territoriale_new_sustainability
+- reseau_des_communs_alimentaires_hors_grille_new_sustainability
+- reseau_des_villes_regeneratives_new_sustainability
 type_relation_dominante: symbiose
 
 annee_debut: 2041
@@ -89,12 +109,41 @@ Maintien opérationnel des 47 corridors bioclimatiques intercontinentaux, pilota
 - [[organisation_territoires]]
 - [[gouvernance_institutions]]
 
-## Relations
-**Alliés** : [[consortium_de_regeneration_planetaire_new_sustainability]], [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]], [[reseaux_de_gouvernance_territoriale_distribues_new_sustainability]], [[operateurs_de_fusion_energetique_regionaux_new_sustainability]]
-**Opposants** : [[lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability]], [[etats_souverainistes_anti_reseau_new_sustainability]], [[communautes_locales_exclues_des_corridors_new_sustainability]]
 
 ## Description journalistique
 De Manaus à Nairobi, les corridors verts du RVC ressemblent de loin à de la nature revenue à l'état sauvage. De près, ce sont des écosystèmes instrumentés jusqu'à la racine : chaque arbre porte un identifiant biosensoriel, chaque rivière est guidée par des modèles prédictifs que revoient chaque nuit les IA du Consortium. En 2098, le RVC est à la fois la plus grande réussite de l'humanité et son infrastructure la plus opaque — personne ne sait vraiment qui contrôle les algorithmes qui décident quels territoires méritent d'être régénérés en premier. Pour les populations des zones d'interface, vivre à la lisière du Réseau Vivant Continental signifie respirer un air mesurable, boire une eau certifiée, et voir ses terres classées 'patrimoine régénératif' sans avoir été consultées.
 
 ## Tensions narratives
 La question de qui contrôle réellement les algorithmes de priorisation écologique reste entière — certains blocs continentaux soupçonnent les zones à forte valorisation énergétique d'être systématiquement favorisées. Des communautés autochtones revendiquent la co-gouvernance de corridors tracés sur leurs territoires ancestraux sans leur consentement. À mesure que le RVC devient indispensable à la stabilité climatique mondiale, sa vulnérabilité en tant que cible géopolitique ou cyber-sabotage grandit silencieusement.
+
+## Relations
+**Alliés :**
+- [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]]
+- [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]]
+- [[agence_orbitale_de_regulation_commune_aorc_new_sustainability]]
+- [[collectifs_riverains_du_bassin_du_congo_new_sustainability]]
+- [[commission_territoriale_ourrassol_new_sustainability]]
+- [[conseil_de_deliberation_augmentee_de_l_union_nordique_new_sustainability]]
+- [[conseil_technocratique_de_coordination_regionale_new_sustainability]]
+- [[consortium_amazonia_viva_new_sustainability]]
+- [[consortium_de_regeneration_planetaire_new_sustainability]]
+- [[consortium_des_ia_climatiques_new_sustainability]]
+- [[fonds_mondial_de_redistribution_technologique_new_sustainability]]
+- [[great_lakes_autonomous_compact_new_sustainability]]
+- [[great_lakes_compact_new_sustainability]]
+- [[hub_nairobi_kigali_new_sustainability]]
+- [[operateurs_de_fusion_energetique_regionaux_new_sustainability]]
+- [[parlement_territoires_nairobi_new_sustainability]]
+- [[programme_onusien_de_mobilite_climatique_new_sustainability]]
+- [[reseau_des_bio_communs_regionaux_new_sustainability]]
+- [[reseau_des_hubs_urbains_regeneratifs_new_sustainability]]
+- [[reseaux_de_gouvernance_territoriale_distribues_new_sustainability]]
+- [[reseaux_de_medecine_regenerative_universelle_new_sustainability]]
+**Opposants :**
+- [[communautes_locales_exclues_des_corridors_new_sustainability]]
+- [[etats_souverainistes_anti_reseau_new_sustainability]]
+- [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]]
+- [[lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability]]
+- [[mouvement_pour_l_autodetermination_territoriale_new_sustainability]]
+- [[reseau_des_communs_alimentaires_hors_grille_new_sustainability]]
+- [[reseau_des_villes_regeneratives_new_sustainability]]

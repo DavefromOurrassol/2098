@@ -32,8 +32,26 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- algorithmic_labor_exchange_reference
+- bloc_ressources_eurasiatique_bre_reference
+- consortium_des_grandes_plateformes_ia_integrees_reference
+- consortium_indo_pacifique_de_l_hydrogene_reference
+- consortium_logistique_asiatique_de_contournement_aln_reference
+- consortiums_d_agriculture_verticale_algorithmique_reference
+- gouvernements_a_regime_de_productivite_mandatee_reference
+- neuroharmonics_reference
+oppositions:
+- bloc_des_souverainistes_climatiques_reference
+- coalition_pour_la_souverainete_numerique_nationale_reference
+- collectifs_academiques_independants_reference
+- conseil_de_geneve_pour_les_droits_biosociaux_reference
+- federation_des_cliniques_autonomes_reference
+- internationale_travailleurs_augmentes_reference
+- regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference
+- reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference
+- syndicats_de_travail_rural_hybride_reference
+- syndicats_de_travailleurs_de_la_transition_energetique_reference
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -97,6 +115,29 @@ Le Consortium se trouve écartelé entre ses membres qui prônent l'augmentation
 - [[systemes_productifs_travail]]
 - [[gouvernance_institutions]]
 - [[sante_biotechnologies]]
+
+
+## Relations
+**Alliés :**
+- [[algorithmic_labor_exchange_reference]]
+- [[bloc_ressources_eurasiatique_bre_reference]]
+- [[consortium_des_grandes_plateformes_ia_integrees_reference]]
+- [[consortium_indo_pacifique_de_l_hydrogene_reference]]
+- [[consortium_logistique_asiatique_de_contournement_aln_reference]]
+- [[consortiums_d_agriculture_verticale_algorithmique_reference]]
+- [[gouvernements_a_regime_de_productivite_mandatee_reference]]
+- [[neuroharmonics_reference]]
+**Opposants :**
+- [[bloc_des_souverainistes_climatiques_reference]]
+- [[coalition_pour_la_souverainete_numerique_nationale_reference]]
+- [[collectifs_academiques_independants_reference]]
+- [[conseil_de_geneve_pour_les_droits_biosociaux_reference]]
+- [[federation_des_cliniques_autonomes_reference]]
+- [[internationale_travailleurs_augmentes_reference]]
+- [[regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference]]
+- [[reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference]]
+- [[syndicats_de_travail_rural_hybride_reference]]
+- [[syndicats_de_travailleurs_de_la_transition_energetique_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

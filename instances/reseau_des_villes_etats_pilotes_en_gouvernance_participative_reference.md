@@ -30,8 +30,32 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_internationale_des_energies_renouvelables_irena_2_reference
+- banque_des_communs_reference
+- collectifs_academiques_independants_reference
+- confederation_des_megapoles_autonomes_reference
+- conseil_de_geneve_pour_les_droits_biosociaux_reference
+- cooperatives_ia_open_source_reference
+- federation_communs_territoriaux_reference
+- helsinki_communs_numeriques_reference
+- leena_vainala_reference
+- ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference
+- reseau_des_metropoles_cotieres_adaptees_reference
+- reseau_meshcommons_netsolidaire_reference
+oppositions:
+- bloc_eurasien_central_reference
+- bloc_ressources_eurasiatique_bre_reference
+- bureau_des_territoires_residuels_reference
+- consortium_des_grandes_plateformes_ia_integrees_reference
+- consortium_des_plateformes_ia_centralisees_anti_deliberation_reference
+- consortiums_prives_de_gestion_des_donnees_critiques_reference
+- etats_a_tendance_centraliste_numerique_reference
+- gouvernements_a_regime_de_productivite_mandatee_reference
+- lobbies_agro_industriels_a_haute_consommation_d_eau_reference
+- pacte_des_souverains_reference
+- plateformes_centralisees_de_narration_officielle_reference
+- rede_paulista_de_distribuic_o_algor_tmica_reference
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -93,6 +117,35 @@ Le Réseau se trouve écartelé entre son idéal d'autonomie radicale et la néc
 - [[organisation_territoires]]
 - [[gouvernance_institutions]]
 - [[valeurs_culture_tempo_sociale]]
+
+
+## Relations
+**Alliés :**
+- [[agence_internationale_des_energies_renouvelables_irena_2_reference]]
+- [[banque_des_communs_reference]]
+- [[collectifs_academiques_independants_reference]]
+- [[confederation_des_megapoles_autonomes_reference]]
+- [[conseil_de_geneve_pour_les_droits_biosociaux_reference]]
+- [[cooperatives_ia_open_source_reference]]
+- [[federation_communs_territoriaux_reference]]
+- [[helsinki_communs_numeriques_reference]]
+- [[leena_vainala_reference]]
+- [[ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference]]
+- [[reseau_des_metropoles_cotieres_adaptees_reference]]
+- [[reseau_meshcommons_netsolidaire_reference]]
+**Opposants :**
+- [[bloc_eurasien_central_reference]]
+- [[bloc_ressources_eurasiatique_bre_reference]]
+- [[bureau_des_territoires_residuels_reference]]
+- [[consortium_des_grandes_plateformes_ia_integrees_reference]]
+- [[consortium_des_plateformes_ia_centralisees_anti_deliberation_reference]]
+- [[consortiums_prives_de_gestion_des_donnees_critiques_reference]]
+- [[etats_a_tendance_centraliste_numerique_reference]]
+- [[gouvernements_a_regime_de_productivite_mandatee_reference]]
+- [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]]
+- [[pacte_des_souverains_reference]]
+- [[plateformes_centralisees_de_narration_officielle_reference]]
+- [[rede_paulista_de_distribuic_o_algor_tmica_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

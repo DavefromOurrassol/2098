@@ -33,13 +33,22 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
-- rust_belt_communes_libres_fortress_world
-- cellules_mouvement_commun_midwest_fortress_world
 - campements_seuils_fermes_fortress_world
+- cellules_mouvement_commun_midwest_fortress_world
+- collectifs_du_seuil_fortress_world
+- mouvement_commun_midwest_fortress_world
+- rust_belt_communes_libres_fortress_world
+- tribunal_algorithmique_de_bruxelles_fortress_world
 oppositions:
-- conseil_moscou_est_fortress_world
 - anba_siege_atlantique_fortress_world
+- bloc_atlantique_fortress_world
+- bloc_eurasiatique_occidental_fortress_world
+- bunker_chambre_securite_territoriale_fortress_world
 - bureau_territoires_residuels_fortress_world
+- conseil_moscou_est_fortress_world
+- directive_kontinuum_fortress_world
+- pacte_forteresses_souveraines_fortress_world
+- rede_paulista_de_distribuic_o_algor_tmica_fortress_world
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -106,15 +115,25 @@ Ces dissidences sont écartelées entre la nécessité de s'allier ponctuellemen
 - [[demographie_mobilite_humaine]]
 - [[valeurs_culture_tempo_sociale]]
 
+
 ## Relations
 **Alliés :**
-- [[rust_belt_communes_libres_fortress_world]]
-- [[cellules_mouvement_commun_midwest_fortress_world]]
 - [[campements_seuils_fermes_fortress_world]]
+- [[cellules_mouvement_commun_midwest_fortress_world]]
+- [[collectifs_du_seuil_fortress_world]]
+- [[mouvement_commun_midwest_fortress_world]]
+- [[rust_belt_communes_libres_fortress_world]]
+- [[tribunal_algorithmique_de_bruxelles_fortress_world]]
 **Opposants :**
-- [[conseil_moscou_est_fortress_world]]
 - [[anba_siege_atlantique_fortress_world]]
+- [[bloc_atlantique_fortress_world]]
+- [[bloc_eurasiatique_occidental_fortress_world]]
+- [[bunker_chambre_securite_territoriale_fortress_world]]
 - [[bureau_territoires_residuels_fortress_world]]
+- [[conseil_moscou_est_fortress_world]]
+- [[directive_kontinuum_fortress_world]]
+- [[pacte_forteresses_souveraines_fortress_world]]
+- [[rede_paulista_de_distribuic_o_algor_tmica_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

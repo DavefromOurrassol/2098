@@ -4,6 +4,7 @@ type: instance
 slug: communes_rust_belt_breakdown
 entite: communes_rust_belt
 scenario: breakdown
+statut: officialise_enrichi
 localisation:
   zone: communes_rust_belt
   lieu: Rust Belt — Détroit, Gary (Indiana), corridor Cleveland-Pittsburgh
@@ -37,24 +38,34 @@ zone_systemique:
     - sécurité
 
 alliances:
-    - mouvement_des_communes_du_rust_belt_breakdown
-    - grandes_lacs_compact_eau_breakdown
-    - collectifs_de_reparation_energetique_breakdown
-    - collectifs_de_sante_communautaire_autogeree_breakdown
-    - brigades_medicales_itinerantes_breakdown
-    - federation_communs_territoriaux_breakdown
-    - guilde_des_techniciens_nomades_breakdown
-    - milices_agro_defensives_locales_breakdown
-
+- brigades_medicales_itinerantes_breakdown
+- collectifs_de_gardiens_archivistes_itinerants_breakdown
+- collectifs_de_reparation_energetique_breakdown
+- collectifs_de_sante_communautaire_autogeree_breakdown
+- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- communautes_rurales_autonomes_breakdown
+- communes_rust_belt_zones_libres_breakdown
+- federation_communs_territoriaux_breakdown
+- grandes_lacs_compact_eau_breakdown
+- guilde_des_techniciens_nomades_breakdown
+- milices_agro_defensives_locales_breakdown
+- mouvement_des_communes_du_rust_belt_breakdown
+- reseaux_de_solidarite_horizontale_post_effondrement_breakdown
 oppositions:
-    - enclaves_corporatives_fortifiees_breakdown
-    - seigneuries_logistiques_armees_breakdown
-    - seigneuries_foncieres_opportunistes_breakdown
-    - milices_de_controle_territorial_breakdown
-    - cartels_logistiques_regionaux_breakdown
-    - blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
-    - midwest_desertifie_breakdown
-
+- blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
+- cartels_logistiques_regionaux_breakdown
+- consortiums_logistiques_agro_corporatifs_breakdown
+- corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown
+- enclaves_corporatives_fortifiees_breakdown
+- enclaves_technologiques_survivantes_breakdown
+- factions_etatiques_residuelles_de_souverainete_hydrique_breakdown
+- midwest_desertifie_breakdown
+- milices_de_controle_territorial_breakdown
+- reseau_de_recuperation_industrielle_illicite_breakdown
+- reseau_des_anciens_financeurs_devenus_censeurs_breakdown
+- reseau_logistique_criminel_concurrent_breakdown
+- seigneuries_foncieres_opportunistes_breakdown
+- seigneuries_logistiques_armees_breakdown
 type_relation_dominante: rivalité
 
 annee_debut: 2041
@@ -98,12 +109,40 @@ Maintien de l'ordre intérieur par des milices civiles rotatives; redistribution
 - [[gouvernance_institutions]]
 - [[systemes_productifs_travail]]
 
-## Relations
-**Alliés** : [[mouvement_des_communes_du_rust_belt_breakdown]], [[grandes_lacs_compact_eau_breakdown]], [[collectifs_de_reparation_energetique_breakdown]], [[collectifs_de_sante_communautaire_autogeree_breakdown]], [[brigades_medicales_itinerantes_breakdown]], [[federation_communs_territoriaux_breakdown]], [[guilde_des_techniciens_nomades_breakdown]], [[milices_agro_defensives_locales_breakdown]]
-**Opposants** : [[enclaves_corporatives_fortifiees_breakdown]], [[seigneuries_logistiques_armees_breakdown]], [[seigneuries_foncieres_opportunistes_breakdown]], [[milices_de_controle_territorial_breakdown]], [[cartels_logistiques_regionaux_breakdown]], [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]], [[midwest_desertifie_breakdown]]
 
 ## Description journalistique
 Depuis les grandes halles de Détroit jusqu'aux silos rouillés de Gary, Indiana, les Communes Libres du Rust Belt ressemblent moins à une révolution qu'à une cicatrice qui tient debout. Là où Ford et US Steel ont laissé des carcasses d'acier, des centaines de milliers de personnes ont rebouché les brèches avec du ciment mélangé à de la sueur : chaufferies collectives alimentées au méthane de décharge, serres hydroponiques dans les ateliers de carrosserie, assemblées de quartier qui tiennent en deux heures ce que le Congrès ne tenait plus en deux ans. Un correspondant de terrain qui a traversé le corridor Cleveland-Pittsburgh en 2094 rapportait des périmètres gardés par des hommes et des femmes armés de fusils de chasse et de rancœur ancienne, mais aussi des cantines où l'on mange chaud chaque soir. Le paradoxe est brutal : chaque commune survit parce qu'elle s'est repliée sur elle-même, et c'est précisément ce repli qui l'empêche de devenir autre chose qu'une survivante.
 
 ## Tensions narratives
 La question non résolue qui ronge les Communes : s'ouvrir pour se fédérer risque d'attirer la prédation des seigneuries logistiques armées et des enclaves corporatives; rester fermées, c'est mourir lentement par épuisement des ressources et vieillissement des populations. Une faction interne pousse à rejoindre le Compact des Grands Lacs pour sécuriser l'accès à l'eau douce, au prix d'une dépendance structurelle redoutée comme une nouvelle forme de colonisation. Ailleurs, des milices locales dérivent vers l'autoritarisme, transformant la protection en taxation forcée — et la frontière entre commune autogérée et fief armé devient de plus en plus floue.
+
+## Relations
+**Alliés :**
+- [[brigades_medicales_itinerantes_breakdown]]
+- [[collectifs_de_gardiens_archivistes_itinerants_breakdown]]
+- [[collectifs_de_reparation_energetique_breakdown]]
+- [[collectifs_de_sante_communautaire_autogeree_breakdown]]
+- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[communautes_rurales_autonomes_breakdown]]
+- [[communes_rust_belt_zones_libres_breakdown]]
+- [[federation_communs_territoriaux_breakdown]]
+- [[grandes_lacs_compact_eau_breakdown]]
+- [[guilde_des_techniciens_nomades_breakdown]]
+- [[milices_agro_defensives_locales_breakdown]]
+- [[mouvement_des_communes_du_rust_belt_breakdown]]
+- [[reseaux_de_solidarite_horizontale_post_effondrement_breakdown]]
+**Opposants :**
+- [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
+- [[cartels_logistiques_regionaux_breakdown]]
+- [[consortiums_logistiques_agro_corporatifs_breakdown]]
+- [[corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown]]
+- [[enclaves_corporatives_fortifiees_breakdown]]
+- [[enclaves_technologiques_survivantes_breakdown]]
+- [[factions_etatiques_residuelles_de_souverainete_hydrique_breakdown]]
+- [[midwest_desertifie_breakdown]]
+- [[milices_de_controle_territorial_breakdown]]
+- [[reseau_de_recuperation_industrielle_illicite_breakdown]]
+- [[reseau_des_anciens_financeurs_devenus_censeurs_breakdown]]
+- [[reseau_logistique_criminel_concurrent_breakdown]]
+- [[seigneuries_foncieres_opportunistes_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]

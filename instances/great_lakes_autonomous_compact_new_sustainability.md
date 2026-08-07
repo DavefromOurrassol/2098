@@ -4,6 +4,7 @@ type: instance
 slug: great_lakes_autonomous_compact_new_sustainability
 entite: great_lakes_autonomous_compact
 scenario: new_sustainability
+statut: officialise_enrichi
 localisation:
   zone: chicago_lacustre_compact
   lieu: Chicago-Lacustre — district de l'ancien Navy Pier
@@ -38,25 +39,30 @@ zone_systemique:
     - société
 
 alliances:
-    - agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
-    - agence_mondiale_de_modelisation_climatique_ammc_new_sustainability
-    - conseil_regulation_ressources_new_sustainability
-    - reseau_des_hubs_urbains_regeneratifs_new_sustainability
-    - collectifs_riverains_du_bassin_du_congo_new_sustainability
-    - trame_bioclimatique_new_sustainability
-    - parlement_deliberatif_mondial_new_sustainability
-    - fonds_mondial_de_regeneration_ecologique_new_sustainability
-    - programme_onu_de_restauration_des_sols_new_sustainability
-
+- agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
+- agence_mondiale_de_modelisation_climatique_ammc_new_sustainability
+- collectifs_riverains_du_bassin_du_congo_new_sustainability
+- conseil_regulation_ressources_new_sustainability
+- consortium_de_regeneration_planetaire_new_sustainability
+- fonds_mondial_de_regeneration_ecologique_new_sustainability
+- great_lakes_compact_new_sustainability
+- hub_nairobi_kigali_new_sustainability
+- kalaallit_nunaat_sovereign_fund_new_sustainability
+- mouvement_pour_l_autodetermination_territoriale_new_sustainability
+- parlement_deliberatif_mondial_new_sustainability
+- programme_onu_de_restauration_des_sols_new_sustainability
+- reseau_des_hubs_urbains_regeneratifs_new_sustainability
+- trame_bioclimatique_new_sustainability
 oppositions:
-    - bloc_des_gouvernements_souverainistes_hydriques_new_sustainability
-    - internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
-    - mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability
-    - coalition_des_industries_extractives_residuelles_new_sustainability
-    - collectifs_de_deplaces_climatiques_non_representes_new_sustainability
-    - faction_conservatrice_pro_actif_strategique_new_sustainability
-    - lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability
-
+- bloc_des_gouvernements_souverainistes_hydriques_new_sustainability
+- coalition_des_industries_extractives_residuelles_new_sustainability
+- collectifs_de_deplaces_climatiques_non_representes_new_sustainability
+- faction_conservatrice_pro_actif_strategique_new_sustainability
+- internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
+- lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability
+- mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability
+- reseau_des_agences_climatiques_regionales_new_sustainability
+- union_des_blocs_energetiques_regionaux_new_sustainability
 type_relation_dominante: alliance stratégique
 
 annee_debut: 2041
@@ -100,12 +106,36 @@ Le Compact régule l'accès, la purification, le débit et la répartition de l'
 - [[organisation_territoires]]
 - [[climat_environnement_global]]
 
-## Relations
-**Alliés** : [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]], [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]], [[conseil_regulation_ressources_new_sustainability]], [[reseau_des_hubs_urbains_regeneratifs_new_sustainability]], [[collectifs_riverains_du_bassin_du_congo_new_sustainability]], [[trame_bioclimatique_new_sustainability]], [[parlement_deliberatif_mondial_new_sustainability]], [[fonds_mondial_de_regeneration_ecologique_new_sustainability]], [[programme_onu_de_restauration_des_sols_new_sustainability]]
-**Opposants** : [[bloc_des_gouvernements_souverainistes_hydriques_new_sustainability]], [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]], [[mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability]], [[coalition_des_industries_extractives_residuelles_new_sustainability]], [[collectifs_de_deplaces_climatiques_non_representes_new_sustainability]], [[faction_conservatrice_pro_actif_strategique_new_sustainability]], [[lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability]]
 
 ## Description journalistique
 Depuis le district de l'ancien Navy Pier, reconverti en siège d'une institution que personne n'aurait imaginée en 2025, la Confédération Lacustre des Grands Lacs administre aujourd'hui 21 % de l'eau douce de surface de la planète avec une précision que les Nations Unies elles-mêmes peinent à égaler. Le Conseil tricaméral — où siègent côte à côte un délégué ojibwé, un gouverneur du Michigan et la mairesse de Cleveland — rend ses décisions en trois langues, dont l'anishinaabemowin, et ses arrêtés hydriques ont force de droit dans dix-neuf juridictions différentes. À Genève, à Nairobi, à Singapour, les négociateurs en gouvernance des biens communs arrivent à Chicago-Lacustre comme en pèlerinage : ils veulent voir comment on gouverne quelque chose d'aussi essentiel que l'eau sans État-nation souverain ni empire technocratique. Ce que le Compact leur montre, inlassablement, c'est que la légitimité se prouve, elle ne se décrète pas.
 
 ## Tensions narratives
 La tension fondatrice du Compact reste vive en 2098 : des millions de déplacés climatiques des plaines asséchées du Midwest réclament un droit d'accès élargi à l'eau lacustre, que le Compact refuse au nom de la soutenabilité du bassin — une décision que certains qualifient de forteresse écologique déguisée en bien commun. En interne, la Chambre des Nations Premières exige depuis 2091 un droit de veto absolu sur les exports hydriques, ce qui fracture la coalition fondatrice. Enfin, la montée du Bloc des Gouvernements Souverainistes Hydriques pose une question de fond : si le modèle Grands Lacs est universel, pourquoi d'autres régions qui tentent de l'imiter se voient-elles opposer les mêmes arguments d'exclusion que le Compact a lui-même subis lors de sa création ?
+
+## Relations
+**Alliés :**
+- [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]]
+- [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]]
+- [[collectifs_riverains_du_bassin_du_congo_new_sustainability]]
+- [[conseil_regulation_ressources_new_sustainability]]
+- [[consortium_de_regeneration_planetaire_new_sustainability]]
+- [[fonds_mondial_de_regeneration_ecologique_new_sustainability]]
+- [[great_lakes_compact_new_sustainability]]
+- [[hub_nairobi_kigali_new_sustainability]]
+- [[kalaallit_nunaat_sovereign_fund_new_sustainability]]
+- [[mouvement_pour_l_autodetermination_territoriale_new_sustainability]]
+- [[parlement_deliberatif_mondial_new_sustainability]]
+- [[programme_onu_de_restauration_des_sols_new_sustainability]]
+- [[reseau_des_hubs_urbains_regeneratifs_new_sustainability]]
+- [[trame_bioclimatique_new_sustainability]]
+**Opposants :**
+- [[bloc_des_gouvernements_souverainistes_hydriques_new_sustainability]]
+- [[coalition_des_industries_extractives_residuelles_new_sustainability]]
+- [[collectifs_de_deplaces_climatiques_non_representes_new_sustainability]]
+- [[faction_conservatrice_pro_actif_strategique_new_sustainability]]
+- [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]]
+- [[lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability]]
+- [[mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability]]
+- [[reseau_des_agences_climatiques_regionales_new_sustainability]]
+- [[union_des_blocs_energetiques_regionaux_new_sustainability]]

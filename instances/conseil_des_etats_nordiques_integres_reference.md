@@ -32,11 +32,21 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- arctic_passage_authority_reference
+- armada_logistique_nordique_reference
+- bruxelles_nouveau_reference
+- consortium_energetique_baltique_reference
+- consortium_energetique_des_mers_du_nord_reference
+- corridor_arctique_nordique_reference
 - europe_occidentale_reconstructee_reference
+- fonds_souverain_arctique_scandinave_reference
+- helsinki_communs_numeriques_reference
 - institutions_multilaterales_survivantes_reference
+- kalaallit_nunaat_sovereign_fund_reference
+- murmansk_transit_arctique_reference
 oppositions:
-- pacte_des_souverains_reference
 - bloc_eurasien_central_reference
+- pacte_des_souverains_reference
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -103,13 +113,24 @@ La tension la plus profonde du Conseil oppose ses membres continentaux — attac
 - [[geopolitique_conflits]]
 - [[organisation_territoires]]
 
+
 ## Relations
 **Alliés :**
+- [[arctic_passage_authority_reference]]
+- [[armada_logistique_nordique_reference]]
+- [[bruxelles_nouveau_reference]]
+- [[consortium_energetique_baltique_reference]]
+- [[consortium_energetique_des_mers_du_nord_reference]]
+- [[corridor_arctique_nordique_reference]]
 - [[europe_occidentale_reconstructee_reference]]
+- [[fonds_souverain_arctique_scandinave_reference]]
+- [[helsinki_communs_numeriques_reference]]
 - [[institutions_multilaterales_survivantes_reference]]
+- [[kalaallit_nunaat_sovereign_fund_reference]]
+- [[murmansk_transit_arctique_reference]]
 **Opposants :**
-- [[pacte_des_souverains_reference]]
 - [[bloc_eurasien_central_reference]]
+- [[pacte_des_souverains_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

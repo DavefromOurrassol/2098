@@ -4,6 +4,7 @@ type: instance
 slug: bureau_des_territoires_residuels_fortress_world
 entite: bureau_des_territoires_residuels
 scenario: fortress_world
+statut: officialise_enrichi
 localisation:
   zone: bureau_territoires_residuels
   lieu: Washington D.C. — Zone Protégée Résiduelle
@@ -36,21 +37,28 @@ zone_systemique:
     - société
 
 alliances:
-    - appareils_d_etat_des_blocs_fermes_fortress_world
-    - executif_militaro_civil_du_regime_fortress_world
-    - dispositifs_de_surveillance_numerique_souveraine_fortress_world
-    - conseil_regulation_algorithmique_fortress_world
-    - assemblee_territoires_fortress_world
-
+- amazonie_pacte_vert_fortress_world
+- appareils_d_etat_des_blocs_fermes_fortress_world
+- assemblee_territoires_fortress_world
+- conseil_regulation_algorithmique_fortress_world
+- dispositifs_de_surveillance_numerique_souveraine_fortress_world
+- executif_militaro_civil_du_regime_fortress_world
+- institutions_multilaterales_residuelles_fortress_world
+- zones_grises_tampons_fortress_world
 oppositions:
-    - coalitions_des_deplaces_et_apatrides_fortress_world
-    - communautes_deplacees_hors_quota_migratoire_fortress_world
-    - cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
-    - voix_du_dehors_fortress_world
-    - le_temoin_fortress_world
-    - archives_chiffrees_de_l_open_internet_coalition_fortress_world
-    - reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world
-
+- archives_chiffrees_de_l_open_internet_coalition_fortress_world
+- campements_seuils_fermes_fortress_world
+- cellules_mouvement_commun_midwest_fortress_world
+- cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- communautes_deplacees_hors_quota_migratoire_fortress_world
+- le_temoin_fortress_world
+- marches_gris_casablanca_fortress_world
+- mouvement_commun_midwest_fortress_world
+- mouvement_des_communes_du_rust_belt_fortress_world
+- reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world
+- rust_belt_communes_libres_fortress_world
+- voix_du_dehors_fortress_world
 type_relation_dominante: dépendance
 
 annee_debut: 2049
@@ -94,12 +102,34 @@ Recense, classe et archive les territoires officiellement déclassés comme inha
 - [[demographie_mobilite_humaine]]
 - [[technologie_information]]
 
-## Relations
-**Alliés** : [[appareils_d_etat_des_blocs_fermes_fortress_world]], [[executif_militaro_civil_du_regime_fortress_world]], [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]], [[conseil_regulation_algorithmique_fortress_world]], [[assemblee_territoires_fortress_world]]
-**Opposants** : [[coalitions_des_deplaces_et_apatrides_fortress_world]], [[communautes_deplacees_hors_quota_migratoire_fortress_world]], [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]], [[voix_du_dehors_fortress_world]], [[le_temoin_fortress_world]], [[archives_chiffrees_de_l_open_internet_coalition_fortress_world]], [[reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world]]
 
 ## Description journalistique
 Dans les couloirs climatisés d'un bâtiment fédéral sans enseigne de ce qui reste de Washington D.C., des fonctionnaires en col blanc continuent de tamponner des dossiers sur des territoires que personne ne gouverne plus. Le Bureau des Territoires Résiduels n'a pas de budget d'action, pas de capacité d'intervention, pas de mandat de relogement — il a des archives. Quarante millions de noms. Des cartes de déplacements forcés d'une précision vertigineuse. Des chronologies d'évacuations jamais officiellement ordonnées. Depuis les décrets de déclassement de 2049, cette agence zombie a transformé l'effacement en science administrative, produisant un savoir sur l'abandon que le régime conserve comme une arme retournée contre sa propre population. Les dissidents qui ont réussi à exfiltrer ne serait-ce qu'un fragment de ses bases de données savent ce qu'ils tiennent entre les mains : la preuve systématique que l'État a choisi qui sauver.
 
 ## Tensions narratives
 Le Bureau détient la cartographie la plus complète jamais produite sur les déplacements forcés américains — et sa direction sait que cette cartographie est à la fois son bouclier (l'État a besoin de ces données pour projeter ses futures zones d'abandon) et sa condamnation (leur publication serait le plus grand scandale politique du siècle). Une fuite partielle de ses archives circule déjà dans les réseaux dissidents via Vera Solano, mais personne ne sait encore si elle est spontanée ou orchestrée par une faction interne du Bureau souhaitant négocier sa survie. La question qui structure tous les scénarios possibles : quand le régime décidera-t-il que le Bureau en sait trop — et que détruire ses archives est moins dangereux que de laisser ses propres agents les utiliser comme monnaie d'échange ?
+
+## Relations
+**Alliés :**
+- [[amazonie_pacte_vert_fortress_world]]
+- [[appareils_d_etat_des_blocs_fermes_fortress_world]]
+- [[assemblee_territoires_fortress_world]]
+- [[conseil_regulation_algorithmique_fortress_world]]
+- [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
+- [[executif_militaro_civil_du_regime_fortress_world]]
+- [[institutions_multilaterales_residuelles_fortress_world]]
+- [[zones_grises_tampons_fortress_world]]
+**Opposants :**
+- [[archives_chiffrees_de_l_open_internet_coalition_fortress_world]]
+- [[campements_seuils_fermes_fortress_world]]
+- [[cellules_mouvement_commun_midwest_fortress_world]]
+- [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[communautes_deplacees_hors_quota_migratoire_fortress_world]]
+- [[le_temoin_fortress_world]]
+- [[marches_gris_casablanca_fortress_world]]
+- [[mouvement_commun_midwest_fortress_world]]
+- [[mouvement_des_communes_du_rust_belt_fortress_world]]
+- [[reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world]]
+- [[rust_belt_communes_libres_fortress_world]]
+- [[voix_du_dehors_fortress_world]]

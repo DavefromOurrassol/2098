@@ -4,6 +4,7 @@ type: instance
 slug: lyon_metropole_reference
 entite: lyon_metropole
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: lyon_metropole
   lieu: Lyon Métropole
@@ -36,22 +37,21 @@ zone_systemique:
     - énergie
 
 alliances:
-    - autorites_regionales_de_regulation_hydrologique_reference
-    - observatoire_climatique_des_territoires_oct_reference
-    - federation_communs_territoriaux_reference
-    - reseau_des_administrations_locales_rurales_participatives_reference
-    - cooperatives_energetiques_decentralisees_reference
-    - plateformes_d_optimisation_territoriale_par_ia_reference
-    - administrations_hybrides_des_cites_relais_peripheriques_reference
-
+- administrations_hybrides_des_cites_relais_peripheriques_reference
+- autorites_regionales_de_regulation_hydrologique_reference
+- confederation_des_megapoles_autonomes_reference
+- cooperatives_energetiques_decentralisees_reference
+- federation_communs_territoriaux_reference
+- observatoire_climatique_des_territoires_oct_reference
+- plateformes_d_optimisation_territoriale_par_ia_reference
 oppositions:
-    - consortiums_energetiques_des_megapoles_reference
-    - operateurs_de_zones_economiques_speciales_periurbaines_reference
-    - collectif_nuit_jaune_reference
-    - lobbies_agro_industriels_a_haute_consommation_d_eau_reference
-    - consortiums_energetiques_opaques_reference
-    - bureau_des_territoires_residuels_reference
-
+- bureau_des_territoires_residuels_reference
+- collectif_nuit_jaune_reference
+- consortiums_energetiques_des_megapoles_reference
+- consortiums_energetiques_opaques_reference
+- lobbies_agro_industriels_a_haute_consommation_d_eau_reference
+- operateurs_de_zones_economiques_speciales_periurbaines_reference
+- reseau_des_administrations_locales_rurales_participatives_reference
 type_relation_dominante: rivalité
 
 annee_debut: 2026
@@ -93,12 +93,27 @@ Lyon Métropole gère l'arbitrage foncier et énergétique sur les 59 communes d
 - [[gouvernance_institutions]]
 - [[organisation_territoires]]
 
-## Relations
-**Alliés** : [[autorites_regionales_de_regulation_hydrologique_reference]], [[observatoire_climatique_des_territoires_oct_reference]], [[federation_communs_territoriaux_reference]], [[reseau_des_administrations_locales_rurales_participatives_reference]], [[cooperatives_energetiques_decentralisees_reference]], [[plateformes_d_optimisation_territoriale_par_ia_reference]], [[administrations_hybrides_des_cites_relais_peripheriques_reference]]
-**Opposants** : [[consortiums_energetiques_des_megapoles_reference]], [[operateurs_de_zones_economiques_speciales_periurbaines_reference]], [[collectif_nuit_jaune_reference]], [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]], [[consortiums_energetiques_opaques_reference]], [[bureau_des_territoires_residuels_reference]]
 
 ## Description journalistique
 Dans les couloirs du siège de la Métropole, avenue Garibaldi, les néons à faible consommation éclairent des salles de réunion où s'affrontent chaque semaine des intérêts radicalement incompatibles : les représentants des corridors industriels de la chimie rhodanienne, les délégués des communes périurbaines de Vaulx-en-Velin ou de Givors qui réclament leur part de la transition énergétique, les syndicats de travailleurs désaugmentés qui contestent les reconversions imposées. Lyon Métropole tient encore — et c'est en soi une performance remarquable dans un monde où les institutions intermédiaires s'effacent ou se vendent. Son président, élu pour un mandat de six ans au suffrage indirect, incarne une figure paradoxale : celle d'un arbitre doté d'une légitimité démocratique réelle mais dont les marges de manœuvre financières rétrécissent chaque année sous la pression des consortiums privés et des injonctions climatiques descendantes. La Métropole gouverne, mais à crédit — de temps, de confiance, et de ressources.
 
 ## Tensions narratives
 La tension centrale est celle de l'arbitrage impossible : Lyon Métropole doit simultanément séduire les investisseurs industriels pour maintenir l'emploi dans les corridors rhônalpins et répondre aux exigences sociales des zones périurbaines qui se sentent abandonnées au profit du cœur métropolitain. Une deuxième fissure court entre sa dépendance croissante aux plateformes d'optimisation territoriale par IA — dont elle ne contrôle ni les algorithmes ni les données — et sa prétention à exercer une souveraineté démocratique sur son territoire. Enfin, l'arrivée de consortiums énergétiques privés qui proposent de financer des infrastructures de transition en échange de dérogations réglementaires place chaque élu devant un dilemme moral concret : jusqu'où peut-on hypothéquer l'autonomie institutionnelle pour tenir des promesses de service public ?
+
+## Relations
+**Alliés :**
+- [[administrations_hybrides_des_cites_relais_peripheriques_reference]]
+- [[autorites_regionales_de_regulation_hydrologique_reference]]
+- [[confederation_des_megapoles_autonomes_reference]]
+- [[cooperatives_energetiques_decentralisees_reference]]
+- [[federation_communs_territoriaux_reference]]
+- [[observatoire_climatique_des_territoires_oct_reference]]
+- [[plateformes_d_optimisation_territoriale_par_ia_reference]]
+**Opposants :**
+- [[bureau_des_territoires_residuels_reference]]
+- [[collectif_nuit_jaune_reference]]
+- [[consortiums_energetiques_des_megapoles_reference]]
+- [[consortiums_energetiques_opaques_reference]]
+- [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]]
+- [[operateurs_de_zones_economiques_speciales_periurbaines_reference]]
+- [[reseau_des_administrations_locales_rurales_participatives_reference]]

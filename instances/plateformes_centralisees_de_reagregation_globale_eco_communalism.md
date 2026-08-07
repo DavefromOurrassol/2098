@@ -34,8 +34,33 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- cartels_de_narration_de_penurie_eco_communalism
+- consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism
+- consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism
+- courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism
+- enclaves_extractivistes_et_etats_residuels_eco_communalism
+- enclaves_extractivistes_residuelles_des_corridors_eco_communalism
+- factions_technophiles_de_la_geo_ingenierie_centralisee_eco_communalism
+- fragments_d_etats_centraux_residuels_eco_communalism
+oppositions:
+- collectifs_de_techniciens_sobres_eco_communalism
+- confederation_des_communs_de_l_arc_septentrional_eco_communalism
+- courant_isolationniste_anti_circulation_de_l_information_eco_communalism
+- frente_sert_o_livre_eco_communalism
+- kalaallit_nunaat_bioterritoire_eco_communalism
+- ligue_des_cites_du_sahel_numerique_eco_communalism
+- mouvement_des_communes_du_rust_belt_eco_communalism
+- prisme_global_eco_communalism
+- reseau_assemblees_fennoscandien_eco_communalism
+- reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism
+- reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
+- sao_paulo_algorithmique_eco_communalism
+- tampere_charte_eco_communalism
+- trame_mnemos_noeud_reseau_eco_communalism
+- tribunal_algorithmique_de_bruxelles_eco_communalism
+- universite_nomade_eco_communalism
+- zones_extractivistes_corridors_eco_communalism
 type_relation_dominante: dépendance
 annee_debut: 2026
 annee_fin: null
@@ -99,6 +124,36 @@ La tension fondamentale réside dans leur double nature : outils de dépendance 
 - [[technologie_information]]
 - [[organisation_territoires]]
 - [[frontieres_du_systeme]]
+
+
+## Relations
+**Alliés :**
+- [[cartels_de_narration_de_penurie_eco_communalism]]
+- [[consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism]]
+- [[consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism]]
+- [[courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism]]
+- [[enclaves_extractivistes_et_etats_residuels_eco_communalism]]
+- [[enclaves_extractivistes_residuelles_des_corridors_eco_communalism]]
+- [[factions_technophiles_de_la_geo_ingenierie_centralisee_eco_communalism]]
+- [[fragments_d_etats_centraux_residuels_eco_communalism]]
+**Opposants :**
+- [[collectifs_de_techniciens_sobres_eco_communalism]]
+- [[confederation_des_communs_de_l_arc_septentrional_eco_communalism]]
+- [[courant_isolationniste_anti_circulation_de_l_information_eco_communalism]]
+- [[frente_sert_o_livre_eco_communalism]]
+- [[kalaallit_nunaat_bioterritoire_eco_communalism]]
+- [[ligue_des_cites_du_sahel_numerique_eco_communalism]]
+- [[mouvement_des_communes_du_rust_belt_eco_communalism]]
+- [[prisme_global_eco_communalism]]
+- [[reseau_assemblees_fennoscandien_eco_communalism]]
+- [[reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism]]
+- [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
+- [[sao_paulo_algorithmique_eco_communalism]]
+- [[tampere_charte_eco_communalism]]
+- [[trame_mnemos_noeud_reseau_eco_communalism]]
+- [[tribunal_algorithmique_de_bruxelles_eco_communalism]]
+- [[universite_nomade_eco_communalism]]
+- [[zones_extractivistes_corridors_eco_communalism]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

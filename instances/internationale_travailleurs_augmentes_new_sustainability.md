@@ -4,6 +4,7 @@ type: instance
 slug: internationale_travailleurs_augmentes_new_sustainability
 entite: internationale_travailleurs_augmentes
 scenario: new_sustainability
+statut: officialise_enrichi
 localisation:
   zone: null
   lieu: null

@@ -4,6 +4,7 @@ type: instance
 slug: agence_stabilisation_climatique_reference
 entite: agence_stabilisation_climatique
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: geneve_lac_retreite
   lieu: Genève-Lac-Retraité
@@ -37,16 +38,40 @@ zone_systemique:
     - société
 
 alliances:
-    - consortium_energetique_des_mers_du_nord_reference
-    - union_africaine_de_resilience_territoriale_reference
-    - reseau_des_metropoles_cotieres_adaptees_reference
-    - programme_onusien_de_mobilite_climatique_new_sustainability
-
+- arctic_passage_authority_reference
+- banque_mondiale_des_transitions_climatiques_reference
+- collectifs_de_journalisme_embarque_reference
+- commission_hydrique_de_l_union_africaine_reference
+- consortium_amazonia_viva_reference
+- consortium_de_maintenance_orbitale_seom_7_reference
+- consortium_des_fournisseurs_d_energie_renouvelable_distribuee_reference
+- consortium_energetique_des_mers_du_nord_reference
+- delta_du_gange_reference
+- ecosynth_global_reference
+- fonds_d_investissement_foncier_climatique_reference
+- institutions_multilaterales_survivantes_reference
+- nairobi_crrc_reference
+- observatoire_climatique_des_territoires_oct_reference
+- oracle_des_seuils_reference
+- ouagadougou_polytechnique_reference
+- pacifique_sud_archipels_flottants_reference
+- pacifique_sud_resilience_network_reference
+- plateformes_d_optimisation_territoriale_par_ia_reference
+- programme_onu_eau_2080_reference
+- programme_onusien_de_mobilite_climatique_new_sustainability
+- reseau_des_metropoles_cotieres_adaptees_reference
+- reseau_hospitalier_hybride_eurasiatique_reference
+- reseaux_de_gouvernance_multilaterale_survivants_reference
+- terrametrics_reference
+- union_africaine_de_resilience_territoriale_reference
+- union_africaine_resilience_reference
 oppositions:
-    - bloc_des_souverainistes_climatiques_reference
-    - collectif_nuit_jaune_reference
-    - corporations_d_extraction_energetique_non_signataires_reference
-
+- bloc_des_souverainistes_climatiques_reference
+- collectif_nuit_jaune_reference
+- corporations_d_extraction_energetique_non_signataires_reference
+- kalaallit_nunaat_sovereign_fund_reference
+- reseaux_de_capteurs_citoyens_reference
+- reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference
 type_relation_dominante: coopération
 
 annee_debut: 2031
@@ -90,12 +115,46 @@ Coordonne les programmes d'injection stratosphérique de soufre entre consortium
 - [[demographie_mobilite_humaine]]
 - [[energie_ressources_critiques]]
 
-## Relations
-**Alliés** : [[consortium_energetique_des_mers_du_nord_reference]], [[union_africaine_de_resilience_territoriale_reference]], [[reseau_des_metropoles_cotieres_adaptees_reference]], [[programme_onusien_de_mobilite_climatique_new_sustainability]]
-**Opposants** : [[bloc_des_souverainistes_climatiques_reference]], [[collectif_nuit_jaune_reference]], [[corporations_d_extraction_energetique_non_signataires_reference]]
 
 ## Description journalistique
 À Genève-Lac-Retraité — le nouveau siège administratif depuis que le bord du lac a été rehaussé de trois mètres — l'AMSC ressemble moins à une agence mondiale qu'à une salle de négoce perpétuelle. Ses couloirs sont peuplés de délégués épuisés qui arrivent avec des mandats contradictoires et repartent avec des compromis qu'ils devront expliquer à des capitales mécontentes. Elle a survécu à trois tentatives de dissolution et à deux scandales d'attribution de couloirs migratoires. Ce qu'elle produit concrètement — les programmes d'ombrelle atmosphérique, les cartes de corridors certifiés — fonctionne, imparfaitement mais réellement. Ce qu'elle représente politiquement reste profondément contesté : un gouvernement de la Terre que personne n'a élu, mais que beaucoup ont choisi de ne pas démanteler.
 
 ## Tensions narratives
 La légitimité de l'AMSC s'effrite à chaque décision d'allocation : qui reçoit un corridor migratoire certifié, qui subit une injection stratosphérique sans consentement local ? Des fuites internes suggèrent que ses modèles climatiques favorisent systématiquement les zones à fort PIB dans la priorisation des ressources d'adaptation. Un courant interne réformiste pousse à l'élection directe d'un Conseil Climatique Mondial, tandis que les États souverainistes voient dans cette réforme une menace supplémentaire. La question centrale de 2098 : l'AMSC peut-elle se réformer démocratiquement sans s'effondrer techniquement ?
+
+## Relations
+**Alliés :**
+- [[arctic_passage_authority_reference]]
+- [[banque_mondiale_des_transitions_climatiques_reference]]
+- [[collectifs_de_journalisme_embarque_reference]]
+- [[commission_hydrique_de_l_union_africaine_reference]]
+- [[consortium_amazonia_viva_reference]]
+- [[consortium_de_maintenance_orbitale_seom_7_reference]]
+- [[consortium_des_fournisseurs_d_energie_renouvelable_distribuee_reference]]
+- [[consortium_energetique_des_mers_du_nord_reference]]
+- [[delta_du_gange_reference]]
+- [[ecosynth_global_reference]]
+- [[fonds_d_investissement_foncier_climatique_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
+- [[nairobi_crrc_reference]]
+- [[observatoire_climatique_des_territoires_oct_reference]]
+- [[oracle_des_seuils_reference]]
+- [[ouagadougou_polytechnique_reference]]
+- [[pacifique_sud_archipels_flottants_reference]]
+- [[pacifique_sud_resilience_network_reference]]
+- [[plateformes_d_optimisation_territoriale_par_ia_reference]]
+- [[programme_onu_eau_2080_reference]]
+- [[programme_onusien_de_mobilite_climatique_new_sustainability]]
+- [[reseau_des_metropoles_cotieres_adaptees_reference]]
+- [[reseau_hospitalier_hybride_eurasiatique_reference]]
+- [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
+- [[terrametrics_reference]]
+- [[union_africaine_de_resilience_territoriale_reference]]
+- [[union_africaine_resilience_reference]]
+**Opposants :**
+- [[bloc_des_souverainistes_climatiques_reference]]
+- [[collectif_nuit_jaune_reference]]
+- [[corporations_d_extraction_energetique_non_signataires_reference]]
+- [[kalaallit_nunaat_sovereign_fund_reference]]
+- [[reseaux_de_capteurs_citoyens_reference]]
+- [[reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference]]

@@ -4,6 +4,7 @@ type: instance
 slug: agadez_ligue_sahel_numerique_breakdown
 entite: agadez_ligue_sahel_numerique
 scenario: breakdown
+statut: officialise_enrichi
 localisation:
   zone: agadez_ligue_sahel_numerique
   lieu: Agadez
@@ -35,21 +36,21 @@ zone_systemique:
     - société
 
 alliances:
-    - diaspora_tech_sahel_breakdown
-    - reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown
-    - guilde_des_techniciens_nomades_breakdown
-    - communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
-    - collectifs_de_reparation_energetique_breakdown
-    - ligue_des_cites_du_sahel_numerique_breakdown
-
+- collectifs_de_gardiens_archivistes_itinerants_breakdown
+- collectifs_de_reparation_energetique_breakdown
+- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- diaspora_tech_sahel_breakdown
+- guilde_des_techniciens_nomades_breakdown
+- ligue_des_cites_du_sahel_numerique_breakdown
+- reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown
 oppositions:
-    - milices_de_controle_territorial_breakdown
-    - seigneuries_logistiques_armees_breakdown
-    - factions_secessionnistes_agrariennes_du_desert_breakdown
-    - fronts_populistes_anti_technocratiques_breakdown
-    - enclaves_corporatives_fortifiees_breakdown
-    - reseau_logistique_criminel_concurrent_breakdown
-
+- carthage_nord_nexcore_breakdown
+- enclaves_corporatives_fortifiees_breakdown
+- factions_secessionnistes_agrariennes_du_desert_breakdown
+- fronts_populistes_anti_technocratiques_breakdown
+- milices_de_controle_territorial_breakdown
+- reseau_logistique_criminel_concurrent_breakdown
+- seigneuries_logistiques_armees_breakdown
 type_relation_dominante: symbiose
 
 annee_debut: 2061
@@ -92,12 +93,27 @@ Déploie et maintient des réseaux maillés basse-énergie entre les communauté
 - [[gouvernance_institutions]]
 - [[organisation_territoires]]
 
-## Relations
-**Alliés** : [[diaspora_tech_sahel_breakdown]], [[reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown]], [[guilde_des_techniciens_nomades_breakdown]], [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]], [[collectifs_de_reparation_energetique_breakdown]], [[ligue_des_cites_du_sahel_numerique_breakdown]]
-**Opposants** : [[milices_de_controle_territorial_breakdown]], [[seigneuries_logistiques_armees_breakdown]], [[factions_secessionnistes_agrariennes_du_desert_breakdown]], [[fronts_populistes_anti_technocratiques_breakdown]], [[enclaves_corporatives_fortifiees_breakdown]], [[reseau_logistique_criminel_concurrent_breakdown]]
 
 ## Description journalistique
 Depuis la tour de relais solaire d'Agadez, repeinte aux couleurs du sable et coiffée d'antennes improvisées, les Nœuds coordonnent aujourd'hui ce que trois États faillis n'ont plus la force de faire : maintenir vivant le flux d'information entre des communautés séparées par des centaines de kilomètres de désert militarisé. Un technicien de la Ligue, les mains calleuses et le terminal à la ceinture, ne se présente jamais comme un fonctionnaire — il est un 'architecte de passage', terme interne désignant ceux qui ouvrent des chemins dans le vide. La Ligue perçoit des 'frais de nœud' — payables en eau, en semences, en heures de travail ou en données cartographiques — et cette monnaie plurielle est devenue, dans certaines zones, le seul système d'échange fonctionnel à des centaines de kilomètres à la ronde. Personne n'a voté pour eux. Tout le monde en dépend.
 
 ## Tensions narratives
 La Ligue se retrouve prise en étau entre les milices qui exigent un accès prioritaire à ses réseaux pour des usages militaires et les communautés qui réclament une gouvernance plus transparente sur les données qu'elles génèrent. Certains nœuds ont commencé à émettre des 'certificats d'accès' exclusifs, recréant de facto une hiérarchie d'accès que la Ligue prétendait abolir. La question de savoir qui contrôle les archives des marchés de données — et donc la mémoire économique de la région — est devenue un enjeu de pouvoir brûlant. Enfin, la pression de la Diaspora Tech Sahel, opérant depuis des enclaves mieux équipées, pour 'standardiser' les protocoles de la Ligue menace d'effacer ce qui en fait la singularité : son ancrage radical dans les usages locaux.
+
+## Relations
+**Alliés :**
+- [[collectifs_de_gardiens_archivistes_itinerants_breakdown]]
+- [[collectifs_de_reparation_energetique_breakdown]]
+- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[diaspora_tech_sahel_breakdown]]
+- [[guilde_des_techniciens_nomades_breakdown]]
+- [[ligue_des_cites_du_sahel_numerique_breakdown]]
+- [[reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown]]
+**Opposants :**
+- [[carthage_nord_nexcore_breakdown]]
+- [[enclaves_corporatives_fortifiees_breakdown]]
+- [[factions_secessionnistes_agrariennes_du_desert_breakdown]]
+- [[fronts_populistes_anti_technocratiques_breakdown]]
+- [[milices_de_controle_territorial_breakdown]]
+- [[reseau_logistique_criminel_concurrent_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]

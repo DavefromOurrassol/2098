@@ -36,8 +36,26 @@ zone_geographique:
 - régionale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- administrations_hybrides_des_cites_relais_peripheriques_reference
+- collectifs_academiques_independants_reference
+- collectifs_de_biopiraterie_inversee_reference
+- consortium_africain_de_biotechnologies_sociales_reference
+- federation_communs_territoriaux_reference
+- federation_des_cliniques_autonomes_reference
+- gouvernements_du_bloc_sahelien_autonome_reference
+- ligue_des_municipalites_peripheriques_sous_connectees_reference
+- mouvement_racines_vivantes_reference
+- reseau_des_administrations_locales_rurales_participatives_reference
+- reseau_des_cooperatives_agro_saheliennes_reference
+- reseaux_de_capteurs_citoyens_reference
+- union_africaine_resilience_reference
+oppositions:
+- consortium_des_grandes_plateformes_ia_integrees_reference
+- consortiums_bancaires_financiarises_reference
+- consortiums_prives_de_gestion_des_donnees_critiques_reference
+- etats_a_tendance_centraliste_numerique_reference
+- plateformes_d_optimisation_territoriale_par_ia_reference
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -104,6 +122,29 @@ La tension centrale réside dans leur statut juridique ambigu : reconnus officie
 - [[sante_biotechnologies]]
 - [[valeurs_culture_tempo_sociale]]
 - [[organisation_territoires]]
+
+
+## Relations
+**Alliés :**
+- [[administrations_hybrides_des_cites_relais_peripheriques_reference]]
+- [[collectifs_academiques_independants_reference]]
+- [[collectifs_de_biopiraterie_inversee_reference]]
+- [[consortium_africain_de_biotechnologies_sociales_reference]]
+- [[federation_communs_territoriaux_reference]]
+- [[federation_des_cliniques_autonomes_reference]]
+- [[gouvernements_du_bloc_sahelien_autonome_reference]]
+- [[ligue_des_municipalites_peripheriques_sous_connectees_reference]]
+- [[mouvement_racines_vivantes_reference]]
+- [[reseau_des_administrations_locales_rurales_participatives_reference]]
+- [[reseau_des_cooperatives_agro_saheliennes_reference]]
+- [[reseaux_de_capteurs_citoyens_reference]]
+- [[union_africaine_resilience_reference]]
+**Opposants :**
+- [[consortium_des_grandes_plateformes_ia_integrees_reference]]
+- [[consortiums_bancaires_financiarises_reference]]
+- [[consortiums_prives_de_gestion_des_donnees_critiques_reference]]
+- [[etats_a_tendance_centraliste_numerique_reference]]
+- [[plateformes_d_optimisation_territoriale_par_ia_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

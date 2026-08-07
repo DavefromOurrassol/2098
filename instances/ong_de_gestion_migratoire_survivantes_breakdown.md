@@ -33,8 +33,22 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_stabilisation_climatique_breakdown
+- archives_neutres_de_geneve_breakdown
+- brigades_medicales_itinerantes_breakdown
+- collectifs_de_sante_communautaire_autogeree_breakdown
+- front_humanitaire_d_urgence_non_affilie_breakdown
+- geneve_bunker_institutions_breakdown
+- gouvernements_regionaux_residuels_reterritorialisants_breakdown
+- midwest_desertifie_breakdown
+- reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown
+oppositions:
+- cartels_logistiques_regionaux_breakdown
+- factions_para_etatiques_hydriques_breakdown
+- milices_de_controle_territorial_breakdown
+- seigneuries_logistiques_armees_breakdown
+- seigneurs_de_guerre_agro_territoriaux_breakdown
 type_relation_dominante: dépendance
 annee_debut: 2026
 annee_fin: null
@@ -93,6 +107,25 @@ La tension centrale de ces ONG réside dans la contradiction entre leur mandat h
 - [[demographie_mobilite_humaine]]
 - [[gouvernance_institutions]]
 - [[organisation_territoires]]
+
+
+## Relations
+**Alliés :**
+- [[agence_stabilisation_climatique_breakdown]]
+- [[archives_neutres_de_geneve_breakdown]]
+- [[brigades_medicales_itinerantes_breakdown]]
+- [[collectifs_de_sante_communautaire_autogeree_breakdown]]
+- [[front_humanitaire_d_urgence_non_affilie_breakdown]]
+- [[geneve_bunker_institutions_breakdown]]
+- [[gouvernements_regionaux_residuels_reterritorialisants_breakdown]]
+- [[midwest_desertifie_breakdown]]
+- [[reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown]]
+**Opposants :**
+- [[cartels_logistiques_regionaux_breakdown]]
+- [[factions_para_etatiques_hydriques_breakdown]]
+- [[milices_de_controle_territorial_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]
+- [[seigneurs_de_guerre_agro_territoriaux_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

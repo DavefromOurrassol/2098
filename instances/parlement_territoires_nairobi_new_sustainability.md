@@ -4,6 +4,7 @@ type: instance
 slug: parlement_territoires_nairobi_new_sustainability
 entite: parlement_territoires_nairobi
 scenario: new_sustainability
+statut: officialise_enrichi
 localisation:
   zone: parlement_territoires_nairobi
   lieu: Parlement des Territoires de Nairobi, collines de Karen
@@ -37,28 +38,29 @@ zone_systemique:
     - infrastructure
 
 alliances:
-    - parlement_deliberatif_mondial_new_sustainability
-    - hub_nairobi_kigali_new_sustainability
-    - agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
-    - assemblee_territoires_new_sustainability
-    - trame_bioclimatique_new_sustainability
-    - programme_onu_de_restauration_des_sols_new_sustainability
-    - coalition_vivant_new_sustainability
-    - observatoire_climatique_narratif_de_nairobi_new_sustainability
-    - great_lakes_compact_new_sustainability
-    - reseau_des_villes_regeneratives_new_sustainability
-    - ligue_des_cites_du_sahel_numerique_new_sustainability
-    - consortium_africain_de_biotechnologies_sociales_new_sustainability
-
+- agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
+- assemblee_territoires_new_sustainability
+- coalition_vivant_new_sustainability
+- consortium_africain_de_biotechnologies_sociales_new_sustainability
+- factions_internes_contestataires_du_bureau_de_moderation_new_sustainability
+- great_lakes_compact_new_sustainability
+- hub_nairobi_kigali_new_sustainability
+- ligue_des_cites_du_sahel_numerique_new_sustainability
+- observatoire_climatique_narratif_de_nairobi_new_sustainability
+- parlement_deliberatif_mondial_new_sustainability
+- programme_onu_de_restauration_des_sols_new_sustainability
+- reseau_des_villes_regeneratives_new_sustainability
+- reseaux_de_gouvernance_territoriale_distribues_new_sustainability
+- trame_bioclimatique_new_sustainability
 oppositions:
-    - bloc_des_gouvernements_souverainistes_hydriques_new_sustainability
-    - lobbies_agro_industriels_du_bassin_du_congo_new_sustainability
-    - lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability
-    - coalition_anti_algorithme_des_autonomies_locales_new_sustainability
-    - collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability
-    - internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
-    - factions_technocratiques_de_la_delegation_ia_totale_new_sustainability
-
+- bloc_des_gouvernements_souverainistes_hydriques_new_sustainability
+- coalition_anti_algorithme_des_autonomies_locales_new_sustainability
+- collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability
+- factions_technocratiques_de_la_delegation_ia_totale_new_sustainability
+- internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
+- lobbies_agro_industriels_du_bassin_du_congo_new_sustainability
+- lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability
+- reseau_global_de_cliniques_regeneratives_new_sustainability
 type_relation_dominante: coopération
 
 annee_debut: 2051
@@ -102,12 +104,35 @@ Le Parlement arbitre l'allocation des ressources hydriques et agricoles entre le
 - [[climat_environnement_global]]
 - [[energie_ressources_critiques]]
 
-## Relations
-**Alliés** : [[parlement_deliberatif_mondial_new_sustainability]], [[hub_nairobi_kigali_new_sustainability]], [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]], [[assemblee_territoires_new_sustainability]], [[trame_bioclimatique_new_sustainability]], [[programme_onu_de_restauration_des_sols_new_sustainability]], [[coalition_vivant_new_sustainability]], [[observatoire_climatique_narratif_de_nairobi_new_sustainability]], [[great_lakes_compact_new_sustainability]], [[reseau_des_villes_regeneratives_new_sustainability]], [[ligue_des_cites_du_sahel_numerique_new_sustainability]], [[consortium_africain_de_biotechnologies_sociales_new_sustainability]]
-**Opposants** : [[bloc_des_gouvernements_souverainistes_hydriques_new_sustainability]], [[lobbies_agro_industriels_du_bassin_du_congo_new_sustainability]], [[lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability]], [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]], [[collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability]], [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]], [[factions_technocratiques_de_la_delegation_ia_totale_new_sustainability]]
 
 ## Description journalistique
 Depuis son siège vitré surplombant les collines de Karen, le Parlement Territoires Nairobi tient séance trois fois par semaine en format hybride : délégués en chair et en os, hologrammes communautaires des districts pastoraux du Nord, et interfaces IA traduisant en temps réel les données hydrologiques en arguments délibératifs. En 2098, c'est ici que se tranche la question la plus sensible d'Afrique de l'Est : qui boit, qui plante, qui préserve. Ses décisions sur les quotas du bassin du Rift ont fait jurisprudence jusqu'à Genève. Reporters et juristes du monde entier s'y pressent moins pour couvrir des votes que pour observer comment une institution parvient encore, dans un monde saturé d'algorithmes, à faire coexister la parole du berger masaï et les recommandations du Réseau ARIA.
 
 ## Tensions narratives
 Le Parlement est pris en étau entre le Parlement Délibératif Mondial qui pousse à une harmonisation algorithmique des ressources et les communautés locales qui contestent toute délégation de leur souveraineté hydrologique à un système automatisé. La montée en puissance du Bloc des Gouvernements Souverainistes Hydriques menace de court-circuiter ses décisions en négociant directement avec les instances onusiennes. En interne, une faction grandissante de délégués jeunes, formés aux outils d'IA délibérative, conteste l'autorité des représentants traditionnels — ouvrant la question de savoir si la démocratie territoriale peut survivre à sa propre modernisation.
+
+## Relations
+**Alliés :**
+- [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]]
+- [[assemblee_territoires_new_sustainability]]
+- [[coalition_vivant_new_sustainability]]
+- [[consortium_africain_de_biotechnologies_sociales_new_sustainability]]
+- [[factions_internes_contestataires_du_bureau_de_moderation_new_sustainability]]
+- [[great_lakes_compact_new_sustainability]]
+- [[hub_nairobi_kigali_new_sustainability]]
+- [[ligue_des_cites_du_sahel_numerique_new_sustainability]]
+- [[observatoire_climatique_narratif_de_nairobi_new_sustainability]]
+- [[parlement_deliberatif_mondial_new_sustainability]]
+- [[programme_onu_de_restauration_des_sols_new_sustainability]]
+- [[reseau_des_villes_regeneratives_new_sustainability]]
+- [[reseaux_de_gouvernance_territoriale_distribues_new_sustainability]]
+- [[trame_bioclimatique_new_sustainability]]
+**Opposants :**
+- [[bloc_des_gouvernements_souverainistes_hydriques_new_sustainability]]
+- [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]]
+- [[collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability]]
+- [[factions_technocratiques_de_la_delegation_ia_totale_new_sustainability]]
+- [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]]
+- [[lobbies_agro_industriels_du_bassin_du_congo_new_sustainability]]
+- [[lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability]]
+- [[reseau_global_de_cliniques_regeneratives_new_sustainability]]

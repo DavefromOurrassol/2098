@@ -29,8 +29,44 @@ zone_geographique:
 - régionale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
+- autorite_continentale_des_ressources_aquatiques_acra_policy_reform
+- conseil_de_regulation_climatique_global_policy_reform
+- conseil_intergouvernemental_de_regulation_technologique_policy_reform
+- conseil_regulation_ressources_policy_reform
+- consortium_africain_de_biotechnologies_sociales_policy_reform
+- consortium_amazonia_viva_policy_reform
+- consortium_des_villes_etats_durables_policy_reform
+- faction_regulatrice_dure_au_sein_du_cei_policy_reform
+- federation_des_mutuelles_biotech_policy_reform
+- fonds_mondial_de_stabilisation_biotechnologique_policy_reform
+- fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform
+- fonds_souverain_de_transition_verte_fstv_policy_reform
+- nexus_biosyn_policy_reform
+- observatoire_mondial_des_ressources_critiques_policy_reform
+- office_integre_des_flux_migratoires_policy_reform
+- reseau_des_agences_sanitaires_regionales_policy_reform
+- reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform
+- reseaux_de_capteurs_ia_climatiques_deployes_par_les_etats_membres_policy_reform
+oppositions:
+- bloc_des_nations_a_economie_carbone_controlee_policy_reform
+- coalition_des_semences_libres_policy_reform
+- collectifs_de_biohackers_agro_communautaires_policy_reform
+- collectifs_de_hackers_biospheriques_policy_reform
+- conglomerats_d_automatisation_industrielle_integrale_policy_reform
+- consortiums_agro_industriels_du_bassin_fluvial_policy_reform
+- etats_dissidents_du_bloc_austral_policy_reform
+- factions_internes_dissidentes_des_contributeurs_historiques_policy_reform
+- factions_internes_pro_desaugmentation_totale_policy_reform
+- front_de_souverainete_biologique_eurasiatique_policy_reform
+- front_souverainiste_des_blocs_non_signataires_policy_reform
+- gouvernements_populistes_anti_depossession_policy_reform
+- internationale_decroissante_anti_planification_policy_reform
+- mouvement_pour_la_justice_ecologique_communautaire_policy_reform
+- mouvement_pour_la_souverainete_territoriale_absolue_policy_reform
+- republique_islamique_iran_policy_reform
+- syndicats_d_extraction_privee_non_regules_policy_reform
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -91,6 +127,49 @@ L'AMV est écartelée entre les blocs industriels qui financent son fonctionneme
 - [[gouvernance_institutions]]
 - [[sante_biotechnologies]]
 - [[climat_environnement_global]]
+
+
+
+## Relations
+**Alliés :**
+- [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]
+- [[autorite_continentale_des_ressources_aquatiques_acra_policy_reform]]
+- [[conseil_de_regulation_climatique_global_policy_reform]]
+- [[conseil_intergouvernemental_de_regulation_technologique_policy_reform]]
+- [[conseil_regulation_ressources_policy_reform]]
+- [[consortium_africain_de_biotechnologies_sociales_policy_reform]]
+- [[consortium_amazonia_viva_policy_reform]]
+- [[consortium_des_villes_etats_durables_policy_reform]]
+- [[faction_regulatrice_dure_au_sein_du_cei_policy_reform]]
+- [[federation_des_mutuelles_biotech_policy_reform]]
+- [[fonds_mondial_de_stabilisation_biotechnologique_policy_reform]]
+- [[fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform]]
+- [[fonds_souverain_de_transition_verte_fstv_policy_reform]]
+- [[nexus_biosyn_policy_reform]]
+- [[observatoire_mondial_des_ressources_critiques_policy_reform]]
+- [[office_integre_des_flux_migratoires_policy_reform]]
+- [[reseau_des_agences_sanitaires_regionales_policy_reform]]
+- [[reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform]]
+- [[reseaux_de_capteurs_ia_climatiques_deployes_par_les_etats_membres_policy_reform]]
+**Opposants :**
+- [[bloc_des_nations_a_economie_carbone_controlee_policy_reform]]
+- [[coalition_des_semences_libres_policy_reform]]
+- [[collectifs_de_biohackers_agro_communautaires_policy_reform]]
+- [[collectifs_de_hackers_biospheriques_policy_reform]]
+- [[conglomerats_d_automatisation_industrielle_integrale_policy_reform]]
+- [[consortiums_agro_industriels_du_bassin_fluvial_policy_reform]]
+- [[etats_dissidents_du_bloc_austral_policy_reform]]
+- [[factions_internes_dissidentes_des_contributeurs_historiques_policy_reform]]
+- [[factions_internes_pro_desaugmentation_totale_policy_reform]]
+- [[front_de_souverainete_biologique_eurasiatique_policy_reform]]
+- [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+- [[gouvernements_populistes_anti_depossession_policy_reform]]
+- [[internationale_decroissante_anti_planification_policy_reform]]
+- [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]]
+- [[mouvement_pour_la_souverainete_territoriale_absolue_policy_reform]]
+- [[republique_islamique_iran_policy_reform]]
+- [[syndicats_d_extraction_privee_non_regules_policy_reform]]
+- [[test_durcissement_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

@@ -31,8 +31,32 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- collectifs_de_journalisme_embarque_reference
+- collectifs_de_journalistes_independants_regionaux_reference
+- federation_des_cliniques_autonomes_reference
+- ong_de_tracabilite_des_ressources_critiques_reference
+- ong_environnementales_de_terrain_reference
+- reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference
+- reseau_mnemos_reference
+- reseaux_de_capteurs_citoyens_reference
+- tbilissi_noeud_mnemos_reference
+- tribunal_algorithmique_de_bruxelles_reference
+- universites_et_think_tanks_en_zones_de_liberte_academique_reference
+- voix_du_dehors_reference
+oppositions:
+- amazonie_consortium_viva_reference
+- bloc_eurasien_central_reference
+- bureaux_de_regulation_informationnelle_reference
+- consortiums_mediatiques_corporatifs_reference
+- consortiums_prives_de_gestion_des_donnees_critiques_reference
+- directive_kontinuum_reference
+- etats_a_tendance_centraliste_numerique_reference
+- pacte_des_souverains_reference
+- plateformes_centralisees_de_narration_officielle_reference
+- plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference
+- rede_paulista_de_distribuic_o_algor_tmica_reference
+- services_de_contre_information_des_blocs_geopolitiques_concurrents_reference
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -96,6 +120,35 @@ Ces réseaux sont tiraillés entre leur loyauté résiduelle envers les institut
 - [[gouvernance_institutions]]
 - [[technologie_information]]
 - [[frontieres_du_systeme]]
+
+
+## Relations
+**Alliés :**
+- [[collectifs_de_journalisme_embarque_reference]]
+- [[collectifs_de_journalistes_independants_regionaux_reference]]
+- [[federation_des_cliniques_autonomes_reference]]
+- [[ong_de_tracabilite_des_ressources_critiques_reference]]
+- [[ong_environnementales_de_terrain_reference]]
+- [[reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference]]
+- [[reseau_mnemos_reference]]
+- [[reseaux_de_capteurs_citoyens_reference]]
+- [[tbilissi_noeud_mnemos_reference]]
+- [[tribunal_algorithmique_de_bruxelles_reference]]
+- [[universites_et_think_tanks_en_zones_de_liberte_academique_reference]]
+- [[voix_du_dehors_reference]]
+**Opposants :**
+- [[amazonie_consortium_viva_reference]]
+- [[bloc_eurasien_central_reference]]
+- [[bureaux_de_regulation_informationnelle_reference]]
+- [[consortiums_mediatiques_corporatifs_reference]]
+- [[consortiums_prives_de_gestion_des_donnees_critiques_reference]]
+- [[directive_kontinuum_reference]]
+- [[etats_a_tendance_centraliste_numerique_reference]]
+- [[pacte_des_souverains_reference]]
+- [[plateformes_centralisees_de_narration_officielle_reference]]
+- [[plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference]]
+- [[rede_paulista_de_distribuic_o_algor_tmica_reference]]
+- [[services_de_contre_information_des_blocs_geopolitiques_concurrents_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

@@ -32,8 +32,23 @@ zone_geographique:
 - orbital
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
+- agence_mondiale_de_modelisation_climatique_ammc_new_sustainability
+- conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability
+- consortium_de_regeneration_planetaire_new_sustainability
+- consortium_helios_new_sustainability
+- fonds_mondial_de_regeneration_ecologique_new_sustainability
+- programme_onu_de_restauration_des_sols_new_sustainability
+- reseau_des_agences_climatiques_regionales_new_sustainability
+- trame_bioclimatique_new_sustainability
+oppositions:
+- bloc_eurasien_souverainiste_new_sustainability
+- coalition_des_industries_extractives_residuelles_new_sustainability
+- collectifs_de_narration_sauvage_hors_protocole_new_sustainability
+- etats_souverainistes_anti_reseau_new_sustainability
+- factions_souverainistes_des_blocs_peripheriques_new_sustainability
+- souverainistes_du_bloc_eurasien_new_sustainability
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -99,6 +114,26 @@ L'AORC est tiraillée entre sa mission de bien commun orbital et la pression des
 - [[gouvernance_institutions]]
 - [[energie_ressources_critiques]]
 - [[geopolitique_conflits]]
+
+
+## Relations
+**Alliés :**
+- [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]]
+- [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]]
+- [[conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability]]
+- [[consortium_de_regeneration_planetaire_new_sustainability]]
+- [[consortium_helios_new_sustainability]]
+- [[fonds_mondial_de_regeneration_ecologique_new_sustainability]]
+- [[programme_onu_de_restauration_des_sols_new_sustainability]]
+- [[reseau_des_agences_climatiques_regionales_new_sustainability]]
+- [[trame_bioclimatique_new_sustainability]]
+**Opposants :**
+- [[bloc_eurasien_souverainiste_new_sustainability]]
+- [[coalition_des_industries_extractives_residuelles_new_sustainability]]
+- [[collectifs_de_narration_sauvage_hors_protocole_new_sustainability]]
+- [[etats_souverainistes_anti_reseau_new_sustainability]]
+- [[factions_souverainistes_des_blocs_peripheriques_new_sustainability]]
+- [[souverainistes_du_bloc_eurasien_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

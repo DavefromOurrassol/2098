@@ -4,6 +4,7 @@ type: instance
 slug: vasil_orentchev_reference
 entite: vasil_orentchev
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: corridors_eurasiens_peripheriques
   lieu: Corridors eurasiens périphériques (zones grises eurasiennes)

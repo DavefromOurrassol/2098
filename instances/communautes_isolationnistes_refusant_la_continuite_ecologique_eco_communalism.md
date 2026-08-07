@@ -32,11 +32,32 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
+alliances:
+- communautes_rurales_dissidentes_anti_cooperation_regionale_eco_communalism
+- communs_secessionnistes_hors_coordination_eco_communalism
+- courant_isolationniste_anti_circulation_de_l_information_eco_communalism
+- factions_autoritaires_locales_identitaires_exclusionnistes_eco_communalism
+- factions_communautaires_refusant_le_partage_narratif_exterieur_eco_communalism
 oppositions:
+- archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
+- assemblees_de_bassin_versant_eco_communalism
+- brigades_de_restauration_ecologique_eco_communalism
+- collectifs_de_cartographie_ecologique_participative_eco_communalism
+- collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism
 - confederation_bassins_vivants_eco_communalism
-- tresse_verte_corridor_eco_communalism
+- consortium_amazonia_viva_eco_communalism
+- cooperatives_d_habitat_regeneratif_eco_communalism
+- fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism
+- guildes_des_semenciers_itinerants_eco_communalism
+- mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism
+- oracle_des_seuils_eco_communalism
 - reseau_assemblees_fennoscandien_eco_communalism
+- reseaux_de_radio_communautaire_basse_consommation_eco_communalism
+- reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
+- trame_bioclimatique_eco_communalism
+- tresse_verte_corridor_eco_communalism
+- universite_nomade_eco_communalism
+- zones_extractivistes_corridors_eco_communalism
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -100,11 +121,34 @@ La contradiction centrale de ces communautés est vertigineuse : profondément a
 - [[climat_environnement_global]]
 - [[gouvernance_institutions]]
 
+
 ## Relations
+**Alliés :**
+- [[communautes_rurales_dissidentes_anti_cooperation_regionale_eco_communalism]]
+- [[communs_secessionnistes_hors_coordination_eco_communalism]]
+- [[courant_isolationniste_anti_circulation_de_l_information_eco_communalism]]
+- [[factions_autoritaires_locales_identitaires_exclusionnistes_eco_communalism]]
+- [[factions_communautaires_refusant_le_partage_narratif_exterieur_eco_communalism]]
 **Opposants :**
+- [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]]
+- [[assemblees_de_bassin_versant_eco_communalism]]
+- [[brigades_de_restauration_ecologique_eco_communalism]]
+- [[collectifs_de_cartographie_ecologique_participative_eco_communalism]]
+- [[collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism]]
 - [[confederation_bassins_vivants_eco_communalism]]
-- [[tresse_verte_corridor_eco_communalism]]
+- [[consortium_amazonia_viva_eco_communalism]]
+- [[cooperatives_d_habitat_regeneratif_eco_communalism]]
+- [[fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism]]
+- [[guildes_des_semenciers_itinerants_eco_communalism]]
+- [[mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism]]
+- [[oracle_des_seuils_eco_communalism]]
 - [[reseau_assemblees_fennoscandien_eco_communalism]]
+- [[reseaux_de_radio_communautaire_basse_consommation_eco_communalism]]
+- [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
+- [[trame_bioclimatique_eco_communalism]]
+- [[tresse_verte_corridor_eco_communalism]]
+- [[universite_nomade_eco_communalism]]
+- [[zones_extractivistes_corridors_eco_communalism]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

@@ -31,8 +31,32 @@ zone_geographique:
 - régionale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism
+- communautes_rurales_dissidentes_anti_cooperation_regionale_eco_communalism
+- courant_isolationniste_anti_circulation_de_l_information_eco_communalism
+- factions_communautaires_refusant_le_partage_narratif_exterieur_eco_communalism
+- fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism
+oppositions:
+- amazonie_pacte_viva_eco_communalism
+- archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
+- assemblees_bioterritoriales_regionales_eco_communalism
+- assemblees_cooperatives_regionales_eco_communalism
+- cercles_de_mediation_territoriale_intercommunautaire_eco_communalism
+- confederation_bassins_vivants_eco_communalism
+- confederation_communs_arc_septentrional_eco_communalism
+- cooperatives_d_habitat_regeneratif_eco_communalism
+- federation_communs_territoriaux_eco_communalism
+- guildes_de_mediateurs_ecologiques_eco_communalism
+- kalaallit_nunaat_sovereign_fund_eco_communalism
+- mouvement_des_communes_du_rust_belt_eco_communalism
+- reseau_assemblees_fennoscandien_eco_communalism
+- reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism
+- reseau_terrafond_bassins_eco_communalism
+- reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
+- tampere_charte_eco_communalism
+- trame_mnemos_noeud_reseau_eco_communalism
+- tresse_verte_corridor_eco_communalism
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -94,6 +118,35 @@ La tension centrale réside dans la contradiction performative du réseau lui-m�
 - [[organisation_territoires]]
 - [[gouvernance_institutions]]
 - [[frontieres_du_systeme]]
+
+
+## Relations
+**Alliés :**
+- [[communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism]]
+- [[communautes_rurales_dissidentes_anti_cooperation_regionale_eco_communalism]]
+- [[courant_isolationniste_anti_circulation_de_l_information_eco_communalism]]
+- [[factions_communautaires_refusant_le_partage_narratif_exterieur_eco_communalism]]
+- [[fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism]]
+**Opposants :**
+- [[amazonie_pacte_viva_eco_communalism]]
+- [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]]
+- [[assemblees_bioterritoriales_regionales_eco_communalism]]
+- [[assemblees_cooperatives_regionales_eco_communalism]]
+- [[cercles_de_mediation_territoriale_intercommunautaire_eco_communalism]]
+- [[confederation_bassins_vivants_eco_communalism]]
+- [[confederation_communs_arc_septentrional_eco_communalism]]
+- [[cooperatives_d_habitat_regeneratif_eco_communalism]]
+- [[federation_communs_territoriaux_eco_communalism]]
+- [[guildes_de_mediateurs_ecologiques_eco_communalism]]
+- [[kalaallit_nunaat_sovereign_fund_eco_communalism]]
+- [[mouvement_des_communes_du_rust_belt_eco_communalism]]
+- [[reseau_assemblees_fennoscandien_eco_communalism]]
+- [[reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism]]
+- [[reseau_terrafond_bassins_eco_communalism]]
+- [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
+- [[tampere_charte_eco_communalism]]
+- [[trame_mnemos_noeud_reseau_eco_communalism]]
+- [[tresse_verte_corridor_eco_communalism]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

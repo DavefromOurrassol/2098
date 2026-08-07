@@ -4,6 +4,7 @@ type: instance
 slug: cargo_mombasa_crrc_breakdown
 entite: cargo_mombasa_crrc
 scenario: breakdown
+statut: officialise_enrichi
 localisation:
   zone: cargo_mombasa_crrc
   lieu: Cargo au large de Mombasa
@@ -33,20 +34,20 @@ zone_systemique:
     - sécurité
 
 alliances:
-    - ligue_des_cites_littorales_en_sursis_breakdown
-    - bloc_de_johannesburg_breakdown
-    - cartels_logistiques_regionaux_breakdown
-    - seigneuries_logistiques_armees_breakdown
-    - front_humanitaire_d_urgence_non_affilie_breakdown
-    - reseau_de_recuperation_industrielle_illicite_breakdown
-
+- bloc_de_johannesburg_breakdown
+- cartels_logistiques_regionaux_breakdown
+- front_humanitaire_d_urgence_non_affilie_breakdown
+- ligue_des_cites_littorales_en_sursis_breakdown
+- nairobi_crrc_breakdown
+- reseau_de_recuperation_industrielle_illicite_breakdown
+- seigneuries_logistiques_armees_breakdown
 oppositions:
-    - saboteurs_des_corridors_de_transit_breakdown
-    - milices_extractivistes_du_bassin_du_congo_breakdown
-    - blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
-    - etats_fragmentes_nationalisant_les_stocks_breakdown
-    - reseau_logistique_criminel_concurrent_breakdown
-
+- blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
+- etats_fragmentes_nationalisant_les_stocks_breakdown
+- gouvernements_de_forteresse_anti_nairobi_breakdown
+- milices_extractivistes_du_bassin_du_congo_breakdown
+- reseau_logistique_criminel_concurrent_breakdown
+- saboteurs_des_corridors_de_transit_breakdown
 type_relation_dominante: dépendance
 
 annee_debut: 2031
@@ -88,12 +89,26 @@ Maintien des liaisons maritimes entre les ports côtiers d'Afrique orientale (Mo
 - [[organisation_territoires]]
 - [[systemes_productifs_travail]]
 
-## Relations
-**Alliés** : [[ligue_des_cites_littorales_en_sursis_breakdown]], [[bloc_de_johannesburg_breakdown]], [[cartels_logistiques_regionaux_breakdown]], [[seigneuries_logistiques_armees_breakdown]], [[front_humanitaire_d_urgence_non_affilie_breakdown]], [[reseau_de_recuperation_industrielle_illicite_breakdown]]
-**Opposants** : [[saboteurs_des_corridors_de_transit_breakdown]], [[milices_extractivistes_du_bassin_du_congo_breakdown]], [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]], [[etats_fragmentes_nationalisant_les_stocks_breakdown]], [[reseau_logistique_criminel_concurrent_breakdown]]
 
 ## Description journalistique
 Sur les quais de Mombasa, les containers rouillés portant le sigle CRRC — quatre lettres peintes à la hâte sur des coques rafistolées — sont devenus aussi familiers que l'odeur du mazout coupé d'huile végétale que brûlent leurs moteurs. Les Dhows de la Dernière Chance, comme les appellent les dockers, n'ont pas de siège social, pas de registre d'actionnaires identifiable, et leurs capitaines changent de pavillon aussi souvent que le vent tourne. Pourtant, ce sont eux qui livrent les antibiotiques à Lamu, les semences à Pemba et le gasoil de contrebande à Mogadiscio — quand personne d'autre ne s'y risque plus. Le prix est élevé, parfois exorbitant : une communauté de pêcheurs de Zanzibar a récemment cédé trois mois de sa prise pour un unique chargement de pompes à eau. Mais l'alternative, c'est le vide.
 
 ## Tensions narratives
 La CRRC incarne la contradiction vivante de l'effondrement : plus les États côtiers s'effondrent, plus elle devient indispensable — et plus elle devient prédatrice. Jusqu'où une organisation de survie peut-elle aller avant de devenir le problème qu'elle prétend résoudre ? Plusieurs capitaines dissidents auraient refusé de transporter des chargements d'armes légères pour des milices locales, créant une fracture interne entre un aile 'utilitaire humaniste' et une direction pragmatiquement amorale. Par ailleurs, le Bloc de Johannesburg cherche à absorber la flotte pour sécuriser ses propres corridors d'approvisionnement, ce qui ferait basculer la CRRC d'une logique de survie communautaire vers celle d'un instrument de puissance régionale — une transformation que certaines communautés côtières perçoivent déjà comme une trahison annoncée.
+
+## Relations
+**Alliés :**
+- [[bloc_de_johannesburg_breakdown]]
+- [[cartels_logistiques_regionaux_breakdown]]
+- [[front_humanitaire_d_urgence_non_affilie_breakdown]]
+- [[ligue_des_cites_littorales_en_sursis_breakdown]]
+- [[nairobi_crrc_breakdown]]
+- [[reseau_de_recuperation_industrielle_illicite_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]
+**Opposants :**
+- [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
+- [[etats_fragmentes_nationalisant_les_stocks_breakdown]]
+- [[gouvernements_de_forteresse_anti_nairobi_breakdown]]
+- [[milices_extractivistes_du_bassin_du_congo_breakdown]]
+- [[reseau_logistique_criminel_concurrent_breakdown]]
+- [[saboteurs_des_corridors_de_transit_breakdown]]

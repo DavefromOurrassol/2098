@@ -4,6 +4,7 @@ type: instance
 slug: oracle_des_seuils_eco_communalism
 entite: oracle_des_seuils
 scenario: eco_communalism
+statut: officialise_enrichi
 localisation:
   zone: null
   lieu: null
@@ -38,23 +39,22 @@ zone_systemique:
     - énergie
 
 alliances:
-    - collectifs_de_geo_observateurs_citoyens_eco_communalism
-    - assemblees_de_bassin_versant_eco_communalism
-    - conseils_de_bassin_versant_eco_communalistes_eco_communalism
-    - reseau_mnemos_eco_communalism
-    - trame_bioclimatique_eco_communalism
-    - collectifs_de_cartographie_ecologique_participative_eco_communalism
-    - assemblees_bioterritoriales_regionales_eco_communalism
-    - collectifs_du_seuil_eco_communalism
-
+- assemblees_bioterritoriales_regionales_eco_communalism
+- assemblees_de_bassin_versant_eco_communalism
+- collectifs_de_cartographie_ecologique_participative_eco_communalism
+- collectifs_de_geo_observateurs_citoyens_eco_communalism
+- collectifs_du_seuil_eco_communalism
+- conseils_de_bassin_versant_eco_communalistes_eco_communalism
+- reseau_mnemos_eco_communalism
+- trame_bioclimatique_eco_communalism
 oppositions:
-    - consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism
-    - factions_autoritaires_de_controle_du_savoir_eco_communalism
-    - courant_isolationniste_anti_circulation_de_l_information_eco_communalism
-    - reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism
-    - communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism
-    - cartels_de_narration_de_penurie_eco_communalism
-
+- cartels_de_narration_de_penurie_eco_communalism
+- communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism
+- consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism
+- courant_isolationniste_anti_circulation_de_l_information_eco_communalism
+- directive_kontinuum_eco_communalism
+- factions_autoritaires_de_controle_du_savoir_eco_communalism
+- reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism
 type_relation_dominante: coopération
 
 annee_debut: 2031
@@ -98,12 +98,28 @@ Produit des alertes probabilistes sur les ruptures imminentes — effondrement d
 - [[organisation_territoires]]
 - [[energie_ressources_critiques]]
 
-## Relations
-**Alliés** : [[collectifs_de_geo_observateurs_citoyens_eco_communalism]], [[assemblees_de_bassin_versant_eco_communalism]], [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]], [[reseau_mnemos_eco_communalism]], [[trame_bioclimatique_eco_communalism]], [[collectifs_de_cartographie_ecologique_participative_eco_communalism]], [[assemblees_bioterritoriales_regionales_eco_communalism]], [[collectifs_du_seuil_eco_communalism]]
-**Opposants** : [[consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism]], [[factions_autoritaires_de_controle_du_savoir_eco_communalism]], [[courant_isolationniste_anti_circulation_de_l_information_eco_communalism]], [[reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism]], [[communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism]], [[cartels_de_narration_de_penurie_eco_communalism]]
 
 ## Description journalistique
 On ne le voit pas, mais on lit ses avertissements sur les tableaux de liège des maisons communes. L'Entreliseur des Seuils n'a pas de siège, pas d'interface unique, pas d'administrateur central : il tourne sur des dizaines de serveurs à faible consommation répartis entre des granges coopératives, des bibliothèques de bassin et des antennes radio communautaires. Quand il signale qu'un aquifère approche de son point de non-retour ou qu'une trame pollinique est sur le point de s'effondrer, les assemblées territoriales reçoivent l'alerte en même temps — sans filtre, sans hiérarchie. Ce que l'Entreliseur ne dit pas, c'est ce qu'il faut sacrifier pour passer le seuil. Cette lacune — volontaire selon ses concepteurs, structurelle selon ses critiques — est devenue le cœur de toutes les disputes politiques qu'il engendre.
 
 ## Tensions narratives
 La fragmentation du système en nœuds autonomes génère des lectures contradictoires d'une même alerte : deux assemblées voisines peuvent recevoir des données partiellement divergentes et tirer des conclusions opposées sur l'urgence d'agir. Des factions autoritaires locales tentent de s'approprier les nœuds territoriaux pour contrôler l'accès aux prédictions et orienter les décisions collectives à leur avantage. Plus profondément, une fracture s'intensifie entre ceux qui voient l'Entreliseur comme un outil de délibération démocratique et ceux qui le considèrent comme un oracle dont l'autorité technique doit primer sur le vote — tension qui menace l'équilibre même du modèle éco-communaliste.
+
+## Relations
+**Alliés :**
+- [[assemblees_bioterritoriales_regionales_eco_communalism]]
+- [[assemblees_de_bassin_versant_eco_communalism]]
+- [[collectifs_de_cartographie_ecologique_participative_eco_communalism]]
+- [[collectifs_de_geo_observateurs_citoyens_eco_communalism]]
+- [[collectifs_du_seuil_eco_communalism]]
+- [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]]
+- [[reseau_mnemos_eco_communalism]]
+- [[trame_bioclimatique_eco_communalism]]
+**Opposants :**
+- [[cartels_de_narration_de_penurie_eco_communalism]]
+- [[communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism]]
+- [[consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism]]
+- [[courant_isolationniste_anti_circulation_de_l_information_eco_communalism]]
+- [[directive_kontinuum_eco_communalism]]
+- [[factions_autoritaires_de_controle_du_savoir_eco_communalism]]
+- [[reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism]]

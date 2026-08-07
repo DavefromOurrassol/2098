@@ -4,6 +4,7 @@ type: instance
 slug: zones_extractivistes_corridors_eco_communalism
 entite: zones_extractivistes_corridors
 scenario: eco_communalism
+statut: officialise_enrichi
 localisation:
   zone: zones_extractivistes_corridors
   lieu: Friches Corridors — anciens territoires d'extraction minière et énergétique reconvertis en corridors de transit écologique
@@ -37,30 +38,30 @@ zone_systemique:
     - énergie
 
 alliances:
-    - brigades_de_restauration_ecologique_eco_communalism
-    - assemblees_bioterritoriales_regionales_eco_communalism
-    - confederation_bassins_vivants_eco_communalism
-    - tresse_verte_corridor_eco_communalism
-    - collectifs_de_cartographie_ecologique_participative_eco_communalism
-    - guildes_de_mediateurs_ecologiques_eco_communalism
-    - cercles_de_mediation_territoriale_intercommunautaire_eco_communalism
-    - archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
-    - cooperative_terrafond_eco_communalism
-    - coalition_vivant_eco_communalism
-    - collectifs_du_seuil_eco_communalism
-    - mouvement_des_communes_du_rust_belt_eco_communalism
-
+- archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
+- assemblees_bioterritoriales_regionales_eco_communalism
+- brigades_de_restauration_ecologique_eco_communalism
+- cercles_de_mediation_territoriale_intercommunautaire_eco_communalism
+- coalition_vivant_eco_communalism
+- collectifs_de_cartographie_ecologique_participative_eco_communalism
+- collectifs_du_seuil_eco_communalism
+- confederation_bassins_vivants_eco_communalism
+- cooperative_terrafond_eco_communalism
+- guildes_de_mediateurs_ecologiques_eco_communalism
+- mouvement_des_communes_du_rust_belt_eco_communalism
+- tresse_verte_corridor_eco_communalism
 oppositions:
-    - enclaves_extractivistes_residuelles_des_corridors_eco_communalism
-    - enclaves_extractivistes_et_etats_residuels_eco_communalism
-    - consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism
-    - reseaux_de_notables_communautaires_capturistes_eco_communalism
-    - conseils_territoriaux_opaques_sur_la_gestion_des_ressources_eco_communalism
-    - communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism
-    - communautes_rurales_dissidentes_anti_cooperation_regionale_eco_communalism
-    - factions_extractivistes_des_aquiferes_communs_eco_communalism
-    - plateformes_centralisees_de_reagregation_globale_eco_communalism
-
+- communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism
+- communautes_rurales_dissidentes_anti_cooperation_regionale_eco_communalism
+- confederation_des_communs_de_l_arc_septentrional_eco_communalism
+- conseils_de_bassin_versant_eco_communalistes_eco_communalism
+- conseils_territoriaux_opaques_sur_la_gestion_des_ressources_eco_communalism
+- consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism
+- enclaves_extractivistes_et_etats_residuels_eco_communalism
+- enclaves_extractivistes_residuelles_des_corridors_eco_communalism
+- factions_extractivistes_des_aquiferes_communs_eco_communalism
+- plateformes_centralisees_de_reagregation_globale_eco_communalism
+- reseaux_de_notables_communautaires_capturistes_eco_communalism
 type_relation_dominante: conflit
 
 annee_debut: 2041
@@ -104,12 +105,36 @@ Assurer la continuité physique et écologique entre communautés autonomes via 
 - [[energie_ressources_critiques]]
 - [[systemes_productifs_travail]]
 
-## Relations
-**Alliés** : [[brigades_de_restauration_ecologique_eco_communalism]], [[assemblees_bioterritoriales_regionales_eco_communalism]], [[confederation_bassins_vivants_eco_communalism]], [[tresse_verte_corridor_eco_communalism]], [[collectifs_de_cartographie_ecologique_participative_eco_communalism]], [[guildes_de_mediateurs_ecologiques_eco_communalism]], [[cercles_de_mediation_territoriale_intercommunautaire_eco_communalism]], [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]], [[cooperative_terrafond_eco_communalism]], [[coalition_vivant_eco_communalism]], [[collectifs_du_seuil_eco_communalism]], [[mouvement_des_communes_du_rust_belt_eco_communalism]]
-**Opposants** : [[enclaves_extractivistes_residuelles_des_corridors_eco_communalism]], [[enclaves_extractivistes_et_etats_residuels_eco_communalism]], [[consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism]], [[reseaux_de_notables_communautaires_capturistes_eco_communalism]], [[conseils_territoriaux_opaques_sur_la_gestion_des_ressources_eco_communalism]], [[communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism]], [[communautes_rurales_dissidentes_anti_cooperation_regionale_eco_communalism]], [[factions_extractivistes_des_aquiferes_communs_eco_communalism]], [[plateformes_centralisees_de_reagregation_globale_eco_communalism]]
 
 ## Description journalistique
 Entre les monticules de stériles rouillés et les premières touffes de saule qui percent l'argile contaminée, on reconnaît à peine l'ancienne concession minière. Les Friches Corridors — c'est ainsi que les assemblées régionales les nomment depuis le Pacte de Reconversion de 2047 — sont aujourd'hui le système nerveux discret du monde éco-communaliste : des bandes de terre arrachées centimètre par centimètre à la logique extractive, où passent les semenciers itinérants, les délégués des bassins versants, et les cortèges de faune sauvage qui remontent lentement vers le nord. Mais la paix des friches est trompeuse : les titres fonciers des anciennes multinationales n'ont jamais été formellement annulés, et des huissiers fantômes continuent de surgir au coin des sentiers recolonisés par les communautés pour brandir des actes notariés du siècle dernier. Chaque prairie reconquise est aussi un procès en suspens.
 
 ## Tensions narratives
 La reconversion juridique du sol reste le nœud gordien : les coalitions communalistes avancent par la pratique et la jurisprudence coutumière, mais les titres de propriété hérités continuent de peser comme une épée de Damoclès sur chaque chantier de dépollution. Par ailleurs, certaines communautés refusent que leurs friches deviennent des corridors ouverts, craignant l'afflux de voisins ou de flux qu'elles ne contrôlent pas — la tension entre continuité écologique et souveraineté locale reste vive. Enfin, la question de la toxicité résiduelle des sols — métaux lourds, résidus de combustibles fossiles — crée des conflits sur la vitesse de réouverture des corridors, entre ceux qui veulent avancer et ceux qui exigent une décontamination complète avant tout transit.
+
+## Relations
+**Alliés :**
+- [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]]
+- [[assemblees_bioterritoriales_regionales_eco_communalism]]
+- [[brigades_de_restauration_ecologique_eco_communalism]]
+- [[cercles_de_mediation_territoriale_intercommunautaire_eco_communalism]]
+- [[coalition_vivant_eco_communalism]]
+- [[collectifs_de_cartographie_ecologique_participative_eco_communalism]]
+- [[collectifs_du_seuil_eco_communalism]]
+- [[confederation_bassins_vivants_eco_communalism]]
+- [[cooperative_terrafond_eco_communalism]]
+- [[guildes_de_mediateurs_ecologiques_eco_communalism]]
+- [[mouvement_des_communes_du_rust_belt_eco_communalism]]
+- [[tresse_verte_corridor_eco_communalism]]
+**Opposants :**
+- [[communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism]]
+- [[communautes_rurales_dissidentes_anti_cooperation_regionale_eco_communalism]]
+- [[confederation_des_communs_de_l_arc_septentrional_eco_communalism]]
+- [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]]
+- [[conseils_territoriaux_opaques_sur_la_gestion_des_ressources_eco_communalism]]
+- [[consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism]]
+- [[enclaves_extractivistes_et_etats_residuels_eco_communalism]]
+- [[enclaves_extractivistes_residuelles_des_corridors_eco_communalism]]
+- [[factions_extractivistes_des_aquiferes_communs_eco_communalism]]
+- [[plateformes_centralisees_de_reagregation_globale_eco_communalism]]
+- [[reseaux_de_notables_communautaires_capturistes_eco_communalism]]

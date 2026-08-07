@@ -31,8 +31,37 @@ zone_geographique:
 - nationale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- administrations_hybrides_des_cites_relais_peripheriques_reference
+- collectifs_academiques_independants_reference
+- commission_hydrique_de_l_union_africaine_reference
+- cooperative_terrafond_reference
+- cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference
+- delta_du_gange_reference
+- delta_du_mekong_reference
+- detroit_compact_grands_lacs_reference
+- federation_communs_territoriaux_reference
+- geneve_lac_retreite_reference
+- great_lakes_autonomous_compact_reference
+- kinshasa_accords_hydriques_reference
+- lyon_metropole_reference
+- nairobi_crrc_reference
+- ong_environnementales_de_terrain_reference
+- operateurs_de_zones_economiques_speciales_periurbaines_reference
+- plateformes_d_optimisation_territoriale_par_ia_reference
+- programme_onu_eau_2080_reference
+- reseau_des_administrations_locales_rurales_participatives_reference
+- reseaux_de_capteurs_citoyens_reference
+- terrametrics_reference
+oppositions:
+- bloc_des_souverainistes_climatiques_reference
+- consortiums_energetiques_des_megapoles_reference
+- consortiums_prives_d_extraction_de_ressources_critiques_reference
+- etats_a_tendance_centraliste_numerique_reference
+- factions_eurasiatiques_contre_la_tarification_hydrique_reference
+- gouvernements_federaux_residuels_souverainistes_reference
+- lobbies_agro_industriels_a_haute_consommation_d_eau_reference
+- operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -94,6 +123,40 @@ Elles sont constamment écartelées entre les injonctions des blocs économiques
 - [[gouvernance_institutions]]
 - [[climat_environnement_global]]
 - [[organisation_territoires]]
+
+
+## Relations
+**Alliés :**
+- [[administrations_hybrides_des_cites_relais_peripheriques_reference]]
+- [[collectifs_academiques_independants_reference]]
+- [[commission_hydrique_de_l_union_africaine_reference]]
+- [[cooperative_terrafond_reference]]
+- [[cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference]]
+- [[delta_du_gange_reference]]
+- [[delta_du_mekong_reference]]
+- [[detroit_compact_grands_lacs_reference]]
+- [[federation_communs_territoriaux_reference]]
+- [[geneve_lac_retreite_reference]]
+- [[great_lakes_autonomous_compact_reference]]
+- [[kinshasa_accords_hydriques_reference]]
+- [[lyon_metropole_reference]]
+- [[nairobi_crrc_reference]]
+- [[ong_environnementales_de_terrain_reference]]
+- [[operateurs_de_zones_economiques_speciales_periurbaines_reference]]
+- [[plateformes_d_optimisation_territoriale_par_ia_reference]]
+- [[programme_onu_eau_2080_reference]]
+- [[reseau_des_administrations_locales_rurales_participatives_reference]]
+- [[reseaux_de_capteurs_citoyens_reference]]
+- [[terrametrics_reference]]
+**Opposants :**
+- [[bloc_des_souverainistes_climatiques_reference]]
+- [[consortiums_energetiques_des_megapoles_reference]]
+- [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[etats_a_tendance_centraliste_numerique_reference]]
+- [[factions_eurasiatiques_contre_la_tarification_hydrique_reference]]
+- [[gouvernements_federaux_residuels_souverainistes_reference]]
+- [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]]
+- [[operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

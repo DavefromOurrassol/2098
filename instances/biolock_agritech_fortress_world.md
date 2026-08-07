@@ -4,6 +4,7 @@ type: instance
 slug: biolock_agritech_fortress_world
 entite: biolock_agritech
 scenario: fortress_world
+statut: officialise_enrichi
 localisation:
   zone: bloc_eurasiatique_occidental
   lieu: Ceinture Productive Eurasiatique

@@ -30,8 +30,19 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- collectifs_de_gouvernance_communautaire_decentralisee_policy_reform
+- conseil_de_regulation_climatique_global_policy_reform
+- fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform
+- fonds_souverain_de_transition_verte_fstv_policy_reform
+- internationale_travailleurs_augmentes_policy_reform
+- mouvement_pour_la_justice_ecologique_communautaire_policy_reform
+oppositions:
+- coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform
+- conseil_regulation_ressources_policy_reform
+- consortium_des_villes_etats_durables_policy_reform
+- factions_technocratiques_de_la_marchandisation_hydrique_policy_reform
+- lobbies_des_energies_fossiles_residuelles_policy_reform
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -94,6 +105,22 @@ La Coalition est tiraillée entre sa légitimité de porte-voix des oubliés et 
 - [[organisation_territoires]]
 - [[systeme_economique_redistribution]]
 - [[gouvernance_institutions]]
+
+
+## Relations
+**Alliés :**
+- [[collectifs_de_gouvernance_communautaire_decentralisee_policy_reform]]
+- [[conseil_de_regulation_climatique_global_policy_reform]]
+- [[fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform]]
+- [[fonds_souverain_de_transition_verte_fstv_policy_reform]]
+- [[internationale_travailleurs_augmentes_policy_reform]]
+- [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]]
+**Opposants :**
+- [[coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform]]
+- [[conseil_regulation_ressources_policy_reform]]
+- [[consortium_des_villes_etats_durables_policy_reform]]
+- [[factions_technocratiques_de_la_marchandisation_hydrique_policy_reform]]
+- [[lobbies_des_energies_fossiles_residuelles_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

@@ -30,8 +30,35 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- administrations_hybrides_des_cites_relais_peripheriques_reference
+- banque_des_communs_reference
+- bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference
+- collectifs_academiques_independants_reference
+- communs_numeriques_agroecologiques_reference
+- federation_communs_territoriaux_reference
+- helsinki_communs_numeriques_reference
+- institut_polytechnique_de_ouagadougou_reference
+- ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference
+- ong_de_preservation_patrimoniale_numerique_reference
+- prisme_global_reference
+- reseau_des_administrations_locales_rurales_participatives_reference
+- reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference
+- reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference
+- reseau_meshcommons_netsolidaire_reference
+- reseaux_de_capteurs_citoyens_reference
+- tribunal_algorithmique_de_bruxelles_reference
+oppositions:
+- coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference
+- consortium_des_grandes_plateformes_ia_integrees_reference
+- consortium_des_plateformes_ia_centralisees_anti_deliberation_reference
+- consortiums_prives_de_gestion_des_donnees_critiques_reference
+- datasovereign_reference
+- directive_kontinuum_reference
+- etats_a_tendance_centraliste_numerique_reference
+- plateformes_centralisees_de_narration_officielle_reference
+- plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference
+- syndicats_de_travail_rural_hybride_reference
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -96,6 +123,38 @@ La tension centrale qui traverse ce réseau est celle de la viabilité face à l
 - [[technologie_information]]
 - [[systeme_economique_redistribution]]
 - [[gouvernance_institutions]]
+
+
+## Relations
+**Alliés :**
+- [[administrations_hybrides_des_cites_relais_peripheriques_reference]]
+- [[banque_des_communs_reference]]
+- [[bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference]]
+- [[collectifs_academiques_independants_reference]]
+- [[communs_numeriques_agroecologiques_reference]]
+- [[federation_communs_territoriaux_reference]]
+- [[helsinki_communs_numeriques_reference]]
+- [[institut_polytechnique_de_ouagadougou_reference]]
+- [[ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference]]
+- [[ong_de_preservation_patrimoniale_numerique_reference]]
+- [[prisme_global_reference]]
+- [[reseau_des_administrations_locales_rurales_participatives_reference]]
+- [[reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference]]
+- [[reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference]]
+- [[reseau_meshcommons_netsolidaire_reference]]
+- [[reseaux_de_capteurs_citoyens_reference]]
+- [[tribunal_algorithmique_de_bruxelles_reference]]
+**Opposants :**
+- [[coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference]]
+- [[consortium_des_grandes_plateformes_ia_integrees_reference]]
+- [[consortium_des_plateformes_ia_centralisees_anti_deliberation_reference]]
+- [[consortiums_prives_de_gestion_des_donnees_critiques_reference]]
+- [[datasovereign_reference]]
+- [[directive_kontinuum_reference]]
+- [[etats_a_tendance_centraliste_numerique_reference]]
+- [[plateformes_centralisees_de_narration_officielle_reference]]
+- [[plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference]]
+- [[syndicats_de_travail_rural_hybride_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

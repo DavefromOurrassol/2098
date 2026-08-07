@@ -35,8 +35,35 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- archives_neutres_geneve_breakdown
+- brigades_medicales_itinerantes_breakdown
+- cargo_mombasa_crrc_breakdown
+- collectif_des_climatologues_sans_etat_breakdown
+- collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
+- collectifs_de_reparation_energetique_breakdown
+- collectifs_de_sante_communautaire_autogeree_breakdown
+- communautes_paysannes_refugiees_breakdown
+- diaspora_tech_sahel_breakdown
+- flux_migratoires_non_integrables_breakdown
+- gouvernements_regionaux_residuels_reterritorialisants_breakdown
+- ligue_des_cites_littorales_en_sursis_breakdown
+- ong_de_gestion_migratoire_survivantes_breakdown
+- pirates_biologiques_open_source_breakdown
+- reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown
+- reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown
+- reseaux_de_soigneurs_traditionnels_breakdown
+- reseaux_noirs_pharmaceutiques_breakdown
+- sfax_relais_bouches_breakdown
+oppositions:
+- alliance_blocs_souverains_breakdown
+- collectifs_du_seuil_breakdown
+- factions_paramilitaires_locales_neutralisees_breakdown
+- geneve_bunker_institutions_breakdown
+- grandes_lacs_compact_eau_breakdown
+- milices_agro_defensives_locales_breakdown
+- milices_de_controle_territorial_breakdown
+- seigneuries_logistiques_armees_breakdown
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -97,6 +124,38 @@ Le Front est perpétuellement tiraillé entre son impératif de neutralité — 
 - [[gouvernance_institutions]]
 - [[demographie_mobilite_humaine]]
 - [[organisation_territoires]]
+
+
+## Relations
+**Alliés :**
+- [[archives_neutres_geneve_breakdown]]
+- [[brigades_medicales_itinerantes_breakdown]]
+- [[cargo_mombasa_crrc_breakdown]]
+- [[collectif_des_climatologues_sans_etat_breakdown]]
+- [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]]
+- [[collectifs_de_reparation_energetique_breakdown]]
+- [[collectifs_de_sante_communautaire_autogeree_breakdown]]
+- [[communautes_paysannes_refugiees_breakdown]]
+- [[diaspora_tech_sahel_breakdown]]
+- [[flux_migratoires_non_integrables_breakdown]]
+- [[gouvernements_regionaux_residuels_reterritorialisants_breakdown]]
+- [[ligue_des_cites_littorales_en_sursis_breakdown]]
+- [[ong_de_gestion_migratoire_survivantes_breakdown]]
+- [[pirates_biologiques_open_source_breakdown]]
+- [[reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown]]
+- [[reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown]]
+- [[reseaux_de_soigneurs_traditionnels_breakdown]]
+- [[reseaux_noirs_pharmaceutiques_breakdown]]
+- [[sfax_relais_bouches_breakdown]]
+**Opposants :**
+- [[alliance_blocs_souverains_breakdown]]
+- [[collectifs_du_seuil_breakdown]]
+- [[factions_paramilitaires_locales_neutralisees_breakdown]]
+- [[geneve_bunker_institutions_breakdown]]
+- [[grandes_lacs_compact_eau_breakdown]]
+- [[milices_agro_defensives_locales_breakdown]]
+- [[milices_de_controle_territorial_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

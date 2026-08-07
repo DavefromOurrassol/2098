@@ -30,8 +30,23 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- administrations_hybrides_des_cites_relais_peripheriques_reference
+- agence_stabilisation_climatique_reference
+- cartel_des_terres_rares_d_asie_centrale_reference
+- factions_eurasiatiques_contre_la_tarification_hydrique_reference
+- federation_des_cliniques_autonomes_reference
+- institutions_multilaterales_survivantes_reference
+- nexus_biosyn_reference
+- reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference
+- reseau_meshcommons_netsolidaire_reference
+oppositions:
+- bloc_eurasien_central_reference
+- bloc_ressources_eurasiatique_bre_reference
+- consortiums_energetiques_opaques_reference
+- consortiums_prives_de_gestion_des_donnees_critiques_reference
+- regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference
+- services_de_contre_information_des_blocs_geopolitiques_concurrents_reference
 type_relation_dominante: symbiose
 annee_debut: 2026
 annee_fin: null
@@ -95,6 +110,26 @@ Le Réseau est structurellement tiraillé entre sa neutralité affichée et la p
 - [[sante_biotechnologies]]
 - [[organisation_territoires]]
 - [[geopolitique_conflits]]
+
+
+## Relations
+**Alliés :**
+- [[administrations_hybrides_des_cites_relais_peripheriques_reference]]
+- [[agence_stabilisation_climatique_reference]]
+- [[cartel_des_terres_rares_d_asie_centrale_reference]]
+- [[factions_eurasiatiques_contre_la_tarification_hydrique_reference]]
+- [[federation_des_cliniques_autonomes_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
+- [[nexus_biosyn_reference]]
+- [[reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference]]
+- [[reseau_meshcommons_netsolidaire_reference]]
+**Opposants :**
+- [[bloc_eurasien_central_reference]]
+- [[bloc_ressources_eurasiatique_bre_reference]]
+- [[consortiums_energetiques_opaques_reference]]
+- [[consortiums_prives_de_gestion_des_donnees_critiques_reference]]
+- [[regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference]]
+- [[services_de_contre_information_des_blocs_geopolitiques_concurrents_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

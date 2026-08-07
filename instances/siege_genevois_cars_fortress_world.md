@@ -4,6 +4,7 @@ type: instance
 slug: siege_genevois_cars_fortress_world
 entite: siege_genevois_cars
 scenario: fortress_world
+statut: officialise_enrichi
 localisation:
   zone: siege_genevois_cars
   lieu: Genève — Siège Genevois de la CARS, enclaves climatiques alpines
@@ -36,25 +37,25 @@ zone_systemique:
     - économie
 
 alliances:
-    - geneve_bunker_fortress_world
-    - nexcore_atlantique_infrastructure_fortress_world
-    - pacte_forteresses_souveraines_fortress_world
-    - reseaux_prives_de_securite_aux_frontieres_fortress_world
-    - conseil_regulation_ressources_fortress_world
-    - complexe_orentchev_almaty_fortress_world
-    - administrations_de_controle_frontalier_des_blocs_fortress_world
-    - agences_de_securite_interieure_des_etats_forteresses_fortress_world
-
+- administrations_de_controle_frontalier_des_blocs_fortress_world
+- agences_de_securite_interieure_des_etats_forteresses_fortress_world
+- archives_diplomatiques_de_l_onu_eclat_fortress_world
+- bloc_des_nations_non_alignees_residuelles_fortress_world
+- complexe_orentchev_almaty_fortress_world
+- conseil_regulation_ressources_fortress_world
+- geneve_bunker_fortress_world
+- nexcore_atlantique_infrastructure_fortress_world
+- pacte_forteresses_souveraines_fortress_world
+- reseaux_prives_de_securite_aux_frontieres_fortress_world
 oppositions:
-    - campements_seuils_fermes_fortress_world
-    - coalitions_des_deplaces_et_apatrides_fortress_world
-    - collectifs_de_reappropriation_energetique_peripherique_fortress_world
-    - communautes_deplacees_hors_quota_migratoire_fortress_world
-    - collectifs_d_ingenieurs_dissidents_anti_militarisation_fortress_world
-    - voix_du_dehors_fortress_world
-    - alliance_sanitaire_des_populations_exclues_fortress_world
-    - factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world
-
+- alliance_sanitaire_des_populations_exclues_fortress_world
+- campements_seuils_fermes_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- collectifs_d_ingenieurs_dissidents_anti_militarisation_fortress_world
+- collectifs_de_reappropriation_energetique_peripherique_fortress_world
+- communautes_deplacees_hors_quota_migratoire_fortress_world
+- factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world
+- voix_du_dehors_fortress_world
 type_relation_dominante: alliance stratégique
 
 annee_debut: 2041
@@ -98,12 +99,31 @@ Déploiement et maintenance de checkpoints blindés aux périmètres des enclave
 - [[geopolitique_conflits]]
 - [[demographie_mobilite_humaine]]
 
-## Relations
-**Alliés** : [[geneve_bunker_fortress_world]], [[nexcore_atlantique_infrastructure_fortress_world]], [[pacte_forteresses_souveraines_fortress_world]], [[reseaux_prives_de_securite_aux_frontieres_fortress_world]], [[conseil_regulation_ressources_fortress_world]], [[complexe_orentchev_almaty_fortress_world]], [[administrations_de_controle_frontalier_des_blocs_fortress_world]], [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]]
-**Opposants** : [[campements_seuils_fermes_fortress_world]], [[coalitions_des_deplaces_et_apatrides_fortress_world]], [[collectifs_de_reappropriation_energetique_peripherique_fortress_world]], [[communautes_deplacees_hors_quota_migratoire_fortress_world]], [[collectifs_d_ingenieurs_dissidents_anti_militarisation_fortress_world]], [[voix_du_dehors_fortress_world]], [[alliance_sanitaire_des_populations_exclues_fortress_world]], [[factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world]]
 
 ## Description journalistique
 Au checkpoint Rhône-Nord, les agents SGC ne portent pas d'uniforme national — ils portent le gris anthracite et le logo discret d'un contrat. En 2098, Siege Genevois Cars contrôle l'accès à quatorze enclaves climatiques alpines, du lac Léman aux crêtes valaisannes, pour une clientèle qui ne se nomme jamais publiquement. Leurs convois blindés silencieux circulent la nuit sur les routes alpines dégagées, entre bunkers résidentiels et héliports privés, pendant que les zones tampons au-dehors survivent sans eau courante stable. SGC ne combat pas l'insécurité — elle la gère géographiquement, s'assurant que la violence et la vulnérabilité restent de l'autre côté du périmètre. Aucun représentant de l'organisation n'a répondu aux demandes d'entretien depuis 2087 ; leur communiqué standard précise que 'SGC opère dans le cadre strict des contrats de souveraineté privée, sans obligation de communication publique'.
 
 ## Tensions narratives
 La montée en puissance de SGC pose une question systémique irrésolue : qui surveille les surveillants, lorsque l'État suisse lui-même est devenu client plutôt que régulateur ? Des fuites internes suggèrent que certains cadres SGC négocient discrètement des contrats avec des blocs géopolitiques rivaux, fragilisant la neutralité tarifée de l'organisation. Par ailleurs, la pression croissante des campements périphériques sur les périmètres alpins pousse SGC à durcir ses protocoles jusqu'à un point où la frontière entre gestion froide et violence ouverte devient difficile à tenir — risquant de transformer le gestionnaire de l'ordre en acteur du conflit qu'il prétend contenir.
+
+## Relations
+**Alliés :**
+- [[administrations_de_controle_frontalier_des_blocs_fortress_world]]
+- [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]]
+- [[archives_diplomatiques_de_l_onu_eclat_fortress_world]]
+- [[bloc_des_nations_non_alignees_residuelles_fortress_world]]
+- [[complexe_orentchev_almaty_fortress_world]]
+- [[conseil_regulation_ressources_fortress_world]]
+- [[geneve_bunker_fortress_world]]
+- [[nexcore_atlantique_infrastructure_fortress_world]]
+- [[pacte_forteresses_souveraines_fortress_world]]
+- [[reseaux_prives_de_securite_aux_frontieres_fortress_world]]
+**Opposants :**
+- [[alliance_sanitaire_des_populations_exclues_fortress_world]]
+- [[campements_seuils_fermes_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[collectifs_d_ingenieurs_dissidents_anti_militarisation_fortress_world]]
+- [[collectifs_de_reappropriation_energetique_peripherique_fortress_world]]
+- [[communautes_deplacees_hors_quota_migratoire_fortress_world]]
+- [[factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world]]
+- [[voix_du_dehors_fortress_world]]

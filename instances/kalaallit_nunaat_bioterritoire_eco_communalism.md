@@ -4,6 +4,7 @@ type: instance
 slug: kalaallit_nunaat_bioterritoire_eco_communalism
 entite: kalaallit_nunaat_bioterritoire
 scenario: eco_communalism
+statut: officialise_enrichi
 localisation:
   zone: kalaallit_nunaat_bioterritoire
   lieu: Kalaallit Nunaat (Groenland)

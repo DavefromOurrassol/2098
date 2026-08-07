@@ -33,8 +33,25 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- bunker_chambre_securite_territoriale_fortress_world
+- bureau_gouvernance_algorithmique_fortress_world
+- coalition_arctique_des_blocs_continentaux_fortress_world
+- complexes_militaro_industriels_de_gestion_des_ressources_fortress_world
+- conseil_moscou_est_fortress_world
+- consortium_eurasiatique_des_ressources_fermees_fortress_world
+- regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world
+- reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world
+- vaultcorp_security_fortress_world
+oppositions:
+- bloc_des_nations_non_alignees_residuelles_fortress_world
+- collectifs_de_reappropriation_energetique_peripherique_fortress_world
+- contrebandiers_energetiques_des_zones_grises_fortress_world
+- corridors_gris_asie_centrale_fortress_world
+- factions_djihadistes_logistiques_d_asie_centrale_fortress_world
+- marches_gris_tbilissi_fortress_world
+- milices_de_piraterie_logistique_arctique_fortress_world
+- reseaux_de_contrebande_energetique_transfrontaliere_fortress_world
 type_relation_dominante: dépendance
 annee_debut: 2026
 annee_fin: null
@@ -102,6 +119,28 @@ La tension centrale réside dans la contradiction entre leur rôle de garants de
 - [[energie_ressources_critiques]]
 - [[geopolitique_conflits]]
 - [[systeme_economique_redistribution]]
+
+
+## Relations
+**Alliés :**
+- [[bunker_chambre_securite_territoriale_fortress_world]]
+- [[bureau_gouvernance_algorithmique_fortress_world]]
+- [[coalition_arctique_des_blocs_continentaux_fortress_world]]
+- [[complexes_militaro_industriels_de_gestion_des_ressources_fortress_world]]
+- [[conseil_moscou_est_fortress_world]]
+- [[consortium_eurasiatique_des_ressources_fermees_fortress_world]]
+- [[regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world]]
+- [[reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world]]
+- [[vaultcorp_security_fortress_world]]
+**Opposants :**
+- [[bloc_des_nations_non_alignees_residuelles_fortress_world]]
+- [[collectifs_de_reappropriation_energetique_peripherique_fortress_world]]
+- [[contrebandiers_energetiques_des_zones_grises_fortress_world]]
+- [[corridors_gris_asie_centrale_fortress_world]]
+- [[factions_djihadistes_logistiques_d_asie_centrale_fortress_world]]
+- [[marches_gris_tbilissi_fortress_world]]
+- [[milices_de_piraterie_logistique_arctique_fortress_world]]
+- [[reseaux_de_contrebande_energetique_transfrontaliere_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

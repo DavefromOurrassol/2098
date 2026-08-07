@@ -4,6 +4,7 @@ type: instance
 slug: arctique_nordark_breakdown
 entite: arctique_nordark
 scenario: breakdown
+statut: officialise_enrichi
 localisation:
   zone: arctique_nordark
   lieu: Nordark — Les Terres du Dessous (au-delà du 70e parallèle, zone arctique circumpolaire)
@@ -37,22 +38,25 @@ zone_systemique:
     - société
 
 alliances:
-    - noeud_nordark_tromso_breakdown
-    - armada_logistique_nordique_breakdown
-    - kalaallit_nunaat_sovereign_fund_breakdown
-    - communautes_rurales_autonomes_breakdown
-    - collectifs_du_seuil_breakdown
-
+- armada_logistique_nordique_breakdown
+- collectifs_du_seuil_breakdown
+- communautes_rurales_autonomes_breakdown
+- compagnies_de_geo_ingenierie_privees_sans_mandat_breakdown
+- kalaallit_nunaat_sovereign_fund_breakdown
+- noeud_nordark_tromso_breakdown
 oppositions:
-    - conglometrat_sino_siberien_bohai_transit_breakdown
-    - consortium_energetique_oural_caspien_breakdown
-    - consortiums_energetiques_samoiedes_du_yamal_breakdown
-    - factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
-    - federation_russe_residuelle_district_de_mourmansk_breakdown
-    - seigneuries_logistiques_armees_breakdown
-    - enclaves_corporatives_fortifiees_breakdown
-    - arctic_passage_authority_breakdown
-
+- archives_neutres_de_geneve_breakdown
+- arctic_passage_authority_breakdown
+- coalition_pacifique_nord_breakdown
+- conglometrat_sino_siberien_bohai_transit_breakdown
+- consortium_energetique_oural_caspien_breakdown
+- consortiums_energetiques_samoiedes_du_yamal_breakdown
+- enclaves_corporatives_fortifiees_breakdown
+- enclaves_finlandaises_breakdown
+- factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
+- federation_russe_residuelle_district_de_mourmansk_breakdown
+- front_des_blocs_regionaux_du_recit_des_conflits_ressources_breakdown
+- seigneuries_logistiques_armees_breakdown
 type_relation_dominante: conflit
 
 annee_debut: 2061
@@ -96,12 +100,31 @@ Les communautés installées dans le Nordark organisent leur propre défense ter
 - [[organisation_territoires]]
 - [[climat_environnement_global]]
 
-## Relations
-**Alliés** : [[noeud_nordark_tromso_breakdown]], [[armada_logistique_nordique_breakdown]], [[kalaallit_nunaat_sovereign_fund_breakdown]], [[communautes_rurales_autonomes_breakdown]], [[collectifs_du_seuil_breakdown]]
-**Opposants** : [[conglometrat_sino_siberien_bohai_transit_breakdown]], [[consortium_energetique_oural_caspien_breakdown]], [[consortiums_energetiques_samoiedes_du_yamal_breakdown]], [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]], [[federation_russe_residuelle_district_de_mourmansk_breakdown]], [[seigneuries_logistiques_armees_breakdown]], [[enclaves_corporatives_fortifiees_breakdown]], [[arctic_passage_authority_breakdown]]
 
 ## Description journalistique
 Au-delà du 70e parallèle, là où les cartes officielles marquent encore des frontières que personne ne reconnaît plus, s'étend ce que ses habitants appellent simplement 'le Dessous' : un territoire grand comme un continent, dont le sol libère depuis une vingtaine d'années des gisements de terres rares, de méthane fossilisé et de minéraux critiques que trois générations de géologues n'avaient jamais pu atteindre sous le pergélisol intact. Depuis l'effondrement des conseils circumpolaires en 2071, il n'existe aucune autorité reconnue pour en revendiquer la souveraineté — seulement des milices locales armées de vieux matériel soviétique et d'orgueil, et des convois d'extraction qui arrivent du sud sans demander la permission. Les communautés installées ici depuis l'effondrement — ex-travailleurs des plateformes pétrolières abandonnées, réfugiés climatiques de Sibérie occidentale, descendants des peuples autochtones circumpolaires — ont constitué des conseils de site qui tiennent le terrain au prix d'une vigilance permanente. Nordark est moins un territoire gouverné qu'un territoire habité de force, par des gens qui savent que reculer d'un kilomètre signifie ne jamais revenir.
 
 ## Tensions narratives
 La question centrale du Nordark est celle du seuil : jusqu'où les communautés locales peuvent-elles repousser les groupes d'extraction avant que la résistance ne les détruise plus sûrement que la capitulation ? Un accord tacite avec le Konsortiet Nordark leur a offert une protection logistique au prix d'une dépendance croissante — certains conseils de site commencent à se demander s'ils n'ont pas simplement changé de maître. Par ailleurs, la fonte accélérée du pergélisol libère non seulement des ressources mais aussi des pathogènes anciens et des poches de méthane explosives, transformant l'espace même de la contestation en terrain hostile. Enfin, des rumeurs persistantes font état de négociations secrètes entre le Fonds des Glaces Libérées du Kalaallit Nunaat et le Conglomérat Bohai Transit pour un partage de zones sans consultation des habitants — une trahison qui, si elle se confirme, pourrait déclencher la première guerre ouverte du Grand Nord post-effondrement.
+
+## Relations
+**Alliés :**
+- [[armada_logistique_nordique_breakdown]]
+- [[collectifs_du_seuil_breakdown]]
+- [[communautes_rurales_autonomes_breakdown]]
+- [[compagnies_de_geo_ingenierie_privees_sans_mandat_breakdown]]
+- [[kalaallit_nunaat_sovereign_fund_breakdown]]
+- [[noeud_nordark_tromso_breakdown]]
+**Opposants :**
+- [[archives_neutres_de_geneve_breakdown]]
+- [[arctic_passage_authority_breakdown]]
+- [[coalition_pacifique_nord_breakdown]]
+- [[conglometrat_sino_siberien_bohai_transit_breakdown]]
+- [[consortium_energetique_oural_caspien_breakdown]]
+- [[consortiums_energetiques_samoiedes_du_yamal_breakdown]]
+- [[enclaves_corporatives_fortifiees_breakdown]]
+- [[enclaves_finlandaises_breakdown]]
+- [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]]
+- [[federation_russe_residuelle_district_de_mourmansk_breakdown]]
+- [[front_des_blocs_regionaux_du_recit_des_conflits_ressources_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]

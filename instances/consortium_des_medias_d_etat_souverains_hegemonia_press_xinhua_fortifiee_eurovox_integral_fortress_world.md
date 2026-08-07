@@ -32,8 +32,23 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- appareils_d_etat_des_blocs_fermes_fortress_world
+- bloc_atlantique_fortress_world
+- bloc_eurasiatique_occidental_fortress_world
+- bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world
+- dispositifs_de_surveillance_numerique_souveraine_fortress_world
+- pacte_forteresses_souveraines_fortress_world
+- regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world
+oppositions:
+- aria_instance_fantome_fortress_world
+- cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
+- marches_gris_casablanca_fortress_world
+- marches_gris_tbilissi_fortress_world
+- mouvement_commun_midwest_fortress_world
+- oracle_des_seuils_fortress_world
+- reseaux_d_echange_clandestin_inter_zones_fortress_world
+- voix_du_dehors_fortress_world
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -95,6 +110,26 @@ La coopération technique entre les trois bras du Consortium sur le protocole VE
 - [[technologie_information]]
 - [[geopolitique_conflits]]
 - [[gouvernance_institutions]]
+
+
+## Relations
+**Alliés :**
+- [[appareils_d_etat_des_blocs_fermes_fortress_world]]
+- [[bloc_atlantique_fortress_world]]
+- [[bloc_eurasiatique_occidental_fortress_world]]
+- [[bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world]]
+- [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
+- [[pacte_forteresses_souveraines_fortress_world]]
+- [[regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world]]
+**Opposants :**
+- [[aria_instance_fantome_fortress_world]]
+- [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]]
+- [[marches_gris_casablanca_fortress_world]]
+- [[marches_gris_tbilissi_fortress_world]]
+- [[mouvement_commun_midwest_fortress_world]]
+- [[oracle_des_seuils_fortress_world]]
+- [[reseaux_d_echange_clandestin_inter_zones_fortress_world]]
+- [[voix_du_dehors_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

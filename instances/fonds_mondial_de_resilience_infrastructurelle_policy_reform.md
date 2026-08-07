@@ -34,8 +34,24 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_internationale_de_l_energie_reformatee_aier_policy_reform
+- agence_stabilisation_climatique_policy_reform
+- agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
+- arctic_passage_authority_policy_reform
+- conseil_de_regulation_climatique_global_policy_reform
+- consortium_technologique_de_planification_territoriale_policy_reform
+- fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform
+- gouvernement_israel_policy_reform
+- great_lakes_autonomous_compact_policy_reform
+- pacifique_sud_resilience_network_policy_reform
+- reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform
+oppositions:
+- bloc_des_nations_a_economie_carbone_controlee_policy_reform
+- coalition_des_souverainistes_numeriques_policy_reform
+- front_souverainiste_des_blocs_non_signataires_policy_reform
+- gouvernements_populistes_anti_depossession_policy_reform
+- mouvement_pour_la_souverainete_territoriale_absolue_policy_reform
 type_relation_dominante: dépendance
 annee_debut: 2026
 annee_fin: null
@@ -98,6 +114,27 @@ Le Fonds se trouve écartelé entre sa mission redistributive — aider les éco
 - [[gouvernance_institutions]]
 - [[systeme_economique_redistribution]]
 - [[energie_ressources_critiques]]
+
+
+## Relations
+**Alliés :**
+- [[agence_internationale_de_l_energie_reformatee_aier_policy_reform]]
+- [[agence_stabilisation_climatique_policy_reform]]
+- [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]
+- [[arctic_passage_authority_policy_reform]]
+- [[conseil_de_regulation_climatique_global_policy_reform]]
+- [[consortium_technologique_de_planification_territoriale_policy_reform]]
+- [[fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform]]
+- [[gouvernement_israel_policy_reform]]
+- [[great_lakes_autonomous_compact_policy_reform]]
+- [[pacifique_sud_resilience_network_policy_reform]]
+- [[reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform]]
+**Opposants :**
+- [[bloc_des_nations_a_economie_carbone_controlee_policy_reform]]
+- [[coalition_des_souverainistes_numeriques_policy_reform]]
+- [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+- [[gouvernements_populistes_anti_depossession_policy_reform]]
+- [[mouvement_pour_la_souverainete_territoriale_absolue_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

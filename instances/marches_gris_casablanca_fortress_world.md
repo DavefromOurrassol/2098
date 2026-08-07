@@ -4,6 +4,7 @@ type: instance
 slug: marches_gris_casablanca_fortress_world
 entite: marches_gris_casablanca
 scenario: fortress_world
+statut: officialise_enrichi
 localisation:
   zone: marches_gris_casablanca
   lieu: Marchés Gris de Casablanca-Périphérie
@@ -39,20 +40,29 @@ zone_systemique:
     - société
 
 alliances:
-    - reseaux_d_echange_clandestin_inter_zones_fortress_world
-    - contrebandiers_energetiques_des_zones_grises_fortress_world
-    - campements_seuils_fermes_fortress_world
-    - reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world
-    - coalitions_des_deplaces_et_apatrides_fortress_world
-    - cliniques_de_deaugmentation_independantes_fortress_world
-
+- archives_chiffrees_de_l_open_internet_coalition_fortress_world
+- campements_seuils_fermes_fortress_world
+- cliniques_de_deaugmentation_independantes_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- communautes_deplacees_hors_quota_migratoire_fortress_world
+- contrebandiers_energetiques_des_zones_grises_fortress_world
+- marches_gris_tbilissi_fortress_world
+- milices_de_piraterie_logistique_arctique_fortress_world
+- reseaux_d_echange_clandestin_inter_zones_fortress_world
+- reseaux_de_contrebande_energetique_transfrontaliere_fortress_world
+- reseaux_de_maintenance_d_infrastructures_critiques_hors_blocs_fortress_world
+- reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world
 oppositions:
-    - agences_de_securite_interieure_des_etats_forteresses_fortress_world
-    - administrations_de_controle_frontalier_des_blocs_fortress_world
-    - bureau_des_territoires_residuels_fortress_world
-    - dispositifs_de_surveillance_numerique_souveraine_fortress_world
-    - corps_des_inspecteurs_de_conformite_inter_blocs_fortress_world
-
+- administrations_de_controle_frontalier_des_blocs_fortress_world
+- agences_de_securite_interieure_des_etats_forteresses_fortress_world
+- bureau_des_territoires_residuels_fortress_world
+- bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world
+- commandements_logistiques_peripheriques_du_bloc_eurasien_central_fortress_world
+- conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world
+- consortium_des_medias_d_etat_souverains_hegemonia_press_xinhua_fortifiee_eurovox_integral_fortress_world
+- corps_des_inspecteurs_de_conformite_inter_blocs_fortress_world
+- dispositifs_de_surveillance_numerique_souveraine_fortress_world
+- instances_aria_concurrentes_des_blocs_rivaux_fortress_world
 type_relation_dominante: symbiose
 
 annee_debut: 2061
@@ -96,12 +106,35 @@ Gestion des flux de marchandises, données biométriques et documents d'accès e
 - [[systeme_economique_redistribution]]
 - [[gouvernance_institutions]]
 
-## Relations
-**Alliés** : [[reseaux_d_echange_clandestin_inter_zones_fortress_world]], [[contrebandiers_energetiques_des_zones_grises_fortress_world]], [[campements_seuils_fermes_fortress_world]], [[reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world]], [[coalitions_des_deplaces_et_apatrides_fortress_world]], [[cliniques_de_deaugmentation_independantes_fortress_world]]
-**Opposants** : [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]], [[administrations_de_controle_frontalier_des_blocs_fortress_world]], [[bureau_des_territoires_residuels_fortress_world]], [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]], [[corps_des_inspecteurs_de_conformite_inter_blocs_fortress_world]]
 
 ## Description journalistique
 À Casablanca-Zone Tampon, les Marchés Gris n'ont pas d'enseigne. Ils ont une réputation. Quiconque a besoin de traverser une frontière que son score biométrique interdit, d'obtenir une ration d'énergie hors quota ou de vendre des données d'identité récupérées sur des cadavres de couloir connaît un contact, qui connaît un bureau, qui connaît un fixeur. En trente-sept ans d'existence semi-tolérée, le Bureau des Interstices Atlantiques est devenu l'infrastructure fantôme de la métropole atlantique : les enclaves fortifiées l'utilisent pour s'approvisionner en main-d'œuvre non traçable, les agences de sécurité le consultent officieusement pour localiser des dissidents, et les populations exclues lui font confiance parce qu'il est le seul système qui fonctionne encore pour elles. Sa survie tient à une équation simple : il sait trop de choses sur trop de gens pour qu'on puisse se permettre de le détruire vraiment.
 
 ## Tensions narratives
 La question qui hante le Bureau depuis deux ans est celle du seuil : à quel moment devient-on trop indispensable pour être toléré, trop visible pour être protégé par sa propre discrétion ? Une faction interne veut professionnaliser les opérations et négocier un statut para-légal avec le Pacte Atlantique — au risque de perdre l'agilité qui fait la valeur de l'organisation. Une autre faction veut étendre les circuits aux blocs rivaux, ce qui transformerait le Bureau en acteur géopolitique et déclencherait une réponse militarisée des agences de contrôle. Entre les deux, les populations des zones exclues qui dépendent des Marchés Gris pour survivre n'ont pas voix au chapitre — et c'est précisément cette invisibilité des dépendants qui permet au Bureau de continuer à opérer sans jamais avoir à se justifier.
+
+## Relations
+**Alliés :**
+- [[archives_chiffrees_de_l_open_internet_coalition_fortress_world]]
+- [[campements_seuils_fermes_fortress_world]]
+- [[cliniques_de_deaugmentation_independantes_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[communautes_deplacees_hors_quota_migratoire_fortress_world]]
+- [[contrebandiers_energetiques_des_zones_grises_fortress_world]]
+- [[marches_gris_tbilissi_fortress_world]]
+- [[milices_de_piraterie_logistique_arctique_fortress_world]]
+- [[reseaux_d_echange_clandestin_inter_zones_fortress_world]]
+- [[reseaux_de_contrebande_energetique_transfrontaliere_fortress_world]]
+- [[reseaux_de_maintenance_d_infrastructures_critiques_hors_blocs_fortress_world]]
+- [[reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world]]
+**Opposants :**
+- [[administrations_de_controle_frontalier_des_blocs_fortress_world]]
+- [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]]
+- [[bureau_des_territoires_residuels_fortress_world]]
+- [[bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world]]
+- [[commandements_logistiques_peripheriques_du_bloc_eurasien_central_fortress_world]]
+- [[conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world]]
+- [[consortium_des_medias_d_etat_souverains_hegemonia_press_xinhua_fortifiee_eurovox_integral_fortress_world]]
+- [[corps_des_inspecteurs_de_conformite_inter_blocs_fortress_world]]
+- [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
+- [[instances_aria_concurrentes_des_blocs_rivaux_fortress_world]]

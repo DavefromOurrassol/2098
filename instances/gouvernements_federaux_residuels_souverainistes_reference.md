@@ -32,8 +32,27 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- bloc_des_souverainistes_climatiques_reference
+- coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference
+- coalition_pour_la_souverainete_numerique_nationale_reference
+- corporations_d_extraction_energetique_non_signataires_reference
+- factions_eurasiatiques_contre_la_tarification_hydrique_reference
+- pacte_des_souverains_reference
+- reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference
+oppositions:
+- autorites_regionales_de_regulation_hydrologique_reference
+- bruxelles_nouveau_reference
+- consortium_amazonia_viva_reference
+- delta_du_mekong_reference
+- europe_occidentale_reconstructee_reference
+- federation_communs_territoriaux_reference
+- great_lakes_autonomous_compact_reference
+- guadalajara_nexus_reference
 - institutions_multilaterales_survivantes_reference
-oppositions: []
+- nairobi_crrc_reference
+- pacifique_sud_resilience_network_reference
+- singapour_est_reference
+- valparaiso_fct_reference
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -100,9 +119,31 @@ Leur contradiction fondamentale réside dans le fait qu'ils invoquent une souver
 - [[organisation_territoires]]
 - [[geopolitique_conflits]]
 
+
+
 ## Relations
 **Alliés :**
+- [[bloc_des_souverainistes_climatiques_reference]]
+- [[coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference]]
+- [[coalition_pour_la_souverainete_numerique_nationale_reference]]
+- [[corporations_d_extraction_energetique_non_signataires_reference]]
+- [[factions_eurasiatiques_contre_la_tarification_hydrique_reference]]
+- [[pacte_des_souverains_reference]]
+- [[reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference]]
+**Opposants :**
+- [[autorites_regionales_de_regulation_hydrologique_reference]]
+- [[bruxelles_nouveau_reference]]
+- [[consortium_amazonia_viva_reference]]
+- [[delta_du_mekong_reference]]
+- [[europe_occidentale_reconstructee_reference]]
+- [[federation_communs_territoriaux_reference]]
+- [[great_lakes_autonomous_compact_reference]]
+- [[guadalajara_nexus_reference]]
 - [[institutions_multilaterales_survivantes_reference]]
+- [[nairobi_crrc_reference]]
+- [[pacifique_sud_resilience_network_reference]]
+- [[singapour_est_reference]]
+- [[valparaiso_fct_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

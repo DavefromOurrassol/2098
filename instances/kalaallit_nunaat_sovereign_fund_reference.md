@@ -4,6 +4,7 @@ type: instance
 slug: kalaallit_nunaat_sovereign_fund_reference
 entite: kalaallit_nunaat_sovereign_fund
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: nuuk_capitale_groenland
   lieu: Nuuk-Capitale
@@ -38,22 +39,23 @@ zone_systemique:
     - sécurité
 
 alliances:
-    - conseil_des_etats_nordiques_integres_reference
-    - fonds_souverain_arctique_scandinave_reference
-    - armada_logistique_nordique_reference
-    - conseil_regulation_ressources_reference
-    - collectifs_de_peche_inuit_et_sami_reference
-    - bloc_des_souverainistes_climatiques_reference
-    - fonds_monetaire_climatique_fmc_reference
-
+- arctic_passage_authority_reference
+- armada_logistique_nordique_reference
+- bloc_des_souverainistes_climatiques_reference
+- collectifs_de_peche_inuit_et_sami_reference
+- conseil_des_etats_nordiques_integres_reference
+- conseil_regulation_ressources_reference
+- fonds_monetaire_climatique_fmc_reference
+- fonds_souverain_arctique_scandinave_reference
 oppositions:
-    - cartel_des_terres_rares_d_asie_centrale_reference
-    - bloc_ressources_eurasiatique_bre_reference
-    - consortiums_prives_d_extraction_de_ressources_critiques_reference
-    - ong_de_tracabilite_des_ressources_critiques_reference
-    - agence_stabilisation_climatique_reference
-    - factions_d_extraction_miniere_independantes_reference
-
+- agence_internationale_des_energies_renouvelables_irena_2_reference
+- agence_stabilisation_climatique_reference
+- bloc_ressources_eurasiatique_bre_reference
+- cartel_des_terres_rares_d_asie_centrale_reference
+- consortium_energetique_des_mers_du_nord_reference
+- consortiums_prives_d_extraction_de_ressources_critiques_reference
+- factions_d_extraction_miniere_independantes_reference
+- ong_de_tracabilite_des_ressources_critiques_reference
 type_relation_dominante: rivalité
 
 annee_debut: 2038
@@ -97,12 +99,29 @@ Gestion et allocation des revenus d'extraction minière souterraine post-inlands
 - [[systeme_economique_redistribution]]
 - [[gouvernance_institutions]]
 
-## Relations
-**Alliés** : [[conseil_des_etats_nordiques_integres_reference]], [[fonds_souverain_arctique_scandinave_reference]], [[armada_logistique_nordique_reference]], [[conseil_regulation_ressources_reference]], [[collectifs_de_peche_inuit_et_sami_reference]], [[bloc_des_souverainistes_climatiques_reference]], [[fonds_monetaire_climatique_fmc_reference]]
-**Opposants** : [[cartel_des_terres_rares_d_asie_centrale_reference]], [[bloc_ressources_eurasiatique_bre_reference]], [[consortiums_prives_d_extraction_de_ressources_critiques_reference]], [[ong_de_tracabilite_des_ressources_critiques_reference]], [[agence_stabilisation_climatique_reference]], [[factions_d_extraction_miniere_independantes_reference]]
 
 ## Description journalistique
 Installé dans une tour de verre qui domine le fjord de Nuuk par tous les temps, le Kalaallit Nunaat Sovereign Fund est devenu en moins de soixante ans l'un des acteurs les plus redoutés des négociations sur les ressources critiques mondiales. Là où des générations de Groenlandais ont subi la tutelle danoise et l'indifférence internationale, ses négociateurs reçoivent aujourd'hui délégations eurasiatiques et émissaires indo-pacifiques dans des salles de conférence aux vitres teintées d'où l'on voit les brise-glaces charger leur cargaison de lithium. Le fonds gère une rente qui se chiffre en centaines de milliards annuels — née de la fonte catastrophique de l'inlandsis — et n'hésite pas à suspendre un contrat d'extraction pour faire monter les enchères entre deux blocs rivaux. Pour ses partisans, c'est la souveraineté retrouvée d'un peuple trop longtemps dépossédé ; pour ses critiques, c'est la monétisation cynique d'une catastrophe climatique dont le Groenland n'est pas responsable.
 
 ## Tensions narratives
 La question centrale qui divise la société groenlandaise : redistribuer une part significative de la rente au fonds climatique mondial — contribution à la réparation d'un désastre global — ou la sanctuariser intégralement comme rempart d'une souveraineté encore fragile ? En parallèle, la pression croissante des collectifs inuit pour que les communautés locales voient concrètement leur niveau de vie transformé, face à une technocratie du fonds perçue comme de plus en plus déconnectée. Enfin, le risque que le jeu de bascule entre blocs géopolitiques finisse par se retourner contre Nuuk si l'un d'eux décidait qu'une déstabilisation forcée coûte moins cher qu'une négociation.
+
+## Relations
+**Alliés :**
+- [[arctic_passage_authority_reference]]
+- [[armada_logistique_nordique_reference]]
+- [[bloc_des_souverainistes_climatiques_reference]]
+- [[collectifs_de_peche_inuit_et_sami_reference]]
+- [[conseil_des_etats_nordiques_integres_reference]]
+- [[conseil_regulation_ressources_reference]]
+- [[fonds_monetaire_climatique_fmc_reference]]
+- [[fonds_souverain_arctique_scandinave_reference]]
+**Opposants :**
+- [[agence_internationale_des_energies_renouvelables_irena_2_reference]]
+- [[agence_stabilisation_climatique_reference]]
+- [[bloc_ressources_eurasiatique_bre_reference]]
+- [[cartel_des_terres_rares_d_asie_centrale_reference]]
+- [[consortium_energetique_des_mers_du_nord_reference]]
+- [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[factions_d_extraction_miniere_independantes_reference]]
+- [[ong_de_tracabilite_des_ressources_critiques_reference]]

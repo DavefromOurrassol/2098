@@ -37,8 +37,29 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- archives_neutres_de_geneve_breakdown
+- archives_neutres_geneve_breakdown
+- bureau_des_territoires_residuels_breakdown
+- collectif_des_climatologues_sans_etat_breakdown
+- collectif_hackers_decroissance_infrastructure_breakdown
+- collectifs_de_gardiens_archivistes_itinerants_breakdown
+- front_humanitaire_d_urgence_non_affilie_breakdown
+- lagos_interieur_mnemos_breakdown
+- le_registre_du_fleuve_breakdown
+- oracle_des_seuils_breakdown
+- reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown
+- reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown
+- tribunal_algorithmique_de_bruxelles_breakdown
+- voix_du_dehors_breakdown
+oppositions:
+- armada_logistique_nordique_breakdown
+- corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown
+- directive_kontinuum_breakdown
+- factions_propagandistes_des_archives_breakdown
+- milices_de_controle_territorial_breakdown
+- nexcore_breakdown
+- reseau_mnemos_breakdown
 type_relation_dominante: symbiose
 annee_debut: 2026
 annee_fin: null
@@ -99,6 +120,32 @@ La tension fondamentale qui déchire ces collectifs est celle entre la préserva
 - [[technologie_information]]
 - [[frontieres_du_systeme]]
 - [[gouvernance_institutions]]
+
+
+## Relations
+**Alliés :**
+- [[archives_neutres_de_geneve_breakdown]]
+- [[archives_neutres_geneve_breakdown]]
+- [[bureau_des_territoires_residuels_breakdown]]
+- [[collectif_des_climatologues_sans_etat_breakdown]]
+- [[collectif_hackers_decroissance_infrastructure_breakdown]]
+- [[collectifs_de_gardiens_archivistes_itinerants_breakdown]]
+- [[front_humanitaire_d_urgence_non_affilie_breakdown]]
+- [[lagos_interieur_mnemos_breakdown]]
+- [[le_registre_du_fleuve_breakdown]]
+- [[oracle_des_seuils_breakdown]]
+- [[reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown]]
+- [[reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown]]
+- [[tribunal_algorithmique_de_bruxelles_breakdown]]
+- [[voix_du_dehors_breakdown]]
+**Opposants :**
+- [[armada_logistique_nordique_breakdown]]
+- [[corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown]]
+- [[directive_kontinuum_breakdown]]
+- [[factions_propagandistes_des_archives_breakdown]]
+- [[milices_de_controle_territorial_breakdown]]
+- [[nexcore_breakdown]]
+- [[reseau_mnemos_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

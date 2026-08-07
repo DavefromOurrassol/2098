@@ -32,8 +32,28 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- conseil_regulation_algorithmique_reference
+- consortium_des_grandes_plateformes_ia_integrees_reference
+- consortiums_mediatiques_corporatifs_reference
+- directive_kontinuum_reference
+- plateformes_centralisees_de_narration_officielle_reference
+oppositions:
+- bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference
+- bureaux_de_regulation_informationnelle_reference
+- coalition_pour_la_souverainete_numerique_nationale_reference
+- collectifs_academiques_independants_reference
+- collectifs_de_journalisme_embarque_reference
+- collectifs_de_journalistes_independants_regionaux_reference
+- cooperatives_ia_open_source_reference
+- ong_de_preservation_patrimoniale_numerique_reference
+- pacte_des_souverains_reference
+- reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference
+- reseau_meshcommons_netsolidaire_reference
+- reseaux_de_capteurs_citoyens_reference
+- reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference
+- tribunal_algorithmique_de_bruxelles_reference
+- voix_du_dehors_reference
 type_relation_dominante: dépendance
 annee_debut: 2026
 annee_fin: null
@@ -94,6 +114,32 @@ La tension centrale réside dans leur double nature : outils de stabilisation é
 - [[technologie_information]]
 - [[gouvernance_institutions]]
 - [[valeurs_culture_tempo_sociale]]
+
+
+
+## Relations
+**Alliés :**
+- [[conseil_regulation_algorithmique_reference]]
+- [[consortium_des_grandes_plateformes_ia_integrees_reference]]
+- [[consortiums_mediatiques_corporatifs_reference]]
+- [[directive_kontinuum_reference]]
+- [[plateformes_centralisees_de_narration_officielle_reference]]
+**Opposants :**
+- [[bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference]]
+- [[bureaux_de_regulation_informationnelle_reference]]
+- [[coalition_pour_la_souverainete_numerique_nationale_reference]]
+- [[collectifs_academiques_independants_reference]]
+- [[collectifs_de_journalisme_embarque_reference]]
+- [[collectifs_de_journalistes_independants_regionaux_reference]]
+- [[cooperatives_ia_open_source_reference]]
+- [[ong_de_preservation_patrimoniale_numerique_reference]]
+- [[pacte_des_souverains_reference]]
+- [[reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference]]
+- [[reseau_meshcommons_netsolidaire_reference]]
+- [[reseaux_de_capteurs_citoyens_reference]]
+- [[reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference]]
+- [[tribunal_algorithmique_de_bruxelles_reference]]
+- [[voix_du_dehors_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

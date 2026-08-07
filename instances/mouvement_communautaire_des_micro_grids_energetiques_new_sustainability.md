@@ -31,8 +31,29 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- coalition_anti_algorithme_des_autonomies_locales_new_sustainability
+- collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability
+- collectifs_riverains_du_bassin_du_congo_new_sustainability
+- consortium_amazonia_viva_new_sustainability
+- les_veilleurs_du_fleuve_new_sustainability
+- ligue_des_cites_du_sahel_numerique_new_sustainability
+- reseau_des_bio_communs_regionaux_new_sustainability
+- reseau_des_communs_alimentaires_hors_grille_new_sustainability
+- reseau_des_communs_productifs_regeneratifs_new_sustainability
+- reseau_des_hubs_urbains_regeneratifs_new_sustainability
+- reseaux_de_gouvernance_territoriale_distribues_new_sustainability
+- reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability
+oppositions:
+- bloc_des_architectes_d_efficience_algorithmique_new_sustainability
+- coalition_des_industries_extractives_residuelles_new_sustainability
+- conseil_energetique_intercontinental_new_sustainability
+- conseil_technocratique_de_coordination_regionale_new_sustainability
+- consortium_helios_new_sustainability
+- faction_conservatrice_pro_actif_strategique_new_sustainability
+- lobbies_agro_industriels_du_bassin_du_congo_new_sustainability
+- operateurs_de_fusion_energetique_regionaux_new_sustainability
+- union_des_blocs_energetiques_regionaux_new_sustainability
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -97,6 +118,32 @@ Le Mouvement est tiraillé entre son idéal d'autonomie radicale et la pression 
 - [[energie_ressources_critiques]]
 - [[organisation_territoires]]
 - [[gouvernance_institutions]]
+
+
+## Relations
+**Alliés :**
+- [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]]
+- [[collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability]]
+- [[collectifs_riverains_du_bassin_du_congo_new_sustainability]]
+- [[consortium_amazonia_viva_new_sustainability]]
+- [[les_veilleurs_du_fleuve_new_sustainability]]
+- [[ligue_des_cites_du_sahel_numerique_new_sustainability]]
+- [[reseau_des_bio_communs_regionaux_new_sustainability]]
+- [[reseau_des_communs_alimentaires_hors_grille_new_sustainability]]
+- [[reseau_des_communs_productifs_regeneratifs_new_sustainability]]
+- [[reseau_des_hubs_urbains_regeneratifs_new_sustainability]]
+- [[reseaux_de_gouvernance_territoriale_distribues_new_sustainability]]
+- [[reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability]]
+**Opposants :**
+- [[bloc_des_architectes_d_efficience_algorithmique_new_sustainability]]
+- [[coalition_des_industries_extractives_residuelles_new_sustainability]]
+- [[conseil_energetique_intercontinental_new_sustainability]]
+- [[conseil_technocratique_de_coordination_regionale_new_sustainability]]
+- [[consortium_helios_new_sustainability]]
+- [[faction_conservatrice_pro_actif_strategique_new_sustainability]]
+- [[lobbies_agro_industriels_du_bassin_du_congo_new_sustainability]]
+- [[operateurs_de_fusion_energetique_regionaux_new_sustainability]]
+- [[union_des_blocs_energetiques_regionaux_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

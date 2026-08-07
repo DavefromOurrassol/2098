@@ -4,6 +4,7 @@ type: instance
 slug: cooperative_terrafond_eco_communalism
 entite: cooperative_terrafond
 scenario: eco_communalism
+statut: officialise_enrichi
 localisation:
   zone: vallee_de_l_ourthe
   lieu: Vallée de l'Ourthe
@@ -35,16 +36,20 @@ zone_systemique:
     - société
 
 alliances:
-    - assemblees_de_bassin_versant_eco_communalism
-    - brigades_de_restauration_ecologique_eco_communalism
-    - mutuelles_de_sante_territoriales_eco_communalism
-    - reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism
-
+- amazonie_pacte_viva_eco_communalism
+- assemblees_de_bassin_versant_eco_communalism
+- brigades_de_restauration_ecologique_eco_communalism
+- confederation_bassins_vivants_eco_communalism
+- kalaallit_nunaat_sovereign_fund_eco_communalism
+- mutuelles_de_sante_territoriales_eco_communalism
+- reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
+- reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism
+- tresse_verte_corridor_eco_communalism
+- zones_extractivistes_corridors_eco_communalism
 oppositions:
-    - agro_conglomerats_des_enclaves_technologiques_eco_communalism
-    - seigneuries_foncieres_opportunistes_breakdown
-    - factions_extractivistes_des_aquiferes_communs_eco_communalism
-
+- agro_conglomerats_des_enclaves_technologiques_eco_communalism
+- factions_extractivistes_des_aquiferes_communs_eco_communalism
+- seigneuries_foncieres_opportunistes_breakdown
 type_relation_dominante: coopération
 
 annee_debut: 2031
@@ -88,12 +93,26 @@ Coordination des semences, des cycles de rotation et des excédents alimentaires
 - [[climat_environnement_global]]
 - [[energie_ressources_critiques]]
 
-## Relations
-**Alliés** : [[assemblees_de_bassin_versant_eco_communalism]], [[brigades_de_restauration_ecologique_eco_communalism]], [[mutuelles_de_sante_territoriales_eco_communalism]], [[reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism]]
-**Opposants** : [[agro_conglomerats_des_enclaves_technologiques_eco_communalism]], [[seigneuries_foncieres_opportunistes_breakdown]], [[factions_extractivistes_des_aquiferes_communs_eco_communalism]]
 
 ## Description journalistique
 Dans la vallée de l'Ourthe reconstituée, on reconnaît une coopérative Terrafond à ses silos peints en ocre et aux panneaux d'affichage des bilans de récolte accrochés à l'entrée des villages. Le Réseau Terrafond des Bassins n'est pas une entreprise ni un État : c'est quelque chose d'intermédiaire, de pragmatiquement vivant. Fondé dans les années 2030 sur les ruines des filières agro-industrielles effondrées, il regroupe aujourd'hui plus de 340 coopératives sur une douzaine de bassins versants d'Europe occidentale et du Maghreb méditerranéen. Chaque assemblée de bassin vote ses propres règles d'échange, mais toutes partagent un même principe : aucune coopérative ne peut accumuler au-delà de ses besoins documentés sur trois ans. Fragile, lent, parfois épuisant à gouverner — mais réel.
 
 ## Tensions narratives
 La tension centrale est celle du seuil : jusqu'où étendre le réseau sans perdre la logique de réciprocité locale qui le fonde ? Certains bassins prospèrent et commencent à attirer des flux migratoires que leurs communs ne peuvent absorber. D'autres, en zone climatiquement dégradée, peinent à atteindre l'autosuffisance et réclament des transferts que les bassins riches rechignent à accorder. La question de la gouvernance des aquifères transfrontaliers génère des frictions croissantes avec des micro-États voisins qui refusent le principe de communs partagés.
+
+## Relations
+**Alliés :**
+- [[amazonie_pacte_viva_eco_communalism]]
+- [[assemblees_de_bassin_versant_eco_communalism]]
+- [[brigades_de_restauration_ecologique_eco_communalism]]
+- [[confederation_bassins_vivants_eco_communalism]]
+- [[kalaallit_nunaat_sovereign_fund_eco_communalism]]
+- [[mutuelles_de_sante_territoriales_eco_communalism]]
+- [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
+- [[reseaux_de_troc_inter_cooperatives_et_marges_periurbaines_eco_communalism]]
+- [[tresse_verte_corridor_eco_communalism]]
+- [[zones_extractivistes_corridors_eco_communalism]]
+**Opposants :**
+- [[agro_conglomerats_des_enclaves_technologiques_eco_communalism]]
+- [[factions_extractivistes_des_aquiferes_communs_eco_communalism]]
+- [[seigneuries_foncieres_opportunistes_breakdown]]

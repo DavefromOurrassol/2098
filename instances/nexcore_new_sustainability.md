@@ -4,6 +4,7 @@ type: instance
 slug: nexcore_new_sustainability
 entite: nexcore
 scenario: new_sustainability
+statut: officialise_enrichi
 localisation:
   zone: null
   lieu: null
@@ -33,10 +34,18 @@ zone_systemique:
   - infrastructure
   - économie
 alliances:
-  - conseil_regulation_algorithmique_new_sustainability
-  - assemblee_territoires_new_sustainability
+- assemblee_territoires_new_sustainability
+- coalition_vivant_new_sustainability
+- conseil_regulation_algorithmique_new_sustainability
+- factions_technocratiques_de_la_delegation_ia_totale_new_sustainability
+- le_temoin_new_sustainability
 oppositions:
-  - nexcore_fortress_world
+- etats_souverainistes_anti_reseau_new_sustainability
+- fonds_mondial_de_redistribution_technologique_new_sustainability
+- nexcore_fortress_world
+- reseau_des_communs_numeriques_globaux_new_sustainability
+- reseaux_d_information_souverainistes_fermes_new_sustainability
+- reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability
 type_relation_dominante: coopération
 annee_debut: 2043
 annee_fin:
@@ -79,9 +88,6 @@ numériques globales sous mandat public avec gouvernance multipartite.
 - [[systeme_economique_redistribution]]
 - [[gouvernance_institutions]]
 
-## Relations
-**Alliés** : [[conseil_regulation_algorithmique_new_sustainability]], [[assemblee_territoires_new_sustainability]]
-**Opposants** : [[nexcore_fortress_world]]
 
 ## Description journalistique
 NexCore Communs est l'une des plus grandes coopératives de l'histoire —
@@ -91,3 +97,18 @@ Amara Diallo-Keïta, est l'une des personnalités les plus influentes de 2098.
 ## Tensions narratives
 Pression des États qui veulent plus de contrôle sur les données. Débat sur
 la gouvernance — trop grande pour être vraiment démocratique ?
+
+## Relations
+**Alliés :**
+- [[assemblee_territoires_new_sustainability]]
+- [[coalition_vivant_new_sustainability]]
+- [[conseil_regulation_algorithmique_new_sustainability]]
+- [[factions_technocratiques_de_la_delegation_ia_totale_new_sustainability]]
+- [[le_temoin_new_sustainability]]
+**Opposants :**
+- [[etats_souverainistes_anti_reseau_new_sustainability]]
+- [[fonds_mondial_de_redistribution_technologique_new_sustainability]]
+- [[nexcore_fortress_world]]
+- [[reseau_des_communs_numeriques_globaux_new_sustainability]]
+- [[reseaux_d_information_souverainistes_fermes_new_sustainability]]
+- [[reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability]]

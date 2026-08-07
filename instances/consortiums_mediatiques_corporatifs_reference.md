@@ -34,8 +34,25 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- consortium_des_grandes_plateformes_ia_integrees_reference
+- consortium_des_grandes_plateformes_logistiques_globales_reference
+- consortium_des_plateformes_ia_centralisees_anti_deliberation_reference
+- consortiums_bancaires_financiarises_reference
+- consortiums_prives_d_extraction_de_ressources_critiques_reference
+- institutions_multilaterales_survivantes_reference
+- plateformes_centralisees_de_narration_officielle_reference
+- plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference
+- services_de_contre_information_des_blocs_geopolitiques_concurrents_reference
+oppositions:
+- bureaux_de_regulation_informationnelle_reference
+- collectifs_academiques_independants_reference
+- collectifs_de_biopiraterie_inversee_reference
+- collectifs_de_journalisme_embarque_reference
+- collectifs_de_journalistes_independants_regionaux_reference
+- prisme_global_reference
+- reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference
+- voix_du_dehors_reference
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -99,6 +116,28 @@ La légitimité des consortiums est rongée par la défiance informationnelle g�
 - [[technologie_information]]
 - [[gouvernance_institutions]]
 - [[systeme_economique_redistribution]]
+
+
+## Relations
+**Alliés :**
+- [[consortium_des_grandes_plateformes_ia_integrees_reference]]
+- [[consortium_des_grandes_plateformes_logistiques_globales_reference]]
+- [[consortium_des_plateformes_ia_centralisees_anti_deliberation_reference]]
+- [[consortiums_bancaires_financiarises_reference]]
+- [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
+- [[plateformes_centralisees_de_narration_officielle_reference]]
+- [[plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference]]
+- [[services_de_contre_information_des_blocs_geopolitiques_concurrents_reference]]
+**Opposants :**
+- [[bureaux_de_regulation_informationnelle_reference]]
+- [[collectifs_academiques_independants_reference]]
+- [[collectifs_de_biopiraterie_inversee_reference]]
+- [[collectifs_de_journalisme_embarque_reference]]
+- [[collectifs_de_journalistes_independants_regionaux_reference]]
+- [[prisme_global_reference]]
+- [[reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference]]
+- [[voix_du_dehors_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

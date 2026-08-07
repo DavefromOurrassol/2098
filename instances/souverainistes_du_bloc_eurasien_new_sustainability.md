@@ -29,8 +29,31 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- alliance_numerique_eurasie_pacifique_new_sustainability
+- bloc_des_gouvernements_souverainistes_hydriques_new_sustainability
+- coalition_anti_fiscalite_universelle_new_sustainability
+- coalition_des_industries_extractives_residuelles_new_sustainability
+- etats_souverainistes_anti_reseau_new_sustainability
+- factions_souverainistes_des_blocs_peripheriques_new_sustainability
+- internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
+- lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability
+- mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability
+- reseaux_d_information_souverainistes_fermes_new_sustainability
+oppositions:
+- agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
+- agence_orbitale_de_regulation_commune_aorc_new_sustainability
+- agence_stabilisation_climatique_new_sustainability
+- bloc_eurasien_souverainiste_new_sustainability
+- centre_institutionnel_geneve_new_sustainability
+- conseil_energetique_intercontinental_new_sustainability
+- conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability
+- conseil_regulation_ressources_new_sustainability
+- consortium_de_regeneration_planetaire_new_sustainability
+- fonds_mondial_de_regeneration_ecologique_new_sustainability
+- parlement_deliberatif_mondial_new_sustainability
+- reseau_des_agences_climatiques_regionales_new_sustainability
+- tribunal_algorithmique_de_bruxelles_new_sustainability
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -93,6 +116,35 @@ Dans un scénario de régénération stable où la gouvernance institutionnelle 
 - [[geopolitique_conflits]]
 - [[gouvernance_institutions]]
 - [[energie_ressources_critiques]]
+
+
+
+## Relations
+**Alliés :**
+- [[alliance_numerique_eurasie_pacifique_new_sustainability]]
+- [[bloc_des_gouvernements_souverainistes_hydriques_new_sustainability]]
+- [[coalition_anti_fiscalite_universelle_new_sustainability]]
+- [[coalition_des_industries_extractives_residuelles_new_sustainability]]
+- [[etats_souverainistes_anti_reseau_new_sustainability]]
+- [[factions_souverainistes_des_blocs_peripheriques_new_sustainability]]
+- [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]]
+- [[lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability]]
+- [[mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability]]
+- [[reseaux_d_information_souverainistes_fermes_new_sustainability]]
+**Opposants :**
+- [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]]
+- [[agence_orbitale_de_regulation_commune_aorc_new_sustainability]]
+- [[agence_stabilisation_climatique_new_sustainability]]
+- [[bloc_eurasien_souverainiste_new_sustainability]]
+- [[centre_institutionnel_geneve_new_sustainability]]
+- [[conseil_energetique_intercontinental_new_sustainability]]
+- [[conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability]]
+- [[conseil_regulation_ressources_new_sustainability]]
+- [[consortium_de_regeneration_planetaire_new_sustainability]]
+- [[fonds_mondial_de_regeneration_ecologique_new_sustainability]]
+- [[parlement_deliberatif_mondial_new_sustainability]]
+- [[reseau_des_agences_climatiques_regionales_new_sustainability]]
+- [[tribunal_algorithmique_de_bruxelles_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

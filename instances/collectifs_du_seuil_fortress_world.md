@@ -4,6 +4,7 @@ type: instance
 slug: collectifs_du_seuil_fortress_world
 entite: collectifs_du_seuil
 scenario: fortress_world
+statut: officialise_enrichi
 localisation:
   zone: zones_grises_tampons
   lieu: Zones grises frontalières entre les blocs (zone tampon balkano-caucasienne mentionnée explicitement)
@@ -34,15 +35,31 @@ zone_systemique:
     - gouvernance
 
 alliances:
-    - contrebandiers_energetiques_des_zones_grises_fortress_world
-    - dissidences_internes_aux_blocs_minoritaires_fortress_world
-    - communautes_deplacees_hors_quota_migratoire_fortress_world
-
+- campements_seuils_fermes_fortress_world
+- communautes_deplacees_hors_quota_migratoire_fortress_world
+- contrebandiers_energetiques_des_zones_grises_fortress_world
+- dissidences_internes_aux_blocs_minoritaires_fortress_world
+- marches_gris_tbilissi_fortress_world
+- mouvement_commun_midwest_fortress_world
+- mouvement_des_communes_du_rust_belt_fortress_world
 oppositions:
-    - administrations_de_controle_frontalier_des_blocs_fortress_world
-    - agences_de_securite_interieure_des_etats_forteresses_fortress_world
-    - front_resilient_pro_systeme_fortress_world
-
+- administrations_de_controle_frontalier_des_blocs_fortress_world
+- agences_de_securite_interieure_des_etats_forteresses_fortress_world
+- almaty_zone_friction_fortress_world
+- anba_siege_atlantique_fortress_world
+- bloc_atlantique_fortress_world
+- bloc_eurasiatique_occidental_fortress_world
+- bunker_chambre_securite_territoriale_fortress_world
+- bureau_territoires_residuels_fortress_world
+- complexe_orentchev_almaty_fortress_world
+- conseil_moscou_est_fortress_world
+- front_resilient_pro_systeme_fortress_world
+- geneve_bunker_fortress_world
+- nexcore_atlantique_infrastructure_fortress_world
+- nexus_biosyn_division_eurasienne_fortress_world
+- tbilissi_nord_zone_franche_fortress_world
+- tours_nexus7_fortress_world
+- zones_grises_tampons_fortress_world
 type_relation_dominante: conflit
 
 annee_debut: 2041
@@ -85,12 +102,37 @@ Les Seuils Fermés maintiennent des enclaves autarciques dans les zones grises f
 - [[valeurs_culture_tempo_sociale]]
 - [[gouvernance_institutions]]
 
-## Relations
-**Alliés** : [[contrebandiers_energetiques_des_zones_grises_fortress_world]], [[dissidences_internes_aux_blocs_minoritaires_fortress_world]], [[communautes_deplacees_hors_quota_migratoire_fortress_world]]
-**Opposants** : [[administrations_de_controle_frontalier_des_blocs_fortress_world]], [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]], [[front_resilient_pro_systeme_fortress_world]]
 
 ## Description journalistique
 On les repère à leurs campements installés dans les no man's lands entre les checkpoints — ces bandes de terre que personne ne revendique officiellement mais que tout le monde surveille. Les Seuils Fermés ne cherchent pas à fuir les murs : ils s'y adossent. Nos correspondants dans la zone tampon balkano-caucasienne ont documenté l'une de leurs 'veillées de comptage' — une cérémonie nocturne où les membres récitent les statistiques d'épuisement des ressources comme d'autres réciteraient des psaumes. Ce qui frappe, c'est moins leur mysticisme que leur organisation : réseaux de communication chiffrés, stocks tournants, cartographie précise des failles dans les dispositifs de surveillance. Les autorités des blocs voisins les classent tantôt comme menace terroriste, tantôt comme anomalie démographique sans statut. Ce flou les protège autant qu'il les condamne.
 
 ## Tensions narratives
 La tension centrale est celle de la récupération : plusieurs blocs géopolitiques cherchent à instrumentaliser les Seuils Fermés comme proxies déstabilisateurs dans les zones d'influence ennemies, ce qui risque de transformer des millénaristes sincères en outils géopolitiques sans qu'ils le réalisent — ou en le réalisant trop tard. En interne, une fracture monte entre les 'contemplatifs' qui attendent l'effondrement et les 'accélérationnistes' qui veulent le provoquer activement en sabotant les infrastructures critiques des blocs. Enfin, leur recrutement massif parmi les rejetés des sélections migratoires leur donne une base démographique croissante mais hétérogène, menaçant la cohérence rituelle qui fait leur identité — grandir, pour eux, c'est peut-être déjà trahir.
+
+## Relations
+**Alliés :**
+- [[campements_seuils_fermes_fortress_world]]
+- [[communautes_deplacees_hors_quota_migratoire_fortress_world]]
+- [[contrebandiers_energetiques_des_zones_grises_fortress_world]]
+- [[dissidences_internes_aux_blocs_minoritaires_fortress_world]]
+- [[marches_gris_tbilissi_fortress_world]]
+- [[mouvement_commun_midwest_fortress_world]]
+- [[mouvement_des_communes_du_rust_belt_fortress_world]]
+**Opposants :**
+- [[administrations_de_controle_frontalier_des_blocs_fortress_world]]
+- [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]]
+- [[almaty_zone_friction_fortress_world]]
+- [[anba_siege_atlantique_fortress_world]]
+- [[bloc_atlantique_fortress_world]]
+- [[bloc_eurasiatique_occidental_fortress_world]]
+- [[bunker_chambre_securite_territoriale_fortress_world]]
+- [[bureau_territoires_residuels_fortress_world]]
+- [[complexe_orentchev_almaty_fortress_world]]
+- [[conseil_moscou_est_fortress_world]]
+- [[front_resilient_pro_systeme_fortress_world]]
+- [[geneve_bunker_fortress_world]]
+- [[nexcore_atlantique_infrastructure_fortress_world]]
+- [[nexus_biosyn_division_eurasienne_fortress_world]]
+- [[tbilissi_nord_zone_franche_fortress_world]]
+- [[tours_nexus7_fortress_world]]
+- [[zones_grises_tampons_fortress_world]]

@@ -4,6 +4,7 @@ type: instance
 slug: lagos_est_nexcore_breakdown
 entite: lagos_est_nexcore
 scenario: breakdown
+statut: officialise_enrichi
 localisation:
   zone: lagos_est_nexcore
   lieu: Lagos-Est (Nœud NexCore)
@@ -37,18 +38,25 @@ zone_systemique:
     - économie
 
 alliances:
-    - guilde_des_techniciens_nomades_breakdown
-    - enclaves_technologiques_survivantes_breakdown
-    - collectifs_de_reparation_energetique_breakdown
-    - ligue_des_cites_littorales_en_sursis_breakdown
-
+- collectifs_de_reparation_energetique_breakdown
+- enclaves_technologiques_survivantes_breakdown
+- guilde_des_techniciens_nomades_breakdown
+- lagos_interieur_mnemos_breakdown
+- ligue_des_cites_littorales_en_sursis_breakdown
+- seoul_collectif_nexcore_breakdown
 oppositions:
-    - seigneuries_logistiques_armees_breakdown
-    - milices_de_controle_territorial_breakdown
-    - front_de_resistance_aux_peages_sur_les_ressources_breakdown
-    - fronts_populistes_anti_technocratiques_breakdown
-    - reseau_logistique_criminel_concurrent_breakdown
-
+- collectifs_de_gardiens_archivistes_itinerants_breakdown
+- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown
+- diaspora_tech_sahel_breakdown
+- front_de_resistance_aux_peages_sur_les_ressources_breakdown
+- fronts_populistes_anti_technocratiques_breakdown
+- ligue_mediterraneenne_des_villes_etats_portuaires_breakdown
+- milices_de_controle_territorial_breakdown
+- reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown
+- reseau_logistique_criminel_concurrent_breakdown
+- reseaux_de_solidarite_horizontale_post_effondrement_breakdown
+- seigneuries_logistiques_armees_breakdown
 type_relation_dominante: dépendance
 
 annee_debut: 2061
@@ -92,12 +100,31 @@ Maintien opérationnel des nœuds énergétiques et des relais de données survi
 - [[gouvernance_institutions]]
 - [[technologie_information]]
 
-## Relations
-**Alliés** : [[guilde_des_techniciens_nomades_breakdown]], [[enclaves_technologiques_survivantes_breakdown]], [[collectifs_de_reparation_energetique_breakdown]], [[ligue_des_cites_littorales_en_sursis_breakdown]]
-**Opposants** : [[seigneuries_logistiques_armees_breakdown]], [[milices_de_controle_territorial_breakdown]], [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]], [[fronts_populistes_anti_technocratiques_breakdown]], [[reseau_logistique_criminel_concurrent_breakdown]]
 
 ## Description journalistique
 Depuis le terminal flottant de Badore, les techniciens des Nœuds Lagunaires ne portent pas d'uniforme — ils portent des jauges. Tension de réseau sur le poignet gauche, carte de transit sur le droit. Lagos Est Nexcore n'a jamais été fondée : elle s'est agrégée autour des huit nœuds de distribution énergétique que personne d'autre ne savait faire fonctionner après la désintégration de 2059. Aujourd'hui, neuf enclaves de l'est lagunaire lui versent des droits de synchronisation pour rester connectées — certaines de gré, d'autres parce que couper le nœud équivaudrait à éteindre leurs hôpitaux. Ses délégués se déplacent en pirogue blindée entre Ajah et Ibeju, arbitrant des conflits de bande passante comme d'autres arbitraient jadis des contrats pétroliers. Coordinatrice vitale ou nouveau seigneur des nœuds — la question se pose chaque saison des pluies, quand les crues remontent et que les prix de l'accès montent avec elles.
 
 ## Tensions narratives
 La consolidation progressive du contrôle de Lagos Est Nexcore sur les nœuds survivants soulève une question centrale : à quel moment la coordinatrice d'urgence devient-elle le seigneur féodal qu'elle prétend remplacer ? Plusieurs enclaves commencent à murmurer contre les tarifs de synchronisation jugés prédateurs, tandis que des factions paramilitaires locales lorgnent sur les nœuds comme sur des forteresses à prendre. En parallèle, la Guilde des Techniciens Nomades — dont Lagos Est Nexcore dépend pour maintenir ses infrastructures — commence à négocier ses propres termes, fragilisant la colonne vertébrale opérationnelle de l'organisation. La question ultime : si une enclave parvenait à construire son propre nœud autonome, le modèle entier s'effondrerait-il par contagion ?
+
+## Relations
+**Alliés :**
+- [[collectifs_de_reparation_energetique_breakdown]]
+- [[enclaves_technologiques_survivantes_breakdown]]
+- [[guilde_des_techniciens_nomades_breakdown]]
+- [[lagos_interieur_mnemos_breakdown]]
+- [[ligue_des_cites_littorales_en_sursis_breakdown]]
+- [[seoul_collectif_nexcore_breakdown]]
+**Opposants :**
+- [[collectifs_de_gardiens_archivistes_itinerants_breakdown]]
+- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown]]
+- [[diaspora_tech_sahel_breakdown]]
+- [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
+- [[fronts_populistes_anti_technocratiques_breakdown]]
+- [[ligue_mediterraneenne_des_villes_etats_portuaires_breakdown]]
+- [[milices_de_controle_territorial_breakdown]]
+- [[reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown]]
+- [[reseau_logistique_criminel_concurrent_breakdown]]
+- [[reseaux_de_solidarite_horizontale_post_effondrement_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]

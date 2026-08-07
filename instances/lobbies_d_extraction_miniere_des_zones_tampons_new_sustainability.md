@@ -36,8 +36,39 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- bloc_eurasien_souverainiste_new_sustainability
+- coalition_des_industries_extractives_residuelles_new_sustainability
+- faction_conservatrice_pro_actif_strategique_new_sustainability
+- factions_souverainistes_des_blocs_peripheriques_new_sustainability
+- mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability
+- souverainistes_du_bloc_eurasien_new_sustainability
+oppositions:
+- agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
+- arctic_passage_authority_new_sustainability
+- coalition_vivant_new_sustainability
+- commission_territoriale_ourrassol_new_sustainability
+- conseil_energetique_intercontinental_new_sustainability
+- conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability
+- conseil_regulation_ressources_new_sustainability
+- consortium_amazonia_viva_new_sustainability
+- consortium_de_regeneration_planetaire_new_sustainability
+- fonds_mondial_de_redistribution_technologique_new_sustainability
+- fonds_mondial_de_regeneration_ecologique_new_sustainability
+- great_lakes_autonomous_compact_new_sustainability
+- hub_nairobi_kigali_new_sustainability
+- institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability
+- kalaallit_nunaat_sovereign_fund_new_sustainability
+- les_veilleurs_du_fleuve_new_sustainability
+- ligue_des_cites_du_sahel_numerique_new_sustainability
+- observatoire_anti_monopole_de_geneve_new_sustainability
+- pacifique_sud_resilience_network_new_sustainability
+- parlement_territoires_nairobi_new_sustainability
+- reseau_des_bio_communs_regionaux_new_sustainability
+- reseau_des_communs_productifs_regeneratifs_new_sustainability
+- reseau_des_hubs_urbains_regeneratifs_new_sustainability
+- reseau_des_villes_regeneratives_new_sustainability
+- trame_bioclimatique_new_sustainability
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -104,6 +135,42 @@ La tension centrale de ces lobbies est structurelle : la transition énergétiqu
 - [[energie_ressources_critiques]]
 - [[organisation_territoires]]
 - [[gouvernance_institutions]]
+
+
+## Relations
+**Alliés :**
+- [[bloc_eurasien_souverainiste_new_sustainability]]
+- [[coalition_des_industries_extractives_residuelles_new_sustainability]]
+- [[faction_conservatrice_pro_actif_strategique_new_sustainability]]
+- [[factions_souverainistes_des_blocs_peripheriques_new_sustainability]]
+- [[mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability]]
+- [[souverainistes_du_bloc_eurasien_new_sustainability]]
+**Opposants :**
+- [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]]
+- [[arctic_passage_authority_new_sustainability]]
+- [[coalition_vivant_new_sustainability]]
+- [[commission_territoriale_ourrassol_new_sustainability]]
+- [[conseil_energetique_intercontinental_new_sustainability]]
+- [[conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability]]
+- [[conseil_regulation_ressources_new_sustainability]]
+- [[consortium_amazonia_viva_new_sustainability]]
+- [[consortium_de_regeneration_planetaire_new_sustainability]]
+- [[fonds_mondial_de_redistribution_technologique_new_sustainability]]
+- [[fonds_mondial_de_regeneration_ecologique_new_sustainability]]
+- [[great_lakes_autonomous_compact_new_sustainability]]
+- [[hub_nairobi_kigali_new_sustainability]]
+- [[institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability]]
+- [[kalaallit_nunaat_sovereign_fund_new_sustainability]]
+- [[les_veilleurs_du_fleuve_new_sustainability]]
+- [[ligue_des_cites_du_sahel_numerique_new_sustainability]]
+- [[observatoire_anti_monopole_de_geneve_new_sustainability]]
+- [[pacifique_sud_resilience_network_new_sustainability]]
+- [[parlement_territoires_nairobi_new_sustainability]]
+- [[reseau_des_bio_communs_regionaux_new_sustainability]]
+- [[reseau_des_communs_productifs_regeneratifs_new_sustainability]]
+- [[reseau_des_hubs_urbains_regeneratifs_new_sustainability]]
+- [[reseau_des_villes_regeneratives_new_sustainability]]
+- [[trame_bioclimatique_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

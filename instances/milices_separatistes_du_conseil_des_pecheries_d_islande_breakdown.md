@@ -36,7 +36,16 @@ zone_systemique:
 - société
 alliances: []
 oppositions:
+- arctic_passage_authority_breakdown
+- armada_logistique_nordique_breakdown
 - autorite_passage_arctique_breakdown
+- coalition_pacifique_nord_breakdown
+- district_mourmansk_residuel_breakdown
+- factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
+- hanse_baltique_breakdown
+- hanse_baltique_recomposee_breakdown
+- kalaallit_nunaat_sovereign_fund_breakdown
+- noeud_nordark_tromso_breakdown
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -95,9 +104,19 @@ Les Milices sont déchirées entre leur idéologie souverainiste radicale et leu
 - [[energie_ressources_critiques]]
 - [[organisation_territoires]]
 
+
 ## Relations
 **Opposants :**
+- [[arctic_passage_authority_breakdown]]
+- [[armada_logistique_nordique_breakdown]]
 - [[autorite_passage_arctique_breakdown]]
+- [[coalition_pacifique_nord_breakdown]]
+- [[district_mourmansk_residuel_breakdown]]
+- [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]]
+- [[hanse_baltique_breakdown]]
+- [[hanse_baltique_recomposee_breakdown]]
+- [[kalaallit_nunaat_sovereign_fund_breakdown]]
+- [[noeud_nordark_tromso_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

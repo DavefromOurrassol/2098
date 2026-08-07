@@ -32,8 +32,18 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability
+- programme_onu_de_restauration_des_sols_new_sustainability
+- programme_onusien_de_mobilite_climatique_new_sustainability
+- internationale_travailleurs_augmentes_new_sustainability
+- reseau_des_communs_productifs_regeneratifs_new_sustainability
+oppositions:
+- coalition_des_industries_extractives_residuelles_new_sustainability
+- coalition_anti_fiscalite_universelle_new_sustainability
+- factions_souverainistes_des_blocs_peripheriques_new_sustainability
+- bloc_eurasien_souverainiste_new_sustainability
+- collectifs_de_deplaces_climatiques_non_representes_new_sustainability
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -98,6 +108,20 @@ Sa dépendance aux recettes de la taxe carbone mondiale le place dans une contra
 - [[systeme_economique_redistribution]]
 - [[systemes_productifs_travail]]
 - [[gouvernance_institutions]]
+
+## Relations
+**Alliés :**
+- [[conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability]]
+- [[programme_onu_de_restauration_des_sols_new_sustainability]]
+- [[programme_onusien_de_mobilite_climatique_new_sustainability]]
+- [[internationale_travailleurs_augmentes_new_sustainability]]
+- [[reseau_des_communs_productifs_regeneratifs_new_sustainability]]
+**Opposants :**
+- [[coalition_des_industries_extractives_residuelles_new_sustainability]]
+- [[coalition_anti_fiscalite_universelle_new_sustainability]]
+- [[factions_souverainistes_des_blocs_peripheriques_new_sustainability]]
+- [[bloc_eurasien_souverainiste_new_sustainability]]
+- [[collectifs_de_deplaces_climatiques_non_representes_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

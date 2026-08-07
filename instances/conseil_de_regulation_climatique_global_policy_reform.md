@@ -33,8 +33,38 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_internationale_de_l_energie_reformatee_aier_policy_reform
+- agence_stabilisation_climatique_policy_reform
+- agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
+- amara_diallo_nkosi_policy_reform
+- arctic_passage_authority_policy_reform
+- autorite_mondiale_du_vivant_amv_policy_reform
+- bloc_des_nations_a_economie_carbone_controlee_policy_reform
+- coalition_des_villes_de_reconversion_policy_reform
+- consortium_amazonia_viva_policy_reform
+- consortium_de_geo_ingenierie_atmospherique_pacifique_policy_reform
+- consortium_des_villes_etats_durables_policy_reform
+- fonds_de_stabilisation_climatique_onu_3_policy_reform
+- fonds_mondial_de_resilience_infrastructurelle_policy_reform
+- fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform
+- fonds_souverain_de_transition_verte_fstv_policy_reform
+- observatoire_mondial_des_ressources_critiques_policy_reform
+- office_integre_des_flux_migratoires_policy_reform
+- oracle_des_seuils_policy_reform
+- pacifique_sud_resilience_network_policy_reform
+- reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform
+- reseaux_de_capteurs_ia_climatiques_deployes_par_les_etats_membres_policy_reform
+oppositions:
+- coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform
+- collectifs_de_resistance_aux_relocalisations_forcees_policy_reform
+- conglomerats_d_automatisation_industrielle_integrale_policy_reform
+- consortiums_agro_industriels_du_bassin_fluvial_policy_reform
+- front_des_autonomies_territoriales_radicales_policy_reform
+- front_des_souverainistes_energetiques_policy_reform
+- front_souverainiste_des_blocs_non_signataires_policy_reform
+- lobbies_des_energies_fossiles_residuelles_policy_reform
+- mouvement_pour_la_souverainete_territoriale_absolue_policy_reform
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -101,6 +131,41 @@ Le Conseil est écartelé entre sa mission universaliste et la réalité d'un mo
 - [[gouvernance_institutions]]
 - [[climat_environnement_global]]
 - [[geopolitique_conflits]]
+
+
+## Relations
+**Alliés :**
+- [[agence_internationale_de_l_energie_reformatee_aier_policy_reform]]
+- [[agence_stabilisation_climatique_policy_reform]]
+- [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]
+- [[amara_diallo_nkosi_policy_reform]]
+- [[arctic_passage_authority_policy_reform]]
+- [[autorite_mondiale_du_vivant_amv_policy_reform]]
+- [[bloc_des_nations_a_economie_carbone_controlee_policy_reform]]
+- [[coalition_des_villes_de_reconversion_policy_reform]]
+- [[consortium_amazonia_viva_policy_reform]]
+- [[consortium_de_geo_ingenierie_atmospherique_pacifique_policy_reform]]
+- [[consortium_des_villes_etats_durables_policy_reform]]
+- [[fonds_de_stabilisation_climatique_onu_3_policy_reform]]
+- [[fonds_mondial_de_resilience_infrastructurelle_policy_reform]]
+- [[fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform]]
+- [[fonds_souverain_de_transition_verte_fstv_policy_reform]]
+- [[observatoire_mondial_des_ressources_critiques_policy_reform]]
+- [[office_integre_des_flux_migratoires_policy_reform]]
+- [[oracle_des_seuils_policy_reform]]
+- [[pacifique_sud_resilience_network_policy_reform]]
+- [[reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform]]
+- [[reseaux_de_capteurs_ia_climatiques_deployes_par_les_etats_membres_policy_reform]]
+**Opposants :**
+- [[coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform]]
+- [[collectifs_de_resistance_aux_relocalisations_forcees_policy_reform]]
+- [[conglomerats_d_automatisation_industrielle_integrale_policy_reform]]
+- [[consortiums_agro_industriels_du_bassin_fluvial_policy_reform]]
+- [[front_des_autonomies_territoriales_radicales_policy_reform]]
+- [[front_des_souverainistes_energetiques_policy_reform]]
+- [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+- [[lobbies_des_energies_fossiles_residuelles_policy_reform]]
+- [[mouvement_pour_la_souverainete_territoriale_absolue_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

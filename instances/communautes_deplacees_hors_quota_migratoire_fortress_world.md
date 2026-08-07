@@ -30,14 +30,40 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
-- rust_belt_communes_libres_fortress_world
+- aria_instance_fantome_fortress_world
+- bassora_couloir_refugies_fortress_world
+- campements_seuils_fermes_fortress_world
 - cellules_mouvement_commun_midwest_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- collectifs_du_seuil_fortress_world
+- corridors_gris_asie_centrale_fortress_world
 - marches_gris_casablanca_fortress_world
 - marches_gris_tbilissi_fortress_world
+- mouvement_commun_midwest_fortress_world
+- mouvement_des_communes_du_rust_belt_fortress_world
+- rust_belt_communes_libres_fortress_world
 oppositions:
-- pacte_forteresses_souveraines_fortress_world
+- administrations_de_controle_frontalier_des_blocs_fortress_world
+- almaty_zone_friction_fortress_world
+- amazonie_pacte_vert_fortress_world
+- anba_siege_atlantique_fortress_world
 - bloc_atlantique_fortress_world
 - bloc_eurasiatique_occidental_fortress_world
+- bunker_chambre_securite_territoriale_fortress_world
+- bureau_des_territoires_residuels_fortress_world
+- bureau_territoires_residuels_fortress_world
+- centre_controle_orbital_helios_fortress_world
+- complexe_orentchev_almaty_fortress_world
+- conseil_moscou_est_fortress_world
+- geneve_bunker_fortress_world
+- instances_aria_concurrentes_des_blocs_rivaux_fortress_world
+- nexcore_atlantique_infrastructure_fortress_world
+- pacte_forteresses_souveraines_fortress_world
+- reseaux_prives_de_securite_aux_frontieres_fortress_world
+- siege_genevois_cars_fortress_world
+- tbilissi_nord_zone_franche_fortress_world
+- zone_usines_forteresses_eurasie_fortress_world
+- zones_grises_tampons_fortress_world
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -104,16 +130,43 @@ Leur survie collective dépend d'une invisibilité qu'elles cherchent pourtant �
 - [[organisation_territoires]]
 - [[gouvernance_institutions]]
 
+
 ## Relations
 **Alliés :**
-- [[rust_belt_communes_libres_fortress_world]]
+- [[aria_instance_fantome_fortress_world]]
+- [[bassora_couloir_refugies_fortress_world]]
+- [[campements_seuils_fermes_fortress_world]]
 - [[cellules_mouvement_commun_midwest_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[collectifs_du_seuil_fortress_world]]
+- [[corridors_gris_asie_centrale_fortress_world]]
 - [[marches_gris_casablanca_fortress_world]]
 - [[marches_gris_tbilissi_fortress_world]]
+- [[mouvement_commun_midwest_fortress_world]]
+- [[mouvement_des_communes_du_rust_belt_fortress_world]]
+- [[rust_belt_communes_libres_fortress_world]]
 **Opposants :**
-- [[pacte_forteresses_souveraines_fortress_world]]
+- [[administrations_de_controle_frontalier_des_blocs_fortress_world]]
+- [[almaty_zone_friction_fortress_world]]
+- [[amazonie_pacte_vert_fortress_world]]
+- [[anba_siege_atlantique_fortress_world]]
 - [[bloc_atlantique_fortress_world]]
 - [[bloc_eurasiatique_occidental_fortress_world]]
+- [[bunker_chambre_securite_territoriale_fortress_world]]
+- [[bureau_des_territoires_residuels_fortress_world]]
+- [[bureau_territoires_residuels_fortress_world]]
+- [[centre_controle_orbital_helios_fortress_world]]
+- [[complexe_orentchev_almaty_fortress_world]]
+- [[conseil_moscou_est_fortress_world]]
+- [[geneve_bunker_fortress_world]]
+- [[instances_aria_concurrentes_des_blocs_rivaux_fortress_world]]
+- [[nexcore_atlantique_infrastructure_fortress_world]]
+- [[pacte_forteresses_souveraines_fortress_world]]
+- [[reseaux_prives_de_securite_aux_frontieres_fortress_world]]
+- [[siege_genevois_cars_fortress_world]]
+- [[tbilissi_nord_zone_franche_fortress_world]]
+- [[zone_usines_forteresses_eurasie_fortress_world]]
+- [[zones_grises_tampons_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

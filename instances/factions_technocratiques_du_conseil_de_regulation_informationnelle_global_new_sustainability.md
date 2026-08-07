@@ -33,8 +33,22 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- conseil_technocratique_de_coordination_regionale_new_sustainability
+- conseil_technocratique_de_gouvernance_alimentaire_new_sustainability
+- directive_kontinuum_new_sustainability
+- enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability
+- factions_internes_pro_opacite_des_parametres_new_sustainability
+- factions_technocratiques_de_la_delegation_ia_totale_new_sustainability
+- lobbies_des_plateformes_de_consensus_automatise_new_sustainability
+oppositions:
+- collectifs_de_desobeissance_algorithmique_new_sustainability
+- factions_souverainistes_des_blocs_peripheriques_new_sustainability
+- leena_vainala_new_sustainability
+- ligue_des_cites_du_sahel_numerique_new_sustainability
+- observatoire_anti_monopole_de_geneve_new_sustainability
+- reseau_des_communs_numeriques_globaux_new_sustainability
+- reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -100,6 +114,25 @@ La contradiction centrale de ces factions réside dans leur position paradoxale 
 - [[gouvernance_institutions]]
 - [[technologie_information]]
 - [[geopolitique_conflits]]
+
+
+## Relations
+**Alliés :**
+- [[conseil_technocratique_de_coordination_regionale_new_sustainability]]
+- [[conseil_technocratique_de_gouvernance_alimentaire_new_sustainability]]
+- [[directive_kontinuum_new_sustainability]]
+- [[enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability]]
+- [[factions_internes_pro_opacite_des_parametres_new_sustainability]]
+- [[factions_technocratiques_de_la_delegation_ia_totale_new_sustainability]]
+- [[lobbies_des_plateformes_de_consensus_automatise_new_sustainability]]
+**Opposants :**
+- [[collectifs_de_desobeissance_algorithmique_new_sustainability]]
+- [[factions_souverainistes_des_blocs_peripheriques_new_sustainability]]
+- [[leena_vainala_new_sustainability]]
+- [[ligue_des_cites_du_sahel_numerique_new_sustainability]]
+- [[observatoire_anti_monopole_de_geneve_new_sustainability]]
+- [[reseau_des_communs_numeriques_globaux_new_sustainability]]
+- [[reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

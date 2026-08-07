@@ -36,14 +36,26 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- collectifs_de_reparation_energetique_breakdown
+- communautes_paysannes_refugiees_breakdown
+- communautes_religieuses_des_relais_physiques_breakdown
 - communes_rust_belt_breakdown
+- communes_rust_belt_zones_libres_breakdown
 - delta_mekong_racines_breakdown
-- occitanie_racines_meres_breakdown
+- factions_paramilitaires_locales_neutralisees_breakdown
 - massif_central_cicatrices_vertes_breakdown
+- mouvement_des_communes_du_rust_belt_breakdown
+- nairobi_crrc_breakdown
+- occitanie_racines_meres_breakdown
+- reseaux_de_soigneurs_traditionnels_breakdown
+- saboteurs_des_corridors_de_transit_breakdown
+- seoul_collectif_nexcore_breakdown
 oppositions:
-- lagos_est_nexcore_breakdown
+- alliance_blocs_souverains_breakdown
 - carthage_nord_nexcore_breakdown
 - corridors_eurasiens_convoyage_breakdown
+- lagos_est_nexcore_breakdown
+- rede_paulista_de_distribuic_o_algor_tmica_breakdown
 type_relation_dominante: symbiose
 annee_debut: 2026
 annee_fin: null
@@ -101,16 +113,29 @@ La tension fondamentale qui ronge ces réseaux est celle entre l'horizontalité 
 - [[gouvernance_institutions]]
 - [[valeurs_culture_tempo_sociale]]
 
+
 ## Relations
 **Alliés :**
+- [[collectifs_de_reparation_energetique_breakdown]]
+- [[communautes_paysannes_refugiees_breakdown]]
+- [[communautes_religieuses_des_relais_physiques_breakdown]]
 - [[communes_rust_belt_breakdown]]
+- [[communes_rust_belt_zones_libres_breakdown]]
 - [[delta_mekong_racines_breakdown]]
-- [[occitanie_racines_meres_breakdown]]
+- [[factions_paramilitaires_locales_neutralisees_breakdown]]
 - [[massif_central_cicatrices_vertes_breakdown]]
+- [[mouvement_des_communes_du_rust_belt_breakdown]]
+- [[nairobi_crrc_breakdown]]
+- [[occitanie_racines_meres_breakdown]]
+- [[reseaux_de_soigneurs_traditionnels_breakdown]]
+- [[saboteurs_des_corridors_de_transit_breakdown]]
+- [[seoul_collectif_nexcore_breakdown]]
 **Opposants :**
-- [[lagos_est_nexcore_breakdown]]
+- [[alliance_blocs_souverains_breakdown]]
 - [[carthage_nord_nexcore_breakdown]]
 - [[corridors_eurasiens_convoyage_breakdown]]
+- [[lagos_est_nexcore_breakdown]]
+- [[rede_paulista_de_distribuic_o_algor_tmica_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

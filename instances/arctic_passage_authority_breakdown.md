@@ -4,6 +4,7 @@ type: instance
 slug: arctic_passage_authority_breakdown
 entite: arctic_passage_authority
 scenario: breakdown
+statut: officialise_enrichi
 localisation:
   zone: autorite_passage_arctique
   lieu: Tromsø, siège de l'Autorité du Passage Arctique
@@ -36,19 +37,21 @@ zone_systemique:
     - infrastructure
 
 alliances:
-    - kalaallit_nunaat_sovereign_fund_breakdown
-    - archives_neutres_de_geneve_breakdown
-    - armada_logistique_nordique_breakdown
-    - consortiums_energetiques_samoiedes_du_yamal_breakdown
-
+- archives_neutres_de_geneve_breakdown
+- armada_logistique_nordique_breakdown
+- consortiums_energetiques_samoiedes_du_yamal_breakdown
+- district_mourmansk_residuel_breakdown
+- kalaallit_nunaat_sovereign_fund_breakdown
+- noeud_nordark_tromso_breakdown
 oppositions:
-    - conglometrat_sino_siberien_bohai_transit_breakdown
-    - federation_russe_residuelle_district_de_mourmansk_breakdown
-    - factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
-    - blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
-    - milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown
-    - saboteurs_des_corridors_de_transit_breakdown
-
+- arctique_nordark_breakdown
+- blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
+- coalition_pacifique_nord_breakdown
+- conglometrat_sino_siberien_bohai_transit_breakdown
+- factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
+- federation_russe_residuelle_district_de_mourmansk_breakdown
+- milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown
+- saboteurs_des_corridors_de_transit_breakdown
 type_relation_dominante: conflit
 
 annee_debut: 2031
@@ -92,12 +95,27 @@ Fantôme institutionnel d'une gouvernance co-construite qui n'a jamais tenu ses 
 - [[energie_ressources_critiques]]
 - [[gouvernance_institutions]]
 
-## Relations
-**Alliés** : [[kalaallit_nunaat_sovereign_fund_breakdown]], [[archives_neutres_de_geneve_breakdown]], [[armada_logistique_nordique_breakdown]], [[consortiums_energetiques_samoiedes_du_yamal_breakdown]]
-**Opposants** : [[conglometrat_sino_siberien_bohai_transit_breakdown]], [[federation_russe_residuelle_district_de_mourmansk_breakdown]], [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]], [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]], [[milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown]], [[saboteurs_des_corridors_de_transit_breakdown]]
 
 ## Description journalistique
 À Tromsø, dans un immeuble partiellement chauffé dont les fenêtres donnent sur un port gelé hors-saison depuis trois ans, trois délégués — dont deux se nient mutuellement toute légitimité — continuent de tamponner des documents au nom de l'Autorité du Passage Arctique. L'institution, fondée en 2031 sur l'espoir d'une co-gouvernance entre États arctiques et nations inuites, yupik et samies, est aujourd'hui le prétexte légal que chaque faction invoque pour justifier ce qu'elle fait déjà par la force. Ses archives, partiellement numérisées et détenues par au moins quatre acteurs différents, sont plus précieuses comme munitions juridiques que comme instrument de régulation. Sur le terrain, le corridor Nord-Ouest se négocie au canon et à la tonne de diesel, pas au droit international.
 
 ## Tensions narratives
 La question centrale : les représentants autochtones restés dans l'institution la maintiennent-ils pour préserver un embryon de droit ou cautionnent-ils par leur présence la spoliation de leurs peuples au nom d'une légitimité factice ? Une faction armée samie menace de publier les archives complètes de l'APA pour prouver que ses droits ont été systématiquement contournés dès la fondation. Pendant ce temps, Bohai Transit et les factions militaires résiduelles nordiques se disputent le droit de siéger au 'conseil de crise' — non pour gouverner le passage, mais pour contrôler qui peut revendiquer légalement d'avoir essayé.
+
+## Relations
+**Alliés :**
+- [[archives_neutres_de_geneve_breakdown]]
+- [[armada_logistique_nordique_breakdown]]
+- [[consortiums_energetiques_samoiedes_du_yamal_breakdown]]
+- [[district_mourmansk_residuel_breakdown]]
+- [[kalaallit_nunaat_sovereign_fund_breakdown]]
+- [[noeud_nordark_tromso_breakdown]]
+**Opposants :**
+- [[arctique_nordark_breakdown]]
+- [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
+- [[coalition_pacifique_nord_breakdown]]
+- [[conglometrat_sino_siberien_bohai_transit_breakdown]]
+- [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]]
+- [[federation_russe_residuelle_district_de_mourmansk_breakdown]]
+- [[milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown]]
+- [[saboteurs_des_corridors_de_transit_breakdown]]

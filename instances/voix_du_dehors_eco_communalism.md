@@ -4,6 +4,7 @@ type: instance
 slug: voix_du_dehors_eco_communalism
 entite: voix_du_dehors
 scenario: eco_communalism
+statut: officialise_enrichi
 localisation:
   zone: europe_occidentale_reconstituee
   lieu: bassin ourrassoli
@@ -32,15 +33,15 @@ zone_systemique:
     - société
 
 alliances:
-    - assemblees_cooperatives_regionales_eco_communalism
-    - reseaux_de_bibliotheques_archives_communautaires_eco_communalism
-    - collectifs_de_cartographie_ecologique_participative_eco_communalism
-
+- assemblees_cooperatives_regionales_eco_communalism
+- collectifs_de_cartographie_ecologique_participative_eco_communalism
+- reseaux_de_bibliotheques_archives_communautaires_eco_communalism
 oppositions:
-    - conseils_territoriaux_opaques_sur_la_gestion_des_ressources_eco_communalism
-    - cartels_de_narration_de_penurie_eco_communalism
-    - courant_isolationniste_anti_circulation_de_l_information_eco_communalism
-
+- cartels_de_narration_de_penurie_eco_communalism
+- conseils_territoriaux_opaques_sur_la_gestion_des_ressources_eco_communalism
+- courant_isolationniste_anti_circulation_de_l_information_eco_communalism
+- directive_kontinuum_eco_communalism
+- factions_communautaires_refusant_le_partage_narratif_exterieur_eco_communalism
 type_relation_dominante: symbiose
 
 annee_debut: 2041
@@ -82,12 +83,21 @@ Documenter les pratiques de gouvernance locale, les tensions sur les ressources 
 - [[technologie_information]]
 - [[gouvernance_institutions]]
 
-## Relations
-**Alliés** : [[assemblees_cooperatives_regionales_eco_communalism]], [[reseaux_de_bibliotheques_archives_communautaires_eco_communalism]], [[collectifs_de_cartographie_ecologique_participative_eco_communalism]]
-**Opposants** : [[conseils_territoriaux_opaques_sur_la_gestion_des_ressources_eco_communalism]], [[cartels_de_narration_de_penurie_eco_communalism]], [[courant_isolationniste_anti_circulation_de_l_information_eco_communalism]]
 
 ## Description journalistique
 On reconnaît une publication du Fil Commun à l'encre de synthèse végétale sur papier recyclé gris, ou au timbre sonore particulier de ses bulletins radio — une voix lente, sans musique d'habillage, presque délibérément humble. En 2098, le réseau compte environ deux mille correspondants permanents et plusieurs dizaines de milliers de relayeurs occasionnels à travers les territoires du bassin ourrassoli. Ce n'est pas un média de masse : c'est un média de précision communautaire, dont chaque édition est pensée pour un territoire, une saison, un débat en cours. Il lui arrive aussi de publier des choses qui dérangent — des enquêtes sur des détournements de semences, des conflits d'eau enterrés par les assemblées — et c'est là que son utilité se révèle la plus âpre.
 
 ## Tensions narratives
 Le Fil Commun est tiraillé entre sa vocation d'outil commun et la tentation de certains nœuds régionaux de l'instrumentaliser pour amplifier leurs propres positions dans les négociations de ressources. Une enquête en cours sur la dissimulation de données de contamination hydrique par une assemblée du sud menace de fracturer pour la première fois le réseau selon des lignes géographiques. Par ailleurs, la question de savoir s'il faut ou non documenter les accords informels avec des entités marchandes extérieures divise profondément les correspondants : la transparence totale est-elle toujours un bien commun, ou peut-elle fragiliser des équilibres locaux précaires ?
+
+## Relations
+**Alliés :**
+- [[assemblees_cooperatives_regionales_eco_communalism]]
+- [[collectifs_de_cartographie_ecologique_participative_eco_communalism]]
+- [[reseaux_de_bibliotheques_archives_communautaires_eco_communalism]]
+**Opposants :**
+- [[cartels_de_narration_de_penurie_eco_communalism]]
+- [[conseils_territoriaux_opaques_sur_la_gestion_des_ressources_eco_communalism]]
+- [[courant_isolationniste_anti_circulation_de_l_information_eco_communalism]]
+- [[directive_kontinuum_eco_communalism]]
+- [[factions_communautaires_refusant_le_partage_narratif_exterieur_eco_communalism]]

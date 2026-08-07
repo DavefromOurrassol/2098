@@ -4,6 +4,7 @@ type: instance
 slug: tbilissi_noeud_mnemos_reference
 entite: tbilissi_noeud_mnemos
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: tbilissi_noeud_mnemos
   lieu: Tbilissi
@@ -37,27 +38,26 @@ zone_systemique:
     - cyberspace
 
 alliances:
-    - reseau_mnemos_reference
-    - collectifs_academiques_independants_reference
-    - ong_de_preservation_patrimoniale_numerique_reference
-    - reseau_meshcommons_netsolidaire_reference
-    - mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
-    - universites_et_think_tanks_en_zones_de_liberte_academique_reference
-    - ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference
-    - helsinki_communs_numeriques_reference
-    - bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference
-    - reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference
-
+- bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference
+- collectifs_academiques_independants_reference
+- helsinki_communs_numeriques_reference
+- ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference
+- mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
+- ong_de_preservation_patrimoniale_numerique_reference
+- reseau_meshcommons_netsolidaire_reference
+- reseau_mnemos_reference
+- reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference
+- siberie_federale_reference
+- universites_et_think_tanks_en_zones_de_liberte_academique_reference
 oppositions:
-    - consortium_des_grandes_plateformes_ia_integrees_reference
-    - consortiums_prives_de_gestion_des_donnees_critiques_reference
-    - regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference
-    - etats_a_tendance_centraliste_numerique_reference
-    - plateformes_centralisees_de_narration_officielle_reference
-    - services_de_contre_information_des_blocs_geopolitiques_concurrents_reference
-    - bureaux_de_regulation_informationnelle_reference
-    - bloc_eurasien_central_reference
-
+- bloc_eurasien_central_reference
+- bureaux_de_regulation_informationnelle_reference
+- consortium_des_grandes_plateformes_ia_integrees_reference
+- consortiums_prives_de_gestion_des_donnees_critiques_reference
+- etats_a_tendance_centraliste_numerique_reference
+- plateformes_centralisees_de_narration_officielle_reference
+- regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference
+- services_de_contre_information_des_blocs_geopolitiques_concurrents_reference
 type_relation_dominante: rivalité
 
 annee_debut: 2041
@@ -101,12 +101,32 @@ Le Nœud collecte, indexe et redistribue des archives culturelles, linguistiques
 - [[gouvernance_institutions]]
 - [[geopolitique_conflits]]
 
-## Relations
-**Alliés** : [[reseau_mnemos_reference]], [[collectifs_academiques_independants_reference]], [[ong_de_preservation_patrimoniale_numerique_reference]], [[reseau_meshcommons_netsolidaire_reference]], [[mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference]], [[universites_et_think_tanks_en_zones_de_liberte_academique_reference]], [[ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference]], [[helsinki_communs_numeriques_reference]], [[bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference]], [[reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference]]
-**Opposants** : [[consortium_des_grandes_plateformes_ia_integrees_reference]], [[consortiums_prives_de_gestion_des_donnees_critiques_reference]], [[regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference]], [[etats_a_tendance_centraliste_numerique_reference]], [[plateformes_centralisees_de_narration_officielle_reference]], [[services_de_contre_information_des_blocs_geopolitiques_concurrents_reference]], [[bureaux_de_regulation_informationnelle_reference]], [[bloc_eurasien_central_reference]]
 
 ## Description journalistique
 Dans les sous-sols renforcés d'un ancien bâtiment de l'Académie des Sciences géorgienne, plusieurs milliers de téraoctets de mémoires régionales survivent à la guerre des données. Le Nœud Mnemos de Tbilissi, fondé dans les années 2040 en réponse aux premières grandes purges informationnelles du Bloc Eurasien Central, s'est imposé comme la bibliothèque de l'impensable : on y trouve des dialectes kartvéliens en voie d'extinction, des registres fonciers contestés du Karabakh d'avant-guerre, des corpus de jurisprudence islamique centre-asiatique effacés des plateformes commerciales. Ses équipes — une centaine de personnes, entre archivistes, ingénieurs réseau et médiateurs culturels — travaillent sous une pression croissante : les régulateurs eurasiatiques réclament des droits d'accès, les corporations de données offrent des rachats, et certains États financeurs exigent des exclusivités. Le Nœud tient, pour l'instant, en jouant ses contradicteurs les uns contre les autres.
 
 ## Tensions narratives
 La tension centrale est celle d'un bien commun sous siège : le Nœud ne peut survivre financièrement sans accepter des partenariats avec des acteurs qui ont intérêt à orienter ce qui est conservé et ce qui ne l'est pas. Un État partenaire réclame la suppression d'archives documentant ses propres violences passées, menaçant de couper son financement — et son accord de non-ingérence opérationnelle. Parallèlement, une faction interne au Nœud pousse à une ouverture totale des archives, au risque d'exposer des témoins protégés encore en vie. Enfin, le Réseau Mnemos global propose une intégration formelle qui garantirait des ressources mais diluerait l'autonomie régionale — une offre que certains voient comme une salvation, d'autres comme une absorption déguisée.
+
+## Relations
+**Alliés :**
+- [[bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference]]
+- [[collectifs_academiques_independants_reference]]
+- [[helsinki_communs_numeriques_reference]]
+- [[ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference]]
+- [[mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference]]
+- [[ong_de_preservation_patrimoniale_numerique_reference]]
+- [[reseau_meshcommons_netsolidaire_reference]]
+- [[reseau_mnemos_reference]]
+- [[reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference]]
+- [[siberie_federale_reference]]
+- [[universites_et_think_tanks_en_zones_de_liberte_academique_reference]]
+**Opposants :**
+- [[bloc_eurasien_central_reference]]
+- [[bureaux_de_regulation_informationnelle_reference]]
+- [[consortium_des_grandes_plateformes_ia_integrees_reference]]
+- [[consortiums_prives_de_gestion_des_donnees_critiques_reference]]
+- [[etats_a_tendance_centraliste_numerique_reference]]
+- [[plateformes_centralisees_de_narration_officielle_reference]]
+- [[regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference]]
+- [[services_de_contre_information_des_blocs_geopolitiques_concurrents_reference]]

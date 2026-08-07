@@ -4,6 +4,7 @@ type: instance
 slug: conseil_moscou_est_fortress_world
 entite: conseil_moscou_est
 scenario: fortress_world
+statut: officialise_enrichi
 localisation:
   zone: conseil_moscou_est
   lieu: Moscou-Est
@@ -38,25 +39,36 @@ zone_systemique:
     - énergie
 
 alliances:
-    - regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world
-    - bloc_eurasiatique_occidental_fortress_world
-    - agences_de_securite_interieure_des_etats_forteresses_fortress_world
-    - dispositifs_de_surveillance_numerique_souveraine_fortress_world
-    - systemes_de_scoring_de_productivite_corporative_fortress_world
-    - administrations_de_controle_frontalier_des_blocs_fortress_world
-    - directive_kontinuum_fortress_world
-    - grille_aria_fortress_world
-
+- administrations_de_controle_frontalier_des_blocs_fortress_world
+- agences_de_securite_interieure_des_etats_forteresses_fortress_world
+- bloc_eurasiatique_occidental_fortress_world
+- bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world
+- commandements_logistiques_peripheriques_du_bloc_eurasien_central_fortress_world
+- consortium_eurasiatique_des_ressources_fermees_fortress_world
+- consortiums_energetiques_du_bloc_ourrassol_fortress_world
+- datacenters_conseil_eurasiatique_fortress_world
+- directive_kontinuum_fortress_world
+- dispositifs_de_surveillance_numerique_souveraine_fortress_world
+- grille_aria_fortress_world
+- nexus_biosyn_division_eurasienne_fortress_world
+- regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world
+- systemes_de_scoring_de_productivite_corporative_fortress_world
+- tours_nexus7_fortress_world
+- zone_usines_forteresses_eurasie_fortress_world
 oppositions:
-    - communautes_deplacees_hors_quota_migratoire_fortress_world
-    - campements_seuils_fermes_fortress_world
-    - collectifs_du_seuil_fortress_world
-    - coalitions_des_deplaces_et_apatrides_fortress_world
-    - alliance_sanitaire_des_populations_exclues_fortress_world
-    - reseaux_d_echange_clandestin_inter_zones_fortress_world
-    - cellules_mouvement_commun_midwest_fortress_world
-    - voix_du_dehors_fortress_world
-
+- alliance_sanitaire_des_populations_exclues_fortress_world
+- archives_diplomatiques_de_l_onu_eclat_fortress_world
+- campements_seuils_fermes_fortress_world
+- cellules_mouvement_commun_midwest_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- collectifs_du_seuil_fortress_world
+- communautes_deplacees_hors_quota_migratoire_fortress_world
+- corridors_gris_asie_centrale_fortress_world
+- dissidences_internes_aux_blocs_minoritaires_fortress_world
+- marches_gris_tbilissi_fortress_world
+- reseaux_d_echange_clandestin_inter_zones_fortress_world
+- reseaux_de_contrebande_energetique_transfrontaliere_fortress_world
+- voix_du_dehors_fortress_world
 type_relation_dominante: dépendance
 
 annee_debut: 2061
@@ -100,12 +112,42 @@ Le Conseil émet, suspend et révoque les accréditations biométriques donnant 
 - [[demographie_mobilite_humaine]]
 - [[energie_ressources_critiques]]
 
-## Relations
-**Alliés** : [[regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world]], [[bloc_eurasiatique_occidental_fortress_world]], [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]], [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]], [[systemes_de_scoring_de_productivite_corporative_fortress_world]], [[administrations_de_controle_frontalier_des_blocs_fortress_world]], [[directive_kontinuum_fortress_world]], [[grille_aria_fortress_world]]
-**Opposants** : [[communautes_deplacees_hors_quota_migratoire_fortress_world]], [[campements_seuils_fermes_fortress_world]], [[collectifs_du_seuil_fortress_world]], [[coalitions_des_deplaces_et_apatrides_fortress_world]], [[alliance_sanitaire_des_populations_exclues_fortress_world]], [[reseaux_d_echange_clandestin_inter_zones_fortress_world]], [[cellules_mouvement_commun_midwest_fortress_world]], [[voix_du_dehors_fortress_world]]
 
 ## Description journalistique
 Dans les sous-niveaux climatisés de Moscou-Est, le Conseil des Zones Accréditées règne sur 340 000 personnes dont la survie tient à un badge biométrique renouvelable tous les quatre-vingt-dix jours. Les journalistes qui ont pu y accéder — rares, encadrés, filmés — décrivent des couloirs de béton immaculés où des agents en combinaison grise vérifient la température corporelle, le score de conformité et la dette énergétique de chaque résident avant de l'autoriser à franchir un sas. Dehors, à quelques mètres des parois isolées, le thermomètre affiche régulièrement 54°C en juillet. Le Conseil ne cache pas cette frontière : il l'exhibe comme une preuve de sa légitimité. 'Ceux qui sont ici ont mérité d'y être', répète la formule officielle gravée aux entrées des blocs. Pour les dizaines de milliers qui campent dans les zones tampons extérieures, cette phrase sonne comme un verdict irrévocable.
 
 ## Tensions narratives
 Le système d'accréditation biométrique commence à présenter des failles : des cas de révocation arbitraire pour 'anomalie comportementale' alimentent une dissidence interne silencieuse parmi les techniciens et les agents de maintenance eux-mêmes, dont certains entretiennent des contacts avec les réseaux clandestins des zones tampons. Par ailleurs, la pression démographique extérieure atteint un seuil critique — les campements périphériques ont triplé en dix-huit mois — et plusieurs factions internes débattent de l'ouverture d'un quota humanitaire d'urgence, ce que les tenants de la ligne dure perçoivent comme une capitulation existentielle. La question qui structure toutes les autres : jusqu'où le Conseil peut-il resserrer l'étau avant que ses propres administrés, devenus otages de leur accréditation, ne se retournent contre lui ?
+
+## Relations
+**Alliés :**
+- [[administrations_de_controle_frontalier_des_blocs_fortress_world]]
+- [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]]
+- [[bloc_eurasiatique_occidental_fortress_world]]
+- [[bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world]]
+- [[commandements_logistiques_peripheriques_du_bloc_eurasien_central_fortress_world]]
+- [[consortium_eurasiatique_des_ressources_fermees_fortress_world]]
+- [[consortiums_energetiques_du_bloc_ourrassol_fortress_world]]
+- [[datacenters_conseil_eurasiatique_fortress_world]]
+- [[directive_kontinuum_fortress_world]]
+- [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
+- [[grille_aria_fortress_world]]
+- [[nexus_biosyn_division_eurasienne_fortress_world]]
+- [[regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world]]
+- [[systemes_de_scoring_de_productivite_corporative_fortress_world]]
+- [[tours_nexus7_fortress_world]]
+- [[zone_usines_forteresses_eurasie_fortress_world]]
+**Opposants :**
+- [[alliance_sanitaire_des_populations_exclues_fortress_world]]
+- [[archives_diplomatiques_de_l_onu_eclat_fortress_world]]
+- [[campements_seuils_fermes_fortress_world]]
+- [[cellules_mouvement_commun_midwest_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[collectifs_du_seuil_fortress_world]]
+- [[communautes_deplacees_hors_quota_migratoire_fortress_world]]
+- [[corridors_gris_asie_centrale_fortress_world]]
+- [[dissidences_internes_aux_blocs_minoritaires_fortress_world]]
+- [[marches_gris_tbilissi_fortress_world]]
+- [[reseaux_d_echange_clandestin_inter_zones_fortress_world]]
+- [[reseaux_de_contrebande_energetique_transfrontaliere_fortress_world]]
+- [[voix_du_dehors_fortress_world]]

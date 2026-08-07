@@ -35,8 +35,34 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- administrations_hybrides_des_cites_relais_peripheriques_reference
+- banque_des_communs_reference
+- collectifs_de_journalistes_independants_regionaux_reference
+- communs_numeriques_agroecologiques_reference
+- cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference
+- cooperatives_energetiques_decentralisees_reference
+- delta_du_mekong_reference
+- europe_occidentale_reconstructee_reference
+- federation_communs_territoriaux_reference
+- federation_des_cliniques_autonomes_reference
+- frente_sert_o_livre_reference
+- institutions_multilaterales_survivantes_reference
+- mouvement_racines_vivantes_reference
+- ong_environnementales_de_terrain_reference
+- reseau_des_administrations_locales_rurales_participatives_reference
+- reseau_des_cooperatives_agro_saheliennes_reference
+- reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference
+- reseaux_de_capteurs_citoyens_reference
+- syndicats_de_travail_rural_hybride_reference
+- union_africaine_de_resilience_territoriale_reference
+oppositions:
+- agrisynth_reference
+- consortiums_d_agriculture_verticale_algorithmique_reference
+- consortiums_prives_d_extraction_de_ressources_critiques_reference
+- ecosynth_global_reference
+- fonds_d_investissement_foncier_climatique_reference
+- lobbies_agro_industriels_a_haute_consommation_d_eau_reference
 type_relation_dominante: symbiose
 annee_debut: 2026
 annee_fin: null
@@ -100,6 +126,37 @@ Les coopératives sont prises en étau entre leur vocation d'autonomie locale et
 - [[organisation_territoires]]
 - [[systemes_productifs_travail]]
 - [[climat_environnement_global]]
+
+
+## Relations
+**Alliés :**
+- [[administrations_hybrides_des_cites_relais_peripheriques_reference]]
+- [[banque_des_communs_reference]]
+- [[collectifs_de_journalistes_independants_regionaux_reference]]
+- [[communs_numeriques_agroecologiques_reference]]
+- [[cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference]]
+- [[cooperatives_energetiques_decentralisees_reference]]
+- [[delta_du_mekong_reference]]
+- [[europe_occidentale_reconstructee_reference]]
+- [[federation_communs_territoriaux_reference]]
+- [[federation_des_cliniques_autonomes_reference]]
+- [[frente_sert_o_livre_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
+- [[mouvement_racines_vivantes_reference]]
+- [[ong_environnementales_de_terrain_reference]]
+- [[reseau_des_administrations_locales_rurales_participatives_reference]]
+- [[reseau_des_cooperatives_agro_saheliennes_reference]]
+- [[reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference]]
+- [[reseaux_de_capteurs_citoyens_reference]]
+- [[syndicats_de_travail_rural_hybride_reference]]
+- [[union_africaine_de_resilience_territoriale_reference]]
+**Opposants :**
+- [[agrisynth_reference]]
+- [[consortiums_d_agriculture_verticale_algorithmique_reference]]
+- [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[ecosynth_global_reference]]
+- [[fonds_d_investissement_foncier_climatique_reference]]
+- [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

@@ -37,10 +37,23 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
+alliances:
+- seigneurs_de_guerre_agro_territoriaux_breakdown
 oppositions:
+- bureau_des_territoires_residuels_breakdown
+- communautes_paysannes_refugiees_breakdown
 - communes_rust_belt_breakdown
+- communes_rust_belt_zones_libres_breakdown
+- consortium_amazonia_viva_breakdown
+- cooperative_terrafond_breakdown
+- delta_mekong_racines_breakdown
+- factions_secessionnistes_agrariennes_du_desert_breakdown
+- frente_sert_o_livre_breakdown
+- ligue_des_cites_littorales_en_sursis_breakdown
+- massif_central_cicatrices_vertes_breakdown
+- noeud_mnemos_pannonie_breakdown
 - occitanie_racines_meres_breakdown
+- vallee_allier_terrafond_breakdown
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -98,10 +111,25 @@ La tension centrale est celle d'une entité qui a besoin de stabilité pour rent
 - [[gouvernance_institutions]]
 - [[systeme_economique_redistribution]]
 
+
 ## Relations
+**Alliés :**
+- [[seigneurs_de_guerre_agro_territoriaux_breakdown]]
 **Opposants :**
+- [[bureau_des_territoires_residuels_breakdown]]
+- [[communautes_paysannes_refugiees_breakdown]]
 - [[communes_rust_belt_breakdown]]
+- [[communes_rust_belt_zones_libres_breakdown]]
+- [[consortium_amazonia_viva_breakdown]]
+- [[cooperative_terrafond_breakdown]]
+- [[delta_mekong_racines_breakdown]]
+- [[factions_secessionnistes_agrariennes_du_desert_breakdown]]
+- [[frente_sert_o_livre_breakdown]]
+- [[ligue_des_cites_littorales_en_sursis_breakdown]]
+- [[massif_central_cicatrices_vertes_breakdown]]
+- [[noeud_mnemos_pannonie_breakdown]]
 - [[occitanie_racines_meres_breakdown]]
+- [[vallee_allier_terrafond_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

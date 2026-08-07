@@ -31,8 +31,37 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- bloc_des_souverainistes_climatiques_reference
+- bloc_eurasien_central_reference
+- bloc_ressources_eurasiatique_bre_reference
+- consortiums_d_extraction_miniere_du_bassin_congolais_reference
+- consortiums_prives_d_extraction_de_ressources_critiques_reference
+- factions_d_extraction_miniere_independantes_reference
+- gouvernements_federaux_residuels_souverainistes_reference
+- lobbies_industriels_des_etats_non_signataires_reference
+- milices_concurrentes_des_droits_de_passage_reference
+- operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference
+oppositions:
+- agence_internationale_des_energies_renouvelables_irena_2_reference
+- agence_stabilisation_climatique_reference
+- arctic_passage_authority_reference
+- banque_mondiale_des_transitions_climatiques_reference
+- blocs_signataires_du_pacte_energetique_multilateral_reference
+- consortium_des_fournisseurs_d_energie_renouvelable_distribuee_reference
+- consortium_energetique_baltique_reference
+- cooperatives_energetiques_decentralisees_reference
+- fonds_monetaire_climatique_fmc_reference
+- gouvernements_du_bloc_sahelien_autonome_reference
+- institutions_multilaterales_survivantes_reference
+- murmansk_transit_arctique_reference
+- observatoire_climatique_des_territoires_oct_reference
+- ong_de_tracabilite_des_ressources_critiques_reference
+- ong_environnementales_de_terrain_reference
+- oracle_des_seuils_reference
+- pacifique_sud_archipels_flottants_reference
+- pacifique_sud_resilience_network_reference
+- syndicats_de_travailleurs_de_la_transition_energetique_reference
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -96,6 +125,40 @@ La tension centrale est existentielle : à mesure que les technologies de stocka
 - [[energie_ressources_critiques]]
 - [[gouvernance_institutions]]
 - [[geopolitique_conflits]]
+
+
+## Relations
+**Alliés :**
+- [[bloc_des_souverainistes_climatiques_reference]]
+- [[bloc_eurasien_central_reference]]
+- [[bloc_ressources_eurasiatique_bre_reference]]
+- [[consortiums_d_extraction_miniere_du_bassin_congolais_reference]]
+- [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[factions_d_extraction_miniere_independantes_reference]]
+- [[gouvernements_federaux_residuels_souverainistes_reference]]
+- [[lobbies_industriels_des_etats_non_signataires_reference]]
+- [[milices_concurrentes_des_droits_de_passage_reference]]
+- [[operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference]]
+**Opposants :**
+- [[agence_internationale_des_energies_renouvelables_irena_2_reference]]
+- [[agence_stabilisation_climatique_reference]]
+- [[arctic_passage_authority_reference]]
+- [[banque_mondiale_des_transitions_climatiques_reference]]
+- [[blocs_signataires_du_pacte_energetique_multilateral_reference]]
+- [[consortium_des_fournisseurs_d_energie_renouvelable_distribuee_reference]]
+- [[consortium_energetique_baltique_reference]]
+- [[cooperatives_energetiques_decentralisees_reference]]
+- [[fonds_monetaire_climatique_fmc_reference]]
+- [[gouvernements_du_bloc_sahelien_autonome_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
+- [[murmansk_transit_arctique_reference]]
+- [[observatoire_climatique_des_territoires_oct_reference]]
+- [[ong_de_tracabilite_des_ressources_critiques_reference]]
+- [[ong_environnementales_de_terrain_reference]]
+- [[oracle_des_seuils_reference]]
+- [[pacifique_sud_archipels_flottants_reference]]
+- [[pacifique_sud_resilience_network_reference]]
+- [[syndicats_de_travailleurs_de_la_transition_energetique_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

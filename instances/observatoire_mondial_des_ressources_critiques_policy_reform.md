@@ -33,8 +33,29 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_internationale_de_l_energie_reformatee_aier_policy_reform
+- agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
+- arctic_passage_authority_policy_reform
+- autorite_mondiale_du_vivant_amv_policy_reform
+- conseil_de_regulation_climatique_global_policy_reform
+- conseil_regulation_ressources_policy_reform
+- consortium_amazonia_viva_policy_reform
+- fonds_de_stabilisation_climatique_onu_3_policy_reform
+- fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform
+- great_lakes_autonomous_compact_policy_reform
+- grille_aria_policy_reform
+- kalaallit_nunaat_sovereign_fund_policy_reform
+- oracle_des_seuils_policy_reform
+- pacifique_sud_resilience_network_policy_reform
+- reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
+oppositions:
+- coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform
+- front_des_souverainistes_energetiques_policy_reform
+- front_souverainiste_des_blocs_non_signataires_policy_reform
+- gouvernements_populistes_anti_depossession_policy_reform
+- lobbies_des_energies_fossiles_residuelles_policy_reform
+- syndicats_d_extraction_privee_non_regules_policy_reform
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -98,6 +119,32 @@ L'OMRC est pris en étau entre sa mission de neutralité scientifique et la réa
 - [[energie_ressources_critiques]]
 - [[gouvernance_institutions]]
 - [[geopolitique_conflits]]
+
+
+## Relations
+**Alliés :**
+- [[agence_internationale_de_l_energie_reformatee_aier_policy_reform]]
+- [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]
+- [[arctic_passage_authority_policy_reform]]
+- [[autorite_mondiale_du_vivant_amv_policy_reform]]
+- [[conseil_de_regulation_climatique_global_policy_reform]]
+- [[conseil_regulation_ressources_policy_reform]]
+- [[consortium_amazonia_viva_policy_reform]]
+- [[fonds_de_stabilisation_climatique_onu_3_policy_reform]]
+- [[fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform]]
+- [[great_lakes_autonomous_compact_policy_reform]]
+- [[grille_aria_policy_reform]]
+- [[kalaallit_nunaat_sovereign_fund_policy_reform]]
+- [[oracle_des_seuils_policy_reform]]
+- [[pacifique_sud_resilience_network_policy_reform]]
+- [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]]
+**Opposants :**
+- [[coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform]]
+- [[front_des_souverainistes_energetiques_policy_reform]]
+- [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+- [[gouvernements_populistes_anti_depossession_policy_reform]]
+- [[lobbies_des_energies_fossiles_residuelles_policy_reform]]
+- [[syndicats_d_extraction_privee_non_regules_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

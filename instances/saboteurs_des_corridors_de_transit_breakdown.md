@@ -34,8 +34,35 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- collectif_hackers_decroissance_infrastructure_breakdown
+- communautes_paysannes_refugiees_breakdown
+- communautes_rurales_autonomes_breakdown
+- front_de_resistance_aux_peages_sur_les_ressources_breakdown
+- reseaux_de_solidarite_horizontale_post_effondrement_breakdown
+oppositions:
+- arctic_passage_authority_breakdown
+- autorite_passage_arctique_breakdown
+- blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
+- cargo_mombasa_crrc_breakdown
+- cartels_logistiques_regionaux_breakdown
+- carthage_nord_nexcore_breakdown
+- conglometrat_sino_siberien_bohai_transit_breakdown
+- consortium_energetique_oural_caspien_breakdown
+- consortiums_logistiques_agro_corporatifs_breakdown
+- corridor_lithium_bouches_breakdown
+- corridors_eurasiens_convoyage_breakdown
+- district_mourmansk_residuel_breakdown
+- enclaves_corporatives_fortifiees_breakdown
+- factions_energetiques_heritieres_des_pactes_abs_breakdown
+- factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
+- hanse_baltique_breakdown
+- kalaallit_nunaat_sovereign_fund_breakdown
+- milices_contractuelles_des_anciens_etats_membres_breakdown
+- milices_privees_documentees_terrain_breakdown
+- noeud_nordark_tromso_breakdown
+- seigneuries_logistiques_armees_breakdown
+- trame_bioclimatique_breakdown
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -93,6 +120,38 @@ Leur résistance diffuse accélère l'effondrement qu'ils subissent eux-mêmes :
 - [[demographie_mobilite_humaine]]
 - [[organisation_territoires]]
 - [[geopolitique_conflits]]
+
+
+## Relations
+**Alliés :**
+- [[collectif_hackers_decroissance_infrastructure_breakdown]]
+- [[communautes_paysannes_refugiees_breakdown]]
+- [[communautes_rurales_autonomes_breakdown]]
+- [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
+- [[reseaux_de_solidarite_horizontale_post_effondrement_breakdown]]
+**Opposants :**
+- [[arctic_passage_authority_breakdown]]
+- [[autorite_passage_arctique_breakdown]]
+- [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
+- [[cargo_mombasa_crrc_breakdown]]
+- [[cartels_logistiques_regionaux_breakdown]]
+- [[carthage_nord_nexcore_breakdown]]
+- [[conglometrat_sino_siberien_bohai_transit_breakdown]]
+- [[consortium_energetique_oural_caspien_breakdown]]
+- [[consortiums_logistiques_agro_corporatifs_breakdown]]
+- [[corridor_lithium_bouches_breakdown]]
+- [[corridors_eurasiens_convoyage_breakdown]]
+- [[district_mourmansk_residuel_breakdown]]
+- [[enclaves_corporatives_fortifiees_breakdown]]
+- [[factions_energetiques_heritieres_des_pactes_abs_breakdown]]
+- [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]]
+- [[hanse_baltique_breakdown]]
+- [[kalaallit_nunaat_sovereign_fund_breakdown]]
+- [[milices_contractuelles_des_anciens_etats_membres_breakdown]]
+- [[milices_privees_documentees_terrain_breakdown]]
+- [[noeud_nordark_tromso_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]
+- [[trame_bioclimatique_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

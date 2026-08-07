@@ -4,6 +4,7 @@ type: instance
 slug: ligue_des_cites_du_sahel_numerique_eco_communalism
 entite: ligue_des_cites_du_sahel_numerique
 scenario: eco_communalism
+statut: officialise_enrichi
 localisation:
   zone: sahel_numerique_ligue
   lieu: Ligue des Cités du Sahel Numérique
@@ -37,24 +38,24 @@ zone_systemique:
     - infrastructure
 
 alliances:
-    - collectifs_de_techniciens_sobres_eco_communalism
-    - mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism
-    - reseaux_de_radio_communautaire_basse_consommation_eco_communalism
-    - assemblees_cooperatives_regionales_eco_communalism
-    - confederation_des_communs_de_l_arc_septentrional_eco_communalism
-    - archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
-    - factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism
-    - reseau_mnemos_eco_communalism
-
+- archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
+- assemblees_cooperatives_regionales_eco_communalism
+- collectifs_de_techniciens_sobres_eco_communalism
+- confederation_des_communs_de_l_arc_septentrional_eco_communalism
+- consortium_africain_de_biotechnologies_sociales_eco_communalism
+- factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism
+- mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism
+- reseau_mnemos_eco_communalism
+- reseaux_de_radio_communautaire_basse_consommation_eco_communalism
+- sao_paulo_algorithmique_eco_communalism
 oppositions:
-    - consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism
-    - reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism
-    - plateformes_centralisees_de_reagregation_globale_eco_communalism
-    - courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism
-    - factions_autoritaires_de_controle_du_savoir_eco_communalism
-    - courant_isolationniste_anti_circulation_de_l_information_eco_communalism
-    - fragments_d_etats_centraux_residuels_eco_communalism
-
+- consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism
+- courant_isolationniste_anti_circulation_de_l_information_eco_communalism
+- courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism
+- factions_autoritaires_de_controle_du_savoir_eco_communalism
+- fragments_d_etats_centraux_residuels_eco_communalism
+- plateformes_centralisees_de_reagregation_globale_eco_communalism
+- reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism
 type_relation_dominante: alliance stratégique
 
 annee_debut: 2041
@@ -98,12 +99,30 @@ Déploiement et maintenance d'un maillage solaire distribué interconnectant les
 - [[gouvernance_institutions]]
 - [[geopolitique_conflits]]
 
-## Relations
-**Alliés** : [[collectifs_de_techniciens_sobres_eco_communalism]], [[mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism]], [[reseaux_de_radio_communautaire_basse_consommation_eco_communalism]], [[assemblees_cooperatives_regionales_eco_communalism]], [[confederation_des_communs_de_l_arc_septentrional_eco_communalism]], [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]], [[factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism]], [[reseau_mnemos_eco_communalism]]
-**Opposants** : [[consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism]], [[reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism]], [[plateformes_centralisees_de_reagregation_globale_eco_communalism]], [[courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism]], [[factions_autoritaires_de_controle_du_savoir_eco_communalism]], [[courant_isolationniste_anti_circulation_de_l_information_eco_communalism]], [[fragments_d_etats_centraux_residuels_eco_communalism]]
 
 ## Description journalistique
 Depuis les toits couverts de panneaux solaires d'Agadez jusqu'aux data-centres enterrés de Niamey, la Ligue des Cités du Sahel Numérique a réussi ce que beaucoup jugeaient impossible en 2040 : bâtir une souveraineté numérique entière à partir des ressources d'un territoire que l'on croyait condamné à la périphérie. Ses protocoles SahelOS, désormais déployés dans quarante-trois communautés de Dakar à Tamanrasset, sont devenus la référence mondiale de l'architecture informationnelle sobre — plus copiés que certains standards issus de Bruxelles ou de Pékin. Les délégués des dix-huit cités se réunissent chaque saison sous la Tente des Protocoles, une assemblée nomade itinérante qui se déplace de ville en ville pour symboliser que nul centre ne gouverne les autres. Mais des observateurs pointent une ironie croissante : à mesure que le modèle s'exporte, la Ligue commence à dicter des conditions d'adhésion, à certifier des conformités, à peser sur les choix technologiques de territoires lointains — reproduisant, par le succès même, la logique hégémonique qu'elle prétendait abolir.
 
 ## Tensions narratives
 La Ligue oscille entre deux identités contradictoires : émancipatrice horizontale ou nouvelle puissance normative sahélienne. Les cités fondatrices comme Agadez revendiquent une voix égale à Ouagadougou, mais la concentration des ingénieurs et des serveurs dans les métropoles crée des asymétries invisibles que les protocoles ouverts peinent à corriger. Par ailleurs, des territoires du Maghreb adoptant SahelOS signalent des dépendances techniques croissantes envers les cités membres pour la maintenance — une forme de néo-dépendance que la Ligue n'a pas encore su résoudre. Enfin, la pression des blocs fermés — qui voient dans la Ligue un modèle de contagion — monte, alimentant des rumeurs d'infiltration et de sabotage des nœuds périphériques.
+
+## Relations
+**Alliés :**
+- [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]]
+- [[assemblees_cooperatives_regionales_eco_communalism]]
+- [[collectifs_de_techniciens_sobres_eco_communalism]]
+- [[confederation_des_communs_de_l_arc_septentrional_eco_communalism]]
+- [[consortium_africain_de_biotechnologies_sociales_eco_communalism]]
+- [[factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism]]
+- [[mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism]]
+- [[reseau_mnemos_eco_communalism]]
+- [[reseaux_de_radio_communautaire_basse_consommation_eco_communalism]]
+- [[sao_paulo_algorithmique_eco_communalism]]
+**Opposants :**
+- [[consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism]]
+- [[courant_isolationniste_anti_circulation_de_l_information_eco_communalism]]
+- [[courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism]]
+- [[factions_autoritaires_de_controle_du_savoir_eco_communalism]]
+- [[fragments_d_etats_centraux_residuels_eco_communalism]]
+- [[plateformes_centralisees_de_reagregation_globale_eco_communalism]]
+- [[reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism]]

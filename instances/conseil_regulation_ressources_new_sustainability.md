@@ -4,6 +4,7 @@ type: instance
 slug: conseil_regulation_ressources_new_sustainability
 entite: conseil_regulation_ressources
 scenario: new_sustainability
+statut: officialise_enrichi
 localisation:
   zone: hub_nairobi_kigali
   lieu: Kigali
@@ -34,16 +35,30 @@ zone_systemique:
     - infrastructure
 
 alliances:
-    - reseau_des_villes_regeneratives_new_sustainability
-    - consortium_des_ia_climatiques_new_sustainability
-    - union_des_blocs_energetiques_regionaux_new_sustainability
-    - programme_onu_de_restauration_des_sols_new_sustainability
-
+- agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
+- agence_mondiale_de_modelisation_climatique_ammc_new_sustainability
+- bloc_eurasien_souverainiste_new_sustainability
+- centre_institutionnel_geneve_new_sustainability
+- conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability
+- consortium_des_ia_climatiques_new_sustainability
+- great_lakes_autonomous_compact_new_sustainability
+- great_lakes_compact_new_sustainability
+- kalaallit_nunaat_sovereign_fund_new_sustainability
+- observatoire_anti_monopole_de_geneve_new_sustainability
+- programme_onu_de_restauration_des_sols_new_sustainability
+- reseau_des_villes_regeneratives_new_sustainability
+- union_des_blocs_energetiques_regionaux_new_sustainability
 oppositions:
-    - lobbies_des_energies_fossiles_residuelles_policy_reform
-    - factions_souverainistes_des_blocs_peripheriques_new_sustainability
-    - collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability
-
+- coalition_anti_fiscalite_universelle_new_sustainability
+- collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability
+- collectifs_de_deplaces_climatiques_non_representes_new_sustainability
+- etats_souverainistes_anti_reseau_new_sustainability
+- factions_souverainistes_des_blocs_peripheriques_new_sustainability
+- internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
+- lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability
+- lobbies_des_energies_fossiles_residuelles_policy_reform
+- mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability
+- souverainistes_du_bloc_eurasien_new_sustainability
 type_relation_dominante: coopération
 
 annee_debut: 2061
@@ -86,12 +101,36 @@ L'AMRRT alloue les quotas d'extraction des minéraux critiques pour les infrastr
 - [[gouvernance_institutions]]
 - [[geopolitique_conflits]]
 
-## Relations
-**Alliés** : [[reseau_des_villes_regeneratives_new_sustainability]], [[consortium_des_ia_climatiques_new_sustainability]], [[union_des_blocs_energetiques_regionaux_new_sustainability]], [[programme_onu_de_restauration_des_sols_new_sustainability]]
-**Opposants** : [[lobbies_des_energies_fossiles_residuelles_policy_reform]], [[factions_souverainistes_des_blocs_peripheriques_new_sustainability]], [[collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability]]
 
 ## Description journalistique
 Depuis son siège circulaire de Kigali — ville choisie en 2061 comme symbole de la réconciliation post-extractiviste — l'AMRRT publie chaque lundi son tableau de bord des ressources mondiales, consulté par 194 gouvernements avant toute décision d'infrastructure majeure. Ses commissaires, issus de quotas régionaux stricts et assistés par l'IA Arbiter-7, ont tranché en 2097 plus de 340 litiges inter-étatiques sans qu'aucun n'escalade en conflit armé. Longtemps raillée comme 'chambre d'enregistrement des puissants', elle est aujourd'hui perçue comme l'un des piliers silencieux de la stabilité mondiale — celle qu'on remarque uniquement quand elle flanche.
 
 ## Tensions narratives
 La question lancinante de 2098 : l'AMRRT est-elle encore un organe de régulation ou est-elle devenue un gouvernement mondial de facto, légitimé par l'urgence mais jamais élu ? Des voix s'élèvent dans les blocs périphériques pour dénoncer une technocratie de la régénération qui décide, depuis Kigali, quelles terres peuvent être exploitées et lesquelles doivent 'se reposer'. La dépendance croissante à Arbiter-7 soulève une autre fracture : que se passe-t-il le jour où l'IA et les commissaires humains divergent sur une allocation critique ?
+
+## Relations
+**Alliés :**
+- [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]]
+- [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]]
+- [[bloc_eurasien_souverainiste_new_sustainability]]
+- [[centre_institutionnel_geneve_new_sustainability]]
+- [[conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability]]
+- [[consortium_des_ia_climatiques_new_sustainability]]
+- [[great_lakes_autonomous_compact_new_sustainability]]
+- [[great_lakes_compact_new_sustainability]]
+- [[kalaallit_nunaat_sovereign_fund_new_sustainability]]
+- [[observatoire_anti_monopole_de_geneve_new_sustainability]]
+- [[programme_onu_de_restauration_des_sols_new_sustainability]]
+- [[reseau_des_villes_regeneratives_new_sustainability]]
+- [[union_des_blocs_energetiques_regionaux_new_sustainability]]
+**Opposants :**
+- [[coalition_anti_fiscalite_universelle_new_sustainability]]
+- [[collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability]]
+- [[collectifs_de_deplaces_climatiques_non_representes_new_sustainability]]
+- [[etats_souverainistes_anti_reseau_new_sustainability]]
+- [[factions_souverainistes_des_blocs_peripheriques_new_sustainability]]
+- [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]]
+- [[lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability]]
+- [[lobbies_des_energies_fossiles_residuelles_policy_reform]]
+- [[mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability]]
+- [[souverainistes_du_bloc_eurasien_new_sustainability]]

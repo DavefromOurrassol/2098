@@ -33,8 +33,31 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
+- bureau_gouvernance_algorithmique_new_sustainability
+- centre_institutionnel_geneve_new_sustainability
+- conseil_energetique_intercontinental_new_sustainability
+- conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability
+- consortium_africain_de_biotechnologies_sociales_new_sustainability
+- consortium_helios_new_sustainability
+- grille_aria_new_sustainability
+- hub_nairobi_kigali_new_sustainability
+- ligue_des_cites_du_sahel_numerique_new_sustainability
+- nexus_biosyn_new_sustainability
+- oms_etendue_new_sustainability
+- pacifique_sud_resilience_network_new_sustainability
+- programme_onu_de_restauration_des_sols_new_sustainability
+- reseau_des_ingenieurs_climatiques_du_sud_global_new_sustainability
+- trame_bioclimatique_new_sustainability
+oppositions:
+- bloc_eurasien_souverainiste_new_sustainability
+- coalition_anti_fiscalite_universelle_new_sustainability
+- enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability
+- factions_souverainistes_des_blocs_peripheriques_new_sustainability
+- lobbies_agro_industriels_du_bassin_du_congo_new_sustainability
+- lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability
+- nexcore_new_sustainability
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -100,6 +123,34 @@ La tension centrale du FMRT réside dans la contradiction entre son mandat redis
 - [[systeme_economique_redistribution]]
 - [[gouvernance_institutions]]
 - [[technologie_information]]
+
+
+## Relations
+**Alliés :**
+- [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]]
+- [[bureau_gouvernance_algorithmique_new_sustainability]]
+- [[centre_institutionnel_geneve_new_sustainability]]
+- [[conseil_energetique_intercontinental_new_sustainability]]
+- [[conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability]]
+- [[consortium_africain_de_biotechnologies_sociales_new_sustainability]]
+- [[consortium_helios_new_sustainability]]
+- [[grille_aria_new_sustainability]]
+- [[hub_nairobi_kigali_new_sustainability]]
+- [[ligue_des_cites_du_sahel_numerique_new_sustainability]]
+- [[nexus_biosyn_new_sustainability]]
+- [[oms_etendue_new_sustainability]]
+- [[pacifique_sud_resilience_network_new_sustainability]]
+- [[programme_onu_de_restauration_des_sols_new_sustainability]]
+- [[reseau_des_ingenieurs_climatiques_du_sud_global_new_sustainability]]
+- [[trame_bioclimatique_new_sustainability]]
+**Opposants :**
+- [[bloc_eurasien_souverainiste_new_sustainability]]
+- [[coalition_anti_fiscalite_universelle_new_sustainability]]
+- [[enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability]]
+- [[factions_souverainistes_des_blocs_peripheriques_new_sustainability]]
+- [[lobbies_agro_industriels_du_bassin_du_congo_new_sustainability]]
+- [[lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability]]
+- [[nexcore_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

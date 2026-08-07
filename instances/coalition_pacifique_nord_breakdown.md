@@ -33,8 +33,20 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- consortiums_energetiques_samoiedes_du_yamal_breakdown
+- enclaves_industrielles_de_bergen_troms_breakdown
+- factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
+- kalaallit_nunaat_sovereign_fund_breakdown
+- ligue_eurasiatique_coalition_pacifique_breakdown
+oppositions:
+- arctic_passage_authority_breakdown
+- arctique_nordark_breakdown
+- autorite_passage_arctique_breakdown
+- conseil_regulation_ressources_breakdown
+- front_de_resistance_aux_peages_sur_les_ressources_breakdown
+- milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown
+- seoul_collectif_nexcore_breakdown
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -94,6 +106,23 @@ La contradiction fondamentale de la Coalition réside dans le fait que ses membr
 - [[geopolitique_conflits]]
 - [[energie_ressources_critiques]]
 - [[gouvernance_institutions]]
+
+
+## Relations
+**Alliés :**
+- [[consortiums_energetiques_samoiedes_du_yamal_breakdown]]
+- [[enclaves_industrielles_de_bergen_troms_breakdown]]
+- [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]]
+- [[kalaallit_nunaat_sovereign_fund_breakdown]]
+- [[ligue_eurasiatique_coalition_pacifique_breakdown]]
+**Opposants :**
+- [[arctic_passage_authority_breakdown]]
+- [[arctique_nordark_breakdown]]
+- [[autorite_passage_arctique_breakdown]]
+- [[conseil_regulation_ressources_breakdown]]
+- [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
+- [[milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown]]
+- [[seoul_collectif_nexcore_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

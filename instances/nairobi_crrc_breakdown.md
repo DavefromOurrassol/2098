@@ -4,6 +4,7 @@ type: instance
 slug: nairobi_crrc_breakdown
 entite: nairobi_crrc
 scenario: breakdown
+statut: officialise_enrichi
 localisation:
   zone: nairobi_crrc
   lieu: Nairobi
@@ -37,24 +38,25 @@ zone_systemique:
     - énergie
 
 alliances:
-    - brigades_medicales_itinerantes_breakdown
-    - collectifs_de_sante_communautaire_autogeree_breakdown
-    - cargo_mombasa_crrc_breakdown
-    - guilde_des_techniciens_nomades_breakdown
-    - reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown
-    - collectifs_de_reparation_energetique_breakdown
-    - grandes_lacs_compact_eau_breakdown
-    - reseaux_de_solidarite_horizontale_post_effondrement_breakdown
-
+- brigades_medicales_itinerantes_breakdown
+- cargo_mombasa_crrc_breakdown
+- collectifs_de_reparation_energetique_breakdown
+- collectifs_de_sante_communautaire_autogeree_breakdown
+- grandes_lacs_compact_eau_breakdown
+- guilde_des_techniciens_nomades_breakdown
+- reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown
+- reseaux_de_solidarite_horizontale_post_effondrement_breakdown
+- seoul_collectif_nexcore_breakdown
 oppositions:
-    - milices_d_accaparement_hydrique_breakdown
-    - seigneuries_logistiques_armees_breakdown
-    - gouvernements_de_forteresse_anti_nairobi_breakdown
-    - cartels_logistiques_regionaux_breakdown
-    - reseau_logistique_criminel_concurrent_breakdown
-    - factions_para_etatiques_hydriques_breakdown
-    - etats_fragmentes_nationalisant_les_stocks_breakdown
-
+- bloc_de_johannesburg_breakdown
+- cartels_logistiques_regionaux_breakdown
+- etats_fragmentes_nationalisant_les_stocks_breakdown
+- factions_para_etatiques_hydriques_breakdown
+- gouvernements_de_forteresse_anti_nairobi_breakdown
+- milices_d_accaparement_hydrique_breakdown
+- milices_extractivistes_du_bassin_du_congo_breakdown
+- reseau_logistique_criminel_concurrent_breakdown
+- seigneuries_logistiques_armees_breakdown
 type_relation_dominante: coopération
 
 annee_debut: 2061
@@ -98,12 +100,31 @@ Coordination décentralisée de la distribution d'eau potable, de carburant de s
 - [[demographie_mobilite_humaine]]
 - [[energie_ressources_critiques]]
 
-## Relations
-**Alliés** : [[brigades_medicales_itinerantes_breakdown]], [[collectifs_de_sante_communautaire_autogeree_breakdown]], [[cargo_mombasa_crrc_breakdown]], [[guilde_des_techniciens_nomades_breakdown]], [[reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown]], [[collectifs_de_reparation_energetique_breakdown]], [[grandes_lacs_compact_eau_breakdown]], [[reseaux_de_solidarite_horizontale_post_effondrement_breakdown]]
-**Opposants** : [[milices_d_accaparement_hydrique_breakdown]], [[seigneuries_logistiques_armees_breakdown]], [[gouvernements_de_forteresse_anti_nairobi_breakdown]], [[cartels_logistiques_regionaux_breakdown]], [[reseau_logistique_criminel_concurrent_breakdown]], [[factions_para_etatiques_hydriques_breakdown]], [[etats_fragmentes_nationalisant_les_stocks_breakdown]]
 
 ## Description journalistique
 Au croisement de Ngong Road et des anciens entrepôts du PAM, une femme en gilet olive froissé lit à voix haute une liste de noms à une foule silencieuse — c'est une distribution d'eau, troisième de la semaine. Personne ici ne lui a conféré le moindre mandat. Elle est coordinatrice de cellule pour le Nairobi CRRC, et c'est suffisant pour que la foule l'écoute. Fondé dans les décombres administratifs des agences onusiennes après la désintégration de 2061, le CRRC n'a ni siège social ni budget centralisé ni direction permanente : il existe comme un filet de nœuds humains qui se rappellent à chaque crise qu'ils ont décidé de ne pas mourir seuls. Les gouvernements résiduels le détestent parce qu'il prouve que leur absence n'est pas irremplaçable. Les milices le craignent parce que ses réseaux de confiance leur résistent sans armes. Et les populations de la région lui obéissent parce que, contrairement à tout le reste, il livre.
 
 ## Tensions narratives
 Le CRRC est déchiré entre son identité de réseau horizontal et la pression croissante de cellules qui, dans certains quartiers, ont commencé à lever des 'contributions obligatoires' ressemblant dangereusement à une fiscalité informelle — glissement vers une autorité qu'il n'a jamais voulu revendiquer. Certains blocs régionaux survivants cherchent à le récupérer comme bras opérationnel légitimant, ce qui menacerait son indépendance vitale. Parallèlement, la question de la succession se pose : les fondateurs vieillissent, les archives sont fragmentées, et sans mémoire institutionnelle transmise, chaque nouvelle crise risque de faire éclater le réseau en factions concurrentes aussi impuissantes que les structures qu'il a remplacées.
+
+## Relations
+**Alliés :**
+- [[brigades_medicales_itinerantes_breakdown]]
+- [[cargo_mombasa_crrc_breakdown]]
+- [[collectifs_de_reparation_energetique_breakdown]]
+- [[collectifs_de_sante_communautaire_autogeree_breakdown]]
+- [[grandes_lacs_compact_eau_breakdown]]
+- [[guilde_des_techniciens_nomades_breakdown]]
+- [[reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown]]
+- [[reseaux_de_solidarite_horizontale_post_effondrement_breakdown]]
+- [[seoul_collectif_nexcore_breakdown]]
+**Opposants :**
+- [[bloc_de_johannesburg_breakdown]]
+- [[cartels_logistiques_regionaux_breakdown]]
+- [[etats_fragmentes_nationalisant_les_stocks_breakdown]]
+- [[factions_para_etatiques_hydriques_breakdown]]
+- [[gouvernements_de_forteresse_anti_nairobi_breakdown]]
+- [[milices_d_accaparement_hydrique_breakdown]]
+- [[milices_extractivistes_du_bassin_du_congo_breakdown]]
+- [[reseau_logistique_criminel_concurrent_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]

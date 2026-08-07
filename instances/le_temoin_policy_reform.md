@@ -4,6 +4,7 @@ type: instance
 slug: le_temoin_policy_reform
 entite: le_temoin
 scenario: policy_reform
+statut: officialise_enrichi
 localisation:
   zone: null
   lieu: null

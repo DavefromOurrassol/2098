@@ -31,8 +31,23 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- administrations_de_controle_frontalier_des_blocs_fortress_world
+- bloc_atlantique_fortress_world
+- bloc_eurasiatique_occidental_fortress_world
+- bloc_pacifique_nord_fortress_world
+- commandement_strategique_des_matieres_critiques_atlantique_fortress_world
+- consortiums_energetiques_du_bloc_ourrassol_fortress_world
+- pacte_forteresses_souveraines_fortress_world
+oppositions:
+- armada_logistique_nordique_fortress_world
+- coalitions_geopolitiques_d_infiltration_des_modeles_climatiques_fortress_world
+- consortiums_de_defense_orbitale_prives_fortress_world
+- factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world
+- factions_djihadistes_logistiques_d_asie_centrale_fortress_world
+- kalaallit_nunaat_sovereign_fund_fortress_world
+- milices_de_piraterie_logistique_arctique_fortress_world
+- operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -96,6 +111,26 @@ La Coalition est structurellement déchirée entre les intérêts divergents du 
 - [[geopolitique_conflits]]
 - [[energie_ressources_critiques]]
 - [[organisation_territoires]]
+
+
+## Relations
+**Alliés :**
+- [[administrations_de_controle_frontalier_des_blocs_fortress_world]]
+- [[bloc_atlantique_fortress_world]]
+- [[bloc_eurasiatique_occidental_fortress_world]]
+- [[bloc_pacifique_nord_fortress_world]]
+- [[commandement_strategique_des_matieres_critiques_atlantique_fortress_world]]
+- [[consortiums_energetiques_du_bloc_ourrassol_fortress_world]]
+- [[pacte_forteresses_souveraines_fortress_world]]
+**Opposants :**
+- [[armada_logistique_nordique_fortress_world]]
+- [[coalitions_geopolitiques_d_infiltration_des_modeles_climatiques_fortress_world]]
+- [[consortiums_de_defense_orbitale_prives_fortress_world]]
+- [[factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world]]
+- [[factions_djihadistes_logistiques_d_asie_centrale_fortress_world]]
+- [[kalaallit_nunaat_sovereign_fund_fortress_world]]
+- [[milices_de_piraterie_logistique_arctique_fortress_world]]
+- [[operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

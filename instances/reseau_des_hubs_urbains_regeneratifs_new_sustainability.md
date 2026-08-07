@@ -33,8 +33,28 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
+- coalition_vivant_new_sustainability
+- conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability
+- fonds_mondial_de_regeneration_ecologique_new_sustainability
+- great_lakes_autonomous_compact_new_sustainability
+- hub_nairobi_kigali_new_sustainability
+- mouvement_communautaire_des_micro_grids_energetiques_new_sustainability
+- rede_paulista_de_distribuic_o_algor_tmica_new_sustainability
+- reseau_des_bio_communs_regionaux_new_sustainability
+- reseau_des_communs_productifs_regeneratifs_new_sustainability
+- reseau_global_de_cliniques_regeneratives_new_sustainability
+- reseau_mnemos_new_sustainability
+- trame_bioclimatique_new_sustainability
+oppositions:
+- bloc_des_architectes_d_efficience_algorithmique_new_sustainability
+- bloc_eurasien_souverainiste_new_sustainability
+- coalition_des_industries_extractives_residuelles_new_sustainability
+- etats_souverainistes_anti_reseau_new_sustainability
+- faction_conservatrice_pro_actif_strategique_new_sustainability
+- lobbies_agro_industriels_du_bassin_du_congo_new_sustainability
+- lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability
 type_relation_dominante: symbiose
 annee_debut: 2026
 annee_fin: null
@@ -96,6 +116,31 @@ Le réseau se trouve pris en étau entre son aspiration à rester un espace d'ex
 - [[organisation_territoires]]
 - [[climat_environnement_global]]
 - [[systemes_productifs_travail]]
+
+
+## Relations
+**Alliés :**
+- [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]]
+- [[coalition_vivant_new_sustainability]]
+- [[conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability]]
+- [[fonds_mondial_de_regeneration_ecologique_new_sustainability]]
+- [[great_lakes_autonomous_compact_new_sustainability]]
+- [[hub_nairobi_kigali_new_sustainability]]
+- [[mouvement_communautaire_des_micro_grids_energetiques_new_sustainability]]
+- [[rede_paulista_de_distribuic_o_algor_tmica_new_sustainability]]
+- [[reseau_des_bio_communs_regionaux_new_sustainability]]
+- [[reseau_des_communs_productifs_regeneratifs_new_sustainability]]
+- [[reseau_global_de_cliniques_regeneratives_new_sustainability]]
+- [[reseau_mnemos_new_sustainability]]
+- [[trame_bioclimatique_new_sustainability]]
+**Opposants :**
+- [[bloc_des_architectes_d_efficience_algorithmique_new_sustainability]]
+- [[bloc_eurasien_souverainiste_new_sustainability]]
+- [[coalition_des_industries_extractives_residuelles_new_sustainability]]
+- [[etats_souverainistes_anti_reseau_new_sustainability]]
+- [[faction_conservatrice_pro_actif_strategique_new_sustainability]]
+- [[lobbies_agro_industriels_du_bassin_du_congo_new_sustainability]]
+- [[lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

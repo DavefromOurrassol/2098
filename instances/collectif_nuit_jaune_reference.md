@@ -30,8 +30,23 @@ zone_geographique:
 - régionale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- collectifs_academiques_independants_reference
+- collectifs_de_journalisme_embarque_reference
+- collectifs_de_journalistes_independants_regionaux_reference
+- federation_communs_territoriaux_reference
+- voix_du_dehors_reference
+oppositions:
+- administrations_hybrides_des_cites_relais_peripheriques_reference
+- agence_stabilisation_climatique_reference
+- algorithmic_labor_exchange_reference
+- bloc_eurasien_central_reference
+- bureau_zones_non_prioritaires_reference
+- europe_occidentale_reconstructee_reference
+- gouvernements_a_regime_de_productivite_mandatee_reference
+- lyon_metropole_reference
+- plateformes_d_optimisation_territoriale_par_ia_reference
+- rede_paulista_de_distribuic_o_algor_tmica_reference
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -94,6 +109,26 @@ Le Collectif est écartelé entre une légitimité morale forte — défendre le
 - [[demographie_mobilite_humaine]]
 - [[gouvernance_institutions]]
 - [[organisation_territoires]]
+
+
+## Relations
+**Alliés :**
+- [[collectifs_academiques_independants_reference]]
+- [[collectifs_de_journalisme_embarque_reference]]
+- [[collectifs_de_journalistes_independants_regionaux_reference]]
+- [[federation_communs_territoriaux_reference]]
+- [[voix_du_dehors_reference]]
+**Opposants :**
+- [[administrations_hybrides_des_cites_relais_peripheriques_reference]]
+- [[agence_stabilisation_climatique_reference]]
+- [[algorithmic_labor_exchange_reference]]
+- [[bloc_eurasien_central_reference]]
+- [[bureau_zones_non_prioritaires_reference]]
+- [[europe_occidentale_reconstructee_reference]]
+- [[gouvernements_a_regime_de_productivite_mandatee_reference]]
+- [[lyon_metropole_reference]]
+- [[plateformes_d_optimisation_territoriale_par_ia_reference]]
+- [[rede_paulista_de_distribuic_o_algor_tmica_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

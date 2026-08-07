@@ -33,8 +33,25 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- blocs_signataires_du_pacte_energetique_multilateral_reference
+- conseil_regulation_ressources_reference
+- consortium_augmentwork_reference
+- consortium_energetique_des_mers_du_nord_reference
+- consortiums_d_extraction_miniere_du_bassin_congolais_reference
+- consortiums_energetiques_des_megapoles_reference
+- fonds_souverains_de_la_ceinture_financiere_pacifique_reference
+- singapour_est_nexcore_reference
+- singapour_est_reference
+oppositions:
+- bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference
+- bloc_eurasien_central_reference
+- cartel_des_terres_rares_d_asie_centrale_reference
+- cooperatives_energetiques_decentralisees_reference
+- institut_polytechnique_de_ouagadougou_reference
+- milices_concurrentes_des_droits_de_passage_reference
+- pacifique_sud_archipels_flottants_reference
+- pacte_des_souverains_reference
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -98,6 +115,28 @@ La tension centrale du Consortium réside dans la contradiction entre ses ambiti
 - [[energie_ressources_critiques]]
 - [[geopolitique_conflits]]
 - [[systeme_economique_redistribution]]
+
+
+## Relations
+**Alliés :**
+- [[blocs_signataires_du_pacte_energetique_multilateral_reference]]
+- [[conseil_regulation_ressources_reference]]
+- [[consortium_augmentwork_reference]]
+- [[consortium_energetique_des_mers_du_nord_reference]]
+- [[consortiums_d_extraction_miniere_du_bassin_congolais_reference]]
+- [[consortiums_energetiques_des_megapoles_reference]]
+- [[fonds_souverains_de_la_ceinture_financiere_pacifique_reference]]
+- [[singapour_est_nexcore_reference]]
+- [[singapour_est_reference]]
+**Opposants :**
+- [[bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference]]
+- [[bloc_eurasien_central_reference]]
+- [[cartel_des_terres_rares_d_asie_centrale_reference]]
+- [[cooperatives_energetiques_decentralisees_reference]]
+- [[institut_polytechnique_de_ouagadougou_reference]]
+- [[milices_concurrentes_des_droits_de_passage_reference]]
+- [[pacifique_sud_archipels_flottants_reference]]
+- [[pacte_des_souverains_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

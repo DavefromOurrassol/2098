@@ -4,6 +4,7 @@ type: instance
 slug: reseau_mnemos_new_sustainability
 entite: reseau_mnemos
 scenario: new_sustainability
+statut: officialise_enrichi
 localisation:
   zone: null
   lieu: null
@@ -34,14 +35,14 @@ zone_systemique:
     - IA
 
 alliances:
-    - conseil_intergouvernemental_de_regulation_technologique_policy_reform
-    - reseau_des_hubs_urbains_regeneratifs_new_sustainability
-    - consortium_d_interoperabilite_ia_humain_new_sustainability
-
+- conseil_intergouvernemental_de_regulation_technologique_policy_reform
+- consortium_d_interoperabilite_ia_humain_new_sustainability
+- reseau_des_hubs_urbains_regeneratifs_new_sustainability
 oppositions:
-    - enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability
-    - internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
-
+- directive_kontinuum_new_sustainability
+- enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability
+- internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
+- reseaux_d_information_souverainistes_fermes_new_sustainability
 type_relation_dominante: symbiose
 
 annee_debut: 2031
@@ -83,12 +84,20 @@ Mnemos maintient en opération plus de 14 000 nœuds autonomes répartis sur l'e
 - [[technologie_information]]
 - [[gouvernance_institutions]]
 
-## Relations
-**Alliés** : [[conseil_intergouvernemental_de_regulation_technologique_policy_reform]], [[reseau_des_hubs_urbains_regeneratifs_new_sustainability]], [[consortium_d_interoperabilite_ia_humain_new_sustainability]]
-**Opposants** : [[enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability]], [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]]
 
 ## Description journalistique
 Dans les bureaux de la Commission Territoriale d'Ourrassol comme dans les fermes regeneratives du delta équatorial, tout le monde consulte Mnemos. Ce réseau invisible et omniprésent pulse sous les territoires reconstruits comme un système nerveux planétaire — ses nœuds photovoltaïques logés dans des caissons biocéramiques résistent aux inondations, aux tempêtes et aux pannes de grille. Né des cendres des grands effondrements informationnels des années 2030, Mnemos a su traverser la crise sans se laisser privatiser ni militariser. Aujourd'hui mature et quasi-institutionnel, il est paradoxalement le seul acteur mondial que personne ne gouverne vraiment — et auquel tout le monde fait confiance.
 
 ## Tensions narratives
 Si Mnemos incarne la stabilité cognitive du monde de 2098, des fissures commencent à apparaître : certains territoires souverainistes revendiquent le droit à des mémoires locales non-synchronisées, craignant une homogénéisation culturelle déguisée en neutralité. Par ailleurs, des audits internes révèlent que les algorithmes de priorisation des savoirs — supposément neutres — favorisent subtilement les épistémologies issues des anciens centres de pouvoir. La question se pose : à qui appartient la mémoire du monde, même bien gérée ?
+
+## Relations
+**Alliés :**
+- [[conseil_intergouvernemental_de_regulation_technologique_policy_reform]]
+- [[consortium_d_interoperabilite_ia_humain_new_sustainability]]
+- [[reseau_des_hubs_urbains_regeneratifs_new_sustainability]]
+**Opposants :**
+- [[directive_kontinuum_new_sustainability]]
+- [[enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability]]
+- [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]]
+- [[reseaux_d_information_souverainistes_fermes_new_sustainability]]

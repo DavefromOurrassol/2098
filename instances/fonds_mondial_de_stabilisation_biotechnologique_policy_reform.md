@@ -32,8 +32,20 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- autorite_mondiale_du_vivant_amv_policy_reform
+- conseil_regulation_ressources_policy_reform
+- consortium_africain_de_biotechnologies_sociales_policy_reform
+- federation_des_mutuelles_biotech_policy_reform
+- fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform
+- nexus_biosyn_policy_reform
+- reseau_des_agences_sanitaires_regionales_policy_reform
+oppositions:
+- bloc_des_nations_a_economie_carbone_controlee_policy_reform
+- front_de_souverainete_biologique_eurasiatique_policy_reform
+- front_souverainiste_des_blocs_non_signataires_policy_reform
+- gouvernements_populistes_anti_depossession_policy_reform
+- mouvement_pour_la_souverainete_territoriale_absolue_policy_reform
 type_relation_dominante: dépendance
 annee_debut: 2026
 annee_fin: null
@@ -95,6 +107,23 @@ Le FMSB incarne la contradiction fondamentale du scénario policy_reform : instr
 - [[sante_biotechnologies]]
 - [[gouvernance_institutions]]
 - [[systeme_economique_redistribution]]
+
+
+## Relations
+**Alliés :**
+- [[autorite_mondiale_du_vivant_amv_policy_reform]]
+- [[conseil_regulation_ressources_policy_reform]]
+- [[consortium_africain_de_biotechnologies_sociales_policy_reform]]
+- [[federation_des_mutuelles_biotech_policy_reform]]
+- [[fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform]]
+- [[nexus_biosyn_policy_reform]]
+- [[reseau_des_agences_sanitaires_regionales_policy_reform]]
+**Opposants :**
+- [[bloc_des_nations_a_economie_carbone_controlee_policy_reform]]
+- [[front_de_souverainete_biologique_eurasiatique_policy_reform]]
+- [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+- [[gouvernements_populistes_anti_depossession_policy_reform]]
+- [[mouvement_pour_la_souverainete_territoriale_absolue_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

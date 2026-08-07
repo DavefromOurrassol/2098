@@ -20,7 +20,7 @@ import re
 
 import yaml
 
-from loader import load_scenario, load_all_variables, VALID_VARS, VALID_SCENARIOS, load_instances_for_scenario
+from loader import load_scenario, load_all_variables, VALID_VARS, VALID_SCENARIOS, load_instances_for_scenario, select_relevant_events
 
 # ---------------------------------------------------------------------------
 # Chargement de journaux.yaml (généré par generate_journaux.py)
@@ -135,6 +135,11 @@ def get_journal_profile(scenario_slug, ligne_editoriale, zone_slug=None, themati
 # Nombre max de jalons majeurs à injecter
 MAX_JALONS_MAJEURS     = 6
 MAX_JALONS_STRUCTURANTS = 4
+# Ajouté le 3 août 2026 (audit de complétude) : plafond pour les ruptures
+# génériques de portée "majeur" (voir MAX_JALONS_RUPTURES_MAJEURES
+# ci-dessous, docstring de build_trajectory_context pour le contexte
+# complet du bug corrigé).
+MAX_JALONS_RUPTURES_MAJEURES = 3
 
 # Nombre max de signaux "locaux" complémentaires (pertinents pour la thématique)
 MAX_SIGNAUX_LOCAUX = 2
@@ -555,11 +560,26 @@ def build_world_context(snapshot):
         lines.append("Ce monde a été modifié par des injections spécifiques :")
 
         if custom_events:
-            for ev in custom_events:
+            # Vue d'ensemble large et volontairement peu coûteuse (une
+            # ligne tronquée par événement) -- ajouté le 2 août 2026 :
+            # plafonnée plus haut que la section détaillée de
+            # build_trajectory_context() pour préserver la vision globale
+            # du monde même quand le détail complet est filtré par
+            # pertinence. Au-delà du plafond, une mention compacte
+            # (dates + noms seulement) maintient quand même la présence
+            # de ces événements à l'esprit du modèle, sans le coût d'une
+            # ligne complète par événement.
+            PLAFOND_APERCU = 25
+            for ev in custom_events[:PLAFOND_APERCU]:
                 lines.append("- [ÉVÉNEMENT {}] {} : {}".format(
                     ev["date_label"], ev["name"],
                     ev["description"][:80] + "..." if len(ev["description"]) > 80
                     else ev["description"]
+                ))
+            reste = custom_events[PLAFOND_APERCU:]
+            if reste:
+                lines.append("- (+ {} autres événements de ce monde : {})".format(
+                    len(reste), ", ".join("{} [{}]".format(e["name"], e["date_label"]) for e in reste)
                 ))
 
         seen = set()
@@ -840,9 +860,29 @@ def build_trajectory_context(snapshot, config=None, thematique=None, dry_run=Tru
         lines.append("")
 
     # ── Priorité 0 : événements custom injectés
-    custom_events = snapshot.get("custom_events", [])
+    # Plafonnés par pertinence + rotation à mémoire depuis le 2 août 2026
+    # (voir loader.select_relevant_events -- avant, TOUS les événements
+    # custom d'un scénario étaient inclus ici sans limite, grossissant
+    # indéfiniment avec le vault). La vue d'ensemble complète reste
+    # disponible plus haut dans le prompt, section "Perturbations custom
+    # actives" (voir build_journalistic_brief) -- volontairement moins
+    # coûteuse par événement (une ligne tronquée), donc plafonnée plus
+    # large, pour ne jamais perdre la vision globale du monde même quand
+    # le détail complet ci-dessous est filtré.
+    custom_events_bruts = snapshot.get("custom_events", [])
+    forced_event_slug = None
+    forcer_resolu = snapshot.get("forcer_resolu")
+    if forcer_resolu and forcer_resolu.get("type") == "evenement" and forcer_resolu.get("event"):
+        forced_event_slug = forcer_resolu["event"].get("slug")
+    custom_events = select_relevant_events(
+        custom_events_bruts, thematique, scenario_slug,
+        forced_event_slug=forced_event_slug, max_events=8, dry_run=dry_run,
+    )
     if custom_events:
-        lines.append("**Événements injectés** [CUSTOM — font partie de ce monde]")
+        lines.append("**Événements injectés** [CUSTOM — font partie de ce monde]"
+                      + (" — {} sur {} au total, les plus pertinents pour cet article".format(
+                          len(custom_events), len(custom_events_bruts))
+                         if len(custom_events_bruts) > len(custom_events) else ""))
         for ev in custom_events:
             forced_badge = " [FORCÉ]" if ev.get("forced") else ""
             lines.append("- [{}]{} {} :".format(
@@ -850,6 +890,16 @@ def build_trajectory_context(snapshot, config=None, thematique=None, dry_run=Tru
             ))
             lines.append("  → {}".format(ev["description"][:100] + "..."
                          if len(ev["description"]) > 100 else ev["description"]))
+            # Ajouté le 3 août 2026 (audit de complétude) : "realisation"
+            # était chargé par loader.py mais jamais affiché -- décrit
+            # comment l'événement s'est concrètement déroulé, distinct de
+            # "description" (mise en scène narrative) et "consequences"
+            # (effets en aval, déjà affichés juste après).
+            if ev.get("realisation"):
+                lines.append("  → Déroulement : {}".format(
+                    ev["realisation"][:80] + "..."
+                    if len(ev["realisation"]) > 80 else ev["realisation"]
+                ))
             if ev.get("consequences"):
                 lines.append("  → Conséquences : {}".format(
                     ev["consequences"][:80] + "..."
@@ -898,6 +948,24 @@ def build_trajectory_context(snapshot, config=None, thematique=None, dry_run=Tru
 
 
     # ── Priorité 2 : ruptures génériques (complément)
+    # Bug corrigé le 3 août 2026 (audit de complétude demandé par David) :
+    # seules les ruptures de portée "structurant" étaient affichées ici.
+    # Les ruptures "majeur" (3+ variables touchées, OU variable pilote +
+    # rupture "core" -- la portée la PLUS significative dans le système de
+    # classement de build_trajectory() dans snapshot.py) n'étaient jamais
+    # montrées : snapshot["trajectory_majors"], calculé exprès pour ça,
+    # n'était lu nulle part dans tout prompt_builder.py. Corrigé en
+    # affichant ces jalons majeurs en priorité, avant les structurants.
+    majeurs_generiques = snapshot.get("trajectory_majors", [])
+    if majeurs_generiques:
+        lines.append("**Ruptures majeures** (contexte de fond, portée large)")
+        for j in majeurs_generiques[:MAX_JALONS_RUPTURES_MAJEURES]:
+            lines.append("- [{}] {}".format(
+                j["type"].upper()[:3],
+                j["content"]
+            ))
+        lines.append("")
+
     jalons = snapshot.get("trajectory_jalons", [])
     structs = [j for j in jalons if j["scope"] == "structurant"]
 
@@ -1091,7 +1159,7 @@ def _load_geographie(scenario_slug):
     return fm.get("zones", [])
 
 
-def build_geographie_context(snapshot, thematique=None):
+def build_geographie_context(snapshot, thematique=None, config=None):
     """
     Construit la section 'géographie du monde' du prompt.
 
@@ -1115,6 +1183,14 @@ def build_geographie_context(snapshot, thematique=None):
     instances"][i]["localisation"]) pourra être mis en évidence ici en plus
     du référentiel général des zones, sans changer la structure de cette
     fonction — juste une section supplémentaire à ajouter dans `lines`.
+
+    config : dict | None — ajouté le 3 août 2026. Sert uniquement à lire
+    config.get("zone_slug") quand un élément est forcé (mode "forcer" de
+    generate.py) : cette zone est ajoutée à zones_pertinentes même en
+    l'absence de filtered_instances qui la porteraient (cas d'un événement
+    ou d'un signal forcé, où filtered_instances reste générique). Optionnel
+    pour rester compatible avec les appels existants qui ne le fournissent
+    pas encore (ex. le bloc de test en bas de ce fichier).
     """
     scenario_slug = snapshot.get("scenario_slug")
     if not scenario_slug:
@@ -1197,6 +1273,31 @@ def build_geographie_context(snapshot, thematique=None):
             "type_lieu": loc.get("type_lieu") or "",
         })
 
+    # Bug corrigé le 3 août 2026 (retour de David, test réel mode Forcer sur
+    # un événement, policy_reform) : zones_pertinentes ne venait QUE de
+    # filtered_instances (les instances auto-sélectionnées génériques,
+    # totalement indépendantes de l'élément forcé pour un événement/signal --
+    # contrairement à une instance forcée, qui devient elle-même la seule
+    # filtered_instance). Résultat observé : consigne finale correcte
+    # ("ancré dans Nuuk Knsf", déjà fixée le 2 août -- bug #8/§3.8, portée
+    # par config["zone_slug"] et lue en ligne 1492 de build_prompt), mais la
+    # section GÉOGRAPHIE détaillée ci-dessus affichait des zones sans rapport
+    # (Genève, issues des instances génériques) et reléguait Nuuk dans la
+    # liste compacte des zones non détaillées -- signal contradictoire pour
+    # le LLM, qui n'a aucune description/tensions/alliés pour sa vraie zone
+    # d'ancrage.
+    #
+    # Important : la zone forcée vit dans config["zone_slug"] (article_config
+    # dans generate.py), PAS dans snapshot["zone_slug"] (qui reste la zone
+    # générique auto-calculée par snapshot.py, indépendante du forçage) --
+    # exactement la même distinction que déjà gérée en ligne 1492 de
+    # build_prompt() pour build_system_prompt(). Nécessite donc que config
+    # soit désormais passé à cette fonction (voir signature + call site
+    # modifiés ci-dessous/dans build_prompt).
+    zone_forcee = (config or {}).get("zone_slug") or snapshot.get("zone_slug")
+    if zone_forcee and zone_forcee in slug_to_zone:
+        zones_pertinentes.update(collect_zone_chain(zone_forcee, zone_forcee))
+
     # Tri : zones pertinentes d'abord (niveau croissant), autres ensuite
     sorted_zones = sorted(zones, key=lambda z: (
         0 if z.get("slug") in zones_pertinentes else 1,
@@ -1226,8 +1327,21 @@ def build_geographie_context(snapshot, thematique=None):
             ))
         lines.append("")
 
-    # Zones détaillées (pertinentes) puis résumé court (autres)
+    # Zones détaillées (pertinentes) puis résumé court (autres) --
+    # plafonné depuis le 2 août 2026 (voir docstring du module) : avant,
+    # sorted_zones était parcourue en entier sans limite, grossissant
+    # indéfiniment avec le vault (déjà ~60 zones sur un scénario mature).
+    # Les zones pertinentes (ancrage de l'article) restent toujours
+    # affichées en détail complet, sans plafond -- leur nombre est déjà
+    # naturellement petit (dérivé de la chaîne de parenté de 1-2
+    # instances/événements ancrés). Seul le résumé "contexte de fond" est
+    # plafonné, avec une liste de noms seuls (sans description) pour le
+    # reste -- préserve la vision globale du monde à coût minimal plutôt
+    # que de faire disparaître ces zones entièrement.
+    PLAFOND_ZONES_RESUME = 20
     in_summary = False
+    n_summary_affichees = 0
+    zones_hors_plafond = []
     for zone in sorted_zones:
         slug   = zone.get("slug", "")
         is_key = slug in zones_pertinentes
@@ -1261,11 +1375,20 @@ def build_geographie_context(snapshot, thematique=None):
                 lines.append("*Rivaux* : {}".format(", ".join(rivaux)))
             lines.append("")
         else:
-            # Résumé court — une ligne
-            nom   = zone.get("nom", "?")
-            desc  = zone.get("description", "")
-            short = desc[:80] + "..." if len(desc) > 80 else desc
-            lines.append("- **{}**{} : {}".format(nom, parent_txt, short))
+            # Résumé court — une ligne, plafonné
+            if n_summary_affichees < PLAFOND_ZONES_RESUME:
+                nom   = zone.get("nom", "?")
+                desc  = zone.get("description", "")
+                short = desc[:80] + "..." if len(desc) > 80 else desc
+                lines.append("- **{}**{} : {}".format(nom, parent_txt, short))
+                n_summary_affichees += 1
+            else:
+                zones_hors_plafond.append(zone.get("nom", "?"))
+
+    if zones_hors_plafond:
+        lines.append("- (+ {} autres zones de ce monde, non détaillées : {})".format(
+            len(zones_hors_plafond), ", ".join(zones_hors_plafond)
+        ))
 
     if in_summary:
         lines.append("")
@@ -1379,6 +1502,29 @@ def build_entities_context(snapshot):
         if desc:
             lines.append(desc)
 
+        # Ajouté le 3 août 2026 (audit de complétude demandé par David) :
+        # responsabilites et signes_distinctifs étaient chargés par
+        # loader.py mais jamais affichés dans le prompt -- pertes de
+        # contenu réelles, distinctes de description_journalistique
+        # (récit d'origine/statut, écrit "de l'extérieur") et de
+        # tensions_narratives (déjà affiché ci-dessous) :
+        #   - responsabilites : ce que l'entité FAIT concrètement (actions,
+        #     leviers, méthodes -- souvent avec des noms propres et détails
+        #     opérationnels absents de description_journalistique)
+        #   - signes_distinctifs : détails concrets/visuels/symboliques qui
+        #     la rendent reconnaissable et citable dans un article (slogans,
+        #     symboles, pratiques caractéristiques)
+        # Affichés en entier comme description_journalistique (pas tronqués
+        # comme tensions_narratives) -- ce sont les deux champs qui
+        # apportaient le plus de matière concrète et perdue.
+        responsabilites = inst.get("responsabilites", "")
+        if responsabilites:
+            lines.append("*Responsabilités* : {}".format(responsabilites))
+
+        signes = inst.get("signes_distinctifs", "")
+        if signes:
+            lines.append("*Signes distinctifs* : {}".format(signes))
+
         # Tensions narratives — angles pour l'article
         tensions = inst.get("tensions_narratives", "")
         if tensions:
@@ -1391,6 +1537,27 @@ def build_entities_context(snapshot):
             lines.append("*Alliés* : {}".format(", ".join(alliances)))
         if oppositions:
             lines.append("*Opposants* : {}".format(", ".join(oppositions)))
+
+        # Ajouté le 7 août 2026 (audit de complétude, point 1.2 du backlog) :
+        # type_relation_dominante/annee_debut/annee_fin étaient chargés par
+        # loader.py (fm.get(...)) et survivaient intacts jusqu'au snapshot,
+        # mais jamais lus ici -- même perte silencieuse que celle corrigée le
+        # 3 août pour responsabilites/signes_distinctifs, restée dans un angle
+        # mort de cet audit. type_relation_dominante est UNE valeur par fiche
+        # (tonalité dominante des relations de l'entité, pas un tag par allié/
+        # opposant précis) -- affichée en une ligne distincte des listes
+        # Alliés/Opposants ci-dessus plutôt que mélangée à chaque nom.
+        relation_dominante = inst.get("type_relation_dominante", "")
+        annee_debut = inst.get("annee_debut")
+        annee_fin   = inst.get("annee_fin")
+        if relation_dominante:
+            if annee_fin:
+                periode = " ({}–{})".format(annee_debut, annee_fin)
+            elif annee_debut:
+                periode = " (depuis {})".format(annee_debut)
+            else:
+                periode = ""
+            lines.append("*Relation dominante* : {}{}".format(relation_dominante, periode))
 
         lines.append("")
 
@@ -1449,7 +1616,7 @@ def build_prompt(snapshot, thematique, config, dry_run=True):
 
     # Construire la section géographie (vide si geographie/{scenario}.md
     # n'existe pas encore pour ce scénario)
-    geographie_section = build_geographie_context(snapshot, thematique=thematique)
+    geographie_section = build_geographie_context(snapshot, thematique=thematique, config=config)
 
     sections = [
         build_world_context(snapshot),
@@ -1475,8 +1642,28 @@ def build_prompt(snapshot, thematique, config, dry_run=True):
 
     user_prompt = "\n".join(sections)
 
+    # Bug corrigé le 3 août 2026 (retour de David, test réel mode Semi-guidé
+    # sur breakdown/sciences_technologies avec --article-longueur breve) :
+    # ce calcul ignorait totalement config["article"]["longueur"] et
+    # recalculait la longueur uniquement depuis thematique.format_dominant
+    # -- doublon divergent de la logique déjà correcte de
+    # build_journalistic_brief() (ligne ~974), qui priorise bien l'override
+    # de config quand il est présent et valide. Résultat : les MÉTADONNÉES
+    # affichaient une longueur différente de celle réellement demandée au
+    # LLM dans la CONSIGNE DE RÉDACTION -- vrai dans TOUS les cas où
+    # config["article"]["longueur"] diffère du format_dominant de la
+    # thématique, pas seulement sur override explicite. Comme "breve" est
+    # la valeur par défaut de config.yaml (indépendante de la thématique),
+    # ce décalage touchait potentiellement la majorité des articles déjà
+    # générés, dès que leur thématique n'a pas elle-même format_dominant
+    # == "breve". Corrigé en réutilisant exactement la même logique de
+    # priorité que build_journalistic_brief().
     format_dom = thematique.get("format_dominant", "breve")
-    longueur   = FORMAT_LONGUEUR.get(format_dom, "300 à 500 mots")
+    config_lon = config.get("article", {}).get("longueur", "auto")
+    if config_lon and config_lon != "auto" and config_lon in FORMAT_LONGUEUR:
+        longueur = FORMAT_LONGUEUR[config_lon]
+    else:
+        longueur = FORMAT_LONGUEUR.get(format_dom, "300 à 500 mots")
 
     print("[prompt] System prompt : {} caractères".format(len(system_prompt)))
     print("[prompt] User prompt   : {} caractères".format(len(user_prompt)))

@@ -4,6 +4,7 @@ type: instance
 slug: prisme_global_reference
 entite: prisme_global
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: null
   lieu: null

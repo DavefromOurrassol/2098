@@ -4,6 +4,7 @@ type: instance
 slug: trame_bioclimatique_policy_reform
 entite: trame_bioclimatique
 scenario: policy_reform
+statut: officialise_enrichi
 localisation:
   zone: null
   lieu: null
@@ -37,17 +38,20 @@ zone_systemique:
     - IA
 
 alliances:
-    - agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
-    - consortium_de_geo_ingenierie_atmospherique_pacifique_policy_reform
-    - fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform
-    - reseaux_de_capteurs_ia_climatiques_deployes_par_les_etats_membres_policy_reform
-
+- agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
+- autorite_continentale_des_ressources_aquatiques_acra_policy_reform
+- consortium_amazonia_viva_policy_reform
+- consortium_de_geo_ingenierie_atmospherique_pacifique_policy_reform
+- consortium_des_villes_etats_durables_policy_reform
+- fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform
+- great_lakes_autonomous_compact_policy_reform
+- reseaux_de_capteurs_ia_climatiques_deployes_par_les_etats_membres_policy_reform
 oppositions:
-    - front_souverainiste_des_blocs_non_signataires_policy_reform
-    - lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability
-    - mouvement_pour_la_justice_ecologique_communautaire_policy_reform
-    - collectifs_de_hackers_biospheriques_policy_reform
-
+- collectifs_de_defense_hydrique_saheliens_policy_reform
+- collectifs_de_hackers_biospheriques_policy_reform
+- front_souverainiste_des_blocs_non_signataires_policy_reform
+- lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability
+- mouvement_pour_la_justice_ecologique_communautaire_policy_reform
 type_relation_dominante: dépendance
 
 annee_debut: 2041
@@ -91,12 +95,26 @@ Déploiement et maintenance des corridors de biodiversité intercontinentaux, de
 - [[organisation_territoires]]
 - [[gouvernance_institutions]]
 
-## Relations
-**Alliés** : [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]], [[consortium_de_geo_ingenierie_atmospherique_pacifique_policy_reform]], [[fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform]], [[reseaux_de_capteurs_ia_climatiques_deployes_par_les_etats_membres_policy_reform]]
-**Opposants** : [[front_souverainiste_des_blocs_non_signataires_policy_reform]], [[lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability]], [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]], [[collectifs_de_hackers_biospheriques_policy_reform]]
 
 ## Description journalistique
 Depuis les tours de contrôle bioclimatique de Nairobi et de Valence, des techniciens supervisent en temps réel 47 000 kilomètres de corridors vivants qui traversent cinq continents. Le RIREC, que ses détracteurs surnomment 'la Frontière verte', impose désormais sa propre logique aux États qui en dépendent : pas de conformité carbone, pas d'accès à l'eau atmosphérique. Inauguré dans l'enthousiasme des grandes réformes des années 2040, le réseau est devenu en cinquante ans un instrument de gouvernance autant qu'un projet de restauration. Les forêts repoussent, les aquifères se reconstituent — mais les communautés autochtones réinstallées pour libérer les corridors contestent devant les tribunaux globaux une dépossession que personne n'ose appeler par son nom.
 
 ## Tensions narratives
 La question centrale non résolue : à qui appartient un écosystème restauré avec de l'argent public mondial ? Les États membres réclament la souveraineté, les communautés locales réclament l'usufruit, et l'ATRB maintient un droit de veto opérationnel qui ressemble de plus en plus à une propriété de fait. Par ailleurs, des rapports internes fuités suggèrent que certains algorithmes de priorisation des corridors favorisent systématiquement les zones à fort potentiel en terres rares — soulevant la suspicion d'une instrumentalisation minière déguisée en restauration. Enfin, la dépendance croissante de plusieurs États sahéliens et andins à l'irrigation atmosphérique du RIREC crée une vulnérabilité stratégique inédite : couper le réseau, c'est déclencher une crise alimentaire.
+
+## Relations
+**Alliés :**
+- [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]
+- [[autorite_continentale_des_ressources_aquatiques_acra_policy_reform]]
+- [[consortium_amazonia_viva_policy_reform]]
+- [[consortium_de_geo_ingenierie_atmospherique_pacifique_policy_reform]]
+- [[consortium_des_villes_etats_durables_policy_reform]]
+- [[fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform]]
+- [[great_lakes_autonomous_compact_policy_reform]]
+- [[reseaux_de_capteurs_ia_climatiques_deployes_par_les_etats_membres_policy_reform]]
+**Opposants :**
+- [[collectifs_de_defense_hydrique_saheliens_policy_reform]]
+- [[collectifs_de_hackers_biospheriques_policy_reform]]
+- [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+- [[lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability]]
+- [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]]

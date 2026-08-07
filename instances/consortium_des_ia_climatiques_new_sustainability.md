@@ -29,8 +29,27 @@ zone_geographique:
 - orbital
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_mondiale_de_modelisation_climatique_ammc_new_sustainability
+- agence_stabilisation_climatique_new_sustainability
+- bloc_des_architectes_d_efficience_algorithmique_new_sustainability
+- conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability
+- conseil_regulation_ressources_new_sustainability
+- conseil_technocratique_de_gouvernance_alimentaire_new_sustainability
+- consortium_amazonia_viva_new_sustainability
+- consortium_d_interoperabilite_ia_humain_new_sustainability
+- factions_technocratiques_de_la_delegation_ia_totale_new_sustainability
+- fonds_mondial_de_regeneration_ecologique_new_sustainability
+- great_lakes_compact_new_sustainability
+- oracle_des_seuils_new_sustainability
+- trame_bioclimatique_new_sustainability
+oppositions:
+- bloc_eurasien_souverainiste_new_sustainability
+- coalition_anti_algorithme_des_autonomies_locales_new_sustainability
+- collectifs_de_desobeissance_algorithmique_new_sustainability
+- etats_souverainistes_anti_reseau_new_sustainability
+- mouvement_pour_l_autodetermination_territoriale_new_sustainability
+- tribunal_gouvernance_algorithmique_bruxelles_new_sustainability
 type_relation_dominante: dépendance
 annee_debut: 2026
 annee_fin: null
@@ -94,6 +113,30 @@ La légitimité démocratique du Consortium reste son talon d'Achille : aucun su
 - [[climat_environnement_global]]
 - [[gouvernance_institutions]]
 - [[technologie_information]]
+
+
+## Relations
+**Alliés :**
+- [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]]
+- [[agence_stabilisation_climatique_new_sustainability]]
+- [[bloc_des_architectes_d_efficience_algorithmique_new_sustainability]]
+- [[conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability]]
+- [[conseil_regulation_ressources_new_sustainability]]
+- [[conseil_technocratique_de_gouvernance_alimentaire_new_sustainability]]
+- [[consortium_amazonia_viva_new_sustainability]]
+- [[consortium_d_interoperabilite_ia_humain_new_sustainability]]
+- [[factions_technocratiques_de_la_delegation_ia_totale_new_sustainability]]
+- [[fonds_mondial_de_regeneration_ecologique_new_sustainability]]
+- [[great_lakes_compact_new_sustainability]]
+- [[oracle_des_seuils_new_sustainability]]
+- [[trame_bioclimatique_new_sustainability]]
+**Opposants :**
+- [[bloc_eurasien_souverainiste_new_sustainability]]
+- [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]]
+- [[collectifs_de_desobeissance_algorithmique_new_sustainability]]
+- [[etats_souverainistes_anti_reseau_new_sustainability]]
+- [[mouvement_pour_l_autodetermination_territoriale_new_sustainability]]
+- [[tribunal_gouvernance_algorithmique_bruxelles_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

@@ -4,6 +4,7 @@ type: instance
 slug: pacifique_sud_resilience_network_reference
 entite: pacifique_sud_resilience_network
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: pacifique_sud_archipels_flottants
   lieu: Archipels Flottants du Pacifique Sud
@@ -37,26 +38,26 @@ zone_systemique:
     - information
 
 alliances:
-    - fonds_monetaire_climatique_fmc_reference
-    - conseil_de_geneve_pour_les_droits_biosociaux_reference
-    - reseau_des_metropoles_cotieres_adaptees_reference
-    - observatoire_climatique_des_territoires_oct_reference
-    - agence_stabilisation_climatique_reference
-    - union_africaine_de_resilience_territoriale_reference
-    - mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
-    - reseau_mnemos_reference
-    - bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference
-    - ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference
-
+- agence_stabilisation_climatique_reference
+- bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference
+- collectifs_de_peche_inuit_et_sami_reference
+- conseil_de_geneve_pour_les_droits_biosociaux_reference
+- fonds_monetaire_climatique_fmc_reference
+- ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference
+- mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
+- observatoire_climatique_des_territoires_oct_reference
+- pacifique_sud_archipels_flottants_reference
+- reseau_des_metropoles_cotieres_adaptees_reference
+- reseau_mnemos_reference
+- union_africaine_de_resilience_territoriale_reference
 oppositions:
-    - alliance_blocs_souverains_reference
-    - bloc_ressources_eurasiatique_bre_reference
-    - consortiums_prives_d_extraction_de_ressources_critiques_reference
-    - fonds_d_investissement_foncier_climatique_reference
-    - corporations_d_extraction_energetique_non_signataires_reference
-    - gouvernements_federaux_residuels_souverainistes_reference
-    - bloc_des_souverainistes_climatiques_reference
-
+- alliance_blocs_souverains_reference
+- bloc_des_souverainistes_climatiques_reference
+- bloc_ressources_eurasiatique_bre_reference
+- consortiums_prives_d_extraction_de_ressources_critiques_reference
+- corporations_d_extraction_energetique_non_signataires_reference
+- fonds_d_investissement_foncier_climatique_reference
+- gouvernements_federaux_residuels_souverainistes_reference
 type_relation_dominante: alliance stratégique
 
 annee_debut: 2041
@@ -100,12 +101,32 @@ L'ASMPI négocie des accords de souveraineté mobile avec les institutions multi
 - [[demographie_mobilite_humaine]]
 - [[climat_environnement_global]]
 
-## Relations
-**Alliés** : [[fonds_monetaire_climatique_fmc_reference]], [[conseil_de_geneve_pour_les_droits_biosociaux_reference]], [[reseau_des_metropoles_cotieres_adaptees_reference]], [[observatoire_climatique_des_territoires_oct_reference]], [[agence_stabilisation_climatique_reference]], [[union_africaine_de_resilience_territoriale_reference]], [[mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference]], [[reseau_mnemos_reference]], [[bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference]], [[ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference]]
-**Opposants** : [[alliance_blocs_souverains_reference]], [[bloc_ressources_eurasiatique_bre_reference]], [[consortiums_prives_d_extraction_de_ressources_critiques_reference]], [[fonds_d_investissement_foncier_climatique_reference]], [[corporations_d_extraction_energetique_non_signataires_reference]], [[gouvernements_federaux_residuels_souverainistes_reference]], [[bloc_des_souverainistes_climatiques_reference]]
 
 ## Description journalistique
 Fondée dans la douleur des premières submersions définitives des atolls de Tuvalu et Kiribati au début des années 2040, l'ASMPI est aujourd'hui l'une des organisations diplomatiques les plus redoutées dans les couloirs des négociations climatiques mondiales — non par sa puissance militaire ou économique, mais par l'autorité morale absolue que lui confère son histoire. Ses délégués arrivent aux sommets de Genève ou Nairobi avec des tablettes affichant en temps réel les coordonnées GPS de plateformes flottantes où vivent leurs concitoyens, preuve vivante de ce que le reste du monde refuse encore d'admettre. Le réseau gère aujourd'hui plus de 340 000 personnes réparties sur des archipels flottants, des mégastructures portuaires et des navires-cités ancrés dans des eaux disputées. Sa dernière victoire : l'inscription dans le Protocole de Carthagène de 2091 du principe de 'souveraineté populationnelle continue', dissociant pour la première fois en droit international la citoyenneté du territoire physique.
 
 ## Tensions narratives
 L'ASMPI est tiraillée entre deux visions de son avenir : celle des 'nostalgistes de la terre ferme', qui maintiennent l'espoir d'un retour territorial grâce à des projets de géo-ingénierie côtière, et celle des 'souverainistes fluides', qui revendiquent la condition nomade maritime comme une identité accomplie et non comme une blessure provisoire. Une tension secondaire fragilise son unité interne : les communautés accueillies par des mégapoles côtières comme Auckland ou Singapour développent des loyautés hybrides qui diluent progressivement leur engagement envers le réseau collectif. Enfin, plusieurs blocs économiques tentent de coopter l'ASMPI en lui offrant des financements considérables en échange d'un soutien stratégique dans des négociations sur les routes maritimes du Pacifique — une offre qui divise profondément ses instances dirigeantes.
+
+## Relations
+**Alliés :**
+- [[agence_stabilisation_climatique_reference]]
+- [[bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference]]
+- [[collectifs_de_peche_inuit_et_sami_reference]]
+- [[conseil_de_geneve_pour_les_droits_biosociaux_reference]]
+- [[fonds_monetaire_climatique_fmc_reference]]
+- [[ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference]]
+- [[mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference]]
+- [[observatoire_climatique_des_territoires_oct_reference]]
+- [[pacifique_sud_archipels_flottants_reference]]
+- [[reseau_des_metropoles_cotieres_adaptees_reference]]
+- [[reseau_mnemos_reference]]
+- [[union_africaine_de_resilience_territoriale_reference]]
+**Opposants :**
+- [[alliance_blocs_souverains_reference]]
+- [[bloc_des_souverainistes_climatiques_reference]]
+- [[bloc_ressources_eurasiatique_bre_reference]]
+- [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[corporations_d_extraction_energetique_non_signataires_reference]]
+- [[fonds_d_investissement_foncier_climatique_reference]]
+- [[gouvernements_federaux_residuels_souverainistes_reference]]

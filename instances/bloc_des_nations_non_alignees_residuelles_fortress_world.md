@@ -30,12 +30,17 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- conseil_regulation_ressources_fortress_world
+- consortium_africain_de_biotechnologies_sociales_fortress_world
+- consortium_amazonia_viva_fortress_world
 - siege_genevois_cars_fortress_world
 - tbilissi_nord_zone_franche_fortress_world
 - zones_grises_tampons_fortress_world
 oppositions:
 - bloc_atlantique_fortress_world
 - bloc_eurasiatique_occidental_fortress_world
+- centre_controle_orbital_helios_fortress_world
+- consortiums_energetiques_du_bloc_ourrassol_fortress_world
 - pacte_forteresses_souveraines_fortress_world
 type_relation_dominante: neutralité
 annee_debut: 2026
@@ -100,14 +105,20 @@ La tension centrale du Bloc réside dans l'écart abyssal entre sa rhétorique d
 - [[gouvernance_institutions]]
 - [[frontieres_du_systeme]]
 
+
 ## Relations
 **Alliés :**
+- [[conseil_regulation_ressources_fortress_world]]
+- [[consortium_africain_de_biotechnologies_sociales_fortress_world]]
+- [[consortium_amazonia_viva_fortress_world]]
 - [[siege_genevois_cars_fortress_world]]
 - [[tbilissi_nord_zone_franche_fortress_world]]
 - [[zones_grises_tampons_fortress_world]]
 **Opposants :**
 - [[bloc_atlantique_fortress_world]]
 - [[bloc_eurasiatique_occidental_fortress_world]]
+- [[centre_controle_orbital_helios_fortress_world]]
+- [[consortiums_energetiques_du_bloc_ourrassol_fortress_world]]
 - [[pacte_forteresses_souveraines_fortress_world]]
 
 ## Notes

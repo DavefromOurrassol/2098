@@ -34,8 +34,28 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- alliance_blocs_souverains_reference
+- arctic_passage_authority_reference
+- armada_logistique_nordique_reference
+- consortium_des_grandes_plateformes_ia_integrees_reference
+- consortiums_bancaires_financiarises_reference
+- consortiums_d_extraction_miniere_du_bassin_congolais_reference
+- consortiums_mediatiques_corporatifs_reference
+- guadalajara_nexus_reference
+- optiflow_logistics_reference
+- plateformes_d_optimisation_territoriale_par_ia_reference
+- singapour_est_nexcore_reference
+oppositions:
+- bloc_des_souverainistes_climatiques_reference
+- bureau_zones_non_prioritaires_reference
+- coalition_pour_la_souverainete_numerique_nationale_reference
+- consortium_logistique_asiatique_de_contournement_aln_reference
+- factions_eurasiatiques_contre_la_tarification_hydrique_reference
+- federation_communs_territoriaux_reference
+- front_souverainiste_des_ressources_d_amerique_du_sud_reference
+- milices_concurrentes_des_droits_de_passage_reference
+- operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference
 type_relation_dominante: dépendance
 annee_debut: 2026
 annee_fin: null
@@ -100,6 +120,32 @@ Le Consortium est écartelé entre sa logique d'optimisation globale et les exig
 - [[systemes_productifs_travail]]
 - [[organisation_territoires]]
 - [[energie_ressources_critiques]]
+
+
+
+## Relations
+**Alliés :**
+- [[alliance_blocs_souverains_reference]]
+- [[arctic_passage_authority_reference]]
+- [[armada_logistique_nordique_reference]]
+- [[consortium_des_grandes_plateformes_ia_integrees_reference]]
+- [[consortiums_bancaires_financiarises_reference]]
+- [[consortiums_d_extraction_miniere_du_bassin_congolais_reference]]
+- [[consortiums_mediatiques_corporatifs_reference]]
+- [[guadalajara_nexus_reference]]
+- [[optiflow_logistics_reference]]
+- [[plateformes_d_optimisation_territoriale_par_ia_reference]]
+- [[singapour_est_nexcore_reference]]
+**Opposants :**
+- [[bloc_des_souverainistes_climatiques_reference]]
+- [[bureau_zones_non_prioritaires_reference]]
+- [[coalition_pour_la_souverainete_numerique_nationale_reference]]
+- [[consortium_logistique_asiatique_de_contournement_aln_reference]]
+- [[factions_eurasiatiques_contre_la_tarification_hydrique_reference]]
+- [[federation_communs_territoriaux_reference]]
+- [[front_souverainiste_des_ressources_d_amerique_du_sud_reference]]
+- [[milices_concurrentes_des_droits_de_passage_reference]]
+- [[operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

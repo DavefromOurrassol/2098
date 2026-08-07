@@ -32,8 +32,32 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_mondiale_de_modelisation_climatique_ammc_new_sustainability
+- bloc_des_architectes_d_efficience_algorithmique_new_sustainability
+- consortium_des_ia_climatiques_new_sustainability
+- directive_kontinuum_new_sustainability
+- factions_internes_pro_opacite_des_parametres_new_sustainability
+- factions_technocratiques_du_conseil_de_regulation_informationnelle_global_new_sustainability
+- lobbies_des_plateformes_de_consensus_automatise_new_sustainability
+- nexcore_new_sustainability
+oppositions:
+- amara_diallo_nkosi_new_sustainability
+- bureau_gouvernance_algorithmique_new_sustainability
+- coalition_anti_algorithme_des_autonomies_locales_new_sustainability
+- collectifs_de_deplaces_climatiques_non_representes_new_sustainability
+- collectifs_de_desobeissance_algorithmique_new_sustainability
+- commission_territoriale_ourrassol_new_sustainability
+- communautes_locales_exclues_des_corridors_new_sustainability
+- faction_conservatrice_pro_actif_strategique_new_sustainability
+- factions_internes_contestataires_du_bureau_de_moderation_new_sustainability
+- oracle_des_seuils_new_sustainability
+- parlement_deliberatif_mondial_new_sustainability
+- parlement_territoires_nairobi_new_sustainability
+- reseau_des_communs_alimentaires_hors_grille_new_sustainability
+- reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability
+- tribunal_algorithmique_de_bruxelles_new_sustainability
+- tribunal_gouvernance_algorithmique_bruxelles_new_sustainability
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -97,6 +121,35 @@ La tension centrale réside dans leur paradoxe fondateur : ces factions opèrent
 - [[gouvernance_institutions]]
 - [[technologie_information]]
 - [[valeurs_culture_tempo_sociale]]
+
+
+## Relations
+**Alliés :**
+- [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]]
+- [[bloc_des_architectes_d_efficience_algorithmique_new_sustainability]]
+- [[consortium_des_ia_climatiques_new_sustainability]]
+- [[directive_kontinuum_new_sustainability]]
+- [[factions_internes_pro_opacite_des_parametres_new_sustainability]]
+- [[factions_technocratiques_du_conseil_de_regulation_informationnelle_global_new_sustainability]]
+- [[lobbies_des_plateformes_de_consensus_automatise_new_sustainability]]
+- [[nexcore_new_sustainability]]
+**Opposants :**
+- [[amara_diallo_nkosi_new_sustainability]]
+- [[bureau_gouvernance_algorithmique_new_sustainability]]
+- [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]]
+- [[collectifs_de_deplaces_climatiques_non_representes_new_sustainability]]
+- [[collectifs_de_desobeissance_algorithmique_new_sustainability]]
+- [[commission_territoriale_ourrassol_new_sustainability]]
+- [[communautes_locales_exclues_des_corridors_new_sustainability]]
+- [[faction_conservatrice_pro_actif_strategique_new_sustainability]]
+- [[factions_internes_contestataires_du_bureau_de_moderation_new_sustainability]]
+- [[oracle_des_seuils_new_sustainability]]
+- [[parlement_deliberatif_mondial_new_sustainability]]
+- [[parlement_territoires_nairobi_new_sustainability]]
+- [[reseau_des_communs_alimentaires_hors_grille_new_sustainability]]
+- [[reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability]]
+- [[tribunal_algorithmique_de_bruxelles_new_sustainability]]
+- [[tribunal_gouvernance_algorithmique_bruxelles_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

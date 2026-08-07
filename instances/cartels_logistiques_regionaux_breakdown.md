@@ -35,8 +35,35 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
+- cargo_mombasa_crrc_breakdown
+- carthage_nord_nexcore_breakdown
+- consortiums_logistiques_agro_corporatifs_breakdown
+- corridor_lithium_bouches_breakdown
+- milices_contractuelles_des_anciens_etats_membres_breakdown
+- milices_de_controle_territorial_breakdown
+- reseau_de_recuperation_industrielle_illicite_breakdown
+- seigneuries_logistiques_armees_breakdown
+oppositions:
+- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- communes_rust_belt_breakdown
+- communes_rust_belt_zones_libres_breakdown
+- cooperative_terrafond_breakdown
+- etats_fragmentes_nationalisant_les_stocks_breakdown
+- factions_paramilitaires_locales_neutralisees_breakdown
+- federation_communs_territoriaux_breakdown
+- frente_sert_o_livre_breakdown
+- front_de_resistance_aux_peages_sur_les_ressources_breakdown
+- gouvernements_regionaux_residuels_reterritorialisants_breakdown
+- hanse_baltique_recomposee_breakdown
+- ligue_des_cites_du_sahel_numerique_breakdown
+- milices_agro_defensives_locales_breakdown
+- nairobi_crrc_breakdown
+- ong_de_gestion_migratoire_survivantes_breakdown
+- reseau_logistique_criminel_concurrent_breakdown
+- saboteurs_des_corridors_de_transit_breakdown
+- sfax_relais_bouches_breakdown
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -97,6 +124,38 @@ Les Cartels sont condamnés à une contradiction structurelle : leur pouvoir rep
 - [[organisation_territoires]]
 - [[energie_ressources_critiques]]
 - [[gouvernance_institutions]]
+
+
+## Relations
+**Alliés :**
+- [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
+- [[cargo_mombasa_crrc_breakdown]]
+- [[carthage_nord_nexcore_breakdown]]
+- [[consortiums_logistiques_agro_corporatifs_breakdown]]
+- [[corridor_lithium_bouches_breakdown]]
+- [[milices_contractuelles_des_anciens_etats_membres_breakdown]]
+- [[milices_de_controle_territorial_breakdown]]
+- [[reseau_de_recuperation_industrielle_illicite_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]
+**Opposants :**
+- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[communes_rust_belt_breakdown]]
+- [[communes_rust_belt_zones_libres_breakdown]]
+- [[cooperative_terrafond_breakdown]]
+- [[etats_fragmentes_nationalisant_les_stocks_breakdown]]
+- [[factions_paramilitaires_locales_neutralisees_breakdown]]
+- [[federation_communs_territoriaux_breakdown]]
+- [[frente_sert_o_livre_breakdown]]
+- [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
+- [[gouvernements_regionaux_residuels_reterritorialisants_breakdown]]
+- [[hanse_baltique_recomposee_breakdown]]
+- [[ligue_des_cites_du_sahel_numerique_breakdown]]
+- [[milices_agro_defensives_locales_breakdown]]
+- [[nairobi_crrc_breakdown]]
+- [[ong_de_gestion_migratoire_survivantes_breakdown]]
+- [[reseau_logistique_criminel_concurrent_breakdown]]
+- [[saboteurs_des_corridors_de_transit_breakdown]]
+- [[sfax_relais_bouches_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

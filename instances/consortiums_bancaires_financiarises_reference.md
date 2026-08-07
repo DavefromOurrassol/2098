@@ -31,8 +31,29 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- algorithmic_labor_exchange_reference
+- amazonie_consortium_viva_reference
+- banque_mondiale_des_transitions_climatiques_reference
+- consortium_des_grandes_plateformes_ia_integrees_reference
+- consortium_des_grandes_plateformes_logistiques_globales_reference
+- consortiums_d_agriculture_verticale_algorithmique_reference
+- consortiums_energetiques_des_megapoles_reference
+- consortiums_mediatiques_corporatifs_reference
+- consortiums_prives_d_extraction_de_ressources_critiques_reference
+- fonds_monetaire_climatique_fmc_reference
+- institutions_multilaterales_survivantes_reference
+- nexcore_reference
+oppositions:
+- banque_des_communs_reference
+- bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference
+- coalition_pour_la_souverainete_numerique_nationale_reference
+- consortium_africain_de_biotechnologies_sociales_reference
+- factions_eurasiatiques_contre_la_tarification_hydrique_reference
+- milices_concurrentes_des_droits_de_passage_reference
+- reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference
+- reseaux_de_medecine_traditionnelle_augmentee_reference
+- sao_paulo_ita_reference
 type_relation_dominante: dépendance
 annee_debut: 2026
 annee_fin: null
@@ -96,6 +117,32 @@ La tension centrale des Consortiums réside dans leur paradoxe existentiel : plu
 - [[systeme_economique_redistribution]]
 - [[gouvernance_institutions]]
 - [[technologie_information]]
+
+
+## Relations
+**Alliés :**
+- [[algorithmic_labor_exchange_reference]]
+- [[amazonie_consortium_viva_reference]]
+- [[banque_mondiale_des_transitions_climatiques_reference]]
+- [[consortium_des_grandes_plateformes_ia_integrees_reference]]
+- [[consortium_des_grandes_plateformes_logistiques_globales_reference]]
+- [[consortiums_d_agriculture_verticale_algorithmique_reference]]
+- [[consortiums_energetiques_des_megapoles_reference]]
+- [[consortiums_mediatiques_corporatifs_reference]]
+- [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[fonds_monetaire_climatique_fmc_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
+- [[nexcore_reference]]
+**Opposants :**
+- [[banque_des_communs_reference]]
+- [[bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference]]
+- [[coalition_pour_la_souverainete_numerique_nationale_reference]]
+- [[consortium_africain_de_biotechnologies_sociales_reference]]
+- [[factions_eurasiatiques_contre_la_tarification_hydrique_reference]]
+- [[milices_concurrentes_des_droits_de_passage_reference]]
+- [[reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference]]
+- [[reseaux_de_medecine_traditionnelle_augmentee_reference]]
+- [[sao_paulo_ita_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

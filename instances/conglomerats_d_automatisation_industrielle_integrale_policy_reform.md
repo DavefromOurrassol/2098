@@ -32,8 +32,29 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- coalition_des_souverainistes_numeriques_policy_reform
+- consortiums_agro_industriels_du_bassin_fluvial_policy_reform
+- consortiums_prives_de_gouvernance_algorithmique_policy_reform
+- front_techno_utopiste_de_la_decision_automatisee_policy_reform
+- lobbies_des_energies_fossiles_residuelles_policy_reform
+- reseau_des_lobbyistes_techniques_onu_energie_policy_reform
+- syndicats_d_extraction_privee_non_regules_policy_reform
+oppositions:
+- agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
+- autorite_mondiale_du_vivant_amv_policy_reform
+- bureau_gouvernance_algorithmique_policy_reform
+- bureau_international_du_travail_augmente_bita_policy_reform
+- collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform
+- conseil_de_regulation_climatique_global_policy_reform
+- conseil_regulation_algorithmique_policy_reform
+- faction_regulatrice_dure_au_sein_du_cei_policy_reform
+- internationale_travailleurs_augmentes_policy_reform
+- mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform
+- reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
+- reseau_des_regulateurs_numeriques_souverains_rrns_policy_reform
+- syndicat_des_ingenieurs_orbitaux_policy_reform
+- tribunal_algorithmique_de_bruxelles_policy_reform
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -98,6 +119,32 @@ La tension centrale réside dans la contradiction entre leur dépendance aux inf
 - [[systemes_productifs_travail]]
 - [[systeme_economique_redistribution]]
 - [[gouvernance_institutions]]
+
+
+## Relations
+**Alliés :**
+- [[coalition_des_souverainistes_numeriques_policy_reform]]
+- [[consortiums_agro_industriels_du_bassin_fluvial_policy_reform]]
+- [[consortiums_prives_de_gouvernance_algorithmique_policy_reform]]
+- [[front_techno_utopiste_de_la_decision_automatisee_policy_reform]]
+- [[lobbies_des_energies_fossiles_residuelles_policy_reform]]
+- [[reseau_des_lobbyistes_techniques_onu_energie_policy_reform]]
+- [[syndicats_d_extraction_privee_non_regules_policy_reform]]
+**Opposants :**
+- [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]
+- [[autorite_mondiale_du_vivant_amv_policy_reform]]
+- [[bureau_gouvernance_algorithmique_policy_reform]]
+- [[bureau_international_du_travail_augmente_bita_policy_reform]]
+- [[collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform]]
+- [[conseil_de_regulation_climatique_global_policy_reform]]
+- [[conseil_regulation_algorithmique_policy_reform]]
+- [[faction_regulatrice_dure_au_sein_du_cei_policy_reform]]
+- [[internationale_travailleurs_augmentes_policy_reform]]
+- [[mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform]]
+- [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]]
+- [[reseau_des_regulateurs_numeriques_souverains_rrns_policy_reform]]
+- [[syndicat_des_ingenieurs_orbitaux_policy_reform]]
+- [[tribunal_algorithmique_de_bruxelles_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

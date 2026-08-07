@@ -35,8 +35,27 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_mondiale_de_modelisation_climatique_ammc_new_sustainability
+- conseil_regulation_algorithmique_new_sustainability
+- consortium_des_ia_climatiques_new_sustainability
+- factions_technocratiques_de_la_delegation_ia_totale_new_sustainability
+- tribunal_algorithmique_de_bruxelles_new_sustainability
+oppositions:
+- coalition_anti_algorithme_des_autonomies_locales_new_sustainability
+- collectifs_de_deplaces_climatiques_non_representes_new_sustainability
+- collectifs_de_desobeissance_algorithmique_new_sustainability
+- factions_internes_contestataires_du_bureau_de_moderation_new_sustainability
+- internationale_travailleurs_augmentes_new_sustainability
+- leena_vainala_new_sustainability
+- ligue_des_cites_du_sahel_numerique_new_sustainability
+- mouvement_communautaire_des_micro_grids_energetiques_new_sustainability
+- mouvement_pour_l_autodetermination_territoriale_new_sustainability
+- mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability
+- reseau_des_bio_communs_regionaux_new_sustainability
+- reseau_des_hubs_urbains_regeneratifs_new_sustainability
+- reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability
+- tribunal_gouvernance_algorithmique_bruxelles_new_sustainability
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -102,6 +121,30 @@ Le Bloc est pris en tenaille entre son discours d'efficience écologique — sé
 - [[gouvernance_institutions]]
 - [[technologie_information]]
 - [[systemes_productifs_travail]]
+
+
+## Relations
+**Alliés :**
+- [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]]
+- [[conseil_regulation_algorithmique_new_sustainability]]
+- [[consortium_des_ia_climatiques_new_sustainability]]
+- [[factions_technocratiques_de_la_delegation_ia_totale_new_sustainability]]
+- [[tribunal_algorithmique_de_bruxelles_new_sustainability]]
+**Opposants :**
+- [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]]
+- [[collectifs_de_deplaces_climatiques_non_representes_new_sustainability]]
+- [[collectifs_de_desobeissance_algorithmique_new_sustainability]]
+- [[factions_internes_contestataires_du_bureau_de_moderation_new_sustainability]]
+- [[internationale_travailleurs_augmentes_new_sustainability]]
+- [[leena_vainala_new_sustainability]]
+- [[ligue_des_cites_du_sahel_numerique_new_sustainability]]
+- [[mouvement_communautaire_des_micro_grids_energetiques_new_sustainability]]
+- [[mouvement_pour_l_autodetermination_territoriale_new_sustainability]]
+- [[mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability]]
+- [[reseau_des_bio_communs_regionaux_new_sustainability]]
+- [[reseau_des_hubs_urbains_regeneratifs_new_sustainability]]
+- [[reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability]]
+- [[tribunal_gouvernance_algorithmique_bruxelles_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

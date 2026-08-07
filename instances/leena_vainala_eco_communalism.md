@@ -4,6 +4,7 @@ type: instance
 slug: leena_vainala_eco_communalism
 entite: leena_vainala
 scenario: eco_communalism
+statut: officialise_enrichi
 localisation:
   zone: arc_septentrional
   lieu: Arc Septentrional (espace fenno-scandinave et baltique)
@@ -33,16 +34,17 @@ zone_systemique:
     - société
 
 alliances:
-    - confederation_des_communs_de_l_arc_septentrional_eco_communalism
-    - reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism
-    - archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
-    - collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism
-
+- archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
+- collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism
+- confederation_communs_arc_septentrional_eco_communalism
+- confederation_des_communs_de_l_arc_septentrional_eco_communalism
+- reseau_assemblees_fennoscandien_eco_communalism
+- reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism
+- tampere_charte_eco_communalism
 oppositions:
-    - front_techno_utopiste_de_la_decision_automatisee_policy_reform
-    - factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism
-    - reseaux_de_notables_communautaires_capturistes_eco_communalism
-
+- factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism
+- front_techno_utopiste_de_la_decision_automatisee_policy_reform
+- reseaux_de_notables_communautaires_capturistes_eco_communalism
 type_relation_dominante: coopération
 
 annee_debut: 2031
@@ -85,12 +87,23 @@ Elle rédige et négocie des protocoles de gouvernance participative pour les as
 - [[valeurs_culture_tempo_sociale]]
 - [[technologie_information]]
 
-## Relations
-**Alliés** : [[confederation_des_communs_de_l_arc_septentrional_eco_communalism]], [[reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism]], [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]], [[collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism]]
-**Opposants** : [[front_techno_utopiste_de_la_decision_automatisee_policy_reform]], [[factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism]], [[reseaux_de_notables_communautaires_capturistes_eco_communalism]]
 
 ## Description journalistique
 On la reconnaît souvent à son sac de toile portant les armoiries brodées de trois communes différentes — une habitude qu'elle a prise de ne jamais se revendiquer d'un seul territoire. À 71 ans, Leena Väinälä parcourt encore les routes lentes de l'Arc septentrional pour assister aux assemblées constitutives, carnet en main, posant ses questions tranchantes avec une douceur désarmante. Ses textes fondateurs — notamment la Charte de Tampere sur les communs numériques de 2038 — sont désormais imprimés sur papier local dans des dizaines de communes qui n'ont jamais eu accès à internet global. Elle dit elle-même qu'elle n'a pas voulu fonder une école, mais que les écoles ont quand même surgi derrière elle, ce qui la préoccupe autant que ça la réjouit.
 
 ## Tensions narratives
 La tension centrale de son parcours dans ce monde est la suivante : ses outils conceptuels, pensés pour émanciper les communautés, sont régulièrement instrumentalisés par des factions locales pour légitimer des fermetures identitaires ou des oligarchies de façade délibérative. Doit-elle amender ses chartes pour les rendre plus résistantes au détournement, au risque de les rigidifier ? Par ailleurs, une nouvelle génération de facilitateurs formés par ses réseaux commence à diverger de sa philosophie, préférant des protocoles algorithmiques légers qu'ils jugent plus équitables — un conflit générationnel qui menace l'unité du mouvement. Sa propre trajectoire vers une forme de figure tutélaire mythifiée la trouble profondément, elle qui a fondé toute son œuvre sur la méfiance envers l'autorité incarnée.
+
+## Relations
+**Alliés :**
+- [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]]
+- [[collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism]]
+- [[confederation_communs_arc_septentrional_eco_communalism]]
+- [[confederation_des_communs_de_l_arc_septentrional_eco_communalism]]
+- [[reseau_assemblees_fennoscandien_eco_communalism]]
+- [[reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism]]
+- [[tampere_charte_eco_communalism]]
+**Opposants :**
+- [[factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism]]
+- [[front_techno_utopiste_de_la_decision_automatisee_policy_reform]]
+- [[reseaux_de_notables_communautaires_capturistes_eco_communalism]]

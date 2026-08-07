@@ -37,7 +37,13 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- arctique_nordark_breakdown
+- brigades_medicales_itinerantes_breakdown
 - communes_rust_belt_breakdown
+- factions_paramilitaires_locales_neutralisees_breakdown
+- mouvement_racines_vivantes_breakdown
+- noeud_mnemos_pannonie_breakdown
+- saboteurs_des_corridors_de_transit_breakdown
 oppositions: []
 type_relation_dominante: symbiose
 annee_debut: 2026
@@ -99,9 +105,16 @@ La tension centrale qui les traverse oppose l'impératif de fermeture — proté
 - [[energie_ressources_critiques]]
 - [[gouvernance_institutions]]
 
+
 ## Relations
 **Alliés :**
+- [[arctique_nordark_breakdown]]
+- [[brigades_medicales_itinerantes_breakdown]]
 - [[communes_rust_belt_breakdown]]
+- [[factions_paramilitaires_locales_neutralisees_breakdown]]
+- [[mouvement_racines_vivantes_breakdown]]
+- [[noeud_mnemos_pannonie_breakdown]]
+- [[saboteurs_des_corridors_de_transit_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

@@ -4,6 +4,7 @@ type: instance
 slug: bureau_des_territoires_residuels_reference
 entite: bureau_des_territoires_residuels
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: bureau_zones_non_prioritaires
   lieu: Direction des Zones Non Prioritaires (DZNP), bâtiment modulaire de Genève
@@ -38,20 +39,25 @@ zone_systemique:
     - infrastructure
 
 alliances:
-    - plateformes_d_optimisation_territoriale_par_ia_reference
-    - agences_de_securite_regionales_de_normalisation_des_zones_grises_reference
-    - bureaux_de_regulation_informationnelle_reference
-    - consortiums_prives_de_gestion_des_donnees_critiques_reference
-    - observatoire_climatique_des_territoires_oct_reference
-
+- agences_de_securite_regionales_de_normalisation_des_zones_grises_reference
+- bureaux_de_regulation_informationnelle_reference
+- consortiums_prives_de_gestion_des_donnees_critiques_reference
+- observatoire_climatique_des_territoires_oct_reference
+- plateformes_d_optimisation_territoriale_par_ia_reference
+- zones_grises_globales_reference
 oppositions:
-    - federation_communs_territoriaux_reference
-    - reseau_des_administrations_locales_rurales_participatives_reference
-    - collectifs_de_journalisme_embarque_reference
-    - reseau_mnemos_reference
-    - voix_du_dehors_reference
-    - ligue_des_municipalites_peripheriques_sous_connectees_reference
-
+- collectifs_de_journalisme_embarque_reference
+- delta_du_gange_reference
+- federation_communs_territoriaux_reference
+- les_veilleurs_du_fleuve_reference
+- ligue_des_municipalites_peripheriques_sous_connectees_reference
+- lyon_metropole_reference
+- optiflow_logistics_reference
+- reseau_des_administrations_locales_rurales_participatives_reference
+- reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference
+- reseau_mnemos_reference
+- singapour_est_reference
+- voix_du_dehors_reference
 type_relation_dominante: dépendance
 
 annee_debut: 2031
@@ -95,12 +101,31 @@ La DZNP recense les zones déclarées 'non prioritaires' par les plateformes d'o
 - [[demographie_mobilite_humaine]]
 - [[technologie_information]]
 
-## Relations
-**Alliés** : [[plateformes_d_optimisation_territoriale_par_ia_reference]], [[agences_de_securite_regionales_de_normalisation_des_zones_grises_reference]], [[bureaux_de_regulation_informationnelle_reference]], [[consortiums_prives_de_gestion_des_donnees_critiques_reference]], [[observatoire_climatique_des_territoires_oct_reference]]
-**Opposants** : [[federation_communs_territoriaux_reference]], [[reseau_des_administrations_locales_rurales_participatives_reference]], [[collectifs_de_journalisme_embarque_reference]], [[reseau_mnemos_reference]], [[voix_du_dehors_reference]], [[ligue_des_municipalites_peripheriques_sous_connectees_reference]]
 
 ## Description journalistique
 Installée dans un bâtiment modulaire de Genève que peu de fonctionnaires peuvent localiser sans un code d'accès interministériel, la Direction des Zones Non Prioritaires emploie environ 340 agents répartis sur quatre fuseaux horaires — la plupart n'ayant jamais mis le pied dans les zones qu'ils archivent. Ses rapports annuels, disponibles en théorie sur requête officielle, arrivent invariablement avec 78 % de leurs pages caviardées. Ce que la presse sait : en 2097, la DZNP a enregistré 1 400 nouvelles 'unités territoriales suspendues', soit une hausse de 23 % sur l'exercice précédent. Ce qu'elle tait : les noms, les visages, les 11 millions de personnes que ces codes représentent. Un ancien agent, sous couverture, l'a décrite comme 'un crématorium de papier — on brûle les vivants à l'encre plutôt qu'au feu'.
 
 ## Tensions narratives
 La DZNP détient les seules archives consolidées prouvant que des territoires habités ont été délibérément exclus des plans de résilience climatique — une preuve que des coalitions comme la Fédération des Communs Territoriaux ou les réseaux de lanceurs d'alerte cherchent activement à obtenir. En interne, une faction minoritaire d'agents estime que la mission de 'documentation' est devenue complicité active, et envisage des fuites ciblées. Parallèlement, les plateformes IA qui alimentent ses classifications commencent à lui retourner des recommandations que même ses directeurs trouvent intenables — soulèvant la question de qui, au fond, gouverne encore les décisions d'abandon.
+
+## Relations
+**Alliés :**
+- [[agences_de_securite_regionales_de_normalisation_des_zones_grises_reference]]
+- [[bureaux_de_regulation_informationnelle_reference]]
+- [[consortiums_prives_de_gestion_des_donnees_critiques_reference]]
+- [[observatoire_climatique_des_territoires_oct_reference]]
+- [[plateformes_d_optimisation_territoriale_par_ia_reference]]
+- [[zones_grises_globales_reference]]
+**Opposants :**
+- [[collectifs_de_journalisme_embarque_reference]]
+- [[delta_du_gange_reference]]
+- [[federation_communs_territoriaux_reference]]
+- [[les_veilleurs_du_fleuve_reference]]
+- [[ligue_des_municipalites_peripheriques_sous_connectees_reference]]
+- [[lyon_metropole_reference]]
+- [[optiflow_logistics_reference]]
+- [[reseau_des_administrations_locales_rurales_participatives_reference]]
+- [[reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference]]
+- [[reseau_mnemos_reference]]
+- [[singapour_est_reference]]
+- [[voix_du_dehors_reference]]

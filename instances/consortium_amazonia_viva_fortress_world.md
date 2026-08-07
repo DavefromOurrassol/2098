@@ -4,6 +4,7 @@ type: instance
 slug: consortium_amazonia_viva_fortress_world
 entite: consortium_amazonia_viva
 scenario: fortress_world
+statut: officialise_enrichi
 localisation:
   zone: amazonie_pacte_vert
   lieu: Amazonie — Territoire du Pacte Vert
@@ -37,21 +38,20 @@ zone_systemique:
     - sécurité
 
 alliances:
-    - bloc_des_nations_non_alignees_residuelles_fortress_world
-    - coalition_vivant_fortress_world
-    - internationale_des_semenciers_agro_pirates_fortress_world
-    - institutions_multilaterales_residuelles_fortress_world
-    - cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
-    - coalitions_des_deplaces_et_apatrides_fortress_world
-
+- bloc_des_nations_non_alignees_residuelles_fortress_world
+- cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
+- coalition_vivant_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- institutions_multilaterales_residuelles_fortress_world
+- internationale_des_semenciers_agro_pirates_fortress_world
 oppositions:
-    - cartels_miniers_militarises_subsahariens_fortress_world
-    - nexus_biosyn_fortress_world
-    - complexes_militaro_industriels_de_gestion_des_ressources_fortress_world
-    - consortium_eurasiatique_des_ressources_fermees_fortress_world
-    - commandement_strategique_des_matieres_critiques_atlantique_fortress_world
-    - etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world
-
+- amazonie_pacte_vert_fortress_world
+- cartels_miniers_militarises_subsahariens_fortress_world
+- commandement_strategique_des_matieres_critiques_atlantique_fortress_world
+- complexes_militaro_industriels_de_gestion_des_ressources_fortress_world
+- consortium_eurasiatique_des_ressources_fermees_fortress_world
+- etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world
+- nexus_biosyn_fortress_world
 type_relation_dominante: conflit
 
 annee_debut: 2041
@@ -95,12 +95,26 @@ Le Pacte maintient un réseau de stations biologiques autonomes disséminées da
 - [[energie_ressources_critiques]]
 - [[gouvernance_institutions]]
 
-## Relations
-**Alliés** : [[bloc_des_nations_non_alignees_residuelles_fortress_world]], [[coalition_vivant_fortress_world]], [[internationale_des_semenciers_agro_pirates_fortress_world]], [[institutions_multilaterales_residuelles_fortress_world]], [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]], [[coalitions_des_deplaces_et_apatrides_fortress_world]]
-**Opposants** : [[cartels_miniers_militarises_subsahariens_fortress_world]], [[nexus_biosyn_fortress_world]], [[complexes_militaro_industriels_de_gestion_des_ressources_fortress_world]], [[consortium_eurasiatique_des_ressources_fermees_fortress_world]], [[commandement_strategique_des_matieres_critiques_atlantique_fortress_world]], [[etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world]]
 
 ## Description journalistique
 Dans les rares transmissions qui franchissent le périmètre de surveillance du Bloc Atlantique, le Pacte Vert Amazônia ressemble moins à une institution qu'à un appel de détresse structuré. Ses délégués — identifiables à leurs badges holographiques frappés d'un jaguar stylisé sur fond de réseau racinaire — négocient depuis des stations flottantes déplacées tous les soixante-douze heures pour éviter les frappes de drones de reconnaissance des cartels. En 2094, ils ont réussi à obtenir un accord de non-agression provisoire avec deux factions du Bloc des Non-Alignés en échange de données phytogénomiques exclusives — un succès fragile que leurs opposants internes qualifient déjà de capitulation. Aujourd'hui, leur périmètre de contrôle réel se réduit, grignoté à la fois par les avancées militarisées des consortiums miniers au sud et par l'infiltration progressive des réseaux biotechnologiques propriétaires au nord. Ils tiennent, mais chaque saison est peut-être la dernière.
 
 ## Tensions narratives
 La question centrale qui fracture le Pacte en interne est celle du prix de la survie : accepter un protectorat partiel d'un bloc dominant pour préserver l'intégrité territoriale, ou maintenir une indépendance pure qui condamne à l'effacement progressif ? Une faction radicale autochtone refuse toute négociation avec les blocs et tente de constituer une force de défense armée autonome, risquant de transformer le Pacte en acteur militaire et de légitimer les frappes préventives. Pendant ce temps, des fuites indiquent que Nexus BioSyn a déjà cartographié secrètement 40% des stocks génomiques amazôniens — rendant la souveraineté revendiquée partiellement fictive avant même d'avoir été reconnue.
+
+## Relations
+**Alliés :**
+- [[bloc_des_nations_non_alignees_residuelles_fortress_world]]
+- [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]]
+- [[coalition_vivant_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[institutions_multilaterales_residuelles_fortress_world]]
+- [[internationale_des_semenciers_agro_pirates_fortress_world]]
+**Opposants :**
+- [[amazonie_pacte_vert_fortress_world]]
+- [[cartels_miniers_militarises_subsahariens_fortress_world]]
+- [[commandement_strategique_des_matieres_critiques_atlantique_fortress_world]]
+- [[complexes_militaro_industriels_de_gestion_des_ressources_fortress_world]]
+- [[consortium_eurasiatique_des_ressources_fermees_fortress_world]]
+- [[etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world]]
+- [[nexus_biosyn_fortress_world]]

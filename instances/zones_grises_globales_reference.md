@@ -4,6 +4,7 @@ type: instance
 slug: zones_grises_globales_reference
 entite: zones_grises_globales
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: null
   lieu: null
@@ -41,24 +42,24 @@ zone_systemique:
     - infrastructure
 
 alliances:
-    - operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference
-    - milices_concurrentes_des_droits_de_passage_reference
-    - factions_d_extraction_miniere_independantes_reference
-    - bureau_des_territoires_residuels_reference
-    - bureau_zones_non_prioritaires_reference
-    - administrations_hybrides_des_cites_relais_peripheriques_reference
-    - reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference
-    - collectifs_de_biopiraterie_inversee_reference
-
+- administrations_hybrides_des_cites_relais_peripheriques_reference
+- bureau_des_territoires_residuels_reference
+- bureau_zones_non_prioritaires_reference
+- collectifs_de_biopiraterie_inversee_reference
+- factions_d_extraction_miniere_independantes_reference
+- milices_concurrentes_des_droits_de_passage_reference
+- operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference
+- reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference
 oppositions:
-    - agences_de_securite_regionales_de_normalisation_des_zones_grises_reference
-    - confederation_des_megapoles_autonomes_reference
-    - institutions_multilaterales_survivantes_reference
-    - reseaux_de_gouvernance_multilaterale_survivants_reference
-    - conseil_regulation_ressources_reference
-    - union_africaine_de_resilience_territoriale_reference
-    - coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference
-
+- agences_de_securite_regionales_de_normalisation_des_zones_grises_reference
+- coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference
+- confederation_des_megapoles_autonomes_reference
+- conseil_regulation_ressources_reference
+- consortium_des_grandes_plateformes_ia_integrees_reference
+- institutions_multilaterales_survivantes_reference
+- reseau_des_metropoles_cotieres_adaptees_reference
+- reseaux_de_gouvernance_multilaterale_survivants_reference
+- union_africaine_de_resilience_territoriale_reference
 type_relation_dominante: dépendance
 
 annee_debut: 2026
@@ -103,12 +104,30 @@ Absorbent les populations déplacées par les crises climatiques, énergétiques
 - [[gouvernance_institutions]]
 - [[systeme_economique_redistribution]]
 
-## Relations
-**Alliés** : [[operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference]], [[milices_concurrentes_des_droits_de_passage_reference]], [[factions_d_extraction_miniere_independantes_reference]], [[bureau_des_territoires_residuels_reference]], [[bureau_zones_non_prioritaires_reference]], [[administrations_hybrides_des_cites_relais_peripheriques_reference]], [[reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference]], [[collectifs_de_biopiraterie_inversee_reference]]
-**Opposants** : [[agences_de_securite_regionales_de_normalisation_des_zones_grises_reference]], [[confederation_des_megapoles_autonomes_reference]], [[institutions_multilaterales_survivantes_reference]], [[reseaux_de_gouvernance_multilaterale_survivants_reference]], [[conseil_regulation_ressources_reference]], [[union_africaine_de_resilience_territoriale_reference]], [[coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference]]
 
 ## Description journalistique
 Depuis Nairobi jusqu'aux marges du Bassin Congolais, depuis les lisières du Sahel jusqu'aux périphéries non cartographiées des grandes corridors logistiques eurasiatiques, les Zones Grises s'étendent en 2098 comme un continent invisible — sans capital, sans drapeau, mais avec une population estimée à plusieurs centaines de millions d'âmes. Elles ne figurent sur aucune carte officielle des blocs régionaux, mais leurs ressources, leur main-d'œuvre et leurs flux traversent quotidiennement les frontières des économies formelles. Un rapport confidentiel du Conseil de Régulation des Ressources Critiques, divulgué en 2096, reconnaissait que 'la stabilité des marchés de terres rares dépend structurellement de circuits d'extraction opérant dans des zones sans juridiction'. Les habitants, eux, parlent simplement de survivre dans des espaces que le monde a choisi de ne pas voir — ni pour les gouverner, ni pour les protéger.
 
 ## Tensions narratives
 La tension centrale est celle de la tolérance calculée : les blocs régionaux et les mégapoles savent que les Zones Grises leur sont utiles — comme réservoir de ressources, de main-d'œuvre flexible et de circuits de contournement — mais cette utilité même rend impossible toute normalisation sincère. Une pression monte néanmoins : les agences de sécurité régionales multiplient les opérations de 'normalisation' qui ressemblent davantage à des prises de contrôle économique qu'à de la gouvernance. En parallèle, des mouvements de résistance locale commencent à cartographier et revendiquer ces territoires comme des espaces de souveraineté alternative, créant une friction inédite entre abandon structurel et auto-organisation émergente.
+
+## Relations
+**Alliés :**
+- [[administrations_hybrides_des_cites_relais_peripheriques_reference]]
+- [[bureau_des_territoires_residuels_reference]]
+- [[bureau_zones_non_prioritaires_reference]]
+- [[collectifs_de_biopiraterie_inversee_reference]]
+- [[factions_d_extraction_miniere_independantes_reference]]
+- [[milices_concurrentes_des_droits_de_passage_reference]]
+- [[operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference]]
+- [[reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference]]
+**Opposants :**
+- [[agences_de_securite_regionales_de_normalisation_des_zones_grises_reference]]
+- [[coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference]]
+- [[confederation_des_megapoles_autonomes_reference]]
+- [[conseil_regulation_ressources_reference]]
+- [[consortium_des_grandes_plateformes_ia_integrees_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
+- [[reseau_des_metropoles_cotieres_adaptees_reference]]
+- [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
+- [[union_africaine_de_resilience_territoriale_reference]]

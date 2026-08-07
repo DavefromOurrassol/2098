@@ -31,8 +31,21 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- amara_diallo_nkosi_policy_reform
+- collectifs_de_biohackers_agro_communautaires_policy_reform
+- collectifs_de_gouvernance_communautaire_decentralisee_policy_reform
+- front_des_autonomies_territoriales_radicales_policy_reform
+- les_veilleurs_du_fleuve_policy_reform
+- mouvement_pour_la_justice_ecologique_communautaire_policy_reform
+- pacifique_sud_resilience_network_policy_reform
+oppositions:
+- autorite_continentale_des_ressources_aquatiques_acra_policy_reform
+- conseil_regulation_ressources_policy_reform
+- factions_technocratiques_de_la_marchandisation_hydrique_policy_reform
+- fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform
+- front_souverainiste_des_blocs_non_signataires_policy_reform
+- trame_bioclimatique_policy_reform
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -95,6 +108,24 @@ Les Collectifs sont pris en étau entre le Bloc Souverainiste Non-Signataire qui
 - [[energie_ressources_critiques]]
 - [[gouvernance_institutions]]
 - [[organisation_territoires]]
+
+
+## Relations
+**Alliés :**
+- [[amara_diallo_nkosi_policy_reform]]
+- [[collectifs_de_biohackers_agro_communautaires_policy_reform]]
+- [[collectifs_de_gouvernance_communautaire_decentralisee_policy_reform]]
+- [[front_des_autonomies_territoriales_radicales_policy_reform]]
+- [[les_veilleurs_du_fleuve_policy_reform]]
+- [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]]
+- [[pacifique_sud_resilience_network_policy_reform]]
+**Opposants :**
+- [[autorite_continentale_des_ressources_aquatiques_acra_policy_reform]]
+- [[conseil_regulation_ressources_policy_reform]]
+- [[factions_technocratiques_de_la_marchandisation_hydrique_policy_reform]]
+- [[fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform]]
+- [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+- [[trame_bioclimatique_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

@@ -32,8 +32,33 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform
+- conglomerats_d_automatisation_industrielle_integrale_policy_reform
+- consortiums_agro_industriels_du_bassin_fluvial_policy_reform
+- front_des_souverainistes_energetiques_policy_reform
+- front_souverainiste_des_blocs_non_signataires_policy_reform
+- republique_islamique_iran_policy_reform
+- reseau_des_lobbyistes_techniques_onu_energie_policy_reform
+- syndicats_d_extraction_privee_non_regules_policy_reform
+oppositions:
+- agence_internationale_de_l_energie_reformatee_aier_policy_reform
+- agence_stabilisation_climatique_policy_reform
+- agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
+- bloc_des_nations_a_economie_carbone_controlee_policy_reform
+- coalition_des_villes_de_reconversion_policy_reform
+- conseil_de_regulation_climatique_global_policy_reform
+- consortium_des_villes_etats_durables_policy_reform
+- federation_des_mutuelles_biotech_policy_reform
+- fonds_de_stabilisation_climatique_onu_3_policy_reform
+- fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform
+- fonds_souverain_de_transition_verte_fstv_policy_reform
+- great_lakes_autonomous_compact_policy_reform
+- kalaallit_nunaat_sovereign_fund_policy_reform
+- mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform
+- observatoire_mondial_des_ressources_critiques_policy_reform
+- pacifique_sud_resilience_network_policy_reform
+- reseau_des_journalistes_d_investigation_energetique_policy_reform
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -99,6 +124,36 @@ Pris entre l'inexorabilité de leur déclin industriel et la nécessité de pré
 - [[energie_ressources_critiques]]
 - [[gouvernance_institutions]]
 - [[climat_environnement_global]]
+
+
+## Relations
+**Alliés :**
+- [[coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform]]
+- [[conglomerats_d_automatisation_industrielle_integrale_policy_reform]]
+- [[consortiums_agro_industriels_du_bassin_fluvial_policy_reform]]
+- [[front_des_souverainistes_energetiques_policy_reform]]
+- [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+- [[republique_islamique_iran_policy_reform]]
+- [[reseau_des_lobbyistes_techniques_onu_energie_policy_reform]]
+- [[syndicats_d_extraction_privee_non_regules_policy_reform]]
+**Opposants :**
+- [[agence_internationale_de_l_energie_reformatee_aier_policy_reform]]
+- [[agence_stabilisation_climatique_policy_reform]]
+- [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]
+- [[bloc_des_nations_a_economie_carbone_controlee_policy_reform]]
+- [[coalition_des_villes_de_reconversion_policy_reform]]
+- [[conseil_de_regulation_climatique_global_policy_reform]]
+- [[consortium_des_villes_etats_durables_policy_reform]]
+- [[federation_des_mutuelles_biotech_policy_reform]]
+- [[fonds_de_stabilisation_climatique_onu_3_policy_reform]]
+- [[fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform]]
+- [[fonds_souverain_de_transition_verte_fstv_policy_reform]]
+- [[great_lakes_autonomous_compact_policy_reform]]
+- [[kalaallit_nunaat_sovereign_fund_policy_reform]]
+- [[mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform]]
+- [[observatoire_mondial_des_ressources_critiques_policy_reform]]
+- [[pacifique_sud_resilience_network_policy_reform]]
+- [[reseau_des_journalistes_d_investigation_energetique_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

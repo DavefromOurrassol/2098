@@ -4,6 +4,7 @@ type: instance
 slug: anba_siege_atlantique_fortress_world
 entite: anba_siege_atlantique
 scenario: fortress_world
+statut: officialise_enrichi
 localisation:
   zone: anba_siege_atlantique
   lieu: Siège de l'ANBA — Autorité Numérique du Bloc Atlantique
@@ -37,24 +38,31 @@ zone_systemique:
     - infrastructure
 
 alliances:
-    - commandement_strategique_des_matieres_critiques_atlantique_fortress_world
-    - nexcore_fortress_world
-    - conseil_regulation_algorithmique_fortress_world
-    - reseaux_prives_de_securite_aux_frontieres_fortress_world
-    - armada_logistique_nordique_fortress_world
-    - kalaallit_nunaat_sovereign_fund_fortress_world
-    - consortiums_de_defense_orbitale_prives_fortress_world
-
+- armada_logistique_nordique_fortress_world
+- bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world
+- commandement_strategique_des_matieres_critiques_atlantique_fortress_world
+- conseil_regulation_algorithmique_fortress_world
+- consortiums_de_defense_orbitale_prives_fortress_world
+- dispositifs_de_surveillance_numerique_souveraine_fortress_world
+- geneve_bunker_fortress_world
+- kalaallit_nunaat_sovereign_fund_fortress_world
+- nexcore_fortress_world
+- reseaux_prives_de_securite_aux_frontieres_fortress_world
 oppositions:
-    - collectifs_du_seuil_fortress_world
-    - coalitions_des_deplaces_et_apatrides_fortress_world
-    - factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world
-    - mouvement_des_communes_du_rust_belt_fortress_world
-    - alliance_sanitaire_des_populations_exclues_fortress_world
-    - communautes_deplacees_hors_quota_migratoire_fortress_world
-    - milices_de_piraterie_logistique_arctique_fortress_world
-    - reseaux_d_echange_clandestin_inter_zones_fortress_world
-
+- alliance_sanitaire_des_populations_exclues_fortress_world
+- archives_chiffrees_de_l_open_internet_coalition_fortress_world
+- archives_diplomatiques_de_l_onu_eclat_fortress_world
+- cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- collectifs_d_ingenieurs_dissidents_anti_militarisation_fortress_world
+- collectifs_du_seuil_fortress_world
+- communautes_deplacees_hors_quota_migratoire_fortress_world
+- dissidences_internes_aux_blocs_minoritaires_fortress_world
+- factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world
+- milices_de_piraterie_logistique_arctique_fortress_world
+- mouvement_des_communes_du_rust_belt_fortress_world
+- reseaux_d_echange_clandestin_inter_zones_fortress_world
+- reseaux_de_contrebande_energetique_transfrontaliere_fortress_world
 type_relation_dominante: alliance stratégique
 
 annee_debut: 2031
@@ -98,12 +106,37 @@ Déploiement et maintien de périmètres de protection autour des enclaves clima
 - [[demographie_mobilite_humaine]]
 - [[systeme_economique_redistribution]]
 
-## Relations
-**Alliés** : [[commandement_strategique_des_matieres_critiques_atlantique_fortress_world]], [[nexcore_fortress_world]], [[conseil_regulation_algorithmique_fortress_world]], [[reseaux_prives_de_securite_aux_frontieres_fortress_world]], [[armada_logistique_nordique_fortress_world]], [[kalaallit_nunaat_sovereign_fund_fortress_world]], [[consortiums_de_defense_orbitale_prives_fortress_world]]
-**Opposants** : [[collectifs_du_seuil_fortress_world]], [[coalitions_des_deplaces_et_apatrides_fortress_world]], [[factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world]], [[mouvement_des_communes_du_rust_belt_fortress_world]], [[alliance_sanitaire_des_populations_exclues_fortress_world]], [[communautes_deplacees_hors_quota_migratoire_fortress_world]], [[milices_de_piraterie_logistique_arctique_fortress_world]], [[reseaux_d_echange_clandestin_inter_zones_fortress_world]]
 
 ## Description journalistique
 Dans les ports fortifiés de l'Atlantique Nord, les hommes en combinaisons grises frappées du double ancre croisée d'Anba Siege Atlantique ne sont ni des soldats ni des douaniers — ils sont quelque chose de plus précis et de plus inquiétant : des gestionnaires de seuil. Pour 2,4 millions de crédits-blocs annuels, un contrat Tier-Platinum vous garantit un corridor sécurisé entre Lisbonne-Enclave et Boston-Forteresse, avec escorte sous-marine, hélitreuillage d'urgence et vérification biométrique express aux douze checkpoints officiels. Pour ceux qui n'ont pas les moyens, la mer est libre — et mortelle. Fondée en 2031 à Gibraltar dans le vide juridique laissé par l'effondrement de l'autorité maritime européenne, Anba Siege gère aujourd'hui plus de quarante zones d'accès contrôlé réparties sur l'arc atlantique, employant quelque 38 000 personnels armés et 12 000 opérateurs de surveillance algorithmique. Sa capitalisation dépasse celle de plusieurs États membres du Bloc Eurasiatique Occidental.
 
 ## Tensions narratives
 La légitimité d'Anba Siege repose sur l'incapacité des États à assurer la protection maritime — mais plusieurs blocs souverains commencent à réclamer la renationalisation des couloirs atlantiques, menaçant son modèle économique. Des fuites internes révèlent que ses algorithmes de gestion des seuils pratiquent une discrimination tarifaire fondée sur l'origine climatique des demandeurs, exposant l'organisation à des poursuites devant la Chambre de Recours Algorithmique de Bruxelles. En coulisses, les milices de piraterie arctique et les réseaux clandestins inter-zones testent systématiquement ses périmètres, cherchant la fissure dans la forteresse marchande. Et la question que personne n'ose poser officiellement demeure : que se passe-t-il le jour où un État-bloc décide de racheter Anba Siege plutôt que de la combattre ?
+
+## Relations
+**Alliés :**
+- [[armada_logistique_nordique_fortress_world]]
+- [[bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world]]
+- [[commandement_strategique_des_matieres_critiques_atlantique_fortress_world]]
+- [[conseil_regulation_algorithmique_fortress_world]]
+- [[consortiums_de_defense_orbitale_prives_fortress_world]]
+- [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
+- [[geneve_bunker_fortress_world]]
+- [[kalaallit_nunaat_sovereign_fund_fortress_world]]
+- [[nexcore_fortress_world]]
+- [[reseaux_prives_de_securite_aux_frontieres_fortress_world]]
+**Opposants :**
+- [[alliance_sanitaire_des_populations_exclues_fortress_world]]
+- [[archives_chiffrees_de_l_open_internet_coalition_fortress_world]]
+- [[archives_diplomatiques_de_l_onu_eclat_fortress_world]]
+- [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[collectifs_d_ingenieurs_dissidents_anti_militarisation_fortress_world]]
+- [[collectifs_du_seuil_fortress_world]]
+- [[communautes_deplacees_hors_quota_migratoire_fortress_world]]
+- [[dissidences_internes_aux_blocs_minoritaires_fortress_world]]
+- [[factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world]]
+- [[milices_de_piraterie_logistique_arctique_fortress_world]]
+- [[mouvement_des_communes_du_rust_belt_fortress_world]]
+- [[reseaux_d_echange_clandestin_inter_zones_fortress_world]]
+- [[reseaux_de_contrebande_energetique_transfrontaliere_fortress_world]]

@@ -32,8 +32,21 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- front_souverainiste_des_blocs_non_signataires_policy_reform
+oppositions:
+- agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
+- arctic_passage_authority_policy_reform
+- autorite_mondiale_du_vivant_amv_policy_reform
+- coalition_des_semences_libres_policy_reform
+- conseil_intergouvernemental_de_regulation_technologique_policy_reform
+- conseil_onu_de_gouvernance_numerique_et_ia_policy_reform
+- consortium_africain_de_biotechnologies_sociales_policy_reform
+- consortium_amazonia_viva_policy_reform
+- fonds_mondial_de_stabilisation_biotechnologique_policy_reform
+- institut_de_therapeutique_integree_de_nairobi_policy_reform
+- nexus_biosyn_policy_reform
+- reseaux_de_capteurs_ia_climatiques_deployes_par_les_etats_membres_policy_reform
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -96,6 +109,23 @@ Le Front se trouve écartelé entre les États eurasiatiques qui adhèrent à l'
 - [[sante_biotechnologies]]
 - [[geopolitique_conflits]]
 - [[gouvernance_institutions]]
+
+## Relations
+**Alliés :**
+- [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+**Opposants :**
+- [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]
+- [[arctic_passage_authority_policy_reform]]
+- [[autorite_mondiale_du_vivant_amv_policy_reform]]
+- [[coalition_des_semences_libres_policy_reform]]
+- [[conseil_intergouvernemental_de_regulation_technologique_policy_reform]]
+- [[conseil_onu_de_gouvernance_numerique_et_ia_policy_reform]]
+- [[consortium_africain_de_biotechnologies_sociales_policy_reform]]
+- [[consortium_amazonia_viva_policy_reform]]
+- [[fonds_mondial_de_stabilisation_biotechnologique_policy_reform]]
+- [[institut_de_therapeutique_integree_de_nairobi_policy_reform]]
+- [[nexus_biosyn_policy_reform]]
+- [[reseaux_de_capteurs_ia_climatiques_deployes_par_les_etats_membres_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

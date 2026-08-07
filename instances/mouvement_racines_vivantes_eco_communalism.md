@@ -4,6 +4,7 @@ type: instance
 slug: mouvement_racines_vivantes_eco_communalism
 entite: mouvement_racines_vivantes
 scenario: eco_communalism
+statut: officialise_enrichi
 localisation:
   zone: massif_central_bioterritoire
   lieu: Massif Central
@@ -35,15 +36,15 @@ zone_systemique:
     - énergie
 
 alliances:
-    - conseils_de_bassin_versant_eco_communalistes_eco_communalism
-    - internationale_des_semenciers_agro_pirates_fortress_world
-    - cooperatives_d_habitat_regeneratif_eco_communalism
-
+- confederation_bassins_vivants_eco_communalism
+- conseils_de_bassin_versant_eco_communalistes_eco_communalism
+- cooperatives_d_habitat_regeneratif_eco_communalism
+- frente_sert_o_livre_eco_communalism
+- internationale_des_semenciers_agro_pirates_fortress_world
 oppositions:
-    - consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism
-    - courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism
-    - factions_autoritaires_locales_identitaires_exclusionnistes_eco_communalism
-
+- consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism
+- courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism
+- factions_autoritaires_locales_identitaires_exclusionnistes_eco_communalism
 type_relation_dominante: symbiose
 
 annee_debut: 2031
@@ -87,12 +88,21 @@ Organisation de cycles d'apprentissage intergénérationnels sur l'agroécologie
 - [[organisation_territoires]]
 - [[systemes_productifs_travail]]
 
-## Relations
-**Alliés** : [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]], [[internationale_des_semenciers_agro_pirates_fortress_world]], [[cooperatives_d_habitat_regeneratif_eco_communalism]]
-**Opposants** : [[consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism]], [[courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism]], [[factions_autoritaires_locales_identitaires_exclusionnistes_eco_communalism]]
 
 ## Description journalistique
 Au creux d'un automne 2098 qui sent la résine et la tourbe brûlée, les noeuds de la Confédération des Racines Vivantes tiennent leur grand rassemblement saisonnier dans les plaines de l'ancien Massif central. Des milliers de délégués venus à pied ou à vélo échangent semences, récits et protocoles de soin du sol. Loin des caricatures de secte verte que certains chroniqueurs urbains leur collent encore, les Racines exercent une influence discrète mais déterminante sur la façon dont une centaine de territoires européens organisent leur nourriture, leur eau et leur mémoire collective. Ce qui n'empêche pas les fractures internes : entre ceux qui veulent refermer les communautés sur elles-mêmes et ceux qui plaident pour une fédération plus large et plus poreuse, la tension est palpable à chaque assemblée.
 
 ## Tensions narratives
 La ligne de fracture entre ouverture fédérative et repli communautaire menace de scinder la Confédération en deux courants irréconciliables. Certains noeuds ont commencé à conditionner l'accès à leurs ressources à une appartenance ethnique ou géographique stricte, trahissant l'universalisme originel du mouvement. Par ailleurs, la montée en puissance des Racines comme autorité de fait sur certains territoires soulève la question non résolue de leur légitimité démocratique. Et dans les marges urbaines où quelques cellules subsistent, le mouvement tente un pari risqué : prouver que la réconciliation avec les cycles naturels peut s'inventer aussi dans le béton fissuré.
+
+## Relations
+**Alliés :**
+- [[confederation_bassins_vivants_eco_communalism]]
+- [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]]
+- [[cooperatives_d_habitat_regeneratif_eco_communalism]]
+- [[frente_sert_o_livre_eco_communalism]]
+- [[internationale_des_semenciers_agro_pirates_fortress_world]]
+**Opposants :**
+- [[consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism]]
+- [[courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism]]
+- [[factions_autoritaires_locales_identitaires_exclusionnistes_eco_communalism]]

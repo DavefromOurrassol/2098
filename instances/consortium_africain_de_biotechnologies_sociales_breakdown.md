@@ -4,6 +4,7 @@ type: instance
 slug: consortium_africain_de_biotechnologies_sociales_breakdown
 entite: consortium_africain_de_biotechnologies_sociales
 scenario: breakdown
+statut: officialise_enrichi
 localisation:
   zone: afrique_de_louest_lagos_sahel
   lieu: Corridor sahélo-sahélien
@@ -33,20 +34,18 @@ zone_systemique:
     - gouvernance
 
 alliances:
-    - brigades_medicales_itinerantes_breakdown
-    - collectifs_de_sante_communautaire_autogeree_breakdown
-    - diaspora_tech_sahel_breakdown
-    - pirates_biologiques_open_source_breakdown
-    - reseaux_de_soigneurs_traditionnels_breakdown
-    - reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown
-
+- brigades_medicales_itinerantes_breakdown
+- diaspora_tech_sahel_breakdown
+- pirates_biologiques_open_source_breakdown
+- reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown
+- reseaux_de_soigneurs_traditionnels_breakdown
 oppositions:
-    - milices_extractivistes_du_bassin_du_congo_breakdown
-    - reseaux_noirs_pharmaceutiques_breakdown
-    - corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown
-    - factions_energetiques_heritieres_des_pactes_abs_breakdown
-    - enclaves_corporatives_fortifiees_breakdown
-
+- collectifs_de_sante_communautaire_autogeree_breakdown
+- corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown
+- enclaves_corporatives_fortifiees_breakdown
+- factions_energetiques_heritieres_des_pactes_abs_breakdown
+- milices_extractivistes_du_bassin_du_congo_breakdown
+- reseaux_noirs_pharmaceutiques_breakdown
 type_relation_dominante: dépendance
 
 annee_debut: 2031
@@ -88,12 +87,24 @@ Déploiement de protocoles biotechnologiques simplifiés et décentralisés — 
 - [[sante_biotechnologies]]
 - [[organisation_territoires]]
 
-## Relations
-**Alliés** : [[brigades_medicales_itinerantes_breakdown]], [[collectifs_de_sante_communautaire_autogeree_breakdown]], [[diaspora_tech_sahel_breakdown]], [[pirates_biologiques_open_source_breakdown]], [[reseaux_de_soigneurs_traditionnels_breakdown]], [[reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown]]
-**Opposants** : [[milices_extractivistes_du_bassin_du_congo_breakdown]], [[reseaux_noirs_pharmaceutiques_breakdown]], [[corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown]], [[factions_energetiques_heritieres_des_pactes_abs_breakdown]], [[enclaves_corporatives_fortifiees_breakdown]]
 
 ## Description journalistique
 On les reconnaît à leurs sacoches isothermes et à leurs mains tachées de réactifs. Les anciens du Consortium — on les appelle 'les Semeurs' dans les campements — arrivent sans prévenir, s'installent deux ou trois jours dans un village, forment quelqu'un à lire un résultat de test, laissent derrière eux des sachets étiquetés à la main et repartent avant que les milices locales ne s'intéressent à leur présence. Ils n'ont plus de certificats, plus de chaîne d'approvisionnement froide garantie, plus de validations réglementaires. Ce qu'ils ont, c'est un corpus technique mémorisé, transmis de cellule en cellule comme une liturgie laïque. Certains observateurs les décrivent comme les derniers porteurs d'une promesse que le monde pré-effondrement n'a pas tenu.
 
 ## Tensions narratives
 La fragmentation des cellules crée une tension irréductible : sans coordination centrale, certaines Semeurs adaptent les protocoles biotechnologiques au point de les dénaturer — voire de les rendre dangereux. La question de la légitimité technique sans certification institutionnelle est ouverte. Simultanément, des factions tentent de récupérer le réseau : les Pirates Biologiques Open-Source voient dans les CABS un vecteur de diffusion ; les Reseaux Noirs Pharmaceutiques cherchent à corrompre des cellules pour authentifier des produits contrefaits. La tentation ultime reste celle de se réinstaller sous la protection d'un pouvoir territorial — au prix de redevenir exactement l'instrument de contrôle déguisé en émancipation que le Consortium avait toujours refusé d'être.
+
+## Relations
+**Alliés :**
+- [[brigades_medicales_itinerantes_breakdown]]
+- [[diaspora_tech_sahel_breakdown]]
+- [[pirates_biologiques_open_source_breakdown]]
+- [[reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown]]
+- [[reseaux_de_soigneurs_traditionnels_breakdown]]
+**Opposants :**
+- [[collectifs_de_sante_communautaire_autogeree_breakdown]]
+- [[corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown]]
+- [[enclaves_corporatives_fortifiees_breakdown]]
+- [[factions_energetiques_heritieres_des_pactes_abs_breakdown]]
+- [[milices_extractivistes_du_bassin_du_congo_breakdown]]
+- [[reseaux_noirs_pharmaceutiques_breakdown]]

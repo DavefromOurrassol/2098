@@ -33,7 +33,9 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
+alliances:
+- amara_diallo_nkosi_policy_reform
+- great_lakes_autonomous_compact_policy_reform
 oppositions: []
 type_relation_dominante: dépendance
 annee_debut: 2026
@@ -102,6 +104,11 @@ L'Institut est pris en étau entre sa vocation scientifique d'indépendance et l
 - [[climat_environnement_global]]
 - [[gouvernance_institutions]]
 - [[organisation_territoires]]
+
+## Relations
+**Alliés :**
+- [[amara_diallo_nkosi_policy_reform]]
+- [[great_lakes_autonomous_compact_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

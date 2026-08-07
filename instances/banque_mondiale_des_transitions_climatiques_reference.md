@@ -30,8 +30,39 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_internationale_des_energies_renouvelables_irena_2_reference
+- agence_stabilisation_climatique_reference
+- agrisynth_reference
+- blocs_signataires_du_pacte_energetique_multilateral_reference
+- bruxelles_nouveau_reference
+- conseil_regulation_ressources_reference
+- consortium_africain_de_biotechnologies_sociales_reference
+- consortium_des_fournisseurs_d_energie_renouvelable_distribuee_reference
+- consortiums_bancaires_financiarises_reference
+- delta_du_gange_reference
+- ecosynth_global_reference
+- fonds_d_investissement_foncier_climatique_reference
+- fonds_monetaire_climatique_fmc_reference
+- geneve_lac_retreite_reference
+- institutions_multilaterales_survivantes_reference
+- kinshasa_accords_hydriques_reference
+- observatoire_climatique_des_territoires_oct_reference
+- oracle_des_seuils_reference
+- programme_onu_eau_2080_reference
+- reseaux_de_gouvernance_multilaterale_survivants_reference
+- union_africaine_resilience_reference
+oppositions:
+- bloc_eurasien_central_reference
+- bloc_ressources_eurasiatique_bre_reference
+- cartel_des_terres_rares_d_asie_centrale_reference
+- consortiums_energetiques_opaques_reference
+- consortiums_prives_d_extraction_de_ressources_critiques_reference
+- corporations_d_extraction_energetique_non_signataires_reference
+- factions_eurasiatiques_contre_la_tarification_hydrique_reference
+- lobbies_industriels_des_etats_non_signataires_reference
+- pacte_des_souverains_reference
+- reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -95,6 +126,43 @@ La BMTC est structurellement tiraillée entre sa vocation redistributive envers 
 - [[systeme_economique_redistribution]]
 - [[gouvernance_institutions]]
 - [[climat_environnement_global]]
+
+
+
+## Relations
+**Alliés :**
+- [[agence_internationale_des_energies_renouvelables_irena_2_reference]]
+- [[agence_stabilisation_climatique_reference]]
+- [[agrisynth_reference]]
+- [[blocs_signataires_du_pacte_energetique_multilateral_reference]]
+- [[bruxelles_nouveau_reference]]
+- [[conseil_regulation_ressources_reference]]
+- [[consortium_africain_de_biotechnologies_sociales_reference]]
+- [[consortium_des_fournisseurs_d_energie_renouvelable_distribuee_reference]]
+- [[consortiums_bancaires_financiarises_reference]]
+- [[delta_du_gange_reference]]
+- [[ecosynth_global_reference]]
+- [[fonds_d_investissement_foncier_climatique_reference]]
+- [[fonds_monetaire_climatique_fmc_reference]]
+- [[geneve_lac_retreite_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
+- [[kinshasa_accords_hydriques_reference]]
+- [[observatoire_climatique_des_territoires_oct_reference]]
+- [[oracle_des_seuils_reference]]
+- [[programme_onu_eau_2080_reference]]
+- [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
+- [[union_africaine_resilience_reference]]
+**Opposants :**
+- [[bloc_eurasien_central_reference]]
+- [[bloc_ressources_eurasiatique_bre_reference]]
+- [[cartel_des_terres_rares_d_asie_centrale_reference]]
+- [[consortiums_energetiques_opaques_reference]]
+- [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[corporations_d_extraction_energetique_non_signataires_reference]]
+- [[factions_eurasiatiques_contre_la_tarification_hydrique_reference]]
+- [[lobbies_industriels_des_etats_non_signataires_reference]]
+- [[pacte_des_souverains_reference]]
+- [[reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

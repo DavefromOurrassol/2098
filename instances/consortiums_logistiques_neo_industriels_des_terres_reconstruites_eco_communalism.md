@@ -31,8 +31,34 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agro_conglomerats_des_enclaves_technologiques_eco_communalism
+- consortiums_industriels_de_l_eau_eco_communalism
+- enclaves_extractivistes_et_etats_residuels_eco_communalism
+- enclaves_extractivistes_residuelles_des_corridors_eco_communalism
+- factions_technophiles_de_la_geo_ingenierie_centralisee_eco_communalism
+- fragments_d_etats_centraux_residuels_eco_communalism
+- plateformes_centralisees_de_reagregation_globale_eco_communalism
+- reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism
+- reseaux_de_notables_communautaires_capturistes_eco_communalism
+oppositions:
+- assemblees_bioterritoriales_regionales_eco_communalism
+- brigades_de_restauration_ecologique_eco_communalism
+- collectifs_de_techniciens_sobres_eco_communalism
+- confederation_bassins_vivants_eco_communalism
+- confederation_communs_arc_septentrional_eco_communalism
+- consortium_africain_de_biotechnologies_sociales_eco_communalism
+- consortium_amazonia_viva_eco_communalism
+- cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
+- kalaallit_nunaat_sovereign_fund_eco_communalism
+- mouvement_des_communes_du_rust_belt_eco_communalism
+- mouvement_racines_vivantes_eco_communalism
+- reseau_assemblees_fennoscandien_eco_communalism
+- reseau_terrafond_bassins_eco_communalism
+- reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
+- tampere_charte_eco_communalism
+- tresse_verte_corridor_eco_communalism
+- zones_extractivistes_corridors_eco_communalism
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -97,6 +123,37 @@ La contradiction centrale des Consortiums réside dans leur dépendance paradoxa
 - [[organisation_territoires]]
 - [[systemes_productifs_travail]]
 - [[energie_ressources_critiques]]
+
+
+## Relations
+**Alliés :**
+- [[agro_conglomerats_des_enclaves_technologiques_eco_communalism]]
+- [[consortiums_industriels_de_l_eau_eco_communalism]]
+- [[enclaves_extractivistes_et_etats_residuels_eco_communalism]]
+- [[enclaves_extractivistes_residuelles_des_corridors_eco_communalism]]
+- [[factions_technophiles_de_la_geo_ingenierie_centralisee_eco_communalism]]
+- [[fragments_d_etats_centraux_residuels_eco_communalism]]
+- [[plateformes_centralisees_de_reagregation_globale_eco_communalism]]
+- [[reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism]]
+- [[reseaux_de_notables_communautaires_capturistes_eco_communalism]]
+**Opposants :**
+- [[assemblees_bioterritoriales_regionales_eco_communalism]]
+- [[brigades_de_restauration_ecologique_eco_communalism]]
+- [[collectifs_de_techniciens_sobres_eco_communalism]]
+- [[confederation_bassins_vivants_eco_communalism]]
+- [[confederation_communs_arc_septentrional_eco_communalism]]
+- [[consortium_africain_de_biotechnologies_sociales_eco_communalism]]
+- [[consortium_amazonia_viva_eco_communalism]]
+- [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]
+- [[kalaallit_nunaat_sovereign_fund_eco_communalism]]
+- [[mouvement_des_communes_du_rust_belt_eco_communalism]]
+- [[mouvement_racines_vivantes_eco_communalism]]
+- [[reseau_assemblees_fennoscandien_eco_communalism]]
+- [[reseau_terrafond_bassins_eco_communalism]]
+- [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
+- [[tampere_charte_eco_communalism]]
+- [[tresse_verte_corridor_eco_communalism]]
+- [[zones_extractivistes_corridors_eco_communalism]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

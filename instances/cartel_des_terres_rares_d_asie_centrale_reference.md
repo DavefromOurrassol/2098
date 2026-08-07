@@ -34,8 +34,28 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- bloc_eurasien_central_reference
+- bloc_ressources_eurasiatique_bre_reference
+- consortiums_prives_d_extraction_de_ressources_critiques_reference
+- operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference
+- reseau_hospitalier_hybride_eurasiatique_reference
+oppositions:
+- agence_internationale_des_energies_renouvelables_irena_2_reference
+- arctic_passage_authority_reference
+- armada_logistique_nordique_reference
+- banque_mondiale_des_transitions_climatiques_reference
+- bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference
+- conseil_regulation_ressources_reference
+- consortium_amazonia_viva_reference
+- consortium_des_fournisseurs_d_energie_renouvelable_distribuee_reference
+- consortium_indo_pacifique_de_l_hydrogene_reference
+- europe_occidentale_reconstructee_reference
+- factions_d_extraction_miniere_independantes_reference
+- institutions_multilaterales_survivantes_reference
+- kalaallit_nunaat_sovereign_fund_reference
+- ong_de_tracabilite_des_ressources_critiques_reference
+- union_africaine_resilience_reference
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -100,6 +120,31 @@ Le Cartel est structurellement tiraillé entre les intérêts divergents de ses 
 - [[energie_ressources_critiques]]
 - [[geopolitique_conflits]]
 - [[systeme_economique_redistribution]]
+
+
+## Relations
+**Alliés :**
+- [[bloc_eurasien_central_reference]]
+- [[bloc_ressources_eurasiatique_bre_reference]]
+- [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference]]
+- [[reseau_hospitalier_hybride_eurasiatique_reference]]
+**Opposants :**
+- [[agence_internationale_des_energies_renouvelables_irena_2_reference]]
+- [[arctic_passage_authority_reference]]
+- [[armada_logistique_nordique_reference]]
+- [[banque_mondiale_des_transitions_climatiques_reference]]
+- [[bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference]]
+- [[conseil_regulation_ressources_reference]]
+- [[consortium_amazonia_viva_reference]]
+- [[consortium_des_fournisseurs_d_energie_renouvelable_distribuee_reference]]
+- [[consortium_indo_pacifique_de_l_hydrogene_reference]]
+- [[europe_occidentale_reconstructee_reference]]
+- [[factions_d_extraction_miniere_independantes_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
+- [[kalaallit_nunaat_sovereign_fund_reference]]
+- [[ong_de_tracabilite_des_ressources_critiques_reference]]
+- [[union_africaine_resilience_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

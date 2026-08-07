@@ -31,8 +31,30 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agro_conglomerats_des_enclaves_technologiques_eco_communalism
+- cartels_de_narration_de_penurie_eco_communalism
+- consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism
+- enclaves_extractivistes_residuelles_des_corridors_eco_communalism
+- factions_autoritaires_de_controle_du_savoir_eco_communalism
+- factions_technophiles_de_la_geo_ingenierie_centralisee_eco_communalism
+- plateformes_centralisees_de_reagregation_globale_eco_communalism
+oppositions:
+- assemblees_bioterritoriales_regionales_eco_communalism
+- collectifs_de_techniciens_sobres_eco_communalism
+- confederation_bassins_vivants_eco_communalism
+- courant_isolationniste_anti_circulation_de_l_information_eco_communalism
+- ligue_des_cites_du_sahel_numerique_eco_communalism
+- mouvement_des_communes_du_rust_belt_eco_communalism
+- mouvement_racines_vivantes_eco_communalism
+- rede_paulista_de_distribuic_o_algor_tmica_eco_communalism
+- reseau_assemblees_fennoscandien_eco_communalism
+- reseau_terrafond_bassins_eco_communalism
+- reseaux_de_radio_communautaire_basse_consommation_eco_communalism
+- sao_paulo_algorithmique_eco_communalism
+- tampere_charte_eco_communalism
+- tribunal_algorithmique_de_bruxelles_eco_communalism
+- universite_nomade_eco_communalism
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -94,6 +116,33 @@ Le courant est piégé dans une contradiction fondamentale : pour gagner en lég
 - [[technologie_information]]
 - [[organisation_territoires]]
 - [[systeme_economique_redistribution]]
+
+
+## Relations
+**Alliés :**
+- [[agro_conglomerats_des_enclaves_technologiques_eco_communalism]]
+- [[cartels_de_narration_de_penurie_eco_communalism]]
+- [[consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism]]
+- [[enclaves_extractivistes_residuelles_des_corridors_eco_communalism]]
+- [[factions_autoritaires_de_controle_du_savoir_eco_communalism]]
+- [[factions_technophiles_de_la_geo_ingenierie_centralisee_eco_communalism]]
+- [[plateformes_centralisees_de_reagregation_globale_eco_communalism]]
+**Opposants :**
+- [[assemblees_bioterritoriales_regionales_eco_communalism]]
+- [[collectifs_de_techniciens_sobres_eco_communalism]]
+- [[confederation_bassins_vivants_eco_communalism]]
+- [[courant_isolationniste_anti_circulation_de_l_information_eco_communalism]]
+- [[ligue_des_cites_du_sahel_numerique_eco_communalism]]
+- [[mouvement_des_communes_du_rust_belt_eco_communalism]]
+- [[mouvement_racines_vivantes_eco_communalism]]
+- [[rede_paulista_de_distribuic_o_algor_tmica_eco_communalism]]
+- [[reseau_assemblees_fennoscandien_eco_communalism]]
+- [[reseau_terrafond_bassins_eco_communalism]]
+- [[reseaux_de_radio_communautaire_basse_consommation_eco_communalism]]
+- [[sao_paulo_algorithmique_eco_communalism]]
+- [[tampere_charte_eco_communalism]]
+- [[tribunal_algorithmique_de_bruxelles_eco_communalism]]
+- [[universite_nomade_eco_communalism]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

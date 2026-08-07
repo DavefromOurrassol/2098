@@ -31,8 +31,22 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- commandements_logistiques_peripheriques_du_bloc_eurasien_central_fortress_world
+- complexes_militaro_industriels_de_gestion_des_ressources_fortress_world
+- nexcore_atlantique_infrastructure_fortress_world
+- nexus_biosyn_division_eurasienne_fortress_world
+oppositions:
+- bloc_pacifique_nord_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- commandement_strategique_des_matieres_critiques_atlantique_fortress_world
+- conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world
+- conseil_regulation_ressources_fortress_world
+- consortium_africain_de_biotechnologies_sociales_fortress_world
+- consortium_amazonia_viva_fortress_world
+- consortium_sino_finlandais_de_flotte_autonome_fortress_world
+- factions_djihadistes_logistiques_d_asie_centrale_fortress_world
+- milices_privees_de_protection_des_sites_germinaux_fortress_world
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -94,6 +108,26 @@ La contradiction fondamentale qui les mine est leur dépendance absolue aux ache
 - [[energie_ressources_critiques]]
 - [[geopolitique_conflits]]
 - [[organisation_territoires]]
+
+
+
+## Relations
+**Alliés :**
+- [[commandements_logistiques_peripheriques_du_bloc_eurasien_central_fortress_world]]
+- [[complexes_militaro_industriels_de_gestion_des_ressources_fortress_world]]
+- [[nexcore_atlantique_infrastructure_fortress_world]]
+- [[nexus_biosyn_division_eurasienne_fortress_world]]
+**Opposants :**
+- [[bloc_pacifique_nord_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[commandement_strategique_des_matieres_critiques_atlantique_fortress_world]]
+- [[conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world]]
+- [[conseil_regulation_ressources_fortress_world]]
+- [[consortium_africain_de_biotechnologies_sociales_fortress_world]]
+- [[consortium_amazonia_viva_fortress_world]]
+- [[consortium_sino_finlandais_de_flotte_autonome_fortress_world]]
+- [[factions_djihadistes_logistiques_d_asie_centrale_fortress_world]]
+- [[milices_privees_de_protection_des_sites_germinaux_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

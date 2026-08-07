@@ -4,6 +4,7 @@ type: instance
 slug: great_lakes_autonomous_compact_policy_reform
 entite: great_lakes_autonomous_compact
 scenario: policy_reform
+statut: officialise_enrichi
 localisation:
   zone: thunder_bay_cglaghi
   lieu: Thunder Bay
@@ -38,25 +39,24 @@ zone_systemique:
     - société
 
 alliances:
-    - autorite_continentale_des_ressources_aquatiques_acra_policy_reform
-    - assemblee_territoires_policy_reform
-    - fonds_mondial_de_resilience_infrastructurelle_policy_reform
-    - observatoire_mondial_des_ressources_critiques_policy_reform
-    - collectifs_de_gouvernance_communautaire_decentralisee_policy_reform
-    - mouvement_pour_la_justice_ecologique_communautaire_policy_reform
-    - trame_bioclimatique_policy_reform
-    - institut_de_modelisation_hydrologique_de_kinshasa_policy_reform
-    - consortium_des_villes_etats_durables_policy_reform
-
+- arctic_passage_authority_policy_reform
+- assemblee_territoires_policy_reform
+- autorite_continentale_des_ressources_aquatiques_acra_policy_reform
+- collectifs_de_gouvernance_communautaire_decentralisee_policy_reform
+- consortium_des_villes_etats_durables_policy_reform
+- fonds_mondial_de_resilience_infrastructurelle_policy_reform
+- institut_de_modelisation_hydrologique_de_kinshasa_policy_reform
+- mouvement_pour_la_justice_ecologique_communautaire_policy_reform
+- observatoire_mondial_des_ressources_critiques_policy_reform
+- trame_bioclimatique_policy_reform
 oppositions:
-    - factions_technocratiques_de_la_marchandisation_hydrique_policy_reform
-    - consortiums_agro_industriels_du_bassin_fluvial_policy_reform
-    - syndicats_d_extraction_privee_non_regules_policy_reform
-    - mouvement_pour_la_souverainete_territoriale_absolue_policy_reform
-    - front_des_autonomies_territoriales_radicales_policy_reform
-    - front_souverainiste_des_blocs_non_signataires_policy_reform
-    - lobbies_des_energies_fossiles_residuelles_policy_reform
-
+- consortiums_agro_industriels_du_bassin_fluvial_policy_reform
+- factions_technocratiques_de_la_marchandisation_hydrique_policy_reform
+- front_des_autonomies_territoriales_radicales_policy_reform
+- front_souverainiste_des_blocs_non_signataires_policy_reform
+- lobbies_des_energies_fossiles_residuelles_policy_reform
+- mouvement_pour_la_souverainete_territoriale_absolue_policy_reform
+- syndicats_d_extraction_privee_non_regules_policy_reform
 type_relation_dominante: coopération
 
 annee_debut: 2041
@@ -100,12 +100,30 @@ Le CGLAGHI régule les prélèvements, les rejets industriels et les flux d'eau 
 - [[organisation_territoires]]
 - [[climat_environnement_global]]
 
-## Relations
-**Alliés** : [[autorite_continentale_des_ressources_aquatiques_acra_policy_reform]], [[assemblee_territoires_policy_reform]], [[fonds_mondial_de_resilience_infrastructurelle_policy_reform]], [[observatoire_mondial_des_ressources_critiques_policy_reform]], [[collectifs_de_gouvernance_communautaire_decentralisee_policy_reform]], [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]], [[trame_bioclimatique_policy_reform]], [[institut_de_modelisation_hydrologique_de_kinshasa_policy_reform]], [[consortium_des_villes_etats_durables_policy_reform]]
-**Opposants** : [[factions_technocratiques_de_la_marchandisation_hydrique_policy_reform]], [[consortiums_agro_industriels_du_bassin_fluvial_policy_reform]], [[syndicats_d_extraction_privee_non_regules_policy_reform]], [[mouvement_pour_la_souverainete_territoriale_absolue_policy_reform]], [[front_des_autonomies_territoriales_radicales_policy_reform]], [[front_souverainiste_des_blocs_non_signataires_policy_reform]], [[lobbies_des_energies_fossiles_residuelles_policy_reform]]
 
 ## Description journalistique
 Depuis ses bureaux installés à Thunder Bay — délibérément choisis hors des capitales traditionnelles — le CGLAGHI gère au quotidien ce que ni Washington ni Ottawa n'ont jamais réussi à protéger : les 21 % des réserves mondiales d'eau douce de surface concentrées dans les Grands Lacs. Ses commissaires — un tiers nommés par les États et provinces membres, un tiers élus par les nations autochtones, un tiers désignés par les collectivités riveraines — siègent sous une grande carte lumineuse où les niveaux d'eau et les flux de prélèvement se mettent à jour en temps réel. On les appelle parfois 'les gardiens de l'eau bleue'. Depuis 2071, leurs protocoles de quota dynamique ont été traduits et adaptés pour sept autres bassins dans le monde, du lac Tchad au Baïkal. Ce qui était une urgence régionale est devenu une grammaire universelle de la gouvernance hydrique.
 
 ## Tensions narratives
 La tension fondatrice demeure entière : à mesure que les sécheresses s'aggravent au sud et à l'ouest du continent, les demandes d'accès aux eaux des Grands Lacs par des régions non membres se multiplient — et le CGLAGHI doit choisir entre solidarité continentale et préservation d'un bien commun fragile. En interne, le poids croissant des nations autochtones dans les décisions de quota heurte les intérêts industriels des États membres, qui menacent de réviser leur contribution financière. Enfin, les factions technocratiques de la marchandisation hydrique font pression pour que le Compact cède la gestion de ses données hydrologiques à des opérateurs privés, contre promesse d'investissements massifs dans les infrastructures — une proposition qui divise profondément ses commissaires.
+
+## Relations
+**Alliés :**
+- [[arctic_passage_authority_policy_reform]]
+- [[assemblee_territoires_policy_reform]]
+- [[autorite_continentale_des_ressources_aquatiques_acra_policy_reform]]
+- [[collectifs_de_gouvernance_communautaire_decentralisee_policy_reform]]
+- [[consortium_des_villes_etats_durables_policy_reform]]
+- [[fonds_mondial_de_resilience_infrastructurelle_policy_reform]]
+- [[institut_de_modelisation_hydrologique_de_kinshasa_policy_reform]]
+- [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]]
+- [[observatoire_mondial_des_ressources_critiques_policy_reform]]
+- [[trame_bioclimatique_policy_reform]]
+**Opposants :**
+- [[consortiums_agro_industriels_du_bassin_fluvial_policy_reform]]
+- [[factions_technocratiques_de_la_marchandisation_hydrique_policy_reform]]
+- [[front_des_autonomies_territoriales_radicales_policy_reform]]
+- [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+- [[lobbies_des_energies_fossiles_residuelles_policy_reform]]
+- [[mouvement_pour_la_souverainete_territoriale_absolue_policy_reform]]
+- [[syndicats_d_extraction_privee_non_regules_policy_reform]]

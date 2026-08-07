@@ -4,6 +4,7 @@ type: instance
 slug: nairobi_crrc_reference
 entite: nairobi_crrc
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: nairobi_crrc
   lieu: Nairobi, campus Gigiri
@@ -37,30 +38,35 @@ zone_systemique:
     - société
 
 alliances:
-    - commission_hydrique_de_l_union_africaine_reference
-    - union_africaine_de_resilience_territoriale_reference
-    - kinshasa_accords_hydriques_reference
-    - autorites_regionales_de_regulation_hydrologique_reference
-    - gouvernements_du_bloc_sahelien_autonome_reference
-    - reseau_des_cooperatives_agro_saheliennes_reference
-    - programme_onu_eau_2080_reference
-    - agence_stabilisation_climatique_reference
-    - observatoire_climatique_des_territoires_oct_reference
-    - institutions_multilaterales_survivantes_reference
-    - ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference
-    - institut_polytechnique_de_ouagadougou_reference
-    - consortium_africain_de_biotechnologies_sociales_reference
-
+- agence_stabilisation_climatique_reference
+- autorites_regionales_de_regulation_hydrologique_reference
+- commission_hydrique_de_l_union_africaine_reference
+- consortium_africain_de_biotechnologies_sociales_reference
+- fonds_monetaire_climatique_fmc_reference
+- gouvernements_du_bloc_sahelien_autonome_reference
+- institut_polytechnique_de_ouagadougou_reference
+- institutions_multilaterales_survivantes_reference
+- kinshasa_accords_hydriques_reference
+- ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference
+- observatoire_climatique_des_territoires_oct_reference
+- ouagadougou_polytechnique_reference
+- programme_onu_eau_2080_reference
+- regulateurs_de_l_union_continentale_africaine_reference
+- reseau_des_cooperatives_agro_saheliennes_reference
+- reseau_des_metropoles_cotieres_adaptees_reference
+- union_africaine_de_resilience_territoriale_reference
+- union_africaine_resilience_reference
+- universites_et_think_tanks_en_zones_de_liberte_academique_reference
 oppositions:
-    - consortiums_d_extraction_miniere_du_bassin_congolais_reference
-    - consortiums_prives_d_extraction_de_ressources_critiques_reference
-    - factions_eurasiatiques_contre_la_tarification_hydrique_reference
-    - bloc_des_souverainistes_climatiques_reference
-    - milices_concurrentes_des_droits_de_passage_reference
-    - factions_d_extraction_miniere_independantes_reference
-    - lobbies_agro_industriels_a_haute_consommation_d_eau_reference
-    - gouvernements_federaux_residuels_souverainistes_reference
-
+- bloc_des_souverainistes_climatiques_reference
+- consortiums_d_extraction_miniere_du_bassin_congolais_reference
+- consortiums_prives_d_extraction_de_ressources_critiques_reference
+- factions_d_extraction_miniere_independantes_reference
+- factions_eurasiatiques_contre_la_tarification_hydrique_reference
+- gouvernements_federaux_residuels_souverainistes_reference
+- lobbies_agro_industriels_a_haute_consommation_d_eau_reference
+- milices_concurrentes_des_droits_de_passage_reference
+- operateurs_de_zones_economiques_speciales_periurbaines_reference
 type_relation_dominante: dépendance
 
 annee_debut: 2031
@@ -104,12 +110,41 @@ Coordination des flux d'approvisionnement en eau, énergie distribuée et denré
 - [[climat_environnement_global]]
 - [[organisation_territoires]]
 
-## Relations
-**Alliés** : [[commission_hydrique_de_l_union_africaine_reference]], [[union_africaine_de_resilience_territoriale_reference]], [[kinshasa_accords_hydriques_reference]], [[autorites_regionales_de_regulation_hydrologique_reference]], [[gouvernements_du_bloc_sahelien_autonome_reference]], [[reseau_des_cooperatives_agro_saheliennes_reference]], [[programme_onu_eau_2080_reference]], [[agence_stabilisation_climatique_reference]], [[observatoire_climatique_des_territoires_oct_reference]], [[institutions_multilaterales_survivantes_reference]], [[ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference]], [[institut_polytechnique_de_ouagadougou_reference]], [[consortium_africain_de_biotechnologies_sociales_reference]]
-**Opposants** : [[consortiums_d_extraction_miniere_du_bassin_congolais_reference]], [[consortiums_prives_d_extraction_de_ressources_critiques_reference]], [[factions_eurasiatiques_contre_la_tarification_hydrique_reference]], [[bloc_des_souverainistes_climatiques_reference]], [[milices_concurrentes_des_droits_de_passage_reference]], [[factions_d_extraction_miniere_independantes_reference]], [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]], [[gouvernements_federaux_residuels_souverainistes_reference]]
 
 ## Description journalistique
 Dans les salles de réunion climatisées du campus Gigiri, à deux kilomètres de l'ancienne ambassade américaine, le Nairobi CRRC ressemble à ce qu'il est : une institution qui a survécu à ses mandataires. Fondé sur les ruines du bureau régional OCHA en 2031, après l'effondrement partiel des mécanismes onusiens de résilience, il coordonne aujourd'hui les flux d'eau potable, de gasoil agro-industriel et de semences certifiées pour une douzaine d'agglomérations est-africaines — sans qu'aucun traité ne lui reconnaisse formellement ce rôle. Ses agents de terrain, reconnaissables à leurs tablettes orange frappées du logo CRRC, circulent librement là où les diplomates sont bloqués : dans les entrepôts des consortiums miniers du Kivu, dans les salles des pompes de Mombasa, dans les marchés d'urgence de Kampala. 'On n'a pas d'armée, on a des données', résume avec une ironie amère sa directrice adjointe. C'est précisément ce monopole informationnel de fait — les tableaux de bord de flux, les alertes de rupture, les prévisions saisonnières — qui maintient l'organisation en vie malgré les tentatives récurrentes des blocs souverainistes de la contourner.
 
 ## Tensions narratives
 Le CRRC marche sur un fil permanent : chaque accord de coordination qu'il obtient renforce son autorité de fait mais attise la méfiance des États qui y voient une délégation de souveraineté non consentie. La montée en puissance des consortiums privés d'extraction — qui préfèrent négocier en bilatéral avec les municipalités en contournant le CRRC — menace de vider l'organisation de sa substance sans jamais la supprimer formellement. Par ailleurs, la tentation existe en interne de basculer vers un rôle plus directif, appuyé sur les outils de modélisation climatique que lui fournissent ses partenaires comme l'OCT ou l'Agence Mondiale pour la Stabilisation Climatique — ce qui l'exposerait à une réaction souverainiste violente. Sa survie à moyen terme dépend peut-être moins de sa compétence technique que de sa capacité à rester assez faible pour ne jamais menacer ceux dont il dépend.
+
+## Relations
+**Alliés :**
+- [[agence_stabilisation_climatique_reference]]
+- [[autorites_regionales_de_regulation_hydrologique_reference]]
+- [[commission_hydrique_de_l_union_africaine_reference]]
+- [[consortium_africain_de_biotechnologies_sociales_reference]]
+- [[fonds_monetaire_climatique_fmc_reference]]
+- [[gouvernements_du_bloc_sahelien_autonome_reference]]
+- [[institut_polytechnique_de_ouagadougou_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
+- [[kinshasa_accords_hydriques_reference]]
+- [[ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference]]
+- [[observatoire_climatique_des_territoires_oct_reference]]
+- [[ouagadougou_polytechnique_reference]]
+- [[programme_onu_eau_2080_reference]]
+- [[regulateurs_de_l_union_continentale_africaine_reference]]
+- [[reseau_des_cooperatives_agro_saheliennes_reference]]
+- [[reseau_des_metropoles_cotieres_adaptees_reference]]
+- [[union_africaine_de_resilience_territoriale_reference]]
+- [[union_africaine_resilience_reference]]
+- [[universites_et_think_tanks_en_zones_de_liberte_academique_reference]]
+**Opposants :**
+- [[bloc_des_souverainistes_climatiques_reference]]
+- [[consortiums_d_extraction_miniere_du_bassin_congolais_reference]]
+- [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[factions_d_extraction_miniere_independantes_reference]]
+- [[factions_eurasiatiques_contre_la_tarification_hydrique_reference]]
+- [[gouvernements_federaux_residuels_souverainistes_reference]]
+- [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]]
+- [[milices_concurrentes_des_droits_de_passage_reference]]
+- [[operateurs_de_zones_economiques_speciales_periurbaines_reference]]

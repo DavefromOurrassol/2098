@@ -30,8 +30,23 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- bureau_gouvernance_algorithmique_policy_reform
+- conseil_intergouvernemental_de_regulation_technologique_policy_reform
+- conseil_onu_de_gouvernance_numerique_et_ia_policy_reform
+- conseil_regulation_algorithmique_policy_reform
+- consortium_technologique_de_planification_territoriale_policy_reform
+- etats_dissidents_du_bloc_austral_policy_reform
+- gouvernement_israel_policy_reform
+- reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
+oppositions:
+- coalition_des_souverainistes_numeriques_policy_reform
+- conglomerats_d_automatisation_industrielle_integrale_policy_reform
+- consortiums_prives_de_gouvernance_algorithmique_policy_reform
+- directive_kontinuum_policy_reform
+- front_souverainiste_de_l_information_regionale_policy_reform
+- front_souverainiste_des_blocs_non_signataires_policy_reform
+- institut_brookings_singapour_de_politique_computationnelle_policy_reform
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -97,6 +112,26 @@ La tension centrale du RRNS réside dans l'écart croissant entre ses membres fo
 - [[gouvernance_institutions]]
 - [[technologie_information]]
 - [[geopolitique_conflits]]
+
+
+## Relations
+**Alliés :**
+- [[bureau_gouvernance_algorithmique_policy_reform]]
+- [[conseil_intergouvernemental_de_regulation_technologique_policy_reform]]
+- [[conseil_onu_de_gouvernance_numerique_et_ia_policy_reform]]
+- [[conseil_regulation_algorithmique_policy_reform]]
+- [[consortium_technologique_de_planification_territoriale_policy_reform]]
+- [[etats_dissidents_du_bloc_austral_policy_reform]]
+- [[gouvernement_israel_policy_reform]]
+- [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]]
+**Opposants :**
+- [[coalition_des_souverainistes_numeriques_policy_reform]]
+- [[conglomerats_d_automatisation_industrielle_integrale_policy_reform]]
+- [[consortiums_prives_de_gouvernance_algorithmique_policy_reform]]
+- [[directive_kontinuum_policy_reform]]
+- [[front_souverainiste_de_l_information_regionale_policy_reform]]
+- [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+- [[institut_brookings_singapour_de_politique_computationnelle_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

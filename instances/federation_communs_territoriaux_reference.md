@@ -4,6 +4,7 @@ type: instance
 slug: federation_communs_territoriaux_reference
 entite: federation_communs_territoriaux
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: null
   lieu: null
@@ -38,17 +39,46 @@ zone_systemique:
     - infrastructure
 
 alliances:
-    - cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference
-    - observatoire_climatique_des_territoires_oct_reference
-    - banque_des_communs_reference
-    - syndicats_de_travailleurs_de_la_transition_energetique_reference
-
+- autorites_regionales_de_regulation_hydrologique_reference
+- banque_des_communs_reference
+- collectif_nuit_jaune_reference
+- collectifs_de_journalisme_embarque_reference
+- collectifs_de_journalistes_independants_regionaux_reference
+- communs_numeriques_agroecologiques_reference
+- consortium_amazonia_viva_reference
+- cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference
+- cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference
+- cooperatives_ia_open_source_reference
+- frente_sert_o_livre_reference
+- great_lakes_autonomous_compact_reference
+- helsinki_communs_numeriques_reference
+- lyon_metropole_reference
+- observatoire_climatique_des_territoires_oct_reference
+- ong_environnementales_de_terrain_reference
+- pacifique_sud_archipels_flottants_reference
+- reseau_des_administrations_locales_rurales_participatives_reference
+- reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference
+- reseau_meshcommons_netsolidaire_reference
+- reseaux_de_capteurs_citoyens_reference
+- reseaux_de_medecine_traditionnelle_augmentee_reference
+- syndicats_de_travail_rural_hybride_reference
+- syndicats_de_travailleurs_de_la_transition_energetique_reference
+- union_africaine_de_resilience_territoriale_reference
 oppositions:
-    - consortium_des_grandes_plateformes_logistiques_globales_reference
-    - gouvernements_federaux_residuels_souverainistes_reference
-    - operateurs_prives_d_energie_distribuee_hors_fct_reference
-    - confederation_des_megapoles_autonomes_reference
-
+- amazonie_consortium_viva_reference
+- bureau_des_territoires_residuels_reference
+- coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference
+- confederation_des_megapoles_autonomes_reference
+- consortium_des_grandes_plateformes_logistiques_globales_reference
+- detroit_compact_grands_lacs_reference
+- fonds_d_investissement_foncier_climatique_reference
+- gouvernements_federaux_residuels_souverainistes_reference
+- lobbies_agro_industriels_a_haute_consommation_d_eau_reference
+- operateurs_de_zones_economiques_speciales_periurbaines_reference
+- operateurs_prives_d_energie_distribuee_hors_fct_reference
+- plateformes_centralisees_de_narration_officielle_reference
+- plateformes_d_optimisation_territoriale_par_ia_reference
+- rede_paulista_de_distribuic_o_algor_tmica_reference
 type_relation_dominante: rivalité
 
 annee_debut: 2041
@@ -92,12 +122,52 @@ La FCT coordonne les protocoles de souveraineté alimentaire entre bassins membr
 - [[systeme_economique_redistribution]]
 - [[energie_ressources_critiques]]
 
-## Relations
-**Alliés** : [[cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference]], [[observatoire_climatique_des_territoires_oct_reference]], [[banque_des_communs_reference]], [[syndicats_de_travailleurs_de_la_transition_energetique_reference]]
-**Opposants** : [[consortium_des_grandes_plateformes_logistiques_globales_reference]], [[gouvernements_federaux_residuels_souverainistes_reference]], [[operateurs_prives_d_energie_distribuee_hors_fct_reference]], [[confederation_des_megapoles_autonomes_reference]]
 
 ## Description journalistique
 Depuis son siège tournant — cette saison à Valparaíso, la prochaine à Tampere — la Fédération des Communs Territoriaux continue de défier les catégories politiques héritées du XXe siècle. Ni État, ni ONG, ni syndicat : quelque chose d'obstinément entre les deux. Ses délégués, élus dans des assemblées de bassin souvent houleuses, négocient chaque trimestre des protocoles d'urgence climatique que les gouvernements nationaux n'arrivent plus à imposer seuls. Mais la FCT montre aussi ses failles : des membres dissidents quittent le réseau pour rejoindre des blocs mégapolitains plus puissants, et ses fonds de résilience sont régulièrement insuffisants face à l'intensité des événements extrêmes. Elle tient, mais personne ne sait vraiment jusqu'à quand.
 
 ## Tensions narratives
 La FCT est tiraillée entre son idéal d'autonomie radicale et la nécessité croissante de s'interfacer avec des systèmes globaux qu'elle ne contrôle pas — réseaux d'IA industrielle, plateformes logistiques, marchés carbone. Certains bassins membres réclament une fédéralisation plus forte au risque de perdre leur souveraineté locale, tandis que d'autres menacent de sécession pour rejoindre des blocs concurrents. La question de la légitimité démocratique des assemblées de bassin face aux technocraties mégapolitaines reste ouverte et explosive.
+
+## Relations
+**Alliés :**
+- [[autorites_regionales_de_regulation_hydrologique_reference]]
+- [[banque_des_communs_reference]]
+- [[collectif_nuit_jaune_reference]]
+- [[collectifs_de_journalisme_embarque_reference]]
+- [[collectifs_de_journalistes_independants_regionaux_reference]]
+- [[communs_numeriques_agroecologiques_reference]]
+- [[consortium_amazonia_viva_reference]]
+- [[cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference]]
+- [[cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference]]
+- [[cooperatives_ia_open_source_reference]]
+- [[frente_sert_o_livre_reference]]
+- [[great_lakes_autonomous_compact_reference]]
+- [[helsinki_communs_numeriques_reference]]
+- [[lyon_metropole_reference]]
+- [[observatoire_climatique_des_territoires_oct_reference]]
+- [[ong_environnementales_de_terrain_reference]]
+- [[pacifique_sud_archipels_flottants_reference]]
+- [[reseau_des_administrations_locales_rurales_participatives_reference]]
+- [[reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference]]
+- [[reseau_meshcommons_netsolidaire_reference]]
+- [[reseaux_de_capteurs_citoyens_reference]]
+- [[reseaux_de_medecine_traditionnelle_augmentee_reference]]
+- [[syndicats_de_travail_rural_hybride_reference]]
+- [[syndicats_de_travailleurs_de_la_transition_energetique_reference]]
+- [[union_africaine_de_resilience_territoriale_reference]]
+**Opposants :**
+- [[amazonie_consortium_viva_reference]]
+- [[bureau_des_territoires_residuels_reference]]
+- [[coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference]]
+- [[confederation_des_megapoles_autonomes_reference]]
+- [[consortium_des_grandes_plateformes_logistiques_globales_reference]]
+- [[detroit_compact_grands_lacs_reference]]
+- [[fonds_d_investissement_foncier_climatique_reference]]
+- [[gouvernements_federaux_residuels_souverainistes_reference]]
+- [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]]
+- [[operateurs_de_zones_economiques_speciales_periurbaines_reference]]
+- [[operateurs_prives_d_energie_distribuee_hors_fct_reference]]
+- [[plateformes_centralisees_de_narration_officielle_reference]]
+- [[plateformes_d_optimisation_territoriale_par_ia_reference]]
+- [[rede_paulista_de_distribuic_o_algor_tmica_reference]]

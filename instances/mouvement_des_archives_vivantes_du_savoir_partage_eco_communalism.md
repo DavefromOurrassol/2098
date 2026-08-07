@@ -31,8 +31,44 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
+- assemblees_bioterritoriales_regionales_eco_communalism
+- brigades_de_restauration_ecologique_eco_communalism
+- cercles_de_mediation_territoriale_intercommunautaire_eco_communalism
+- collectifs_de_cartographie_ecologique_participative_eco_communalism
+- collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism
+- collectifs_de_geo_observateurs_citoyens_eco_communalism
+- collectifs_de_techniciens_sobres_eco_communalism
+- consortium_africain_de_biotechnologies_sociales_eco_communalism
+- consortium_amazonia_viva_eco_communalism
+- cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
+- fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism
+- guildes_des_semenciers_itinerants_eco_communalism
+- ligue_des_cites_du_sahel_numerique_eco_communalism
+- mouvement_des_communes_du_rust_belt_eco_communalism
+- reseau_assemblees_fennoscandien_eco_communalism
+- reseaux_de_bibliotheques_archives_communautaires_eco_communalism
+- reseaux_de_radio_communautaire_basse_consommation_eco_communalism
+- reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
+- trame_mnemos_noeud_reseau_eco_communalism
+- tresse_verte_corridor_eco_communalism
+- tribunal_algorithmique_de_bruxelles_eco_communalism
+- universite_nomade_eco_communalism
+oppositions:
+- collectifs_du_seuil_eco_communalism
+- communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism
+- conseils_territoriaux_opaques_sur_la_gestion_des_ressources_eco_communalism
+- consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism
+- courant_isolationniste_anti_circulation_de_l_information_eco_communalism
+- directive_kontinuum_eco_communalism
+- enclaves_extractivistes_residuelles_des_corridors_eco_communalism
+- factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism
+- factions_autoritaires_de_controle_du_savoir_eco_communalism
+- factions_autoritaires_locales_identitaires_exclusionnistes_eco_communalism
+- factions_communautaires_refusant_le_partage_narratif_exterieur_eco_communalism
+- reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism
+- reseaux_de_notables_communautaires_capturistes_eco_communalism
 type_relation_dominante: symbiose
 annee_debut: 2026
 annee_fin: null
@@ -91,6 +127,47 @@ Le Mouvement est tiraillé entre la volonté de préserver des savoirs en voie d
 - [[technologie_information]]
 - [[valeurs_culture_tempo_sociale]]
 - [[organisation_territoires]]
+
+
+## Relations
+**Alliés :**
+- [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]]
+- [[assemblees_bioterritoriales_regionales_eco_communalism]]
+- [[brigades_de_restauration_ecologique_eco_communalism]]
+- [[cercles_de_mediation_territoriale_intercommunautaire_eco_communalism]]
+- [[collectifs_de_cartographie_ecologique_participative_eco_communalism]]
+- [[collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism]]
+- [[collectifs_de_geo_observateurs_citoyens_eco_communalism]]
+- [[collectifs_de_techniciens_sobres_eco_communalism]]
+- [[consortium_africain_de_biotechnologies_sociales_eco_communalism]]
+- [[consortium_amazonia_viva_eco_communalism]]
+- [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]
+- [[fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism]]
+- [[guildes_des_semenciers_itinerants_eco_communalism]]
+- [[ligue_des_cites_du_sahel_numerique_eco_communalism]]
+- [[mouvement_des_communes_du_rust_belt_eco_communalism]]
+- [[reseau_assemblees_fennoscandien_eco_communalism]]
+- [[reseaux_de_bibliotheques_archives_communautaires_eco_communalism]]
+- [[reseaux_de_radio_communautaire_basse_consommation_eco_communalism]]
+- [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
+- [[trame_mnemos_noeud_reseau_eco_communalism]]
+- [[tresse_verte_corridor_eco_communalism]]
+- [[tribunal_algorithmique_de_bruxelles_eco_communalism]]
+- [[universite_nomade_eco_communalism]]
+**Opposants :**
+- [[collectifs_du_seuil_eco_communalism]]
+- [[communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism]]
+- [[conseils_territoriaux_opaques_sur_la_gestion_des_ressources_eco_communalism]]
+- [[consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism]]
+- [[courant_isolationniste_anti_circulation_de_l_information_eco_communalism]]
+- [[directive_kontinuum_eco_communalism]]
+- [[enclaves_extractivistes_residuelles_des_corridors_eco_communalism]]
+- [[factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism]]
+- [[factions_autoritaires_de_controle_du_savoir_eco_communalism]]
+- [[factions_autoritaires_locales_identitaires_exclusionnistes_eco_communalism]]
+- [[factions_communautaires_refusant_le_partage_narratif_exterieur_eco_communalism]]
+- [[reseau_des_marches_noirs_de_donnees_extractivistes_eco_communalism]]
+- [[reseaux_de_notables_communautaires_capturistes_eco_communalism]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

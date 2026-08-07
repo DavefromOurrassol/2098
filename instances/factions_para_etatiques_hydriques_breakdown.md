@@ -36,8 +36,37 @@ zone_geographique:
 - régionale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- consortiums_logistiques_agro_corporatifs_breakdown
+- factions_etatiques_residuelles_de_souverainete_hydrique_breakdown
+- milices_d_accaparement_hydrique_breakdown
+- trame_bioclimatique_breakdown
+oppositions:
+- brigades_medicales_itinerantes_breakdown
+- collectif_des_climatologues_sans_etat_breakdown
+- collectifs_de_sante_communautaire_autogeree_breakdown
+- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- corridors_eurasiens_convoyage_breakdown
+- delta_mekong_racines_breakdown
+- diaspora_tech_sahel_breakdown
+- enclaves_agro_communautaires_autonomes_breakdown
+- enclaves_corporatives_fortifiees_breakdown
+- enclaves_industrielles_du_corridor_oural_caspien_breakdown
+- factions_secessionnistes_agrariennes_du_desert_breakdown
+- frente_sert_o_livre_breakdown
+- front_de_resistance_aux_peages_sur_les_ressources_breakdown
+- grandes_lacs_compact_eau_breakdown
+- guilde_des_techniciens_nomades_breakdown
+- hanse_baltique_recomposee_breakdown
+- le_registre_du_fleuve_breakdown
+- les_veilleurs_du_fleuve_breakdown
+- midwest_desertifie_breakdown
+- nairobi_crrc_breakdown
+- ong_de_gestion_migratoire_survivantes_breakdown
+- reseaux_de_soigneurs_traditionnels_breakdown
+- seigneuries_logistiques_armees_breakdown
+- seigneurs_de_guerre_agro_territoriaux_breakdown
+- vallee_allier_terrafond_breakdown
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -98,6 +127,41 @@ La tension principale est celle entre la logique prédatrice à court terme — 
 - [[energie_ressources_critiques]]
 - [[gouvernance_institutions]]
 - [[organisation_territoires]]
+
+
+
+## Relations
+**Alliés :**
+- [[consortiums_logistiques_agro_corporatifs_breakdown]]
+- [[factions_etatiques_residuelles_de_souverainete_hydrique_breakdown]]
+- [[milices_d_accaparement_hydrique_breakdown]]
+- [[trame_bioclimatique_breakdown]]
+**Opposants :**
+- [[brigades_medicales_itinerantes_breakdown]]
+- [[collectif_des_climatologues_sans_etat_breakdown]]
+- [[collectifs_de_sante_communautaire_autogeree_breakdown]]
+- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[corridors_eurasiens_convoyage_breakdown]]
+- [[delta_mekong_racines_breakdown]]
+- [[diaspora_tech_sahel_breakdown]]
+- [[enclaves_agro_communautaires_autonomes_breakdown]]
+- [[enclaves_corporatives_fortifiees_breakdown]]
+- [[enclaves_industrielles_du_corridor_oural_caspien_breakdown]]
+- [[factions_secessionnistes_agrariennes_du_desert_breakdown]]
+- [[frente_sert_o_livre_breakdown]]
+- [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
+- [[grandes_lacs_compact_eau_breakdown]]
+- [[guilde_des_techniciens_nomades_breakdown]]
+- [[hanse_baltique_recomposee_breakdown]]
+- [[le_registre_du_fleuve_breakdown]]
+- [[les_veilleurs_du_fleuve_breakdown]]
+- [[midwest_desertifie_breakdown]]
+- [[nairobi_crrc_breakdown]]
+- [[ong_de_gestion_migratoire_survivantes_breakdown]]
+- [[reseaux_de_soigneurs_traditionnels_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]
+- [[seigneurs_de_guerre_agro_territoriaux_breakdown]]
+- [[vallee_allier_terrafond_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

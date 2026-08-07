@@ -4,6 +4,7 @@ type: instance
 slug: alliance_blocs_souverains_fortress_world
 entite: alliance_blocs_souverains
 scenario: fortress_world
+statut: officialise_enrichi
 localisation:
   zone: pacte_forteresses_souveraines
   lieu: Pacte des Forteresses Souveraines — siège tournant (actuellement plateforme offshore au large des côtes baltiques)
@@ -36,16 +37,23 @@ zone_systemique:
     - économie
 
 alliances:
-    - complexes_militaro_industriels_de_gestion_des_ressources_fortress_world
-    - cartels_energetiques_des_bioreacteurs_fortress_world
-    - reseaux_prives_de_securite_aux_frontieres_fortress_world
-
+- amazonie_pacte_vert_fortress_world
+- biolock_agritech_fortress_world
+- bloc_atlantique_fortress_world
+- bloc_eurasiatique_occidental_fortress_world
+- cartels_energetiques_des_bioreacteurs_fortress_world
+- centre_controle_orbital_helios_fortress_world
+- complexes_militaro_industriels_de_gestion_des_ressources_fortress_world
+- directive_kontinuum_fortress_world
+- ironclad_logistics_fortress_world
+- reseaux_prives_de_securite_aux_frontieres_fortress_world
+- terrashield_geoengineering_fortress_world
+- vaultcorp_security_fortress_world
 oppositions:
-    - coalitions_des_deplaces_et_apatrides_fortress_world
-    - reseaux_d_echange_clandestin_inter_zones_fortress_world
-    - factions_internes_pro_autarcie_totale_fortress_world
-    - institutions_multilaterales_residuelles_fortress_world
-
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- factions_internes_pro_autarcie_totale_fortress_world
+- institutions_multilaterales_residuelles_fortress_world
+- reseaux_d_echange_clandestin_inter_zones_fortress_world
 type_relation_dominante: alliance stratégique
 
 annee_debut: 2031
@@ -89,12 +97,29 @@ Gestion des accords bilatéraux d'approvisionnement énergétique entre blocs me
 - [[gouvernance_institutions]]
 - [[organisation_territoires]]
 
-## Relations
-**Alliés** : [[complexes_militaro_industriels_de_gestion_des_ressources_fortress_world]], [[cartels_energetiques_des_bioreacteurs_fortress_world]], [[reseaux_prives_de_securite_aux_frontieres_fortress_world]]
-**Opposants** : [[coalitions_des_deplaces_et_apatrides_fortress_world]], [[reseaux_d_echange_clandestin_inter_zones_fortress_world]], [[factions_internes_pro_autarcie_totale_fortress_world]], [[institutions_multilaterales_residuelles_fortress_world]]
 
 ## Description journalistique
 Le Pacte des Forteresses Souveraines fête en 2098 ses soixante-sept ans dans une atmosphère de paranoia institutionnelle. Depuis son siège tournant — actuellement une plateforme offshore au large des côtes baltiques, territoire de personne appartenant à tout le monde — ses représentants négocient chaque mois des accords énergétiques dont la durée de vie dépasse rarement deux saisons. Les délégués arrivent blindés, accompagnés de juristes-soldats, et repartent avec des contrats rédigés en triplicata sur support physique uniquement. 'Nous avons inventé la paix sans confiance', déclarait son secrétaire-général sortant lors de la session de Gdansk-Forteresse. Ce que ses détracteurs traduisent autrement : ils ont institutionnalisé la guerre froide permanente en la rendant présentable.
 
 ## Tensions narratives
 La logique même du Pacte accélère son effritement : chaque accord bilatéral crée des jalousies entre membres, et certains blocs négocient désormais en secret avec des zones officiellement exclues, fragilisant la doctrine de réciprocité stricte. Une faction interne, les 'Absolutistes de la clôture', pousse à l'abandon total de tout accord formalisé au profit d'une autarcie pure — ce qui signerait la dissolution du Pacte lui-même. Pendant ce temps, les corridors énergétiques que le Pacte est censé protéger sont de plus en plus infiltrés par des acteurs non-étatiques armés que personne ne veut officiellement reconnaître ni affronter.
+
+## Relations
+**Alliés :**
+- [[amazonie_pacte_vert_fortress_world]]
+- [[biolock_agritech_fortress_world]]
+- [[bloc_atlantique_fortress_world]]
+- [[bloc_eurasiatique_occidental_fortress_world]]
+- [[cartels_energetiques_des_bioreacteurs_fortress_world]]
+- [[centre_controle_orbital_helios_fortress_world]]
+- [[complexes_militaro_industriels_de_gestion_des_ressources_fortress_world]]
+- [[directive_kontinuum_fortress_world]]
+- [[ironclad_logistics_fortress_world]]
+- [[reseaux_prives_de_securite_aux_frontieres_fortress_world]]
+- [[terrashield_geoengineering_fortress_world]]
+- [[vaultcorp_security_fortress_world]]
+**Opposants :**
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[factions_internes_pro_autarcie_totale_fortress_world]]
+- [[institutions_multilaterales_residuelles_fortress_world]]
+- [[reseaux_d_echange_clandestin_inter_zones_fortress_world]]

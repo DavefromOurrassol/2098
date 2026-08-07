@@ -34,8 +34,23 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- collectifs_de_biohackers_agro_communautaires_policy_reform
+- collectifs_de_gouvernance_communautaire_decentralisee_policy_reform
+- factions_internes_pro_desaugmentation_totale_policy_reform
+- front_des_autonomies_territoriales_radicales_policy_reform
+- mouvement_pour_la_justice_ecologique_communautaire_policy_reform
+- mouvement_pour_la_souverainete_territoriale_absolue_policy_reform
+oppositions:
+- autorite_mondiale_du_vivant_amv_policy_reform
+- bureau_gouvernance_algorithmique_policy_reform
+- conseil_regulation_algorithmique_policy_reform
+- conseil_regulation_ressources_policy_reform
+- consortium_technologique_de_planification_territoriale_policy_reform
+- grille_aria_policy_reform
+- oracle_des_seuils_policy_reform
+- rede_paulista_de_distribuic_o_algor_tmica_policy_reform
+- reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -96,6 +111,26 @@ L'organisation est tiraillée entre son internationalisme affiché et son allerg
 - [[gouvernance_institutions]]
 - [[valeurs_culture_tempo_sociale]]
 - [[systeme_economique_redistribution]]
+
+
+## Relations
+**Alliés :**
+- [[collectifs_de_biohackers_agro_communautaires_policy_reform]]
+- [[collectifs_de_gouvernance_communautaire_decentralisee_policy_reform]]
+- [[factions_internes_pro_desaugmentation_totale_policy_reform]]
+- [[front_des_autonomies_territoriales_radicales_policy_reform]]
+- [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]]
+- [[mouvement_pour_la_souverainete_territoriale_absolue_policy_reform]]
+**Opposants :**
+- [[autorite_mondiale_du_vivant_amv_policy_reform]]
+- [[bureau_gouvernance_algorithmique_policy_reform]]
+- [[conseil_regulation_algorithmique_policy_reform]]
+- [[conseil_regulation_ressources_policy_reform]]
+- [[consortium_technologique_de_planification_territoriale_policy_reform]]
+- [[grille_aria_policy_reform]]
+- [[oracle_des_seuils_policy_reform]]
+- [[rede_paulista_de_distribuic_o_algor_tmica_policy_reform]]
+- [[reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

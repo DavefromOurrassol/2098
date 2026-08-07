@@ -32,8 +32,36 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_internationale_de_l_energie_reformatee_aier_policy_reform
+- agence_stabilisation_climatique_policy_reform
+- agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
+- autorite_mondiale_du_vivant_amv_policy_reform
+- collectifs_citoyens_de_deliberation_augmentee_policy_reform
+- collectifs_de_gouvernance_communautaire_decentralisee_policy_reform
+- conseil_de_regulation_climatique_global_policy_reform
+- conseil_regulation_ressources_policy_reform
+- consortium_africain_de_biotechnologies_sociales_policy_reform
+- consortium_amazonia_viva_policy_reform
+- fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform
+- great_lakes_autonomous_compact_policy_reform
+- kalaallit_nunaat_sovereign_fund_policy_reform
+- pacifique_sud_resilience_network_policy_reform
+- reseau_des_metropoles_n_uds_policy_reform
+- trame_bioclimatique_policy_reform
+oppositions:
+- coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform
+- coalition_des_souverainistes_numeriques_policy_reform
+- coalition_des_villes_de_reconversion_policy_reform
+- courant_autoritaire_recuperateur_du_vocabulaire_communautaire_policy_reform
+- front_des_souverainistes_energetiques_policy_reform
+- front_souverainiste_de_l_information_regionale_policy_reform
+- front_souverainiste_des_blocs_non_signataires_policy_reform
+- gouvernements_populistes_anti_depossession_policy_reform
+- lobbies_des_energies_fossiles_residuelles_policy_reform
+- mouvement_pour_la_souverainete_territoriale_absolue_policy_reform
+- syndicats_d_extraction_privee_non_regules_policy_reform
+- union_technocratique_eurasiatique_policy_reform
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -95,6 +123,40 @@ Le Consortium incarne une contradiction fondamentale : prôner l'autonomie terri
 - [[organisation_territoires]]
 - [[gouvernance_institutions]]
 - [[climat_environnement_global]]
+
+
+
+## Relations
+**Alliés :**
+- [[agence_internationale_de_l_energie_reformatee_aier_policy_reform]]
+- [[agence_stabilisation_climatique_policy_reform]]
+- [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]
+- [[autorite_mondiale_du_vivant_amv_policy_reform]]
+- [[collectifs_citoyens_de_deliberation_augmentee_policy_reform]]
+- [[collectifs_de_gouvernance_communautaire_decentralisee_policy_reform]]
+- [[conseil_de_regulation_climatique_global_policy_reform]]
+- [[conseil_regulation_ressources_policy_reform]]
+- [[consortium_africain_de_biotechnologies_sociales_policy_reform]]
+- [[consortium_amazonia_viva_policy_reform]]
+- [[fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform]]
+- [[great_lakes_autonomous_compact_policy_reform]]
+- [[kalaallit_nunaat_sovereign_fund_policy_reform]]
+- [[pacifique_sud_resilience_network_policy_reform]]
+- [[reseau_des_metropoles_n_uds_policy_reform]]
+- [[trame_bioclimatique_policy_reform]]
+**Opposants :**
+- [[coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform]]
+- [[coalition_des_souverainistes_numeriques_policy_reform]]
+- [[coalition_des_villes_de_reconversion_policy_reform]]
+- [[courant_autoritaire_recuperateur_du_vocabulaire_communautaire_policy_reform]]
+- [[front_des_souverainistes_energetiques_policy_reform]]
+- [[front_souverainiste_de_l_information_regionale_policy_reform]]
+- [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+- [[gouvernements_populistes_anti_depossession_policy_reform]]
+- [[lobbies_des_energies_fossiles_residuelles_policy_reform]]
+- [[mouvement_pour_la_souverainete_territoriale_absolue_policy_reform]]
+- [[syndicats_d_extraction_privee_non_regules_policy_reform]]
+- [[union_technocratique_eurasiatique_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

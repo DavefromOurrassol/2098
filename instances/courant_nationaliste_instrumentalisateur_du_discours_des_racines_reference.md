@@ -34,7 +34,13 @@ zone_systemique:
 - société
 alliances:
 - pacte_des_souverains_reference
-oppositions: []
+oppositions:
+- consortium_africain_de_biotechnologies_sociales_reference
+- europe_occidentale_reconstructee_reference
+- frente_sert_o_livre_reference
+- mouvement_racines_vivantes_reference
+- ouagadougou_polytechnique_reference
+- union_africaine_resilience_reference
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -98,9 +104,17 @@ Sa contradiction centrale est d'utiliser les technologies de l'information les p
 - [[demographie_mobilite_humaine]]
 - [[gouvernance_institutions]]
 
+
 ## Relations
 **Alliés :**
 - [[pacte_des_souverains_reference]]
+**Opposants :**
+- [[consortium_africain_de_biotechnologies_sociales_reference]]
+- [[europe_occidentale_reconstructee_reference]]
+- [[frente_sert_o_livre_reference]]
+- [[mouvement_racines_vivantes_reference]]
+- [[ouagadougou_polytechnique_reference]]
+- [[union_africaine_resilience_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

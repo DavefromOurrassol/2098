@@ -4,6 +4,7 @@ type: instance
 slug: tribunal_algorithmique_de_bruxelles_breakdown
 entite: tribunal_algorithmique_de_bruxelles
 scenario: breakdown
+statut: officialise_enrichi
 localisation:
   zone: geneve_bunker_institutions
   lieu: Enclaves européennes (nomade, origine Bruxelles)
@@ -33,20 +34,20 @@ zone_systemique:
     - information
 
 alliances:
-    - archives_neutres_de_geneve_breakdown
-    - conseil_regulation_algorithmique_breakdown
-    - collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
-    - reseau_mnemos_breakdown
-    - le_temoin_breakdown
-
+- archives_neutres_de_geneve_breakdown
+- archives_neutres_geneve_breakdown
+- collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
+- conseil_regulation_algorithmique_breakdown
+- le_temoin_breakdown
+- reseau_mnemos_breakdown
+- tour_bcuc_geneve_breakdown
 oppositions:
-    - enclaves_corporatives_fortifiees_breakdown
-    - fronts_populistes_anti_technocratiques_breakdown
-    - factions_propagandistes_des_archives_breakdown
-    - directive_kontinuum_breakdown
-    - nexcore_breakdown
-    - cites_etats_secessionistes_breakdown
-
+- cites_etats_secessionistes_breakdown
+- directive_kontinuum_breakdown
+- enclaves_corporatives_fortifiees_breakdown
+- factions_propagandistes_des_archives_breakdown
+- fronts_populistes_anti_technocratiques_breakdown
+- nexcore_breakdown
 type_relation_dominante: rivalité
 
 annee_debut: 2041
@@ -88,12 +89,26 @@ La Chambre instruit encore des dossiers — soumis via réseaux dégradés ou po
 - [[gouvernance_institutions]]
 - [[technologie_information]]
 
-## Relations
-**Alliés** : [[archives_neutres_de_geneve_breakdown]], [[conseil_regulation_algorithmique_breakdown]], [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]], [[reseau_mnemos_breakdown]], [[le_temoin_breakdown]]
-**Opposants** : [[enclaves_corporatives_fortifiees_breakdown]], [[fronts_populistes_anti_technocratiques_breakdown]], [[factions_propagandistes_des_archives_breakdown]], [[directive_kontinuum_breakdown]], [[nexcore_breakdown]], [[cites_etats_secessionistes_breakdown]]
 
 ## Description journalistique
 On les appelle les « juges fantômes ». Ils arrivent avec des mallettes blindées contenant des disques durs chiffrés et un sceau institutionnel dont l'autorité n'est reconnue que par eux-mêmes. La Chambre des Recours Algorithmiques tient ses audiences dans des arrière-salles d'enclaves techno-survivantes, sous des ampoules à dynamo, devant des plaideurs qui ont parfois marché trois semaines pour déposer un recours contre un système d'allocation hydrique qui a condamné leur communauté. Les arrêts sont rédigés, signés, tamponnés — puis rangés dans des archives que personne n'ira consulter. Et pourtant ils viennent. Parce que dans l'effondrement, même un jugement inappliqué est une forme de preuve que quelque chose a existé, qu'une injustice a été nommée.
 
 ## Tensions narratives
 La Chambre est déchirée entre deux factions internes : les 'archivistes', qui estiment que son rôle est désormais purement mémoriel et documentaire, et les 'exécutionnistes', qui veulent nouer des alliances avec des milices territoriales pour forcer l'application de leurs arrêts — au risque de perdre toute prétention à l'impartialité. Par ailleurs, certains systèmes algorithmiques encore actifs — notamment ceux hérités des consortiums énergétiques — ont commencé à générer des contre-jurisprudences automatisées contestant la légitimité de la Chambre elle-même, créant un vertige juridique kafkaïen : la machine juge son juge. La question de savoir si les arrêts accumulés constituent une ressource précieuse pour une future reconstruction ou une fiction dangereuse entretenant l'illusion d'un ordre mort traverse chaque session.
+
+## Relations
+**Alliés :**
+- [[archives_neutres_de_geneve_breakdown]]
+- [[archives_neutres_geneve_breakdown]]
+- [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]]
+- [[conseil_regulation_algorithmique_breakdown]]
+- [[le_temoin_breakdown]]
+- [[reseau_mnemos_breakdown]]
+- [[tour_bcuc_geneve_breakdown]]
+**Opposants :**
+- [[cites_etats_secessionistes_breakdown]]
+- [[directive_kontinuum_breakdown]]
+- [[enclaves_corporatives_fortifiees_breakdown]]
+- [[factions_propagandistes_des_archives_breakdown]]
+- [[fronts_populistes_anti_technocratiques_breakdown]]
+- [[nexcore_breakdown]]

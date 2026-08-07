@@ -4,6 +4,7 @@ type: instance
 slug: rede_paulista_de_distribuic_o_algor_tmica_new_sustainability
 entite: rede_paulista_de_distribuic_o_algor_tmica
 scenario: new_sustainability
+statut: officialise_enrichi
 localisation:
   zone: ameriques_reconfigurees
   lieu: São Paulo (Santo André / Heliópolis)

@@ -4,6 +4,7 @@ type: instance
 slug: mouvement_des_communes_du_rust_belt_eco_communalism
 entite: mouvement_des_communes_du_rust_belt
 scenario: eco_communalism
+statut: officialise_enrichi
 localisation:
   zone: rust_belt_confederation_friches
   lieu: Confédération des Friches Vivantes (Rust Belt, zones post-industrielles d'Europe centrale et d'Asie du Nord-Est)
@@ -38,36 +39,36 @@ zone_systemique:
     - infrastructure
 
 alliances:
-    - archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
-    - assemblees_cooperatives_regionales_eco_communalism
-    - brigades_de_restauration_ecologique_eco_communalism
-    - collectifs_de_techniciens_sobres_eco_communalism
-    - confederation_des_communs_de_l_arc_septentrional_eco_communalism
-    - conseils_de_bassin_versant_eco_communalistes_eco_communalism
-    - cooperatives_d_habitat_regeneratif_eco_communalism
-    - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
-    - federation_communs_territoriaux_eco_communalism
-    - guildes_de_mediateurs_ecologiques_eco_communalism
-    - mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism
-    - mutuelles_de_sante_territoriales_eco_communalism
-    - reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
-    - trame_bioclimatique_eco_communalism
-
+- archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
+- assemblees_cooperatives_regionales_eco_communalism
+- brigades_de_restauration_ecologique_eco_communalism
+- collectifs_de_techniciens_sobres_eco_communalism
+- confederation_des_communs_de_l_arc_septentrional_eco_communalism
+- conseils_de_bassin_versant_eco_communalistes_eco_communalism
+- cooperatives_d_habitat_regeneratif_eco_communalism
+- cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
+- federation_communs_territoriaux_eco_communalism
+- guildes_de_mediateurs_ecologiques_eco_communalism
+- mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism
+- mutuelles_de_sante_territoriales_eco_communalism
+- reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
+- trame_bioclimatique_eco_communalism
+- zones_extractivistes_corridors_eco_communalism
 oppositions:
-    - agro_conglomerats_des_enclaves_technologiques_eco_communalism
-    - cartels_de_narration_de_penurie_eco_communalism
-    - communs_secessionnistes_hors_coordination_eco_communalism
-    - consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism
-    - consortiums_industriels_de_l_eau_eco_communalism
-    - consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism
-    - courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism
-    - enclaves_extractivistes_residuelles_des_corridors_eco_communalism
-    - factions_autoritaires_locales_identitaires_exclusionnistes_eco_communalism
-    - factions_extractivistes_des_aquiferes_communs_eco_communalism
-    - fragments_d_etats_centraux_residuels_eco_communalism
-    - plateformes_centralisees_de_reagregation_globale_eco_communalism
-    - reseaux_de_notables_communautaires_capturistes_eco_communalism
-
+- agro_conglomerats_des_enclaves_technologiques_eco_communalism
+- cartels_de_narration_de_penurie_eco_communalism
+- communs_secessionnistes_hors_coordination_eco_communalism
+- consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism
+- consortiums_industriels_de_l_eau_eco_communalism
+- consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism
+- courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism
+- enclaves_extractivistes_residuelles_des_corridors_eco_communalism
+- factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism
+- factions_autoritaires_locales_identitaires_exclusionnistes_eco_communalism
+- factions_extractivistes_des_aquiferes_communs_eco_communalism
+- fragments_d_etats_centraux_residuels_eco_communalism
+- plateformes_centralisees_de_reagregation_globale_eco_communalism
+- reseaux_de_notables_communautaires_capturistes_eco_communalism
 type_relation_dominante: coopération
 
 annee_debut: 2031
@@ -111,12 +112,42 @@ Coordination des flux de ressources et de savoir-faire entre communes membres vi
 - [[energie_ressources_critiques]]
 - [[gouvernance_institutions]]
 
-## Relations
-**Alliés** : [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]], [[assemblees_cooperatives_regionales_eco_communalism]], [[brigades_de_restauration_ecologique_eco_communalism]], [[collectifs_de_techniciens_sobres_eco_communalism]], [[confederation_des_communs_de_l_arc_septentrional_eco_communalism]], [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]], [[cooperatives_d_habitat_regeneratif_eco_communalism]], [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]], [[federation_communs_territoriaux_eco_communalism]], [[guildes_de_mediateurs_ecologiques_eco_communalism]], [[mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism]], [[mutuelles_de_sante_territoriales_eco_communalism]], [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]], [[trame_bioclimatique_eco_communalism]]
-**Opposants** : [[agro_conglomerats_des_enclaves_technologiques_eco_communalism]], [[cartels_de_narration_de_penurie_eco_communalism]], [[communs_secessionnistes_hors_coordination_eco_communalism]], [[consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism]], [[consortiums_industriels_de_l_eau_eco_communalism]], [[consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism]], [[courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism]], [[enclaves_extractivistes_residuelles_des_corridors_eco_communalism]], [[factions_autoritaires_locales_identitaires_exclusionnistes_eco_communalism]], [[factions_extractivistes_des_aquiferes_communs_eco_communalism]], [[fragments_d_etats_centraux_residuels_eco_communalism]], [[plateformes_centralisees_de_reagregation_globale_eco_communalism]], [[reseaux_de_notables_communautaires_capturistes_eco_communalism]]
 
 ## Description journalistique
 Depuis les ruines rouillées de Pittsburgh, Detroit et Łódź jusqu'aux zones grises de la Mandchourie désindustrialisée, la Confédération des Friches Vivantes tisse, depuis plus de soixante ans, une toile discrète mais tenace de communes autogérées. Pas de siège social, pas de porte-parole officiel, pas de budget centralisé : seulement des protocoles de réciprocité que les délégués communaux renégocient tous les trois ans lors de leurs Assemblées Tournantes. On la reconnaît à ses toits végétalisés sur des charpentes métalliques d'autrefois, à ses ateliers de reconversion où d'anciens ouvriers sidérurgistes forment aujourd'hui des jeunes à la biométhanisation et à la taille des haies bocagères. Ses détracteurs l'accusent d'inefficacité et de romantisme industriel recyclé ; ses membres répondent simplement par leurs chiffres : 94 % des communes affiliées ont atteint l'autosuffisance alimentaire de base, et leurs terres dépolluted représentent la plus grande superficie de régénération écologique non étatique du monde post-fragmenté.
 
 ## Tensions narratives
 La Confédération est désormais assez puissante pour que les fragments d'États résiduels cherchent à la régulariser, à en faire une interlocutrice institutionnelle — ce qui divise profondément ses membres entre ceux qui voient dans cette reconnaissance une victoire et ceux qui y lisent le début de leur domestication. Par ailleurs, la pression des consortiums logistiques néo-industriels s'intensifie sur certaines friches à haute valeur minière, menaçant de racheter des communes isolées à court de ressources. Enfin, une génération née dans les friches, n'ayant jamais connu le monde industriel, commence à questionner la centralité de la mémoire ouvrière dans l'identité confédérale — tension générationnelle qui pourrait redéfinir ce que 'friche vivante' signifie pour les décennies à venir.
+
+## Relations
+**Alliés :**
+- [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]]
+- [[assemblees_cooperatives_regionales_eco_communalism]]
+- [[brigades_de_restauration_ecologique_eco_communalism]]
+- [[collectifs_de_techniciens_sobres_eco_communalism]]
+- [[confederation_des_communs_de_l_arc_septentrional_eco_communalism]]
+- [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]]
+- [[cooperatives_d_habitat_regeneratif_eco_communalism]]
+- [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]
+- [[federation_communs_territoriaux_eco_communalism]]
+- [[guildes_de_mediateurs_ecologiques_eco_communalism]]
+- [[mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism]]
+- [[mutuelles_de_sante_territoriales_eco_communalism]]
+- [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
+- [[trame_bioclimatique_eco_communalism]]
+- [[zones_extractivistes_corridors_eco_communalism]]
+**Opposants :**
+- [[agro_conglomerats_des_enclaves_technologiques_eco_communalism]]
+- [[cartels_de_narration_de_penurie_eco_communalism]]
+- [[communs_secessionnistes_hors_coordination_eco_communalism]]
+- [[consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism]]
+- [[consortiums_industriels_de_l_eau_eco_communalism]]
+- [[consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism]]
+- [[courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism]]
+- [[enclaves_extractivistes_residuelles_des_corridors_eco_communalism]]
+- [[factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism]]
+- [[factions_autoritaires_locales_identitaires_exclusionnistes_eco_communalism]]
+- [[factions_extractivistes_des_aquiferes_communs_eco_communalism]]
+- [[fragments_d_etats_centraux_residuels_eco_communalism]]
+- [[plateformes_centralisees_de_reagregation_globale_eco_communalism]]
+- [[reseaux_de_notables_communautaires_capturistes_eco_communalism]]

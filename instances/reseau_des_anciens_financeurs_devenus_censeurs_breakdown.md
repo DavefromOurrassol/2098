@@ -37,8 +37,22 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
+- consortiums_logistiques_agro_corporatifs_breakdown
+- corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown
+- enclaves_corporatives_fortifiees_breakdown
+- seigneuries_logistiques_armees_breakdown
+oppositions:
+- archives_neutres_geneve_breakdown
+- bureau_des_territoires_residuels_breakdown
+- collectif_des_climatologues_sans_etat_breakdown
+- communes_rust_belt_breakdown
+- front_de_resistance_aux_peages_sur_les_ressources_breakdown
+- lagos_interieur_mnemos_breakdown
+- reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown
+- reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown
+- voix_du_dehors_breakdown
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -96,6 +110,25 @@ La contradiction fondamentale qui les mine est celle du mécène retourné : leu
 - [[technologie_information]]
 - [[gouvernance_institutions]]
 - [[systeme_economique_redistribution]]
+
+
+## Relations
+**Alliés :**
+- [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
+- [[consortiums_logistiques_agro_corporatifs_breakdown]]
+- [[corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown]]
+- [[enclaves_corporatives_fortifiees_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]
+**Opposants :**
+- [[archives_neutres_geneve_breakdown]]
+- [[bureau_des_territoires_residuels_breakdown]]
+- [[collectif_des_climatologues_sans_etat_breakdown]]
+- [[communes_rust_belt_breakdown]]
+- [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
+- [[lagos_interieur_mnemos_breakdown]]
+- [[reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown]]
+- [[reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown]]
+- [[voix_du_dehors_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

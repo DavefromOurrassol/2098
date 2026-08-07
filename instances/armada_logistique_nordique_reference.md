@@ -4,6 +4,7 @@ type: instance
 slug: armada_logistique_nordique_reference
 entite: armada_logistique_nordique
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: tromsoe_aln
   lieu: Tromsø
@@ -37,15 +38,24 @@ zone_systemique:
     - gouvernance
 
 alliances:
-    - conseil_des_etats_nordiques_integres_reference
-    - consortium_energetique_baltique_reference
-    - fonds_souverain_arctique_scandinave_reference
-
+- arctic_passage_authority_reference
+- conseil_des_etats_nordiques_integres_reference
+- consortium_des_grandes_plateformes_logistiques_globales_reference
+- consortium_energetique_baltique_reference
+- corridor_arctique_nordique_reference
+- fonds_souverain_arctique_scandinave_reference
+- kalaallit_nunaat_sovereign_fund_reference
+- milices_concurrentes_des_droits_de_passage_reference
+- murmansk_transit_arctique_reference
+- optiflow_logistics_reference
 oppositions:
-    - siberie_federale_reference
-    - collectifs_de_peche_inuit_et_sami_reference
-    - consortium_logistique_asiatique_de_contournement_aln_reference
-
+- bloc_ressources_eurasiatique_bre_reference
+- cartel_des_terres_rares_d_asie_centrale_reference
+- collectifs_de_peche_inuit_et_sami_reference
+- consortium_logistique_asiatique_de_contournement_aln_reference
+- guadalajara_nexus_reference
+- ong_de_tracabilite_des_ressources_critiques_reference
+- siberie_federale_reference
 type_relation_dominante: dépendance
 
 annee_debut: 2031
@@ -89,12 +99,30 @@ Gestion opérationnelle des routes maritimes arctiques et des hubs de transborde
 - [[organisation_territoires]]
 - [[systeme_economique_redistribution]]
 
-## Relations
-**Alliés** : [[conseil_des_etats_nordiques_integres_reference]], [[consortium_energetique_baltique_reference]], [[fonds_souverain_arctique_scandinave_reference]]
-**Opposants** : [[siberie_federale_reference]], [[collectifs_de_peche_inuit_et_sami_reference]], [[consortium_logistique_asiatique_de_contournement_aln_reference]]
 
 ## Description journalistique
 Depuis ses tours de verre gris-acier d'Tromsø, l'Armada Logistique Nordique ne ressemble à aucune entreprise du siècle précédent : elle lève des péages sur les mers, arbitre les tensions entre blocs et répond à ses actionnaires en langues simultanées. En 2098, pas un container de lithium sibérien ni un flux d'hydrogène liquéfié scandinave ne traverse l'Arctique sans son visa. Ses flottes de brise-glaces autonomes, estampillées du triple anneau bleu-blanc-argent, sont devenues aussi familières aux dockers de Mourmansk qu'aux traders de Singapour. Certains l'appellent 'le péagiste du monde qui déraille' — une formule que ses directeurs encaissent avec le sourire satisfait de ceux qui savent que la dépendance est la meilleure des protections.
 
 ## Tensions narratives
 L'ALN maintient un équilibre précaire entre blocs qui la tolèrent faute de mieux, mais toute rupture diplomatique majeure pourrait la transformer en cible ou en enjeu d'une guerre logistique froide. Sa gouvernance para-étatique — ni totalement privée, ni souveraine — est contestée par les nouvelles puissances arctiques réclamant une renégociation des accords fondateurs de 2031. En interne, la montée en puissance de ses IA de routage autonome crée une friction croissante avec les États nordiques actionnaires, qui craignent de perdre la main sur un actif devenu trop critique pour être laissé aux algorithmes.
+
+## Relations
+**Alliés :**
+- [[arctic_passage_authority_reference]]
+- [[conseil_des_etats_nordiques_integres_reference]]
+- [[consortium_des_grandes_plateformes_logistiques_globales_reference]]
+- [[consortium_energetique_baltique_reference]]
+- [[corridor_arctique_nordique_reference]]
+- [[fonds_souverain_arctique_scandinave_reference]]
+- [[kalaallit_nunaat_sovereign_fund_reference]]
+- [[milices_concurrentes_des_droits_de_passage_reference]]
+- [[murmansk_transit_arctique_reference]]
+- [[optiflow_logistics_reference]]
+**Opposants :**
+- [[bloc_ressources_eurasiatique_bre_reference]]
+- [[cartel_des_terres_rares_d_asie_centrale_reference]]
+- [[collectifs_de_peche_inuit_et_sami_reference]]
+- [[consortium_logistique_asiatique_de_contournement_aln_reference]]
+- [[guadalajara_nexus_reference]]
+- [[ong_de_tracabilite_des_ressources_critiques_reference]]
+- [[siberie_federale_reference]]

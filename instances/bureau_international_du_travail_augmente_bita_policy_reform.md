@@ -31,8 +31,19 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform
+- conseil_onu_de_gouvernance_numerique_et_ia_policy_reform
+- conseil_regulation_algorithmique_policy_reform
+- internationale_travailleurs_augmentes_policy_reform
+- reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
+- syndicat_des_ingenieurs_orbitaux_policy_reform
+oppositions:
+- coalition_des_souverainistes_numeriques_policy_reform
+- conglomerats_d_automatisation_industrielle_integrale_policy_reform
+- consortiums_prives_de_gouvernance_algorithmique_policy_reform
+- front_souverainiste_de_l_information_regionale_policy_reform
+- front_souverainiste_des_blocs_non_signataires_policy_reform
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -96,6 +107,22 @@ Le BITA est écartelé entre les blocs souverainistes qui refusent toute supervi
 - [[systemes_productifs_travail]]
 - [[gouvernance_institutions]]
 - [[systeme_economique_redistribution]]
+
+
+## Relations
+**Alliés :**
+- [[collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform]]
+- [[conseil_onu_de_gouvernance_numerique_et_ia_policy_reform]]
+- [[conseil_regulation_algorithmique_policy_reform]]
+- [[internationale_travailleurs_augmentes_policy_reform]]
+- [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]]
+- [[syndicat_des_ingenieurs_orbitaux_policy_reform]]
+**Opposants :**
+- [[coalition_des_souverainistes_numeriques_policy_reform]]
+- [[conglomerats_d_automatisation_industrielle_integrale_policy_reform]]
+- [[consortiums_prives_de_gouvernance_algorithmique_policy_reform]]
+- [[front_souverainiste_de_l_information_regionale_policy_reform]]
+- [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

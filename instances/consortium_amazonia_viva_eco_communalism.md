@@ -4,6 +4,7 @@ type: instance
 slug: consortium_amazonia_viva_eco_communalism
 entite: consortium_amazonia_viva
 scenario: eco_communalism
+statut: officialise_enrichi
 localisation:
   zone: amazonie_pacte_viva
   lieu: Amazonie — Pacte Amazônia Viva
@@ -37,29 +38,28 @@ zone_systemique:
     - énergie
 
 alliances:
-    - coalition_vivant_eco_communalism
-    - assemblee_territoires_eco_communalism
-    - assemblees_bioterritoriales_regionales_eco_communalism
-    - assemblees_de_bassin_versant_eco_communalism
-    - brigades_de_restauration_ecologique_eco_communalism
-    - collectifs_de_cartographie_ecologique_participative_eco_communalism
-    - collectifs_de_geo_observateurs_citoyens_eco_communalism
-    - conseils_de_bassin_versant_eco_communalistes_eco_communalism
-    - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
-    - federation_communs_territoriaux_eco_communalism
-    - guildes_de_mediateurs_ecologiques_eco_communalism
-    - mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism
-    - trame_bioclimatique_eco_communalism
-
+- assemblee_territoires_eco_communalism
+- assemblees_bioterritoriales_regionales_eco_communalism
+- assemblees_de_bassin_versant_eco_communalism
+- brigades_de_restauration_ecologique_eco_communalism
+- coalition_vivant_eco_communalism
+- collectifs_de_cartographie_ecologique_participative_eco_communalism
+- collectifs_de_geo_observateurs_citoyens_eco_communalism
+- conseils_de_bassin_versant_eco_communalistes_eco_communalism
+- cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
+- federation_communs_territoriaux_eco_communalism
+- frente_sert_o_livre_eco_communalism
+- guildes_de_mediateurs_ecologiques_eco_communalism
+- mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism
+- trame_bioclimatique_eco_communalism
 oppositions:
-    - enclaves_extractivistes_residuelles_des_corridors_eco_communalism
-    - factions_extractivistes_des_aquiferes_communs_eco_communalism
-    - consortiums_industriels_de_l_eau_eco_communalism
-    - agro_conglomerats_des_enclaves_technologiques_eco_communalism
-    - consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism
-    - factions_technophiles_de_la_geo_ingenierie_centralisee_eco_communalism
-    - communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism
-
+- agro_conglomerats_des_enclaves_technologiques_eco_communalism
+- communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism
+- consortiums_industriels_de_l_eau_eco_communalism
+- consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism
+- enclaves_extractivistes_residuelles_des_corridors_eco_communalism
+- factions_extractivistes_des_aquiferes_communs_eco_communalism
+- factions_technophiles_de_la_geo_ingenierie_centralisee_eco_communalism
 type_relation_dominante: alliance stratégique
 
 annee_debut: 2031
@@ -103,12 +103,34 @@ Le Pacte coordonne les protocoles de régénération des corridors écologiques,
 - [[gouvernance_institutions]]
 - [[energie_ressources_critiques]]
 
-## Relations
-**Alliés** : [[coalition_vivant_eco_communalism]], [[assemblee_territoires_eco_communalism]], [[assemblees_bioterritoriales_regionales_eco_communalism]], [[assemblees_de_bassin_versant_eco_communalism]], [[brigades_de_restauration_ecologique_eco_communalism]], [[collectifs_de_cartographie_ecologique_participative_eco_communalism]], [[collectifs_de_geo_observateurs_citoyens_eco_communalism]], [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]], [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]], [[federation_communs_territoriaux_eco_communalism]], [[guildes_de_mediateurs_ecologiques_eco_communalism]], [[mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism]], [[trame_bioclimatique_eco_communalism]]
-**Opposants** : [[enclaves_extractivistes_residuelles_des_corridors_eco_communalism]], [[factions_extractivistes_des_aquiferes_communs_eco_communalism]], [[consortiums_industriels_de_l_eau_eco_communalism]], [[agro_conglomerats_des_enclaves_technologiques_eco_communalism]], [[consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism]], [[factions_technophiles_de_la_geo_ingenierie_centralisee_eco_communalism]], [[communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism]]
 
 ## Description journalistique
 Depuis la grande confluence de Manaus en 2041, le Pacte Amazônia Viva est devenu la référence mondiale de ce que les communautés appellent ici la 'garde souveraine'. Pas de siège fixe, pas de drapeau unique : le Pacte se réunit deux fois par an en assemblée fluviale itinérante, sur des pirogues élargies et des plateformes de bambou ancrées aux confluences. Ses représentants — moitiés chamanes, moitiés agronomes — négocient des échanges de semences avec la Confédération des Communs de l'Arc Septentrional aussi naturellement qu'ils cartographient l'avancée du tapir dans des zones réhabilitées. Ce que les journalistes étrangers peinent encore à saisir, c'est que leur pouvoir ne vient pas d'un traité : il vient du fait que la forêt, elle, les reconnaît.
 
 ## Tensions narratives
 La légitimité du Pacte est contestée de l'intérieur : certaines nations autochtones membres refusent de partager leurs cartographies sacrées avec les collectifs scientifiques, craignant une réappropriation culturelle même bienveillante. Par ailleurs, les enclaves extractivistes résiduelles des corridors grignotent les marges du territoire en profitant des zones grises entre communautés. La grande question de 2098 est de savoir si le Pacte peut tenir sa promesse d'horizontalité quand la pression des consortiums industriels de l'eau menace de forcer une centralisation défensive — devenir un État pour survivre, au risque de trahir ce qu'il défend.
+
+## Relations
+**Alliés :**
+- [[assemblee_territoires_eco_communalism]]
+- [[assemblees_bioterritoriales_regionales_eco_communalism]]
+- [[assemblees_de_bassin_versant_eco_communalism]]
+- [[brigades_de_restauration_ecologique_eco_communalism]]
+- [[coalition_vivant_eco_communalism]]
+- [[collectifs_de_cartographie_ecologique_participative_eco_communalism]]
+- [[collectifs_de_geo_observateurs_citoyens_eco_communalism]]
+- [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]]
+- [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]
+- [[federation_communs_territoriaux_eco_communalism]]
+- [[frente_sert_o_livre_eco_communalism]]
+- [[guildes_de_mediateurs_ecologiques_eco_communalism]]
+- [[mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism]]
+- [[trame_bioclimatique_eco_communalism]]
+**Opposants :**
+- [[agro_conglomerats_des_enclaves_technologiques_eco_communalism]]
+- [[communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism]]
+- [[consortiums_industriels_de_l_eau_eco_communalism]]
+- [[consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism]]
+- [[enclaves_extractivistes_residuelles_des_corridors_eco_communalism]]
+- [[factions_extractivistes_des_aquiferes_communs_eco_communalism]]
+- [[factions_technophiles_de_la_geo_ingenierie_centralisee_eco_communalism]]

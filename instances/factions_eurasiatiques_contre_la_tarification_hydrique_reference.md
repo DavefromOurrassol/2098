@@ -30,8 +30,37 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- bloc_des_souverainistes_climatiques_reference
+- bloc_eurasien_central_reference
+- bloc_ressources_eurasiatique_bre_reference
+- gouvernements_federaux_residuels_souverainistes_reference
+- operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference
+- pacte_des_souverains_reference
+- reseau_hospitalier_hybride_eurasiatique_reference
+oppositions:
+- autorites_regionales_de_regulation_hydrologique_reference
+- banque_mondiale_des_transitions_climatiques_reference
+- commission_hydrique_de_l_union_africaine_reference
+- consortium_des_grandes_plateformes_logistiques_globales_reference
+- consortium_helios_reference
+- consortiums_bancaires_financiarises_reference
+- consortiums_energetiques_des_megapoles_reference
+- delta_du_gange_reference
+- delta_du_mekong_reference
+- europe_occidentale_reconstructee_reference
+- fonds_monetaire_climatique_fmc_reference
+- fonds_souverain_arctique_scandinave_reference
+- geneve_lac_retreite_reference
+- great_lakes_autonomous_compact_reference
+- institutions_multilaterales_survivantes_reference
+- kinshasa_accords_hydriques_reference
+- lobbies_agro_industriels_a_haute_consommation_d_eau_reference
+- nairobi_crrc_reference
+- observatoire_climatique_des_territoires_oct_reference
+- programme_onu_eau_2080_reference
+- regulateurs_de_l_union_continentale_africaine_reference
+- terrametrics_reference
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -97,6 +126,40 @@ La contradiction fondamentale des Factions est d'invoquer la souveraineté hydri
 - [[geopolitique_conflits]]
 - [[energie_ressources_critiques]]
 - [[gouvernance_institutions]]
+
+
+## Relations
+**Alliés :**
+- [[bloc_des_souverainistes_climatiques_reference]]
+- [[bloc_eurasien_central_reference]]
+- [[bloc_ressources_eurasiatique_bre_reference]]
+- [[gouvernements_federaux_residuels_souverainistes_reference]]
+- [[operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference]]
+- [[pacte_des_souverains_reference]]
+- [[reseau_hospitalier_hybride_eurasiatique_reference]]
+**Opposants :**
+- [[autorites_regionales_de_regulation_hydrologique_reference]]
+- [[banque_mondiale_des_transitions_climatiques_reference]]
+- [[commission_hydrique_de_l_union_africaine_reference]]
+- [[consortium_des_grandes_plateformes_logistiques_globales_reference]]
+- [[consortium_helios_reference]]
+- [[consortiums_bancaires_financiarises_reference]]
+- [[consortiums_energetiques_des_megapoles_reference]]
+- [[delta_du_gange_reference]]
+- [[delta_du_mekong_reference]]
+- [[europe_occidentale_reconstructee_reference]]
+- [[fonds_monetaire_climatique_fmc_reference]]
+- [[fonds_souverain_arctique_scandinave_reference]]
+- [[geneve_lac_retreite_reference]]
+- [[great_lakes_autonomous_compact_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
+- [[kinshasa_accords_hydriques_reference]]
+- [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]]
+- [[nairobi_crrc_reference]]
+- [[observatoire_climatique_des_territoires_oct_reference]]
+- [[programme_onu_eau_2080_reference]]
+- [[regulateurs_de_l_union_continentale_africaine_reference]]
+- [[terrametrics_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

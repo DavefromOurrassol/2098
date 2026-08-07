@@ -4,6 +4,7 @@ type: instance
 slug: leena_vainala_reference
 entite: leena_vainala
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: corridor_arctique_nordique
   lieu: Helsinki

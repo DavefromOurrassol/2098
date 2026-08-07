@@ -4,6 +4,7 @@ type: instance
 slug: bureau_zones_non_prioritaires_reference
 entite: bureau_zones_non_prioritaires
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: bureau_zones_non_prioritaires
   lieu: Genève-Nord, bâtiment modulaire à la périphérie du district administratif
@@ -33,18 +34,22 @@ zone_systemique:
     - société
 
 alliances:
-    - administrations_hybrides_des_cites_relais_peripheriques_reference
-    - observatoire_climatique_des_territoires_oct_reference
-    - conseil_de_geneve_pour_les_droits_biosociaux_reference
-    - collectifs_academiques_independants_reference
-
+- administrations_hybrides_des_cites_relais_peripheriques_reference
+- agences_de_securite_regionales_de_normalisation_des_zones_grises_reference
+- collectifs_academiques_independants_reference
+- conseil_de_geneve_pour_les_droits_biosociaux_reference
+- ligue_des_municipalites_peripheriques_sous_connectees_reference
+- observatoire_climatique_des_territoires_oct_reference
+- zones_grises_globales_reference
 oppositions:
-    - alliance_blocs_souverains_reference
-    - consortium_des_grandes_plateformes_logistiques_globales_reference
-    - consortiums_prives_d_extraction_de_ressources_critiques_reference
-    - fonds_souverains_de_la_ceinture_financiere_pacifique_reference
-    - blocs_signataires_du_pacte_energetique_multilateral_reference
-
+- alliance_blocs_souverains_reference
+- blocs_signataires_du_pacte_energetique_multilateral_reference
+- collectif_nuit_jaune_reference
+- consortium_des_grandes_plateformes_logistiques_globales_reference
+- consortiums_prives_d_extraction_de_ressources_critiques_reference
+- delta_du_gange_reference
+- fonds_souverains_de_la_ceinture_financiere_pacifique_reference
+- sao_paulo_ita_reference
 type_relation_dominante: dépendance
 
 annee_debut: 2031
@@ -86,12 +91,28 @@ Produit des rapports périodiques sur les zones périphériques non intégrées 
 - [[gouvernance_institutions]]
 - [[demographie_mobilite_humaine]]
 
-## Relations
-**Alliés** : [[administrations_hybrides_des_cites_relais_peripheriques_reference]], [[observatoire_climatique_des_territoires_oct_reference]], [[conseil_de_geneve_pour_les_droits_biosociaux_reference]], [[collectifs_academiques_independants_reference]]
-**Opposants** : [[alliance_blocs_souverains_reference]], [[consortium_des_grandes_plateformes_logistiques_globales_reference]], [[consortiums_prives_d_extraction_de_ressources_critiques_reference]], [[fonds_souverains_de_la_ceinture_financiere_pacifique_reference]], [[blocs_signataires_du_pacte_energetique_multilateral_reference]]
 
 ## Description journalistique
 Installé dans un bâtiment de verre dépoli à la périphérie du district administratif de Genève-Nord, le Bureau des Zones Non Prioritaires ressemble à ce qu'il est : un organisme maintenu sous perfusion budgétaire symbolique. Ses 340 agents permanents — dont 200 sont en télétravail dispersé dans des fuseaux horaires que les grandes capitales ont cessé de considérer comme stratégiques — produisent chaque trimestre des rapports denses, rigoureusement documentés, et systématiquement classés sans suite. En 2097, le BZNP a publié 14 alertes de niveau critique concernant des zones de rupture alimentaire en Afrique subsaharienne intérieure et en Asie centrale basse ; aucune n'a déclenché de mécanisme de réponse formelle. Ce que le Bureau représente, aux yeux des observateurs institutionnels, est peut-être plus précieux que ce qu'il accomplit : la preuve que le système international n'a pas abandonné ces territoires — il les a délégués.
 
 ## Tensions narratives
 La tension centrale du BZNP tient à l'impossibilité de sa réforme : augmenter ses moyens reviendrait à admettre que le système a volontairement laissé mourir des territoires depuis des décennies, ce qu'aucun bloc dominant n'est prêt à reconnaître. Ses propres agents sont déchirés entre la conviction que leurs rapports documentent une réalité essentielle et la lucidité que cette documentation n'a jamais produit d'effet. Une faction interne, liée aux réseaux de lanceurs d'alerte institutionnels, cherche à faire fuiter les archives complètes du Bureau — 67 ans de signalements sans réponse — comme acte politique terminal. La question narrative reste ouverte : le BZNP peut-il se transformer en instrument de mémoire accusatrice, ou mourra-t-il dans la même indifférence qu'il a toujours servie ?
+
+## Relations
+**Alliés :**
+- [[administrations_hybrides_des_cites_relais_peripheriques_reference]]
+- [[agences_de_securite_regionales_de_normalisation_des_zones_grises_reference]]
+- [[collectifs_academiques_independants_reference]]
+- [[conseil_de_geneve_pour_les_droits_biosociaux_reference]]
+- [[ligue_des_municipalites_peripheriques_sous_connectees_reference]]
+- [[observatoire_climatique_des_territoires_oct_reference]]
+- [[zones_grises_globales_reference]]
+**Opposants :**
+- [[alliance_blocs_souverains_reference]]
+- [[blocs_signataires_du_pacte_energetique_multilateral_reference]]
+- [[collectif_nuit_jaune_reference]]
+- [[consortium_des_grandes_plateformes_logistiques_globales_reference]]
+- [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[delta_du_gange_reference]]
+- [[fonds_souverains_de_la_ceinture_financiere_pacifique_reference]]
+- [[sao_paulo_ita_reference]]

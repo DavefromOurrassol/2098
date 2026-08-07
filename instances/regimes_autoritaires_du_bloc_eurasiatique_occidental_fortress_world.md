@@ -34,15 +34,24 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
-- conseil_moscou_est_fortress_world
+- bloc_eurasiatique_occidental_fortress_world
 - centre_controle_orbital_helios_fortress_world
+- conseil_moscou_est_fortress_world
+- consortium_des_medias_d_etat_souverains_hegemonia_press_xinhua_fortifiee_eurovox_integral_fortress_world
+- consortium_eurasiatique_des_ressources_fermees_fortress_world
+- consortium_helios_fortress_world
+- consortiums_energetiques_du_bloc_ourrassol_fortress_world
 - datacenters_conseil_eurasiatique_fortress_world
+- directive_kontinuum_fortress_world
+- nexus_biosyn_division_eurasienne_fortress_world
 - zone_usines_forteresses_eurasie_fortress_world
 oppositions:
 - bloc_atlantique_fortress_world
 - campements_seuils_fermes_fortress_world
-- marches_gris_tbilissi_fortress_world
 - corridors_gris_asie_centrale_fortress_world
+- factions_internes_pro_autarcie_totale_fortress_world
+- marches_gris_tbilissi_fortress_world
+- oligarchies_technologiques_souveraines_d_infrastructure_de_calcul_fortress_world
 - rust_belt_communes_libres_fortress_world
 type_relation_dominante: conflit
 annee_debut: 2026
@@ -108,17 +117,27 @@ La tension centrale du Bloc réside dans la contradiction entre son besoin de re
 - [[geopolitique_conflits]]
 - [[frontieres_du_systeme]]
 
+
 ## Relations
 **Alliés :**
-- [[conseil_moscou_est_fortress_world]]
+- [[bloc_eurasiatique_occidental_fortress_world]]
 - [[centre_controle_orbital_helios_fortress_world]]
+- [[conseil_moscou_est_fortress_world]]
+- [[consortium_des_medias_d_etat_souverains_hegemonia_press_xinhua_fortifiee_eurovox_integral_fortress_world]]
+- [[consortium_eurasiatique_des_ressources_fermees_fortress_world]]
+- [[consortium_helios_fortress_world]]
+- [[consortiums_energetiques_du_bloc_ourrassol_fortress_world]]
 - [[datacenters_conseil_eurasiatique_fortress_world]]
+- [[directive_kontinuum_fortress_world]]
+- [[nexus_biosyn_division_eurasienne_fortress_world]]
 - [[zone_usines_forteresses_eurasie_fortress_world]]
 **Opposants :**
 - [[bloc_atlantique_fortress_world]]
 - [[campements_seuils_fermes_fortress_world]]
-- [[marches_gris_tbilissi_fortress_world]]
 - [[corridors_gris_asie_centrale_fortress_world]]
+- [[factions_internes_pro_autarcie_totale_fortress_world]]
+- [[marches_gris_tbilissi_fortress_world]]
+- [[oligarchies_technologiques_souveraines_d_infrastructure_de_calcul_fortress_world]]
 - [[rust_belt_communes_libres_fortress_world]]
 
 ## Notes

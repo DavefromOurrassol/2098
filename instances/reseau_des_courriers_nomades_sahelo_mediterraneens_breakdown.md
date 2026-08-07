@@ -37,13 +37,29 @@ zone_systemique:
 - société
 alliances:
 - agadez_ligue_sahel_numerique_breakdown
-- sfax_relais_bouches_breakdown
-- occitanie_racines_meres_breakdown
+- archives_neutres_geneve_breakdown
+- collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
+- consortium_africain_de_biotechnologies_sociales_breakdown
+- corridors_eurasiens_convoyage_breakdown
+- diaspora_tech_sahel_breakdown
+- factions_secessionnistes_agrariennes_du_desert_breakdown
+- front_humanitaire_d_urgence_non_affilie_breakdown
+- hanse_baltique_recomposee_breakdown
+- lagos_interieur_mnemos_breakdown
+- ligue_des_cites_du_sahel_numerique_breakdown
 - massif_central_cicatrices_vertes_breakdown
+- milices_agro_defensives_locales_breakdown
+- milices_privees_documentees_terrain_breakdown
+- occitanie_racines_meres_breakdown
+- reseau_logistique_criminel_concurrent_breakdown
+- reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown
+- sfax_relais_bouches_breakdown
+- voix_du_dehors_breakdown
 oppositions:
 - carthage_nord_nexcore_breakdown
-- lagos_est_nexcore_breakdown
 - corridor_lithium_bouches_breakdown
+- lagos_est_nexcore_breakdown
+- reseau_des_anciens_financeurs_devenus_censeurs_breakdown
 type_relation_dominante: symbiose
 annee_debut: 2026
 annee_fin: null
@@ -103,16 +119,33 @@ Le réseau est convoité par des acteurs très dissemblables : NexCore cherche �
 - [[organisation_territoires]]
 - [[frontieres_du_systeme]]
 
+
 ## Relations
 **Alliés :**
 - [[agadez_ligue_sahel_numerique_breakdown]]
-- [[sfax_relais_bouches_breakdown]]
-- [[occitanie_racines_meres_breakdown]]
+- [[archives_neutres_geneve_breakdown]]
+- [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]]
+- [[consortium_africain_de_biotechnologies_sociales_breakdown]]
+- [[corridors_eurasiens_convoyage_breakdown]]
+- [[diaspora_tech_sahel_breakdown]]
+- [[factions_secessionnistes_agrariennes_du_desert_breakdown]]
+- [[front_humanitaire_d_urgence_non_affilie_breakdown]]
+- [[hanse_baltique_recomposee_breakdown]]
+- [[lagos_interieur_mnemos_breakdown]]
+- [[ligue_des_cites_du_sahel_numerique_breakdown]]
 - [[massif_central_cicatrices_vertes_breakdown]]
+- [[milices_agro_defensives_locales_breakdown]]
+- [[milices_privees_documentees_terrain_breakdown]]
+- [[occitanie_racines_meres_breakdown]]
+- [[reseau_logistique_criminel_concurrent_breakdown]]
+- [[reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown]]
+- [[sfax_relais_bouches_breakdown]]
+- [[voix_du_dehors_breakdown]]
 **Opposants :**
 - [[carthage_nord_nexcore_breakdown]]
-- [[lagos_est_nexcore_breakdown]]
 - [[corridor_lithium_bouches_breakdown]]
+- [[lagos_est_nexcore_breakdown]]
+- [[reseau_des_anciens_financeurs_devenus_censeurs_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

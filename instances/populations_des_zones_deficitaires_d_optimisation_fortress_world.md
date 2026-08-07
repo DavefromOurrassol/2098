@@ -35,8 +35,21 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- alliance_sanitaire_des_populations_exclues_fortress_world
+- coalition_vivant_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- mouvement_commun_midwest_fortress_world
+- rust_belt_communes_libres_fortress_world
+oppositions:
+- appareils_d_etat_des_blocs_fermes_fortress_world
+- bloc_atlantique_fortress_world
+- bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world
+- grille_aria_fortress_world
+- nexcore_atlantique_infrastructure_fortress_world
+- nexus_biosyn_fortress_world
+- rede_paulista_de_distribuic_o_algor_tmica_fortress_world
+- reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -105,6 +118,24 @@ La tension centrale est celle entre la résignation et la révolte : une fractio
 - [[organisation_territoires]]
 - [[demographie_mobilite_humaine]]
 - [[gouvernance_institutions]]
+
+
+## Relations
+**Alliés :**
+- [[alliance_sanitaire_des_populations_exclues_fortress_world]]
+- [[coalition_vivant_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[mouvement_commun_midwest_fortress_world]]
+- [[rust_belt_communes_libres_fortress_world]]
+**Opposants :**
+- [[appareils_d_etat_des_blocs_fermes_fortress_world]]
+- [[bloc_atlantique_fortress_world]]
+- [[bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world]]
+- [[grille_aria_fortress_world]]
+- [[nexcore_atlantique_infrastructure_fortress_world]]
+- [[nexus_biosyn_fortress_world]]
+- [[rede_paulista_de_distribuic_o_algor_tmica_fortress_world]]
+- [[reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

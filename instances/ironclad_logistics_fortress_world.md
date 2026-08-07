@@ -4,6 +4,7 @@ type: instance
 slug: ironclad_logistics_fortress_world
 entite: ironclad_logistics
 scenario: fortress_world
+statut: officialise_enrichi
 localisation:
   zone: null
   lieu: null
@@ -36,20 +37,20 @@ zone_systemique:
     - infrastructure
 
 alliances:
-    - alliance_blocs_souverains_fortress_world
-    - armada_logistique_nordique_fortress_world
-    - commandements_logistiques_peripheriques_du_bloc_eurasien_central_fortress_world
-    - consortium_eurasiatique_des_ressources_fermees_fortress_world
-    - nexcore_atlantique_infrastructure_fortress_world
-    - vaultcorp_security_fortress_world
-
+- alliance_blocs_souverains_fortress_world
+- armada_logistique_nordique_fortress_world
+- commandement_strategique_des_matieres_critiques_atlantique_fortress_world
+- commandements_logistiques_peripheriques_du_bloc_eurasien_central_fortress_world
+- consortium_eurasiatique_des_ressources_fermees_fortress_world
+- consortium_sino_finlandais_de_flotte_autonome_fortress_world
+- nexcore_atlantique_infrastructure_fortress_world
+- vaultcorp_security_fortress_world
 oppositions:
-    - coalitions_des_deplaces_et_apatrides_fortress_world
-    - factions_djihadistes_logistiques_d_asie_centrale_fortress_world
-    - milices_de_piraterie_logistique_arctique_fortress_world
-    - reseaux_de_contrebande_energetique_transfrontaliere_fortress_world
-    - factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world
-
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world
+- factions_djihadistes_logistiques_d_asie_centrale_fortress_world
+- milices_de_piraterie_logistique_arctique_fortress_world
+- reseaux_de_contrebande_energetique_transfrontaliere_fortress_world
 type_relation_dominante: alliance stratégique
 
 annee_debut: 2038
@@ -92,12 +93,26 @@ ISC gère les corridors logistiques critiques entre les blocs souverains, transp
 - [[organisation_territoires]]
 - [[systemes_productifs_travail]]
 
-## Relations
-**Alliés** : [[alliance_blocs_souverains_fortress_world]], [[armada_logistique_nordique_fortress_world]], [[commandements_logistiques_peripheriques_du_bloc_eurasien_central_fortress_world]], [[consortium_eurasiatique_des_ressources_fermees_fortress_world]], [[nexcore_atlantique_infrastructure_fortress_world]], [[vaultcorp_security_fortress_world]]
-**Opposants** : [[coalitions_des_deplaces_et_apatrides_fortress_world]], [[factions_djihadistes_logistiques_d_asie_centrale_fortress_world]], [[milices_de_piraterie_logistique_arctique_fortress_world]], [[reseaux_de_contrebande_energetique_transfrontaliere_fortress_world]], [[factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world]]
 
 ## Description journalistique
 Dans un monde où les blocs souverains ont érigé des frontières infranchissables, Ironclad Sovereign Corridors (ISC) est le dernier fil reliant ces forteresses entre elles. Ses convois blindés, escortés par des milices en exosquelettes et des drones de surveillance, traversent les zones grises d'Asie centrale ou les couloirs arctiques sous haute tension, transportant des conteneurs scellés dont le contenu reste un mystère. Les États forteresses ferment les yeux sur ses méthodes, tant qu'elle garantit l'approvisionnement en terres rares ou en biocarburants. Mais dans les zones tampons, les populations exclues voient en ISC un symbole de l'oppression des blocs, attaquant ses convois ou piratant ses systèmes de traçabilité. Récemment, des rumeurs persistantes évoquent des négociations secrètes entre ISC et le Pacte des Forteresses Souveraines pour une intégration plus formelle...
 
 ## Tensions narratives
 ISC est au cœur de plusieurs tensions majeures : son statut de quasi-État remet en cause la souveraineté des blocs fermés, tandis que ses protocoles opaques alimentent les théories sur des trafics d'armes ou de technologies interdites. Les attaques répétées de milices pirates ou de factions djihadistes en Asie centrale menacent la stabilité des corridors, poussant ISC à militariser davantage ses opérations. Par ailleurs, des dissensions internes émergent entre les factions pro-autarcie des blocs et les partisans d'une intégration plus poussée d'ISC dans les structures de gouvernance. Enfin, la question de la transparence de ses activités pourrait devenir un enjeu central, avec des appels croissants à un audit indépendant de ses flux logistiques.
+
+## Relations
+**Alliés :**
+- [[alliance_blocs_souverains_fortress_world]]
+- [[armada_logistique_nordique_fortress_world]]
+- [[commandement_strategique_des_matieres_critiques_atlantique_fortress_world]]
+- [[commandements_logistiques_peripheriques_du_bloc_eurasien_central_fortress_world]]
+- [[consortium_eurasiatique_des_ressources_fermees_fortress_world]]
+- [[consortium_sino_finlandais_de_flotte_autonome_fortress_world]]
+- [[nexcore_atlantique_infrastructure_fortress_world]]
+- [[vaultcorp_security_fortress_world]]
+**Opposants :**
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world]]
+- [[factions_djihadistes_logistiques_d_asie_centrale_fortress_world]]
+- [[milices_de_piraterie_logistique_arctique_fortress_world]]
+- [[reseaux_de_contrebande_energetique_transfrontaliere_fortress_world]]

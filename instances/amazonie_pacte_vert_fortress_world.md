@@ -4,6 +4,7 @@ type: instance
 slug: amazonie_pacte_vert_fortress_world
 entite: amazonie_pacte_vert
 scenario: fortress_world
+statut: officialise_enrichi
 localisation:
   zone: amazonie_pacte_vert
   lieu: Manaus-Forteresse, Amazonie
@@ -37,25 +38,25 @@ zone_systemique:
     - information
 
 alliances:
-    - alliance_blocs_souverains_fortress_world
-    - appareils_d_etat_des_blocs_fermes_fortress_world
-    - complexes_militaro_industriels_de_gestion_des_ressources_fortress_world
-    - etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world
-    - milices_privees_de_protection_des_sites_germinaux_fortress_world
-    - bureau_des_territoires_residuels_fortress_world
-    - systemes_de_scoring_de_productivite_corporative_fortress_world
-
+- alliance_blocs_souverains_fortress_world
+- appareils_d_etat_des_blocs_fermes_fortress_world
+- bureau_des_territoires_residuels_fortress_world
+- complexes_militaro_industriels_de_gestion_des_ressources_fortress_world
+- etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world
+- milices_privees_de_protection_des_sites_germinaux_fortress_world
+- systemes_de_scoring_de_productivite_corporative_fortress_world
 oppositions:
-    - consortium_amazonia_viva_fortress_world
-    - coalition_vivant_fortress_world
-    - communautes_deplacees_hors_quota_migratoire_fortress_world
-    - coalitions_des_deplaces_et_apatrides_fortress_world
-    - collectifs_de_reappropriation_energetique_peripherique_fortress_world
-    - cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
-    - alliance_sanitaire_des_populations_exclues_fortress_world
-    - le_temoin_fortress_world
-    - voix_du_dehors_fortress_world
-
+- alliance_sanitaire_des_populations_exclues_fortress_world
+- cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
+- coalition_vivant_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- collectifs_de_reappropriation_energetique_peripherique_fortress_world
+- communautes_deplacees_hors_quota_migratoire_fortress_world
+- consortium_amazonia_viva_fortress_world
+- consortium_des_blocs_solaires_orbitaux_concurrents_fortress_world
+- consortiums_de_defense_orbitale_prives_fortress_world
+- le_temoin_fortress_world
+- voix_du_dehors_fortress_world
 type_relation_dominante: alliance stratégique
 
 annee_debut: 2031
@@ -99,12 +100,31 @@ Organisation de lobbying et de certification environnementale adossée aux élit
 - [[gouvernance_institutions]]
 - [[demographie_mobilite_humaine]]
 
-## Relations
-**Alliés** : [[alliance_blocs_souverains_fortress_world]], [[appareils_d_etat_des_blocs_fermes_fortress_world]], [[complexes_militaro_industriels_de_gestion_des_ressources_fortress_world]], [[etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world]], [[milices_privees_de_protection_des_sites_germinaux_fortress_world]], [[bureau_des_territoires_residuels_fortress_world]], [[systemes_de_scoring_de_productivite_corporative_fortress_world]]
-**Opposants** : [[consortium_amazonia_viva_fortress_world]], [[coalition_vivant_fortress_world]], [[communautes_deplacees_hors_quota_migratoire_fortress_world]], [[coalitions_des_deplaces_et_apatrides_fortress_world]], [[collectifs_de_reappropriation_energetique_peripherique_fortress_world]], [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]], [[alliance_sanitaire_des_populations_exclues_fortress_world]], [[le_temoin_fortress_world]], [[voix_du_dehors_fortress_world]]
 
 ## Description journalistique
 Installé dans ses bureaux vitrés de Manaus-Forteresse, le Pacte Vert Amazônia publie chaque trimestre ses 'Rapports de Conformité Écosystémique' — documents aux graphiques soignés, traduits en cinq langues de blocs, distribués dans les salles de conférence climatique des grandes forteresses continentales. Derrière la rhétorique de la biodiversité sauvegardée se cache un mécanisme d'exclusion d'une redoutable efficacité : la certification 'Zone de Conservation Souveraine' délivrée par le Pacte vaut expulsion administrative pour les quelque 340 000 riverains encore présents dans les couloirs forestiers disputés. Les populations Yanomami résiduelles, les caboclos des várzeas, les descendants des comunidades quilombolas — tous figurent dans les rapports internes sous la rubrique 'facteurs d'instabilité écologique incompatibles avec les protocoles de préservation de niveau 4'. Le Pacte est aujourd'hui ce que le mouvement écologiste du début du siècle redoutait sans vouloir le nommer : une police verte au service des propriétaires du monde.
 
 ## Tensions narratives
 Le consortium_amazonia_viva tente de produire des contre-certifications populaires qui entrent en collision directe avec les labels du Pacte, créant une guerre documentaire pour la légitimité territoriale. Des lanceurs d'alerte internes, notamment récupérés par le réseau le_temoin_fortress_world, ont commencé à faire fuiter les cartes internes révélant que les 'zones de conservation' coïncident systématiquement avec des gisements de terres rares non exploitées — ce qui suggère que la sanctuarisation prépare une future extraction contrôlée plutôt qu'une réelle préservation. La tension monte également entre le Pacte et les milices_privees_de_protection_des_sites_germinaux qui opèrent parfois dans les mêmes zones sans reconnaître la hiérarchie du Pacte, menaçant la cohérence narrative de la 'gestion écologique pacifique'. Enfin, les cellules_universitaires_dissidentes_des_zones_tampons accumulent des données de terrain contredisant point par point les rapports officiels de biodiversité, construisant un dossier de contestation scientifique qui pourrait ébranler la crédibilité du Pacte auprès des blocs européens encore attachés à une écologie formellement crédible.
+
+## Relations
+**Alliés :**
+- [[alliance_blocs_souverains_fortress_world]]
+- [[appareils_d_etat_des_blocs_fermes_fortress_world]]
+- [[bureau_des_territoires_residuels_fortress_world]]
+- [[complexes_militaro_industriels_de_gestion_des_ressources_fortress_world]]
+- [[etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world]]
+- [[milices_privees_de_protection_des_sites_germinaux_fortress_world]]
+- [[systemes_de_scoring_de_productivite_corporative_fortress_world]]
+**Opposants :**
+- [[alliance_sanitaire_des_populations_exclues_fortress_world]]
+- [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]]
+- [[coalition_vivant_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[collectifs_de_reappropriation_energetique_peripherique_fortress_world]]
+- [[communautes_deplacees_hors_quota_migratoire_fortress_world]]
+- [[consortium_amazonia_viva_fortress_world]]
+- [[consortium_des_blocs_solaires_orbitaux_concurrents_fortress_world]]
+- [[consortiums_de_defense_orbitale_prives_fortress_world]]
+- [[le_temoin_fortress_world]]
+- [[voix_du_dehors_fortress_world]]

@@ -31,10 +31,22 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- bureau_des_territoires_residuels_reference
 - bureau_zones_non_prioritaires_reference
+- directive_kontinuum_reference
+- europe_occidentale_reconstructee_reference
+- factions_d_extraction_miniere_independantes_reference
 - institutions_multilaterales_survivantes_reference
+- operateurs_de_zones_economiques_speciales_periurbaines_reference
 oppositions:
+- administrations_hybrides_des_cites_relais_peripheriques_reference
+- guadalajara_nexus_reference
+- milices_concurrentes_des_droits_de_passage_reference
+- operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference
+- pacifique_sud_archipels_flottants_reference
 - pacte_des_souverains_reference
+- vasil_orentchev_reference
+- zones_grises_globales_reference
 type_relation_dominante: dépendance
 annee_debut: 2026
 annee_fin: null
@@ -98,12 +110,25 @@ Leur existence même repose sur une contradiction fondamentale : mandatées pour
 - [[organisation_territoires]]
 - [[frontieres_du_systeme]]
 
+
 ## Relations
 **Alliés :**
+- [[bureau_des_territoires_residuels_reference]]
 - [[bureau_zones_non_prioritaires_reference]]
+- [[directive_kontinuum_reference]]
+- [[europe_occidentale_reconstructee_reference]]
+- [[factions_d_extraction_miniere_independantes_reference]]
 - [[institutions_multilaterales_survivantes_reference]]
+- [[operateurs_de_zones_economiques_speciales_periurbaines_reference]]
 **Opposants :**
+- [[administrations_hybrides_des_cites_relais_peripheriques_reference]]
+- [[guadalajara_nexus_reference]]
+- [[milices_concurrentes_des_droits_de_passage_reference]]
+- [[operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference]]
+- [[pacifique_sud_archipels_flottants_reference]]
 - [[pacte_des_souverains_reference]]
+- [[vasil_orentchev_reference]]
+- [[zones_grises_globales_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

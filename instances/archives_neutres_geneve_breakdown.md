@@ -4,6 +4,7 @@ type: instance
 slug: archives_neutres_geneve_breakdown
 entite: archives_neutres_geneve
 scenario: breakdown
+statut: officialise_enrichi
 localisation:
   zone: archives_neutres_geneve
   lieu: Archives Neutres de Genève (sous-sols du Palais des Nations)
@@ -33,21 +34,23 @@ zone_systemique:
     - société
 
 alliances:
-    - collectifs_de_gardiens_archivistes_itinerants_breakdown
-    - collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
-    - reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown
-    - tribunal_algorithmique_de_bruxelles_breakdown
-    - ligue_mediterraneenne_des_villes_etats_portuaires_breakdown
-    - front_humanitaire_d_urgence_non_affilie_breakdown
-
+- collectifs_de_gardiens_archivistes_itinerants_breakdown
+- collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
+- enclaves_technologiques_survivantes_breakdown
+- front_humanitaire_d_urgence_non_affilie_breakdown
+- geneve_bunker_institutions_breakdown
+- ligue_mediterraneenne_des_villes_etats_portuaires_breakdown
+- reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown
+- tour_bcuc_geneve_breakdown
+- tribunal_algorithmique_de_bruxelles_breakdown
 oppositions:
-    - factions_propagandistes_des_archives_breakdown
-    - reseau_des_anciens_financeurs_devenus_censeurs_breakdown
-    - seigneuries_logistiques_armees_breakdown
-    - milices_de_controle_territorial_breakdown
-    - front_des_blocs_regionaux_du_recit_des_conflits_ressources_breakdown
-    - enclaves_corporatives_fortifiees_breakdown
-
+- enclaves_corporatives_fortifiees_breakdown
+- factions_propagandistes_des_archives_breakdown
+- front_des_blocs_regionaux_du_recit_des_conflits_ressources_breakdown
+- gouvernements_de_forteresse_anti_nairobi_breakdown
+- milices_de_controle_territorial_breakdown
+- reseau_des_anciens_financeurs_devenus_censeurs_breakdown
+- seigneuries_logistiques_armees_breakdown
 type_relation_dominante: neutralité
 
 annee_debut: 2026
@@ -89,12 +92,29 @@ Authentifier et délivrer des copies certifiées de documents juridiques et inst
 - [[gouvernance_institutions]]
 - [[technologie_information]]
 
-## Relations
-**Alliés** : [[collectifs_de_gardiens_archivistes_itinerants_breakdown]], [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]], [[reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown]], [[tribunal_algorithmique_de_bruxelles_breakdown]], [[ligue_mediterraneenne_des_villes_etats_portuaires_breakdown]], [[front_humanitaire_d_urgence_non_affilie_breakdown]]
-**Opposants** : [[factions_propagandistes_des_archives_breakdown]], [[reseau_des_anciens_financeurs_devenus_censeurs_breakdown]], [[seigneuries_logistiques_armees_breakdown]], [[milices_de_controle_territorial_breakdown]], [[front_des_blocs_regionaux_du_recit_des_conflits_ressources_breakdown]], [[enclaves_corporatives_fortifiees_breakdown]]
 
 ## Description journalistique
 Dans les sous-sols humides de ce qui fut le Palais des Nations, entre des rayonnages métalliques rouillés et des serveurs alimentés par des panneaux solaires de récupération, une vingtaine d'archivistes en manteaux usés tamponnent encore des documents au nom de la neutralité helvétique. Les Archives Neutres de Genève survivent — à peine — en vendant leur mémoire fragment par fragment : un traité d'eau contre un bidon de gasoil, un acte de propriété cadastrale contre une semaine de protection armée assurée par telle ou telle milice. Leur directrice, une juriste genevoise d'une soixantaine d'années nommée Elsbeth Varner, répète que 'la mémoire ne se vend pas' mais chaque semaine, elle signe un nouvel accord de fourniture avec un nouveau seigneur local. Ceux qui viennent les consulter — délégués paysans, émissaires de cités-états, plénipotentiaires de factions en guerre — savent qu'ils entrent dans un espace où les règles de l'ancien monde ont encore une valeur, aussi étrange que cela paraisse en 2098.
 
 ## Tensions narratives
 La tension centrale est existentielle : jusqu'où les Archives peuvent-elles négocier leur accès sans devenir l'instrument d'une faction plutôt que le bien commun de toutes ? Plusieurs blocs régionaux tentent activement de corrompre ou d'infiltrer le personnel pour obtenir un accès exclusif à des documents stratégiques — actes de concession minière préeffondrement, traités de délimitation de corridors d'eau. En parallèle, les collectifs hackers-archivistes itinérants pressent les Archives de numériser et diffuser librement leurs fonds, ce que Varner refuse au nom de la survie physique de l'institution. Une troisième tension sourd en interne : une faction minoritaire du personnel, épuisée et idéaliste, envisage une 'grande ouverture' sacrificielle — tout diffuser, tout publier, quitte à disparaître, plutôt que de continuer à attester pour ceux qui paient.
+
+## Relations
+**Alliés :**
+- [[collectifs_de_gardiens_archivistes_itinerants_breakdown]]
+- [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]]
+- [[enclaves_technologiques_survivantes_breakdown]]
+- [[front_humanitaire_d_urgence_non_affilie_breakdown]]
+- [[geneve_bunker_institutions_breakdown]]
+- [[ligue_mediterraneenne_des_villes_etats_portuaires_breakdown]]
+- [[reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown]]
+- [[tour_bcuc_geneve_breakdown]]
+- [[tribunal_algorithmique_de_bruxelles_breakdown]]
+**Opposants :**
+- [[enclaves_corporatives_fortifiees_breakdown]]
+- [[factions_propagandistes_des_archives_breakdown]]
+- [[front_des_blocs_regionaux_du_recit_des_conflits_ressources_breakdown]]
+- [[gouvernements_de_forteresse_anti_nairobi_breakdown]]
+- [[milices_de_controle_territorial_breakdown]]
+- [[reseau_des_anciens_financeurs_devenus_censeurs_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]

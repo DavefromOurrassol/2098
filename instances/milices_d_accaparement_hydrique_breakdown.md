@@ -34,8 +34,31 @@ zone_geographique:
 - régionale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- factions_para_etatiques_hydriques_breakdown
+- milices_de_controle_territorial_breakdown
+- milices_extractivistes_du_bassin_du_congo_breakdown
+- seigneuries_logistiques_armees_breakdown
+- seigneurs_de_guerre_agro_territoriaux_breakdown
+oppositions:
+- collectif_des_climatologues_sans_etat_breakdown
+- collectifs_de_reparation_energetique_breakdown
+- cooperative_terrafond_breakdown
+- delta_mekong_racines_breakdown
+- diaspora_tech_sahel_breakdown
+- flux_migratoires_non_integrables_breakdown
+- frente_sert_o_livre_breakdown
+- front_de_resistance_aux_peages_sur_les_ressources_breakdown
+- grandes_lacs_compact_eau_breakdown
+- guilde_des_techniciens_nomades_breakdown
+- les_veilleurs_du_fleuve_breakdown
+- ligue_des_cites_littorales_en_sursis_breakdown
+- midwest_desertifie_breakdown
+- milices_agro_defensives_locales_breakdown
+- mouvement_racines_vivantes_breakdown
+- nairobi_crrc_breakdown
+- occitanie_racines_meres_breakdown
+- vallee_allier_terrafond_breakdown
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -91,6 +114,34 @@ Ces milices sont déchirées entre leur logique prédatrice à court terme et la
 - [[energie_ressources_critiques]]
 - [[organisation_territoires]]
 - [[geopolitique_conflits]]
+
+
+## Relations
+**Alliés :**
+- [[factions_para_etatiques_hydriques_breakdown]]
+- [[milices_de_controle_territorial_breakdown]]
+- [[milices_extractivistes_du_bassin_du_congo_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]
+- [[seigneurs_de_guerre_agro_territoriaux_breakdown]]
+**Opposants :**
+- [[collectif_des_climatologues_sans_etat_breakdown]]
+- [[collectifs_de_reparation_energetique_breakdown]]
+- [[cooperative_terrafond_breakdown]]
+- [[delta_mekong_racines_breakdown]]
+- [[diaspora_tech_sahel_breakdown]]
+- [[flux_migratoires_non_integrables_breakdown]]
+- [[frente_sert_o_livre_breakdown]]
+- [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
+- [[grandes_lacs_compact_eau_breakdown]]
+- [[guilde_des_techniciens_nomades_breakdown]]
+- [[les_veilleurs_du_fleuve_breakdown]]
+- [[ligue_des_cites_littorales_en_sursis_breakdown]]
+- [[midwest_desertifie_breakdown]]
+- [[milices_agro_defensives_locales_breakdown]]
+- [[mouvement_racines_vivantes_breakdown]]
+- [[nairobi_crrc_breakdown]]
+- [[occitanie_racines_meres_breakdown]]
+- [[vallee_allier_terrafond_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

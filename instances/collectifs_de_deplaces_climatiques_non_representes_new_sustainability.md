@@ -35,8 +35,30 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability
+- collectifs_de_desobeissance_algorithmique_new_sustainability
+- collectifs_de_narration_sauvage_hors_protocole_new_sustainability
+- communautes_locales_exclues_des_corridors_new_sustainability
+- factions_internes_contestataires_du_bureau_de_moderation_new_sustainability
+- les_veilleurs_du_fleuve_new_sustainability
+- observatoire_climatique_narratif_de_nairobi_new_sustainability
+- pacifique_sud_resilience_network_new_sustainability
+- parlement_deliberatif_mondial_new_sustainability
+- reseaux_de_medecine_regenerative_universelle_new_sustainability
+- reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability
+oppositions:
+- agence_stabilisation_climatique_new_sustainability
+- bloc_des_architectes_d_efficience_algorithmique_new_sustainability
+- centre_institutionnel_geneve_new_sustainability
+- conseil_regulation_ressources_new_sustainability
+- factions_souverainistes_des_blocs_peripheriques_new_sustainability
+- factions_technocratiques_de_la_delegation_ia_totale_new_sustainability
+- fonds_mondial_de_transition_ecologique_du_travail_new_sustainability
+- great_lakes_autonomous_compact_new_sustainability
+- lobbies_des_plateformes_de_consensus_automatise_new_sustainability
+- programme_onusien_de_mobilite_climatique_new_sustainability
+- reseau_global_de_cliniques_regeneratives_new_sustainability
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -97,6 +119,33 @@ La tension fondamentale de ces collectifs réside dans leur double invisibilité
 - [[demographie_mobilite_humaine]]
 - [[gouvernance_institutions]]
 - [[organisation_territoires]]
+
+
+## Relations
+**Alliés :**
+- [[collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability]]
+- [[collectifs_de_desobeissance_algorithmique_new_sustainability]]
+- [[collectifs_de_narration_sauvage_hors_protocole_new_sustainability]]
+- [[communautes_locales_exclues_des_corridors_new_sustainability]]
+- [[factions_internes_contestataires_du_bureau_de_moderation_new_sustainability]]
+- [[les_veilleurs_du_fleuve_new_sustainability]]
+- [[observatoire_climatique_narratif_de_nairobi_new_sustainability]]
+- [[pacifique_sud_resilience_network_new_sustainability]]
+- [[parlement_deliberatif_mondial_new_sustainability]]
+- [[reseaux_de_medecine_regenerative_universelle_new_sustainability]]
+- [[reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability]]
+**Opposants :**
+- [[agence_stabilisation_climatique_new_sustainability]]
+- [[bloc_des_architectes_d_efficience_algorithmique_new_sustainability]]
+- [[centre_institutionnel_geneve_new_sustainability]]
+- [[conseil_regulation_ressources_new_sustainability]]
+- [[factions_souverainistes_des_blocs_peripheriques_new_sustainability]]
+- [[factions_technocratiques_de_la_delegation_ia_totale_new_sustainability]]
+- [[fonds_mondial_de_transition_ecologique_du_travail_new_sustainability]]
+- [[great_lakes_autonomous_compact_new_sustainability]]
+- [[lobbies_des_plateformes_de_consensus_automatise_new_sustainability]]
+- [[programme_onusien_de_mobilite_climatique_new_sustainability]]
+- [[reseau_global_de_cliniques_regeneratives_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

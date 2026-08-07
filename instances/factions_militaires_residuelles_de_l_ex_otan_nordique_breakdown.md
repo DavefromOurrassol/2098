@@ -34,8 +34,30 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- armada_logistique_nordique_breakdown
+- coalition_pacifique_nord_breakdown
+- enclaves_industrielles_de_bergen_troms_breakdown
+- hanse_baltique_recomposee_breakdown
+- milices_contractuelles_des_anciens_etats_membres_breakdown
+- seigneuries_logistiques_armees_breakdown
+oppositions:
+- arctic_passage_authority_breakdown
+- arctique_nordark_breakdown
+- autorite_passage_arctique_breakdown
+- communautes_religieuses_des_relais_physiques_breakdown
+- district_mourmansk_residuel_breakdown
+- enclaves_finlandaises_breakdown
+- factions_paramilitaires_locales_neutralisees_breakdown
+- federation_russe_residuelle_district_de_mourmansk_breakdown
+- front_de_resistance_aux_peages_sur_les_ressources_breakdown
+- hanse_baltique_breakdown
+- kalaallit_nunaat_sovereign_fund_breakdown
+- milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown
+- noeud_nordark_tromso_breakdown
+- reseau_de_recuperation_industrielle_illicite_breakdown
+- reseau_logistique_criminel_concurrent_breakdown
+- saboteurs_des_corridors_de_transit_breakdown
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -92,6 +114,34 @@ Leur cohérence interne est constamment menacée par les rivalités entre factio
 - [[geopolitique_conflits]]
 - [[organisation_territoires]]
 - [[gouvernance_institutions]]
+
+
+
+## Relations
+**Alliés :**
+- [[armada_logistique_nordique_breakdown]]
+- [[coalition_pacifique_nord_breakdown]]
+- [[enclaves_industrielles_de_bergen_troms_breakdown]]
+- [[hanse_baltique_recomposee_breakdown]]
+- [[milices_contractuelles_des_anciens_etats_membres_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]
+**Opposants :**
+- [[arctic_passage_authority_breakdown]]
+- [[arctique_nordark_breakdown]]
+- [[autorite_passage_arctique_breakdown]]
+- [[communautes_religieuses_des_relais_physiques_breakdown]]
+- [[district_mourmansk_residuel_breakdown]]
+- [[enclaves_finlandaises_breakdown]]
+- [[factions_paramilitaires_locales_neutralisees_breakdown]]
+- [[federation_russe_residuelle_district_de_mourmansk_breakdown]]
+- [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
+- [[hanse_baltique_breakdown]]
+- [[kalaallit_nunaat_sovereign_fund_breakdown]]
+- [[milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown]]
+- [[noeud_nordark_tromso_breakdown]]
+- [[reseau_de_recuperation_industrielle_illicite_breakdown]]
+- [[reseau_logistique_criminel_concurrent_breakdown]]
+- [[saboteurs_des_corridors_de_transit_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

@@ -37,8 +37,20 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- cargo_mombasa_crrc_breakdown
+- cartels_logistiques_regionaux_breakdown
+- factions_paramilitaires_locales_neutralisees_breakdown
+- milices_de_controle_territorial_breakdown
+- reseau_logistique_criminel_concurrent_breakdown
+- seigneurs_de_guerre_agro_territoriaux_breakdown
+oppositions:
+- collectifs_de_reparation_energetique_breakdown
+- communes_rust_belt_breakdown
+- factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
+- federation_communs_territoriaux_breakdown
+- front_techno_reconstructionniste_breakdown
+- trame_bioclimatique_breakdown
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -98,6 +110,23 @@ Le réseau est à la fois prédateur et pourvoyeur : en pillant les ruines indus
 - [[energie_ressources_critiques]]
 - [[gouvernance_institutions]]
 - [[systemes_productifs_travail]]
+
+
+## Relations
+**Alliés :**
+- [[cargo_mombasa_crrc_breakdown]]
+- [[cartels_logistiques_regionaux_breakdown]]
+- [[factions_paramilitaires_locales_neutralisees_breakdown]]
+- [[milices_de_controle_territorial_breakdown]]
+- [[reseau_logistique_criminel_concurrent_breakdown]]
+- [[seigneurs_de_guerre_agro_territoriaux_breakdown]]
+**Opposants :**
+- [[collectifs_de_reparation_energetique_breakdown]]
+- [[communes_rust_belt_breakdown]]
+- [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]]
+- [[federation_communs_territoriaux_breakdown]]
+- [[front_techno_reconstructionniste_breakdown]]
+- [[trame_bioclimatique_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

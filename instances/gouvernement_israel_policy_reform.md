@@ -34,8 +34,18 @@ zone_geographique:
 - régionale
 zone_systemique:
 - gouvernance
-alliances: []
-oppositions: []
+alliances:
+- conseil_regulation_ressources_policy_reform
+- agence_internationale_de_l_energie_reformatee_aier_policy_reform
+- bureau_gouvernance_algorithmique_policy_reform
+- reseau_des_regulateurs_numeriques_souverains_rrns_policy_reform
+- fonds_mondial_de_resilience_infrastructurelle_policy_reform
+oppositions:
+- republique_islamique_iran_policy_reform
+- front_souverainiste_des_blocs_non_signataires_policy_reform
+- coalition_des_souverainistes_numeriques_policy_reform
+- mouvement_pour_la_souverainete_territoriale_absolue_policy_reform
+- factions_technocratiques_de_la_marchandisation_hydrique_policy_reform
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -99,6 +109,20 @@ La tension centrale du Gouvernement d'Israël dans ce scénario réside dans la 
 - [[geopolitique_conflits]]
 - [[gouvernance_institutions]]
 - [[energie_ressources_critiques]]
+
+## Relations
+**Alliés :**
+- [[conseil_regulation_ressources_policy_reform]]
+- [[agence_internationale_de_l_energie_reformatee_aier_policy_reform]]
+- [[bureau_gouvernance_algorithmique_policy_reform]]
+- [[reseau_des_regulateurs_numeriques_souverains_rrns_policy_reform]]
+- [[fonds_mondial_de_resilience_infrastructurelle_policy_reform]]
+**Opposants :**
+- [[republique_islamique_iran_policy_reform]]
+- [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+- [[coalition_des_souverainistes_numeriques_policy_reform]]
+- [[mouvement_pour_la_souverainete_territoriale_absolue_policy_reform]]
+- [[factions_technocratiques_de_la_marchandisation_hydrique_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

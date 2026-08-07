@@ -4,6 +4,7 @@ type: instance
 slug: enclaves_finlandaises_breakdown
 entite: enclaves_finlandaises
 scenario: breakdown
+statut: officialise_enrichi
 localisation:
   zone: enclaves_finlandaises
   lieu: Enclaves finlandaises (Tampere, Turku, Rovaniemi — territoire finlandais fragmenté)
@@ -35,17 +36,16 @@ zone_systemique:
     - infrastructure
 
 alliances:
-    - hanse_baltique_breakdown
-    - enclaves_industrielles_de_bergen_troms_breakdown
-    - communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
-    - collectifs_de_reparation_energetique_breakdown
-
+- collectifs_de_reparation_energetique_breakdown
+- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- enclaves_industrielles_de_bergen_troms_breakdown
+- enclaves_technologiques_survivantes_breakdown
+- hanse_baltique_breakdown
 oppositions:
-    - arctique_nordark_breakdown
-    - federation_russe_residuelle_district_de_mourmansk_breakdown
-    - seigneuries_logistiques_armees_breakdown
-    - factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
-
+- arctique_nordark_breakdown
+- factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
+- federation_russe_residuelle_district_de_mourmansk_breakdown
+- seigneuries_logistiques_armees_breakdown
 type_relation_dominante: rivalité
 
 annee_debut: 2031
@@ -89,12 +89,22 @@ Chaque enclave assure localement la distribution alimentaire via ses coopérativ
 - [[gouvernance_institutions]]
 - [[geopolitique_conflits]]
 
-## Relations
-**Alliés** : [[hanse_baltique_breakdown]], [[enclaves_industrielles_de_bergen_troms_breakdown]], [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]], [[collectifs_de_reparation_energetique_breakdown]]
-**Opposants** : [[arctique_nordark_breakdown]], [[federation_russe_residuelle_district_de_mourmansk_breakdown]], [[seigneuries_logistiques_armees_breakdown]], [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]]
 
 ## Description journalistique
 À Tampere, le conseil de l'enclave se réunit dans une ancienne salle polyvalente municipale, éclairée à l'éolien local. Il n'y a plus de drapeau finlandais aux murs — seulement des cartes de ressources et des listes de quotas alimentaires. Les Enclaves du Nord existent depuis que Helsinki a cessé d'exister comme pouvoir central, vers 2031, emportée par l'enchaînement des crises énergétiques et des migrations massives venues du sud de la Baltique. Ce qui subsiste, c'est une vingtaine de poches autonomes entre Turku et Rovaniemi, chacune avec ses propres règles, ses propres alliances, son propre degré de survie. Elles commercent entre elles quand elles le peuvent, se méfient les unes des autres quand elles ne le peuvent pas. Nordark les presse depuis le nord pour l'accès aux forêts. La Hanse Baltique négocie du grain contre des droits de passage maritime. Personne, ici, ne parle de « reconstruction nationale ». On parle de l'hiver prochain.
 
 ## Tensions narratives
 La tension centrale des Enclaves est structurelle : leur force — la décentralisation radicale — est aussi leur faiblesse face aux pressions extérieures coordonnées. Quand Nordark ou le District de Mourmansk négocient, ils parlent d'une seule voix ; les enclaves répondent en ordre dispersé. Certaines enclaves envisagent une fédération minimale de défense commune, mais d'autres y voient le début de la reconstitution d'un État centralisateur. Par ailleurs, les flux migratoires en provenance des zones effondrées de la Baltique sud menacent d'excéder les capacités d'absorption locales, fragilisant les équilibres coopératifs internes. Enfin, les ressources géothermiques du nord des enclaves suscitent des convoitises croissantes qui pourraient forcer une enclave isolée à un accord de vassalisation déguisé.
+
+## Relations
+**Alliés :**
+- [[collectifs_de_reparation_energetique_breakdown]]
+- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[enclaves_industrielles_de_bergen_troms_breakdown]]
+- [[enclaves_technologiques_survivantes_breakdown]]
+- [[hanse_baltique_breakdown]]
+**Opposants :**
+- [[arctique_nordark_breakdown]]
+- [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]]
+- [[federation_russe_residuelle_district_de_mourmansk_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]

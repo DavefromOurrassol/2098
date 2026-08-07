@@ -4,6 +4,7 @@ type: instance
 slug: optiflow_logistics_reference
 entite: optiflow_logistics
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: null
   lieu: null
@@ -39,22 +40,21 @@ zone_systemique:
     - gouvernance
 
 alliances:
-    - consortium_des_grandes_plateformes_logistiques_globales_reference
-    - consortium_energetique_des_mers_du_nord_reference
-    - armada_logistique_nordique_reference
-    - agence_internationale_des_energies_renouvelables_irena_2_reference
-    - blocs_signataires_du_pacte_energetique_multilateral_reference
-    - confederation_des_megapoles_autonomes_reference
-    - nexcore_reference
-
+- agence_internationale_des_energies_renouvelables_irena_2_reference
+- armada_logistique_nordique_reference
+- blocs_signataires_du_pacte_energetique_multilateral_reference
+- confederation_des_megapoles_autonomes_reference
+- consortium_des_grandes_plateformes_ia_integrees_reference
+- consortium_des_grandes_plateformes_logistiques_globales_reference
+- consortium_energetique_des_mers_du_nord_reference
+- nexcore_reference
 oppositions:
-    - bureau_des_territoires_residuels_reference
-    - ligue_des_municipalites_peripheriques_sous_connectees_reference
-    - collectifs_de_biopiraterie_inversee_reference
-    - mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
-    - operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference
-    - milices_concurrentes_des_droits_de_passage_reference
-
+- bureau_des_territoires_residuels_reference
+- collectifs_de_biopiraterie_inversee_reference
+- ligue_des_municipalites_peripheriques_sous_connectees_reference
+- milices_concurrentes_des_droits_de_passage_reference
+- mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
+- operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference
 type_relation_dominante: dépendance
 
 annee_debut: 2026
@@ -98,12 +98,27 @@ OGLN contrôle 68% des flux de ressources critiques (énergie, nourriture, médi
 - [[systeme_economique_redistribution]]
 - [[organisation_territoires]]
 
-## Relations
-**Alliés** : [[consortium_des_grandes_plateformes_logistiques_globales_reference]], [[consortium_energetique_des_mers_du_nord_reference]], [[armada_logistique_nordique_reference]], [[agence_internationale_des_energies_renouvelables_irena_2_reference]], [[blocs_signataires_du_pacte_energetique_multilateral_reference]], [[confederation_des_megapoles_autonomes_reference]], [[nexcore_reference]]
-**Opposants** : [[bureau_des_territoires_residuels_reference]], [[ligue_des_municipalites_peripheriques_sous_connectees_reference]], [[collectifs_de_biopiraterie_inversee_reference]], [[mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference]], [[operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference]], [[milices_concurrentes_des_droits_de_passage_reference]]
 
 ## Description journalistique
 Imaginez un monde où votre survie dépend d'un colis livré en moins de 12h... ou de votre capacité à vivre sans. C'est la réalité imposée par OGLN, l'ombre logistique qui décide quelles villes respirent et quelles autres étouffent. Ses drones noirs, reconnaissables à leur silhouette en 'V' inversé, sillonnent les cieux des mégapoles comme des vautours bienveillants, tandis que ses algorithmes tracent des frontières invisibles entre les territoires 'prioritaires' et les autres. En 2098, OGLN est à la fois le pompier et l'incendiaire : elle éteint les pénuries dans les zones connectées, mais alimente les crises ailleurs. Ses employés, des 'logisticiens augmentés' équipés d'implants neuronaux, parlent d'eux comme des 'gardiens de l'équilibre', tandis que les exclus les appellent les 'nouveaux seigneurs féodaux'.
 
 ## Tensions narratives
 1. **La révolte des exclus** : Les territoires non connectés au réseau OGLN développent des alternatives logistiques parallèles, souvent illégales, comme les 'caravanes de la survie' qui traversent les zones grises en contournant les ZTP. Ces réseaux clandestins sont la cible d'une répression croissante, alimentant un cycle de violence et de contrebande. 2. **La dépendance algorithmique** : Les algorithmes d'OGLN, de plus en plus opaques, sont accusés de favoriser systématiquement les clients 'premium' (gouvernements, grandes corporations) au détriment des besoins vitaux des populations. Des fuites récentes ont révélé que ses IA intègrent des critères de 'rentabilité sociale' pour prioriser les livraisons, une notion floue qui pourrait cacher des biais géopolitiques. 3. **La guerre des couloirs** : Les ZTP d'OGLN sont devenus des cibles stratégiques pour les milices et les États en conflit. En 2097, une cyberattaque massive a paralysé ses drones pendant 72h, provoquant des émeutes dans plusieurs mégapoles. Depuis, OGLN a militarisé ses opérations, créant une zone grise entre logistique civile et sécurité nationale. 4. **L'alternative des communs** : Face à OGLN, des réseaux comme la Fédération des Communs Territoriaux développent des systèmes logistiques open-source, basés sur la réciprocité et la transparence. Ces initiatives, encore marginales, pourraient-elles ébranler le monopole d'OGLN, ou sont-elles condamnées à rester des niches pour privilégiés ?
+
+## Relations
+**Alliés :**
+- [[agence_internationale_des_energies_renouvelables_irena_2_reference]]
+- [[armada_logistique_nordique_reference]]
+- [[blocs_signataires_du_pacte_energetique_multilateral_reference]]
+- [[confederation_des_megapoles_autonomes_reference]]
+- [[consortium_des_grandes_plateformes_ia_integrees_reference]]
+- [[consortium_des_grandes_plateformes_logistiques_globales_reference]]
+- [[consortium_energetique_des_mers_du_nord_reference]]
+- [[nexcore_reference]]
+**Opposants :**
+- [[bureau_des_territoires_residuels_reference]]
+- [[collectifs_de_biopiraterie_inversee_reference]]
+- [[ligue_des_municipalites_peripheriques_sous_connectees_reference]]
+- [[milices_concurrentes_des_droits_de_passage_reference]]
+- [[mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference]]
+- [[operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference]]

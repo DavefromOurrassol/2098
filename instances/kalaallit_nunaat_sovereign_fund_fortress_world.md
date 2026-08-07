@@ -4,6 +4,7 @@ type: instance
 slug: kalaallit_nunaat_sovereign_fund_fortress_world
 entite: kalaallit_nunaat_sovereign_fund
 scenario: fortress_world
+statut: officialise_enrichi
 localisation:
   zone: nuna_capital_siege
   lieu: Nuuk-Forteresse — Siège de Nuna Capital
@@ -39,18 +40,19 @@ zone_systemique:
     - sécurité
 
 alliances:
-    - coalition_arctique_des_blocs_continentaux_fortress_world
-    - armada_logistique_nordique_fortress_world
-    - commandement_strategique_des_matieres_critiques_atlantique_fortress_world
-    - conseil_regulation_ressources_fortress_world
-
+- anba_siege_atlantique_fortress_world
+- armada_logistique_nordique_fortress_world
+- bloc_pacifique_nord_fortress_world
+- commandement_strategique_des_matieres_critiques_atlantique_fortress_world
+- conseil_regulation_ressources_fortress_world
+- consortium_sino_finlandais_de_flotte_autonome_fortress_world
 oppositions:
-    - factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world
-    - milices_de_piraterie_logistique_arctique_fortress_world
-    - coalitions_geopolitiques_d_infiltration_des_modeles_climatiques_fortress_world
-    - collectifs_de_reappropriation_energetique_peripherique_fortress_world
-    - consortium_eurasiatique_des_ressources_fermees_fortress_world
-
+- coalition_arctique_des_blocs_continentaux_fortress_world
+- coalitions_geopolitiques_d_infiltration_des_modeles_climatiques_fortress_world
+- collectifs_de_reappropriation_energetique_peripherique_fortress_world
+- consortium_eurasiatique_des_ressources_fermees_fortress_world
+- factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world
+- milices_de_piraterie_logistique_arctique_fortress_world
 type_relation_dominante: rivalité
 
 annee_debut: 2041
@@ -94,12 +96,25 @@ Nuna Capital alloue les droits d'extraction des ressources groenlandaises (terre
 - [[gouvernance_institutions]]
 - [[organisation_territoires]]
 
-## Relations
-**Alliés** : [[coalition_arctique_des_blocs_continentaux_fortress_world]], [[armada_logistique_nordique_fortress_world]], [[commandement_strategique_des_matieres_critiques_atlantique_fortress_world]], [[conseil_regulation_ressources_fortress_world]]
-**Opposants** : [[factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world]], [[milices_de_piraterie_logistique_arctique_fortress_world]], [[coalitions_geopolitiques_d_infiltration_des_modeles_climatiques_fortress_world]], [[collectifs_de_reappropriation_energetique_peripherique_fortress_world]], [[consortium_eurasiatique_des_ressources_fermees_fortress_world]]
 
 ## Description journalistique
 À Nuuk-Forteresse, le siège de Nuna Capital ressemble moins à une institution financière qu'à un bunker diplomatique : vitres blindées, personnel polyglotte formé à Genève et à Pékin, et des délégations des trois grands blocs qui se croisent dans des salles d'attente séparées, sans jamais se voir. Le Fonds gère aujourd'hui l'équivalent de 2 400 milliards d'unités de valeur bloc — une fortune bâtie sur la disparition d'un glacier. Ses directeurs, majoritairement Inuit, ont imposé au monde une règle simple : qui veut le lithium groenlandais accepte les conditions groenlandaises. Dans un monde où chaque ressource est une arme, Nuna Capital est peut-être la seule institution à n'appartenir officiellement à aucun camp — ce qui en fait, paradoxalement, l'acteur le plus courtisé de l'Arc Arctique.
 
 ## Tensions narratives
 La tension centrale de Nuna Capital est existentielle : la souveraineté retrouvée repose intégralement sur une catastrophe que le peuple kalaallit n'a pas voulue, et la conscience de cette origine empoisonne les débats internes entre la faction 'rente comme rempart' et les voix qui réclament une redistribution vers les zones climatiquement sinistrées. Par ailleurs, les trois blocs convergent lentement vers une stratégie de pression coordonnée pour forcer un alignement — et Nuna Capital doit décider si son ambiguïté peut tenir encore longtemps face à la militarisation croissante de l'Arc. Enfin, les Inuit des zones côtières submergées, déplacés par la même fonte qui enrichit le Fonds, commencent à organiser une contestation interne que les dirigeants de Nuuk-Forteresse ne peuvent plus ignorer.
+
+## Relations
+**Alliés :**
+- [[anba_siege_atlantique_fortress_world]]
+- [[armada_logistique_nordique_fortress_world]]
+- [[bloc_pacifique_nord_fortress_world]]
+- [[commandement_strategique_des_matieres_critiques_atlantique_fortress_world]]
+- [[conseil_regulation_ressources_fortress_world]]
+- [[consortium_sino_finlandais_de_flotte_autonome_fortress_world]]
+**Opposants :**
+- [[coalition_arctique_des_blocs_continentaux_fortress_world]]
+- [[coalitions_geopolitiques_d_infiltration_des_modeles_climatiques_fortress_world]]
+- [[collectifs_de_reappropriation_energetique_peripherique_fortress_world]]
+- [[consortium_eurasiatique_des_ressources_fermees_fortress_world]]
+- [[factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world]]
+- [[milices_de_piraterie_logistique_arctique_fortress_world]]

@@ -35,9 +35,21 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
+alliances:
+- milices_d_accaparement_hydrique_breakdown
+- milices_de_controle_territorial_breakdown
 oppositions:
+- cargo_mombasa_crrc_breakdown
+- conglometrat_sino_siberien_bohai_transit_breakdown
+- conseil_regulation_ressources_breakdown
+- consortium_africain_de_biotechnologies_sociales_breakdown
+- consortium_amazonia_viva_breakdown
+- factions_paramilitaires_locales_neutralisees_breakdown
+- le_registre_du_fleuve_breakdown
+- ligue_des_cites_du_sahel_numerique_breakdown
+- milices_agro_defensives_locales_breakdown
 - nairobi_crrc_breakdown
+- reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -97,9 +109,23 @@ Leur fragmentation interne est leur principale faiblesse : les factions rivales 
 - [[geopolitique_conflits]]
 - [[organisation_territoires]]
 
+
 ## Relations
+**Alliés :**
+- [[milices_d_accaparement_hydrique_breakdown]]
+- [[milices_de_controle_territorial_breakdown]]
 **Opposants :**
-- [[nairobi_crrc]]
+- [[cargo_mombasa_crrc_breakdown]]
+- [[conglometrat_sino_siberien_bohai_transit_breakdown]]
+- [[conseil_regulation_ressources_breakdown]]
+- [[consortium_africain_de_biotechnologies_sociales_breakdown]]
+- [[consortium_amazonia_viva_breakdown]]
+- [[factions_paramilitaires_locales_neutralisees_breakdown]]
+- [[le_registre_du_fleuve_breakdown]]
+- [[ligue_des_cites_du_sahel_numerique_breakdown]]
+- [[milices_agro_defensives_locales_breakdown]]
+- [[nairobi_crrc_breakdown]]
+- [[reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

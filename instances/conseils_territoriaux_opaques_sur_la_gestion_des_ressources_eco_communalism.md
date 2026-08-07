@@ -29,8 +29,30 @@ zone_geographique:
 - régionale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- consortiums_industriels_de_l_eau_eco_communalism
+- directive_kontinuum_eco_communalism
+- enclaves_extractivistes_residuelles_des_corridors_eco_communalism
+- factions_autoritaires_locales_identitaires_exclusionnistes_eco_communalism
+- reseaux_de_notables_communautaires_capturistes_eco_communalism
+oppositions:
+- amazonie_pacte_viva_eco_communalism
+- archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
+- assemblees_bioterritoriales_regionales_eco_communalism
+- assemblees_cooperatives_regionales_eco_communalism
+- cercles_de_mediation_territoriale_intercommunautaire_eco_communalism
+- collectifs_de_cartographie_ecologique_participative_eco_communalism
+- confederation_bassins_vivants_eco_communalism
+- kalaallit_nunaat_sovereign_fund_eco_communalism
+- mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism
+- rede_paulista_de_distribuic_o_algor_tmica_eco_communalism
+- reseau_terrafond_bassins_eco_communalism
+- reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
+- sao_paulo_algorithmique_eco_communalism
+- tresse_verte_corridor_eco_communalism
+- tribunal_algorithmique_de_bruxelles_eco_communalism
+- voix_du_dehors_eco_communalism
+- zones_extractivistes_corridors_eco_communalism
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -92,6 +114,33 @@ La tension centrale est celle entre l'efficacité pragmatique et la trahison des
 - [[organisation_territoires]]
 - [[gouvernance_institutions]]
 - [[energie_ressources_critiques]]
+
+
+## Relations
+**Alliés :**
+- [[consortiums_industriels_de_l_eau_eco_communalism]]
+- [[directive_kontinuum_eco_communalism]]
+- [[enclaves_extractivistes_residuelles_des_corridors_eco_communalism]]
+- [[factions_autoritaires_locales_identitaires_exclusionnistes_eco_communalism]]
+- [[reseaux_de_notables_communautaires_capturistes_eco_communalism]]
+**Opposants :**
+- [[amazonie_pacte_viva_eco_communalism]]
+- [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]]
+- [[assemblees_bioterritoriales_regionales_eco_communalism]]
+- [[assemblees_cooperatives_regionales_eco_communalism]]
+- [[cercles_de_mediation_territoriale_intercommunautaire_eco_communalism]]
+- [[collectifs_de_cartographie_ecologique_participative_eco_communalism]]
+- [[confederation_bassins_vivants_eco_communalism]]
+- [[kalaallit_nunaat_sovereign_fund_eco_communalism]]
+- [[mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism]]
+- [[rede_paulista_de_distribuic_o_algor_tmica_eco_communalism]]
+- [[reseau_terrafond_bassins_eco_communalism]]
+- [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]
+- [[sao_paulo_algorithmique_eco_communalism]]
+- [[tresse_verte_corridor_eco_communalism]]
+- [[tribunal_algorithmique_de_bruxelles_eco_communalism]]
+- [[voix_du_dehors_eco_communalism]]
+- [[zones_extractivistes_corridors_eco_communalism]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

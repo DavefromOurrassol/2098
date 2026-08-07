@@ -4,6 +4,7 @@ type: instance
 slug: corridors_eurasiens_convoyage_breakdown
 entite: corridors_eurasiens_convoyage
 scenario: breakdown
+statut: officialise_enrichi
 localisation:
   zone: corridors_eurasiens_convoyage
   lieu: Les Venelles — Corridors Eurasiens Convoyage (d'Almaty aux berges de la Vistule, corridor Oural-Pannonie)
@@ -36,24 +37,24 @@ zone_systemique:
     - société
 
 alliances:
-    - seigneuries_logistiques_armees_breakdown
-    - conglometrat_sino_siberien_bohai_transit_breakdown
-    - consortium_energetique_oural_caspien_breakdown
-    - reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown
-    - guilde_des_techniciens_nomades_breakdown
-    - brigades_medicales_itinerantes_breakdown
-    - communautes_religieuses_des_relais_physiques_breakdown
-    - noeud_mnemos_pannonie_breakdown
-
+- brigades_medicales_itinerantes_breakdown
+- communautes_religieuses_des_relais_physiques_breakdown
+- conglometrat_sino_siberien_bohai_transit_breakdown
+- consortium_energetique_oural_caspien_breakdown
+- guilde_des_techniciens_nomades_breakdown
+- noeud_mnemos_pannonie_breakdown
+- reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown
+- seigneuries_logistiques_armees_breakdown
 oppositions:
-    - saboteurs_des_corridors_de_transit_breakdown
-    - milices_de_controle_territorial_breakdown
-    - etats_fragmentes_nationalisant_les_stocks_breakdown
-    - blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
-    - factions_para_etatiques_hydriques_breakdown
-    - collectif_hackers_decroissance_infrastructure_breakdown
-    - reseau_logistique_criminel_concurrent_breakdown
-
+- blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
+- collectif_hackers_decroissance_infrastructure_breakdown
+- enclaves_technologiques_survivantes_breakdown
+- etats_fragmentes_nationalisant_les_stocks_breakdown
+- factions_para_etatiques_hydriques_breakdown
+- milices_de_controle_territorial_breakdown
+- reseau_logistique_criminel_concurrent_breakdown
+- reseaux_de_solidarite_horizontale_post_effondrement_breakdown
+- saboteurs_des_corridors_de_transit_breakdown
 type_relation_dominante: rivalité
 
 annee_debut: 2026
@@ -97,12 +98,30 @@ Assurer le transit physique des denrées alimentaires, des carburants, des médi
 - [[demographie_mobilite_humaine]]
 - [[systeme_economique_redistribution]]
 
-## Relations
-**Alliés** : [[seigneuries_logistiques_armees_breakdown]], [[conglometrat_sino_siberien_bohai_transit_breakdown]], [[consortium_energetique_oural_caspien_breakdown]], [[reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown]], [[guilde_des_techniciens_nomades_breakdown]], [[brigades_medicales_itinerantes_breakdown]], [[communautes_religieuses_des_relais_physiques_breakdown]], [[noeud_mnemos_pannonie_breakdown]]
-**Opposants** : [[saboteurs_des_corridors_de_transit_breakdown]], [[milices_de_controle_territorial_breakdown]], [[etats_fragmentes_nationalisant_les_stocks_breakdown]], [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]], [[factions_para_etatiques_hydriques_breakdown]], [[collectif_hackers_decroissance_infrastructure_breakdown]], [[reseau_logistique_criminel_concurrent_breakdown]]
 
 ## Description journalistique
 Depuis Almaty jusqu'aux berges de la Vistule, ce que les convoyeurs appellent 'les Venelles' ressemble moins à une infrastructure qu'à un organisme malade qui refuse de mourir. Les camions blindés de fortune avancent de nuit, phares couverts, suivant des routes non cartographiées et des conducteurs qui ne parlent pas la même langue mais partagent le même geste de paix — paume ouverte, arme baissée — au moment de franchir un checkpoint. Chaque seigneurie logistique prélève son droit de passage : un quart de la cargaison, trois heures d'arrêt forcé, parfois un otage rendu contre promesse de retour. Pourtant, sans ces Venelles, les enclaves survivantes de l'Eurasie s'éteindraient en quelques semaines faute de pétrole, de farine ou d'antibiotiques. Un journaliste de l'agence Mnemos qui a traversé le corridor Oural-Pannonie en 2097 a résumé l'absurdité de la situation en une phrase : 'Ce réseau fonctionne parce que personne n'a encore intérêt à ce qu'il s'arrête complètement — mais chacun fait tout pour le fragmenter un peu plus chaque jour.'
 
 ## Tensions narratives
 La tension centrale des Venelles est structurelle et inexorable : plus le réseau devient vital à la survie eurasienne, plus chaque faction qui en tient un tronçon a intérêt à en renforcer le contrôle plutôt qu'à le céder — accélérant ainsi la désintégration qu'il est censé prévenir. Une tentative récente du Conglométrat Bohai Transit de racheter plusieurs seigneuries logistiques clés a failli déclencher une guerre ouverte sur le corridor kazakh. Par ailleurs, les flux de réfugiés — tolérés quand ils paient, refoulés violemment sinon — créent des points de rupture humanitaire permanents que les Brigades Médicales Itinérantes tentent de gérer sans mandat ni protection. La question sans réponse demeure : qui, s'il en reste un, hérite des Venelles si la dernière seigneurie capable de tenir un segment décide d'en barrer l'accès définitivement ?
+
+## Relations
+**Alliés :**
+- [[brigades_medicales_itinerantes_breakdown]]
+- [[communautes_religieuses_des_relais_physiques_breakdown]]
+- [[conglometrat_sino_siberien_bohai_transit_breakdown]]
+- [[consortium_energetique_oural_caspien_breakdown]]
+- [[guilde_des_techniciens_nomades_breakdown]]
+- [[noeud_mnemos_pannonie_breakdown]]
+- [[reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]
+**Opposants :**
+- [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
+- [[collectif_hackers_decroissance_infrastructure_breakdown]]
+- [[enclaves_technologiques_survivantes_breakdown]]
+- [[etats_fragmentes_nationalisant_les_stocks_breakdown]]
+- [[factions_para_etatiques_hydriques_breakdown]]
+- [[milices_de_controle_territorial_breakdown]]
+- [[reseau_logistique_criminel_concurrent_breakdown]]
+- [[reseaux_de_solidarite_horizontale_post_effondrement_breakdown]]
+- [[saboteurs_des_corridors_de_transit_breakdown]]

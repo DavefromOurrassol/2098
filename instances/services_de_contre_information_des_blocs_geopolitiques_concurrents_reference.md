@@ -31,8 +31,24 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- consortiums_mediatiques_corporatifs_reference
+- consortiums_prives_de_gestion_des_donnees_critiques_reference
+- etats_a_tendance_centraliste_numerique_reference
+- plateformes_centralisees_de_narration_officielle_reference
+- reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference
+oppositions:
+- bureaux_de_regulation_informationnelle_reference
+- collectifs_de_journalisme_embarque_reference
+- collectifs_de_journalistes_independants_regionaux_reference
+- conseil_regulation_algorithmique_reference
+- observatoire_climatique_des_territoires_oct_reference
+- oracle_des_seuils_reference
+- reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference
+- reseau_hospitalier_hybride_eurasiatique_reference
+- reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference
+- tbilissi_noeud_mnemos_reference
+- voix_du_dehors_reference
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -95,6 +111,27 @@ Ces services sont pris dans une contradiction fondamentale : en cherchant à dé
 - [[geopolitique_conflits]]
 - [[technologie_information]]
 - [[gouvernance_institutions]]
+
+
+## Relations
+**Alliés :**
+- [[consortiums_mediatiques_corporatifs_reference]]
+- [[consortiums_prives_de_gestion_des_donnees_critiques_reference]]
+- [[etats_a_tendance_centraliste_numerique_reference]]
+- [[plateformes_centralisees_de_narration_officielle_reference]]
+- [[reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference]]
+**Opposants :**
+- [[bureaux_de_regulation_informationnelle_reference]]
+- [[collectifs_de_journalisme_embarque_reference]]
+- [[collectifs_de_journalistes_independants_regionaux_reference]]
+- [[conseil_regulation_algorithmique_reference]]
+- [[observatoire_climatique_des_territoires_oct_reference]]
+- [[oracle_des_seuils_reference]]
+- [[reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference]]
+- [[reseau_hospitalier_hybride_eurasiatique_reference]]
+- [[reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference]]
+- [[tbilissi_noeud_mnemos_reference]]
+- [[voix_du_dehors_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

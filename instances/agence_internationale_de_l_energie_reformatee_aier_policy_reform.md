@@ -31,8 +31,32 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_stabilisation_climatique_policy_reform
+- arctic_passage_authority_policy_reform
+- assemblee_territoires_policy_reform
+- bloc_des_nations_a_economie_carbone_controlee_policy_reform
+- conseil_de_regulation_climatique_global_policy_reform
+- conseil_regulation_ressources_policy_reform
+- consortium_des_villes_etats_durables_policy_reform
+- fonds_de_stabilisation_climatique_onu_3_policy_reform
+- fonds_mondial_de_resilience_infrastructurelle_policy_reform
+- fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform
+- fonds_souverain_de_transition_verte_fstv_policy_reform
+- gouvernement_israel_policy_reform
+- grille_aria_policy_reform
+- kalaallit_nunaat_sovereign_fund_policy_reform
+- observatoire_mondial_des_ressources_critiques_policy_reform
+- reseau_des_lobbyistes_techniques_onu_energie_policy_reform
+oppositions:
+- agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
+- coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform
+- front_des_souverainistes_energetiques_policy_reform
+- front_souverainiste_des_blocs_non_signataires_policy_reform
+- lobbies_des_energies_fossiles_residuelles_policy_reform
+- republique_islamique_iran_policy_reform
+- reseau_des_journalistes_d_investigation_energetique_policy_reform
+- syndicats_d_extraction_privee_non_regules_policy_reform
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -95,6 +119,37 @@ L'AIER est structurellement écartelée entre son rôle de garant des accords mu
 - [[energie_ressources_critiques]]
 - [[gouvernance_institutions]]
 - [[climat_environnement_global]]
+
+
+
+## Relations
+**Alliés :**
+- [[agence_stabilisation_climatique_policy_reform]]
+- [[arctic_passage_authority_policy_reform]]
+- [[assemblee_territoires_policy_reform]]
+- [[bloc_des_nations_a_economie_carbone_controlee_policy_reform]]
+- [[conseil_de_regulation_climatique_global_policy_reform]]
+- [[conseil_regulation_ressources_policy_reform]]
+- [[consortium_des_villes_etats_durables_policy_reform]]
+- [[fonds_de_stabilisation_climatique_onu_3_policy_reform]]
+- [[fonds_mondial_de_resilience_infrastructurelle_policy_reform]]
+- [[fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform]]
+- [[fonds_souverain_de_transition_verte_fstv_policy_reform]]
+- [[gouvernement_israel_policy_reform]]
+- [[grille_aria_policy_reform]]
+- [[kalaallit_nunaat_sovereign_fund_policy_reform]]
+- [[observatoire_mondial_des_ressources_critiques_policy_reform]]
+- [[reseau_des_lobbyistes_techniques_onu_energie_policy_reform]]
+**Opposants :**
+- [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]
+- [[coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform]]
+- [[front_des_souverainistes_energetiques_policy_reform]]
+- [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+- [[lobbies_des_energies_fossiles_residuelles_policy_reform]]
+- [[republique_islamique_iran_policy_reform]]
+- [[reseau_des_journalistes_d_investigation_energetique_policy_reform]]
+- [[syndicats_d_extraction_privee_non_regules_policy_reform]]
+- [[test_durcissement_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

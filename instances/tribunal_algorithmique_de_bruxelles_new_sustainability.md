@@ -4,6 +4,7 @@ type: instance
 slug: tribunal_algorithmique_de_bruxelles_new_sustainability
 entite: tribunal_algorithmique_de_bruxelles
 scenario: new_sustainability
+statut: officialise_enrichi
 localisation:
   zone: tribunal_gouvernance_algorithmique_bruxelles
   lieu: Tribunal Algorithmique de Bruxelles, quartier du Schuman reconstruit
@@ -35,29 +36,29 @@ zone_systemique:
     - information
 
 alliances:
-    - bureau_gouvernance_algorithmique_new_sustainability
-    - conseil_regulation_algorithmique_new_sustainability
-    - consortium_d_audit_algorithmique_ouvert_new_sustainability
-    - consortium_d_interoperabilite_ia_humain_new_sustainability
-    - parlement_deliberatif_mondial_new_sustainability
-    - assemblee_territoires_new_sustainability
-    - college_des_auditeurs_independants_du_parlement_biotechnologique_mondial_new_sustainability
-    - institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability
-    - observatoire_anti_monopole_de_geneve_new_sustainability
-    - conseil_de_regulation_cognitive_de_l_onu_new_sustainability
-
+- assemblee_territoires_new_sustainability
+- bloc_des_architectes_d_efficience_algorithmique_new_sustainability
+- bureau_gouvernance_algorithmique_new_sustainability
+- centre_institutionnel_geneve_new_sustainability
+- college_des_auditeurs_independants_du_parlement_biotechnologique_mondial_new_sustainability
+- conseil_de_regulation_cognitive_de_l_onu_new_sustainability
+- conseil_regulation_algorithmique_new_sustainability
+- consortium_d_audit_algorithmique_ouvert_new_sustainability
+- consortium_d_interoperabilite_ia_humain_new_sustainability
+- institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability
+- observatoire_anti_monopole_de_geneve_new_sustainability
+- parlement_deliberatif_mondial_new_sustainability
 oppositions:
-    - bloc_des_gouvernements_souverainistes_hydriques_new_sustainability
-    - etats_souverainistes_anti_reseau_new_sustainability
-    - internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
-    - souverainistes_du_bloc_eurasien_new_sustainability
-    - factions_technocratiques_de_la_delegation_ia_totale_new_sustainability
-    - factions_internes_pro_opacite_des_parametres_new_sustainability
-    - lobbies_des_plateformes_de_consensus_automatise_new_sustainability
-    - enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability
-    - collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability
-    - coalition_anti_algorithme_des_autonomies_locales_new_sustainability
-
+- bloc_des_gouvernements_souverainistes_hydriques_new_sustainability
+- coalition_anti_algorithme_des_autonomies_locales_new_sustainability
+- collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability
+- enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability
+- etats_souverainistes_anti_reseau_new_sustainability
+- factions_internes_pro_opacite_des_parametres_new_sustainability
+- factions_technocratiques_de_la_delegation_ia_totale_new_sustainability
+- internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
+- lobbies_des_plateformes_de_consensus_automatise_new_sustainability
+- souverainistes_du_bloc_eurasien_new_sustainability
 type_relation_dominante: rivalité
 
 annee_debut: 2041
@@ -99,12 +100,35 @@ Le Tribunal instruit et tranche les recours formés par des individus, collectif
 - [[gouvernance_institutions]]
 - [[technologie_information]]
 
-## Relations
-**Alliés** : [[bureau_gouvernance_algorithmique_new_sustainability]], [[conseil_regulation_algorithmique_new_sustainability]], [[consortium_d_audit_algorithmique_ouvert_new_sustainability]], [[consortium_d_interoperabilite_ia_humain_new_sustainability]], [[parlement_deliberatif_mondial_new_sustainability]], [[assemblee_territoires_new_sustainability]], [[college_des_auditeurs_independants_du_parlement_biotechnologique_mondial_new_sustainability]], [[institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability]], [[observatoire_anti_monopole_de_geneve_new_sustainability]], [[conseil_de_regulation_cognitive_de_l_onu_new_sustainability]]
-**Opposants** : [[bloc_des_gouvernements_souverainistes_hydriques_new_sustainability]], [[etats_souverainistes_anti_reseau_new_sustainability]], [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]], [[souverainistes_du_bloc_eurasien_new_sustainability]], [[factions_technocratiques_de_la_delegation_ia_totale_new_sustainability]], [[factions_internes_pro_opacite_des_parametres_new_sustainability]], [[lobbies_des_plateformes_de_consensus_automatise_new_sustainability]], [[enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability]], [[collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability]], [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]]
 
 ## Description journalistique
 Dans le quartier du Schuman reconstruit, derrière des façades de bois composite et de verre biosourcé, le Tribunal Algorithmique de Bruxelles rend chaque semaine plusieurs dizaines de décisions qui font trembler des architectures décisionnelles déployées de Lagos à Varsovie. Ses audiences — retransmises en flux ouvert sur le Réseau des Communs Numériques — sont devenues le spectacle paradoxal d'une machine jugée par une autre machine assistée d'humains en robe grise. Ses juristes-auditeurs, mi-légistes mi-ingénieurs, décortiquent des lignes de code comme d'autres lirent autrefois des contrats. Ses décisions les plus emblématiques — l'invalidation partielle du module d'allocation résidentielle ARIA-7 en 2087 ou la mise sous tutelle temporaire d'un algorithme de scoring carbone déployé dans trois États-membres — ont imposé sa stature internationale. Mais pour les gouvernements du Bloc Eurasien et les souverainistes de la Ceinture Boréale, Bruxelles reste une capitale étrangère, et ce tribunal, une ingérence déguisée en droit.
 
 ## Tensions narratives
 La question de l'exécution effective de ses décisions reste entière : sans force contraignante propre, le Tribunal dépend du Conseil de Gouvernance Algorithmique Intégrée pour faire respecter ses injonctions, une dépendance que certains internes dénoncent comme une vassalité structurelle. Sa légitimité extraterritoriale est attaquée frontalement par les souverainistes eurasiens depuis l'affaire du module de notation sociale de Novossibirsk en 2094. En parallèle, des collectifs de désobéissance algorithmique le critiquent par l'autre bout : trop lent, trop technocratique, incapable de traiter les millions de cas individuels qui s'accumulent dans ses files. Et en coulisses, la question de savoir si les modules d'audit IA du Tribunal peuvent être eux-mêmes contestés — et par qui — reste sans réponse juridique satisfaisante.
+
+## Relations
+**Alliés :**
+- [[assemblee_territoires_new_sustainability]]
+- [[bloc_des_architectes_d_efficience_algorithmique_new_sustainability]]
+- [[bureau_gouvernance_algorithmique_new_sustainability]]
+- [[centre_institutionnel_geneve_new_sustainability]]
+- [[college_des_auditeurs_independants_du_parlement_biotechnologique_mondial_new_sustainability]]
+- [[conseil_de_regulation_cognitive_de_l_onu_new_sustainability]]
+- [[conseil_regulation_algorithmique_new_sustainability]]
+- [[consortium_d_audit_algorithmique_ouvert_new_sustainability]]
+- [[consortium_d_interoperabilite_ia_humain_new_sustainability]]
+- [[institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability]]
+- [[observatoire_anti_monopole_de_geneve_new_sustainability]]
+- [[parlement_deliberatif_mondial_new_sustainability]]
+**Opposants :**
+- [[bloc_des_gouvernements_souverainistes_hydriques_new_sustainability]]
+- [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]]
+- [[collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability]]
+- [[enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability]]
+- [[etats_souverainistes_anti_reseau_new_sustainability]]
+- [[factions_internes_pro_opacite_des_parametres_new_sustainability]]
+- [[factions_technocratiques_de_la_delegation_ia_totale_new_sustainability]]
+- [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]]
+- [[lobbies_des_plateformes_de_consensus_automatise_new_sustainability]]
+- [[souverainistes_du_bloc_eurasien_new_sustainability]]

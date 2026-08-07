@@ -34,9 +34,43 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference
+- coalition_pour_la_souverainete_numerique_nationale_reference
+- consortium_des_plateformes_ia_centralisees_anti_deliberation_reference
+- datasovereign_reference
+- directive_kontinuum_reference
+- gouvernements_a_regime_de_productivite_mandatee_reference
 - pacte_des_souverains_reference
+- plateformes_centralisees_de_narration_officielle_reference
+- regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference
+- services_de_contre_information_des_blocs_geopolitiques_concurrents_reference
 oppositions:
+- administrations_hybrides_des_cites_relais_peripheriques_reference
+- autorites_regionales_de_regulation_hydrologique_reference
+- banque_des_communs_reference
+- bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference
+- bruxelles_nouveau_reference
+- collectifs_academiques_independants_reference
+- collectifs_de_journalisme_embarque_reference
+- collectifs_de_journalistes_independants_regionaux_reference
+- communs_numeriques_agroecologiques_reference
+- cooperatives_energetiques_decentralisees_reference
+- cooperatives_ia_open_source_reference
+- federation_des_cliniques_autonomes_reference
+- helsinki_communs_numeriques_reference
 - institutions_multilaterales_survivantes_reference
+- mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
+- ong_environnementales_de_terrain_reference
+- oracle_des_seuils_reference
+- reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference
+- reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference
+- reseau_meshcommons_netsolidaire_reference
+- reseau_mnemos_reference
+- reseaux_de_capteurs_citoyens_reference
+- reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference
+- reseaux_de_medecine_traditionnelle_augmentee_reference
+- tbilissi_noeud_mnemos_reference
+- tribunal_algorithmique_de_bruxelles_reference
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -99,11 +133,46 @@ La tension centrale réside dans la contradiction entre l'efficacité revendiqu�
 - [[technologie_information]]
 - [[geopolitique_conflits]]
 
+
 ## Relations
 **Alliés :**
-- [[pacte_des_souverains]]
+- [[coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference]]
+- [[coalition_pour_la_souverainete_numerique_nationale_reference]]
+- [[consortium_des_plateformes_ia_centralisees_anti_deliberation_reference]]
+- [[datasovereign_reference]]
+- [[directive_kontinuum_reference]]
+- [[gouvernements_a_regime_de_productivite_mandatee_reference]]
+- [[pacte_des_souverains_reference]]
+- [[plateformes_centralisees_de_narration_officielle_reference]]
+- [[regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference]]
+- [[services_de_contre_information_des_blocs_geopolitiques_concurrents_reference]]
 **Opposants :**
-- [[institutions_multilaterales_survivantes]]
+- [[administrations_hybrides_des_cites_relais_peripheriques_reference]]
+- [[autorites_regionales_de_regulation_hydrologique_reference]]
+- [[banque_des_communs_reference]]
+- [[bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference]]
+- [[bruxelles_nouveau_reference]]
+- [[collectifs_academiques_independants_reference]]
+- [[collectifs_de_journalisme_embarque_reference]]
+- [[collectifs_de_journalistes_independants_regionaux_reference]]
+- [[communs_numeriques_agroecologiques_reference]]
+- [[cooperatives_energetiques_decentralisees_reference]]
+- [[cooperatives_ia_open_source_reference]]
+- [[federation_des_cliniques_autonomes_reference]]
+- [[helsinki_communs_numeriques_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
+- [[mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference]]
+- [[ong_environnementales_de_terrain_reference]]
+- [[oracle_des_seuils_reference]]
+- [[reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference]]
+- [[reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference]]
+- [[reseau_meshcommons_netsolidaire_reference]]
+- [[reseau_mnemos_reference]]
+- [[reseaux_de_capteurs_citoyens_reference]]
+- [[reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference]]
+- [[reseaux_de_medecine_traditionnelle_augmentee_reference]]
+- [[tbilissi_noeud_mnemos_reference]]
+- [[tribunal_algorithmique_de_bruxelles_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

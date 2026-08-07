@@ -34,11 +34,20 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- archives_neutres_de_geneve_breakdown
+- armada_logistique_nordique_breakdown
+- coalition_pacifique_nord_breakdown
+- enclaves_finlandaises_breakdown
+- factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
+- front_techno_reconstructionniste_breakdown
 - hanse_baltique_breakdown
+- hanse_baltique_recomposee_breakdown
+- kalaallit_nunaat_sovereign_fund_breakdown
 - noeud_nordark_tromso_breakdown
 oppositions:
 - autorite_passage_arctique_breakdown
 - district_mourmansk_residuel_breakdown
+- federation_russe_residuelle_district_de_mourmansk_breakdown
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -98,13 +107,23 @@ Les Enclaves sont déchirées entre leur logique de survie autarcique et la tent
 - [[systemes_productifs_travail]]
 - [[energie_ressources_critiques]]
 
+
 ## Relations
 **Alliés :**
+- [[archives_neutres_de_geneve_breakdown]]
+- [[armada_logistique_nordique_breakdown]]
+- [[coalition_pacifique_nord_breakdown]]
+- [[enclaves_finlandaises_breakdown]]
+- [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]]
+- [[front_techno_reconstructionniste_breakdown]]
 - [[hanse_baltique_breakdown]]
+- [[hanse_baltique_recomposee_breakdown]]
+- [[kalaallit_nunaat_sovereign_fund_breakdown]]
 - [[noeud_nordark_tromso_breakdown]]
 **Opposants :**
 - [[autorite_passage_arctique_breakdown]]
 - [[district_mourmansk_residuel_breakdown]]
+- [[federation_russe_residuelle_district_de_mourmansk_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

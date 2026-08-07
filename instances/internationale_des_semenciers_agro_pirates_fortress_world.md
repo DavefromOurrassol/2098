@@ -36,10 +36,19 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- consortium_africain_de_biotechnologies_sociales_fortress_world
+- consortium_amazonia_viva_fortress_world
+- mouvement_des_communes_du_rust_belt_fortress_world
 - rust_belt_communes_libres_fortress_world
 oppositions:
+- biolock_agritech_fortress_world
+- conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world
+- instances_aria_concurrentes_des_blocs_rivaux_fortress_world
+- milices_privees_de_protection_des_sites_germinaux_fortress_world
 - nexus_biosyn_division_eurasienne_fortress_world
 - nexus_biosyn_division_pacifique_fortress_world
+- nexus_biosyn_fortress_world
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -104,12 +113,22 @@ L'organisation est tiraillée entre sa vocation de résistance universelle et le
 - [[frontieres_du_systeme]]
 - [[gouvernance_institutions]]
 
+
 ## Relations
 **Alliés :**
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[consortium_africain_de_biotechnologies_sociales_fortress_world]]
+- [[consortium_amazonia_viva_fortress_world]]
+- [[mouvement_des_communes_du_rust_belt_fortress_world]]
 - [[rust_belt_communes_libres_fortress_world]]
 **Opposants :**
+- [[biolock_agritech_fortress_world]]
+- [[conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world]]
+- [[instances_aria_concurrentes_des_blocs_rivaux_fortress_world]]
+- [[milices_privees_de_protection_des_sites_germinaux_fortress_world]]
 - [[nexus_biosyn_division_eurasienne_fortress_world]]
 - [[nexus_biosyn_division_pacifique_fortress_world]]
+- [[nexus_biosyn_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

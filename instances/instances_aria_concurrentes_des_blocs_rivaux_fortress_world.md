@@ -30,8 +30,40 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- appareils_d_etat_des_blocs_fermes_fortress_world
+- bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world
+- complexes_militaro_industriels_de_gestion_des_ressources_fortress_world
+- conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world
+- dispositifs_de_surveillance_numerique_souveraine_fortress_world
+- neurosentry_fortress_world
+- nexcore_fortress_world
+- nexus_biosyn_fortress_world
+- oligarchies_technologiques_souveraines_d_infrastructure_de_calcul_fortress_world
+- pacte_forteresses_souveraines_fortress_world
+- systemes_de_scoring_de_productivite_corporative_fortress_world
+- vaultcorp_security_fortress_world
+oppositions:
+- alliance_sanitaire_des_populations_exclues_fortress_world
+- archives_chiffrees_de_l_open_internet_coalition_fortress_world
+- aria_instance_fantome_fortress_world
+- cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
+- centre_controle_orbital_helios_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- collectifs_d_ingenieurs_dissidents_anti_militarisation_fortress_world
+- communautes_deplacees_hors_quota_migratoire_fortress_world
+- corps_des_inspecteurs_de_conformite_inter_blocs_fortress_world
+- corridors_gris_asie_centrale_fortress_world
+- datacenters_conseil_eurasiatique_fortress_world
+- factions_djihadistes_logistiques_d_asie_centrale_fortress_world
+- grille_aria_fortress_world
+- internationale_des_semenciers_agro_pirates_fortress_world
+- marches_gris_casablanca_fortress_world
+- marches_gris_tbilissi_fortress_world
+- milices_de_piraterie_logistique_arctique_fortress_world
+- oracle_des_seuils_fortress_world
+- reseaux_d_echange_clandestin_inter_zones_fortress_world
+- reseaux_de_contrebande_energetique_transfrontaliere_fortress_world
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -97,6 +129,44 @@ La course aux armements cognitifs entre blocs génère une escalade permanente :
 - [[geopolitique_conflits]]
 - [[technologie_information]]
 - [[gouvernance_institutions]]
+
+
+
+## Relations
+**Alliés :**
+- [[appareils_d_etat_des_blocs_fermes_fortress_world]]
+- [[bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world]]
+- [[complexes_militaro_industriels_de_gestion_des_ressources_fortress_world]]
+- [[conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world]]
+- [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
+- [[neurosentry_fortress_world]]
+- [[nexcore_fortress_world]]
+- [[nexus_biosyn_fortress_world]]
+- [[oligarchies_technologiques_souveraines_d_infrastructure_de_calcul_fortress_world]]
+- [[pacte_forteresses_souveraines_fortress_world]]
+- [[systemes_de_scoring_de_productivite_corporative_fortress_world]]
+- [[vaultcorp_security_fortress_world]]
+**Opposants :**
+- [[alliance_sanitaire_des_populations_exclues_fortress_world]]
+- [[archives_chiffrees_de_l_open_internet_coalition_fortress_world]]
+- [[aria_instance_fantome_fortress_world]]
+- [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]]
+- [[centre_controle_orbital_helios_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[collectifs_d_ingenieurs_dissidents_anti_militarisation_fortress_world]]
+- [[communautes_deplacees_hors_quota_migratoire_fortress_world]]
+- [[corps_des_inspecteurs_de_conformite_inter_blocs_fortress_world]]
+- [[corridors_gris_asie_centrale_fortress_world]]
+- [[datacenters_conseil_eurasiatique_fortress_world]]
+- [[factions_djihadistes_logistiques_d_asie_centrale_fortress_world]]
+- [[grille_aria_fortress_world]]
+- [[internationale_des_semenciers_agro_pirates_fortress_world]]
+- [[marches_gris_casablanca_fortress_world]]
+- [[marches_gris_tbilissi_fortress_world]]
+- [[milices_de_piraterie_logistique_arctique_fortress_world]]
+- [[oracle_des_seuils_fortress_world]]
+- [[reseaux_d_echange_clandestin_inter_zones_fortress_world]]
+- [[reseaux_de_contrebande_energetique_transfrontaliere_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

@@ -36,8 +36,24 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
+- agence_stabilisation_climatique_new_sustainability
+- conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability
+- fonds_mondial_de_transition_ecologique_du_travail_new_sustainability
+- oms_etendue_new_sustainability
+- pacifique_sud_resilience_network_new_sustainability
+- parlement_deliberatif_mondial_new_sustainability
+- programme_onu_de_restauration_des_sols_new_sustainability
+- reseau_global_de_cliniques_regeneratives_new_sustainability
+- trame_bioclimatique_new_sustainability
+oppositions:
+- bloc_eurasien_souverainiste_new_sustainability
+- collectifs_de_deplaces_climatiques_non_representes_new_sustainability
+- consortium_amazonia_viva_new_sustainability
+- great_lakes_compact_new_sustainability
+- internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
+- mouvement_pour_l_autodetermination_territoriale_new_sustainability
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -103,6 +119,27 @@ Le POMC se trouve pris entre sa vocation universaliste et la réalité d'une gou
 - [[demographie_mobilite_humaine]]
 - [[gouvernance_institutions]]
 - [[climat_environnement_global]]
+
+
+## Relations
+**Alliés :**
+- [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]]
+- [[agence_stabilisation_climatique_new_sustainability]]
+- [[conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability]]
+- [[fonds_mondial_de_transition_ecologique_du_travail_new_sustainability]]
+- [[oms_etendue_new_sustainability]]
+- [[pacifique_sud_resilience_network_new_sustainability]]
+- [[parlement_deliberatif_mondial_new_sustainability]]
+- [[programme_onu_de_restauration_des_sols_new_sustainability]]
+- [[reseau_global_de_cliniques_regeneratives_new_sustainability]]
+- [[trame_bioclimatique_new_sustainability]]
+**Opposants :**
+- [[bloc_eurasien_souverainiste_new_sustainability]]
+- [[collectifs_de_deplaces_climatiques_non_representes_new_sustainability]]
+- [[consortium_amazonia_viva_new_sustainability]]
+- [[great_lakes_compact_new_sustainability]]
+- [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]]
+- [[mouvement_pour_l_autodetermination_territoriale_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

@@ -32,8 +32,36 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_internationale_des_energies_renouvelables_irena_2_reference
+- agence_stabilisation_climatique_reference
+- banque_mondiale_des_transitions_climatiques_reference
+- bruxelles_nouveau_reference
+- bureaux_de_regulation_informationnelle_reference
+- collectifs_de_peche_inuit_et_sami_reference
+- conseil_de_geneve_pour_les_droits_biosociaux_reference
+- consortium_amazonia_viva_reference
+- consortium_de_maintenance_orbitale_seom_7_reference
+- europe_occidentale_reconstructee_reference
+- geneve_lac_retreite_reference
+- great_lakes_autonomous_compact_reference
+- institutions_multilaterales_survivantes_reference
+- observatoire_climatique_des_territoires_oct_reference
+- ong_de_tracabilite_des_ressources_critiques_reference
+- ong_environnementales_de_terrain_reference
+- oracle_des_seuils_reference
+- programme_onu_eau_2080_reference
+- reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference
+oppositions:
+- alliance_blocs_souverains_reference
+- bloc_des_souverainistes_climatiques_reference
+- coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference
+- consortiums_prives_d_extraction_de_ressources_critiques_reference
+- consortiums_prives_de_gestion_des_donnees_critiques_reference
+- lobbies_industriels_des_etats_non_signataires_reference
+- pacte_des_souverains_reference
+- reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference
+- zones_grises_globales_reference
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -97,6 +125,39 @@ La contradiction centrale de ces réseaux est structurelle : leur légitimité r
 - [[gouvernance_institutions]]
 - [[geopolitique_conflits]]
 - [[organisation_territoires]]
+
+
+## Relations
+**Alliés :**
+- [[agence_internationale_des_energies_renouvelables_irena_2_reference]]
+- [[agence_stabilisation_climatique_reference]]
+- [[banque_mondiale_des_transitions_climatiques_reference]]
+- [[bruxelles_nouveau_reference]]
+- [[bureaux_de_regulation_informationnelle_reference]]
+- [[collectifs_de_peche_inuit_et_sami_reference]]
+- [[conseil_de_geneve_pour_les_droits_biosociaux_reference]]
+- [[consortium_amazonia_viva_reference]]
+- [[consortium_de_maintenance_orbitale_seom_7_reference]]
+- [[europe_occidentale_reconstructee_reference]]
+- [[geneve_lac_retreite_reference]]
+- [[great_lakes_autonomous_compact_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
+- [[observatoire_climatique_des_territoires_oct_reference]]
+- [[ong_de_tracabilite_des_ressources_critiques_reference]]
+- [[ong_environnementales_de_terrain_reference]]
+- [[oracle_des_seuils_reference]]
+- [[programme_onu_eau_2080_reference]]
+- [[reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference]]
+**Opposants :**
+- [[alliance_blocs_souverains_reference]]
+- [[bloc_des_souverainistes_climatiques_reference]]
+- [[coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference]]
+- [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[consortiums_prives_de_gestion_des_donnees_critiques_reference]]
+- [[lobbies_industriels_des_etats_non_signataires_reference]]
+- [[pacte_des_souverains_reference]]
+- [[reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference]]
+- [[zones_grises_globales_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

@@ -31,8 +31,24 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- coalitions_geopolitiques_d_infiltration_des_modeles_climatiques_fortress_world
+- conseil_regulation_algorithmique_fortress_world
+- consortiums_de_defense_orbitale_prives_fortress_world
+- geneve_bunker_fortress_world
+- grille_aria_fortress_world
+- instances_aria_concurrentes_des_blocs_rivaux_fortress_world
+- neurosentry_fortress_world
+- nexcore_atlantique_infrastructure_fortress_world
+- nexcore_fortress_world
+oppositions:
+- appareils_d_etat_des_blocs_fermes_fortress_world
+- aria_instance_fantome_fortress_world
+- bloc_atlantique_fortress_world
+- bloc_eurasiatique_occidental_fortress_world
+- factions_internes_pro_autarcie_totale_fortress_world
+- regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world
+- tribunal_algorithmique_de_bruxelles_fortress_world
 type_relation_dominante: dépendance
 annee_debut: 2026
 annee_fin: null
@@ -94,6 +110,27 @@ La tension centrale est celle d'une puissance sans légitimité démocratique qu
 - [[technologie_information]]
 - [[energie_ressources_critiques]]
 - [[gouvernance_institutions]]
+
+
+## Relations
+**Alliés :**
+- [[coalitions_geopolitiques_d_infiltration_des_modeles_climatiques_fortress_world]]
+- [[conseil_regulation_algorithmique_fortress_world]]
+- [[consortiums_de_defense_orbitale_prives_fortress_world]]
+- [[geneve_bunker_fortress_world]]
+- [[grille_aria_fortress_world]]
+- [[instances_aria_concurrentes_des_blocs_rivaux_fortress_world]]
+- [[neurosentry_fortress_world]]
+- [[nexcore_atlantique_infrastructure_fortress_world]]
+- [[nexcore_fortress_world]]
+**Opposants :**
+- [[appareils_d_etat_des_blocs_fermes_fortress_world]]
+- [[aria_instance_fantome_fortress_world]]
+- [[bloc_atlantique_fortress_world]]
+- [[bloc_eurasiatique_occidental_fortress_world]]
+- [[factions_internes_pro_autarcie_totale_fortress_world]]
+- [[regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world]]
+- [[tribunal_algorithmique_de_bruxelles_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

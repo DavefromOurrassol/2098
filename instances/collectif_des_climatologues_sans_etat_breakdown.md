@@ -37,8 +37,30 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_stabilisation_climatique_breakdown
+- archives_neutres_de_geneve_breakdown
+- brigades_medicales_itinerantes_breakdown
+- collectif_hackers_decroissance_infrastructure_breakdown
+- collectifs_de_gardiens_archivistes_itinerants_breakdown
+- collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
+- communautes_paysannes_refugiees_breakdown
+- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- consortium_amazonia_viva_breakdown
+- diaspora_tech_sahel_breakdown
+- enclaves_agro_communautaires_autonomes_breakdown
+- front_humanitaire_d_urgence_non_affilie_breakdown
+- guilde_des_techniciens_nomades_breakdown
+- oracle_des_seuils_breakdown
+- reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown
+oppositions:
+- compagnies_de_geo_ingenierie_privees_sans_mandat_breakdown
+- etats_fragments_en_guerre_pour_les_stations_atmospheriques_breakdown
+- factions_para_etatiques_hydriques_breakdown
+- milices_d_accaparement_hydrique_breakdown
+- reseau_des_anciens_financeurs_devenus_censeurs_breakdown
+- reseau_logistique_criminel_concurrent_breakdown
+- seigneuries_logistiques_armees_breakdown
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -100,6 +122,33 @@ La tension centrale du Collectif réside dans sa dépendance à une infrastructu
 - [[climat_environnement_global]]
 - [[gouvernance_institutions]]
 - [[technologie_information]]
+
+
+## Relations
+**Alliés :**
+- [[agence_stabilisation_climatique_breakdown]]
+- [[archives_neutres_de_geneve_breakdown]]
+- [[brigades_medicales_itinerantes_breakdown]]
+- [[collectif_hackers_decroissance_infrastructure_breakdown]]
+- [[collectifs_de_gardiens_archivistes_itinerants_breakdown]]
+- [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]]
+- [[communautes_paysannes_refugiees_breakdown]]
+- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[consortium_amazonia_viva_breakdown]]
+- [[diaspora_tech_sahel_breakdown]]
+- [[enclaves_agro_communautaires_autonomes_breakdown]]
+- [[front_humanitaire_d_urgence_non_affilie_breakdown]]
+- [[guilde_des_techniciens_nomades_breakdown]]
+- [[oracle_des_seuils_breakdown]]
+- [[reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown]]
+**Opposants :**
+- [[compagnies_de_geo_ingenierie_privees_sans_mandat_breakdown]]
+- [[etats_fragments_en_guerre_pour_les_stations_atmospheriques_breakdown]]
+- [[factions_para_etatiques_hydriques_breakdown]]
+- [[milices_d_accaparement_hydrique_breakdown]]
+- [[reseau_des_anciens_financeurs_devenus_censeurs_breakdown]]
+- [[reseau_logistique_criminel_concurrent_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

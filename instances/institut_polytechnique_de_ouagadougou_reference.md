@@ -31,8 +31,24 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- amara_diallo_nkosi_reference
+- collectifs_academiques_independants_reference
+- commission_hydrique_de_l_union_africaine_reference
+- consortium_africain_de_biotechnologies_sociales_reference
+- cooperatives_ia_open_source_reference
+- gouvernements_du_bloc_sahelien_autonome_reference
+- nairobi_crrc_reference
+- reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference
+- reseau_des_cooperatives_agro_saheliennes_reference
+- union_africaine_de_resilience_territoriale_reference
+- union_africaine_resilience_reference
+oppositions:
+- consortium_des_grandes_plateformes_ia_integrees_reference
+- consortium_indo_pacifique_de_l_hydrogene_reference
+- consortiums_prives_de_gestion_des_donnees_critiques_reference
+- lobbies_agro_industriels_a_haute_consommation_d_eau_reference
+- singapour_est_reference
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -98,6 +114,27 @@ L'Institut est pris en étau entre sa mission d'autonomisation régionale et la 
 - [[gouvernance_institutions]]
 - [[technologie_information]]
 - [[demographie_mobilite_humaine]]
+
+
+## Relations
+**Alliés :**
+- [[amara_diallo_nkosi_reference]]
+- [[collectifs_academiques_independants_reference]]
+- [[commission_hydrique_de_l_union_africaine_reference]]
+- [[consortium_africain_de_biotechnologies_sociales_reference]]
+- [[cooperatives_ia_open_source_reference]]
+- [[gouvernements_du_bloc_sahelien_autonome_reference]]
+- [[nairobi_crrc_reference]]
+- [[reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference]]
+- [[reseau_des_cooperatives_agro_saheliennes_reference]]
+- [[union_africaine_de_resilience_territoriale_reference]]
+- [[union_africaine_resilience_reference]]
+**Opposants :**
+- [[consortium_des_grandes_plateformes_ia_integrees_reference]]
+- [[consortium_indo_pacifique_de_l_hydrogene_reference]]
+- [[consortiums_prives_de_gestion_des_donnees_critiques_reference]]
+- [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]]
+- [[singapour_est_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

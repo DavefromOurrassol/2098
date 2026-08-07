@@ -34,8 +34,22 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- administrations_hybrides_des_cites_relais_peripheriques_reference
 - bureau_zones_non_prioritaires_reference
-oppositions: []
+- frente_sert_o_livre_reference
+- helsinki_communs_numeriques_reference
+- operateurs_de_zones_economiques_speciales_periurbaines_reference
+- operateurs_prives_d_energie_distribuee_hors_fct_reference
+- reseau_des_administrations_locales_rurales_participatives_reference
+- reseau_meshcommons_netsolidaire_reference
+- reseau_mnemos_reference
+- reseaux_de_medecine_traditionnelle_augmentee_reference
+- tribunal_algorithmique_de_bruxelles_reference
+oppositions:
+- bureau_des_territoires_residuels_reference
+- optiflow_logistics_reference
+- rede_paulista_de_distribuic_o_algor_tmica_reference
+- singapour_est_reference
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -100,9 +114,25 @@ La Ligue est tiraillée entre deux stratégies incompatibles : certains membres 
 - [[technologie_information]]
 - [[gouvernance_institutions]]
 
+
 ## Relations
 **Alliés :**
+- [[administrations_hybrides_des_cites_relais_peripheriques_reference]]
 - [[bureau_zones_non_prioritaires_reference]]
+- [[frente_sert_o_livre_reference]]
+- [[helsinki_communs_numeriques_reference]]
+- [[operateurs_de_zones_economiques_speciales_periurbaines_reference]]
+- [[operateurs_prives_d_energie_distribuee_hors_fct_reference]]
+- [[reseau_des_administrations_locales_rurales_participatives_reference]]
+- [[reseau_meshcommons_netsolidaire_reference]]
+- [[reseau_mnemos_reference]]
+- [[reseaux_de_medecine_traditionnelle_augmentee_reference]]
+- [[tribunal_algorithmique_de_bruxelles_reference]]
+**Opposants :**
+- [[bureau_des_territoires_residuels_reference]]
+- [[optiflow_logistics_reference]]
+- [[rede_paulista_de_distribuic_o_algor_tmica_reference]]
+- [[singapour_est_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

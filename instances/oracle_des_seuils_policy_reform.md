@@ -4,6 +4,7 @@ type: instance
 slug: oracle_des_seuils_policy_reform
 entite: oracle_des_seuils
 scenario: policy_reform
+statut: officialise_enrichi
 localisation:
   zone: null
   lieu: null
@@ -37,29 +38,29 @@ zone_systemique:
     - énergie
 
 alliances:
-    - conseil_de_regulation_climatique_global_policy_reform
-    - conseil_intergouvernemental_de_regulation_technologique_policy_reform
-    - conseil_onu_de_gouvernance_numerique_et_ia_policy_reform
-    - bureau_gouvernance_algorithmique_policy_reform
-    - observatoire_mondial_des_ressources_critiques_policy_reform
-    - reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform
-    - reseaux_de_capteurs_ia_climatiques_deployes_par_les_etats_membres_policy_reform
-    - fonds_de_stabilisation_climatique_onu_3_policy_reform
-    - grille_aria_policy_reform
-    - agence_stabilisation_climatique_policy_reform
-    - reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
-    - institut_brookings_singapour_de_politique_computationnelle_policy_reform
-
+- agence_stabilisation_climatique_policy_reform
+- bureau_gouvernance_algorithmique_policy_reform
+- conseil_de_regulation_climatique_global_policy_reform
+- conseil_intergouvernemental_de_regulation_technologique_policy_reform
+- conseil_onu_de_gouvernance_numerique_et_ia_policy_reform
+- directive_kontinuum_policy_reform
+- fonds_de_stabilisation_climatique_onu_3_policy_reform
+- grille_aria_policy_reform
+- institut_brookings_singapour_de_politique_computationnelle_policy_reform
+- observatoire_mondial_des_ressources_critiques_policy_reform
+- office_integre_des_flux_migratoires_policy_reform
+- reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
+- reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform
+- reseaux_de_capteurs_ia_climatiques_deployes_par_les_etats_membres_policy_reform
 oppositions:
-    - coalition_des_souverainistes_numeriques_policy_reform
-    - front_souverainiste_des_blocs_non_signataires_policy_reform
-    - front_techno_utopiste_de_la_decision_automatisee_policy_reform
-    - collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform
-    - courants_post_technocratiques_de_reconquete_democratique_policy_reform
-    - internationale_decroissante_anti_planification_policy_reform
-    - front_souverainiste_de_l_information_regionale_policy_reform
-    - les_hors_prisme_policy_reform
-
+- coalition_des_souverainistes_numeriques_policy_reform
+- collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform
+- courants_post_technocratiques_de_reconquete_democratique_policy_reform
+- front_souverainiste_de_l_information_regionale_policy_reform
+- front_souverainiste_des_blocs_non_signataires_policy_reform
+- front_techno_utopiste_de_la_decision_automatisee_policy_reform
+- internationale_decroissante_anti_planification_policy_reform
+- les_hors_prisme_policy_reform
 type_relation_dominante: dépendance
 
 annee_debut: 2041
@@ -103,12 +104,35 @@ Produit et met à jour en continu des cartographies probabilistes des points de 
 - [[climat_environnement_global]]
 - [[energie_ressources_critiques]]
 
-## Relations
-**Alliés** : [[conseil_de_regulation_climatique_global_policy_reform]], [[conseil_intergouvernemental_de_regulation_technologique_policy_reform]], [[conseil_onu_de_gouvernance_numerique_et_ia_policy_reform]], [[bureau_gouvernance_algorithmique_policy_reform]], [[observatoire_mondial_des_ressources_critiques_policy_reform]], [[reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform]], [[reseaux_de_capteurs_ia_climatiques_deployes_par_les_etats_membres_policy_reform]], [[fonds_de_stabilisation_climatique_onu_3_policy_reform]], [[grille_aria_policy_reform]], [[agence_stabilisation_climatique_policy_reform]], [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]], [[institut_brookings_singapour_de_politique_computationnelle_policy_reform]]
-**Opposants** : [[coalition_des_souverainistes_numeriques_policy_reform]], [[front_souverainiste_des_blocs_non_signataires_policy_reform]], [[front_techno_utopiste_de_la_decision_automatisee_policy_reform]], [[collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform]], [[courants_post_technocratiques_de_reconquete_democratique_policy_reform]], [[internationale_decroissante_anti_planification_policy_reform]], [[front_souverainiste_de_l_information_regionale_policy_reform]], [[les_hors_prisme_policy_reform]]
 
 ## Description journalistique
 Depuis ses serveurs distribués sur sept continents, l'Oracle des Seuils publie chaque trimestre son rapport de rupture systémique — un document de quarante pages qui fait trembler les chancelleries avant même d'être rendu public. En 2098, pas une session du Conseil de Régulation Climatique Global ne s'ouvre sans que ses courbes de probabilité ne soient projetées en salle plénière. Ce que l'Oracle dit, il le dit avec une précision glaçante : 'le seuil de non-retour hydrique sahelien sera franchi dans dix-huit à vingt-deux mois avec 73 % de probabilité'. Ce qu'il ne dit pas — qui doit partir, qui doit rester, ce qu'il convient de sauver — reste la plaie ouverte de la gouvernance mondiale. Ses détracteurs l'appellent 'le confesseur muet' : il connaît le péché, il annonce la chute, et il laisse les hommes décider de la pénitence.
 
 ## Tensions narratives
 La dépendance croissante des institutions à ses alertes soulève une question de légitimité inversée : est-ce l'Oracle qui sert la gouvernance, ou la gouvernance qui sert à légitimer les seuils de l'Oracle ? Une faction au sein du Conseil Intergouvernemental tente d'introduire un 'module normatif' capable de recommander des priorités post-seuil — ce qui transformerait l'outil d'alerte en architecte de politique, franchissant un seuil que l'Oracle lui-même n'a jamais modélisé. Par ailleurs, des collectifs citoyens exigent l'accès en temps réel aux données brutes, accusant les institutions de sélectionner les seuils qu'elles activent politiquement tout en ignorant ceux qui menacent leurs intérêts propres.
+
+## Relations
+**Alliés :**
+- [[agence_stabilisation_climatique_policy_reform]]
+- [[bureau_gouvernance_algorithmique_policy_reform]]
+- [[conseil_de_regulation_climatique_global_policy_reform]]
+- [[conseil_intergouvernemental_de_regulation_technologique_policy_reform]]
+- [[conseil_onu_de_gouvernance_numerique_et_ia_policy_reform]]
+- [[directive_kontinuum_policy_reform]]
+- [[fonds_de_stabilisation_climatique_onu_3_policy_reform]]
+- [[grille_aria_policy_reform]]
+- [[institut_brookings_singapour_de_politique_computationnelle_policy_reform]]
+- [[observatoire_mondial_des_ressources_critiques_policy_reform]]
+- [[office_integre_des_flux_migratoires_policy_reform]]
+- [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]]
+- [[reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform]]
+- [[reseaux_de_capteurs_ia_climatiques_deployes_par_les_etats_membres_policy_reform]]
+**Opposants :**
+- [[coalition_des_souverainistes_numeriques_policy_reform]]
+- [[collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform]]
+- [[courants_post_technocratiques_de_reconquete_democratique_policy_reform]]
+- [[front_souverainiste_de_l_information_regionale_policy_reform]]
+- [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+- [[front_techno_utopiste_de_la_decision_automatisee_policy_reform]]
+- [[internationale_decroissante_anti_planification_policy_reform]]
+- [[les_hors_prisme_policy_reform]]

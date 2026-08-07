@@ -31,8 +31,20 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- bloc_eurasien_souverainiste_new_sustainability
+- conseil_technocratique_de_coordination_regionale_new_sustainability
+- factions_souverainistes_des_blocs_peripheriques_new_sustainability
+- prisme_global_new_sustainability
+- reseaux_d_information_souverainistes_fermes_new_sustainability
+- souverainistes_du_bloc_eurasien_new_sustainability
+oppositions:
+- centre_institutionnel_geneve_new_sustainability
+- coalition_anti_algorithme_des_autonomies_locales_new_sustainability
+- conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability
+- etats_souverainistes_anti_reseau_new_sustainability
+- observatoire_anti_monopole_de_geneve_new_sustainability
+- reseau_des_communs_numeriques_globaux_new_sustainability
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -97,6 +109,23 @@ La tension centrale de l'Alliance réside dans la contradiction entre son discou
 - [[geopolitique_conflits]]
 - [[technologie_information]]
 - [[gouvernance_institutions]]
+
+
+## Relations
+**Alliés :**
+- [[bloc_eurasien_souverainiste_new_sustainability]]
+- [[conseil_technocratique_de_coordination_regionale_new_sustainability]]
+- [[factions_souverainistes_des_blocs_peripheriques_new_sustainability]]
+- [[prisme_global_new_sustainability]]
+- [[reseaux_d_information_souverainistes_fermes_new_sustainability]]
+- [[souverainistes_du_bloc_eurasien_new_sustainability]]
+**Opposants :**
+- [[centre_institutionnel_geneve_new_sustainability]]
+- [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]]
+- [[conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability]]
+- [[etats_souverainistes_anti_reseau_new_sustainability]]
+- [[observatoire_anti_monopole_de_geneve_new_sustainability]]
+- [[reseau_des_communs_numeriques_globaux_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

@@ -32,8 +32,32 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- bloc_des_gouvernements_souverainistes_hydriques_new_sustainability
+- coalition_des_industries_extractives_residuelles_new_sustainability
+- enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability
+- etats_souverainistes_anti_reseau_new_sustainability
+- factions_souverainistes_des_blocs_peripheriques_new_sustainability
+- internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
+- mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability
+- reseaux_d_information_souverainistes_fermes_new_sustainability
+- souverainistes_du_bloc_eurasien_new_sustainability
+oppositions:
+- agence_stabilisation_climatique_new_sustainability
+- bloc_eurasien_souverainiste_new_sustainability
+- bureau_gouvernance_algorithmique_new_sustainability
+- centre_institutionnel_geneve_new_sustainability
+- conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability
+- conseil_regulation_algorithmique_new_sustainability
+- conseil_regulation_ressources_new_sustainability
+- consortium_africain_de_biotechnologies_sociales_new_sustainability
+- fonds_mondial_de_redistribution_technologique_new_sustainability
+- fonds_mondial_de_regeneration_ecologique_new_sustainability
+- fonds_mondial_de_transition_ecologique_du_travail_new_sustainability
+- kalaallit_nunaat_sovereign_fund_new_sustainability
+- parlement_deliberatif_mondial_new_sustainability
+- reseau_des_agences_climatiques_regionales_new_sustainability
+- reseau_global_de_cliniques_regeneratives_new_sustainability
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -100,6 +124,36 @@ La Coalition se trouve prise dans une contradiction fondamentale : elle défend 
 - [[systeme_economique_redistribution]]
 - [[gouvernance_institutions]]
 - [[geopolitique_conflits]]
+
+
+
+## Relations
+**Alliés :**
+- [[bloc_des_gouvernements_souverainistes_hydriques_new_sustainability]]
+- [[coalition_des_industries_extractives_residuelles_new_sustainability]]
+- [[enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability]]
+- [[etats_souverainistes_anti_reseau_new_sustainability]]
+- [[factions_souverainistes_des_blocs_peripheriques_new_sustainability]]
+- [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]]
+- [[mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability]]
+- [[reseaux_d_information_souverainistes_fermes_new_sustainability]]
+- [[souverainistes_du_bloc_eurasien_new_sustainability]]
+**Opposants :**
+- [[agence_stabilisation_climatique_new_sustainability]]
+- [[bloc_eurasien_souverainiste_new_sustainability]]
+- [[bureau_gouvernance_algorithmique_new_sustainability]]
+- [[centre_institutionnel_geneve_new_sustainability]]
+- [[conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability]]
+- [[conseil_regulation_algorithmique_new_sustainability]]
+- [[conseil_regulation_ressources_new_sustainability]]
+- [[consortium_africain_de_biotechnologies_sociales_new_sustainability]]
+- [[fonds_mondial_de_redistribution_technologique_new_sustainability]]
+- [[fonds_mondial_de_regeneration_ecologique_new_sustainability]]
+- [[fonds_mondial_de_transition_ecologique_du_travail_new_sustainability]]
+- [[kalaallit_nunaat_sovereign_fund_new_sustainability]]
+- [[parlement_deliberatif_mondial_new_sustainability]]
+- [[reseau_des_agences_climatiques_regionales_new_sustainability]]
+- [[reseau_global_de_cliniques_regeneratives_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

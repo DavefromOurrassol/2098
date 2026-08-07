@@ -4,6 +4,7 @@ type: instance
 slug: ecosynth_global_reference
 entite: ecosynth_global
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: null
   lieu: null

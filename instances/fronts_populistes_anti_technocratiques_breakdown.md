@@ -37,7 +37,18 @@ zone_systemique:
 alliances:
 - communes_rust_belt_zones_libres_breakdown
 oppositions:
+- agadez_ligue_sahel_numerique_breakdown
+- agence_stabilisation_climatique_breakdown
+- directive_kontinuum_breakdown
+- front_techno_reconstructionniste_breakdown
 - geneve_bunker_institutions_breakdown
+- lagos_est_nexcore_breakdown
+- occitanie_racines_meres_breakdown
+- oracle_des_seuils_breakdown
+- rede_paulista_de_distribuic_o_algor_tmica_breakdown
+- seoul_collectif_nexcore_breakdown
+- tour_bcuc_geneve_breakdown
+- tribunal_algorithmique_de_bruxelles_breakdown
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -95,11 +106,23 @@ La contradiction fondamentale qui ronge les Fronts est leur dépendance aux rés
 - [[valeurs_culture_tempo_sociale]]
 - [[organisation_territoires]]
 
+
 ## Relations
 **Alliés :**
 - [[communes_rust_belt_zones_libres_breakdown]]
 **Opposants :**
+- [[agadez_ligue_sahel_numerique_breakdown]]
+- [[agence_stabilisation_climatique_breakdown]]
+- [[directive_kontinuum_breakdown]]
+- [[front_techno_reconstructionniste_breakdown]]
 - [[geneve_bunker_institutions_breakdown]]
+- [[lagos_est_nexcore_breakdown]]
+- [[occitanie_racines_meres_breakdown]]
+- [[oracle_des_seuils_breakdown]]
+- [[rede_paulista_de_distribuic_o_algor_tmica_breakdown]]
+- [[seoul_collectif_nexcore_breakdown]]
+- [[tour_bcuc_geneve_breakdown]]
+- [[tribunal_algorithmique_de_bruxelles_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

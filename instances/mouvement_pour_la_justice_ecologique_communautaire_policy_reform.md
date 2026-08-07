@@ -35,8 +35,41 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- coalition_des_semences_libres_policy_reform
+- coalition_des_villes_de_reconversion_policy_reform
+- collectifs_citoyens_de_deliberation_augmentee_policy_reform
+- collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform
+- collectifs_de_biohackers_agro_communautaires_policy_reform
+- collectifs_de_defense_hydrique_saheliens_policy_reform
+- collectifs_de_gouvernance_communautaire_decentralisee_policy_reform
+- collectifs_de_hackers_biospheriques_policy_reform
+- collectifs_de_resistance_aux_relocalisations_forcees_policy_reform
+- consortium_amazonia_viva_policy_reform
+- courants_post_technocratiques_de_reconquete_democratique_policy_reform
+- factions_internes_pro_desaugmentation_totale_policy_reform
+- front_des_autonomies_territoriales_radicales_policy_reform
+- front_des_communes_algorithmiques_policy_reform
+- great_lakes_autonomous_compact_policy_reform
+- institut_de_therapeutique_integree_de_nairobi_policy_reform
+- internationale_decroissante_anti_planification_policy_reform
+- les_veilleurs_du_fleuve_policy_reform
+- mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform
+- pacifique_sud_resilience_network_policy_reform
+- reseau_des_journalistes_d_investigation_energetique_policy_reform
+oppositions:
+- agence_stabilisation_climatique_policy_reform
+- agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
+- autorite_mondiale_du_vivant_amv_policy_reform
+- bureau_gouvernance_algorithmique_policy_reform
+- coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform
+- conseil_regulation_ressources_policy_reform
+- consortium_de_geo_ingenierie_atmospherique_pacifique_policy_reform
+- consortiums_agro_industriels_du_bassin_fluvial_policy_reform
+- courant_autoritaire_recuperateur_du_vocabulaire_communautaire_policy_reform
+- factions_technocratiques_de_la_marchandisation_hydrique_policy_reform
+- grille_aria_policy_reform
+- trame_bioclimatique_policy_reform
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -101,6 +134,44 @@ Le mouvement est écartelé entre son ancrage résolument local et la nécessit�
 - [[organisation_territoires]]
 - [[gouvernance_institutions]]
 - [[climat_environnement_global]]
+
+
+## Relations
+**Alliés :**
+- [[coalition_des_semences_libres_policy_reform]]
+- [[coalition_des_villes_de_reconversion_policy_reform]]
+- [[collectifs_citoyens_de_deliberation_augmentee_policy_reform]]
+- [[collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform]]
+- [[collectifs_de_biohackers_agro_communautaires_policy_reform]]
+- [[collectifs_de_defense_hydrique_saheliens_policy_reform]]
+- [[collectifs_de_gouvernance_communautaire_decentralisee_policy_reform]]
+- [[collectifs_de_hackers_biospheriques_policy_reform]]
+- [[collectifs_de_resistance_aux_relocalisations_forcees_policy_reform]]
+- [[consortium_amazonia_viva_policy_reform]]
+- [[courants_post_technocratiques_de_reconquete_democratique_policy_reform]]
+- [[factions_internes_pro_desaugmentation_totale_policy_reform]]
+- [[front_des_autonomies_territoriales_radicales_policy_reform]]
+- [[front_des_communes_algorithmiques_policy_reform]]
+- [[great_lakes_autonomous_compact_policy_reform]]
+- [[institut_de_therapeutique_integree_de_nairobi_policy_reform]]
+- [[internationale_decroissante_anti_planification_policy_reform]]
+- [[les_veilleurs_du_fleuve_policy_reform]]
+- [[mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform]]
+- [[pacifique_sud_resilience_network_policy_reform]]
+- [[reseau_des_journalistes_d_investigation_energetique_policy_reform]]
+**Opposants :**
+- [[agence_stabilisation_climatique_policy_reform]]
+- [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]
+- [[autorite_mondiale_du_vivant_amv_policy_reform]]
+- [[bureau_gouvernance_algorithmique_policy_reform]]
+- [[coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform]]
+- [[conseil_regulation_ressources_policy_reform]]
+- [[consortium_de_geo_ingenierie_atmospherique_pacifique_policy_reform]]
+- [[consortiums_agro_industriels_du_bassin_fluvial_policy_reform]]
+- [[courant_autoritaire_recuperateur_du_vocabulaire_communautaire_policy_reform]]
+- [[factions_technocratiques_de_la_marchandisation_hydrique_policy_reform]]
+- [[grille_aria_policy_reform]]
+- [[trame_bioclimatique_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

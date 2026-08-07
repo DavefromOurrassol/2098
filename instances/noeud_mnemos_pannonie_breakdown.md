@@ -4,6 +4,7 @@ type: instance
 slug: noeud_mnemos_pannonie_breakdown
 entite: noeud_mnemos_pannonie
 scenario: breakdown
+statut: officialise_enrichi
 localisation:
   zone: noeud_mnemos_pannonie
   lieu: Győr, plaine pannonienne (bassin du Danube)
@@ -34,19 +35,19 @@ zone_systemique:
     - société
 
 alliances:
-    - reseau_mnemos_breakdown
-    - collectifs_de_gardiens_archivistes_itinerants_breakdown
-    - communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
-    - communautes_rurales_autonomes_breakdown
-    - archives_neutres_de_geneve_breakdown
-    - federation_communs_territoriaux_breakdown
-
+- archives_neutres_de_geneve_breakdown
+- collectifs_de_gardiens_archivistes_itinerants_breakdown
+- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- communautes_rurales_autonomes_breakdown
+- corridors_eurasiens_convoyage_breakdown
+- federation_communs_territoriaux_breakdown
+- reseau_mnemos_breakdown
+- tour_bcuc_geneve_breakdown
 oppositions:
-    - seigneuries_foncieres_opportunistes_breakdown
-    - milices_de_controle_territorial_breakdown
-    - factions_propagandistes_des_archives_breakdown
-    - seigneurs_de_guerre_agro_territoriaux_breakdown
-
+- factions_propagandistes_des_archives_breakdown
+- milices_de_controle_territorial_breakdown
+- seigneuries_foncieres_opportunistes_breakdown
+- seigneurs_de_guerre_agro_territoriaux_breakdown
 type_relation_dominante: neutralité
 
 annee_debut: 2061
@@ -90,12 +91,25 @@ Collecte, numérisation partielle et conservation physique des archives juridiqu
 - [[organisation_territoires]]
 - [[technologie_information]]
 
-## Relations
-**Alliés** : [[reseau_mnemos_breakdown]], [[collectifs_de_gardiens_archivistes_itinerants_breakdown]], [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]], [[communautes_rurales_autonomes_breakdown]], [[archives_neutres_de_geneve_breakdown]], [[federation_communs_territoriaux_breakdown]]
-**Opposants** : [[seigneuries_foncieres_opportunistes_breakdown]], [[milices_de_controle_territorial_breakdown]], [[factions_propagandistes_des_archives_breakdown]], [[seigneurs_de_guerre_agro_territoriaux_breakdown]]
 
 ## Description journalistique
 Dans les caves d'une ancienne mairie de Győr transformée en dépôt d'archives improvisé, une dizaine de silhouettes penchées sur des registres papier et des tablettes de fortune constituent ce que les habitants de la plaine appellent simplement 'les Gardiens'. Anciens archivistes d'État, ex-cadastreurs hongrois ou techniciens reconvertis de Bratislava, ils ont tissé en vingt ans un réseau de mémoire vivante qui court de village en village le long du Danube. Quand deux communes se disputent un puits ou la propriété d'un grenier communautaire, ce sont eux qu'on convoque — non parce qu'ils ont été élus, mais parce qu'ils détiennent les preuves. Leur pouvoir est celui de l'encre sur le papier dans un monde où les serveurs sont morts.
 
 ## Tensions narratives
 La neutralité des Gardiens est leur seul bouclier, mais elle se fissure : une seigneurie foncière opportuniste propose des vivres et de la protection en échange d'une relecture favorable d'anciens titres de propriété, mettant en crise la faction la plus précaire du nœud. Par ailleurs, la question de la légitimité de leur arbitrage monte : qui a mandaté ces archivistes pour trancher les litiges ? Certaines communes contestent leurs verdicts documentaires, les accusant de favoriser les villages qui leur apportent le plus de ressources. Enfin, un fragment rival du réseau Mnemos, opérant depuis Novi Sad avec des méthodes plus opaques, commence à concurrencer leur autorité mémorielle sur le sud de la plaine.
+
+## Relations
+**Alliés :**
+- [[archives_neutres_de_geneve_breakdown]]
+- [[collectifs_de_gardiens_archivistes_itinerants_breakdown]]
+- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[communautes_rurales_autonomes_breakdown]]
+- [[corridors_eurasiens_convoyage_breakdown]]
+- [[federation_communs_territoriaux_breakdown]]
+- [[reseau_mnemos_breakdown]]
+- [[tour_bcuc_geneve_breakdown]]
+**Opposants :**
+- [[factions_propagandistes_des_archives_breakdown]]
+- [[milices_de_controle_territorial_breakdown]]
+- [[seigneuries_foncieres_opportunistes_breakdown]]
+- [[seigneurs_de_guerre_agro_territoriaux_breakdown]]

@@ -36,8 +36,21 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- brigades_medicales_itinerantes_breakdown
+- collectifs_de_sante_communautaire_autogeree_breakdown
+- front_humanitaire_d_urgence_non_affilie_breakdown
+- reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown
+- reseaux_de_soigneurs_traditionnels_breakdown
+oppositions:
+- carthage_nord_nexcore_breakdown
+- etats_fragmentes_nationalisant_les_stocks_breakdown
+- federation_communs_territoriaux_breakdown
+- gouvernements_de_forteresse_anti_nairobi_breakdown
+- grandes_lacs_compact_eau_breakdown
+- milices_d_accaparement_hydrique_breakdown
+- milices_de_controle_territorial_breakdown
+- seigneuries_logistiques_armees_breakdown
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -98,6 +111,24 @@ La tension centrale est celle de la responsabilité sans sujet : les flux migrat
 - [[demographie_mobilite_humaine]]
 - [[organisation_territoires]]
 - [[gouvernance_institutions]]
+
+
+## Relations
+**Alliés :**
+- [[brigades_medicales_itinerantes_breakdown]]
+- [[collectifs_de_sante_communautaire_autogeree_breakdown]]
+- [[front_humanitaire_d_urgence_non_affilie_breakdown]]
+- [[reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown]]
+- [[reseaux_de_soigneurs_traditionnels_breakdown]]
+**Opposants :**
+- [[carthage_nord_nexcore_breakdown]]
+- [[etats_fragmentes_nationalisant_les_stocks_breakdown]]
+- [[federation_communs_territoriaux_breakdown]]
+- [[gouvernements_de_forteresse_anti_nairobi_breakdown]]
+- [[grandes_lacs_compact_eau_breakdown]]
+- [[milices_d_accaparement_hydrique_breakdown]]
+- [[milices_de_controle_territorial_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

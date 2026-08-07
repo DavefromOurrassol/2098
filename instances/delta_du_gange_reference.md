@@ -4,6 +4,7 @@ type: instance
 slug: delta_du_gange_reference
 entite: delta_du_gange
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: delta_du_gange
   lieu: Delta du Gange

@@ -34,8 +34,38 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- milices_de_controle_territorial_breakdown
+- reseau_de_recuperation_industrielle_illicite_breakdown
+- reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown
+- seigneuries_logistiques_armees_breakdown
+- seigneurs_de_guerre_agro_territoriaux_breakdown
+oppositions:
+- agadez_ligue_sahel_numerique_breakdown
+- blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
+- cargo_mombasa_crrc_breakdown
+- cartels_logistiques_regionaux_breakdown
+- collectif_des_climatologues_sans_etat_breakdown
+- communes_rust_belt_breakdown
+- consortiums_logistiques_agro_corporatifs_breakdown
+- corridors_eurasiens_convoyage_breakdown
+- enclaves_agro_communautaires_autonomes_breakdown
+- etats_fragmentes_nationalisant_les_stocks_breakdown
+- factions_etatiques_residuelles_de_souverainete_hydrique_breakdown
+- factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
+- factions_paramilitaires_locales_neutralisees_breakdown
+- front_de_resistance_aux_peages_sur_les_ressources_breakdown
+- hanse_baltique_breakdown
+- lagos_est_nexcore_breakdown
+- ligue_mediterraneenne_des_villes_etats_portuaires_breakdown
+- milices_agro_defensives_locales_breakdown
+- milices_contractuelles_des_anciens_etats_membres_breakdown
+- milices_privees_documentees_terrain_breakdown
+- nairobi_crrc_breakdown
+- noeud_nordark_tromso_breakdown
+- reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown
+- reseaux_noirs_pharmaceutiques_breakdown
+- vasil_orentchev_breakdown
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -91,6 +121,42 @@ La tension centrale de ce réseau réside dans la contradiction entre sa logique
 - [[organisation_territoires]]
 - [[geopolitique_conflits]]
 - [[frontieres_du_systeme]]
+
+
+
+## Relations
+**Alliés :**
+- [[milices_de_controle_territorial_breakdown]]
+- [[reseau_de_recuperation_industrielle_illicite_breakdown]]
+- [[reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]
+- [[seigneurs_de_guerre_agro_territoriaux_breakdown]]
+**Opposants :**
+- [[agadez_ligue_sahel_numerique_breakdown]]
+- [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
+- [[cargo_mombasa_crrc_breakdown]]
+- [[cartels_logistiques_regionaux_breakdown]]
+- [[collectif_des_climatologues_sans_etat_breakdown]]
+- [[communes_rust_belt_breakdown]]
+- [[consortiums_logistiques_agro_corporatifs_breakdown]]
+- [[corridors_eurasiens_convoyage_breakdown]]
+- [[enclaves_agro_communautaires_autonomes_breakdown]]
+- [[etats_fragmentes_nationalisant_les_stocks_breakdown]]
+- [[factions_etatiques_residuelles_de_souverainete_hydrique_breakdown]]
+- [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]]
+- [[factions_paramilitaires_locales_neutralisees_breakdown]]
+- [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
+- [[hanse_baltique_breakdown]]
+- [[lagos_est_nexcore_breakdown]]
+- [[ligue_mediterraneenne_des_villes_etats_portuaires_breakdown]]
+- [[milices_agro_defensives_locales_breakdown]]
+- [[milices_contractuelles_des_anciens_etats_membres_breakdown]]
+- [[milices_privees_documentees_terrain_breakdown]]
+- [[nairobi_crrc_breakdown]]
+- [[noeud_nordark_tromso_breakdown]]
+- [[reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown]]
+- [[reseaux_noirs_pharmaceutiques_breakdown]]
+- [[vasil_orentchev_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

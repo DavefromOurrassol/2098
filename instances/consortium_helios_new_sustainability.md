@@ -4,6 +4,7 @@ type: instance
 slug: consortium_helios_new_sustainability
 entite: consortium_helios
 scenario: new_sustainability
+statut: officialise_enrichi
 localisation:
   zone: null
   lieu: null
@@ -39,15 +40,16 @@ zone_systemique:
     - orbital
 
 alliances:
-    - conseil_energetique_intercontinental_new_sustainability
-    - fonds_mondial_de_redistribution_technologique_new_sustainability
-    - agence_orbitale_de_regulation_commune_aorc_new_sustainability
-
+- agence_orbitale_de_regulation_commune_aorc_new_sustainability
+- conseil_energetique_intercontinental_new_sustainability
+- fonds_mondial_de_redistribution_technologique_new_sustainability
+- operateurs_de_fusion_energetique_regionaux_new_sustainability
+- union_des_blocs_energetiques_regionaux_new_sustainability
 oppositions:
-    - mouvement_communautaire_des_micro_grids_energetiques_new_sustainability
-    - faction_conservatrice_pro_actif_strategique_new_sustainability
-    - observatoire_anti_monopole_de_geneve_new_sustainability
-
+- faction_conservatrice_pro_actif_strategique_new_sustainability
+- mouvement_communautaire_des_micro_grids_energetiques_new_sustainability
+- observatoire_anti_monopole_de_geneve_new_sustainability
+- reseau_des_ingenieurs_climatiques_du_sud_global_new_sustainability
 type_relation_dominante: coopération
 
 annee_debut: 2026
@@ -91,12 +93,22 @@ Helios gère et maintient les réseaux de captage solaire orbital mutualisés so
 - [[gouvernance_institutions]]
 - [[geopolitique_conflits]]
 
-## Relations
-**Alliés** : [[conseil_energetique_intercontinental_new_sustainability]], [[fonds_mondial_de_redistribution_technologique_new_sustainability]], [[agence_orbitale_de_regulation_commune_aorc_new_sustainability]]
-**Opposants** : [[mouvement_communautaire_des_micro_grids_energetiques_new_sustainability]], [[faction_conservatrice_pro_actif_strategique_new_sustainability]], [[observatoire_anti_monopole_de_geneve_new_sustainability]]
 
 ## Description journalistique
 En 2098, Helios n'est plus tout à fait le prédateur silencieux qu'il fut dans les années 2040. Ses tours de contrôle orbital scintillent toujours au-dessus des continents, mais les logos blancs et or arborent désormais le sceau bleu du Conseil Énergétique Intercontinental. Ses dirigeants siègent en costume sobre dans des forums de gouvernance retransmis en temps réel — loin des salles closes d'antan. Pour ses défenseurs, Helios est l'exemple parfait d'une privatisation disciplinée au service du bien commun. Pour ses critiques les plus acérés, c'est un loup devenu chien de berger : il garde encore le troupeau, mais c'est lui qui a négocié les termes de sa propre laisse.
 
 ## Tensions narratives
 La tension fondamentale entre bien commun et actif stratégique n'a pas disparu — elle s'est intériorisée. Une faction dirigeante au sein d'Helios milite discrètement pour une renégociation des licences communes lors du renouvellement du traité de 2101, cherchant à récupérer la souveraineté tarifaire sur les zones à forte densité énergétique. Par ailleurs, la montée des réseaux micro-énergétiques communautaires remet en question la pertinence même d'un acteur centralisé, aussi régulé soit-il. Enfin, la question de qui contrôle réellement les algorithmes d'optimisation IA d'Helios — et donc qui décide des priorités d'allocation en cas de crise — reste délibérément opaque, malgré les audits officiels.
+
+## Relations
+**Alliés :**
+- [[agence_orbitale_de_regulation_commune_aorc_new_sustainability]]
+- [[conseil_energetique_intercontinental_new_sustainability]]
+- [[fonds_mondial_de_redistribution_technologique_new_sustainability]]
+- [[operateurs_de_fusion_energetique_regionaux_new_sustainability]]
+- [[union_des_blocs_energetiques_regionaux_new_sustainability]]
+**Opposants :**
+- [[faction_conservatrice_pro_actif_strategique_new_sustainability]]
+- [[mouvement_communautaire_des_micro_grids_energetiques_new_sustainability]]
+- [[observatoire_anti_monopole_de_geneve_new_sustainability]]
+- [[reseau_des_ingenieurs_climatiques_du_sud_global_new_sustainability]]

@@ -31,8 +31,23 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- assemblees_bioterritoriales_regionales_eco_communalism
+- collectifs_de_techniciens_sobres_eco_communalism
+- confederation_bassins_vivants_eco_communalism
+- ligue_des_cites_du_sahel_numerique_eco_communalism
+- rede_paulista_de_distribuic_o_algor_tmica_eco_communalism
+- reseau_assemblees_fennoscandien_eco_communalism
+- reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism
+- sao_paulo_algorithmique_eco_communalism
+oppositions:
+- collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism
+- courant_isolationniste_anti_circulation_de_l_information_eco_communalism
+- factions_communautaires_refusant_le_partage_narratif_exterieur_eco_communalism
+- leena_vainala_eco_communalism
+- mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism
+- mouvement_des_communes_du_rust_belt_eco_communalism
+- tribunal_algorithmique_de_bruxelles_eco_communalism
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -100,6 +115,26 @@ La contradiction fondamentale qui les ronge est celle-ci : en prétendant allég
 - [[gouvernance_institutions]]
 - [[technologie_information]]
 - [[valeurs_culture_tempo_sociale]]
+
+
+## Relations
+**Alliés :**
+- [[assemblees_bioterritoriales_regionales_eco_communalism]]
+- [[collectifs_de_techniciens_sobres_eco_communalism]]
+- [[confederation_bassins_vivants_eco_communalism]]
+- [[ligue_des_cites_du_sahel_numerique_eco_communalism]]
+- [[rede_paulista_de_distribuic_o_algor_tmica_eco_communalism]]
+- [[reseau_assemblees_fennoscandien_eco_communalism]]
+- [[reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism]]
+- [[sao_paulo_algorithmique_eco_communalism]]
+**Opposants :**
+- [[collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism]]
+- [[courant_isolationniste_anti_circulation_de_l_information_eco_communalism]]
+- [[factions_communautaires_refusant_le_partage_narratif_exterieur_eco_communalism]]
+- [[leena_vainala_eco_communalism]]
+- [[mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism]]
+- [[mouvement_des_communes_du_rust_belt_eco_communalism]]
+- [[tribunal_algorithmique_de_bruxelles_eco_communalism]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

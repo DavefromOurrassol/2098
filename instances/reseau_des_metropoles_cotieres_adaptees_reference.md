@@ -32,13 +32,19 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
-- institutions_multilaterales_survivantes_reference
-- geneve_lac_retreite_reference
-- nairobi_crrc_reference
-- singapour_est_reference
+- agence_stabilisation_climatique_reference
+- bruxelles_nouveau_reference
 - delta_du_gange_reference
 - delta_du_mekong_reference
+- detroit_compact_grands_lacs_reference
+- geneve_lac_retreite_reference
+- great_lakes_autonomous_compact_reference
+- institutions_multilaterales_survivantes_reference
+- nairobi_crrc_reference
 - pacifique_sud_archipels_flottants_reference
+- pacifique_sud_resilience_network_reference
+- reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference
+- singapour_est_reference
 - valparaiso_fct_reference
 oppositions:
 - pacte_des_souverains_reference
@@ -107,19 +113,26 @@ Le Réseau est écartelé entre deux logiques irréconciliables : celle des mét
 - [[climat_environnement_global]]
 - [[demographie_mobilite_humaine]]
 
+
 ## Relations
 **Alliés :**
-- [[institutions_multilaterales_survivantes]]
-- [[geneve_lac_retreite]]
-- [[nairobi_crrc]]
-- [[singapour_est]]
-- [[delta_du_gange]]
-- [[delta_du_mekong]]
-- [[pacifique_sud_archipels_flottants]]
-- [[valparaiso_fct]]
+- [[agence_stabilisation_climatique_reference]]
+- [[bruxelles_nouveau_reference]]
+- [[delta_du_gange_reference]]
+- [[delta_du_mekong_reference]]
+- [[detroit_compact_grands_lacs_reference]]
+- [[geneve_lac_retreite_reference]]
+- [[great_lakes_autonomous_compact_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
+- [[nairobi_crrc_reference]]
+- [[pacifique_sud_archipels_flottants_reference]]
+- [[pacifique_sud_resilience_network_reference]]
+- [[reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference]]
+- [[singapour_est_reference]]
+- [[valparaiso_fct_reference]]
 **Opposants :**
-- [[pacte_des_souverains]]
-- [[zones_grises_globales]]
+- [[pacte_des_souverains_reference]]
+- [[zones_grises_globales_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

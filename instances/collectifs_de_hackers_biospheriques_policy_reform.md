@@ -31,8 +31,24 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- coalition_des_semences_libres_policy_reform
+- collectifs_citoyens_de_deliberation_augmentee_policy_reform
+- collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform
+- collectifs_de_biohackers_agro_communautaires_policy_reform
+- collectifs_de_gouvernance_communautaire_decentralisee_policy_reform
+- courants_post_technocratiques_de_reconquete_democratique_policy_reform
+- mouvement_pour_la_justice_ecologique_communautaire_policy_reform
+- reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
+oppositions:
+- agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
+- autorite_mondiale_du_vivant_amv_policy_reform
+- bureau_gouvernance_algorithmique_policy_reform
+- conseil_regulation_ressources_policy_reform
+- consortium_de_geo_ingenierie_atmospherique_pacifique_policy_reform
+- factions_technocratiques_de_la_marchandisation_hydrique_policy_reform
+- nexus_biosyn_policy_reform
+- trame_bioclimatique_policy_reform
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -95,6 +111,27 @@ Les Collectifs se trouvent dans une contradiction structurelle : pour contester 
 - [[technologie_information]]
 - [[climat_environnement_global]]
 - [[gouvernance_institutions]]
+
+
+## Relations
+**Alliés :**
+- [[coalition_des_semences_libres_policy_reform]]
+- [[collectifs_citoyens_de_deliberation_augmentee_policy_reform]]
+- [[collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform]]
+- [[collectifs_de_biohackers_agro_communautaires_policy_reform]]
+- [[collectifs_de_gouvernance_communautaire_decentralisee_policy_reform]]
+- [[courants_post_technocratiques_de_reconquete_democratique_policy_reform]]
+- [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]]
+- [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]]
+**Opposants :**
+- [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]
+- [[autorite_mondiale_du_vivant_amv_policy_reform]]
+- [[bureau_gouvernance_algorithmique_policy_reform]]
+- [[conseil_regulation_ressources_policy_reform]]
+- [[consortium_de_geo_ingenierie_atmospherique_pacifique_policy_reform]]
+- [[factions_technocratiques_de_la_marchandisation_hydrique_policy_reform]]
+- [[nexus_biosyn_policy_reform]]
+- [[trame_bioclimatique_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

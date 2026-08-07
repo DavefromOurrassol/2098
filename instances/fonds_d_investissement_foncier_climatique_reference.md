@@ -37,8 +37,24 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_stabilisation_climatique_reference
+- banque_mondiale_des_transitions_climatiques_reference
+- consortiums_energetiques_des_megapoles_reference
+- institutions_multilaterales_survivantes_reference
+- observatoire_climatique_des_territoires_oct_reference
+oppositions:
+- bloc_des_souverainistes_climatiques_reference
+- consortium_amazonia_viva_reference
+- cooperative_terrafond_reference
+- cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference
+- cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference
+- federation_communs_territoriaux_reference
+- frente_sert_o_livre_reference
+- geneve_lac_retreite_reference
+- gouvernements_du_bloc_sahelien_autonome_reference
+- pacifique_sud_resilience_network_reference
+- reseau_des_cooperatives_agro_saheliennes_reference
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -102,6 +118,27 @@ La tension centrale du FIFC réside dans la contradiction entre sa mission décl
 - [[organisation_territoires]]
 - [[systeme_economique_redistribution]]
 - [[climat_environnement_global]]
+
+
+## Relations
+**Alliés :**
+- [[agence_stabilisation_climatique_reference]]
+- [[banque_mondiale_des_transitions_climatiques_reference]]
+- [[consortiums_energetiques_des_megapoles_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
+- [[observatoire_climatique_des_territoires_oct_reference]]
+**Opposants :**
+- [[bloc_des_souverainistes_climatiques_reference]]
+- [[consortium_amazonia_viva_reference]]
+- [[cooperative_terrafond_reference]]
+- [[cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference]]
+- [[cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference]]
+- [[federation_communs_territoriaux_reference]]
+- [[frente_sert_o_livre_reference]]
+- [[geneve_lac_retreite_reference]]
+- [[gouvernements_du_bloc_sahelien_autonome_reference]]
+- [[pacifique_sud_resilience_network_reference]]
+- [[reseau_des_cooperatives_agro_saheliennes_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

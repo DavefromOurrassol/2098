@@ -34,8 +34,34 @@ zone_geographique:
 - régionale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_stabilisation_climatique_reference
+- collectif_nuit_jaune_reference
+- collectifs_academiques_independants_reference
+- federation_communs_territoriaux_reference
+- institutions_multilaterales_survivantes_reference
+- observatoire_climatique_des_territoires_oct_reference
+- ong_de_tracabilite_des_ressources_critiques_reference
+- ong_environnementales_de_terrain_reference
+- prisme_global_reference
+- reseau_des_administrations_locales_rurales_participatives_reference
+- reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference
+- reseau_mnemos_reference
+- reseaux_de_capteurs_citoyens_reference
+- reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference
+- syndicats_de_travailleurs_de_la_transition_energetique_reference
+- universites_et_think_tanks_en_zones_de_liberte_academique_reference
+oppositions:
+- bureau_des_territoires_residuels_reference
+- bureaux_de_regulation_informationnelle_reference
+- consortiums_d_extraction_miniere_du_bassin_congolais_reference
+- consortiums_mediatiques_corporatifs_reference
+- datasovereign_reference
+- directive_kontinuum_reference
+- etats_a_tendance_centraliste_numerique_reference
+- plateformes_centralisees_de_narration_officielle_reference
+- plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference
+- services_de_contre_information_des_blocs_geopolitiques_concurrents_reference
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -96,6 +122,37 @@ La tension fondamentale de ces collectifs réside dans le paradoxe de leur légi
 - [[technologie_information]]
 - [[valeurs_culture_tempo_sociale]]
 - [[gouvernance_institutions]]
+
+
+## Relations
+**Alliés :**
+- [[agence_stabilisation_climatique_reference]]
+- [[collectif_nuit_jaune_reference]]
+- [[collectifs_academiques_independants_reference]]
+- [[federation_communs_territoriaux_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
+- [[observatoire_climatique_des_territoires_oct_reference]]
+- [[ong_de_tracabilite_des_ressources_critiques_reference]]
+- [[ong_environnementales_de_terrain_reference]]
+- [[prisme_global_reference]]
+- [[reseau_des_administrations_locales_rurales_participatives_reference]]
+- [[reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference]]
+- [[reseau_mnemos_reference]]
+- [[reseaux_de_capteurs_citoyens_reference]]
+- [[reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference]]
+- [[syndicats_de_travailleurs_de_la_transition_energetique_reference]]
+- [[universites_et_think_tanks_en_zones_de_liberte_academique_reference]]
+**Opposants :**
+- [[bureau_des_territoires_residuels_reference]]
+- [[bureaux_de_regulation_informationnelle_reference]]
+- [[consortiums_d_extraction_miniere_du_bassin_congolais_reference]]
+- [[consortiums_mediatiques_corporatifs_reference]]
+- [[datasovereign_reference]]
+- [[directive_kontinuum_reference]]
+- [[etats_a_tendance_centraliste_numerique_reference]]
+- [[plateformes_centralisees_de_narration_officielle_reference]]
+- [[plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference]]
+- [[services_de_contre_information_des_blocs_geopolitiques_concurrents_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

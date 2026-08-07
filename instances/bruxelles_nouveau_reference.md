@@ -4,6 +4,7 @@ type: instance
 slug: bruxelles_nouveau_reference
 entite: bruxelles_nouveau
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: bruxelles_nouveau
   lieu: Bruxelles-Nouveau
@@ -34,22 +35,22 @@ zone_systemique:
     - information
 
 alliances:
-    - tribunal_algorithmique_de_bruxelles_reference
-    - reseaux_de_gouvernance_multilaterale_survivants_reference
-    - conseil_de_geneve_pour_les_droits_biosociaux_reference
-    - confederation_des_megapoles_autonomes_reference
-    - reseau_des_metropoles_cotieres_adaptees_reference
-    - banque_mondiale_des_transitions_climatiques_reference
-    - conseil_des_etats_nordiques_integres_reference
-
+- banque_mondiale_des_transitions_climatiques_reference
+- confederation_des_megapoles_autonomes_reference
+- conseil_de_geneve_pour_les_droits_biosociaux_reference
+- conseil_des_etats_nordiques_integres_reference
+- europe_occidentale_reconstructee_reference
+- fonds_monetaire_climatique_fmc_reference
+- reseau_des_metropoles_cotieres_adaptees_reference
+- reseaux_de_gouvernance_multilaterale_survivants_reference
+- tribunal_algorithmique_de_bruxelles_reference
 oppositions:
-    - alliance_blocs_souverains_reference
-    - bloc_des_souverainistes_climatiques_reference
-    - gouvernements_federaux_residuels_souverainistes_reference
-    - coalition_pour_la_souverainete_numerique_nationale_reference
-    - etats_a_tendance_centraliste_numerique_reference
-    - bloc_eurasien_central_reference
-
+- alliance_blocs_souverains_reference
+- bloc_des_souverainistes_climatiques_reference
+- bloc_eurasien_central_reference
+- coalition_pour_la_souverainete_numerique_nationale_reference
+- etats_a_tendance_centraliste_numerique_reference
+- gouvernements_federaux_residuels_souverainistes_reference
 type_relation_dominante: neutralité
 
 annee_debut: 2026
@@ -91,12 +92,28 @@ Bruxelles Nouveau coordonne des cadres de négociation non contraignants sur les
 - [[gouvernance_institutions]]
 - [[geopolitique_conflits]]
 
-## Relations
-**Alliés** : [[tribunal_algorithmique_de_bruxelles_reference]], [[reseaux_de_gouvernance_multilaterale_survivants_reference]], [[conseil_de_geneve_pour_les_droits_biosociaux_reference]], [[confederation_des_megapoles_autonomes_reference]], [[reseau_des_metropoles_cotieres_adaptees_reference]], [[banque_mondiale_des_transitions_climatiques_reference]], [[conseil_des_etats_nordiques_integres_reference]]
-**Opposants** : [[alliance_blocs_souverains_reference]], [[bloc_des_souverainistes_climatiques_reference]], [[gouvernements_federaux_residuels_souverainistes_reference]], [[coalition_pour_la_souverainete_numerique_nationale_reference]], [[etats_a_tendance_centraliste_numerique_reference]], [[bloc_eurasien_central_reference]]
 
 ## Description journalistique
 Depuis les tours vitrées de son siège réaménagé au cœur de ce qui fut le quartier européen, Bruxelles Nouveau tient ses sessions plénières avec la ponctualité métronomique d'une institution qui a survécu à ses raisons d'être. Les délégués arrivent, signent les registres numériques, prononcent des déclarations communes sans valeur exécutoire, et repartent. Ses observateurs les plus lucides, à commencer par certains de ses propres fonctionnaires, admettent en privé que l'organisation joue essentiellement le rôle d'une chambre d'enregistrement diplomatique : elle légitime des arrangements négociés ailleurs, offre un cadre formel à des compromis conclus dans des couloirs moins visibles. Sa survie tient à une équation simple et cynique — chaque État membre préfère une coordination symbolique à une absence totale de coordination —, ce qui en dit long sur l'état de l'idéal européen en 2098.
 
 ## Tensions narratives
 La question qui hante Bruxelles Nouveau est celle de sa propre légitimité : peut-on coordonner sans autorité, représenter sans mandat, médier sans confiance ? La montée du Pacte des Souverains et des blocs eurasiatiques concurrents érode chaque année un peu plus son espace opérationnel, tandis que le Tribunal Algorithmique de Bruxelles — formellement sous son égide — acquiert une autorité pratique que l'institution-mère n'a jamais possédée. Une faction interne pousse à une refondation radicale vers un modèle de gouvernance à géométrie variable ; une autre s'accroche à la continuité comme garantie minimale contre le chaos. Entre ces deux tendances, Bruxelles Nouveau s'avance vers une bifurcation dont elle ne maîtrise ni le calendrier ni l'issue.
+
+## Relations
+**Alliés :**
+- [[banque_mondiale_des_transitions_climatiques_reference]]
+- [[confederation_des_megapoles_autonomes_reference]]
+- [[conseil_de_geneve_pour_les_droits_biosociaux_reference]]
+- [[conseil_des_etats_nordiques_integres_reference]]
+- [[europe_occidentale_reconstructee_reference]]
+- [[fonds_monetaire_climatique_fmc_reference]]
+- [[reseau_des_metropoles_cotieres_adaptees_reference]]
+- [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
+- [[tribunal_algorithmique_de_bruxelles_reference]]
+**Opposants :**
+- [[alliance_blocs_souverains_reference]]
+- [[bloc_des_souverainistes_climatiques_reference]]
+- [[bloc_eurasien_central_reference]]
+- [[coalition_pour_la_souverainete_numerique_nationale_reference]]
+- [[etats_a_tendance_centraliste_numerique_reference]]
+- [[gouvernements_federaux_residuels_souverainistes_reference]]

@@ -37,8 +37,43 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- collectif_hackers_decroissance_infrastructure_breakdown
 - communes_rust_belt_zones_libres_breakdown
-oppositions: []
+- factions_secessionnistes_agrariennes_du_desert_breakdown
+- les_veilleurs_du_fleuve_breakdown
+- mouvement_des_communes_du_rust_belt_breakdown
+- saboteurs_des_corridors_de_transit_breakdown
+oppositions:
+- autorite_passage_arctique_breakdown
+- cartels_logistiques_regionaux_breakdown
+- carthage_nord_nexcore_breakdown
+- coalition_pacifique_nord_breakdown
+- conglometrat_sino_siberien_bohai_transit_breakdown
+- consortium_energetique_oural_caspien_breakdown
+- consortiums_energetiques_samoiedes_du_yamal_breakdown
+- corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown
+- corridor_lithium_bouches_breakdown
+- directive_kontinuum_breakdown
+- enclaves_corporatives_fortifiees_breakdown
+- etats_fragmentes_nationalisant_les_stocks_breakdown
+- etats_fragments_en_guerre_pour_les_stations_atmospheriques_breakdown
+- factions_energetiques_heritieres_des_pactes_abs_breakdown
+- factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
+- factions_para_etatiques_hydriques_breakdown
+- front_techno_reconstructionniste_breakdown
+- grandes_lacs_compact_eau_breakdown
+- hanse_baltique_breakdown
+- kalaallit_nunaat_sovereign_fund_breakdown
+- lagos_est_nexcore_breakdown
+- milices_contractuelles_des_anciens_etats_membres_breakdown
+- milices_d_accaparement_hydrique_breakdown
+- milices_privees_documentees_terrain_breakdown
+- reseau_des_anciens_financeurs_devenus_censeurs_breakdown
+- reseau_logistique_criminel_concurrent_breakdown
+- seigneuries_logistiques_armees_breakdown
+- seigneurs_de_guerre_agro_territoriaux_breakdown
+- tour_bcuc_geneve_breakdown
+- vasil_orentchev_breakdown
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -96,9 +131,46 @@ Le Front est tiraillé entre sa posture de résistance non-violente héritée de
 - [[gouvernance_institutions]]
 - [[organisation_territoires]]
 
+
 ## Relations
 **Alliés :**
+- [[collectif_hackers_decroissance_infrastructure_breakdown]]
 - [[communes_rust_belt_zones_libres_breakdown]]
+- [[factions_secessionnistes_agrariennes_du_desert_breakdown]]
+- [[les_veilleurs_du_fleuve_breakdown]]
+- [[mouvement_des_communes_du_rust_belt_breakdown]]
+- [[saboteurs_des_corridors_de_transit_breakdown]]
+**Opposants :**
+- [[autorite_passage_arctique_breakdown]]
+- [[cartels_logistiques_regionaux_breakdown]]
+- [[carthage_nord_nexcore_breakdown]]
+- [[coalition_pacifique_nord_breakdown]]
+- [[conglometrat_sino_siberien_bohai_transit_breakdown]]
+- [[consortium_energetique_oural_caspien_breakdown]]
+- [[consortiums_energetiques_samoiedes_du_yamal_breakdown]]
+- [[corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown]]
+- [[corridor_lithium_bouches_breakdown]]
+- [[directive_kontinuum_breakdown]]
+- [[enclaves_corporatives_fortifiees_breakdown]]
+- [[etats_fragmentes_nationalisant_les_stocks_breakdown]]
+- [[etats_fragments_en_guerre_pour_les_stations_atmospheriques_breakdown]]
+- [[factions_energetiques_heritieres_des_pactes_abs_breakdown]]
+- [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]]
+- [[factions_para_etatiques_hydriques_breakdown]]
+- [[front_techno_reconstructionniste_breakdown]]
+- [[grandes_lacs_compact_eau_breakdown]]
+- [[hanse_baltique_breakdown]]
+- [[kalaallit_nunaat_sovereign_fund_breakdown]]
+- [[lagos_est_nexcore_breakdown]]
+- [[milices_contractuelles_des_anciens_etats_membres_breakdown]]
+- [[milices_d_accaparement_hydrique_breakdown]]
+- [[milices_privees_documentees_terrain_breakdown]]
+- [[reseau_des_anciens_financeurs_devenus_censeurs_breakdown]]
+- [[reseau_logistique_criminel_concurrent_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]
+- [[seigneurs_de_guerre_agro_territoriaux_breakdown]]
+- [[tour_bcuc_geneve_breakdown]]
+- [[vasil_orentchev_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

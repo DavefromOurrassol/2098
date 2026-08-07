@@ -33,8 +33,34 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- arctic_passage_authority_reference
+- collectifs_de_journalisme_embarque_reference
+- collectifs_de_journalistes_independants_regionaux_reference
+- conseil_de_geneve_pour_les_droits_biosociaux_reference
+- federation_des_cliniques_autonomes_reference
+- institutions_multilaterales_survivantes_reference
+- kinshasa_accords_hydriques_reference
+- observatoire_climatique_des_territoires_oct_reference
+- reseaux_de_capteurs_citoyens_reference
+- reseaux_de_gouvernance_multilaterale_survivants_reference
+- reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference
+- voix_du_dehors_reference
+oppositions:
+- armada_logistique_nordique_reference
+- bloc_ressources_eurasiatique_bre_reference
+- cartel_des_terres_rares_d_asie_centrale_reference
+- consortiums_d_extraction_miniere_du_bassin_congolais_reference
+- consortiums_energetiques_opaques_reference
+- consortiums_prives_d_extraction_de_ressources_critiques_reference
+- consortiums_prives_de_gestion_des_donnees_critiques_reference
+- corporations_d_extraction_energetique_non_signataires_reference
+- factions_d_extraction_miniere_independantes_reference
+- kalaallit_nunaat_sovereign_fund_reference
+- lobbies_industriels_des_etats_non_signataires_reference
+- operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference
+- reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference
+- vasil_orentchev_reference
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -96,6 +122,37 @@ L'ONG navigue en permanence entre son rôle de contre-pouvoir radical et les com
 - [[energie_ressources_critiques]]
 - [[gouvernance_institutions]]
 - [[climat_environnement_global]]
+
+
+## Relations
+**Alliés :**
+- [[arctic_passage_authority_reference]]
+- [[collectifs_de_journalisme_embarque_reference]]
+- [[collectifs_de_journalistes_independants_regionaux_reference]]
+- [[conseil_de_geneve_pour_les_droits_biosociaux_reference]]
+- [[federation_des_cliniques_autonomes_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
+- [[kinshasa_accords_hydriques_reference]]
+- [[observatoire_climatique_des_territoires_oct_reference]]
+- [[reseaux_de_capteurs_citoyens_reference]]
+- [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
+- [[reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference]]
+- [[voix_du_dehors_reference]]
+**Opposants :**
+- [[armada_logistique_nordique_reference]]
+- [[bloc_ressources_eurasiatique_bre_reference]]
+- [[cartel_des_terres_rares_d_asie_centrale_reference]]
+- [[consortiums_d_extraction_miniere_du_bassin_congolais_reference]]
+- [[consortiums_energetiques_opaques_reference]]
+- [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[consortiums_prives_de_gestion_des_donnees_critiques_reference]]
+- [[corporations_d_extraction_energetique_non_signataires_reference]]
+- [[factions_d_extraction_miniere_independantes_reference]]
+- [[kalaallit_nunaat_sovereign_fund_reference]]
+- [[lobbies_industriels_des_etats_non_signataires_reference]]
+- [[operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference]]
+- [[reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference]]
+- [[vasil_orentchev_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

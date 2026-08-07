@@ -4,6 +4,7 @@ type: instance
 slug: valparaiso_fct_reference
 entite: valparaiso_fct
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: valparaiso_fct
   lieu: Valparaíso
@@ -37,22 +38,23 @@ zone_systemique:
     - énergie
 
 alliances:
-    - fonds_souverains_de_la_ceinture_financiere_pacifique_reference
-    - operateurs_de_zones_economiques_speciales_periurbaines_reference
-    - consortium_logistique_asiatique_de_contournement_aln_reference
-    - guadalajara_nexus_reference
-    - singapour_est_reference
-    - administrations_hybrides_des_cites_relais_peripheriques_reference
-    - operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference
-
+- administrations_hybrides_des_cites_relais_peripheriques_reference
+- consortium_logistique_asiatique_de_contournement_aln_reference
+- fonds_souverains_de_la_ceinture_financiere_pacifique_reference
+- guadalajara_nexus_reference
+- operateurs_de_zones_economiques_speciales_periurbaines_reference
+- operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference
+- programme_onu_eau_2080_reference
+- reseau_des_metropoles_cotieres_adaptees_reference
+- singapour_est_reference
 oppositions:
-    - alliance_blocs_souverains_reference
-    - coalition_pour_la_souverainete_numerique_nationale_reference
-    - bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference
-    - front_souverainiste_des_ressources_d_amerique_du_sud_reference
-    - regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference
-    - gouvernements_federaux_residuels_souverainistes_reference
-
+- alliance_blocs_souverains_reference
+- bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference
+- coalition_pour_la_souverainete_numerique_nationale_reference
+- front_souverainiste_des_ressources_d_amerique_du_sud_reference
+- gouvernements_federaux_residuels_souverainistes_reference
+- operateurs_prives_d_energie_distribuee_hors_fct_reference
+- regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference
 type_relation_dominante: neutralité
 
 annee_debut: 2041
@@ -96,12 +98,29 @@ La FCT opère des chambres de compensation multidevises pour les échanges infor
 - [[gouvernance_institutions]]
 - [[energie_ressources_critiques]]
 
-## Relations
-**Alliés** : [[fonds_souverains_de_la_ceinture_financiere_pacifique_reference]], [[operateurs_de_zones_economiques_speciales_periurbaines_reference]], [[consortium_logistique_asiatique_de_contournement_aln_reference]], [[guadalajara_nexus_reference]], [[singapour_est_reference]], [[administrations_hybrides_des_cites_relais_peripheriques_reference]], [[operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference]]
-**Opposants** : [[alliance_blocs_souverains_reference]], [[coalition_pour_la_souverainete_numerique_nationale_reference]], [[bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference]], [[front_souverainiste_des_ressources_d_amerique_du_sud_reference]], [[regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference]], [[gouvernements_federaux_residuels_souverainistes_reference]]
 
 ## Description journalistique
 Depuis ses bureaux sans enseigne dans la zone portuaire haute de Valparaíso — aujourd'hui à trente mètres au-dessus du niveau de la mer post-submersion partielle — la FCT traite chaque jour des milliards d'unités de valeur qui n'existent dans aucun registre officiel. Ses agents, qu'on appelle 'compensateurs', sont des juristes, des ingénieurs de protocole et des anthropologues du commerce ; ils parlent tous au moins quatre langues réglementaires. Les délégations du BEC et des fonds pacifiques s'y croisent dans les mêmes couloirs sans jamais se reconnaître diplomatiquement, mais en signant les mêmes formulaires FCT. Un journaliste qui a tenté d'obtenir la liste complète de ses clients s'est vu remettre, poliment, une réponse standardisée en sept langues : 'La confidentialité des parties est la condition de leur confiance.'
 
 ## Tensions narratives
 La FCT est régulièrement accusée par des coalitions souverainistes de perpétuer la fragmentation qu'elle prétend gérer — sans elle, les blocs seraient peut-être contraints de négocier directement. Certains régulateurs du BEC soupçonnent ses chambres de compensation de servir de vecteur au blanchiment de flux énergétiques illicites issus des zones grises eurasiennes. En interne, une faction de 'compensateurs éthiques' pousse pour introduire des clauses d'exclusion sur les échanges finançant des acteurs de conflits hybrides — ce qui menacerait directement le modèle de neutralité absolue sur lequel repose toute l'architecture de confiance de la FCT.
+
+## Relations
+**Alliés :**
+- [[administrations_hybrides_des_cites_relais_peripheriques_reference]]
+- [[consortium_logistique_asiatique_de_contournement_aln_reference]]
+- [[fonds_souverains_de_la_ceinture_financiere_pacifique_reference]]
+- [[guadalajara_nexus_reference]]
+- [[operateurs_de_zones_economiques_speciales_periurbaines_reference]]
+- [[operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference]]
+- [[programme_onu_eau_2080_reference]]
+- [[reseau_des_metropoles_cotieres_adaptees_reference]]
+- [[singapour_est_reference]]
+**Opposants :**
+- [[alliance_blocs_souverains_reference]]
+- [[bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference]]
+- [[coalition_pour_la_souverainete_numerique_nationale_reference]]
+- [[front_souverainiste_des_ressources_d_amerique_du_sud_reference]]
+- [[gouvernements_federaux_residuels_souverainistes_reference]]
+- [[operateurs_prives_d_energie_distribuee_hors_fct_reference]]
+- [[regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference]]

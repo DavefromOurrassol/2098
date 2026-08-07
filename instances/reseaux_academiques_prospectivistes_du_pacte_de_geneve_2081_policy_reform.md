@@ -32,8 +32,36 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_stabilisation_climatique_policy_reform
+- agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
+- autorite_mondiale_du_vivant_amv_policy_reform
+- bloc_des_nations_a_economie_carbone_controlee_policy_reform
+- conseil_de_regulation_climatique_global_policy_reform
+- conseil_onu_de_gouvernance_numerique_et_ia_policy_reform
+- conseil_regulation_ressources_policy_reform
+- consortium_africain_de_biotechnologies_sociales_policy_reform
+- consortium_amazonia_viva_policy_reform
+- fonds_mondial_de_resilience_infrastructurelle_policy_reform
+- institut_brookings_singapour_de_politique_computationnelle_policy_reform
+- office_integre_des_flux_migratoires_policy_reform
+- oracle_des_seuils_policy_reform
+- pacifique_sud_resilience_network_policy_reform
+- prisme_global_policy_reform
+- reseau_des_agences_sanitaires_regionales_policy_reform
+- reseau_des_journalistes_d_investigation_energetique_policy_reform
+- reseau_des_metropoles_n_uds_policy_reform
+- reseaux_de_capteurs_ia_climatiques_deployes_par_les_etats_membres_policy_reform
+- syndicat_des_ingenieurs_orbitaux_policy_reform
+- union_technocratique_eurasiatique_policy_reform
+oppositions:
+- coalition_des_souverainistes_numeriques_policy_reform
+- collectifs_de_resistance_aux_relocalisations_forcees_policy_reform
+- courant_autoritaire_recuperateur_du_vocabulaire_communautaire_policy_reform
+- factions_internes_dissidentes_des_contributeurs_historiques_policy_reform
+- front_souverainiste_des_blocs_non_signataires_policy_reform
+- internationale_decroissante_anti_planification_policy_reform
+- mouvement_pour_la_souverainete_territoriale_absolue_policy_reform
 type_relation_dominante: symbiose
 annee_debut: 2026
 annee_fin: null
@@ -97,6 +125,39 @@ Le réseau est écartelé entre sa vocation d'indépendance académique et sa d�
 - [[gouvernance_institutions]]
 - [[frontieres_du_systeme]]
 - [[valeurs_culture_tempo_sociale]]
+
+
+## Relations
+**Alliés :**
+- [[agence_stabilisation_climatique_policy_reform]]
+- [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]
+- [[autorite_mondiale_du_vivant_amv_policy_reform]]
+- [[bloc_des_nations_a_economie_carbone_controlee_policy_reform]]
+- [[conseil_de_regulation_climatique_global_policy_reform]]
+- [[conseil_onu_de_gouvernance_numerique_et_ia_policy_reform]]
+- [[conseil_regulation_ressources_policy_reform]]
+- [[consortium_africain_de_biotechnologies_sociales_policy_reform]]
+- [[consortium_amazonia_viva_policy_reform]]
+- [[fonds_mondial_de_resilience_infrastructurelle_policy_reform]]
+- [[institut_brookings_singapour_de_politique_computationnelle_policy_reform]]
+- [[office_integre_des_flux_migratoires_policy_reform]]
+- [[oracle_des_seuils_policy_reform]]
+- [[pacifique_sud_resilience_network_policy_reform]]
+- [[prisme_global_policy_reform]]
+- [[reseau_des_agences_sanitaires_regionales_policy_reform]]
+- [[reseau_des_journalistes_d_investigation_energetique_policy_reform]]
+- [[reseau_des_metropoles_n_uds_policy_reform]]
+- [[reseaux_de_capteurs_ia_climatiques_deployes_par_les_etats_membres_policy_reform]]
+- [[syndicat_des_ingenieurs_orbitaux_policy_reform]]
+- [[union_technocratique_eurasiatique_policy_reform]]
+**Opposants :**
+- [[coalition_des_souverainistes_numeriques_policy_reform]]
+- [[collectifs_de_resistance_aux_relocalisations_forcees_policy_reform]]
+- [[courant_autoritaire_recuperateur_du_vocabulaire_communautaire_policy_reform]]
+- [[factions_internes_dissidentes_des_contributeurs_historiques_policy_reform]]
+- [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+- [[internationale_decroissante_anti_planification_policy_reform]]
+- [[mouvement_pour_la_souverainete_territoriale_absolue_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

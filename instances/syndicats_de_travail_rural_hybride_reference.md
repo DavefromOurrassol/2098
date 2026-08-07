@@ -31,8 +31,20 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- cooperative_terrafond_reference
+- cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference
+- federation_communs_territoriaux_reference
+- frente_sert_o_livre_reference
+- internationale_travailleurs_augmentes_reference
+- reseau_des_administrations_locales_rurales_participatives_reference
+- reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference
+oppositions:
+- consortium_augmentwork_reference
+- consortiums_d_agriculture_verticale_algorithmique_reference
+- consortiums_prives_d_extraction_de_ressources_critiques_reference
+- cooperatives_ia_open_source_reference
+- lobbies_agro_industriels_a_haute_consommation_d_eau_reference
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -96,6 +108,23 @@ Tiraillés entre la défense de l'emploi humain et la nécessité pragmatique d'
 - [[systemes_productifs_travail]]
 - [[organisation_territoires]]
 - [[systeme_economique_redistribution]]
+
+
+## Relations
+**Alliés :**
+- [[cooperative_terrafond_reference]]
+- [[cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference]]
+- [[federation_communs_territoriaux_reference]]
+- [[frente_sert_o_livre_reference]]
+- [[internationale_travailleurs_augmentes_reference]]
+- [[reseau_des_administrations_locales_rurales_participatives_reference]]
+- [[reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference]]
+**Opposants :**
+- [[consortium_augmentwork_reference]]
+- [[consortiums_d_agriculture_verticale_algorithmique_reference]]
+- [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[cooperatives_ia_open_source_reference]]
+- [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

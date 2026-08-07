@@ -4,6 +4,7 @@ type: instance
 slug: universite_nomade_eco_communalism
 entite: universite_nomade
 scenario: eco_communalism
+statut: officialise_enrichi
 localisation:
   zone: universite_nomade
   lieu: Université Nomade — Bioterritoires d'Amérique du Nord
@@ -37,26 +38,25 @@ zone_systemique:
     - économie
 
 alliances:
-    - assemblees_bioterritoriales_regionales_eco_communalism
-    - guildes_des_semenciers_itinerants_eco_communalism
-    - collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism
-    - mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism
-    - reseaux_de_bibliotheques_archives_communautaires_eco_communalism
-    - brigades_de_restauration_ecologique_eco_communalism
-    - collectifs_de_techniciens_sobres_eco_communalism
-    - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
-    - reseaux_de_radio_communautaire_basse_consommation_eco_communalism
-    - collectifs_du_seuil_eco_communalism
-
+- assemblees_bioterritoriales_regionales_eco_communalism
+- brigades_de_restauration_ecologique_eco_communalism
+- collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism
+- collectifs_de_techniciens_sobres_eco_communalism
+- collectifs_du_seuil_eco_communalism
+- cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
+- guildes_des_semenciers_itinerants_eco_communalism
+- mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism
+- reseaux_de_bibliotheques_archives_communautaires_eco_communalism
+- reseaux_de_radio_communautaire_basse_consommation_eco_communalism
+- tresse_verte_corridor_eco_communalism
 oppositions:
-    - factions_autoritaires_de_controle_du_savoir_eco_communalism
-    - communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism
-    - courant_isolationniste_anti_circulation_de_l_information_eco_communalism
-    - factions_communautaires_refusant_le_partage_narratif_exterieur_eco_communalism
-    - reseaux_de_notables_communautaires_capturistes_eco_communalism
-    - courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism
-    - plateformes_centralisees_de_reagregation_globale_eco_communalism
-
+- communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism
+- courant_isolationniste_anti_circulation_de_l_information_eco_communalism
+- courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism
+- factions_autoritaires_de_controle_du_savoir_eco_communalism
+- factions_communautaires_refusant_le_partage_narratif_exterieur_eco_communalism
+- plateformes_centralisees_de_reagregation_globale_eco_communalism
+- reseaux_de_notables_communautaires_capturistes_eco_communalism
 type_relation_dominante: coopération
 
 annee_debut: 2041
@@ -100,12 +100,31 @@ La Ronde des Savoirs organise des séjours d'apprentissage collectif de deux à 
 - [[systemes_productifs_travail]]
 - [[demographie_mobilite_humaine]]
 
-## Relations
-**Alliés** : [[assemblees_bioterritoriales_regionales_eco_communalism]], [[guildes_des_semenciers_itinerants_eco_communalism]], [[collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism]], [[mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism]], [[reseaux_de_bibliotheques_archives_communautaires_eco_communalism]], [[brigades_de_restauration_ecologique_eco_communalism]], [[collectifs_de_techniciens_sobres_eco_communalism]], [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]], [[reseaux_de_radio_communautaire_basse_consommation_eco_communalism]], [[collectifs_du_seuil_eco_communalism]]
-**Opposants** : [[factions_autoritaires_de_controle_du_savoir_eco_communalism]], [[communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism]], [[courant_isolationniste_anti_circulation_de_l_information_eco_communalism]], [[factions_communautaires_refusant_le_partage_narratif_exterieur_eco_communalism]], [[reseaux_de_notables_communautaires_capturistes_eco_communalism]], [[courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism]], [[plateformes_centralisees_de_reagregation_globale_eco_communalism]]
 
 ## Description journalistique
 Depuis les années 2040, la Ronde des Savoirs sillonne les bioterritoires d'Ourrassol à bord de caravanes solaires et de radeaux fluviaux chargés de bibliothèques portatives, de graines de variétés rares et de passeurs de métiers oubliés. Nulle façade, nul recteur, nul parchemin : on y entre par le seuil d'une communauté qui accepte d'ouvrir ses granges et ses feux de veille à une vingtaine de voyageurs-apprenants. La réciprocité est la règle d'or — la communauté hôte enseigne autant qu'elle reçoit, et personne ne repart sans avoir laissé quelque chose. Dans un monde où la fragmentation territoriale menace l'autarcie intellectuelle, la Ronde est parfois la seule institution à traverser la frontière invisible entre deux vallées qui ne se parlaient plus.
 
 ## Tensions narratives
 La Ronde peine à maintenir une continuité lorsque des communautés hôtes refusent l'accueil par méfiance identitaire ou peur de voir leurs pratiques 'extorquées' par des étrangers. Certaines Assemblées Bioterritoriales cherchent à la formaliser en lui imposant des curriculum accrédités, ce qui menace son principe même de non-institutionnalisation. Des factions autoritaires locales tentent parfois de la détourner en la confinant à un seul territoire pour en faire un outil de légitimation du pouvoir en place. Enfin, la tension entre la mobilité nécessaire à sa survie et la réduction globale de la mobilité humaine dans le scénario éco-communaliste constitue sa contradiction structurelle la plus profonde.
+
+## Relations
+**Alliés :**
+- [[assemblees_bioterritoriales_regionales_eco_communalism]]
+- [[brigades_de_restauration_ecologique_eco_communalism]]
+- [[collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism]]
+- [[collectifs_de_techniciens_sobres_eco_communalism]]
+- [[collectifs_du_seuil_eco_communalism]]
+- [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]
+- [[guildes_des_semenciers_itinerants_eco_communalism]]
+- [[mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism]]
+- [[reseaux_de_bibliotheques_archives_communautaires_eco_communalism]]
+- [[reseaux_de_radio_communautaire_basse_consommation_eco_communalism]]
+- [[tresse_verte_corridor_eco_communalism]]
+**Opposants :**
+- [[communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism]]
+- [[courant_isolationniste_anti_circulation_de_l_information_eco_communalism]]
+- [[courant_techno_solutionniste_pro_re_globalisation_numerique_eco_communalism]]
+- [[factions_autoritaires_de_controle_du_savoir_eco_communalism]]
+- [[factions_communautaires_refusant_le_partage_narratif_exterieur_eco_communalism]]
+- [[plateformes_centralisees_de_reagregation_globale_eco_communalism]]
+- [[reseaux_de_notables_communautaires_capturistes_eco_communalism]]

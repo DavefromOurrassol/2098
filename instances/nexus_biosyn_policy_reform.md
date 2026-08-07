@@ -4,6 +4,7 @@ type: instance
 slug: nexus_biosyn_policy_reform
 entite: nexus_biosyn
 scenario: policy_reform
+statut: officialise_enrichi
 localisation:
   zone: null
   lieu: null
@@ -38,17 +39,20 @@ zone_systemique:
     - infrastructure
 
 alliances:
-    - autorite_mondiale_du_vivant_amv_policy_reform
-    - consortium_agro_pacifique_policy_reform
-    - institut_de_therapeutique_integree_de_nairobi_policy_reform
-    - fonds_mondial_de_stabilisation_biotechnologique_policy_reform
-
+- autorite_mondiale_du_vivant_amv_policy_reform
+- consortium_agro_pacifique_policy_reform
+- consortiums_prives_de_gouvernance_algorithmique_policy_reform
+- fonds_mondial_de_stabilisation_biotechnologique_policy_reform
 oppositions:
-    - coalition_des_semences_libres_policy_reform
-    - front_de_souverainete_biologique_eurasiatique_policy_reform
-    - collectifs_de_biohackers_agro_communautaires_policy_reform
-    - bloc_des_nations_a_economie_carbone_controlee_policy_reform
-
+- bloc_des_nations_a_economie_carbone_controlee_policy_reform
+- coalition_des_semences_libres_policy_reform
+- collectifs_de_biohackers_agro_communautaires_policy_reform
+- collectifs_de_hackers_biospheriques_policy_reform
+- consortium_africain_de_biotechnologies_sociales_policy_reform
+- factions_internes_pro_desaugmentation_totale_policy_reform
+- federation_des_mutuelles_biotech_policy_reform
+- front_de_souverainete_biologique_eurasiatique_policy_reform
+- institut_de_therapeutique_integree_de_nairobi_policy_reform
 type_relation_dominante: alliance stratégique
 
 annee_debut: 2026
@@ -92,12 +96,26 @@ Fournit les licences encadrées de semences synthétiques aux blocs agro-aliment
 - [[gouvernance_institutions]]
 - [[energie_ressources_critiques]]
 
-## Relations
-**Alliés** : [[autorite_mondiale_du_vivant_amv_policy_reform]], [[consortium_agro_pacifique_policy_reform]], [[institut_de_therapeutique_integree_de_nairobi_policy_reform]], [[fonds_mondial_de_stabilisation_biotechnologique_policy_reform]]
-**Opposants** : [[coalition_des_semences_libres_policy_reform]], [[front_de_souverainete_biologique_eurasiatique_policy_reform]], [[collectifs_de_biohackers_agro_communautaires_policy_reform]], [[bloc_des_nations_a_economie_carbone_controlee_policy_reform]]
 
 ## Description journalistique
 Nexus BioSyn Regulatory Partners est aujourd'hui ce que ses détracteurs appellent 'le loup devenu berger' : le géant des biotechnologies qui, après des décennies de procès en dépossession du vivant, siège désormais aux tables mêmes où se rédige la régulation mondiale. Depuis les accords de Genève Biotech de 2091, l'entreprise affiche une façade de partenariat institutionnel irréprochable — licences accessibles, fonds de transfert technologique, délégués permanents à l'AMV. Mais les chiffres racontent une autre histoire : 73% des semences synthétiques cultivées sur Terre portent encore son empreinte génétique brevetée, et les thérapies cellulaires adaptatives de dernière génération restent hors de portée des deux tiers de la population mondiale malgré les clauses d'accès obligatoire. Le régulateur est aussi le régulé, et Nexus BioSyn a fait de cette ambiguïté son modèle d'affaires définitif.
 
 ## Tensions narratives
 La tension centrale réside dans le paradoxe fondateur du scénario : Nexus BioSyn est à la fois l'outil de la stabilisation sanitaire mondiale et le verrou qui empêche une véritable démocratisation du vivant. Les négociations secrètes autour de la révision des brevets de 5e génération — les organismes à métabolisme climatique adaptatif — pourraient fracturer l'alliance avec l'AMV si les blocs du Sud exigent des cessions plus larges. Par ailleurs, des fuites récentes suggèrent que certains délégués Nexus au sein des comités techniques auraient délibérément ralenti l'homologation de semences concurrentes développées par des consortiums publics africains, relançant le spectre d'un capture réglementaire systématique.
+
+## Relations
+**Alliés :**
+- [[autorite_mondiale_du_vivant_amv_policy_reform]]
+- [[consortium_agro_pacifique_policy_reform]]
+- [[consortiums_prives_de_gouvernance_algorithmique_policy_reform]]
+- [[fonds_mondial_de_stabilisation_biotechnologique_policy_reform]]
+**Opposants :**
+- [[bloc_des_nations_a_economie_carbone_controlee_policy_reform]]
+- [[coalition_des_semences_libres_policy_reform]]
+- [[collectifs_de_biohackers_agro_communautaires_policy_reform]]
+- [[collectifs_de_hackers_biospheriques_policy_reform]]
+- [[consortium_africain_de_biotechnologies_sociales_policy_reform]]
+- [[factions_internes_pro_desaugmentation_totale_policy_reform]]
+- [[federation_des_mutuelles_biotech_policy_reform]]
+- [[front_de_souverainete_biologique_eurasiatique_policy_reform]]
+- [[institut_de_therapeutique_integree_de_nairobi_policy_reform]]

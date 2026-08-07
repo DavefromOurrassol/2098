@@ -32,8 +32,22 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- appareils_d_etat_des_blocs_fermes_fortress_world
+- centre_controle_orbital_helios_fortress_world
+- complexes_militaro_industriels_de_gestion_des_ressources_fortress_world
+- consortium_eurasiatique_des_ressources_fermees_fortress_world
+- dispositifs_de_surveillance_numerique_souveraine_fortress_world
+- oligarchies_technologiques_souveraines_d_infrastructure_de_calcul_fortress_world
+oppositions:
+- archives_chiffrees_de_l_open_internet_coalition_fortress_world
+- bureau_gouvernance_algorithmique_fortress_world
+- coalition_arctique_des_blocs_continentaux_fortress_world
+- coalition_vivant_fortress_world
+- corps_des_inspecteurs_de_conformite_inter_blocs_fortress_world
+- institutions_multilaterales_residuelles_fortress_world
+- kalaallit_nunaat_sovereign_fund_fortress_world
+- oracle_des_seuils_fortress_world
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -97,6 +111,25 @@ La contradiction fondamentale de ces coalitions réside dans le fait qu'en sabot
 - [[geopolitique_conflits]]
 - [[technologie_information]]
 - [[climat_environnement_global]]
+
+
+## Relations
+**Alliés :**
+- [[appareils_d_etat_des_blocs_fermes_fortress_world]]
+- [[centre_controle_orbital_helios_fortress_world]]
+- [[complexes_militaro_industriels_de_gestion_des_ressources_fortress_world]]
+- [[consortium_eurasiatique_des_ressources_fermees_fortress_world]]
+- [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
+- [[oligarchies_technologiques_souveraines_d_infrastructure_de_calcul_fortress_world]]
+**Opposants :**
+- [[archives_chiffrees_de_l_open_internet_coalition_fortress_world]]
+- [[bureau_gouvernance_algorithmique_fortress_world]]
+- [[coalition_arctique_des_blocs_continentaux_fortress_world]]
+- [[coalition_vivant_fortress_world]]
+- [[corps_des_inspecteurs_de_conformite_inter_blocs_fortress_world]]
+- [[institutions_multilaterales_residuelles_fortress_world]]
+- [[kalaallit_nunaat_sovereign_fund_fortress_world]]
+- [[oracle_des_seuils_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

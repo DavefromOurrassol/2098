@@ -4,6 +4,7 @@ type: instance
 slug: nexcore_reference
 entite: nexcore
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: null
   lieu: null
@@ -40,17 +41,27 @@ zone_systemique:
     - cyberspace
 
 alliances:
-    - bloc_ressources_eurasiatique_bre_reference
-    - consortiums_bancaires_financiarises_reference
-    - agence_mondiale_de_modelisation_climatique_ammc_new_sustainability
-    - consortium_des_fournisseurs_d_energie_renouvelable_distribuee_reference
-
+- agence_mondiale_de_modelisation_climatique_ammc_new_sustainability
+- bloc_ressources_eurasiatique_bre_reference
+- consortium_des_fournisseurs_d_energie_renouvelable_distribuee_reference
+- consortium_des_grandes_plateformes_ia_integrees_reference
+- consortiums_bancaires_financiarises_reference
+- consortiums_prives_d_extraction_de_ressources_critiques_reference
+- corridor_arctique_nordique_reference
+- ecosynth_global_reference
+- optiflow_logistics_reference
+- singapour_est_nexcore_reference
+- terrametrics_reference
 oppositions:
-    - coalition_pour_la_souverainete_numerique_nationale_reference
-    - bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference
-    - reseau_meshcommons_netsolidaire_reference
-    - regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference
-
+- bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference
+- coalition_pour_la_souverainete_numerique_nationale_reference
+- conseil_regulation_algorithmique_reference
+- consortium_amazonia_viva_reference
+- frente_sert_o_livre_reference
+- helsinki_communs_numeriques_reference
+- murmansk_transit_arctique_reference
+- regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference
+- reseau_meshcommons_netsolidaire_reference
 type_relation_dominante: dépendance
 
 annee_debut: 2026
@@ -94,12 +105,33 @@ Opère et maintient 67% des câbles sous-marins actifs, les principales grilles 
 - [[energie_ressources_critiques]]
 - [[gouvernance_institutions]]
 
-## Relations
-**Alliés** : [[bloc_ressources_eurasiatique_bre_reference]], [[consortiums_bancaires_financiarises_reference]], [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]], [[consortium_des_fournisseurs_d_energie_renouvelable_distribuee_reference]]
-**Opposants** : [[coalition_pour_la_souverainete_numerique_nationale_reference]], [[bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference]], [[reseau_meshcommons_netsolidaire_reference]], [[regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference]]
 
 ## Description journalistique
 Demandez à n'importe quel ingénieur réseau de Lagos, de Séoul ou de Bogotá de qui dépend sa ligne critique, il prononcera le même nom : NexCore. En 2098, le Groupe n'affiche pas de logo sur les bâtiments gouvernementaux — il n'en a pas besoin. Ses câbles courent sous les océans, ses nœuds de calcul ronronnent dans des data centers climatisés à l'énergie géothermique, et ses algorithmes de routage décident, milliseconde après milliseconde, quelle donnée climatique arrive en premier sur le bureau d'un ministre. Officiellement, NexCore GIG est un 'opérateur d'infrastructure critique sous régime de concession internationale'. Officieusement, c'est le propriétaire silencieux du système nerveux de la planète — une entité dont la chute serait, selon ses propres rapports de risque systémique soigneusement divulgués aux régulateurs, 'une extinction de signal mondiale de niveau catastrophique'.
 
 ## Tensions narratives
 La grande question de 2098 : peut-on nationaliser ce qu'on ne comprend plus techniquement ? Plusieurs États tentent de renégocier leurs contrats d'infrastructure après avoir découvert des clauses d'accès aux données embarquées — NexCore conteste devant les tribunaux arbitraux privés qu'elle a elle-même contribué à financer. En parallèle, une fuite interne ('le Dossier Latence') suggère que NexCore aurait délibérément dégradé les performances réseau de zones géographiques jugées 'non rentables' pendant une crise climatique, accélérant une décision d'évacuation. La tension entre infrastructure vitale et empire privé n'a jamais été aussi tranchante — et la réponse appartient à celui qui contrôle les câbles.
+
+## Relations
+**Alliés :**
+- [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]]
+- [[bloc_ressources_eurasiatique_bre_reference]]
+- [[consortium_des_fournisseurs_d_energie_renouvelable_distribuee_reference]]
+- [[consortium_des_grandes_plateformes_ia_integrees_reference]]
+- [[consortiums_bancaires_financiarises_reference]]
+- [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[corridor_arctique_nordique_reference]]
+- [[ecosynth_global_reference]]
+- [[optiflow_logistics_reference]]
+- [[singapour_est_nexcore_reference]]
+- [[terrametrics_reference]]
+**Opposants :**
+- [[bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference]]
+- [[coalition_pour_la_souverainete_numerique_nationale_reference]]
+- [[conseil_regulation_algorithmique_reference]]
+- [[consortium_amazonia_viva_reference]]
+- [[frente_sert_o_livre_reference]]
+- [[helsinki_communs_numeriques_reference]]
+- [[murmansk_transit_arctique_reference]]
+- [[regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference]]
+- [[reseau_meshcommons_netsolidaire_reference]]

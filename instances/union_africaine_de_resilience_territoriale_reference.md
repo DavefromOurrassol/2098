@@ -30,8 +30,29 @@ zone_geographique:
 - régionale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_internationale_des_energies_renouvelables_irena_2_reference
+- agence_stabilisation_climatique_reference
+- banque_des_communs_reference
+- commission_hydrique_de_l_union_africaine_reference
+- conseil_regulation_ressources_reference
+- consortium_africain_de_biotechnologies_sociales_reference
+- cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference
+- federation_communs_territoriaux_reference
+- institut_polytechnique_de_ouagadougou_reference
+- kinshasa_accords_hydriques_reference
+- nairobi_crrc_reference
+- pacifique_sud_resilience_network_reference
+- regulateurs_de_l_union_continentale_africaine_reference
+- reseau_des_cooperatives_agro_saheliennes_reference
+- union_africaine_resilience_reference
+oppositions:
+- consortiums_d_extraction_miniere_du_bassin_congolais_reference
+- corridor_arctique_nordique_reference
+- gouvernements_du_bloc_sahelien_autonome_reference
+- institutions_multilaterales_survivantes_reference
+- lobbies_agro_industriels_a_haute_consommation_d_eau_reference
+- zones_grises_globales_reference
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -95,6 +116,32 @@ L'UART est tiraillée entre sa vocation continentale et la montée des blocs sou
 - [[organisation_territoires]]
 - [[gouvernance_institutions]]
 - [[demographie_mobilite_humaine]]
+
+
+## Relations
+**Alliés :**
+- [[agence_internationale_des_energies_renouvelables_irena_2_reference]]
+- [[agence_stabilisation_climatique_reference]]
+- [[banque_des_communs_reference]]
+- [[commission_hydrique_de_l_union_africaine_reference]]
+- [[conseil_regulation_ressources_reference]]
+- [[consortium_africain_de_biotechnologies_sociales_reference]]
+- [[cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference]]
+- [[federation_communs_territoriaux_reference]]
+- [[institut_polytechnique_de_ouagadougou_reference]]
+- [[kinshasa_accords_hydriques_reference]]
+- [[nairobi_crrc_reference]]
+- [[pacifique_sud_resilience_network_reference]]
+- [[regulateurs_de_l_union_continentale_africaine_reference]]
+- [[reseau_des_cooperatives_agro_saheliennes_reference]]
+- [[union_africaine_resilience_reference]]
+**Opposants :**
+- [[consortiums_d_extraction_miniere_du_bassin_congolais_reference]]
+- [[corridor_arctique_nordique_reference]]
+- [[gouvernements_du_bloc_sahelien_autonome_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
+- [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]]
+- [[zones_grises_globales_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

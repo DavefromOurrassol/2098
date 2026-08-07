@@ -4,6 +4,7 @@ type: instance
 slug: bloc_eurasien_central_reference
 entite: bloc_eurasien_central
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: bloc_eurasien_central
   lieu: Bloc Eurasien Central
@@ -37,23 +38,43 @@ zone_systemique:
     - sécurité
 
 alliances:
-    - bloc_ressources_eurasiatique_bre_reference
-    - cartel_des_terres_rares_d_asie_centrale_reference
-    - siberie_federale_reference
-    - regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference
-    - reseau_hospitalier_hybride_eurasiatique_reference
-    - factions_eurasiatiques_contre_la_tarification_hydrique_reference
-    - operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference
-
+- bloc_ressources_eurasiatique_bre_reference
+- cartel_des_terres_rares_d_asie_centrale_reference
+- coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference
+- consortium_logistique_asiatique_de_contournement_aln_reference
+- corporations_d_extraction_energetique_non_signataires_reference
+- datasovereign_reference
+- factions_eurasiatiques_contre_la_tarification_hydrique_reference
+- front_souverainiste_des_ressources_d_amerique_du_sud_reference
+- plateformes_centralisees_de_narration_officielle_reference
+- regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference
+- reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference
+- siberie_federale_reference
 oppositions:
-    - confederation_des_megapoles_autonomes_reference
-    - alliance_blocs_souverains_reference
-    - consortium_indo_pacifique_de_l_hydrogene_reference
-    - fonds_souverains_de_la_ceinture_financiere_pacifique_reference
-    - coalition_pour_la_souverainete_numerique_nationale_reference
-    - milices_concurrentes_des_droits_de_passage_reference
-    - collectif_nuit_jaune_reference
-
+- alliance_blocs_souverains_reference
+- banque_mondiale_des_transitions_climatiques_reference
+- bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference
+- bruxelles_nouveau_reference
+- coalition_pour_la_souverainete_numerique_nationale_reference
+- collectif_nuit_jaune_reference
+- confederation_des_megapoles_autonomes_reference
+- conseil_de_geneve_pour_les_droits_biosociaux_reference
+- conseil_des_etats_nordiques_integres_reference
+- consortium_des_grandes_plateformes_ia_integrees_reference
+- consortium_energetique_baltique_reference
+- consortium_energetique_des_mers_du_nord_reference
+- consortium_indo_pacifique_de_l_hydrogene_reference
+- delta_du_mekong_reference
+- europe_occidentale_reconstructee_reference
+- fonds_souverains_de_la_ceinture_financiere_pacifique_reference
+- institutions_multilaterales_survivantes_reference
+- milices_concurrentes_des_droits_de_passage_reference
+- operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference
+- reseau_des_administrations_locales_rurales_participatives_reference
+- reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference
+- reseau_hospitalier_hybride_eurasiatique_reference
+- reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference
+- tbilissi_noeud_mnemos_reference
 type_relation_dominante: rivalité
 
 annee_debut: 2041
@@ -97,12 +118,49 @@ Coordination des politiques énergétiques et des routes d'extraction entre memb
 - [[systeme_economique_redistribution]]
 - [[gouvernance_institutions]]
 
-## Relations
-**Alliés** : [[bloc_ressources_eurasiatique_bre_reference]], [[cartel_des_terres_rares_d_asie_centrale_reference]], [[siberie_federale_reference]], [[regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference]], [[reseau_hospitalier_hybride_eurasiatique_reference]], [[factions_eurasiatiques_contre_la_tarification_hydrique_reference]], [[operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference]]
-**Opposants** : [[confederation_des_megapoles_autonomes_reference]], [[alliance_blocs_souverains_reference]], [[consortium_indo_pacifique_de_l_hydrogene_reference]], [[fonds_souverains_de_la_ceinture_financiere_pacifique_reference]], [[coalition_pour_la_souverainete_numerique_nationale_reference]], [[milices_concurrentes_des_droits_de_passage_reference]], [[collectif_nuit_jaune_reference]]
 
 ## Description journalistique
 Depuis ses bureaux tournants — cette année à Almaty, l'an prochain peut-être à Tbilissi si le vote passe — le Bloc Eurasien Central ressemble moins à une institution qu'à une salle d'attente diplomatique permanente. Fondé dans les années 2040 sur la promesse d'une solidarité géopolitique post-effondrement des grandes alliances du siècle précédent, le BEC n'a jamais réussi à transformer la nécessité en projet. Ses sommets produisent des communiqués soigneusement vidés de substance, ses commissions énergétiques se réunissent trois fois par an pour entériner des compromis que chaque membre contourne dès le retour chez lui. Ce que le BEC fait réellement, c'est empêcher le pire : des conflits ouverts entre ses propres membres sur les corridors gaziers de l'Oural ou les aquifères du Ferghana. En 2098, c'est peut-être suffisant pour survivre — mais plus assez pour peser.
 
 ## Tensions narratives
 La question de l'accès aux terres rares d'Asie centrale oppose frontalement deux membres fondateurs, menaçant d'éclater au prochain cycle de renégociation du Traité de Bakou (2099). Par ailleurs, la Sibérie Fédérale joue un double jeu en maintenant des accords énergétiques bilatéraux avec des entités extérieures au BEC, sapant la cohérence collective sans jamais franchir le seuil de la rupture formelle. Enfin, une faction interne pousse à une intégration numérique accrue via un registre de données critiques partagé — proposition que la moitié des membres perçoit comme un cheval de Troie de surveillance réciproque.
+
+## Relations
+**Alliés :**
+- [[bloc_ressources_eurasiatique_bre_reference]]
+- [[cartel_des_terres_rares_d_asie_centrale_reference]]
+- [[coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference]]
+- [[consortium_logistique_asiatique_de_contournement_aln_reference]]
+- [[corporations_d_extraction_energetique_non_signataires_reference]]
+- [[datasovereign_reference]]
+- [[factions_eurasiatiques_contre_la_tarification_hydrique_reference]]
+- [[front_souverainiste_des_ressources_d_amerique_du_sud_reference]]
+- [[plateformes_centralisees_de_narration_officielle_reference]]
+- [[regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference]]
+- [[reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference]]
+- [[siberie_federale_reference]]
+**Opposants :**
+- [[alliance_blocs_souverains_reference]]
+- [[banque_mondiale_des_transitions_climatiques_reference]]
+- [[bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference]]
+- [[bruxelles_nouveau_reference]]
+- [[coalition_pour_la_souverainete_numerique_nationale_reference]]
+- [[collectif_nuit_jaune_reference]]
+- [[confederation_des_megapoles_autonomes_reference]]
+- [[conseil_de_geneve_pour_les_droits_biosociaux_reference]]
+- [[conseil_des_etats_nordiques_integres_reference]]
+- [[consortium_des_grandes_plateformes_ia_integrees_reference]]
+- [[consortium_energetique_baltique_reference]]
+- [[consortium_energetique_des_mers_du_nord_reference]]
+- [[consortium_indo_pacifique_de_l_hydrogene_reference]]
+- [[delta_du_mekong_reference]]
+- [[europe_occidentale_reconstructee_reference]]
+- [[fonds_souverains_de_la_ceinture_financiere_pacifique_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
+- [[milices_concurrentes_des_droits_de_passage_reference]]
+- [[operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference]]
+- [[reseau_des_administrations_locales_rurales_participatives_reference]]
+- [[reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference]]
+- [[reseau_hospitalier_hybride_eurasiatique_reference]]
+- [[reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference]]
+- [[tbilissi_noeud_mnemos_reference]]

@@ -32,8 +32,26 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_internationale_des_energies_renouvelables_irena_2_reference
+- bureaux_de_regulation_informationnelle_reference
+- commission_hydrique_de_l_union_africaine_reference
+- consortium_africain_de_biotechnologies_sociales_reference
+- kinshasa_accords_hydriques_reference
+- nairobi_crrc_reference
+- programme_onu_eau_2080_reference
+- reseau_des_cooperatives_agro_saheliennes_reference
+- union_africaine_de_resilience_territoriale_reference
+- union_africaine_resilience_reference
+oppositions:
+- bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference
+- consortiums_d_extraction_miniere_du_bassin_congolais_reference
+- consortiums_prives_d_extraction_de_ressources_critiques_reference
+- factions_eurasiatiques_contre_la_tarification_hydrique_reference
+- gouvernements_du_bloc_sahelien_autonome_reference
+- lobbies_agro_industriels_a_haute_consommation_d_eau_reference
+- nexus_biosyn_reference
+- operateurs_prives_d_energie_distribuee_hors_fct_reference
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -96,6 +114,29 @@ Les Régulateurs se trouvent pris en étau entre les ambitions souveraines des �
 - [[gouvernance_institutions]]
 - [[organisation_territoires]]
 - [[geopolitique_conflits]]
+
+
+## Relations
+**Alliés :**
+- [[agence_internationale_des_energies_renouvelables_irena_2_reference]]
+- [[bureaux_de_regulation_informationnelle_reference]]
+- [[commission_hydrique_de_l_union_africaine_reference]]
+- [[consortium_africain_de_biotechnologies_sociales_reference]]
+- [[kinshasa_accords_hydriques_reference]]
+- [[nairobi_crrc_reference]]
+- [[programme_onu_eau_2080_reference]]
+- [[reseau_des_cooperatives_agro_saheliennes_reference]]
+- [[union_africaine_de_resilience_territoriale_reference]]
+- [[union_africaine_resilience_reference]]
+**Opposants :**
+- [[bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference]]
+- [[consortiums_d_extraction_miniere_du_bassin_congolais_reference]]
+- [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[factions_eurasiatiques_contre_la_tarification_hydrique_reference]]
+- [[gouvernements_du_bloc_sahelien_autonome_reference]]
+- [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]]
+- [[nexus_biosyn_reference]]
+- [[operateurs_prives_d_energie_distribuee_hors_fct_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

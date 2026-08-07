@@ -36,8 +36,35 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
+- agence_mondiale_de_modelisation_climatique_ammc_new_sustainability
+- agence_orbitale_de_regulation_commune_aorc_new_sustainability
+- arctic_passage_authority_new_sustainability
+- bloc_eurasien_souverainiste_new_sustainability
+- bureau_gouvernance_algorithmique_new_sustainability
+- centre_institutionnel_geneve_new_sustainability
+- conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability
+- consortium_d_audit_algorithmique_ouvert_new_sustainability
+- consortium_d_interoperabilite_ia_humain_new_sustainability
+- fonds_mondial_de_regeneration_ecologique_new_sustainability
+- great_lakes_compact_new_sustainability
+- hub_nairobi_kigali_new_sustainability
+- observatoire_anti_monopole_de_geneve_new_sustainability
+- observatoire_climatique_narratif_de_nairobi_new_sustainability
+- programme_onu_de_restauration_des_sols_new_sustainability
+- reseau_des_ingenieurs_climatiques_du_sud_global_new_sustainability
+- reseau_des_villes_regeneratives_new_sustainability
+- reseau_global_de_cliniques_regeneratives_new_sustainability
+- union_des_blocs_energetiques_regionaux_new_sustainability
+oppositions:
+- coalition_anti_fiscalite_universelle_new_sustainability
+- consortium_amazonia_viva_new_sustainability
+- etats_souverainistes_anti_reseau_new_sustainability
+- factions_souverainistes_des_blocs_peripheriques_new_sustainability
+- great_lakes_autonomous_compact_new_sustainability
+- mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability
+- souverainistes_du_bloc_eurasien_new_sustainability
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -100,6 +127,38 @@ Le Réseau est tiraillé entre la rigueur des mandats techniques imposés par le
 - [[climat_environnement_global]]
 - [[organisation_territoires]]
 - [[gouvernance_institutions]]
+
+
+## Relations
+**Alliés :**
+- [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]]
+- [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]]
+- [[agence_orbitale_de_regulation_commune_aorc_new_sustainability]]
+- [[arctic_passage_authority_new_sustainability]]
+- [[bloc_eurasien_souverainiste_new_sustainability]]
+- [[bureau_gouvernance_algorithmique_new_sustainability]]
+- [[centre_institutionnel_geneve_new_sustainability]]
+- [[conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability]]
+- [[consortium_d_audit_algorithmique_ouvert_new_sustainability]]
+- [[consortium_d_interoperabilite_ia_humain_new_sustainability]]
+- [[fonds_mondial_de_regeneration_ecologique_new_sustainability]]
+- [[great_lakes_compact_new_sustainability]]
+- [[hub_nairobi_kigali_new_sustainability]]
+- [[observatoire_anti_monopole_de_geneve_new_sustainability]]
+- [[observatoire_climatique_narratif_de_nairobi_new_sustainability]]
+- [[programme_onu_de_restauration_des_sols_new_sustainability]]
+- [[reseau_des_ingenieurs_climatiques_du_sud_global_new_sustainability]]
+- [[reseau_des_villes_regeneratives_new_sustainability]]
+- [[reseau_global_de_cliniques_regeneratives_new_sustainability]]
+- [[union_des_blocs_energetiques_regionaux_new_sustainability]]
+**Opposants :**
+- [[coalition_anti_fiscalite_universelle_new_sustainability]]
+- [[consortium_amazonia_viva_new_sustainability]]
+- [[etats_souverainistes_anti_reseau_new_sustainability]]
+- [[factions_souverainistes_des_blocs_peripheriques_new_sustainability]]
+- [[great_lakes_autonomous_compact_new_sustainability]]
+- [[mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability]]
+- [[souverainistes_du_bloc_eurasien_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

@@ -30,8 +30,24 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- autorites_regionales_de_regulation_hydrologique_reference
+- banque_des_communs_reference
+- commission_hydrique_de_l_union_africaine_reference
+- communs_numeriques_agroecologiques_reference
+- cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference
+- cooperatives_energetiques_decentralisees_reference
+- federation_communs_territoriaux_reference
+- federation_des_cliniques_autonomes_reference
+- ong_environnementales_de_terrain_reference
+- programme_onu_eau_2080_reference
+- reseau_des_administrations_locales_rurales_participatives_reference
+- reseau_des_cooperatives_agro_saheliennes_reference
+oppositions:
+- consortiums_d_agriculture_verticale_algorithmique_reference
+- consortiums_prives_d_extraction_de_ressources_critiques_reference
+- fonds_d_investissement_foncier_climatique_reference
+- lobbies_agro_industriels_a_haute_consommation_d_eau_reference
 type_relation_dominante: symbiose
 annee_debut: 2026
 annee_fin: null
@@ -97,6 +113,27 @@ La tension principale réside dans l'écart croissant entre les coopératives de
 - [[systemes_productifs_travail]]
 - [[climat_environnement_global]]
 - [[organisation_territoires]]
+
+
+## Relations
+**Alliés :**
+- [[autorites_regionales_de_regulation_hydrologique_reference]]
+- [[banque_des_communs_reference]]
+- [[commission_hydrique_de_l_union_africaine_reference]]
+- [[communs_numeriques_agroecologiques_reference]]
+- [[cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference]]
+- [[cooperatives_energetiques_decentralisees_reference]]
+- [[federation_communs_territoriaux_reference]]
+- [[federation_des_cliniques_autonomes_reference]]
+- [[ong_environnementales_de_terrain_reference]]
+- [[programme_onu_eau_2080_reference]]
+- [[reseau_des_administrations_locales_rurales_participatives_reference]]
+- [[reseau_des_cooperatives_agro_saheliennes_reference]]
+**Opposants :**
+- [[consortiums_d_agriculture_verticale_algorithmique_reference]]
+- [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[fonds_d_investissement_foncier_climatique_reference]]
+- [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

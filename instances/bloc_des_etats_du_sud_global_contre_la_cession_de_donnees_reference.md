@@ -32,8 +32,36 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- coalition_pour_la_souverainete_numerique_nationale_reference
+- cooperatives_ia_open_source_reference
+- front_souverainiste_des_ressources_d_amerique_du_sud_reference
+- ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference
+- pacifique_sud_resilience_network_reference
+- pacte_des_souverains_reference
+- reseau_meshcommons_netsolidaire_reference
+- tbilissi_noeud_mnemos_reference
+- union_africaine_resilience_reference
+oppositions:
+- agrisynth_reference
+- algorithmic_labor_exchange_reference
+- bloc_eurasien_central_reference
+- cartel_des_terres_rares_d_asie_centrale_reference
+- consortium_des_grandes_plateformes_ia_integrees_reference
+- consortium_indo_pacifique_de_l_hydrogene_reference
+- consortiums_bancaires_financiarises_reference
+- consortiums_prives_de_gestion_des_donnees_critiques_reference
+- datasovereign_reference
+- directive_kontinuum_reference
+- etats_a_tendance_centraliste_numerique_reference
+- nexcore_reference
+- observatoire_climatique_des_territoires_oct_reference
+- ong_de_preservation_patrimoniale_numerique_reference
+- plateformes_d_optimisation_territoriale_par_ia_reference
+- plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference
+- regulateurs_de_l_union_continentale_africaine_reference
+- singapour_est_nexcore_reference
+- valparaiso_fct_reference
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -96,6 +124,39 @@ La tension centrale du Bloc réside dans la contradiction entre son ambition de 
 - [[geopolitique_conflits]]
 - [[technologie_information]]
 - [[gouvernance_institutions]]
+
+
+## Relations
+**Alliés :**
+- [[coalition_pour_la_souverainete_numerique_nationale_reference]]
+- [[cooperatives_ia_open_source_reference]]
+- [[front_souverainiste_des_ressources_d_amerique_du_sud_reference]]
+- [[ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference]]
+- [[pacifique_sud_resilience_network_reference]]
+- [[pacte_des_souverains_reference]]
+- [[reseau_meshcommons_netsolidaire_reference]]
+- [[tbilissi_noeud_mnemos_reference]]
+- [[union_africaine_resilience_reference]]
+**Opposants :**
+- [[agrisynth_reference]]
+- [[algorithmic_labor_exchange_reference]]
+- [[bloc_eurasien_central_reference]]
+- [[cartel_des_terres_rares_d_asie_centrale_reference]]
+- [[consortium_des_grandes_plateformes_ia_integrees_reference]]
+- [[consortium_indo_pacifique_de_l_hydrogene_reference]]
+- [[consortiums_bancaires_financiarises_reference]]
+- [[consortiums_prives_de_gestion_des_donnees_critiques_reference]]
+- [[datasovereign_reference]]
+- [[directive_kontinuum_reference]]
+- [[etats_a_tendance_centraliste_numerique_reference]]
+- [[nexcore_reference]]
+- [[observatoire_climatique_des_territoires_oct_reference]]
+- [[ong_de_preservation_patrimoniale_numerique_reference]]
+- [[plateformes_d_optimisation_territoriale_par_ia_reference]]
+- [[plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference]]
+- [[regulateurs_de_l_union_continentale_africaine_reference]]
+- [[singapour_est_nexcore_reference]]
+- [[valparaiso_fct_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

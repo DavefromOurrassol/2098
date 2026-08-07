@@ -31,8 +31,20 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_mondiale_de_modelisation_climatique_ammc_new_sustainability
+- arctic_passage_authority_new_sustainability
+- centre_institutionnel_geneve_new_sustainability
+- conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability
+- consortium_d_interoperabilite_ia_humain_new_sustainability
+- leena_vainala_new_sustainability
+- trame_bioclimatique_new_sustainability
+oppositions:
+- coalition_anti_algorithme_des_autonomies_locales_new_sustainability
+- factions_souverainistes_des_blocs_peripheriques_new_sustainability
+- institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability
+- kalaallit_nunaat_sovereign_fund_new_sustainability
+- mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -96,6 +108,23 @@ La tension centrale du Conseil réside dans la ligne floue entre assistance algo
 - [[gouvernance_institutions]]
 - [[technologie_information]]
 - [[climat_environnement_global]]
+
+
+## Relations
+**Alliés :**
+- [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]]
+- [[arctic_passage_authority_new_sustainability]]
+- [[centre_institutionnel_geneve_new_sustainability]]
+- [[conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability]]
+- [[consortium_d_interoperabilite_ia_humain_new_sustainability]]
+- [[leena_vainala_new_sustainability]]
+- [[trame_bioclimatique_new_sustainability]]
+**Opposants :**
+- [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]]
+- [[factions_souverainistes_des_blocs_peripheriques_new_sustainability]]
+- [[institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability]]
+- [[kalaallit_nunaat_sovereign_fund_new_sustainability]]
+- [[mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

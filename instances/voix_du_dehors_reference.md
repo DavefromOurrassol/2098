@@ -4,6 +4,7 @@ type: instance
 slug: voix_du_dehors_reference
 entite: voix_du_dehors
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: null
   lieu: null
@@ -38,17 +39,23 @@ zone_systemique:
     - cyberspace
 
 alliances:
-    - collectifs_de_journalistes_independants_regionaux_reference
-    - ong_environnementales_de_terrain_reference
-    - reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference
-    - universites_et_think_tanks_en_zones_de_liberte_academique_reference
-
+- collectif_nuit_jaune_reference
+- collectifs_de_journalistes_independants_regionaux_reference
+- ong_de_tracabilite_des_ressources_critiques_reference
+- ong_environnementales_de_terrain_reference
+- reseaux_de_capteurs_citoyens_reference
+- reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference
+- universites_et_think_tanks_en_zones_de_liberte_academique_reference
 oppositions:
-    - plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference
-    - services_de_contre_information_des_blocs_geopolitiques_concurrents_reference
-    - consortiums_energetiques_opaques_reference
-    - dispositifs_de_surveillance_numerique_souveraine_fortress_world
-
+- bureau_des_territoires_residuels_reference
+- coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference
+- consortiums_energetiques_opaques_reference
+- consortiums_mediatiques_corporatifs_reference
+- directive_kontinuum_reference
+- dispositifs_de_surveillance_numerique_souveraine_fortress_world
+- plateformes_centralisees_de_narration_officielle_reference
+- plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference
+- services_de_contre_information_des_blocs_geopolitiques_concurrents_reference
 type_relation_dominante: infiltration
 
 annee_debut: 2031
@@ -92,12 +99,29 @@ Collecte, vérification et diffusion d'informations sur les crises climatiques l
 - [[geopolitique_conflits]]
 - [[energie_ressources_critiques]]
 
-## Relations
-**Alliés** : [[collectifs_de_journalistes_independants_regionaux_reference]], [[ong_environnementales_de_terrain_reference]], [[reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference]], [[universites_et_think_tanks_en_zones_de_liberte_academique_reference]]
-**Opposants** : [[plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference]], [[services_de_contre_information_des_blocs_geopolitiques_concurrents_reference]], [[consortiums_energetiques_opaques_reference]], [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
 
 ## Description journalistique
 On reconnaît une publication de la Voix du Dehors à son filigrane typographique — une ligne brisée traversant le texte, signature d'un formatage pensé pour résister à la compression des agrégateurs IA. En 2098, le réseau compte plusieurs centaines de nœuds actifs répartis entre serveurs distribués et imprimés clandestins circulant dans les mégapoles à régulation numérique stricte. Ses enquêtes sur les détournements de quotas énergétiques dans les zones tampons climatiques lui ont valu autant de prix de presse que de procédures judiciaires transfrontalières. La question qui revient systématiquement dans les rédactions concurrentes : qui finance réellement les éditions en langue mandarine et en swahili, lancées simultanément en 2087 ? La Voix du Dehors répond par ses chartes d'audit publiées trimestriellement — des documents que personne ne lit entièrement, et que tout le monde cite.
 
 ## Tensions narratives
 La tension centrale reste irrésolue : plusieurs enquêtes internes ont identifié des financements suspects en provenance de deux blocs géopolitiques adverses simultanément, suggérant que la Voix du Dehors est infiltrée à plusieurs niveaux sans que cela invalide nécessairement la véracité de ses publications — ou peut-être précisément parce que chaque camp laisse passer les vérités qui nuisent à l'autre. Une faction interne pousse à une transition vers une gouvernance algorithmique transparente pour garantir l'indépendance éditoriale ; une autre y voit un cheval de Troie des plateformes dominantes. Enfin, les sources humaines dans les zones climatiques critiques signalent une pression croissante : les relais physiques disparaissent, arrêtés ou simplement achetés, et le réseau vieillit sans avoir résolu sa question fondatrice.
+
+## Relations
+**Alliés :**
+- [[collectif_nuit_jaune_reference]]
+- [[collectifs_de_journalistes_independants_regionaux_reference]]
+- [[ong_de_tracabilite_des_ressources_critiques_reference]]
+- [[ong_environnementales_de_terrain_reference]]
+- [[reseaux_de_capteurs_citoyens_reference]]
+- [[reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference]]
+- [[universites_et_think_tanks_en_zones_de_liberte_academique_reference]]
+**Opposants :**
+- [[bureau_des_territoires_residuels_reference]]
+- [[coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference]]
+- [[consortiums_energetiques_opaques_reference]]
+- [[consortiums_mediatiques_corporatifs_reference]]
+- [[directive_kontinuum_reference]]
+- [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
+- [[plateformes_centralisees_de_narration_officielle_reference]]
+- [[plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference]]
+- [[services_de_contre_information_des_blocs_geopolitiques_concurrents_reference]]

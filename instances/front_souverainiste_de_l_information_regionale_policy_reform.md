@@ -31,8 +31,29 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- coalition_des_souverainistes_numeriques_policy_reform
+- collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform
+- factions_internes_dissidentes_des_contributeurs_historiques_policy_reform
+- front_des_autonomies_territoriales_radicales_policy_reform
+- front_souverainiste_des_blocs_non_signataires_policy_reform
+- gouvernements_populistes_anti_depossession_policy_reform
+- les_hors_prisme_policy_reform
+oppositions:
+- bureau_gouvernance_algorithmique_policy_reform
+- bureau_international_du_travail_augmente_bita_policy_reform
+- collectifs_citoyens_de_deliberation_augmentee_policy_reform
+- conseil_de_gouvernance_de_l_information_policy_reform
+- conseil_regulation_algorithmique_policy_reform
+- consortium_des_ia_editoriales_certifiees_policy_reform
+- consortium_des_villes_etats_durables_policy_reform
+- consortium_technologique_de_planification_territoriale_policy_reform
+- consortiums_prives_de_gouvernance_algorithmique_policy_reform
+- directive_kontinuum_policy_reform
+- oracle_des_seuils_policy_reform
+- prisme_global_policy_reform
+- reseau_des_regulateurs_numeriques_souverains_rrns_policy_reform
+- reseaux_de_capteurs_ia_climatiques_deployes_par_les_etats_membres_policy_reform
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -95,6 +116,33 @@ Le Front est tiraillé entre une légitimité populaire régionale et la nécess
 - [[technologie_information]]
 - [[gouvernance_institutions]]
 - [[organisation_territoires]]
+
+
+
+## Relations
+**Alliés :**
+- [[coalition_des_souverainistes_numeriques_policy_reform]]
+- [[collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform]]
+- [[factions_internes_dissidentes_des_contributeurs_historiques_policy_reform]]
+- [[front_des_autonomies_territoriales_radicales_policy_reform]]
+- [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+- [[gouvernements_populistes_anti_depossession_policy_reform]]
+- [[les_hors_prisme_policy_reform]]
+**Opposants :**
+- [[bureau_gouvernance_algorithmique_policy_reform]]
+- [[bureau_international_du_travail_augmente_bita_policy_reform]]
+- [[collectifs_citoyens_de_deliberation_augmentee_policy_reform]]
+- [[conseil_de_gouvernance_de_l_information_policy_reform]]
+- [[conseil_regulation_algorithmique_policy_reform]]
+- [[consortium_des_ia_editoriales_certifiees_policy_reform]]
+- [[consortium_des_villes_etats_durables_policy_reform]]
+- [[consortium_technologique_de_planification_territoriale_policy_reform]]
+- [[consortiums_prives_de_gouvernance_algorithmique_policy_reform]]
+- [[directive_kontinuum_policy_reform]]
+- [[oracle_des_seuils_policy_reform]]
+- [[prisme_global_policy_reform]]
+- [[reseau_des_regulateurs_numeriques_souverains_rrns_policy_reform]]
+- [[reseaux_de_capteurs_ia_climatiques_deployes_par_les_etats_membres_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

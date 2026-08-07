@@ -4,6 +4,7 @@ type: instance
 slug: midwest_desertifie_breakdown
 entite: midwest_desertifie
 scenario: breakdown
+statut: officialise_enrichi
 localisation:
   zone: midwest_desertifie
   lieu: Topeka, Midwest désertifié
@@ -34,20 +35,20 @@ zone_systemique:
     - infrastructure
 
 alliances:
-    - grandes_lacs_compact_eau_breakdown
-    - mouvement_des_communes_du_rust_belt_breakdown
-    - brigades_medicales_itinerantes_breakdown
-    - ong_de_gestion_migratoire_survivantes_breakdown
-    - gouvernements_regionaux_residuels_reterritorialisants_breakdown
-
+- brigades_medicales_itinerantes_breakdown
+- gouvernements_regionaux_residuels_reterritorialisants_breakdown
+- grandes_lacs_compact_eau_breakdown
+- mouvement_des_communes_du_rust_belt_breakdown
+- ong_de_gestion_migratoire_survivantes_breakdown
 oppositions:
-    - milices_de_controle_territorial_breakdown
-    - milices_d_accaparement_hydrique_breakdown
-    - factions_para_etatiques_hydriques_breakdown
-    - seigneuries_logistiques_armees_breakdown
-    - factions_secessionnistes_agrariennes_du_desert_breakdown
-    - seigneurs_de_guerre_agro_territoriaux_breakdown
-
+- communes_rust_belt_breakdown
+- enclaves_technologiques_survivantes_breakdown
+- factions_para_etatiques_hydriques_breakdown
+- factions_secessionnistes_agrariennes_du_desert_breakdown
+- milices_d_accaparement_hydrique_breakdown
+- milices_de_controle_territorial_breakdown
+- seigneuries_logistiques_armees_breakdown
+- seigneurs_de_guerre_agro_territoriaux_breakdown
 type_relation_dominante: rivalité
 
 annee_debut: 2026
@@ -91,12 +92,26 @@ Négociation de trêves temporaires entre communautés survivantes pour l'accès
 - [[demographie_mobilite_humaine]]
 - [[energie_ressources_critiques]]
 
-## Relations
-**Alliés** : [[grandes_lacs_compact_eau_breakdown]], [[mouvement_des_communes_du_rust_belt_breakdown]], [[brigades_medicales_itinerantes_breakdown]], [[ong_de_gestion_migratoire_survivantes_breakdown]], [[gouvernements_regionaux_residuels_reterritorialisants_breakdown]]
-**Opposants** : [[milices_de_controle_territorial_breakdown]], [[milices_d_accaparement_hydrique_breakdown]], [[factions_para_etatiques_hydriques_breakdown]], [[seigneuries_logistiques_armees_breakdown]], [[factions_secessionnistes_agrariennes_du_desert_breakdown]], [[seigneurs_de_guerre_agro_territoriaux_breakdown]]
 
 ## Description journalistique
 Depuis Topeka, ce qui reste du Bureau Régional fédéral opère depuis un hangar climatisé au diesel, où des fonctionnaires en uniformes délavés apposent encore des tampons sur des formulaires que les milices du Kansas ne reconnaissent plus depuis trois ans. Les 'Coursiers du Protocole', comme les appellent les survivants qui les croisent sur les pistes de poussière rouge, sillonnent à moto les zones mortes du Nebraska et du Missouri avec des cartables remplis d'actes officiels et de cartes hydrologiques périmées. Leur crédit se mesure en eau : une négociation réussie autour d'un puits vaut plus que dix décrets signés. Ni tout à fait légitimes, ni tout à fait ignorés, ils survivent parce que dans un monde sans arbitre, même un fantôme en uniforme peut servir de prétexte à la paix.
 
 ## Tensions narratives
 La tension centrale est celle d'une institution qui ne peut survivre qu'en négociant, mais qui perd toute crédibilité à chaque concession faite aux milices — ses propres représentants se demandent s'ils servent encore un État ou s'ils sont devenus des courtiers privés habillés en fonctionnaires. La question de la succession interne est paralysée : nommer un nouveau 'Directeur Régional' crédible nécessiterait une élection que personne ne peut organiser, et un mandat que personne ne peut octroyer. Enfin, le Compact des Grands Lacs — leur allié le plus solide — commence à exiger des contreparties territoriales que l'AFR n'a légalement pas le droit de céder, mais qu'elle ne peut refuser sans perdre l'accès à l'eau qui la maintient en vie.
+
+## Relations
+**Alliés :**
+- [[brigades_medicales_itinerantes_breakdown]]
+- [[gouvernements_regionaux_residuels_reterritorialisants_breakdown]]
+- [[grandes_lacs_compact_eau_breakdown]]
+- [[mouvement_des_communes_du_rust_belt_breakdown]]
+- [[ong_de_gestion_migratoire_survivantes_breakdown]]
+**Opposants :**
+- [[communes_rust_belt_breakdown]]
+- [[enclaves_technologiques_survivantes_breakdown]]
+- [[factions_para_etatiques_hydriques_breakdown]]
+- [[factions_secessionnistes_agrariennes_du_desert_breakdown]]
+- [[milices_d_accaparement_hydrique_breakdown]]
+- [[milices_de_controle_territorial_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]
+- [[seigneurs_de_guerre_agro_territoriaux_breakdown]]

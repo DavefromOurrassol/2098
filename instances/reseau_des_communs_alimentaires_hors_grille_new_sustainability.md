@@ -32,8 +32,24 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- coalition_anti_algorithme_des_autonomies_locales_new_sustainability
+- collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability
+- collectifs_de_desobeissance_algorithmique_new_sustainability
+- collectifs_de_narration_sauvage_hors_protocole_new_sustainability
+- communautes_locales_exclues_des_corridors_new_sustainability
+- les_veilleurs_du_fleuve_new_sustainability
+- mouvement_communautaire_des_micro_grids_energetiques_new_sustainability
+- reseau_des_bio_communs_regionaux_new_sustainability
+- reseau_des_communs_numeriques_globaux_new_sustainability
+- reseau_des_communs_productifs_regeneratifs_new_sustainability
+oppositions:
+- conseil_technocratique_de_gouvernance_alimentaire_new_sustainability
+- enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability
+- factions_technocratiques_de_la_delegation_ia_totale_new_sustainability
+- grille_aria_new_sustainability
+- lobbies_agro_industriels_du_bassin_du_congo_new_sustainability
+- trame_bioclimatique_new_sustainability
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -99,6 +115,27 @@ Le réseau est pris en étau entre l'attrait croissant de ses pratiques régén�
 - [[organisation_territoires]]
 - [[systemes_productifs_travail]]
 - [[climat_environnement_global]]
+
+
+## Relations
+**Alliés :**
+- [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]]
+- [[collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability]]
+- [[collectifs_de_desobeissance_algorithmique_new_sustainability]]
+- [[collectifs_de_narration_sauvage_hors_protocole_new_sustainability]]
+- [[communautes_locales_exclues_des_corridors_new_sustainability]]
+- [[les_veilleurs_du_fleuve_new_sustainability]]
+- [[mouvement_communautaire_des_micro_grids_energetiques_new_sustainability]]
+- [[reseau_des_bio_communs_regionaux_new_sustainability]]
+- [[reseau_des_communs_numeriques_globaux_new_sustainability]]
+- [[reseau_des_communs_productifs_regeneratifs_new_sustainability]]
+**Opposants :**
+- [[conseil_technocratique_de_gouvernance_alimentaire_new_sustainability]]
+- [[enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability]]
+- [[factions_technocratiques_de_la_delegation_ia_totale_new_sustainability]]
+- [[grille_aria_new_sustainability]]
+- [[lobbies_agro_industriels_du_bassin_du_congo_new_sustainability]]
+- [[trame_bioclimatique_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

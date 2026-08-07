@@ -31,8 +31,27 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- alliance_sanitaire_des_populations_exclues_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- collectifs_de_reappropriation_energetique_peripherique_fortress_world
+- collectifs_du_seuil_fortress_world
+- corridors_gris_asie_centrale_fortress_world
+- factions_dissidentes_du_consortium_helios_fortress_world
+- marches_gris_casablanca_fortress_world
+- marches_gris_tbilissi_fortress_world
+- milices_de_piraterie_logistique_arctique_fortress_world
+- reseaux_d_echange_clandestin_inter_zones_fortress_world
+- reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world
+oppositions:
+- appareils_d_etat_des_blocs_fermes_fortress_world
+- bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world
+- cartels_energetiques_des_bioreacteurs_fortress_world
+- consortiums_energetiques_du_bloc_ourrassol_fortress_world
+- nexcore_atlantique_infrastructure_fortress_world
+- reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world
+- reseaux_prives_de_securite_aux_frontieres_fortress_world
+- vaultcorp_security_fortress_world
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -95,6 +114,30 @@ Le réseau est tiraillé entre sa fonction vitale de filet de survie et sa natur
 - [[energie_ressources_critiques]]
 - [[organisation_territoires]]
 - [[frontieres_du_systeme]]
+
+
+## Relations
+**Alliés :**
+- [[alliance_sanitaire_des_populations_exclues_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[collectifs_de_reappropriation_energetique_peripherique_fortress_world]]
+- [[collectifs_du_seuil_fortress_world]]
+- [[corridors_gris_asie_centrale_fortress_world]]
+- [[factions_dissidentes_du_consortium_helios_fortress_world]]
+- [[marches_gris_casablanca_fortress_world]]
+- [[marches_gris_tbilissi_fortress_world]]
+- [[milices_de_piraterie_logistique_arctique_fortress_world]]
+- [[reseaux_d_echange_clandestin_inter_zones_fortress_world]]
+- [[reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world]]
+**Opposants :**
+- [[appareils_d_etat_des_blocs_fermes_fortress_world]]
+- [[bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world]]
+- [[cartels_energetiques_des_bioreacteurs_fortress_world]]
+- [[consortiums_energetiques_du_bloc_ourrassol_fortress_world]]
+- [[nexcore_atlantique_infrastructure_fortress_world]]
+- [[reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world]]
+- [[reseaux_prives_de_securite_aux_frontieres_fortress_world]]
+- [[vaultcorp_security_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

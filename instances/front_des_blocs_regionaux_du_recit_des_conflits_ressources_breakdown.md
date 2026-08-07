@@ -38,8 +38,21 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- bloc_de_johannesburg_breakdown
+- blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
+- etats_fragmentes_nationalisant_les_stocks_breakdown
+- gouvernements_regionaux_residuels_reterritorialisants_breakdown
+- ligue_eurasiatique_coalition_pacifique_breakdown
+oppositions:
+- alliance_blocs_souverains_breakdown
+- archives_neutres_de_geneve_breakdown
+- archives_neutres_geneve_breakdown
+- arctique_nordark_breakdown
+- front_techno_reconstructionniste_breakdown
+- nexcore_breakdown
+- oracle_des_seuils_breakdown
+- voix_du_dehors_breakdown
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -101,6 +114,24 @@ La contradiction fondamentale du Front est qu'il prétend représenter une coali
 - [[geopolitique_conflits]]
 - [[technologie_information]]
 - [[energie_ressources_critiques]]
+
+
+## Relations
+**Alliés :**
+- [[bloc_de_johannesburg_breakdown]]
+- [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
+- [[etats_fragmentes_nationalisant_les_stocks_breakdown]]
+- [[gouvernements_regionaux_residuels_reterritorialisants_breakdown]]
+- [[ligue_eurasiatique_coalition_pacifique_breakdown]]
+**Opposants :**
+- [[alliance_blocs_souverains_breakdown]]
+- [[archives_neutres_de_geneve_breakdown]]
+- [[archives_neutres_geneve_breakdown]]
+- [[arctique_nordark_breakdown]]
+- [[front_techno_reconstructionniste_breakdown]]
+- [[nexcore_breakdown]]
+- [[oracle_des_seuils_breakdown]]
+- [[voix_du_dehors_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

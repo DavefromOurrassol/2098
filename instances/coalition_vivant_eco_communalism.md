@@ -4,6 +4,7 @@ type: instance
 slug: coalition_vivant_eco_communalism
 entite: coalition_vivant
 scenario: eco_communalism
+statut: officialise_enrichi
 localisation:
   zone: grande_vallee_bioterritoire
   lieu: La Grande-Vallée
@@ -33,9 +34,14 @@ zone_systemique:
   - société
   - infrastructure
 alliances:
-  - assemblee_territoires_eco_communalism
-  - le_temoin_eco_communalism
-oppositions: []
+- assemblee_territoires_eco_communalism
+- consortium_amazonia_viva_eco_communalism
+- le_temoin_eco_communalism
+- tresse_verte_corridor_eco_communalism
+- zones_extractivistes_corridors_eco_communalism
+oppositions:
+- enclaves_extractivistes_et_etats_residuels_eco_communalism
+- factions_autoritaires_locales_identitaires_exclusionnistes_eco_communalism
 type_relation_dominante: symbiose
 annee_debut: 2045
 annee_fin:
@@ -78,9 +84,6 @@ Pratique partagée — chaque communauté a ses propres gardiens.
 - [[organisation_territoires]]
 - [[valeurs_culture_tempo_sociale]]
 
-## Relations
-**Alliés** : [[assemblee_territoires_eco_communalism]], [[le_temoin_eco_communalism]]
-**Opposants** : _aucun défini_
 
 ## Description journalistique
 Dans le bioterritoire de la Grande-Vallée, ils sont sept. Ils se lèvent
@@ -92,3 +95,14 @@ les débats s'arrêtent.
 Tension entre transmission traditionnelle et données numériques. Débat sur
 les limites de leur autorité — quand le territoire dit non, les humains
 doivent-ils obéir ?
+
+## Relations
+**Alliés :**
+- [[assemblee_territoires_eco_communalism]]
+- [[consortium_amazonia_viva_eco_communalism]]
+- [[le_temoin_eco_communalism]]
+- [[tresse_verte_corridor_eco_communalism]]
+- [[zones_extractivistes_corridors_eco_communalism]]
+**Opposants :**
+- [[enclaves_extractivistes_et_etats_residuels_eco_communalism]]
+- [[factions_autoritaires_locales_identitaires_exclusionnistes_eco_communalism]]

@@ -37,8 +37,25 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- amara_diallo_nkosi_breakdown
+- brigades_medicales_itinerantes_breakdown
+- collectif_des_climatologues_sans_etat_breakdown
+- collectifs_de_sante_communautaire_autogeree_breakdown
+- communautes_religieuses_des_relais_physiques_breakdown
+- diaspora_tech_sahel_breakdown
+- flux_migratoires_non_integrables_breakdown
+- front_humanitaire_d_urgence_non_affilie_breakdown
+- geneve_bunker_institutions_breakdown
+- gouvernements_regionaux_residuels_reterritorialisants_breakdown
+- ligue_des_cites_littorales_en_sursis_breakdown
 - nairobi_crrc_breakdown
-oppositions: []
+- ong_de_gestion_migratoire_survivantes_breakdown
+- pirates_biologiques_open_source_breakdown
+- reseaux_de_soigneurs_traditionnels_breakdown
+- reseaux_noirs_pharmaceutiques_breakdown
+oppositions:
+- milices_de_controle_territorial_breakdown
+- reseau_des_anciens_financeurs_devenus_censeurs_breakdown
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -100,9 +117,28 @@ Le Réseau est perpétuellement tiraillé entre l'impératif de neutralité huma
 - [[demographie_mobilite_humaine]]
 - [[geopolitique_conflits]]
 
+
 ## Relations
 **Alliés :**
-- [[nairobi_crrc]]
+- [[amara_diallo_nkosi_breakdown]]
+- [[brigades_medicales_itinerantes_breakdown]]
+- [[collectif_des_climatologues_sans_etat_breakdown]]
+- [[collectifs_de_sante_communautaire_autogeree_breakdown]]
+- [[communautes_religieuses_des_relais_physiques_breakdown]]
+- [[diaspora_tech_sahel_breakdown]]
+- [[flux_migratoires_non_integrables_breakdown]]
+- [[front_humanitaire_d_urgence_non_affilie_breakdown]]
+- [[geneve_bunker_institutions_breakdown]]
+- [[gouvernements_regionaux_residuels_reterritorialisants_breakdown]]
+- [[ligue_des_cites_littorales_en_sursis_breakdown]]
+- [[nairobi_crrc_breakdown]]
+- [[ong_de_gestion_migratoire_survivantes_breakdown]]
+- [[pirates_biologiques_open_source_breakdown]]
+- [[reseaux_de_soigneurs_traditionnels_breakdown]]
+- [[reseaux_noirs_pharmaceutiques_breakdown]]
+**Opposants :**
+- [[milices_de_controle_territorial_breakdown]]
+- [[reseau_des_anciens_financeurs_devenus_censeurs_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

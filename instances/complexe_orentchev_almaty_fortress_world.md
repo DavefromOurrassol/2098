@@ -4,6 +4,7 @@ type: instance
 slug: complexe_orentchev_almaty_fortress_world
 entite: complexe_orentchev_almaty
 scenario: fortress_world
+statut: officialise_enrichi
 localisation:
   zone: complexe_orentchev_almaty
   lieu: Complexe Orentchev, Almaty
@@ -38,22 +39,29 @@ zone_systemique:
     - société
 
 alliances:
-    - vasil_orentchev_fortress_world
-    - operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world
-    - consortium_eurasiatique_des_ressources_fermees_fortress_world
-    - reseaux_prives_de_securite_aux_frontieres_fortress_world
-    - agences_de_securite_interieure_des_etats_forteresses_fortress_world
-    - conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world
-
+- agences_de_securite_interieure_des_etats_forteresses_fortress_world
+- almaty_zone_friction_fortress_world
+- commandements_logistiques_peripheriques_du_bloc_eurasien_central_fortress_world
+- conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world
+- consortium_eurasiatique_des_ressources_fermees_fortress_world
+- geneve_bunker_fortress_world
+- nexus_biosyn_division_eurasienne_fortress_world
+- operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world
+- reseaux_prives_de_securite_aux_frontieres_fortress_world
+- siege_genevois_cars_fortress_world
+- tbilissi_nord_zone_franche_fortress_world
+- tours_nexus7_fortress_world
+- vasil_orentchev_fortress_world
 oppositions:
-    - campements_seuils_fermes_fortress_world
-    - collectifs_de_reappropriation_energetique_peripherique_fortress_world
-    - alliance_sanitaire_des_populations_exclues_fortress_world
-    - communautes_deplacees_hors_quota_migratoire_fortress_world
-    - factions_djihadistes_logistiques_d_asie_centrale_fortress_world
-    - collectifs_du_seuil_fortress_world
-    - coalition_vivant_fortress_world
-
+- alliance_sanitaire_des_populations_exclues_fortress_world
+- campements_seuils_fermes_fortress_world
+- coalition_vivant_fortress_world
+- collectifs_de_reappropriation_energetique_peripherique_fortress_world
+- collectifs_du_seuil_fortress_world
+- communautes_deplacees_hors_quota_migratoire_fortress_world
+- corridors_gris_asie_centrale_fortress_world
+- factions_djihadistes_logistiques_d_asie_centrale_fortress_world
+- reseaux_d_echange_clandestin_inter_zones_fortress_world
 type_relation_dominante: dépendance
 
 annee_debut: 2041
@@ -97,12 +105,35 @@ Le Complexe assure l'approvisionnement en eau potable filtrée, en soins médica
 - [[sante_biotechnologies]]
 - [[demographie_mobilite_humaine]]
 
-## Relations
-**Alliés** : [[vasil_orentchev_fortress_world]], [[operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world]], [[consortium_eurasiatique_des_ressources_fermees_fortress_world]], [[reseaux_prives_de_securite_aux_frontieres_fortress_world]], [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]], [[conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world]]
-**Opposants** : [[campements_seuils_fermes_fortress_world]], [[collectifs_de_reappropriation_energetique_peripherique_fortress_world]], [[alliance_sanitaire_des_populations_exclues_fortress_world]], [[communautes_deplacees_hors_quota_migratoire_fortress_world]], [[factions_djihadistes_logistiques_d_asie_centrale_fortress_world]], [[collectifs_du_seuil_fortress_world]], [[coalition_vivant_fortress_world]]
 
 ## Description journalistique
 Depuis les collines surplombant Almaty, le Complexe Orentchev se distingue par ses tours de verre fumé et ses dômes de climatisation artificielle qui luisent la nuit comme une île orbitale posée à même le sol centre-asiatique. À l'intérieur : piscines à l'eau purifiée, chirurgies augmentatives de troisième génération, jardins hydroponiques tempérés à 22 degrés toute l'année — pendant qu'à deux kilomètres, les faubourgs d'Almaty-Est survivent avec des coupures d'eau quotidiennes et des cliniques de fortune. Vasil Orentchev n'y réside qu'une fraction de l'année, mais son nom est gravé à l'entrée des douze portiques de contrôle biométrique. Les habitants du Complexe — cadres supérieurs, familles de diplomates de blocs, technocrates eurasiatiques — ne parlent pas de 'forteresse' : ils disent 'campus' ou 'communauté sécurisée'. Le reste de la ville, lui, l'appelle simplement 'le Mur'.
 
 ## Tensions narratives
 La pression démographique des camps périphériques d'Almaty s'intensifie chaque saison sèche, et plusieurs tentatives d'intrusion organisées ont déjà mis à l'épreuve les systèmes de sécurité algorithmiques — soulevant la question de leur robustesse face à des tactiques collectives non anticipées. Par ailleurs, des dissidences internes émergent parmi les employés de maintenance et le personnel médical du Complexe, qui vivent dans une zone-tampon semi-intégrée aux conditions nettement inférieures à celles des résidents accrédités. Enfin, la dépendance du Complexe aux corridors logistiques eurasiatiques le rend vulnérable aux tensions géopolitiques régionales — une rupture d'approvisionnement en pièces critiques pourrait fragiliser les systèmes de filtration d'eau, révélant que même la forteresse n'est pas aussi autarcique qu'elle le prétend.
+
+## Relations
+**Alliés :**
+- [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]]
+- [[almaty_zone_friction_fortress_world]]
+- [[commandements_logistiques_peripheriques_du_bloc_eurasien_central_fortress_world]]
+- [[conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world]]
+- [[consortium_eurasiatique_des_ressources_fermees_fortress_world]]
+- [[geneve_bunker_fortress_world]]
+- [[nexus_biosyn_division_eurasienne_fortress_world]]
+- [[operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world]]
+- [[reseaux_prives_de_securite_aux_frontieres_fortress_world]]
+- [[siege_genevois_cars_fortress_world]]
+- [[tbilissi_nord_zone_franche_fortress_world]]
+- [[tours_nexus7_fortress_world]]
+- [[vasil_orentchev_fortress_world]]
+**Opposants :**
+- [[alliance_sanitaire_des_populations_exclues_fortress_world]]
+- [[campements_seuils_fermes_fortress_world]]
+- [[coalition_vivant_fortress_world]]
+- [[collectifs_de_reappropriation_energetique_peripherique_fortress_world]]
+- [[collectifs_du_seuil_fortress_world]]
+- [[communautes_deplacees_hors_quota_migratoire_fortress_world]]
+- [[corridors_gris_asie_centrale_fortress_world]]
+- [[factions_djihadistes_logistiques_d_asie_centrale_fortress_world]]
+- [[reseaux_d_echange_clandestin_inter_zones_fortress_world]]

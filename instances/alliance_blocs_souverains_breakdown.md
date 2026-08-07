@@ -4,6 +4,7 @@ type: instance
 slug: alliance_blocs_souverains_breakdown
 entite: alliance_blocs_souverains
 scenario: breakdown
+statut: officialise_enrichi
 localisation:
   zone: null
   lieu: null
@@ -35,14 +36,13 @@ zone_systemique:
     - sécurité
 
 alliances:
-    - milices_contractuelles_des_anciens_etats_membres_breakdown
-    - factions_energetiques_heritieres_des_pactes_abs_breakdown
-
+- factions_energetiques_heritieres_des_pactes_abs_breakdown
+- milices_contractuelles_des_anciens_etats_membres_breakdown
 oppositions:
-    - reseaux_de_solidarite_horizontale_post_effondrement_breakdown
-    - cites_etats_secessionistes_breakdown
-    - front_humanitaire_d_urgence_non_affilie_breakdown
-
+- cites_etats_secessionistes_breakdown
+- front_des_blocs_regionaux_du_recit_des_conflits_ressources_breakdown
+- front_humanitaire_d_urgence_non_affilie_breakdown
+- reseaux_de_solidarite_horizontale_post_effondrement_breakdown
 type_relation_dominante: conflit
 
 annee_debut: 2026
@@ -85,12 +85,19 @@ Administration nominale de traités bilatéraux devenus lettres mortes, réclama
 - [[energie_ressources_critiques]]
 - [[organisation_territoires]]
 
-## Relations
-**Alliés** : [[milices_contractuelles_des_anciens_etats_membres_breakdown]], [[factions_energetiques_heritieres_des_pactes_abs_breakdown]]
-**Opposants** : [[reseaux_de_solidarite_horizontale_post_effondrement_breakdown]], [[cites_etats_secessionistes_breakdown]], [[front_humanitaire_d_urgence_non_affilie_breakdown]]
 
 ## Description journalistique
 Il n'existe plus de siège, plus de secrétariat général, plus de drapeau unifié — et pourtant, le nom 'Pacte des Souverains' s'affiche encore sur les ultimatums que se lancent mutuellement les commandants de Bloc IV et Bloc IX dans la zone du Bassin Caspien. L'Alliance des Blocs Souverains a survécu à son propre effondrement sous la forme la plus perverse qui soit : un cadre juridique fantôme que chaque belligérant invoque pour justifier l'agression, jamais pour contraindre la paix. Des archivistes de Genève-Bunker ont recensé 340 violations croisées des traités ABS enregistrées entre 2091 et 2097 — sans qu'une seule procédure d'arbitrage ait abouti. Ce que l'Alliance promettait — l'ordre par la séparation — a produit son exact contraire : la guerre de tous contre tous, habillée en droit international.
 
 ## Tensions narratives
 Qui détient la légitimité d'invoquer les traités ABS — et à quelles fins ? Des diplomates zombies continuent de négocier dans des bunkers au nom d'États qui n'existent plus, créant des droits fantômes sur des ressources bien réelles. La question de savoir si l'ABS peut être 'réactivée' divise profondément les survivants institutionnels : certains y voient le seul cadre possible pour une reconstruction par blocs, d'autres l'accusent d'être la matrice même du chaos actuel. Un conflit latent oppose les archivistes-juristes qui veulent préserver les traités comme socle normatif futur aux commandants de terrain qui veulent les effacer pour repartir de zéro.
+
+## Relations
+**Alliés :**
+- [[factions_energetiques_heritieres_des_pactes_abs_breakdown]]
+- [[milices_contractuelles_des_anciens_etats_membres_breakdown]]
+**Opposants :**
+- [[cites_etats_secessionistes_breakdown]]
+- [[front_des_blocs_regionaux_du_recit_des_conflits_ressources_breakdown]]
+- [[front_humanitaire_d_urgence_non_affilie_breakdown]]
+- [[reseaux_de_solidarite_horizontale_post_effondrement_breakdown]]

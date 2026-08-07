@@ -29,8 +29,22 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- courant_autoritaire_recuperateur_du_vocabulaire_communautaire_policy_reform
+- faction_regulatrice_dure_au_sein_du_cei_policy_reform
+- front_souverainiste_de_l_information_regionale_policy_reform
+- front_souverainiste_des_blocs_non_signataires_policy_reform
+oppositions:
+- agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
+- autorite_mondiale_du_vivant_amv_policy_reform
+- collectifs_citoyens_de_deliberation_augmentee_policy_reform
+- conseil_regulation_ressources_policy_reform
+- consortium_des_ia_editoriales_certifiees_policy_reform
+- courants_post_technocratiques_de_reconquete_democratique_policy_reform
+- fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform
+- prisme_global_policy_reform
+- reseau_des_agences_sanitaires_regionales_policy_reform
+- reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -93,6 +107,26 @@ La contradiction centrale qui les ronge est celle de contributeurs historiques d
 ## Variables influencées
 - [[gouvernance_institutions]]
 - [[valeurs_culture_tempo_sociale]]
+
+
+
+## Relations
+**Alliés :**
+- [[courant_autoritaire_recuperateur_du_vocabulaire_communautaire_policy_reform]]
+- [[faction_regulatrice_dure_au_sein_du_cei_policy_reform]]
+- [[front_souverainiste_de_l_information_regionale_policy_reform]]
+- [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+**Opposants :**
+- [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]
+- [[autorite_mondiale_du_vivant_amv_policy_reform]]
+- [[collectifs_citoyens_de_deliberation_augmentee_policy_reform]]
+- [[conseil_regulation_ressources_policy_reform]]
+- [[consortium_des_ia_editoriales_certifiees_policy_reform]]
+- [[courants_post_technocratiques_de_reconquete_democratique_policy_reform]]
+- [[fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform]]
+- [[prisme_global_policy_reform]]
+- [[reseau_des_agences_sanitaires_regionales_policy_reform]]
+- [[reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

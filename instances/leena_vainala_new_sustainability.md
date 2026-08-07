@@ -4,6 +4,7 @@ type: instance
 slug: leena_vainala_new_sustainability
 entite: leena_vainala
 scenario: new_sustainability
+statut: officialise_enrichi
 localisation:
   zone: union_nordique_europe_nord
   lieu: Helsinki

@@ -31,8 +31,30 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- corridors_gris_asie_centrale_fortress_world
+- factions_internes_pro_autarcie_totale_fortress_world
+- operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world
+- reseaux_de_contrebande_energetique_transfrontaliere_fortress_world
+oppositions:
+- almaty_zone_friction_fortress_world
+- bassora_couloir_refugies_fortress_world
+- bloc_eurasiatique_occidental_fortress_world
+- bloc_pacifique_nord_fortress_world
+- cartels_energetiques_des_bioreacteurs_fortress_world
+- cartels_miniers_militarises_subsahariens_fortress_world
+- coalition_arctique_des_blocs_continentaux_fortress_world
+- commandements_logistiques_peripheriques_du_bloc_eurasien_central_fortress_world
+- complexe_orentchev_almaty_fortress_world
+- consortium_sino_finlandais_de_flotte_autonome_fortress_world
+- consortiums_energetiques_du_bloc_ourrassol_fortress_world
+- instances_aria_concurrentes_des_blocs_rivaux_fortress_world
+- ironclad_logistics_fortress_world
+- marches_gris_tbilissi_fortress_world
+- nexcore_atlantique_infrastructure_fortress_world
+- nexus_biosyn_division_eurasienne_fortress_world
+- reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world
+- vasil_orentchev_fortress_world
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -95,6 +117,34 @@ La tension fondamentale qui ronge ces factions est celle entre l'idéologie et l
 - [[geopolitique_conflits]]
 - [[organisation_territoires]]
 - [[energie_ressources_critiques]]
+
+
+
+## Relations
+**Alliés :**
+- [[corridors_gris_asie_centrale_fortress_world]]
+- [[factions_internes_pro_autarcie_totale_fortress_world]]
+- [[operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world]]
+- [[reseaux_de_contrebande_energetique_transfrontaliere_fortress_world]]
+**Opposants :**
+- [[almaty_zone_friction_fortress_world]]
+- [[bassora_couloir_refugies_fortress_world]]
+- [[bloc_eurasiatique_occidental_fortress_world]]
+- [[bloc_pacifique_nord_fortress_world]]
+- [[cartels_energetiques_des_bioreacteurs_fortress_world]]
+- [[cartels_miniers_militarises_subsahariens_fortress_world]]
+- [[coalition_arctique_des_blocs_continentaux_fortress_world]]
+- [[commandements_logistiques_peripheriques_du_bloc_eurasien_central_fortress_world]]
+- [[complexe_orentchev_almaty_fortress_world]]
+- [[consortium_sino_finlandais_de_flotte_autonome_fortress_world]]
+- [[consortiums_energetiques_du_bloc_ourrassol_fortress_world]]
+- [[instances_aria_concurrentes_des_blocs_rivaux_fortress_world]]
+- [[ironclad_logistics_fortress_world]]
+- [[marches_gris_tbilissi_fortress_world]]
+- [[nexcore_atlantique_infrastructure_fortress_world]]
+- [[nexus_biosyn_division_eurasienne_fortress_world]]
+- [[reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world]]
+- [[vasil_orentchev_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

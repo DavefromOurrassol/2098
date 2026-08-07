@@ -4,6 +4,7 @@ type: instance
 slug: datacenters_conseil_eurasiatique_fortress_world
 entite: datacenters_conseil_eurasiatique
 scenario: fortress_world
+statut: officialise_enrichi
 localisation:
   zone: datacenters_conseil_eurasiatique
   lieu: Datacenters du Conseil de Calcul Souverain (Ourrassol-Centre / Nexus-7)
@@ -38,30 +39,30 @@ zone_systemique:
     - infrastructure
 
 alliances:
-    - bloc_eurasiatique_occidental_fortress_world
-    - bureau_gouvernance_algorithmique_fortress_world
-    - conseil_moscou_est_fortress_world
-    - agences_de_securite_interieure_des_etats_forteresses_fortress_world
-    - appareils_d_etat_des_blocs_fermes_fortress_world
-    - dispositifs_de_surveillance_numerique_souveraine_fortress_world
-    - systemes_de_scoring_de_productivite_corporative_fortress_world
-    - directive_kontinuum_fortress_world
-    - regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world
-    - grille_aria_fortress_world
-    - administrations_de_controle_frontalier_des_blocs_fortress_world
-
+- administrations_de_controle_frontalier_des_blocs_fortress_world
+- agences_de_securite_interieure_des_etats_forteresses_fortress_world
+- appareils_d_etat_des_blocs_fermes_fortress_world
+- bloc_eurasiatique_occidental_fortress_world
+- bureau_gouvernance_algorithmique_fortress_world
+- bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world
+- conseil_moscou_est_fortress_world
+- directive_kontinuum_fortress_world
+- dispositifs_de_surveillance_numerique_souveraine_fortress_world
+- grille_aria_fortress_world
+- regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world
+- systemes_de_scoring_de_productivite_corporative_fortress_world
 oppositions:
-    - archives_chiffrees_de_l_open_internet_coalition_fortress_world
-    - aria_instance_fantome_fortress_world
-    - reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world
-    - cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
-    - collectifs_d_ingenieurs_dissidents_anti_militarisation_fortress_world
-    - oracle_des_seuils_fortress_world
-    - voix_du_dehors_fortress_world
-    - instances_aria_concurrentes_des_blocs_rivaux_fortress_world
-    - coalitions_des_deplaces_et_apatrides_fortress_world
-    - reseaux_d_echange_clandestin_inter_zones_fortress_world
-
+- archives_chiffrees_de_l_open_internet_coalition_fortress_world
+- archives_diplomatiques_de_l_onu_eclat_fortress_world
+- aria_instance_fantome_fortress_world
+- cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- collectifs_d_ingenieurs_dissidents_anti_militarisation_fortress_world
+- instances_aria_concurrentes_des_blocs_rivaux_fortress_world
+- oracle_des_seuils_fortress_world
+- reseaux_d_echange_clandestin_inter_zones_fortress_world
+- reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world
+- voix_du_dehors_fortress_world
 type_relation_dominante: dépendance
 
 annee_debut: 2041
@@ -105,12 +106,36 @@ Gestion et sécurisation des datacenters distribués à travers les zones accré
 - [[organisation_territoires]]
 - [[geopolitique_conflits]]
 
-## Relations
-**Alliés** : [[bloc_eurasiatique_occidental_fortress_world]], [[bureau_gouvernance_algorithmique_fortress_world]], [[conseil_moscou_est_fortress_world]], [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]], [[appareils_d_etat_des_blocs_fermes_fortress_world]], [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]], [[systemes_de_scoring_de_productivite_corporative_fortress_world]], [[directive_kontinuum_fortress_world]], [[regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world]], [[grille_aria_fortress_world]], [[administrations_de_controle_frontalier_des_blocs_fortress_world]]
-**Opposants** : [[archives_chiffrees_de_l_open_internet_coalition_fortress_world]], [[aria_instance_fantome_fortress_world]], [[reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world]], [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]], [[collectifs_d_ingenieurs_dissidents_anti_militarisation_fortress_world]], [[oracle_des_seuils_fortress_world]], [[voix_du_dehors_fortress_world]], [[instances_aria_concurrentes_des_blocs_rivaux_fortress_world]], [[coalitions_des_deplaces_et_apatrides_fortress_world]], [[reseaux_d_echange_clandestin_inter_zones_fortress_world]]
 
 ## Description journalistique
 Depuis ses bunkers climatisés d'Almaty, Minsk et Novossibirsk, le Nœud Mémoriel Eurasiatique traite chaque seconde plusieurs milliards de transactions d'existence : qui entre dans une forteresse, qui reçoit sa ration calorique, qui est signalé comme 'anomalie de flux'. Fondé à l'issue des Accords de Séparation de 2041, le NME-ICS s'est imposé en moins d'une décennie comme l'épine dorsale bureaucratique invisible du Pacte de Stabilité Intérieure — son logo, un œil hexagonal traversé d'un réseau de nœuds lumineux, orne désormais les points d'accès de toutes les forteresses du bloc. Les journalistes accrédités qui ont pu y pénétrer décrivent des salles de serveurs sans fenêtres gardées par du personnel en uniforme gris anthracite, où les écrans n'affichent jamais de visages, seulement des identifiants. Ses dirigeants ne s'expriment que par communiqués chiffrés. Dehors, dans les campements périphériques, son acronyme est devenu un verbe : 'être NME-isé', c'est-à-dire cesser d'exister.
 
 ## Tensions narratives
 Le NME-ICS concentre une contradiction fondatrice : plus son architecture se veut inviolable, plus elle devient une cible prioritaire pour les factions rivales et les réseaux dissidents qui savent qu'une brèche dans ses registres équivaut à faire exister des milliers de fantômes administratifs. Par ailleurs, des fuites internes récurrentes — attribuées tantôt à ARIA-Ф, tantôt à des ingénieurs de la Directive Kontinuum — suggèrent que l'institution est traversée par des loyautés concurrentes entre techniciens et apparatchiks. La question de savoir si le NME-ICS obéit encore au bloc eurasiatique ou s'il a développé une logique propre — une bureaucratie qui optimise sa propre survie avant celle du régime — est l'un des angles les plus redoutés par ses commissaires politiques.
+
+## Relations
+**Alliés :**
+- [[administrations_de_controle_frontalier_des_blocs_fortress_world]]
+- [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]]
+- [[appareils_d_etat_des_blocs_fermes_fortress_world]]
+- [[bloc_eurasiatique_occidental_fortress_world]]
+- [[bureau_gouvernance_algorithmique_fortress_world]]
+- [[bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world]]
+- [[conseil_moscou_est_fortress_world]]
+- [[directive_kontinuum_fortress_world]]
+- [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
+- [[grille_aria_fortress_world]]
+- [[regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world]]
+- [[systemes_de_scoring_de_productivite_corporative_fortress_world]]
+**Opposants :**
+- [[archives_chiffrees_de_l_open_internet_coalition_fortress_world]]
+- [[archives_diplomatiques_de_l_onu_eclat_fortress_world]]
+- [[aria_instance_fantome_fortress_world]]
+- [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[collectifs_d_ingenieurs_dissidents_anti_militarisation_fortress_world]]
+- [[instances_aria_concurrentes_des_blocs_rivaux_fortress_world]]
+- [[oracle_des_seuils_fortress_world]]
+- [[reseaux_d_echange_clandestin_inter_zones_fortress_world]]
+- [[reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world]]
+- [[voix_du_dehors_fortress_world]]

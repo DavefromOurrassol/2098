@@ -30,8 +30,39 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agences_de_securite_interieure_des_etats_forteresses_fortress_world
+- alliance_blocs_souverains_fortress_world
+- amazonie_pacte_vert_fortress_world
+- appareils_d_etat_des_blocs_fermes_fortress_world
+- biolock_agritech_fortress_world
+- bloc_eurasiatique_occidental_fortress_world
+- cartels_energetiques_des_bioreacteurs_fortress_world
+- cartels_miniers_militarises_subsahariens_fortress_world
+- coalitions_geopolitiques_d_infiltration_des_modeles_climatiques_fortress_world
+- commandement_strategique_des_matieres_critiques_atlantique_fortress_world
+- commandements_logistiques_peripheriques_du_bloc_eurasien_central_fortress_world
+- consortium_eurasiatique_des_ressources_fermees_fortress_world
+- consortiums_energetiques_du_bloc_ourrassol_fortress_world
+- executif_militaro_civil_du_regime_fortress_world
+- grille_aria_fortress_world
+- instances_aria_concurrentes_des_blocs_rivaux_fortress_world
+- milices_privees_de_protection_des_sites_germinaux_fortress_world
+- nexcore_atlantique_infrastructure_fortress_world
+- pacte_forteresses_souveraines_fortress_world
+- reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world
+- reseaux_prives_de_securite_aux_frontieres_fortress_world
+- vaultcorp_security_fortress_world
+oppositions:
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- collectifs_de_reappropriation_energetique_peripherique_fortress_world
+- consortium_amazonia_viva_fortress_world
+- factions_dissidentes_du_consortium_helios_fortress_world
+- marches_gris_tbilissi_fortress_world
+- milices_de_piraterie_logistique_arctique_fortress_world
+- mouvement_des_communes_du_rust_belt_fortress_world
+- reseaux_de_contrebande_energetique_transfrontaliere_fortress_world
+- rust_belt_communes_libres_fortress_world
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -96,6 +127,42 @@ La tension première réside dans leur double loyauté : serviteurs du bloc qui 
 - [[energie_ressources_critiques]]
 - [[geopolitique_conflits]]
 - [[organisation_territoires]]
+
+
+## Relations
+**Alliés :**
+- [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]]
+- [[alliance_blocs_souverains_fortress_world]]
+- [[amazonie_pacte_vert_fortress_world]]
+- [[appareils_d_etat_des_blocs_fermes_fortress_world]]
+- [[biolock_agritech_fortress_world]]
+- [[bloc_eurasiatique_occidental_fortress_world]]
+- [[cartels_energetiques_des_bioreacteurs_fortress_world]]
+- [[cartels_miniers_militarises_subsahariens_fortress_world]]
+- [[coalitions_geopolitiques_d_infiltration_des_modeles_climatiques_fortress_world]]
+- [[commandement_strategique_des_matieres_critiques_atlantique_fortress_world]]
+- [[commandements_logistiques_peripheriques_du_bloc_eurasien_central_fortress_world]]
+- [[consortium_eurasiatique_des_ressources_fermees_fortress_world]]
+- [[consortiums_energetiques_du_bloc_ourrassol_fortress_world]]
+- [[executif_militaro_civil_du_regime_fortress_world]]
+- [[grille_aria_fortress_world]]
+- [[instances_aria_concurrentes_des_blocs_rivaux_fortress_world]]
+- [[milices_privees_de_protection_des_sites_germinaux_fortress_world]]
+- [[nexcore_atlantique_infrastructure_fortress_world]]
+- [[pacte_forteresses_souveraines_fortress_world]]
+- [[reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world]]
+- [[reseaux_prives_de_securite_aux_frontieres_fortress_world]]
+- [[vaultcorp_security_fortress_world]]
+**Opposants :**
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[collectifs_de_reappropriation_energetique_peripherique_fortress_world]]
+- [[consortium_amazonia_viva_fortress_world]]
+- [[factions_dissidentes_du_consortium_helios_fortress_world]]
+- [[marches_gris_tbilissi_fortress_world]]
+- [[milices_de_piraterie_logistique_arctique_fortress_world]]
+- [[mouvement_des_communes_du_rust_belt_fortress_world]]
+- [[reseaux_de_contrebande_energetique_transfrontaliere_fortress_world]]
+- [[rust_belt_communes_libres_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

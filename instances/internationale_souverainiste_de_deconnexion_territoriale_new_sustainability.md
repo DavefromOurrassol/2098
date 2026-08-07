@@ -35,8 +35,49 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- bloc_des_gouvernements_souverainistes_hydriques_new_sustainability
+- coalition_anti_algorithme_des_autonomies_locales_new_sustainability
+- coalition_anti_fiscalite_universelle_new_sustainability
+- etats_souverainistes_anti_reseau_new_sustainability
+- factions_souverainistes_des_blocs_peripheriques_new_sustainability
+- mouvement_pour_l_autodetermination_territoriale_new_sustainability
+- mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability
+- reseaux_d_information_souverainistes_fermes_new_sustainability
+- reseaux_de_gouvernance_territoriale_distribues_new_sustainability
+- souverainistes_du_bloc_eurasien_new_sustainability
+oppositions:
+- agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability
+- agence_mondiale_de_modelisation_climatique_ammc_new_sustainability
+- agence_stabilisation_climatique_new_sustainability
+- bloc_eurasien_souverainiste_new_sustainability
+- bureau_gouvernance_algorithmique_new_sustainability
+- centre_institutionnel_geneve_new_sustainability
+- collectif_des_mediateurs_cognitifs_internationaux_new_sustainability
+- commission_territoriale_ourrassol_new_sustainability
+- conseil_de_regulation_cognitive_de_l_onu_new_sustainability
+- conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability
+- conseil_regulation_ressources_new_sustainability
+- conseil_technocratique_de_gouvernance_alimentaire_new_sustainability
+- consortium_amazonia_viva_new_sustainability
+- consortium_d_interoperabilite_ia_humain_new_sustainability
+- consortium_de_regeneration_planetaire_new_sustainability
+- great_lakes_autonomous_compact_new_sustainability
+- great_lakes_compact_new_sustainability
+- hub_nairobi_kigali_new_sustainability
+- ligue_des_cites_du_sahel_numerique_new_sustainability
+- oms_etendue_new_sustainability
+- pacifique_sud_resilience_network_new_sustainability
+- parlement_deliberatif_mondial_new_sustainability
+- parlement_territoires_nairobi_new_sustainability
+- programme_onu_de_restauration_des_sols_new_sustainability
+- programme_onusien_de_mobilite_climatique_new_sustainability
+- reseau_des_communs_numeriques_globaux_new_sustainability
+- reseau_global_de_cliniques_regeneratives_new_sustainability
+- reseau_mnemos_new_sustainability
+- trame_bioclimatique_new_sustainability
+- tribunal_algorithmique_de_bruxelles_new_sustainability
+- union_des_blocs_energetiques_regionaux_new_sustainability
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -103,6 +144,53 @@ La tension centrale de l'ISDT réside dans sa contradiction existentielle : pour
 - [[organisation_territoires]]
 - [[frontieres_du_systeme]]
 - [[gouvernance_institutions]]
+
+
+
+## Relations
+**Alliés :**
+- [[bloc_des_gouvernements_souverainistes_hydriques_new_sustainability]]
+- [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]]
+- [[coalition_anti_fiscalite_universelle_new_sustainability]]
+- [[etats_souverainistes_anti_reseau_new_sustainability]]
+- [[factions_souverainistes_des_blocs_peripheriques_new_sustainability]]
+- [[mouvement_pour_l_autodetermination_territoriale_new_sustainability]]
+- [[mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability]]
+- [[reseaux_d_information_souverainistes_fermes_new_sustainability]]
+- [[reseaux_de_gouvernance_territoriale_distribues_new_sustainability]]
+- [[souverainistes_du_bloc_eurasien_new_sustainability]]
+**Opposants :**
+- [[agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability]]
+- [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]]
+- [[agence_stabilisation_climatique_new_sustainability]]
+- [[bloc_eurasien_souverainiste_new_sustainability]]
+- [[bureau_gouvernance_algorithmique_new_sustainability]]
+- [[centre_institutionnel_geneve_new_sustainability]]
+- [[collectif_des_mediateurs_cognitifs_internationaux_new_sustainability]]
+- [[commission_territoriale_ourrassol_new_sustainability]]
+- [[conseil_de_regulation_cognitive_de_l_onu_new_sustainability]]
+- [[conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability]]
+- [[conseil_regulation_ressources_new_sustainability]]
+- [[conseil_technocratique_de_gouvernance_alimentaire_new_sustainability]]
+- [[consortium_amazonia_viva_new_sustainability]]
+- [[consortium_d_interoperabilite_ia_humain_new_sustainability]]
+- [[consortium_de_regeneration_planetaire_new_sustainability]]
+- [[great_lakes_autonomous_compact_new_sustainability]]
+- [[great_lakes_compact_new_sustainability]]
+- [[hub_nairobi_kigali_new_sustainability]]
+- [[ligue_des_cites_du_sahel_numerique_new_sustainability]]
+- [[oms_etendue_new_sustainability]]
+- [[pacifique_sud_resilience_network_new_sustainability]]
+- [[parlement_deliberatif_mondial_new_sustainability]]
+- [[parlement_territoires_nairobi_new_sustainability]]
+- [[programme_onu_de_restauration_des_sols_new_sustainability]]
+- [[programme_onusien_de_mobilite_climatique_new_sustainability]]
+- [[reseau_des_communs_numeriques_globaux_new_sustainability]]
+- [[reseau_global_de_cliniques_regeneratives_new_sustainability]]
+- [[reseau_mnemos_new_sustainability]]
+- [[trame_bioclimatique_new_sustainability]]
+- [[tribunal_algorithmique_de_bruxelles_new_sustainability]]
+- [[union_des_blocs_energetiques_regionaux_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

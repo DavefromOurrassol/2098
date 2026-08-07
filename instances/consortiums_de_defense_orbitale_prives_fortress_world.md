@@ -33,11 +33,19 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- anba_siege_atlantique_fortress_world
 - bloc_atlantique_fortress_world
 - bloc_eurasiatique_occidental_fortress_world
 - bloc_pacifique_nord_fortress_world
+- centre_controle_orbital_helios_fortress_world
+- consortium_helios_fortress_world
+- geneve_bunker_fortress_world
+- oligarchies_technologiques_souveraines_d_infrastructure_de_calcul_fortress_world
+- reseaux_prives_de_securite_aux_frontieres_fortress_world
+- vaultcorp_security_fortress_world
 oppositions:
 - amazonie_pacte_vert_fortress_world
+- coalition_arctique_des_blocs_continentaux_fortress_world
 - zones_grises_tampons_fortress_world
 type_relation_dominante: dépendance
 annee_debut: 2026
@@ -101,13 +109,22 @@ La tension centrale qui ronge ces consortiums est structurelle : leur survie éc
 - [[frontieres_du_systeme]]
 - [[energie_ressources_critiques]]
 
+
 ## Relations
 **Alliés :**
+- [[anba_siege_atlantique_fortress_world]]
 - [[bloc_atlantique_fortress_world]]
 - [[bloc_eurasiatique_occidental_fortress_world]]
 - [[bloc_pacifique_nord_fortress_world]]
+- [[centre_controle_orbital_helios_fortress_world]]
+- [[consortium_helios_fortress_world]]
+- [[geneve_bunker_fortress_world]]
+- [[oligarchies_technologiques_souveraines_d_infrastructure_de_calcul_fortress_world]]
+- [[reseaux_prives_de_securite_aux_frontieres_fortress_world]]
+- [[vaultcorp_security_fortress_world]]
 **Opposants :**
 - [[amazonie_pacte_vert_fortress_world]]
+- [[coalition_arctique_des_blocs_continentaux_fortress_world]]
 - [[zones_grises_tampons_fortress_world]]
 
 ## Notes

@@ -4,6 +4,7 @@ type: instance
 slug: tribunal_algorithmique_de_bruxelles_policy_reform
 entite: tribunal_algorithmique_de_bruxelles
 scenario: policy_reform
+statut: officialise_enrichi
 localisation:
   zone: hub_europeen_regulation
   lieu: Bruxelles

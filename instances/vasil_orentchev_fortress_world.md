@@ -4,6 +4,7 @@ type: instance
 slug: vasil_orentchev_fortress_world
 entite: vasil_orentchev
 scenario: fortress_world
+statut: officialise_enrichi
 localisation:
   zone: zones_grises_tampons
   lieu: Almaty (complexe fortifié aux abords), corridors des zones grises d'Asie centrale
@@ -36,15 +37,14 @@ zone_systemique:
     - gouvernance
 
 alliances:
-    - commandements_logistiques_peripheriques_du_bloc_eurasien_central_fortress_world
-    - operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world
-    - reseaux_de_maintenance_d_infrastructures_critiques_hors_blocs_fortress_world
-
+- commandements_logistiques_peripheriques_du_bloc_eurasien_central_fortress_world
+- complexe_orentchev_almaty_fortress_world
+- operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world
+- reseaux_de_maintenance_d_infrastructures_critiques_hors_blocs_fortress_world
 oppositions:
-    - bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world
-    - factions_djihadistes_logistiques_d_asie_centrale_fortress_world
-    - corps_des_inspecteurs_de_conformite_inter_blocs_fortress_world
-
+- bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world
+- corps_des_inspecteurs_de_conformite_inter_blocs_fortress_world
+- factions_djihadistes_logistiques_d_asie_centrale_fortress_world
 type_relation_dominante: alliance stratégique
 
 annee_debut: 2041
@@ -88,12 +88,20 @@ Contrôle et monnaye l'accès à plusieurs corridors terrestres et fluviaux reli
 - [[organisation_territoires]]
 - [[gouvernance_institutions]]
 
-## Relations
-**Alliés** : [[commandements_logistiques_peripheriques_du_bloc_eurasien_central_fortress_world]], [[operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world]], [[reseaux_de_maintenance_d_infrastructures_critiques_hors_blocs_fortress_world]]
-**Opposants** : [[bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world]], [[factions_djihadistes_logistiques_d_asie_centrale_fortress_world]], [[corps_des_inspecteurs_de_conformite_inter_blocs_fortress_world]]
 
 ## Description journalistique
 On ne le voit jamais sur les images satellites officielles, mais ses convois blindés traversent chaque semaine des zones que les cartographes des blocs ont coloriées en gris neutre — ni ici, ni là. Vasil Orentchev, 67 ans, ancien colonel, aujourd'hui maître des passages, reçoit dans un complexe fortifié aux abords de ce qui fut Almaty un journaliste autorisé avec la même froideur méthodique qu'il applique à ses tableaux de bord logistiques. 'Je ne fais pas de politique, je fais de la physique : les ressources doivent aller d'un point A à un point B, et personne d'autre ne le fera à ma place.' Derrière lui, trois écrans affichent en temps réel l'état de corridors que ni Bruxelles-Forteresse ni le Conseil de Moscou-Est ne reconnaissent officiellement mais qu'ils utilisent sans interruption depuis 2047.
 
 ## Tensions narratives
 La disparition progressive des zones grises sous la pression des blocs qui cherchent à internaliser leurs corridors réduit mécaniquement l'espace vital d'Orentchev — le forçant potentiellement à choisir un camp ou à précipiter un conflit ouvert pour préserver sa valeur d'intermédiaire. La question de sa succession constitue une bombe à retardement : sans structure institutionnelle, son réseau repose sur sa seule autorité personnelle, et plusieurs lieutenants ambitieux attendent l'effacement du maître. Enfin, des rumeurs persistantes l'accusent d'avoir laissé transiter des composants de systèmes d'armes non-conventionnels — une accusation qui, si prouvée, lui vaudrait une désignation comme cible par au moins deux blocs majeurs.
+
+## Relations
+**Alliés :**
+- [[commandements_logistiques_peripheriques_du_bloc_eurasien_central_fortress_world]]
+- [[complexe_orentchev_almaty_fortress_world]]
+- [[operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world]]
+- [[reseaux_de_maintenance_d_infrastructures_critiques_hors_blocs_fortress_world]]
+**Opposants :**
+- [[bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world]]
+- [[corps_des_inspecteurs_de_conformite_inter_blocs_fortress_world]]
+- [[factions_djihadistes_logistiques_d_asie_centrale_fortress_world]]

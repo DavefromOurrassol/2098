@@ -35,8 +35,20 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- arctic_passage_authority_new_sustainability
+- conseil_energetique_intercontinental_new_sustainability
+- consortium_helios_new_sustainability
+- reseau_des_communs_productifs_regeneratifs_new_sustainability
+- trame_bioclimatique_new_sustainability
+- union_des_blocs_energetiques_regionaux_new_sustainability
+oppositions:
+- bloc_des_gouvernements_souverainistes_hydriques_new_sustainability
+- coalition_anti_algorithme_des_autonomies_locales_new_sustainability
+- collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability
+- etats_souverainistes_anti_reseau_new_sustainability
+- mouvement_communautaire_des_micro_grids_energetiques_new_sustainability
+- observatoire_anti_monopole_de_geneve_new_sustainability
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -100,6 +112,24 @@ La tension centrale qui les traverse est celle de l'autonomie revendiquée face 
 - [[energie_ressources_critiques]]
 - [[organisation_territoires]]
 - [[systemes_productifs_travail]]
+
+
+
+## Relations
+**Alliés :**
+- [[arctic_passage_authority_new_sustainability]]
+- [[conseil_energetique_intercontinental_new_sustainability]]
+- [[consortium_helios_new_sustainability]]
+- [[reseau_des_communs_productifs_regeneratifs_new_sustainability]]
+- [[trame_bioclimatique_new_sustainability]]
+- [[union_des_blocs_energetiques_regionaux_new_sustainability]]
+**Opposants :**
+- [[bloc_des_gouvernements_souverainistes_hydriques_new_sustainability]]
+- [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]]
+- [[collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability]]
+- [[etats_souverainistes_anti_reseau_new_sustainability]]
+- [[mouvement_communautaire_des_micro_grids_energetiques_new_sustainability]]
+- [[observatoire_anti_monopole_de_geneve_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

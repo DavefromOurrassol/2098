@@ -4,6 +4,7 @@ type: instance
 slug: directive_kontinuum_eco_communalism
 entite: directive_kontinuum
 scenario: eco_communalism
+statut: officialise_enrichi
 localisation:
   zone: bioterritoires_atlantique_nord
   lieu: corridor atlantique

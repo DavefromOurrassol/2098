@@ -4,6 +4,7 @@ type: instance
 slug: agence_stabilisation_climatique_breakdown
 entite: agence_stabilisation_climatique
 scenario: breakdown
+statut: officialise_enrichi
 localisation:
   zone: geneve_bunker_institutions
   lieu: Genève — tour abritant le Bureau de Coordination d'Urgence Climatique

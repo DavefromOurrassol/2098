@@ -31,8 +31,27 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- directive_kontinuum_new_sustainability
+- enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability
+- faction_conservatrice_pro_actif_strategique_new_sustainability
+- factions_technocratiques_de_la_delegation_ia_totale_new_sustainability
+- factions_technocratiques_du_conseil_de_regulation_informationnelle_global_new_sustainability
+- lobbies_des_plateformes_de_consensus_automatise_new_sustainability
+oppositions:
+- collectifs_de_desobeissance_algorithmique_new_sustainability
+- college_des_auditeurs_independants_du_parlement_biotechnologique_mondial_new_sustainability
+- consortium_africain_de_biotechnologies_sociales_new_sustainability
+- consortium_d_audit_algorithmique_ouvert_new_sustainability
+- factions_internes_contestataires_du_bureau_de_moderation_new_sustainability
+- grille_aria_new_sustainability
+- ligue_des_cites_du_sahel_numerique_new_sustainability
+- oracle_des_seuils_new_sustainability
+- rede_paulista_de_distribuic_o_algor_tmica_new_sustainability
+- reseaux_de_medecine_regenerative_universelle_new_sustainability
+- reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability
+- tribunal_algorithmique_de_bruxelles_new_sustainability
+- tribunal_gouvernance_algorithmique_bruxelles_new_sustainability
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -96,6 +115,30 @@ La tension majeure réside dans le paradoxe fondateur du scénario new_sustainab
 - [[gouvernance_institutions]]
 - [[technologie_information]]
 - [[frontieres_du_systeme]]
+
+
+## Relations
+**Alliés :**
+- [[directive_kontinuum_new_sustainability]]
+- [[enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability]]
+- [[faction_conservatrice_pro_actif_strategique_new_sustainability]]
+- [[factions_technocratiques_de_la_delegation_ia_totale_new_sustainability]]
+- [[factions_technocratiques_du_conseil_de_regulation_informationnelle_global_new_sustainability]]
+- [[lobbies_des_plateformes_de_consensus_automatise_new_sustainability]]
+**Opposants :**
+- [[collectifs_de_desobeissance_algorithmique_new_sustainability]]
+- [[college_des_auditeurs_independants_du_parlement_biotechnologique_mondial_new_sustainability]]
+- [[consortium_africain_de_biotechnologies_sociales_new_sustainability]]
+- [[consortium_d_audit_algorithmique_ouvert_new_sustainability]]
+- [[factions_internes_contestataires_du_bureau_de_moderation_new_sustainability]]
+- [[grille_aria_new_sustainability]]
+- [[ligue_des_cites_du_sahel_numerique_new_sustainability]]
+- [[oracle_des_seuils_new_sustainability]]
+- [[rede_paulista_de_distribuic_o_algor_tmica_new_sustainability]]
+- [[reseaux_de_medecine_regenerative_universelle_new_sustainability]]
+- [[reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability]]
+- [[tribunal_algorithmique_de_bruxelles_new_sustainability]]
+- [[tribunal_gouvernance_algorithmique_bruxelles_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

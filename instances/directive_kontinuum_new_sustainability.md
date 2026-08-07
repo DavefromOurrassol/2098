@@ -4,6 +4,7 @@ type: instance
 slug: directive_kontinuum_new_sustainability
 entite: directive_kontinuum
 scenario: new_sustainability
+statut: officialise_enrichi
 localisation:
   zone: null
   lieu: null

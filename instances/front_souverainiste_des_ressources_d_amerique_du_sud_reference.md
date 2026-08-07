@@ -32,8 +32,25 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_internationale_des_energies_renouvelables_irena_2_reference
+- alliance_blocs_souverains_reference
+- bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference
+- bloc_des_souverainistes_climatiques_reference
+- bloc_eurasien_central_reference
+- institutions_multilaterales_survivantes_reference
+- pacte_des_souverains_reference
+oppositions:
+- amazonie_consortium_viva_reference
+- conseil_regulation_ressources_reference
+- consortium_amazonia_viva_reference
+- consortium_des_grandes_plateformes_logistiques_globales_reference
+- consortiums_d_extraction_miniere_du_bassin_congolais_reference
+- consortiums_energetiques_opaques_reference
+- consortiums_prives_d_extraction_de_ressources_critiques_reference
+- lobbies_agro_industriels_a_haute_consommation_d_eau_reference
+- programme_onu_eau_2080_reference
+- valparaiso_fct_reference
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -95,6 +112,28 @@ Le Front est tiraillé entre ses membres étatiques — tentés par des accords 
 - [[energie_ressources_critiques]]
 - [[geopolitique_conflits]]
 - [[gouvernance_institutions]]
+
+
+## Relations
+**Alliés :**
+- [[agence_internationale_des_energies_renouvelables_irena_2_reference]]
+- [[alliance_blocs_souverains_reference]]
+- [[bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference]]
+- [[bloc_des_souverainistes_climatiques_reference]]
+- [[bloc_eurasien_central_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
+- [[pacte_des_souverains_reference]]
+**Opposants :**
+- [[amazonie_consortium_viva_reference]]
+- [[conseil_regulation_ressources_reference]]
+- [[consortium_amazonia_viva_reference]]
+- [[consortium_des_grandes_plateformes_logistiques_globales_reference]]
+- [[consortiums_d_extraction_miniere_du_bassin_congolais_reference]]
+- [[consortiums_energetiques_opaques_reference]]
+- [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]]
+- [[programme_onu_eau_2080_reference]]
+- [[valparaiso_fct_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

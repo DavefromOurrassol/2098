@@ -34,8 +34,24 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- autorite_passage_arctique_breakdown
+- enclaves_industrielles_de_bergen_troms_breakdown
+- factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
+- grandes_lacs_compact_eau_breakdown
+- kalaallit_nunaat_sovereign_fund_breakdown
+- ligue_des_cites_littorales_en_sursis_breakdown
+- ligue_mediterraneenne_des_villes_etats_portuaires_breakdown
+- noeud_nordark_tromso_breakdown
+- reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown
+- tour_bcuc_geneve_breakdown
+oppositions:
+- armada_logistique_nordique_breakdown
+- cartels_logistiques_regionaux_breakdown
+- factions_para_etatiques_hydriques_breakdown
+- federation_russe_residuelle_district_de_mourmansk_breakdown
+- milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown
+- nexcore_breakdown
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -93,6 +109,27 @@ La Hanse est déchirée entre sa vocation marchande — qui exige neutralité et
 - [[gouvernance_institutions]]
 - [[geopolitique_conflits]]
 - [[organisation_territoires]]
+
+
+## Relations
+**Alliés :**
+- [[autorite_passage_arctique_breakdown]]
+- [[enclaves_industrielles_de_bergen_troms_breakdown]]
+- [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]]
+- [[grandes_lacs_compact_eau_breakdown]]
+- [[kalaallit_nunaat_sovereign_fund_breakdown]]
+- [[ligue_des_cites_littorales_en_sursis_breakdown]]
+- [[ligue_mediterraneenne_des_villes_etats_portuaires_breakdown]]
+- [[noeud_nordark_tromso_breakdown]]
+- [[reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown]]
+- [[tour_bcuc_geneve_breakdown]]
+**Opposants :**
+- [[armada_logistique_nordique_breakdown]]
+- [[cartels_logistiques_regionaux_breakdown]]
+- [[factions_para_etatiques_hydriques_breakdown]]
+- [[federation_russe_residuelle_district_de_mourmansk_breakdown]]
+- [[milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown]]
+- [[nexcore_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

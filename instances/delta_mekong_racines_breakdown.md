@@ -4,6 +4,7 @@ type: instance
 slug: delta_mekong_racines_breakdown
 entite: delta_mekong_racines
 scenario: breakdown
+statut: officialise_enrichi
 localisation:
   zone: delta_mekong_racines
   lieu: Delta du Mékong
@@ -36,21 +37,21 @@ zone_systemique:
     - énergie
 
 alliances:
-    - communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
-    - enclaves_agro_communautaires_autonomes_breakdown
-    - mouvement_racines_vivantes_breakdown
-    - reseaux_de_soigneurs_traditionnels_breakdown
-    - federation_communs_territoriaux_breakdown
-    - communautes_paysannes_refugiees_breakdown
-
+- collectifs_de_gardiens_archivistes_itinerants_breakdown
+- communautes_paysannes_refugiees_breakdown
+- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- enclaves_agro_communautaires_autonomes_breakdown
+- federation_communs_territoriaux_breakdown
+- mouvement_racines_vivantes_breakdown
+- reseaux_de_soigneurs_traditionnels_breakdown
+- reseaux_de_solidarite_horizontale_post_effondrement_breakdown
 oppositions:
-    - milices_d_accaparement_hydrique_breakdown
-    - factions_etatiques_residuelles_de_souverainete_hydrique_breakdown
-    - seigneurs_de_guerre_agro_territoriaux_breakdown
-    - consortiums_logistiques_agro_corporatifs_breakdown
-    - factions_para_etatiques_hydriques_breakdown
-    - seigneuries_foncieres_opportunistes_breakdown
-
+- consortiums_logistiques_agro_corporatifs_breakdown
+- factions_etatiques_residuelles_de_souverainete_hydrique_breakdown
+- factions_para_etatiques_hydriques_breakdown
+- milices_d_accaparement_hydrique_breakdown
+- seigneuries_foncieres_opportunistes_breakdown
+- seigneurs_de_guerre_agro_territoriaux_breakdown
 type_relation_dominante: rivalité
 
 annee_debut: 2031
@@ -94,12 +95,27 @@ Organisation collective de la gestion des eaux, des semences et des calendriers 
 - [[systemes_productifs_travail]]
 - [[gouvernance_institutions]]
 
-## Relations
-**Alliés** : [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]], [[enclaves_agro_communautaires_autonomes_breakdown]], [[mouvement_racines_vivantes_breakdown]], [[reseaux_de_soigneurs_traditionnels_breakdown]], [[federation_communs_territoriaux_breakdown]], [[communautes_paysannes_refugiees_breakdown]]
-**Opposants** : [[milices_d_accaparement_hydrique_breakdown]], [[factions_etatiques_residuelles_de_souverainete_hydrique_breakdown]], [[seigneurs_de_guerre_agro_territoriaux_breakdown]], [[consortiums_logistiques_agro_corporatifs_breakdown]], [[factions_para_etatiques_hydriques_breakdown]], [[seigneuries_foncieres_opportunistes_breakdown]]
 
 ## Description journalistique
 Dans les bras du Mekong mourant, là où les cartes d'État n'ont plus cours depuis une décennie, les Mères des Eaux font tourner le monde à leur rythme. On les repère à l'aube, debout dans la vase jusqu'aux genoux, lisant les courants comme d'autres lisent des instruments. Leurs assemblées se tiennent sur des embarcations ancrées au milieu des bras du fleuve — terrain neutre, hors de portée des milices terrestres. Chaque communauté gère ses propres digues, ses propres semences, ses propres stocks de riz immergé. Aucune n'accepte de déléguer à une autre plus qu'elle ne délègue au vent. Des journalistes qui tentent de couvrir ces territoires disparaissent des radars : non par violence, mais par ostracisme méthodique. Le Delta n'existe que pour ceux qui y sont nés.
 
 ## Tensions narratives
 La fragmentation qui protège ces communautés les condamne aussi : une montée des eaux catastrophique sur un bassin voisin ne déclenche aucune solidarité automatique, chaque collectif refusant d'ouvrir ses stocks. Des courtiers extérieurs — milices agro-corporatives ou factions étatiques résiduelles — cherchent à infiltrer le réseau via de faux réfugiés ou des promesses de semences résistantes à la salinité. Et une jeune génération née après l'effondrement commence à questionner la clôture absolue : certains veulent savoir ce que les Archives de Genève conservent de leurs propres terres, d'autres rêvent d'un pacte avec des collectifs du bassin de l'Irrawaddy — mais les anciens voient dans toute ouverture le premier pas vers la dissolution de ce qu'ils ont sauvé.
+
+## Relations
+**Alliés :**
+- [[collectifs_de_gardiens_archivistes_itinerants_breakdown]]
+- [[communautes_paysannes_refugiees_breakdown]]
+- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[enclaves_agro_communautaires_autonomes_breakdown]]
+- [[federation_communs_territoriaux_breakdown]]
+- [[mouvement_racines_vivantes_breakdown]]
+- [[reseaux_de_soigneurs_traditionnels_breakdown]]
+- [[reseaux_de_solidarite_horizontale_post_effondrement_breakdown]]
+**Opposants :**
+- [[consortiums_logistiques_agro_corporatifs_breakdown]]
+- [[factions_etatiques_residuelles_de_souverainete_hydrique_breakdown]]
+- [[factions_para_etatiques_hydriques_breakdown]]
+- [[milices_d_accaparement_hydrique_breakdown]]
+- [[seigneuries_foncieres_opportunistes_breakdown]]
+- [[seigneurs_de_guerre_agro_territoriaux_breakdown]]

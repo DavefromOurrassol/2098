@@ -4,6 +4,7 @@ type: instance
 slug: le_temoin_breakdown
 entite: le_temoin
 scenario: breakdown
+statut: officialise_enrichi
 localisation:
   zone: null
   lieu: null
@@ -23,7 +24,8 @@ zone_geographique:
 zone_systemique:
   - information
   - société
-alliances: []
+alliances:
+- tribunal_algorithmique_de_bruxelles_breakdown
 oppositions: []
 type_relation_dominante: neutralité
 annee_debut: 2071
@@ -57,9 +59,6 @@ de donner du sens au chaos systémique global.
 - [[technologie_information]]
 - [[valeurs_culture_tempo_sociale]]
 
-## Relations
-**Alliés** : _aucun défini_
-**Opposants** : _aucun défini_
 
 ## Description journalistique
 Personne ne sait qui est Le Signal. Les analyses arrivent sur des fréquences
@@ -70,3 +69,7 @@ système est lisible. Regardez."
 Plusieurs factions tentent de l'identifier. Ses analyses deviennent de
 plus en plus pessimistes. Dernière publication — "Il n'y a plus de système
 à analyser."
+
+## Relations
+**Alliés :**
+- [[tribunal_algorithmique_de_bruxelles_breakdown]]

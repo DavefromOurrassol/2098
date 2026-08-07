@@ -31,8 +31,34 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- agence_stabilisation_climatique_reference
+- autorites_regionales_de_regulation_hydrologique_reference
+- bureau_des_territoires_residuels_reference
+- consortium_des_grandes_plateformes_ia_integrees_reference
+- consortium_des_grandes_plateformes_logistiques_globales_reference
+- gouvernements_a_regime_de_productivite_mandatee_reference
+- lyon_metropole_reference
+- neuroharmonics_reference
+- observatoire_climatique_des_territoires_oct_reference
+- rede_paulista_de_distribuic_o_algor_tmica_reference
+- terrametrics_reference
+oppositions:
+- administrations_hybrides_des_cites_relais_peripheriques_reference
+- bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference
+- collectif_nuit_jaune_reference
+- collectifs_academiques_independants_reference
+- communs_numeriques_agroecologiques_reference
+- cooperatives_energetiques_decentralisees_reference
+- federation_communs_territoriaux_reference
+- mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
+- mouvement_racines_vivantes_reference
+- ong_environnementales_de_terrain_reference
+- reseau_des_administrations_locales_rurales_participatives_reference
+- reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference
+- reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference
+- reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference
+- reseaux_de_medecine_traditionnelle_augmentee_reference
 type_relation_dominante: dépendance
 annee_debut: 2026
 annee_fin: null
@@ -93,6 +119,37 @@ La tension centrale oppose l'efficacité mesurable de ces systèmes — réducti
 - [[organisation_territoires]]
 - [[gouvernance_institutions]]
 - [[technologie_information]]
+
+
+## Relations
+**Alliés :**
+- [[agence_stabilisation_climatique_reference]]
+- [[autorites_regionales_de_regulation_hydrologique_reference]]
+- [[bureau_des_territoires_residuels_reference]]
+- [[consortium_des_grandes_plateformes_ia_integrees_reference]]
+- [[consortium_des_grandes_plateformes_logistiques_globales_reference]]
+- [[gouvernements_a_regime_de_productivite_mandatee_reference]]
+- [[lyon_metropole_reference]]
+- [[neuroharmonics_reference]]
+- [[observatoire_climatique_des_territoires_oct_reference]]
+- [[rede_paulista_de_distribuic_o_algor_tmica_reference]]
+- [[terrametrics_reference]]
+**Opposants :**
+- [[administrations_hybrides_des_cites_relais_peripheriques_reference]]
+- [[bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference]]
+- [[collectif_nuit_jaune_reference]]
+- [[collectifs_academiques_independants_reference]]
+- [[communs_numeriques_agroecologiques_reference]]
+- [[cooperatives_energetiques_decentralisees_reference]]
+- [[federation_communs_territoriaux_reference]]
+- [[mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference]]
+- [[mouvement_racines_vivantes_reference]]
+- [[ong_environnementales_de_terrain_reference]]
+- [[reseau_des_administrations_locales_rurales_participatives_reference]]
+- [[reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference]]
+- [[reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference]]
+- [[reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference]]
+- [[reseaux_de_medecine_traditionnelle_augmentee_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

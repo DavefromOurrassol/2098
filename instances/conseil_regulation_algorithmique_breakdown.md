@@ -4,6 +4,7 @@ type: instance
 slug: conseil_regulation_algorithmique_breakdown
 entite: conseil_regulation_algorithmique
 scenario: breakdown
+statut: officialise_enrichi
 localisation:
   zone: geneve_bunker_institutions
   lieu: Genève-Bunker
@@ -27,8 +28,13 @@ zone_geographique:
 zone_systemique:
   - IA
   - information
-alliances: []
-oppositions: []
+alliances:
+- rede_paulista_de_distribuic_o_algor_tmica_breakdown
+- tribunal_algorithmique_de_bruxelles_breakdown
+oppositions:
+- bureau_des_territoires_residuels_breakdown
+- oracle_des_seuils_breakdown
+- seoul_collectif_nexcore_breakdown
 type_relation_dominante: neutralité
 annee_debut: 2030
 annee_fin: 2049
@@ -68,9 +74,6 @@ Il n'en reste que des fragments que quelques ingénieurs tentent d'appliquer.
 - [[technologie_information]]
 - [[gouvernance_institutions]]
 
-## Relations
-**Alliés** : _aucun défini_
-**Opposants** : _aucun défini_
 
 ## Description journalistique
 Quand on demande à un ingénieur de 2098 ce qu'était le Comité Mondial
@@ -80,3 +83,12 @@ Les protocoles existent encore dans des archives que personne ne consulte.
 ## Tensions narratives
 Des archéologues du code retrouvent des fragments et tentent de les
 réactiver. Peut-on réguler ce qu'on ne comprend plus ?
+
+## Relations
+**Alliés :**
+- [[rede_paulista_de_distribuic_o_algor_tmica_breakdown]]
+- [[tribunal_algorithmique_de_bruxelles_breakdown]]
+**Opposants :**
+- [[bureau_des_territoires_residuels_breakdown]]
+- [[oracle_des_seuils_breakdown]]
+- [[seoul_collectif_nexcore_breakdown]]

@@ -4,6 +4,7 @@ type: instance
 slug: assemblee_territoires_policy_reform
 entite: assemblee_territoires
 scenario: policy_reform
+statut: officialise_enrichi
 localisation:
   zone: null
   lieu: null
@@ -37,16 +38,17 @@ zone_systemique:
     - société
 
 alliances:
-    - agence_internationale_de_l_energie_reformatee_aier_policy_reform
-    - reseau_des_metropoles_n_uds_policy_reform
-    - office_integre_des_flux_migratoires_policy_reform
-    - consortium_technologique_de_planification_territoriale_policy_reform
-
+- agence_internationale_de_l_energie_reformatee_aier_policy_reform
+- conseil_regulation_algorithmique_policy_reform
+- consortium_technologique_de_planification_territoriale_policy_reform
+- great_lakes_autonomous_compact_policy_reform
+- office_integre_des_flux_migratoires_policy_reform
+- pacifique_sud_resilience_network_policy_reform
+- reseau_des_metropoles_n_uds_policy_reform
 oppositions:
-    - front_des_autonomies_territoriales_radicales_policy_reform
-    - front_souverainiste_des_blocs_non_signataires_policy_reform
-    - collectifs_de_gouvernance_communautaire_decentralisee_policy_reform
-
+- collectifs_de_gouvernance_communautaire_decentralisee_policy_reform
+- front_des_autonomies_territoriales_radicales_policy_reform
+- front_souverainiste_des_blocs_non_signataires_policy_reform
 type_relation_dominante: coopération
 
 annee_debut: 2041
@@ -91,12 +93,23 @@ Le CRTI alloue les droits de planification territoriale aux grandes zones de tra
 - [[energie_ressources_critiques]]
 - [[climat_environnement_global]]
 
-## Relations
-**Alliés** : [[agence_internationale_de_l_energie_reformatee_aier_policy_reform]], [[reseau_des_metropoles_n_uds_policy_reform]], [[office_integre_des_flux_migratoires_policy_reform]], [[consortium_technologique_de_planification_territoriale_policy_reform]]
-**Opposants** : [[front_des_autonomies_territoriales_radicales_policy_reform]], [[front_souverainiste_des_blocs_non_signataires_policy_reform]], [[collectifs_de_gouvernance_communautaire_decentralisee_policy_reform]]
 
 ## Description journalistique
 Depuis son siège rotatif — alternant tous les sept ans entre Nairobi, Rotterdam et Chengdu — le CRTI ressemble moins à une assemblée qu'à une salle de contrôle géopolitique. Les délégués territoriaux n'y prononcent pas de discours : ils y valident des arbitrages produits par les systèmes de modélisation ATLAS, corrigent des pondérations, négocient des seuils. Certains y voient l'aboutissement rationnel de la gouvernance post-crise ; d'autres dénoncent une chambre d'entérinement habillée en démocratie. Ce qui est indéniable, c'est son emprise : aucun corridor d'infrastructure d'envergure continentale ne se construit sans son sceau, aucune zone de relogement climatique ne s'ouvre sans son calendrier.
 
 ## Tensions narratives
 La légitimité démocratique du CRTI est contestée en profondeur : ses mécanismes de pondération algorithmique favorisent structurellement les territoires à haute densité infrastructurelle, marginalisant de facto les zones périphériques qu'il prétend rééquilibrer. Une faction interne pousse à une réforme du mode de représentation, tandis que des blocs souverainistes régionaux menacent de créer des assemblées parallèles. Par ailleurs, la dépendance croissante aux modèles prédictifs ATLAS soulève une question existentielle : qui gouverne vraiment — les délégués, ou l'algorithme qu'ils ne comprennent plus tout à fait ?
+
+## Relations
+**Alliés :**
+- [[agence_internationale_de_l_energie_reformatee_aier_policy_reform]]
+- [[conseil_regulation_algorithmique_policy_reform]]
+- [[consortium_technologique_de_planification_territoriale_policy_reform]]
+- [[great_lakes_autonomous_compact_policy_reform]]
+- [[office_integre_des_flux_migratoires_policy_reform]]
+- [[pacifique_sud_resilience_network_policy_reform]]
+- [[reseau_des_metropoles_n_uds_policy_reform]]
+**Opposants :**
+- [[collectifs_de_gouvernance_communautaire_decentralisee_policy_reform]]
+- [[front_des_autonomies_territoriales_radicales_policy_reform]]
+- [[front_souverainiste_des_blocs_non_signataires_policy_reform]]

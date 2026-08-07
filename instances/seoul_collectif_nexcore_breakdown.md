@@ -4,6 +4,7 @@ type: instance
 slug: seoul_collectif_nexcore_breakdown
 entite: seoul_collectif_nexcore
 scenario: breakdown
+statut: officialise_enrichi
 localisation:
   zone: seoul_collectif_nexcore
   lieu: Séoul (districts de Nowon et Dobong)
@@ -36,23 +37,25 @@ zone_systemique:
     - cyberspace
 
 alliances:
-    - nexcore_breakdown
-    - lagos_est_nexcore_breakdown
-    - carthage_nord_nexcore_breakdown
-    - nairobi_crrc_breakdown
-    - collectifs_de_reparation_energetique_breakdown
-    - guilde_des_techniciens_nomades_breakdown
-    - collectif_hackers_decroissance_infrastructure_breakdown
-    - reseaux_de_solidarite_horizontale_post_effondrement_breakdown
-
+- carthage_nord_nexcore_breakdown
+- collectif_hackers_decroissance_infrastructure_breakdown
+- collectifs_de_reparation_energetique_breakdown
+- enclaves_technologiques_survivantes_breakdown
+- guilde_des_techniciens_nomades_breakdown
+- lagos_est_nexcore_breakdown
+- nairobi_crrc_breakdown
+- nexcore_breakdown
+- reseaux_de_solidarite_horizontale_post_effondrement_breakdown
 oppositions:
-    - coalition_pacifique_nord_breakdown
-    - conglometrat_sino_siberien_bohai_transit_breakdown
-    - enclaves_corporatives_fortifiees_breakdown
-    - milices_de_controle_territorial_breakdown
-    - fronts_populistes_anti_technocratiques_breakdown
-    - conseil_regulation_algorithmique_breakdown
-
+- coalition_pacifique_nord_breakdown
+- collectifs_de_gardiens_archivistes_itinerants_breakdown
+- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- conglometrat_sino_siberien_bohai_transit_breakdown
+- conseil_regulation_algorithmique_breakdown
+- corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown
+- enclaves_corporatives_fortifiees_breakdown
+- fronts_populistes_anti_technocratiques_breakdown
+- milices_de_controle_territorial_breakdown
 type_relation_dominante: symbiose
 
 annee_debut: 2081
@@ -95,12 +98,31 @@ Maintient en état des réseaux de communication décentralisés dans les zones 
 - [[technologie_information]]
 - [[organisation_territoires]]
 
-## Relations
-**Alliés** : [[nexcore_breakdown]], [[lagos_est_nexcore_breakdown]], [[carthage_nord_nexcore_breakdown]], [[nairobi_crrc_breakdown]], [[collectifs_de_reparation_energetique_breakdown]], [[guilde_des_techniciens_nomades_breakdown]], [[collectif_hackers_decroissance_infrastructure_breakdown]], [[reseaux_de_solidarite_horizontale_post_effondrement_breakdown]]
-**Opposants** : [[coalition_pacifique_nord_breakdown]], [[conglometrat_sino_siberien_bohai_transit_breakdown]], [[enclaves_corporatives_fortifiees_breakdown]], [[milices_de_controle_territorial_breakdown]], [[fronts_populistes_anti_technocratiques_breakdown]], [[conseil_regulation_algorithmique_breakdown]]
 
 ## Description journalistique
 Dans les districts de Nowon et Dobong, là où les panneaux officiels ont été arrachés et les antennes étatiques sabotées, les habitants parlent simplement des 'grilles' — ces nœuds de câbles et de boîtiers recyclés qui pendent entre les immeubles comme des nervures exposées. Derrière eux, le Seoul Collectif Nexcore : ni administration, ni milice, ni entreprise, mais quelque chose qui fait le travail des trois. Des anciens ingénieurs de Samsung ou de Kakao côtoient des militants anti-démolition de 2060, et ensemble ils font tourner des marchés d'échange numériques, des alertes d'intrusion de quartier et des archives médicales partagées. Les blocs régionaux du Pacifique Nord les surveillent avec une méfiance croissante : chaque nouveau district que le Collectif 'câble' est un district qui échappe à leur orbite. Personne ne sait exactement combien de personnes en font partie. Personne à Seoul ne peut se permettre de le leur demander.
 
 ## Tensions narratives
 Le Collectif est à un point de bascule : son efficacité attire des demandes de formalisation — de la part de réfugiés qui veulent une 'adresse' pour négocier, et de blocs régionaux qui préféreraient un interlocuteur identifiable à une nébuleuse incontrôlable. Accepter équivaut à se soumettre à des logiques de pouvoir qui les trahiraient ; refuser risque de les laisser isolés face à des pressions militaires croissantes. En interne, une fracture monte entre les techniciens qui veulent étendre le réseau au-delà de Seoul et les militants de quartier qui craignent de perdre l'ancrage territorial qui fait leur légitimité. Et une question sans réponse hante les assemblées nocturnes : si le Collectif devient une puissance, qui le contrôlera ?
+
+## Relations
+**Alliés :**
+- [[carthage_nord_nexcore_breakdown]]
+- [[collectif_hackers_decroissance_infrastructure_breakdown]]
+- [[collectifs_de_reparation_energetique_breakdown]]
+- [[enclaves_technologiques_survivantes_breakdown]]
+- [[guilde_des_techniciens_nomades_breakdown]]
+- [[lagos_est_nexcore_breakdown]]
+- [[nairobi_crrc_breakdown]]
+- [[nexcore_breakdown]]
+- [[reseaux_de_solidarite_horizontale_post_effondrement_breakdown]]
+**Opposants :**
+- [[coalition_pacifique_nord_breakdown]]
+- [[collectifs_de_gardiens_archivistes_itinerants_breakdown]]
+- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[conglometrat_sino_siberien_bohai_transit_breakdown]]
+- [[conseil_regulation_algorithmique_breakdown]]
+- [[corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown]]
+- [[enclaves_corporatives_fortifiees_breakdown]]
+- [[fronts_populistes_anti_technocratiques_breakdown]]
+- [[milices_de_controle_territorial_breakdown]]

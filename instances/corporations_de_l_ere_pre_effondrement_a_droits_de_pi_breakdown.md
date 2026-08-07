@@ -38,8 +38,25 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- enclaves_corporatives_fortifiees_breakdown
+- milices_contractuelles_des_anciens_etats_membres_breakdown
+- reseau_des_anciens_financeurs_devenus_censeurs_breakdown
+- tour_bcuc_geneve_breakdown
+oppositions:
+- collectif_hackers_decroissance_infrastructure_breakdown
+- collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
+- communes_rust_belt_breakdown
+- consortium_africain_de_biotechnologies_sociales_breakdown
+- front_de_resistance_aux_peages_sur_les_ressources_breakdown
+- front_techno_reconstructionniste_breakdown
+- lagos_est_nexcore_breakdown
+- lagos_interieur_mnemos_breakdown
+- nexcore_breakdown
+- pirates_biologiques_open_source_breakdown
+- reseau_mnemos_breakdown
+- reseaux_noirs_pharmaceutiques_breakdown
+- seoul_collectif_nexcore_breakdown
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -100,6 +117,28 @@ La tension centrale est celle de la légitimité : dans un monde où les États 
 - [[technologie_information]]
 - [[gouvernance_institutions]]
 - [[systeme_economique_redistribution]]
+
+
+## Relations
+**Alliés :**
+- [[enclaves_corporatives_fortifiees_breakdown]]
+- [[milices_contractuelles_des_anciens_etats_membres_breakdown]]
+- [[reseau_des_anciens_financeurs_devenus_censeurs_breakdown]]
+- [[tour_bcuc_geneve_breakdown]]
+**Opposants :**
+- [[collectif_hackers_decroissance_infrastructure_breakdown]]
+- [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]]
+- [[communes_rust_belt_breakdown]]
+- [[consortium_africain_de_biotechnologies_sociales_breakdown]]
+- [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
+- [[front_techno_reconstructionniste_breakdown]]
+- [[lagos_est_nexcore_breakdown]]
+- [[lagos_interieur_mnemos_breakdown]]
+- [[nexcore_breakdown]]
+- [[pirates_biologiques_open_source_breakdown]]
+- [[reseau_mnemos_breakdown]]
+- [[reseaux_noirs_pharmaceutiques_breakdown]]
+- [[seoul_collectif_nexcore_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

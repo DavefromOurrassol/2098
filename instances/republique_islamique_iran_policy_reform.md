@@ -33,8 +33,18 @@ zone_geographique:
 - régionale
 zone_systemique:
 - gouvernance
-alliances: []
-oppositions: []
+alliances:
+- front_souverainiste_des_blocs_non_signataires_policy_reform
+- front_des_souverainistes_energetiques_policy_reform
+- gouvernements_populistes_anti_depossession_policy_reform
+- faction_regulatrice_dure_au_sein_du_cei_policy_reform
+- lobbies_des_energies_fossiles_residuelles_policy_reform
+oppositions:
+- gouvernement_israel_policy_reform
+- agence_internationale_de_l_energie_reformatee_aier_policy_reform
+- conseil_regulation_ressources_policy_reform
+- grille_aria_policy_reform
+- autorite_mondiale_du_vivant_amv_policy_reform
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
@@ -98,6 +108,20 @@ La tension centrale est celle d'un État souverain contraint d'accepter une arch
 - [[geopolitique_conflits]]
 - [[gouvernance_institutions]]
 - [[energie_ressources_critiques]]
+
+## Relations
+**Alliés :**
+- [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+- [[front_des_souverainistes_energetiques_policy_reform]]
+- [[gouvernements_populistes_anti_depossession_policy_reform]]
+- [[faction_regulatrice_dure_au_sein_du_cei_policy_reform]]
+- [[lobbies_des_energies_fossiles_residuelles_policy_reform]]
+**Opposants :**
+- [[gouvernement_israel_policy_reform]]
+- [[agence_internationale_de_l_energie_reformatee_aier_policy_reform]]
+- [[conseil_regulation_ressources_policy_reform]]
+- [[grille_aria_policy_reform]]
+- [[autorite_mondiale_du_vivant_amv_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

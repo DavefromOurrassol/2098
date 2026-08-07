@@ -36,12 +36,24 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
-- institutions_multilaterales_survivantes_reference
+- collectifs_academiques_independants_reference
+- collectifs_de_journalisme_embarque_reference
+- collectifs_de_journalistes_independants_regionaux_reference
+- communs_numeriques_agroecologiques_reference
 - geneve_lac_retreite_reference
 - helsinki_communs_numeriques_reference
+- institutions_multilaterales_survivantes_reference
 - nairobi_crrc_reference
+- observatoire_climatique_des_territoires_oct_reference
+- ong_de_preservation_patrimoniale_numerique_reference
 - ouagadougou_polytechnique_reference
-oppositions: []
+- reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference
+- reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference
+- tbilissi_noeud_mnemos_reference
+- tribunal_algorithmique_de_bruxelles_reference
+- voix_du_dehors_reference
+oppositions:
+- plateformes_centralisees_de_narration_officielle_reference
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -106,13 +118,27 @@ La tension principale réside dans leur dépendance croissante aux infrastructur
 - [[technologie_information]]
 - [[organisation_territoires]]
 
+
 ## Relations
 **Alliés :**
-- [[institutions_multilaterales_survivantes_reference]]
+- [[collectifs_academiques_independants_reference]]
+- [[collectifs_de_journalisme_embarque_reference]]
+- [[collectifs_de_journalistes_independants_regionaux_reference]]
+- [[communs_numeriques_agroecologiques_reference]]
 - [[geneve_lac_retreite_reference]]
 - [[helsinki_communs_numeriques_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
 - [[nairobi_crrc_reference]]
+- [[observatoire_climatique_des_territoires_oct_reference]]
+- [[ong_de_preservation_patrimoniale_numerique_reference]]
 - [[ouagadougou_polytechnique_reference]]
+- [[reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference]]
+- [[reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference]]
+- [[tbilissi_noeud_mnemos_reference]]
+- [[tribunal_algorithmique_de_bruxelles_reference]]
+- [[voix_du_dehors_reference]]
+**Opposants :**
+- [[plateformes_centralisees_de_narration_officielle_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

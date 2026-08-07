@@ -32,8 +32,28 @@ zone_geographique:
 - globale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- college_des_auditeurs_independants_du_parlement_biotechnologique_mondial_new_sustainability
+- conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability
+- consortium_africain_de_biotechnologies_sociales_new_sustainability
+- nexus_biosyn_new_sustainability
+- oms_etendue_new_sustainability
+- parlement_deliberatif_mondial_new_sustainability
+- programme_onusien_de_mobilite_climatique_new_sustainability
+- reseau_des_agences_climatiques_regionales_new_sustainability
+- reseau_des_bio_communs_regionaux_new_sustainability
+- reseau_des_communs_productifs_regeneratifs_new_sustainability
+- reseau_des_hubs_urbains_regeneratifs_new_sustainability
+- reseau_des_villes_regeneratives_new_sustainability
+- reseaux_de_medecine_regenerative_universelle_new_sustainability
+oppositions:
+- coalition_anti_fiscalite_universelle_new_sustainability
+- collectifs_de_deplaces_climatiques_non_representes_new_sustainability
+- enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability
+- etats_souverainistes_anti_reseau_new_sustainability
+- internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
+- observatoire_anti_monopole_de_geneve_new_sustainability
+- parlement_territoires_nairobi_new_sustainability
 type_relation_dominante: dépendance
 annee_debut: 2026
 annee_fin: null
@@ -98,6 +118,31 @@ Le Réseau est pris en tenaille entre sa mission de soin universel affichée et 
 - [[sante_biotechnologies]]
 - [[demographie_mobilite_humaine]]
 - [[systeme_economique_redistribution]]
+
+
+## Relations
+**Alliés :**
+- [[college_des_auditeurs_independants_du_parlement_biotechnologique_mondial_new_sustainability]]
+- [[conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability]]
+- [[consortium_africain_de_biotechnologies_sociales_new_sustainability]]
+- [[nexus_biosyn_new_sustainability]]
+- [[oms_etendue_new_sustainability]]
+- [[parlement_deliberatif_mondial_new_sustainability]]
+- [[programme_onusien_de_mobilite_climatique_new_sustainability]]
+- [[reseau_des_agences_climatiques_regionales_new_sustainability]]
+- [[reseau_des_bio_communs_regionaux_new_sustainability]]
+- [[reseau_des_communs_productifs_regeneratifs_new_sustainability]]
+- [[reseau_des_hubs_urbains_regeneratifs_new_sustainability]]
+- [[reseau_des_villes_regeneratives_new_sustainability]]
+- [[reseaux_de_medecine_regenerative_universelle_new_sustainability]]
+**Opposants :**
+- [[coalition_anti_fiscalite_universelle_new_sustainability]]
+- [[collectifs_de_deplaces_climatiques_non_representes_new_sustainability]]
+- [[enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability]]
+- [[etats_souverainistes_anti_reseau_new_sustainability]]
+- [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]]
+- [[observatoire_anti_monopole_de_geneve_new_sustainability]]
+- [[parlement_territoires_nairobi_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

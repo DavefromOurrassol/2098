@@ -4,6 +4,7 @@ type: instance
 slug: pacifique_sud_archipels_flottants_reference
 entite: pacifique_sud_archipels_flottants
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: pacifique_sud_archipels_flottants
   lieu: Archipels Flottants du Pacifique Sud
@@ -37,25 +38,23 @@ zone_systemique:
     - énergie
 
 alliances:
-    - pacifique_sud_resilience_network_reference
-    - reseau_des_metropoles_cotieres_adaptees_reference
-    - banque_des_communs_reference
-    - federation_communs_territoriaux_reference
-    - conseil_de_geneve_pour_les_droits_biosociaux_reference
-    - agence_stabilisation_climatique_reference
-    - institutions_multilaterales_survivantes_reference
-    - mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
-    - cooperatives_energetiques_decentralisees_reference
-    - consortium_indo_pacifique_de_l_hydrogene_reference
-
+- agence_stabilisation_climatique_reference
+- banque_des_communs_reference
+- conseil_de_geneve_pour_les_droits_biosociaux_reference
+- cooperatives_energetiques_decentralisees_reference
+- federation_communs_territoriaux_reference
+- institutions_multilaterales_survivantes_reference
+- mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
+- pacifique_sud_resilience_network_reference
+- reseau_des_metropoles_cotieres_adaptees_reference
 oppositions:
-    - fonds_souverains_de_la_ceinture_financiere_pacifique_reference
-    - corporations_d_extraction_energetique_non_signataires_reference
-    - consortiums_prives_d_extraction_de_ressources_critiques_reference
-    - bloc_des_souverainistes_climatiques_reference
-    - alliance_blocs_souverains_reference
-    - agences_de_securite_regionales_de_normalisation_des_zones_grises_reference
-
+- agences_de_securite_regionales_de_normalisation_des_zones_grises_reference
+- alliance_blocs_souverains_reference
+- bloc_des_souverainistes_climatiques_reference
+- consortium_indo_pacifique_de_l_hydrogene_reference
+- consortiums_prives_d_extraction_de_ressources_critiques_reference
+- corporations_d_extraction_energetique_non_signataires_reference
+- fonds_souverains_de_la_ceinture_financiere_pacifique_reference
 type_relation_dominante: dépendance
 
 annee_debut: 2041
@@ -99,12 +98,29 @@ La CAFPS coordonne la gestion collective des plateformes flottantes — maintena
 - [[climat_environnement_global]]
 - [[energie_ressources_critiques]]
 
-## Relations
-**Alliés** : [[pacifique_sud_resilience_network_reference]], [[reseau_des_metropoles_cotieres_adaptees_reference]], [[banque_des_communs_reference]], [[federation_communs_territoriaux_reference]], [[conseil_de_geneve_pour_les_droits_biosociaux_reference]], [[agence_stabilisation_climatique_reference]], [[institutions_multilaterales_survivantes_reference]], [[mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference]], [[cooperatives_energetiques_decentralisees_reference]], [[consortium_indo_pacifique_de_l_hydrogene_reference]]
-**Opposants** : [[fonds_souverains_de_la_ceinture_financiere_pacifique_reference]], [[corporations_d_extraction_energetique_non_signataires_reference]], [[consortiums_prives_d_extraction_de_ressources_critiques_reference]], [[bloc_des_souverainistes_climatiques_reference]], [[alliance_blocs_souverains_reference]], [[agences_de_securite_regionales_de_normalisation_des_zones_grises_reference]]
 
 ## Description journalistique
 À bord de la plateforme Haumea-7, amarrée au large des anciens atolls Cook ce mois-ci, les délégués de vingt-trois communautés flottantes débattent depuis soixante-douze heures d'un accord de pêche que Sydney refuse de signer. La Confédération des Archipels Flottants du Pacifique Sud existe ainsi : dans l'urgence permanente, bricolant sa légitimité réunion après réunion. Née dans les années 2040 alors que les premières îles basses disparaissaient sous les eaux, elle regroupe aujourd'hui près de 340 000 personnes réparties sur des structures modulaires qui dérivent avec les courants ou s'ancrent temporairement selon les saisons. Elle n'est reconnue comme sujet de droit international que par onze États — les autres la traitent comme une zone grise commode pour y déposer des populations indésirables tout en lui refusant les droits qui iraient avec.
 
 ## Tensions narratives
 La CAFPS est prise en étau entre sa nécessité de croître — accueillir de nouvelles communautés déplacées — et le risque que cette croissance rende ses structures ingouvernables et ses revendications inaudibles. Les corporations maritimes qui lui vendent l'énergie et les pièces de maintenance accumulent silencieusement des droits de créance sur plusieurs plateformes, soulevant la question de qui possédera réellement ces territoires dans dix ans. Enfin, une faction interne conteste le modèle délibératif jugé trop lent face aux crises climatiques immédiates, ouvrant un débat existentiel : peut-on survivre en restant une démocratie quand la mer monte plus vite que les votes ne tombent ?
+
+## Relations
+**Alliés :**
+- [[agence_stabilisation_climatique_reference]]
+- [[banque_des_communs_reference]]
+- [[conseil_de_geneve_pour_les_droits_biosociaux_reference]]
+- [[cooperatives_energetiques_decentralisees_reference]]
+- [[federation_communs_territoriaux_reference]]
+- [[institutions_multilaterales_survivantes_reference]]
+- [[mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference]]
+- [[pacifique_sud_resilience_network_reference]]
+- [[reseau_des_metropoles_cotieres_adaptees_reference]]
+**Opposants :**
+- [[agences_de_securite_regionales_de_normalisation_des_zones_grises_reference]]
+- [[alliance_blocs_souverains_reference]]
+- [[bloc_des_souverainistes_climatiques_reference]]
+- [[consortium_indo_pacifique_de_l_hydrogene_reference]]
+- [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[corporations_d_extraction_energetique_non_signataires_reference]]
+- [[fonds_souverains_de_la_ceinture_financiere_pacifique_reference]]

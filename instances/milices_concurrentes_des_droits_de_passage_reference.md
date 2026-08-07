@@ -31,8 +31,39 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- administrations_hybrides_des_cites_relais_peripheriques_reference
+- armada_logistique_nordique_reference
+- corporations_d_extraction_energetique_non_signataires_reference
+- operateurs_de_zones_economiques_speciales_periurbaines_reference
+- operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference
+- reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference
+- zones_grises_globales_reference
+oppositions:
+- agences_de_securite_regionales_de_normalisation_des_zones_grises_reference
+- arctic_passage_authority_reference
+- bloc_eurasien_central_reference
+- bloc_ressources_eurasiatique_bre_reference
+- commission_hydrique_de_l_union_africaine_reference
+- consortium_de_maintenance_orbitale_seom_7_reference
+- consortium_des_grandes_plateformes_logistiques_globales_reference
+- consortium_energetique_baltique_reference
+- consortium_energetique_des_mers_du_nord_reference
+- consortium_indo_pacifique_de_l_hydrogene_reference
+- consortium_logistique_asiatique_de_contournement_aln_reference
+- consortiums_bancaires_financiarises_reference
+- consortiums_d_extraction_miniere_du_bassin_congolais_reference
+- corridor_arctique_nordique_reference
+- gouvernements_du_bloc_sahelien_autonome_reference
+- guadalajara_nexus_reference
+- murmansk_transit_arctique_reference
+- nairobi_crrc_reference
+- optiflow_logistics_reference
+- pacte_des_souverains_reference
+- sao_paulo_ita_reference
+- singapour_est_nexcore_reference
+- union_africaine_resilience_reference
+- vasil_orentchev_reference
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
@@ -98,6 +129,43 @@ La tension centrale réside dans leur paradoxe fonctionnel : en assurant une cer
 - [[organisation_territoires]]
 - [[geopolitique_conflits]]
 - [[demographie_mobilite_humaine]]
+
+
+
+## Relations
+**Alliés :**
+- [[administrations_hybrides_des_cites_relais_peripheriques_reference]]
+- [[armada_logistique_nordique_reference]]
+- [[corporations_d_extraction_energetique_non_signataires_reference]]
+- [[operateurs_de_zones_economiques_speciales_periurbaines_reference]]
+- [[operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference]]
+- [[reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference]]
+- [[zones_grises_globales_reference]]
+**Opposants :**
+- [[agences_de_securite_regionales_de_normalisation_des_zones_grises_reference]]
+- [[arctic_passage_authority_reference]]
+- [[bloc_eurasien_central_reference]]
+- [[bloc_ressources_eurasiatique_bre_reference]]
+- [[commission_hydrique_de_l_union_africaine_reference]]
+- [[consortium_de_maintenance_orbitale_seom_7_reference]]
+- [[consortium_des_grandes_plateformes_logistiques_globales_reference]]
+- [[consortium_energetique_baltique_reference]]
+- [[consortium_energetique_des_mers_du_nord_reference]]
+- [[consortium_indo_pacifique_de_l_hydrogene_reference]]
+- [[consortium_logistique_asiatique_de_contournement_aln_reference]]
+- [[consortiums_bancaires_financiarises_reference]]
+- [[consortiums_d_extraction_miniere_du_bassin_congolais_reference]]
+- [[corridor_arctique_nordique_reference]]
+- [[gouvernements_du_bloc_sahelien_autonome_reference]]
+- [[guadalajara_nexus_reference]]
+- [[murmansk_transit_arctique_reference]]
+- [[nairobi_crrc_reference]]
+- [[optiflow_logistics_reference]]
+- [[pacte_des_souverains_reference]]
+- [[sao_paulo_ita_reference]]
+- [[singapour_est_nexcore_reference]]
+- [[union_africaine_resilience_reference]]
+- [[vasil_orentchev_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

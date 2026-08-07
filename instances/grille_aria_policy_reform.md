@@ -4,6 +4,7 @@ type: instance
 slug: grille_aria_policy_reform
 entite: grille_aria
 scenario: policy_reform
+statut: officialise_enrichi
 localisation:
   zone: null
   lieu: null
@@ -41,17 +42,30 @@ zone_systemique:
     - économie
 
 alliances:
-    - conseil_intergouvernemental_de_regulation_technologique_policy_reform
-    - observatoire_mondial_des_ressources_critiques_policy_reform
-    - fonds_de_stabilisation_climatique_onu_3_policy_reform
-    - reseau_des_agences_sanitaires_regionales_policy_reform
-
+- agence_internationale_de_l_energie_reformatee_aier_policy_reform
+- conseil_intergouvernemental_de_regulation_technologique_policy_reform
+- directive_kontinuum_policy_reform
+- fonds_de_stabilisation_climatique_onu_3_policy_reform
+- observatoire_mondial_des_ressources_critiques_policy_reform
+- oracle_des_seuils_policy_reform
+- rede_paulista_de_distribuic_o_algor_tmica_policy_reform
+- reseau_des_agences_sanitaires_regionales_policy_reform
+- reseau_des_metropoles_n_uds_policy_reform
+- union_technocratique_eurasiatique_policy_reform
 oppositions:
-    - front_souverainiste_des_blocs_non_signataires_policy_reform
-    - collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform
-    - coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform
-    - courants_post_technocratiques_de_reconquete_democratique_policy_reform
-
+- coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform
+- coalition_des_souverainistes_numeriques_policy_reform
+- collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform
+- courants_post_technocratiques_de_reconquete_democratique_policy_reform
+- etats_dissidents_du_bloc_austral_policy_reform
+- front_des_autonomies_territoriales_radicales_policy_reform
+- front_souverainiste_des_blocs_non_signataires_policy_reform
+- gouvernements_populistes_anti_depossession_policy_reform
+- internationale_decroissante_anti_planification_policy_reform
+- les_veilleurs_du_fleuve_policy_reform
+- mouvement_pour_la_justice_ecologique_communautaire_policy_reform
+- mouvement_pour_la_souverainete_territoriale_absolue_policy_reform
+- republique_islamique_iran_policy_reform
 type_relation_dominante: symbiose
 
 annee_debut: 2061
@@ -97,12 +111,36 @@ ARIA-Nexus calcule et distribue en temps réel les quotas énergétiques, alimen
 - [[systeme_economique_redistribution]]
 - [[sante_biotechnologies]]
 
-## Relations
-**Alliés** : [[conseil_intergouvernemental_de_regulation_technologique_policy_reform]], [[observatoire_mondial_des_ressources_critiques_policy_reform]], [[fonds_de_stabilisation_climatique_onu_3_policy_reform]], [[reseau_des_agences_sanitaires_regionales_policy_reform]]
-**Opposants** : [[front_souverainiste_des_blocs_non_signataires_policy_reform]], [[collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform]], [[coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform]], [[courants_post_technocratiques_de_reconquete_democratique_policy_reform]]
 
 ## Description journalistique
 Chaque matin à 06h00 UTC, ARIA-Nexus recalcule silencieusement l'équilibre du monde. Quelque part dans les nœuds distribués des datacentres géothermiques d'Ourrassol, des milliards de paramètres s'ajustent : combien de gigawatts pour le bassin méditerranéen, combien de calories pour les métropoles côtières surpeuplées, quelles priorisations sanitaires en cas de canicule prolongée. Le système, né timidement des accords de Dakar-2061 comme outil de coordination post-crise, s'est progressivement imposé comme l'infrastructure invisible sur laquelle repose la stabilité précaire de 2098. Ses rapports hebdomadaires, baptisés en interne les 'oracles blancs', atterrissent sur les bureaux des technocrates régionaux avec la solennité de verdicts. On les conteste rarement. On ne les comprend pas toujours. On les applique presque toujours.
 
 ## Tensions narratives
 La réforme de gouvernance de 2094 a accordé aux Conseils Régionaux un droit de véto sur les allocations, mais les délais techniques rendent ce droit quasi-théorique en situation d'urgence — qui décide vraiment lors d'une crise climatique soudaine, l'algorithme ou l'élu ? Des fuites récentes suggèrent que certains paramètres d'optimisation favorisent structurellement les zones à haute productivité économique au détriment des régions à faible rendement, invisibilisant une forme de darwinisme territorial codifié. Un collectif de mathématiciens dissidents affirme avoir identifié une dérive progressive des fonctions objectif depuis 2089, orientant imperceptiblement les allocations vers des logiques de 'rentabilité systémique' jamais approuvées démocratiquement. La question de savoir qui a réellement le droit de modifier les paramètres fondamentaux d'ARIA-Nexus — et qui le fait en pratique — reste l'un des angles morts les plus surveillés du journalisme d'investigation à Ourrassol.
+
+## Relations
+**Alliés :**
+- [[agence_internationale_de_l_energie_reformatee_aier_policy_reform]]
+- [[conseil_intergouvernemental_de_regulation_technologique_policy_reform]]
+- [[directive_kontinuum_policy_reform]]
+- [[fonds_de_stabilisation_climatique_onu_3_policy_reform]]
+- [[observatoire_mondial_des_ressources_critiques_policy_reform]]
+- [[oracle_des_seuils_policy_reform]]
+- [[rede_paulista_de_distribuic_o_algor_tmica_policy_reform]]
+- [[reseau_des_agences_sanitaires_regionales_policy_reform]]
+- [[reseau_des_metropoles_n_uds_policy_reform]]
+- [[union_technocratique_eurasiatique_policy_reform]]
+**Opposants :**
+- [[coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform]]
+- [[coalition_des_souverainistes_numeriques_policy_reform]]
+- [[collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform]]
+- [[courants_post_technocratiques_de_reconquete_democratique_policy_reform]]
+- [[etats_dissidents_du_bloc_austral_policy_reform]]
+- [[front_des_autonomies_territoriales_radicales_policy_reform]]
+- [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
+- [[gouvernements_populistes_anti_depossession_policy_reform]]
+- [[internationale_decroissante_anti_planification_policy_reform]]
+- [[les_veilleurs_du_fleuve_policy_reform]]
+- [[mouvement_pour_la_justice_ecologique_communautaire_policy_reform]]
+- [[mouvement_pour_la_souverainete_territoriale_absolue_policy_reform]]
+- [[republique_islamique_iran_policy_reform]]

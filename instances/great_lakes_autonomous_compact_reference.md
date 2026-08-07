@@ -4,6 +4,7 @@ type: instance
 slug: great_lakes_autonomous_compact_reference
 entite: great_lakes_autonomous_compact
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: detroit_compact_grands_lacs
   lieu: Detroit — Nœud Administratif Central du Compact des Grands Lacs
@@ -37,24 +38,24 @@ zone_systemique:
     - société
 
 alliances:
-    - autorites_regionales_de_regulation_hydrologique_reference
-    - programme_onu_eau_2080_reference
-    - banque_des_communs_reference
-    - confederation_des_megapoles_autonomes_reference
-    - reseau_des_metropoles_cotieres_adaptees_reference
-    - federation_communs_territoriaux_reference
-    - observatoire_climatique_des_territoires_oct_reference
-    - reseaux_de_gouvernance_multilaterale_survivants_reference
-    - conseil_de_geneve_pour_les_droits_biosociaux_reference
-
+- autorites_regionales_de_regulation_hydrologique_reference
+- banque_des_communs_reference
+- confederation_des_megapoles_autonomes_reference
+- conseil_de_geneve_pour_les_droits_biosociaux_reference
+- federation_communs_territoriaux_reference
+- guadalajara_nexus_reference
+- observatoire_climatique_des_territoires_oct_reference
+- programme_onu_eau_2080_reference
+- reseau_des_metropoles_cotieres_adaptees_reference
+- reseaux_de_gouvernance_multilaterale_survivants_reference
 oppositions:
-    - gouvernements_federaux_residuels_souverainistes_reference
-    - lobbies_agro_industriels_a_haute_consommation_d_eau_reference
-    - bloc_des_souverainistes_climatiques_reference
-    - consortiums_prives_d_extraction_de_ressources_critiques_reference
-    - factions_eurasiatiques_contre_la_tarification_hydrique_reference
-    - alliance_blocs_souverains_reference
-
+- alliance_blocs_souverains_reference
+- bloc_des_souverainistes_climatiques_reference
+- consortiums_prives_d_extraction_de_ressources_critiques_reference
+- detroit_compact_grands_lacs_reference
+- factions_eurasiatiques_contre_la_tarification_hydrique_reference
+- gouvernements_federaux_residuels_souverainistes_reference
+- lobbies_agro_industriels_a_haute_consommation_d_eau_reference
 type_relation_dominante: coopération
 
 annee_debut: 2031
@@ -98,12 +99,30 @@ Le Compact fixe les quotas de prélèvement, régule les transferts hydriques ve
 - [[gouvernance_institutions]]
 - [[organisation_territoires]]
 
-## Relations
-**Alliés** : [[autorites_regionales_de_regulation_hydrologique_reference]], [[programme_onu_eau_2080_reference]], [[banque_des_communs_reference]], [[confederation_des_megapoles_autonomes_reference]], [[reseau_des_metropoles_cotieres_adaptees_reference]], [[federation_communs_territoriaux_reference]], [[observatoire_climatique_des_territoires_oct_reference]], [[reseaux_de_gouvernance_multilaterale_survivants_reference]], [[conseil_de_geneve_pour_les_droits_biosociaux_reference]]
-**Opposants** : [[gouvernements_federaux_residuels_souverainistes_reference]], [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]], [[bloc_des_souverainistes_climatiques_reference]], [[consortiums_prives_d_extraction_de_ressources_critiques_reference]], [[factions_eurasiatiques_contre_la_tarification_hydrique_reference]], [[alliance_blocs_souverains_reference]]
 
 ## Description journalistique
 Depuis les berges de Thunder Bay jusqu'aux quais de Chicago, le Compact des Grands Lacs administre en 2098 un bassin qui fournit de l'eau potable à quelque 48 millions de personnes et représente l'un des derniers systèmes lacustres de grande envergure encore en bon état écologique relatif. Fondé dans l'urgence en 2031 après la sécheresse catastrophique qui avait failli provoquer un conflit armé entre l'Ontario et le Michigan, le Compact est aujourd'hui une institution hybride aux pouvoirs réels mais contestés : ses décisions sur les quotas d'exportation hydrique ont force exécutoire dans le bassin, mais elles sont régulièrement attaquées par les gouvernements fédéraux résidu­els qui y voient une sécession rampante. Le siège, installé dans l'ancienne ville de Detroit — rebaptisée nœud administratif central — accueille des délégués autochtones ojibwés et mohawks siégeant à égalité avec les représentants des États membres, une configuration inédite qui fait du Compact un objet d'étude dans toutes les écoles de gouvernance du monde.
 
 ## Tensions narratives
 La pression pour autoriser des transferts hydriques massifs vers les zones désertifiées du Sud-Ouest nord-américain crée une ligne de fracture interne entre les délégués autochtones — farouchement opposés à toute exportation — et les représentants des mégapoles qui y voient une source de revenus et de pouvoir diplomatique. Par ailleurs, le modèle du Compact inspire des tentatives de réplication sur d'autres bassins mondiaux, mais ses fondateurs craignent qu'une universalisation trop rapide ne dilue la légitimité fonctionnelle qui fait sa force. Enfin, l'émergence de consortiums privés proposant des 'solutions hydriques alternatives' aux zones exclues du Compact menace de court-circuiter son autorité par la technique plutôt que par la politique.
+
+## Relations
+**Alliés :**
+- [[autorites_regionales_de_regulation_hydrologique_reference]]
+- [[banque_des_communs_reference]]
+- [[confederation_des_megapoles_autonomes_reference]]
+- [[conseil_de_geneve_pour_les_droits_biosociaux_reference]]
+- [[federation_communs_territoriaux_reference]]
+- [[guadalajara_nexus_reference]]
+- [[observatoire_climatique_des_territoires_oct_reference]]
+- [[programme_onu_eau_2080_reference]]
+- [[reseau_des_metropoles_cotieres_adaptees_reference]]
+- [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
+**Opposants :**
+- [[alliance_blocs_souverains_reference]]
+- [[bloc_des_souverainistes_climatiques_reference]]
+- [[consortiums_prives_d_extraction_de_ressources_critiques_reference]]
+- [[detroit_compact_grands_lacs_reference]]
+- [[factions_eurasiatiques_contre_la_tarification_hydrique_reference]]
+- [[gouvernements_federaux_residuels_souverainistes_reference]]
+- [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]]

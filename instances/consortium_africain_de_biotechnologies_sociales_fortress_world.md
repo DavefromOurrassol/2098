@@ -4,6 +4,7 @@ type: instance
 slug: consortium_africain_de_biotechnologies_sociales_fortress_world
 entite: consortium_africain_de_biotechnologies_sociales
 scenario: fortress_world
+statut: officialise_enrichi
 localisation:
   zone: zones_grises_tampons
   lieu: Abidjan-Tampon
@@ -36,21 +37,21 @@ zone_systemique:
     - infrastructure
 
 alliances:
-    - alliance_sanitaire_des_populations_exclues_fortress_world
-    - bloc_des_nations_non_alignees_residuelles_fortress_world
-    - institutions_multilaterales_residuelles_fortress_world
-    - cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
-    - reseaux_de_maintenance_d_infrastructures_critiques_hors_blocs_fortress_world
-    - internationale_des_semenciers_agro_pirates_fortress_world
-
+- alliance_sanitaire_des_populations_exclues_fortress_world
+- bloc_des_nations_non_alignees_residuelles_fortress_world
+- cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
+- institutions_multilaterales_residuelles_fortress_world
+- internationale_des_semenciers_agro_pirates_fortress_world
+- reseaux_de_maintenance_d_infrastructures_critiques_hors_blocs_fortress_world
 oppositions:
-    - nexus_biosyn_fortress_world
-    - cartels_miniers_militarises_subsahariens_fortress_world
-    - milices_privees_de_protection_des_sites_germinaux_fortress_world
-    - etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world
-    - divisions_concurrentes_nexus_biosyn_fortress_world
-    - systemes_de_scoring_de_productivite_corporative_fortress_world
-
+- cartels_miniers_militarises_subsahariens_fortress_world
+- divisions_concurrentes_nexus_biosyn_fortress_world
+- etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world
+- milices_privees_de_protection_des_sites_germinaux_fortress_world
+- nexus_biosyn_division_eurasienne_fortress_world
+- nexus_biosyn_division_pacifique_fortress_world
+- nexus_biosyn_fortress_world
+- systemes_de_scoring_de_productivite_corporative_fortress_world
 type_relation_dominante: dépendance
 
 annee_debut: 2031
@@ -94,12 +95,27 @@ Le BBAP déploie des protocoles de biotechnologies de seconde génération — v
 - [[gouvernance_institutions]]
 - [[organisation_territoires]]
 
-## Relations
-**Alliés** : [[alliance_sanitaire_des_populations_exclues_fortress_world]], [[bloc_des_nations_non_alignees_residuelles_fortress_world]], [[institutions_multilaterales_residuelles_fortress_world]], [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]], [[reseaux_de_maintenance_d_infrastructures_critiques_hors_blocs_fortress_world]], [[internationale_des_semenciers_agro_pirates_fortress_world]]
-**Opposants** : [[nexus_biosyn_fortress_world]], [[cartels_miniers_militarises_subsahariens_fortress_world]], [[milices_privees_de_protection_des_sites_germinaux_fortress_world]], [[etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world]], [[divisions_concurrentes_nexus_biosyn_fortress_world]], [[systemes_de_scoring_de_productivite_corporative_fortress_world]]
 
 ## Description journalistique
 Depuis son bureau de coordination d'Abidjan-Tampon — une zone grise entre le bloc atlantique et les terres non réclamées du Sahel intérieur — le BBAP ressemble moins à un consortium de biotechnologies sociales qu'à une agence de sous-traitance humanitaire sous tutelle fragmentée. Ses camions blancs portant le logo du génome stylisé sillonnent des routes que les blocs souverains ne cartographient plus, livrant des vaccins thermostables et des kits de diagnostic aux communautés que personne d'autre ne dessert. Mais à Dakar comme à Kinshasa, les voix critiques se multiplient : ces technologies, dont les licences sont renégociées tous les dix-huit mois avec Nexus BioSyn sous pression des régulateurs des blocs, ressemblent de plus en plus à un instrument de dépendance conditionnelle qu'à une émancipation. 'Ils nous soignent avec nos propres données', résume un technicien de santé de Mopti. Le BBAP lui-même ne sait peut-être plus très bien de quel côté il opère.
 
 ## Tensions narratives
 Le BBAP est pris dans un étau structurel : chaque licence biotechnologique renégociée avec les conglomérats des blocs resserre un peu plus la dépendance qui était censée être transitoire, et les données épidémiologiques transmises comme contrepartie alimentent des algorithmes de gestion des populations dont les effets retombent sur les communautés mêmes que le consortium prétend protéger. Une scission interne se dessine entre une faction réformiste qui croit encore pouvoir infléchir les conditions des licences depuis l'intérieur, et une aile radicale qui envisage de couper les ponts avec les blocs pour opérer en pur réseau clandestin — au risque de perdre l'accès aux biotechnologies de pointe. La question qui hante ses fondateurs survivants : ont-ils construit un outil d'émancipation ou une interface de contrôle déguisée, et peuvent-ils encore faire la différence ?
+
+## Relations
+**Alliés :**
+- [[alliance_sanitaire_des_populations_exclues_fortress_world]]
+- [[bloc_des_nations_non_alignees_residuelles_fortress_world]]
+- [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]]
+- [[institutions_multilaterales_residuelles_fortress_world]]
+- [[internationale_des_semenciers_agro_pirates_fortress_world]]
+- [[reseaux_de_maintenance_d_infrastructures_critiques_hors_blocs_fortress_world]]
+**Opposants :**
+- [[cartels_miniers_militarises_subsahariens_fortress_world]]
+- [[divisions_concurrentes_nexus_biosyn_fortress_world]]
+- [[etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world]]
+- [[milices_privees_de_protection_des_sites_germinaux_fortress_world]]
+- [[nexus_biosyn_division_eurasienne_fortress_world]]
+- [[nexus_biosyn_division_pacifique_fortress_world]]
+- [[nexus_biosyn_fortress_world]]
+- [[systemes_de_scoring_de_productivite_corporative_fortress_world]]

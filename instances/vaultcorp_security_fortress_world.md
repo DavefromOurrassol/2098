@@ -4,6 +4,7 @@ type: instance
 slug: vaultcorp_security_fortress_world
 entite: vaultcorp_security
 scenario: fortress_world
+statut: officialise_enrichi
 localisation:
   zone: null
   lieu: null
@@ -39,25 +40,32 @@ zone_systemique:
     - économie
 
 alliances:
-    - administrations_de_controle_frontalier_des_blocs_fortress_world
-    - agences_de_securite_interieure_des_etats_forteresses_fortress_world
-    - alliance_blocs_souverains_fortress_world
-    - complexes_militaro_industriels_de_gestion_des_ressources_fortress_world
-    - consortiums_de_defense_orbitale_prives_fortress_world
-    - nexcore_atlantique_infrastructure_fortress_world
-    - nexus_biosyn_fortress_world
-    - pacte_forteresses_souveraines_fortress_world
-
+- administrations_de_controle_frontalier_des_blocs_fortress_world
+- agences_de_securite_interieure_des_etats_forteresses_fortress_world
+- alliance_blocs_souverains_fortress_world
+- commandement_strategique_des_matieres_critiques_atlantique_fortress_world
+- complexes_militaro_industriels_de_gestion_des_ressources_fortress_world
+- consortiums_de_defense_orbitale_prives_fortress_world
+- consortiums_energetiques_du_bloc_ourrassol_fortress_world
+- executif_militaro_civil_du_regime_fortress_world
+- instances_aria_concurrentes_des_blocs_rivaux_fortress_world
+- ironclad_logistics_fortress_world
+- milices_privees_de_protection_des_sites_germinaux_fortress_world
+- nexcore_atlantique_infrastructure_fortress_world
+- nexus_biosyn_fortress_world
+- pacte_forteresses_souveraines_fortress_world
+- reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world
+- reseaux_prives_de_securite_aux_frontieres_fortress_world
+- terrashield_geoengineering_fortress_world
 oppositions:
-    - alliance_sanitaire_des_populations_exclues_fortress_world
-    - cellules_mouvement_commun_midwest_fortress_world
-    - coalitions_des_deplaces_et_apatrides_fortress_world
-    - collectifs_d_ingenieurs_dissidents_anti_militarisation_fortress_world
-    - contrebandiers_energetiques_des_zones_grises_fortress_world
-    - factions_dissidentes_du_consortium_helios_fortress_world
-    - mouvement_commun_midwest_fortress_world
-    - reseaux_de_contrebande_energetique_transfrontaliere_fortress_world
-
+- alliance_sanitaire_des_populations_exclues_fortress_world
+- cellules_mouvement_commun_midwest_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- collectifs_d_ingenieurs_dissidents_anti_militarisation_fortress_world
+- contrebandiers_energetiques_des_zones_grises_fortress_world
+- factions_dissidentes_du_consortium_helios_fortress_world
+- mouvement_commun_midwest_fortress_world
+- reseaux_de_contrebande_energetique_transfrontaliere_fortress_world
 type_relation_dominante: symbiose
 
 annee_debut: 2031
@@ -101,12 +109,38 @@ VCSDS conçoit et déploie des systèmes de surveillance autonomes pour les zone
 - [[technologie_information]]
 - [[gouvernance_institutions]]
 
-## Relations
-**Alliés** : [[administrations_de_controle_frontalier_des_blocs_fortress_world]], [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]], [[alliance_blocs_souverains_fortress_world]], [[complexes_militaro_industriels_de_gestion_des_ressources_fortress_world]], [[consortiums_de_defense_orbitale_prives_fortress_world]], [[nexcore_atlantique_infrastructure_fortress_world]], [[nexus_biosyn_fortress_world]], [[pacte_forteresses_souveraines_fortress_world]]
-**Opposants** : [[alliance_sanitaire_des_populations_exclues_fortress_world]], [[cellules_mouvement_commun_midwest_fortress_world]], [[coalitions_des_deplaces_et_apatrides_fortress_world]], [[collectifs_d_ingenieurs_dissidents_anti_militarisation_fortress_world]], [[contrebandiers_energetiques_des_zones_grises_fortress_world]], [[factions_dissidentes_du_consortium_helios_fortress_world]], [[mouvement_commun_midwest_fortress_world]], [[reseaux_de_contrebande_energetique_transfrontaliere_fortress_world]]
 
 ## Description journalistique
 Dans les couloirs blindés de la Forteresse Eurasiatique ou les tours climatisées du Pacte Atlantique, on croise souvent ces silhouettes en exosquelettes noirs siglés VCSDS, armes intelligentes au poing et interfaces rétiniennes clignotantes. VaultCorp n'est plus une simple entreprise : c'est une ombre portée sur les frontières du monde. Ses drones 'Sentinel' patrouillent les corridors énergétiques d'Asie centrale, ses algorithmes 'Lockdown' décident en temps réel de l'ouverture ou de la fermeture des seuils frontaliers, et ses milices 'Iron Veil' sont devenues les gardiennes officieuses des sites germinaux amazoniens. Le paradoxe ? Plus les États-forteresses dépendent de VaultCorp pour leur sécurité, moins ils semblent capables de s'en passer. Comme si la souveraineté était devenue une option payante, avec abonnement mensuel et frais de résiliation exorbitants.
 
 ## Tensions narratives
 La tension centrale autour de VCSDS réside dans sa double nature : est-elle le dernier rempart des États-forteresses ou leur fossoyeur ? Ses contrats opaques avec les régimes autoritaires du Bloc Eurasiatique, ses interventions controversées dans les zones grises comme Almaty, ou ses liens troubles avec les cartels miniers subsahariens en font une cible privilégiée des dissidences. Par ailleurs, la dépendance croissante des blocs envers ses technologies soulève une question explosive : que se passera-t-il lorsque VaultCorp décidera de verrouiller un territoire non pas pour le protéger, mais pour le contrôler ? Les rumeurs persistantes d'une 'Directive Orentchev' – un protocole secret permettant à VCSDS de prendre le contrôle des infrastructures critiques en cas de 'menace existentielle' – alimentent les théories du complot et les craintes d'un coup d'État algorithmique.
+
+## Relations
+**Alliés :**
+- [[administrations_de_controle_frontalier_des_blocs_fortress_world]]
+- [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]]
+- [[alliance_blocs_souverains_fortress_world]]
+- [[commandement_strategique_des_matieres_critiques_atlantique_fortress_world]]
+- [[complexes_militaro_industriels_de_gestion_des_ressources_fortress_world]]
+- [[consortiums_de_defense_orbitale_prives_fortress_world]]
+- [[consortiums_energetiques_du_bloc_ourrassol_fortress_world]]
+- [[executif_militaro_civil_du_regime_fortress_world]]
+- [[instances_aria_concurrentes_des_blocs_rivaux_fortress_world]]
+- [[ironclad_logistics_fortress_world]]
+- [[milices_privees_de_protection_des_sites_germinaux_fortress_world]]
+- [[nexcore_atlantique_infrastructure_fortress_world]]
+- [[nexus_biosyn_fortress_world]]
+- [[pacte_forteresses_souveraines_fortress_world]]
+- [[reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world]]
+- [[reseaux_prives_de_securite_aux_frontieres_fortress_world]]
+- [[terrashield_geoengineering_fortress_world]]
+**Opposants :**
+- [[alliance_sanitaire_des_populations_exclues_fortress_world]]
+- [[cellules_mouvement_commun_midwest_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[collectifs_d_ingenieurs_dissidents_anti_militarisation_fortress_world]]
+- [[contrebandiers_energetiques_des_zones_grises_fortress_world]]
+- [[factions_dissidentes_du_consortium_helios_fortress_world]]
+- [[mouvement_commun_midwest_fortress_world]]
+- [[reseaux_de_contrebande_energetique_transfrontaliere_fortress_world]]

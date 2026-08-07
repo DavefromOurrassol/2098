@@ -4,6 +4,7 @@ type: instance
 slug: consortium_helios_policy_reform
 entite: consortium_helios
 scenario: policy_reform
+statut: officialise_enrichi
 localisation:
   zone: hub_europeen_regulation
   lieu: Genève
@@ -37,17 +38,15 @@ zone_systemique:
     - infrastructure
 
 alliances:
-    - conseil_energetique_intercontinental_new_sustainability
-    - syndicat_des_ingenieurs_orbitaux_policy_reform
-    - fonds_souverain_de_transition_verte_fstv_policy_reform
-    - reseau_des_lobbyistes_techniques_onu_energie_policy_reform
-
+- conseil_energetique_intercontinental_new_sustainability
+- fonds_souverain_de_transition_verte_fstv_policy_reform
+- reseau_des_lobbyistes_techniques_onu_energie_policy_reform
 oppositions:
-    - mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform
-    - mouvement_communautaire_des_micro_grids_energetiques_new_sustainability
-    - faction_regulatrice_dure_au_sein_du_cei_policy_reform
-    - reseau_des_journalistes_d_investigation_energetique_policy_reform
-
+- faction_regulatrice_dure_au_sein_du_cei_policy_reform
+- mouvement_communautaire_des_micro_grids_energetiques_new_sustainability
+- mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform
+- reseau_des_journalistes_d_investigation_energetique_policy_reform
+- syndicat_des_ingenieurs_orbitaux_policy_reform
 type_relation_dominante: alliance stratégique
 
 annee_debut: 2026
@@ -91,12 +90,21 @@ Gestion et exploitation des réseaux de captage solaire orbital (OSH — Orbital
 - [[systeme_economique_redistribution]]
 - [[geopolitique_conflits]]
 
-## Relations
-**Alliés** : [[conseil_energetique_intercontinental_new_sustainability]], [[syndicat_des_ingenieurs_orbitaux_policy_reform]], [[fonds_souverain_de_transition_verte_fstv_policy_reform]], [[reseau_des_lobbyistes_techniques_onu_energie_policy_reform]]
-**Opposants** : [[mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform]], [[mouvement_communautaire_des_micro_grids_energetiques_new_sustainability]], [[faction_regulatrice_dure_au_sein_du_cei_policy_reform]], [[reseau_des_journalistes_d_investigation_energetique_policy_reform]]
 
 ## Description journalistique
 Le Consortium Helios, c'est l'empire invisible qui alimente vos villes tout en écrivant les règles du jeu. Depuis ses quarante-sept stations de captage orbital — des structures de plusieurs kilomètres carrés dont les reflets dorés sont désormais visibles à l'œil nu au crépuscule — il achemine l'énergie vers des milliards de foyers en échange d'un contrôle sur les infrastructures que nul gouvernement seul ne peut dupliquer. En 2098, sous la pression du Conseil Énergétique Intercontinental, Helios a signé le Pacte de Régulation de Genève-III, acceptant théoriquement une supervision renforcée. Mais dans les couloirs du même sommet, ses représentants siégeaient aux comités de rédaction des textes qu'ils s'engageaient à respecter. 'Ils régulent le régulateur', résumait en off une source au CEI. Le Consortium affiche des bilans de durabilité exemplaires et des engagements carbone irréprochables — et continue, en parallèle, de valoriser l'énergie orbitale comme actif financier de premier rang sur les marchés de Genève et de Nairobi.
 
 ## Tensions narratives
 La tension centrale réside dans la contradiction structurelle entre la légitimité que le Consortium tire de la transition écologique réussie — il a effectivement décarbonisé 40% du réseau continental — et l'opacité de sa gouvernance réelle, où actionnaires et lobbyistes pèsent plus que les comités publics. Un rapport interne filtré en 2097 suggère qu'Helios ralentit délibérément le déploiement des microgrids communautaires pour protéger ses marges de distribution, ce qui alimenterait une enquête parlementaire. La question de la nationalisation partielle des infrastructures orbitales revient cycliquement, portée par des États qui réalisent leur dépendance critique — et que le Consortium désamorce à chaque fois par des concessions techniques ciblées. Enfin, la génération d'ingénieurs orbitaux formés par Helios commence à se syndiquer et à poser la question du contrôle démocratique du ciel.
+
+## Relations
+**Alliés :**
+- [[conseil_energetique_intercontinental_new_sustainability]]
+- [[fonds_souverain_de_transition_verte_fstv_policy_reform]]
+- [[reseau_des_lobbyistes_techniques_onu_energie_policy_reform]]
+**Opposants :**
+- [[faction_regulatrice_dure_au_sein_du_cei_policy_reform]]
+- [[mouvement_communautaire_des_micro_grids_energetiques_new_sustainability]]
+- [[mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform]]
+- [[reseau_des_journalistes_d_investigation_energetique_policy_reform]]
+- [[syndicat_des_ingenieurs_orbitaux_policy_reform]]

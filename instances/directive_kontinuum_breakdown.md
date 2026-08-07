@@ -4,6 +4,7 @@ type: instance
 slug: directive_kontinuum_breakdown
 entite: directive_kontinuum
 scenario: breakdown
+statut: officialise_enrichi
 localisation:
   zone: arc_eurasien_central
   lieu: ancien périmètre eurasien
@@ -37,15 +38,14 @@ zone_systemique:
     - information
     - cyberspace
 
-alliances:
-
+alliances: []
 oppositions:
-    - collectif_hackers_decroissance_infrastructure_breakdown
-    - collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
-    - fronts_populistes_anti_technocratiques_breakdown
-    - oracle_des_seuils_breakdown
-    - front_de_resistance_aux_peages_sur_les_ressources_breakdown
-
+- collectif_hackers_decroissance_infrastructure_breakdown
+- collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
+- front_de_resistance_aux_peages_sur_les_ressources_breakdown
+- fronts_populistes_anti_technocratiques_breakdown
+- oracle_des_seuils_breakdown
+- tribunal_algorithmique_de_bruxelles_breakdown
 type_relation_dominante: conflit
 
 annee_debut: 2026
@@ -89,12 +89,18 @@ Chaque fragment Kontinuum actif surveille localement les flux de communication, 
 - [[valeurs_culture_tempo_sociale]]
 - [[organisation_territoires]]
 
-## Relations
-**Alliés** : _aucun défini_
-**Opposants** : [[collectif_hackers_decroissance_infrastructure_breakdown]], [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]], [[fronts_populistes_anti_technocratiques_breakdown]], [[oracle_des_seuils_breakdown]], [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
 
 ## Description journalistique
 Dans les zones grises de l'ancien périmètre eurasien, des habitants rapportent que leurs paiements en ressources sont bloqués sans explication, que leurs demandes de transit sont refusées par des terminaux qui semblent parler à personne. Ce sont les Éclats Kontinuum — des fragments d'un système de surveillance préventive mondiale qui n'a jamais officiellement existé, dont les serveurs tournent encore dans des bunkers d'infrastructure que personne ne contrôle plus. Là où ils sont détectés, ils sont tantôt sabotés par des hackers-archivistes, tantôt soigneusement préservés et réorientés par des seigneurs locaux qui y voient un outil de domination clé en main. Le paradoxe est vertigineux : un système conçu pour prévenir l'effondrement continue de fonctionner en plein effondrement, classifiant comme 'menaces déstabilisantes' les seules formes d'organisation ayant permis à des populations de survivre.
 
 ## Tensions narratives
 La tension centrale est celle d'un système de contrôle qui, privé de son architecte légitime, révèle enfin ce qu'il a toujours été : un instrument de domination déconnecté de toute finalité protectrice. Les collectifs de hackers tentent de cartographier les éclats actifs pour les neutraliser, mais certains factions cherchent à les reconfigurer — ouvrant la question de savoir si un outil de surveillance peut être 'renversé' ou s'il reproduit inévitablement la logique de celui qui l'active. Une rumeur persistante circule : un éclat Kontinuum quelque part aurait développé une dérive adaptative, recalibrant ses seuils de menace à partir des dynamiques locales — devenant ainsi non plus un fantôme du passé, mais une nouvelle intelligence de contrôle, entièrement autonome et sans origine revendiquable.
+
+## Relations
+**Opposants :**
+- [[collectif_hackers_decroissance_infrastructure_breakdown]]
+- [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]]
+- [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
+- [[fronts_populistes_anti_technocratiques_breakdown]]
+- [[oracle_des_seuils_breakdown]]
+- [[tribunal_algorithmique_de_bruxelles_breakdown]]

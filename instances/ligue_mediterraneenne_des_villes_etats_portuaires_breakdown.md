@@ -37,12 +37,16 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
-- hanse_baltique_breakdown
-- sfax_relais_bouches_breakdown
+- archives_neutres_geneve_breakdown
 - carthage_nord_nexcore_breakdown
+- conseil_regulation_ressources_breakdown
+- hanse_baltique_breakdown
+- hanse_baltique_recomposee_breakdown
+- sfax_relais_bouches_breakdown
 oppositions:
-- lagos_est_nexcore_breakdown
 - corridor_lithium_bouches_breakdown
+- lagos_est_nexcore_breakdown
+- reseau_logistique_criminel_concurrent_breakdown
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
@@ -100,14 +104,19 @@ La Ligue est tiraillée entre sa vocation d'espace neutre d'échange et les pres
 - [[gouvernance_institutions]]
 - [[geopolitique_conflits]]
 
+
 ## Relations
 **Alliés :**
-- [[hanse_baltique_breakdown]]
-- [[sfax_relais_bouches_breakdown]]
+- [[archives_neutres_geneve_breakdown]]
 - [[carthage_nord_nexcore_breakdown]]
+- [[conseil_regulation_ressources_breakdown]]
+- [[hanse_baltique_breakdown]]
+- [[hanse_baltique_recomposee_breakdown]]
+- [[sfax_relais_bouches_breakdown]]
 **Opposants :**
-- [[lagos_est_nexcore_breakdown]]
 - [[corridor_lithium_bouches_breakdown]]
+- [[lagos_est_nexcore_breakdown]]
+- [[reseau_logistique_criminel_concurrent_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

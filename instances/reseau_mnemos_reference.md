@@ -4,6 +4,7 @@ type: instance
 slug: reseau_mnemos_reference
 entite: reseau_mnemos
 scenario: reference
+statut: officialise_enrichi
 localisation:
   zone: null
   lieu: null
@@ -38,16 +39,22 @@ zone_systemique:
     - énergie
 
 alliances:
-    - collectifs_academiques_independants_reference
-    - ligue_des_municipalites_peripheriques_sous_connectees_reference
-    - ong_de_preservation_patrimoniale_numerique_reference
-    - cooperatives_energetiques_decentralisees_reference
-
+- collectifs_academiques_independants_reference
+- collectifs_de_journalisme_embarque_reference
+- cooperatives_energetiques_decentralisees_reference
+- helsinki_communs_numeriques_reference
+- ligue_des_municipalites_peripheriques_sous_connectees_reference
+- ong_de_preservation_patrimoniale_numerique_reference
+- pacifique_sud_resilience_network_reference
+- reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference
+- tbilissi_noeud_mnemos_reference
 oppositions:
-    - consortium_des_grandes_plateformes_ia_integrees_reference
-    - etats_a_tendance_centraliste_numerique_reference
-    - consortiums_prives_de_gestion_des_donnees_critiques_reference
-
+- bureau_des_territoires_residuels_reference
+- consortium_des_grandes_plateformes_ia_integrees_reference
+- consortiums_prives_de_gestion_des_donnees_critiques_reference
+- directive_kontinuum_reference
+- etats_a_tendance_centraliste_numerique_reference
+- plateformes_centralisees_de_narration_officielle_reference
 type_relation_dominante: rivalité
 
 annee_debut: 2031
@@ -91,12 +98,28 @@ Mnemos assure la réplication redondante et la transmission des savoirs critique
 - [[organisation_territoires]]
 - [[energie_ressources_critiques]]
 
-## Relations
-**Alliés** : [[collectifs_academiques_independants_reference]], [[ligue_des_municipalites_peripheriques_sous_connectees_reference]], [[ong_de_preservation_patrimoniale_numerique_reference]], [[cooperatives_energetiques_decentralisees_reference]]
-**Opposants** : [[consortium_des_grandes_plateformes_ia_integrees_reference]], [[etats_a_tendance_centraliste_numerique_reference]], [[consortiums_prives_de_gestion_des_donnees_critiques_reference]]
 
 ## Description journalistique
 Dans les sous-sols d'une ancienne école désaffectée de Tbilissi, un boîtier gris de la taille d'une valise clignote silencieusement — c'est un nœud Mnemos, l'un des 14 000 disséminés sur la planète. Ce réseau discret, né de la peur collective de l'effacement numérique après les grandes coupures de 2034, stocke aujourd'hui l'équivalent de plusieurs bibliothèques nationales en format compressé et chiffré. Ni vraiment institutionnel, ni franchement clandestin, Mnemos navigue dans un entre-deux légal tendu : ses opérateurs bénévoles et ses techniciens itinérants sont tantôt salués par des maires de zones sinistrées, tantôt convoqués par des autorités de régulation informationnelle. 'Nous ne sommes pas contre les plateformes', explique Soraya Okonkwo, coordinatrice régionale Afrique de l'Ouest, 'nous sommes la clause de survie que personne n'a voulu écrire.'
 
 ## Tensions narratives
 La pression croissante des grandes plateformes pour intégrer Mnemos à leurs architectures — sous couvert de 'fiabilisation' — menace l'indépendance fondatrice du réseau. Certains nœuds, dans des zones à haute instabilité climatique, tombent progressivement en déshérence faute de mainteneurs humains qualifiés. La question de la gouvernance du réseau — qui décide de ce qui est préservé, et selon quels critères — génère des fractures internes croissantes entre partisans d'une charte ouverte universelle et tenants d'une sélection raisonnée face aux contraintes énergétiques.
+
+## Relations
+**Alliés :**
+- [[collectifs_academiques_independants_reference]]
+- [[collectifs_de_journalisme_embarque_reference]]
+- [[cooperatives_energetiques_decentralisees_reference]]
+- [[helsinki_communs_numeriques_reference]]
+- [[ligue_des_municipalites_peripheriques_sous_connectees_reference]]
+- [[ong_de_preservation_patrimoniale_numerique_reference]]
+- [[pacifique_sud_resilience_network_reference]]
+- [[reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference]]
+- [[tbilissi_noeud_mnemos_reference]]
+**Opposants :**
+- [[bureau_des_territoires_residuels_reference]]
+- [[consortium_des_grandes_plateformes_ia_integrees_reference]]
+- [[consortiums_prives_de_gestion_des_donnees_critiques_reference]]
+- [[directive_kontinuum_reference]]
+- [[etats_a_tendance_centraliste_numerique_reference]]
+- [[plateformes_centralisees_de_narration_officielle_reference]]

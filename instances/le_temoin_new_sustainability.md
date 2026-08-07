@@ -4,6 +4,7 @@ type: instance
 slug: le_temoin_new_sustainability
 entite: le_temoin
 scenario: new_sustainability
+statut: officialise_enrichi
 localisation:
   zone: hub_nairobi_kigali
   lieu: Nairobi-Centre
