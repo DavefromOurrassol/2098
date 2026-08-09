@@ -1,0 +1,17 @@
+undo_custom.py — 2026-08-09 10:08:04 — mode EXECUTE
+1 item(s) à traiter
+
+
+── instance / test_zone_hint / generalisation=yes ──
+  [DEL] test_zone_hint_breakdown.md → backup test_zone_hint_breakdown.md.bak
+  [DEL] test_zone_hint_fortress_world.md → backup test_zone_hint_fortress_world.md.bak
+  [DEL] test_zone_hint_new_sustainability.md → backup test_zone_hint_new_sustainability.md.bak
+  [DEL] test_zone_hint_eco_communalism.md → backup test_zone_hint_eco_communalism.md.bak
+  [DEL] test_zone_hint_policy_reform.md → backup test_zone_hint_policy_reform.md.bak
+  [DEL] test_zone_hint_reference.md → backup test_zone_hint_reference.md.bak
+  [DEL] test_zone_hint.md → backup test_zone_hint.md.bak
+  [JSON] 'test_zone_hint' retiré de _entities_list.json
+  [DEL] last_validated.json resetté
+
+════════════════════════════════════════════════════════════
+Terminé. Lancez validate.py pour vérifier la base.

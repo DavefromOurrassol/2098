@@ -10053,3 +10053,42 @@ processed:
     alimentée par les Brigades de Restauration Écologique et consultable par n'importe
     quel village membre.
   etat_ref: actif
+- status: injected
+  idea:
+    nom: Test Zone Hint
+    category: organisation
+    role: Organisation de test pour vérifier la factorisation
+    etat: actif
+    scenario_ref: breakdown
+    zone_hint: Amazonie
+  slug: test_zone_hint
+  scenarios:
+  - breakdown
+  - fortress_world
+  - new_sustainability
+  - eco_communalism
+  - policy_reform
+  - reference
+  archetype:
+    description_complete: Une organisation conçue pour évaluer, valider ou tester
+      des mécanismes, des processus ou des infrastructures dans un contexte de fragmentation
+      systémique. Elle incarne la nécessité de vérifier la robustesse, la cohérence
+      ou l'efficacité d'un système en crise, souvent en marge des structures institutionnelles
+      établies. Son rôle est à la fois technique et politique, car elle révèle les
+      limites ou les potentialités des outils qu'elle examine, tout en étant elle-même
+      soumise aux dynamiques chaotiques de son environnement.
+    tension_fondamentale: La légitimité de son existence repose sur sa neutralité
+      et son utilité fonctionnelle, mais son action est inévitablement influencée
+      par les rapports de force et les déséquilibres du système qu'elle teste. Elle
+      doit prouver sa valeur sans devenir un acteur dominant, sous peine de perdre
+      sa crédibilité ou d'être instrumentalisée.
+    variables_potentielles:
+    - technologie_information
+    - gouvernance_institutions
+    - frontieres_du_systeme
+    - systemes_productifs_travail
+    doublon_detecte: false
+    doublon_slug: null
+  scenario_ref: breakdown
+  role_ref: Organisation de test pour vérifier la factorisation
+  etat_ref: actif
