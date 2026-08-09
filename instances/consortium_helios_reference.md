@@ -48,7 +48,7 @@ oppositions:
 - mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform
 type_relation_dominante: dépendance
 
-annee_debut: 2026
+annee_debut: 2032
 annee_fin: 
 
 etat_temporel: actif

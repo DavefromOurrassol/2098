@@ -52,7 +52,7 @@ oppositions:
 - operateurs_de_fusion_energetique_regionaux_new_sustainability
 - reseau_global_de_cliniques_regeneratives_new_sustainability
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2037
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

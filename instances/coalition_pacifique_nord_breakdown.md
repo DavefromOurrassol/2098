@@ -48,7 +48,7 @@ oppositions:
 - milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown
 - seoul_collectif_nexcore_breakdown
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2041
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

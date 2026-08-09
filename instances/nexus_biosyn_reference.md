@@ -54,7 +54,7 @@ oppositions:
 - regulateurs_de_l_union_continentale_africaine_reference
 type_relation_dominante: dépendance
 
-annee_debut: 2026
+annee_debut: 2032
 annee_fin: 
 
 etat_temporel: actif

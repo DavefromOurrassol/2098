@@ -91,7 +91,7 @@ oppositions:
 - zones_grises_globales_reference
 type_relation_dominante: neutralité
 
-annee_debut: 2026
+annee_debut: 2040
 annee_fin: 
 
 etat_temporel: actif

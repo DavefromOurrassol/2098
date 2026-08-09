@@ -52,7 +52,7 @@ oppositions:
 - les_veilleurs_du_fleuve_policy_reform
 - mouvement_pour_la_justice_ecologique_communautaire_policy_reform
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2032
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

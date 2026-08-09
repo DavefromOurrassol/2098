@@ -51,7 +51,7 @@ oppositions:
 - pirates_biologiques_open_source_breakdown
 - reseau_logistique_criminel_concurrent_breakdown
 type_relation_dominante: symbiose
-annee_debut: 2026
+annee_debut: 2041
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

@@ -53,7 +53,7 @@ oppositions:
 - mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
 - reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2031
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

@@ -95,6 +95,8 @@ localisation:
   zone: null
   lieu: null
   type_lieu: null
+annee_debut_verifiee: true
+
 ---
 
 # Consortium des Plateformes IA Centralisées Anti-Délibération

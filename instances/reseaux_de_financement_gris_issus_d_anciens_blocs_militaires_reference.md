@@ -93,6 +93,8 @@ localisation:
   zone: zones_grises_globales
   lieu: null
   type_lieu: region
+annee_debut_verifiee: true
+
 ---
 
 # Réseaux de financement gris issus d'anciens blocs militaires

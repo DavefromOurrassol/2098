@@ -35,7 +35,7 @@ oppositions:
   - compagnies_de_geo_ingenierie_privees_sans_mandat_breakdown
   - fronts_populistes_anti_technocratiques_breakdown
 type_relation_dominante: rivalité
-annee_debut: 2026
+annee_debut: 2041
 annee_fin:
 etat_temporel: transformé
 age_historique: résiduel

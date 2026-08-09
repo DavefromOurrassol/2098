@@ -95,6 +95,8 @@ localisation:
   zone: geneve_nexus
   lieu: Genève-Nexus, siège principal
   type_lieu: ville
+annee_debut_verifiee: true
+
 ---
 
 # Conseil Intergouvernemental de Régulation Technologique

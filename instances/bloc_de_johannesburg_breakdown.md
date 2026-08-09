@@ -46,7 +46,7 @@ oppositions:
 - nairobi_crrc_breakdown
 - seigneuries_logistiques_armees_breakdown
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2042
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

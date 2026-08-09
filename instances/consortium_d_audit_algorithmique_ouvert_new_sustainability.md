@@ -51,7 +51,7 @@ oppositions:
 - factions_internes_pro_opacite_des_parametres_new_sustainability
 - lobbies_des_plateformes_de_consensus_automatise_new_sustainability
 type_relation_dominante: coopération
-annee_debut: 2026
+annee_debut: 2040
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

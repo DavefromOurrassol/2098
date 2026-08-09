@@ -80,7 +80,7 @@ oppositions:
 - tribunal_algorithmique_de_bruxelles_fortress_world
 - voix_du_dehors_fortress_world
 type_relation_dominante: dépendance
-annee_debut: 2026
+annee_debut: 2036
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

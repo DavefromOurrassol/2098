@@ -57,7 +57,7 @@ oppositions:
 - lagos_est_nexcore_breakdown
 - rede_paulista_de_distribuic_o_algor_tmica_breakdown
 type_relation_dominante: symbiose
-annee_debut: 2026
+annee_debut: 2041
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

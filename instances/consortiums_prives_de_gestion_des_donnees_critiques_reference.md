@@ -73,7 +73,7 @@ oppositions:
 - tbilissi_noeud_mnemos_reference
 - tribunal_algorithmique_de_bruxelles_reference
 type_relation_dominante: dépendance
-annee_debut: 2026
+annee_debut: 2033
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

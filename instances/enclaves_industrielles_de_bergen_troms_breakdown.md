@@ -49,7 +49,7 @@ oppositions:
 - district_mourmansk_residuel_breakdown
 - federation_russe_residuelle_district_de_mourmansk_breakdown
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2058
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

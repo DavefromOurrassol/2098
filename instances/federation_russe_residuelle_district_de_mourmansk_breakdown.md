@@ -58,7 +58,7 @@ oppositions:
 - kalaallit_nunaat_sovereign_fund_breakdown
 - noeud_nordark_tromso_breakdown
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2057
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

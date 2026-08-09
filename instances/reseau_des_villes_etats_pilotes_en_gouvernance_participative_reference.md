@@ -57,7 +57,7 @@ oppositions:
 - plateformes_centralisees_de_narration_officielle_reference
 - rede_paulista_de_distribuic_o_algor_tmica_reference
 type_relation_dominante: coopération
-annee_debut: 2026
+annee_debut: 2032
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

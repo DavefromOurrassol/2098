@@ -50,7 +50,7 @@ oppositions:
 - pacte_forteresses_souveraines_fortress_world
 - rede_paulista_de_distribuic_o_algor_tmica_fortress_world
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2061
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

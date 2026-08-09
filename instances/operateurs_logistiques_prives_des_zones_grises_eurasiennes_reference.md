@@ -55,7 +55,7 @@ oppositions:
 - optiflow_logistics_reference
 - regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2033
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

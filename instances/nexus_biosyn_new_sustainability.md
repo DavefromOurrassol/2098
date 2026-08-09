@@ -52,7 +52,7 @@ oppositions:
 - reseaux_de_medecine_regenerative_universelle_new_sustainability
 type_relation_dominante: symbiose
 
-annee_debut: 2026
+annee_debut: 2038
 annee_fin: 
 
 etat_temporel: transformé

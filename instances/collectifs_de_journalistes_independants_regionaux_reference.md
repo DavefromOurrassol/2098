@@ -54,7 +54,7 @@ oppositions:
 - plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference
 - services_de_contre_information_des_blocs_geopolitiques_concurrents_reference
 type_relation_dominante: coopération
-annee_debut: 2026
+annee_debut: 2032
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

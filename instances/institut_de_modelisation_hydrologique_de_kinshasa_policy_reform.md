@@ -38,7 +38,7 @@ alliances:
 - great_lakes_autonomous_compact_policy_reform
 oppositions: []
 type_relation_dominante: dépendance
-annee_debut: 2026
+annee_debut: 2035
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

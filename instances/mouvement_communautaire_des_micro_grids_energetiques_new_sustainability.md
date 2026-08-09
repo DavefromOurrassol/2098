@@ -55,7 +55,7 @@ oppositions:
 - operateurs_de_fusion_energetique_regionaux_new_sustainability
 - union_des_blocs_energetiques_regionaux_new_sustainability
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2030
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

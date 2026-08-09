@@ -55,7 +55,7 @@ oppositions:
 - occitanie_racines_meres_breakdown
 - vallee_allier_terrafond_breakdown
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2042
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

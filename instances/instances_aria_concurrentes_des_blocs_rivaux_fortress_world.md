@@ -65,7 +65,7 @@ oppositions:
 - reseaux_d_echange_clandestin_inter_zones_fortress_world
 - reseaux_de_contrebande_energetique_transfrontaliere_fortress_world
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2036
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

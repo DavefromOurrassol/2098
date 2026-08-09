@@ -99,6 +99,8 @@ localisation:
   zone: null
   lieu: null
   type_lieu: null
+annee_debut_verifiee: true
+
 ---
 
 # Collectifs de Journalisme Embarqué

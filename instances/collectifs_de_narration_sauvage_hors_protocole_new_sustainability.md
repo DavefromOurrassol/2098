@@ -52,7 +52,7 @@ oppositions:
 - observatoire_climatique_narratif_de_nairobi_new_sustainability
 - prisme_global_new_sustainability
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2032
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

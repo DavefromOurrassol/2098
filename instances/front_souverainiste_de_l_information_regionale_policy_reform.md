@@ -55,7 +55,7 @@ oppositions:
 - reseau_des_regulateurs_numeriques_souverains_rrns_policy_reform
 - reseaux_de_capteurs_ia_climatiques_deployes_par_les_etats_membres_policy_reform
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2030
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

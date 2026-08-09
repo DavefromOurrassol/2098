@@ -13,13 +13,24 @@ d'une vraie donnée -- le risque ne se voit pas dans le texte généré,
 contrairement à "neutralité" qui aurait été plus repérable.
 
 Usage :
-    python3 audit_dates_instances.py [chemin_vers_dossier_instances]
+    python3 audit_dates_instances.py                    # dossier instances/ par défaut
+    python3 audit_dates_instances.py --dossier /chemin/vers/instances
+
+Converti le 8 août 2026 (sys.argv positionnel -> argparse --dossier) pour
+cohérence avec le reste du pipeline et intégration au GUI (une entrée de
+type argparse avec un flag optionnel s'y prête directement, un argument
+positionnel non).
 """
-import sys
+import argparse
 import os
 import re
+from pathlib import Path
+
 import yaml
 from collections import Counter
+
+GENERATOR_DIR = Path(__file__).resolve().parent
+DEFAULT_INSTANCES_DIR = GENERATOR_DIR.parent / "instances"
 
 def parse_frontmatter(filepath):
     with open(filepath, "r", encoding="utf-8") as f:
@@ -34,11 +45,17 @@ def parse_frontmatter(filepath):
         return {}
 
 def main():
-    instances_dir = sys.argv[1] if len(sys.argv) > 1 else "vault/instances"
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--dossier", type=str, default=str(DEFAULT_INSTANCES_DIR),
+        help="Dossier instances/ à scanner (défaut : instances/ du vault courant)"
+    )
+    args = parser.parse_args()
+    instances_dir = args.dossier
     if not os.path.isdir(instances_dir):
         print("Dossier introuvable : {}".format(instances_dir))
-        print("Relance avec : python3 {} /chemin/vers/vault/instances".format(sys.argv[0]))
-        sys.exit(1)
+        print("Relance avec : python3 {} --dossier /chemin/vers/vault/instances".format(__file__))
+        raise SystemExit(1)
 
     total = 0
     avec_relations = 0

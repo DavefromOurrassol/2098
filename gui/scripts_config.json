@@ -624,6 +624,28 @@
         "description": "Laisser vide = les 6 par défaut (auto) ou libre choix du LLM (auto-suggest)"
       },
       {
+        "flag": "--ancrage-temporel",
+        "type": "select",
+        "label": "Ancrage temporel",
+        "optional": true,
+        "default": "libre",
+        "choices": [
+          {
+            "value": "libre",
+            "label": "Libre (défaut — priorité aux jalons du scénario)"
+          },
+          {
+            "value": "recent",
+            "label": "Récent forcé (1-3 prochaines années, ancré dans etat_du_monde_reel.md)"
+          }
+        ],
+        "mode_only": [
+          "custom",
+          "auto"
+        ],
+        "description": "8 août 2026 : le mode 'libre' (comportement historique) donne quasi toujours la priorité aux jalons de la chronologie du scénario sur etat_du_monde_reel.md, y compris pour une origine proche de 2026 — confirmé par test réel. Choisir 'recent' pour forcer délibérément une entité qui émerge maintenant, ancrée dans l'état du monde réel plutôt que dans un jalon futur du scénario. Sans effet en mode auto-suggest (ne crée pas d'instances)."
+      },
+      {
         "flag": "--dry-run",
         "type": "checkbox",
         "label": "Simulation (rien écrit sur disque, mais appels LLM réels)",
@@ -801,7 +823,7 @@
       }
     ],
     "config_fields_mode": "custom",
-    "gui_verified": true
+    "gui_verified": false
   },
   {
     "id": "inject_events",
@@ -2088,6 +2110,269 @@
       }
     ],
     "yaml_files": [],
+    "gui_verified": false
+  },
+  {
+    "id": "export_prompt_veille",
+    "label": "Préparer le prompt de veille",
+    "icon": "📡",
+    "section": "monde_reel",
+    "script": "export_prompt_veille.py",
+    "description": "Génère un prompt à copier-coller dans une IA au choix avec accès web (Claude.ai, ChatGPT...), pour actualiser la partie \"situation actuelle\" des 12 variables d'etat_du_monde_reel.md. Aucun appel API — le contenu précédent de chaque section est injecté automatiquement pour que la mise à jour reste cohérente et ne réécrive que ce qui a réellement changé.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Aperçu seulement (n'écrit pas le fichier prompt)",
+        "default": false,
+        "description": "Affiche le prompt dans le journal d'exécution sans créer veille_prompt_a_copier.md."
+      }
+    ],
+    "yaml_files": [
+      {
+        "path": "documentation/need_action/veille_prompt_a_copier.md",
+        "label": "Prompt à copier — colle-le dans l'IA de ton choix avec accès web",
+        "readonly": false
+      }
+    ],
+    "gui_verified": false
+  },
+  {
+    "id": "import_veille_etat_monde",
+    "label": "Importer le résultat de la veille",
+    "icon": "📥",
+    "section": "monde_reel",
+    "script": "import_veille_etat_monde.py",
+    "description": "Colle la réponse de l'IA (obtenue via \"Préparer le prompt de veille\") dans le champ ci-dessous, puis lance ce script : il ne patche QUE les sections marquées [MODIFIÉ] (paragraphe \"situation actuelle\" + date), laisse les sections [INCHANGÉ] et les perspectives historiques (~10-15 ans / ~200 ans) strictement intactes. Aucun appel API. La réponse collée est archivée automatiquement après un import réussi.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Simulation (aucune écriture, aucun archivage)",
+        "default": false,
+        "description": "Affiche le rapport diff (sections modifiées/inchangées) sans toucher à etat_du_monde_reel.md ni archiver la réponse collée."
+      },
+      {
+        "flag": "--force",
+        "type": "checkbox",
+        "label": "Importer même si la réponse n'a pas été collée aujourd'hui",
+        "default": false,
+        "description": "Par sécurité, le script refuse d'importer si veille_reponse_brute.md n'a pas été modifié aujourd'hui (probable réponse oubliée d'une veille précédente). Cocher pour forcer quand même."
+      }
+    ],
+    "yaml_files": [
+      {
+        "path": "documentation/need_action/veille_reponse_brute.md",
+        "label": "Réponse de l'IA à coller ici avant de lancer le script",
+        "readonly": false
+      }
+    ],
+    "gui_verified": false
+  },
+  {
+    "id": "generate_instances",
+    "label": "Générer les instances manquantes",
+    "icon": "🧩",
+    "section": "entites_creation",
+    "script": "generate_instances.py",
+    "description": "Génère les instances par scénario (instances/{slug}_{scenario}.md) pour des entités déjà créées dans entites/, qu'elles soient anciennes ou fraîchement ajoutées — ne crée AUCUNE nouvelle entité, ne fait que peupler les scénarios manquants pour des entités existantes. Distinct de \"Créer des entités\", qui crée entité + instances en un seul run.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--entity",
+        "type": "slug_select",
+        "slug_type": "entities",
+        "label": "Entité (optionnel — vide = toutes)",
+        "optional": true,
+        "description": "Traiter uniquement cette entité. Laisser vide pour traiter toutes les entités du vault."
+      },
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario (optionnel — vide = les 6)",
+        "optional": true,
+        "choices": [
+          {
+            "value": "breakdown",
+            "label": "breakdown"
+          },
+          {
+            "value": "fortress_world",
+            "label": "fortress_world"
+          },
+          {
+            "value": "new_sustainability",
+            "label": "new_sustainability"
+          },
+          {
+            "value": "eco_communalism",
+            "label": "eco_communalism"
+          },
+          {
+            "value": "policy_reform",
+            "label": "policy_reform"
+          },
+          {
+            "value": "reference",
+            "label": "reference"
+          }
+        ],
+        "description": "Traiter uniquement ce scénario. Laisser vide pour traiter les 6."
+      },
+      {
+        "flag": "--ancrage-temporel",
+        "type": "select",
+        "label": "Ancrage temporel",
+        "optional": true,
+        "default": "libre",
+        "choices": [
+          {
+            "value": "libre",
+            "label": "Libre (défaut — priorité aux jalons du scénario)"
+          },
+          {
+            "value": "recent",
+            "label": "Récent forcé (1-3 prochaines années, ancré dans etat_du_monde_reel.md)"
+          }
+        ],
+        "description": "8 août 2026 : le mode 'libre' (comportement historique) donne quasi toujours la priorité aux jalons de la chronologie du scénario sur etat_du_monde_reel.md, y compris pour une origine proche de 2026 — confirmé par test réel. Choisir 'recent' pour forcer délibérément une instance qui émerge maintenant, ancrée dans l'état du monde réel plutôt que dans un jalon futur du scénario."
+      },
+      {
+        "flag": "--force",
+        "type": "checkbox",
+        "label": "Régénérer même si l'instance existe déjà",
+        "default": false,
+        "description": "Sans cette case, une instance déjà existante pour ce couple entité/scénario est sautée (pas régénérée)."
+      },
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Simulation (rien écrit sur disque, mais appels LLM réels)",
+        "default": false,
+        "description": "⚠️ Comme pour \"Créer des entités\" : ce mode appelle quand même le LLM pour de vrai (une fois par couple entité/scénario traité) — seule l'écriture des fichiers finaux est sautée. Un coût API réel est engagé malgré le mot \"simulation\"."
+      }
+    ],
+    "gui_verified": false
+  },
+  {
+    "id": "fix_annee_debut_placeholder",
+    "label": "Réexaminer les dates de naissance (annee_debut)",
+    "icon": "🕰️",
+    "section": "entites_nettoyage",
+    "script": "fix_annee_debut_placeholder.py",
+    "description": "Corrige rétroactivement les fiches officialise_enrichi restées au placeholder annee_debut=2026 : confirme ou corrige selon le profil narratif, priorité aux jalons du scénario, avec une exigence de traçabilité réelle (champ ancrage_reel) obligatoire pour toute date dans les 10 prochaines années (2026-2036), validée mécaniquement contre le recyclage de jalons fictifs. Idempotent : une fiche confirmée ou corrigée est marquée annee_debut_verifiee et n'est plus jamais retraitée aux runs suivants, quel que soit le nombre de relances.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--all",
+        "type": "checkbox",
+        "label": "Tous les scénarios",
+        "description": "Traite tous les scénarios disponibles",
+        "default": false,
+        "mutually_exclusive_with": "scenario"
+      },
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "default": "",
+        "optional": true,
+        "mutually_exclusive_with": "all"
+      },
+      {
+        "flag": "--slug",
+        "type": "slug_select",
+        "label": "Une seule fiche (optionnel)",
+        "slug_type": "instances",
+        "optional": true,
+        "description": "Limite le traitement à une fiche précise du scénario choisi."
+      },
+      {
+        "flag": "--limit",
+        "type": "number",
+        "label": "Nombre de fiches max par scénario (optionnel)",
+        "description": "Utile pour estimer le coût réel avant un run complet.",
+        "min": 1,
+        "optional": true
+      },
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Simulation (rien écrit sur disque, mais appels LLM réels)",
+        "description": "⚠️ Appelle quand même le LLM pour de vrai sur chaque fiche traitée — seule l'écriture finale (annee_debut + marqueur annee_debut_verifiee) est sautée. Un coût API réel est engagé malgré le mot \"simulation\".",
+        "default": false
+      }
+    ],
+    "yaml_files": [
+      {
+        "path": "documentation/need_action/fix_annee_debut_placeholder.md",
+        "label": "Rapport du dernier run réel (réinitialisé à chaque run, jamais en dry-run)",
+        "readonly": true
+      }
+    ],
+    "gui_verified": false,
+    "required_one_of": [
+      [
+        "--scenario",
+        "--all"
+      ]
+    ]
+  },
+  {
+    "id": "audit_dates_instances",
+    "label": "Audit — dates (annee_debut / annee_fin)",
+    "icon": "📊",
+    "section": "validation",
+    "script": "audit_dates_instances.py",
+    "description": "Diagnostic en lecture seule (aucune écriture) : distribution réelle de annee_debut/annee_fin sur tout le vault, détecte les cas où le champ est absent du frontmatter (fallback silencieux de loader.py). Utile pour vérifier la cohérence d'ensemble après un run de fix_annee_debut_placeholder.py, ou repérer une concentration excessive d'entités sur une même année.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--dossier",
+        "type": "text",
+        "label": "Dossier instances/ (optionnel — vide = celui du vault courant)",
+        "optional": true
+      }
+    ],
+    "gui_verified": false
+  },
+  {
+    "id": "audit_etat_temporel_fin",
+    "label": "Audit — cohérence etat_temporel / annee_fin",
+    "icon": "📊",
+    "section": "validation",
+    "script": "audit_etat_temporel_fin.py",
+    "description": "Diagnostic en lecture seule (aucune écriture) : vérifie que les fiches avec un etat_temporel impliquant normalement une fin (disparu/transformé/historique/mythifié) ont bien une annee_fin renseignée. Constat du 8 août 2026 : 28/710 fiches concernées sans annee_fin (93% d'incohérence sur cette sous-population) — chantier de correction rétroactive pas encore construit, voir backlog.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--dossier",
+        "type": "text",
+        "label": "Dossier instances/ (optionnel — vide = celui du vault courant)",
+        "optional": true
+      }
+    ],
+    "gui_verified": false
+  },
+  {
+    "id": "audit_type_relation_dominante",
+    "label": "Audit — type_relation_dominante",
+    "icon": "📊",
+    "section": "validation",
+    "script": "audit_type_relation_dominante.py",
+    "description": "Diagnostic en lecture seule (aucune écriture) : sur les fiches ayant au moins une alliance/opposition réelle, vérifie si type_relation_dominante est explicitement renseigné dans le frontmatter ou absent (cas résiduel ambigu, indiscernable de 'neutralité' une fois passé par loader.py).",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--dossier",
+        "type": "text",
+        "label": "Dossier instances/ (optionnel — vide = celui du vault courant)",
+        "optional": true
+      }
+    ],
     "gui_verified": false
   }
 ]

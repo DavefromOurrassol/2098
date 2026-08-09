@@ -53,7 +53,7 @@ oppositions:
 - consortium_eurasiatique_des_ressources_fermees_fortress_world
 - factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world
 type_relation_dominante: dépendance
-annee_debut: 2026
+annee_debut: 2037
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

@@ -110,6 +110,8 @@ localisation:
   zone: geneve_conseil_biosocial
   lieu: Genève-Lac-Retraité, Conseil des Droits Biosociaux
   type_lieu: site_strategique
+annee_debut_verifiee: true
+
 ---
 
 # Conseil de Genève pour les Droits Biosociaux

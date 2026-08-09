@@ -46,7 +46,7 @@ oppositions:
 - lobbies_industriels_des_etats_non_signataires_reference
 - operateurs_prives_d_energie_distribuee_hors_fct_reference
 type_relation_dominante: symbiose
-annee_debut: 2026
+annee_debut: 2030
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

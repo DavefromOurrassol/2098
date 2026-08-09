@@ -50,7 +50,7 @@ oppositions:
 - reseau_des_communs_alimentaires_hors_grille_new_sustainability
 - reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability
 type_relation_dominante: coopération
-annee_debut: 2026
+annee_debut: 2038
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

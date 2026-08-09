@@ -57,7 +57,7 @@ oppositions:
 - reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability
 - tribunal_gouvernance_algorithmique_bruxelles_new_sustainability
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2040
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

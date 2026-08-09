@@ -62,7 +62,7 @@ oppositions:
 - regulateurs_de_l_union_continentale_africaine_reference
 - terrametrics_reference
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2031
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

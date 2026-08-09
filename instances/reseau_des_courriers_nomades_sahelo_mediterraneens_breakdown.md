@@ -61,7 +61,7 @@ oppositions:
 - lagos_est_nexcore_breakdown
 - reseau_des_anciens_financeurs_devenus_censeurs_breakdown
 type_relation_dominante: symbiose
-annee_debut: 2026
+annee_debut: 2041
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

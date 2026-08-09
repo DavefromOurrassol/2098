@@ -55,7 +55,7 @@ oppositions:
 - front_souverainiste_des_blocs_non_signataires_policy_reform
 - institut_de_therapeutique_integree_de_nairobi_policy_reform
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2034
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

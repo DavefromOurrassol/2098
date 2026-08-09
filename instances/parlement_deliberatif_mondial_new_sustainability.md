@@ -68,7 +68,7 @@ oppositions:
 - lobbies_agro_industriels_du_bassin_du_congo_new_sustainability
 - souverainistes_du_bloc_eurasien_new_sustainability
 type_relation_dominante: coopération
-annee_debut: 2026
+annee_debut: 2027
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

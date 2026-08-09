@@ -60,7 +60,7 @@ oppositions:
 - pacifique_sud_resilience_network_policy_reform
 - reseau_des_journalistes_d_investigation_energetique_policy_reform
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2035
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

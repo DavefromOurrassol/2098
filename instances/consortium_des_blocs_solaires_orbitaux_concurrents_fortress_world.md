@@ -38,7 +38,7 @@ oppositions:
 - consortium_helios_fortress_world
 - rust_belt_communes_libres_fortress_world
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2037
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

@@ -64,7 +64,7 @@ oppositions:
 - milices_concurrentes_des_droits_de_passage_reference
 type_relation_dominante: coopération
 
-annee_debut: 2026
+annee_debut: 2036
 annee_fin: 
 
 etat_temporel: actif
@@ -89,6 +89,8 @@ tensions_narratives: >
   L'UAR est prise en étau entre ses membres qui la court-circuitent — certains négociant directement avec le Bloc Eurasien Central ou les consortiums miniers — et les partenaires multilatéraux qui la sollicitent précisément parce qu'elle est le seul interlocuteur formellement continental. Sa Commission Hydrique produit des données climatiques reconnues mondialement, mais ses recommandations sont régulièrement ignorées par les États riverains du Congo ou du Niger. La question qui obsède ses dirigeants : faut-il accepter un rôle de facilitateur symbolique, ou risquer l'implosion en tentant d'imposer une vraie autorité supranationale que la moitié des membres refuserait ?
 
 date_creation: 2026-06-27
+annee_debut_verifiee: true
+
 ---
 
 # Union Africaine Résilience (UAR)

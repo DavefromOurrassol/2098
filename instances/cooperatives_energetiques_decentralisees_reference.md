@@ -61,7 +61,7 @@ oppositions:
 - plateformes_d_optimisation_territoriale_par_ia_reference
 - rede_paulista_de_distribuic_o_algor_tmica_reference
 type_relation_dominante: symbiose
-annee_debut: 2026
+annee_debut: 2031
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

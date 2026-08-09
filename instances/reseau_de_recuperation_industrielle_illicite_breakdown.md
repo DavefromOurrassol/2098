@@ -52,7 +52,7 @@ oppositions:
 - front_techno_reconstructionniste_breakdown
 - trame_bioclimatique_breakdown
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2041
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

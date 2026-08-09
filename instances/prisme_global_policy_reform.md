@@ -48,7 +48,7 @@ oppositions:
 - les_hors_prisme_policy_reform
 type_relation_dominante: dépendance
 
-annee_debut: 2026
+annee_debut: 2074
 annee_fin: 
 
 etat_temporel: transformé

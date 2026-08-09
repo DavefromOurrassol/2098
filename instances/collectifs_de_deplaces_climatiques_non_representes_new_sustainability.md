@@ -60,7 +60,7 @@ oppositions:
 - programme_onusien_de_mobilite_climatique_new_sustainability
 - reseau_global_de_cliniques_regeneratives_new_sustainability
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2038
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

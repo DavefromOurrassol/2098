@@ -54,7 +54,7 @@ oppositions:
 - kalaallit_nunaat_sovereign_fund_policy_reform
 - observatoire_mondial_des_ressources_critiques_policy_reform
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2036
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

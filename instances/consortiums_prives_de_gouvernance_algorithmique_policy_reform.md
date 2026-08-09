@@ -68,7 +68,7 @@ oppositions:
 - reseau_des_regulateurs_numeriques_souverains_rrns_policy_reform
 - tribunal_algorithmique_de_bruxelles_policy_reform
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2036
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

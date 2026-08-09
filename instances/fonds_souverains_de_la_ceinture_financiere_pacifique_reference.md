@@ -43,7 +43,7 @@ oppositions:
 - bureau_zones_non_prioritaires_reference
 - pacifique_sud_archipels_flottants_reference
 type_relation_dominante: symbiose
-annee_debut: 2026
+annee_debut: 2032
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

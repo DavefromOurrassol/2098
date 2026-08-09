@@ -44,7 +44,7 @@ oppositions:
 - bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference
 - federation_des_cliniques_autonomes_reference
 type_relation_dominante: dépendance
-annee_debut: 2026
+annee_debut: 2030
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

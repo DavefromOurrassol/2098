@@ -60,7 +60,7 @@ oppositions:
 - saboteurs_des_corridors_de_transit_breakdown
 - tour_bcuc_geneve_breakdown
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2041
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

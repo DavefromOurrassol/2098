@@ -61,7 +61,7 @@ oppositions:
 - factions_communautaires_refusant_le_partage_narratif_exterieur_eco_communalism
 - reseaux_de_notables_communautaires_capturistes_eco_communalism
 type_relation_dominante: coopération
-annee_debut: 2026
+annee_debut: 2036
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

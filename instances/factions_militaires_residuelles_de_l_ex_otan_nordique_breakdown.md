@@ -59,7 +59,7 @@ oppositions:
 - reseau_logistique_criminel_concurrent_breakdown
 - saboteurs_des_corridors_de_transit_breakdown
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2031
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

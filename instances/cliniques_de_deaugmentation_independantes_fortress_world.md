@@ -56,7 +56,7 @@ oppositions:
 - neurosentry_fortress_world
 - nexus_biosyn_division_eurasienne_fortress_world
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2046
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

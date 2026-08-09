@@ -59,7 +59,7 @@ oppositions:
 - mouvement_des_communes_du_rust_belt_fortress_world
 type_relation_dominante: symbiose
 
-annee_debut: 2026
+annee_debut: 2038
 annee_fin: 
 
 etat_temporel: actif

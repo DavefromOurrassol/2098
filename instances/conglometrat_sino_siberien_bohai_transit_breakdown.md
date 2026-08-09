@@ -58,7 +58,7 @@ oppositions:
 - saboteurs_des_corridors_de_transit_breakdown
 - seoul_collectif_nexcore_breakdown
 type_relation_dominante: dépendance
-annee_debut: 2026
+annee_debut: 2050
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

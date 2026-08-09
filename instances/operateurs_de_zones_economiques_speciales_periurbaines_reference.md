@@ -59,7 +59,7 @@ oppositions:
 - reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference
 - sao_paulo_ita_reference
 type_relation_dominante: dépendance
-annee_debut: 2026
+annee_debut: 2032
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

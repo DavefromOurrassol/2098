@@ -58,7 +58,7 @@ oppositions:
 - reseaux_de_contrebande_energetique_transfrontaliere_fortress_world
 - tribunal_algorithmique_de_bruxelles_fortress_world
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2036
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

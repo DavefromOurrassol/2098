@@ -54,7 +54,7 @@ oppositions:
 - oligarchies_technologiques_souveraines_d_infrastructure_de_calcul_fortress_world
 - rust_belt_communes_libres_fortress_world
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2036
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

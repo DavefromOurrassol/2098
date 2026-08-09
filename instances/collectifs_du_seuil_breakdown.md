@@ -49,7 +49,7 @@ oppositions:
 - gouvernements_regionaux_residuels_reterritorialisants_breakdown
 type_relation_dominante: conflit
 
-annee_debut: 2026
+annee_debut: 2041
 annee_fin: 
 
 etat_temporel: actif

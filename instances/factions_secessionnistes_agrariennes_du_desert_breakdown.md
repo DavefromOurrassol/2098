@@ -54,7 +54,7 @@ oppositions:
 - milices_de_controle_territorial_breakdown
 - seigneuries_foncieres_opportunistes_breakdown
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2055
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

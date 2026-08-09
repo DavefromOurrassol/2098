@@ -63,7 +63,7 @@ oppositions:
 - reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference
 - zones_grises_globales_reference
 type_relation_dominante: coopération
-annee_debut: 2026
+annee_debut: 2033
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

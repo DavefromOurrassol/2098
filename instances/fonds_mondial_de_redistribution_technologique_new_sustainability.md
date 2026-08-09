@@ -59,7 +59,7 @@ oppositions:
 - lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability
 - nexcore_new_sustainability
 type_relation_dominante: coopération
-annee_debut: 2026
+annee_debut: 2040
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

@@ -62,7 +62,7 @@ oppositions:
 - factions_technophiles_de_la_geo_ingenierie_centralisee_eco_communalism
 - plateformes_centralisees_de_reagregation_globale_eco_communalism
 type_relation_dominante: symbiose
-annee_debut: 2026
+annee_debut: 2038
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

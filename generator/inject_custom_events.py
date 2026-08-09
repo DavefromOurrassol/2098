@@ -198,11 +198,36 @@ def read_registre_text():
     return REGISTRE_PATH.read_text(encoding="utf-8")
 
 
+def _est_ligne_separateur(ligne: str) -> bool:
+    """
+    Détecte une ligne séparatrice de tableau markdown (`|---|---|` ou une
+    variante espacée/alignée comme `| --------- | --------- |`, produite
+    par certains éditeurs -- Obsidian notamment -- qui réalignent les
+    colonnes automatiquement).
+
+    Portée le 7 août 2026 depuis inject_custom_signals.py (audit point
+    1.2 du backlog), où elle avait déjà été écrite le 26 juillet 2026 pour
+    corriger le même bug ici -- jamais répercutée dans ce fichier jusqu'à
+    ce que fix_annee_debut_placeholder.py révèle indépendamment le même
+    symptôme : `line.startswith("|---")` ne matchait QUE le format
+    compact, donc parse_registre_table() retournait 0 ligne pour la
+    section "## breakdown" du registre réel (reformatée avec des espaces),
+    rendant get_registre_excerpt_for_variables()/get_all_evenements()
+    aveugles sur tout ce scénario -- anti-collision d'événements
+    inopérante spécifiquement sur breakdown, sans erreur levée.
+    """
+    contenu = ligne.strip()
+    if not contenu.startswith("|"):
+        return False
+    interieur = contenu.replace("|", "")
+    return bool(interieur.strip()) and all(c in "-: \t" for c in interieur)
+
+
 def parse_registre_table(scen_body):
     rows = []
     table_started = False
     for line in scen_body.split("\n"):
-        if line.startswith("|---"):
+        if _est_ligne_separateur(line):
             table_started = True
             continue
         if table_started and line.startswith("|"):

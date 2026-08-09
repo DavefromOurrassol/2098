@@ -58,7 +58,7 @@ oppositions:
 - rede_paulista_de_distribuic_o_algor_tmica_reference
 - services_de_contre_information_des_blocs_geopolitiques_concurrents_reference
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2032
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

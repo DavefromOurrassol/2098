@@ -47,7 +47,7 @@ oppositions:
 - oracle_des_seuils_policy_reform
 - prisme_global_policy_reform
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2033
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

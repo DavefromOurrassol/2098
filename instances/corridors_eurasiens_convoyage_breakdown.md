@@ -57,7 +57,7 @@ oppositions:
 - saboteurs_des_corridors_de_transit_breakdown
 type_relation_dominante: rivalité
 
-annee_debut: 2026
+annee_debut: 2051
 annee_fin: 
 
 etat_temporel: actif

@@ -57,7 +57,7 @@ oppositions:
 - lobbies_agro_industriels_du_bassin_du_congo_new_sustainability
 - lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability
 type_relation_dominante: symbiose
-annee_debut: 2026
+annee_debut: 2030
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

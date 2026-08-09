@@ -51,7 +51,7 @@ oppositions:
 - seigneuries_logistiques_armees_breakdown
 type_relation_dominante: conflit
 
-annee_debut: 2026
+annee_debut: 2049
 annee_fin: 
 
 etat_temporel: transformé

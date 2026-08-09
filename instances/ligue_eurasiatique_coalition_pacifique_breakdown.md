@@ -44,7 +44,7 @@ oppositions:
 - agence_stabilisation_climatique_breakdown
 - geneve_bunker_institutions_breakdown
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2041
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

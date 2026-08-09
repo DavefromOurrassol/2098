@@ -1,0 +1,80 @@
+============================================================
+OURRASSOL 2098 — Création entités + instances
+============================================================
+(mode --dry-run : rien ne sera écrit)
+
+Mode : auto (fourni via --mode)
+
+[1/2] Génération de 1 entité(s) (scénarios : breakdown)...
+[llm] Mistral (mistral-large-latest) — entrée : 25815 | sortie : 292
+[2/2] Validation, injection et génération des instances...
+
+  ✓ Les Gardiens des Seuils Hybrides (hybride)
+{
+  "nom": "Les Gardiens des Seuils Hybrides",
+  "category": "hybride",
+  "description_complete": "Entité composée d'humains augmentés, d'IA locales et de communautés territoriales, chargée de surveiller et négocier les passages entre zones effondrées et enclaves fonctionnelles. Ils opèrent comme médiateurs, douaniers et arbitres des flux de ressources, d'informations et de personnes, tout en protégeant les équilibres fragiles des territoires qu'ils desservent. Leur légitimité repose sur une neutralité opérationnelle, mais leur pouvoir réel découle de leur capacité à contrôler les points de friction critiques.",
+  "tension_fondamentale": "La neutralité comme condition de survie contre la tentation de devenir des seigneurs de guerre des interstices territoriaux — jusqu'où peuvent-ils préserver leur intégrité sans basculer dans l'exploitation ?",
+  "variables_potentielles": [
+    "geopolitique_conflits",
+    "organisation_territoires",
+    "frontieres_du_systeme",
+    "demographie_mobilite_humaine"
+  ],
+  "scenarios_instances": [
+    "breakdown"
+  ],
+  "doublon_detecte": false,
+  "doublon_slug": null
+}
+  Instances (1 scénario(s)) :
+    → breakdown [ANCRAGE RÉCENT]... [llm] Mistral (mistral-large-latest) — entrée : 17265 | sortie : 1005
+✓
+{
+  "nom": "Les Veilleurs des Interstices",
+  "type_dans_scenario": "hybride",
+  "role_dans_scenario": "Entité émergente née de la fragmentation accélérée des territoires et de la militarisation des frontières, les Veilleurs des Interstices incarnent une réponse pragmatique à l'effondrement des chaînes logistiques et à la crise migratoire massive. Composés d'anciens douaniers, de techniciens nomades, d'IA locales de médiation et de communautés frontalières, ils opèrent comme des arbitres neutres sur les points de passage critiques entre zones effondrées et enclaves fonctionnelles, monétisant leur contrôle des flux tout en évitant de basculer dans le seigneurialisme territorial.",
+  "responsabilites": "Négociation des droits de passage pour les convois humanitaires et logistiques, gestion des protocoles de quarantaine sanitaire et algorithmique aux frontières des enclaves, arbitrage des conflits entre milices locales et cartels logistiques, et préservation d'une neutralité opérationnelle malgré les pressions des blocs souverains. Ils documentent aussi les mouvements de populations et les stocks de ressources critiques pour les Archives Neutres de Genève.",
+  "impact_local": 4,
+  "impact_systemique_global": 2,
+  "variables_influencees": [
+    "geopolitique_conflits",
+    "organisation_territoires",
+    "demographie_mobilite_humaine",
+    "frontieres_du_systeme"
+  ],
+  "zone_geographique": [
+    "régionale",
+    "nationale"
+  ],
+  "zone_systemique": [
+    "gouvernance",
+    "infrastructure",
+    "sécurité",
+    "société"
+  ],
+  "alliances": [
+    "archives_neutres_de_geneve_breakdown",
+    "reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown",
+    "brigades_medicales_itinerantes_breakdown",
+    "guilde_des_techniciens_nomades_breakdown"
+  ],
+  "oppositions": [
+    "seigneuries_logistiques_armees_breakdown",
+    "milices_de_controle_territorial_breakdown",
+    "blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown",
+    "factions_paramilitaires_locales_neutralisees_breakdown"
+  ],
+  "type_relation_dominante": "neutralité",
+  "annee_debut": 2027,
+  "annee_fin": null,
+  "etat_temporel": "actif",
+  "age_historique": "émergent",
+  "generation": "transition",
+  "description_journalistique": "En 2098, les Veilleurs des Interstices restent une énigme : ni État, ni milice, ni corporation, mais un réseau de points de contrôle hybrides où se croisent drones de surveillance, anciens douaniers reconvertis et algorithmes de négociation en temps réel. Leur emblème - un seuil stylisé entre deux mains ouvertes - orne les checkpoints des corridors eurasiens et des routes sahéliennes, symbolisant leur rôle ambigu : garants de la fluidité des flux dans un monde fragmenté, ou simples profiteurs des interstices territoriaux ? Leur neutralité affichée cache mal leur pouvoir réel : sans eux, ni les convois humanitaires ni les cargaisons de lithium ne traverseraient les zones grises.",
+  "signes_distinctifs": "Uniformes modulaires combinant éléments militaires recyclés et tissus locaux, badges numériques affichant leur score de neutralité (calculé par IA), et utilisation systématique de terminaux low-tech pour éviter la dépendance aux réseaux centraux. Leurs postes-frontières mobiles sont souvent installés dans d'anciennes stations-service ou gares désaffectées, marquées par des fresques murales représentant des cartes des flux migratoires et logistiques.",
+  "tensions_narratives": "La tension fondamentale des Veilleurs - préserver leur neutralité ou devenir des seigneurs de guerre des interstices - reste irrésolue. Leur alliance fragile avec les Archives Neutres de Genève est menacée par leur collaboration croissante avec les cartels logistiques régionaux, tandis que leur contrôle des données sur les mouvements de populations en fait une cible pour les factions propagandistes. Leur avenir dépendra de leur capacité à résister à la tentation de monétiser leur position stratégique, ou au contraire à assumer pleinement leur rôle de nouveaux arbitres d'un monde post-effondrement."
+}
+
+Terminé. 1/1 entité(s) créée(s).
+Instances : 1 créée(s) | 0 déjà existante(s) | 0 erreur(s)

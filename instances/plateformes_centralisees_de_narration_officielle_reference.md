@@ -65,7 +65,7 @@ oppositions:
 - universites_et_think_tanks_en_zones_de_liberte_academique_reference
 - voix_du_dehors_reference
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2032
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

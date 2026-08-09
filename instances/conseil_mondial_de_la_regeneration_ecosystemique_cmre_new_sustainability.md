@@ -86,7 +86,7 @@ oppositions:
 - souverainistes_du_bloc_eurasien_new_sustainability
 type_relation_dominante: alliance stratégique
 
-annee_debut: 2026
+annee_debut: 2038
 annee_fin: 
 
 etat_temporel: actif

@@ -44,7 +44,7 @@ oppositions:
 - factions_technocratiques_de_la_marchandisation_hydrique_policy_reform
 - lobbies_des_energies_fossiles_residuelles_policy_reform
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2028
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

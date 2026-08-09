@@ -1,0 +1,17 @@
+============================================================
+OURRASSOL 2098 — Création entités + instances
+============================================================
+(mode --dry-run : rien ne sera écrit)
+
+Mode : auto (fourni via --mode)
+
+[1/2] Génération de 1 entité(s) (scénarios : breakdown)...
+[llm] Mistral (mistral-large-latest) — entrée : 25815 | sortie : 305
+[2/2] Validation, injection et génération des instances...
+
+  ✗ Les Nœuds de Résilience Hybride (NRH) :
+     - Variable inconnue : 'systeme_productifs_travail'
+
+Terminé. 0/1 entité(s) créée(s).
+1 entité(s) rejetée(s) — voir le détail ci-dessus.
+Instances : 0 créée(s) | 0 déjà existante(s) | 0 erreur(s)

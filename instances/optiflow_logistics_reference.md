@@ -57,7 +57,7 @@ oppositions:
 - operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference
 type_relation_dominante: dépendance
 
-annee_debut: 2026
+annee_debut: 2032
 annee_fin: 
 
 etat_temporel: actif

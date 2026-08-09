@@ -52,7 +52,7 @@ oppositions:
 - milices_de_controle_territorial_breakdown
 - seigneuries_logistiques_armees_breakdown
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2044
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

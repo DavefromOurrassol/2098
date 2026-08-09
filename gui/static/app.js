@@ -59,6 +59,7 @@ const SECTIONS = [
   { key: 'entites_nettoyage',  label: 'Entités & événements — nettoyage' },
   { key: 'geo_construction',   label: 'Géographie — construction' },
   { key: 'geo_diagnostic',     label: 'Géographie — diagnostic' },
+  { key: 'monde_reel',         label: 'Référence — monde réel' },
   { key: 'validation',         label: 'Validation' },
 ];
 

@@ -45,7 +45,7 @@ oppositions:
 - reseaux_de_solidarite_horizontale_post_effondrement_breakdown
 type_relation_dominante: conflit
 
-annee_debut: 2026
+annee_debut: 2041
 annee_fin: 
 
 etat_temporel: transformé

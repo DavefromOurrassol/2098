@@ -73,7 +73,7 @@ oppositions:
 - reseau_des_villes_regeneratives_new_sustainability
 - reseaux_de_medecine_regenerative_universelle_new_sustainability
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2040
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

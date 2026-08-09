@@ -50,7 +50,7 @@ oppositions:
 
 type_relation_dominante: coopération
 
-annee_debut: 2026
+annee_debut: 2031
 annee_fin: 
 
 etat_temporel: actif

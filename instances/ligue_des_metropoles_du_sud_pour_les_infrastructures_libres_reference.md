@@ -54,7 +54,7 @@ oppositions:
 - pacte_des_souverains_reference
 - rede_paulista_de_distribuic_o_algor_tmica_reference
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2029
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent
@@ -90,6 +90,8 @@ localisation:
   zone: null
   lieu: null
   type_lieu: null
+annee_debut_verifiee: true
+
 ---
 
 # Ligue des Métropoles du Sud pour les Infrastructures Libres

@@ -89,6 +89,8 @@ localisation:
   zone: geneve_lac_retreite
   lieu: Genève-Lac-Retraité — Siège principal FMC
   type_lieu: site_strategique
+annee_debut_verifiee: true
+
 ---
 
 # Fonds Monétaire Climatique (FMC)

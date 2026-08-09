@@ -58,7 +58,7 @@ oppositions:
 - syndicats_de_travailleurs_de_la_transition_energetique_reference
 - voix_du_dehors_reference
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2032
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

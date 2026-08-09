@@ -109,6 +109,8 @@ localisation:
   zone: null
   lieu: null
   type_lieu: null
+annee_debut_verifiee: true
+
 ---
 
 # Réseaux néo-démocratiques plaidant pour la gouvernance participative directe

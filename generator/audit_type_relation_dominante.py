@@ -8,17 +8,21 @@ fois passé par loader.py::load_instance() -- d'où ce script qui lit le
 frontmatter brut, avant tout fallback).
 
 Usage :
-    python3 audit_type_relation_dominante.py [chemin_vers_dossier_instances]
+    python3 audit_type_relation_dominante.py                    # dossier instances/ par défaut
+    python3 audit_type_relation_dominante.py --dossier /chemin/vers/instances
 
-Par défaut cherche vault/instances/ relatif au dossier courant -- ajuster
-PATHS["instances"] ci-dessous ou passer le chemin en argument si ta
-structure diffère (voir loader.py::PATHS pour la valeur exacte utilisée
-par le pipeline réel).
+Converti le 8 août 2026 (sys.argv positionnel -> argparse --dossier) pour
+cohérence avec le reste du pipeline et intégration au GUI.
 """
-import sys
+import argparse
 import os
 import re
+from pathlib import Path
+
 import yaml
+
+GENERATOR_DIR = Path(__file__).resolve().parent
+DEFAULT_INSTANCES_DIR = GENERATOR_DIR.parent / "instances"
 
 def parse_frontmatter(filepath):
     """Extrait uniquement le frontmatter YAML brut, sans aucun fallback --
@@ -36,11 +40,17 @@ def parse_frontmatter(filepath):
         return {}
 
 def main():
-    instances_dir = sys.argv[1] if len(sys.argv) > 1 else "vault/instances"
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--dossier", type=str, default=str(DEFAULT_INSTANCES_DIR),
+        help="Dossier instances/ à scanner (défaut : instances/ du vault courant)"
+    )
+    args = parser.parse_args()
+    instances_dir = args.dossier
     if not os.path.isdir(instances_dir):
         print("Dossier introuvable : {}".format(instances_dir))
-        print("Relance avec : python3 {} /chemin/vers/vault/instances".format(sys.argv[0]))
-        sys.exit(1)
+        print("Relance avec : python3 {} --dossier /chemin/vers/vault/instances".format(__file__))
+        raise SystemExit(1)
 
     total = 0
     avec_relations = 0

@@ -49,7 +49,7 @@ oppositions:
 - factions_technocratiques_de_la_delegation_ia_totale_new_sustainability
 - prisme_global_new_sustainability
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2037
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

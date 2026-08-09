@@ -46,7 +46,7 @@ oppositions:
 - reseau_des_agences_sanitaires_regionales_policy_reform
 - reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2035
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

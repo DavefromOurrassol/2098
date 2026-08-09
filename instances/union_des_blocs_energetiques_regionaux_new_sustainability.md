@@ -47,7 +47,7 @@ oppositions:
 - mouvement_communautaire_des_micro_grids_energetiques_new_sustainability
 - mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability
 type_relation_dominante: coopération
-annee_debut: 2026
+annee_debut: 2038
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

@@ -48,7 +48,7 @@ oppositions:
 - coalition_arctique_des_blocs_continentaux_fortress_world
 - zones_grises_tampons_fortress_world
 type_relation_dominante: dépendance
-annee_debut: 2026
+annee_debut: 2037
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

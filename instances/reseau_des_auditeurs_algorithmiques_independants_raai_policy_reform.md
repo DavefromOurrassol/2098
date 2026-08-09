@@ -72,7 +72,7 @@ oppositions:
 - front_techno_utopiste_de_la_decision_automatisee_policy_reform
 - reseau_des_lobbyistes_techniques_onu_energie_policy_reform
 type_relation_dominante: coopération
-annee_debut: 2026
+annee_debut: 2033
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

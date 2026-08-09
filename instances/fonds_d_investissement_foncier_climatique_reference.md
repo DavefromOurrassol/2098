@@ -56,7 +56,7 @@ oppositions:
 - pacifique_sud_resilience_network_reference
 - reseau_des_cooperatives_agro_saheliennes_reference
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2032
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

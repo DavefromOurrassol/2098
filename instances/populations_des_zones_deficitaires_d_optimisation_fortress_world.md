@@ -51,7 +51,7 @@ oppositions:
 - rede_paulista_de_distribuic_o_algor_tmica_fortress_world
 - reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2046
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

@@ -101,6 +101,8 @@ localisation:
   zone: null
   lieu: null
   type_lieu: null
+annee_debut_verifiee: true
+
 ---
 
 # Coalition Anti-Fiscalité Universelle

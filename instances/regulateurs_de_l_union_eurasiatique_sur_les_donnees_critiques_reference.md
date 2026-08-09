@@ -52,7 +52,7 @@ oppositions:
 - tbilissi_noeud_mnemos_reference
 - valparaiso_fct_reference
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2032
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

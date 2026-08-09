@@ -48,7 +48,7 @@ oppositions:
 - bloc_eurasien_central_reference
 - pacte_des_souverains_reference
 type_relation_dominante: coopération
-annee_debut: 2026
+annee_debut: 2040
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

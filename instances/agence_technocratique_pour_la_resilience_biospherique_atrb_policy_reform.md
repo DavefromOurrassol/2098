@@ -118,6 +118,8 @@ localisation:
   zone: geneve_nexus
   lieu: Genève-Nexus, siège administratif principal
   type_lieu: ville
+annee_debut_verifiee: true
+
 ---
 
 # Agence Technocratique pour la Résilience Biosphérique (ATRB)

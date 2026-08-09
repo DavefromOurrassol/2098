@@ -75,6 +75,7 @@ SCENARIOS_DIR = VAULT_ROOT / "scenarios"
 VARIABLES_DIR = VAULT_ROOT / "variables"
 GEOGRAPHIE_DIR = VAULT_ROOT / "geographie"
 REGISTRE_PATH = GENERATOR_DIR / "registre_evenements.md"
+ETAT_MONDE_PATH = GENERATOR_DIR / "etat_du_monde_reel.md"
 ENTITIES_LIST_PATH = ENTITES_DIR / "_entities_list.json"
 NEED_ACTION_DIR = VAULT_ROOT / "documentation" / "need_action"
 REPORT_PATH = NEED_ACTION_DIR / "enrich_minimal_report.md"
@@ -307,6 +308,23 @@ def build_instances_summary(scenario, exclude_slug=None):
     return "\n".join(lines)
 
 
+_etat_monde_cache = None
+
+
+def load_etat_monde_reel():
+    """Charge etat_du_monde_reel.md — voir generate_instances.py pour le
+    commentaire complet (même mécanisme, même fichier partagé)."""
+    global _etat_monde_cache
+    if _etat_monde_cache is not None:
+        return _etat_monde_cache
+    if not ETAT_MONDE_PATH.exists():
+        _etat_monde_cache = "(etat_du_monde_reel.md absent — aucun ancrage réel disponible, se fier uniquement au profil narratif choisi)"
+        return _etat_monde_cache
+    text = ETAT_MONDE_PATH.read_text(encoding="utf-8").strip()
+    _etat_monde_cache = text if text else "(etat_du_monde_reel.md présent mais vide — pas encore rempli)"
+    return _etat_monde_cache
+
+
 def build_registre_excerpt(scenario, variables_influencees):
     """Extrait pertinent du registre pour le scénario + variables concernées."""
     if not REGISTRE_PATH.exists():
@@ -437,6 +455,11 @@ REGISTRE DES ÉVÉNEMENTS (extrait)
 {registre_excerpt}
 
 ═══════════════════════════════════════════════════
+ÉTAT DU MONDE RÉEL (référence factuelle, PAS de la fiction)
+═══════════════════════════════════════════════════
+{load_etat_monde_reel()}
+
+═══════════════════════════════════════════════════
 INSTRUCTIONS
 ═══════════════════════════════════════════════════
 Génère un JSON avec EXACTEMENT ces champs :
@@ -457,7 +480,9 @@ Génère un JSON avec EXACTEMENT ces champs :
   "alliances": ["slug_instance_valide", ...],
   "oppositions": ["slug_instance_valide", ...],
   "zone_geographique": ["locale|urbaine|nationale|régionale|continentale|globale|orbital"],
-  "type_relation_dominante": "coopération|compétition|neutralité|conflit|dépendance|symbiose"
+  "type_relation_dominante": "coopération|compétition|neutralité|conflit|dépendance|symbiose",
+  "annee_debut": <entier entre 2026 et 2098 — voir RÈGLE CHRONOLOGIE ci-dessous>,
+  "annee_fin": <entier ou null — voir RÈGLE CHRONOLOGIE ci-dessous>
 }}
 
 RÈGLES IMPÉRATIVES :
@@ -468,6 +493,29 @@ RÈGLES IMPÉRATIVES :
 - zone_geographique : liste avec au moins une valeur parmi les 7 valeurs autorisées
 - Tous les textes en français, cohérents avec l'univers 2098 et le scénario {scenario}
 - Respecter l'etat_temporel, l'age_historique et la generation existants
+- RÈGLE CHRONOLOGIE (ajoutée le 7 août 2026, audit point 1.2) : la fiche
+  porte actuellement annee_debut={annee_debut}. C'est souvent une valeur de
+  création jamais retouchée (2026 par défaut), pas nécessairement une donnée
+  narrative réelle. Réexamine-la à la lumière de age_historique={age_historique}
+  et generation={generation} ci-dessus : si 2026 est déjà cohérent avec un
+  profil "émergent"/"transition", confirme-la telle quelle. Si le profil est
+  "résiduel"/"post-effondrement"/"mythifié"/"déclinant", propose une année
+  nettement antérieure à 2098 qui reflète l'ancienneté de l'entité.
+  PRIORITÉ ABSOLUE : si une ligne de la section REGISTRE DES ÉVÉNEMENTS
+  ci-dessus correspond clairement à la naissance/l'origine de cette entité
+  (rupture, crise, bascule cohérente avec son role_dans_scenario), utilise
+  l'année de CETTE ligne plutôt qu'une estimation qualitative libre — c'est
+  la source la plus fiable disponible. Ne change jamais annee_debut sans
+  raison tirée de age_historique/generation/etat_temporel ou d'une ligne du
+  registre — ce n'est pas un champ à randomiser. annee_fin reste null sauf
+  raison narrative explicite de dater une fin.
+- CONSIGNE ANCRAGE RÉEL (ajoutée le 7 août 2026, audit point 1.2) : si tu
+  confirmes ou proposes un annee_debut dans les 3-5 prochaines années
+  (proche d'aujourd'hui), l'origine de cette entité DOIT être un
+  prolongement plausible de la section ÉTAT DU MONDE RÉEL ci-dessus — pas
+  une invention déconnectée de ce qui existe réellement aujourd'hui. Si
+  annee_debut est plus lointain, cette section sert seulement de toile de
+  fond historique, pas de contrainte directe.
 """
     return system_prompt, user_prompt
 
@@ -685,6 +733,30 @@ def write_enriched_fiche(path, original_fm, original_body, enriched_data, dry_ru
     rel = enriched_data.get("type_relation_dominante")
     if rel:
         fm["type_relation_dominante"] = rel
+
+    # annee_debut / annee_fin — ajouté le 7 août 2026 (audit point 1.2) :
+    # jusqu'ici cette passe ne redemandait jamais ces deux champs au LLM,
+    # donc une fiche créée avec le placeholder de création (souvent 2026
+    # littéral, jamais retouché) restait bloquée à cette valeur même après
+    # enrichissement complet. Même garde-fou de plage que dans les scripts
+    # créateurs (2026-2098) pour ne jamais écrire une valeur aberrante.
+    annee_debut_val = enriched_data.get("annee_debut")
+    if annee_debut_val is not None:
+        try:
+            v = int(annee_debut_val)
+            if 2026 <= v <= 2098:
+                fm["annee_debut"] = v
+        except (TypeError, ValueError):
+            pass
+
+    annee_fin_val = enriched_data.get("annee_fin")
+    if annee_fin_val not in (None, "", "null"):
+        try:
+            v = int(annee_fin_val)
+            if 2026 <= v <= 2098:
+                fm["annee_fin"] = v
+        except (TypeError, ValueError):
+            pass
 
     # Reconstruire le body Markdown
     name = fm.get("name", fm.get("slug", ""))

@@ -72,7 +72,7 @@ oppositions:
 - fragments_d_etats_centraux_residuels_eco_communalism
 - reseaux_de_notables_communautaires_capturistes_eco_communalism
 type_relation_dominante: symbiose
-annee_debut: 2026
+annee_debut: 2038
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

@@ -53,7 +53,7 @@ oppositions:
 - reseaux_prives_de_securite_aux_frontieres_fortress_world
 - vaultcorp_security_fortress_world
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2037
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

@@ -45,7 +45,7 @@ oppositions:
 - bloc_eurasien_souverainiste_new_sustainability
 - collectifs_de_deplaces_climatiques_non_representes_new_sustainability
 type_relation_dominante: coopération
-annee_debut: 2026
+annee_debut: 2038
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

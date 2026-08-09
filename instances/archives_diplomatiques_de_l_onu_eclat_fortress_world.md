@@ -40,7 +40,7 @@ oppositions:
 - conseil_moscou_est_fortress_world
 - datacenters_conseil_eurasiatique_fortress_world
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2046
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

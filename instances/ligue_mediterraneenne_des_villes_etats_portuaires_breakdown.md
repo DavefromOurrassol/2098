@@ -48,7 +48,7 @@ oppositions:
 - lagos_est_nexcore_breakdown
 - reseau_logistique_criminel_concurrent_breakdown
 type_relation_dominante: coopération
-annee_debut: 2026
+annee_debut: 2030
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

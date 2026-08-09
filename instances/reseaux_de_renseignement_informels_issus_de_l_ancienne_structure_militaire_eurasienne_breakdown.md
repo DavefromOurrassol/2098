@@ -51,7 +51,7 @@ oppositions:
 - nexcore_breakdown
 - reseau_logistique_criminel_concurrent_breakdown
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2036
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

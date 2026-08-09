@@ -53,7 +53,7 @@ oppositions:
 - seigneuries_logistiques_armees_breakdown
 type_relation_dominante: neutralité
 
-annee_debut: 2026
+annee_debut: 2041
 annee_fin: 
 
 etat_temporel: actif

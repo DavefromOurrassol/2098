@@ -55,7 +55,7 @@ oppositions:
 - front_de_resistance_aux_peages_sur_les_ressources_breakdown
 - saboteurs_des_corridors_de_transit_breakdown
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2036
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

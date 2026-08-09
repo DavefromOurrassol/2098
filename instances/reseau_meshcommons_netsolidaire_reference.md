@@ -66,7 +66,7 @@ oppositions:
 - plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference
 - regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference
 type_relation_dominante: coopération
-annee_debut: 2026
+annee_debut: 2030
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

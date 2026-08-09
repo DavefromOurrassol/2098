@@ -63,7 +63,7 @@ oppositions:
 - rede_paulista_de_distribuic_o_algor_tmica_new_sustainability
 - tribunal_gouvernance_algorithmique_bruxelles_new_sustainability
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2033
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

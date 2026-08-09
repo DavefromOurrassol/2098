@@ -56,7 +56,7 @@ oppositions:
 - reseau_des_metropoles_n_uds_policy_reform
 - reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2035
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

@@ -52,7 +52,7 @@ oppositions:
 - rede_paulista_de_distribuic_o_algor_tmica_policy_reform
 - reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2028
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

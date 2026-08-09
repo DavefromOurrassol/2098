@@ -64,7 +64,7 @@ oppositions:
 - lobbies_agro_industriels_du_bassin_du_congo_new_sustainability
 - mouvement_pour_l_autodetermination_territoriale_new_sustainability
 type_relation_dominante: coopération
-annee_debut: 2026
+annee_debut: 2037
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

@@ -55,7 +55,7 @@ oppositions:
 - reseaux_d_echange_clandestin_inter_zones_fortress_world
 - rust_belt_communes_libres_fortress_world
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2047
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

@@ -52,7 +52,7 @@ oppositions:
 - programme_onu_eau_2080_reference
 - valparaiso_fct_reference
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2030
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

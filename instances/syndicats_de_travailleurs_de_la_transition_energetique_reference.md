@@ -85,6 +85,8 @@ localisation:
   zone: europe_occidentale_reconstructee
   lieu: Lyon-Métropole
   type_lieu: ville
+annee_debut_verifiee: true
+
 ---
 
 # Syndicats de travailleurs de la transition énergétique

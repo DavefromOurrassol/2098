@@ -96,6 +96,8 @@ localisation:
   zone: null
   lieu: Siège tournant — Genève-Bunker / Bruxelles-Forteresse / Zones Tampons
   type_lieu: infrastructure
+annee_debut_verifiee: true
+
 ---
 
 # Corps des Inspecteurs de Conformité Inter-Blocs

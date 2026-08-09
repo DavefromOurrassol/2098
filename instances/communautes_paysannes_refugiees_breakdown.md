@@ -60,7 +60,7 @@ oppositions:
 - nexcore_breakdown
 - seigneuries_foncieres_opportunistes_breakdown
 type_relation_dominante: dépendance
-annee_debut: 2026
+annee_debut: 2042
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

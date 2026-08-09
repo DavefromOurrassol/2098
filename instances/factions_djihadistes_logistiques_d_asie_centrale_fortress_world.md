@@ -56,7 +56,7 @@ oppositions:
 - reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world
 - vasil_orentchev_fortress_world
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2038
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

@@ -54,7 +54,7 @@ oppositions:
 - voix_du_dehors_eco_communalism
 - zones_extractivistes_corridors_eco_communalism
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2036
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

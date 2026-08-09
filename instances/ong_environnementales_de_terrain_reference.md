@@ -71,7 +71,7 @@ oppositions:
 - siberie_federale_reference
 - terrametrics_reference
 type_relation_dominante: coopération
-annee_debut: 2026
+annee_debut: 2031
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

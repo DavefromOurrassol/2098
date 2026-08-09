@@ -50,7 +50,7 @@ oppositions:
 - lobbies_des_energies_fossiles_residuelles_policy_reform
 - reseau_des_lobbyistes_techniques_onu_energie_policy_reform
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2033
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

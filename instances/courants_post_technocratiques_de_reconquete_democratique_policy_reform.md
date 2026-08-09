@@ -57,7 +57,7 @@ oppositions:
 - rede_paulista_de_distribuic_o_algor_tmica_policy_reform
 - union_technocratique_eurasiatique_policy_reform
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2073
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

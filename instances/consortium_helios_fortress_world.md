@@ -52,7 +52,7 @@ oppositions:
 - reseaux_de_contrebande_energetique_transfrontaliere_fortress_world
 type_relation_dominante: dépendance
 
-annee_debut: 2026
+annee_debut: 2037
 annee_fin: 
 
 etat_temporel: transformé

@@ -95,6 +95,8 @@ localisation:
   zone: geneve_lacustre
   lieu: Genève-Lacustre
   type_lieu: ville
+annee_debut_verifiee: true
+
 ---
 
 # Fédération des Mutuelles Biotech

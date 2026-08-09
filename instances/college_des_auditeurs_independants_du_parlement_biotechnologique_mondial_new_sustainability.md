@@ -49,7 +49,7 @@ oppositions:
 - lobbies_des_plateformes_de_consensus_automatise_new_sustainability
 - nexus_biosyn_new_sustainability
 type_relation_dominante: coopération
-annee_debut: 2026
+annee_debut: 2037
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

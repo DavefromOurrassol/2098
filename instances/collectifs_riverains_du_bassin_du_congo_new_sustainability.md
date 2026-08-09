@@ -56,7 +56,7 @@ oppositions:
 - lobbies_agro_industriels_du_bassin_du_congo_new_sustainability
 - reseau_des_villes_regeneratives_new_sustainability
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2032
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

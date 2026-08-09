@@ -88,6 +88,8 @@ localisation:
   zone: tromsoe_aln
   lieu: Tromsø
   type_lieu: ville
+annee_debut_verifiee: true
+
 ---
 
 # Fonds Souverain Arctique Scandinave

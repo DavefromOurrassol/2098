@@ -55,7 +55,7 @@ oppositions:
 - internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
 - mouvement_pour_l_autodetermination_territoriale_new_sustainability
 type_relation_dominante: coopération
-annee_debut: 2026
+annee_debut: 2039
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

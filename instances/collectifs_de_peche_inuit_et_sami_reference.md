@@ -47,7 +47,7 @@ oppositions:
 - detroit_compact_grands_lacs_reference
 - fonds_souverain_arctique_scandinave_reference
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2041
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

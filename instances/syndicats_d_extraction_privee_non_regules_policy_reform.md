@@ -56,7 +56,7 @@ oppositions:
 - observatoire_mondial_des_ressources_critiques_policy_reform
 - reseau_des_journalistes_d_investigation_energetique_policy_reform
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2029
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

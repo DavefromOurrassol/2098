@@ -114,6 +114,8 @@ localisation:
   zone: bloc_eurasien_souverainiste
   lieu: Bloc Eurasien — noyau dur de résistance souverainiste
   type_lieu: region
+annee_debut_verifiee: true
+
 ---
 
 # États Souverainistes Anti-Réseau

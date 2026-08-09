@@ -46,7 +46,7 @@ oppositions:
 - cartels_miniers_militarises_subsahariens_fortress_world
 - reseaux_de_contrebande_energetique_transfrontaliere_fortress_world
 type_relation_dominante: dépendance
-annee_debut: 2026
+annee_debut: 2041
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

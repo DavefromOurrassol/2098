@@ -56,7 +56,7 @@ oppositions:
 - mouvement_pour_l_autodetermination_territoriale_new_sustainability
 - reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability
 type_relation_dominante: dépendance
-annee_debut: 2026
+annee_debut: 2030
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

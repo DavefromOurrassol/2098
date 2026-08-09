@@ -49,7 +49,7 @@ oppositions:
 - kalaallit_nunaat_sovereign_fund_fortress_world
 - oracle_des_seuils_fortress_world
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2036
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

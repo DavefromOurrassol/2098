@@ -44,7 +44,7 @@ oppositions:
 - frente_sert_o_livre_reference
 - reseau_des_cooperatives_agro_saheliennes_reference
 type_relation_dominante: dépendance
-annee_debut: 2026
+annee_debut: 2029
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

@@ -88,6 +88,8 @@ localisation:
   zone: lyon_metropole
   lieu: Lyon-Métropole, siège principal — antenne secondaire à Helsinki
   type_lieu: ville
+annee_debut_verifiee: true
+
 ---
 
 # ONG de Préservation Patrimoniale Numérique

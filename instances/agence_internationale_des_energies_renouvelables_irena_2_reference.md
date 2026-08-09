@@ -104,6 +104,8 @@ localisation:
   zone: geneve_lac_retreite
   lieu: Genève-Lac-Retraité — Siège Principal IRENA-2
   type_lieu: ville
+annee_debut_verifiee: true
+
 ---
 
 # Agence Internationale des Énergies Renouvelables (IRENA-2)

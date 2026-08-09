@@ -56,7 +56,7 @@ oppositions:
 
 type_relation_dominante: alliance stratégique
 
-annee_debut: 2026
+annee_debut: 2037
 annee_fin: 
 
 etat_temporel: actif

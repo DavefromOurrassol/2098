@@ -55,7 +55,7 @@ oppositions:
 - observatoire_anti_monopole_de_geneve_new_sustainability
 - parlement_territoires_nairobi_new_sustainability
 type_relation_dominante: dépendance
-annee_debut: 2026
+annee_debut: 2031
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

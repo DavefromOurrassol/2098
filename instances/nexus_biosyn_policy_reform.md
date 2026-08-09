@@ -55,7 +55,7 @@ oppositions:
 - institut_de_therapeutique_integree_de_nairobi_policy_reform
 type_relation_dominante: alliance stratégique
 
-annee_debut: 2026
+annee_debut: 2091
 annee_fin: 
 
 etat_temporel: actif

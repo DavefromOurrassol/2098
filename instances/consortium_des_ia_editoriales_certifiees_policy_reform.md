@@ -49,7 +49,7 @@ oppositions:
 - front_souverainiste_des_blocs_non_signataires_policy_reform
 - les_hors_prisme_policy_reform
 type_relation_dominante: coopération
-annee_debut: 2026
+annee_debut: 2033
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

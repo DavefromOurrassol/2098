@@ -54,7 +54,7 @@ oppositions:
 - lobbies_agro_industriels_a_haute_consommation_d_eau_reference
 - zones_grises_globales_reference
 type_relation_dominante: coopération
-annee_debut: 2026
+annee_debut: 2032
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

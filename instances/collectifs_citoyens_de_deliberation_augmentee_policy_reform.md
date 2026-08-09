@@ -56,7 +56,7 @@ oppositions:
 - front_techno_utopiste_de_la_decision_automatisee_policy_reform
 - union_technocratique_eurasiatique_policy_reform
 type_relation_dominante: coopération
-annee_debut: 2026
+annee_debut: 2034
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

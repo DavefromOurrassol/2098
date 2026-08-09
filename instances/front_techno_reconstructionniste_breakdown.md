@@ -51,7 +51,7 @@ oppositions:
 - mouvement_racines_vivantes_breakdown
 - reseau_de_recuperation_industrielle_illicite_breakdown
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2041
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

@@ -46,7 +46,7 @@ alliances:
 - saboteurs_des_corridors_de_transit_breakdown
 oppositions: []
 type_relation_dominante: symbiose
-annee_debut: 2026
+annee_debut: 2042
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

@@ -45,7 +45,7 @@ oppositions:
 - front_souverainiste_de_l_information_regionale_policy_reform
 - front_souverainiste_des_blocs_non_signataires_policy_reform
 type_relation_dominante: coopération
-annee_debut: 2026
+annee_debut: 2033
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent
@@ -84,6 +84,8 @@ localisation:
   zone: geneve_nexus
   lieu: Genève-Nexus, quartier des institutions du travail
   type_lieu: ville
+annee_debut_verifiee: true
+
 ---
 
 # Bureau International du Travail Augmenté (BITA)

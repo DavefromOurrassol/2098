@@ -68,7 +68,7 @@ oppositions:
 - republique_islamique_iran_policy_reform
 - syndicats_d_extraction_privee_non_regules_policy_reform
 type_relation_dominante: coopération
-annee_debut: 2026
+annee_debut: 2035
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

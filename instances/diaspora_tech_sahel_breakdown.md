@@ -53,7 +53,7 @@ oppositions:
 - nexcore_breakdown
 - seigneurs_de_guerre_agro_territoriaux_breakdown
 type_relation_dominante: coopération
-annee_debut: 2026
+annee_debut: 2042
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

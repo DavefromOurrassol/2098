@@ -78,7 +78,7 @@ oppositions:
 - tresse_verte_corridor_eco_communalism
 - zones_extractivistes_corridors_eco_communalism
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2047
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

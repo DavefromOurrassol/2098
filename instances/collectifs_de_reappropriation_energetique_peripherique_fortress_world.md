@@ -57,7 +57,7 @@ oppositions:
 - tours_nexus7_fortress_world
 - zone_usines_forteresses_eurasie_fortress_world
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2046
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

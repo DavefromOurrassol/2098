@@ -51,7 +51,7 @@ oppositions:
 - pacifique_sud_resilience_network_new_sustainability
 - reseau_des_hubs_urbains_regeneratifs_new_sustainability
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2030
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

@@ -70,7 +70,7 @@ oppositions:
 - reseau_des_villes_regeneratives_new_sustainability
 - trame_bioclimatique_new_sustainability
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2041
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

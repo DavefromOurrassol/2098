@@ -57,7 +57,7 @@ oppositions:
 - lobbies_agro_industriels_a_haute_consommation_d_eau_reference
 - plateformes_d_optimisation_territoriale_par_ia_reference
 type_relation_dominante: coopération
-annee_debut: 2026
+annee_debut: 2031
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent
@@ -95,6 +95,8 @@ localisation:
   zone: null
   lieu: null
   type_lieu: null
+annee_debut_verifiee: true
+
 ---
 
 # Communs Numériques Agroécologiques

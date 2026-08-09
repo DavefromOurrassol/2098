@@ -56,7 +56,7 @@ oppositions:
 - reseaux_d_echange_clandestin_inter_zones_fortress_world
 type_relation_dominante: symbiose
 
-annee_debut: 2026
+annee_debut: 2036
 annee_fin: 
 
 etat_temporel: actif

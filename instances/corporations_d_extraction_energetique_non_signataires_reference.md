@@ -63,7 +63,7 @@ oppositions:
 - pacifique_sud_resilience_network_reference
 - syndicats_de_travailleurs_de_la_transition_energetique_reference
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2033
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

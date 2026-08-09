@@ -46,7 +46,7 @@ oppositions:
 - front_techno_utopiste_de_la_decision_automatisee_policy_reform
 - rede_paulista_de_distribuic_o_algor_tmica_policy_reform
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2028
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

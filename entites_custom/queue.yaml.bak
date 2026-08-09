@@ -1,9 +1,1 @@
 queue:
-- nom: Test Requeue Debug
-  category: humain
-  role: Entrée de test pour valider requeue_needs_review.py
-  etat: actif
-  scenario_ref: breakdown
-  scenario_hint: null
-  zone_hint: null
-  source: test_manuel_31_juillet

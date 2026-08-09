@@ -1,0 +1,83 @@
+============================================================
+OURRASSOL 2098 — Création entités + instances
+============================================================
+(mode --dry-run : rien ne sera écrit)
+
+Mode : auto (fourni via --mode)
+
+[1/2] Génération de 1 entité(s) (scénarios : fortress_world)...
+[llm] Mistral (mistral-large-latest) — entrée : 25819 | sortie : 333
+[2/2] Validation, injection et génération des instances...
+
+  ✓ Stratégix Resource Monopolies (SRM) (entreprise)
+{
+  "nom": "Stratégix Resource Monopolies (SRM)",
+  "category": "entreprise",
+  "description_complete": "SRM est un conglomérat transnational spécialisé dans l'acquisition, la sécurisation et la monopolisation des ressources critiques (eau, terres rares, semences, énergie) au sein des blocs souverains. Opérant comme un partenaire indispensable mais opaque des États-forteresses, SRM combine extraction high-tech, logistique militarisée et contrats d'exclusivité pour verrouiller l'accès aux ressources, tout en externalisant les coûts écologiques et sociaux sur les territoires périphériques. Son modèle repose sur une intégration verticale extrême, où chaque maillon de la chaîne de valeur est contrôlé par des filiales ou des sous-traitants sous contrat d'allégeance.",
+  "tension_fondamentale": "La souveraineté des États sur leurs ressources contre la dépendance structurelle à un acteur privé qui en détient les clés technologiques et logistiques — SRM incarne la privatisation de la souveraineté elle-même.",
+  "variables_potentielles": [
+    "energie_ressources_critiques",
+    "geopolitique_conflits",
+    "organisation_territoires",
+    "systemes_productifs_travail"
+  ],
+  "scenarios_instances": [
+    "fortress_world"
+  ],
+  "doublon_detecte": false,
+  "doublon_slug": null
+}
+  Instances (1 scénario(s)) :
+    → fortress_world [ANCRAGE RÉCENT]... [llm] Mistral (mistral-large-latest) — entrée : 17665 | sortie : 1304
+✓
+{
+  "nom": "Stratégix Sovereign Monopolies (SSM)",
+  "type_dans_scenario": "entreprise",
+  "role_dans_scenario": "SSM émerge comme le bras armé privé des États-forteresses dans la sécurisation des ressources critiques, capitalisant sur la fragmentation géopolitique et la crise des chaînes d'approvisionnement post-2026. Née de la fusion de plusieurs conglomérats énergétiques et miniers sous pression réglementaire, elle incarne la privatisation accélérée de la souveraineté territoriale, où les frontières entre contrat d'État et monopole privé s'effacent. Son rôle systémique est double : elle verrouille l'accès aux ressources pour les blocs tout en externalisant les coûts écologiques et sociaux sur les zones grises, devenant un acteur incontournable mais contesté des équilibres de pouvoir en 2098.",
+  "responsabilites": "SSM gère des corridors logistiques militarisés pour l'extraction et le transport de terres rares, d'eau et de semences génétiquement modifiées, sous couvert de contrats d'exclusivité avec les États-forteresses. Elle opère des fermes verticales automatisées dans les zones tampons, contrôle des réseaux de distribution d'hydrogène sous contrat militaire, et déploie des milices privées pour sécuriser les sites germinaux. Ses filiales locales, souvent enregistrées dans des paradis réglementaires, appliquent des systèmes de scoring de productivité corporative pour optimiser l'exploitation des ressources.",
+  "impact_local": 4,
+  "impact_systemique_global": 3,
+  "variables_influencees": [
+    "energie_ressources_critiques",
+    "geopolitique_conflits",
+    "organisation_territoires",
+    "systemes_productifs_travail"
+  ],
+  "zone_geographique": [
+    "régionale",
+    "continentale"
+  ],
+  "zone_systemique": [
+    "énergie",
+    "sécurité",
+    "infrastructure",
+    "économie"
+  ],
+  "alliances": [
+    "alliance_blocs_souverains_fortress_world",
+    "complexes_militaro_industriels_de_gestion_des_ressources_fortress_world",
+    "nexus_biosyn_fortress_world",
+    "vaultcorp_security_fortress_world",
+    "ironclad_logistics_fortress_world"
+  ],
+  "oppositions": [
+    "coalitions_des_deplaces_et_apatrides_fortress_world",
+    "collectifs_de_reappropriation_energetique_peripherique_fortress_world",
+    "mouvement_commun_midwest_fortress_world",
+    "internationale_des_semenciers_agro_pirates_fortress_world",
+    "reseaux_de_contrebande_energetique_transfrontaliere_fortress_world"
+  ],
+  "type_relation_dominante": "dépendance",
+  "annee_debut": 2027,
+  "ancrage_reel": "SSM descend directement des consortiums énergétiques et miniers privés (comme Glencore ou Rio Tinto) qui, dès 2026, ont commencé à internaliser des fonctions de sécurité et de logistique militarisée pour contourner les régulations étatiques, dans un contexte de tensions croissantes sur les ressources critiques (voir section 'energie_ressources_critiques' de l'ÉTAT DU MONDE RÉEL).",
+  "annee_fin": null,
+  "etat_temporel": "actif",
+  "age_historique": "émergent",
+  "generation": "transition",
+  "description_journalistique": "En 2098, SSM est devenue le visage le plus visible de la souveraineté privatisée : une entreprise qui ne se contente plus d'extraire des ressources, mais qui les *possède* au nom des États. Ses convois blindés, escortés par des drones autonomes, traversent les corridors eurasiatiques et atlantiques sous des drapeaux hybrides mêlant logos corporatifs et emblèmes nationaux. Ses fermes verticales, installées dans les zones tampons d'Asie centrale ou du Sahel, produisent des semences sous brevet tout en alimentant des réseaux d'hydrogène réservés aux blocs. Les populations locales parlent d'elle comme d'un 'État dans l'État', tandis que les gouvernements ferment les yeux sur ses méthodes, tant qu'elle garantit l'approvisionnement des forteresses. Son siège social, une tour climatisée à Genève Bunker, abrite des salles de crise où se négocient en temps réel les quotas de terres rares entre blocs rivaux.",
+  "signes_distinctifs": "SSM se reconnaît à ses logos bicolores (noir et or), inspirés des emblèmes des compagnies coloniales du XIXe siècle, apposés sur ses infrastructures critiques. Ses employés portent des badges biométriques affichant leur score de productivité en temps réel, et ses milices privées arborent des uniformes modulaires aux couleurs des États-forteresses avec lesquels elles collaborent. Ses convois logistiques sont marqués de codes-barres géants visibles par satellite, indiquant leur contenu et leur destination souveraine.",
+  "tensions_narratives": "SSM cristallise les tensions entre souveraineté étatique et dépendance privée : jusqu'où les États accepteront-ils de déléguer leur pouvoir régalien à une entreprise ? Ses alliances avec les complexes militaro-industriels des blocs pourraient se retourner contre elle si les factions pro-autarcie gagnent en influence. Par ailleurs, ses pratiques d'externalisation des coûts écologiques alimentent une résistance croissante dans les zones grises, où des collectifs locaux sabotent ses infrastructures. Enfin, la question de sa régulation reste un champ de bataille : les tentatives de la Chambre de Sécurité Territoriale pour encadrer ses activités se heurtent à son lobbying discret mais efficace auprès des exécutifs militaro-civils des blocs."
+}
+
+Terminé. 1/1 entité(s) créée(s).
+Instances : 1 créée(s) | 0 déjà existante(s) | 0 erreur(s)

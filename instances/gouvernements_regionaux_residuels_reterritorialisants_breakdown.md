@@ -58,7 +58,7 @@ oppositions:
 - seigneurs_de_guerre_agro_territoriaux_breakdown
 - vallee_allier_terrafond_breakdown
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2041
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

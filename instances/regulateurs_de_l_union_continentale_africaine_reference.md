@@ -53,7 +53,7 @@ oppositions:
 - nexus_biosyn_reference
 - operateurs_prives_d_energie_distribuee_hors_fct_reference
 type_relation_dominante: coopération
-annee_debut: 2026
+annee_debut: 2033
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent
@@ -91,6 +91,8 @@ localisation:
   zone: union_africaine_resilience
   lieu: Nairobi / Kinshasa (siège rotatif)
   type_lieu: ville
+annee_debut_verifiee: true
+
 ---
 
 # Régulateurs de l'Union Continentale Africaine

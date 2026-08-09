@@ -73,7 +73,7 @@ oppositions:
 - vaultcorp_security_fortress_world
 - zones_grises_tampons_fortress_world
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2044
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

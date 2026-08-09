@@ -64,7 +64,7 @@ oppositions:
 - nexus_biosyn_reference
 - operateurs_de_zones_economiques_speciales_periurbaines_reference
 type_relation_dominante: coopération
-annee_debut: 2026
+annee_debut: 2031
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

@@ -46,7 +46,7 @@ oppositions:
 - union_technocratique_eurasiatique_policy_reform
 - consortiums_agro_industriels_du_bassin_fluvial_policy_reform
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2035
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

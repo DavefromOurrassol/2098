@@ -1,0 +1,25 @@
+============================================================
+OURRASSOL 2098 — Création entités + instances
+============================================================
+(mode --dry-run : rien ne sera écrit)
+
+Mode : auto (fourni via --mode)
+
+[1/2] Génération de 1 entité(s) (scénarios : breakdown)...
+[llm] Mistral (mistral-large-latest) — entrée : 25815 | sortie : 295
+[2/2] Validation, injection et génération des instances...
+
+  ⚠ Les Gardiens des Nœuds Hybrides : 1 problème(s), tentative de correction 1/2...
+     - Slug 'les_gardiens_des_n_uds_hybrides' déjà utilisé par une entité existante
+[llm] Mistral (mistral-large-latest) — entrée : 833 | sortie : 287
+
+  ⚠ Les Gardiens des Nœuds Hybrides : 1 problème(s), tentative de correction 2/2...
+     - Slug 'les_gardiens_des_n_uds_hybrides' déjà utilisé par une entité existante
+[llm] Mistral (mistral-large-latest) — entrée : 833 | sortie : 287
+
+  ✗ Les Gardiens des Nœuds Hybrides :
+     - Slug 'les_gardiens_des_n_uds_hybrides' déjà utilisé par une entité existante
+
+Terminé. 0/1 entité(s) créée(s).
+1 entité(s) rejetée(s) — voir le détail ci-dessus.
+Instances : 0 créée(s) | 0 déjà existante(s) | 0 erreur(s)

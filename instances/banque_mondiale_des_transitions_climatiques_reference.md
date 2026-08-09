@@ -103,6 +103,8 @@ localisation:
   zone: geneve_lac_retreite
   lieu: Genève-Lac-Retraité, siège principal (siège secondaire à Nairobi)
   type_lieu: ville
+annee_debut_verifiee: true
+
 ---
 
 # Banque Mondiale des Transitions Climatiques

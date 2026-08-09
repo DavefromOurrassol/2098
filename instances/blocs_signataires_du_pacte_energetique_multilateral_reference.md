@@ -89,6 +89,8 @@ localisation:
   zone: null
   lieu: null
   type_lieu: null
+annee_debut_verifiee: true
+
 ---
 
 # Blocs Signataires du Pacte Énergétique Multilatéral

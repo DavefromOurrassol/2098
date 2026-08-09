@@ -60,7 +60,7 @@ oppositions:
 - occitanie_racines_meres_breakdown
 - vallee_allier_terrafond_breakdown
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2043
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

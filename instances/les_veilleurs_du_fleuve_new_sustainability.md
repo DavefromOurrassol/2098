@@ -48,7 +48,7 @@ oppositions:
 - lobbies_d_extraction_miniere_des_zones_tampons_new_sustainability
 type_relation_dominante: rivalité
 
-annee_debut: 2026
+annee_debut: 2038
 annee_fin: 
 
 etat_temporel: actif

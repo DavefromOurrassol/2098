@@ -65,7 +65,7 @@ oppositions:
 - reseau_de_recuperation_industrielle_illicite_breakdown
 - seigneuries_logistiques_armees_breakdown
 type_relation_dominante: coopération
-annee_debut: 2026
+annee_debut: 2054
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

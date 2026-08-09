@@ -44,7 +44,7 @@ oppositions:
 - reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability
 type_relation_dominante: symbiose
 
-annee_debut: 2026
+annee_debut: 2040
 annee_fin: 
 
 etat_temporel: actif

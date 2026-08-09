@@ -51,7 +51,7 @@ oppositions:
 - mouvement_pour_l_autodetermination_territoriale_new_sustainability
 - tribunal_gouvernance_algorithmique_bruxelles_new_sustainability
 type_relation_dominante: dépendance
-annee_debut: 2026
+annee_debut: 2041
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

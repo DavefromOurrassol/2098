@@ -59,7 +59,7 @@ oppositions:
 - regulateurs_de_l_union_continentale_africaine_reference
 - union_africaine_de_resilience_territoriale_reference
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2036
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

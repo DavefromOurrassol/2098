@@ -49,7 +49,7 @@ oppositions:
 - consortiums_agro_industriels_du_bassin_fluvial_policy_reform
 - nexus_biosyn_policy_reform
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2029
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

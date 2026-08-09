@@ -48,7 +48,7 @@ oppositions:
 - factions_djihadistes_logistiques_d_asie_centrale_fortress_world
 - milices_privees_de_protection_des_sites_germinaux_fortress_world
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2046
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

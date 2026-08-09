@@ -51,7 +51,7 @@ oppositions:
 - factions_souverainistes_des_blocs_peripheriques_new_sustainability
 - internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
 type_relation_dominante: coopération
-annee_debut: 2026
+annee_debut: 2040
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

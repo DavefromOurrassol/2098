@@ -49,7 +49,7 @@ oppositions:
 - milices_de_piraterie_logistique_arctique_fortress_world
 - reseaux_de_contrebande_energetique_transfrontaliere_fortress_world
 type_relation_dominante: neutralité
-annee_debut: 2026
+annee_debut: 2041
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

@@ -82,6 +82,8 @@ localisation:
   zone: kourou_controle_orbital
   lieu: Centre de Contrôle Orbital de Kourou
   type_lieu: infrastructure
+annee_debut_verifiee: true
+
 ---
 
 # Consortium de Maintenance Orbitale SEOM-7

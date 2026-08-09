@@ -1,0 +1,81 @@
+============================================================
+OURRASSOL 2098 — Création entités + instances
+============================================================
+(mode --dry-run : rien ne sera écrit)
+
+Mode : auto (fourni via --mode)
+
+[1/2] Génération de 1 entité(s) (scénarios : breakdown)...
+[llm] Mistral (mistral-large-latest) — entrée : 25815 | sortie : 265
+[2/2] Validation, injection et génération des instances...
+
+  ✓ Les Gardiens des Seuils Hybrides (hybride)
+{
+  "nom": "Les Gardiens des Seuils Hybrides",
+  "category": "hybride",
+  "description_complete": "Entité composée d'humains augmentés, d'IA locales et de représentants communautaires, chargée de surveiller et réguler les points de passage critiques entre zones stables et instables (corridors logistiques, frontières écologiques, nœuds énergétiques). Leur légitimité repose sur une reconnaissance mutuelle entre blocs rivaux, mais leur neutralité est constamment remise en question par les acteurs qui les financent ou les infiltrent.",
+  "tension_fondamentale": "La neutralité opérationnelle comme condition de survie collective contre la capture par des intérêts particuliers — peut-on être à la fois arbitre et acteur dans un monde fragmenté ?",
+  "variables_potentielles": [
+    "geopolitique_conflits",
+    "organisation_territoires",
+    "frontieres_du_systeme",
+    "energie_ressources_critiques"
+  ],
+  "scenarios_instances": [
+    "breakdown"
+  ],
+  "doublon_detecte": false,
+  "doublon_slug": null
+}
+  Instances (1 scénario(s)) :
+    → breakdown... [llm] Mistral (mistral-large-latest) — entrée : 17440 | sortie : 1365
+✓
+{
+  "nom": "Les Veilleurs des Brèches",
+  "type_dans_scenario": "hybride",
+  "role_dans_scenario": "Entité fragmentée mais persistante, chargée de maintenir les derniers corridors logistiques et énergétiques entre zones stables et instables. Composée d'humains augmentés (exosquelettes, implants neuronaux), d'IA locales de surveillance et de représentants des communautés frontalières, elle opère comme un arbitre précaire dans un monde où les frontières sont devenues des zones de conflit permanent. Sa légitimité repose sur une reconnaissance mutuelle fragile entre blocs rivaux, mais son autorité est constamment contestée par les seigneurs de guerre, les cartels logistiques et les factions énergétiques.",
+  "responsabilites": "1) Surveiller et sécuriser les points de passage critiques (nœuds énergétiques, corridors logistiques, frontières écologiques) via des drones autonomes et des patrouilles hybrides. 2) Négocier des cessez-le-feu temporaires pour permettre le transit de ressources vitales (eau, médicaments, carburants). 3) Documenter les violations des accords frontaliers et transmettre ces données aux Archives Neutres de Genève. 4) Former des milices locales à la défense des seuils, tout en évitant leur capture par des intérêts particuliers.",
+  "impact_local": 4,
+  "impact_systemique_global": 2,
+  "variables_influencees": [
+    "geopolitique_conflits",
+    "energie_ressources_critiques",
+    "organisation_territoires",
+    "frontieres_du_systeme"
+  ],
+  "zone_geographique": [
+    "régionale",
+    "continentale"
+  ],
+  "zone_systemique": [
+    "énergie",
+    "infrastructure",
+    "sécurité",
+    "gouvernance"
+  ],
+  "alliances": [
+    "archives_neutres_de_geneve_breakdown",
+    "brigades_medicales_itinerantes_breakdown",
+    "reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown",
+    "collectifs_de_gardiens_archivistes_itinerants_breakdown"
+  ],
+  "oppositions": [
+    "seigneuries_logistiques_armees_breakdown",
+    "milices_extractivistes_du_bassin_du_congo_breakdown",
+    "factions_energetiques_heritieres_des_pactes_abs_breakdown",
+    "cartels_logistiques_regionaux_breakdown",
+    "blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown"
+  ],
+  "type_relation_dominante": "rivalité",
+  "annee_debut": 2057,
+  "annee_fin": null,
+  "etat_temporel": "actif",
+  "age_historique": "déclinant",
+  "generation": "post-effondrement",
+  "description_journalistique": "« Ils sont les derniers à croire que les frontières peuvent encore être des ponts. » C’est ainsi que les décrit Amara Diallo-Nkosi, dans son rapport sur les corridors sahéliens pour les Archives Neutres de Genève. Les Veilleurs des Brèches, autrefois une force neutre et respectée, ne sont plus aujourd’hui qu’un réseau de postes avancés clairsemés, tenus par des humains augmentés et des IA locales à moitié autonomes. Leur mission ? Empêcher que les dernières routes du monde ne deviennent des cimetières. Mais dans un paysage où chaque seuil est disputé par des seigneurs de guerre et des cartels logistiques, leur neutralité est devenue une fiction. Leurs patrouilles sont harcelées, leurs drones abattus, et leurs accords violés avant même que l’encre ne sèche. Pourtant, ils persistent. Parce que sans eux, il n’y aurait plus personne pour compter les morts.",
+  "signes_distinctifs": "1) **Exosquelettes bricolés** : Leurs Gardiens portent des exosquelettes assemblés à partir de débris militaires et de pièces imprimées en 3D, souvent recouverts de symboles tribaux ou de graffitis politiques. 2) **Drones « lucioles »** : Des essaims de petits drones autonomes, équipés de lumières clignotantes, surveillent les corridors la nuit, créant une « frontière lumineuse » visible à des kilomètres. 3) **Bannières des seuils** : Chaque poste avancé arbore une bannière blanche et bleue, frappée d’un symbole hybride (un œil humain fusionné avec un circuit imprimé), rappelant leur double nature. 4) **Langage des signes** : Pour éviter les écoutes, leurs patrouilles communiquent via un langage gestuel codé, mélange de signes militaires et de symboles locaux.",
+  "tensions_narratives": "1) **La trahison des IA** : Plusieurs IA locales, censées être neutres, ont été infiltrées par des factions énergétiques ou des cartels logistiques, semant la méfiance au sein des Gardiens. Certains humains augmentés refusent désormais de collaborer avec elles, tandis que d’autres plaident pour leur « rééducation ». 2) **Le dilemme des ressources** : Les Veilleurs dépendent des livraisons de carburant et de pièces détachées pour leurs exosquelettes et leurs drones. Mais ces livraisons sont de plus en plus rares, et ils doivent choisir entre les utiliser pour eux-mêmes ou les partager avec les communautés locales, au risque de perdre leur soutien. 3) **La guerre des archives** : Leurs rapports sur les violations frontalières sont censés être transmis aux Archives Neutres de Genève, mais plusieurs copies ont été interceptées ou falsifiées par des factions propagandistes. Certains Gardiens commencent à douter de l’utilité de documenter quoi que ce soit. 4) **L’ultimatum des seigneurs de guerre** : Plusieurs seigneurs de guerre ont lancé un ultimatum : soit les Veilleurs se rangent sous leur bannière, soit ils seront éliminés. Certains postes avancés ont déjà capitulé, tandis que d’autres résistent, au prix de pertes de plus en plus lourdes."
+}
+
+Terminé. 1/1 entité(s) créée(s).
+Instances : 1 créée(s) | 0 déjà existante(s) | 0 erreur(s)

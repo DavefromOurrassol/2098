@@ -55,7 +55,7 @@ oppositions:
 - reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
 - trame_bioclimatique_eco_communalism
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2035
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

@@ -93,6 +93,8 @@ localisation:
   zone: bloc_eurasien_souverainiste
   lieu: Séoul / bassins versants asiatiques contestés
   type_lieu: region
+annee_debut_verifiee: true
+
 ---
 
 # Souverainistes du Bloc Eurasien

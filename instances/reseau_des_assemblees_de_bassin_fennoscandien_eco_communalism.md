@@ -58,7 +58,7 @@ oppositions:
 - factions_autoritaires_locales_identitaires_exclusionnistes_eco_communalism
 - factions_extractivistes_des_aquiferes_communs_eco_communalism
 type_relation_dominante: coopération
-annee_debut: 2026
+annee_debut: 2040
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

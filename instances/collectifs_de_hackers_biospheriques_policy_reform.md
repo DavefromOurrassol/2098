@@ -50,7 +50,7 @@ oppositions:
 - nexus_biosyn_policy_reform
 - trame_bioclimatique_policy_reform
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2035
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

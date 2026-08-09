@@ -60,7 +60,7 @@ oppositions:
 - plateformes_d_optimisation_territoriale_par_ia_reference
 - singapour_est_nexcore_reference
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2030
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

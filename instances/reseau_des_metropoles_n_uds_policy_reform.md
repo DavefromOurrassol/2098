@@ -52,7 +52,7 @@ oppositions:
 - front_souverainiste_des_blocs_non_signataires_policy_reform
 - mouvement_pour_la_souverainete_territoriale_absolue_policy_reform
 type_relation_dominante: coopération
-annee_debut: 2026
+annee_debut: 2036
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

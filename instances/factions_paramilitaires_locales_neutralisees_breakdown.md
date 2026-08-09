@@ -58,7 +58,7 @@ oppositions:
 - reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown
 - seigneuries_logistiques_armees_breakdown
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2041
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

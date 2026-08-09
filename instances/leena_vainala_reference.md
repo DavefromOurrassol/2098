@@ -52,7 +52,7 @@ oppositions:
 - coalition_des_gouvernements_contre_les_chartes_de_destabilisation_reference
 - front_techno_utopiste_de_la_decision_automatisee_policy_reform
 type_relation_dominante: rivalité
-annee_debut: 2026
+annee_debut: 2032
 annee_fin: null
 etat_temporel: actif
 age_historique: ascendant

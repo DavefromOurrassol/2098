@@ -68,7 +68,7 @@ oppositions:
 - reseaux_de_capteurs_ia_climatiques_deployes_par_les_etats_membres_policy_reform
 - union_technocratique_eurasiatique_policy_reform
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2028
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

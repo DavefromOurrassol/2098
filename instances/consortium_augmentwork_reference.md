@@ -53,7 +53,7 @@ oppositions:
 - syndicats_de_travail_rural_hybride_reference
 - syndicats_de_travailleurs_de_la_transition_energetique_reference
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2029
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent
@@ -92,6 +92,8 @@ localisation:
   zone: null
   lieu: null
   type_lieu: null
+annee_debut_verifiee: true
+
 ---
 
 # Consortium AugmentWork

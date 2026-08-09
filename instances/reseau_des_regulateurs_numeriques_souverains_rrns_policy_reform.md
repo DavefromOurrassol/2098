@@ -48,7 +48,7 @@ oppositions:
 - front_souverainiste_des_blocs_non_signataires_policy_reform
 - institut_brookings_singapour_de_politique_computationnelle_policy_reform
 type_relation_dominante: coopération
-annee_debut: 2026
+annee_debut: 2032
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

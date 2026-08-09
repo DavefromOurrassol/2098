@@ -49,7 +49,7 @@ oppositions:
 - lobbies_des_energies_fossiles_residuelles_policy_reform
 - syndicats_d_extraction_privee_non_regules_policy_reform
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2033
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

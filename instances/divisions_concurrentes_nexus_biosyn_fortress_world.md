@@ -43,7 +43,7 @@ oppositions:
 - nexus_biosyn_division_pacifique_fortress_world
 - nexus_biosyn_fortress_world
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2036
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

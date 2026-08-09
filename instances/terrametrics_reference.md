@@ -54,7 +54,7 @@ oppositions:
 - reseaux_de_capteurs_citoyens_reference
 type_relation_dominante: rivalité
 
-annee_debut: 2026
+annee_debut: 2033
 annee_fin: 
 
 etat_temporel: actif

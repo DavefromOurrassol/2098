@@ -87,7 +87,7 @@ oppositions:
 - seoul_collectif_nexcore_breakdown
 - sfax_relais_bouches_breakdown
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2041
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

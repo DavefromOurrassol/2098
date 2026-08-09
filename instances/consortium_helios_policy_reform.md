@@ -49,7 +49,7 @@ oppositions:
 - syndicat_des_ingenieurs_orbitaux_policy_reform
 type_relation_dominante: alliance stratégique
 
-annee_debut: 2026
+annee_debut: 2035
 annee_fin: 
 
 etat_temporel: actif

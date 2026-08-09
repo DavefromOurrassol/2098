@@ -63,7 +63,7 @@ oppositions:
 - syndicats_d_extraction_privee_non_regules_policy_reform
 - union_technocratique_eurasiatique_policy_reform
 type_relation_dominante: coopération
-annee_debut: 2026
+annee_debut: 2034
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

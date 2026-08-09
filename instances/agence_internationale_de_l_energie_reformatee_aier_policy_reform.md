@@ -96,6 +96,8 @@ localisation:
   zone: geneve_lacustre
   lieu: Genève-Lacustre
   type_lieu: ville
+annee_debut_verifiee: true
+
 ---
 
 # Agence Internationale de l'Énergie Reformatée (AIER)

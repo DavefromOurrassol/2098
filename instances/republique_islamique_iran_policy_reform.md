@@ -46,7 +46,7 @@ oppositions:
 - grille_aria_policy_reform
 - autorite_mondiale_du_vivant_amv_policy_reform
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2027
 annee_fin: null
 etat_temporel: actif
 age_historique: dominant

@@ -65,7 +65,7 @@ oppositions:
 - front_des_blocs_regionaux_du_recit_des_conflits_ressources_breakdown
 - seigneuries_logistiques_armees_breakdown
 type_relation_dominante: neutralité
-annee_debut: 2026
+annee_debut: 2041
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

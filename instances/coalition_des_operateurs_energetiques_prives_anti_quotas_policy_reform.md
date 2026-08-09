@@ -59,7 +59,7 @@ oppositions:
 - reseau_des_journalistes_d_investigation_energetique_policy_reform
 - syndicat_des_ingenieurs_orbitaux_policy_reform
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2033
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

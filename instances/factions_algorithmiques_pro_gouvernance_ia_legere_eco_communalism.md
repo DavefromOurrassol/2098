@@ -49,7 +49,7 @@ oppositions:
 - mouvement_des_communes_du_rust_belt_eco_communalism
 - tribunal_algorithmique_de_bruxelles_eco_communalism
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2036
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

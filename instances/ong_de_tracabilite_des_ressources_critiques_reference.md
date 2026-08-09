@@ -62,7 +62,7 @@ oppositions:
 - reseaux_de_financement_gris_issus_d_anciens_blocs_militaires_reference
 - vasil_orentchev_reference
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2030
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent
@@ -99,6 +99,8 @@ localisation:
   zone: null
   lieu: 'Siège itinérant : Nairobi / Lyon-Métropole / Singapour-Est'
   type_lieu: infrastructure
+annee_debut_verifiee: true
+
 ---
 
 # ONG de Traçabilité des Ressources Critiques

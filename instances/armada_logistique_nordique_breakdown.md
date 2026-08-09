@@ -56,7 +56,7 @@ oppositions:
 - reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown
 type_relation_dominante: rivalité
 
-annee_debut: 2026
+annee_debut: 2057
 annee_fin: 
 
 etat_temporel: actif

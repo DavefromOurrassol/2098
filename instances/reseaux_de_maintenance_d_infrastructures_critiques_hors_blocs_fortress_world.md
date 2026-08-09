@@ -45,7 +45,7 @@ oppositions:
 - bureau_territoires_residuels_fortress_world
 - nexcore_atlantique_infrastructure_fortress_world
 type_relation_dominante: symbiose
-annee_debut: 2026
+annee_debut: 2046
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

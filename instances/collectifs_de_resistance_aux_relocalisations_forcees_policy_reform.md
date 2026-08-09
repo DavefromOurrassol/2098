@@ -49,7 +49,7 @@ oppositions:
 - reseau_des_metropoles_n_uds_policy_reform
 - reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2044
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

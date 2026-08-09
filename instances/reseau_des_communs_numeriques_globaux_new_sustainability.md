@@ -58,7 +58,7 @@ oppositions:
 - prisme_global_new_sustainability
 - tribunal_gouvernance_algorithmique_bruxelles_new_sustainability
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2039
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

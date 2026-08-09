@@ -60,7 +60,7 @@ oppositions:
 - reseaux_noirs_pharmaceutiques_breakdown
 - seigneuries_logistiques_armees_breakdown
 type_relation_dominante: symbiose
-annee_debut: 2026
+annee_debut: 2036
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

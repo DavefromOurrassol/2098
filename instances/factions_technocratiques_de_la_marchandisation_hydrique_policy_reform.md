@@ -61,7 +61,7 @@ oppositions:
 - reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
 - syndicat_des_ingenieurs_orbitaux_policy_reform
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2028
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

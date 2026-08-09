@@ -50,7 +50,7 @@ oppositions:
 - reseaux_d_echange_clandestin_inter_zones_fortress_world
 - rust_belt_communes_libres_fortress_world
 type_relation_dominante: dépendance
-annee_debut: 2026
+annee_debut: 2046
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

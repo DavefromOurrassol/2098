@@ -50,7 +50,7 @@ oppositions:
 - mouvement_communautaire_des_micro_grids_energetiques_new_sustainability
 - observatoire_anti_monopole_de_geneve_new_sustainability
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2060
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

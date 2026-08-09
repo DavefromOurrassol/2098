@@ -43,7 +43,7 @@ oppositions:
 - consortiums_energetiques_du_bloc_ourrassol_fortress_world
 - pacte_forteresses_souveraines_fortress_world
 type_relation_dominante: neutralité
-annee_debut: 2026
+annee_debut: 2044
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

@@ -57,7 +57,7 @@ oppositions:
 - etats_a_tendance_centraliste_numerique_reference
 - plateformes_d_optimisation_territoriale_par_ia_reference
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2031
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

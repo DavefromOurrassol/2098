@@ -58,7 +58,7 @@ oppositions:
 - reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world
 - vaultcorp_security_fortress_world
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2037
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

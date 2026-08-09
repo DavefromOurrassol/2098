@@ -48,7 +48,7 @@ oppositions:
 
 type_relation_dominante: rivalité
 
-annee_debut: 2026
+annee_debut: 2032
 annee_fin: 
 
 etat_temporel: actif

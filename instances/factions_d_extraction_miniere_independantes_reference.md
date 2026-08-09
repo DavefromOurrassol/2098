@@ -55,7 +55,7 @@ oppositions:
 - ong_de_tracabilite_des_ressources_critiques_reference
 - union_africaine_resilience_reference
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2030
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

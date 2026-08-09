@@ -54,7 +54,7 @@ oppositions:
 - oracle_des_seuils_breakdown
 - voix_du_dehors_breakdown
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2041
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

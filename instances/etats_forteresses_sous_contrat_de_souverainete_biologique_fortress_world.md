@@ -55,7 +55,7 @@ oppositions:
 - reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world
 - rust_belt_communes_libres_fortress_world
 type_relation_dominante: dépendance
-annee_debut: 2026
+annee_debut: 2044
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

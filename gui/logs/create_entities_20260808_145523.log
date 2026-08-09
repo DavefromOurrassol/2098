@@ -1,0 +1,80 @@
+============================================================
+OURRASSOL 2098 — Création entités + instances
+============================================================
+(mode --dry-run : rien ne sera écrit)
+
+Mode : auto (fourni via --mode)
+
+[1/2] Génération de 1 entité(s) (scénarios : breakdown)...
+[llm] Mistral (mistral-large-latest) — entrée : 25815 | sortie : 321
+[2/2] Validation, injection et génération des instances...
+
+  ✓ Les Gardiens des Frontières Flottantes (hybride)
+{
+  "nom": "Les Gardiens des Frontières Flottantes",
+  "category": "hybride",
+  "description_complete": "Entité hybride composée de milices locales, d'IA de surveillance environnementale et de communautés autochtones, chargée de gérer les zones frontalières instables où les États ont perdu le contrôle. Ces Gardiens opèrent comme une interface entre les blocs régionaux, régulant les flux de ressources, de migrants et d'informations tout en protégeant les écosystèmes fragiles. Leur légitimité repose sur une combinaison de savoirs traditionnels, de technologies de monitoring et de force armée, mais leur neutralité est constamment remise en question par les acteurs étatiques et non étatiques qui cherchent à instrumentaliser ces zones.",
+  "tension_fondamentale": "La protection des écosystèmes et des populations marginalisées contre la souveraineté étatique et les intérêts extractivistes : comment concilier une gouvernance locale légitime avec les impératifs géopolitiques des blocs régionaux ?",
+  "variables_potentielles": [
+    "geopolitique_conflits",
+    "organisation_territoires",
+    "climat_environnement_global",
+    "demographie_mobilite_humaine"
+  ],
+  "scenarios_instances": [
+    "breakdown"
+  ],
+  "doublon_detecte": false,
+  "doublon_slug": null
+}
+  Instances (1 scénario(s)) :
+    → breakdown [ANCRAGE RÉCENT]... [llm] Mistral (mistral-large-latest) — entrée : 17548 | sortie : 1115
+✓
+{
+  "nom": "Les Veilleurs des Lisières Flottantes",
+  "type_dans_scenario": "hybride",
+  "role_dans_scenario": "Interface fragile entre les blocs régionaux en fragmentation et les territoires abandonnés par les États, les Veilleurs des Lisières Flottantes émergent comme une réponse locale à l'effondrement des chaînes de gouvernance traditionnelles. Composés de milices communautaires, d'IA environnementales open-source et de savoirs autochtones, ils régulent les flux de ressources, de migrants et d'informations dans les zones frontalières devenues ingouvernables. Leur légitimité repose sur une combinaison précaire de force armée, de monitoring écologique et de médiation culturelle, mais leur neutralité est constamment contestée par les acteurs étatiques résiduels et les seigneurs de guerre agro-territoriaux.",
+  "responsabilites": "Ils patrouillent les corridors de transit abandonnés, négocient des droits de passage avec les milices locales, et documentent les basculements écologiques en temps réel via des réseaux de capteurs low-tech. Leurs responsabilités incluent aussi la protection des écosystèmes critiques (zones humides, forêts primaires) contre l'extractivisme illégal, et la gestion des camps de migrants en transit, souvent en collaboration avec les Brigades Médicales Itinérantes et les Collectifs de Santé Communautaire Autogérée.",
+  "impact_local": 4,
+  "impact_systemique_global": 2,
+  "variables_influencees": [
+    "geopolitique_conflits",
+    "organisation_territoires",
+    "climat_environnement_global",
+    "demographie_mobilite_humaine"
+  ],
+  "zone_geographique": [
+    "régionale",
+    "locale"
+  ],
+  "zone_systemique": [
+    "gouvernance",
+    "sécurité",
+    "infrastructure",
+    "société"
+  ],
+  "alliances": [
+    "brigades_medicales_itinerantes_breakdown",
+    "collectifs_de_sante_communautaire_autogeree_breakdown",
+    "reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown",
+    "collectifs_de_gardiens_archivistes_itinerants_breakdown"
+  ],
+  "oppositions": [
+    "milices_extractivistes_du_bassin_du_congo_breakdown",
+    "seigneurs_de_guerre_agro_territoriaux_breakdown",
+    "factions_para_etatiques_hydriques_breakdown",
+    "etats_fragmentes_nationalisant_les_stocks_breakdown"
+  ],
+  "type_relation_dominante": "rivalité",
+  "annee_debut": 2027,
+  "annee_fin": null,
+  "etat_temporel": "actif",
+  "age_historique": "émergent",
+  "generation": "transition",
+  "description_journalistique": "Imaginez des avant-postes mobiles, à moitié fixes, à moitié flottants — des tours de guet en bois et métal rouillé, équipées de panneaux solaires artisanaux et de paraboles bricolées pour capter les signaux des satellites moribonds. Les Veilleurs, vêtus de treillis usés et de gilets pare-balles récupérés, patrouillent à pied ou en véhicules électriques low-cost le long des anciennes frontières, désormais devenues des zones grises. Leur emblème, un cercle fracturé en trois parties (humain, machine, nature), est peint à la bombe sur les murs des villages qu'ils protègent. Leur pouvoir ? Une connaissance intime des territoires, des réseaux de capteurs DIY qui traquent la pollution des sols et la montée des eaux, et une réputation de médiateurs impartiaux — même si certains les accusent de jouer double jeu avec les cartels logistiques.",
+  "signes_distinctifs": "Leur symbole, un cercle en trois segments (humain, IA, écosystème), est souvent graffité sur les checkpoints improvisés. Leurs membres portent des brassards aux couleurs variables selon les régions, mais toujours ornés d'un motif de carte fractale représentant les zones frontalières. Les drones qu'ils utilisent, assemblés à partir de pièces récupérées, sont reconnaissables à leurs ailes en bambou et leurs caméras thermiques low-tech.",
+  "tensions_narratives": "Les Veilleurs sont pris entre deux feux : d'un côté, les États résiduels les voient comme une menace à leur souveraineté, de l'autre, les communautés locales les accusent de ne pas en faire assez pour protéger les écosystèmes. Leur alliance avec les Brigades Médicales Itinérantes et les Courriers Nomades est fragile, et certains craignent qu'ils ne finissent par être absorbés par les Seigneurs de Guerre Agro-Territoriaux. Leur plus grand défi ? Maintenir leur neutralité dans un monde où les ressources deviennent de plus en plus rares, et où chaque décision peut déclencher un conflit."
+}
+
+Terminé. 1/1 entité(s) créée(s).
+Instances : 1 créée(s) | 0 déjà existante(s) | 0 erreur(s)

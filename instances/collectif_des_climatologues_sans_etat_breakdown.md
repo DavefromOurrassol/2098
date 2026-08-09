@@ -62,7 +62,7 @@ oppositions:
 - reseau_logistique_criminel_concurrent_breakdown
 - seigneuries_logistiques_armees_breakdown
 type_relation_dominante: coopération
-annee_debut: 2026
+annee_debut: 2041
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

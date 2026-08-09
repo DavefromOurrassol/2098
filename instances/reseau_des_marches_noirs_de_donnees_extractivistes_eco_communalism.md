@@ -60,7 +60,7 @@ oppositions:
 - sao_paulo_algorithmique_eco_communalism
 - trame_mnemos_noeud_reseau_eco_communalism
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2036
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

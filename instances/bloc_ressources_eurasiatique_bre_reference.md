@@ -75,7 +75,7 @@ oppositions:
 - reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference
 - reseau_hospitalier_hybride_eurasiatique_reference
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2027
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

@@ -48,7 +48,7 @@ oppositions:
 - regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference
 - services_de_contre_information_des_blocs_geopolitiques_concurrents_reference
 type_relation_dominante: symbiose
-annee_debut: 2026
+annee_debut: 2037
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

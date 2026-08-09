@@ -50,7 +50,7 @@ oppositions:
 - les_veilleurs_du_fleuve_policy_reform
 - mouvement_pour_la_souverainete_territoriale_absolue_policy_reform
 type_relation_dominante: coopération
-annee_debut: 2026
+annee_debut: 2038
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

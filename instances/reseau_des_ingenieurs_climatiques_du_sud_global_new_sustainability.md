@@ -54,7 +54,7 @@ oppositions:
 - consortium_helios_new_sustainability
 - factions_souverainistes_des_blocs_peripheriques_new_sustainability
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2038
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

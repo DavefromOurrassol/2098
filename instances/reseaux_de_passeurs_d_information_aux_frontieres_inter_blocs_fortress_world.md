@@ -63,7 +63,7 @@ oppositions:
 - dispositifs_de_surveillance_numerique_souveraine_fortress_world
 - reseaux_prives_de_securite_aux_frontieres_fortress_world
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2044
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

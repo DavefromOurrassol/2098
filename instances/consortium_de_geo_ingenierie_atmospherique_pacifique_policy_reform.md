@@ -47,7 +47,7 @@ oppositions:
 - mouvement_pour_la_justice_ecologique_communautaire_policy_reform
 - pacifique_sud_resilience_network_policy_reform
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2035
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

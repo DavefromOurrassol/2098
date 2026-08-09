@@ -73,7 +73,7 @@ oppositions:
 - syndicats_de_travail_rural_hybride_reference
 - union_africaine_de_resilience_territoriale_reference
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2031
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

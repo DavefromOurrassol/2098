@@ -61,7 +61,7 @@ oppositions:
 - plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference
 - terrametrics_reference
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2031
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

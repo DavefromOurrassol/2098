@@ -50,7 +50,7 @@ oppositions:
 - factions_souverainistes_des_blocs_peripheriques_new_sustainability
 - souverainistes_du_bloc_eurasien_new_sustainability
 type_relation_dominante: coopération
-annee_debut: 2026
+annee_debut: 2039
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

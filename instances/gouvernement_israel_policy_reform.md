@@ -47,7 +47,7 @@ oppositions:
 - mouvement_pour_la_souverainete_territoriale_absolue_policy_reform
 - factions_technocratiques_de_la_marchandisation_hydrique_policy_reform
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2027
 annee_fin: null
 etat_temporel: actif
 age_historique: dominant

@@ -54,7 +54,7 @@ oppositions:
 - factions_internes_pro_desaugmentation_totale_policy_reform
 - front_souverainiste_des_blocs_non_signataires_policy_reform
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2028
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

@@ -81,7 +81,7 @@ oppositions:
 - zone_usines_forteresses_eurasie_fortress_world
 - zones_grises_tampons_fortress_world
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2036
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

@@ -53,7 +53,7 @@ oppositions:
 - terrashield_geoengineering_fortress_world
 - vaultcorp_security_fortress_world
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2044
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

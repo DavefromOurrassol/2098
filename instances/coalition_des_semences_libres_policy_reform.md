@@ -88,6 +88,8 @@ localisation:
   zone: hub_europeen_regulation
   lieu: Genève-Lacustre / réseau régional agro-rural
   type_lieu: region
+annee_debut_verifiee: true
+
 ---
 
 # Coalition des Semences Libres

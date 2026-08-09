@@ -52,7 +52,7 @@ oppositions:
 - lobbies_des_energies_fossiles_residuelles_policy_reform
 - mouvement_pour_la_souverainete_territoriale_absolue_policy_reform
 type_relation_dominante: dépendance
-annee_debut: 2026
+annee_debut: 2035
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

@@ -46,7 +46,7 @@ oppositions:
 - observatoire_anti_monopole_de_geneve_new_sustainability
 - reseau_des_communs_numeriques_globaux_new_sustainability
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2033
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent

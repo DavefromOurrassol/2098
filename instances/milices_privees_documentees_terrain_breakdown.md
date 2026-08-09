@@ -54,7 +54,7 @@ oppositions:
 - saboteurs_des_corridors_de_transit_breakdown
 - voix_du_dehors_breakdown
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2041
 annee_fin: null
 etat_temporel: actif
 age_historique: émergent
