@@ -80,8 +80,6 @@ type_relation_dominante: alliance stratégique
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: mature
 generation: transition
 
 injection:
@@ -102,6 +100,9 @@ tensions_narratives: >
   La tension centrale de l'ABS est celle de sa propre contradiction : protéger la souveraineté de chaque membre interdit toute véritable mutualisation, condamnant le pacte à l'impuissance face aux blocs qu'il dénonce. Des fissures apparaissent entre membres tentés par des accords bilatéraux avec les grandes puissances supranationales et ceux qui maintiennent une ligne dure. La question des données climatiques — faut-il les partager avec l'Agence Mondiale pour la Stabilisation Climatique au risque de céder de la souveraineté, ou les refuser au risque de l'isolement ? — menace à chaque sommet de faire exploser l'alliance.
 
 date_creation: 2026-06-27
+trajectoire: mature
+est_clandestin: false
+
 ---
 
 # Alliance des Blocs Souverains (ABS)

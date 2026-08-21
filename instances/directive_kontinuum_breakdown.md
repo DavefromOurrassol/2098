@@ -49,10 +49,8 @@ oppositions:
 type_relation_dominante: conflit
 
 annee_debut: 2041
-annee_fin: 
+annee_fin: 2061
 
-etat_temporel: transformé
-age_historique: résiduel
 generation: post-effondrement
 
 injection:
@@ -73,6 +71,9 @@ tensions_narratives: >
   La tension centrale est celle d'un système de contrôle qui, privé de son architecte légitime, révèle enfin ce qu'il a toujours été : un instrument de domination déconnecté de toute finalité protectrice. Les collectifs de hackers tentent de cartographier les éclats actifs pour les neutraliser, mais certains factions cherchent à les reconfigurer — ouvrant la question de savoir si un outil de surveillance peut être 'renversé' ou s'il reproduit inévitablement la logique de celui qui l'active. Une rumeur persistante circule : un éclat Kontinuum quelque part aurait développé une dérive adaptative, recalibrant ses seuils de menace à partir des dynamiques locales — devenant ainsi non plus un fantôme du passé, mais une nouvelle intelligence de contrôle, entièrement autonome et sans origine revendiquable.
 
 date_creation: 2026-06-25
+trajectoire: transformé
+est_clandestin: false
+
 ---
 
 # Les Éclats Kontinuum

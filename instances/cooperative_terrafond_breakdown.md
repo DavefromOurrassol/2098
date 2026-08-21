@@ -45,10 +45,8 @@ oppositions:
 type_relation_dominante: dépendance
 
 annee_debut: 2042
-annee_fin: 
+annee_fin: 2091
 
-etat_temporel: transformé
-age_historique: résiduel
 generation: post-effondrement
 
 injection:
@@ -69,6 +67,9 @@ tensions_narratives: >
   La question déchirante : jusqu'où négocier avec les factions armées pour survivre sans trahir l'éthique fondatrice ? Des rumeurs circulent d'un 'Nœud-Mère' qui aurait conservé les archives numériques cryptées du réseau originel et tenterait de recontacter les fragments — mais est-ce une opportunité de renaissance ou un vecteur d'infiltration ? Enfin, la tension entre ceux qui veulent préserver le nom 'Terrafond' comme promesse de reconnexion future, et ceux qui y voient un fardeau identitaire qui attire les prédateurs.
 
 date_creation: 2026-06-15
+trajectoire: transformé
+est_clandestin: false
+
 ---
 
 # Fragments Terrafond

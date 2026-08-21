@@ -1,0 +1,105 @@
+---
+name: Réseau des Sentinelles des Eaux Profondes
+type: instance
+slug: les_veilleurs_des_nappes_phreatiques_reference
+entite: les_veilleurs_des_nappes_phreatiques
+scenario: reference
+localisation:
+  zone: bassin_congo_ressources
+  lieu: bassin du Congo
+  type_lieu: site_strategique
+
+type_dans_scenario: réseau
+
+role_dans_scenario: >
+  Mouvement décentralisé de surveillance et de protection des nappes phréatiques, combinant technologies low-tech, savoirs locaux et résistance active contre l'accaparement des ressources hydriques. Les Veilleurs agissent comme un contre-pouvoir face aux consortiums privés et aux lobbies agro-industriels, documentant les pollutions et les extractions illégales tout en organisant des actions directes non violentes pour bloquer les projets destructeurs.
+
+responsabilites: >
+  Cartographie citoyenne des nappes phréatiques via des réseaux de capteurs open-source, formation des communautés locales à la gestion durable de l'eau, organisation de campagnes de plaidoyer et de mobilisations contre les projets d'extraction massive. Ils développent également des systèmes de filtration low-tech et des techniques de recharge artificielle des nappes pour les zones rurales.
+
+impact_local: 4
+impact_systemique_global: 3
+
+variables_influencees:
+    - climat_environnement_global
+    - energie_ressources_critiques
+    - organisation_territoires
+    - systeme_economique_redistribution
+
+zone_geographique:
+    - locale
+    - régionale
+    - nationale
+
+zone_systemique:
+    - gouvernance
+    - économie
+    - société
+    - infrastructure
+
+alliances:
+    - cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference
+    - federation_communs_territoriaux_reference
+    - reseau_des_administrations_locales_rurales_participatives_reference
+    - collectifs_de_journalisme_embarque_reference
+    - voix_du_dehors_reference
+
+oppositions:
+    - lobbies_agro_industriels_a_haute_consommation_d_eau_reference
+    - consortiums_prives_d_extraction_de_ressources_critiques_reference
+    - autorites_regionales_de_regulation_hydrologique_reference
+    - operateurs_de_zones_economiques_speciales_periurbaines_reference
+    - corporations_d_extraction_energetique_non_signataires_reference
+
+type_relation_dominante: conflit
+
+annee_debut: 2036
+annee_fin: 
+
+trajectoire: ascendant
+est_clandestin: false
+generation: transition
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  En 2098, les Sentinelles des Eaux Profondes sont devenues une force incontournable dans la gestion des ressources hydriques, surtout dans les zones rurales et périurbaines. Leur réseau de capteurs artisanaux, disséminés dans les puits et les rivières, alimente une base de données open-source qui fait référence pour les communautés locales. Leur action la plus médiatisée reste le blocage du projet *Aquifer-X* en 2072, où des milliers de Veilleurs ont encerclé les sites de forage illégaux dans le bassin du Congo, forçant les consortiums miniers à négocier. Aujourd’hui, leur modèle inspire des mouvements similaires en Asie du Sud-Est et en Amérique latine, où l’eau est devenue un enjeu de souveraineté territoriale.
+
+signes_distinctifs: >
+  Les Veilleurs se reconnaissent à leurs vêtements teints avec des pigments naturels (bleu indigo pour l’eau, vert pour la végétation) et à leurs symboles brodés : une goutte d’eau traversée par une racine, représentant leur lien avec les nappes phréatiques. Leurs capteurs low-tech, fabriqués à partir de matériaux recyclés, sont souvent peints aux couleurs des communautés locales et deviennent des objets de fierté collective.
+
+tensions_narratives: >
+  Le réseau est tiraillé entre son ancrage local et la nécessité de se structurer à une échelle plus large pour peser face aux acteurs globaux. Certains groupes prônent une radicalisation des actions (sabotages ciblés, hacking des systèmes de gestion hydrique), tandis que d’autres défendent une approche strictement non violente et légale. Par ailleurs, leur alliance avec les *Coopératives Agro-Écologiques* est menacée par des divergences sur la priorité à accorder à l’agriculture ou à la préservation des nappes. Enfin, leur dépendance aux technologies open-source les expose aux cyberattaques des consortiums privés, qui cherchent à discréditer leurs données.
+
+date_creation: 2026-08-15
+---
+
+# Réseau des Sentinelles des Eaux Profondes
+
+## Rôle dans [[reference]]
+Mouvement décentralisé de surveillance et de protection des nappes phréatiques, combinant technologies low-tech, savoirs locaux et résistance active contre l'accaparement des ressources hydriques. Les Veilleurs agissent comme un contre-pouvoir face aux consortiums privés et aux lobbies agro-industriels, documentant les pollutions et les extractions illégales tout en organisant des actions directes non violentes pour bloquer les projets destructeurs.
+
+## Responsabilités
+Cartographie citoyenne des nappes phréatiques via des réseaux de capteurs open-source, formation des communautés locales à la gestion durable de l'eau, organisation de campagnes de plaidoyer et de mobilisations contre les projets d'extraction massive. Ils développent également des systèmes de filtration low-tech et des techniques de recharge artificielle des nappes pour les zones rurales.
+
+## Variables influencées
+- [[climat_environnement_global]]
+- [[energie_ressources_critiques]]
+- [[organisation_territoires]]
+- [[systeme_economique_redistribution]]
+
+## Relations
+**Alliés** : [[cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference]], [[federation_communs_territoriaux_reference]], [[reseau_des_administrations_locales_rurales_participatives_reference]], [[collectifs_de_journalisme_embarque_reference]], [[voix_du_dehors_reference]]
+**Opposants** : [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]], [[consortiums_prives_d_extraction_de_ressources_critiques_reference]], [[autorites_regionales_de_regulation_hydrologique_reference]], [[operateurs_de_zones_economiques_speciales_periurbaines_reference]], [[corporations_d_extraction_energetique_non_signataires_reference]]
+
+## Description journalistique
+En 2098, les Sentinelles des Eaux Profondes sont devenues une force incontournable dans la gestion des ressources hydriques, surtout dans les zones rurales et périurbaines. Leur réseau de capteurs artisanaux, disséminés dans les puits et les rivières, alimente une base de données open-source qui fait référence pour les communautés locales. Leur action la plus médiatisée reste le blocage du projet *Aquifer-X* en 2072, où des milliers de Veilleurs ont encerclé les sites de forage illégaux dans le bassin du Congo, forçant les consortiums miniers à négocier. Aujourd’hui, leur modèle inspire des mouvements similaires en Asie du Sud-Est et en Amérique latine, où l’eau est devenue un enjeu de souveraineté territoriale.
+
+## Tensions narratives
+Le réseau est tiraillé entre son ancrage local et la nécessité de se structurer à une échelle plus large pour peser face aux acteurs globaux. Certains groupes prônent une radicalisation des actions (sabotages ciblés, hacking des systèmes de gestion hydrique), tandis que d’autres défendent une approche strictement non violente et légale. Par ailleurs, leur alliance avec les *Coopératives Agro-Écologiques* est menacée par des divergences sur la priorité à accorder à l’agriculture ou à la préservation des nappes. Enfin, leur dépendance aux technologies open-source les expose aux cyberattaques des consortiums privés, qui cherchent à discréditer leurs données.

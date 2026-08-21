@@ -36,7 +36,7 @@ zone_systemique:
 alliances:
 - communs_numeriques_agroecologiques_reference
 - cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference
-- frente_sert_o_livre_reference
+- frente_sertao_livre_reference
 - ong_environnementales_de_terrain_reference
 - reseau_des_administrations_locales_rurales_participatives_reference
 - reseaux_de_medecine_traditionnelle_augmentee_reference
@@ -55,8 +55,6 @@ type_relation_dominante: rivalité
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: ascendant
 generation: reconstruction
 
 injection:
@@ -77,6 +75,9 @@ tensions_narratives: >
   La ligne de fracture interne la plus vive oppose les 'transmetteurs ouverts', favorables au dialogue avec les institutions technocratiques d'adaptation, aux 'gardiens du seuil', qui refusent toute collaboration au nom de la pureté doctrinale — et dont certains glissent vers un ruralisme xénophobe. Par ailleurs, la captation de leurs savoirs par des plateformes d'IA agronomique soulève une crise de propriété collective : à qui appartient la mémoire du sol ? Enfin, la montée d'une seconde génération née dans les mégapoles et attirée par le Mouvement comme esthétique plutôt que comme pratique pose la question de l'authenticité et de la dilution — et pourrait soit revitaliser le réseau, soit l'évider de l'intérieur.
 
 date_creation: 2026-06-15
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Mouvement des Racines Vivantes
@@ -103,7 +104,7 @@ La ligne de fracture interne la plus vive oppose les 'transmetteurs ouverts', fa
 **Alliés :**
 - [[communs_numeriques_agroecologiques_reference]]
 - [[cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference]]
-- [[frente_sert_o_livre_reference]]
+- [[frente_sertao_livre_reference]]
 - [[ong_environnementales_de_terrain_reference]]
 - [[reseau_des_administrations_locales_rurales_participatives_reference]]
 - [[reseaux_de_medecine_traditionnelle_augmentee_reference]]

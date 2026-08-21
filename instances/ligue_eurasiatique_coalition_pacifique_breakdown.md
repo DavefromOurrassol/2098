@@ -46,8 +46,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2041
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -78,6 +76,9 @@ tensions_narratives: La tension fondamentale de la Ligue réside dans la contrad
   cause la capacité de la Ligue à contrôler les dynamiques insurrectionnelles sur
   ses propres flancs.
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Ligue Eurasiatique–Coalition Pacifique

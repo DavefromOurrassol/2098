@@ -61,8 +61,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -102,6 +100,8 @@ localisation:
   lieu: null
   type_lieu: null
 annee_debut_verifiee: true
+trajectoire: émergent
+est_clandestin: false
 
 ---
 

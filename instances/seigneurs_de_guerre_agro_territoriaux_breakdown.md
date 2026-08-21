@@ -57,7 +57,7 @@ oppositions:
 - enclaves_agro_communautaires_autonomes_breakdown
 - enclaves_industrielles_du_corridor_oural_caspien_breakdown
 - factions_para_etatiques_hydriques_breakdown
-- frente_sert_o_livre_breakdown
+- frente_sertao_livre_breakdown
 - front_de_resistance_aux_peages_sur_les_ressources_breakdown
 - gouvernements_regionaux_residuels_reterritorialisants_breakdown
 - les_veilleurs_du_fleuve_breakdown
@@ -74,8 +74,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2041
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -105,6 +103,9 @@ tensions_narratives: 'La contradiction centrale qui ronge ces seigneurs est cell
   brutale contre une dépendance technologique qui recomposerait d''autres formes de
   domination.'
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Seigneurs de Guerre Agro-Territoriaux
@@ -154,7 +155,7 @@ La contradiction centrale qui ronge ces seigneurs est celle de toute féodalité
 - [[enclaves_agro_communautaires_autonomes_breakdown]]
 - [[enclaves_industrielles_du_corridor_oural_caspien_breakdown]]
 - [[factions_para_etatiques_hydriques_breakdown]]
-- [[frente_sert_o_livre_breakdown]]
+- [[frente_sertao_livre_breakdown]]
 - [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
 - [[gouvernements_regionaux_residuels_reterritorialisants_breakdown]]
 - [[les_veilleurs_du_fleuve_breakdown]]

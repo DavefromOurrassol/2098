@@ -67,8 +67,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2049
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -106,6 +104,9 @@ localisation:
   lieu: Zones grises et tampons — campements des seuils fermés, corridors gris d'Asie
     Centrale, périphéries de Casablanca et Bassora
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Communautés Déplacées Hors Quota Migratoire

@@ -48,8 +48,6 @@ type_relation_dominante: infiltration
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: clandestin
-age_historique: résiduel
 generation: post-effondrement
 
 injection:
@@ -70,6 +68,9 @@ tensions_narratives: >
   Qui détient encore les clés d'authentification originelles, et sont-elles elles-mêmes compromises ? Une cellule découvre qu'elle diffuse depuis six mois des faux fabriqués par un bloc adverse — comment purger le réseau quand il n'existe pas de centre ? Un journaliste de terrain doit choisir entre publier une vérité qui déstabilisera une zone déjà au bord du chaos humanitaire ou la garder pour un moment qui ne viendra peut-être jamais. La question fondatrice revient, plus acérée que jamais : dans un monde où toute information est suspectée, la vérité documentée a-t-elle encore un effet différent du mensonge habile ?
 
 date_creation: 2026-06-15
+trajectoire: résiduel
+est_clandestin: true
+
 ---
 
 # Les Bouches de l'Abîme

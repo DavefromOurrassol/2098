@@ -730,7 +730,7 @@ zones:
     allies: []
     rivaux: []
   sources_attestees:
-  - frente_sert_o_livre_breakdown
+  - frente_sertao_livre_breakdown
   promu_depuis: null
 - slug: zone_golfe_levant
   nom: Zone Golfe Persique–Levant
@@ -2032,7 +2032,7 @@ zones:
     allies: []
     rivaux: []
   sources_attestees:
-  - rede_paulista_de_distribuic_o_algor_tmica_breakdown
+  - rede_paulista_de_distribuicao_algoritmica_breakdown
   promu_depuis: null
 - slug: seoul_collectif_nexcore
   nom: Séoul (Collectif NexCore)
@@ -3330,7 +3330,7 @@ Semi-aride nordeste et franges du cerrado brésilien où l'effondrement des stru
 
 **Tensions internes** : Tension entre refus de hiérarchie formelle et nécessité d'une défense collective coordonnée ; nœuds épuisés acceptant des pactes avec des cartels logistiques contre carburant et médicaments ; test existentiel de l'accueil des réfugiés côtiers désespérés.
 
-*Sources attestées : frente_sert_o_livre_breakdown*
+*Sources attestées : frente_sertao_livre_breakdown*
 
 ### Zone Golfe Persique–Levant
 
@@ -3989,7 +3989,7 @@ Mégapole brésilienne où la Rede Paulista de Distribuição Algorítmica conti
 
 **Tensions internes** : Guerre autour des nœuds résiduels entre reconstructeurs d'une gouvernance algorithmique réformée et radicaux refusant toute délégation technique ; biais d'allocation favorisant les zones à faible densité (accident ou intention ?) ; groupes brûlant les nœuds réseaux encore actifs.
 
-*Sources attestées : rede_paulista_de_distribuic_o_algor_tmica_breakdown*
+*Sources attestées : rede_paulista_de_distribuicao_algoritmica_breakdown*
 
 #### Séoul (Collectif NexCore) — sous [[asie_pacifique_sud_est]]
 

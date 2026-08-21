@@ -61,7 +61,7 @@ oppositions:
 - cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference
 - delta_du_mekong_reference
 - fonds_souverain_arctique_scandinave_reference
-- frente_sert_o_livre_reference
+- frente_sertao_livre_reference
 - front_souverainiste_des_ressources_d_amerique_du_sud_reference
 - gouvernements_du_bloc_sahelien_autonome_reference
 - great_lakes_autonomous_compact_reference
@@ -84,8 +84,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2030
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -122,6 +120,9 @@ localisation:
   zone: null
   lieu: null
   type_lieu: null
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Consortiums Privés d'Extraction de Ressources Critiques
@@ -179,7 +180,7 @@ La tension centrale qui les traverse est celle entre leur dépendance aux cadres
 - [[cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference]]
 - [[delta_du_mekong_reference]]
 - [[fonds_souverain_arctique_scandinave_reference]]
-- [[frente_sert_o_livre_reference]]
+- [[frente_sertao_livre_reference]]
 - [[front_souverainiste_des_ressources_d_amerique_du_sud_reference]]
 - [[gouvernements_du_bloc_sahelien_autonome_reference]]
 - [[great_lakes_autonomous_compact_reference]]

@@ -56,8 +56,6 @@ oppositions:
 type_relation_dominante: symbiose
 annee_debut: 2041
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -89,6 +87,9 @@ tensions_narratives: 'La tension centrale qui les traverse est celle entre missi
   NexCore et Mnemos notamment — qui voient en elles une concurrence difficilement
   contrôlable sur le marché de l''information post-effondrement.'
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Communautés Religieuses des Relais Physiques

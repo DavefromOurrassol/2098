@@ -60,8 +60,6 @@ type_relation_dominante: rivalité
 annee_debut: 2051
 annee_fin: 
 
-etat_temporel: actif
-age_historique: déclinant
 generation: post-effondrement
 
 injection:
@@ -82,6 +80,9 @@ tensions_narratives: >
   La tension centrale des Venelles est structurelle et inexorable : plus le réseau devient vital à la survie eurasienne, plus chaque faction qui en tient un tronçon a intérêt à en renforcer le contrôle plutôt qu'à le céder — accélérant ainsi la désintégration qu'il est censé prévenir. Une tentative récente du Conglométrat Bohai Transit de racheter plusieurs seigneuries logistiques clés a failli déclencher une guerre ouverte sur le corridor kazakh. Par ailleurs, les flux de réfugiés — tolérés quand ils paient, refoulés violemment sinon — créent des points de rupture humanitaire permanents que les Brigades Médicales Itinérantes tentent de gérer sans mandat ni protection. La question sans réponse demeure : qui, s'il en reste un, hérite des Venelles si la dernière seigneurie capable de tenir un segment décide d'en barrer l'accès définitivement ?
 
 date_creation: 2026-06-27
+trajectoire: déclinant
+est_clandestin: false
+
 ---
 
 # Les Venelles — Corridors Eurasiens Convoyage

@@ -51,8 +51,6 @@ type_relation_dominante: coopération
 annee_debut: 2061
 annee_fin: 
 
-etat_temporel: actif
-age_historique: mature
 generation: transition
 
 injection:
@@ -73,6 +71,9 @@ tensions_narratives: >
   L'équilibre fragile des Accords de Kinshasa est menacé par la sécheresse exceptionnelle de 2096 qui pousse plusieurs États à invoquer des clauses d'urgence nationale — Amara doit choisir entre défendre la lettre de l'accord ou accepter des dérogations qui affaibliront le précédent pour des décennies. Par ailleurs, une fuite de données de son réseau de capteurs, exploitée par un consortium minier pour anticiper les décisions d'allocation, soulève la question de savoir si la transparence technique qu'elle défend n'arme pas ses adversaires plus qu'elle ne protège les vulnérables. Enfin, une nouvelle génération d'ingénieurs sahéliens, formés à l'IA prédictive, remet en question son refus des systèmes automatisés de décision hydrique, la accusant d'un humanisme qui ralentit l'adaptation.
 
 date_creation: 2026-06-15
+trajectoire: mature
+est_clandestin: false
+
 ---
 
 # Amara Diallo-Nkosi

@@ -45,8 +45,6 @@ oppositions:
 type_relation_dominante: neutralité
 annee_debut: 2044
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -81,6 +79,9 @@ localisation:
   zone: geneve_bunker
   lieu: Siège Genevois de la CARS / Genève-Bunker
   type_lieu: infrastructure
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Bloc des Nations Non-Alignées Résiduelles

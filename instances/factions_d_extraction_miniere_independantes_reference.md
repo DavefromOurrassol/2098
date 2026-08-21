@@ -57,8 +57,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2030
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -92,6 +90,9 @@ localisation:
   zone: zones_grises_globales
   lieu: null
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Factions d'Extraction Minière Indépendantes

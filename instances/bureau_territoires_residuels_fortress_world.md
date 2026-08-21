@@ -67,8 +67,6 @@ type_relation_dominante: dépendance
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: forteresse
 
 injection:
@@ -89,6 +87,9 @@ tensions_narratives: >
   La tension centrale du Bureau est celle de ses propres archives : en codifiant méticuleusement chaque décision d'abandon, il a constitué le corpus documentaire le plus complet sur les crimes territoriaux des forteresses — des milliers de dossiers qui pourraient, entre les mains des bonnes coalitions dissidentes ou d'un tribunal algorithmique résiduel, constituer un acte d'accusation irréfutable. Des agents internes — les 'archivistes gris' — sont soupçonnés d'alimenter clandestinement les réseaux comme Fractures ou les Archives Chiffrées. Parallèlement, la fragmentation croissante du monde-forteresse pousse certains blocs à contester les classifications du Bureau pour récupérer des zones résiduelles riches en ressources, créant des conflits de juridiction qui lézardent son autorité. Enfin, la question non résolue : à quel moment une institution qui documente l'injustice cesse-t-elle d'en être le complice pour en devenir, malgré elle, le témoin à charge ?
 
 date_creation: 2026-06-27
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Bureau des Territoires Résiduels — Division Continentale

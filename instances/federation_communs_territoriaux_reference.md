@@ -49,7 +49,7 @@ alliances:
 - cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference
 - cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference
 - cooperatives_ia_open_source_reference
-- frente_sert_o_livre_reference
+- frente_sertao_livre_reference
 - great_lakes_autonomous_compact_reference
 - helsinki_communs_numeriques_reference
 - lyon_metropole_reference
@@ -78,14 +78,12 @@ oppositions:
 - operateurs_prives_d_energie_distribuee_hors_fct_reference
 - plateformes_centralisees_de_narration_officielle_reference
 - plateformes_d_optimisation_territoriale_par_ia_reference
-- rede_paulista_de_distribuic_o_algor_tmica_reference
+- rede_paulista_de_distribuicao_algoritmica_reference
 type_relation_dominante: rivalité
 
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: ascendant
 generation: transition
 
 injection:
@@ -106,6 +104,9 @@ tensions_narratives: >
   La FCT est tiraillée entre son idéal d'autonomie radicale et la nécessité croissante de s'interfacer avec des systèmes globaux qu'elle ne contrôle pas — réseaux d'IA industrielle, plateformes logistiques, marchés carbone. Certains bassins membres réclament une fédéralisation plus forte au risque de perdre leur souveraineté locale, tandis que d'autres menacent de sécession pour rejoindre des blocs concurrents. La question de la légitimité démocratique des assemblées de bassin face aux technocraties mégapolitaines reste ouverte et explosive.
 
 date_creation: 2026-06-15
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Fédération des Communs Territoriaux
@@ -141,7 +142,7 @@ La FCT est tiraillée entre son idéal d'autonomie radicale et la nécessité cr
 - [[cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference]]
 - [[cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference]]
 - [[cooperatives_ia_open_source_reference]]
-- [[frente_sert_o_livre_reference]]
+- [[frente_sertao_livre_reference]]
 - [[great_lakes_autonomous_compact_reference]]
 - [[helsinki_communs_numeriques_reference]]
 - [[lyon_metropole_reference]]
@@ -170,4 +171,4 @@ La FCT est tiraillée entre son idéal d'autonomie radicale et la nécessité cr
 - [[operateurs_prives_d_energie_distribuee_hors_fct_reference]]
 - [[plateformes_centralisees_de_narration_officielle_reference]]
 - [[plateformes_d_optimisation_territoriale_par_ia_reference]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_reference]]
+- [[rede_paulista_de_distribuicao_algoritmica_reference]]

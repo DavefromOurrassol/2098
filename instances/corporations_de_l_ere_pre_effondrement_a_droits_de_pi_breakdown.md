@@ -60,8 +60,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2041
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -94,6 +92,9 @@ tensions_narratives: 'La tension centrale est celle de la légitimité : dans un
   les licences exigées, alimentant ainsi un modèle d''extraction qui compromet les
   ressources nécessaires à la survie collective.'
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Corporations de l'Ère Pré-Effondrement à Droits de PI

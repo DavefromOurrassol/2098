@@ -57,8 +57,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2033
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -91,6 +89,9 @@ localisation:
   zone: corridors_eurasiens_peripheriques
   lieu: Corridors Eurasiens Périphériques
   type_lieu: infrastructure
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Opérateurs Logistiques Privés des Zones Grises Eurasiennes

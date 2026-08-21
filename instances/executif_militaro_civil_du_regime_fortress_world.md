@@ -44,7 +44,7 @@ alliances:
 - dispositifs_de_surveillance_numerique_souveraine_fortress_world
 - nexcore_fortress_world
 - pacte_forteresses_souveraines_fortress_world
-- rede_paulista_de_distribuic_o_algor_tmica_fortress_world
+- rede_paulista_de_distribuicao_algoritmica_fortress_world
 - vaultcorp_security_fortress_world
 oppositions:
 - alliance_sanitaire_des_populations_exclues_fortress_world
@@ -60,8 +60,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2036
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -94,6 +92,9 @@ localisation:
   zone: bunker_chambre_securite_territoriale
   lieu: Bunker de la Chambre de Sécurité Territoriale, Genève-Bunker
   type_lieu: infrastructure
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Exécutif Militaro-Civil du Régime
@@ -134,7 +135,7 @@ La tension fondamentale de l'Exécutif réside dans la contradiction entre sa rh
 - [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
 - [[nexcore_fortress_world]]
 - [[pacte_forteresses_souveraines_fortress_world]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_fortress_world]]
+- [[rede_paulista_de_distribuicao_algoritmica_fortress_world]]
 - [[vaultcorp_security_fortress_world]]
 **Opposants :**
 - [[alliance_sanitaire_des_populations_exclues_fortress_world]]

@@ -52,8 +52,6 @@ oppositions:
 type_relation_dominante: symbiose
 annee_debut: 2031
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -87,6 +85,9 @@ localisation:
   zone: siege_circulaire_kigali_amrrt
   lieu: Kigali — Siège circulaire de l'AMRRT
   type_lieu: site_strategique
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Réseaux de Médecine Régénérative Universelle

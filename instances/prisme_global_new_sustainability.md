@@ -47,8 +47,6 @@ type_relation_dominante: symbiose
 annee_debut: 2040
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: ère cognitive
 
 injection:
@@ -69,6 +67,9 @@ tensions_narratives: >
   La frontière entre 'espace de dissidence balisé' et mise sous cloche du désaccord réel est dénoncée par les collectifs de narration sauvage, qui accusent Prisme Global d'avoir transformé le pluralisme en pluralisme contrôlé. En interne, le Bureau de Modération est fracturé entre une faction technocratique favorable à un resserrement des protocoles et une faction humaniste qui réclame l'élargissement des zones de parole non filtrée. La question non résolue : si Prisme Global est désormais trop central pour échouer, qui le surveille — et qui raconte l'histoire de ceux qui le racontent ?
 
 date_creation: 2026-06-15
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Prisme Global

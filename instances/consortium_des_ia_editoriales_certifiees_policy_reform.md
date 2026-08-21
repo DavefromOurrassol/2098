@@ -51,8 +51,6 @@ oppositions:
 type_relation_dominante: coopération
 annee_debut: 2033
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -88,6 +86,9 @@ localisation:
   zone: conseil_regulation_numerique_geneve
   lieu: Genève-Nexus
   type_lieu: infrastructure
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Consortium des IA Éditoriales Certifiées

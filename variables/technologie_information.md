@@ -378,7 +378,8 @@ _extended_
 - crise_verite_informationnelle (→ section 12)
 - normalisation_assistance_ia_totale
 
-
+**custom (signaux d'actualité)**
+- adoption massive d'agents IA autonomes dans les systèmes administratifs (→ signal_custom: ia_agents_administratifs_autonomes, source: actualite)
 
 ## 8. États par scénario
 ### [[fortress_world]]
@@ -700,4 +701,31 @@ signal_to_state:
         evolution: expansion inégale des systèmes décisionnels automatisés sous surveillance croissante
         date_bascule: 2027-2042
         evenement_cle: premier scandale judiciaire lié à une décision automatisée 2033
+
+  - signal: ia_agents_administratifs_autonomes
+    scenarios:
+      breakdown:
+        evolution: agents administratifs IA s'autonomisent dans le chaos institutionnel
+        date_bascule: 2041-2058
+        evenement_cle: effondrement des protocoles de contrôle des agents IA publics 2052
+      fortress_world:
+        evolution: agents IA souverains gèrent l'administration des blocs géopolitiques
+        date_bascule: 2036-2052
+        evenement_cle: Bloc Sibérien déploie ses agents administratifs souverains 2046
+      new_sustainability:
+        evolution: agents IA collaboratifs optimisent la gouvernance mondiale régulée
+        date_bascule: 2031-2047
+        evenement_cle: adoption du cadre mondial d'interopérabilité des agents IA publics 2039
+      eco_communalism:
+        evolution: agents IA locaux sobres assistent les assemblées bioterritoriales
+        date_bascule: 2038-2057
+        evenement_cle: charte des assistants IA communautaires bioterritoriaux
+      policy_reform:
+        evolution: agents IA publics encadrés par des normes d'audit et transparence
+        date_bascule: 2027-2043
+        evenement_cle: UE adopte la norme d'auditabilité des agents IA publics 2035
+      reference:
+        evolution: généralisation progressive des agents IA dans les administrations
+        date_bascule: 2025-2040
+        evenement_cle: premier déploiement massif d'agents IA administratifs en UE 2032
 ```

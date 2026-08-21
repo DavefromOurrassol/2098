@@ -56,8 +56,6 @@ type_relation_dominante: alliance stratégique
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: transition
 
 injection:
@@ -78,6 +76,9 @@ tensions_narratives: >
   La tension centrale du KNSF-AGRC en 2098 est celle du choix entre deux légitimités incompatibles : redistribuer une fraction de la rente circumpolaire au fonds climatique mondial — ce qui consoliderait son image de 'bon acteur' de la gouvernance globale mais affaiblirait l'argument souverain — ou capitaliser sur cette ressource comme rempart identitaire et politique face à l'absorption technocratique. Une faction interne de jeunes économistes formés à l'ARIA-Nexus pousse vers une intégration totale dans les marchés de crédits énergétiques régulés, ce qui déchire le conseil d'administration. Pendant ce temps, les syndicats d'extraction privée non régulés cherchent à contourner les licences KNSF en finançant des opérations para-légales dans les zones maritimes disputées — une menace existentielle que le fonds ne peut contrer qu'en renforçant précisément les institutions internationales qu'il cherche par ailleurs à tenir à distance.
 
 date_creation: 2026-06-23
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Kalaallit Nunaat Sovereign Fund — Autorité de Gestion des Ressources Circumpolaires (KNSF-AGRC)

@@ -22,16 +22,18 @@ ligne_editoriale:
 # Liste des rubriques pour cette série.
 # Chaque thématique génère articles_par_thematique articles.
 thematiques:
-  - politique
-  - societe
+  - culture
+  - lifestyle_art_de_vivre
+  - histoire_patrimoine
+  - medias_communication
 # ── Nombre d'articles par thématique ──
 # 1 = un article par thématique (recommandé pour commencer)
-articles_par_thematique: 1
+articles_par_thematique: 3
 
 # ── Longueur des articles ──
 # breve | analyse | reportage | chronique | editorial
 # "auto" = laisse chaque thématique choisir son format naturel
-longueur: breve
+longueur: auto
 
 # ── Angle spécifique (optionnel) ──
 # Précise un angle commun à tous les articles de la série.

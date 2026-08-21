@@ -1,0 +1,176 @@
+============================================================
+OURRASSOL 2098 — Création entités + instances
+============================================================
+
+Mode : custom (fourni via --mode)
+
+=== gelecek_meclisi ===
+[1/3] Déduction de l'archétype...
+[llm] Mistral (mistral-large-latest) — entrée : 25889 | sortie : 313
+[2/3] Validation (essai 1)...
+[3/3] Injection de l'entité...
+[Instances] Génération automatique pour 6 scénario(s)...
+  Instances (6 scénario(s)) :
+    → breakdown [CONTRAINTE DURE]... [llm] Mistral (mistral-large-latest) — entrée : 19259 | sortie : 1837
+✓
+    → fortress_world... [llm] Mistral (mistral-large-latest) — entrée : 19063 | sortie : 1524
+✓
+    → new_sustainability... [llm] Mistral (mistral-large-latest) — entrée : 18586 | sortie : 1746
+✓
+    → eco_communalism... [llm] Mistral (mistral-large-latest) — entrée : 17878 | sortie : 1653
+✓
+    → policy_reform... [llm] Mistral (mistral-large-latest) — entrée : 18445 | sortie : 1849
+✓
+    → reference... ============================================================
+EXTRACT_LOCALISATION — Ourrassol 2098
+============================================================
+Fiches à traiter : 6
+
+[1/6] 
+[instance] gelecek_meclisi_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 9425 | sortie : 80
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : L'entité Gelecek Meclisi est une assemblée itinérante sans ancrage géographique fixe, organisée dans des zones neutres (anciennes archives, nœuds logistiques désaffectés) à l'échelle régionale et continentale.
+  → écrit
+[2/6] 
+[instance] gelecek_meclisi_eco_communalism
+  scénario : eco_communalism
+[llm] Mistral (mistral-small-latest) — entrée : 8852 | sortie : 87
+  issue     : ambigu
+  zone      : bioterritoires_anatoliens
+  lieu      : ancienne centrale solaire reconvertie en Anatolie
+  motif     : Lieu précis mentionné (Anatolie) mais zone trop générique pour le slug 'bioterritoires_anatoliens' qui couvre toute la péninsule.
+  → écrit
+[3/6] 
+[instance] gelecek_meclisi_fortress_world
+  scénario : fortress_world
+[llm] Mistral (mistral-small-latest) — entrée : 7540 | sortie : 69
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : L'entité est une assemblée transnationale et informelle sans ancrage géographique local précis, opérant via des data havens éphémères et des campements de seuil.
+  → écrit
+[4/6] 
+[instance] gelecek_meclisi_new_sustainability
+  scénario : new_sustainability
+[llm] Mistral (mistral-small-latest) — entrée : 7493 | sortie : 92
+  issue     : extrait
+  zone      : centre_institutionnel_geneve
+  lieu      : siège flottant ancré dans le détroit de Gibraltar
+  motif     : Le texte mentionne explicitement un siège flottant ancré dans le détroit de Gibraltar, infrastructure hybride située dans la zone géographique 'centre_institutionnel_geneve'.
+  → écrit
+[5/6] 
+[instance] gelecek_meclisi_policy_reform
+  scénario : policy_reform
+[llm] Mistral (mistral-small-latest) — entrée : 7519 | sortie : 77
+  [VALIDATION ÉCHOUÉE] slug zone inconnu : 'istanbul' (non trouvé dans geographie/policy_reform.md)
+  Réponse LLM : {"issue": "extrait", "zone": "istanbul", "lieu": "Istanbul (siège physique du Gelecek Meclisi)", "type_lieu": "infrastructure", "justification": "Le texte mentionne explicitement le siège physique du 
+[6/6] 
+[instance] gelecek_meclisi_reference
+  scénario : reference
+[llm] Mistral (mistral-small-latest) — entrée : 6988 | sortie : 65
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : L'entité n'a pas de siège fixe et ses sessions tournent entre plusieurs villes (Istanbul, Nairobi, Singapour Est) sans ancrage géographique local précis.
+  → écrit
+
+============================================================
+RÉCAPITULATIF
+============================================================
+  Extraits (zone trouvée)    : 1
+  Vides assumés (transnat.)  : 3
+  Ambigus (review manuelle)  : 1
+  Erreurs                    : 1
+  Total traité               : 6
+
+  → 1 fiche(s) à review manuelle :
+     • gelecek_meclisi_eco_communalism — zone candidate : bioterritoires_anatoliens
+
+  → 1 erreur(s) :
+     • gelecek_meclisi_policy_reform : ["slug zone inconnu : 'istanbul' (non trouvé dans geographie/policy_reform.md)"]
+
+Fiches modifiées : 5
+Sauvegardes .bak créées pour chaque fichier modifié.
+Rapport need_action mis a jour : documentation/need_action/localisation_review.md
+   (1 fiche(s) en attente)
+=================================================================
+  REVIEW LOCALISATION — Ourrassol 2098
+=================================================================
+  MODE AUTO-RESOLVE : résolution automatique par le LLM
+
+  1 fiche(s) à reviewer
+
+  Résolution automatique de 1 fiche(s)...
+
+  [1/1] gelecek_meclisi_eco_communalism
+    zone candidate : bioterritoires_anatoliens
+[llm] Mistral (mistral-small-latest) — entrée : 4958 | sortie : 116
+    décision      : choisir
+    zone retenue  : bassins_versants_anatoliens
+    motif         : L'Anatolie est une région précise au sein de la péninsule anatolienne, mieux représentée par le slug de niveau 2 'bassins_versants_anatoliens' que par le slug générique de niveau 1 'bioterritoires_anatoliens'.
+    → écrit
+
+
+📋 Rapport mis à jour : documentation/need_action/localisation_review.md
+   (0 fiche(s) restantes)
+=================================================================
+  Auto-resolve terminé.
+  Résolus : 1   Skippés/erreurs : 0
+=================================================================
+
+[validate] Démarrage de la validation...
+[validate] 1/9 — Nomenclature...
+[validate] 2/9 — Cohérence systémique...
+[validate] 3/9 — Entités et instances...
+[validate] 4/9 — Thématiques...
+[validate] 5/9 — Localisation...
+[validate] 6/9 — Références croisées...
+[validate] 7/9 — Matrice d'influence...
+[validate] 8/9 — Événements...
+[validate] 9/9 — Cohérence narrative post-injection...
+
+════════════════════════════════════════════════════════════
+VALIDATION — OURRASSOL 2098
+════════════════════════════════════════════════════════════
+
+📊 INVENTAIRE
+────────────────────────────────────────────────────────────
+  [NOMENCLATURE] 6/6 scénarios | 12/12 variables
+  [ENTITIES] 592 entités chargées
+  [INSTANCES] 744 instances chargées
+  [THEMATIQUES] 20 thématiques trouvées
+  [LOCALISATION] 827 fiches riches | 1 sans localisation | 0 review_manuelle
+  [CROSS_REFERENCES] 1374 slugs dans le référentiel
+  [MATRIX] 132 edges dans la matrice
+  [EVENTS] 24 archétypes d'événements
+  [EVENTS] 83 instances d'événements
+  [NARRATIVE] Aucune event_instance modifiée depuis la dernière validation — scan ignoré (--narrative pour forcer)
+
+⚠️  AVERTISSEMENTS (1)
+────────────────────────────────────────────────────────────
+  [LOCALISATION] 1 avertissements
+
+════════════════════════════════════════════════════════════
+✓ BASE VALIDE — 0 erreurs | 1 avertissements | 0 corrections
+════════════════════════════════════════════════════════════
+[llm] Mistral (mistral-large-latest) — entrée : 19539 | sortie : 1664
+✓
+
+Terminé. Voir /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/entites_custom/processed.yaml et /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/entites_custom/needs_review.yaml.
+Instances : 6 créée(s) | 0 déjà existante(s) | 0 erreur(s)
+
+════════════════════════════════════════════════════════════
+CYCLE POST-INJECTION
+════════════════════════════════════════════════════════════
+
+→ /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/generator/extract_localisation.py
+
+→ /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/generator/review_localisation.py --auto-resolve
+
+→ /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/generator/validate.py
+
+✓ Cycle post-injection terminé.

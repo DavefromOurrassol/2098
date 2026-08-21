@@ -49,8 +49,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2027
 annee_fin: null
-etat_temporel: actif
-age_historique: dominant
 generation: transition
 injection:
   type: canonique
@@ -86,6 +84,9 @@ localisation:
   zone: tel_aviv
   lieu: Tel-Aviv
   type_lieu: ville
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Gouvernement d'Israël

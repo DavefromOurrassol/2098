@@ -50,8 +50,6 @@ type_relation_dominante: coopération
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: reconstruction
 
 injection:
@@ -72,6 +70,9 @@ tensions_narratives: >
   La tension centrale de son parcours dans ce monde est la suivante : ses outils conceptuels, pensés pour émanciper les communautés, sont régulièrement instrumentalisés par des factions locales pour légitimer des fermetures identitaires ou des oligarchies de façade délibérative. Doit-elle amender ses chartes pour les rendre plus résistantes au détournement, au risque de les rigidifier ? Par ailleurs, une nouvelle génération de facilitateurs formés par ses réseaux commence à diverger de sa philosophie, préférant des protocoles algorithmiques légers qu'ils jugent plus équitables — un conflit générationnel qui menace l'unité du mouvement. Sa propre trajectoire vers une forme de figure tutélaire mythifiée la trouble profondément, elle qui a fondé toute son œuvre sur la méfiance envers l'autorité incarnée.
 
 date_creation: 2026-06-15
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Leena Väinälä

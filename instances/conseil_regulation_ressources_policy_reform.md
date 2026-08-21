@@ -81,8 +81,6 @@ oppositions:
 type_relation_dominante: coopération
 annee_debut: 2061
 annee_fin: null
-etat_temporel: actif
-age_historique: dominant
 generation: transition
 injection:
   type: canonique
@@ -123,6 +121,9 @@ tensions_narratives: 'La légitimité démocratique du CRRC-ARN est contestée d
 
   '
 date_creation: 2026-06-15
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Conseil de Régulation des Ressources Critiques — Autorité Réformée de Nairobi
@@ -179,4 +180,3 @@ La légitimité démocratique du CRRC-ARN est contestée depuis sa réforme : qu
 - [[reseau_des_journalistes_d_investigation_energetique_policy_reform]]
 - [[reseau_des_lobbyistes_techniques_onu_energie_policy_reform]]
 - [[syndicats_d_extraction_privee_non_regules_policy_reform]]
-- [[test_durcissement_policy_reform]]

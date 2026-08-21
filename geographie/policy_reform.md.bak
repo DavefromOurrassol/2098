@@ -56,6 +56,8 @@ zones:
     type_entite: pays
     portion: null
   - entite: Groenland
+    type_entite: pays
+    portion: null
   description: Zone définie par la trajectoire politique américaine dans le scénario,
     notamment l'élection de 2055 qui porte au pouvoir un gouvernement social-démocrate
     progressiste contraint par les accords internationaux existants. Les Amériques
@@ -1637,7 +1639,7 @@ zones:
     - hub_europeen_regulation
     - la_haye_tribunal
   sources_attestees:
-  - rede_paulista_de_distribuic_o_algor_tmica_policy_reform
+  - rede_paulista_de_distribuicao_algoritmica_policy_reform
   - bureau_gouvernance_algorithmique_policy_reform
   promu_depuis: null
 - slug: singapour_brookings
@@ -2013,7 +2015,7 @@ zones:
     rivaux:
     - acra_siege_la_haye
   sources_attestees:
-  - rede_paulista_de_distribuic_o_algor_tmica_policy_reform
+  - rede_paulista_de_distribuicao_algoritmica_policy_reform
   promu_depuis: null
 - slug: conseil_regulation_numerique_geneve
   nom: Conseil de Régulation Numérique de Genève
@@ -2112,9 +2114,9 @@ zones:
   promu_depuis: null
 - slug: noeuds_irrigation_saheliens
   nom: Nœuds d'irrigation atmosphérique sahéliens
-  niveau: 3
+  niveau: 2
   type: infrastructure
-  parent: corridors_vivants_rirec
+  parent: bloc_souverainiste_non_signataire
   origine_reelle:
   - entite: Niger
     type_entite: pays
@@ -3083,7 +3085,7 @@ Mégalopole de 32 millions d'habitants où opère la Rede Paulista de Distribui�
 
 **Rivaux** : hub_europeen_regulation, la_haye_tribunal
 
-*Sources attestées : rede_paulista_de_distribuic_o_algor_tmica_policy_reform, bureau_gouvernance_algorithmique_policy_reform*
+*Sources attestées : rede_paulista_de_distribuicao_algoritmica_policy_reform, bureau_gouvernance_algorithmique_policy_reform*
 
 #### Singapour — sous [[espace_eurasiatique]]
 
@@ -3273,7 +3275,7 @@ Tours de contrôle climatisées au cœur de São Paulo depuis lesquelles la RPDA
 
 **Rivaux** : acra_siege_la_haye
 
-*Sources attestées : rede_paulista_de_distribuic_o_algor_tmica_policy_reform*
+*Sources attestées : rede_paulista_de_distribuicao_algoritmica_policy_reform*
 
 ##### Conseil de Régulation Numérique de Genève — sous [[geneve_nexus]]
 

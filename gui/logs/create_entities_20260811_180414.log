@@ -1,0 +1,153 @@
+============================================================
+OURRASSOL 2098 — Création entités + instances
+============================================================
+(mode --dry-run : rien ne sera écrit)
+
+Mode : auto-suggest (fourni via --mode)
+
+[1/2] Analyse de la couverture du vault...
+  221 instance(s) analysée(s) | 586 entité(s) existante(s)
+[2/2] Génération de 1 idée(s) d'entités...
+[llm] Mistral (mistral-large-latest) — entrée : 26917 | sortie : 2200
+  ✓ Consortium des Pêcheries Autonomes de l'Arctique (CPAA) (organisation) — ref: new_sustainability
+    → Comble le vide géographique dans la zone polaire (Nuuk, Islande, Arctique) et renforce la catégorie 'organisation' tout en intégrant des enjeux écologiques et démographiques spécifiques à cette région sous-représentée.
+  ✓ Réseau des Cartographes des Zones Grises (RCZG) (réseau) — ref: zones_grises_tampons
+    → Couvre la zone géographique sous-représentée du bassin caspien et des corridors eurasiens, tout en renforçant la catégorie 'réseau' avec une fonction systémique distincte (cartographie des marges).
+  ✓ Agence de Régulation des Détroits Stratégiques (ARDS) (institution) — ref: policy_reform
+    → Répond au déséquilibre géographique des détroits stratégiques (Ormuz, Bab el-Mandeb) et renforce la catégorie 'institution' avec une fonction de régulation des flux critiques.
+  ✓ Collectif des Ingénieurs Climatiques du Golfe (CICG) (réseau) — ref: new_sustainability
+    → Cible la zone géographique sous-représentée du golfe Persique et renforce la catégorie 'réseau' avec une approche écologique et technologique innovante.
+  ✓ Ligue des Villes Portuaires du Sud Global (LVPSG) (organisation) — ref: eco_communalism
+    → Comble le vide géographique des zones côtières sous-représentées (Lagos, Karachi, Medellín) et renforce la catégorie 'organisation' avec une approche territoriale et écologique.
+  ✓ Syndicat des Travailleurs des Mines de Lithium du Triangle (STMLT) (organisation) — ref: breakdown
+    → Couvre la zone géographique sous-représentée du corridor lithium (Amérique du Sud) et renforce la catégorie 'organisation' avec une fonction sociale et économique critique.
+  ✓ Archives des Mémoires Oubliées (AMO) (infrastructure) — ref: reference
+    → Répond au déséquilibre géographique de l'Afrique centrale (Brazzaville, bassin du Congo) et renforce la catégorie 'infrastructure' avec une fonction mémorielle et sociale unique.
+  ✓ Front des Techniciens Sobres du Sahel (FTSS) (réseau) — ref: eco_communalism
+    → Cible la zone géographique sous-représentée du Sahel et renforce la catégorie 'réseau' avec une approche technologique et écologique innovante.
+  ✓ Consortium des Énergies Marines du Pacifique Sud (CEMPS) (entreprise) — ref: new_sustainability
+    → Comble le vide géographique des îles du Pacifique (Funafuti, Tuvalu) et renforce la catégorie 'entreprise' avec une approche énergétique et écologique spécifique.
+  ✓ Le Cartographe des Marges (LCM) (humain) — ref: zones_grises_globales
+    → Couvre la zone géographique sous-représentée de l'Asie centrale et renforce la catégorie 'humain' avec une fonction systémique unique (cartographie des marges).
+
+[DRY-RUN] Idées générées (non écrites dans queue.yaml) :
+queue:
+- category: organisation
+  etat: ascendant
+  nom: Consortium des Pêcheries Autonomes de l'Arctique (CPAA)
+  role: Alliance de communautés inuit et sami, ainsi que de pêcheurs indépendants,
+    basée à Nuuk (Groenland), qui gère collectivement les droits de pêche et les quotas
+    dans les eaux arctiques rendues accessibles par la fonte des glaces. Elle négocie
+    directement avec les blocs géopolitiques pour éviter l'exploitation industrielle
+    non régulée et protège les écosystèmes marins fragiles tout en assurant la subsistance
+    des populations locales.
+  scenario_hint: null
+  scenario_ref: new_sustainability
+  source: auto_generated
+- category: réseau
+  etat: marginal
+  nom: Réseau des Cartographes des Zones Grises (RCZG)
+  role: Réseau clandestin de géographes, hackers et anciens militaires opérant depuis
+    Tbilissi (Géorgie), qui cartographie en temps réel les zones grises et les corridors
+    informels d'Asie centrale et du Caucase. Il fournit des données critiques aux
+    acteurs locaux, aux ONG et aux contrebandiers pour naviguer dans les territoires
+    non gouvernés, tout en documentant les violations des droits humains et les trafics
+    illicites.
+  scenario_hint: null
+  scenario_ref: zones_grises_tampons
+  source: auto_generated
+- category: institution
+  etat: dominant
+  nom: Agence de Régulation des Détroits Stratégiques (ARDS)
+  role: Institution internationale basée à Istanbul (Turquie), chargée de réguler
+    le trafic maritime et les droits de passage dans les détroits d'Ormuz et de Bab
+    el-Mandeb. Elle arbitre les conflits entre blocs géopolitiques pour éviter les
+    blocages logistiques et garantit un accès équitable aux corridors énergétiques
+    critiques, tout en luttant contre la piraterie et les milices privées.
+  scenario_hint: null
+  scenario_ref: policy_reform
+  source: auto_generated
+- category: réseau
+  etat: émergent
+  nom: Collectif des Ingénieurs Climatiques du Golfe (CICG)
+  role: Réseau de scientifiques et d'ingénieurs basé à Bandar Abbas (Iran), spécialisé
+    dans la géo-ingénierie locale pour atténuer les effets des vagues de chaleur extrêmes
+    dans le golfe Persique. Il développe des solutions low-tech (brumisateurs solaires,
+    revêtements réfléchissants) et des protocoles de survie pour les populations urbaines,
+    tout en documentant les impacts des projets de géo-ingénierie non régulés des
+    blocs souverains.
+  scenario_hint: null
+  scenario_ref: new_sustainability
+  source: auto_generated
+- category: organisation
+  etat: ascendant
+  nom: Ligue des Villes Portuaires du Sud Global (LVPSG)
+  role: Coalition de maires et de gouvernements locaux des villes portuaires de Lagos
+    (Nigeria), Karachi (Pakistan), et Medellín (Colombie), qui coordonne des politiques
+    d'adaptation aux montée des eaux et aux événements climatiques extrêmes. Elle
+    mutualise les ressources pour construire des infrastructures résilientes (digues
+    modulaires, systèmes de drainage intelligents) et négocie avec les consortiums
+    logistiques pour éviter l'abandon des zones côtières vulnérables.
+  scenario_hint: null
+  scenario_ref: eco_communalism
+  source: auto_generated
+- category: organisation
+  etat: mature
+  nom: Syndicat des Travailleurs des Mines de Lithium du Triangle (STMLT)
+  role: Syndicat transnational basé à Antofagasta (Chili), représentant les travailleurs
+    des mines de lithium des déserts d'Atacama (Chili), d'Uyuni (Bolivie) et de Hombre
+    Muerto (Argentine). Il lutte pour des conditions de travail décentes, une redistribution
+    équitable des revenus du lithium, et la protection des écosystèmes désertiques
+    contre l'extraction prédatrice, tout en négociant avec les consortiums miniers
+    et les blocs géopolitiques.
+  scenario_hint: null
+  scenario_ref: breakdown
+  source: auto_generated
+- category: infrastructure
+  etat: émergent
+  nom: Archives des Mémoires Oubliées (AMO)
+  role: Infrastructure décentralisée de préservation des récits et des savoirs des
+    populations déplacées et marginalisées, basée à Brazzaville (République du Congo).
+    Elle collecte, numérise et diffuse des témoignages oraux, des cartes mentales
+    et des pratiques culturelles des communautés riveraines du bassin du Congo, du
+    Sahel et des zones de conflit, afin de lutter contre l'effacement historique et
+    de documenter les violations des droits humains.
+  scenario_hint: null
+  scenario_ref: reference
+  source: auto_generated
+- category: réseau
+  etat: marginal
+  nom: Front des Techniciens Sobres du Sahel (FTSS)
+  role: Réseau d'ingénieurs, d'agriculteurs et de techniciens basé à Agadez (Niger),
+    qui promeut des solutions technologiques sobres et adaptées aux réalités du Sahel.
+    Il développe des systèmes d'irrigation solaire, des techniques de récupération
+    d'eau de pluie, et des outils de monitoring climatique low-tech, tout en formant
+    les communautés locales à leur maintenance et en résistant à l'imposition de technologies
+    importées non adaptées.
+  scenario_hint: null
+  scenario_ref: eco_communalism
+  source: auto_generated
+- category: entreprise
+  etat: ascendant
+  nom: Consortium des Énergies Marines du Pacifique Sud (CEMPS)
+  role: Consortium d'entreprises et de coopératives locales basé à Funafuti (Tuvalu),
+    spécialisé dans l'exploitation des énergies marines (houle, marémotrice, thermique
+    des mers) pour les petits États insulaires du Pacifique. Il développe des micro-réseaux
+    énergétiques autonomes et résilients, tout en négociant avec les blocs géopolitiques
+    pour éviter l'accaparement des ressources marines par des acteurs extérieurs.
+  scenario_hint: null
+  scenario_ref: new_sustainability
+  source: auto_generated
+- category: humain
+  etat: marginal
+  nom: Le Cartographe des Marges (LCM)
+  role: Individu ou collectif anonyme opérant depuis les zones grises de l'Asie centrale
+    (Karakalpakstan, Ouzbékistan), spécialisé dans la cartographie des territoires
+    abandonnés, des corridors informels et des réseaux de contrebande. Ses cartes,
+    diffusées via des réseaux clandestins, sont utilisées par les migrants, les contrebandiers
+    et les ONG pour naviguer dans les espaces non gouvernés, tout en documentant les
+    dynamiques géopolitiques invisibles.
+  scenario_hint: null
+  scenario_ref: zones_grises_globales
+  source: auto_generated
+

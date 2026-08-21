@@ -39,7 +39,7 @@ zone_systemique:
 alliances:
 - arctic_passage_authority_breakdown
 - armada_logistique_nordique_breakdown
-- autorite_passage_arctique_breakdown
+- arctic_passage_authority_breakdown
 - consortium_energetique_oural_caspien_breakdown
 - hanse_baltique_breakdown
 oppositions:
@@ -56,8 +56,6 @@ type_relation_dominante: rivalité
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: résiduel
 generation: post-effondrement
 
 injection:
@@ -78,6 +76,9 @@ tensions_narratives: >
   La question centrale est celle de l'après : qui prendra le contrôle des quais si le Bureau cède — et à quel prix de sang ? Le Konsortiet Nordark pousse à une intégration commerciale que le Bureau refuse car elle signerait sa dissolution ; les factions militaires ex-OTAN voudraient un protectorat qu'elles n'ont pas les moyens d'imposer ; le Conglométrat Bohai Transit offre des financements en échange d'exclusivités que le Bureau ne peut accorder sans s'aliéner tous les autres. Pendant ce temps, les agents du Bureau eux-mêmes se fractionnent : une faction pragmatique veut négocier une intégration honorable, une faction dure préfère le blocage total plutôt que la dissolution — quitte à faire sauter les écluses si nécessaire.
 
 date_creation: 2026-06-27
+trajectoire: résiduel
+est_clandestin: false
+
 ---
 
 # Administration Résiduelle de Mourmansk — Le Bastion du Détroit Gelé
@@ -105,7 +106,7 @@ La question centrale est celle de l'après : qui prendra le contrôle des quais 
 **Alliés :**
 - [[arctic_passage_authority_breakdown]]
 - [[armada_logistique_nordique_breakdown]]
-- [[autorite_passage_arctique_breakdown]]
+- [[arctic_passage_authority_breakdown]]
 - [[consortium_energetique_oural_caspien_breakdown]]
 - [[hanse_baltique_breakdown]]
 **Opposants :**

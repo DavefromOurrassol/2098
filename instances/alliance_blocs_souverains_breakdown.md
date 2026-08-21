@@ -46,10 +46,8 @@ oppositions:
 type_relation_dominante: conflit
 
 annee_debut: 2041
-annee_fin: 
+annee_fin: 2053
 
-etat_temporel: transformé
-age_historique: résiduel
 generation: forteresse
 
 injection:
@@ -70,6 +68,9 @@ tensions_narratives: >
   Qui détient la légitimité d'invoquer les traités ABS — et à quelles fins ? Des diplomates zombies continuent de négocier dans des bunkers au nom d'États qui n'existent plus, créant des droits fantômes sur des ressources bien réelles. La question de savoir si l'ABS peut être 'réactivée' divise profondément les survivants institutionnels : certains y voient le seul cadre possible pour une reconstruction par blocs, d'autres l'accusent d'être la matrice même du chaos actuel. Un conflit latent oppose les archivistes-juristes qui veulent préserver les traités comme socle normatif futur aux commandants de terrain qui veulent les effacer pour repartir de zéro.
 
 date_creation: 2026-06-15
+trajectoire: transformé
+est_clandestin: false
+
 ---
 
 # Pacte des Souverains — Ce qui en reste

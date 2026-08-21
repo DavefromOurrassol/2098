@@ -62,8 +62,6 @@ type_relation_dominante: dépendance
 annee_debut: 2034
 annee_fin: 
 
-etat_temporel: actif
-age_historique: déclinant
 generation: forteresse
 
 injection:
@@ -84,6 +82,9 @@ tensions_narratives: >
   La tension centrale est celle entre l'urgence vécue par les habitants et la lenteur paralysée des institutions qui prétendent les gouverner : jusqu'où peut aller la désintégration territoriale avant qu'un État riverain revendique une compétence exclusive — ou l'abandonne définitivement ? La montée des flux migratoires alimente par ailleurs une instrumentalisation politique croissante dans les pays d'accueil, transformant la catastrophe écologique en carburant pour les nationalismes. Enfin, des acteurs privés — fonds fonciers climatiques, consortiums d'infrastructure — commencent à racheter des droits sur les terres encore viables, soulevant la question de savoir si la prochaine phase du delta sera celle d'une privatisation silencieuse de ce qui en reste.
 
 date_creation: 2026-06-27
+trajectoire: déclinant
+est_clandestin: false
+
 ---
 
 # Delta du Gange — Zone de Crise Permanente

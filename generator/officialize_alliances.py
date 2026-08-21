@@ -127,12 +127,15 @@ VALID_CATEGORIES = [
 # ---------------------------------------------------------------------------
 
 def slugify(text):
-    s = text.lower()
-    for fr, en in [("é", "e"), ("è", "e"), ("ê", "e"), ("ë", "e"),
-                   ("à", "a"), ("â", "a"), ("ä", "a"), ("ù", "u"),
-                   ("û", "u"), ("ü", "u"), ("î", "i"), ("ï", "i"),
-                   ("ô", "o"), ("ö", "o"), ("ç", "c")]:
-        s = s.replace(fr, en)
+    # Normalisation Unicode générique (NFD + suppression des marques
+    # diacritiques) plutôt qu'une table d'accents français en dur —
+    # même correctif que create_entities_and_instances.py et
+    # create_entity.py, appliqué le 14 août 2026 (bug trouvé le 8 août
+    # sur des slugs portugais cassés, voir audit_broken_slugs.py).
+    import unicodedata
+    s = unicodedata.normalize("NFD", text or "")
+    s = "".join(c for c in s if unicodedata.category(c) != "Mn")
+    s = s.lower()
     s = re.sub(r"[^a-z0-9]+", "_", s)
     return s.strip("_")
 
@@ -565,8 +568,8 @@ type_relation_dominante: neutralité
 annee_debut: 2026
 annee_fin:
 
-etat_temporel: actif
-age_historique: émergent
+trajectoire: émergent
+est_clandestin: false
 generation: transition
 
 injection:

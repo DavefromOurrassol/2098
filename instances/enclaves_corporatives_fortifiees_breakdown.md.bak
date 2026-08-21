@@ -4,6 +4,10 @@ type: instance
 slug: enclaves_corporatives_fortifiees_breakdown
 entite: enclaves_corporatives_fortifiees
 scenario: breakdown
+localisation:
+  zone: afrique_de_louest_lagos_sahel
+  lieu: Lagos-Est
+  type_lieu: infrastructure
 statut: officialise_enrichi
 type_dans_scenario: organisation
 role_dans_scenario: 'Dans le scénario breakdown, incarnent la substitution des institutions
@@ -31,13 +35,45 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- carthage_nord_nexcore_breakdown
+- compagnies_de_geo_ingenierie_privees_sans_mandat_breakdown
+- consortiums_logistiques_agro_corporatifs_breakdown
+- corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown
+- milices_privees_documentees_terrain_breakdown
+- rede_paulista_de_distribuic_o_algor_tmica_breakdown
+- reseau_des_anciens_financeurs_devenus_censeurs_breakdown
+- seigneuries_logistiques_armees_breakdown
+oppositions:
+- agadez_ligue_sahel_numerique_breakdown
+- archives_neutres_geneve_breakdown
+- arctique_nordark_breakdown
+- collectif_hackers_decroissance_infrastructure_breakdown
+- collectifs_de_reparation_energetique_breakdown
+- communes_rust_belt_breakdown
+- communes_rust_belt_zones_libres_breakdown
+- consortium_africain_de_biotechnologies_sociales_breakdown
+- consortium_amazonia_viva_breakdown
+- factions_para_etatiques_hydriques_breakdown
+- federation_communs_territoriaux_breakdown
+- front_de_resistance_aux_peages_sur_les_ressources_breakdown
+- geneve_bunker_institutions_breakdown
+- grandes_lacs_compact_eau_breakdown
+- lagos_interieur_mnemos_breakdown
+- le_registre_du_fleuve_breakdown
+- ligue_des_cites_du_sahel_numerique_breakdown
+- ligue_des_cites_littorales_en_sursis_breakdown
+- milices_de_controle_territorial_breakdown
+- mouvement_des_communes_du_rust_belt_breakdown
+- oracle_des_seuils_breakdown
+- pirates_biologiques_open_source_breakdown
+- reseaux_de_soigneurs_traditionnels_breakdown
+- saboteurs_des_corridors_de_transit_breakdown
+- seoul_collectif_nexcore_breakdown
+- tribunal_algorithmique_de_bruxelles_breakdown
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2038
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -65,10 +101,9 @@ tensions_narratives: 'La légitimité des enclaves repose entièrement sur leur 
   Enfin, la concurrence entre enclaves rivales génère des guerres tarifaires et des
   raids de débauchage de personnel qualifié qui fragilisent l''ensemble de l''écosystème.'
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: null
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Enclaves Corporatives Fortifiées
@@ -92,6 +127,45 @@ La légitimité des enclaves repose entièrement sur leur capacité à maintenir
 - [[organisation_territoires]]
 - [[gouvernance_institutions]]
 - [[systeme_economique_redistribution]]
+
+
+## Relations
+**Alliés :**
+- [[carthage_nord_nexcore_breakdown]]
+- [[compagnies_de_geo_ingenierie_privees_sans_mandat_breakdown]]
+- [[consortiums_logistiques_agro_corporatifs_breakdown]]
+- [[corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown]]
+- [[milices_privees_documentees_terrain_breakdown]]
+- [[rede_paulista_de_distribuic_o_algor_tmica_breakdown]]
+- [[reseau_des_anciens_financeurs_devenus_censeurs_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]
+**Opposants :**
+- [[agadez_ligue_sahel_numerique_breakdown]]
+- [[archives_neutres_geneve_breakdown]]
+- [[arctique_nordark_breakdown]]
+- [[collectif_hackers_decroissance_infrastructure_breakdown]]
+- [[collectifs_de_reparation_energetique_breakdown]]
+- [[communes_rust_belt_breakdown]]
+- [[communes_rust_belt_zones_libres_breakdown]]
+- [[consortium_africain_de_biotechnologies_sociales_breakdown]]
+- [[consortium_amazonia_viva_breakdown]]
+- [[factions_para_etatiques_hydriques_breakdown]]
+- [[federation_communs_territoriaux_breakdown]]
+- [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
+- [[geneve_bunker_institutions_breakdown]]
+- [[grandes_lacs_compact_eau_breakdown]]
+- [[lagos_interieur_mnemos_breakdown]]
+- [[le_registre_du_fleuve_breakdown]]
+- [[ligue_des_cites_du_sahel_numerique_breakdown]]
+- [[ligue_des_cites_littorales_en_sursis_breakdown]]
+- [[milices_de_controle_territorial_breakdown]]
+- [[mouvement_des_communes_du_rust_belt_breakdown]]
+- [[oracle_des_seuils_breakdown]]
+- [[pirates_biologiques_open_source_breakdown]]
+- [[reseaux_de_soigneurs_traditionnels_breakdown]]
+- [[saboteurs_des_corridors_de_transit_breakdown]]
+- [[seoul_collectif_nexcore_breakdown]]
+- [[tribunal_algorithmique_de_bruxelles_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

@@ -56,8 +56,6 @@ type_relation_dominante: neutralité
 annee_debut: 2047
 annee_fin: 
 
-etat_temporel: actif
-age_historique: déclinant
 generation: transition
 
 injection:
@@ -78,6 +76,9 @@ tensions_narratives: >
   La question qui hante Bruxelles Nouveau est celle de sa propre légitimité : peut-on coordonner sans autorité, représenter sans mandat, médier sans confiance ? La montée du Pacte des Souverains et des blocs eurasiatiques concurrents érode chaque année un peu plus son espace opérationnel, tandis que le Tribunal Algorithmique de Bruxelles — formellement sous son égide — acquiert une autorité pratique que l'institution-mère n'a jamais possédée. Une faction interne pousse à une refondation radicale vers un modèle de gouvernance à géométrie variable ; une autre s'accroche à la continuité comme garantie minimale contre le chaos. Entre ces deux tendances, Bruxelles Nouveau s'avance vers une bifurcation dont elle ne maîtrise ni le calendrier ni l'issue.
 
 date_creation: 2026-06-27
+trajectoire: déclinant
+est_clandestin: false
+
 ---
 
 # Bruxelles Nouveau

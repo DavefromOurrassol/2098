@@ -64,8 +64,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2041
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -96,6 +94,9 @@ tensions_narratives: Le Consortium est pris en étau entre le Bloc IV et le Bloc
   avant leur destruction et ceux qui parient sur une rente fossile prolongée dans
   un monde privé d'alternatives énergétiques viables.
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Consortium Énergétique Oural-Caspien

@@ -1,0 +1,111 @@
+---
+name: Seuils Intégraux — Division de Contrôle Biopolitique (SIDCB)
+type: instance
+slug: institut_des_seuils_demographiques_fortress_world
+entite: institut_des_seuils_demographiques
+scenario: fortress_world
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
+
+type_dans_scenario: institution
+
+role_dans_scenario: >
+  Dans le monde fragmenté de Fortress World, le SIDCB est l'organe exécutif de l'Institut des Seuils Démographiques, transformé en machine de tri et de contrôle des populations. Il ne se contente plus de modéliser les flux migratoires : il les verrouille, les optimise et les militarise au service des blocs souverains. Son rôle est double : justifier scientifiquement les politiques d'exclusion (quotas, murs, zones tampons) tout en gérant les « seuils » — ces zones grises où les populations indésirables sont parquées, triées ou redirigées vers des territoires sacrifiés.
+
+responsabilites: >
+  Le SIDCB supervise les « corridors de seuil » (zones tampons entre blocs), gère les quotas migratoires inter-blocs via des algorithmes de scoring démographique, et coordonne les milices privées chargées de faire respecter les frontières. Il produit aussi les « cartes de viabilité territoriale » utilisées par les États-forteresses pour justifier l'abandon de certaines régions. Ses données alimentent les systèmes de surveillance numérique souveraine et les dispositifs de scoring de productivité corporative.
+
+impact_local: 4
+impact_systemique_global: 3
+
+variables_influencees:
+    - demographie_mobilite_humaine
+    - organisation_territoires
+    - gouvernance_institutions
+    - frontieres_du_systeme
+
+zone_geographique:
+    - régionale
+    - continentale
+    - globale
+
+zone_systemique:
+    - gouvernance
+    - sécurité
+    - infrastructure
+    - société
+
+alliances:
+    - administrations_de_controle_frontalier_des_blocs_fortress_world
+    - agence_de_regulation_des_detroits_strategiques_ards_fortress_world
+    - agences_de_securite_interieure_des_etats_forteresses_fortress_world
+    - alliance_blocs_souverains_fortress_world
+    - bureau_gouvernance_algorithmique_fortress_world
+    - centre_controle_orbital_helios_fortress_world
+    - neurosentry_fortress_world
+    - vaultcorp_security_fortress_world
+    - pacte_forteresses_souveraines_fortress_world
+
+oppositions:
+    - alliance_sanitaire_des_populations_exclues_fortress_world
+    - coalitions_des_deplaces_et_apatrides_fortress_world
+    - mouvement_commun_midwest_fortress_world
+    - cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
+    - reseau_des_cartographes_des_zones_grises_fortress_world
+    - oracle_des_seuils_fortress_world
+
+type_relation_dominante: dépendance
+
+annee_debut: 2046
+annee_fin: 
+
+trajectoire: dominant
+est_clandestin: false
+generation: forteresse
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  « Les Seuils Intégraux ne sont plus une institution, mais une frontière à part entière », écrivait en 2087 le journaliste exilé Elias Voss dans son enquête *Les Noms des Oubliés*. Le SIDCB incarne cette mutation : né en 2046 des cendres des anciens observatoires démographiques, il a transformé la science des populations en outil de guerre territoriale. Ses « corridors de seuil » — ces zones grises où s’entassent les indésirables — sont devenus des laboratoires à ciel ouvert, où se testent les limites de la résistance humaine. Ses algorithmes, nourris de données biométriques et de scores de productivité, décident qui peut traverser, qui doit rester, et qui sera redirigé vers les « zones déficitaires d’optimisation ». Les murs ont des yeux, et ces yeux sont ceux du SIDCB.
+
+signes_distinctifs: >
+  Le logo du SIDCB représente une courbe de Gauss stylisée, dont les extrémités se brisent en barbelés. Ses agents portent des uniformes gris-bleu, inspirés des tenues des douanes du XXIe siècle, mais équipés de visières à réalité augmentée affichant en temps réel les scores démographiques des individus croisés. Les « seuils » sont marqués par des bornes lumineuses rouges, visibles depuis l’espace, qui délimitent les zones de tri.
+
+tensions_narratives: >
+  Le SIDCB est au cœur de plusieurs conflits narratifs majeurs : 1) **La légitimité scientifique vs. l’ingénierie sociale** — ses modèles démographiques sont-ils encore des outils d’anticipation ou de simples justifications pour l’exclusion ? 2) **La résistance des seuils** — les populations parquées dans les zones tampons s’organisent-elles en contre-sociétés, ou sont-elles condamnées à disparaître ? 3) **La fragmentation interne** — des factions au sein du SIDCB prônent-elles un durcissement encore plus radical (élimination des « bouches inutiles »), ou une réouverture contrôlée des flux pour éviter l’effondrement des économies des blocs ? 4) **La guerre des données** — les archives du SIDCB, piratées à plusieurs reprises, révèlent-elles des manipulations délibérées des seuils pour servir des intérêts géopolitiques ?
+
+date_creation: 2026-08-17
+---
+
+# Seuils Intégraux — Division de Contrôle Biopolitique (SIDCB)
+
+## Rôle dans [[fortress_world]]
+Dans le monde fragmenté de Fortress World, le SIDCB est l'organe exécutif de l'Institut des Seuils Démographiques, transformé en machine de tri et de contrôle des populations. Il ne se contente plus de modéliser les flux migratoires : il les verrouille, les optimise et les militarise au service des blocs souverains. Son rôle est double : justifier scientifiquement les politiques d'exclusion (quotas, murs, zones tampons) tout en gérant les « seuils » — ces zones grises où les populations indésirables sont parquées, triées ou redirigées vers des territoires sacrifiés.
+
+## Responsabilités
+Le SIDCB supervise les « corridors de seuil » (zones tampons entre blocs), gère les quotas migratoires inter-blocs via des algorithmes de scoring démographique, et coordonne les milices privées chargées de faire respecter les frontières. Il produit aussi les « cartes de viabilité territoriale » utilisées par les États-forteresses pour justifier l'abandon de certaines régions. Ses données alimentent les systèmes de surveillance numérique souveraine et les dispositifs de scoring de productivité corporative.
+
+## Variables influencées
+- [[demographie_mobilite_humaine]]
+- [[organisation_territoires]]
+- [[gouvernance_institutions]]
+- [[frontieres_du_systeme]]
+
+## Relations
+**Alliés** : [[administrations_de_controle_frontalier_des_blocs_fortress_world]], [[agence_de_regulation_des_detroits_strategiques_ards_fortress_world]], [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]], [[alliance_blocs_souverains_fortress_world]], [[bureau_gouvernance_algorithmique_fortress_world]], [[centre_controle_orbital_helios_fortress_world]], [[neurosentry_fortress_world]], [[vaultcorp_security_fortress_world]], [[pacte_forteresses_souveraines_fortress_world]]
+**Opposants** : [[alliance_sanitaire_des_populations_exclues_fortress_world]], [[coalitions_des_deplaces_et_apatrides_fortress_world]], [[mouvement_commun_midwest_fortress_world]], [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]], [[reseau_des_cartographes_des_zones_grises_fortress_world]], [[oracle_des_seuils_fortress_world]]
+
+## Description journalistique
+« Les Seuils Intégraux ne sont plus une institution, mais une frontière à part entière », écrivait en 2087 le journaliste exilé Elias Voss dans son enquête *Les Noms des Oubliés*. Le SIDCB incarne cette mutation : né en 2046 des cendres des anciens observatoires démographiques, il a transformé la science des populations en outil de guerre territoriale. Ses « corridors de seuil » — ces zones grises où s’entassent les indésirables — sont devenus des laboratoires à ciel ouvert, où se testent les limites de la résistance humaine. Ses algorithmes, nourris de données biométriques et de scores de productivité, décident qui peut traverser, qui doit rester, et qui sera redirigé vers les « zones déficitaires d’optimisation ». Les murs ont des yeux, et ces yeux sont ceux du SIDCB.
+
+## Tensions narratives
+Le SIDCB est au cœur de plusieurs conflits narratifs majeurs : 1) **La légitimité scientifique vs. l’ingénierie sociale** — ses modèles démographiques sont-ils encore des outils d’anticipation ou de simples justifications pour l’exclusion ? 2) **La résistance des seuils** — les populations parquées dans les zones tampons s’organisent-elles en contre-sociétés, ou sont-elles condamnées à disparaître ? 3) **La fragmentation interne** — des factions au sein du SIDCB prônent-elles un durcissement encore plus radical (élimination des « bouches inutiles »), ou une réouverture contrôlée des flux pour éviter l’effondrement des économies des blocs ? 4) **La guerre des données** — les archives du SIDCB, piratées à plusieurs reprises, révèlent-elles des manipulations délibérées des seuils pour servir des intérêts géopolitiques ?

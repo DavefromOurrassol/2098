@@ -62,8 +62,6 @@ type_relation_dominante: coopération
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: ascendant
 generation: reconstruction
 
 injection:
@@ -84,6 +82,9 @@ tensions_narratives: >
   La Ronde peine à maintenir une continuité lorsque des communautés hôtes refusent l'accueil par méfiance identitaire ou peur de voir leurs pratiques 'extorquées' par des étrangers. Certaines Assemblées Bioterritoriales cherchent à la formaliser en lui imposant des curriculum accrédités, ce qui menace son principe même de non-institutionnalisation. Des factions autoritaires locales tentent parfois de la détourner en la confinant à un seul territoire pour en faire un outil de légitimation du pouvoir en place. Enfin, la tension entre la mobilité nécessaire à sa survie et la réduction globale de la mobilité humaine dans le scénario éco-communaliste constitue sa contradiction structurelle la plus profonde.
 
 date_creation: 2026-06-27
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # La Ronde des Savoirs

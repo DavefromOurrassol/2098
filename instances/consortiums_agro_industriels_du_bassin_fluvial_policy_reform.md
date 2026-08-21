@@ -54,8 +54,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2032
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -92,6 +90,9 @@ localisation:
   zone: andes_bloc_austral
   lieu: Bassin fluvial régional (siège opérationnel mobile entre plateformes de négociation)
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Consortiums Agro-Industriels du Bassin Fluvial

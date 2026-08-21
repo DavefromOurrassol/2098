@@ -50,8 +50,6 @@ type_relation_dominante: conflit
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: clandestin
-age_historique: résiduel
 generation: forteresse
 
 injection:
@@ -72,6 +70,9 @@ tensions_narratives: >
   Le Réseau est tiraillé entre deux factions : les 'Réformistes de Bloc', qui acceptent de jouer le jeu des États autoritaires pour arracher des protections minimales, et les 'Désaugmentés', qui prônent le retrait collectif de toute technologie corporelle propriétaire au risque de l'employabilité zéro. La question non résolue qui ronge l'organisation : peut-on défendre la dignité du travailleur augmenté sans légitimer le système qui produit l'augmentation comme instrument de contrôle ? Et si un État-bloc offrait une reconnaissance officielle en échange d'une exclusivité sur le réseau, combien de cellules résisteraient à cette offre ?
 
 date_creation: 2026-06-15
+trajectoire: résiduel
+est_clandestin: true
+
 ---
 
 # Réseau des Collectifs Augmentés — Coordination Bloc Eurasie

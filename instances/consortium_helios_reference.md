@@ -51,8 +51,6 @@ type_relation_dominante: dépendance
 annee_debut: 2032
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: transition
 
 injection:
@@ -73,6 +71,9 @@ tensions_narratives: >
   La pression des métropoles du Sud Global pour renégocier les contrats hérités des années 2050 pourrait fracturer le modèle tarifaire unifié d'Helios. En interne, une faction de cadres intermédiaires plaide pour une 'mutualisation partielle' des infrastructures, tandis que le conseil des actionnaires résiste farouchement — la question de l'énergie comme bien commun n'a jamais été aussi proche d'une rupture institutionnelle. Parallèlement, des fuites de données issues de leurs systèmes de tarification algorithmique alimentent des enquêtes journalistiques qui pourraient exposer l'ampleur réelle de leur influence politique dissimulée.
 
 date_creation: 2026-06-15
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Consortium Helios

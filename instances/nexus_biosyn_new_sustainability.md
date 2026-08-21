@@ -53,10 +53,8 @@ oppositions:
 type_relation_dominante: symbiose
 
 annee_debut: 2038
-annee_fin: 
+annee_fin: 2062
 
-etat_temporel: transformé
-age_historique: mature
 generation: ère cognitive
 
 injection:
@@ -77,6 +75,9 @@ tensions_narratives: >
   La question non résolue reste explosive : qui contrôle vraiment les semences quand les brevets expirent et que Nexus BioSyn peut en déposer de nouveaux sur les variantes optimisées ? Les mouvements de bio-communs accusent le consortium d'un 'verrouillage progressif doux', remplaçant les monopoles bruts par une dépendance infrastructurelle invisible. Par ailleurs, les thérapies cellulaires adaptatives de cinquième génération — non encore soumises aux accords de licence universelle — créent une zone grise juridique et éthique explosive. Enfin, la question de l'audit algorithmique des semences, dont le code source reste propriétaire, concentre une bataille sourde entre transparence démocratique et secret industriel au cœur même de la technocratie.
 
 date_creation: 2026-06-15
+trajectoire: transformé
+est_clandestin: false
+
 ---
 
 # Nexus BioSyn Consortium for Life Sciences

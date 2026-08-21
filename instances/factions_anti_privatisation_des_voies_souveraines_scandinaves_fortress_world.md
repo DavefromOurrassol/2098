@@ -55,8 +55,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2036
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -92,6 +90,9 @@ localisation:
   zone: espace_nordique_arctique
   lieu: Parlements nordiques et corridors arctiques de transit
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Factions Anti-Privatisation des Voies Souveraines Scandinaves

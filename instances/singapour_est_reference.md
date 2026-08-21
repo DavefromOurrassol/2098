@@ -58,8 +58,6 @@ type_relation_dominante: rivalité
 annee_debut: 2081
 annee_fin: 
 
-etat_temporel: actif
-age_historique: ascendant
 generation: forteresse
 
 injection:
@@ -80,6 +78,9 @@ tensions_narratives: >
   La prospérité croissante de Singapour Est se construit sur un paradoxe structurel : plus elle attire d'accords commerciaux et de capitaux, plus elle prive la zone métropolitaine centrale des ressources nécessaires à ses infrastructures partagées — eau dessalée, réseaux énergétiques, défense côtière. Des voix s'élèvent dans les quartiers périphériques de l'archipel pour dénoncer un modèle qui externalise les coûts de la solidarité tout en privatisant les bénéfices de la position géographique. En parallèle, la montée des consortiums privés — notamment Nexcore — dans la gestion de ses zones économiques spéciales soulève la question de savoir si Singapour Est reste une entité publique semi-autonome ou si elle glisse vers une forme de gouvernance corporative déguisée. Enfin, les blocs régionaux voisins observent avec intérêt et inquiétude ce modèle réplicable : si d'autres zones portuaires asiatiques emboîtent le pas, l'ordre commercial régional pourrait se fragmenter au-delà de tout cadre de régulation multilatérale.
 
 date_creation: 2026-06-27
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Singapour Est

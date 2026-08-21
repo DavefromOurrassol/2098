@@ -39,7 +39,7 @@ alliances:
 - conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability
 - ligue_des_cites_du_sahel_numerique_new_sustainability
 - observatoire_anti_monopole_de_geneve_new_sustainability
-- rede_paulista_de_distribuic_o_algor_tmica_new_sustainability
+- rede_paulista_de_distribuicao_algoritmica_new_sustainability
 - reseau_des_agences_climatiques_regionales_new_sustainability
 - tribunal_algorithmique_de_bruxelles_new_sustainability
 - tribunal_gouvernance_algorithmique_bruxelles_new_sustainability
@@ -53,8 +53,6 @@ oppositions:
 type_relation_dominante: coopération
 annee_debut: 2040
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -89,6 +87,9 @@ localisation:
   zone: bruxelles_tribunal_algo
   lieu: Bruxelles
   type_lieu: ville
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Consortium d'Audit Algorithmique Ouvert
@@ -122,7 +123,7 @@ Le CAAO est structurellement coincé entre les institutions technocratiques qui 
 - [[conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability]]
 - [[ligue_des_cites_du_sahel_numerique_new_sustainability]]
 - [[observatoire_anti_monopole_de_geneve_new_sustainability]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_new_sustainability]]
+- [[rede_paulista_de_distribuicao_algoritmica_new_sustainability]]
 - [[reseau_des_agences_climatiques_regionales_new_sustainability]]
 - [[tribunal_algorithmique_de_bruxelles_new_sustainability]]
 - [[tribunal_gouvernance_algorithmique_bruxelles_new_sustainability]]

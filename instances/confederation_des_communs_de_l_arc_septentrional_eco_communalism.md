@@ -49,8 +49,6 @@ oppositions:
 type_relation_dominante: symbiose
 annee_debut: 2038
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -87,6 +85,9 @@ localisation:
   zone: arc_septentrional
   lieu: Arc Septentrional — siège itinérant
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Confédération des Communs de l'Arc Septentrional

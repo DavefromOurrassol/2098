@@ -50,8 +50,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2028
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -86,6 +84,9 @@ localisation:
   zone: espace_eurasiatique
   lieu: Chengdu / Nœuds de l'Union Technocratique Eurasiatique
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Front de Souveraineté Biologique Eurasiatique

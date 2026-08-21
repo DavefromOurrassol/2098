@@ -4,6 +4,7 @@ type: instance
 slug: corridor_lithium_bouches_breakdown
 entite: corridor_lithium_bouches
 scenario: breakdown
+statut: officialise_enrichi
 localisation:
   zone: amazon_pacte_gardiens
   lieu: Salars andins de Bolivie, Chili et Argentine
@@ -37,26 +38,24 @@ zone_systemique:
     - gouvernance
 
 alliances:
-    - seigneuries_logistiques_armees_breakdown
-    - cartels_logistiques_regionaux_breakdown
-    - blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
-    - frente_sert_o_livre_breakdown
-    - communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
-
+- blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
+- cartels_logistiques_regionaux_breakdown
+- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- frente_sert_o_livre_breakdown
+- seigneuries_logistiques_armees_breakdown
 oppositions:
-    - milices_de_controle_territorial_breakdown
-    - saboteurs_des_corridors_de_transit_breakdown
-    - etats_fragmentes_nationalisant_les_stocks_breakdown
-    - front_de_resistance_aux_peages_sur_les_ressources_breakdown
-    - seigneurs_de_guerre_agro_territoriaux_breakdown
-
+- etats_fragmentes_nationalisant_les_stocks_breakdown
+- front_de_resistance_aux_peages_sur_les_ressources_breakdown
+- ligue_mediterraneenne_des_villes_etats_portuaires_breakdown
+- milices_de_controle_territorial_breakdown
+- reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown
+- saboteurs_des_corridors_de_transit_breakdown
+- seigneurs_de_guerre_agro_territoriaux_breakdown
 type_relation_dominante: conflit
 
 annee_debut: 2061
 annee_fin: 
 
-etat_temporel: actif
-age_historique: résiduel
 generation: post-effondrement
 
 injection:
@@ -77,6 +76,9 @@ tensions_narratives: >
   La question centrale est de savoir si un acteur — milice montante, bloc régional, communauté locale ou corporation résiduelle — parviendra à imposer une régulation minimale sur le Corridor sans provoquer une coalition d'exclus qui détruirait les infrastructures plutôt que de les céder. Chaque convoi livré est une victoire provisoire, chaque convoi saboté un rappel que la richesse du sous-sol reste une malédiction autant qu'une promesse. À terme, le Corridor pourrait devenir le théâtre d'une confrontation directe entre les blocs encore debout — celui qui sécurisera le lithium dessinera la carte du monde d'après.
 
 date_creation: 2026-06-27
+trajectoire: résiduel
+est_clandestin: false
+
 ---
 
 # Les Bouches du Lithium — Corridor Minier des Andes Brisées
@@ -93,12 +95,25 @@ Extraction artisanale et semi-industrielle du lithium sur les salars andins frag
 - [[geopolitique_conflits]]
 - [[gouvernance_institutions]]
 
-## Relations
-**Alliés** : [[seigneuries_logistiques_armees_breakdown]], [[cartels_logistiques_regionaux_breakdown]], [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]], [[frente_sert_o_livre_breakdown]], [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
-**Opposants** : [[milices_de_controle_territorial_breakdown]], [[saboteurs_des_corridors_de_transit_breakdown]], [[etats_fragmentes_nationalisant_les_stocks_breakdown]], [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]], [[seigneurs_de_guerre_agro_territoriaux_breakdown]]
 
 ## Description journalistique
 Sur les salars de Bolivie, du Chili et d'Argentine, la blancheur aveuglante du sel est maintenant striée de stigmates : pistes défoncées par des convois blindés improvisés, derricks abandonnés à mi-hauteur, campements de miliciens qui changeaient de drapeau trois fois par saison. Le lithium sort encore du sol — il ne peut pas s'arrêter, trop de monde en dépend — mais chaque tonne est l'objet d'une négociation armée entre des hommes qui ne se font aucune confiance. Les acheteurs arrivent de Seoul, de Bergen ou des Enclaves de Lagos avec du cash, des médicaments ou des armes pour se payer leur quota. Les communautés andines survivantes, elles, ont appris à jouer les factions les unes contre les autres pour conserver une marge de survie, vendant leur connaissance du terrain plus que le minerai lui-même.
 
 ## Tensions narratives
 La question centrale est de savoir si un acteur — milice montante, bloc régional, communauté locale ou corporation résiduelle — parviendra à imposer une régulation minimale sur le Corridor sans provoquer une coalition d'exclus qui détruirait les infrastructures plutôt que de les céder. Chaque convoi livré est une victoire provisoire, chaque convoi saboté un rappel que la richesse du sous-sol reste une malédiction autant qu'une promesse. À terme, le Corridor pourrait devenir le théâtre d'une confrontation directe entre les blocs encore debout — celui qui sécurisera le lithium dessinera la carte du monde d'après.
+
+## Relations
+**Alliés :**
+- [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
+- [[cartels_logistiques_regionaux_breakdown]]
+- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[frente_sert_o_livre_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]
+**Opposants :**
+- [[etats_fragmentes_nationalisant_les_stocks_breakdown]]
+- [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
+- [[ligue_mediterraneenne_des_villes_etats_portuaires_breakdown]]
+- [[milices_de_controle_territorial_breakdown]]
+- [[reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown]]
+- [[saboteurs_des_corridors_de_transit_breakdown]]
+- [[seigneurs_de_guerre_agro_territoriaux_breakdown]]

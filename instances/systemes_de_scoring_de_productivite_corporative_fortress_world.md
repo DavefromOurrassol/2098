@@ -51,7 +51,7 @@ alliances:
 - nexus_biosyn_division_eurasienne_fortress_world
 - nexus_biosyn_division_pacifique_fortress_world
 - nexus_biosyn_fortress_world
-- rede_paulista_de_distribuic_o_algor_tmica_fortress_world
+- rede_paulista_de_distribuicao_algoritmica_fortress_world
 - tbilissi_nord_zone_franche_fortress_world
 - tours_nexus7_fortress_world
 - zone_usines_forteresses_eurasie_fortress_world
@@ -74,8 +74,6 @@ oppositions:
 type_relation_dominante: dépendance
 annee_debut: 2038
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -108,6 +106,9 @@ localisation:
   zone: null
   lieu: null
   type_lieu: infrastructure
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Systèmes de Scoring de Productivité Corporative
@@ -152,7 +153,7 @@ La tension centrale réside dans l'écart entre le discours de méritocracie tec
 - [[nexus_biosyn_division_eurasienne_fortress_world]]
 - [[nexus_biosyn_division_pacifique_fortress_world]]
 - [[nexus_biosyn_fortress_world]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_fortress_world]]
+- [[rede_paulista_de_distribuicao_algoritmica_fortress_world]]
 - [[tbilissi_nord_zone_franche_fortress_world]]
 - [[tours_nexus7_fortress_world]]
 - [[zone_usines_forteresses_eurasie_fortress_world]]

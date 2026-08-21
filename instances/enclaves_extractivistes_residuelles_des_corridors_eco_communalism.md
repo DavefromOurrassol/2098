@@ -61,7 +61,7 @@ oppositions:
 - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
 - enclaves_extractivistes_et_etats_residuels_eco_communalism
 - fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism
-- frente_sert_o_livre_eco_communalism
+- frente_sertao_livre_eco_communalism
 - guildes_de_mediateurs_ecologiques_eco_communalism
 - kalaallit_nunaat_bioterritoire_eco_communalism
 - kalaallit_nunaat_sovereign_fund_eco_communalism
@@ -80,8 +80,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2047
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -117,6 +115,9 @@ localisation:
   zone: zones_extractivistes_corridors
   lieu: Corridors Extractivistes Résiduels — zones de transit inter-bioterritoriaux
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Enclaves Extractivistes Résiduelles des Corridors
@@ -174,7 +175,7 @@ La tension centrale est celle d'un anachronisme armé : ces enclaves survivent p
 - [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]
 - [[enclaves_extractivistes_et_etats_residuels_eco_communalism]]
 - [[fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism]]
-- [[frente_sert_o_livre_eco_communalism]]
+- [[frente_sertao_livre_eco_communalism]]
 - [[guildes_de_mediateurs_ecologiques_eco_communalism]]
 - [[kalaallit_nunaat_bioterritoire_eco_communalism]]
 - [[kalaallit_nunaat_sovereign_fund_eco_communalism]]

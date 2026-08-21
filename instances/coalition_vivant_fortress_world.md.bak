@@ -4,6 +4,11 @@ type: instance
 slug: coalition_vivant_fortress_world
 entite: coalition_vivant
 scenario: fortress_world
+statut: officialise_enrichi
+localisation:
+  zone: bloc_atlantique
+  lieu: Bloc Atlantique
+  type_lieu: region
 type_dans_scenario: réseau
 role_dans_scenario: >
   Organisation écologique clandestine opérant en marge de la légalité
@@ -27,14 +32,32 @@ zone_systemique:
   - société
   - information
 alliances:
-  - le_temoin_fortress_world
+- cellules_mouvement_commun_midwest_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- consortium_amazonia_viva_fortress_world
+- le_temoin_fortress_world
+- marches_gris_tbilissi_fortress_world
+- mouvement_des_communes_du_rust_belt_fortress_world
+- populations_des_zones_deficitaires_d_optimisation_fortress_world
 oppositions:
-  - conseil_regulation_algorithmique_fortress_world
+- amazonie_pacte_vert_fortress_world
+- biolock_agritech_fortress_world
+- bloc_atlantique_fortress_world
+- bloc_eurasiatique_occidental_fortress_world
+- bunker_chambre_securite_territoriale_fortress_world
+- coalitions_geopolitiques_d_infiltration_des_modeles_climatiques_fortress_world
+- complexe_orentchev_almaty_fortress_world
+- conseil_regulation_algorithmique_fortress_world
+- geneve_bunker_fortress_world
+- milices_privees_de_protection_des_sites_germinaux_fortress_world
+- nexus_biosyn_division_eurasienne_fortress_world
+- nexus_biosyn_division_pacifique_fortress_world
+- pacte_forteresses_souveraines_fortress_world
+- rede_paulista_de_distribuic_o_algor_tmica_fortress_world
+- terrashield_geoengineering_fortress_world
 type_relation_dominante: conflit
 annee_debut: 2048
 annee_fin:
-etat_temporel: clandestin
-age_historique: ascendant
 generation: forteresse
 injection:
   type: canonique
@@ -61,6 +84,9 @@ tensions_narratives: >
   d'information. Plusieurs membres arrêtés en 2097. La coordination
   centrale a été compromise.
 date_creation: 2098-01-01
+trajectoire: ascendant
+est_clandestin: true
+
 ---
 
 # Réseau Vert Clandestin
@@ -74,9 +100,6 @@ Opère via réseaux mesh non certifiés.
 - [[valeurs_culture_tempo_sociale]]
 - [[gouvernance_institutions]]
 
-## Relations
-**Alliés** : [[le_temoin_fortress_world]]
-**Opposants** : [[conseil_regulation_algorithmique_fortress_world]]
 
 ## Description journalistique
 Le Réseau Vert Clandestin n'a pas de porte-parole. Le Bloc les accuse de
@@ -87,3 +110,29 @@ nappes phréatiques dans le Midwest désertifié.
 ## Tensions narratives
 Division interne sur la radicalisation. Plusieurs membres arrêtés en 2097.
 La coordination centrale a été compromise.
+
+## Relations
+**Alliés :**
+- [[cellules_mouvement_commun_midwest_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[consortium_amazonia_viva_fortress_world]]
+- [[le_temoin_fortress_world]]
+- [[marches_gris_tbilissi_fortress_world]]
+- [[mouvement_des_communes_du_rust_belt_fortress_world]]
+- [[populations_des_zones_deficitaires_d_optimisation_fortress_world]]
+**Opposants :**
+- [[amazonie_pacte_vert_fortress_world]]
+- [[biolock_agritech_fortress_world]]
+- [[bloc_atlantique_fortress_world]]
+- [[bloc_eurasiatique_occidental_fortress_world]]
+- [[bunker_chambre_securite_territoriale_fortress_world]]
+- [[coalitions_geopolitiques_d_infiltration_des_modeles_climatiques_fortress_world]]
+- [[complexe_orentchev_almaty_fortress_world]]
+- [[conseil_regulation_algorithmique_fortress_world]]
+- [[geneve_bunker_fortress_world]]
+- [[milices_privees_de_protection_des_sites_germinaux_fortress_world]]
+- [[nexus_biosyn_division_eurasienne_fortress_world]]
+- [[nexus_biosyn_division_pacifique_fortress_world]]
+- [[pacte_forteresses_souveraines_fortress_world]]
+- [[rede_paulista_de_distribuic_o_algor_tmica_fortress_world]]
+- [[terrashield_geoengineering_fortress_world]]

@@ -55,7 +55,7 @@ oppositions:
 - cooperatives_d_habitat_regeneratif_eco_communalism
 - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
 - fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism
-- frente_sert_o_livre_eco_communalism
+- frente_sertao_livre_eco_communalism
 - guildes_de_mediateurs_ecologiques_eco_communalism
 - guildes_des_semenciers_itinerants_eco_communalism
 - kalaallit_nunaat_bioterritoire_eco_communalism
@@ -72,8 +72,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2038
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -108,6 +106,9 @@ localisation:
   zone: aquiferes_maghreb
   lieu: Aquifères Transfrontaliers du Maghreb
   type_lieu: site_strategique
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Factions Extractivistes des Aquifères Communs
@@ -158,7 +159,7 @@ La contradiction centrale de ces factions est qu'elles prospèrent précisément
 - [[cooperatives_d_habitat_regeneratif_eco_communalism]]
 - [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]
 - [[fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism]]
-- [[frente_sert_o_livre_eco_communalism]]
+- [[frente_sertao_livre_eco_communalism]]
 - [[guildes_de_mediateurs_ecologiques_eco_communalism]]
 - [[guildes_des_semenciers_itinerants_eco_communalism]]
 - [[kalaallit_nunaat_bioterritoire_eco_communalism]]

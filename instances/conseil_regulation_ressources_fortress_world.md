@@ -46,10 +46,8 @@ oppositions:
 type_relation_dominante: neutralité
 
 annee_debut: 2061
-annee_fin: 
+annee_fin: 2063
 
-etat_temporel: transformé
-age_historique: résiduel
 generation: forteresse
 
 injection:
@@ -70,6 +68,9 @@ tensions_narratives: >
   La CARS détient encore des archives complètes sur les flux de ressources d'avant la fragmentation — données que les blocs veulent effacer ou contrôler, et que des réseaux clandestins cherchent à exfiltrer. Une faction interne, les 'Nairobi Loyalistes', tente de réactiver les mécanismes d'arbitrage contraignants, ce qui la met en collision frontale avec les intérêts des blocs dominants. La question de sa dissolution formelle, régulièrement posée, n'est jamais tranchée — la supprimer reviendrait à admettre publiquement l'échec définitif du multilatéralisme, ce qu'aucun bloc ne veut assumer. Son existence même est devenue une fiction diplomatique entretenue collectivement par des ennemis.
 
 date_creation: 2026-06-15
+trajectoire: transformé
+est_clandestin: false
+
 ---
 
 # Vestige du Conseil — Chambre d'Arbitrage des Ressources Souveraines (CARS)

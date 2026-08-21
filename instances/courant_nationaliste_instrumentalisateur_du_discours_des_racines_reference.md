@@ -37,15 +37,13 @@ alliances:
 oppositions:
 - consortium_africain_de_biotechnologies_sociales_reference
 - europe_occidentale_reconstructee_reference
-- frente_sert_o_livre_reference
+- frente_sertao_livre_reference
 - mouvement_racines_vivantes_reference
 - ouagadougou_polytechnique_reference
 - union_africaine_resilience_reference
 type_relation_dominante: conflit
 annee_debut: 2032
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -80,6 +78,9 @@ localisation:
   zone: null
   lieu: null
   type_lieu: null
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Courant Nationaliste Instrumentalisateur du Discours des Racines
@@ -111,7 +112,7 @@ Sa contradiction centrale est d'utiliser les technologies de l'information les p
 **Opposants :**
 - [[consortium_africain_de_biotechnologies_sociales_reference]]
 - [[europe_occidentale_reconstructee_reference]]
-- [[frente_sert_o_livre_reference]]
+- [[frente_sertao_livre_reference]]
 - [[mouvement_racines_vivantes_reference]]
 - [[ouagadougou_polytechnique_reference]]
 - [[union_africaine_resilience_reference]]

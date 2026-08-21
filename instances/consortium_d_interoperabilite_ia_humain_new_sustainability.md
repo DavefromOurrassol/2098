@@ -62,8 +62,6 @@ oppositions:
 type_relation_dominante: coopération
 annee_debut: 2038
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -102,6 +100,9 @@ localisation:
   zone: bruxelles_tribunal_algo
   lieu: Bruxelles — siège normatif adjacent au Tribunal de Gouvernance Algorithmique
   type_lieu: ville
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Consortium d'Interopérabilité IA-Humain

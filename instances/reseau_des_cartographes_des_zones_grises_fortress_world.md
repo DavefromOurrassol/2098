@@ -1,0 +1,100 @@
+---
+name: Réseau Liminalis
+type: instance
+slug: reseau_des_cartographes_des_zones_grises_fortress_world
+entite: reseau_des_cartographes_des_zones_grises
+scenario: fortress_world
+localisation:
+  zone: plaine_de_pannonie
+  lieu: plaine de Pannonie
+  type_lieu: region
+
+type_dans_scenario: réseau
+
+role_dans_scenario: >
+  Collectif clandestin de cartographes, hackers et anciens militaires opérant depuis les zones grises du bassin caspien et de la plaine de Pannonie. Ils documentent et cartographient les territoires non gouvernés pour fournir des données aux acteurs locaux, aux ONG et aux contrebandiers, tout en évitant la capture par les blocs souverains. Leur rôle est de préserver l'autonomie informationnelle des marges, transformant la connaissance en outil de résistance contre l'effacement systémique des zones abandonnées ou contestées.
+
+responsabilites: >
+  Production de cartes dynamiques des zones grises, incluant infrastructures critiques abandonnées, corridors de contrebande énergétique, et points de friction géopolitique. Maintenance de réseaux de communication chiffrés hors des écosystèmes souverains, et formation des populations locales à l'auto-documentation. Archivage clandestin des données pour empêcher leur monopolisation par les blocs ou les milices privées.
+
+impact_local: 4
+impact_systemique_global: 2
+
+variables_influencees:
+    - organisation_territoires
+    - technologie_information
+    - geopolitique_conflits
+
+zone_geographique:
+    - régionale
+
+zone_systemique:
+    - information
+    - sécurité
+    - infrastructure
+
+alliances:
+    - alliance_sanitaire_des_populations_exclues_fortress_world
+    - coalitions_des_deplaces_et_apatrides_fortress_world
+    - reseaux_d_echange_clandestin_inter_zones_fortress_world
+    - contrebandiers_energetiques_des_zones_grises_fortress_world
+    - cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
+
+oppositions:
+    - administrations_de_controle_frontalier_des_blocs_fortress_world
+    - agences_de_securite_interieure_des_etats_forteresses_fortress_world
+    - bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world
+    - vaultcorp_security_fortress_world
+    - dispositifs_de_surveillance_numerique_souveraine_fortress_world
+
+type_relation_dominante: symbiose
+
+annee_debut: 2047
+annee_fin: 
+
+trajectoire: marginal
+est_clandestin: true
+generation: forteresse
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Depuis les ruines des anciennes républiques soviétiques et les interstices des corridors caucasiens, le Réseau Liminalis opère comme une ombre numérique. Ses membres, souvent des déserteurs des milices frontalières ou des universitaires radiés des blocs, arpentent les zones grises avec des drones low-tech et des capteurs bricolés, traçant des cartes que les États forteresses préféreraient voir disparaître. Leurs données, échangées via des réseaux maillés hors des infrastructures souveraines, alimentent les contrebandiers d'hydrogène et les cliniques de déaugmentation des seuils. En 2098, Liminalis reste l'une des dernières sources fiables sur les territoires que les blocs ont choisi d'oublier — ou de bombarder.
+
+signes_distinctifs: >
+  Symbole : une boussole brisée dont l'aiguille pointe vers un point d'interrogation, souvent graffée sur les murs des zones tampons. Équipement : drones assemblés à partir de pièces de récupération, émetteurs radio à ondes courtes camouflés en antennes paraboliques rouillées. Langage : un argot mêlant termes militaires, jargon hacker et expressions locales des steppes.
+
+tensions_narratives: >
+  Le réseau est tiraillé entre sa mission originelle de préservation des savoirs et la tentation de monétiser ses données auprès des cartels énergétiques ou des milices privées. Certains membres prônent une alliance avec les factions djihadistes logistiques pour sécuriser des corridors, tandis que d'autres veulent rester neutres. La fragmentation des blocs pourrait offrir une fenêtre d'ascension — ou précipiter sa destruction par les agences de sécurité intérieure, qui voient en Liminalis une menace à l'ordre territorial souverain.
+
+date_creation: 2026-08-17
+---
+
+# Réseau Liminalis
+
+## Rôle dans [[fortress_world]]
+Collectif clandestin de cartographes, hackers et anciens militaires opérant depuis les zones grises du bassin caspien et de la plaine de Pannonie. Ils documentent et cartographient les territoires non gouvernés pour fournir des données aux acteurs locaux, aux ONG et aux contrebandiers, tout en évitant la capture par les blocs souverains. Leur rôle est de préserver l'autonomie informationnelle des marges, transformant la connaissance en outil de résistance contre l'effacement systémique des zones abandonnées ou contestées.
+
+## Responsabilités
+Production de cartes dynamiques des zones grises, incluant infrastructures critiques abandonnées, corridors de contrebande énergétique, et points de friction géopolitique. Maintenance de réseaux de communication chiffrés hors des écosystèmes souverains, et formation des populations locales à l'auto-documentation. Archivage clandestin des données pour empêcher leur monopolisation par les blocs ou les milices privées.
+
+## Variables influencées
+- [[organisation_territoires]]
+- [[technologie_information]]
+- [[geopolitique_conflits]]
+
+## Relations
+**Alliés** : [[alliance_sanitaire_des_populations_exclues_fortress_world]], [[coalitions_des_deplaces_et_apatrides_fortress_world]], [[reseaux_d_echange_clandestin_inter_zones_fortress_world]], [[contrebandiers_energetiques_des_zones_grises_fortress_world]], [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]]
+**Opposants** : [[administrations_de_controle_frontalier_des_blocs_fortress_world]], [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]], [[bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world]], [[vaultcorp_security_fortress_world]], [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
+
+## Description journalistique
+Depuis les ruines des anciennes républiques soviétiques et les interstices des corridors caucasiens, le Réseau Liminalis opère comme une ombre numérique. Ses membres, souvent des déserteurs des milices frontalières ou des universitaires radiés des blocs, arpentent les zones grises avec des drones low-tech et des capteurs bricolés, traçant des cartes que les États forteresses préféreraient voir disparaître. Leurs données, échangées via des réseaux maillés hors des infrastructures souveraines, alimentent les contrebandiers d'hydrogène et les cliniques de déaugmentation des seuils. En 2098, Liminalis reste l'une des dernières sources fiables sur les territoires que les blocs ont choisi d'oublier — ou de bombarder.
+
+## Tensions narratives
+Le réseau est tiraillé entre sa mission originelle de préservation des savoirs et la tentation de monétiser ses données auprès des cartels énergétiques ou des milices privées. Certains membres prônent une alliance avec les factions djihadistes logistiques pour sécuriser des corridors, tandis que d'autres veulent rester neutres. La fragmentation des blocs pourrait offrir une fenêtre d'ascension — ou précipiter sa destruction par les agences de sécurité intérieure, qui voient en Liminalis une menace à l'ordre territorial souverain.

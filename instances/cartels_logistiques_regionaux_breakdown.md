@@ -53,7 +53,7 @@ oppositions:
 - etats_fragmentes_nationalisant_les_stocks_breakdown
 - factions_paramilitaires_locales_neutralisees_breakdown
 - federation_communs_territoriaux_breakdown
-- frente_sert_o_livre_breakdown
+- frente_sertao_livre_breakdown
 - front_de_resistance_aux_peages_sur_les_ressources_breakdown
 - gouvernements_regionaux_residuels_reterritorialisants_breakdown
 - hanse_baltique_recomposee_breakdown
@@ -67,8 +67,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2051
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -101,6 +99,9 @@ tensions_narratives: 'Les Cartels sont condamnés à une contradiction structure
   humanitaires et réseaux communautaires tentent de construire des routes alternatives,
   menaçant le monopole de fait que les Cartels ont mis des décennies à consolider.'
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Cartels Logistiques Régionaux
@@ -145,7 +146,7 @@ Les Cartels sont condamnés à une contradiction structurelle : leur pouvoir rep
 - [[etats_fragmentes_nationalisant_les_stocks_breakdown]]
 - [[factions_paramilitaires_locales_neutralisees_breakdown]]
 - [[federation_communs_territoriaux_breakdown]]
-- [[frente_sert_o_livre_breakdown]]
+- [[frente_sertao_livre_breakdown]]
 - [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
 - [[gouvernements_regionaux_residuels_reterritorialisants_breakdown]]
 - [[hanse_baltique_recomposee_breakdown]]

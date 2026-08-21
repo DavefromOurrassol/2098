@@ -55,8 +55,6 @@ oppositions:
 type_relation_dominante: neutralité
 annee_debut: 2028
 annee_fin: 2051
-etat_temporel: disparu
-age_historique: résiduel
 generation: post-effondrement
 injection:
   type: canonique
@@ -83,6 +81,9 @@ tensions_narratives: >
   un réseau mondial reconstitué serait-il une libération ou un nouveau
   vecteur de contrôle ?
 date_creation: 2098-01-01
+trajectoire: disparu
+est_clandestin: false
+
 ---
 
 # Les Fragments NexCore

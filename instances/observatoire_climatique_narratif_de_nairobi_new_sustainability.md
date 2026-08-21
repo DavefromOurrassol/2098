@@ -52,8 +52,6 @@ oppositions:
 type_relation_dominante: coopération
 annee_debut: 2037
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -89,6 +87,9 @@ localisation:
   zone: nairobi_observatoire_climatique
   lieu: Nairobi, Observatoire Climatique Narratif
   type_lieu: site_strategique
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Observatoire Climatique Narratif de Nairobi

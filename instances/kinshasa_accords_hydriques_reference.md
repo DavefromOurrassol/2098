@@ -61,8 +61,6 @@ type_relation_dominante: coopération
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: mature
 generation: transition
 
 injection:
@@ -83,6 +81,9 @@ tensions_narratives: >
   La prochaine grande sécheresse du bassin — que l'Oracle des Seuils prédit avec 73 % de probabilité pour 2101-2103 — risque de rendre caducs les quotas actuels et de forcer une renégociation dans un contexte de rivalité accrue entre États et consortiums privés. Par ailleurs, la pression croissante des consortiums miniers du bassin congolais pour obtenir des dérogations permanentes aux restrictions de dérivation fragilise le secrétariat des Accords, dont plusieurs fonctionnaires clés font l'objet d'enquêtes pour corruption. Enfin, la question de l'intégration des données citoyennes collectées par les réseaux de capteurs locaux dans les décisions d'allocation divise profondément les signataires entre États transparents et régimes opaques.
 
 date_creation: 2026-06-27
+trajectoire: mature
+est_clandestin: false
+
 ---
 
 # Accords Hydriques de Kinshasa

@@ -58,8 +58,6 @@ type_relation_dominante: rivalité
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: forteresse
 
 injection:
@@ -80,6 +78,9 @@ tensions_narratives: >
   La tension centrale de Nuna Capital est existentielle : la souveraineté retrouvée repose intégralement sur une catastrophe que le peuple kalaallit n'a pas voulue, et la conscience de cette origine empoisonne les débats internes entre la faction 'rente comme rempart' et les voix qui réclament une redistribution vers les zones climatiquement sinistrées. Par ailleurs, les trois blocs convergent lentement vers une stratégie de pression coordonnée pour forcer un alignement — et Nuna Capital doit décider si son ambiguïté peut tenir encore longtemps face à la militarisation croissante de l'Arc. Enfin, les Inuit des zones côtières submergées, déplacés par la même fonte qui enrichit le Fonds, commencent à organiser une contestation interne que les dirigeants de Nuuk-Forteresse ne peuvent plus ignorer.
 
 date_creation: 2026-06-23
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Nuna Capital — Fonds Souverain de Kalaallit Nunaat

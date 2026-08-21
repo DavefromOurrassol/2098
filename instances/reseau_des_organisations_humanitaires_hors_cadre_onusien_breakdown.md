@@ -59,8 +59,6 @@ oppositions:
 type_relation_dominante: coopération
 annee_debut: 2041
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -93,6 +91,9 @@ tensions_narratives: Le Réseau est perpétuellement tiraillé entre l'impérati
   la cohésion du réseau et nourrit des fractures entre organisations aux idéologies
   divergentes.
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Réseau des Organisations Humanitaires Hors Cadre Onusien

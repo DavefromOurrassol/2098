@@ -54,8 +54,6 @@ oppositions:
 type_relation_dominante: rivalité
 annee_debut: 2032
 annee_fin: null
-etat_temporel: actif
-age_historique: ascendant
 generation: transition
 injection:
   type: canonique
@@ -94,6 +92,9 @@ tensions_narratives: 'La tension centrale est celle d''une voix légitime dans u
 
   '
 date_creation: 2026-06-15
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Leena Väinälä

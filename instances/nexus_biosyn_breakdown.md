@@ -50,10 +50,8 @@ oppositions:
 type_relation_dominante: dépendance
 
 annee_debut: 2041
-annee_fin: 
+annee_fin: 2053
 
-etat_temporel: transformé
-age_historique: résiduel
 generation: post-effondrement
 
 injection:
@@ -74,6 +72,9 @@ tensions_narratives: >
   Qui détient légitimement les brevets des semences dans un monde sans tribunal international capable de les faire respecter — et que se passe-t-il quand deux factions BioSyn rivales revendiquent le même territoire agricole ? Des communautés entières vivent sous la menace d'une 'coupure de licence' pour leurs cultures génétiquement verrouillées, sans avoir les moyens de payer ni les ressources pour revenir à des semences libres. À l'inverse, des pirates biologiques tentent de décoder et libérer les séquences propriétaires, transformant la biologie en champ de bataille idéologique entre le droit à se nourrir et la logique du brevet. La question hante les zones de conflit : si Nexus BioSyn n'existe plus vraiment, la dette biologique qu'on lui doit existe-t-elle encore ?
 
 date_creation: 2026-06-15
+trajectoire: transformé
+est_clandestin: false
+
 ---
 
 # Fragments BioSyn

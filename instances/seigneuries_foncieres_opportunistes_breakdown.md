@@ -48,7 +48,7 @@ oppositions:
 - cooperative_terrafond_breakdown
 - delta_mekong_racines_breakdown
 - factions_secessionnistes_agrariennes_du_desert_breakdown
-- frente_sert_o_livre_breakdown
+- frente_sertao_livre_breakdown
 - ligue_des_cites_littorales_en_sursis_breakdown
 - massif_central_cicatrices_vertes_breakdown
 - noeud_mnemos_pannonie_breakdown
@@ -57,8 +57,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2042
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -87,6 +85,9 @@ tensions_narratives: La tension centrale est celle d'une entité qui a besoin de
   génère des conflits armés récurrents qui déstabilisent les régions entières qu'elles
   prétendent administrer.
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Seigneuries Foncières Opportunistes
@@ -124,7 +125,7 @@ La tension centrale est celle d'une entité qui a besoin de stabilité pour rent
 - [[cooperative_terrafond_breakdown]]
 - [[delta_mekong_racines_breakdown]]
 - [[factions_secessionnistes_agrariennes_du_desert_breakdown]]
-- [[frente_sert_o_livre_breakdown]]
+- [[frente_sertao_livre_breakdown]]
 - [[ligue_des_cites_littorales_en_sursis_breakdown]]
 - [[massif_central_cicatrices_vertes_breakdown]]
 - [[noeud_mnemos_pannonie_breakdown]]

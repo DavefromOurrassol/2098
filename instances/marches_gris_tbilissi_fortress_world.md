@@ -77,8 +77,6 @@ type_relation_dominante: infiltration
 annee_debut: 2061
 annee_fin: 
 
-etat_temporel: clandestin
-age_historique: ascendant
 generation: forteresse
 
 injection:
@@ -99,6 +97,9 @@ tensions_narratives: >
   La montée en puissance du Conseil Moscou Est dans la surveillance algorithmique des zones grises tbilissiennes menace de colmater les dernières failles que les Marches exploitent — obligeant le réseau à choisir entre se fragmenter davantage ou se radicaliser en acteur politique. Par ailleurs, la demande croissante des populations exclues crée une pression morale que l'organisation, structurellement amorale, peine à absorber sans se transformer en mouvement de résistance — ce qu'elle refuse d'être pour préserver sa neutralité commerciale. Enfin, les blocs rivaux cherchent à les retourner comme vecteur d'infiltration réciproque, ce qui expose le réseau au risque de devenir, malgré lui, l'instrument d'une guerre par procuration qu'il a toujours prétendu ne pas mener.
 
 date_creation: 2026-06-27
+trajectoire: ascendant
+est_clandestin: true
+
 ---
 
 # Marches Gris Tbilissi — Réseau des Interstices Caucasiens

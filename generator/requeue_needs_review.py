@@ -87,6 +87,31 @@ def main():
             encoding="utf-8"
         )
         print(f"✓ {len(new_ideas)} entrées ajoutées à {QUEUE_PATH}")
+
+        # Correctif du 16 août 2026 : needs_review.yaml n'était jamais
+        # nettoyé après un requeue réussi -- les entrées y restaient
+        # indéfiniment même une fois l'idée retraitée avec succès (trouvé
+        # sur deux cas réels, "Les Veilleurs des Nappes Phréatiques" et
+        # "Gelecek Meclisi", tous deux toujours affichés dans le panneau
+        # Revue du GUI bien après leur résolution). On retire ici
+        # uniquement les entrées effectivement requeue-ées cette fois
+        # (new_ideas) -- celles ignorées comme doublons (skipped)
+        # restent en l'état, elles n'ont pas été traitées par ce run.
+        requeued_keys = {
+            i.get("_slug_corrige", i.get("nom", "")).lower() for i in new_ideas
+        }
+        remaining = [
+            e for e in entries
+            if (e.get("idea") or {}).get("_slug_corrige",
+                (e.get("idea") or {}).get("nom", "")).lower() not in requeued_keys
+        ]
+        NEEDS_REVIEW_PATH.write_text(
+            yaml.dump({"needs_review": remaining}, allow_unicode=True,
+                      default_flow_style=False, sort_keys=False),
+            encoding="utf-8"
+        )
+        print(f"✓ {len(entries) - len(remaining)} entrée(s) retirée(s) de {NEEDS_REVIEW_PATH}")
+
         print("\n→ Lancer :")
         print("  python3 create_entities_and_instances.py  (mode custom)")
     else:

@@ -1,63 +1,6 @@
-# signaux_custom/queue.yaml
-#
-# Ajoute ici tes idées de signaux faibles "custom" (observations de l'actualité,
-# lectures, intuitions...). Lance ensuite :
-#
-#   python3 generator/inject_custom_signals.py            ← injection réelle
-#   python3 generator/inject_custom_signals.py --dry-run  ← test sans écriture
-#
-# CHAMPS :
-#   id                  : identifiant court lisible (lettres, chiffres, underscores)
-#   description         : l'observation en langage naturel, quelques phrases suffisent
-#   source              : libre — date, lien d'article, nom d'un livre...
-#   variable_hint       : optionnel. Met null si tu ne sais pas — le LLM choisit
-#                         automatiquement. Sinon, une variable unique (chaîne) ou
-#                         plusieurs (liste) que tu IMPOSES comme cibles ; le LLM
-#                         peut en ajouter d'autres si pertinent, dans la limite
-#                         de variable_hint_count.
-#                         Variables disponibles :
-#                           systeme_economique_redistribution | gouvernance_institutions
-#                           geopolitique_conflits | valeurs_culture_tempo_sociale
-#                           organisation_territoires | sante_biotechnologies
-#                           frontieres_du_systeme | technologie_information
-#                           climat_environnement_global | energie_ressources_critiques
-#                           demographie_mobilite_humaine | systemes_productifs_travail
-#   variable_hint_count : optionnel, entier 1-4. Plafond du nombre total de
-#                         variables que le LLM peut retourner (hint(s) inclus).
-#                         Par défaut : 2. Monte à 3-4 si tu penses que le signal
-#                         est vraiment structurant entre plusieurs domaines.
-#   zone_hint           : optionnel. Un LIEU RÉEL de 2026 (pays, région, ville --
-#                         ex: "Norvège"), PAS un slug de zone 2098. Le LLM
-#                         retrouve lui-même à quelle zone/bloc ce lieu
-#                         correspond dans chacun des 6 scénarios (la
-#                         correspondance peut différer d'un scénario à
-#                         l'autre). Influence la rédaction des
-#                         evenement_cle/evolution -- si l'idée source
-#                         mentionne elle-même un lieu différent, celui-ci
-#                         est prioritaire sur zone_hint.
-#
-# EXEMPLES :
-#   - id: mon_signal_2026
-#     description: >
-#       Plusieurs pays testent des chatbots thérapeutes remboursés par la
-#       sécurité sociale, avec débat sur la responsabilité médicale en cas
-#       d'erreur de l'IA.
-#     source: actualite_2026-06
-#     variable_hint: sante_biotechnologies
-#     variable_hint_count: null   # garde le défaut (2)
-#
-#   - id: crise_structurante_2026
-#     description: >
-#       Une vague de ruptures d'approvisionnement en terres rares déclenche
-#       à la fois des tensions diplomatiques et une accélération forcée des
-#       politiques de relocalisation industrielle.
-#     source: actualite_2026-06
-#     variable_hint: [energie_ressources_critiques, geopolitique_conflits]
-#     variable_hint_count: 4   # le LLM peut ajouter jusqu'à 2 variables de plus
-#
-# Les idées traitées sont déplacées vers processed.yaml (succès) ou
-# needs_review.yaml (échec après corrections automatiques).
-# ──────────────────────────────────────────────────────────────────────────────
-
 queue:
-  [] # ← remplace [] par tes idées
+- id: IA administratives
+  description: Adoption massive d'agents IA autonomes dans les systèmes de gestion
+    informationnelle des administrations et entreprises, avec une dépendance croissante
+    aux infrastructures algorithmiques pour le traitement des données critiques.
+  variable_hint: technologie_information

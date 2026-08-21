@@ -42,7 +42,7 @@ alliances:
 - factions_para_etatiques_hydriques_breakdown
 oppositions:
 - amara_diallo_nkosi_breakdown
-- autorite_passage_arctique_breakdown
+- arctic_passage_authority_breakdown
 - communes_rust_belt_breakdown
 - delta_mekong_racines_breakdown
 - factions_secessionnistes_agrariennes_du_desert_breakdown
@@ -51,8 +51,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2043
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -84,6 +82,9 @@ tensions_narratives: 'La contradiction fondamentale de ces factions réside dans
   État souverain distribuant l''eau par quotas militarisés à des réfugiés climatiques
   est devenue l''un des symboles les plus chargés de la fragmentation systémique.'
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Factions Étatiques Résiduelles de Souveraineté Hydrique
@@ -114,7 +115,7 @@ La contradiction fondamentale de ces factions réside dans le fait qu'elles reve
 - [[factions_para_etatiques_hydriques_breakdown]]
 **Opposants :**
 - [[amara_diallo_nkosi_breakdown]]
-- [[autorite_passage_arctique_breakdown]]
+- [[arctic_passage_authority_breakdown]]
 - [[communes_rust_belt_breakdown]]
 - [[delta_mekong_racines_breakdown]]
 - [[factions_secessionnistes_agrariennes_du_desert_breakdown]]

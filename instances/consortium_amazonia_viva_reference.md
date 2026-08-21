@@ -47,7 +47,7 @@ alliances:
 - cooperative_terrafond_reference
 - federation_communs_territoriaux_reference
 - fonds_monetaire_climatique_fmc_reference
-- frente_sert_o_livre_reference
+- frente_sertao_livre_reference
 - observatoire_climatique_des_territoires_oct_reference
 - reseaux_de_capteurs_citoyens_reference
 - reseaux_de_gouvernance_multilaterale_survivants_reference
@@ -70,8 +70,6 @@ type_relation_dominante: alliance stratégique
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: ascendant
 generation: transition
 
 injection:
@@ -92,6 +90,9 @@ tensions_narratives: >
   La tension centrale reste entière : le Consortium dispose d'une légitimité morale et symbolique forte, mais sa capacité à faire respecter ses décisions contre des acteurs dotés de moyens militaires ou financiers supérieurs reste précaire. Des fissures internes commencent à apparaître entre les communautés autochtones qui refusent toute monétisation de la biodiversité et les autorités locales qui voient dans les accords de compensation carbone un levier économique vital pour leurs populations. Par ailleurs, le Bloc Ressources Eurasiatique finance discrètement des factions dissidentes au sein même du Consortium pour fragmenter sa cohésion de vote. La question qui hante ses dirigeants : jusqu'où peut-on négocier sans trahir ?
 
 date_creation: 2026-06-23
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Consortium Amazônia Viva
@@ -125,7 +126,7 @@ La tension centrale reste entière : le Consortium dispose d'une légitimité mo
 - [[cooperative_terrafond_reference]]
 - [[federation_communs_territoriaux_reference]]
 - [[fonds_monetaire_climatique_fmc_reference]]
-- [[frente_sert_o_livre_reference]]
+- [[frente_sertao_livre_reference]]
 - [[observatoire_climatique_des_territoires_oct_reference]]
 - [[reseaux_de_capteurs_citoyens_reference]]
 - [[reseaux_de_gouvernance_multilaterale_survivants_reference]]

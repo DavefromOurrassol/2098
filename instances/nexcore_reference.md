@@ -57,7 +57,7 @@ oppositions:
 - coalition_pour_la_souverainete_numerique_nationale_reference
 - conseil_regulation_algorithmique_reference
 - consortium_amazonia_viva_reference
-- frente_sert_o_livre_reference
+- frente_sertao_livre_reference
 - helsinki_communs_numeriques_reference
 - murmansk_transit_arctique_reference
 - regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference
@@ -67,8 +67,6 @@ type_relation_dominante: dépendance
 annee_debut: 2033
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: transition
 
 injection:
@@ -89,6 +87,9 @@ tensions_narratives: >
   La grande question de 2098 : peut-on nationaliser ce qu'on ne comprend plus techniquement ? Plusieurs États tentent de renégocier leurs contrats d'infrastructure après avoir découvert des clauses d'accès aux données embarquées — NexCore conteste devant les tribunaux arbitraux privés qu'elle a elle-même contribué à financer. En parallèle, une fuite interne ('le Dossier Latence') suggère que NexCore aurait délibérément dégradé les performances réseau de zones géographiques jugées 'non rentables' pendant une crise climatique, accélérant une décision d'évacuation. La tension entre infrastructure vitale et empire privé n'a jamais été aussi tranchante — et la réponse appartient à celui qui contrôle les câbles.
 
 date_creation: 2026-06-20
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # NexCore Global Infrastructure Group
@@ -130,7 +131,7 @@ La grande question de 2098 : peut-on nationaliser ce qu'on ne comprend plus tech
 - [[coalition_pour_la_souverainete_numerique_nationale_reference]]
 - [[conseil_regulation_algorithmique_reference]]
 - [[consortium_amazonia_viva_reference]]
-- [[frente_sert_o_livre_reference]]
+- [[frente_sertao_livre_reference]]
 - [[helsinki_communs_numeriques_reference]]
 - [[murmansk_transit_arctique_reference]]
 - [[regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference]]

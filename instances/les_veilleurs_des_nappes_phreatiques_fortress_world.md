@@ -1,0 +1,101 @@
+---
+name: Les Sentinelles des Aquifères Oubliés
+type: instance
+slug: les_veilleurs_des_nappes_phreatiques_fortress_world
+entite: les_veilleurs_des_nappes_phreatiques
+scenario: fortress_world
+localisation:
+  zone: afrique_subsaharienne_zones_effondrees
+  lieu: Sahel
+  type_lieu: region
+
+type_dans_scenario: réseau
+
+role_dans_scenario: >
+  Mouvement décentralisé de protection et de surveillance citoyenne des nappes phréatiques, né en réaction à l'accaparement des ressources hydriques par les blocs souverains. Les Sentinelles combinent des techniques low-tech de monitoring (capteurs artisanaux, réseaux de puits communautaires) avec une résistance active contre les milices corporatives et les administrations frontalières qui tentent de verrouiller l'accès à l'eau. Leur rôle systémique est double : préserver un bien commun vital dans les zones abandonnées par les blocs, et incarner une alternative locale à la gouvernance autoritaire des ressources.
+
+responsabilites: >
+  Cartographier et protéger les nappes phréatiques hors des zones contrôlées par les blocs ; former les populations locales à la gestion autonome de l'eau ; saboter les infrastructures d'extraction illégale ou polluante ; documenter les violations des droits hydriques pour alimenter les réseaux d'information clandestins ; organiser des corridors d'approvisionnement en eau pour les populations déplacées.
+
+impact_local: 4
+impact_systemique_global: 2
+
+variables_influencees:
+    - energie_ressources_critiques
+    - organisation_territoires
+    - gouvernance_institutions
+
+zone_geographique:
+    - régionale
+    - nationale
+
+zone_systemique:
+    - énergie
+    - gouvernance
+    - société
+
+alliances:
+    - alliance_sanitaire_des_populations_exclues_fortress_world
+    - coalitions_des_deplaces_et_apatrides_fortress_world
+    - reseaux_d_echange_clandestin_inter_zones_fortress_world
+    - coalition_vivant_fortress_world
+    - mouvement_commun_midwest_fortress_world
+
+oppositions:
+    - administrations_de_controle_frontalier_des_blocs_fortress_world
+    - agences_de_securite_interieure_des_etats_forteresses_fortress_world
+    - milices_privees_de_protection_des_sites_germinaux_fortress_world
+    - biolock_agritech_fortress_world
+    - consortium_eurasiatique_des_ressources_fermees_fortress_world
+
+type_relation_dominante: conflit
+
+annee_debut: 2047
+annee_fin: 
+
+trajectoire: ascendant
+est_clandestin: true
+generation: forteresse
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Depuis le verrouillage des nappes phréatiques du Sahel par le Bloc Atlantique en 2047, les Sentinelles des Aquifères Oubliés sont devenues le dernier rempart des populations exclues des zones sécurisées. Ces réseaux clandestins, souvent composés de femmes et d'anciens ingénieurs hydrauliques, ont transformé des milliers de villages en bastions de résistance hydrique. Leur méthode ? Des capteurs bricolés à partir de déchets électroniques, des puits communautaires creusés à la main, et une connaissance intime des aquifères qui défie les cartes officielles des blocs. Leur symbole, une goutte d'eau stylisée en forme de clé, est devenu un signe de ralliement dans les zones grises, où l'eau est plus précieuse que l'or.
+
+signes_distinctifs: >
+  Leur emblème, une goutte d'eau en forme de clé, est gravé ou peint sur les puits et les réservoirs qu'ils protègent. Les membres portent souvent des foulards ou des bracelets tissés avec des fils bleus, symbolisant les nappes phréatiques. Leurs outils low-tech (capteurs artisanaux, pompes à énergie solaire bricolées) sont devenus des objets de contre-culture, exposés comme des trophées dans les campements des Seuils Fermés.
+
+tensions_narratives: >
+  Les Sentinelles sont tiraillées entre leur ancrage local et la nécessité de se coordonner à plus grande échelle pour peser face aux blocs. Leur alliance avec les Coalitions des Déplacés et Apatrides pourrait les entraîner dans une logique de confrontation directe, tandis que leur collaboration avec le Réseau Vert Clandestin ouvre la porte à une approche plus systémique, mais aussi plus risquée. Leur plus grand défi : éviter de reproduire les structures de pouvoir qu'ils combattent, tout en résistant à la répression croissante des milices corporatives. Leur trajectoire pourrait basculer vers une radicalisation armée ou, à l'inverse, vers une intégration forcée dans les dispositifs de gouvernance des blocs, sous la pression des crises hydriques.
+
+date_creation: 2026-08-15
+---
+
+# Les Sentinelles des Aquifères Oubliés
+
+## Rôle dans [[fortress_world]]
+Mouvement décentralisé de protection et de surveillance citoyenne des nappes phréatiques, né en réaction à l'accaparement des ressources hydriques par les blocs souverains. Les Sentinelles combinent des techniques low-tech de monitoring (capteurs artisanaux, réseaux de puits communautaires) avec une résistance active contre les milices corporatives et les administrations frontalières qui tentent de verrouiller l'accès à l'eau. Leur rôle systémique est double : préserver un bien commun vital dans les zones abandonnées par les blocs, et incarner une alternative locale à la gouvernance autoritaire des ressources.
+
+## Responsabilités
+Cartographier et protéger les nappes phréatiques hors des zones contrôlées par les blocs ; former les populations locales à la gestion autonome de l'eau ; saboter les infrastructures d'extraction illégale ou polluante ; documenter les violations des droits hydriques pour alimenter les réseaux d'information clandestins ; organiser des corridors d'approvisionnement en eau pour les populations déplacées.
+
+## Variables influencées
+- [[energie_ressources_critiques]]
+- [[organisation_territoires]]
+- [[gouvernance_institutions]]
+
+## Relations
+**Alliés** : [[alliance_sanitaire_des_populations_exclues_fortress_world]], [[coalitions_des_deplaces_et_apatrides_fortress_world]], [[reseaux_d_echange_clandestin_inter_zones_fortress_world]], [[coalition_vivant_fortress_world]], [[mouvement_commun_midwest_fortress_world]]
+**Opposants** : [[administrations_de_controle_frontalier_des_blocs_fortress_world]], [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]], [[milices_privees_de_protection_des_sites_germinaux_fortress_world]], [[biolock_agritech_fortress_world]], [[consortium_eurasiatique_des_ressources_fermees_fortress_world]]
+
+## Description journalistique
+Depuis le verrouillage des nappes phréatiques du Sahel par le Bloc Atlantique en 2047, les Sentinelles des Aquifères Oubliés sont devenues le dernier rempart des populations exclues des zones sécurisées. Ces réseaux clandestins, souvent composés de femmes et d'anciens ingénieurs hydrauliques, ont transformé des milliers de villages en bastions de résistance hydrique. Leur méthode ? Des capteurs bricolés à partir de déchets électroniques, des puits communautaires creusés à la main, et une connaissance intime des aquifères qui défie les cartes officielles des blocs. Leur symbole, une goutte d'eau stylisée en forme de clé, est devenu un signe de ralliement dans les zones grises, où l'eau est plus précieuse que l'or.
+
+## Tensions narratives
+Les Sentinelles sont tiraillées entre leur ancrage local et la nécessité de se coordonner à plus grande échelle pour peser face aux blocs. Leur alliance avec les Coalitions des Déplacés et Apatrides pourrait les entraîner dans une logique de confrontation directe, tandis que leur collaboration avec le Réseau Vert Clandestin ouvre la porte à une approche plus systémique, mais aussi plus risquée. Leur plus grand défi : éviter de reproduire les structures de pouvoir qu'ils combattent, tout en résistant à la répression croissante des milices corporatives. Leur trajectoire pourrait basculer vers une radicalisation armée ou, à l'inverse, vers une intégration forcée dans les dispositifs de gouvernance des blocs, sous la pression des crises hydriques.

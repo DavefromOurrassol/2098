@@ -71,8 +71,6 @@ type_relation_dominante: symbiose
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: reconstruction
 
 injection:
@@ -93,6 +91,9 @@ tensions_narratives: >
   La question de qui contrôle réellement les algorithmes de priorisation écologique reste entière — certains blocs continentaux soupçonnent les zones à forte valorisation énergétique d'être systématiquement favorisées. Des communautés autochtones revendiquent la co-gouvernance de corridors tracés sur leurs territoires ancestraux sans leur consentement. À mesure que le RVC devient indispensable à la stabilité climatique mondiale, sa vulnérabilité en tant que cible géopolitique ou cyber-sabotage grandit silencieusement.
 
 date_creation: 2026-06-15
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Réseau Vivant Continental — RVC

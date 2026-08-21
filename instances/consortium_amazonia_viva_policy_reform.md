@@ -68,8 +68,6 @@ type_relation_dominante: alliance stratégique
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: ascendant
 generation: transition
 
 injection:
@@ -90,6 +88,9 @@ tensions_narratives: >
   Le Consortium est pris en étau entre deux risques symétriques : être coopté par l'appareil technocratique global qui a besoin de sa légitimité de terrain pour valider ses propres décisions, ou rester trop radical et être marginalisé au profit d'interlocuteurs plus accommodants. En interne, la fracture entre les composantes scientifiques — tentées par les instruments de géo-ingénierie douce — et les gardiens autochtones — qui y voient une nouvelle forme de colonisation technique — menace régulièrement la cohésion de la coalition. La question de la monétisation des crédits carbone amazoniens par les fonds globaux soulève une bataille existentielle : est-ce une ressource de financement souverain ou la transformation d'un écosystème sacré en actif financier ? La trajectoire du Consortium dans les cinq prochaines années dira si la diplomatie écologique infra-étatique est une révolution de gouvernance ou une anomalie tolérée le temps que les grandes puissances reprennent la main.
 
 date_creation: 2026-06-23
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Consortium Amazônia Viva — Délégation Reconnue auprès du Conseil de Régulation Climatique Global

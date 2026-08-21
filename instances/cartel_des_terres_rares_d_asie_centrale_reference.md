@@ -59,8 +59,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2030
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -97,6 +95,9 @@ localisation:
   zone: corridors_eurasiens_zones_grises
   lieu: Corridors Eurasiens Centraux — siège tournant non déclaré
   type_lieu: infrastructure
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Cartel des Terres Rares d'Asie Centrale

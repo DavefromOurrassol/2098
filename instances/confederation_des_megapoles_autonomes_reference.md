@@ -36,7 +36,7 @@ alliances:
 - helsinki_communs_numeriques_reference
 - lyon_metropole_reference
 - optiflow_logistics_reference
-- rede_paulista_de_distribuic_o_algor_tmica_reference
+- rede_paulista_de_distribuicao_algoritmica_reference
 - reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference
 - sao_paulo_ita_reference
 - singapour_est_nexcore_reference
@@ -53,8 +53,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2032
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -91,6 +89,9 @@ localisation:
   zone: null
   lieu: null
   type_lieu: null
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Confédération des Mégapoles Autonomes
@@ -125,7 +126,7 @@ La Confédération est déchirée entre la solidarité mégapolitaine affichée 
 - [[helsinki_communs_numeriques_reference]]
 - [[lyon_metropole_reference]]
 - [[optiflow_logistics_reference]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_reference]]
+- [[rede_paulista_de_distribuicao_algoritmica_reference]]
 - [[reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference]]
 - [[sao_paulo_ita_reference]]
 - [[singapour_est_nexcore_reference]]

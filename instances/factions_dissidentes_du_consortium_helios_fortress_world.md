@@ -46,8 +46,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2063
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -83,6 +81,9 @@ localisation:
   zone: zones_grises_tampons
   lieu: Corridors Gris d'Asie Centrale / Tbilissi-Nord
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Factions Dissidentes du Consortium Helios

@@ -70,8 +70,6 @@ oppositions:
 type_relation_dominante: coopération
 annee_debut: 2037
 annee_fin:
-etat_temporel: actif
-age_historique: ascendant
 generation: transition
 injection:
   type: canonique
@@ -95,6 +93,9 @@ tensions_narratives: >
   Débat sur l'extension de sa compétence au secteur privé.
   Accusée d'être trop lente face à l'accélération technologique.
 date_creation: 2098-01-01
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Agence Internationale de Supervision IA

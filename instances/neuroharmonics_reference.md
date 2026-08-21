@@ -57,8 +57,6 @@ type_relation_dominante: dépendance
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: ère cognitive
 
 injection:
@@ -79,6 +77,9 @@ tensions_narratives: >
   La dépendance croissante aux implants NH-GAN crée une fracture neurocognitive entre travailleurs augmentés et non-augmentés, avec des mouvements de résistance comme l'Internationale des Travailleurs Augmentés qui piratent les mises à jour logicielles. Les scandales se multiplient autour des 'effacements sélectifs' de souvenirs chez les travailleurs en fin de contrat, et des rumeurs persistent sur des protocoles expérimentaux de contrôle émotionnel dans les zones grises. Parallèlement, NH-GAN pousse pour étendre ses technologies aux enfants des travailleurs, promettant une 'préparation optimale' aux métiers de demain - une perspective qui horrifie les défenseurs des droits biosociaux. La question se pose : jusqu'où les États et les corporations laisseront-ils NH-GAN redéfinir ce que signifie être humain ?
 
 date_creation: 2026-07-11
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # NeuroHarmonics Global Augmentation Network (NH-GAN)

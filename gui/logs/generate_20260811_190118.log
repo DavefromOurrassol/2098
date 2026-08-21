@@ -1,0 +1,13 @@
+
+============================================================
+OURRASSOL 2098 — Générateur d'articles
+============================================================
+  Mode       : Semi-guidé
+  Scénario   : breakdown
+  Thématique : actualites_a_la_une
+  Longueur   : analyse
+  Angle      : romuva la nouvelle religion en europe
+============================================================
+[erreur] Valeurs invalides dans config.yaml :
+  - zone_slug invalide : 'archives_neutres_geneve' n'existe pas dans journaux.yaml pour breakdown/pro_pouvoir.
+    Zones valides : afrique_centrale_australe, afrique_de_louest_lagos_sahel, amazon_pacte_gardiens, antilles_orientales_fragmentes, arc_eurasien_central, arc_sahelo_mediterraneen, archipel_anglo_celtique, archipel_comores_autonome, arctique_nordark, argentine_pampas_autonome, asie_pacifique_sud_est, australie_continent_insulaire, bolivie_altipano_strategique, caribe_insulaire_residuel, chili_cordillere_autonome, cuba_archipel_resilient, espace_nord_americain_fragmente, ethiopie_hautes_terres_autonome, geneve_bunker_institutions, guatemala_corridor_centre_americain, haiti_territoire_sinistre, himalaya_nepal_autonome, honduras_territoire_dispute, inde_sous_continent_resilient, jamaique_hub_caraibes, madagascar_ile_resiliente, maurice_hub_financier, melanesie_insulaire, micronesie_pacifique_central, nordeste_bresil_frente, nouvelle_zelande_archipel_pacifique, polynesie_centrale, republicque_dominicaine_etat_frontalier, salvador_enclave_resistante, venezuela_archipel_petrolier, zone_golfe_levant

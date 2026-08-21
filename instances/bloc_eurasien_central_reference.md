@@ -80,8 +80,6 @@ type_relation_dominante: rivalité
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: déclinant
 generation: transition
 
 injection:
@@ -102,6 +100,9 @@ tensions_narratives: >
   La question de l'accès aux terres rares d'Asie centrale oppose frontalement deux membres fondateurs, menaçant d'éclater au prochain cycle de renégociation du Traité de Bakou (2099). Par ailleurs, la Sibérie Fédérale joue un double jeu en maintenant des accords énergétiques bilatéraux avec des entités extérieures au BEC, sapant la cohérence collective sans jamais franchir le seuil de la rupture formelle. Enfin, une faction interne pousse à une intégration numérique accrue via un registre de données critiques partagé — proposition que la moitié des membres perçoit comme un cheval de Troie de surveillance réciproque.
 
 date_creation: 2026-06-27
+trajectoire: déclinant
+est_clandestin: false
+
 ---
 
 # Bloc Eurasien Central (BEC)

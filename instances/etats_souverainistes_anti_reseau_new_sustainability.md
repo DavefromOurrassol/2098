@@ -80,8 +80,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2026
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -115,6 +113,8 @@ localisation:
   lieu: Bloc Eurasien — noyau dur de résistance souverainiste
   type_lieu: region
 annee_debut_verifiee: true
+trajectoire: émergent
+est_clandestin: false
 
 ---
 

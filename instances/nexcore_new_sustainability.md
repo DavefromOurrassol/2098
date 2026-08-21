@@ -49,8 +49,6 @@ oppositions:
 type_relation_dominante: coopération
 annee_debut: 2043
 annee_fin:
-etat_temporel: actif
-age_historique: mature
 generation: ère cognitive
 injection:
   type: canonique
@@ -75,6 +73,9 @@ tensions_narratives: >
   Certains membres du Sud Global accusent une domination culturelle
   persistante malgré la structure coopérative.
 date_creation: 2098-01-01
+trajectoire: mature
+est_clandestin: false
+
 ---
 
 # NexCore Communs

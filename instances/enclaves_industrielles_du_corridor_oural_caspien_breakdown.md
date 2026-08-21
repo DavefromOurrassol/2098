@@ -54,8 +54,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2041
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -88,6 +86,9 @@ tensions_narratives: 'Les Enclaves sont prisonnières de leur propre valeur : le
   extérieur risque de transformer l''enclave en vassale d''un seigneur de guerre plutôt
   qu''en nœud productif indépendant.'
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Enclaves Industrielles du Corridor Oural-Caspien

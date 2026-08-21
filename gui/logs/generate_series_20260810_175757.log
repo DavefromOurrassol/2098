@@ -1,0 +1,1324 @@
+
+============================================================
+OURRASSOL 2098 — Génération de série
+============================================================
+  Scénario     : policy_reform
+  Thématiques  : 6
+    - sciences_technologies
+    - musique
+    - faits_divers
+    - opinions_editoriaux
+    - education
+    - medias_communication
+  Articles/th. : 3
+  Longueur     : auto
+============================================================
+
+[series] 18 articles à générer...
+
+[1/18] policy_reform × sciences_technologies — 3 janvier 2098
+
+[snapshot] Construction du monde 2098 — scénario : policy_reform
+[snapshot] Variables pilotes : ['gouvernance_institutions', 'technologie_information', 'energie_ressources_critiques', 'climat_environnement_global']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 1 | Cohérence : OK
+[snapshot] Jalons trajectoire : 154 (36 majeurs)
+[snapshot] Événements signal_to_state : 62 (25 majeurs)
+[snapshot] Tensions thématiques : 2
+[snapshot] Instances chargées : 102 | Filtrées : 6
+[snapshot] Événement custom 'Protocole de Médiation de La Haye — Crise Israélo-Iranienne' (an 2027, 71 ans d'effet)
+  → geopolitique_conflits : 45 → 53.0 (delta:+8.0)
+  → energie_ressources_critiques : 54.2 → 64.2 (delta:+10.0)
+  → gouvernance_institutions : 76.4 → 88.4 (delta:+12.0)
+  → demographie_mobilite_humaine : 47.0 → 52.0 (delta:+5.0)
+[snapshot] Événement custom 'Acte Fondateur de Funafuti : Naissance du Pacifique Sud Resilience Network' (an 2039, 59 ans d'effet)
+  → climat_environnement_global : 43.0 → 49.0 (delta:+6.0)
+  → gouvernance_institutions : 88.4 → 100 (delta:+14.0)
+  → organisation_territoires : 48.5 → 58.5 (delta:+10.0)
+  → frontieres_du_systeme : 39.6 → 51.6 (delta:+12.0)
+[snapshot] Événement custom 'L'Attentat des Neuf Nœuds — Déclencheur de Régulation Internationale' (an 2040, 58 ans d'effet)
+  → technologie_information : 83.9 → 71.9 (delta:-12.0)
+  → gouvernance_institutions : 94.6 → 100 (delta:+10.0)
+  → geopolitique_conflits : 16.0 → 11.0 (delta:-5.0)
+[snapshot] Événement custom 'Enchères Circumpolaires du Kalaallit — Protocole de Nairobi' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 66.6 → 78.6 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → geopolitique_conflits : 0.8 → 8.8 (delta:+8.0)
+  → organisation_territoires : 52.7 → 59.7 (delta:+7.0)
+[snapshot] Événement custom 'Exode du Midwest Aride — Protocole d'Intégration Lacustre' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 54.9 → 42.9 (delta:-12.0)
+  → organisation_territoires : 55.2 → 65.2 (delta:+10.0)
+  → gouvernance_institutions : 96.4 → 100 (delta:+8.0)
+  → climat_environnement_global : 49.3 → 57.3 (delta:+8.0)
+[snapshot] Événement custom 'Protocole d'Urgence Amazonienne — Crise de Gouvernance du Bassin Vert' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 57.3 → 65.3 (delta:+8.0)
+  → geopolitique_conflits : 2.5 → 0 (delta:-10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+7.0)
+  → organisation_territoires : 69.4 → 78.4 (delta:+9.0)
+[snapshot] Événement custom 'Traité de Belém : la Souveraineté Carbone Amazonienne face aux Blocs' (an 2055, 43 ans d'effet)
+  → climat_environnement_global : 65.3 → 73.3 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → geopolitique_conflits : 0 → 9.0 (delta:+9.0)
+  → energie_ressources_critiques : 75.3 → 80.3 (delta:+5.0)
+[snapshot] Événement custom 'Victoire du Parti Social-Démocrate Progressiste' (an 2056, 42 ans d'effet)
+  → systeme_economique_redistribution : 61.6 → 71.6 (delta:+10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+  → valeurs_culture_tempo_sociale : 50 → 54.0 (delta:+4.0)
+[snapshot] Événement custom 'Incident du Passage Arctique — Saisie de l'APA par les Unités NAT' (an 2059, 39 ans d'effet)
+  → geopolitique_conflits : 8.2 → 0 (delta:-12.0)
+  → frontieres_du_systeme : 46.6 → 36.6 (delta:-10.0)
+  → energie_ressources_critiques : 81.8 → 89.8 (delta:+8.0)
+[snapshot] Événement custom 'Insurrection des Favelas Numériques de São Paulo contre la RPDA' (an 2073, 25 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+8.0)
+  → technologie_information : 98.5 → 100 (delta:+10.0)
+  → organisation_territoires : 83.5 → 89.5 (delta:+6.0)
+[snapshot] Événement custom 'L'Affaire Van Derburgh — Jurisprudence sur le Patrimoine Technologique' (an 2078, 20 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+2.0)
+  → technologie_information : 100 → 100 (delta:+1.0)
+[snapshot] Événements custom : 11 | 178 variables affectées
+
+[prompt] Assemblage du prompt...
+[prompt] System prompt : 2820 caractères
+[prompt] User prompt   : 59922 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-large-latest, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 17589 | sortie : 1758
+[api] Article généré : 7382 caractères
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/20260810_175900_policy_reform_sciences_technologies_article_3janvier2098.md
+  ✓ Sauvegardé : 20260810_175900_policy_reform_sciences_technologies_article_3janvier2098.md
+
+[2/18] policy_reform × sciences_technologies — 17 janvier 2098
+
+[snapshot] Construction du monde 2098 — scénario : policy_reform
+[snapshot] Variables pilotes : ['gouvernance_institutions', 'technologie_information', 'energie_ressources_critiques', 'climat_environnement_global']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 1 | Cohérence : OK
+[snapshot] Jalons trajectoire : 154 (36 majeurs)
+[snapshot] Événements signal_to_state : 62 (25 majeurs)
+[snapshot] Tensions thématiques : 2
+[snapshot] Instances chargées : 102 | Filtrées : 6
+[snapshot] Événement custom 'Protocole de Médiation de La Haye — Crise Israélo-Iranienne' (an 2027, 71 ans d'effet)
+  → geopolitique_conflits : 45 → 53.0 (delta:+8.0)
+  → energie_ressources_critiques : 54.2 → 64.2 (delta:+10.0)
+  → gouvernance_institutions : 76.4 → 88.4 (delta:+12.0)
+  → demographie_mobilite_humaine : 47.0 → 52.0 (delta:+5.0)
+[snapshot] Événement custom 'Acte Fondateur de Funafuti : Naissance du Pacifique Sud Resilience Network' (an 2039, 59 ans d'effet)
+  → climat_environnement_global : 43.0 → 49.0 (delta:+6.0)
+  → gouvernance_institutions : 88.4 → 100 (delta:+14.0)
+  → organisation_territoires : 48.5 → 58.5 (delta:+10.0)
+  → frontieres_du_systeme : 39.6 → 51.6 (delta:+12.0)
+[snapshot] Événement custom 'L'Attentat des Neuf Nœuds — Déclencheur de Régulation Internationale' (an 2040, 58 ans d'effet)
+  → technologie_information : 83.9 → 71.9 (delta:-12.0)
+  → gouvernance_institutions : 94.6 → 100 (delta:+10.0)
+  → geopolitique_conflits : 16.0 → 11.0 (delta:-5.0)
+[snapshot] Événement custom 'Enchères Circumpolaires du Kalaallit — Protocole de Nairobi' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 66.6 → 78.6 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → geopolitique_conflits : 0.8 → 8.8 (delta:+8.0)
+  → organisation_territoires : 52.7 → 59.7 (delta:+7.0)
+[snapshot] Événement custom 'Exode du Midwest Aride — Protocole d'Intégration Lacustre' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 54.9 → 42.9 (delta:-12.0)
+  → organisation_territoires : 55.2 → 65.2 (delta:+10.0)
+  → gouvernance_institutions : 96.4 → 100 (delta:+8.0)
+  → climat_environnement_global : 49.3 → 57.3 (delta:+8.0)
+[snapshot] Événement custom 'Protocole d'Urgence Amazonienne — Crise de Gouvernance du Bassin Vert' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 57.3 → 65.3 (delta:+8.0)
+  → geopolitique_conflits : 2.5 → 0 (delta:-10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+7.0)
+  → organisation_territoires : 69.4 → 78.4 (delta:+9.0)
+[snapshot] Événement custom 'Traité de Belém : la Souveraineté Carbone Amazonienne face aux Blocs' (an 2055, 43 ans d'effet)
+  → climat_environnement_global : 65.3 → 73.3 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → geopolitique_conflits : 0 → 9.0 (delta:+9.0)
+  → energie_ressources_critiques : 75.3 → 80.3 (delta:+5.0)
+[snapshot] Événement custom 'Victoire du Parti Social-Démocrate Progressiste' (an 2056, 42 ans d'effet)
+  → systeme_economique_redistribution : 61.6 → 71.6 (delta:+10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+  → valeurs_culture_tempo_sociale : 50 → 54.0 (delta:+4.0)
+[snapshot] Événement custom 'Incident du Passage Arctique — Saisie de l'APA par les Unités NAT' (an 2059, 39 ans d'effet)
+  → geopolitique_conflits : 8.2 → 0 (delta:-12.0)
+  → frontieres_du_systeme : 46.6 → 36.6 (delta:-10.0)
+  → energie_ressources_critiques : 81.8 → 89.8 (delta:+8.0)
+[snapshot] Événement custom 'Insurrection des Favelas Numériques de São Paulo contre la RPDA' (an 2073, 25 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+8.0)
+  → technologie_information : 98.5 → 100 (delta:+10.0)
+  → organisation_territoires : 83.5 → 89.5 (delta:+6.0)
+[snapshot] Événement custom 'L'Affaire Van Derburgh — Jurisprudence sur le Patrimoine Technologique' (an 2078, 20 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+2.0)
+  → technologie_information : 100 → 100 (delta:+1.0)
+[snapshot] Événements custom : 11 | 178 variables affectées
+
+[prompt] Assemblage du prompt...
+[prompt] System prompt : 2742 caractères
+[prompt] User prompt   : 59866 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-large-latest, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 17544 | sortie : 1551
+[api] Article généré : 6428 caractères
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/20260810_180001_policy_reform_sciences_technologies_article_17janvier2098.md
+  ✓ Sauvegardé : 20260810_180001_policy_reform_sciences_technologies_article_17janvier2098.md
+
+[3/18] policy_reform × sciences_technologies — 2 février 2098
+
+[snapshot] Construction du monde 2098 — scénario : policy_reform
+[snapshot] Variables pilotes : ['gouvernance_institutions', 'technologie_information', 'energie_ressources_critiques', 'climat_environnement_global']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 1 | Cohérence : OK
+[snapshot] Jalons trajectoire : 154 (36 majeurs)
+[snapshot] Événements signal_to_state : 62 (25 majeurs)
+[snapshot] Tensions thématiques : 2
+[snapshot] Instances chargées : 102 | Filtrées : 6
+[snapshot] Événement custom 'Protocole de Médiation de La Haye — Crise Israélo-Iranienne' (an 2027, 71 ans d'effet)
+  → geopolitique_conflits : 45 → 53.0 (delta:+8.0)
+  → energie_ressources_critiques : 54.2 → 64.2 (delta:+10.0)
+  → gouvernance_institutions : 76.4 → 88.4 (delta:+12.0)
+  → demographie_mobilite_humaine : 47.0 → 52.0 (delta:+5.0)
+[snapshot] Événement custom 'Acte Fondateur de Funafuti : Naissance du Pacifique Sud Resilience Network' (an 2039, 59 ans d'effet)
+  → climat_environnement_global : 43.0 → 49.0 (delta:+6.0)
+  → gouvernance_institutions : 88.4 → 100 (delta:+14.0)
+  → organisation_territoires : 48.5 → 58.5 (delta:+10.0)
+  → frontieres_du_systeme : 39.6 → 51.6 (delta:+12.0)
+[snapshot] Événement custom 'L'Attentat des Neuf Nœuds — Déclencheur de Régulation Internationale' (an 2040, 58 ans d'effet)
+  → technologie_information : 83.9 → 71.9 (delta:-12.0)
+  → gouvernance_institutions : 94.6 → 100 (delta:+10.0)
+  → geopolitique_conflits : 16.0 → 11.0 (delta:-5.0)
+[snapshot] Événement custom 'Enchères Circumpolaires du Kalaallit — Protocole de Nairobi' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 66.6 → 78.6 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → geopolitique_conflits : 0.8 → 8.8 (delta:+8.0)
+  → organisation_territoires : 52.7 → 59.7 (delta:+7.0)
+[snapshot] Événement custom 'Exode du Midwest Aride — Protocole d'Intégration Lacustre' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 54.9 → 42.9 (delta:-12.0)
+  → organisation_territoires : 55.2 → 65.2 (delta:+10.0)
+  → gouvernance_institutions : 96.4 → 100 (delta:+8.0)
+  → climat_environnement_global : 49.3 → 57.3 (delta:+8.0)
+[snapshot] Événement custom 'Protocole d'Urgence Amazonienne — Crise de Gouvernance du Bassin Vert' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 57.3 → 65.3 (delta:+8.0)
+  → geopolitique_conflits : 2.5 → 0 (delta:-10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+7.0)
+  → organisation_territoires : 69.4 → 78.4 (delta:+9.0)
+[snapshot] Événement custom 'Traité de Belém : la Souveraineté Carbone Amazonienne face aux Blocs' (an 2055, 43 ans d'effet)
+  → climat_environnement_global : 65.3 → 73.3 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → geopolitique_conflits : 0 → 9.0 (delta:+9.0)
+  → energie_ressources_critiques : 75.3 → 80.3 (delta:+5.0)
+[snapshot] Événement custom 'Victoire du Parti Social-Démocrate Progressiste' (an 2056, 42 ans d'effet)
+  → systeme_economique_redistribution : 61.6 → 71.6 (delta:+10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+  → valeurs_culture_tempo_sociale : 50 → 54.0 (delta:+4.0)
+[snapshot] Événement custom 'Incident du Passage Arctique — Saisie de l'APA par les Unités NAT' (an 2059, 39 ans d'effet)
+  → geopolitique_conflits : 8.2 → 0 (delta:-12.0)
+  → frontieres_du_systeme : 46.6 → 36.6 (delta:-10.0)
+  → energie_ressources_critiques : 81.8 → 89.8 (delta:+8.0)
+[snapshot] Événement custom 'Insurrection des Favelas Numériques de São Paulo contre la RPDA' (an 2073, 25 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+8.0)
+  → technologie_information : 98.5 → 100 (delta:+10.0)
+  → organisation_territoires : 83.5 → 89.5 (delta:+6.0)
+[snapshot] Événement custom 'L'Affaire Van Derburgh — Jurisprudence sur le Patrimoine Technologique' (an 2078, 20 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+2.0)
+  → technologie_information : 100 → 100 (delta:+1.0)
+[snapshot] Événements custom : 11 | 178 variables affectées
+
+[prompt] Assemblage du prompt...
+[prompt] System prompt : 2820 caractères
+[prompt] User prompt   : 59906 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-large-latest, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 17576 | sortie : 1785
+[api] Article généré : 7425 caractères
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/20260810_180119_policy_reform_sciences_technologies_article_2fvrier2098.md
+  ✓ Sauvegardé : 20260810_180119_policy_reform_sciences_technologies_article_2fvrier2098.md
+
+[4/18] policy_reform × musique — 19 février 2098
+
+[snapshot] Construction du monde 2098 — scénario : policy_reform
+[snapshot] Variables pilotes : ['gouvernance_institutions', 'technologie_information', 'energie_ressources_critiques', 'climat_environnement_global']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 1 | Cohérence : OK
+[snapshot] Jalons trajectoire : 154 (36 majeurs)
+[snapshot] Événements signal_to_state : 62 (25 majeurs)
+[snapshot] Tensions thématiques : 6
+[snapshot] Instances chargées : 102 | Filtrées : 6
+[snapshot] Événement custom 'Protocole de Médiation de La Haye — Crise Israélo-Iranienne' (an 2027, 71 ans d'effet)
+  → geopolitique_conflits : 45 → 53.0 (delta:+8.0)
+  → energie_ressources_critiques : 54.2 → 64.2 (delta:+10.0)
+  → gouvernance_institutions : 76.4 → 88.4 (delta:+12.0)
+  → demographie_mobilite_humaine : 47.0 → 52.0 (delta:+5.0)
+[snapshot] Événement custom 'Acte Fondateur de Funafuti : Naissance du Pacifique Sud Resilience Network' (an 2039, 59 ans d'effet)
+  → climat_environnement_global : 43.0 → 49.0 (delta:+6.0)
+  → gouvernance_institutions : 88.4 → 100 (delta:+14.0)
+  → organisation_territoires : 48.5 → 58.5 (delta:+10.0)
+  → frontieres_du_systeme : 39.6 → 51.6 (delta:+12.0)
+[snapshot] Événement custom 'L'Attentat des Neuf Nœuds — Déclencheur de Régulation Internationale' (an 2040, 58 ans d'effet)
+  → technologie_information : 83.9 → 71.9 (delta:-12.0)
+  → gouvernance_institutions : 94.6 → 100 (delta:+10.0)
+  → geopolitique_conflits : 16.0 → 11.0 (delta:-5.0)
+[snapshot] Événement custom 'Enchères Circumpolaires du Kalaallit — Protocole de Nairobi' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 66.6 → 78.6 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → geopolitique_conflits : 0.8 → 8.8 (delta:+8.0)
+  → organisation_territoires : 52.7 → 59.7 (delta:+7.0)
+[snapshot] Événement custom 'Exode du Midwest Aride — Protocole d'Intégration Lacustre' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 54.9 → 42.9 (delta:-12.0)
+  → organisation_territoires : 55.2 → 65.2 (delta:+10.0)
+  → gouvernance_institutions : 96.4 → 100 (delta:+8.0)
+  → climat_environnement_global : 49.3 → 57.3 (delta:+8.0)
+[snapshot] Événement custom 'Protocole d'Urgence Amazonienne — Crise de Gouvernance du Bassin Vert' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 57.3 → 65.3 (delta:+8.0)
+  → geopolitique_conflits : 2.5 → 0 (delta:-10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+7.0)
+  → organisation_territoires : 69.4 → 78.4 (delta:+9.0)
+[snapshot] Événement custom 'Traité de Belém : la Souveraineté Carbone Amazonienne face aux Blocs' (an 2055, 43 ans d'effet)
+  → climat_environnement_global : 65.3 → 73.3 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → geopolitique_conflits : 0 → 9.0 (delta:+9.0)
+  → energie_ressources_critiques : 75.3 → 80.3 (delta:+5.0)
+[snapshot] Événement custom 'Victoire du Parti Social-Démocrate Progressiste' (an 2056, 42 ans d'effet)
+  → systeme_economique_redistribution : 61.6 → 71.6 (delta:+10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+  → valeurs_culture_tempo_sociale : 50 → 54.0 (delta:+4.0)
+[snapshot] Événement custom 'Incident du Passage Arctique — Saisie de l'APA par les Unités NAT' (an 2059, 39 ans d'effet)
+  → geopolitique_conflits : 8.2 → 0 (delta:-12.0)
+  → frontieres_du_systeme : 46.6 → 36.6 (delta:-10.0)
+  → energie_ressources_critiques : 81.8 → 89.8 (delta:+8.0)
+[snapshot] Événement custom 'Insurrection des Favelas Numériques de São Paulo contre la RPDA' (an 2073, 25 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+8.0)
+  → technologie_information : 98.5 → 100 (delta:+10.0)
+  → organisation_territoires : 83.5 → 89.5 (delta:+6.0)
+[snapshot] Événement custom 'L'Affaire Van Derburgh — Jurisprudence sur le Patrimoine Technologique' (an 2078, 20 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+2.0)
+  → technologie_information : 100 → 100 (delta:+1.0)
+[snapshot] Événements custom : 11 | 178 variables affectées
+
+[prompt] Assemblage du prompt...
+[prompt] System prompt : 2827 caractères
+[prompt] User prompt   : 54520 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-large-latest, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 16170 | sortie : 1457
+[api] Article généré : 5581 caractères
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/20260810_180235_policy_reform_musique_article_19fvrier2098.md
+  ✓ Sauvegardé : 20260810_180235_policy_reform_musique_article_19fvrier2098.md
+
+[5/18] policy_reform × musique — 8 mars 2098
+
+[snapshot] Construction du monde 2098 — scénario : policy_reform
+[snapshot] Variables pilotes : ['gouvernance_institutions', 'technologie_information', 'energie_ressources_critiques', 'climat_environnement_global']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 1 | Cohérence : OK
+[snapshot] Jalons trajectoire : 154 (36 majeurs)
+[snapshot] Événements signal_to_state : 62 (25 majeurs)
+[snapshot] Tensions thématiques : 6
+[snapshot] Instances chargées : 102 | Filtrées : 6
+[snapshot] Événement custom 'Protocole de Médiation de La Haye — Crise Israélo-Iranienne' (an 2027, 71 ans d'effet)
+  → geopolitique_conflits : 45 → 53.0 (delta:+8.0)
+  → energie_ressources_critiques : 54.2 → 64.2 (delta:+10.0)
+  → gouvernance_institutions : 76.4 → 88.4 (delta:+12.0)
+  → demographie_mobilite_humaine : 47.0 → 52.0 (delta:+5.0)
+[snapshot] Événement custom 'Acte Fondateur de Funafuti : Naissance du Pacifique Sud Resilience Network' (an 2039, 59 ans d'effet)
+  → climat_environnement_global : 43.0 → 49.0 (delta:+6.0)
+  → gouvernance_institutions : 88.4 → 100 (delta:+14.0)
+  → organisation_territoires : 48.5 → 58.5 (delta:+10.0)
+  → frontieres_du_systeme : 39.6 → 51.6 (delta:+12.0)
+[snapshot] Événement custom 'L'Attentat des Neuf Nœuds — Déclencheur de Régulation Internationale' (an 2040, 58 ans d'effet)
+  → technologie_information : 83.9 → 71.9 (delta:-12.0)
+  → gouvernance_institutions : 94.6 → 100 (delta:+10.0)
+  → geopolitique_conflits : 16.0 → 11.0 (delta:-5.0)
+[snapshot] Événement custom 'Enchères Circumpolaires du Kalaallit — Protocole de Nairobi' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 66.6 → 78.6 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → geopolitique_conflits : 0.8 → 8.8 (delta:+8.0)
+  → organisation_territoires : 52.7 → 59.7 (delta:+7.0)
+[snapshot] Événement custom 'Exode du Midwest Aride — Protocole d'Intégration Lacustre' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 54.9 → 42.9 (delta:-12.0)
+  → organisation_territoires : 55.2 → 65.2 (delta:+10.0)
+  → gouvernance_institutions : 96.4 → 100 (delta:+8.0)
+  → climat_environnement_global : 49.3 → 57.3 (delta:+8.0)
+[snapshot] Événement custom 'Protocole d'Urgence Amazonienne — Crise de Gouvernance du Bassin Vert' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 57.3 → 65.3 (delta:+8.0)
+  → geopolitique_conflits : 2.5 → 0 (delta:-10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+7.0)
+  → organisation_territoires : 69.4 → 78.4 (delta:+9.0)
+[snapshot] Événement custom 'Traité de Belém : la Souveraineté Carbone Amazonienne face aux Blocs' (an 2055, 43 ans d'effet)
+  → climat_environnement_global : 65.3 → 73.3 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → geopolitique_conflits : 0 → 9.0 (delta:+9.0)
+  → energie_ressources_critiques : 75.3 → 80.3 (delta:+5.0)
+[snapshot] Événement custom 'Victoire du Parti Social-Démocrate Progressiste' (an 2056, 42 ans d'effet)
+  → systeme_economique_redistribution : 61.6 → 71.6 (delta:+10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+  → valeurs_culture_tempo_sociale : 50 → 54.0 (delta:+4.0)
+[snapshot] Événement custom 'Incident du Passage Arctique — Saisie de l'APA par les Unités NAT' (an 2059, 39 ans d'effet)
+  → geopolitique_conflits : 8.2 → 0 (delta:-12.0)
+  → frontieres_du_systeme : 46.6 → 36.6 (delta:-10.0)
+  → energie_ressources_critiques : 81.8 → 89.8 (delta:+8.0)
+[snapshot] Événement custom 'Insurrection des Favelas Numériques de São Paulo contre la RPDA' (an 2073, 25 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+8.0)
+  → technologie_information : 98.5 → 100 (delta:+10.0)
+  → organisation_territoires : 83.5 → 89.5 (delta:+6.0)
+[snapshot] Événement custom 'L'Affaire Van Derburgh — Jurisprudence sur le Patrimoine Technologique' (an 2078, 20 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+2.0)
+  → technologie_information : 100 → 100 (delta:+1.0)
+[snapshot] Événements custom : 11 | 178 variables affectées
+
+[prompt] Assemblage du prompt...
+[WARN][journal] Pas d'édition locale pour zone 'conseil_regulation_numerique_geneve' / policy_reform / pro_pouvoir → fallback réseau global
+[prompt] System prompt : 2472 caractères
+[prompt] User prompt   : 54618 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-large-latest, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 16106 | sortie : 1476
+[api] Article généré : 5923 caractères
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/20260810_180332_policy_reform_musique_article_8mars2098.md
+  ✓ Sauvegardé : 20260810_180332_policy_reform_musique_article_8mars2098.md
+
+[6/18] policy_reform × musique — 24 mars 2098
+
+[snapshot] Construction du monde 2098 — scénario : policy_reform
+[snapshot] Variables pilotes : ['gouvernance_institutions', 'technologie_information', 'energie_ressources_critiques', 'climat_environnement_global']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 1 | Cohérence : OK
+[snapshot] Jalons trajectoire : 154 (36 majeurs)
+[snapshot] Événements signal_to_state : 62 (25 majeurs)
+[snapshot] Tensions thématiques : 6
+[snapshot] Instances chargées : 102 | Filtrées : 6
+[snapshot] Événement custom 'Protocole de Médiation de La Haye — Crise Israélo-Iranienne' (an 2027, 71 ans d'effet)
+  → geopolitique_conflits : 45 → 53.0 (delta:+8.0)
+  → energie_ressources_critiques : 54.2 → 64.2 (delta:+10.0)
+  → gouvernance_institutions : 76.4 → 88.4 (delta:+12.0)
+  → demographie_mobilite_humaine : 47.0 → 52.0 (delta:+5.0)
+[snapshot] Événement custom 'Acte Fondateur de Funafuti : Naissance du Pacifique Sud Resilience Network' (an 2039, 59 ans d'effet)
+  → climat_environnement_global : 43.0 → 49.0 (delta:+6.0)
+  → gouvernance_institutions : 88.4 → 100 (delta:+14.0)
+  → organisation_territoires : 48.5 → 58.5 (delta:+10.0)
+  → frontieres_du_systeme : 39.6 → 51.6 (delta:+12.0)
+[snapshot] Événement custom 'L'Attentat des Neuf Nœuds — Déclencheur de Régulation Internationale' (an 2040, 58 ans d'effet)
+  → technologie_information : 83.9 → 71.9 (delta:-12.0)
+  → gouvernance_institutions : 94.6 → 100 (delta:+10.0)
+  → geopolitique_conflits : 16.0 → 11.0 (delta:-5.0)
+[snapshot] Événement custom 'Enchères Circumpolaires du Kalaallit — Protocole de Nairobi' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 66.6 → 78.6 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → geopolitique_conflits : 0.8 → 8.8 (delta:+8.0)
+  → organisation_territoires : 52.7 → 59.7 (delta:+7.0)
+[snapshot] Événement custom 'Exode du Midwest Aride — Protocole d'Intégration Lacustre' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 54.9 → 42.9 (delta:-12.0)
+  → organisation_territoires : 55.2 → 65.2 (delta:+10.0)
+  → gouvernance_institutions : 96.4 → 100 (delta:+8.0)
+  → climat_environnement_global : 49.3 → 57.3 (delta:+8.0)
+[snapshot] Événement custom 'Protocole d'Urgence Amazonienne — Crise de Gouvernance du Bassin Vert' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 57.3 → 65.3 (delta:+8.0)
+  → geopolitique_conflits : 2.5 → 0 (delta:-10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+7.0)
+  → organisation_territoires : 69.4 → 78.4 (delta:+9.0)
+[snapshot] Événement custom 'Traité de Belém : la Souveraineté Carbone Amazonienne face aux Blocs' (an 2055, 43 ans d'effet)
+  → climat_environnement_global : 65.3 → 73.3 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → geopolitique_conflits : 0 → 9.0 (delta:+9.0)
+  → energie_ressources_critiques : 75.3 → 80.3 (delta:+5.0)
+[snapshot] Événement custom 'Victoire du Parti Social-Démocrate Progressiste' (an 2056, 42 ans d'effet)
+  → systeme_economique_redistribution : 61.6 → 71.6 (delta:+10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+  → valeurs_culture_tempo_sociale : 50 → 54.0 (delta:+4.0)
+[snapshot] Événement custom 'Incident du Passage Arctique — Saisie de l'APA par les Unités NAT' (an 2059, 39 ans d'effet)
+  → geopolitique_conflits : 8.2 → 0 (delta:-12.0)
+  → frontieres_du_systeme : 46.6 → 36.6 (delta:-10.0)
+  → energie_ressources_critiques : 81.8 → 89.8 (delta:+8.0)
+[snapshot] Événement custom 'Insurrection des Favelas Numériques de São Paulo contre la RPDA' (an 2073, 25 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+8.0)
+  → technologie_information : 98.5 → 100 (delta:+10.0)
+  → organisation_territoires : 83.5 → 89.5 (delta:+6.0)
+[snapshot] Événement custom 'L'Affaire Van Derburgh — Jurisprudence sur le Patrimoine Technologique' (an 2078, 20 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+2.0)
+  → technologie_information : 100 → 100 (delta:+1.0)
+[snapshot] Événements custom : 11 | 178 variables affectées
+
+[prompt] Assemblage du prompt...
+[prompt] System prompt : 2827 caractères
+[prompt] User prompt   : 54057 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-large-latest, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 16033 | sortie : 1555
+[api] Article généré : 6509 caractères
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/20260810_180437_policy_reform_musique_article_24mars2098.md
+  ✓ Sauvegardé : 20260810_180437_policy_reform_musique_article_24mars2098.md
+
+[7/18] policy_reform × faits_divers — 5 avril 2098
+
+[snapshot] Construction du monde 2098 — scénario : policy_reform
+[snapshot] Variables pilotes : ['gouvernance_institutions', 'technologie_information', 'energie_ressources_critiques', 'climat_environnement_global']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 1 | Cohérence : OK
+[snapshot] Jalons trajectoire : 154 (36 majeurs)
+[snapshot] Événements signal_to_state : 62 (25 majeurs)
+[snapshot] Tensions thématiques : 8
+[snapshot] Instances chargées : 102 | Filtrées : 6
+[snapshot] Événement custom 'Protocole de Médiation de La Haye — Crise Israélo-Iranienne' (an 2027, 71 ans d'effet)
+  → geopolitique_conflits : 45 → 53.0 (delta:+8.0)
+  → energie_ressources_critiques : 54.2 → 64.2 (delta:+10.0)
+  → gouvernance_institutions : 76.4 → 88.4 (delta:+12.0)
+  → demographie_mobilite_humaine : 47.0 → 52.0 (delta:+5.0)
+[snapshot] Événement custom 'Acte Fondateur de Funafuti : Naissance du Pacifique Sud Resilience Network' (an 2039, 59 ans d'effet)
+  → climat_environnement_global : 43.0 → 49.0 (delta:+6.0)
+  → gouvernance_institutions : 88.4 → 100 (delta:+14.0)
+  → organisation_territoires : 48.5 → 58.5 (delta:+10.0)
+  → frontieres_du_systeme : 39.6 → 51.6 (delta:+12.0)
+[snapshot] Événement custom 'L'Attentat des Neuf Nœuds — Déclencheur de Régulation Internationale' (an 2040, 58 ans d'effet)
+  → technologie_information : 83.9 → 71.9 (delta:-12.0)
+  → gouvernance_institutions : 94.6 → 100 (delta:+10.0)
+  → geopolitique_conflits : 16.0 → 11.0 (delta:-5.0)
+[snapshot] Événement custom 'Enchères Circumpolaires du Kalaallit — Protocole de Nairobi' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 66.6 → 78.6 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → geopolitique_conflits : 0.8 → 8.8 (delta:+8.0)
+  → organisation_territoires : 52.7 → 59.7 (delta:+7.0)
+[snapshot] Événement custom 'Exode du Midwest Aride — Protocole d'Intégration Lacustre' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 54.9 → 42.9 (delta:-12.0)
+  → organisation_territoires : 55.2 → 65.2 (delta:+10.0)
+  → gouvernance_institutions : 96.4 → 100 (delta:+8.0)
+  → climat_environnement_global : 49.3 → 57.3 (delta:+8.0)
+[snapshot] Événement custom 'Protocole d'Urgence Amazonienne — Crise de Gouvernance du Bassin Vert' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 57.3 → 65.3 (delta:+8.0)
+  → geopolitique_conflits : 2.5 → 0 (delta:-10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+7.0)
+  → organisation_territoires : 69.4 → 78.4 (delta:+9.0)
+[snapshot] Événement custom 'Traité de Belém : la Souveraineté Carbone Amazonienne face aux Blocs' (an 2055, 43 ans d'effet)
+  → climat_environnement_global : 65.3 → 73.3 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → geopolitique_conflits : 0 → 9.0 (delta:+9.0)
+  → energie_ressources_critiques : 75.3 → 80.3 (delta:+5.0)
+[snapshot] Événement custom 'Victoire du Parti Social-Démocrate Progressiste' (an 2056, 42 ans d'effet)
+  → systeme_economique_redistribution : 61.6 → 71.6 (delta:+10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+  → valeurs_culture_tempo_sociale : 50 → 54.0 (delta:+4.0)
+[snapshot] Événement custom 'Incident du Passage Arctique — Saisie de l'APA par les Unités NAT' (an 2059, 39 ans d'effet)
+  → geopolitique_conflits : 8.2 → 0 (delta:-12.0)
+  → frontieres_du_systeme : 46.6 → 36.6 (delta:-10.0)
+  → energie_ressources_critiques : 81.8 → 89.8 (delta:+8.0)
+[snapshot] Événement custom 'Insurrection des Favelas Numériques de São Paulo contre la RPDA' (an 2073, 25 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+8.0)
+  → technologie_information : 98.5 → 100 (delta:+10.0)
+  → organisation_territoires : 83.5 → 89.5 (delta:+6.0)
+[snapshot] Événement custom 'L'Affaire Van Derburgh — Jurisprudence sur le Patrimoine Technologique' (an 2078, 20 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+2.0)
+  → technologie_information : 100 → 100 (delta:+1.0)
+[snapshot] Événements custom : 11 | 178 variables affectées
+
+[prompt] Assemblage du prompt...
+[prompt] System prompt : 2822 caractères
+[prompt] User prompt   : 57104 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-large-latest, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 16816 | sortie : 874
+[api] Article généré : 3100 caractères
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/20260810_180514_policy_reform_faits_divers_article_5avril2098.md
+  ✓ Sauvegardé : 20260810_180514_policy_reform_faits_divers_article_5avril2098.md
+
+[8/18] policy_reform × faits_divers — 21 avril 2098
+
+[snapshot] Construction du monde 2098 — scénario : policy_reform
+[snapshot] Variables pilotes : ['gouvernance_institutions', 'technologie_information', 'energie_ressources_critiques', 'climat_environnement_global']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 1 | Cohérence : OK
+[snapshot] Jalons trajectoire : 154 (36 majeurs)
+[snapshot] Événements signal_to_state : 62 (25 majeurs)
+[snapshot] Tensions thématiques : 8
+[snapshot] Instances chargées : 102 | Filtrées : 6
+[snapshot] Événement custom 'Protocole de Médiation de La Haye — Crise Israélo-Iranienne' (an 2027, 71 ans d'effet)
+  → geopolitique_conflits : 45 → 53.0 (delta:+8.0)
+  → energie_ressources_critiques : 54.2 → 64.2 (delta:+10.0)
+  → gouvernance_institutions : 76.4 → 88.4 (delta:+12.0)
+  → demographie_mobilite_humaine : 47.0 → 52.0 (delta:+5.0)
+[snapshot] Événement custom 'Acte Fondateur de Funafuti : Naissance du Pacifique Sud Resilience Network' (an 2039, 59 ans d'effet)
+  → climat_environnement_global : 43.0 → 49.0 (delta:+6.0)
+  → gouvernance_institutions : 88.4 → 100 (delta:+14.0)
+  → organisation_territoires : 48.5 → 58.5 (delta:+10.0)
+  → frontieres_du_systeme : 39.6 → 51.6 (delta:+12.0)
+[snapshot] Événement custom 'L'Attentat des Neuf Nœuds — Déclencheur de Régulation Internationale' (an 2040, 58 ans d'effet)
+  → technologie_information : 83.9 → 71.9 (delta:-12.0)
+  → gouvernance_institutions : 94.6 → 100 (delta:+10.0)
+  → geopolitique_conflits : 16.0 → 11.0 (delta:-5.0)
+[snapshot] Événement custom 'Enchères Circumpolaires du Kalaallit — Protocole de Nairobi' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 66.6 → 78.6 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → geopolitique_conflits : 0.8 → 8.8 (delta:+8.0)
+  → organisation_territoires : 52.7 → 59.7 (delta:+7.0)
+[snapshot] Événement custom 'Exode du Midwest Aride — Protocole d'Intégration Lacustre' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 54.9 → 42.9 (delta:-12.0)
+  → organisation_territoires : 55.2 → 65.2 (delta:+10.0)
+  → gouvernance_institutions : 96.4 → 100 (delta:+8.0)
+  → climat_environnement_global : 49.3 → 57.3 (delta:+8.0)
+[snapshot] Événement custom 'Protocole d'Urgence Amazonienne — Crise de Gouvernance du Bassin Vert' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 57.3 → 65.3 (delta:+8.0)
+  → geopolitique_conflits : 2.5 → 0 (delta:-10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+7.0)
+  → organisation_territoires : 69.4 → 78.4 (delta:+9.0)
+[snapshot] Événement custom 'Traité de Belém : la Souveraineté Carbone Amazonienne face aux Blocs' (an 2055, 43 ans d'effet)
+  → climat_environnement_global : 65.3 → 73.3 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → geopolitique_conflits : 0 → 9.0 (delta:+9.0)
+  → energie_ressources_critiques : 75.3 → 80.3 (delta:+5.0)
+[snapshot] Événement custom 'Victoire du Parti Social-Démocrate Progressiste' (an 2056, 42 ans d'effet)
+  → systeme_economique_redistribution : 61.6 → 71.6 (delta:+10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+  → valeurs_culture_tempo_sociale : 50 → 54.0 (delta:+4.0)
+[snapshot] Événement custom 'Incident du Passage Arctique — Saisie de l'APA par les Unités NAT' (an 2059, 39 ans d'effet)
+  → geopolitique_conflits : 8.2 → 0 (delta:-12.0)
+  → frontieres_du_systeme : 46.6 → 36.6 (delta:-10.0)
+  → energie_ressources_critiques : 81.8 → 89.8 (delta:+8.0)
+[snapshot] Événement custom 'Insurrection des Favelas Numériques de São Paulo contre la RPDA' (an 2073, 25 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+8.0)
+  → technologie_information : 98.5 → 100 (delta:+10.0)
+  → organisation_territoires : 83.5 → 89.5 (delta:+6.0)
+[snapshot] Événement custom 'L'Affaire Van Derburgh — Jurisprudence sur le Patrimoine Technologique' (an 2078, 20 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+2.0)
+  → technologie_information : 100 → 100 (delta:+1.0)
+[snapshot] Événements custom : 11 | 178 variables affectées
+
+[prompt] Assemblage du prompt...
+[prompt] System prompt : 2822 caractères
+[prompt] User prompt   : 57097 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-large-latest, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 16845 | sortie : 1009
+[api] Article généré : 3850 caractères
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/20260810_180604_policy_reform_faits_divers_article_21avril2098.md
+  ✓ Sauvegardé : 20260810_180604_policy_reform_faits_divers_article_21avril2098.md
+
+[9/18] policy_reform × faits_divers — 10 mai 2098
+
+[snapshot] Construction du monde 2098 — scénario : policy_reform
+[snapshot] Variables pilotes : ['gouvernance_institutions', 'technologie_information', 'energie_ressources_critiques', 'climat_environnement_global']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 1 | Cohérence : OK
+[snapshot] Jalons trajectoire : 154 (36 majeurs)
+[snapshot] Événements signal_to_state : 62 (25 majeurs)
+[snapshot] Tensions thématiques : 8
+[snapshot] Instances chargées : 102 | Filtrées : 6
+[snapshot] Événement custom 'Protocole de Médiation de La Haye — Crise Israélo-Iranienne' (an 2027, 71 ans d'effet)
+  → geopolitique_conflits : 45 → 53.0 (delta:+8.0)
+  → energie_ressources_critiques : 54.2 → 64.2 (delta:+10.0)
+  → gouvernance_institutions : 76.4 → 88.4 (delta:+12.0)
+  → demographie_mobilite_humaine : 47.0 → 52.0 (delta:+5.0)
+[snapshot] Événement custom 'Acte Fondateur de Funafuti : Naissance du Pacifique Sud Resilience Network' (an 2039, 59 ans d'effet)
+  → climat_environnement_global : 43.0 → 49.0 (delta:+6.0)
+  → gouvernance_institutions : 88.4 → 100 (delta:+14.0)
+  → organisation_territoires : 48.5 → 58.5 (delta:+10.0)
+  → frontieres_du_systeme : 39.6 → 51.6 (delta:+12.0)
+[snapshot] Événement custom 'L'Attentat des Neuf Nœuds — Déclencheur de Régulation Internationale' (an 2040, 58 ans d'effet)
+  → technologie_information : 83.9 → 71.9 (delta:-12.0)
+  → gouvernance_institutions : 94.6 → 100 (delta:+10.0)
+  → geopolitique_conflits : 16.0 → 11.0 (delta:-5.0)
+[snapshot] Événement custom 'Enchères Circumpolaires du Kalaallit — Protocole de Nairobi' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 66.6 → 78.6 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → geopolitique_conflits : 0.8 → 8.8 (delta:+8.0)
+  → organisation_territoires : 52.7 → 59.7 (delta:+7.0)
+[snapshot] Événement custom 'Exode du Midwest Aride — Protocole d'Intégration Lacustre' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 54.9 → 42.9 (delta:-12.0)
+  → organisation_territoires : 55.2 → 65.2 (delta:+10.0)
+  → gouvernance_institutions : 96.4 → 100 (delta:+8.0)
+  → climat_environnement_global : 49.3 → 57.3 (delta:+8.0)
+[snapshot] Événement custom 'Protocole d'Urgence Amazonienne — Crise de Gouvernance du Bassin Vert' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 57.3 → 65.3 (delta:+8.0)
+  → geopolitique_conflits : 2.5 → 0 (delta:-10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+7.0)
+  → organisation_territoires : 69.4 → 78.4 (delta:+9.0)
+[snapshot] Événement custom 'Traité de Belém : la Souveraineté Carbone Amazonienne face aux Blocs' (an 2055, 43 ans d'effet)
+  → climat_environnement_global : 65.3 → 73.3 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → geopolitique_conflits : 0 → 9.0 (delta:+9.0)
+  → energie_ressources_critiques : 75.3 → 80.3 (delta:+5.0)
+[snapshot] Événement custom 'Victoire du Parti Social-Démocrate Progressiste' (an 2056, 42 ans d'effet)
+  → systeme_economique_redistribution : 61.6 → 71.6 (delta:+10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+  → valeurs_culture_tempo_sociale : 50 → 54.0 (delta:+4.0)
+[snapshot] Événement custom 'Incident du Passage Arctique — Saisie de l'APA par les Unités NAT' (an 2059, 39 ans d'effet)
+  → geopolitique_conflits : 8.2 → 0 (delta:-12.0)
+  → frontieres_du_systeme : 46.6 → 36.6 (delta:-10.0)
+  → energie_ressources_critiques : 81.8 → 89.8 (delta:+8.0)
+[snapshot] Événement custom 'Insurrection des Favelas Numériques de São Paulo contre la RPDA' (an 2073, 25 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+8.0)
+  → technologie_information : 98.5 → 100 (delta:+10.0)
+  → organisation_territoires : 83.5 → 89.5 (delta:+6.0)
+[snapshot] Événement custom 'L'Affaire Van Derburgh — Jurisprudence sur le Patrimoine Technologique' (an 2078, 20 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+2.0)
+  → technologie_information : 100 → 100 (delta:+1.0)
+[snapshot] Événements custom : 11 | 178 variables affectées
+
+[prompt] Assemblage du prompt...
+[prompt] System prompt : 2905 caractères
+[prompt] User prompt   : 56551 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-large-latest, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 16704 | sortie : 658
+[api] Article généré : 2552 caractères
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/20260810_180639_policy_reform_faits_divers_article_10mai2098.md
+  ✓ Sauvegardé : 20260810_180639_policy_reform_faits_divers_article_10mai2098.md
+
+[10/18] policy_reform × opinions_editoriaux — 27 mai 2098
+
+[snapshot] Construction du monde 2098 — scénario : policy_reform
+[snapshot] Variables pilotes : ['gouvernance_institutions', 'technologie_information', 'energie_ressources_critiques', 'climat_environnement_global']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 1 | Cohérence : OK
+[snapshot] Jalons trajectoire : 154 (36 majeurs)
+[snapshot] Événements signal_to_state : 62 (25 majeurs)
+[snapshot] Tensions thématiques : 8
+[snapshot] Instances chargées : 102 | Filtrées : 6
+[snapshot] Événement custom 'Protocole de Médiation de La Haye — Crise Israélo-Iranienne' (an 2027, 71 ans d'effet)
+  → geopolitique_conflits : 45 → 53.0 (delta:+8.0)
+  → energie_ressources_critiques : 54.2 → 64.2 (delta:+10.0)
+  → gouvernance_institutions : 76.4 → 88.4 (delta:+12.0)
+  → demographie_mobilite_humaine : 47.0 → 52.0 (delta:+5.0)
+[snapshot] Événement custom 'Acte Fondateur de Funafuti : Naissance du Pacifique Sud Resilience Network' (an 2039, 59 ans d'effet)
+  → climat_environnement_global : 43.0 → 49.0 (delta:+6.0)
+  → gouvernance_institutions : 88.4 → 100 (delta:+14.0)
+  → organisation_territoires : 48.5 → 58.5 (delta:+10.0)
+  → frontieres_du_systeme : 39.6 → 51.6 (delta:+12.0)
+[snapshot] Événement custom 'L'Attentat des Neuf Nœuds — Déclencheur de Régulation Internationale' (an 2040, 58 ans d'effet)
+  → technologie_information : 83.9 → 71.9 (delta:-12.0)
+  → gouvernance_institutions : 94.6 → 100 (delta:+10.0)
+  → geopolitique_conflits : 16.0 → 11.0 (delta:-5.0)
+[snapshot] Événement custom 'Enchères Circumpolaires du Kalaallit — Protocole de Nairobi' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 66.6 → 78.6 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → geopolitique_conflits : 0.8 → 8.8 (delta:+8.0)
+  → organisation_territoires : 52.7 → 59.7 (delta:+7.0)
+[snapshot] Événement custom 'Exode du Midwest Aride — Protocole d'Intégration Lacustre' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 54.9 → 42.9 (delta:-12.0)
+  → organisation_territoires : 55.2 → 65.2 (delta:+10.0)
+  → gouvernance_institutions : 96.4 → 100 (delta:+8.0)
+  → climat_environnement_global : 49.3 → 57.3 (delta:+8.0)
+[snapshot] Événement custom 'Protocole d'Urgence Amazonienne — Crise de Gouvernance du Bassin Vert' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 57.3 → 65.3 (delta:+8.0)
+  → geopolitique_conflits : 2.5 → 0 (delta:-10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+7.0)
+  → organisation_territoires : 69.4 → 78.4 (delta:+9.0)
+[snapshot] Événement custom 'Traité de Belém : la Souveraineté Carbone Amazonienne face aux Blocs' (an 2055, 43 ans d'effet)
+  → climat_environnement_global : 65.3 → 73.3 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → geopolitique_conflits : 0 → 9.0 (delta:+9.0)
+  → energie_ressources_critiques : 75.3 → 80.3 (delta:+5.0)
+[snapshot] Événement custom 'Victoire du Parti Social-Démocrate Progressiste' (an 2056, 42 ans d'effet)
+  → systeme_economique_redistribution : 61.6 → 71.6 (delta:+10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+  → valeurs_culture_tempo_sociale : 50 → 54.0 (delta:+4.0)
+[snapshot] Événement custom 'Incident du Passage Arctique — Saisie de l'APA par les Unités NAT' (an 2059, 39 ans d'effet)
+  → geopolitique_conflits : 8.2 → 0 (delta:-12.0)
+  → frontieres_du_systeme : 46.6 → 36.6 (delta:-10.0)
+  → energie_ressources_critiques : 81.8 → 89.8 (delta:+8.0)
+[snapshot] Événement custom 'Insurrection des Favelas Numériques de São Paulo contre la RPDA' (an 2073, 25 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+8.0)
+  → technologie_information : 98.5 → 100 (delta:+10.0)
+  → organisation_territoires : 83.5 → 89.5 (delta:+6.0)
+[snapshot] Événement custom 'L'Affaire Van Derburgh — Jurisprudence sur le Patrimoine Technologique' (an 2078, 20 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+2.0)
+  → technologie_information : 100 → 100 (delta:+1.0)
+[snapshot] Événements custom : 11 | 178 variables affectées
+
+[prompt] Assemblage du prompt...
+[prompt] System prompt : 2819 caractères
+[prompt] User prompt   : 55591 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-large-latest, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 16383 | sortie : 1710
+[api] Article généré : 7020 caractères
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/20260810_180747_policy_reform_opinions_editoriaux_article_27mai2098.md
+  ✓ Sauvegardé : 20260810_180747_policy_reform_opinions_editoriaux_article_27mai2098.md
+
+[11/18] policy_reform × opinions_editoriaux — 4 juin 2098
+
+[snapshot] Construction du monde 2098 — scénario : policy_reform
+[snapshot] Variables pilotes : ['gouvernance_institutions', 'technologie_information', 'energie_ressources_critiques', 'climat_environnement_global']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 1 | Cohérence : OK
+[snapshot] Jalons trajectoire : 154 (36 majeurs)
+[snapshot] Événements signal_to_state : 62 (25 majeurs)
+[snapshot] Tensions thématiques : 8
+[snapshot] Instances chargées : 102 | Filtrées : 6
+[snapshot] Événement custom 'Protocole de Médiation de La Haye — Crise Israélo-Iranienne' (an 2027, 71 ans d'effet)
+  → geopolitique_conflits : 45 → 53.0 (delta:+8.0)
+  → energie_ressources_critiques : 54.2 → 64.2 (delta:+10.0)
+  → gouvernance_institutions : 76.4 → 88.4 (delta:+12.0)
+  → demographie_mobilite_humaine : 47.0 → 52.0 (delta:+5.0)
+[snapshot] Événement custom 'Acte Fondateur de Funafuti : Naissance du Pacifique Sud Resilience Network' (an 2039, 59 ans d'effet)
+  → climat_environnement_global : 43.0 → 49.0 (delta:+6.0)
+  → gouvernance_institutions : 88.4 → 100 (delta:+14.0)
+  → organisation_territoires : 48.5 → 58.5 (delta:+10.0)
+  → frontieres_du_systeme : 39.6 → 51.6 (delta:+12.0)
+[snapshot] Événement custom 'L'Attentat des Neuf Nœuds — Déclencheur de Régulation Internationale' (an 2040, 58 ans d'effet)
+  → technologie_information : 83.9 → 71.9 (delta:-12.0)
+  → gouvernance_institutions : 94.6 → 100 (delta:+10.0)
+  → geopolitique_conflits : 16.0 → 11.0 (delta:-5.0)
+[snapshot] Événement custom 'Enchères Circumpolaires du Kalaallit — Protocole de Nairobi' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 66.6 → 78.6 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → geopolitique_conflits : 0.8 → 8.8 (delta:+8.0)
+  → organisation_territoires : 52.7 → 59.7 (delta:+7.0)
+[snapshot] Événement custom 'Exode du Midwest Aride — Protocole d'Intégration Lacustre' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 54.9 → 42.9 (delta:-12.0)
+  → organisation_territoires : 55.2 → 65.2 (delta:+10.0)
+  → gouvernance_institutions : 96.4 → 100 (delta:+8.0)
+  → climat_environnement_global : 49.3 → 57.3 (delta:+8.0)
+[snapshot] Événement custom 'Protocole d'Urgence Amazonienne — Crise de Gouvernance du Bassin Vert' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 57.3 → 65.3 (delta:+8.0)
+  → geopolitique_conflits : 2.5 → 0 (delta:-10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+7.0)
+  → organisation_territoires : 69.4 → 78.4 (delta:+9.0)
+[snapshot] Événement custom 'Traité de Belém : la Souveraineté Carbone Amazonienne face aux Blocs' (an 2055, 43 ans d'effet)
+  → climat_environnement_global : 65.3 → 73.3 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → geopolitique_conflits : 0 → 9.0 (delta:+9.0)
+  → energie_ressources_critiques : 75.3 → 80.3 (delta:+5.0)
+[snapshot] Événement custom 'Victoire du Parti Social-Démocrate Progressiste' (an 2056, 42 ans d'effet)
+  → systeme_economique_redistribution : 61.6 → 71.6 (delta:+10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+  → valeurs_culture_tempo_sociale : 50 → 54.0 (delta:+4.0)
+[snapshot] Événement custom 'Incident du Passage Arctique — Saisie de l'APA par les Unités NAT' (an 2059, 39 ans d'effet)
+  → geopolitique_conflits : 8.2 → 0 (delta:-12.0)
+  → frontieres_du_systeme : 46.6 → 36.6 (delta:-10.0)
+  → energie_ressources_critiques : 81.8 → 89.8 (delta:+8.0)
+[snapshot] Événement custom 'Insurrection des Favelas Numériques de São Paulo contre la RPDA' (an 2073, 25 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+8.0)
+  → technologie_information : 98.5 → 100 (delta:+10.0)
+  → organisation_territoires : 83.5 → 89.5 (delta:+6.0)
+[snapshot] Événement custom 'L'Affaire Van Derburgh — Jurisprudence sur le Patrimoine Technologique' (an 2078, 20 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+2.0)
+  → technologie_information : 100 → 100 (delta:+1.0)
+[snapshot] Événements custom : 11 | 178 variables affectées
+
+[prompt] Assemblage du prompt...
+[WARN][journal] Pas d'édition locale pour zone 'conseil_regulation_numerique_geneve' / policy_reform / pro_pouvoir → fallback réseau global
+[prompt] System prompt : 2472 caractères
+[prompt] User prompt   : 55655 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-large-latest, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 16332 | sortie : 1391
+[api] Article généré : 5891 caractères
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/20260810_180846_policy_reform_opinions_editoriaux_article_4juin2098.md
+  ✓ Sauvegardé : 20260810_180846_policy_reform_opinions_editoriaux_article_4juin2098.md
+
+[12/18] policy_reform × opinions_editoriaux — 19 juin 2098
+
+[snapshot] Construction du monde 2098 — scénario : policy_reform
+[snapshot] Variables pilotes : ['gouvernance_institutions', 'technologie_information', 'energie_ressources_critiques', 'climat_environnement_global']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 1 | Cohérence : OK
+[snapshot] Jalons trajectoire : 154 (36 majeurs)
+[snapshot] Événements signal_to_state : 62 (25 majeurs)
+[snapshot] Tensions thématiques : 8
+[snapshot] Instances chargées : 102 | Filtrées : 6
+[snapshot] Événement custom 'Protocole de Médiation de La Haye — Crise Israélo-Iranienne' (an 2027, 71 ans d'effet)
+  → geopolitique_conflits : 45 → 53.0 (delta:+8.0)
+  → energie_ressources_critiques : 54.2 → 64.2 (delta:+10.0)
+  → gouvernance_institutions : 76.4 → 88.4 (delta:+12.0)
+  → demographie_mobilite_humaine : 47.0 → 52.0 (delta:+5.0)
+[snapshot] Événement custom 'Acte Fondateur de Funafuti : Naissance du Pacifique Sud Resilience Network' (an 2039, 59 ans d'effet)
+  → climat_environnement_global : 43.0 → 49.0 (delta:+6.0)
+  → gouvernance_institutions : 88.4 → 100 (delta:+14.0)
+  → organisation_territoires : 48.5 → 58.5 (delta:+10.0)
+  → frontieres_du_systeme : 39.6 → 51.6 (delta:+12.0)
+[snapshot] Événement custom 'L'Attentat des Neuf Nœuds — Déclencheur de Régulation Internationale' (an 2040, 58 ans d'effet)
+  → technologie_information : 83.9 → 71.9 (delta:-12.0)
+  → gouvernance_institutions : 94.6 → 100 (delta:+10.0)
+  → geopolitique_conflits : 16.0 → 11.0 (delta:-5.0)
+[snapshot] Événement custom 'Enchères Circumpolaires du Kalaallit — Protocole de Nairobi' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 66.6 → 78.6 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → geopolitique_conflits : 0.8 → 8.8 (delta:+8.0)
+  → organisation_territoires : 52.7 → 59.7 (delta:+7.0)
+[snapshot] Événement custom 'Exode du Midwest Aride — Protocole d'Intégration Lacustre' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 54.9 → 42.9 (delta:-12.0)
+  → organisation_territoires : 55.2 → 65.2 (delta:+10.0)
+  → gouvernance_institutions : 96.4 → 100 (delta:+8.0)
+  → climat_environnement_global : 49.3 → 57.3 (delta:+8.0)
+[snapshot] Événement custom 'Protocole d'Urgence Amazonienne — Crise de Gouvernance du Bassin Vert' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 57.3 → 65.3 (delta:+8.0)
+  → geopolitique_conflits : 2.5 → 0 (delta:-10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+7.0)
+  → organisation_territoires : 69.4 → 78.4 (delta:+9.0)
+[snapshot] Événement custom 'Traité de Belém : la Souveraineté Carbone Amazonienne face aux Blocs' (an 2055, 43 ans d'effet)
+  → climat_environnement_global : 65.3 → 73.3 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → geopolitique_conflits : 0 → 9.0 (delta:+9.0)
+  → energie_ressources_critiques : 75.3 → 80.3 (delta:+5.0)
+[snapshot] Événement custom 'Victoire du Parti Social-Démocrate Progressiste' (an 2056, 42 ans d'effet)
+  → systeme_economique_redistribution : 61.6 → 71.6 (delta:+10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+  → valeurs_culture_tempo_sociale : 50 → 54.0 (delta:+4.0)
+[snapshot] Événement custom 'Incident du Passage Arctique — Saisie de l'APA par les Unités NAT' (an 2059, 39 ans d'effet)
+  → geopolitique_conflits : 8.2 → 0 (delta:-12.0)
+  → frontieres_du_systeme : 46.6 → 36.6 (delta:-10.0)
+  → energie_ressources_critiques : 81.8 → 89.8 (delta:+8.0)
+[snapshot] Événement custom 'Insurrection des Favelas Numériques de São Paulo contre la RPDA' (an 2073, 25 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+8.0)
+  → technologie_information : 98.5 → 100 (delta:+10.0)
+  → organisation_territoires : 83.5 → 89.5 (delta:+6.0)
+[snapshot] Événement custom 'L'Affaire Van Derburgh — Jurisprudence sur le Patrimoine Technologique' (an 2078, 20 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+2.0)
+  → technologie_information : 100 → 100 (delta:+1.0)
+[snapshot] Événements custom : 11 | 178 variables affectées
+
+[prompt] Assemblage du prompt...
+[WARN][journal] Pas d'édition locale pour zone 'conseil_regulation_numerique_geneve' / policy_reform / pro_pouvoir → fallback réseau global
+[prompt] System prompt : 2472 caractères
+[prompt] User prompt   : 55757 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-large-latest, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 16343 | sortie : 1454
+[api] Article généré : 5988 caractères
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/20260810_180951_policy_reform_opinions_editoriaux_article_19juin2098.md
+  ✓ Sauvegardé : 20260810_180951_policy_reform_opinions_editoriaux_article_19juin2098.md
+
+[13/18] policy_reform × education — 7 juillet 2098
+
+[snapshot] Construction du monde 2098 — scénario : policy_reform
+[snapshot] Variables pilotes : ['gouvernance_institutions', 'technologie_information', 'energie_ressources_critiques', 'climat_environnement_global']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 1 | Cohérence : OK
+[snapshot] Jalons trajectoire : 154 (36 majeurs)
+[snapshot] Événements signal_to_state : 62 (25 majeurs)
+[snapshot] Tensions thématiques : 6
+[snapshot] Instances chargées : 102 | Filtrées : 6
+[snapshot] Événement custom 'Protocole de Médiation de La Haye — Crise Israélo-Iranienne' (an 2027, 71 ans d'effet)
+  → geopolitique_conflits : 45 → 53.0 (delta:+8.0)
+  → energie_ressources_critiques : 54.2 → 64.2 (delta:+10.0)
+  → gouvernance_institutions : 76.4 → 88.4 (delta:+12.0)
+  → demographie_mobilite_humaine : 47.0 → 52.0 (delta:+5.0)
+[snapshot] Événement custom 'Acte Fondateur de Funafuti : Naissance du Pacifique Sud Resilience Network' (an 2039, 59 ans d'effet)
+  → climat_environnement_global : 43.0 → 49.0 (delta:+6.0)
+  → gouvernance_institutions : 88.4 → 100 (delta:+14.0)
+  → organisation_territoires : 48.5 → 58.5 (delta:+10.0)
+  → frontieres_du_systeme : 39.6 → 51.6 (delta:+12.0)
+[snapshot] Événement custom 'L'Attentat des Neuf Nœuds — Déclencheur de Régulation Internationale' (an 2040, 58 ans d'effet)
+  → technologie_information : 83.9 → 71.9 (delta:-12.0)
+  → gouvernance_institutions : 94.6 → 100 (delta:+10.0)
+  → geopolitique_conflits : 16.0 → 11.0 (delta:-5.0)
+[snapshot] Événement custom 'Enchères Circumpolaires du Kalaallit — Protocole de Nairobi' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 66.6 → 78.6 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → geopolitique_conflits : 0.8 → 8.8 (delta:+8.0)
+  → organisation_territoires : 52.7 → 59.7 (delta:+7.0)
+[snapshot] Événement custom 'Exode du Midwest Aride — Protocole d'Intégration Lacustre' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 54.9 → 42.9 (delta:-12.0)
+  → organisation_territoires : 55.2 → 65.2 (delta:+10.0)
+  → gouvernance_institutions : 96.4 → 100 (delta:+8.0)
+  → climat_environnement_global : 49.3 → 57.3 (delta:+8.0)
+[snapshot] Événement custom 'Protocole d'Urgence Amazonienne — Crise de Gouvernance du Bassin Vert' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 57.3 → 65.3 (delta:+8.0)
+  → geopolitique_conflits : 2.5 → 0 (delta:-10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+7.0)
+  → organisation_territoires : 69.4 → 78.4 (delta:+9.0)
+[snapshot] Événement custom 'Traité de Belém : la Souveraineté Carbone Amazonienne face aux Blocs' (an 2055, 43 ans d'effet)
+  → climat_environnement_global : 65.3 → 73.3 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → geopolitique_conflits : 0 → 9.0 (delta:+9.0)
+  → energie_ressources_critiques : 75.3 → 80.3 (delta:+5.0)
+[snapshot] Événement custom 'Victoire du Parti Social-Démocrate Progressiste' (an 2056, 42 ans d'effet)
+  → systeme_economique_redistribution : 61.6 → 71.6 (delta:+10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+  → valeurs_culture_tempo_sociale : 50 → 54.0 (delta:+4.0)
+[snapshot] Événement custom 'Incident du Passage Arctique — Saisie de l'APA par les Unités NAT' (an 2059, 39 ans d'effet)
+  → geopolitique_conflits : 8.2 → 0 (delta:-12.0)
+  → frontieres_du_systeme : 46.6 → 36.6 (delta:-10.0)
+  → energie_ressources_critiques : 81.8 → 89.8 (delta:+8.0)
+[snapshot] Événement custom 'Insurrection des Favelas Numériques de São Paulo contre la RPDA' (an 2073, 25 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+8.0)
+  → technologie_information : 98.5 → 100 (delta:+10.0)
+  → organisation_territoires : 83.5 → 89.5 (delta:+6.0)
+[snapshot] Événement custom 'L'Affaire Van Derburgh — Jurisprudence sur le Patrimoine Technologique' (an 2078, 20 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+2.0)
+  → technologie_information : 100 → 100 (delta:+1.0)
+[snapshot] Événements custom : 11 | 178 variables affectées
+
+[prompt] Assemblage du prompt...
+[prompt] System prompt : 2820 caractères
+[prompt] User prompt   : 55248 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-large-latest, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 16330 | sortie : 1834
+[api] Article généré : 7455 caractères
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/20260810_181103_policy_reform_education_article_7juillet2098.md
+  ✓ Sauvegardé : 20260810_181103_policy_reform_education_article_7juillet2098.md
+
+[14/18] policy_reform × education — 23 juillet 2098
+
+[snapshot] Construction du monde 2098 — scénario : policy_reform
+[snapshot] Variables pilotes : ['gouvernance_institutions', 'technologie_information', 'energie_ressources_critiques', 'climat_environnement_global']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 1 | Cohérence : OK
+[snapshot] Jalons trajectoire : 154 (36 majeurs)
+[snapshot] Événements signal_to_state : 62 (25 majeurs)
+[snapshot] Tensions thématiques : 6
+[snapshot] Instances chargées : 102 | Filtrées : 6
+[snapshot] Événement custom 'Protocole de Médiation de La Haye — Crise Israélo-Iranienne' (an 2027, 71 ans d'effet)
+  → geopolitique_conflits : 45 → 53.0 (delta:+8.0)
+  → energie_ressources_critiques : 54.2 → 64.2 (delta:+10.0)
+  → gouvernance_institutions : 76.4 → 88.4 (delta:+12.0)
+  → demographie_mobilite_humaine : 47.0 → 52.0 (delta:+5.0)
+[snapshot] Événement custom 'Acte Fondateur de Funafuti : Naissance du Pacifique Sud Resilience Network' (an 2039, 59 ans d'effet)
+  → climat_environnement_global : 43.0 → 49.0 (delta:+6.0)
+  → gouvernance_institutions : 88.4 → 100 (delta:+14.0)
+  → organisation_territoires : 48.5 → 58.5 (delta:+10.0)
+  → frontieres_du_systeme : 39.6 → 51.6 (delta:+12.0)
+[snapshot] Événement custom 'L'Attentat des Neuf Nœuds — Déclencheur de Régulation Internationale' (an 2040, 58 ans d'effet)
+  → technologie_information : 83.9 → 71.9 (delta:-12.0)
+  → gouvernance_institutions : 94.6 → 100 (delta:+10.0)
+  → geopolitique_conflits : 16.0 → 11.0 (delta:-5.0)
+[snapshot] Événement custom 'Enchères Circumpolaires du Kalaallit — Protocole de Nairobi' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 66.6 → 78.6 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → geopolitique_conflits : 0.8 → 8.8 (delta:+8.0)
+  → organisation_territoires : 52.7 → 59.7 (delta:+7.0)
+[snapshot] Événement custom 'Exode du Midwest Aride — Protocole d'Intégration Lacustre' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 54.9 → 42.9 (delta:-12.0)
+  → organisation_territoires : 55.2 → 65.2 (delta:+10.0)
+  → gouvernance_institutions : 96.4 → 100 (delta:+8.0)
+  → climat_environnement_global : 49.3 → 57.3 (delta:+8.0)
+[snapshot] Événement custom 'Protocole d'Urgence Amazonienne — Crise de Gouvernance du Bassin Vert' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 57.3 → 65.3 (delta:+8.0)
+  → geopolitique_conflits : 2.5 → 0 (delta:-10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+7.0)
+  → organisation_territoires : 69.4 → 78.4 (delta:+9.0)
+[snapshot] Événement custom 'Traité de Belém : la Souveraineté Carbone Amazonienne face aux Blocs' (an 2055, 43 ans d'effet)
+  → climat_environnement_global : 65.3 → 73.3 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → geopolitique_conflits : 0 → 9.0 (delta:+9.0)
+  → energie_ressources_critiques : 75.3 → 80.3 (delta:+5.0)
+[snapshot] Événement custom 'Victoire du Parti Social-Démocrate Progressiste' (an 2056, 42 ans d'effet)
+  → systeme_economique_redistribution : 61.6 → 71.6 (delta:+10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+  → valeurs_culture_tempo_sociale : 50 → 54.0 (delta:+4.0)
+[snapshot] Événement custom 'Incident du Passage Arctique — Saisie de l'APA par les Unités NAT' (an 2059, 39 ans d'effet)
+  → geopolitique_conflits : 8.2 → 0 (delta:-12.0)
+  → frontieres_du_systeme : 46.6 → 36.6 (delta:-10.0)
+  → energie_ressources_critiques : 81.8 → 89.8 (delta:+8.0)
+[snapshot] Événement custom 'Insurrection des Favelas Numériques de São Paulo contre la RPDA' (an 2073, 25 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+8.0)
+  → technologie_information : 98.5 → 100 (delta:+10.0)
+  → organisation_territoires : 83.5 → 89.5 (delta:+6.0)
+[snapshot] Événement custom 'L'Affaire Van Derburgh — Jurisprudence sur le Patrimoine Technologique' (an 2078, 20 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+2.0)
+  → technologie_information : 100 → 100 (delta:+1.0)
+[snapshot] Événements custom : 11 | 178 variables affectées
+
+[prompt] Assemblage du prompt...
+[prompt] System prompt : 2820 caractères
+[prompt] User prompt   : 55479 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-large-latest, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 16355 | sortie : 1757
+[api] Article généré : 7067 caractères
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/20260810_181210_policy_reform_education_article_23juillet2098.md
+  ✓ Sauvegardé : 20260810_181210_policy_reform_education_article_23juillet2098.md
+
+[15/18] policy_reform × education — 6 août 2098
+
+[snapshot] Construction du monde 2098 — scénario : policy_reform
+[snapshot] Variables pilotes : ['gouvernance_institutions', 'technologie_information', 'energie_ressources_critiques', 'climat_environnement_global']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 1 | Cohérence : OK
+[snapshot] Jalons trajectoire : 154 (36 majeurs)
+[snapshot] Événements signal_to_state : 62 (25 majeurs)
+[snapshot] Tensions thématiques : 6
+[snapshot] Instances chargées : 102 | Filtrées : 6
+[snapshot] Événement custom 'Protocole de Médiation de La Haye — Crise Israélo-Iranienne' (an 2027, 71 ans d'effet)
+  → geopolitique_conflits : 45 → 53.0 (delta:+8.0)
+  → energie_ressources_critiques : 54.2 → 64.2 (delta:+10.0)
+  → gouvernance_institutions : 76.4 → 88.4 (delta:+12.0)
+  → demographie_mobilite_humaine : 47.0 → 52.0 (delta:+5.0)
+[snapshot] Événement custom 'Acte Fondateur de Funafuti : Naissance du Pacifique Sud Resilience Network' (an 2039, 59 ans d'effet)
+  → climat_environnement_global : 43.0 → 49.0 (delta:+6.0)
+  → gouvernance_institutions : 88.4 → 100 (delta:+14.0)
+  → organisation_territoires : 48.5 → 58.5 (delta:+10.0)
+  → frontieres_du_systeme : 39.6 → 51.6 (delta:+12.0)
+[snapshot] Événement custom 'L'Attentat des Neuf Nœuds — Déclencheur de Régulation Internationale' (an 2040, 58 ans d'effet)
+  → technologie_information : 83.9 → 71.9 (delta:-12.0)
+  → gouvernance_institutions : 94.6 → 100 (delta:+10.0)
+  → geopolitique_conflits : 16.0 → 11.0 (delta:-5.0)
+[snapshot] Événement custom 'Enchères Circumpolaires du Kalaallit — Protocole de Nairobi' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 66.6 → 78.6 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → geopolitique_conflits : 0.8 → 8.8 (delta:+8.0)
+  → organisation_territoires : 52.7 → 59.7 (delta:+7.0)
+[snapshot] Événement custom 'Exode du Midwest Aride — Protocole d'Intégration Lacustre' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 54.9 → 42.9 (delta:-12.0)
+  → organisation_territoires : 55.2 → 65.2 (delta:+10.0)
+  → gouvernance_institutions : 96.4 → 100 (delta:+8.0)
+  → climat_environnement_global : 49.3 → 57.3 (delta:+8.0)
+[snapshot] Événement custom 'Protocole d'Urgence Amazonienne — Crise de Gouvernance du Bassin Vert' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 57.3 → 65.3 (delta:+8.0)
+  → geopolitique_conflits : 2.5 → 0 (delta:-10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+7.0)
+  → organisation_territoires : 69.4 → 78.4 (delta:+9.0)
+[snapshot] Événement custom 'Traité de Belém : la Souveraineté Carbone Amazonienne face aux Blocs' (an 2055, 43 ans d'effet)
+  → climat_environnement_global : 65.3 → 73.3 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → geopolitique_conflits : 0 → 9.0 (delta:+9.0)
+  → energie_ressources_critiques : 75.3 → 80.3 (delta:+5.0)
+[snapshot] Événement custom 'Victoire du Parti Social-Démocrate Progressiste' (an 2056, 42 ans d'effet)
+  → systeme_economique_redistribution : 61.6 → 71.6 (delta:+10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+  → valeurs_culture_tempo_sociale : 50 → 54.0 (delta:+4.0)
+[snapshot] Événement custom 'Incident du Passage Arctique — Saisie de l'APA par les Unités NAT' (an 2059, 39 ans d'effet)
+  → geopolitique_conflits : 8.2 → 0 (delta:-12.0)
+  → frontieres_du_systeme : 46.6 → 36.6 (delta:-10.0)
+  → energie_ressources_critiques : 81.8 → 89.8 (delta:+8.0)
+[snapshot] Événement custom 'Insurrection des Favelas Numériques de São Paulo contre la RPDA' (an 2073, 25 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+8.0)
+  → technologie_information : 98.5 → 100 (delta:+10.0)
+  → organisation_territoires : 83.5 → 89.5 (delta:+6.0)
+[snapshot] Événement custom 'L'Affaire Van Derburgh — Jurisprudence sur le Patrimoine Technologique' (an 2078, 20 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+2.0)
+  → technologie_information : 100 → 100 (delta:+1.0)
+[snapshot] Événements custom : 11 | 178 variables affectées
+
+[prompt] Assemblage du prompt...
+[prompt] System prompt : 2745 caractères
+[prompt] User prompt   : 55378 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-large-latest, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 16341 | sortie : 1845
+[api] Article généré : 7366 caractères
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/20260810_181323_policy_reform_education_article_6aot2098.md
+  ✓ Sauvegardé : 20260810_181323_policy_reform_education_article_6aot2098.md
+
+[16/18] policy_reform × medias_communication — 22 août 2098
+
+[snapshot] Construction du monde 2098 — scénario : policy_reform
+[snapshot] Variables pilotes : ['gouvernance_institutions', 'technologie_information', 'energie_ressources_critiques', 'climat_environnement_global']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 1 | Cohérence : OK
+[snapshot] Jalons trajectoire : 154 (36 majeurs)
+[snapshot] Événements signal_to_state : 62 (25 majeurs)
+[snapshot] Tensions thématiques : 8
+[snapshot] Instances chargées : 102 | Filtrées : 6
+[snapshot] Événement custom 'Protocole de Médiation de La Haye — Crise Israélo-Iranienne' (an 2027, 71 ans d'effet)
+  → geopolitique_conflits : 45 → 53.0 (delta:+8.0)
+  → energie_ressources_critiques : 54.2 → 64.2 (delta:+10.0)
+  → gouvernance_institutions : 76.4 → 88.4 (delta:+12.0)
+  → demographie_mobilite_humaine : 47.0 → 52.0 (delta:+5.0)
+[snapshot] Événement custom 'Acte Fondateur de Funafuti : Naissance du Pacifique Sud Resilience Network' (an 2039, 59 ans d'effet)
+  → climat_environnement_global : 43.0 → 49.0 (delta:+6.0)
+  → gouvernance_institutions : 88.4 → 100 (delta:+14.0)
+  → organisation_territoires : 48.5 → 58.5 (delta:+10.0)
+  → frontieres_du_systeme : 39.6 → 51.6 (delta:+12.0)
+[snapshot] Événement custom 'L'Attentat des Neuf Nœuds — Déclencheur de Régulation Internationale' (an 2040, 58 ans d'effet)
+  → technologie_information : 83.9 → 71.9 (delta:-12.0)
+  → gouvernance_institutions : 94.6 → 100 (delta:+10.0)
+  → geopolitique_conflits : 16.0 → 11.0 (delta:-5.0)
+[snapshot] Événement custom 'Enchères Circumpolaires du Kalaallit — Protocole de Nairobi' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 66.6 → 78.6 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → geopolitique_conflits : 0.8 → 8.8 (delta:+8.0)
+  → organisation_territoires : 52.7 → 59.7 (delta:+7.0)
+[snapshot] Événement custom 'Exode du Midwest Aride — Protocole d'Intégration Lacustre' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 54.9 → 42.9 (delta:-12.0)
+  → organisation_territoires : 55.2 → 65.2 (delta:+10.0)
+  → gouvernance_institutions : 96.4 → 100 (delta:+8.0)
+  → climat_environnement_global : 49.3 → 57.3 (delta:+8.0)
+[snapshot] Événement custom 'Protocole d'Urgence Amazonienne — Crise de Gouvernance du Bassin Vert' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 57.3 → 65.3 (delta:+8.0)
+  → geopolitique_conflits : 2.5 → 0 (delta:-10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+7.0)
+  → organisation_territoires : 69.4 → 78.4 (delta:+9.0)
+[snapshot] Événement custom 'Traité de Belém : la Souveraineté Carbone Amazonienne face aux Blocs' (an 2055, 43 ans d'effet)
+  → climat_environnement_global : 65.3 → 73.3 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → geopolitique_conflits : 0 → 9.0 (delta:+9.0)
+  → energie_ressources_critiques : 75.3 → 80.3 (delta:+5.0)
+[snapshot] Événement custom 'Victoire du Parti Social-Démocrate Progressiste' (an 2056, 42 ans d'effet)
+  → systeme_economique_redistribution : 61.6 → 71.6 (delta:+10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+  → valeurs_culture_tempo_sociale : 50 → 54.0 (delta:+4.0)
+[snapshot] Événement custom 'Incident du Passage Arctique — Saisie de l'APA par les Unités NAT' (an 2059, 39 ans d'effet)
+  → geopolitique_conflits : 8.2 → 0 (delta:-12.0)
+  → frontieres_du_systeme : 46.6 → 36.6 (delta:-10.0)
+  → energie_ressources_critiques : 81.8 → 89.8 (delta:+8.0)
+[snapshot] Événement custom 'Insurrection des Favelas Numériques de São Paulo contre la RPDA' (an 2073, 25 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+8.0)
+  → technologie_information : 98.5 → 100 (delta:+10.0)
+  → organisation_territoires : 83.5 → 89.5 (delta:+6.0)
+[snapshot] Événement custom 'L'Affaire Van Derburgh — Jurisprudence sur le Patrimoine Technologique' (an 2078, 20 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+2.0)
+  → technologie_information : 100 → 100 (delta:+1.0)
+[snapshot] Événements custom : 11 | 178 variables affectées
+
+[prompt] Assemblage du prompt...
+[prompt] System prompt : 2742 caractères
+[prompt] User prompt   : 55754 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-large-latest, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 16603 | sortie : 2300
+[api] Article généré : 9425 caractères
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/20260810_181459_policy_reform_medias_communication_article_22aot2098.md
+  ✓ Sauvegardé : 20260810_181459_policy_reform_medias_communication_article_22aot2098.md
+
+[17/18] policy_reform × medias_communication — 4 septembre 2098
+
+[snapshot] Construction du monde 2098 — scénario : policy_reform
+[snapshot] Variables pilotes : ['gouvernance_institutions', 'technologie_information', 'energie_ressources_critiques', 'climat_environnement_global']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 1 | Cohérence : OK
+[snapshot] Jalons trajectoire : 154 (36 majeurs)
+[snapshot] Événements signal_to_state : 62 (25 majeurs)
+[snapshot] Tensions thématiques : 8
+[snapshot] Instances chargées : 102 | Filtrées : 6
+[snapshot] Événement custom 'Protocole de Médiation de La Haye — Crise Israélo-Iranienne' (an 2027, 71 ans d'effet)
+  → geopolitique_conflits : 45 → 53.0 (delta:+8.0)
+  → energie_ressources_critiques : 54.2 → 64.2 (delta:+10.0)
+  → gouvernance_institutions : 76.4 → 88.4 (delta:+12.0)
+  → demographie_mobilite_humaine : 47.0 → 52.0 (delta:+5.0)
+[snapshot] Événement custom 'Acte Fondateur de Funafuti : Naissance du Pacifique Sud Resilience Network' (an 2039, 59 ans d'effet)
+  → climat_environnement_global : 43.0 → 49.0 (delta:+6.0)
+  → gouvernance_institutions : 88.4 → 100 (delta:+14.0)
+  → organisation_territoires : 48.5 → 58.5 (delta:+10.0)
+  → frontieres_du_systeme : 39.6 → 51.6 (delta:+12.0)
+[snapshot] Événement custom 'L'Attentat des Neuf Nœuds — Déclencheur de Régulation Internationale' (an 2040, 58 ans d'effet)
+  → technologie_information : 83.9 → 71.9 (delta:-12.0)
+  → gouvernance_institutions : 94.6 → 100 (delta:+10.0)
+  → geopolitique_conflits : 16.0 → 11.0 (delta:-5.0)
+[snapshot] Événement custom 'Enchères Circumpolaires du Kalaallit — Protocole de Nairobi' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 66.6 → 78.6 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → geopolitique_conflits : 0.8 → 8.8 (delta:+8.0)
+  → organisation_territoires : 52.7 → 59.7 (delta:+7.0)
+[snapshot] Événement custom 'Exode du Midwest Aride — Protocole d'Intégration Lacustre' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 54.9 → 42.9 (delta:-12.0)
+  → organisation_territoires : 55.2 → 65.2 (delta:+10.0)
+  → gouvernance_institutions : 96.4 → 100 (delta:+8.0)
+  → climat_environnement_global : 49.3 → 57.3 (delta:+8.0)
+[snapshot] Événement custom 'Protocole d'Urgence Amazonienne — Crise de Gouvernance du Bassin Vert' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 57.3 → 65.3 (delta:+8.0)
+  → geopolitique_conflits : 2.5 → 0 (delta:-10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+7.0)
+  → organisation_territoires : 69.4 → 78.4 (delta:+9.0)
+[snapshot] Événement custom 'Traité de Belém : la Souveraineté Carbone Amazonienne face aux Blocs' (an 2055, 43 ans d'effet)
+  → climat_environnement_global : 65.3 → 73.3 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → geopolitique_conflits : 0 → 9.0 (delta:+9.0)
+  → energie_ressources_critiques : 75.3 → 80.3 (delta:+5.0)
+[snapshot] Événement custom 'Victoire du Parti Social-Démocrate Progressiste' (an 2056, 42 ans d'effet)
+  → systeme_economique_redistribution : 61.6 → 71.6 (delta:+10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+  → valeurs_culture_tempo_sociale : 50 → 54.0 (delta:+4.0)
+[snapshot] Événement custom 'Incident du Passage Arctique — Saisie de l'APA par les Unités NAT' (an 2059, 39 ans d'effet)
+  → geopolitique_conflits : 8.2 → 0 (delta:-12.0)
+  → frontieres_du_systeme : 46.6 → 36.6 (delta:-10.0)
+  → energie_ressources_critiques : 81.8 → 89.8 (delta:+8.0)
+[snapshot] Événement custom 'Insurrection des Favelas Numériques de São Paulo contre la RPDA' (an 2073, 25 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+8.0)
+  → technologie_information : 98.5 → 100 (delta:+10.0)
+  → organisation_territoires : 83.5 → 89.5 (delta:+6.0)
+[snapshot] Événement custom 'L'Affaire Van Derburgh — Jurisprudence sur le Patrimoine Technologique' (an 2078, 20 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+2.0)
+  → technologie_information : 100 → 100 (delta:+1.0)
+[snapshot] Événements custom : 11 | 178 variables affectées
+
+[prompt] Assemblage du prompt...
+[prompt] System prompt : 2742 caractères
+[prompt] User prompt   : 55674 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-large-latest, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 16568 | sortie : 2080
+[api] Article généré : 7987 caractères
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/20260810_181620_policy_reform_medias_communication_article_4septembre2098.md
+  ✓ Sauvegardé : 20260810_181620_policy_reform_medias_communication_article_4septembre2098.md
+
+[18/18] policy_reform × medias_communication — 20 septembre 2098
+
+[snapshot] Construction du monde 2098 — scénario : policy_reform
+[snapshot] Variables pilotes : ['gouvernance_institutions', 'technologie_information', 'energie_ressources_critiques', 'climat_environnement_global']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 1 | Cohérence : OK
+[snapshot] Jalons trajectoire : 154 (36 majeurs)
+[snapshot] Événements signal_to_state : 62 (25 majeurs)
+[snapshot] Tensions thématiques : 8
+[snapshot] Instances chargées : 102 | Filtrées : 6
+[snapshot] Événement custom 'Protocole de Médiation de La Haye — Crise Israélo-Iranienne' (an 2027, 71 ans d'effet)
+  → geopolitique_conflits : 45 → 53.0 (delta:+8.0)
+  → energie_ressources_critiques : 54.2 → 64.2 (delta:+10.0)
+  → gouvernance_institutions : 76.4 → 88.4 (delta:+12.0)
+  → demographie_mobilite_humaine : 47.0 → 52.0 (delta:+5.0)
+[snapshot] Événement custom 'Acte Fondateur de Funafuti : Naissance du Pacifique Sud Resilience Network' (an 2039, 59 ans d'effet)
+  → climat_environnement_global : 43.0 → 49.0 (delta:+6.0)
+  → gouvernance_institutions : 88.4 → 100 (delta:+14.0)
+  → organisation_territoires : 48.5 → 58.5 (delta:+10.0)
+  → frontieres_du_systeme : 39.6 → 51.6 (delta:+12.0)
+[snapshot] Événement custom 'L'Attentat des Neuf Nœuds — Déclencheur de Régulation Internationale' (an 2040, 58 ans d'effet)
+  → technologie_information : 83.9 → 71.9 (delta:-12.0)
+  → gouvernance_institutions : 94.6 → 100 (delta:+10.0)
+  → geopolitique_conflits : 16.0 → 11.0 (delta:-5.0)
+[snapshot] Événement custom 'Enchères Circumpolaires du Kalaallit — Protocole de Nairobi' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 66.6 → 78.6 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → geopolitique_conflits : 0.8 → 8.8 (delta:+8.0)
+  → organisation_territoires : 52.7 → 59.7 (delta:+7.0)
+[snapshot] Événement custom 'Exode du Midwest Aride — Protocole d'Intégration Lacustre' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 54.9 → 42.9 (delta:-12.0)
+  → organisation_territoires : 55.2 → 65.2 (delta:+10.0)
+  → gouvernance_institutions : 96.4 → 100 (delta:+8.0)
+  → climat_environnement_global : 49.3 → 57.3 (delta:+8.0)
+[snapshot] Événement custom 'Protocole d'Urgence Amazonienne — Crise de Gouvernance du Bassin Vert' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 57.3 → 65.3 (delta:+8.0)
+  → geopolitique_conflits : 2.5 → 0 (delta:-10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+7.0)
+  → organisation_territoires : 69.4 → 78.4 (delta:+9.0)
+[snapshot] Événement custom 'Traité de Belém : la Souveraineté Carbone Amazonienne face aux Blocs' (an 2055, 43 ans d'effet)
+  → climat_environnement_global : 65.3 → 73.3 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → geopolitique_conflits : 0 → 9.0 (delta:+9.0)
+  → energie_ressources_critiques : 75.3 → 80.3 (delta:+5.0)
+[snapshot] Événement custom 'Victoire du Parti Social-Démocrate Progressiste' (an 2056, 42 ans d'effet)
+  → systeme_economique_redistribution : 61.6 → 71.6 (delta:+10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+  → valeurs_culture_tempo_sociale : 50 → 54.0 (delta:+4.0)
+[snapshot] Événement custom 'Incident du Passage Arctique — Saisie de l'APA par les Unités NAT' (an 2059, 39 ans d'effet)
+  → geopolitique_conflits : 8.2 → 0 (delta:-12.0)
+  → frontieres_du_systeme : 46.6 → 36.6 (delta:-10.0)
+  → energie_ressources_critiques : 81.8 → 89.8 (delta:+8.0)
+[snapshot] Événement custom 'Insurrection des Favelas Numériques de São Paulo contre la RPDA' (an 2073, 25 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+8.0)
+  → technologie_information : 98.5 → 100 (delta:+10.0)
+  → organisation_territoires : 83.5 → 89.5 (delta:+6.0)
+[snapshot] Événement custom 'L'Affaire Van Derburgh — Jurisprudence sur le Patrimoine Technologique' (an 2078, 20 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+2.0)
+  → technologie_information : 100 → 100 (delta:+1.0)
+[snapshot] Événements custom : 11 | 178 variables affectées
+
+[prompt] Assemblage du prompt...
+[prompt] System prompt : 2820 caractères
+[prompt] User prompt   : 55823 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-large-latest, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 16609 | sortie : 2349
+[api] Article généré : 9480 caractères
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/20260810_181742_policy_reform_medias_communication_article_20septembre2098.md
+  ✓ Sauvegardé : 20260810_181742_policy_reform_medias_communication_article_20septembre2098.md
+
+[series] Index généré : _index.md
+
+============================================================
+SÉRIE GÉNÉRÉE
+  ✓ 18 articles | ✗ 0 erreurs
+  📁 /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/policy_reform
+============================================================

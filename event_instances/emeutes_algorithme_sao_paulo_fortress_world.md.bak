@@ -4,6 +4,10 @@ type: event_instance
 slug: emeutes_algorithme_sao_paulo_fortress_world
 archetype: emeutes_algorithme_sao_paulo
 scenario: fortress_world
+localisation:
+  zone: sao_paulo_megapole
+  lieu: São Paulo — Quartiers périphériques (Vila Brasilândia, zones déficitaires)
+  type_lieu: ville
 type_evenement: political_social
 portee: regionale
 date: 2073

@@ -1,0 +1,437 @@
+
+============================================================
+OURRASSOL 2098 — Génération des instances
+============================================================
+
+591 entité(s) à traiter, 1 scénario(s) chacune.
+
+
+=== Agadez Ligue Sahel Numerique ===
+  → agadez_ligue_sahel_numerique × breakdown... (déjà existant)
+
+=== Agence de Régulation des Détroits Stratégiques (ARDS) ===
+  → agence_de_regulation_des_detroits_strategiques_ards × breakdown... [llm] Mistral (mistral-large-latest) — entrée : 18415 | sortie : 1491
+✓
+
+=== Agence Mondiale pour la Stabilisation Climatique ===
+  → agence_stabilisation_climatique × breakdown... (déjà existant)
+
+=== Alliance des Blocs Souverains ===
+  → alliance_blocs_souverains × breakdown... (déjà existant)
+
+=== Amara Diallo-Nkosi ===
+  → amara_diallo_nkosi × breakdown... (déjà existant)
+
+=== Archives Neutres de Genève ===
+  → archives_neutres_de_geneve × breakdown... (déjà existant)
+
+=== Archives Neutres Geneve ===
+  → archives_neutres_geneve × breakdown... (déjà existant)
+
+=== Arctic Passage Authority ===
+  → arctic_passage_authority × breakdown... (déjà existant)
+
+=== Arctique Nordark ===
+  → arctique_nordark × breakdown... (déjà existant)
+
+=== Armada Logistique Nordique ===
+  → armada_logistique_nordique × breakdown... (déjà existant)
+
+=== Assemblée des Territoires ===
+  → assemblee_territoires × breakdown... [llm] Mistral (mistral-large-latest) — entrée : 18260 | sortie : 1205
+✗ (Aucun JSON exploitable trouvé dans la réponse : '```json\n{\n  "nom": "Assemblée des Territoires Éclatés",\n  "type_dans_scenario": "institution",\n  "role_dans_scenario": "Instance de gouvernance post-effondrement tentant de recomposer un cadre décisio')
+
+=== Autorite Passage Arctique ===
+  → autorite_passage_arctique × breakdown... (déjà existant)
+
+=== Bloc de Johannesburg ===
+  → bloc_de_johannesburg × breakdown... (déjà existant)
+
+=== Blocs de Contrôle des Couloirs d'Approvisionnement Stratégiques ===
+  → blocs_de_controle_des_couloirs_d_approvisionnement_strategiques × breakdown... (déjà existant)
+
+=== Brigades Médicales Itinérantes ===
+  → brigades_medicales_itinerantes × breakdown... (déjà existant)
+
+=== Bureau des Territoires Résiduels ===
+  → bureau_des_territoires_residuels × breakdown... (déjà existant)
+
+=== Cargo Mombasa Crrc ===
+  → cargo_mombasa_crrc × breakdown... (déjà existant)
+
+=== Cartels Logistiques Régionaux ===
+  → cartels_logistiques_regionaux × breakdown... (déjà existant)
+
+=== Carthage Nord Nexcore ===
+  → carthage_nord_nexcore × breakdown... (déjà existant)
+
+=== Cités-États Sécessionistes ===
+  → cites_etats_secessionistes × breakdown... (déjà existant)
+
+=== Coalition Pacifique Nord ===
+  → coalition_pacifique_nord × breakdown... (déjà existant)
+
+=== Coalition du Vivant ===
+  → coalition_vivant × breakdown... [llm] Mistral (mistral-large-latest) — entrée : 18265 | sortie : 1357
+✓
+
+=== Collectif des Climatologues Sans État ===
+  → collectif_des_climatologues_sans_etat × breakdown... (déjà existant)
+
+=== Collectif Hackers Décroissance-Infrastructure ===
+  → collectif_hackers_decroissance_infrastructure × breakdown... (déjà existant)
+
+=== Collectifs de Gardiens-Archivistes Itinérants ===
+  → collectifs_de_gardiens_archivistes_itinerants × breakdown... (déjà existant)
+
+=== Collectifs de Hackers Archivistes des Interstices Réseaux ===
+  → collectifs_de_hackers_archivistes_des_interstices_reseaux × breakdown... (déjà existant)
+
+=== Collectifs de Réparation Énergétique ===
+  → collectifs_de_reparation_energetique × breakdown... (déjà existant)
+
+=== Collectifs de Santé Communautaire Autogérée ===
+  → collectifs_de_sante_communautaire_autogeree × breakdown... (déjà existant)
+
+=== Collectifs du Seuil ===
+  → collectifs_du_seuil × breakdown... (déjà existant)
+
+=== Communautés Paysannes Réfugiées ===
+  → communautes_paysannes_refugiees × breakdown... (déjà existant)
+
+=== Communautés Religieuses des Relais Physiques ===
+  → communautes_religieuses_des_relais_physiques × breakdown... (déjà existant)
+
+=== Communautés Rurales Autogérées des Nœuds de Survie ===
+  → communautes_rurales_autogerees_des_n_uds_de_survie × breakdown... (déjà existant)
+
+=== communautés rurales autonomes ===
+  → communautes_rurales_autonomes × breakdown... (déjà existant)
+
+=== Communes Rust Belt ===
+  → communes_rust_belt × breakdown... (déjà existant)
+
+=== Communes Rust Belt Zones Libres ===
+  → communes_rust_belt_zones_libres × breakdown... (déjà existant)
+
+=== Compagnies de Géo-Ingénierie Privées Sans Mandat ===
+  → compagnies_de_geo_ingenierie_privees_sans_mandat × breakdown... (déjà existant)
+
+=== Conglométrat sino-sibérien Bohai Transit ===
+  → conglometrat_sino_siberien_bohai_transit × breakdown... (déjà existant)
+
+=== Conseil de Régulation Algorithmique ===
+  → conseil_regulation_algorithmique × breakdown... (déjà existant)
+
+=== Conseil de Régulation des Ressources Critiques ===
+  → conseil_regulation_ressources × breakdown... (déjà existant)
+
+=== Consortium Africain de Biotechnologies Sociales ===
+  → consortium_africain_de_biotechnologies_sociales × breakdown... (déjà existant)
+
+=== Consortium Amazônia Viva ===
+  → consortium_amazonia_viva × breakdown... (déjà existant)
+
+=== Consortium des Pêcheries Autonomes du Grand Nord ===
+  → consortium_des_pecheries_autonomes_du_grand_nord × breakdown... (déjà existant)
+
+=== Consortium Énergétique Oural-Caspien ===
+  → consortium_energetique_oural_caspien × breakdown... (déjà existant)
+
+=== Consortiums Énergétiques Samoïèdes du Yamal ===
+  → consortiums_energetiques_samoiedes_du_yamal × breakdown... (déjà existant)
+
+=== Consortiums Logistiques Agro-Corporatifs ===
+  → consortiums_logistiques_agro_corporatifs × breakdown... (déjà existant)
+
+=== Coopérative Terrafond ===
+  → cooperative_terrafond × breakdown... (déjà existant)
+
+=== Corporations de l'Ère Pré-Effondrement à Droits de PI ===
+  → corporations_de_l_ere_pre_effondrement_a_droits_de_pi × breakdown... (déjà existant)
+
+=== Corridor Lithium Bouches ===
+  → corridor_lithium_bouches × breakdown... (déjà existant)
+
+=== Corridors Eurasiens Convoyage ===
+  → corridors_eurasiens_convoyage × breakdown... (déjà existant)
+
+=== Delta Mekong Racines ===
+  → delta_mekong_racines × breakdown... (déjà existant)
+
+=== Diaspora Tech Sahel ===
+  → diaspora_tech_sahel × breakdown... (déjà existant)
+
+=== Directive Kontinuum ===
+  → directive_kontinuum × breakdown... (déjà existant)
+
+=== District Mourmansk Residuel ===
+  → district_mourmansk_residuel × breakdown... (déjà existant)
+
+=== Enclaves Agro-Communautaires Autonomes ===
+  → enclaves_agro_communautaires_autonomes × breakdown... (déjà existant)
+
+=== Enclaves Corporatives Fortifiées ===
+  → enclaves_corporatives_fortifiees × breakdown... (déjà existant)
+
+=== Enclaves Finlandaises ===
+  → enclaves_finlandaises × breakdown... (déjà existant)
+
+=== Enclaves Industrielles de Bergen-Tromsø ===
+  → enclaves_industrielles_de_bergen_troms × breakdown... (déjà existant)
+
+=== Enclaves Industrielles du Corridor Oural-Caspien ===
+  → enclaves_industrielles_du_corridor_oural_caspien × breakdown... (déjà existant)
+
+=== Enclaves Technologiques Survivantes ===
+  → enclaves_technologiques_survivantes × breakdown... (déjà existant)
+
+=== États Fragmentés Nationalisant les Stocks ===
+  → etats_fragmentes_nationalisant_les_stocks × breakdown... (déjà existant)
+
+=== États-Fragments en Guerre pour les Stations Atmosphériques ===
+  → etats_fragments_en_guerre_pour_les_stations_atmospheriques × breakdown... (déjà existant)
+
+=== Factions Énergétiques Héritières des Pactes ABS ===
+  → factions_energetiques_heritieres_des_pactes_abs × breakdown... (déjà existant)
+
+=== Factions Étatiques Résiduelles de Souveraineté Hydrique ===
+  → factions_etatiques_residuelles_de_souverainete_hydrique × breakdown... (déjà existant)
+
+=== Factions Militaires Résiduelles de l'Ex-OTAN Nordique ===
+  → factions_militaires_residuelles_de_l_ex_otan_nordique × breakdown... (déjà existant)
+
+=== Factions Para-Étatiques Hydriques ===
+  → factions_para_etatiques_hydriques × breakdown... (déjà existant)
+
+=== Factions Paramilitaires Locales Neutralisées ===
+  → factions_paramilitaires_locales_neutralisees × breakdown... (déjà existant)
+
+=== Factions Propagandistes des Archives ===
+  → factions_propagandistes_des_archives × breakdown... (déjà existant)
+
+=== Factions Sécessionnistes Agrariennes du Désert ===
+  → factions_secessionnistes_agrariennes_du_desert × breakdown... (déjà existant)
+
+=== Fédération des Communs Territoriaux ===
+  → federation_communs_territoriaux × breakdown... (déjà existant)
+
+=== Fédération Russe Résiduelle — District de Mourmansk ===
+  → federation_russe_residuelle_district_de_mourmansk × breakdown... (déjà existant)
+
+=== Flux Migratoires Non Intégrables ===
+  → flux_migratoires_non_integrables × breakdown... (déjà existant)
+
+=== Frente Sertão Livre ===
+  → frente_sert_o_livre × breakdown... (déjà existant)
+
+=== Front de Résistance aux Péages sur les Ressources ===
+  → front_de_resistance_aux_peages_sur_les_ressources × breakdown... (déjà existant)
+
+=== Front des Blocs Régionaux du Récit des Conflits-Ressources ===
+  → front_des_blocs_regionaux_du_recit_des_conflits_ressources × breakdown... (déjà existant)
+
+=== Front Humanitaire d'Urgence Non Affilié ===
+  → front_humanitaire_d_urgence_non_affilie × breakdown... (déjà existant)
+
+=== Front Techno-Reconstructionniste ===
+  → front_techno_reconstructionniste × breakdown... (déjà existant)
+
+=== Fronts Populistes Anti-Technocratiques ===
+  → fronts_populistes_anti_technocratiques × breakdown... (déjà existant)
+
+=== Geneve Bunker Institutions ===
+  → geneve_bunker_institutions × breakdown... (déjà existant)
+
+=== Gouvernements de Forteresse Anti-Nairobi ===
+  → gouvernements_de_forteresse_anti_nairobi × breakdown... (déjà existant)
+
+=== Gouvernements Régionaux Résiduels Reterritorialisants ===
+  → gouvernements_regionaux_residuels_reterritorialisants × breakdown... (déjà existant)
+
+=== Grandes Lacs Compact Eau ===
+  → grandes_lacs_compact_eau × breakdown... (déjà existant)
+
+=== Guilde des Techniciens Nomades ===
+  → guilde_des_techniciens_nomades × breakdown... (déjà existant)
+
+=== Hanse Baltique ===
+  → hanse_baltique × breakdown... (déjà existant)
+
+=== Hanse Baltique Recomposée ===
+  → hanse_baltique_recomposee × breakdown... (déjà existant)
+
+=== Institut des Seuils Démographiques ===
+  → institut_des_seuils_demographiques × breakdown... [llm] Mistral (mistral-large-latest) — entrée : 18417 | sortie : 1262
+✗ (Aucun JSON exploitable trouvé dans la réponse : '```json\n{\n  "nom": "Les Vestiges du Compas Démographique",\n  "type_dans_scenario": "institution",\n  "role_dans_scenario": "Dans le chaos du breakdown, l\'Institut des Seuils Démographiques a éclaté en ')
+
+=== Kalaallit Nunaat Sovereign Fund ===
+  → kalaallit_nunaat_sovereign_fund × breakdown... (déjà existant)
+
+=== Lagos Est Nexcore ===
+  → lagos_est_nexcore × breakdown... (déjà existant)
+
+=== Lagos Interieur Mnemos ===
+  → lagos_interieur_mnemos × breakdown... (déjà existant)
+
+=== Le Cartographe Silencieux ===
+  → le_cartographe_silencieux × breakdown [CONTRAINTE DURE]... [llm] Mistral (mistral-large-latest) — entrée : 18610 | sortie : 1152
+✗
+     - trajectoire invalide : 'clandestin'
+
+=== Le Registre du Fleuve ===
+  → le_registre_du_fleuve × breakdown... (déjà existant)
+
+=== Le Témoin ===
+  → le_temoin × breakdown... (déjà existant)
+
+=== Les Veilleurs du Fleuve ===
+  → les_veilleurs_du_fleuve × breakdown... (déjà existant)
+
+=== Ligue des Cités du Sahel Numérique ===
+  → ligue_des_cites_du_sahel_numerique × breakdown... (déjà existant)
+
+=== Ligue des Cités Littorales en Sursis ===
+  → ligue_des_cites_littorales_en_sursis × breakdown... (déjà existant)
+
+=== Ligue Eurasiatique–Coalition Pacifique ===
+  → ligue_eurasiatique_coalition_pacifique × breakdown... (déjà existant)
+
+=== Ligue Méditerranéenne des Villes-États Portuaires ===
+  → ligue_mediterraneenne_des_villes_etats_portuaires × breakdown... (déjà existant)
+
+=== Massif Central Cicatrices Vertes ===
+  → massif_central_cicatrices_vertes × breakdown... (déjà existant)
+
+=== Midwest Desertifie ===
+  → midwest_desertifie × breakdown... (déjà existant)
+
+=== Milices Agro-Défensives Locales ===
+  → milices_agro_defensives_locales × breakdown... (déjà existant)
+
+=== Milices Contractuelles des Anciens États-Membres ===
+  → milices_contractuelles_des_anciens_etats_membres × breakdown... (déjà existant)
+
+=== Milices d'Accaparement Hydrique ===
+  → milices_d_accaparement_hydrique × breakdown... (déjà existant)
+
+=== Milices de Contrôle Territorial ===
+  → milices_de_controle_territorial × breakdown... (déjà existant)
+
+=== Milices Extractivistes du Bassin du Congo ===
+  → milices_extractivistes_du_bassin_du_congo × breakdown... (déjà existant)
+
+=== Milices Privées Documentées Terrain ===
+  → milices_privees_documentees_terrain × breakdown... (déjà existant)
+
+=== Milices Séparatistes du Conseil des Pêcheries d'Islande ===
+  → milices_separatistes_du_conseil_des_pecheries_d_islande × breakdown... (déjà existant)
+
+=== Mouvement des Communes du Rust Belt ===
+  → mouvement_des_communes_du_rust_belt × breakdown... (déjà existant)
+
+=== Mouvement des Racines Vivantes ===
+  → mouvement_racines_vivantes × breakdown... (déjà existant)
+
+=== NexCore ===
+  → nexcore × breakdown... (déjà existant)
+
+=== Nexus BioSyn ===
+  → nexus_biosyn × breakdown... (déjà existant)
+
+=== Noeud Mnemos Pannonie ===
+  → noeud_mnemos_pannonie × breakdown... (déjà existant)
+
+=== Noeud Nordark Tromso ===
+  → noeud_nordark_tromso × breakdown... (déjà existant)
+
+=== Occitanie Racines Meres ===
+  → occitanie_racines_meres × breakdown... (déjà existant)
+
+=== ONG de Gestion Migratoire Survivantes ===
+  → ong_de_gestion_migratoire_survivantes × breakdown... (déjà existant)
+
+=== Oracle des Seuils ===
+  → oracle_des_seuils × breakdown... (déjà existant)
+
+=== Pirates Biologiques Open-Source ===
+  → pirates_biologiques_open_source × breakdown... (déjà existant)
+
+=== Rede Paulista de Distribuição Algorítmica ===
+  → rede_paulista_de_distribuic_o_algor_tmica × breakdown... (déjà existant)
+
+=== Réseau de Récupération Industrielle Illicite ===
+  → reseau_de_recuperation_industrielle_illicite × breakdown... (déjà existant)
+
+=== Réseau des Anciens Financeurs Devenus Censeurs ===
+  → reseau_des_anciens_financeurs_devenus_censeurs × breakdown... (déjà existant)
+
+=== Réseau des Cartographes des Zones Grises ===
+  → reseau_des_cartographes_des_zones_grises × breakdown... (déjà existant)
+
+=== Réseau des Courriers Nomades Sahélo-Méditerranéens ===
+  → reseau_des_courriers_nomades_sahelo_mediterraneens × breakdown... (déjà existant)
+
+=== Réseau des Organisations Humanitaires Hors Cadre Onusien ===
+  → reseau_des_organisations_humanitaires_hors_cadre_onusien × breakdown... (déjà existant)
+
+=== Réseau Logistique Criminel Concurrent ===
+  → reseau_logistique_criminel_concurrent × breakdown... (déjà existant)
+
+=== Réseau de Mémoire Distribuée Mnemos ===
+  → reseau_mnemos × breakdown... (déjà existant)
+
+=== Réseaux de renseignement informels issus de l'ancienne structure militaire eurasienne ===
+  → reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne × breakdown... (déjà existant)
+
+=== Réseaux de Soigneurs Traditionnels ===
+  → reseaux_de_soigneurs_traditionnels × breakdown... (déjà existant)
+
+=== Réseaux de solidarité horizontale post-effondrement ===
+  → reseaux_de_solidarite_horizontale_post_effondrement × breakdown... (déjà existant)
+
+=== Réseaux Noirs Pharmaceutiques ===
+  → reseaux_noirs_pharmaceutiques × breakdown... (déjà existant)
+
+=== Saboteurs des Corridors de Transit ===
+  → saboteurs_des_corridors_de_transit × breakdown... (déjà existant)
+
+=== Seigneuries Foncières Opportunistes ===
+  → seigneuries_foncieres_opportunistes × breakdown... (déjà existant)
+
+=== Seigneuries Logistiques Armées ===
+  → seigneuries_logistiques_armees × breakdown... (déjà existant)
+
+=== Seigneurs de Guerre Agro-Territoriaux ===
+  → seigneurs_de_guerre_agro_territoriaux × breakdown... (déjà existant)
+
+=== Seoul Collectif Nexcore ===
+  → seoul_collectif_nexcore × breakdown... (déjà existant)
+
+=== Sfax Relais Bouches ===
+  → sfax_relais_bouches × breakdown... (déjà existant)
+
+=== Terminal Kharg Data Haven ===
+  → terminal_kharg_data_haven × breakdown... (déjà existant)
+
+=== Tour Bcuc Geneve ===
+  → tour_bcuc_geneve × breakdown... (déjà existant)
+
+=== Trame Bioclimatique Continentale ===
+  → trame_bioclimatique × breakdown... (déjà existant)
+
+=== Tribunal Algorithmique de Bruxelles ===
+  → tribunal_algorithmique_de_bruxelles × breakdown... (déjà existant)
+
+=== Vallee Allier Terrafond ===
+  → vallee_allier_terrafond × breakdown... (déjà existant)
+
+=== Vasil Orentchev ===
+  → vasil_orentchev × breakdown... (déjà existant)
+
+=== Voix du Dehors ===
+  → voix_du_dehors × breakdown... (déjà existant)
+
+============================================================
+✓ 2 instance(s) créée(s) | 135 déjà existante(s) | 3 erreur(s)
+============================================================

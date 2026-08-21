@@ -1,0 +1,101 @@
+
+[validate] Démarrage de la validation...
+[validate] 1/10 — Nomenclature...
+[validate] 2/10 — Cohérence systémique...
+[validate] 3/10 — Entités et instances...
+[validate] 4/10 — Thématiques...
+[validate] 5/10 — Localisation...
+[validate] 6/10 — Références croisées...
+[validate] 7/10 — Matrice d'influence...
+[validate] 8/10 — Événements...
+[validate] 9/10 — Signaux faibles (section 7 ↔ section 12)...
+[validate] 10/10 — Cohérence narrative post-injection...
+
+════════════════════════════════════════════════════════════
+VALIDATION — OURRASSOL 2098
+════════════════════════════════════════════════════════════
+
+📊 INVENTAIRE
+────────────────────────────────────────────────────────────
+  [NOMENCLATURE] 6/6 scénarios | 12/12 variables
+  [ENTITIES] 592 entités chargées
+  [INSTANCES] 744 instances chargées
+  [THEMATIQUES] 20 thématiques trouvées
+  [LOCALISATION] 827 fiches riches | 1 sans localisation | 0 review_manuelle
+  [CROSS_REFERENCES] 1374 slugs dans le référentiel
+  [MATRIX] 132 edges dans la matrice
+  [EVENTS] 24 archétypes d'événements
+  [EVENTS] 83 instances d'événements
+  [NARRATIVE] Aucune event_instance modifiée depuis la dernière validation — scan ignoré (--narrative pour forcer)
+
+⚠️  AVERTISSEMENTS (61)
+────────────────────────────────────────────────────────────
+  [LOCALISATION] 1 avertissements
+    gelecek_meclisi_policy_reform.md — champ localisation absent (fiche riche non traitée)
+  [SIGNALS] 60 avertissements
+    climat_environnement_global.md — signal 'captation_carbone_industrielle' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    climat_environnement_global.md — signal 'discours_effondrement_climatique' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    climat_environnement_global.md — signal 'instabilite_saisonniere' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    climat_environnement_global.md — signal 'megafeux_saisonniers' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    climat_environnement_global.md — signal 'relocalisation_cotiere' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    climat_environnement_global.md — signal 'stress_hydrique' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    demographie_mobilite_humaine.md — signal 'debats_identitaires_migrations' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    demographie_mobilite_humaine.md — signal 'gestion_algorithmique_flux_humains' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    demographie_mobilite_humaine.md — signal 'migrations_climatiques' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    demographie_mobilite_humaine.md — signal 'outils_predictifs_migratoires' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    demographie_mobilite_humaine.md — signal 'politiques_migratoires_restrictives' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    demographie_mobilite_humaine.md — signal 'vieillissement_demographique' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    energie_ressources_critiques.md — signal 'acceptation_transition_contrainte' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    energie_ressources_critiques.md — signal 'adaptation_sobriete_energetique' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    energie_ressources_critiques.md — signal 'competition_terres_rares' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    energie_ressources_critiques.md — signal 'degradation_sites_miniers' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    energie_ressources_critiques.md — signal 'fusion_experimentale' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    energie_ressources_critiques.md — signal 'stockage_energie_nouvelle_generation' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    frontieres_du_systeme.md — signal 'industrialisation_orbitale_privee' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    frontieres_du_systeme.md — signal 'minage_asteroides' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    frontieres_du_systeme.md — signal 'nouvelles_communautes_orbitales' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    frontieres_du_systeme.md — signal 'retour_recit_civilisationnel_spatial' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    frontieres_du_systeme.md — signal 'saturation_orbitale' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    frontieres_du_systeme.md — signal 'spatialisation_des_conflits' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    gouvernance_institutions.md — signal 'crise_confiance_institutions' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    gouvernance_institutions.md — signal 'fragmentation_institutionnelle_regionale' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    gouvernance_institutions.md — signal 'gouvernance_algorithmique_emergente' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    gouvernance_institutions.md — signal 'gouvernance_environnementale_multiniveaux' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    gouvernance_institutions.md — signal 'systemes_decision_automatises_publics' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    gouvernance_institutions.md — signal 'transformation_attentes_democratiques' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    sante_biotechnologies.md — signal 'acceptation_homme_augmente' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    sante_biotechnologies.md — signal 'course_biotech_internationale' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    sante_biotechnologies.md — signal 'emergence_pathogenes_nouveaux' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    sante_biotechnologies.md — signal 'inegalites_acces_soins' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    sante_biotechnologies.md — signal 'medecine_predictive_ia' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    sante_biotechnologies.md — signal 'surveillance_sanitaire_continue' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    systeme_economique_redistribution.md — signal 'automatisation_financi' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    systeme_economique_redistribution.md — signal 'dedollarisation_progressive' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    systeme_economique_redistribution.md — signal 'economie_plateformes_dominante' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    systeme_economique_redistribution.md — signal 'explosion_inegalites_patrimoniales' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    systeme_economique_redistribution.md — signal 'remise_en_cause_capitalisme_croissance' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    systeme_economique_redistribution.md — signal 'taxation_carbone_globale' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    systemes_productifs_travail.md — signal 'automatisation_agricole_massive' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    systemes_productifs_travail.md — signal 'automatisation_cognitive' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    systemes_productifs_travail.md — signal 'disparition_metiers_intermediaires' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    systemes_productifs_travail.md — signal 'fragmentation_chaines_valeur' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    systemes_productifs_travail.md — signal 'normalisation_post_travail' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    systemes_productifs_travail.md — signal 'robotisation_services' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    technologie_information.md — signal 'agents_autonomes_multi_ia' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    technologie_information.md — signal 'automatisation_decisionnelle' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    technologie_information.md — signal 'concentration_informationnelle' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    technologie_information.md — signal 'consommation_energetique_ia' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    technologie_information.md — signal 'crise_verite_informationnelle' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    technologie_information.md — signal 'dependance_numerique' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    valeurs_culture_tempo_sociale.md — signal 'acceleration_rythmes_vie_urbains' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    valeurs_culture_tempo_sociale.md — signal 'desynchronisation_generationnelle' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    valeurs_culture_tempo_sociale.md — signal 'fatigue_civilisationnelle' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    valeurs_culture_tempo_sociale.md — signal 'guerres_culturelles_transnationales' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    valeurs_culture_tempo_sociale.md — signal 'hybridation_ia_culture' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+    valeurs_culture_tempo_sociale.md — signal 'retour_spiritualites_hybrides' présent en section 12 mais sans annotation correspondante en section 7 (préfixe 'signal_custom:' manquant ou oublié ? voir bug du 27 juillet)
+
+════════════════════════════════════════════════════════════
+✓ BASE VALIDE — 0 erreurs | 61 avertissements | 0 corrections
+════════════════════════════════════════════════════════════
+
+📄 Rapport sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/validation_report.md

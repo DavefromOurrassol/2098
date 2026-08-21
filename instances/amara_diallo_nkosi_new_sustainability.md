@@ -51,8 +51,6 @@ type_relation_dominante: coopération
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: transition
 
 injection:
@@ -73,6 +71,9 @@ tensions_narratives: >
   La tension centrale de sa trajectoire en 2098 est celle de l'obsolescence programmée : les nouvelles générations d'architectes hydriques, formées dès l'enfance aux interfaces IA, remettent en cause la nécessité d'une médiation humaine dans des systèmes jugés suffisamment matures pour s'autoréguler. Diallo-Nkosi résiste — non par conservatisme, soutient-elle, mais parce qu'elle a vu des algorithmes optimiser l'équité au détriment de la dignité. Une deuxième ligne de fracture oppose sa vision continentale africaine à une gouvernance globale qui tend à effacer les spécificités locales au nom de l'efficacité systémique. Enfin, une rumeur persistante circule dans les couloirs de l'AGRB : elle préparerait un rapport critique sur les dérives de la délégation décisionnelle aux IA dans trois bassins versants asiatiques — un document qui pourrait fracturer les alliances institutionnelles qu'elle a elle-même construites.
 
 date_creation: 2026-06-15
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Amara Diallo-Nkosi

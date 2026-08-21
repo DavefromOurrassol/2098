@@ -41,7 +41,7 @@ alliances:
 - consortiums_logistiques_agro_corporatifs_breakdown
 - corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown
 - milices_privees_documentees_terrain_breakdown
-- rede_paulista_de_distribuic_o_algor_tmica_breakdown
+- rede_paulista_de_distribuicao_algoritmica_breakdown
 - reseau_des_anciens_financeurs_devenus_censeurs_breakdown
 - seigneuries_logistiques_armees_breakdown
 oppositions:
@@ -74,8 +74,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2038
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -103,6 +101,9 @@ tensions_narratives: 'La légitimité des enclaves repose entièrement sur leur 
   Enfin, la concurrence entre enclaves rivales génère des guerres tarifaires et des
   raids de débauchage de personnel qualifié qui fragilisent l''ensemble de l''écosystème.'
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Enclaves Corporatives Fortifiées
@@ -135,7 +136,7 @@ La légitimité des enclaves repose entièrement sur leur capacité à maintenir
 - [[consortiums_logistiques_agro_corporatifs_breakdown]]
 - [[corporations_de_l_ere_pre_effondrement_a_droits_de_pi_breakdown]]
 - [[milices_privees_documentees_terrain_breakdown]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_breakdown]]
+- [[rede_paulista_de_distribuicao_algoritmica_breakdown]]
 - [[reseau_des_anciens_financeurs_devenus_censeurs_breakdown]]
 - [[seigneuries_logistiques_armees_breakdown]]
 **Opposants :**

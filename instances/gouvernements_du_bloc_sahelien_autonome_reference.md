@@ -61,8 +61,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2036
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -96,6 +94,9 @@ localisation:
   zone: bloc_sahelien_autonome
   lieu: Ouagadougou (siège tournant)
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Gouvernements du Bloc Sahélien Autonome

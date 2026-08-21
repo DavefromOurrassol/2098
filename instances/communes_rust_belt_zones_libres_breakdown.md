@@ -62,8 +62,6 @@ type_relation_dominante: symbiose
 annee_debut: 2081
 annee_fin: 
 
-etat_temporel: clandestin
-age_historique: ascendant
 generation: post-effondrement
 
 injection:
@@ -84,6 +82,9 @@ tensions_narratives: >
   La réussite même des Communes devient leur piège : plus elles stabilisent leur économie de subsistance, plus elles attirent des flux migratoires que leurs ressources ne peuvent absorber — forçant des décisions d'exclusion de plus en plus difficiles à distinguer de la brutalité qu'elles prétendent fuir. Certaines communes commencent à se doter de milices internes, brouillant la frontière entre autodéfense émancipatrice et pouvoir coercitif naissant. Parallèlement, des agents des gouvernements régionaux résiduels et des cartels logistiques cherchent à identifier leurs nœuds de distribution pour les intégrer de force ou les neutraliser — la clandestinité est une armure qui s'érode à mesure que la réputation des Forges s'étend.
 
 date_creation: 2026-06-27
+trajectoire: ascendant
+est_clandestin: true
+
 ---
 
 # Communes Libres du Rust Belt — Les Forges du Commun

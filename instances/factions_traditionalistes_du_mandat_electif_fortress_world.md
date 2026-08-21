@@ -48,8 +48,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2036
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -84,6 +82,9 @@ localisation:
   zone: pacte_forteresses_souveraines
   lieu: Plateforme Offshore Baltique
   type_lieu: infrastructure
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Factions Traditionalistes du Mandat Électif

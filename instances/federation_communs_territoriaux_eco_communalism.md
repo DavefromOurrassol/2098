@@ -54,8 +54,6 @@ type_relation_dominante: coopération
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: ascendant
 generation: post-effondrement
 
 injection:
@@ -76,6 +74,9 @@ tensions_narratives: >
   La ligne de fracture la plus vive oppose les 'autonomistes durs', qui voient dans toute coordination inter-bassins un premier pas vers une recentralisation autoritaire, aux 'confédéralistes pragmatiques' qui estiment que sans mutualisation des risques climatiques, chaque commun mourra seul. Par ailleurs, certains bassins membres — enrichis par des réserves d'eau ou d'énergie solaire exceptionnelles — commencent à exercer une influence disproportionnée, recréant de facto des rapports de domination que la Confédération prétendait abolir. Enfin, la question non résolue de l'accueil des populations déplacées par les zones désertifiées menace de faire imploser le consensus fondateur entre territoires d'accueil et communs refermés sur eux-mêmes.
 
 date_creation: 2026-06-15
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Confédération des Bassins Vivants

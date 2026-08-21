@@ -47,7 +47,7 @@ oppositions:
 - cooperative_terrafond_reference
 - cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference
 - cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference
-- frente_sert_o_livre_reference
+- frente_sertao_livre_reference
 - gouvernements_du_bloc_sahelien_autonome_reference
 - mouvement_racines_vivantes_reference
 - reseau_des_cooperatives_agro_saheliennes_reference
@@ -55,8 +55,6 @@ oppositions:
 type_relation_dominante: dépendance
 annee_debut: 2031
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -92,6 +90,9 @@ localisation:
   zone: null
   lieu: null
   type_lieu: infrastructure
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Consortiums d'Agriculture Verticale Algorithmique
@@ -133,7 +134,7 @@ La tension centrale réside dans l'écart croissant entre l'efficacité producti
 - [[cooperative_terrafond_reference]]
 - [[cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference]]
 - [[cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference]]
-- [[frente_sert_o_livre_reference]]
+- [[frente_sertao_livre_reference]]
 - [[gouvernements_du_bloc_sahelien_autonome_reference]]
 - [[mouvement_racines_vivantes_reference]]
 - [[reseau_des_cooperatives_agro_saheliennes_reference]]

@@ -56,10 +56,8 @@ oppositions:
 type_relation_dominante: neutralité
 
 annee_debut: 2041
-annee_fin: 
+annee_fin: 2061
 
-etat_temporel: transformé
-age_historique: résiduel
 generation: post-effondrement
 
 injection:
@@ -80,6 +78,9 @@ tensions_narratives: >
   Le Résidu de Genève oscille en permanence entre deux abîmes : se soumettre davantage aux logiques locales pour rester utile, au risque de ne plus être distinguable d'un simple intermédiaire mercenaire ; ou s'accrocher à une posture symbolique qui l'isole et le rend inopérant. Certains de ses fonctionnaires militent pour une alliance formelle avec les Archives Neutres afin de créer un pôle de mémoire institutionnelle à valeur contraignante ; d'autres craignent que cette fusion ne les dévoie définitivement vers l'archivage plutôt que vers l'action. La question non dite est : qui, dans ce monde fracturé, a encore besoin d'une légitimité qui ne s'appuie sur aucune force ?
 
 date_creation: 2026-06-27
+trajectoire: transformé
+est_clandestin: false
+
 ---
 
 # Résidu de Genève — Le Palais des Fantômes

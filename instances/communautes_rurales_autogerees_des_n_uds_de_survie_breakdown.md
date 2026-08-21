@@ -48,7 +48,7 @@ alliances:
 - diaspora_tech_sahel_breakdown
 - enclaves_finlandaises_breakdown
 - factions_secessionnistes_agrariennes_du_desert_breakdown
-- frente_sert_o_livre_breakdown
+- frente_sertao_livre_breakdown
 - guilde_des_techniciens_nomades_breakdown
 - massif_central_cicatrices_vertes_breakdown
 - milices_agro_defensives_locales_breakdown
@@ -75,8 +75,6 @@ oppositions:
 type_relation_dominante: symbiose
 annee_debut: 2041
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -106,6 +104,9 @@ tensions_narratives: 'La tension centrale est celle de la clôture contre l''ouv
   liés aux anciens systèmes numériques crée une fracture interne entre les ''technophiles
   de survie'' et les partisans d''un retour radical au bas-technologique.'
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Communautés Rurales Autogérées des Nœuds de Survie
@@ -146,7 +147,7 @@ La tension centrale est celle de la clôture contre l'ouverture : certaines comm
 - [[diaspora_tech_sahel_breakdown]]
 - [[enclaves_finlandaises_breakdown]]
 - [[factions_secessionnistes_agrariennes_du_desert_breakdown]]
-- [[frente_sert_o_livre_breakdown]]
+- [[frente_sertao_livre_breakdown]]
 - [[guilde_des_techniciens_nomades_breakdown]]
 - [[massif_central_cicatrices_vertes_breakdown]]
 - [[milices_agro_defensives_locales_breakdown]]

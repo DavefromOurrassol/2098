@@ -41,15 +41,13 @@ alliances:
 - nexcore_new_sustainability
 - parlement_deliberatif_mondial_new_sustainability
 - parlement_territoires_nairobi_new_sustainability
-- rede_paulista_de_distribuic_o_algor_tmica_new_sustainability
+- rede_paulista_de_distribuicao_algoritmica_new_sustainability
 - tribunal_algorithmique_de_bruxelles_new_sustainability
 oppositions:
 - etats_souverainistes_anti_reseau_new_sustainability
 type_relation_dominante: coopération
 annee_debut: 2041
 annee_fin:
-etat_temporel: actif
-age_historique: mature
 generation: ère cognitive
 injection:
   type: canonique
@@ -74,6 +72,9 @@ tensions_narratives: >
   la pondération des votes — un État de 2 millions face à un écosystème
   de 500 millions d'hectares.
 date_creation: 2098-01-01
+trajectoire: mature
+est_clandestin: false
+
 ---
 
 # Parlement des Territoires
@@ -106,7 +107,7 @@ sur la pondération des votes.
 - [[nexcore_new_sustainability]]
 - [[parlement_deliberatif_mondial_new_sustainability]]
 - [[parlement_territoires_nairobi_new_sustainability]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_new_sustainability]]
+- [[rede_paulista_de_distribuicao_algoritmica_new_sustainability]]
 - [[tribunal_algorithmique_de_bruxelles_new_sustainability]]
 **Opposants :**
 - [[etats_souverainistes_anti_reseau_new_sustainability]]

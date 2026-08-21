@@ -46,7 +46,7 @@ alliances:
 - cooperatives_d_habitat_regeneratif_eco_communalism
 - federation_communs_territoriaux_eco_communalism
 - fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism
-- frente_sert_o_livre_eco_communalism
+- frente_sertao_livre_eco_communalism
 - guildes_des_semenciers_itinerants_eco_communalism
 - le_registre_du_fleuve_eco_communalism
 - mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism
@@ -73,8 +73,6 @@ oppositions:
 type_relation_dominante: symbiose
 annee_debut: 2037
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -114,6 +112,9 @@ localisation:
   zone: massif_central_bioterritoire
   lieu: Nœuds dispersés sur l'ensemble du Massif Central et des Cévennes
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Coopératives Semencières et d'Archives Agronomiques
@@ -154,7 +155,7 @@ La tension centrale qui traverse ces coopératives est celle entre préservation
 - [[cooperatives_d_habitat_regeneratif_eco_communalism]]
 - [[federation_communs_territoriaux_eco_communalism]]
 - [[fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism]]
-- [[frente_sert_o_livre_eco_communalism]]
+- [[frente_sertao_livre_eco_communalism]]
 - [[guildes_des_semenciers_itinerants_eco_communalism]]
 - [[le_registre_du_fleuve_eco_communalism]]
 - [[mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism]]

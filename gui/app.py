@@ -397,7 +397,13 @@ def zones_pays_liste():
     try:
         import json as _json
         data = _json.loads(zones_pays_path.read_text(encoding="utf-8"))
-        return jsonify({"pays": data.get("pays_liste", [])})
+        # Correctif du 16 août 2026 : pays_liste n'était jamais triée (ordre
+        # d'écriture arbitraire du JSON) -- réutilise _fold() (déjà existant,
+        # normalisation NFD) comme clé de tri plutôt qu'un sorted() naïf, qui
+        # placerait mal les entrées accentuées (ex. "Écosse" après les mots
+        # en Z au lieu d'à côté des mots en E).
+        pays = sorted(data.get("pays_liste", []), key=_fold)
+        return jsonify({"pays": pays})
     except Exception as e:
         return jsonify({"pays": [], "error": str(e)})
 
@@ -2899,6 +2905,16 @@ def get_slugs():
         elif slug_type == "zones_hier":
             zones = _scan_zone_slugs_hier(vault_root, scenario)
             return jsonify({"slugs": [z["slug"] for z in zones], "zones": zones})
+        elif slug_type == "zones_hier_journal":
+            # Ajouté le 11 août 2026, spécifique à --zone-slug de generate.py
+            # (mode Semi-guidé) -- voir _zones_avec_journal() pour le détail
+            # du bug corrigé. zones_hier ci-dessus reste inchangé : zone_hint
+            # (create_entities/inject_events) a légitimement besoin de la
+            # hiérarchie complète, sans ce filtre.
+            zones = _scan_zone_slugs_hier(vault_root, scenario)
+            zones_ok = _zones_avec_journal(pipeline_dir, scenario)
+            zones = [z for z in zones if z["slug"] in zones_ok]
+            return jsonify({"slugs": [z["slug"] for z in zones], "zones": zones})
         elif slug_type == "forcer_scenarios":
             # Ajouté le 2 août 2026 pour le mode "forcer" de generate.py.
             # slug_type_field="--forcer-slug" garantit que le slug de
@@ -2995,7 +3011,19 @@ def get_slugs():
             # + JSON vers le nouveau mode --scan-pending, purement mécanique
             # (collect_fiches() ne fait que lire du frontmatter, aucun appel
             # LLM) côté extract_localisation.py.
-            candidats = _scan_localisation_candidats(pipeline_dir, scenario)
+            #
+            # Paramètre force ajouté le 14 août 2026 (backlog Partie 2 : le
+            # menu ne se rafraîchissait jamais en cochant "Retraiter même si
+            # déjà fait", contournable seulement via --scenario). Cause
+            # réelle en 3 parties : (1) --slug n'avait pas de slug_extra_params
+            # déclaré côté scripts_config.json pour --force, (2) même une
+            # fois déclaré, lireValeurChamp() (app.js) lisait .value sur la
+            # checkbox au lieu de .checked -- toujours "on" quel que soit
+            # l'état -- et (3) même le paramètre correctement transmis
+            # n'était de toute façon jamais lu ni transmis au sous-processus
+            # ici. Les trois corrigés ensemble le même jour.
+            force = request.args.get("force", "").lower() == "true"
+            candidats = _scan_localisation_candidats(pipeline_dir, scenario, force=force)
             return jsonify({
                 "slugs": [c["slug"] for c in candidats],
                 "candidats": candidats,
@@ -3010,16 +3038,19 @@ def get_slugs():
     return jsonify({"slugs": slugs})
 
 
-def _scan_localisation_candidats(pipeline_dir: Path, scenario: str) -> list:
+def _scan_localisation_candidats(pipeline_dir: Path, scenario: str, force: bool = False) -> list:
     """Appelle extract_localisation.py --scan-pending en sous-processus
     (lecture seule, aucun appel LLM) et retourne la liste des fiches n'ayant
     pas encore de champ localisation. scenario vide = tous les scénarios
     (contrairement à zones_a_reparenter, --scenario est optionnel côté
-    script)."""
+    script). force=True ajouté le 14 août 2026 : liste aussi les fiches déjà
+    traitées, en cohérence avec --force côté script (collect_fiches())."""
     try:
         cmd = [sys.executable, "extract_localisation.py", "--scan-pending", "--json"]
         if scenario:
             cmd += ["--scenario", scenario]
+        if force:
+            cmd += ["--force"]
         resultat = subprocess.run(
             cmd, cwd=pipeline_dir, capture_output=True, text=True,
             timeout=15, stdin=subprocess.DEVNULL,
@@ -3233,6 +3264,43 @@ def _scan_zone_slugs(pipeline_dir: Path, scenario: str, n1_only: bool) -> list:
     return sorted(set(slugs))
 
 
+def _zones_avec_journal(pipeline_dir: Path, scenario: str) -> set:
+    """Retourne l'ensemble des slugs de zone ayant un journal dans
+    journaux.yaml pour ce scénario (union des deux lignes éditoriales
+    pro_pouvoir/opposition).
+
+    Ajouté le 11 août 2026 : --zone-slug (generate.py, mode Semi-guidé)
+    utilisait jusqu'ici la même liste zones_hier que zone_hint
+    (create_entities/inject_events), qui inclut toutes les sous-zones
+    N2/N3 -- alors que journaux.yaml n'a jamais qu'une entrée par zone
+    N1. Une sous-zone sélectionnée dans ce menu faisait donc
+    systématiquement échouer validate_config_semi_guide() au lancement
+    du script, après coup, plutôt que d'être filtrée en amont (cas réel :
+    archives_neutres_geneve, niveau 2 sous geneve_bunker_institutions).
+
+    Filtre sur le contenu réel de journaux.yaml (structure :
+    data[scenario][ligne]['zones'] = {slug: {...}}) plutôt que sur
+    niveau==1, pour rester correct même si la convention de niveaux
+    changeait un jour.
+    """
+    journaux_path = pipeline_dir / "journaux.yaml"
+    if not journaux_path.exists():
+        return set()
+    try:
+        import yaml as _yaml
+        data = _yaml.safe_load(journaux_path.read_text(encoding="utf-8")) or {}
+    except Exception:
+        return set()
+
+    scenario_data = data.get(scenario) or {}
+    result = set()
+    for ligne, contenu in scenario_data.items():
+        if not isinstance(contenu, dict):
+            continue
+        result.update((contenu.get("zones") or {}).keys())
+    return result
+
+
 def _scan_zone_slugs_hier(pipeline_dir: Path, scenario: str) -> list:
     """Retourne toutes les zones hiérarchiquement (N1 -> N2 -> N3)."""
     if not scenario:
@@ -3277,10 +3345,10 @@ def _scan_zone_slugs_hier(pipeline_dir: Path, scenario: str) -> list:
     result = []
     def add_zone(z):
         result.append(z)
-        for child in sorted(by_parent.get(z["slug"], []), key=lambda x: x["slug"]):
+        for child in sorted(by_parent.get(z["slug"], []), key=lambda x: x["nom"]):
             add_zone(child)
 
-    for z in sorted(n1, key=lambda x: x["slug"]):
+    for z in sorted(n1, key=lambda x: x["nom"]):
         add_zone(z)
 
     seen = {z["slug"] for z in result}
@@ -3565,6 +3633,41 @@ def _read_needs_review_yaml(path: Path, source: str, start_marker: str = None, s
                     current["scenario"] = stripped[2:].strip()
                 elif stripped.startswith("errors:"):
                     pass
+                # Repli générique des 3 scripts d'injection (create_entities_
+                # and_instances.py, inject_custom_events.py, inject_custom_
+                # signals.py) sur une exception imprévue : `{"error": str(e)}`,
+                # une clé SCALAIRE unique — à ne pas confondre avec "errors:"
+                # (pluriel, liste) déjà géré ci-dessus. Jusqu'ici non reconnu
+                # du tout : une entrée needs_review née de ce chemin de repli
+                # affichait toujours DÉTAIL vide, sur les 3 pipelines. Ajouté
+                # le 12 août 2026, même session que le correctif nom:/
+                # scenario_ref:/reason: ci-dessous.
+                elif stripped.startswith("error:") and not current.get("error"):
+                    val = stripped[len("error:"):].strip()
+                    if val.startswith("'") and val.endswith("'"):
+                        val = val[1:-1].replace("''", "'")
+                    elif val.startswith('"') and val.endswith('"'):
+                        val = val[1:-1]
+                    current["error"] = val
+                # Champs propres à entites_custom/signaux_custom (12 août 2026) :
+                # jusqu'ici le placeholder posé par start_marker (ex. "(entité)")
+                # n'était jamais remplacé par le vrai nom, faute de reconnaître
+                # les clés "nom:"/"scenario_ref:"/"reason:" utilisées par ce
+                # format (imbriquées sous "idea:", contrairement au format
+                # événements/enrichissement) — le parseur ignore de toute façon
+                # l'indentation (stripped = line.strip()), donc les lire au même
+                # niveau que les autres clés ne pose pas de problème structurel.
+                elif stripped.startswith("nom:") and current.get("slug", "").startswith("(") and current.get("slug", "").endswith(")"):
+                    current["slug"] = stripped[len("nom:"):].strip()
+                elif stripped.startswith("scenario_ref:") and not current.get("scenario"):
+                    current["scenario"] = stripped[len("scenario_ref:"):].strip()
+                elif stripped.startswith("reason:") and not current.get("error"):
+                    val = stripped[len("reason:"):].strip()
+                    if val.startswith("'") and val.endswith("'"):
+                        val = val[1:-1].replace("''", "'")
+                    elif val.startswith('"') and val.endswith('"'):
+                        val = val[1:-1]
+                    current["error"] = val
                 elif stripped.startswith("- ") and current.get("slug") != "(événement)":
                     # Item d'une liste errors
                     err = stripped[2:].strip()

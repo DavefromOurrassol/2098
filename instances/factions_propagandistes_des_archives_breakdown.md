@@ -51,8 +51,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2036
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -82,6 +80,9 @@ tensions_narratives: 'La tension centrale réside dans leur propre fragmentation
   Archives Neutres de Genève-Bunker ou le cluster Mnemos de Lagos-Intérieur représente
   une menace existentielle pour leur monopole narratif régional.'
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Factions Propagandistes des Archives

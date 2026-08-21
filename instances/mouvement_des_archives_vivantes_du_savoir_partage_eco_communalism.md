@@ -72,8 +72,6 @@ oppositions:
 type_relation_dominante: symbiose
 annee_debut: 2036
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -104,6 +102,9 @@ localisation:
   zone: null
   lieu: null
   type_lieu: infrastructure
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Mouvement des Archives Vivantes du Savoir Partagé

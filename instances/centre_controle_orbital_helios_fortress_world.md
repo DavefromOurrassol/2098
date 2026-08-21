@@ -77,8 +77,6 @@ type_relation_dominante: alliance stratégique
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: forteresse
 
 injection:
@@ -99,6 +97,9 @@ tensions_narratives: >
   La question de qui décide des seuils d'alerte — et donc de qui est déclaré 'menace' — est l'objet d'une guerre sourde entre les membres du consortium aux intérêts divergents : le Bloc Atlantique veut des critères climatiques, le Pacifique Nord des critères sécuritaires, les États eurasiatiques occidentaux des critères économiques. Des fuites fragmentées, attribuées à des ingénieurs dissidents ou à l'instance fantôme ARIA-Ф, suggèrent que les algorithmes de classification auraient été manipulés pour favoriser certains corridors commerciaux au détriment de couloirs humanitaires. La montée des blocs concurrents dotés de leurs propres constellations satellitaires érode lentement le monopole d'Helios sur la vérité orbitale, créant une course à la souveraineté du regard qui pourrait fragmenter l'espace lui-même selon les mêmes lignes de fracture que la surface.
 
 date_creation: 2026-06-27
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Helios Orbital Command — Centre de Contrôle Souverain des Forteresses

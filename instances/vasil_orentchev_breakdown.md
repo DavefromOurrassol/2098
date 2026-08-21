@@ -48,8 +48,6 @@ type_relation_dominante: alliance stratégique
 annee_debut: 2061
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: post-effondrement
 
 injection:
@@ -70,6 +68,9 @@ tensions_narratives: >
   La question centrale d'Orentchev dans ce scénario est celle de sa propre durée : son modèle repose sur un équilibre fragile entre suffisamment de chaos pour être indispensable et suffisamment d'ordre pour que ses convois circulent — un équilibre que la trajectoire de fragmentation menace de rompre définitivement. Si un bloc émergent parvient à reconsolidiser les corridors eurasiens, il devient soit un actif à absorber soit une menace à éliminer. Parallèlement, les populations des enclaves qu'il dessert commencent à questionner publiquement la légitimité d'un homme qui profite structurellement de leur dépendance, alimentant une tension entre utilité fonctionnelle et exploitation systémique que ses opérateurs locaux peinent à contenir.
 
 date_creation: 2026-06-15
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Vasil Orentchev

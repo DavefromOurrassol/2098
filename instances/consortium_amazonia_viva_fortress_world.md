@@ -57,8 +57,6 @@ type_relation_dominante: conflit
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: clandestin
-age_historique: déclinant
 generation: forteresse
 
 injection:
@@ -79,6 +77,9 @@ tensions_narratives: >
   La question centrale qui fracture le Pacte en interne est celle du prix de la survie : accepter un protectorat partiel d'un bloc dominant pour préserver l'intégrité territoriale, ou maintenir une indépendance pure qui condamne à l'effacement progressif ? Une faction radicale autochtone refuse toute négociation avec les blocs et tente de constituer une force de défense armée autonome, risquant de transformer le Pacte en acteur militaire et de légitimer les frappes préventives. Pendant ce temps, des fuites indiquent que Nexus BioSyn a déjà cartographié secrètement 40% des stocks génomiques amazôniens — rendant la souveraineté revendiquée partiellement fictive avant même d'avoir été reconnue.
 
 date_creation: 2026-06-23
+trajectoire: déclinant
+est_clandestin: true
+
 ---
 
 # Pacte Vert Amazônia — Souveraineté des Gardiens

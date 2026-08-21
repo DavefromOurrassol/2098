@@ -76,8 +76,6 @@ type_relation_dominante: symbiose
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: ascendant
 generation: reconstruction
 
 injection:
@@ -98,6 +96,9 @@ tensions_narratives: >
   La Tresse est menacée par deux forces opposées qui convergent vers le même résultat : d'un côté, les fragments d'États résiduels et les consortiums logistiques qui cherchent à la 'sécuriser' en y installant des points de contrôle, transformant le corridor vivant en route administrée ; de l'autre, des communautés isolationnistes qui veulent en couper les tronçons traversant leurs terres, refusant toute circulation extérieure. À l'intérieur même du réseau, une tension sourde monte entre ceux qui souhaitent formaliser une charte de gouvernance partagée pour protéger le corridor et ceux qui craignent que toute institutionnalisation ne soit le premier pas vers sa capture. La question de fond reste entière : peut-on protéger ce qui tire sa force de son refus d'être protégé ?
 
 date_creation: 2026-06-27
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Tresse Verte Corridor

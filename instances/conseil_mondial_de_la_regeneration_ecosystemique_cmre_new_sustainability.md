@@ -89,8 +89,6 @@ type_relation_dominante: alliance stratégique
 annee_debut: 2038
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: ère cognitive
 
 injection:
@@ -111,6 +109,9 @@ tensions_narratives: >
   Le CMRE est au centre d’un bras de fer permanent entre universalisme écologique et souveraineté territoriale. Ses détracteurs, comme les Collectifs Anarcho-Autonomistes des Zones Libres, dénoncent une « colonisation verte » imposée par des algorithmes. À l’inverse, les États souverainistes hydriques ou les lobbies agro-industriels du Bassin du Congo tentent de contourner ses normes, créant des zones grises de régénération non certifiée. Une autre tension émerge autour de la « dette écologique » : qui paie pour les projets ? Les fonds mondiaux ou les territoires concernés ? Enfin, la montée des IA décisionnelles au sein du CMRE soulève des questions sur la démocratie écologique : qui contrôle vraiment les critères de régénération ?
 
 date_creation: 2026-07-11
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Conseil Mondial de la Régénération Écosystémique (CMRE)

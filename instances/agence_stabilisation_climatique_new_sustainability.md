@@ -65,8 +65,6 @@ type_relation_dominante: coopération
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: reconstruction
 
 injection:
@@ -87,6 +85,9 @@ tensions_narratives: >
   La légitimité démocratique de l'APRC reste le point de friction central : ses décisions s'imposent aux États membres sans vote populaire, au nom de l'urgence perpétuée. Des voix croissantes au sein même de l'institution questionnent le seuil à partir duquel la 'stabilisation' devient une justification pour figer les inégalités géographiques héritées. Par ailleurs, la dépendance croissante à ses systèmes d'IA décisionnels soulève la question de qui gouverne réellement — les humains ou les modèles climatiques prédictifs. Enfin, les communautés déplacées des zones sacrifiées aux programmes de régénération forestière commencent à s'organiser, réclamant une représentation directe dans les instances qui décident de leur territoire.
 
 date_creation: 2026-06-15
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Autorité Planétaire pour la Régénération Climatique

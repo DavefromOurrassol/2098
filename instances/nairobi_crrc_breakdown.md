@@ -62,8 +62,6 @@ type_relation_dominante: coopération
 annee_debut: 2061
 annee_fin: 
 
-etat_temporel: actif
-age_historique: ascendant
 generation: post-effondrement
 
 injection:
@@ -84,6 +82,9 @@ tensions_narratives: >
   Le CRRC est déchiré entre son identité de réseau horizontal et la pression croissante de cellules qui, dans certains quartiers, ont commencé à lever des 'contributions obligatoires' ressemblant dangereusement à une fiscalité informelle — glissement vers une autorité qu'il n'a jamais voulu revendiquer. Certains blocs régionaux survivants cherchent à le récupérer comme bras opérationnel légitimant, ce qui menacerait son indépendance vitale. Parallèlement, la question de la succession se pose : les fondateurs vieillissent, les archives sont fragmentées, et sans mémoire institutionnelle transmise, chaque nouvelle crise risque de faire éclater le réseau en factions concurrentes aussi impuissantes que les structures qu'il a remplacées.
 
 date_creation: 2026-06-27
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Nairobi CRRC — Les Cellules du Dernier Maillage

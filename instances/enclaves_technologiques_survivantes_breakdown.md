@@ -44,7 +44,7 @@ alliances:
 - lagos_est_nexcore_breakdown
 - lagos_interieur_mnemos_breakdown
 - nexus_biosyn_breakdown
-- rede_paulista_de_distribuic_o_algor_tmica_breakdown
+- rede_paulista_de_distribuicao_algoritmica_breakdown
 - seoul_collectif_nexcore_breakdown
 oppositions:
 - communes_rust_belt_breakdown
@@ -53,8 +53,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2041
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -83,6 +81,9 @@ tensions_narratives: 'Leur paradoxe fondamental est d''être à la fois indispen
   NexCore ou Mnemos ; d''autres tentent de tisser des réseaux d''entraide discrets,
   fragiles comme du verre dans un monde en morceaux.'
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Enclaves Technologiques Survivantes
@@ -117,7 +118,7 @@ Leur paradoxe fondamental est d'être à la fois indispensables et condamnées :
 - [[lagos_est_nexcore_breakdown]]
 - [[lagos_interieur_mnemos_breakdown]]
 - [[nexus_biosyn_breakdown]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_breakdown]]
+- [[rede_paulista_de_distribuicao_algoritmica_breakdown]]
 - [[seoul_collectif_nexcore_breakdown]]
 **Opposants :**
 - [[communes_rust_belt_breakdown]]

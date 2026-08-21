@@ -52,8 +52,6 @@ oppositions:
 type_relation_dominante: coopération
 annee_debut: 2038
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -86,6 +84,9 @@ localisation:
   zone: acra_siege_la_haye
   lieu: La Haye
   type_lieu: ville
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Autorité Continentale des Ressources Aquatiques (ACRA)

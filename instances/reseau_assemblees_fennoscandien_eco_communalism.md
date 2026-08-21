@@ -65,8 +65,6 @@ type_relation_dominante: coopération
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: mature
 generation: reconstruction
 
 injection:
@@ -87,6 +85,9 @@ tensions_narratives: >
   La pression monte depuis trois ans autour de la gestion des corridors forestiers boréaux : certaines assemblées veulent centraliser la décision d'accès pour éviter la surexploitation, ce qui reviendrait à créer une autorité supra-locale que le Réseau refuse constitutionnellement d'être. Parallèlement, la Confédération des Communs de l'Arc Septentrional pousse à une fusion institutionnelle qui permettrait une représentation commune face aux blocs extérieurs — proposition que le Réseau vit comme une menace existentielle sur son principe de souveraineté locale. Enfin, une faction interne de 'réalistes' argumente que sans règles contraignantes, les premières crises sévères de sécheresse ou de disette fragmenteront le Réseau en quelques saisons.
 
 date_creation: 2026-06-27
+trajectoire: mature
+est_clandestin: false
+
 ---
 
 # Réseau des Assemblées Fennoscandien

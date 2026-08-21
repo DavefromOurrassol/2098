@@ -62,8 +62,6 @@ type_relation_dominante: coopération
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: reconstruction
 
 injection:
@@ -84,6 +82,9 @@ tensions_narratives: >
   La tension fondatrice demeure entière : à mesure que les sécheresses s'aggravent au sud et à l'ouest du continent, les demandes d'accès aux eaux des Grands Lacs par des régions non membres se multiplient — et le CGLAGHI doit choisir entre solidarité continentale et préservation d'un bien commun fragile. En interne, le poids croissant des nations autochtones dans les décisions de quota heurte les intérêts industriels des États membres, qui menacent de réviser leur contribution financière. Enfin, les factions technocratiques de la marchandisation hydrique font pression pour que le Compact cède la gestion de ses données hydrologiques à des opérateurs privés, contre promesse d'investissements massifs dans les infrastructures — une proposition qui divise profondément ses commissaires.
 
 date_creation: 2026-06-23
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Compact des Grands Lacs — Autorité de Gouvernance Hydrique Intégrée (CGLAGHI)

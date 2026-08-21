@@ -48,7 +48,7 @@ alliances:
 - consortium_africain_de_biotechnologies_sociales_eco_communalism
 - factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism
 - ligue_des_cites_du_sahel_numerique_eco_communalism
-- rede_paulista_de_distribuic_o_algor_tmica_eco_communalism
+- rede_paulista_de_distribuicao_algoritmica_eco_communalism
 - tribunal_algorithmique_de_bruxelles_eco_communalism
 oppositions:
 - agro_conglomerats_des_enclaves_technologiques_eco_communalism
@@ -65,8 +65,6 @@ type_relation_dominante: coopération
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: reconstruction
 
 injection:
@@ -87,6 +85,9 @@ tensions_narratives: >
   La principale fissure interne du CPGA est la question des paramètres algorithmiques : les communautés périphériques, historiquement défavorisées, accusent les assemblées centrales de coder des biais favorisant les zones les plus densément organisées. Une faction dissidente réclame un droit de veto communautaire sur chaque mise à jour de l'algorithme, ce qui menace de paralyser le système. Parallèlement, la pression des plateformes de réagrégation globale s'intensifie : elles proposent des offres de services clé-en-main qui séduisent certains responsables de zones fatiguées par la complexité délibérative. Enfin, le succès du modèle à l'export crée un paradoxe : São Paulo risque de devenir une marque plus qu'une commune vivante, ses techniciens absorbés par les missions extérieures pendant que les infrastructures locales vieillissent.
 
 date_creation: 2026-06-27
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Consórcio Paulistano de Gestão Algorítmica (CPGA)
@@ -120,7 +121,7 @@ La principale fissure interne du CPGA est la question des paramètres algorithmi
 - [[consortium_africain_de_biotechnologies_sociales_eco_communalism]]
 - [[factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism]]
 - [[ligue_des_cites_du_sahel_numerique_eco_communalism]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_eco_communalism]]
+- [[rede_paulista_de_distribuicao_algoritmica_eco_communalism]]
 - [[tribunal_algorithmique_de_bruxelles_eco_communalism]]
 **Opposants :**
 - [[agro_conglomerats_des_enclaves_technologiques_eco_communalism]]

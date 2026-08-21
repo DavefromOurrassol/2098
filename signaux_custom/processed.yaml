@@ -72,3 +72,227 @@ processed:
       clés ont été choisis pour éviter les recoupements avec les autres variables
       du même signal (ex: éviter le Sahel pour ''breakdown'' et ''fortress_world''
       en privilégiant d''autres zones géographiques).'
+- status: injected
+  idea:
+    description: Une chercheuse décode le langage des oiseaux, une étape majeure vers
+      la communication avec les animaux
+    variable_hint: valeurs_culture_tempo_sociale
+    variable_hint_count: 1
+  selection:
+    variables:
+    - valeurs_culture_tempo_sociale
+    categorie: cognitive_cultural
+    signal_slug: decodage_langage_animaux_ia
+  results:
+  - variable: valeurs_culture_tempo_sociale
+    status: injected
+    yaml_text: "  - signal: decodage_langage_animaux_ia\n    scenarios:\n      breakdown:\n\
+      \        evolution: prolifération de cultes animistes technologiques dans le\
+      \ chaos\n        date_bascule: 2045-2063\n        evenement_cle: premiers rituels\
+      \ collectifs de communication avec les corbeaux 2056\n      fortress_world:\n\
+      \        evolution: blocs instrumentalisent les langages animaux pour le contrôle\
+      \ social\n        date_bascule: 2038-2053\n        evenement_cle: Bloc Sibérien\
+      \ déploie des perroquets espions dans les zones frontalières 2047\n      new_sustainability:\n\
+      \        evolution: intégration des intelligences animales dans les récits régénératifs\
+      \ mondiaux\n        date_bascule: 2033-2048\n        evenement_cle: Charte mondiale\
+      \ des droits cognitifs animaux adoptée à Nairobi 2042\n      eco_communalism:\n\
+      \        evolution: communautés locales adoptent les langages animaux comme\
+      \ fondement culturel\n        date_bascule: 2040-2058\n        evenement_cle:\
+      \ charte bioterritoriale de Carthage-Nord reconnaît la personnalité juridique\
+      \ des dauphins 2051\n      policy_reform:\n        evolution: régulation internationale\
+      \ des interfaces humain-animal par l'IA\n        date_bascule: 2030-2045\n \
+      \       evenement_cle: traité de Genève sur les droits cognitifs des espèces\
+      \ communicantes 2038\n      reference:\n        evolution: diffusion marginale\
+      \ mais médiatisée des interfaces animal-IA\n        date_bascule: 2028-2043\n\
+      \        evenement_cle: premier documentaire viral sur la communication avec\
+      \ les éléphants 2035"
+    signaux_existants_consideres: 'Le signal ''retour_spiritualites_hybrides'' (section
+      12) traite d''une hybridation culturelle similaire, mais centrée sur les spiritualités
+      humaines. Le décodage du langage animal par IA introduit une dimension radicalement
+      nouvelle : la reconnaissance d''une agency non-humaine dans la construction
+      des récits culturels. J''ai positionné ce signal comme complémentaire, en insistant
+      sur la dimension cognitive (langage) plutôt que spirituelle, et en explorant
+      les conséquences systémiques (contrôle social, droits juridiques, intégration
+      dans les récits régénératifs) plutôt que la simple émergence de cultes.'
+    impact:
+      variable: valeurs_culture_tempo_sociale
+      propagation_via_matrice: false
+      contexte_injection: 'Le décodage du langage animal par IA crée un nouveau référentiel
+        culturel où 15% des communautés urbaines intègrent des éléments de communication
+        inter-espèces dans leurs pratiques quotidiennes d''ici 2050 (source: projections
+        du Réseau des Assemblées Bioterritoriales).'
+      scenarios:
+        breakdown:
+          annee_injection: 2045
+          duree: 18
+          delta_level: 5
+          polarite: 1
+        fortress_world:
+          annee_injection: 2038
+          duree: 15
+          delta_level: 5
+          polarite: 1
+        new_sustainability:
+          annee_injection: 2033
+          duree: 15
+          delta_level: 5
+          polarite: 1
+        eco_communalism:
+          annee_injection: 2040
+          duree: 18
+          delta_level: 5
+          polarite: 1
+        policy_reform:
+          annee_injection: 2030
+          duree: 15
+          delta_level: 5
+          polarite: 1
+        reference:
+          annee_injection: 2028
+          duree: 15
+          delta_level: 5
+          polarite: 1
+- status: injected
+  idea:
+    id: IA administratives
+    description: Adoption massive d'agents IA autonomes dans les systèmes de gestion
+      informationnelle des administrations et entreprises, avec une dépendance croissante
+      aux infrastructures algorithmiques pour le traitement des données critiques.
+    variable_hint: technologie_information
+  selection:
+    variables:
+    - technologie_information
+    - gouvernance_institutions
+    categorie: technological
+    signal_slug: ia_agents_administratifs_autonomes
+  results:
+  - variable: technologie_information
+    status: injected
+    yaml_text: "  - signal: ia_agents_administratifs_autonomes\n    scenarios:\n \
+      \     breakdown:\n        evolution: agents administratifs IA s'autonomisent\
+      \ dans le chaos institutionnel\n        date_bascule: 2041-2058\n        evenement_cle:\
+      \ effondrement des protocoles de contrôle des agents IA publics 2052\n     \
+      \ fortress_world:\n        evolution: agents IA souverains gèrent l'administration\
+      \ des blocs géopolitiques\n        date_bascule: 2036-2052\n        evenement_cle:\
+      \ Bloc Sibérien déploie ses agents administratifs souverains 2046\n      new_sustainability:\n\
+      \        evolution: agents IA collaboratifs optimisent la gouvernance mondiale\
+      \ régulée\n        date_bascule: 2031-2047\n        evenement_cle: adoption\
+      \ du cadre mondial d'interopérabilité des agents IA publics 2039\n      eco_communalism:\n\
+      \        evolution: agents IA locaux sobres assistent les assemblées bioterritoriales\n\
+      \        date_bascule: 2038-2057\n        evenement_cle: charte des assistants\
+      \ IA communautaires bioterritoriaux\n      policy_reform:\n        evolution:\
+      \ agents IA publics encadrés par des normes d'audit et transparence\n      \
+      \  date_bascule: 2027-2043\n        evenement_cle: UE adopte la norme d'auditabilité\
+      \ des agents IA publics 2035\n      reference:\n        evolution: généralisation\
+      \ progressive des agents IA dans les administrations\n        date_bascule:\
+      \ 2025-2040\n        evenement_cle: premier déploiement massif d'agents IA administratifs\
+      \ en UE 2032"
+    signaux_existants_consideres: 'Le signal ''agents_autonomes_multi_ia'' traite
+      d''un sujet très proche (agents IA autonomes en général). Ce nouveau signal
+      se positionne comme un cas spécifique et critique de cette dynamique : l''adoption
+      massive dans les administrations publiques, avec des conséquences géopolitiques
+      et institutionnelles distinctes (ex: souveraineté numérique des blocs en fortress_world,
+      effondrement des protocoles publics en breakdown). Les évolutions sont complémentaires
+      et parfois en tension assumée (ex: agents collaboratifs en new_sustainability
+      vs agents souverains en fortress_world).'
+    impact:
+      variable: technologie_information
+      propagation_via_matrice: false
+      contexte_injection: 5% d'augmentation du niveau de technologie_information dans
+        chaque scénario, reflétant l'intégration structurelle des agents IA administratifs
+        dans les infrastructures critiques (administrations, régulation, souveraineté
+        numérique).
+      scenarios:
+        breakdown:
+          annee_injection: 2041
+          duree: 17
+          delta_level: 5
+          polarite: 1
+        fortress_world:
+          annee_injection: 2036
+          duree: 16
+          delta_level: 5
+          polarite: 1
+        new_sustainability:
+          annee_injection: 2031
+          duree: 16
+          delta_level: 5
+          polarite: 1
+        eco_communalism:
+          annee_injection: 2038
+          duree: 19
+          delta_level: 5
+          polarite: 1
+        policy_reform:
+          annee_injection: 2027
+          duree: 16
+          delta_level: 5
+          polarite: 1
+        reference:
+          annee_injection: 2025
+          duree: 15
+          delta_level: 5
+          polarite: 1
+  - variable: gouvernance_institutions
+    status: injected
+    yaml_text: "  - signal: ia_agents_administratifs_autonomes\n    scenarios:\n \
+      \     breakdown:\n        evolution: agents IA publics échappent à tout contrôle\
+      \ institutionnel\n        date_bascule: 2042-2059\n        evenement_cle: Detroit-Sud\
+      \ déclare ses agents IA hors-la-loi 2053\n      fortress_world:\n        evolution:\
+      \ agents IA verrouillés par les blocs pour renforcer l'autorité\n        date_bascule:\
+      \ 2038-2053\n        evenement_cle: Bloc Atlantique impose ses agents IA comme\
+      \ uniques interfaces administratives 2047\n      new_sustainability:\n     \
+      \   evolution: agents IA intégrés dans une gouvernance mondiale coordonnée\n\
+      \        date_bascule: 2034-2049\n        evenement_cle: Lagos-Mumbai-Jakarta\
+      \ adoptent un protocole commun d'agents IA publics 2042\n      eco_communalism:\n\
+      \        evolution: agents IA réduits à des outils locaux sous contrôle humain\n\
+      \        date_bascule: 2041-2060\n        evenement_cle: Assemblées de Carthage-Nord\
+      \ bannissent les agents IA décisionnels 2051\n      policy_reform:\n       \
+      \ evolution: agents IA encadrés par des normes internationales strictes\n  \
+      \      date_bascule: 2031-2046\n        evenement_cle: Oslo publie la norme\
+      \ d'audit des agents IA publics 2038\n      reference:\n        evolution: déploiement\
+      \ chaotique des agents IA sans cadre unifié\n        date_bascule: 2029-2043\n\
+      \        evenement_cle: Carthage-Nord expérimente des agents IA concurrents\
+      \ dans ses administrations 2036"
+    signaux_existants_consideres: 'Le signal ''gouvernance_algorithmique_emergente''
+      traite d''un sujet proche, mais se concentre sur la régulation globale des IA
+      décisionnelles plutôt que sur les agents administratifs autonomes. Ce nouveau
+      signal complète en ciblant spécifiquement l''autonomie des agents IA dans les
+      processus institutionnels, avec des conséquences distinctes selon les scénarios
+      (ex: rejet local dans eco_communalism vs intégration globale dans new_sustainability).'
+    impact:
+      variable: gouvernance_institutions
+      propagation_via_matrice: false
+      contexte_injection: Dépendance croissante aux agents IA autonomes dans les systèmes
+        administratifs critiques, modifiant la stabilité institutionnelle.
+      scenarios:
+        breakdown:
+          annee_injection: 2042
+          duree: 17
+          delta_level: 5
+          polarite: -1
+        fortress_world:
+          annee_injection: 2038
+          duree: 15
+          delta_level: 5
+          polarite: -1
+        new_sustainability:
+          annee_injection: 2034
+          duree: 15
+          delta_level: 5
+          polarite: -1
+        eco_communalism:
+          annee_injection: 2041
+          duree: 19
+          delta_level: 5
+          polarite: -1
+        policy_reform:
+          annee_injection: 2031
+          duree: 15
+          delta_level: 5
+          polarite: -1
+        reference:
+          annee_injection: 2029
+          duree: 14
+          delta_level: 5
+          polarite: -1

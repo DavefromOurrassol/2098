@@ -67,8 +67,6 @@ type_relation_dominante: dépendance
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: forteresse
 
 injection:
@@ -89,6 +87,9 @@ tensions_narratives: >
   La fracture interne entre les divisions est explosive : la Division Eurasienne et la Division Pacifique-Nord se disputent le brevet de la thérapie immuno-climatique Gen-4X, un conflit de propriété intellectuelle qui a déjà coûté la vie à trois directeurs régionaux en deux ans. Par ailleurs, des lanceurs d'alerte affirment que certaines divisions sabotent discrètement les récoltes de blocs adversaires via des variantes génétiques dormantes — une guerre biologique plausiblement niable. Enfin, la montée des réseaux agro-pirates redistribuant des semences libres non brevetées menace pour la première fois le modèle de dépendance germinale, forçant Nexus à envisager une réponse militaire directe que plusieurs États refusent encore de cautionner.
 
 date_creation: 2026-06-15
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Nexus BioSyn Sovereign Divisions

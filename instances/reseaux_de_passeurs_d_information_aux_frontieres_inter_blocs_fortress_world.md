@@ -65,8 +65,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2044
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -101,6 +99,9 @@ localisation:
   zone: zones_grises_tampons
   lieu: Corridors gris inter-blocs (Casablanca, Tbilissi-Nord, Almaty)
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Réseaux de passeurs d'information aux frontières inter-blocs

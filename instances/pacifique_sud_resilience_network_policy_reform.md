@@ -62,8 +62,6 @@ type_relation_dominante: alliance stratégique
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: post-effondrement
 
 injection:
@@ -84,6 +82,9 @@ tensions_narratives: >
   La tension centrale du PSRN en 2098 est celle du piège de la victimité institutionnalisée : plus ses membres sont écoutés comme témoins de la catastrophe, moins ils parviennent à imposer des décisions contraignantes sur la géo-ingénierie ou les quotas carbone. Une faction interne, menée par des juristes de la troisième génération née hors-territoire, pousse à dépasser le rôle de 'conscience du système' pour revendiquer une puissance de blocage dans les votes du Conseil Climatique — ce qui risque de fracturer les alliances avec les institutions qui les soutiennent. Par ailleurs, le Consortium de Géo-ingénierie Atmosphérique Pacifique propose des interventions sur les courants marins susceptibles de modifier les conditions des zones où sont ancrées les plateformes souveraines du PSRN, sans consultation préalable — une nouvelle forme d'effacement territorial qui ravive des traumatismes intergénérationnels profonds.
 
 date_creation: 2026-06-23
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Pacific South Resilience Network — Délégation Permanente auprès du Conseil de Régulation Climatique Global

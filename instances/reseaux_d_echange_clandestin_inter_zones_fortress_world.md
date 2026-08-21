@@ -66,7 +66,7 @@ oppositions:
 - neurosentry_fortress_world
 - nexus_biosyn_division_pacifique_fortress_world
 - pacte_forteresses_souveraines_fortress_world
-- rede_paulista_de_distribuic_o_algor_tmica_fortress_world
+- rede_paulista_de_distribuicao_algoritmica_fortress_world
 - reseaux_prives_de_securite_aux_frontieres_fortress_world
 - systemes_de_scoring_de_productivite_corporative_fortress_world
 - terrashield_geoengineering_fortress_world
@@ -74,8 +74,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2036
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -110,6 +108,9 @@ localisation:
   lieu: Corridors gris, marchés périphériques, zones tampons balkano-caucasiennes
     et casablancaises
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Réseaux d'échange clandestin inter-zones
@@ -171,7 +172,7 @@ La tension fondamentale de ces réseaux réside dans leur double nature : instru
 - [[neurosentry_fortress_world]]
 - [[nexus_biosyn_division_pacifique_fortress_world]]
 - [[pacte_forteresses_souveraines_fortress_world]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_fortress_world]]
+- [[rede_paulista_de_distribuicao_algoritmica_fortress_world]]
 - [[reseaux_prives_de_securite_aux_frontieres_fortress_world]]
 - [[systemes_de_scoring_de_productivite_corporative_fortress_world]]
 - [[terrashield_geoengineering_fortress_world]]

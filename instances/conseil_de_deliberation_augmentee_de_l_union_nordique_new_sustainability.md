@@ -48,8 +48,6 @@ oppositions:
 type_relation_dominante: coopération
 annee_debut: 2040
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -85,6 +83,9 @@ localisation:
   zone: union_nordique_europe_nord
   lieu: Helsinki / Nuuk (siège tournant)
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Conseil de Délibération Augmentée de l'Union Nordique

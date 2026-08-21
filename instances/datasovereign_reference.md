@@ -56,8 +56,6 @@ type_relation_dominante: symbiose
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: ère cognitive
 
 injection:
@@ -78,6 +76,9 @@ tensions_narratives: >
   La tension centrale autour de SovData réside dans son double discours : elle vend de la souveraineté aux États tout en organisant leur dépendance. Les révélations récentes sur des 'fuites contrôlées' de données vers des consortiums privés ont provoqué des crises diplomatiques, notamment avec le Bloc des États du Sud Global. Par ailleurs, son partenariat avec les plateformes IA intégrées soulève des questions sur l'autonomie réelle des États dans leurs décisions algorithmiques. Enfin, son expansion dans les zones grises eurasiatiques en fait une cible pour les milices concurrentes des droits de passage, créant un nouveau front dans les conflits hybrides.
 
 date_creation: 2026-07-11
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # SovData Global Trust

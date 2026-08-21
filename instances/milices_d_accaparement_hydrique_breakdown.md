@@ -47,7 +47,7 @@ oppositions:
 - delta_mekong_racines_breakdown
 - diaspora_tech_sahel_breakdown
 - flux_migratoires_non_integrables_breakdown
-- frente_sert_o_livre_breakdown
+- frente_sertao_livre_breakdown
 - front_de_resistance_aux_peages_sur_les_ressources_breakdown
 - grandes_lacs_compact_eau_breakdown
 - guilde_des_techniciens_nomades_breakdown
@@ -62,8 +62,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2043
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -91,6 +89,9 @@ tensions_narratives: 'Ces milices sont déchirées entre leur logique prédatric
   est nulle mais leur emprise est totale : elles incarnent la contradiction absolue
   du breakdown, où la violence devient le seul service public qui reste.'
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Milices d'Accaparement Hydrique
@@ -130,7 +131,7 @@ Ces milices sont déchirées entre leur logique prédatrice à court terme et la
 - [[delta_mekong_racines_breakdown]]
 - [[diaspora_tech_sahel_breakdown]]
 - [[flux_migratoires_non_integrables_breakdown]]
-- [[frente_sert_o_livre_breakdown]]
+- [[frente_sertao_livre_breakdown]]
 - [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
 - [[grandes_lacs_compact_eau_breakdown]]
 - [[guilde_des_techniciens_nomades_breakdown]]

@@ -54,10 +54,8 @@ oppositions:
 type_relation_dominante: coopération
 
 annee_debut: 2031
-annee_fin: 
+annee_fin: 2062
 
-etat_temporel: transformé
-age_historique: mature
 generation: reconstruction
 
 injection:
@@ -78,6 +76,9 @@ tensions_narratives: >
   L'ABCS marche en permanence sur un fil : pour maintenir l'accès aux biotechnologies indispensables, elle doit traiter avec les enclaves technologiques néo-industrielles dont elle conteste le modèle, risquant à chaque fois d'être perçue comme leur sous-traitante par les communautés qu'elle sert. Par ailleurs, certaines assemblées bioterritoriales réclament un transfert total des savoirs et protocoles, souhaitant s'affranchir même de ce dernier intermédiaire. La question se pose : l'ABCS est-elle encore une passerelle vers l'émancipation technologique, ou est-elle devenue elle-même un goulet d'étranglement — bienveillant, mais structurellement nécessaire à sa propre survie ?
 
 date_creation: 2026-06-25
+trajectoire: transformé
+est_clandestin: false
+
 ---
 
 # Alliance des Biotechnologies Communautaires du Sahel (ABCS)

@@ -64,8 +64,6 @@ type_relation_dominante: dépendance
 annee_debut: 2049
 annee_fin: 
 
-etat_temporel: actif
-age_historique: résiduel
 generation: forteresse
 
 injection:
@@ -86,6 +84,9 @@ tensions_narratives: >
   Le Bureau détient la cartographie la plus complète jamais produite sur les déplacements forcés américains — et sa direction sait que cette cartographie est à la fois son bouclier (l'État a besoin de ces données pour projeter ses futures zones d'abandon) et sa condamnation (leur publication serait le plus grand scandale politique du siècle). Une fuite partielle de ses archives circule déjà dans les réseaux dissidents via Vera Solano, mais personne ne sait encore si elle est spontanée ou orchestrée par une faction interne du Bureau souhaitant négocier sa survie. La question qui structure tous les scénarios possibles : quand le régime décidera-t-il que le Bureau en sait trop — et que détruire ses archives est moins dangereux que de laisser ses propres agents les utiliser comme monnaie d'échange ?
 
 date_creation: 2026-06-23
+trajectoire: résiduel
+est_clandestin: false
+
 ---
 
 # Bureau des Territoires Résiduels — Division Continentale Américaine

@@ -64,8 +64,6 @@ type_relation_dominante: coopération
 annee_debut: 2061
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: reconstruction
 
 injection:
@@ -86,6 +84,9 @@ tensions_narratives: >
   La question lancinante de 2098 : l'AMRRT est-elle encore un organe de régulation ou est-elle devenue un gouvernement mondial de facto, légitimé par l'urgence mais jamais élu ? Des voix s'élèvent dans les blocs périphériques pour dénoncer une technocratie de la régénération qui décide, depuis Kigali, quelles terres peuvent être exploitées et lesquelles doivent 'se reposer'. La dépendance croissante à Arbiter-7 soulève une autre fracture : que se passe-t-il le jour où l'IA et les commissaires humains divergent sur une allocation critique ?
 
 date_creation: 2026-06-15
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Autorité Mondiale de Régulation des Ressources et de la Transition (AMRRT)

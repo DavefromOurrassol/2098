@@ -38,12 +38,12 @@ alliances:
 - consortium_africain_de_biotechnologies_sociales_eco_communalism
 - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
 - factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism
-- frente_sert_o_livre_eco_communalism
+- frente_sertao_livre_eco_communalism
 - guildes_des_semenciers_itinerants_eco_communalism
 - ligue_des_cites_du_sahel_numerique_eco_communalism
 - mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism
 - mouvement_des_communes_du_rust_belt_eco_communalism
-- rede_paulista_de_distribuic_o_algor_tmica_eco_communalism
+- rede_paulista_de_distribuicao_algoritmica_eco_communalism
 - reseau_mnemos_eco_communalism
 - reseaux_de_bibliotheques_archives_communautaires_eco_communalism
 - reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
@@ -64,8 +64,6 @@ oppositions:
 type_relation_dominante: symbiose
 annee_debut: 2038
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -100,6 +98,9 @@ localisation:
   zone: null
   lieu: null
   type_lieu: null
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Collectifs de Techniciens Sobres
@@ -134,12 +135,12 @@ La tension centrale des Collectifs réside dans le paradoxe de leur propre succ�
 - [[consortium_africain_de_biotechnologies_sociales_eco_communalism]]
 - [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]
 - [[factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism]]
-- [[frente_sert_o_livre_eco_communalism]]
+- [[frente_sertao_livre_eco_communalism]]
 - [[guildes_des_semenciers_itinerants_eco_communalism]]
 - [[ligue_des_cites_du_sahel_numerique_eco_communalism]]
 - [[mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism]]
 - [[mouvement_des_communes_du_rust_belt_eco_communalism]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_eco_communalism]]
+- [[rede_paulista_de_distribuicao_algoritmica_eco_communalism]]
 - [[reseau_mnemos_eco_communalism]]
 - [[reseaux_de_bibliotheques_archives_communautaires_eco_communalism]]
 - [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]

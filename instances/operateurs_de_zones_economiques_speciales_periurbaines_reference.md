@@ -41,7 +41,7 @@ alliances:
 - ligue_des_municipalites_peripheriques_sous_connectees_reference
 - milices_concurrentes_des_droits_de_passage_reference
 - operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference
-- rede_paulista_de_distribuic_o_algor_tmica_reference
+- rede_paulista_de_distribuicao_algoritmica_reference
 - singapour_est_nexcore_reference
 - singapour_est_reference
 - valparaiso_fct_reference
@@ -50,7 +50,7 @@ oppositions:
 - cooperative_terrafond_reference
 - federation_communs_territoriaux_reference
 - federation_des_cliniques_autonomes_reference
-- frente_sert_o_livre_reference
+- frente_sertao_livre_reference
 - internationale_travailleurs_augmentes_reference
 - les_veilleurs_du_fleuve_reference
 - lyon_metropole_reference
@@ -61,8 +61,6 @@ oppositions:
 type_relation_dominante: dépendance
 annee_debut: 2032
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -99,6 +97,9 @@ localisation:
   zone: null
   lieu: null
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Opérateurs de Zones Économiques Spéciales Périurbaines
@@ -136,7 +137,7 @@ La tension centrale réside dans l'ambivalence de leur légitimité : tolérés 
 - [[ligue_des_municipalites_peripheriques_sous_connectees_reference]]
 - [[milices_concurrentes_des_droits_de_passage_reference]]
 - [[operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_reference]]
+- [[rede_paulista_de_distribuicao_algoritmica_reference]]
 - [[singapour_est_nexcore_reference]]
 - [[singapour_est_reference]]
 - [[valparaiso_fct_reference]]
@@ -145,7 +146,7 @@ La tension centrale réside dans l'ambivalence de leur légitimité : tolérés 
 - [[cooperative_terrafond_reference]]
 - [[federation_communs_territoriaux_reference]]
 - [[federation_des_cliniques_autonomes_reference]]
-- [[frente_sert_o_livre_reference]]
+- [[frente_sertao_livre_reference]]
 - [[internationale_travailleurs_augmentes_reference]]
 - [[les_veilleurs_du_fleuve_reference]]
 - [[lyon_metropole_reference]]

@@ -79,8 +79,6 @@ oppositions:
 type_relation_dominante: coopération
 annee_debut: 2038
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -114,6 +112,9 @@ localisation:
   zone: brazzaville_agrb
   lieu: Brazzaville — Siège africain de l'AGRB
   type_lieu: site_strategique
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Agence Globale de Régénération des Bassins Versants (AGRB-ONU)

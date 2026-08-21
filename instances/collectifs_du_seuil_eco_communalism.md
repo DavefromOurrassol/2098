@@ -50,8 +50,6 @@ type_relation_dominante: rivalité
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: marginal
 generation: post-effondrement
 
 injection:
@@ -72,6 +70,9 @@ tensions_narratives: >
   La tension centrale est théologique autant que politique : si la régénération éco-communaliste réussit, les Veilleurs sont condamnés à l'insignifiance — prophètes d'une apocalypse qui n'a pas eu lieu. Mais si le système fragile des communautés autonomes se disloque face à une nouvelle crise climatique ou conflictuelle, leur crédibilité explose et leur réseau de Sillons devient soudainement stratégique. Une deuxième ligne de tension concerne les jeunes générations nées dans les communautés éco-communalistes : certains, déçus par la lenteur de la reconstruction, sont attirés par la radicalité du retrait des Veilleurs. Enfin, la question des archives : les Sillons contiennent des savoirs techniques précieux que les réseaux coopératifs voudraient intégrer — mais à quel prix, et selon quelles conditions d'accès ?
 
 date_creation: 2026-06-15
+trajectoire: marginal
+est_clandestin: false
+
 ---
 
 # Les Veilleurs du Seuil

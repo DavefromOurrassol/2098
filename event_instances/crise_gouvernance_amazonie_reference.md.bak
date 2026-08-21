@@ -4,6 +4,10 @@ type: event_instance
 slug: crise_gouvernance_amazonie_reference
 archetype: crise_gouvernance_amazonie
 scenario: reference
+localisation:
+  zone: amazonie_consortium_viva
+  lieu: Belém, Bassin Amazonien
+  type_lieu: ville
 type_evenement: political_social
 portee: continentale
 date: 2047

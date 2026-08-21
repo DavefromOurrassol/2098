@@ -36,7 +36,7 @@ zone_systemique:
 alliances:
 - administrations_hybrides_des_cites_relais_peripheriques_reference
 - bureau_zones_non_prioritaires_reference
-- frente_sert_o_livre_reference
+- frente_sertao_livre_reference
 - helsinki_communs_numeriques_reference
 - operateurs_de_zones_economiques_speciales_periurbaines_reference
 - operateurs_prives_d_energie_distribuee_hors_fct_reference
@@ -48,13 +48,11 @@ alliances:
 oppositions:
 - bureau_des_territoires_residuels_reference
 - optiflow_logistics_reference
-- rede_paulista_de_distribuic_o_algor_tmica_reference
+- rede_paulista_de_distribuicao_algoritmica_reference
 - singapour_est_reference
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -91,6 +89,8 @@ localisation:
   lieu: null
   type_lieu: null
 annee_debut_verifiee: true
+trajectoire: émergent
+est_clandestin: false
 
 ---
 
@@ -121,7 +121,7 @@ La Ligue est tiraillée entre deux stratégies incompatibles : certains membres 
 **Alliés :**
 - [[administrations_hybrides_des_cites_relais_peripheriques_reference]]
 - [[bureau_zones_non_prioritaires_reference]]
-- [[frente_sert_o_livre_reference]]
+- [[frente_sertao_livre_reference]]
 - [[helsinki_communs_numeriques_reference]]
 - [[operateurs_de_zones_economiques_speciales_periurbaines_reference]]
 - [[operateurs_prives_d_energie_distribuee_hors_fct_reference]]
@@ -133,7 +133,7 @@ La Ligue est tiraillée entre deux stratégies incompatibles : certains membres 
 **Opposants :**
 - [[bureau_des_territoires_residuels_reference]]
 - [[optiflow_logistics_reference]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_reference]]
+- [[rede_paulista_de_distribuicao_algoritmica_reference]]
 - [[singapour_est_reference]]
 
 ## Notes

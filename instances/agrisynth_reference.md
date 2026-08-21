@@ -41,13 +41,11 @@ oppositions:
 - collectifs_de_biopiraterie_inversee_reference
 - conseil_de_geneve_pour_les_droits_biosociaux_reference
 - cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference
-- frente_sert_o_livre_reference
+- frente_sertao_livre_reference
 - reseau_des_cooperatives_agro_saheliennes_reference
 type_relation_dominante: dépendance
 annee_debut: 2029
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -82,6 +80,9 @@ localisation:
   zone: europe_occidentale_reconstructee
   lieu: Lyon-Métropole
   type_lieu: ville
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # AgriSynth
@@ -120,7 +121,7 @@ AgriSynth se trouve au cœur d'une contradiction structurelle : ses données son
 - [[collectifs_de_biopiraterie_inversee_reference]]
 - [[conseil_de_geneve_pour_les_droits_biosociaux_reference]]
 - [[cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference]]
-- [[frente_sert_o_livre_reference]]
+- [[frente_sertao_livre_reference]]
 - [[reseau_des_cooperatives_agro_saheliennes_reference]]
 
 ## Notes

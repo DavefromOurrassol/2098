@@ -65,8 +65,6 @@ type_relation_dominante: dépendance
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: transition
 
 injection:
@@ -87,6 +85,9 @@ tensions_narratives: >
   La tension centrale est celle de la tolérance calculée : les blocs régionaux et les mégapoles savent que les Zones Grises leur sont utiles — comme réservoir de ressources, de main-d'œuvre flexible et de circuits de contournement — mais cette utilité même rend impossible toute normalisation sincère. Une pression monte néanmoins : les agences de sécurité régionales multiplient les opérations de 'normalisation' qui ressemblent davantage à des prises de contrôle économique qu'à de la gouvernance. En parallèle, des mouvements de résistance locale commencent à cartographier et revendiquer ces territoires comme des espaces de souveraineté alternative, créant une friction inédite entre abandon structurel et auto-organisation émergente.
 
 date_creation: 2026-06-27
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Marges Persistantes — Zones Grises du Système Mondial

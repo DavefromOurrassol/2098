@@ -53,7 +53,7 @@ oppositions:
 - enclaves_corporatives_fortifiees_breakdown
 - enclaves_industrielles_du_corridor_oural_caspien_breakdown
 - factions_secessionnistes_agrariennes_du_desert_breakdown
-- frente_sert_o_livre_breakdown
+- frente_sertao_livre_breakdown
 - front_de_resistance_aux_peages_sur_les_ressources_breakdown
 - grandes_lacs_compact_eau_breakdown
 - guilde_des_techniciens_nomades_breakdown
@@ -70,8 +70,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2043
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -104,6 +102,9 @@ tensions_narratives: 'La tension principale est celle entre la logique prédatri
   peut aussi se soulever dès qu''une faction rivale ou une pluie abondante fragilise
   le monopole hydrique.'
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Factions Para-Étatiques Hydriques
@@ -148,7 +149,7 @@ La tension principale est celle entre la logique prédatrice à court terme — 
 - [[enclaves_corporatives_fortifiees_breakdown]]
 - [[enclaves_industrielles_du_corridor_oural_caspien_breakdown]]
 - [[factions_secessionnistes_agrariennes_du_desert_breakdown]]
-- [[frente_sert_o_livre_breakdown]]
+- [[frente_sertao_livre_breakdown]]
 - [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
 - [[grandes_lacs_compact_eau_breakdown]]
 - [[guilde_des_techniciens_nomades_breakdown]]

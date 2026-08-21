@@ -68,8 +68,6 @@ type_relation_dominante: alliance stratégique
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: forteresse
 
 injection:
@@ -90,6 +88,9 @@ tensions_narratives: >
   La légitimité d'Anba Siege repose sur l'incapacité des États à assurer la protection maritime — mais plusieurs blocs souverains commencent à réclamer la renationalisation des couloirs atlantiques, menaçant son modèle économique. Des fuites internes révèlent que ses algorithmes de gestion des seuils pratiquent une discrimination tarifaire fondée sur l'origine climatique des demandeurs, exposant l'organisation à des poursuites devant la Chambre de Recours Algorithmique de Bruxelles. En coulisses, les milices de piraterie arctique et les réseaux clandestins inter-zones testent systématiquement ses périmètres, cherchant la fissure dans la forteresse marchande. Et la question que personne n'ose poser officiellement demeure : que se passe-t-il le jour où un État-bloc décide de racheter Anba Siege plutôt que de la combattre ?
 
 date_creation: 2026-06-27
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Anba Siege Atlantique — Division Accès Protégés

@@ -37,7 +37,7 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
-- autorite_passage_arctique_breakdown
+- arctic_passage_authority_breakdown
 - consortium_energetique_oural_caspien_breakdown
 - consortiums_energetiques_samoiedes_du_yamal_breakdown
 - corridors_eurasiens_convoyage_breakdown
@@ -60,8 +60,6 @@ oppositions:
 type_relation_dominante: dépendance
 annee_debut: 2050
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -94,6 +92,9 @@ tensions_narratives: 'Bohai Transit est prise en étau entre ses actionnaires si
   Bohai Transit gouverne des territoires de fait sans en assumer la responsabilité
   politique, ce qui la rend indispensable et honnie en égale mesure.'
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Conglométrat sino-sibérien Bohai Transit
@@ -121,7 +122,7 @@ Bohai Transit est prise en étau entre ses actionnaires sino-mandchous qui exige
 
 ## Relations
 **Alliés :**
-- [[autorite_passage_arctique_breakdown]]
+- [[arctic_passage_authority_breakdown]]
 - [[consortium_energetique_oural_caspien_breakdown]]
 - [[consortiums_energetiques_samoiedes_du_yamal_breakdown]]
 - [[corridors_eurasiens_convoyage_breakdown]]

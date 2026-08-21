@@ -60,8 +60,6 @@ type_relation_dominante: dépendance
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: ascendant
 generation: transition
 
 injection:
@@ -82,6 +80,9 @@ tensions_narratives: >
   La CAFPS est prise en étau entre sa nécessité de croître — accueillir de nouvelles communautés déplacées — et le risque que cette croissance rende ses structures ingouvernables et ses revendications inaudibles. Les corporations maritimes qui lui vendent l'énergie et les pièces de maintenance accumulent silencieusement des droits de créance sur plusieurs plateformes, soulevant la question de qui possédera réellement ces territoires dans dix ans. Enfin, une faction interne conteste le modèle délibératif jugé trop lent face aux crises climatiques immédiates, ouvrant un débat existentiel : peut-on survivre en restant une démocratie quand la mer monte plus vite que les votes ne tombent ?
 
 date_creation: 2026-06-27
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Confédération des Archipels Flottants du Pacifique Sud (CAFPS)

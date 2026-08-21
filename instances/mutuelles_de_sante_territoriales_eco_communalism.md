@@ -36,7 +36,7 @@ alliances:
 - cooperative_terrafond_eco_communalism
 - cooperatives_d_habitat_regeneratif_eco_communalism
 - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
-- frente_sert_o_livre_eco_communalism
+- frente_sertao_livre_eco_communalism
 - guildes_des_semenciers_itinerants_eco_communalism
 - les_veilleurs_du_fleuve_eco_communalism
 - mouvement_des_communes_du_rust_belt_eco_communalism
@@ -55,8 +55,6 @@ oppositions:
 type_relation_dominante: symbiose
 annee_debut: 2036
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -90,6 +88,9 @@ localisation:
   zone: null
   lieu: null
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Mutuelles de Santé Territoriales
@@ -122,7 +123,7 @@ La tension centrale est celle de la solidarité territoriale contre l'exclusion 
 - [[cooperative_terrafond_eco_communalism]]
 - [[cooperatives_d_habitat_regeneratif_eco_communalism]]
 - [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]
-- [[frente_sert_o_livre_eco_communalism]]
+- [[frente_sertao_livre_eco_communalism]]
 - [[guildes_des_semenciers_itinerants_eco_communalism]]
 - [[les_veilleurs_du_fleuve_eco_communalism]]
 - [[mouvement_des_communes_du_rust_belt_eco_communalism]]

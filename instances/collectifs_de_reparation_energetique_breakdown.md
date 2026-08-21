@@ -61,14 +61,12 @@ oppositions:
 - milices_d_accaparement_hydrique_breakdown
 - milices_de_controle_territorial_breakdown
 - nexcore_breakdown
-- rede_paulista_de_distribuic_o_algor_tmica_breakdown
+- rede_paulista_de_distribuicao_algoritmica_breakdown
 - reseau_de_recuperation_industrielle_illicite_breakdown
 - seigneuries_logistiques_armees_breakdown
 type_relation_dominante: coopération
 annee_debut: 2054
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -99,6 +97,9 @@ tensions_narratives: 'Leur neutralité affichée est constamment mise à l''épr
   est de savoir si le Collectif peut rester au service de tous quand la rareté exige
   de choisir.'
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Collectifs de Réparation Énergétique
@@ -151,7 +152,7 @@ Leur neutralité affichée est constamment mise à l'épreuve : les milices terr
 - [[milices_d_accaparement_hydrique_breakdown]]
 - [[milices_de_controle_territorial_breakdown]]
 - [[nexcore_breakdown]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_breakdown]]
+- [[rede_paulista_de_distribuicao_algoritmica_breakdown]]
 - [[reseau_de_recuperation_industrielle_illicite_breakdown]]
 - [[seigneuries_logistiques_armees_breakdown]]
 

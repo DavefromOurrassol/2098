@@ -55,8 +55,6 @@ oppositions:
 type_relation_dominante: coopération
 annee_debut: 2042
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -88,6 +86,9 @@ tensions_narratives: 'Le réseau est déchiré entre l''urgence de transmettre s
   le réseau : la génération fondatrice vieillit en exil, et les jeunes ingénieurs
   nés en diaspora n''ont jamais vu les puits qu''ils sont censés sauver.'
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Diaspora Tech Sahel

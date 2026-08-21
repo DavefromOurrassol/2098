@@ -1,0 +1,42 @@
+# Traçabilité — `communes_rust_belt_zones_libres` (evenement)
+
+*Généré le 2026-08-10 23:49*
+
+## 1. Origine
+
+- **Statut d'injection** : traité
+- **Trouvé dans** : `/Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/evenements_custom/processed.yaml`
+- **Source de l'idée** : rééquilibrage_geo_2026-06
+- **Description d'origine** : _quasi identique au Descriptif ci-dessous (§2), non répétée._
+
+## 2. Descriptif
+
+**Les Forges du Commun — Proclamation des Zones Libres de l'Algorithme**
+
+Le Mouvement des Communes du Rust Belt occupe les anciens sites industriels de Detroit, Cleveland et Pittsburgh, proclamant des zones libres de l algorithme. Premier test de force entre les communes post-industrielles et l appareil securitaire du bloc dans le coeur de l Amerique du Nord.
+
+
+## 3. Évolution dans le temps et l'espace
+
+- **Date fictive (archétype)** : 2063
+- **Portée** : regionale · **Intensité** : forte
+- **Injecté dans 3/6 scénarios** : breakdown, fortress_world, eco_communalism
+
+### breakdown — 2061
+- Zone : Communes Libres du Rust Belt (Forges du Commun) (niveau 3) · Impossible dans ce scénario : False · Acteurs : mouvement_des_communes_du_rust_belt, collectifs_de_reparation_energetique, brigades_medicales_itinerantes, milices_contractuelles_des_anciens_etats_membres, enclaves_corporatives_fortifiees, et 3 autre(s)
+- **Réalisation** : Dans un contexte d'effondrement institutionnel avancé, les Communes Libres du Rust Belt n'ont plus besoin de défier un appareil sécuritaire centralisé : celui-ci s'est largement délité. L'occupation des anciens sites industriels de Detroit, Cleveland et Pittsburgh se fait dans un vide de pouvoir partiel, face à des milices contractuelles fragmentées et des enclaves corporatives désorganisées. La proclamation des zones libres de l'algorithme prend une dimension différente — moins un acte de résistance héroïque qu'une sécession de fait dans un monde où personne n'a plus vraiment les moyens de répondre. Les Communes sécurisent les ruines industrielles non pas par victoire militaire mais par persistance et organisation communautaire, tandis que les appareils résiduels de l'ancien bloc nord-américain se contentent d'encercler sans pouvoir écraser.
+
+### fortress_world — 2063
+- Zone : Fédération des Communes Libres du Rust Belt (niveau 3) · Impossible dans ce scénario : False · Acteurs : mouvement_des_communes_du_rust_belt, agences_de_securite_interieure_des_etats_forteresses, bureau_des_territoires_residuels, syndicats_industriels_residuels_post_crise, collectifs_de_reappropriation_energetique_peripherique, et 9 autre(s)
+- **Réalisation** : Dans un monde où le Bloc Atlantique a sacrifié ses périphéries industrielles déclinantes au profit de ses nœuds stratégiques fortifiés, la Fédération des Communes Libres du Rust Belt occupe les friches géantes de Detroit, Cleveland et Pittsburgh à l'automne 2063. Appuyées sur les syndicats industriels résiduels et les collectifs de réappropriation énergétique, elles proclament des territoires soustraits aux systèmes de scoring de productivité et aux dispositifs de surveillance numérique souveraine. Le Bloc Atlantique, via ses agences de sécurité intérieure, répond par un blocus logistique et énergétique — refusant toute intervention militaire frontale qui légitimerait les communes — tandis que le Bureau des Territoires Résiduels déclare les zones concernées 'non-conformes au protocole d'optimisation continentale'. La résistance tient plusieurs mois dans un rapport de force asymétrique et médiatiquement étouffé.
+
+### eco_communalism — 2063
+- Zone : Confédération des Friches Vivantes (niveau 2) · Impossible dans ce scénario : False · Acteurs : mouvement_des_communes_du_rust_belt, fragments_d_etats_centraux_residuels, collectifs_de_techniciens_sobres, cartels_de_narration_de_penurie, voix_du_dehors, et 4 autre(s)
+- **Réalisation** : Dans un contexte de fragmentation avancée des structures fédérales nord-américaines, la Confédération des Friches Vivantes coordonne l'occupation simultanée de trois grands sites industriels désaffectés — les anciens complexes de Détroit-Rivière, Cleveland-Lakefront et Pittsburgh-Monongahela. Les occupants y proclament des 'zones de souveraineté commune' explicitement affranchies de tout système de gouvernance algorithmique, ce qui constitue un défi direct aux blocs sécuritaires résiduels qui tentent encore de maintenir une surveillance numérique centralisée sur ces corridors industriels. La résistance des Fragments d'États Centraux Résiduels est réelle mais fragmentée : incapables de mobiliser une réponse coercitive unifiée, ils optent pour un blocus logistique et une guerre de récits via les Cartels de Narration de Pénurie. Les communes tiennent, s'appuyant sur les Collectifs de Techniciens Sobres pour maintenir des infrastructures low-tech autonomes.
+
+**Variables systémiques impactées (tous scénarios confondus)** : geopolitique_conflits, gouvernance_institutions, organisation_territoires, valeurs_culture_tempo_sociale
+
+## 4. Aval — usage dans les articles publiés
+
+_Aucune mention trouvée dans `articles/*.md` (scan texte brut, best-effort — un article peut mentionner l'entité sous une formulation différente sans que ce scan la détecte)._
+

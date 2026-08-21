@@ -55,8 +55,6 @@ type_relation_dominante: neutralité
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: mature
 generation: transition
 
 injection:
@@ -77,6 +75,9 @@ tensions_narratives: >
   La question du passage à un mandat coercitif revient à chaque crise : le retrait accéléré de 2094 a relancé les débats sur une réforme statutaire que certains cantons bloquent depuis dix ans. Un rapport interne filtré en 2097 révèle que les projections des scientifiques du Forum divergent radicalement des chiffres officiels communiqués aux gouvernements membres — une dissimulation que certains délégués justifient comme 'gestion de la stabilité politique'. Par ailleurs, des fonds d'investissement foncier commencent à racheter les terres en retrait du lac au fur et à mesure qu'elles émergent, transformant le désastre collectif en opportunité spéculative privée que le Forum observe sans pouvoir intervenir.
 
 date_creation: 2026-06-27
+trajectoire: mature
+est_clandestin: false
+
 ---
 
 # Forum Léman — Coordination pour le Recul des Eaux

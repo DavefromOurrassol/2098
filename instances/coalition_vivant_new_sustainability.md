@@ -50,8 +50,6 @@ oppositions:
 type_relation_dominante: coopération
 annee_debut: 2033
 annee_fin:
-etat_temporel: actif
-age_historique: dominant
 generation: ère cognitive
 injection:
   type: canonique
@@ -76,6 +74,9 @@ tensions_narratives: >
   vraiment pour les forêts ? Tension avec les États qui voient le
   Protocole du Vivant comme une menace à leur souveraineté.
 date_creation: 2098-01-01
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Coalition du Vivant

@@ -44,7 +44,7 @@ def get_dashboard():
         "journaux":       _stats_journaux(pipeline_dir),
         "enrichissement": _stats_enrichissement(vault_root),
         "thematiques":    _stats_thematiques(vault_root),
-        "zones":          _stats_zones(pipeline_dir, cfg.get("scenarios", [])),
+        "zones":          _stats_zones(vault_root, cfg.get("scenarios", [])),
         "review_count":   _count_review_items(vault_root),  # bug #15 : était pipeline_dir
         "vault_ok":       vault_root.exists() and pipeline_dir.exists(),
     }
@@ -218,7 +218,7 @@ def _stats_thematiques(vault_root: Path) -> dict:
     return dict(sorted(by_th.items(), key=lambda x: -x[1]))
 
 
-def _stats_zones(pipeline_dir: Path, scenarios: list) -> dict:
+def _stats_zones(vault_root: Path, scenarios: list) -> dict:
     """
     Format geographie/{scenario}.md :
       zones:
@@ -226,11 +226,27 @@ def _stats_zones(pipeline_dir: Path, scenarios: list) -> dict:
           nom: ...
           niveau: 1
     Compter les zones de niveau 1 par scénario.
+
+    Correctif du 16 août 2026 : prenait pipeline_dir en paramètre alors que
+    geographie/ vit à la racine du vault (vault_root), pas dans
+    generator/ -- contrairement à journaux.yaml (_stats_journaux, qui reste
+    dans pipeline_dir à raison, lui est bien dans generator/). Deuxième bug
+    distinct de celui du 16 août sur niveau_pat (re.MULTILINE manquant) --
+    les deux masquaient le même symptôme (total toujours à 0), trouvés l'un
+    après l'autre en testant sur le vrai dashboard de David.
     """
-    geo_dir = pipeline_dir / "geographie"
+    geo_dir = vault_root / "geographie"
     if not geo_dir.exists():
         return {"total": 0, "by_scenario": {}}
-    niveau_pat = re.compile(r"^\s+niveau:\s*(\d+)")
+    # Correctif du 16 août 2026 : re.MULTILINE manquant sur ce pattern
+    # (présent sur toutes les autres regex de ce fichier) -- sans lui, "^"
+    # ne matche que la toute première position du fichier entier, jamais
+    # le début de chaque ligne. Comme geographie/{scenario}.md commence
+    # toujours par "---" (frontmatter), "niveau: 1" ne pouvait JAMAIS
+    # matcher, quel que soit le contenu réel -- d'où le "0" systématique
+    # affiché sur la carte "ZONES GÉO (NIVEAU 1)" du dashboard, repéré par
+    # David en regardant le dashboard.
+    niveau_pat = re.compile(r"^\s+niveau:\s*(\d+)", re.MULTILINE)
     by_scenario: dict = {}
     total = 0
     for sc in scenarios:

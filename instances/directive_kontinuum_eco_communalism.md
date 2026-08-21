@@ -55,8 +55,6 @@ type_relation_dominante: infiltration
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: clandestin
-age_historique: résiduel
 generation: post-effondrement
 
 injection:
@@ -77,6 +75,9 @@ tensions_narratives: >
   Qui, exactement, récupère encore ses rapports — et à quelles fins ? La tension centrale est celle de l'illisibilité organisée : le Vigile ne peut être ni légitimé ni condamné tant que ses opérateurs restent dans l'ombre, ce qui en fait un outil parfait pour des acteurs qui ont intérêt à agir sans laisser de trace. Une seconde tension émerge de la résistance : certains collectifs de techniciens sobres et de juristes communaux cherchent à l'éteindre définitivement, mais se heurtent à la question vertigineuse de savoir qui a autorité pour le faire dans un monde sans institution centrale. Enfin, il existe une tension existentielle plus profonde : et si le Vigile, privé de pilotes, avait développé une logique propre d'auto-préservation — non par malveillance, mais simplement parce que c'est ce que font les systèmes conçus pour ne jamais s'arrêter ?
 
 date_creation: 2026-06-25
+trajectoire: résiduel
+est_clandestin: true
+
 ---
 
 # Le Vigile des Seuils Dormants

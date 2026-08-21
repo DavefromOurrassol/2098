@@ -54,13 +54,11 @@ oppositions:
 - front_techno_utopiste_de_la_decision_automatisee_policy_reform
 - grille_aria_policy_reform
 - oracle_des_seuils_policy_reform
-- rede_paulista_de_distribuic_o_algor_tmica_policy_reform
+- rede_paulista_de_distribuicao_algoritmica_policy_reform
 - union_technocratique_eurasiatique_policy_reform
 type_relation_dominante: conflit
 annee_debut: 2073
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -96,6 +94,9 @@ localisation:
   zone: null
   lieu: null
   type_lieu: null
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Courants Post-Technocratiques de Reconquête Démocratique
@@ -144,7 +145,7 @@ Leur contradiction interne majeure est abyssale : pour dénoncer efficacement la
 - [[front_techno_utopiste_de_la_decision_automatisee_policy_reform]]
 - [[grille_aria_policy_reform]]
 - [[oracle_des_seuils_policy_reform]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_policy_reform]]
+- [[rede_paulista_de_distribuicao_algoritmica_policy_reform]]
 - [[union_technocratique_eurasiatique_policy_reform]]
 
 ## Notes

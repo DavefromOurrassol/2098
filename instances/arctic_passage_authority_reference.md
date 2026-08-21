@@ -65,8 +65,6 @@ type_relation_dominante: coopération
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: mature
 generation: transition
 
 injection:
@@ -87,6 +85,9 @@ tensions_narratives: >
   La question centrale qui mine l'APA en 2098 est celle du vote qualifié : les nations autochtones disposent d'un droit de veto formel sur les décisions environnementales, mais les États membres ont progressivement reclassé la majorité des décisions comme 'logistiques' ou 'économiques', soustrayant ainsi des pans entiers de la gouvernance au regard autochtone. Une réforme structurelle est en débat depuis trois ans, bloquée par la Sibérie Fédérale et le bloc eurasiatique. Parallèlement, le Fonds de Compensation Écologique, théoriquement destiné aux communautés riveraines, est accusé par les Collectifs de Pêche Inuit et Sami d'être capté à 70% par des projets d'infrastructure bénéficiant aux États membres. L'APA risque à terme de devenir le symbole exactement inversé de ce qu'elle prétend incarner : une institution qui a donné aux peuples du Nord une voix formelle pour mieux légitimer leur dépossession effective.
 
 date_creation: 2026-06-23
+trajectoire: mature
+est_clandestin: false
+
 ---
 
 # Autorité de Passage Arctique

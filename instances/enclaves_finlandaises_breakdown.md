@@ -51,8 +51,6 @@ type_relation_dominante: rivalité
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: déclinant
 generation: post-effondrement
 
 injection:
@@ -73,6 +71,9 @@ tensions_narratives: >
   La tension centrale des Enclaves est structurelle : leur force — la décentralisation radicale — est aussi leur faiblesse face aux pressions extérieures coordonnées. Quand Nordark ou le District de Mourmansk négocient, ils parlent d'une seule voix ; les enclaves répondent en ordre dispersé. Certaines enclaves envisagent une fédération minimale de défense commune, mais d'autres y voient le début de la reconstitution d'un État centralisateur. Par ailleurs, les flux migratoires en provenance des zones effondrées de la Baltique sud menacent d'excéder les capacités d'absorption locales, fragilisant les équilibres coopératifs internes. Enfin, les ressources géothermiques du nord des enclaves suscitent des convoitises croissantes qui pourraient forcer une enclave isolée à un accord de vassalisation déguisé.
 
 date_creation: 2026-06-27
+trajectoire: déclinant
+est_clandestin: false
+
 ---
 
 # Les Enclaves du Nord — Fragments Finlandais

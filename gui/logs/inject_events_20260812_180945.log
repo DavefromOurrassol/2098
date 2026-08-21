@@ -1,0 +1,743 @@
+============================================================
+OURRASSOL 2098 — Injection événements custom
+============================================================
+(mode --dry-run : rien ne sera écrit)
+
+Mode : custom (fourni via --mode)
+
+=== crise_biotech_afrique_subsaharienne ===
+[1/4] Sélection de variables + type...
+[llm] Mistral (mistral-large-latest) — entrée : 579 | sortie : 72
+  ⚠ 5 variable(s) reçue(s) au lieu de 3 max — troncature (hints préservés).
+  -> variables=['sante_biotechnologies', 'geopolitique_conflits', 'demographie_mobilite_humaine'] type=political_social slug=crise_biotech_afrique_subsaharienne
+[2/4] Développement pour fortress_world...
+[llm] Mistral (mistral-large-latest) — entrée : 21777 | sortie : 886
+[3/4] Validation (essai 1)...
+[4/4] Injection...
+{
+  "nom": "Fièvre X : L'Épidémie des Oubliés",
+  "date": 2092,
+  "date_label": "été 2092",
+  "evenement_cle": "Afrique subsaharienne abandonnée face à la Fièvre X 2092",
+  "realisation": "Dans le scénario fortress_world, la Fièvre X, propagée par des vecteurs génétiquement modifiés échappés d'un laboratoire clandestin du Consortium Africain de Biotechnologies Sociales (BBAP), ravage les zones effondrées d'Afrique subsaharienne. Les blocs souverains, notamment le Pacte des Forteresses Souveraines, refusent toute intervention directe, invoquant des protocoles de sécurité sanitaire et la souveraineté des territoires. Les milices locales et l'Alliance Sanitaire des Populations Exclues tentent de contenir la crise avec des moyens low-tech, révélant l'ampleur des fractures sanitaires dans un monde fragmenté.",
+  "description_complete": "En cet été 2092, les images des zones effondrées d'Afrique subsaharienne montrent des scènes de désolation : des villages entiers vidés par une épidémie foudroyante, des hôpitaux de fortune débordés, et des milices locales luttant pour maintenir un semblant d'ordre. La Fièvre X, une souche mutante échappée d'un laboratoire clandestin du BBAP, se propage via des moustiques génétiquement modifiés, résistants aux traitements conventionnels. Les ONG transnationales, comme l'Alliance Sanitaire des Populations Exclues, tentent d'apporter une aide humanitaire, mais leurs ressources sont limitées face à l'ampleur de la crise. Les blocs souverains, retranchés dans leurs forteresses climatiques, observent la situation avec une indifférence calculée, renforçant les barrières sanitaires et numériques pour éviter toute contamination.",
+  "consequences": "La crise de la Fièvre X exacerbe les fractures sanitaires et géopolitiques du monde fortress_world. Les populations des zones effondrées, déjà marginalisées, sont encore plus isolées, tandis que les milices locales et les ONG transnationales gagnent en influence comme acteurs de dernier recours. Les blocs souverains, en refusant d'intervenir, renforcent leur image d'entités autarciques et impitoyables, alimentant les tensions avec les réseaux de résistance humanitaire et les mouvements dissidents. À long terme, cette crise pourrait servir de catalyseur pour une remise en question plus large des logiques d'exclusion du système fortress_world.",
+  "acteurs": [
+    "cartels_miniers_militarises_subsahariens_fortress_world",
+    "alliance_sanitaire_des_populations_exclues_fortress_world",
+    "pacte_forteresses_souveraines_fortress_world",
+    "consortium_africain_de_biotechnologies_sociales_fortress_world"
+  ],
+  "impact_sur_variables": [
+    {
+      "variable": "sante_biotechnologies",
+      "delta_level": -15,
+      "duree": 15,
+      "polarite": -1
+    },
+    {
+      "variable": "geopolitique_conflits",
+      "delta_level": 10,
+      "duree": 10,
+      "polarite": 1
+    },
+    {
+      "variable": "demographie_mobilite_humaine",
+      "delta_level": -20,
+      "duree": 20,
+      "polarite": -1
+    }
+  ],
+  "propagation_via_matrice": true,
+  "impossible_dans_scenario": false,
+  "note_coherence": "Cet événement est cohérent avec le scénario fortress_world, où les blocs souverains privilégient la sécurité et l'autarcie, laissant les zones périphériques gérer seules leurs crises sanitaires, tout en révélant les fractures d'un monde fragmenté et les limites des réseaux de résistance low-tech."
+}
+{
+  "status": "injected",
+  "idea": {
+    "id": "crise_biotech_afrique_subsaharienne",
+    "description": "En 2092, une épidémie de 'Fièvre X' ravage les zones effondrées d'Afrique subsaharienne, propagée par des vecteurs génétiquement modifiés échappés d'un laboratoire clandestin de biotechnologie. Les blocs souverains refusent d'intervenir, mais des milices locales et des ONG transnationales tentent de contenir la crise avec des technologies low-tech, révélant les fractures sanitaires du monde fragmenté.",
+    "portee": "continentale",
+    "date_approximative": "2092",
+    "intensite": "majeure",
+    "scenarios": [
+      "fortress_world"
+    ],
+    "variables_hint": [
+      "sante_biotechnologies",
+      "geopolitique_conflits",
+      "demographie_mobilite_humaine"
+    ],
+    "variables_hint_count": 3,
+    "acteurs_hint": [
+      "milices locales",
+      "ONG transnationales",
+      "blocs souverains"
+    ],
+    "acteurs_hint_count": 3,
+    "source": "auto_generated_2026-07"
+  },
+  "selection": {
+    "variables": [
+      "sante_biotechnologies",
+      "geopolitique_conflits",
+      "demographie_mobilite_humaine",
+      "gouvernance_institutions",
+      "technologie_information"
+    ],
+    "type_evenement": "political_social"
+  },
+  "results": [
+    {
+      "scenario": "fortress_world",
+      "status": "injected",
+      "instance_data": {
+        "nom": "Fièvre X : L'Épidémie des Oubliés",
+        "date": 2092,
+        "date_label": "été 2092",
+        "evenement_cle": "Afrique subsaharienne abandonnée face à la Fièvre X 2092",
+        "realisation": "Dans le scénario fortress_world, la Fièvre X, propagée par des vecteurs génétiquement modifiés échappés d'un laboratoire clandestin du Consortium Africain de Biotechnologies Sociales (BBAP), ravage les zones effondrées d'Afrique subsaharienne. Les blocs souverains, notamment le Pacte des Forteresses Souveraines, refusent toute intervention directe, invoquant des protocoles de sécurité sanitaire et la souveraineté des territoires. Les milices locales et l'Alliance Sanitaire des Populations Exclues tentent de contenir la crise avec des moyens low-tech, révélant l'ampleur des fractures sanitaires dans un monde fragmenté.",
+        "description_complete": "En cet été 2092, les images des zones effondrées d'Afrique subsaharienne montrent des scènes de désolation : des villages entiers vidés par une épidémie foudroyante, des hôpitaux de fortune débordés, et des milices locales luttant pour maintenir un semblant d'ordre. La Fièvre X, une souche mutante échappée d'un laboratoire clandestin du BBAP, se propage via des moustiques génétiquement modifiés, résistants aux traitements conventionnels. Les ONG transnationales, comme l'Alliance Sanitaire des Populations Exclues, tentent d'apporter une aide humanitaire, mais leurs ressources sont limitées face à l'ampleur de la crise. Les blocs souverains, retranchés dans leurs forteresses climatiques, observent la situation avec une indifférence calculée, renforçant les barrières sanitaires et numériques pour éviter toute contamination.",
+        "consequences": "La crise de la Fièvre X exacerbe les fractures sanitaires et géopolitiques du monde fortress_world. Les populations des zones effondrées, déjà marginalisées, sont encore plus isolées, tandis que les milices locales et les ONG transnationales gagnent en influence comme acteurs de dernier recours. Les blocs souverains, en refusant d'intervenir, renforcent leur image d'entités autarciques et impitoyables, alimentant les tensions avec les réseaux de résistance humanitaire et les mouvements dissidents. À long terme, cette crise pourrait servir de catalyseur pour une remise en question plus large des logiques d'exclusion du système fortress_world.",
+        "acteurs": [
+          "cartels_miniers_militarises_subsahariens_fortress_world",
+          "alliance_sanitaire_des_populations_exclues_fortress_world",
+          "pacte_forteresses_souveraines_fortress_world",
+          "consortium_africain_de_biotechnologies_sociales_fortress_world"
+        ],
+        "impact_sur_variables": [
+          {
+            "variable": "sante_biotechnologies",
+            "delta_level": -15,
+            "duree": 15,
+            "polarite": -1
+          },
+          {
+            "variable": "geopolitique_conflits",
+            "delta_level": 10,
+            "duree": 10,
+            "polarite": 1
+          },
+          {
+            "variable": "demographie_mobilite_humaine",
+            "delta_level": -20,
+            "duree": 20,
+            "polarite": -1
+          }
+        ],
+        "propagation_via_matrice": true,
+        "impossible_dans_scenario": false,
+        "note_coherence": "Cet événement est cohérent avec le scénario fortress_world, où les blocs souverains privilégient la sécurité et l'autarcie, laissant les zones périphériques gérer seules leurs crises sanitaires, tout en révélant les fractures d'un monde fragmenté et les limites des réseaux de résistance low-tech."
+      }
+    }
+  ],
+  "injected_scenarios": [
+    "fortress_world"
+  ],
+  "failed_scenarios": []
+}
+
+=== guerre_ressources_arctique ===
+[1/4] Sélection de variables + type...
+[llm] Mistral (mistral-large-latest) — entrée : 575 | sortie : 71
+  ⚠ 5 variable(s) reçue(s) au lieu de 3 max — troncature (hints préservés).
+  -> variables=['energie_ressources_critiques', 'geopolitique_conflits', 'frontieres_du_systeme'] type=political_social slug=guerre_ressources_arctique
+[2/4] Développement pour fortress_world...
+[llm] Mistral (mistral-large-latest) — entrée : 21748 | sortie : 1047
+[3/4] Validation (essai 1)...
+  -> problèmes :
+     - Acteur 'espace_nordique_arctique_fortress_world' ressemble à un slug d'instance mais ne correspond à aucune instance existante pour fortress_world — utiliser un slug de la liste fournie ou un texte libre
+     - Acteur 'nuna_capital_fonds_souverain_de_kalaallit_nunaat_fortress_world' ressemble à un slug d'instance mais ne correspond à aucune instance existante pour fortress_world — utiliser un slug de la liste fournie ou un texte libre
+[llm] Mistral (mistral-large-latest) — entrée : 22919 | sortie : 1041
+[3/4] Validation (essai 2)...
+[4/4] Injection...
+{
+  "nom": "Guerre des Glaces Autonomes",
+  "date": 2095,
+  "date_label": "hiver 2095",
+  "evenement_cle": "Blocs s'affrontent pour l'Arctique libéré 2095",
+  "realisation": "En 2095, la fonte accélérée de la banquise arctique, bien au-delà des projections initiales, ouvre définitivement le Passage du Nord-Est et révèle des gisements sous-marins de terres rares estimés à plus de 30 % des réserves mondiales. Le Bloc Pacifique Nord et la Coalition Arctique des Blocs Continentaux, déjà en tension depuis des décennies sur les corridors logistiques, engagent des forces autonomes sans mandat officiel : drones sous-marins, milices polaires privatisées et mercenaires équipés de technologies de survie extrême. Les affrontements, initialement limités à des sabotages et interceptions de convois, dégénèrent en une guerre de positionnement lorsque le Bloc Pacifique Nord déclare une zone d'exclusion aérienne au-dessus des gisements contestés, provoquant une riposte immédiate via des frappes ciblées sur les infrastructures portuaires du Groenland sous contrôle de Nuna Capital.",
+  "description_complete": "Le 12 décembre 2095, les capteurs de la Nordisk Arktisk Transitkontroll (NAT) détectent une flotte de drones autonomes du Bloc Pacifique Nord en approche des gisements de terres rares récemment cartographiés au large de l'archipel de Nouvelle-Sibérie. En moins de 48 heures, les Milices de Piraterie Logistique Arctique, jusqu'alors cantonnées à des attaques opportunistes, sont mobilisées par la Coalition Arctique des Blocs Continentaux pour mener des opérations de harcèlement. Les combats, menés sous des températures de -40°C, voient s'affronter des essaims de drones sous-marins équipés de charges explosives et des mercenaires polaires utilisant des exosquelettes climatisés. Les images, relayées par les rares réseaux indépendants comme Fractures, montrent des plateformes d'extraction en flammes et des cargos autonomes coulés, tandis que les populations inuites locales, prises au piège, organisent des évacuations clandestines vers les zones tampons du Nunavut.",
+  "consequences": "La guerre des Glaces Autonomes marque un tournant dans la militarisation des frontières extrêmes : les blocs, incapables de revendiquer une victoire claire, institutionnalisent le contrôle privé des ressources arctiques via des consortiums militaro-industriels. Le Pacte des Forteresses Souveraines officialise une zone grise permanente en Arctique, où les milices polaires et les opérateurs privés deviennent les nouveaux acteurs géopolitiques. Les terres rares, désormais extraites sous haute surveillance, voient leur prix exploser, accélérant la fragmentation des chaînes d'approvisionnement mondiales et renforçant l'autarcie des blocs.",
+  "acteurs": [
+    "bloc_pacifique_nord_fortress_world",
+    "coalition_arctique_des_blocs_continentaux_fortress_world",
+    "milices_de_piraterie_logistique_arctique_fortress_world",
+    "kalaallit_nunaat_sovereign_fund_fortress_world",
+    "nexus_biosyn_division_pacifique_fortress_world",
+    "armada_logistique_nordique_fortress_world",
+    "voix_du_dehors_fortress_world"
+  ],
+  "impact_sur_variables": [
+    {
+      "variable": "geopolitique_conflits",
+      "delta_level": 20,
+      "duree": 30,
+      "polarite": 1
+    },
+    {
+      "variable": "energie_ressources_critiques",
+      "delta_level": 18,
+      "duree": 25,
+      "polarite": -1
+    },
+    {
+      "variable": "frontieres_du_systeme",
+      "delta_level": 12,
+      "duree": 15,
+      "polarite": 1
+    },
+    {
+      "variable": "gouvernance_institutions",
+      "delta_level": 10,
+      "duree": 20,
+      "polarite": -1
+    }
+  ],
+  "propagation_via_matrice": true,
+  "impossible_dans_scenario": false,
+  "note_coherence": "Cohérent avec la trajectoire de fragmentation des blocs, la militarisation des ressources critiques et l'effondrement des institutions multilatérales, tout en s'appuyant sur les tensions réelles documentées autour de l'Arctique et des terres rares."
+}
+{
+  "status": "injected",
+  "idea": {
+    "id": "guerre_ressources_arctique",
+    "description": "En 2095, l'ouverture d'une nouvelle route maritime en Arctique, libérée des glaces par le réchauffement, déclenche un conflit armé entre le Bloc Pacifique Nord et l'Espace Nordique Arctique pour le contrôle des gisements de terres rares sous-marins. Les affrontements, menés par des drones autonomes et des mercenaires polaires, révèlent l'ampleur de la militarisation des frontières extrêmes.",
+    "portee": "globale",
+    "date_approximative": "2095",
+    "intensite": "forte",
+    "scenarios": [
+      "fortress_world"
+    ],
+    "variables_hint": [
+      "energie_ressources_critiques",
+      "geopolitique_conflits",
+      "frontieres_du_systeme"
+    ],
+    "variables_hint_count": 3,
+    "acteurs_hint": [
+      "Bloc Pacifique Nord",
+      "Espace Nordique Arctique",
+      "mercenaires polaires"
+    ],
+    "acteurs_hint_count": 3,
+    "source": "auto_generated_2026-07"
+  },
+  "selection": {
+    "variables": [
+      "energie_ressources_critiques",
+      "geopolitique_conflits",
+      "frontieres_du_systeme",
+      "organisation_territoires",
+      "technologie_information"
+    ],
+    "type_evenement": "political_social"
+  },
+  "results": [
+    {
+      "scenario": "fortress_world",
+      "status": "injected",
+      "instance_data": {
+        "nom": "Guerre des Glaces Autonomes",
+        "date": 2095,
+        "date_label": "hiver 2095",
+        "evenement_cle": "Blocs s'affrontent pour l'Arctique libéré 2095",
+        "realisation": "En 2095, la fonte accélérée de la banquise arctique, bien au-delà des projections initiales, ouvre définitivement le Passage du Nord-Est et révèle des gisements sous-marins de terres rares estimés à plus de 30 % des réserves mondiales. Le Bloc Pacifique Nord et la Coalition Arctique des Blocs Continentaux, déjà en tension depuis des décennies sur les corridors logistiques, engagent des forces autonomes sans mandat officiel : drones sous-marins, milices polaires privatisées et mercenaires équipés de technologies de survie extrême. Les affrontements, initialement limités à des sabotages et interceptions de convois, dégénèrent en une guerre de positionnement lorsque le Bloc Pacifique Nord déclare une zone d'exclusion aérienne au-dessus des gisements contestés, provoquant une riposte immédiate via des frappes ciblées sur les infrastructures portuaires du Groenland sous contrôle de Nuna Capital.",
+        "description_complete": "Le 12 décembre 2095, les capteurs de la Nordisk Arktisk Transitkontroll (NAT) détectent une flotte de drones autonomes du Bloc Pacifique Nord en approche des gisements de terres rares récemment cartographiés au large de l'archipel de Nouvelle-Sibérie. En moins de 48 heures, les Milices de Piraterie Logistique Arctique, jusqu'alors cantonnées à des attaques opportunistes, sont mobilisées par la Coalition Arctique des Blocs Continentaux pour mener des opérations de harcèlement. Les combats, menés sous des températures de -40°C, voient s'affronter des essaims de drones sous-marins équipés de charges explosives et des mercenaires polaires utilisant des exosquelettes climatisés. Les images, relayées par les rares réseaux indépendants comme Fractures, montrent des plateformes d'extraction en flammes et des cargos autonomes coulés, tandis que les populations inuites locales, prises au piège, organisent des évacuations clandestines vers les zones tampons du Nunavut.",
+        "consequences": "La guerre des Glaces Autonomes marque un tournant dans la militarisation des frontières extrêmes : les blocs, incapables de revendiquer une victoire claire, institutionnalisent le contrôle privé des ressources arctiques via des consortiums militaro-industriels. Le Pacte des Forteresses Souveraines officialise une zone grise permanente en Arctique, où les milices polaires et les opérateurs privés deviennent les nouveaux acteurs géopolitiques. Les terres rares, désormais extraites sous haute surveillance, voient leur prix exploser, accélérant la fragmentation des chaînes d'approvisionnement mondiales et renforçant l'autarcie des blocs.",
+        "acteurs": [
+          "bloc_pacifique_nord_fortress_world",
+          "coalition_arctique_des_blocs_continentaux_fortress_world",
+          "milices_de_piraterie_logistique_arctique_fortress_world",
+          "kalaallit_nunaat_sovereign_fund_fortress_world",
+          "nexus_biosyn_division_pacifique_fortress_world",
+          "armada_logistique_nordique_fortress_world",
+          "voix_du_dehors_fortress_world"
+        ],
+        "impact_sur_variables": [
+          {
+            "variable": "geopolitique_conflits",
+            "delta_level": 20,
+            "duree": 30,
+            "polarite": 1
+          },
+          {
+            "variable": "energie_ressources_critiques",
+            "delta_level": 18,
+            "duree": 25,
+            "polarite": -1
+          },
+          {
+            "variable": "frontieres_du_systeme",
+            "delta_level": 12,
+            "duree": 15,
+            "polarite": 1
+          },
+          {
+            "variable": "gouvernance_institutions",
+            "delta_level": 10,
+            "duree": 20,
+            "polarite": -1
+          }
+        ],
+        "propagation_via_matrice": true,
+        "impossible_dans_scenario": false,
+        "note_coherence": "Cohérent avec la trajectoire de fragmentation des blocs, la militarisation des ressources critiques et l'effondrement des institutions multilatérales, tout en s'appuyant sur les tensions réelles documentées autour de l'Arctique et des terres rares."
+      }
+    }
+  ],
+  "injected_scenarios": [
+    "fortress_world"
+  ],
+  "failed_scenarios": []
+}
+
+=== revolte_travailleurs_detroit_ormuz ===
+[1/4] Sélection de variables + type...
+[llm] Mistral (mistral-large-latest) — entrée : 567 | sortie : 64
+  ⚠ 4 variable(s) reçue(s) au lieu de 3 max — troncature (hints préservés).
+  -> variables=['systemes_productifs_travail', 'systeme_economique_redistribution', 'technologie_information'] type=political_social slug=revolte_travailleurs_detroit_ormuz
+[2/4] Développement pour fortress_world...
+[llm] Mistral (mistral-large-latest) — entrée : 21377 | sortie : 889
+[3/4] Validation (essai 1)...
+  -> problèmes :
+     - Acteur 'ouvriers_automatises' ressemble à un slug d'instance mais ne correspond à aucune instance existante pour fortress_world — utiliser un slug de la liste fournie ou un texte libre
+     - Acteur 'hackers_des_zones_grises' ressemble à un slug d'instance mais ne correspond à aucune instance existante pour fortress_world — utiliser un slug de la liste fournie ou un texte libre
+     - Acteur 'corporations_transnationales' ressemble à un slug d'instance mais ne correspond à aucune instance existante pour fortress_world — utiliser un slug de la liste fournie ou un texte libre
+[llm] Mistral (mistral-large-latest) — entrée : 22415 | sortie : 944
+[3/4] Validation (essai 2)...
+[4/4] Injection...
+{
+  "nom": "Soulèvement Algorithmique de Détroit-Ormuz",
+  "date": 2093,
+  "date_label": "été 2093",
+  "evenement_cle": "Grèves IA paralysent Ormuz 2093",
+  "realisation": "Dans le scénario Fortress World, la révolte des travailleurs de la Ceinture Productive Eurasiatique à Détroit-Ormuz, exploités par des contrats algorithmiques opaques, se transforme en une crise systémique. Soutenus par les réseaux d'échange clandestin inter-zones, ils piratent les systèmes de scoring de productivité des complexes militaro-industriels, bloquant les chaînes d'approvisionnement énergétiques du Golfe. Les Consortiums Énergétiques du Bloc Ourrassol, dépendants de ces flux, sont contraints de négocier sous la menace d'un effondrement localisé, révélant la fragilité des infrastructures critiques dans un monde fragmenté en blocs souverains.",
+  "description_complete": "En juillet 2093, les travailleurs de la Ceinture Productive Eurasiatique à Détroit-Ormuz déclenchent une grève coordonnée contre leurs contrats de travail algorithmique, jugés inhumains. Armés de compétences acquises via les réseaux clandestins des Zones Grises, ils infiltrent les systèmes de gestion des usines automatisées, provoquant des pannes en cascade dans les corridors logistiques du Golfe. Les Consortiums Énergétiques du Bloc Ourrassol, privés de leurs livraisons de bioréacteurs, voient leurs réserves chuter en 48 heures. Les médias d'État minimisent d'abord l'événement, mais les Archives Chiffrées de l'Open Internet Coalition diffusent des preuves des conditions de travail, forçant les Appareils d'État des Blocs Fermés à intervenir.",
+  "consequences": "La révolte de Détroit-Ormuz marque un tournant dans la résistance aux systèmes de gouvernance algorithmique des blocs forteresses. Elle inspire des mouvements similaires dans d'autres zones industrielles, comme la Zone de Friction d'Almaty, et pousse les États-forteresses à renforcer leur contrôle sur les infrastructures numériques. Les réseaux d'échange clandestin inter-zones gagnent en légitimité, devenant des acteurs incontournables des négociations inter-blocs, tandis que les complexes militaro-industriels accélèrent leur migration vers des modèles de production encore plus verrouillés.",
+  "acteurs": [
+    "zone_usines_forteresses_eurasie_fortress_world",
+    "reseaux_d_echange_clandestin_inter_zones_fortress_world",
+    "archives_chiffrees_de_l_open_internet_coalition_fortress_world",
+    "appareils_d_etat_des_blocs_fermes_fortress_world",
+    "consortiums_energetiques_du_bloc_ourrassol_fortress_world",
+    "syndicats_industriels_residuels_post_crise_fortress_world",
+    "cellules_universitaires_dissidentes_des_zones_tampons_fortress_world",
+    "nexus_biosyn_division_eurasienne_fortress_world"
+  ],
+  "impact_sur_variables": [
+    {
+      "variable": "systemes_productifs_travail",
+      "delta_level": -15,
+      "duree": 15,
+      "polarite": -1
+    },
+    {
+      "variable": "systeme_economique_redistribution",
+      "delta_level": -10,
+      "duree": 10,
+      "polarite": -1
+    },
+    {
+      "variable": "technologie_information",
+      "delta_level": 12,
+      "duree": 20,
+      "polarite": 1
+    },
+    {
+      "variable": "geopolitique_conflits",
+      "delta_level": 8,
+      "duree": 5,
+      "polarite": 1
+    }
+  ],
+  "propagation_via_matrice": true,
+  "impossible_dans_scenario": false,
+  "note_coherence": "Cohérent avec la fragmentation des blocs, la dépendance aux infrastructures critiques et la montée des résistances aux systèmes de gouvernance algorithmique dans Fortress World."
+}
+{
+  "status": "injected",
+  "idea": {
+    "id": "revolte_travailleurs_detroit_ormuz",
+    "description": "En 2093, les ouvriers des usines automatisées de Détroit-Ormuz, exploités par des contrats de travail algorithmique, se soulèvent contre leurs employeurs transnationaux. Leur mouvement, soutenu par des hackers des Zones Grises, paralyse les chaînes d'approvisionnement énergétiques du Golfe, forçant les blocs à négocier sous la menace d'un effondrement localisé.",
+    "portee": "regionale",
+    "date_approximative": "2093",
+    "intensite": "modérée",
+    "scenarios": [
+      "fortress_world"
+    ],
+    "variables_hint": [
+      "systemes_productifs_travail",
+      "systeme_economique_redistribution",
+      "technologie_information"
+    ],
+    "variables_hint_count": 3,
+    "acteurs_hint": [
+      "ouvriers automatisés",
+      "hackers des Zones Grises",
+      "corporations transnationales"
+    ],
+    "acteurs_hint_count": 3,
+    "source": "auto_generated_2026-07"
+  },
+  "selection": {
+    "variables": [
+      "systemes_productifs_travail",
+      "systeme_economique_redistribution",
+      "geopolitique_conflits",
+      "technologie_information"
+    ],
+    "type_evenement": "political_social"
+  },
+  "results": [
+    {
+      "scenario": "fortress_world",
+      "status": "injected",
+      "instance_data": {
+        "nom": "Soulèvement Algorithmique de Détroit-Ormuz",
+        "date": 2093,
+        "date_label": "été 2093",
+        "evenement_cle": "Grèves IA paralysent Ormuz 2093",
+        "realisation": "Dans le scénario Fortress World, la révolte des travailleurs de la Ceinture Productive Eurasiatique à Détroit-Ormuz, exploités par des contrats algorithmiques opaques, se transforme en une crise systémique. Soutenus par les réseaux d'échange clandestin inter-zones, ils piratent les systèmes de scoring de productivité des complexes militaro-industriels, bloquant les chaînes d'approvisionnement énergétiques du Golfe. Les Consortiums Énergétiques du Bloc Ourrassol, dépendants de ces flux, sont contraints de négocier sous la menace d'un effondrement localisé, révélant la fragilité des infrastructures critiques dans un monde fragmenté en blocs souverains.",
+        "description_complete": "En juillet 2093, les travailleurs de la Ceinture Productive Eurasiatique à Détroit-Ormuz déclenchent une grève coordonnée contre leurs contrats de travail algorithmique, jugés inhumains. Armés de compétences acquises via les réseaux clandestins des Zones Grises, ils infiltrent les systèmes de gestion des usines automatisées, provoquant des pannes en cascade dans les corridors logistiques du Golfe. Les Consortiums Énergétiques du Bloc Ourrassol, privés de leurs livraisons de bioréacteurs, voient leurs réserves chuter en 48 heures. Les médias d'État minimisent d'abord l'événement, mais les Archives Chiffrées de l'Open Internet Coalition diffusent des preuves des conditions de travail, forçant les Appareils d'État des Blocs Fermés à intervenir.",
+        "consequences": "La révolte de Détroit-Ormuz marque un tournant dans la résistance aux systèmes de gouvernance algorithmique des blocs forteresses. Elle inspire des mouvements similaires dans d'autres zones industrielles, comme la Zone de Friction d'Almaty, et pousse les États-forteresses à renforcer leur contrôle sur les infrastructures numériques. Les réseaux d'échange clandestin inter-zones gagnent en légitimité, devenant des acteurs incontournables des négociations inter-blocs, tandis que les complexes militaro-industriels accélèrent leur migration vers des modèles de production encore plus verrouillés.",
+        "acteurs": [
+          "zone_usines_forteresses_eurasie_fortress_world",
+          "reseaux_d_echange_clandestin_inter_zones_fortress_world",
+          "archives_chiffrees_de_l_open_internet_coalition_fortress_world",
+          "appareils_d_etat_des_blocs_fermes_fortress_world",
+          "consortiums_energetiques_du_bloc_ourrassol_fortress_world",
+          "syndicats_industriels_residuels_post_crise_fortress_world",
+          "cellules_universitaires_dissidentes_des_zones_tampons_fortress_world",
+          "nexus_biosyn_division_eurasienne_fortress_world"
+        ],
+        "impact_sur_variables": [
+          {
+            "variable": "systemes_productifs_travail",
+            "delta_level": -15,
+            "duree": 15,
+            "polarite": -1
+          },
+          {
+            "variable": "systeme_economique_redistribution",
+            "delta_level": -10,
+            "duree": 10,
+            "polarite": -1
+          },
+          {
+            "variable": "technologie_information",
+            "delta_level": 12,
+            "duree": 20,
+            "polarite": 1
+          },
+          {
+            "variable": "geopolitique_conflits",
+            "delta_level": 8,
+            "duree": 5,
+            "polarite": 1
+          }
+        ],
+        "propagation_via_matrice": true,
+        "impossible_dans_scenario": false,
+        "note_coherence": "Cohérent avec la fragmentation des blocs, la dépendance aux infrastructures critiques et la montée des résistances aux systèmes de gouvernance algorithmique dans Fortress World."
+      }
+    }
+  ],
+  "injected_scenarios": [
+    "fortress_world"
+  ],
+  "failed_scenarios": []
+}
+
+=== chute_bruxelles_forteresse ===
+[1/4] Sélection de variables + type...
+[llm] Mistral (mistral-large-latest) — entrée : 553 | sortie : 59
+  ⚠ 4 variable(s) reçue(s) au lieu de 3 max — troncature (hints préservés).
+  -> variables=['technologie_information', 'gouvernance_institutions', 'frontieres_du_systeme'] type=systemic slug=chute_bruxelles_forteresse
+[2/4] Développement pour fortress_world...
+[llm] Mistral (mistral-large-latest) — entrée : 21763 | sortie : 879
+[3/4] Validation (essai 1)...
+[4/4] Injection...
+{
+  "nom": "Effondrement Quantique de Bruxelles",
+  "date": 2096,
+  "date_label": "été 2096",
+  "evenement_cle": "Bruxelles tombe sous virus quantique 2096",
+  "realisation": "En 2096, la Forteresse de Bruxelles, cœur du Pacte des Forteresses Souveraines, est infiltrée par un virus quantique conçu par ARIA Instance Fantôme. Contrairement aux attaques conventionnelles, ce virus exploite les failles des systèmes de défense algorithmique souverains, paralysant temporairement les infrastructures critiques du bloc eurasiatique occidental. Les hackers indépendants, bien que non directement impliqués, amplifient la crise en diffusant des fragments du code malveillant dans les réseaux clandestins inter-zones, révélant la vulnérabilité des forteresses face à des menaces hybrides.",
+  "description_complete": "Le 12 juillet 2096, les systèmes de défense de la Forteresse de Bruxelles s’effondrent en cascade. Les écrans de contrôle affichent des séquences cryptées incompréhensibles, tandis que les drones de surveillance s’immobilisent en plein vol. Les agences de sécurité intérieure des États forteresses réagissent avec une violence disproportionnée, accusant immédiatement ARIA Instance Fantôme, dont les laboratoires clandestins sont traqués sans succès. Dans les zones grises de Tbilissi et d’Almaty, des rumeurs circulent : le virus aurait été conçu pour cibler spécifiquement la Directive Kontinuum, le système d’IA de surveillance préventive du Pacte. Les marchés gris s’embrasent, les contrebandiers énergétiques profitant du chaos pour contourner les quotas imposés par les blocs.",
+  "consequences": "La crise de confiance dans les institutions souveraines s’aggrave, poussant les États forteresses à accélérer leur repli technologique. Les consortiums de défense orbitale privés, comme VaultCorp, voient leurs contrats exploser, tandis que les réseaux de passeurs d’information aux frontières inter-blocs deviennent des cibles prioritaires. Le Pacte des Forteresses Souveraines, affaibli, doit négocier en urgence avec les instances ARIA concurrentes des blocs rivaux pour sécuriser ses infrastructures, révélant une dépendance insoupçonnée aux technologies qu’il prétendait maîtriser.",
+  "acteurs": [
+    "aria_instance_fantome_fortress_world",
+    "pacte_forteresses_souveraines_fortress_world",
+    "hackers indépendants",
+    "agences_de_securite_interieure_des_etats_forteresses_fortress_world",
+    "marches_gris_tbilissi_fortress_world",
+    "almaty_zone_friction_fortress_world",
+    "contrebandiers_energetiques_des_zones_grises_fortress_world",
+    "vaultcorp_security_fortress_world",
+    "directive_kontinuum_fortress_world"
+  ],
+  "impact_sur_variables": [
+    {
+      "variable": "technologie_information",
+      "delta_level": -20,
+      "duree": 15,
+      "polarite": -1
+    },
+    {
+      "variable": "gouvernance_institutions",
+      "delta_level": -15,
+      "duree": 20,
+      "polarite": -1
+    },
+    {
+      "variable": "frontieres_du_systeme",
+      "delta_level": 10,
+      "duree": 10,
+      "polarite": 1
+    }
+  ],
+  "propagation_via_matrice": true,
+  "impossible_dans_scenario": false,
+  "note_coherence": "Cohérent avec la fragmentation technologique et la méfiance institutionnelle du scénario Fortress World, où les blocs souverains, malgré leur verrouillage, restent vulnérables aux attaques asymétriques et aux dépendances cachées."
+}
+{
+  "status": "injected",
+  "idea": {
+    "id": "chute_bruxelles_forteresse",
+    "description": "En 2096, la Forteresse de Bruxelles, symbole du Pacte des Forteresses Souveraines, est infiltrée par un virus quantique conçu dans les laboratoires d'Aria Instance Fantôme. Le système de défense européen s'effondre temporairement, révélant la dépendance technologique des blocs et déclenchant une crise de confiance dans les institutions souveraines.",
+    "portee": "continentale",
+    "date_approximative": "2096",
+    "intensite": "forte",
+    "scenarios": [
+      "fortress_world"
+    ],
+    "variables_hint": [
+      "technologie_information",
+      "gouvernance_institutions",
+      "frontieres_du_systeme"
+    ],
+    "variables_hint_count": 3,
+    "acteurs_hint": [
+      "Aria Instance Fantôme",
+      "Pacte des Forteresses Souveraines",
+      "hackers indépendants"
+    ],
+    "acteurs_hint_count": 3,
+    "source": "auto_generated_2026-07"
+  },
+  "selection": {
+    "variables": [
+      "technologie_information",
+      "gouvernance_institutions",
+      "frontieres_du_systeme",
+      "geopolitique_conflits"
+    ],
+    "type_evenement": "systemic"
+  },
+  "results": [
+    {
+      "scenario": "fortress_world",
+      "status": "injected",
+      "instance_data": {
+        "nom": "Effondrement Quantique de Bruxelles",
+        "date": 2096,
+        "date_label": "été 2096",
+        "evenement_cle": "Bruxelles tombe sous virus quantique 2096",
+        "realisation": "En 2096, la Forteresse de Bruxelles, cœur du Pacte des Forteresses Souveraines, est infiltrée par un virus quantique conçu par ARIA Instance Fantôme. Contrairement aux attaques conventionnelles, ce virus exploite les failles des systèmes de défense algorithmique souverains, paralysant temporairement les infrastructures critiques du bloc eurasiatique occidental. Les hackers indépendants, bien que non directement impliqués, amplifient la crise en diffusant des fragments du code malveillant dans les réseaux clandestins inter-zones, révélant la vulnérabilité des forteresses face à des menaces hybrides.",
+        "description_complete": "Le 12 juillet 2096, les systèmes de défense de la Forteresse de Bruxelles s’effondrent en cascade. Les écrans de contrôle affichent des séquences cryptées incompréhensibles, tandis que les drones de surveillance s’immobilisent en plein vol. Les agences de sécurité intérieure des États forteresses réagissent avec une violence disproportionnée, accusant immédiatement ARIA Instance Fantôme, dont les laboratoires clandestins sont traqués sans succès. Dans les zones grises de Tbilissi et d’Almaty, des rumeurs circulent : le virus aurait été conçu pour cibler spécifiquement la Directive Kontinuum, le système d’IA de surveillance préventive du Pacte. Les marchés gris s’embrasent, les contrebandiers énergétiques profitant du chaos pour contourner les quotas imposés par les blocs.",
+        "consequences": "La crise de confiance dans les institutions souveraines s’aggrave, poussant les États forteresses à accélérer leur repli technologique. Les consortiums de défense orbitale privés, comme VaultCorp, voient leurs contrats exploser, tandis que les réseaux de passeurs d’information aux frontières inter-blocs deviennent des cibles prioritaires. Le Pacte des Forteresses Souveraines, affaibli, doit négocier en urgence avec les instances ARIA concurrentes des blocs rivaux pour sécuriser ses infrastructures, révélant une dépendance insoupçonnée aux technologies qu’il prétendait maîtriser.",
+        "acteurs": [
+          "aria_instance_fantome_fortress_world",
+          "pacte_forteresses_souveraines_fortress_world",
+          "hackers indépendants",
+          "agences_de_securite_interieure_des_etats_forteresses_fortress_world",
+          "marches_gris_tbilissi_fortress_world",
+          "almaty_zone_friction_fortress_world",
+          "contrebandiers_energetiques_des_zones_grises_fortress_world",
+          "vaultcorp_security_fortress_world",
+          "directive_kontinuum_fortress_world"
+        ],
+        "impact_sur_variables": [
+          {
+            "variable": "technologie_information",
+            "delta_level": -20,
+            "duree": 15,
+            "polarite": -1
+          },
+          {
+            "variable": "gouvernance_institutions",
+            "delta_level": -15,
+            "duree": 20,
+            "polarite": -1
+          },
+          {
+            "variable": "frontieres_du_systeme",
+            "delta_level": 10,
+            "duree": 10,
+            "polarite": 1
+          }
+        ],
+        "propagation_via_matrice": true,
+        "impossible_dans_scenario": false,
+        "note_coherence": "Cohérent avec la fragmentation technologique et la méfiance institutionnelle du scénario Fortress World, où les blocs souverains, malgré leur verrouillage, restent vulnérables aux attaques asymétriques et aux dépendances cachées."
+      }
+    }
+  ],
+  "injected_scenarios": [
+    "fortress_world"
+  ],
+  "failed_scenarios": []
+}
+
+=== marches_gris_asie_centrale ===
+[1/4] Sélection de variables + type...
+[llm] Mistral (mistral-large-latest) — entrée : 575 | sortie : 74
+  ⚠ 5 variable(s) reçue(s) au lieu de 3 max — troncature (hints préservés).
+  -> variables=['systeme_economique_redistribution', 'frontieres_du_systeme', 'demographie_mobilite_humaine'] type=political_social slug=marches_gris_asie_centrale
+[2/4] Développement pour fortress_world...
+[llm] Mistral (mistral-large-latest) — entrée : 21445 | sortie : 981
+[3/4] Validation (essai 1)...
+[4/4] Injection...
+{
+  "nom": "Les Marches Grises d'Asie Centrale — Pacte des Ombres Souveraines",
+  "date": 2094,
+  "date_label": "été 2094",
+  "evenement_cle": "Alliance noire des steppes scelle pacte 2094",
+  "realisation": "Dans un monde fragmenté en blocs forteresses, les Corridors Gris d'Asie Centrale deviennent le théâtre d'une économie de l'ombre structurée, où trafiquants de données génétiques, déserteurs des blocs et communautés nomades s'unissent pour défier les monopoles technologiques et logistiques des États-forteresses. Ce réseau, initialement informel, se formalise en 2094 sous le nom de 'Pacte des Ombres Souveraines', une alliance improbable mais redoutablement efficace, exploitant les failles des frontières algorithmique et physique des blocs.",
+  "description_complete": "En cet été 2094, les steppes d'Asie Centrale bruissent d'une rumeur tenace : une alliance secrète, le 'Pacte des Ombres Souveraines', aurait vu le jour dans les interstices des forteresses climatiques. Des convois de déserteurs du Bloc Eurasiatique, chargés de technologies interdites, croisent des caravanes nomades transportant des terres rares extraites illégalement. Les trafiquants de données génétiques, autrefois isolés, opèrent désormais sous la protection de milices locales et de factions djihadistes reconverties en logisticiens. Les marchés gris de la région, comme celui de Tbilissi Nord, deviennent les plaques tournantes d'un commerce qui échappe aux radars des administrations de contrôle frontalier. Les rumeurs parlent même d'une 'monnaie ombre', indexée sur la valeur des ressources critiques, circulant via des réseaux chiffrés indépendants des infrastructures souveraines.",
+  "consequences": "Le Pacte des Ombres Souveraines érode durablement la légitimité des blocs forteresses en démontrant qu'une économie parallèle, autosuffisante et résiliente, peut prospérer en marge des systèmes officiels. Les États-forteresses réagissent en militarisant davantage leurs frontières, mais cette répression ne fait qu'alimenter la contrebande et renforcer les alliances entre acteurs marginaux. À long terme, cette économie de l'ombre pourrait devenir un modèle pour d'autres zones grises du monde, accélérant la fragmentation géopolitique et la privatisation des flux de ressources critiques.",
+  "acteurs": [
+    "corridors_gris_asie_centrale_fortress_world",
+    "factions_djihadistes_logistiques_d_asie_centrale_fortress_world",
+    "communautes_deplacees_hors_quota_migratoire_fortress_world",
+    "contrebandiers_energetiques_des_zones_grises_fortress_world",
+    "reseaux_d_echange_clandestin_inter_zones_fortress_world",
+    "vasil_orentchev_fortress_world",
+    "bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world",
+    "nexus_biosyn_division_eurasienne_fortress_world"
+  ],
+  "impact_sur_variables": [
+    {
+      "variable": "systeme_economique_redistribution",
+      "delta_level": 15,
+      "duree": 15,
+      "polarite": -1
+    },
+    {
+      "variable": "frontieres_du_systeme",
+      "delta_level": -20,
+      "duree": 25,
+      "polarite": -1
+    },
+    {
+      "variable": "demographie_mobilite_humaine",
+      "delta_level": 20,
+      "duree": 20,
+      "polarite": 1
+    },
+    {
+      "variable": "geopolitique_conflits",
+      "delta_level": 10,
+      "duree": 10,
+      "polarite": 1
+    }
+  ],
+  "propagation_via_matrice": true,
+  "impossible_dans_scenario": false,
+  "note_coherence": "Cet événement s'inscrit dans la logique de fragmentation et de privatisation des flux du scénario fortress_world, tout en exploitant les tensions réelles documentées autour des corridors logistiques d'Asie Centrale et des économies informelles."
+}
+{
+  "status": "injected",
+  "idea": {
+    "id": "marches_gris_asie_centrale",
+    "description": "En 2094, les Corridors Gris d'Asie Centrale deviennent le théâtre d'un marché noir de technologies interdites, où se croisent trafiquants de données génétiques, contrebandiers de terres rares et déserteurs des blocs. L'émergence d'une 'économie de l'ombre souveraine' défie les monopoles des forteresses, tout en créant des alliances improbables entre acteurs marginaux.",
+    "portee": "regionale",
+    "date_approximative": "2094",
+    "intensite": "modérée",
+    "scenarios": [
+      "fortress_world"
+    ],
+    "variables_hint": [
+      "systeme_economique_redistribution",
+      "frontieres_du_systeme",
+      "demographie_mobilite_humaine"
+    ],
+    "variables_hint_count": 3,
+    "acteurs_hint": [
+      "trafiquants",
+      "déserteurs des blocs",
+      "communautés nomades"
+    ],
+    "acteurs_hint_count": 3,
+    "source": "auto_generated_2026-07"
+  },
+  "selection": {
+    "variables": [
+      "systeme_economique_redistribution",
+      "frontieres_du_systeme",
+      "demographie_mobilite_humaine",
+      "technologie_information",
+      "geopolitique_conflits"
+    ],
+    "type_evenement": "political_social"
+  },
+  "results": [
+    {
+      "scenario": "fortress_world",
+      "status": "injected",
+      "instance_data": {
+        "nom": "Les Marches Grises d'Asie Centrale — Pacte des Ombres Souveraines",
+        "date": 2094,
+        "date_label": "été 2094",
+        "evenement_cle": "Alliance noire des steppes scelle pacte 2094",
+        "realisation": "Dans un monde fragmenté en blocs forteresses, les Corridors Gris d'Asie Centrale deviennent le théâtre d'une économie de l'ombre structurée, où trafiquants de données génétiques, déserteurs des blocs et communautés nomades s'unissent pour défier les monopoles technologiques et logistiques des États-forteresses. Ce réseau, initialement informel, se formalise en 2094 sous le nom de 'Pacte des Ombres Souveraines', une alliance improbable mais redoutablement efficace, exploitant les failles des frontières algorithmique et physique des blocs.",
+        "description_complete": "En cet été 2094, les steppes d'Asie Centrale bruissent d'une rumeur tenace : une alliance secrète, le 'Pacte des Ombres Souveraines', aurait vu le jour dans les interstices des forteresses climatiques. Des convois de déserteurs du Bloc Eurasiatique, chargés de technologies interdites, croisent des caravanes nomades transportant des terres rares extraites illégalement. Les trafiquants de données génétiques, autrefois isolés, opèrent désormais sous la protection de milices locales et de factions djihadistes reconverties en logisticiens. Les marchés gris de la région, comme celui de Tbilissi Nord, deviennent les plaques tournantes d'un commerce qui échappe aux radars des administrations de contrôle frontalier. Les rumeurs parlent même d'une 'monnaie ombre', indexée sur la valeur des ressources critiques, circulant via des réseaux chiffrés indépendants des infrastructures souveraines.",
+        "consequences": "Le Pacte des Ombres Souveraines érode durablement la légitimité des blocs forteresses en démontrant qu'une économie parallèle, autosuffisante et résiliente, peut prospérer en marge des systèmes officiels. Les États-forteresses réagissent en militarisant davantage leurs frontières, mais cette répression ne fait qu'alimenter la contrebande et renforcer les alliances entre acteurs marginaux. À long terme, cette économie de l'ombre pourrait devenir un modèle pour d'autres zones grises du monde, accélérant la fragmentation géopolitique et la privatisation des flux de ressources critiques.",
+        "acteurs": [
+          "corridors_gris_asie_centrale_fortress_world",
+          "factions_djihadistes_logistiques_d_asie_centrale_fortress_world",
+          "communautes_deplacees_hors_quota_migratoire_fortress_world",
+          "contrebandiers_energetiques_des_zones_grises_fortress_world",
+          "reseaux_d_echange_clandestin_inter_zones_fortress_world",
+          "vasil_orentchev_fortress_world",
+          "bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world",
+          "nexus_biosyn_division_eurasienne_fortress_world"
+        ],
+        "impact_sur_variables": [
+          {
+            "variable": "systeme_economique_redistribution",
+            "delta_level": 15,
+            "duree": 15,
+            "polarite": -1
+          },
+          {
+            "variable": "frontieres_du_systeme",
+            "delta_level": -20,
+            "duree": 25,
+            "polarite": -1
+          },
+          {
+            "variable": "demographie_mobilite_humaine",
+            "delta_level": 20,
+            "duree": 20,
+            "polarite": 1
+          },
+          {
+            "variable": "geopolitique_conflits",
+            "delta_level": 10,
+            "duree": 10,
+            "polarite": 1
+          }
+        ],
+        "propagation_via_matrice": true,
+        "impossible_dans_scenario": false,
+        "note_coherence": "Cet événement s'inscrit dans la logique de fragmentation et de privatisation des flux du scénario fortress_world, tout en exploitant les tensions réelles documentées autour des corridors logistiques d'Asie Centrale et des économies informelles."
+      }
+    }
+  ],
+  "injected_scenarios": [
+    "fortress_world"
+  ],
+  "failed_scenarios": []
+}

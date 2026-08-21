@@ -4,6 +4,10 @@ type: instance
 slug: communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
 entite: communautes_rurales_autogerees_des_n_uds_de_survie
 scenario: breakdown
+localisation:
+  zone: massif_central_cicatrices_vertes
+  lieu: Massif Central
+  type_lieu: region
 statut: officialise_enrichi
 type_dans_scenario: réseau
 role_dans_scenario: 'Utilisent les nœuds comme bibliothèques de survie distribuées,
@@ -31,20 +35,46 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- agadez_ligue_sahel_numerique_breakdown
+- brigades_medicales_itinerantes_breakdown
+- collectif_des_climatologues_sans_etat_breakdown
+- collectifs_de_reparation_energetique_breakdown
+- collectifs_de_sante_communautaire_autogeree_breakdown
 - communes_rust_belt_breakdown
+- communes_rust_belt_zones_libres_breakdown
+- consortium_amazonia_viva_breakdown
+- corridor_lithium_bouches_breakdown
 - delta_mekong_racines_breakdown
-- occitanie_racines_meres_breakdown
+- diaspora_tech_sahel_breakdown
+- enclaves_finlandaises_breakdown
+- factions_secessionnistes_agrariennes_du_desert_breakdown
+- frente_sert_o_livre_breakdown
+- guilde_des_techniciens_nomades_breakdown
 - massif_central_cicatrices_vertes_breakdown
+- milices_agro_defensives_locales_breakdown
+- mouvement_des_communes_du_rust_belt_breakdown
+- noeud_mnemos_pannonie_breakdown
+- occitanie_racines_meres_breakdown
+- pirates_biologiques_open_source_breakdown
+- reseau_mnemos_breakdown
+- reseaux_de_soigneurs_traditionnels_breakdown
+- reseaux_noirs_pharmaceutiques_breakdown
+- sfax_relais_bouches_breakdown
 - vallee_allier_terrafond_breakdown
 oppositions:
-- lagos_est_nexcore_breakdown
+- cartels_logistiques_regionaux_breakdown
 - carthage_nord_nexcore_breakdown
+- consortiums_logistiques_agro_corporatifs_breakdown
+- factions_para_etatiques_hydriques_breakdown
+- front_techno_reconstructionniste_breakdown
+- lagos_est_nexcore_breakdown
+- milices_contractuelles_des_anciens_etats_membres_breakdown
+- milices_privees_documentees_terrain_breakdown
+- seigneurs_de_guerre_agro_territoriaux_breakdown
 - seoul_collectif_nexcore_breakdown
 type_relation_dominante: symbiose
-annee_debut: 2026
+annee_debut: 2041
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -74,10 +104,9 @@ tensions_narratives: 'La tension centrale est celle de la clôture contre l''ouv
   liés aux anciens systèmes numériques crée une fracture interne entre les ''technophiles
   de survie'' et les partisans d''un retour radical au bas-technologique.'
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Communautés Rurales Autogérées des Nœuds de Survie
@@ -102,16 +131,45 @@ La tension centrale est celle de la clôture contre l'ouverture : certaines comm
 - [[technologie_information]]
 - [[energie_ressources_critiques]]
 
+
 ## Relations
 **Alliés :**
+- [[agadez_ligue_sahel_numerique_breakdown]]
+- [[brigades_medicales_itinerantes_breakdown]]
+- [[collectif_des_climatologues_sans_etat_breakdown]]
+- [[collectifs_de_reparation_energetique_breakdown]]
+- [[collectifs_de_sante_communautaire_autogeree_breakdown]]
 - [[communes_rust_belt_breakdown]]
+- [[communes_rust_belt_zones_libres_breakdown]]
+- [[consortium_amazonia_viva_breakdown]]
+- [[corridor_lithium_bouches_breakdown]]
 - [[delta_mekong_racines_breakdown]]
-- [[occitanie_racines_meres_breakdown]]
+- [[diaspora_tech_sahel_breakdown]]
+- [[enclaves_finlandaises_breakdown]]
+- [[factions_secessionnistes_agrariennes_du_desert_breakdown]]
+- [[frente_sert_o_livre_breakdown]]
+- [[guilde_des_techniciens_nomades_breakdown]]
 - [[massif_central_cicatrices_vertes_breakdown]]
+- [[milices_agro_defensives_locales_breakdown]]
+- [[mouvement_des_communes_du_rust_belt_breakdown]]
+- [[noeud_mnemos_pannonie_breakdown]]
+- [[occitanie_racines_meres_breakdown]]
+- [[pirates_biologiques_open_source_breakdown]]
+- [[reseau_mnemos_breakdown]]
+- [[reseaux_de_soigneurs_traditionnels_breakdown]]
+- [[reseaux_noirs_pharmaceutiques_breakdown]]
+- [[sfax_relais_bouches_breakdown]]
 - [[vallee_allier_terrafond_breakdown]]
 **Opposants :**
-- [[lagos_est_nexcore_breakdown]]
+- [[cartels_logistiques_regionaux_breakdown]]
 - [[carthage_nord_nexcore_breakdown]]
+- [[consortiums_logistiques_agro_corporatifs_breakdown]]
+- [[factions_para_etatiques_hydriques_breakdown]]
+- [[front_techno_reconstructionniste_breakdown]]
+- [[lagos_est_nexcore_breakdown]]
+- [[milices_contractuelles_des_anciens_etats_membres_breakdown]]
+- [[milices_privees_documentees_terrain_breakdown]]
+- [[seigneurs_de_guerre_agro_territoriaux_breakdown]]
 - [[seoul_collectif_nexcore_breakdown]]
 
 ## Notes

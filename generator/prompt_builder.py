@@ -219,14 +219,31 @@ MAX_VARIABLES_DETAIL = 6
 # Formats et longueurs cibles
 FORMAT_LONGUEUR = {
     "breve":     "200 à 400 mots",
+    "brève":     "200 à 400 mots",   # bug trouvé le 9 août 2026 : VALID_FORMATS
+                                       # (validate.py) accepte les deux orthographes
+                                       # pour format_dominant, mais ce dict ne
+                                       # couvrait que la version sans accent — toute
+                                       # thématique avec "brève" (accentué) retombait
+                                       # silencieusement sur le filet de secours
+                                       # générique "300 à 500 mots" au lieu de "200 à
+                                       # 400 mots". Découvert via audit_longueur_
+                                       # articles.py (4/4 articles "brève" du vault
+                                       # portaient bien la plage de secours, jamais
+                                       # la vraie plage de la catégorie).
     "analyse":   "600 à 900 mots",
     "reportage": "700 à 1000 mots",
     "chronique": "400 à 700 mots",
     "editorial": "500 à 800 mots",
+    "éditorial": "500 à 800 mots",    # même bug, même correctif préventif —
+                                       # jamais observé en pratique sur le vault
+                                       # actuel (aucun article "éditorial" dans
+                                       # l'échantillon audité), mais VALID_FORMATS
+                                       # accepte cette orthographe aussi.
     "informatif":"150 à 300 mots",
     "narratif":  "400 à 700 mots",
     "utilitaire":"100 à 200 mots",
     "reflexif":  "500 à 800 mots",
+    "réflexif":  "500 à 800 mots",    # idem — préventif, non observé en pratique.
 }
 
 NIVEAU_EMOTIONNEL_LABEL = {
@@ -454,12 +471,48 @@ Tes règles absolues :
 Ton identité éditoriale :
 {ton}""".format(**profile)
 
+    # Signature — corrigé le 10 août 2026 (retour de David : certains
+    # articles sans signature, d'autres avec signature + nom du journal,
+    # incohérent). Root cause : "journaliste" n'est peuplé que par le
+    # chemin 1 (édition locale, journaux.yaml → zones). Les chemins 2
+    # (réseau global) et 3 (profils hardcodés JOURNAL_PROFILES) ne le
+    # fournissent jamais — l'instruction de signature était donc purement
+    # et simplement absente du prompt dans ces cas, laissant au LLM le
+    # choix libre de signer ou non. Corrigé : une instruction de signature
+    # est désormais TOUJOURS donnée, avec un format explicite et unique
+    # (nom + journal) — nom curaté si disponible (chemin 1), sinon
+    # inventé par le LLM lui-même mais au même format standardisé.
+    #
+    # Complément du même jour, après lecture d'un batch réel : "à
+    # l'endroit journalistique habituel" s'est révélé trop vague — sur 12
+    # articles, la signature est apparue tantôt en haut (sous la date),
+    # tantôt en bas (fin d'article), et un cas l'a même dupliquée aux
+    # deux endroits malgré la consigne "une seule fois". Conforme aux
+    # usages réels de la presse en ligne (byline sous le titre/date, pas
+    # en pied d'article — l'usage "en bas" est plutôt celui des tribunes/
+    # éditoriaux), la position est maintenant explicitement fixée en haut,
+    # et la consigne "une seule fois" reformulée pour interdire toute
+    # répétition ailleurs dans le texte.
     journaliste = profile.get("journaliste", "").strip()
+    nom_journal = profile.get("nom", "")
     if journaliste:
         base_prompt += (
-            "\n\nTu signes cet article en tant que {} — reste cette même signature "
-            "tout au long de l'article (une seule fois, à l'endroit journalistique "
-            "habituel), sans en inventer une autre.".format(journaliste)
+            "\n\nTu signes cet article en tant que {} — au format exact "
+            "\"{} — {}\", sans en inventer une autre. Cette signature "
+            "apparaît UNE SEULE FOIS dans tout l'article, immédiatement "
+            "sous la date de publication (comme dans la presse en ligne) "
+            "— jamais en fin d'article, jamais répétée ailleurs.".format(
+                journaliste, journaliste, nom_journal
+            )
+        )
+    else:
+        base_prompt += (
+            "\n\nTu signes cet article d'un nom de journaliste crédible "
+            "que tu inventes toi-même, au format exact \"Prénom Nom — {}\". "
+            "Cette signature apparaît UNE SEULE FOIS dans tout l'article, "
+            "immédiatement sous la date de publication (comme dans la "
+            "presse en ligne) — jamais en fin d'article, jamais répétée "
+            "ailleurs.".format(nom_journal)
         )
 
     return base_prompt
@@ -616,7 +669,25 @@ def build_variables_context(snapshot, thematique, all_variables):
       - state_logic
       - dominant_dynamics
       - sous-dynamiques (sub_variables) + indicateurs primaires
-      - forces_attractives / forces_repulsives (si disponibles)
+      - forces_attractives / forces_repulsives (section 3 du corps
+        markdown, "Dynamique interne" — câblé le 15 août), avec une
+        consigne de pilotage explicite. Version 1 (descriptive,
+        "à parts égales") insuffisante sur 3/3 tests réels — répulsif
+        systématiquement mobilisé, attractif quasi absent. Version 2
+        (15 août, même session) : contrainte concrète et actionnable
+        ("au moins un fait/acteur/citation illustrant une force
+        attractive").
+      - consigne de couverture des variables pilotes (ajoutée le
+        15 août) : diagnostic sur 5/5 générations réelles montrant
+        climat_environnement_global totalement absente du texte alors
+        qu'elle était vérifiée présente dans le top MAX_VARIABLES_DETAIL
+        à chaque fois (donc pas un problème de troncature côté code —
+        le LLM reçoit la donnée en détail mais ne la mobilise pas,
+        probablement un effet de position/priorité narrative de la
+        thématique). Distincte de la consigne forces ci-dessus : ici
+        on demande une résonance minimale de CHAQUE variable pilote
+        dans le texte, pas un équilibre attractif/répulsif au sein
+        d'une variable donnée.
       - weak_signals pertinents
 
     all_variables : dict {slug: dict} — sortie de loader.load_all_variables(),
@@ -631,11 +702,12 @@ def build_variables_context(snapshot, thematique, all_variables):
     vars_vis  = thematique.get("variables_visibles", [])
     vars_sec  = thematique.get("variables_secondaires", [])
     pilots    = snapshot.get("pilot_variables", [])
+    constrained = snapshot.get("constrained_variables", [])
 
     # Ordre de priorité
     priority = []
     seen = set()
-    for v in vars_vis + pilots + vars_sec:
+    for v in vars_vis + pilots + constrained + vars_sec:
         if v in VALID_VARS and v not in seen:
             seen.add(v)
             priority.append(v)
@@ -649,6 +721,50 @@ def build_variables_context(snapshot, thematique, all_variables):
     # Variables détaillées (top MAX_VARIABLES_DETAIL)
     lines.append("### Variables clés (détail)")
     lines.append("")
+    lines.append("Pour chaque variable, les forces attractives et répulsives "
+                  "listées ci-dessous sont deux dynamiques réelles et actives "
+                  "de ce monde, pas de simples options.")
+    lines.append("**Contrainte concrète, pas une indication approximative** : "
+                  "sur l'ensemble des variables ci-dessous, au moins un fait, "
+                  "un acteur ou une citation de l'article doit illustrer une "
+                  "force attractive (coopération, stabilisation, innovation...) "
+                  "— pas nécessairement une par variable, mais le texte ne peut "
+                  "pas se limiter uniquement aux forces répulsives (tensions, "
+                  "frictions, crises). Un ton d'article tendu ou critique ne "
+                  "dispense pas de cette exigence : une institution peut être "
+                  "contestée ET produire, dans le même article, un effet "
+                  "stabilisateur concret que ses détracteurs eux-mêmes "
+                  "reconnaissent.")
+    lines.append("")
+    lines.append("**Couverture des variables pilotes** (repérables au tag "
+                  "[VARIABLE PILOTE] ci-dessous) : chacune doit trouver au "
+                  "moins une résonance explicite dans l'article — un fait, un "
+                  "chiffre, un acteur ou une conséquence concrète, pas "
+                  "nécessairement liée à ses forces attractives/répulsives "
+                  "précises — même si elle semble moins centrale à l'angle "
+                  "que tu choisis. Ne laisse aucune variable pilote "
+                  "totalement absente du texte sous prétexte qu'une autre se "
+                  "prête mieux au récit.")
+    lines.append("")
+    lines.append("**Variables contraintes de ce scénario** (repérables au tag "
+                  "[VARIABLE CONTRAINTE] ci-dessous) : une variable contrainte "
+                  "n'est PAS une valeur figée ni un simple état défavorable — "
+                  "c'est une limite structurelle sur l'espace des trajectoires "
+                  "accessibles dans ce scénario précis. Elle peut évoluer, "
+                  "mais son évolution reste bornée par la logique du monde "
+                  "décrite plus haut (section ÉTAT DU MONDE / logique "
+                  "système) : elle ne peut PAS basculer vers son extrême "
+                  "opposé sans qu'une rupture structurelle majeure du "
+                  "scénario le justifie explicitement. Déduis le sens de "
+                  "cette borne (dans quelle direction la variable est "
+                  "empêchée d'évoluer librement) depuis la logique narrative "
+                  "du scénario déjà fournie, pas depuis une valeur imposée. "
+                  "Exemple : dans un scénario de repli territorial, une "
+                  "variable de mobilité humaine contrainte ne peut pas être "
+                  "dépeinte comme en forte ouverture soudaine, même si elle "
+                  "peut légèrement fluctuer — sauf événement de rupture "
+                  "explicite dans le corpus.")
+    lines.append("")
 
     for var_slug in priority[:MAX_VARIABLES_DETAIL]:
         state = variable_states.get(var_slug, {})
@@ -659,11 +775,14 @@ def build_variables_context(snapshot, thematique, all_variables):
 
         is_pilot = var_slug in pilots
         is_visible = var_slug in vars_vis
+        is_constrained = var_slug in constrained
         tag = ""
         if is_visible:
             tag = " [VARIABLE PRINCIPALE]"
         elif is_pilot:
             tag = " [VARIABLE PILOTE]"
+        elif is_constrained:
+            tag = " [VARIABLE CONTRAINTE]"
 
         lines.append("**{}**{}".format(var_slug, tag))
         lines.append("- Niveau : {}/100 | Volatilité : {}/100".format(level, volatility))
@@ -685,6 +804,18 @@ def build_variables_context(snapshot, thematique, all_variables):
         indicateurs = all_variables.get(var_slug, {}).get("indicateurs", [])
         if indicateurs:
             lines.append("- Indicateurs à ancrer : {}".format(", ".join(indicateurs[:4])))
+
+        # Forces attractives/répulsives — source : section 3 du corps
+        # markdown ('Dynamique interne'), voir loader._extract_forces_
+        # from_body. Section 4 ('Structure causale') volontairement
+        # ignorée (doublon, décision du 15 août).
+        forces_attractives = all_variables.get(var_slug, {}).get("forces_attractives", [])
+        if forces_attractives:
+            lines.append("- Forces attractives : {}".format(", ".join(forces_attractives[:4])))
+
+        forces_repulsives = all_variables.get(var_slug, {}).get("forces_repulsives", [])
+        if forces_repulsives:
+            lines.append("- Forces répulsives : {}".format(", ".join(forces_repulsives[:4])))
 
         lines.append("")
 
@@ -1082,8 +1213,21 @@ def build_journalistic_brief(thematique, config, snapshot=None):
         lines.append("**Titre suggéré** : {}".format(titre_config))
         lines.append("")
 
-    # Date fictive
-    lines.append("**Date de publication** : à définir dans l'article — une date crédible en 2098")
+    # Date fictive — corrigé le 10 août 2026 (retour de David : la date du
+    # nom de fichier, calculée par generate.py/generate_series.py pour
+    # espacer les articles d'une série, ne servait qu'au slug du nom de
+    # fichier — jamais transmise au LLM, qui inventait donc sa propre date,
+    # sans lien avec celle du nom de fichier. Convergence observée vers une
+    # même date récurrente sur plusieurs articles, cohérente avec une
+    # consigne trop ouverte ("une date crédible en 2098" sans ancrage).
+    date_fictive_config = config.get("article", {}).get("date_fictive", "")
+    if date_fictive_config:
+        lines.append(
+            "**Date de publication** : {} — reprends cette date exacte, "
+            "ne la remplace pas par une autre.".format(date_fictive_config)
+        )
+    else:
+        lines.append("**Date de publication** : à définir dans l'article — une date crédible en 2098")
     lines.append("")
 
     # Consigne finale
@@ -1092,9 +1236,31 @@ def build_journalistic_brief(thematique, config, snapshot=None):
     lines.append("Écris maintenant l'article. Commence directement par le titre.")
     lines.append("")
     lines.append("Contraintes impératives :")
+    # Renforcement du 10 août 2026 (chantier "dérive du LLM sur la longueur
+    # réelle des articles", backlog Partie 1 point 1) : la longueur était
+    # déjà donnée plus haut ("**Format** : ... | **Longueur** : ..."), mais
+    # seulement comme ligne de métadonnée passive, jamais reprise dans ce
+    # bloc final juste avant génération — la seule série d'instructions
+    # explicitement qualifiées d'"impératives". Répétée ici, reformulée en
+    # contrainte dure, au même niveau que les autres règles de ce bloc.
+    lines.append(
+        "- **Longueur impérative : {}** — ne t'arrête pas avant la borne "
+        "basse, ne dépasse pas la borne haute. C'est une contrainte dure, "
+        "pas une indication approximative.".format(longueur)
+    )
     lines.append("- Le titre doit être accrocheur et ancré dans le monde décrit")
-    lines.append("- La date et le lieu de publication apparaissent sous le titre")
+    if date_fictive_config:
+        lines.append(
+            "- La date de publication est **{}** — reprends cette date exacte "
+            "sous le titre, n'en invente pas une autre".format(date_fictive_config)
+        )
+    else:
+        lines.append("- La date et le lieu de publication apparaissent sous le titre")
     lines.append("- L'article utilise des noms propres inventés mais crédibles (personnes, lieux, organisations)")
+    lines.append(
+        "- La signature du journaliste apparaît UNE SEULE FOIS, immédiatement "
+        "sous la date de publication — jamais en fin d'article, jamais répétée"
+    )
     lines.append("- Aucune référence au mot 'scénario', 'variable', 'simulation'")
     lines.append("- Le contexte du monde est montré, pas expliqué")
     if snapshot.get("filtered_instances"):
@@ -1475,26 +1641,26 @@ def build_entities_context(snapshot):
     lines.append("")
 
     for inst in instances:
-        etat   = inst.get("etat_temporel", "actif")
+        # Chantier trajectoire (9 août 2026) : remplace etat_temporel par
+        # trajectoire (axe unique) + est_clandestin (booléen indépendant,
+        # affichable EN PLUS de la position sur l'axe — auparavant
+        # impossible : "clandestin" était une valeur d'etat_temporel parmi
+        # d'autres, une entité ne pouvait pas être à la fois "dominant" et
+        # "clandestin", par exemple).
+        trajectoire = inst.get("trajectoire", "mature")
+        est_clandestin = inst.get("est_clandestin", False)
         impact = inst.get("impact_systemique_global", 0)
         is_custom = inst.get("injection", {}).get("type") == "custom"
         annee_injection = inst.get("injection", {}).get("annee_injection", "")
 
-        # Badge d'état
-        etat_badge = {
-            "actif":      "ACTIF",
-            "clandestin": "CLANDESTIN",
-            "disparu":    "DISPARU",
-            "transformé": "TRANSFORMÉ",
-            "mythifié":   "MYTHIFIÉ",
-            "historique": "HISTORIQUE",
-        }.get(etat, etat.upper())
+        traj_badge = trajectoire.upper()
+        clandestin_badge = " [CLANDESTIN]" if est_clandestin else ""
 
         # Badge custom
         custom_badge = " [CUSTOM — injecté en {}]".format(annee_injection) if is_custom and annee_injection else ""
 
-        lines.append("**{}** [{}]{} [impact:{}/5]".format(
-            inst["name"], etat_badge, custom_badge, impact
+        lines.append("**{}** [{}]{}{} [impact:{}/5]".format(
+            inst["name"], traj_badge, clandestin_badge, custom_badge, impact
         ))
 
         # Description journalistique

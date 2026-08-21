@@ -1,0 +1,100 @@
+---
+name: Les Fantômes des Seuils
+type: instance
+slug: institut_des_seuils_demographiques_breakdown
+entite: institut_des_seuils_demographiques
+scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
+
+type_dans_scenario: institution
+
+role_dans_scenario: >
+  Dans le chaos du *breakdown*, l'Institut des Seuils Démographiques a éclaté en une myriade de fragments autonomes, connus sous le nom des *Fantômes des Seuils*. Ces entités résiduelles opèrent comme des observatoires clandestins et des régulateurs informels des flux migratoires, utilisant les dernières données démographiques et les réseaux de survie pour négocier, orienter ou bloquer les déplacements de populations. Leur rôle oscille entre la protection des communautés vulnérables et l'instrumentalisation des crises pour le contrôle territorial, reflétant la tension fondamentale de l'archétype : la gestion scientifique des flux humains comme outil de survie ou de domination.
+
+responsabilites: >
+  Les *Fantômes des Seuils* cartographient les zones de rupture démographique, identifient les corridors migratoires critiques et négocient des accords de transit avec les milices locales, les seigneurs de guerre et les enclaves autonomes. Ils gèrent des bases de données résiduelles sur les populations déplacées, souvent en collaboration avec les *Collectifs de Gardiens-Archivistes Itinérants* ou les *Réseaux de Courriers Nomades Sahélo-Méditerranéens*. Leur influence s'étend aussi à la modélisation des seuils de tolérance des territoires, déterminant quelles communautés peuvent s'installer où, et à quel prix — en ressources, en loyauté ou en travail.
+
+impact_local: 4
+impact_systemique_global: 3
+
+variables_influencees:
+    - demographie_mobilite_humaine
+    - organisation_territoires
+    - gouvernance_institutions
+
+zone_geographique:
+    - régionale
+    - continentale
+
+zone_systemique:
+    - gouvernance
+    - société
+    - infrastructure
+
+alliances:
+    - collectifs_de_gardiens_archivistes_itinerants_breakdown
+    - reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown
+    - archives_neutres_de_geneve_breakdown
+    - brigades_medicales_itinerantes_breakdown
+
+oppositions:
+    - seigneuries_logistiques_armees_breakdown
+    - milices_d_accaparement_hydrique_breakdown
+    - etats_fragments_en_guerre_pour_les_stations_atmospheriques_breakdown
+    - factions_paramilitaires_locales_neutralisees_breakdown
+
+type_relation_dominante: symbiose
+
+annee_debut: 2048
+annee_fin: 
+
+trajectoire: résiduel
+est_clandestin: true
+generation: post-effondrement
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  En 2098, les *Fantômes des Seuils* sont devenus une légende parmi les communautés de déplacés et les réseaux de survie. Nés de l'effondrement de l'Institut des Seuils Démographiques en 2048, ces entités opaques ont transformé la gestion des flux migratoires en une science de l'ombre. On les reconnaît à leurs émissaires, souvent vêtus de combinaisons grises marquées de symboles cryptiques, qui apparaissent aux frontières des territoires en crise pour négocier des corridors humanitaires ou des quotas de population. Leurs bases de données, héritées des anciens serveurs de l'Institut, sont devenues des outils de pouvoir, échangés contre des ressources ou des protections. Certains les accusent d'avoir transformé la souffrance des déplacés en monnaie d'échange ; d'autres leur attribuent la survie de millions de personnes dans un monde où les frontières sont devenues des lignes de front.
+
+signes_distinctifs: >
+  Les *Fantômes des Seuils* se distinguent par leur iconographie minimaliste : des combinaisons grises ou kaki, souvent usées, marquées d'un symbole en forme de seuil stylisé (deux lignes parallèles traversées par une flèche brisée). Leurs émissaires portent des dispositifs de stockage de données analogiques — des cartes perforées ou des disques durs scellés — comme symbole de leur héritage institutionnel. Leurs messages sont toujours signés d'un code alphanumérique, rappelant les anciens identifiants de l'Institut.
+
+tensions_narratives: >
+  Les *Fantômes des Seuils* incarnent la lutte entre humanité et contrôle dans un monde fragmenté. Leur double jeu — protéger les déplacés tout en monétisant leur survie — en fait des cibles pour les milices et les seigneurs de guerre, mais aussi des alliés indispensables pour les communautés en mouvement. Leur avenir dépendra de leur capacité à préserver leur neutralité apparente ou à basculer définitivement dans l'instrumentalisation des crises. Une question persiste : ces fantômes sont-ils les derniers gardiens d'une gouvernance humaine, ou les premiers architectes d'un nouvel ordre biopolitique ?
+
+date_creation: 2026-08-17
+---
+
+# Les Fantômes des Seuils
+
+## Rôle dans [[breakdown]]
+Dans le chaos du *breakdown*, l'Institut des Seuils Démographiques a éclaté en une myriade de fragments autonomes, connus sous le nom des *Fantômes des Seuils*. Ces entités résiduelles opèrent comme des observatoires clandestins et des régulateurs informels des flux migratoires, utilisant les dernières données démographiques et les réseaux de survie pour négocier, orienter ou bloquer les déplacements de populations. Leur rôle oscille entre la protection des communautés vulnérables et l'instrumentalisation des crises pour le contrôle territorial, reflétant la tension fondamentale de l'archétype : la gestion scientifique des flux humains comme outil de survie ou de domination.
+
+## Responsabilités
+Les *Fantômes des Seuils* cartographient les zones de rupture démographique, identifient les corridors migratoires critiques et négocient des accords de transit avec les milices locales, les seigneurs de guerre et les enclaves autonomes. Ils gèrent des bases de données résiduelles sur les populations déplacées, souvent en collaboration avec les *Collectifs de Gardiens-Archivistes Itinérants* ou les *Réseaux de Courriers Nomades Sahélo-Méditerranéens*. Leur influence s'étend aussi à la modélisation des seuils de tolérance des territoires, déterminant quelles communautés peuvent s'installer où, et à quel prix — en ressources, en loyauté ou en travail.
+
+## Variables influencées
+- [[demographie_mobilite_humaine]]
+- [[organisation_territoires]]
+- [[gouvernance_institutions]]
+
+## Relations
+**Alliés** : [[collectifs_de_gardiens_archivistes_itinerants_breakdown]], [[reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown]], [[archives_neutres_de_geneve_breakdown]], [[brigades_medicales_itinerantes_breakdown]]
+**Opposants** : [[seigneuries_logistiques_armees_breakdown]], [[milices_d_accaparement_hydrique_breakdown]], [[etats_fragments_en_guerre_pour_les_stations_atmospheriques_breakdown]], [[factions_paramilitaires_locales_neutralisees_breakdown]]
+
+## Description journalistique
+En 2098, les *Fantômes des Seuils* sont devenus une légende parmi les communautés de déplacés et les réseaux de survie. Nés de l'effondrement de l'Institut des Seuils Démographiques en 2048, ces entités opaques ont transformé la gestion des flux migratoires en une science de l'ombre. On les reconnaît à leurs émissaires, souvent vêtus de combinaisons grises marquées de symboles cryptiques, qui apparaissent aux frontières des territoires en crise pour négocier des corridors humanitaires ou des quotas de population. Leurs bases de données, héritées des anciens serveurs de l'Institut, sont devenues des outils de pouvoir, échangés contre des ressources ou des protections. Certains les accusent d'avoir transformé la souffrance des déplacés en monnaie d'échange ; d'autres leur attribuent la survie de millions de personnes dans un monde où les frontières sont devenues des lignes de front.
+
+## Tensions narratives
+Les *Fantômes des Seuils* incarnent la lutte entre humanité et contrôle dans un monde fragmenté. Leur double jeu — protéger les déplacés tout en monétisant leur survie — en fait des cibles pour les milices et les seigneurs de guerre, mais aussi des alliés indispensables pour les communautés en mouvement. Leur avenir dépendra de leur capacité à préserver leur neutralité apparente ou à basculer définitivement dans l'instrumentalisation des crises. Une question persiste : ces fantômes sont-ils les derniers gardiens d'une gouvernance humaine, ou les premiers architectes d'un nouvel ordre biopolitique ?

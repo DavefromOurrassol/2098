@@ -45,10 +45,13 @@ USAGE
 """
 
 import argparse
+import subprocess
+import sys
 import time
+from pathlib import Path
 
 from instance_generation_common import (
-    SCENARIOS, VALID_VARS, VALID_ETATS, SLUG_PATTERN,
+    SCENARIOS, VALID_VARS, VALID_TRAJECTOIRE, TRAJECTOIRE_INACTIVES, SLUG_PATTERN,
     parse_md, get_client, call_claude_json, build_instance_prompt,
     validate_instance, clean_relations, write_instance_file,
     process_entity_scenario, instance_exists, load_instances_in_scenario,
@@ -139,6 +142,49 @@ def generate_all(filter_entity=None, filter_scenario=None, force=False, dry_run=
     if dry_run:
         print("(mode --dry-run : rien n'a été écrit sur disque)")
     print("=" * 60)
+
+    # Correctif du 16 août 2026 : contrairement à create_entities_and_
+    # instances.py (mode custom) et inject_custom_events.py, ce script
+    # n'enchaînait jamais le cycle post-injection (extract_localisation →
+    # review_localisation --auto-resolve → validate.py), laissant les
+    # instances backfillées ici sans localisation tant que David ne le
+    # lançait pas à la main. Trouvé en questionnant pourquoi une instance
+    # régénérée via ce script n'avait pas de localisation contrairement à
+    # celles créées via le mode custom.
+    if not dry_run and total_created > 0:
+        run_post_injection_cycle()
+
+
+def run_post_injection_cycle():
+    """
+    Lance automatiquement le cycle post-injection :
+      extract_localisation.py → review_localisation.py --auto-resolve → validate.py
+    Appelé après chaque backfill réussi (hors dry-run) — copie identique
+    de la fonction du même nom dans create_entities_and_instances.py et
+    inject_custom_events.py (code dupliqué à dessein, pas factorisé, pour
+    rester cohérent avec la convention déjà en place sur les deux autres
+    scripts plutôt que d'introduire un import croisé entre eux).
+    """
+    generator_dir = Path(__file__).resolve().parent
+    steps = [
+        ("extract_localisation", [sys.executable, str(generator_dir / "extract_localisation.py")]),
+        ("review_localisation",  [sys.executable, str(generator_dir / "review_localisation.py"), "--auto-resolve"]),
+        ("validate",             [sys.executable, str(generator_dir / "validate.py")]),
+    ]
+
+    print("\n" + "═" * 60)
+    print("CYCLE POST-INJECTION")
+    print("═" * 60)
+
+    for name, cmd in steps:
+        print(f"\n→ {' '.join(cmd[1:])}")
+        result = subprocess.run(cmd, cwd=str(generator_dir))
+        if result.returncode != 0:
+            print(f"  [WARN] {name} s'est terminé avec le code {result.returncode}.")
+            print("  → Vérifiez manuellement avant de continuer.")
+            break
+    else:
+        print("\n✓ Cycle post-injection terminé.")
 
 
 # ---------------------------------------------------------------------------

@@ -55,8 +55,6 @@ type_relation_dominante: rivalité
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: ascendant
 generation: transition
 
 injection:
@@ -77,6 +75,9 @@ tensions_narratives: >
   La scission entre réformistes et désaugmenteurs menace d'éclater lors du Congrès de Lagos 2099, où sera voté le soutien ou non au Protocole d'Harmonisation Productive des Nations-Économies. Certains délégués soupçonnent l'aile modérée d'être infiltrée par des agents des consortiums industriels via des implants cognitifs compromis — une accusation impossible à prouver sans violer l'intégrité corporelle des suspects. Par ailleurs, la montée d'une génération de travailleurs *nés augmentés* remet en question le cadre philosophique fondateur de l'ITA : peut-on défendre la souveraineté d'un corps qui n'a jamais existé sans ses augmentations ?
 
 date_creation: 2026-06-15
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Internationale des Travailleurs Augmentés

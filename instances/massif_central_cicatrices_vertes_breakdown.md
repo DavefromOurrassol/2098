@@ -58,8 +58,6 @@ type_relation_dominante: conflit
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: ascendant
 generation: post-effondrement
 
 injection:
@@ -80,6 +78,9 @@ tensions_narratives: >
   La tension centrale est celle du commun menacé : les communautés ont bâti des règles collectives d'usage de la forêt, mais ces règles ne valent rien face aux factions extérieures armées qui ne reconnaissent aucun droit coutumier. Une ligne de fracture interne est tout aussi explosive : certains clans envisagent de vendre des droits d'exploitation à des consortiums en échange d'une protection militaire, tandis que d'autres refusent toute marchandisation et menacent de représailles. Par ailleurs, l'afflux croissant de réfugiés climatiques cherchant à s'installer dans les Cicatrices fait pression sur les ressources et exacerbe les méfiances entre anciens habitants et nouveaux arrivants. Enfin, la question de qui cartographie ces terres — et à qui cette cartographie profite — est devenue un enjeu de pouvoir en soi : plusieurs factions extérieures ont été repérées à dresser des relevés topographiques clandestins des sources et des coupes forestières.
 
 date_creation: 2026-06-27
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Les Cicatrices Vertes — Massif Central Fragmenté

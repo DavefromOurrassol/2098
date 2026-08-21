@@ -1,0 +1,22 @@
+============================================================
+AUDIT trajectoire / annee_fin — 710 fiches scannées
+============================================================
+
+-- Distribution de trajectoire --
+  émergent : 424
+  dominant : 108
+  ascendant : 64
+  mature : 45
+  transformé : 28
+  déclinant : 15
+  résiduel : 15
+  marginal : 9
+  disparu : 2
+
+-- Cohérence trajectoire <-> annee_fin --
+  Fiches avec une trajectoire impliquant normalement une fin (transformé/disparu/historique/mythifié) : 30
+    ... dont annee_fin renseignée (cohérent)      : 30
+    ... dont annee_fin VIDE (incohérence probable) : 0
+
+  Taux d'incohérence sur ces trajectoires : 0.0%
+

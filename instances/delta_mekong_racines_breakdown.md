@@ -57,8 +57,6 @@ type_relation_dominante: rivalité
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: ascendant
 generation: post-effondrement
 
 injection:
@@ -79,6 +77,9 @@ tensions_narratives: >
   La fragmentation qui protège ces communautés les condamne aussi : une montée des eaux catastrophique sur un bassin voisin ne déclenche aucune solidarité automatique, chaque collectif refusant d'ouvrir ses stocks. Des courtiers extérieurs — milices agro-corporatives ou factions étatiques résiduelles — cherchent à infiltrer le réseau via de faux réfugiés ou des promesses de semences résistantes à la salinité. Et une jeune génération née après l'effondrement commence à questionner la clôture absolue : certains veulent savoir ce que les Archives de Genève conservent de leurs propres terres, d'autres rêvent d'un pacte avec des collectifs du bassin de l'Irrawaddy — mais les anciens voient dans toute ouverture le premier pas vers la dissolution de ce qu'ils ont sauvé.
 
 date_creation: 2026-06-27
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Les Mères des Eaux — Delta Mekong Racines

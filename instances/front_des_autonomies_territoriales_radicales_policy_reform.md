@@ -52,13 +52,11 @@ oppositions:
 - consortium_de_geo_ingenierie_atmospherique_pacifique_policy_reform
 - great_lakes_autonomous_compact_policy_reform
 - grille_aria_policy_reform
-- rede_paulista_de_distribuic_o_algor_tmica_policy_reform
+- rede_paulista_de_distribuicao_algoritmica_policy_reform
 - reseau_des_agences_sanitaires_regionales_policy_reform
 type_relation_dominante: conflit
 annee_debut: 2034
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -95,6 +93,9 @@ localisation:
   zone: bloc_souverainiste_non_signataire
   lieu: Sahel occidental, Andes, zones rurales périphériques
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Front des Autonomies Territoriales Radicales
@@ -142,7 +143,7 @@ Le Front est tiraillé entre sa radicalité fondatrice — refuser toute forme d
 - [[consortium_de_geo_ingenierie_atmospherique_pacifique_policy_reform]]
 - [[great_lakes_autonomous_compact_policy_reform]]
 - [[grille_aria_policy_reform]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_policy_reform]]
+- [[rede_paulista_de_distribuicao_algoritmica_policy_reform]]
 - [[reseau_des_agences_sanitaires_regionales_policy_reform]]
 
 ## Notes

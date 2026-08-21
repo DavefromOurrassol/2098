@@ -29,7 +29,7 @@ zone_systemique:
   - IA
   - information
 alliances:
-- rede_paulista_de_distribuic_o_algor_tmica_breakdown
+- rede_paulista_de_distribuicao_algoritmica_breakdown
 - tribunal_algorithmique_de_bruxelles_breakdown
 oppositions:
 - bureau_des_territoires_residuels_breakdown
@@ -38,8 +38,6 @@ oppositions:
 type_relation_dominante: neutralité
 annee_debut: 2030
 annee_fin: 2049
-etat_temporel: disparu
-age_historique: résiduel
 generation: post-effondrement
 injection:
   type: canonique
@@ -62,6 +60,9 @@ tensions_narratives: >
   qu'on ne comprend plus ? Certains groupes utilisent ces protocoles comme
   base pour reconstruire une gouvernance IA locale.
 date_creation: 2098-01-01
+trajectoire: disparu
+est_clandestin: false
+
 ---
 
 # Les Protocoles Fantômes
@@ -86,7 +87,7 @@ réactiver. Peut-on réguler ce qu'on ne comprend plus ?
 
 ## Relations
 **Alliés :**
-- [[rede_paulista_de_distribuic_o_algor_tmica_breakdown]]
+- [[rede_paulista_de_distribuicao_algoritmica_breakdown]]
 - [[tribunal_algorithmique_de_bruxelles_breakdown]]
 **Opposants :**
 - [[bureau_des_territoires_residuels_breakdown]]

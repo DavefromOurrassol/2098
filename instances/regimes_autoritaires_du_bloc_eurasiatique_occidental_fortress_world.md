@@ -56,8 +56,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2036
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -93,6 +91,9 @@ localisation:
   zone: bloc_eurasiatique_occidental
   lieu: Moscou-Est / Bratislava-Secteur Alpha / Ourrassol-Nexus-7
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Régimes Autoritaires du Bloc Eurasiatique Occidental

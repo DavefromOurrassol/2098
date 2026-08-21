@@ -52,8 +52,6 @@ type_relation_dominante: coopération
 annee_debut: 2061
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: transition
 
 injection:
@@ -74,6 +72,9 @@ tensions_narratives: >
   La tension centrale de son parcours est celle du mandataire pris en étau : les protocoles qu'elle a conçus favorisent objectivement les populations les plus vulnérables, mais leur application passe par des institutions qui restent dominées par les États les plus puissants. Une fuite récente de données algorithmiques suggère que ses modèles prédictifs ont été altérés par des opérateurs privés, ce qui menace sa réputation d'intégrité et la stabilité des accords. Par ailleurs, une nouvelle génération de militants hydriques conteste la légitimité même de la gouvernance technocratique, l'accusant de 'gérer l'injustice plutôt que de la détruire'. Sa trajectoire oscille entre consécration institutionnelle et désillusion radicale.
 
 date_creation: 2026-06-15
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Amara Diallo-Nkosi

@@ -75,8 +75,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2040
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -111,6 +109,9 @@ localisation:
   zone: moyen_orient_golfe
   lieu: Golfe Persique — bureaux de coordination régionale
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Coalition des Industries Extractives Résiduelles

@@ -46,10 +46,8 @@ oppositions:
 type_relation_dominante: conflit
 
 annee_debut: 2041
-annee_fin: 
+annee_fin: 2055
 
-etat_temporel: transformé
-age_historique: résiduel
 generation: post-effondrement
 
 injection:
@@ -70,6 +68,9 @@ tensions_narratives: >
   Un réseau de techniciens nomades tente de reconnecter clandestinement plusieurs tronçons orphelins pour restaurer un minimum de cohérence hydrique régionale — mission perçue comme subversive par les factions qui tirent leur pouvoir de la fragmentation. La question de savoir si une station atmosphérique encore intacte peut être remise en service sans déclencher une guerre entre trois factions riveraines structure de nombreux conflits locaux. Enfin, des rumeurs persistent qu'un ancien centre de contrôle continental serait encore actif quelque part, gérant automatiquement des flux que personne ne comprend plus — et que le retrouver signifierait soit sauver la Trame, soit en achever le pillage.
 
 date_creation: 2026-06-15
+trajectoire: transformé
+est_clandestin: false
+
 ---
 
 # Les Cicatrices Vertes

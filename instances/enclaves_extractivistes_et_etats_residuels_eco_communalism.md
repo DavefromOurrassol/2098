@@ -62,7 +62,7 @@ oppositions:
 - confederation_des_communs_de_l_arc_septentrional_eco_communalism
 - conseils_de_bassin_versant_eco_communalistes_eco_communalism
 - enclaves_extractivistes_residuelles_des_corridors_eco_communalism
-- frente_sert_o_livre_eco_communalism
+- frente_sertao_livre_eco_communalism
 - guildes_de_mediateurs_ecologiques_eco_communalism
 - reseaux_de_bibliotheques_archives_communautaires_eco_communalism
 - trame_bioclimatique_eco_communalism
@@ -73,8 +73,6 @@ type_relation_dominante: rivalité
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: résiduel
 generation: post-effondrement
 
 injection:
@@ -95,6 +93,9 @@ tensions_narratives: >
   La contradiction centrale — être moralement condamné et fonctionnellement nécessaire — génère une série de crises latentes : des assemblées communalistes découvrent que leurs matériaux de construction proviennent indirectement d'une enclave minière ; des travailleurs précaires rejettent l'intégration communautaire et revendiquent le droit à l'enclave comme espace de liberté hors-norme ; des États-coquilles tentent de se relégitimer en adoptant un discours écologique de façade pour accéder aux réseaux d'échange régionaux. La question de savoir si les enclaves peuvent se transformer de l'intérieur, ou si leur absorption par les communs les détruirait mutuellement, reste ouverte et explosément politique.
 
 date_creation: 2026-06-27
+trajectoire: résiduel
+est_clandestin: false
+
 ---
 
 # Périphéries Extractivistes et États-Coquilles
@@ -142,7 +143,7 @@ La contradiction centrale — être moralement condamné et fonctionnellement n�
 - [[confederation_des_communs_de_l_arc_septentrional_eco_communalism]]
 - [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]]
 - [[enclaves_extractivistes_residuelles_des_corridors_eco_communalism]]
-- [[frente_sert_o_livre_eco_communalism]]
+- [[frente_sertao_livre_eco_communalism]]
 - [[guildes_de_mediateurs_ecologiques_eco_communalism]]
 - [[reseaux_de_bibliotheques_archives_communautaires_eco_communalism]]
 - [[trame_bioclimatique_eco_communalism]]

@@ -60,8 +60,6 @@ type_relation_dominante: rivalité
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: ascendant
 generation: transition
 
 injection:
@@ -82,6 +80,9 @@ tensions_narratives: >
   La pression croissante des grandes plateformes pour intégrer Mnemos à leurs architectures — sous couvert de 'fiabilisation' — menace l'indépendance fondatrice du réseau. Certains nœuds, dans des zones à haute instabilité climatique, tombent progressivement en déshérence faute de mainteneurs humains qualifiés. La question de la gouvernance du réseau — qui décide de ce qui est préservé, et selon quels critères — génère des fractures internes croissantes entre partisans d'une charte ouverte universelle et tenants d'une sélection raisonnée face aux contraintes énergétiques.
 
 date_creation: 2026-06-15
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Mnemos — Réseau de Mémoire Distribuée

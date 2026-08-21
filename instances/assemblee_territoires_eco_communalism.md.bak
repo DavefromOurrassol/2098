@@ -4,6 +4,12 @@ type: instance
 slug: assemblee_territoires_eco_communalism
 entite: assemblee_territoires
 scenario: eco_communalism
+statut: officialise_enrichi
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 type_dans_scenario: réseau
 role_dans_scenario: >
   Réseau horizontal d'assemblées locales coordonnant les communs globaux
@@ -26,14 +32,20 @@ zone_systemique:
   - gouvernance
   - société
 alliances:
-  - coalition_vivant_eco_communalism
-  - le_temoin_eco_communalism
-oppositions: []
+- coalition_vivant_eco_communalism
+- confederation_bassins_vivants_eco_communalism
+- consortium_amazonia_viva_eco_communalism
+- frente_sert_o_livre_eco_communalism
+- kalaallit_nunaat_bioterritoire_eco_communalism
+- le_temoin_eco_communalism
+- reseau_terrafond_bassins_eco_communalism
+- sao_paulo_algorithmique_eco_communalism
+- tresse_verte_corridor_eco_communalism
+oppositions:
+- enclaves_extractivistes_et_etats_residuels_eco_communalism
 type_relation_dominante: coopération
 annee_debut: 2052
 annee_fin:
-etat_temporel: actif
-age_historique: ascendant
 generation: reconstruction
 injection:
   type: canonique
@@ -58,6 +70,9 @@ tensions_narratives: >
   et celles qui refusent tout mécanisme supralocal. Question non résolue —
   peut-on gérer le climat sans autorité centrale ?
 date_creation: 2098-01-01
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Réseau des Assemblées Bioterritioriales
@@ -71,9 +86,6 @@ sans autorité centrale. Session itinérante deux fois par an.
 - [[gouvernance_institutions]]
 - [[valeurs_culture_tempo_sociale]]
 
-## Relations
-**Alliés** : [[coalition_vivant_eco_communalism]], [[le_temoin_eco_communalism]]
-**Opposants** : _aucun défini_
 
 ## Description journalistique
 La prochaine session plénière se tient au Chiapas. 340 délégués, pas de
@@ -83,3 +95,17 @@ des arbres."
 ## Tensions narratives
 Tension entre communautés voulant plus de coordination et celles refusant
 tout mécanisme supralocal. Peut-on gérer le climat sans autorité centrale ?
+
+## Relations
+**Alliés :**
+- [[coalition_vivant_eco_communalism]]
+- [[confederation_bassins_vivants_eco_communalism]]
+- [[consortium_amazonia_viva_eco_communalism]]
+- [[frente_sert_o_livre_eco_communalism]]
+- [[kalaallit_nunaat_bioterritoire_eco_communalism]]
+- [[le_temoin_eco_communalism]]
+- [[reseau_terrafond_bassins_eco_communalism]]
+- [[sao_paulo_algorithmique_eco_communalism]]
+- [[tresse_verte_corridor_eco_communalism]]
+**Opposants :**
+- [[enclaves_extractivistes_et_etats_residuels_eco_communalism]]

@@ -58,8 +58,6 @@ type_relation_dominante: alliance stratégique
 annee_debut: 2091
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: ère cognitive
 
 injection:
@@ -80,6 +78,9 @@ tensions_narratives: >
   La tension centrale réside dans le paradoxe fondateur du scénario : Nexus BioSyn est à la fois l'outil de la stabilisation sanitaire mondiale et le verrou qui empêche une véritable démocratisation du vivant. Les négociations secrètes autour de la révision des brevets de 5e génération — les organismes à métabolisme climatique adaptatif — pourraient fracturer l'alliance avec l'AMV si les blocs du Sud exigent des cessions plus larges. Par ailleurs, des fuites récentes suggèrent que certains délégués Nexus au sein des comités techniques auraient délibérément ralenti l'homologation de semences concurrentes développées par des consortiums publics africains, relançant le spectre d'un capture réglementaire systématique.
 
 date_creation: 2026-06-15
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Nexus BioSyn Regulatory Partners

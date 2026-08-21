@@ -46,8 +46,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2041
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -75,6 +73,9 @@ tensions_narratives: 'La tension centrale est celle de la survie par l''isolemen
   noirs qu''elles ont involontairement engendrés. La question de qui reconnaît qui
   — et selon quel droit — empoisonne chaque alliance naissante.'
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Cités-États Sécessionistes

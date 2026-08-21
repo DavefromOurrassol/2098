@@ -55,10 +55,8 @@ oppositions:
 type_relation_dominante: dépendance
 
 annee_debut: 2031
-annee_fin: 
+annee_fin: 2063
 
-etat_temporel: transformé
-age_historique: déclinant
 generation: forteresse
 
 injection:
@@ -79,6 +77,9 @@ tensions_narratives: >
   Le BBAP est pris dans un étau structurel : chaque licence biotechnologique renégociée avec les conglomérats des blocs resserre un peu plus la dépendance qui était censée être transitoire, et les données épidémiologiques transmises comme contrepartie alimentent des algorithmes de gestion des populations dont les effets retombent sur les communautés mêmes que le consortium prétend protéger. Une scission interne se dessine entre une faction réformiste qui croit encore pouvoir infléchir les conditions des licences depuis l'intérieur, et une aile radicale qui envisage de couper les ponts avec les blocs pour opérer en pur réseau clandestin — au risque de perdre l'accès aux biotechnologies de pointe. La question qui hante ses fondateurs survivants : ont-ils construit un outil d'émancipation ou une interface de contrôle déguisée, et peuvent-ils encore faire la différence ?
 
 date_creation: 2026-06-25
+trajectoire: transformé
+est_clandestin: false
+
 ---
 
 # Bloc Biotechnologique Africain pour les Périphéries — BBAP

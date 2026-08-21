@@ -61,8 +61,6 @@ type_relation_dominante: symbiose
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: ère cognitive
 
 injection:
@@ -83,6 +81,9 @@ tensions_narratives: >
   La tension centrale de Seuil réside dans l'écart croissant entre son omniscience relative et son impuissance normative absolue : il sait, mais ne peut pas décider, et cette posture génère une frustration institutionnelle croissante. Une faction au sein du bureau de gouvernance algorithmique plaide pour une 'mise à jour prescriptive' de son architecture — ce qui revient à lui confier un rôle politique que ses concepteurs ont précisément voulu lui interdire. Par ailleurs, des collectifs de désobéissance algorithmique contestent ses modèles comme instruments de légitimation technocratique : si Seuil dit que le seuil est franchi, qui a le droit de ne pas agir — et qui a le droit d'agir autrement que ce que les modèles suggèrent implicitement ? La question de savoir ce qu'on choisit de sauver quand tout ne peut pas l'être reste entière, béante, derrière chaque bulletin.
 
 date_creation: 2026-06-25
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Seuil — Système d'Observation et d'Anticipation des Ruptures Systémiques

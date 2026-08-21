@@ -63,8 +63,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2041
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -93,6 +91,9 @@ tensions_narratives: 'La contradiction fondamentale de ces États est d''utilise
   réussie rend la prochaine plus probable et la coordination internationale un peu
   plus morte.'
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # États Fragmentés Nationalisant les Stocks

@@ -52,10 +52,8 @@ oppositions:
 type_relation_dominante: rivalité
 
 annee_debut: 2044
-annee_fin: 
+annee_fin: 2061
 
-etat_temporel: transformé
-age_historique: résiduel
 generation: post-effondrement
 
 injection:
@@ -76,6 +74,9 @@ tensions_narratives: >
   La tension centrale est celle d'une institution qui ne peut survivre qu'en négociant, mais qui perd toute crédibilité à chaque concession faite aux milices — ses propres représentants se demandent s'ils servent encore un État ou s'ils sont devenus des courtiers privés habillés en fonctionnaires. La question de la succession interne est paralysée : nommer un nouveau 'Directeur Régional' crédible nécessiterait une élection que personne ne peut organiser, et un mandat que personne ne peut octroyer. Enfin, le Compact des Grands Lacs — leur allié le plus solide — commence à exiger des contreparties territoriales que l'AFR n'a légalement pas le droit de céder, mais qu'elle ne peut refuser sans perdre l'accès à l'eau qui la maintient en vie.
 
 date_creation: 2026-06-27
+trajectoire: transformé
+est_clandestin: false
+
 ---
 
 # Administration Fédérale Résiduelle du Midwest — Les Coursiers du Protocole

@@ -77,8 +77,6 @@ type_relation_dominante: coopération
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: mature
 generation: transition
 
 injection:
@@ -99,6 +97,9 @@ tensions_narratives: >
   La légitimité de l'AMSC s'effrite à chaque décision d'allocation : qui reçoit un corridor migratoire certifié, qui subit une injection stratosphérique sans consentement local ? Des fuites internes suggèrent que ses modèles climatiques favorisent systématiquement les zones à fort PIB dans la priorisation des ressources d'adaptation. Un courant interne réformiste pousse à l'élection directe d'un Conseil Climatique Mondial, tandis que les États souverainistes voient dans cette réforme une menace supplémentaire. La question centrale de 2098 : l'AMSC peut-elle se réformer démocratiquement sans s'effondrer techniquement ?
 
 date_creation: 2026-06-15
+trajectoire: mature
+est_clandestin: false
+
 ---
 
 # Agence Mondiale pour la Stabilisation Climatique

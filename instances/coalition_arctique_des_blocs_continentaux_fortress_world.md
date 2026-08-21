@@ -51,8 +51,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2041
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -88,6 +86,9 @@ localisation:
   zone: espace_nordique_arctique
   lieu: Svalbard — Tours de Contrôle Flottantes NAT / Corridors Arctiques de Transit
   type_lieu: infrastructure
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Coalition Arctique des Blocs Continentaux

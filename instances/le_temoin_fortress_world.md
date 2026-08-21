@@ -44,13 +44,11 @@ oppositions:
 - conseil_regulation_algorithmique_fortress_world
 - directive_kontinuum_fortress_world
 - nexcore_atlantique_infrastructure_fortress_world
-- rede_paulista_de_distribuic_o_algor_tmica_fortress_world
+- rede_paulista_de_distribuicao_algoritmica_fortress_world
 - zones_grises_tampons_fortress_world
 type_relation_dominante: conflit
 annee_debut: 2079
 annee_fin:
-etat_temporel: clandestin
-age_historique: ascendant
 generation: forteresse
 injection:
   type: canonique
@@ -76,6 +74,9 @@ tensions_narratives: >
   se sont espacées depuis trois mois. Un de ses contacts proches a disparu
   en avril.
 date_creation: 2098-01-01
+trajectoire: ascendant
+est_clandestin: true
+
 ---
 
 # Vera Solano
@@ -114,5 +115,5 @@ Ses publications se sont espacées depuis trois mois.
 - [[conseil_regulation_algorithmique_fortress_world]]
 - [[directive_kontinuum_fortress_world]]
 - [[nexcore_atlantique_infrastructure_fortress_world]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_fortress_world]]
+- [[rede_paulista_de_distribuicao_algoritmica_fortress_world]]
 - [[zones_grises_tampons_fortress_world]]

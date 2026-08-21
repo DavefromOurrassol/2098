@@ -70,8 +70,6 @@ type_relation_dominante: dépendance
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: mature
 generation: forteresse
 
 injection:
@@ -92,6 +90,9 @@ tensions_narratives: >
   La surveillance satellitaire permanente génère une cartographie détaillée du corridor que les forteresses possèdent mais n'utilisent jamais pour fermer ce qu'elles ont intérêt à laisser ouvert — jusqu'au moment où un incident politique force leur main. Les solidarités qui se nouent dans le flux sédentarisent progressivement certains nœuds du réseau, créant des densités humaines qui deviennent visibles et potentiellement organisables — exactement ce que les régimes adjacents ne peuvent tolérer. La question qui hante le corridor : jusqu'où peut-on construire une communauté dans un espace dont la survie dépend de son invisibilité ? Et qui, parmi les opérateurs privés qui profitent du flux, a intérêt à trahir le réseau avant que les populations qui le peuplent ne trouvent une voix collective ?
 
 date_creation: 2026-06-27
+trajectoire: mature
+est_clandestin: false
+
 ---
 
 # Corridors Gris d'Asie Centrale — Réseau des Interstices Steppiques

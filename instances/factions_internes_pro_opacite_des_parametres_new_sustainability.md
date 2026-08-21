@@ -47,7 +47,7 @@ oppositions:
 - grille_aria_new_sustainability
 - ligue_des_cites_du_sahel_numerique_new_sustainability
 - oracle_des_seuils_new_sustainability
-- rede_paulista_de_distribuic_o_algor_tmica_new_sustainability
+- rede_paulista_de_distribuicao_algoritmica_new_sustainability
 - reseaux_de_medecine_regenerative_universelle_new_sustainability
 - reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability
 - tribunal_algorithmique_de_bruxelles_new_sustainability
@@ -55,8 +55,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2032
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -92,6 +90,9 @@ localisation:
   zone: centre_institutionnel_geneve
   lieu: Genève — commissions techniques des institutions de gouvernance climatique
   type_lieu: site_strategique
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Factions Internes Pro-Opacité des Paramètres
@@ -134,7 +135,7 @@ La tension majeure réside dans le paradoxe fondateur du scénario new_sustainab
 - [[grille_aria_new_sustainability]]
 - [[ligue_des_cites_du_sahel_numerique_new_sustainability]]
 - [[oracle_des_seuils_new_sustainability]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_new_sustainability]]
+- [[rede_paulista_de_distribuicao_algoritmica_new_sustainability]]
 - [[reseaux_de_medecine_regenerative_universelle_new_sustainability]]
 - [[reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability]]
 - [[tribunal_algorithmique_de_bruxelles_new_sustainability]]

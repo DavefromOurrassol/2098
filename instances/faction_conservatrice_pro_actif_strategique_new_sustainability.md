@@ -53,8 +53,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2030
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -90,6 +88,9 @@ localisation:
   zone: ourrassol_commission_territoriale
   lieu: Commission Territoriale d'Ourrassol
   type_lieu: site_strategique
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Faction Conservatrice Pro-Actif Stratégique

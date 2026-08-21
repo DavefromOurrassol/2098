@@ -56,8 +56,6 @@ type_relation_dominante: coopération
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: ascendant
 generation: reconstruction
 
 injection:
@@ -78,6 +76,9 @@ tensions_narratives: >
   La question de la continuité entre territoires refuse de se résoudre : une communauté du plateau central bloque depuis sept ans l'extension d'un corridor amphibien, invoquant sa souveraineté alimentaire. Ailleurs, des factions techniques militent pour intégrer des capteurs numériques dans la gestion des corridors — ce qui rouvrirait la porte à des formes de centralisation que beaucoup considèrent comme la porte d'entrée de la dépossession. Et au fond, une tension plus sourde : la Tresse Verte est-elle encore un commun quand certaines communautés riches en biodiversité commencent à en faire un argument de prestige dans les échanges interterritoriaux ?
 
 date_creation: 2026-06-15
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # La Tresse Verte

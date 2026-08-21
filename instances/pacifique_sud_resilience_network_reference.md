@@ -63,8 +63,6 @@ type_relation_dominante: alliance stratégique
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: ascendant
 generation: transition
 
 injection:
@@ -85,6 +83,9 @@ tensions_narratives: >
   L'ASMPI est tiraillée entre deux visions de son avenir : celle des 'nostalgistes de la terre ferme', qui maintiennent l'espoir d'un retour territorial grâce à des projets de géo-ingénierie côtière, et celle des 'souverainistes fluides', qui revendiquent la condition nomade maritime comme une identité accomplie et non comme une blessure provisoire. Une tension secondaire fragilise son unité interne : les communautés accueillies par des mégapoles côtières comme Auckland ou Singapour développent des loyautés hybrides qui diluent progressivement leur engagement envers le réseau collectif. Enfin, plusieurs blocs économiques tentent de coopter l'ASMPI en lui offrant des financements considérables en échange d'un soutien stratégique dans des négociations sur les routes maritimes du Pacifique — une offre qui divise profondément ses instances dirigeantes.
 
 date_creation: 2026-06-23
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Alliance pour la Souveraineté Maritime des Peuples Insulaires (ASMPI)

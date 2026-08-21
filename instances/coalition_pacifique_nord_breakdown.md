@@ -42,7 +42,7 @@ alliances:
 oppositions:
 - arctic_passage_authority_breakdown
 - arctique_nordark_breakdown
-- autorite_passage_arctique_breakdown
+- arctic_passage_authority_breakdown
 - conseil_regulation_ressources_breakdown
 - front_de_resistance_aux_peages_sur_les_ressources_breakdown
 - milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown
@@ -50,8 +50,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2041
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -83,6 +81,9 @@ tensions_narratives: 'La contradiction fondamentale de la Coalition réside dans
   de tout cadre institutionnel la prive de la légitimité nécessaire pour faire respecter
   ses propres décrets, transformant chaque accord en bras de fer armé.'
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Coalition Pacifique Nord
@@ -118,7 +119,7 @@ La contradiction fondamentale de la Coalition réside dans le fait que ses membr
 **Opposants :**
 - [[arctic_passage_authority_breakdown]]
 - [[arctique_nordark_breakdown]]
-- [[autorite_passage_arctique_breakdown]]
+- [[arctic_passage_authority_breakdown]]
 - [[conseil_regulation_ressources_breakdown]]
 - [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
 - [[milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown]]

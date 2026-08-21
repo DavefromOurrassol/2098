@@ -56,8 +56,6 @@ type_relation_dominante: dépendance
 annee_debut: 2061
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: forteresse
 
 injection:
@@ -78,6 +76,9 @@ tensions_narratives: >
   La tension centrale de Singapour Est Nexcore tient à ce paradoxe : plus elle étend son emprise sur le corridor, plus elle devient vulnérable à toute perturbation de l'ordre régional qu'elle a contribué à façonner — un conflit entre blocs, une dislocation portuaire, ou l'émergence d'un concurrent comme le Consortium Logistique Asiatique de Contournement ALN pourrait effacer en quelques semaines une décennie de construction patiente. Par ailleurs, les gouvernements locaux qui tolèrent son rôle quasi-étatique commencent à réclamer des contreparties formelles, menaçant de régulariser ce que Nexcore Est préfère maintenir dans le flou. Enfin, sa relation ambiguë avec NexCore Global soulève une question non résolue : est-elle une filiale autonome, une franchise territoriale, ou un concurrent potentiel que la maison-mère surveille avec une méfiance croissante ?
 
 date_creation: 2026-06-27
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Singapour Est Nexcore

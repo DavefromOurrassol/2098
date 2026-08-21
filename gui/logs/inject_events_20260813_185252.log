@@ -1,0 +1,18 @@
+============================================================
+OURRASSOL 2098 — Injection événements custom
+============================================================
+
+Mode : auto (fourni via --mode)
+
+[1/2] Analyse de la couverture du vault...
+  18 event_instance(s) analysée(s)
+  Variables imposées : systemes_productifs_travail
+[2/2] Génération de 2 idée(s) d'événements...
+[llm] Mistral (mistral-large-latest) — entrée : 3410 | sortie : 736
+  ✓ revolution_travail_sahel_numerique — regionale | 2047 | scénarios: ['eco_communalism', 'new_sustainability', 'policy_reform']
+    → Couvre une zone sous-représentée (Sahel), introduit un modèle innovant de travail lié aux biotechnologies et énergies renouvelables, et équilibre la bande temporelle 'moyen' (2036-2060).
+  ✓ greve_generale_corridors_eurasiens — continentale | 2039 | scénarios: ['fortress_world', 'breakdown', 'policy_reform']
+    → Comble un vide géographique (corridors eurasiens), aborde la variable sous-représentée 'santé_biotechnologies' via des revendications sociales, et diversifie les types d'événements avec un conflit politique/social en bande 'proche' (2026-2035).
+
+2 idée(s) ajoutée(s) à /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/evenements_custom/queue.yaml
+→ Inspectez queue.yaml, puis relancez en mode custom pour injecter.

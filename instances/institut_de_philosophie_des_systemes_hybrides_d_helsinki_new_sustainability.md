@@ -55,8 +55,6 @@ oppositions:
 type_relation_dominante: coopération
 annee_debut: 2032
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -94,6 +92,9 @@ localisation:
   zone: institut_philosophie_hybrides_helsinki
   lieu: Helsinki
   type_lieu: ville
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Institut de Philosophie des Systèmes Hybrides d'Helsinki

@@ -4,6 +4,10 @@ type: event_instance
 slug: emeutes_algorithme_sao_paulo_policy_reform
 archetype: emeutes_algorithme_sao_paulo
 scenario: policy_reform
+localisation:
+  zone: sao_paulo_rpda
+  lieu: São Paulo
+  type_lieu: ville
 type_evenement: political_social
 portee: regionale
 date: 2073

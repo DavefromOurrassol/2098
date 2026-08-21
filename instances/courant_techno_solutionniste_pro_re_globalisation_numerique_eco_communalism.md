@@ -47,7 +47,7 @@ oppositions:
 - ligue_des_cites_du_sahel_numerique_eco_communalism
 - mouvement_des_communes_du_rust_belt_eco_communalism
 - mouvement_racines_vivantes_eco_communalism
-- rede_paulista_de_distribuic_o_algor_tmica_eco_communalism
+- rede_paulista_de_distribuicao_algoritmica_eco_communalism
 - reseau_assemblees_fennoscandien_eco_communalism
 - reseau_terrafond_bassins_eco_communalism
 - reseaux_de_radio_communautaire_basse_consommation_eco_communalism
@@ -58,8 +58,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2036
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -93,6 +91,9 @@ localisation:
   zone: null
   lieu: null
   type_lieu: null
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Courant Techno-Solutionniste Pro-Re-Globalisation Numérique
@@ -135,7 +136,7 @@ Le courant est piégé dans une contradiction fondamentale : pour gagner en lég
 - [[ligue_des_cites_du_sahel_numerique_eco_communalism]]
 - [[mouvement_des_communes_du_rust_belt_eco_communalism]]
 - [[mouvement_racines_vivantes_eco_communalism]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_eco_communalism]]
+- [[rede_paulista_de_distribuicao_algoritmica_eco_communalism]]
 - [[reseau_assemblees_fennoscandien_eco_communalism]]
 - [[reseau_terrafond_bassins_eco_communalism]]
 - [[reseaux_de_radio_communautaire_basse_consommation_eco_communalism]]

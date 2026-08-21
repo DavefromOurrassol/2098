@@ -56,8 +56,6 @@ type_relation_dominante: alliance stratégique
 annee_debut: 2038
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: forteresse
 
 injection:
@@ -78,6 +76,9 @@ tensions_narratives: >
   ISC est au cœur de plusieurs tensions majeures : son statut de quasi-État remet en cause la souveraineté des blocs fermés, tandis que ses protocoles opaques alimentent les théories sur des trafics d'armes ou de technologies interdites. Les attaques répétées de milices pirates ou de factions djihadistes en Asie centrale menacent la stabilité des corridors, poussant ISC à militariser davantage ses opérations. Par ailleurs, des dissensions internes émergent entre les factions pro-autarcie des blocs et les partisans d'une intégration plus poussée d'ISC dans les structures de gouvernance. Enfin, la question de la transparence de ses activités pourrait devenir un enjeu central, avec des appels croissants à un audit indépendant de ses flux logistiques.
 
 date_creation: 2026-07-11
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Ironclad Sovereign Corridors (ISC)

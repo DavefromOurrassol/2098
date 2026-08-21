@@ -544,7 +544,7 @@ zones:
     rivaux:
     - enclaves_extractivistes_et_etats_residuels
   sources_attestees:
-  - frente_sert_o_livre_eco_communalism
+  - frente_sertao_livre_eco_communalism
   promu_depuis: null
 - slug: polynesie_reconstituee
   nom: Polynésie Reconstituée
@@ -813,7 +813,7 @@ zones:
     rivaux:
     - enclaves_extractivistes_et_etats_residuels
   sources_attestees:
-  - rede_paulista_de_distribuic_o_algor_tmica_eco_communalism
+  - rede_paulista_de_distribuicao_algoritmica_eco_communalism
   promu_depuis: null
 - slug: agadez_ville
   nom: Agadez
@@ -1047,7 +1047,7 @@ zones:
     allies: []
     rivaux: []
   sources_attestees:
-  - rede_paulista_de_distribuic_o_algor_tmica_eco_communalism
+  - rede_paulista_de_distribuicao_algoritmica_eco_communalism
   promu_depuis: null
 - slug: cevennes_interieure
   nom: Cévennes Intérieure
@@ -1323,7 +1323,7 @@ zones:
     allies: []
     rivaux: []
   sources_attestees:
-  - frente_sert_o_livre_eco_communalism
+  - frente_sertao_livre_eco_communalism
   promu_depuis: null
 - slug: grande_vallee_bioterritoire
   nom: La Grande-Vallée
@@ -1382,7 +1382,7 @@ zones:
     allies: []
     rivaux: []
   sources_attestees:
-  - rede_paulista_de_distribuic_o_algor_tmica_eco_communalism
+  - rede_paulista_de_distribuicao_algoritmica_eco_communalism
   promu_depuis: null
 - slug: kalaallit_nunaat_bioterritoire
   nom: Kalaallit Nunaat — Fonds des Terres Émergées
@@ -3484,7 +3484,7 @@ Réseau de communautés semi-arides du Nordeste brésilien organisées en coopé
 
 **Rivaux** : enclaves_extractivistes_et_etats_residuels
 
-*Sources attestées : frente_sert_o_livre_eco_communalism*
+*Sources attestées : frente_sertao_livre_eco_communalism*
 
 ### Polynésie Reconstituée
 
@@ -3560,7 +3560,7 @@ Mégalopole de vingt millions d'âmes dont le grand système d'allocation algori
 
 **Rivaux** : enclaves_extractivistes_et_etats_residuels
 
-*Sources attestées : rede_paulista_de_distribuic_o_algor_tmica_eco_communalism*
+*Sources attestées : rede_paulista_de_distribuicao_algoritmica_eco_communalism*
 
 #### Agadez — sous [[sahel_numerique_ligue]]
 
@@ -3673,7 +3673,7 @@ Quartier périphérique de São Paulo où un panneau solaire alimente un serveur
 
 **Tensions internes** : Vulnérabilité face aux propositions de réunification des opérateurs d'IA propriétaires ; question de la transmission des compétences techniques aux prochaines générations sans recréer une caste technicienne.
 
-*Sources attestées : rede_paulista_de_distribuic_o_algor_tmica_eco_communalism*
+*Sources attestées : rede_paulista_de_distribuicao_algoritmica_eco_communalism*
 
 #### Cévennes Intérieure — sous [[europe_occidentale_reconstituee]]
 
@@ -3797,7 +3797,7 @@ Principal nœud de circulation des délégués du Frente Sertão Livre, point de
 
 **Tensions internes** : Pression des municípios locaux offrant des subventions en échange d'une formalisation juridique ; présence d'agents des corporations biotechnologiques cherchant à identifier les leaders du réseau.
 
-*Sources attestées : frente_sert_o_livre_eco_communalism*
+*Sources attestées : frente_sertao_livre_eco_communalism*
 
 #### La Grande-Vallée — sous [[bioterritoires_amerique_du_nord]]
 
@@ -3825,7 +3825,7 @@ Municípion périurbain de São Paulo où une faction locale a modifié en silen
 
 **Tensions internes** : Absence d'audit démocratique réel du module ; résistance de la faction locale à toute transparence ; familles exclues sans recours institutionnel.
 
-*Sources attestées : rede_paulista_de_distribuic_o_algor_tmica_eco_communalism*
+*Sources attestées : rede_paulista_de_distribuicao_algoritmica_eco_communalism*
 
 #### Kalaallit Nunaat — Fonds des Terres Émergées — sous [[arc_septentrional]]
 

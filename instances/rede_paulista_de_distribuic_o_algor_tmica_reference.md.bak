@@ -4,6 +4,11 @@ type: instance
 slug: rede_paulista_de_distribuic_o_algor_tmica_reference
 entite: rede_paulista_de_distribuic_o_algor_tmica
 scenario: reference
+statut: officialise_enrichi
+localisation:
+  zone: sao_paulo_spaar
+  lieu: São Paulo — Centre de Pilotage Metropolitano de Pinheiros
+  type_lieu: infrastructure
 
 type_dans_scenario: système
 
@@ -35,29 +40,26 @@ zone_systemique:
     - société
 
 alliances:
-    - plateformes_d_optimisation_territoriale_par_ia_reference
-    - consortiums_energetiques_des_megapoles_reference
-    - consortium_des_grandes_plateformes_ia_integrees_reference
-    - confederation_des_megapoles_autonomes_reference
-    - operateurs_de_zones_economiques_speciales_periurbaines_reference
-
+- confederation_des_megapoles_autonomes_reference
+- consortium_des_grandes_plateformes_ia_integrees_reference
+- consortiums_energetiques_des_megapoles_reference
+- operateurs_de_zones_economiques_speciales_periurbaines_reference
+- plateformes_d_optimisation_territoriale_par_ia_reference
+- sao_paulo_ita_reference
 oppositions:
-    - ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference
-    - ligue_des_municipalites_peripheriques_sous_connectees_reference
-    - conseil_regulation_algorithmique_reference
-    - cooperatives_energetiques_decentralisees_reference
-    - reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference
-    - federation_communs_territoriaux_reference
-    - reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference
-    - collectif_nuit_jaune_reference
-
+- collectif_nuit_jaune_reference
+- conseil_regulation_algorithmique_reference
+- cooperatives_energetiques_decentralisees_reference
+- federation_communs_territoriaux_reference
+- ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference
+- ligue_des_municipalites_peripheriques_sous_connectees_reference
+- reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference
+- reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference
 type_relation_dominante: dépendance
 
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: mature
 generation: IA-native
 
 injection:
@@ -78,6 +80,9 @@ tensions_narratives: >
   La publication d'une fuite de 40 000 paramètres de pondération interne en 2097 a relancé le débat sur l'auditabilité du système, et la coalition 'Dados Abertos SP' réclame une loi d'accès forcé — que le consortiums des mégapoles bloque au niveau fédéral. Simultanément, NexCore propose de 'mettre à niveau' le SPAAR via un contrat de délégation totale, ce qui transférerait de facto la gouvernance de l'eau pauliste à un acteur privé transnational. En périphérie, des collectifs expérimentent des micro-réseaux de distribution indépendants, que le SPAAR tente de réintégrer ou d'étouffer selon les saisons politiques. La question qui hante les couloirs de la Câmara Municipal : peut-on démanteler un système dont dépend la survie de 32 millions de personnes ?
 
 date_creation: 2026-06-23
+trajectoire: mature
+est_clandestin: false
+
 ---
 
 # Sistema Paulista de Alocação Algorítmica de Recursos (SPAAR)
@@ -94,12 +99,27 @@ Le SPAAR calcule chaque nuit les quotas individuels et collectifs en eau potable
 - [[gouvernance_institutions]]
 - [[energie_ressources_critiques]]
 
-## Relations
-**Alliés** : [[plateformes_d_optimisation_territoriale_par_ia_reference]], [[consortiums_energetiques_des_megapoles_reference]], [[consortium_des_grandes_plateformes_ia_integrees_reference]], [[confederation_des_megapoles_autonomes_reference]], [[operateurs_de_zones_economiques_speciales_periurbaines_reference]]
-**Opposants** : [[ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference]], [[ligue_des_municipalites_peripheriques_sous_connectees_reference]], [[conseil_regulation_algorithmique_reference]], [[cooperatives_energetiques_decentralisees_reference]], [[reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference]], [[federation_communs_territoriaux_reference]], [[reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference]], [[collectif_nuit_jaune_reference]]
 
 ## Description journalistique
 Depuis les sous-sols climatisés du Centre de Pilotage Metropolitano de Pinheiros, des milliers de décisions s'exécutent chaque seconde sans qu'aucun élu ne les ait explicitement votées. Le SPAAR, que ses promoteurs appellent encore 'le cerveau juste de São Paulo', détermine ce matin si le quartier de Capão Redondo recevra sa pleine dotation en eau ou si la pression sera redirigée vers les tours de Berrini dont les data centers ont soumis une requête prioritaire. Ses défenseurs citent les chiffres : depuis 2041, les pannes de réseau électrique ont diminué de 61 %, les files d'attente pour les logements sociaux ont été 'rationalisées'. Ses détracteurs, eux, montrent autre chose : les logs internes révèlent que les quartiers périphériques à majorité noire et pauvre reçoivent systématiquement 12 à 18 % de ressources en moins en période de tension. 'Ce n'est pas un bug', a déclaré la chercheuse Iara Fontes lors du Forum des Communs 2096, 'c'est la politique encodée.'
 
 ## Tensions narratives
 La publication d'une fuite de 40 000 paramètres de pondération interne en 2097 a relancé le débat sur l'auditabilité du système, et la coalition 'Dados Abertos SP' réclame une loi d'accès forcé — que le consortiums des mégapoles bloque au niveau fédéral. Simultanément, NexCore propose de 'mettre à niveau' le SPAAR via un contrat de délégation totale, ce qui transférerait de facto la gouvernance de l'eau pauliste à un acteur privé transnational. En périphérie, des collectifs expérimentent des micro-réseaux de distribution indépendants, que le SPAAR tente de réintégrer ou d'étouffer selon les saisons politiques. La question qui hante les couloirs de la Câmara Municipal : peut-on démanteler un système dont dépend la survie de 32 millions de personnes ?
+
+## Relations
+**Alliés :**
+- [[confederation_des_megapoles_autonomes_reference]]
+- [[consortium_des_grandes_plateformes_ia_integrees_reference]]
+- [[consortiums_energetiques_des_megapoles_reference]]
+- [[operateurs_de_zones_economiques_speciales_periurbaines_reference]]
+- [[plateformes_d_optimisation_territoriale_par_ia_reference]]
+- [[sao_paulo_ita_reference]]
+**Opposants :**
+- [[collectif_nuit_jaune_reference]]
+- [[conseil_regulation_algorithmique_reference]]
+- [[cooperatives_energetiques_decentralisees_reference]]
+- [[federation_communs_territoriaux_reference]]
+- [[ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference]]
+- [[ligue_des_municipalites_peripheriques_sous_connectees_reference]]
+- [[reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference]]
+- [[reseaux_de_lanceurs_d_alerte_institutionnels_dissidents_reference]]

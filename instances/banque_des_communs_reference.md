@@ -45,7 +45,7 @@ alliances:
 - cooperatives_ia_open_source_reference
 - federation_communs_territoriaux_reference
 - fonds_monetaire_climatique_fmc_reference
-- frente_sert_o_livre_reference
+- frente_sertao_livre_reference
 - great_lakes_autonomous_compact_reference
 - helsinki_communs_numeriques_reference
 - pacifique_sud_archipels_flottants_reference
@@ -64,8 +64,6 @@ oppositions:
 type_relation_dominante: coopération
 annee_debut: 2032
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -101,6 +99,9 @@ localisation:
   zone: lyon_metropole
   lieu: Lyon-Métropole, siège principal — antennes à Helsinki et Ouagadougou
   type_lieu: ville
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Banque des Communs
@@ -138,7 +139,7 @@ Sa légitimité reste contestée par les institutions financières conventionnel
 - [[cooperatives_ia_open_source_reference]]
 - [[federation_communs_territoriaux_reference]]
 - [[fonds_monetaire_climatique_fmc_reference]]
-- [[frente_sert_o_livre_reference]]
+- [[frente_sertao_livre_reference]]
 - [[great_lakes_autonomous_compact_reference]]
 - [[helsinki_communs_numeriques_reference]]
 - [[pacifique_sud_archipels_flottants_reference]]

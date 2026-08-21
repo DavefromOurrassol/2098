@@ -60,13 +60,11 @@ oppositions:
 - lobbies_des_plateformes_de_consensus_automatise_new_sustainability
 - observatoire_climatique_narratif_de_nairobi_new_sustainability
 - oracle_des_seuils_new_sustainability
-- rede_paulista_de_distribuic_o_algor_tmica_new_sustainability
+- rede_paulista_de_distribuicao_algoritmica_new_sustainability
 - tribunal_gouvernance_algorithmique_bruxelles_new_sustainability
 type_relation_dominante: conflit
 annee_debut: 2033
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -102,6 +100,9 @@ localisation:
   zone: bassins_versants_asiatiques_derives
   lieu: Zones de dérives algorithmiques — nœuds périphériques mobiles
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Collectifs de Désobéissance Algorithmique
@@ -157,7 +158,7 @@ Leur légitimité est constamment fragilisée par la stabilité apparente du sys
 - [[lobbies_des_plateformes_de_consensus_automatise_new_sustainability]]
 - [[observatoire_climatique_narratif_de_nairobi_new_sustainability]]
 - [[oracle_des_seuils_new_sustainability]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_new_sustainability]]
+- [[rede_paulista_de_distribuicao_algoritmica_new_sustainability]]
 - [[tribunal_gouvernance_algorithmique_bruxelles_new_sustainability]]
 
 ## Notes

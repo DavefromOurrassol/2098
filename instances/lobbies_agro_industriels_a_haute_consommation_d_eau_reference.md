@@ -52,7 +52,7 @@ oppositions:
 - factions_eurasiatiques_contre_la_tarification_hydrique_reference
 - federation_communs_territoriaux_reference
 - federation_des_cliniques_autonomes_reference
-- frente_sert_o_livre_reference
+- frente_sertao_livre_reference
 - front_souverainiste_des_ressources_d_amerique_du_sud_reference
 - geneve_lac_retreite_reference
 - great_lakes_autonomous_compact_reference
@@ -75,8 +75,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2031
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -110,6 +108,9 @@ localisation:
   zone: null
   lieu: null
   type_lieu: null
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Lobbies Agro-Industriels à Haute Consommation d'Eau
@@ -158,7 +159,7 @@ La tension centrale est existentielle : les modèles de production qu'ils défen
 - [[factions_eurasiatiques_contre_la_tarification_hydrique_reference]]
 - [[federation_communs_territoriaux_reference]]
 - [[federation_des_cliniques_autonomes_reference]]
-- [[frente_sert_o_livre_reference]]
+- [[frente_sertao_livre_reference]]
 - [[front_souverainiste_des_ressources_d_amerique_du_sud_reference]]
 - [[geneve_lac_retreite_reference]]
 - [[great_lakes_autonomous_compact_reference]]

@@ -67,8 +67,6 @@ type_relation_dominante: dépendance
 annee_debut: 2051
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: forteresse
 
 injection:
@@ -89,6 +87,9 @@ tensions_narratives: >
   La Division navigue en permanence sur le fil entre autonomie opérationnelle et subordination au centre — une tension que les régimes locaux exploitent pour renégocier leurs contrats à la hausse, menaçant de basculer vers des concurrents régionaux émergents. Son réseau biométrique, conçu pour 'sécuriser la santé', est régulièrement sollicité par les appareils d'État pour des fonctions de surveillance politique, ce qui expose la Division à des accusations de complicité que le centre cherche à distance à démentir. Par ailleurs, les campements périphériques aux portes des enclaves documentent avec une précision croissante la corrélation entre zones hors-contrat et surmortalité épidémique — une cartographie qui, si elle atteignait les tribunaux résiduels, pourrait requalifier le modèle économique de la Division en crime sanitaire systémique. Enfin, des factions internes pro-autarcie totale dans certains régimes clients poussent à la nationalisation des infrastructures BioSyn, ce qui menacerait l'existence même de la branche eurasienne.
 
 date_creation: 2026-06-27
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Nexus BioSyn — Division Eurasienne des Forteresses Vitales

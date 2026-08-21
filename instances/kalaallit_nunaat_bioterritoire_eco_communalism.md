@@ -68,8 +68,6 @@ type_relation_dominante: alliance stratégique
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: mature
 generation: post-effondrement
 
 injection:
@@ -90,6 +88,9 @@ tensions_narratives: >
   La tension centrale qui traverse le bioterritoire en 2098 est celle entre l'intégrité du retrait et la pression de la célébrité mondiale : plus Kalaallit Nunaat devient une référence symbolique incontournable, plus des acteurs extérieurs — des consortiums industriels aux mouvements politiques instrumentalisateurs — cherchent à s'en approcher, à en extraire des ressources ou à en capturer le récit. En interne, une fracture générationnelle s'approfondit entre les 'gardiens du seuil', partisans d'un isolationnisme absolu, et une jeunesse qui souhaite peser davantage sur la gouvernance éco-communaliste mondiale sans pour autant renoncer à l'autonomie. La question des eaux de fonte glaciaire représente l'enjeu le plus explosif : les aquifères du bioterritoire sont parmi les dernières réserves d'eau douce non contaminées de l'hémisphère nord, et la pression des factions extractivistes extérieures croît chaque année, testant les limites de la souveraineté proclamée.
 
 date_creation: 2026-06-27
+trajectoire: mature
+est_clandestin: false
+
 ---
 
 # Kalaallit Nunaat Bioterritoire Souverain

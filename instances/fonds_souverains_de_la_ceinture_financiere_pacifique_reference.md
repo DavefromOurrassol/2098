@@ -45,8 +45,6 @@ oppositions:
 type_relation_dominante: symbiose
 annee_debut: 2032
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -82,6 +80,9 @@ localisation:
   zone: indo_pacifique_emergent
   lieu: Singapour-Est — Nœud NexCore (siège opérationnel tournant)
   type_lieu: infrastructure
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Fonds Souverains de la Ceinture Financière Pacifique

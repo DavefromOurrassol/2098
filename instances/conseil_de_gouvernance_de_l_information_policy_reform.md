@@ -44,12 +44,10 @@ oppositions:
 - front_souverainiste_de_l_information_regionale_policy_reform
 - front_souverainiste_des_blocs_non_signataires_policy_reform
 - les_hors_prisme_policy_reform
-- rede_paulista_de_distribuic_o_algor_tmica_policy_reform
+- rede_paulista_de_distribuicao_algoritmica_policy_reform
 type_relation_dominante: compétition
 annee_debut: 2033
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -87,6 +85,9 @@ localisation:
   zone: conseil_regulation_numerique_geneve
   lieu: Genève-Nexus, Conseil de Régulation Numérique
   type_lieu: infrastructure
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Conseil de Gouvernance de l'Information
@@ -126,7 +127,7 @@ La légitimité du CGI est minée par l'absence des blocs souverainistes non-sig
 - [[front_souverainiste_de_l_information_regionale_policy_reform]]
 - [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
 - [[les_hors_prisme_policy_reform]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_policy_reform]]
+- [[rede_paulista_de_distribuicao_algoritmica_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

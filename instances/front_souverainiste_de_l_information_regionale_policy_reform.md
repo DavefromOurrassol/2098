@@ -57,8 +57,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2030
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -93,6 +91,9 @@ localisation:
   zone: hub_europeen_regulation
   lieu: Tampere / Genève-Nexus (présence de lobbying institutionnel)
   type_lieu: ville
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Front Souverainiste de l'Information Régionale

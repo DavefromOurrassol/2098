@@ -38,7 +38,7 @@ alliances:
 - collectifs_de_techniciens_sobres_eco_communalism
 - cooperatives_d_habitat_regeneratif_eco_communalism
 - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
-- frente_sert_o_livre_eco_communalism
+- frente_sertao_livre_eco_communalism
 - guildes_de_mediateurs_ecologiques_eco_communalism
 - mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism
 - mutuelles_de_sante_territoriales_eco_communalism
@@ -62,8 +62,6 @@ oppositions:
 type_relation_dominante: symbiose
 annee_debut: 2036
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -99,6 +97,9 @@ localisation:
   zone: null
   lieu: null
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Guildes des Semenciers Itinérants
@@ -132,7 +133,7 @@ La tension principale qui traverse les Guildes oppose ceux qui veulent formalise
 - [[collectifs_de_techniciens_sobres_eco_communalism]]
 - [[cooperatives_d_habitat_regeneratif_eco_communalism]]
 - [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]
-- [[frente_sert_o_livre_eco_communalism]]
+- [[frente_sertao_livre_eco_communalism]]
 - [[guildes_de_mediateurs_ecologiques_eco_communalism]]
 - [[mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism]]
 - [[mutuelles_de_sante_territoriales_eco_communalism]]

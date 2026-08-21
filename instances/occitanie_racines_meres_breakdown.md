@@ -40,7 +40,7 @@ alliances:
 - communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
 - enclaves_agro_communautaires_autonomes_breakdown
 - federation_communs_territoriaux_breakdown
-- frente_sert_o_livre_breakdown
+- frente_sertao_livre_breakdown
 - massif_central_cicatrices_vertes_breakdown
 - milices_agro_defensives_locales_breakdown
 - mouvement_racines_vivantes_breakdown
@@ -62,8 +62,6 @@ type_relation_dominante: alliance stratégique
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: ascendant
 generation: post-effondrement
 
 injection:
@@ -84,6 +82,9 @@ tensions_narratives: >
   La pression des seigneuries agro-territoriales sur les dépôts de semences pourrait forcer le mouvement à accepter une protection armée externe — trahissant son principe d'autonomie. En interne, une faction dite des 'Purs' cherche à conditionner l'accès aux ressources à la maîtrise de l'occitan et à une généalogie territoriale, transformant la mémoire en frontière. Parallèlement, des factions politiques résiduelles tentent de capter la légitimité des Racines-Mères pour asseoir une autorité régionale — une récupération que les cercles fondateurs refusent mais que certains élus locaux survivants encouragent activement. La question de l'ouverture aux communautés paysannes réfugiées nord-africaines climatiques reste le point de rupture le plus explosif du mouvement.
 
 date_creation: 2026-06-27
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Les Racines-Mères — Confédération Occitane des Semences et des Mémoires
@@ -113,7 +114,7 @@ La pression des seigneuries agro-territoriales sur les dépôts de semences pour
 - [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
 - [[enclaves_agro_communautaires_autonomes_breakdown]]
 - [[federation_communs_territoriaux_breakdown]]
-- [[frente_sert_o_livre_breakdown]]
+- [[frente_sertao_livre_breakdown]]
 - [[massif_central_cicatrices_vertes_breakdown]]
 - [[milices_agro_defensives_locales_breakdown]]
 - [[mouvement_racines_vivantes_breakdown]]

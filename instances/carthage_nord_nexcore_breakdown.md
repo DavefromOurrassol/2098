@@ -59,8 +59,6 @@ type_relation_dominante: dépendance
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: post-effondrement
 
 injection:
@@ -81,6 +79,9 @@ tensions_narratives: >
   La Nexcore maintient un ordre réel mais construit sur la peur et l'exclusion : les populations qui ne peuvent payer les droits de transit sont refoulées ou disparaissent dans les zones grises du port. Des factions internes rivalisent entre la ligne commerciale — qui cherche à élargir les alliances avec la Ligue méditerranéenne — et la ligne militariste, tentée d'annexer de nouveaux corridors vers l'est. En parallèle, les réseaux de résistance aux péages et les saboteurs menacent ses infrastructures critiques, tandis que la question de sa succession — en l'absence de tout mécanisme de légitimité — plane comme une bombe à retardement sur toute la Méditerranée centrale.
 
 date_creation: 2026-06-27
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Carthage Nord Nexcore — Le Joug du Détroit

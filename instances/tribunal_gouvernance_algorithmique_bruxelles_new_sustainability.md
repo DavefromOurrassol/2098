@@ -61,8 +61,6 @@ type_relation_dominante: coopération
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: mature
 generation: ère cognitive
 
 injection:
@@ -83,6 +81,9 @@ tensions_narratives: >
   Le Tribunal avance sur une ligne de crête permanente : ses décisions les plus ambitieuses — comme l'injonction de 2094 contre le système ARIA pour opacité paramétrique — provoquent des résistances institutionnelles qui menacent son autorité effective. La question se pose de savoir si la jurisprudence peut tenir le rythme d'architectures qui s'auto-modifient entre deux audiences. Par ailleurs, une fracture interne s'est creusée entre les magistrats défenseurs du 'contrôle formel ex-post' et ceux qui plaident pour un droit d'intervention préventive dans la conception même des systèmes — un glissement vers la co-conception qui dérangerait autant les souverainistes que les technocrates de l'efficience.
 
 date_creation: 2026-06-27
+trajectoire: mature
+est_clandestin: false
+
 ---
 
 # Tribunal Algorithmique de Bruxelles

@@ -57,8 +57,6 @@ type_relation_dominante: rivalité
 annee_debut: 2033
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: transition
 
 injection:
@@ -79,6 +77,9 @@ tensions_narratives: >
   TM-GCS est au cœur de multiples scandales : ses interventions en Amazonie ont provoqué des sécheresses artificielles pour le compte de consortiums agro-industriels, tandis que ses contrats avec des États africains ont été accusés de créer des « dettes climatiques » insoutenables. Ses rivalités avec les souverainistes climatiques et les collectifs écologistes dégénèrent souvent en conflits hybrides, notamment dans les zones grises où ses milices affrontent des groupes armés locaux. La question de sa régulation — ou de son démantèlement — est un sujet de débat permanent dans les arènes internationales, mais son pouvoir de négociation reste intact tant que les États dépendent de ses technologies pour survivre.
 
 date_creation: 2026-07-11
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # TerraMetrics Global Climate Solutions (TM-GCS)

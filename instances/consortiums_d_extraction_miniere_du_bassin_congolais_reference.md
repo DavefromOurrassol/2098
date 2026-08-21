@@ -59,8 +59,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2030
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -95,6 +93,9 @@ localisation:
   zone: bassin_congo_ressources
   lieu: Bassin du Congo — zones d'extraction nord-est et sud-est
   type_lieu: site_strategique
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Consortiums d'Extraction Minière du Bassin Congolais

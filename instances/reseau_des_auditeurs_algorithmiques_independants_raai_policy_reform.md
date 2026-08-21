@@ -55,7 +55,7 @@ alliances:
 - mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform
 - observatoire_mondial_des_ressources_critiques_policy_reform
 - oracle_des_seuils_policy_reform
-- rede_paulista_de_distribuic_o_algor_tmica_policy_reform
+- rede_paulista_de_distribuicao_algoritmica_policy_reform
 - reseau_des_journalistes_d_investigation_energetique_policy_reform
 - reseau_des_regulateurs_numeriques_souverains_rrns_policy_reform
 - tribunal_algorithmique_de_bruxelles_policy_reform
@@ -74,8 +74,6 @@ oppositions:
 type_relation_dominante: coopération
 annee_debut: 2033
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -107,6 +105,9 @@ localisation:
   zone: hub_europeen_regulation
   lieu: Genève-Nexus / Tampere (nœuds principaux)
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Réseau des Auditeurs Algorithmiques Indépendants (RAAI)
@@ -154,7 +155,7 @@ Le RAAI est pris en étau entre son mandat d'indépendance et la dépendance cro
 - [[mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform]]
 - [[observatoire_mondial_des_ressources_critiques_policy_reform]]
 - [[oracle_des_seuils_policy_reform]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_policy_reform]]
+- [[rede_paulista_de_distribuicao_algoritmica_policy_reform]]
 - [[reseau_des_journalistes_d_investigation_energetique_policy_reform]]
 - [[reseau_des_regulateurs_numeriques_souverains_rrns_policy_reform]]
 - [[tribunal_algorithmique_de_bruxelles_policy_reform]]

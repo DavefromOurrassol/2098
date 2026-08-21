@@ -4,11 +4,11 @@ type: instance
 slug: armada_logistique_nordique_breakdown
 entite: armada_logistique_nordique
 scenario: breakdown
+statut: officialise_enrichi
 localisation:
   zone: arctique_nordark
   lieu: Arctique Nordark (Tromsø, corridor de Barents, Svalbard)
   type_lieu: region
-
 type_dans_scenario: organisation
 
 role_dans_scenario: >
@@ -37,23 +37,28 @@ zone_systemique:
     - économie
 
 alliances:
-    - enclaves_industrielles_de_bergen_troms_breakdown
-    - factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
-    - consortiums_energetiques_samoiedes_du_yamal_breakdown
-
+- arctic_passage_authority_breakdown
+- arctique_nordark_breakdown
+- autorite_passage_arctique_breakdown
+- consortiums_energetiques_samoiedes_du_yamal_breakdown
+- district_mourmansk_residuel_breakdown
+- enclaves_industrielles_de_bergen_troms_breakdown
+- factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
+- hanse_baltique_breakdown
+- kalaallit_nunaat_sovereign_fund_breakdown
+- noeud_nordark_tromso_breakdown
 oppositions:
-    - hanse_baltique_recomposee_breakdown
-    - milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown
-    - federation_russe_residuelle_district_de_mourmansk_breakdown
-    - conglometrat_sino_siberien_bohai_transit_breakdown
-
+- collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
+- conglometrat_sino_siberien_bohai_transit_breakdown
+- federation_russe_residuelle_district_de_mourmansk_breakdown
+- hanse_baltique_recomposee_breakdown
+- milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown
+- reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown
 type_relation_dominante: rivalité
 
-annee_debut: 2026
+annee_debut: 2057
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: post-effondrement
 
 injection:
@@ -74,6 +79,9 @@ tensions_narratives: >
   Nordark est au bord d'une implosion interne : les factions militaires intégrées réclament une partition des revenus que les technocrates logistiques refusent, créant une ligne de fracture entre seigneurs de guerre et gestionnaires de flux. Parallèlement, le dégel accéléré de l'Arctique ouvre de nouveaux passages que Nordark n'a ni les moyens ni le personnel pour sécuriser — des routes grises que des acteurs hostiles commencent à emprunter. La question qui hante les couloirs de Tromsø : peut-on maintenir un empire logistique sans État derrière soi, ou Nordark est-elle condamnée à devenir l'État qu'elle a remplacé ?
 
 date_creation: 2026-06-15
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Konsortiet Nordark — Axes du Grand Nord
@@ -90,12 +98,29 @@ Nordark maintient sous contrôle armé les routes maritimes arctiques (passage d
 - [[organisation_territoires]]
 - [[climat_environnement_global]]
 
-## Relations
-**Alliés** : [[enclaves_industrielles_de_bergen_troms_breakdown]], [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]], [[consortiums_energetiques_samoiedes_du_yamal_breakdown]]
-**Opposants** : [[hanse_baltique_recomposee_breakdown]], [[milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown]], [[federation_russe_residuelle_district_de_mourmansk_breakdown]], [[conglometrat_sino_siberien_bohai_transit_breakdown]]
 
 ## Description journalistique
 À Tromsø, on ne parle plus de la ville mais du 'nœud Nordark'. Leurs convois brise-glace portent des drapeaux noirs frappés d'un compas brisé sur fond de mer blanche — symbole involontairement honnête d'une organisation qui oriente le monde sans plus croire aux anciennes directions. Un reporter qui tente d'embarquer sans accréditation Nordark disparaît dans les statistiques de 'pertes de transit'. Le Konsortiet ne communique plus par conférences de presse mais par bulletins tarifaires : en 2097, le droit de passage d'un convoi alimentaire vers les enclaves finlandaises a augmenté de 340 % en six mois. Ce que les anciens gouvernements scandinaves avaient construit comme infrastructure publique, Nordark l'a transformé en feudalisme de flux — et personne n'a encore trouvé comment les en déloger.
 
 ## Tensions narratives
 Nordark est au bord d'une implosion interne : les factions militaires intégrées réclament une partition des revenus que les technocrates logistiques refusent, créant une ligne de fracture entre seigneurs de guerre et gestionnaires de flux. Parallèlement, le dégel accéléré de l'Arctique ouvre de nouveaux passages que Nordark n'a ni les moyens ni le personnel pour sécuriser — des routes grises que des acteurs hostiles commencent à emprunter. La question qui hante les couloirs de Tromsø : peut-on maintenir un empire logistique sans État derrière soi, ou Nordark est-elle condamnée à devenir l'État qu'elle a remplacé ?
+
+## Relations
+**Alliés :**
+- [[arctic_passage_authority_breakdown]]
+- [[arctique_nordark_breakdown]]
+- [[autorite_passage_arctique_breakdown]]
+- [[consortiums_energetiques_samoiedes_du_yamal_breakdown]]
+- [[district_mourmansk_residuel_breakdown]]
+- [[enclaves_industrielles_de_bergen_troms_breakdown]]
+- [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]]
+- [[hanse_baltique_breakdown]]
+- [[kalaallit_nunaat_sovereign_fund_breakdown]]
+- [[noeud_nordark_tromso_breakdown]]
+**Opposants :**
+- [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]]
+- [[conglometrat_sino_siberien_bohai_transit_breakdown]]
+- [[federation_russe_residuelle_district_de_mourmansk_breakdown]]
+- [[hanse_baltique_recomposee_breakdown]]
+- [[milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown]]
+- [[reseaux_de_renseignement_informels_issus_de_l_ancienne_structure_militaire_eurasienne_breakdown]]

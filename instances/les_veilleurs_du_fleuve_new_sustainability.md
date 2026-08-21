@@ -51,8 +51,6 @@ type_relation_dominante: rivalité
 annee_debut: 2038
 annee_fin: 
 
-etat_temporel: actif
-age_historique: mature
 generation: transition
 
 injection:
@@ -73,6 +71,9 @@ tensions_narratives: >
   Leur plus grand défi ? Trouver un équilibre entre leur besoin de discrétion et la nécessité de peser sur les décisions globales. Certains collectifs veulent s’allier plus étroitement avec les réseaux néo-démocratiques pour exiger une représentation officielle, tandis que d’autres prônent une radicalisation, comme les Zones Libres anarcho-autonomistes. Par ailleurs, leur dépendance croissante aux outils technologiques (même détournés) les expose à des risques de récupération par les plateformes de consensus automatisé ou les lobbies agro-industriels, qui cherchent à les infiltrer pour discréditer leur légitimité.
 
 date_creation: 2026-07-11
+trajectoire: mature
+est_clandestin: false
+
 ---
 
 # Réseau des Sentinelles Fluviales

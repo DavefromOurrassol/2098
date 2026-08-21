@@ -37,7 +37,7 @@ alliances:
 - cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference
 - cooperatives_ia_open_source_reference
 - federation_communs_territoriaux_reference
-- frente_sert_o_livre_reference
+- frente_sertao_livre_reference
 - helsinki_communs_numeriques_reference
 - leena_vainala_reference
 - mouvement_racines_vivantes_reference
@@ -59,8 +59,6 @@ oppositions:
 type_relation_dominante: coopération
 annee_debut: 2031
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -96,6 +94,8 @@ localisation:
   lieu: null
   type_lieu: null
 annee_debut_verifiee: true
+trajectoire: émergent
+est_clandestin: false
 
 ---
 
@@ -132,7 +132,7 @@ La montée en puissance des grandes plateformes agro-technologiques privées et 
 - [[cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference]]
 - [[cooperatives_ia_open_source_reference]]
 - [[federation_communs_territoriaux_reference]]
-- [[frente_sert_o_livre_reference]]
+- [[frente_sertao_livre_reference]]
 - [[helsinki_communs_numeriques_reference]]
 - [[leena_vainala_reference]]
 - [[mouvement_racines_vivantes_reference]]

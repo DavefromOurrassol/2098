@@ -63,8 +63,6 @@ type_relation_dominante: conflit
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: ascendant
 generation: post-effondrement
 
 injection:
@@ -85,6 +83,9 @@ tensions_narratives: >
   La pression du Commandement Atlantique s'intensifie : des 'corridors de réintégration' sont proposés aux communes qui accepteraient une supervision énergétique externe, créant des fractures internes entre pragmatiques et radicaux. La question de l'institutionnalisation déchire le mouvement : certains nœuds, épuisés par les tensions sécuritaires, envisagent de négocier un statut juridique protégé — au risque de valider l'autorité même qu'ils refusent. Enfin, l'afflux massif de réfugiés des mégapoles effondrées dépasse les capacités d'intégration et pousse certaines communes à ériger leurs propres frontières, reproduisant malgré elles la logique d'enclavement qu'elles combattent.
 
 date_creation: 2026-06-23
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Communes Libres du Rust Belt — Les Forges du Commun

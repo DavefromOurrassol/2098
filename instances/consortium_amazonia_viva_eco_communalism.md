@@ -48,7 +48,7 @@ alliances:
 - conseils_de_bassin_versant_eco_communalistes_eco_communalism
 - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
 - federation_communs_territoriaux_eco_communalism
-- frente_sert_o_livre_eco_communalism
+- frente_sertao_livre_eco_communalism
 - guildes_de_mediateurs_ecologiques_eco_communalism
 - mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism
 - trame_bioclimatique_eco_communalism
@@ -65,8 +65,6 @@ type_relation_dominante: alliance stratégique
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: reconstruction
 
 injection:
@@ -87,6 +85,9 @@ tensions_narratives: >
   La légitimité du Pacte est contestée de l'intérieur : certaines nations autochtones membres refusent de partager leurs cartographies sacrées avec les collectifs scientifiques, craignant une réappropriation culturelle même bienveillante. Par ailleurs, les enclaves extractivistes résiduelles des corridors grignotent les marges du territoire en profitant des zones grises entre communautés. La grande question de 2098 est de savoir si le Pacte peut tenir sa promesse d'horizontalité quand la pression des consortiums industriels de l'eau menace de forcer une centralisation défensive — devenir un État pour survivre, au risque de trahir ce qu'il défend.
 
 date_creation: 2026-06-23
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Pacte Amazônia Viva
@@ -122,7 +123,7 @@ La légitimité du Pacte est contestée de l'intérieur : certaines nations auto
 - [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]]
 - [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]
 - [[federation_communs_territoriaux_eco_communalism]]
-- [[frente_sert_o_livre_eco_communalism]]
+- [[frente_sertao_livre_eco_communalism]]
 - [[guildes_de_mediateurs_ecologiques_eco_communalism]]
 - [[mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism]]
 - [[trame_bioclimatique_eco_communalism]]

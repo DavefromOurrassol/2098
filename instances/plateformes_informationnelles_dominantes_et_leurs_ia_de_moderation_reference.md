@@ -57,8 +57,6 @@ oppositions:
 type_relation_dominante: dépendance
 annee_debut: 2030
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -91,6 +89,9 @@ localisation:
   zone: null
   lieu: null
   type_lieu: infrastructure
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Plateformes Informationnelles Dominantes et leurs IA de Modération

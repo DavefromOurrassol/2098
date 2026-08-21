@@ -50,7 +50,7 @@ oppositions:
 - kalaallit_nunaat_sovereign_fund_fortress_world
 - nexcore_atlantique_infrastructure_fortress_world
 - pacte_forteresses_souveraines_fortress_world
-- rede_paulista_de_distribuic_o_algor_tmica_fortress_world
+- rede_paulista_de_distribuicao_algoritmica_fortress_world
 - reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world
 - siege_genevois_cars_fortress_world
 - tbilissi_nord_zone_franche_fortress_world
@@ -59,8 +59,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2046
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -95,6 +93,9 @@ localisation:
   zone: zones_grises_tampons
   lieu: Zones grises périphériques (Casablanca, Tbilissi-Nord, couloirs balkano-caucasiens)
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Collectifs de Réappropriation Énergétique Périphérique
@@ -139,7 +140,7 @@ Leur survie dépend de l'invisibilité, mais leur croissance exige une visibilit
 - [[kalaallit_nunaat_sovereign_fund_fortress_world]]
 - [[nexcore_atlantique_infrastructure_fortress_world]]
 - [[pacte_forteresses_souveraines_fortress_world]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_fortress_world]]
+- [[rede_paulista_de_distribuicao_algoritmica_fortress_world]]
 - [[reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world]]
 - [[siege_genevois_cars_fortress_world]]
 - [[tbilissi_nord_zone_franche_fortress_world]]

@@ -49,8 +49,6 @@ type_relation_dominante: coopération
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: marginal
 generation: reconstruction
 
 injection:
@@ -71,6 +69,9 @@ tensions_narratives: >
   La fédération est tiraillée entre sa vocation à tisser un récit commun et la tentation des nœuds les plus puissants de s'autonomiser en systèmes d'information locaux fermés. Certaines communautés accusent le protocole 'Trame' d'être lui-même un vecteur d'homogénéisation culturelle masquée. La question de la mémoire des territoires disparus — inondés, désertifiés, abandonnés — crée des frictions politiques vives : qui a le droit de raconter ce qui n'existe plus ? Enfin, des acteurs extérieurs tentent périodiquement de racheter ou d'infiltrer des nœuds stratégiques pour accéder à des données environnementales rares.
 
 date_creation: 2026-06-15
+trajectoire: marginal
+est_clandestin: false
+
 ---
 
 # Mémoire des Terres

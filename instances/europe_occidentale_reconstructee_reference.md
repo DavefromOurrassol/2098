@@ -65,8 +65,6 @@ type_relation_dominante: dépendance
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: déclinant
 generation: reconstruction
 
 injection:
@@ -87,6 +85,9 @@ tensions_narratives: >
   L'UOC est prise en étau entre des États membres qui lui délèguent leurs problèmes migratoires sans lui en donner les moyens, et des blocs souverainistes qui instrumentalisent chaque décision technocratique comme preuve de sa déconnexion populaire. Sa capacité à maintenir les normes commerciales est menacée par la montée des accords bilatéraux directs que certains membres négocient en parallèle avec le Bloc Eurasien Central. Enfin, la question de sa propre légitimité constitutionnelle — jamais résolue depuis sa fondation — pourrait resurfaces violemment si une crise migratoire majeure ou une rupture énergétique forçait une prise de décision d'urgence qu'aucun mandat démocratique ne couvrirait.
 
 date_creation: 2026-06-27
+trajectoire: déclinant
+est_clandestin: false
+
 ---
 
 # Union Occidentale de Coordination (UOC)

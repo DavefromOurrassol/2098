@@ -37,8 +37,6 @@ oppositions: []
 type_relation_dominante: coopération
 annee_debut: 2082
 annee_fin:
-etat_temporel: actif
-age_historique: ascendant
 generation: reconstruction
 injection:
   type: canonique
@@ -62,6 +60,9 @@ tensions_narratives: >
   mieux garder oral. Tension entre la préservation de la mémoire et la
   protection de la vie privée communautaire.
 date_creation: 2098-01-01
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Mele Tupou

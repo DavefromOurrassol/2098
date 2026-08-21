@@ -48,12 +48,10 @@ oppositions:
 - conseil_moscou_est_fortress_world
 - directive_kontinuum_fortress_world
 - pacte_forteresses_souveraines_fortress_world
-- rede_paulista_de_distribuic_o_algor_tmica_fortress_world
+- rede_paulista_de_distribuicao_algoritmica_fortress_world
 type_relation_dominante: conflit
 annee_debut: 2061
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -91,6 +89,9 @@ localisation:
   zone: zones_grises_tampons
   lieu: Multiples zones grises et tampons (Casablanca-Périphérie, Tbilissi-Nord, Balkans)
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Dissidences Internes aux Blocs Minoritaires
@@ -133,7 +134,7 @@ Ces dissidences sont écartelées entre la nécessité de s'allier ponctuellemen
 - [[conseil_moscou_est_fortress_world]]
 - [[directive_kontinuum_fortress_world]]
 - [[pacte_forteresses_souveraines_fortress_world]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_fortress_world]]
+- [[rede_paulista_de_distribuicao_algoritmica_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

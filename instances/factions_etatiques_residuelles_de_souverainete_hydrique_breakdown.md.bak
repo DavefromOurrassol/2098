@@ -4,6 +4,11 @@ type: instance
 slug: factions_etatiques_residuelles_de_souverainete_hydrique_breakdown
 entite: factions_etatiques_residuelles_de_souverainete_hydrique
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 statut: officialise_enrichi
 type_dans_scenario: organisation
 role_dans_scenario: Dans le scénario breakdown, ces factions incarnent la persistance
@@ -33,16 +38,19 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
+alliances:
+- factions_para_etatiques_hydriques_breakdown
 oppositions:
-- grandes_lacs_compact_eau_breakdown
+- amara_diallo_nkosi_breakdown
 - autorite_passage_arctique_breakdown
 - communes_rust_belt_breakdown
+- delta_mekong_racines_breakdown
+- factions_secessionnistes_agrariennes_du_desert_breakdown
+- grandes_lacs_compact_eau_breakdown
+- reseau_logistique_criminel_concurrent_breakdown
 type_relation_dominante: conflit
-annee_debut: 2026
+annee_debut: 2043
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -74,10 +82,9 @@ tensions_narratives: 'La contradiction fondamentale de ces factions réside dans
   État souverain distribuant l''eau par quotas militarisés à des réfugiés climatiques
   est devenue l''un des symboles les plus chargés de la fragmentation systémique.'
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: null
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Factions Étatiques Résiduelles de Souveraineté Hydrique
@@ -102,11 +109,18 @@ La contradiction fondamentale de ces factions réside dans le fait qu'elles reve
 - [[gouvernance_institutions]]
 - [[energie_ressources_critiques]]
 
+
 ## Relations
+**Alliés :**
+- [[factions_para_etatiques_hydriques_breakdown]]
 **Opposants :**
-- [[grandes_lacs_compact_eau_breakdown]]
+- [[amara_diallo_nkosi_breakdown]]
 - [[autorite_passage_arctique_breakdown]]
 - [[communes_rust_belt_breakdown]]
+- [[delta_mekong_racines_breakdown]]
+- [[factions_secessionnistes_agrariennes_du_desert_breakdown]]
+- [[grandes_lacs_compact_eau_breakdown]]
+- [[reseau_logistique_criminel_concurrent_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

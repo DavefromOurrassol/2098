@@ -79,6 +79,13 @@ from pathlib import Path
 import yaml
 
 from llm_client import call_llm
+# _read_registre_text() et detect_registre_leakage() importées depuis le
+# module partagé plutôt que dupliquées localement — correctif du 14 août
+# 2026 (point de vigilance backlog Partie 2 : les deux copies avaient déjà
+# dérivé cosmétiquement, sans effet fonctionnel à ce jour, mais même
+# pattern de duplication qui avait causé de vraies divergences avant la
+# factorisation de juillet/août dans instance_generation_common.py).
+from instance_generation_common import detect_registre_leakage, _read_registre_text
 
 # ---------------------------------------------------------------------------
 # Configuration (mêmes conventions que fix_alliances_oppositions.py)
@@ -123,15 +130,9 @@ TRANSIENT_BACKOFF_SECONDS = 5
 # format de parsing que get_registre_excerpt_for_variables() dans
 # inject_custom_events.py/inject_custom_signals.py (colonnes : type | date
 # | source | variable(s) | pilote | evenement_cle).
-
-_registre_cache = None
-
-
-def _read_registre_text():
-    global _registre_cache
-    if _registre_cache is None:
-        _registre_cache = REGISTRE_PATH.read_text(encoding="utf-8") if REGISTRE_PATH.exists() else ""
-    return _registre_cache
+#
+# _read_registre_text() vit désormais dans instance_generation_common.py
+# (importée en tête de fichier) — plus de cache local ici.
 
 
 def _parse_registre_table(scen_body):
@@ -513,61 +514,9 @@ def call_llm_json_resilient(system, user_content, max_tokens=400):
     raise RuntimeError(f"Panne API persistante après {TRANSIENT_RETRIES} tentatives : {last_error}")
 
 
-def _normalize_for_matching(text):
-    """Normalise un texte pour la comparaison n-gram : minuscules, retire
-    la ponctuation, espaces multiples réduits à un seul."""
-    text = text.lower()
-    text = re.sub(r"[^\w\s]", " ", text, flags=re.UNICODE)
-    text = re.sub(r"\s+", " ", text).strip()
-    return text
-
-
-def detect_registre_leakage(ancrage_reel_text, min_shingle=6):
-    """
-    Détecte si ancrage_reel recopie (même reformulé légèrement) un jalon de
-    la CHRONOLOGIE RÉELLE DU SCÉNARIO (fictive, malgré son nom) plutôt que
-    de citer un fait authentique de l'ÉTAT DU MONDE RÉEL. Ajouté le 8 août
-    2026 : la consigne en prose seule ne suffisait pas — testé en
-    conditions réelles par David sur la fiche AMMC, le LLM continuait de
-    recycler le nom du jalon fictif ("Traité mondial sur l'eau et la
-    sécurité hydrique") sous une justification habillée pour paraître
-    réelle, malgré un avertissement explicite dans le prompt. Garde-fou
-    mécanique : recherche de séquences de 6 mots consécutifs identiques
-    entre ancrage_reel et le registre complet — un tel chevauchement est
-    hautement improbable par hasard, donc presque toujours révélateur
-    d'un jalon fictif recopié plutôt que d'un fait réel indépendamment
-    formulé. Seuil relevé de 4 à 6 mots le 8 août 2026 après un faux
-    positif réel : "de l'agence internationale" (4 mots) matchait à la
-    fois la vraie AIE (Agence Internationale de l'Énergie, citée
-    légitimement depuis l'ÉTAT DU MONDE RÉEL) et un jalon fictif
-    totalement différent ("Agence Internationale de la Fusion", 2045,
-    registre new_sustainability) — 6 mots réduit ce risque de collision
-    sur des tournures administratives génériques.
-
-    Renvoie la séquence détectée (pour message d'erreur explicite), ou
-    None si aucun chevauchement suspect.
-    """
-    # Comparaison par TUPLES DE MOTS (pas de sous-chaîne de caractères) —
-    # correctif du 8 août 2026 : la version précédente (recherche de
-    # sous-chaîne sur texte joint par espaces) produisait un faux positif
-    # sur la vraie AIE ("...internationale de l'Énergie") à cause d'un
-    # chevauchement de CARACTÈRES avec un jalon fictif sans rapport
-    # ("...internationale de la Fusion") — "de l" est un préfixe littéral
-    # de "de la", donc matchait à tort même si "l" et "la" sont deux mots
-    # différents. La comparaison par tuples élimine structurellement ce
-    # type de faux positif : deux séquences ne matchent que si TOUS leurs
-    # mots sont identiques un par un, jamais par chevauchement partiel.
-    registre_words = _normalize_for_matching(_read_registre_text()).split()
-    registre_shingles = set()
-    for i in range(len(registre_words) - min_shingle + 1):
-        registre_shingles.add(tuple(registre_words[i:i + min_shingle]))
-
-    ancrage_words = _normalize_for_matching(ancrage_reel_text).split()
-    for i in range(len(ancrage_words) - min_shingle + 1):
-        shingle = tuple(ancrage_words[i:i + min_shingle])
-        if shingle in registre_shingles:
-            return " ".join(shingle)
-    return None
+# _normalize_for_matching() et detect_registre_leakage() vivent désormais
+# dans instance_generation_common.py (importée en tête de fichier) — plus
+# de copie locale ici. Comportement inchangé, seul l'appelant a changé.
 
 
 def validate_targeted(data):

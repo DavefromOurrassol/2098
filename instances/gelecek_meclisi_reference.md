@@ -1,0 +1,99 @@
+---
+name: gelecek_meclisi_reference
+type: instance
+slug: gelecek_meclisi_reference
+entite: gelecek_meclisi
+scenario: reference
+localisation:
+  zone:
+  lieu:
+  type_lieu:
+  note: transnationale_sans_ancrage
+type_dans_scenario: hybride
+role_dans_scenario: |
+  Assemblée délibérative et coordinatrice émergente, née de la fragmentation des institutions traditionnelles et de la nécessité de concilier des visions du futur divergentes. Elle agit comme un espace de négociation entre acteurs étatiques résiduels, mégapoles autonomes, consortiums technologiques et mouvements sociaux, cherchant à éviter l'effondrement systémique ou à en gérer les conséquences. Son rôle est à la fois symbolique (légitimation de compromis fragiles) et opérationnel (cadre pour des actions collectives limitées mais critiques).
+responsabilites: |
+  1) Faciliter des accords sectoriels entre blocs souverains et acteurs non-étatiques (ex : régulation hydrique, partage des données climatiques, corridors logistiques arctiques). 2) Produire des scénarios de résilience territoriale en collaboration avec les Observatoires Climatiques des Territoires (OCT) et les plateformes d'optimisation territoriale par IA. 3) Légitimer des initiatives locales ou régionales en leur offrant une visibilité globale, sans prétendre à une autorité centrale. 4) Servir de médiateur dans les conflits liés aux ressources critiques (terres rares, énergie, eau) entre consortiums privés et États souverains.
+impact_local: 3
+impact_systemique_global: 4
+variables_influencees:
+  - gouvernance_institutions
+  - valeurs_culture_tempo_sociale
+  - technologie_information
+  - systeme_economique_redistribution
+zone_geographique:
+  - continentale
+  - globale
+zone_systemique:
+  - gouvernance
+  - information
+  - économie
+alliances:
+  - confederation_des_megapoles_autonomes_reference
+  - agence_internationale_des_energies_renouvelables_irena_2_reference
+  - agence_stabilisation_climatique_reference
+  - collectifs_academiques_independants_reference
+  - reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference
+  - observatoire_climatique_des_territoires_oct_reference
+  - plateformes_d_optimisation_territoriale_par_ia_reference
+oppositions:
+  - alliance_blocs_souverains_reference
+  - consortium_des_grandes_plateformes_ia_integrees_reference
+  - bloc_des_souverainistes_climatiques_reference
+  - lobbies_agro_industriels_a_haute_consommation_d_eau_reference
+  - milices_concurrentes_des_droits_de_passage_reference
+type_relation_dominante: coopération
+annee_debut: 2047
+annee_fin:
+trajectoire: ascendant
+est_clandestin: false
+generation: reconstruction
+injection:
+  type: custom
+  annee_injection: 2047
+  contexte_injection: |
+    Le Gelecek Meclisi agit comme un catalyseur de gouvernance hybride dans un système en fragmentation, en créant des cadres de coopération là où les institutions traditionnelles ont échoué. Son impact sur 'gouvernance_institutions' reflète sa capacité à agréger des légitimités disparates et à produire des accords sectoriels, même limités. Sur 'valeurs_culture_tempo_sociale', il influence la perception du temps social en promouvant une vision du futur comme espace de négociation plutôt que de conflit. Enfin, son rôle dans la modération des scénarios d'IA territoriaux en fait un acteur clé de 'technologie_information', bien que son influence reste contestée par les plateformes centralisées.
+  impact_sur_variables:
+    - variable: gouvernance_institutions
+      delta_level: 15
+      duree: 20
+      polarite: 1
+    - variable: valeurs_culture_tempo_sociale
+      delta_level: 10
+      duree: 15
+      polarite: 1
+    - variable: technologie_information
+      delta_level: 8
+      duree: 10
+      polarite: 1
+  propagation:
+    via_matrice: true
+description_journalistique: "Le *Gelecek Meclisi* (littéralement 'Assemblée du Futur' en turc, langue choisie pour son statut de pont entre l'Europe et l'Asie) est devenu en 2098 l'un des rares espaces où mégapoles autonomes, États résiduels et consortiums technologiques acceptent encore de se parler. Né dans le chaos des années 2040, après l'effondrement des dernières tentatives de gouvernance multilatérale classique, il incarne une forme de diplomatie post-institutionnelle : pas de siège fixe (ses sessions tournent entre Istanbul, Nairobi, et Singapour Est), pas de vote contraignant, mais une capacité à agréger des fragments de légitimité pour des accords sectoriels. Ses 'scénarios de résilience' sont devenus des références obligées pour les plateformes d'IA qui optimisent les territoires, même si personne ne sait vraiment qui les applique. Certains y voient une utopie, d'autres un cache-misère pour un monde en décomposition lente."
+signes_distinctifs: "1) Un logo minimaliste : une spirale fractale en dégradé de bleu et vert, symbolisant la convergence de trajectoires divergentes. 2) Des sessions retransmises en direct via des réseaux mesh locaux (pour contourner les plateformes centralisées), avec des interprètes en temps réel utilisant des IA open-source. 3) Une esthétique sobre et modulaire : mobilier recyclé, écrans low-tech affichant des données en temps réel sur les ressources critiques, et une absence totale de drapeaux nationaux (remplacés par des codes couleurs territoriaux). 4) Un protocole de délibération inspiré des assemblées citoyennes islandaises, mais adapté aux contraintes du XXIe siècle : tours de parole chronométrés par IA, modération algorithmique des conflits, et votes pondérés par l'urgence climatique des territoires représentés."
+tensions_narratives: "1) **Légitimité vs. Efficacité** : Le Meclisi est régulièrement critiqué pour son incapacité à imposer des décisions, mais ses défenseurs arguent que dans un monde fragmenté, la légitimité prime sur l'efficacité. 2) **Technologie vs. Souveraineté** : Les consortiums IA voient en lui un outil de légitimation de leurs scénarios d'optimisation territoriale, tandis que les blocs souverains le soupçonnent de servir de cheval de Troie pour une gouvernance algorithmique. 3) **Urgence climatique vs. Justice sociale** : Ses scénarios de résilience privilégient souvent les mégapoles côtières adaptées, au détriment des zones rurales ou des territoires en déclin, creusant les inégalités. 4) **Clandestinité vs. Transparence** : Certains acteurs (comme les collectifs de biopiraterie inversée) refusent de participer aux sessions officielles, préférant des négociations parallèles dans l'ombre."
+date_creation: 2026-08-16
+---
+
+# gelecek_meclisi_reference
+
+## Rôle dans [[reference]]
+Assemblée délibérative et coordinatrice émergente, née de la fragmentation des institutions traditionnelles et de la nécessité de concilier des visions du futur divergentes. Elle agit comme un espace de négociation entre acteurs étatiques résiduels, mégapoles autonomes, consortiums technologiques et mouvements sociaux, cherchant à éviter l'effondrement systémique ou à en gérer les conséquences. Son rôle est à la fois symbolique (légitimation de compromis fragiles) et opérationnel (cadre pour des actions collectives limitées mais critiques).
+
+## Responsabilités
+1) Faciliter des accords sectoriels entre blocs souverains et acteurs non-étatiques (ex : régulation hydrique, partage des données climatiques, corridors logistiques arctiques). 2) Produire des scénarios de résilience territoriale en collaboration avec les Observatoires Climatiques des Territoires (OCT) et les plateformes d'optimisation territoriale par IA. 3) Légitimer des initiatives locales ou régionales en leur offrant une visibilité globale, sans prétendre à une autorité centrale. 4) Servir de médiateur dans les conflits liés aux ressources critiques (terres rares, énergie, eau) entre consortiums privés et États souverains.
+
+## Variables influencées
+- [[gouvernance_institutions]]
+- [[valeurs_culture_tempo_sociale]]
+- [[technologie_information]]
+- [[systeme_economique_redistribution]]
+
+## Relations
+**Alliés** : [[confederation_des_megapoles_autonomes_reference]], [[agence_internationale_des_energies_renouvelables_irena_2_reference]], [[agence_stabilisation_climatique_reference]], [[collectifs_academiques_independants_reference]], [[reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference]], [[observatoire_climatique_des_territoires_oct_reference]], [[plateformes_d_optimisation_territoriale_par_ia_reference]]
+**Opposants** : [[alliance_blocs_souverains_reference]], [[consortium_des_grandes_plateformes_ia_integrees_reference]], [[bloc_des_souverainistes_climatiques_reference]], [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]], [[milices_concurrentes_des_droits_de_passage_reference]]
+
+## Description journalistique
+Le *Gelecek Meclisi* (littéralement 'Assemblée du Futur' en turc, langue choisie pour son statut de pont entre l'Europe et l'Asie) est devenu en 2098 l'un des rares espaces où mégapoles autonomes, États résiduels et consortiums technologiques acceptent encore de se parler. Né dans le chaos des années 2040, après l'effondrement des dernières tentatives de gouvernance multilatérale classique, il incarne une forme de diplomatie post-institutionnelle : pas de siège fixe (ses sessions tournent entre Istanbul, Nairobi, et Singapour Est), pas de vote contraignant, mais une capacité à agréger des fragments de légitimité pour des accords sectoriels. Ses 'scénarios de résilience' sont devenus des références obligées pour les plateformes d'IA qui optimisent les territoires, même si personne ne sait vraiment qui les applique. Certains y voient une utopie, d'autres un cache-misère pour un monde en décomposition lente.
+
+## Tensions narratives
+1) **Légitimité vs. Efficacité** : Le Meclisi est régulièrement critiqué pour son incapacité à imposer des décisions, mais ses défenseurs arguent que dans un monde fragmenté, la légitimité prime sur l'efficacité. 2) **Technologie vs. Souveraineté** : Les consortiums IA voient en lui un outil de légitimation de leurs scénarios d'optimisation territoriale, tandis que les blocs souverains le soupçonnent de servir de cheval de Troie pour une gouvernance algorithmique. 3) **Urgence climatique vs. Justice sociale** : Ses scénarios de résilience privilégient souvent les mégapoles côtières adaptées, au détriment des zones rurales ou des territoires en déclin, creusant les inégalités. 4) **Clandestinité vs. Transparence** : Certains acteurs (comme les collectifs de biopiraterie inversée) refusent de participer aux sessions officielles, préférant des négociations parallèles dans l'ombre.

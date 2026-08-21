@@ -41,7 +41,7 @@ alliances:
 - lyon_metropole_reference
 - neuroharmonics_reference
 - observatoire_climatique_des_territoires_oct_reference
-- rede_paulista_de_distribuic_o_algor_tmica_reference
+- rede_paulista_de_distribuicao_algoritmica_reference
 - terrametrics_reference
 oppositions:
 - administrations_hybrides_des_cites_relais_peripheriques_reference
@@ -62,8 +62,6 @@ oppositions:
 type_relation_dominante: dépendance
 annee_debut: 2032
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -96,6 +94,9 @@ localisation:
   zone: null
   lieu: null
   type_lieu: infrastructure
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Plateformes d'Optimisation Territoriale par IA
@@ -132,7 +133,7 @@ La tension centrale oppose l'efficacité mesurable de ces systèmes — réducti
 - [[lyon_metropole_reference]]
 - [[neuroharmonics_reference]]
 - [[observatoire_climatique_des_territoires_oct_reference]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_reference]]
+- [[rede_paulista_de_distribuicao_algoritmica_reference]]
 - [[terrametrics_reference]]
 **Opposants :**
 - [[administrations_hybrides_des_cites_relais_peripheriques_reference]]

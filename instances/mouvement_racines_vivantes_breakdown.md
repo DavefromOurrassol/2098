@@ -39,7 +39,7 @@ alliances:
 - communautes_rurales_autonomes_breakdown
 - consortium_amazonia_viva_breakdown
 - delta_mekong_racines_breakdown
-- frente_sert_o_livre_breakdown
+- frente_sertao_livre_breakdown
 - internationale_des_semenciers_agro_pirates_fortress_world
 - massif_central_cicatrices_vertes_breakdown
 - occitanie_racines_meres_breakdown
@@ -54,10 +54,8 @@ oppositions:
 type_relation_dominante: conflit
 
 annee_debut: 2041
-annee_fin: 
+annee_fin: 2057
 
-etat_temporel: transformé
-age_historique: résiduel
 generation: post-effondrement
 
 injection:
@@ -78,6 +76,9 @@ tensions_narratives: >
   La fracture entre les branches 'ouvertes' — accueillantes, échangistes, fondées sur la réciprocité — et les branches 'closes' — autarciques, xénophobes, sacralisées — est la ligne de faille centrale du mouvement. Qui peut prétendre représenter l'héritage légitime des Racines ? La question de la transmission des savoirs pose un enjeu dramatique : faut-il les partager pour que l'humanité survive, ou les garder secrets pour protéger les communautés ? Enfin, certaines cellules commencent à nouer des alliances avec des technologies de captage d'eau ou de biologie synthétique, ce qui pourrait régénérer le mouvement ou le faire exploser de l'intérieur.
 
 date_creation: 2026-06-15
+trajectoire: transformé
+est_clandestin: false
+
 ---
 
 # Les Racines-Mères
@@ -106,7 +107,7 @@ La fracture entre les branches 'ouvertes' — accueillantes, échangistes, fond�
 - [[communautes_rurales_autonomes_breakdown]]
 - [[consortium_amazonia_viva_breakdown]]
 - [[delta_mekong_racines_breakdown]]
-- [[frente_sert_o_livre_breakdown]]
+- [[frente_sertao_livre_breakdown]]
 - [[internationale_des_semenciers_agro_pirates_fortress_world]]
 - [[massif_central_cicatrices_vertes_breakdown]]
 - [[occitanie_racines_meres_breakdown]]

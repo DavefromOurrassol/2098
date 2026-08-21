@@ -57,8 +57,6 @@ type_relation_dominante: dépendance
 annee_debut: 2032
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: transition
 
 injection:
@@ -79,6 +77,9 @@ tensions_narratives: >
   La montée des mouvements OpenSeed, qui revendiquent le droit à des semences non brevetées comme droit fondamental, pourrait forcer un premier vrai procès devant le Tribunal Climatique International — avec Nexus BioSyn en position d'accusé historique. Par ailleurs, la firme fait face à une bifurcation interne : une faction dirigeante souhaite ouvrir partiellement les brevets pour prévenir une régulation forcée, quand une autre mise sur l'accélération du verrouillage avant que les États ne retrouvent de la souveraineté biologique. En toile de fond, des rumeurs persistantes évoquent des 'clauses de dormance' intégrées aux semences de quatrième génération — une stérilisation programmable activable en cas de défaut de paiement de licence.
 
 date_creation: 2026-06-15
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Nexus BioSyn

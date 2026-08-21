@@ -1,0 +1,82 @@
+---
+name: Révolution du Travail Régénératif au Sahel Numérique
+type: event_instance
+slug: revolution_travail_sahel_numerique_policy_reform
+archetype: revolution_travail_sahel_numerique
+scenario: policy_reform
+type_evenement: political_social
+portee: regionale
+date: 2047
+date_label: été 2047
+impossible: false
+custom: true
+description: >
+  Sous un soleil de plomb, des paysans de la région de Tillabéri (Niger) et des membres des collectifs de biohackers agro-communautaires ont célébré ce matin le lancement officiel de la plateforme 'Travail Régénératif Sahel'. Alimentée par des micro-réseaux solaires, cette initiative open-source permet désormais à des milliers de familles d'échanger des heures de travail contre des crédits pour des kits de désalinisation solaire et des semences résistantes à la sécheresse. Les data centers locaux, autrefois réservés aux élites urbaines, se transforment en hubs de formation aux métiers de la maintenance écologique, attirant l'attention des observateurs de l'Agence Technocratique pour la Résilience Biosphérique (ATRB).
+consequences: >
+  Cette initiative marque un tournant dans la gouvernance locale des ressources critiques, offrant un modèle alternatif de résilience face aux crises hydriques et économiques. Elle inspire des répliques dans d'autres régions africaines, tout en suscitant des débats au sein des institutions globales sur la régulation des plateformes de travail communautaire et leur intégration dans les cadres technocratiques.
+realisation: >
+  Dans un contexte de réformes technocratiques mondiales et de tensions hydriques croissantes, la Ligue du Sahel Numérique (Dakar-Agadez) voit émerger une coalition inédite entre des collectifs de biohackers agro-communautaires et des collectifs de gouvernance communautaire décentralisée. Leur plateforme open-source de 'travail régénératif' contourne les systèmes de dette traditionnels en échangeant des heures de travail contre des crédits pour des outils solaires et des semences adaptées, sous le regard attentif des institutions globales.
+impact_sur_variables:
+  - variable: systemes_productifs_travail
+    delta_level: 12
+    duree: 15
+    polarite: 1
+  - variable: technologie_information
+    delta_level: 8
+    duree: 10
+    polarite: 1
+  - variable: energie_ressources_critiques
+    delta_level: 10
+    duree: 12
+    polarite: 1
+  - variable: gouvernance_institutions
+    delta_level: 5
+    duree: 8
+    polarite: 1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+    - collectifs_de_biohackers_agro_communautaires_policy_reform
+    - collectifs_de_gouvernance_communautaire_decentralisee_policy_reform
+    - agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
+    - collectifs_de_defense_hydrique_saheliens_policy_reform
+    - consortium_africain_de_biotechnologies_sociales_policy_reform
+    - bureau_international_du_travail_augmente_bita_policy_reform
+note_coherence: 'Cohérent avec le scénario ''policy_reform'' : intégration technocratique des initiatives
+  locales, tension entre gouvernance institutionnelle et autonomie communautaire,
+  et focalisation sur les ressources critiques (eau, énergie) dans un contexte de
+  transition accélérée.'
+custom_source: auto_generated_2026-08
+date_creation: 2026-08-13
+---
+
+# Révolution du Travail Régénératif au Sahel Numérique
+
+## Réalisation dans [[policy_reform]]
+Dans un contexte de réformes technocratiques mondiales et de tensions hydriques croissantes, la Ligue du Sahel Numérique (Dakar-Agadez) voit émerger une coalition inédite entre des collectifs de biohackers agro-communautaires et des collectifs de gouvernance communautaire décentralisée. Leur plateforme open-source de 'travail régénératif' contourne les systèmes de dette traditionnels en échangeant des heures de travail contre des crédits pour des outils solaires et des semences adaptées, sous le regard attentif des institutions globales.
+
+## Description journalistique
+Sous un soleil de plomb, des paysans de la région de Tillabéri (Niger) et des membres des collectifs de biohackers agro-communautaires ont célébré ce matin le lancement officiel de la plateforme 'Travail Régénératif Sahel'. Alimentée par des micro-réseaux solaires, cette initiative open-source permet désormais à des milliers de familles d'échanger des heures de travail contre des crédits pour des kits de désalinisation solaire et des semences résistantes à la sécheresse. Les data centers locaux, autrefois réservés aux élites urbaines, se transforment en hubs de formation aux métiers de la maintenance écologique, attirant l'attention des observateurs de l'Agence Technocratique pour la Résilience Biosphérique (ATRB).
+
+## Conséquences
+Cette initiative marque un tournant dans la gouvernance locale des ressources critiques, offrant un modèle alternatif de résilience face aux crises hydriques et économiques. Elle inspire des répliques dans d'autres régions africaines, tout en suscitant des débats au sein des institutions globales sur la régulation des plateformes de travail communautaire et leur intégration dans les cadres technocratiques.
+
+## Impact sur les variables
+- **systemes_productifs_travail** : delta +12 sur 15 ans
+- **technologie_information** : delta +8 sur 10 ans
+- **energie_ressources_critiques** : delta +10 sur 12 ans
+- **gouvernance_institutions** : delta +5 sur 8 ans
+
+## Acteurs impliqués
+- [[collectifs_de_biohackers_agro_communautaires_policy_reform]]
+- [[collectifs_de_gouvernance_communautaire_decentralisee_policy_reform]]
+- [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]
+- [[collectifs_de_defense_hydrique_saheliens_policy_reform]]
+- [[consortium_africain_de_biotechnologies_sociales_policy_reform]]
+- [[bureau_international_du_travail_augmente_bita_policy_reform]]
+
+## Note de cohérence
+'Cohérent avec le scénario ''policy_reform'' : intégration technocratique des initiatives
+  locales, tension entre gouvernance institutionnelle et autonomie communautaire,
+  et focalisation sur les ressources critiques (eau, énergie) dans un contexte de
+  transition accélérée.'

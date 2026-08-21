@@ -61,8 +61,6 @@ type_relation_dominante: dépendance
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: transition
 
 injection:
@@ -83,6 +81,9 @@ tensions_narratives: >
   L'ALN maintient un équilibre précaire entre blocs qui la tolèrent faute de mieux, mais toute rupture diplomatique majeure pourrait la transformer en cible ou en enjeu d'une guerre logistique froide. Sa gouvernance para-étatique — ni totalement privée, ni souveraine — est contestée par les nouvelles puissances arctiques réclamant une renégociation des accords fondateurs de 2031. En interne, la montée en puissance de ses IA de routage autonome crée une friction croissante avec les États nordiques actionnaires, qui craignent de perdre la main sur un actif devenu trop critique pour être laissé aux algorithmes.
 
 date_creation: 2026-06-15
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Armada Logistique Nordique

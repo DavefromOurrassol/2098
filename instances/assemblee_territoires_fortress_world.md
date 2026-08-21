@@ -41,8 +41,6 @@ oppositions:
 type_relation_dominante: alliance stratégique
 annee_debut: 2050
 annee_fin:
-etat_temporel: actif
-age_historique: mature
 generation: forteresse
 injection:
   type: canonique
@@ -66,6 +64,9 @@ tensions_narratives: >
   depuis 2091. Certains délégués auraient demandé une révision —
   aucune suite connue.
 date_creation: 2098-01-01
+trajectoire: mature
+est_clandestin: false
+
 ---
 
 # Chambre de Sécurité Territoriale

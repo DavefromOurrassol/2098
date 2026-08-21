@@ -66,14 +66,12 @@ oppositions:
 - operateurs_de_fusion_energetique_regionaux_new_sustainability
 - oracle_des_seuils_new_sustainability
 - parlement_territoires_nairobi_new_sustainability
-- rede_paulista_de_distribuic_o_algor_tmica_new_sustainability
+- rede_paulista_de_distribuicao_algoritmica_new_sustainability
 - tribunal_algorithmique_de_bruxelles_new_sustainability
 - tribunal_gouvernance_algorithmique_bruxelles_new_sustainability
 type_relation_dominante: conflit
 annee_debut: 2062
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -107,6 +105,9 @@ localisation:
   zone: null
   lieu: null
   type_lieu: null
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Coalition Anti-Algorithme des Autonomies Locales
@@ -169,7 +170,7 @@ La contradiction fondamentale qui ronge la Coalition est d'ordre existentiel : p
 - [[operateurs_de_fusion_energetique_regionaux_new_sustainability]]
 - [[oracle_des_seuils_new_sustainability]]
 - [[parlement_territoires_nairobi_new_sustainability]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_new_sustainability]]
+- [[rede_paulista_de_distribuicao_algoritmica_new_sustainability]]
 - [[tribunal_algorithmique_de_bruxelles_new_sustainability]]
 - [[tribunal_gouvernance_algorithmique_bruxelles_new_sustainability]]
 

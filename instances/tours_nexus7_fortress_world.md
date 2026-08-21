@@ -62,8 +62,6 @@ type_relation_dominante: symbiose
 annee_debut: 2038
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: forteresse
 
 injection:
@@ -84,6 +82,9 @@ tensions_narratives: >
   Les blocs souverains exigent de plus en plus l'intégration des tours dans leurs systèmes de surveillance nationale, menaçant l'indépendance contractuelle qui fait la valeur du produit Nexus7 — la corporation résiste, mais jusqu'où ? Des réseaux de passeurs ont percé plusieurs sas périphériques dans les complexes de Lagos-Nord et de São Paulo-Centre, introduisant des résidents non accrédités dont certains ont disparu sans trace dans les registres internes. Enfin, des factions internes à Nexus7 débattent en secret d'une sécession totale — transformer l'archipel en entité politique souveraine supranationale, dernier produit premium dans un monde où la souveraineté elle-même est à vendre.
 
 date_creation: 2026-06-27
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Tours Nexus7 — Archipel des Forteresses Résiduelles

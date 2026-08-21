@@ -94,8 +94,6 @@ type_relation_dominante: neutralité
 annee_debut: 2040
 annee_fin: 
 
-etat_temporel: actif
-age_historique: déclinant
 generation: transition
 
 injection:
@@ -116,6 +114,9 @@ tensions_narratives: >
   Le RGMS est pris en étau entre deux logiques qui se renforcent mutuellement : plus il cède aux souverainetés pour rester dans la négociation, plus il perd l'autorité morale qui justifiait sa présence à la table ; plus il tente de résister, plus les blocs menacent de créer des forums parallèles. La question de son financement est une bombe à retardement : les États contributeurs réduisent leurs dotations au rythme de leurs replis nationalistes, laissant un vide que les fondations privées et les consortiums s'offrent à combler — au prix d'une dépendance qui corrodera ce qui reste de neutralité institutionnelle. Et si, paradoxalement, c'est l'escalade d'une crise majeure — climatique, énergétique ou militaire — qui lui redonne une pertinence aiguë, la question se pose : une institution conçue pour l'universel peut-elle survivre en n'étant utile qu'en état d'urgence ?
 
 date_creation: 2026-06-27
+trajectoire: déclinant
+est_clandestin: false
+
 ---
 
 # Réseau de Gouvernance Multilatérale Survivant (RGMS)

@@ -2,7 +2,7 @@
 name: Collectifs du Seuil
 type: entity
 slug: collectifs_du_seuil
-category: mouvement
+category: organisation
 description: >
   Constellation de communautés millénarsites croyant en l'imminence d'un effondrement final salutaire et organisant leur survie dans des enclaves ritualisées. Présents dans les zones grises de tous les scénarios de tension.
 tension_fondamentale: >

@@ -52,8 +52,6 @@ type_relation_dominante: coopération
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: mature
 generation: ère cognitive
 
 injection:
@@ -74,6 +72,9 @@ tensions_narratives: >
   La fracture interne entre les 'intégrateurs' — favorables à la négociation permanente dans les structures technocratiques — et les 'dissidents du confort' qui accusent la Confédération d'avoir légitimé l'optimisation en l'encadrant sans la questionner. La question du Fonds de Réversibilité, dont les demandes augmentent chaque année, révèle une souffrance augmentée que les Chartes n'ont pas résolue. Enfin, la tentation pour certains États membres de contourner la CMTCA au profit de régulations nationales plus permissives crée des brèches dans la cohérence globale durement construite.
 
 date_creation: 2026-06-15
+trajectoire: mature
+est_clandestin: false
+
 ---
 
 # Confédération Mondiale des Travailleurs Cognitifs et Augmentés

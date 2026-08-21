@@ -55,8 +55,6 @@ oppositions:
 type_relation_dominante: dépendance
 annee_debut: 2047
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -96,6 +94,9 @@ localisation:
   zone: ourrassol_centre_nexus7
   lieu: Ourrassol-Centre (Nexus-7)
   type_lieu: infrastructure
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Consortiums Énergétiques du Bloc Ourrassol

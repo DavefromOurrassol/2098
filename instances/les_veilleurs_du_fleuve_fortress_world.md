@@ -54,8 +54,6 @@ type_relation_dominante: symbiose
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: clandestin
-age_historique: ascendant
 generation: post-effondrement
 
 injection:
@@ -76,6 +74,9 @@ tensions_narratives: >
   Les Gardiens sont tiraillés entre leur besoin de discrétion et la nécessité de se structurer pour peser face aux blocs. Certains groupes prônent une alliance plus poussée avec les Coalitions des Déplacés, tandis que d'autres craignent une récupération par les réseaux de contrebande. Leur plus grand défi reste la transmission des savoirs : comment former de nouveaux gardiens sans attirer l'attention des agences de sécurité ? Leur existence même pose une question explosive : que se passerait-il si les blocs découvraient l'ampleur de leur réseau ?
 
 date_creation: 2026-07-11
+trajectoire: ascendant
+est_clandestin: true
+
 ---
 
 # Les Gardiens des Veines Oubliées

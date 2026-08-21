@@ -374,26 +374,6 @@
     ]
   },
   {
-    "nom": "Le Cartographe Silencieux",
-    "slug": "le_cartographe_silencieux",
-    "categorie": "humain",
-    "description": "Le Cartographe Silencieux est l'archétype de celui qui détient la connaissance des espaces invisibles — les zones grises, les territoires oubliés, les marges que le pouvoir officiel ne peut plus ou ne veut plus nommer. Ancien serviteur d'un ordre établi, il a retourné ses compétences cartographiques et analytiques en capital privé, opérant dans l'ombre des institutions défaillantes. Il est à la fois témoin lucide et acteur ambigu : son savoir est précieux précisément parce qu'il révèle ce que les cartes officielles dissimulent, mais il le vend au plus offrant, faisant de la connaissance un instrument de pouvoir désincarné de toute loyauté. Il incarne le passage de l'agent d'État au prestataire de l'opacité — l'expert qui survit à l'effondrement des systèmes en monétisant ce que les systèmes laissent dans l'ombre.",
-    "tension_fondamentale": "La connaissance des marges comme service public ou comme marchandise stratégique : celui qui cartographie les angles morts du monde détient un pouvoir de révélation ou d'occultation, et le choix de le vendre plutôt que de le partager fait de la vérité elle-même un actif au service du plus fort.",
-    "variables_potentielles": [
-      "organisation_territoires",
-      "geopolitique_conflits",
-      "technologie_information"
-    ],
-    "scenarios": [
-      "breakdown",
-      "fortress_world",
-      "new_sustainability",
-      "eco_communalism",
-      "policy_reform",
-      "reference"
-    ]
-  },
-  {
     "nom": "Réseau des Marchés Noirs de Données Extractivistes",
     "slug": "reseau_des_marches_noirs_de_donnees_extractivistes",
     "categorie": "réseau",
@@ -7323,7 +7303,7 @@
   },
   {
     "nom": "Rede Paulista de Distribuição Algorítmica",
-    "slug": "rede_paulista_de_distribuic_o_algor_tmica",
+    "slug": "rede_paulista_de_distribuicao_algoritmica",
     "categorie": "système",
     "description": "Un système d'allocation algorithmique des ressources vitales à l'échelle métropolitaine — eau, énergie, logement, mobilité — géré par une intelligence artificielle dont les paramètres de décision concentrent un pouvoir immense sur la vie quotidienne de millions d'habitants. Né d'une promesse d'optimisation rationnelle et équitable, il devient au fil du temps un dispositif de gouvernance opaque, dont les biais techniques cristallisent des inégalités structurelles. Symbole de la modernité technocratique dans les mégalopoles du Sud global, il est simultanément modèle exporté et terrain de contestation radicale. Il incarne la tension entre l'efficacité mesurable des machines et la légitimité politique des choix qu'elles encodent sans le dire.",
     "tension_fondamentale": "L'optimisation algorithmique des communs urbains promet l'équité par le calcul, mais encode silencieusement des hiérarchies politiques dans ses paramètres — la neutralité technique est une fiction qui redistribue le pouvoir sans délibération.",
@@ -7345,7 +7325,7 @@
   },
   {
     "nom": "Frente Sertão Livre",
-    "slug": "frente_sert_o_livre",
+    "slug": "frente_sertao_livre",
     "categorie": "réseau",
     "description": "Un réseau de communautés périphériques et marginalisées qui transforment leur vulnérabilité structurelle en force collective, s'organisant autour de ressources locales partagées — énergie, eau, terre, semences — pour bâtir une économie de la subsistance émancipée. Enraciné dans des territoires que les centres de pouvoir ont abandonnés ou pillés, ce type d'entité articule résistance active et construction patiente d'alternatives concrètes, refusant à la fois la dépendance aux structures globales et la logique de l'accumulation. Il incarne la possibilité que la marge devienne laboratoire, que le dénuement engendre l'invention, et que la solidarité horizontale entre pairs constitue une forme de gouvernance à part entière.",
     "tension_fondamentale": "La survie par l'autonomie radicale contre la tentation de l'intégration aux circuits dominants : ce réseau doit sans cesse arbitrer entre l'imperméabilité qui protège et l'ouverture qui renforce, entre la pureté de la rupture avec les pouvoirs établis et les compromis nécessaires à son expansion et à sa durabilité.",
@@ -7684,23 +7664,6 @@
     ],
     "scenarios": [
       "fortress_world"
-    ]
-  },
-  {
-    "nom": "Autorite Passage Arctique",
-    "slug": "autorite_passage_arctique",
-    "categorie": "institution",
-    "description": "L'Autorité du Passage Arctique est l'archétype de l'institution régulatrice héritée — née dans un monde stable pour gouverner un espace qui n'existait pas encore comme enjeu, et qui survit à sa propre obsolescence en se transformant en coquille disputée. Elle représente la désintégration des corps intermédiaires multilatéraux : ces structures qui, une fois privées de la puissance qui les soutenait, deviennent des coques vides où s'affrontent les factions qui espèrent récupérer leur mandat résiduel, leurs archives, leurs protocoles, leur droit à parler au nom de l'espace commun. Elle incarne moins la gouvernance que le fantôme de la gouvernance — et la lutte pour hériter de ce fantôme.",
-    "tension_fondamentale": "Une institution régulatrice héritée ne disparaît pas quand elle perd sa légitimité — elle devient une ressource à capturer : sa carcasse bureaucratique, ses accréditations résiduelles et ses archives de précédents juridiques valent encore assez pour que des factions rivales se la disputent, sans jamais la reconstruire.",
-    "variables_potentielles": [
-      "gouvernance_institutions",
-      "geopolitique_conflits",
-      "frontieres_du_systeme",
-      "energie_ressources_critiques",
-      "organisation_territoires"
-    ],
-    "scenarios": [
-      "breakdown"
     ]
   },
   {
@@ -9569,6 +9532,150 @@
     ],
     "scenarios": [
       "new_sustainability"
+    ]
+  },
+  {
+    "nom": "Consortium des Pêcheries Autonomes du Grand Nord",
+    "slug": "consortium_des_pecheries_autonomes_du_grand_nord",
+    "categorie": "organisation",
+    "description": "Une alliance décentralisée de communautés locales et d'acteurs indépendants qui gèrent collectivement une ressource naturelle critique, souvent située dans des zones frontalières ou marginales. Cette entité incarne la résistance à l'appropriation privée ou étatique des ressources, tout en négociant des accords durables avec des pouvoirs plus larges pour préserver leur autonomie et leur mode de vie. Elle représente une forme de gouvernance hybride, mêlant traditions locales, coopération pragmatique et adaptation aux contraintes géopolitiques et écologiques.",
+    "tension_fondamentale": "La contradiction entre l'autonomie locale et la nécessité de s'inscrire dans des cadres plus larges (géopolitiques, économiques ou écologiques) pour survivre, tout en résistant à la dilution de leur souveraineté ou à l'exploitation par des acteurs extérieurs.",
+    "variables_potentielles": [
+      "gouvernance_institutions",
+      "geopolitique_conflits",
+      "organisation_territoires",
+      "energie_ressources_critiques",
+      "valeurs_culture_tempo_sociale"
+    ],
+    "scenarios": [
+      "breakdown",
+      "fortress_world",
+      "new_sustainability",
+      "eco_communalism",
+      "policy_reform",
+      "reference"
+    ]
+  },
+  {
+    "nom": "Réseau des Cartographes des Zones Grises",
+    "slug": "reseau_des_cartographes_des_zones_grises",
+    "categorie": "réseau",
+    "description": "Un réseau clandestin de cartographes, hackers et experts marginaux qui documentent et rendent accessibles les connaissances sur les territoires abandonnés, contestés ou non gouvernés. Cette entité incarne la résistance par la production et la diffusion de savoirs critiques, souvent en dehors des cadres légaux ou institutionnels, pour servir les acteurs locaux, les contrebandiers ou les mouvements de survie. Elle représente la préservation de l'information comme acte de subversion et d'autonomie face à des systèmes de contrôle ou d'oubli.",
+    "tension_fondamentale": "La connaissance comme bien commun et outil d'émancipation contre la tentation de la marchandisation, de la capture par le pouvoir ou de l'instrumentalisation à des fins de contrôle. Son existence même questionne : qui a le droit de savoir, et qui décide de ce qui doit être su ?",
+    "variables_potentielles": [
+      "technologie_information",
+      "geopolitique_conflits",
+      "organisation_territoires",
+      "valeurs_culture_tempo_sociale"
+    ],
+    "scenarios": [
+      "breakdown",
+      "fortress_world",
+      "new_sustainability",
+      "eco_communalism",
+      "policy_reform",
+      "reference"
+    ]
+  },
+  {
+    "nom": "Agence de Régulation des Détroits Stratégiques (ARDS)",
+    "slug": "agence_de_regulation_des_detroits_strategiques_ards",
+    "categorie": "institution",
+    "description": "Institution archétypale chargée de réguler et sécuriser les points de passage stratégiques essentiels à la circulation des ressources critiques, des biens et des personnes. Elle incarne l'équilibre précaire entre souveraineté étatique, intérêts privés et bien commun global, en arbitrant les conflits et en garantissant une stabilité minimale dans un monde fragmenté. Son existence repose sur une légitimité technique et géopolitique, souvent contestée par ceux qu'elle exclut ou contraint.",
+    "tension_fondamentale": "La contradiction entre la nécessité d'une gouvernance centralisée pour assurer la fluidité des échanges vitaux et l'impératif de souveraineté locale ou sectorielle, qui remet en cause son autorité. Son pouvoir repose sur sa capacité à être à la fois neutre et indispensable, tout en étant perçue comme un outil de domination par ceux qui en dépendent.",
+    "variables_potentielles": [
+      "gouvernance_institutions",
+      "geopolitique_conflits",
+      "energie_ressources_critiques",
+      "organisation_territoires"
+    ],
+    "scenarios": [
+      "breakdown",
+      "fortress_world",
+      "new_sustainability",
+      "eco_communalism",
+      "policy_reform",
+      "reference"
+    ]
+  },
+  {
+    "nom": "Terminal Kharg Data Haven",
+    "slug": "terminal_kharg_data_haven",
+    "categorie": "infrastructure",
+    "description": "Une infrastructure offshore hybride, physiquement ancrée dans un territoire neutre ou contesté, qui sert simultanément de sanctuaire pour les données sensibles et de hub pour les échanges illicites. Elle incarne la porosité des frontières numériques et géopolitiques, offrant une plateforme où la préservation de l'information critique coexiste avec son exploitation commerciale ou stratégique. Son modèle repose sur une opacité calculée : elle se présente comme un espace neutre tout en tirant profit des asymétries de pouvoir et des failles réglementaires.",
+    "tension_fondamentale": "La survie par l'ambiguïté fonctionnelle — être un rempart contre la censure et l'oubli tout en alimentant les circuits de l'extraction et de la spéculation sur les données, sans jamais pouvoir trancher entre éthique et utilité.",
+    "variables_potentielles": [
+      "technologie_information",
+      "geopolitique_conflits",
+      "frontieres_du_systeme",
+      "gouvernance_institutions",
+      "systeme_economique_redistribution"
+    ],
+    "scenarios": [
+      "breakdown",
+      "fortress_world",
+      "new_sustainability",
+      "eco_communalism",
+      "policy_reform",
+      "reference"
+    ]
+  },
+  {
+    "nom": "Les Veilleurs des Nappes Phréatiques",
+    "slug": "les_veilleurs_des_nappes_phreatiques",
+    "categorie": "organisation",
+    "description": "Cette entité incarne un mouvement de surveillance et de protection communautaire des ressources naturelles vitales, organisé de manière décentralisée et ancré localement. Elle combine une approche low-tech et participative avec une résistance active contre les menaces extérieures (extraction illégale, pollution, accaparement). Son essence réside dans la défense collective d'un bien commun essentiel, souvent négligé ou exploité par des acteurs plus puissants, en s'appuyant sur des réseaux citoyens et des technologies accessibles.",
+    "tension_fondamentale": "La contradiction entre l'autonomie locale et la nécessité d'une coordination plus large pour peser face aux acteurs globaux ou étatiques, tout en évitant de reproduire les structures de pouvoir qu'elle combat.",
+    "variables_potentielles": [
+      "climat_environnement_global",
+      "organisation_territoires",
+      "systeme_economique_redistribution",
+      "valeurs_culture_tempo_sociale"
+    ],
+    "scenarios": [
+      "breakdown",
+      "fortress_world",
+      "new_sustainability",
+      "eco_communalism",
+      "policy_reform",
+      "reference"
+    ]
+  },
+  {
+    "nom": "Les Gardiens des Corridors Hybrides",
+    "slug": "les_gardiens_des_corridors_hybrides",
+    "categorie": "hybride",
+    "description": "Entité mi-humaine, mi-algorithmique chargée de la gestion et de la sécurisation des corridors logistiques critiques entre les blocs souverains. Composée d'équipes locales intégrant des opérateurs humains, des IA de surveillance et des milices privées, elle assure la fluidité des échanges tout en maintenant une opacité stratégique sur les flux réels. Son existence repose sur un équilibre précaire entre transparence opérationnelle (pour les partenaires) et secret absolu (pour les rivaux).",
+    "tension_fondamentale": "La neutralité apparente comme condition de survie contre la tentation de devenir un acteur géopolitique à part entière — comment rester un facilitateur indispensable sans basculer dans le contrôle ?",
+    "variables_potentielles": [
+      "geopolitique_conflits",
+      "organisation_territoires",
+      "energie_ressources_critiques",
+      "technologie_information"
+    ],
+    "scenarios": [
+      "fortress_world"
+    ]
+  },
+  {
+    "nom": "gelecek_meclisi",
+    "slug": "gelecek_meclisi",
+    "categorie": "hybride",
+    "description": "Une assemblée hybride émergente qui incarne la tentative de concilier des visions du futur divergentes au sein d'un système en fragmentation. Elle agit comme un espace de délibération et de coordination entre acteurs disparates (institutionnels, communautaires, technologiques), cherchant à articuler des logiques locales et globales, traditionnelles et innovantes, pour éviter l'effondrement ou en gérer les conséquences. Son essence réside dans sa capacité à agréger des fragments de légitimité et à proposer des cadres d'action collective malgré l'absence de consensus ou d'autorité centrale.",
+    "tension_fondamentale": "La contradiction entre la nécessité de construire un futur commun (par la planification, la régulation ou la vision partagée) et l'impossibilité de s'accorder sur les moyens ou les fins, dans un contexte où les institutions traditionnelles ont perdu leur monopole sur la légitimité. Cette entité oscille entre l'utopie d'une gouvernance inclusive et le risque de devenir un outil de légitimation pour des pouvoirs émergents ou des logiques préexistantes.",
+    "variables_potentielles": [
+      "gouvernance_institutions",
+      "valeurs_culture_tempo_sociale",
+      "technologie_information",
+      "organisation_territoires"
+    ],
+    "scenarios": [
+      "breakdown",
+      "fortress_world",
+      "new_sustainability",
+      "eco_communalism",
+      "policy_reform",
+      "reference"
     ]
   }
 ]

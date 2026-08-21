@@ -67,8 +67,6 @@ type_relation_dominante: dépendance
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: forteresse
 
 injection:
@@ -89,6 +87,9 @@ tensions_narratives: >
   La pression démographique des camps périphériques d'Almaty s'intensifie chaque saison sèche, et plusieurs tentatives d'intrusion organisées ont déjà mis à l'épreuve les systèmes de sécurité algorithmiques — soulevant la question de leur robustesse face à des tactiques collectives non anticipées. Par ailleurs, des dissidences internes émergent parmi les employés de maintenance et le personnel médical du Complexe, qui vivent dans une zone-tampon semi-intégrée aux conditions nettement inférieures à celles des résidents accrédités. Enfin, la dépendance du Complexe aux corridors logistiques eurasiatiques le rend vulnérable aux tensions géopolitiques régionales — une rupture d'approvisionnement en pièces critiques pourrait fragiliser les systèmes de filtration d'eau, révélant que même la forteresse n'est pas aussi autarcique qu'elle le prétend.
 
 date_creation: 2026-06-27
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Complexe Orentchev Almaty — Zone Résidentielle Souveraine

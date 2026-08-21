@@ -1,0 +1,10 @@
+============================================================
+AUDIT type_relation_dominante — 710 fiches scannées
+============================================================
+Fiches avec au moins 1 alliance/opposition réelle : 710
+
+  Parmi elles :
+  - type_relation_dominante ABSENT du frontmatter  : 0  <-- cas résiduel ambigu
+  - présent, valeur = 'neutralité' (choix réel)    : 17
+  - présent, autre valeur (rivalité/conflit/...)   : 693
+

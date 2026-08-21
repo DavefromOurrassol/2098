@@ -53,8 +53,6 @@ type_relation_dominante: rivalité
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: clandestin
-age_historique: résiduel
 generation: post-effondrement
 
 injection:
@@ -75,6 +73,9 @@ tensions_narratives: >
   La Chambre est déchirée entre deux factions internes : les 'archivistes', qui estiment que son rôle est désormais purement mémoriel et documentaire, et les 'exécutionnistes', qui veulent nouer des alliances avec des milices territoriales pour forcer l'application de leurs arrêts — au risque de perdre toute prétention à l'impartialité. Par ailleurs, certains systèmes algorithmiques encore actifs — notamment ceux hérités des consortiums énergétiques — ont commencé à générer des contre-jurisprudences automatisées contestant la légitimité de la Chambre elle-même, créant un vertige juridique kafkaïen : la machine juge son juge. La question de savoir si les arrêts accumulés constituent une ressource précieuse pour une future reconstruction ou une fiction dangereuse entretenant l'illusion d'un ordre mort traverse chaque session.
 
 date_creation: 2026-06-25
+trajectoire: résiduel
+est_clandestin: true
+
 ---
 
 # Chambre des Recours Algorithmiques — Ce qu'il en reste

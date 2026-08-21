@@ -58,8 +58,6 @@ oppositions:
 type_relation_dominante: dépendance
 annee_debut: 2041
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -93,6 +91,9 @@ tensions_narratives: 'La tension centrale de la Ligue réside dans l''impossibil
   et une faction mémorielle qui refuse de dissoudre l''institution, même symbolique,
   tant qu''un seul ressortissant est vivant.'
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Ligue des Cités Littorales en Sursis

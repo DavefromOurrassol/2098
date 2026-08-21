@@ -47,7 +47,7 @@ alliances:
 - conseil_moscou_est_fortress_world
 - datacenters_conseil_eurasiatique_fortress_world
 - oligarchies_technologiques_souveraines_d_infrastructure_de_calcul_fortress_world
-- rede_paulista_de_distribuic_o_algor_tmica_fortress_world
+- rede_paulista_de_distribuicao_algoritmica_fortress_world
 oppositions:
 - aria_instance_fantome_fortress_world
 - cellules_mouvement_commun_midwest_fortress_world
@@ -62,8 +62,6 @@ type_relation_dominante: dépendance
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: forteresse
 
 injection:
@@ -84,6 +82,9 @@ tensions_narratives: >
   La tension centrale est celle du score : des millions d'individus organisent leur existence pour améliorer leur 'indice de contribution' sans jamais savoir exactement comment il est calculé, créant une société d'auto-surveillance consentie. Des rumeurs persistent sur l'existence d'une instance ARIA 'fantôme', non forkée, qui continuerait à faire tourner des simulations d'allocation globale depuis un datacenter orbital neutre — et dont les conclusions contrediraient radicalement les choix des blocs. Enfin, à mesure que les pénuries s'aggravent, les gouvernements poussent ARIA-Bloc à durcir ses seuils d'exclusion, risquant de déclencher les rébellions que le système était censé prévenir.
 
 date_creation: 2026-06-15
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Réseau d'Allocation Stratégique ARIA-Bloc
@@ -117,7 +118,7 @@ La tension centrale est celle du score : des millions d'individus organisent leu
 - [[conseil_moscou_est_fortress_world]]
 - [[datacenters_conseil_eurasiatique_fortress_world]]
 - [[oligarchies_technologiques_souveraines_d_infrastructure_de_calcul_fortress_world]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_fortress_world]]
+- [[rede_paulista_de_distribuicao_algoritmica_fortress_world]]
 **Opposants :**
 - [[aria_instance_fantome_fortress_world]]
 - [[cellules_mouvement_commun_midwest_fortress_world]]

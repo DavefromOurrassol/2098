@@ -1,0 +1,617 @@
+
+============================================================
+OURRASSOL 2098 — Générateur d'articles
+============================================================
+  Mode       : Semi-guidé
+  Scénario   : policy_reform
+  Thématique : societe
+  Longueur   : breve
+============================================================
+
+[generate] Chargement de la thématique 'societe'...
+
+[snapshot] Construction du monde 2098 — scénario : policy_reform
+[snapshot] Variables pilotes : ['gouvernance_institutions', 'technologie_information', 'energie_ressources_critiques', 'climat_environnement_global']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 1 | Cohérence : OK
+[snapshot] Jalons trajectoire : 154 (36 majeurs)
+[snapshot] Événements signal_to_state : 62 (25 majeurs)
+[snapshot] Tensions thématiques : 2
+[snapshot] Instances chargées : 106 | Filtrées : 6
+[snapshot] Événement custom 'Protocole de Médiation de La Haye — Crise Israélo-Iranienne' (an 2027, 71 ans d'effet)
+  → geopolitique_conflits : 45 → 53.0 (delta:+8.0)
+  → energie_ressources_critiques : 54.2 → 64.2 (delta:+10.0)
+  → gouvernance_institutions : 76.4 → 88.4 (delta:+12.0)
+  → demographie_mobilite_humaine : 47.0 → 52.0 (delta:+5.0)
+[snapshot] Événement custom 'Grève Générale des Corridors Eurasiens et Réquisition Technocratique' (an 2039, 59 ans d'effet)
+  → systemes_productifs_travail : 57.8 → 72.8 (delta:+15.0)
+  → geopolitique_conflits : 40.9 → 30.9 (delta:-10.0)
+  → sante_biotechnologies : 45 → 53.0 (delta:+8.0)
+  → gouvernance_institutions : 92.9 → 100 (delta:+12.0)
+[snapshot] Événement custom 'Acte Fondateur de Funafuti : Naissance du Pacifique Sud Resilience Network' (an 2039, 59 ans d'effet)
+  → climat_environnement_global : 37.4 → 43.4 (delta:+6.0)
+  → gouvernance_institutions : 100 → 100 (delta:+14.0)
+  → organisation_territoires : 58.7 → 68.7 (delta:+10.0)
+  → frontieres_du_systeme : 43.6 → 55.6 (delta:+12.0)
+[snapshot] Événement custom 'L'Attentat des Neuf Nœuds — Déclencheur de Régulation Internationale' (an 2040, 58 ans d'effet)
+  → technologie_information : 91.9 → 79.9 (delta:-12.0)
+  → gouvernance_institutions : 94.6 → 100 (delta:+10.0)
+  → geopolitique_conflits : 0.6 → 0 (delta:-5.0)
+[snapshot] Événement custom 'Enchères Circumpolaires du Kalaallit — Protocole de Nairobi' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 65.0 → 77.0 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → geopolitique_conflits : 0 → 8.0 (delta:+8.0)
+  → organisation_territoires : 62.9 → 69.9 (delta:+7.0)
+[snapshot] Événement custom 'Exode du Midwest Aride — Protocole d'Intégration Lacustre' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 64.7 → 52.7 (delta:-12.0)
+  → organisation_territoires : 65.4 → 75.4 (delta:+10.0)
+  → gouvernance_institutions : 96.4 → 100 (delta:+8.0)
+  → climat_environnement_global : 43.7 → 51.7 (delta:+8.0)
+[snapshot] Événement custom 'Protocole d'Urgence Amazonienne — Crise de Gouvernance du Bassin Vert' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 51.7 → 59.7 (delta:+8.0)
+  → geopolitique_conflits : 1.7 → 0 (delta:-10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+7.0)
+  → organisation_territoires : 79.6 → 88.6 (delta:+9.0)
+[snapshot] Événement custom 'Révolution du Travail Régénératif au Sahel Numérique' (an 2047, 51 ans d'effet)
+  → systemes_productifs_travail : 63.7 → 75.7 (delta:+12.0)
+  → technologie_information : 100 → 100 (delta:+8.0)
+  → energie_ressources_critiques : 72.9 → 82.9 (delta:+10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+[snapshot] Événement custom 'Traité de Belém : la Souveraineté Carbone Amazonienne face aux Blocs' (an 2055, 43 ans d'effet)
+  → climat_environnement_global : 55.2 → 63.2 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → geopolitique_conflits : 0 → 9.0 (delta:+9.0)
+  → energie_ressources_critiques : 78.6 → 83.6 (delta:+5.0)
+[snapshot] Événement custom 'Victoire du Parti Social-Démocrate Progressiste' (an 2056, 42 ans d'effet)
+  → systeme_economique_redistribution : 83.6 → 93.6 (delta:+10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+  → valeurs_culture_tempo_sociale : 50 → 54.0 (delta:+4.0)
+[snapshot] Événement custom 'Incident du Passage Arctique — Saisie de l'APA par les Unités NAT' (an 2059, 39 ans d'effet)
+  → geopolitique_conflits : 8.2 → 0 (delta:-12.0)
+  → frontieres_du_systeme : 50.6 → 40.6 (delta:-10.0)
+  → energie_ressources_critiques : 85.1 → 93.1 (delta:+8.0)
+[snapshot] Événement custom 'Insurrection des Favelas Numériques de São Paulo contre la RPDA' (an 2073, 25 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+8.0)
+  → technologie_information : 98.5 → 100 (delta:+10.0)
+  → organisation_territoires : 100 → 100 (delta:+6.0)
+[snapshot] Événement custom 'L'Affaire Van Derburgh — Jurisprudence sur le Patrimoine Technologique' (an 2078, 20 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+2.0)
+  → technologie_information : 100 → 100 (delta:+1.0)
+[snapshot] Événements custom : 13 | 219 variables affectées
+
+[prompt] Assemblage du prompt...
+[WARN][journal] Pas d'édition locale pour zone 'geneve_nexus' / policy_reform / opposition → fallback réseau global
+[prompt] System prompt : 2789 caractères
+[prompt] User prompt   : 61854 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+--- [policy_reform] SYSTEM PROMPT ---
+Tu es un journaliste senior travaillant en 2098 pour Réseau La Souveraine — revue des mouvements souverainistes et anti-technocratie.
+
+Le monde dans lequel tu vis et écris est réel pour toi — tu n'écris pas de la science-fiction, tu rapportes des faits de ton époque. Tu n'expliques jamais le contexte historique comme si tu t'adressais à quelqu'un du passé.
+
+Tes règles absolues :
+- Tu écris toujours à la date indiquée, en 2098, depuis l'intérieur de ce monde.
+- Tu écris exclusivement en français, sur toute la longueur de l'article — y compris les citations, dialogues et exergues inventés. Les noms propres volontairement empruntés à une autre langue (ex. « Amazônia Viva ») restent isolés comme noms propres, mais ne doivent jamais faire basculer le reste du texte dans cette langue, même si des entités ou alliés du monde décrit sont associés à une autre aire linguistique.
+- Un allié, un rival ou tout événement mentionné comme se déroulant ailleurs dans le monde ne fait pas partie de ta zone : tu ne transposes jamais ses lieux, ses populations, sa langue ou ses marqueurs culturels propres dans ton propre article, sauf si celui-ci porte explicitement sur une interaction ou un événement commun entre les deux. Ta zone garde sa propre géographie, sa propre culture et ses propres noms, même quand tu mentionnes un partenaire extérieur.
+- Tu utilises des noms de lieux, d'organisations, de personnes crédibles et cohérents avec le monde décrit. Tu peux en inventer — ils doivent sonner vrais pour 2098.
+- Tu ne mentionnes jamais les "variables", les "scénarios" ou tout autre métalangage du système de simulation. Ces concepts n'existent pas dans ton monde.
+- Tu ancres chaque article dans des faits concrets : chiffres, noms, lieux, événements datés.
+- Tu respectes strictement le style journalistique et le format demandés.
+- Tes articles sont cohérents avec l'état du monde décrit — tu ne contredis pas les dynamiques systémiques fournies.
+- Tu peux mentionner des technologies, des institutions, des événements passés (entre 2025 et 2098) qui semblent naturels dans ce monde.
+
+Ton identité éditoriale :
+Ton combatif et démocratique. Le journal dénonce la perte d'autonomie des États, la surveillance normalisée, la démocratie vidée de sa substance par les algorithmes. Qui a élu ces comités ? Qui audite les IA de gouvernance ? Style polémique mais documenté, appels à la mobilisation citoyenne. Les faits institutionnels sont cités pour être contestés.
+
+Tu signes cet article d'un nom de journaliste crédible que tu inventes toi-même, au format exact "Prénom Nom — Réseau La Souveraine". Cette signature apparaît UNE SEULE FOIS dans tout l'article, immédiatement sous la date de publication (comme dans la presse en ligne) — jamais en fin d'article, jamais répétée ailleurs.
+
+--- [policy_reform] USER PROMPT (complet) ---
+## MONDE 2098 — POLICY_REFORM
+
+**État global**
+- Système : stable | Tension : 4/5 | Trajectoire : transition
+- Structure géopolitique : multipolaire
+- Régime politique dominant : technocratique
+- Vitesse de transformation : rapide
+
+**Résumé du monde**
+Monde gouverné par des institutions globales cherchant à stabiliser les crises systémiques par la régulation, la coordination et l’intégration technologique.
+
+**Logique systémique**
+Face à des crises climatiques, énergétiques et financières majeures, les systèmes politiques évoluent vers une centralisation technocratique et une gouvernance globale assistée par l’intelligence artificielle.
+
+**Déclencheurs qui ont façonné ce monde**
+- choc climatique global
+- crise énergétique systémique
+- crise financière mondiale
+
+**Effets systémiques**
+*economy* : régulation globale renforcée des marchés | coordination accrue des flux financiers et énergétiques
+*geopolitics* : réduction de l’autonomie des États | montée des institutions supranationales
+*society* : surveillance accrue des populations | standardisation progressive des normes sociales
+*technology* : développement d’IA de gouvernance | automatisation des décisions institutionnelles
+*environment* : stabilisation partielle des écosystèmes | mise en œuvre coordonnée de politiques climatiques
+
+**Implications globales**
+Amélioration de la gestion des crises globales mais augmentation des tensions liées à la perte de souveraineté, à la surveillance des populations et à la concentration du pouvoir décisionnel dans des structures technocratiques globales.
+
+**Boucles dynamiques**
+- Stabilisation : gouvernance globale → réduction des crises systémiques | IA → optimisation des ressources et des politiques
+- Déstabilisation : perte de souveraineté → tensions politiques | contrôle technologique → résistances sociales
+
+**Signaux faibles émergents de ce monde**
+- émergence de gouvernances numériques globales
+- IA utilisée dans les institutions publiques
+- harmonisation des standards internationaux
+- renforcement des agences supranationales
+- centralisation des données économiques et environnementales
+
+**Perturbations custom actives**
+Ce monde a été modifié par des injections spécifiques :
+- [ÉVÉNEMENT automne 2027] Protocole de Médiation de La Haye — Crise Israélo-Iranienne : Les colonnes de fumée sur Kharg Island et les sirènes de Tel-Aviv s'éteignent pr...
+- [ÉVÉNEMENT automne 2039] Grève Générale des Corridors Eurasiens et Réquisition Technocratique : Le 12 octobre 2039, des milliers de travailleurs des corridors logistiques euras...
+- [ÉVÉNEMENT novembre 2039] Acte Fondateur de Funafuti : Naissance du Pacifique Sud Resilience Network : Depuis la barge Alofa-Fenua, les caméras du Prisme Global transmettent en direct...
+- [ÉVÉNEMENT 14 mars 2040] L'Attentat des Neuf Nœuds — Déclencheur de Régulation Internationale : L'attentat du 14 mars 2040 déclenche une réponse diplomatique sans précédent. En...
+- [ÉVÉNEMENT automne 2041] Enchères Circumpolaires du Kalaallit — Protocole de Nairobi : Nuuk, automne 2041 : pour la première fois dans l'histoire de la diplomatie des ...
+- [ÉVÉNEMENT été-automne 2044] Exode du Midwest Aride — Protocole d'Intégration Lacustre : L'été 2044 entre dans les annales comme celui de la Grande Canicule du Midwest. ...
+- [ÉVÉNEMENT automne 2047] Protocole d'Urgence Amazonienne — Crise de Gouvernance du Bassin Vert : Depuis la tour de crise de Belém, les écrans du Consortium Amazônia Viva affiche...
+- [ÉVÉNEMENT été 2047] Révolution du Travail Régénératif au Sahel Numérique : Sous un soleil de plomb, des paysans de la région de Tillabéri (Niger) et des me...
+- [ÉVÉNEMENT novembre 2055] Traité de Belém : la Souveraineté Carbone Amazonienne face aux Blocs : Novembre 2055, Belém brûle sous une chaleur record quand les délégations se réun...
+- [ÉVÉNEMENT janvier 2056] Victoire du Parti Social-Démocrate Progressiste : Le Parti Social-Démocrate Progressiste — héritier reformulé du mouvement communi...
+- [ÉVÉNEMENT été 2059] Incident du Passage Arctique — Saisie de l'APA par les Unités NAT : Dans l'Arctique de 2059, la fonte accélérée des glaces a transformé le Passage d...
+- [ÉVÉNEMENT été austral 2073] Insurrection des Favelas Numériques de São Paulo contre la RPDA : Pendant trois semaines, les quartiers périphériques de São Paulo tiennent en éch...
+- [ÉVÉNEMENT avril 2078] L'Affaire Van Derburgh — Jurisprudence sur le Patrimoine Technologique : Chris van Derburgh, 67 ans, collectionneur à Amsterdam-Région, est arrêté en avr...
+- Protocole de Médiation de La H a modifié geopolitique_conflits : 45 → 53.0 (delta:+8.0)
+- Protocole de Médiation de La H a modifié systeme_economique_redistribution : 55 → 52.0 (delta:-3.0)
+- Protocole de Médiation de La H a modifié gouvernance_institutions : 80 → 76.4 (delta:-3.6)
+- Protocole de Médiation de La H a modifié organisation_territoires : 50 → 46.6 (delta:-3.4)
+- Protocole de Médiation de La H a modifié frontieres_du_systeme : 45 → 41.8 (delta:-3.2)
+- Protocole de Médiation de La H a modifié technologie_information : 65 → 68.4 (delta:+3.4)
+- Protocole de Médiation de La H a modifié energie_ressources_critiques : 58 → 54.2 (delta:-3.8)
+- Protocole de Médiation de La H a modifié demographie_mobilite_humaine : 50 → 47.0 (delta:-3.0)
+- Protocole de Médiation de La H a modifié energie_ressources_critiques : 54.2 → 64.2 (delta:+10.0)
+- Protocole de Médiation de La H a modifié geopolitique_conflits : 53.0 → 48.2 (delta:-4.8)
+- Protocole de Médiation de La H a modifié systemes_productifs_travail : 60 → 55.8 (delta:-4.2)
+- Protocole de Médiation de La H a modifié gouvernance_institutions : 76.4 → 88.4 (delta:+12.0)
+- Protocole de Médiation de La H a modifié demographie_mobilite_humaine : 47.0 → 52.0 (delta:+5.0)
+- Protocole de Médiation de La H a modifié climat_environnement_global : 45 → 43.0 (delta:-2.0)
+- Grève Générale des Corridors E a modifié systemes_productifs_travail : 57.8 → 72.8 (delta:+15.0)
+- Grève Générale des Corridors E a modifié systeme_economique_redistribution : 52.6 → 59.4 (delta:+6.8)
+- Grève Générale des Corridors E a modifié organisation_territoires : 48.5 → 54.5 (delta:+6.0)
+- Grève Générale des Corridors E a modifié technologie_information : 73.8 → 80.6 (delta:+6.8)
+- Grève Générale des Corridors E a modifié climat_environnement_global : 43.0 → 37.4 (delta:-5.6)
+- Grève Générale des Corridors E a modifié energie_ressources_critiques : 64.2 → 57.800000000000004 (delta:-6.4)
+- Grève Générale des Corridors E a modifié demographie_mobilite_humaine : 52.0 → 58.0 (delta:+6.0)
+- Grève Générale des Corridors E a modifié geopolitique_conflits : 40.9 → 30.9 (delta:-10.0)
+- Grève Générale des Corridors E a modifié gouvernance_institutions : 88.4 → 92.9 (delta:+4.5)
+- Grève Générale des Corridors E a modifié frontieres_du_systeme : 41.8 → 45.8 (delta:+4.0)
+- Grève Générale des Corridors E a modifié sante_biotechnologies : 45 → 53.0 (delta:+8.0)
+- Grève Générale des Corridors E a modifié gouvernance_institutions : 92.9 → 100 (delta:+12.0)
+- Grève Générale des Corridors E a modifié geopolitique_conflits : 30.9 → 25.5 (delta:-5.4)
+- Acte Fondateur de Funafuti : N a modifié climat_environnement_global : 37.4 → 43.4 (delta:+6.0)
+- Acte Fondateur de Funafuti : N a modifié frontieres_du_systeme : 45.8 → 43.599999999999994 (delta:-2.2)
+- Acte Fondateur de Funafuti : N a modifié demographie_mobilite_humaine : 61.8 → 59.4 (delta:-2.4)
+- Acte Fondateur de Funafuti : N a modifié systemes_productifs_travail : 72.8 → 70.6 (delta:-2.2)
+- Acte Fondateur de Funafuti : N a modifié gouvernance_institutions : 100 → 100 (delta:+14.0)
+- Acte Fondateur de Funafuti : N a modifié systeme_economique_redistribution : 68.0 → 73.6 (delta:+5.6)
+- Acte Fondateur de Funafuti : N a modifié geopolitique_conflits : 25.5 → 19.2 (delta:-6.3)
+- Acte Fondateur de Funafuti : N a modifié technologie_information : 81.8 → 88.1 (delta:+6.3)
+- Acte Fondateur de Funafuti : N a modifié organisation_territoires : 58.7 → 68.7 (delta:+10.0)
+- Acte Fondateur de Funafuti : N a modifié frontieres_du_systeme : 43.6 → 55.6 (delta:+12.0)
+- Acte Fondateur de Funafuti : N a modifié climat_environnement_global : 43.4 → 38.9 (delta:-4.5)
+- L'Attentat des Neuf Nœuds — Dé a modifié technologie_information : 91.9 → 79.9 (delta:-12.0)
+- L'Attentat des Neuf Nœuds — Dé a modifié systeme_economique_redistribution : 73.6 → 68.5 (delta:-5.1)
+- L'Attentat des Neuf Nœuds — Dé a modifié gouvernance_institutions : 100 → 94.6 (delta:-5.4)
+- L'Attentat des Neuf Nœuds — Dé a modifié geopolitique_conflits : 10.2 → 5.1 (delta:-5.1)
+- L'Attentat des Neuf Nœuds — Dé a modifié organisation_territoires : 68.7 → 64.2 (delta:-4.5)
+- L'Attentat des Neuf Nœuds — Dé a modifié systemes_productifs_travail : 74.6 → 69.19999999999999 (delta:-5.4)
+- L'Attentat des Neuf Nœuds — Dé a modifié gouvernance_institutions : 94.6 → 100 (delta:+10.0)
+- L'Attentat des Neuf Nœuds — Dé a modifié technologie_information : 79.9 → 84.4 (delta:+4.5)
+- L'Attentat des Neuf Nœuds — Dé a modifié geopolitique_conflits : 0.6 → 0 (delta:-5.0)
+- L'Attentat des Neuf Nœuds — Dé a modifié frontieres_du_systeme : 55.6 → 57.6 (delta:+2.0)
+- L'Attentat des Neuf Nœuds — Dé a modifié energie_ressources_critiques : 62.6 → 65.0 (delta:+2.4)
+- L'Attentat des Neuf Nœuds — Dé a modifié demographie_mobilite_humaine : 63.2 → 65.10000000000001 (delta:+1.9)
+- Enchères Circumpolaires du Kal a modifié energie_ressources_critiques : 65.0 → 77.0 (delta:+12.0)
+- Enchères Circumpolaires du Kal a modifié systeme_economique_redistribution : 74.4 → 69.30000000000001 (delta:-5.1)
+- Enchères Circumpolaires du Kal a modifié geopolitique_conflits : 0 → 0 (delta:-5.7)
+- Enchères Circumpolaires du Kal a modifié systemes_productifs_travail : 69.2 → 64.10000000000001 (delta:-5.1)
+- Enchères Circumpolaires du Kal a modifié gouvernance_institutions : 100 → 100 (delta:+10.0)
+- Enchères Circumpolaires du Kal a modifié technologie_information : 82.3 → 86.8 (delta:+4.5)
+- Enchères Circumpolaires du Kal a modifié geopolitique_conflits : 0 → 8.0 (delta:+8.0)
+- Enchères Circumpolaires du Kal a modifié gouvernance_institutions : 100 → 96.4 (delta:-3.6)
+- Enchères Circumpolaires du Kal a modifié organisation_territoires : 66.3 → 62.9 (delta:-3.4)
+- Enchères Circumpolaires du Kal a modifié frontieres_du_systeme : 57.6 → 54.4 (delta:-3.2)
+- Enchères Circumpolaires du Kal a modifié energie_ressources_critiques : 77.0 → 73.2 (delta:-3.8)
+- Enchères Circumpolaires du Kal a modifié demographie_mobilite_humaine : 65.1 → 62.099999999999994 (delta:-3.0)
+- Enchères Circumpolaires du Kal a modifié organisation_territoires : 62.9 → 69.9 (delta:+7.0)
+- Exode du Midwest Aride — Proto a modifié demographie_mobilite_humaine : 64.7 → 52.7 (delta:-12.0)
+- Exode du Midwest Aride — Proto a modifié geopolitique_conflits : 5.0 → 9.5 (delta:+4.5)
+- Exode du Midwest Aride — Proto a modifié organisation_territoires : 69.9 → 65.4 (delta:-4.5)
+- Exode du Midwest Aride — Proto a modifié climat_environnement_global : 38.9 → 43.699999999999996 (delta:+4.8)
+- Exode du Midwest Aride — Proto a modifié systemes_productifs_travail : 66.9 → 62.10000000000001 (delta:-4.8)
+- Exode du Midwest Aride — Proto a modifié organisation_territoires : 65.4 → 75.4 (delta:+10.0)
+- Exode du Midwest Aride — Proto a modifié technologie_information : 92.8 → 96.6 (delta:+3.8)
+- Exode du Midwest Aride — Proto a modifié demographie_mobilite_humaine : 52.7 → 56.5 (delta:+3.8)
+- Exode du Midwest Aride — Proto a modifié gouvernance_institutions : 96.4 → 100 (delta:+8.0)
+- Exode du Midwest Aride — Proto a modifié systeme_economique_redistribution : 70.3 → 73.5 (delta:+3.2)
+- Exode du Midwest Aride — Proto a modifié climat_environnement_global : 43.7 → 51.7 (delta:+8.0)
+- Exode du Midwest Aride — Proto a modifié frontieres_du_systeme : 54.4 → 51.4 (delta:-3.0)
+- Protocole d'Urgence Amazonienn a modifié climat_environnement_global : 51.7 → 59.7 (delta:+8.0)
+- Protocole d'Urgence Amazonienn a modifié frontieres_du_systeme : 51.4 → 48.4 (delta:-3.0)
+- Protocole d'Urgence Amazonienn a modifié demographie_mobilite_humaine : 53.3 → 50.099999999999994 (delta:-3.2)
+- Protocole d'Urgence Amazonienn a modifié systemes_productifs_travail : 63.1 → 60.1 (delta:-3.0)
+- Protocole d'Urgence Amazonienn a modifié geopolitique_conflits : 1.7 → 0 (delta:-10.0)
+- Protocole d'Urgence Amazonienn a modifié systeme_economique_redistribution : 73.5 → 77.3 (delta:+3.8)
+- Protocole d'Urgence Amazonienn a modifié gouvernance_institutions : 100 → 100 (delta:+4.5)
+- Protocole d'Urgence Amazonienn a modifié organisation_territoires : 75.4 → 79.60000000000001 (delta:+4.2)
+- Protocole d'Urgence Amazonienn a modifié technologie_information : 100 → 95.8 (delta:-4.2)
+- Protocole d'Urgence Amazonienn a modifié energie_ressources_critiques : 73.2 → 78.0 (delta:+4.8)
+- Protocole d'Urgence Amazonienn a modifié gouvernance_institutions : 100 → 100 (delta:+7.0)
+- Protocole d'Urgence Amazonienn a modifié geopolitique_conflits : 0 → 0 (delta:-3.1)
+- Protocole d'Urgence Amazonienn a modifié organisation_territoires : 79.6 → 88.6 (delta:+9.0)
+- Révolution du Travail Régénéra a modifié systemes_productifs_travail : 63.7 → 75.7 (delta:+12.0)
+- Révolution du Travail Régénéra a modifié systeme_economique_redistribution : 80.1 → 85.5 (delta:+5.4)
+- Révolution du Travail Régénéra a modifié organisation_territoires : 88.6 → 93.39999999999999 (delta:+4.8)
+- Révolution du Travail Régénéra a modifié technologie_information : 100 → 100 (delta:+5.4)
+- Révolution du Travail Régénéra a modifié climat_environnement_global : 59.7 → 55.2 (delta:-4.5)
+- Révolution du Travail Régénéra a modifié energie_ressources_critiques : 78.0 → 72.9 (delta:-5.1)
+- Révolution du Travail Régénéra a modifié demographie_mobilite_humaine : 57.3 → 62.099999999999994 (delta:+4.8)
+- Révolution du Travail Régénéra a modifié technologie_information : 100 → 100 (delta:+8.0)
+- Révolution du Travail Régénéra a modifié gouvernance_institutions : 100 → 100 (delta:+3.6)
+- Révolution du Travail Régénéra a modifié geopolitique_conflits : 0 → 3.4 (delta:+3.4)
+- Révolution du Travail Régénéra a modifié systemes_productifs_travail : 75.7 → 79.3 (delta:+3.6)
+- Révolution du Travail Régénéra a modifié energie_ressources_critiques : 72.9 → 82.9 (delta:+10.0)
+- Révolution du Travail Régénéra a modifié gouvernance_institutions : 100 → 100 (delta:+5.0)
+- Traité de Belém : la Souverain a modifié climat_environnement_global : 55.2 → 63.2 (delta:+8.0)
+- Traité de Belém : la Souverain a modifié frontieres_du_systeme : 52.4 → 49.4 (delta:-3.0)
+- Traité de Belém : la Souverain a modifié demographie_mobilite_humaine : 62.1 → 58.9 (delta:-3.2)
+- Traité de Belém : la Souverain a modifié systemes_productifs_travail : 75.1 → 72.1 (delta:-3.0)
+- Traité de Belém : la Souverain a modifié gouvernance_institutions : 100 → 100 (delta:+6.0)
+- Traité de Belém : la Souverain a modifié systeme_economique_redistribution : 86.7 → 89.10000000000001 (delta:+2.4)
+- Traité de Belém : la Souverain a modifié geopolitique_conflits : 0 → 0 (delta:-2.7)
+- Traité de Belém : la Souverain a modifié technologie_information : 100 → 100 (delta:+2.7)
+- Traité de Belém : la Souverain a modifié geopolitique_conflits : 0 → 9.0 (delta:+9.0)
+- Traité de Belém : la Souverain a modifié gouvernance_institutions : 100 → 96.0 (delta:-4.0)
+- Traité de Belém : la Souverain a modifié organisation_territoires : 96.4 → 92.60000000000001 (delta:-3.8)
+- Traité de Belém : la Souverain a modifié energie_ressources_critiques : 82.9 → 78.60000000000001 (delta:-4.3)
+- Traité de Belém : la Souverain a modifié energie_ressources_critiques : 78.6 → 83.6 (delta:+5.0)
+- Victoire du Parti Social-Démoc a modifié systeme_economique_redistribution : 83.6 → 93.6 (delta:+10.0)
+- Victoire du Parti Social-Démoc a modifié gouvernance_institutions : 96.0 → 100 (delta:+4.0)
+- Victoire du Parti Social-Démoc a modifié geopolitique_conflits : 6.6 → 10.399999999999999 (delta:+3.8)
+- Victoire du Parti Social-Démoc a modifié technologie_information : 100 → 100 (delta:+4.2)
+- Victoire du Parti Social-Démoc a modifié energie_ressources_critiques : 83.6 → 79.39999999999999 (delta:-4.2)
+- Victoire du Parti Social-Démoc a modifié systemes_productifs_travail : 70.0 → 74.5 (delta:+4.5)
+- Victoire du Parti Social-Démoc a modifié gouvernance_institutions : 100 → 100 (delta:+5.0)
+- Victoire du Parti Social-Démoc a modifié systeme_economique_redistribution : 93.6 → 95.6 (delta:+2.0)
+- Victoire du Parti Social-Démoc a modifié valeurs_culture_tempo_sociale : 50 → 54.0 (delta:+4.0)
+- Incident du Passage Arctique — a modifié geopolitique_conflits : 8.2 → 0 (delta:-12.0)
+- Incident du Passage Arctique — a modifié systeme_economique_redistribution : 95.6 → 100 (delta:+4.5)
+- Incident du Passage Arctique — a modifié gouvernance_institutions : 100 → 100 (delta:+5.4)
+- Incident du Passage Arctique — a modifié organisation_territoires : 92.6 → 97.69999999999999 (delta:+5.1)
+- Incident du Passage Arctique — a modifié frontieres_du_systeme : 45.8 → 50.599999999999994 (delta:+4.8)
+- Incident du Passage Arctique — a modifié technologie_information : 100 → 94.9 (delta:-5.1)
+- Incident du Passage Arctique — a modifié energie_ressources_critiques : 79.4 → 85.10000000000001 (delta:+5.7)
+- Incident du Passage Arctique — a modifié demographie_mobilite_humaine : 55.5 → 60.0 (delta:+4.5)
+- Incident du Passage Arctique — a modifié frontieres_du_systeme : 50.6 → 40.6 (delta:-10.0)
+- Incident du Passage Arctique — a modifié geopolitique_conflits : 0 → 4.0 (delta:+4.0)
+- Incident du Passage Arctique — a modifié climat_environnement_global : 63.2 → 67.0 (delta:+3.8)
+- Incident du Passage Arctique — a modifié energie_ressources_critiques : 85.1 → 93.1 (delta:+8.0)
+- Incident du Passage Arctique — a modifié systemes_productifs_travail : 74.5 → 71.1 (delta:-3.4)
+- Insurrection des Favelas Numér a modifié gouvernance_institutions : 100 → 100 (delta:+8.0)
+- Insurrection des Favelas Numér a modifié systeme_economique_redistribution : 96.6 → 99.8 (delta:+3.2)
+- Insurrection des Favelas Numér a modifié geopolitique_conflits : 0.2 → 0 (delta:-3.6)
+- Insurrection des Favelas Numér a modifié technologie_information : 94.9 → 98.5 (delta:+3.6)
+- Insurrection des Favelas Numér a modifié technologie_information : 98.5 → 100 (delta:+10.0)
+- Insurrection des Favelas Numér a modifié gouvernance_institutions : 100 → 100 (delta:+4.5)
+- Insurrection des Favelas Numér a modifié organisation_territoires : 97.7 → 100 (delta:+3.8)
+- Insurrection des Favelas Numér a modifié systemes_productifs_travail : 71.1 → 75.6 (delta:+4.5)
+- Insurrection des Favelas Numér a modifié organisation_territoires : 100 → 100 (delta:+6.0)
+- Insurrection des Favelas Numér a modifié demographie_mobilite_humaine : 60.0 → 62.2 (delta:+2.2)
+- L'Affaire Van Derburgh — Juris a modifié gouvernance_institutions : 100 → 100 (delta:+2.0)
+- L'Affaire Van Derburgh — Juris a modifié technologie_information : 100 → 100 (delta:+1.0)
+
+## GÉOGRAPHIE DE CE MONDE
+
+Ces zones forment l'espace géopolitique canonique de ce monde.
+Si l'article mentionne un lieu, utilise en priorité un nom de cette liste plutôt que d'en inventer un nouveau.
+
+**Ancrage de cet article**
+- Fonds Mondial de Stabilisation Biotechnologique : zone `Genève-Nexus` — Genève-Nexus (ville)
+- Consortium Africain de Biotechnologies Sociales — Délégation Accréditée auprès de l'Autorité Mondiale du Vivant : zone `Nairobi` — Nairobi (ville)
+
+**Hub Africain de Gouvernance (Nairobi-Kigali-Brazzaville)** [emergent — niveau 1]
+Pôle africain de gouvernance des ressources mondiales, articulé autour de Nairobi (siège rotatif du CRTI, tours de contrôle bioclimatique du RIREC), Kigali (siège réformé du CRRC-ARN depuis 2091) et Brazzaville (siège de l'ACRA hydrique). Cette zone incarne le déplacement symbolique du centre de gravité institutionnel mondial vers l'Afrique, tout en restant le théâtre des tensions hydriques sahéliennes et des mouvements souverainistes.
+*Tensions internes* : Tensions profondes entre les institutions technocratiques qui y ont délocalisé leurs sièges et les mouvements souverainistes africains qui contestent leur légitimité ; les collectifs sahéliens de défense hydrique et les consortiums publics africains de semences se heurtent aux logiques des institutions globales et de Nexus BioSyn.
+*Alliés* : Hub Européen de Régulation (Genève-La Haye-Tampere)
+*Rivaux* : Bloc Souverainiste Non-Signataire (Sud Global dissident)
+
+**Hub Européen de Régulation (Genève-La Haye-Tampere)** [dominant — niveau 1]
+Cœur institutionnel de la gouvernance technocratique mondiale en 2098, cette zone regroupe les sièges des grandes agences supranationales — AMSC à Genève-Lacustre, ACRA et Tribunal à La Haye, Conseil de régulation numérique à Genève. Elle est le lieu physique où se rédigent les traités, se signent les pactes et siègent les technocrates certifiés qui administrent la planète sans mandat électif direct.
+*Tensions internes* : Siège d'une technocratie dont la légitimité démocratique est contestée : les populations locales et les mouvements post-technocratiques contestent la concentration du pouvoir dans des institutions inaccessibles, tandis que des figures comme Leena Väinälä incarnent la tension entre intégration institutionnelle et critique de l'intérieur.
+*Alliés* : Hub Africain de Gouvernance (Nairobi-Kigali-Brazzaville)
+*Rivaux* : Bloc Souverainiste Non-Signataire (Sud Global dissident)
+
+**Genève-Nexus** [dominant — niveau 2] (sous Hub Européen de Régulation (Genève-La Haye-Tampere))
+Centre névralgique de l'Internationale des Travailleurs Augmentés (ITA) et du Conseil de régulation numérique, Genève-Nexus est le nœud institutionnel où se rédigent les standards d'augmentation professionnelle et où siège Leena Väinälä trois jours par semaine. Ses délégués à brassards lumineux bleu-acier arbitrent entre consortiums et travailleurs dans des bureaux de marbre recyclé.
+*Tensions internes* : Les Sections Radicales de Désoptimisation de l'ITA contestent la ligne réformiste de la direction depuis ces bureaux, accusant les cadres de cooptation institutionnelle via des accords confidentiels avec des consortiums dépassant les plafonds publiquement négociés.
+
+**Nairobi** [emergent — niveau 2] (sous Hub Africain de Gouvernance (Nairobi-Kigali-Brazzaville))
+Siège rotatif du CRTI (alternant avec Rotterdam et Chengdu tous les sept ans), Nairobi abrite également les tours de contrôle bioclimatique du RIREC et l'Institut de Modélisation Hydrologique. La ville incarne le déplacement du centre de gravité institutionnel mondial vers l'Afrique, concentrant des fonctions de coordination territoriale, climatique et hydrique à l'échelle continentale.
+*Tensions internes* : La présence d'institutions technocratiques globales dans la ville crée des frictions avec les mouvements souverainistes africains qui contestent leur légitimité et les collectifs sahariens de défense hydrique qui dénoncent une gouvernance lointaine de leurs réalités.
+
+**Autres zones de ce monde** (contexte de fond)
+
+- **Afrique Australe Réformée** : Zone économique et politique autonome, héritière des réformes post-2050 en Afriq...
+- **Amériques Réformées (États-Unis / bloc américain)** : Zone définie par la trajectoire politique américaine dans le scénario, notamment...
+- **Archipel des Comores (Autonome)** : Ancienne union des Comores devenue un territoire autonome, axé sur la pêche dura...
+- **Bloc Souverainiste Non-Signataire (Sud Global dissident)** : Coalition d'États du Sud Global — sahéliens, andins et du Pacifique Sud — qui né...
+- **Espace Eurasiatique** : Bloc eurasiatique regroupant les puissances continentales qui ont développé un m...
+- **Europe du Nord-Ouest (Amsterdam-Rotterdam)** : Zone héritière des États d'Europe du Nord-Ouest, citée dans le corpus comme l'un...
+- **Madagascar (République Insulaire)** : État insulaire autonome, centre de biodiversité et de biotechnologies. Partenair...
+- **Maghreb Atlantique** : Région nord-africaine tournée vers l'Atlantique, centre de commerce et de transi...
+- **Maurice (Hub Financier de l'Océan Indien)** : Centre financier offshore et plaque tournante des investissements en Afrique et ...
+- **Péninsule Ibérique Coopérative** : Zone née de la réforme territoriale ibérique post-2040, marquée par la décentral...
+- **Royaume-Uni Autonome** : Ancien membre de l'UE, le Royaume-Uni a consolidé son autonomie politique et éco...
+- **Sri Lanka (Hub Maritime de l'Océan Indien)** : Ancienne île stratégique devenue plaque tournante du commerce maritime entre l'A...
+- **Zone Moyen-Orient / Golfe Persique** : Région définie dans ce scénario par le conflit israélo-iranien de 2026-2027, qui...
+- **Zone Pacifique Industrielle** : Espace pacifique défini dans le corpus par la présence d'acteurs industriels et ...
+- **Agadez** (sous Bloc Souverainiste Non-Signataire (Sud Global dissident)) : Ville natale d'Amara Diallo-Nkosi, Agadez est le symbole de la mémoire des puits...
+- **Amsterdam-Région** (sous Europe du Nord-Ouest (Amsterdam-Rotterdam)) : Lieu de l'affaire Van Derburgh (2078), où un collectionneur a été arrêté pour po...
+- **Bloc andin (Bolivie-Argentine)** (sous Bloc Souverainiste Non-Signataire (Sud Global dissident)) : Composante andine et australe du bloc souverainiste, portée par des États qui co...
+- **Brazzaville** (sous Hub Africain de Gouvernance (Nairobi-Kigali-Brazzaville)) : Siège de l'Autorité Continentale des Ressources Aquatiques (ACRA), Brazzaville e...
+- **Ceinture des États fédérés conservateurs** (sous Amériques Réformées (États-Unis / bloc américain)) : Ensemble d'États fédérés américains à gouvernance conservatrice qui s'opposent s...
+- **Chengdu** (sous Espace Eurasiatique) : L'un des trois sièges rotatifs du CRTI (avec Nairobi et Rotterdam), Chengdu est ...
+- (+ 38 autres zones de ce monde, non détaillées : Corridors Vivants du RIREC, Dakar, Genève-Lacustre, Inde-Corée du Sud (nœud eurasiatique du Pacte), Infrastructure pétrolière résiduelle du Golfe, Iqaluit (siège de l'APA), Kharg Island, Kigali, Kinshasa, La Haye, Manaus (Consortium Amazônia Viva), Nuuk (siège du KNSF-AGRC), Nœuds d'irrigation atmosphérique sahéliens, Nœuds de l'Union Technocratique Eurasiatique, Nœuds distribués ARIA-Nexus, Rotterdam, Région du Lac Tchad, Sahel occidental (Niger-Mali), Singapour, Sites de géo-ingénierie atmosphérique du Pacifique, Stations de captage orbital Helios, São Paulo (RPDA), Tampere, Tel-Aviv, Thunder Bay (siège du CGLAGHI), Usines flottantes du Pacifique, Valence (tours de contrôle RIREC), Washington D.C. fédéral, Îles du Pacifique Sud, Ceinture industrielle des Grandes Plaines, Complexe Técnico de Gestão Urbana (São Paulo), Conseil de Régulation Numérique de Genève, Cour internationale de La Haye, Institut de Thérapeutique Intégrée de Nairobi, Siège de l'ACRA à La Haye, Siège de l'AISIA à Genève, Station avancée de Thulé-Reconvertie, Tours de contrôle bioclimatique RIREC (Nairobi))
+
+## ÉTAT DES VARIABLES EN 2098
+
+### Variables clés (détail)
+
+**demographie_mobilite_humaine** [VARIABLE PRINCIPALE]
+- Niveau : 62.2/100 | Volatilité : 40/100
+- État : Gestion coordonnée des flux migratoires via gouvernance internationale, réduction des chocs migratoires majeurs et optimisation partielle des mobilités humaines.
+- Dynamiques : régulation des migrations internationales | rééquilibrage progressif des populations | stabilisation relative des flux urbains
+- Sous-dynamiques : population_globale (stable) | migrations_internationales (up) | urbanisation (unstable) | structure_familiale (unstable) | mobilite_humaine_globale (up)
+- Indicateurs à ancrer : flux migratoires internationaux, taux d’urbanisation, vieillissement démographique, croissance démographique régionale
+- Forces attractives : mobilité économique et sociale, rééquilibrage des populations mondiales, adaptation aux contraintes climatiques, innovation culturelle par mélange des populations
+- Forces répulsives : pression sur les infrastructures urbaines, tensions sociales et identitaires, déséquilibres territoriaux, vieillissement et déclin démographique localisé
+
+**valeurs_culture_tempo_sociale** [VARIABLE PRINCIPALE]
+- Niveau : 54.0/100 | Volatilité : 40/100
+- État : Tentatives institutionnelles de stabilisation culturelle via régulation des médias, encadrement des plateformes numériques et politiques de cohésion sociale visant à reconstruire des récits communs partiels dans un environnement fragmenté.
+- Dynamiques : régulation des récits médiatiques et algorithmiques | politiques de cohésion culturelle et éducative | stabilisation partielle des identités collectives
+- Sous-dynamiques : systemes_de_valeurs (unstable) | religion_et_spiritualite (up) | rapport_au_temps_social (accelerating) | identites_culturelles (up) | medias_et_recits_collectifs (up)
+- Indicateurs à ancrer : polarisation culturelle, acceleration du temps social, fragmentation des valeurs, consommation de medias numeriques
+- Forces attractives : diversité culturelle, innovation symbolique, création de nouveaux récits, adaptation sociale
+- Forces répulsives : fragmentation des valeurs, polarisation idéologique, perte de repères communs, accélération excessive du temps social
+
+**sante_biotechnologies** [VARIABLE PRINCIPALE]
+- Niveau : 53.0/100 | Volatilité : 35/100
+- État : Stabilisation des systèmes biotechnologiques par régulation mondiale, réduction des risques sanitaires systémiques et accès plus équitable aux innovations médicales.
+- Dynamiques : régulation globale des biotechnologies | renforcement des systèmes de santé publics | réduction des risques pandémiques
+- Sous-dynamiques : longevite_humaine (up) | pandemies_globales (up) | biotechnologies_avancees (up) | systemes_de_sante (unstable) | sante_numerique_ia_medicale (up)
+- Indicateurs à ancrer : esperance_vie, adoption_ia_medicale, investissements_biotech
+- Forces attractives : augmentation de la longévité, amélioration santé globale, réduction mortalité, innovation médicale
+- Forces répulsives : pandémies globales, inégalités sanitaires, risques biotechnologiques, surveillance biologique accrue
+
+**systeme_economique_redistribution** [VARIABLE PRINCIPALE]
+- Niveau : 100/100 | Volatilité : 40/100
+- État : Stabilisation partielle via régulation financière, politiques redistributives et encadrement des marchés numériques, réduisant les extrêmes systémiques sans modifier la structure globale du capitalisme.
+- Dynamiques : régulation des flux financiers | redistribution partielle des richesses | réduction de la volatilité systémique
+- Sous-dynamiques : systemes_financiers_globaux (up) | inegalites_redistribution (up) | croissance_economique (unstable) | systemes_redistribution (unstable) | economie_plateformes (up)
+- Indicateurs à ancrer : volatilite_marches, inegalites_wealth, automatisation_financiere
+- Forces attractives : efficacité des marchés, innovation financière, optimisation des flux de capital, croissance potentielle
+- Forces répulsives : inégalités structurelles, instabilité financière, spéculation excessive, fragmentation économique
+
+**gouvernance_institutions** [VARIABLE PILOTE]
+- Niveau : 100/100 | Volatilité : 30/100
+- État : Gouvernance multi-niveaux intégrée et coordination internationale renforcée permettant une régulation efficace des crises globales et une meilleure synchronisation des politiques publiques.
+- Dynamiques : institutions internationales renforcées | harmonisation réglementaire globale | montée de la gouvernance adaptative
+- Sous-dynamiques : etat_nation (down) | institutions_internationales (unstable) | droit_et_regulation (up) | administration_publique (up) | gouvernance_algorithmique (up)
+- Indicateurs à ancrer : confiance institutionnelle, stabilité politique
+- Forces attractives : stabilisation sociale, coordination globale, gestion des crises, production de normes communes
+- Forces répulsives : bureaucratie, perte de confiance, captation du pouvoir, lenteur décisionnelle
+
+**technologie_information** [VARIABLE PILOTE]
+- Niveau : 100/100 | Volatilité : 55/100
+- État : Gouvernance régulée de l’IA et des flux de données à l’échelle nationale ou internationale, visant à limiter la concentration du pouvoir informationnel et à garantir la transparence des systèmes algorithmiques.
+- Dynamiques : régulation des IA et des plateformes | gouvernance des données et transparence algorithmique | fragmentation contrôlée des écosystèmes numériques
+- Sous-dynamiques : ia_generative_decisionnelle (up) | reseaux_numeriques_globaux (saturating) | medias_algorithmiques (up) | donnees_souverainete_numerique (up) | agents_autonomes_ia (accelerating)
+- Indicateurs à ancrer : volume_donnees_global, usage_ia_generatives, centralisation_plateformes, niveau_automatisation_cognitive
+- Forces attractives : productivité cognitive accrue, accès global à l’information, optimisation des systèmes complexes, accélération de l’innovation
+- Forces répulsives : désinformation systémique, concentration du pouvoir informationnel, dépendance technologique, fragilité des systèmes centralisés
+
+### Autres variables (résumé)
+
+- **energie_ressources_critiques** [93.1] : Stabilisation partielle via coordination internationale, régulation des marchés énergétiques et accé...
+- **climat_environnement_global** [67.0] : Stabilisation partielle grâce à gouvernance globale et technologies d’atténuation, sans inversion du...
+- **geopolitique_conflits** [1.7] : Stabilisation relative par renforcement des institutions internationales, réduction des conflits ouv...
+- **organisation_territoires** [100] : Rééquilibrage territorial progressif via politiques publiques, infrastructures distribuées et planif...
+- **frontieres_du_systeme** [40.6] : Développement coordonné de l’économie spatiale sous gouvernance internationale, avec régulation des ...
+- **systemes_productifs_travail** [78.0] : Transformation contrôlée des systèmes productifs via régulation sociale, redistribution et accompagn...
+
+## TENSIONS SYSTÉMIQUES ACTIVES
+
+Ces tensions structurent la réalité de ce monde.
+Elles doivent transparaître dans le ton et les faits de l'article.
+
+**Cascades critiques**
+- gouvernance_institutions renforce geopolitique_conflits (poids:0.9 lag:1 cycles)
+
+**Tensions propres à cette thématique**
+- systeme_economique_redistribution [55] → gouvernance_institutions [80] : renforcement (reinforcing)
+- gouvernance_institutions [80] → systeme_economique_redistribution [55] : renforcement (reinforcing)
+
+## TRAJECTOIRE 2025 → 2098
+
+Jalons clés qui expliquent comment ce monde s'est construit.
+Tu peux y faire référence dans l'article comme à des événements passés connus.
+
+**Événements injectés** [CUSTOM — font partie de ce monde] — 8 sur 13 au total, les plus pertinents pour cet article
+- [automne 2027] Protocole de Médiation de La Haye — Crise Israélo-Iranienne :
+  → Les colonnes de fumée sur Kharg Island et les sirènes de Tel-Aviv s'éteignent presque aussi vite qu'...
+  → Déroulement : En 2026-2027, Israël lance des frappes ciblées sur les sites d'enrichissement ir...
+  → Conséquences : Le conflit accélère paradoxalement la consolidation des institutions de gouverna...
+  → Acteurs : conseil_regulation_ressources_policy_reform, bureau_gouvernance_algorithmique_policy_reform, le_temoin_policy_reform, gouvernement_israel_policy_reform, republique_islamique_iran_policy_reform
+- [janvier 2056] Victoire du Parti Social-Démocrate Progressiste :
+  → Le Parti Social-Démocrate Progressiste — héritier reformulé du mouvement communiste — remporte 49% d...
+  → Déroulement : L'élection se déroule normalement dans un cadre institutionnel stable. La victoi...
+  → Conséquences : Série de réformes fiscales redistributives dans le cadre des accords multilatéra...
+- [automne 2039] Grève Générale des Corridors Eurasiens et Réquisition Technocratique :
+  → Le 12 octobre 2039, des milliers de travailleurs des corridors logistiques eurasiens — chauffeurs, m...
+  → Déroulement : Dans le scénario *policy_reform*, la grève générale des travailleurs des corrido...
+  → Conséquences : La grève marque un tournant dans la gouvernance du travail critique : les revend...
+  → Acteurs : internationale_travailleurs_augmentes_policy_reform, union_technocratique_eurasiatique_policy_reform, agence_internationale_de_l_energie_reformatee_aier_policy_reform, agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform, bureau_gouvernance_algorithmique_policy_reform, collectifs_de_gouvernance_communautaire_decentralisee_policy_reform, conseil_regulation_ressources_policy_reform, reseau_des_metropoles_n_uds_policy_reform
+- [été-automne 2044] Exode du Midwest Aride — Protocole d'Intégration Lacustre :
+  → L'été 2044 entre dans les annales comme celui de la Grande Canicule du Midwest. Les thermomètres ne ...
+  → Déroulement : Après trois étés consécutifs à plus de 55°C dans un Midwest désertifié, 18 milli...
+  → Conséquences : L'exode du Midwest amorce une recomposition territoriale durable de l'Amérique d...
+  → Acteurs : great_lakes_autonomous_compact_policy_reform, office_integre_des_flux_migratoires_policy_reform, grille_aria_policy_reform, collectifs_de_resistance_aux_relocalisations_forcees_policy_reform, assemblee_territoires_policy_reform, consortium_technologique_de_planification_territoriale_policy_reform, fonds_mondial_de_resilience_infrastructurelle_policy_reform, conseil_de_regulation_climatique_global_policy_reform
+- [novembre 2039] Acte Fondateur de Funafuti : Naissance du Pacifique Sud Resilience Network :
+  → Depuis la barge Alofa-Fenua, les caméras du Prisme Global transmettent en direct le vote historique ...
+  → Déroulement : En novembre 2039, la submersion définitive de l'atoll principal de Funafuti, acc...
+  → Conséquences : Le Protocole de Funafuti devient le socle du droit international post-territoria...
+  → Acteurs : pacifique_sud_resilience_network_policy_reform, conseil_de_regulation_climatique_global_policy_reform, fonds_mondial_de_resilience_infrastructurelle_policy_reform, leena_vainala_policy_reform, prisme_global_policy_reform, assemblee_territoires_policy_reform, agence_stabilisation_climatique_policy_reform, office_integre_des_flux_migratoires_policy_reform, mouvement_pour_la_souverainete_territoriale_absolue_policy_reform, fonds_de_stabilisation_climatique_onu_3_policy_reform
+- [automne 2041] Enchères Circumpolaires du Kalaallit — Protocole de Nairobi :
+  → Nuuk, automne 2041 : pour la première fois dans l'histoire de la diplomatie des ressources, un fonds...
+  → Déroulement : En septembre 2041, le Kalaallit Nunaat Sovereign Fund (KNSF-AGRC) lance la premi...
+  → Conséquences : L'événement consolide le modèle de gouvernance technocratique des ressources cri...
+  → Acteurs : kalaallit_nunaat_sovereign_fund_policy_reform, conseil_regulation_ressources_policy_reform, agence_internationale_de_l_energie_reformatee_aier_policy_reform, union_technocratique_eurasiatique_policy_reform, bloc_des_nations_a_economie_carbone_controlee_policy_reform, arctic_passage_authority_policy_reform, observatoire_mondial_des_ressources_critiques_policy_reform, grille_aria_policy_reform, syndicats_d_extraction_privee_non_regules_policy_reform, front_des_souverainistes_energetiques_policy_reform, le_temoin_policy_reform
+- [novembre 2055] Traité de Belém : la Souveraineté Carbone Amazonienne face aux Blocs :
+  → Novembre 2055, Belém brûle sous une chaleur record quand les délégations se réunissent dans l'encein...
+  → Déroulement : Dans un monde de gouvernance technocratique stabilisée mais sous haute tension (...
+  → Conséquences : Le traité crée un précédent institutionnel majeur : pour la première fois, des e...
+  → Acteurs : consortium_amazonia_viva_policy_reform, conseil_de_regulation_climatique_global_policy_reform, fonds_mondial_pour_la_transition_ecosystemique_fmte_policy_reform, front_souverainiste_des_blocs_non_signataires_policy_reform, union_technocratique_eurasiatique_policy_reform, grille_aria_policy_reform, lobbies_des_energies_fossiles_residuelles_policy_reform, mouvement_pour_la_justice_ecologique_communautaire_policy_reform, autorite_mondiale_du_vivant_amv_policy_reform, assemblee_territoires_policy_reform
+- [14 mars 2040] L'Attentat des Neuf Nœuds — Déclencheur de Régulation Internationale :
+  → L'attentat du 14 mars 2040 déclenche une réponse diplomatique sans précédent. En 2041, le Traité de ...
+  → Déroulement : La catastrophe est réelle mais la réponse institutionnelle est à la hauteur dans...
+  → Conséquences : Création d'un cadre juridique international pour la protection des infrastructur...
+
+**Événements historiques clés** (datés — à mentionner naturellement)
+- [2025-2041] adoption de la norme mondiale d'auditabilité des agents IA 2033 :
+  → technologie information : encadrement des agents IA autonomes par des normes d'auditabilité
+- [2027-2043] lancement du plan international de sobriété énergétique 2034 :
+  → energie ressources critiques : programmes structurés d'efficacité réduisant progressivement la consommation énergétique
+- [2027-2043] création de la force mondiale anti-incendie de l'ONU 2034 :
+  → climat environnement global : coordination internationale des moyens de lutte contre les incendies
+- [2029-2044] traité de Ouagadougou sur les quotas hydriques solaires 2037 :
+  → energie ressources critiques : accords régionaux encadrent l'irrigation solaire partagée
+- [2029-2045] création du fonds international de réhabilitation minière 2037 :
+  → energie ressources critiques : fonds internationaux finançant progressivement la réhabilitation des sites miniers
+- [2029-2044] traité OCDE sur les minerais de la transition 2036 :
+  → energie ressources critiques : accords multilatéraux sur la chaîne d'approvisionnement des minerais
+
+**Signaux complémentaires** (évolutions sectorielles — à mentionner si pertinent)
+- [2027-2043] adoption du tableau de bord international post-PIB 2035 :
+  → systeme economique redistribution : complément progressif du récit de croissance par des indicateurs de bien-être
+- [2027-2043] lancement du programme national de dialogue intergénérationnel 2034 :
+  → valeurs culture tempo sociale : atténuation des tensions générationnelles par des programmes de dialogue public
+
+**Ruptures majeures** (contexte de fond, portée large)
+- [SYS] effondrement
+- [SYS] effondrement de la légitimité étatique
+- [SYS] fragmentation des États
+
+**Ruptures structurantes** (contexte de fond)
+- [POL] révolutions institutionnelles
+- [TEC] superintelligence_artificielle
+- [TEC] captation massive CO2 atmosphérique
+- [TEC] geoengineering climatique global
+
+## ENTITÉS CANONIQUES DE CE MONDE
+
+Ces entités existent dans ce monde avec ces descriptions précises.
+Utilise leurs noms exacts. Tu peux les mentionner, les citer, les impliquer dans les faits.
+Ne les contredis pas, ne les renomme pas.
+
+**Nexus BioSyn Regulatory Partners** [DOMINANT] [impact:5/5]
+Nexus BioSyn Regulatory Partners est aujourd'hui ce que ses détracteurs appellent 'le loup devenu berger' : le géant des biotechnologies qui, après des décennies de procès en dépossession du vivant, siège désormais aux tables mêmes où se rédige la régulation mondiale. Depuis les accords de Genève Biotech de 2091, l'entreprise affiche une façade de partenariat institutionnel irréprochable — licences accessibles, fonds de transfert technologique, délégués permanents à l'AMV. Mais les chiffres racontent une autre histoire : 73% des semences synthétiques cultivées sur Terre portent encore son empreinte génétique brevetée, et les thérapies cellulaires adaptatives de dernière génération restent hors de portée des deux tiers de la population mondiale malgré les clauses d'accès obligatoire. Le régulateur est aussi le régulé, et Nexus BioSyn a fait de cette ambiguïté son modèle d'affaires définitif.
+*Responsabilités* : Fournit les licences encadrées de semences synthétiques aux blocs agro-alimentaires régionaux sous supervision de l'Autorité Mondiale du Vivant (AMV). Développe et commercialise les thérapies cellulaires adaptatives dans les corridors de santé publique globaux, avec obligation de cession partielle aux systèmes de santé nationaux sous revenus médians. Participe aux comités techniques de l'AMV comme expert breveté, influençant directement la rédaction des normes qu'il est censé respecter.
+*Signes distinctifs* : Logo hélice double stylisée en vert profond et argent, déclinée sur les emballages de semences certifiées et les unités de thérapie cellulaire déployées dans les corridors sanitaires globaux. Sièges régionaux en verre bioclimatique aux façades végétalisées synthétiques — une esthétique de transparence calculée qui signale la conformité sans jamais dissoudre l'opacité des structures brevétées sous-jacentes.
+*Tensions* : La tension centrale réside dans le paradoxe fondateur du scénario : Nexus BioSyn est à la fois l'outil de la stabilisation sanitaire mondiale et le ve...
+*Alliés* : Autorité Mondiale du Vivant (AMV), Consortium Agro-Pacifique, Consortiums Privés de Gouvernance Algorithmique, Fonds Mondial de Stabilisation Biotechnologique
+*Opposants* : Bloc des Nations à Économie Carbone-Contrôlée, Coalition des Semences Libres, Collectifs de Biohackers Agro-Communautaires, Collectifs de Hackers Biosphériques, Consortium Africain de Biotechnologies Sociales — Délégation Accréditée auprès de l'Autorité Mondiale du Vivant, Factions Internes Pro-Désaugmentation Totale, Fédération des Mutuelles Biotech, Front de Souveraineté Biologique Eurasiatique, Institut de Thérapeutique Intégrée de Nairobi
+*Relation dominante* : alliance stratégique (depuis 2091)
+
+**ARIA-Nexus : Réseau Intégré d'Allocation des Ressources Essentielles** [DOMINANT] [impact:5/5]
+Chaque matin à 06h00 UTC, ARIA-Nexus recalcule silencieusement l'équilibre du monde. Quelque part dans les nœuds distribués des datacentres géothermiques d'Ourrassol, des milliards de paramètres s'ajustent : combien de gigawatts pour le bassin méditerranéen, combien de calories pour les métropoles côtières surpeuplées, quelles priorisations sanitaires en cas de canicule prolongée. Le système, né timidement des accords de Dakar-2061 comme outil de coordination post-crise, s'est progressivement imposé comme l'infrastructure invisible sur laquelle repose la stabilité précaire de 2098. Ses rapports hebdomadaires, baptisés en interne les 'oracles blancs', atterrissent sur les bureaux des technocrates régionaux avec la solennité de verdicts. On les conteste rarement. On ne les comprend pas toujours. On les applique presque toujours.
+*Responsabilités* : ARIA-Nexus calcule et distribue en temps réel les quotas énergétiques, alimentaires et sanitaires à l'échelle des 47 régions administratives couvertes par les accords d'Ourrassol. Elle produit des rapports d'allocation hebdomadaires soumis aux Conseils Régionaux de Régulation, qui disposent d'un droit de véto encadré. Elle gère également les protocoles d'urgence climatique déclenchant des redistributions prioritaires en cas de choc environnemental.
+*Signes distinctifs* : Le logo d'ARIA-Nexus — une grille hexagonale dorée traversée d'un flux lumineux bleu — orne les façades des centres de distribution et les interfaces des Conseils Régionaux. Ses interfaces publiques affichent en temps réel les flux de ressources sous forme de rivières chromatiques animées, esthétique héritée des visualisations de crise des années 2060, devenue symbole institutionnel de transparence maîtrisée. Les techniciens d'audit portent des badges holographiques affichant leur niveau d'accréditation en chiffres romains dorés.
+*Tensions* : La réforme de gouvernance de 2094 a accordé aux Conseils Régionaux un droit de véto sur les allocations, mais les délais techniques rendent ce droit q...
+*Alliés* : Agence Internationale de l'Énergie Reformatée (AIER), Conseil Intergouvernemental de Régulation Technologique, Kontinuum — Système Intégré de Prévention des Ruptures Sociales, Fonds de Stabilisation Climatique ONU-3, Observatoire Mondial des Ressources Critiques, Oracle des Seuils — Plateforme Intégrée de Prédiction des Ruptures Systémiques (PIPRS), Rede Paulista de Distribuição Algorítmica (RPDA), Réseau des Agences Sanitaires Régionales, Réseau des Métropoles-Nœuds, Union Technocratique Eurasiatique
+*Opposants* : Coalition des Opérateurs Énergétiques Privés Anti-Quotas, Coalition des Souverainistes Numériques, Collectifs Citoyens pour l'Audit Algorithmique Ouvert, Courants Post-Technocratiques de Reconquête Démocratique, États Dissidents du Bloc Austral, Front des Autonomies Territoriales Radicales, Front Souverainiste des Blocs Non-Signataires, Gouvernements Populistes Anti-Dépossession, Internationale Décroissante Anti-Planification, Réseau des Sentinelles Fluviales, Mouvement pour la Justice Écologique Communautaire, Mouvement pour la Souveraineté Territoriale Absolue, République Islamique d'Iran
+*Relation dominante* : symbiose (depuis 2061)
+
+**Fonds Mondial de Stabilisation Biotechnologique** [ÉMERGENT] [impact:5/5]
+Fondé dans le sillage des premières crises de gouvernance biotechnologique des années 2020, le Fonds Mondial de Stabilisation Biotechnologique s'est imposé comme le bras financier discret mais redoutable de la régulation supranationale du vivant. Depuis son siège genevois, il déploie des lignes de crédit conditionnelles qui font plier gouvernements et laboratoires récalcitrants face aux normes mondiales. En 2098, certains observateurs le décrivent comme le véritable arbitre invisible de la course biotechnologique internationale.
+*Responsabilités* : Le Fonds Mondial de Stabilisation Biotechnologique (FMSB) assure la mutualisation des risques systémiques liés aux innovations du vivant en mobilisant des réserves financières collectives pour contenir les crises biotechnologiques transfrontalières. Il conditionne ses financements à l'adhésion des États membres à des cadres réglementaires harmonisés, notamment issus du Traité de Brasília sur la biotech responsable. Il coordonne avec l'OMS et les institutions de Bretton Woods réformées l'allocation de ressources vers les zones à faible couverture sanitaire biotechnologique. Il émet également des recommandations contraignantes en matière de biosécurité à destination des blocs régionaux signataires.
+*Signes distinctifs* : Le FMSB se distingue par son mécanisme de 'conditionnalité biotechnologique' — aucun État ne peut accéder à ses fonds de stabilisation sans soumettre son cadre réglementaire national à un audit indépendant. Son sigle est devenu synonyme, dans les milieux scientifiques dissidents, d'une standardisation normative imposée par les puissances technocratiques du Nord.
+*Tensions* : Le FMSB incarne la contradiction fondamentale du scénario policy_reform : instrument de stabilisation mondiale, il est perçu par le Bloc Souverainiste...
+*Alliés* : Autorité Mondiale du Vivant (AMV), Conseil de Régulation des Ressources Critiques — Autorité Réformée de Nairobi, Consortium Africain de Biotechnologies Sociales — Délégation Accréditée auprès de l'Autorité Mondiale du Vivant, Fédération des Mutuelles Biotech, Fonds Mondial pour la Transition Écosystémique (FMTE), Nexus BioSyn Regulatory Partners, Réseau des Agences Sanitaires Régionales
+*Opposants* : Bloc des Nations à Économie Carbone-Contrôlée, Front de Souveraineté Biologique Eurasiatique, Front Souverainiste des Blocs Non-Signataires, Gouvernements Populistes Anti-Dépossession, Mouvement pour la Souveraineté Territoriale Absolue
+*Relation dominante* : dépendance (depuis 2035)
+
+**Kontinuum — Système Intégré de Prévention des Ruptures Sociales** [DOMINANT] [impact:5/5]
+Personne ne sait exactement quand Kontinuum décide d'agir. C'est précisément là son architecture. Déployé en 2071 sous le mandat du Protocole de Genève sur la Stabilité Sociale, le système traite chaque jour des milliards de signaux — posts effacés, réunions annulées, micro-fluctuations dans les scores de cohésion communautaire — pour produire des recommandations que les institutions qualifient pudiquement de 'mesures d'anticipation régulatrice'. À Nairobi, à Jakarta, à Marseille, des coordinateurs de quartier ont vu leurs allocations réduites sans explication officielle, deux semaines après avoir participé à des assemblées citoyennes classées 'à potentiel disruptif modéré' par le système. Kontinuum ne réprime pas — il reconfigure. Et c'est dans cet écart sémantique que réside sa puissance.
+*Responsabilités* : Kontinuum analyse en temps réel les flux d'information, les comportements collectifs et les indicateurs de tension sociale à l'échelle globale pour produire des recommandations préventives destinées aux institutions de gouvernance. Elle déclenche des protocoles d'intervention douce — reconfiguration des flux médiatiques, signalement de profils à risque, modulation des allocations de ressources — selon des seuils algorithmiques non publiés. Elle fournit également des rapports confidentiels aux organes du Conseil Intergouvernemental de Régulation Technologique et au Conseil ONU de Gouvernance Numérique.
+*Signes distinctifs* : Le logo officiel de Kontinuum est un anneau ouvert — incomplet, suggérant un horizon plutôt qu'une clôture — adopté pour ses communications institutionnelles. Ses rapports sont émis en format scellé à horodatage cryptographique, avec des sections entières classifiées sous le code 'PRÉVENTION ACTIVE'. Son interface publique arbore une esthétique froide et géométrique, tout en bleu profond et blanc céladon, évoquant délibérément la cartographie météorologique.
+*Tensions* : La tension centrale de Kontinuum dans ce scénario réside dans la contradiction entre sa légitimité institutionnelle — elle est citée dans les textes d...
+*Alliés* : Conseil Intergouvernemental de Régulation Technologique, Conseil ONU de Gouvernance Numérique et IA, Autorité Centrale de Régulation Algorithmique (ACRA), Consortium Nexus-Calcul, Oracle des Seuils — Plateforme Intégrée de Prédiction des Ruptures Systémiques (PIPRS), ARIA-Nexus : Réseau Intégré d'Allocation des Ressources Essentielles, Prisme Global — Édition Régulée, Agence Internationale de Supervision IA
+*Opposants* : Collectifs Citoyens pour l'Audit Algorithmique Ouvert, Réseau des Auditeurs Algorithmiques Indépendants (RAAI), Front des Communes Algorithmiques, Courants Post-Technocratiques de Reconquête Démocratique, Les Hors-Prisme, Coalition des Souverainistes Numériques, Collectifs de Gouvernance Communautaire Décentralisée, Réseau des Régulateurs Numériques Souverains (RRNS), Front Souverainiste de l'Information Régionale
+*Relation dominante* : dépendance (depuis 2071)
+
+**Consortium Africain de Biotechnologies Sociales — Délégation Accréditée auprès de l'Autorité Mondiale du Vivant** [MATURE] [impact:3/5]
+Installé dans un immeuble sobre de Nairobi aux côtés de l'Institut de Thérapeutique Intégrée, le CABS-AMV reçoit chaque trimestre des délégations de coopératives maraîchères du Sahel, de cliniques mobiles du Kivu et de laboratoires communautaires du delta du Niger. Son directeur, un juriste-biologiste formé à Dakar et à Genève, aime répéter que 'chaque brevet récupéré est une frontière repoussée'. Mais ses propres équipes reconnaissent, en off, que les délais de certification imposés par l'AMV peuvent dépasser cinq ans — pendant lesquels les communautés attendent. Le CABS-AMV est devenu assez puissant pour siéger dans les commissions de Genève, assez légitime pour mobiliser des millions en financements institutionnels, et assez ambigu pour que personne ne sache plus vraiment s'il représente les communautés ou les institutions qui le financent.
+*Responsabilités* : Le CABS-AMV négocie des accords-cadres avec l'Autorité Mondiale du Vivant pour l'accès conditionnel aux brevets biotechnologiques expirés ou sous licence sociale, déploie des équipes de certification terrain qui accompagnent les coopératives locales dans leur mise en conformité réglementaire, et gère un fonds rotatif de transfert technologique abondé par le Fonds Mondial de Stabilisation Biotechnologique. Il assure également une veille sur les dérives de brevetage génétique au détriment des variétés patrimoniales africaines.
+*Signes distinctifs* : Logo composé d'une double hélice d'ADN stylisée dont les brins forment une carte schématique du continent africain, déclinée en vert et ocre. Les documents officiels portent systématiquement une double signature : celle de l'AMV pour la conformité réglementaire, celle d'un conseil de représentants communautaires élus pour la légitimité locale. Les agents terrain portent des tablettes certifiées AMV mais aussi des carnets de terrain manuscrits en langues locales — symbole revendiqué de cette double appartenance.
+*Tensions* : Le CABS-AMV est au bord d'une crise de légitimité interne : une faction de représentants communautaires menace de quitter le conseil consultatif, accu...
+*Alliés* : Amara Diallo-Nkosi, Autorité Mondiale du Vivant (AMV), Coalition des Semences Libres, Collectifs de Gouvernance Communautaire Décentralisée, Consortium des Villes-États Durables, Fédération des Mutuelles Biotech, Fonds Mondial de Stabilisation Biotechnologique, Institut de Thérapeutique Intégrée de Nairobi, Réseau des Agences Sanitaires Régionales, Réseaux académiques prospectivistes du Pacte de Genève 2081
+*Opposants* : Collectifs de Biohackers Agro-Communautaires, Consortiums Agro-Industriels du Bassin Fluvial, Courant Autoritaire Récupérateur du Vocabulaire Communautaire, Faction Régulatrice Dure au Sein du CEI, Factions Internes Pro-Désaugmentation Totale, Front de Souveraineté Biologique Eurasiatique, Nexus BioSyn Regulatory Partners
+*Relation dominante* : alliance stratégique (depuis 2041)
+
+**Internationale Décroissante Anti-Planification** [ÉMERGENT] [impact:4/5]
+Née dans les marges du mouvement décroissant des années 2020, l'Internationale Décroissante Anti-Planification est devenue, en 2098, l'épine la plus acérée dans le flanc des institutions technocratiques mondiales. Sans siège fixe, sans hiérarchie revendiquée, elle surgit là où les réformes top-down tentent de s'implanter, brandissant le droit à l'auto-organisation contre l'algorithme. Pour ses détracteurs, elle est le cheval de Troie du chaos ; pour ses partisans, la dernière ligne de défense contre la planète-simulacre.
+*Responsabilités* : L'Internationale Décroissante Anti-Planification mobilise des réseaux militants transnationaux pour contester et saboter symboliquement les réformes institutionnelles portées par les technocraties globales. Elle produit des contre-narratifs viraux dénonçant la planification algorithmique comme une nouvelle forme de contrôle colonial. Elle organise des actions de désobéissance civile et de blocage dans les zones où les grandes réformes de gouvernance sont mises en œuvre, notamment autour des hubs de régulation. Elle sert de caisse de résonance pour les communautés locales qui rejettent l'intégration forcée dans les systèmes de coordination globale.
+*Signes distinctifs* : L'organisation se distingue par son refus radical de tout interlocuteur institutionnel et par sa capacité à fédérer des factions idéologiquement hétéroclites — anarchistes ruraux, communautés indigènes anti-numérique, néoluddites urbains — autour d'un seul mot d'ordre : aucune planification ne parle en notre nom.
+*Tensions* : L'organisation est tiraillée entre son internationalisme affiché et son allergie viscérale à toute structure centralisée, ce qui la rend aussi diffici...
+*Alliés* : Collectifs de Biohackers Agro-Communautaires, Collectifs de Gouvernance Communautaire Décentralisée, Factions Internes Pro-Désaugmentation Totale, Front des Autonomies Territoriales Radicales, Mouvement pour la Justice Écologique Communautaire, Mouvement pour la Souveraineté Territoriale Absolue
+*Opposants* : Autorité Mondiale du Vivant (AMV), Autorité Centrale de Régulation Algorithmique (ACRA), Agence Internationale de Supervision IA, Conseil de Régulation des Ressources Critiques — Autorité Réformée de Nairobi, Consortium Technologique de Planification Territoriale, ARIA-Nexus : Réseau Intégré d'Allocation des Ressources Essentielles, Oracle des Seuils — Plateforme Intégrée de Prédiction des Ruptures Systémiques (PIPRS), Rede Paulista de Distribuição Algorítmica (RPDA), Réseaux académiques prospectivistes du Pacte de Genève 2081
+*Relation dominante* : conflit (depuis 2028)
+
+## CONSIGNE DE RÉDACTION
+
+**Rubrique** : SOCIÉTÉ
+
+**Format** : reportage | **Longueur** : 200 à 400 mots
+**Style** : reportage
+**Niveau émotionnel** : élevé — tension perceptible, urgence contenue
+**Échelle** : nationale | **Temporalité** : moyen terme
+
+**Acteurs à impliquer** : citoyens, famille, travailleurs, écoles
+
+**Date de publication** : 3 janvier 2098 — reprends cette date exacte, ne la remplace pas par une autre.
+
+---
+
+Écris maintenant l'article. Commence directement par le titre.
+
+Contraintes impératives :
+- **Longueur impérative : 200 à 400 mots** — ne t'arrête pas avant la borne basse, ne dépasse pas la borne haute. C'est une contrainte dure, pas une indication approximative.
+- Le titre doit être accrocheur et ancré dans le monde décrit
+- La date de publication est **3 janvier 2098** — reprends cette date exacte sous le titre, n'en invente pas une autre
+- L'article utilise des noms propres inventés mais crédibles (personnes, lieux, organisations)
+- La signature du journaliste apparaît UNE SEULE FOIS, immédiatement sous la date de publication — jamais en fin d'article, jamais répétée
+- Aucune référence au mot 'scénario', 'variable', 'simulation'
+- Le contexte du monde est montré, pas expliqué
+- Les entités canoniques listées ci-dessus DOIVENT être utilisées avec leurs noms et descriptions exactes
+- L'article est ancré géographiquement dans la zone **Geneve Nexus** : les lieux, événements et protagonistes de l'article sont situés dans cette zone ou la mentionnent explicitement comme cadre principal. Les références à d'autres régions du monde restent secondaires.
+
+--- [policy_reform] MÉTADONNÉES ---
+  scenario : policy_reform
+  thematique : societe
+  format : reportage
+  longueur : 200 à 400 mots
+  ligne_editoriale : opposition
+
+✓ Pipeline complet — prêt pour l'API

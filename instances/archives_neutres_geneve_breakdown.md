@@ -56,8 +56,6 @@ type_relation_dominante: neutralité
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: résiduel
 generation: post-effondrement
 
 injection:
@@ -78,6 +76,9 @@ tensions_narratives: >
   La tension centrale est existentielle : jusqu'où les Archives peuvent-elles négocier leur accès sans devenir l'instrument d'une faction plutôt que le bien commun de toutes ? Plusieurs blocs régionaux tentent activement de corrompre ou d'infiltrer le personnel pour obtenir un accès exclusif à des documents stratégiques — actes de concession minière préeffondrement, traités de délimitation de corridors d'eau. En parallèle, les collectifs hackers-archivistes itinérants pressent les Archives de numériser et diffuser librement leurs fonds, ce que Varner refuse au nom de la survie physique de l'institution. Une troisième tension sourd en interne : une faction minoritaire du personnel, épuisée et idéaliste, envisage une 'grande ouverture' sacrificielle — tout diffuser, tout publier, quitte à disparaître, plutôt que de continuer à attester pour ceux qui paient.
 
 date_creation: 2026-06-27
+trajectoire: résiduel
+est_clandestin: false
+
 ---
 
 # Archives Neutres de Genève

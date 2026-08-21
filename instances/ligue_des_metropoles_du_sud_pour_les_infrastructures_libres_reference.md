@@ -52,12 +52,10 @@ oppositions:
 - directive_kontinuum_reference
 - institutions_multilaterales_survivantes_reference
 - pacte_des_souverains_reference
-- rede_paulista_de_distribuic_o_algor_tmica_reference
+- rede_paulista_de_distribuicao_algoritmica_reference
 type_relation_dominante: compétition
 annee_debut: 2029
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -91,6 +89,8 @@ localisation:
   lieu: null
   type_lieu: null
 annee_debut_verifiee: true
+trajectoire: émergent
+est_clandestin: false
 
 ---
 
@@ -140,7 +140,7 @@ La Ligue est tiraillée entre son idéal d'horizontalité radicale et la tentati
 - [[directive_kontinuum_reference]]
 - [[institutions_multilaterales_survivantes_reference]]
 - [[pacte_des_souverains_reference]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_reference]]
+- [[rede_paulista_de_distribuicao_algoritmica_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

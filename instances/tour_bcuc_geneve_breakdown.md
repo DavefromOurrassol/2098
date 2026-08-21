@@ -54,10 +54,8 @@ oppositions:
 type_relation_dominante: dépendance
 
 annee_debut: 2041
-annee_fin: 
+annee_fin: 2057
 
-etat_temporel: transformé
-age_historique: résiduel
 generation: post-effondrement
 
 injection:
@@ -78,6 +76,9 @@ tensions_narratives: >
   La Tour est assise sur un paradoxe existentiel : plus elle mobilise ses archives pour arbitrer des conflits, plus elle révèle l'étendue de ses anciennes compromissions avec des entités aujourd'hui disparues ou ennemies, sapant la neutralité qu'elle revendique. Certains fragments d'États membres la soupçonnent de favoriser secrètement les grandes enclaves corporatives qui continuent de la financer discrètement, ce qui alimente les fronts populistes qui réclament sa dissolution. En parallèle, des réseaux comme les Archives Neutres de Genève ou Mnemos Pannonie cherchent à absorber ses fonds documentaires, rendant sa survie institutionnelle conditionnelle à sa capacité à rester irremplaçable — un pari de plus en plus incertain dans un monde où la force prime sur la procédure.
 
 date_creation: 2026-06-27
+trajectoire: transformé
+est_clandestin: false
+
 ---
 
 # Tour Bcuc Genève — Le Comptoir des Ruines

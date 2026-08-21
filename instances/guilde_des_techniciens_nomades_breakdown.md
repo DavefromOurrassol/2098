@@ -61,8 +61,6 @@ oppositions:
 type_relation_dominante: dépendance
 annee_debut: 2041
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -92,6 +90,9 @@ tensions_narratives: La Guilde est tiraillée entre sa vocation de service unive
   technique. La question de savoir si la Guilde deviendra un acteur de gouvernance
   légitime ou un outil d'un nouveau féodalisme technocratique reste entière.
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Guilde des Techniciens Nomades

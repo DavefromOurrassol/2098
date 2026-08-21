@@ -57,8 +57,6 @@ type_relation_dominante: alliance stratégique
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: reconstruction
 
 injection:
@@ -79,6 +77,9 @@ tensions_narratives: >
   La tension fondamentale du Kivfak Nunani en 2098 tient à une question que ses propres fondateurs refusent de trancher : la rente climatique doit-elle être un bien commun mondial, au nom de la solidarité avec les autres victimes du réchauffement, ou le rempart légitime d'une souveraineté trop longtemps confisquée ? En interne, une faction jeune et radicale — les 'Sermersooq' — pousse à nationaliser intégralement les ressources et à rompre avec les cadres de gouvernance globale, tandis que la direction technocratique historique mise sur l'intégration institutionnelle comme seule garantie durable d'influence. Par ailleurs, les communautés inuit des zones non urbanisées contestent de plus en plus la captation de la rente par une élite nuukoise jugée trop déconnectée des réalités territoriales, ouvrant une fracture interne potentiellement déstabilisatrice.
 
 date_creation: 2026-06-23
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Fonds Souverain Kalaallit Nunaat — Kivfak Nunani

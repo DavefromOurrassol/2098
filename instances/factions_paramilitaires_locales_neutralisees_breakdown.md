@@ -60,8 +60,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2041
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -94,6 +92,9 @@ tensions_narratives: 'La tension centrale est celle de la prédation : chaque fa
   de Cracovie est de savoir si ces groupes représentaient une forme embryonnaire de
   gouvernance populaire ou simplement la violence ordinaire de la fragmentation.'
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Factions Paramilitaires Locales Neutralisées

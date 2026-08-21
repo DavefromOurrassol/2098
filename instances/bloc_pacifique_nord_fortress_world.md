@@ -51,8 +51,6 @@ oppositions:
 type_relation_dominante: neutralité
 annee_debut: 2041
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -83,6 +81,9 @@ localisation:
   zone: bloc_pacifique_nord
   lieu: Bloc Pacifique Nord
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Bloc Pacifique Nord

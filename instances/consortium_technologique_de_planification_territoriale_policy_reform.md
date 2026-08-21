@@ -57,8 +57,6 @@ oppositions:
 type_relation_dominante: dépendance
 annee_debut: 2036
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -96,6 +94,9 @@ localisation:
   zone: hub_europeen_regulation
   lieu: Genève-Nexus
   type_lieu: ville
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Consortium Technologique de Planification Territoriale

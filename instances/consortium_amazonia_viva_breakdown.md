@@ -57,10 +57,8 @@ oppositions:
 type_relation_dominante: conflit
 
 annee_debut: 2031
-annee_fin: 
+annee_fin: 2057
 
-etat_temporel: transformé
-age_historique: déclinant
 generation: post-effondrement
 
 injection:
@@ -81,6 +79,9 @@ tensions_narratives: >
   La fracture interne est le vrai danger : les conseils autochtones refusent de plus en plus de céder des 'zones tampons' en échange de trêves que les blocs ne respectent jamais, tandis que les scientifiques arguent que sans compromis territoriaux, tout sera perdu. La question de savoir si la légitimité écologique peut survivre sans force militaire propre — ou si le Pacte doit armer ses gardiens et devenir ce qu'il combat — est le débat qui menace de le faire éclater définitivement. Et dans l'ombre, certains délégués négocient secrètement avec les enclaves corporatives, vendant des données sur la biodiversité en échange de protection armée localisée.
 
 date_creation: 2026-06-23
+trajectoire: transformé
+est_clandestin: false
+
 ---
 
 # Pacte des Gardiens de l'Amazone — Ce qui reste

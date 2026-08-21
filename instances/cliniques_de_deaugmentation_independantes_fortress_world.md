@@ -58,8 +58,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2046
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -95,6 +93,9 @@ localisation:
   zone: zones_grises_tampons
   lieu: Casablanca-Périphérie, Tbilissi-Nord, corridors gris d'Asie Centrale
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Cliniques de Déaugmentation Indépendantes

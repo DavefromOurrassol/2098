@@ -58,8 +58,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2029
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -95,6 +93,9 @@ localisation:
   zone: bloc_souverainiste_non_signataire
   lieu: Sahel occidental, Andes, corridors transfrontaliers non surveillés
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Syndicats d'Extraction Privée Non Régulés
@@ -130,7 +131,6 @@ La tension centrale réside dans leur dépendance paradoxale au système qu'ils 
 - [[front_souverainiste_des_blocs_non_signataires_policy_reform]]
 - [[gouvernements_populistes_anti_depossession_policy_reform]]
 - [[lobbies_des_energies_fossiles_residuelles_policy_reform]]
-- [[test_durcissement_policy_reform]]
 **Opposants :**
 - [[agence_internationale_de_l_energie_reformatee_aier_policy_reform]]
 - [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]

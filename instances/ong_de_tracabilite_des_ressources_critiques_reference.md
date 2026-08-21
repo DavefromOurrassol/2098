@@ -64,8 +64,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2030
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -100,6 +98,8 @@ localisation:
   lieu: 'Siège itinérant : Nairobi / Lyon-Métropole / Singapour-Est'
   type_lieu: infrastructure
 annee_debut_verifiee: true
+trajectoire: émergent
+est_clandestin: false
 
 ---
 

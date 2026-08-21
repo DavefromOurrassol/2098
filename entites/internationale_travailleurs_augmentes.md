@@ -2,7 +2,7 @@
 name: Internationale des Travailleurs Augmentés
 type: entity
 slug: internationale_travailleurs_augmentes
-category: mouvement
+category: organisation
 description: >
   Syndicat transnational défendant les droits des travailleurs hybridés humain-machine face aux logiques d'optimisation et de remplacement algorithmique. Oscille entre réformisme institutionnel et radicalité protestataire.
 tension_fondamentale: >

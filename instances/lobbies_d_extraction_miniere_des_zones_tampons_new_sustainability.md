@@ -72,8 +72,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2041
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -112,6 +110,9 @@ localisation:
   lieu: Nairobi — couloirs du Parlement des Territoires et bureaux de représentation
     régionale
   type_lieu: infrastructure
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Lobbies d'Extraction Minière des Zones-Tampons

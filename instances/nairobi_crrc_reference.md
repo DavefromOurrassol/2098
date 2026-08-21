@@ -72,8 +72,6 @@ type_relation_dominante: dépendance
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: mature
 generation: transition
 
 injection:
@@ -94,6 +92,9 @@ tensions_narratives: >
   Le CRRC marche sur un fil permanent : chaque accord de coordination qu'il obtient renforce son autorité de fait mais attise la méfiance des États qui y voient une délégation de souveraineté non consentie. La montée en puissance des consortiums privés d'extraction — qui préfèrent négocier en bilatéral avec les municipalités en contournant le CRRC — menace de vider l'organisation de sa substance sans jamais la supprimer formellement. Par ailleurs, la tentation existe en interne de basculer vers un rôle plus directif, appuyé sur les outils de modélisation climatique que lui fournissent ses partenaires comme l'OCT ou l'Agence Mondiale pour la Stabilisation Climatique — ce qui l'exposerait à une réaction souverainiste violente. Sa survie à moyen terme dépend peut-être moins de sa compétence technique que de sa capacité à rester assez faible pour ne jamais menacer ceux dont il dépend.
 
 date_creation: 2026-06-27
+trajectoire: mature
+est_clandestin: false
+
 ---
 
 # Nairobi CRRC — Centre Régional de Résilience et de Coordination

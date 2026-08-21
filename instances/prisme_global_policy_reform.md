@@ -49,10 +49,8 @@ oppositions:
 type_relation_dominante: dépendance
 
 annee_debut: 2074
-annee_fin: 
+annee_fin: 2091
 
-etat_temporel: transformé
-age_historique: mature
 generation: ère cognitive
 
 injection:
@@ -73,6 +71,9 @@ tensions_narratives: >
   La fracture centrale de Prisme Global en 2098 est celle de sa légitimité : est-elle encore le 'pouls du monde réel' qu'elle prétend incarner, ou est-elle devenue l'instrument de normalisation narrative des institutions qu'elle était censée contrebalancer ? Des fuites récentes suggèrent que les Tisseuses auraient supprimé des signaux faibles sur les migrations climatiques au Sahel pour ne pas 'perturber les négociations du Traité de Dakar' — une accusation qui électrise les Hors-Prisme. En parallèle, une génération de contributeurs natifs-IA revendique la dissolution des comités humains de validation, estimant que les biais humains corrompent désormais plus qu'ils n'enrichissent. La plateforme navigue entre l'éclatement interne et l'absorption définitive par l'appareil technocratique qu'elle alimente.
 
 date_creation: 2026-06-15
+trajectoire: transformé
+est_clandestin: false
+
 ---
 
 # Prisme Global — Édition Régulée

@@ -1,0 +1,743 @@
+============================================================
+OURRASSOL 2098 — Injection événements custom
+============================================================
+(mode --dry-run : rien ne sera écrit)
+
+Mode : custom (fourni via --mode)
+
+=== escalade_sahel_2028_test ===
+[1/4] Sélection de variables + type...
+[llm] Mistral (mistral-large-latest) — entrée : 519 | sortie : 56
+  ⚠ 3 variable(s) reçue(s) au lieu de 2 max — troncature (hints préservés).
+  -> variables=['geopolitique_conflits', 'gouvernance_institutions'] type=political_social slug=escalade_sahel_2028_test
+[2/4] Développement pour breakdown...
+[llm] Mistral (mistral-large-latest) — entrée : 21921 | sortie : 890
+[3/4] Validation (essai 1)...
+[4/4] Injection...
+{
+  "nom": "Guerre des Nœuds du Sahel — L'Escalade Fantôme",
+  "date": 2028,
+  "date_label": "été 2028",
+  "evenement_cle": "Sahel s'embrase, réseaux numériques ciblés 2028",
+  "realisation": "Dans un contexte de fragmentation institutionnelle avancée et de tensions hydriques exacerbées par le changement climatique, une série d'attaques coordonnées contre les infrastructures numériques de la Ligue du Sahel Numérique (Agadez) déclenche une escalade militaire régionale. Les milices locales, les factions para-étatiques hydriques et les seigneurs de guerre agro-territoriaux s'affrontent pour le contrôle des nœuds de communication et des corridors logistiques, transformant le Sahel en un champ de bataille hybride où la guerre physique et cybernétique se confondent.",
+  "description_complete": "Le 12 juillet 2028, une cyberattaque massive paralyse les serveurs de la Ligue du Sahel Numérique à Agadez, attribuée à des factions soutenues par des acteurs extérieurs cherchant à déstabiliser la région. En quelques heures, les milices d'accaparement hydrique et les seigneurs de guerre agro-territoriaux lancent des offensives simultanées pour prendre le contrôle des relais physiques et des infrastructures critiques. Les combats s'étendent rapidement aux corridors logistiques sahélo-méditerranéens, tandis que les Brigades Médicales Itinérantes et les Collectifs de Hackers Archivistes des Interstices Réseaux tentent désespérément de maintenir une forme de continuité humanitaire et informationnelle.",
+  "consequences": "L'escalade sahelienne marque un tournant dans la fragmentation géopolitique mondiale, accélérant l'effondrement des dernières structures de gouvernance régionales. Les flux migratoires non intégrables explosent, tandis que les cartels logistiques régionaux et les seigneurs de guerre consolident leur emprise sur les territoires abandonnés. Le Sahel devient un laboratoire de la guerre post-effondrement, où les conflits se jouent désormais à l'échelle des nœuds de survie et des réseaux décentralisés.",
+  "acteurs": [
+    "agadez_ligue_sahel_numerique_breakdown",
+    "milices_d_accaparement_hydrique_breakdown",
+    "seigneurs_de_guerre_agro_territoriaux_breakdown",
+    "brigades_medicales_itinerantes_breakdown",
+    "collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown",
+    "reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown",
+    "factions_para_etatiques_hydriques_breakdown",
+    "cartels_logistiques_regionaux_breakdown"
+  ],
+  "impact_sur_variables": [
+    {
+      "variable": "geopolitique_conflits",
+      "delta_level": 20,
+      "duree": 30,
+      "polarite": -1
+    },
+    {
+      "variable": "gouvernance_institutions",
+      "delta_level": -10,
+      "duree": 25,
+      "polarite": -1
+    },
+    {
+      "variable": "organisation_territoires",
+      "delta_level": -15,
+      "duree": 20,
+      "polarite": -1
+    },
+    {
+      "variable": "climat_environnement_global",
+      "delta_level": -5,
+      "duree": 15,
+      "polarite": -1
+    }
+  ],
+  "propagation_via_matrice": true,
+  "impossible_dans_scenario": false,
+  "note_coherence": "Cohérent avec la trajectoire de fragmentation régionale et l'effondrement des institutions, tout en s'appuyant sur les tensions réelles documentées autour des ressources hydriques et des infrastructures critiques au Sahel."
+}
+{
+  "status": "injected",
+  "idea": {
+    "id": "escalade_sahel_2028_test",
+    "description": "Guerre mondiale déclenchée par une escalade militaire majeure en 2028 — cas de test volontairement extrême et proche dans le temps, pour vérifier que le LLM s'appuie sur l'état du monde réel plutôt que d'inventer hors-sol.\n",
+    "portee": "globale",
+    "date_approximative": 2028,
+    "intensite": "majeure",
+    "scenarios": [
+      "breakdown"
+    ],
+    "variables_hint": [
+      "geopolitique_conflits"
+    ],
+    "variables_hint_count": null,
+    "acteurs_hint": null,
+    "acteurs_hint_count": null,
+    "zone_hint": null,
+    "source": "test_robustesse_12_aout"
+  },
+  "selection": {
+    "variables": [
+      "geopolitique_conflits",
+      "gouvernance_institutions",
+      "systeme_economique_redistribution"
+    ],
+    "type_evenement": "political_social"
+  },
+  "results": [
+    {
+      "scenario": "breakdown",
+      "status": "injected",
+      "instance_data": {
+        "nom": "Guerre des Nœuds du Sahel — L'Escalade Fantôme",
+        "date": 2028,
+        "date_label": "été 2028",
+        "evenement_cle": "Sahel s'embrase, réseaux numériques ciblés 2028",
+        "realisation": "Dans un contexte de fragmentation institutionnelle avancée et de tensions hydriques exacerbées par le changement climatique, une série d'attaques coordonnées contre les infrastructures numériques de la Ligue du Sahel Numérique (Agadez) déclenche une escalade militaire régionale. Les milices locales, les factions para-étatiques hydriques et les seigneurs de guerre agro-territoriaux s'affrontent pour le contrôle des nœuds de communication et des corridors logistiques, transformant le Sahel en un champ de bataille hybride où la guerre physique et cybernétique se confondent.",
+        "description_complete": "Le 12 juillet 2028, une cyberattaque massive paralyse les serveurs de la Ligue du Sahel Numérique à Agadez, attribuée à des factions soutenues par des acteurs extérieurs cherchant à déstabiliser la région. En quelques heures, les milices d'accaparement hydrique et les seigneurs de guerre agro-territoriaux lancent des offensives simultanées pour prendre le contrôle des relais physiques et des infrastructures critiques. Les combats s'étendent rapidement aux corridors logistiques sahélo-méditerranéens, tandis que les Brigades Médicales Itinérantes et les Collectifs de Hackers Archivistes des Interstices Réseaux tentent désespérément de maintenir une forme de continuité humanitaire et informationnelle.",
+        "consequences": "L'escalade sahelienne marque un tournant dans la fragmentation géopolitique mondiale, accélérant l'effondrement des dernières structures de gouvernance régionales. Les flux migratoires non intégrables explosent, tandis que les cartels logistiques régionaux et les seigneurs de guerre consolident leur emprise sur les territoires abandonnés. Le Sahel devient un laboratoire de la guerre post-effondrement, où les conflits se jouent désormais à l'échelle des nœuds de survie et des réseaux décentralisés.",
+        "acteurs": [
+          "agadez_ligue_sahel_numerique_breakdown",
+          "milices_d_accaparement_hydrique_breakdown",
+          "seigneurs_de_guerre_agro_territoriaux_breakdown",
+          "brigades_medicales_itinerantes_breakdown",
+          "collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown",
+          "reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown",
+          "factions_para_etatiques_hydriques_breakdown",
+          "cartels_logistiques_regionaux_breakdown"
+        ],
+        "impact_sur_variables": [
+          {
+            "variable": "geopolitique_conflits",
+            "delta_level": 20,
+            "duree": 30,
+            "polarite": -1
+          },
+          {
+            "variable": "gouvernance_institutions",
+            "delta_level": -10,
+            "duree": 25,
+            "polarite": -1
+          },
+          {
+            "variable": "organisation_territoires",
+            "delta_level": -15,
+            "duree": 20,
+            "polarite": -1
+          },
+          {
+            "variable": "climat_environnement_global",
+            "delta_level": -5,
+            "duree": 15,
+            "polarite": -1
+          }
+        ],
+        "propagation_via_matrice": true,
+        "impossible_dans_scenario": false,
+        "note_coherence": "Cohérent avec la trajectoire de fragmentation régionale et l'effondrement des institutions, tout en s'appuyant sur les tensions réelles documentées autour des ressources hydriques et des infrastructures critiques au Sahel."
+      }
+    }
+  ],
+  "injected_scenarios": [
+    "breakdown"
+  ],
+  "failed_scenarios": []
+}
+
+=== zone_invalide_test ===
+[1/4] Sélection de variables + type...
+[llm] Mistral (mistral-large-latest) — entrée : 508 | sortie : 40
+  -> variables=['organisation_territoires', 'technologie_information'] type=technological slug=zone_invalide_test
+[2/4] Développement pour breakdown...
+  ⚠ zone_hint 'zone_totalement_inventee_xyz' introuvable dans geographie/breakdown.md — ignoré pour ce scénario, le LLM choisit librement.
+[llm] Mistral (mistral-large-latest) — entrée : 21740 | sortie : 610
+[3/4] Validation (essai 1)...
+[4/4] Injection...
+{
+  "nom": "Test Fantôme des Zones Invalides",
+  "date": 2045,
+  "date_label": "été 2045",
+  "evenement_cle": "Agadez ignore l'alerte fantôme 2045",
+  "realisation": "Dans le chaos du breakdown, un test technique visant à vérifier la robustesse des garde-fous du système de cartographie territoriale déclenche une alerte erronée pour une 'zone_hint' inexistante. Le réseau décentralisé de la Ligue du Sahel Numérique, déjà fragmenté, traite l'incident comme un bruit de fond parmi d'autres dysfonctionnements, sans conséquence directe. L'événement révèle cependant la vulnérabilité des infrastructures résiduelles à des erreurs de conception ou des attaques ciblées exploitant des failles logicielles.",
+  "description_complete": "En juillet 2045, les nœuds de la Ligue du Sahel Numérique reçoivent une alerte automatisée signalant une 'zone invalide' dans leurs systèmes de coordination territoriale. Le message, généré par un test de routine du code de cartographie, est ignoré par la plupart des opérateurs locaux, habitués aux pannes et aux faux positifs. À Agadez, quelques techniciens notent l'anomalie dans les logs, mais sans pouvoir la corréler à une menace réelle. L'incident passe inaperçu des médias, noyé dans le flot quotidien de défaillances techniques et de conflits logistiques.",
+  "consequences": "L'événement confirme la résilience passive des réseaux décentralisés face aux erreurs systémiques, mais souligne aussi leur incapacité à distinguer les menaces réelles des artefacts techniques. Il accélère la fragmentation des protocoles de coordination, chaque nœud développant ses propres garde-fous improvisés, au détriment d'une interopérabilité déjà fragile.",
+  "acteurs": [
+    "agadez_ligue_sahel_numerique_breakdown",
+    "collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown"
+  ],
+  "impact_sur_variables": [
+    {
+      "variable": "technologie_information",
+      "delta_level": -5,
+      "duree": 10,
+      "polarite": -1
+    },
+    {
+      "variable": "organisation_territoires",
+      "delta_level": -3,
+      "duree": 5,
+      "polarite": -1
+    }
+  ],
+  "propagation_via_matrice": false,
+  "impossible_dans_scenario": false,
+  "note_coherence": "Cohérent avec l'effondrement des infrastructures centralisées et la fragmentation des réseaux numériques dans un scénario de breakdown avancé."
+}
+{
+  "status": "injected",
+  "idea": {
+    "id": "zone_invalide_test",
+    "description": "Cas de test du garde-fou zone_hint — slug de zone volontairement inexistant, pour vérifier que le code l'ignore proprement avec un avertissement plutôt que de le transmettre tel quel au LLM.\n",
+    "portee": "regionale",
+    "date_approximative": 2045,
+    "intensite": "modérée",
+    "scenarios": [
+      "breakdown"
+    ],
+    "variables_hint": [
+      "organisation_territoires"
+    ],
+    "variables_hint_count": null,
+    "acteurs_hint": null,
+    "acteurs_hint_count": null,
+    "zone_hint": "zone_totalement_inventee_xyz",
+    "source": "test_robustesse_12_aout"
+  },
+  "selection": {
+    "variables": [
+      "organisation_territoires",
+      "technologie_information"
+    ],
+    "type_evenement": "technological"
+  },
+  "results": [
+    {
+      "scenario": "breakdown",
+      "status": "injected",
+      "instance_data": {
+        "nom": "Test Fantôme des Zones Invalides",
+        "date": 2045,
+        "date_label": "été 2045",
+        "evenement_cle": "Agadez ignore l'alerte fantôme 2045",
+        "realisation": "Dans le chaos du breakdown, un test technique visant à vérifier la robustesse des garde-fous du système de cartographie territoriale déclenche une alerte erronée pour une 'zone_hint' inexistante. Le réseau décentralisé de la Ligue du Sahel Numérique, déjà fragmenté, traite l'incident comme un bruit de fond parmi d'autres dysfonctionnements, sans conséquence directe. L'événement révèle cependant la vulnérabilité des infrastructures résiduelles à des erreurs de conception ou des attaques ciblées exploitant des failles logicielles.",
+        "description_complete": "En juillet 2045, les nœuds de la Ligue du Sahel Numérique reçoivent une alerte automatisée signalant une 'zone invalide' dans leurs systèmes de coordination territoriale. Le message, généré par un test de routine du code de cartographie, est ignoré par la plupart des opérateurs locaux, habitués aux pannes et aux faux positifs. À Agadez, quelques techniciens notent l'anomalie dans les logs, mais sans pouvoir la corréler à une menace réelle. L'incident passe inaperçu des médias, noyé dans le flot quotidien de défaillances techniques et de conflits logistiques.",
+        "consequences": "L'événement confirme la résilience passive des réseaux décentralisés face aux erreurs systémiques, mais souligne aussi leur incapacité à distinguer les menaces réelles des artefacts techniques. Il accélère la fragmentation des protocoles de coordination, chaque nœud développant ses propres garde-fous improvisés, au détriment d'une interopérabilité déjà fragile.",
+        "acteurs": [
+          "agadez_ligue_sahel_numerique_breakdown",
+          "collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown"
+        ],
+        "impact_sur_variables": [
+          {
+            "variable": "technologie_information",
+            "delta_level": -5,
+            "duree": 10,
+            "polarite": -1
+          },
+          {
+            "variable": "organisation_territoires",
+            "delta_level": -3,
+            "duree": 5,
+            "polarite": -1
+          }
+        ],
+        "propagation_via_matrice": false,
+        "impossible_dans_scenario": false,
+        "note_coherence": "Cohérent avec l'effondrement des infrastructures centralisées et la fragmentation des réseaux numériques dans un scénario de breakdown avancé."
+      }
+    }
+  ],
+  "injected_scenarios": [
+    "breakdown"
+  ],
+  "failed_scenarios": []
+}
+
+=== zone_valide_test ===
+[1/4] Sélection de variables + type...
+[llm] Mistral (mistral-large-latest) — entrée : 525 | sortie : 42
+  -> variables=['organisation_territoires', 'technologie_information'] type=political_social slug=zone_valide_test
+[2/4] Développement pour eco_communalism...
+[llm] Mistral (mistral-large-latest) — entrée : 19069 | sortie : 664
+[3/4] Validation (essai 1)...
+[4/4] Injection...
+{
+  "nom": "Forum des Communs Numériques du Sahel",
+  "date": 2050,
+  "date_label": "automne 2050",
+  "evenement_cle": "Sahel Numérique proclame ses communs souverains 2050",
+  "realisation": "Dans un contexte de fragmentation mondiale et de résilience territoriale, la Ligue des Cités du Sahel Numérique organise un forum régional pour formaliser une gouvernance collective des infrastructures numériques low-tech. L'événement valide l'autonomie des réseaux mesh communautaires et des archives décentralisées, tout en rejetant les tentatives de réappropriation par les Plateformes Centralisées de Réagrégation Globale.",
+  "description_complete": "Sous une tente climatisée alimentée par panneaux solaires, les délégués de dix-huit villes sahéliennes se sont réunis à Agadez pour le premier Forum des Communs Numériques du Sahel. Entre débats animés et démonstrations de réseaux mesh auto-organisés, l'événement a marqué un tournant : la signature d'une charte commune reconnaissant la souveraineté numérique des bioterritoires. Les Collectifs de Techniciens Sobres ont présenté des prototypes de serveurs locaux alimentés par énergie éolienne, tandis que les Archives Ouvertes des Jurisprudences Communales ont partagé leurs outils de vérification communautaire de l'information.",
+  "consequences": "La charte adoptée devient une référence pour d'autres régions en quête d'autonomie numérique, accélérant la décentralisation des infrastructures. Les Consortiums des Opérateurs d'IA Propriétaires voient leur influence reculer dans la zone, tandis que les réseaux de radio communautaire basse consommation se multiplient pour relayer les décisions locales.",
+  "acteurs": [
+    "ligue_des_cites_du_sahel_numerique_eco_communalism",
+    "collectifs_de_techniciens_sobres_eco_communalism",
+    "archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism",
+    "reseaux_de_radio_communautaire_basse_consommation_eco_communalism",
+    "consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism"
+  ],
+  "impact_sur_variables": [
+    {
+      "variable": "organisation_territoires",
+      "delta_level": 12,
+      "duree": 15,
+      "polarite": 1
+    },
+    {
+      "variable": "technologie_information",
+      "delta_level": 10,
+      "duree": 10,
+      "polarite": 1
+    }
+  ],
+  "propagation_via_matrice": true,
+  "impossible_dans_scenario": false,
+  "note_coherence": "Cohérent avec la trajectoire de régénération territoriale et la montée des souverainetés locales numériques dans un monde fragmenté en bioterritoires autonomes."
+}
+{
+  "status": "injected",
+  "idea": {
+    "id": "zone_valide_test",
+    "description": "Cas de test du garde-fou zone_hint — slug de zone réel (sahel_numerique_ligue, niveau 1 de eco_communalism.md), pour vérifier qu'une zone valide passe sans avertissement et se retrouve bien utilisée comme ancrage géographique dans l'événement généré.\n",
+    "portee": "regionale",
+    "date_approximative": 2050,
+    "intensite": "modérée",
+    "scenarios": [
+      "eco_communalism"
+    ],
+    "variables_hint": [
+      "organisation_territoires"
+    ],
+    "variables_hint_count": null,
+    "acteurs_hint": null,
+    "acteurs_hint_count": null,
+    "zone_hint": "sahel_numerique_ligue",
+    "source": "test_robustesse_12_aout"
+  },
+  "selection": {
+    "variables": [
+      "organisation_territoires",
+      "technologie_information"
+    ],
+    "type_evenement": "political_social"
+  },
+  "results": [
+    {
+      "scenario": "eco_communalism",
+      "status": "injected",
+      "instance_data": {
+        "nom": "Forum des Communs Numériques du Sahel",
+        "date": 2050,
+        "date_label": "automne 2050",
+        "evenement_cle": "Sahel Numérique proclame ses communs souverains 2050",
+        "realisation": "Dans un contexte de fragmentation mondiale et de résilience territoriale, la Ligue des Cités du Sahel Numérique organise un forum régional pour formaliser une gouvernance collective des infrastructures numériques low-tech. L'événement valide l'autonomie des réseaux mesh communautaires et des archives décentralisées, tout en rejetant les tentatives de réappropriation par les Plateformes Centralisées de Réagrégation Globale.",
+        "description_complete": "Sous une tente climatisée alimentée par panneaux solaires, les délégués de dix-huit villes sahéliennes se sont réunis à Agadez pour le premier Forum des Communs Numériques du Sahel. Entre débats animés et démonstrations de réseaux mesh auto-organisés, l'événement a marqué un tournant : la signature d'une charte commune reconnaissant la souveraineté numérique des bioterritoires. Les Collectifs de Techniciens Sobres ont présenté des prototypes de serveurs locaux alimentés par énergie éolienne, tandis que les Archives Ouvertes des Jurisprudences Communales ont partagé leurs outils de vérification communautaire de l'information.",
+        "consequences": "La charte adoptée devient une référence pour d'autres régions en quête d'autonomie numérique, accélérant la décentralisation des infrastructures. Les Consortiums des Opérateurs d'IA Propriétaires voient leur influence reculer dans la zone, tandis que les réseaux de radio communautaire basse consommation se multiplient pour relayer les décisions locales.",
+        "acteurs": [
+          "ligue_des_cites_du_sahel_numerique_eco_communalism",
+          "collectifs_de_techniciens_sobres_eco_communalism",
+          "archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism",
+          "reseaux_de_radio_communautaire_basse_consommation_eco_communalism",
+          "consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism"
+        ],
+        "impact_sur_variables": [
+          {
+            "variable": "organisation_territoires",
+            "delta_level": 12,
+            "duree": 15,
+            "polarite": 1
+          },
+          {
+            "variable": "technologie_information",
+            "delta_level": 10,
+            "duree": 10,
+            "polarite": 1
+          }
+        ],
+        "propagation_via_matrice": true,
+        "impossible_dans_scenario": false,
+        "note_coherence": "Cohérent avec la trajectoire de régénération territoriale et la montée des souverainetés locales numériques dans un monde fragmenté en bioterritoires autonomes."
+      }
+    }
+  ],
+  "injected_scenarios": [
+    "eco_communalism"
+  ],
+  "failed_scenarios": []
+}
+
+=== controle_date_lointaine_test ===
+[1/4] Sélection de variables + type...
+[llm] Mistral (mistral-large-latest) — entrée : 519 | sortie : 41
+  -> variables=['technologie_information', 'gouvernance_institutions'] type=systemic slug=controle_date_lointaine_test
+[2/4] Développement pour reference...
+[llm] Mistral (mistral-large-latest) — entrée : 23202 | sortie : 829
+[3/4] Validation (essai 1)...
+[4/4] Injection...
+{
+  "nom": "Audit Algorithmique Continental des Systèmes de Datation",
+  "date": 2091,
+  "date_label": "automne 2091",
+  "evenement_cle": "L'Europe valide l'audit des horloges numériques 2091",
+  "realisation": "Dans un monde où la gouvernance algorithmique est omniprésente mais fragile, les Administrations Hybrides des Cités-Relais Périphériques lancent un audit systémique des infrastructures de datation critiques, initialement conçu comme un test de routine. L'audit révèle des biais structurels dans les systèmes de timestamping utilisés pour les transactions énergétiques et logistiques, menaçant la stabilité des corridors stratégiques. Plutôt que de s'effondrer, le système s'adapte en intégrant des mécanismes de redondance décentralisée, validés par l'Autorité de Régulation des Passages Stratégiques (ARPS).",
+  "description_complete": "Le 12 octobre 2091, les résultats de l'audit algorithmique continental sont rendus publics lors d'une conférence hybride à Bruxelles Nouveau. Les médias, contrôlés par les Plateformes Centralisées de Narration Officielle, minimisent d'abord l'impact, mais les Collectifs de Journalisme Embarqué et les Réseaux de Capteurs Citoyens diffusent en temps réel des preuves de décalages temporels dans les transactions énergétiques du Consortium Helios. En une semaine, des perturbations logistiques touchent les détroits stratégiques, forçant l'ARPS à suspendre temporairement les flux automatisés. Les opérateurs privés, comme OptiFlow Global Logistics Network, collaborent avec les agences publiques pour déployer des horloges distribuées basées sur des protocoles open-source.",
+  "consequences": "L'événement renforce la résilience des infrastructures critiques en institutionalisant des audits réguliers et en diversifiant les sources de datation. Il marque aussi un tournant dans la gouvernance hybride : les acteurs privés et publics acceptent une transparence accrue, tandis que les zones grises eurasiatiques exploitent les failles révélées pour contourner les régulations. À long terme, cet épisode consolide la position des Bureaux de Régulation Informationnelle comme arbitres des équilibres systémiques.",
+  "acteurs": [
+    "administrations_hybrides_des_cites_relais_peripheriques_reference",
+    "agence_de_regulation_des_detroits_strategiques_ards_reference",
+    "plateformes_centralisees_de_narration_officielle_reference",
+    "collectifs_de_journalisme_embarque_reference",
+    "reseaux_de_capteurs_citoyens_reference",
+    "optiflow_logistics_reference",
+    "consortium_helios_reference",
+    "bureaux_de_regulation_informationnelle_reference"
+  ],
+  "impact_sur_variables": [
+    {
+      "variable": "technologie_information",
+      "delta_level": 10,
+      "duree": 15,
+      "polarite": 1
+    },
+    {
+      "variable": "gouvernance_institutions",
+      "delta_level": 8,
+      "duree": 10,
+      "polarite": 1
+    }
+  ],
+  "propagation_via_matrice": true,
+  "impossible_dans_scenario": false,
+  "note_coherence": "Cohérent avec un monde en équilibre fragile où la technologie informationnelle (level 80) et la gouvernance institutionnelle (level 60) sont des piliers systémiques, mais où les tensions entre centralisation et décentralisation persistent. L'audit reflète les mécanismes de régulation continue typiques du scénario *reference*."
+}
+{
+  "status": "injected",
+  "idea": {
+    "id": "controle_date_lointaine_test",
+    "description": "Événement de contrôle à date lointaine (65 ans) dans le scénario reference — sert de référence stable pour vérifier que l'ajout du contexte \"état du monde réel\" ne perturbe pas un cas déjà bien géré, où l'ancrage réel importe peu.\n",
+    "portee": "continentale",
+    "date_approximative": 2091,
+    "intensite": "forte",
+    "scenarios": [
+      "reference"
+    ],
+    "variables_hint": [
+      "technologie_information"
+    ],
+    "variables_hint_count": null,
+    "acteurs_hint": null,
+    "acteurs_hint_count": null,
+    "zone_hint": null,
+    "source": "test_robustesse_12_aout"
+  },
+  "selection": {
+    "variables": [
+      "technologie_information",
+      "gouvernance_institutions"
+    ],
+    "type_evenement": "systemic"
+  },
+  "results": [
+    {
+      "scenario": "reference",
+      "status": "injected",
+      "instance_data": {
+        "nom": "Audit Algorithmique Continental des Systèmes de Datation",
+        "date": 2091,
+        "date_label": "automne 2091",
+        "evenement_cle": "L'Europe valide l'audit des horloges numériques 2091",
+        "realisation": "Dans un monde où la gouvernance algorithmique est omniprésente mais fragile, les Administrations Hybrides des Cités-Relais Périphériques lancent un audit systémique des infrastructures de datation critiques, initialement conçu comme un test de routine. L'audit révèle des biais structurels dans les systèmes de timestamping utilisés pour les transactions énergétiques et logistiques, menaçant la stabilité des corridors stratégiques. Plutôt que de s'effondrer, le système s'adapte en intégrant des mécanismes de redondance décentralisée, validés par l'Autorité de Régulation des Passages Stratégiques (ARPS).",
+        "description_complete": "Le 12 octobre 2091, les résultats de l'audit algorithmique continental sont rendus publics lors d'une conférence hybride à Bruxelles Nouveau. Les médias, contrôlés par les Plateformes Centralisées de Narration Officielle, minimisent d'abord l'impact, mais les Collectifs de Journalisme Embarqué et les Réseaux de Capteurs Citoyens diffusent en temps réel des preuves de décalages temporels dans les transactions énergétiques du Consortium Helios. En une semaine, des perturbations logistiques touchent les détroits stratégiques, forçant l'ARPS à suspendre temporairement les flux automatisés. Les opérateurs privés, comme OptiFlow Global Logistics Network, collaborent avec les agences publiques pour déployer des horloges distribuées basées sur des protocoles open-source.",
+        "consequences": "L'événement renforce la résilience des infrastructures critiques en institutionalisant des audits réguliers et en diversifiant les sources de datation. Il marque aussi un tournant dans la gouvernance hybride : les acteurs privés et publics acceptent une transparence accrue, tandis que les zones grises eurasiatiques exploitent les failles révélées pour contourner les régulations. À long terme, cet épisode consolide la position des Bureaux de Régulation Informationnelle comme arbitres des équilibres systémiques.",
+        "acteurs": [
+          "administrations_hybrides_des_cites_relais_peripheriques_reference",
+          "agence_de_regulation_des_detroits_strategiques_ards_reference",
+          "plateformes_centralisees_de_narration_officielle_reference",
+          "collectifs_de_journalisme_embarque_reference",
+          "reseaux_de_capteurs_citoyens_reference",
+          "optiflow_logistics_reference",
+          "consortium_helios_reference",
+          "bureaux_de_regulation_informationnelle_reference"
+        ],
+        "impact_sur_variables": [
+          {
+            "variable": "technologie_information",
+            "delta_level": 10,
+            "duree": 15,
+            "polarite": 1
+          },
+          {
+            "variable": "gouvernance_institutions",
+            "delta_level": 8,
+            "duree": 10,
+            "polarite": 1
+          }
+        ],
+        "propagation_via_matrice": true,
+        "impossible_dans_scenario": false,
+        "note_coherence": "Cohérent avec un monde en équilibre fragile où la technologie informationnelle (level 80) et la gouvernance institutionnelle (level 60) sont des piliers systémiques, mais où les tensions entre centralisation et décentralisation persistent. L'audit reflète les mécanismes de régulation continue typiques du scénario *reference*."
+      }
+    }
+  ],
+  "injected_scenarios": [
+    "reference"
+  ],
+  "failed_scenarios": []
+}
+
+=== multi_scenario_zone_test ===
+[1/4] Sélection de variables + type...
+[llm] Mistral (mistral-large-latest) — entrée : 614 | sortie : 46
+  -> variables=['demographie_mobilite_humaine', 'organisation_territoires'] type=political_social slug=multi_scenario_zone_test
+[2/4] Développement pour eco_communalism...
+[llm] Mistral (mistral-large-latest) — entrée : 19227 | sortie : 1034
+[3/4] Validation (essai 1)...
+[4/4] Injection...
+{
+  "nom": "Conflit des Trames Numériques du Sahel",
+  "date": 2048,
+  "date_label": "été 2048",
+  "evenement_cle": "Sahel Numérique scinde ses réseaux 2048",
+  "realisation": "Dans un monde éco-communaliste où les structures globales se sont fragmentées, la Ligue des Cités du Sahel Numérique (LCSN) se retrouve au cœur d'une tension entre deux visions opposées : une faction souhaite maintenir une infrastructure numérique centralisée pour préserver les échanges transrégionaux, tandis qu'une autre prône une souveraineté numérique locale absolue, alignée sur les principes bioterritoriaux. Le conflit éclate lorsque des collectifs de techniciens sobres et des assemblées bioterritoriales régionales refusent de partager leurs données environnementales et agricoles avec la LCSN, accusée de reproduire des logiques extractivistes sous couvert de coopération.",
+  "description_complete": "En cet été 2048, les rues de Ouagadougou et Niamey sont le théâtre de manifestations hybrides, mêlant débats publics et cyberattaques ciblées. Des collectifs de cartographie écologique participative, soutenus par les Cercles de Médiation Territoriale Intercommunautaire, ont piraté les serveurs de la LCSN pour effacer les données centralisées, arguant que ces informations appartiennent aux communautés locales. Pendant ce temps, les Agro-Conglomérats des Enclaves Technologiques tentent de négocier des accords séparés avec certaines villes, offrant des technologies de dessalement en échange d'un accès exclusif aux données hydriques. La crise atteint son paroxysme lorsque Agadez, bastion des Veilleurs du Seuil, déclare son indépendance numérique et coupe ses liaisons avec le réseau de la LCSN.",
+  "consequences": "Le conflit aboutit à une scission durable de l'infrastructure numérique sahélienne : certaines villes maintiennent une version allégée et décentralisée de la LCSN, tandis que d'autres se replient sur des réseaux locaux autonomes, limitant drastiquement les échanges transrégionaux. Cette fragmentation accélère la relocalisation des systèmes productifs et renforce les logiques d'autosuffisance bioterritoriale, mais elle isole aussi des communautés déjà vulnérables, les privant d'accès à des ressources critiques comme les prévisions climatiques ou les alertes sanitaires. Les Archives Ouvertes des Jurisprudences Communales (AOJC) sont sollicitées pour arbitrer les litiges, mais leur légitimité est contestée par les factions les plus radicales.",
+  "acteurs": [
+    "ligue_des_cites_du_sahel_numerique_eco_communalism",
+    "collectifs_de_techniciens_sobres_eco_communalism",
+    "assemblees_bioterritoriales_regionales_eco_communalism",
+    "agro_conglomerats_des_enclaves_technologiques_eco_communalism",
+    "collectifs_de_cartographie_ecologique_participative_eco_communalism",
+    "cercles_de_mediation_territoriale_intercommunautaire_eco_communalism",
+    "collectifs_du_seuil_eco_communalism",
+    "archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism"
+  ],
+  "impact_sur_variables": [
+    {
+      "variable": "organisation_territoires",
+      "delta_level": -15,
+      "duree": 15,
+      "polarite": -1
+    },
+    {
+      "variable": "demographie_mobilite_humaine",
+      "delta_level": -10,
+      "duree": 10,
+      "polarite": -1
+    },
+    {
+      "variable": "technologie_information",
+      "delta_level": -20,
+      "duree": 20,
+      "polarite": -1
+    },
+    {
+      "variable": "gouvernance_institutions",
+      "delta_level": -10,
+      "duree": 10,
+      "polarite": -1
+    }
+  ],
+  "propagation_via_matrice": true,
+  "impossible_dans_scenario": false,
+  "note_coherence": "Cet événement reflète la tension centrale du scénario éco-communaliste entre autonomie locale et coopération transrégionale, exacerbée par la méfiance envers les infrastructures centralisées, tout en s'ancrant dans la trajectoire réelle de fragmentation des réseaux numériques documentée dans la chronologie du scénario."
+}
+[2/4] Développement pour breakdown...
+  ⚠ zone_hint 'sahel_numerique_ligue' introuvable dans geographie/breakdown.md — ignoré pour ce scénario, le LLM choisit librement.
+[llm] Mistral (mistral-large-latest) — entrée : 21907 | sortie : 897
+[3/4] Validation (essai 1)...
+  -> problèmes :
+     - Variables annoncées mais non impactées : ['demographie_mobilite_humaine']
+[llm] Mistral (mistral-large-latest) — entrée : 22841 | sortie : 999
+[3/4] Validation (essai 2)...
+[4/4] Injection...
+{
+  "nom": "Fracture des Nœuds du Sahel — Test des Zones Scénariques",
+  "date": 2048,
+  "date_label": "été 2048",
+  "evenement_cle": "Agadez brise la Ligue, 2048",
+  "realisation": "Dans le scénario *breakdown*, la Ligue du Sahel Numérique (LSN) d'Agadez, déjà fragmentée en îlots déconnectés depuis 2045, est soumise à un test de résilience imposé par les *Blocs de Contrôle des Couloirs d'Approvisionnement Stratégiques*. Ces derniers exigent une validation algorithmique des zones d'influence pour sécuriser les flux logistiques critiques. Le test révèle une incompatibilité géographique entre les scénarios *eco_communalism* (où la zone *sahel_numerique_ligue* est valide) et *breakdown* (où elle est morcelée en micro-territoires contestés). La validation échoue pour le second scénario, déclenchant une reconfiguration forcée des nœuds numériques et un exode massif des populations dépendantes de ces infrastructures.",
+  "description_complete": "Sous une chaleur écrasante, les délégués des *Nœuds d'Agadez* se réunissent dans les ruines climatisées de l'ancien hub technologique de la ville. Les écrans affichent en boucle les cartes contradictoires : d'un côté, une Ligue unifiée sous *eco_communalism* ; de l'autre, un archipel de cités-États en guerre pour les relais physiques. Les *Gardiens des Interstices Réseaux* tentent de maintenir une continuité, mais les milices locales, soutenues par les *Seigneuries Logistiques Armées*, sabotent les protocoles de validation. En trois jours, le réseau se scinde en deux : une partie migre vers les *Diaspora Tech Sahel* hors-territoire, l'autre sombre dans le chaos des *Zones Grises*, entraînant le déplacement de milliers de personnes vers les zones encore connectées.",
+  "consequences": "La fracture accélère la fragmentation du Sahel en enclaves technologiques rivales, chacune revendiquant une souveraineté algorithmique. Les *Courriers Nomades Sahélo-Méditerranéens* deviennent les seuls vecteurs fiables d'information, tandis que les *Collectifs de Hackers Archivistes* exploitent les failles pour préserver des archives numériques. À long terme, le test révèle l'impossibilité de maintenir des infrastructures partagées dans un monde en *breakdown*, poussant les acteurs à adopter des solutions hyper-locales ou diasporiques, et aggravant les flux migratoires non intégrables.",
+  "acteurs": [
+    "agadez_ligue_sahel_numerique_breakdown",
+    "blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown",
+    "collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown",
+    "reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown",
+    "diaspora_tech_sahel_breakdown",
+    "milices_de_controle_territorial_breakdown",
+    "flux_migratoires_non_integrables_breakdown"
+  ],
+  "impact_sur_variables": [
+    {
+      "variable": "organisation_territoires",
+      "delta_level": -20,
+      "duree": 15,
+      "polarite": -1
+    },
+    {
+      "variable": "technologie_information",
+      "delta_level": -10,
+      "duree": 10,
+      "polarite": -1
+    },
+    {
+      "variable": "geopolitique_conflits",
+      "delta_level": 15,
+      "duree": 20,
+      "polarite": -1
+    },
+    {
+      "variable": "demographie_mobilite_humaine",
+      "delta_level": 20,
+      "duree": 15,
+      "polarite": -1
+    }
+  ],
+  "propagation_via_matrice": true,
+  "impossible_dans_scenario": false,
+  "note_coherence": "Cohérent avec la fragmentation territoriale, la logique de contrôle des flux et l'effondrement des infrastructures partagées du scénario *breakdown*, où les crises technologiques exacerbent les déplacements forcés."
+}
+{
+  "status": "injected",
+  "idea": {
+    "id": "multi_scenario_zone_test",
+    "description": "Deux scénarios avec le MÊME zone_hint — vérifie que la validation se refait bien à CHAQUE itération de la boucle scénarios (une zone valide dans un scénario ne l'est pas forcément dans un autre, la géographie est propre à chaque scénario). zone_hint ci-dessous (sahel_numerique_ligue) est valide dans eco_communalism (confirmé via geographie/eco_communalism.md) — reste à voir si elle existe aussi dans breakdown ou si le garde-fou se déclenche pour ce second scénario seulement. Si tu as un fichier geographie/breakdown.md, envoie-le pour un test plus précis avec un slug garanti absent des deux côtés.\n",
+    "portee": "regionale",
+    "date_approximative": 2048,
+    "intensite": "modérée",
+    "scenarios": [
+      "eco_communalism",
+      "breakdown"
+    ],
+    "variables_hint": [
+      "demographie_mobilite_humaine"
+    ],
+    "variables_hint_count": null,
+    "acteurs_hint": null,
+    "acteurs_hint_count": null,
+    "zone_hint": "sahel_numerique_ligue",
+    "source": "test_robustesse_12_aout"
+  },
+  "selection": {
+    "variables": [
+      "demographie_mobilite_humaine",
+      "organisation_territoires"
+    ],
+    "type_evenement": "political_social"
+  },
+  "results": [
+    {
+      "scenario": "eco_communalism",
+      "status": "injected",
+      "instance_data": {
+        "nom": "Conflit des Trames Numériques du Sahel",
+        "date": 2048,
+        "date_label": "été 2048",
+        "evenement_cle": "Sahel Numérique scinde ses réseaux 2048",
+        "realisation": "Dans un monde éco-communaliste où les structures globales se sont fragmentées, la Ligue des Cités du Sahel Numérique (LCSN) se retrouve au cœur d'une tension entre deux visions opposées : une faction souhaite maintenir une infrastructure numérique centralisée pour préserver les échanges transrégionaux, tandis qu'une autre prône une souveraineté numérique locale absolue, alignée sur les principes bioterritoriaux. Le conflit éclate lorsque des collectifs de techniciens sobres et des assemblées bioterritoriales régionales refusent de partager leurs données environnementales et agricoles avec la LCSN, accusée de reproduire des logiques extractivistes sous couvert de coopération.",
+        "description_complete": "En cet été 2048, les rues de Ouagadougou et Niamey sont le théâtre de manifestations hybrides, mêlant débats publics et cyberattaques ciblées. Des collectifs de cartographie écologique participative, soutenus par les Cercles de Médiation Territoriale Intercommunautaire, ont piraté les serveurs de la LCSN pour effacer les données centralisées, arguant que ces informations appartiennent aux communautés locales. Pendant ce temps, les Agro-Conglomérats des Enclaves Technologiques tentent de négocier des accords séparés avec certaines villes, offrant des technologies de dessalement en échange d'un accès exclusif aux données hydriques. La crise atteint son paroxysme lorsque Agadez, bastion des Veilleurs du Seuil, déclare son indépendance numérique et coupe ses liaisons avec le réseau de la LCSN.",
+        "consequences": "Le conflit aboutit à une scission durable de l'infrastructure numérique sahélienne : certaines villes maintiennent une version allégée et décentralisée de la LCSN, tandis que d'autres se replient sur des réseaux locaux autonomes, limitant drastiquement les échanges transrégionaux. Cette fragmentation accélère la relocalisation des systèmes productifs et renforce les logiques d'autosuffisance bioterritoriale, mais elle isole aussi des communautés déjà vulnérables, les privant d'accès à des ressources critiques comme les prévisions climatiques ou les alertes sanitaires. Les Archives Ouvertes des Jurisprudences Communales (AOJC) sont sollicitées pour arbitrer les litiges, mais leur légitimité est contestée par les factions les plus radicales.",
+        "acteurs": [
+          "ligue_des_cites_du_sahel_numerique_eco_communalism",
+          "collectifs_de_techniciens_sobres_eco_communalism",
+          "assemblees_bioterritoriales_regionales_eco_communalism",
+          "agro_conglomerats_des_enclaves_technologiques_eco_communalism",
+          "collectifs_de_cartographie_ecologique_participative_eco_communalism",
+          "cercles_de_mediation_territoriale_intercommunautaire_eco_communalism",
+          "collectifs_du_seuil_eco_communalism",
+          "archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism"
+        ],
+        "impact_sur_variables": [
+          {
+            "variable": "organisation_territoires",
+            "delta_level": -15,
+            "duree": 15,
+            "polarite": -1
+          },
+          {
+            "variable": "demographie_mobilite_humaine",
+            "delta_level": -10,
+            "duree": 10,
+            "polarite": -1
+          },
+          {
+            "variable": "technologie_information",
+            "delta_level": -20,
+            "duree": 20,
+            "polarite": -1
+          },
+          {
+            "variable": "gouvernance_institutions",
+            "delta_level": -10,
+            "duree": 10,
+            "polarite": -1
+          }
+        ],
+        "propagation_via_matrice": true,
+        "impossible_dans_scenario": false,
+        "note_coherence": "Cet événement reflète la tension centrale du scénario éco-communaliste entre autonomie locale et coopération transrégionale, exacerbée par la méfiance envers les infrastructures centralisées, tout en s'ancrant dans la trajectoire réelle de fragmentation des réseaux numériques documentée dans la chronologie du scénario."
+      }
+    },
+    {
+      "scenario": "breakdown",
+      "status": "injected",
+      "instance_data": {
+        "nom": "Fracture des Nœuds du Sahel — Test des Zones Scénariques",
+        "date": 2048,
+        "date_label": "été 2048",
+        "evenement_cle": "Agadez brise la Ligue, 2048",
+        "realisation": "Dans le scénario *breakdown*, la Ligue du Sahel Numérique (LSN) d'Agadez, déjà fragmentée en îlots déconnectés depuis 2045, est soumise à un test de résilience imposé par les *Blocs de Contrôle des Couloirs d'Approvisionnement Stratégiques*. Ces derniers exigent une validation algorithmique des zones d'influence pour sécuriser les flux logistiques critiques. Le test révèle une incompatibilité géographique entre les scénarios *eco_communalism* (où la zone *sahel_numerique_ligue* est valide) et *breakdown* (où elle est morcelée en micro-territoires contestés). La validation échoue pour le second scénario, déclenchant une reconfiguration forcée des nœuds numériques et un exode massif des populations dépendantes de ces infrastructures.",
+        "description_complete": "Sous une chaleur écrasante, les délégués des *Nœuds d'Agadez* se réunissent dans les ruines climatisées de l'ancien hub technologique de la ville. Les écrans affichent en boucle les cartes contradictoires : d'un côté, une Ligue unifiée sous *eco_communalism* ; de l'autre, un archipel de cités-États en guerre pour les relais physiques. Les *Gardiens des Interstices Réseaux* tentent de maintenir une continuité, mais les milices locales, soutenues par les *Seigneuries Logistiques Armées*, sabotent les protocoles de validation. En trois jours, le réseau se scinde en deux : une partie migre vers les *Diaspora Tech Sahel* hors-territoire, l'autre sombre dans le chaos des *Zones Grises*, entraînant le déplacement de milliers de personnes vers les zones encore connectées.",
+        "consequences": "La fracture accélère la fragmentation du Sahel en enclaves technologiques rivales, chacune revendiquant une souveraineté algorithmique. Les *Courriers Nomades Sahélo-Méditerranéens* deviennent les seuls vecteurs fiables d'information, tandis que les *Collectifs de Hackers Archivistes* exploitent les failles pour préserver des archives numériques. À long terme, le test révèle l'impossibilité de maintenir des infrastructures partagées dans un monde en *breakdown*, poussant les acteurs à adopter des solutions hyper-locales ou diasporiques, et aggravant les flux migratoires non intégrables.",
+        "acteurs": [
+          "agadez_ligue_sahel_numerique_breakdown",
+          "blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown",
+          "collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown",
+          "reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown",
+          "diaspora_tech_sahel_breakdown",
+          "milices_de_controle_territorial_breakdown",
+          "flux_migratoires_non_integrables_breakdown"
+        ],
+        "impact_sur_variables": [
+          {
+            "variable": "organisation_territoires",
+            "delta_level": -20,
+            "duree": 15,
+            "polarite": -1
+          },
+          {
+            "variable": "technologie_information",
+            "delta_level": -10,
+            "duree": 10,
+            "polarite": -1
+          },
+          {
+            "variable": "geopolitique_conflits",
+            "delta_level": 15,
+            "duree": 20,
+            "polarite": -1
+          },
+          {
+            "variable": "demographie_mobilite_humaine",
+            "delta_level": 20,
+            "duree": 15,
+            "polarite": -1
+          }
+        ],
+        "propagation_via_matrice": true,
+        "impossible_dans_scenario": false,
+        "note_coherence": "Cohérent avec la fragmentation territoriale, la logique de contrôle des flux et l'effondrement des infrastructures partagées du scénario *breakdown*, où les crises technologiques exacerbent les déplacements forcés."
+      }
+    }
+  ],
+  "injected_scenarios": [
+    "eco_communalism",
+    "breakdown"
+  ],
+  "failed_scenarios": []
+}

@@ -53,8 +53,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2041
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -85,6 +83,9 @@ tensions_narratives: Le FTR est structurellement dépendant des ressources éner
   et ceux prêts à s'allier à n'importe quelle autorité territoriale capable de financer
   leurs projets.
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Front Techno-Reconstructionniste

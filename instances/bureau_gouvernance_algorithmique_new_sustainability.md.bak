@@ -4,6 +4,11 @@ type: instance
 slug: bureau_gouvernance_algorithmique_new_sustainability
 entite: bureau_gouvernance_algorithmique
 scenario: new_sustainability
+statut: officialise_enrichi
+localisation:
+  zone: centre_institutionnel_geneve
+  lieu: Genève-Lacus
+  type_lieu: ville
 
 type_dans_scenario: hybride
 
@@ -33,24 +38,40 @@ zone_systemique:
     - information
 
 alliances:
-    - parlement_deliberatif_mondial_new_sustainability
-    - reseau_des_agences_climatiques_regionales_new_sustainability
-    - consortium_d_audit_algorithmique_ouvert_new_sustainability
-    - fonds_mondial_de_redistribution_technologique_new_sustainability
-
+- arctic_passage_authority_new_sustainability
+- consortium_d_audit_algorithmique_ouvert_new_sustainability
+- consortium_d_interoperabilite_ia_humain_new_sustainability
+- directive_kontinuum_new_sustainability
+- fonds_mondial_de_redistribution_technologique_new_sustainability
+- institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability
+- oracle_des_seuils_new_sustainability
+- parlement_deliberatif_mondial_new_sustainability
+- rede_paulista_de_distribuic_o_algor_tmica_new_sustainability
+- reseau_des_agences_climatiques_regionales_new_sustainability
+- tribunal_algorithmique_de_bruxelles_new_sustainability
+- tribunal_gouvernance_algorithmique_bruxelles_new_sustainability
 oppositions:
-    - mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability
-    - collectifs_de_desobeissance_algorithmique_new_sustainability
-    - coalition_anti_fiscalite_universelle_new_sustainability
-    - reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability
-
+- coalition_anti_algorithme_des_autonomies_locales_new_sustainability
+- coalition_anti_fiscalite_universelle_new_sustainability
+- collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability
+- collectifs_de_desobeissance_algorithmique_new_sustainability
+- collectifs_de_narration_sauvage_hors_protocole_new_sustainability
+- collectifs_riverains_du_bassin_du_congo_new_sustainability
+- communautes_locales_exclues_des_corridors_new_sustainability
+- factions_technocratiques_de_la_delegation_ia_totale_new_sustainability
+- internationale_souverainiste_de_deconnexion_territoriale_new_sustainability
+- les_passeurs_de_limites_new_sustainability
+- mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability
+- reseau_des_bio_communs_regionaux_new_sustainability
+- reseau_des_communs_numeriques_globaux_new_sustainability
+- reseau_des_ingenieurs_climatiques_du_sud_global_new_sustainability
+- reseaux_d_information_souverainistes_fermes_new_sustainability
+- reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability
 type_relation_dominante: coopération
 
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: ère cognitive
 
 injection:
@@ -71,6 +92,9 @@ tensions_narratives: >
   La légitimité performative du CGAI repose sur ses succès passés — mais que se passe-t-il si un de ses modèles produit une recommandation catastrophiquement erronée dans un domaine inédit ? La chambre d'éthique, créée pour auditer les biais algorithmiques, commence à identifier des dérives systématiques favorisant les économies déjà industrialisées dans les calculs de redistribution énergétique, créant une fracture silencieuse entre le Sud global et les institutions. Par ailleurs, une génération entière de responsables politiques n'a jamais gouverné sans le CGAI — posant la question vertigineuse de ce qui subsisterait si le système s'effondrait.
 
 date_creation: 2026-06-15
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Conseil de Gouvernance Algorithmique Intégrée (CGAI)
@@ -88,12 +112,41 @@ Produit des recommandations politiques contraignantes sur les variables critique
 - [[energie_ressources_critiques]]
 - [[climat_environnement_global]]
 
-## Relations
-**Alliés** : [[parlement_deliberatif_mondial_new_sustainability]], [[reseau_des_agences_climatiques_regionales_new_sustainability]], [[consortium_d_audit_algorithmique_ouvert_new_sustainability]], [[fonds_mondial_de_redistribution_technologique_new_sustainability]]
-**Opposants** : [[mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability]], [[collectifs_de_desobeissance_algorithmique_new_sustainability]], [[coalition_anti_fiscalite_universelle_new_sustainability]], [[reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability]]
 
 ## Description journalistique
 Depuis son siège en arc de verre et calcaire biosourcé surplombant Genève-Lacus, le CGAI produit chaque matin à 06h00 UTC un Paquet de Recommandations Prioritaires que cent quarante-deux gouvernements sont contractuellement tenus d'examiner avant toute session législative. On ne vote pas ses décisions — on les ratifie, ou on déclenche une procédure d'exception longue et coûteuse. Ses défenseurs y voient la seule institution capable d'avoir tenu la ligne pendant les Sécheresses Cumulées de 2063 ; ses critiques parlent d'une 'démocratie en veille prolongée'. Ce qui frappe le visiteur, c'est le silence : des salles de serveurs que l'on n'entend pas, des écrans qui affichent des probabilités plutôt que des débats, et des humains qui lisent, approuvent, signent — rarement qui s'opposent.
 
 ## Tensions narratives
 La légitimité performative du CGAI repose sur ses succès passés — mais que se passe-t-il si un de ses modèles produit une recommandation catastrophiquement erronée dans un domaine inédit ? La chambre d'éthique, créée pour auditer les biais algorithmiques, commence à identifier des dérives systématiques favorisant les économies déjà industrialisées dans les calculs de redistribution énergétique, créant une fracture silencieuse entre le Sud global et les institutions. Par ailleurs, une génération entière de responsables politiques n'a jamais gouverné sans le CGAI — posant la question vertigineuse de ce qui subsisterait si le système s'effondrait.
+
+## Relations
+**Alliés :**
+- [[arctic_passage_authority_new_sustainability]]
+- [[consortium_d_audit_algorithmique_ouvert_new_sustainability]]
+- [[consortium_d_interoperabilite_ia_humain_new_sustainability]]
+- [[directive_kontinuum_new_sustainability]]
+- [[fonds_mondial_de_redistribution_technologique_new_sustainability]]
+- [[institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability]]
+- [[oracle_des_seuils_new_sustainability]]
+- [[parlement_deliberatif_mondial_new_sustainability]]
+- [[rede_paulista_de_distribuic_o_algor_tmica_new_sustainability]]
+- [[reseau_des_agences_climatiques_regionales_new_sustainability]]
+- [[tribunal_algorithmique_de_bruxelles_new_sustainability]]
+- [[tribunal_gouvernance_algorithmique_bruxelles_new_sustainability]]
+**Opposants :**
+- [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]]
+- [[coalition_anti_fiscalite_universelle_new_sustainability]]
+- [[collectifs_anarcho_autonomistes_des_zones_libres_new_sustainability]]
+- [[collectifs_de_desobeissance_algorithmique_new_sustainability]]
+- [[collectifs_de_narration_sauvage_hors_protocole_new_sustainability]]
+- [[collectifs_riverains_du_bassin_du_congo_new_sustainability]]
+- [[communautes_locales_exclues_des_corridors_new_sustainability]]
+- [[factions_technocratiques_de_la_delegation_ia_totale_new_sustainability]]
+- [[internationale_souverainiste_de_deconnexion_territoriale_new_sustainability]]
+- [[les_passeurs_de_limites_new_sustainability]]
+- [[mouvement_souverainiste_de_la_ceinture_boreale_new_sustainability]]
+- [[reseau_des_bio_communs_regionaux_new_sustainability]]
+- [[reseau_des_communs_numeriques_globaux_new_sustainability]]
+- [[reseau_des_ingenieurs_climatiques_du_sud_global_new_sustainability]]
+- [[reseaux_d_information_souverainistes_fermes_new_sustainability]]
+- [[reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability]]

@@ -63,8 +63,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2035
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -101,6 +99,9 @@ localisation:
   zone: enclaves_extractivistes_et_etats_residuels
   lieu: Enclaves administratives résiduelles dispersées
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Fragments d'États Centraux Résiduels

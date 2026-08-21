@@ -1,0 +1,95 @@
+============================================================
+OURRASSOL 2098 — Injection événements custom
+============================================================
+(mode --dry-run : rien ne sera écrit)
+
+Mode : auto (fourni via --mode)
+
+[1/2] Analyse de la couverture du vault...
+  18 event_instance(s) analysée(s)
+  Variables imposées : valeurs_culture_tempo_sociale
+[2/2] Génération de 3 idée(s) d'événements...
+[llm] Mistral (mistral-large-latest) — entrée : 3411 | sortie : 1077
+  ✓ festival_memoire_afrique_centrale — continentale | 2042 | scénarios: ['eco_communalism', 'policy_reform', 'reference']
+    → Couvre l'Afrique centrale/australe (zone prioritaire), introduit un événement culturel (peu représenté) et impacte les variables *valeurs_culture_tempo_sociale* et *demographie_mobilite_humaine* (sous-représentées).
+  ✓ conflit_temps_travail_eurasie_centrale — regionale | 2055 | scénarios: ['fortress_world', 'new_sustainability', 'breakdown']
+    → Cible l'arc eurasien central (zone vide), comble le manque d'événements sur *systemes_productifs_travail* (variable critique) et diversifie les types d'événements avec un conflit social.
+  ✓ rituel_glace_qaanaaq_2030 — globale | 2030 | scénarios: ['new_sustainability', 'eco_communalism', 'policy_reform']
+    → Couvre l'Arctique (zone prioritaire), équilibre la distribution temporelle (proche) et impacte *frontieres_du_systeme* (variable sous-représentée) via un événement culturel et environnemental.
+
+[DRY-RUN] Idées générées (non écrites dans queue.yaml) :
+queue:
+- acteurs_hint:
+  - collectifs_artistiques_locaux
+  - ong_internationales
+  acteurs_hint_count: 2
+  date_approximative: '2042'
+  description: En 2042, le premier *Festival des Mémoires Vivantes* se tient à Brazzaville,
+    réunissant des communautés pygmées, bantoues et des diasporas africaines pour
+    préserver et réinterpréter les récits oraux menacés par l'effondrement des infrastructures
+    numériques. Des collectifs artistiques locaux et des ONG internationales collaborent
+    pour créer des archives vivantes sous forme de performances, d'installations éphémères
+    et de réseaux de transmission intergénérationnels.
+  id: festival_memoire_afrique_centrale
+  intensite: modérée
+  portee: continentale
+  scenarios:
+  - eco_communalism
+  - policy_reform
+  - reference
+  source: auto_generated_2026-08
+  variables_hint:
+  - valeurs_culture_tempo_sociale
+  - gouvernance_institutions
+  - demographie_mobilite_humaine
+  variables_hint_count: 3
+- acteurs_hint:
+  - syndicats_autonomes
+  - consortiums_logistiques_sino_russes
+  acteurs_hint_count: 2
+  date_approximative: '2055'
+  description: En 2055, une grève générale éclate dans les *Corridors Eurasiens de
+    Convoyage* (Kazakhstan-Ouzbékistan), où des travailleurs des zones franches logistiques
+    s'opposent aux algorithmes de gestion du temps imposés par les consortiums sino-russes.
+    Le mouvement, soutenu par des syndicats autonomes et des hackers locaux, réclame
+    le droit à des rythmes de travail adaptés aux cycles climatiques extrêmes, déclenchant
+    une crise géopolitique entre les blocs Fortress World et New Sustainability.
+  id: conflit_temps_travail_eurasie_centrale
+  intensite: forte
+  portee: regionale
+  scenarios:
+  - fortress_world
+  - new_sustainability
+  - breakdown
+  source: auto_generated_2026-08
+  variables_hint:
+  - valeurs_culture_tempo_sociale
+  - systemes_productifs_travail
+  - geopolitique_conflits
+  variables_hint_count: 3
+- acteurs_hint:
+  - communaute_inuit_qaanaaq
+  - mouvements_climatiques_internationaux
+  acteurs_hint_count: 2
+  date_approximative: '2030'
+  description: En 2030, la communauté inuit de Qaanaaq (Groenland) organise un *Rituel
+    de la Glace Disparue*, marquant la première année où la banquise estivale ne se
+    reforme pas. L'événement, diffusé en direct via des réseaux low-tech, devient
+    un symbole mondial de deuil écologique et inspire des mouvements de désobéissance
+    climatique dans les villes du Nord. Des scientifiques et des activistes internationaux
+    y participent, créant une alliance improbable entre savoirs traditionnels et technologies
+    de résilience.
+  id: rituel_glace_qaanaaq_2030
+  intensite: majeure
+  portee: globale
+  scenarios:
+  - new_sustainability
+  - eco_communalism
+  - policy_reform
+  source: auto_generated_2026-08
+  variables_hint:
+  - valeurs_culture_tempo_sociale
+  - climat_environnement_global
+  - frontieres_du_systeme
+  variables_hint_count: 3
+

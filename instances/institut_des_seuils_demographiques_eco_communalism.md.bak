@@ -1,0 +1,98 @@
+---
+name: Observatoire des Équilibres Bioterritoriaux (OEB)
+type: instance
+slug: institut_des_seuils_demographiques_eco_communalism
+entite: institut_des_seuils_demographiques
+scenario: eco_communalism
+
+type_dans_scenario: institution
+
+role_dans_scenario: >
+  L'Institut des Seuils Démographiques, dans le scénario eco_communalism, se transforme en une institution décentralisée et participative, l'Observatoire des Équilibres Bioterritoriaux (OEB). Son rôle est de modéliser et réguler les flux démographiques en harmonie avec les capacités écologiques et sociales des bioterritoires. Il agit comme un médiateur entre les communautés locales, les assemblées bioterritoriales et les réseaux de coordination régionale, garantissant que les migrations et les politiques de natalité respectent les seuils de résilience écologique et sociale.
+
+responsabilites: >
+  L'OEB produit des données et des modèles prédictifs sur les dynamiques démographiques, les flux migratoires et les pressions écologiques. Il facilite la relocalisation des populations en fonction des ressources disponibles et des besoins des communautés, tout en évitant les surcharges territoriales. Il collabore avec les Brigades de Restauration Écologique et les Collectifs de Cartographie Écologique Participative pour intégrer les enjeux environnementaux dans ses analyses.
+
+impact_local: 4
+impact_systemique_global: 3
+
+variables_influencees:
+    - demographie_mobilite_humaine
+    - organisation_territoires
+    - gouvernance_institutions
+
+zone_geographique:
+    - régionale
+    - nationale
+    - continentale
+
+zone_systemique:
+    - gouvernance
+    - société
+    - infrastructure
+
+alliances:
+    - assemblee_territoires_eco_communalism
+    - assemblees_bioterritoriales_regionales_eco_communalism
+    - brigades_de_restauration_ecologique_eco_communalism
+    - collectifs_de_cartographie_ecologique_participative_eco_communalism
+    - cercles_de_mediation_territoriale_intercommunautaire_eco_communalism
+    - confederation_bassins_vivants_eco_communalism
+
+oppositions:
+    - communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism
+    - communautes_rurales_dissidentes_anti_cooperation_regionale_eco_communalism
+    - enclaves_extractivistes_et_etats_residuels_eco_communalism
+    - factions_autoritaires_locales_identitaires_exclusionnistes_eco_communalism
+
+type_relation_dominante: coopération
+
+annee_debut: 2044
+annee_fin: 
+
+trajectoire: dominant
+est_clandestin: false
+generation: reconstruction
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  En 2098, l'Observatoire des Équilibres Bioterritoriaux (OEB) est devenu une pierre angulaire de la gouvernance décentralisée du monde eco_communaliste. Né dans le sillage des crises migratoires des années 2040, l'OEB a su transformer la gestion des flux humains en un outil de résilience écologique et sociale. Ses rapports annuels, co-construits avec les communautés locales, sont attendus comme des événements majeurs, influençant les décisions des Assemblées Bioterritoriales. Pourtant, ses détracteurs, notamment parmi les enclaves extractivistes et les factions isolationnistes, l'accusent de servir de cheval de Troie à une ingénierie sociale déguisée en écologie.
+
+signes_distinctifs: >
+  L'OEB se reconnaît à ses cartes dynamiques projetées sur des supports low-tech, souvent réalisées à partir de matériaux recyclés. Son logo, une spirale représentant l'équilibre entre flux humains et capacités écologiques, est omniprésent dans les lieux de délibération bioterritoriale. Ses membres portent des badges en bois gravé, symbolisant leur engagement envers la sobriété et la transparence.
+
+tensions_narratives: >
+  L'OEB est au cœur de tensions croissantes entre les partisans d'une régulation stricte des flux migratoires pour préserver les écosystèmes locaux et ceux qui y voient une forme de contrôle biopolitique déguisé. Certains bioterritoires remettent en question son autorité, arguant que ses modèles ne prennent pas suffisamment en compte les spécificités culturelles et historiques des communautés. Par ailleurs, les factions autoritaires locales l'accusent de favoriser une « dilution identitaire » sous couvert de coopération écologique. Son avenir pourrait dépendre de sa capacité à concilier ces visions opposées tout en maintenant sa légitimité scientifique et démocratique.
+
+date_creation: 2026-08-17
+---
+
+# Observatoire des Équilibres Bioterritoriaux (OEB)
+
+## Rôle dans [[eco_communalism]]
+L'Institut des Seuils Démographiques, dans le scénario eco_communalism, se transforme en une institution décentralisée et participative, l'Observatoire des Équilibres Bioterritoriaux (OEB). Son rôle est de modéliser et réguler les flux démographiques en harmonie avec les capacités écologiques et sociales des bioterritoires. Il agit comme un médiateur entre les communautés locales, les assemblées bioterritoriales et les réseaux de coordination régionale, garantissant que les migrations et les politiques de natalité respectent les seuils de résilience écologique et sociale.
+
+## Responsabilités
+L'OEB produit des données et des modèles prédictifs sur les dynamiques démographiques, les flux migratoires et les pressions écologiques. Il facilite la relocalisation des populations en fonction des ressources disponibles et des besoins des communautés, tout en évitant les surcharges territoriales. Il collabore avec les Brigades de Restauration Écologique et les Collectifs de Cartographie Écologique Participative pour intégrer les enjeux environnementaux dans ses analyses.
+
+## Variables influencées
+- [[demographie_mobilite_humaine]]
+- [[organisation_territoires]]
+- [[gouvernance_institutions]]
+
+## Relations
+**Alliés** : [[assemblee_territoires_eco_communalism]], [[assemblees_bioterritoriales_regionales_eco_communalism]], [[brigades_de_restauration_ecologique_eco_communalism]], [[collectifs_de_cartographie_ecologique_participative_eco_communalism]], [[cercles_de_mediation_territoriale_intercommunautaire_eco_communalism]], [[confederation_bassins_vivants_eco_communalism]]
+**Opposants** : [[communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism]], [[communautes_rurales_dissidentes_anti_cooperation_regionale_eco_communalism]], [[enclaves_extractivistes_et_etats_residuels_eco_communalism]], [[factions_autoritaires_locales_identitaires_exclusionnistes_eco_communalism]]
+
+## Description journalistique
+En 2098, l'Observatoire des Équilibres Bioterritoriaux (OEB) est devenu une pierre angulaire de la gouvernance décentralisée du monde eco_communaliste. Né dans le sillage des crises migratoires des années 2040, l'OEB a su transformer la gestion des flux humains en un outil de résilience écologique et sociale. Ses rapports annuels, co-construits avec les communautés locales, sont attendus comme des événements majeurs, influençant les décisions des Assemblées Bioterritoriales. Pourtant, ses détracteurs, notamment parmi les enclaves extractivistes et les factions isolationnistes, l'accusent de servir de cheval de Troie à une ingénierie sociale déguisée en écologie.
+
+## Tensions narratives
+L'OEB est au cœur de tensions croissantes entre les partisans d'une régulation stricte des flux migratoires pour préserver les écosystèmes locaux et ceux qui y voient une forme de contrôle biopolitique déguisé. Certains bioterritoires remettent en question son autorité, arguant que ses modèles ne prennent pas suffisamment en compte les spécificités culturelles et historiques des communautés. Par ailleurs, les factions autoritaires locales l'accusent de favoriser une « dilution identitaire » sous couvert de coopération écologique. Son avenir pourrait dépendre de sa capacité à concilier ces visions opposées tout en maintenant sa légitimité scientifique et démocratique.

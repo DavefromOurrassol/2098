@@ -56,8 +56,6 @@ type_relation_dominante: symbiose
 annee_debut: 2061
 annee_fin: 
 
-etat_temporel: actif
-age_historique: ascendant
 generation: post-effondrement
 
 injection:
@@ -78,6 +76,9 @@ tensions_narratives: >
   La Ligue se retrouve prise en étau entre les milices qui exigent un accès prioritaire à ses réseaux pour des usages militaires et les communautés qui réclament une gouvernance plus transparente sur les données qu'elles génèrent. Certains nœuds ont commencé à émettre des 'certificats d'accès' exclusifs, recréant de facto une hiérarchie d'accès que la Ligue prétendait abolir. La question de savoir qui contrôle les archives des marchés de données — et donc la mémoire économique de la région — est devenue un enjeu de pouvoir brûlant. Enfin, la pression de la Diaspora Tech Sahel, opérant depuis des enclaves mieux équipées, pour 'standardiser' les protocoles de la Ligue menace d'effacer ce qui en fait la singularité : son ancrage radical dans les usages locaux.
 
 date_creation: 2026-06-27
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Ligue du Sahel Numérique — Les Nœuds d'Agadez

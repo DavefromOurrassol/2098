@@ -4,6 +4,11 @@ type: instance
 slug: collectifs_de_sante_communautaire_autogeree_breakdown
 entite: collectifs_de_sante_communautaire_autogeree
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 statut: officialise_enrichi
 type_dans_scenario: réseau
 role_dans_scenario: 'Dans un contexte de breakdown, ces collectifs pallient l''effondrement
@@ -29,13 +34,34 @@ zone_geographique:
 - régionale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- brigades_medicales_itinerantes_breakdown
+- collectifs_de_reparation_energetique_breakdown
+- communautes_paysannes_refugiees_breakdown
+- communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+- communes_rust_belt_breakdown
+- communes_rust_belt_zones_libres_breakdown
+- flux_migratoires_non_integrables_breakdown
+- frente_sert_o_livre_breakdown
+- front_humanitaire_d_urgence_non_affilie_breakdown
+- geneve_bunker_institutions_breakdown
+- les_veilleurs_du_fleuve_breakdown
+- mouvement_des_communes_du_rust_belt_breakdown
+- nairobi_crrc_breakdown
+- ong_de_gestion_migratoire_survivantes_breakdown
+- pirates_biologiques_open_source_breakdown
+- reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown
+- reseaux_de_soigneurs_traditionnels_breakdown
+oppositions:
+- consortium_africain_de_biotechnologies_sociales_breakdown
+- factions_para_etatiques_hydriques_breakdown
+- milices_de_controle_territorial_breakdown
+- nexus_biosyn_breakdown
+- reseaux_noirs_pharmaceutiques_breakdown
+- seigneuries_logistiques_armees_breakdown
 type_relation_dominante: symbiose
-annee_debut: 2026
+annee_debut: 2036
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -69,10 +95,9 @@ tensions_narratives: 'La tension centrale qui traverse ces collectifs est celle 
   la légitimité du savoir médical non institutionnel divise en interne les praticiens
   formés des techniciens autodidactes, menaçant la cohésion du réseau.'
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Collectifs de Santé Communautaire Autogérée
@@ -96,6 +121,34 @@ La tension centrale qui traverse ces collectifs est celle entre l'urgence du soi
 - [[sante_biotechnologies]]
 - [[organisation_territoires]]
 - [[gouvernance_institutions]]
+
+
+## Relations
+**Alliés :**
+- [[brigades_medicales_itinerantes_breakdown]]
+- [[collectifs_de_reparation_energetique_breakdown]]
+- [[communautes_paysannes_refugiees_breakdown]]
+- [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
+- [[communes_rust_belt_breakdown]]
+- [[communes_rust_belt_zones_libres_breakdown]]
+- [[flux_migratoires_non_integrables_breakdown]]
+- [[frente_sert_o_livre_breakdown]]
+- [[front_humanitaire_d_urgence_non_affilie_breakdown]]
+- [[geneve_bunker_institutions_breakdown]]
+- [[les_veilleurs_du_fleuve_breakdown]]
+- [[mouvement_des_communes_du_rust_belt_breakdown]]
+- [[nairobi_crrc_breakdown]]
+- [[ong_de_gestion_migratoire_survivantes_breakdown]]
+- [[pirates_biologiques_open_source_breakdown]]
+- [[reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown]]
+- [[reseaux_de_soigneurs_traditionnels_breakdown]]
+**Opposants :**
+- [[consortium_africain_de_biotechnologies_sociales_breakdown]]
+- [[factions_para_etatiques_hydriques_breakdown]]
+- [[milices_de_controle_territorial_breakdown]]
+- [[nexus_biosyn_breakdown]]
+- [[reseaux_noirs_pharmaceutiques_breakdown]]
+- [[seigneuries_logistiques_armees_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

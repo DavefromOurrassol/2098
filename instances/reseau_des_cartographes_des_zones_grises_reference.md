@@ -1,0 +1,105 @@
+---
+name: Atlas des Marges
+type: instance
+slug: reseau_des_cartographes_des_zones_grises_reference
+entite: reseau_des_cartographes_des_zones_grises
+scenario: reference
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
+
+type_dans_scenario: réseau
+
+role_dans_scenario: >
+  Le Réseau des Cartographes des Zones Grises dans *reference* est une nébuleuse de collecteurs de données, hackers et géographes dissidents qui documentent les territoires abandonnés, contestés ou non gouvernés. Il agit comme un contre-pouvoir informationnel face aux plateformes centralisées et aux agences de normalisation, en rendant accessibles des cartes, des protocoles de survie et des archives sur les zones grises. Son rôle est à la fois pratique (outils pour les contrebandiers, les réfugiés climatiques, les milices locales) et politique (préservation de savoirs critiques comme acte de résistance).
+
+responsabilites: >
+  1) Cartographier en temps réel les zones grises via des réseaux de capteurs citoyens et des drones low-cost ; 2) Archiver et diffuser des données sur les ressources critiques (eau, terres rares, terres arables) hors des cadres légaux ; 3) Former des relais locaux à l'autonomie informationnelle (ateliers de cryptographie, maintenance de réseaux mesh) ; 4) Contester les narrations officielles des plateformes dominantes via des contre-cartes et des récits alternatifs.
+
+impact_local: 4
+impact_systemique_global: 3
+
+variables_influencees:
+    - technologie_information
+    - organisation_territoires
+    - geopolitique_conflits
+
+zone_geographique:
+    - régionale
+    - continentale
+    - globale
+
+zone_systemique:
+    - information
+    - société
+    - cyberspace
+
+alliances:
+    - reseau_meshcommons_netsolidaire_reference
+    - collectifs_de_journalisme_embarque_reference
+    - collectifs_de_journalistes_independants_regionaux_reference
+    - reseau_mnemos_reference
+    - mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
+    - federation_des_cliniques_autonomes_reference
+    - cooperatives_ia_open_source_reference
+
+oppositions:
+    - plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference
+    - bureaux_de_regulation_informationnelle_reference
+    - agences_de_securite_regionales_de_normalisation_des_zones_grises_reference
+    - consortium_des_grandes_plateformes_ia_integrees_reference
+    - bureau_des_territoires_residuels_reference
+
+type_relation_dominante: rivalité
+
+annee_debut: 2039
+annee_fin: 
+
+trajectoire: ascendant
+est_clandestin: true
+generation: transition
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  En 2098, l’*Atlas des Marges* est devenu le Wikileaks des territoires oubliés. Né dans l’ombre après la submersion de Tuvalu en 2039, ce réseau a transformé la cartographie en arme de résistance. Ses membres, souvent des réfugiés climatiques ou des déserteurs des mégapoles, arpentent les zones grises avec des outils bricolés : drones à énergie solaire, capteurs artisanaux, et des réseaux mesh qui survivent aux coupures des États. Leurs cartes, diffusées via des serveurs clandestins, sont devenues indispensables pour les contrebandiers du Passage Arctique ou les coopératives agro-écologiques du Sahel. Mais leur plus grande victoire ? Avoir forcé les plateformes dominantes à reconnaître l’existence de ces territoires — ne serait-ce que pour mieux les contrôler.
+
+signes_distinctifs: >
+  1) **Symbolique** : Un globe fracturé en mosaïque, où chaque fragment représente une zone grise cartographiée. Les couleurs varient selon le degré de contrôle étatique (du rouge pour les zones militarisées au vert pour les territoires autonomes). 2) **Outils** : Des « boîtes noires » low-tech (serveurs auto-alimentés par panneaux solaires) cachées dans des containers recyclés, souvent décorées de graffitis géolocalisés. 3) **Langage** : Un argot mêlant termes géographiques et cryptographie (« *topo* » pour une carte, « *nuage* » pour un serveur, « *fantôme* » pour un territoire effacé des bases de données officielles).
+
+tensions_narratives: >
+  1) **La marchandisation du savoir** : Des consortiums privés tentent de racheter leurs archives pour monétiser les données sur les ressources critiques, menaçant leur indépendance. 2) **La répression algorithmique** : Les IA de modération des plateformes dominantes censurent de plus en plus leurs cartes, les qualifiant de « désinformation territoriale ». 3) **La fracture interne** : Une scission oppose les « puristes » (qui veulent rester clandestins) aux « pragmatiques » (qui plaident pour une alliance avec les villes-refuge ou les coopératives énergétiques). 4) **L’oubli comme arme** : Certains États effacent délibérément des zones de leurs bases de données pour les rendre *invisibles* — un défi pour un réseau qui se définit par la visibilité des marges.
+
+date_creation: 2026-08-11
+---
+
+# Atlas des Marges
+
+## Rôle dans [[reference]]
+Le Réseau des Cartographes des Zones Grises dans *reference* est une nébuleuse de collecteurs de données, hackers et géographes dissidents qui documentent les territoires abandonnés, contestés ou non gouvernés. Il agit comme un contre-pouvoir informationnel face aux plateformes centralisées et aux agences de normalisation, en rendant accessibles des cartes, des protocoles de survie et des archives sur les zones grises. Son rôle est à la fois pratique (outils pour les contrebandiers, les réfugiés climatiques, les milices locales) et politique (préservation de savoirs critiques comme acte de résistance).
+
+## Responsabilités
+1) Cartographier en temps réel les zones grises via des réseaux de capteurs citoyens et des drones low-cost ; 2) Archiver et diffuser des données sur les ressources critiques (eau, terres rares, terres arables) hors des cadres légaux ; 3) Former des relais locaux à l'autonomie informationnelle (ateliers de cryptographie, maintenance de réseaux mesh) ; 4) Contester les narrations officielles des plateformes dominantes via des contre-cartes et des récits alternatifs.
+
+## Variables influencées
+- [[technologie_information]]
+- [[organisation_territoires]]
+- [[geopolitique_conflits]]
+
+## Relations
+**Alliés** : [[reseau_meshcommons_netsolidaire_reference]], [[collectifs_de_journalisme_embarque_reference]], [[collectifs_de_journalistes_independants_regionaux_reference]], [[reseau_mnemos_reference]], [[mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference]], [[federation_des_cliniques_autonomes_reference]], [[cooperatives_ia_open_source_reference]]
+**Opposants** : [[plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference]], [[bureaux_de_regulation_informationnelle_reference]], [[agences_de_securite_regionales_de_normalisation_des_zones_grises_reference]], [[consortium_des_grandes_plateformes_ia_integrees_reference]], [[bureau_des_territoires_residuels_reference]]
+
+## Description journalistique
+En 2098, l’*Atlas des Marges* est devenu le Wikileaks des territoires oubliés. Né dans l’ombre après la submersion de Tuvalu en 2039, ce réseau a transformé la cartographie en arme de résistance. Ses membres, souvent des réfugiés climatiques ou des déserteurs des mégapoles, arpentent les zones grises avec des outils bricolés : drones à énergie solaire, capteurs artisanaux, et des réseaux mesh qui survivent aux coupures des États. Leurs cartes, diffusées via des serveurs clandestins, sont devenues indispensables pour les contrebandiers du Passage Arctique ou les coopératives agro-écologiques du Sahel. Mais leur plus grande victoire ? Avoir forcé les plateformes dominantes à reconnaître l’existence de ces territoires — ne serait-ce que pour mieux les contrôler.
+
+## Tensions narratives
+1) **La marchandisation du savoir** : Des consortiums privés tentent de racheter leurs archives pour monétiser les données sur les ressources critiques, menaçant leur indépendance. 2) **La répression algorithmique** : Les IA de modération des plateformes dominantes censurent de plus en plus leurs cartes, les qualifiant de « désinformation territoriale ». 3) **La fracture interne** : Une scission oppose les « puristes » (qui veulent rester clandestins) aux « pragmatiques » (qui plaident pour une alliance avec les villes-refuge ou les coopératives énergétiques). 4) **L’oubli comme arme** : Certains États effacent délibérément des zones de leurs bases de données pour les rendre *invisibles* — un défi pour un réseau qui se définit par la visibilité des marges.

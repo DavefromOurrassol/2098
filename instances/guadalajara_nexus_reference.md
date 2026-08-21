@@ -57,8 +57,6 @@ type_relation_dominante: symbiose
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: ascendant
 generation: transition
 
 injection:
@@ -79,6 +77,9 @@ tensions_narratives: >
   La neutralité opérationnelle du Nexus est son atout et sa blessure : en traitant indifféremment flux légitimes et flux opaques, il normalise des circuits que les États fédéraux résiduels tentent de réguler, alimentant une controverse permanente sur sa complicité structurelle avec des acteurs prédateurs. La montée en puissance de l'Armada Logistique Nordique sur les corridors arctiques redessine les équilibres et menace de marginaliser les routes terrestres que le Nexus contrôle, l'obligeant à chercher de nouveaux partenaires au risque de compromettre sa neutralité. Enfin, plusieurs municipalités autonomes qui lui doivent leur survie économique commencent à réclamer une formalisation de ses règles d'arbitrage — une institutionnalisation qui transformerait le Nexus en ce qu'il a toujours refusé d'être : une autorité.
 
 date_creation: 2026-06-27
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Guadalajara Nexus

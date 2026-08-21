@@ -42,8 +42,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2046
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -80,6 +78,9 @@ localisation:
   lieu: Genève-Bunker, site principal des Archives — avec copies répliquées à Bratislava-Secteur
     Alpha et Nairobi
   type_lieu: infrastructure
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Archives Diplomatiques de l'ONU-Éclat

@@ -49,8 +49,6 @@ oppositions:
 type_relation_dominante: coopération
 annee_debut: 2038
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -88,6 +86,9 @@ localisation:
   zone: centre_institutionnel_geneve
   lieu: Genève — siège tournant de l'UBER, avenue des Blocs
   type_lieu: infrastructure
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Union des Blocs Energétiques Régionaux

@@ -50,8 +50,6 @@ type_relation_dominante: alliance stratégique
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: forteresse
 
 injection:
@@ -72,6 +70,9 @@ tensions_narratives: >
   La disparition progressive des zones grises sous la pression des blocs qui cherchent à internaliser leurs corridors réduit mécaniquement l'espace vital d'Orentchev — le forçant potentiellement à choisir un camp ou à précipiter un conflit ouvert pour préserver sa valeur d'intermédiaire. La question de sa succession constitue une bombe à retardement : sans structure institutionnelle, son réseau repose sur sa seule autorité personnelle, et plusieurs lieutenants ambitieux attendent l'effacement du maître. Enfin, des rumeurs persistantes l'accusent d'avoir laissé transiter des composants de systèmes d'armes non-conventionnels — une accusation qui, si prouvée, lui vaudrait une désignation comme cible par au moins deux blocs majeurs.
 
 date_creation: 2026-06-15
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Vasil Orentchev

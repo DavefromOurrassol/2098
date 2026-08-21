@@ -450,7 +450,11 @@ def _scan_articles(slug: str, nom: str = None) -> list:
     motifs = [slug]
     if nom:
         motifs.append(nom)
-    for path in sorted(ARTICLES_DIR.glob("*.md")):
+    # Récursif depuis le 10 août 2026 (fix save_article dans api.py) : les
+    # articles générés en série/manuel sont désormais réellement rangés
+    # dans articles/{scenario}/, plus seulement à la racine -- un scan
+    # non récursif les aurait rendus invisibles à ce diagnostic.
+    for path in sorted(ARTICLES_DIR.glob("**/*.md")):
         try:
             txt = path.read_text(encoding="utf-8", errors="ignore")
         except Exception:
@@ -487,18 +491,33 @@ def _textes_proches(a: str, b: str, seuil: float = 0.6) -> bool:
 
 def _formater_liste_slugs(slugs: list, scenario: str = None, max_n: int = 5) -> str:
     """Rend une liste de slugs lisible : retire le suffixe _{scenario} de
-    chaque slug quand il est fourni (les acteurs impliqués sont stockés
-    avec leur suffixe scénario, ex. 'xxx_breakdown' -- inutile de le
-    répéter puisqu'on est déjà dans la sous-section de ce scénario), et
-    tronque au-delà de max_n avec un compteur plutôt que de tout aligner
-    sur une seule ligne illisible."""
+    chaque slug (fourni explicitement, ou détecté automatiquement si TOUS
+    les slugs de la liste partagent le même suffixe parmi SCENARIOS --
+    cas d'une entité présente dans un seul scénario, ex. alliances/
+    oppositions agrégées "tous scénarios confondus" qui n'en couvrent en
+    réalité qu'un seul), puis remplace les underscores par des espaces et
+    met en majuscule chaque mot pour un rendu lisible plutôt que du
+    snake_case brut. Tronque au-delà de max_n avec un compteur plutôt que
+    de tout aligner sur une seule ligne illisible.
+
+    Corrigé le 11 août 2026 (retour de David sur un exemple réel où une
+    liste de 20+ slugs bruts, tous suffixés "_eco_communalism" à
+    l'identique et sans aucune mise en forme, était quasiment illisible).
+    """
     if not slugs:
         return "—"
+    suffixe = scenario
+    if suffixe is None:
+        # Détection auto : un seul suffixe scénario partagé par tous ?
+        for sc in SCENARIOS:
+            if all(s.endswith(f"_{sc}") for s in slugs):
+                suffixe = sc
+                break
     nettoyes = []
     for s in slugs:
-        if scenario and s.endswith(f"_{scenario}"):
-            s = s[: -(len(scenario) + 1)]
-        nettoyes.append(s)
+        if suffixe and s.endswith(f"_{suffixe}"):
+            s = s[: -(len(suffixe) + 1)]
+        nettoyes.append(s.replace("_", " ").strip().capitalize())
     if len(nettoyes) <= max_n:
         return ", ".join(nettoyes)
     reste = len(nettoyes) - max_n
@@ -506,8 +525,13 @@ def _formater_liste_slugs(slugs: list, scenario: str = None, max_n: int = 5) -> 
 
 
 def _rendre_markdown(trace: dict) -> str:
+    # Libellés lisibles pour le type technique (instance/evenement/signal),
+    # utilisés uniquement pour l'affichage -- corrigé le 11 août 2026 suite
+    # à un retour de David sur la clarté générale de cette sortie.
+    TYPE_LABELS = {"instance": "entité", "evenement": "événement", "signal": "signal"}
+    type_label = TYPE_LABELS.get(trace["type"], trace["type"])
     lines = [
-        f"# Traçabilité — `{trace['slug']}` ({trace['type']})",
+        f"# Traçabilité — `{trace['slug']}` ({type_label})",
         "",
         f"*Généré le {datetime.now().strftime('%Y-%m-%d %H:%M')}*",
         "",
@@ -515,9 +539,18 @@ def _rendre_markdown(trace: dict) -> str:
         "",
     ]
     origine = trace.get("origine") or {}
-    lines.append(f"- **Statut d'injection** : {origine.get('statut_injection')}")
+    # Reformulation en langage clair du statut brut de _chercher_origine()
+    # (valeur JSON/API inchangée pour ne rien casser en aval -- seule cette
+    # phrase d'affichage change).
+    statut_brut = origine.get("statut_injection") or ""
+    if statut_brut == "traité":
+        lines.append("- **Origine** : l'idée de départ à l'origine de cette fiche a été retrouvée.")
+    elif statut_brut == "en échec":
+        lines.append("- **Origine** : l'idée de départ a été retrouvée, mais sa création avait initialement échoué avant d'être reprise.")
+    else:
+        lines.append("- **Origine** : non retrouvée — l'idée qui a mené à la création de cette fiche n'a pas pu être identifiée (probablement une fiche ancienne, créée avant la mise en place du suivi).")
     if origine.get("fichier_source"):
-        lines.append(f"- **Trouvé dans** : `{origine['fichier_source']}`")
+        lines.append(f"- **Détail technique** : `{origine['fichier_source']}`")
     entree = origine.get("entree_brute")
     description_origine = None
     if entree:
@@ -560,7 +593,11 @@ def _rendre_markdown(trace: dict) -> str:
             loc = (i.get("localisation") or {}).get("zone") if i.get("localisation") else None
             zone_desc = _decrire_zone(i["scenario"], loc) if loc else "—"
             lines.append(f"### {i['scenario']}")
-            lines.append(f"- Zone : {zone_desc} · Impact local/global : {i.get('impact_local', '—')}/{i.get('impact_systemique_global', '—')} · Enrichie le : {i.get('date_enrichissement') or '—'}")
+            impact_l = i.get("impact_local")
+            impact_g = i.get("impact_systemique_global")
+            impact_l_str = f"{impact_l}/5" if impact_l is not None else "—"
+            impact_g_str = f"{impact_g}/5" if impact_g is not None else "—"
+            lines.append(f"- Zone : {zone_desc} · Impact local : {impact_l_str} · Impact global : {impact_g_str} · Détails complétés par l'IA le : {i.get('date_enrichissement') or '—'}")
             if i.get("role_dans_scenario"):
                 lines.append(f"- **Rôle** : {i['role_dans_scenario'].strip()}")
             lines.append("")
@@ -627,7 +664,7 @@ def _rendre_markdown(trace: dict) -> str:
             lines.append("_Bloc `signal_to_state` non trouvé ou non parsable dans la fiche d'audit -- évolution par scénario indisponible._")
 
     if "articles_mentionnant" in trace:
-        lines += ["", "## 4. Aval — usage dans les articles publiés", ""]
+        lines += ["", "## 4. Usage dans les articles déjà publiés", ""]
         articles = trace["articles_mentionnant"]
         if not articles:
             lines.append("_Aucune mention trouvée dans `articles/*.md` (scan texte brut, best-effort — un article peut mentionner l'entité sous une formulation différente sans que ce scan la détecte)._")

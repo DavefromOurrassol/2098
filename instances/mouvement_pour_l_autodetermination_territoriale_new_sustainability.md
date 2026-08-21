@@ -64,8 +64,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2033
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -102,6 +100,9 @@ localisation:
   zone: parlement_territoires_nairobi
   lieu: Parlement des Territoires de Nairobi — tribunes périphériques
   type_lieu: site_strategique
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Mouvement pour l'Autodétermination Territoriale

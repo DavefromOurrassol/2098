@@ -61,8 +61,6 @@ type_relation_dominante: alliance stratégique
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: ascendant
 generation: transition
 
 injection:
@@ -83,6 +81,9 @@ tensions_narratives: >
   La tension centrale du CABS tient à la nature même de son instrument : le biorevenu redistribue, mais il collecte d'abord. À mesure que les grands consortiums biotech globaux, dont NexCore et Nexus BioSyn, cherchent à négocier des accords de données directement avec les États africains en contournant le CABS, le Consortium se retrouve en position défensive — défendant à la fois sa part de marché institutionnel et sa crédibilité communautaire. Une deuxième ligne de fracture s'ouvre en interne : plusieurs responsables régionaux du CABS, issus des mouvements de biopiraterie inversée, plaident pour une rupture avec les certifications des bailleurs du Nord, au risque d'assécher les financements qui font tenir le système. Enfin, des gouvernements du bloc sahélien autonome commencent à percevoir le CABS comme un acteur para-souverain empiétant sur leurs prérogatives sanitaires — ce qui pourrait à terme faire basculer l'organisation du côté des entités sous surveillance politique.
 
 date_creation: 2026-06-25
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Consortium Africain de Biotechnologies Sociales (CABS)

@@ -1,0 +1,23 @@
+
+======================================================================
+FAUX POSITIFS PROBABLES — désaccord de slug (PAS un échec de génération) (0)
+======================================================================
+  (aucun)
+
+======================================================================
+ENTITÉS ENTIÈRES SUSPECTES — majorité/totalité des scénarios manquants (0)
+======================================================================
+  (aucun)
+
+======================================================================
+ÉCHECS PONCTUELS PROBABLES — 1 ou 2 scénarios manquants sur le total (1)
+======================================================================
+  Institut des Seuils Démographiques  (slug : institut_des_seuils_demographiques)
+    scénario manquant : new_sustainability
+    raison            : raison introuvable dans les logs (aucun run archivé ne matche, ou log absent/rotaté)
+    -> solution : relancer la génération de cette instance précise pour ce scénario (create_entities_and_instances.py / generate_instances.py).
+
+
+Rappel : ce script ne relance rien et n'écrit aucune fiche.
+
+Rapport écrit : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/documentation/need_action/instances_manquantes.md

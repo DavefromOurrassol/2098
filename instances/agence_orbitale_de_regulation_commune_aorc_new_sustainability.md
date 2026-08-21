@@ -52,8 +52,6 @@ oppositions:
 type_relation_dominante: coopération
 annee_debut: 2039
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -91,6 +89,9 @@ localisation:
   zone: helios_tours_orbitales
   lieu: Tours de contrôle orbital Helios — bureau secondaire à Genève-Centre
   type_lieu: infrastructure
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Agence Orbitale de Régulation Commune (AORC)

@@ -49,13 +49,11 @@ oppositions:
 - consortium_technologique_de_planification_territoriale_policy_reform
 - grille_aria_policy_reform
 - oracle_des_seuils_policy_reform
-- rede_paulista_de_distribuic_o_algor_tmica_policy_reform
+- rede_paulista_de_distribuicao_algoritmica_policy_reform
 - reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform
 type_relation_dominante: conflit
 annee_debut: 2028
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -88,6 +86,9 @@ localisation:
   zone: null
   lieu: null
   type_lieu: null
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Internationale Décroissante Anti-Planification
@@ -129,7 +130,7 @@ L'organisation est tiraillée entre son internationalisme affiché et son allerg
 - [[consortium_technologique_de_planification_territoriale_policy_reform]]
 - [[grille_aria_policy_reform]]
 - [[oracle_des_seuils_policy_reform]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_policy_reform]]
+- [[rede_paulista_de_distribuicao_algoritmica_policy_reform]]
 - [[reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform]]
 
 ## Notes

@@ -61,8 +61,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2032
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -98,6 +96,9 @@ localisation:
   zone: bruxelles_tribunal_algo
   lieu: Bruxelles et réseaux institutionnels distribués
   type_lieu: site_strategique
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Factions Technocratiques de la Délégation IA Totale

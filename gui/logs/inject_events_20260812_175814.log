@@ -1,0 +1,17 @@
+============================================================
+OURRASSOL 2098 — Injection événements custom
+============================================================
+
+Mode : auto (fourni via --mode)
+
+[1/2] Analyse de la couverture du vault...
+  18 event_instance(s) analysée(s)
+  Filtre scénario : eco_communalism
+  Variables imposées : energie_ressources_critiques
+[2/2] Génération de 1 idée(s) d'événements...
+[llm] Mistral (mistral-large-latest) — entrée : 1247 | sortie : 366
+  ✓ crise_energetique_sahel_numerique — regionale | 2092 | scénarios: ['eco_communalism']
+    → Couvre une zone géographique sous-représentée (Sahel Numérique), impacte une variable peu couverte (énergie_ressources_critiques) et introduit un événement de type 'technologique/social' dans un scénario eco-communaliste.
+
+1 idée(s) ajoutée(s) à /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/evenements_custom/queue.yaml
+→ Inspectez queue.yaml, puis relancez en mode custom pour injecter.

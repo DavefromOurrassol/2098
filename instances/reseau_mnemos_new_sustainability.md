@@ -48,8 +48,6 @@ type_relation_dominante: symbiose
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: ère cognitive
 
 injection:
@@ -70,6 +68,9 @@ tensions_narratives: >
   Si Mnemos incarne la stabilité cognitive du monde de 2098, des fissures commencent à apparaître : certains territoires souverainistes revendiquent le droit à des mémoires locales non-synchronisées, craignant une homogénéisation culturelle déguisée en neutralité. Par ailleurs, des audits internes révèlent que les algorithmes de priorisation des savoirs — supposément neutres — favorisent subtilement les épistémologies issues des anciens centres de pouvoir. La question se pose : à qui appartient la mémoire du monde, même bien gérée ?
 
 date_creation: 2026-06-15
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Mnemos — Réseau de Mémoire Distribuée

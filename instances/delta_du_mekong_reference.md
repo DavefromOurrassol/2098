@@ -57,8 +57,6 @@ type_relation_dominante: rivalité
 annee_debut: 2036
 annee_fin: 
 
-etat_temporel: actif
-age_historique: déclinant
 generation: forteresse
 
 injection:
@@ -79,6 +77,9 @@ tensions_narratives: >
   La tension centrale est celle du paradoxe de la conservation compétitive : chaque État riverain finance des programmes de restauration écologique unilatéraux qui échouent précisément parce que la cause des dégâts — les barrages et détournements en amont — est contrôlée par un voisin. Une deuxième ligne de tension oppose les communautés agricoles locales, qui négocient directement des accords d'accès à l'eau entre villages à travers les frontières, aux appareils étatiques qui criminalisent ces arrangements informels comme atteinte à la souveraineté. Enfin, la question de qui paiera la facture de la dépollution et de la restauration sédimentaire — évaluée à plusieurs centaines de milliards — reste un gouffre diplomatique sans fond : le Programme ONU-Eau 2080 a proposé un mécanisme de compensation croisée trois fois depuis 2085, et trois fois les États riveraux l'ont rejeté en bloc tout en continuant à le réclamer en bilatéral.
 
 date_creation: 2026-06-27
+trajectoire: déclinant
+est_clandestin: false
+
 ---
 
 # Delta du Mékong — Zone de Friction Nourricière

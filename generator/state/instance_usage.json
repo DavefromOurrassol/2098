@@ -1,22 +1,128 @@
 {
+  "breakdown": {
+    "instances": {
+      "bureau_des_territoires_residuels_breakdown": 1,
+      "corridors_eurasiens_convoyage_breakdown": 1,
+      "grandes_lacs_compact_eau_breakdown": 1,
+      "hanse_baltique_breakdown": 1,
+      "terminal_kharg_data_haven_breakdown": 1,
+      "voix_du_dehors_breakdown": 1
+    }
+  },
   "eco_communalism": {
     "instances": {
-      "ligue_des_cites_du_sahel_numerique_eco_communalism": 1,
+      "confederation_communs_arc_septentrional_eco_communalism": 1,
+      "consortium_africain_de_biotechnologies_sociales_eco_communalism": 2,
+      "factions_algorithmiques_pro_gouvernance_ia_legere_eco_communalism": 1,
+      "factions_autoritaires_de_controle_du_savoir_eco_communalism": 1,
+      "gelecek_meclisi_eco_communalism": 1,
+      "kalaallit_nunaat_sovereign_fund_eco_communalism": 2,
+      "leena_vainala_eco_communalism": 1,
+      "ligue_des_cites_du_sahel_numerique_eco_communalism": 4,
       "reseau_assemblees_fennoscandien_eco_communalism": 1,
-      "reseau_terrafond_bassins_eco_communalism": 1,
-      "sao_paulo_algorithmique_eco_communalism": 1,
+      "reseau_mnemos_eco_communalism": 2,
+      "reseau_terrafond_bassins_eco_communalism": 2,
+      "sao_paulo_algorithmique_eco_communalism": 4,
       "tampere_charte_eco_communalism": 1,
-      "trame_mnemos_noeud_reseau_eco_communalism": 1
+      "terminal_kharg_data_haven_eco_communalism": 4,
+      "trame_mnemos_noeud_reseau_eco_communalism": 3
     }
   },
   "fortress_world": {
     "instances": {
-      "bloc_atlantique_fortress_world": 1,
-      "bloc_eurasiatique_occidental_fortress_world": 1,
-      "directive_kontinuum_fortress_world": 1,
+      "bloc_atlantique_fortress_world": 3,
+      "bloc_eurasiatique_occidental_fortress_world": 4,
+      "bureau_des_territoires_residuels_fortress_world": 1,
+      "centre_controle_orbital_helios_fortress_world": 1,
+      "collectifs_du_seuil_fortress_world": 1,
+      "consortium_helios_fortress_world": 1,
+      "directive_kontinuum_fortress_world": 2,
       "dissidences_internes_aux_blocs_minoritaires_fortress_world": 1,
-      "neurosentry_fortress_world": 1,
-      "systemes_de_scoring_de_productivite_corporative_fortress_world": 1
+      "executif_militaro_civil_du_regime_fortress_world": 1,
+      "factions_traditionalistes_du_mandat_electif_fortress_world": 1,
+      "les_gardiens_des_n_uds_hybrides_fortress_world": 1,
+      "mouvement_commun_midwest_fortress_world": 1,
+      "neurosentry_fortress_world": 2,
+      "nexus_biosyn_fortress_world": 1,
+      "pacte_forteresses_souveraines_fortress_world": 1,
+      "systemes_de_scoring_de_productivite_corporative_fortress_world": 1,
+      "voix_du_dehors_fortress_world": 1
+    }
+  },
+  "new_sustainability": {
+    "instances": {
+      "bureau_gouvernance_algorithmique_new_sustainability": 1,
+      "conseil_regulation_algorithmique_new_sustainability": 1,
+      "consortium_helios_new_sustainability": 1,
+      "grille_aria_new_sustainability": 1,
+      "nexcore_new_sustainability": 1,
+      "terminal_kharg_data_haven_new_sustainability": 1
+    }
+  },
+  "policy_reform": {
+    "instances": {
+      "coalition_des_souverainistes_numeriques_policy_reform": 1,
+      "conseil_intergouvernemental_de_regulation_technologique_policy_reform": 1,
+      "conseil_regulation_ressources_policy_reform": 1,
+      "consortium_des_ia_editoriales_certifiees_policy_reform": 1,
+      "consortium_helios_policy_reform": 2,
+      "consortiums_prives_de_gouvernance_algorithmique_policy_reform": 1,
+      "directive_kontinuum_policy_reform": 3,
+      "grille_aria_policy_reform": 2,
+      "institut_brookings_singapour_de_politique_computationnelle_policy_reform": 1,
+      "leena_vainala_policy_reform": 1,
+      "nexus_biosyn_policy_reform": 1,
+      "prisme_global_policy_reform": 1,
+      "terminal_kharg_data_haven_policy_reform": 2
+    }
+  },
+  "reference": {
+    "instances": {
+      "amazonie_consortium_viva_reference": 6,
+      "armada_logistique_nordique_reference": 1,
+      "bureau_des_territoires_residuels_reference": 1,
+      "bureaux_de_regulation_informationnelle_reference": 5,
+      "collectifs_academiques_independants_reference": 5,
+      "collectifs_de_biopiraterie_inversee_reference": 6,
+      "collectifs_de_journalisme_embarque_reference": 1,
+      "confederation_des_megapoles_autonomes_reference": 6,
+      "conseil_des_etats_nordiques_integres_reference": 1,
+      "consortiums_energetiques_des_megapoles_reference": 1,
+      "datasovereign_reference": 1,
+      "directive_kontinuum_reference": 12,
+      "ecosynth_global_reference": 6,
+      "etats_a_tendance_centraliste_numerique_reference": 1,
+      "gelecek_meclisi_reference": 11,
+      "gouvernements_a_regime_de_productivite_mandatee_reference": 1,
+      "gouvernements_du_bloc_sahelien_autonome_reference": 1,
+      "gouvernements_federaux_residuels_souverainistes_reference": 1,
+      "institut_des_seuils_demographiques_reference": 1,
+      "internationale_travailleurs_augmentes_reference": 8,
+      "leena_vainala_reference": 8,
+      "ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference": 1,
+      "ligue_des_municipalites_peripheriques_sous_connectees_reference": 1,
+      "nexcore_reference": 1,
+      "nexus_biosyn_reference": 6,
+      "observatoire_climatique_des_territoires_oct_reference": 1,
+      "ong_de_preservation_patrimoniale_numerique_reference": 5,
+      "operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference": 1,
+      "oracle_des_seuils_reference": 6,
+      "pacifique_sud_archipels_flottants_reference": 1,
+      "plateformes_centralisees_de_narration_officielle_reference": 5,
+      "plateformes_d_optimisation_territoriale_par_ia_reference": 1,
+      "plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference": 4,
+      "prisme_global_reference": 4,
+      "regulateurs_de_l_union_continentale_africaine_reference": 1,
+      "regulateurs_de_l_union_eurasiatique_sur_les_donnees_critiques_reference": 1,
+      "reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference": 1,
+      "reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference": 6,
+      "reseau_hospitalier_hybride_eurasiatique_reference": 1,
+      "reseaux_de_gouvernance_multilaterale_survivants_reference": 1,
+      "singapour_est_nexcore_reference": 1,
+      "tbilissi_noeud_mnemos_reference": 14,
+      "union_africaine_de_resilience_territoriale_reference": 1,
+      "voix_du_dehors_reference": 1,
+      "zones_grises_globales_reference": 1
     }
   }
 }

@@ -42,8 +42,6 @@ oppositions:
 type_relation_dominante: dépendance
 annee_debut: 2046
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -79,6 +77,9 @@ localisation:
   zone: zone_usines_forteresses_eurasie
   lieu: Zones Industrielles Forteresses — Bloc Eurasiatique
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Syndicats Industriels Résiduels Post-Crise

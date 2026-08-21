@@ -53,8 +53,6 @@ oppositions:
 type_relation_dominante: coopération
 annee_debut: 2040
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -91,6 +89,9 @@ localisation:
   zone: null
   lieu: null
   type_lieu: null
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Collectif des Médiateurs Cognitifs Internationaux

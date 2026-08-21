@@ -63,15 +63,13 @@ oppositions:
 - front_techno_utopiste_de_la_decision_automatisee_policy_reform
 - grille_aria_policy_reform
 - oracle_des_seuils_policy_reform
-- rede_paulista_de_distribuic_o_algor_tmica_policy_reform
+- rede_paulista_de_distribuicao_algoritmica_policy_reform
 - reseau_des_lobbyistes_techniques_onu_energie_policy_reform
 - reseaux_de_capteurs_ia_climatiques_deployes_par_les_etats_membres_policy_reform
 - union_technocratique_eurasiatique_policy_reform
 type_relation_dominante: conflit
 annee_debut: 2028
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -106,6 +104,9 @@ localisation:
   zone: null
   lieu: null
   type_lieu: null
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Collectifs Citoyens pour l'Audit Algorithmique Ouvert
@@ -162,7 +163,7 @@ Les Collectifs sont tiraillés entre leur efficacité croissante — qui les rap
 - [[front_techno_utopiste_de_la_decision_automatisee_policy_reform]]
 - [[grille_aria_policy_reform]]
 - [[oracle_des_seuils_policy_reform]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_policy_reform]]
+- [[rede_paulista_de_distribuicao_algoritmica_policy_reform]]
 - [[reseau_des_lobbyistes_techniques_onu_energie_policy_reform]]
 - [[reseaux_de_capteurs_ia_climatiques_deployes_par_les_etats_membres_policy_reform]]
 - [[union_technocratique_eurasiatique_policy_reform]]

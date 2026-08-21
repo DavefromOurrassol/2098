@@ -45,14 +45,12 @@ alliances:
 - kalaallit_nunaat_sovereign_fund_breakdown
 - noeud_nordark_tromso_breakdown
 oppositions:
-- autorite_passage_arctique_breakdown
+- arctic_passage_authority_breakdown
 - district_mourmansk_residuel_breakdown
 - federation_russe_residuelle_district_de_mourmansk_breakdown
 type_relation_dominante: compétition
 annee_debut: 2058
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -83,6 +81,9 @@ tensions_narratives: Les Enclaves sont déchirées entre leur logique de survie 
   ouvrière — et les travailleurs non qualifiés réfugiés menace la cohésion sociale
   que les directeurs d'enclave peinent à maintenir.
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Enclaves Industrielles de Bergen-Tromsø
@@ -121,7 +122,7 @@ Les Enclaves sont déchirées entre leur logique de survie autarcique et la tent
 - [[kalaallit_nunaat_sovereign_fund_breakdown]]
 - [[noeud_nordark_tromso_breakdown]]
 **Opposants :**
-- [[autorite_passage_arctique_breakdown]]
+- [[arctic_passage_authority_breakdown]]
 - [[district_mourmansk_residuel_breakdown]]
 - [[federation_russe_residuelle_district_de_mourmansk_breakdown]]
 

@@ -197,12 +197,18 @@ def build_existing_entities_summary(entities):
 
 
 def slugify(text):
-    s = text.lower()
-    for fr, en in [("é", "e"), ("è", "e"), ("ê", "e"), ("ë", "e"),
-                   ("à", "a"), ("â", "a"), ("ä", "a"), ("ù", "u"),
-                   ("û", "u"), ("ü", "u"), ("î", "i"), ("ï", "i"),
-                   ("ô", "o"), ("ö", "o"), ("ç", "c")]:
-        s = s.replace(fr, en)
+    # Normalisation Unicode générique (NFD + suppression des marques
+    # diacritiques) plutôt qu'une table d'accents français en dur —
+    # même correctif que create_entities_and_instances.py et
+    # officialize_alliances.py, appliqué le 14 août 2026 (bug trouvé le
+    # 8 août sur des slugs portugais cassés, voir audit_broken_slugs.py).
+    # Script legacy/archivé (fusionné dans create_entities_and_
+    # instances.py, plus dans scripts_config.json), corrigé quand même
+    # par cohérence si jamais relancé manuellement en CLI.
+    import unicodedata
+    s = unicodedata.normalize("NFD", text or "")
+    s = "".join(c for c in s if unicodedata.category(c) != "Mn")
+    s = s.lower()
     s = re.sub(r"[^a-z0-9]+", "_", s)
     return s.strip("_")
 

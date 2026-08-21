@@ -1,0 +1,86 @@
+---
+name: Détroits Souverains - ARDS Fragmentée
+type: instance
+slug: agence_de_regulation_des_detroits_strategiques_ards_fortress_world
+entite: agence_de_regulation_des_detroits_strategiques_ards
+scenario: fortress_world
+localisation:
+  zone:
+  lieu:
+  type_lieu:
+  note: transnationale_sans_ancrage
+type_dans_scenario: institution
+role_dans_scenario: Dans un monde de blocs forteresses où les interdépendances sont réduites à leur minimum, l'ARDS Fragmentée incarne les vestiges d'une gouvernance globale des détroits stratégiques. Autrefois garante d'une neutralité technique, elle est désormais éclatée en cellules régionales contrôlées par les blocs, chargées d'arbitrer les flux résiduels de ressources critiques entre zones souveraines. Son rôle se limite à éviter les blocages totaux, tout en servant de champ de bataille pour les influences géopolitiques des grandes forteresses.
+responsabilites: |
+  Gérer les corridors maritimes et terrestres résiduels entre blocs (ex. détroit d'Ormuz, Bosphore, détroit de Malacca) via des protocoles d'urgence négociés sous pression. Superviser les quotas de transit des matières premières sous contrôle militaire. Arbitrer les conflits logistiques entre opérateurs privés et commandements stratégiques des blocs. Maintenir une illusion de neutralité pour justifier sa survie institutionnelle.
+impact_local: 4
+impact_systemique_global: 3
+variables_influencees:
+  - geopolitique_conflits
+  - energie_ressources_critiques
+  - gouvernance_institutions
+  - organisation_territoires
+zone_geographique:
+  - régionale
+  - continentale
+zone_systemique:
+  - gouvernance
+  - sécurité
+  - infrastructure
+alliances:
+  - alliance_blocs_souverains_fortress_world
+  - corps_des_inspecteurs_de_conformite_inter_blocs_fortress_world
+  - commandement_strategique_des_matieres_critiques_atlantique_fortress_world
+  - commandements_logistiques_peripheriques_du_bloc_eurasien_central_fortress_world
+  - consortium_eurasiatique_des_ressources_fermees_fortress_world
+oppositions:
+  - contrebandiers_energetiques_des_zones_grises_fortress_world
+  - reseaux_de_contrebande_energetique_transfrontaliere_fortress_world
+  - coalitions_des_deplaces_et_apatrides_fortress_world
+  - factions_djihadistes_logistiques_d_asie_centrale_fortress_world
+  - milices_de_piraterie_logistique_arctique_fortress_world
+type_relation_dominante: dépendance
+annee_debut: 2047
+annee_fin:
+trajectoire: déclinant
+est_clandestin: false
+generation: forteresse
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+description_journalistique: |
+  « Les Détroits Souverains ? Une coquille vide avec des uniformes de trois blocs différents », ironisait un contrebandier kazakh en 2089. Aujourd'hui, l'ARDS Fragmentée n'est plus qu'un réseau de bunkers flottants et de tours de contrôle militarisées, où des fonctionnaires en treillis négocient au cas par cas le passage d'un pétrolier ou d'un convoi de terres rares. Ses archives, jadis centralisées à Genève, sont désormais dispersées entre Moscou, Shanghai et Washington — quand elles n'ont pas été effacées par des cyberattaques. Les derniers inspecteurs indépendants ont été remplacés par des algorithmes souverains, chacun défendant les intérêts de son bloc. Pourtant, malgré tout, les détroits restent ouverts. À quel prix ?
+signes_distinctifs: |
+  Uniformes hybrides mêlant insignes des anciens États-nations et logos des blocs forteresses. Bases flottantes ancrées près des détroits, équipées de drones de surveillance et de systèmes de brouillage. Drapeaux officiels remplacés par des bannières neutres aux couleurs des « corridors souverains ». Langage codé dans les communications : « flux optimisés » pour les quotas, « incidents de conformité » pour les blocages.
+tensions_narratives: |
+  L'ARDS Fragmentée est tiraillée entre sa mission résiduelle de fluidité et les logiques d'autarcie des blocs. Ses protocoles d'urgence sont régulièrement contournés par les milices logistiques ou les factions pro-autarcie, tandis que les commandements stratégiques des blocs menacent de la dissoudre pour créer leurs propres agences. Certains y voient une relique d'un monde multipolaire, d'autres un outil de domination déguisé. Son avenir se joue dans les zones grises : pourra-t-elle survivre comme médiateur, ou sera-t-elle absorbée par les complexes militaro-industriels des forteresses ?
+date_creation: 2026-08-11
+---
+
+# Détroits Souverains - ARDS Fragmentée
+
+## Rôle dans [[fortress_world]]
+Dans un monde de blocs forteresses où les interdépendances sont réduites à leur minimum, l'ARDS Fragmentée incarne les vestiges d'une gouvernance globale des détroits stratégiques. Autrefois garante d'une neutralité technique, elle est désormais éclatée en cellules régionales contrôlées par les blocs, chargées d'arbitrer les flux résiduels de ressources critiques entre zones souveraines. Son rôle se limite à éviter les blocages totaux, tout en servant de champ de bataille pour les influences géopolitiques des grandes forteresses.
+
+## Responsabilités
+Gérer les corridors maritimes et terrestres résiduels entre blocs (ex. détroit d'Ormuz, Bosphore, détroit de Malacca) via des protocoles d'urgence négociés sous pression. Superviser les quotas de transit des matières premières sous contrôle militaire. Arbitrer les conflits logistiques entre opérateurs privés et commandements stratégiques des blocs. Maintenir une illusion de neutralité pour justifier sa survie institutionnelle.
+
+## Variables influencées
+- [[geopolitique_conflits]]
+- [[energie_ressources_critiques]]
+- [[gouvernance_institutions]]
+- [[organisation_territoires]]
+
+## Relations
+**Alliés** : [[alliance_blocs_souverains_fortress_world]], [[corps_des_inspecteurs_de_conformite_inter_blocs_fortress_world]], [[commandement_strategique_des_matieres_critiques_atlantique_fortress_world]], [[commandements_logistiques_peripheriques_du_bloc_eurasien_central_fortress_world]], [[consortium_eurasiatique_des_ressources_fermees_fortress_world]]
+**Opposants** : [[contrebandiers_energetiques_des_zones_grises_fortress_world]], [[reseaux_de_contrebande_energetique_transfrontaliere_fortress_world]], [[coalitions_des_deplaces_et_apatrides_fortress_world]], [[factions_djihadistes_logistiques_d_asie_centrale_fortress_world]], [[milices_de_piraterie_logistique_arctique_fortress_world]]
+
+## Description journalistique
+« Les Détroits Souverains ? Une coquille vide avec des uniformes de trois blocs différents », ironisait un contrebandier kazakh en 2089. Aujourd'hui, l'ARDS Fragmentée n'est plus qu'un réseau de bunkers flottants et de tours de contrôle militarisées, où des fonctionnaires en treillis négocient au cas par cas le passage d'un pétrolier ou d'un convoi de terres rares. Ses archives, jadis centralisées à Genève, sont désormais dispersées entre Moscou, Shanghai et Washington — quand elles n'ont pas été effacées par des cyberattaques. Les derniers inspecteurs indépendants ont été remplacés par des algorithmes souverains, chacun défendant les intérêts de son bloc. Pourtant, malgré tout, les détroits restent ouverts. À quel prix ?
+
+## Tensions narratives
+L'ARDS Fragmentée est tiraillée entre sa mission résiduelle de fluidité et les logiques d'autarcie des blocs. Ses protocoles d'urgence sont régulièrement contournés par les milices logistiques ou les factions pro-autarcie, tandis que les commandements stratégiques des blocs menacent de la dissoudre pour créer leurs propres agences. Certains y voient une relique d'un monde multipolaire, d'autres un outil de domination déguisé. Son avenir se joue dans les zones grises : pourra-t-elle survivre comme médiateur, ou sera-t-elle absorbée par les complexes militaro-industriels des forteresses ?

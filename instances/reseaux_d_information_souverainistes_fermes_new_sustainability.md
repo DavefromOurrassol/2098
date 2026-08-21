@@ -61,8 +61,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2062
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -100,6 +98,9 @@ localisation:
   zone: bloc_eurasien_souverainiste
   lieu: null
   type_lieu: infrastructure
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Réseaux d'information souverainistes fermés

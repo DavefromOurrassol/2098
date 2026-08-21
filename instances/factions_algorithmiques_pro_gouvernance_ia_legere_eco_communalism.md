@@ -36,7 +36,7 @@ alliances:
 - collectifs_de_techniciens_sobres_eco_communalism
 - confederation_bassins_vivants_eco_communalism
 - ligue_des_cites_du_sahel_numerique_eco_communalism
-- rede_paulista_de_distribuic_o_algor_tmica_eco_communalism
+- rede_paulista_de_distribuicao_algoritmica_eco_communalism
 - reseau_assemblees_fennoscandien_eco_communalism
 - reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism
 - sao_paulo_algorithmique_eco_communalism
@@ -51,8 +51,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2036
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -92,6 +90,9 @@ localisation:
   zone: null
   lieu: null
   type_lieu: null
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Factions Algorithmiques Pro-Gouvernance IA Légère
@@ -123,7 +124,7 @@ La contradiction fondamentale qui les ronge est celle-ci : en prétendant allég
 - [[collectifs_de_techniciens_sobres_eco_communalism]]
 - [[confederation_bassins_vivants_eco_communalism]]
 - [[ligue_des_cites_du_sahel_numerique_eco_communalism]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_eco_communalism]]
+- [[rede_paulista_de_distribuicao_algoritmica_eco_communalism]]
 - [[reseau_assemblees_fennoscandien_eco_communalism]]
 - [[reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism]]
 - [[sao_paulo_algorithmique_eco_communalism]]

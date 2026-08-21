@@ -53,10 +53,8 @@ oppositions:
 type_relation_dominante: dépendance
 
 annee_debut: 2037
-annee_fin: 
+annee_fin: 2063
 
-etat_temporel: transformé
-age_historique: déclinant
 generation: forteresse
 
 injection:
@@ -77,6 +75,9 @@ tensions_narratives: >
   La tension centrale est celle d'un oligopole qui a résolu sa contradiction fondatrice de la pire manière : l'énergie n'est ni bien commun ni actif purement privé, elle est désormais arme d'État. Des factions internes contestent cette militarisation complète, craignant que la destruction de la crédibilité de neutralité d'Helios n'ouvre la voie à des attaques sur les infrastructures orbitales considérées comme cibles légitimes. Par ailleurs, des branches dissidentes de l'ancien Consortium tentent de reconstituer un réseau d'énergie transfrontalier clandestin, menaçant directement le monopole de coercition d'Helios BSE. La question de l'après-forteresse plane : si les blocs se désagrègent, Helios BSE sera-t-elle démantelée comme crime contre l'humanité énergétique, ou survivra-t-elle comme infrastructure indispensable ?
 
 date_creation: 2026-06-15
+trajectoire: transformé
+est_clandestin: false
+
 ---
 
 # Helios Bloc Consortium — Division Souveraineté Énergétique

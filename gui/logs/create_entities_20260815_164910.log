@@ -1,0 +1,17 @@
+============================================================
+OURRASSOL 2098 — Création entités + instances
+============================================================
+
+Mode : auto (fourni via --mode)
+
+[1/2] Génération de 1 entité(s) (scénarios : fortress_world)...
+[llm] Mistral (mistral-large-latest) — entrée : 26049 | sortie : 286
+[2/2] Validation, injection et génération des instances...
+
+  ✓ Les Gardiens des Corridors Hybrides (hybride)
+  Instances (1 scénario(s)) :
+    → fortress_world... [llm] Mistral (mistral-large-latest) — entrée : 18369 | sortie : 1106
+✓
+
+Terminé. 1/1 entité(s) créée(s).
+Instances : 1 créée(s) | 0 déjà existante(s) | 0 erreur(s)

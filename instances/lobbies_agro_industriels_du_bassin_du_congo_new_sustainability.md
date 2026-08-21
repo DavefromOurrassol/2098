@@ -68,8 +68,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2035
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -103,6 +101,9 @@ localisation:
   zone: bassin_du_congo
   lieu: Brazzaville / Kinshasa
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Lobbies Agro-Industriels du Bassin du Congo

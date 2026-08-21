@@ -57,8 +57,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2027
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -91,6 +89,9 @@ localisation:
   zone: bruxelles_forteresse
   lieu: Bruxelles-Forteresse, Quartier Commandement Nord
   type_lieu: infrastructure
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Commandement Stratégique des Matières Critiques Atlantique

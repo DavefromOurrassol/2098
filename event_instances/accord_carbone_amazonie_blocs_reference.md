@@ -47,7 +47,7 @@ acteurs_impliques:
     - fonds_monetaire_climatique_fmc_reference
     - front_souverainiste_des_ressources_d_amerique_du_sud_reference
     - reseaux_de_gouvernance_multilaterale_survivants_reference
-    - frente_sert_o_livre_reference
+    - frente_sertao_livre_reference
     - ong_environnementales_de_terrain_reference
     - lobbies_industriels_des_etats_non_signataires_reference
 note_coherence: "Dans un monde hybride en transition fragile, une victoire diplomatique partielle — réelle mais incomplète, saluée mais non universelle — est exactement le type d'issue que ce scénario produit : ni effondrement, ni triomphe, mais un équilibre précaire qui déplace les tensions sans les résoudre."
@@ -80,7 +80,7 @@ Le traité institue un précédent juridique fragile mais réel : pour la premi�
 - [[fonds_monetaire_climatique_fmc_reference]]
 - [[front_souverainiste_des_ressources_d_amerique_du_sud_reference]]
 - [[reseaux_de_gouvernance_multilaterale_survivants_reference]]
-- [[frente_sert_o_livre_reference]]
+- [[frente_sertao_livre_reference]]
 - [[ong_environnementales_de_terrain_reference]]
 - [[lobbies_industriels_des_etats_non_signataires_reference]]
 

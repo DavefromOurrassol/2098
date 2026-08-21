@@ -46,8 +46,6 @@ oppositions:
 type_relation_dominante: dépendance
 annee_debut: 2041
 annee_fin:
-etat_temporel: actif
-age_historique: dominant
 generation: forteresse
 injection:
   type: canonique
@@ -73,6 +71,9 @@ tensions_narratives: >
   Tension entre les ingénieurs qui veulent une infrastructure plus
   ouverte et le Commandement qui exige un contrôle total.
 date_creation: 2098-01-01
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # NexCore Bloc Atlantique

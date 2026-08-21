@@ -68,6 +68,14 @@ NEEDS_REVIEW_PATH = SIGNAUX_CUSTOM_DIR / "needs_review.yaml"
 
 MAX_FIX_ATTEMPTS = 2
 
+# Chantier injection matricielle des signaux faibles (16 août 2026) :
+# plafond volontairement fixe et bas (pas dérivé d'un score comme pour les
+# instances, qui n'ont pas d'équivalent ici) — un signal "faible" doit
+# rester un effet mineur sur le monde, jamais comparable à un événement ou
+# une entité custom. Décidé avec David (via_matrice à false par défaut,
+# même session).
+MAX_DELTA_SIGNAL = 10
+
 SCENARIOS = [
     "breakdown",
     "fortress_world",
@@ -601,7 +609,11 @@ indentée comme les entrées existantes de la section 12, commençant par
 {{
   "signal_to_state_yaml": "  - signal: {signal_slug}\\n    scenarios:\\n      breakdown:\\n        evolution: ...\\n        date_bascule: AAAA-AAAA\\n        evenement_cle: ... AAAA\\n      ...",
   "section7_annotation": "- description courte du signal (→ signal_custom: {signal_slug}, source: {source})",
-  "signaux_existants_consideres": "Explique en 1-3 phrases si un signal déjà présent en section 12 traite d'un sujet proche, et comment tu t'es positionné par rapport à lui (complémentaire / conséquence / tension assumée). Si aucun signal existant proche n'a été identifié, dis-le explicitement (ex: 'Aucun signal existant sur un sujet proche identifié.') -- ce champ est obligatoire même en l'absence de recoupement, pour que le choix (ou l'absence de choix à faire) reste vérifiable a posteriori plutôt que silencieux."
+  "signaux_existants_consideres": "Explique en 1-3 phrases si un signal déjà présent en section 12 traite d'un sujet proche, et comment tu t'es positionné par rapport à lui (complémentaire / conséquence / tension assumée). Si aucun signal existant proche n'a été identifié, dis-le explicitement (ex: 'Aucun signal existant sur un sujet proche identifié.') -- ce champ est obligatoire même en l'absence de recoupement, pour que le choix (ou l'absence de choix à faire) reste vérifiable a posteriori plutôt que silencieux.",
+  "delta_level": 0,
+  "polarite": 1,
+  "propagation_via_matrice": false,
+  "contexte_injection": "phrase courte expliquant l'impact chiffré ci-dessous"
 }}
 
 IMPORTANT sur "section7_annotation" : le texte "signal_custom: " (avec les
@@ -610,6 +622,26 @@ n'écris jamais juste "(→ {signal_slug}, source: ...)" en sautant ce
 préfixe, même si ça semble redondant. C'est ce texte exact qui permet de
 retrouver et retirer cette ligne proprement si le signal est annulé plus
 tard.
+
+IMPORTANT sur "delta_level"/"polarite"/"propagation_via_matrice" (chantier
+injection matricielle, 16 août 2026) : ce signal doit pouvoir influencer
+RÉELLEMENT le niveau de la variable {variable_slug}, pas seulement la
+mentionner narrativement.
+PLAFOND STRICT : |delta_level| ne doit JAMAIS dépasser {MAX_DELTA_SIGNAL}
+— un signal reste par nature un effet MINEUR, très inférieur à un
+événement ou une entité custom (qui peuvent aller jusqu'à 25). Si l'idée
+source te semble mériter un impact plus fort que {MAX_DELTA_SIGNAL},
+c'est probablement le signe que ce n'est pas un "signal faible" mais un
+véritable événement — choisis quand même une valeur dans la plage
+autorisée, ne la dépasse pas.
+Ce delta est appliqué UNE FOIS PAR SCÉNARIO où ce signal est développé,
+avec une année d'injection et une durée d'effet dérivées automatiquement
+de "date_bascule" (pas besoin de les répéter ici) — choisis donc une
+valeur cohérente avec l'ensemble des 6 scénarios, pas seulement celui qui
+te semble le plus marquant.
+"propagation_via_matrice" : false SAUF SI ce signal touche une dynamique
+véritablement structurelle et durable (rare pour un signal faible) — en
+cas de doute, false.
 """
     return call_claude_json(client, "Tu es un assistant de world-building.", user_content, max_tokens=4000)
 
@@ -618,9 +650,30 @@ tard.
 # Validation mécanique
 # ---------------------------------------------------------------------------
 
-def validate_signal_block(yaml_text, signal_slug, variable_slug, registre_text):
-    """Retourne une liste de problèmes (vide si tout est OK)."""
+def validate_signal_block(yaml_text, signal_slug, variable_slug, registre_text,
+                           delta_level=None, propagation_via_matrice=None):
+    """Retourne une liste de problèmes (vide si tout est OK).
+
+    delta_level/propagation_via_matrice (16 août 2026, chantier injection
+    matricielle) : validés ici en plus du bloc YAML narratif, pour
+    centraliser tous les contrôles de ce (signal, variable) en un seul
+    passage — cohérent avec le fait que les deux sont produits par le
+    même appel LLM (step2_develop) et corrigés ensemble en cas d'échec."""
     issues = []
+
+    if delta_level is not None:
+        try:
+            delta_val = float(delta_level)
+        except (TypeError, ValueError):
+            issues.append(f"delta_level non numérique : {delta_level!r}")
+            delta_val = None
+        if delta_val is not None and abs(delta_val) > MAX_DELTA_SIGNAL:
+            issues.append(
+                f"delta_level={delta_val} dépasse le plafond {MAX_DELTA_SIGNAL} "
+                f"(un signal faible ne peut pas avoir un impact aussi fort)"
+            )
+    if propagation_via_matrice is not None and not isinstance(propagation_via_matrice, bool):
+        issues.append(f"propagation_via_matrice doit être un booléen : {propagation_via_matrice!r}")
 
     try:
         parsed = yaml.safe_load("signal_to_state:\n" + yaml_text)
@@ -875,7 +928,7 @@ def regenerate_registre(variable_slug, signal_slug, entry, pilote):
 # ---------------------------------------------------------------------------
 
 def write_custom_fiche(signal_slug, idea_text, source, variables, categorie, yaml_text,
-                        notes_coherence=None):
+                        notes_coherence=None, impacts=None):
     SIGNAUX_CUSTOM_DIR.mkdir(parents=True, exist_ok=True)
     path = SIGNAUX_CUSTOM_DIR / f"{signal_slug}.md"
 
@@ -891,6 +944,40 @@ def write_custom_fiche(signal_slug, idea_text, source, variables, categorie, yam
         )
         if lignes:
             coherence_block = f"\n## Cohérence avec les signaux existants\n\n{lignes}\n"
+
+    # Bloc impact chiffré (16 août 2026, chantier injection matricielle) --
+    # DÉLIBÉRÉMENT séparé du bloc `signal_to_state` narratif ci-dessous, et
+    # DÉLIBÉRÉMENT écrit avec `>` pour contexte_injection (pas un scalaire
+    # brut sur une ligne) -- leçon tirée du bug YAML du 16 août 2026 sur le
+    # chantier instances (un ' : ' dans le texte cassait tout le parsing
+    # de la fiche). Consommé par apply_custom_signals() dans snapshot.py.
+    impact_block = ""
+    if impacts:
+        entries_yaml = []
+        for imp in impacts:
+            scen_lines = "\n".join(
+                "      {}:\n        annee_injection: {}\n        duree: {}\n"
+                "        delta_level: {}\n        polarite: {}".format(
+                    scen, d["annee_injection"], d["duree"],
+                    d["delta_level"], d["polarite"],
+                )
+                for scen, d in imp["scenarios"].items()
+            )
+            contexte = (imp.get("contexte_injection") or "").strip().replace("\n", " ")
+            entries_yaml.append(
+                "  - variable: {}\n"
+                "    propagation_via_matrice: {}\n"
+                "    contexte_injection: >\n      {}\n"
+                "    scenarios:\n{}".format(
+                    imp["variable"],
+                    str(bool(imp.get("propagation_via_matrice", False))).lower(),
+                    contexte,
+                    scen_lines,
+                )
+            )
+        impact_block = "\n## Impact chiffré\n\n```yaml\nimpact_sur_variables:\n{}\n```\n".format(
+            "\n".join(entries_yaml)
+        )
 
     content = f"""---
 slug: {signal_slug}
@@ -910,7 +997,7 @@ statut: injected
 signal_to_state:
 {yaml_text.rstrip()}
 ```
-"""
+{impact_block}"""
     path.write_text(content, encoding="utf-8")
 
 
@@ -976,7 +1063,11 @@ def process_idea(client, idea, dry_run=False):
         for attempt in range(MAX_FIX_ATTEMPTS + 1):
             yaml_text = develop["signal_to_state_yaml"]
             print(f"[3/4] Validation (essai {attempt + 1})...")
-            issues = validate_signal_block(yaml_text, signal_slug, variable_slug, registre_text)
+            issues = validate_signal_block(
+                yaml_text, signal_slug, variable_slug, registre_text,
+                delta_level=develop.get("delta_level"),
+                propagation_via_matrice=develop.get("propagation_via_matrice"),
+            )
             if not issues:
                 break
             print("  -> problèmes :")
@@ -1019,9 +1110,33 @@ def process_idea(client, idea, dry_run=False):
         for scen, data in entry_for_siblings["scenarios"].items():
             sibling_events[scen] = data["evenement_cle"]
 
+        # Bloc d'impact chiffré par scénario (16 août 2026, chantier
+        # injection matricielle) : annee_injection/duree dérivés de la
+        # fenêtre date_bascule déjà écrite pour ce scénario, pas redemandés
+        # au LLM -- garantit la cohérence entre narratif et numérique sans
+        # risque de désynchronisation entre les deux.
+        impact_scenarios = {}
+        for scen, data in entry_for_siblings["scenarios"].items():
+            m = re.match(r"^(\d{4})-(\d{4})$", data.get("date_bascule", ""))
+            if not m:
+                continue  # date_bascule déjà validée plus haut, filet de sécurité seulement
+            start, end = int(m.group(1)), int(m.group(2))
+            impact_scenarios[scen] = {
+                "annee_injection": start,
+                "duree": max(end - start, 1),
+                "delta_level": develop.get("delta_level") or 0,
+                "polarite": develop.get("polarite") or 1,
+            }
+
         results.append({"variable": variable_slug, "status": "injected",
                          "yaml_text": yaml_text,
-                         "signaux_existants_consideres": develop.get("signaux_existants_consideres", "")})
+                         "signaux_existants_consideres": develop.get("signaux_existants_consideres", ""),
+                         "impact": {
+                             "variable": variable_slug,
+                             "propagation_via_matrice": bool(develop.get("propagation_via_matrice", False)),
+                             "contexte_injection": develop.get("contexte_injection", ""),
+                             "scenarios": impact_scenarios,
+                         }})
 
     if not dry_run:
         injected_yaml = "\n".join(
@@ -1032,8 +1147,9 @@ def process_idea(client, idea, dry_run=False):
                 r["variable"]: r.get("signaux_existants_consideres", "")
                 for r in results if r["status"] == "injected"
             }
+            impacts = [r["impact"] for r in results if r["status"] == "injected"]
             write_custom_fiche(signal_slug, idea_text, source, variables, categorie,
-                                injected_yaml, notes_coherence)
+                                injected_yaml, notes_coherence, impacts=impacts)
 
     overall = "needs_review" if any(r["status"] != "injected" for r in results) else "injected"
     return {"status": overall, "idea": idea, "selection": selection, "results": results}

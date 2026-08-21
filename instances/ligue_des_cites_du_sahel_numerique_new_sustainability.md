@@ -66,8 +66,6 @@ type_relation_dominante: alliance stratégique
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: mature
 generation: reconstruction
 
 injection:
@@ -88,6 +86,9 @@ tensions_narratives: >
   La montée en puissance des cités-nœuds de Dakar et Addis-Abeba crée une fracture silencieuse entre les membres fondateurs riches en données et les cités périphériques qui se sentent de nouveau marginalisées — cette fois par leurs propres alliés. Par ailleurs, plusieurs demandes d'adhésion émanant de territoires d'Asie centrale poussent la CTSA à définir si elle reste un projet africain ou devient une architecture globale, risquant de diluer son identité fondatrice. Enfin, la pression croissante du Conseil de Gouvernance Algorithmique Intégrée pour intégrer les protocoles CTSA dans le cadre mondial soulève une question existentielle : l'absorption dans la gouvernance globale est-elle consécration ou dissolution ?
 
 date_creation: 2026-06-23
+trajectoire: mature
+est_clandestin: false
+
 ---
 
 # Confédération des Territoires Sahéliens Autonomes — CTSA

@@ -1,0 +1,32 @@
+
+=== IA administratives ===
+[1/4] Sélection de variable(s)...
+[llm] Mistral (mistral-large-latest) — entrée : 4639 | sortie : 52
+  -> variables=['technologie_information', 'gouvernance_institutions'] categorie=technological signal_slug=ia_agents_administratifs_autonomes
+[2/4] Développement pour technologie_information...
+[llm] Mistral (mistral-large-latest) — entrée : 32633 | sortie : 643
+[3/4] Validation (essai 1)...
+  ⚠ [avertissement, non bloquant] [new_sustainability] fenêtre 2031-2047 déjà utilisée par un autre signal de technologie_information dans le registre.
+  ⚠ [avertissement, non bloquant] [eco_communalism] fenêtre 2038-2057 déjà utilisée par un autre signal de technologie_information dans le registre.
+  ⚠ [avertissement, non bloquant] [policy_reform] fenêtre 2027-2043 déjà utilisée par un autre signal de technologie_information dans le registre.
+  ⚠ [avertissement, non bloquant] [reference] fenêtre 2025-2040 déjà utilisée par un autre signal de technologie_information dans le registre.
+  -> problèmes :
+     - [policy_reform] 'evenement_cle' a 12 mots (attendu 4-11) : 'adoption de la norme ISO 42001 pour les agents administratifs IA 2035'
+[llm] Mistral (mistral-large-latest) — entrée : 33376 | sortie : 661
+[3/4] Validation (essai 2)...
+  ⚠ [avertissement, non bloquant] [new_sustainability] fenêtre 2031-2047 déjà utilisée par un autre signal de technologie_information dans le registre.
+  ⚠ [avertissement, non bloquant] [eco_communalism] fenêtre 2038-2057 déjà utilisée par un autre signal de technologie_information dans le registre.
+  ⚠ [avertissement, non bloquant] [policy_reform] fenêtre 2027-2043 déjà utilisée par un autre signal de technologie_information dans le registre.
+  ⚠ [avertissement, non bloquant] [reference] fenêtre 2025-2040 déjà utilisée par un autre signal de technologie_information dans le registre.
+[4/4] Injection...
+[2/4] Développement pour gouvernance_institutions...
+[llm] Mistral (mistral-large-latest) — entrée : 32611 | sortie : 714
+[3/4] Validation (essai 1)...
+  -> problèmes :
+     - [eco_communalism] 'evenement_cle' a 12 mots (attendu 4-11) : 'Réseau des Assemblées Bioterritoriales limite les agents IA aux tâches logistiques 2051'
+     - [policy_reform] 'evenement_cle' a 12 mots (attendu 4-11) : "Alliance Pacifique publie la première norme mondiale d'audit des agents IA 2038"
+[llm] Mistral (mistral-large-latest) — entrée : 33414 | sortie : 619
+[3/4] Validation (essai 2)...
+[4/4] Injection...
+
+Terminé. Voir /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/signaux_custom/processed.yaml et /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/signaux_custom/needs_review.yaml.

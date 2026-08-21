@@ -54,8 +54,6 @@ type_relation_dominante: dépendance
 annee_debut: 2081
 annee_fin: 
 
-etat_temporel: clandestin
-age_historique: ascendant
 generation: post-effondrement
 
 injection:
@@ -76,6 +74,9 @@ tensions_narratives: >
   La tension centrale tourne autour du moment où la solidarité devient domination : des témoignages de plus en plus nombreux évoquent des relais qui conditionnent l'accès à la nourriture à des loyautés politiques ou à des services informels, reproduisant exactement la logique des institutions qu'ils ont remplacées. Une autre ligne de fracture émerge avec Carthage Nord Nexcore, qui tente d'absorber ou de neutraliser les Bouches pour contrôler seul les flux alimentaires du littoral est. Enfin, la question de la succession — les relais fondateurs vieillissent, leurs remplaçants potentiels se disputent déjà les nœuds les plus lucratifs — menace de transformer le réseau de survie en terrain de guerre intestine.
 
 date_creation: 2026-06-27
+trajectoire: ascendant
+est_clandestin: true
+
 ---
 
 # Les Bouches de Sfax — Relais de la Faim Juste

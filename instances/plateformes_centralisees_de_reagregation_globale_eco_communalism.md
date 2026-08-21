@@ -47,7 +47,7 @@ oppositions:
 - collectifs_de_techniciens_sobres_eco_communalism
 - confederation_des_communs_de_l_arc_septentrional_eco_communalism
 - courant_isolationniste_anti_circulation_de_l_information_eco_communalism
-- frente_sert_o_livre_eco_communalism
+- frente_sertao_livre_eco_communalism
 - kalaallit_nunaat_bioterritoire_eco_communalism
 - ligue_des_cites_du_sahel_numerique_eco_communalism
 - mouvement_des_communes_du_rust_belt_eco_communalism
@@ -64,8 +64,6 @@ oppositions:
 type_relation_dominante: dépendance
 annee_debut: 2035
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -101,6 +99,9 @@ localisation:
   zone: null
   lieu: null
   type_lieu: infrastructure
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Plateformes Centralisées de Réagrégation Globale
@@ -140,7 +141,7 @@ La tension fondamentale réside dans leur double nature : outils de dépendance 
 - [[collectifs_de_techniciens_sobres_eco_communalism]]
 - [[confederation_des_communs_de_l_arc_septentrional_eco_communalism]]
 - [[courant_isolationniste_anti_circulation_de_l_information_eco_communalism]]
-- [[frente_sert_o_livre_eco_communalism]]
+- [[frente_sertao_livre_eco_communalism]]
 - [[kalaallit_nunaat_bioterritoire_eco_communalism]]
 - [[ligue_des_cites_du_sahel_numerique_eco_communalism]]
 - [[mouvement_des_communes_du_rust_belt_eco_communalism]]

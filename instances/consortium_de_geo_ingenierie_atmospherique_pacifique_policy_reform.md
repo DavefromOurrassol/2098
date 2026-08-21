@@ -49,8 +49,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2035
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -87,6 +85,9 @@ localisation:
   zone: consortium_geo_ingenierie_pacifique_sites
   lieu: Sites de géo-ingénierie atmosphérique du Pacifique
   type_lieu: infrastructure
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Consortium de Géo-ingénierie Atmosphérique Pacifique

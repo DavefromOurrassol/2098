@@ -59,8 +59,6 @@ oppositions:
 type_relation_dominante: coopération
 annee_debut: 2033
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -96,6 +94,9 @@ localisation:
   zone: centre_institutionnel_geneve
   lieu: Genève-Centre institutionnel mondial
   type_lieu: ville
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Conseil de Régulation Cognitive de l'ONU

@@ -51,8 +51,6 @@ type_relation_dominante: symbiose
 annee_debut: 2038
 annee_fin: 
 
-etat_temporel: actif
-age_historique: ascendant
 generation: post-effondrement
 
 injection:
@@ -73,6 +71,9 @@ tensions_narratives: >
   Le réseau est tiraillé entre deux dynamiques : d'un côté, une radicalisation face à l'accaparement croissant des ressources par les milices et les enclaves corporatives, poussant certains groupes à s'allier avec des saboteurs ou des pirates biologiques ; de l'autre, une tentation de négocier avec les gouvernements résiduels pour obtenir une reconnaissance officielle, au risque de perdre leur autonomie. Leur plus grand défi ? Maintenir la cohérence de leur savoir alors que les derniers experts meurent ou sont enlevés par des factions en quête de monopole technologique. Certains murmurent qu'ils envisagent de créer une « université des fleuves » clandestine, mais personne ne sait où elle pourrait bien émerger.
 
 date_creation: 2026-07-11
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Les Gardiens des Veines Brisées

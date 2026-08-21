@@ -53,8 +53,6 @@ type_relation_dominante: rivalité
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: mature
 generation: transition
 
 injection:
@@ -75,6 +73,9 @@ tensions_narratives: >
   La demande croissante en eau des nouvelles zones d'agriculture verticale algorithmique autour de Detroit menace de rouvrir les conflits de quotas entre municipalités membres, fracturant l'unité fragile du Compact. Parallèlement, plusieurs nations Anishinaabe ont déposé devant le Tribunal Algorithmique de Bruxelles une plainte pour exclusion structurelle de leur souveraineté hydrique, créant un précédent juridique qui pourrait invalider rétroactivement les licences d'accès délivrées depuis 2031. Enfin, la montée d'un Compact alternatif — le Great Lakes Autonomous Compact — porté par des communautés autochtones et des coopératives locales, pose la question de savoir si l'institution technocratique peut survivre à la concurrence d'une légitimité qu'elle n'a jamais su construire.
 
 date_creation: 2026-06-27
+trajectoire: mature
+est_clandestin: false
+
 ---
 
 # Detroit Compact Grands Lacs

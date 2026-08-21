@@ -56,8 +56,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2041
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -91,6 +89,9 @@ tensions_narratives: 'La contradiction fondamentale du Front est qu''il prétend
   en tête — qui disposent d''infrastructures qu''aucun bloc régional ne peut plus
   égaler.'
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Front des Blocs Régionaux du Récit des Conflits-Ressources

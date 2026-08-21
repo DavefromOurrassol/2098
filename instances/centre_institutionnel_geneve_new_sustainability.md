@@ -83,8 +83,6 @@ type_relation_dominante: coopération
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: reconstruction
 
 injection:
@@ -105,6 +103,9 @@ tensions_narratives: >
   La tension centrale : plusieurs États du Bloc Eurasien Souverainiste menacent périodiquement de ne plus soumettre leurs feuilles de route nationales, arguant que les standards du Centre favorisent les économies post-industrielles occidentales au détriment de leur rattrapage énergétique. Par ailleurs, les Collectifs de Déplacés Climatiques Non-Représentés réclament depuis 2091 un siège permanent au Comité d'Arbitrage, ce que refusent les États membres — créant un angle mort démocratique dans l'institution censée incarner le bien commun. Enfin, une faction technocratique interne pousse à déléguer davantage d'arbitrages à des systèmes d'IA comme le Conseil Mondial de l'IA Régénérative, ce qui risquerait de vider le Centre de sa substance politique et d'éroder la dernière fiction de souveraineté collective partagée.
 
 date_creation: 2026-06-27
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Centre Institutionnel de Genève — Secrétariat Permanent du Pacte de Durabilité Nouvelle

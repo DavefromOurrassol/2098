@@ -59,8 +59,6 @@ type_relation_dominante: symbiose
 annee_debut: 2036
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: forteresse
 
 injection:
@@ -81,6 +79,9 @@ tensions_narratives: >
   1) **La révolte des 'Déconnectés'** : Des mouvements clandestins, comme les Cellules Universitaires Dissidentes, sabotent les infrastructures NSCD et développent des contre-mesures pour neutraliser les implants. Leur objectif ? Rendre les citoyens 'invisibles' aux algorithmes de scoring. 2) **La guerre des algorithmes** : Les blocs souverains se livrent une bataille secrète pour pirater ou corrompre les systèmes NSCD de leurs rivaux, créant des 'zones de brouillage cognitif' où les populations deviennent ingouvernables. 3) **L'énigme des 'Cerveaux Fantômes'** : Des rumeurs persistantes évoquent des individus dont les implants ont été piratés pour créer des 'identités neuronales' fictives, permettant de contourner les contrôles. La NSCD nie farouchement, mais les arrestations se multiplient. 4) **Le dilemme des régimes** : Plus les systèmes NSCD deviennent intrusifs, plus les régimes dépendent d'eux pour maintenir l'ordre. Mais cette dépendance les rend vulnérables : que se passe-t-il si la NSCD décide de 'désoptimiser' un dirigeant ?
 
 date_creation: 2026-07-11
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # NeuroSentry Sovereign Cognitive Division (NSCD)

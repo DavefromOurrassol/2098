@@ -95,8 +95,6 @@ type_relation_dominante: alliance stratégique
 annee_debut: 2036
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: forteresse
 
 injection:
@@ -117,6 +115,9 @@ tensions_narratives: >
   La prospérité intérieure commence à montrer ses fissures : les factions pro-autarcie totale contestent les rares échanges économiques résiduels avec l'extérieur, tandis que des dissidences internes dénoncent le coût moral d'un système qui laisse mourir des centaines de milliers de personnes à ses portes chaque année. La Directive Kontinuum — module algorithmique de gestion des flux aux frontières orientales — connaît des défaillances croissantes exploitées par les réseaux de passeurs d'information, menaçant l'intégrité du mur numérique. Enfin, la rivalité sourde avec le Bloc Pacifique Nord sur le contrôle des routes arctiques pourrait forcer le Pacte à choisir entre son isolationnisme doctrinal et une coopération stratégique qui viendrait le contaminer — ouvrir une brèche dans le modèle même qu'il prétend incarner.
 
 date_creation: 2026-06-27
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Forteresse Eurasiatique Occidentale — Pacte de Stabilité Intérieure

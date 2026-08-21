@@ -4,11 +4,11 @@ type: instance
 slug: kalaallit_nunaat_sovereign_fund_breakdown
 entite: kalaallit_nunaat_sovereign_fund
 scenario: breakdown
+statut: officialise_enrichi
 localisation:
   zone: groenland_fonds_glaces
-  lieu: Nuuk, Groenland
+  lieu: Nuuk
   type_lieu: site_strategique
-
 type_dans_scenario: institution
 
 role_dans_scenario: >
@@ -39,27 +39,30 @@ zone_systemique:
     - sécurité
 
 alliances:
-    - armada_logistique_nordique_breakdown
-    - consortium_energetique_oural_caspien_breakdown
-    - hanse_baltique_recomposee_breakdown
-    - enclaves_industrielles_de_bergen_troms_breakdown
-    - coalition_pacifique_nord_breakdown
-
+- arctic_passage_authority_breakdown
+- arctique_nordark_breakdown
+- armada_logistique_nordique_breakdown
+- autorite_passage_arctique_breakdown
+- coalition_pacifique_nord_breakdown
+- consortium_energetique_oural_caspien_breakdown
+- enclaves_industrielles_de_bergen_troms_breakdown
+- hanse_baltique_breakdown
+- hanse_baltique_recomposee_breakdown
+- noeud_nordark_tromso_breakdown
 oppositions:
-    - factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
-    - federation_russe_residuelle_district_de_mourmansk_breakdown
-    - saboteurs_des_corridors_de_transit_breakdown
-    - front_de_resistance_aux_peages_sur_les_ressources_breakdown
-    - milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown
-    - blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
-
+- blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
+- consortiums_energetiques_samoiedes_du_yamal_breakdown
+- district_mourmansk_residuel_breakdown
+- factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
+- federation_russe_residuelle_district_de_mourmansk_breakdown
+- front_de_resistance_aux_peages_sur_les_ressources_breakdown
+- milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown
+- saboteurs_des_corridors_de_transit_breakdown
 type_relation_dominante: rivalité
 
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: post-effondrement
 
 injection:
@@ -80,6 +83,9 @@ tensions_narratives: >
   Le Fonds est déchiré entre une faction 'souverainiste radicale' qui veut convertir la rente en arsenal militaire autonome et une faction 'redistribution conditionnelle' qui propose d'utiliser les ressources comme monnaie d'influence pour reconstruire des institutions régionales minimales. Pendant ce temps, des groupes inuit dissidents accusent le Fonds d'avoir reproduit exactement le modèle extractiviste colonial qu'il prétendait renverser — pillant le territoire ancestral au profit d'une élite de gestionnaires nunavimmiut et danois reconvertis. La question brûle : le Fonds tiendra-t-il quand les gisements les plus accessibles seront épuisés, ou sa puissance n'est-elle qu'une parenthèse tragique de l'effondrement ?
 
 date_creation: 2026-06-23
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Kalaallit Nunaat Sovereign Fund — Fonds des Glaces Libérées
@@ -96,12 +102,31 @@ Le Fonds gère les droits d'extraction sur les gisements groenlandais dégelés,
 - [[organisation_territoires]]
 - [[climat_environnement_global]]
 
-## Relations
-**Alliés** : [[armada_logistique_nordique_breakdown]], [[consortium_energetique_oural_caspien_breakdown]], [[hanse_baltique_recomposee_breakdown]], [[enclaves_industrielles_de_bergen_troms_breakdown]], [[coalition_pacifique_nord_breakdown]]
-**Opposants** : [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]], [[federation_russe_residuelle_district_de_mourmansk_breakdown]], [[saboteurs_des_corridors_de_transit_breakdown]], [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]], [[milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown]], [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
 
 ## Description journalistique
 Au siège provisoire du Fonds — un bunker pressurisé à Nuuk dont les couloirs sentent le permafrost décomposé et le diesel de secours — les négociateurs kalaallit reçoivent les émissaires des blocs comme des souverains d'un autre âge. Ils posent leurs conditions en chiffres simples : tant de gigawatts garantis contre tant de tonnes de néodyme. Pas de traités, pas de protocoles. Ceux qui refusent voient leurs convois détournés ou leurs accès aux plateformes offshore coupés sans préavis. Ce que le monde a longtemps appelé 'développement durable pour les peuples autochtones' est devenu, en 2098, la seule institution qui tienne encore une promesse — celle de livrer ce qu'elle vend.
 
 ## Tensions narratives
 Le Fonds est déchiré entre une faction 'souverainiste radicale' qui veut convertir la rente en arsenal militaire autonome et une faction 'redistribution conditionnelle' qui propose d'utiliser les ressources comme monnaie d'influence pour reconstruire des institutions régionales minimales. Pendant ce temps, des groupes inuit dissidents accusent le Fonds d'avoir reproduit exactement le modèle extractiviste colonial qu'il prétendait renverser — pillant le territoire ancestral au profit d'une élite de gestionnaires nunavimmiut et danois reconvertis. La question brûle : le Fonds tiendra-t-il quand les gisements les plus accessibles seront épuisés, ou sa puissance n'est-elle qu'une parenthèse tragique de l'effondrement ?
+
+## Relations
+**Alliés :**
+- [[arctic_passage_authority_breakdown]]
+- [[arctique_nordark_breakdown]]
+- [[armada_logistique_nordique_breakdown]]
+- [[autorite_passage_arctique_breakdown]]
+- [[coalition_pacifique_nord_breakdown]]
+- [[consortium_energetique_oural_caspien_breakdown]]
+- [[enclaves_industrielles_de_bergen_troms_breakdown]]
+- [[hanse_baltique_breakdown]]
+- [[hanse_baltique_recomposee_breakdown]]
+- [[noeud_nordark_tromso_breakdown]]
+**Opposants :**
+- [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
+- [[consortiums_energetiques_samoiedes_du_yamal_breakdown]]
+- [[district_mourmansk_residuel_breakdown]]
+- [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]]
+- [[federation_russe_residuelle_district_de_mourmansk_breakdown]]
+- [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
+- [[milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown]]
+- [[saboteurs_des_corridors_de_transit_breakdown]]

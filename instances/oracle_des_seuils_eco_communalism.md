@@ -60,8 +60,6 @@ type_relation_dominante: coopération
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: mature
 generation: reconstruction
 
 injection:
@@ -82,6 +80,9 @@ tensions_narratives: >
   La fragmentation du système en nœuds autonomes génère des lectures contradictoires d'une même alerte : deux assemblées voisines peuvent recevoir des données partiellement divergentes et tirer des conclusions opposées sur l'urgence d'agir. Des factions autoritaires locales tentent de s'approprier les nœuds territoriaux pour contrôler l'accès aux prédictions et orienter les décisions collectives à leur avantage. Plus profondément, une fracture s'intensifie entre ceux qui voient l'Entreliseur comme un outil de délibération démocratique et ceux qui le considèrent comme un oracle dont l'autorité technique doit primer sur le vote — tension qui menace l'équilibre même du modèle éco-communaliste.
 
 date_creation: 2026-06-25
+trajectoire: mature
+est_clandestin: false
+
 ---
 
 # L'Entreliseur des Seuils

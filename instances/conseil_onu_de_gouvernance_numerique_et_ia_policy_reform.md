@@ -44,7 +44,7 @@ alliances:
 - institut_brookings_singapour_de_politique_computationnelle_policy_reform
 - leena_vainala_policy_reform
 - oracle_des_seuils_policy_reform
-- rede_paulista_de_distribuic_o_algor_tmica_policy_reform
+- rede_paulista_de_distribuicao_algoritmica_policy_reform
 - reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
 - reseau_des_regulateurs_numeriques_souverains_rrns_policy_reform
 - reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform
@@ -58,8 +58,6 @@ oppositions:
 type_relation_dominante: coopération
 annee_debut: 2027
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -95,6 +93,9 @@ localisation:
   zone: geneve_nexus
   lieu: Genève-Nexus
   type_lieu: ville
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Conseil ONU de Gouvernance Numérique et IA
@@ -135,7 +136,7 @@ Le Conseil est écartelé entre sa vocation universaliste et le refus croissant 
 - [[institut_brookings_singapour_de_politique_computationnelle_policy_reform]]
 - [[leena_vainala_policy_reform]]
 - [[oracle_des_seuils_policy_reform]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_policy_reform]]
+- [[rede_paulista_de_distribuicao_algoritmica_policy_reform]]
 - [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]]
 - [[reseau_des_regulateurs_numeriques_souverains_rrns_policy_reform]]
 - [[reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform]]

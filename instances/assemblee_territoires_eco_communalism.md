@@ -35,7 +35,7 @@ alliances:
 - coalition_vivant_eco_communalism
 - confederation_bassins_vivants_eco_communalism
 - consortium_amazonia_viva_eco_communalism
-- frente_sert_o_livre_eco_communalism
+- frente_sertao_livre_eco_communalism
 - kalaallit_nunaat_bioterritoire_eco_communalism
 - le_temoin_eco_communalism
 - reseau_terrafond_bassins_eco_communalism
@@ -46,8 +46,6 @@ oppositions:
 type_relation_dominante: coopération
 annee_debut: 2052
 annee_fin:
-etat_temporel: actif
-age_historique: ascendant
 generation: reconstruction
 injection:
   type: canonique
@@ -72,6 +70,9 @@ tensions_narratives: >
   et celles qui refusent tout mécanisme supralocal. Question non résolue —
   peut-on gérer le climat sans autorité centrale ?
 date_creation: 2098-01-01
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Réseau des Assemblées Bioterritioriales
@@ -100,7 +101,7 @@ tout mécanisme supralocal. Peut-on gérer le climat sans autorité centrale ?
 - [[coalition_vivant_eco_communalism]]
 - [[confederation_bassins_vivants_eco_communalism]]
 - [[consortium_amazonia_viva_eco_communalism]]
-- [[frente_sert_o_livre_eco_communalism]]
+- [[frente_sertao_livre_eco_communalism]]
 - [[kalaallit_nunaat_bioterritoire_eco_communalism]]
 - [[le_temoin_eco_communalism]]
 - [[reseau_terrafond_bassins_eco_communalism]]

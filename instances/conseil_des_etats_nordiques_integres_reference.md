@@ -50,8 +50,6 @@ oppositions:
 type_relation_dominante: coopération
 annee_debut: 2040
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -89,6 +87,9 @@ localisation:
   zone: corridor_arctique_nordique
   lieu: Helsinki / Nuuk (siège rotatif)
   type_lieu: ville
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Conseil des États Nordiques Intégrés

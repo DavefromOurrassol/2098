@@ -53,8 +53,6 @@ type_relation_dominante: coopération
 annee_debut: 2038
 annee_fin: 
 
-etat_temporel: actif
-age_historique: ascendant
 generation: post-effondrement
 
 injection:
@@ -75,6 +73,9 @@ tensions_narratives: >
   Leur modèle horizontal et décentralisé est à la fois leur force et leur faiblesse : comment concilier leur besoin d'autonomie avec la nécessité de s'intégrer aux Assemblées de Bassin Versant pour peser sur les décisions régionales ? Leur opposition frontale aux enclaves extractivistes les expose à des représailles violentes, tandis que leur collaboration avec les Mutuelles de Santé Territoriales soulève des questions sur la protection des données sanitaires. Enfin, leur dépendance aux technologies sobres les rend vulnérables aux cyberattaques des factions algorithmiques, qui cherchent à infiltrer leurs réseaux pour contrôler l'information environnementale.
 
 date_creation: 2026-07-11
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Les Veilleurs des Eaux du Congo

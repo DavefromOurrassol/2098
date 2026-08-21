@@ -54,8 +54,6 @@ type_relation_dominante: infiltration
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: clandestin
-age_historique: résiduel
 generation: post-effondrement
 
 injection:
@@ -76,6 +74,9 @@ tensions_narratives: >
   La tension centrale est celle du secret devenu arme : les archives du Registre contiennent les preuves de sacrifices territoriaux délibérés — populations abandonnées, zones climatiques sacrifiées sans recours — et chaque fragment qui fuit alimente à la fois les résistances légitimes et les propagandes des factions. Certains agents dissidents cherchent à transmettre leurs données aux communautés concernées ; d'autres les monétisent auprès de seigneuries logistiques ou de gouvernements-forteresses qui veulent savoir ce que leurs rivaux ont sacrifié. La question irrésolue : si le Registre rend ses archives publiques, il donne aux abandonnés la preuve de leur abandon — mais aussi aux prédateurs une cartographie précise des territoires sans défense.
 
 date_creation: 2026-06-23
+trajectoire: résiduel
+est_clandestin: true
+
 ---
 
 # Registre des Zones Non Récupérables

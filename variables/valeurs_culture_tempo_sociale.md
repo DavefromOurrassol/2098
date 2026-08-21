@@ -366,7 +366,8 @@ _extended_
 - retour de spiritualites hybrides (→ section 12)
 - multiplication des narratifs concurrents
 
-
+**custom (signaux d'actualité)**
+- décodage des langages animaux par IA ouvre des récits culturels hybrides (→ signal_custom: decodage_langage_animaux_ia, source: actualite)
 
 ## 8. États par scénario
 ### [[fortress_world]]
@@ -688,4 +689,32 @@ signal_to_state:
         evolution: diffusion graduelle des spiritualités hybrides comme phénomène culturel de niche
         date_bascule: 2028-2042
         evenement_cle: premier recensement mondial des spiritualités hybrides émergentes 2035
+
+  - signal: decodage_langage_animaux_ia
+    scenarios:
+      breakdown:
+        evolution: prolifération de cultes animistes technologiques dans le chaos
+        date_bascule: 2045-2063
+        evenement_cle: premiers rituels collectifs de communication avec les corbeaux 2056
+      fortress_world:
+        evolution: blocs instrumentalisent les langages animaux pour le contrôle social
+        date_bascule: 2038-2053
+        evenement_cle: Bloc Sibérien déploie des perroquets espions dans les zones frontalières 2047
+      new_sustainability:
+        evolution: intégration des intelligences animales dans les récits régénératifs mondiaux
+        date_bascule: 2033-2048
+        evenement_cle: Charte mondiale des droits cognitifs animaux adoptée à Nairobi 2042
+      eco_communalism:
+        evolution: communautés locales adoptent les langages animaux comme fondement culturel
+        date_bascule: 2040-2058
+        evenement_cle: charte bioterritoriale de Carthage-Nord reconnaît la personnalité juridique des dauphins 2051
+      policy_reform:
+        evolution: régulation internationale des interfaces humain-animal par l'IA
+        date_bascule: 2030-2045
+        evenement_cle: traité de Genève sur les droits cognitifs des espèces communicantes 2038
+      reference:
+        evolution: diffusion marginale mais médiatisée des interfaces animal-IA
+        date_bascule: 2028-2043
+        evenement_cle: premier documentaire viral sur la communication avec les éléphants 2035
+
 ```

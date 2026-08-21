@@ -43,7 +43,7 @@ alliances:
 - cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference
 - cooperatives_energetiques_decentralisees_reference
 - federation_des_cliniques_autonomes_reference
-- frente_sert_o_livre_reference
+- frente_sertao_livre_reference
 - gouvernements_du_bloc_sahelien_autonome_reference
 - institut_polytechnique_de_ouagadougou_reference
 - nairobi_crrc_reference
@@ -62,8 +62,6 @@ oppositions:
 type_relation_dominante: coopération
 annee_debut: 2031
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -100,6 +98,9 @@ localisation:
   zone: bloc_sahelien_autonome
   lieu: Réseau itinérant (nœuds à Ouagadougou, Niamey, Tombouctou)
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Réseau des Coopératives Agro-Sahéliennes
@@ -136,7 +137,7 @@ Le réseau est pris en étau entre le Bloc Sahélien Autonome qui cherche à l'i
 - [[cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference]]
 - [[cooperatives_energetiques_decentralisees_reference]]
 - [[federation_des_cliniques_autonomes_reference]]
-- [[frente_sert_o_livre_reference]]
+- [[frente_sertao_livre_reference]]
 - [[gouvernements_du_bloc_sahelien_autonome_reference]]
 - [[institut_polytechnique_de_ouagadougou_reference]]
 - [[nairobi_crrc_reference]]

@@ -37,7 +37,7 @@ alliances:
 - collectifs_de_geo_observateurs_citoyens_eco_communalism
 - cooperatives_d_habitat_regeneratif_eco_communalism
 - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
-- frente_sert_o_livre_eco_communalism
+- frente_sertao_livre_eco_communalism
 - guildes_de_mediateurs_ecologiques_eco_communalism
 - ligue_des_cites_du_sahel_numerique_eco_communalism
 - mouvement_des_communes_du_rust_belt_eco_communalism
@@ -61,8 +61,6 @@ oppositions:
 type_relation_dominante: coopération
 annee_debut: 2036
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -97,6 +95,9 @@ localisation:
   zone: null
   lieu: null
   type_lieu: null
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Assemblées Coopératives Régionales
@@ -131,7 +132,7 @@ L'absence d'un pouvoir coercitif central expose les Assemblées à une fragilit�
 - [[collectifs_de_geo_observateurs_citoyens_eco_communalism]]
 - [[cooperatives_d_habitat_regeneratif_eco_communalism]]
 - [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]
-- [[frente_sert_o_livre_eco_communalism]]
+- [[frente_sertao_livre_eco_communalism]]
 - [[guildes_de_mediateurs_ecologiques_eco_communalism]]
 - [[ligue_des_cites_du_sahel_numerique_eco_communalism]]
 - [[mouvement_des_communes_du_rust_belt_eco_communalism]]

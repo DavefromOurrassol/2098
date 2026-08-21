@@ -54,8 +54,6 @@ type_relation_dominante: dépendance
 annee_debut: 2032
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: transition
 
 injection:
@@ -76,6 +74,9 @@ tensions_narratives: >
   EGRS cristallise les contradictions de la transition écologique financiarisée : ses solutions sauvent des écosystèmes tout en créant une nouvelle forme de dépendance technologique. Les scandales se multiplient, comme les fuites révélant que certaines souches brevetées sont issues de biopiraterie sur des savoirs traditionnels. Par ailleurs, son modèle économique repose sur une croissance continue des 'besoins en résilience', alimentant une bulle spéculative sur les actifs climatiques. Les mouvements écologistes radicaux accusent EGRS de 'verdir le capitalisme sans en changer les règles', tandis que les États clients oscillent entre gratitude et ressentiment face à cette entreprise devenue trop puissante pour être régulée.
 
 date_creation: 2026-07-11
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # EcoSynth Global Resilience Systems (EGRS)

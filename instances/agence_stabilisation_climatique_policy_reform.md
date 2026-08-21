@@ -63,8 +63,6 @@ type_relation_dominante: coopération
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: transition
 
 injection:
@@ -85,6 +83,9 @@ tensions_narratives: >
   La légitimité de l'AMSC repose sur son efficacité : si une intervention géo-ingénieriste majeure échoue ou produit des effets secondaires catastrophiques sur une région non consultée, toute l'architecture de confiance s'effondre. Par ailleurs, la tension entre sa mission de stabilisation globale et les intérêts nationaux des États membres s'intensifie à mesure que les zones inhabitables se rapprochent des territoires des puissances fondatrices. Enfin, une faction interne — les 'Réformistes du Mandat' — pousse à l'organisation d'un référendum mondial sur la légitimité de l'Agence, une initiative que la direction centrale bloque systématiquement au nom de 'l'urgence opérationnelle permanente'.
 
 date_creation: 2026-06-15
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Agence Mondiale pour la Stabilisation Climatique

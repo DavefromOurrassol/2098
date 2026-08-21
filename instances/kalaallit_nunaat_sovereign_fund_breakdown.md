@@ -42,7 +42,7 @@ alliances:
 - arctic_passage_authority_breakdown
 - arctique_nordark_breakdown
 - armada_logistique_nordique_breakdown
-- autorite_passage_arctique_breakdown
+- arctic_passage_authority_breakdown
 - coalition_pacifique_nord_breakdown
 - consortium_energetique_oural_caspien_breakdown
 - enclaves_industrielles_de_bergen_troms_breakdown
@@ -63,8 +63,6 @@ type_relation_dominante: rivalité
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: post-effondrement
 
 injection:
@@ -85,6 +83,9 @@ tensions_narratives: >
   Le Fonds est déchiré entre une faction 'souverainiste radicale' qui veut convertir la rente en arsenal militaire autonome et une faction 'redistribution conditionnelle' qui propose d'utiliser les ressources comme monnaie d'influence pour reconstruire des institutions régionales minimales. Pendant ce temps, des groupes inuit dissidents accusent le Fonds d'avoir reproduit exactement le modèle extractiviste colonial qu'il prétendait renverser — pillant le territoire ancestral au profit d'une élite de gestionnaires nunavimmiut et danois reconvertis. La question brûle : le Fonds tiendra-t-il quand les gisements les plus accessibles seront épuisés, ou sa puissance n'est-elle qu'une parenthèse tragique de l'effondrement ?
 
 date_creation: 2026-06-23
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Kalaallit Nunaat Sovereign Fund — Fonds des Glaces Libérées
@@ -113,7 +114,7 @@ Le Fonds est déchiré entre une faction 'souverainiste radicale' qui veut conve
 - [[arctic_passage_authority_breakdown]]
 - [[arctique_nordark_breakdown]]
 - [[armada_logistique_nordique_breakdown]]
-- [[autorite_passage_arctique_breakdown]]
+- [[arctic_passage_authority_breakdown]]
 - [[coalition_pacifique_nord_breakdown]]
 - [[consortium_energetique_oural_caspien_breakdown]]
 - [[enclaves_industrielles_de_bergen_troms_breakdown]]

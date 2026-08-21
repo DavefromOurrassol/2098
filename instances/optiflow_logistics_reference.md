@@ -60,8 +60,6 @@ type_relation_dominante: dépendance
 annee_debut: 2032
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: ère cognitive
 
 injection:
@@ -82,6 +80,9 @@ tensions_narratives: >
   1. **La révolte des exclus** : Les territoires non connectés au réseau OGLN développent des alternatives logistiques parallèles, souvent illégales, comme les 'caravanes de la survie' qui traversent les zones grises en contournant les ZTP. Ces réseaux clandestins sont la cible d'une répression croissante, alimentant un cycle de violence et de contrebande. 2. **La dépendance algorithmique** : Les algorithmes d'OGLN, de plus en plus opaques, sont accusés de favoriser systématiquement les clients 'premium' (gouvernements, grandes corporations) au détriment des besoins vitaux des populations. Des fuites récentes ont révélé que ses IA intègrent des critères de 'rentabilité sociale' pour prioriser les livraisons, une notion floue qui pourrait cacher des biais géopolitiques. 3. **La guerre des couloirs** : Les ZTP d'OGLN sont devenus des cibles stratégiques pour les milices et les États en conflit. En 2097, une cyberattaque massive a paralysé ses drones pendant 72h, provoquant des émeutes dans plusieurs mégapoles. Depuis, OGLN a militarisé ses opérations, créant une zone grise entre logistique civile et sécurité nationale. 4. **L'alternative des communs** : Face à OGLN, des réseaux comme la Fédération des Communs Territoriaux développent des systèmes logistiques open-source, basés sur la réciprocité et la transparence. Ces initiatives, encore marginales, pourraient-elles ébranler le monopole d'OGLN, ou sont-elles condamnées à rester des niches pour privilégiés ?
 
 date_creation: 2026-07-11
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # OptiFlow Global Logistics Network (OGLN)

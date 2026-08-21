@@ -62,8 +62,6 @@ type_relation_dominante: conflit
 annee_debut: 2061
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: forteresse
 
 injection:
@@ -84,6 +82,9 @@ tensions_narratives: >
   La cohésion interne du Compact commence à se fissurer : des factions membres débattent violemment du droit à vendre de l'eau aux zones extérieures contre des ressources rares — certains y voient une survie économique, d'autres une trahison fondatrice. Le mouvement des Communes du Rust Belt tente de forger une coalition de résistance capable de contester les lignes de berge par la force ou par la négociation, tandis que des saboteurs infiltrent les stations de pompage. La question la plus explosive reste celle des enfants nés hors-Compact mais grandis à l'intérieur — leur statut d'ayants droit est contesté, et leur existence trace une ligne de fracture morale que même les partisans les plus durs du Compact peinent à regarder en face.
 
 date_creation: 2026-06-27
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Compact des Grands Lacs — Le Mur d'Eau

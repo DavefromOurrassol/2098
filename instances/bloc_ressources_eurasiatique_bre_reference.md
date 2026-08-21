@@ -77,8 +77,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2027
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -113,6 +111,9 @@ localisation:
   zone: bloc_eurasien_central
   lieu: Corridors Eurasiens Centraux — siège tournant entre Tbilissi et Sibérie Fédérale
   type_lieu: infrastructure
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Bloc Ressources Eurasiatique (BRE)

@@ -53,8 +53,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2036
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -82,6 +80,9 @@ tensions_narratives: 'Ces réseaux sont prisonniers d''une loyauté orpheline : 
   générations de transition refusent de disparaître dans l''anonymat tandis que les
   recrues émergentes ignorent jusqu''aux codes de conduite de l''ancienne structure.'
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Réseaux de renseignement informels issus de l'ancienne structure militaire eurasienne

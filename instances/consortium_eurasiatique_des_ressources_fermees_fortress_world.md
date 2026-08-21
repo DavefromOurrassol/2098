@@ -57,8 +57,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2027
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -92,6 +90,9 @@ localisation:
   zone: bloc_eurasiatique_occidental
   lieu: Moscou-Est / Zones Industrielles Forteresses
   type_lieu: infrastructure
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Consortium Eurasiatique des Ressources Fermées

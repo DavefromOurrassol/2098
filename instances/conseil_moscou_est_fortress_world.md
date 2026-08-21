@@ -74,8 +74,6 @@ type_relation_dominante: dépendance
 annee_debut: 2061
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: forteresse
 
 injection:
@@ -96,6 +94,9 @@ tensions_narratives: >
   Le système d'accréditation biométrique commence à présenter des failles : des cas de révocation arbitraire pour 'anomalie comportementale' alimentent une dissidence interne silencieuse parmi les techniciens et les agents de maintenance eux-mêmes, dont certains entretiennent des contacts avec les réseaux clandestins des zones tampons. Par ailleurs, la pression démographique extérieure atteint un seuil critique — les campements périphériques ont triplé en dix-huit mois — et plusieurs factions internes débattent de l'ouverture d'un quota humanitaire d'urgence, ce que les tenants de la ligne dure perçoivent comme une capitulation existentielle. La question qui structure toutes les autres : jusqu'où le Conseil peut-il resserrer l'étau avant que ses propres administrés, devenus otages de leur accréditation, ne se retournent contre lui ?
 
 date_creation: 2026-06-27
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Conseil Moscou Est — Administration des Zones Accréditées

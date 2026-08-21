@@ -1,0 +1,82 @@
+============================================================
+OURRASSOL 2098 — Création entités + instances
+============================================================
+(mode --dry-run : rien ne sera écrit)
+
+Mode : auto-suggest (fourni via --mode)
+
+[1/2] Analyse de la couverture du vault...
+  226 instance(s) analysée(s) | 590 entité(s) existante(s)
+  Filtre scénario : ['fortress_world']
+[2/2] Génération de 1 idée(s) d'entités...
+[llm] Mistral (mistral-large-latest) — entrée : 26421 | sortie : 1173
+  ✓ Consortium des Oasis Autonomes du Golfe (organisation) — ref: fortress_world
+    → Couvre une zone géographique sous-représentée (golfe_moyen_orient_zone_disputee) et introduit une dynamique de résilience locale dans un contexte de fragmentation géopolitique, équilibrant la catégorie 'organisation' tout en évitant les années sur-représentées (2031, 2041).
+  ✓ Réseau des Gardiens des Glaces de Nuuk (réseau) — ref: fortress_world
+    → Comble un vide géographique (nuuk_forteresse) et temporel (bande lointaine 2061-2098), tout en renforçant la catégorie 'réseau' avec une entité ancrée dans une dynamique écologique et géopolitique réelle (surveillance arctique).
+  ✓ Plateforme de Résilience des Nappes Phréatiques du Midwest (infrastructure) — ref: fortress_world
+    → Cible une zone géographique et une ressource critique sous-représentées (nappes_phreatiques_contaminees_midwest), tout en introduisant une infrastructure hybride (technologique/sociale) pour équilibrer la catégorie 'infrastructure'.
+  ✓ Ligue des Tours Flottantes du Svalbard (institution) — ref: fortress_world
+    → Couvre une zone géographique isolée (svalbard_tours_flottantes) et renforce la catégorie 'institution' avec une entité systémique ancrée dans les enjeux arctiques, évitant les années sur-représentées.
+  ✓ Collectif des Brise-Glaces Autonomes de Mourmansk (hybride) — ref: fortress_world
+    → Introduit une entité hybride (humain/IA/milice) dans une zone sous-représentée (hangar_briseglaces_autonomes_nat), comblant un vide narratif autour des infrastructures critiques et des acteurs ambivalents.
+
+[DRY-RUN] Idées générées (non écrites dans queue.yaml) :
+queue:
+- category: organisation
+  etat: ascendant
+  nom: Consortium des Oasis Autonomes du Golfe
+  role: Réseau de villes-oasis et de communautés bédouines du golfe_moyen_orient_zone_disputee,
+    organisées en micro-grids énergétiques et en systèmes de dessalement autonomes.
+    Ce consortium négocie des accords locaux de non-agression avec les factions militaires
+    et les blocs souverains pour préserver des zones de neutralité écologique et humaine
+    dans un territoire marqué par les conflits hydriques et énergétiques.
+  scenario_hint: null
+  scenario_ref: fortress_world
+  source: auto_generated
+- category: réseau
+  etat: marginal
+  nom: Réseau des Gardiens des Glaces de Nuuk
+  role: Collectif inuit et groenlandais basé à nuuk_forteresse, dédié à la surveillance
+    des calottes glaciaires et à la protection des corridors maritimes arctiques.
+    Ce réseau combine savoirs traditionnels et technologies de monitoring pour alerter
+    sur les risques de destabilisation climatique et les intrusions des milices extractivistes,
+    tout en négociant des droits de passage avec les blocs souverains.
+  scenario_hint: null
+  scenario_ref: fortress_world
+  source: auto_generated
+- category: infrastructure
+  etat: émergent
+  nom: Plateforme de Résilience des Nappes Phréatiques du Midwest
+  role: Infrastructure décentralisée de gestion des nappes_phreatiques_contaminees_midwest,
+    combinant capteurs citoyens, algorithmes de modélisation hydrique et coopératives
+    locales. Cette plateforme permet aux communautés rurales de négocier des quotas
+    d'extraction avec les agro-conglomérats et les États souverains, tout en documentant
+    les contaminations pour alimenter des litiges juridiques transnationaux.
+  scenario_hint: null
+  scenario_ref: fortress_world
+  source: auto_generated
+- category: institution
+  etat: dominant
+  nom: Ligue des Tours Flottantes du Svalbard
+  role: Alliance des svalbard_tours_flottantes, regroupant des États souverains, des
+    entreprises de géo-ingénierie et des communautés scientifiques pour gérer les
+    stations de recherche et les hubs logistiques en Arctique. Cette ligue arbitre
+    les conflits d'accès aux ressources libérées par la fonte des glaces et négocie
+    des traités de non-militarisation avec les blocs eurasiatique et atlantique.
+  scenario_hint: null
+  scenario_ref: fortress_world
+  source: auto_generated
+- category: hybride
+  etat: ascendant
+  nom: Collectif des Brise-Glaces Autonomes de Mourmansk
+  role: Coalition de techniciens, d'IA logistiques et de milices privées opérant depuis
+    le hangar_briseglaces_autonomes_nat. Ce collectif assure la maintenance des corridors
+    maritimes arctiques pour le compte des blocs souverains, tout en monnayant des
+    services de contrebande ou de secours aux communautés isolées. Leur neutralité
+    opérationnelle en fait des acteurs incontournables, mais aussi des cibles pour
+    les factions sécessionnistes.
+  scenario_hint: null
+  scenario_ref: fortress_world
+  source: auto_generated
+

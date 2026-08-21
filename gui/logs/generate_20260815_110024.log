@@ -1,0 +1,152 @@
+
+============================================================
+OURRASSOL 2098 — Générateur d'articles
+============================================================
+  Mode       : Semi-guidé
+  Scénario   : breakdown
+  Thématique : actualites_a_la_une
+  Longueur   : analyse
+============================================================
+
+[generate] Chargement de la thématique 'actualites_a_la_une'...
+
+[snapshot] Construction du monde 2098 — scénario : breakdown
+[snapshot] Variables pilotes : ['geopolitique_conflits', 'energie_ressources_critiques', 'organisation_territoires', 'climat_environnement_global', 'systemes_productifs_travail']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 16 | Cohérence : ATTENTION
+[snapshot] Jalons trajectoire : 154 (43 majeurs)
+[snapshot] Événements signal_to_state : 62 (20 majeurs)
+[snapshot] Tensions thématiques : 8
+[snapshot] Instances chargées : 137 | Filtrées : 6
+[snapshot] Événement custom 'La Déflagration du Croissant — Embrasement sans arbitre' (an 2027, 71 ans d'effet)
+  → geopolitique_conflits : 95 → 91.0 (delta:-4.0)
+  → energie_ressources_critiques : 97.9 → 100 (delta:+8.0)
+  → gouvernance_institutions : 21.8 → 26.8 (delta:+5.0)
+  → demographie_mobilite_humaine : 91.5 → 98.5 (delta:+7.0)
+[snapshot] Événement custom 'Guerre des Nœuds du Sahel — L'Escalade Fantôme' (an 2028, 70 ans d'effet)
+  → geopolitique_conflits : 82.4 → 62.400000000000006 (delta:-20.0)
+  → gouvernance_institutions : 35.8 → 50.8 (delta:+15.0)
+  → organisation_territoires : 100 → 100 (delta:+10.0)
+  → energie_ressources_critiques : 100 → 100 (delta:+12.0)
+[snapshot] Événement custom 'Grève des Veines Eurasiatiques — L'Étranglement des Corridors' (an 2039, 59 ans d'effet)
+  → systemes_productifs_travail : 93.3 → 73.3 (delta:-20.0)
+  → geopolitique_conflits : 45.7 → 30.700000000000003 (delta:-15.0)
+  → sante_biotechnologies : 85 → 75.0 (delta:-10.0)
+  → organisation_territoires : 98.4 → 86.4 (delta:-12.0)
+[snapshot] Événement custom 'L'Attentat des Neuf Nœuds — Le Jour Sans Signal' (an 2040, 58 ans d'effet)
+  → technologie_information : 77.7 → 52.7 (delta:-25.0)
+  → gouvernance_institutions : 46.4 → 34.4 (delta:-12.0)
+  → systeme_economique_redistribution : 76.1 → 66.1 (delta:-10.0)
+[snapshot] Événement custom 'La Ruée des Glaces — Enchères Souveraines du Kalaallit Fund' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 100 → 100 (delta:+8.0)
+  → geopolitique_conflits : 23.0 → 11.0 (delta:-12.0)
+  → gouvernance_institutions : 35.8 → 45.8 (delta:+10.0)
+  → organisation_territoires : 82.1 → 89.1 (delta:+7.0)
+[snapshot] Événement custom 'L'Exode des Grands Brûlés — La Déroute du Bureau des Résidus' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 100 → 92.0 (delta:-8.0)
+  → organisation_territoires : 86.1 → 100 (delta:+15.0)
+  → gouvernance_institutions : 45.8 → 57.8 (delta:+12.0)
+  → climat_environnement_global : 100 → 95.0 (delta:-5.0)
+  → geopolitique_conflits : 0 → 0 (delta:-12.0)
+  → energie_ressources_critiques : 100 → 100 (delta:+10.0)
+[snapshot] Événement custom 'Test Fantôme des Zones Invalides' (an 2045, 53 ans d'effet)
+  → technologie_information : 51.0 → 56.0 (delta:+5.0)
+  → organisation_territoires : 100 → 100 (delta:+3.0)
+[snapshot] Événement custom 'La Fracture de Belém — Quand le Bassin Amazonien a cessé d'être un territoire' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 95.0 → 100 (delta:+12.0)
+  → geopolitique_conflits : 0 → 0 (delta:-8.0)
+  → gouvernance_institutions : 66.8 → 74.8 (delta:+8.0)
+  → organisation_territoires : 100 → 100 (delta:+10.0)
+[snapshot] Événement custom 'Fracture des Nœuds — Test fantôme du Sahel Numérique' (an 2048, 50 ans d'effet)
+  → organisation_territoires : 100 → 100 (delta:+10.0)
+  → technologie_information : 63.8 → 68.8 (delta:+5.0)
+  → geopolitique_conflits : 2.1 → 0 (delta:-8.0)
+  → demographie_mobilite_humaine : 100 → 88.0 (delta:-12.0)
+[snapshot] Événement custom 'Le Compact des Grands Lacs — Sécession de fait' (an 2053, 45 ans d'effet)
+  → organisation_territoires : 95.5 → 87.5 (delta:-8.0)
+  → gouvernance_institutions : 80.6 → 90.6 (delta:+10.0)
+  → geopolitique_conflits : 3.4 → 0 (delta:-12.0)
+  → energie_ressources_critiques : 100 → 90.0 (delta:-10.0)
+  → climat_environnement_global : 100 → 100 (delta:+4.0)
+[snapshot] Événement custom 'Victoire Fantôme du Parti Commun' (an 2055, 43 ans d'effet)
+  → gouvernance_institutions : 96.0 → 91.0 (delta:-5.0)
+  → geopolitique_conflits : 7.0 → 15.0 (delta:+8.0)
+  → organisation_territoires : 89.2 → 83.2 (delta:-6.0)
+[snapshot] Événement custom 'La Saisie du Détroit — Incident du Passage Nord-Ouest' (an 2057, 41 ans d'effet)
+  → geopolitique_conflits : 17.5 → 9.5 (delta:-8.0)
+  → energie_ressources_critiques : 90.0 → 100 (delta:+10.0)
+  → frontieres_du_systeme : 47.3 → 53.3 (delta:+6.0)
+  → organisation_territoires : 86.6 → 93.6 (delta:+7.0)
+  → climat_environnement_global : 97.8 → 100 (delta:+4.0)
+[snapshot] Événement custom 'Les Forges du Commun — Proclamation des Zones Libres de l'Algorithme' (an 2061, 37 ans d'effet)
+  → geopolitique_conflits : 0 → 0 (delta:-8.0)
+  → valeurs_culture_tempo_sociale : 90 → 100 (delta:+12.0)
+  → gouvernance_institutions : 94.6 → 100 (delta:+7.0)
+  → organisation_territoires : 97.0 → 87.0 (delta:-10.0)
+[snapshot] Événement custom 'Les Éclats d'Agadez — Ce qui reste du Forum' (an 2061, 37 ans d'effet)
+  → technologie_information : 55.9 → 59.9 (delta:+4.0)
+  → gouvernance_institutions : 100 → 100 (delta:+8.0)
+  → organisation_territoires : 88.5 → 94.5 (delta:+6.0)
+[snapshot] Événement custom 'Les Forges du Commun — Proclamation des Zones Libres du Rust Belt' (an 2061, 37 ans d'effet)
+  → geopolitique_conflits : 0 → 0 (delta:-8.0)
+  → valeurs_culture_tempo_sociale : 100 → 100 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → technologie_information : 66.8 → 72.8 (delta:+6.0)
+  → organisation_territoires : 100 → 90.0 (delta:-10.0)
+[snapshot] Événement custom 'La Révolte des Zones Mortes — Effondrement de la RPDA' (an 2073, 25 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+8.0)
+  → technologie_information : 72.6 → 78.6 (delta:+6.0)
+  → organisation_territoires : 92.2 → 100 (delta:+10.0)
+[snapshot] Événement custom 'L'Arrestation de Van Derburgh par la Milice de Detroit-Sud' (an 2078, 20 ans d'effet)
+  → gouvernance_institutions : 100 → 99.0 (delta:-1.0)
+  → valeurs_culture_tempo_sociale : 100 → 99.0 (delta:-1.0)
+[snapshot] Événements custom : 17 | 317 variables affectées
+
+[prompt] Assemblage du prompt...
+[prompt] System prompt : 3121 caractères
+[prompt] User prompt   : 72985 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-large-latest, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 22360 | sortie : 2596
+[api] Article généré : 10028 caractères
+[api] Longueur hors plage (1588 mots, attendu 600-900, écart 76%) — retry unique avec rappel explicite...
+[llm] Mistral (mistral-large-latest) — entrée : 22471 | sortie : 1726
+[api] Retry terminé : 1064 mots (attendu 600-900).
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/20260815_110232_breakdown_actualites_a_la_une_article_18octobre2098.md
+
+============================================================
+ARTICLE GÉNÉRÉ
+============================================================
+**Les Bouches de l’Abîme parlent : le Sahel numérique saigne en silence**
+
+*18 octobre 2098*
+
+Aïcha Benyamina — Seuil Sécurisé - Bulletin des Racines-Mères
+
+SFax — Les fumées des relais calcinés d’Agadez montent encore, trois semaines après l’assaut des milices du *Bloc IV*, mais personne ne les voit. Les satellites sont morts depuis 2048, les drones des seigneurs de guerre logistiques ne survolent plus que les *Venelles* eurasiatiques, et les derniers relais mesh du *Ligue Sahelo-Numérique* ont été réduits en cendres par des charges artisanales. Pourtant, quelque part entre les ruines des stations atmosphériques du Tibesti et les entrepôts climatisés de Sfax, une vérité persiste : le Sahel numérique est en train de mourir. Et cette fois, ce n’est pas une panne. C’est un choix.
+
+Les *Bouches de l’Abîme* l’ont écrit dans leur dernier envoi, glissé sous une porte de la *Médina des Courriers* : *« Ils ont coupé les nœuds pour que plus personne ne sache où finit la terre et où commence le désert. »* Le document, un feuillet plastifié froissé aux bords noircis, porte la signature cryptographique des cellules lyonnaises — l’une des rares encore en vie. À l’intérieur, des chiffres : 47 relais détruits en six mois, 12 000 kilomètres de fibre optique enterrée sous le sable, 89 % des stations de dessalement du *Corridor des Lithiums* désormais contrôlées par des milices affiliées au *Consortium Oural-Caspien*. Et une phrase, soulignée trois fois : *« L’eau coule vers le nord. Les données aussi. »*
+
+### **La grande saignée des données**
+
+Agadez n’était pas une ville. C’était un nœud. Un de ces points névralgiques où, même après *L’Attentat des Neuf Nœuds* de 2040, les fragments des anciens réseaux continuaient de respirer. On y échangeait des clés USB contenant les plans des stations atmosphériques volées à *Kharg-9 Data Haven*, des cartes hydriques mises à jour en temps réel par les *Gardiens du Danube*, et des listes de noms — ceux des réfugiés refoulés aux *lignes de berge* du *Compact des Grands Lacs*, ceux des techniciens enlevés par les *Seigneuries Logistiques Armées* pour maintenir leurs convoyeurs en vie. Mais depuis juillet, Agadez est un fantôme. Les milices du *Bloc IV*, commandées par un ancien officier des *Factions Énergétiques Héritières*, ont méthodiquement dynamité les relais, abattu les antennes, et exécuté les *courriers nomades* qui tentaient de fuir vers le sud. Leur motif ? Officiellement, *« sécuriser les flux stratégiques »*. En réalité, priver le *Ligue Sahelo-Numérique* de ses yeux.
+
+*« Ils veulent que le Sahel redevienne un désert, au sens propre comme au sens numérique »*, explique Yacouba Diallo, un ancien ingénieur des *Archives Neutres de Genève-Bunker*, aujourd’hui réfugié dans une cellule des *Racines-Mères* à Lyon-Part-Dieu. *« Sans relais, sans données, sans cartes, les communautés locales perdent leur dernier levier face aux seigneurs de guerre. Elles ne savent plus où creuser pour trouver de l’eau, quelles routes éviter, quels checkpoints négocier. Elles redeviennent des proies. »* Diallo montre une carte tracée à la main sur un morceau de toile cirée, récupéré dans les ruines d’un marché de Sfax. Les points rouges marquent les relais détruits. Les flèches bleues indiquent les flux d’eau détournés vers les *Venelles* eurasiatiques. *« Regardez. Tout converge vers le nord. L’eau, les données, les gens. Le Sahel est en train de se vider. »*
+
+### **L’eau et le code : une équation mortelle**
+
+La corrélation entre contrôle des données et contrôle des ressources n’est pas nouvelle. Depuis *La Déflagration du Croissant* de 2027, chaque crise énergétique, chaque pénurie hydrique, a été précédée ou accompagnée d’une attaque sur les infrastructures numériques. Mais ce qui se joue aujourd’hui dans l’*Arc Sahélo-Méditerranéen* est d’une autre ampleur. *« Avant, on coupait les réseaux pour cacher une frappe. Maintenant, on les coupe pour cacher une extinction »*, résume un rapport interne des *Bouches de l’Abîme*, dont nous avons obtenu une copie. Le document détaille comment les milices du *Bloc IV* ont synchronisé leurs attaques sur les relais d’Agadez avec le détournement des dernières nappes phréatiques du *Bassin du Lac Tchad*. Résultat : les communautés qui dépendaient des pompes solaires connectées aux réseaux mesh n’ont plus ni eau ni moyen de savoir où en trouver. *« Ils appellent ça une ‘stratégie de rationalisation des ressources’. Nous, on appelle ça un nettoyage préventif »*, écrit l’auteur, dont la signature a été effacée.
+
+Pire encore : les données volées à Agadez n’ont pas été détruites. Elles ont été transférées. *« Kharg-9 Data Haven a enregistré un pic d’activité en août »*, confirme une source au sein des *Collectifs de Hackers Archivistes des Interstices Réseaux*. *« Des téraoctets de cartes hydriques, de logs de stations atmosphériques, de listes de réfugiés… Tout a été exfiltré vers des serveurs offshore. Pour qui ? Probablement pour les mêmes qui financent les milices. »* La destination finale ? Les *Venelles*, bien sûr. Ou peut-être les coffres des *Seigneuries Logistiques Armées* qui contrôlent le *Corridor Oural-Pannonie*. *« Les données sont la nouvelle monnaie. Et l’eau, le nouveau pétrole. Ceux qui contrôlent les deux contrôlent tout »*, conclut la source.
+
+### **La résistance des ombres**
+
+Pourtant, quelque part dans les *fragments Terrafond* de la vallée de l’Allier, une réponse s’organise. Les *Racines-Mères* ont lancé ce qu’elles appellent *« l’Opération Baraka »* : une tentative désespérée de reconstruire un réseau mesh local, alimenté par des panneaux solaires de récupération et des antennes bricolées à partir de vieux routeurs. *« On ne peut pas sauver Agadez. Mais on peut sauver ce qui reste »*, explique Fatima Benjelloun, une *courrière* qui a fui Sfax après l’assassinat de son frère, un technicien des *Bouches de l’Abîme*. *« Chaque relais qu’on installe, c’est une communauté qui peut encore savoir où creuser, où fuir, qui éviter. C’est une graine. »*
+
+Le problème ? Les graines ont besoin d’eau. Et l’eau, dans l’*Arc Sahélo-Méditerranéen*, coule désormais vers le nord. *« Les milices du *Bloc IV* ont compris une chose »*, analyse Diallo. *« Dans un monde où tout s’effondre, celui qui contrôle l’information contrôle les survivants. Et celui qui contrôle les survivants contrôle l’avenir. »* Les *Bouches de l’Abîme* l’ont écrit en latin, dans un coin de leur dernier envoi : *« Civis pacem parat bellum. »* Le citoyen prépare la paix par la guerre. Mais dans le Sahel de 2098, la guerre n’a plus de règles. Et la paix n’est plus qu’un mot.
+
+============================================================
+✓ Sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/20260815_110232_breakdown_actualites_a_la_une_article_18octobre2098.md
+============================================================
+

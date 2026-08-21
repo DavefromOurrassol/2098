@@ -51,8 +51,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2029
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -85,6 +83,9 @@ localisation:
   zone: null
   lieu: null
   type_lieu: null
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Collectifs de Biohackers Agro-Communautaires
@@ -129,7 +130,6 @@ Le paradoxe central qui les déchire est d'ordre existentiel : plus ils réussis
 - [[consortium_agro_pacifique_policy_reform]]
 - [[consortiums_agro_industriels_du_bassin_fluvial_policy_reform]]
 - [[nexus_biosyn_policy_reform]]
-- [[test_durcissement_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

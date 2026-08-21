@@ -44,7 +44,7 @@ alliances:
 - ligue_des_cites_du_sahel_numerique_new_sustainability
 - parlement_territoires_nairobi_new_sustainability
 - programme_onu_de_restauration_des_sols_new_sustainability
-- rede_paulista_de_distribuic_o_algor_tmica_new_sustainability
+- rede_paulista_de_distribuicao_algoritmica_new_sustainability
 - reseau_des_agences_climatiques_regionales_new_sustainability
 - reseau_des_ingenieurs_climatiques_du_sud_global_new_sustainability
 - reseau_global_de_cliniques_regeneratives_new_sustainability
@@ -60,8 +60,6 @@ oppositions:
 type_relation_dominante: coopération
 annee_debut: 2032
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -99,6 +97,9 @@ localisation:
   zone: null
   lieu: null
   type_lieu: null
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Réseau des Villes Régénératives
@@ -137,7 +138,7 @@ Le Réseau est tiraillé entre sa vocation de laboratoire d'expérimentation loc
 - [[ligue_des_cites_du_sahel_numerique_new_sustainability]]
 - [[parlement_territoires_nairobi_new_sustainability]]
 - [[programme_onu_de_restauration_des_sols_new_sustainability]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_new_sustainability]]
+- [[rede_paulista_de_distribuicao_algoritmica_new_sustainability]]
 - [[reseau_des_agences_climatiques_regionales_new_sustainability]]
 - [[reseau_des_ingenieurs_climatiques_du_sud_global_new_sustainability]]
 - [[reseau_global_de_cliniques_regeneratives_new_sustainability]]

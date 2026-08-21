@@ -45,15 +45,13 @@ oppositions:
 - lagos_est_nexcore_breakdown
 - occitanie_racines_meres_breakdown
 - oracle_des_seuils_breakdown
-- rede_paulista_de_distribuic_o_algor_tmica_breakdown
+- rede_paulista_de_distribuicao_algoritmica_breakdown
 - seoul_collectif_nexcore_breakdown
 - tour_bcuc_geneve_breakdown
 - tribunal_algorithmique_de_bruxelles_breakdown
 type_relation_dominante: conflit
 annee_debut: 2041
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -82,6 +80,9 @@ tensions_narratives: 'La contradiction fondamentale qui ronge les Fronts est leu
   Dans plusieurs zones, certains Fronts ont glissé vers des milices territoriales
   indiscernables des seigneurs de guerre qu''ils prétendaient combattre.'
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Fronts Populistes Anti-Technocratiques
@@ -119,7 +120,7 @@ La contradiction fondamentale qui ronge les Fronts est leur dépendance aux rés
 - [[lagos_est_nexcore_breakdown]]
 - [[occitanie_racines_meres_breakdown]]
 - [[oracle_des_seuils_breakdown]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_breakdown]]
+- [[rede_paulista_de_distribuicao_algoritmica_breakdown]]
 - [[seoul_collectif_nexcore_breakdown]]
 - [[tour_bcuc_geneve_breakdown]]
 - [[tribunal_algorithmique_de_bruxelles_breakdown]]

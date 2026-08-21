@@ -46,7 +46,7 @@ alliances:
 - europe_occidentale_reconstructee_reference
 - federation_communs_territoriaux_reference
 - federation_des_cliniques_autonomes_reference
-- frente_sert_o_livre_reference
+- frente_sertao_livre_reference
 - institutions_multilaterales_survivantes_reference
 - mouvement_racines_vivantes_reference
 - ong_environnementales_de_terrain_reference
@@ -66,8 +66,6 @@ oppositions:
 type_relation_dominante: symbiose
 annee_debut: 2032
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -103,6 +101,9 @@ localisation:
   zone: null
   lieu: null
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Coopératives Agro-Écologiques de Reconstruction Territoriale
@@ -140,7 +141,7 @@ Les coopératives sont prises en étau entre leur vocation d'autonomie locale et
 - [[europe_occidentale_reconstructee_reference]]
 - [[federation_communs_territoriaux_reference]]
 - [[federation_des_cliniques_autonomes_reference]]
-- [[frente_sert_o_livre_reference]]
+- [[frente_sertao_livre_reference]]
 - [[institutions_multilaterales_survivantes_reference]]
 - [[mouvement_racines_vivantes_reference]]
 - [[ong_environnementales_de_terrain_reference]]

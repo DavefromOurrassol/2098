@@ -47,8 +47,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2028
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -82,6 +80,9 @@ localisation:
   zone: andes_bloc_austral
   lieu: Bloc andin (Bolivie-Argentine)
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # États Dissidents du Bloc Austral

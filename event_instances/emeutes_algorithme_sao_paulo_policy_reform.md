@@ -36,7 +36,7 @@ impact_sur_variables:
 propagation:
   via_matrice: true
 acteurs_impliques:
-    - rede_paulista_de_distribuic_o_algor_tmica_policy_reform
+    - rede_paulista_de_distribuicao_algoritmica_policy_reform
     - collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform
     - reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
     - conseil_intergouvernemental_de_regulation_technologique_policy_reform
@@ -68,7 +68,7 @@ L'événement catalyse une réforme forcée des standards d'auditabilité des sy
 - **organisation_territoires** : delta +6 sur 18 ans
 
 ## Acteurs impliqués
-- [[rede_paulista_de_distribuic_o_algor_tmica_policy_reform]]
+- [[rede_paulista_de_distribuicao_algoritmica_policy_reform]]
 - [[collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform]]
 - [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]]
 - [[conseil_intergouvernemental_de_regulation_technologique_policy_reform]]

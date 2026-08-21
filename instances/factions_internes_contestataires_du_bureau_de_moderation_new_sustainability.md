@@ -51,8 +51,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2037
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -90,6 +88,9 @@ localisation:
   zone: centre_institutionnel_geneve
   lieu: Genève — siège du Bureau de Modération
   type_lieu: site_strategique
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Factions Internes Contestataires du Bureau de Modération

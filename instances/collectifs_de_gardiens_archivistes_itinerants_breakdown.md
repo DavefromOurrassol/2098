@@ -62,8 +62,6 @@ oppositions:
 type_relation_dominante: symbiose
 annee_debut: 2041
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -96,6 +94,9 @@ tensions_narratives: 'La tension centrale qui travaille ces collectifs est celle
   : accepter la protection armée d''une faction pour traverser un corridor, c''est
   inévitablement servir ses intérêts informationnels.'
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Collectifs de Gardiens-Archivistes Itinérants

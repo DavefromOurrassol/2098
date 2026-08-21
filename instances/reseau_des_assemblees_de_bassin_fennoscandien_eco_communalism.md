@@ -60,8 +60,6 @@ oppositions:
 type_relation_dominante: coopération
 annee_debut: 2040
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -98,6 +96,9 @@ localisation:
   zone: reseau_assemblees_fennoscandien
   lieu: Tampere (siège tournant des sessions plénières)
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Réseau des Assemblées de Bassin Fennoscandien

@@ -73,8 +73,6 @@ type_relation_dominante: infiltration
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: clandestin
-age_historique: résiduel
 generation: forteresse
 
 injection:
@@ -95,6 +93,9 @@ tensions_narratives: >
   La question qui fracture Fractures de l'intérieur : depuis 2089, des preuves circulent qu'un des trois nœuds de financement anonyme du réseau serait une opération d'influence d'un bloc concurrent — ce qui ferait de certaines révélations des armes déguisées en vérités. Certains correspondants ont commencé à publier en dehors des protocoles officiels du réseau, créant des branches sauvages incontrôlables. Et pour la première fois, un État-bloc propose une amnistie et une légalisation partielle en échange d'une intégration surveillée — offre que deux membres fondateurs encore actifs envisagent sérieusement d'accepter.
 
 date_creation: 2026-06-15
+trajectoire: résiduel
+est_clandestin: true
+
 ---
 
 # Fractures

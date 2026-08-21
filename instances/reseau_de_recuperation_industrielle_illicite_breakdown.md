@@ -54,8 +54,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2041
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -87,6 +85,9 @@ tensions_narratives: 'Le réseau est à la fois prédateur et pourvoyeur : en pi
   les mêmes zones d''abandon, transformant les anciens sites industriels en théâtres
   de négociation armée.'
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Réseau de Récupération Industrielle Illicite

@@ -55,10 +55,8 @@ oppositions:
 type_relation_dominante: conflit
 
 annee_debut: 2031
-annee_fin: 
+annee_fin: 2057
 
-etat_temporel: transformé
-age_historique: résiduel
 generation: post-effondrement
 
 injection:
@@ -79,6 +77,9 @@ tensions_narratives: >
   La question centrale : les représentants autochtones restés dans l'institution la maintiennent-ils pour préserver un embryon de droit ou cautionnent-ils par leur présence la spoliation de leurs peuples au nom d'une légitimité factice ? Une faction armée samie menace de publier les archives complètes de l'APA pour prouver que ses droits ont été systématiquement contournés dès la fondation. Pendant ce temps, Bohai Transit et les factions militaires résiduelles nordiques se disputent le droit de siéger au 'conseil de crise' — non pour gouverner le passage, mais pour contrôler qui peut revendiquer légalement d'avoir essayé.
 
 date_creation: 2026-06-23
+trajectoire: transformé
+est_clandestin: false
+
 ---
 
 # Autorité du Passage Arctique — Ce qu'il en reste

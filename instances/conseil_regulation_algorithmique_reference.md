@@ -42,13 +42,11 @@ oppositions:
 - directive_kontinuum_reference
 - le_temoin_reference
 - nexcore_reference
-- rede_paulista_de_distribuic_o_algor_tmica_reference
+- rede_paulista_de_distribuicao_algoritmica_reference
 - services_de_contre_information_des_blocs_geopolitiques_concurrents_reference
 type_relation_dominante: neutralité
 annee_debut: 2031
 annee_fin:
-etat_temporel: actif
-age_historique: déclinant
 generation: transition
 injection:
   type: canonique
@@ -72,6 +70,9 @@ tensions_narratives: >
   sur la pertinence de continuer sans mandat contraignant. Certains
   membres militent pour une réforme radicale, d'autres pour la dissolution.
 date_creation: 2098-01-01
+trajectoire: déclinant
+est_clandestin: false
+
 ---
 
 # Comité de Surveillance IA
@@ -109,5 +110,5 @@ la pertinence de continuer sans mandat contraignant.
 - [[directive_kontinuum_reference]]
 - [[le_temoin_reference]]
 - [[nexcore_reference]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_reference]]
+- [[rede_paulista_de_distribuicao_algoritmica_reference]]
 - [[services_de_contre_information_des_blocs_geopolitiques_concurrents_reference]]

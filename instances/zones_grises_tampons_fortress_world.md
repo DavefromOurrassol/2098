@@ -69,8 +69,6 @@ type_relation_dominante: dépendance
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: forteresse
 
 injection:
@@ -91,6 +89,9 @@ tensions_narratives: >
   La question de la responsabilité est le nœud central : dès qu'une forteresse reconnaît administrer un Périmètre de Seuil, elle s'expose à des obligations juridiques résiduelles envers ses habitants — mais si elle le nie totalement, les populations tombent dans un angle mort visible qui alimente les dissidences internes et les réseaux d'information clandestins. La montée des cellules universitaires dissidentes qui cartographient systématiquement ces zones menace de rendre leur opacité insoutenable. Parallèlement, les contrebandiers et les réseaux de passeurs qui traversent ces seuils en exploitent les failles de surveillance, transformant peu à peu les instruments de contrôle en corridors d'autonomie partielle — une ironie structurelle que les blocs souverains ne peuvent admettre sans reconnaître l'échec de leur propre architecture de confinement.
 
 date_creation: 2026-06-27
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Périmètres de Seuil — Zones Tampons de Contrôle Climatique

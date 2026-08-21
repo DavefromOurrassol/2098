@@ -1,0 +1,112 @@
+---
+name: gelecek_meclisi_fragmentaire
+type: instance
+slug: gelecek_meclisi_fortress_world
+entite: gelecek_meclisi
+scenario: fortress_world
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
+
+type_dans_scenario: hybride
+
+role_dans_scenario: >
+  Assemblée émergente et fragmentée, née de la nécessité de négocier des issues communes entre les blocs forteresses et les zones grises, malgré l'absence de légitimité centrale. Elle agit comme un forum informel où se croisent diplomates résiduels, ingénieurs dissidents, contrebandiers énergétiques et représentants des populations exclues, cherchant à articuler des logiques locales (accès aux ressources, corridors humanitaires) avec les impératifs de souveraineté des blocs. Son rôle est moins de gouverner que de *lubrifier* les frictions systémiques, en proposant des cadres d'action collective temporaires (ex. quotas de transit, échanges de données climatiques) qui évitent l'escalade militaire ou l'effondrement logistique.
+
+responsabilites: >
+  1) Négocier des accords de seuil (ex. corridors gris d'Asie centrale, marchés de Casablanca) entre blocs rivaux et acteurs périphériques, en contournant les institutions formelles paralysées. 2) Documenter et diffuser des protocoles de résilience locale (ex. maintenance d'infrastructures critiques hors-blocs, réappropriation énergétique) via des archives chiffrées et des réseaux de passeurs d'information. 3) Arbitrer des conflits de souveraineté territoriale (ex. zones tampons, aquifères transfrontaliers) en s'appuyant sur des données hybrides (satellitaires, locales, algorithmiques) plutôt que sur des traités caducs.
+
+impact_local: 3
+impact_systemique_global: 2
+
+variables_influencees:
+    - gouvernance_institutions
+    - organisation_territoires
+    - technologie_information
+
+zone_geographique:
+    - régionale
+    - continentale
+
+zone_systemique:
+    - gouvernance
+    - information
+    - sécurité
+
+alliances:
+    - coalitions_des_deplaces_et_apatrides_fortress_world
+    - reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world
+    - cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
+    - archives_chiffrees_de_l_open_internet_coalition_fortress_world
+
+oppositions:
+    - administrations_de_controle_frontalier_des_blocs_fortress_world
+    - agences_de_securite_interieure_des_etats_forteresses_fortress_world
+    - bureau_gouvernance_algorithmique_fortress_world
+
+type_relation_dominante: infiltration
+
+annee_debut: 2051
+annee_fin: 
+
+trajectoire: ascendant
+est_clandestin: true
+generation: forteresse
+
+injection:
+  type: custom
+  annee_injection: 2051
+  contexte_injection: >
+    Le *Gelecek Meclisi Fragmentaire* agit comme un contre-pouvoir informel qui atténue la rigidité des blocs forteresses en introduisant des mécanismes de coordination hybrides. Son impact sur *gouvernance_institutions* reflète sa capacité à créer des espaces de négociation là où les institutions traditionnelles ont échoué, tandis que son influence sur *organisation_territoires* découle de sa gestion des corridors et zones tampons. Enfin, son usage détourné des technologies de surveillance (*technologie_information*) montre comment l'information peut être réappropriée pour contourner les contrôles souverains.
+  impact_sur_variables:
+  - variable: gouvernance_institutions
+    delta_level: 8
+    duree: 15
+    polarite: 1
+  - variable: organisation_territoires
+    delta_level: 6
+    duree: 20
+    polarite: 1
+  - variable: technologie_information
+    delta_level: 5
+    duree: 10
+    polarite: 1
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Imaginez un parlement sans hémicycle, où les débats se tiennent dans des data havens éphémères ou des campements de seuil, et où les votes sont remplacés par des algorithmes de consensus distribué. Le *Gelecek Meclisi Fragmentaire* est cette étrange créature née après le Compact des Grands Lacs (2051), quand les blocs ont réalisé que même leurs forteresses avaient besoin de soupapes. Ses membres ? Des anciens de l'ONU-Éclat reconvertis en courtiers de corridors, des ingénieurs du Rust Belt qui piratent les grilles ARIA pour faire passer des réfugiés, des contrebandiers kazakhs qui monnayent des données climatiques contre du lithium. Leur dernière victoire ? Un accord tacite entre le Bloc Atlantique et les Cartels Miniers Subsahariens pour partager les nappes phréatiques du Sahel — un traité qui tient parce qu'il n'est écrit nulle part, et que personne n'a intérêt à le rompre.
+
+signes_distinctifs: >
+  1) *Symbolique* : Un logo fractal inspiré des motifs des seuils d'Asie centrale, où chaque fragment représente un acteur du réseau (blocs, zones grises, populations exclues). 2) *Technologie* : Utilisation de *Nexus7 résiduels* comme relais de communication, détournés de leur usage militaire pour créer un intranet diplomatique clandestin. 3) *Rituel* : Les sessions se tiennent dans des lieux en mouvement (convois logistiques, data centers mobiles) pour échapper à la surveillance des blocs, avec un protocole de silence radio strict (pas de traces numériques, seulement des archives physiques chiffrées).
+
+tensions_narratives: >
+  1) *Légitimité vs. Efficacité* : Le Meclisi est-il un outil de résistance ou un cheval de Troie des blocs, qui l'utilisent pour identifier et neutraliser les dissidences ? 2) *Fragmentation vs. Unité* : Les accords négociés sont-ils assez solides pour éviter l'effondrement, ou ne font-ils que reporter les conflits ? 3) *Technologie vs. Humain* : Les algorithmes de consensus (comme *LIMINAL*) remplacent-ils la diplomatie traditionnelle, ou créent-ils de nouvelles formes de manipulation ? 4) *Trajectoire* : Le Meclisi peut-il évoluer vers une gouvernance alternative, ou est-il condamné à rester un réseau informel, toléré tant qu'il sert les intérêts des forteresses ?
+
+date_creation: 2026-08-16
+---
+
+# gelecek_meclisi_fragmentaire
+
+## Rôle dans [[fortress_world]]
+Assemblée émergente et fragmentée, née de la nécessité de négocier des issues communes entre les blocs forteresses et les zones grises, malgré l'absence de légitimité centrale. Elle agit comme un forum informel où se croisent diplomates résiduels, ingénieurs dissidents, contrebandiers énergétiques et représentants des populations exclues, cherchant à articuler des logiques locales (accès aux ressources, corridors humanitaires) avec les impératifs de souveraineté des blocs. Son rôle est moins de gouverner que de *lubrifier* les frictions systémiques, en proposant des cadres d'action collective temporaires (ex. quotas de transit, échanges de données climatiques) qui évitent l'escalade militaire ou l'effondrement logistique.
+
+## Responsabilités
+1) Négocier des accords de seuil (ex. corridors gris d'Asie centrale, marchés de Casablanca) entre blocs rivaux et acteurs périphériques, en contournant les institutions formelles paralysées. 2) Documenter et diffuser des protocoles de résilience locale (ex. maintenance d'infrastructures critiques hors-blocs, réappropriation énergétique) via des archives chiffrées et des réseaux de passeurs d'information. 3) Arbitrer des conflits de souveraineté territoriale (ex. zones tampons, aquifères transfrontaliers) en s'appuyant sur des données hybrides (satellitaires, locales, algorithmiques) plutôt que sur des traités caducs.
+
+## Variables influencées
+- [[gouvernance_institutions]]
+- [[organisation_territoires]]
+- [[technologie_information]]
+
+## Relations
+**Alliés** : [[coalitions_des_deplaces_et_apatrides_fortress_world]], [[reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world]], [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]], [[archives_chiffrees_de_l_open_internet_coalition_fortress_world]]
+**Opposants** : [[administrations_de_controle_frontalier_des_blocs_fortress_world]], [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]], [[bureau_gouvernance_algorithmique_fortress_world]]
+
+## Description journalistique
+Imaginez un parlement sans hémicycle, où les débats se tiennent dans des data havens éphémères ou des campements de seuil, et où les votes sont remplacés par des algorithmes de consensus distribué. Le *Gelecek Meclisi Fragmentaire* est cette étrange créature née après le Compact des Grands Lacs (2051), quand les blocs ont réalisé que même leurs forteresses avaient besoin de soupapes. Ses membres ? Des anciens de l'ONU-Éclat reconvertis en courtiers de corridors, des ingénieurs du Rust Belt qui piratent les grilles ARIA pour faire passer des réfugiés, des contrebandiers kazakhs qui monnayent des données climatiques contre du lithium. Leur dernière victoire ? Un accord tacite entre le Bloc Atlantique et les Cartels Miniers Subsahariens pour partager les nappes phréatiques du Sahel — un traité qui tient parce qu'il n'est écrit nulle part, et que personne n'a intérêt à le rompre.
+
+## Tensions narratives
+1) *Légitimité vs. Efficacité* : Le Meclisi est-il un outil de résistance ou un cheval de Troie des blocs, qui l'utilisent pour identifier et neutraliser les dissidences ? 2) *Fragmentation vs. Unité* : Les accords négociés sont-ils assez solides pour éviter l'effondrement, ou ne font-ils que reporter les conflits ? 3) *Technologie vs. Humain* : Les algorithmes de consensus (comme *LIMINAL*) remplacent-ils la diplomatie traditionnelle, ou créent-ils de nouvelles formes de manipulation ? 4) *Trajectoire* : Le Meclisi peut-il évoluer vers une gouvernance alternative, ou est-il condamné à rester un réseau informel, toléré tant qu'il sert les intérêts des forteresses ?

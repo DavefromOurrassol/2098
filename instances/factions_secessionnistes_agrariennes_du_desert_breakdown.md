@@ -56,8 +56,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2055
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -90,6 +88,9 @@ tensions_narratives: La contradiction fondamentale de ces factions est qu'elles 
   des acteurs opportunistes — seigneurs de guerre, corporations extractivistes, réseaux
   de traite — qui cherchent à les instrumentaliser ou à les corrompre de l'intérieur.
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Factions Sécessionnistes Agrariennes du Désert

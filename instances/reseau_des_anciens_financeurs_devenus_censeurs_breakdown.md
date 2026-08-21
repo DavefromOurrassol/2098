@@ -56,8 +56,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2036
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -87,6 +85,9 @@ tensions_narratives: 'La contradiction fondamentale qui les mine est celle du m�
   à tenir, exposant le réseau à des risques d''instrumentalisation par des acteurs
   bien plus violents.'
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Réseau des Anciens Financeurs Devenus Censeurs

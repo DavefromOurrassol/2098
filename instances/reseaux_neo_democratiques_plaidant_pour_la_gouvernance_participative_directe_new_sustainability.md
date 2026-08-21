@@ -66,12 +66,10 @@ oppositions:
 - lobbies_des_plateformes_de_consensus_automatise_new_sustainability
 - nexcore_new_sustainability
 - prisme_global_new_sustainability
-- rede_paulista_de_distribuic_o_algor_tmica_new_sustainability
+- rede_paulista_de_distribuicao_algoritmica_new_sustainability
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -110,6 +108,8 @@ localisation:
   lieu: null
   type_lieu: null
 annee_debut_verifiee: true
+trajectoire: émergent
+est_clandestin: false
 
 ---
 
@@ -167,7 +167,7 @@ La tension centrale de ces réseaux réside dans leur propre outillage : en util
 - [[lobbies_des_plateformes_de_consensus_automatise_new_sustainability]]
 - [[nexcore_new_sustainability]]
 - [[prisme_global_new_sustainability]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_new_sustainability]]
+- [[rede_paulista_de_distribuicao_algoritmica_new_sustainability]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

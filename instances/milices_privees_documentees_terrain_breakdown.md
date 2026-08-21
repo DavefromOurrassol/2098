@@ -56,8 +56,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2041
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -86,6 +84,9 @@ tensions_narratives: 'La tension fondamentale de ces milices réside dans leur d
   la compétition entre factions pour les mêmes corridors de ressources génère des
   cycles de violence qui détruisent les équilibres locaux qu''elles prétendent défendre.'
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Milices Privées Documentées Terrain

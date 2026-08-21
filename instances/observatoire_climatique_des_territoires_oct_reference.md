@@ -50,7 +50,7 @@ alliances:
 - detroit_compact_grands_lacs_reference
 - federation_communs_territoriaux_reference
 - fonds_d_investissement_foncier_climatique_reference
-- frente_sert_o_livre_reference
+- frente_sertao_livre_reference
 - geneve_lac_retreite_reference
 - great_lakes_autonomous_compact_reference
 - institutions_multilaterales_survivantes_reference
@@ -78,8 +78,6 @@ oppositions:
 type_relation_dominante: coopération
 annee_debut: 2031
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -112,6 +110,9 @@ localisation:
   zone: geneve_lac_retreite
   lieu: Genève-Lac-Retraité
   type_lieu: ville
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Observatoire Climatique des Territoires (OCT)
@@ -156,7 +157,7 @@ L'OCT est tiraillée entre son mandat de neutralité scientifique et les pressio
 - [[detroit_compact_grands_lacs_reference]]
 - [[federation_communs_territoriaux_reference]]
 - [[fonds_d_investissement_foncier_climatique_reference]]
-- [[frente_sert_o_livre_reference]]
+- [[frente_sertao_livre_reference]]
 - [[geneve_lac_retreite_reference]]
 - [[great_lakes_autonomous_compact_reference]]
 - [[institutions_multilaterales_survivantes_reference]]

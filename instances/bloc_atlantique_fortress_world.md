@@ -92,8 +92,6 @@ type_relation_dominante: alliance stratégique
 annee_debut: 2061
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: forteresse
 
 injection:
@@ -114,6 +112,9 @@ tensions_narratives: >
   Le PAPC est traversé par une fracture croissante entre sa faction technocratique — partisane d'une ouverture sélective maîtrisée pour compenser l'effondrement démographique interne — et ses courants souverainistes radicaux qui réclament une autarcie totale et menacent de faire sécession vers un bloc ultra-fermé. Simultanément, les premières générations nées entièrement à l'intérieur du Mur commencent à contester une doctrine de préservation qui ne leur a jamais laissé le choix d'un dehors ; des cellules dissidentes internes, infiltrées ou spontanées, font circuler des archives de ce que le monde extérieur ressemble réellement, sapant le récit officiel de 'chaos barbare' au-delà des digues. Enfin, la question de la soutenabilité économique du Système Mur-Digue devient critique : maintenir 14 000 km de frontières militarisées consomme 38 % du budget collectif du Pacte, et les premières fissures dans l'infrastructure — physiques et politiques — commencent à apparaître.
 
 date_creation: 2026-06-27
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Pacte Atlantique de Préservation Civilisationnelle — PAPC

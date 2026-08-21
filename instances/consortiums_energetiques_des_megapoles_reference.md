@@ -44,7 +44,7 @@ alliances:
 - fonds_d_investissement_foncier_climatique_reference
 - lobbies_agro_industriels_a_haute_consommation_d_eau_reference
 - operateurs_de_zones_economiques_speciales_periurbaines_reference
-- rede_paulista_de_distribuic_o_algor_tmica_reference
+- rede_paulista_de_distribuicao_algoritmica_reference
 - terrametrics_reference
 oppositions:
 - agence_internationale_des_energies_renouvelables_irena_2_reference
@@ -62,8 +62,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2032
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -100,6 +98,9 @@ localisation:
   zone: null
   lieu: null
   type_lieu: infrastructure
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Consortiums Énergétiques des Mégapoles
@@ -139,7 +140,7 @@ Les Consortiums se trouvent pris en étau entre leur logique d'expansion privée
 - [[fonds_d_investissement_foncier_climatique_reference]]
 - [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]]
 - [[operateurs_de_zones_economiques_speciales_periurbaines_reference]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_reference]]
+- [[rede_paulista_de_distribuicao_algoritmica_reference]]
 - [[terrametrics_reference]]
 **Opposants :**
 - [[agence_internationale_des_energies_renouvelables_irena_2_reference]]

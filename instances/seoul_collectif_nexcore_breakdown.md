@@ -61,8 +61,6 @@ type_relation_dominante: symbiose
 annee_debut: 2081
 annee_fin: 
 
-etat_temporel: actif
-age_historique: ascendant
 generation: post-effondrement
 
 injection:
@@ -83,6 +81,9 @@ tensions_narratives: >
   Le Collectif est à un point de bascule : son efficacité attire des demandes de formalisation — de la part de réfugiés qui veulent une 'adresse' pour négocier, et de blocs régionaux qui préféreraient un interlocuteur identifiable à une nébuleuse incontrôlable. Accepter équivaut à se soumettre à des logiques de pouvoir qui les trahiraient ; refuser risque de les laisser isolés face à des pressions militaires croissantes. En interne, une fracture monte entre les techniciens qui veulent étendre le réseau au-delà de Seoul et les militants de quartier qui craignent de perdre l'ancrage territorial qui fait leur légitimité. Et une question sans réponse hante les assemblées nocturnes : si le Collectif devient une puissance, qui le contrôlera ?
 
 date_creation: 2026-06-27
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Seoul Collectif Nexcore — Les Grilles de l'Entre-Deux

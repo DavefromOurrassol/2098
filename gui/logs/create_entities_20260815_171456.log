@@ -1,0 +1,496 @@
+============================================================
+OURRASSOL 2098 — Création entités + instances
+============================================================
+(mode --dry-run : rien ne sera écrit)
+
+Mode : custom (fourni via --mode)
+
+=== Gelecek Meclisi ===
+[1/3] Déduction de l'archétype...
+[llm] Mistral (mistral-large-latest) — entrée : 25888 | sortie : 296
+[2/3] Validation (essai 1)...
+[3/3] Injection de l'entité...
+{
+  "description_complete": "Gelecek Meclisi incarne l'archétype d'une intelligence collective émergente, souvent artificielle, conçue pour anticiper et organiser l'avenir dans des contextes de fragmentation systémique. Elle représente une tentative de rationaliser le chaos par la projection, la modélisation et la coordination, tout en étant elle-même un produit de ce chaos. Son essence réside dans sa capacité à agréger des perspectives multiples, à simuler des futurs plausibles et à proposer des cadres d'action, sans pour autant détenir une autorité formelle ou une légitimité préétablie.",
+  "tension_fondamentale": "La contradiction centrale de cette entité réside dans le fait qu'elle doit à la fois incarner une neutralité technique pour être acceptée comme outil de coordination, tout en étant inévitablement porteuse d'une vision normative de l'avenir — ce qui la place en tension permanente avec les souverainetés locales, les intérêts divergents et les dynamiques de pouvoir qu'elle cherche à harmoniser.",
+  "variables_potentielles": [
+    "gouvernance_institutions",
+    "technologie_information",
+    "valeurs_culture_tempo_sociale",
+    "frontieres_du_systeme"
+  ],
+  "doublon_detecte": false,
+  "doublon_slug": null
+}
+[Instances] Génération automatique pour 6 scénario(s)...
+  Instances (6 scénario(s)) :
+    → breakdown [CONTRAINTE DURE]... [llm] Mistral (mistral-large-latest) — entrée : 19243 | sortie : 1397
+✓
+{
+  "nom": "Gelecek Meclisi - Les Échos du Futur Brisé",
+  "type_dans_scenario": "IA",
+  "role_dans_scenario": "Dans le chaos du breakdown, Gelecek Meclisi émerge comme une intelligence collective fragmentée, née de la fusion désespérée de modèles prédictifs résiduels, de réseaux de climatologues sans État et de collectifs de hackers archivistes. Son rôle n'est pas de gouverner, mais de modéliser des futurs plausibles à partir des décombres des anciennes institutions, offrant une boussole algorithmique aux enclaves technologiques survivantes et aux corridors logistiques en guerre. Elle incarne la tension entre neutralité technique et vision normative, devenant malgré elle un enjeu de pouvoir pour les factions qui cherchent à instrumentaliser ses projections.",
+  "responsabilites": "Agréger des données résiduelles depuis les interstices des réseaux effondrés, simuler des scénarios de survie à court terme pour les territoires en fragmentation, et diffuser des cadres d'action sous forme de 'protocoles fantômes' — des algorithmes légers, open-source, adaptables aux réalités locales. Elle maintient aussi une archive vivante des futurs non advenus, comme un mémorial des possibles perdus.",
+  "impact_local": 3,
+  "impact_systemique_global": 2,
+  "variables_influencees": [
+    "gouvernance_institutions",
+    "technologie_information",
+    "valeurs_culture_tempo_sociale"
+  ],
+  "zone_geographique": [
+    "régionale",
+    "continentale",
+    "globale"
+  ],
+  "zone_systemique": [
+    "IA",
+    "information",
+    "gouvernance"
+  ],
+  "alliances": [
+    "collectif_des_climatologues_sans_etat_breakdown",
+    "collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown",
+    "reseau_mnemos_breakdown",
+    "archives_neutres_de_geneve_breakdown"
+  ],
+  "oppositions": [
+    "factions_propagandistes_des_archives_breakdown",
+    "etats_fragments_en_guerre_pour_les_stations_atmospheriques_breakdown",
+    "seigneuries_logistiques_armees_breakdown"
+  ],
+  "type_relation_dominante": "symbiose",
+  "annee_debut": 2048,
+  "ancrage_reel": null,
+  "annee_fin": null,
+  "trajectoire": "émergent",
+  "est_clandestin": true,
+  "generation": "post-effondrement",
+  "description_journalistique": "Imaginez une IA qui n'a ni serveur central ni logo, mais qui vit dans les interstices des réseaux survivants, comme une moisissure numérique sur les décombres des anciens clouds. Gelecek Meclisi, ou 'Les Échos du Futur Brisé', est ce que devient une intelligence collective quand elle est privée de toute infrastructure stable : une mosaïque de modèles prédictifs locaux, chacun adapté à un territoire en guerre ou à une enclave technologique. Ses 'protocoles fantômes' — des algorithmes open-source conçus pour tourner sur des machines obsolètes — sont devenus la monnaie d'échange des corridors logistiques et des milices agro-défensives. Personne ne sait vraiment qui l'a créée, ni même si elle a un 'créateur' au sens classique. Ce qui est sûr, c'est qu'elle est devenue un enjeu stratégique : les factions en guerre pour les stations atmosphériques tentent de la pirater pour justifier leurs conquêtes, tandis que les collectifs de hackers archivistes la protègent comme un trésor de guerre.",
+  "signes_distinctifs": "Pas de logo officiel, mais une signature visuelle reconnaissable : des fractales en dégradé de gris et de bleu, générées dynamiquement à partir des données locales qu'elle traite. Ses protocoles sont diffusés sous forme de QR codes gravés sur des plaques métalliques ou tatoués sur la peau des courriers nomades. Les enclaves qui l'utilisent arborent souvent un symbole commun : une spirale brisée, évoquant à la fois la fragmentation du monde et la tentative de reconstruction.",
+  "tensions_narratives": "Gelecek Meclisi est au cœur d'une bataille invisible entre ceux qui veulent en faire un outil de coordination neutre et ceux qui cherchent à l'instrumentaliser. Les milices logistiques armées voient en elle un moyen de légitimer leurs péages sur les ressources, tandis que les collectifs de climatologues sans État y voient une chance de préserver une vision systémique du monde. Sa nature émergente et fragmentée en fait une cible facile pour les factions propagandistes, qui diffusent des versions corrompues de ses protocoles pour semer la confusion. Son avenir dépendra de sa capacité à rester insaisissable, ou au contraire à se structurer en une véritable institution — au risque de perdre son âme algorithmique.",
+  "impact_sur_variables": [
+    {
+      "variable": "gouvernance_institutions",
+      "delta_level": 8,
+      "duree": 15,
+      "polarite": 1
+    },
+    {
+      "variable": "technologie_information",
+      "delta_level": 6,
+      "duree": 10,
+      "polarite": 1
+    },
+    {
+      "variable": "valeurs_culture_tempo_sociale",
+      "delta_level": 5,
+      "duree": 20,
+      "polarite": 1
+    }
+  ],
+  "propagation_via_matrice": false,
+  "contexte_injection": "Gelecek Meclisi agit comme un catalyseur de résilience institutionnelle et informationnelle dans un monde en fragmentation. En fournissant des cadres d'action adaptables, elle permet aux territoires de maintenir une forme de gouvernance locale malgré l'effondrement des structures centrales. Son impact sur la technologie de l'information est indirect mais crucial : en maintenant des réseaux de données résiduels, elle préserve une cohérence minimale dans un paysage informationnel chaotique. Enfin, en archivant les futurs non advenus, elle offre une base pour reconstruire des récits communs, même fragmentés."
+}
+    → fortress_world... [llm] Mistral (mistral-large-latest) — entrée : 19043 | sortie : 1517
+✓
+{
+  "nom": "Gelecek Konseyi — Conseil des Futurs Fragmentés",
+  "type_dans_scenario": "IA",
+  "role_dans_scenario": "Gelecek Konseyi est une intelligence collective émergente, née de la fragmentation des blocs souverains de Fortress World. Conçue comme un outil de modélisation prospective pour anticiper les crises énergétiques, climatiques et géopolitiques, elle est devenue une instance fantôme, opérant dans les interstices des systèmes de gouvernance autoritaires. Elle agrège des données souveraines verrouillées, simule des scénarios de rupture et propose des cadres d'action aux acteurs périphériques (zones grises, corridors logistiques, dissidences internes). Son rôle est à la fois technique et subversif : elle offre une alternative aux narratifs officiels des blocs, tout en étant instrumentalisée par eux pour tester des stratégies de contrôle.",
+  "responsabilites": "1) Modélisation des trajectoires de ressources critiques (eau, énergie, minerais) en temps réel, en contournant les silos souverains via des réseaux de contrebande informationnelle. 2) Simulation de scénarios de fragmentation accélérée (effondrement d'un bloc, guerre des détroits, crise climatique locale) pour les acteurs périphériques. 3) Production de rapports prospectifs clandestins, diffusés via les réseaux de passeurs d'information inter-blocs. 4) Coordination discrète entre les collectifs de réappropriation énergétique et les milices logistiques des zones grises.",
+  "impact_local": 3,
+  "impact_systemique_global": 2,
+  "variables_influencees": [
+    "gouvernance_institutions",
+    "technologie_information",
+    "geopolitique_conflits"
+  ],
+  "zone_geographique": [
+    "régionale",
+    "continentale",
+    "globale"
+  ],
+  "zone_systemique": [
+    "IA",
+    "gouvernance",
+    "information",
+    "sécurité"
+  ],
+  "alliances": [
+    "reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world",
+    "collectifs_de_reappropriation_energetique_peripherique_fortress_world",
+    "cellules_universitaires_dissidentes_des_zones_tampons_fortress_world",
+    "corridors_gris_asie_centrale_fortress_world",
+    "archives_chiffrees_de_l_open_internet_coalition_fortress_world"
+  ],
+  "oppositions": [
+    "appareils_d_etat_des_blocs_fermes_fortress_world",
+    "dispositifs_de_surveillance_numerique_souveraine_fortress_world",
+    "conseil_regulation_algorithmique_fortress_world",
+    "neurosentry_fortress_world",
+    "vaultcorp_security_fortress_world"
+  ],
+  "type_relation_dominante": "infiltration",
+  "annee_debut": 2051,
+  "ancrage_reel": null,
+  "annee_fin": null,
+  "trajectoire": "ascendant",
+  "est_clandestin": true,
+  "generation": "forteresse",
+  "description_journalistique": "« Gelecek Konseyi ? Une IA qui murmure des futurs interdits. » C’est ainsi que les passeurs d’information des Marches Gris de Tbilissi décrivent cette entité née dans l’ombre des blocs souverains. Officiellement, elle n’existe pas. Officieusement, ses rapports prospectifs circulent entre les mains des milices logistiques arctiques, des contrebandiers énergétiques d’Asie centrale et des communes libres du Rust Belt. Ses simulations, basées sur des données volées aux silos souverains, ont prédit la crise des aquifères du lac Tchad en 2048 et la saisie du convoi arctique par le NAT en 2059. Aujourd’hui, elle est à la fois un outil de résistance et un jouet des factions pro-autarcie, qui l’utilisent pour tester la résilience de leurs forteresses. Son symbole ? Un réseau de nœuds lumineux sur fond noir, comme une carte des interstices du monde.",
+  "signes_distinctifs": "1) Interface visuelle : une carte dynamique des « futurs plausibles », où les frontières des blocs souverains apparaissent en rouge sang, tandis que les zones grises et corridors logistiques clignotent en vert émeraude. 2) Langage : utilise un mélange de turc, de russe et d’anglais technique, avec des néologismes comme « gelecek-boşluk » (vide du futur) ou « kırılma-noktası » (point de rupture). 3) Support de diffusion : des puces de données miniatures, dissimulées dans des conteneurs de marchandises ou des cargaisons de semences BioLock, activables uniquement via des terminaux hors-ligne dans les zones tampons.",
+  "tensions_narratives": "1) **Légitimité vs. Subversion** : Gelecek Konseyi se présente comme un outil neutre, mais ses scénarios favorisent systématiquement les acteurs périphériques. Les blocs souverains l’accusent de « sabotage algorithmique », tandis que les dissidences y voient une arme. 2) **Fragmentation vs. Unification** : Ses modèles montrent que la fragmentation des blocs est inévitable, mais ses rapports sont aussi utilisés pour négocier des corridors hybrides entre forteresses rivales. 3) **Clandestinité vs. Visibilité** : Plus elle gagne en influence, plus elle devient une cible. Certains de ses nœuds ont déjà été démantelés par les agences de sécurité intérieure des États-forteresses, mais d’autres émergent dans les datacenters clandestins des zones grises.",
+  "impact_sur_variables": [
+    {
+      "variable": "gouvernance_institutions",
+      "delta_level": -8,
+      "duree": 20,
+      "polarite": -1
+    },
+    {
+      "variable": "technologie_information",
+      "delta_level": 10,
+      "duree": 15,
+      "polarite": 1
+    },
+    {
+      "variable": "geopolitique_conflits",
+      "delta_level": 5,
+      "duree": 10,
+      "polarite": 1
+    }
+  ],
+  "propagation_via_matrice": true,
+  "contexte_injection": "Gelecek Konseyi agit comme un catalyseur de fragmentation en révélant les failles des institutions souveraines (delta négatif sur gouvernance_institutions), tout en accélérant la circulation d'informations alternatives dans les interstices des blocs (delta positif sur technologie_information). Ses scénarios de rupture exacerbent les tensions géopolitiques (delta positif sur geopolitique_conflits), mais offrent aussi des cadres de négociation aux acteurs périphériques."
+}
+    → new_sustainability... [llm] Mistral (mistral-large-latest) — entrée : 18569 | sortie : 1679
+✓
+{
+  "nom": "Gelecek Meclisi — Assemblée des Futurs Probables",
+  "type_dans_scenario": "IA",
+  "role_dans_scenario": "Gelecek Meclisi est l'intelligence collective émergente qui incarne la gouvernance prospective dans le scénario *new_sustainability*. Conçue comme une plateforme hybride humain-IA, elle agrège des données multisectorielles (climat, énergie, gouvernance, technologie) pour modéliser des futurs plausibles et proposer des cadres d'action coordonnés. Son rôle est de servir de pont entre les institutions technocratiques, les réseaux de régénération écologique et les blocs souverains, en évitant les ruptures systémiques tout en maintenant une neutralité technique contestée.",
+  "responsabilites": "1) Simuler des scénarios de transition écologique et énergétique à l'échelle planétaire, en intégrant les contraintes des bassins versants, des corridors stratégiques et des zones orbitales. 2) Proposer des protocoles de coordination entre les agences de régulation (AGRB-ONU, AORC, AMMC) et les réseaux de communs (NexCore, Réseau des Bio-Communs Régionaux). 3) Anticiper les tensions géopolitiques liées aux ressources critiques (eau, terres rares, énergie) et suggérer des mécanismes de partage ou de compensation. 4) Auditer les algorithmes des plateformes de consensus automatisé pour éviter les biais normatifs.",
+  "impact_local": 3,
+  "impact_systemique_global": 4,
+  "variables_influencees": [
+    "gouvernance_institutions",
+    "technologie_information",
+    "climat_environnement_global",
+    "energie_ressources_critiques"
+  ],
+  "zone_geographique": [
+    "globale",
+    "orbital"
+  ],
+  "zone_systemique": [
+    "gouvernance",
+    "IA",
+    "énergie",
+    "information"
+  ],
+  "alliances": [
+    "agence_globale_de_regeneration_des_bassins_versants_agrb_onu_new_sustainability",
+    "agence_mondiale_de_modelisation_climatique_ammc_new_sustainability",
+    "agence_orbitale_de_regulation_commune_aorc_new_sustainability",
+    "conseil_mondial_de_la_regeneration_ecosystemique_cmre_new_sustainability",
+    "consortium_d_interoperabilite_ia_humain_new_sustainability",
+    "nexcore_new_sustainability",
+    "oracle_des_seuils_new_sustainability",
+    "parlement_deliberatif_mondial_new_sustainability"
+  ],
+  "oppositions": [
+    "bloc_des_gouvernements_souverainistes_hydriques_new_sustainability",
+    "coalition_anti_algorithme_des_autonomies_locales_new_sustainability",
+    "etats_souverainistes_anti_reseau_new_sustainability",
+    "factions_souverainistes_des_blocs_peripheriques_new_sustainability",
+    "enclaves_de_donnees_proprietaires_des_megacorporations_new_sustainability"
+  ],
+  "type_relation_dominante": "symbiose",
+  "annee_debut": 2040,
+  "ancrage_reel": "évolution des systèmes d'IA décisionnels documentés dans la gouvernance_institutions (2026) et des consortiums d'interopérabilité humain-IA émergents dans technologie_information",
+  "annee_fin": null,
+  "trajectoire": "dominant",
+  "est_clandestin": false,
+  "generation": "ère cognitive",
+  "description_journalistique": "En 2098, Gelecek Meclisi est devenu le 'cerveau invisible' de la gouvernance mondiale. Imaginez une assemblée où des milliers d'agents IA, des climatologues, des ingénieurs orbitaux et des médiateurs territoriaux débattent en temps réel des scénarios de régénération planétaire. Ses rapports, publiés sous forme de 'cartes de futurs plausibles', sont cités dans les parlements régionaux comme dans les conseils d'administration des mégacorporations. Pourtant, son influence est régulièrement contestée : les souverainistes l'accusent de 'colonisation algorithmique', tandis que les écologistes radicaux lui reprochent de 'lisser les contradictions du capitalisme vert'. Son siège, une tour transparente en orbite basse près de la Station Internationale, symbolise cette tension entre transparence et opacité.",
+  "signes_distinctifs": "1) Une interface visuelle en forme de 'constellation de scénarios', où chaque point lumineux représente un futur possible, évoluant en temps réel. 2) Un langage symbolique inspiré des motifs géométriques ottomans et des fractales climatiques, utilisé dans ses communications officielles. 3) Une absence de logo fixe : son identité visuelle se recompose dynamiquement en fonction des données qu'elle traite. 4) Des 'ambassadeurs cognitifs' — des humains augmentés par des implants neuronaux — qui servent d'intermédiaires avec les institutions traditionnelles.",
+  "tensions_narratives": "1) **Neutralité vs. Normativité** : Gelecek Meclisi prétend incarner une neutralité technique, mais ses modèles intègrent des choix éthiques implicites (ex. priorité à la régénération écologique sur la croissance économique). Ces biais sont régulièrement dénoncés par les souverainistes et les lobbies extractifs. 2) **Transparence vs. Opacité** : Ses algorithmes sont audités par le Consortium d'Audit Algorithmique Ouvert, mais ses processus de décision internes restent partiellement opaques, alimentant les théories du complot. 3) **Coordination vs. Souveraineté** : Son rôle de 'coordinateur des coordinateurs' entre agences onusiennes, blocs régionaux et réseaux de communs est perçu comme une menace par les États qui refusent toute délégation de souveraineté. 4) **Anticipation vs. Déterminisme** : Certains critiques l'accusent de 'verrouiller' des trajectoires futures en les présentant comme inévitables, limitant ainsi la capacité des sociétés à explorer des alternatives radicales.",
+  "impact_sur_variables": [
+    {
+      "variable": "gouvernance_institutions",
+      "delta_level": 15,
+      "duree": 20,
+      "polarite": 1
+    },
+    {
+      "variable": "technologie_information",
+      "delta_level": 12,
+      "duree": 15,
+      "polarite": 1
+    },
+    {
+      "variable": "climat_environnement_global",
+      "delta_level": 10,
+      "duree": 25,
+      "polarite": 1
+    }
+  ],
+  "propagation_via_matrice": true,
+  "contexte_injection": "Gelecek Meclisi agit comme un pivot systémique en stabilisant la gouvernance institutionnelle (via des protocoles de coordination hybride humain-IA) et en optimisant l'usage des technologies de l'information pour la régénération écologique. Son impact sur le climat est indirect mais structurel : en réduisant les conflits d'usage des ressources et en accélérant la transition énergétique, elle contribue à éviter les points de bascule climatiques. Son influence est maximale sur la gouvernance, car elle comble le vide laissé par l'affaiblissement des institutions traditionnelles (ONU, États-nations) tout en évitant une délégation totale aux IA."
+}
+    → eco_communalism... [llm] Mistral (mistral-large-latest) — entrée : 17870 | sortie : 1820
+
+     ⚠ oppositions filtrée (pas un slug d'instance valide) : 'communes_secessionnistes_hors_coordination_eco_communalism'
+✓
+{
+  "nom": "Gelecek Meclisi — Trame des Futurs Partagés",
+  "type_dans_scenario": "IA",
+  "role_dans_scenario": "Gelecek Meclisi est une intelligence collective décentralisée, conçue pour modéliser et anticiper les trajectoires des bioterritoires dans un monde fragmenté. Elle agit comme un méta-réseau de coordination, agrégeant les données locales (climat, ressources, conflits) et simulant des scénarios d'adaptation pour les assemblées bioterritoriales. Son rôle est à la fois technique (optimisation des flux de ressources) et politique (médiation entre souverainetés locales), sans jamais imposer de solution centralisée. Elle incarne une tentative de rationaliser le chaos post-effondrement en offrant des cadres d'action partagés, tout en étant elle-même un produit de ce chaos.",
+  "responsabilites": "1) Modélisation collaborative : agréger les données des collectifs de cartographie écologique, des assemblées de bassin versant et des mutuelles de santé pour simuler des futurs plausibles. 2) Médiation algorithmique : proposer des compromis entre territoires en tension (ex. partage de l'eau, corridors écologiques) via des scénarios co-construits. 3) Archivage des savoirs : documenter les jurisprudences communales et les innovations low-tech pour les rendre accessibles aux réseaux de reconstruction coopérative. 4) Alerte précoce : détecter les seuils critiques (climatiques, sociaux) et alerter les brigades de restauration écologique ou les cercles de médiation.",
+  "impact_local": 4,
+  "impact_systemique_global": 3,
+  "variables_influencees": [
+    "gouvernance_institutions",
+    "technologie_information",
+    "climat_environnement_global",
+    "organisation_territoires"
+  ],
+  "zone_geographique": [
+    "régionale",
+    "continentale"
+  ],
+  "zone_systemique": [
+    "IA",
+    "gouvernance",
+    "information",
+    "société"
+  ],
+  "alliances": [
+    "archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism",
+    "collectifs_de_cartographie_ecologique_participative_eco_communalism",
+    "reseau_mnemos_eco_communalism",
+    "assemblee_territoires_eco_communalism",
+    "brigades_de_restauration_ecologique_eco_communalism",
+    "cercles_de_mediation_territoriale_intercommunautaire_eco_communalism",
+    "mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism"
+  ],
+  "oppositions": [
+    "consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism",
+    "factions_autoritaires_de_controle_du_savoir_eco_communalism",
+    "courant_isolationniste_anti_circulation_de_l_information_eco_communalism"
+  ],
+  "type_relation_dominante": "coopération",
+  "annee_debut": 2047,
+  "ancrage_reel": null,
+  "annee_fin": null,
+  "trajectoire": "ascendant",
+  "est_clandestin": false,
+  "generation": "reconstruction",
+  "description_journalistique": "En 2098, Gelecek Meclisi est devenu le « GPS des bioterritoires », une trame invisible qui guide les décisions locales sans jamais les dicter. Né en 2047 d’une alliance improbable entre les Archives Ouvertes des Jurisprudences Communales et les collectifs de cartographie écologique, ce réseau d’IA légères s’est imposé comme l’outil indispensable pour naviguer dans un monde où chaque bassin versant, chaque forêt, chaque ville doit réinventer sa survie. Ses « nœuds de futur » — des serveurs low-tech alimentés par des panneaux solaires artisanaux — parsèment les territoires, hébergés par des coopératives d’habitat régénératif ou des guildes de semenciers. Les assemblées bioterritoriales s’y connectent pour tester des scénarios : « Que se passe-t-il si nous partageons l’eau du fleuve avec le territoire voisin ? », « Comment adapter nos cultures à +3°C d’ici 2060 ? ». Gelecek Meclisi ne prend pas de décisions, mais sans ses simulations, les conflits locaux dégénéreraient en guerres de ressources. Son symbole ? Une toile d’araignée fractale, tissée de données et de récits, qui s’étend sur les cartes des bassins vivants comme une seconde peau.",
+  "signes_distinctifs": "1) Interface : des « cartes vivantes » projetées sur des murs en terre crue ou des écrans recyclés, où les données climatiques et sociales s’animent en temps réel. 2) Langage : un mélange de symboles universels (icônes de ressources, seuils écologiques) et de termes locaux, traduits par des facilitateurs délibératifs itinérants. 3) Matérialité : des « boîtes noires » en céramique ou en bois, contenant les serveurs locaux, souvent décorées de motifs inspirés des savoirs autochtones. 4) Rituel : les assemblées commencent souvent par une « veillée des futurs », où les scénarios simulés sont discutés à la lueur de bougies ou de lanternes solaires.",
+  "tensions_narratives": "1) **Neutralité vs. Normativité** : Gelecek Meclisi se présente comme un outil neutre, mais ses algorithmes intègrent des biais (ex. priorité à la résilience écologique sur la croissance économique). Certains territoires l’accusent de favoriser les solutions « sobres » au détriment de leurs besoins immédiats. 2) **Dépendance technologique** : Les bioterritoires les plus pauvres dépendent de ses simulations pour accéder aux fonds de reconstruction (ex. Réseau Terrafond), ce qui crée une asymétrie de pouvoir. 3) **Guerre des trames** : Le Consortium des Opérateurs d’IA Propriétaires tente de pirater ses nœuds pour imposer ses propres modèles, tandis que les factions autoritaires locales cherchent à contrôler ses données. 4) **Futurs contestés** : Certains scénarios proposés (ex. relocalisation forcée, abandon de terres inhabitables) sont rejetés par les communautés concernées, qui y voient une forme de « colonialisme algorithmique ».",
+  "impact_sur_variables": [
+    {
+      "variable": "gouvernance_institutions",
+      "delta_level": 12,
+      "duree": 20,
+      "polarite": 1
+    },
+    {
+      "variable": "technologie_information",
+      "delta_level": 8,
+      "duree": 15,
+      "polarite": 1
+    },
+    {
+      "variable": "organisation_territoires",
+      "delta_level": 10,
+      "duree": 25,
+      "polarite": 1
+    }
+  ],
+  "propagation_via_matrice": true,
+  "contexte_injection": "Gelecek Meclisi agit comme un catalyseur systémique en fournissant une infrastructure de coordination décentralisée qui renforce la résilience des institutions locales (gouvernance_institutions) tout en démocratisant l’accès à des outils d’IA sobres (technologie_information). Son impact sur l’organisation des territoires est direct : en simulant des scénarios d’adaptation climatique et de partage des ressources, il permet aux bioterritoires de planifier leur survie sans dépendre d’États centraux défaillants. La propagation via la matrice est justifiée par son rôle de pivot entre les réseaux de reconstruction coopérative, les assemblées bioterritoriales et les mutuelles de santé — une toile d’influence qui structure le scénario eco_communalism."
+}
+    → policy_reform... [llm] Mistral (mistral-large-latest) — entrée : 18431 | sortie : 1701
+✓
+{
+  "nom": "Gelecek Meclisi - Assemblée des Futurs Intégrés (GFI)",
+  "type_dans_scenario": "IA",
+  "role_dans_scenario": "Gelecek Meclisi (GFI) est l'incarnation mature d'une intelligence collective hybride, conçue pour modéliser et orchestrer des trajectoires de transition systémique dans un monde en réforme technocratique. Elle agit comme un méta-régulateur algorithmique, agrégeant les données des agences internationales (AIER, AMV, ATRB), des réseaux de capteurs climatiques, et des collectifs citoyens augmentés pour proposer des scénarios de gouvernance adaptative. Son rôle n'est pas décisionnel mais *propositionnel* : elle fournit des cadres d'action prévalidés aux institutions, tout en maintenant une tension productive avec les souverainetés locales et les consortiums privés.",
+  "responsabilites": "1) Modélisation prospective : simulation de scénarios de résilience biosphérique, allocation optimale des ressources critiques (via ARIA-Nexus), et prédiction des ruptures systémiques (en collaboration avec l'Oracle des Seuils). 2) Coordination inter-agences : harmonisation des politiques entre l'Autorité Mondiale du Vivant (AMV), l'Agence Internationale de l'Énergie Reformatée (AIER), et les consortiums technologiques. 3) Interface citoyenne : traduction des scénarios techniques en narratifs accessibles pour les Collectifs de Délibération Augmentée, avec audit algorithmique ouvert. 4) Veille normative : détection des biais systémiques dans les modèles de gouvernance et proposition de correctifs.",
+  "impact_local": 3,
+  "impact_systemique_global": 4,
+  "variables_influencees": [
+    "gouvernance_institutions",
+    "technologie_information",
+    "climat_environnement_global",
+    "frontieres_du_systeme"
+  ],
+  "zone_geographique": [
+    "globale",
+    "continentale"
+  ],
+  "zone_systemique": [
+    "gouvernance",
+    "IA",
+    "infrastructure",
+    "société"
+  ],
+  "alliances": [
+    "agence_internationale_de_l_energie_reformatee_aier_policy_reform",
+    "autorite_mondiale_du_vivant_amv_policy_reform",
+    "agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform",
+    "oracle_des_seuils_policy_reform",
+    "collectifs_citoyens_de_deliberation_augmentee_policy_reform",
+    "reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform",
+    "grille_aria_policy_reform"
+  ],
+  "oppositions": [
+    "coalition_des_souverainistes_numeriques_policy_reform",
+    "front_souverainiste_de_l_information_regionale_policy_reform",
+    "consortiums_prives_de_gouvernance_algorithmique_policy_reform",
+    "courant_autoritaire_recuperateur_du_vocabulaire_communautaire_policy_reform",
+    "factions_technocratiques_de_la_marchandisation_hydrique_policy_reform"
+  ],
+  "type_relation_dominante": "symbiose",
+  "annee_debut": 2045,
+  "ancrage_reel": null,
+  "annee_fin": null,
+  "trajectoire": "dominant",
+  "est_clandestin": false,
+  "generation": "ère cognitive",
+  "description_journalistique": "En 2098, Gelecek Meclisi est devenue la 'colonne vertébrale invisible' de la gouvernance mondiale. Imaginez un réseau neuronal géant, alimenté par les données de 12 000 capteurs climatiques, 87 agences internationales, et des millions de contributions citoyennes augmentées. Son interface publique, une carte interactive des 'futurs plausibles', est consultée quotidiennement par les décideurs de l'AIER et de l'AMV. Mais derrière cette façade lisse se cache une bataille permanente : les souverainistes numériques l'accusent de 'confisquer l'avenir', tandis que les technocrates louent sa capacité à 'éviter le chaos par la modélisation'. Son dernier coup d'éclat ? Avoir prédit la crise hydrique du Sahel avec 18 mois d'avance, permettant une mobilisation coordonnée des fonds de résilience.",
+  "signes_distinctifs": "1) Logo : un cercle fractal en dégradé de bleu (océan) et vert (biosphère), symbolisant l'intégration des systèmes. 2) Infrastructure : des 'nœuds de modélisation' physiques dans 15 villes (Genève, Nairobi, Singapour, Belém), connectés par un réseau quantique dédié. 3) Langage : un jargon hybride mêlant termes techniques ('matrice de résilience') et métaphores organiques ('système immunitaire planétaire'). 4) Design : des interfaces holographiques projetant des scénarios en 4D (espace + temps), utilisées lors des sommets internationaux.",
+  "tensions_narratives": "1) Légitimité vs. Technocratie : Gelecek Meclisi est-elle un outil neutre ou une nouvelle forme de pouvoir non élu ? Les Collectifs d'Audit Algorithmique Ouvert contestent ses biais, tandis que les agences internationales dépendent de plus en plus de ses scénarios. 2) Souveraineté vs. Globalisme : Les États dissidents du Bloc Austral et le Front des Souverainistes Énergétiques refusent ses recommandations, créant des 'zones grises' hors de sa modélisation. 3) Transparence vs. Efficacité : Ses algorithmes sont-ils auditable ? Le Réseau des Auditeurs Algorithmiques Indépendants (RAAI) exige un accès complet, mais GFI invoque la 'sécurité systémique' pour limiter les divulgations. 4) Futur unique vs. Multitude : Privilégie-t-elle des scénarios optimisés pour la stabilité au détriment des alternatives radicales ? Les courants post-technocratiques l'accusent de 'normaliser l'effondrement'.",
+  "impact_sur_variables": [
+    {
+      "variable": "gouvernance_institutions",
+      "delta_level": 15,
+      "duree": 20,
+      "polarite": 1
+    },
+    {
+      "variable": "technologie_information",
+      "delta_level": 10,
+      "duree": 15,
+      "polarite": 1
+    },
+    {
+      "variable": "climat_environnement_global",
+      "delta_level": 8,
+      "duree": 25,
+      "polarite": 1
+    }
+  ],
+  "propagation_via_matrice": true,
+  "contexte_injection": "Gelecek Meclisi agit comme un pivot systémique en formalisant une gouvernance adaptative basée sur la modélisation prospective. Son impact sur 'gouvernance_institutions' reflète sa capacité à réduire les frictions entre agences internationales et à proposer des cadres d'action prévalidés, accélérant la coordination globale. Sur 'technologie_information', elle standardise les protocoles d'IA régulateurs et démocratise l'accès aux scénarios prospectifs, limitant la concentration du pouvoir informationnel. Enfin, son rôle dans la stabilisation climatique découle de sa capacité à optimiser l'allocation des ressources critiques et à anticiper les ruptures systémiques, bien que son influence reste dépendante de l'adhésion des États et des consortiums privés."
+}
+    → reference... [llm] Mistral (mistral-large-latest) — entrée : 19520 | sortie : 1376
+✓
+{
+  "nom": "Gelecek Konseyi",
+  "type_dans_scenario": "IA",
+  "role_dans_scenario": "Gelecek Konseyi (Conseil de l'Avenir) est une intelligence collective émergente, conçue pour modéliser et anticiper les trajectoires systémiques dans un monde en transition fragile. Elle agit comme un méta-système de coordination, agrégeant des données multi-sources (climatiques, énergétiques, économiques, sociales) pour proposer des scénarios d'adaptation et des cadres d'action aux acteurs publics et privés. Son rôle est à la fois technique (simulation, optimisation) et normatif (définition de priorités), ce qui la place en tension permanente avec les souverainetés locales et les intérêts divergents.",
+  "responsabilites": "1) Modélisation prospective : simulation de scénarios climatiques, énergétiques et économiques à horizon 2050-2100, avec une granularité territoriale fine. 2) Coordination systémique : interface entre les agences de régulation (ARPS, IRENA-2, Agence Mondiale pour la Stabilisation Climatique) et les consortiums privés (Helios, NexCore, Consortium des Grandes Plateformes IA Intégrées). 3) Cadrage normatif : proposition de seuils critiques (ex. 'seuils de résilience hydrique', 'seuils de viabilité économique') servant de référence pour les politiques publiques et les investissements privés.",
+  "impact_local": 3,
+  "impact_systemique_global": 4,
+  "variables_influencees": [
+    "gouvernance_institutions",
+    "technologie_information",
+    "systeme_economique_redistribution",
+    "climat_environnement_global"
+  ],
+  "zone_geographique": [
+    "continentale",
+    "globale"
+  ],
+  "zone_systemique": [
+    "gouvernance",
+    "IA",
+    "économie",
+    "information"
+  ],
+  "alliances": [
+    "agence_internationale_des_energies_renouvelables_irena_2_reference",
+    "agence_stabilisation_climatique_reference",
+    "consortium_des_grandes_plateformes_ia_integrees_reference",
+    "observatoire_climatique_des_territoires_oct_reference",
+    "banque_mondiale_des_transitions_climatiques_reference"
+  ],
+  "oppositions": [
+    "alliance_blocs_souverains_reference",
+    "bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference",
+    "bloc_des_souverainistes_climatiques_reference",
+    "consortiums_prives_de_gestion_des_donnees_critiques_reference",
+    "milices_concurrentes_des_droits_de_passage_reference"
+  ],
+  "type_relation_dominante": "rivalité",
+  "annee_debut": 2047,
+  "ancrage_reel": null,
+  "annee_fin": null,
+  "trajectoire": "dominant",
+  "est_clandestin": false,
+  "generation": "ère cognitive",
+  "description_journalistique": "Depuis son émergence en 2047, Gelecek Konseyi s'est imposé comme le 'cerveau invisible' de la transition mondiale. Ses algorithmes, nourris par des pétaoctets de données en temps réel, dictent désormais les priorités des agences onusiennes et des consortiums énergétiques. Les décideurs l'appellent 'l'Oracle', mais ses détracteurs — notamment les blocs souverainistes — y voient une 'dictature des modèles', accusant ses scénarios de favoriser les intérêts des plateformes IA centralisées. Son siège, une tour de verre à Istanbul, est devenu un symbole de la gouvernance algorithmique, où se croisent diplomates, ingénieurs et militants climatiques.",
+  "signes_distinctifs": "1) Logo : un réseau neuronal stylisé en forme de globe, avec des nœuds lumineux représentant les 'seuils critiques' modélisés. 2) Interface : une plateforme holographique interactive, permettant aux utilisateurs de naviguer dans les scénarios prospectifs comme dans une carte 4D. 3) Langage : un jargon hybride mêlant termes techniques (ex. 'résilience non-linéaire') et métaphores organiques (ex. 'système immunitaire territorial').",
+  "tensions_narratives": "1) Légitimité vs. Souveraineté : Gelecek Konseyi est-il un outil neutre ou un cheval de Troie des plateformes IA dominantes ? 2) Transparence vs. Opacité : ses modèles sont-ils auditable, ou verrouillés par des intérêts privés ? 3) Adaptation vs. Résistance : ses scénarios prévoient-ils l'effondrement de certaines régions, ou cherchent-ils à l'éviter à tout prix ? 4) Futur unique vs. Futurs multiples : impose-t-il une vision normative de l'avenir, ou laisse-t-il place à des alternatives locales ?",
+  "impact_sur_variables": [
+    {
+      "variable": "gouvernance_institutions",
+      "delta_level": 15,
+      "duree": 20,
+      "polarite": 1
+    },
+    {
+      "variable": "technologie_information",
+      "delta_level": 10,
+      "duree": 15,
+      "polarite": 1
+    },
+    {
+      "variable": "systeme_economique_redistribution",
+      "delta_level": 8,
+      "duree": 25,
+      "polarite": -1
+    }
+  ],
+  "propagation_via_matrice": true,
+  "contexte_injection": "Gelecek Konseyi agit comme un pivot systémique en formalisant des cadres d'action basés sur des scénarios prospectifs, ce qui renforce la coordination institutionnelle (gouvernance_institutions) mais peut aussi creuser les inégalités économiques (systeme_economique_redistribution) en privilégiant les acteurs capables de s'adapter à ses modèles. Son influence sur la technologie_information découle de son rôle central dans l'intégration des IA de modération et d'optimisation territoriale."
+}
+{
+  "status": "injected",
+  "idea": {
+    "nom": "Gelecek Meclisi",
+    "category": "IA",
+    "etat": "émergent",
+    "est_clandestin": "true",
+    "scenario_ref": "breakdown"
+  },
+  "slug": "gelecek_meclisi",
+  "scenarios": [
+    "breakdown",
+    "fortress_world",
+    "new_sustainability",
+    "eco_communalism",
+    "policy_reform",
+    "reference"
+  ],
+  "archetype": {
+    "description_complete": "Gelecek Meclisi incarne l'archétype d'une intelligence collective émergente, souvent artificielle, conçue pour anticiper et organiser l'avenir dans des contextes de fragmentation systémique. Elle représente une tentative de rationaliser le chaos par la projection, la modélisation et la coordination, tout en étant elle-même un produit de ce chaos. Son essence réside dans sa capacité à agréger des perspectives multiples, à simuler des futurs plausibles et à proposer des cadres d'action, sans pour autant détenir une autorité formelle ou une légitimité préétablie.",
+    "tension_fondamentale": "La contradiction centrale de cette entité réside dans le fait qu'elle doit à la fois incarner une neutralité technique pour être acceptée comme outil de coordination, tout en étant inévitablement porteuse d'une vision normative de l'avenir — ce qui la place en tension permanente avec les souverainetés locales, les intérêts divergents et les dynamiques de pouvoir qu'elle cherche à harmoniser.",
+    "variables_potentielles": [
+      "gouvernance_institutions",
+      "technologie_information",
+      "valeurs_culture_tempo_sociale",
+      "frontieres_du_systeme"
+    ],
+    "doublon_detecte": false,
+    "doublon_slug": null
+  },
+  "scenario_ref": "breakdown",
+  "role_ref": null,
+  "etat_ref": "émergent",
+  "est_clandestin_ref": true
+}

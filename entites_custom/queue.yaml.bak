@@ -1,7 +1,6 @@
 queue:
-  - nom: "Test Zone Hint"
-    category: organisation
-    role: "Organisation de test pour vérifier la factorisation"
-    etat: actif
-    scenario_ref: breakdown
-    zone_hint: "Amazonie"
+- nom: gelecek_meclisi
+  category: hybride
+  etat: émergent
+  est_clandestin: 'true'
+  scenario_ref: breakdown

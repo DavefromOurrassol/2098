@@ -53,10 +53,8 @@ oppositions:
 type_relation_dominante: coopération
 
 annee_debut: 2038
-annee_fin: 
+annee_fin: 2098
 
-etat_temporel: transformé
-age_historique: mature
 generation: ère cognitive
 
 injection:
@@ -77,6 +75,9 @@ tensions_narratives: >
   La tension fondamentale entre bien commun et actif stratégique n'a pas disparu — elle s'est intériorisée. Une faction dirigeante au sein d'Helios milite discrètement pour une renégociation des licences communes lors du renouvellement du traité de 2101, cherchant à récupérer la souveraineté tarifaire sur les zones à forte densité énergétique. Par ailleurs, la montée des réseaux micro-énergétiques communautaires remet en question la pertinence même d'un acteur centralisé, aussi régulé soit-il. Enfin, la question de qui contrôle réellement les algorithmes d'optimisation IA d'Helios — et donc qui décide des priorités d'allocation en cas de crise — reste délibérément opaque, malgré les audits officiels.
 
 date_creation: 2026-06-15
+trajectoire: transformé
+est_clandestin: false
+
 ---
 
 # Consortium Helios — Division Biens Communs Énergétiques

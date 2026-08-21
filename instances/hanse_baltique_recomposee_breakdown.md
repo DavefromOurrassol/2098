@@ -35,7 +35,7 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
-- autorite_passage_arctique_breakdown
+- arctic_passage_authority_breakdown
 - enclaves_industrielles_de_bergen_troms_breakdown
 - factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
 - grandes_lacs_compact_eau_breakdown
@@ -55,8 +55,6 @@ oppositions:
 type_relation_dominante: coopération
 annee_debut: 2041
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -86,6 +84,9 @@ tensions_narratives: La Hanse est déchirée entre sa vocation marchande — qui
   de l'adhésion des enclaves finlandaises et des ruines institutionnelles scandinaves
   crée des fractures internes entre un bloc expansionniste et un bloc conservateur.
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Hanse Baltique Recomposée
@@ -113,7 +114,7 @@ La Hanse est déchirée entre sa vocation marchande — qui exige neutralité et
 
 ## Relations
 **Alliés :**
-- [[autorite_passage_arctique_breakdown]]
+- [[arctic_passage_authority_breakdown]]
 - [[enclaves_industrielles_de_bergen_troms_breakdown]]
 - [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]]
 - [[grandes_lacs_compact_eau_breakdown]]

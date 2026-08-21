@@ -15,7 +15,7 @@ PRINCIPE
        bible géographique, registre des événements
      - Appelle le LLM pour générer tous les champs placeholder
      - Valide mécaniquement le résultat (localisation.zone, type_lieu,
-       impact_local/global [0-5], variables_influencees, etat_temporel,
+       impact_local/global [0-5], variables_influencees, trajectoire,
        zone_geographique, alliances/oppositions)
      - En cas d'échec de validation, rappelle le LLM (max 2 retries)
      - Écrit la fiche enrichie sur disque (statut: officialise_enrichi)
@@ -118,9 +118,9 @@ VALID_VARS = [
     "systemes_productifs_travail",
 ]
 
-VALID_ETAT_TEMPOREL = [
-    "actif", "disparu", "transformé", "clandestin", "historique", "mythifié"
-]
+# VALID_ETAT_TEMPOREL / VALID_AGE_HISTORIQUE supprimées (chantier
+# trajectoire, 9 août 2026) — c'étaient déjà des constantes mortes ici,
+# jamais référencées ailleurs dans ce fichier.
 
 VALID_ZONES_GEOGRAPHIQUES = [
     "locale", "urbaine", "nationale", "régionale", "continentale", "globale", "orbital",
@@ -128,12 +128,16 @@ VALID_ZONES_GEOGRAPHIQUES = [
 
 VALID_TYPE_LIEU = ["ville", "region", "infrastructure", "site_strategique"]
 
-VALID_AGE_HISTORIQUE = [
-    "émergent", "marginal", "ascendant", "dominant",
-    "mature", "déclinant", "résiduel", "mythifié"
+# NOTE (9 août 2026) : liste alignée sur les 7 valeurs réelles utilisées
+# partout ailleurs dans le pipeline (officialize_alliances.py, schéma JSON
+# de generate_instances.py/create_entities_and_instances.py). Corrigée par
+# prudence — constante morte ici (jamais câblée à un vrai check dans ce
+# fichier, generation n'y est que lu comme contexte pour le LLM), mais
+# autant qu'elle soit juste si elle est un jour reliée à une validation.
+VALID_GENERATION = [
+    "pré-crise", "transition", "post-effondrement", "IA-native",
+    "forteresse", "reconstruction", "ère cognitive",
 ]
-
-VALID_GENERATION = ["fondateur", "transition", "natif", "post-effondrement"]
 
 
 # ---------------------------------------------------------------------------
@@ -384,8 +388,8 @@ def build_enrich_prompt(fiche, scenario, entite_data, scenario_ctx, var_levels, 
     type_dans_scenario = fm.get("type_dans_scenario", "")
     annee_debut = fm.get("annee_debut", 2026)
     annee_fin = fm.get("annee_fin", "")
-    etat_temporel = fm.get("etat_temporel", "actif")
-    age_historique = fm.get("age_historique", "")
+    trajectoire = fm.get("trajectoire", "mature")
+    est_clandestin = fm.get("est_clandestin", False)
     generation = fm.get("generation", "")
     zone_geographique = fm.get("zone_geographique", [])
 
@@ -408,8 +412,8 @@ type_dans_scenario: {type_dans_scenario}
 scenario: {scenario}
 role_dans_scenario: {role}
 variables_influencees: {variables}
-etat_temporel: {etat_temporel}
-age_historique: {age_historique}
+trajectoire: {trajectoire}
+est_clandestin: {est_clandestin}
 generation: {generation}
 annee_debut: {annee_debut}
 annee_fin: {annee_fin or "(non renseigné)"}
@@ -492,11 +496,11 @@ RÈGLES IMPÉRATIVES :
 - IMPORTANT : chaque slug dans alliances/oppositions DOIT obligatoirement se terminer par _{scenario} (ex: mon_entite_{scenario}). Ne jamais omettre ce suffixe.
 - zone_geographique : liste avec au moins une valeur parmi les 7 valeurs autorisées
 - Tous les textes en français, cohérents avec l'univers 2098 et le scénario {scenario}
-- Respecter l'etat_temporel, l'age_historique et la generation existants
+- Respecter la trajectoire, est_clandestin et la generation existants
 - RÈGLE CHRONOLOGIE (ajoutée le 7 août 2026, audit point 1.2) : la fiche
   porte actuellement annee_debut={annee_debut}. C'est souvent une valeur de
   création jamais retouchée (2026 par défaut), pas nécessairement une donnée
-  narrative réelle. Réexamine-la à la lumière de age_historique={age_historique}
+  narrative réelle. Réexamine-la à la lumière de trajectoire={trajectoire}
   et generation={generation} ci-dessus : si 2026 est déjà cohérent avec un
   profil "émergent"/"transition", confirme-la telle quelle. Si le profil est
   "résiduel"/"post-effondrement"/"mythifié"/"déclinant", propose une année
@@ -506,7 +510,7 @@ RÈGLES IMPÉRATIVES :
   (rupture, crise, bascule cohérente avec son role_dans_scenario), utilise
   l'année de CETTE ligne plutôt qu'une estimation qualitative libre — c'est
   la source la plus fiable disponible. Ne change jamais annee_debut sans
-  raison tirée de age_historique/generation/etat_temporel ou d'une ligne du
+  raison tirée de trajectoire/generation ou d'une ligne du
   registre — ce n'est pas un champ à randomiser. annee_fin reste null sauf
   raison narrative explicite de dater une fin.
 - CONSIGNE ANCRAGE RÉEL (ajoutée le 7 août 2026, audit point 1.2) : si tu

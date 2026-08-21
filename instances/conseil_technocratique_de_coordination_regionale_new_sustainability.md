@@ -58,8 +58,6 @@ oppositions:
 type_relation_dominante: dépendance
 annee_debut: 2030
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -98,6 +96,9 @@ localisation:
   zone: centre_institutionnel_geneve
   lieu: Genève / Nairobi / Barcelone (siège tournant)
   type_lieu: site_strategique
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Conseil Technocratique de Coordination Régionale

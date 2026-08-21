@@ -44,7 +44,7 @@ alliances:
 - mouvement_des_communes_du_rust_belt_eco_communalism
 - mouvement_racines_vivantes_eco_communalism
 - oracle_des_seuils_eco_communalism
-- rede_paulista_de_distribuic_o_algor_tmica_eco_communalism
+- rede_paulista_de_distribuicao_algoritmica_eco_communalism
 - reseau_assemblees_fennoscandien_eco_communalism
 - reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism
 - reseau_terrafond_bassins_eco_communalism
@@ -58,8 +58,6 @@ oppositions:
 type_relation_dominante: symbiose
 annee_debut: 2038
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -95,6 +93,9 @@ localisation:
   zone: null
   lieu: null
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Conseils de Bassin Versant Éco-Communalistes
@@ -134,7 +135,7 @@ La tension centrale qui traverse ces conseils oppose la logique des bassins vers
 - [[mouvement_des_communes_du_rust_belt_eco_communalism]]
 - [[mouvement_racines_vivantes_eco_communalism]]
 - [[oracle_des_seuils_eco_communalism]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_eco_communalism]]
+- [[rede_paulista_de_distribuicao_algoritmica_eco_communalism]]
 - [[reseau_assemblees_fennoscandien_eco_communalism]]
 - [[reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism]]
 - [[reseau_terrafond_bassins_eco_communalism]]

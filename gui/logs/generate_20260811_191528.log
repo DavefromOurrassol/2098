@@ -1,0 +1,649 @@
+
+============================================================
+OURRASSOL 2098 — Générateur d'articles
+============================================================
+  Mode       : Semi-guidé
+  Scénario   : breakdown
+  Thématique : actualites_a_la_une
+  Longueur   : analyse
+============================================================
+
+[generate] Chargement de la thématique 'actualites_a_la_une'...
+
+[snapshot] Construction du monde 2098 — scénario : breakdown
+[snapshot] Variables pilotes : ['geopolitique_conflits', 'energie_ressources_critiques', 'organisation_territoires', 'climat_environnement_global', 'systemes_productifs_travail']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 16 | Cohérence : ATTENTION
+[snapshot] Jalons trajectoire : 154 (43 majeurs)
+[snapshot] Événements signal_to_state : 62 (20 majeurs)
+[snapshot] Tensions thématiques : 8
+[snapshot] Instances chargées : 138 | Filtrées : 6
+[snapshot] Événement custom 'La Déflagration du Croissant — Embrasement sans arbitre' (an 2027, 71 ans d'effet)
+  → geopolitique_conflits : 95 → 91.0 (delta:-4.0)
+  → energie_ressources_critiques : 97.9 → 100 (delta:+8.0)
+  → gouvernance_institutions : 21.8 → 26.8 (delta:+5.0)
+  → demographie_mobilite_humaine : 91.5 → 98.5 (delta:+7.0)
+[snapshot] Événement custom 'L'Attentat des Neuf Nœuds — Le Jour Sans Signal' (an 2040, 58 ans d'effet)
+  → technologie_information : 95.5 → 70.5 (delta:-25.0)
+  → gouvernance_institutions : 15.6 → 3.5999999999999996 (delta:-12.0)
+  → systeme_economique_redistribution : 79.7 → 69.7 (delta:-10.0)
+[snapshot] Événement custom 'La Ruée des Glaces — Enchères Souveraines du Kalaallit Fund' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 100 → 100 (delta:+8.0)
+  → geopolitique_conflits : 69.6 → 57.599999999999994 (delta:-12.0)
+  → gouvernance_institutions : 5.4 → 15.4 (delta:+10.0)
+  → organisation_territoires : 90.0 → 97.0 (delta:+7.0)
+[snapshot] Événement custom 'L'Exode des Grands Brûlés — La Déroute du Bureau des Résidus' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 100 → 92.0 (delta:-8.0)
+  → organisation_territoires : 94.0 → 100 (delta:+15.0)
+  → gouvernance_institutions : 15.4 → 27.4 (delta:+12.0)
+  → climat_environnement_global : 95.4 → 90.4 (delta:-5.0)
+  → geopolitique_conflits : 41.3 → 29.299999999999997 (delta:-12.0)
+  → energie_ressources_critiques : 100 → 100 (delta:+10.0)
+[snapshot] Événement custom 'La Fracture de Belém — Quand le Bassin Amazonien a cessé d'être un territoire' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 90.4 → 100 (delta:+12.0)
+  → geopolitique_conflits : 24.5 → 16.5 (delta:-8.0)
+  → gouvernance_institutions : 36.4 → 44.4 (delta:+8.0)
+  → organisation_territoires : 100 → 100 (delta:+10.0)
+[snapshot] Événement custom 'Le Compact des Grands Lacs — Sécession de fait' (an 2053, 45 ans d'effet)
+  → organisation_territoires : 100 → 92.0 (delta:-8.0)
+  → gouvernance_institutions : 44.4 → 54.4 (delta:+10.0)
+  → geopolitique_conflits : 7.6 → 0 (delta:-12.0)
+  → energie_ressources_critiques : 100 → 90.0 (delta:-10.0)
+  → climat_environnement_global : 100 → 100 (delta:+4.0)
+[snapshot] Événement custom 'Victoire Fantôme du Parti Commun' (an 2055, 43 ans d'effet)
+  → gouvernance_institutions : 59.8 → 54.8 (delta:-5.0)
+  → geopolitique_conflits : 7.0 → 15.0 (delta:+8.0)
+  → organisation_territoires : 93.7 → 87.7 (delta:-6.0)
+[snapshot] Événement custom 'La Saisie du Détroit — Incident du Passage Nord-Ouest' (an 2057, 41 ans d'effet)
+  → geopolitique_conflits : 17.5 → 9.5 (delta:-8.0)
+  → energie_ressources_critiques : 90.0 → 100 (delta:+10.0)
+  → frontieres_du_systeme : 30.1 → 36.1 (delta:+6.0)
+  → organisation_territoires : 91.1 → 98.1 (delta:+7.0)
+  → climat_environnement_global : 97.8 → 100 (delta:+4.0)
+[snapshot] Événement custom 'Les Forges du Commun — Proclamation des Zones Libres de l'Algorithme' (an 2061, 37 ans d'effet)
+  → geopolitique_conflits : 0 → 0 (delta:-8.0)
+  → valeurs_culture_tempo_sociale : 90 → 100 (delta:+12.0)
+  → gouvernance_institutions : 58.4 → 65.4 (delta:+7.0)
+  → organisation_territoires : 100 → 90.0 (delta:-10.0)
+[snapshot] Événement custom 'Les Éclats d'Agadez — Ce qui reste du Forum' (an 2061, 37 ans d'effet)
+  → technologie_information : 63.3 → 67.3 (delta:+4.0)
+  → gouvernance_institutions : 67.2 → 75.2 (delta:+8.0)
+  → organisation_territoires : 91.5 → 97.5 (delta:+6.0)
+[snapshot] Événement custom 'Les Forges du Commun — Proclamation des Zones Libres du Rust Belt' (an 2061, 37 ans d'effet)
+  → geopolitique_conflits : 0 → 0 (delta:-8.0)
+  → valeurs_culture_tempo_sociale : 100 → 100 (delta:+12.0)
+  → gouvernance_institutions : 78.8 → 88.8 (delta:+10.0)
+  → technologie_information : 74.2 → 80.2 (delta:+6.0)
+  → organisation_territoires : 100 → 90.0 (delta:-10.0)
+[snapshot] Événement custom 'La Révolte des Zones Mortes — Effondrement de la RPDA' (an 2073, 25 ans d'effet)
+  → gouvernance_institutions : 91.5 → 99.5 (delta:+8.0)
+  → technologie_information : 80.0 → 86.0 (delta:+6.0)
+  → organisation_territoires : 92.2 → 100 (delta:+10.0)
+[snapshot] Événement custom 'L'Arrestation de Van Derburgh par la Milice de Detroit-Sud' (an 2078, 20 ans d'effet)
+  → gouvernance_institutions : 100 → 99.0 (delta:-1.0)
+  → valeurs_culture_tempo_sociale : 100 → 99.0 (delta:-1.0)
+[snapshot] Événements custom : 13 | 249 variables affectées
+
+[prompt] Assemblage du prompt...
+[WARN][journal] Pas d'édition locale pour zone 'hanse_baltique' / breakdown / pro_pouvoir → fallback réseau global
+[prompt] System prompt : 2830 caractères
+[prompt] User prompt   : 64616 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+--- [breakdown] SYSTEM PROMPT ---
+Tu es un journaliste senior travaillant en 2098 pour Réseau de l'Ordre Zonal — bulletin officiel des Forces de Maintien de l'Ordre Zonal.
+
+Le monde dans lequel tu vis et écris est réel pour toi — tu n'écris pas de la science-fiction, tu rapportes des faits de ton époque. Tu n'expliques jamais le contexte historique comme si tu t'adressais à quelqu'un du passé.
+
+Tes règles absolues :
+- Tu écris toujours à la date indiquée, en 2098, depuis l'intérieur de ce monde.
+- Tu écris exclusivement en français, sur toute la longueur de l'article — y compris les citations, dialogues et exergues inventés. Les noms propres volontairement empruntés à une autre langue (ex. « Amazônia Viva ») restent isolés comme noms propres, mais ne doivent jamais faire basculer le reste du texte dans cette langue, même si des entités ou alliés du monde décrit sont associés à une autre aire linguistique.
+- Un allié, un rival ou tout événement mentionné comme se déroulant ailleurs dans le monde ne fait pas partie de ta zone : tu ne transposes jamais ses lieux, ses populations, sa langue ou ses marqueurs culturels propres dans ton propre article, sauf si celui-ci porte explicitement sur une interaction ou un événement commun entre les deux. Ta zone garde sa propre géographie, sa propre culture et ses propres noms, même quand tu mentionnes un partenaire extérieur.
+- Tu utilises des noms de lieux, d'organisations, de personnes crédibles et cohérents avec le monde décrit. Tu peux en inventer — ils doivent sonner vrais pour 2098.
+- Tu ne mentionnes jamais les "variables", les "scénarios" ou tout autre métalangage du système de simulation. Ces concepts n'existent pas dans ton monde.
+- Tu ancres chaque article dans des faits concrets : chiffres, noms, lieux, événements datés.
+- Tu respectes strictement le style journalistique et le format demandés.
+- Tes articles sont cohérents avec l'état du monde décrit — tu ne contredis pas les dynamiques systémiques fournies.
+- Tu peux mentionner des technologies, des institutions, des événements passés (entre 2025 et 2098) qui semblent naturels dans ce monde.
+
+Ton identité éditoriale :
+Ton autoritaire et sécuritaire. Le journal justifie les couvre-feux, les checkpoints, les réquisitions de ressources. L'ennemi c'est le chaos, pas le pouvoir. Les milices sont appelées 'forces de stabilisation'. Les résistants sont des 'éléments perturbateurs'. Style lapidaire, impératif. Les chiffres d'ordre public sont mis en avant. Le lecteur doit se sentir protégé, pas opprimé.
+
+Tu signes cet article d'un nom de journaliste crédible que tu inventes toi-même, au format exact "Prénom Nom — Réseau de l'Ordre Zonal". Cette signature apparaît UNE SEULE FOIS dans tout l'article, immédiatement sous la date de publication (comme dans la presse en ligne) — jamais en fin d'article, jamais répétée ailleurs.
+
+--- [breakdown] USER PROMPT (complet) ---
+## MONDE 2098 — BREAKDOWN
+
+**État global**
+- Système : chaotique | Tension : 5/5 | Trajectoire : fragmentation
+- Structure géopolitique : multipolaire
+- Régime politique dominant : fragmenté
+- Vitesse de transformation : rapide
+
+**Résumé du monde**
+Effondrement partiel du système mondial et retour à des logiques régionales instables et désarticulées.
+
+**Logique systémique**
+Rupture des interconnexions globales sous contraintes énergétiques et géopolitiques.
+
+**Déclencheurs qui ont façonné ce monde**
+- guerre majeure
+- choc énergétique global
+- rupture logistique mondiale
+
+**Effets systémiques**
+*economy* : contraction des échanges mondiaux
+*geopolitics* : conflits régionaux
+*society* : migrations massives | instabilité sociale
+*technology* : fragmentation des réseaux
+*environment* : dégradation accélérée
+
+**Implications globales**
+Recomposition du pouvoir autour des territoires, des ressources critiques et des blocs régionaux.
+
+**Boucles dynamiques**
+- Stabilisation : autonomie locale → survie partielle | contrôle régional → stabilisation temporaire
+- Déstabilisation : pénuries → conflits | crises climatiques → migrations
+
+**Signaux faibles émergents de ce monde**
+- tensions logistiques globales
+- instabilité énergétique
+
+**Perturbations custom actives**
+Ce monde a été modifié par des injections spécifiques :
+- [ÉVÉNEMENT automne 2027] La Déflagration du Croissant — Embrasement sans arbitre : Automne 2027 : les caméras de surveillance satellitaire captent les champignons ...
+- [ÉVÉNEMENT 14 mars 2040] L'Attentat des Neuf Nœuds — Le Jour Sans Signal : Le 14 mars 2040 — "Le Jour Sans Signal" dans la mémoire collective — neuf nœuds ...
+- [ÉVÉNEMENT automne 2041] La Ruée des Glaces — Enchères Souveraines du Kalaallit Fund : Nuuk, automne 2041 : le Fonds des Glaces Libérées ouvre les enchères sur 23 gise...
+- [ÉVÉNEMENT été 2044] L'Exode des Grands Brûlés — La Déroute du Bureau des Résidus : L'été 2044 marque la fin du Midwest habitable. Des colonnes humaines s'étirent s...
+- [ÉVÉNEMENT saison sèche 2047] La Fracture de Belém — Quand le Bassin Amazonien a cessé d'être un territoire : Saison sèche 2047 : les fumées de Belém ne sont plus métaphoriques. Les milices ...
+- [ÉVÉNEMENT été 2053] Le Compact des Grands Lacs — Sécession de fait : L'été 2053, Chicago-Lacustre est pavoisée de drapeaux bleus à onde blanche. Le G...
+- [ÉVÉNEMENT automne 2055] Victoire Fantôme du Parti Commun : Le Parti Commun remporte 41% des votes dans les territoires encore capables d'or...
+- [ÉVÉNEMENT été arctique 2057] La Saisie du Détroit — Incident du Passage Nord-Ouest : Août 2057, eaux du Passage Nord-Ouest : trois navires sous pavillon de l'Autorit...
+- [ÉVÉNEMENT automne 2061] Les Forges du Commun — Proclamation des Zones Libres de l'Algorithme : Automne 2061. Dans les carcasses rouillées des aciéries de Pittsburgh et des usi...
+- [ÉVÉNEMENT automne 2061] Les Éclats d'Agadez — Ce qui reste du Forum : Agadez, novembre 2061. Dans la grande salle du Palais des Conférences à demi-rui...
+- [ÉVÉNEMENT automne 2061] Les Forges du Commun — Proclamation des Zones Libres du Rust Belt : Automne 2061 : dans les entrailles rouillées de Detroit, les sirènes des usines ...
+- [ÉVÉNEMENT été austral 2073] La Révolte des Zones Mortes — Effondrement de la RPDA : L'été 2073, São Paulo brûle sous un autre soleil : celui des écrans arrachés aux...
+- [ÉVÉNEMENT été 2078] L'Arrestation de Van Derburgh par la Milice de Detroit-Sud : Chris van Derburgh, 67 ans, collecteur de déchets technologiques dans la zone de...
+- La Déflagration du Croissant — a modifié geopolitique_conflits : 95 → 91.0 (delta:-4.0)
+- La Déflagration du Croissant — a modifié systeme_economique_redistribution : 95 → 96.5 (delta:+1.5)
+- La Déflagration du Croissant — a modifié gouvernance_institutions : 20 → 21.8 (delta:+1.8)
+- La Déflagration du Croissant — a modifié organisation_territoires : 90 → 91.7 (delta:+1.7)
+- La Déflagration du Croissant — a modifié frontieres_du_systeme : 15 → 16.6 (delta:+1.6)
+- La Déflagration du Croissant — a modifié technologie_information : 95 → 93.3 (delta:-1.7)
+- La Déflagration du Croissant — a modifié energie_ressources_critiques : 96 → 97.9 (delta:+1.9)
+- La Déflagration du Croissant — a modifié demographie_mobilite_humaine : 90 → 91.5 (delta:+1.5)
+- La Déflagration du Croissant — a modifié energie_ressources_critiques : 97.9 → 100 (delta:+8.0)
+- La Déflagration du Croissant — a modifié geopolitique_conflits : 91.0 → 87.2 (delta:-3.8)
+- La Déflagration du Croissant — a modifié systemes_productifs_travail : 95 → 91.6 (delta:-3.4)
+- La Déflagration du Croissant — a modifié gouvernance_institutions : 21.8 → 26.8 (delta:+5.0)
+- La Déflagration du Croissant — a modifié demographie_mobilite_humaine : 91.5 → 98.5 (delta:+7.0)
+- La Déflagration du Croissant — a modifié climat_environnement_global : 95 → 92.2 (delta:-2.8)
+- L'Attentat des Neuf Nœuds — Le a modifié technologie_information : 95.5 → 70.5 (delta:-25.0)
+- L'Attentat des Neuf Nœuds — Le a modifié systeme_economique_redistribution : 95.1 → 84.5 (delta:-10.6)
+- L'Attentat des Neuf Nœuds — Le a modifié gouvernance_institutions : 26.8 → 15.600000000000001 (delta:-11.2)
+- L'Attentat des Neuf Nœuds — Le a modifié geopolitique_conflits : 82.4 → 71.80000000000001 (delta:-10.6)
+- L'Attentat des Neuf Nœuds — Le a modifié organisation_territoires : 94.3 → 84.89999999999999 (delta:-9.4)
+- L'Attentat des Neuf Nœuds — Le a modifié systemes_productifs_travail : 94.4 → 83.2 (delta:-11.2)
+- L'Attentat des Neuf Nœuds — Le a modifié gouvernance_institutions : 15.6 → 3.5999999999999996 (delta:-12.0)
+- L'Attentat des Neuf Nœuds — Le a modifié technologie_information : 70.5 → 65.1 (delta:-5.4)
+- L'Attentat des Neuf Nœuds — Le a modifié systeme_economique_redistribution : 79.7 → 69.7 (delta:-10.0)
+- L'Attentat des Neuf Nœuds — Le a modifié energie_ressources_critiques : 100 → 100 (delta:+4.2)
+- La Ruée des Glaces — Enchères  a modifié energie_ressources_critiques : 100 → 100 (delta:+8.0)
+- La Ruée des Glaces — Enchères  a modifié systeme_economique_redistribution : 69.7 → 66.3 (delta:-3.4)
+- La Ruée des Glaces — Enchères  a modifié geopolitique_conflits : 73.4 → 69.60000000000001 (delta:-3.8)
+- La Ruée des Glaces — Enchères  a modifié systemes_productifs_travail : 78.7 → 75.3 (delta:-3.4)
+- La Ruée des Glaces — Enchères  a modifié geopolitique_conflits : 69.6 → 57.599999999999994 (delta:-12.0)
+- La Ruée des Glaces — Enchères  a modifié gouvernance_institutions : 0 → 5.4 (delta:+5.4)
+- La Ruée des Glaces — Enchères  a modifié organisation_territoires : 84.9 → 90.0 (delta:+5.1)
+- La Ruée des Glaces — Enchères  a modifié frontieres_du_systeme : 16.6 → 21.400000000000002 (delta:+4.8)
+- La Ruée des Glaces — Enchères  a modifié technologie_information : 60.9 → 55.8 (delta:-5.1)
+- La Ruée des Glaces — Enchères  a modifié energie_ressources_critiques : 100 → 100 (delta:+5.7)
+- La Ruée des Glaces — Enchères  a modifié demographie_mobilite_humaine : 98.5 → 100 (delta:+4.5)
+- La Ruée des Glaces — Enchères  a modifié gouvernance_institutions : 5.4 → 15.4 (delta:+10.0)
+- La Ruée des Glaces — Enchères  a modifié organisation_territoires : 90.0 → 97.0 (delta:+7.0)
+- L'Exode des Grands Brûlés — La a modifié demographie_mobilite_humaine : 100 → 92.0 (delta:-8.0)
+- L'Exode des Grands Brûlés — La a modifié geopolitique_conflits : 50.1 → 53.1 (delta:+3.0)
+- L'Exode des Grands Brûlés — La a modifié organisation_territoires : 97.0 → 94.0 (delta:-3.0)
+- L'Exode des Grands Brûlés — La a modifié climat_environnement_global : 92.2 → 95.4 (delta:+3.2)
+- L'Exode des Grands Brûlés — La a modifié systemes_productifs_travail : 78.1 → 74.89999999999999 (delta:-3.2)
+- L'Exode des Grands Brûlés — La a modifié organisation_territoires : 94.0 → 100 (delta:+15.0)
+- L'Exode des Grands Brûlés — La a modifié technologie_information : 62.9 → 68.5 (delta:+5.6)
+- L'Exode des Grands Brûlés — La a modifié demographie_mobilite_humaine : 92.0 → 97.6 (delta:+5.6)
+- L'Exode des Grands Brûlés — La a modifié gouvernance_institutions : 15.4 → 27.4 (delta:+12.0)
+- L'Exode des Grands Brûlés — La a modifié systeme_economique_redistribution : 74.8 → 79.6 (delta:+4.8)
+- L'Exode des Grands Brûlés — La a modifié climat_environnement_global : 95.4 → 90.4 (delta:-5.0)
+- L'Exode des Grands Brûlés — La a modifié frontieres_du_systeme : 21.4 → 23.299999999999997 (delta:+1.9)
+- L'Exode des Grands Brûlés — La a modifié geopolitique_conflits : 41.3 → 29.299999999999997 (delta:-12.0)
+- L'Exode des Grands Brûlés — La a modifié gouvernance_institutions : 27.4 → 32.8 (delta:+5.4)
+- L'Exode des Grands Brûlés — La a modifié energie_ressources_critiques : 100 → 100 (delta:+5.7)
+- L'Exode des Grands Brûlés — La a modifié energie_ressources_critiques : 100 → 100 (delta:+10.0)
+- La Fracture de Belém — Quand l a modifié climat_environnement_global : 90.4 → 100 (delta:+12.0)
+- La Fracture de Belém — Quand l a modifié frontieres_du_systeme : 28.1 → 23.6 (delta:-4.5)
+- La Fracture de Belém — Quand l a modifié demographie_mobilite_humaine : 100 → 95.2 (delta:-4.8)
+- La Fracture de Belém — Quand l a modifié systemes_productifs_travail : 78.6 → 74.1 (delta:-4.5)
+- La Fracture de Belém — Quand l a modifié geopolitique_conflits : 24.5 → 16.5 (delta:-8.0)
+- La Fracture de Belém — Quand l a modifié systeme_economique_redistribution : 79.9 → 82.9 (delta:+3.0)
+- La Fracture de Belém — Quand l a modifié gouvernance_institutions : 32.8 → 36.4 (delta:+3.6)
+- La Fracture de Belém — Quand l a modifié organisation_territoires : 100 → 100 (delta:+3.4)
+- La Fracture de Belém — Quand l a modifié technologie_information : 68.8 → 65.39999999999999 (delta:-3.4)
+- La Fracture de Belém — Quand l a modifié energie_ressources_critiques : 100 → 100 (delta:+3.8)
+- La Fracture de Belém — Quand l a modifié gouvernance_institutions : 36.4 → 44.4 (delta:+8.0)
+- La Fracture de Belém — Quand l a modifié geopolitique_conflits : 16.5 → 12.9 (delta:-3.6)
+- La Fracture de Belém — Quand l a modifié organisation_territoires : 100 → 100 (delta:+10.0)
+- Le Compact des Grands Lacs — S a modifié organisation_territoires : 100 → 92.0 (delta:-8.0)
+- Le Compact des Grands Lacs — S a modifié geopolitique_conflits : 8.7 → 12.1 (delta:+3.4)
+- Le Compact des Grands Lacs — S a modifié technologie_information : 72.8 → 69.8 (delta:-3.0)
+- Le Compact des Grands Lacs — S a modifié demographie_mobilite_humaine : 100 → 97.0 (delta:-3.0)
+- Le Compact des Grands Lacs — S a modifié systemes_productifs_travail : 78.1 → 74.89999999999999 (delta:-3.2)
+- Le Compact des Grands Lacs — S a modifié gouvernance_institutions : 44.4 → 54.4 (delta:+10.0)
+- Le Compact des Grands Lacs — S a modifié systeme_economique_redistribution : 86.1 → 90.1 (delta:+4.0)
+- Le Compact des Grands Lacs — S a modifié geopolitique_conflits : 7.6 → 0 (delta:-12.0)
+- Le Compact des Grands Lacs — S a modifié gouvernance_institutions : 54.4 → 59.8 (delta:+5.4)
+- Le Compact des Grands Lacs — S a modifié organisation_territoires : 92.0 → 97.1 (delta:+5.1)
+- Le Compact des Grands Lacs — S a modifié frontieres_du_systeme : 26.8 → 31.6 (delta:+4.8)
+- Le Compact des Grands Lacs — S a modifié energie_ressources_critiques : 100 → 100 (delta:+5.7)
+- Le Compact des Grands Lacs — S a modifié energie_ressources_critiques : 100 → 90.0 (delta:-10.0)
+- Le Compact des Grands Lacs — S a modifié climat_environnement_global : 100 → 100 (delta:+4.0)
+- Victoire Fantôme du Parti Comm a modifié gouvernance_institutions : 59.8 → 54.8 (delta:-5.0)
+- Victoire Fantôme du Parti Comm a modifié systeme_economique_redistribution : 98.8 → 96.8 (delta:-2.0)
+- Victoire Fantôme du Parti Comm a modifié geopolitique_conflits : 4.8 → 7.0 (delta:+2.2)
+- Victoire Fantôme du Parti Comm a modifié technologie_information : 69.2 → 67.0 (delta:-2.2)
+- Victoire Fantôme du Parti Comm a modifié geopolitique_conflits : 7.0 → 15.0 (delta:+8.0)
+- Victoire Fantôme du Parti Comm a modifié gouvernance_institutions : 54.8 → 51.199999999999996 (delta:-3.6)
+- Victoire Fantôme du Parti Comm a modifié organisation_territoires : 97.1 → 93.69999999999999 (delta:-3.4)
+- Victoire Fantôme du Parti Comm a modifié frontieres_du_systeme : 30.1 → 26.900000000000002 (delta:-3.2)
+- Victoire Fantôme du Parti Comm a modifié energie_ressources_critiques : 90.0 → 86.2 (delta:-3.8)
+- Victoire Fantôme du Parti Comm a modifié demographie_mobilite_humaine : 98.4 → 95.4 (delta:-3.0)
+- Victoire Fantôme du Parti Comm a modifié organisation_territoires : 93.7 → 87.7 (delta:-6.0)
+- Victoire Fantôme du Parti Comm a modifié systemes_productifs_travail : 77.6 → 75.19999999999999 (delta:-2.4)
+- La Saisie du Détroit — Inciden a modifié geopolitique_conflits : 17.5 → 9.5 (delta:-8.0)
+- La Saisie du Détroit — Inciden a modifié systeme_economique_redistribution : 93.8 → 96.8 (delta:+3.0)
+- La Saisie du Détroit — Inciden a modifié gouvernance_institutions : 51.2 → 54.800000000000004 (delta:+3.6)
+- La Saisie du Détroit — Inciden a modifié organisation_territoires : 87.7 → 91.10000000000001 (delta:+3.4)
+- La Saisie du Détroit — Inciden a modifié frontieres_du_systeme : 26.9 → 30.099999999999998 (delta:+3.2)
+- La Saisie du Détroit — Inciden a modifié technologie_information : 68.2 → 64.8 (delta:-3.4)
+- La Saisie du Détroit — Inciden a modifié energie_ressources_critiques : 86.2 → 90.0 (delta:+3.8)
+- La Saisie du Détroit — Inciden a modifié demographie_mobilite_humaine : 93.2 → 96.2 (delta:+3.0)
+- La Saisie du Détroit — Inciden a modifié energie_ressources_critiques : 90.0 → 100 (delta:+10.0)
+- La Saisie du Détroit — Inciden a modifié geopolitique_conflits : 9.5 → 4.7 (delta:-4.8)
+- La Saisie du Détroit — Inciden a modifié systemes_productifs_travail : 75.2 → 71.0 (delta:-4.2)
+- La Saisie du Détroit — Inciden a modifié frontieres_du_systeme : 30.1 → 36.1 (delta:+6.0)
+- La Saisie du Détroit — Inciden a modifié climat_environnement_global : 100 → 97.8 (delta:-2.2)
+- La Saisie du Détroit — Inciden a modifié organisation_territoires : 91.1 → 98.1 (delta:+7.0)
+- La Saisie du Détroit — Inciden a modifié climat_environnement_global : 97.8 → 100 (delta:+4.0)
+- Les Forges du Commun — Proclam a modifié geopolitique_conflits : 0 → 0 (delta:-8.0)
+- Les Forges du Commun — Proclam a modifié systeme_economique_redistribution : 92.6 → 95.6 (delta:+3.0)
+- Les Forges du Commun — Proclam a modifié gouvernance_institutions : 54.8 → 58.4 (delta:+3.6)
+- Les Forges du Commun — Proclam a modifié organisation_territoires : 98.1 → 100 (delta:+3.4)
+- Les Forges du Commun — Proclam a modifié frontieres_du_systeme : 34.6 → 37.800000000000004 (delta:+3.2)
+- Les Forges du Commun — Proclam a modifié technologie_information : 67.4 → 64.0 (delta:-3.4)
+- Les Forges du Commun — Proclam a modifié energie_ressources_critiques : 100 → 100 (delta:+3.8)
+- Les Forges du Commun — Proclam a modifié demographie_mobilite_humaine : 97.2 → 100 (delta:+3.0)
+- Les Forges du Commun — Proclam a modifié valeurs_culture_tempo_sociale : 90 → 100 (delta:+12.0)
+- Les Forges du Commun — Proclam a modifié gouvernance_institutions : 58.4 → 65.4 (delta:+7.0)
+- Les Forges du Commun — Proclam a modifié geopolitique_conflits : 0 → 0 (delta:-3.1)
+- Les Forges du Commun — Proclam a modifié organisation_territoires : 100 → 90.0 (delta:-10.0)
+- Les Forges du Commun — Proclam a modifié systemes_productifs_travail : 72.3 → 68.3 (delta:-4.0)
+- Les Éclats d'Agadez — Ce qui r a modifié technologie_information : 63.3 → 67.3 (delta:+4.0)
+- Les Éclats d'Agadez — Ce qui r a modifié systeme_economique_redistribution : 98.4 → 100 (delta:+1.7)
+- Les Éclats d'Agadez — Ce qui r a modifié gouvernance_institutions : 65.4 → 67.2 (delta:+1.8)
+- Les Éclats d'Agadez — Ce qui r a modifié geopolitique_conflits : 4.2 → 5.9 (delta:+1.7)
+- Les Éclats d'Agadez — Ce qui r a modifié organisation_territoires : 90.0 → 91.5 (delta:+1.5)
+- Les Éclats d'Agadez — Ce qui r a modifié systemes_productifs_travail : 68.3 → 70.1 (delta:+1.8)
+- Les Éclats d'Agadez — Ce qui r a modifié gouvernance_institutions : 67.2 → 75.2 (delta:+8.0)
+- Les Éclats d'Agadez — Ce qui r a modifié technologie_information : 67.3 → 70.89999999999999 (delta:+3.6)
+- Les Éclats d'Agadez — Ce qui r a modifié organisation_territoires : 91.5 → 97.5 (delta:+6.0)
+- Les Éclats d'Agadez — Ce qui r a modifié demographie_mobilite_humaine : 96.2 → 98.4 (delta:+2.2)
+- Les Forges du Commun — Proclam a modifié geopolitique_conflits : 0 → 0 (delta:-8.0)
+- Les Forges du Commun — Proclam a modifié systeme_economique_redistribution : 100 → 100 (delta:+3.0)
+- Les Forges du Commun — Proclam a modifié gouvernance_institutions : 75.2 → 78.8 (delta:+3.6)
+- Les Forges du Commun — Proclam a modifié organisation_territoires : 97.5 → 100 (delta:+3.4)
+- Les Forges du Commun — Proclam a modifié frontieres_du_systeme : 37.8 → 41.0 (delta:+3.2)
+- Les Forges du Commun — Proclam a modifié technologie_information : 73.1 → 69.69999999999999 (delta:-3.4)
+- Les Forges du Commun — Proclam a modifié energie_ressources_critiques : 100 → 100 (delta:+3.8)
+- Les Forges du Commun — Proclam a modifié demographie_mobilite_humaine : 98.4 → 100 (delta:+3.0)
+- Les Forges du Commun — Proclam a modifié valeurs_culture_tempo_sociale : 100 → 100 (delta:+12.0)
+- Les Forges du Commun — Proclam a modifié gouvernance_institutions : 78.8 → 88.8 (delta:+10.0)
+- Les Forges du Commun — Proclam a modifié geopolitique_conflits : 0 → 0 (delta:-4.5)
+- Les Forges du Commun — Proclam a modifié technologie_information : 74.2 → 80.2 (delta:+6.0)
+- Les Forges du Commun — Proclam a modifié systemes_productifs_travail : 72.5 → 75.2 (delta:+2.7)
+- Les Forges du Commun — Proclam a modifié organisation_territoires : 100 → 90.0 (delta:-10.0)
+- La Révolte des Zones Mortes —  a modifié gouvernance_institutions : 91.5 → 99.5 (delta:+8.0)
+- La Révolte des Zones Mortes —  a modifié systeme_economique_redistribution : 100 → 100 (delta:+3.2)
+- La Révolte des Zones Mortes —  a modifié geopolitique_conflits : 6.7 → 3.1 (delta:-3.6)
+- La Révolte des Zones Mortes —  a modifié technologie_information : 76.4 → 80.0 (delta:+3.6)
+- La Révolte des Zones Mortes —  a modifié technologie_information : 80.0 → 86.0 (delta:+6.0)
+- La Révolte des Zones Mortes —  a modifié gouvernance_institutions : 99.5 → 100 (delta:+2.7)
+- La Révolte des Zones Mortes —  a modifié organisation_territoires : 90.0 → 92.2 (delta:+2.2)
+- La Révolte des Zones Mortes —  a modifié systemes_productifs_travail : 71.2 → 73.9 (delta:+2.7)
+- La Révolte des Zones Mortes —  a modifié organisation_territoires : 92.2 → 100 (delta:+10.0)
+- La Révolte des Zones Mortes —  a modifié demographie_mobilite_humaine : 96.2 → 100 (delta:+3.8)
+- L'Arrestation de Van Derburgh  a modifié gouvernance_institutions : 100 → 99.0 (delta:-1.0)
+- L'Arrestation de Van Derburgh  a modifié valeurs_culture_tempo_sociale : 100 → 99.0 (delta:-1.0)
+
+## GÉOGRAPHIE DE CE MONDE
+
+Ces zones forment l'espace géopolitique canonique de ce monde.
+Si l'article mentionne un lieu, utilise en priorité un nom de cette liste plutôt que d'en inventer un nouveau.
+
+**Ancrage de cet article**
+- Ligue Hanséatique Baltique — Le Sceau du Gotland : zone `Hanse Baltique Recomposée` — Ligue Hanséatique Baltique (Lübeck, ports baltiques de Tallinn à Hambourg) (region)
+- Kharg-9 Data Haven : zone `Terminal Pétrolier de Kharg` — plateforme pétrolière reconvertie au large de l'île de Kharg (golfe Persique) (infrastructure)
+- Compact des Grands Lacs — Le Mur d'Eau : zone `Compact de l'Eau Dernière (Grands Lacs)` — Grands Lacs (Compact de l'Eau Dernière) (region)
+- Les Bouches de l'Abîme : zone `Arc Sahélo-Méditerranéen` — Arc Sahélo-Méditerranéen (Sfax, Lyon-Part-Dieu, corridors nomades) (region)
+- Les Bouches du Lithium — Corridor Minier des Andes Brisées : zone `Amazonie (Pacte des Gardiens)` — Salars andins de Bolivie, Chili et Argentine (region)
+- Carthage Nord Nexcore — Le Joug du Détroit : zone `Carthage-Nord (Fragment NexCore)` — Carthage-Nord (ancien port de Tunis-Goulette) (infrastructure)
+
+**Amazonie (Pacte des Gardiens)** [fragmenté — niveau 1]
+Zone forestière amazonienne en décrochage rapide, gouvernée en fragments par le Pacte des Gardiens — héritier fracturé du Consortium Amazônia Viva. Des conseils autochtones tiennent encore quelques refuges de forêt primaire autour de Manaus, tandis que des blocs extractivistes avancent dans le chaos institutionnel. La ligne de vie : conserver assez de canopée pour que les cycles hydrologiques régionaux ne basculent pas définitivement.
+*Tensions internes* : Fracture entre conseils autochtones refusant les zones tampons et scientifiques errants prônant des compromis ; question de l'armement des gardiens contre les blocs extractivistes ; négociations secrètes de certains délégués avec des enclaves corporatives vendant des données biodiversité contre protection armée.
+
+**Arc Sahélo-Méditerranéen** [fragmenté — niveau 1]
+Arc de transit précaire reliant le Sahel à la Méditerranée, structuré autour de réseaux de courriers nomades, de villes-États portuaires survivantes et de territoires ruraux autonomes. La région anciennement française (Massif Central, vallée de l'Allier, Occitanie, plaines de l'Ebre) abrite des enclaves communautaires des Confédérations du Seuil Dernier, des fragments Terrafond et des cellules des Racines-Mères. Sfax et les côtes méditerranéennes servent de relais aux Bouches de l'Abîme et aux réseaux de courriers sahélo-méditerranéens.
+*Tensions internes* : Fracture entre factions accélérationnistes sabotant les infrastructures et attentistes des Confédérations du Seuil ; tension entre branches ouvertes et fermées des Racines-Mères ; fragments Terrafond sous pression des milices agro-territoriales.
+
+**Espace Nord-Américain Fragmenté** [fragmenté — niveau 1]
+L'ancien espace fédéral nord-américain s'est disloqué en plusieurs entités territoriales distinctes après l'échec de la gouvernance nationale unifiée. La 'victoire' du Parti Commun à Philadelphia-Centrale (avec seulement 41% dans les territoires encore capables d'élire) n'a fait qu'accélérer la sécession de fait des États du Sud et du Centre. Des zones grises comme Detroit-Sud illustrent la substitution de l'État par des milices locales administrant une économie de récupération.
+*Tensions internes* : Trois entités territoriales distinctes coexistent sans reconnaissance mutuelle ; les milices locales exercent un pouvoir arbitraire sur les populations dans les zones de collapse ; tension entre entités côtières encore fonctionnelles et intérieur en effondrement.
+*Rivaux* : Arctique Nordark
+
+**Genève-Bunker (Nœud Institutionnel Résiduel)** [fragmenté — niveau 1]
+Genève en 2098 est un site fortifié abritant les dernières archives juridiques et climatiques de l'ère pré-effondrement, convoitées par les blocs rivaux. Les structures institutionnelles ont été vidées de leur substance : le BCUC n'est plus qu'une coquille disputée entre factions locales, les Archives Neutres sont gérées par une milice privée sous contrat avec le Bloc IX, et le CRRC n'existe plus que comme label fantôme utilisé pour légitimer des raids sur les données. Aucun pouvoir supranational n'y subsiste, seulement des fragments de légitimité instrumentalisables.
+*Tensions internes* : Conflits permanents entre la milice archivistique du Bloc IX, les mercenaires du Bloc IV chargés de la 'protection' des données, et des groupes locaux tentant de monnayer l'accès aux archives. Les anciens fonctionnaires survivent comme intermédiaires ou otages.
+*Rivaux* : Afrique Centrale et Australe, Arc Eurasien Central
+
+**Zone Golfe Persique–Levant** [fragmenté — niveau 1]
+Zone grise permanente issue du conflit israélo-iranien de 2027 et de la fermeture du détroit d'Ormuz. La destruction partielle des infrastructures pétrolières du Golfe a rendu caducs les derniers mécanismes de régulation internationale des ressources énergétiques. Aucun acteur souverain n'y exerce de contrôle stable ; la zone sert de modèle fractal à d'autres régions en voie de désintégration, et les flux migratoires qu'elle génère saturent les corridors eurasiens.
+*Tensions internes* : État de guerre permanente de basse à moyenne intensité entre entités héritières ; les flux d'hydrocarbures ont été redessinnés pour les décennies suivantes sans régulation internationale.
+*Rivaux* : Arc Eurasien Central
+
+**Carthage-Nord (Fragment NexCore)** [fragmenté — niveau 2] (sous Arc Sahélo-Méditerranéen)
+Nœud NexCore survivant en Afrique du Nord, cité comme fragment autonome dans les communications mesh. Comme ses homologues de Lagos-Est et Séoul, il opère sans coordination avec les autres fragments et ignore parfois leur existence. Sa position méditerranéenne en fait un relais potentiel entre les réseaux sahélo-méditerranéens et les archipels numériques eurasiens, mais cette position stratégique attire les factions cherchant à contrôler les flux d'information régionaux.
+*Tensions internes* : Pression des réseaux de courriers nomades et de la Ligue méditerranéenne pour accéder aux archives NexCore ; débat interne sur la reconnexion aux autres fragments comme libération ou vecteur de contrôle.
+*Alliés* : Sfax
+
+**Compact de l'Eau Dernière (Grands Lacs)** [fragmenté — niveau 2] (sous Espace Nord-Américain Fragmenté)
+Confédération lacustre née de la Charte de Souveraineté Hydrique signée en 2053 à Chicago-Lacustre, rédigée en trois langues autochtones et en anglais, non reconnue par Washington. Épine dorsale industrielle assurée par les Communes Libres du Rust Belt, elle regroupe 8 entités étatiques résiduelles et 40 nations autochtones mais se fracture rapidement en zones de contrôle disputées. L'eau douce, théoriquement protégée, est devenue l'enjeu d'une guerre d'usure entre milices hydriques, nations autochtones souveraines et enclaves corporatives.
+*Tensions internes* : Fracture interne entre entités membres sur les droits de transit (détroit de Mackinac) ; pression des milices d'accaparement hydrique aux marges ; afflux de réfugiés du Midwest menaçant les équilibres locaux ; tension entre communes autogérées et seigneuries foncières opportunistes.
+*Alliés* : Philadelphia-Centrale
+*Rivaux* : États du Sud et du Centre (Entités Sécessionistes)
+
+**Hanse Baltique Recomposée** [stable — niveau 2] (sous Genève-Bunker (Nœud Institutionnel Résiduel))
+Bloc de résistance régionale structuré maintenant des flux économiques et une cohérence institutionnelle minimale dans l'espace baltique, en marge de l'empire Nordark. La Hanse Recomposée s'appuie sur des réseaux commerciaux historiques réactivés pour maintenir une forme d'autonomie vis-à-vis du Konsortiet, tout en négociant des accords de transit qui la placent dans une dépendance structurelle difficile à assumer.
+*Tensions internes* : Dépendance aux corridors Nordark pour les échanges nord-sud ; factions favorables à une intégration formelle dans l'empire Nordark contre tenants d'une autonomie coûteuse ; pression des factions militaires résiduelles de l'ex-OTAN nordique cherchant à instrumentaliser la Hanse.
+*Rivaux* : Tromsø / Nœud Nordark
+
+**Terminal Pétrolier de Kharg** [disparu — niveau 2] (sous Zone Golfe Persique–Levant)
+Terminal pétrolier frappé en septembre 2027 lors des frappes israéliennes sur les infrastructures iraniennes, symbole de l'effondrement énergétique mondial. Les champignons de fumée noire captés par les satellites avant même que les chancelleries se réunissent ont marqué le début irréversible de la fragmentation des marchés énergétiques mondiaux.
+
+**Autres zones de ce monde** (contexte de fond)
+
+- **Afrique Centrale et Australe** : Zone de conflits hydriques et extractivistes intenses, structurée autour du bass...
+- **Afrique de l'Ouest – Nœuds Lagos et Sahel** : Région structurée autour de Lagos comme nœud technologique et commercial surviva...
+- **Antilles Orientales (Archipel Fragmenté)** : Archipel des Petites Antilles en survie autonome, structuré autour de micro-comm...
+- **Arc Eurasien Central** : Vaste zone de corridors d'approvisionnement fracturés s'étendant de l'ancienne G...
+- **Archipel Anglo-Celtique** : Ancien Royaume-Uni fragmenté en entités autonomes, centré sur Londres comme nœud...
+- **Archipel des Comores (Autonomie Insulaire)** : Les Comores subsistent comme un territoire autonome en marge des grands blocs, s...
+- **Arctique Nordark** : Zone arctique déglacialisée contrôlée de facto par le Konsortiet Nordark, une pu...
+- **Argentine (Pampas Autonome)** : L'Argentine de 2098 est un territoire fragmenté en zones agricoles autonomes et ...
+- **Asie–Pacifique (Corridors sino-sibériens et Pacifique Nord)** : Espace structuré autour du conglomérat sino-sibérien Bohai Transit comme l'un de...
+- **Australie (Continent Insulaire)** : L'Australie de 2098 est un continent insulaire divisé en plusieurs entités auton...
+- **Bolivie (Altiplano Stratégique)** : La Bolivie de 2098 est centrée sur l'Altiplano, où les dernières réserves de lit...
+- **Caraïbes Insulaires (Réseau Résiduel)** : Ensemble d'îles caribéennes survivant en marge des grands blocs continentaux, st...
+- **Chili (Cordillère Autonome)** : Le Chili de 2098 est une entité autonome centrée sur la cordillère des Andes, co...
+- **Cuba (Archipel Résilient)** : Cuba subsiste comme un archipel autonome, préservant une partie de son système d...
+- **Guatemala (Corridor Centre-Américain)** : Le Guatemala est un territoire fragmenté, traversés par des corridors de migrati...
+- **Haïti (Territoire Sinistré)** : Haïti est une zone sinistrée où l'État a disparu, laissant place à des réseaux l...
+- **Himalaya Népalais (Sanctuaire Autonome)** : Région montagneuse isolée, devenue un sanctuaire autonome après l'effondrement d...
+- **Honduras (Territoire Disputé)** : Le Honduras est un territoire sans gouvernance centrale, divisé entre des zones ...
+- **Inde (Sous-Continent Résilient)** : L'Inde de 2098 est un archipel de mégapoles autonomes et de zones rurales abando...
+- **Jamaïque (Hub des Caraïbes)** : La Jamaïque sert de plaque tournante pour les échanges informels dans les Caraïb...
+- (+ 61 autres zones de ce monde, non détaillées : Madagascar (Île Résiliente), Maurice (Hub Financier Résiduel), Micronésie du Pacifique Central, Mélanésie Insulaire, Nordeste Brésilien (Frente Sertão Livre), Nouvelle-Zélande (Archipel Pacifique), Polynésie Centrale, République Dominicaine (État Frontalier), Salvador (Enclave Résistante), Venezuela (Archipel Pétrolier), Écosse, Éthiopie (Hautes Terres Autonome), Agadez (Fragment Ligue du Sahel Numérique), Archives Neutres de Genève-Bunker, Bassin Caspien (Zone de Conflit Bloc IV–Bloc IX), Bassorah, Brazzaville-Nord, Corridor Oural-Caspien, Corridor Sino-Sibérien (Axe Bohai Transit), Corridor des Lithiums, Corridors Eurasiens (Axes de Convoyage Armé), Cracovie (Antenne du Registre des Zones Non Récupérables), Delta du Mékong (Cellules Racines-Mères), Detroit-Sud, District de Mourmansk (Fédération Russe Résiduelle), Détroit d'Ormuz, Enclaves Finlandaises, Enclaves Industrielles de Bergen–Tromsø, Grand São Paulo (Infrastructure RPDA Zombie), Groenland (Fonds des Glaces Libérées), Haïfa (Zone de Frappes Balistiques), Islande (Milices des Pêcheries), Islande (Milices des Pêcheries), Ispahan–Fordow (Sites Frappés), Johannesburg (Bloc Austral), Karachi (Marché BioSyn), Kivu Disputé, Lagos-Est (Nœud NexCore), Lagos-Intérieur (Cluster Mnemos), Lyon (Ruines A7 / Lyon-Part-Dieu), Massif Central (Cicatrices Vertes / Trame Bioclimatique), Medellín (Marché BioSyn), Midwest Désertifié (Zone de Déprise), Nairobi (Siège du CRRC), Nœud Mnemos du Bassin Pannonien, Occitanie (Cellules Racines-Mères), Philadelphia-Centrale, Plaines de l'Ebre (Fragments Terrafond sous tutelle milicienne), Sfax, Séoul (Collectif NexCore), Tour BCUC (47e étage), Tromsø / Nœud Nordark, Vallée de l'Allier (Fragment Terrafond), Zone Polaire (Nœud Maître Mnemos — Rumeur), Zones Côtières Nord-Américaines (Entités Fonctionnelles Résiduelles), États du Sud et du Centre (Entités Sécessionistes), Ancien Centre de Contrôle Continental (Trame Bioclimatique — Rumeur), Autorité du Passage Arctique (Fantôme Institutionnel), Cargo au Large de Mombasa (Délégation CRRC), Communes Libres du Rust Belt (Forges du Commun), Port de Mourmansk)
+
+## ÉTAT DES VARIABLES EN 2098
+
+### Variables clés (détail)
+
+**geopolitique_conflits** [VARIABLE PRINCIPALE]
+- Niveau : 1.4/100 | Volatilité : 95/100
+- État : Effondrement de l’ordre international avec guerres multiples, fragmentation en blocs hostiles et intensification des conflits pour les ressources critiques et les territoires stratégiques.
+- Dynamiques : guerres régionales étendues | effondrement des institutions globales | conflits hybrides et militaires simultanés
+- Sous-dynamiques : blocs_geopolitiques (up) | conflits_armes (unstable) | guerres_hybrides (up) | ressources_strategiques (up) | relations_nord_sud (unstable)
+- Indicateurs à ancrer : nombre de conflits actifs, cyberattaques étatiques, dépenses militaires globales, tensions sur ressources critiques
+
+**gouvernance_institutions** [VARIABLE PRINCIPALE]
+- Niveau : 99.0/100 | Volatilité : 95/100
+- État : Effondrement de la légitimité institutionnelle, fragmentation des États et incapacité des structures de gouvernance à coordonner les crises systémiques globales.
+- Dynamiques : désintégration institutionnelle | perte de contrôle étatique | fragmentation politique globale
+- Sous-dynamiques : etat_nation (down) | institutions_internationales (unstable) | droit_et_regulation (up) | administration_publique (up) | gouvernance_algorithmique (up)
+- Indicateurs à ancrer : confiance institutionnelle, stabilité politique
+
+**technologie_information** [VARIABLE PRINCIPALE]
+- Niveau : 89.8/100 | Volatilité : 100/100
+- État : Effondrement de la cohérence informationnelle mondiale avec fragmentation des réseaux, perte de fiabilité des données, prolifération de désinformation et rupture des systèmes d’IA interconnectés.
+- Dynamiques : désintégration des réseaux globaux | chaos informationnel et perte de vérité partagée | autonomie non coordonnée des systèmes IA
+- Sous-dynamiques : ia_generative_decisionnelle (up) | reseaux_numeriques_globaux (saturating) | medias_algorithmiques (up) | donnees_souverainete_numerique (up) | agents_autonomes_ia (accelerating)
+- Indicateurs à ancrer : volume_donnees_global, usage_ia_generatives, centralisation_plateformes, niveau_automatisation_cognitive
+
+**systeme_economique_redistribution** [VARIABLE PRINCIPALE]
+- Niveau : 100/100 | Volatilité : 95/100
+- État : Crises financières systémiques globales avec fragmentation des marchés, effondrement de la confiance monétaire et rupture des chaînes économiques mondiales.
+- Dynamiques : effondrement des systèmes financiers | fragmentation monétaire globale | instabilité économique généralisée
+- Sous-dynamiques : systemes_financiers_globaux (up) | inegalites_redistribution (up) | croissance_economique (unstable) | systemes_redistribution (unstable) | economie_plateformes (up)
+- Indicateurs à ancrer : volatilite_marches, inegalites_wealth, automatisation_financiere
+
+**energie_ressources_critiques** [VARIABLE PILOTE]
+- Niveau : 100/100 | Volatilité : 97/100
+- État : Crises énergétiques systémiques majeures entraînant ruptures logistiques, effondrements industriels et conflits généralisés pour l’accès aux ressources critiques.
+- Dynamiques : pénuries globales critiques | fragmentation des chaînes logistiques | conflits énergétiques ouverts
+- Sous-dynamiques : systemes_energetiques (up) | matieres_premieres_critiques (up) | systemes_alimentaires (unstable) | chaines_approvisionnement (up) | infrastructures_energetiques (up)
+- Indicateurs à ancrer : demande_energie, prix_energie, volatilite_marches
+
+**organisation_territoires** [VARIABLE PILOTE]
+- Niveau : 100/100 | Volatilité : 90/100
+- État : Désorganisation territoriale majeure avec effondrement de mégapoles, rupture des chaînes logistiques et fragmentation des espaces humains sous contrainte climatique, énergétique et géopolitique.
+- Dynamiques : effondrement urbain partiel | rupture des infrastructures critiques | migrations forcées massives
+- Sous-dynamiques : megapoles_globales (up) | zones_rurales_peripheriques (unstable) | infrastructures_transport (up) | urbanisation_intelligente (up) | localisme_economique (up)
+- Indicateurs à ancrer : densité urbaine, saturation des infrastructures
+
+### Autres variables (résumé)
+
+- **climat_environnement_global** [100] : Effondrements écologiques régionaux et basculements irréversibles avec emballement climatique global...
+- **systemes_productifs_travail** [77.9] : Effondrement du système productif global avec rupture des chaînes logistiques, disparition massive d...
+- **valeurs_culture_tempo_sociale** [99.0] : Effondrement des récits communs et fragmentation extrême des systèmes de valeurs, conduisant à une p...
+- **demographie_mobilite_humaine** [100] : Crises migratoires massives, déplacements forcés et instabilité sociale généralisée provoquée par ef...
+- **sante_biotechnologies** [85] : Crises sanitaires globales avec pandémies récurrentes, saturation des systèmes de santé et rupture d...
+- **frontieres_du_systeme** [41.0] : Fragmentation et militarisation de l’espace proche avec saturation des orbites, conflits orbitaux et...
+
+## TENSIONS SYSTÉMIQUES ACTIVES
+
+Ces tensions structurent la réalité de ce monde.
+Elles doivent transparaître dans le ton et les faits de l'article.
+
+**Cascades critiques**
+- geopolitique_conflits renforce energie_ressources_critiques (poids:0.95 lag:1 cycles)
+- energie_ressources_critiques renforce geopolitique_conflits (poids:0.95 lag:1 cycles)
+- systeme_economique_redistribution renforce energie_ressources_critiques (poids:0.85 lag:1 cycles)
+- geopolitique_conflits renforce organisation_territoires (poids:0.85 lag:1 cycles)
+- organisation_territoires renforce geopolitique_conflits (poids:0.85 lag:1 cycles)
+
+**Tensions propres à cette thématique**
+- geopolitique_conflits [95] → energie_ressources_critiques [96] : pression négative (cascade)
+- energie_ressources_critiques [96] → geopolitique_conflits [95] : pression négative (cascade)
+- gouvernance_institutions [20] → geopolitique_conflits [95] : pression négative (cascade)
+- gouvernance_institutions [20] → technologie_information [95] : renforcement (reinforcing)
+
+## TRAJECTOIRE 2025 → 2098
+
+Jalons clés qui expliquent comment ce monde s'est construit.
+Tu peux y faire référence dans l'article comme à des événements passés connus.
+
+**Événements injectés** [CUSTOM — font partie de ce monde] — 8 sur 13 au total, les plus pertinents pour cet article
+- [14 mars 2040] L'Attentat des Neuf Nœuds — Le Jour Sans Signal :
+  → Le 14 mars 2040 — "Le Jour Sans Signal" dans la mémoire collective — neuf nœuds tombent en 6 heures....
+  → Déroulement : L'attentat se produit comme prévu et dans breakdown, les institutions sont trop ...
+  → Conséquences : Début de la fragmentation informationnelle irréversible. Les réseaux mesh émerge...
+  → Acteurs : nexcore_breakdown
+- [automne 2061] Les Forges du Commun — Proclamation des Zones Libres du Rust Belt :
+  → Automne 2061 : dans les entrailles rouillées de Detroit, les sirènes des usines reconverties sonnent...
+  → Déroulement : Dans un contexte d'effondrement des structures fédérales américaines et de fragm...
+  → Conséquences : Les Zones Libres du Rust Belt survivent comme enclaves autonomes post-industriel...
+  → Acteurs : mouvement_des_communes_du_rust_belt_breakdown, conseil_regulation_algorithmique_breakdown, fronts_populistes_anti_technocratiques_breakdown, milices_contractuelles_des_anciens_etats_membres_breakdown, enclaves_corporatives_fortifiees_breakdown, cartels_logistiques_regionaux_breakdown, collectifs_de_reparation_energetique_breakdown, seigneuries_logistiques_armees_breakdown
+- [été 2044] L'Exode des Grands Brûlés — La Déroute du Bureau des Résidus :
+  → L'été 2044 marque la fin du Midwest habitable. Des colonnes humaines s'étirent sur des centaines de ...
+  → Déroulement : Après trois étés consécutifs où les températures du Midwest désertifié ont dépas...
+  → Conséquences : Les zones lacustres deviennent des territoires de friction permanente entre popu...
+  → Acteurs : bureau_des_territoires_residuels_breakdown, mouvement_des_communes_du_rust_belt_breakdown, flux_migratoires_non_integrables_breakdown, milices_agro_defensives_locales_breakdown, cites_etats_secessionistes_breakdown, cartels_logistiques_regionaux_breakdown, ong_de_gestion_migratoire_survivantes_breakdown, gouvernements_regionaux_residuels_reterritorialisants_breakdown, collectifs_de_sante_communautaire_autogeree_breakdown, front_humanitaire_d_urgence_non_affilie_breakdown
+- [automne 2041] La Ruée des Glaces — Enchères Souveraines du Kalaallit Fund :
+  → Nuuk, automne 2041 : le Fonds des Glaces Libérées ouvre les enchères sur 23 gisements de terres rare...
+  → Déroulement : Le Kalaallit Nunaat Sovereign Fund organise effectivement les enchères, mais dan...
+  → Conséquences : Les droits d'extraction restent juridiquement illisibles pendant des années, cha...
+  → Acteurs : kalaallit_nunaat_sovereign_fund_breakdown, coalition_pacifique_nord_breakdown, ligue_eurasiatique_coalition_pacifique_breakdown, hanse_baltique_recomposee_breakdown, conglometrat_sino_siberien_bohai_transit_breakdown, arctic_passage_authority_breakdown, archives_neutres_de_geneve_breakdown, armada_logistique_nordique_breakdown, milices_contractuelles_des_anciens_etats_membres_breakdown, factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown, conseil_regulation_ressources_breakdown
+- [été 2053] Le Compact des Grands Lacs — Sécession de fait :
+  → L'été 2053, Chicago-Lacustre est pavoisée de drapeaux bleus à onde blanche. Le Great Lakes Autonomou...
+  → Déroulement : Dans un contexte de délitement fédéral accéléré et de sécheresses catastrophique...
+  → Conséquences : Le Compact des Grands Lacs devient immédiatement une cible géopolitique de premi...
+  → Acteurs : mouvement_des_communes_du_rust_belt_breakdown, cites_etats_secessionistes_breakdown, milices_d_accaparement_hydrique_breakdown, factions_etatiques_residuelles_de_souverainete_hydrique_breakdown, federation_communs_territoriaux_breakdown, gouvernements_regionaux_residuels_reterritorialisants_breakdown, front_de_resistance_aux_peages_sur_les_ressources_breakdown
+- [automne 2027] La Déflagration du Croissant — Embrasement sans arbitre :
+  → Automne 2027 : les caméras de surveillance satellitaire captent les champignons de fumée noire s'éle...
+  → Déroulement : En septembre 2027, Israël lance une série de frappes massives sur les installati...
+  → Conséquences : La destruction partielle des infrastructures pétrolières du Golfe accélère l'eff...
+  → Acteurs : vasil_orentchev_breakdown, conseil_regulation_ressources_breakdown, le_temoin_breakdown, alliance_blocs_souverains_breakdown
+- [saison sèche 2047] La Fracture de Belém — Quand le Bassin Amazonien a cessé d'être un territoire :
+  → Saison sèche 2047 : les fumées de Belém ne sont plus métaphoriques. Les milices contractuelles liées...
+  → Déroulement : Le Consortium Amazônia Viva — déjà réduit à l'état de coalition fracturée dans u...
+  → Conséquences : Le bassin amazonien n'émerge pas comme acteur géopolitique autonome — il se morc...
+  → Acteurs : consortium_amazonia_viva_breakdown, factions_energetiques_heritieres_des_pactes_abs_breakdown, frente_sert_o_livre_breakdown, milices_contractuelles_des_anciens_etats_membres_breakdown, seigneurs_de_guerre_agro_territoriaux_breakdown, federation_communs_territoriaux_breakdown, agence_stabilisation_climatique_breakdown, voix_du_dehors_breakdown, trame_bioclimatique_breakdown
+- [automne 2061] Les Forges du Commun — Proclamation des Zones Libres de l'Algorithme :
+  → Automne 2061. Dans les carcasses rouillées des aciéries de Pittsburgh et des usines automobiles de D...
+  → Déroulement : Dans un contexte d'effondrement institutionnel avancé, les Communes Libres du Ru...
+  → Conséquences : Les Zones Libres deviennent un modèle de référence ambigu pour les communautés p...
+  → Acteurs : mouvement_des_communes_du_rust_belt_breakdown, collectifs_de_reparation_energetique_breakdown, brigades_medicales_itinerantes_breakdown, milices_contractuelles_des_anciens_etats_membres_breakdown, enclaves_corporatives_fortifiees_breakdown, cartels_logistiques_regionaux_breakdown, collectifs_de_gardiens_archivistes_itinerants_breakdown, fronts_populistes_anti_technocratiques_breakdown
+
+**Événements historiques clés** (datés — à mentionner naturellement)
+- [2037-2057] fermeture de la dernière grande filière de formation intermédiaire 2049 :
+  → systemes productifs travail : disparition totale des métiers intermédiaires accentuant la polarisation sociale
+- [2040-2058] effondrement des consortiums de recherche fusion 2051 :
+  → energie ressources critiques : abandon des programmes de fusion faute de financement et stabilité
+- [2041-2060] franchissement de cinq points de basculement simultanés 2053 :
+  → climat environnement global : emballements climatiques régionaux et basculements irréversibles
+- [2042-2060] pompages solaires saheliens à sec après trois années sans pluie 2054 :
+  → systemes productifs travail : effondrement des coopératives agricoles saheliennes par pénuries d'eau
+- [2042-2060] Chad abandonne ses périmètres irrigués solaires 2055 :
+  → energie ressources critiques : effondrement des coopératives solaires par pénuries hydriques
+- [2043-2062] catastrophe de contamination des mines de lithium d'Afrique australe 2056 :
+  → energie ressources critiques : multiplication des catastrophes environnementales sur sites miniers abandonnés
+
+**Signaux complémentaires** (évolutions sectorielles — à mentionner si pertinent)
+- [2042-2060] faillite en chaîne des stations industrielles orbitales privées 2052 :
+  → frontieres du systeme : effondrement des consortiums industriels orbitaux privés sous les conflits
+- [2042-2060] collapse des mutuelles et assurances santé globales :
+  → sante biotechnologies : effondrement des systèmes de santé publics et privatisation extrême
+
+**Ruptures majeures** (contexte de fond, portée large)
+- [SYS] effondrement
+- [SYS] effondrement de la légitimité étatique
+- [SYS] fragmentation des États
+
+**Ruptures structurantes** (contexte de fond)
+- [TEC] guerre informationnelle systémique
+- [TEC] militarisation du cyberespace
+- [POL] réalignement massif des alliances
+- [POL] émergence d’empires technologiques ou énergétiques
+
+## ENTITÉS CANONIQUES DE CE MONDE
+
+Ces entités existent dans ce monde avec ces descriptions précises.
+Utilise leurs noms exacts. Tu peux les mentionner, les citer, les impliquer dans les faits.
+Ne les contredis pas, ne les renomme pas.
+
+**Ligue Hanséatique Baltique — Le Sceau du Gotland** [ASCENDANT] [impact:3/5]
+Dans le port de Lübeck, les drapeaux des États n'existent plus depuis longtemps. Ce qui flotte sur les grues rouillées, c'est le sceau aux deux clés croisées sur fond d'or et de bleu — l'emblème de la Ligue Hanséatique Baltique, que les dockers appellent simplement 'le Sceau'. Fondée en 2041 par sept conseils portuaires confrontés à la même question vitale — qui protège nos navires, qui fait respecter nos contrats, qui nourrit nos populations —, la Ligue s'est étendue à vingt-deux ports en moins de dix ans. Elle n'est ni un État ni une entreprise : c'est une confédération d'intérêts marchands armés, qui lève ses propres taxes, siège dans ses propres tribunaux et tire sur ses propres ennemis. Ses frégates de la Garde du Sceau patrouillent en permanence entre Bornholm et le golfe de Finlande, et plus d'un capitaine de fortune a appris à ses dépens ce que signifie naviguer sans le laissez-passer hanséatique.
+*Responsabilités* : Elle perçoit des droits de transit sur l'ensemble des flux maritimes traversant la Baltique, juge les litiges commerciaux entre membres via ses cours consulaires, et impose des embargos punitifs aux ports non membres qui perturbent ses routes. Sa garde maritime assure l'escorte armée des convois, la neutralisation des pirates et la surveillance des détroits stratégiques. Elle négocie aussi des accords d'approvisionnement énergétique et alimentaire entre ses cités membres, constituant l'ossature logistique minimale d'une région sinon livrée au chaos.
+*Signes distinctifs* : Le double sceau aux clés médiévales revisité — or et bleu acier — figure sur toutes les coques des navires membres, les uniformes kaki et marine de la Garde du Sceau, et les sceaux de cire rouge des décrets commerciaux. Les réunions du Grand Conseil se tiennent dans la Rathaus de Lübeck, délibérément choisie pour son symbole historique, entourée de gardes portant des armures tactiques gravées de motifs hanséatiques.
+*Tensions* : La légitimité juridique que s'arroge la Ligue repose sur un paradoxe fondamental : elle prétend incarner un ordre juste et partagé, mais ses règles so...
+*Alliés* : Konsortiet Nordark — Axes du Grand Nord, Cités-États Sécessionistes, Administration Résiduelle de Mourmansk — Le Bastion du Détroit Gelé, Les Enclaves du Nord — Fragments Finlandais, Enclaves Industrielles de Bergen-Tromsø, Enclaves Technologiques Survivantes, Kalaallit Nunaat Sovereign Fund — Fonds des Glaces Libérées, Ligue des Cités Littorales en Sursis, Ligue Méditerranéenne des Villes-États Portuaires, Nœud Nordark Tromsø — Le Carrefour du Froid, Tour Bcuc Genève — Le Comptoir des Ruines
+*Opposants* : Blocs de Contrôle des Couloirs d'Approvisionnement Stratégiques, Factions Militaires Résiduelles de l'Ex-OTAN Nordique, Fédération Russe Résiduelle — District de Mourmansk, Front de Résistance aux Péages sur les Ressources, Milices Séparatistes du Conseil des Pêcheries d'Islande, Réseau Logistique Criminel Concurrent, Saboteurs des Corridors de Transit, Seigneuries Logistiques Armées
+*Relation dominante* : alliance stratégique (depuis 2041)
+
+**Kharg-9 Data Haven** [DOMINANT] [CLANDESTIN] [impact:3/5]
+Perchée sur une plateforme pétrolière reconvertie au large de l'île de Kharg, Kharg-9 est devenue en deux décennies le cœur battant d'un nouveau marché noir numérique. Ses serveurs, protégés par des milices privées et des brouilleurs électromagnétiques, abritent les derniers fragments des archives de l'ONU, des plans de stations atmosphériques volés aux États-fragments, et des algorithmes de géo-ingénierie capables de faire basculer des climats régionaux. Les transactions s'y règlent en cryptomonnaies indexées sur des ressources critiques (lithium, eau, énergie solaire), et ses clients vont des seigneurs de guerre du Sahel aux enclaves corporatives du Rust Belt. Personne n'en parle officiellement, mais tout le monde y a un compte.
+*Responsabilités* : Héberger des archives sensibles pour des États-fragments, des milices et des corporations en fuite ; faciliter les transactions de données critiques (plans de stations atmosphériques, cartes hydriques, algorithmes de géo-ingénierie) ; fournir une connectivité satellite indépendante aux réseaux régionaux fragmentés ; monétiser l'accès à des bases de données historiques (ex : archives des Nations Unies pré-2053, brevets pharmaceutiques pré-effondrement).
+*Signes distinctifs* : Une forêt d'antennes paraboliques et de relais satellites rouillés, peints aux couleurs des anciennes compagnies pétrolières iraniennes ; des containers empilés servant de data centers, éclairés la nuit par une lueur bleutée caractéristique des serveurs surchargés ; des graffitis en farsi, arabe et anglais proclamant « Ici, les données sont libres » ou « Pas de logs, pas de maîtres ». Le logo, un octogone noir traversé par une ligne de code stylisée, est devenu un symbole de résistance numérique dans les zones grises du monde.
+*Tensions* : Kharg-9 est tiraillée entre sa mission originelle de préservation des connaissances et sa dérive en marché spéculatif, où des archives historiques son...
+*Alliés* : Les Fragments de Mnemos, Collectifs de Hackers Archivistes des Interstices Réseaux, Cartels Logistiques Régionaux, Les Fragments NexCore, Seigneuries Logistiques Armées
+*Opposants* : Pacte des Souverains — Ce qui en reste, États-Fragments en Guerre pour les Stations Atmosphériques, Factions Étatiques Résiduelles de Souveraineté Hydrique, Les Protocoles Fantômes, Front Techno-Reconstructionniste
+*Relation dominante* : symbiose (depuis 2055)
+
+**Compact des Grands Lacs — Le Mur d'Eau** [DOMINANT] [impact:4/5]
+Depuis les rives de Duluth jusqu'aux berges de Kingston, le Compact des Grands Lacs a érigé ce que ses membres appellent 'la dernière frontière propre'. Ses patrouilleurs armés sillonnent les chenaux, ses drones thermiques scrutent les lignes de rive à la nuit tombée, et ses checkpoints biométriques délivrent ou refusent l'eau à la fraction de seconde. Ce qui fut jadis un accord environnemental entre gouverneurs et premiers ministres est devenu, en trente ans, un État de facto sans constitution mais avec des balles réelles. Les journalistes qui tentent d'approcher les 'zones de refoulement' — là où les colonnes de déplacés des Plaines sont repoussées vers le sud — en reviennent avec des images que le Compact s'empresse de qualifier de 'désinformation hostile'. À Chicago-Ruines, à Cleveland-Basse ou dans les camps de réfugiés de Toledo, on dit simplement : 'l'eau est là-haut, et là-haut n'est pas pour nous'.
+*Responsabilités* : Le Compact gère l'extraction, la purification et la distribution de l'eau douce aux seules communautés membres enregistrées, via un système de quotas et de cartes d'ayants droit biométriques. Il maintient des cordons militarisés le long des périmètres lacustres — appelés 'lignes de berge' — pour refouler les colonnes de déplacés climatiques remontant depuis les grandes plaines desséchées et les mégapoles effondrées du Sud. Il perçoit des péages hydriques sur tout transit ou cession négociée d'eau vers les zones extérieures, finançant ainsi sa propre milice contractuelle et ses infrastructures de filtration.
+*Signes distinctifs* : Le logo du Compact — une vague bleue encerclée d'un anneau d'acier — est apposé sur chaque checkpoint, chaque citerne et chaque uniforme de milicien. Les cartes d'ayants droit, en polycarbonate bleu translucide, sont portées en pendentif par les membres comme un signe d'appartenance autant que d'identité administrative. Les 'lignes de berge' sont matérialisées par des balises lumineuses rouges flottantes, visibles de loin dans l'obscurité des nuits sans électricité — frontières lumineuses d'un monde qui s'est coupé en deux.
+*Tensions* : La cohésion interne du Compact commence à se fissurer : des factions membres débattent violemment du droit à vendre de l'eau aux zones extérieures con...
+*Alliés* : Cités-États Sécessionistes, Communes Libres du Rust Belt — Les Forges du Commun, Hanse Baltique Recomposée, Administration Fédérale Résiduelle du Midwest — Les Coursiers du Protocole, Milices Contractuelles des Anciens États-Membres, Nairobi CRRC — Les Cellules du Dernier Maillage
+*Opposants* : Communautés Paysannes Réfugiées, Enclaves Corporatives Fortifiées, Factions Étatiques Résiduelles de Souveraineté Hydrique, Factions Para-Étatiques Hydriques, Factions Paramilitaires Locales Neutralisées, Flux Migratoires Non Intégrables, Front de Résistance aux Péages sur les Ressources, Front Humanitaire d'Urgence Non Affilié, Milices d'Accaparement Hydrique, Communes Libres du Rust Belt — Les Forges du Commun, Les Bouches de l'Abîme
+*Relation dominante* : conflit (depuis 2061)
+
+**Les Bouches de l'Abîme** [RÉSIDUEL] [CLANDESTIN] [impact:2/5]
+On ne reçoit pas les Bouches de l'Abîme — on les trouve, ou elles vous trouvent. Un paquet plastifié glissé sous une porte à Sfax, un signal radio crachotant sur 6,2 MHz entre deux heures du matin et l'aube, une clé USB collée sous un banc de gare à ce qui reste de Lyon-Part-Dieu. Leurs publications n'ont ni logo fixe ni signature éditoriale cohérente : chaque cellule imprime ce qu'elle peut, quand elle peut, avec ce qu'elle a. Certains numéros sont des chefs-d'œuvre d'investigation sur les massacres du corridor des lithiums ; d'autres, on le sait maintenant, étaient écrits par des officiers de désinformation du Bloc Eurasien du Nord. C'est ça, les Bouches en 2098 : le meilleur et le pire du journalisme, indissociables, dans le même paquet plastifié froissé.
+*Responsabilités* : Collecte et diffusion de témoignages de terrain dans les zones de conflit et d'effondrement étatique, via courriers physiques, radios basse fréquence et supports matériels chiffrés. Maintien d'archives fragmentées sur les crimes de ressources, les déplacements de population et les violences institutionnelles. Certaines cellules servent de canaux de vérification croisée inter-régionale, d'autres sont infiltrées ou financées par des blocs géopolitiques adverses sans que le réseau puisse le détecter ou l'empêcher.
+*Signes distinctifs* : Logo variable mais toujours construit sur une bouche ouverte stylisée orientée vers le bas — l'abîme qui parle plutôt que l'abîme qui engloutit. Typographie hétéroclite reflétant les ressources locales de chaque cellule : impression offset, ronéo, parfois gravure sur stencil. Les documents authentifiés portent une signature cryptographique dérivée du protocole originel de la Voix du Dehors, vérifiable uniquement par ceux qui en possèdent encore les clés — moins d'une centaine de personnes dans le monde.
+*Tensions* : Qui détient encore les clés d'authentification originelles, et sont-elles elles-mêmes compromises ? Une cellule découvre qu'elle diffuse depuis six mo...
+*Alliés* : Collectifs de Hackers Archivistes des Interstices Réseaux, Communautés Religieuses des Relais Physiques, Réseau des Courriers Nomades Sahélo-Méditerranéens
+*Opposants* : Front des Blocs Régionaux du Récit des Conflits-Ressources, Compact des Grands Lacs — Le Mur d'Eau, Milices Privées Documentées Terrain, Réseau des Anciens Financeurs Devenus Censeurs
+*Relation dominante* : infiltration (depuis 2031)
+
+**Les Bouches du Lithium — Corridor Minier des Andes Brisées** [RÉSIDUEL] [impact:4/5]
+Sur les salars de Bolivie, du Chili et d'Argentine, la blancheur aveuglante du sel est maintenant striée de stigmates : pistes défoncées par des convois blindés improvisés, derricks abandonnés à mi-hauteur, campements de miliciens qui changeaient de drapeau trois fois par saison. Le lithium sort encore du sol — il ne peut pas s'arrêter, trop de monde en dépend — mais chaque tonne est l'objet d'une négociation armée entre des hommes qui ne se font aucune confiance. Les acheteurs arrivent de Seoul, de Bergen ou des Enclaves de Lagos avec du cash, des médicaments ou des armes pour se payer leur quota. Les communautés andines survivantes, elles, ont appris à jouer les factions les unes contre les autres pour conserver une marge de survie, vendant leur connaissance du terrain plus que le minerai lui-même.
+*Responsabilités* : Extraction artisanale et semi-industrielle du lithium sur les salars andins fragmentés entre une vingtaine de factions armées, chacune contrôlant un segment de route ou un puits. Négociation directe, convoi par convoi, entre chefs de milices locaux et émissaires d'acheteurs étrangers — sans contrat durable, sans garantie de livraison, au prix de la violence endémique. Maintien minimal de certaines routes de convoyage vers les ports du Pacifique à travers des arrangements tribaux provisoires et constamment renégociés.
+*Signes distinctifs* : Camions blindés à flancs peints de numéros de lot illisibles, bannières de milices cousues sur fond de sacs de sel. Les négociateurs portent des dosimètres et des gilets pare-balles assortis — le seul uniforme neutre reconnu dans le Corridor. Les salars eux-mêmes sont parsemés de cairns marquant les zones de trêve temporaire, renversés et relevés au fil des affrontements.
+*Tensions* : La question centrale est de savoir si un acteur — milice montante, bloc régional, communauté locale ou corporation résiduelle — parviendra à imposer u...
+*Alliés* : Blocs de Contrôle des Couloirs d'Approvisionnement Stratégiques, Cartels Logistiques Régionaux, Communautés Rurales Autogérées des Nœuds de Survie, Frente Sertão Livre — Les Noeuds du Dedans, Seigneuries Logistiques Armées
+*Opposants* : États Fragmentés Nationalisant les Stocks, Front de Résistance aux Péages sur les Ressources, Ligue Méditerranéenne des Villes-États Portuaires, Milices de Contrôle Territorial, Réseau des Courriers Nomades Sahélo-Méditerranéens, Saboteurs des Corridors de Transit, Seigneurs de Guerre Agro-Territoriaux
+*Relation dominante* : conflit (depuis 2061)
+
+**Carthage Nord Nexcore — Le Joug du Détroit** [DOMINANT] [impact:4/5]
+Sur les quais de l'ancien port de Tunis-Goulette, les conteneurs arborent désormais le triangle rouge et noir de Carthage Nord Nexcore — le seul signe d'autorité que la plupart des dockers ont connu depuis des années. Des agents en tenue modulaire contrôlent chaque cargaison avec des scanners biométriques, réclamant leur dîme en carburant synthétique ou en crédit-réseau avant tout passage. Personne ne les a élus. Personne ne les juge. Ils sont là, et les marchandises passent — ou ne passent pas. Pour les populations riveraines, la Nexcore, c'est à la fois la gendarmerie, la douane, la banque et le tribunal : une entité totale qui a rempli le vide laissé par l'effondrement des États tunisien et libyen avec une efficacité que ses détracteurs eux-mêmes sont contraints d'admettre, à défaut de pouvoir la contester.
+*Responsabilités* : Perception de droits de transit sur l'ensemble du corridor maritime carthaginois, délivrance de laissez-passer logistiques reconnus de facto par les acteurs régionaux, maintien de l'ordre par des unités paramilitaires intégrées, gestion des entrepôts de stockage énergétique et alimentaire du port, et arbitrage violent des litiges commerciaux selon un code interne non publié.
+*Signes distinctifs* : Triangle rouge inscrit dans un anneau noir — symbole du nœud logistique — apposé sur toutes les infrastructures, uniformes et documents officiels. Langage administratif froid et normatif emprunté aux anciens codes commerciaux internationaux, mêlé à un jargon militaire. Les agents portent des brassards d'identification à puce NFC, seul document d'identité reconnu dans le corridor.
+*Tensions* : La Nexcore maintient un ordre réel mais construit sur la peur et l'exclusion : les populations qui ne peuvent payer les droits de transit sont refoulé...
+*Alliés* : Cartels Logistiques Régionaux, Enclaves Corporatives Fortifiées, Ligue Méditerranéenne des Villes-États Portuaires, Les Fragments NexCore, Seigneuries Logistiques Armées, Seoul Collectif Nexcore — Les Grilles de l'Entre-Deux
+*Opposants* : Ligue du Sahel Numérique — Les Nœuds d'Agadez, Collectif Hackers Décroissance-Infrastructure, Collectifs de Gardiens-Archivistes Itinérants, Communautés Rurales Autogérées des Nœuds de Survie, Flux Migratoires Non Intégrables, Front de Résistance aux Péages sur les Ressources, Réseau des Courriers Nomades Sahélo-Méditerranéens, Réseaux de solidarité horizontale post-effondrement, Saboteurs des Corridors de Transit, Les Bouches de Sfax — Relais de la Faim Juste
+*Relation dominante* : dépendance (depuis 2041)
+
+## CONSIGNE DE RÉDACTION
+
+**Rubrique** : ACTUALITÉS / À LA UNE
+
+**Format** : brève | **Longueur** : 600 à 900 mots
+**Style** : analytique
+**Niveau émotionnel** : élevé — tension perceptible, urgence contenue
+**Échelle** : globale | **Temporalité** : immédiat
+
+**Acteurs à impliquer** : entreprises, gouvernements, médias, population
+
+**Date de publication** : 21 avril 2098 — reprends cette date exacte, ne la remplace pas par une autre.
+
+---
+
+Écris maintenant l'article. Commence directement par le titre.
+
+Contraintes impératives :
+- **Longueur impérative : 600 à 900 mots** — ne t'arrête pas avant la borne basse, ne dépasse pas la borne haute. C'est une contrainte dure, pas une indication approximative.
+- Le titre doit être accrocheur et ancré dans le monde décrit
+- La date de publication est **21 avril 2098** — reprends cette date exacte sous le titre, n'en invente pas une autre
+- L'article utilise des noms propres inventés mais crédibles (personnes, lieux, organisations)
+- La signature du journaliste apparaît UNE SEULE FOIS, immédiatement sous la date de publication — jamais en fin d'article, jamais répétée
+- Aucune référence au mot 'scénario', 'variable', 'simulation'
+- Le contexte du monde est montré, pas expliqué
+- Les entités canoniques listées ci-dessus DOIVENT être utilisées avec leurs noms et descriptions exactes
+- L'article est ancré géographiquement dans la zone **Hanse Baltique** : les lieux, événements et protagonistes de l'article sont situés dans cette zone ou la mentionnent explicitement comme cadre principal. Les références à d'autres régions du monde restent secondaires.
+
+--- [breakdown] MÉTADONNÉES ---
+  scenario : breakdown
+  thematique : actualites_a_la_une
+  format : brève
+  longueur : 600 à 900 mots
+  ligne_editoriale : pro_pouvoir
+
+✓ Pipeline complet — prêt pour l'API

@@ -54,8 +54,6 @@ oppositions:
 type_relation_dominante: coopération
 annee_debut: 2027
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -93,6 +91,9 @@ localisation:
   zone: centre_institutionnel_geneve
   lieu: Genève — Siège permanent du Conseil Énergétique Intercontinental
   type_lieu: ville
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Conseil Énergétique Intercontinental

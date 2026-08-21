@@ -53,13 +53,11 @@ oppositions:
 - nexus_biosyn_division_eurasienne_fortress_world
 - nexus_biosyn_division_pacifique_fortress_world
 - pacte_forteresses_souveraines_fortress_world
-- rede_paulista_de_distribuic_o_algor_tmica_fortress_world
+- rede_paulista_de_distribuicao_algoritmica_fortress_world
 - terrashield_geoengineering_fortress_world
 type_relation_dominante: conflit
 annee_debut: 2048
 annee_fin:
-etat_temporel: clandestin
-age_historique: ascendant
 generation: forteresse
 injection:
   type: canonique
@@ -86,6 +84,9 @@ tensions_narratives: >
   d'information. Plusieurs membres arrêtés en 2097. La coordination
   centrale a été compromise.
 date_creation: 2098-01-01
+trajectoire: ascendant
+est_clandestin: true
+
 ---
 
 # Réseau Vert Clandestin
@@ -133,5 +134,5 @@ La coordination centrale a été compromise.
 - [[nexus_biosyn_division_eurasienne_fortress_world]]
 - [[nexus_biosyn_division_pacifique_fortress_world]]
 - [[pacte_forteresses_souveraines_fortress_world]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_fortress_world]]
+- [[rede_paulista_de_distribuicao_algoritmica_fortress_world]]
 - [[terrashield_geoengineering_fortress_world]]

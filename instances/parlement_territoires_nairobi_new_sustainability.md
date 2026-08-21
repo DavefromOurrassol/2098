@@ -66,8 +66,6 @@ type_relation_dominante: coopération
 annee_debut: 2051
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: reconstruction
 
 injection:
@@ -88,6 +86,9 @@ tensions_narratives: >
   Le Parlement est pris en étau entre le Parlement Délibératif Mondial qui pousse à une harmonisation algorithmique des ressources et les communautés locales qui contestent toute délégation de leur souveraineté hydrologique à un système automatisé. La montée en puissance du Bloc des Gouvernements Souverainistes Hydriques menace de court-circuiter ses décisions en négociant directement avec les instances onusiennes. En interne, une faction grandissante de délégués jeunes, formés aux outils d'IA délibérative, conteste l'autorité des représentants traditionnels — ouvrant la question de savoir si la démocratie territoriale peut survivre à sa propre modernisation.
 
 date_creation: 2026-06-27
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Parlement Territoires Nairobi

@@ -53,8 +53,6 @@ type_relation_dominante: coopération
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: ascendant
 generation: transition
 
 injection:
@@ -75,6 +73,9 @@ tensions_narratives: >
   Les Gardiens des Rives sont tiraillés entre leur besoin de rester discrets pour éviter la répression et la nécessité de se structurer pour peser face aux acteurs globaux. Leur alliance avec les réseaux de capteurs citoyens et les cliniques autonomes pourrait les transformer en un contre-pouvoir territorial, mais leur méfiance envers les institutions les isole des financements et des protections légales. Leur plus grand défi ? Résister à la cooptation par les plateformes d'optimisation territoriale, qui voient en eux une source de données précieuses — ou une menace à neutraliser. Leur avenir pourrait basculer vers une fédération formelle, une radicalisation clandestine, ou une absorption par les marges persistantes du système.
 
 date_creation: 2026-07-11
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Les Gardiens des Rives

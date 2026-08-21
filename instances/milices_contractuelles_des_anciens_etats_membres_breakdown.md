@@ -62,8 +62,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2041
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -96,6 +94,9 @@ tensions_narratives: 'La contradiction fondamentale de ces milices réside dans 
   crée une tension permanente entre fidélité au contrat et solidarités communautaires
   qui éclatent lors de chaque crise de redistribution.'
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Milices Contractuelles des Anciens États-Membres

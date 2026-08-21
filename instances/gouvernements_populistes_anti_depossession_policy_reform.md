@@ -59,8 +59,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2040
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -95,6 +93,9 @@ localisation:
   zone: bloc_souverainiste_non_signataire
   lieu: réseau diffus de capitales dissidentes
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Gouvernements Populistes Anti-Dépossession
@@ -133,7 +134,6 @@ Ces gouvernements sont pris en étau entre leur légitimité démocratique inter
 - [[mouvement_pour_la_souverainete_territoriale_absolue_policy_reform]]
 - [[republique_islamique_iran_policy_reform]]
 - [[syndicats_d_extraction_privee_non_regules_policy_reform]]
-- [[test_durcissement_policy_reform]]
 **Opposants :**
 - [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]
 - [[autorite_mondiale_du_vivant_amv_policy_reform]]

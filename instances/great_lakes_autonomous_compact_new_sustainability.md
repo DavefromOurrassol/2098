@@ -68,8 +68,6 @@ type_relation_dominante: alliance stratégique
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: reconstruction
 
 injection:
@@ -90,6 +88,9 @@ tensions_narratives: >
   La tension fondatrice du Compact reste vive en 2098 : des millions de déplacés climatiques des plaines asséchées du Midwest réclament un droit d'accès élargi à l'eau lacustre, que le Compact refuse au nom de la soutenabilité du bassin — une décision que certains qualifient de forteresse écologique déguisée en bien commun. En interne, la Chambre des Nations Premières exige depuis 2091 un droit de veto absolu sur les exports hydriques, ce qui fracture la coalition fondatrice. Enfin, la montée du Bloc des Gouvernements Souverainistes Hydriques pose une question de fond : si le modèle Grands Lacs est universel, pourquoi d'autres régions qui tentent de l'imiter se voient-elles opposer les mêmes arguments d'exclusion que le Compact a lui-même subis lors de sa création ?
 
 date_creation: 2026-06-23
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Great Lakes Autonomous Compact — Confédération Lacustre des Grands Lacs

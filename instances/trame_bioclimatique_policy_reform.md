@@ -57,8 +57,6 @@ type_relation_dominante: dépendance
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: transition
 
 injection:
@@ -79,6 +77,9 @@ tensions_narratives: >
   La question centrale non résolue : à qui appartient un écosystème restauré avec de l'argent public mondial ? Les États membres réclament la souveraineté, les communautés locales réclament l'usufruit, et l'ATRB maintient un droit de veto opérationnel qui ressemble de plus en plus à une propriété de fait. Par ailleurs, des rapports internes fuités suggèrent que certains algorithmes de priorisation des corridors favorisent systématiquement les zones à fort potentiel en terres rares — soulevant la suspicion d'une instrumentalisation minière déguisée en restauration. Enfin, la dépendance croissante de plusieurs États sahéliens et andins à l'irrigation atmosphérique du RIREC crée une vulnérabilité stratégique inédite : couper le réseau, c'est déclencher une crise alimentaire.
 
 date_creation: 2026-06-15
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Réseau Intégré de Restauration Écosystémique Continentale (RIREC)

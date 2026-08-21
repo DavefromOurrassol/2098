@@ -81,8 +81,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2032
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -117,6 +115,9 @@ localisation:
   zone: pacte_des_souverains
   lieu: Sommets Itinérants du Pacte des Souverains
   type_lieu: site_strategique
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Bloc des Souverainistes Climatiques

@@ -57,8 +57,6 @@ oppositions:
 type_relation_dominante: coopération
 annee_debut: 2039
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -96,6 +94,9 @@ localisation:
   zone: hub_nairobi_kigali
   lieu: Nairobi-Node
   type_lieu: site_strategique
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Programme Onusien de Mobilité Climatique

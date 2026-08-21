@@ -37,7 +37,7 @@ alliances:
 - consortium_d_interoperabilite_ia_humain_new_sustainability
 - nexcore_new_sustainability
 - oracle_des_seuils_new_sustainability
-- rede_paulista_de_distribuic_o_algor_tmica_new_sustainability
+- rede_paulista_de_distribuicao_algoritmica_new_sustainability
 - tribunal_algorithmique_de_bruxelles_new_sustainability
 - tribunal_gouvernance_algorithmique_bruxelles_new_sustainability
 oppositions:
@@ -49,8 +49,6 @@ oppositions:
 type_relation_dominante: coopération
 annee_debut: 2040
 annee_fin:
-etat_temporel: actif
-age_historique: mature
 generation: ère cognitive
 injection:
   type: canonique
@@ -74,6 +72,9 @@ tensions_narratives: >
   nationales. Débat interne sur la limite entre régulation et censure
   algorithmique. Accusations de lenteur face à l'accélération technologique.
 date_creation: 2098-01-01
+trajectoire: mature
+est_clandestin: false
+
 ---
 
 # Conseil Mondial de l'IA Régénérative
@@ -105,7 +106,7 @@ Débat interne sur la limite entre régulation et censure algorithmique.
 - [[consortium_d_interoperabilite_ia_humain_new_sustainability]]
 - [[nexcore_new_sustainability]]
 - [[oracle_des_seuils_new_sustainability]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_new_sustainability]]
+- [[rede_paulista_de_distribuicao_algoritmica_new_sustainability]]
 - [[tribunal_algorithmique_de_bruxelles_new_sustainability]]
 - [[tribunal_gouvernance_algorithmique_bruxelles_new_sustainability]]
 **Opposants :**

@@ -1,0 +1,90 @@
+---
+name: Grève Générale des Corridors Eurasiens et Réquisition Technocratique
+type: event_instance
+slug: greve_generale_corridors_eurasiens_policy_reform
+archetype: greve_generale_corridors_eurasiens
+scenario: policy_reform
+localisation:
+  zone: espace_eurasiatique
+  lieu: corridors logistiques eurasiens (Bakou-Almaty)
+  type_lieu: infrastructure
+type_evenement: political_social
+portee: continentale
+date: 2039
+date_label: automne 2039
+impossible: false
+custom: true
+description: >
+  Le 12 octobre 2039, des milliers de travailleurs des corridors logistiques eurasiens — chauffeurs, manutentionnaires, techniciens de maintenance — cessent le travail simultanément, paralysant les flux de lithium et de terres rares entre Bakou et Almaty. Les réseaux mesh locaux, jusqu’ici tolérés par les autorités, diffusent en temps réel les revendications : statut de 'travailleurs critiques', accès aux thérapies géniques anti-pollution, et droit à la mobilité forcée. Les images de convois immobilisés, filmées par des drones autonomes, deviennent virales sur Prisme Global. Face à la crise, l’UTE et l’AIER activent un protocole d’urgence : les corridors sont déclarés 'zones d’intérêt stratégique supranational', et les travailleurs sont réquisitionnés sous supervision algorithmique. Les communes autonomes qui émergent le long des axes abandonnés sont rapidement encadrées par des 'contrats de résilience territoriale' proposés par l’Agence Technocratique pour la Résilience Biosphérique (ATRB).
+consequences: >
+  La grève marque un tournant dans la gouvernance du travail critique : les revendications des travailleurs sont partiellement satisfaites (accès aux thérapies géniques, reconnaissance du statut), mais au prix d’une intégration forcée dans un système de régulation supranationale. L'Internationale des Travailleurs Augmentés gagne en légitimité institutionnelle, tandis que les États souverains eurasiatiques perdent une partie de leur autonomie décisionnelle. Les communes autonomes, initialement perçues comme une menace, deviennent des laboratoires de gouvernance hybride, mêlant autogestion locale et supervision technocratique. Le modèle se diffuse ensuite à d’autres corridors logistiques mondiaux.
+realisation: >
+  Dans le scénario *policy_reform*, la grève générale des travailleurs des corridors logistiques eurasiens (Bakou-Almaty) se déclenche comme prévu en 2039, coordonnée via des réseaux mesh locaux et soutenue par l'Internationale des Travailleurs Augmentés. Cependant, contrairement à la description originale, les États souverains eurasiatiques ne répondent pas par une répression militaire brute, mais par une *réquisition technocratique* pilotée par l'Union Technocratique Eurasiatique (UTE) et l'Agence Internationale de l'Énergie Reformatée (AIER). Les convois sont placés sous contrôle algorithmique (système ARIA-Nexus), et les revendications des travailleurs sont partiellement intégrées dans un nouveau cadre réglementaire supranational.
+impact_sur_variables:
+  - variable: systemes_productifs_travail
+    delta_level: 15
+    duree: 15
+    polarite: 1
+  - variable: geopolitique_conflits
+    delta_level: 10
+    duree: 10
+    polarite: -1
+  - variable: sante_biotechnologies
+    delta_level: 8
+    duree: 12
+    polarite: 1
+  - variable: gouvernance_institutions
+    delta_level: 12
+    duree: 20
+    polarite: 1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+    - internationale_travailleurs_augmentes_policy_reform
+    - union_technocratique_eurasiatique_policy_reform
+    - agence_internationale_de_l_energie_reformatee_aier_policy_reform
+    - agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
+    - bureau_gouvernance_algorithmique_policy_reform
+    - collectifs_de_gouvernance_communautaire_decentralisee_policy_reform
+    - conseil_regulation_ressources_policy_reform
+    - reseau_des_metropoles_n_uds_policy_reform
+note_coherence: 'Cohérent avec le scénario *policy_reform* : la crise est résolue par une régulation
+  technocratique supranationale, intégrant partiellement les revendications sociales
+  tout en renforçant le contrôle institutionnel. Les acteurs clés (UTE, AIER, ATRB)
+  et les dynamiques de gouvernance multi-niveaux sont respectés.'
+custom_source: auto_generated_2026-08
+date_creation: 2026-08-13
+---
+
+# Grève Générale des Corridors Eurasiens et Réquisition Technocratique
+
+## Réalisation dans [[policy_reform]]
+Dans le scénario *policy_reform*, la grève générale des travailleurs des corridors logistiques eurasiens (Bakou-Almaty) se déclenche comme prévu en 2039, coordonnée via des réseaux mesh locaux et soutenue par l'Internationale des Travailleurs Augmentés. Cependant, contrairement à la description originale, les États souverains eurasiatiques ne répondent pas par une répression militaire brute, mais par une *réquisition technocratique* pilotée par l'Union Technocratique Eurasiatique (UTE) et l'Agence Internationale de l'Énergie Reformatée (AIER). Les convois sont placés sous contrôle algorithmique (système ARIA-Nexus), et les revendications des travailleurs sont partiellement intégrées dans un nouveau cadre réglementaire supranational.
+
+## Description journalistique
+Le 12 octobre 2039, des milliers de travailleurs des corridors logistiques eurasiens — chauffeurs, manutentionnaires, techniciens de maintenance — cessent le travail simultanément, paralysant les flux de lithium et de terres rares entre Bakou et Almaty. Les réseaux mesh locaux, jusqu’ici tolérés par les autorités, diffusent en temps réel les revendications : statut de 'travailleurs critiques', accès aux thérapies géniques anti-pollution, et droit à la mobilité forcée. Les images de convois immobilisés, filmées par des drones autonomes, deviennent virales sur Prisme Global. Face à la crise, l’UTE et l’AIER activent un protocole d’urgence : les corridors sont déclarés 'zones d’intérêt stratégique supranational', et les travailleurs sont réquisitionnés sous supervision algorithmique. Les communes autonomes qui émergent le long des axes abandonnés sont rapidement encadrées par des 'contrats de résilience territoriale' proposés par l’Agence Technocratique pour la Résilience Biosphérique (ATRB).
+
+## Conséquences
+La grève marque un tournant dans la gouvernance du travail critique : les revendications des travailleurs sont partiellement satisfaites (accès aux thérapies géniques, reconnaissance du statut), mais au prix d’une intégration forcée dans un système de régulation supranationale. L'Internationale des Travailleurs Augmentés gagne en légitimité institutionnelle, tandis que les États souverains eurasiatiques perdent une partie de leur autonomie décisionnelle. Les communes autonomes, initialement perçues comme une menace, deviennent des laboratoires de gouvernance hybride, mêlant autogestion locale et supervision technocratique. Le modèle se diffuse ensuite à d’autres corridors logistiques mondiaux.
+
+## Impact sur les variables
+- **systemes_productifs_travail** : delta +15 sur 15 ans
+- **geopolitique_conflits** : delta -10 sur 10 ans
+- **sante_biotechnologies** : delta +8 sur 12 ans
+- **gouvernance_institutions** : delta +12 sur 20 ans
+
+## Acteurs impliqués
+- [[internationale_travailleurs_augmentes_policy_reform]]
+- [[union_technocratique_eurasiatique_policy_reform]]
+- [[agence_internationale_de_l_energie_reformatee_aier_policy_reform]]
+- [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]]
+- [[bureau_gouvernance_algorithmique_policy_reform]]
+- [[collectifs_de_gouvernance_communautaire_decentralisee_policy_reform]]
+- [[conseil_regulation_ressources_policy_reform]]
+- [[reseau_des_metropoles_n_uds_policy_reform]]
+
+## Note de cohérence
+'Cohérent avec le scénario *policy_reform* : la crise est résolue par une régulation
+  technocratique supranationale, intégrant partiellement les revendications sociales
+  tout en renforçant le contrôle institutionnel. Les acteurs clés (UTE, AIER, ATRB)
+  et les dynamiques de gouvernance multi-niveaux sont respectés.'

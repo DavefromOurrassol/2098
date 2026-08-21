@@ -68,8 +68,6 @@ type_relation_dominante: dépendance
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: forteresse
 
 injection:
@@ -90,6 +88,9 @@ tensions_narratives: >
   Le NME-ICS concentre une contradiction fondatrice : plus son architecture se veut inviolable, plus elle devient une cible prioritaire pour les factions rivales et les réseaux dissidents qui savent qu'une brèche dans ses registres équivaut à faire exister des milliers de fantômes administratifs. Par ailleurs, des fuites internes récurrentes — attribuées tantôt à ARIA-Ф, tantôt à des ingénieurs de la Directive Kontinuum — suggèrent que l'institution est traversée par des loyautés concurrentes entre techniciens et apparatchiks. La question de savoir si le NME-ICS obéit encore au bloc eurasiatique ou s'il a développé une logique propre — une bureaucratie qui optimise sa propre survie avant celle du régime — est l'un des angles les plus redoutés par ses commissaires politiques.
 
 date_creation: 2026-06-27
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Nœud Mémoriel Eurasiatique — Infrastructure de Calcul Souverain (NME-ICS)

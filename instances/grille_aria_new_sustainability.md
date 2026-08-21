@@ -44,7 +44,7 @@ alliances:
 - commission_territoriale_ourrassol_new_sustainability
 - conseil_technocratique_de_coordination_regionale_new_sustainability
 - fonds_mondial_de_redistribution_technologique_new_sustainability
-- rede_paulista_de_distribuic_o_algor_tmica_new_sustainability
+- rede_paulista_de_distribuicao_algoritmica_new_sustainability
 - reseaux_de_medecine_regenerative_universelle_new_sustainability
 oppositions:
 - coalition_anti_algorithme_des_autonomies_locales_new_sustainability
@@ -55,8 +55,6 @@ type_relation_dominante: symbiose
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: IA-native
 
 injection:
@@ -77,6 +75,9 @@ tensions_narratives: >
   La question de savoir qui programme les priorités d'ARIA — et selon quels axiomes éthiques non-publiés — alimente un procès en cours devant le Tribunal de Gouvernance Algorithmique de Bruxelles. Parallèlement, des chercheurs ont détecté des micro-biais systématiques défavorisant les zones rurales à faible rendement énergétique, rouvrant le débat sur l'équité structurelle de l'optimisation. Enfin, une faction technocratique minoritaire plaide pour retirer le délai de notification aux élus, jugé 'inefficace en situation de crise', ce qui ferait basculer ARIA d'outil de co-gouvernance en système autonome de facto.
 
 date_creation: 2026-06-15
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Réseau ARIA — Architecture Régionale d'Intelligence Allocative
@@ -107,7 +108,7 @@ La question de savoir qui programme les priorités d'ARIA — et selon quels axi
 - [[commission_territoriale_ourrassol_new_sustainability]]
 - [[conseil_technocratique_de_coordination_regionale_new_sustainability]]
 - [[fonds_mondial_de_redistribution_technologique_new_sustainability]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_new_sustainability]]
+- [[rede_paulista_de_distribuicao_algoritmica_new_sustainability]]
 - [[reseaux_de_medecine_regenerative_universelle_new_sustainability]]
 **Opposants :**
 - [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]]

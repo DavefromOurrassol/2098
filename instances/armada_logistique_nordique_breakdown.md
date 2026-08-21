@@ -39,7 +39,7 @@ zone_systemique:
 alliances:
 - arctic_passage_authority_breakdown
 - arctique_nordark_breakdown
-- autorite_passage_arctique_breakdown
+- arctic_passage_authority_breakdown
 - consortiums_energetiques_samoiedes_du_yamal_breakdown
 - district_mourmansk_residuel_breakdown
 - enclaves_industrielles_de_bergen_troms_breakdown
@@ -59,8 +59,6 @@ type_relation_dominante: rivalité
 annee_debut: 2057
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: post-effondrement
 
 injection:
@@ -81,6 +79,9 @@ tensions_narratives: >
   Nordark est au bord d'une implosion interne : les factions militaires intégrées réclament une partition des revenus que les technocrates logistiques refusent, créant une ligne de fracture entre seigneurs de guerre et gestionnaires de flux. Parallèlement, le dégel accéléré de l'Arctique ouvre de nouveaux passages que Nordark n'a ni les moyens ni le personnel pour sécuriser — des routes grises que des acteurs hostiles commencent à emprunter. La question qui hante les couloirs de Tromsø : peut-on maintenir un empire logistique sans État derrière soi, ou Nordark est-elle condamnée à devenir l'État qu'elle a remplacé ?
 
 date_creation: 2026-06-15
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Konsortiet Nordark — Axes du Grand Nord
@@ -108,7 +109,7 @@ Nordark est au bord d'une implosion interne : les factions militaires intégrée
 **Alliés :**
 - [[arctic_passage_authority_breakdown]]
 - [[arctique_nordark_breakdown]]
-- [[autorite_passage_arctique_breakdown]]
+- [[arctic_passage_authority_breakdown]]
 - [[consortiums_energetiques_samoiedes_du_yamal_breakdown]]
 - [[district_mourmansk_residuel_breakdown]]
 - [[enclaves_industrielles_de_bergen_troms_breakdown]]

@@ -82,8 +82,6 @@ type_relation_dominante: conflit
 annee_debut: 2061
 annee_fin: 
 
-etat_temporel: actif
-age_historique: ascendant
 generation: forteresse
 
 injection:
@@ -104,6 +102,9 @@ tensions_narratives: >
   Le Front du Dehors est pris en étau entre deux logiques qui le déchirent : plus il monte en visibilité médiatique et politique, plus les autorités des forteresses peuvent cibler et démanteler ses cellules ; plus il reste discret et souterrain, moins il pèse sur les décisions qui condamnent ses membres à mourir hors des murs. Une faction interne pousse vers une radicalisation des actions directes — sabotages symboliques des systèmes de contrôle frontalier — tandis qu'une autre parie sur l'usure juridique et les recours institutionnels résiduels, au risque de légitimer un système fondamentalement illégitime. La question de qui parle au nom des exclus — et si parler depuis l'intérieur d'un système qui vous écrase ne revient pas à en devenir le complice — fracture le mouvement en profondeur.
 
 date_creation: 2026-06-27
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Mouvement Commun Midwest — Front du Dehors

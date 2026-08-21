@@ -1,0 +1,98 @@
+---
+name: Les Veilleurs des Brumes — Réseau des Cartographes des Zones Grises
+type: instance
+slug: reseau_des_cartographes_des_zones_grises_breakdown
+entite: reseau_des_cartographes_des_zones_grises
+scenario: breakdown
+
+type_dans_scenario: réseau
+
+role_dans_scenario: >
+  Dans un monde où les frontières se sont effondrées sous les coups des conflits géopolitiques, des crises climatiques et de la fragmentation des réseaux d'information, les Veilleurs des Brumes documentent et diffusent les connaissances sur les territoires abandonnés, contestés ou non gouvernés. Ils opèrent comme une mémoire vivante des interstices du monde, fournissant des cartes, des protocoles de survie et des données critiques à ceux qui en ont besoin : contrebandiers, communautés rurales autonomes, milices locales, ou même factions étatiques résiduelles cherchant à étendre leur influence. Leur rôle est à la fois subversif et vital : ils préservent l'autonomie des acteurs marginaux tout en risquant d'être instrumentalisés par des pouvoirs plus grands.
+
+responsabilites: >
+  1) Cartographier en temps réel les zones grises (territoires sans gouvernance stable, corridors de contrebande, enclaves autonomes) à l'aide de drones low-tech, de capteurs artisanaux et de réseaux de courriers humains. 2) Archiver et diffuser des données critiques (accès à l'eau, stocks de nourriture, mouvements de milices, risques environnementaux) via des relais physiques (communautés religieuses, collectifs de hackers) et des réseaux numériques résiduels. 3) Former des « nœuds locaux » capables de maintenir et mettre à jour les cartes, en échange de ressources ou de protection. 4) Négocier des trêves temporaires avec les factions en conflit pour permettre l'accès aux zones dangereuses.
+
+impact_local: 4
+impact_systemique_global: 2
+
+variables_influencees:
+    - technologie_information
+    - organisation_territoires
+    - geopolitique_conflits
+
+zone_geographique:
+    - régionale
+    - continentale
+
+zone_systemique:
+    - information
+    - société
+    - infrastructure
+
+alliances:
+    - collectifs_de_gardiens_archivistes_itinerants_breakdown
+    - collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown
+    - reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown
+    - communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+    - ligue_des_cites_du_sahel_numerique_breakdown
+    - front_de_resistance_aux_peages_sur_les_ressources_breakdown
+
+oppositions:
+    - seigneuries_logistiques_armees_breakdown
+    - milices_de_controle_territorial_breakdown
+    - factions_para_etatiques_hydriques_breakdown
+    - blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
+    - reseau_des_anciens_financeurs_devenus_censeurs_breakdown
+
+type_relation_dominante: symbiose
+
+annee_debut: 2051
+annee_fin: 
+
+trajectoire: ascendant
+est_clandestin: true
+generation: post-effondrement
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  « Ils savent où l'on peut encore passer. » C'est la phrase que l'on entend le plus souvent quand on évoque les Veilleurs des Brumes, ce réseau clandestin de cartographes qui a émergé des ruines des années 2050. À une époque où les satellites sont devenus des cibles et où les données officielles ne valent plus grand-chose, leurs cartes — tracées à la main, mises à jour par des relais humains, protégées par des algorithmes de chiffrement low-tech — sont devenues une monnaie d'échange aussi précieuse que les munitions ou les graines. On les trouve dans les souks numériques du Sahel, les enclaves agro-communautaires d'Europe de l'Est, ou même dans les bunkers des milices hydriques du Moyen-Orient. Leur symbole, une boussole brisée entourée de brume, est à la fois un avertissement et une promesse : dans un monde où plus personne ne sait vraiment où il va, eux, au moins, savent où l'on peut encore marcher.
+
+signes_distinctifs: >
+  - Une boussole brisée entourée de brume, souvent gravée ou tatouée sur les avant-bras des membres.  - Utilisation de carnets en papier résistant aux intempéries, remplis de codes et de cartes manuscrites.  - Réseau de « phares » : des tours ou des bâtiments élevés équipés de miroirs et de signaux lumineux pour transmettre des informations sur de longues distances sans dépendre des réseaux numériques.  - Langage codé basé sur des proverbes locaux, adapté à chaque région pour éviter la détection.
+
+tensions_narratives: >
+  - **La connaissance comme arme** : Les Veilleurs des Brumes doivent constamment naviguer entre leur idéal de savoir partagé et le risque que leurs cartes soient utilisées pour des raids, des accaparements de ressources ou des nettoyages ethniques. Certains nœuds locaux ont déjà été accusés de collaborer avec des milices, ce qui menace la cohésion du réseau.  - **La guerre des archives** : Des factions comme les *Factions Propagandistes des Archives* ou les *Seigneuries Logistiques Armées* cherchent à infiltrer ou détruire le réseau, voyant en lui une menace pour leur contrôle sur les territoires.  - **L'IA contre la main humaine** : Alors que des enclaves technologiques survivantes développent des IA capables de cartographier automatiquement les zones grises, les Veilleurs des Brumes défendent une approche artisanale, arguant que seule la mémoire humaine peut capturer la complexité des territoires en constante mutation.  - **Le dilemme de la visibilité** : Plus ils deviennent indispensables, plus ils risquent d'être ciblés. Certains plaident pour une dissolution partielle du réseau, tandis que d'autres veulent le rendre encore plus robuste, quitte à perdre en clandestinité.
+
+date_creation: 2026-08-11
+---
+
+# Les Veilleurs des Brumes — Réseau des Cartographes des Zones Grises
+
+## Rôle dans [[breakdown]]
+Dans un monde où les frontières se sont effondrées sous les coups des conflits géopolitiques, des crises climatiques et de la fragmentation des réseaux d'information, les Veilleurs des Brumes documentent et diffusent les connaissances sur les territoires abandonnés, contestés ou non gouvernés. Ils opèrent comme une mémoire vivante des interstices du monde, fournissant des cartes, des protocoles de survie et des données critiques à ceux qui en ont besoin : contrebandiers, communautés rurales autonomes, milices locales, ou même factions étatiques résiduelles cherchant à étendre leur influence. Leur rôle est à la fois subversif et vital : ils préservent l'autonomie des acteurs marginaux tout en risquant d'être instrumentalisés par des pouvoirs plus grands.
+
+## Responsabilités
+1) Cartographier en temps réel les zones grises (territoires sans gouvernance stable, corridors de contrebande, enclaves autonomes) à l'aide de drones low-tech, de capteurs artisanaux et de réseaux de courriers humains. 2) Archiver et diffuser des données critiques (accès à l'eau, stocks de nourriture, mouvements de milices, risques environnementaux) via des relais physiques (communautés religieuses, collectifs de hackers) et des réseaux numériques résiduels. 3) Former des « nœuds locaux » capables de maintenir et mettre à jour les cartes, en échange de ressources ou de protection. 4) Négocier des trêves temporaires avec les factions en conflit pour permettre l'accès aux zones dangereuses.
+
+## Variables influencées
+- [[technologie_information]]
+- [[organisation_territoires]]
+- [[geopolitique_conflits]]
+
+## Relations
+**Alliés** : [[collectifs_de_gardiens_archivistes_itinerants_breakdown]], [[collectifs_de_hackers_archivistes_des_interstices_reseaux_breakdown]], [[reseau_des_courriers_nomades_sahelo_mediterraneens_breakdown]], [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]], [[ligue_des_cites_du_sahel_numerique_breakdown]], [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
+**Opposants** : [[seigneuries_logistiques_armees_breakdown]], [[milices_de_controle_territorial_breakdown]], [[factions_para_etatiques_hydriques_breakdown]], [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]], [[reseau_des_anciens_financeurs_devenus_censeurs_breakdown]]
+
+## Description journalistique
+« Ils savent où l'on peut encore passer. » C'est la phrase que l'on entend le plus souvent quand on évoque les Veilleurs des Brumes, ce réseau clandestin de cartographes qui a émergé des ruines des années 2050. À une époque où les satellites sont devenus des cibles et où les données officielles ne valent plus grand-chose, leurs cartes — tracées à la main, mises à jour par des relais humains, protégées par des algorithmes de chiffrement low-tech — sont devenues une monnaie d'échange aussi précieuse que les munitions ou les graines. On les trouve dans les souks numériques du Sahel, les enclaves agro-communautaires d'Europe de l'Est, ou même dans les bunkers des milices hydriques du Moyen-Orient. Leur symbole, une boussole brisée entourée de brume, est à la fois un avertissement et une promesse : dans un monde où plus personne ne sait vraiment où il va, eux, au moins, savent où l'on peut encore marcher.
+
+## Tensions narratives
+- **La connaissance comme arme** : Les Veilleurs des Brumes doivent constamment naviguer entre leur idéal de savoir partagé et le risque que leurs cartes soient utilisées pour des raids, des accaparements de ressources ou des nettoyages ethniques. Certains nœuds locaux ont déjà été accusés de collaborer avec des milices, ce qui menace la cohésion du réseau.  - **La guerre des archives** : Des factions comme les *Factions Propagandistes des Archives* ou les *Seigneuries Logistiques Armées* cherchent à infiltrer ou détruire le réseau, voyant en lui une menace pour leur contrôle sur les territoires.  - **L'IA contre la main humaine** : Alors que des enclaves technologiques survivantes développent des IA capables de cartographier automatiquement les zones grises, les Veilleurs des Brumes défendent une approche artisanale, arguant que seule la mémoire humaine peut capturer la complexité des territoires en constante mutation.  - **Le dilemme de la visibilité** : Plus ils deviennent indispensables, plus ils risquent d'être ciblés. Certains plaident pour une dissolution partielle du réseau, tandis que d'autres veulent le rendre encore plus robuste, quitte à perdre en clandestinité.

@@ -4,13 +4,11 @@ type: instance
 slug: bureau_gouvernance_algorithmique_fortress_world
 entite: bureau_gouvernance_algorithmique
 scenario: fortress_world
+statut: officialise_enrichi
 localisation:
   zone: bloc_atlantique
   lieu: Ourrassol-Centre (Nexus-7)
   type_lieu: infrastructure
-  statut: review_manuelle
-  note: "Le siège est explicitement situé à Ourrassol-Centre (bâtiment Nexus-7), au sein du 'bloc Ourrassol', mais aucune zone 'bloc_ourrassol' n'existe dans la liste ; le Bloc Atlantique est le candidat le plus probable pour un bloc autoritaire centré sur l'espace atlantique nord incluant Ourrassol."
-
 type_dans_scenario: hybride
 
 role_dans_scenario: >
@@ -40,22 +38,27 @@ zone_systemique:
     - sécurité
 
 alliances:
-    - consortiums_energetiques_du_bloc_ourrassol_fortress_world
-    - dispositifs_de_surveillance_numerique_souveraine_fortress_world
-    - executif_militaro_civil_du_regime_fortress_world
-
+- bloc_eurasiatique_occidental_fortress_world
+- centre_controle_orbital_helios_fortress_world
+- consortiums_energetiques_du_bloc_ourrassol_fortress_world
+- datacenters_conseil_eurasiatique_fortress_world
+- directive_kontinuum_fortress_world
+- dispositifs_de_surveillance_numerique_souveraine_fortress_world
+- executif_militaro_civil_du_regime_fortress_world
+- neurosentry_fortress_world
+- rede_paulista_de_distribuic_o_algor_tmica_fortress_world
 oppositions:
-    - collectifs_de_desobeissance_algorithmique_new_sustainability
-    - factions_traditionalistes_du_mandat_electif_fortress_world
-    - coalitions_geopolitiques_d_infiltration_des_modeles_climatiques_fortress_world
-
+- aria_instance_fantome_fortress_world
+- coalitions_geopolitiques_d_infiltration_des_modeles_climatiques_fortress_world
+- collectifs_de_desobeissance_algorithmique_new_sustainability
+- factions_traditionalistes_du_mandat_electif_fortress_world
+- oracle_des_seuils_fortress_world
+- tribunal_algorithmique_de_bruxelles_fortress_world
 type_relation_dominante: dépendance
 
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: forteresse
 
 injection:
@@ -76,6 +79,9 @@ tensions_narratives: >
   La légitimité du Conseil repose entièrement sur la croyance en l'infaillibilité de ses modèles — mais des anomalies répétées dans les allocations de ressources laissent suspecter une manipulation humaine non déclarée des paramètres. Des ingénieurs dissidents tentent de reconstruire les algorithmes depuis des fragments de directives publiques, risquant l'accusation de 'sabotage calculatoire'. Par ailleurs, des blocs rivaux auraient développé leurs propres systèmes concurrents, transformant la gouvernance algorithmique en terrain d'une guerre froide technologique dont les populations ne sont que les variables d'ajustement.
 
 date_creation: 2026-06-15
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Conseil de Calcul Souverain — Directive Ourrassol
@@ -92,12 +98,28 @@ Organe technocratique de premier rang au sein du bloc Ourrassol, le Conseil de C
 - [[technologie_information]]
 - [[organisation_territoires]]
 
-## Relations
-**Alliés** : [[consortiums_energetiques_du_bloc_ourrassol_fortress_world]], [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]], [[executif_militaro_civil_du_regime_fortress_world]]
-**Opposants** : [[collectifs_de_desobeissance_algorithmique_new_sustainability]], [[factions_traditionalistes_du_mandat_electif_fortress_world]], [[coalitions_geopolitiques_d_infiltration_des_modeles_climatiques_fortress_world]]
 
 ## Description journalistique
 Dans les couloirs vitrés du Nexus-7, siège du Conseil de Calcul Souverain à Ourrassol-Centre, aucune voix ne s'élève — seul le bourdonnement bas des serveurs tient lieu de délibération. Fondé en 2041 sur les décombres de trois ministères jugés 'inefficients', le Conseil émet chaque semaine ses Directives Calculées, des textes réglementaires dont les citoyens ne verront jamais les fondements mathématiques. Les élus qui subsistent dans le bloc siègent en chambre d'enregistrement : contester une directive, c'est contester 'le calcul lui-même'. Des lanceurs d'alerte affirment que les paramètres de pondération favorisent systématiquement les zones productives au détriment des territoires jugés 'à rendement négatif' — formule froide désignant des millions d'habitants.
 
 ## Tensions narratives
 La légitimité du Conseil repose entièrement sur la croyance en l'infaillibilité de ses modèles — mais des anomalies répétées dans les allocations de ressources laissent suspecter une manipulation humaine non déclarée des paramètres. Des ingénieurs dissidents tentent de reconstruire les algorithmes depuis des fragments de directives publiques, risquant l'accusation de 'sabotage calculatoire'. Par ailleurs, des blocs rivaux auraient développé leurs propres systèmes concurrents, transformant la gouvernance algorithmique en terrain d'une guerre froide technologique dont les populations ne sont que les variables d'ajustement.
+
+## Relations
+**Alliés :**
+- [[bloc_eurasiatique_occidental_fortress_world]]
+- [[centre_controle_orbital_helios_fortress_world]]
+- [[consortiums_energetiques_du_bloc_ourrassol_fortress_world]]
+- [[datacenters_conseil_eurasiatique_fortress_world]]
+- [[directive_kontinuum_fortress_world]]
+- [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
+- [[executif_militaro_civil_du_regime_fortress_world]]
+- [[neurosentry_fortress_world]]
+- [[rede_paulista_de_distribuic_o_algor_tmica_fortress_world]]
+**Opposants :**
+- [[aria_instance_fantome_fortress_world]]
+- [[coalitions_geopolitiques_d_infiltration_des_modeles_climatiques_fortress_world]]
+- [[collectifs_de_desobeissance_algorithmique_new_sustainability]]
+- [[factions_traditionalistes_du_mandat_electif_fortress_world]]
+- [[oracle_des_seuils_fortress_world]]
+- [[tribunal_algorithmique_de_bruxelles_fortress_world]]

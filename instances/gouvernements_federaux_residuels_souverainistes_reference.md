@@ -56,8 +56,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2033
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -95,6 +93,9 @@ localisation:
   zone: pacte_des_souverains
   lieu: Sommets Itinérants du Pacte des Souverains
   type_lieu: site_strategique
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Gouvernements Fédéraux Résiduels Souverainistes

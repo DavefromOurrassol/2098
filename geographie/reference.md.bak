@@ -829,12 +829,6 @@ zones:
   - entite: Turkménistan
     type_entite: pays
     portion: null
-  - entite: Tadjikistan
-    type_entite: pays
-    portion: null
-  - entite: Afghanistan
-    type_entite: pays
-    portion: null
   - entite: Palestine
     type_entite: pays
     portion: null
@@ -842,12 +836,6 @@ zones:
     type_entite: pays
     portion: null
   - entite: Somalie
-    type_entite: pays
-    portion: null
-  - entite: Italie
-    type_entite: pays
-    portion: null
-  - entite: Kirghizistan
     type_entite: pays
     portion: null
   description: Ensemble des espaces hors-cadre institutionnel effectif — zones tampons
@@ -1811,7 +1799,7 @@ zones:
     - valparaiso_fct
     rivaux: []
   sources_attestees:
-  - frente_sert_o_livre_reference
+  - frente_sertao_livre_reference
   promu_depuis: null
 - slug: siberie_federale
   nom: Sibérie Fédérale
@@ -2074,7 +2062,7 @@ zones:
   nom: Zones Tampons Climatiques Européennes
   niveau: 2
   type: zone_sinistree
-  parent: zones_grises_globales
+  parent: europe_occidentale_reconstructee
   origine_reelle:
   - entite: France
     type_entite: pays
@@ -2380,7 +2368,7 @@ zones:
     allies: []
     rivaux: []
   sources_attestees:
-  - rede_paulista_de_distribuic_o_algor_tmica_reference
+  - rede_paulista_de_distribuicao_algoritmica_reference
   promu_depuis: null
 - slug: singapour_est_nexcore
   nom: Singapour-Est — Nœud NexCore
@@ -3279,7 +3267,7 @@ Territoire semi-aride du Nordeste brésilien et des zones sèches adjacentes d'A
 
 **Alliés** : valparaiso_fct
 
-*Sources attestées : frente_sert_o_livre_reference*
+*Sources attestées : frente_sertao_livre_reference*
 
 #### Sibérie Fédérale — sous [[bloc_eurasien_central]]
 
@@ -3546,7 +3534,7 @@ Infrastructure de gouvernance algorithmique invisible et omniprésente orchestra
 - Centre de Pilotage Metropolitano de Pinheiros (infrastructure) — Sous-sols climatisés hébergeant le SPAAR — cerveau algorithmique contesté de la mégapole pauliste
 - Quartiers périphériques (Capão Redondo) (region) — Zone type recevant systématiquement 12-18% de ressources en moins en période de tension selon les logs SPAAR
 
-*Sources attestées : rede_paulista_de_distribuic_o_algor_tmica_reference*
+*Sources attestées : rede_paulista_de_distribuicao_algoritmica_reference*
 
 ##### Singapour-Est — Nœud NexCore — sous [[singapour_est]]
 

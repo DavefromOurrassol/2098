@@ -49,8 +49,6 @@ type_relation_dominante: conflit
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: résiduel
 generation: post-effondrement
 
 injection:
@@ -71,6 +69,9 @@ tensions_narratives: >
   Sa compétence est son bouclier et sa malédiction : chaque faction veut la capturer plutôt que la tuer, ce qui l'enferme dans une neutralité imposée qu'elle ne choisit plus. Elle doit choisir entre servir tout le monde — et donc ne protéger personne en priorité — ou choisir un camp et transformer son expertise en arme géopolitique. Une trahison passée la hante : un accord qu'elle a facilité en 2081 a indirectement permis à une milice d'assécher une vallée peuplée. La question de sa responsabilité morale dans un système qu'elle n'a jamais pleinement contrôlé est ouverte.
 
 date_creation: 2026-06-15
+trajectoire: résiduel
+est_clandestin: false
+
 ---
 
 # Amara Diallo-Nkosi

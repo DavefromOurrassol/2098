@@ -89,8 +89,6 @@ type_relation_dominante: dépendance
 annee_debut: 2036
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: forteresse
 
 injection:
@@ -111,6 +109,9 @@ tensions_narratives: >
   La contradiction fondamentale de Nexcore est désormais visible même pour ses actionnaires : chaque amélioration de ses systèmes de filtrage renforce le régime qui le finance, mais accélère aussi l'instabilité des zones tampons qu'il est censé stabiliser, générant de nouveaux contrats dans un cycle sans fin. Des lanceurs d'alerte internes, relayés par des réseaux comme Fractures, documentent des défaillances volontairement retardées pour justifier des avenants contractuels. Par ailleurs, l'émergence de collectifs d'ingénieurs dissidents qui connaissent de l'intérieur les plans de ses infrastructures représente une menace sécuritaire croissante. Enfin, certains États-forteresses commencent à envisager une nationalisation partielle des murs les plus stratégiques — ce qui constituerait pour Nexcore une menace existentielle bien plus redoutable que n'importe quel mouvement de réfugiés.
 
 date_creation: 2026-06-27
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Nexcore Atlantique Infrastructure — Division Séparation Climatique

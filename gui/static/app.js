@@ -933,7 +933,19 @@ async function renderOption(opt, script) {
     inp.type = 'text';
     inp.dataset.flag = opt.flag;
     inp.dataset.defaultValue = opt.default || '';
-    inp.placeholder = opt.label;
+    // Corrigé le 11 août 2026 : utilisait opt.label (le libellé du champ,
+    // déjà affiché juste au-dessus) au lieu de opt.placeholder (le texte
+    // d'exemple prévu, ex. "ex : focus sur les réfugiés climatiques") --
+    // ce dernier n'était donc jamais visible.
+    inp.placeholder = opt.placeholder || opt.label;
+    // autocomplete="off" ajouté le 11 août 2026 : sans attribut `name` ni
+    // consigne explicite, le navigateur (Safari en particulier) peut
+    // proposer/réinjecter une ancienne saisie faite dans ce même champ des
+    // semaines plus tôt, en se basant sur le placeholder plutôt que sur un
+    // vrai nom de champ -- cas réel vécu par David sur "Angle spécifique"
+    // (generate.py), une valeur de test oubliée réapparue sans lien avec
+    // config.yaml ni le code serveur (inp.value n'est jamais fixé ici).
+    inp.autocomplete = 'off';
     group.appendChild(inp);
 
     if (opt.description) {
@@ -960,7 +972,16 @@ function lireValeurChamp(flag) {
     return Array.from(chips.querySelectorAll('.yaml-chip.active')).map(c => c.dataset.value).join(',');
   }
   const el = document.querySelector(`[data-flag="${flag}"]`);
-  return el ? el.value : '';
+  if (!el) return '';
+  // Une checkbox sans attribut value explicite renvoie toujours "on" via
+  // .value, coché ou pas -- il faut lire .checked. Bug trouvé le 14 août
+  // 2026 en diagnostiquant pourquoi --force ne rafraîchissait pas le menu
+  // --slug de extract_localisation (backlog Partie 2) : même une fois
+  // slug_extra_params câblé, cette fonction aurait renvoyé "on" en
+  // permanence, jamais l'état réel de la case. collectArgs()/isFlagActive()
+  // géraient déjà correctement ce cas, pas lireValeurChamp().
+  if (el.type === 'checkbox') return el.checked ? 'true' : 'false';
+  return el.value;
 }
 
 // Calcule la chaîne de paramètres additionnels (&nom=valeur...) à partir
@@ -1254,10 +1275,30 @@ function validateRequiredFields(script) {
  * "Édition brute"). Ne concerne que le(s) panneau(x) du script actif --
  * #form-body est reconstruit à chaque changement de script, donc aucun
  * panneau d'un autre script ne peut être capté par erreur.
+ *
+ * Correctif du 11 août 2026 : un panneau `config_fields_mode` (ex. le
+ * formulaire queue.yaml de `create_entities`, réservé au mode Custom)
+ * reste dans le DOM même quand un autre mode (auto-suggest, auto) est
+ * actif -- updateModeOnlyVisibility() le cache seulement visuellement
+ * (display:none), il n'est jamais retiré de #form-body. Sans ce filtre,
+ * cliquer sur Lancer en mode auto-suggest sauvegardait quand même le
+ * formulaire Custom resté ouvert/vu plus tôt dans la session -- vide s'il
+ * n'avait jamais été rempli -- écrasant silencieusement le fichier YAML
+ * (cas réel vécu : queue.yaml vidé juste après un run auto-suggest ayant
+ * pourtant réussi à y écrire 5 idées). On ignore désormais tout panneau
+ * dont le mode déclaré ne correspond pas à l'onglet actif, même mode
+ * (case, priorité au check) que updateModeOnlyVisibility().
  */
 async function saveOpenConfigForms() {
+  const activeTab = document.querySelector('.mode-tab.active');
+  const activeMode = activeTab ? activeTab.dataset.value : null;
+
   const panels = document.querySelectorAll('#form-body .yaml-form-panel');
   for (const wrapper of panels) {
+    if (activeMode && wrapper.dataset.modeOnly) {
+      const allowedModes = wrapper.dataset.modeOnly.split(',');
+      if (!allowedModes.includes(activeMode)) continue;
+    }
     const yamlPath  = wrapper.dataset.yamlPath;
     const rawZone   = wrapper.querySelector('.yaml-raw-zone');
     const statusMsg = wrapper.querySelector('.yaml-status-msg');

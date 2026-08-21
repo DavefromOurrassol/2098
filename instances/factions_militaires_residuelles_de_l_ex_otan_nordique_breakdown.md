@@ -44,7 +44,7 @@ alliances:
 oppositions:
 - arctic_passage_authority_breakdown
 - arctique_nordark_breakdown
-- autorite_passage_arctique_breakdown
+- arctic_passage_authority_breakdown
 - communautes_religieuses_des_relais_physiques_breakdown
 - district_mourmansk_residuel_breakdown
 - enclaves_finlandaises_breakdown
@@ -61,8 +61,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2031
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -91,6 +89,9 @@ tensions_narratives: Leur cohérence interne est constamment menacée par les ri
   le Nœud Nordark de Tromsø une forme de réintégration institutionnelle, tandis que
   d'autres s'enfoncent dans une logique prédatrice pure.
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Factions Militaires Résiduelles de l'Ex-OTAN Nordique
@@ -128,7 +129,7 @@ Leur cohérence interne est constamment menacée par les rivalités entre factio
 **Opposants :**
 - [[arctic_passage_authority_breakdown]]
 - [[arctique_nordark_breakdown]]
-- [[autorite_passage_arctique_breakdown]]
+- [[arctic_passage_authority_breakdown]]
 - [[communautes_religieuses_des_relais_physiques_breakdown]]
 - [[district_mourmansk_residuel_breakdown]]
 - [[enclaves_finlandaises_breakdown]]

@@ -53,8 +53,6 @@ type_relation_dominante: neutralité
 annee_debut: 2061
 annee_fin: 
 
-etat_temporel: actif
-age_historique: ascendant
 generation: post-effondrement
 
 injection:
@@ -75,6 +73,9 @@ tensions_narratives: >
   La neutralité des Gardiens est leur seul bouclier, mais elle se fissure : une seigneurie foncière opportuniste propose des vivres et de la protection en échange d'une relecture favorable d'anciens titres de propriété, mettant en crise la faction la plus précaire du nœud. Par ailleurs, la question de la légitimité de leur arbitrage monte : qui a mandaté ces archivistes pour trancher les litiges ? Certaines communes contestent leurs verdicts documentaires, les accusant de favoriser les villages qui leur apportent le plus de ressources. Enfin, un fragment rival du réseau Mnemos, opérant depuis Novi Sad avec des méthodes plus opaques, commence à concurrencer leur autorité mémorielle sur le sud de la plaine.
 
 date_creation: 2026-06-27
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Nœud Mnemos Pannonie — Les Gardiens du Danube

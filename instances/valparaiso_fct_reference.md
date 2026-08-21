@@ -60,8 +60,6 @@ type_relation_dominante: neutralité
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: mature
 generation: transition
 
 injection:
@@ -82,6 +80,9 @@ tensions_narratives: >
   La FCT est régulièrement accusée par des coalitions souverainistes de perpétuer la fragmentation qu'elle prétend gérer — sans elle, les blocs seraient peut-être contraints de négocier directement. Certains régulateurs du BEC soupçonnent ses chambres de compensation de servir de vecteur au blanchiment de flux énergétiques illicites issus des zones grises eurasiennes. En interne, une faction de 'compensateurs éthiques' pousse pour introduire des clauses d'exclusion sur les échanges finançant des acteurs de conflits hybrides — ce qui menacerait directement le modèle de neutralité absolue sur lequel repose toute l'architecture de confiance de la FCT.
 
 date_creation: 2026-06-27
+trajectoire: mature
+est_clandestin: false
+
 ---
 
 # Valparaíso FCT — Facilitation & Compensation Transfrontalière

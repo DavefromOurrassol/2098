@@ -58,8 +58,6 @@ type_relation_dominante: coopération
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: mature
 generation: reconstruction
 
 injection:
@@ -80,6 +78,9 @@ tensions_narratives: >
   La tension centrale de la Commission est celle du double mandat : rendre des comptes vers le haut (les agences onusiennes, le Conseil Technocratique de Coordination Régionale) sans trahir la confiance de la base locale qui lui donne son autorité. Un conflit latent couve autour de la question des algorithmes d'allocation des sols : la grille ARIA impose des zonages que plusieurs communautés rurales d'Ourrassol rejettent comme technocratiquement aveugles à leurs réalités. Par ailleurs, à chaque renouvellement triennal, des collectifs autonomistes tentent de parasiter les assemblées pour contester la légitimité même du cadre supranational. La Commission risque à terme de se retrouver coincée entre une base qui veut plus d'autonomie et des tutelles qui exigent plus de conformité — avec, pour seule marge de manœuvre, l'art fragile de la délibération.
 
 date_creation: 2026-06-27
+trajectoire: mature
+est_clandestin: false
+
 ---
 
 # Commission Territoriale d'Ourrassol

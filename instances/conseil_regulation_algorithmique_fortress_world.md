@@ -61,8 +61,6 @@ oppositions:
 type_relation_dominante: rivalité
 annee_debut: 2044
 annee_fin:
-etat_temporel: actif
-age_historique: dominant
 generation: forteresse
 injection:
   type: canonique
@@ -88,6 +86,9 @@ tensions_narratives: >
   Le fils du directeur a disparu en 2089 — on dit qu'il a rejoint un
   collectif non certifié.
 date_creation: 2098-01-01
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Autorité Numérique du Bloc Atlantique

@@ -60,8 +60,6 @@ oppositions:
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -97,6 +95,8 @@ localisation:
   lieu: Genève-Lacustre
   type_lieu: ville
 annee_debut_verifiee: true
+trajectoire: émergent
+est_clandestin: false
 
 ---
 
@@ -151,7 +151,6 @@ L'AIER est structurellement écartelée entre son rôle de garant des accords mu
 - [[republique_islamique_iran_policy_reform]]
 - [[reseau_des_journalistes_d_investigation_energetique_policy_reform]]
 - [[syndicats_d_extraction_privee_non_regules_policy_reform]]
-- [[test_durcissement_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

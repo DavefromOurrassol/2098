@@ -55,8 +55,6 @@ type_relation_dominante: coopération
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: ascendant
 generation: reconstruction
 
 injection:
@@ -77,6 +75,9 @@ tensions_narratives: >
   La tension centrale est celle du seuil : jusqu'où étendre le réseau sans perdre la logique de réciprocité locale qui le fonde ? Certains bassins prospèrent et commencent à attirer des flux migratoires que leurs communs ne peuvent absorber. D'autres, en zone climatiquement dégradée, peinent à atteindre l'autosuffisance et réclament des transferts que les bassins riches rechignent à accorder. La question de la gouvernance des aquifères transfrontaliers génère des frictions croissantes avec des micro-États voisins qui refusent le principe de communs partagés.
 
 date_creation: 2026-06-15
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Réseau Terrafond des Bassins

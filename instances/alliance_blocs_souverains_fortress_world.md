@@ -59,8 +59,6 @@ type_relation_dominante: alliance stratégique
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: déclinant
 generation: forteresse
 
 injection:
@@ -81,6 +79,9 @@ tensions_narratives: >
   La logique même du Pacte accélère son effritement : chaque accord bilatéral crée des jalousies entre membres, et certains blocs négocient désormais en secret avec des zones officiellement exclues, fragilisant la doctrine de réciprocité stricte. Une faction interne, les 'Absolutistes de la clôture', pousse à l'abandon total de tout accord formalisé au profit d'une autarcie pure — ce qui signerait la dissolution du Pacte lui-même. Pendant ce temps, les corridors énergétiques que le Pacte est censé protéger sont de plus en plus infiltrés par des acteurs non-étatiques armés que personne ne veut officiellement reconnaître ni affronter.
 
 date_creation: 2026-06-15
+trajectoire: déclinant
+est_clandestin: false
+
 ---
 
 # Pacte des Forteresses Souveraines

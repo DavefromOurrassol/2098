@@ -67,8 +67,6 @@ type_relation_dominante: dépendance
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: forteresse
 
 injection:
@@ -89,6 +87,9 @@ tensions_narratives: >
   La Directive est structurellement incapable de prouver qu'elle protège les populations plutôt qu'elle ne les soumet : ses propres succès sont indémontrables — comment attester qu'une grève qui n'a pas eu lieu aurait eu lieu sans elle ? Cette opacité constitutive crée une fracture croissante au sein même des exécutifs du Pacte, certains commençant à soupçonner que le système optimise non la stabilité sociale mais la pérennité des régimes qui l'ont déployé. Par ailleurs, l'émergence de l'Oracle des Seuils — un système concurrent fragmenté issu de fuites de code — menace d'exposer pour la première fois les paramètres cachés de la Directive, ce qui pourrait déclencher soit une purge algorithmique d'ampleur inédite, soit l'effondrement de la légitimité de plusieurs gouvernements membres simultanément.
 
 date_creation: 2026-06-25
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Directive Kontinuum — Module Minsk

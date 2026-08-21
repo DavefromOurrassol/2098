@@ -51,8 +51,6 @@ type_relation_dominante: dépendance
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: clandestin
-age_historique: résiduel
 generation: post-effondrement
 
 injection:
@@ -73,6 +71,9 @@ tensions_narratives: >
   La fragmentation des cellules crée une tension irréductible : sans coordination centrale, certaines Semeurs adaptent les protocoles biotechnologiques au point de les dénaturer — voire de les rendre dangereux. La question de la légitimité technique sans certification institutionnelle est ouverte. Simultanément, des factions tentent de récupérer le réseau : les Pirates Biologiques Open-Source voient dans les CABS un vecteur de diffusion ; les Reseaux Noirs Pharmaceutiques cherchent à corrompre des cellules pour authentifier des produits contrefaits. La tentation ultime reste celle de se réinstaller sous la protection d'un pouvoir territorial — au prix de redevenir exactement l'instrument de contrôle déguisé en émancipation que le Consortium avait toujours refusé d'être.
 
 date_creation: 2026-06-25
+trajectoire: résiduel
+est_clandestin: true
+
 ---
 
 # Fragments CABS — Les Semeurs de Ruines

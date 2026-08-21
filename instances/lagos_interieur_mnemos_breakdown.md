@@ -58,8 +58,6 @@ type_relation_dominante: infiltration
 annee_debut: 2061
 annee_fin: 
 
-etat_temporel: clandestin
-age_historique: ascendant
 generation: post-effondrement
 
 injection:
@@ -80,6 +78,9 @@ tensions_narratives: >
   La ligne entre préservation sacrée et marchandisation cynique s'efface à mesure que la crise s'approfondit : certaines cellules facturent désormais l'accès aux archives au prix de la survie, excluant de fait les plus démunis de leur propre mémoire. Des factions internes disputent si les données doivent rester chiffrées et inconditionnellement protégées ou si elles peuvent être utilisées comme levier géopolitique face aux milices territoriales. En parallèle, les Fragments NexCore cherchent à infiltrer les nœuds pour s'approprier les bases identitaires et en faire un instrument de contrôle de population — ce qui pourrait provoquer soit la destruction délibérée des archives par les Cryptes elles-mêmes, soit leur trahison ultime.
 
 date_creation: 2026-06-27
+trajectoire: ascendant
+est_clandestin: true
+
 ---
 
 # Lagos Intérieur Mnemos — Les Cryptes Lagunaires

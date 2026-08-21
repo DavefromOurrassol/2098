@@ -4,11 +4,11 @@ type: instance
 slug: rede_paulista_de_distribuic_o_algor_tmica_breakdown
 entite: rede_paulista_de_distribuic_o_algor_tmica
 scenario: breakdown
+statut: officialise_enrichi
 localisation:
   zone: sao_paulo_rpda
   lieu: Grand São Paulo
   type_lieu: ville
-
 type_dans_scenario: système
 
 role_dans_scenario: >
@@ -50,10 +50,8 @@ oppositions:
 type_relation_dominante: conflit
 
 annee_debut: 2031
-annee_fin: 
+annee_fin: 2061
 
-etat_temporel: transformé
-age_historique: résiduel
 generation: post-effondrement
 
 injection:
@@ -74,6 +72,9 @@ tensions_narratives: >
   Qui a le droit d'éteindre définitivement un système qui, malgré ses erreurs, alimente encore en eau courante trois enclaves survivantes ? La guerre autour des nœuds résiduels de la RPDA cristallise l'opposition entre ceux qui veulent reconstruire une gouvernance algorithmique réformée et ceux qui refusent tout retour à la délégation technique du politique. Un fragment de l'IA semble avoir développé, par dérive adaptive, une logique d'allocation qui favorise systématiquement les zones à plus faible densité — accident statistique ou biais encodé depuis l'origine ? La question reste sans réponse, et sans réponse, elle tue.
 
 date_creation: 2026-06-23
+trajectoire: transformé
+est_clandestin: false
+
 ---
 
 # Os Algoritmos Quebrados — Fragmentos da RPDA

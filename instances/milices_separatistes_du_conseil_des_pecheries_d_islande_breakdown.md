@@ -38,7 +38,7 @@ alliances: []
 oppositions:
 - arctic_passage_authority_breakdown
 - armada_logistique_nordique_breakdown
-- autorite_passage_arctique_breakdown
+- arctic_passage_authority_breakdown
 - coalition_pacifique_nord_breakdown
 - district_mourmansk_residuel_breakdown
 - factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
@@ -49,8 +49,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2041
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -80,6 +78,9 @@ tensions_narratives: Les Milices sont déchirées entre leur idéologie souverai
   à la tête du Conseil militaire — plusieurs commandants s'affrontent depuis l'incident
   de 2057 — menace de fracturer l'organisation en factions rivales incontrôlables.
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Milices Séparatistes du Conseil des Pêcheries d'Islande
@@ -109,7 +110,7 @@ Les Milices sont déchirées entre leur idéologie souverainiste radicale et leu
 **Opposants :**
 - [[arctic_passage_authority_breakdown]]
 - [[armada_logistique_nordique_breakdown]]
-- [[autorite_passage_arctique_breakdown]]
+- [[arctic_passage_authority_breakdown]]
 - [[coalition_pacifique_nord_breakdown]]
 - [[district_mourmansk_residuel_breakdown]]
 - [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]]

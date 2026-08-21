@@ -67,8 +67,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2033
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -106,6 +104,9 @@ localisation:
   zone: zones_grises_globales
   lieu: Corridors sahéliens, eurasiens périphériques et franges américaines désertifiées
   type_lieu: infrastructure
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Milices Concurrentes des Droits de Passage

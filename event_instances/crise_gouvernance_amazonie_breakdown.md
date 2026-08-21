@@ -42,7 +42,7 @@ propagation:
 acteurs_impliques:
     - consortium_amazonia_viva_breakdown
     - factions_energetiques_heritieres_des_pactes_abs_breakdown
-    - frente_sert_o_livre_breakdown
+    - frente_sertao_livre_breakdown
     - milices_contractuelles_des_anciens_etats_membres_breakdown
     - seigneurs_de_guerre_agro_territoriaux_breakdown
     - federation_communs_territoriaux_breakdown
@@ -74,7 +74,7 @@ Le bassin amazonien n'émerge pas comme acteur géopolitique autonome — il se 
 ## Acteurs impliqués
 - [[consortium_amazonia_viva_breakdown]]
 - [[factions_energetiques_heritieres_des_pactes_abs_breakdown]]
-- [[frente_sert_o_livre_breakdown]]
+- [[frente_sertao_livre_breakdown]]
 - [[milices_contractuelles_des_anciens_etats_membres_breakdown]]
 - [[seigneurs_de_guerre_agro_territoriaux_breakdown]]
 - [[federation_communs_territoriaux_breakdown]]

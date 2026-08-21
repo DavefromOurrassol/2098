@@ -1,0 +1,88 @@
+---
+slug: ia_administrative_dependance_algorithmique
+source: actualite
+categorie: technological
+variables_cibles: ['valeurs_culture_tempo_sociale']
+statut: injected
+---
+
+## Idée source
+
+Diffusion accélérée d'agents IA autonomes multi-tâches dans les administrations publiques et les chaînes de production, avec des gains de productivité documentés mais des inquiétudes croissantes sur la dépendance algorithmique des institutions.
+
+## Cohérence avec les signaux existants
+
+- **valeurs_culture_tempo_sociale** : Le signal 'systemes_decision_automatises_publics' (section 12) traite d'un sujet proche mais se concentre sur la gouvernance institutionnelle plutôt que sur l'impact culturel et temporel. Ce nouveau signal complète en mettant l'accent sur la dépendance algorithmique comme facteur de désynchronisation sociale et de fragmentation des valeurs, en cohérence avec les dynamiques de 'desynchronisation_generationnelle' et 'fatigue_civilisationnelle'. La tension est assumée dans les scénarios comme breakdown (effondrement) et fortress_world (instrumentalisation), où la dépendance algorithmique aggrave les fractures existantes.
+
+## Trajectoire injectée
+
+```yaml
+signal_to_state:
+  - signal: ia_administrative_dependance_algorithmique
+    scenarios:
+      breakdown:
+        evolution: effondrement des institutions par dépendance algorithmique critique
+        date_bascule: 2042-2060
+        evenement_cle: panne systémique des IA administratives paralyse les États 2053
+      fortress_world:
+        evolution: blocs verrouillent leurs IA administratives comme outils de contrôle
+        date_bascule: 2037-2052
+        evenement_cle: Bloc Sibérien impose son IA administrative souveraine 2048
+      new_sustainability:
+        evolution: IA administratives co-gérées stabilisent les rythmes sociaux
+        date_bascule: 2033-2048
+        evenement_cle: Accord de Séoul sur la gouvernance algorithmique partagée 2041
+      eco_communalism:
+        evolution: communautés rejettent les IA administratives centralisées
+        date_bascule: 2040-2058
+        evenement_cle: charte bioterritoriale interdit les algorithmes publics 2052
+      policy_reform:
+        evolution: régulation stricte des IA administratives pour préserver la cohésion
+        date_bascule: 2030-2045
+        evenement_cle: traité international sur l'auditabilité des IA publiques 2038
+      reference:
+        evolution: dépendance algorithmique accélère la fragmentation sociale
+        date_bascule: 2028-2043
+        evenement_cle: premier scandale de biais algorithmique institutionnel majeur 2036
+```
+
+## Impact chiffré
+
+```yaml
+impact_sur_variables:
+  - variable: valeurs_culture_tempo_sociale
+    propagation_via_matrice: false
+    contexte_injection: >
+      La dépendance aux IA administratives réduit la résilience des institutions et accélère la fragmentation des rythmes sociaux, avec un impact documenté de -5 sur la cohésion des valeurs culturelles dans les scénarios tendus.
+    scenarios:
+      breakdown:
+        annee_injection: 2042
+        duree: 18
+        delta_level: 5
+        polarite: -1
+      fortress_world:
+        annee_injection: 2037
+        duree: 15
+        delta_level: 5
+        polarite: -1
+      new_sustainability:
+        annee_injection: 2033
+        duree: 15
+        delta_level: 5
+        polarite: -1
+      eco_communalism:
+        annee_injection: 2040
+        duree: 18
+        delta_level: 5
+        polarite: -1
+      policy_reform:
+        annee_injection: 2030
+        duree: 15
+        delta_level: 5
+        polarite: -1
+      reference:
+        annee_injection: 2028
+        duree: 15
+        delta_level: 5
+        polarite: -1
+```

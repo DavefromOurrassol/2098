@@ -51,7 +51,7 @@ alliances:
 - diaspora_tech_sahel_breakdown
 - factions_secessionnistes_agrariennes_du_desert_breakdown
 - flux_migratoires_non_integrables_breakdown
-- frente_sert_o_livre_breakdown
+- frente_sertao_livre_breakdown
 - front_humanitaire_d_urgence_non_affilie_breakdown
 - geneve_bunker_institutions_breakdown
 - guilde_des_techniciens_nomades_breakdown
@@ -74,8 +74,6 @@ oppositions:
 type_relation_dominante: coopération
 annee_debut: 2044
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -107,6 +105,9 @@ tensions_narratives: 'Les Brigades oscillent en permanence entre neutralité rev
   pourquoi — est devenue, dans plusieurs zones de conflit, une question politique
   explosive.'
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Brigades Médicales Itinérantes
@@ -149,7 +150,7 @@ Les Brigades oscillent en permanence entre neutralité revendiquée et instrumen
 - [[diaspora_tech_sahel_breakdown]]
 - [[factions_secessionnistes_agrariennes_du_desert_breakdown]]
 - [[flux_migratoires_non_integrables_breakdown]]
-- [[frente_sert_o_livre_breakdown]]
+- [[frente_sertao_livre_breakdown]]
 - [[front_humanitaire_d_urgence_non_affilie_breakdown]]
 - [[geneve_bunker_institutions_breakdown]]
 - [[guilde_des_techniciens_nomades_breakdown]]

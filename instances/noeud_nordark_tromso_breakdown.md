@@ -41,7 +41,7 @@ alliances:
 - arctic_passage_authority_breakdown
 - arctique_nordark_breakdown
 - armada_logistique_nordique_breakdown
-- autorite_passage_arctique_breakdown
+- arctic_passage_authority_breakdown
 - collectifs_de_reparation_energetique_breakdown
 - enclaves_industrielles_de_bergen_troms_breakdown
 - guilde_des_techniciens_nomades_breakdown
@@ -61,8 +61,6 @@ type_relation_dominante: dépendance
 annee_debut: 2087
 annee_fin: 
 
-etat_temporel: actif
-age_historique: ascendant
 generation: post-effondrement
 
 injection:
@@ -83,6 +81,9 @@ tensions_narratives: >
   Le Nœud est coincé entre sa nécessité absolue pour les communautés environnantes et l'attractivité mortelle que cette nécessité crée pour les prédateurs armés : renforcer les défenses, c'est militariser une institution civile et risquer de devenir soi-même ce qu'on combat. La question de la légitimité politique est également ouverte : les crédits-chaleur ont progressivement remplacé toute autre monnaie dans la région, ce qui donne au Nœud un pouvoir économique que certains communautés commencent à contester ouvertement. Enfin, la dépendance au réseau Nordark continental — dont les liaisons se fragmentent — expose le Nœud à un isolement total qui pourrait transformer une force en prison.
 
 date_creation: 2026-06-27
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Nœud Nordark Tromsø — Le Carrefour du Froid
@@ -111,7 +112,7 @@ Le Nœud est coincé entre sa nécessité absolue pour les communautés environn
 - [[arctic_passage_authority_breakdown]]
 - [[arctique_nordark_breakdown]]
 - [[armada_logistique_nordique_breakdown]]
-- [[autorite_passage_arctique_breakdown]]
+- [[arctic_passage_authority_breakdown]]
 - [[collectifs_de_reparation_energetique_breakdown]]
 - [[enclaves_industrielles_de_bergen_troms_breakdown]]
 - [[guilde_des_techniciens_nomades_breakdown]]

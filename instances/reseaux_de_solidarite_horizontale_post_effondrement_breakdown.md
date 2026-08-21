@@ -55,12 +55,10 @@ oppositions:
 - carthage_nord_nexcore_breakdown
 - corridors_eurasiens_convoyage_breakdown
 - lagos_est_nexcore_breakdown
-- rede_paulista_de_distribuic_o_algor_tmica_breakdown
+- rede_paulista_de_distribuicao_algoritmica_breakdown
 type_relation_dominante: symbiose
 annee_debut: 2041
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -89,6 +87,9 @@ tensions_narratives: 'La tension fondamentale qui ronge ces réseaux est celle e
   négocier avec Genève-Bunker, accepter la protection ambiguë de la Hanse Baltique
   — fracture régulièrement les assemblées.'
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Réseaux de solidarité horizontale post-effondrement
@@ -135,7 +136,7 @@ La tension fondamentale qui ronge ces réseaux est celle entre l'horizontalité 
 - [[carthage_nord_nexcore_breakdown]]
 - [[corridors_eurasiens_convoyage_breakdown]]
 - [[lagos_est_nexcore_breakdown]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_breakdown]]
+- [[rede_paulista_de_distribuicao_algoritmica_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

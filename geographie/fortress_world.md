@@ -719,7 +719,7 @@ zones:
     allies: []
     rivaux: []
   sources_attestees:
-  - rede_paulista_de_distribuic_o_algor_tmica_fortress_world
+  - rede_paulista_de_distribuicao_algoritmica_fortress_world
   promu_desde: null
   promu_depuis: null
 - slug: zones_grises_tampons
@@ -1622,7 +1622,7 @@ zones:
     allies: []
     rivaux: []
   sources_attestees:
-  - rede_paulista_de_distribuic_o_algor_tmica_fortress_world
+  - rede_paulista_de_distribuicao_algoritmica_fortress_world
   promu_depuis: null
 - slug: svalbard_tours_flottantes
   nom: Svalbard — Tours de Contrôle Flottantes NAT
@@ -1706,7 +1706,7 @@ zones:
     allies: []
     rivaux: []
   sources_attestees:
-  - rede_paulista_de_distribuic_o_algor_tmica_fortress_world
+  - rede_paulista_de_distribuicao_algoritmica_fortress_world
   promu_depuis: null
 - slug: zone_tampon_balkano_caucasienne
   nom: Zone Tampon Balkano-Caucasienne
@@ -2898,7 +2898,7 @@ Mégapole de 34 millions d'habitants gouvernée par le Sistema Paulista de Aloca
 - Serveurs SPAS — Plateau d'Interlagos (infrastructure) — Datacenters bunkerisés sous le plateau d'Interlagos depuis lesquels le SPAS attribue chaque matin les quotas vitaux de 34 millions d'habitants
 - Zone Norte de São Paulo (region) — Quartier résidentiel populaire systématiquement sous-doté par le SPAS depuis la modification des paramètres de 2091, foyer de la résistance clandestine
 
-*Sources attestées : rede_paulista_de_distribuic_o_algor_tmica_fortress_world*
+*Sources attestées : rede_paulista_de_distribuicao_algoritmica_fortress_world*
 
 ### Zones Grises et Tampons
 
@@ -3270,7 +3270,7 @@ Datacenters bunkerisés sous le plateau d'Interlagos abritant le Sistema Paulist
 
 **Tensions internes** : Vulnérabilité potentielle via la faille découverte par les ingénieurs dissidents ; modification unilatérale non mandatée des paramètres en 2091 constituant un levier de déstabilisation si rendue publique.
 
-*Sources attestées : rede_paulista_de_distribuic_o_algor_tmica_fortress_world*
+*Sources attestées : rede_paulista_de_distribuicao_algoritmica_fortress_world*
 
 #### Svalbard — Tours de Contrôle Flottantes NAT — sous [[espace_nordique_arctique]]
 
@@ -3314,7 +3314,7 @@ Quartiers résidentiels populaires du nord de São Paulo systématiquement sous-
 
 **Tensions internes** : Population privée délibérément d'eau et d'énergie par des paramètres non démocratiques ; foyer du collectif d'ingénieurs dissidents ayant découvert la faille dans le SPAS.
 
-*Sources attestées : rede_paulista_de_distribuic_o_algor_tmica_fortress_world*
+*Sources attestées : rede_paulista_de_distribuicao_algoritmica_fortress_world*
 
 #### Zone Tampon Balkano-Caucasienne — sous [[zones_grises_tampons]]
 

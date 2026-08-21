@@ -69,8 +69,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2032
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -107,6 +105,9 @@ localisation:
   zone: bloc_souverainiste_non_signataire
   lieu: réseau transrégional — ancrage principal dans les marges du Bloc Souverainiste
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Mouvement pour la Souveraineté Territoriale Absolue

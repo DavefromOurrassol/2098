@@ -62,8 +62,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2038
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -100,6 +98,9 @@ localisation:
   zone: zones_post_industrielles_eurasie
   lieu: Corridors logistiques post-industriels d'Eurasie centrale
   type_lieu: infrastructure
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Consortiums Logistiques Néo-Industriels des Terres Reconstruites

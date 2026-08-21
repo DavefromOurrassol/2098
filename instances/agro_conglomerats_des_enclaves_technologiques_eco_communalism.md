@@ -48,7 +48,7 @@ oppositions:
 - cooperative_terrafond_eco_communalism
 - cooperatives_d_habitat_regeneratif_eco_communalism
 - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
-- frente_sert_o_livre_eco_communalism
+- frente_sertao_livre_eco_communalism
 - guildes_de_mediateurs_ecologiques_eco_communalism
 - guildes_des_semenciers_itinerants_eco_communalism
 - kalaallit_nunaat_bioterritoire_eco_communalism
@@ -62,8 +62,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2038
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -96,6 +94,9 @@ localisation:
   zone: enclaves_extractivistes_et_etats_residuels
   lieu: Corridors Extractivistes Résiduels
   type_lieu: infrastructure
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Agro-Conglomérats des Enclaves Technologiques
@@ -140,7 +141,7 @@ Leur survie dépend de l'accès aux terres et aux ressources que les bioterritoi
 - [[cooperative_terrafond_eco_communalism]]
 - [[cooperatives_d_habitat_regeneratif_eco_communalism]]
 - [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]
-- [[frente_sert_o_livre_eco_communalism]]
+- [[frente_sertao_livre_eco_communalism]]
 - [[guildes_de_mediateurs_ecologiques_eco_communalism]]
 - [[guildes_des_semenciers_itinerants_eco_communalism]]
 - [[kalaallit_nunaat_bioterritoire_eco_communalism]]

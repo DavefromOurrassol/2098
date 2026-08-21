@@ -48,8 +48,6 @@ type_relation_dominante: rivalité
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: ascendant
 generation: IA-native
 
 injection:
@@ -70,6 +68,9 @@ tensions_narratives: >
   La question de qui contrôle réellement les IA éditoriales de pondération ronge Prisme de l'intérieur : des audits indépendants révèlent régulièrement des biais structurels favorisant certaines zones géographiques. Par ailleurs, des acteurs institutionnels tentent d'infiltrer le réseau via des contributeurs fictifs pour diluer des récits gênants — une guerre silencieuse de la vraisemblance. Enfin, la croissance même de Prisme menace son identité : devenu trop grand pour être ignoré, il est désormais courtisé par les pouvoirs qu'il prétend surveiller, risquant de glisser de miroir critique en caution narrative.
 
 date_creation: 2026-06-15
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Prisme Global

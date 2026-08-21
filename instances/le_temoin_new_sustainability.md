@@ -37,8 +37,6 @@ oppositions: []
 type_relation_dominante: coopération
 annee_debut: 2058
 annee_fin:
-etat_temporel: actif
-age_historique: mature
 generation: ère cognitive
 injection:
   type: canonique
@@ -63,6 +61,9 @@ tensions_narratives: >
   récits. Son dernier livre questionne ouvertement si la "durabilité"
   globale est vraiment aussi universelle qu'elle se prétend.
 date_creation: 2098-01-01
+trajectoire: mature
+est_clandestin: false
+
 ---
 
 # Kofi Asante-Mensah

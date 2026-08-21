@@ -57,8 +57,6 @@ type_relation_dominante: conflit
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: forteresse
 
 injection:
@@ -79,6 +77,9 @@ tensions_narratives: >
   La Zone de Friction est structurellement indispensable à l'enclave d'Almaty, mais son existence alimente les réseaux de résistance qu'elle est censée contenir : chaque checkpoint produit des données biométriques revendues clandestinement, chaque rejet crée un corps supplémentaire versé dans les collectifs dissidents périphériques. La question centrale est celle du seuil de rupture : à quel niveau de pression la zone bascule-t-elle d'espace-soupape en foyer d'insurrection incontrôlable ? Par ailleurs, les négociations clandestines entre opérateurs de l'enclave et contrebandiers de la zone créent des interdépendances que le régime ne peut officiellement reconnaître sans décrédibiliser l'architecture même de la forteresse. Enfin, le sort de Vasil Orentchev — dont les intérêts économiques traversent discrètement la ligne de friction — constitue un fil narratif explosif si ses compromissions venaient à être documentées.
 
 date_creation: 2026-06-27
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Zone de Friction d'Almaty — Périmètre des Seuils Kazakhs

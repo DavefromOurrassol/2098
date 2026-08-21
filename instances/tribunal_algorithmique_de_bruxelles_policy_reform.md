@@ -56,8 +56,6 @@ type_relation_dominante: coopération
 annee_debut: 2061
 annee_fin: 
 
-etat_temporel: actif
-age_historique: mature
 generation: ère cognitive
 
 injection:
@@ -78,6 +76,9 @@ tensions_narratives: >
   La CRAB est structurellement prise entre deux feux : les consortiums privés et les blocs souverainistes qui refusent sa juridiction au nom de l'efficacité ou de la souveraineté nationale, et les collectifs citoyens qui lui reprochent d'être trop lente, trop techniciste et trop dépendante des expertises émanant des acteurs qu'elle est censée contrôler. Une tension interne croissante oppose les juges-humains, garants de la dimension éthique, aux panels d'auditeurs algorithmiques qui réclament un droit de décision autonome au sein même de la chambre — ouvrant la question vertigineuse de savoir si un algorithme peut juger un algorithme. Enfin, une jurisprudence récente suspendant temporairement le système ARIA-Nexus a provoqué une crise diplomatique avec plusieurs États membres, mettant la CRAB au centre d'un bras de fer entre légitimité juridique et impératifs de gestion des ressources critiques.
 
 date_creation: 2026-06-25
+trajectoire: mature
+est_clandestin: false
+
 ---
 
 # Chambre de Révision Algorithmique de Bruxelles (CRAB)

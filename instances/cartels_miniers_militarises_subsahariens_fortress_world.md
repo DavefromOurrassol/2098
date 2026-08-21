@@ -50,8 +50,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2046
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -85,6 +83,9 @@ localisation:
   zone: afrique_subsaharienne_zones_effondrees
   lieu: Nairobi et corridors miniers du Grand Rift
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Cartels Miniers Militarisés Subsahariens

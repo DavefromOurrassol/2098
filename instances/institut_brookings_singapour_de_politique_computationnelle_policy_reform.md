@@ -52,8 +52,6 @@ oppositions:
 type_relation_dominante: coopération
 annee_debut: 2033
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -94,6 +92,9 @@ localisation:
   zone: singapour_brookings
   lieu: Singapour
   type_lieu: ville
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Institut Brookings-Singapour de Politique Computationnelle

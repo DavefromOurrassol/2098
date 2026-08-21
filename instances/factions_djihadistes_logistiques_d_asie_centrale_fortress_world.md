@@ -58,8 +58,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2038
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -94,6 +92,9 @@ localisation:
   zone: corridors_gris_asie_centrale
   lieu: Corridors Gris d'Asie Centrale — nœuds entre Almaty et Tbilissi
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Factions Djihadistes Logistiques d'Asie Centrale

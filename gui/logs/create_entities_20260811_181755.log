@@ -1,0 +1,23 @@
+============================================================
+OURRASSOL 2098 — Création entités + instances
+============================================================
+
+Mode : auto-suggest (fourni via --mode)
+
+[1/2] Analyse de la couverture du vault...
+  221 instance(s) analysée(s) | 586 entité(s) existante(s)
+[2/2] Génération de 1 idée(s) d'entités...
+[llm] Mistral (mistral-large-latest) — entrée : 26917 | sortie : 992
+  ✓ Consortium des Pêcheries Autonomes du Grand Nord (organisation) — ref: new_sustainability
+    → Comble le vide géographique dans les zones polaires et maritimes sous-représentées, tout en introduisant une entité collective centrée sur la gestion durable des ressources naturelles critiques.
+  ✓ Réseau des Cartographes des Zones Grises (réseau) — ref: fortress_world
+    → Répond au manque d'entités de type 'réseau' dans les zones de conflit et de non-droit, tout en offrant une fonction systémique de production de connaissances alternatives.
+  ✓ Agence de Régulation des Détroits Stratégiques (ARDS) (institution) — ref: policy_reform
+    → Couvre une lacune institutionnelle dans les zones géostratégiques sous-représentées (détroits), tout en introduisant un mécanisme de régulation transnationale des flux critiques.
+  ✓ Les Veilleurs des Nappes Phréatiques (mouvement) — ref: eco_communalism
+    → Introduit une entité de type 'mouvement' centrée sur la protection des ressources hydriques, comblant un vide thématique et géographique dans les zones rurales et extractivistes.
+  ✓ Terminal Kharg Data Haven (infrastructure) — ref: reference
+    → Comble un manque d'infrastructures critiques dans les zones sous-représentées (golfe Persique), tout en offrant une fonction systémique de préservation et de circulation de l'information.
+
+5 idée(s) ajoutée(s) à /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/entites_custom/queue.yaml
+→ Inspectez queue.yaml, puis relancez en mode custom pour créer les entités.

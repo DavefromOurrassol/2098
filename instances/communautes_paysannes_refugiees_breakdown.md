@@ -41,7 +41,7 @@ alliances:
 - collectifs_de_sante_communautaire_autogeree_breakdown
 - delta_mekong_racines_breakdown
 - enclaves_agro_communautaires_autonomes_breakdown
-- frente_sert_o_livre_breakdown
+- frente_sertao_livre_breakdown
 - front_humanitaire_d_urgence_non_affilie_breakdown
 - massif_central_cicatrices_vertes_breakdown
 - mouvement_racines_vivantes_breakdown
@@ -62,8 +62,6 @@ oppositions:
 type_relation_dominante: dépendance
 annee_debut: 2042
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -93,6 +91,9 @@ tensions_narratives: Ces communautés sont simultanément désirées pour leurs 
   perpétuelle qui érode précisément la transmission générationnelle qu'elles cherchent
   à préserver.
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Communautés Paysannes Réfugiées
@@ -126,7 +127,7 @@ Ces communautés sont simultanément désirées pour leurs savoir-faire et rejet
 - [[collectifs_de_sante_communautaire_autogeree_breakdown]]
 - [[delta_mekong_racines_breakdown]]
 - [[enclaves_agro_communautaires_autonomes_breakdown]]
-- [[frente_sert_o_livre_breakdown]]
+- [[frente_sertao_livre_breakdown]]
 - [[front_humanitaire_d_urgence_non_affilie_breakdown]]
 - [[massif_central_cicatrices_vertes_breakdown]]
 - [[mouvement_racines_vivantes_breakdown]]

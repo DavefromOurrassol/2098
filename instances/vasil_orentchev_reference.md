@@ -53,8 +53,6 @@ type_relation_dominante: dépendance
 annee_debut: 2061
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: transition
 
 injection:
@@ -75,6 +73,9 @@ tensions_narratives: >
   La multipolarité instable de 2098 oblige Orentchev à naviguer entre des blocs concurrents qui cherchent simultanément à utiliser ses corridors et à les absorber sous contrôle direct, menaçant son indépendance fondatrice. Une tension croissante émerge entre sa logique purement pragmatique et les populations des zones relais qui commencent à le percevoir comme une autorité légitime — rôle qu'il refuse mais que la réalité lui impose. Enfin, la montée des systèmes de traçabilité IA des ressources critiques pourrait rendre ses opérations opaques illisibles pour les consortiums qui le financent, le forçant à choisir entre transparence et disparition.
 
 date_creation: 2026-06-15
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Vasil Orentchev

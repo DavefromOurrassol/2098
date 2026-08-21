@@ -72,8 +72,6 @@ type_relation_dominante: alliance stratégique
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: reconstruction
 
 injection:
@@ -94,6 +92,9 @@ tensions_narratives: >
   Le succès même du Hub alimente une tension structurelle croissante : plusieurs grandes institutions mondiales, dont le Conseil de Gouvernance Algorithmique Intégrée et le Fonds Mondial de Régénération Écologique, cherchent à formaliser des partenariats exclusifs qui risquent de formater l'agenda du Hub selon leurs priorités institutionnelles plutôt que celles des communautés qu'il représente. En interne, une faction de jeunes cadres plaide pour une délégation plus large aux systèmes IA de coordination, tandis que les fondateurs historiques — issus des réseaux agricoles du terrain — redoutent une technocratisation qui éloignerait le Hub de ses racines. La question de la propriété intellectuelle des modèles exportés constitue également un front de friction montant : entre ceux qui souhaitent les maintenir en communs ouverts et ceux qui voient dans leur monétisation partielle un levier de financement de l'autonomie institutionnelle.
 
 date_creation: 2026-06-27
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Hub Nairobi-Kigali — Pôle Continental de Gouvernance Régénérative

@@ -62,8 +62,6 @@ type_relation_dominante: alliance stratégique
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: ascendant
 generation: post-effondrement
 
 injection:
@@ -84,6 +82,9 @@ tensions_narratives: >
   La légitimité juridique que s'arroge la Ligue repose sur un paradoxe fondamental : elle prétend incarner un ordre juste et partagé, mais ses règles sont rédigées par les grandes cités membres au détriment des ports mineurs et des populations côtières non représentées, qui paient les droits sans siéger au Conseil. La montée des milices séparatistes islandaises et la pression croissante du Consortium Énergétique Oural-Caspien sur les détroits orientaux menacent d'embraser un équilibre déjà précaire. En interne, Hambourg et Tallinn s'affrontent sourdement pour le contrôle des routes les plus lucratives, et des rumeurs persistent sur des arrangements secrets entre des capitaines de la Garde et des réseaux logistiques criminels concurrents.
 
 date_creation: 2026-06-27
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Ligue Hanséatique Baltique — Le Sceau du Gotland

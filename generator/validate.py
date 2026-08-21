@@ -43,6 +43,8 @@ PATHS = {
     "evenements":       os.path.join(VAULT_PATH, "evenements"),
     "event_instances":  os.path.join(VAULT_PATH, "event_instances"),
     "influence_matrix": os.path.join(VAULT_PATH, "influence_matrix.md"),
+    "signaux_custom":   os.path.join(VAULT_PATH, "signaux_custom"),
+    "registre":         os.path.join(VAULT_PATH, "registre_evenements.md"),
 }
 
 VALID_VARS = [
@@ -65,9 +67,21 @@ VALID_CATEGORIES = [
     "entreprise", "IA", "média", "territoire"
 ]
 
-VALID_ETAT_TEMPOREL = [
-    "actif", "disparu", "transformé", "clandestin", "historique", "mythifié"
+# Chantier trajectoire (9 août 2026) : etat_temporel + age_historique
+# fusionnés en un seul axe narratif continu. VALID_ETAT_TEMPOREL et
+# VALID_AGE_HISTORIQUE supprimés (VALID_AGE_HISTORIQUE était d'ailleurs une
+# constante morte, jamais câblée à un vrai check — bug de fond corrigé au
+# passage). est_clandestin devient un booléen indépendant, hors de cet axe.
+VALID_TRAJECTOIRE = [
+    "émergent", "marginal", "ascendant", "dominant", "mature", "déclinant",
+    "résiduel", "transformé", "disparu", "historique", "mythifié",
 ]
+
+# Unifie les 3 définitions dupliquées et divergentes trouvées le 9 août 2026
+# (INACTIVE_ETATS, ETAT_INACTIFS, et le hardcode "disparu" du check C4) —
+# un seul ensemble de vérité désormais, utilisé partout où l'un des trois
+# anciens noms était utilisé.
+TRAJECTOIRE_INACTIVES = {"transformé", "disparu", "historique", "mythifié"}
 
 VALID_ZONES_GEOGRAPHIQUES = [
     "locale", "urbaine", "nationale", "régionale", "continentale",
@@ -86,11 +100,6 @@ GENERATOR_DIR         = os.path.join(VAULT_PATH, "generator")
 LAST_VALIDATED_PATH   = os.path.join(GENERATOR_DIR, "last_validated.json")
 NARRATIVE_ISSUES_PATH = os.path.join(NEED_ACTION_DIR, "narrative_issues.yaml")
 
-VALID_AGE_HISTORIQUE = [
-    "émergent", "marginal", "ascendant", "dominant",
-    "mature", "déclinant", "résiduel", "mythifié"
-]
-
 VALID_FORMATS = [
     "breve", "brève",
     "analyse",
@@ -107,14 +116,28 @@ VALID_FORMATS = [
 LEVEL_HIGH_THRESHOLD = 70   # niveau "élevé"
 LEVEL_LOW_THRESHOLD  = 30   # niveau "faible"
 
-# Mapping état_temporel attendu selon state_of_system
-COHERENCE_MAP = {
-    "chaotique":   {"actif", "disparu", "clandestin", "résiduel", "transformé"},
-    "fragile":     {"actif", "ascendant", "déclinant", "clandestin", "transformé"},
-    "instable":    {"actif", "ascendant", "dominant", "clandestin", "transformé"},
-    "stable":      {"actif", "dominant", "mature"},
-    "resilient":   {"actif", "dominant", "mature", "ascendant"},
-    "collapsing":  {"disparu", "clandestin", "résiduel"},
+# Mapping trajectoire attendue selon state_of_system (chantier trajectoire,
+# 9 août 2026 — remplace COHERENCE_MAP qui mélangeait etat_temporel et
+# age_historique). "clandestin" retiré (devenu est_clandestin, hors axe).
+#
+# Recalibré le 9 août 2026 après un premier passage trop strict (avait
+# oublié "émergent" dans toutes les lignes — 424/528 avertissements sur
+# 710 fiches migrées, faux positifs massifs) puis un second passage
+# calibré sur la répartition réelle observée sur le vault entier. Ce
+# second passage a montré que "fragile" et "instable" acceptent en
+# pratique presque toutes les valeurs de l'axe (états systémiques
+# ambigus par nature) — le check n'y discrimine plus rien d'utile une
+# fois élargi pour éviter les faux positifs. Décision avec David :
+# simplifié pour ne garder le check QUE là où il discrimine vraiment
+# (resilient, collapsing — peu de valeurs cohérentes, donc utile).
+# "chaotique"/"fragile"/"instable"/"stable" retirés de la map : absence
+# de clé → set() vide → check ignoré pour ces state_of_system (voir
+# l'appel TRAJECTOIRE_COHERENCE_MAP.get(sys_state, set()) plus bas).
+# resilient/collapsing inchangés depuis le calibrage initial — 0
+# avertissement observé sur le vault réel avec ces valeurs.
+TRAJECTOIRE_COHERENCE_MAP = {
+    "resilient":  {"dominant", "mature", "ascendant"},
+    "collapsing": {"disparu", "résiduel", "transformé"},
 }
 
 
@@ -427,11 +450,11 @@ def validate_entities(result):
                 result.error("instances", fname,
                     "variable_influencee invalide : '{}'".format(v_clean))
 
-        # Vérifier etat_temporel
-        etat = fm.get("etat_temporel", "")
-        if etat and etat not in VALID_ETAT_TEMPOREL:
+        # Vérifier trajectoire (chantier 9 août 2026 — remplace etat_temporel)
+        trajectoire = fm.get("trajectoire", "")
+        if trajectoire and trajectoire not in VALID_TRAJECTOIRE:
             result.warning("instances", fname,
-                "etat_temporel invalide : '{}'".format(etat))
+                "trajectoire invalide : '{}'".format(trajectoire))
 
         # Vérifier zone_geographique
         zones_geo = fm.get("zone_geographique", []) or []
@@ -441,16 +464,15 @@ def validate_entities(result):
                 result.warning("instances", fname,
                     "zone_geographique invalide : '{}'".format(z_clean))
 
-        # Cohérence etat_temporel ↔ state_of_system du scénario
-        if sc and sc in scenario_states and etat:
+        # Cohérence trajectoire ↔ state_of_system du scénario
+        if sc and sc in scenario_states and trajectoire:
             sys_state = scenario_states[sc]
-            expected_etats = COHERENCE_MAP.get(sys_state, set())
-            age = fm.get("age_historique", "")
-            if expected_etats and etat not in expected_etats and age not in expected_etats:
+            expected_trajectoires = TRAJECTOIRE_COHERENCE_MAP.get(sys_state, set())
+            if expected_trajectoires and trajectoire not in expected_trajectoires:
                 result.warning("instances", fname,
-                    "etat_temporel '{}' potentiellement incohérent avec "
+                    "trajectoire '{}' potentiellement incohérente avec "
                     "state_of_system '{}' du scénario '{}'".format(
-                        etat, sys_state, sc))
+                        trajectoire, sys_state, sc))
 
         # Vérifier les injections custom
         injection = fm.get("injection", {}) or {}
@@ -845,6 +867,174 @@ def validate_matrix(result):
 # 7. VALIDATION ÉVÉNEMENTS
 # ─────────────────────────────────────────
 
+def validate_signals(result):
+    """
+    Vérifie la cohérence entre section 7 (annotations courtes) et
+    section 12 (blocs signal_to_state) des fiches variables, plus les
+    fiches d'audit signaux_custom/*.md et le registre — chantier
+    demandé par David le 16 août 2026, suite à un incident documenté le
+    26 juillet (signal dupliqué dans variables/geopolitique_conflits.md
+    après un crash entre l'écriture de la fiche variable et celle du
+    registre) et à des bugs similaires trouvés le 27 juillet (annotation
+    section 7 sans préfixe, bloc section 12 cassé par undo_custom.py).
+
+    Approche : croiser 3 sources indépendantes plutôt que faire confiance
+    à une seule (même principe que le fix appliqué à
+    resolve_signal_variables() dans undo_custom.py le 26 juillet) :
+      1. Section 7 de chaque fiche variable (annotations `signal_custom:`)
+      2. Section 12 de chaque fiche variable (bloc `signal_to_state`)
+      3. `variables_cibles` des fiches d'audit signaux_custom/*.md
+    Diagnostic uniquement -- ne corrige rien, ne fait aucune hypothèse
+    sur laquelle des 3 sources a raison en cas de désaccord.
+    """
+    variables_dir = PATHS["variables"]
+    if not os.path.exists(variables_dir):
+        return
+
+    # ── 1. Section 7 : slugs annotés (avec détection du bug connu du
+    #    préfixe manquant, pour ne pas les compter comme "absents")
+    section7_slugs = {}   # {variable_slug: set(signal_slugs)}
+    section7_malformed = {}  # {variable_slug: [lignes sans préfixe reconnu]}
+    for fname in list_files(variables_dir):
+        var_slug = fname[:-3]
+        _, body, _ = parse_md(os.path.join(variables_dir, fname))
+        if body is None:
+            continue
+        m = re.search(r"##\s*7\..*?\n(.*?)\n##\s*8\.", body, re.DOTALL)
+        section7 = m.group(1) if m else ""
+        found = set(re.findall(r"signal_custom:\s*([a-z0-9_]+)", section7))
+        section7_slugs[var_slug] = found
+
+        # Lignes qui ressemblent à une annotation de signal custom (même
+        # marqueur de section) mais sans le préfixe attendu -- symptôme
+        # exact du bug #4 du 27 juillet.
+        marker_block = re.search(
+            r"\*\*custom \(signaux d.actualité\)\*\*\s*\n(.*)", section7, re.DOTALL
+        )
+        if marker_block:
+            for line in marker_block.group(1).splitlines():
+                line = line.strip()
+                if line.startswith("-") and "signal_custom:" not in line:
+                    section7_malformed.setdefault(var_slug, []).append(line)
+
+    # ── 2. Section 12 : slugs dans le bloc signal_to_state (+ doublons)
+    section12_slugs = {}   # {variable_slug: set(signal_slugs)}
+    for fname in list_files(variables_dir):
+        var_slug = fname[:-3]
+        _, body, _ = parse_md(os.path.join(variables_dir, fname))
+        if body is None:
+            continue
+        blocks = re.findall(r"```yaml\n(.*?)\n```", body, re.DOTALL)
+        yaml_block = blocks[-1] if blocks else ""
+        all_slugs = re.findall(r"^\s*-\s*signal:\s*([a-z0-9_]+)", yaml_block, re.MULTILINE)
+        section12_slugs[var_slug] = set(all_slugs)
+
+        seen = {}
+        for s in all_slugs:
+            seen[s] = seen.get(s, 0) + 1
+        for s, count in seen.items():
+            if count > 1:
+                result.error(
+                    "signals", fname,
+                    "signal '{}' apparaît {} fois dans le bloc section 12 "
+                    "(doublon -- symptôme connu, voir incident du 26 juillet "
+                    "sur norvege_terres_rares_levier_geopolitique)".format(s, count)
+                )
+
+    # ── 3bis. Slugs réellement custom (preuve = une fiche d'audit existe)
+    # -- distinction cruciale trouvée en testant sur le vrai vault le 16
+    # août 2026 : les signaux du socle initial (juin 2026, avant
+    # l'existence même d'inject_custom_signals.py) utilisent un format
+    # totalement différent en section 7 -- marqueurs de catégorie
+    # (**technological**, **social**...) et простое "(→ slug)" SANS le
+    # préfixe "signal_custom:". Ce ne sont pas des signaux custom, donc
+    # ne pas les soumettre au croisement 7<->12 -- source du faux
+    # positif massif (60/60) trouvé au premier run réel.
+    custom_signal_slugs = set()
+    signaux_dir_for_slugs = PATHS.get("signaux_custom")
+    if signaux_dir_for_slugs and os.path.exists(signaux_dir_for_slugs):
+        for fname in list_files(signaux_dir_for_slugs):
+            fm, _, _ = parse_md(os.path.join(signaux_dir_for_slugs, fname))
+            if fm and fm.get("slug"):
+                custom_signal_slugs.add(fm["slug"])
+
+    # ── 3. Croisement section 7 <-> section 12, par fiche variable
+    #    (uniquement pour les slugs custom confirmés -- voir 3bis)
+    all_var_slugs = set(section7_slugs) | set(section12_slugs)
+    for var_slug in sorted(all_var_slugs):
+        fname = var_slug + ".md"
+        s7 = section7_slugs.get(var_slug, set())
+        s12 = {s for s in section12_slugs.get(var_slug, set()) if s in custom_signal_slugs}
+        only_in_7 = s7 - s12
+        only_in_12 = s12 - s7
+        for s in sorted(only_in_7):
+            result.warning(
+                "signals", fname,
+                "signal '{}' annoté en section 7 mais absent du bloc "
+                "section 12 de cette même fiche".format(s)
+            )
+        for s in sorted(only_in_12):
+            result.warning(
+                "signals", fname,
+                "signal '{}' présent en section 12 mais sans annotation "
+                "correspondante en section 7 (préfixe 'signal_custom:' "
+                "manquant ou oublié ? voir bug du 27 juillet)".format(s)
+            )
+        for line in section7_malformed.get(var_slug, []):
+            result.warning(
+                "signals", fname,
+                "ligne de section 7 sans préfixe 'signal_custom:' reconnu "
+                "(invisible à undo_custom.py) : {!r}".format(line)
+            )
+
+    # ── 4. Fiches d'audit signaux_custom/*.md : variables_cibles complet ?
+    signaux_dir = PATHS.get("signaux_custom")
+    if signaux_dir and os.path.exists(signaux_dir):
+        for fname in list_files(signaux_dir):
+            fm, _, _ = parse_md(os.path.join(signaux_dir, fname))
+            if not fm:
+                continue
+            slug = fm.get("slug", fname[:-3])
+            declared = set(fm.get("variables_cibles") or [])
+            # Variables où ce slug apparaît RÉELLEMENT (section 7 ou 12)
+            actual = {
+                v for v in all_var_slugs
+                if slug in section7_slugs.get(v, set())
+                or slug in section12_slugs.get(v, set())
+            }
+            missing_from_fiche = actual - declared
+            if missing_from_fiche:
+                result.error(
+                    "signals", fname,
+                    "variables_cibles ({}) ne couvre pas toutes les fiches "
+                    "variables où ce signal apparaît réellement : {} manquante(s) "
+                    "-- symptôme du bug de run partiel corrigé dans "
+                    "resolve_signal_variables() le 26 juillet".format(
+                        sorted(declared), sorted(missing_from_fiche)
+                    )
+                )
+
+    # ── 5. Registre : lignes de type 'signal' vs ce qui existe réellement
+    registre_path = PATHS.get("registre")
+    if registre_path and os.path.exists(registre_path):
+        with open(registre_path, "r", encoding="utf-8") as f:
+            registre_text = f.read()
+        for row_match in re.finditer(
+            r"^\|\s*signal\s*\|[^|]*\|\s*([a-z0-9_]+)\s*\|\s*([a-z0-9_]+)\s*\|",
+            registre_text, re.MULTILINE
+        ):
+            signal_slug, var_slug = row_match.group(1), row_match.group(2)
+            if var_slug in section12_slugs and signal_slug not in section12_slugs[var_slug]:
+                result.warning(
+                    "signals", "registre_evenements.md",
+                    "signal '{}' référencé dans le registre pour la variable "
+                    "'{}' mais absent du bloc section 12 de cette fiche".format(
+                        signal_slug, var_slug
+                    )
+                )
+
+
+
 def validate_events(result):
     """Vérifie la cohérence des archétypes d'événements et de leurs instances."""
 
@@ -1146,7 +1336,7 @@ def _event_instances_modified_since(ts):
 def validate_narrative_coherence(result, force=False):
     """
     Vérifie la cohérence narrative post-injection dans les event_instances :
-      A. Acteurs : slug suffixe scénario correct + etat_temporel actif
+      A. Acteurs : slug suffixe scénario correct + trajectoire active
       B. Variables : overflow level + delta_reel hors [0, 100]
 
     Ne tourne que si des event_instances ont été modifiées depuis le dernier
@@ -1159,17 +1349,17 @@ def validate_narrative_coherence(result, force=False):
         result.info("narrative", "Aucune event_instance modifiée depuis la dernière validation — scan ignoré (--narrative pour forcer)")
         return
 
-    # ── Charger les instances : slug → etat_temporel + scenario
-    instances_meta = {}  # slug → {"etat_temporel": ..., "scenario": ...}
+    # ── Charger les instances : slug → trajectoire + scenario
+    instances_meta = {}  # slug → {"trajectoire": ..., "scenario": ...}
     if os.path.exists(PATHS["instances"]):
         for fname in list_files(PATHS["instances"]):
             slug = fname.replace(".md", "")
             fm, _, _ = parse_md(os.path.join(PATHS["instances"], fname))
             if fm:
                 instances_meta[slug] = {
-                    "etat_temporel": fm.get("etat_temporel", ""),
-                    "age_historique": fm.get("age_historique", ""),
-                    "scenario":      fm.get("scenario", ""),
+                    "trajectoire": fm.get("trajectoire", ""),
+                    "scenario":    fm.get("scenario", ""),
+                    "annee_fin":   fm.get("annee_fin"),
                 }
 
     # ── Charger les variable levels par scénario
@@ -1184,7 +1374,8 @@ def validate_narrative_coherence(result, force=False):
                 if sc in states and isinstance(states[sc], dict):
                     var_levels[sc][var] = states[sc].get("level", 50)
 
-    INACTIVE_ETATS = {"disparu", "historique"}
+    # (INACTIVE_ETATS supprimé — remplacé par INACTIVE_TRAJECTOIRES_ACTEUR,
+    # défini localement dans le check A2 ci-dessous, chantier trajectoire)
 
     issues_by_scenario = {}  # scenario → [{"event": ..., "type": ..., "message": ...}]
     total_issues = 0
@@ -1221,22 +1412,54 @@ def validate_narrative_coherence(result, force=False):
                 })
                 total_issues += 1
 
-            # A2 — etat_temporel actif
-            # Un acteur disparu/historique avec age_historique résiduel ou mythifié
-            # est narrativement acceptable (trace passive, référence, symbole).
-            RESIDUEL_AGES = {"résiduel", "mythifié"}
+            # A2 — trajectoire active (chantier 9 août 2026, remplace etat_
+            # temporel/age_historique séparés). Avant la fusion, un acteur
+            # etat_temporel='disparu'/'historique' échappait à cet
+            # avertissement si son age_historique valait 'résiduel'/
+            # 'mythifié' (trace passive, référence, symbole — acceptable
+            # dans un événement). Cette exception reposait sur DEUX champs
+            # distincts pouvant porter des valeurs différentes ; elle
+            # devient structurellement impossible avec un seul champ
+            # trajectoire (une fiche ne peut plus être à la fois 'disparu'
+            # ET 'résiduel'). Le check se limite donc désormais à signaler
+            # trajectoire ∈ {disparu, historique} — même périmètre par
+            # défaut que l'ancien INACTIVE_ETATS, sans reconduire une
+            # exception qui n'a plus de sens. Note : 'résiduel', 'mythifié'
+            # et 'transformé' restent hors de cet ensemble (comme avant),
+            # donc toujours acceptables tels quels dans un événement.
+            INACTIVE_TRAJECTOIRES_ACTEUR = {"disparu", "historique"}
             meta = instances_meta.get(acteur)
             if meta:
-                etat = meta.get("etat_temporel", "")
-                age  = meta.get("age_historique", "")
-                if etat in INACTIVE_ETATS and age not in RESIDUEL_AGES:
-                    msg = "acteur '{}' a etat_temporel='{}' / age_historique='{}' — inactif dans l'événement".format(
-                        acteur, etat, age or "(non défini)")
-                    result.warning("narrative", fname, msg)
-                    issues_by_scenario.setdefault(sc, []).append({
-                        "event": event_slug, "type": "acteur_inactif", "message": msg
-                    })
-                    total_issues += 1
+                trajectoire_acteur = meta.get("trajectoire", "")
+                if trajectoire_acteur in INACTIVE_TRAJECTOIRES_ACTEUR:
+                    # Correctif du 16 août 2026 : ce check comparait trajectoire
+                    # (état figé en 2098) sans jamais tenir compte de la date de
+                    # L'ÉVÉNEMENT lui-même -- un acteur "disparu" en 2098 a pu
+                    # être parfaitement actif au moment d'un événement bien
+                    # antérieur à sa disparition (annee_fin). Faux positif réel
+                    # trouvé le jour même (nexcore_breakdown, actif 2028-2051,
+                    # signalé à tort sur un événement de 2040). Si annee_fin est
+                    # renseigné, on ne signale que si l'événement est POSTÉRIEUR
+                    # à cette date -- sinon (annee_fin absent), on garde
+                    # l'ancien comportement (signaler quand même), l'incertitude
+                    # étant elle-même une donnée manquante à corriger.
+                    annee_fin = meta.get("annee_fin")
+                    date_evenement = fm.get("date")
+                    doit_signaler = True
+                    if annee_fin is not None and date_evenement is not None:
+                        try:
+                            doit_signaler = int(date_evenement) > int(annee_fin)
+                        except (ValueError, TypeError):
+                            pass  # valeurs non numériques -- filet de sécurité, comportement inchangé
+
+                    if doit_signaler:
+                        msg = "acteur '{}' a trajectoire='{}' — inactif dans l'événement".format(
+                            acteur, trajectoire_acteur)
+                        result.warning("narrative", fname, msg)
+                        issues_by_scenario.setdefault(sc, []).append({
+                            "event": event_slug, "type": "acteur_inactif", "message": msg
+                        })
+                        total_issues += 1
 
         # ── B. Vérification overflow delta/level
         impacts = fm.get("impact_sur_variables", []) or []
@@ -1262,8 +1485,15 @@ def validate_narrative_coherence(result, force=False):
                     })
                     total_issues += 1
 
-    # ── C. Validation narrative des instances (annee_debut, annee_fin, etat_temporel)
-    ETAT_INACTIFS = {"disparu", "transformé", "historique", "mythifié"}
+    # ── C. Validation narrative des instances (annee_debut, annee_fin, trajectoire)
+    # ETAT_INACTIFS supprimé — remplacé par TRAJECTOIRE_INACTIVES (module-
+    # level, chantier trajectoire du 9 août 2026). Cette unification corrige
+    # au passage le bug C4 identifié le 9 août : le check C4 testait
+    # `etat == "disparu"` en dur au lieu d'utiliser cet ensemble complet,
+    # rendant invisibles à la validation les fiches transformé/historique/
+    # mythifié sans annee_fin (28 fiches transformé concernées avant ce
+    # correctif). Désormais C4 couvre les 4 valeurs terminales, comme C3 le
+    # fait déjà.
 
     if os.path.exists(PATHS["instances"]):
         for fname in list_files(PATHS["instances"]):
@@ -1276,7 +1506,7 @@ def validate_narrative_coherence(result, force=False):
             if sc not in VALID_SCENARIOS:
                 continue
 
-            etat       = fm.get("etat_temporel", "")
+            trajectoire = fm.get("trajectoire", "")
             annee_debut = fm.get("annee_debut")
             annee_fin   = fm.get("annee_fin")
 
@@ -1302,12 +1532,12 @@ def validate_narrative_coherence(result, force=False):
                 except (ValueError, TypeError):
                     pass
 
-            # C3 — annee_fin ≤ 2097 mais etat_temporel actif
+            # C3 — annee_fin ≤ 2097 mais trajectoire toujours active
             if annee_fin:
                 try:
-                    if int(annee_fin) <= 2097 and etat and etat not in ETAT_INACTIFS:
-                        msg = "annee_fin={} ≤ 2097 mais etat_temporel='{}' (attendu: disparu/transformé/historique/mythifié)".format(
-                            annee_fin, etat)
+                    if int(annee_fin) <= 2097 and trajectoire and trajectoire not in TRAJECTOIRE_INACTIVES:
+                        msg = "annee_fin={} ≤ 2097 mais trajectoire='{}' (attendu: transformé/disparu/historique/mythifié)".format(
+                            annee_fin, trajectoire)
                         result.warning("narrative", fname, msg)
                         issues_by_scenario.setdefault(sc, []).append({
                             "instance": slug, "type": "etat_incoherent_annee_fin", "message": msg
@@ -1316,9 +1546,11 @@ def validate_narrative_coherence(result, force=False):
                 except (ValueError, TypeError):
                     pass
 
-            # C4 — etat_temporel disparu sans annee_fin
-            if etat == "disparu" and not annee_fin:
-                msg = "etat_temporel='disparu' mais annee_fin absent"
+            # C4 — trajectoire terminale sans annee_fin (corrige le bug du
+            # 9 août 2026 : testait "disparu" en dur au lieu de couvrir les
+            # 4 valeurs terminales comme C3 le fait déjà)
+            if trajectoire in TRAJECTOIRE_INACTIVES and not annee_fin:
+                msg = "trajectoire='{}' mais annee_fin absent".format(trajectoire)
                 result.warning("narrative", fname, msg)
                 issues_by_scenario.setdefault(sc, []).append({
                     "instance": slug, "type": "disparu_sans_annee_fin", "message": msg
@@ -1371,31 +1603,34 @@ def run(verbose=False, report=False, fix=False, localisation_only=False, narrati
 
     print("\n[validate] Démarrage de la validation...")
 
-    print("[validate] 1/9 — Nomenclature...")
+    print("[validate] 1/10 — Nomenclature...")
     validate_nomenclature(result)
 
-    print("[validate] 2/9 — Cohérence systémique...")
+    print("[validate] 2/10 — Cohérence systémique...")
     validate_systemic(result)
 
-    print("[validate] 3/9 — Entités et instances...")
+    print("[validate] 3/10 — Entités et instances...")
     validate_entities(result)
 
-    print("[validate] 4/9 — Thématiques...")
+    print("[validate] 4/10 — Thématiques...")
     validate_thematiques(result)
 
-    print("[validate] 5/9 — Localisation...")
+    print("[validate] 5/10 — Localisation...")
     validate_localisation(result)
 
-    print("[validate] 6/9 — Références croisées...")
+    print("[validate] 6/10 — Références croisées...")
     validate_cross_references(result)
 
-    print("[validate] 7/9 — Matrice d'influence...")
+    print("[validate] 7/10 — Matrice d'influence...")
     validate_matrix(result)
 
-    print("[validate] 8/9 — Événements...")
+    print("[validate] 8/10 — Événements...")
     validate_events(result)
 
-    print("[validate] 9/9 — Cohérence narrative post-injection...")
+    print("[validate] 9/10 — Signaux faibles (section 7 ↔ section 12)...")
+    validate_signals(result)
+
+    print("[validate] 10/10 — Cohérence narrative post-injection...")
     validate_narrative_coherence(result, force=narrative)
 
     print_results(result, verbose=verbose)

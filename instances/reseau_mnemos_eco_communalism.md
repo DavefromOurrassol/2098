@@ -56,8 +56,6 @@ type_relation_dominante: symbiose
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: ascendant
 generation: reconstruction
 
 injection:
@@ -78,6 +76,9 @@ tensions_narratives: >
   La Trame peine à synchroniser des nœuds dont les communautés ont développé des protocoles incompatibles, menaçant de créer des archipels de savoirs inaccessibles les uns aux autres. Certaines assemblées refusent de partager des innovations jugées stratégiques, transformant la coopération en compétition silencieuse. Des agents d'enclaves corporatives cherchent à infiltrer des nœuds pour cartographier les ressources territoriales que la Trame révèle indirectement. Enfin, une génération de jeunes nés après l'effondrement commence à questionner l'archivage de 'savoirs du monde d'avant' jugés inutiles, voire dangereux.
 
 date_creation: 2026-06-15
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Trame Mnemos

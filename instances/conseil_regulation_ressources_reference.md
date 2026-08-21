@@ -57,8 +57,6 @@ type_relation_dominante: coopération
 annee_debut: 2061
 annee_fin: 
 
-etat_temporel: actif
-age_historique: déclinant
 generation: transition
 
 injection:
@@ -79,6 +77,9 @@ tensions_narratives: >
   La réforme du droit de veto des membres permanents est bloquée depuis 2089, paralysant toute décision contraignante sur les réserves d'eau fossile d'Afrique subsaharienne, devenues le prochain point d'ignition. Un mouvement interne de jeunes délégués du Sud global pousse à une refondation radicale — 'Nairobi 2.0' — tandis que les puissances historiques préfèrent une institution faible et prévisible à une institution forte et imprévisible. En parallèle, des algorithmes de gestion des ressources développés par des acteurs privés commencent à supplanter ses outils d'analyse, soulevant la question de savoir qui régule vraiment les ressources critiques en 2098.
 
 date_creation: 2026-06-15
+trajectoire: déclinant
+est_clandestin: false
+
 ---
 
 # Conseil de Régulation des Ressources Critiques

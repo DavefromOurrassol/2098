@@ -72,8 +72,6 @@ type_relation_dominante: conflit
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: forteresse
 
 injection:
@@ -94,6 +92,9 @@ tensions_narratives: >
   Le Bunker est structurellement dépendant de la permanence de la menace qu'il est censé neutraliser : toute stabilisation réelle des zones tampons viderait sa raison d'être, ce qui pousse certains analystes dissidents à documenter des cas de menaces manufacturées ou amplifiées pour justifier de nouvelles interventions. En interne, des factions divergent sur la ligne à tenir — entre ceux qui veulent étendre les périmètres sécurisés pour absorber de nouvelles élites, et ceux qui prônent une contraction radicale et une épuration accélérée des zones grises. Enfin, la montée des instances ARIA concurrentes et des systèmes algorithmiques souverains parallèles menace de court-circuiter l'autorité du Bunker, qui voit dans cette automatisation une perte de contrôle discrétionnaire — la seule ressource qu'il refuse absolument de partager.
 
 date_creation: 2026-06-27
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Bunker — Chambre de Sécurité Territoriale

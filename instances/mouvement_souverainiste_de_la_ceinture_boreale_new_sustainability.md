@@ -62,8 +62,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2041
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -100,6 +98,9 @@ localisation:
   zone: ceinture_boreale
   lieu: Ceinture Boréale — territoires forestiers nordiques
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Mouvement Souverainiste de la Ceinture Boréale

@@ -57,8 +57,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2036
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -93,6 +91,9 @@ tensions_narratives: La contradiction centrale des Factions ABS réside dans leu
   la confrontation ouverte avec tout acteur tentant de construire une gouvernance
   énergétique alternative.
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Factions Énergétiques Héritières des Pactes ABS

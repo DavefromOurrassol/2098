@@ -63,8 +63,6 @@ type_relation_dominante: alliance stratégique
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: ascendant
 generation: reconstruction
 
 injection:
@@ -85,6 +83,9 @@ tensions_narratives: >
   La Confédération avance en permanence sur un fil : les communs sibériens, galvanisés par l'accès soudain à des terres arables libérées par le dégel, réclament des droits d'extraction que les communs canadiens refusent au nom de la sobriété partagée — et aucune instance centrale n'a autorité pour trancher. Pendant ce temps, les Fragments d'États Centraux Résiduels tentent de séduire les communs les plus isolés avec des offres de protection et d'infrastructure, menaçant de fragmenter par le bas ce que la Confédération a construit. En interne, une génération de délégués plus jeunes pousse vers une charte contraignante commune, au risque de briser l'équilibre fondateur entre autonomie et solidarité.
 
 date_creation: 2026-06-27
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Confédération des Communs de l'Arc Septentrional

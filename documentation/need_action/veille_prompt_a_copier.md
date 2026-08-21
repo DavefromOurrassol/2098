@@ -1,4 +1,4 @@
-# PROMPT DE VEILLE — état du monde réel — 08 août 2026
+# PROMPT DE VEILLE — état du monde réel — 10 août 2026
 
 Copie tout ce qui suit dans une IA avec accès web (Claude.ai, ChatGPT, etc.), colle sa réponse telle quelle dans documentation/need_action/veille_reponse_brute.md (panneau GUI de import_veille_etat_monde), puis lance import_veille_etat_monde.py.
 
@@ -29,7 +29,7 @@ Dimensions officielles de cette variable à vérifier explicitement (ne pas se l
   - economie plateformes : structuration numérique des échanges économiques
 
 ## gouvernance_institutions
-(jamais mis à jour par une veille — contenu initial)
+(dernière mise à jour : 08 août 2026)
 
 le Democracy Report 2026
 de V-Dem (publié mars 2026) confirme l'accélération — **92 autocraties
@@ -40,6 +40,12 @@ démocratisation" amorcée en 1974 (Révolution des Œillets) ont été
 quasiment effacés en une décennie. Le "centre de gravité" de la gouvernance
 mondiale s'est déplacé vers l'autoritarisme, avec une capacité croissante
 des régimes autocratiques majeurs à réécrire les normes internationales.
+Élément complémentaire sur les institutions internationales : l'ONU traverse
+en 2026 une crise de liquidités inédite et une paralysie répétée de son
+Conseil de sécurité (vetos bloquant toute action sur Gaza et l'Ukraine en
+2025-2026), relançant les appels du Secrétaire général Guterres à une
+réforme structurelle (Conseil de sécurité et institutions financières
+mondiales) qui reste sans issue faute de consensus entre puissances.
 
 Dimensions officielles de cette variable à vérifier explicitement (ne pas se limiter à ce qui était déjà couvert précédemment) :
   - etat nation : Unité souveraine de base du système politique moderne.
@@ -49,23 +55,9 @@ Dimensions officielles de cette variable à vérifier explicitement (ne pas se l
   - gouvernance algorithmique : Décision publique assistée ou automatisée par IA.
 
 ## geopolitique_conflits
-(jamais mis à jour par une veille — contenu initial)
+(dernière mise à jour : 08 août 2026)
 
-deux conflits majeurs
-actifs simultanément mi-2026. **Guerre Russie-Ukraine** : toujours active
-malgré une trêve ponctuelle de 32h à Pâques orthodoxe (11 avril 2026),
-gains territoriaux russes nets en juillet 2026, frappes réciproques sur
-infrastructures civiles poursuivies début août, négociations intermittentes
-sous impulsion américaine sans issue à ce jour. **Conflit au Moyen-Orient** :
-débuté en février 2026 (dynamique Israël-Iran), escalade documentée début
-août 2026 (attaques directes de l'IRGC iranien sur des pétroliers sous
-escorte navale américaine dans le détroit d'Ormuz, franchissement jugé
-significatif). A provoqué d'importants déplacements de population (~1M au
-Liban mi-mai, 3,2M temporaires en Iran fin mars) et la plus grande
-libération coordonnée de réserves stratégiques pétrolières de l'histoire de
-l'AIE (mars 2026). **Points chauds additionnels** signalés par les analyses
-2026 : tensions persistantes détroit de Taïwan, mer de Chine méridionale —
-non actifs mais surveillés comme risques d'escalade future.
+Deux conflits majeurs actifs simultanément début août 2026. **Guerre Russie-Ukraine** : toujours active, frappes réciproques poursuivies (la Russie annonce un nombre record de missiles tirés en juillet ; frappes ukrainiennes en profondeur sur le territoire russe, jusqu'à plus de 1000 km du front). Tensions internes nouvelles côté ukrainien : manifestations réclamant la démission du général en chef Syrsky, remaniement contesté de l'architecture des forces de drones par Zelensky, négociations toujours sans issue. Élément nouveau signalé début août : le renseignement américain aurait révisé son évaluation stratégique, jugeant désormais possible une attaque limitée de la Russie contre un État membre de l'OTAN entre l'automne 2026 et 2029 (cyberattaque d'ampleur ou incursion terrestre limitée), rompant avec l'hypothèse antérieure d'évitement de toute confrontation directe. **Conflit au Moyen-Orient** : élément non capté précédemment — le Guide suprême iranien Ali Khamenei a été tué le 28 février 2026 au déclenchement du conflit (frappes conjointes américano-israéliennes) ; un conseil provisoire puis un nouveau Guide suprême, Mojtaba Khamenei, ont pris la succession. Après une accalmie, les États-Unis ont repris des frappes directes sur l'Iran début juillet (treize jours consécutifs fin juillet, visant capacités navales, missiles et sites de surveillance de l'IRGC), suivies de nouvelles attaques iraniennes sur des pétroliers sous escorte américaine dans le détroit d'Ormuz début août. Un accord de transit Iran-Oman annoncé fin juillet reste sans confirmation américaine. Points chauds additionnels inchangés (Taïwan, mer de Chine méridionale).
 
 Dimensions officielles de cette variable à vérifier explicitement (ne pas se limiter à ce qui était déjà couvert précédemment) :
   - blocs geopolitiques : Structuration des alliances de puissance et des sphères d’influence globales.
@@ -75,28 +67,9 @@ Dimensions officielles de cette variable à vérifier explicitement (ne pas se l
   - relations nord sud : Déséquilibres structurels globaux et recompositions des rapports de dépendance.
 
 ## valeurs_culture_tempo_sociale
-(jamais mis à jour par une veille — contenu initial)
+(dernière mise à jour : 08 août 2026)
 
-— **mouvement de fond
-majeur** : une vague mondiale de mobilisation de la Génération Z a émergé en
-2025 et se poursuit en 2026, touchant des pays très divers (Népal, Maroc,
-Madagascar, Togo, Indonésie, Bangladesh, Bulgarie, Pérou...), essentiellement
-dans le "Sud global" mais avec des répliques ailleurs. Déclencheurs locaux
-variés (corruption, blocage de réseaux sociaux au Népal, budget jugé
-inéquitable en Bulgarie, promesses d'indépendance non tenues au Maroc) mais
-un fil conducteur commun : rejet d'élites jugées déconnectées et corrompues,
-avenir perçu comme bloqué, mobilisation largement organisée via les réseaux
-sociaux. Effets politiques concrets déjà observés : chute du gouvernement
-bulgare (démission du premier ministre, décembre 2025), fin du mandat de
-Sheikh Hasina au Bangladesh (élections février 2026). Le mouvement tend à
-dépasser le seul cadre générationnel en s'élargissant à d'autres catégories
-sociales (travailleurs précaires, classes moyennes) et se heurte à une
-répression croissante (interdictions de manifester, pressions sur les
-universités) qui, loin de l'éteindre, renforce chez les participants la
-perception qu'un seuil a été franchi. Trajectoire encore incertaine :
-les chercheurs (Michel Wieviorka notamment) soulignent que ce type de
-mouvement peut soit perdurer et produire des effets durables, soit se
-déliter faute de structuration politique.
+Mouvement de fond majeur toujours actif et en expansion géographique continue. Aux foyers déjà identifiés (Népal, Maroc, Madagascar, Togo, Indonésie, Bangladesh, Bulgarie, Pérou) s'ajoutent en 2026 de nouveaux épisodes : Inde (mi-2026, mobilisation étudiante après des propos jugés méprisants d'un juge de la Cour suprême envers la jeunesse, à l'origine d'un mouvement parodique surnommé "Cockroach Janta Party"), Mexique (contestation de l'insécurité et des assassinats de journalistes et responsables locaux, dans le contexte de la préparation de la Coupe du monde 2026), ainsi que Kenya, Philippines, Bolivie et Paraguay, sur fond de coût de la vie et de corruption. Le mouvement continue de produire des effets électoraux concrets, avec des scrutins attendus en 2026 au Maroc, au Népal et au Pérou sous pression de la rue. Les chercheurs relèvent une convergence croissante entre la colère générationnelle des pays du Sud et une politisation accrue de la jeunesse dans les pays riches (illustrée par l'élection de Zohran Mamdani à New York, portée en partie par le vote jeune). Trajectoire toujours incertaine entre structuration politique durable et essoufflement ; la répression demeure la réponse dominante des gouvernements en place.
 
 Dimensions officielles de cette variable à vérifier explicitement (ne pas se limiter à ce qui était déjà couvert précédemment) :
   - systemes de valeurs : Cadres moraux structurant les sociétés et leurs normes collectives.
@@ -159,7 +132,7 @@ Dimensions officielles de cette variable à vérifier explicitement (ne pas se l
   - sante numerique ia medicale : diagnostic, prédiction et traitement assistés par IA
 
 ## frontieres_du_systeme
-(jamais mis à jour par une veille — contenu initial)
+(dernière mise à jour : 08 août 2026)
 
 — **nouvelle course à
 l'espace** : la mission Artemis II (avril 2026) a réalisé le premier survol
@@ -177,7 +150,15 @@ des acteurs — percée continue du secteur privé (SpaceX, Blue Origin, Virgin
 Galactic) et montée en puissance de nouveaux acteurs étatiques (Inde,
 Émirats arabes unis), en plus de la progression chinoise engagée depuis le
 début des années 2000 (programme CLEP, mission Chang'e 7 vers le pôle Sud
-lunaire prévue en 2026).
+lunaire prévue en 2026, lancement effectif ce mois-ci). Sur l'infrastructure
+orbitale : plus de 10 000 satellites Starlink sont désormais actifs en
+orbite basse (SpaceX a entamé fin 2025-2026 une reconfiguration abaissant
+son altitude principale de 550 à 480 km pour la sécurité spatiale), et
+SpaceX a déposé fin janvier 2026 une demande auprès de la FCC pour une
+mégaconstellation pouvant atteindre le million de satellites, destinée à
+alimenter des centres de données en orbite — plus de 1,2 million de
+satellites supplémentaires sont en projet toutes constellations confondues,
+ravivant les inquiétudes scientifiques sur l'encombrement orbital.
 
 Dimensions officielles de cette variable à vérifier explicitement (ne pas se limiter à ce qui était déjà couvert précédemment) :
   - infrastructure orbitale : Support technologique des activités humaines en orbite terrestre.
@@ -218,14 +199,27 @@ Dimensions officielles de cette variable à vérifier explicitement (ne pas se l
   - agents autonomes ia : Systèmes d’action et de décision autonomes multi-IA.
 
 ## climat_environnement_global
-(jamais mis à jour par une veille — contenu initial)
+(dernière mise à jour : 08 août 2026)
 
 (rappel du constat du 7
 août, inchangé) : COP30 (Belém, nov. 2025) a débouché sur un bilan "mitigé"
 — accord sur le triplement du financement d'adaptation climatique d'ici 2035
 (nouvel objectif de 300 milliards $/an), création du "Mécanisme de Belém",
 mais échec à inscrire une feuille de route contraignante d'élimination des
-combustibles fossiles, reportée à la COP31 (Antalya, Turquie, nov. 2026).
+combustibles fossiles, reportée à la COP31 (Antalya, Turquie, 9-20 novembre
+2026, coprésidée par la Turquie et l'Australie). Élément nouveau, sur la
+dimension "événements extrêmes" : l'Europe a connu en juin 2026 une canicule
+historique jugée hors norme par les services météorologiques — le 24 juin
+est devenu le jour le plus chaud jamais enregistré en France (moyenne
+nationale jour/nuit de 29,9°C, effaçant un record vieux de plus de vingt
+ans), avec jusqu'à 72 départements simultanément en vigilance rouge ; mai
+2026 a par ailleurs été le deuxième mois de mai le plus chaud jamais
+enregistré au niveau mondial selon Copernicus (+1,42°C par rapport au
+niveau préindustriel). L'OMS estime à environ 1 300 le nombre de décès
+supplémentaires liés à la chaleur en Europe sur la seule semaine du 21 au
+28 juin. Les scientifiques (IPSL notamment) confirment l'amplification de
+ces épisodes par le changement climatique, combiné à un possible retour
+d'El Niño anticipé jusqu'en 2027.
 
 Dimensions officielles de cette variable à vérifier explicitement (ne pas se limiter à ce qui était déjà couvert précédemment) :
   - rechauffement climatique global : régulation thermique du système Terre
@@ -235,13 +229,9 @@ Dimensions officielles de cette variable à vérifier explicitement (ne pas se l
   - pollution globale : charge toxique systémique
 
 ## energie_ressources_critiques
-(jamais mis à jour par une veille — contenu initial)
+(dernière mise à jour : 08 août 2026)
 
-(rappel du choc pétrolier
-du 7 août, inchangé) : perte de production estimée à 10 millions de
-barils/jour en mars 2026 suite aux perturbations du détroit d'Ormuz,
-libération coordonnée de 426 millions de barils par les 32 pays membres de
-l'AIE — "le plus grave choc d'offre pétrolière de l'histoire" selon l'AIE.
+Rappel du choc pétrolier de mars 2026, inchangé sur le fond : perte de production estimée à 10 millions de barils/jour, libération coordonnée de 426 millions de barils par les 32 pays membres de l'AIE — "le plus grave choc d'offre pétrolière de l'histoire" selon l'AIE. Actualisation début août sur l'énergie : la reprise des frappes américaines directes sur l'Iran début juillet (treize jours consécutifs fin juillet, ciblant installations navales, missiles et sites de surveillance de l'IRGC) et de nouvelles attaques iraniennes contre des pétroliers sous escorte américaine dans le détroit d'Ormuz fin juillet ont ravivé la volatilité des cours : le Brent est repassé au-dessus de 100 $ le baril début juillet avant de refluer autour de 80-84 $ début août. Un accord de transit annoncé fin juillet entre l'Iran et Oman reste sans confirmation américaine. Sur la dimension "matières premières critiques" : la Chine a durci ses contrôles à l'exportation de terres rares tout au long de 2026 (nouvelle salve le 22 juin visant des dizaines d'entreprises américaines, extension aux terres rares lourdes, contrôles étendus à l'argent, l'antimoine et le tungstène), faisant grimper les prix d'environ 30 % depuis janvier et accélérant les stratégies occidentales de diversification (initiative conjointe États-Unis/UE/Japon sur les minéraux critiques).
 
 Dimensions officielles de cette variable à vérifier explicitement (ne pas se limiter à ce qui était déjà couvert précédemment) :
   - systemes energetiques : production et distribution d’énergie mondiale
@@ -313,7 +303,7 @@ Dimensions officielles de cette variable à vérifier explicitement (ne pas se l
 
 ------------------------------------------------------------------------------
 
-Date d'aujourd'hui à utiliser comme référence : 08 août 2026
+Date d'aujourd'hui à utiliser comme référence : 10 août 2026
 
 Fais des recherches web pour vérifier et actualiser chacune des 12 sections ci-dessus à la date d'aujourd'hui. Pour CHAQUE section :
 

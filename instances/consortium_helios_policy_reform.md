@@ -52,8 +52,6 @@ type_relation_dominante: alliance stratégique
 annee_debut: 2035
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: transition
 
 injection:
@@ -74,6 +72,9 @@ tensions_narratives: >
   La tension centrale réside dans la contradiction structurelle entre la légitimité que le Consortium tire de la transition écologique réussie — il a effectivement décarbonisé 40% du réseau continental — et l'opacité de sa gouvernance réelle, où actionnaires et lobbyistes pèsent plus que les comités publics. Un rapport interne filtré en 2097 suggère qu'Helios ralentit délibérément le déploiement des microgrids communautaires pour protéger ses marges de distribution, ce qui alimenterait une enquête parlementaire. La question de la nationalisation partielle des infrastructures orbitales revient cycliquement, portée par des États qui réalisent leur dépendance critique — et que le Consortium désamorce à chaque fois par des concessions techniques ciblées. Enfin, la génération d'ingénieurs orbitaux formés par Helios commence à se syndiquer et à poser la question du contrôle démocratique du ciel.
 
 date_creation: 2026-06-15
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Consortium Helios

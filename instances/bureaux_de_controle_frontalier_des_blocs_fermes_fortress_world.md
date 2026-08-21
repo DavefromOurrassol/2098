@@ -71,8 +71,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2045
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -111,6 +109,9 @@ localisation:
   lieu: Multiples points de passage aux frontières des blocs — ancrage opérationnel
     dans les zones tampons et seuils fermés
   type_lieu: infrastructure
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Bureaux de Contrôle Frontalier des Blocs Fermés

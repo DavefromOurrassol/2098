@@ -1,0 +1,27 @@
+============================================================
+AUDIT annee_debut / annee_fin — 710 fiches scannées
+============================================================
+Fiches avec au moins 1 alliance/opposition réelle : 710
+
+-- annee_debut --
+  ABSENT du frontmatter (fallback loader.py -> 2026) : 0  <-- risque silencieux
+  Présent, valeur = 2026 (donnée réelle)              : 27
+  Présent, autre année                                : 683
+
+  Distribution des valeurs réellement présentes (top 10) :
+    2041 : 157
+    2031 : 104
+    2036 : 55
+    2032 : 44
+    2038 : 41
+    2033 : 30
+    2061 : 29
+    2026 : 27
+    2035 : 25
+    2037 : 20
+
+-- annee_fin --
+  ABSENT du frontmatter (fallback loader.py -> None) : 0
+  Présent, valeur = null/vide (relation en cours)    : 680
+  Présent, valeur renseignée (relation terminée)     : 30
+

@@ -4,6 +4,10 @@ type: instance
 slug: coalition_pacifique_nord_breakdown
 entite: coalition_pacifique_nord
 scenario: breakdown
+localisation:
+  zone: asie_pacifique_sud_est
+  lieu: Corridor sino-sibérien / Pacifique Nord
+  type_lieu: region
 statut: officialise_enrichi
 type_dans_scenario: organisation
 role_dans_scenario: 'Dans le scénario breakdown, incarne le repli souverainiste sur
@@ -29,13 +33,23 @@ zone_geographique:
 - continentale
 zone_systemique:
 - société
-alliances: []
-oppositions: []
+alliances:
+- consortiums_energetiques_samoiedes_du_yamal_breakdown
+- enclaves_industrielles_de_bergen_troms_breakdown
+- factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
+- kalaallit_nunaat_sovereign_fund_breakdown
+- ligue_eurasiatique_coalition_pacifique_breakdown
+oppositions:
+- arctic_passage_authority_breakdown
+- arctique_nordark_breakdown
+- autorite_passage_arctique_breakdown
+- conseil_regulation_ressources_breakdown
+- front_de_resistance_aux_peages_sur_les_ressources_breakdown
+- milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown
+- seoul_collectif_nexcore_breakdown
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2041
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -67,10 +81,9 @@ tensions_narratives: 'La contradiction fondamentale de la Coalition réside dans
   de tout cadre institutionnel la prive de la légitimité nécessaire pour faire respecter
   ses propres décrets, transformant chaque accord en bras de fer armé.'
 date_creation: 2026-06-20
-localisation:
-  zone: asie_pacifique_sud_est
-  lieu: Corridor sino-sibérien / Pacifique Nord
-  type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Coalition Pacifique Nord
@@ -94,6 +107,23 @@ La contradiction fondamentale de la Coalition réside dans le fait que ses membr
 - [[geopolitique_conflits]]
 - [[energie_ressources_critiques]]
 - [[gouvernance_institutions]]
+
+
+## Relations
+**Alliés :**
+- [[consortiums_energetiques_samoiedes_du_yamal_breakdown]]
+- [[enclaves_industrielles_de_bergen_troms_breakdown]]
+- [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]]
+- [[kalaallit_nunaat_sovereign_fund_breakdown]]
+- [[ligue_eurasiatique_coalition_pacifique_breakdown]]
+**Opposants :**
+- [[arctic_passage_authority_breakdown]]
+- [[arctique_nordark_breakdown]]
+- [[autorite_passage_arctique_breakdown]]
+- [[conseil_regulation_ressources_breakdown]]
+- [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
+- [[milices_separatistes_du_conseil_des_pecheries_d_islande_breakdown]]
+- [[seoul_collectif_nexcore_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

@@ -71,8 +71,6 @@ type_relation_dominante: conflit
 annee_debut: 2061
 annee_fin: 
 
-etat_temporel: clandestin
-age_historique: marginal
 generation: forteresse
 
 injection:
@@ -93,6 +91,9 @@ tensions_narratives: >
   La décentralisation absolue protège le réseau mais interdit toute montée en puissance : chaque cellule survit, aucune ne peut transformer durablement les rapports de pouvoir qui l'ont engendrée. La tentation d'une coordination plus large — portée notamment par les liens naissants avec la Fédération des Communes Libres du Rust Belt — risque d'exposer des nœuds jusqu'ici insaisissables à la surveillance algorithmique des blocs. Et une question fracture les cellules en silence : résister pour durer dans la marge, ou prendre le risque de l'exposition pour exister politiquement ?
 
 date_creation: 2026-06-27
+trajectoire: marginal
+est_clandestin: true
+
 ---
 
 # Cellules du Dehors — Réseau Commun Midwest

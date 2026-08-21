@@ -52,8 +52,6 @@ oppositions:
 type_relation_dominante: dépendance
 annee_debut: 2046
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -90,6 +88,9 @@ localisation:
   zone: zones_grises_tampons
   lieu: Zones tampons et périphéries métropolitaines des blocs
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Front Résilient Pro-Système

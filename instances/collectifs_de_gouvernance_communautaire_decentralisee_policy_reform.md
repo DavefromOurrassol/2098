@@ -67,13 +67,11 @@ oppositions:
 - directive_kontinuum_policy_reform
 - factions_technocratiques_de_la_marchandisation_hydrique_policy_reform
 - front_techno_utopiste_de_la_decision_automatisee_policy_reform
-- rede_paulista_de_distribuic_o_algor_tmica_policy_reform
+- rede_paulista_de_distribuicao_algoritmica_policy_reform
 - reseau_des_agences_sanitaires_regionales_policy_reform
 type_relation_dominante: compétition
 annee_debut: 2029
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -109,6 +107,9 @@ localisation:
   zone: null
   lieu: null
   type_lieu: null
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Collectifs de Gouvernance Communautaire Décentralisée
@@ -167,7 +168,7 @@ Ces collectifs sont tiraillés entre leur vocation radicalement locale et la né
 - [[directive_kontinuum_policy_reform]]
 - [[factions_technocratiques_de_la_marchandisation_hydrique_policy_reform]]
 - [[front_techno_utopiste_de_la_decision_automatisee_policy_reform]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_policy_reform]]
+- [[rede_paulista_de_distribuicao_algoritmica_policy_reform]]
 - [[reseau_des_agences_sanitaires_regionales_policy_reform]]
 
 ## Notes

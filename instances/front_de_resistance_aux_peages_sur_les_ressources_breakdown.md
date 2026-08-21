@@ -44,7 +44,7 @@ alliances:
 - mouvement_des_communes_du_rust_belt_breakdown
 - saboteurs_des_corridors_de_transit_breakdown
 oppositions:
-- autorite_passage_arctique_breakdown
+- arctic_passage_authority_breakdown
 - cartels_logistiques_regionaux_breakdown
 - carthage_nord_nexcore_breakdown
 - coalition_pacifique_nord_breakdown
@@ -77,8 +77,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2054
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -107,6 +105,9 @@ tensions_narratives: Le Front est tiraillé entre sa posture de résistance non-
   rend vulnérable à l'infiltration et à la récupération par des acteurs extractifs
   qui instrumentalisent son discours pour légitimer leurs propres monopoles locaux.
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Front de Résistance aux Péages sur les Ressources
@@ -141,7 +142,7 @@ Le Front est tiraillé entre sa posture de résistance non-violente héritée de
 - [[mouvement_des_communes_du_rust_belt_breakdown]]
 - [[saboteurs_des_corridors_de_transit_breakdown]]
 **Opposants :**
-- [[autorite_passage_arctique_breakdown]]
+- [[arctic_passage_authority_breakdown]]
 - [[cartels_logistiques_regionaux_breakdown]]
 - [[carthage_nord_nexcore_breakdown]]
 - [[coalition_pacifique_nord_breakdown]]

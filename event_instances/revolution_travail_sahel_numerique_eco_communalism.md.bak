@@ -1,0 +1,80 @@
+---
+name: Révolution du Travail Régénératif Sahelo-Numérique
+type: event_instance
+slug: revolution_travail_sahel_numerique_eco_communalism
+archetype: revolution_travail_sahel_numerique
+scenario: eco_communalism
+type_evenement: political_social
+portee: regionale
+date: 2047
+date_label: été 2047
+impossible: false
+custom: true
+description: >
+  Sous un soleil de plomb, les paysans de la région de Niamey et d'Agadez se pressent devant les écrans tactiles des 'Hubs Solaires Communautaires', où s'affiche la plateforme 'Nourrir le Sahel'. Pour la première fois, une journée de travail dans les champs de millet ou de niébé se convertit directement en crédits pour accéder à une unité de désalinisation solaire ou à un lot de semences résistantes à la sécheresse. Les data centers locaux, autrefois symboles de dépendance technologique, sont devenus des centres de formation où les jeunes apprennent à entretenir les micro-réseaux solaires et à réparer les outils agricoles low-tech. Une révolution silencieuse, mais tangible, où le travail humain reprend le pas sur les dettes et les algorithmes extractivistes.
+consequences: >
+  Ce modèle de 'travail régénératif' se diffuse rapidement dans les zones arides du Sahel, inspirant d'autres régions à adopter des systèmes similaires. Les coopératives agricoles gagnent en autonomie, réduisant leur dépendance aux consortiums industriels de l'eau et aux agro-conglomérats. Les data centers solaires deviennent des symboles de résilience, attirant des investissements locaux et renforçant la souveraineté numérique des communautés. À long terme, cette initiative contribue à stabiliser les populations rurales et à freiner l'exode vers les mégapoles surpeuplées.
+realisation: >
+  Dans un contexte de fragmentation des chaînes de valeur globales et de crise hydrique persistante, la Ligue des Cités du Sahel Numérique (Dakar-Agadez) voit émerger une coalition inédite entre les Assemblées Coopératives Régionales et les Collectifs de Techniciens Sobres. Ces acteurs contournent les systèmes de dette traditionnels en lançant une plateforme open-source où les heures de travail agricole s'échangent contre des crédits pour des outils de désalinisation solaire et des semences adaptées, le tout soutenu par des data centers alimentés par des micro-réseaux solaires.
+impact_sur_variables:
+  - variable: systemes_productifs_travail
+    delta_level: 15
+    duree: 25
+    polarite: 1
+  - variable: technologie_information
+    delta_level: 10
+    duree: 20
+    polarite: 1
+  - variable: energie_ressources_critiques
+    delta_level: 12
+    duree: 20
+    polarite: 1
+  - variable: organisation_territoires
+    delta_level: 8
+    duree: 15
+    polarite: 1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+    - assemblees_cooperatives_regionales_eco_communalism
+    - collectifs_de_techniciens_sobres_eco_communalism
+    - ligue_des_cites_du_sahel_numerique_eco_communalism
+    - consortium_africain_de_biotechnologies_sociales_eco_communalism
+    - reseaux_de_radio_communautaire_basse_consommation_eco_communalism
+note_coherence: Cet événement s'inscrit parfaitement dans la trajectoire éco-communaliste du scénario,
+  où les communautés locales réinventent les systèmes productifs en combinant low-tech,
+  autonomie énergétique et gouvernance horizontale, tout en contournant les logiques
+  extractivistes et de dette.
+custom_source: auto_generated_2026-08
+date_creation: 2026-08-13
+---
+
+# Révolution du Travail Régénératif Sahelo-Numérique
+
+## Réalisation dans [[eco_communalism]]
+Dans un contexte de fragmentation des chaînes de valeur globales et de crise hydrique persistante, la Ligue des Cités du Sahel Numérique (Dakar-Agadez) voit émerger une coalition inédite entre les Assemblées Coopératives Régionales et les Collectifs de Techniciens Sobres. Ces acteurs contournent les systèmes de dette traditionnels en lançant une plateforme open-source où les heures de travail agricole s'échangent contre des crédits pour des outils de désalinisation solaire et des semences adaptées, le tout soutenu par des data centers alimentés par des micro-réseaux solaires.
+
+## Description journalistique
+Sous un soleil de plomb, les paysans de la région de Niamey et d'Agadez se pressent devant les écrans tactiles des 'Hubs Solaires Communautaires', où s'affiche la plateforme 'Nourrir le Sahel'. Pour la première fois, une journée de travail dans les champs de millet ou de niébé se convertit directement en crédits pour accéder à une unité de désalinisation solaire ou à un lot de semences résistantes à la sécheresse. Les data centers locaux, autrefois symboles de dépendance technologique, sont devenus des centres de formation où les jeunes apprennent à entretenir les micro-réseaux solaires et à réparer les outils agricoles low-tech. Une révolution silencieuse, mais tangible, où le travail humain reprend le pas sur les dettes et les algorithmes extractivistes.
+
+## Conséquences
+Ce modèle de 'travail régénératif' se diffuse rapidement dans les zones arides du Sahel, inspirant d'autres régions à adopter des systèmes similaires. Les coopératives agricoles gagnent en autonomie, réduisant leur dépendance aux consortiums industriels de l'eau et aux agro-conglomérats. Les data centers solaires deviennent des symboles de résilience, attirant des investissements locaux et renforçant la souveraineté numérique des communautés. À long terme, cette initiative contribue à stabiliser les populations rurales et à freiner l'exode vers les mégapoles surpeuplées.
+
+## Impact sur les variables
+- **systemes_productifs_travail** : delta +15 sur 25 ans
+- **technologie_information** : delta +10 sur 20 ans
+- **energie_ressources_critiques** : delta +12 sur 20 ans
+- **organisation_territoires** : delta +8 sur 15 ans
+
+## Acteurs impliqués
+- [[assemblees_cooperatives_regionales_eco_communalism]]
+- [[collectifs_de_techniciens_sobres_eco_communalism]]
+- [[ligue_des_cites_du_sahel_numerique_eco_communalism]]
+- [[consortium_africain_de_biotechnologies_sociales_eco_communalism]]
+- [[reseaux_de_radio_communautaire_basse_consommation_eco_communalism]]
+
+## Note de cohérence
+Cet événement s'inscrit parfaitement dans la trajectoire éco-communaliste du scénario,
+  où les communautés locales réinventent les systèmes productifs en combinant low-tech,
+  autonomie énergétique et gouvernance horizontale, tout en contournant les logiques
+  extractivistes et de dette.

@@ -66,8 +66,6 @@ type_relation_dominante: dépendance
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: IA-native
 
 injection:
@@ -88,6 +86,9 @@ tensions_narratives: >
   La dépendance croissante des institutions à ses alertes soulève une question de légitimité inversée : est-ce l'Oracle qui sert la gouvernance, ou la gouvernance qui sert à légitimer les seuils de l'Oracle ? Une faction au sein du Conseil Intergouvernemental tente d'introduire un 'module normatif' capable de recommander des priorités post-seuil — ce qui transformerait l'outil d'alerte en architecte de politique, franchissant un seuil que l'Oracle lui-même n'a jamais modélisé. Par ailleurs, des collectifs citoyens exigent l'accès en temps réel aux données brutes, accusant les institutions de sélectionner les seuils qu'elles activent politiquement tout en ignorant ceux qui menacent leurs intérêts propres.
 
 date_creation: 2026-06-25
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Oracle des Seuils — Plateforme Intégrée de Prédiction des Ruptures Systémiques (PIPRS)

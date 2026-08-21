@@ -74,8 +74,6 @@ type_relation_dominante: coopération
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: mature
 generation: reconstruction
 
 injection:
@@ -96,6 +94,9 @@ tensions_narratives: >
   La Confédération est désormais assez puissante pour que les fragments d'États résiduels cherchent à la régulariser, à en faire une interlocutrice institutionnelle — ce qui divise profondément ses membres entre ceux qui voient dans cette reconnaissance une victoire et ceux qui y lisent le début de leur domestication. Par ailleurs, la pression des consortiums logistiques néo-industriels s'intensifie sur certaines friches à haute valeur minière, menaçant de racheter des communes isolées à court de ressources. Enfin, une génération née dans les friches, n'ayant jamais connu le monde industriel, commence à questionner la centralité de la mémoire ouvrière dans l'identité confédérale — tension générationnelle qui pourrait redéfinir ce que 'friche vivante' signifie pour les décennies à venir.
 
 date_creation: 2026-06-23
+trajectoire: mature
+est_clandestin: false
+
 ---
 
 # Confédération des Friches Vivantes

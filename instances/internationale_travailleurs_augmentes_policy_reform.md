@@ -49,8 +49,6 @@ type_relation_dominante: coopération
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: transition
 
 injection:
@@ -71,6 +69,9 @@ tensions_narratives: >
   La ligne réformiste incarnée par la direction centrale est de plus en plus contestée par les Sections Radicales de Désoptimisation, qui réclament un droit au déchargement intégral et une clause de sortie de l'augmentation sans perte d'emploi — ce que les accords actuels n'accordent pas. Parallèlement, des fuites internes suggèrent que certains cadres de l'ITA auraient signé des accords confidentiels avec des consortiums autorisant des seuils d'augmentation dépassant les plafonds publiquement négociés, soulevant le spectre d'une cooptation institutionnelle. La question de la représentativité se pose aussi avec acuité : peut-on réellement parler au nom des travailleurs 'augmentés de survie' — ceux qui n'ont pas choisi l'hybridation mais l'ont subi pour rester employables — depuis des bureaux climatisés de Genève-Nexus ?
 
 date_creation: 2026-06-15
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Internationale des Travailleurs Augmentés

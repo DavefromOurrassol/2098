@@ -68,8 +68,6 @@ type_relation_dominante: symbiose
 annee_debut: 2061
 annee_fin: 
 
-etat_temporel: actif
-age_historique: mature
 generation: forteresse
 
 injection:
@@ -90,6 +88,9 @@ tensions_narratives: >
   La question qui hante le Bureau depuis deux ans est celle du seuil : à quel moment devient-on trop indispensable pour être toléré, trop visible pour être protégé par sa propre discrétion ? Une faction interne veut professionnaliser les opérations et négocier un statut para-légal avec le Pacte Atlantique — au risque de perdre l'agilité qui fait la valeur de l'organisation. Une autre faction veut étendre les circuits aux blocs rivaux, ce qui transformerait le Bureau en acteur géopolitique et déclencherait une réponse militarisée des agences de contrôle. Entre les deux, les populations des zones exclues qui dépendent des Marchés Gris pour survivre n'ont pas voix au chapitre — et c'est précisément cette invisibilité des dépendants qui permet au Bureau de continuer à opérer sans jamais avoir à se justifier.
 
 date_creation: 2026-06-27
+trajectoire: mature
+est_clandestin: false
+
 ---
 
 # Marchés Gris de Casablanca — Bureau des Interstices Atlantiques

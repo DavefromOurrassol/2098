@@ -4,6 +4,10 @@ type: instance
 slug: enclaves_industrielles_de_bergen_troms_breakdown
 entite: enclaves_industrielles_de_bergen_troms
 scenario: breakdown
+localisation:
+  zone: enclaves_industrielles_bergen_tromso
+  lieu: Bergen et Tromsø
+  type_lieu: infrastructure
 statut: officialise_enrichi
 type_dans_scenario: organisation
 role_dans_scenario: 'Dans le scénario breakdown, les Enclaves Industrielles de Bergen-Tromsø
@@ -30,16 +34,23 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- archives_neutres_de_geneve_breakdown
+- armada_logistique_nordique_breakdown
+- coalition_pacifique_nord_breakdown
+- enclaves_finlandaises_breakdown
+- factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown
+- front_techno_reconstructionniste_breakdown
 - hanse_baltique_breakdown
+- hanse_baltique_recomposee_breakdown
+- kalaallit_nunaat_sovereign_fund_breakdown
 - noeud_nordark_tromso_breakdown
 oppositions:
 - autorite_passage_arctique_breakdown
 - district_mourmansk_residuel_breakdown
+- federation_russe_residuelle_district_de_mourmansk_breakdown
 type_relation_dominante: compétition
-annee_debut: 2026
+annee_debut: 2058
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -70,10 +81,9 @@ tensions_narratives: Les Enclaves sont déchirées entre leur logique de survie 
   ouvrière — et les travailleurs non qualifiés réfugiés menace la cohésion sociale
   que les directeurs d'enclave peinent à maintenir.
 date_creation: 2026-06-20
-localisation:
-  zone: enclaves_industrielles_bergen_tromso
-  lieu: Bergen et Tromsø
-  type_lieu: infrastructure
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Enclaves Industrielles de Bergen-Tromsø
@@ -98,13 +108,23 @@ Les Enclaves sont déchirées entre leur logique de survie autarcique et la tent
 - [[systemes_productifs_travail]]
 - [[energie_ressources_critiques]]
 
+
 ## Relations
 **Alliés :**
+- [[archives_neutres_de_geneve_breakdown]]
+- [[armada_logistique_nordique_breakdown]]
+- [[coalition_pacifique_nord_breakdown]]
+- [[enclaves_finlandaises_breakdown]]
+- [[factions_militaires_residuelles_de_l_ex_otan_nordique_breakdown]]
+- [[front_techno_reconstructionniste_breakdown]]
 - [[hanse_baltique_breakdown]]
+- [[hanse_baltique_recomposee_breakdown]]
+- [[kalaallit_nunaat_sovereign_fund_breakdown]]
 - [[noeud_nordark_tromso_breakdown]]
 **Opposants :**
 - [[autorite_passage_arctique_breakdown]]
 - [[district_mourmansk_residuel_breakdown]]
+- [[federation_russe_residuelle_district_de_mourmansk_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

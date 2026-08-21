@@ -55,8 +55,6 @@ type_relation_dominante: coopération
 annee_debut: 2042
 annee_fin: 
 
-etat_temporel: actif
-age_historique: mature
 generation: post-effondrement
 
 injection:
@@ -77,6 +75,9 @@ tensions_narratives: >
   La *Mémoire des Eaux* incarne la tension entre ouverture et protection : comment partager les données sur les stocks de poisson sans attirer les braconniers des enclaves extractivistes ? Comment concilier la transparence avec les communautés qui refusent de divulguer leurs savoirs ancestraux, comme certaines factions isolationnistes ? Par ailleurs, son modèle décentralisé est menacé par les *Consortiums Industriels de l’Eau*, qui tentent de corrompre des nœuds locaux pour accaparer les données hydrologiques. Enfin, la question de la pérennité se pose : que deviendront ces archives si les générations futures, habituées à la sobriété, perdent les compétences pour les maintenir ?
 
 date_creation: 2026-07-11
+trajectoire: mature
+est_clandestin: false
+
 ---
 
 # Mémoire des Eaux du Congo

@@ -43,7 +43,7 @@ alliances:
 - delta_mekong_racines_breakdown
 - enclaves_agro_communautaires_autonomes_breakdown
 - flux_migratoires_non_integrables_breakdown
-- frente_sert_o_livre_breakdown
+- frente_sertao_livre_breakdown
 - front_humanitaire_d_urgence_non_affilie_breakdown
 - le_registre_du_fleuve_breakdown
 - les_veilleurs_du_fleuve_breakdown
@@ -63,8 +63,6 @@ oppositions:
 type_relation_dominante: symbiose
 annee_debut: 2041
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -94,6 +92,9 @@ tensions_narratives: Ces réseaux sont pris en étau entre la légitimité popul
   des seigneurs de guerre locaux et deviennent instruments de pouvoir plutôt que serviteurs
   de soin, fracturant de l'intérieur l'éthique du réseau.
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Réseaux de Soigneurs Traditionnels
@@ -129,7 +130,7 @@ Ces réseaux sont pris en étau entre la légitimité populaire qu'ils ont conqu
 - [[delta_mekong_racines_breakdown]]
 - [[enclaves_agro_communautaires_autonomes_breakdown]]
 - [[flux_migratoires_non_integrables_breakdown]]
-- [[frente_sert_o_livre_breakdown]]
+- [[frente_sertao_livre_breakdown]]
 - [[front_humanitaire_d_urgence_non_affilie_breakdown]]
 - [[le_registre_du_fleuve_breakdown]]
 - [[les_veilleurs_du_fleuve_breakdown]]

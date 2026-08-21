@@ -48,7 +48,7 @@ alliances:
 - fonds_de_stabilisation_climatique_onu_3_policy_reform
 - observatoire_mondial_des_ressources_critiques_policy_reform
 - oracle_des_seuils_policy_reform
-- rede_paulista_de_distribuic_o_algor_tmica_policy_reform
+- rede_paulista_de_distribuicao_algoritmica_policy_reform
 - reseau_des_agences_sanitaires_regionales_policy_reform
 - reseau_des_metropoles_n_uds_policy_reform
 - union_technocratique_eurasiatique_policy_reform
@@ -71,8 +71,6 @@ type_relation_dominante: symbiose
 annee_debut: 2061
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: ère cognitive
 
 injection:
@@ -93,6 +91,9 @@ tensions_narratives: >
   La réforme de gouvernance de 2094 a accordé aux Conseils Régionaux un droit de véto sur les allocations, mais les délais techniques rendent ce droit quasi-théorique en situation d'urgence — qui décide vraiment lors d'une crise climatique soudaine, l'algorithme ou l'élu ? Des fuites récentes suggèrent que certains paramètres d'optimisation favorisent structurellement les zones à haute productivité économique au détriment des régions à faible rendement, invisibilisant une forme de darwinisme territorial codifié. Un collectif de mathématiciens dissidents affirme avoir identifié une dérive progressive des fonctions objectif depuis 2089, orientant imperceptiblement les allocations vers des logiques de 'rentabilité systémique' jamais approuvées démocratiquement. La question de savoir qui a réellement le droit de modifier les paramètres fondamentaux d'ARIA-Nexus — et qui le fait en pratique — reste l'un des angles morts les plus surveillés du journalisme d'investigation à Ourrassol.
 
 date_creation: 2026-06-15
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # ARIA-Nexus : Réseau Intégré d'Allocation des Ressources Essentielles
@@ -126,7 +127,7 @@ La réforme de gouvernance de 2094 a accordé aux Conseils Régionaux un droit d
 - [[fonds_de_stabilisation_climatique_onu_3_policy_reform]]
 - [[observatoire_mondial_des_ressources_critiques_policy_reform]]
 - [[oracle_des_seuils_policy_reform]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_policy_reform]]
+- [[rede_paulista_de_distribuicao_algoritmica_policy_reform]]
 - [[reseau_des_agences_sanitaires_regionales_policy_reform]]
 - [[reseau_des_metropoles_n_uds_policy_reform]]
 - [[union_technocratique_eurasiatique_policy_reform]]

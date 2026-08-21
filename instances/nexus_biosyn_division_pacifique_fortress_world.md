@@ -59,8 +59,6 @@ type_relation_dominante: dépendance
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: forteresse
 
 injection:
@@ -81,6 +79,9 @@ tensions_narratives: >
   La rivalité avec la Division Eurasienne menace de fracturer Nexus BioSyn de l'intérieur, certains gouverneurs d'archipels jouant les deux divisions l'une contre l'autre pour renégocier des marges. Des réseaux de semenciers agro-pirates diffusent des variétés non brevetées dans les interstices des corridors, forçant la Division à durcir ses protocoles de conformité au risque de provoquer des émeutes aux checkpoints. La question non résolue : si un État-forteresse majeur décidait de rompre son contrat, la Division aurait-elle les moyens de l'asphyxier — ou révélerait-elle ainsi les limites réelles de son pouvoir ?
 
 date_creation: 2026-06-27
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Nexus BioSyn — Division Pacifique des Corridors Vitaux

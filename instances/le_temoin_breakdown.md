@@ -30,8 +30,6 @@ oppositions: []
 type_relation_dominante: neutralité
 annee_debut: 2071
 annee_fin:
-etat_temporel: clandestin
-age_historique: ascendant
 generation: post-effondrement
 injection:
   type: canonique
@@ -47,6 +45,9 @@ signes_distinctifs: |
 tensions_narratives: |
   Plusieurs factions tentent de l'identifier — certaines pour le protéger, d'autres pour le faire taire. Ses analyses deviennent de plus en plus pessimistes. La dernière publication s'intitulait : "Il n'y a plus de système à analyser."
 date_creation: 2098-01-01
+trajectoire: ascendant
+est_clandestin: true
+
 ---
 
 # Le Signal

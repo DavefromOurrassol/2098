@@ -4,6 +4,10 @@ type: event_instance
 slug: accord_carbone_amazonie_blocs_reference
 archetype: accord_carbone_amazonie_blocs
 scenario: reference
+localisation:
+  zone: amazonie_consortium_viva
+  lieu: Belém
+  type_lieu: ville
 type_evenement: political_social
 portee: globale
 date: 2055

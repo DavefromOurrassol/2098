@@ -47,8 +47,6 @@ oppositions:
 type_relation_dominante: symbiose
 annee_debut: 2046
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -82,6 +80,9 @@ localisation:
   zone: zones_grises_tampons
   lieu: Zones grises et tampons inter-blocs
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Réseaux de maintenance d'infrastructures critiques hors-blocs

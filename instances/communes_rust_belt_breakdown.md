@@ -71,8 +71,6 @@ type_relation_dominante: rivalité
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: ascendant
 generation: post-effondrement
 
 injection:
@@ -93,6 +91,9 @@ tensions_narratives: >
   La question non résolue qui ronge les Communes : s'ouvrir pour se fédérer risque d'attirer la prédation des seigneuries logistiques armées et des enclaves corporatives; rester fermées, c'est mourir lentement par épuisement des ressources et vieillissement des populations. Une faction interne pousse à rejoindre le Compact des Grands Lacs pour sécuriser l'accès à l'eau douce, au prix d'une dépendance structurelle redoutée comme une nouvelle forme de colonisation. Ailleurs, des milices locales dérivent vers l'autoritarisme, transformant la protection en taxation forcée — et la frontière entre commune autogérée et fief armé devient de plus en plus floue.
 
 date_creation: 2026-06-27
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Communes Libres du Rust Belt — Les Forges du Commun

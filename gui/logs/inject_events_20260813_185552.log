@@ -1,0 +1,339 @@
+============================================================
+EXTRACT_LOCALISATION — Ourrassol 2098
+============================================================
+Fiches à traiter : 14
+
+[1/14] 
+[instance] agence_de_regulation_des_detroits_strategiques_ards_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 9063 | sortie : 58
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : L'entité est une coalition transnationale sans ancrage géographique local précis, opérant sur plusieurs détroits stratégiques dispersés.
+  → écrit
+[2/14] 
+[instance] coalition_vivant_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8861 | sortie : 73
+  issue     : extrait
+  zone      : massif_central_cicatrices_vertes
+  lieu      : Cicatrices Vertes du Massif Central
+  motif     : Le texte mentionne explicitement leur sanctuaire mobile dans les Cicatrices Vertes du Massif Central.
+  → écrit
+[3/14] 
+[instance] terminal_kharg_data_haven_new_sustainability
+  scénario : new_sustainability
+[llm] Mistral (mistral-small-latest) — entrée : 6519 | sortie : 104
+  issue     : extrait
+  zone      : moyen_orient_golfe
+  lieu      : détroit d'Ormuz, mer d'Oman
+  motif     : Le texte mentionne explicitement l'ancrage de Kharg-9 dans les eaux contestées du détroit d'Ormuz, en mer d'Oman, une zone mappable sur 'moyen_orient_golfe'.
+  → écrit
+[4/14] 
+[event_instance] escalade_sahel_2028_test_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8383 | sortie : 70
+  issue     : extrait
+  zone      : agadez_ligue_sahel_numerique
+  lieu      : Agadez
+  motif     : L'événement mentionne explicitement Agadez comme cible principale des cyberattaques et des assauts militaires.
+  → écrit
+[5/14] 
+[event_instance] greve_generale_corridors_eurasiens_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8194 | sortie : 92
+  issue     : extrait
+  zone      : arc_eurasien_central
+  lieu      : Corridors logistiques vitaux Bakou-Almaty (Venelles eurasiatiques)
+  motif     : L'événement est centré sur les corridors logistiques reliant Bakou à Almaty, clairement identifiables comme faisant partie de l'Arc Eurasien Central.
+  → écrit
+[6/14] 
+[event_instance] greve_generale_corridors_eurasiens_fortress_world
+  scénario : fortress_world
+[llm] Mistral (mistral-small-latest) — entrée : 7030 | sortie : 83
+  issue     : extrait
+  zone      : almaty_zone_friction
+  lieu      : Almaty
+  motif     : L'événement mentionne explicitement une occupation à Almaty et le Périmètre des Seuils Kazakhs, localisés dans la zone 'Almaty — Zone de Friction'.
+  → écrit
+[7/14] 
+[event_instance] greve_generale_corridors_eurasiens_policy_reform
+  scénario : policy_reform
+[llm] Mistral (mistral-small-latest) — entrée : 6467 | sortie : 84
+  issue     : extrait
+  zone      : espace_eurasiatique
+  lieu      : corridors logistiques eurasiens (Bakou-Almaty)
+  motif     : L'événement est localisé précisément sur les corridors logistiques entre Bakou et Almaty, intégrés dans l'espace eurasiatique.
+  → écrit
+[8/14] 
+[event_instance] multi_scenario_zone_test_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 8436 | sortie : 55
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : L'événement décrit une alerte fantôme trans-scénarios sans ancrage géographique local précis dans le scénario breakdown.
+  → écrit
+[9/14] 
+[event_instance] multi_scenario_zone_test_eco_communalism
+  scénario : eco_communalism
+[llm] Mistral (mistral-small-latest) — entrée : 7937 | sortie : 70
+  issue     : extrait
+  zone      : sahel_numerique_ligue
+  lieu      : Agadez
+  motif     : Le sommet de la Ligue des Cités du Sahel Numérique a lieu à Agadez en juin 2048.
+  → écrit
+[10/14] 
+[event_instance] revolution_travail_sahel_numerique_eco_communalism
+  scénario : eco_communalism
+[llm] Mistral (mistral-small-latest) — entrée : 7784 | sortie : 74
+  issue     : extrait
+  zone      : sahel_numerique_ligue
+  lieu      : Niamey et Agadez
+  motif     : Le texte mentionne explicitement les régions de Niamey et d'Agadez comme zones d'ancrage de l'événement.
+  → écrit
+[11/14] 
+[event_instance] revolution_travail_sahel_numerique_new_sustainability
+  scénario : new_sustainability
+[llm] Mistral (mistral-small-latest) — entrée : 6318 | sortie : 92
+  issue     : extrait
+  zone      : sahel_zone_regeneration
+  lieu      : CTSA (Confédération des Territoires Sahéliens Autonomes) - villes comme Dakar, Agadez, Niamey
+  motif     : L'événement est explicitement situé dans la CTSA, une région africaine du Sahel mentionnée dans les zones disponibles.
+  → écrit
+[12/14] 
+[event_instance] revolution_travail_sahel_numerique_policy_reform
+  scénario : policy_reform
+[llm] Mistral (mistral-small-latest) — entrée : 6016 | sortie : 111
+  issue     : extrait
+  zone      : sahel_occidental_dissident
+  lieu      : Tillabéri (Niger) et Ligue du Sahel Numérique (Dakar-Agadez)
+  motif     : Le texte mentionne explicitement la région de Tillabéri au Niger et la Ligue du Sahel Numérique (Dakar-Agadez), toutes deux mappables sur la zone 'sahel_occidental_dissident'.
+  → écrit
+[13/14] 
+[event_instance] zone_invalide_test_breakdown
+  scénario : breakdown
+[llm] Mistral (mistral-small-latest) — entrée : 7787 | sortie : 62
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : L'événement est transnational et sans ancrage géographique local précis, lié à un test technique décentralisé et à des infrastructures numériques fragmentées.
+  → écrit
+[14/14] 
+[event_instance] zone_valide_test_eco_communalism
+  scénario : eco_communalism
+[llm] Mistral (mistral-small-latest) — entrée : 7542 | sortie : 71
+  issue     : extrait
+  zone      : agadez_ville
+  lieu      : Agadez
+  motif     : L'événement se déroule explicitement à Agadez, mentionnée comme 'Capitale des Sables Numériques' dans la fiche.
+  → écrit
+
+============================================================
+RÉCAPITULATIF
+============================================================
+  Extraits (zone trouvée)    : 11
+  Vides assumés (transnat.)  : 3
+  Ambigus (review manuelle)  : 0
+  Erreurs                    : 0
+  Total traité               : 14
+
+Fiches modifiées : 14
+Sauvegardes .bak créées pour chaque fichier modifié.
+Rapport need_action mis a jour : documentation/need_action/localisation_review.md
+   (0 fiche(s) en attente)
+=================================================================
+  REVIEW LOCALISATION — Ourrassol 2098
+=================================================================
+  MODE AUTO-RESOLVE : résolution automatique par le LLM
+
+  Aucune fiche en review_manuelle. Rien à faire.
+
+[validate] Démarrage de la validation...
+[validate] 1/9 — Nomenclature...
+[validate] 2/9 — Cohérence systémique...
+[validate] 3/9 — Entités et instances...
+[validate] 4/9 — Thématiques...
+[validate] 5/9 — Localisation...
+[validate] 6/9 — Références croisées...
+[validate] 7/9 — Matrice d'influence...
+[validate] 8/9 — Événements...
+[validate] 9/9 — Cohérence narrative post-injection...
+
+════════════════════════════════════════════════════════════
+VALIDATION — OURRASSOL 2098
+════════════════════════════════════════════════════════════
+
+📊 INVENTAIRE
+────────────────────────────────────────────────────────────
+  [NOMENCLATURE] 6/6 scénarios | 12/12 variables
+  [ENTITIES] 590 entités chargées
+  [INSTANCES] 733 instances chargées
+  [THEMATIQUES] 20 thématiques trouvées
+  [LOCALISATION] 815 fiches riches | 0 sans localisation | 0 review_manuelle
+  [CROSS_REFERENCES] 1361 slugs dans le référentiel
+  [MATRIX] 132 edges dans la matrice
+  [EVENTS] 23 archétypes d'événements
+  [EVENTS] 82 instances d'événements
+  [NARRATIVE] 3 problème(s) narratif(s) détecté(s) — voir narrative_issues.yaml
+
+⚠️  AVERTISSEMENTS (10)
+────────────────────────────────────────────────────────────
+  [CROSS_REFERENCES] 7 avertissements
+  [NARRATIVE] 3 avertissements
+
+════════════════════════════════════════════════════════════
+✓ BASE VALIDE — 0 erreurs | 10 avertissements | 0 corrections
+════════════════════════════════════════════════════════════
+============================================================
+OURRASSOL 2098 — Injection événements custom
+============================================================
+
+Mode : custom (fourni via --mode)
+
+=== escalade_sahel_2028_test ===
+[1/4] Sélection de variables + type...
+[llm] Mistral (mistral-large-latest) — entrée : 519 | sortie : 56
+  ⚠ 3 variable(s) reçue(s) au lieu de 2 max — troncature (hints préservés).
+  -> variables=['geopolitique_conflits', 'gouvernance_institutions'] type=political_social slug=escalade_sahel_2028_test
+[2/4] Développement pour breakdown...
+[llm] Mistral (mistral-large-latest) — entrée : 21921 | sortie : 1077
+[3/4] Validation (essai 1)...
+[4/4] Injection...
+
+=== zone_invalide_test ===
+[1/4] Sélection de variables + type...
+[llm] Mistral (mistral-large-latest) — entrée : 508 | sortie : 40
+  -> variables=['organisation_territoires', 'technologie_information'] type=technological slug=zone_invalide_test
+[2/4] Développement pour breakdown...
+  ⚠ zone_hint 'zone_totalement_inventee_xyz' introuvable dans geographie/breakdown.md — ignoré pour ce scénario, le LLM choisit librement.
+[llm] Mistral (mistral-large-latest) — entrée : 21740 | sortie : 754
+[3/4] Validation (essai 1)...
+[4/4] Injection...
+
+=== zone_valide_test ===
+[1/4] Sélection de variables + type...
+[llm] Mistral (mistral-large-latest) — entrée : 525 | sortie : 42
+  -> variables=['organisation_territoires', 'technologie_information'] type=political_social slug=zone_valide_test
+[2/4] Développement pour eco_communalism...
+[llm] Mistral (mistral-large-latest) — entrée : 19069 | sortie : 770
+[3/4] Validation (essai 1)...
+[4/4] Injection...
+
+=== controle_date_lointaine_test ===
+[1/4] Sélection de variables + type...
+[llm] Mistral (mistral-large-latest) — entrée : 519 | sortie : 41
+  -> variables=['technologie_information', 'gouvernance_institutions'] type=systemic slug=controle_date_lointaine_test
+[2/4] Développement pour reference...
+[llm] Mistral (mistral-large-latest) — entrée : 23202 | sortie : 847
+[3/4] Validation (essai 1)...
+  -> problèmes :
+     - 'evenement_cle' sans année finale : "2091 : L'Europe valide l'horloge algorithmique unifiée"
+[llm] Mistral (mistral-large-latest) — entrée : 24095 | sortie : 734
+[3/4] Validation (essai 2)...
+  -> problèmes :
+     - 'evenement_cle' sans année finale : "2091 : L'Europe valide l'horloge unifiée des infrastructures critiques"
+[llm] Mistral (mistral-large-latest) — entrée : 23983 | sortie : 732
+[3/4] Validation (essai 3)...
+  -> problèmes :
+     - 'evenement_cle' sans année finale : "2091 : L'Europe unifie l'horloge des infrastructures critiques"
+
+=== multi_scenario_zone_test ===
+[1/4] Sélection de variables + type...
+[llm] Mistral (mistral-large-latest) — entrée : 614 | sortie : 46
+  -> variables=['demographie_mobilite_humaine', 'organisation_territoires'] type=political_social slug=multi_scenario_zone_test
+[2/4] Développement pour eco_communalism...
+[llm] Mistral (mistral-large-latest) — entrée : 19271 | sortie : 977
+[3/4] Validation (essai 1)...
+[4/4] Injection...
+[2/4] Développement pour breakdown...
+  ⚠ zone_hint 'sahel_numerique_ligue' introuvable dans geographie/breakdown.md — ignoré pour ce scénario, le LLM choisit librement.
+[llm] Mistral (mistral-large-latest) — entrée : 21951 | sortie : 949
+[3/4] Validation (essai 1)...
+  -> problèmes :
+     - Variables annoncées mais non impactées : ['demographie_mobilite_humaine']
+[llm] Mistral (mistral-large-latest) — entrée : 22937 | sortie : 1100
+[3/4] Validation (essai 2)...
+[4/4] Injection...
+
+=== revolution_travail_sahel_numerique ===
+[1/4] Sélection de variables + type...
+[llm] Mistral (mistral-large-latest) — entrée : 597 | sortie : 74
+  ⚠ 5 variable(s) reçue(s) au lieu de 3 max — troncature (hints préservés).
+  -> variables=['systemes_productifs_travail', 'technologie_information', 'energie_ressources_critiques'] type=political_social slug=revolution_travail_sahel_numerique
+[2/4] Développement pour eco_communalism...
+[llm] Mistral (mistral-large-latest) — entrée : 19373 | sortie : 902
+[3/4] Validation (essai 1)...
+  -> problèmes :
+     - Acteur 'cooperatives_agricoles_saheliennes' ressemble à un slug d'instance mais ne correspond à aucune instance existante pour eco_communalism — utiliser un slug de la liste fournie ou un texte libre
+     - Acteur 'collectifs_tech_locaux' ressemble à un slug d'instance mais ne correspond à aucune instance existante pour eco_communalism — utiliser un slug de la liste fournie ou un texte libre
+     - Acteur 'alliance_des_biotechnologies_communautaires_du_sahel_abc_eco_communalism' ressemble à un slug d'instance mais ne correspond à aucune instance existante pour eco_communalism — utiliser un slug de la liste fournie ou un texte libre
+[llm] Mistral (mistral-large-latest) — entrée : 20454 | sortie : 918
+[3/4] Validation (essai 2)...
+[4/4] Injection...
+[2/4] Développement pour new_sustainability...
+[llm] Mistral (mistral-large-latest) — entrée : 20748 | sortie : 889
+[3/4] Validation (essai 1)...
+  -> problèmes :
+     - Acteur 'cooperatives_agricoles_saheliennes' ressemble à un slug d'instance mais ne correspond à aucune instance existante pour new_sustainability — utiliser un slug de la liste fournie ou un texte libre
+     - Acteur 'collectifs_tech_locaux' ressemble à un slug d'instance mais ne correspond à aucune instance existante pour new_sustainability — utiliser un slug de la liste fournie ou un texte libre
+[llm] Mistral (mistral-large-latest) — entrée : 21750 | sortie : 926
+[3/4] Validation (essai 2)...
+[4/4] Injection...
+[2/4] Développement pour policy_reform...
+[llm] Mistral (mistral-large-latest) — entrée : 20576 | sortie : 819
+[3/4] Validation (essai 1)...
+  -> problèmes :
+     - Acteur 'cooperatives_agricoles_saheliennes' ressemble à un slug d'instance mais ne correspond à aucune instance existante pour policy_reform — utiliser un slug de la liste fournie ou un texte libre
+     - Acteur 'collectifs_tech_locaux' ressemble à un slug d'instance mais ne correspond à aucune instance existante pour policy_reform — utiliser un slug de la liste fournie ou un texte libre
+[llm] Mistral (mistral-large-latest) — entrée : 21506 | sortie : 855
+[3/4] Validation (essai 2)...
+[4/4] Injection...
+
+=== greve_generale_corridors_eurasiens ===
+[1/4] Sélection de variables + type...
+[llm] Mistral (mistral-large-latest) — entrée : 608 | sortie : 74
+  ⚠ 5 variable(s) reçue(s) au lieu de 3 max — troncature (hints préservés).
+  -> variables=['systemes_productifs_travail', 'geopolitique_conflits', 'sante_biotechnologies'] type=political_social slug=greve_generale_corridors_eurasiens
+[2/4] Développement pour fortress_world...
+[llm] Mistral (mistral-large-latest) — entrée : 21786 | sortie : 1021
+[3/4] Validation (essai 1)...
+  -> problèmes :
+     - Acteur 'syndicats_transfrontaliers' ressemble à un slug d'instance mais ne correspond à aucune instance existante pour fortress_world — utiliser un slug de la liste fournie ou un texte libre
+     - Acteur 'etats_souverains_eurasiatiques' ressemble à un slug d'instance mais ne correspond à aucune instance existante pour fortress_world — utiliser un slug de la liste fournie ou un texte libre
+[llm] Mistral (mistral-large-latest) — entrée : 22914 | sortie : 1051
+[3/4] Validation (essai 2)...
+[4/4] Injection...
+[2/4] Développement pour breakdown...
+[llm] Mistral (mistral-large-latest) — entrée : 22283 | sortie : 952
+[3/4] Validation (essai 1)...
+  -> problèmes :
+     - Acteur 'syndicats_transfrontaliers' ressemble à un slug d'instance mais ne correspond à aucune instance existante pour breakdown — utiliser un slug de la liste fournie ou un texte libre
+     - Acteur 'etats_souverains_eurasiatiques' ressemble à un slug d'instance mais ne correspond à aucune instance existante pour breakdown — utiliser un slug de la liste fournie ou un texte libre
+[llm] Mistral (mistral-large-latest) — entrée : 23340 | sortie : 988
+[3/4] Validation (essai 2)...
+[4/4] Injection...
+[2/4] Développement pour policy_reform...
+[llm] Mistral (mistral-large-latest) — entrée : 20623 | sortie : 1056
+[3/4] Validation (essai 1)...
+  -> problèmes :
+     - Acteur 'syndicats_transfrontaliers' ressemble à un slug d'instance mais ne correspond à aucune instance existante pour policy_reform — utiliser un slug de la liste fournie ou un texte libre
+     - Acteur 'etats_souverains_eurasiatiques' ressemble à un slug d'instance mais ne correspond à aucune instance existante pour policy_reform — utiliser un slug de la liste fournie ou un texte libre
+[llm] Mistral (mistral-large-latest) — entrée : 21788 | sortie : 1071
+[3/4] Validation (essai 2)...
+[4/4] Injection...
+
+Terminé. Voir /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/evenements_custom/processed.yaml et /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/evenements_custom/needs_review.yaml.
+
+════════════════════════════════════════════════════════════
+CYCLE POST-INJECTION
+════════════════════════════════════════════════════════════
+
+→ /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/generator/extract_localisation.py
+
+→ /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/generator/review_localisation.py --auto-resolve
+
+→ /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/generator/validate.py
+
+✓ Cycle post-injection terminé.

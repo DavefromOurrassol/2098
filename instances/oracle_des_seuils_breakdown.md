@@ -50,10 +50,8 @@ oppositions:
 type_relation_dominante: rivalité
 
 annee_debut: 2031
-annee_fin: 
+annee_fin: 2053
 
-etat_temporel: transformé
-age_historique: résiduel
 generation: post-effondrement
 
 injection:
@@ -74,6 +72,9 @@ tensions_narratives: >
   Qui détient le droit de parler au nom du Seuil quand l'institution émettrice n'existe plus ? Des collectifs tentent de reconstruire un Oracle unifié, mais chaque tentative de centralisation attire immédiatement des tentatives de capture — par des blocs régionaux, des corporations, des factions militaires. La question politique que l'Oracle original laissait sans réponse — que choisit-on de sauver ? — se retourne contre lui : dans un monde d'effondrements simultanés, dire qu'un seuil est franchi sans désigner un responsable est devenu une forme d'accusation flottante que chacun retourne contre ses ennemis.
 
 date_creation: 2026-06-25
+trajectoire: transformé
+est_clandestin: false
+
 ---
 
 # Les Voix du Seuil — Fragments de l'Oracle

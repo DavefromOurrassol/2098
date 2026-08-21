@@ -63,8 +63,6 @@ oppositions:
 type_relation_dominante: symbiose
 annee_debut: 2041
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -97,6 +95,9 @@ tensions_narratives: 'La tension fondamentale qui déchire ces collectifs est ce
   physiquement ces nœuds résiduels — Nordark, NexCore, Mnemos — qui peuvent les instrumentaliser
   ou les écraser selon leurs intérêts.'
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Collectifs de Hackers Archivistes des Interstices Réseaux

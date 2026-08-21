@@ -60,8 +60,6 @@ type_relation_dominante: conflit
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: clandestin
-age_historique: résiduel
 generation: forteresse
 
 injection:
@@ -82,6 +80,9 @@ tensions_narratives: >
   La Chambre oscille entre la tentation de se dissoudre dans la clandestinité pour survivre et celle de provoquer une confrontation ouverte avec le Conseil de Calcul Souverain pour forcer une reconnaissance — même hostile. Certains de ses juges sont soupçonnés d'être infiltrés par les factions dissidentes du Consortium Helios ou par les réseaux de passeurs d'information, ce qui fragilise sa crédibilité de neutralité. La question la plus explosive est celle-ci : si la Chambre accepte de juger les algorithmes du Bloc Atlantique avec des outils juridiques pré-forteresse, est-elle encore un tribunal — ou déjà un acte de résistance politique déguisé en procédure ?
 
 date_creation: 2026-06-25
+trajectoire: résiduel
+est_clandestin: true
+
 ---
 
 # Chambre de Recours Algorithmique — Bruxelles Résiduelle

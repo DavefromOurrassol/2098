@@ -63,8 +63,6 @@ type_relation_dominante: rivalité
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: ascendant
 generation: transition
 
 injection:
@@ -85,6 +83,9 @@ tensions_narratives: >
   La tension centrale est celle d'un bien commun sous siège : le Nœud ne peut survivre financièrement sans accepter des partenariats avec des acteurs qui ont intérêt à orienter ce qui est conservé et ce qui ne l'est pas. Un État partenaire réclame la suppression d'archives documentant ses propres violences passées, menaçant de couper son financement — et son accord de non-ingérence opérationnelle. Parallèlement, une faction interne au Nœud pousse à une ouverture totale des archives, au risque d'exposer des témoins protégés encore en vie. Enfin, le Réseau Mnemos global propose une intégration formelle qui garantirait des ressources mais diluerait l'autonomie régionale — une offre que certains voient comme une salvation, d'autres comme une absorption déguisée.
 
 date_creation: 2026-06-27
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Tbilissi Nœud Mnemos

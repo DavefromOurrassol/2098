@@ -62,8 +62,6 @@ type_relation_dominante: alliance stratégique
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: mature
 generation: transition
 
 injection:
@@ -84,6 +82,9 @@ tensions_narratives: >
   Le CABS-AMV est au bord d'une crise de légitimité interne : une faction de représentants communautaires menace de quitter le conseil consultatif, accusant l'organisation d'avoir sacrifié l'accès aux semences patrimoniales pour obtenir le renouvellement de son accréditation auprès de l'AMV. Parallèlement, Nexus BioSyn tente d'infiltrer ses comités d'experts via des candidatures 'neutres' pour bloquer les transferts de licences concurrents. Enfin, la question de savoir si le CABS-AMV doit rejoindre la Coalition des Semences Libres dans sa résistance frontale à certains mécanismes de l'AMV, ou maintenir sa posture de négociateur interne, divise profondément ses dirigeants — et pourrait redéfinir ce qu'il est fondamentalement.
 
 date_creation: 2026-06-25
+trajectoire: mature
+est_clandestin: false
+
 ---
 
 # Consortium Africain de Biotechnologies Sociales — Délégation Accréditée auprès de l'Autorité Mondiale du Vivant

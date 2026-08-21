@@ -45,7 +45,7 @@ alliances:
 - reseau_des_anciens_financeurs_devenus_censeurs_breakdown
 oppositions:
 - arctic_passage_authority_breakdown
-- autorite_passage_arctique_breakdown
+- arctic_passage_authority_breakdown
 - cargo_mombasa_crrc_breakdown
 - collectif_hackers_decroissance_infrastructure_breakdown
 - communes_rust_belt_breakdown
@@ -72,8 +72,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2042
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -101,6 +99,9 @@ tensions_narratives: La contradiction fondamentale des Blocs est qu'en cherchant
   minimale avec les institutions résiduelles de Genève-Bunker, mais les lignes dures
   imposent la logique du tout-ou-rien.
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Blocs de Contrôle des Couloirs d'Approvisionnement Stratégiques
@@ -136,7 +137,7 @@ La contradiction fondamentale des Blocs est qu'en cherchant à sécuriser les re
 - [[reseau_des_anciens_financeurs_devenus_censeurs_breakdown]]
 **Opposants :**
 - [[arctic_passage_authority_breakdown]]
-- [[autorite_passage_arctique_breakdown]]
+- [[arctic_passage_authority_breakdown]]
 - [[cargo_mombasa_crrc_breakdown]]
 - [[collectif_hackers_decroissance_infrastructure_breakdown]]
 - [[communes_rust_belt_breakdown]]

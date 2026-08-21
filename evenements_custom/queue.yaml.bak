@@ -15,7 +15,7 @@
 #   scenarios              : liste de scénarios à couvrir, ou null pour les 6 par défaut
 #                            (valeurs : breakdown, fortress_world, new_sustainability,
 #                            eco_communalism, policy_reform, reference)
-#   variables_hint         : optionnel. null si tu ne sais pas — Claude choisit
+#   variables_hint         : optionnel. null si tu ne sais pas — le LLM choisit
 #                            automatiquement. Sinon une variable (chaîne) ou
 #                            plusieurs (liste) que tu IMPOSES comme impactées.
 #                            Variables disponibles :
@@ -27,7 +27,7 @@
 #                              demographie_mobilite_humaine | systemes_productifs_travail
 #   variables_hint_count   : optionnel, entier 1-4. Plafond du nombre total de
 #                            variables (hint(s) inclus). Défaut : 2.
-#   acteurs_hint           : optionnel. null si tu ne sais pas — Claude choisit
+#   acteurs_hint           : optionnel. null si tu ne sais pas — le LLM choisit
 #                            parmi les instances d'entités existantes pour
 #                            chaque scénario. Sinon un slug d'instance (chaîne)
 #                            ou plusieurs (liste) que tu IMPOSES.
@@ -56,4 +56,20 @@
 # ──────────────────────────────────────────────────────────────────────────────
 
 queue:
-  [] # ← remplace [] par tes idées
+  - id: controle_date_lointaine_test
+    description: 'Événement de contrôle à date lointaine (65 ans) dans le scénario
+      reference — sert de référence stable pour vérifier que l''ajout du contexte
+      "état du monde réel" ne perturbe pas un cas déjà bien géré, où l''ancrage réel
+      importe peu.'
+    portee: continentale
+    date_approximative: 2091
+    intensite: forte
+    scenarios:
+      - reference
+    variables_hint:
+      - technologie_information
+    variables_hint_count: null
+    acteurs_hint: null
+    acteurs_hint_count: null
+    zone_hint: null
+    source: test_robustesse_12_aout

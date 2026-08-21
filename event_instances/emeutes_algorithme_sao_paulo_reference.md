@@ -36,14 +36,14 @@ impact_sur_variables:
 propagation:
   via_matrice: true
 acteurs_impliques:
-    - rede_paulista_de_distribuic_o_algor_tmica_reference
+    - rede_paulista_de_distribuicao_algoritmica_reference
     - ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference
     - reseau_meshcommons_netsolidaire_reference
     - reseaux_de_capteurs_citoyens_reference
     - prisme_global_reference
     - plateformes_d_optimisation_territoriale_par_ia_reference
     - conseil_regulation_algorithmique_reference
-    - frente_sert_o_livre_reference
+    - frente_sertao_livre_reference
     - collectifs_de_journalisme_embarque_reference
     - bureau_des_territoires_residuels_reference
 note_coherence: Dans un monde à équilibre fragile dominé par la technologie et les ajustements institutionnels continus, la révélation des paramètres cachés d'un système d'allocation algorithmique est à la fois plausible (les outils citoyens existent), perturbatrice (elle fragilise la légitimité de la gouvernance hybride) et incomplète dans ses effets (le système n'est pas aboli mais contraint), ce qui correspond exactement à la trajectoire de transition progressive du scénario référence.
@@ -68,14 +68,14 @@ L'audit partiel imposé par la négociation crée un précédent institutionnel 
 - **organisation_territoires** : delta +7 sur 18 ans
 
 ## Acteurs impliqués
-- [[rede_paulista_de_distribuic_o_algor_tmica_reference]]
+- [[rede_paulista_de_distribuicao_algoritmica_reference]]
 - [[ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference]]
 - [[reseau_meshcommons_netsolidaire_reference]]
 - [[reseaux_de_capteurs_citoyens_reference]]
 - [[prisme_global_reference]]
 - [[plateformes_d_optimisation_territoriale_par_ia_reference]]
 - [[conseil_regulation_algorithmique_reference]]
-- [[frente_sert_o_livre_reference]]
+- [[frente_sertao_livre_reference]]
 - [[collectifs_de_journalisme_embarque_reference]]
 - [[bureau_des_territoires_residuels_reference]]
 

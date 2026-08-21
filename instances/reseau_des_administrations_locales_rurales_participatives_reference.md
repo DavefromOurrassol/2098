@@ -44,7 +44,7 @@ alliances:
 - cooperatives_ia_open_source_reference
 - federation_communs_territoriaux_reference
 - federation_des_cliniques_autonomes_reference
-- frente_sert_o_livre_reference
+- frente_sertao_livre_reference
 - les_veilleurs_du_fleuve_reference
 - ligue_des_municipalites_peripheriques_sous_connectees_reference
 - mouvement_racines_vivantes_reference
@@ -63,8 +63,6 @@ oppositions:
 type_relation_dominante: coopération
 annee_debut: 2032
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -99,6 +97,9 @@ localisation:
   zone: massif_central_terrafond
   lieu: Massif Central — réseau diffus de communes rurales
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Réseau des Administrations Locales Rurales Participatives
@@ -138,7 +139,7 @@ La tension centrale du Réseau réside dans la contradiction entre sa vocation d
 - [[cooperatives_ia_open_source_reference]]
 - [[federation_communs_territoriaux_reference]]
 - [[federation_des_cliniques_autonomes_reference]]
-- [[frente_sert_o_livre_reference]]
+- [[frente_sertao_livre_reference]]
 - [[les_veilleurs_du_fleuve_reference]]
 - [[ligue_des_municipalites_peripheriques_sous_connectees_reference]]
 - [[mouvement_racines_vivantes_reference]]

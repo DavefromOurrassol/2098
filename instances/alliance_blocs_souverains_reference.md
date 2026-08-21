@@ -71,8 +71,6 @@ type_relation_dominante: rivalité
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: ascendant
 generation: forteresse
 
 injection:
@@ -93,6 +91,9 @@ tensions_narratives: >
   La Charte de Réciprocité Stricte commence à montrer ses limites : plusieurs États membres sont tentés par des accords parallèles avec les mégapoles globales, court-circuitant le cadre bilatéral officiel. La question du partage des technologies d'adaptation climatique crée une fracture interne entre membres dotés et membres dépendants. Enfin, l'émergence de corridors énergétiques IA-gérés soulève une question existentielle : peut-on maintenir une logique souverainiste quand l'infrastructure de souveraineté elle-même est déléguée à des systèmes autonomes transnationaux ?
 
 date_creation: 2026-06-15
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Pacte des Souverains

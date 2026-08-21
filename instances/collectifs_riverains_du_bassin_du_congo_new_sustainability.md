@@ -58,8 +58,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2032
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -100,6 +98,9 @@ localisation:
   zone: bassin_du_congo
   lieu: Bassin du Congo — villages riverains et plateformes délibératives flottantes
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Collectifs Riverains du Bassin du Congo

@@ -1,0 +1,42 @@
+============================================================
+OURRASSOL 2098 — Réexamen annee_debut (placeholder 2026)
+============================================================
+(mode --dry-run : rien ne sera écrit)
+
+════════════════════════════════════════════════════════════
+SCÉNARIO : BREAKDOWN
+════════════════════════════════════════════════════════════
+  (aucune fiche concernée — pas de annee_debut=2026 sur officialise_enrichi)
+
+════════════════════════════════════════════════════════════
+SCÉNARIO : FORTRESS_WORLD
+════════════════════════════════════════════════════════════
+  (aucune fiche concernée — pas de annee_debut=2026 sur officialise_enrichi)
+
+════════════════════════════════════════════════════════════
+SCÉNARIO : NEW_SUSTAINABILITY
+════════════════════════════════════════════════════════════
+  (aucune fiche concernée — pas de annee_debut=2026 sur officialise_enrichi)
+
+════════════════════════════════════════════════════════════
+SCÉNARIO : ECO_COMMUNALISM
+════════════════════════════════════════════════════════════
+  (aucune fiche concernée — pas de annee_debut=2026 sur officialise_enrichi)
+
+════════════════════════════════════════════════════════════
+SCÉNARIO : POLICY_REFORM
+════════════════════════════════════════════════════════════
+  (aucune fiche concernée — pas de annee_debut=2026 sur officialise_enrichi)
+
+════════════════════════════════════════════════════════════
+SCÉNARIO : REFERENCE
+════════════════════════════════════════════════════════════
+  (aucune fiche concernée — pas de annee_debut=2026 sur officialise_enrichi)
+
+════════════════════════════════════════════════════════════
+RÉSUMÉ
+════════════════════════════════════════════════════════════
+  Traitées   : 0
+  Corrigées  : 0
+  Confirmées : 0
+  Échecs     : 0

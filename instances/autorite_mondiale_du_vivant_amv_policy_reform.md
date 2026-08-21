@@ -70,8 +70,6 @@ oppositions:
 type_relation_dominante: coopération
 annee_debut: 2035
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -104,6 +102,9 @@ localisation:
   zone: geneve_lacustre
   lieu: Genève-Lacustre
   type_lieu: ville
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Autorité Mondiale du Vivant (AMV)
@@ -169,7 +170,6 @@ L'AMV est écartelée entre les blocs industriels qui financent son fonctionneme
 - [[mouvement_pour_la_souverainete_territoriale_absolue_policy_reform]]
 - [[republique_islamique_iran_policy_reform]]
 - [[syndicats_d_extraction_privee_non_regules_policy_reform]]
-- [[test_durcissement_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

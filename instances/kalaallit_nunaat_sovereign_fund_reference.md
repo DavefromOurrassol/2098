@@ -61,8 +61,6 @@ type_relation_dominante: rivalité
 annee_debut: 2038
 annee_fin: 
 
-etat_temporel: actif
-age_historique: ascendant
 generation: transition
 
 injection:
@@ -83,6 +81,9 @@ tensions_narratives: >
   La question centrale qui divise la société groenlandaise : redistribuer une part significative de la rente au fonds climatique mondial — contribution à la réparation d'un désastre global — ou la sanctuariser intégralement comme rempart d'une souveraineté encore fragile ? En parallèle, la pression croissante des collectifs inuit pour que les communautés locales voient concrètement leur niveau de vie transformé, face à une technocratie du fonds perçue comme de plus en plus déconnectée. Enfin, le risque que le jeu de bascule entre blocs géopolitiques finisse par se retourner contre Nuuk si l'un d'eux décidait qu'une déstabilisation forcée coûte moins cher qu'une négociation.
 
 date_creation: 2026-06-23
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Kalaallit Nunaat Sovereign Fund

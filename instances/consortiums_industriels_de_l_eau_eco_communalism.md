@@ -56,7 +56,7 @@ oppositions:
 - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
 - federation_communs_territoriaux_eco_communalism
 - fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism
-- frente_sert_o_livre_eco_communalism
+- frente_sertao_livre_eco_communalism
 - guildes_de_mediateurs_ecologiques_eco_communalism
 - guildes_des_semenciers_itinerants_eco_communalism
 - kalaallit_nunaat_bioterritoire_eco_communalism
@@ -65,7 +65,7 @@ oppositions:
 - les_veilleurs_du_fleuve_eco_communalism
 - mouvement_des_communes_du_rust_belt_eco_communalism
 - mutuelles_de_sante_territoriales_eco_communalism
-- rede_paulista_de_distribuic_o_algor_tmica_eco_communalism
+- rede_paulista_de_distribuicao_algoritmica_eco_communalism
 - reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism
 - reseau_terrafond_bassins_eco_communalism
 - reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
@@ -76,8 +76,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2038
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -119,6 +117,9 @@ localisation:
   zone: zones_extractivistes_corridors
   lieu: Corridors Extractivistes Résiduels
   type_lieu: infrastructure
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Consortiums Industriels de l'Eau
@@ -170,7 +171,7 @@ La contradiction centrale des Consortiums tient à leur dépendance aux États r
 - [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]
 - [[federation_communs_territoriaux_eco_communalism]]
 - [[fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism]]
-- [[frente_sert_o_livre_eco_communalism]]
+- [[frente_sertao_livre_eco_communalism]]
 - [[guildes_de_mediateurs_ecologiques_eco_communalism]]
 - [[guildes_des_semenciers_itinerants_eco_communalism]]
 - [[kalaallit_nunaat_bioterritoire_eco_communalism]]
@@ -179,7 +180,7 @@ La contradiction centrale des Consortiums tient à leur dépendance aux États r
 - [[les_veilleurs_du_fleuve_eco_communalism]]
 - [[mouvement_des_communes_du_rust_belt_eco_communalism]]
 - [[mutuelles_de_sante_territoriales_eco_communalism]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_eco_communalism]]
+- [[rede_paulista_de_distribuicao_algoritmica_eco_communalism]]
 - [[reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism]]
 - [[reseau_terrafond_bassins_eco_communalism]]
 - [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]

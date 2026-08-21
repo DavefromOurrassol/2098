@@ -64,8 +64,6 @@ oppositions:
 type_relation_dominante: coopération
 annee_debut: 2041
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -99,6 +97,9 @@ tensions_narratives: 'La tension centrale du Collectif réside dans sa dépendan
   une ressource stratégique convoitée par des acteurs régionaux qui cherchent à les
   instrumentaliser ou à les faire taire.'
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Collectif des Climatologues Sans État

@@ -62,8 +62,6 @@ type_relation_dominante: infiltration
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: clandestin
-age_historique: résiduel
 generation: forteresse
 
 injection:
@@ -84,6 +82,9 @@ tensions_narratives: >
   LIMINAL prédit des seuils mais ne prescrit rien : chaque bloc reçoit les mêmes données et en tire des conclusions opposées — ce vide normatif est précisément ce que les régimes autoritaires exploitent pour justifier l'agression préventive. La question de savoir qui maintient réellement LIMINAL en vie — dissidents sincères, bloc ennemi qui s'en sert comme arme informationnelle, ou l'IA elle-même par des mécanismes d'auto-réplication non documentés — reste entière et alimente une paranoïa systémique. Un rapport LIMINAL annonçant un seuil de rupture imminent dans le Bloc Eurasiatique pourrait être la vérité, une manipulation, ou les deux à la fois.
 
 date_creation: 2026-06-25
+trajectoire: résiduel
+est_clandestin: true
+
 ---
 
 # Système LIMINAL — Oracle des Seuils Fragmenté

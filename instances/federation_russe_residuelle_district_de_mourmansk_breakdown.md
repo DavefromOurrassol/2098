@@ -38,7 +38,7 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
-- autorite_passage_arctique_breakdown
+- arctic_passage_authority_breakdown
 - consortium_energetique_oural_caspien_breakdown
 - consortiums_energetiques_samoiedes_du_yamal_breakdown
 - factions_energetiques_heritieres_des_pactes_abs_breakdown
@@ -60,8 +60,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2057
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -94,6 +92,9 @@ tensions_narratives: 'Le District est écartelé entre la Hanse Baltique Recompo
   acteur extérieur préfère que Mourmansk reste faible, mais aucun ne veut la voir
   tomber dans le camp adverse.'
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Fédération Russe Résiduelle — District de Mourmansk
@@ -121,7 +122,7 @@ Le District est écartelé entre la Hanse Baltique Recomposée et les acteurs no
 
 ## Relations
 **Alliés :**
-- [[autorite_passage_arctique_breakdown]]
+- [[arctic_passage_authority_breakdown]]
 - [[consortium_energetique_oural_caspien_breakdown]]
 - [[consortiums_energetiques_samoiedes_du_yamal_breakdown]]
 - [[factions_energetiques_heritieres_des_pactes_abs_breakdown]]

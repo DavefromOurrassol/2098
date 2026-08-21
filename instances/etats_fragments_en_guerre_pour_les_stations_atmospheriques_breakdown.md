@@ -58,8 +58,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2041
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -91,6 +89,9 @@ tensions_narratives: 'La tension fondamentale de ces États-Fragments réside da
   ces entités revendiquent l''héritage des États souverains mais n''en exercent aucune
   des fonctions sociales, réduites à de pures machines de guerre climatique.'
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # États-Fragments en Guerre pour les Stations Atmosphériques

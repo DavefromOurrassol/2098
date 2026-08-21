@@ -41,7 +41,7 @@ alliances:
 - great_lakes_autonomous_compact_new_sustainability
 - hub_nairobi_kigali_new_sustainability
 - mouvement_communautaire_des_micro_grids_energetiques_new_sustainability
-- rede_paulista_de_distribuic_o_algor_tmica_new_sustainability
+- rede_paulista_de_distribuicao_algoritmica_new_sustainability
 - reseau_des_bio_communs_regionaux_new_sustainability
 - reseau_des_communs_productifs_regeneratifs_new_sustainability
 - reseau_global_de_cliniques_regeneratives_new_sustainability
@@ -58,8 +58,6 @@ oppositions:
 type_relation_dominante: symbiose
 annee_debut: 2037
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -93,6 +91,9 @@ localisation:
   zone: null
   lieu: null
   type_lieu: null
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Réseau des Hubs Urbains Régénératifs
@@ -127,7 +128,7 @@ Le réseau se trouve pris en étau entre son aspiration à rester un espace d'ex
 - [[great_lakes_autonomous_compact_new_sustainability]]
 - [[hub_nairobi_kigali_new_sustainability]]
 - [[mouvement_communautaire_des_micro_grids_energetiques_new_sustainability]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_new_sustainability]]
+- [[rede_paulista_de_distribuicao_algoritmica_new_sustainability]]
 - [[reseau_des_bio_communs_regionaux_new_sustainability]]
 - [[reseau_des_communs_productifs_regeneratifs_new_sustainability]]
 - [[reseau_global_de_cliniques_regeneratives_new_sustainability]]

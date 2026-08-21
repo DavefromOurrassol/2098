@@ -61,8 +61,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2044
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -98,6 +96,9 @@ localisation:
   zone: europe_occidentale_reconstituee
   lieu: Massif Central, Rust Belt, marges bioterritoriales fragmentées
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Factions Autoritaires Locales Identitaires Exclusionnistes

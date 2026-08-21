@@ -61,8 +61,6 @@ type_relation_dominante: coopération
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: mature
 generation: transition
 
 injection:
@@ -83,6 +81,9 @@ tensions_narratives: >
   La pression pour autoriser des transferts hydriques massifs vers les zones désertifiées du Sud-Ouest nord-américain crée une ligne de fracture interne entre les délégués autochtones — farouchement opposés à toute exportation — et les représentants des mégapoles qui y voient une source de revenus et de pouvoir diplomatique. Par ailleurs, le modèle du Compact inspire des tentatives de réplication sur d'autres bassins mondiaux, mais ses fondateurs craignent qu'une universalisation trop rapide ne dilue la légitimité fonctionnelle qui fait sa force. Enfin, l'émergence de consortiums privés proposant des 'solutions hydriques alternatives' aux zones exclues du Compact menace de court-circuiter son autorité par la technique plutôt que par la politique.
 
 date_creation: 2026-06-23
+trajectoire: mature
+est_clandestin: false
+
 ---
 
 # Compact des Grands Lacs

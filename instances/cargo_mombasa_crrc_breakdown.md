@@ -53,8 +53,6 @@ type_relation_dominante: dépendance
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: post-effondrement
 
 injection:
@@ -75,6 +73,9 @@ tensions_narratives: >
   La CRRC incarne la contradiction vivante de l'effondrement : plus les États côtiers s'effondrent, plus elle devient indispensable — et plus elle devient prédatrice. Jusqu'où une organisation de survie peut-elle aller avant de devenir le problème qu'elle prétend résoudre ? Plusieurs capitaines dissidents auraient refusé de transporter des chargements d'armes légères pour des milices locales, créant une fracture interne entre un aile 'utilitaire humaniste' et une direction pragmatiquement amorale. Par ailleurs, le Bloc de Johannesburg cherche à absorber la flotte pour sécuriser ses propres corridors d'approvisionnement, ce qui ferait basculer la CRRC d'une logique de survie communautaire vers celle d'un instrument de puissance régionale — une transformation que certaines communautés côtières perçoivent déjà comme une trahison annoncée.
 
 date_creation: 2026-06-27
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Cargo Mombasa CRRC — Les Dhows de la Dernière Chance

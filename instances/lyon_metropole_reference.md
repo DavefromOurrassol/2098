@@ -57,8 +57,6 @@ type_relation_dominante: rivalité
 annee_debut: 2032
 annee_fin: 
 
-etat_temporel: actif
-age_historique: mature
 generation: transition
 
 injection:
@@ -79,6 +77,9 @@ tensions_narratives: >
   La tension centrale est celle de l'arbitrage impossible : Lyon Métropole doit simultanément séduire les investisseurs industriels pour maintenir l'emploi dans les corridors rhônalpins et répondre aux exigences sociales des zones périurbaines qui se sentent abandonnées au profit du cœur métropolitain. Une deuxième fissure court entre sa dépendance croissante aux plateformes d'optimisation territoriale par IA — dont elle ne contrôle ni les algorithmes ni les données — et sa prétention à exercer une souveraineté démocratique sur son territoire. Enfin, l'arrivée de consortiums énergétiques privés qui proposent de financer des infrastructures de transition en échange de dérogations réglementaires place chaque élu devant un dilemme moral concret : jusqu'où peut-on hypothéquer l'autonomie institutionnelle pour tenir des promesses de service public ?
 
 date_creation: 2026-06-27
+trajectoire: mature
+est_clandestin: false
+
 ---
 
 # Lyon Métropole — Autorité de Coordination Territoriale

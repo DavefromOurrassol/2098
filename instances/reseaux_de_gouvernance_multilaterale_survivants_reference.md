@@ -65,8 +65,6 @@ oppositions:
 type_relation_dominante: coopération
 annee_debut: 2033
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -102,6 +100,9 @@ localisation:
   zone: institutions_multilaterales_survivantes
   lieu: Genève-Lac-Retraité / Nairobi / forums itinérants
   type_lieu: infrastructure
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Réseaux de gouvernance multilatérale survivants

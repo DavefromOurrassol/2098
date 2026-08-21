@@ -1,0 +1,31 @@
+# Traçabilité — `collectifs_de_cartographie_ecologique_participative` (instance)
+
+*Généré le 2026-08-11 00:00*
+
+## 1. Origine
+
+- **Statut d'injection** : origine introuvable (idée non trouvée dans processed/needs_review.yaml)
+
+## 2. Descriptif
+
+**Collectifs de Cartographie Écologique Participative**
+
+Réseaux citoyens produisant des cartographies collaboratives des écosystèmes locaux, combinant savoirs traditionnels et outils de relevé participatif. Incarnent une appropriation collective de la connaissance environnementale comme base de gouvernance territoriale.
+
+
+## 3. Évolution dans le temps et l'espace
+
+- **Présente dans 1/6 scénarios** : eco_communalism
+
+### eco_communalism
+- Zone : — · Impact local/global : 5/3 · Enrichie le : 2026-06-27
+- **Rôle** : Dans le scénario eco_communalism, servent d'infrastructure cognitive distribuée permettant aux communautés de documenter, négocier et défendre leurs territoires écologiques sans dépendre d'institutions centralisées.
+
+**Variables systémiques influencées (tous scénarios confondus)** : climat_environnement_global, organisation_territoires, technologie_information
+**Alliances (réseau relationnel)** : amazonie_pacte_viva_eco_communalism, archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism, assemblees_bioterritoriales_regionales_eco_communalism, assemblees_de_bassin_versant_eco_communalism, brigades_de_restauration_ecologique_eco_communalism, cercles_de_mediation_territoriale_intercommunautaire_eco_communalism, collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism, collectifs_de_geo_observateurs_citoyens_eco_communalism, et 20 autre(s)
+**Oppositions (réseau relationnel)** : communautes_isolationnistes_refusant_la_continuite_ecologique_eco_communalism, conseils_territoriaux_opaques_sur_la_gestion_des_ressources_eco_communalism, courant_isolationniste_anti_circulation_de_l_information_eco_communalism, enclaves_extractivistes_residuelles_des_corridors_eco_communalism, factions_autoritaires_de_controle_du_savoir_eco_communalism, factions_communautaires_refusant_le_partage_narratif_exterieur_eco_communalism, factions_extractivistes_des_aquiferes_communs_eco_communalism, fragments_d_etats_centraux_residuels_eco_communalism, et 1 autre(s)
+
+## 4. Aval — usage dans les articles publiés
+
+_Aucune mention trouvée dans `articles/*.md` (scan texte brut, best-effort — un article peut mentionner l'entité sous une formulation différente sans que ce scan la détecte)._
+

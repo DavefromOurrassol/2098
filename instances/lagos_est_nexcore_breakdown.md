@@ -62,8 +62,6 @@ type_relation_dominante: dépendance
 annee_debut: 2061
 annee_fin: 
 
-etat_temporel: actif
-age_historique: ascendant
 generation: post-effondrement
 
 injection:
@@ -84,6 +82,9 @@ tensions_narratives: >
   La consolidation progressive du contrôle de Lagos Est Nexcore sur les nœuds survivants soulève une question centrale : à quel moment la coordinatrice d'urgence devient-elle le seigneur féodal qu'elle prétend remplacer ? Plusieurs enclaves commencent à murmurer contre les tarifs de synchronisation jugés prédateurs, tandis que des factions paramilitaires locales lorgnent sur les nœuds comme sur des forteresses à prendre. En parallèle, la Guilde des Techniciens Nomades — dont Lagos Est Nexcore dépend pour maintenir ses infrastructures — commence à négocier ses propres termes, fragilisant la colonne vertébrale opérationnelle de l'organisation. La question ultime : si une enclave parvenait à construire son propre nœud autonome, le modèle entier s'effondrerait-il par contagion ?
 
 date_creation: 2026-06-27
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Lagos Est Nexcore — Les Nœuds Lagunaires

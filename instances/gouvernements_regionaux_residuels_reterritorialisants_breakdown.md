@@ -60,8 +60,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2041
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -91,6 +89,9 @@ tensions_narratives: Tiraillés entre leur prétention à la légalité et la r�
   ils luttent pour demeurer indispensables dans un monde qui a appris à se passer
   d'eux.
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Gouvernements Régionaux Résiduels Reterritorialisants

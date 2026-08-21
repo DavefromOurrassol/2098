@@ -20,6 +20,7 @@ from loader import (
     load_all_variables,
     load_instances_for_scenario,
     load_events_for_scenario,
+    load_custom_signals,
     filter_instances_for_thematique,
     select_instances_by_impact,
     resolve_forced_element,
@@ -38,6 +39,74 @@ CASCADE_ROLES = {"cascade", "reinforcing"}
 
 # Catégories de ruptures à extraire pour la trajectoire
 RUPTURE_CATEGORIES = ["technological", "systemic", "political_social"]
+
+# ─────────────────────────────────────────
+# BLOC `simulation` DES FICHES VARIABLES (P22, 20 août 2026)
+# ─────────────────────────────────────────
+# Mapping qualitatif -> numérique pour les 3 champs rendus opérationnels
+# (volatility, tipping_point_risk, systemic_criticality). predictability/
+# uncertainty_level restent hors scope (point 2, mis de côté -- voir
+# backlog, introduiraient de l'aléa dans un pipeline aujourd'hui
+# déterministe).
+#
+# RÈGLE DE NON-RÉGRESSION : toute variable sans bloc `simulation` rempli,
+# ou avec une valeur de champ absente/non reconnue, retombe sur la valeur
+# DEFAULT ci-dessous -- qui reproduit exactement le comportement fixe
+# d'avant ce chantier. Aucune variable existante ne doit changer de
+# comportement du seul fait que ce mécanisme existe désormais.
+
+# volatility -- module le facteur d'amortissement de la propagation
+# matricielle (remplace le 0.5 fixe), côté variable CIBLE (une cible
+# volatile réagit plus fort à une poussée reçue).
+VOLATILITY_DAMPING = {
+    "low":       0.3,
+    "medium":    0.5,
+    "high":      0.8,
+    "very_high": 1.0,
+}
+VOLATILITY_DAMPING_DEFAULT = 0.5  # = comportement fixe d'avant ce chantier
+
+# tipping_point_risk -- abaisse les seuils de détection de tension dans
+# check_coherence() (60/70), côté variable qui PORTE le risque (source ou
+# cible selon le test, jamais les deux en même temps sur un même test).
+TIPPING_THRESHOLD_ADJUST = {
+    "low":       0,
+    "medium":    5,
+    "high":      10,
+    "very_high": 15,
+}
+TIPPING_THRESHOLD_ADJUST_DEFAULT = 0  # = pas de changement de seuil
+
+# systemic_criticality -- multiplicateur additionnel sur le delta propagé,
+# côté variable SOURCE (une variable critique qui bouge pèse plus lourd
+# sur ce qu'elle influence). Échelle RÉELLE du vault = entier 1-5 (pas une
+# chaîne qualitative comme les deux champs ci-dessus -- vérifié sur les
+# 12 fiches variables le 20 août 2026, ex. systemic_criticality: 5).
+CRITICALITY_MULTIPLIER = {
+    1: 0.7,
+    2: 0.85,
+    3: 1.0,
+    4: 1.3,
+    5: 1.6,
+}
+CRITICALITY_MULTIPLIER_DEFAULT = 1.0  # = pas d'amplification/atténuation
+
+
+def _get_simulation_param(all_variables, var_slug, field, mapping, default_value):
+    """
+    Lit un champ qualitatif du bloc `simulation` d'une variable et le
+    convertit en valeur numérique via `mapping`.
+
+    Retourne `default_value` si la variable est inconnue, si le bloc
+    `simulation` est absent/vide, ou si le champ ne correspond à aucune
+    clé du mapping -- c'est le mécanisme de non-régression : toute
+    fiche variable non renseignée sur ce point se comporte exactement
+    comme avant l'existence de ce mécanisme.
+    """
+    var = all_variables.get(var_slug, {}) or {}
+    sim = var.get("simulation", {}) or {}
+    raw = sim.get(field, "")
+    return mapping.get(raw, default_value)
 
 
 # ─────────────────────────────────────────
@@ -223,12 +292,18 @@ def get_variable_state(variable, scenario_slug):
 # ÉTAPE 3 — COHÉRENCE VIA MATRICE
 # ─────────────────────────────────────────
 
-def check_coherence(variable_states, matrix):
+def check_coherence(variable_states, matrix, all_variables):
     """
     Vérifie la cohérence des états via la matrice d'influence.
     Pour chaque paire (source, target) avec weight fort :
       - Si polarity -1 et les deux variables ont level élevé → tension détectée
       - Si polarity +1 et écart de level > 40 → incohérence potentielle
+
+    Seuils de base 60 (tension_negative) / 70 (cascade_critique), abaissés
+    par variable selon son `simulation.tipping_point_risk` (P22, 20 août
+    2026) -- une variable proche de sa bascule déclenche une tension à un
+    niveau plus bas. Variable sans bloc `simulation` renseigné = seuils
+    inchangés (voir TIPPING_THRESHOLD_ADJUST_DEFAULT).
 
     Retourne :
       - tensions     : list de dicts (conflits détectés)
@@ -238,6 +313,11 @@ def check_coherence(variable_states, matrix):
     by_pair  = matrix["by_pair"]
 
     for source_slug, source_state in variable_states.items():
+        source_adjust = _get_simulation_param(
+            all_variables, source_slug, "tipping_point_risk",
+            TIPPING_THRESHOLD_ADJUST, TIPPING_THRESHOLD_ADJUST_DEFAULT
+        )
+
         for target_slug, target_state in variable_states.items():
             if source_slug == target_slug:
                 continue
@@ -257,8 +337,17 @@ def check_coherence(variable_states, matrix):
             s_level = float(s_level)
             t_level = float(t_level)
 
+            target_adjust = _get_simulation_param(
+                all_variables, target_slug, "tipping_point_risk",
+                TIPPING_THRESHOLD_ADJUST, TIPPING_THRESHOLD_ADJUST_DEFAULT
+            )
+
             # Tension : lien négatif fort entre deux variables à niveau élevé
-            if edge["polarity"] == -1 and s_level > 60 and t_level > 60:
+            tension_seuil_source = 60 - source_adjust
+            tension_seuil_target = 60 - target_adjust
+            if (edge["polarity"] == -1
+                    and s_level > tension_seuil_source
+                    and t_level > tension_seuil_target):
                 tensions.append({
                     "type":          "tension_negative",
                     "source":        source_slug,
@@ -272,10 +361,11 @@ def check_coherence(variable_states, matrix):
                 })
 
             # Cascade critique : lien cascade + polarity -1 + lag court
+            cascade_seuil = 70 - source_adjust
             if (edge["feedback_role"] == "cascade"
                     and edge["polarity"] == -1
                     and edge["lag"] <= 2
-                    and s_level > 70):
+                    and s_level > cascade_seuil):
                 tensions.append({
                     "type":          "cascade_critique",
                     "source":        source_slug,
@@ -464,7 +554,7 @@ def build_trajectory(all_variables, scenario_slug, pilot_variables):
 # ÉTAPE 6B — APPLICATION DES INJECTIONS CUSTOM
 # ─────────────────────────────────────────
 
-def apply_custom_injections(variable_states, instances, matrix):
+def apply_custom_injections(variable_states, instances, matrix, all_variables):
     """
     Applique les deltas des entités custom injectées sur les variables.
 
@@ -472,7 +562,11 @@ def apply_custom_injections(variable_states, instances, matrix):
       1. Calcule la durée d'effet réelle (2098 - annee_injection)
       2. Pondère le delta par min(duree_effet, duree_declaree) / duree_declaree
       3. Applique le delta au level de la variable
-      4. Si propagation.via_matrice = true, propage via les edges forts
+      4. Si propagation.via_matrice = true, propage via les edges forts,
+         avec un facteur de propagation = volatility de la CIBLE ×
+         systemic_criticality de la SOURCE (P22, 20 août 2026 -- remplace
+         le facteur fixe 0.5 d'avant ce chantier ; variable sans bloc
+         `simulation` renseigné = 0.5 × 1.0 = 0.5, comportement inchangé)
 
     Retourne les variable_states modifiés + un log des modifications.
     """
@@ -534,16 +628,25 @@ def apply_custom_injections(variable_states, instances, matrix):
 
             # Propagation via matrice
             if via_matrice and matrix:
+                criticality_source = _get_simulation_param(
+                    all_variables, var, "systemic_criticality",
+                    CRITICALITY_MULTIPLIER, CRITICALITY_MULTIPLIER_DEFAULT
+                )
                 edges = matrix["by_source"].get(var, [])
                 for edge in edges:
                     if edge["weight"] < 0.75:
                         continue
-                    target     = edge["target"]
-                    prop_delta = round(
-                        delta_applique * edge["weight"] * edge["polarity"] * 0.5, 1
-                    )
+                    target = edge["target"]
                     if target not in states:
                         continue
+                    volatility_target = _get_simulation_param(
+                        all_variables, target, "volatility",
+                        VOLATILITY_DAMPING, VOLATILITY_DAMPING_DEFAULT
+                    )
+                    prop_delta = round(
+                        delta_applique * edge["weight"] * edge["polarity"]
+                        * volatility_target * criticality_source, 1
+                    )
                     old_t = states[target].get("level", 50)
                     if old_t == "" or old_t is None:
                         old_t = 50
@@ -562,7 +665,7 @@ def apply_custom_injections(variable_states, instances, matrix):
     return states, modifications
 
 
-def apply_custom_events(variable_states, events, matrix):
+def apply_custom_events(variable_states, events, matrix, all_variables):
     """
     Applique les deltas des événements custom sur les variables.
     Similaire à apply_custom_injections mais pour les événements.
@@ -620,16 +723,25 @@ def apply_custom_events(variable_states, events, matrix):
 
             # Propagation via matrice
             if via_matrice and matrix:
+                criticality_source = _get_simulation_param(
+                    all_variables, var, "systemic_criticality",
+                    CRITICALITY_MULTIPLIER, CRITICALITY_MULTIPLIER_DEFAULT
+                )
                 edges = matrix["by_source"].get(var, [])
                 for edge in edges:
                     if edge["weight"] < 0.75:
                         continue
-                    target     = edge["target"]
-                    prop_delta = round(
-                        delta_applique * edge["weight"] * edge["polarity"] * 0.5, 1
-                    )
+                    target = edge["target"]
                     if target not in states:
                         continue
+                    volatility_target = _get_simulation_param(
+                        all_variables, target, "volatility",
+                        VOLATILITY_DAMPING, VOLATILITY_DAMPING_DEFAULT
+                    )
+                    prop_delta = round(
+                        delta_applique * edge["weight"] * edge["polarity"]
+                        * volatility_target * criticality_source, 1
+                    )
                     old_t = states[target].get("level", 50)
                     if old_t == "" or old_t is None:
                         old_t = 50
@@ -645,6 +757,112 @@ def apply_custom_events(variable_states, events, matrix):
                         "old_level": old_t,
                         "new_level": new_t,
                     })
+
+    return states, modifications
+
+
+def apply_custom_signals(variable_states, signals, matrix, scenario_slug, all_variables):
+    """
+    Applique les deltas des signaux faibles custom sur les variables
+    (chantier injection matricielle, 16 août 2026) -- même mécanique que
+    apply_custom_events()/apply_custom_injections(), avec deux différences
+    structurelles propres aux signaux :
+      1. Chaque entrée `signals` (issue de loader.load_custom_signals())
+         ne porte qu'UNE SEULE variable cible (pas une liste d'impacts) --
+         un signal développe une seule variable par appel LLM, contrairement
+         aux instances/événements qui peuvent en toucher plusieurs.
+      2. annee_injection/duree sont PROPRES À CHAQUE SCÉNARIO (dérivés de
+         `date_bascule`, qui diffère d'un scénario à l'autre pour le même
+         signal) -- d'où le paramètre scenario_slug, absent des deux
+         fonctions sœurs qui appliquent le même delta à tous les scénarios.
+
+    Retourne les variable_states modifiés + un log des modifications,
+    même format que les deux fonctions sœurs pour rester compatible avec
+    l'affichage existant de "Perturbations custom actives".
+    """
+    modifications = []
+    states = {k: dict(v) for k, v in variable_states.items()}
+
+    for signal in signals:
+        var = signal.get("variable", "")
+        scen_data = (signal.get("scenarios") or {}).get(scenario_slug)
+        if not scen_data or var not in states:
+            continue
+
+        annee       = scen_data.get("annee_injection", 2050)
+        delta       = scen_data.get("delta_level", 0)
+        duree_dec   = scen_data.get("duree", 15)
+        polarite    = scen_data.get("polarite", 1)
+        via_matrice = signal.get("propagation_via_matrice", False)
+
+        if not delta:
+            continue
+
+        duree_effet = 2098 - int(annee)
+        nom_signal = signal.get("source_fiche", "signal").replace(".md", "")
+        print("[snapshot] Signal custom '{}' sur {} (an {}, {} ans d'effet)".format(
+            nom_signal, var, annee, duree_effet
+        ))
+
+        facteur        = min(duree_effet, duree_dec) / max(duree_dec, 1)
+        delta_applique = round(delta * facteur * polarite, 1)
+
+        old_level = states[var].get("level", 50)
+        if old_level == "" or old_level is None:
+            old_level = 50
+
+        new_level = max(0, min(100, float(old_level) + delta_applique))
+        states[var]["level"]              = round(new_level, 1)
+        states[var]["signal_perturbation"] = True
+        states[var]["signal_source"]       = nom_signal
+
+        modifications.append({
+            "event":     "[signal] " + nom_signal,
+            "date":      annee,
+            "variable":  var,
+            "delta":     delta_applique,
+            "old_level": old_level,
+            "new_level": new_level,
+        })
+        print("  → {} : {} → {} (delta:{:+})".format(
+            var, old_level, new_level, delta_applique
+        ))
+
+        if via_matrice and matrix:
+            criticality_source = _get_simulation_param(
+                all_variables, var, "systemic_criticality",
+                CRITICALITY_MULTIPLIER, CRITICALITY_MULTIPLIER_DEFAULT
+            )
+            edges = matrix["by_source"].get(var, [])
+            for edge in edges:
+                if edge["weight"] < 0.75:
+                    continue
+                target = edge["target"]
+                if target not in states:
+                    continue
+                volatility_target = _get_simulation_param(
+                    all_variables, target, "volatility",
+                    VOLATILITY_DAMPING, VOLATILITY_DAMPING_DEFAULT
+                )
+                prop_delta = round(
+                    delta_applique * edge["weight"] * edge["polarity"]
+                    * volatility_target * criticality_source, 1
+                )
+                old_t = states[target].get("level", 50)
+                if old_t == "" or old_t is None:
+                    old_t = 50
+                new_t = max(0, min(100, float(old_t) + prop_delta))
+                states[target]["level"]              = round(new_t, 1)
+                states[target]["signal_perturbation"] = True
+                states[target]["signal_source"]       = "{} (propagé)".format(nom_signal)
+                modifications.append({
+                    "event":     "[signal] " + nom_signal + " (propagé)",
+                    "date":      annee,
+                    "variable":  target,
+                    "delta":     prop_delta,
+                    "old_level": old_t,
+                    "new_level": new_t,
+                })
 
     return states, modifications
 
@@ -751,7 +969,7 @@ def build_snapshot(scenario_slug, thematique=None, dry_run=True, forcer_config=N
     print("[snapshot] États définis : {}/{}".format(defined, len(VALID_VARS)))
 
     # ── Étape 3 : cohérence
-    coherence = check_coherence(variable_states, matrix)
+    coherence = check_coherence(variable_states, matrix, all_variables)
     print("[snapshot] Tensions détectées : {} | Cohérence : {}".format(
         len(coherence["tensions"]),
         "OK" if coherence["coherence_ok"] else "ATTENTION"
@@ -801,7 +1019,7 @@ def build_snapshot(scenario_slug, thematique=None, dry_run=True, forcer_config=N
                         if i.get("injection", {}).get("type") == "custom"]
     if custom_instances:
         variable_states, modifications = apply_custom_injections(
-            variable_states, custom_instances, matrix
+            variable_states, custom_instances, matrix, all_variables
         )
         print("[snapshot] Modifications custom (entités) : {} variables affectées".format(
             len(modifications)
@@ -814,7 +1032,7 @@ def build_snapshot(scenario_slug, thematique=None, dry_run=True, forcer_config=N
     event_modifications = []
     if custom_events:
         variable_states, event_modifications = apply_custom_events(
-            variable_states, custom_events, matrix
+            variable_states, custom_events, matrix, all_variables
         )
         print("[snapshot] Événements custom : {} | {} variables affectées".format(
             len(custom_events), len(event_modifications)
@@ -822,6 +1040,19 @@ def build_snapshot(scenario_slug, thematique=None, dry_run=True, forcer_config=N
     else:
         print("[snapshot] Événements custom : aucun")
 
+    # ── Étape 6D2 : charger et appliquer les signaux faibles custom
+    # (chantier injection matricielle, 16 août 2026 — troisième et dernier
+    # type d'injection après entités/instances et événements)
+    custom_signals = load_custom_signals()
+    signal_modifications = []
+    if custom_signals:
+        variable_states, signal_modifications = apply_custom_signals(
+            variable_states, custom_signals, matrix, scenario_slug, all_variables
+        )
+        print("[snapshot] Signaux custom chiffrés : {} | {} variables affectées".format(
+            len(custom_signals), len(signal_modifications)
+        ))
+    modifications = modifications + event_modifications + signal_modifications
 
     # ── Étape 6D : forçage d'un élément (ajouté le 2 août 2026)
     forcer_resolu = resolve_forced_element(forcer_config, scenario_slug)
@@ -935,11 +1166,15 @@ def build_snapshot(scenario_slug, thematique=None, dry_run=True, forcer_config=N
         "all_instances":       all_instances,
         "filtered_instances":  filtered_instances,
         "custom_instances":    custom_instances,
-        "modifications":       modifications + event_modifications,
+        "modifications":       modifications,
 
         # Événements custom
         "custom_events":       custom_events,
         "event_modifications": event_modifications,
+
+        # Signaux faibles custom chiffrés (16 août 2026)
+        "custom_signals":       custom_signals,
+        "signal_modifications": signal_modifications,
 
         # Zone dominante — déterminée depuis les instances filtrées
         "zone_slug":           _dominant_zone(filtered_instances),

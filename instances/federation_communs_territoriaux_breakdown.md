@@ -40,7 +40,7 @@ alliances:
 - communes_rust_belt_zones_libres_breakdown
 - consortium_amazonia_viva_breakdown
 - delta_mekong_racines_breakdown
-- frente_sert_o_livre_breakdown
+- frente_sertao_livre_breakdown
 - internationale_des_semenciers_agro_pirates_fortress_world
 - le_registre_du_fleuve_breakdown
 - les_veilleurs_du_fleuve_breakdown
@@ -62,10 +62,8 @@ oppositions:
 type_relation_dominante: conflit
 
 annee_debut: 2031
-annee_fin: 
+annee_fin: 2091
 
-etat_temporel: transformé
-age_historique: résiduel
 generation: post-effondrement
 
 injection:
@@ -86,6 +84,9 @@ tensions_narratives: >
   Qui détient la légitimité du nom 'CBV' quand deux bassins voisins entrent en guerre pour un aquifère ? Des émissaires tentent de reconvoquer une assemblée fédérale depuis trois ans sans jamais atteindre le quorum. Certains chefs locaux instrumentalisent l'héritage des communs pour légitimer des pouvoirs autoritaires, trahissant les principes fondateurs. Et si quelques archivistes retrouvaient les protocoles originaux de 2031 — cela suffirait-il à refédérer, ou n'alimenterait-on qu'une guerre de succession symbolique ?
 
 date_creation: 2026-06-15
+trajectoire: transformé
+est_clandestin: false
+
 ---
 
 # Confédération des Bassins Vivants
@@ -115,7 +116,7 @@ Qui détient la légitimité du nom 'CBV' quand deux bassins voisins entrent en 
 - [[communes_rust_belt_zones_libres_breakdown]]
 - [[consortium_amazonia_viva_breakdown]]
 - [[delta_mekong_racines_breakdown]]
-- [[frente_sert_o_livre_breakdown]]
+- [[frente_sertao_livre_breakdown]]
 - [[internationale_des_semenciers_agro_pirates_fortress_world]]
 - [[le_registre_du_fleuve_breakdown]]
 - [[les_veilleurs_du_fleuve_breakdown]]

@@ -54,8 +54,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2041
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -86,6 +84,9 @@ tensions_narratives: La revendication identitaire samoïède qui légitime leur 
   pressions permanentes d'intégration qui menacent l'autonomie pour laquelle ils se
   sont constitués.
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Consortiums Énergétiques Samoïèdes du Yamal

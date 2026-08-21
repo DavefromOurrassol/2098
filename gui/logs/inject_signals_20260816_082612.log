@@ -1,0 +1,15 @@
+
+=== sans_id ===
+[1/4] Sélection de variable(s)...
+[llm] Mistral (mistral-large-latest) — entrée : 4625 | sortie : 70
+  -> variables=['valeurs_culture_tempo_sociale'] categorie=cognitive_cultural signal_slug=decodage_langage_animaux_ia
+[2/4] Développement pour valeurs_culture_tempo_sociale...
+[llm] Mistral (mistral-large-latest) — entrée : 31004 | sortie : 720
+[3/4] Validation (essai 1)...
+  ⚠ [avertissement, non bloquant] [fortress_world] fenêtre 2038-2053 déjà utilisée par un autre signal de valeurs_culture_tempo_sociale dans le registre.
+  ⚠ [avertissement, non bloquant] [new_sustainability] fenêtre 2033-2048 déjà utilisée par un autre signal de valeurs_culture_tempo_sociale dans le registre.
+  ⚠ [avertissement, non bloquant] [eco_communalism] fenêtre 2040-2058 déjà utilisée par un autre signal de valeurs_culture_tempo_sociale dans le registre.
+  ⚠ [avertissement, non bloquant] [policy_reform] fenêtre 2030-2045 déjà utilisée par un autre signal de valeurs_culture_tempo_sociale dans le registre.
+[4/4] Injection...
+
+Terminé. Voir /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/signaux_custom/processed.yaml et /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/signaux_custom/needs_review.yaml.

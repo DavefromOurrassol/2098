@@ -59,8 +59,6 @@ type_relation_dominante: alliance stratégique
 annee_debut: 2037
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: forteresse
 
 injection:
@@ -81,6 +79,9 @@ tensions_narratives: >
   TSG est au cœur de multiples conflits : ses technologies de verrouillage climatique sont-elles une protection légitime ou une arme de guerre environnementale ? Les dissidents accusent l’entreprise de créer des « zones mortes » en périphérie des blocs, tandis que ses dirigeants justifient leurs actions par la nécessité de préserver les derniers havres de stabilité. La rivalité avec les Coalitions Géopolitiques d’Infiltration des Modèles Climatiques pourrait déclencher une cyberguerre pour le contrôle des données atmosphériques. Enfin, la dépendance des blocs envers TSG pose la question : qui contrôle vraiment le climat, les États ou leurs fournisseurs technologiques ?
 
 date_creation: 2026-07-11
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # TerraShield Sovereign GeoEngineering (TSG)

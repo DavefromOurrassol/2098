@@ -70,8 +70,6 @@ type_relation_dominante: coopération
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: mature
 generation: transition
 
 injection:
@@ -92,6 +90,9 @@ tensions_narratives: >
   La tension centrale est existentielle : rester fidèle à la neutralité ouverte qui fonde sa légitimité, ou accepter de se territorialiser davantage pour peser face aux acteurs qui, eux, n'hésitent pas à privatiser et militariser le réseau. Des voix internes réclament une alliance plus franche avec le Conseil des États Nordiques Intégrés, au risque de perdre la confiance des ONG du Sud global qui voient dans cette proximité un nouveau colonialisme numérique bienveillant. Par ailleurs, des tentatives répétées d'infiltration — techniques et politiques — émanant d'opérateurs privés et de régulateurs eurasiatiques mettent à l'épreuve sa gouvernance collective : jusqu'où la transparence peut-elle résister à des adversaires qui, eux, opèrent dans l'opacité ? Enfin, la question de la succession et du renouvellement des compétences techniques pèse : les jeunes ingénieurs forment à ses protocoles rejoignent souvent, faute de rémunération compétitive, les plateformes qu'ils étaient censés contrebalancer.
 
 date_creation: 2026-06-27
+trajectoire: mature
+est_clandestin: false
+
 ---
 
 # Helsinki Communs Numériques

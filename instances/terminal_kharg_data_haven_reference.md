@@ -1,0 +1,83 @@
+---
+name: Kharg Data Nexus
+type: instance
+slug: terminal_kharg_data_haven_reference
+entite: terminal_kharg_data_haven
+scenario: reference
+localisation:
+  zone: bloc_persique_autonome
+  lieu: Kharg
+  type_lieu: infrastructure
+type_dans_scenario: infrastructure
+role_dans_scenario: |
+  Centre névralgique offshore du golfe Persique, Kharg Data Nexus incarne l'ambivalence structurelle des sanctuaires de données en zone grise. Officiellement, il héberge les archives numériques des dissidents, journalistes et ONG fuyant la censure des blocs souverains, tout en fournissant des serveurs de contournement pour les réseaux mesh et les collectifs de biopiraterie inversée. En réalité, il est aussi la plaque tournante du commerce illicite de données critiques entre consortiums privés, agences de renseignement et factions minières indépendantes, exploitant les failles réglementaires des détroits stratégiques et des zones économiques spéciales périurbaines.
+responsabilites: |
+  Gestion d'un réseau de serveurs offshore à tolérance de panne élevée, chiffrement quantique des archives sensibles, négociation des droits de transit avec l'Autorité de Régulation des Passages Stratégiques (ARPS). Parallèlement, il monétise l'accès à des bases de données piratées (brevets climatiques, algorithmes de modération, cartes hydrologiques contestées) via des enchères opaques, tout en servant de hub logistique pour les flux de données entre le Bloc Ressources Eurasiatique (BRE) et les Consortiums Privés d'Extraction de Ressources Critiques.
+impact_local: 4
+impact_systemique_global: 3
+variables_influencees:
+  - technologie_information
+  - geopolitique_conflits
+  - systeme_economique_redistribution
+zone_geographique:
+  - régionale
+  - globale
+zone_systemique:
+  - information
+  - cyberspace
+  - économie
+alliances:
+  - reseau_mnemos_reference
+  - collectifs_de_biopiraterie_inversee_reference
+  - reseau_meshcommons_netsolidaire_reference
+  - operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference
+  - consortiums_prives_de_gestion_des_donnees_critiques_reference
+oppositions:
+  - bureaux_de_regulation_informationnelle_reference
+  - agence_de_regulation_des_detroits_strategiques_ards_reference
+  - bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference
+  - coalition_pour_la_souverainete_numerique_nationale_reference
+  - milices_concurrentes_des_droits_de_passage_reference
+type_relation_dominante: symbiose
+annee_debut: 2041
+annee_fin:
+trajectoire: mature
+est_clandestin: false
+generation: ère cognitive
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+description_journalistique: "Perchée sur les vestiges rouillés du terminal pétrolier de Kharg, cette forteresse de béton et de verre blindé domine les eaux turquoise du golfe comme un mirage géopolitique. À l'intérieur, des rangées de serveurs bourdonnent sous une climatisation survoltée, tandis que des techniciens en combinaison antistatique négocient en temps réel avec des algorithmes de modération chinois et des milices corporatistes. Les murs sont couverts de graffitis numériques : des extraits de bases de données volées, des cartes de conflits hydriques, des manifestes de dissidents. Le soir, des drones-cargos décollent en silence vers des destinations inconnues, chargés de disques durs contenant les secrets que les États ne veulent plus voir circuler."
+signes_distinctifs: |
+  Architecture hybride mêlant structures pétrolières désaffectées et modules high-tech flottants, signalétique en farsi, arabe et mandarin. Le logo, un octogone fractal inspiré des motifs persans, est souvent tagué par les collectifs de hackers pour en faire un symbole de résistance. Les antennes paraboliques, camouflées en tours de forage, émettent un bourdonnement constant, audible à des kilomètres à la ronde.
+tensions_narratives: |
+  Kharg Data Nexus est au cœur d'une guerre froide des données : d'un côté, les blocs souverains tentent de le faire fermer sous prétexte de souveraineté numérique, de l'autre, les consortiums privés et les ONG de préservation patrimoniale le défendent comme un rempart contre l'oubli. Sa survie dépend de sa capacité à naviguer entre ces forces, tout en évitant de devenir un simple outil des réseaux de financement gris. Une fuite massive de données, ou une attaque ciblée par une IA de modération, pourrait faire basculer son équilibre précaire et déclencher une crise systémique dans le commerce illicite de l'information.
+date_creation: 2026-08-11
+---
+
+# Kharg Data Nexus
+
+## Rôle dans [[reference]]
+Centre névralgique offshore du golfe Persique, Kharg Data Nexus incarne l'ambivalence structurelle des sanctuaires de données en zone grise. Officiellement, il héberge les archives numériques des dissidents, journalistes et ONG fuyant la censure des blocs souverains, tout en fournissant des serveurs de contournement pour les réseaux mesh et les collectifs de biopiraterie inversée. En réalité, il est aussi la plaque tournante du commerce illicite de données critiques entre consortiums privés, agences de renseignement et factions minières indépendantes, exploitant les failles réglementaires des détroits stratégiques et des zones économiques spéciales périurbaines.
+
+## Responsabilités
+Gestion d'un réseau de serveurs offshore à tolérance de panne élevée, chiffrement quantique des archives sensibles, négociation des droits de transit avec l'Autorité de Régulation des Passages Stratégiques (ARPS). Parallèlement, il monétise l'accès à des bases de données piratées (brevets climatiques, algorithmes de modération, cartes hydrologiques contestées) via des enchères opaques, tout en servant de hub logistique pour les flux de données entre le Bloc Ressources Eurasiatique (BRE) et les Consortiums Privés d'Extraction de Ressources Critiques.
+
+## Variables influencées
+- [[technologie_information]]
+- [[geopolitique_conflits]]
+- [[systeme_economique_redistribution]]
+
+## Relations
+**Alliés** : [[reseau_mnemos_reference]], [[collectifs_de_biopiraterie_inversee_reference]], [[reseau_meshcommons_netsolidaire_reference]], [[operateurs_logistiques_prives_des_zones_grises_eurasiennes_reference]], [[consortiums_prives_de_gestion_des_donnees_critiques_reference]]
+**Opposants** : [[bureaux_de_regulation_informationnelle_reference]], [[agence_de_regulation_des_detroits_strategiques_ards_reference]], [[bloc_des_etats_du_sud_global_contre_la_cession_de_donnees_reference]], [[coalition_pour_la_souverainete_numerique_nationale_reference]], [[milices_concurrentes_des_droits_de_passage_reference]]
+
+## Description journalistique
+Perchée sur les vestiges rouillés du terminal pétrolier de Kharg, cette forteresse de béton et de verre blindé domine les eaux turquoise du golfe comme un mirage géopolitique. À l'intérieur, des rangées de serveurs bourdonnent sous une climatisation survoltée, tandis que des techniciens en combinaison antistatique négocient en temps réel avec des algorithmes de modération chinois et des milices corporatistes. Les murs sont couverts de graffitis numériques : des extraits de bases de données volées, des cartes de conflits hydriques, des manifestes de dissidents. Le soir, des drones-cargos décollent en silence vers des destinations inconnues, chargés de disques durs contenant les secrets que les États ne veulent plus voir circuler.
+
+## Tensions narratives
+Kharg Data Nexus est au cœur d'une guerre froide des données : d'un côté, les blocs souverains tentent de le faire fermer sous prétexte de souveraineté numérique, de l'autre, les consortiums privés et les ONG de préservation patrimoniale le défendent comme un rempart contre l'oubli. Sa survie dépend de sa capacité à naviguer entre ces forces, tout en évitant de devenir un simple outil des réseaux de financement gris. Une fuite massive de données, ou une attaque ciblée par une IA de modération, pourrait faire basculer son équilibre précaire et déclencher une crise systémique dans le commerce illicite de l'information.

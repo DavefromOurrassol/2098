@@ -61,8 +61,6 @@ type_relation_dominante: alliance stratégique
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: forteresse
 
 injection:
@@ -83,6 +81,9 @@ tensions_narratives: >
   La montée en puissance de SGC pose une question systémique irrésolue : qui surveille les surveillants, lorsque l'État suisse lui-même est devenu client plutôt que régulateur ? Des fuites internes suggèrent que certains cadres SGC négocient discrètement des contrats avec des blocs géopolitiques rivaux, fragilisant la neutralité tarifée de l'organisation. Par ailleurs, la pression croissante des campements périphériques sur les périmètres alpins pousse SGC à durcir ses protocoles jusqu'à un point où la frontière entre gestion froide et violence ouverte devient difficile à tenir — risquant de transformer le gestionnaire de l'ordre en acteur du conflit qu'il prétend contenir.
 
 date_creation: 2026-06-27
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # SGC — Siege Genevois Cars, Division Alpes Souveraines

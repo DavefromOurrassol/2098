@@ -44,7 +44,7 @@ alliances:
 - cooperatives_d_habitat_regeneratif_eco_communalism
 - cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism
 - fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism
-- frente_sert_o_livre_eco_communalism
+- frente_sertao_livre_eco_communalism
 - guildes_de_mediateurs_ecologiques_eco_communalism
 - guildes_des_semenciers_itinerants_eco_communalism
 - kalaallit_nunaat_bioterritoire_eco_communalism
@@ -74,8 +74,6 @@ oppositions:
 type_relation_dominante: symbiose
 annee_debut: 2038
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -109,6 +107,9 @@ localisation:
   zone: europe_occidentale_reconstituee
   lieu: Massif Central — Apennins — Cévennes (réseau itinérant)
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Brigades de Restauration Écologique
@@ -150,7 +151,7 @@ Les Brigades se trouvent écartelées entre l'urgence climatique qui exige des i
 - [[cooperatives_d_habitat_regeneratif_eco_communalism]]
 - [[cooperatives_semencieres_et_d_archives_agronomiques_eco_communalism]]
 - [[fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism]]
-- [[frente_sert_o_livre_eco_communalism]]
+- [[frente_sertao_livre_eco_communalism]]
 - [[guildes_de_mediateurs_ecologiques_eco_communalism]]
 - [[guildes_des_semenciers_itinerants_eco_communalism]]
 - [[kalaallit_nunaat_bioterritoire_eco_communalism]]

@@ -53,13 +53,11 @@ oppositions:
 - conseil_technocratique_de_gouvernance_alimentaire_new_sustainability
 - operateurs_de_fusion_energetique_regionaux_new_sustainability
 - parlement_territoires_nairobi_new_sustainability
-- rede_paulista_de_distribuic_o_algor_tmica_new_sustainability
+- rede_paulista_de_distribuicao_algoritmica_new_sustainability
 - tribunal_algorithmique_de_bruxelles_new_sustainability
 type_relation_dominante: conflit
 annee_debut: 2029
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -96,6 +94,9 @@ localisation:
   zone: null
   lieu: null
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Collectifs Anarcho-Autonomistes des Zones Libres
@@ -145,7 +146,7 @@ La tension centrale est celle d'une alternative crédible qui devient malgré el
 - [[conseil_technocratique_de_gouvernance_alimentaire_new_sustainability]]
 - [[operateurs_de_fusion_energetique_regionaux_new_sustainability]]
 - [[parlement_territoires_nairobi_new_sustainability]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_new_sustainability]]
+- [[rede_paulista_de_distribuicao_algoritmica_new_sustainability]]
 - [[tribunal_algorithmique_de_bruxelles_new_sustainability]]
 
 ## Notes

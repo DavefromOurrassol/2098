@@ -48,8 +48,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2027
 annee_fin: null
-etat_temporel: actif
-age_historique: dominant
 generation: transition
 injection:
   type: canonique
@@ -85,6 +83,9 @@ localisation:
   zone: zone_moyen_orient_golfe
   lieu: Téhéran / Kharg Island
   type_lieu: region
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # République Islamique d'Iran

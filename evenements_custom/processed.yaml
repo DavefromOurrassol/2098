@@ -4380,3 +4380,222 @@ processed:
   injected_scenarios:
   - eco_communalism
   status: injected
+- idea:
+    id: escalade_sahel_2028_test
+    description: 'Guerre mondiale déclenchée par une escalade militaire majeure en
+      2028 — cas de test volontairement extrême et proche dans le temps, pour vérifier
+      que le LLM s''appuie sur l''état du monde réel plutôt que d''inventer hors-sol.
+
+      '
+    portee: globale
+    date_approximative: 2028
+    intensite: majeure
+    scenarios:
+    - breakdown
+    variables_hint:
+    - geopolitique_conflits
+    variables_hint_count: null
+    acteurs_hint: null
+    acteurs_hint_count: null
+    zone_hint: null
+    source: test_robustesse_12_aout
+  selection:
+    variables:
+    - geopolitique_conflits
+    - gouvernance_institutions
+    - systeme_economique_redistribution
+    type_evenement: political_social
+  injected_scenarios:
+  - breakdown
+  status: injected
+- idea:
+    id: zone_invalide_test
+    description: 'Cas de test du garde-fou zone_hint — slug de zone volontairement
+      inexistant, pour vérifier que le code l''ignore proprement avec un avertissement
+      plutôt que de le transmettre tel quel au LLM.
+
+      '
+    portee: regionale
+    date_approximative: 2045
+    intensite: modérée
+    scenarios:
+    - breakdown
+    variables_hint:
+    - organisation_territoires
+    variables_hint_count: null
+    acteurs_hint: null
+    acteurs_hint_count: null
+    zone_hint: zone_totalement_inventee_xyz
+    source: test_robustesse_12_aout
+  selection:
+    variables:
+    - organisation_territoires
+    - technologie_information
+    type_evenement: technological
+  injected_scenarios:
+  - breakdown
+  status: injected
+- idea:
+    id: zone_valide_test
+    description: 'Cas de test du garde-fou zone_hint — slug de zone réel (sahel_numerique_ligue,
+      niveau 1 de eco_communalism.md), pour vérifier qu''une zone valide passe sans
+      avertissement et se retrouve bien utilisée comme ancrage géographique dans l''événement
+      généré.
+
+      '
+    portee: regionale
+    date_approximative: 2050
+    intensite: modérée
+    scenarios:
+    - eco_communalism
+    variables_hint:
+    - organisation_territoires
+    variables_hint_count: null
+    acteurs_hint: null
+    acteurs_hint_count: null
+    zone_hint: sahel_numerique_ligue
+    source: test_robustesse_12_aout
+  selection:
+    variables:
+    - organisation_territoires
+    - technologie_information
+    type_evenement: political_social
+  injected_scenarios:
+  - eco_communalism
+  status: injected
+- idea:
+    id: multi_scenario_zone_test
+    description: 'Deux scénarios avec le MÊME zone_hint — vérifie que la validation
+      se refait bien à CHAQUE itération de la boucle scénarios (une zone valide dans
+      un scénario ne l''est pas forcément dans un autre, la géographie est propre
+      à chaque scénario). zone_hint ci-dessous (sahel_numerique_ligue) est valide
+      dans eco_communalism (confirmé via geographie/eco_communalism.md) — reste à
+      voir si elle existe aussi dans breakdown ou si le garde-fou se déclenche pour
+      ce second scénario seulement. Si tu as un fichier geographie/breakdown.md, envoie-le
+      pour un test plus précis avec un slug garanti absent des deux côtés.
+
+      '
+    portee: regionale
+    date_approximative: 2048
+    intensite: modérée
+    scenarios:
+    - eco_communalism
+    - breakdown
+    variables_hint:
+    - demographie_mobilite_humaine
+    variables_hint_count: null
+    acteurs_hint: null
+    acteurs_hint_count: null
+    zone_hint: sahel_numerique_ligue
+    source: test_robustesse_12_aout
+  selection:
+    variables:
+    - demographie_mobilite_humaine
+    - organisation_territoires
+    type_evenement: political_social
+  injected_scenarios:
+  - eco_communalism
+  - breakdown
+  status: injected
+- idea:
+    id: revolution_travail_sahel_numerique
+    description: 'Dans la Ligue du Sahel Numérique (région de Dakar-Agadez), une coalition
+      de coopératives agricoles et de collectifs tech locaux lance une plateforme
+      open-source de ''travail régénératif'' : les paysans échangent des heures de
+      travail contre des crédits pour accéder à des outils de désalinisation solaire
+      et des semences adaptées, contournant les systèmes de dette traditionnels. Les
+      data centers locaux, alimentés par des micro-réseaux solaires, deviennent des
+      hubs de formation aux métiers de la maintenance écologique.'
+    portee: regionale
+    date_approximative: '2047'
+    intensite: modérée
+    scenarios:
+    - eco_communalism
+    - new_sustainability
+    - policy_reform
+    variables_hint:
+    - systemes_productifs_travail
+    - technologie_information
+    - energie_ressources_critiques
+    variables_hint_count: 3
+    acteurs_hint:
+    - cooperatives_agricoles_saheliennes
+    - collectifs_tech_locaux
+    source: auto_generated_2026-08
+  selection:
+    variables:
+    - systemes_productifs_travail
+    - technologie_information
+    - energie_ressources_critiques
+    - systeme_economique_redistribution
+    - organisation_territoires
+    type_evenement: political_social
+  injected_scenarios:
+  - eco_communalism
+  - new_sustainability
+  - policy_reform
+  status: injected
+- idea:
+    id: greve_generale_corridors_eurasiens
+    description: 'En 2039, les travailleurs des corridors logistiques eurasiens (de
+      Bakou à Almaty) déclenchent une grève générale coordonnée via des réseaux mesh
+      locaux, paralysant les convois de lithium et de terres rares. Revendication
+      : la reconnaissance de leur statut de ''travailleurs critiques'' avec droits
+      à la santé génomique (thérapies géniques anti-pollution) et à la mobilité forcée.
+      Les États souverains du bloc eurasiatique répondent par des réquisitions militaires,
+      tandis que des communes autonomes émergent le long des axes abandonnés.'
+    portee: continentale
+    date_approximative: '2039'
+    intensite: forte
+    scenarios:
+    - fortress_world
+    - breakdown
+    - policy_reform
+    variables_hint:
+    - systemes_productifs_travail
+    - geopolitique_conflits
+    - sante_biotechnologies
+    variables_hint_count: 3
+    acteurs_hint:
+    - syndicats_transfrontaliers
+    - etats_souverains_eurasiatiques
+    source: auto_generated_2026-08
+  selection:
+    variables:
+    - systemes_productifs_travail
+    - geopolitique_conflits
+    - sante_biotechnologies
+    - organisation_territoires
+    - demographie_mobilite_humaine
+    type_evenement: political_social
+  injected_scenarios:
+  - fortress_world
+  - breakdown
+  - policy_reform
+  status: injected
+- idea:
+    id: controle_date_lointaine_test
+    description: Événement de contrôle à date lointaine (65 ans) dans le scénario
+      reference — sert de référence stable pour vérifier que l'ajout du contexte "état
+      du monde réel" ne perturbe pas un cas déjà bien géré, où l'ancrage réel importe
+      peu.
+    portee: continentale
+    date_approximative: 2091
+    intensite: forte
+    scenarios:
+    - reference
+    variables_hint:
+    - technologie_information
+    variables_hint_count: null
+    acteurs_hint: null
+    acteurs_hint_count: null
+    zone_hint: null
+    source: test_robustesse_12_aout
+  selection:
+    variables:
+    - technologie_information
+    - frontieres_du_systeme
+    type_evenement: technological
+  injected_scenarios:
+  - reference
+  status: injected

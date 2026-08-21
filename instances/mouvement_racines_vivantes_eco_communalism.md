@@ -39,7 +39,7 @@ alliances:
 - confederation_bassins_vivants_eco_communalism
 - conseils_de_bassin_versant_eco_communalistes_eco_communalism
 - cooperatives_d_habitat_regeneratif_eco_communalism
-- frente_sert_o_livre_eco_communalism
+- frente_sertao_livre_eco_communalism
 - internationale_des_semenciers_agro_pirates_fortress_world
 oppositions:
 - consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism
@@ -50,8 +50,6 @@ type_relation_dominante: symbiose
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: reconstruction
 
 injection:
@@ -72,6 +70,9 @@ tensions_narratives: >
   La ligne de fracture entre ouverture fédérative et repli communautaire menace de scinder la Confédération en deux courants irréconciliables. Certains noeuds ont commencé à conditionner l'accès à leurs ressources à une appartenance ethnique ou géographique stricte, trahissant l'universalisme originel du mouvement. Par ailleurs, la montée en puissance des Racines comme autorité de fait sur certains territoires soulève la question non résolue de leur légitimité démocratique. Et dans les marges urbaines où quelques cellules subsistent, le mouvement tente un pari risqué : prouver que la réconciliation avec les cycles naturels peut s'inventer aussi dans le béton fissuré.
 
 date_creation: 2026-06-15
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Confédération des Racines Vivantes
@@ -100,7 +101,7 @@ La ligne de fracture entre ouverture fédérative et repli communautaire menace 
 - [[confederation_bassins_vivants_eco_communalism]]
 - [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]]
 - [[cooperatives_d_habitat_regeneratif_eco_communalism]]
-- [[frente_sert_o_livre_eco_communalism]]
+- [[frente_sertao_livre_eco_communalism]]
 - [[internationale_des_semenciers_agro_pirates_fortress_world]]
 **Opposants :**
 - [[consortiums_logistiques_neo_industriels_des_terres_reconstruites_eco_communalism]]

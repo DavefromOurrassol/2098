@@ -63,8 +63,6 @@ type_relation_dominante: coopération
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: mature
 generation: reconstruction
 
 injection:
@@ -85,6 +83,9 @@ tensions_narratives: >
   La tension centrale reste intacte malgré la maturité institutionnelle : l'inclusion des peuples circumpolaires au sein du Conseil les a-t-elle protégés ou neutralisés ? Le Mouvement Souverainiste de la Ceinture Boréale accuse le Conseil d'avoir transformé la résistance autochtone en procédure administrative. Parallèlement, plusieurs États membres du corridor cherchent à réviser les droits de veto autochtones jugés 'inefficients' face à l'urgence des flux énergétiques intercontinentaux. Enfin, l'émergence de l'exploitation des ressources spatiales soulève une question vertigineuse : si les corridors orbitaux deviennent le nouveau passage stratégique, qui sera le prochain 'peuple autochtone' à être absorbé dans une gouvernance qui prétend les représenter ?
 
 date_creation: 2026-06-23
+trajectoire: mature
+est_clandestin: false
+
 ---
 
 # Autorité du Passage Arctique — Nuna Siku Governance Council

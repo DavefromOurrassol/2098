@@ -106,8 +106,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2044
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -145,6 +143,9 @@ localisation:
   zone: zones_grises_tampons
   lieu: Zones grises et tampons — siège tournant entre campements
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Coalitions des Déplacés et Apatrides

@@ -1,0 +1,99 @@
+============================================================
+EXTRACT_LOCALISATION — Ourrassol 2098
+============================================================
+Fiches à traiter : 1
+
+[1/1] 
+[event_instance] controle_date_lointaine_test_reference
+  scénario : reference
+[llm] Mistral (mistral-small-latest) — entrée : 5585 | sortie : 48
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : L'événement est une référence technique transnationale sans ancrage géographique local précis.
+  → écrit
+
+============================================================
+RÉCAPITULATIF
+============================================================
+  Extraits (zone trouvée)    : 0
+  Vides assumés (transnat.)  : 1
+  Ambigus (review manuelle)  : 0
+  Erreurs                    : 0
+  Total traité               : 1
+
+Fiches modifiées : 1
+Sauvegardes .bak créées pour chaque fichier modifié.
+Rapport need_action mis a jour : documentation/need_action/localisation_review.md
+   (0 fiche(s) en attente)
+=================================================================
+  REVIEW LOCALISATION — Ourrassol 2098
+=================================================================
+  MODE AUTO-RESOLVE : résolution automatique par le LLM
+
+  Aucune fiche en review_manuelle. Rien à faire.
+
+[validate] Démarrage de la validation...
+[validate] 1/9 — Nomenclature...
+[validate] 2/9 — Cohérence systémique...
+[validate] 3/9 — Entités et instances...
+[validate] 4/9 — Thématiques...
+[validate] 5/9 — Localisation...
+[validate] 6/9 — Références croisées...
+[validate] 7/9 — Matrice d'influence...
+[validate] 8/9 — Événements...
+[validate] 9/9 — Cohérence narrative post-injection...
+
+════════════════════════════════════════════════════════════
+VALIDATION — OURRASSOL 2098
+════════════════════════════════════════════════════════════
+
+📊 INVENTAIRE
+────────────────────────────────────────────────────────────
+  [NOMENCLATURE] 6/6 scénarios | 12/12 variables
+  [ENTITIES] 590 entités chargées
+  [INSTANCES] 733 instances chargées
+  [THEMATIQUES] 20 thématiques trouvées
+  [LOCALISATION] 816 fiches riches | 0 sans localisation | 0 review_manuelle
+  [CROSS_REFERENCES] 1361 slugs dans le référentiel
+  [MATRIX] 132 edges dans la matrice
+  [EVENTS] 24 archétypes d'événements
+  [EVENTS] 83 instances d'événements
+  [NARRATIVE] 3 problème(s) narratif(s) détecté(s) — voir narrative_issues.yaml
+
+⚠️  AVERTISSEMENTS (10)
+────────────────────────────────────────────────────────────
+  [CROSS_REFERENCES] 7 avertissements
+  [NARRATIVE] 3 avertissements
+
+════════════════════════════════════════════════════════════
+✓ BASE VALIDE — 0 erreurs | 10 avertissements | 0 corrections
+════════════════════════════════════════════════════════════
+============================================================
+OURRASSOL 2098 — Injection événements custom
+============================================================
+
+Mode : custom (fourni via --mode)
+
+=== controle_date_lointaine_test ===
+[1/4] Sélection de variables + type...
+[llm] Mistral (mistral-large-latest) — entrée : 519 | sortie : 41
+  -> variables=['technologie_information', 'frontieres_du_systeme'] type=technological slug=controle_date_lointaine_test
+[2/4] Développement pour reference...
+[llm] Mistral (mistral-large-latest) — entrée : 22795 | sortie : 691
+[3/4] Validation (essai 1)...
+[4/4] Injection...
+
+Terminé. Voir /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/evenements_custom/processed.yaml et /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/evenements_custom/needs_review.yaml.
+
+════════════════════════════════════════════════════════════
+CYCLE POST-INJECTION
+════════════════════════════════════════════════════════════
+
+→ /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/generator/extract_localisation.py
+
+→ /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/generator/review_localisation.py --auto-resolve
+
+→ /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/generator/validate.py
+
+✓ Cycle post-injection terminé.

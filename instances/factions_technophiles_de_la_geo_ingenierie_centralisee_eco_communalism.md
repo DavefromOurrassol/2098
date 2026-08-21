@@ -57,8 +57,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2035
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -100,6 +98,9 @@ localisation:
   lieu: Centres de commandement climatique distribués, siège opérationnel en Eurasie
     centrale
   type_lieu: infrastructure
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Factions Technophiles de la Géo-Ingénierie Centralisée

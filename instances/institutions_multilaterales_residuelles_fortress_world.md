@@ -58,8 +58,6 @@ oppositions:
 type_relation_dominante: dépendance
 annee_debut: 2061
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -94,6 +92,9 @@ localisation:
   zone: geneve_bunker
   lieu: Genève-Bunker, avec antennes à Nairobi et Washington D.C.
   type_lieu: infrastructure
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Institutions Multilatérales Résiduelles

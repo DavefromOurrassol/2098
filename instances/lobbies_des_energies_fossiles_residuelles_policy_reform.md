@@ -62,8 +62,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2035
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -101,6 +99,9 @@ localisation:
   zone: golfe_persique_petrole_residuel
   lieu: Infrastructure pétrolière résiduelle du Golfe / antennes à Genève-Lacustre
   type_lieu: infrastructure
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Lobbies des Énergies Fossiles Résiduelles

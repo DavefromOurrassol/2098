@@ -53,8 +53,6 @@ type_relation_dominante: alliance stratégique
 annee_debut: 2038
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: forteresse
 
 injection:
@@ -75,6 +73,9 @@ tensions_narratives: >
   1) **Guerre des semences** : Les blocs souverains s'affrontent pour le contrôle des dernières variétés non brevetées, notamment dans les zones de friction comme Almaty ou les corridors gris d'Asie Centrale. 2) **Révolte des fermiers** : Dans les territoires résiduels, des mouvements comme le Front du Dehors sabotent les silos de BLSS, libérant des stocks de graines 'contaminées' par des virus génétiques open-source. 3) **Dépendance toxique** : Les semences de BLSS, conçues pour résister aux climats extrêmes, nécessitent des intrants spécifiques vendus à prix d'or, créant une spirale d'endettement des États clients. 4) **Trahisons internes** : Des factions au sein de Nexus BioSyn et des complexes militaro-industriels cherchent à saper l'hégémonie de BLSS pour imposer leurs propres solutions biotech.
 
 date_creation: 2026-07-11
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # BioLock Sovereign Seeds (BLSS)

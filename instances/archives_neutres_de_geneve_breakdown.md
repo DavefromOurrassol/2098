@@ -67,8 +67,6 @@ oppositions:
 type_relation_dominante: neutralité
 annee_debut: 2041
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -99,6 +97,9 @@ tensions_narratives: 'La tension fondamentale des Archives est celle de l''archi
   de savoir si préserver un ordre juridique effondré constitue un acte de résistance
   ou de mystification.'
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Archives Neutres de Genève

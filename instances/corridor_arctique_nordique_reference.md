@@ -72,8 +72,6 @@ oppositions:
 type_relation_dominante: rivalité
 annee_debut: 2041
 annee_fin: null
-etat_temporel: actif
-age_historique: dominant
 generation: forteresse
 injection:
   type: canonique
@@ -122,6 +120,9 @@ tensions_narratives: 'La question centrale est celle du seuil : à quel moment l
 
   '
 date_creation: 2026-06-27
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Passage Arctique du Nord — Zone de Transit Disputée

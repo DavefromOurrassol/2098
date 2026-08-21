@@ -61,6 +61,20 @@ import yaml
 
 from llm_client import call_llm  # tier structured_strict — canonique/référencé
 
+# Réutilisées telles quelles (mêmes chemins REGISTRE_PATH/ETAT_MONDE_PATH,
+# même liste SCENARIOS) — ajouté le 12 août 2026, chantier "cohérence
+# événements custom / vault, registre, géographie, état du monde". Avant
+# ce correctif, inject_custom_events.py ne chargeait jamais
+# etat_du_monde_reel.md, contrairement à la génération d'instances
+# (create_entities_and_instances.py / generate_instances.py) — un événement
+# daté proche d'aujourd'hui pouvait donc être généré sans aucun ancrage sur
+# l'actualité réelle.
+from instance_generation_common import (
+    load_etat_monde_reel, load_scenario_timeline_summary,
+    compute_temporal_distribution, format_temporal_summary,
+    format_concentration_warnings,
+)
+
 
 # ---------------------------------------------------------------------------
 # Configuration
@@ -493,6 +507,12 @@ invente un nouveau (texte libre) que si vraiment aucun ne convient :
 ## EXTRAIT DU REGISTRE DES ÉVÉNEMENTS (anti-collision, ce scénario, ces variables)
 {registre_excerpt or "(aucune entrée existante pour ces variables dans ce scénario)"}
 
+## CHRONOLOGIE RÉELLE DU SCÉNARIO {scenario.upper()} (jalons datés majeurs/structurants)
+{load_scenario_timeline_summary(scenario)}
+
+## ÉTAT DU MONDE RÉEL (référence factuelle, PAS de la fiction)
+{load_etat_monde_reel()}
+
 ## CONSIGNE
 
 Règles importantes :
@@ -500,14 +520,20 @@ Règles importantes :
   en effondrement, l'événement reflète cet effondrement (peut ne pas se
   produire, se produire différemment, ou avoir des conséquences opposées
   à l'intention originale)
+- L'événement DOIT aussi rester cohérent avec la CHRONOLOGIE RÉELLE DU
+  SCÉNARIO ci-dessus (ne pas contredire un jalon déjà établi à une date
+  proche) et, si sa date est proche d'aujourd'hui, avec l'ÉTAT DU MONDE
+  RÉEL ci-dessus — une escalade proche dans le temps doit s'ancrer sur
+  une tension réellement documentée, pas être inventée hors-sol
 - Le nom peut être identique, une variante, ou radicalement différent
 - La date peut varier de +/- 10 ans par rapport à la date approximative
 - Les impacts sur les variables doivent être cohérents avec leurs levels
   actuels (pas de delta positif massif sur une variable déjà en
   effondrement), et chaque delta_level doit rester dans la plage
   raisonnable -{MAX_DELTA_LEVEL} à +{MAX_DELTA_LEVEL}
-- Le champ "evenement_cle" doit être une phrase courte (4-11 mots) avec
-  une année finale, sans collision avec le registre fourni ci-dessus
+- Le champ "evenement_cle" doit être une phrase courte (4-11 mots) contenant
+  une année à 4 chiffres (n'importe où dans la phrase — début, milieu ou
+  fin), sans collision avec le registre fourni ci-dessus
 - Si l'événement est impossible ou absurde dans ce scénario, le dire
   clairement (impossible_dans_scenario: true) et proposer une variante
   plausible quand même
@@ -519,7 +545,7 @@ Réponds UNIQUEMENT en JSON, sans aucun texte autour, format exact :
   "nom": "Nom de l'événement dans ce scénario",
   "date": 2055,
   "date_label": "description de la date ex: printemps 2055",
-  "evenement_cle": "phrase courte 4-11 mots avec annee finale 2055",
+  "evenement_cle": "phrase courte 4-11 mots avec une année 2055 (n'importe où dans la phrase)",
   "realisation": "comment l'événement se réalise (ou ne se réalise pas) dans ce monde — 3-5 lignes",
   "description_complete": "description journalistique de l'événement — 3-4 lignes vivantes",
   "consequences": "conséquences à long terme dans ce monde — 2-3 lignes",
@@ -539,6 +565,28 @@ Réponds UNIQUEMENT en JSON, sans aucun texte autour, format exact :
 # Validation mécanique
 # ---------------------------------------------------------------------------
 
+def truncate_actors(instance_data, actors_hint, actors_hint_count, available_actors):
+    """Filtre dur sur le nombre d'acteurs, même principe que la troncature
+    déjà appliquée aux variables dans process_idea() — la consigne du
+    prompt ("choisis entre 1 et {n} acteurs") n'est qu'indicative, le LLM
+    peut la dépasser. Les hints imposés par l'utilisateur sont toujours
+    préservés en priorité, même logique que pour variables_hint_count.
+    Ajouté le 14 août 2026 (backlog P15 — acteurs_hint_count était calculé
+    et borné [1-4] mais jamais réellement appliqué : ni transmis à
+    step2_develop_instance(), ni utilisé par validate_instance(), la
+    valeur était calculée puis jetée sans effet sur le nombre d'acteurs
+    réellement produit par le LLM)."""
+    acteurs = instance_data.get("acteurs") or []
+    if len(acteurs) <= actors_hint_count:
+        return
+    valid_actor_slugs = {a["slug"] for a in available_actors}
+    hints_valid = [h for h in (actors_hint or []) if h in valid_actor_slugs]
+    kept = list(dict.fromkeys(hints_valid + acteurs))[:actors_hint_count]
+    print(f"  ⚠ {len(acteurs)} acteur(s) reçu(s) au lieu de {actors_hint_count} max "
+          f"— troncature (hints préservés).")
+    instance_data["acteurs"] = kept
+
+
 def validate_instance(instance_data, variables, scenario, registre_text, available_actors):
     issues = []
 
@@ -553,9 +601,9 @@ def validate_instance(instance_data, variables, scenario, registre_text, availab
     if evenement_cle and (wc < 4 or wc > 11):
         issues.append(f"'evenement_cle' a {wc} mots (attendu 4-11) : {evenement_cle!r}")
 
-    year_match = re.search(r"(\d{4})\s*$", evenement_cle)
+    year_match = re.search(r"\b(\d{4})\b", evenement_cle)
     if evenement_cle and not year_match:
-        issues.append(f"'evenement_cle' sans année finale : {evenement_cle!r}")
+        issues.append(f"'evenement_cle' sans année (4 chiffres) : {evenement_cle!r}")
 
     all_events = get_all_evenements(registre_text)
     if evenement_cle.strip().lower() in all_events:
@@ -848,6 +896,11 @@ QUEUE_TEMPLATE = """\
 #                            ou plusieurs (liste) que tu IMPOSES.
 #   acteurs_hint_count     : optionnel, entier 1-4. Plafond du nombre total
 #                            d'acteurs (hint(s) inclus). Défaut : 2.
+#   zone_hint              : optionnel. null si tu ne sais pas — le LLM choisit
+#                            librement l'ancrage géographique. Sinon une zone
+#                            (chaîne libre, ex: "Bassin du Congo") que tu IMPOSES
+#                            comme lieu d'ancrage de l'événement — injectée
+#                            directement dans le prompt de génération.
 #   source                 : libre — date, lien d'article...
 #
 # EXEMPLE :
@@ -864,6 +917,7 @@ QUEUE_TEMPLATE = """\
 #     variables_hint_count: null
 #     acteurs_hint: null
 #     acteurs_hint_count: null
+#     zone_hint: null
 #     source: actualite_2026-06
 #
 # Les idées traitées sont déplacées vers processed.yaml (succès) ou
@@ -949,12 +1003,30 @@ def process_idea(client, idea, dry_run=False):
                 registre_text, variables, scenario
             )
 
+            # Validation mécanique de zone_hint (12 août 2026, chantier
+            # cohérence) : avant ce correctif, zone_hint était passé tel
+            # quel au LLM en texte libre, jamais vérifié contre les zones
+            # réelles de ce scénario — un slug inventé ou mal orthographié
+            # (ou valide pour un AUTRE scénario, mais pas celui-ci) passait
+            # sans avertissement. Les zones sont scoping par scénario, donc
+            # cette validation doit se refaire à chaque itération, pas une
+            # seule fois avant la boucle.
+            scenario_zone_hint = zone_hint
+            if zone_hint:
+                zones_valides = load_all_zones_event(scenario)
+                if zone_hint not in zones_valides:
+                    print(f"  ⚠ zone_hint '{zone_hint}' introuvable dans "
+                          f"geographie/{scenario}.md — ignoré pour ce "
+                          f"scénario, le LLM choisit librement.")
+                    scenario_zone_hint = None
+
             previous, issues = None, None
             instance_data = step2_develop_instance(
                 client, idea, event_slug, type_evenement, variables, scenario,
                 registre_excerpt, available_actors, actors_hint,
-                zone_hint=zone_hint,
+                zone_hint=scenario_zone_hint,
             )
+            truncate_actors(instance_data, actors_hint, actors_hint_count, available_actors)
 
             for attempt in range(MAX_FIX_ATTEMPTS + 1):
                 print(f"[3/4] Validation (essai {attempt + 1})...")
@@ -971,8 +1043,9 @@ def process_idea(client, idea, dry_run=False):
                         client, idea, event_slug, type_evenement, variables, scenario,
                         registre_excerpt, available_actors, actors_hint,
                         previous=instance_data, issues=issues,
-                        zone_hint=zone_hint,
+                        zone_hint=scenario_zone_hint,
                     )
+                    truncate_actors(instance_data, actors_hint, actors_hint_count, available_actors)
 
             if issues:
                 results.append({
@@ -1048,12 +1121,15 @@ def analyze_vault_coverage():
     geo_absent    = {}
     type_coverage = {}
     var_coverage  = {}
+    year_coverage = {}   # scenario → {date (int): count} — dimension
+                         # temporelle (backlog Partie 1 #2, 13 août 2026)
     existing_cles = []
 
     for sc in SCENARIOS:
         geo_coverage[sc] = {}
         type_coverage[sc] = {}
         var_coverage[sc] = {v: 0 for v in VALID_VARS}
+        year_coverage[sc] = {}
 
     if EVENT_INSTANCES_DIR.exists():
         for path in sorted(EVENT_INSTANCES_DIR.glob("*.md")):
@@ -1076,6 +1152,12 @@ def analyze_vault_coverage():
             cle = fm.get("evenement_cle", "")
             if cle:
                 existing_cles.append(cle)
+            try:
+                annee = int(fm.get("date"))
+            except (TypeError, ValueError):
+                annee = None
+            if annee is not None:
+                year_coverage[sc][annee] = year_coverage[sc].get(annee, 0) + 1
 
     # Zones absentes
     for sc in SCENARIOS:
@@ -1088,6 +1170,7 @@ def analyze_vault_coverage():
         "geo_absent":    geo_absent,
         "type_coverage": type_coverage,
         "var_coverage":  var_coverage,
+        "year_coverage": year_coverage,
         "existing_cles": existing_cles,
     }
 
@@ -1133,6 +1216,24 @@ def build_auto_analysis_summary(coverage, scenario_filter=None):
         vc = coverage["var_coverage"].get(sc, {})
         least = sorted(vc.items(), key=lambda x: x[1])[:4]
         lines.append(f"  {sc}: " + ", ".join(f"{v}({n})" for v, n in least))
+
+    # Dimension temporelle (backlog Partie 1 #2, portée élargie aux
+    # événements le 12 août, codée le 13 août 2026) : bandes larges par
+    # scénario pour le signal actionnable, plus détection de concentration
+    # par année exacte vault-entier (même logique que côté entités).
+    lines.append("")
+    lines.append("## Distribution temporelle actuelle (date, bandes larges)")
+    for sc in scenarios:
+        lines.extend(format_temporal_summary(coverage["year_coverage"].get(sc, {}), sc))
+
+    global_year_counts = {}
+    for sc_counts in coverage["year_coverage"].values():
+        for year, n in sc_counts.items():
+            global_year_counts[year] = global_year_counts.get(year, 0) + n
+    concentration_lines = format_concentration_warnings(global_year_counts, "vault entier, tous événements")
+    if concentration_lines:
+        lines.append("")
+        lines.extend(concentration_lines)
 
     return "\n".join(lines)
 
@@ -1205,7 +1306,20 @@ Ces idées seront écrites dans queue.yaml pour être inspectées et injectées 
 
 ## CONSIGNE
 - Compense les déséquilibres détectés : couvre les zones géographiques sous-représentées,
-  les types d'événements peu présents, les variables peu couvertes.
+  les types d'événements peu présents, les variables peu couvertes, et les
+  bandes temporelles sous-représentées (proche/moyen/lointain ci-dessus) —
+  sans forcer une répartition parfaitement égale, l'objectif est d'éviter
+  qu'une bande ou une année précise ne se retrouve démesurément
+  sur-représentée.
+- Si une concentration sur une année précise est signalée ci-dessus, évite
+  de proposer date_approximative sur cette même année.
+- Pour toute idée dont date_approximative sera proche d'aujourd'hui (avant
+  2036), privilégie un thème qui pourra naturellement s'ancrer sur une
+  tension réelle déjà documentée (l'ancrage précis se fera au développement
+  de l'instance, mais une idée clairement rattachable à une dynamique
+  documentée a plus de chances d'y parvenir qu'un thème arbitraire) plutôt
+  que de viser cette bande pour la seule raison de rééquilibrer la
+  distribution.
 - Chaque événement doit être cohérent avec les scénarios qu'il impacte.
 - Propose des scénarios pertinents pour chaque événement (pas forcément les 6 — seulement
   ceux où l'événement a du sens narrativement).

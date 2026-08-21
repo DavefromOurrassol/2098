@@ -41,7 +41,7 @@ zone_systemique:
 alliances: []
 oppositions:
 - archives_neutres_geneve_breakdown
-- autorite_passage_arctique_breakdown
+- arctic_passage_authority_breakdown
 - cargo_mombasa_crrc_breakdown
 - communautes_paysannes_refugiees_breakdown
 - conseil_regulation_ressources_breakdown
@@ -53,8 +53,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2041
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -83,6 +81,9 @@ tensions_narratives: 'La contradiction centrale de ces gouvernements réside dan
   propres priorités géopolitiques — menace à tout moment de transformer la coalition
   en arène de rivalités mutuelles.'
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Gouvernements de Forteresse Anti-Nairobi
@@ -111,7 +112,7 @@ La contradiction centrale de ces gouvernements réside dans leur dépendance aux
 ## Relations
 **Opposants :**
 - [[archives_neutres_geneve_breakdown]]
-- [[autorite_passage_arctique_breakdown]]
+- [[arctic_passage_authority_breakdown]]
 - [[cargo_mombasa_crrc_breakdown]]
 - [[communautes_paysannes_refugiees_breakdown]]
 - [[conseil_regulation_ressources_breakdown]]

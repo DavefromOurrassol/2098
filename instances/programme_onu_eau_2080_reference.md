@@ -63,8 +63,6 @@ oppositions:
 type_relation_dominante: coopération
 annee_debut: 2031
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -102,6 +100,9 @@ localisation:
   zone: geneve_lac_retreite
   lieu: Genève-Lac-Retraité — Siège principal, avec antenne opérationnelle à Nairobi
   type_lieu: site_strategique
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Programme ONU-Eau 2080

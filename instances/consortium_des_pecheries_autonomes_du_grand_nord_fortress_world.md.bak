@@ -1,0 +1,98 @@
+---
+name: Alliance des Glaces Autonomes (AGA)
+type: instance
+slug: consortium_des_pecheries_autonomes_du_grand_nord_fortress_world
+entite: consortium_des_pecheries_autonomes_du_grand_nord
+scenario: fortress_world
+
+type_dans_scenario: hybride
+
+role_dans_scenario: >
+  Le Consortium des Pêcheries Autonomes du Grand Nord, réinventé dans le scénario fortress_world, prend la forme de l'Alliance des Glaces Autonomes (AGA). Cette entité incarne la résistance des communautés côtières arctiques face à la militarisation et à la privatisation des ressources halieutiques et des voies maritimes par les blocs souverains. Elle négocie des accords de pêche durable tout en défendant une gouvernance locale des territoires polaires, mêlant traditions inuites, sami et sibériennes avec des technologies autonomes de surveillance et de gestion des stocks. L'AGA est un acteur clé des tensions entre autonomie locale et contrôle géopolitique dans l'Arctique fragmenté.
+
+responsabilites: >
+  L'AGA gère des quotas de pêche autonomes, déploie des drones sous-marins et des capteurs pour surveiller les stocks de poissons et les mouvements des flottes des blocs. Elle organise des convois de pêcheurs indépendants, contourne les blocus logistiques des milices arctiques, et négocie des corridors de transit avec les commandements logistiques périphériques des blocs eurasiens et atlantiques. Elle protège également les zones de reproduction des espèces menacées par les projets d'extraction minière des consortiums énergétiques.
+
+impact_local: 4
+impact_systemique_global: 3
+
+variables_influencees:
+    - geopolitique_conflits
+    - energie_ressources_critiques
+    - gouvernance_institutions
+    - organisation_territoires
+
+zone_geographique:
+    - régionale
+    - continentale
+
+zone_systemique:
+    - énergie
+    - gouvernance
+    - sécurité
+    - infrastructure
+
+alliances:
+    - coalition_arctique_des_blocs_continentaux_fortress_world
+    - coalitions_des_deplaces_et_apatrides_fortress_world
+    - collectifs_de_reappropriation_energetique_peripherique_fortress_world
+    - milices_de_piraterie_logistique_arctique_fortress_world
+
+oppositions:
+    - armada_logistique_nordique_fortress_world
+    - consortium_helios_fortress_world
+    - complexes_militaro_industriels_de_gestion_des_ressources_fortress_world
+    - nexcore_atlantique_infrastructure_fortress_world
+
+type_relation_dominante: rivalité
+
+annee_debut: 2059
+annee_fin: 
+
+trajectoire: ascendant
+est_clandestin: false
+generation: forteresse
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Depuis le « Coup des Glaces » de 2059, quand l’AGA a saisi un convoi de la NAT et forcé le Groenland à porter l’affaire devant un tribunal fantôme, cette alliance de pêcheurs, d’éleveurs de rennes et de hackers polaires est devenue la bête noire des blocs. Ses « flottes autonomes » – des bateaux équipés de filets intelligents et de brouilleurs anti-drone – écument les eaux interdites, tandis que ses « ambassadeurs des glaces » négocient des traités éphémères avec les commandements logistiques des blocs. En 2098, l’AGA contrôle près de 30 % des quotas de cabillaud et de krill de l’Arctique, une prouesse dans un monde où les ressources sont verrouillées par des forteresses énergétiques.
+
+signes_distinctifs: >
+  Les membres de l’AGA portent des combinaisons thermiques ornées de motifs traditionnels inuits ou sami, intégrant des capteurs solaires et des émetteurs radio à basse fréquence. Leurs bateaux arborent des drapeaux hybrides : une ancre en filigrane sur un fond bleu et blanc, symbolisant la glace et la mer. Les drones sous-marins de l’AGA sont reconnaissables à leur coque transparente, inspirée des méduses polaires, et à leurs lumières bleutées clignotantes.
+
+tensions_narratives: >
+  L’AGA est tiraillée entre sa volonté d’autonomie et sa dépendance aux technologies des blocs (drones, capteurs, IA de gestion des stocks). Ses alliances avec les milices de piraterie logistique arctique et les coalitions de déplacés la placent en porte-à-faux avec les factions pro-autarcie des blocs. La découverte de gisements d’hélium-3 sous la banquise pourrait soit renforcer son pouvoir de négociation, soit déclencher une intervention militaire des consortiums énergétiques. Enfin, son modèle de gouvernance décentralisée est menacé par l’émergence de leaders charismatiques, comme la « Reine des Glaces » du Groenland, qui pourraient transformer l’AGA en un État souverain... ou en une nouvelle forteresse.
+
+date_creation: 2026-08-11
+---
+
+# Alliance des Glaces Autonomes (AGA)
+
+## Rôle dans [[fortress_world]]
+Le Consortium des Pêcheries Autonomes du Grand Nord, réinventé dans le scénario fortress_world, prend la forme de l'Alliance des Glaces Autonomes (AGA). Cette entité incarne la résistance des communautés côtières arctiques face à la militarisation et à la privatisation des ressources halieutiques et des voies maritimes par les blocs souverains. Elle négocie des accords de pêche durable tout en défendant une gouvernance locale des territoires polaires, mêlant traditions inuites, sami et sibériennes avec des technologies autonomes de surveillance et de gestion des stocks. L'AGA est un acteur clé des tensions entre autonomie locale et contrôle géopolitique dans l'Arctique fragmenté.
+
+## Responsabilités
+L'AGA gère des quotas de pêche autonomes, déploie des drones sous-marins et des capteurs pour surveiller les stocks de poissons et les mouvements des flottes des blocs. Elle organise des convois de pêcheurs indépendants, contourne les blocus logistiques des milices arctiques, et négocie des corridors de transit avec les commandements logistiques périphériques des blocs eurasiens et atlantiques. Elle protège également les zones de reproduction des espèces menacées par les projets d'extraction minière des consortiums énergétiques.
+
+## Variables influencées
+- [[geopolitique_conflits]]
+- [[energie_ressources_critiques]]
+- [[gouvernance_institutions]]
+- [[organisation_territoires]]
+
+## Relations
+**Alliés** : [[coalition_arctique_des_blocs_continentaux_fortress_world]], [[coalitions_des_deplaces_et_apatrides_fortress_world]], [[collectifs_de_reappropriation_energetique_peripherique_fortress_world]], [[milices_de_piraterie_logistique_arctique_fortress_world]]
+**Opposants** : [[armada_logistique_nordique_fortress_world]], [[consortium_helios_fortress_world]], [[complexes_militaro_industriels_de_gestion_des_ressources_fortress_world]], [[nexcore_atlantique_infrastructure_fortress_world]]
+
+## Description journalistique
+Depuis le « Coup des Glaces » de 2059, quand l’AGA a saisi un convoi de la NAT et forcé le Groenland à porter l’affaire devant un tribunal fantôme, cette alliance de pêcheurs, d’éleveurs de rennes et de hackers polaires est devenue la bête noire des blocs. Ses « flottes autonomes » – des bateaux équipés de filets intelligents et de brouilleurs anti-drone – écument les eaux interdites, tandis que ses « ambassadeurs des glaces » négocient des traités éphémères avec les commandements logistiques des blocs. En 2098, l’AGA contrôle près de 30 % des quotas de cabillaud et de krill de l’Arctique, une prouesse dans un monde où les ressources sont verrouillées par des forteresses énergétiques.
+
+## Tensions narratives
+L’AGA est tiraillée entre sa volonté d’autonomie et sa dépendance aux technologies des blocs (drones, capteurs, IA de gestion des stocks). Ses alliances avec les milices de piraterie logistique arctique et les coalitions de déplacés la placent en porte-à-faux avec les factions pro-autarcie des blocs. La découverte de gisements d’hélium-3 sous la banquise pourrait soit renforcer son pouvoir de négociation, soit déclencher une intervention militaire des consortiums énergétiques. Enfin, son modèle de gouvernance décentralisée est menacé par l’émergence de leaders charismatiques, comme la « Reine des Glaces » du Groenland, qui pourraient transformer l’AGA en un État souverain... ou en une nouvelle forteresse.

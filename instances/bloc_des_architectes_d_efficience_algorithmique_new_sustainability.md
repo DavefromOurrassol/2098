@@ -59,8 +59,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2040
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -98,6 +96,9 @@ localisation:
   zone: bruxelles_tribunal_algo
   lieu: Bruxelles — Tribunal de Gouvernance Algorithmique
   type_lieu: site_strategique
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Bloc des Architectes d'Efficience Algorithmique

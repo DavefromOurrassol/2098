@@ -28,6 +28,7 @@ PATHS = {
     "instances":        os.path.join(VAULT_PATH, "instances"),
     "evenements":       os.path.join(VAULT_PATH, "evenements"),
     "event_instances":  os.path.join(VAULT_PATH, "event_instances"),
+    "signaux_custom":   os.path.join(VAULT_PATH, "signaux_custom"),
 }
 
 VALID_VARS = [
@@ -185,6 +186,8 @@ def load_variable(variable_slug):
     reinforcing_scenarios = clean_wikilinks(sm.get("reinforcing_scenarios", []) if isinstance(sm, dict) else [])
     constrained_scenarios = clean_wikilinks(sm.get("constrained_scenarios", []) if isinstance(sm, dict) else [])
 
+    forces = _extract_forces_from_body(parsed["body"])
+
     return {
         "slug":                   variable_slug,
         "variable_type":          fm.get("variable_type", ""),
@@ -206,6 +209,8 @@ def load_variable(variable_slug):
         "simulation":             fm.get("simulation", {}) or {},
         "sub_variables":          _clean_sub_variables(fm.get("sub_variables", []) or []),
         "indicateurs":            _extract_indicateurs_from_body(parsed["body"]),
+        "forces_attractives":     forces["forces_attractives"],
+        "forces_repulsives":      forces["forces_repulsives"],
         "body":                   parsed["body"],
     }
 
@@ -374,6 +379,64 @@ def load_influence_matrix():
         "by_source": by_source,
         "by_pair":   by_pair,
     }
+
+
+def load_custom_signals():
+    """
+    Charge les fiches d'audit signaux_custom/*.md et en extrait le bloc
+    `impact_sur_variables` (chantier injection matricielle, 16 août 2026).
+
+    Contrairement aux instances/événements custom (bloc `injection:` dans
+    le frontmatter YAML), ce bloc vit dans le corps markdown de la fiche,
+    dans un bloc ```yaml``` distinct du `signal_to_state` narratif -- les
+    fiches signaux_custom n'ont pas de frontmatter dédié à l'injection,
+    seulement slug/source/categorie/variables_cibles/statut. On réutilise
+    donc la même technique d'extraction que inject_custom_signals.py
+    (dernier bloc ```yaml``` pertinent), pas parse_md_file seul.
+
+    Retourne une liste de dicts {variable, propagation_via_matrice,
+    contexte_injection, scenarios: {scen: {annee_injection, duree,
+    delta_level, polarite}}} -- un par (signal, variable) injecté.
+    """
+    directory = PATHS.get("signaux_custom")
+    if not directory or not os.path.isdir(directory):
+        return []
+
+    impacts = []
+    for filename in os.listdir(directory):
+        if not filename.endswith(".md"):
+            continue
+        filepath = os.path.join(directory, filename)
+        try:
+            with open(filepath, "r", encoding="utf-8") as f:
+                raw = f.read()
+        except OSError:
+            continue
+
+        m = re.search(r"```yaml\nimpact_sur_variables:\n(.*?)\n```", raw, re.DOTALL)
+        if not m:
+            continue
+        try:
+            parsed = yaml.safe_load("impact_sur_variables:\n" + m.group(1))
+        except yaml.YAMLError as e:
+            print("  Avertissement YAML (impact_sur_variables) dans {} : {}".format(filepath, e))
+            continue
+
+        for entry in (parsed or {}).get("impact_sur_variables") or []:
+            if not isinstance(entry, dict):
+                continue
+            variable = entry.get("variable")
+            if variable not in VALID_VARS:
+                continue
+            impacts.append({
+                "variable":                variable,
+                "propagation_via_matrice": bool(entry.get("propagation_via_matrice", False)),
+                "contexte_injection":      entry.get("contexte_injection", ""),
+                "scenarios":               entry.get("scenarios") or {},
+                "source_fiche":            filename,
+            })
+
+    return impacts
 
 
 def load_all_variables():
@@ -582,6 +645,62 @@ def _extract_indicateurs_from_body(body):
     return items
 
 
+def _extract_forces_from_body(body):
+    """
+    Extrait forces_attractives/forces_repulsives depuis la section
+    '## 3. Dynamique interne' du corps markdown d'une fiche variable.
+
+    La section '## 4. Structure causale' contient un doublon partiel de
+    ce même contenu (Forces attractives / Forces répulsives, formulation
+    différente, parfois incohérente en snake_case sur 2 des 12 fiches) —
+    volontairement ignorée : analyse comparative du 15 août sur les 12
+    fiches confirmant que section 3 est systématiquement plus complète
+    (4-8 items vs 1-5) et jamais affectée par l'artefact de formatage
+    vu en section 4. Décision actée par David le 15 août.
+
+    Structure attendue :
+      ## 3. Dynamique interne
+      ...
+      **forces_attractives**
+      - item1
+      - item2
+      **forces_repulsives**
+      - item3
+
+    Retourne un dict : {"forces_attractives": [...], "forces_repulsives": [...]}
+    (listes vides si la section ou les sous-catégories sont absentes)
+    """
+    result = {"forces_attractives": [], "forces_repulsives": []}
+
+    m = re.search(r"##\s+3\.\s+Dynamique interne\s*\n(.*?)(?=\n##\s+|\Z)", body, re.DOTALL)
+    if not m:
+        return result
+
+    block = m.group(1)
+
+    m_attract = re.search(
+        r"\*\*forces_attractives\*\*\s*\n(.*?)(?=\n\*\*\w|\Z)", block, re.DOTALL
+    )
+    if m_attract:
+        result["forces_attractives"] = [
+            line.lstrip("- ").strip()
+            for line in m_attract.group(1).split("\n")
+            if line.strip().startswith("-")
+        ]
+
+    m_repuls = re.search(
+        r"\*\*forces_repulsives\*\*\s*\n(.*?)(?=\n\*\*\w|\Z)", block, re.DOTALL
+    )
+    if m_repuls:
+        result["forces_repulsives"] = [
+            line.lstrip("- ").strip()
+            for line in m_repuls.group(1).split("\n")
+            if line.strip().startswith("-")
+        ]
+
+    return result
+
+
 def _extract_ruptures_from_body(body):
     """
     Extrait les ruptures depuis le corps markdown.
@@ -717,8 +836,11 @@ def load_instance(instance_slug):
         "type_relation_dominante": fm.get("type_relation_dominante", "neutralité"),
         "annee_debut":             fm.get("annee_debut", 2026),
         "annee_fin":               fm.get("annee_fin", None),
-        "etat_temporel":           fm.get("etat_temporel", "actif"),
-        "age_historique":          fm.get("age_historique", "mature"),
+        # Chantier trajectoire (9 août 2026) : etat_temporel + age_historique
+        # fusionnés en un seul axe narratif continu. clandestin en sort,
+        # devient un booléen indépendant est_clandestin.
+        "trajectoire":    fm.get("trajectoire", "mature"),
+        "est_clandestin": fm.get("est_clandestin", False),
         "generation":              fm.get("generation", ""),
         "injection":               injection,
         "description_journalistique": str(fm.get("description_journalistique", "") or "").strip(),
@@ -1019,6 +1141,38 @@ def zones_disponibles_pour_element(type_, slug, scenarios):
 INSTANCE_STATE_DIR   = os.path.join(os.path.dirname(os.path.abspath(__file__)), "state")
 INSTANCE_USAGE_FILE  = os.path.join(INSTANCE_STATE_DIR, "instance_usage.json")
 
+# Tolérance utilisée pour regrouper les scores "proches" en une même
+# tranche de rotation (voir _select_least_used_instances). Choisie en
+# fonction de la granularité naturelle du score de
+# filter_instances_for_thematique() : une variable secondaire ou une
+# zone systémique valent chacune 1 point, une variable visible 3 points,
+# et impact_systemique_global contribue par pas de 0.5 (0 à 2.5 sur une
+# échelle de 0 à 5). Une tolérance de 2.0 absorbe un écart d'impact
+# systémique jusqu'à 4 points ou une différence d'une variable/zone
+# secondaire, sans effacer l'écart plus significatif d'une variable
+# visible (3 points) ou d'un fort delta d'impact -- à ajuster si
+# l'usage réel montre qu'elle est trop large (des instances nettement
+# moins pertinentes sortent) ou trop étroite (le problème d'origine
+# persiste).
+INSTANCE_SCORE_TOLERANCE = 2.0
+
+
+def _score_bucket(score, max_score, tolerance=INSTANCE_SCORE_TOLERANCE):
+    """Regroupe un score en tranche de tolérance RELATIVE au score
+    maximum du lot de candidats, pour que la rotation traite comme
+    "ex-aequo" des scores proches et pas seulement identiques.
+
+    Un découpage par arrondi absolu (round(score/tolerance)) a un défaut
+    de bord : deux scores très proches peuvent tomber de part et
+    d'autre d'une limite de tranche par pur hasard d'arrondi (ex. 10.0
+    et 9.0 avec tolerance=2.0 : round(5.0)=5 mais round(4.5)=4 --
+    jamais groupés bien qu'à 1 point d'écart). En calculant la tranche
+    par rapport au score maximum du lot (bucket 0 = [max-tolerance, max]),
+    le meilleur score et tout ce qui est à moins de `tolerance` de lui
+    sont garantis dans la même tranche. Voir _select_least_used_instances.
+    """
+    return int((max_score - score) // tolerance)
+
 
 def _load_instance_usage_state():
     """Charge l'état d'usage des instances (par scénario). Retourne {} si absent/corrompu."""
@@ -1047,12 +1201,25 @@ def _select_least_used_instances(candidates, usage_state, scenario_slug, max_n):
     Contrairement aux jalons (purement least-used, le score n'entre plus
     en jeu une fois qu'on rotationne), on garde ici une influence du
     score de pertinence : les candidates sont d'abord regroupées par
-    "niveau de score" (le score original, pas juste le rang), et c'est
-    au sein d'un même niveau de score que la rotation départage. Ça
-    évite qu'une instance très pertinente pour la thématique en cours
-    passe systématiquement après une instance à peine pertinente juste
-    parce qu'elle a été moins utilisée par le passé -- la rotation
-    n'intervient qu'en cas d'ex-aequo réel de pertinence.
+    "tranche de score" (voir INSTANCE_SCORE_TOLERANCE ci-dessous), et
+    c'est au sein d'une même tranche que la rotation départage. Ça évite
+    qu'une instance très pertinente pour la thématique en cours passe
+    systématiquement après une instance à peine pertinente juste parce
+    qu'elle a été moins utilisée par le passé -- la rotation n'intervient
+    qu'en cas de pertinence proche, pas radicalement différente.
+
+    Historique : la version initiale (2 août 2026) regroupait par score
+    EXACT plutôt que par tranche. Diagnostic du 15 août sur le vault réel
+    (entité terminal_kharg_data_haven revenant comme sujet principal sur
+    3/3 générations réelles, deux scénarios différents, thématique
+    actualites_a_la_une) : une instance dont le score domine légèrement
+    mais systématiquement toutes les autres (impact_systemique_global
+    élevé + recoupement constant avec les zones de cette thématique)
+    n'est presque jamais à égalité stricte avec une autre -- la rotation
+    ne se déclenchait donc jamais pour elle, malgré l'intention du
+    mécanisme. Le passage à une tranche de tolérance élargit ce qui
+    compte comme "pertinence proche" sans changer le principe : le score
+    reste le signal dominant, seule la granularité de l'égalité change.
     """
     if len(candidates) <= max_n:
         selected = list(candidates)
@@ -1060,10 +1227,13 @@ def _select_least_used_instances(candidates, usage_state, scenario_slug, max_n):
         counts = usage_state.setdefault(scenario_slug, {}).setdefault("instances", {})
         shuffled = list(candidates)
         random.shuffle(shuffled)
-        # Tri stable : score décroissant d'abord (priorité à la pertinence),
-        # nombre d'utilisations passées ensuite (départage les ex-aequo).
+        max_score = max(pair[0] for pair in candidates)
+        # Tri stable : tranche de score croissante d'abord (0 = tranche
+        # la plus haute, priorité à la pertinence), nombre d'utilisations
+        # passées ensuite (départage les ex-aequo au sein d'une même
+        # tranche).
         shuffled.sort(key=lambda pair: counts.get(pair[1]["slug"], 0))
-        shuffled.sort(key=lambda pair: -pair[0])
+        shuffled.sort(key=lambda pair: _score_bucket(pair[0], max_score))
         selected = shuffled[:max_n]
 
     counts = usage_state.setdefault(scenario_slug, {}).setdefault("instances", {})
@@ -1390,7 +1560,7 @@ if __name__ == "__main__":
     try:
         inst = load_instance("le_temoin_breakdown")
         print("  name             :", inst["name"])
-        print("  etat_temporel    :", inst["etat_temporel"])
+        print("  trajectoire      :", inst["trajectoire"])
         print("  impact_global    :", inst["impact_systemique_global"])
         print("  variables        :", inst["variables_influencees"])
         print("  description (50c):", inst["description_journalistique"][:50], "...")

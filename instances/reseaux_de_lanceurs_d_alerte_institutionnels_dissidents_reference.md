@@ -55,13 +55,11 @@ oppositions:
 - pacte_des_souverains_reference
 - plateformes_centralisees_de_narration_officielle_reference
 - plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference
-- rede_paulista_de_distribuic_o_algor_tmica_reference
+- rede_paulista_de_distribuicao_algoritmica_reference
 - services_de_contre_information_des_blocs_geopolitiques_concurrents_reference
 type_relation_dominante: conflit
 annee_debut: 2032
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -97,6 +95,9 @@ localisation:
   zone: null
   lieu: null
   type_lieu: null
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Réseaux de lanceurs d'alerte institutionnels dissidents
@@ -147,7 +148,7 @@ Ces réseaux sont tiraillés entre leur loyauté résiduelle envers les institut
 - [[pacte_des_souverains_reference]]
 - [[plateformes_centralisees_de_narration_officielle_reference]]
 - [[plateformes_informationnelles_dominantes_et_leurs_ia_de_moderation_reference]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_reference]]
+- [[rede_paulista_de_distribuicao_algoritmica_reference]]
 - [[services_de_contre_information_des_blocs_geopolitiques_concurrents_reference]]
 
 ## Notes

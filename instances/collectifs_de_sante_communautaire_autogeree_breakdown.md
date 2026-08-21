@@ -42,7 +42,7 @@ alliances:
 - communes_rust_belt_breakdown
 - communes_rust_belt_zones_libres_breakdown
 - flux_migratoires_non_integrables_breakdown
-- frente_sert_o_livre_breakdown
+- frente_sertao_livre_breakdown
 - front_humanitaire_d_urgence_non_affilie_breakdown
 - geneve_bunker_institutions_breakdown
 - les_veilleurs_du_fleuve_breakdown
@@ -62,8 +62,6 @@ oppositions:
 type_relation_dominante: symbiose
 annee_debut: 2036
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -97,6 +95,9 @@ tensions_narratives: 'La tension centrale qui traverse ces collectifs est celle 
   la légitimité du savoir médical non institutionnel divise en interne les praticiens
   formés des techniciens autodidactes, menaçant la cohésion du réseau.'
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Collectifs de Santé Communautaire Autogérée
@@ -131,7 +132,7 @@ La tension centrale qui traverse ces collectifs est celle entre l'urgence du soi
 - [[communes_rust_belt_breakdown]]
 - [[communes_rust_belt_zones_libres_breakdown]]
 - [[flux_migratoires_non_integrables_breakdown]]
-- [[frente_sert_o_livre_breakdown]]
+- [[frente_sertao_livre_breakdown]]
 - [[front_humanitaire_d_urgence_non_affilie_breakdown]]
 - [[geneve_bunker_institutions_breakdown]]
 - [[les_veilleurs_du_fleuve_breakdown]]

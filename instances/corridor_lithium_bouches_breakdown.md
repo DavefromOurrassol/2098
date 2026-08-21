@@ -41,7 +41,7 @@ alliances:
 - blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
 - cartels_logistiques_regionaux_breakdown
 - communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
-- frente_sert_o_livre_breakdown
+- frente_sertao_livre_breakdown
 - seigneuries_logistiques_armees_breakdown
 oppositions:
 - etats_fragmentes_nationalisant_les_stocks_breakdown
@@ -56,8 +56,6 @@ type_relation_dominante: conflit
 annee_debut: 2061
 annee_fin: 
 
-etat_temporel: actif
-age_historique: résiduel
 generation: post-effondrement
 
 injection:
@@ -78,6 +76,9 @@ tensions_narratives: >
   La question centrale est de savoir si un acteur — milice montante, bloc régional, communauté locale ou corporation résiduelle — parviendra à imposer une régulation minimale sur le Corridor sans provoquer une coalition d'exclus qui détruirait les infrastructures plutôt que de les céder. Chaque convoi livré est une victoire provisoire, chaque convoi saboté un rappel que la richesse du sous-sol reste une malédiction autant qu'une promesse. À terme, le Corridor pourrait devenir le théâtre d'une confrontation directe entre les blocs encore debout — celui qui sécurisera le lithium dessinera la carte du monde d'après.
 
 date_creation: 2026-06-27
+trajectoire: résiduel
+est_clandestin: false
+
 ---
 
 # Les Bouches du Lithium — Corridor Minier des Andes Brisées
@@ -106,7 +107,7 @@ La question centrale est de savoir si un acteur — milice montante, bloc régio
 - [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
 - [[cartels_logistiques_regionaux_breakdown]]
 - [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
-- [[frente_sert_o_livre_breakdown]]
+- [[frente_sertao_livre_breakdown]]
 - [[seigneuries_logistiques_armees_breakdown]]
 **Opposants :**
 - [[etats_fragmentes_nationalisant_les_stocks_breakdown]]

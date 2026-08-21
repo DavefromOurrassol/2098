@@ -40,8 +40,6 @@ oppositions: []
 type_relation_dominante: dépendance
 annee_debut: 2035
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -81,6 +79,9 @@ localisation:
   zone: kinshasa_modelisation_hydrique
   lieu: Kinshasa
   type_lieu: ville
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Institut de Modélisation Hydrologique de Kinshasa

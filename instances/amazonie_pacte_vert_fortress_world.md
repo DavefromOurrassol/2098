@@ -62,8 +62,6 @@ type_relation_dominante: alliance stratégique
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: forteresse
 
 injection:
@@ -84,6 +82,9 @@ tensions_narratives: >
   Le consortium_amazonia_viva tente de produire des contre-certifications populaires qui entrent en collision directe avec les labels du Pacte, créant une guerre documentaire pour la légitimité territoriale. Des lanceurs d'alerte internes, notamment récupérés par le réseau le_temoin_fortress_world, ont commencé à faire fuiter les cartes internes révélant que les 'zones de conservation' coïncident systématiquement avec des gisements de terres rares non exploitées — ce qui suggère que la sanctuarisation prépare une future extraction contrôlée plutôt qu'une réelle préservation. La tension monte également entre le Pacte et les milices_privees_de_protection_des_sites_germinaux qui opèrent parfois dans les mêmes zones sans reconnaître la hiérarchie du Pacte, menaçant la cohérence narrative de la 'gestion écologique pacifique'. Enfin, les cellules_universitaires_dissidentes_des_zones_tampons accumulent des données de terrain contredisant point par point les rapports officiels de biodiversité, construisant un dossier de contestation scientifique qui pourrait ébranler la crédibilité du Pacte auprès des blocs européens encore attachés à une écologie formellement crédible.
 
 date_creation: 2026-06-27
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Pacte Vert Amazônia — Division Sanctuaires Souverains

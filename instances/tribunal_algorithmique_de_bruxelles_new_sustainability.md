@@ -64,8 +64,6 @@ type_relation_dominante: rivalité
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: mature
 generation: ère cognitive
 
 injection:
@@ -86,6 +84,9 @@ tensions_narratives: >
   La question de l'exécution effective de ses décisions reste entière : sans force contraignante propre, le Tribunal dépend du Conseil de Gouvernance Algorithmique Intégrée pour faire respecter ses injonctions, une dépendance que certains internes dénoncent comme une vassalité structurelle. Sa légitimité extraterritoriale est attaquée frontalement par les souverainistes eurasiens depuis l'affaire du module de notation sociale de Novossibirsk en 2094. En parallèle, des collectifs de désobéissance algorithmique le critiquent par l'autre bout : trop lent, trop technocratique, incapable de traiter les millions de cas individuels qui s'accumulent dans ses files. Et en coulisses, la question de savoir si les modules d'audit IA du Tribunal peuvent être eux-mêmes contestés — et par qui — reste sans réponse juridique satisfaisante.
 
 date_creation: 2026-06-25
+trajectoire: mature
+est_clandestin: false
+
 ---
 
 # Tribunal Algorithmique de Bruxelles

@@ -58,8 +58,6 @@ type_relation_dominante: alliance stratégique
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: transition
 
 injection:
@@ -80,6 +78,9 @@ tensions_narratives: >
   La tension centrale de l'APA en 2098 est une question de fond : la représentation inuit au sein du Conseil de Direction (un tiers des sièges, garantie par le Traité d'Iqaluit de 2041) constitue-t-elle une souveraineté réelle ou une chambre d'enregistrement ornementale ? Le Kalaallit Nunaat Sovereign Fund pousse à élargir les prérogatives inuit sur la fixation des péages environnementaux, tandis que les États membres — Canada en tête — résistent à tout rééquilibrage qui réduirait leur contrôle sur un corridor d'intérêt stratégique national. En parallèle, la rivalité avec la NAT sur les corridors arctiques occidentaux prend une dimension de plus en plus ouverte : deux incidents de «superposition de juridiction» en 2096-2097 ont failli dégénérer en crise diplomatique formelle. Enfin, des fuites récentes dans la presse — relayées par le Réseau des Journalistes d'Investigation Énergétique — suggèrent que des opérateurs privés proches de la Coalition des Opérateurs Énergétiques Privés Anti-Quotas contournent les protocoles environnementaux via des pavillons de complaisance, avec la complicité passive de certains fonctionnaires canadiens au sein de l'APA.
 
 date_creation: 2026-06-23
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Arctic Passage Authority — Administration du Passage du Nord-Ouest

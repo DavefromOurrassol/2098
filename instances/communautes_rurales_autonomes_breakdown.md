@@ -48,8 +48,6 @@ oppositions: []
 type_relation_dominante: symbiose
 annee_debut: 2042
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -81,6 +79,9 @@ tensions_narratives: La tension centrale qui les traverse oppose l'impératif de
   de réfugiés climatiques et énergétiques sans parvenir à consolider leurs propres
   bases productives, fragilisant l'équilibre même qui les rendait viables.
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # communautés rurales autonomes

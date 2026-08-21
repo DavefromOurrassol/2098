@@ -48,15 +48,13 @@ oppositions:
 - instances_aria_concurrentes_des_blocs_rivaux_fortress_world
 - nexcore_atlantique_infrastructure_fortress_world
 - pacte_forteresses_souveraines_fortress_world
-- rede_paulista_de_distribuic_o_algor_tmica_fortress_world
+- rede_paulista_de_distribuicao_algoritmica_fortress_world
 - siege_genevois_cars_fortress_world
 - terrashield_geoengineering_fortress_world
 - vaultcorp_security_fortress_world
 type_relation_dominante: conflit
 annee_debut: 2044
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -92,6 +90,9 @@ localisation:
   zone: null
   lieu: null
   type_lieu: null
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Collectifs d'Ingénieurs Dissidents Anti-Militarisation
@@ -135,7 +136,7 @@ La tension fondamentale de ces collectifs réside dans la contradiction entre le
 - [[instances_aria_concurrentes_des_blocs_rivaux_fortress_world]]
 - [[nexcore_atlantique_infrastructure_fortress_world]]
 - [[pacte_forteresses_souveraines_fortress_world]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_fortress_world]]
+- [[rede_paulista_de_distribuicao_algoritmica_fortress_world]]
 - [[siege_genevois_cars_fortress_world]]
 - [[terrashield_geoengineering_fortress_world]]
 - [[vaultcorp_security_fortress_world]]

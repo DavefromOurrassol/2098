@@ -51,8 +51,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2041
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -82,6 +80,9 @@ tensions_narratives: 'Leurs interventions unilatérales déclenchent des représ
   catastrophe reste entière : aucun tribunal ne dispose aujourd''hui de la juridiction
   pour les poursuivre.'
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Compagnies de Géo-Ingénierie Privées Sans Mandat

@@ -49,10 +49,8 @@ oppositions:
 type_relation_dominante: conflit
 
 annee_debut: 2061
-annee_fin: 
+annee_fin: 2075
 
-etat_temporel: transformé
-age_historique: résiduel
 generation: post-effondrement
 
 injection:
@@ -73,6 +71,9 @@ tensions_narratives: >
   Quelle faction héritera de la légitimité formelle si un semblant d'ordre mondial se reconstruit — et qui a intérêt à ce que cette question reste sans réponse ? Les registres de ressources du CRRC, même partiels, constituent la carte la plus complète des stocks mondiaux restants : qui les vole, qui les protège, et à quel prix ? Un État mineur pourrait théoriquement déclencher une crise diplomatique en invoquant les accords de Nairobi contre un géant extractif — le Fantôme a-t-il encore assez de chair pour mordre ?
 
 date_creation: 2026-06-15
+trajectoire: transformé
+est_clandestin: false
+
 ---
 
 # Fantôme de Nairobi

@@ -67,8 +67,6 @@ type_relation_dominante: coopération
 annee_debut: 2036
 annee_fin: 
 
-etat_temporel: actif
-age_historique: déclinant
 generation: transition
 
 injection:
@@ -90,6 +88,8 @@ tensions_narratives: >
 
 date_creation: 2026-06-27
 annee_debut_verifiee: true
+trajectoire: déclinant
+est_clandestin: false
 
 ---
 

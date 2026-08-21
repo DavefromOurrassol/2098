@@ -52,8 +52,6 @@ type_relation_dominante: conflit
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: ascendant
 generation: post-effondrement
 
 injection:
@@ -74,6 +72,9 @@ tensions_narratives: >
   La fracture entre les factions 'attentistes' qui refusent toute action offensive et les 'accélérationnistes' qui sabotent activement les dernières infrastructures régionales pour hâter la purification est en train de déchirer le réseau de l'intérieur. Certaines enclaves commencent à exercer un pouvoir territorial quasi-étatique, trahissant leur doctrine anti-institutionnelle. Et une question non résolue hante les anciens : si le Seuil est déjà franchi, si l'effondrement est là — que prophétise-t-on encore, et à qui ?
 
 date_creation: 2026-06-15
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Les Confédérations du Seuil Dernier

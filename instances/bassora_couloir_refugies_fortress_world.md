@@ -60,8 +60,6 @@ type_relation_dominante: dépendance
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: marginal
 generation: forteresse
 
 injection:
@@ -82,6 +80,9 @@ tensions_narratives: >
   La tension centrale est structurelle et sans issue visible : l'organisation dépend des blocs qu'elle critique pour obtenir les droits de passage sans lesquels ses convois meurent dans les couloirs. Chaque négociation réussie renforce la légitimité pratique des forteresses comme arbitres du vivable. En interne, une faction de terrain pousse vers une radicalisation — refus des accréditations, constitution de routes clandestines autonomes — au risque de perdre la tolérance laborieusement construite. Une autre faction envisage une formalisation partielle avec les institutions multilatérales résiduelles, au prix d'une dépendance qui pourrait transformer l'organisation en sous-traitant humanitaire des blocs. Pendant ce temps, les milices privées aux frontières comprennent que la disparition du Couloir leur livrerait un flux humain totalement sans défense — et calculent jusqu'où pousser avant de franchir ce seuil.
 
 date_creation: 2026-06-27
+trajectoire: marginal
+est_clandestin: false
+
 ---
 
 # Couloir Humanitaire de Bassora — Division Flux Réfugiés

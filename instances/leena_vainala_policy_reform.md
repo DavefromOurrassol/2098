@@ -52,8 +52,6 @@ type_relation_dominante: rivalité
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: transition
 
 injection:
@@ -74,6 +72,9 @@ tensions_narratives: >
   La tension centrale de Väinälä en 2098 est celle de la cooptation : jusqu'où peut-on travailler de l'intérieur d'un système technocratique sans en devenir le visage légitime ? Ses anciens alliés des communs l'accusent de caution intellectuelle ; les institutions la tolèrent précisément parce qu'elle les critique avec un vocabulaire qu'elles contrôlent. Une deuxième tension émerge autour de son héritage : ses chartes sont désormais invoquées par des régimes autoritaires pour justifier la régulation des plateformes sans délibération réelle. Enfin, une question biographique hante ses entretiens : que fera-t-elle si le prochain traité de gouvernance IA exclut définitivement toute procédure délibérative — partira-t-elle, ou signera-t-elle quand même ?
 
 date_creation: 2026-06-15
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Leena Väinälä

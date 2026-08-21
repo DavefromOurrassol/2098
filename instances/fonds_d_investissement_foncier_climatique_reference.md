@@ -50,7 +50,7 @@ oppositions:
 - cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference
 - cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference
 - federation_communs_territoriaux_reference
-- frente_sert_o_livre_reference
+- frente_sertao_livre_reference
 - geneve_lac_retreite_reference
 - gouvernements_du_bloc_sahelien_autonome_reference
 - pacifique_sud_resilience_network_reference
@@ -58,8 +58,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2032
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -95,6 +93,9 @@ localisation:
   zone: null
   lieu: null
   type_lieu: null
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Fonds d'Investissement Foncier Climatique
@@ -134,7 +135,7 @@ La tension centrale du FIFC réside dans la contradiction entre sa mission décl
 - [[cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference]]
 - [[cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference]]
 - [[federation_communs_territoriaux_reference]]
-- [[frente_sert_o_livre_reference]]
+- [[frente_sertao_livre_reference]]
 - [[geneve_lac_retreite_reference]]
 - [[gouvernements_du_bloc_sahelien_autonome_reference]]
 - [[pacifique_sud_resilience_network_reference]]

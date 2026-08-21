@@ -60,8 +60,6 @@ type_relation_dominante: dépendance
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: forteresse
 
 injection:
@@ -82,6 +80,9 @@ tensions_narratives: >
   La Zone dépend des travailleurs périphériques pour maintenir ses infrastructures, mais leur présence temporaire crée des vecteurs d'infiltration que le consortium peine à contrôler : les Marches Gris de Tbilissi opèrent précisément dans ces sas de transition. Par ailleurs, la dégradation accélérée des zones extérieures commence à menacer les nappes phréatiques que la Zone exploite — une boucle de rétroaction que CaucaSec refuse d'admettre publiquement. Enfin, les factions dissidentes internes — notamment parmi les ingénieurs de maintenance sous-accrédités — alimentent des fuites vers les réseaux clandestins, fragilisant le mythe d'imperméabilité qui constitue le principal argument commercial de la forteresse.
 
 date_creation: 2026-06-27
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Tbilissi Nord Zone Franche — Forteresse Thermique du Caucase

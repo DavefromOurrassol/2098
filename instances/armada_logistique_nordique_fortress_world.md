@@ -55,8 +55,6 @@ type_relation_dominante: dépendance
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: forteresse
 
 injection:
@@ -77,6 +75,9 @@ tensions_narratives: >
   La NAT se dit neutre, mais plusieurs blocs l'accusent de favoriser ses alliés scandinaves dans les priorités de transit, précipitant des crises d'approvisionnement en chaîne. En interne, une faction technocratique pousse à automatiser intégralement les négociations via IA, ce qui déposséderait les diplomates humains de leur rôle — et mettrait fin à la corruption qui fait vivre nombre de fonctionnaires nordiques. La question qui hante les chancelleries : si la NAT coupe les corridors arctiques à un bloc en crise, est-ce un acte commercial ou un acte de guerre ?
 
 date_creation: 2026-06-15
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Nordisk Arktisk Transitkontroll — NAT

@@ -2,7 +2,7 @@
 name: Coalition du Vivant
 type: entity
 slug: coalition_vivant
-category: mouvement
+category: organisation
 description: >
   Alliance militante pour la défense des écosystèmes et des droits du vivant
   non-humain. Son statut légal, son influence et ses méthodes varient

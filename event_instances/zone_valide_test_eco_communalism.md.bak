@@ -1,0 +1,70 @@
+---
+name: Forum des Communs Numériques du Sahel
+type: event_instance
+slug: zone_valide_test_eco_communalism
+archetype: zone_valide_test
+scenario: eco_communalism
+type_evenement: political_social
+portee: regionale
+date: 2050
+date_label: automne 2050
+impossible: false
+custom: true
+description: >
+  Sous les dômes géodésiques climatisés d'Agadez, rebaptisée 'Capitale des Sables Numériques', plus de 300 délégués des dix-huit villes membres de la Ligue des Cités du Sahel Numérique se sont réunis pendant cinq jours en octobre 2050. Entre ateliers sur les réseaux mesh communautaires et démonstrations de systèmes d'irrigation pilotés par IA frugale, l'événement a pris un tournant historique lorsque la représentante de Ouagadougou a lu la 'Déclaration des Communs Numériques Sahéliens', proclamant l'autonomie des infrastructures locales face aux consortiums extractivistes. Les images des écrans géants affichant en temps réel la cartographie des nœuds de la Trame Mnemos locale ont fait le tour des réseaux communautaires, devenant un symbole de résistance technologique.
+consequences: >
+  La Déclaration d'Agadez 2050 devient une référence pour les autres bioterritoires en quête d'autonomie numérique, accélérant la fragmentation des architectures informationnelles mondiales. Les dernières plateformes centralisées tentent des contre-offensives juridiques et techniques, mais leur influence se réduit aux enclaves extractivistes. Le modèle sahélien inspire notamment les Assemblées Bioterritoriales Régionales d'Afrique de l'Ouest, qui adoptent des chartes similaires dans les deux années suivantes.
+realisation: >
+  Dans un contexte de fragmentation mondiale et de résurgence des logiques extractivistes, la Ligue des Cités du Sahel Numérique organise un forum régional à Agadez pour consolider son modèle de gouvernance numérique communautaire. L'événement, initialement conçu comme un simple échange de bonnes pratiques, se transforme en une déclaration solennelle de souveraineté numérique territoriale, marquant une rupture symbolique avec les dernières plateformes centralisées résiduelles.
+impact_sur_variables:
+  - variable: organisation_territoires
+    delta_level: 12
+    duree: 15
+    polarite: 1
+  - variable: technologie_information
+    delta_level: 18
+    duree: 20
+    polarite: 1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+    - ligue_des_cites_du_sahel_numerique_eco_communalism
+    - collectifs_de_techniciens_sobres_eco_communalism
+    - reseau_mnemos_eco_communalism
+    - consortium_africain_de_biotechnologies_sociales_eco_communalism
+    - assemblees_bioterritoriales_regionales_eco_communalism
+    - factions_autoritaires_de_controle_du_savoir_eco_communalism
+note_coherence: Cohérent avec la trajectoire de régénération territoriale du scénario éco-communaliste
+  et l'ancrage historique du Sahel numérique comme laboratoire d'autonomie locale
+  depuis les années 2040.
+custom_source: test_robustesse_12_aout
+date_creation: 2026-08-13
+---
+
+# Forum des Communs Numériques du Sahel
+
+## Réalisation dans [[eco_communalism]]
+Dans un contexte de fragmentation mondiale et de résurgence des logiques extractivistes, la Ligue des Cités du Sahel Numérique organise un forum régional à Agadez pour consolider son modèle de gouvernance numérique communautaire. L'événement, initialement conçu comme un simple échange de bonnes pratiques, se transforme en une déclaration solennelle de souveraineté numérique territoriale, marquant une rupture symbolique avec les dernières plateformes centralisées résiduelles.
+
+## Description journalistique
+Sous les dômes géodésiques climatisés d'Agadez, rebaptisée 'Capitale des Sables Numériques', plus de 300 délégués des dix-huit villes membres de la Ligue des Cités du Sahel Numérique se sont réunis pendant cinq jours en octobre 2050. Entre ateliers sur les réseaux mesh communautaires et démonstrations de systèmes d'irrigation pilotés par IA frugale, l'événement a pris un tournant historique lorsque la représentante de Ouagadougou a lu la 'Déclaration des Communs Numériques Sahéliens', proclamant l'autonomie des infrastructures locales face aux consortiums extractivistes. Les images des écrans géants affichant en temps réel la cartographie des nœuds de la Trame Mnemos locale ont fait le tour des réseaux communautaires, devenant un symbole de résistance technologique.
+
+## Conséquences
+La Déclaration d'Agadez 2050 devient une référence pour les autres bioterritoires en quête d'autonomie numérique, accélérant la fragmentation des architectures informationnelles mondiales. Les dernières plateformes centralisées tentent des contre-offensives juridiques et techniques, mais leur influence se réduit aux enclaves extractivistes. Le modèle sahélien inspire notamment les Assemblées Bioterritoriales Régionales d'Afrique de l'Ouest, qui adoptent des chartes similaires dans les deux années suivantes.
+
+## Impact sur les variables
+- **organisation_territoires** : delta +12 sur 15 ans
+- **technologie_information** : delta +18 sur 20 ans
+
+## Acteurs impliqués
+- [[ligue_des_cites_du_sahel_numerique_eco_communalism]]
+- [[collectifs_de_techniciens_sobres_eco_communalism]]
+- [[reseau_mnemos_eco_communalism]]
+- [[consortium_africain_de_biotechnologies_sociales_eco_communalism]]
+- [[assemblees_bioterritoriales_regionales_eco_communalism]]
+- [[factions_autoritaires_de_controle_du_savoir_eco_communalism]]
+
+## Note de cohérence
+Cohérent avec la trajectoire de régénération territoriale du scénario éco-communaliste
+  et l'ancrage historique du Sahel numérique comme laboratoire d'autonomie locale
+  depuis les années 2040.

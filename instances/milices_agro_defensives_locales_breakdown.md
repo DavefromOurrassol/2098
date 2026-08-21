@@ -41,7 +41,7 @@ alliances:
 - enclaves_agro_communautaires_autonomes_breakdown
 - factions_paramilitaires_locales_neutralisees_breakdown
 - federation_communs_territoriaux_breakdown
-- frente_sert_o_livre_breakdown
+- frente_sertao_livre_breakdown
 - massif_central_cicatrices_vertes_breakdown
 - milices_de_controle_territorial_breakdown
 - occitanie_racines_meres_breakdown
@@ -62,8 +62,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2042
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -94,6 +92,9 @@ tensions_narratives: 'La ligne entre protection communautaire et prédation est 
   comme points de ravitaillement — créant une dépendance mutuelle explosive avec les
   acteurs qui les pillent.'
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Milices Agro-Défensives Locales
@@ -127,7 +128,7 @@ La ligne entre protection communautaire et prédation est franchie quotidienneme
 - [[enclaves_agro_communautaires_autonomes_breakdown]]
 - [[factions_paramilitaires_locales_neutralisees_breakdown]]
 - [[federation_communs_territoriaux_breakdown]]
-- [[frente_sert_o_livre_breakdown]]
+- [[frente_sertao_livre_breakdown]]
 - [[massif_central_cicatrices_vertes_breakdown]]
 - [[milices_de_controle_territorial_breakdown]]
 - [[occitanie_racines_meres_breakdown]]

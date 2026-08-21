@@ -69,8 +69,6 @@ type_relation_dominante: alliance stratégique
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: mature
 generation: post-effondrement
 
 injection:
@@ -91,6 +89,9 @@ tensions_narratives: >
   La tension centrale tourne autour de la rigidité croissante des seuils de sobriété énergétique : des communes nordiques aux hivers particulièrement sévères réclament des dérogations que les gardiens du texte refusent, au nom de l'intégrité du modèle. Parallèlement, des collectifs d'Europe centrale qui cherchent à adopter la Charte exigent des adaptations culturelles et climatiques que les signataires historiques vivent comme une dilution. Enfin, des fragments d'États résiduels tentent de récupérer la légitimité symbolique de la Charte pour l'instrumentaliser comme substitut d'autorité — menaçant de transformer l'acte de sécession en nouvelle forme de souveraineté institutionnalisée.
 
 date_creation: 2026-06-27
+trajectoire: mature
+est_clandestin: false
+
 ---
 
 # Charte de Tampere

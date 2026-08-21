@@ -55,12 +55,10 @@ oppositions:
 - lobbies_agro_industriels_a_haute_consommation_d_eau_reference
 - pacte_des_souverains_reference
 - plateformes_centralisees_de_narration_officielle_reference
-- rede_paulista_de_distribuic_o_algor_tmica_reference
+- rede_paulista_de_distribuicao_algoritmica_reference
 type_relation_dominante: coopération
 annee_debut: 2032
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -94,6 +92,9 @@ localisation:
   zone: null
   lieu: null
   type_lieu: null
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Réseau des Villes-États Pilotes en Gouvernance Participative
@@ -145,7 +146,7 @@ Le Réseau se trouve écartelé entre son idéal d'autonomie radicale et la néc
 - [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]]
 - [[pacte_des_souverains_reference]]
 - [[plateformes_centralisees_de_narration_officielle_reference]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_reference]]
+- [[rede_paulista_de_distribuicao_algoritmica_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

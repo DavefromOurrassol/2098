@@ -54,7 +54,7 @@ oppositions:
 - mouvement_des_communes_du_rust_belt_eco_communalism
 - oracle_des_seuils_eco_communalism
 - prisme_global_eco_communalism
-- rede_paulista_de_distribuic_o_algor_tmica_eco_communalism
+- rede_paulista_de_distribuicao_algoritmica_eco_communalism
 - reseaux_de_bibliotheques_archives_communautaires_eco_communalism
 - reseaux_de_radio_communautaire_basse_consommation_eco_communalism
 - reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
@@ -65,8 +65,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2047
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -102,6 +100,9 @@ localisation:
   zone: null
   lieu: null
   type_lieu: infrastructure
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Consortium des Opérateurs d'IA Propriétaires sur les Trames
@@ -148,7 +149,7 @@ La contradiction centrale du Consortium est existentielle : pour survivre, il do
 - [[mouvement_des_communes_du_rust_belt_eco_communalism]]
 - [[oracle_des_seuils_eco_communalism]]
 - [[prisme_global_eco_communalism]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_eco_communalism]]
+- [[rede_paulista_de_distribuicao_algoritmica_eco_communalism]]
 - [[reseaux_de_bibliotheques_archives_communautaires_eco_communalism]]
 - [[reseaux_de_radio_communautaire_basse_consommation_eco_communalism]]
 - [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]

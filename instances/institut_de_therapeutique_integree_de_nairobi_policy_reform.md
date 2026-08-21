@@ -48,8 +48,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2035
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -88,6 +86,9 @@ localisation:
   zone: institut_therapeutique_nairobi
   lieu: Nairobi, quartier de Westlands
   type_lieu: ville
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Institut de Thérapeutique Intégrée de Nairobi

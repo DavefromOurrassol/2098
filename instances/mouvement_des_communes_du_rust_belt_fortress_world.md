@@ -73,8 +73,6 @@ type_relation_dominante: conflit
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: clandestin
-age_historique: marginal
 generation: forteresse
 
 injection:
@@ -95,6 +93,9 @@ tensions_narratives: >
   La Fédération est au bord d'une fracture interne entre une faction radicalement autonomiste qui refuse tout contact avec les blocs souverains — même pour négocier des couloirs humanitaires — et une faction pragmatiste prête à échanger de la reconnaissance partielle contre des garanties de non-intervention. Simultanément, les agences de sécurité intérieure des États forteresses ont commencé à infiltrer les assemblées périphériques, faisant peser la menace d'une décapitation silencieuse du réseau. Une troisième tension, moins visible, ronge le mouvement de l'intérieur : certaines communes ont commencé à commercer discrètement avec les contrebandiers énergétiques des zones grises, compromettant le récit d'autosuffisance pure qui fonde leur légitimité morale.
 
 date_creation: 2026-06-23
+trajectoire: marginal
+est_clandestin: true
+
 ---
 
 # Fédération des Communes Libres du Rust Belt

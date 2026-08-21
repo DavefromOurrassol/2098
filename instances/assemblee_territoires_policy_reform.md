@@ -54,8 +54,6 @@ type_relation_dominante: coopération
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: transition
 
 injection:
@@ -76,6 +74,9 @@ tensions_narratives: >
   La légitimité démocratique du CRTI est contestée en profondeur : ses mécanismes de pondération algorithmique favorisent structurellement les territoires à haute densité infrastructurelle, marginalisant de facto les zones périphériques qu'il prétend rééquilibrer. Une faction interne pousse à une réforme du mode de représentation, tandis que des blocs souverainistes régionaux menacent de créer des assemblées parallèles. Par ailleurs, la dépendance croissante aux modèles prédictifs ATLAS soulève une question existentielle : qui gouverne vraiment — les délégués, ou l'algorithme qu'ils ne comprennent plus tout à fait ?
 
 date_creation: 2026-06-20
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Conseil de Régulation des Territoires Intégrés (CRTI)

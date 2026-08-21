@@ -69,8 +69,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2053
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -98,6 +96,9 @@ tensions_narratives: 'La tension centrale de ce réseau réside dans la contradi
   — qui résistent à toute forme d''absorption. Enfin, sa propre croissance le rend
   vulnérable aux schismes internes entre factions régionales aux intérêts divergents.'
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Réseau Logistique Criminel Concurrent

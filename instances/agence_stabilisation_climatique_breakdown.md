@@ -36,9 +36,7 @@ oppositions:
   - fronts_populistes_anti_technocratiques_breakdown
 type_relation_dominante: rivalité
 annee_debut: 2041
-annee_fin:
-etat_temporel: transformé
-age_historique: résiduel
+annee_fin: 2061
 generation: post-effondrement
 injection:
   type: canonique
@@ -54,6 +52,9 @@ signes_distinctifs: |
 tensions_narratives: |
   La question centrale : qui possède légitimement les archives et les données de monitoring climatique accumulées depuis soixante-dix ans ? Des blocs régionaux tentent de s'en emparer par la force ou la corruption, tandis que le BCUC les utilise comme ultime monnaie d'échange pour rester en vie. Une faction interne milite pour dissoudre l'agence et redistribuer les données en open source — ce qui pourrait déclencher une guerre de l'information climatique. Enfin, un groupe de directeurs régionaux tente secrètement de ressusciter l'AMSC sous une forme autoritaire, invoquant l'état d'urgence permanent pour justifier un pouvoir sans mandat démocratique.
 date_creation: 2026-06-15
+trajectoire: transformé
+est_clandestin: false
+
 ---
 
 # Résidu AMSC — Bureau de Coordination d'Urgence Climatique

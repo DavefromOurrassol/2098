@@ -51,8 +51,6 @@ type_relation_dominante: rivalité
 annee_debut: 2032
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: ère cognitive
 
 injection:
@@ -73,6 +71,9 @@ tensions_narratives: >
   La tension centrale de Väinälä en 2098 est celle de la co-optation : en siégeant dans les instances qu'elle critique, légitime-t-elle précisément ce qu'elle combat ? Une faction montante de jeunes philosophes 'post-délibératifs' la considère désormais comme une figure du passé, attachée à des rituels de débat humain devenus anchroniques face à l'urgence des défis systémiques. Par ailleurs, des rumeurs persistantes évoquent l'existence d'un 'Protocole Väinälä' secret — un ensemble de seuils normatifs au-delà desquels elle aurait accepté que l'autonomie algorithmique soit légitime — dont la révélation pourrait fracasser son image de gardienne intransigeante de la délibération.
 
 date_creation: 2026-06-15
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Leena Väinälä

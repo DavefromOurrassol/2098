@@ -51,8 +51,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2036
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -87,6 +85,9 @@ localisation:
   zone: corridors_gris_asie_centrale
   lieu: Corridors Gris d'Asie Centrale — postes de commandement avancés
   type_lieu: infrastructure
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Commandements Logistiques Périphériques du Bloc Eurasien Central

@@ -62,8 +62,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2039
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -102,6 +100,9 @@ localisation:
   zone: massif_central_bioterritoire
   lieu: Plateaux du Massif Central et marges rurales isolées
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Courant Isolationniste Anti-Circulation de l'Information

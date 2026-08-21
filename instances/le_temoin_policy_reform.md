@@ -37,8 +37,6 @@ oppositions:
 type_relation_dominante: rivalité
 annee_debut: 2071
 annee_fin:
-etat_temporel: actif
-age_historique: dominant
 generation: transition
 injection:
   type: canonique
@@ -62,6 +60,9 @@ tensions_narratives: >
   Plusieurs sources ont reculé sous pression. Elle continue seule.
   Sa rédaction lui demande de ralentir. Elle refuse.
 date_creation: 2098-01-01
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Ingrid Larsson

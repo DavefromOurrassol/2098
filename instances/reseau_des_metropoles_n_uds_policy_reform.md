@@ -43,7 +43,7 @@ alliances:
 - consortium_technologique_de_planification_territoriale_policy_reform
 - grille_aria_policy_reform
 - office_integre_des_flux_migratoires_policy_reform
-- rede_paulista_de_distribuic_o_algor_tmica_policy_reform
+- rede_paulista_de_distribuicao_algoritmica_policy_reform
 - reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform
 oppositions:
 - bloc_des_nations_a_economie_carbone_controlee_policy_reform
@@ -54,8 +54,6 @@ oppositions:
 type_relation_dominante: coopération
 annee_debut: 2036
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -91,6 +89,9 @@ localisation:
   zone: null
   lieu: null
   type_lieu: null
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Réseau des Métropoles-Nœuds
@@ -126,7 +127,7 @@ Le Réseau est tiraillé entre sa vocation réformatrice — porter des standard
 - [[consortium_technologique_de_planification_territoriale_policy_reform]]
 - [[grille_aria_policy_reform]]
 - [[office_integre_des_flux_migratoires_policy_reform]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_policy_reform]]
+- [[rede_paulista_de_distribuicao_algoritmica_policy_reform]]
 - [[reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform]]
 **Opposants :**
 - [[bloc_des_nations_a_economie_carbone_controlee_policy_reform]]

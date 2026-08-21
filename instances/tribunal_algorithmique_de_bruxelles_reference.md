@@ -62,8 +62,6 @@ type_relation_dominante: rivalité
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: ascendant
 generation: transition
 
 injection:
@@ -84,6 +82,9 @@ tensions_narratives: >
   Le Tribunal est pris en étau entre son ambition normative et son impuissance opérationnelle : ses injonctions sont respectées par les petits acteurs, ignorées ou contournées par les grandes plateformes qui ont les ressources pour jouer la montre. Ses propres outils d'audit reposent sur des IA fournies par des consortiums qu'il est susceptible de juger — une contradiction structurelle que ses détracteurs exploitent. La question ouverte en 2098 est celle de son évolution : deviendra-t-il un tribunal symbolique vidé de substance, une juridiction réformée dotée de pouvoirs d'exécution réels, ou le terrain d'une bataille plus large sur qui contrôle les règles de l'IA continentale ?
 
 date_creation: 2026-06-25
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Tribunal Algorithmique de Bruxelles

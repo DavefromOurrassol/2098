@@ -1,0 +1,81 @@
+---
+name: Conflit des Communs Numériques du Sahel
+type: event_instance
+slug: multi_scenario_zone_test_eco_communalism
+archetype: multi_scenario_zone_test
+scenario: eco_communalism
+type_evenement: political_social
+portee: regionale
+date: 2048
+date_label: été 2048
+impossible: false
+custom: true
+description: >
+  En juin 2048, la Ligue des Cités du Sahel Numérique (LCSN) organise un sommet extraordinaire à Agadez pour proclamer l'indépendance de ses trames numériques. Les Assemblées Bioterritoriales Régionales, soutenues par les Collectifs de Cartographie Écologique Participative, y défendent une vision de communs numériques locaux, déconnectés des architectures centralisées. Mais la cérémonie est perturbée par des cyberattaques attribuées au Consortium des Opérateurs d'IA Propriétaires sur les Trames, qui tente de saboter la transition. Pendant ce temps, des communautés rurales dissidentes, comme celles du Courant Isolationniste Anti-Circulation de l'Information, bloquent physiquement les relais de données pour empêcher toute fuite vers l'extérieur.
+consequences: >
+  Le conflit révèle la fragilité des équilibres éco-communalistes : la LCSN se scinde en deux entités distinctes — une frange radicale, les *Communs Sécessionnistes Hors-Coordination*, qui érige des pare-feux physiques et algorithmiques, et une autre, plus modérée, qui maintient des ponts avec les réseaux globaux via des nœuds contrôlés. Cette division affaiblit la résilience collective du Sahel, tout en inspirant d'autres bioterritoires à repenser leur rapport à la souveraineté numérique. Les Archives Ouvertes des Jurisprudences Communales (AOJC) sont sollicitées pour arbitrer les litiges, mais leur légitimité est contestée par les factions les plus radicales.
+realisation: >
+  Dans un monde éco-communaliste où les bioterritoires autonomes coexistent avec des enclaves technologiques résiduelles, la Ligue des Cités du Sahel Numérique (LCSN) proclame la souveraineté de ses infrastructures numériques. Cependant, cette proclamation déclenche une crise de gouvernance interne : les factions isolationnistes refusent toute coordination avec les réseaux externes, tandis que les techno-solutionnistes pro-re-globalisation numérique tentent de maintenir des liens avec les plateformes centralisées. La zone *sahel_numerique_ligue* devient un champ de tension entre autonomie radicale et interconnexion forcée.
+impact_sur_variables:
+  - variable: organisation_territoires
+    delta_level: -15
+    duree: 15
+    polarite: -1
+  - variable: demographie_mobilite_humaine
+    delta_level: -10
+    duree: 10
+    polarite: -1
+  - variable: technologie_information
+    delta_level: 10
+    duree: 20
+    polarite: 1
+propagation:
+  via_matrice: true
+acteurs_impliques:
+    - ligue_des_cites_du_sahel_numerique_eco_communalism
+    - assemblees_bioterritoriales_regionales_eco_communalism
+    - collectifs_de_cartographie_ecologique_participative_eco_communalism
+    - consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism
+    - courant_isolationniste_anti_circulation_de_l_information_eco_communalism
+    - communs_secessionnistes_hors_coordination_eco_communalism
+    - archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism
+note_coherence: Cet événement s'inscrit dans la tension structurelle du scénario éco-communaliste
+  entre autonomie locale et interdépendance globale, exacerbée par la fragmentation
+  des infrastructures numériques. La zone *sahel_numerique_ligue* est un terrain propice
+  à cette crise, car elle incarne à la fois l'innovation communautaire et les pressions
+  extractivistes résiduelles.
+custom_source: test_robustesse_12_aout
+date_creation: 2026-08-13
+---
+
+# Conflit des Communs Numériques du Sahel
+
+## Réalisation dans [[eco_communalism]]
+Dans un monde éco-communaliste où les bioterritoires autonomes coexistent avec des enclaves technologiques résiduelles, la Ligue des Cités du Sahel Numérique (LCSN) proclame la souveraineté de ses infrastructures numériques. Cependant, cette proclamation déclenche une crise de gouvernance interne : les factions isolationnistes refusent toute coordination avec les réseaux externes, tandis que les techno-solutionnistes pro-re-globalisation numérique tentent de maintenir des liens avec les plateformes centralisées. La zone *sahel_numerique_ligue* devient un champ de tension entre autonomie radicale et interconnexion forcée.
+
+## Description journalistique
+En juin 2048, la Ligue des Cités du Sahel Numérique (LCSN) organise un sommet extraordinaire à Agadez pour proclamer l'indépendance de ses trames numériques. Les Assemblées Bioterritoriales Régionales, soutenues par les Collectifs de Cartographie Écologique Participative, y défendent une vision de communs numériques locaux, déconnectés des architectures centralisées. Mais la cérémonie est perturbée par des cyberattaques attribuées au Consortium des Opérateurs d'IA Propriétaires sur les Trames, qui tente de saboter la transition. Pendant ce temps, des communautés rurales dissidentes, comme celles du Courant Isolationniste Anti-Circulation de l'Information, bloquent physiquement les relais de données pour empêcher toute fuite vers l'extérieur.
+
+## Conséquences
+Le conflit révèle la fragilité des équilibres éco-communalistes : la LCSN se scinde en deux entités distinctes — une frange radicale, les *Communs Sécessionnistes Hors-Coordination*, qui érige des pare-feux physiques et algorithmiques, et une autre, plus modérée, qui maintient des ponts avec les réseaux globaux via des nœuds contrôlés. Cette division affaiblit la résilience collective du Sahel, tout en inspirant d'autres bioterritoires à repenser leur rapport à la souveraineté numérique. Les Archives Ouvertes des Jurisprudences Communales (AOJC) sont sollicitées pour arbitrer les litiges, mais leur légitimité est contestée par les factions les plus radicales.
+
+## Impact sur les variables
+- **organisation_territoires** : delta +15 sur 15 ans
+- **demographie_mobilite_humaine** : delta +10 sur 10 ans
+- **technologie_information** : delta +10 sur 20 ans
+
+## Acteurs impliqués
+- [[ligue_des_cites_du_sahel_numerique_eco_communalism]]
+- [[assemblees_bioterritoriales_regionales_eco_communalism]]
+- [[collectifs_de_cartographie_ecologique_participative_eco_communalism]]
+- [[consortium_des_operateurs_d_ia_proprietaires_sur_les_trames_eco_communalism]]
+- [[courant_isolationniste_anti_circulation_de_l_information_eco_communalism]]
+- [[communs_secessionnistes_hors_coordination_eco_communalism]]
+- [[archives_ouvertes_des_jurisprudences_communales_aojc_eco_communalism]]
+
+## Note de cohérence
+Cet événement s'inscrit dans la tension structurelle du scénario éco-communaliste
+  entre autonomie locale et interdépendance globale, exacerbée par la fragmentation
+  des infrastructures numériques. La zone *sahel_numerique_ligue* est un terrain propice
+  à cette crise, car elle incarne à la fois l'innovation communautaire et les pressions
+  extractivistes résiduelles.

@@ -51,8 +51,6 @@ oppositions:
 type_relation_dominante: dépendance
 annee_debut: 2032
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -90,6 +88,9 @@ localisation:
   zone: helsinki_communs_numeriques
   lieu: Helsinki, siège opérationnel du Consortium
   type_lieu: infrastructure
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Consortium Énergétique Baltique

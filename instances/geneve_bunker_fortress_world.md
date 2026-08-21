@@ -66,8 +66,6 @@ type_relation_dominante: alliance stratégique
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: forteresse
 
 injection:
@@ -88,6 +86,9 @@ tensions_narratives: >
   La tension majeure réside dans la dépendance paradoxale de Genève Bunker au chaos extérieur : si les blocs géopolitiques stabilisaient réellement les zones exposées, la demande résidentielle s'effondrerait. En interne, une faction d'actionnaires pousse à l'autarcie énergétique totale pour couper toute dépendance aux corridors de ressources négociés avec le Bloc Atlantique — ce qui déclencherait une crise diplomatique majeure. Par ailleurs, REFUGE, l'IA de surveillance interne, accumule des données comportementales sur les élites mondiales les plus puissantes : qui contrôle réellement REFUGE contrôle des leviers de chantage inédits. Enfin, les réseaux clandestins infiltrent progressivement les zones de service, posant la question de savoir si la forteresse est aussi étanche qu'elle le prétend.
 
 date_creation: 2026-06-27
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Genève Bunker — Forteresse Souveraine Climatique

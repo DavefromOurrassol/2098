@@ -77,8 +77,6 @@ type_relation_dominante: dépendance
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: marginal
 generation: forteresse
 
 injection:
@@ -99,6 +97,9 @@ tensions_narratives: >
   L'enjeu central est le piège de la visibilité : toute tentative d'organisation durable attire l'attention des agences de sécurité et précipite les expulsions, mais l'invisibilité garantit la désintégration interne par concurrence pour la rareté. Une faction cherche à négocier une reconnaissance formelle auprès du Bureau des Territoires Résiduels, au risque de se faire instrumentaliser ; une autre prône la clandestinité totale et le refus de tout travail pour les blocs, au prix de la survie immédiate. Entre les deux, des leaders informels tentent de maintenir un équilibre aussi précaire que leur statut — et la question de qui trahira le premier, sous la pression des systèmes de scoring de productivité corporative, reste ouverte.
 
 date_creation: 2026-06-27
+trajectoire: marginal
+est_clandestin: false
+
 ---
 
 # Les Seuils Fermés — Réseau des Campements Périphériques

@@ -75,8 +75,6 @@ type_relation_dominante: coopération
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: mature
 generation: reconstruction
 
 injection:
@@ -97,6 +95,9 @@ tensions_narratives: >
   La question lancinante du Réseau Terrafond est celle-ci : jusqu'où la discipline collective peut-elle contraindre une communauté qui refuse ses verdicts ? Plusieurs bassins versants ont déjà connu des sécessions de fait, des groupes locaux appliquant leurs propres règles d'extraction sans mandat collectif. En parallèle, des réseaux de notables capturistes infiltrent les assemblées pour orienter les décisions foncières en leur faveur, menaçant la légitimité délibérative de l'intérieur. Et la pression des consortiums industriels sur les aquifères frontaliers ne faiblit pas : Terrafond manque de force coercitive propre, et sa survie dépend entièrement de la cohésion — fragile — de ses membres.
 
 date_creation: 2026-06-27
+trajectoire: mature
+est_clandestin: false
+
 ---
 
 # Réseau Terrafond des Bassins

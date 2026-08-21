@@ -54,10 +54,8 @@ oppositions:
 type_relation_dominante: rivalité
 
 annee_debut: 2041
-annee_fin: 
+annee_fin: 2055
 
-etat_temporel: transformé
-age_historique: résiduel
 generation: post-effondrement
 
 injection:
@@ -78,6 +76,9 @@ tensions_narratives: >
   La tension centrale est celle de l'héritage fracturé : qui a le droit de parler au nom de la Ligue quand la Ligue n'existe plus comme corps unifié ? Chaque fragment accuse les autres de trahison, et certains nœuds envisagent de vendre leur infrastructure aux blocs dominants pour survivre — ce qui constituerait l'ultime capitulation de l'idéal fondateur. Parallèlement, la Diaspora Tech Sahel tente de l'extérieur de réinjecter des ressources pour reconnecter les fragments, mais ses émissaires sont parfois perçus comme des nouveaux colonisateurs techniques. La question ouverte : est-ce que la survie fragmentée de l'idée vaut mieux que sa disparition propre ?
 
 date_creation: 2026-06-23
+trajectoire: transformé
+est_clandestin: false
+
 ---
 
 # Les Éclats du Sahel — Fragments de la Ligue

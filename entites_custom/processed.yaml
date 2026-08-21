@@ -1,100 +1,6 @@
 processed:
 - status: injected
   idea:
-    nom: Le Cartographe Silencieux
-    category: humain
-    role: 'Ancien officier de renseignement devenu cartographe clandestin des zones
-      de non-droit, vendant ses relevés aux plus offrants.
-
-      '
-    etat: clandestin
-    scenario_ref: breakdown
-    scenario_hint: null
-    source: idee_2026-06
-  slug: le_cartographe_silencieux
-  scenarios:
-  - breakdown
-  - fortress_world
-  - new_sustainability
-  - eco_communalism
-  - policy_reform
-  - reference
-  archetype:
-    description_complete: 'Le Cartographe Silencieux est l''archétype de celui qui
-      détient la connaissance des espaces invisibles — les zones grises, les territoires
-      oubliés, les marges que le pouvoir officiel ne peut plus ou ne veut plus nommer.
-      Ancien serviteur d''un ordre établi, il a retourné ses compétences cartographiques
-      et analytiques en capital privé, opérant dans l''ombre des institutions défaillantes.
-      Il est à la fois témoin lucide et acteur ambigu : son savoir est précieux précisément
-      parce qu''il révèle ce que les cartes officielles dissimulent, mais il le vend
-      au plus offrant, faisant de la connaissance un instrument de pouvoir désincarné
-      de toute loyauté. Il incarne le passage de l''agent d''État au prestataire de
-      l''opacité — l''expert qui survit à l''effondrement des systèmes en monétisant
-      ce que les systèmes laissent dans l''ombre.'
-    tension_fondamentale: 'La connaissance des marges comme service public ou comme
-      marchandise stratégique : celui qui cartographie les angles morts du monde détient
-      un pouvoir de révélation ou d''occultation, et le choix de le vendre plutôt
-      que de le partager fait de la vérité elle-même un actif au service du plus fort.'
-    variables_potentielles:
-    - organisation_territoires
-    - geopolitique_conflits
-    - technologie_information
-    doublon_detecte: false
-    doublon_slug: null
-  scenario_ref: breakdown
-  role_ref: 'Ancien officier de renseignement devenu cartographe clandestin des zones
-    de non-droit, vendant ses relevés aux plus offrants.
-
-    '
-  etat_ref: clandestin
-- status: injected
-  idea:
-    nom: Le Cartographe Silencieux
-    category: humain
-    role: 'Ancien officier de renseignement devenu cartographe clandestin des zones
-      de non-droit, vendant ses relevés aux plus offrants.
-
-      '
-    etat: clandestin
-    scenario_ref: breakdown
-    scenario_hint: null
-    source: idee_2026-06
-  slug: le_cartographe_silencieux
-  scenarios:
-  - breakdown
-  - fortress_world
-  - new_sustainability
-  - eco_communalism
-  - policy_reform
-  - reference
-  archetype:
-    description_complete: 'Le Cartographe Silencieux est l''archétype de celui qui
-      détient la connaissance des espaces invisibles — zones grises, marges oubliées,
-      territoires que les pouvoirs officiels ne voient plus ou refusent de voir. Ancien
-      serviteur d''un ordre institutionnel qu''il a quitté ou perdu, il a converti
-      son savoir opérationnel en une pratique solitaire et vénale, traçant ce que
-      les autres ignorent. Sa valeur réside précisément dans l''écart entre l''information
-      qu''il produit et celle que les institutions légitimes diffusent. Il n''est
-      ni héros ni traître : il est l''opérateur discret d''une vérité partielle, monnayable
-      parce que rare.'
-    tension_fondamentale: La connaissance des marges est-elle un bien commun qui devrait
-      éclairer les vulnérables et orienter les décisions collectives, ou une marchandise
-      stratégique réservée à ceux qui peuvent l'acheter — et celui qui la détient
-      peut-il encore choisir à qui elle sert ?
-    variables_potentielles:
-    - organisation_territoires
-    - technologie_information
-    - geopolitique_conflits
-    doublon_detecte: false
-    doublon_slug: null
-  scenario_ref: breakdown
-  role_ref: 'Ancien officier de renseignement devenu cartographe clandestin des zones
-    de non-droit, vendant ses relevés aux plus offrants.
-
-    '
-  etat_ref: clandestin
-- status: injected
-  idea:
     nom: Consortium Amazônia Viva
     category: organisation
     role: 'Coalition transnationale d''organisations autochtones, de scientifiques
@@ -10092,3 +9998,287 @@ processed:
   scenario_ref: breakdown
   role_ref: Organisation de test pour vérifier la factorisation
   etat_ref: actif
+- status: injected
+  idea:
+    nom: Consortium des Pêcheries Autonomes du Grand Nord
+    category: organisation
+    role: Alliance de communautés inuit et sami, ainsi que de pêcheurs indépendants,
+      gérant collectivement les zones de pêche arctiques autour de l'Island_Pecheries
+      et du détroit de Béring. Ce consortium négocie des droits de pêche durables
+      avec les blocs souverains tout en résistant à la privatisation des ressources
+      halieutiques par les grandes entreprises énergétiques.
+    etat: ascendant
+    scenario_ref: new_sustainability
+    scenario_hint: null
+    source: auto_generated
+  slug: consortium_des_pecheries_autonomes_du_grand_nord
+  scenarios:
+  - breakdown
+  - fortress_world
+  - new_sustainability
+  - eco_communalism
+  - policy_reform
+  - reference
+  archetype:
+    description_complete: Une alliance décentralisée de communautés locales et d'acteurs
+      indépendants qui gèrent collectivement une ressource naturelle critique, souvent
+      située dans des zones frontalières ou marginales. Cette entité incarne la résistance
+      à l'appropriation privée ou étatique des ressources, tout en négociant des accords
+      durables avec des pouvoirs plus larges pour préserver leur autonomie et leur
+      mode de vie. Elle représente une forme de gouvernance hybride, mêlant traditions
+      locales, coopération pragmatique et adaptation aux contraintes géopolitiques
+      et écologiques.
+    tension_fondamentale: La contradiction entre l'autonomie locale et la nécessité
+      de s'inscrire dans des cadres plus larges (géopolitiques, économiques ou écologiques)
+      pour survivre, tout en résistant à la dilution de leur souveraineté ou à l'exploitation
+      par des acteurs extérieurs.
+    variables_potentielles:
+    - gouvernance_institutions
+    - geopolitique_conflits
+    - organisation_territoires
+    - energie_ressources_critiques
+    - valeurs_culture_tempo_sociale
+    doublon_detecte: false
+    doublon_slug: null
+  scenario_ref: new_sustainability
+  role_ref: Alliance de communautés inuit et sami, ainsi que de pêcheurs indépendants,
+    gérant collectivement les zones de pêche arctiques autour de l'Island_Pecheries
+    et du détroit de Béring. Ce consortium négocie des droits de pêche durables avec
+    les blocs souverains tout en résistant à la privatisation des ressources halieutiques
+    par les grandes entreprises énergétiques.
+  etat_ref: ascendant
+  est_clandestin_ref: null
+- status: injected
+  idea:
+    nom: Réseau des Cartographes des Zones Grises
+    category: réseau
+    role: Collectif clandestin de géographes, hackers et anciens militaires opérant
+      depuis les zones grises du bassin_caspien_zone_conflit et de la plaine_de_pannonie.
+      Ils documentent et cartographient les territoires non gouvernés pour fournir
+      des données aux acteurs locaux, aux ONG et aux contrebandiers, tout en évitant
+      la capture par les blocs souverains.
+    etat: marginal
+    scenario_ref: fortress_world
+    scenario_hint: null
+    source: auto_generated
+  slug: reseau_des_cartographes_des_zones_grises
+  scenarios:
+  - breakdown
+  - fortress_world
+  - new_sustainability
+  - eco_communalism
+  - policy_reform
+  - reference
+  archetype:
+    description_complete: Un réseau clandestin de cartographes, hackers et experts
+      marginaux qui documentent et rendent accessibles les connaissances sur les territoires
+      abandonnés, contestés ou non gouvernés. Cette entité incarne la résistance par
+      la production et la diffusion de savoirs critiques, souvent en dehors des cadres
+      légaux ou institutionnels, pour servir les acteurs locaux, les contrebandiers
+      ou les mouvements de survie. Elle représente la préservation de l'information
+      comme acte de subversion et d'autonomie face à des systèmes de contrôle ou d'oubli.
+    tension_fondamentale: 'La connaissance comme bien commun et outil d''émancipation
+      contre la tentation de la marchandisation, de la capture par le pouvoir ou de
+      l''instrumentalisation à des fins de contrôle. Son existence même questionne
+      : qui a le droit de savoir, et qui décide de ce qui doit être su ?'
+    variables_potentielles:
+    - technologie_information
+    - geopolitique_conflits
+    - organisation_territoires
+    - valeurs_culture_tempo_sociale
+    doublon_detecte: false
+    doublon_slug: null
+  scenario_ref: fortress_world
+  role_ref: Collectif clandestin de géographes, hackers et anciens militaires opérant
+    depuis les zones grises du bassin_caspien_zone_conflit et de la plaine_de_pannonie.
+    Ils documentent et cartographient les territoires non gouvernés pour fournir des
+    données aux acteurs locaux, aux ONG et aux contrebandiers, tout en évitant la
+    capture par les blocs souverains.
+  etat_ref: marginal
+  est_clandestin_ref: null
+- status: injected
+  idea:
+    nom: Agence de Régulation des Détroits Stratégiques (ARDS)
+    category: institution
+    role: Institution internationale basée à détroit_ormuz et détroit_sud, chargée
+      de superviser la libre circulation des ressources critiques (énergie, minerais,
+      denrées) à travers les détroits maritimes. Elle arbitre les conflits entre blocs
+      souverains et milices locales, tout en luttant contre la piraterie et les monopoles
+      privés.
+    etat: dominant
+    scenario_ref: policy_reform
+    scenario_hint: null
+    source: auto_generated
+  slug: agence_de_regulation_des_detroits_strategiques_ards
+  scenarios:
+  - breakdown
+  - fortress_world
+  - new_sustainability
+  - eco_communalism
+  - policy_reform
+  - reference
+  archetype:
+    description_complete: Institution archétypale chargée de réguler et sécuriser
+      les points de passage stratégiques essentiels à la circulation des ressources
+      critiques, des biens et des personnes. Elle incarne l'équilibre précaire entre
+      souveraineté étatique, intérêts privés et bien commun global, en arbitrant les
+      conflits et en garantissant une stabilité minimale dans un monde fragmenté.
+      Son existence repose sur une légitimité technique et géopolitique, souvent contestée
+      par ceux qu'elle exclut ou contraint.
+    tension_fondamentale: La contradiction entre la nécessité d'une gouvernance centralisée
+      pour assurer la fluidité des échanges vitaux et l'impératif de souveraineté
+      locale ou sectorielle, qui remet en cause son autorité. Son pouvoir repose sur
+      sa capacité à être à la fois neutre et indispensable, tout en étant perçue comme
+      un outil de domination par ceux qui en dépendent.
+    variables_potentielles:
+    - gouvernance_institutions
+    - geopolitique_conflits
+    - energie_ressources_critiques
+    - organisation_territoires
+    doublon_detecte: false
+    doublon_slug: null
+  scenario_ref: policy_reform
+  role_ref: Institution internationale basée à détroit_ormuz et détroit_sud, chargée
+    de superviser la libre circulation des ressources critiques (énergie, minerais,
+    denrées) à travers les détroits maritimes. Elle arbitre les conflits entre blocs
+    souverains et milices locales, tout en luttant contre la piraterie et les monopoles
+    privés.
+  etat_ref: dominant
+  est_clandestin_ref: null
+- status: injected
+  idea:
+    nom: Terminal Kharg Data Haven
+    category: infrastructure
+    role: Centre de données offshore situé sur terminal_kharg, dans le golfe Persique.
+      Il héberge des archives numériques neutres et des serveurs de contournement
+      pour les dissidents, les journalistes et les ONG, tout en servant de plaque
+      tournante pour le commerce illicite de données entre blocs souverains et zones
+      grises.
+    etat: mature
+    scenario_ref: reference
+    scenario_hint: null
+    source: auto_generated
+  slug: terminal_kharg_data_haven
+  scenarios:
+  - breakdown
+  - fortress_world
+  - new_sustainability
+  - eco_communalism
+  - policy_reform
+  - reference
+  archetype:
+    description_complete: 'Une infrastructure offshore hybride, physiquement ancrée
+      dans un territoire neutre ou contesté, qui sert simultanément de sanctuaire
+      pour les données sensibles et de hub pour les échanges illicites. Elle incarne
+      la porosité des frontières numériques et géopolitiques, offrant une plateforme
+      où la préservation de l''information critique coexiste avec son exploitation
+      commerciale ou stratégique. Son modèle repose sur une opacité calculée : elle
+      se présente comme un espace neutre tout en tirant profit des asymétries de pouvoir
+      et des failles réglementaires.'
+    tension_fondamentale: La survie par l'ambiguïté fonctionnelle — être un rempart
+      contre la censure et l'oubli tout en alimentant les circuits de l'extraction
+      et de la spéculation sur les données, sans jamais pouvoir trancher entre éthique
+      et utilité.
+    variables_potentielles:
+    - technologie_information
+    - geopolitique_conflits
+    - frontieres_du_systeme
+    - gouvernance_institutions
+    - systeme_economique_redistribution
+    doublon_detecte: false
+    doublon_slug: null
+  scenario_ref: reference
+  role_ref: Centre de données offshore situé sur terminal_kharg, dans le golfe Persique.
+    Il héberge des archives numériques neutres et des serveurs de contournement pour
+    les dissidents, les journalistes et les ONG, tout en servant de plaque tournante
+    pour le commerce illicite de données entre blocs souverains et zones grises.
+  etat_ref: mature
+  est_clandestin_ref: null
+- status: injected
+  idea:
+    nom: Les Veilleurs des Nappes Phréatiques
+    category: organisation
+    role: Mouvement écologiste et communautaire actif dans les nappes_phreatiques_contaminees_midwest
+      et le bassin du Congo. Ils surveillent et protègent les réserves d'eau souterraine
+      contre l'extraction illégale et la pollution, en utilisant des technologies
+      low-tech et des réseaux de capteurs citoyens. Leur action combine résistance
+      locale et plaidoyer international.
+    etat: émergent
+    scenario_ref: eco_communalism
+    scenario_hint: null
+    source: auto_generated
+  slug: les_veilleurs_des_nappes_phreatiques
+  scenarios:
+  - breakdown
+  - fortress_world
+  - new_sustainability
+  - eco_communalism
+  - policy_reform
+  - reference
+  archetype:
+    description_complete: Cette entité incarne un mouvement de surveillance et de
+      protection communautaire des ressources naturelles vitales, organisé de manière
+      décentralisée et ancré localement. Elle combine une approche low-tech et participative
+      avec une résistance active contre les menaces extérieures (extraction illégale,
+      pollution, accaparement). Son essence réside dans la défense collective d'un
+      bien commun essentiel, souvent négligé ou exploité par des acteurs plus puissants,
+      en s'appuyant sur des réseaux citoyens et des technologies accessibles.
+    tension_fondamentale: La contradiction entre l'autonomie locale et la nécessité
+      d'une coordination plus large pour peser face aux acteurs globaux ou étatiques,
+      tout en évitant de reproduire les structures de pouvoir qu'elle combat.
+    variables_potentielles:
+    - climat_environnement_global
+    - organisation_territoires
+    - systeme_economique_redistribution
+    - valeurs_culture_tempo_sociale
+    doublon_detecte: false
+    doublon_slug: null
+  scenario_ref: eco_communalism
+  role_ref: Mouvement écologiste et communautaire actif dans les nappes_phreatiques_contaminees_midwest
+    et le bassin du Congo. Ils surveillent et protègent les réserves d'eau souterraine
+    contre l'extraction illégale et la pollution, en utilisant des technologies low-tech
+    et des réseaux de capteurs citoyens. Leur action combine résistance locale et
+    plaidoyer international.
+  etat_ref: émergent
+  est_clandestin_ref: null
+- status: injected
+  idea:
+    nom: gelecek_meclisi
+    category: hybride
+    etat: émergent
+    est_clandestin: 'true'
+    scenario_ref: breakdown
+  slug: gelecek_meclisi
+  scenarios:
+  - breakdown
+  - fortress_world
+  - new_sustainability
+  - eco_communalism
+  - policy_reform
+  - reference
+  archetype:
+    description_complete: Une assemblée hybride émergente qui incarne la tentative
+      de concilier des visions du futur divergentes au sein d'un système en fragmentation.
+      Elle agit comme un espace de délibération et de coordination entre acteurs disparates
+      (institutionnels, communautaires, technologiques), cherchant à articuler des
+      logiques locales et globales, traditionnelles et innovantes, pour éviter l'effondrement
+      ou en gérer les conséquences. Son essence réside dans sa capacité à agréger
+      des fragments de légitimité et à proposer des cadres d'action collective malgré
+      l'absence de consensus ou d'autorité centrale.
+    tension_fondamentale: La contradiction entre la nécessité de construire un futur
+      commun (par la planification, la régulation ou la vision partagée) et l'impossibilité
+      de s'accorder sur les moyens ou les fins, dans un contexte où les institutions
+      traditionnelles ont perdu leur monopole sur la légitimité. Cette entité oscille
+      entre l'utopie d'une gouvernance inclusive et le risque de devenir un outil
+      de légitimation pour des pouvoirs émergents ou des logiques préexistantes.
+    variables_potentielles:
+    - gouvernance_institutions
+    - valeurs_culture_tempo_sociale
+    - technologie_information
+    - organisation_territoires
+    doublon_detecte: false
+    doublon_slug: null
+  scenario_ref: breakdown
+  role_ref: null
+  etat_ref: émergent
+  est_clandestin_ref: true

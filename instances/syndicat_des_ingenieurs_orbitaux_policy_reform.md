@@ -46,8 +46,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2034
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -85,6 +83,9 @@ localisation:
   zone: hub_europeen_regulation
   lieu: Genève-Nexus
   type_lieu: ville
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Syndicat des Ingénieurs Orbitaux

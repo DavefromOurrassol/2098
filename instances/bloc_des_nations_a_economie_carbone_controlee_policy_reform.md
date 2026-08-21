@@ -63,8 +63,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2035
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -98,6 +96,9 @@ localisation:
   zone: null
   lieu: null
   type_lieu: null
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Bloc des Nations à Économie Carbone-Contrôlée

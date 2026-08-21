@@ -61,8 +61,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2033
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -95,6 +93,9 @@ localisation:
   zone: geneve_nexus
   lieu: Genève-Nexus, antenne de coordination régulatoire
   type_lieu: ville
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Coalition des Opérateurs Énergétiques Privés Anti-Quotas

@@ -46,8 +46,6 @@ oppositions:
 type_relation_dominante: dépendance
 annee_debut: 2026
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -83,6 +81,8 @@ localisation:
   lieu: Centre de Contrôle Orbital de Kourou
   type_lieu: infrastructure
 annee_debut_verifiee: true
+trajectoire: émergent
+est_clandestin: false
 
 ---
 

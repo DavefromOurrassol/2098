@@ -60,8 +60,6 @@ type_relation_dominante: alliance stratégique
 annee_debut: 2047
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: reconstruction
 
 injection:
@@ -82,6 +80,9 @@ tensions_narratives: >
   La Confédération est tiraillée entre son rôle de témoin moral — condition de son influence — et la tentation d'une agentivité politique pleine qui risquerait de la faire basculer dans les jeux d'alliance habituels, diluant sa singularité éthique. Une faction interne, dite des Gardiens de la Mémoire, résiste à toute intégration trop profonde dans la gouvernance technocratique mondiale, craignant que l'efficience algorithmique ne phagocyte les récits vivants des cultures englouties. Par ailleurs, la question de la transmission aux générations nées sur plateforme — qui n'ont jamais vu de terre émergée — pose une crise identitaire latente : peut-on construire une fierté nationale sur un deuil que l'on n'a pas soi-même vécu ?
 
 date_creation: 2026-06-23
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Pacifique Sud Resilience Network — Confédération Maritime du Pacifique Austral

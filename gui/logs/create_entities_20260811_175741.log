@@ -1,0 +1,14 @@
+============================================================
+OURRASSOL 2098 — Création entités + instances
+============================================================
+(mode --dry-run : rien ne sera écrit)
+
+Mode : auto-suggest (fourni via --mode)
+Scénario de référence ciblé ? (Entrée pour laisser le LLM choisir) [breakdown|fortress_world|new_sustainability|eco_communalism|policy_reform|reference] : Traceback (most recent call last):
+  File "/Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/generator/create_entities_and_instances.py", line 1282, in <module>
+    main()
+  File "/Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/generator/create_entities_and_instances.py", line 1277, in main
+    run_auto_suggest_mode(client, dry_run=args.dry_run, n=args.n,
+  File "/Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/generator/create_entities_and_instances.py", line 1009, in run_auto_suggest_mode
+    scenario_raw = input(
+EOFError: EOF when reading a line

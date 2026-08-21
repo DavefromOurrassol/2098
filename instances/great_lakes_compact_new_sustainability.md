@@ -63,8 +63,6 @@ type_relation_dominante: alliance stratégique
 annee_debut: 2038
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: reconstruction
 
 injection:
@@ -85,6 +83,9 @@ tensions_narratives: >
   La tension fondamentale du Compact demeure entière : au moins deux États membres ont, en 2094 et 2097, menacé de suspension temporaire leur participation lors de sécheresses internes sévères, invoquant le primat de leur sécurité hydrique nationale sur le protocole commun — et ont finalement reculé, mais de justesse. La montée en influence du Great Lakes Autonomous Compact, faction interne qui prône une autonomisation complète du bassin vis-à-vis des États fédéraux, crée une ligne de fracture idéologique croissante au sein même de l'institution. Enfin, son statut de 'modèle exportable' génère une pression contradictoire : plus il est reconnu globalement, plus il doit se comporter en institution normative universelle, ce qui entre en tension avec son identité fondamentale d'accord local et volontaire.
 
 date_creation: 2026-06-27
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Great Lakes Compact — Pacte des Eaux Partagées

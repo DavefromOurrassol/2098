@@ -75,8 +75,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2044
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -114,6 +112,9 @@ localisation:
   zone: zones_grises_tampons
   lieu: Zones tampons balkano-caucasiennes et couloirs de réfugiés
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Alliance Sanitaire des Populations Exclues

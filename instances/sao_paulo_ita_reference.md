@@ -44,13 +44,13 @@ alliances:
 - consortium_amazonia_viva_reference
 - federation_des_cliniques_autonomes_reference
 - ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference
-- rede_paulista_de_distribuic_o_algor_tmica_reference
+- rede_paulista_de_distribuicao_algoritmica_reference
 - reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference
 oppositions:
 - bureau_zones_non_prioritaires_reference
 - consortiums_bancaires_financiarises_reference
 - consortiums_energetiques_des_megapoles_reference
-- frente_sert_o_livre_reference
+- frente_sertao_livre_reference
 - milices_concurrentes_des_droits_de_passage_reference
 - operateurs_de_zones_economiques_speciales_periurbaines_reference
 type_relation_dominante: rivalité
@@ -58,8 +58,6 @@ type_relation_dominante: rivalité
 annee_debut: 2033
 annee_fin: 
 
-etat_temporel: actif
-age_historique: déclinant
 generation: transition
 
 injection:
@@ -80,6 +78,9 @@ tensions_narratives: >
   La PMSP-AC est prise entre deux logiques également destructrices : capituler face aux consortiums privés qui offrent de reprendre des services entiers en échange d'une cession de souveraineté territoriale partielle, ou résister en continuant d'administrer à perte des zones où elle n'est plus que symboliquement présente, alimentant ainsi le discours des mouvements sécessionnistes qui l'accusent d'être une coquille vide prélevant des taxes sans rendre de services. Le mouvement Frente Sertão Livre, actif dans les périphéries nord, utilise précisément les carences de la Prefeitura comme argument de mobilisation. Simultanément, certains de ses propres cadres négocient discrètement avec des opérateurs privés ou des entités comme le SPAAR des transferts de compétences qui videraient l'institution de sa substance — créant une tension interne entre les 'réformistes pragmatiques' et les 'légitimistes' attachés à la forme institutionnelle comme valeur en soi.
 
 date_creation: 2026-06-27
+trajectoire: déclinant
+est_clandestin: false
+
 ---
 
 # Prefeitura Metropolitana de São Paulo — Administração de Continuidade (PMSP-AC)
@@ -111,12 +112,12 @@ La PMSP-AC est prise entre deux logiques également destructrices : capituler fa
 - [[consortium_amazonia_viva_reference]]
 - [[federation_des_cliniques_autonomes_reference]]
 - [[ligue_des_metropoles_du_sud_pour_les_infrastructures_libres_reference]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_reference]]
+- [[rede_paulista_de_distribuicao_algoritmica_reference]]
 - [[reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference]]
 **Opposants :**
 - [[bureau_zones_non_prioritaires_reference]]
 - [[consortiums_bancaires_financiarises_reference]]
 - [[consortiums_energetiques_des_megapoles_reference]]
-- [[frente_sert_o_livre_reference]]
+- [[frente_sertao_livre_reference]]
 - [[milices_concurrentes_des_droits_de_passage_reference]]
 - [[operateurs_de_zones_economiques_speciales_periurbaines_reference]]

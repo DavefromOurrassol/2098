@@ -79,13 +79,15 @@ import yaml
 from llm_client import call_llm  # tier structured_strict — canonique/référencé
 
 from instance_generation_common import (
-    SCENARIOS, VALID_VARS, VALID_ETATS, SLUG_PATTERN, INSTANCE_MAX_TOKENS,
+    SCENARIOS, VALID_VARS, VALID_TRAJECTOIRE, TRAJECTOIRE_INACTIVES, SLUG_PATTERN, INSTANCE_MAX_TOKENS,
     parse_md, get_client, call_claude_json, build_instance_prompt,
     validate_instance, clean_relations, write_instance_file,
     process_entity_scenario, instance_exists, load_instances_in_scenario,
     load_scenario_context, load_variables_states, load_etat_monde_reel,
     load_scenario_timeline_summary, detect_registre_leakage,
     _normalize_for_matching,
+    compute_temporal_distribution, format_temporal_summary,
+    format_concentration_warnings,
 )
 
 
@@ -187,14 +189,38 @@ def build_existing_entities_summary(entities):
 
 
 def slugify(text):
-    s = text.lower()
-    for fr, en in [("é", "e"), ("è", "e"), ("ê", "e"), ("ë", "e"),
-                   ("à", "a"), ("â", "a"), ("ä", "a"), ("ù", "u"),
-                   ("û", "u"), ("ü", "u"), ("î", "i"), ("ï", "i"),
-                   ("ô", "o"), ("ö", "o"), ("ç", "c")]:
-        s = s.replace(fr, en)
+    # Normalisation Unicode générique (NFD + suppression des marques
+    # diacritiques) plutôt qu'une table d'accents français en dur — la
+    # table précédente ne couvrait que é/è/ê/ë/à/â/ä/ù/û/ü/î/ï/ô/ö/ç et
+    # laissait passer tout caractère accentué non-français (portugais
+    # ã/õ/á/í/ó/ú, espagnol ñ, etc.) directement dans le re.sub suivant,
+    # qui le remplaçait par "_" au lieu de le translittérer. Bug trouvé
+    # le 8 août 2026 (chantier annee_fin) sur des slugs portugais cassés
+    # (ex. "rede_paulista_de_distribuic_o_algor_tmica" au lieu de
+    # "rede_paulista_de_distribuicao_algoritmica"), corrigé le 14 août
+    # 2026. Même principe déjà utilisé par _fold() dans gui/app.py.
+    import unicodedata
+    s = unicodedata.normalize("NFD", text or "")
+    s = "".join(c for c in s if unicodedata.category(c) != "Mn")
+    s = s.lower()
     s = re.sub(r"[^a-z0-9]+", "_", s)
     return s.strip("_")
+
+
+def _parse_optional_bool(value):
+    """Convertit la valeur brute (venant du GUI, select tri-état) du champ
+    est_clandestin en True/False/None. None = pas de contrainte (comme les
+    autres champs optionnels de hard_constraint : role/etat laissés vides).
+    Ajouté le 9 août 2026 (chantier trajectoire, Option 1 — voir SPEC_
+    CHANTIER_TRAJECTOIRE.md) : est_clandestin_ref est tri-état, un simple
+    checkbox HTML ne peut pas exprimer "indifférent" vs "false explicite",
+    d'où le select à 3 choix côté scripts_config.json plutôt qu'une case
+    à cocher classique."""
+    if value in (None, ""):
+        return None
+    if isinstance(value, bool):
+        return value
+    return str(value).strip().lower() == "true"
 
 
 # ---------------------------------------------------------------------------
@@ -232,8 +258,8 @@ que l'utilisateur a déjà fixée.
 - Nom : {idea['nom']}
 - Catégorie : {idea['category']}
 - Scénario de référence : {idea['scenario_ref']}
-- Rôle dans ce scénario : {idea['role']}
-- État dans ce scénario : {idea['etat']}
+- Rôle dans ce scénario : {idea.get('role') or "non spécifié par l'utilisateur — à déduire librement du nom/catégorie ci-dessus"}
+- État dans ce scénario : {idea.get('etat') or "non spécifié par l'utilisateur — à déduire librement"}
 
 ## CONTEXTE DU SCÉNARIO DE RÉFÉRENCE
 - État : {sc_ctx['state_of_system']} | Tension : {sc_ctx['tension_level']}/5 | Trajectoire : {sc_ctx['trajectory']}
@@ -477,7 +503,8 @@ def validate_auto_entity(entity, existing_entities, existing_names_in_batch):
 
 def write_entity_file(name, slug, category, description, tension,
                        variables, scenarios, custom_source=None,
-                       scenario_ref=None, role_ref=None, etat_ref=None):
+                       scenario_ref=None, role_ref=None, etat_ref=None,
+                       est_clandestin_ref=None):
     ENTITES_DIR.mkdir(parents=True, exist_ok=True)
     vars_yaml = "\n".join(f"  - {v}" for v in variables)
     scenarios_yaml = "\n".join(f"  - {s}" for s in scenarios)
@@ -495,6 +522,13 @@ def write_entity_file(name, slug, category, description, tension,
         extra_fm += f"scenario_ref: {scenario_ref}\n"
         extra_fm += f"role_ref: >\n  {role_ref_clean}\n"
         extra_fm += f"etat_ref: {etat_ref}\n"
+        # Chantier trajectoire (9 août 2026, Option 1) : n'écrit
+        # est_clandestin_ref QUE si une contrainte a explicitement été
+        # posée (True/False) — None signifie "pas de contrainte", et ne
+        # doit pas polluer le frontmatter avec une ligne "None" ou "null"
+        # qui laisserait croire à une contrainte "false" par défaut.
+        if est_clandestin_ref is not None:
+            extra_fm += f"est_clandestin_ref: {str(est_clandestin_ref).lower()}\n"
 
     content = f"""---
 name: {name}
@@ -628,16 +662,22 @@ def save_queue_with_template(remaining):
 
 
 def generate_instances_for_entity(client, entity_fm, scenarios, dry_run=False,
-                                   ancrage_temporel="libre"):
+                                   ancrage_temporel="libre", injection_custom=False):
     """Enchaîne la génération de toutes les instances d'UNE entité
     fraîchement créée, sur la liste de scénarios fournie. Continue même
-    si une instance échoue (résilience voulue)."""
+    si une instance échoue (résilience voulue).
+
+    injection_custom (15 août 2026) : propagé à process_entity_scenario
+    — True uniquement depuis process_custom_idea (idée utilisateur
+    explicite), False depuis le mode auto (génération de masse, pas
+    d'intention d'injection délibérée sur les variables)."""
     stats = {"created": 0, "skipped": 0, "errors": 0}
     print(f"  Instances ({len(scenarios)} scénario(s)) :")
     for scenario in scenarios:
         outcome = process_entity_scenario(client, entity_fm, scenario, dry_run=dry_run,
                                            ancrage_temporel=ancrage_temporel,
-                                           log_prefix="    →")
+                                           log_prefix="    →",
+                                           injection_custom=injection_custom)
         if outcome["status"] == "created":
             stats["created"] += 1
         elif outcome["status"] == "skipped":
@@ -660,12 +700,21 @@ def process_custom_idea(client, idea, dry_run=False, ancrage_temporel="libre"):
 
     print(f"\n=== {nom} ===")
 
+    # Bug trouvé le 11 août 2026 (test réel, mode auto-suggest → custom) :
+    # ces deux rejets précoces retournaient directement sans jamais rien
+    # imprimer -- contrairement à tous les autres cas d'échec de cette
+    # fonction (archétype, instance), qui affichent toujours leur motif.
+    # L'entrée finissait bien dans needs_review.yaml avec la bonne raison,
+    # mais l'utilisateur voyait juste l'en-tête "=== Nom ===" suivi de rien,
+    # sans savoir que cette idée avait été rejetée ni pourquoi.
     if category not in VALID_CATEGORIES:
-        return {"status": "needs_review", "idea": idea,
-                "reason": f"category invalide : {category!r}"}
+        reason = f"category invalide : {category!r}"
+        print(f"  ✗ Rejetée : {reason}")
+        return {"status": "needs_review", "idea": idea, "reason": reason}
     if scenario_ref not in SCENARIOS:
-        return {"status": "needs_review", "idea": idea,
-                "reason": f"scenario_ref invalide : {scenario_ref!r}"}
+        reason = f"scenario_ref invalide : {scenario_ref!r}"
+        print(f"  ✗ Rejetée : {reason}")
+        return {"status": "needs_review", "idea": idea, "reason": reason}
 
     scenarios = scenario_hint if scenario_hint else list(SCENARIOS)
     scenarios = [s for s in scenarios if s in SCENARIOS]
@@ -697,6 +746,8 @@ def process_custom_idea(client, idea, dry_run=False, ancrage_temporel="libre"):
     slug = slugify(nom)
     print("[3/3] Injection de l'entité...")
     zone_hint = idea.get("zone_hint") or None
+    # Chantier trajectoire (9 août 2026, Option 1) — voir _parse_optional_bool()
+    est_clandestin_ref = _parse_optional_bool(idea.get("est_clandestin"))
 
     entity_fm = {
         "name": nom, "slug": slug, "category": category,
@@ -706,6 +757,7 @@ def process_custom_idea(client, idea, dry_run=False, ancrage_temporel="libre"):
         "scenario_ref": scenario_ref,
         "role_ref": idea.get("role"),
         "etat_ref": idea.get("etat"),
+        "est_clandestin_ref": est_clandestin_ref,
         "zone_hint": zone_hint,
     }
 
@@ -715,6 +767,7 @@ def process_custom_idea(client, idea, dry_run=False, ancrage_temporel="libre"):
             archetype["tension_fondamentale"], archetype["variables_potentielles"],
             scenarios, custom_source=idea.get("source"),
             scenario_ref=scenario_ref, role_ref=idea.get("role"), etat_ref=idea.get("etat"),
+            est_clandestin_ref=est_clandestin_ref,
         )
         append_to_entities_list({
             "nom": nom, "slug": slug, "categorie": category,
@@ -729,13 +782,15 @@ def process_custom_idea(client, idea, dry_run=False, ancrage_temporel="libre"):
     # Enchaînement automatique : génération des instances pour cette entité
     print(f"[Instances] Génération automatique pour {len(scenarios)} scénario(s)...")
     instance_stats = generate_instances_for_entity(client, entity_fm, scenarios, dry_run=dry_run,
-                                                     ancrage_temporel=ancrage_temporel)
+                                                     ancrage_temporel=ancrage_temporel,
+                                                     injection_custom=True)
 
     return {
         "status": "injected", "idea": idea, "slug": slug,
         "scenarios": scenarios, "archetype": archetype,
         "scenario_ref": scenario_ref,
         "role_ref": idea.get("role"), "etat_ref": idea.get("etat"),
+        "est_clandestin_ref": est_clandestin_ref,
         "instance_stats": instance_stats,
     }
 
@@ -759,6 +814,13 @@ def run_custom_mode(client, dry_run, ancrage_temporel="libre"):
             outcome = process_custom_idea(client, idea, dry_run=dry_run,
                                            ancrage_temporel=ancrage_temporel)
         except Exception as e:
+            # Corrigé le 15 août 2026 (test réel "Gelecek Meclisi" —
+            # KeyError('role') totalement silencieux, découvert seulement
+            # en fouillant needs_review.yaml après coup) : avant, cette
+            # exception était capturée sans jamais s'afficher à l'écran,
+            # contrairement au rejet category/scenario_ref invalide
+            # (corrigé le 11 août pour le même symptôme, cas différent).
+            print(f"  ✗ Exception : {e}")
             outcome = {"status": "needs_review", "idea": idea, "error": str(e)}
 
         if dry_run:
@@ -815,10 +877,13 @@ def analyze_entity_coverage():
     geo_coverage  = {}   # scenario → {zone: count}
     geo_absent    = {}   # scenario → [slug_zone sans instance]
     cat_coverage  = {}   # category → count global
+    year_coverage = {}   # scenario → {annee_debut (int): count} — dimension
+                         # temporelle (backlog Partie 1 #2, 13 août 2026)
     existing_entities = load_entities_list()
 
     for sc in SCENARIOS:
         geo_coverage[sc] = {}
+        year_coverage[sc] = {}
 
     if INSTANCES_DIR.exists():
         for path in sorted(INSTANCES_DIR.glob("*.md")):
@@ -830,6 +895,12 @@ def analyze_entity_coverage():
             if isinstance(loc, dict):
                 zone = loc.get("zone") or "inconnue"
                 geo_coverage[sc][zone] = geo_coverage[sc].get(zone, 0) + 1
+            try:
+                annee = int(fm.get("annee_debut"))
+            except (TypeError, ValueError):
+                annee = None
+            if annee is not None:
+                year_coverage[sc][annee] = year_coverage[sc].get(annee, 0) + 1
 
     # Zones absentes : présentes dans geographie/ mais sans aucune instance
     for sc in SCENARIOS:
@@ -846,6 +917,7 @@ def analyze_entity_coverage():
         "geo_coverage":       geo_coverage,
         "geo_absent":         geo_absent,
         "cat_coverage":       cat_coverage,
+        "year_coverage":      year_coverage,
         "existing_entities":  existing_entities,
     }
 
@@ -883,6 +955,24 @@ def build_entity_analysis_summary(coverage, scenario_filter=None):
         lines.append("  " + ", ".join(f"{c}({n})" for c, n in sorted(cc.items(), key=lambda x: -x[1])))
     else:
         lines.append("  (aucune entité)")
+
+    # Dimension temporelle (backlog Partie 1 #2, 13 août 2026) : bandes
+    # larges par scénario pour le signal actionnable, plus détection de
+    # concentration par année exacte vault-entier (même granularité que
+    # celle qui avait révélé 22% sur 2041 avant le correctif annee_fin).
+    lines.append("")
+    lines.append("## Distribution temporelle actuelle (annee_debut, bandes larges)")
+    for sc in scenarios:
+        lines.extend(format_temporal_summary(coverage["year_coverage"].get(sc, {}), sc))
+
+    global_year_counts = {}
+    for sc_counts in coverage["year_coverage"].values():
+        for year, n in sc_counts.items():
+            global_year_counts[year] = global_year_counts.get(year, 0) + n
+    concentration_lines = format_concentration_warnings(global_year_counts, "vault entier, toutes entités")
+    if concentration_lines:
+        lines.append("")
+        lines.extend(concentration_lines)
 
     return "\n".join(lines)
 
@@ -938,7 +1028,19 @@ Ces idées seront écrites dans queue.yaml pour être inspectées et créées en
 
 ## CONSIGNE
 - Compense les déséquilibres : couvre les zones géographiques sous-représentées,
-  les catégories peu présentes.
+  les catégories peu présentes, et les bandes temporelles sous-représentées
+  (proche/moyen/lointain ci-dessus) — sans forcer artificiellement une
+  répartition parfaitement égale, l'objectif est d'éviter qu'une bande ou
+  une année précise ne se retrouve démesurément sur-représentée.
+- Si une concentration sur une année précise est signalée ci-dessus, évite
+  de proposer une nouvelle entité sur cette même année.
+- Pour toute entité dont l'année de naissance narrative (annee_debut) sera
+  proche d'aujourd'hui (avant 2036), privilégie une idée qui pourra
+  naturellement s'ancrer sur un mouvement de fond réel déjà identifié
+  (l'ancrage précis se fera à la génération de l'instance, mais une idée
+  clairement rattachable à une dynamique documentée a plus de chances d'y
+  parvenir qu'une idée arbitraire) plutôt que de viser cette bande pour la
+  seule raison de rééquilibrer la distribution.
 - Chaque entité doit avoir une fonction systémique distincte des existantes.
 - Propose le scénario de référence le plus cohérent pour chaque entité.
 - Pour un ancrage géographique précis, mentionne le lieu dans le champ role.
@@ -951,7 +1053,7 @@ Réponds UNIQUEMENT en JSON, sans aucun texte autour, format exact :
       "nom": "Nom de l'entité",
       "category": "{'|'.join(VALID_CATEGORIES)}",
       "role": "Rôle précis dans le scénario de référence, 2-3 lignes, avec lieu géographique explicite.",
-      "etat": "{'|'.join(VALID_ETATS)}",
+      "etat": "{'|'.join(VALID_TRAJECTOIRE)}",
       "scenario_ref": "nom_du_scenario",
       "scenario_hint": null,
       "source": "auto_generated",
@@ -967,22 +1069,38 @@ Réponds UNIQUEMENT en JSON, sans aucun texte autour, format exact :
 
 def run_auto_suggest_mode(client, dry_run, n=None, scenario_filter=None):
     """Mode auto-suggest : analyse le vault, génère des idées, les ajoute à queue.yaml."""
+    # sys.stdin.isatty() : évite le blocage/crash (EOFError) quand ce script est
+    # lancé sans terminal interactif derrière (GUI Flask, cron) — même bug que
+    # celui corrigé le 11 juillet 2026 sur --mode, ici sur les deux prompts
+    # secondaires de ce mode. Hors terminal interactif, on retombe directement
+    # sur la valeur par défaut au lieu de tenter un input().
     if n is None:
-        raw_n = input("Nombre d'idées à générer ? [défaut: 3] : ").strip()
-        try:
-            n = int(raw_n) if raw_n else 3
-            if n < 1:
+        if sys.stdin.isatty():
+            raw_n = input("Nombre d'idées à générer ? [défaut: 3] : ").strip()
+            try:
+                n = int(raw_n) if raw_n else 3
+                if n < 1:
+                    n = 3
+            except ValueError:
                 n = 3
-        except ValueError:
+        else:
             n = 3
 
     if scenario_filter is None:
-        scenario_raw = input(
-            "Scénario de référence ciblé ? (Entrée pour laisser le LLM choisir) [{}] : ".format(
-                "|".join(SCENARIOS)
-            )
-        ).strip()
-        scenario_filter = scenario_raw if scenario_raw in SCENARIOS else None
+        if sys.stdin.isatty():
+            scenario_raw = input(
+                "Scénario de référence ciblé ? (Entrée pour laisser le LLM choisir) [{}] : ".format(
+                    "|".join(SCENARIOS)
+                )
+            ).strip()
+            # scenario_filter est traité comme une liste partout en aval
+            # (step_auto_suggest_entities boucle dessus avec "for s in scenario_filter")
+            # — jamais comme une chaîne simple, sous peine d'itérer caractère par
+            # caractère sur le nom du scénario.
+            scenario_filter = [scenario_raw] if scenario_raw in SCENARIOS else None
+        # sinon (GUI/cron, pas de terminal) : scenario_filter reste None,
+        # ce qui correspond au comportement par défaut documenté dans le
+        # prompt ci-dessus ("Entrée pour laisser le LLM choisir").
 
     print("\n[1/2] Analyse de la couverture du vault...")
     coverage = analyze_entity_coverage()
@@ -1030,24 +1148,34 @@ def run_auto_suggest_mode(client, dry_run, n=None, scenario_filter=None):
 
 def run_auto_mode(client, dry_run, n=None, category_hint=None, scenarios_only=None,
                    ancrage_temporel="libre"):
+    # Même garde que dans run_auto_suggest_mode ci-dessus : pas d'input()
+    # si aucun terminal interactif n'est disponible (GUI Flask, cron).
     if n is None:
-        raw = input("Combien d'entités générer ? : ").strip()
-        try:
-            n = int(raw)
-        except ValueError:
-            print("Nombre invalide.")
+        if sys.stdin.isatty():
+            raw = input("Combien d'entités générer ? : ").strip()
+            try:
+                n = int(raw)
+            except ValueError:
+                print("Nombre invalide.")
+                return
+        else:
+            print("Nombre d'entités non fourni (--n) et aucun terminal interactif "
+                  "disponible pour le demander — arrêt.")
             return
     if n < 1:
         print("Le nombre doit être >= 1.")
         return
 
     if category_hint is None:
-        category_raw = input(
-            "Catégorie imposée (optionnel, Entrée pour libre) [{}] : ".format(
-                "|".join(VALID_CATEGORIES)
-            )
-        ).strip()
-        category_hint = category_raw if category_raw in VALID_CATEGORIES else None
+        if sys.stdin.isatty():
+            category_raw = input(
+                "Catégorie imposée (optionnel, Entrée pour libre) [{}] : ".format(
+                    "|".join(VALID_CATEGORIES)
+                )
+            ).strip()
+            category_hint = category_raw if category_raw in VALID_CATEGORIES else None
+        # sinon (GUI/cron) : category_hint reste None = libre, comportement
+        # par défaut documenté dans le prompt ci-dessus.
 
     existing_entities = load_entities_list()
 
@@ -1144,6 +1272,14 @@ def run_auto_mode(client, dry_run, n=None, category_hint=None, scenarios_only=No
     print(f"Instances : {total_instance_stats['created']} créée(s) | "
           f"{total_instance_stats['skipped']} déjà existante(s) | "
           f"{total_instance_stats['errors']} erreur(s)")
+
+    # Correctif du 16 août 2026 : seul run_custom_mode() enchaînait le
+    # cycle post-injection — le mode auto (qui injecte pourtant lui aussi
+    # directement dans le vault, contrairement à auto-suggest qui ne fait
+    # qu'alimenter queue.yaml) n'avait jamais cet appel. Trouvé en
+    # discutant du même trou déjà corrigé sur generate_instances.py.
+    if not dry_run and len(created) > 0:
+        run_post_injection_cycle()
 
 
 # ---------------------------------------------------------------------------

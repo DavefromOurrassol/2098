@@ -46,7 +46,7 @@ alliances:
 - institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability
 - oracle_des_seuils_new_sustainability
 - parlement_deliberatif_mondial_new_sustainability
-- rede_paulista_de_distribuic_o_algor_tmica_new_sustainability
+- rede_paulista_de_distribuicao_algoritmica_new_sustainability
 - reseau_des_agences_climatiques_regionales_new_sustainability
 - tribunal_algorithmique_de_bruxelles_new_sustainability
 - tribunal_gouvernance_algorithmique_bruxelles_new_sustainability
@@ -72,8 +72,6 @@ type_relation_dominante: coopération
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: ère cognitive
 
 injection:
@@ -94,6 +92,9 @@ tensions_narratives: >
   La légitimité performative du CGAI repose sur ses succès passés — mais que se passe-t-il si un de ses modèles produit une recommandation catastrophiquement erronée dans un domaine inédit ? La chambre d'éthique, créée pour auditer les biais algorithmiques, commence à identifier des dérives systématiques favorisant les économies déjà industrialisées dans les calculs de redistribution énergétique, créant une fracture silencieuse entre le Sud global et les institutions. Par ailleurs, une génération entière de responsables politiques n'a jamais gouverné sans le CGAI — posant la question vertigineuse de ce qui subsisterait si le système s'effondrait.
 
 date_creation: 2026-06-15
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Conseil de Gouvernance Algorithmique Intégrée (CGAI)
@@ -128,7 +129,7 @@ La légitimité performative du CGAI repose sur ses succès passés — mais que
 - [[institut_de_philosophie_des_systemes_hybrides_d_helsinki_new_sustainability]]
 - [[oracle_des_seuils_new_sustainability]]
 - [[parlement_deliberatif_mondial_new_sustainability]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_new_sustainability]]
+- [[rede_paulista_de_distribuicao_algoritmica_new_sustainability]]
 - [[reseau_des_agences_climatiques_regionales_new_sustainability]]
 - [[tribunal_algorithmique_de_bruxelles_new_sustainability]]
 - [[tribunal_gouvernance_algorithmique_bruxelles_new_sustainability]]

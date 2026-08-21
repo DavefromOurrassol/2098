@@ -42,7 +42,7 @@ alliances:
 - reseaux_de_solidarite_horizontale_post_effondrement_breakdown
 oppositions:
 - arctic_passage_authority_breakdown
-- autorite_passage_arctique_breakdown
+- arctic_passage_authority_breakdown
 - blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
 - cargo_mombasa_crrc_breakdown
 - cartels_logistiques_regionaux_breakdown
@@ -66,8 +66,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2044
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -97,6 +95,9 @@ tensions_narratives: 'Leur résistance diffuse accélère l''effondrement qu''il
   guerre par procuration. La question de savoir si leurs actes constituent de la résistance
   ou du terrorisme est au cœur des rares débats institutionnels encore actifs à Genève-Bunker.'
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Saboteurs des Corridors de Transit
@@ -131,7 +132,7 @@ Leur résistance diffuse accélère l'effondrement qu'ils subissent eux-mêmes :
 - [[reseaux_de_solidarite_horizontale_post_effondrement_breakdown]]
 **Opposants :**
 - [[arctic_passage_authority_breakdown]]
-- [[autorite_passage_arctique_breakdown]]
+- [[arctic_passage_authority_breakdown]]
 - [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]]
 - [[cargo_mombasa_crrc_breakdown]]
 - [[cartels_logistiques_regionaux_breakdown]]

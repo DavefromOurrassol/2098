@@ -62,7 +62,7 @@ oppositions:
 - front_souverainiste_de_l_information_regionale_policy_reform
 - leena_vainala_policy_reform
 - mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform
-- rede_paulista_de_distribuic_o_algor_tmica_policy_reform
+- rede_paulista_de_distribuicao_algoritmica_policy_reform
 - reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
 - reseau_des_journalistes_d_investigation_energetique_policy_reform
 - reseau_des_regulateurs_numeriques_souverains_rrns_policy_reform
@@ -70,8 +70,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2036
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -110,6 +108,9 @@ localisation:
   zone: null
   lieu: Genève, Singapour, Washington D.C. (présence multi-sites)
   type_lieu: infrastructure
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Consortiums Privés de Gouvernance Algorithmique
@@ -162,7 +163,7 @@ La tension centrale réside dans l'irréconciliable contradiction entre leur lé
 - [[front_souverainiste_de_l_information_regionale_policy_reform]]
 - [[leena_vainala_policy_reform]]
 - [[mouvement_pour_la_souverainete_energetique_commune_msec_policy_reform]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_policy_reform]]
+- [[rede_paulista_de_distribuicao_algoritmica_policy_reform]]
 - [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]]
 - [[reseau_des_journalistes_d_investigation_energetique_policy_reform]]
 - [[reseau_des_regulateurs_numeriques_souverains_rrns_policy_reform]]

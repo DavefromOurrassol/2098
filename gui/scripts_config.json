@@ -197,9 +197,9 @@
         "type": "slug_select",
         "label": "Zone",
         "mode_only": "semi_guide",
-        "slug_type": "zones_hier",
+        "slug_type": "zones_hier_journal",
         "optional": true,
-        "description": "Dépend du scénario choisi ci-dessus."
+        "description": "Dépend du scénario choisi ci-dessus. Ne liste que les zones ayant un journal — les sous-zones plus fines ne sont pas sélectionnables ici."
       },
       {
         "flag": "--article-titre-suggere",
@@ -252,7 +252,7 @@
         "label": "Scénarios à couvrir",
         "mode_only": "forcer",
         "slug_type": "forcer_scenarios",
-        "description": "Restreint automatiquement à ce qui est disponible pour l'élément choisi ci-dessus. \"Tous\" = tous les scénarios où il est disponible (pas nécessairement les 6). ⚠ Mécanisme neuf, à vérifier en conditions réelles -- voir échange du 2 août 2026.",
+        "description": "Restreint automatiquement à ce qui est disponible pour l'élément choisi ci-dessus. \"Tous\" = tous les scénarios où il est disponible (pas nécessairement les 6).",
         "slug_extra_params": {
           "slug": "--forcer-slug",
           "element_type": "--forcer-type"
@@ -272,7 +272,7 @@
         }
       }
     ],
-    "gui_verified": false,
+    "gui_verified": true,
     "mode_select": {
       "label": "Mode de génération",
       "choices": [
@@ -473,7 +473,7 @@
         "flag": "--update",
         "type": "checkbox",
         "label": "Zones manquantes seulement",
-        "description": "N'ajoute que les zones absentes de journaux.yaml",
+        "description": "N'ajoute que les zones qui n'ont pas encore de journal, sans toucher aux journaux déjà créés.",
         "default": false
       },
       {
@@ -643,7 +643,7 @@
           "custom",
           "auto"
         ],
-        "description": "8 août 2026 : le mode 'libre' (comportement historique) donne quasi toujours la priorité aux jalons de la chronologie du scénario sur etat_du_monde_reel.md, y compris pour une origine proche de 2026 — confirmé par test réel. Choisir 'recent' pour forcer délibérément une entité qui émerge maintenant, ancrée dans l'état du monde réel plutôt que dans un jalon futur du scénario. Sans effet en mode auto-suggest (ne crée pas d'instances)."
+        "description": "Le mode 'libre' (par défaut) donne presque toujours la priorité aux jalons du scénario, même pour une origine proche de 2026. Choisis 'récent' pour forcer délibérément une entité qui émerge maintenant, ancrée dans l'actualité réelle plutôt que dans un jalon futur du scénario. Sans effet en mode auto-suggest (ne crée pas d'instances)."
       },
       {
         "flag": "--dry-run",
@@ -732,23 +732,43 @@
       {
         "key": "etat",
         "type": "select",
-        "label": "État",
+        "label": "Trajectoire (contrainte dure)",
         "choices": [
           {
-            "value": "actif",
-            "label": "actif"
+            "value": "émergent",
+            "label": "émergent"
           },
           {
-            "value": "disparu",
-            "label": "disparu"
+            "value": "marginal",
+            "label": "marginal"
+          },
+          {
+            "value": "ascendant",
+            "label": "ascendant"
+          },
+          {
+            "value": "dominant",
+            "label": "dominant"
+          },
+          {
+            "value": "mature",
+            "label": "mature"
+          },
+          {
+            "value": "déclinant",
+            "label": "déclinant"
+          },
+          {
+            "value": "résiduel",
+            "label": "résiduel"
           },
           {
             "value": "transformé",
             "label": "transformé"
           },
           {
-            "value": "clandestin",
-            "label": "clandestin"
+            "value": "disparu",
+            "label": "disparu"
           },
           {
             "value": "historique",
@@ -757,6 +777,22 @@
           {
             "value": "mythifié",
             "label": "mythifié"
+          }
+        ],
+        "optional": true
+      },
+      {
+        "key": "est_clandestin",
+        "type": "select",
+        "label": "Clandestin (contrainte dure)",
+        "choices": [
+          {
+            "value": "true",
+            "label": "oui — force clandestin"
+          },
+          {
+            "value": "false",
+            "label": "non — force non-clandestin"
           }
         ],
         "optional": true
@@ -823,7 +859,7 @@
       }
     ],
     "config_fields_mode": "custom",
-    "gui_verified": false
+    "gui_verified": true
   },
   {
     "id": "inject_events",
@@ -1205,7 +1241,7 @@
     "icon": "✨",
     "section": "entites_creation",
     "script": "enrich_minimal.py",
-    "description": "Complète via IA les fiches créées a minima (champs manquants), pour les amener au même niveau de détail que les autres. Si la résolution des conflits est active, les deux mêmes rapports que sur fix_alliances_oppositions sont réinitialisés à chaque run réel : ils ne reflètent que l'état du DERNIER run.",
+    "description": "Complète automatiquement les fiches qui n'ont que le strict minimum, pour qu'elles aient autant de détails que les autres. Si la résolution des conflits d'alliances/oppositions est activée, les rapports ci-dessous ne montrent que le dernier lancement, pas un historique cumulé.",
     "requires": [],
     "options": [
       {
@@ -1285,7 +1321,7 @@
         "readonly": true
       }
     ],
-    "gui_verified": false,
+    "gui_verified": true,
     "required_one_of": [
       [
         "--scenario",
@@ -1299,7 +1335,7 @@
     "icon": "🤝",
     "section": "entites_nettoyage",
     "script": "fix_alliances_oppositions.py",
-    "description": "Corrige les alliances/oppositions vides sur les fiches déjà enrichies (prompt ciblé, liste réelle des instances du scénario fournie au LLM). Complète aussi la réciprocité (si A cite B en alliance/opposition, B doit citer A en retour) et peut résoudre automatiquement les conflits de réciprocité détectés selon la règle \"opposition prioritaire\" (une opposition déclarée l'emporte sur une alliance déclarée en cas de contradiction) — rétroactif, modifie les fiches en conflit sur disque. Les deux rapports ci-dessous (conflits détectés / résolus) sont réinitialisés à chaque run réel (pas en simulation) : ils ne reflètent que l'état du DERNIER run, plus aucun historique cumulé.",
+    "description": "Remplit les alliances et oppositions manquantes sur les fiches déjà complétées, en s'assurant que chaque relation est bien réciproque (si A dit qu'il est allié à B, B doit le dire aussi) — et peut résoudre automatiquement les cas où deux fiches se contredisent (l'une dit « allié », l'autre dit « opposé »). Les rapports ci-dessous ne montrent que le dernier lancement, pas un historique cumulé.",
     "requires": [],
     "options": [
       {
@@ -1322,52 +1358,52 @@
       {
         "flag": "--slug",
         "type": "slug_select",
-        "label": "Une seule fiche (passe de complétion LLM uniquement)",
+        "label": "Une seule fiche (uniquement pour le remplissage par l'IA)",
         "slug_type": "instances",
         "optional": true,
-        "description": "Limite la passe LLM (génération des alliances/oppositions vides) à une fiche précise. Sans effet sur la passe de réciprocité ni sur la résolution de conflits, qui portent toujours sur le scénario entier."
+        "description": "Limite le remplissage des alliances/oppositions manquantes à une seule fiche. Les étapes suivantes (vérification de réciprocité, résolution des conflits) continuent, elles, de porter sur tout le scénario."
       },
       {
         "flag": "--limit",
         "type": "number",
-        "label": "Nombre de fiches max (passe LLM)",
-        "description": "Limite le nombre de fiches traitées par scénario dans la passe LLM — utile pour estimer le coût avant un run complet. Sans effet sur la passe de réciprocité ni la résolution de conflits.",
+        "label": "Nombre de fiches max (remplissage par l'IA)",
+        "description": "Limite le nombre de fiches traitées par l'IA à chaque scénario — utile pour estimer le coût avant un lancement complet. Les étapes suivantes ne sont pas concernées.",
         "min": 1,
         "optional": true
       },
       {
         "flag": "--dry-run",
         "type": "checkbox",
-        "label": "Simulation (rien écrit sur disque, mais appels LLM réels sur la passe de complétion)",
-        "description": "N'écrit rien sur disque, quelle que soit la passe active. ⚠️ Si la passe LLM est active (pas de --reciprocite-seule), elle appelle quand même le LLM pour de vrai — seule l'écriture du résultat est sautée.",
+        "label": "Simulation (rien n'est écrit, mais l'IA est quand même sollicitée)",
+        "description": "N'écrit rien sur le disque. ⚠️ Si le remplissage par l'IA est actif (case « Réciprocité seule » décochée ci-dessous), l'IA est quand même appelée pour de vrai — un coût réel est engagé — seule l'écriture du résultat final est sautée.",
         "default": false
       },
       {
         "flag": "--reciprocite-seule",
         "type": "checkbox",
-        "label": "Réciprocité seule (aucun appel LLM)",
-        "description": "Saute entièrement la passe de complétion LLM, lance uniquement la passe de réciprocité (et la résolution de conflits si cochée ci-dessous).",
+        "label": "Réciprocité seule (sans l'IA)",
+        "description": "Ignore complètement le remplissage par l'IA ; vérifie seulement la réciprocité des alliances/oppositions déjà présentes (et résout les conflits, si la case ci-dessous est cochée).",
         "default": false
       },
       {
         "flag": "--skip-reciprocite",
         "type": "checkbox",
-        "label": "Sans passe de réciprocité",
-        "description": "Lance la passe LLM mais saute la passe de réciprocité après. ⚠️ Rend \"Résoudre les conflits\" ci-dessous sans effet (la résolution ne peut agir que sur les conflits que la passe de réciprocité détecte) — ne pas cocher les deux ensemble.",
+        "label": "Sans vérification de réciprocité",
+        "description": "Remplit les alliances/oppositions manquantes avec l'IA, mais sans vérifier ensuite la réciprocité. ⚠️ Rend la case « Résoudre les conflits » ci-dessous inutile (elle ne peut agir que sur des conflits détectés par cette vérification) — ne coche pas les deux en même temps.",
         "default": false
       },
       {
         "flag": "--resoudre-conflits",
         "type": "checkbox",
         "label": "Résoudre les conflits (opposition prioritaire, rétroactif)",
-        "description": "Après la passe de réciprocité, résout automatiquement les conflits détectés selon la règle \"opposition prioritaire\" : pour chaque conflit (une fiche cite l'autre en alliance, l'autre la cite déjà en opposition), le slug est retiré des alliances de la première. RÉTROACTIF : modifie les fiches déjà en conflit sur disque, sauf si \"Simulation\" est cochée. Chaque résolution est journalisée dans documentation/need_action/fix_alliances_conflits_reciprocite_resolus.md. Sans effet si \"Sans passe de réciprocité\" est cochée.",
+        "description": "Après la vérification de réciprocité, corrige automatiquement les cas contradictoires : si une fiche dit « allié » avec une autre qui la dit « opposée », l'opposition l'emporte — l'alliance est retirée. Modifie réellement les fiches concernées (sauf si « Simulation » est cochée). Sans effet si « Sans vérification de réciprocité » est cochée.",
         "default": false
       },
       {
         "flag": "--bascule-en-opposition",
         "type": "checkbox",
         "label": "Résolution forte (bascule aussi en opposition)",
-        "description": "Avec \"Résoudre les conflits\" : au lieu de simplement retirer l'entité des alliances, l'ajoute aussi explicitement aux oppositions. Par défaut (décoché), résolution conservatrice : retrait seul, sans rien ajouter.",
+        "description": "Avec « Résoudre les conflits » activé : au lieu de simplement retirer l'alliance en trop, ajoute aussi explicitement l'entité aux oppositions. Par défaut, la correction est plus prudente : elle retire seulement, sans rien ajouter.",
         "default": false,
         "depends_on": "--resoudre-conflits",
         "advanced": true
@@ -1376,16 +1412,16 @@
     "yaml_files": [
       {
         "path": "documentation/need_action/fix_alliances_conflits_reciprocite.md",
-        "label": "documentation/need_action/fix_alliances_conflits_reciprocite.md",
+        "label": "Rapport des conflits détectés (dernier lancement)",
         "readonly": true
       },
       {
         "path": "documentation/need_action/fix_alliances_conflits_reciprocite_resolus.md",
-        "label": "documentation/need_action/fix_alliances_conflits_reciprocite_resolus.md",
+        "label": "Rapport des conflits résolus (dernier lancement)",
         "readonly": true
       }
     ],
-    "gui_verified": false,
+    "gui_verified": true,
     "required_one_of": [
       [
         "--scenario",
@@ -1485,7 +1521,7 @@
         "label": "Fiche cible",
         "slug_type": "entities",
         "optional": true,
-        "description": "La fiche à annuler, identifiée par son nom de fichier technique (slug). Laisser vide pour traiter la file d'attente undo_queue.yaml à la place.",
+        "description": "La fiche à annuler, identifiée par son nom de fichier technique (slug). Laisser vide pour traiter automatiquement tout ce qui est en attente d'annulation.",
         "slug_type_field": "--type",
         "slug_type_map": {
           "signal": "signals",
@@ -1499,23 +1535,23 @@
         "choices": [
           {
             "value": "instance",
-            "label": "instance"
+            "label": "Instance (dans un scénario)"
           },
           {
             "value": "event_instance",
-            "label": "event_instance"
+            "label": "Instance d'événement (dans un scénario)"
           },
           {
             "value": "entite",
-            "label": "entite"
+            "label": "Entité (archétype, hors scénario)"
           },
           {
             "value": "event",
-            "label": "event"
+            "label": "Événement (archétype, hors scénario)"
           },
           {
             "value": "signal",
-            "label": "signal"
+            "label": "Signal faible"
           }
         ],
         "optional": true,
@@ -1607,7 +1643,7 @@
     "icon": "🧪",
     "section": "geo_diagnostic",
     "script": "scan_geographie_complet.py",
-    "description": "Lance en une fois tout ou partie des 5 vérifications géographiques (zones manquantes, catégories, cohérence pays/zone, conventions, patron spatial), avec un résumé final. Étape optionnelle en plus : demander à l'IA de rédiger des propositions de correction, à relire toi-même.",
+    "description": "Lance en une fois tout ou partie des 5 vérifications géographiques (zones manquantes, catégories, cohérence pays/zone, conventions, répartition spatiale des zones), avec un résumé final. Étape optionnelle en plus : demander à l'IA de rédiger des propositions de correction, à relire toi-même.",
     "requires": [],
     "options": [
       {
@@ -1690,7 +1726,7 @@
       {
         "flag": "--no-cache-patron-spatial",
         "type": "checkbox",
-        "label": "Revérifier avec l'IA malgré le cache",
+        "label": "Revérifier avec l'IA (ignorer le résultat déjà calculé)",
         "description": "Le dernier contrôle réutilise normalement un résultat déjà calculé pour aller plus vite. Cette case force un nouveau calcul complet",
         "default": false,
         "depends_on": "--run-patron-spatial"
@@ -1842,7 +1878,7 @@
     "icon": "🔬",
     "section": "geo_diagnostic",
     "script": "zoning_topdown.py",
-    "description": "Génère à la main, pour un cas précis, la même proposition que produirait l'IA — sert à tester/déboguer sans passer par l'onglet Carte.",
+    "description": "Génère, pour un cas précis que tu choisis, la même proposition de zone que l'IA produirait normalement — utile pour vérifier son comportement sans passer par l'onglet Carte.",
     "requires": [],
     "options": [
       {
@@ -1857,7 +1893,7 @@
         "flag": "--pays",
         "type": "text",
         "label": "Pays concernés (1er cas : pays sans zone)",
-        "description": "Un ou plusieurs noms de pays séparés par des espaces. À utiliser seul (sans le champ ci-dessous) -- NON VÉRIFIÉ dans le GUI cette session, à tester avant de s'y fier (voir remarque séparée).",
+        "description": "Un ou plusieurs noms de pays séparés par des espaces. À utiliser seul (sans le champ ci-dessous). ⚠️ Comportement pas encore confirmé en usage réel — vérifie le résultat avant de t'y fier.",
         "optional": true
       },
       {
@@ -1890,7 +1926,7 @@
     "icon": "🔗",
     "section": "geo_diagnostic",
     "script": "reparenter_sous_zones_orphelines.py",
-    "description": "Après le déplacement d'un pays vers une nouvelle zone, retrouve et rattache les sous-zones (villes, régions) qui pointaient encore vers l'ancienne. Déjà appelé automatiquement après un reparent manuel (onglet Carte) et après generer_zones_topdown --apply-topdown ; ces deux appels auto avalent silencieusement leurs erreurs. Cette entrée manuelle sert de filet de secours pour vérifier/rattraper après coup.",
+    "description": "Après le déplacement d'un pays vers une nouvelle zone, retrouve et rattache les sous-zones (villes, régions) restées pointées vers l'ancienne zone. Ce rattachement se fait déjà automatiquement après un déplacement dans l'onglet Carte ou une génération de zone par l'IA, mais ces passes automatiques peuvent silencieusement rater un cas. Ce bouton sert de filet de sécurité pour vérifier et rattraper après coup.",
     "requires": [],
     "options": [
       {
@@ -1907,7 +1943,7 @@
         "label": "Zone cible à corriger",
         "slug_type": "zones_a_reparenter",
         "required": true,
-        "description": "Seules les zones N1 ayant actuellement au moins une sous-zone orpheline en attente sont listées (au lieu de toutes les zones N1 du scénario). Liste vide = rien à corriger pour ce scénario en ce moment."
+        "description": "Seules les zones de premier niveau ayant actuellement au moins une sous-zone orpheline en attente sont listées (au lieu de toutes les zones du scénario). Liste vide = rien à corriger pour ce scénario en ce moment."
       }
     ],
     "gui_verified": true
@@ -1934,7 +1970,10 @@
         "label": "Une seule fiche",
         "slug_type": "fiches_a_localiser",
         "optional": true,
-        "description": "Seules les fiches n'ayant pas encore de localisation sont listées (au lieu de toutes les instances). Pour cibler une fiche déjà traitée avec \"Retraiter même si déjà fait\", laisser ce champ vide et utiliser --scenario pour restreindre le lot plutôt qu'une fiche précise."
+        "description": "Seules les fiches n'ayant pas encore de localisation sont listées (au lieu de toutes les instances). Coche \"Retraiter même si déjà fait\" pour voir apparaître les fiches déjà traitées dans cette liste.",
+        "slug_extra_params": {
+          "force": "--force"
+        }
       },
       {
         "flag": "--force",
@@ -2029,7 +2068,7 @@
         "flag": "--localisation",
         "type": "checkbox",
         "label": "Localisation SEULEMENT (saute les 8 autres sections)",
-        "description": "⚠️ N'est pas additif : lance uniquement la vérification localisation et s'arrête là, sans passer par la nomenclature, la cohérence systémique, les entités, etc. Utile pour une revérification rapide ciblée, pas pour un contrôle complet du vault.",
+        "description": "⚠️ Ne s'ajoute pas aux autres vérifications, il les remplace : lance uniquement la vérification localisation et s'arrête là, sans passer par la nomenclature, la cohérence systémique, les entités, etc. Utile pour une revérification rapide ciblée, pas pour un contrôle complet du vault.",
         "default": false
       },
       {
@@ -2056,7 +2095,7 @@
     "icon": "🔍",
     "section": "entites_nettoyage",
     "script": "trace_injection.py",
-    "description": "Reconstitue le parcours complet d'un slug donné : origine (idée source, date d'injection), propagation dans l'espace (scénarios, zones) et le temps (fictif et réel), variables systémiques influencées, réseau relationnel (alliances/oppositions ou acteurs impliqués), et usage aval dans les articles publiés. Diagnostic pur, lecture seule, aucun appel LLM.",
+    "description": "Retrace l'histoire complète d'un personnage, événement ou signal : d'où il vient, dans quels scénarios et quelles zones il apparaît, quel effet il a sur le monde, et dans quels articles déjà publiés il a été utilisé. Ne modifie rien, gratuit (pas d'appel à l'IA).",
     "options": [
       {
         "flag": "--type",
@@ -2110,7 +2149,7 @@
       }
     ],
     "yaml_files": [],
-    "gui_verified": false
+    "gui_verified": true
   },
   {
     "id": "export_prompt_veille",
@@ -2136,7 +2175,7 @@
         "readonly": false
       }
     ],
-    "gui_verified": false
+    "gui_verified": true
   },
   {
     "id": "import_veille_etat_monde",
@@ -2169,7 +2208,7 @@
         "readonly": false
       }
     ],
-    "gui_verified": false
+    "gui_verified": true
   },
   {
     "id": "generate_instances",
@@ -2237,7 +2276,7 @@
             "label": "Récent forcé (1-3 prochaines années, ancré dans etat_du_monde_reel.md)"
           }
         ],
-        "description": "8 août 2026 : le mode 'libre' (comportement historique) donne quasi toujours la priorité aux jalons de la chronologie du scénario sur etat_du_monde_reel.md, y compris pour une origine proche de 2026 — confirmé par test réel. Choisir 'recent' pour forcer délibérément une instance qui émerge maintenant, ancrée dans l'état du monde réel plutôt que dans un jalon futur du scénario."
+        "description": "Le mode 'libre' (par défaut) donne presque toujours la priorité aux jalons du scénario, même pour une origine proche de 2026. Choisis 'récent' pour forcer délibérément une instance qui émerge maintenant, ancrée dans l'actualité réelle plutôt que dans un jalon futur du scénario."
       },
       {
         "flag": "--force",
@@ -2262,7 +2301,7 @@
     "icon": "🕰️",
     "section": "entites_nettoyage",
     "script": "fix_annee_debut_placeholder.py",
-    "description": "Corrige rétroactivement les fiches officialise_enrichi restées au placeholder annee_debut=2026 : confirme ou corrige selon le profil narratif, priorité aux jalons du scénario, avec une exigence de traçabilité réelle (champ ancrage_reel) obligatoire pour toute date dans les 10 prochaines années (2026-2036), validée mécaniquement contre le recyclage de jalons fictifs. Idempotent : une fiche confirmée ou corrigée est marquée annee_debut_verifiee et n'est plus jamais retraitée aux runs suivants, quel que soit le nombre de relances.",
+    "description": "Corrige les fiches d'entités dont l'année de naissance/création était restée bloquée à une valeur par défaut (2026), en la remplaçant par une date cohérente avec l'histoire du scénario. Sans risque à relancer : une fiche déjà corrigée n'est jamais retraitée, quel que soit le nombre de fois où tu lances ce script.",
     "requires": [],
     "options": [
       {
@@ -2313,7 +2352,7 @@
         "readonly": true
       }
     ],
-    "gui_verified": false,
+    "gui_verified": true,
     "required_one_of": [
       [
         "--scenario",
@@ -2327,7 +2366,7 @@
     "icon": "📊",
     "section": "validation",
     "script": "audit_dates_instances.py",
-    "description": "Diagnostic en lecture seule (aucune écriture) : distribution réelle de annee_debut/annee_fin sur tout le vault, détecte les cas où le champ est absent du frontmatter (fallback silencieux de loader.py). Utile pour vérifier la cohérence d'ensemble après un run de fix_annee_debut_placeholder.py, ou repérer une concentration excessive d'entités sur une même année.",
+    "description": "Diagnostic en lecture seule (aucune écriture) : montre comment les dates de naissance et de fin sont réparties sur tout le vault, et repère les fiches où ce champ est carrément absent — un cas qui passe normalement inaperçu. Utile pour vérifier l'ensemble après avoir lancé \"Réexaminer les dates de naissance\", ou pour repérer une concentration excessive d'entités sur une même année.",
     "requires": [],
     "options": [
       {
@@ -2337,15 +2376,15 @@
         "optional": true
       }
     ],
-    "gui_verified": false
+    "gui_verified": true
   },
   {
     "id": "audit_etat_temporel_fin",
-    "label": "Audit — cohérence etat_temporel / annee_fin",
+    "label": "Audit — cohérence trajectoire / annee_fin",
     "icon": "📊",
     "section": "validation",
     "script": "audit_etat_temporel_fin.py",
-    "description": "Diagnostic en lecture seule (aucune écriture) : vérifie que les fiches avec un etat_temporel impliquant normalement une fin (disparu/transformé/historique/mythifié) ont bien une annee_fin renseignée. Constat du 8 août 2026 : 28/710 fiches concernées sans annee_fin (93% d'incohérence sur cette sous-population) — chantier de correction rétroactive pas encore construit, voir backlog.",
+    "description": "Diagnostic en lecture seule (aucune écriture) : vérifie que les fiches dont la trajectoire implique normalement une fin (transformé, disparu, historique, mythifié) ont bien une date de fin renseignée. Sert aujourd'hui de vérification de routine — le problème historique qu'il surveillait a déjà été entièrement corrigé.",
     "requires": [],
     "options": [
       {
@@ -2355,7 +2394,25 @@
         "optional": true
       }
     ],
-    "gui_verified": false
+    "gui_verified": true
+  },
+  {
+    "id": "audit_longueur_articles",
+    "label": "Audit — longueur réelle vs étiquette des articles",
+    "icon": "📊",
+    "section": "validation",
+    "script": "audit_longueur_articles.py",
+    "description": "Diagnostic en lecture seule (aucune écriture, aucun appel à l'IA) : compare la longueur réelle de chaque article généré (nombre de mots) à la longueur annoncée dans sa fiche, et donne au passage la répartition des formats par scénario et par thématique. Sert à mesurer l'ampleur d'un éventuel écart, pas à le corriger.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--dossier",
+        "type": "text",
+        "label": "Dossier articles/ (optionnel — vide = celui du vault courant)",
+        "optional": true
+      }
+    ],
+    "gui_verified": true
   },
   {
     "id": "audit_type_relation_dominante",
@@ -2363,7 +2420,7 @@
     "icon": "📊",
     "section": "validation",
     "script": "audit_type_relation_dominante.py",
-    "description": "Diagnostic en lecture seule (aucune écriture) : sur les fiches ayant au moins une alliance/opposition réelle, vérifie si type_relation_dominante est explicitement renseigné dans le frontmatter ou absent (cas résiduel ambigu, indiscernable de 'neutralité' une fois passé par loader.py).",
+    "description": "Diagnostic en lecture seule (aucune écriture) : sur les fiches ayant au moins une alliance ou opposition réelle, vérifie si le type de relation dominante est bien renseigné explicitement ou s'il est absent — un cas ambigu qui, une fois affiché, ressemble à tort à de la neutralité.",
     "requires": [],
     "options": [
       {
@@ -2371,6 +2428,51 @@
         "type": "text",
         "label": "Dossier instances/ (optionnel — vide = celui du vault courant)",
         "optional": true
+      }
+    ],
+    "gui_verified": true
+  },
+  {
+    "id": "audit_instances_manquantes",
+    "label": "Audit — instances manquantes (scénarios jamais générés)",
+    "icon": "📊",
+    "section": "validation",
+    "script": "audit_instances_manquantes.py",
+    "description": "Diagnostic en lecture seule (aucune écriture, aucun appel à l'IA) : compare, pour chaque entité, les scénarios prévus à la création (scenarios_instances) aux fichiers instances/ réellement présents sur disque, et classe chaque trou trouvé en 3 catégories (désaccord de nommage probable / entité entière suspecte / échec ponctuel probable), avec la raison retrouvée dans les logs GUI quand elle existe encore. Ne relance rien tout seul — indique juste quoi relancer.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--vault-root",
+        "type": "text",
+        "label": "Racine du vault (optionnel — vide = celle du vault courant)",
+        "optional": true
+      },
+      {
+        "flag": "--report",
+        "type": "checkbox",
+        "label": "Écrire aussi le rapport dans documentation/need_action/instances_manquantes.md",
+        "default": true
+      },
+      {
+        "flag": "--seuil-absolu",
+        "type": "number",
+        "label": "Nombre de scénarios manquants à partir duquel une entité est classée 'suspecte' (défaut 3)",
+        "default": 3,
+        "optional": true
+      },
+      {
+        "flag": "--seuil-suspect",
+        "type": "number",
+        "label": "Proportion de scénarios manquants (0 à 1) déclenchant aussi le classement 'suspecte' (défaut 0.5)",
+        "default": 0.5,
+        "optional": true
+      }
+    ],
+    "yaml_files": [
+      {
+        "path": "documentation/need_action/instances_manquantes.md",
+        "label": "Rapport du dernier audit (réécrit à chaque lancement avec --report)",
+        "readonly": true
       }
     ],
     "gui_verified": false

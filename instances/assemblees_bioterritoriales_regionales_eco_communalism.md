@@ -59,7 +59,7 @@ alliances:
 - mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism
 - mutuelles_de_sante_territoriales_eco_communalism
 - oracle_des_seuils_eco_communalism
-- rede_paulista_de_distribuic_o_algor_tmica_eco_communalism
+- rede_paulista_de_distribuicao_algoritmica_eco_communalism
 - reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism
 - reseau_mnemos_eco_communalism
 - reseau_terrafond_bassins_eco_communalism
@@ -96,8 +96,6 @@ oppositions:
 type_relation_dominante: symbiose
 annee_debut: 2040
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -132,6 +130,9 @@ localisation:
   zone: null
   lieu: null
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Assemblées Bioterritoriales Régionales
@@ -186,7 +187,7 @@ Les Assemblées sont constamment tiraillées entre leur vocation délibérative 
 - [[mouvement_des_archives_vivantes_du_savoir_partage_eco_communalism]]
 - [[mutuelles_de_sante_territoriales_eco_communalism]]
 - [[oracle_des_seuils_eco_communalism]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_eco_communalism]]
+- [[rede_paulista_de_distribuicao_algoritmica_eco_communalism]]
 - [[reseau_des_assemblees_de_bassin_fennoscandien_eco_communalism]]
 - [[reseau_mnemos_eco_communalism]]
 - [[reseau_terrafond_bassins_eco_communalism]]

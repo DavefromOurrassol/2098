@@ -63,8 +63,6 @@ oppositions:
 type_relation_dominante: symbiose
 annee_debut: 2041
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -95,6 +93,9 @@ tensions_narratives: 'Le réseau est convoité par des acteurs très dissemblabl
   de survie et les jeunes générations qui réclament une charte formelle pour négocier
   collectivement face aux blocs armés.'
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Réseau des Courriers Nomades Sahélo-Méditerranéens

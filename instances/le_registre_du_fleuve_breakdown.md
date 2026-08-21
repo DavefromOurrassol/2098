@@ -52,8 +52,6 @@ type_relation_dominante: symbiose
 annee_debut: 2078
 annee_fin: 
 
-etat_temporel: actif
-age_historique: ascendant
 generation: post-effondrement
 
 injection:
@@ -74,6 +72,9 @@ tensions_narratives: >
   1) **La guerre des archives** : Les milices extractivistes et les seigneurs de guerre locaux cherchent à infiltrer ou détruire le réseau, tandis que des factions propagandistes tentent de corrompre ses données pour réécrire l’histoire des conflits. 2) **Le dilemme de la transparence** : Faut-il rendre publiques les cartes des gisements miniers pour armer les communautés, au risque d’attirer de nouveaux prédateurs ? 3) **La fracture générationnelle** : Les anciens privilégient les archives physiques (carnets, cartes), tandis que les jeunes hackers poussent à une numérisation massive, vulnérable aux cyberattaques. 4) **L’alliance fragile avec les Veilleurs du Fleuve** : Ces gardiens armés protègent les bibliothèques flottantes, mais leur violence croissante menace la neutralité des *Mémoires*.
 
 date_creation: 2026-07-11
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Les Mémoires des Veines du Congo

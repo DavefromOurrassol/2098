@@ -45,7 +45,7 @@ alliances:
 - consortium_technologique_de_planification_territoriale_policy_reform
 - consortiums_prives_de_gouvernance_algorithmique_policy_reform
 - factions_technocratiques_de_la_marchandisation_hydrique_policy_reform
-- rede_paulista_de_distribuic_o_algor_tmica_policy_reform
+- rede_paulista_de_distribuicao_algoritmica_policy_reform
 - reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
 - union_technocratique_eurasiatique_policy_reform
 oppositions:
@@ -57,8 +57,6 @@ oppositions:
 type_relation_dominante: coopération
 annee_debut: 2035
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -92,6 +90,9 @@ localisation:
   zone: geneve_nexus
   lieu: Genève-Nexus, Conseil de Régulation Numérique
   type_lieu: ville
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Consortium Technologique des Nations Intégrées
@@ -129,7 +130,7 @@ Le Consortium se trouve pris en étau entre sa mission d'harmonisation globale e
 - [[consortium_technologique_de_planification_territoriale_policy_reform]]
 - [[consortiums_prives_de_gouvernance_algorithmique_policy_reform]]
 - [[factions_technocratiques_de_la_marchandisation_hydrique_policy_reform]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_policy_reform]]
+- [[rede_paulista_de_distribuicao_algoritmica_policy_reform]]
 - [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]]
 - [[union_technocratique_eurasiatique_policy_reform]]
 **Opposants :**

@@ -47,8 +47,6 @@ type_relation_dominante: symbiose
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: mature
 generation: reconstruction
 
 injection:
@@ -69,6 +67,9 @@ tensions_narratives: >
   Le Fil Commun est tiraillé entre sa vocation d'outil commun et la tentation de certains nœuds régionaux de l'instrumentaliser pour amplifier leurs propres positions dans les négociations de ressources. Une enquête en cours sur la dissimulation de données de contamination hydrique par une assemblée du sud menace de fracturer pour la première fois le réseau selon des lignes géographiques. Par ailleurs, la question de savoir s'il faut ou non documenter les accords informels avec des entités marchandes extérieures divise profondément les correspondants : la transparence totale est-elle toujours un bien commun, ou peut-elle fragiliser des équilibres locaux précaires ?
 
 date_creation: 2026-06-15
+trajectoire: mature
+est_clandestin: false
+
 ---
 
 # Le Fil Commun

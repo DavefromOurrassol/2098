@@ -76,8 +76,6 @@ type_relation_dominante: conflit
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: clandestin
-age_historique: marginal
 generation: forteresse
 
 injection:
@@ -98,6 +96,9 @@ tensions_narratives: >
   La tension fondamentale qui ronge la Fédération est celle de sa propre survie organisationnelle : pour résister aux raids des agences de sécurité intérieure, les communes doivent se coordonner davantage, créer des structures de commandement, accumuler des ressources — et ce faisant, elles reproduisent exactement les hiérarchies et les logiques de centralisation qu'elles ont fui. Certains nœuds commencent à accepter des approvisionnements énergétiques en provenance de contrebandiers liés aux zones grises, risquant une dépendance qui compromet leur autonomie proclamée. D'autres refusent tout contact extérieur et s'isolent au point de frôler l'effondrement sanitaire. La question non résolue — et peut-être irrésoluble — est de savoir si une résistance peut grandir sans se trahir, et si la Fédération est encore un projet politique ou déjà une légende que l'on entretient pour ne pas désespérer.
 
 date_creation: 2026-06-27
+trajectoire: marginal
+est_clandestin: true
+
 ---
 
 # Fédération des Communes Libres du Rust Belt

@@ -56,8 +56,6 @@ type_relation_dominante: rivalité
 annee_debut: 2029
 annee_fin: 
 
-etat_temporel: actif
-age_historique: ascendant
 generation: transition
 
 injection:
@@ -78,6 +76,9 @@ tensions_narratives: >
   Les Sentinelles Fluviales sont au cœur d’un paradoxe : leur efficacité locale les rend indispensables, mais leur refus de s’intégrer aux structures globales les prive de moyens et de reconnaissance. Leur alliance avec des collectifs d’audit algorithmique pourrait leur offrir une voix plus forte, mais au risque de perdre leur autonomie. Par ailleurs, leur opposition frontale aux autorités hydriques et aux consortiums agro-industriels en fait des cibles pour les factions technocratiques, qui cherchent à les discréditer ou à les infiltrer. Leur avenir dépendra de leur capacité à concilier leur ancrage territorial avec une stratégie plus large, sans tomber dans le piège de la récupération politique.
 
 date_creation: 2026-07-11
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Réseau des Sentinelles Fluviales

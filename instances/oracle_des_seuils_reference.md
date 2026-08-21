@@ -62,8 +62,6 @@ type_relation_dominante: dépendance
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: IA-native
 
 injection:
@@ -84,6 +82,9 @@ tensions_narratives: >
   Qui contrôle réellement l'Oracle ? La gouvernance de ses données d'entrée — fournies par des consortiums énergétiques, des États et des plateformes privées — soulève des soupçons croissants de biais systémique : un seuil que personne ne finance politiquement à alerter tarde-t-il à apparaître ? Par ailleurs, plusieurs blocs souverainistes refusent de partager leurs données nationales, créant des zones d'ombre dans les modèles. Enfin, la question du 'vide normatif' structurel de l'Oracle devient explosive : quand il annonce un effondrement imminent, la bataille pour définir ce que l'on 'choisit de sauver' dégénère en conflit politique ouvert — et l'Oracle, neutre par design, devient malgré lui l'instrument de la paralysie.
 
 date_creation: 2026-06-25
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Oracle des Seuils

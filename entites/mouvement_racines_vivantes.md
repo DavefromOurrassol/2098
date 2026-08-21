@@ -2,7 +2,7 @@
 name: Mouvement des Racines Vivantes
 type: entity
 slug: mouvement_racines_vivantes
-category: mouvement
+category: organisation
 description: >
   Mouvement spirituel et politique fondé sur la réconciliation avec les cycles naturels et la transmission des savoirs écologiques ancestraux. Présent dans les ruralités reconstruites comme dans les marges urbaines.
 tension_fondamentale: >

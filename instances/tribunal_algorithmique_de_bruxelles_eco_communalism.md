@@ -54,8 +54,6 @@ type_relation_dominante: coopération
 annee_debut: 2061
 annee_fin: 
 
-etat_temporel: actif
-age_historique: marginal
 generation: reconstruction
 
 injection:
@@ -76,6 +74,9 @@ tensions_narratives: >
   La CRAD est contestée de l'intérieur même des assemblées : certaines communautés jugent qu'elle n'a pas la légitimité pour imposer des corrections à des algorithmes adoptés localement par vote démocratique — créant un paradoxe vertigineux entre souveraineté communautaire et protection des droits individuels. Elle manque cruellement de techniciens capables d'auditer les systèmes les plus opaques, ce qui l'expose à rendre des verdicts partiels ou manipulés par ceux qui maîtrisent le code. Enfin, sa survie financière dépend des contributions volontaires des assemblées — et les factions opérant des réseaux algorithmiques propriétaires font tout pour assécher ces contributions, pariant sur son extinction silencieuse par faiblesse de moyens.
 
 date_creation: 2026-06-25
+trajectoire: marginal
+est_clandestin: false
+
 ---
 
 # Chambre de Recours sur les Automatismes Délégués (CRAD)

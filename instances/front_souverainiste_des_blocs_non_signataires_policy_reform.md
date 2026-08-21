@@ -101,8 +101,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2027
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -139,6 +137,9 @@ localisation:
   zone: bloc_souverainiste_non_signataire
   lieu: présidence tournante (Dakar / Manaus / Agadez)
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Front Souverainiste des Blocs Non-Signataires
@@ -179,7 +180,6 @@ La contradiction fondamentale du Front réside dans son hétérogénéité const
 - [[mouvement_pour_la_souverainete_territoriale_absolue_policy_reform]]
 - [[republique_islamique_iran_policy_reform]]
 - [[syndicats_d_extraction_privee_non_regules_policy_reform]]
-- [[test_durcissement_policy_reform]]
 **Opposants :**
 - [[agence_internationale_de_l_energie_reformatee_aier_policy_reform]]
 - [[agence_stabilisation_climatique_policy_reform]]

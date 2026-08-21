@@ -57,8 +57,6 @@ type_relation_dominante: alliance stratégique
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: ascendant
 generation: reconstruction
 
 injection:
@@ -79,6 +77,9 @@ tensions_narratives: >
   La question centrale qui traverse le Fonds est celle de sa légitimité dans un monde qui a rejeté l'accumulation centralisée : peut-on être un fonds souverain dans un univers de communs ? Une faction interne, issue des jeunes délégués des fjords, plaide pour une dissolution progressive du Fonds en un réseau décentralisé de dotations communautaires ; l'ancienne garde résiste au nom de la souveraineté durement acquise. Parallèlement, les enclaves extractivistes résiduelles tentent de corrompre les gestionnaires locaux pour contourner les clauses écologiques, tandis que les communs sécessionnistes refusent tout simplement de reconnaître l'autorité du Fonds sur des terres qu'ils considèrent comme les leurs. La grande question de 2098 : le Fonds saura-t-il se transformer avant que sa propre rente — épuisable — ne le condamne à l'obsolescence ?
 
 date_creation: 2026-06-23
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Fonds des Terres Émergées du Kalaallit Nunaat

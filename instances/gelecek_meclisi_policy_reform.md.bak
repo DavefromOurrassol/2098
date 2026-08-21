@@ -1,0 +1,115 @@
+---
+name: gelecek_meclisi_reform
+type: instance
+slug: gelecek_meclisi_policy_reform
+entite: gelecek_meclisi
+scenario: policy_reform
+
+type_dans_scenario: hybride
+
+role_dans_scenario: >
+  Assemblée délibérative et coordinatrice émergente, née de la nécessité de concilier les visions divergentes des institutions technocratiques globales et des mouvements locaux ou sectoriels dans un monde en transition régulée. Elle agit comme un espace de négociation permanente entre les agences internationales (AIER, AMV, ATRB), les consortiums technologiques (Nexus-Calcul, Helios), les collectifs citoyens (Délibération Augmentée, Audit Algorithmique Ouvert) et les États souverains, pour éviter l'effritement des cadres communs tout en intégrant les innovations disruptives. Son rôle est à la fois de légitimer les réformes structurelles (climat, énergie, IA) et de désamorcer les tensions entre planification centralisée et autonomie locale.
+
+responsabilites: >
+  1) Organiser des forums hybrides (physiques et algorithmiques) pour aligner les politiques sectorielles (ex. quotas hydriques, régulation IA, relocalisations territoriales) avec les réalités locales. 2) Produire des cadres de gouvernance adaptatifs, combinant normes internationales et flexibilité territoriale. 3) Servir de médiateur entre les agences technocratiques et les fronts de résistance (ex. Souverainistes Énergétiques, Autonomies Territoriales Radicales) en proposant des compromis opérationnels. 4) Publier des rapports prospectifs sur les risques systémiques (climat, ressources, IA) pour éclairer les décisions des institutions comme l'Oracle des Seuils ou le Conseil de Régulation Climatique Global.
+
+impact_local: 4
+impact_systemique_global: 3
+
+variables_influencees:
+    - gouvernance_institutions
+    - technologie_information
+    - organisation_territoires
+    - valeurs_culture_tempo_sociale
+
+zone_geographique:
+    - continentale
+    - globale
+
+zone_systemique:
+    - gouvernance
+    - IA
+    - société
+
+alliances:
+    - agence_internationale_de_l_energie_reformatee_aier_policy_reform
+    - agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform
+    - autorite_mondiale_du_vivant_amv_policy_reform
+    - collectifs_citoyens_de_deliberation_augmentee_policy_reform
+    - conseil_de_gouvernance_de_l_information_policy_reform
+    - conseil_regulation_algorithmique_policy_reform
+    - oracle_des_seuils_policy_reform
+    - reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform
+
+oppositions:
+    - coalition_des_souverainistes_numeriques_policy_reform
+    - front_des_souverainistes_energetiques_policy_reform
+    - front_des_autonomies_territoriales_radicales_policy_reform
+    - internationale_decroissante_anti_planification_policy_reform
+    - courant_autoritaire_recuperateur_du_vocabulaire_communautaire_policy_reform
+
+type_relation_dominante: coopération
+
+annee_debut: 2047
+annee_fin: 
+
+trajectoire: ascendant
+est_clandestin: false
+generation: transition
+
+injection:
+  type: custom
+  annee_injection: 2047
+  contexte_injection: >
+    Le *Gelecek Meclisi* agit comme un catalyseur systémique en formalisant des mécanismes de coordination entre acteurs disparates, ce qui renforce la résilience des institutions (gouvernance_institutions) tout en intégrant les innovations technologiques (technologie_information) dans des cadres légitimes. Son impact sur l'organisation des territoires est structurel : en permettant des compromis entre planification globale et autonomie locale, il accélère le rééquilibrage territorial sans provoquer de ruptures violentes.
+  impact_sur_variables:
+  - variable: gouvernance_institutions
+    delta_level: 12
+    duree: 20
+    polarite: 1
+  - variable: technologie_information
+    delta_level: 8
+    duree: 15
+    polarite: 1
+  - variable: organisation_territoires
+    delta_level: 10
+    duree: 25
+    polarite: 1
+  propagation:
+    via_matrice: true
+
+description_journalistique: >
+  Imaginez un parlement sans murs, où des algorithmes de médiation traduisent en temps réel les débats entre un ministre kenyan, un ingénieur orbital du Syndicat des Ingénieurs Orbitaux, et une représentante des Collectifs de Défense Hydrique Sahéliens. Le *Gelecek Meclisi* (littéralement 'Assemblée du Futur' en turc, langue choisie pour son statut de pont entre l'Europe et l'Asie) est devenu en 2098 le lieu où se négocient les compromis impossibles : comment concilier la souveraineté carbone des États avec les quotas de l'AIER ? Comment encadrer les IA éditoriales sans étouffer les voix des Hors-Prisme ? Ses sessions, retransmises en direct via Prisme Global, sont suivies par des millions de citoyens-augmentés, qui votent ensuite pour valider ou rejeter les propositions via des plateformes comme la Rede Paulista de Distribuição Algorítmica. Un mélange déroutant de technocratie et de démocratie directe, où les décisions se prennent à la vitesse des crises, mais avec une légitimité inédite.
+
+signes_distinctifs: >
+  1) **Architecture symbolique** : Son siège physique, à Istanbul, est un bâtiment en forme de sablier, dont la partie supérieure (transparente) abrite les débats publics, et la partie inférieure (opaque) les négociations algorithmiques. Les murs sont couverts de données en temps réel (niveaux des nappes phréatiques, émissions carbone, flux migratoires) projetées par des IA comme celles du Consortium Nexus-Calcul. 2) **Langage visuel** : Les participants portent des badges biométriques affichant leur 'score de légitimité' (calculé en fonction de leur représentativité sectorielle et territoriale), et les débats sont modérés par des avatars holographiques inspirés des figures historiques de la diplomatie (ex. Dag Hammarskjöld pour les questions onusiennes, Wangari Maathai pour l'environnement). 3) **Rituel** : Chaque session commence par la lecture d'un 'seuil critique' par l'Oracle des Seuils, rappelant les limites planétaires en jeu.
+
+tensions_narratives: >
+  1) **Légitimité vs. Efficacité** : Le Meclisi est accusé par les souverainistes (numériques, énergétiques, territoriaux) de n'être qu'une chambre d'enregistrement des décisions technocratiques, tandis que les agences internationales lui reprochent de ralentir les réformes par son obsession du consensus. 2) **Algorithmes vs. Humains** : Les outils de médiation automatisée (comme ceux du Bureau de Gouvernance Algorithmique) sont de plus en plus utilisés pour accélérer les compromis, mais des collectifs comme les Auditeurs Algorithmiques Indépendants dénoncent leur opacité et leur biais pro-institutionnel. 3) **Crise de représentativité** : Les mouvements post-technocratiques (Courants de Reconquête Démocratique) exigent que les sièges du Meclisi soient tirés au sort parmi les citoyens, et non plus attribués par cooptation entre institutions. 4) **Guerre des récits** : Le Front Souverainiste de l'Information Régionale diffuse des deepfakes des débats du Meclisi pour discréditer ses décisions, tandis que Prisme Global tente de réguler ces flux avec des IA éditoriales certifiées.
+
+date_creation: 2026-08-16
+---
+
+# gelecek_meclisi_reform
+
+## Rôle dans [[policy_reform]]
+Assemblée délibérative et coordinatrice émergente, née de la nécessité de concilier les visions divergentes des institutions technocratiques globales et des mouvements locaux ou sectoriels dans un monde en transition régulée. Elle agit comme un espace de négociation permanente entre les agences internationales (AIER, AMV, ATRB), les consortiums technologiques (Nexus-Calcul, Helios), les collectifs citoyens (Délibération Augmentée, Audit Algorithmique Ouvert) et les États souverains, pour éviter l'effritement des cadres communs tout en intégrant les innovations disruptives. Son rôle est à la fois de légitimer les réformes structurelles (climat, énergie, IA) et de désamorcer les tensions entre planification centralisée et autonomie locale.
+
+## Responsabilités
+1) Organiser des forums hybrides (physiques et algorithmiques) pour aligner les politiques sectorielles (ex. quotas hydriques, régulation IA, relocalisations territoriales) avec les réalités locales. 2) Produire des cadres de gouvernance adaptatifs, combinant normes internationales et flexibilité territoriale. 3) Servir de médiateur entre les agences technocratiques et les fronts de résistance (ex. Souverainistes Énergétiques, Autonomies Territoriales Radicales) en proposant des compromis opérationnels. 4) Publier des rapports prospectifs sur les risques systémiques (climat, ressources, IA) pour éclairer les décisions des institutions comme l'Oracle des Seuils ou le Conseil de Régulation Climatique Global.
+
+## Variables influencées
+- [[gouvernance_institutions]]
+- [[technologie_information]]
+- [[organisation_territoires]]
+- [[valeurs_culture_tempo_sociale]]
+
+## Relations
+**Alliés** : [[agence_internationale_de_l_energie_reformatee_aier_policy_reform]], [[agence_technocratique_pour_la_resilience_biospherique_atrb_policy_reform]], [[autorite_mondiale_du_vivant_amv_policy_reform]], [[collectifs_citoyens_de_deliberation_augmentee_policy_reform]], [[conseil_de_gouvernance_de_l_information_policy_reform]], [[conseil_regulation_algorithmique_policy_reform]], [[oracle_des_seuils_policy_reform]], [[reseaux_academiques_prospectivistes_du_pacte_de_geneve_2081_policy_reform]]
+**Opposants** : [[coalition_des_souverainistes_numeriques_policy_reform]], [[front_des_souverainistes_energetiques_policy_reform]], [[front_des_autonomies_territoriales_radicales_policy_reform]], [[internationale_decroissante_anti_planification_policy_reform]], [[courant_autoritaire_recuperateur_du_vocabulaire_communautaire_policy_reform]]
+
+## Description journalistique
+Imaginez un parlement sans murs, où des algorithmes de médiation traduisent en temps réel les débats entre un ministre kenyan, un ingénieur orbital du Syndicat des Ingénieurs Orbitaux, et une représentante des Collectifs de Défense Hydrique Sahéliens. Le *Gelecek Meclisi* (littéralement 'Assemblée du Futur' en turc, langue choisie pour son statut de pont entre l'Europe et l'Asie) est devenu en 2098 le lieu où se négocient les compromis impossibles : comment concilier la souveraineté carbone des États avec les quotas de l'AIER ? Comment encadrer les IA éditoriales sans étouffer les voix des Hors-Prisme ? Ses sessions, retransmises en direct via Prisme Global, sont suivies par des millions de citoyens-augmentés, qui votent ensuite pour valider ou rejeter les propositions via des plateformes comme la Rede Paulista de Distribuição Algorítmica. Un mélange déroutant de technocratie et de démocratie directe, où les décisions se prennent à la vitesse des crises, mais avec une légitimité inédite.
+
+## Tensions narratives
+1) **Légitimité vs. Efficacité** : Le Meclisi est accusé par les souverainistes (numériques, énergétiques, territoriaux) de n'être qu'une chambre d'enregistrement des décisions technocratiques, tandis que les agences internationales lui reprochent de ralentir les réformes par son obsession du consensus. 2) **Algorithmes vs. Humains** : Les outils de médiation automatisée (comme ceux du Bureau de Gouvernance Algorithmique) sont de plus en plus utilisés pour accélérer les compromis, mais des collectifs comme les Auditeurs Algorithmiques Indépendants dénoncent leur opacité et leur biais pro-institutionnel. 3) **Crise de représentativité** : Les mouvements post-technocratiques (Courants de Reconquête Démocratique) exigent que les sièges du Meclisi soient tirés au sort parmi les citoyens, et non plus attribués par cooptation entre institutions. 4) **Guerre des récits** : Le Front Souverainiste de l'Information Régionale diffuse des deepfakes des débats du Meclisi pour discréditer ses décisions, tandis que Prisme Global tente de réguler ces flux avec des IA éditoriales certifiées.

@@ -55,8 +55,6 @@ type_relation_dominante: dépendance
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: déclinant
 generation: transition
 
 injection:
@@ -77,6 +75,9 @@ tensions_narratives: >
   La tension centrale du BZNP tient à l'impossibilité de sa réforme : augmenter ses moyens reviendrait à admettre que le système a volontairement laissé mourir des territoires depuis des décennies, ce qu'aucun bloc dominant n'est prêt à reconnaître. Ses propres agents sont déchirés entre la conviction que leurs rapports documentent une réalité essentielle et la lucidité que cette documentation n'a jamais produit d'effet. Une faction interne, liée aux réseaux de lanceurs d'alerte institutionnels, cherche à faire fuiter les archives complètes du Bureau — 67 ans de signalements sans réponse — comme acte politique terminal. La question narrative reste ouverte : le BZNP peut-il se transformer en instrument de mémoire accusatrice, ou mourra-t-il dans la même indifférence qu'il a toujours servie ?
 
 date_creation: 2026-06-27
+trajectoire: déclinant
+est_clandestin: false
+
 ---
 
 # Bureau des Zones Non Prioritaires (BZNP)

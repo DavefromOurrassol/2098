@@ -47,7 +47,7 @@ alliances:
 - confederation_des_communs_de_l_arc_septentrional_eco_communalism
 - conseils_de_bassin_versant_eco_communalistes_eco_communalism
 - cooperative_terrafond_eco_communalism
-- frente_sert_o_livre_eco_communalism
+- frente_sertao_livre_eco_communalism
 - guildes_de_mediateurs_ecologiques_eco_communalism
 - kalaallit_nunaat_bioterritoire_eco_communalism
 - reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism
@@ -69,8 +69,6 @@ type_relation_dominante: alliance stratégique
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: mature
 generation: reconstruction
 
 injection:
@@ -91,6 +89,9 @@ tensions_narratives: >
   La tension centrale du Pacte est celle de sa propre réussite : plus il est reconnu comme interlocuteur légitime par les fragments d'États résiduels et les consortiums qui cherchent à négocier des 'accords de compensation écologique', plus il risque de se doter d'une structure représentative fixe qui reproduirait les hiérarchies qu'il combat. Un courant interne, animé par plusieurs communautés du Alto Solimões, refuse catégoriquement toute négociation formelle avec des acteurs extractivistes et menace de faire sécession du Pacte si une délégation permanente est créée. Par ailleurs, la question de l'accueil de communautés réfugiées climatiques venues du Cerrado met à l'épreuve les principes de réciprocité : peut-on fermer un pacte ouvert sans trahir son âme ? Enfin, des porteurs de pacte ont signalé l'infiltration de réseaux de notables capturistes dans au moins trois assemblées de bassin, semant le doute sur l'intégrité des décisions collectives les plus récentes.
 
 date_creation: 2026-06-27
+trajectoire: mature
+est_clandestin: false
+
 ---
 
 # Pacte Amazônia Viva
@@ -125,7 +126,7 @@ La tension centrale du Pacte est celle de sa propre réussite : plus il est reco
 - [[confederation_des_communs_de_l_arc_septentrional_eco_communalism]]
 - [[conseils_de_bassin_versant_eco_communalistes_eco_communalism]]
 - [[cooperative_terrafond_eco_communalism]]
-- [[frente_sert_o_livre_eco_communalism]]
+- [[frente_sertao_livre_eco_communalism]]
 - [[guildes_de_mediateurs_ecologiques_eco_communalism]]
 - [[kalaallit_nunaat_bioterritoire_eco_communalism]]
 - [[reseaux_de_reconstruction_cooperative_inter_communautes_eco_communalism]]

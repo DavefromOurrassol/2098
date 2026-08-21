@@ -87,8 +87,6 @@ type_relation_dominante: alliance stratégique
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: reconstruction
 
 injection:
@@ -109,6 +107,9 @@ tensions_narratives: >
   La tension structurelle du Bloc reste entière : la clause de réserve nationale, conçue pour rassurer les membres les plus jaloux de leur autonomie, est de plus en plus invoquée par des gouvernements élus sur des plateformes anti-quotas, menaçant l'intégrité du plancher écologique commun. Par ailleurs, le succès du modèle à l'export génère une pression inverse — des régions du Sud global demandant à rejoindre le Bloc sans partager la même histoire institutionnelle, ce qui force une réforme statutaire que les membres fondateurs refusent. Enfin, l'intégration croissante des systèmes d'IA décisionnels dans la coordination régionale ravive le débat sur ce que 'souveraineté' signifie encore quand les paramètres d'allocation sont définis par des algorithmes paneuropéens.
 
 date_creation: 2026-06-27
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Bloc Eurasien Souverainiste — Charte de Vilnius

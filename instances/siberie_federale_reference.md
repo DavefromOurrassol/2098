@@ -44,8 +44,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2041
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -84,6 +82,9 @@ localisation:
   zone: siberie_federale
   lieu: Sibérie Fédérale — territoire administratif central
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Sibérie Fédérale

@@ -43,7 +43,7 @@ alliances:
 - communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
 - consortium_africain_de_biotechnologies_sociales_breakdown
 - enclaves_agro_communautaires_autonomes_breakdown
-- frente_sert_o_livre_breakdown
+- frente_sertao_livre_breakdown
 - front_humanitaire_d_urgence_non_affilie_breakdown
 - reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown
 - reseaux_de_soigneurs_traditionnels_breakdown
@@ -59,8 +59,6 @@ oppositions:
 type_relation_dominante: symbiose
 annee_debut: 2041
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -95,6 +93,9 @@ tensions_narratives: 'La tension centrale qui les dévore est celle entre l''urg
   ou à les éliminer selon que leurs productions sont vues comme une ressource ou une
   menace.'
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Pirates Biologiques Open-Source
@@ -129,7 +130,7 @@ La tension centrale qui les dévore est celle entre l'urgence humanitaire qui l�
 - [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]]
 - [[consortium_africain_de_biotechnologies_sociales_breakdown]]
 - [[enclaves_agro_communautaires_autonomes_breakdown]]
-- [[frente_sert_o_livre_breakdown]]
+- [[frente_sertao_livre_breakdown]]
 - [[front_humanitaire_d_urgence_non_affilie_breakdown]]
 - [[reseau_des_organisations_humanitaires_hors_cadre_onusien_breakdown]]
 - [[reseaux_de_soigneurs_traditionnels_breakdown]]

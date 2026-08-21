@@ -56,8 +56,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2028
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -92,6 +90,9 @@ localisation:
   zone: geneve_nexus
   lieu: Genève-Nexus, siège du CEI
   type_lieu: ville
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Faction Régulatrice Dure au Sein du CEI

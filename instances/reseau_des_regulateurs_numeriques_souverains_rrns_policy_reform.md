@@ -50,8 +50,6 @@ oppositions:
 type_relation_dominante: coopération
 annee_debut: 2032
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -89,6 +87,9 @@ localisation:
   zone: conseil_regulation_numerique_geneve
   lieu: Genève-Nexus (siège tournant)
   type_lieu: infrastructure
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Réseau des Régulateurs Numériques Souverains (RRNS)

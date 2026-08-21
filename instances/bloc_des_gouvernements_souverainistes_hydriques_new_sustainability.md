@@ -65,8 +65,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2038
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -107,6 +105,9 @@ localisation:
   zone: bloc_eurasien_souverainiste
   lieu: Siège tournant entre membres fondateurs
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Bloc des Gouvernements Souverainistes Hydriques

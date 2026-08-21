@@ -60,8 +60,6 @@ type_relation_dominante: rivalité
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: transition
 
 injection:
@@ -82,6 +80,9 @@ tensions_narratives: >
   La montée en puissance du Consortium Logistique Asiatique de Contournement ALN, qui finance activement des routes alternatives via le détroit de Béring, fragilise la rente de position de Mourmansk et accentue les divisions internes du Pacte de Kola. Parallèlement, les collectifs Inuit et Sami intensifient leurs revendications sur les zones côtières transformées en zones industrielles sans consultation. La question centrale reste entière : jusqu'à quand le consortium russo-scandinave peut-il tenir face à une puissance asiatique qui préfère payer pour contourner plutôt que pour traverser ?
 
 date_creation: 2026-06-27
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Murmansk Transit Arctique

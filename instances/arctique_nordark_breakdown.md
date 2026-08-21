@@ -62,8 +62,6 @@ type_relation_dominante: conflit
 annee_debut: 2061
 annee_fin: 
 
-etat_temporel: actif
-age_historique: ascendant
 generation: post-effondrement
 
 injection:
@@ -84,6 +82,9 @@ tensions_narratives: >
   La question centrale du Nordark est celle du seuil : jusqu'où les communautés locales peuvent-elles repousser les groupes d'extraction avant que la résistance ne les détruise plus sûrement que la capitulation ? Un accord tacite avec le Konsortiet Nordark leur a offert une protection logistique au prix d'une dépendance croissante — certains conseils de site commencent à se demander s'ils n'ont pas simplement changé de maître. Par ailleurs, la fonte accélérée du pergélisol libère non seulement des ressources mais aussi des pathogènes anciens et des poches de méthane explosives, transformant l'espace même de la contestation en terrain hostile. Enfin, des rumeurs persistantes font état de négociations secrètes entre le Fonds des Glaces Libérées du Kalaallit Nunaat et le Conglomérat Bohai Transit pour un partage de zones sans consultation des habitants — une trahison qui, si elle se confirme, pourrait déclencher la première guerre ouverte du Grand Nord post-effondrement.
 
 date_creation: 2026-06-27
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Nordark — Les Terres du Dessous

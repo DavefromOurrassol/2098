@@ -4,6 +4,11 @@ type: instance
 slug: rede_paulista_de_distribuic_o_algor_tmica_fortress_world
 entite: rede_paulista_de_distribuic_o_algor_tmica
 scenario: fortress_world
+statut: officialise_enrichi
+localisation:
+  zone: sao_paulo_megapole
+  lieu: São Paulo
+  type_lieu: ville
 
 type_dans_scenario: système
 
@@ -58,8 +63,6 @@ type_relation_dominante: dépendance
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: forteresse
 
 injection:
@@ -80,6 +83,9 @@ tensions_narratives: >
   Des fuites récentes suggèrent que les paramètres du SPAS ont été modifiés unilatéralement en 2091 pour prioriser les zones d'extraction industrielle au détriment des quartiers résidentiels populaires — sans aucun mandat démocratique. Un collectif d'ingénieurs dissidents prétend avoir trouvé une faille permettant de falsifier les scores de mobilité, ouvrant la possibilité d'une subversion massive du système. Parallèlement, le régime envisage d'exporter le SPAS comme modèle de gouvernance algorithmique vers les États-partenaires du bloc sud-atlantique, ce qui transformerait une infrastructure locale en outil de domination régionale. La question qui fracture l'espace public clandestin : peut-on réformer un système dont les biais sont devenus la colonne vertébrale du pouvoir ?
 
 date_creation: 2026-06-23
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Sistema Paulista de Alocação Soberana — SPAS

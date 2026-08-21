@@ -50,7 +50,7 @@ oppositions:
 - consortium_africain_de_biotechnologies_sociales_reference
 - federation_communs_territoriaux_reference
 - fonds_monetaire_climatique_fmc_reference
-- frente_sert_o_livre_reference
+- frente_sertao_livre_reference
 - front_souverainiste_des_ressources_d_amerique_du_sud_reference
 - mouvement_racines_vivantes_reference
 - ong_environnementales_de_terrain_reference
@@ -60,8 +60,6 @@ type_relation_dominante: rivalité
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: transition
 
 injection:
@@ -82,6 +80,9 @@ tensions_narratives: >
   Chaque brevet accordé constitue une pièce à conviction potentielle pour les procédures d'annulation initiées par le Conseil de Genève et le Front Souverainiste : plus le Consortium réussit, plus il documente sa propre vulnérabilité juridique future. Plusieurs États amazoniens négocient en parallèle une plateforme de séquençage souverain en open-access qui, si elle aboutit, rendrait caduque l'argument de la 'découverte originale'. Enfin, des lanceurs d'alerte internes auraient transmis aux Collectifs de Biopiraterie Inversée des métadonnées révélant que certains composés brevetés étaient déjà documentés dans des savoirs traditionnels oraux — ce qui pourrait provoquer la plus grande cascade d'invalidations de brevets biologiques de l'histoire.
 
 date_creation: 2026-06-27
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Amazonie Consortium Viva
@@ -119,7 +120,7 @@ Chaque brevet accordé constitue une pièce à conviction potentielle pour les p
 - [[consortium_africain_de_biotechnologies_sociales_reference]]
 - [[federation_communs_territoriaux_reference]]
 - [[fonds_monetaire_climatique_fmc_reference]]
-- [[frente_sert_o_livre_reference]]
+- [[frente_sertao_livre_reference]]
 - [[front_souverainiste_des_ressources_d_amerique_du_sud_reference]]
 - [[mouvement_racines_vivantes_reference]]
 - [[ong_environnementales_de_terrain_reference]]

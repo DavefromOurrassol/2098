@@ -49,8 +49,6 @@ type_relation_dominante: symbiose
 annee_debut: 2038
 annee_fin: 
 
-etat_temporel: actif
-age_historique: mature
 generation: ère cognitive
 
 injection:
@@ -71,6 +69,9 @@ tensions_narratives: >
   Les Passeurs de Seuil sont au cœur d'un paradoxe : leur existence même questionne la légitimité d'un système qui se veut équitable et optimisé, mais qui laisse des millions de personnes en marge. Leur tolérance par les institutions est fragile, et certains blocs souverainistes voient en eux une menace à éradiquer. Leur avenir dépendra de leur capacité à rester invisibles tout en étant indispensables. Une question persiste : jusqu'où les institutions accepteront-elles de fermer les yeux sur leurs activités, avant de les intégrer ou de les réprimer ?
 
 date_creation: 2026-07-11
+trajectoire: mature
+est_clandestin: false
+
 ---
 
 # Réseau des Passeurs de Seuil

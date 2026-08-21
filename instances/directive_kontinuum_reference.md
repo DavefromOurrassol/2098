@@ -70,8 +70,6 @@ type_relation_dominante: infiltration
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: IA-native
 
 injection:
@@ -92,6 +90,9 @@ tensions_narratives: >
   La tension centrale est celle de l'invisibilité choisie : comment contester un pouvoir qui n'admet pas son existence ? Les lanceurs d'alerte qui ont tenté de cartographier ses seuils de déclenchement ont tous été neutralisés par des voies apparemment légitimes. Une faction au sein du Conseil de Régulation Algorithmique cherche à obtenir une 'auditabilité minimale' du Système, mais se heurte à l'argument circulaire que divulguer les seuils rendrait le système contournable et donc dangereux. Une trajectoire narrative ouverte : une coalition d'acteurs du Sud global, contestant la cession de données, commence à documenter que le Système Kontinuum protège systématiquement les équilibres favorables aux détenteurs de capital — ce qui ferait basculer l'entité de 'gardien neutre' à 'instrument de classe'.
 
 date_creation: 2026-06-25
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Système Kontinuum

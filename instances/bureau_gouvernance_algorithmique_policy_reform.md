@@ -53,7 +53,7 @@ alliances:
 - institut_brookings_singapour_de_politique_computationnelle_policy_reform
 - office_integre_des_flux_migratoires_policy_reform
 - oracle_des_seuils_policy_reform
-- rede_paulista_de_distribuic_o_algor_tmica_policy_reform
+- rede_paulista_de_distribuicao_algoritmica_policy_reform
 - reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
 - reseau_des_metropoles_n_uds_policy_reform
 - reseau_des_regulateurs_numeriques_souverains_rrns_policy_reform
@@ -82,8 +82,6 @@ type_relation_dominante: dépendance
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: ère cognitive
 
 injection:
@@ -104,6 +102,9 @@ tensions_narratives: >
   La tension centrale de l'ACRA repose sur le paradoxe de sa légitimité : plus ses algorithmes prouvent leur efficacité prédictive, moins les États peuvent politiquement s'y opposer, créant une dépendance institutionnelle qui érode les contre-pouvoirs. Un mouvement croissant exige l'ouverture totale du code source de ses modèles délibératifs, ce que l'ACRA refuse au nom de la 'sécurité systémique'. En coulisses, la dépendance à l'infrastructure de Nexus-Calcul soulève la question de savoir qui, en définitive, paramètre les valeurs encodées dans les arbitrages globaux. La prochaine DRI portant sur le rationnement énergétique post-2100 pourrait précipiter la sécession du bloc afro-asiatique du Pacte de Genève.
 
 date_creation: 2026-06-15
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Autorité Centrale de Régulation Algorithmique (ACRA)
@@ -144,7 +145,7 @@ La tension centrale de l'ACRA repose sur le paradoxe de sa légitimité : plus s
 - [[institut_brookings_singapour_de_politique_computationnelle_policy_reform]]
 - [[office_integre_des_flux_migratoires_policy_reform]]
 - [[oracle_des_seuils_policy_reform]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_policy_reform]]
+- [[rede_paulista_de_distribuicao_algoritmica_policy_reform]]
 - [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]]
 - [[reseau_des_metropoles_n_uds_policy_reform]]
 - [[reseau_des_regulateurs_numeriques_souverains_rrns_policy_reform]]

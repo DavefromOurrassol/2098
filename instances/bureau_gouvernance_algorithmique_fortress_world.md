@@ -46,7 +46,7 @@ alliances:
 - dispositifs_de_surveillance_numerique_souveraine_fortress_world
 - executif_militaro_civil_du_regime_fortress_world
 - neurosentry_fortress_world
-- rede_paulista_de_distribuic_o_algor_tmica_fortress_world
+- rede_paulista_de_distribuicao_algoritmica_fortress_world
 oppositions:
 - aria_instance_fantome_fortress_world
 - coalitions_geopolitiques_d_infiltration_des_modeles_climatiques_fortress_world
@@ -59,8 +59,6 @@ type_relation_dominante: dépendance
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: forteresse
 
 injection:
@@ -81,6 +79,9 @@ tensions_narratives: >
   La légitimité du Conseil repose entièrement sur la croyance en l'infaillibilité de ses modèles — mais des anomalies répétées dans les allocations de ressources laissent suspecter une manipulation humaine non déclarée des paramètres. Des ingénieurs dissidents tentent de reconstruire les algorithmes depuis des fragments de directives publiques, risquant l'accusation de 'sabotage calculatoire'. Par ailleurs, des blocs rivaux auraient développé leurs propres systèmes concurrents, transformant la gouvernance algorithmique en terrain d'une guerre froide technologique dont les populations ne sont que les variables d'ajustement.
 
 date_creation: 2026-06-15
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Conseil de Calcul Souverain — Directive Ourrassol
@@ -114,7 +115,7 @@ La légitimité du Conseil repose entièrement sur la croyance en l'infaillibili
 - [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
 - [[executif_militaro_civil_du_regime_fortress_world]]
 - [[neurosentry_fortress_world]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_fortress_world]]
+- [[rede_paulista_de_distribuicao_algoritmica_fortress_world]]
 **Opposants :**
 - [[aria_instance_fantome_fortress_world]]
 - [[coalitions_geopolitiques_d_infiltration_des_modeles_climatiques_fortress_world]]

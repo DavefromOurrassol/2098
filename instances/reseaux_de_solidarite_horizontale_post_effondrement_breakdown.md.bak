@@ -4,6 +4,11 @@ type: instance
 slug: reseaux_de_solidarite_horizontale_post_effondrement_breakdown
 entite: reseaux_de_solidarite_horizontale_post_effondrement
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 statut: officialise_enrichi
 type_dans_scenario: réseau
 role_dans_scenario: 'Dans le scénario breakdown, ces réseaux constituent à la fois
@@ -31,19 +36,29 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- collectifs_de_reparation_energetique_breakdown
+- communautes_paysannes_refugiees_breakdown
+- communautes_religieuses_des_relais_physiques_breakdown
 - communes_rust_belt_breakdown
+- communes_rust_belt_zones_libres_breakdown
 - delta_mekong_racines_breakdown
-- occitanie_racines_meres_breakdown
+- factions_paramilitaires_locales_neutralisees_breakdown
 - massif_central_cicatrices_vertes_breakdown
+- mouvement_des_communes_du_rust_belt_breakdown
+- nairobi_crrc_breakdown
+- occitanie_racines_meres_breakdown
+- reseaux_de_soigneurs_traditionnels_breakdown
+- saboteurs_des_corridors_de_transit_breakdown
+- seoul_collectif_nexcore_breakdown
 oppositions:
-- lagos_est_nexcore_breakdown
+- alliance_blocs_souverains_breakdown
 - carthage_nord_nexcore_breakdown
 - corridors_eurasiens_convoyage_breakdown
+- lagos_est_nexcore_breakdown
+- rede_paulista_de_distribuic_o_algor_tmica_breakdown
 type_relation_dominante: symbiose
-annee_debut: 2026
+annee_debut: 2041
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -72,10 +87,9 @@ tensions_narratives: 'La tension fondamentale qui ronge ces réseaux est celle e
   négocier avec Genève-Bunker, accepter la protection ambiguë de la Hanse Baltique
   — fracture régulièrement les assemblées.'
 date_creation: 2026-06-20
-localisation:
-  zone: null
-  lieu: null
-  type_lieu: null
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Réseaux de solidarité horizontale post-effondrement
@@ -100,16 +114,29 @@ La tension fondamentale qui ronge ces réseaux est celle entre l'horizontalité 
 - [[gouvernance_institutions]]
 - [[valeurs_culture_tempo_sociale]]
 
+
 ## Relations
 **Alliés :**
+- [[collectifs_de_reparation_energetique_breakdown]]
+- [[communautes_paysannes_refugiees_breakdown]]
+- [[communautes_religieuses_des_relais_physiques_breakdown]]
 - [[communes_rust_belt_breakdown]]
+- [[communes_rust_belt_zones_libres_breakdown]]
 - [[delta_mekong_racines_breakdown]]
-- [[occitanie_racines_meres_breakdown]]
+- [[factions_paramilitaires_locales_neutralisees_breakdown]]
 - [[massif_central_cicatrices_vertes_breakdown]]
+- [[mouvement_des_communes_du_rust_belt_breakdown]]
+- [[nairobi_crrc_breakdown]]
+- [[occitanie_racines_meres_breakdown]]
+- [[reseaux_de_soigneurs_traditionnels_breakdown]]
+- [[saboteurs_des_corridors_de_transit_breakdown]]
+- [[seoul_collectif_nexcore_breakdown]]
 **Opposants :**
-- [[lagos_est_nexcore_breakdown]]
+- [[alliance_blocs_souverains_breakdown]]
 - [[carthage_nord_nexcore_breakdown]]
 - [[corridors_eurasiens_convoyage_breakdown]]
+- [[lagos_est_nexcore_breakdown]]
+- [[rede_paulista_de_distribuic_o_algor_tmica_breakdown]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

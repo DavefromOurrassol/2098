@@ -58,13 +58,11 @@ oppositions:
 - front_techno_reconstructionniste_breakdown
 - milices_contractuelles_des_anciens_etats_membres_breakdown
 - milices_de_controle_territorial_breakdown
-- rede_paulista_de_distribuic_o_algor_tmica_breakdown
+- rede_paulista_de_distribuicao_algoritmica_breakdown
 - tour_bcuc_geneve_breakdown
 type_relation_dominante: conflit
 annee_debut: 2041
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -95,6 +93,9 @@ tensions_narratives: 'La contradiction fondamentale du Collectif est celle de to
   recruté par des seigneurs de guerre régionaux et chassé par les milices de protection
   des nœuds survivants.'
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Collectif Hackers Décroissance-Infrastructure
@@ -144,7 +145,7 @@ La contradiction fondamentale du Collectif est celle de tout accélérationnisme
 - [[front_techno_reconstructionniste_breakdown]]
 - [[milices_contractuelles_des_anciens_etats_membres_breakdown]]
 - [[milices_de_controle_territorial_breakdown]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_breakdown]]
+- [[rede_paulista_de_distribuicao_algoritmica_breakdown]]
 - [[tour_bcuc_geneve_breakdown]]
 
 ## Notes

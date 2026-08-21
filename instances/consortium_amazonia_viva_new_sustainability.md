@@ -71,8 +71,6 @@ type_relation_dominante: alliance stratégique
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: reconstruction
 
 injection:
@@ -93,6 +91,9 @@ tensions_narratives: >
   La pression des blocs industriels pour monétiser les crédits carbone à des prix inférieurs aux coûts réels de régénération menace de transformer la souveraineté écologique en simple instrument financier. En interne, la fracture entre les délégations autochtones, qui défendent une logique de sanctuarisation absolue, et les gouvernements locaux brésiliens et colombiens, tentés par une valorisation économique contrôlée, fragilise la coalition. Par ailleurs, la dépendance croissante aux IA de modélisation partenaires soulève la question de savoir si la légitimité de garde reste humaine ou si elle est en train d'être capturée par les systèmes algorithmiques. Enfin, des communautés locales exclues des corridors de conservation contestent que leurs terres aient été intégrées sans consentement réel dans le périmètre géré par Belém.
 
 date_creation: 2026-06-23
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Consortium Amazônia Viva

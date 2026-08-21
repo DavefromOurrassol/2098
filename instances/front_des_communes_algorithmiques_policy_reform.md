@@ -44,12 +44,10 @@ oppositions:
 - directive_kontinuum_policy_reform
 - factions_technocratiques_de_la_marchandisation_hydrique_policy_reform
 - front_techno_utopiste_de_la_decision_automatisee_policy_reform
-- rede_paulista_de_distribuic_o_algor_tmica_policy_reform
+- rede_paulista_de_distribuicao_algoritmica_policy_reform
 type_relation_dominante: conflit
 annee_debut: 2028
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -82,6 +80,9 @@ localisation:
   zone: hub_europeen_regulation
   lieu: Tampere / Genève-Nexus (double ancrage militant-institutionnel)
   type_lieu: ville
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Front des Communes Algorithmiques
@@ -122,7 +123,7 @@ Le mouvement est tiraillé entre sa base populaire, qui réclame un blocage pur 
 - [[directive_kontinuum_policy_reform]]
 - [[factions_technocratiques_de_la_marchandisation_hydrique_policy_reform]]
 - [[front_techno_utopiste_de_la_decision_automatisee_policy_reform]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_policy_reform]]
+- [[rede_paulista_de_distribuicao_algoritmica_policy_reform]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

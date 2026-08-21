@@ -46,12 +46,10 @@ oppositions:
 - gouvernements_a_regime_de_productivite_mandatee_reference
 - lyon_metropole_reference
 - plateformes_d_optimisation_territoriale_par_ia_reference
-- rede_paulista_de_distribuic_o_algor_tmica_reference
+- rede_paulista_de_distribuicao_algoritmica_reference
 type_relation_dominante: conflit
 annee_debut: 2034
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -86,6 +84,9 @@ localisation:
   zone: zones_tampons_climatiques_europeennes
   lieu: Zones tampons climatiques européennes — terrain de friction principal
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Collectif Nuit Jaune
@@ -128,7 +129,7 @@ Le Collectif est écartelé entre une légitimité morale forte — défendre le
 - [[gouvernements_a_regime_de_productivite_mandatee_reference]]
 - [[lyon_metropole_reference]]
 - [[plateformes_d_optimisation_territoriale_par_ia_reference]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_reference]]
+- [[rede_paulista_de_distribuicao_algoritmica_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

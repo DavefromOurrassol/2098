@@ -72,8 +72,6 @@ oppositions:
 type_relation_dominante: coopération
 annee_debut: 2026
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -111,6 +109,8 @@ localisation:
   lieu: Genève-Lac-Retraité, Conseil des Droits Biosociaux
   type_lieu: site_strategique
 annee_debut_verifiee: true
+trajectoire: émergent
+est_clandestin: false
 
 ---
 

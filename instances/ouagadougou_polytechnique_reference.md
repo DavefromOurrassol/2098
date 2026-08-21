@@ -54,8 +54,6 @@ type_relation_dominante: dépendance
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: ascendant
 generation: reconstruction
 
 injection:
@@ -76,6 +74,9 @@ tensions_narratives: >
   La tension centrale tourne autour de la guerre silencieuse des financements : chaque partenariat signé implique une clause de loyauté tacite que les enseignants refusent et que l'administration accepte, creusant un fossé interne entre corps académique et direction. Une seconde tension porte sur la fuite des cerveaux : les meilleurs diplômés quittent systématiquement la région pour des postes dans les mégapoles globales ou les consortiums énergétiques, vidant de sens la mission de développement collectif. Enfin, la question du statut de l'institution face aux régulateurs de l'Union Continentale Africaine — autonomie pleine ou intégration dans un réseau supranational de compétences — risque de redéfinir radicalement son identité d'ici 2105.
 
 date_creation: 2026-06-27
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Ouagadougou Polytechnique

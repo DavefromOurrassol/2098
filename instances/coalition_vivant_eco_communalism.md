@@ -45,8 +45,6 @@ oppositions:
 type_relation_dominante: symbiose
 annee_debut: 2045
 annee_fin:
-etat_temporel: actif
-age_historique: dominant
 generation: reconstruction
 injection:
   type: canonique
@@ -71,6 +69,9 @@ tensions_narratives: >
   données numériques. Débat sur les limites de leur autorité — quand
   le territoire dit non, les humains doivent-ils obéir ?
 date_creation: 2098-01-01
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Les Gardiens du Territoire

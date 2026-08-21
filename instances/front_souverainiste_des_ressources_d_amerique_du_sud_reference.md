@@ -54,8 +54,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2030
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -89,6 +87,9 @@ localisation:
   zone: ameriques_multipolaires
   lieu: Valparaíso / São Paulo (sièges rotatifs)
   type_lieu: ville
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Front Souverainiste des Ressources d'Amérique du Sud

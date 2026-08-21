@@ -41,7 +41,7 @@ alliances:
 - federation_des_mutuelles_biotech_policy_reform
 - grille_aria_policy_reform
 - oracle_des_seuils_policy_reform
-- rede_paulista_de_distribuic_o_algor_tmica_policy_reform
+- rede_paulista_de_distribuicao_algoritmica_policy_reform
 - reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform
 - reseau_des_regulateurs_numeriques_souverains_rrns_policy_reform
 - tribunal_algorithmique_de_bruxelles_policy_reform
@@ -56,8 +56,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2026
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -96,6 +94,8 @@ localisation:
   lieu: Genève-Nexus, siège principal
   type_lieu: ville
 annee_debut_verifiee: true
+trajectoire: émergent
+est_clandestin: false
 
 ---
 
@@ -133,7 +133,7 @@ Le CIRT est structurellement écartelé entre sa vocation universaliste et l'abs
 - [[federation_des_mutuelles_biotech_policy_reform]]
 - [[grille_aria_policy_reform]]
 - [[oracle_des_seuils_policy_reform]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_policy_reform]]
+- [[rede_paulista_de_distribuicao_algoritmica_policy_reform]]
 - [[reseau_des_auditeurs_algorithmiques_independants_raai_policy_reform]]
 - [[reseau_des_regulateurs_numeriques_souverains_rrns_policy_reform]]
 - [[tribunal_algorithmique_de_bruxelles_policy_reform]]

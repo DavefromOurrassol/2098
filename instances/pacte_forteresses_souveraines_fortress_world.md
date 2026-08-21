@@ -89,8 +89,6 @@ type_relation_dominante: alliance stratégique
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: forteresse
 
 injection:
@@ -111,6 +109,9 @@ tensions_narratives: >
   La cohésion du Pacte repose sur la permanence de la menace extérieure : à mesure que les zones dégradées se vident ou s'organisent en réseaux parallèles, certains membres remettent en question la justification économique de l'exclusion totale. Des fissures apparaissent entre blocs pro-autarcie radicale et factions qui plaident pour des corridors de ressources contrôlés. Pendant ce temps, des fuites de données internes — attribuées aux archives clandestines et aux instances fantômes — menacent de rendre publics les protocoles de triage humanitaire, provoquant une crise de légitimité que le Pacte n'a pas les outils diplomatiques pour absorber.
 
 date_creation: 2026-06-27
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Pacte des Forteresses Souveraines — Charte de Sécurité Intégrale

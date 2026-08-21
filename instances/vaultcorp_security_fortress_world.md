@@ -71,8 +71,6 @@ type_relation_dominante: symbiose
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: forteresse
 
 injection:
@@ -93,6 +91,9 @@ tensions_narratives: >
   La tension centrale autour de VCSDS réside dans sa double nature : est-elle le dernier rempart des États-forteresses ou leur fossoyeur ? Ses contrats opaques avec les régimes autoritaires du Bloc Eurasiatique, ses interventions controversées dans les zones grises comme Almaty, ou ses liens troubles avec les cartels miniers subsahariens en font une cible privilégiée des dissidences. Par ailleurs, la dépendance croissante des blocs envers ses technologies soulève une question explosive : que se passera-t-il lorsque VaultCorp décidera de verrouiller un territoire non pas pour le protéger, mais pour le contrôler ? Les rumeurs persistantes d'une 'Directive Orentchev' – un protocole secret permettant à VCSDS de prendre le contrôle des infrastructures critiques en cas de 'menace existentielle' – alimentent les théories du complot et les craintes d'un coup d'État algorithmique.
 
 date_creation: 2026-07-11
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # VaultCorp Sovereign Defense Systems (VCSDS)

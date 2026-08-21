@@ -49,8 +49,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2035
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -85,6 +83,9 @@ localisation:
   zone: sahel_occidental_dissident
   lieu: Sahel occidental (Niger-Mali) / Région du Lac Tchad
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Collectifs de Défense Hydrique Sahéliens

@@ -59,8 +59,6 @@ type_relation_dominante: conflit
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: ascendant
 generation: post-effondrement
 
 injection:
@@ -81,6 +79,9 @@ tensions_narratives: >
   Le Terrafond est confronté à un dilemme existentiel : accueillir les flux de réfugiés paysans qui frappent à ses frontières poreuses renforce ses bras mais fragilise ses équilibres délibératifs et attise les convoitises extérieures ; se fermer le condamne à une consanguinité politique qui érode lentement sa légitimité. Par ailleurs, une faction interne commence à négocier discrètement avec un consortium logistique agro-corporatif en échange d'une protection armée — trahison ou pragmatisme de survie ? Enfin, la montée des eaux imprévisibles de l'Allier menace de redessiner les périmètres fonciers collectifs, rouvrant des conflits de délimitation que la gouvernance commune avait mis dix ans à clore.
 
 date_creation: 2026-06-27
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Terrafond Vallée — Le Pacte des Terres Vives

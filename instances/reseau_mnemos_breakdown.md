@@ -52,10 +52,8 @@ oppositions:
 type_relation_dominante: conflit
 
 annee_debut: 2049
-annee_fin: 
+annee_fin: 2061
 
-etat_temporel: transformé
-age_historique: résiduel
 generation: post-effondrement
 
 injection:
@@ -76,6 +74,9 @@ tensions_narratives: >
   La question centrale est de savoir si les Fragments peuvent un jour se resynchroniser — ou si la méfiance entre clusters est désormais irréversible. Certains gardiens tentent de reconstruire un protocole minimal d'échange, ce qui en fait des cibles autant que des héros. D'autres ont délibérément corrompu leurs archives pour les rendre inutilisables par des envahisseurs, au risque de détruire ce qu'ils prétendaient protéger. Enfin, des rumeurs persistent d'un nœud maître encore intact, quelque part en zone polaire, qui contiendrait la sauvegarde complète du réseau originel — et autour duquel se forment des expéditions aussi désespérées que dangereuses.
 
 date_creation: 2026-06-15
+trajectoire: transformé
+est_clandestin: false
+
 ---
 
 # Les Fragments de Mnemos

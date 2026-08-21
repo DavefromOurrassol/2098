@@ -35,7 +35,7 @@ alliances:
 - cooperative_terrafond_reference
 - cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference
 - federation_communs_territoriaux_reference
-- frente_sert_o_livre_reference
+- frente_sertao_livre_reference
 - internationale_travailleurs_augmentes_reference
 - reseau_des_administrations_locales_rurales_participatives_reference
 - reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference
@@ -48,8 +48,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2031
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -85,6 +83,9 @@ localisation:
   zone: europe_occidentale_reconstructee
   lieu: Massif Central / Plaines Ibériques Réhumidifiées
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Syndicats de travail rural hybride
@@ -115,7 +116,7 @@ Tiraillés entre la défense de l'emploi humain et la nécessité pragmatique d'
 - [[cooperative_terrafond_reference]]
 - [[cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference]]
 - [[federation_communs_territoriaux_reference]]
-- [[frente_sert_o_livre_reference]]
+- [[frente_sertao_livre_reference]]
 - [[internationale_travailleurs_augmentes_reference]]
 - [[reseau_des_administrations_locales_rurales_participatives_reference]]
 - [[reseau_des_villes_refuge_pour_travailleurs_desaugmentes_reference]]

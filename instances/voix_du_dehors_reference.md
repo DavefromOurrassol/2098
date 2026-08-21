@@ -61,8 +61,6 @@ type_relation_dominante: infiltration
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: mature
 generation: transition
 
 injection:
@@ -83,6 +81,9 @@ tensions_narratives: >
   La tension centrale reste irrésolue : plusieurs enquêtes internes ont identifié des financements suspects en provenance de deux blocs géopolitiques adverses simultanément, suggérant que la Voix du Dehors est infiltrée à plusieurs niveaux sans que cela invalide nécessairement la véracité de ses publications — ou peut-être précisément parce que chaque camp laisse passer les vérités qui nuisent à l'autre. Une faction interne pousse à une transition vers une gouvernance algorithmique transparente pour garantir l'indépendance éditoriale ; une autre y voit un cheval de Troie des plateformes dominantes. Enfin, les sources humaines dans les zones climatiques critiques signalent une pression croissante : les relais physiques disparaissent, arrêtés ou simplement achetés, et le réseau vieillit sans avoir résolu sa question fondatrice.
 
 date_creation: 2026-06-15
+trajectoire: mature
+est_clandestin: false
+
 ---
 
 # Voix du Dehors

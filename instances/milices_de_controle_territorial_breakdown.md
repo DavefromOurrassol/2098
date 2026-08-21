@@ -69,7 +69,7 @@ oppositions:
 - etats_fragmentes_nationalisant_les_stocks_breakdown
 - factions_secessionnistes_agrariennes_du_desert_breakdown
 - flux_migratoires_non_integrables_breakdown
-- frente_sert_o_livre_breakdown
+- frente_sertao_livre_breakdown
 - front_humanitaire_d_urgence_non_affilie_breakdown
 - gouvernements_regionaux_residuels_reterritorialisants_breakdown
 - lagos_est_nexcore_breakdown
@@ -89,8 +89,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2041
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -122,6 +120,9 @@ tensions_narratives: 'La tension fondamentale de ces milices réside dans leur d
   légitimation — certaines négociant des accords avec les reliquats institutionnels
   de Genève-Bunker — divise profondément leurs rangs entre pragmatistes et jusqu''au-boutistes.'
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Milices de Contrôle Territorial
@@ -179,7 +180,7 @@ La tension fondamentale de ces milices réside dans leur double nature : porteus
 - [[etats_fragmentes_nationalisant_les_stocks_breakdown]]
 - [[factions_secessionnistes_agrariennes_du_desert_breakdown]]
 - [[flux_migratoires_non_integrables_breakdown]]
-- [[frente_sert_o_livre_breakdown]]
+- [[frente_sertao_livre_breakdown]]
 - [[front_humanitaire_d_urgence_non_affilie_breakdown]]
 - [[gouvernements_regionaux_residuels_reterritorialisants_breakdown]]
 - [[lagos_est_nexcore_breakdown]]

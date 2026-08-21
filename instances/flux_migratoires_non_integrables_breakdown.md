@@ -54,8 +54,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2044
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -88,6 +86,9 @@ tensions_narratives: 'La tension centrale est celle de la responsabilité sans s
   la conscience d''être instrumentalisées par des acteurs miliciens ou corporatifs
   qui exploitent leur vulnérabilité pour s''emparer de ressources territoriales.'
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Flux Migratoires Non Intégrables

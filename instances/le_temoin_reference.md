@@ -35,8 +35,6 @@ oppositions:
 type_relation_dominante: neutralité
 annee_debut: 2080
 annee_fin:
-etat_temporel: actif
-age_historique: ascendant
 generation: transition
 injection:
   type: canonique
@@ -61,6 +59,9 @@ tensions_narratives: >
   commence à se demander si le journalisme qu'il pratique sert encore
   à quelque chose.
 date_creation: 2098-01-01
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Raj Mehta

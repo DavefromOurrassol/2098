@@ -41,7 +41,7 @@ alliances:
 - consortium_amazonia_viva_breakdown
 - delta_mekong_racines_breakdown
 - factions_secessionnistes_agrariennes_du_desert_breakdown
-- frente_sert_o_livre_breakdown
+- frente_sertao_livre_breakdown
 - guilde_des_techniciens_nomades_breakdown
 - ligue_des_cites_du_sahel_numerique_breakdown
 - massif_central_cicatrices_vertes_breakdown
@@ -61,8 +61,6 @@ oppositions:
 type_relation_dominante: coopération
 annee_debut: 2041
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -92,6 +90,9 @@ tensions_narratives: 'La tentation du repli total — fermer les frontières, re
   résistent aux reconfigurations imposées par les plus jeunes, nés dans un monde sans
   mémoire de l''État-nation.'
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Enclaves Agro-Communautaires Autonomes
@@ -125,7 +126,7 @@ La tentation du repli total — fermer les frontières, refuser les nouveaux exi
 - [[consortium_amazonia_viva_breakdown]]
 - [[delta_mekong_racines_breakdown]]
 - [[factions_secessionnistes_agrariennes_du_desert_breakdown]]
-- [[frente_sert_o_livre_breakdown]]
+- [[frente_sertao_livre_breakdown]]
 - [[guilde_des_techniciens_nomades_breakdown]]
 - [[ligue_des_cites_du_sahel_numerique_breakdown]]
 - [[massif_central_cicatrices_vertes_breakdown]]

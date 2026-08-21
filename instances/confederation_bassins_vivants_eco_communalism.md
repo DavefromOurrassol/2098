@@ -91,8 +91,6 @@ type_relation_dominante: coopération
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: post-effondrement
 
 injection:
@@ -113,6 +111,9 @@ tensions_narratives: >
   La tension principale traverse la question de l'exclusion : que faire d'une communauté membre qui viole durablement les quotas de prélèvement lors d'une sécheresse ? La Confédération n'a pas de bras armé, et ses seuls leviers sont la réputation et la coupure des solidarités — mais l'exclusion d'un bassin en détresse peut signifier sa mort sociale et écologique. Par ailleurs, son attractivité croissante attire des acteurs opportunistes : des agro-conglomérats qui tentent de faire admettre des filiales restructurées sous des noms d'emprunt, et des fragments d'États résiduels qui voient dans l'adhésion un moyen de regagner une légitimité perdue sans en accepter les contraintes réelles. La Confédération doit choisir : rester un exemple ou devenir un pouvoir — et ce choix ne peut plus être indéfiniment différé.
 
 date_creation: 2026-06-27
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Confédération des Bassins Vivants

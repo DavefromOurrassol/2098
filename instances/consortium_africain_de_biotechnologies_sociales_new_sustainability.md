@@ -63,8 +63,6 @@ type_relation_dominante: alliance stratégique
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: mature
 generation: reconstruction
 
 injection:
@@ -85,6 +83,9 @@ tensions_narratives: >
   Le CPBE est écartelé entre son rôle de plaidoyer communautaire et sa dépendance croissante aux financements institutionnels mondiaux qui conditionnent leur aide à des standards de «gouvernance transparente» définis hors d'Afrique. Une frange interne, proche des collectifs de désobéissance algorithmique, accuse la direction de sacrifier la souveraineté biomédicale locale sur l'autel de la respectabilité internationale. Parallèlement, des acteurs comme Nexus BioSyn cherchent à infiltrer ses comités de certification pour orienter les standards en leur faveur. La question centrale : jusqu'où peut-on réformer un système sans en devenir le gardien ?
 
 date_creation: 2026-06-25
+trajectoire: mature
+est_clandestin: false
+
 ---
 
 # Consortium Panafricain des Biotechnologies pour l'Équité (CPBE)

@@ -1,0 +1,68 @@
+============================================================
+AUDIT longueur articles — 31 fichiers scannés
+============================================================
+
+-- Statistiques de longueur réelle (comptage de mots du corps) --
+  Min    : 322
+  Max    : 1257
+  Moyenne: 696
+
+-- Distribution du format (catégorie de la thématique) --
+  analyse : 17
+  reportage : 9
+  brève : 4
+  chronique : 1
+
+-- CAS A : format et longueur pointent vers la même plage --
+   (pas d'override probable — le vrai signal de qualité)
+  Cohérentes   : 8
+  Incohérentes : 19
+  Taux d'incohérence réel (cas A uniquement) : 70.4%
+
+-- Détail cas A incohérentes (vrai signal, à examiner) --
+  20260621_195524_fortress_world_sciences_technologies_article.md : format='analyse' (attendu 600-900 mots) — 989 mots réels
+  20260621_200620_fortress_world_sciences_technologies_article.md : format='analyse' (attendu 600-900 mots) — 957 mots réels
+  20260628_075754_fortress_world_sciences_technologies_article.md : format='analyse' (attendu 600-900 mots) — 1092 mots réels
+  20260628_160545_policy_reform_societe_article.md : format='reportage' (attendu 700-1000 mots) — 1182 mots réels
+  20260628_161154_policy_reform_societe_article.md : format='reportage' (attendu 700-1000 mots) — 486 mots réels
+  20260628_161545_policy_reform_societe_article_22aot2098.md : format='reportage' (attendu 700-1000 mots) — 322 mots réels
+  20260628_175131_eco_communalism_societe_article_20septembre2098.md : format='reportage' (attendu 700-1000 mots) — 432 mots réels
+  20260705_172900_eco_communalism_sante_article_6aot2098.md : format='analyse' (attendu 600-900 mots) — 450 mots réels
+  20260705_175125_eco_communalism_sante_article_20septembre2098.md : format='analyse' (attendu 600-900 mots) — 495 mots réels
+  20260705_183701_eco_communalism_sante_article_3octobre2098.md : format='analyse' (attendu 600-900 mots) — 354 mots réels
+  20260706_183009_breakdown_politique_article_17janvier2098.md : format='analyse' (attendu 600-900 mots) — 1127 mots réels
+  20260706_183040_breakdown_economie_finance_article_2fvrier2098.md : format='analyse' (attendu 600-900 mots) — 1257 mots réels
+  20260706_183108_breakdown_environnement_climat_article_19fvrier2098.md : format='reportage' (attendu 700-1000 mots) — 1133 mots réels
+  20260706_183156_breakdown_medias_communication_article_24mars2098.md : format='analyse' (attendu 600-900 mots) — 992 mots réels
+  20260706_185558_policy_reform_politique_article_3janvier2098.md : format='analyse' (attendu 600-900 mots) — 415 mots réels
+  20260706_185610_policy_reform_societe_article_17janvier2098.md : format='reportage' (attendu 700-1000 mots) — 369 mots réels
+  20260711_103325_eco_communalism_sante_article_27mai2098.md : format='analyse' (attendu 600-900 mots) — 428 mots réels
+  20260711_175027_eco_communalism_sante_article_21avril2098.md : format='analyse' (attendu 600-900 mots) — 396 mots réels
+  20260716_070008_eco_communalism_sante_article_8mars2098.md : format='analyse' (attendu 600-900 mots) — 438 mots réels
+
+-- CAS B : format et longueur divergent (override probable) --
+   (0 articles — informatif seulement, PAS un signe du bug)
+
+-- Non analysables (format ou longueur absent/non reconnu) : 4 --
+  20260628_175911_fortress_world_actualites_a_la_une_article_22aot2098.md : format='brève' longueur='300 à 500 mots' — 396 mots réels
+  20260628_233404_fortress_world_actualites_a_la_une_article_8mars2098.md : format='brève' longueur='300 à 500 mots' — 364 mots réels
+  20260706_182946_breakdown_actualites_a_la_une_article_3janvier2098.md : format='brève' longueur='300 à 500 mots' — 483 mots réels
+  20260802_185402_eco_communalism_actualites_a_la_une_article_8mars2098.md : format='brève' longueur='300 à 500 mots' — 582 mots réels
+
+-- Distribution par scénario --
+  fortress_world : 10
+  eco_communalism : 10
+  breakdown : 6
+  policy_reform : 5
+
+-- Distribution par thématique --
+  sante : 8
+  societe : 6
+  sciences_technologies : 5
+  actualites_a_la_une : 4
+  sports : 2
+  politique : 2
+  religion_spiritualite : 1
+  economie_finance : 1
+  environnement_climat : 1
+  medias_communication : 1

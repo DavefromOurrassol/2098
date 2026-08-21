@@ -4,13 +4,11 @@ type: instance
 slug: rede_paulista_de_distribuic_o_algor_tmica_new_sustainability
 entite: rede_paulista_de_distribuic_o_algor_tmica
 scenario: new_sustainability
+statut: officialise_enrichi
 localisation:
   zone: ameriques_reconfigurees
   lieu: São Paulo (Santo André / Heliópolis)
   type_lieu: ville
-  statut: review_manuelle
-  note: "Le SPAR est clairement ancré à São Paulo (métropole, complexe de Santo André, quartier d'Heliópolis), mais aucune zone spécifique à São Paulo n'existe dans la liste ; la zone parente la plus proche est ameriques_reconfigurees."
-
 type_dans_scenario: système
 
 role_dans_scenario: >
@@ -61,8 +59,6 @@ type_relation_dominante: coopération
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: mature
 generation: ère cognitive
 
 injection:
@@ -83,6 +79,9 @@ tensions_narratives: >
   La tension principale réside dans la révision triennale des paramètres de 2100, qui s'annonce explosive : une coalition de communautés périphériques exige l'introduction d'un droit de veto populaire sur toute modification algorithmique, tandis que les factions technocratiques internes résistent au nom de l'efficacité systémique. Par ailleurs, le SPAR est sollicité pour exporter son modèle à Lagos et Jakarta via le Réseau des Hubs Urbains Régénératifs — ce qui pose la question de savoir si ses biais structurels paulistains seront également exportés. Enfin, une fuite récente de documentation interne suggère que certains paramètres énergétiques sont restés calqués sur des modèles de consommation datant de 2045, rendant invisible toute une génération de pratiques communautaires régénératives développées hors-grille.
 
 date_creation: 2026-06-23
+trajectoire: mature
+est_clandestin: false
+
 ---
 
 # Sistema Paulista de Alocação Regenerativa (SPAR)

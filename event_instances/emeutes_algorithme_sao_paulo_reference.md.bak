@@ -4,6 +4,10 @@ type: event_instance
 slug: emeutes_algorithme_sao_paulo_reference
 archetype: emeutes_algorithme_sao_paulo
 scenario: reference
+localisation:
+  zone: sao_paulo_spaar
+  lieu: São Paulo — Périphéries et SPAAR
+  type_lieu: infrastructure
 type_evenement: political_social
 portee: regionale
 date: 2073

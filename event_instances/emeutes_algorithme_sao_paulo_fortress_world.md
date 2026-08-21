@@ -36,7 +36,7 @@ impact_sur_variables:
 propagation:
   via_matrice: true
 acteurs_impliques:
-    - rede_paulista_de_distribuic_o_algor_tmica_fortress_world
+    - rede_paulista_de_distribuicao_algoritmica_fortress_world
     - populations_des_zones_deficitaires_d_optimisation_fortress_world
     - agences_de_securite_interieure_des_etats_forteresses_fortress_world
     - archives_chiffrees_de_l_open_internet_coalition_fortress_world
@@ -67,7 +67,7 @@ L'insurrection ne renverse pas le régime algorithmique de São Paulo — les ag
 - **organisation_territoires** : delta +10 sur 12 ans
 
 ## Acteurs impliqués
-- [[rede_paulista_de_distribuic_o_algor_tmica_fortress_world]]
+- [[rede_paulista_de_distribuicao_algoritmica_fortress_world]]
 - [[populations_des_zones_deficitaires_d_optimisation_fortress_world]]
 - [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]]
 - [[archives_chiffrees_de_l_open_internet_coalition_fortress_world]]

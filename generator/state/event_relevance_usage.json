@@ -1,0 +1,68 @@
+{
+  "breakdown": {
+    "conflit_israel_iran_2026_breakdown": 1,
+    "crise_gouvernance_amazonie_breakdown": 1,
+    "effondrement_reseau_mondial_communication_breakdown": 1,
+    "encheres_terres_rares_groenland_breakdown": 1,
+    "escalade_sahel_2028_test_breakdown": 1,
+    "exode_midwest_grands_lacs_breakdown": 1,
+    "insurrection_rust_belt_breakdown": 1,
+    "secession_great_lakes_compact_breakdown": 1
+  },
+  "eco_communalism": {
+    "communes_rust_belt_zones_libres_eco_communalism": 4,
+    "conflit_israel_iran_2026_eco_communalism": 4,
+    "crise_gouvernance_amazonie_eco_communalism": 4,
+    "effondrement_reseau_mondial_communication_eco_communalism": 4,
+    "encheres_terres_rares_groenland_eco_communalism": 4,
+    "exode_midwest_grands_lacs_eco_communalism": 4,
+    "grand_forum_sahel_numerique_eco_communalism": 4,
+    "insurrection_rust_belt_eco_communalism": 4
+  },
+  "fortress_world": {
+    "communes_rust_belt_zones_libres_fortress_world": 2,
+    "conflit_israel_iran_2026_fortress_world": 3,
+    "crise_gouvernance_amazonie_fortress_world": 2,
+    "effondrement_reseau_mondial_communication_fortress_world": 3,
+    "election_parti_commun_americain_fortress_world": 1,
+    "encheres_terres_rares_groenland_fortress_world": 3,
+    "exode_midwest_grands_lacs_fortress_world": 2,
+    "greve_generale_corridors_eurasiens_fortress_world": 2,
+    "insurrection_rust_belt_fortress_world": 3,
+    "secession_great_lakes_compact_fortress_world": 2
+  },
+  "new_sustainability": {
+    "accord_carbone_amazonie_blocs_new_sustainability": 1,
+    "conflit_israel_iran_2026_new_sustainability": 1,
+    "crise_gouvernance_amazonie_new_sustainability": 1,
+    "effondrement_reseau_mondial_communication_new_sustainability": 1,
+    "election_parti_commun_americain_new_sustainability": 1,
+    "encheres_terres_rares_groenland_new_sustainability": 1,
+    "revolution_travail_sahel_numerique_new_sustainability": 1,
+    "submersion_tuvalu_acte_fondateur_new_sustainability": 1
+  },
+  "policy_reform": {
+    "accord_carbone_amazonie_blocs_policy_reform": 3,
+    "conflit_israel_iran_2026_policy_reform": 3,
+    "crise_gouvernance_amazonie_policy_reform": 3,
+    "effondrement_reseau_mondial_communication_policy_reform": 3,
+    "election_parti_commun_americain_policy_reform": 1,
+    "encheres_terres_rares_groenland_policy_reform": 3,
+    "greve_generale_corridors_eurasiens_policy_reform": 3,
+    "revolution_travail_sahel_numerique_policy_reform": 2,
+    "submersion_tuvalu_acte_fondateur_policy_reform": 3
+  },
+  "reference": {
+    "accord_carbone_amazonie_blocs_reference": 19,
+    "conflit_israel_iran_2026_reference": 25,
+    "crise_gouvernance_amazonie_reference": 7,
+    "effondrement_reseau_mondial_communication_reference": 25,
+    "election_parti_commun_americain_reference": 25,
+    "emeutes_algorithme_sao_paulo_reference": 5,
+    "encheres_terres_rares_groenland_reference": 25,
+    "exode_midwest_grands_lacs_reference": 12,
+    "nairobi_biorevenu_pilote_2094_reference": 19,
+    "secession_great_lakes_compact_reference": 14,
+    "submersion_tuvalu_acte_fondateur_reference": 24
+  }
+}

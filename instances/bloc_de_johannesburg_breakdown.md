@@ -48,8 +48,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2042
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -79,6 +77,9 @@ tensions_narratives: Le Bloc prétend incarner la continuité institutionnelle a
   le CRRC, la question de savoir qui gouverne réellement l'Afrique centrale reste
   ouverte et explosive.
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Bloc de Johannesburg

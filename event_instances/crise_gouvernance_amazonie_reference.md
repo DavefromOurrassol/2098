@@ -41,7 +41,7 @@ propagation:
   via_matrice: true
 acteurs_impliques:
     - consortium_amazonia_viva_reference
-    - frente_sert_o_livre_reference
+    - frente_sertao_livre_reference
     - consortiums_energetiques_opaques_reference
     - corporations_d_extraction_energetique_non_signataires_reference
     - blocs_signataires_du_pacte_energetique_multilateral_reference
@@ -76,7 +76,7 @@ L'épreuve de Belém cristallise le statut ambigu mais irréversible du bassin a
 
 ## Acteurs impliqués
 - [[consortium_amazonia_viva_reference]]
-- [[frente_sert_o_livre_reference]]
+- [[frente_sertao_livre_reference]]
 - [[consortiums_energetiques_opaques_reference]]
 - [[corporations_d_extraction_energetique_non_signataires_reference]]
 - [[blocs_signataires_du_pacte_energetique_multilateral_reference]]

@@ -61,8 +61,6 @@ type_relation_dominante: alliance stratégique
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: reconstruction
 
 injection:
@@ -83,6 +81,9 @@ tensions_narratives: >
   La Ligue oscille entre deux identités contradictoires : émancipatrice horizontale ou nouvelle puissance normative sahélienne. Les cités fondatrices comme Agadez revendiquent une voix égale à Ouagadougou, mais la concentration des ingénieurs et des serveurs dans les métropoles crée des asymétries invisibles que les protocoles ouverts peinent à corriger. Par ailleurs, des territoires du Maghreb adoptant SahelOS signalent des dépendances techniques croissantes envers les cités membres pour la maintenance — une forme de néo-dépendance que la Ligue n'a pas encore su résoudre. Enfin, la pression des blocs fermés — qui voient dans la Ligue un modèle de contagion — monte, alimentant des rumeurs d'infiltration et de sabotage des nœuds périphériques.
 
 date_creation: 2026-06-23
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Ligue des Cités du Sahel Numérique

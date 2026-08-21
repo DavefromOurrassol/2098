@@ -54,8 +54,6 @@ oppositions:
 type_relation_dominante: compétition
 annee_debut: 2029
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -89,6 +87,9 @@ localisation:
   zone: indo_pacifique_emergent
   lieu: Singapour-Est / Séoul (nœuds opérationnels principaux)
   type_lieu: infrastructure
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Consortium Logistique Asiatique de Contournement ALN

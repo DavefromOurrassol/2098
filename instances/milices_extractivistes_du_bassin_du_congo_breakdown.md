@@ -53,8 +53,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2042
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -85,6 +83,9 @@ tensions_narratives: 'Leur fragmentation interne est leur principale faiblesse :
   existentielle qu''elles cherchent à décrédibiliser par des attaques ciblées sur
   ses délégations.'
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Milices Extractivistes du Bassin du Congo

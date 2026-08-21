@@ -64,8 +64,6 @@ type_relation_dominante: dépendance
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: actif
-age_historique: dominant
 generation: forteresse
 
 injection:
@@ -86,6 +84,9 @@ tensions_narratives: >
   La Ceinture est indispensable aux forteresses et pourtant traitée comme une ressource consommable : la moindre baisse de rendement déclenche des audits punitifs, tandis que les conditions de vie se dégradent sous l'effet des chocs climatiques que les murs de la Zone ne filtrent qu'imparfaitement. Des réseaux clandestins de transmission d'information tentent de faire sortir des données sur les conditions réelles de vie, menaçant la réputation de conformité sociale que les consortiums vendent aux blocs clients. La question qui taraude les analystes des forteresses n'est pas morale — elle est stratégique : jusqu'à quel degré de pression une population captive reste-t-elle productive avant de devenir un risque systémique ? Et si la Zone s'arrêtait, délibérément ou non, qui effondrerait en premier : elle, ou les forteresses qu'elle nourrit ?
 
 date_creation: 2026-06-27
+trajectoire: dominant
+est_clandestin: false
+
 ---
 
 # Ceinture Productive Eurasiatique — Zones de Labeur Sous Mandat

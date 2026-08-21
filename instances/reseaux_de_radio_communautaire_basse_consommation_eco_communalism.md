@@ -40,7 +40,7 @@ alliances:
 - confederation_bassins_vivants_eco_communalism
 - cooperatives_d_habitat_regeneratif_eco_communalism
 - fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism
-- frente_sert_o_livre_eco_communalism
+- frente_sertao_livre_eco_communalism
 - guildes_de_mediateurs_ecologiques_eco_communalism
 - le_registre_du_fleuve_eco_communalism
 - les_veilleurs_du_fleuve_eco_communalism
@@ -65,8 +65,6 @@ oppositions:
 type_relation_dominante: symbiose
 annee_debut: 2036
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -99,6 +97,9 @@ localisation:
   zone: null
   lieu: null
   type_lieu: infrastructure
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Réseaux de radio communautaire basse consommation
@@ -134,7 +135,7 @@ La portée limitée de chaque émetteur crée des zones d'ombre structurelles, o
 - [[confederation_bassins_vivants_eco_communalism]]
 - [[cooperatives_d_habitat_regeneratif_eco_communalism]]
 - [[fraternites_ecospiritualistes_des_anciens_survivalistes_eco_communalism]]
-- [[frente_sert_o_livre_eco_communalism]]
+- [[frente_sertao_livre_eco_communalism]]
 - [[guildes_de_mediateurs_ecologiques_eco_communalism]]
 - [[le_registre_du_fleuve_eco_communalism]]
 - [[les_veilleurs_du_fleuve_eco_communalism]]

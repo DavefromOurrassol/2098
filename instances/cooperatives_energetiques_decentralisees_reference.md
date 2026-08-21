@@ -40,7 +40,7 @@ alliances:
 - consortium_des_fournisseurs_d_energie_renouvelable_distribuee_reference
 - cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference
 - cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference
-- frente_sert_o_livre_reference
+- frente_sertao_livre_reference
 - lyon_metropole_reference
 - ong_environnementales_de_terrain_reference
 - pacifique_sud_archipels_flottants_reference
@@ -59,12 +59,10 @@ oppositions:
 - lobbies_industriels_des_etats_non_signataires_reference
 - operateurs_prives_d_energie_distribuee_hors_fct_reference
 - plateformes_d_optimisation_territoriale_par_ia_reference
-- rede_paulista_de_distribuic_o_algor_tmica_reference
+- rede_paulista_de_distribuicao_algoritmica_reference
 type_relation_dominante: symbiose
 annee_debut: 2031
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -97,6 +95,9 @@ localisation:
   zone: null
   lieu: null
   type_lieu: region
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Coopératives Énergétiques Décentralisées
@@ -130,7 +131,7 @@ Les coopératives se trouvent prises en étau entre la tentation de croître —
 - [[consortium_des_fournisseurs_d_energie_renouvelable_distribuee_reference]]
 - [[cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference]]
 - [[cooperatives_agro_ecologiques_du_bassin_mediterraneen_reference]]
-- [[frente_sert_o_livre_reference]]
+- [[frente_sertao_livre_reference]]
 - [[lyon_metropole_reference]]
 - [[ong_environnementales_de_terrain_reference]]
 - [[pacifique_sud_archipels_flottants_reference]]
@@ -149,7 +150,7 @@ Les coopératives se trouvent prises en étau entre la tentation de croître —
 - [[lobbies_industriels_des_etats_non_signataires_reference]]
 - [[operateurs_prives_d_energie_distribuee_hors_fct_reference]]
 - [[plateformes_d_optimisation_territoriale_par_ia_reference]]
-- [[rede_paulista_de_distribuic_o_algor_tmica_reference]]
+- [[rede_paulista_de_distribuicao_algoritmica_reference]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

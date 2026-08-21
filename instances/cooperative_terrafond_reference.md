@@ -49,8 +49,6 @@ type_relation_dominante: coopération
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: mature
 generation: transition
 
 injection:
@@ -71,6 +69,9 @@ tensions_narratives: >
   La tentation d'intégration dans les grands systèmes d'agriculture contractuelle algorithmique menace l'autonomie du réseau : certaines coopératives membres négocient des accords partiels avec des plateformes d'optimisation IA, créant une fracture interne entre puristes de la réciprocité et pragmatiques de la survie financière. Par ailleurs, la montée des réfugiés climatiques vers les zones tampons que gère Terrafond génère une pression démographique que le modèle du suffisant n'a pas été conçu pour absorber. Question ouverte : le Réseau peut-il grandir sans trahir son principe fondateur, ou sa force réside-t-elle précisément dans son refus d'échelle ?
 
 date_creation: 2026-06-15
+trajectoire: mature
+est_clandestin: false
+
 ---
 
 # Réseau Terrafond

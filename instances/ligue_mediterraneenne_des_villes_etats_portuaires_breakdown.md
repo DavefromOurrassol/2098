@@ -50,8 +50,6 @@ oppositions:
 type_relation_dominante: coopération
 annee_debut: 2030
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -80,6 +78,9 @@ tensions_narratives: 'La Ligue est tiraillée entre sa vocation d''espace neutre
   déplacées de l''arc sahélien et des côtes basses noient littéralement les infrastructures
   des villes-membres.'
 date_creation: 2026-06-20
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Ligue Méditerranéenne des Villes-États Portuaires

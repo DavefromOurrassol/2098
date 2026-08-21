@@ -55,8 +55,6 @@ oppositions:
 type_relation_dominante: dépendance
 annee_debut: 2037
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -95,6 +93,9 @@ localisation:
   zone: corridors_gris_asie_centrale
   lieu: Tbilissi-Nord / Almaty — sièges tournants
   type_lieu: infrastructure
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Opérateurs Privés de Transit Énergétique Caucasien-Centrasiatique

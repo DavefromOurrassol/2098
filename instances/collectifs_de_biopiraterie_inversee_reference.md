@@ -39,7 +39,7 @@ alliances:
 - consortium_africain_de_biotechnologies_sociales_reference
 - consortium_amazonia_viva_reference
 - federation_des_cliniques_autonomes_reference
-- frente_sert_o_livre_reference
+- frente_sertao_livre_reference
 - reseaux_de_medecine_traditionnelle_augmentee_reference
 - zones_grises_globales_reference
 oppositions:
@@ -57,8 +57,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2033
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -91,6 +89,9 @@ localisation:
   zone: null
   lieu: null
   type_lieu: null
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Collectifs de Biopiraterie Inversée
@@ -123,7 +124,7 @@ Leur légitimité est constamment disputée : alliés objectifs des communautés
 - [[consortium_africain_de_biotechnologies_sociales_reference]]
 - [[consortium_amazonia_viva_reference]]
 - [[federation_des_cliniques_autonomes_reference]]
-- [[frente_sert_o_livre_reference]]
+- [[frente_sertao_livre_reference]]
 - [[reseaux_de_medecine_traditionnelle_augmentee_reference]]
 - [[zones_grises_globales_reference]]
 **Opposants :**

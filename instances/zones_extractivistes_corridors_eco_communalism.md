@@ -55,9 +55,7 @@ oppositions:
   - reseaux_de_notables_communautaires_capturistes_eco_communalism
 type_relation_dominante: conflit
 annee_debut: 2041
-annee_fin:
-etat_temporel: transformé
-age_historique: ascendant
+annee_fin: 2063
 generation: reconstruction
 injection:
   type: canonique
@@ -71,6 +69,9 @@ signes_distinctifs: Bornes orange rouillées des anciens périmètres miniers re
 tensions_narratives: |
   La reconversion juridique du sol reste le nœud gordien : les coalitions communalistes avancent par la pratique et la jurisprudence coutumière, mais les titres de propriété hérités continuent de peser comme une épée de Damoclès sur chaque chantier de dépollution. Par ailleurs, certaines communautés refusent que leurs friches deviennent des corridors ouverts, craignant l'afflux de voisins ou de flux qu'elles ne contrôlent pas — la tension entre continuité écologique et souveraineté locale reste vive. Enfin, la question de la toxicité résiduelle des sols — métaux lourds, résidus de combustibles fossiles — crée des conflits sur la vitesse de réouverture des corridors, entre ceux qui veulent avancer et ceux qui exigent une décontamination complète avant tout transit.
 date_creation: 2026-06-27
+trajectoire: transformé
+est_clandestin: false
+
 ---
 
 # Friches Corridors — Terres de Passage

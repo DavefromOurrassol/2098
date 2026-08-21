@@ -1,0 +1,103 @@
+---
+name: Les Gardiens des Détroits Fantômes
+type: instance
+slug: agence_de_regulation_des_detroits_strategiques_ards_breakdown
+entite: agence_de_regulation_des_detroits_strategiques_ards
+scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
+
+type_dans_scenario: hybride
+
+role_dans_scenario: >
+  Dans le chaos du breakdown, l'ARDS a éclaté en fragments rivaux contrôlant les détroits stratégiques (Ormuz, Bab-el-Mandeb, Malacca, Bosphore, etc.). Les Gardiens des Détroits Fantômes en sont le résidu le plus influent : une coalition informelle de milices logistiques, d'anciens fonctionnaires de l'ARDS, de hackers des corridors maritimes et de seigneurs de guerre locaux, unis par la nécessité de maintenir un semblant de fluidité dans les échanges vitaux. Ils arbitrent les conflits entre blocs régionaux, monnayent des droits de passage et sabotent les tentatives de monopole absolu sur les flux. Leur légitimité repose sur leur capacité à être à la fois indispensables et insaisissables, jouant les uns contre les autres dans un équilibre précaire.
+
+responsabilites: >
+  1) Négocier des corridors de transit sécurisés pour les convois de ressources critiques (lithium, terres rares, denrées, médicaments) en échange de péages ou de services. 2) Saboter ou infiltrer les blocs rivaux qui tentent de verrouiller un détroit (ex. : piratage des systèmes de guidage des navires, attaques ciblées sur les infrastructures portuaires). 3) Documenter et archiver les flux logistiques pour éviter les ruptures totales, en collaboration avec les réseaux de cartographes des zones grises. 4) Former des milices locales à la gestion des points de passage, créant une dépendance durable envers leur expertise.
+
+impact_local: 4
+impact_systemique_global: 3
+
+variables_influencees:
+    - geopolitique_conflits
+    - energie_ressources_critiques
+    - organisation_territoires
+
+zone_geographique:
+    - régionale
+    - continentale
+
+zone_systemique:
+    - énergie
+    - gouvernance
+    - infrastructure
+    - sécurité
+
+alliances:
+    - reseau_des_cartographes_des_zones_grises_breakdown
+    - guilde_des_techniciens_nomades_breakdown
+    - brigades_medicales_itinerantes_breakdown
+    - collectifs_de_reparation_energetique_breakdown
+    - front_de_resistance_aux_peages_sur_les_ressources_breakdown
+
+oppositions:
+    - blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown
+    - seigneuries_logistiques_armees_breakdown
+    - factions_energetiques_heritieres_des_pactes_abs_breakdown
+    - carthage_nord_nexcore_breakdown
+    - district_mourmansk_residuel_breakdown
+
+type_relation_dominante: rivalité
+
+annee_debut: 2055
+annee_fin: 
+
+trajectoire: résiduel
+est_clandestin: true
+generation: post-effondrement
+
+injection:
+  type: canonique
+  annee_injection:
+  contexte_injection:
+  impact_sur_variables:
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  « Ils sont partout et nulle part », résume un capitaine de cargo du corridor Malacca-Suez, sous couvert d'anonymat. Les Gardiens des Détroits Fantômes ne signent jamais leurs interventions, mais leur marque de fabrique est reconnaissable : des détroits soudainement rouverts après des mois de blocage, des péages « raisonnables » prélevés en nature (médicaments, pièces détachées) plutôt qu'en crédits fantômes, et surtout, cette capacité à faire disparaître les convois trop gourmands. Leur QG ? Une flottille de navires-usines reconvertis, croisant au large des zones contestées, où se croisent anciens diplomates de l'ARDS, hackers des douanes fantômes et miliciens des « ports libres ». Leur dernière prouesse ? Avoir rouvert le détroit de Bab-el-Mandeb en 2092 après trois ans de guerre hydrique, en piratant les drones de surveillance saoudiens et en soudoyant les pêcheurs yéménites pour guider les tankers. « Sans eux, le lithium du Congo ne serait jamais arrivé aux forges du Rust Belt », admet un ingénieur de la Confédération des Bassins Vivants.
+
+signes_distinctifs: >
+  1) **Le Sceau du Passage** : un tatouage ou un insigne temporaire (peinture corporelle, patch électronique) apposé sur les équipages et les cargaisons autorisées à traverser un détroit. Chaque sceau est unique, généré par un algorithme open-source et valable 72 heures. 2) **Les Phares Fantômes** : des balises lumineuses ou sonores installées sur des épaves, des récifs ou des plateformes offshore, émettant des signaux codés pour guider les convois à travers les zones minées ou contrôlées par des milices hostiles. 3) **L'Archive des Flux** : un réseau décentralisé de serveurs cachés dans des conteneurs maritimes ou des grottes côtières, documentant en temps réel les mouvements de ressources critiques. Accessible uniquement via des relais physiques (ex. : les « Cryptes Lagunaires » de Lagos Intérieur Mnemos).
+
+tensions_narratives: >
+  1) **La Guerre des Péages** : Les Gardiens monnayent leur expertise, mais jusqu'où peuvent-ils pousser leur avantage sans devenir eux-mêmes des seigneurs de guerre ? Leur alliance fragile avec le Front de Résistance aux Péages sur les Ressources pourrait voler en éclats si leurs tarifs deviennent trop oppressifs. 2) **L'Ombre de l'ARDS** : Certains anciens fonctionnaires de l'ARDS, intégrés aux Gardiens, rêvent de reconstituer l'agence sous une forme encore plus centralisée. D'autres, au contraire, veulent la voir disparaître à jamais, remplacée par un réseau horizontal de ports libres. 3) **La Trahison des Cartes** : Leur collaboration avec les cartographes des zones grises est vitale, mais ces derniers documentent aussi leurs exactions. Que se passera-t-il si les archives des Gardiens tombent entre de mauvaises mains ? 4) **Le Piège des Détroits** : Plus ils contrôlent de points de passage, plus ils deviennent une cible pour les blocs régionaux. Leur force (la dispersion) pourrait devenir leur faiblesse si un acteur majeur décide de les éradiquer.
+
+date_creation: 2026-08-11
+---
+
+# Les Gardiens des Détroits Fantômes
+
+## Rôle dans [[breakdown]]
+Dans le chaos du breakdown, l'ARDS a éclaté en fragments rivaux contrôlant les détroits stratégiques (Ormuz, Bab-el-Mandeb, Malacca, Bosphore, etc.). Les Gardiens des Détroits Fantômes en sont le résidu le plus influent : une coalition informelle de milices logistiques, d'anciens fonctionnaires de l'ARDS, de hackers des corridors maritimes et de seigneurs de guerre locaux, unis par la nécessité de maintenir un semblant de fluidité dans les échanges vitaux. Ils arbitrent les conflits entre blocs régionaux, monnayent des droits de passage et sabotent les tentatives de monopole absolu sur les flux. Leur légitimité repose sur leur capacité à être à la fois indispensables et insaisissables, jouant les uns contre les autres dans un équilibre précaire.
+
+## Responsabilités
+1) Négocier des corridors de transit sécurisés pour les convois de ressources critiques (lithium, terres rares, denrées, médicaments) en échange de péages ou de services. 2) Saboter ou infiltrer les blocs rivaux qui tentent de verrouiller un détroit (ex. : piratage des systèmes de guidage des navires, attaques ciblées sur les infrastructures portuaires). 3) Documenter et archiver les flux logistiques pour éviter les ruptures totales, en collaboration avec les réseaux de cartographes des zones grises. 4) Former des milices locales à la gestion des points de passage, créant une dépendance durable envers leur expertise.
+
+## Variables influencées
+- [[geopolitique_conflits]]
+- [[energie_ressources_critiques]]
+- [[organisation_territoires]]
+
+## Relations
+**Alliés** : [[reseau_des_cartographes_des_zones_grises_breakdown]], [[guilde_des_techniciens_nomades_breakdown]], [[brigades_medicales_itinerantes_breakdown]], [[collectifs_de_reparation_energetique_breakdown]], [[front_de_resistance_aux_peages_sur_les_ressources_breakdown]]
+**Opposants** : [[blocs_de_controle_des_couloirs_d_approvisionnement_strategiques_breakdown]], [[seigneuries_logistiques_armees_breakdown]], [[factions_energetiques_heritieres_des_pactes_abs_breakdown]], [[carthage_nord_nexcore_breakdown]], [[district_mourmansk_residuel_breakdown]]
+
+## Description journalistique
+« Ils sont partout et nulle part », résume un capitaine de cargo du corridor Malacca-Suez, sous couvert d'anonymat. Les Gardiens des Détroits Fantômes ne signent jamais leurs interventions, mais leur marque de fabrique est reconnaissable : des détroits soudainement rouverts après des mois de blocage, des péages « raisonnables » prélevés en nature (médicaments, pièces détachées) plutôt qu'en crédits fantômes, et surtout, cette capacité à faire disparaître les convois trop gourmands. Leur QG ? Une flottille de navires-usines reconvertis, croisant au large des zones contestées, où se croisent anciens diplomates de l'ARDS, hackers des douanes fantômes et miliciens des « ports libres ». Leur dernière prouesse ? Avoir rouvert le détroit de Bab-el-Mandeb en 2092 après trois ans de guerre hydrique, en piratant les drones de surveillance saoudiens et en soudoyant les pêcheurs yéménites pour guider les tankers. « Sans eux, le lithium du Congo ne serait jamais arrivé aux forges du Rust Belt », admet un ingénieur de la Confédération des Bassins Vivants.
+
+## Tensions narratives
+1) **La Guerre des Péages** : Les Gardiens monnayent leur expertise, mais jusqu'où peuvent-ils pousser leur avantage sans devenir eux-mêmes des seigneurs de guerre ? Leur alliance fragile avec le Front de Résistance aux Péages sur les Ressources pourrait voler en éclats si leurs tarifs deviennent trop oppressifs. 2) **L'Ombre de l'ARDS** : Certains anciens fonctionnaires de l'ARDS, intégrés aux Gardiens, rêvent de reconstituer l'agence sous une forme encore plus centralisée. D'autres, au contraire, veulent la voir disparaître à jamais, remplacée par un réseau horizontal de ports libres. 3) **La Trahison des Cartes** : Leur collaboration avec les cartographes des zones grises est vitale, mais ces derniers documentent aussi leurs exactions. Que se passera-t-il si les archives des Gardiens tombent entre de mauvaises mains ? 4) **Le Piège des Détroits** : Plus ils contrôlent de points de passage, plus ils deviennent une cible pour les blocs régionaux. Leur force (la dispersion) pourrait devenir leur faiblesse si un acteur majeur décide de les éradiquer.

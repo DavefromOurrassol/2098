@@ -65,8 +65,6 @@ type_relation_dominante: conflit
 annee_debut: 2041
 annee_fin: 
 
-etat_temporel: clandestin
-age_historique: ascendant
 generation: forteresse
 
 injection:
@@ -87,6 +85,9 @@ tensions_narratives: >
   La tension centrale est celle de la récupération : plusieurs blocs géopolitiques cherchent à instrumentaliser les Seuils Fermés comme proxies déstabilisateurs dans les zones d'influence ennemies, ce qui risque de transformer des millénaristes sincères en outils géopolitiques sans qu'ils le réalisent — ou en le réalisant trop tard. En interne, une fracture monte entre les 'contemplatifs' qui attendent l'effondrement et les 'accélérationnistes' qui veulent le provoquer activement en sabotant les infrastructures critiques des blocs. Enfin, leur recrutement massif parmi les rejetés des sélections migratoires leur donne une base démographique croissante mais hétérogène, menaçant la cohérence rituelle qui fait leur identité — grandir, pour eux, c'est peut-être déjà trahir.
 
 date_creation: 2026-06-15
+trajectoire: ascendant
+est_clandestin: true
+
 ---
 
 # Les Seuils Fermés

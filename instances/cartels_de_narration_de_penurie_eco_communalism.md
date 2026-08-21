@@ -48,7 +48,7 @@ oppositions:
 - assemblees_bioterritoriales_regionales_eco_communalism
 - collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism
 - confederation_bassins_vivants_eco_communalism
-- frente_sert_o_livre_eco_communalism
+- frente_sertao_livre_eco_communalism
 - kalaallit_nunaat_bioterritoire_eco_communalism
 - mouvement_des_communes_du_rust_belt_eco_communalism
 - oracle_des_seuils_eco_communalism
@@ -60,8 +60,6 @@ oppositions:
 type_relation_dominante: conflit
 annee_debut: 2036
 annee_fin: null
-etat_temporel: actif
-age_historique: émergent
 generation: transition
 injection:
   type: canonique
@@ -97,6 +95,9 @@ localisation:
   zone: null
   lieu: null
   type_lieu: null
+trajectoire: émergent
+est_clandestin: false
+
 ---
 
 # Cartels de Narration de Pénurie
@@ -137,7 +138,7 @@ Les Cartels prospèrent précisément sur les acquis démocratiques des communau
 - [[assemblees_bioterritoriales_regionales_eco_communalism]]
 - [[collectifs_de_facilitateurs_deliberatifs_itinerants_eco_communalism]]
 - [[confederation_bassins_vivants_eco_communalism]]
-- [[frente_sert_o_livre_eco_communalism]]
+- [[frente_sertao_livre_eco_communalism]]
 - [[kalaallit_nunaat_bioterritoire_eco_communalism]]
 - [[mouvement_des_communes_du_rust_belt_eco_communalism]]
 - [[oracle_des_seuils_eco_communalism]]

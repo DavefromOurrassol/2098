@@ -63,8 +63,6 @@ type_relation_dominante: symbiose
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: ascendant
 generation: reconstruction
 
 injection:
@@ -85,6 +83,9 @@ tensions_narratives: >
   La Trame est confrontée à un dilemme croissant : deux nœuds du bassin du Gardon pratiquent des méthodes d'agroforesterie radicalement incompatibles et refusent tout arbitrage externe, paralysant la coordination régionale depuis dix-huit mois. Parallèlement, une faction de communes fondatrices menace de fermer l'accès à leurs archives aux nouveaux nœuds qu'elles jugent 'trop perméables aux logiques marchandes'. Enfin, le Consortium des Opérateurs d'IA Propriétaires lorgne sur les métadonnées des échanges Mnemos pour en extraire des modèles prédictifs de ressources — une menace existentielle pour un réseau qui a fondé sa légitimité sur la souveraineté radicale du savoir local.
 
 date_creation: 2026-06-27
+trajectoire: ascendant
+est_clandestin: false
+
 ---
 
 # Trame Mnemos

@@ -63,8 +63,6 @@ type_relation_dominante: dépendance
 annee_debut: 2031
 annee_fin: 
 
-etat_temporel: actif
-age_historique: mature
 generation: transition
 
 injection:
@@ -85,6 +83,9 @@ tensions_narratives: >
   La DZNP détient les seules archives consolidées prouvant que des territoires habités ont été délibérément exclus des plans de résilience climatique — une preuve que des coalitions comme la Fédération des Communs Territoriaux ou les réseaux de lanceurs d'alerte cherchent activement à obtenir. En interne, une faction minoritaire d'agents estime que la mission de 'documentation' est devenue complicité active, et envisage des fuites ciblées. Parallèlement, les plateformes IA qui alimentent ses classifications commencent à lui retourner des recommandations que même ses directeurs trouvent intenables — soulèvant la question de qui, au fond, gouverne encore les décisions d'abandon.
 
 date_creation: 2026-06-23
+trajectoire: mature
+est_clandestin: false
+
 ---
 
 # Direction des Zones Non Prioritaires (DZNP)
