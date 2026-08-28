@@ -1,0 +1,169 @@
+
+============================================================
+OURRASSOL 2098 — Générateur d'articles
+============================================================
+  Mode       : Semi-guidé
+  Scénario   : breakdown
+  Thématique : petites_annonces_services
+  Longueur   : analyse
+============================================================
+
+[generate] Chargement de la thématique 'petites_annonces_services'...
+
+[snapshot] Construction du monde 2098 — scénario : breakdown
+[snapshot] Variables pilotes : ['geopolitique_conflits', 'energie_ressources_critiques', 'organisation_territoires', 'climat_environnement_global', 'systemes_productifs_travail']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 16 | Cohérence : ATTENTION
+[snapshot] Jalons trajectoire : 154 (43 majeurs)
+[snapshot] Événements signal_to_state : 65 (20 majeurs)
+[snapshot] Tensions thématiques : 6
+[snapshot] Instances chargées : 141 | Filtrées : 6
+[snapshot] Injection custom 'Gelecek Meclisi — Les Échos du Demain' (an 2048, 50 ans d'effet)
+  → gouvernance_institutions : 20 → 28.0 (delta:+8.0)
+  → valeurs_culture_tempo_sociale : 90 → 96.0 (delta:+6.0)
+  → technologie_information : 95 → 100 (delta:+5.0)
+[snapshot] Modifications custom (entités) : 3 variables affectées
+[snapshot] Événement custom 'La Déflagration du Croissant — Embrasement sans arbitre' (an 2027, 71 ans d'effet)
+  → geopolitique_conflits : 95 → 91.0 (delta:-4.0)
+  → energie_ressources_critiques : 100 → 100 (delta:+8.0)
+  → gouvernance_institutions : 30.9 → 35.9 (delta:+5.0)
+  → demographie_mobilite_humaine : 92.4 → 99.4 (delta:+7.0)
+[snapshot] Événement custom 'Grève des Veines Eurasiatiques — L'Étranglement des Corridors' (an 2039, 59 ans d'effet)
+  → systemes_productifs_travail : 93.2 → 73.2 (delta:-20.0)
+  → geopolitique_conflits : 70.0 → 55.0 (delta:-15.0)
+  → sante_biotechnologies : 85 → 75.0 (delta:-10.0)
+  → organisation_territoires : 95.9 → 83.9 (delta:-12.0)
+[snapshot] Événement custom 'L'Attentat des Neuf Nœuds — Le Jour Sans Signal' (an 2040, 58 ans d'effet)
+  → technologie_information : 44.5 → 19.5 (delta:-25.0)
+  → gouvernance_institutions : 28.7 → 16.7 (delta:-12.0)
+  → systeme_economique_redistribution : 51.4 → 41.4 (delta:-10.0)
+[snapshot] Événement custom 'La Ruée des Glaces — Enchères Souveraines du Kalaallit Fund' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 100 → 100 (delta:+8.0)
+  → geopolitique_conflits : 32.9 → 20.9 (delta:-12.0)
+  → gouvernance_institutions : 18.9 → 28.9 (delta:+10.0)
+  → organisation_territoires : 77.1 → 84.1 (delta:+7.0)
+[snapshot] Événement custom 'L'Exode des Grands Brûlés — La Déroute du Bureau des Résidus' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 100 → 92.0 (delta:-8.0)
+  → organisation_territoires : 80.2 → 95.2 (delta:+15.0)
+  → gouvernance_institutions : 28.9 → 40.9 (delta:+12.0)
+  → climat_environnement_global : 100 → 95.0 (delta:-5.0)
+  → geopolitique_conflits : 0 → 0 (delta:-12.0)
+  → energie_ressources_critiques : 100 → 100 (delta:+10.0)
+[snapshot] Événement custom 'La Fracture de Belém — Quand le Bassin Amazonien a cessé d'être un territoire' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 95.0 → 100 (delta:+12.0)
+  → geopolitique_conflits : 0 → 0 (delta:-8.0)
+  → gouvernance_institutions : 55.3 → 63.3 (delta:+8.0)
+  → organisation_territoires : 100 → 100 (delta:+10.0)
+[snapshot] Événement custom 'Le Compact des Grands Lacs — Sécession de fait' (an 2053, 45 ans d'effet)
+  → organisation_territoires : 100 → 92.0 (delta:-8.0)
+  → gouvernance_institutions : 63.3 → 73.3 (delta:+10.0)
+  → geopolitique_conflits : 0 → 0 (delta:-12.0)
+  → energie_ressources_critiques : 100 → 90.0 (delta:-10.0)
+  → climat_environnement_global : 100 → 100 (delta:+4.0)
+[snapshot] Événement custom 'Victoire Fantôme du Parti Commun' (an 2055, 43 ans d'effet)
+  → gouvernance_institutions : 81.9 → 76.9 (delta:-5.0)
+  → geopolitique_conflits : 18.0 → 26.0 (delta:+8.0)
+  → organisation_territoires : 94.6 → 88.6 (delta:-6.0)
+[snapshot] Événement custom 'La Saisie du Détroit — Incident du Passage Nord-Ouest' (an 2057, 41 ans d'effet)
+  → geopolitique_conflits : 31.3 → 23.3 (delta:-8.0)
+  → energie_ressources_critiques : 90.0 → 100 (delta:+10.0)
+  → frontieres_du_systeme : 82.5 → 88.5 (delta:+6.0)
+  → organisation_territoires : 94.0 → 100 (delta:+7.0)
+  → climat_environnement_global : 94.2 → 98.2 (delta:+4.0)
+[snapshot] Événement custom 'Les Forges du Commun — Proclamation des Zones Libres de l'Algorithme' (an 2061, 37 ans d'effet)
+  → geopolitique_conflits : 0 → 0 (delta:-8.0)
+  → valeurs_culture_tempo_sociale : 96.0 → 100 (delta:+12.0)
+  → gouvernance_institutions : 82.7 → 89.7 (delta:+7.0)
+  → organisation_territoires : 100 → 90.0 (delta:-10.0)
+[snapshot] Événement custom 'Les Éclats d'Agadez — Ce qui reste du Forum' (an 2061, 37 ans d'effet)
+  → technologie_information : 20.6 → 24.6 (delta:+4.0)
+  → gouvernance_institutions : 92.6 → 100 (delta:+8.0)
+  → organisation_territoires : 92.4 → 98.4 (delta:+6.0)
+[snapshot] Événement custom 'Les Forges du Commun — Proclamation des Zones Libres du Rust Belt' (an 2061, 37 ans d'effet)
+  → geopolitique_conflits : 0 → 0 (delta:-8.0)
+  → valeurs_culture_tempo_sociale : 100 → 100 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → technologie_information : 45.5 → 51.5 (delta:+6.0)
+  → organisation_territoires : 100 → 90.0 (delta:-10.0)
+[snapshot] Événement custom 'La Révolte des Zones Mortes — Effondrement de la RPDA' (an 2073, 25 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+8.0)
+  → technologie_information : 53.2 → 59.2 (delta:+6.0)
+  → organisation_territoires : 93.6 → 100 (delta:+10.0)
+[snapshot] Événement custom 'L'Arrestation de Van Derburgh par la Milice de Detroit-Sud' (an 2078, 20 ans d'effet)
+  → gouvernance_institutions : 100 → 99.0 (delta:-1.0)
+  → valeurs_culture_tempo_sociale : 100 → 99.0 (delta:-1.0)
+[snapshot] Événements custom : 14 | 270 variables affectées
+[snapshot] Signal custom 'decodage_langage_animaux_ia' sur valeurs_culture_tempo_sociale (an 2045, 53 ans d'effet)
+  → valeurs_culture_tempo_sociale : 99.0 → 100 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur technologie_information (an 2041, 57 ans d'effet)
+  → technologie_information : 69.0 → 74.0 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur gouvernance_institutions (an 2042, 56 ans d'effet)
+  → gouvernance_institutions : 99.0 → 94.0 (delta:-5.0)
+[snapshot] Signaux custom chiffrés : 3 | 3 variables affectées
+
+[prompt] Assemblage du prompt...
+[prompt] System prompt : 3038 caractères
+[prompt] User prompt   : 72195 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-large-latest, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 21768 | sortie : 1467
+[api] Article généré : 5330 caractères
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/breakdown/20260823_181126_breakdown_petites_annonces_services_article_20septembre2098.md
+
+============================================================
+ARTICLE GÉNÉRÉ
+============================================================
+**CONVOIS NOCTURNES : GUIDES ET ESCORTES POUR LES VENELLES EURASIENNES**
+
+20 septembre 2098
+Timur Sadykov — Trassa Logistika - Voie Logistique
+
+---
+
+**Corridors sécurisés entre Almaty et la Vistule — Réservation ouverte pour l’automne 2098**
+
+Les *Venelles* — ces axes de convoyage armé reliant l’Asie centrale à l’Europe de l’Est — restent la seule voie d’approvisionnement viable pour les enclaves survivantes de l’Arc Eurasien. En raison de la saturation des convois militaires et des risques accrus de raids, plusieurs opérateurs indépendants proposent désormais des services d’escorte et de guidage pour les particuliers, les petites cargaisons et les groupes déplacés.
+
+**Services disponibles**
+- **Escorte armée légère** : Convois de 3 à 5 véhicules blindés de fortune, équipés de brouilleurs radio et de systèmes de détection rudimentaires. Priorité aux cargaisons critiques (médicaments, semences, pièces détachées). Tarif : 12 000 ₽ par véhicule, payable en carburant, nourriture ou données exploitables.
+- **Guide local certifié** : Accompagnement par des convoyeurs expérimentés, capables de négocier les checkpoints et d’éviter les zones de sabotage. Connaissance des routes secondaires et des relais clandestins. Tarif : 3 500 ₽ par trajet, ou échange contre compétences techniques (mécanique, cryptographie basique).
+- **Transport de personnes** : Places limitées dans les camions de marchandises. Sièges sécurisés, mais sans garantie de confort. Réservé aux déplacements urgents (évacuation sanitaire, regroupement familial). Tarif : 8 000 ₽ par personne, ou travail en échange (maintenance, cuisine collective).
+
+**Conditions**
+- **Délais** : Réservation obligatoire 72h à l’avance. Départs nocturnes uniquement, entre 22h et 4h.
+- **Sécurité** : Aucun remboursement en cas d’attaque ou de blocage. Les escortes ne garantissent pas l’intégrité des cargaisons, mais réduisent les risques de 40% (statistiques 2097, *Réseau Mnemos Pannonie*).
+- **Interdictions** : Armes lourdes, explosifs, données classifiées (risque de confiscation par les milices locales). Les passagers doivent signer une décharge de responsabilité.
+
+**Zones couvertes**
+- **Axe Oural-Pannonie** : Orenbourg → Samara → Kazan → Nijni Novgorod → Moscou (zone grise) → Smolensk → Brest (Biélorussie) → Varsovie.
+- **Branche caspienne** : Bakou → Astrakhan → Volgograd → Voronej → Kiev (franchissement sous conditions).
+- **Détour kazakh** : Almaty → Chimkent → Tachkent → Samarcande → Boukhara → Turkmenabat (accès limité aux détenteurs de laissez-passer *Bohai Transit*).
+
+**Contact**
+- **Relais de Samara** : Point de rendez-vous au kilomètre 47 de l’ancienne M5, derrière l’usine désaffectée *Krasny Oktyabr*. Code d’accès : fanion rouge attaché à l’antenne du véhicule.
+- **Réseau Mnemos** : Messages cryptés via le nœud *Pannonie* (adresse : `mnemos://eurasie.venelles`). Réponse sous 24h.
+- **Guilde des Techniciens Nomades** : Atelier mobile près de Kazan. Reconnaissable aux graffitis *VTN* sur les murs. Ouvert de 18h à minuit.
+
+**Avertissement**
+Les *Venelles* sont sous contrôle partagé des *Seigneuries Logistiques Armées* et des milices locales. Les tarifs varient selon la faction dominante sur chaque tronçon. Les opérateurs indépendants ne sont pas affiliés aux blocs *ABS IV* ou *IX*, mais paient des droits de passage informels. En cas de conflit ouvert, les convois civils sont suspendus sans préavis.
+
+---
+**Rappel** : Les *Brigades Médicales Itinérantes* maintiennent des points de soins d’urgence le long des axes. Les relais *Sfax* (via les *Bouches de la Faim Juste*) fournissent des rations de survie aux groupes en transit, sur présentation d’un bon de solidarité (distribué par les communautés locales).
+
+---
+**Pour les professionnels**
+Les *Enclaves Corporatives Fortifiées* de la région recrutent des convoyeurs expérimentés pour leurs propres réseaux. Salaire : 25 000 ₽/mois + logement en zone sécurisée. Candidatures via *Carthage-Nord NexCore* (Lagos-Est) ou directement auprès des milices *BioSyn* à Volgograd.
+
+---
+**À noter**
+- Le *Nœud Mnemos Pannonie* signale une augmentation des attaques ciblées contre les convois transportant des données. Les disques durs et serveurs doivent être cryptés (algorithme *Mnemos-256*).
+- Les *Courriers Nomades Sahélo-Méditerranéens* proposent des liaisons entre Kiev et Sfax pour les messages urgents. Tarif : 5 000 ₽ par pli, livraison sous 10 jours.
+
+---
+**Dernière mise à jour** : 19 septembre 2098. Les prix sont valables jusqu’au 30 novembre, sous réserve de fluctuations des cours du carburant et des droits de passage.
+
+============================================================
+✓ Sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/breakdown/20260823_181126_breakdown_petites_annonces_services_article_20septembre2098.md
+============================================================
+

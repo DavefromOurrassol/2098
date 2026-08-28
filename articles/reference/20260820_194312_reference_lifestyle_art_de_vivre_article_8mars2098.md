@@ -17,6 +17,31 @@ variables_pilotes:
   - technologie_information
   - systeme_economique_redistribution
   - gouvernance_institutions
+slug: slow_biotech_quand_l_amazonie_reinvente_l_art_de_vivre_a_l_heure_des_brevets_viv
+chapo: "En 2098, le \"slow biotech\" émerge comme un art de vivre militant en Amazonie, où cultiver des variétés non brevetées devient un acte de résistance douce. Entre low-tech et réappropriation du vivant, cette tendance séduit ceux qui refusent la dépendance aux géants des semences."
+tags:
+  - agroécologie
+  - brevets vivants
+  - low-tech
+  - autonomie alimentaire
+  - biopiraterie inversée
+image_prompt: "Une biologiste nommée Léa Morais, vêtue d'une tenue de terrain, tient un sachet en fibre de kapok contenant des graines bleutées de *Solanum resilientis*, devant un balcon urbain de Belém regorgeant de plantes étiquetées \"libres de droits\"."
+a_une_photo: false
+image_credit: ""
+journaliste_slug: camille_viera
+date_evenement: 8 mars 2098
+zone_principale: amazonie_consortium_viva
+date_publication: 8 mars 2098
+entites_citees:
+  - amazonie_consortium_viva_reference
+  - collectifs_de_biopiraterie_inversee_reference
+  - consortium_amazonia_viva_reference
+  - federation_des_cliniques_autonomes_reference
+  - nexus_biosyn_reference
+articles_lies:
+  - slow_carbon_quand_respirer_devient_un_luxe
+  - slow_canopee_quand_la_foret_amazonienne_inspire_un_nouveau_luxe_sobre
+
 ---
 **« Slow Biotech » : quand l’Amazonie réinvente l’art de vivre à l’heure des brevets vivants**
 
@@ -45,3 +70,6 @@ Le débat divise. Pour les uns, le *slow biotech* est un privilège de classes m
 Quoi qu’il en soit, la tendance s’inscrit dans une dynamique plus large : celle d’un monde où la technologie, devenue omniprésente, génère son propre contre-mouvement. « Après l’ère du *tout-numérique*, voici celle du *tout-vivant* », écrit la sociologue Maria Ferreira dans son dernier essai, *Les Nouveaux Jardiniers*. Un vivant qui, pour une fois, échappe aux algorithmes.
 
 *Camille Viera — Réseau Le Monde en Tension*
+
+---
+**Voir aussi** : [[amazonie_consortium_viva_reference]] · [[collectifs_de_biopiraterie_inversee_reference]] · [[consortium_amazonia_viva_reference]] · [[federation_des_cliniques_autonomes_reference]] · [[nexus_biosyn_reference]] · [[slow_carbon_quand_respirer_devient_un_luxe]] · [[slow_canopee_quand_la_foret_amazonienne_inspire_un_nouveau_luxe_sobre]]

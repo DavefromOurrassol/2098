@@ -1,0 +1,152 @@
+
+============================================================
+OURRASSOL 2098 — Générateur d'articles
+============================================================
+  Mode       : Semi-guidé
+  Scénario   : breakdown
+  Thématique : petites_annonces_services
+  Longueur   : analyse
+============================================================
+
+[generate] Chargement de la thématique 'petites_annonces_services'...
+
+[snapshot] Construction du monde 2098 — scénario : breakdown
+[snapshot] Variables pilotes : ['geopolitique_conflits', 'energie_ressources_critiques', 'organisation_territoires', 'climat_environnement_global', 'systemes_productifs_travail']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 16 | Cohérence : ATTENTION
+[snapshot] Jalons trajectoire : 154 (43 majeurs)
+[snapshot] Événements signal_to_state : 65 (20 majeurs)
+[snapshot] Tensions thématiques : 6
+[snapshot] Instances chargées : 141 | Filtrées : 6
+[snapshot] Injection custom 'Gelecek Meclisi — Les Échos du Demain' (an 2048, 50 ans d'effet)
+  → gouvernance_institutions : 20 → 28.0 (delta:+8.0)
+  → valeurs_culture_tempo_sociale : 90 → 96.0 (delta:+6.0)
+  → technologie_information : 95 → 100 (delta:+5.0)
+[snapshot] Modifications custom (entités) : 3 variables affectées
+[snapshot] Événement custom 'La Déflagration du Croissant — Embrasement sans arbitre' (an 2027, 71 ans d'effet)
+  → geopolitique_conflits : 95 → 91.0 (delta:-4.0)
+  → energie_ressources_critiques : 100 → 100 (delta:+8.0)
+  → gouvernance_institutions : 30.9 → 35.9 (delta:+5.0)
+  → demographie_mobilite_humaine : 92.4 → 99.4 (delta:+7.0)
+[snapshot] Événement custom 'Grève des Veines Eurasiatiques — L'Étranglement des Corridors' (an 2039, 59 ans d'effet)
+  → systemes_productifs_travail : 93.2 → 73.2 (delta:-20.0)
+  → geopolitique_conflits : 70.0 → 55.0 (delta:-15.0)
+  → sante_biotechnologies : 85 → 75.0 (delta:-10.0)
+  → organisation_territoires : 95.9 → 83.9 (delta:-12.0)
+[snapshot] Événement custom 'L'Attentat des Neuf Nœuds — Le Jour Sans Signal' (an 2040, 58 ans d'effet)
+  → technologie_information : 44.5 → 19.5 (delta:-25.0)
+  → gouvernance_institutions : 28.7 → 16.7 (delta:-12.0)
+  → systeme_economique_redistribution : 51.4 → 41.4 (delta:-10.0)
+[snapshot] Événement custom 'La Ruée des Glaces — Enchères Souveraines du Kalaallit Fund' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 100 → 100 (delta:+8.0)
+  → geopolitique_conflits : 32.9 → 20.9 (delta:-12.0)
+  → gouvernance_institutions : 18.9 → 28.9 (delta:+10.0)
+  → organisation_territoires : 77.1 → 84.1 (delta:+7.0)
+[snapshot] Événement custom 'L'Exode des Grands Brûlés — La Déroute du Bureau des Résidus' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 100 → 92.0 (delta:-8.0)
+  → organisation_territoires : 80.2 → 95.2 (delta:+15.0)
+  → gouvernance_institutions : 28.9 → 40.9 (delta:+12.0)
+  → climat_environnement_global : 100 → 95.0 (delta:-5.0)
+  → geopolitique_conflits : 0 → 0 (delta:-12.0)
+  → energie_ressources_critiques : 100 → 100 (delta:+10.0)
+[snapshot] Événement custom 'La Fracture de Belém — Quand le Bassin Amazonien a cessé d'être un territoire' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 95.0 → 100 (delta:+12.0)
+  → geopolitique_conflits : 0 → 0 (delta:-8.0)
+  → gouvernance_institutions : 55.3 → 63.3 (delta:+8.0)
+  → organisation_territoires : 100 → 100 (delta:+10.0)
+[snapshot] Événement custom 'Le Compact des Grands Lacs — Sécession de fait' (an 2053, 45 ans d'effet)
+  → organisation_territoires : 100 → 92.0 (delta:-8.0)
+  → gouvernance_institutions : 63.3 → 73.3 (delta:+10.0)
+  → geopolitique_conflits : 0 → 0 (delta:-12.0)
+  → energie_ressources_critiques : 100 → 90.0 (delta:-10.0)
+  → climat_environnement_global : 100 → 100 (delta:+4.0)
+[snapshot] Événement custom 'Victoire Fantôme du Parti Commun' (an 2055, 43 ans d'effet)
+  → gouvernance_institutions : 81.9 → 76.9 (delta:-5.0)
+  → geopolitique_conflits : 18.0 → 26.0 (delta:+8.0)
+  → organisation_territoires : 94.6 → 88.6 (delta:-6.0)
+[snapshot] Événement custom 'La Saisie du Détroit — Incident du Passage Nord-Ouest' (an 2057, 41 ans d'effet)
+  → geopolitique_conflits : 31.3 → 23.3 (delta:-8.0)
+  → energie_ressources_critiques : 90.0 → 100 (delta:+10.0)
+  → frontieres_du_systeme : 82.5 → 88.5 (delta:+6.0)
+  → organisation_territoires : 94.0 → 100 (delta:+7.0)
+  → climat_environnement_global : 94.2 → 98.2 (delta:+4.0)
+[snapshot] Événement custom 'Les Forges du Commun — Proclamation des Zones Libres de l'Algorithme' (an 2061, 37 ans d'effet)
+  → geopolitique_conflits : 0 → 0 (delta:-8.0)
+  → valeurs_culture_tempo_sociale : 96.0 → 100 (delta:+12.0)
+  → gouvernance_institutions : 82.7 → 89.7 (delta:+7.0)
+  → organisation_territoires : 100 → 90.0 (delta:-10.0)
+[snapshot] Événement custom 'Les Éclats d'Agadez — Ce qui reste du Forum' (an 2061, 37 ans d'effet)
+  → technologie_information : 20.6 → 24.6 (delta:+4.0)
+  → gouvernance_institutions : 92.6 → 100 (delta:+8.0)
+  → organisation_territoires : 92.4 → 98.4 (delta:+6.0)
+[snapshot] Événement custom 'Les Forges du Commun — Proclamation des Zones Libres du Rust Belt' (an 2061, 37 ans d'effet)
+  → geopolitique_conflits : 0 → 0 (delta:-8.0)
+  → valeurs_culture_tempo_sociale : 100 → 100 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → technologie_information : 45.5 → 51.5 (delta:+6.0)
+  → organisation_territoires : 100 → 90.0 (delta:-10.0)
+[snapshot] Événement custom 'La Révolte des Zones Mortes — Effondrement de la RPDA' (an 2073, 25 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+8.0)
+  → technologie_information : 53.2 → 59.2 (delta:+6.0)
+  → organisation_territoires : 93.6 → 100 (delta:+10.0)
+[snapshot] Événement custom 'L'Arrestation de Van Derburgh par la Milice de Detroit-Sud' (an 2078, 20 ans d'effet)
+  → gouvernance_institutions : 100 → 99.0 (delta:-1.0)
+  → valeurs_culture_tempo_sociale : 100 → 99.0 (delta:-1.0)
+[snapshot] Événements custom : 14 | 270 variables affectées
+[snapshot] Signal custom 'decodage_langage_animaux_ia' sur valeurs_culture_tempo_sociale (an 2045, 53 ans d'effet)
+  → valeurs_culture_tempo_sociale : 99.0 → 100 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur technologie_information (an 2041, 57 ans d'effet)
+  → technologie_information : 69.0 → 74.0 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur gouvernance_institutions (an 2042, 56 ans d'effet)
+  → gouvernance_institutions : 99.0 → 94.0 (delta:-5.0)
+[snapshot] Signaux custom chiffrés : 3 | 3 variables affectées
+
+[prompt] Assemblage du prompt...
+[prompt] System prompt : 3038 caractères
+[prompt] User prompt   : 75934 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-large-latest, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 22620 | sortie : 1538
+[api] Article généré : 6214 caractères
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/breakdown/20260823_175311_breakdown_petites_annonces_services_article_22aout2098.md
+
+============================================================
+ARTICLE GÉNÉRÉ
+============================================================
+**CONVOIS FANTÔMES : LES COURTIERS DE L'OMBRE DES VENELLES**
+
+*22 août 2098*
+
+Timur Sadykov — Trassa Logistika - Voie Logistique
+
+**SAMARKAND —** Les écrans tactiles de la halle des échanges de Samarkand-Transit clignotent en rouge ce matin : *"Alerte checkpoint 17-K : blocage factionnel, détournement conseillé"*. Pour les convoyeurs indépendants des Venelles, ce genre de message est devenu aussi banal que la poussière des pistes. Mais derrière ces alertes se cache une économie parallèle en plein essor : celle des *courtiers de l'ombre*, ces intermédiaires qui monnayent leur connaissance des réseaux clandestins pour faire passer marchandises et personnes à travers les mailles des seigneurs de guerre logistiques.
+
+D'après les données compilées par le *Registre des Flux Résiduels* (RFR), une plateforme collaborative maintenue par des techniciens nomades, près de 38 % des convois empruntant les corridors eurasiens entre Almaty et la Vistule passent désormais par des itinéraires non officiels. *"Les Venelles ne sont plus un réseau, mais une toile d'araignée où chaque fil peut se rompre"*, explique Levan K., un ancien ingénieur des corridors reconverti en courtier. *"Mon travail ? Trouver les fils qui tiennent encore."*
+
+### **Le marché des routes invisibles**
+Les courtiers opèrent depuis des hubs précaires comme Samarkand-Transit, Osh-Bazar ou les ruines du terminal de Chimkent. Leur outil principal : des cartes dynamiques générées par des algorithmes locaux, nourries de données en temps réel sur les mouvements des milices, les sabotages et les conditions météo. *"On ne parle plus de GPS, mais de GPR — Géolocalisation Par Rumeurs"*, ironise Aisha M., une courtière basée à Tachkent. *"Un checkpoint qui bouge, une cargaison qui disparaît, un convoi qui explose… Tout se sait en moins d'une heure si vous savez écouter."*
+
+Les tarifs varient selon le risque. Un passage garanti à travers le corridor Oural-Pannonie coûte entre 12 et 20 % de la valeur de la cargaison, payable en crédits-chaleur (la monnaie locale indexée sur le prix du carburant) ou en nature. *"Les milices prennent 25 % pour un sauf-conduit officiel. Nous, on propose 15 %, mais sans garantie de survie"*, précise Levan. Les clients ? Des communautés rurales cherchant à exporter leur surplus de blé synthétique, des brigades médicales itinérantes transportant des vaccins, ou des familles déplacées fuyant les zones de conflit du bassin caspien.
+
+### **L'économie des nœuds brisés**
+La fragmentation des Venelles a donné naissance à une micro-économie de la débrouille. À Osh, des mécaniciens reconvertis en *"réparateurs de convois"* rafistolent les camions blindés avec des pièces récupérées sur des carcasses de véhicules militaires. *"Un moteur de T-72 modifié pour tourner au biodiesel de colza, ça vaut trois fois son poids en antibiotiques"*, explique Ruslan, un ancien soldat devenu ferrailleur. Plus au nord, à Karaganda, des collectifs de femmes gèrent des *"maisons de transit"*, où les convoyeurs peuvent se reposer, se soigner et échanger des informations en échange de services ou de denrées.
+
+Cette économie parallèle repose sur une confiance fragile. *"Un courtier qui trahit une fois est un courtier mort"*, résume Aisha. Les sanctions sont expéditives : exclusion des réseaux, sabotages ciblés, ou pire. Pourtant, malgré les risques, le nombre de courtiers ne cesse d'augmenter. D'après le RFR, leur effectif a crû de 42 % depuis 2095, alimenté par l'effondrement des chaînes logistiques officielles et l'arrivée massive de migrants en quête de moyens de subsistance.
+
+### **La technologie au service de l'invisible**
+Les courtiers s'appuient sur des outils low-tech adaptés aux contraintes des Venelles. Les cartes dynamiques sont partagées via des réseaux mesh locaux, utilisant des antennes artisanales et des protocoles de communication chiffrés. *"On a réinventé Internet, mais en version analogique"*, explique Timur N., un technicien du *Réseau des Gardiens du Danube*, une cellule de Mnemos qui documente les flux clandestins. *"Pas de satellites, pas de cloud. Juste des nœuds humains qui transmettent l'information de proche en proche."*
+
+Les transactions, elles, sont enregistrées dans des *"registres de survie"*, des carnets physiques ou des tablettes cryptées où chaque échange est noté à la main. *"En cas de contrôle, on peut toujours dire que c'est un journal intime"*, sourit Levan. *"Et si on nous confisque le carnet, les données sont déjà parties dans trois directions différentes."*
+
+### **Un équilibre précaire**
+Pourtant, cette économie de l'ombre reste à la merci des seigneurs de guerre logistiques. En juin dernier, Vasil Orentchev, l'un des principaux opérateurs des Venelles, a lancé une *"campagne de nettoyage"* contre les courtiers indépendants. *"Il veut reprendre le contrôle des flux, et pour ça, il élimine la concurrence"*, explique un analyste du *Bureau des Résidus*, une ONG qui suit les dynamiques des zones grises. *"Le problème, c'est que sans les courtiers, les Venelles s'effondrent. Ils sont le dernier ciment d'un réseau qui se désagrège."*
+
+À Samarkand, les courtiers continuent de travailler, mais avec une prudence accrue. *"On ne sait jamais qui est un informateur"*, confie Aisha. *"Alors on fait comme si chaque conversation pouvait être la dernière."* Pour l'instant, les Venelles tiennent encore. Mais pour combien de temps ?
+
+---
+
+============================================================
+✓ Sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/breakdown/20260823_175311_breakdown_petites_annonces_services_article_22aout2098.md
+============================================================
+

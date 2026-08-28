@@ -17,6 +17,31 @@ variables_pilotes:
   - technologie_information
   - systeme_economique_redistribution
   - gouvernance_institutions
+slug: memoire_en_apnee_quand_l_art_se_noie_dans_les_archives_fantomes
+chapo: "Dans un futur dystopique où les archives culturelles sont menacées de disparition, des artistes lyonnais transforment la résistance mémorielle en acte créatif. Entre performances éphémères et récupération de données censurées, ils luttent pour préserver une histoire alternative face à la régulation algorithmique."
+tags:
+  - art numérique
+  - censure algorithmique
+  - archives orphelines
+  - résistance culturelle
+  - mémoire collective
+image_prompt: "Une artiste nommée Nour Belkacem, vêtue d'une combinaison futuriste, observe des danseurs équipés de capteurs biométriques évoluant devant des projections d'archives numériques en train de s'effacer, dans un entrepôt industriel réaménagé en sanctuaire de données."
+a_une_photo: false
+image_credit: ""
+journaliste_slug: marine_delcourt
+date_evenement: 17 janvier 2098
+zone_principale: lyon_metropole
+date_publication: 17 janvier 2098
+entites_citees:
+  - bureaux_de_regulation_informationnelle_reference
+  - ong_de_preservation_patrimoniale_numerique_reference
+  - plateformes_centralisees_de_narration_officielle_reference
+  - prisme_global_reference
+articles_lies:
+  - memoire_en_fragments_quand_l_art_defie_la_muraille_de_verre
+  - murmures_sous_la_glace_quand_l_art_arctique_defie_les_recits_officiels
+  - le_silence_des_algorithmes_quand_les_plateformes_eteignent_les_voix_du_nord
+
 ---
 **« Mémoire en apnée : quand l’art se noie dans les archives fantômes »**
 
@@ -41,3 +66,6 @@ Son prochain projet, *L’Archive qui respire*, sera une installation immersive 
 Mais pour combien de temps encore ? Les rumeurs d’un nouveau durcissement des BRI circulent, tandis que les Plateformes Informationnelles Dominantes renforcent leurs algorithmes de modération. « Un jour, ils couperont l’oxygène », prédit Elias Varga. « Et ce jour-là, l’art devra apprendre à respirer sous l’eau. »
 
 Marine Delcourt — Réseau Le Dessous des Cartes
+
+---
+**Voir aussi** : [[bureaux_de_regulation_informationnelle_reference]] · [[ong_de_preservation_patrimoniale_numerique_reference]] · [[plateformes_centralisees_de_narration_officielle_reference]] · [[prisme_global_reference]] · [[memoire_en_fragments_quand_l_art_defie_la_muraille_de_verre]] · [[murmures_sous_la_glace_quand_l_art_arctique_defie_les_recits_officiels]] · [[le_silence_des_algorithmes_quand_les_plateformes_eteignent_les_voix_du_nord]]

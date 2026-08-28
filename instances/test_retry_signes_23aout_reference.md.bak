@@ -1,0 +1,93 @@
+---
+name: Réseau Sentinelle des Signaux Faibles (RSSF-23)
+type: instance
+slug: test_retry_signes_23aout_reference
+entite: test_retry_signes_23aout
+scenario: reference
+localisation:
+  zone: ouagadougou_polytechnique
+  lieu: Ouagadougou
+  type_lieu: ville
+type_dans_scenario: infrastructure
+role_dans_scenario: |
+  Le RSSF-23 est une infrastructure émergente conçue pour détecter, tester et ajuster en continu les signaux faibles ou indicateurs critiques d'un système mondial en transition. Dans un contexte de fragilité systémique, il agit comme un mécanisme de résilience proactive, identifiant les dysfonctionnements, opportunités ou risques imminents pour proposer des corrections itératives. Son rôle est à la fois technique (surveillance des variables clés comme l'énergie, le climat ou l'information) et symbolique, incarnant l'adaptabilité comme nouvelle norme de gouvernance dans un monde où la prévisibilité est devenue un luxe.
+responsabilites: |
+  Le RSSF-23 déploie des réseaux de capteurs citoyens, des algorithmes d'analyse prédictive et des protocoles de réponse rapide pour surveiller les seuils critiques (ex. stress hydrique, volatilité des marchés énergétiques, désinformation algorithmique). Il coordonne des cellules locales de validation des signaux, souvent en partenariat avec des collectifs académiques indépendants ou des ONG de terrain, et publie des rapports d'alerte itératifs destinés aux institutions hybrides et aux agences de régulation. Son mandat inclut aussi la formation de 'veilleurs' territoriaux, capables d'interpréter les données en contexte.
+impact_local: 3
+impact_systemique_global: 2
+variables_influencees:
+  - technologie_information
+  - climat_environnement_global
+  - energie_ressources_critiques
+  - systeme_economique_redistribution
+zone_geographique:
+  - régionale
+  - continentale
+  - globale
+zone_systemique:
+  - information
+  - infrastructure
+  - gouvernance
+alliances:
+  - collectifs_academiques_independants_reference
+  - reseaux_de_capteurs_citoyens_reference
+  - agence_stabilisation_climatique_reference
+  - bureaux_de_regulation_informationnelle_reference
+oppositions:
+  - consortiums_energetiques_opaques_reference
+  - plateformes_centralisees_de_narration_officielle_reference
+  - lobbies_agro_industriels_a_haute_consommation_d_eau_reference
+type_relation_dominante: coopération
+annee_debut: 2032
+annee_fin:
+trajectoire: émergent
+est_clandestin: true
+generation: transition
+injection:
+  type: custom
+  annee_injection: 2032
+  contexte_injection: |
+    Le RSSF-23 agit comme un multiplicateur de résilience en démocratisant l'accès aux données critiques et en forçant les institutions à intégrer les signaux faibles dans leurs protocoles. Son impact sur technologie_information vient de sa capacité à contourner les plateformes centralisées, tandis que son influence sur climat_environnement_global découle de ses alertes précoces sur les points de bascule régionaux (ex. stress hydrique en Méditerranée).
+  impact_sur_variables:
+    - variable: technologie_information
+      delta_level: 8
+      duree: 15
+      polarite: 1
+    - variable: climat_environnement_global
+      delta_level: 6
+      duree: 20
+      polarite: 1
+  propagation:
+    via_matrice: false
+description_journalistique: |
+  En 2098, le Réseau Sentinelle des Signaux Faibles (RSSF-23) reste une énigme pour beaucoup. Né dans l'ombre des crises hydriques et énergétiques des années 2030, ce réseau clandestin de capteurs et d'analystes a survécu en se fondant dans le paysage des infrastructures critiques. Ses 'veilleurs', souvent des universitaires ou des militants locaux, opèrent depuis des hubs discrets comme Ouagadougou ou Tbilissi, où ils croisent données satellitaires, témoignages de terrain et modèles prédictifs pour anticiper les prochains points de rupture. Le RSSF-23 est devenu une référence malgré lui : ses rapports, diffusés via des canaux chiffrés, sont cités par les agences de régulation quand les plateformes officielles minimisent les risques. Son symbole ? Un œil stylisé, mi-algorithme mi-organique, graffité sur les murs des zones grises.
+signes_distinctifs: Le logo du RSSF-23 représente un œil dont l'iris est un diagramme de réseau neuronal, entouré d'une spirale évoquant un cyclone ou une courbe de température. Ses membres utilisent des badges en céramique connectée, indétectables par les scanners corporels standards, et communiquent via des protocoles de mesh networking inspirés des réseaux de résistance des années 2020. Les rapports du réseau sont reconnaissables à leur mise en page minimaliste, avec des graphiques en temps réel intégrés dans des documents statiques pour contourner la censure algorithmique.
+retry_signes_distinctifs: non
+tensions_narratives: |
+  Le RSSF-23 incarne la contradiction centrale de notre époque : plus il affine ses modèles prédictifs, plus il révèle l'imprévisibilité fondamentale du système. Ses détracteurs, notamment les consortiums énergétiques opaques, l'accusent de semer la panique en surinterprétant des signaux ambigus. À l'inverse, ses partisans lui reprochent de rester trop discret, alors que ses alertes pourraient justifier des actions radicales (ex. moratoires sur l'extraction minière). Une question hante ses membres : jusqu'où peuvent-ils pousser la transparence sans devenir eux-mêmes une cible ? Certains murmurent que le réseau a déjà été infiltré par des IA de modération cherchant à discréditer ses conclusions.
+date_creation: 2026-08-23
+---
+
+# Réseau Sentinelle des Signaux Faibles (RSSF-23)
+
+## Rôle dans [[reference]]
+Le RSSF-23 est une infrastructure émergente conçue pour détecter, tester et ajuster en continu les signaux faibles ou indicateurs critiques d'un système mondial en transition. Dans un contexte de fragilité systémique, il agit comme un mécanisme de résilience proactive, identifiant les dysfonctionnements, opportunités ou risques imminents pour proposer des corrections itératives. Son rôle est à la fois technique (surveillance des variables clés comme l'énergie, le climat ou l'information) et symbolique, incarnant l'adaptabilité comme nouvelle norme de gouvernance dans un monde où la prévisibilité est devenue un luxe.
+
+## Responsabilités
+Le RSSF-23 déploie des réseaux de capteurs citoyens, des algorithmes d'analyse prédictive et des protocoles de réponse rapide pour surveiller les seuils critiques (ex. stress hydrique, volatilité des marchés énergétiques, désinformation algorithmique). Il coordonne des cellules locales de validation des signaux, souvent en partenariat avec des collectifs académiques indépendants ou des ONG de terrain, et publie des rapports d'alerte itératifs destinés aux institutions hybrides et aux agences de régulation. Son mandat inclut aussi la formation de 'veilleurs' territoriaux, capables d'interpréter les données en contexte.
+
+## Variables influencées
+- [[technologie_information]]
+- [[climat_environnement_global]]
+- [[energie_ressources_critiques]]
+- [[systeme_economique_redistribution]]
+
+## Relations
+**Alliés** : [[collectifs_academiques_independants_reference]], [[reseaux_de_capteurs_citoyens_reference]], [[agence_stabilisation_climatique_reference]], [[bureaux_de_regulation_informationnelle_reference]]
+**Opposants** : [[consortiums_energetiques_opaques_reference]], [[plateformes_centralisees_de_narration_officielle_reference]], [[lobbies_agro_industriels_a_haute_consommation_d_eau_reference]]
+
+## Description journalistique
+En 2098, le Réseau Sentinelle des Signaux Faibles (RSSF-23) reste une énigme pour beaucoup. Né dans l'ombre des crises hydriques et énergétiques des années 2030, ce réseau clandestin de capteurs et d'analystes a survécu en se fondant dans le paysage des infrastructures critiques. Ses 'veilleurs', souvent des universitaires ou des militants locaux, opèrent depuis des hubs discrets comme Ouagadougou ou Tbilissi, où ils croisent données satellitaires, témoignages de terrain et modèles prédictifs pour anticiper les prochains points de rupture. Le RSSF-23 est devenu une référence malgré lui : ses rapports, diffusés via des canaux chiffrés, sont cités par les agences de régulation quand les plateformes officielles minimisent les risques. Son symbole ? Un œil stylisé, mi-algorithme mi-organique, graffité sur les murs des zones grises.
+
+## Tensions narratives
+Le RSSF-23 incarne la contradiction centrale de notre époque : plus il affine ses modèles prédictifs, plus il révèle l'imprévisibilité fondamentale du système. Ses détracteurs, notamment les consortiums énergétiques opaques, l'accusent de semer la panique en surinterprétant des signaux ambigus. À l'inverse, ses partisans lui reprochent de rester trop discret, alors que ses alertes pourraient justifier des actions radicales (ex. moratoires sur l'extraction minière). Une question hante ses membres : jusqu'où peuvent-ils pousser la transparence sans devenir eux-mêmes une cible ? Certains murmurent que le réseau a déjà été infiltré par des IA de modération cherchant à discréditer ses conclusions.

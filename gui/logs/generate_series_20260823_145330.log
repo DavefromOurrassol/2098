@@ -1,0 +1,112 @@
+
+============================================================
+OURRASSOL 2098 — Génération de série
+============================================================
+  Scénario     : new_sustainability
+  Thématiques  : 1
+    - histoire_patrimoine
+  Articles/th. : 1
+  Longueur     : breve
+============================================================
+
+[series] 1 articles à générer...
+
+[1/1] new_sustainability × histoire_patrimoine — 3 janvier 2098
+
+[snapshot] Construction du monde 2098 — scénario : new_sustainability
+[snapshot] Variables pilotes : ['climat_environnement_global', 'technologie_information', 'gouvernance_institutions', 'energie_ressources_critiques']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 3 | Cohérence : OK
+[snapshot] Jalons trajectoire : 154 (36 majeurs)
+[snapshot] Événements signal_to_state : 65 (27 majeurs)
+[snapshot] Tensions thématiques : 4
+[DEBUG _est_garanti] slug=gelecek_meclisi_new_sustainability injection={'type': 'custom', 'annee_injection': 2047, 'contexte_injection': "L'AFC incarne la synthèse entre coordination globale et autonomie locale, une nécessité dans un monde où les institutions traditionnelles ont perdu leur monopole sur la légitimité. Son impact sur la gouvernance est direct : elle a permis de stabiliser des cadres de régulation hybrides, combinant participation humaine et optimisation algorithmique, tout en évitant une fragmentation chaotique. Sur le plan technologique, elle a accéléré l'interopérabilité entre les systèmes d'IA et les réseaux de gouvernance territoriale, en imposant des protocoles ouverts et audités. Enfin, son rôle dans l'organisation des territoires a été crucial pour éviter que les hubs urbains ne deviennent des îlots de prospérité coupés des périphéries, en favorisant des modèles de résilience distribuée.", 'impact_sur_variables': [{'variable': 'gouvernance_institutions', 'delta_level': 15, 'duree': 20, 'polarite': 1}, {'variable': 'technologie_information', 'delta_level': 10, 'duree': 15, 'polarite': 1}, {'variable': 'organisation_territoires', 'delta_level': 12, 'duree': 25, 'polarite': 1}], 'propagation': {'via_matrice': True}}
+[DEBUG _est_garanti] slug=gelecek_meclisi_new_sustainability injection={'type': 'custom', 'annee_injection': 2047, 'contexte_injection': "L'AFC incarne la synthèse entre coordination globale et autonomie locale, une nécessité dans un monde où les institutions traditionnelles ont perdu leur monopole sur la légitimité. Son impact sur la gouvernance est direct : elle a permis de stabiliser des cadres de régulation hybrides, combinant participation humaine et optimisation algorithmique, tout en évitant une fragmentation chaotique. Sur le plan technologique, elle a accéléré l'interopérabilité entre les systèmes d'IA et les réseaux de gouvernance territoriale, en imposant des protocoles ouverts et audités. Enfin, son rôle dans l'organisation des territoires a été crucial pour éviter que les hubs urbains ne deviennent des îlots de prospérité coupés des périphéries, en favorisant des modèles de résilience distribuée.", 'impact_sur_variables': [{'variable': 'gouvernance_institutions', 'delta_level': 15, 'duree': 20, 'polarite': 1}, {'variable': 'technologie_information', 'delta_level': 10, 'duree': 15, 'polarite': 1}, {'variable': 'organisation_territoires', 'delta_level': 12, 'duree': 25, 'polarite': 1}], 'propagation': {'via_matrice': True}}
+[loader] Instance(s) custom garantie(s) dans filtered_instances : gelecek_meclisi_new_sustainability
+[snapshot] Instances chargées : 112 | Filtrées : 6
+[snapshot] Injection custom 'Meclis-i Atiye — Assemblée des Futurs Convergents' (an 2047, 51 ans d'effet)
+  → gouvernance_institutions : 90 → 100 (delta:+15.0)
+  → technologie_information : 91.6 → 100 (delta:+10.0)
+  → organisation_territoires : 41.0 → 53.0 (delta:+12.0)
+[snapshot] Modifications custom (entités) : 15 variables affectées
+[snapshot] Événement custom 'La Crise de Détroit : Frappes contenues et médiation planétaire' (an 2026, 72 ans d'effet)
+  → geopolitique_conflits : 13.0 → 21.0 (delta:+8.0)
+  → energie_ressources_critiques : 28.3 → 38.3 (delta:+10.0)
+  → gouvernance_institutions : 94.2 → 99.2 (delta:+5.0)
+  → demographie_mobilite_humaine : 46.1 → 50.1 (delta:+4.0)
+[snapshot] Événement custom 'Acte Fondateur de Nuku — La Souveraineté Post-Territoriale du Pacifique' (an 2039, 59 ans d'effet)
+  → climat_environnement_global : 31.7 → 34.7 (delta:+3.0)
+  → gouvernance_institutions : 99.2 → 100 (delta:+8.0)
+  → organisation_territoires : 49.6 → 59.6 (delta:+10.0)
+  → frontieres_du_systeme : 66.2 → 78.2 (delta:+12.0)
+[snapshot] Événement custom 'La Crise des Neuf Nœuds — Catalyseur des Communs Numériques' (an 2040, 58 ans d'effet)
+  → technologie_information : 100 → 85.0 (delta:-15.0)
+  → gouvernance_institutions : 89.2 → 99.2 (delta:+10.0)
+  → systeme_economique_redistribution : 79.9 → 87.9 (delta:+8.0)
+[snapshot] Événement custom 'Enchères de Nuuk — La Souveraineté Négociée des Terres Rares du Groenland' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 29.6 → 37.6 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → geopolitique_conflits : 0 → 0 (delta:-5.0)
+  → organisation_territoires : 54.0 → 58.0 (delta:+4.0)
+[snapshot] Événement custom 'La Grande Confluence — Exode du Midwest et Pacte des Grands Lacs' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 58.1 → 46.1 (delta:-12.0)
+  → organisation_territoires : 52.1 → 42.1 (delta:-10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → climat_environnement_global : 33.2 → 36.2 (delta:+3.0)
+[snapshot] Événement custom 'Crise de Gouvernance du Bassin Amazonien — L'Épreuve de Souveraineté' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 36.2 → 40.2 (delta:+4.0)
+  → geopolitique_conflits : 11.3 → 5.300000000000001 (delta:-6.0)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+  → organisation_territoires : 46.2 → 53.2 (delta:+7.0)
+[snapshot] Événement custom 'Révolution du Travail Régénératif dans la Confédération des Territoires Sahéliens Autonomes' (an 2047, 51 ans d'effet)
+  → systemes_productifs_travail : 41.8 → 56.8 (delta:+15.0)
+  → technologie_information : 100 → 100 (delta:+10.0)
+  → energie_ressources_critiques : 37.7 → 45.7 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+[snapshot] Événement custom 'Pacte Lacustre des Grands Lacs — Autonomie Négociée dans le Cadre de Nairobi' (an 2051, 47 ans d'effet)
+  → organisation_territoires : 67.0 → 79.0 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → geopolitique_conflits : 0 → 5.0 (delta:+5.0)
+[snapshot] Événement custom 'Traité de Belém — Souveraineté Carbone Amazonienne' (an 2053, 45 ans d'effet)
+  → climat_environnement_global : 28.5 → 36.5 (delta:+8.0)
+  → gouvernance_institutions : 96.4 → 100 (delta:+5.0)
+  → geopolitique_conflits : 0 → 6.0 (delta:+6.0)
+  → energie_ressources_critiques : 32.3 → 36.3 (delta:+4.0)
+[snapshot] Événement custom 'Victoire de la Coalition de Transition Sociale' (an 2055, 43 ans d'effet)
+  → gouvernance_institutions : 95.7 → 100 (delta:+8.0)
+  → systeme_economique_redistribution : 98.0 → 100 (delta:+12.0)
+  → valeurs_culture_tempo_sociale : 55 → 61.0 (delta:+6.0)
+[snapshot] Événement custom 'Forum Mondial des Infrastructures Hors-Grille d'Agadez — Charte de Souveraineté Numérique des Périphéries' (an 2062, 36 ans d'effet)
+  → technologie_information : 100 → 100 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → organisation_territoires : 76.3 → 88.3 (delta:+12.0)
+[snapshot] Événement custom 'L'Affaire Van Derburgh — Procès du Patrimoine Numérique' (an 2078, 20 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+2.0)
+  → valeurs_culture_tempo_sociale : 61.0 → 62.0 (delta:+1.0)
+[snapshot] Événements custom : 12 | 199 variables affectées
+[snapshot] Signal custom 'decodage_langage_animaux_ia' sur valeurs_culture_tempo_sociale (an 2033, 65 ans d'effet)
+  → valeurs_culture_tempo_sociale : 62.0 → 67.0 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur technologie_information (an 2031, 67 ans d'effet)
+  → technologie_information : 100 → 100 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur gouvernance_institutions (an 2034, 64 ans d'effet)
+  → gouvernance_institutions : 100 → 95.0 (delta:-5.0)
+[snapshot] Signaux custom chiffrés : 3 | 3 variables affectées
+
+[prompt] Assemblage du prompt...
+[prompt] System prompt : 2808 caractères
+[prompt] User prompt   : 69786 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-large-latest, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 20188 | sortie : 932
+[api] Article généré : 3771 caractères
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/new_sustainability/20260823_145412_new_sustainability_histoire_patrimoine_article_3janvier2098.md
+  ✓ Sauvegardé : 20260823_145412_new_sustainability_histoire_patrimoine_article_3janvier2098.md
+
+[series] Index généré : _index.md
+
+============================================================
+SÉRIE GÉNÉRÉE
+  ✓ 1 articles | ✗ 0 erreurs
+  📁 /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/new_sustainability
+============================================================

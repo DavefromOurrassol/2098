@@ -57,6 +57,7 @@ generation: forteresse
 
 injection:
   type: custom
+  garantie_selection: false
   annee_injection: 2051
   contexte_injection: >
     Le *Gelecek Meclisi Fragmentaire* agit comme un contre-pouvoir informel qui atténue la rigidité des blocs forteresses en introduisant des mécanismes de coordination hybrides. Son impact sur *gouvernance_institutions* reflète sa capacité à créer des espaces de négociation là où les institutions traditionnelles ont échoué, tandis que son influence sur *organisation_territoires* découle de sa gestion des corridors et zones tampons. Enfin, son usage détourné des technologies de surveillance (*technologie_information*) montre comment l'information peut être réappropriée pour contourner les contrôles souverains.

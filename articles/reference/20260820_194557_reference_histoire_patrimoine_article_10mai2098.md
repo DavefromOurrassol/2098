@@ -17,6 +17,29 @@ variables_pilotes:
   - technologie_information
   - systeme_economique_redistribution
   - gouvernance_institutions
+slug: tbilissi_capitale_des_memoires_oubliees_quand_l_archive_defie_la_geopolitique
+chapo: "À Tbilissi, le *Nœud Mnemos* préserve les archives que les États et corporations veulent effacer, des dialectes oubliés aux preuves foncières contestées. Entre résistance mémorielle et pressions géopolitiques, cette archive vivante incarne un enjeu crucial : qui contrôle le passé ?"
+tags:
+  - archives numériques
+  - mémoire collective
+  - géopolitique des données
+  - résistance culturelle
+  - patrimoine contesté
+image_prompt: "Une historienne en chef, Lika Beridze, debout devant des serveurs décentralisés dans les sous-sols de l'ancienne Académie des Sciences géorgienne à Tbilissi, éclairée par une lumière tamisée, entourée de câbles et d'écrans affichant des fragments de textes anciens."
+a_une_photo: false
+image_credit: ""
+journaliste_slug: lea_martel
+date_evenement: 10 mai 2098
+zone_principale: geneve_lac_retreite
+date_publication: 10 mai 2098
+entites_citees:
+  - agence_stabilisation_climatique_reference
+  - reseau_mnemos_reference
+articles_lies:
+  - les_memoires_oubliees_de_tbilissi_quand_l_histoire_resiste_aux_algorithmes
+  - memoire_en_fragments_quand_l_art_defie_la_muraille_de_verre
+  - mnemos_la_memoire_qui_resiste_aux_algorithmes
+
 ---
 **Tbilissi, capitale des mémoires oubliées : quand l’archive défie la géopolitique**
 
@@ -44,3 +67,6 @@ Cette fonction pratique explique pourquoi le Nœud résiste, malgré les pressio
 En attendant, le Nœud Mnemos continue de tisser ses réseaux, discrètement, obstinément. Comme un rappel que dans un monde fracturé, la mémoire reste l’une des dernières formes de résistance.
 
 *Léa Martel — Réseau Le Dessous des Cartes*
+
+---
+**Voir aussi** : [[agence_stabilisation_climatique_reference]] · [[reseau_mnemos_reference]] · [[les_memoires_oubliees_de_tbilissi_quand_l_histoire_resiste_aux_algorithmes]] · [[memoire_en_fragments_quand_l_art_defie_la_muraille_de_verre]] · [[mnemos_la_memoire_qui_resiste_aux_algorithmes]]

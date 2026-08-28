@@ -897,15 +897,6 @@ async function renderOption(opt, script) {
     }
     const placeholder = document.createElement('option');
     placeholder.value = '';
-    placeholder.textContent = 'Chargement…';
-    sel.appendChild(placeholder);
-    group.appendChild(sel);
-
-    // Charger les slugs en async
-    loadSlugsForSelect(sel, opt.slug_type, opt.slug_extra_params);
-
-    // Si select scénario existe dans le même formulaire, écouter ses changements
-    // (délégué après rendu)
     sel.dataset.needsScenario = 'true';
 
     // Source de slugs dynamique selon un autre champ -- ajouté le 26
@@ -917,6 +908,37 @@ async function renderOption(opt, script) {
     if (opt.slug_type_field && opt.slug_type_map) {
       sel.dataset.slugTypeField = opt.slug_type_field;
       sel.dataset.slugTypeMap = JSON.stringify(opt.slug_type_map);
+    }
+
+    // requires_scenario_selected (22 août 2026, trouvé en testant
+    // set_priorite_forcee) : opt-in -- certains champs slug_select
+    // n'ont de sens qu'une fois un scénario réel choisi (la liste
+    // dépend entièrement de lui, pas juste "affinée" par lui). Sans ce
+    // flag, le chargement initial se faisait AVANT tout choix de
+    // scénario (scenario='' dans la requête /api/slugs) -- si
+    // l'utilisateur sélectionnait une valeur à ce moment-là puis
+    // choisissait le scénario ensuite, le rechargement déclenché par
+    // ce second choix REMPLACE silencieusement la liste (innerHTML) et
+    // retombe sur le placeholder vide, perdant la sélection sans aucun
+    // signal visuel -- collectArgs() n'envoie alors jamais le flag,
+    // argparse échoue côté script avec une erreur qui ne dit rien de
+    // la vraie cause. Le champ est ici désactivé et affiche un
+    // placeholder explicite tant qu'aucun scénario n'est choisi,
+    // empêchant la séquence problématique à la source plutôt que de la
+    // réparer après coup. N'affecte aucun champ existant qui ne déclare
+    // pas ce flag (undo_custom, fix_annee_debut_placeholder, zone_hint) --
+    // comportement strictement inchangé pour eux.
+    if (opt.requires_scenario_selected) {
+      sel.disabled = true;
+      placeholder.textContent = 'Choisis d’abord un scénario';
+      sel.appendChild(placeholder);
+      group.appendChild(sel);
+    } else {
+      placeholder.textContent = 'Chargement…';
+      sel.appendChild(placeholder);
+      group.appendChild(sel);
+      // Charger les slugs en async
+      loadSlugsForSelect(sel, opt.slug_type, opt.slug_extra_params);
     }
 
   } else if (opt.type === 'number') {
@@ -1102,6 +1124,11 @@ document.addEventListener('change', async (e) => {
     const slugSelects = document.querySelectorAll('[data-needs-scenario="true"]');
     for (const sel of slugSelects) {
       await rafraichirChampDynamique(sel);
+      // 22 août 2026 : réactive un champ bloqué par
+      // requires_scenario_selected une fois qu'un scénario réel est
+      // choisi. No-op pour un champ jamais désactivé (undo_custom,
+      // fix_annee_debut_placeholder, zone_hint).
+      if (e.target.value) sel.disabled = false;
     }
   }
 });
@@ -1165,6 +1192,19 @@ function collectArgs() {
   document.querySelectorAll('[data-flag]').forEach(el => {
     const flag = el.dataset.flag;
     if (!flag) return;
+
+    // 23 août 2026 : ignorer un champ actuellement masqué par mode_only
+    // (mode actif différent) -- même correctif que validateRequiredFields()
+    // ci-dessous, évite qu'une valeur laissée dans un champ caché (ex.
+    // rempli en mode manuel, formulaire ensuite basculé sur auto) ne
+    // fuite dans la commande d'un autre mode.
+    const modeOnlyGroup = el.closest('[data-mode-only]');
+    if (modeOnlyGroup && modeActive) {
+      const allowedModes = modeOnlyGroup.dataset.modeOnly.split(',');
+      if (!allowedModes.includes(modeActive.dataset.value)) {
+        return;
+      }
+    }
 
     if (el.type === 'checkbox') {
       if (el.checked) args.push(flag);
@@ -1252,7 +1292,23 @@ function validateRequiredGroups(script) {
  */
 function validateRequiredFields(script) {
   const manquants = [];
+  // 23 août 2026 : un champ caché par mode_only (mode actif différent) ne
+  // doit jamais être exigé au lancement -- updateModeOnlyVisibility() le
+  // masque visuellement mais ne touchait jamais à cette validation,
+  // laissant un champ invisible bloquer le formulaire (trouvé sur
+  // inject_journaliste_custom.py, mode auto, --zone-slug mode_only:
+  // "manuel"). Même lecture de l'onglet actif que updateModeOnlyVisibility,
+  // pour rester cohérent.
+  const activeTab = document.querySelector('.mode-tab.active');
+  const activeMode = activeTab ? activeTab.dataset.value : null;
+
   for (const opt of script.options || []) {
+    if (opt.mode_only) {
+      const allowedModes = Array.isArray(opt.mode_only) ? opt.mode_only : [opt.mode_only];
+      if (activeMode && !allowedModes.includes(activeMode)) {
+        continue;
+      }
+    }
     if (opt.required && !isFlagActive(opt.flag)) {
       manquants.push(opt.label || opt.flag);
     }

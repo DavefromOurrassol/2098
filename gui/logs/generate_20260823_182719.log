@@ -1,0 +1,134 @@
+
+============================================================
+OURRASSOL 2098 — Générateur d'articles
+============================================================
+  Mode       : Semi-guidé
+  Scénario   : breakdown
+  Thématique : meteo
+  Longueur   : analyse
+============================================================
+
+[generate] Chargement de la thématique 'meteo'...
+
+[snapshot] Construction du monde 2098 — scénario : breakdown
+[snapshot] Variables pilotes : ['geopolitique_conflits', 'energie_ressources_critiques', 'organisation_territoires', 'climat_environnement_global', 'systemes_productifs_travail']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 16 | Cohérence : ATTENTION
+[snapshot] Jalons trajectoire : 154 (43 majeurs)
+[snapshot] Événements signal_to_state : 65 (20 majeurs)
+[snapshot] Tensions thématiques : 4
+[snapshot] Instances chargées : 141 | Filtrées : 6
+[snapshot] Injection custom 'Gelecek Meclisi — Les Échos du Demain' (an 2048, 50 ans d'effet)
+  → gouvernance_institutions : 20 → 28.0 (delta:+8.0)
+  → valeurs_culture_tempo_sociale : 90 → 96.0 (delta:+6.0)
+  → technologie_information : 95 → 100 (delta:+5.0)
+[snapshot] Modifications custom (entités) : 3 variables affectées
+[snapshot] Événement custom 'La Déflagration du Croissant — Embrasement sans arbitre' (an 2027, 71 ans d'effet)
+  → geopolitique_conflits : 95 → 91.0 (delta:-4.0)
+  → energie_ressources_critiques : 100 → 100 (delta:+8.0)
+  → gouvernance_institutions : 30.9 → 35.9 (delta:+5.0)
+  → demographie_mobilite_humaine : 92.4 → 99.4 (delta:+7.0)
+[snapshot] Événement custom 'Grève des Veines Eurasiatiques — L'Étranglement des Corridors' (an 2039, 59 ans d'effet)
+  → systemes_productifs_travail : 93.2 → 73.2 (delta:-20.0)
+  → geopolitique_conflits : 70.0 → 55.0 (delta:-15.0)
+  → sante_biotechnologies : 85 → 75.0 (delta:-10.0)
+  → organisation_territoires : 95.9 → 83.9 (delta:-12.0)
+[snapshot] Événement custom 'L'Attentat des Neuf Nœuds — Le Jour Sans Signal' (an 2040, 58 ans d'effet)
+  → technologie_information : 44.5 → 19.5 (delta:-25.0)
+  → gouvernance_institutions : 28.7 → 16.7 (delta:-12.0)
+  → systeme_economique_redistribution : 51.4 → 41.4 (delta:-10.0)
+[snapshot] Événement custom 'La Ruée des Glaces — Enchères Souveraines du Kalaallit Fund' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 100 → 100 (delta:+8.0)
+  → geopolitique_conflits : 32.9 → 20.9 (delta:-12.0)
+  → gouvernance_institutions : 18.9 → 28.9 (delta:+10.0)
+  → organisation_territoires : 77.1 → 84.1 (delta:+7.0)
+[snapshot] Événement custom 'L'Exode des Grands Brûlés — La Déroute du Bureau des Résidus' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 100 → 92.0 (delta:-8.0)
+  → organisation_territoires : 80.2 → 95.2 (delta:+15.0)
+  → gouvernance_institutions : 28.9 → 40.9 (delta:+12.0)
+  → climat_environnement_global : 100 → 95.0 (delta:-5.0)
+  → geopolitique_conflits : 0 → 0 (delta:-12.0)
+  → energie_ressources_critiques : 100 → 100 (delta:+10.0)
+[snapshot] Événement custom 'La Fracture de Belém — Quand le Bassin Amazonien a cessé d'être un territoire' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 95.0 → 100 (delta:+12.0)
+  → geopolitique_conflits : 0 → 0 (delta:-8.0)
+  → gouvernance_institutions : 55.3 → 63.3 (delta:+8.0)
+  → organisation_territoires : 100 → 100 (delta:+10.0)
+[snapshot] Événement custom 'Le Compact des Grands Lacs — Sécession de fait' (an 2053, 45 ans d'effet)
+  → organisation_territoires : 100 → 92.0 (delta:-8.0)
+  → gouvernance_institutions : 63.3 → 73.3 (delta:+10.0)
+  → geopolitique_conflits : 0 → 0 (delta:-12.0)
+  → energie_ressources_critiques : 100 → 90.0 (delta:-10.0)
+  → climat_environnement_global : 100 → 100 (delta:+4.0)
+[snapshot] Événement custom 'Victoire Fantôme du Parti Commun' (an 2055, 43 ans d'effet)
+  → gouvernance_institutions : 81.9 → 76.9 (delta:-5.0)
+  → geopolitique_conflits : 18.0 → 26.0 (delta:+8.0)
+  → organisation_territoires : 94.6 → 88.6 (delta:-6.0)
+[snapshot] Événement custom 'La Saisie du Détroit — Incident du Passage Nord-Ouest' (an 2057, 41 ans d'effet)
+  → geopolitique_conflits : 31.3 → 23.3 (delta:-8.0)
+  → energie_ressources_critiques : 90.0 → 100 (delta:+10.0)
+  → frontieres_du_systeme : 82.5 → 88.5 (delta:+6.0)
+  → organisation_territoires : 94.0 → 100 (delta:+7.0)
+  → climat_environnement_global : 94.2 → 98.2 (delta:+4.0)
+[snapshot] Événement custom 'Les Forges du Commun — Proclamation des Zones Libres de l'Algorithme' (an 2061, 37 ans d'effet)
+  → geopolitique_conflits : 0 → 0 (delta:-8.0)
+  → valeurs_culture_tempo_sociale : 96.0 → 100 (delta:+12.0)
+  → gouvernance_institutions : 82.7 → 89.7 (delta:+7.0)
+  → organisation_territoires : 100 → 90.0 (delta:-10.0)
+[snapshot] Événement custom 'Les Éclats d'Agadez — Ce qui reste du Forum' (an 2061, 37 ans d'effet)
+  → technologie_information : 20.6 → 24.6 (delta:+4.0)
+  → gouvernance_institutions : 92.6 → 100 (delta:+8.0)
+  → organisation_territoires : 92.4 → 98.4 (delta:+6.0)
+[snapshot] Événement custom 'Les Forges du Commun — Proclamation des Zones Libres du Rust Belt' (an 2061, 37 ans d'effet)
+  → geopolitique_conflits : 0 → 0 (delta:-8.0)
+  → valeurs_culture_tempo_sociale : 100 → 100 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → technologie_information : 45.5 → 51.5 (delta:+6.0)
+  → organisation_territoires : 100 → 90.0 (delta:-10.0)
+[snapshot] Événement custom 'La Révolte des Zones Mortes — Effondrement de la RPDA' (an 2073, 25 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+8.0)
+  → technologie_information : 53.2 → 59.2 (delta:+6.0)
+  → organisation_territoires : 93.6 → 100 (delta:+10.0)
+[snapshot] Événement custom 'L'Arrestation de Van Derburgh par la Milice de Detroit-Sud' (an 2078, 20 ans d'effet)
+  → gouvernance_institutions : 100 → 99.0 (delta:-1.0)
+  → valeurs_culture_tempo_sociale : 100 → 99.0 (delta:-1.0)
+[snapshot] Événements custom : 14 | 270 variables affectées
+[snapshot] Signal custom 'decodage_langage_animaux_ia' sur valeurs_culture_tempo_sociale (an 2045, 53 ans d'effet)
+  → valeurs_culture_tempo_sociale : 99.0 → 100 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur technologie_information (an 2041, 57 ans d'effet)
+  → technologie_information : 69.0 → 74.0 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur gouvernance_institutions (an 2042, 56 ans d'effet)
+  → gouvernance_institutions : 99.0 → 94.0 (delta:-5.0)
+[snapshot] Signaux custom chiffrés : 3 | 3 variables affectées
+
+[prompt] Assemblage du prompt...
+[prompt] System prompt : 3119 caractères
+[prompt] User prompt   : 69433 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-large-latest, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 21192 | sortie : 803
+[api] Article généré : 2959 caractères
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/breakdown/20260823_182754_breakdown_meteo_article_23juillet2098.md
+
+============================================================
+ARTICLE GÉNÉRÉ
+============================================================
+**LE CIEL EN FEU : SEUIL DES 52°C FRANCHI EN OCCITANIE, RECORD ABSOLU POUR LA ZONE TAMPON**
+
+23 juillet 2098
+
+Mariama Traoré — Seuil Sécurisé - Bulletin des Racines-Mères
+
+La station de captation atmosphérique de Kilomètre 340, dernier poste encore opérationnel sous contrôle du Clan des Eaux Hautes, a enregistré ce matin à 14h23 un pic de **52,4°C** dans la plaine de l’Ebre, pulvérisant le précédent record de 49,8°C établi en 2087. Les capteurs du Massif Central, bien que moins exposés, affichent une moyenne nocturne de **34°C**, interdisant tout refroidissement des sols. « On est entré dans la zone rouge du *Protocole Canicule 2091* », confirme un technicien de la Confédération des Bassins Vivants (CBV), sous couvert d’anonymat. « Les seuils de tolérance humaine sont dépassés depuis trois jours. Les filets anti-UV des fragments Terrafond ne suffisent plus. »
+
+Les autorités locales, représentées par le Conseil des Gardiens de Montbrun, ont activé hier l’*État de Chaleur Extrême*, suspendant toute activité non essentielle entre 11h et 18h. Les réseaux de courriers nomades sahélo-méditerranéens, habituellement silencieux sur leurs itinéraires, signalent des arrêts forcés dans les *zones tampons* non ombragées. « Les bêtes refusent d’avancer », rapporte un messager à Ourrassol. « Même les chameaux de la Trame Bioclimatique s’effondrent. »
+
+Les *Cicatrices Vertes*, ces tronçons de la Trame Bioclimatique Continentale devenus frontières, enregistrent des pannes en cascade sur les systèmes de brumisation. Les cellules des Racines-Mères ont distribué des kits de survie — sachets de sels de réhydratation et bâches aluminisées — mais les stocks s’épuisent. « On ne peut plus compter sur les convois logistiques », explique une coordinatrice locale. « Les milices agro-territoriales bloquent les axes. Elles savent que l’eau vaut plus que le lithium, maintenant. »
+
+Recommandation des autorités : limiter les déplacements aux heures nocturnes, couvrir les réservoirs d’eau pour éviter l’évaporation, et signaler tout cas de *coup de chaleur foudroyant* — symptômes : absence de sudation, peau sèche et brûlante — aux postes de soins des Brigades Médicales Itinérantes.
+
+============================================================
+✓ Sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/breakdown/20260823_182754_breakdown_meteo_article_23juillet2098.md
+============================================================
+

@@ -4,6 +4,11 @@ type: event_instance
 slug: multi_scenario_zone_test_breakdown
 archetype: multi_scenario_zone_test
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 type_evenement: political_social
 portee: regionale
 date: 2048

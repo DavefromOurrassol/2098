@@ -1,0 +1,790 @@
+
+============================================================
+OURRASSOL 2098 — Génération de série
+============================================================
+  Scénario     : fortress_world
+  Thématiques  : 4
+    - economie_finance
+    - societe
+    - sports
+    - petites_annonces_services
+  Articles/th. : 2
+  Longueur     : auto
+============================================================
+
+[series] 8 articles à générer...
+
+[1/8] fortress_world × economie_finance — 3 janvier 2098
+
+[snapshot] Construction du monde 2098 — scénario : fortress_world
+[snapshot] Variables pilotes : ['geopolitique_conflits', 'energie_ressources_critiques', 'gouvernance_institutions', 'organisation_territoires']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 16 | Cohérence : ATTENTION
+[snapshot] Jalons trajectoire : 154 (37 majeurs)
+[snapshot] Événements signal_to_state : 65 (14 majeurs)
+[snapshot] Tensions thématiques : 8
+[loader] Instance(s) custom garantie(s) dans filtered_instances : gelecek_meclisi_fortress_world
+[snapshot] Instances chargées : 130 | Filtrées : 6
+[snapshot] Injection custom 'gelecek_meclisi_fragmentaire' (an 2051, 47 ans d'effet)
+  → gouvernance_institutions : 50 → 58.0 (delta:+8.0)
+  → organisation_territoires : 80 → 86.0 (delta:+6.0)
+  → technologie_information : 85 → 90.0 (delta:+5.0)
+[snapshot] Modifications custom (entités) : 3 variables affectées
+[snapshot] Événement custom 'Embrasement du Corridor Pétrolier : la Guerre des Forteresses du Moyen-Orient' (an 2027, 71 ans d'effet)
+  → geopolitique_conflits : 85 → 73.0 (delta:-12.0)
+  → energie_ressources_critiques : 96.6 → 100 (delta:+14.0)
+  → gouvernance_institutions : 66.6 → 74.6 (delta:+8.0)
+  → demographie_mobilite_humaine : 82.2 → 93.2 (delta:+11.0)
+[snapshot] Événement custom 'Grève Générale des Corridors Eurasiens — Soulèvement des Oubliés du Lithium' (an 2039, 59 ans d'effet)
+  → systemes_productifs_travail : 81.2 → 61.2 (delta:-20.0)
+  → geopolitique_conflits : 38.2 → 53.2 (delta:+15.0)
+  → sante_biotechnologies : 65 → 75.0 (delta:+10.0)
+  → gouvernance_institutions : 63.8 → 51.8 (delta:-12.0)
+[snapshot] Événement custom 'L'Attentat des Neuf Nœuds — Prétexte à la Souveraineté Numérique' (an 2040, 58 ans d'effet)
+  → technologie_information : 64.9 → 44.900000000000006 (delta:-20.0)
+  → gouvernance_institutions : 37.4 → 27.4 (delta:-10.0)
+  → geopolitique_conflits : 56.7 → 71.7 (delta:+15.0)
+[snapshot] Événement custom 'Enchères de Nuna : la guerre des offres pour le sous-sol groenlandais' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 63.6 → 55.6 (delta:-8.0)
+  → geopolitique_conflits : 81.4 → 71.4 (delta:-10.0)
+  → gouvernance_institutions : 23.8 → 35.8 (delta:+12.0)
+  → organisation_territoires : 63.6 → 56.6 (delta:-7.0)
+[snapshot] Événement custom 'L'Exode des Plaines — Ruée vers les Lacs' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 67.4 → 55.400000000000006 (delta:-12.0)
+  → organisation_territoires : 50.7 → 64.7 (delta:+14.0)
+  → gouvernance_institutions : 35.8 → 45.8 (delta:+10.0)
+  → climat_environnement_global : 91.4 → 83.4 (delta:-8.0)
+[snapshot] Événement custom 'Belém : l'Amazonie bascule, les milices prennent le bassin' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 83.4 → 100 (delta:+18.0)
+  → geopolitique_conflits : 49.3 → 41.3 (delta:-8.0)
+  → gouvernance_institutions : 51.6 → 63.6 (delta:+12.0)
+  → organisation_territoires : 70.1 → 80.1 (delta:+10.0)
+[snapshot] Événement custom 'La Sécession des Grands Lacs — Rupture de Chicago-Lacustre' (an 2051, 47 ans d'effet)
+  → organisation_territoires : 80.1 → 68.1 (delta:-12.0)
+  → gouvernance_institutions : 63.6 → 77.6 (delta:+14.0)
+  → geopolitique_conflits : 13.2 → 3.1999999999999993 (delta:-10.0)
+  → energie_ressources_critiques : 89.7 → 81.7 (delta:-8.0)
+[snapshot] Événement custom 'Liquidation du Mouvement Commun Américain' (an 2052, 46 ans d'effet)
+  → gouvernance_institutions : 84.8 → 79.8 (delta:-5.0)
+  → valeurs_culture_tempo_sociale : 80 → 72.0 (delta:-8.0)
+  → geopolitique_conflits : 18.7 → 23.7 (delta:+5.0)
+[snapshot] Événement custom 'Incident du Passage du Nord-Ouest : la NAT saisit le convoi de l'APA' (an 2059, 39 ans d'effet)
+  → geopolitique_conflits : 23.7 → 15.7 (delta:-8.0)
+  → energie_ressources_critiques : 85.3 → 75.3 (delta:-10.0)
+  → frontieres_du_systeme : 34.6 → 22.6 (delta:-12.0)
+[snapshot] Événement custom 'La Révolte des Communes Libres du Rust Belt — Zones Hors-Algorithme' (an 2063, 35 ans d'effet)
+  → geopolitique_conflits : 40.2 → 32.2 (delta:-8.0)
+  → valeurs_culture_tempo_sociale : 72.0 → 84.0 (delta:+12.0)
+  → gouvernance_institutions : 87.8 → 94.8 (delta:+7.0)
+  → organisation_territoires : 82.3 → 72.3 (delta:-10.0)
+[snapshot] Événement custom 'Insurrection des Communes du Rust Belt — Zones Libres de l'Algorithme' (an 2063, 35 ans d'effet)
+  → geopolitique_conflits : 32.9 → 24.9 (delta:-8.0)
+  → valeurs_culture_tempo_sociale : 84.0 → 72.0 (delta:-12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → technologie_information : 68.0 → 62.0 (delta:-6.0)
+[snapshot] Événement custom 'Insurrection des Zones Déficitaires — São Paulo, la Cartographie Rebelle' (an 2073, 25 ans d'effet)
+  → gouvernance_institutions : 95.7 → 100 (delta:+12.0)
+  → technologie_information : 79.3 → 87.3 (delta:+8.0)
+  → organisation_territoires : 78.9 → 88.9 (delta:+10.0)
+[snapshot] Événement custom 'L'Affaire Van Derburgh — Archives Non Certifiées' (an 2078, 20 ans d'effet)
+  → valeurs_culture_tempo_sociale : 72.0 → 70.0 (delta:-2.0)
+  → gouvernance_institutions : 100 → 99.0 (delta:-1.0)
+[snapshot] Événements custom : 13 | 222 variables affectées
+[snapshot] Signal custom 'decodage_langage_animaux_ia' sur valeurs_culture_tempo_sociale (an 2038, 60 ans d'effet)
+  → valeurs_culture_tempo_sociale : 70.0 → 75.0 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur technologie_information (an 2036, 62 ans d'effet)
+  → technologie_information : 97.1 → 100 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur gouvernance_institutions (an 2038, 60 ans d'effet)
+  → gouvernance_institutions : 99.0 → 94.0 (delta:-5.0)
+[snapshot] Signaux custom chiffrés : 3 | 3 variables affectées
+
+[prompt] Assemblage du prompt...
+[prompt] System prompt : 3064 caractères
+[prompt] User prompt   : 65189 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-large-latest, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 19712 | sortie : 2066
+[api] Article généré : 8273 caractères
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/fortress_world/20260821_095405_fortress_world_economie_finance_article_3janvier2098.md
+  ✓ Sauvegardé : 20260821_095405_fortress_world_economie_finance_article_3janvier2098.md
+
+[2/8] fortress_world × economie_finance — 17 janvier 2098
+
+[snapshot] Construction du monde 2098 — scénario : fortress_world
+[snapshot] Variables pilotes : ['geopolitique_conflits', 'energie_ressources_critiques', 'gouvernance_institutions', 'organisation_territoires']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 16 | Cohérence : ATTENTION
+[snapshot] Jalons trajectoire : 154 (37 majeurs)
+[snapshot] Événements signal_to_state : 65 (14 majeurs)
+[snapshot] Tensions thématiques : 8
+[loader] Instance(s) custom garantie(s) dans filtered_instances : gelecek_meclisi_fortress_world
+[snapshot] Instances chargées : 130 | Filtrées : 6
+[snapshot] Injection custom 'gelecek_meclisi_fragmentaire' (an 2051, 47 ans d'effet)
+  → gouvernance_institutions : 50 → 58.0 (delta:+8.0)
+  → organisation_territoires : 80 → 86.0 (delta:+6.0)
+  → technologie_information : 85 → 90.0 (delta:+5.0)
+[snapshot] Modifications custom (entités) : 3 variables affectées
+[snapshot] Événement custom 'Embrasement du Corridor Pétrolier : la Guerre des Forteresses du Moyen-Orient' (an 2027, 71 ans d'effet)
+  → geopolitique_conflits : 85 → 73.0 (delta:-12.0)
+  → energie_ressources_critiques : 96.6 → 100 (delta:+14.0)
+  → gouvernance_institutions : 66.6 → 74.6 (delta:+8.0)
+  → demographie_mobilite_humaine : 82.2 → 93.2 (delta:+11.0)
+[snapshot] Événement custom 'Grève Générale des Corridors Eurasiens — Soulèvement des Oubliés du Lithium' (an 2039, 59 ans d'effet)
+  → systemes_productifs_travail : 81.2 → 61.2 (delta:-20.0)
+  → geopolitique_conflits : 38.2 → 53.2 (delta:+15.0)
+  → sante_biotechnologies : 65 → 75.0 (delta:+10.0)
+  → gouvernance_institutions : 63.8 → 51.8 (delta:-12.0)
+[snapshot] Événement custom 'L'Attentat des Neuf Nœuds — Prétexte à la Souveraineté Numérique' (an 2040, 58 ans d'effet)
+  → technologie_information : 64.9 → 44.900000000000006 (delta:-20.0)
+  → gouvernance_institutions : 37.4 → 27.4 (delta:-10.0)
+  → geopolitique_conflits : 56.7 → 71.7 (delta:+15.0)
+[snapshot] Événement custom 'Enchères de Nuna : la guerre des offres pour le sous-sol groenlandais' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 63.6 → 55.6 (delta:-8.0)
+  → geopolitique_conflits : 81.4 → 71.4 (delta:-10.0)
+  → gouvernance_institutions : 23.8 → 35.8 (delta:+12.0)
+  → organisation_territoires : 63.6 → 56.6 (delta:-7.0)
+[snapshot] Événement custom 'L'Exode des Plaines — Ruée vers les Lacs' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 67.4 → 55.400000000000006 (delta:-12.0)
+  → organisation_territoires : 50.7 → 64.7 (delta:+14.0)
+  → gouvernance_institutions : 35.8 → 45.8 (delta:+10.0)
+  → climat_environnement_global : 91.4 → 83.4 (delta:-8.0)
+[snapshot] Événement custom 'Belém : l'Amazonie bascule, les milices prennent le bassin' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 83.4 → 100 (delta:+18.0)
+  → geopolitique_conflits : 49.3 → 41.3 (delta:-8.0)
+  → gouvernance_institutions : 51.6 → 63.6 (delta:+12.0)
+  → organisation_territoires : 70.1 → 80.1 (delta:+10.0)
+[snapshot] Événement custom 'La Sécession des Grands Lacs — Rupture de Chicago-Lacustre' (an 2051, 47 ans d'effet)
+  → organisation_territoires : 80.1 → 68.1 (delta:-12.0)
+  → gouvernance_institutions : 63.6 → 77.6 (delta:+14.0)
+  → geopolitique_conflits : 13.2 → 3.1999999999999993 (delta:-10.0)
+  → energie_ressources_critiques : 89.7 → 81.7 (delta:-8.0)
+[snapshot] Événement custom 'Liquidation du Mouvement Commun Américain' (an 2052, 46 ans d'effet)
+  → gouvernance_institutions : 84.8 → 79.8 (delta:-5.0)
+  → valeurs_culture_tempo_sociale : 80 → 72.0 (delta:-8.0)
+  → geopolitique_conflits : 18.7 → 23.7 (delta:+5.0)
+[snapshot] Événement custom 'Incident du Passage du Nord-Ouest : la NAT saisit le convoi de l'APA' (an 2059, 39 ans d'effet)
+  → geopolitique_conflits : 23.7 → 15.7 (delta:-8.0)
+  → energie_ressources_critiques : 85.3 → 75.3 (delta:-10.0)
+  → frontieres_du_systeme : 34.6 → 22.6 (delta:-12.0)
+[snapshot] Événement custom 'La Révolte des Communes Libres du Rust Belt — Zones Hors-Algorithme' (an 2063, 35 ans d'effet)
+  → geopolitique_conflits : 40.2 → 32.2 (delta:-8.0)
+  → valeurs_culture_tempo_sociale : 72.0 → 84.0 (delta:+12.0)
+  → gouvernance_institutions : 87.8 → 94.8 (delta:+7.0)
+  → organisation_territoires : 82.3 → 72.3 (delta:-10.0)
+[snapshot] Événement custom 'Insurrection des Communes du Rust Belt — Zones Libres de l'Algorithme' (an 2063, 35 ans d'effet)
+  → geopolitique_conflits : 32.9 → 24.9 (delta:-8.0)
+  → valeurs_culture_tempo_sociale : 84.0 → 72.0 (delta:-12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → technologie_information : 68.0 → 62.0 (delta:-6.0)
+[snapshot] Événement custom 'Insurrection des Zones Déficitaires — São Paulo, la Cartographie Rebelle' (an 2073, 25 ans d'effet)
+  → gouvernance_institutions : 95.7 → 100 (delta:+12.0)
+  → technologie_information : 79.3 → 87.3 (delta:+8.0)
+  → organisation_territoires : 78.9 → 88.9 (delta:+10.0)
+[snapshot] Événement custom 'L'Affaire Van Derburgh — Archives Non Certifiées' (an 2078, 20 ans d'effet)
+  → valeurs_culture_tempo_sociale : 72.0 → 70.0 (delta:-2.0)
+  → gouvernance_institutions : 100 → 99.0 (delta:-1.0)
+[snapshot] Événements custom : 13 | 222 variables affectées
+[snapshot] Signal custom 'decodage_langage_animaux_ia' sur valeurs_culture_tempo_sociale (an 2038, 60 ans d'effet)
+  → valeurs_culture_tempo_sociale : 70.0 → 75.0 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur technologie_information (an 2036, 62 ans d'effet)
+  → technologie_information : 97.1 → 100 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur gouvernance_institutions (an 2038, 60 ans d'effet)
+  → gouvernance_institutions : 99.0 → 94.0 (delta:-5.0)
+[snapshot] Signaux custom chiffrés : 3 | 3 variables affectées
+
+[prompt] Assemblage du prompt...
+[prompt] System prompt : 3064 caractères
+[prompt] User prompt   : 66272 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-large-latest, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 19979 | sortie : 2057
+[api] Article généré : 8445 caractères
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/fortress_world/20260821_095509_fortress_world_economie_finance_article_17janvier2098.md
+  ✓ Sauvegardé : 20260821_095509_fortress_world_economie_finance_article_17janvier2098.md
+
+[3/8] fortress_world × societe — 2 février 2098
+
+[snapshot] Construction du monde 2098 — scénario : fortress_world
+[snapshot] Variables pilotes : ['geopolitique_conflits', 'energie_ressources_critiques', 'gouvernance_institutions', 'organisation_territoires']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 16 | Cohérence : ATTENTION
+[snapshot] Jalons trajectoire : 154 (37 majeurs)
+[snapshot] Événements signal_to_state : 65 (14 majeurs)
+[snapshot] Tensions thématiques : 2
+[loader] Instance(s) custom garantie(s) dans filtered_instances : gelecek_meclisi_fortress_world
+[snapshot] Instances chargées : 130 | Filtrées : 6
+[snapshot] Injection custom 'gelecek_meclisi_fragmentaire' (an 2051, 47 ans d'effet)
+  → gouvernance_institutions : 50 → 58.0 (delta:+8.0)
+  → organisation_territoires : 80 → 86.0 (delta:+6.0)
+  → technologie_information : 85 → 90.0 (delta:+5.0)
+[snapshot] Modifications custom (entités) : 3 variables affectées
+[snapshot] Événement custom 'Embrasement du Corridor Pétrolier : la Guerre des Forteresses du Moyen-Orient' (an 2027, 71 ans d'effet)
+  → geopolitique_conflits : 85 → 73.0 (delta:-12.0)
+  → energie_ressources_critiques : 96.6 → 100 (delta:+14.0)
+  → gouvernance_institutions : 66.6 → 74.6 (delta:+8.0)
+  → demographie_mobilite_humaine : 82.2 → 93.2 (delta:+11.0)
+[snapshot] Événement custom 'Grève Générale des Corridors Eurasiens — Soulèvement des Oubliés du Lithium' (an 2039, 59 ans d'effet)
+  → systemes_productifs_travail : 81.2 → 61.2 (delta:-20.0)
+  → geopolitique_conflits : 38.2 → 53.2 (delta:+15.0)
+  → sante_biotechnologies : 65 → 75.0 (delta:+10.0)
+  → gouvernance_institutions : 63.8 → 51.8 (delta:-12.0)
+[snapshot] Événement custom 'L'Attentat des Neuf Nœuds — Prétexte à la Souveraineté Numérique' (an 2040, 58 ans d'effet)
+  → technologie_information : 64.9 → 44.900000000000006 (delta:-20.0)
+  → gouvernance_institutions : 37.4 → 27.4 (delta:-10.0)
+  → geopolitique_conflits : 56.7 → 71.7 (delta:+15.0)
+[snapshot] Événement custom 'Enchères de Nuna : la guerre des offres pour le sous-sol groenlandais' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 63.6 → 55.6 (delta:-8.0)
+  → geopolitique_conflits : 81.4 → 71.4 (delta:-10.0)
+  → gouvernance_institutions : 23.8 → 35.8 (delta:+12.0)
+  → organisation_territoires : 63.6 → 56.6 (delta:-7.0)
+[snapshot] Événement custom 'L'Exode des Plaines — Ruée vers les Lacs' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 67.4 → 55.400000000000006 (delta:-12.0)
+  → organisation_territoires : 50.7 → 64.7 (delta:+14.0)
+  → gouvernance_institutions : 35.8 → 45.8 (delta:+10.0)
+  → climat_environnement_global : 91.4 → 83.4 (delta:-8.0)
+[snapshot] Événement custom 'Belém : l'Amazonie bascule, les milices prennent le bassin' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 83.4 → 100 (delta:+18.0)
+  → geopolitique_conflits : 49.3 → 41.3 (delta:-8.0)
+  → gouvernance_institutions : 51.6 → 63.6 (delta:+12.0)
+  → organisation_territoires : 70.1 → 80.1 (delta:+10.0)
+[snapshot] Événement custom 'La Sécession des Grands Lacs — Rupture de Chicago-Lacustre' (an 2051, 47 ans d'effet)
+  → organisation_territoires : 80.1 → 68.1 (delta:-12.0)
+  → gouvernance_institutions : 63.6 → 77.6 (delta:+14.0)
+  → geopolitique_conflits : 13.2 → 3.1999999999999993 (delta:-10.0)
+  → energie_ressources_critiques : 89.7 → 81.7 (delta:-8.0)
+[snapshot] Événement custom 'Liquidation du Mouvement Commun Américain' (an 2052, 46 ans d'effet)
+  → gouvernance_institutions : 84.8 → 79.8 (delta:-5.0)
+  → valeurs_culture_tempo_sociale : 80 → 72.0 (delta:-8.0)
+  → geopolitique_conflits : 18.7 → 23.7 (delta:+5.0)
+[snapshot] Événement custom 'Incident du Passage du Nord-Ouest : la NAT saisit le convoi de l'APA' (an 2059, 39 ans d'effet)
+  → geopolitique_conflits : 23.7 → 15.7 (delta:-8.0)
+  → energie_ressources_critiques : 85.3 → 75.3 (delta:-10.0)
+  → frontieres_du_systeme : 34.6 → 22.6 (delta:-12.0)
+[snapshot] Événement custom 'La Révolte des Communes Libres du Rust Belt — Zones Hors-Algorithme' (an 2063, 35 ans d'effet)
+  → geopolitique_conflits : 40.2 → 32.2 (delta:-8.0)
+  → valeurs_culture_tempo_sociale : 72.0 → 84.0 (delta:+12.0)
+  → gouvernance_institutions : 87.8 → 94.8 (delta:+7.0)
+  → organisation_territoires : 82.3 → 72.3 (delta:-10.0)
+[snapshot] Événement custom 'Insurrection des Communes du Rust Belt — Zones Libres de l'Algorithme' (an 2063, 35 ans d'effet)
+  → geopolitique_conflits : 32.9 → 24.9 (delta:-8.0)
+  → valeurs_culture_tempo_sociale : 84.0 → 72.0 (delta:-12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → technologie_information : 68.0 → 62.0 (delta:-6.0)
+[snapshot] Événement custom 'Insurrection des Zones Déficitaires — São Paulo, la Cartographie Rebelle' (an 2073, 25 ans d'effet)
+  → gouvernance_institutions : 95.7 → 100 (delta:+12.0)
+  → technologie_information : 79.3 → 87.3 (delta:+8.0)
+  → organisation_territoires : 78.9 → 88.9 (delta:+10.0)
+[snapshot] Événement custom 'L'Affaire Van Derburgh — Archives Non Certifiées' (an 2078, 20 ans d'effet)
+  → valeurs_culture_tempo_sociale : 72.0 → 70.0 (delta:-2.0)
+  → gouvernance_institutions : 100 → 99.0 (delta:-1.0)
+[snapshot] Événements custom : 13 | 222 variables affectées
+[snapshot] Signal custom 'decodage_langage_animaux_ia' sur valeurs_culture_tempo_sociale (an 2038, 60 ans d'effet)
+  → valeurs_culture_tempo_sociale : 70.0 → 75.0 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur technologie_information (an 2036, 62 ans d'effet)
+  → technologie_information : 97.1 → 100 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur gouvernance_institutions (an 2038, 60 ans d'effet)
+  → gouvernance_institutions : 99.0 → 94.0 (delta:-5.0)
+[snapshot] Signaux custom chiffrés : 3 | 3 variables affectées
+
+[prompt] Assemblage du prompt...
+[WARN][journal] Pas d'édition locale pour zone 'tours_nexus7' / fortress_world / opposition → fallback réseau global
+[prompt] System prompt : 2838 caractères
+[prompt] User prompt   : 74609 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-large-latest, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 21852 | sortie : 2355
+[api] Article généré : 9123 caractères
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/fortress_world/20260821_095628_fortress_world_societe_article_2fevrier2098.md
+  ✓ Sauvegardé : 20260821_095628_fortress_world_societe_article_2fevrier2098.md
+
+[4/8] fortress_world × societe — 19 février 2098
+
+[snapshot] Construction du monde 2098 — scénario : fortress_world
+[snapshot] Variables pilotes : ['geopolitique_conflits', 'energie_ressources_critiques', 'gouvernance_institutions', 'organisation_territoires']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 16 | Cohérence : ATTENTION
+[snapshot] Jalons trajectoire : 154 (37 majeurs)
+[snapshot] Événements signal_to_state : 65 (14 majeurs)
+[snapshot] Tensions thématiques : 2
+[loader] Instance(s) custom garantie(s) dans filtered_instances : gelecek_meclisi_fortress_world
+[snapshot] Instances chargées : 130 | Filtrées : 6
+[snapshot] Injection custom 'gelecek_meclisi_fragmentaire' (an 2051, 47 ans d'effet)
+  → gouvernance_institutions : 50 → 58.0 (delta:+8.0)
+  → organisation_territoires : 80 → 86.0 (delta:+6.0)
+  → technologie_information : 85 → 90.0 (delta:+5.0)
+[snapshot] Modifications custom (entités) : 3 variables affectées
+[snapshot] Événement custom 'Embrasement du Corridor Pétrolier : la Guerre des Forteresses du Moyen-Orient' (an 2027, 71 ans d'effet)
+  → geopolitique_conflits : 85 → 73.0 (delta:-12.0)
+  → energie_ressources_critiques : 96.6 → 100 (delta:+14.0)
+  → gouvernance_institutions : 66.6 → 74.6 (delta:+8.0)
+  → demographie_mobilite_humaine : 82.2 → 93.2 (delta:+11.0)
+[snapshot] Événement custom 'Grève Générale des Corridors Eurasiens — Soulèvement des Oubliés du Lithium' (an 2039, 59 ans d'effet)
+  → systemes_productifs_travail : 81.2 → 61.2 (delta:-20.0)
+  → geopolitique_conflits : 38.2 → 53.2 (delta:+15.0)
+  → sante_biotechnologies : 65 → 75.0 (delta:+10.0)
+  → gouvernance_institutions : 63.8 → 51.8 (delta:-12.0)
+[snapshot] Événement custom 'L'Attentat des Neuf Nœuds — Prétexte à la Souveraineté Numérique' (an 2040, 58 ans d'effet)
+  → technologie_information : 64.9 → 44.900000000000006 (delta:-20.0)
+  → gouvernance_institutions : 37.4 → 27.4 (delta:-10.0)
+  → geopolitique_conflits : 56.7 → 71.7 (delta:+15.0)
+[snapshot] Événement custom 'Enchères de Nuna : la guerre des offres pour le sous-sol groenlandais' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 63.6 → 55.6 (delta:-8.0)
+  → geopolitique_conflits : 81.4 → 71.4 (delta:-10.0)
+  → gouvernance_institutions : 23.8 → 35.8 (delta:+12.0)
+  → organisation_territoires : 63.6 → 56.6 (delta:-7.0)
+[snapshot] Événement custom 'L'Exode des Plaines — Ruée vers les Lacs' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 67.4 → 55.400000000000006 (delta:-12.0)
+  → organisation_territoires : 50.7 → 64.7 (delta:+14.0)
+  → gouvernance_institutions : 35.8 → 45.8 (delta:+10.0)
+  → climat_environnement_global : 91.4 → 83.4 (delta:-8.0)
+[snapshot] Événement custom 'Belém : l'Amazonie bascule, les milices prennent le bassin' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 83.4 → 100 (delta:+18.0)
+  → geopolitique_conflits : 49.3 → 41.3 (delta:-8.0)
+  → gouvernance_institutions : 51.6 → 63.6 (delta:+12.0)
+  → organisation_territoires : 70.1 → 80.1 (delta:+10.0)
+[snapshot] Événement custom 'La Sécession des Grands Lacs — Rupture de Chicago-Lacustre' (an 2051, 47 ans d'effet)
+  → organisation_territoires : 80.1 → 68.1 (delta:-12.0)
+  → gouvernance_institutions : 63.6 → 77.6 (delta:+14.0)
+  → geopolitique_conflits : 13.2 → 3.1999999999999993 (delta:-10.0)
+  → energie_ressources_critiques : 89.7 → 81.7 (delta:-8.0)
+[snapshot] Événement custom 'Liquidation du Mouvement Commun Américain' (an 2052, 46 ans d'effet)
+  → gouvernance_institutions : 84.8 → 79.8 (delta:-5.0)
+  → valeurs_culture_tempo_sociale : 80 → 72.0 (delta:-8.0)
+  → geopolitique_conflits : 18.7 → 23.7 (delta:+5.0)
+[snapshot] Événement custom 'Incident du Passage du Nord-Ouest : la NAT saisit le convoi de l'APA' (an 2059, 39 ans d'effet)
+  → geopolitique_conflits : 23.7 → 15.7 (delta:-8.0)
+  → energie_ressources_critiques : 85.3 → 75.3 (delta:-10.0)
+  → frontieres_du_systeme : 34.6 → 22.6 (delta:-12.0)
+[snapshot] Événement custom 'La Révolte des Communes Libres du Rust Belt — Zones Hors-Algorithme' (an 2063, 35 ans d'effet)
+  → geopolitique_conflits : 40.2 → 32.2 (delta:-8.0)
+  → valeurs_culture_tempo_sociale : 72.0 → 84.0 (delta:+12.0)
+  → gouvernance_institutions : 87.8 → 94.8 (delta:+7.0)
+  → organisation_territoires : 82.3 → 72.3 (delta:-10.0)
+[snapshot] Événement custom 'Insurrection des Communes du Rust Belt — Zones Libres de l'Algorithme' (an 2063, 35 ans d'effet)
+  → geopolitique_conflits : 32.9 → 24.9 (delta:-8.0)
+  → valeurs_culture_tempo_sociale : 84.0 → 72.0 (delta:-12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → technologie_information : 68.0 → 62.0 (delta:-6.0)
+[snapshot] Événement custom 'Insurrection des Zones Déficitaires — São Paulo, la Cartographie Rebelle' (an 2073, 25 ans d'effet)
+  → gouvernance_institutions : 95.7 → 100 (delta:+12.0)
+  → technologie_information : 79.3 → 87.3 (delta:+8.0)
+  → organisation_territoires : 78.9 → 88.9 (delta:+10.0)
+[snapshot] Événement custom 'L'Affaire Van Derburgh — Archives Non Certifiées' (an 2078, 20 ans d'effet)
+  → valeurs_culture_tempo_sociale : 72.0 → 70.0 (delta:-2.0)
+  → gouvernance_institutions : 100 → 99.0 (delta:-1.0)
+[snapshot] Événements custom : 13 | 222 variables affectées
+[snapshot] Signal custom 'decodage_langage_animaux_ia' sur valeurs_culture_tempo_sociale (an 2038, 60 ans d'effet)
+  → valeurs_culture_tempo_sociale : 70.0 → 75.0 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur technologie_information (an 2036, 62 ans d'effet)
+  → technologie_information : 97.1 → 100 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur gouvernance_institutions (an 2038, 60 ans d'effet)
+  → gouvernance_institutions : 99.0 → 94.0 (delta:-5.0)
+[snapshot] Signaux custom chiffrés : 3 | 3 variables affectées
+
+[prompt] Assemblage du prompt...
+[WARN][journal] Pas d'édition locale pour zone 'tours_nexus7' / fortress_world / pro_pouvoir → fallback réseau global
+[prompt] System prompt : 2828 caractères
+[prompt] User prompt   : 72559 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-large-latest, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 21364 | sortie : 1898
+[api] Article généré : 7382 caractères
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/fortress_world/20260821_095732_fortress_world_societe_article_19fevrier2098.md
+  ✓ Sauvegardé : 20260821_095732_fortress_world_societe_article_19fevrier2098.md
+
+[5/8] fortress_world × sports — 8 mars 2098
+
+[snapshot] Construction du monde 2098 — scénario : fortress_world
+[snapshot] Variables pilotes : ['geopolitique_conflits', 'energie_ressources_critiques', 'gouvernance_institutions', 'organisation_territoires']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 16 | Cohérence : ATTENTION
+[snapshot] Jalons trajectoire : 154 (37 majeurs)
+[snapshot] Événements signal_to_state : 65 (14 majeurs)
+[snapshot] Tensions thématiques : 6
+[loader] Instance(s) custom garantie(s) dans filtered_instances : gelecek_meclisi_fortress_world
+[snapshot] Instances chargées : 130 | Filtrées : 6
+[snapshot] Injection custom 'gelecek_meclisi_fragmentaire' (an 2051, 47 ans d'effet)
+  → gouvernance_institutions : 50 → 58.0 (delta:+8.0)
+  → organisation_territoires : 80 → 86.0 (delta:+6.0)
+  → technologie_information : 85 → 90.0 (delta:+5.0)
+[snapshot] Modifications custom (entités) : 3 variables affectées
+[snapshot] Événement custom 'Embrasement du Corridor Pétrolier : la Guerre des Forteresses du Moyen-Orient' (an 2027, 71 ans d'effet)
+  → geopolitique_conflits : 85 → 73.0 (delta:-12.0)
+  → energie_ressources_critiques : 96.6 → 100 (delta:+14.0)
+  → gouvernance_institutions : 66.6 → 74.6 (delta:+8.0)
+  → demographie_mobilite_humaine : 82.2 → 93.2 (delta:+11.0)
+[snapshot] Événement custom 'Grève Générale des Corridors Eurasiens — Soulèvement des Oubliés du Lithium' (an 2039, 59 ans d'effet)
+  → systemes_productifs_travail : 81.2 → 61.2 (delta:-20.0)
+  → geopolitique_conflits : 38.2 → 53.2 (delta:+15.0)
+  → sante_biotechnologies : 65 → 75.0 (delta:+10.0)
+  → gouvernance_institutions : 63.8 → 51.8 (delta:-12.0)
+[snapshot] Événement custom 'L'Attentat des Neuf Nœuds — Prétexte à la Souveraineté Numérique' (an 2040, 58 ans d'effet)
+  → technologie_information : 64.9 → 44.900000000000006 (delta:-20.0)
+  → gouvernance_institutions : 37.4 → 27.4 (delta:-10.0)
+  → geopolitique_conflits : 56.7 → 71.7 (delta:+15.0)
+[snapshot] Événement custom 'Enchères de Nuna : la guerre des offres pour le sous-sol groenlandais' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 63.6 → 55.6 (delta:-8.0)
+  → geopolitique_conflits : 81.4 → 71.4 (delta:-10.0)
+  → gouvernance_institutions : 23.8 → 35.8 (delta:+12.0)
+  → organisation_territoires : 63.6 → 56.6 (delta:-7.0)
+[snapshot] Événement custom 'L'Exode des Plaines — Ruée vers les Lacs' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 67.4 → 55.400000000000006 (delta:-12.0)
+  → organisation_territoires : 50.7 → 64.7 (delta:+14.0)
+  → gouvernance_institutions : 35.8 → 45.8 (delta:+10.0)
+  → climat_environnement_global : 91.4 → 83.4 (delta:-8.0)
+[snapshot] Événement custom 'Belém : l'Amazonie bascule, les milices prennent le bassin' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 83.4 → 100 (delta:+18.0)
+  → geopolitique_conflits : 49.3 → 41.3 (delta:-8.0)
+  → gouvernance_institutions : 51.6 → 63.6 (delta:+12.0)
+  → organisation_territoires : 70.1 → 80.1 (delta:+10.0)
+[snapshot] Événement custom 'La Sécession des Grands Lacs — Rupture de Chicago-Lacustre' (an 2051, 47 ans d'effet)
+  → organisation_territoires : 80.1 → 68.1 (delta:-12.0)
+  → gouvernance_institutions : 63.6 → 77.6 (delta:+14.0)
+  → geopolitique_conflits : 13.2 → 3.1999999999999993 (delta:-10.0)
+  → energie_ressources_critiques : 89.7 → 81.7 (delta:-8.0)
+[snapshot] Événement custom 'Liquidation du Mouvement Commun Américain' (an 2052, 46 ans d'effet)
+  → gouvernance_institutions : 84.8 → 79.8 (delta:-5.0)
+  → valeurs_culture_tempo_sociale : 80 → 72.0 (delta:-8.0)
+  → geopolitique_conflits : 18.7 → 23.7 (delta:+5.0)
+[snapshot] Événement custom 'Incident du Passage du Nord-Ouest : la NAT saisit le convoi de l'APA' (an 2059, 39 ans d'effet)
+  → geopolitique_conflits : 23.7 → 15.7 (delta:-8.0)
+  → energie_ressources_critiques : 85.3 → 75.3 (delta:-10.0)
+  → frontieres_du_systeme : 34.6 → 22.6 (delta:-12.0)
+[snapshot] Événement custom 'La Révolte des Communes Libres du Rust Belt — Zones Hors-Algorithme' (an 2063, 35 ans d'effet)
+  → geopolitique_conflits : 40.2 → 32.2 (delta:-8.0)
+  → valeurs_culture_tempo_sociale : 72.0 → 84.0 (delta:+12.0)
+  → gouvernance_institutions : 87.8 → 94.8 (delta:+7.0)
+  → organisation_territoires : 82.3 → 72.3 (delta:-10.0)
+[snapshot] Événement custom 'Insurrection des Communes du Rust Belt — Zones Libres de l'Algorithme' (an 2063, 35 ans d'effet)
+  → geopolitique_conflits : 32.9 → 24.9 (delta:-8.0)
+  → valeurs_culture_tempo_sociale : 84.0 → 72.0 (delta:-12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → technologie_information : 68.0 → 62.0 (delta:-6.0)
+[snapshot] Événement custom 'Insurrection des Zones Déficitaires — São Paulo, la Cartographie Rebelle' (an 2073, 25 ans d'effet)
+  → gouvernance_institutions : 95.7 → 100 (delta:+12.0)
+  → technologie_information : 79.3 → 87.3 (delta:+8.0)
+  → organisation_territoires : 78.9 → 88.9 (delta:+10.0)
+[snapshot] Événement custom 'L'Affaire Van Derburgh — Archives Non Certifiées' (an 2078, 20 ans d'effet)
+  → valeurs_culture_tempo_sociale : 72.0 → 70.0 (delta:-2.0)
+  → gouvernance_institutions : 100 → 99.0 (delta:-1.0)
+[snapshot] Événements custom : 13 | 222 variables affectées
+[snapshot] Signal custom 'decodage_langage_animaux_ia' sur valeurs_culture_tempo_sociale (an 2038, 60 ans d'effet)
+  → valeurs_culture_tempo_sociale : 70.0 → 75.0 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur technologie_information (an 2036, 62 ans d'effet)
+  → technologie_information : 97.1 → 100 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur gouvernance_institutions (an 2038, 60 ans d'effet)
+  → gouvernance_institutions : 99.0 → 94.0 (delta:-5.0)
+[snapshot] Signaux custom chiffrés : 3 | 3 variables affectées
+
+[prompt] Assemblage du prompt...
+[prompt] System prompt : 2994 caractères
+[prompt] User prompt   : 66735 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-large-latest, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 20005 | sortie : 2515
+[api] Article généré : 10178 caractères
+[api] Longueur hors plage (1464 mots, attendu 700-1000, écart 46%) — retry unique avec rappel explicite...
+[llm] Mistral (mistral-large-latest) — entrée : 20119 | sortie : 1960
+[api] Retry terminé : 1114 mots (attendu 700-1000).
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/fortress_world/20260821_100000_fortress_world_sports_article_8mars2098.md
+  ✓ Sauvegardé : 20260821_100000_fortress_world_sports_article_8mars2098.md
+
+[6/8] fortress_world × sports — 24 mars 2098
+
+[snapshot] Construction du monde 2098 — scénario : fortress_world
+[snapshot] Variables pilotes : ['geopolitique_conflits', 'energie_ressources_critiques', 'gouvernance_institutions', 'organisation_territoires']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 16 | Cohérence : ATTENTION
+[snapshot] Jalons trajectoire : 154 (37 majeurs)
+[snapshot] Événements signal_to_state : 65 (14 majeurs)
+[snapshot] Tensions thématiques : 6
+[loader] Instance(s) custom garantie(s) dans filtered_instances : gelecek_meclisi_fortress_world
+[snapshot] Instances chargées : 130 | Filtrées : 6
+[snapshot] Injection custom 'gelecek_meclisi_fragmentaire' (an 2051, 47 ans d'effet)
+  → gouvernance_institutions : 50 → 58.0 (delta:+8.0)
+  → organisation_territoires : 80 → 86.0 (delta:+6.0)
+  → technologie_information : 85 → 90.0 (delta:+5.0)
+[snapshot] Modifications custom (entités) : 3 variables affectées
+[snapshot] Événement custom 'Embrasement du Corridor Pétrolier : la Guerre des Forteresses du Moyen-Orient' (an 2027, 71 ans d'effet)
+  → geopolitique_conflits : 85 → 73.0 (delta:-12.0)
+  → energie_ressources_critiques : 96.6 → 100 (delta:+14.0)
+  → gouvernance_institutions : 66.6 → 74.6 (delta:+8.0)
+  → demographie_mobilite_humaine : 82.2 → 93.2 (delta:+11.0)
+[snapshot] Événement custom 'Grève Générale des Corridors Eurasiens — Soulèvement des Oubliés du Lithium' (an 2039, 59 ans d'effet)
+  → systemes_productifs_travail : 81.2 → 61.2 (delta:-20.0)
+  → geopolitique_conflits : 38.2 → 53.2 (delta:+15.0)
+  → sante_biotechnologies : 65 → 75.0 (delta:+10.0)
+  → gouvernance_institutions : 63.8 → 51.8 (delta:-12.0)
+[snapshot] Événement custom 'L'Attentat des Neuf Nœuds — Prétexte à la Souveraineté Numérique' (an 2040, 58 ans d'effet)
+  → technologie_information : 64.9 → 44.900000000000006 (delta:-20.0)
+  → gouvernance_institutions : 37.4 → 27.4 (delta:-10.0)
+  → geopolitique_conflits : 56.7 → 71.7 (delta:+15.0)
+[snapshot] Événement custom 'Enchères de Nuna : la guerre des offres pour le sous-sol groenlandais' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 63.6 → 55.6 (delta:-8.0)
+  → geopolitique_conflits : 81.4 → 71.4 (delta:-10.0)
+  → gouvernance_institutions : 23.8 → 35.8 (delta:+12.0)
+  → organisation_territoires : 63.6 → 56.6 (delta:-7.0)
+[snapshot] Événement custom 'L'Exode des Plaines — Ruée vers les Lacs' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 67.4 → 55.400000000000006 (delta:-12.0)
+  → organisation_territoires : 50.7 → 64.7 (delta:+14.0)
+  → gouvernance_institutions : 35.8 → 45.8 (delta:+10.0)
+  → climat_environnement_global : 91.4 → 83.4 (delta:-8.0)
+[snapshot] Événement custom 'Belém : l'Amazonie bascule, les milices prennent le bassin' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 83.4 → 100 (delta:+18.0)
+  → geopolitique_conflits : 49.3 → 41.3 (delta:-8.0)
+  → gouvernance_institutions : 51.6 → 63.6 (delta:+12.0)
+  → organisation_territoires : 70.1 → 80.1 (delta:+10.0)
+[snapshot] Événement custom 'La Sécession des Grands Lacs — Rupture de Chicago-Lacustre' (an 2051, 47 ans d'effet)
+  → organisation_territoires : 80.1 → 68.1 (delta:-12.0)
+  → gouvernance_institutions : 63.6 → 77.6 (delta:+14.0)
+  → geopolitique_conflits : 13.2 → 3.1999999999999993 (delta:-10.0)
+  → energie_ressources_critiques : 89.7 → 81.7 (delta:-8.0)
+[snapshot] Événement custom 'Liquidation du Mouvement Commun Américain' (an 2052, 46 ans d'effet)
+  → gouvernance_institutions : 84.8 → 79.8 (delta:-5.0)
+  → valeurs_culture_tempo_sociale : 80 → 72.0 (delta:-8.0)
+  → geopolitique_conflits : 18.7 → 23.7 (delta:+5.0)
+[snapshot] Événement custom 'Incident du Passage du Nord-Ouest : la NAT saisit le convoi de l'APA' (an 2059, 39 ans d'effet)
+  → geopolitique_conflits : 23.7 → 15.7 (delta:-8.0)
+  → energie_ressources_critiques : 85.3 → 75.3 (delta:-10.0)
+  → frontieres_du_systeme : 34.6 → 22.6 (delta:-12.0)
+[snapshot] Événement custom 'La Révolte des Communes Libres du Rust Belt — Zones Hors-Algorithme' (an 2063, 35 ans d'effet)
+  → geopolitique_conflits : 40.2 → 32.2 (delta:-8.0)
+  → valeurs_culture_tempo_sociale : 72.0 → 84.0 (delta:+12.0)
+  → gouvernance_institutions : 87.8 → 94.8 (delta:+7.0)
+  → organisation_territoires : 82.3 → 72.3 (delta:-10.0)
+[snapshot] Événement custom 'Insurrection des Communes du Rust Belt — Zones Libres de l'Algorithme' (an 2063, 35 ans d'effet)
+  → geopolitique_conflits : 32.9 → 24.9 (delta:-8.0)
+  → valeurs_culture_tempo_sociale : 84.0 → 72.0 (delta:-12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → technologie_information : 68.0 → 62.0 (delta:-6.0)
+[snapshot] Événement custom 'Insurrection des Zones Déficitaires — São Paulo, la Cartographie Rebelle' (an 2073, 25 ans d'effet)
+  → gouvernance_institutions : 95.7 → 100 (delta:+12.0)
+  → technologie_information : 79.3 → 87.3 (delta:+8.0)
+  → organisation_territoires : 78.9 → 88.9 (delta:+10.0)
+[snapshot] Événement custom 'L'Affaire Van Derburgh — Archives Non Certifiées' (an 2078, 20 ans d'effet)
+  → valeurs_culture_tempo_sociale : 72.0 → 70.0 (delta:-2.0)
+  → gouvernance_institutions : 100 → 99.0 (delta:-1.0)
+[snapshot] Événements custom : 13 | 222 variables affectées
+[snapshot] Signal custom 'decodage_langage_animaux_ia' sur valeurs_culture_tempo_sociale (an 2038, 60 ans d'effet)
+  → valeurs_culture_tempo_sociale : 70.0 → 75.0 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur technologie_information (an 2036, 62 ans d'effet)
+  → technologie_information : 97.1 → 100 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur gouvernance_institutions (an 2038, 60 ans d'effet)
+  → gouvernance_institutions : 99.0 → 94.0 (delta:-5.0)
+[snapshot] Signaux custom chiffrés : 3 | 3 variables affectées
+
+[prompt] Assemblage du prompt...
+[prompt] System prompt : 3067 caractères
+[prompt] User prompt   : 64866 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-large-latest, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 19553 | sortie : 1811
+[api] Article généré : 7082 caractères
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/fortress_world/20260821_100111_fortress_world_sports_article_24mars2098.md
+  ✓ Sauvegardé : 20260821_100111_fortress_world_sports_article_24mars2098.md
+
+[7/8] fortress_world × petites_annonces_services — 5 avril 2098
+
+[snapshot] Construction du monde 2098 — scénario : fortress_world
+[snapshot] Variables pilotes : ['geopolitique_conflits', 'energie_ressources_critiques', 'gouvernance_institutions', 'organisation_territoires']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 16 | Cohérence : ATTENTION
+[snapshot] Jalons trajectoire : 154 (37 majeurs)
+[snapshot] Événements signal_to_state : 65 (14 majeurs)
+[snapshot] Tensions thématiques : 6
+[loader] Instance(s) custom garantie(s) dans filtered_instances : gelecek_meclisi_fortress_world
+[snapshot] Instances chargées : 130 | Filtrées : 6
+[snapshot] Injection custom 'gelecek_meclisi_fragmentaire' (an 2051, 47 ans d'effet)
+  → gouvernance_institutions : 50 → 58.0 (delta:+8.0)
+  → organisation_territoires : 80 → 86.0 (delta:+6.0)
+  → technologie_information : 85 → 90.0 (delta:+5.0)
+[snapshot] Modifications custom (entités) : 3 variables affectées
+[snapshot] Événement custom 'Embrasement du Corridor Pétrolier : la Guerre des Forteresses du Moyen-Orient' (an 2027, 71 ans d'effet)
+  → geopolitique_conflits : 85 → 73.0 (delta:-12.0)
+  → energie_ressources_critiques : 96.6 → 100 (delta:+14.0)
+  → gouvernance_institutions : 66.6 → 74.6 (delta:+8.0)
+  → demographie_mobilite_humaine : 82.2 → 93.2 (delta:+11.0)
+[snapshot] Événement custom 'Grève Générale des Corridors Eurasiens — Soulèvement des Oubliés du Lithium' (an 2039, 59 ans d'effet)
+  → systemes_productifs_travail : 81.2 → 61.2 (delta:-20.0)
+  → geopolitique_conflits : 38.2 → 53.2 (delta:+15.0)
+  → sante_biotechnologies : 65 → 75.0 (delta:+10.0)
+  → gouvernance_institutions : 63.8 → 51.8 (delta:-12.0)
+[snapshot] Événement custom 'L'Attentat des Neuf Nœuds — Prétexte à la Souveraineté Numérique' (an 2040, 58 ans d'effet)
+  → technologie_information : 64.9 → 44.900000000000006 (delta:-20.0)
+  → gouvernance_institutions : 37.4 → 27.4 (delta:-10.0)
+  → geopolitique_conflits : 56.7 → 71.7 (delta:+15.0)
+[snapshot] Événement custom 'Enchères de Nuna : la guerre des offres pour le sous-sol groenlandais' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 63.6 → 55.6 (delta:-8.0)
+  → geopolitique_conflits : 81.4 → 71.4 (delta:-10.0)
+  → gouvernance_institutions : 23.8 → 35.8 (delta:+12.0)
+  → organisation_territoires : 63.6 → 56.6 (delta:-7.0)
+[snapshot] Événement custom 'L'Exode des Plaines — Ruée vers les Lacs' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 67.4 → 55.400000000000006 (delta:-12.0)
+  → organisation_territoires : 50.7 → 64.7 (delta:+14.0)
+  → gouvernance_institutions : 35.8 → 45.8 (delta:+10.0)
+  → climat_environnement_global : 91.4 → 83.4 (delta:-8.0)
+[snapshot] Événement custom 'Belém : l'Amazonie bascule, les milices prennent le bassin' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 83.4 → 100 (delta:+18.0)
+  → geopolitique_conflits : 49.3 → 41.3 (delta:-8.0)
+  → gouvernance_institutions : 51.6 → 63.6 (delta:+12.0)
+  → organisation_territoires : 70.1 → 80.1 (delta:+10.0)
+[snapshot] Événement custom 'La Sécession des Grands Lacs — Rupture de Chicago-Lacustre' (an 2051, 47 ans d'effet)
+  → organisation_territoires : 80.1 → 68.1 (delta:-12.0)
+  → gouvernance_institutions : 63.6 → 77.6 (delta:+14.0)
+  → geopolitique_conflits : 13.2 → 3.1999999999999993 (delta:-10.0)
+  → energie_ressources_critiques : 89.7 → 81.7 (delta:-8.0)
+[snapshot] Événement custom 'Liquidation du Mouvement Commun Américain' (an 2052, 46 ans d'effet)
+  → gouvernance_institutions : 84.8 → 79.8 (delta:-5.0)
+  → valeurs_culture_tempo_sociale : 80 → 72.0 (delta:-8.0)
+  → geopolitique_conflits : 18.7 → 23.7 (delta:+5.0)
+[snapshot] Événement custom 'Incident du Passage du Nord-Ouest : la NAT saisit le convoi de l'APA' (an 2059, 39 ans d'effet)
+  → geopolitique_conflits : 23.7 → 15.7 (delta:-8.0)
+  → energie_ressources_critiques : 85.3 → 75.3 (delta:-10.0)
+  → frontieres_du_systeme : 34.6 → 22.6 (delta:-12.0)
+[snapshot] Événement custom 'La Révolte des Communes Libres du Rust Belt — Zones Hors-Algorithme' (an 2063, 35 ans d'effet)
+  → geopolitique_conflits : 40.2 → 32.2 (delta:-8.0)
+  → valeurs_culture_tempo_sociale : 72.0 → 84.0 (delta:+12.0)
+  → gouvernance_institutions : 87.8 → 94.8 (delta:+7.0)
+  → organisation_territoires : 82.3 → 72.3 (delta:-10.0)
+[snapshot] Événement custom 'Insurrection des Communes du Rust Belt — Zones Libres de l'Algorithme' (an 2063, 35 ans d'effet)
+  → geopolitique_conflits : 32.9 → 24.9 (delta:-8.0)
+  → valeurs_culture_tempo_sociale : 84.0 → 72.0 (delta:-12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → technologie_information : 68.0 → 62.0 (delta:-6.0)
+[snapshot] Événement custom 'Insurrection des Zones Déficitaires — São Paulo, la Cartographie Rebelle' (an 2073, 25 ans d'effet)
+  → gouvernance_institutions : 95.7 → 100 (delta:+12.0)
+  → technologie_information : 79.3 → 87.3 (delta:+8.0)
+  → organisation_territoires : 78.9 → 88.9 (delta:+10.0)
+[snapshot] Événement custom 'L'Affaire Van Derburgh — Archives Non Certifiées' (an 2078, 20 ans d'effet)
+  → valeurs_culture_tempo_sociale : 72.0 → 70.0 (delta:-2.0)
+  → gouvernance_institutions : 100 → 99.0 (delta:-1.0)
+[snapshot] Événements custom : 13 | 222 variables affectées
+[snapshot] Signal custom 'decodage_langage_animaux_ia' sur valeurs_culture_tempo_sociale (an 2038, 60 ans d'effet)
+  → valeurs_culture_tempo_sociale : 70.0 → 75.0 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur technologie_information (an 2036, 62 ans d'effet)
+  → technologie_information : 97.1 → 100 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur gouvernance_institutions (an 2038, 60 ans d'effet)
+  → gouvernance_institutions : 99.0 → 94.0 (delta:-5.0)
+[snapshot] Signaux custom chiffrés : 3 | 3 variables affectées
+
+[prompt] Assemblage du prompt...
+[WARN][journal] Pas d'édition locale pour zone 'nexcore_atlantique_infrastructure' / fortress_world / opposition → fallback réseau global
+[prompt] System prompt : 2838 caractères
+[prompt] User prompt   : 76268 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-large-latest, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 22291 | sortie : 1002
+[api] Article généré : 3797 caractères
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/fortress_world/20260821_100154_fortress_world_petites_annonces_services_article_5avril2098.md
+  ✓ Sauvegardé : 20260821_100154_fortress_world_petites_annonces_services_article_5avril2098.md
+
+[8/8] fortress_world × petites_annonces_services — 21 avril 2098
+
+[snapshot] Construction du monde 2098 — scénario : fortress_world
+[snapshot] Variables pilotes : ['geopolitique_conflits', 'energie_ressources_critiques', 'gouvernance_institutions', 'organisation_territoires']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 16 | Cohérence : ATTENTION
+[snapshot] Jalons trajectoire : 154 (37 majeurs)
+[snapshot] Événements signal_to_state : 65 (14 majeurs)
+[snapshot] Tensions thématiques : 6
+[loader] Instance(s) custom garantie(s) dans filtered_instances : gelecek_meclisi_fortress_world
+[snapshot] Instances chargées : 130 | Filtrées : 6
+[snapshot] Injection custom 'gelecek_meclisi_fragmentaire' (an 2051, 47 ans d'effet)
+  → gouvernance_institutions : 50 → 58.0 (delta:+8.0)
+  → organisation_territoires : 80 → 86.0 (delta:+6.0)
+  → technologie_information : 85 → 90.0 (delta:+5.0)
+[snapshot] Modifications custom (entités) : 3 variables affectées
+[snapshot] Événement custom 'Embrasement du Corridor Pétrolier : la Guerre des Forteresses du Moyen-Orient' (an 2027, 71 ans d'effet)
+  → geopolitique_conflits : 85 → 73.0 (delta:-12.0)
+  → energie_ressources_critiques : 96.6 → 100 (delta:+14.0)
+  → gouvernance_institutions : 66.6 → 74.6 (delta:+8.0)
+  → demographie_mobilite_humaine : 82.2 → 93.2 (delta:+11.0)
+[snapshot] Événement custom 'Grève Générale des Corridors Eurasiens — Soulèvement des Oubliés du Lithium' (an 2039, 59 ans d'effet)
+  → systemes_productifs_travail : 81.2 → 61.2 (delta:-20.0)
+  → geopolitique_conflits : 38.2 → 53.2 (delta:+15.0)
+  → sante_biotechnologies : 65 → 75.0 (delta:+10.0)
+  → gouvernance_institutions : 63.8 → 51.8 (delta:-12.0)
+[snapshot] Événement custom 'L'Attentat des Neuf Nœuds — Prétexte à la Souveraineté Numérique' (an 2040, 58 ans d'effet)
+  → technologie_information : 64.9 → 44.900000000000006 (delta:-20.0)
+  → gouvernance_institutions : 37.4 → 27.4 (delta:-10.0)
+  → geopolitique_conflits : 56.7 → 71.7 (delta:+15.0)
+[snapshot] Événement custom 'Enchères de Nuna : la guerre des offres pour le sous-sol groenlandais' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 63.6 → 55.6 (delta:-8.0)
+  → geopolitique_conflits : 81.4 → 71.4 (delta:-10.0)
+  → gouvernance_institutions : 23.8 → 35.8 (delta:+12.0)
+  → organisation_territoires : 63.6 → 56.6 (delta:-7.0)
+[snapshot] Événement custom 'L'Exode des Plaines — Ruée vers les Lacs' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 67.4 → 55.400000000000006 (delta:-12.0)
+  → organisation_territoires : 50.7 → 64.7 (delta:+14.0)
+  → gouvernance_institutions : 35.8 → 45.8 (delta:+10.0)
+  → climat_environnement_global : 91.4 → 83.4 (delta:-8.0)
+[snapshot] Événement custom 'Belém : l'Amazonie bascule, les milices prennent le bassin' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 83.4 → 100 (delta:+18.0)
+  → geopolitique_conflits : 49.3 → 41.3 (delta:-8.0)
+  → gouvernance_institutions : 51.6 → 63.6 (delta:+12.0)
+  → organisation_territoires : 70.1 → 80.1 (delta:+10.0)
+[snapshot] Événement custom 'La Sécession des Grands Lacs — Rupture de Chicago-Lacustre' (an 2051, 47 ans d'effet)
+  → organisation_territoires : 80.1 → 68.1 (delta:-12.0)
+  → gouvernance_institutions : 63.6 → 77.6 (delta:+14.0)
+  → geopolitique_conflits : 13.2 → 3.1999999999999993 (delta:-10.0)
+  → energie_ressources_critiques : 89.7 → 81.7 (delta:-8.0)
+[snapshot] Événement custom 'Liquidation du Mouvement Commun Américain' (an 2052, 46 ans d'effet)
+  → gouvernance_institutions : 84.8 → 79.8 (delta:-5.0)
+  → valeurs_culture_tempo_sociale : 80 → 72.0 (delta:-8.0)
+  → geopolitique_conflits : 18.7 → 23.7 (delta:+5.0)
+[snapshot] Événement custom 'Incident du Passage du Nord-Ouest : la NAT saisit le convoi de l'APA' (an 2059, 39 ans d'effet)
+  → geopolitique_conflits : 23.7 → 15.7 (delta:-8.0)
+  → energie_ressources_critiques : 85.3 → 75.3 (delta:-10.0)
+  → frontieres_du_systeme : 34.6 → 22.6 (delta:-12.0)
+[snapshot] Événement custom 'La Révolte des Communes Libres du Rust Belt — Zones Hors-Algorithme' (an 2063, 35 ans d'effet)
+  → geopolitique_conflits : 40.2 → 32.2 (delta:-8.0)
+  → valeurs_culture_tempo_sociale : 72.0 → 84.0 (delta:+12.0)
+  → gouvernance_institutions : 87.8 → 94.8 (delta:+7.0)
+  → organisation_territoires : 82.3 → 72.3 (delta:-10.0)
+[snapshot] Événement custom 'Insurrection des Communes du Rust Belt — Zones Libres de l'Algorithme' (an 2063, 35 ans d'effet)
+  → geopolitique_conflits : 32.9 → 24.9 (delta:-8.0)
+  → valeurs_culture_tempo_sociale : 84.0 → 72.0 (delta:-12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → technologie_information : 68.0 → 62.0 (delta:-6.0)
+[snapshot] Événement custom 'Insurrection des Zones Déficitaires — São Paulo, la Cartographie Rebelle' (an 2073, 25 ans d'effet)
+  → gouvernance_institutions : 95.7 → 100 (delta:+12.0)
+  → technologie_information : 79.3 → 87.3 (delta:+8.0)
+  → organisation_territoires : 78.9 → 88.9 (delta:+10.0)
+[snapshot] Événement custom 'L'Affaire Van Derburgh — Archives Non Certifiées' (an 2078, 20 ans d'effet)
+  → valeurs_culture_tempo_sociale : 72.0 → 70.0 (delta:-2.0)
+  → gouvernance_institutions : 100 → 99.0 (delta:-1.0)
+[snapshot] Événements custom : 13 | 222 variables affectées
+[snapshot] Signal custom 'decodage_langage_animaux_ia' sur valeurs_culture_tempo_sociale (an 2038, 60 ans d'effet)
+  → valeurs_culture_tempo_sociale : 70.0 → 75.0 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur technologie_information (an 2036, 62 ans d'effet)
+  → technologie_information : 97.1 → 100 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur gouvernance_institutions (an 2038, 60 ans d'effet)
+  → gouvernance_institutions : 99.0 → 94.0 (delta:-5.0)
+[snapshot] Signaux custom chiffrés : 3 | 3 variables affectées
+
+[prompt] Assemblage du prompt...
+[WARN][journal] Pas d'édition locale pour zone 'nexcore_atlantique_infrastructure' / fortress_world / opposition → fallback réseau global
+[prompt] System prompt : 2838 caractères
+[prompt] User prompt   : 75539 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-large-latest, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 22050 | sortie : 925
+[api] Article généré : 3631 caractères
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/fortress_world/20260821_100236_fortress_world_petites_annonces_services_article_21avril2098.md
+  ✓ Sauvegardé : 20260821_100236_fortress_world_petites_annonces_services_article_21avril2098.md
+
+[series] Index généré : _index.md
+
+============================================================
+SÉRIE GÉNÉRÉE
+  ✓ 8 articles | ✗ 0 erreurs
+  📁 /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/fortress_world
+============================================================

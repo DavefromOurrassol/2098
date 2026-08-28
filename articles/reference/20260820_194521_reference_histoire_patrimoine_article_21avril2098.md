@@ -17,6 +17,31 @@ variables_pilotes:
   - technologie_information
   - systeme_economique_redistribution
   - gouvernance_institutions
+slug: mnemos_la_memoire_qui_resiste_aux_algorithmes
+chapo: "En 2098, le Nœud Mnemos de Tbilissi préserve des archives \"non alignées\" face à l’hégémonie des systèmes centralisés, résistant à l’effacement algorithmique de l’histoire. Une lutte mondiale pour garder vivantes les mémoires marginalisées."
+tags:
+  - archives décentralisées
+  - résistance numérique
+  - mémoire historique
+  - algorithmes de contrôle
+  - géopolitique des données
+image_prompt: "Lena Kvaratskhelia, technicienne et gardienne du Nœud Mnemos, nettoie un vieux serveur dans les sous-sols poussiéreux de l’ancien institut de linguistique soviétique à Tbilissi, entourée d’étagères de disques durs rouillés et de registres papier."
+a_une_photo: false
+image_credit: ""
+journaliste_slug: theo_vartanian
+date_evenement: 21 avril 2098
+zone_principale: sao_paulo_spaar
+date_publication: 21 avril 2098
+entites_citees:
+  - confederation_des_megapoles_autonomes_reference
+  - gouvernements_a_regime_de_productivite_mandatee_reference
+  - rede_paulista_de_distribuicao_algoritmica_reference
+  - reseau_mnemos_reference
+articles_lies:
+  - les_memoires_oubliees_de_tbilissi_quand_l_histoire_resiste_aux_algorithmes
+  - tbilissi_capitale_des_memoires_oubliees_quand_l_archive_defie_la_geopolitique
+  - tbilissi_laboratoire_invisible_de_la_guerre_des_algorithmes
+
 ---
 **« Mnemos : la mémoire qui résiste aux algorithmes »**
 
@@ -37,3 +62,6 @@ Pourtant, le modèle du Nœud est fragile. Ses serveurs vieillissent, ses financ
 Reste à savoir combien de temps cette mémoire résistera à l’oubli algorithmique.
 
 **Théo Vartanian — Réseau Le Dessous des Cartes**
+
+---
+**Voir aussi** : [[confederation_des_megapoles_autonomes_reference]] · [[gouvernements_a_regime_de_productivite_mandatee_reference]] · [[rede_paulista_de_distribuicao_algoritmica_reference]] · [[reseau_mnemos_reference]] · [[les_memoires_oubliees_de_tbilissi_quand_l_histoire_resiste_aux_algorithmes]] · [[tbilissi_capitale_des_memoires_oubliees_quand_l_archive_defie_la_geopolitique]] · [[tbilissi_laboratoire_invisible_de_la_guerre_des_algorithmes]]

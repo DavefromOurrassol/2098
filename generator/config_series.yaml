@@ -7,7 +7,7 @@
 # Un seul scénario par série
 # Valeurs : fortress_world | new_sustainability | breakdown
 #           eco_communalism | policy_reform | reference
-scenario: policy_reform
+scenario: fortress_world
 
 # ── Ligne éditoriale ──
 # Détermine le journal et sa posture éditoriale pour toute la série.
@@ -22,13 +22,13 @@ ligne_editoriale:
 # Liste des rubriques pour cette série.
 # Chaque thématique génère articles_par_thematique articles.
 thematiques:
-  - culture
-  - lifestyle_art_de_vivre
+  - actualites_a_la_une
+  - economie_finance
   - histoire_patrimoine
-  - medias_communication
+  - petites_annonces_services
 # ── Nombre d'articles par thématique ──
 # 1 = un article par thématique (recommandé pour commencer)
-articles_par_thematique: 3
+articles_par_thematique: 2
 
 # ── Longueur des articles ──
 # breve | analyse | reportage | chronique | editorial

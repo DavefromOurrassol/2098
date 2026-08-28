@@ -130,14 +130,209 @@ def _retry_with_length_feedback(prompt_data, wc_precedent, bornes):
         temperature=TEMPERATURE,
         task_tier=TASK_TIER,
     )
+    # P20 (21 août 2026) : le retry réutilise prompt_data["user_prompt"]
+    # en entier (voir retry_user_prompt ci-dessus), qui contient déjà la
+    # consigne du bloc métadonnées -- extraction nécessaire ici aussi,
+    # AVANT le comptage de mots, sinon le bloc fausserait wc_retry.
+    # type_diffusion (P21, 25 août 2026) lu depuis prompt_data["metadata"]
+    # -- déjà présent dans ce dict, pas de paramètre supplémentaire à
+    # faire remonter jusqu'ici.
+    type_diffusion = prompt_data.get("metadata", {}).get("type_diffusion", "ecrit")
+    article_retry, meta_retry = _extract_publication_metadata(article_retry, type_diffusion)
     wc_retry = _count_words(article_retry)
     print("[api] Retry terminé : {} mots (attendu {}-{}).".format(wc_retry, lo, hi))
-    return article_retry, wc_retry
+    return article_retry, wc_retry, meta_retry
 
 
 # ─────────────────────────────────────────
 # APPEL API
 # ─────────────────────────────────────────
+
+# ─────────────────────────────────────────
+# P20 (21 août 2026) — MÉTADONNÉES DE PUBLICATION
+# ─────────────────────────────────────────
+# Phase A du scoping du 12 juillet 2026 (backlog point 7) : enrichir le
+# frontmatter des articles pour anticiper une future publication web,
+# sans retraiter des centaines de fichiers a posteriori. Toutes les
+# fonctions ci-dessous sont non bloquantes par construction -- un champ
+# manquant ou mal formé ne fait jamais échouer la génération/sauvegarde
+# de l'article, il reste juste vide dans le frontmatter (même philosophie
+# que _parse_longueur_bornes plus haut : dégradation silencieuse).
+
+def _slugify(text):
+    """Identique à create_entity.py/create_entities_and_instances.py
+    (NFD + suppression des marques diacritiques plutôt qu'une table
+    d'accents français en dur -- correctif du 14 août 2026 sur les slugs
+    portugais cassés, voir audit_broken_slugs.py). Dupliqué ici à dessein
+    -- api.py n'importe aucun de ces scripts pour cette seule fonction
+    utilitaire."""
+    s = unicodedata.normalize("NFD", text or "")
+    s = "".join(c for c in s if unicodedata.category(c) != "Mn")
+    s = s.lower()
+    s = re.sub(r"[^a-z0-9]+", "_", s)
+    return s.strip("_")
+
+
+def _yaml_escape(text):
+    """Échappement minimal pour insérer du texte libre (deux-points,
+    guillemets) dans une ligne 'clé: valeur' du frontmatter construit à
+    la main par build_article_md() -- pas de dumper YAML ici. Les champs
+    existants avant P20 sont tous des valeurs contrôlées (slugs, enums,
+    nombres) ; chapo/image_prompt sont les premiers à contenir du texte
+    libre potentiellement problématique pour un parseur YAML naïf (ex.
+    un chapo contenant ':' casserait 'chapo: Nuuk : la tension monte'
+    sans cet échappement)."""
+    escaped = (text or "").replace("\\", "\\\\").replace('"', '\\"').replace("\n", " ")
+    return '"{}"'.format(escaped)
+
+
+_PUBLICATION_META_RE = re.compile(
+    r"===METADONNEES_PUBLICATION===\s*(.*?)\s*===FIN_METADONNEES===",
+    re.DOTALL | re.IGNORECASE
+)
+
+
+def _extract_publication_metadata(article_text, type_diffusion="ecrit"):
+    """
+    Extrait et retire le bloc métadonnées de publication ajouté en fin de
+    réponse par la consigne de build_journalistic_brief() (chapo, tags,
+    image_prompt -- produits par le LLM dans le MÊME appel que l'article,
+    Option 1 actée le 12 juillet 2026).
+
+    type_diffusion (P21, 25 août 2026) : si "oral", deux champs
+    supplémentaires sont attendus dans le même bloc --
+    LIEU_DIFFUSION/MODE_RECEPTION (consigne ajoutée le 25 août dans
+    build_journalistic_brief(), jamais demandée pour un article écrit --
+    donc jamais recherchée ici non plus dans ce cas, pas de faux
+    avertissement "champ manquant" sur un champ qui n'a jamais été
+    sollicité).
+
+    Retourne (article_sans_bloc, meta_dict). meta_dict contient toujours
+    les 3 clés (chapo, tags, image_prompt), vides/liste vide si absentes
+    ou non parsables — plus lieu_diffusion/mode_reception si oral. Le
+    bloc est TOUJOURS retiré du texte s'il est trouvé, même si son
+    contenu interne ne parse pas -- pour ne jamais laisser le marqueur
+    dans l'article publié ni fausser le comptage de mots (voir
+    generate_article() : cette extraction a lieu AVANT _count_words(),
+    sinon le bloc fausserait la mesure de longueur et le déclenchement
+    du retry, chantier du 10 août 2026).
+    """
+    meta = {"chapo": "", "tags": [], "image_prompt": ""}
+    if type_diffusion == "oral":
+        meta["lieu_diffusion"] = ""
+        meta["mode_reception"] = ""
+
+    m = _PUBLICATION_META_RE.search(article_text)
+    if not m:
+        print("[api] [WARN] Bloc ===METADONNEES_PUBLICATION=== absent de la "
+              "réponse du LLM — chapo/tags/image_prompt resteront vides "
+              "pour cet article.")
+        return article_text.strip(), meta
+
+    block = m.group(1)
+    clean_text = (article_text[:m.start()] + article_text[m.end():]).rstrip()
+
+    # Correctif du 21 août 2026 (soir) : re.IGNORECASE ajouté après un
+    # cas réel sur enrich_articles_pre_p20.py où le bloc externe
+    # ===METADONNEES_PUBLICATION=== était bien trouvé (déjà en
+    # IGNORECASE) mais aucune des 3 lignes internes ne matchait --
+    # signe que le LLM avait probablement répondu en "Chapo:"/"chapo:"
+    # plutôt que "CHAPO:" strict. Correctif défensif, sans risque de
+    # régression (strictement plus permissif qu'avant) -- profite aussi
+    # bien à ce script qu'à la génération live, qui partage cette même
+    # fonction.
+    chapo_m = re.search(r"^CHAPO:\s*(.+)$", block, re.MULTILINE | re.IGNORECASE)
+    tags_m  = re.search(r"^TAGS:\s*(.+)$", block, re.MULTILINE | re.IGNORECASE)
+    img_m   = re.search(r"^IMAGE_PROMPT:\s*(.+)$", block, re.MULTILINE | re.IGNORECASE)
+
+    if chapo_m:
+        meta["chapo"] = chapo_m.group(1).strip()
+    if tags_m:
+        meta["tags"] = [t.strip() for t in tags_m.group(1).split(",") if t.strip()]
+    if img_m:
+        meta["image_prompt"] = img_m.group(1).strip()
+
+    champs_attendus_ok = chapo_m and tags_m and img_m
+
+    if type_diffusion == "oral":
+        lieu_m = re.search(r"^LIEU_DIFFUSION:\s*(.+)$", block, re.MULTILINE | re.IGNORECASE)
+        mode_m = re.search(r"^MODE_RECEPTION:\s*(.+)$", block, re.MULTILINE | re.IGNORECASE)
+        if lieu_m:
+            meta["lieu_diffusion"] = lieu_m.group(1).strip()
+        if mode_m:
+            meta["mode_reception"] = mode_m.group(1).strip()
+        champs_attendus_ok = champs_attendus_ok and lieu_m and mode_m
+
+    if not champs_attendus_ok:
+        print("[api] [WARN] Bloc métadonnées trouvé mais incomplet "
+              "(chapo={}, tags={}, image_prompt={}{}) — champ(s) manquant(s) "
+              "laissé(s) vide(s).".format(
+                  bool(chapo_m), bool(tags_m), bool(img_m),
+                  ", lieu_diffusion={}, mode_reception={}".format(
+                      bool(lieu_m), bool(mode_m)
+                  ) if type_diffusion == "oral" else ""
+              ))
+
+    return clean_text, meta
+
+
+_BYLINE_RE = re.compile(
+    r"^\*{0,2}([A-ZÀ-Ý][\w'’\-]+(?:\s+[A-ZÀ-Ý][\w'’\-]+)+)\s+—\s+(.+?)\*{0,2}$",
+    re.MULTILINE
+)
+
+
+def _extract_byline(article_text):
+    """
+    Extrait le nom du·de la journaliste depuis la signature "Prénom Nom —
+    Journal" du corps de l'article -- position garantie immédiatement
+    sous la date de publication depuis le correctif du 10 août 2026
+    (build_system_prompt()). Recherche restreinte aux 8 premières lignes
+    non vides pour éviter tout faux positif sur un tiret cadratin
+    ailleurs dans le texte (citation, dialogue, ou le dateline en début
+    de premier paragraphe type "NUUK-FORTE — Le 18 avril...", exclu
+    naturellement par l'exigence d'au moins 2 mots capitalisés avant le
+    tiret -- un dateline est presque toujours un seul mot/lieu composé).
+
+    Tolère un habillage Markdown gras optionnel autour de la ligne
+    entière ("**Nom — Journal**") -- corrigé le 21 août 2026 après un
+    test réel sur 8 articles (fortress_world) : 1 cas sur 8 utilisait ce
+    format, non prévu par la version initiale de cette regex, qui exigeait
+    que la ligne commence directement par une lettre majuscule.
+
+    Retourne (nom, nom_journal) ou (None, None) si non trouvé -- non
+    bloquant, journaliste_slug reste vide dans ce cas plutôt que de
+    faire échouer la sauvegarde de l'article. Cas réel observé le 21 août
+    2026 : sur 8 articles test, 2 n'avaient tout simplement AUCUNE
+    signature dans le corps généré (pas un problème d'extraction, la
+    donnée n'existe pas dans le texte) -- gap de conformité à la consigne
+    de signature du 10 août 2026, distinct du chantier P20 lui-même, à
+    suivre séparément si le taux se confirme sur un plus gros volume.
+    """
+    head_lines = [l for l in article_text.split("\n") if l.strip()][:8]
+    head = "\n".join(head_lines)
+    m = _BYLINE_RE.search(head)
+    if not m:
+        return None, None
+    return m.group(1).strip(), m.group(2).strip()
+
+
+def _extract_title(article_text):
+    """Titre = première ligne en gras (**...**) de l'article, format
+    imposé par la consigne de rédaction ("Commence directement par le
+    titre"). Repli sur la première ligne non vide sans le formatage gras
+    si jamais absent -- jamais bloquant, sert uniquement à dériver
+    `slug`."""
+    for line in article_text.split("\n"):
+        line = line.strip()
+        if not line:
+            continue
+        m = re.match(r"^\*\*(.+?)\*\*$", line)
+        if m:
+            return m.group(1).strip()
+        return line
+    return ""
+
 
 def call_claude(prompt_data):
     """
@@ -192,13 +387,22 @@ def build_article_filename(snapshot, thematique, article_text, date_fictive=None
     return "{}_{}_{}_article{}.md".format(timestamp, scenario, thema, suffix)
 
 
-def build_article_md(article_text, snapshot, thematique, prompt_data):
+def build_article_md(article_text, snapshot, thematique, prompt_data, date_fictive=None, a_une_photo=False, image_credit=""):
     """
     Construit le fichier .md final avec frontmatter + article.
     Inclut les métadonnées de génération pour traçabilité.
     """
     meta = prompt_data["metadata"]
     now  = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+    # P20 (21 août 2026) : slug dérivé du titre réel de l'article (Phase A
+    # du scoping du 12 juillet 2026, backlog point 7) -- évite de le
+    # dériver du titre à chaque usage ultérieur, risques de collision/
+    # accents déjà rencontrés ailleurs (audit_broken_slugs.py). Tronqué à
+    # 80 caractères, limite raisonnable pour un slug d'URL sans jamais
+    # faire échouer la sauvegarde si le titre est absent/vide.
+    titre = _extract_title(article_text)
+    slug = _slugify(titre)[:80].strip("_") or "article-sans-titre"
 
     # Frontmatter YAML
     frontmatter_lines = [
@@ -219,14 +423,114 @@ def build_article_md(article_text, snapshot, thematique, prompt_data):
         "ligne_editoriale: {}".format(meta.get("ligne_editoriale", "pro_pouvoir")),
         "scenario_state: {}".format(snapshot["scenario"]["state_of_system"]),
         "tension_level: {}".format(snapshot["scenario"]["tension_level"]),
-        "variables_pilotes:",
+        # ── P20 (21 août 2026) — enrichissement frontmatter publication
+        # web future, Phase A du scoping du 12 juillet 2026 (backlog
+        # point 7). Phase B (zone_principale, date_publication,
+        # articles_lies) et Phase C (image_principale/alt/credit, liées
+        # au futur generate_images.py) restent hors scope de ce chantier.
+        "slug: {}".format(slug),
+        "chapo: {}".format(_yaml_escape(meta.get("chapo", ""))),
+        "tags:",
     ]
+    for t in meta.get("tags", []):
+        frontmatter_lines.append("  - {}".format(t))
+    frontmatter_lines += [
+        "image_prompt: {}".format(_yaml_escape(meta.get("image_prompt", ""))),
+        # a_une_photo : décision manuelle, prise dès l'écriture de
+        # l'article (GUI, champ "a_une_photo", décision actée le 21 août
+        # 2026 -- avant : toujours false en dur, bascule uniquement après
+        # coup). Toujours explicite (jamais de repli sur config.yaml
+        # résiduel), reflète l'état de la case à cocher au moment du
+        # lancement -- même traitement que --dry-run côté generate.py.
+        "a_une_photo: {}".format("true" if a_une_photo else "false"),
+        # image_credit : décision manuelle, comme a_une_photo -- vide
+        # tant que non tranché. Valeurs attendues (Phase C, 21 août
+        # 2026) : "IA_generated" / "personnel" / "autre". Consommé par
+        # generate_images.py pour décider du traitement (génération
+        # automatique vs placeholder en attente d'upload manuel).
+        "image_credit: \"{}\"".format(image_credit or ""),
+        "journaliste_slug: {}".format(meta.get("journaliste_slug", "")),
+        "date_evenement: {}".format(date_fictive or ""),
+        # ── P20 Phase B (21 août 2026) ──
+        # zone_principale : corrigé le 25 août 2026 -- l'hypothèse
+        # d'origine ("réutilise snapshot['zone_slug'], même valeur, pas
+        # un second mécanisme") était fausse dès qu'un choix de zone
+        # MANUEL est fait (GUI/CLI, config["zone_slug"]) : build_prompt()
+        # priorise ce choix manuel pour résoudre le journal/journaliste
+        # (voir zone_slug = config.get('zone_slug') or
+        # snapshot.get('zone_slug')), mais ce champ continuait de lire
+        # UNIQUEMENT snapshot["zone_slug"] (la zone dominante
+        # auto-calculée depuis filtered_instances, indépendante du choix
+        # manuel) -- les deux pouvaient diverger silencieusement, jamais
+        # remarqué avant P21 (trouvé sur un test réel où le contenu de
+        # l'article -- Afrique centrale -- ne correspondait plus du tout
+        # à zone_principale -- arc_eurasien_central). Même priorité que
+        # build_prompt() désormais : le choix manuel, s'il existe,
+        # l'emporte toujours.
+        #
+        # CRASH corrigé le même jour : première version de ce correctif
+        # lisait directement config.get("zone_slug") ici -- mais
+        # build_article_md() n'a jamais reçu "config" en paramètre (seul
+        # save_article(), son appelant, l'a). save_article() calcule
+        # maintenant cette valeur et la dépose dans
+        # prompt_data["metadata"]["zone_principale_resolue"] AVANT
+        # d'appeler build_article_md(), qui la lit ici via "meta" (déjà
+        # accessible, comme tous les autres champs de ce bloc) au lieu
+        # de tenter d'accéder à "config" directement.
+        "zone_principale: {}".format(meta.get("zone_principale_resolue") or snapshot.get("zone_slug") or ""),
+        # date_publication = date_evenement pour l'instant -- aucun délai
+        # éditorial simulé, décision actée le 21 août 2026. Champs
+        # laissés séparés dans le frontmatter (pas fusionnés) pour ne pas
+        # fermer la porte à un vrai décalage plus tard sans migration de
+        # schéma.
+        "date_publication: {}".format(date_fictive or ""),
+        # ── P21 (25 août 2026) — journaux oraux ──
+        # type_diffusion : toujours écrit ("ecrit" par défaut, même si
+        # le champ n'a jamais existé sur cet article) -- permet de
+        # filtrer/auditer les articles oraux plus tard sans dépendre de
+        # la présence/absence des 3 champs suivants. duree_estimee/
+        # lieu_diffusion/mode_reception : vides pour un article écrit
+        # (jamais demandés au LLM ni calculés dans ce cas, voir
+        # generate_article()) -- même convention que image_credit
+        # ci-dessus (champ toujours présent, vide tant que non
+        # applicable), pas de champ manquant selon le cas.
+        "type_diffusion: {}".format(meta.get("type_diffusion", "ecrit")),
+        "duree_estimee: \"{}\"".format(meta.get("duree_estimee", "")),
+        "lieu_diffusion: {}".format(_yaml_escape(meta.get("lieu_diffusion", ""))),
+        "mode_reception: {}".format(_yaml_escape(meta.get("mode_reception", ""))),
+        # entites_citees : sous-produit de filtered_instances, prépare le
+        # futur rapprochement articles_lies (script séparé, non fait à ce
+        # stade) sans obliger la génération à relire tout le corpus
+        # existant à chaque article.
+        "entites_citees:",
+    ]
+    for inst in snapshot.get("filtered_instances", []):
+        inst_slug = inst.get("slug")
+        if inst_slug:
+            frontmatter_lines.append("  - {}".format(inst_slug))
+    frontmatter_lines.append("variables_pilotes:")
     for v in snapshot.get("pilot_variables", []):
         frontmatter_lines.append("  - {}".format(v))
     frontmatter_lines.append("---")
     frontmatter_lines.append("")
 
-    return "\n".join(frontmatter_lines) + article_text
+    # Section "Voir aussi" (21 août 2026, soir) -- wikilinks Obsidian
+    # depuis entites_citees, dans le CORPS (pas le frontmatter) : la vue
+    # graphique d'Obsidian suit les [[wikilinks]] du corps, jamais les
+    # listes de frontmatter (confirmé sur les fiches entites/*.md
+    # existantes, où les liens vers scénario/instances sont déjà dans un
+    # tableau en bas de fiche, jamais en frontmatter -- même convention
+    # reprise ici). articles_lies n'existe pas encore à ce stade de la
+    # génération (calculé après coup par rapprocher_articles.py, qui
+    # mettra à jour cette même ligne pour y ajouter les articles liés une
+    # fois disponibles) -- seuls entites_citees sont donc listés ici.
+    entites_slugs = [inst.get("slug") for inst in snapshot.get("filtered_instances", []) if inst.get("slug")]
+    voir_aussi = ""
+    if entites_slugs:
+        liens = " · ".join("[[{}]]".format(s) for s in entites_slugs)
+        voir_aussi = "\n\n---\n**Voir aussi** : {}\n".format(liens)
+
+    return "\n".join(frontmatter_lines) + article_text + voir_aussi
 
 
 def save_article(article_text, snapshot, thematique, prompt_data, config):
@@ -249,16 +553,42 @@ def save_article(article_text, snapshot, thematique, prompt_data, config):
     output_dir = os.path.join(VAULT_PATH, dossier_config)
     os.makedirs(output_dir, exist_ok=True)
 
+    # Date fictive -- remontée avant le if/else (P20, 21 août 2026) : elle
+    # ne servait jusqu'ici qu'au nom de fichier en mode "auto", jamais
+    # transmise au frontmatter (champ date_evenement, Phase A du scoping
+    # du 12 juillet 2026). Calculée une seule fois, utilisée dans les deux
+    # cas ci-dessous.
+    date_fictive = config.get("article", {}).get("date_fictive", "")
+
+    # zone_principale_resolue (25 août 2026) : calculée ici plutôt que
+    # dans build_article_md() -- cette dernière n'a jamais reçu "config"
+    # en paramètre (seul save_article(), son appelant, l'a), une
+    # première version du correctif du même jour tentait d'y lire
+    # config.get(...) directement et faisait planter TOUTE génération
+    # d'article (écrit ou oral, P21 sans rapport avec la cause réelle du
+    # crash) avec un NameError. Même priorité manuel>auto que
+    # build_prompt() -- voir le commentaire complet à l'endroit où cette
+    # clé est lue, dans build_article_md().
+    prompt_data["metadata"]["zone_principale_resolue"] = (
+        config.get("zone_slug") or snapshot.get("zone_slug") or ""
+    )
+
+    # a_une_photo / image_credit -- décision prise dès l'écriture de
+    # l'article (GUI, generate.py --a-une-photo/--credit, generate_series.py
+    # politique aléatoire/toutes/aucune -- décision actée le 21 août 2026).
+    a_une_photo = bool(config.get("article", {}).get("a_une_photo", False))
+    image_credit = config.get("article", {}).get("image_credit", "") or ""
+
     # Nom du fichier
     nom_config = config.get("output", {}).get("nom_fichier", "auto")
     if nom_config == "auto":
-        date_fictive = config.get("article", {}).get("date_fictive", "")
         filename = build_article_filename(snapshot, thematique, article_text, date_fictive)
     else:
         filename = nom_config if nom_config.endswith(".md") else nom_config + ".md"
 
     # Contenu complet
-    content = build_article_md(article_text, snapshot, thematique, prompt_data)
+    content = build_article_md(article_text, snapshot, thematique, prompt_data, date_fictive=date_fictive,
+                                a_une_photo=a_une_photo, image_credit=image_credit)
 
     filepath = os.path.join(output_dir, filename)
     with open(filepath, "w", encoding="utf-8") as f:
@@ -291,6 +621,18 @@ def generate_article(prompt_data, snapshot, thematique, config):
     # Appel LLM
     article = call_claude(prompt_data)
 
+    # P21 (25 août 2026) : lu une seule fois ici, réutilisé pour
+    # l'extraction du bloc métadonnées (LIEU_DIFFUSION/MODE_RECEPTION
+    # attendus seulement en oral) et pour le calcul de duree_estimee
+    # plus bas.
+    type_diffusion = prompt_data.get("metadata", {}).get("type_diffusion", "ecrit")
+
+    # P20 (21 août 2026) : extraction du bloc métadonnées de publication
+    # (chapo/tags/image_prompt) AVANT tout comptage de mots -- sinon le
+    # bloc fausserait la mesure de longueur et le déclenchement du retry
+    # ci-dessous (chantier du 10 août 2026, backlog Partie 1 point 1).
+    article, meta_publication = _extract_publication_metadata(article, type_diffusion)
+
     # Validation longueur + retry conditionnel (ajouté le 10 août 2026,
     # décision explicite avec David : seuil unique à 40% d'écart, un seul
     # retry maximum, résultat du retry accepté quoi qu'il arrive -- voir
@@ -300,7 +642,7 @@ def generate_article(prompt_data, snapshot, thematique, config):
     retry_effectue = False
     if bornes:
         if _deviation_ratio(wc, bornes) > RETRY_DEVIATION_THRESHOLD:
-            article, wc = _retry_with_length_feedback(prompt_data, wc, bornes)
+            article, wc, meta_publication = _retry_with_length_feedback(prompt_data, wc, bornes)
             retry_effectue = True
     else:
         print("[api] [WARN] Longueur '{}' non reconnue par _parse_longueur_bornes "
@@ -309,6 +651,48 @@ def generate_article(prompt_data, snapshot, thematique, config):
 
     prompt_data["metadata"]["mots_reels"] = wc
     prompt_data["metadata"]["retry_longueur"] = retry_effectue
+    prompt_data["metadata"]["chapo"] = meta_publication["chapo"]
+    prompt_data["metadata"]["tags"] = meta_publication["tags"]
+    prompt_data["metadata"]["image_prompt"] = meta_publication["image_prompt"]
+
+    # P21 (25 août 2026) : duree_estimee volontairement PAS demandée au
+    # LLM (contrairement à lieu_diffusion/mode_reception) -- calculée
+    # après coup depuis mots_reels, plus fiable qu'une estimation a
+    # priori qui pourrait diverger du texte réellement produit.
+    # ~140 mots/minute : rythme oral posé et clair, cohérent avec un
+    # discours de prise de parole publique plutôt qu'un débit rapide de
+    # conversation informelle (150-160 mots/minute) ou une lecture lente
+    # solennelle (110-120) -- valeur médiane, ouverte à ajustement si
+    # les durées calculées semblent irréalistes en pratique une fois
+    # observées sur du contenu réel.
+    MOTS_PAR_MINUTE_ORAL = 140
+    if type_diffusion == "oral":
+        minutes = max(1, round(wc / MOTS_PAR_MINUTE_ORAL))
+        prompt_data["metadata"]["duree_estimee"] = "{} minute{}".format(
+            minutes, "s" if minutes > 1 else ""
+        )
+        prompt_data["metadata"]["lieu_diffusion"] = meta_publication.get("lieu_diffusion", "")
+        prompt_data["metadata"]["mode_reception"] = meta_publication.get("mode_reception", "")
+
+    # P20 -- signature journaliste. Corrigé le 25 août 2026 (diagnostiqué
+    # le 23 août sur P25, jamais implémenté à l'époque, devenu nécessaire
+    # avec P21 -- voir prompt_builder.py, docstring du champ "journaliste"
+    # dans build_prompt()) : priorité au nom déjà résolu par
+    # get_journal_profile() (chemin 1, édition locale curatée --
+    # déterministe, connu AVANT même l'appel LLM). L'extraction du texte
+    # généré (_extract_byline()) ne sert plus qu'en repli, pour le seul
+    # cas où aucun nom curaté n'était disponible (chemin 2/3, réseau
+    # global/profil hardcodé -- le LLM invente alors un nom que le code
+    # ne peut connaître qu'en le relisant après coup). Un article ORAL
+    # n'a jamais de ligne "Nom — Journal" formatée en début de texte
+    # (STYLE_ORAL, "pas de mise en page journalistique") -- sans ce
+    # correctif, _extract_byline() ne pouvait structurellement jamais la
+    # trouver, laissant journaliste_slug vide sur 100% des articles
+    # oraux malgré un nom pourtant connu avec certitude.
+    journaliste_nom = prompt_data.get("metadata", {}).get("journaliste", "").strip()
+    if not journaliste_nom:
+        journaliste_nom, _ = _extract_byline(article)
+    prompt_data["metadata"]["journaliste_slug"] = _slugify(journaliste_nom) if journaliste_nom else ""
 
     # Sauvegarde
     filepath = save_article(article, snapshot, thematique, prompt_data, config)

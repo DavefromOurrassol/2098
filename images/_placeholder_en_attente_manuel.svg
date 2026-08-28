@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <rect width="800" height="450" fill="#e8e6e1"/>
+  <rect x="1" y="1" width="798" height="448" fill="none" stroke="#c9c5bc" stroke-width="2"/>
+  <g stroke="#c9c5bc" stroke-width="2">
+    <line x1="0" y1="0" x2="800" y2="450"/>
+    <line x1="800" y1="0" x2="0" y2="450"/>
+  </g>
+  <rect x="220" y="195" width="360" height="60" fill="#e8e6e1"/>
+  <text x="400" y="218" font-family="Georgia, serif" font-size="20" fill="#5a564d" text-anchor="middle">Image en attente</text>
+  <text x="400" y="243" font-family="Georgia, serif" font-size="14" fill="#7a766c" text-anchor="middle">upload manuel requis</text>
+</svg>

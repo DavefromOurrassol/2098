@@ -1,0 +1,114 @@
+---
+name: Protocole Urgence-22
+type: instance
+slug: test_priorite_forcee_22aout_reference
+entite: test_priorite_forcee_22aout
+scenario: reference
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
+
+type_dans_scenario: organisation
+
+role_dans_scenario: >
+  Test Priorité Forcée 22août est une structure émergente conçue pour imposer des protocoles de priorisation dans les contextes de crises systémiques ou de ressources limitées. Son rôle est de valider, par la force si nécessaire, des mécanismes d'allocation des moyens qui contournent les processus démocratiques ou collaboratifs au nom de l'urgence. Elle incarne une logique de contrôle par l'exception, où l'efficacité immédiate prime sur la légitimité durable, risquant de normaliser des mesures coercitives comme nouvelle norme de gouvernance.
+
+responsabilites: >
+  Protocole Urgence-22 intervient dans les zones en crise pour tester des algorithmes de priorisation des ressources (énergie, eau, nourriture, soins) en temps réel. Ses équipes, souvent composées d'experts en logistique et de forces de sécurité privées, imposent des décisions d'allocation basées sur des critères d'urgence et de survie, sans consultation des populations locales. Elle documente ces interventions pour en faire des modèles reproductibles, alimentant une base de données utilisée par les gouvernements et les consortiums privés.
+
+impact_local: 3
+impact_systemique_global: 2
+
+variables_influencees:
+    - gouvernance_institutions
+    - systeme_economique_redistribution
+    - geopolitique_conflits
+
+zone_geographique:
+    - nationale
+    - régionale
+    - globale
+
+zone_systemique:
+    - gouvernance
+    - économie
+    - sécurité
+
+alliances:
+    - consortiums_prives_d_extraction_de_ressources_critiques_reference
+    - consortiums_energetiques_opaques_reference
+    - agences_de_securite_regionales_de_normalisation_des_zones_grises_reference
+
+oppositions:
+    - federation_des_cliniques_autonomes_reference
+    - cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference
+    - reseau_des_administrations_locales_rurales_participatives_reference
+    - collectifs_de_journalisme_embarque_reference
+
+type_relation_dominante: conflit
+
+annee_debut: 2039
+annee_fin: 
+
+trajectoire: émergent
+est_clandestin: true
+generation: transition
+
+injection:
+  type: custom
+  annee_injection: 2039
+  contexte_injection: >
+    Protocole Urgence-22 agit comme un accélérateur de fragmentation institutionnelle et économique, en normalisant des mécanismes de priorisation coercitifs qui affaiblissent les structures démocratiques et creusent les inégalités. Son influence sur les conflits géopolitiques est indirecte mais réelle, en alimentant des tensions locales qui peuvent dégénérer en crises régionales.
+  impact_sur_variables:
+  - variable: gouvernance_institutions
+    delta_level: -8
+    duree: 15
+    polarite: -1
+  - variable: systeme_economique_redistribution
+    delta_level: -5
+    duree: 10
+    polarite: -1
+  - variable: geopolitique_conflits
+    delta_level: 6
+    duree: 10
+    polarite: 1
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Depuis son apparition discrète en 2039, Protocole Urgence-22 est devenu le visage invisible des crises. Ses équipes, souvent déployées sous couvert d'ONG ou de missions humanitaires, interviennent dans les zones de tension pour imposer des règles d'allocation des ressources qui défient les principes démocratiques. Leurs interventions, filmées et analysées en temps réel, servent de laboratoire pour une gouvernance par l'urgence, où la survie justifie la coercition. Les témoignages de populations locales décrivent des scènes où des algorithmes décident qui a accès à l'eau ou à l'électricité, tandis que des milices privées veillent à l'application des décisions. Une normalisation de l'exception qui inquiète les observateurs.
+
+signes_distinctifs: >
+  Protocole Urgence-22 opère sous des identités variables, mais ses équipes se reconnaissent à leurs combinaisons grises sans logo, équipées de tablettes affichant des interfaces de priorisation en temps réel. Leur symbole, un sablier rouge traversé par une flèche, apparaît souvent graffité sur les murs des zones où elles interviennent, marquant leur passage comme un avertissement. Leurs véhicules, des drones et des camions banalisés, sont équipés de systèmes de brouillage pour éviter toute surveillance extérieure.
+
+tensions_narratives: >
+  Protocole Urgence-22 cristallise les tensions entre efficacité et légitimité. Ses interventions, souvent justifiées par des crises réelles, risquent de devenir des outils de contrôle permanent, transformant des mesures d'urgence en structures de pouvoir durables. Ses liens avec des consortiums privés et des agences de sécurité soulèvent des questions sur ses véritables commanditaires. Certains y voient une réponse nécessaire à l'effondrement des systèmes traditionnels, tandis que d'autres dénoncent une privatisation de la gouvernance. Son avenir dépendra de sa capacité à rester dans l'ombre ou à s'imposer comme un acteur incontournable des crises futures.
+
+date_creation: 2026-08-22
+priorite_forcee: true
+---
+
+# Protocole Urgence-22
+
+## Rôle dans [[reference]]
+Test Priorité Forcée 22août est une structure émergente conçue pour imposer des protocoles de priorisation dans les contextes de crises systémiques ou de ressources limitées. Son rôle est de valider, par la force si nécessaire, des mécanismes d'allocation des moyens qui contournent les processus démocratiques ou collaboratifs au nom de l'urgence. Elle incarne une logique de contrôle par l'exception, où l'efficacité immédiate prime sur la légitimité durable, risquant de normaliser des mesures coercitives comme nouvelle norme de gouvernance.
+
+## Responsabilités
+Protocole Urgence-22 intervient dans les zones en crise pour tester des algorithmes de priorisation des ressources (énergie, eau, nourriture, soins) en temps réel. Ses équipes, souvent composées d'experts en logistique et de forces de sécurité privées, imposent des décisions d'allocation basées sur des critères d'urgence et de survie, sans consultation des populations locales. Elle documente ces interventions pour en faire des modèles reproductibles, alimentant une base de données utilisée par les gouvernements et les consortiums privés.
+
+## Variables influencées
+- [[gouvernance_institutions]]
+- [[systeme_economique_redistribution]]
+- [[geopolitique_conflits]]
+
+## Relations
+**Alliés** : [[consortiums_prives_d_extraction_de_ressources_critiques_reference]], [[consortiums_energetiques_opaques_reference]], [[agences_de_securite_regionales_de_normalisation_des_zones_grises_reference]]
+**Opposants** : [[federation_des_cliniques_autonomes_reference]], [[cooperatives_agro_ecologiques_de_reconstruction_territoriale_reference]], [[reseau_des_administrations_locales_rurales_participatives_reference]], [[collectifs_de_journalisme_embarque_reference]]
+
+## Description journalistique
+Depuis son apparition discrète en 2039, Protocole Urgence-22 est devenu le visage invisible des crises. Ses équipes, souvent déployées sous couvert d'ONG ou de missions humanitaires, interviennent dans les zones de tension pour imposer des règles d'allocation des ressources qui défient les principes démocratiques. Leurs interventions, filmées et analysées en temps réel, servent de laboratoire pour une gouvernance par l'urgence, où la survie justifie la coercition. Les témoignages de populations locales décrivent des scènes où des algorithmes décident qui a accès à l'eau ou à l'électricité, tandis que des milices privées veillent à l'application des décisions. Une normalisation de l'exception qui inquiète les observateurs.
+
+## Tensions narratives
+Protocole Urgence-22 cristallise les tensions entre efficacité et légitimité. Ses interventions, souvent justifiées par des crises réelles, risquent de devenir des outils de contrôle permanent, transformant des mesures d'urgence en structures de pouvoir durables. Ses liens avec des consortiums privés et des agences de sécurité soulèvent des questions sur ses véritables commanditaires. Certains y voient une réponse nécessaire à l'effondrement des systèmes traditionnels, tandis que d'autres dénoncent une privatisation de la gouvernance. Son avenir dépendra de sa capacité à rester dans l'ombre ou à s'imposer comme un acteur incontournable des crises futures.

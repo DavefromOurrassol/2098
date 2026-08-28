@@ -17,6 +17,30 @@ variables_pilotes:
   - technologie_information
   - systeme_economique_redistribution
   - gouvernance_institutions
+slug: les_memoires_oubliees_de_tbilissi_quand_l_histoire_resiste_aux_algorithmes
+chapo: "À Tbilissi, une équipe d’archivistes préserve les récits effacés par les algorithmes et les régulateurs eurasiatiques, dans un combat discret mais acharné pour sauver la mémoire historique face à la réécriture géopolitique du passé."
+tags:
+  - archives numériques
+  - censure algorithmique
+  - mémoire historique
+  - résistance culturelle
+  - géopolitique des données
+image_prompt: "Tamar Kalandadze, directrice du Nœud Mnemos, debout dans un sous-sol encombré de serveurs et de documents anciens, éclairée par une lumière bleutée, entourée d’écrans affichant des cartes et des textes censurés."
+a_une_photo: false
+image_credit: ""
+journaliste_slug: lea_vartanian
+date_evenement: 5 avril 2098
+zone_principale: delta_du_gange
+date_publication: 5 avril 2098
+entites_citees:
+  - delta_du_gange_reference
+  - reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference
+  - reseau_mnemos_reference
+articles_lies:
+  - memoire_en_fragments_quand_l_art_defie_la_muraille_de_verre
+  - tbilissi_capitale_des_memoires_oubliees_quand_l_archive_defie_la_geopolitique
+  - mnemos_la_memoire_qui_resiste_aux_algorithmes
+
 ---
 **Les mémoires oubliées de Tbilissi : quand l’Histoire résiste aux algorithmes**
 
@@ -44,3 +68,6 @@ Cette bataille pour la mémoire n’est pas propre à Tbilissi. Partout dans le 
 Pourtant, à Tbilissi, la résistance reste discrète. « Nous ne sommes pas une menace », répète Kalandadze. « Juste un rappel : l’Histoire ne s’écrit pas seulement avec des données, mais avec des choix. Et ces choix, nous refusons de les abandonner aux machines. »
 
 Reste à savoir combien de temps cette ligne tiendra. Les régulateurs eurasiatiques ont déjà prévenu : si Mnemos ne coopère pas, ses financements publics seront coupés. Une menace qui pourrait bien sonner le glas de ce dernier bastion de mémoire analogique. Mais pour l’instant, dans les sous-sols de Tbilissi, les serveurs continuent de tourner. Et avec eux, l’espoir que certaines histoires ne disparaîtront pas.
+
+---
+**Voir aussi** : [[delta_du_gange_reference]] · [[reseau_des_villes_etats_pilotes_en_gouvernance_participative_reference]] · [[reseau_mnemos_reference]] · [[memoire_en_fragments_quand_l_art_defie_la_muraille_de_verre]] · [[tbilissi_capitale_des_memoires_oubliees_quand_l_archive_defie_la_geopolitique]] · [[mnemos_la_memoire_qui_resiste_aux_algorithmes]]

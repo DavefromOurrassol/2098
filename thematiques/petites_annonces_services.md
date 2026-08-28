@@ -22,6 +22,7 @@ echelle: locale
 temporalite: immédiat
 style_journalistique: utilitaire
 format_dominant: brève
+format_fige: true
 niveau_emotionnel: faible
 sensibilite_cascades: 2
 ---

@@ -328,6 +328,16 @@ def load_thematique(thematique_slug):
         "temporalite":         fm.get("temporalite", ""),
         "style_journalistique": fm.get("style_journalistique", ""),
         "format_dominant":     fm.get("format_dominant", ""),
+        # 23 août 2026 : même bug que garantie_selection/priorite_forcee
+        # trouvé plus tôt dans la session (load_instance()) -- cette
+        # fonction reconstruit aussi le dict avec une liste blanche de
+        # champs connus, donc tout nouveau champ y était silencieusement
+        # perdu malgré une écriture correcte sur disque. format_fige
+        # (priorité longueur : override manuel vs format naturel de la
+        # thématique, voir _resoudre_longueur() dans prompt_builder.py)
+        # en a fait les frais -- ajouté ici pour que le correctif
+        # fonctionne réellement.
+        "format_fige":         fm.get("format_fige") is True,
         "niveau_emotionnel":   fm.get("niveau_emotionnel", ""),
         "sensibilite_cascades": fm.get("sensibilite_cascades", 0),
         "types_evenements":    fm.get("types_evenements", []) or [],
@@ -816,6 +826,15 @@ def load_instance(instance_slug):
         "contexte_injection": str(injection_raw.get("contexte_injection", "") or "").strip(),
         "impact_sur_variables": injection_raw.get("impact_sur_variables", []) or [],
         "propagation":        injection_raw.get("propagation", {}) or {},
+        # 23 août 2026 : load_instance() reconstruit ce dict avec une
+        # liste blanche de clés connues -- garantie_selection (22-23
+        # août, découplage garantie de présence / propagation d'impact,
+        # voir set_garantie_selection.py) en était absent, silencieusement
+        # perdu à chaque chargement malgré sa présence correcte sur
+        # disque. Trouvé via un print de diagnostic temporaire après que
+        # le correctif gelecek_meclisi n'ait eu AUCUN effet en conditions
+        # réelles malgré un fichier .md correctement patché.
+        "garantie_selection": injection_raw.get("garantie_selection", True),
     }
 
     return {
@@ -843,6 +862,16 @@ def load_instance(instance_slug):
         "est_clandestin": fm.get("est_clandestin", False),
         "generation":              fm.get("generation", ""),
         "injection":               injection,
+        # 23 août 2026 : même bug que garantie_selection ci-dessus --
+        # priorite_forcee (22 août 2026, mécanisme de présence garantie
+        # d'une entité) était absent de cette liste blanche, donc
+        # silencieusement perdu à chaque chargement malgré une écriture
+        # correcte sur disque (confirmée hier par grep) et un test de
+        # création/édition GUI réussi -- mais le test d'hier n'avait
+        # vérifié que l'ÉCRITURE du champ, jamais sa PRISE EN COMPTE
+        # réelle par une génération d'article. Le mécanisme n'avait donc
+        # probablement jamais fonctionné en pratique jusqu'à ce correctif.
+        "priorite_forcee":         fm.get("priorite_forcee") is True,
         "description_journalistique": str(fm.get("description_journalistique", "") or "").strip(),
         "signes_distinctifs":      str(fm.get("signes_distinctifs", "") or "").strip(),
         "tensions_narratives":     str(fm.get("tensions_narratives", "") or "").strip(),
@@ -1190,6 +1219,58 @@ def _save_instance_usage_state(state):
         json.dump(state, f, ensure_ascii=False, indent=2, sort_keys=True)
 
 
+# Cooldown d'usage (22 août 2026, backlog 9bis) : REMPLACE la pénalité
+# de score initialement conçue le même jour (retirée -- invalidée par
+# test synthétique avant tout déploiement réel, voir historique ci-
+# dessous). Diagnostic : plusieurs institutions "à spectre large"
+# (variables_influencees génériques + impact_systemique_global élevé)
+# dominent structurellement le score de filter_instances_for_thematique
+# -- jamais concurrencées par la rotation à mémoire du 15 août, qui ne
+# départage que des scores PROCHES (_score_bucket), pas des scores
+# durablement dominants.
+#
+# Historique de la première tentative (retirée) : une pénalité
+# proportionnelle au nombre d'usages cumulés, plafonnée, appliquée au
+# score avant le calcul de tranche. Test synthétique reproduisant le
+# cas réel (cluster de 5-6 institutions structurellement favorisées
+# ensemble dans policy_reform, pas une seule dominante isolée) : ÉCHEC
+# total, 20/20 sélections inchangées quel que soit le plafond testé
+# (jusqu'à 15, largement au-dessus de l'écart réel de 5.5 points).
+# Cause : des instances sélectionnées à la même fréquence accumulent la
+# MÊME pénalité, donc l'écart entre elles ne bouge jamais -- un défaut
+# mathématique du principe "pénaliser selon le compteur d'usage" quand
+# plusieurs candidates restent à égalité de fréquence, pas un problème
+# de calibration qu'un plafond différent aurait pu corriger.
+#
+# Mécanisme retenu à la place -- cooldown dur, indépendant du score :
+# après COOLDOWN_STREAK sélections CONSÉCUTIVES pour un scénario donné,
+# une instance devient inéligible pendant les COOLDOWN_DURATION
+# apparitions suivantes où elle aurait autrement été candidate --
+# quel que soit son score, même s'il reste dominant. Ce mécanisme ne
+# compare pas les instances entre elles (donc aucun problème d'égalité
+# de fréquence) -- il regarde chaque instance individuellement.
+COOLDOWN_STREAK = 3
+COOLDOWN_DURATION = 2
+
+# Exemption de dominance écrasante (22 août 2026, retour de David après
+# le premier test du cooldown) : le cooldown dur ci-dessus force la
+# rotation de TOUTE instance après COOLDOWN_STREAK sélections
+# consécutives, y compris une instance dont le score reste très
+# largement devant tout le reste du lot -- ce qui peut être excessif si
+# sa domination est réellement méritée plutôt qu'un artefact structurel
+# comme celui diagnostiqué le 22 août (cluster de plusieurs institutions
+# à peu près à égalité, pas un unique score qui écrase tout).
+#
+# Seuil calibré entre les deux cas testés : l'écart réel diagnostiqué
+# dans le vault (directive_kontinuum vs son concurrent direct, ~5.5
+# points) doit RESTER soumis au cooldown -- c'est exactement le cas que
+# ce chantier corrige. Un écart largement supérieur (cas de contrôle
+# synthétique à 16 points) doit en être exempté. Valeur ouverte à
+# recalibrage si les scores réels du vault s'avèrent différents de ces
+# deux repères une fois testé en conditions réelles.
+DOMINANCE_EXEMPTION_GAP = 10.0
+
+
 def _select_least_used_instances(candidates, usage_state, scenario_slug, max_n):
     """
     Sélectionne max_n instances parmi candidates (déjà triées par score
@@ -1220,14 +1301,49 @@ def _select_least_used_instances(candidates, usage_state, scenario_slug, max_n):
     mécanisme. Le passage à une tranche de tolérance élargit ce qui
     compte comme "pertinence proche" sans changer le principe : le score
     reste le signal dominant, seule la granularité de l'égalité change.
+
+    Cooldown (22 août 2026, voir commentaire au-dessus de COOLDOWN_STREAK) :
+    avant tout calcul de tranche, les candidates actuellement en
+    cooldown sont retirées d'office du pool éligible -- exclusion
+    déterministe, indépendante du score. Le cooldown décompte à chaque
+    apparition en tant que candidate (pas en temps réel) ; le streak
+    ne progresse que sur des sélections consécutives RÉELLES, remis à
+    zéro dès qu'une instance candidate n'est pas retenue un round donné.
+    Exemption de dominance écrasante (voir DOMINANCE_EXEMPTION_GAP) :
+    l'instance dont le score dépasse la 2e meilleure candidate du lot
+    d'au moins ce seuil échappe entièrement au mécanisme -- ni cooldown
+    possible, ni accumulation de streak -- ce round-ci.
     """
-    if len(candidates) <= max_n:
-        selected = list(candidates)
+    scenario_state = usage_state.setdefault(scenario_slug, {})
+    counts = scenario_state.setdefault("instances", {})
+    streaks = scenario_state.setdefault("streaks", {})
+    cooldowns = scenario_state.setdefault("cooldowns", {})
+
+    exempt_slug = None
+    if len(candidates) >= 2:
+        top_score, second_score = sorted(
+            (pair[0] for pair in candidates), reverse=True
+        )[:2]
+        if top_score - second_score >= DOMINANCE_EXEMPTION_GAP:
+            exempt_slug = next(
+                inst["slug"] for score, inst in candidates if score == top_score
+            )
+            cooldowns[exempt_slug] = 0  # lève un cooldown résiduel éventuel
+
+    eligibles, en_cooldown = [], []
+    for pair in candidates:
+        slug = pair[1]["slug"]
+        if slug == exempt_slug or cooldowns.get(slug, 0) <= 0:
+            eligibles.append(pair)
+        else:
+            en_cooldown.append(pair)
+
+    if len(eligibles) <= max_n:
+        selected = list(eligibles)
     else:
-        counts = usage_state.setdefault(scenario_slug, {}).setdefault("instances", {})
-        shuffled = list(candidates)
+        shuffled = list(eligibles)
         random.shuffle(shuffled)
-        max_score = max(pair[0] for pair in candidates)
+        max_score = max(pair[0] for pair in eligibles)
         # Tri stable : tranche de score croissante d'abord (0 = tranche
         # la plus haute, priorité à la pertinence), nombre d'utilisations
         # passées ensuite (départage les ex-aequo au sein d'une même
@@ -1236,11 +1352,138 @@ def _select_least_used_instances(candidates, usage_state, scenario_slug, max_n):
         shuffled.sort(key=lambda pair: _score_bucket(pair[0], max_score))
         selected = shuffled[:max_n]
 
-    counts = usage_state.setdefault(scenario_slug, {}).setdefault("instances", {})
-    for _, inst in selected:
-        counts[inst["slug"]] = counts.get(inst["slug"], 0) + 1
+    selected_slugs = {inst["slug"] for _, inst in selected}
+
+    # Décompte du cooldown pour les candidates qui en étaient captives ce
+    # round -- décrémenté uniquement quand l'instance était candidate
+    # (pas en temps réel absolu, cohérent avec le fait que cette
+    # fonction n'est appelée que lorsqu'une instance est pertinente pour
+    # une thématique).
+    for _, inst in en_cooldown:
+        slug = inst["slug"]
+        cooldowns[slug] = max(0, cooldowns.get(slug, 0) - 1)
+
+    # Mise à jour streak/compteur/déclenchement du cooldown pour les
+    # candidates éligibles ce round -- sauf l'exemptée, qui n'accumule
+    # jamais de streak.
+    for pair in eligibles:
+        slug = pair[1]["slug"]
+        if slug == exempt_slug:
+            if slug in selected_slugs:
+                counts[slug] = counts.get(slug, 0) + 1
+            continue
+        if slug in selected_slugs:
+            counts[slug] = counts.get(slug, 0) + 1
+            streaks[slug] = streaks.get(slug, 0) + 1
+            if streaks[slug] >= COOLDOWN_STREAK:
+                cooldowns[slug] = COOLDOWN_DURATION
+                streaks[slug] = 0
+        else:
+            streaks[slug] = 0
 
     return [inst for _, inst in selected]
+
+
+def _select_with_custom_guarantee(scored, scenario_slug, dry_run, max_n):
+    """
+    Garantie d'inclusion des instances custom (backlog Partie 3, risque
+    identifié le 3 août 2026, corrigé le 21 août 2026).
+
+    Risque comblé : snapshot.py (apply_custom_injections) applique
+    TOUJOURS les deltas de variables d'une instance custom, sans
+    filtrage -- mais jusqu'ici, sa description ne parvenait au LLM que
+    si elle survivait au même filtrage par pertinence thématique que
+    n'importe quelle instance du socle (filter_instances_for_thematique
+    / select_instances_by_impact). Une instance custom avec un score de
+    pertinence faible pour la thématique en cours (peu de recoupement
+    variables/zone) pouvait donc influencer le monde sans jamais être
+    décrite -- décalage entre "ce qui bouge les chiffres" et "ce que le
+    LLM voit".
+
+    Principe : sépare scored (liste de tuples (score, inst)) en
+    instances custom (injection.type == "custom") et non-custom. Les
+    custom obtiennent une place garantie dans la limite de max_n --
+    si elles sont plus nombreuses que de places disponibles, priorité
+    entre elles par score décroissant (cas non rencontré à ce jour,
+    vault à zéro instance custom au 21 août 2026, mais pas exclu à
+    l'avenir). Les places restantes vont aux non-custom, via la même
+    rotation à mémoire qu'avant ce correctif (_select_least_used_
+    instances) si scenario_slug est fourni, sinon un tri déterministe
+    simple (repli legacy, inchangé).
+
+    NON-RÉGRESSION : si aucune instance custom n'est présente dans
+    scored (cas de tout le vault au moment de ce correctif), le
+    comportement est STRICTEMENT identique à avant -- max_n places
+    toutes disputées par les non-custom, même rotation, même tri.
+    """
+    def _est_garanti(inst):
+        # 22 août 2026 : élargi de la garantie custom (21 août) au flag
+        # priorite_forcee -- deux portes d'entrée différentes vers le
+        # même pool garanti (édition manuelle d'une instance existante,
+        # ou case à cocher à la création). Une instance priorite_forcee
+        # échappe de fait à la rotation _select_least_used_instances
+        # (jamais dans noncustom ci-dessous) -- aucun conflit avec la
+        # pénalité d'usage qui y est appliquée.
+        #
+        # 23 août 2026 : injection.garantie_selection (défaut true si
+        # absent -- AUCUNE régression sur les instances custom
+        # existantes) permet de découpler la garantie de présence de la
+        # propagation d'impact sur les variables (apply_custom_injections,
+        # snapshot.py, qui ne regarde QUE injection.type == "custom",
+        # jamais ce nouveau flag -- une instance peut donc continuer
+        # d'influencer la simulation du monde tout en perdant sa
+        # garantie de présence dans les articles). Cas d'usage réel :
+        # gelecek_meclisi, injectée en 2047 sur 4 scénarios, devenue
+        # quasi-omniprésente (jusqu'à 98% des articles new_sustainability)
+        # -- la garantie initiale n'avait plus de raison d'être des
+        # années plus tard, mais son effet causal sur gouvernance_
+        # institutions/technologie_information/organisation_territoires
+        # devait être préservé.
+        injection = inst.get("injection", {})
+        return (
+            (injection.get("type") == "custom"
+             and injection.get("garantie_selection", True) is not False)
+            or inst.get("priorite_forcee") is True
+        )
+
+    custom = sorted(
+        [(s, i) for s, i in scored if _est_garanti(i)],
+        key=lambda x: -x[0]
+    )
+    noncustom = [(s, i) for s, i in scored if not _est_garanti(i)]
+
+    guaranteed = custom[:max_n]
+    if len(custom) > max_n:
+        exclues = ", ".join(i.get("slug", "?") for _, i in custom[max_n:])
+        print("[loader] [WARN] {} instances custom en lice pour {} emplacement(s) "
+              "garanti(s) -- {} exclue(s) malgré la garantie (priorité au score) : "
+              "{}".format(len(custom), max_n, len(custom) - max_n, exclues))
+    if guaranteed:
+        noms = ", ".join(i.get("slug", "?") for _, i in guaranteed)
+        print("[loader] Instance(s) custom garantie(s) dans filtered_instances : {}".format(noms))
+
+    remaining = max_n - len(guaranteed)
+    if remaining > 0 and noncustom:
+        if scenario_slug:
+            usage_state = _load_instance_usage_state()
+            selected_noncustom = _select_least_used_instances(
+                noncustom, usage_state, scenario_slug, remaining
+            )
+            if not dry_run:
+                _save_instance_usage_state(usage_state)
+        else:
+            noncustom.sort(key=lambda x: -x[0])
+            selected_noncustom = [inst for _, inst in noncustom[:remaining]]
+    else:
+        selected_noncustom = []
+
+    result = [inst for _, inst in guaranteed] + selected_noncustom
+    # Tri final par score décroissant -- ordre d'affichage cohérent
+    # (les plus pertinentes/impactantes en tête), même esprit que le tri
+    # déjà en place avant ce correctif.
+    score_by_slug = {i["slug"]: s for s, i in scored if i.get("slug")}
+    result.sort(key=lambda inst: -score_by_slug.get(inst.get("slug", ""), 0))
+    return result
 
 
 def select_instances_by_impact(instances, scenario_slug, dry_run=True, max_n=6):
@@ -1249,14 +1492,12 @@ def select_instances_by_impact(instances, scenario_slug, dry_run=True, max_n=6):
     utilisé par snapshot.py) -- même rotation à mémoire que
     filter_instances_for_thematique() ci-dessous, sur le score
     impact_systemique_global plutôt qu'un score de pertinence thématique.
+
+    Garantie d'inclusion des instances custom ajoutée le 21 août 2026 --
+    voir _select_with_custom_guarantee().
     """
-    usage_state = _load_instance_usage_state()
     scored = [(inst.get("impact_systemique_global", 0), inst) for inst in instances]
-    scored.sort(key=lambda x: -x[0])
-    selected = _select_least_used_instances(scored, usage_state, scenario_slug, max_n)
-    if not dry_run:
-        _save_instance_usage_state(usage_state)
-    return selected
+    return _select_with_custom_guarantee(scored, scenario_slug, dry_run, max_n)
 
 
 # ─────────────────────────────────────────
@@ -1449,8 +1690,25 @@ def filter_instances_for_thematique(instances, thematique, scenario_slug=None, d
         # Score 4 — impact systémique global
         score += inst.get("impact_systemique_global", 0) * 0.5
 
-        # Exclure les instances sans pertinence
-        if score > 0:
+        # Exclure les instances sans pertinence -- SAUF une instance
+        # custom à score nul (21 août 2026, backlog Partie 3) ou une
+        # instance priorite_forcee (22 août 2026), qui restent
+        # candidates à la garantie d'inclusion ci-dessous plutôt que
+        # d'être écartées avant même d'y arriver. Sans l'un ou l'autre
+        # cas (situation de tout le vault au 21 août), comportement
+        # inchangé.
+        #
+        # 23 août 2026 : is_custom tient compte de
+        # injection.garantie_selection (défaut true, voir _est_garanti
+        # dans _select_with_custom_guarantee ci-dessus pour le contexte
+        # complet) -- une instance custom avec garantie_selection: false
+        # n'est plus exemptée de l'exclusion à score nul, exactement
+        # comme une instance canonique.
+        injection = inst.get("injection", {})
+        is_custom = (injection.get("type") == "custom"
+                     and injection.get("garantie_selection", True) is not False)
+        is_priorite_forcee = inst.get("priorite_forcee") is True
+        if score > 0 or is_custom or is_priorite_forcee:
             scored.append((score, inst))
 
     # Rotation à mémoire (ajouté le 2 août 2026) : au-delà de MAX_INSTANCES
@@ -1462,15 +1720,11 @@ def filter_instances_for_thematique(instances, thematique, scenario_slug=None, d
     # d'articles. Sans scenario_slug (appel legacy), repli sur
     # l'ancien comportement déterministe -- pas de rotation possible sans
     # savoir sous quel scénario compter l'usage.
-    if scenario_slug:
-        usage_state = _load_instance_usage_state()
-        selected = _select_least_used_instances(scored, usage_state, scenario_slug, MAX_INSTANCES)
-        if not dry_run:
-            _save_instance_usage_state(usage_state)
-        return selected
-
-    scored.sort(key=lambda x: -x[0])
-    return [inst for _, inst in scored[:MAX_INSTANCES]]
+    #
+    # Garantie d'inclusion des instances custom ajoutée le 21 août 2026
+    # -- voir _select_with_custom_guarantee(). Sans instance custom,
+    # comportement STRICTEMENT identique à avant ce correctif.
+    return _select_with_custom_guarantee(scored, scenario_slug, dry_run, MAX_INSTANCES)
 
 if __name__ == "__main__":
     print("=== Test loader.py ===\n")

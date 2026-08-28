@@ -1,0 +1,117 @@
+---
+name: Protocole Phénix
+type: instance
+slug: test_priorite_forcee_22aout_new_sustainability
+entite: test_priorite_forcee_22aout
+scenario: new_sustainability
+localisation:
+  zone: centre_institutionnel_geneve
+  lieu: Genève
+  type_lieu: infrastructure
+
+type_dans_scenario: organisation
+
+role_dans_scenario: >
+  Le Protocole Phénix est une entité hybride née de la fusion entre des think tanks technocratiques, des unités militaires spécialisées dans la gestion de crise et des consortiums d'IA décisionnelles. Son rôle est de tester et imposer des protocoles de priorisation des ressources en contexte de rupture systémique, en s'appuyant sur une logique d'urgence et d'efficacité immédiate. Il opère comme un arbitre invisible des tensions entre régénération écologique, stabilité géopolitique et souveraineté algorithmique, souvent au détriment des processus démocratiques traditionnels.
+
+responsabilites: >
+  Le Protocole Phénix intervient dans les zones de crise (climatiques, énergétiques, migratoires) pour réallouer les ressources critiques (eau, énergie, données, infrastructures) selon des critères d'optimisation systémique. Il supervise des exercices de simulation à grande échelle, valide ou invalide les décisions des agences locales, et peut imposer des mesures coercitives en cas de blocage institutionnel. Ses algorithmes de priorisation sont intégrés aux systèmes de gouvernance hybride (humain-IA) des régions sous tension.
+
+impact_local: 4
+impact_systemique_global: 3
+
+variables_influencees:
+    - gouvernance_institutions
+    - technologie_information
+    - energie_ressources_critiques
+
+zone_geographique:
+    - régionale
+    - continentale
+    - globale
+
+zone_systemique:
+    - gouvernance
+    - IA
+    - énergie
+    - sécurité
+
+alliances:
+    - bureau_gouvernance_algorithmique_new_sustainability
+    - conseil_regulation_algorithmique_new_sustainability
+    - directive_kontinuum_new_sustainability
+    - agence_mondiale_de_modelisation_climatique_ammc_new_sustainability
+    - conseil_regulation_ressources_new_sustainability
+
+oppositions:
+    - coalition_anti_algorithme_des_autonomies_locales_new_sustainability
+    - collectifs_de_desobeissance_algorithmique_new_sustainability
+    - parlement_territoires_nairobi_new_sustainability
+    - mouvement_pour_l_autodetermination_territoriale_new_sustainability
+    - reseaux_de_gouvernance_territoriale_distribues_new_sustainability
+
+type_relation_dominante: conflit
+
+annee_debut: 2041
+annee_fin: 
+
+trajectoire: dominant
+est_clandestin: false
+generation: ère cognitive
+
+injection:
+  type: custom
+  annee_injection: 2041
+  contexte_injection: >
+    Le Protocole Phénix incarne la tension entre régulation algorithmique et gouvernance inclusive. Son impact négatif sur 'gouvernance_institutions' reflète la normalisation de l'urgence comme mode de gestion, tandis que son influence positive sur 'technologie_information' et 'energie_ressources_critiques' illustre son rôle dans l'optimisation systémique des ressources rares.
+  impact_sur_variables:
+  - variable: gouvernance_institutions
+    delta_level: 12
+    duree: 20
+    polarite: -1
+  - variable: technologie_information
+    delta_level: 10
+    duree: 15
+    polarite: 1
+  - variable: energie_ressources_critiques
+    delta_level: 8
+    duree: 10
+    polarite: 1
+  propagation:
+    via_matrice: true
+
+description_journalistique: >
+  Depuis son quartier général flottant au-dessus de Genève, le Protocole Phénix est devenu le 'méta-régulateur' invisible des crises du XXIe siècle. Ses équipes, composées d'anciens militaires, de data scientists et de philosophes des systèmes, interviennent discrètement dans les zones de rupture – qu'il s'agisse d'une pénurie d'eau dans le Sahel ou d'une cyberattaque sur les réseaux énergétiques européens. Leur méthode ? Des algorithmes de priorisation qui tranchent dans le vif, souvent au mépris des processus démocratiques locaux. 'Ils sont les pompiers pyromanes de notre époque', résume un ancien membre du Parlement des Territoires. 'Ils éteignent les incendies, mais en créant de nouvelles braises.'
+
+signes_distinctifs: >
+  Le logo du Protocole Phénix – un oiseau stylisé dont les ailes forment un circuit imprimé – est apposé sur les infrastructures critiques qu'il supervise. Ses agents portent des combinaisons grises à capteurs biométriques, et leurs décisions sont symbolisées par des 'sceaux numériques' visibles uniquement via des lunettes à réalité augmentée. Leur devise, 'Optimum in Extremis', est gravée sur les portes de leurs centres de commandement mobiles.
+
+tensions_narratives: >
+  Le Protocole Phénix cristallise les tensions entre efficacité et légitimité. Ses détracteurs l'accusent de normaliser l'état d'urgence permanent, tandis que ses partisans y voient le seul rempart contre l'effondrement systémique. Ses algorithmes, opaques par nécessité, sont au cœur de scandales récurrents – comme lors de la 'Nuit des Priorités' en 2052, où des milliers de patients ont été privés d'accès aux cliniques régénératives au profit de la stabilisation des réseaux électriques. La question se pose : jusqu'où une société peut-elle accepter d'être gouvernée par l'urgence ?
+
+date_creation: 2026-08-22
+priorite_forcee: true
+---
+
+# Protocole Phénix
+
+## Rôle dans [[new_sustainability]]
+Le Protocole Phénix est une entité hybride née de la fusion entre des think tanks technocratiques, des unités militaires spécialisées dans la gestion de crise et des consortiums d'IA décisionnelles. Son rôle est de tester et imposer des protocoles de priorisation des ressources en contexte de rupture systémique, en s'appuyant sur une logique d'urgence et d'efficacité immédiate. Il opère comme un arbitre invisible des tensions entre régénération écologique, stabilité géopolitique et souveraineté algorithmique, souvent au détriment des processus démocratiques traditionnels.
+
+## Responsabilités
+Le Protocole Phénix intervient dans les zones de crise (climatiques, énergétiques, migratoires) pour réallouer les ressources critiques (eau, énergie, données, infrastructures) selon des critères d'optimisation systémique. Il supervise des exercices de simulation à grande échelle, valide ou invalide les décisions des agences locales, et peut imposer des mesures coercitives en cas de blocage institutionnel. Ses algorithmes de priorisation sont intégrés aux systèmes de gouvernance hybride (humain-IA) des régions sous tension.
+
+## Variables influencées
+- [[gouvernance_institutions]]
+- [[technologie_information]]
+- [[energie_ressources_critiques]]
+
+## Relations
+**Alliés** : [[bureau_gouvernance_algorithmique_new_sustainability]], [[conseil_regulation_algorithmique_new_sustainability]], [[directive_kontinuum_new_sustainability]], [[agence_mondiale_de_modelisation_climatique_ammc_new_sustainability]], [[conseil_regulation_ressources_new_sustainability]]
+**Opposants** : [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]], [[collectifs_de_desobeissance_algorithmique_new_sustainability]], [[parlement_territoires_nairobi_new_sustainability]], [[mouvement_pour_l_autodetermination_territoriale_new_sustainability]], [[reseaux_de_gouvernance_territoriale_distribues_new_sustainability]]
+
+## Description journalistique
+Depuis son quartier général flottant au-dessus de Genève, le Protocole Phénix est devenu le 'méta-régulateur' invisible des crises du XXIe siècle. Ses équipes, composées d'anciens militaires, de data scientists et de philosophes des systèmes, interviennent discrètement dans les zones de rupture – qu'il s'agisse d'une pénurie d'eau dans le Sahel ou d'une cyberattaque sur les réseaux énergétiques européens. Leur méthode ? Des algorithmes de priorisation qui tranchent dans le vif, souvent au mépris des processus démocratiques locaux. 'Ils sont les pompiers pyromanes de notre époque', résume un ancien membre du Parlement des Territoires. 'Ils éteignent les incendies, mais en créant de nouvelles braises.'
+
+## Tensions narratives
+Le Protocole Phénix cristallise les tensions entre efficacité et légitimité. Ses détracteurs l'accusent de normaliser l'état d'urgence permanent, tandis que ses partisans y voient le seul rempart contre l'effondrement systémique. Ses algorithmes, opaques par nécessité, sont au cœur de scandales récurrents – comme lors de la 'Nuit des Priorités' en 2052, où des milliers de patients ont été privés d'accès aux cliniques régénératives au profit de la stabilisation des réseaux électriques. La question se pose : jusqu'où une société peut-elle accepter d'être gouvernée par l'urgence ?

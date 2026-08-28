@@ -1,0 +1,1099 @@
+
+============================================================
+OURRASSOL 2098 — Génération de série
+============================================================
+  Scénario     : new_sustainability
+  Thématiques  : 6
+    - actualites_a_la_une
+    - economie_finance
+    - societe
+    - education
+    - histoire_patrimoine
+    - petites_annonces_services
+  Articles/th. : 2
+  Longueur     : auto
+============================================================
+
+[series] 12 articles à générer...
+
+[1/12] new_sustainability × actualites_a_la_une — 3 janvier 2098
+
+[snapshot] Construction du monde 2098 — scénario : new_sustainability
+[snapshot] Variables pilotes : ['climat_environnement_global', 'technologie_information', 'gouvernance_institutions', 'energie_ressources_critiques']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 3 | Cohérence : OK
+[snapshot] Jalons trajectoire : 154 (36 majeurs)
+[snapshot] Événements signal_to_state : 65 (27 majeurs)
+[snapshot] Tensions thématiques : 8
+[snapshot] Instances chargées : 112 | Filtrées : 6
+[snapshot] Injection custom 'Meclis-i Atiye — Assemblée des Futurs Convergents' (an 2047, 51 ans d'effet)
+  → gouvernance_institutions : 90 → 100 (delta:+15.0)
+  → technologie_information : 91.6 → 100 (delta:+10.0)
+  → organisation_territoires : 41.0 → 53.0 (delta:+12.0)
+[snapshot] Modifications custom (entités) : 15 variables affectées
+[snapshot] Événement custom 'La Crise de Détroit : Frappes contenues et médiation planétaire' (an 2026, 72 ans d'effet)
+  → geopolitique_conflits : 13.0 → 21.0 (delta:+8.0)
+  → energie_ressources_critiques : 28.3 → 38.3 (delta:+10.0)
+  → gouvernance_institutions : 94.2 → 99.2 (delta:+5.0)
+  → demographie_mobilite_humaine : 46.1 → 50.1 (delta:+4.0)
+[snapshot] Événement custom 'Acte Fondateur de Nuku — La Souveraineté Post-Territoriale du Pacifique' (an 2039, 59 ans d'effet)
+  → climat_environnement_global : 31.7 → 34.7 (delta:+3.0)
+  → gouvernance_institutions : 99.2 → 100 (delta:+8.0)
+  → organisation_territoires : 49.6 → 59.6 (delta:+10.0)
+  → frontieres_du_systeme : 66.2 → 78.2 (delta:+12.0)
+[snapshot] Événement custom 'La Crise des Neuf Nœuds — Catalyseur des Communs Numériques' (an 2040, 58 ans d'effet)
+  → technologie_information : 100 → 85.0 (delta:-15.0)
+  → gouvernance_institutions : 89.2 → 99.2 (delta:+10.0)
+  → systeme_economique_redistribution : 79.9 → 87.9 (delta:+8.0)
+[snapshot] Événement custom 'Enchères de Nuuk — La Souveraineté Négociée des Terres Rares du Groenland' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 29.6 → 37.6 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → geopolitique_conflits : 0 → 0 (delta:-5.0)
+  → organisation_territoires : 54.0 → 58.0 (delta:+4.0)
+[snapshot] Événement custom 'La Grande Confluence — Exode du Midwest et Pacte des Grands Lacs' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 58.1 → 46.1 (delta:-12.0)
+  → organisation_territoires : 52.1 → 42.1 (delta:-10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → climat_environnement_global : 33.2 → 36.2 (delta:+3.0)
+[snapshot] Événement custom 'Crise de Gouvernance du Bassin Amazonien — L'Épreuve de Souveraineté' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 36.2 → 40.2 (delta:+4.0)
+  → geopolitique_conflits : 11.3 → 5.300000000000001 (delta:-6.0)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+  → organisation_territoires : 46.2 → 53.2 (delta:+7.0)
+[snapshot] Événement custom 'Révolution du Travail Régénératif dans la Confédération des Territoires Sahéliens Autonomes' (an 2047, 51 ans d'effet)
+  → systemes_productifs_travail : 41.8 → 56.8 (delta:+15.0)
+  → technologie_information : 100 → 100 (delta:+10.0)
+  → energie_ressources_critiques : 37.7 → 45.7 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+[snapshot] Événement custom 'Pacte Lacustre des Grands Lacs — Autonomie Négociée dans le Cadre de Nairobi' (an 2051, 47 ans d'effet)
+  → organisation_territoires : 67.0 → 79.0 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → geopolitique_conflits : 0 → 5.0 (delta:+5.0)
+[snapshot] Événement custom 'Traité de Belém — Souveraineté Carbone Amazonienne' (an 2053, 45 ans d'effet)
+  → climat_environnement_global : 28.5 → 36.5 (delta:+8.0)
+  → gouvernance_institutions : 96.4 → 100 (delta:+5.0)
+  → geopolitique_conflits : 0 → 6.0 (delta:+6.0)
+  → energie_ressources_critiques : 32.3 → 36.3 (delta:+4.0)
+[snapshot] Événement custom 'Victoire de la Coalition de Transition Sociale' (an 2055, 43 ans d'effet)
+  → gouvernance_institutions : 95.7 → 100 (delta:+8.0)
+  → systeme_economique_redistribution : 98.0 → 100 (delta:+12.0)
+  → valeurs_culture_tempo_sociale : 55 → 61.0 (delta:+6.0)
+[snapshot] Événement custom 'Forum Mondial des Infrastructures Hors-Grille d'Agadez — Charte de Souveraineté Numérique des Périphéries' (an 2062, 36 ans d'effet)
+  → technologie_information : 100 → 100 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → organisation_territoires : 76.3 → 88.3 (delta:+12.0)
+[snapshot] Événement custom 'L'Affaire Van Derburgh — Procès du Patrimoine Numérique' (an 2078, 20 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+2.0)
+  → valeurs_culture_tempo_sociale : 61.0 → 62.0 (delta:+1.0)
+[snapshot] Événements custom : 12 | 199 variables affectées
+[snapshot] Signal custom 'decodage_langage_animaux_ia' sur valeurs_culture_tempo_sociale (an 2033, 65 ans d'effet)
+  → valeurs_culture_tempo_sociale : 62.0 → 67.0 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur technologie_information (an 2031, 67 ans d'effet)
+  → technologie_information : 100 → 100 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur gouvernance_institutions (an 2034, 64 ans d'effet)
+  → gouvernance_institutions : 100 → 95.0 (delta:-5.0)
+[snapshot] Signaux custom chiffrés : 3 | 3 variables affectées
+
+[prompt] Assemblage du prompt...
+[prompt] System prompt : 2814 caractères
+[prompt] User prompt   : 62345 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-large-latest, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 18518 | sortie : 987
+[api] Article généré : 3833 caractères
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/new_sustainability/20260823_150154_new_sustainability_actualites_a_la_une_article_3janvier2098.md
+  ✓ Sauvegardé : 20260823_150154_new_sustainability_actualites_a_la_une_article_3janvier2098.md
+
+[2/12] new_sustainability × actualites_a_la_une — 17 janvier 2098
+
+[snapshot] Construction du monde 2098 — scénario : new_sustainability
+[snapshot] Variables pilotes : ['climat_environnement_global', 'technologie_information', 'gouvernance_institutions', 'energie_ressources_critiques']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 3 | Cohérence : OK
+[snapshot] Jalons trajectoire : 154 (36 majeurs)
+[snapshot] Événements signal_to_state : 65 (27 majeurs)
+[snapshot] Tensions thématiques : 8
+[snapshot] Instances chargées : 112 | Filtrées : 6
+[snapshot] Injection custom 'Meclis-i Atiye — Assemblée des Futurs Convergents' (an 2047, 51 ans d'effet)
+  → gouvernance_institutions : 90 → 100 (delta:+15.0)
+  → technologie_information : 91.6 → 100 (delta:+10.0)
+  → organisation_territoires : 41.0 → 53.0 (delta:+12.0)
+[snapshot] Modifications custom (entités) : 15 variables affectées
+[snapshot] Événement custom 'La Crise de Détroit : Frappes contenues et médiation planétaire' (an 2026, 72 ans d'effet)
+  → geopolitique_conflits : 13.0 → 21.0 (delta:+8.0)
+  → energie_ressources_critiques : 28.3 → 38.3 (delta:+10.0)
+  → gouvernance_institutions : 94.2 → 99.2 (delta:+5.0)
+  → demographie_mobilite_humaine : 46.1 → 50.1 (delta:+4.0)
+[snapshot] Événement custom 'Acte Fondateur de Nuku — La Souveraineté Post-Territoriale du Pacifique' (an 2039, 59 ans d'effet)
+  → climat_environnement_global : 31.7 → 34.7 (delta:+3.0)
+  → gouvernance_institutions : 99.2 → 100 (delta:+8.0)
+  → organisation_territoires : 49.6 → 59.6 (delta:+10.0)
+  → frontieres_du_systeme : 66.2 → 78.2 (delta:+12.0)
+[snapshot] Événement custom 'La Crise des Neuf Nœuds — Catalyseur des Communs Numériques' (an 2040, 58 ans d'effet)
+  → technologie_information : 100 → 85.0 (delta:-15.0)
+  → gouvernance_institutions : 89.2 → 99.2 (delta:+10.0)
+  → systeme_economique_redistribution : 79.9 → 87.9 (delta:+8.0)
+[snapshot] Événement custom 'Enchères de Nuuk — La Souveraineté Négociée des Terres Rares du Groenland' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 29.6 → 37.6 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → geopolitique_conflits : 0 → 0 (delta:-5.0)
+  → organisation_territoires : 54.0 → 58.0 (delta:+4.0)
+[snapshot] Événement custom 'La Grande Confluence — Exode du Midwest et Pacte des Grands Lacs' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 58.1 → 46.1 (delta:-12.0)
+  → organisation_territoires : 52.1 → 42.1 (delta:-10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → climat_environnement_global : 33.2 → 36.2 (delta:+3.0)
+[snapshot] Événement custom 'Crise de Gouvernance du Bassin Amazonien — L'Épreuve de Souveraineté' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 36.2 → 40.2 (delta:+4.0)
+  → geopolitique_conflits : 11.3 → 5.300000000000001 (delta:-6.0)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+  → organisation_territoires : 46.2 → 53.2 (delta:+7.0)
+[snapshot] Événement custom 'Révolution du Travail Régénératif dans la Confédération des Territoires Sahéliens Autonomes' (an 2047, 51 ans d'effet)
+  → systemes_productifs_travail : 41.8 → 56.8 (delta:+15.0)
+  → technologie_information : 100 → 100 (delta:+10.0)
+  → energie_ressources_critiques : 37.7 → 45.7 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+[snapshot] Événement custom 'Pacte Lacustre des Grands Lacs — Autonomie Négociée dans le Cadre de Nairobi' (an 2051, 47 ans d'effet)
+  → organisation_territoires : 67.0 → 79.0 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → geopolitique_conflits : 0 → 5.0 (delta:+5.0)
+[snapshot] Événement custom 'Traité de Belém — Souveraineté Carbone Amazonienne' (an 2053, 45 ans d'effet)
+  → climat_environnement_global : 28.5 → 36.5 (delta:+8.0)
+  → gouvernance_institutions : 96.4 → 100 (delta:+5.0)
+  → geopolitique_conflits : 0 → 6.0 (delta:+6.0)
+  → energie_ressources_critiques : 32.3 → 36.3 (delta:+4.0)
+[snapshot] Événement custom 'Victoire de la Coalition de Transition Sociale' (an 2055, 43 ans d'effet)
+  → gouvernance_institutions : 95.7 → 100 (delta:+8.0)
+  → systeme_economique_redistribution : 98.0 → 100 (delta:+12.0)
+  → valeurs_culture_tempo_sociale : 55 → 61.0 (delta:+6.0)
+[snapshot] Événement custom 'Forum Mondial des Infrastructures Hors-Grille d'Agadez — Charte de Souveraineté Numérique des Périphéries' (an 2062, 36 ans d'effet)
+  → technologie_information : 100 → 100 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → organisation_territoires : 76.3 → 88.3 (delta:+12.0)
+[snapshot] Événement custom 'L'Affaire Van Derburgh — Procès du Patrimoine Numérique' (an 2078, 20 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+2.0)
+  → valeurs_culture_tempo_sociale : 61.0 → 62.0 (delta:+1.0)
+[snapshot] Événements custom : 12 | 199 variables affectées
+[snapshot] Signal custom 'decodage_langage_animaux_ia' sur valeurs_culture_tempo_sociale (an 2033, 65 ans d'effet)
+  → valeurs_culture_tempo_sociale : 62.0 → 67.0 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur technologie_information (an 2031, 67 ans d'effet)
+  → technologie_information : 100 → 100 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur gouvernance_institutions (an 2034, 64 ans d'effet)
+  → gouvernance_institutions : 100 → 95.0 (delta:-5.0)
+[snapshot] Signaux custom chiffrés : 3 | 3 variables affectées
+
+[prompt] Assemblage du prompt...
+[prompt] System prompt : 2814 caractères
+[prompt] User prompt   : 62369 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-large-latest, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 18519 | sortie : 1038
+[api] Article généré : 4105 caractères
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/new_sustainability/20260823_150241_new_sustainability_actualites_a_la_une_article_17janvier2098.md
+  ✓ Sauvegardé : 20260823_150241_new_sustainability_actualites_a_la_une_article_17janvier2098.md
+
+[3/12] new_sustainability × economie_finance — 2 février 2098
+
+[snapshot] Construction du monde 2098 — scénario : new_sustainability
+[snapshot] Variables pilotes : ['climat_environnement_global', 'technologie_information', 'gouvernance_institutions', 'energie_ressources_critiques']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 3 | Cohérence : OK
+[snapshot] Jalons trajectoire : 154 (36 majeurs)
+[snapshot] Événements signal_to_state : 65 (27 majeurs)
+[snapshot] Tensions thématiques : 8
+[snapshot] Instances chargées : 112 | Filtrées : 6
+[snapshot] Injection custom 'Meclis-i Atiye — Assemblée des Futurs Convergents' (an 2047, 51 ans d'effet)
+  → gouvernance_institutions : 90 → 100 (delta:+15.0)
+  → technologie_information : 91.6 → 100 (delta:+10.0)
+  → organisation_territoires : 41.0 → 53.0 (delta:+12.0)
+[snapshot] Modifications custom (entités) : 15 variables affectées
+[snapshot] Événement custom 'La Crise de Détroit : Frappes contenues et médiation planétaire' (an 2026, 72 ans d'effet)
+  → geopolitique_conflits : 13.0 → 21.0 (delta:+8.0)
+  → energie_ressources_critiques : 28.3 → 38.3 (delta:+10.0)
+  → gouvernance_institutions : 94.2 → 99.2 (delta:+5.0)
+  → demographie_mobilite_humaine : 46.1 → 50.1 (delta:+4.0)
+[snapshot] Événement custom 'Acte Fondateur de Nuku — La Souveraineté Post-Territoriale du Pacifique' (an 2039, 59 ans d'effet)
+  → climat_environnement_global : 31.7 → 34.7 (delta:+3.0)
+  → gouvernance_institutions : 99.2 → 100 (delta:+8.0)
+  → organisation_territoires : 49.6 → 59.6 (delta:+10.0)
+  → frontieres_du_systeme : 66.2 → 78.2 (delta:+12.0)
+[snapshot] Événement custom 'La Crise des Neuf Nœuds — Catalyseur des Communs Numériques' (an 2040, 58 ans d'effet)
+  → technologie_information : 100 → 85.0 (delta:-15.0)
+  → gouvernance_institutions : 89.2 → 99.2 (delta:+10.0)
+  → systeme_economique_redistribution : 79.9 → 87.9 (delta:+8.0)
+[snapshot] Événement custom 'Enchères de Nuuk — La Souveraineté Négociée des Terres Rares du Groenland' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 29.6 → 37.6 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → geopolitique_conflits : 0 → 0 (delta:-5.0)
+  → organisation_territoires : 54.0 → 58.0 (delta:+4.0)
+[snapshot] Événement custom 'La Grande Confluence — Exode du Midwest et Pacte des Grands Lacs' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 58.1 → 46.1 (delta:-12.0)
+  → organisation_territoires : 52.1 → 42.1 (delta:-10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → climat_environnement_global : 33.2 → 36.2 (delta:+3.0)
+[snapshot] Événement custom 'Crise de Gouvernance du Bassin Amazonien — L'Épreuve de Souveraineté' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 36.2 → 40.2 (delta:+4.0)
+  → geopolitique_conflits : 11.3 → 5.300000000000001 (delta:-6.0)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+  → organisation_territoires : 46.2 → 53.2 (delta:+7.0)
+[snapshot] Événement custom 'Révolution du Travail Régénératif dans la Confédération des Territoires Sahéliens Autonomes' (an 2047, 51 ans d'effet)
+  → systemes_productifs_travail : 41.8 → 56.8 (delta:+15.0)
+  → technologie_information : 100 → 100 (delta:+10.0)
+  → energie_ressources_critiques : 37.7 → 45.7 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+[snapshot] Événement custom 'Pacte Lacustre des Grands Lacs — Autonomie Négociée dans le Cadre de Nairobi' (an 2051, 47 ans d'effet)
+  → organisation_territoires : 67.0 → 79.0 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → geopolitique_conflits : 0 → 5.0 (delta:+5.0)
+[snapshot] Événement custom 'Traité de Belém — Souveraineté Carbone Amazonienne' (an 2053, 45 ans d'effet)
+  → climat_environnement_global : 28.5 → 36.5 (delta:+8.0)
+  → gouvernance_institutions : 96.4 → 100 (delta:+5.0)
+  → geopolitique_conflits : 0 → 6.0 (delta:+6.0)
+  → energie_ressources_critiques : 32.3 → 36.3 (delta:+4.0)
+[snapshot] Événement custom 'Victoire de la Coalition de Transition Sociale' (an 2055, 43 ans d'effet)
+  → gouvernance_institutions : 95.7 → 100 (delta:+8.0)
+  → systeme_economique_redistribution : 98.0 → 100 (delta:+12.0)
+  → valeurs_culture_tempo_sociale : 55 → 61.0 (delta:+6.0)
+[snapshot] Événement custom 'Forum Mondial des Infrastructures Hors-Grille d'Agadez — Charte de Souveraineté Numérique des Périphéries' (an 2062, 36 ans d'effet)
+  → technologie_information : 100 → 100 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → organisation_territoires : 76.3 → 88.3 (delta:+12.0)
+[snapshot] Événement custom 'L'Affaire Van Derburgh — Procès du Patrimoine Numérique' (an 2078, 20 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+2.0)
+  → valeurs_culture_tempo_sociale : 61.0 → 62.0 (delta:+1.0)
+[snapshot] Événements custom : 12 | 199 variables affectées
+[snapshot] Signal custom 'decodage_langage_animaux_ia' sur valeurs_culture_tempo_sociale (an 2033, 65 ans d'effet)
+  → valeurs_culture_tempo_sociale : 62.0 → 67.0 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur technologie_information (an 2031, 67 ans d'effet)
+  → technologie_information : 100 → 100 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur gouvernance_institutions (an 2034, 64 ans d'effet)
+  → gouvernance_institutions : 100 → 95.0 (delta:-5.0)
+[snapshot] Signaux custom chiffrés : 3 | 3 variables affectées
+
+[prompt] Assemblage du prompt...
+[prompt] System prompt : 2771 caractères
+[prompt] User prompt   : 66151 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-large-latest, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 19264 | sortie : 2514
+[api] Article généré : 10599 caractères
+[api] Longueur hors plage (1468 mots, attendu 600-900, écart 63%) — retry unique avec rappel explicite...
+[llm] Mistral (mistral-large-latest) — entrée : 19376 | sortie : 1937
+[api] Retry terminé : 1110 mots (attendu 600-900).
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/new_sustainability/20260823_150453_new_sustainability_economie_finance_article_2fevrier2098.md
+  ✓ Sauvegardé : 20260823_150453_new_sustainability_economie_finance_article_2fevrier2098.md
+
+[4/12] new_sustainability × economie_finance — 19 février 2098
+
+[snapshot] Construction du monde 2098 — scénario : new_sustainability
+[snapshot] Variables pilotes : ['climat_environnement_global', 'technologie_information', 'gouvernance_institutions', 'energie_ressources_critiques']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 3 | Cohérence : OK
+[snapshot] Jalons trajectoire : 154 (36 majeurs)
+[snapshot] Événements signal_to_state : 65 (27 majeurs)
+[snapshot] Tensions thématiques : 8
+[snapshot] Instances chargées : 112 | Filtrées : 6
+[snapshot] Injection custom 'Meclis-i Atiye — Assemblée des Futurs Convergents' (an 2047, 51 ans d'effet)
+  → gouvernance_institutions : 90 → 100 (delta:+15.0)
+  → technologie_information : 91.6 → 100 (delta:+10.0)
+  → organisation_territoires : 41.0 → 53.0 (delta:+12.0)
+[snapshot] Modifications custom (entités) : 15 variables affectées
+[snapshot] Événement custom 'La Crise de Détroit : Frappes contenues et médiation planétaire' (an 2026, 72 ans d'effet)
+  → geopolitique_conflits : 13.0 → 21.0 (delta:+8.0)
+  → energie_ressources_critiques : 28.3 → 38.3 (delta:+10.0)
+  → gouvernance_institutions : 94.2 → 99.2 (delta:+5.0)
+  → demographie_mobilite_humaine : 46.1 → 50.1 (delta:+4.0)
+[snapshot] Événement custom 'Acte Fondateur de Nuku — La Souveraineté Post-Territoriale du Pacifique' (an 2039, 59 ans d'effet)
+  → climat_environnement_global : 31.7 → 34.7 (delta:+3.0)
+  → gouvernance_institutions : 99.2 → 100 (delta:+8.0)
+  → organisation_territoires : 49.6 → 59.6 (delta:+10.0)
+  → frontieres_du_systeme : 66.2 → 78.2 (delta:+12.0)
+[snapshot] Événement custom 'La Crise des Neuf Nœuds — Catalyseur des Communs Numériques' (an 2040, 58 ans d'effet)
+  → technologie_information : 100 → 85.0 (delta:-15.0)
+  → gouvernance_institutions : 89.2 → 99.2 (delta:+10.0)
+  → systeme_economique_redistribution : 79.9 → 87.9 (delta:+8.0)
+[snapshot] Événement custom 'Enchères de Nuuk — La Souveraineté Négociée des Terres Rares du Groenland' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 29.6 → 37.6 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → geopolitique_conflits : 0 → 0 (delta:-5.0)
+  → organisation_territoires : 54.0 → 58.0 (delta:+4.0)
+[snapshot] Événement custom 'La Grande Confluence — Exode du Midwest et Pacte des Grands Lacs' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 58.1 → 46.1 (delta:-12.0)
+  → organisation_territoires : 52.1 → 42.1 (delta:-10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → climat_environnement_global : 33.2 → 36.2 (delta:+3.0)
+[snapshot] Événement custom 'Crise de Gouvernance du Bassin Amazonien — L'Épreuve de Souveraineté' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 36.2 → 40.2 (delta:+4.0)
+  → geopolitique_conflits : 11.3 → 5.300000000000001 (delta:-6.0)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+  → organisation_territoires : 46.2 → 53.2 (delta:+7.0)
+[snapshot] Événement custom 'Révolution du Travail Régénératif dans la Confédération des Territoires Sahéliens Autonomes' (an 2047, 51 ans d'effet)
+  → systemes_productifs_travail : 41.8 → 56.8 (delta:+15.0)
+  → technologie_information : 100 → 100 (delta:+10.0)
+  → energie_ressources_critiques : 37.7 → 45.7 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+[snapshot] Événement custom 'Pacte Lacustre des Grands Lacs — Autonomie Négociée dans le Cadre de Nairobi' (an 2051, 47 ans d'effet)
+  → organisation_territoires : 67.0 → 79.0 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → geopolitique_conflits : 0 → 5.0 (delta:+5.0)
+[snapshot] Événement custom 'Traité de Belém — Souveraineté Carbone Amazonienne' (an 2053, 45 ans d'effet)
+  → climat_environnement_global : 28.5 → 36.5 (delta:+8.0)
+  → gouvernance_institutions : 96.4 → 100 (delta:+5.0)
+  → geopolitique_conflits : 0 → 6.0 (delta:+6.0)
+  → energie_ressources_critiques : 32.3 → 36.3 (delta:+4.0)
+[snapshot] Événement custom 'Victoire de la Coalition de Transition Sociale' (an 2055, 43 ans d'effet)
+  → gouvernance_institutions : 95.7 → 100 (delta:+8.0)
+  → systeme_economique_redistribution : 98.0 → 100 (delta:+12.0)
+  → valeurs_culture_tempo_sociale : 55 → 61.0 (delta:+6.0)
+[snapshot] Événement custom 'Forum Mondial des Infrastructures Hors-Grille d'Agadez — Charte de Souveraineté Numérique des Périphéries' (an 2062, 36 ans d'effet)
+  → technologie_information : 100 → 100 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → organisation_territoires : 76.3 → 88.3 (delta:+12.0)
+[snapshot] Événement custom 'L'Affaire Van Derburgh — Procès du Patrimoine Numérique' (an 2078, 20 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+2.0)
+  → valeurs_culture_tempo_sociale : 61.0 → 62.0 (delta:+1.0)
+[snapshot] Événements custom : 12 | 199 variables affectées
+[snapshot] Signal custom 'decodage_langage_animaux_ia' sur valeurs_culture_tempo_sociale (an 2033, 65 ans d'effet)
+  → valeurs_culture_tempo_sociale : 62.0 → 67.0 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur technologie_information (an 2031, 67 ans d'effet)
+  → technologie_information : 100 → 100 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur gouvernance_institutions (an 2034, 64 ans d'effet)
+  → gouvernance_institutions : 100 → 95.0 (delta:-5.0)
+[snapshot] Signaux custom chiffrés : 3 | 3 variables affectées
+
+[prompt] Assemblage du prompt...
+[prompt] System prompt : 2771 caractères
+[prompt] User prompt   : 66145 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-large-latest, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 19258 | sortie : 1964
+[api] Article généré : 8024 caractères
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/new_sustainability/20260823_150556_new_sustainability_economie_finance_article_19fevrier2098.md
+  ✓ Sauvegardé : 20260823_150556_new_sustainability_economie_finance_article_19fevrier2098.md
+
+[5/12] new_sustainability × societe — 8 mars 2098
+
+[snapshot] Construction du monde 2098 — scénario : new_sustainability
+[snapshot] Variables pilotes : ['climat_environnement_global', 'technologie_information', 'gouvernance_institutions', 'energie_ressources_critiques']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 3 | Cohérence : OK
+[snapshot] Jalons trajectoire : 154 (36 majeurs)
+[snapshot] Événements signal_to_state : 65 (27 majeurs)
+[snapshot] Tensions thématiques : 2
+[snapshot] Instances chargées : 112 | Filtrées : 6
+[snapshot] Injection custom 'Meclis-i Atiye — Assemblée des Futurs Convergents' (an 2047, 51 ans d'effet)
+  → gouvernance_institutions : 90 → 100 (delta:+15.0)
+  → technologie_information : 91.6 → 100 (delta:+10.0)
+  → organisation_territoires : 41.0 → 53.0 (delta:+12.0)
+[snapshot] Modifications custom (entités) : 15 variables affectées
+[snapshot] Événement custom 'La Crise de Détroit : Frappes contenues et médiation planétaire' (an 2026, 72 ans d'effet)
+  → geopolitique_conflits : 13.0 → 21.0 (delta:+8.0)
+  → energie_ressources_critiques : 28.3 → 38.3 (delta:+10.0)
+  → gouvernance_institutions : 94.2 → 99.2 (delta:+5.0)
+  → demographie_mobilite_humaine : 46.1 → 50.1 (delta:+4.0)
+[snapshot] Événement custom 'Acte Fondateur de Nuku — La Souveraineté Post-Territoriale du Pacifique' (an 2039, 59 ans d'effet)
+  → climat_environnement_global : 31.7 → 34.7 (delta:+3.0)
+  → gouvernance_institutions : 99.2 → 100 (delta:+8.0)
+  → organisation_territoires : 49.6 → 59.6 (delta:+10.0)
+  → frontieres_du_systeme : 66.2 → 78.2 (delta:+12.0)
+[snapshot] Événement custom 'La Crise des Neuf Nœuds — Catalyseur des Communs Numériques' (an 2040, 58 ans d'effet)
+  → technologie_information : 100 → 85.0 (delta:-15.0)
+  → gouvernance_institutions : 89.2 → 99.2 (delta:+10.0)
+  → systeme_economique_redistribution : 79.9 → 87.9 (delta:+8.0)
+[snapshot] Événement custom 'Enchères de Nuuk — La Souveraineté Négociée des Terres Rares du Groenland' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 29.6 → 37.6 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → geopolitique_conflits : 0 → 0 (delta:-5.0)
+  → organisation_territoires : 54.0 → 58.0 (delta:+4.0)
+[snapshot] Événement custom 'La Grande Confluence — Exode du Midwest et Pacte des Grands Lacs' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 58.1 → 46.1 (delta:-12.0)
+  → organisation_territoires : 52.1 → 42.1 (delta:-10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → climat_environnement_global : 33.2 → 36.2 (delta:+3.0)
+[snapshot] Événement custom 'Crise de Gouvernance du Bassin Amazonien — L'Épreuve de Souveraineté' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 36.2 → 40.2 (delta:+4.0)
+  → geopolitique_conflits : 11.3 → 5.300000000000001 (delta:-6.0)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+  → organisation_territoires : 46.2 → 53.2 (delta:+7.0)
+[snapshot] Événement custom 'Révolution du Travail Régénératif dans la Confédération des Territoires Sahéliens Autonomes' (an 2047, 51 ans d'effet)
+  → systemes_productifs_travail : 41.8 → 56.8 (delta:+15.0)
+  → technologie_information : 100 → 100 (delta:+10.0)
+  → energie_ressources_critiques : 37.7 → 45.7 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+[snapshot] Événement custom 'Pacte Lacustre des Grands Lacs — Autonomie Négociée dans le Cadre de Nairobi' (an 2051, 47 ans d'effet)
+  → organisation_territoires : 67.0 → 79.0 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → geopolitique_conflits : 0 → 5.0 (delta:+5.0)
+[snapshot] Événement custom 'Traité de Belém — Souveraineté Carbone Amazonienne' (an 2053, 45 ans d'effet)
+  → climat_environnement_global : 28.5 → 36.5 (delta:+8.0)
+  → gouvernance_institutions : 96.4 → 100 (delta:+5.0)
+  → geopolitique_conflits : 0 → 6.0 (delta:+6.0)
+  → energie_ressources_critiques : 32.3 → 36.3 (delta:+4.0)
+[snapshot] Événement custom 'Victoire de la Coalition de Transition Sociale' (an 2055, 43 ans d'effet)
+  → gouvernance_institutions : 95.7 → 100 (delta:+8.0)
+  → systeme_economique_redistribution : 98.0 → 100 (delta:+12.0)
+  → valeurs_culture_tempo_sociale : 55 → 61.0 (delta:+6.0)
+[snapshot] Événement custom 'Forum Mondial des Infrastructures Hors-Grille d'Agadez — Charte de Souveraineté Numérique des Périphéries' (an 2062, 36 ans d'effet)
+  → technologie_information : 100 → 100 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → organisation_territoires : 76.3 → 88.3 (delta:+12.0)
+[snapshot] Événement custom 'L'Affaire Van Derburgh — Procès du Patrimoine Numérique' (an 2078, 20 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+2.0)
+  → valeurs_culture_tempo_sociale : 61.0 → 62.0 (delta:+1.0)
+[snapshot] Événements custom : 12 | 199 variables affectées
+[snapshot] Signal custom 'decodage_langage_animaux_ia' sur valeurs_culture_tempo_sociale (an 2033, 65 ans d'effet)
+  → valeurs_culture_tempo_sociale : 62.0 → 67.0 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur technologie_information (an 2031, 67 ans d'effet)
+  → technologie_information : 100 → 100 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur gouvernance_institutions (an 2034, 64 ans d'effet)
+  → gouvernance_institutions : 100 → 95.0 (delta:-5.0)
+[snapshot] Signaux custom chiffrés : 3 | 3 variables affectées
+
+[prompt] Assemblage du prompt...
+[prompt] System prompt : 2810 caractères
+[prompt] User prompt   : 66031 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-large-latest, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 19371 | sortie : 1804
+[api] Article généré : 7057 caractères
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/new_sustainability/20260823_150652_new_sustainability_societe_article_8mars2098.md
+  ✓ Sauvegardé : 20260823_150652_new_sustainability_societe_article_8mars2098.md
+
+[6/12] new_sustainability × societe — 24 mars 2098
+
+[snapshot] Construction du monde 2098 — scénario : new_sustainability
+[snapshot] Variables pilotes : ['climat_environnement_global', 'technologie_information', 'gouvernance_institutions', 'energie_ressources_critiques']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 3 | Cohérence : OK
+[snapshot] Jalons trajectoire : 154 (36 majeurs)
+[snapshot] Événements signal_to_state : 65 (27 majeurs)
+[snapshot] Tensions thématiques : 2
+[snapshot] Instances chargées : 112 | Filtrées : 6
+[snapshot] Injection custom 'Meclis-i Atiye — Assemblée des Futurs Convergents' (an 2047, 51 ans d'effet)
+  → gouvernance_institutions : 90 → 100 (delta:+15.0)
+  → technologie_information : 91.6 → 100 (delta:+10.0)
+  → organisation_territoires : 41.0 → 53.0 (delta:+12.0)
+[snapshot] Modifications custom (entités) : 15 variables affectées
+[snapshot] Événement custom 'La Crise de Détroit : Frappes contenues et médiation planétaire' (an 2026, 72 ans d'effet)
+  → geopolitique_conflits : 13.0 → 21.0 (delta:+8.0)
+  → energie_ressources_critiques : 28.3 → 38.3 (delta:+10.0)
+  → gouvernance_institutions : 94.2 → 99.2 (delta:+5.0)
+  → demographie_mobilite_humaine : 46.1 → 50.1 (delta:+4.0)
+[snapshot] Événement custom 'Acte Fondateur de Nuku — La Souveraineté Post-Territoriale du Pacifique' (an 2039, 59 ans d'effet)
+  → climat_environnement_global : 31.7 → 34.7 (delta:+3.0)
+  → gouvernance_institutions : 99.2 → 100 (delta:+8.0)
+  → organisation_territoires : 49.6 → 59.6 (delta:+10.0)
+  → frontieres_du_systeme : 66.2 → 78.2 (delta:+12.0)
+[snapshot] Événement custom 'La Crise des Neuf Nœuds — Catalyseur des Communs Numériques' (an 2040, 58 ans d'effet)
+  → technologie_information : 100 → 85.0 (delta:-15.0)
+  → gouvernance_institutions : 89.2 → 99.2 (delta:+10.0)
+  → systeme_economique_redistribution : 79.9 → 87.9 (delta:+8.0)
+[snapshot] Événement custom 'Enchères de Nuuk — La Souveraineté Négociée des Terres Rares du Groenland' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 29.6 → 37.6 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → geopolitique_conflits : 0 → 0 (delta:-5.0)
+  → organisation_territoires : 54.0 → 58.0 (delta:+4.0)
+[snapshot] Événement custom 'La Grande Confluence — Exode du Midwest et Pacte des Grands Lacs' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 58.1 → 46.1 (delta:-12.0)
+  → organisation_territoires : 52.1 → 42.1 (delta:-10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → climat_environnement_global : 33.2 → 36.2 (delta:+3.0)
+[snapshot] Événement custom 'Crise de Gouvernance du Bassin Amazonien — L'Épreuve de Souveraineté' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 36.2 → 40.2 (delta:+4.0)
+  → geopolitique_conflits : 11.3 → 5.300000000000001 (delta:-6.0)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+  → organisation_territoires : 46.2 → 53.2 (delta:+7.0)
+[snapshot] Événement custom 'Révolution du Travail Régénératif dans la Confédération des Territoires Sahéliens Autonomes' (an 2047, 51 ans d'effet)
+  → systemes_productifs_travail : 41.8 → 56.8 (delta:+15.0)
+  → technologie_information : 100 → 100 (delta:+10.0)
+  → energie_ressources_critiques : 37.7 → 45.7 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+[snapshot] Événement custom 'Pacte Lacustre des Grands Lacs — Autonomie Négociée dans le Cadre de Nairobi' (an 2051, 47 ans d'effet)
+  → organisation_territoires : 67.0 → 79.0 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → geopolitique_conflits : 0 → 5.0 (delta:+5.0)
+[snapshot] Événement custom 'Traité de Belém — Souveraineté Carbone Amazonienne' (an 2053, 45 ans d'effet)
+  → climat_environnement_global : 28.5 → 36.5 (delta:+8.0)
+  → gouvernance_institutions : 96.4 → 100 (delta:+5.0)
+  → geopolitique_conflits : 0 → 6.0 (delta:+6.0)
+  → energie_ressources_critiques : 32.3 → 36.3 (delta:+4.0)
+[snapshot] Événement custom 'Victoire de la Coalition de Transition Sociale' (an 2055, 43 ans d'effet)
+  → gouvernance_institutions : 95.7 → 100 (delta:+8.0)
+  → systeme_economique_redistribution : 98.0 → 100 (delta:+12.0)
+  → valeurs_culture_tempo_sociale : 55 → 61.0 (delta:+6.0)
+[snapshot] Événement custom 'Forum Mondial des Infrastructures Hors-Grille d'Agadez — Charte de Souveraineté Numérique des Périphéries' (an 2062, 36 ans d'effet)
+  → technologie_information : 100 → 100 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → organisation_territoires : 76.3 → 88.3 (delta:+12.0)
+[snapshot] Événement custom 'L'Affaire Van Derburgh — Procès du Patrimoine Numérique' (an 2078, 20 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+2.0)
+  → valeurs_culture_tempo_sociale : 61.0 → 62.0 (delta:+1.0)
+[snapshot] Événements custom : 12 | 199 variables affectées
+[snapshot] Signal custom 'decodage_langage_animaux_ia' sur valeurs_culture_tempo_sociale (an 2033, 65 ans d'effet)
+  → valeurs_culture_tempo_sociale : 62.0 → 67.0 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur technologie_information (an 2031, 67 ans d'effet)
+  → technologie_information : 100 → 100 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur gouvernance_institutions (an 2034, 64 ans d'effet)
+  → gouvernance_institutions : 100 → 95.0 (delta:-5.0)
+[snapshot] Signaux custom chiffrés : 3 | 3 variables affectées
+
+[prompt] Assemblage du prompt...
+[prompt] System prompt : 2831 caractères
+[prompt] User prompt   : 66714 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-large-latest, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 19534 | sortie : 2492
+[api] Article généré : 9808 caractères
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/new_sustainability/20260823_150758_new_sustainability_societe_article_24mars2098.md
+  ✓ Sauvegardé : 20260823_150758_new_sustainability_societe_article_24mars2098.md
+
+[7/12] new_sustainability × education — 5 avril 2098
+
+[snapshot] Construction du monde 2098 — scénario : new_sustainability
+[snapshot] Variables pilotes : ['climat_environnement_global', 'technologie_information', 'gouvernance_institutions', 'energie_ressources_critiques']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 3 | Cohérence : OK
+[snapshot] Jalons trajectoire : 154 (36 majeurs)
+[snapshot] Événements signal_to_state : 65 (27 majeurs)
+[snapshot] Tensions thématiques : 6
+[snapshot] Instances chargées : 112 | Filtrées : 6
+[snapshot] Injection custom 'Meclis-i Atiye — Assemblée des Futurs Convergents' (an 2047, 51 ans d'effet)
+  → gouvernance_institutions : 90 → 100 (delta:+15.0)
+  → technologie_information : 91.6 → 100 (delta:+10.0)
+  → organisation_territoires : 41.0 → 53.0 (delta:+12.0)
+[snapshot] Modifications custom (entités) : 15 variables affectées
+[snapshot] Événement custom 'La Crise de Détroit : Frappes contenues et médiation planétaire' (an 2026, 72 ans d'effet)
+  → geopolitique_conflits : 13.0 → 21.0 (delta:+8.0)
+  → energie_ressources_critiques : 28.3 → 38.3 (delta:+10.0)
+  → gouvernance_institutions : 94.2 → 99.2 (delta:+5.0)
+  → demographie_mobilite_humaine : 46.1 → 50.1 (delta:+4.0)
+[snapshot] Événement custom 'Acte Fondateur de Nuku — La Souveraineté Post-Territoriale du Pacifique' (an 2039, 59 ans d'effet)
+  → climat_environnement_global : 31.7 → 34.7 (delta:+3.0)
+  → gouvernance_institutions : 99.2 → 100 (delta:+8.0)
+  → organisation_territoires : 49.6 → 59.6 (delta:+10.0)
+  → frontieres_du_systeme : 66.2 → 78.2 (delta:+12.0)
+[snapshot] Événement custom 'La Crise des Neuf Nœuds — Catalyseur des Communs Numériques' (an 2040, 58 ans d'effet)
+  → technologie_information : 100 → 85.0 (delta:-15.0)
+  → gouvernance_institutions : 89.2 → 99.2 (delta:+10.0)
+  → systeme_economique_redistribution : 79.9 → 87.9 (delta:+8.0)
+[snapshot] Événement custom 'Enchères de Nuuk — La Souveraineté Négociée des Terres Rares du Groenland' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 29.6 → 37.6 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → geopolitique_conflits : 0 → 0 (delta:-5.0)
+  → organisation_territoires : 54.0 → 58.0 (delta:+4.0)
+[snapshot] Événement custom 'La Grande Confluence — Exode du Midwest et Pacte des Grands Lacs' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 58.1 → 46.1 (delta:-12.0)
+  → organisation_territoires : 52.1 → 42.1 (delta:-10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → climat_environnement_global : 33.2 → 36.2 (delta:+3.0)
+[snapshot] Événement custom 'Crise de Gouvernance du Bassin Amazonien — L'Épreuve de Souveraineté' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 36.2 → 40.2 (delta:+4.0)
+  → geopolitique_conflits : 11.3 → 5.300000000000001 (delta:-6.0)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+  → organisation_territoires : 46.2 → 53.2 (delta:+7.0)
+[snapshot] Événement custom 'Révolution du Travail Régénératif dans la Confédération des Territoires Sahéliens Autonomes' (an 2047, 51 ans d'effet)
+  → systemes_productifs_travail : 41.8 → 56.8 (delta:+15.0)
+  → technologie_information : 100 → 100 (delta:+10.0)
+  → energie_ressources_critiques : 37.7 → 45.7 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+[snapshot] Événement custom 'Pacte Lacustre des Grands Lacs — Autonomie Négociée dans le Cadre de Nairobi' (an 2051, 47 ans d'effet)
+  → organisation_territoires : 67.0 → 79.0 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → geopolitique_conflits : 0 → 5.0 (delta:+5.0)
+[snapshot] Événement custom 'Traité de Belém — Souveraineté Carbone Amazonienne' (an 2053, 45 ans d'effet)
+  → climat_environnement_global : 28.5 → 36.5 (delta:+8.0)
+  → gouvernance_institutions : 96.4 → 100 (delta:+5.0)
+  → geopolitique_conflits : 0 → 6.0 (delta:+6.0)
+  → energie_ressources_critiques : 32.3 → 36.3 (delta:+4.0)
+[snapshot] Événement custom 'Victoire de la Coalition de Transition Sociale' (an 2055, 43 ans d'effet)
+  → gouvernance_institutions : 95.7 → 100 (delta:+8.0)
+  → systeme_economique_redistribution : 98.0 → 100 (delta:+12.0)
+  → valeurs_culture_tempo_sociale : 55 → 61.0 (delta:+6.0)
+[snapshot] Événement custom 'Forum Mondial des Infrastructures Hors-Grille d'Agadez — Charte de Souveraineté Numérique des Périphéries' (an 2062, 36 ans d'effet)
+  → technologie_information : 100 → 100 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → organisation_territoires : 76.3 → 88.3 (delta:+12.0)
+[snapshot] Événement custom 'L'Affaire Van Derburgh — Procès du Patrimoine Numérique' (an 2078, 20 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+2.0)
+  → valeurs_culture_tempo_sociale : 61.0 → 62.0 (delta:+1.0)
+[snapshot] Événements custom : 12 | 199 variables affectées
+[snapshot] Signal custom 'decodage_langage_animaux_ia' sur valeurs_culture_tempo_sociale (an 2033, 65 ans d'effet)
+  → valeurs_culture_tempo_sociale : 62.0 → 67.0 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur technologie_information (an 2031, 67 ans d'effet)
+  → technologie_information : 100 → 100 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur gouvernance_institutions (an 2034, 64 ans d'effet)
+  → gouvernance_institutions : 100 → 95.0 (delta:-5.0)
+[snapshot] Signaux custom chiffrés : 3 | 3 variables affectées
+
+[prompt] Assemblage du prompt...
+[prompt] System prompt : 2831 caractères
+[prompt] User prompt   : 66781 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-large-latest, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 19319 | sortie : 2070
+[api] Article généré : 8443 caractères
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/new_sustainability/20260823_150859_new_sustainability_education_article_5avril2098.md
+  ✓ Sauvegardé : 20260823_150859_new_sustainability_education_article_5avril2098.md
+
+[8/12] new_sustainability × education — 21 avril 2098
+
+[snapshot] Construction du monde 2098 — scénario : new_sustainability
+[snapshot] Variables pilotes : ['climat_environnement_global', 'technologie_information', 'gouvernance_institutions', 'energie_ressources_critiques']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 3 | Cohérence : OK
+[snapshot] Jalons trajectoire : 154 (36 majeurs)
+[snapshot] Événements signal_to_state : 65 (27 majeurs)
+[snapshot] Tensions thématiques : 6
+[snapshot] Instances chargées : 112 | Filtrées : 6
+[snapshot] Injection custom 'Meclis-i Atiye — Assemblée des Futurs Convergents' (an 2047, 51 ans d'effet)
+  → gouvernance_institutions : 90 → 100 (delta:+15.0)
+  → technologie_information : 91.6 → 100 (delta:+10.0)
+  → organisation_territoires : 41.0 → 53.0 (delta:+12.0)
+[snapshot] Modifications custom (entités) : 15 variables affectées
+[snapshot] Événement custom 'La Crise de Détroit : Frappes contenues et médiation planétaire' (an 2026, 72 ans d'effet)
+  → geopolitique_conflits : 13.0 → 21.0 (delta:+8.0)
+  → energie_ressources_critiques : 28.3 → 38.3 (delta:+10.0)
+  → gouvernance_institutions : 94.2 → 99.2 (delta:+5.0)
+  → demographie_mobilite_humaine : 46.1 → 50.1 (delta:+4.0)
+[snapshot] Événement custom 'Acte Fondateur de Nuku — La Souveraineté Post-Territoriale du Pacifique' (an 2039, 59 ans d'effet)
+  → climat_environnement_global : 31.7 → 34.7 (delta:+3.0)
+  → gouvernance_institutions : 99.2 → 100 (delta:+8.0)
+  → organisation_territoires : 49.6 → 59.6 (delta:+10.0)
+  → frontieres_du_systeme : 66.2 → 78.2 (delta:+12.0)
+[snapshot] Événement custom 'La Crise des Neuf Nœuds — Catalyseur des Communs Numériques' (an 2040, 58 ans d'effet)
+  → technologie_information : 100 → 85.0 (delta:-15.0)
+  → gouvernance_institutions : 89.2 → 99.2 (delta:+10.0)
+  → systeme_economique_redistribution : 79.9 → 87.9 (delta:+8.0)
+[snapshot] Événement custom 'Enchères de Nuuk — La Souveraineté Négociée des Terres Rares du Groenland' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 29.6 → 37.6 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → geopolitique_conflits : 0 → 0 (delta:-5.0)
+  → organisation_territoires : 54.0 → 58.0 (delta:+4.0)
+[snapshot] Événement custom 'La Grande Confluence — Exode du Midwest et Pacte des Grands Lacs' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 58.1 → 46.1 (delta:-12.0)
+  → organisation_territoires : 52.1 → 42.1 (delta:-10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → climat_environnement_global : 33.2 → 36.2 (delta:+3.0)
+[snapshot] Événement custom 'Crise de Gouvernance du Bassin Amazonien — L'Épreuve de Souveraineté' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 36.2 → 40.2 (delta:+4.0)
+  → geopolitique_conflits : 11.3 → 5.300000000000001 (delta:-6.0)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+  → organisation_territoires : 46.2 → 53.2 (delta:+7.0)
+[snapshot] Événement custom 'Révolution du Travail Régénératif dans la Confédération des Territoires Sahéliens Autonomes' (an 2047, 51 ans d'effet)
+  → systemes_productifs_travail : 41.8 → 56.8 (delta:+15.0)
+  → technologie_information : 100 → 100 (delta:+10.0)
+  → energie_ressources_critiques : 37.7 → 45.7 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+[snapshot] Événement custom 'Pacte Lacustre des Grands Lacs — Autonomie Négociée dans le Cadre de Nairobi' (an 2051, 47 ans d'effet)
+  → organisation_territoires : 67.0 → 79.0 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → geopolitique_conflits : 0 → 5.0 (delta:+5.0)
+[snapshot] Événement custom 'Traité de Belém — Souveraineté Carbone Amazonienne' (an 2053, 45 ans d'effet)
+  → climat_environnement_global : 28.5 → 36.5 (delta:+8.0)
+  → gouvernance_institutions : 96.4 → 100 (delta:+5.0)
+  → geopolitique_conflits : 0 → 6.0 (delta:+6.0)
+  → energie_ressources_critiques : 32.3 → 36.3 (delta:+4.0)
+[snapshot] Événement custom 'Victoire de la Coalition de Transition Sociale' (an 2055, 43 ans d'effet)
+  → gouvernance_institutions : 95.7 → 100 (delta:+8.0)
+  → systeme_economique_redistribution : 98.0 → 100 (delta:+12.0)
+  → valeurs_culture_tempo_sociale : 55 → 61.0 (delta:+6.0)
+[snapshot] Événement custom 'Forum Mondial des Infrastructures Hors-Grille d'Agadez — Charte de Souveraineté Numérique des Périphéries' (an 2062, 36 ans d'effet)
+  → technologie_information : 100 → 100 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → organisation_territoires : 76.3 → 88.3 (delta:+12.0)
+[snapshot] Événement custom 'L'Affaire Van Derburgh — Procès du Patrimoine Numérique' (an 2078, 20 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+2.0)
+  → valeurs_culture_tempo_sociale : 61.0 → 62.0 (delta:+1.0)
+[snapshot] Événements custom : 12 | 199 variables affectées
+[snapshot] Signal custom 'decodage_langage_animaux_ia' sur valeurs_culture_tempo_sociale (an 2033, 65 ans d'effet)
+  → valeurs_culture_tempo_sociale : 62.0 → 67.0 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur technologie_information (an 2031, 67 ans d'effet)
+  → technologie_information : 100 → 100 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur gouvernance_institutions (an 2034, 64 ans d'effet)
+  → gouvernance_institutions : 100 → 95.0 (delta:-5.0)
+[snapshot] Signaux custom chiffrés : 3 | 3 variables affectées
+
+[prompt] Assemblage du prompt...
+[prompt] System prompt : 2814 caractères
+[prompt] User prompt   : 66736 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-large-latest, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 19310 | sortie : 2113
+[api] Article généré : 8713 caractères
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/new_sustainability/20260823_151001_new_sustainability_education_article_21avril2098.md
+  ✓ Sauvegardé : 20260823_151001_new_sustainability_education_article_21avril2098.md
+
+[9/12] new_sustainability × histoire_patrimoine — 10 mai 2098
+
+[snapshot] Construction du monde 2098 — scénario : new_sustainability
+[snapshot] Variables pilotes : ['climat_environnement_global', 'technologie_information', 'gouvernance_institutions', 'energie_ressources_critiques']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 3 | Cohérence : OK
+[snapshot] Jalons trajectoire : 154 (36 majeurs)
+[snapshot] Événements signal_to_state : 65 (27 majeurs)
+[snapshot] Tensions thématiques : 4
+[snapshot] Instances chargées : 112 | Filtrées : 6
+[snapshot] Injection custom 'Meclis-i Atiye — Assemblée des Futurs Convergents' (an 2047, 51 ans d'effet)
+  → gouvernance_institutions : 90 → 100 (delta:+15.0)
+  → technologie_information : 91.6 → 100 (delta:+10.0)
+  → organisation_territoires : 41.0 → 53.0 (delta:+12.0)
+[snapshot] Modifications custom (entités) : 15 variables affectées
+[snapshot] Événement custom 'La Crise de Détroit : Frappes contenues et médiation planétaire' (an 2026, 72 ans d'effet)
+  → geopolitique_conflits : 13.0 → 21.0 (delta:+8.0)
+  → energie_ressources_critiques : 28.3 → 38.3 (delta:+10.0)
+  → gouvernance_institutions : 94.2 → 99.2 (delta:+5.0)
+  → demographie_mobilite_humaine : 46.1 → 50.1 (delta:+4.0)
+[snapshot] Événement custom 'Acte Fondateur de Nuku — La Souveraineté Post-Territoriale du Pacifique' (an 2039, 59 ans d'effet)
+  → climat_environnement_global : 31.7 → 34.7 (delta:+3.0)
+  → gouvernance_institutions : 99.2 → 100 (delta:+8.0)
+  → organisation_territoires : 49.6 → 59.6 (delta:+10.0)
+  → frontieres_du_systeme : 66.2 → 78.2 (delta:+12.0)
+[snapshot] Événement custom 'La Crise des Neuf Nœuds — Catalyseur des Communs Numériques' (an 2040, 58 ans d'effet)
+  → technologie_information : 100 → 85.0 (delta:-15.0)
+  → gouvernance_institutions : 89.2 → 99.2 (delta:+10.0)
+  → systeme_economique_redistribution : 79.9 → 87.9 (delta:+8.0)
+[snapshot] Événement custom 'Enchères de Nuuk — La Souveraineté Négociée des Terres Rares du Groenland' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 29.6 → 37.6 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → geopolitique_conflits : 0 → 0 (delta:-5.0)
+  → organisation_territoires : 54.0 → 58.0 (delta:+4.0)
+[snapshot] Événement custom 'La Grande Confluence — Exode du Midwest et Pacte des Grands Lacs' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 58.1 → 46.1 (delta:-12.0)
+  → organisation_territoires : 52.1 → 42.1 (delta:-10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → climat_environnement_global : 33.2 → 36.2 (delta:+3.0)
+[snapshot] Événement custom 'Crise de Gouvernance du Bassin Amazonien — L'Épreuve de Souveraineté' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 36.2 → 40.2 (delta:+4.0)
+  → geopolitique_conflits : 11.3 → 5.300000000000001 (delta:-6.0)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+  → organisation_territoires : 46.2 → 53.2 (delta:+7.0)
+[snapshot] Événement custom 'Révolution du Travail Régénératif dans la Confédération des Territoires Sahéliens Autonomes' (an 2047, 51 ans d'effet)
+  → systemes_productifs_travail : 41.8 → 56.8 (delta:+15.0)
+  → technologie_information : 100 → 100 (delta:+10.0)
+  → energie_ressources_critiques : 37.7 → 45.7 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+[snapshot] Événement custom 'Pacte Lacustre des Grands Lacs — Autonomie Négociée dans le Cadre de Nairobi' (an 2051, 47 ans d'effet)
+  → organisation_territoires : 67.0 → 79.0 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → geopolitique_conflits : 0 → 5.0 (delta:+5.0)
+[snapshot] Événement custom 'Traité de Belém — Souveraineté Carbone Amazonienne' (an 2053, 45 ans d'effet)
+  → climat_environnement_global : 28.5 → 36.5 (delta:+8.0)
+  → gouvernance_institutions : 96.4 → 100 (delta:+5.0)
+  → geopolitique_conflits : 0 → 6.0 (delta:+6.0)
+  → energie_ressources_critiques : 32.3 → 36.3 (delta:+4.0)
+[snapshot] Événement custom 'Victoire de la Coalition de Transition Sociale' (an 2055, 43 ans d'effet)
+  → gouvernance_institutions : 95.7 → 100 (delta:+8.0)
+  → systeme_economique_redistribution : 98.0 → 100 (delta:+12.0)
+  → valeurs_culture_tempo_sociale : 55 → 61.0 (delta:+6.0)
+[snapshot] Événement custom 'Forum Mondial des Infrastructures Hors-Grille d'Agadez — Charte de Souveraineté Numérique des Périphéries' (an 2062, 36 ans d'effet)
+  → technologie_information : 100 → 100 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → organisation_territoires : 76.3 → 88.3 (delta:+12.0)
+[snapshot] Événement custom 'L'Affaire Van Derburgh — Procès du Patrimoine Numérique' (an 2078, 20 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+2.0)
+  → valeurs_culture_tempo_sociale : 61.0 → 62.0 (delta:+1.0)
+[snapshot] Événements custom : 12 | 199 variables affectées
+[snapshot] Signal custom 'decodage_langage_animaux_ia' sur valeurs_culture_tempo_sociale (an 2033, 65 ans d'effet)
+  → valeurs_culture_tempo_sociale : 62.0 → 67.0 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur technologie_information (an 2031, 67 ans d'effet)
+  → technologie_information : 100 → 100 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur gouvernance_institutions (an 2034, 64 ans d'effet)
+  → gouvernance_institutions : 100 → 95.0 (delta:-5.0)
+[snapshot] Signaux custom chiffrés : 3 | 3 variables affectées
+
+[prompt] Assemblage du prompt...
+[prompt] System prompt : 2841 caractères
+[prompt] User prompt   : 67604 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-large-latest, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 19637 | sortie : 1586
+[api] Article généré : 6603 caractères
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/new_sustainability/20260823_151051_new_sustainability_histoire_patrimoine_article_10mai2098.md
+  ✓ Sauvegardé : 20260823_151051_new_sustainability_histoire_patrimoine_article_10mai2098.md
+
+[10/12] new_sustainability × histoire_patrimoine — 27 mai 2098
+
+[snapshot] Construction du monde 2098 — scénario : new_sustainability
+[snapshot] Variables pilotes : ['climat_environnement_global', 'technologie_information', 'gouvernance_institutions', 'energie_ressources_critiques']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 3 | Cohérence : OK
+[snapshot] Jalons trajectoire : 154 (36 majeurs)
+[snapshot] Événements signal_to_state : 65 (27 majeurs)
+[snapshot] Tensions thématiques : 4
+[snapshot] Instances chargées : 112 | Filtrées : 6
+[snapshot] Injection custom 'Meclis-i Atiye — Assemblée des Futurs Convergents' (an 2047, 51 ans d'effet)
+  → gouvernance_institutions : 90 → 100 (delta:+15.0)
+  → technologie_information : 91.6 → 100 (delta:+10.0)
+  → organisation_territoires : 41.0 → 53.0 (delta:+12.0)
+[snapshot] Modifications custom (entités) : 15 variables affectées
+[snapshot] Événement custom 'La Crise de Détroit : Frappes contenues et médiation planétaire' (an 2026, 72 ans d'effet)
+  → geopolitique_conflits : 13.0 → 21.0 (delta:+8.0)
+  → energie_ressources_critiques : 28.3 → 38.3 (delta:+10.0)
+  → gouvernance_institutions : 94.2 → 99.2 (delta:+5.0)
+  → demographie_mobilite_humaine : 46.1 → 50.1 (delta:+4.0)
+[snapshot] Événement custom 'Acte Fondateur de Nuku — La Souveraineté Post-Territoriale du Pacifique' (an 2039, 59 ans d'effet)
+  → climat_environnement_global : 31.7 → 34.7 (delta:+3.0)
+  → gouvernance_institutions : 99.2 → 100 (delta:+8.0)
+  → organisation_territoires : 49.6 → 59.6 (delta:+10.0)
+  → frontieres_du_systeme : 66.2 → 78.2 (delta:+12.0)
+[snapshot] Événement custom 'La Crise des Neuf Nœuds — Catalyseur des Communs Numériques' (an 2040, 58 ans d'effet)
+  → technologie_information : 100 → 85.0 (delta:-15.0)
+  → gouvernance_institutions : 89.2 → 99.2 (delta:+10.0)
+  → systeme_economique_redistribution : 79.9 → 87.9 (delta:+8.0)
+[snapshot] Événement custom 'Enchères de Nuuk — La Souveraineté Négociée des Terres Rares du Groenland' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 29.6 → 37.6 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → geopolitique_conflits : 0 → 0 (delta:-5.0)
+  → organisation_territoires : 54.0 → 58.0 (delta:+4.0)
+[snapshot] Événement custom 'La Grande Confluence — Exode du Midwest et Pacte des Grands Lacs' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 58.1 → 46.1 (delta:-12.0)
+  → organisation_territoires : 52.1 → 42.1 (delta:-10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → climat_environnement_global : 33.2 → 36.2 (delta:+3.0)
+[snapshot] Événement custom 'Crise de Gouvernance du Bassin Amazonien — L'Épreuve de Souveraineté' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 36.2 → 40.2 (delta:+4.0)
+  → geopolitique_conflits : 11.3 → 5.300000000000001 (delta:-6.0)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+  → organisation_territoires : 46.2 → 53.2 (delta:+7.0)
+[snapshot] Événement custom 'Révolution du Travail Régénératif dans la Confédération des Territoires Sahéliens Autonomes' (an 2047, 51 ans d'effet)
+  → systemes_productifs_travail : 41.8 → 56.8 (delta:+15.0)
+  → technologie_information : 100 → 100 (delta:+10.0)
+  → energie_ressources_critiques : 37.7 → 45.7 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+[snapshot] Événement custom 'Pacte Lacustre des Grands Lacs — Autonomie Négociée dans le Cadre de Nairobi' (an 2051, 47 ans d'effet)
+  → organisation_territoires : 67.0 → 79.0 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → geopolitique_conflits : 0 → 5.0 (delta:+5.0)
+[snapshot] Événement custom 'Traité de Belém — Souveraineté Carbone Amazonienne' (an 2053, 45 ans d'effet)
+  → climat_environnement_global : 28.5 → 36.5 (delta:+8.0)
+  → gouvernance_institutions : 96.4 → 100 (delta:+5.0)
+  → geopolitique_conflits : 0 → 6.0 (delta:+6.0)
+  → energie_ressources_critiques : 32.3 → 36.3 (delta:+4.0)
+[snapshot] Événement custom 'Victoire de la Coalition de Transition Sociale' (an 2055, 43 ans d'effet)
+  → gouvernance_institutions : 95.7 → 100 (delta:+8.0)
+  → systeme_economique_redistribution : 98.0 → 100 (delta:+12.0)
+  → valeurs_culture_tempo_sociale : 55 → 61.0 (delta:+6.0)
+[snapshot] Événement custom 'Forum Mondial des Infrastructures Hors-Grille d'Agadez — Charte de Souveraineté Numérique des Périphéries' (an 2062, 36 ans d'effet)
+  → technologie_information : 100 → 100 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → organisation_territoires : 76.3 → 88.3 (delta:+12.0)
+[snapshot] Événement custom 'L'Affaire Van Derburgh — Procès du Patrimoine Numérique' (an 2078, 20 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+2.0)
+  → valeurs_culture_tempo_sociale : 61.0 → 62.0 (delta:+1.0)
+[snapshot] Événements custom : 12 | 199 variables affectées
+[snapshot] Signal custom 'decodage_langage_animaux_ia' sur valeurs_culture_tempo_sociale (an 2033, 65 ans d'effet)
+  → valeurs_culture_tempo_sociale : 62.0 → 67.0 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur technologie_information (an 2031, 67 ans d'effet)
+  → technologie_information : 100 → 100 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur gouvernance_institutions (an 2034, 64 ans d'effet)
+  → gouvernance_institutions : 100 → 95.0 (delta:-5.0)
+[snapshot] Signaux custom chiffrés : 3 | 3 variables affectées
+
+[prompt] Assemblage du prompt...
+[prompt] System prompt : 2742 caractères
+[prompt] User prompt   : 70123 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-large-latest, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 20235 | sortie : 1837
+[api] Article généré : 7598 caractères
+[api] Longueur hors plage (1000 mots, attendu 400-700, écart 43%) — retry unique avec rappel explicite...
+[llm] Mistral (mistral-large-latest) — entrée : 20347 | sortie : 1463
+[api] Retry terminé : 759 mots (attendu 400-700).
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/new_sustainability/20260823_151238_new_sustainability_histoire_patrimoine_article_27mai2098.md
+  ✓ Sauvegardé : 20260823_151238_new_sustainability_histoire_patrimoine_article_27mai2098.md
+
+[11/12] new_sustainability × petites_annonces_services — 4 juin 2098
+
+[snapshot] Construction du monde 2098 — scénario : new_sustainability
+[snapshot] Variables pilotes : ['climat_environnement_global', 'technologie_information', 'gouvernance_institutions', 'energie_ressources_critiques']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 3 | Cohérence : OK
+[snapshot] Jalons trajectoire : 154 (36 majeurs)
+[snapshot] Événements signal_to_state : 65 (27 majeurs)
+[snapshot] Tensions thématiques : 6
+[snapshot] Instances chargées : 112 | Filtrées : 6
+[snapshot] Injection custom 'Meclis-i Atiye — Assemblée des Futurs Convergents' (an 2047, 51 ans d'effet)
+  → gouvernance_institutions : 90 → 100 (delta:+15.0)
+  → technologie_information : 91.6 → 100 (delta:+10.0)
+  → organisation_territoires : 41.0 → 53.0 (delta:+12.0)
+[snapshot] Modifications custom (entités) : 15 variables affectées
+[snapshot] Événement custom 'La Crise de Détroit : Frappes contenues et médiation planétaire' (an 2026, 72 ans d'effet)
+  → geopolitique_conflits : 13.0 → 21.0 (delta:+8.0)
+  → energie_ressources_critiques : 28.3 → 38.3 (delta:+10.0)
+  → gouvernance_institutions : 94.2 → 99.2 (delta:+5.0)
+  → demographie_mobilite_humaine : 46.1 → 50.1 (delta:+4.0)
+[snapshot] Événement custom 'Acte Fondateur de Nuku — La Souveraineté Post-Territoriale du Pacifique' (an 2039, 59 ans d'effet)
+  → climat_environnement_global : 31.7 → 34.7 (delta:+3.0)
+  → gouvernance_institutions : 99.2 → 100 (delta:+8.0)
+  → organisation_territoires : 49.6 → 59.6 (delta:+10.0)
+  → frontieres_du_systeme : 66.2 → 78.2 (delta:+12.0)
+[snapshot] Événement custom 'La Crise des Neuf Nœuds — Catalyseur des Communs Numériques' (an 2040, 58 ans d'effet)
+  → technologie_information : 100 → 85.0 (delta:-15.0)
+  → gouvernance_institutions : 89.2 → 99.2 (delta:+10.0)
+  → systeme_economique_redistribution : 79.9 → 87.9 (delta:+8.0)
+[snapshot] Événement custom 'Enchères de Nuuk — La Souveraineté Négociée des Terres Rares du Groenland' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 29.6 → 37.6 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → geopolitique_conflits : 0 → 0 (delta:-5.0)
+  → organisation_territoires : 54.0 → 58.0 (delta:+4.0)
+[snapshot] Événement custom 'La Grande Confluence — Exode du Midwest et Pacte des Grands Lacs' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 58.1 → 46.1 (delta:-12.0)
+  → organisation_territoires : 52.1 → 42.1 (delta:-10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → climat_environnement_global : 33.2 → 36.2 (delta:+3.0)
+[snapshot] Événement custom 'Crise de Gouvernance du Bassin Amazonien — L'Épreuve de Souveraineté' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 36.2 → 40.2 (delta:+4.0)
+  → geopolitique_conflits : 11.3 → 5.300000000000001 (delta:-6.0)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+  → organisation_territoires : 46.2 → 53.2 (delta:+7.0)
+[snapshot] Événement custom 'Révolution du Travail Régénératif dans la Confédération des Territoires Sahéliens Autonomes' (an 2047, 51 ans d'effet)
+  → systemes_productifs_travail : 41.8 → 56.8 (delta:+15.0)
+  → technologie_information : 100 → 100 (delta:+10.0)
+  → energie_ressources_critiques : 37.7 → 45.7 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+[snapshot] Événement custom 'Pacte Lacustre des Grands Lacs — Autonomie Négociée dans le Cadre de Nairobi' (an 2051, 47 ans d'effet)
+  → organisation_territoires : 67.0 → 79.0 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → geopolitique_conflits : 0 → 5.0 (delta:+5.0)
+[snapshot] Événement custom 'Traité de Belém — Souveraineté Carbone Amazonienne' (an 2053, 45 ans d'effet)
+  → climat_environnement_global : 28.5 → 36.5 (delta:+8.0)
+  → gouvernance_institutions : 96.4 → 100 (delta:+5.0)
+  → geopolitique_conflits : 0 → 6.0 (delta:+6.0)
+  → energie_ressources_critiques : 32.3 → 36.3 (delta:+4.0)
+[snapshot] Événement custom 'Victoire de la Coalition de Transition Sociale' (an 2055, 43 ans d'effet)
+  → gouvernance_institutions : 95.7 → 100 (delta:+8.0)
+  → systeme_economique_redistribution : 98.0 → 100 (delta:+12.0)
+  → valeurs_culture_tempo_sociale : 55 → 61.0 (delta:+6.0)
+[snapshot] Événement custom 'Forum Mondial des Infrastructures Hors-Grille d'Agadez — Charte de Souveraineté Numérique des Périphéries' (an 2062, 36 ans d'effet)
+  → technologie_information : 100 → 100 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → organisation_territoires : 76.3 → 88.3 (delta:+12.0)
+[snapshot] Événement custom 'L'Affaire Van Derburgh — Procès du Patrimoine Numérique' (an 2078, 20 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+2.0)
+  → valeurs_culture_tempo_sociale : 61.0 → 62.0 (delta:+1.0)
+[snapshot] Événements custom : 12 | 199 variables affectées
+[snapshot] Signal custom 'decodage_langage_animaux_ia' sur valeurs_culture_tempo_sociale (an 2033, 65 ans d'effet)
+  → valeurs_culture_tempo_sociale : 62.0 → 67.0 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur technologie_information (an 2031, 67 ans d'effet)
+  → technologie_information : 100 → 100 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur gouvernance_institutions (an 2034, 64 ans d'effet)
+  → gouvernance_institutions : 100 → 95.0 (delta:-5.0)
+[snapshot] Signaux custom chiffrés : 3 | 3 variables affectées
+
+[prompt] Assemblage du prompt...
+[prompt] System prompt : 2884 caractères
+[prompt] User prompt   : 68367 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-large-latest, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 19846 | sortie : 623
+[api] Article généré : 2484 caractères
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/new_sustainability/20260823_151302_new_sustainability_petites_annonces_services_article_4juin2098.md
+  ✓ Sauvegardé : 20260823_151302_new_sustainability_petites_annonces_services_article_4juin2098.md
+
+[12/12] new_sustainability × petites_annonces_services — 19 juin 2098
+
+[snapshot] Construction du monde 2098 — scénario : new_sustainability
+[snapshot] Variables pilotes : ['climat_environnement_global', 'technologie_information', 'gouvernance_institutions', 'energie_ressources_critiques']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 3 | Cohérence : OK
+[snapshot] Jalons trajectoire : 154 (36 majeurs)
+[snapshot] Événements signal_to_state : 65 (27 majeurs)
+[snapshot] Tensions thématiques : 6
+[snapshot] Instances chargées : 112 | Filtrées : 6
+[snapshot] Injection custom 'Meclis-i Atiye — Assemblée des Futurs Convergents' (an 2047, 51 ans d'effet)
+  → gouvernance_institutions : 90 → 100 (delta:+15.0)
+  → technologie_information : 91.6 → 100 (delta:+10.0)
+  → organisation_territoires : 41.0 → 53.0 (delta:+12.0)
+[snapshot] Modifications custom (entités) : 15 variables affectées
+[snapshot] Événement custom 'La Crise de Détroit : Frappes contenues et médiation planétaire' (an 2026, 72 ans d'effet)
+  → geopolitique_conflits : 13.0 → 21.0 (delta:+8.0)
+  → energie_ressources_critiques : 28.3 → 38.3 (delta:+10.0)
+  → gouvernance_institutions : 94.2 → 99.2 (delta:+5.0)
+  → demographie_mobilite_humaine : 46.1 → 50.1 (delta:+4.0)
+[snapshot] Événement custom 'Acte Fondateur de Nuku — La Souveraineté Post-Territoriale du Pacifique' (an 2039, 59 ans d'effet)
+  → climat_environnement_global : 31.7 → 34.7 (delta:+3.0)
+  → gouvernance_institutions : 99.2 → 100 (delta:+8.0)
+  → organisation_territoires : 49.6 → 59.6 (delta:+10.0)
+  → frontieres_du_systeme : 66.2 → 78.2 (delta:+12.0)
+[snapshot] Événement custom 'La Crise des Neuf Nœuds — Catalyseur des Communs Numériques' (an 2040, 58 ans d'effet)
+  → technologie_information : 100 → 85.0 (delta:-15.0)
+  → gouvernance_institutions : 89.2 → 99.2 (delta:+10.0)
+  → systeme_economique_redistribution : 79.9 → 87.9 (delta:+8.0)
+[snapshot] Événement custom 'Enchères de Nuuk — La Souveraineté Négociée des Terres Rares du Groenland' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 29.6 → 37.6 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → geopolitique_conflits : 0 → 0 (delta:-5.0)
+  → organisation_territoires : 54.0 → 58.0 (delta:+4.0)
+[snapshot] Événement custom 'La Grande Confluence — Exode du Midwest et Pacte des Grands Lacs' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 58.1 → 46.1 (delta:-12.0)
+  → organisation_territoires : 52.1 → 42.1 (delta:-10.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → climat_environnement_global : 33.2 → 36.2 (delta:+3.0)
+[snapshot] Événement custom 'Crise de Gouvernance du Bassin Amazonien — L'Épreuve de Souveraineté' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 36.2 → 40.2 (delta:+4.0)
+  → geopolitique_conflits : 11.3 → 5.300000000000001 (delta:-6.0)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+  → organisation_territoires : 46.2 → 53.2 (delta:+7.0)
+[snapshot] Événement custom 'Révolution du Travail Régénératif dans la Confédération des Territoires Sahéliens Autonomes' (an 2047, 51 ans d'effet)
+  → systemes_productifs_travail : 41.8 → 56.8 (delta:+15.0)
+  → technologie_information : 100 → 100 (delta:+10.0)
+  → energie_ressources_critiques : 37.7 → 45.7 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+[snapshot] Événement custom 'Pacte Lacustre des Grands Lacs — Autonomie Négociée dans le Cadre de Nairobi' (an 2051, 47 ans d'effet)
+  → organisation_territoires : 67.0 → 79.0 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → geopolitique_conflits : 0 → 5.0 (delta:+5.0)
+[snapshot] Événement custom 'Traité de Belém — Souveraineté Carbone Amazonienne' (an 2053, 45 ans d'effet)
+  → climat_environnement_global : 28.5 → 36.5 (delta:+8.0)
+  → gouvernance_institutions : 96.4 → 100 (delta:+5.0)
+  → geopolitique_conflits : 0 → 6.0 (delta:+6.0)
+  → energie_ressources_critiques : 32.3 → 36.3 (delta:+4.0)
+[snapshot] Événement custom 'Victoire de la Coalition de Transition Sociale' (an 2055, 43 ans d'effet)
+  → gouvernance_institutions : 95.7 → 100 (delta:+8.0)
+  → systeme_economique_redistribution : 98.0 → 100 (delta:+12.0)
+  → valeurs_culture_tempo_sociale : 55 → 61.0 (delta:+6.0)
+[snapshot] Événement custom 'Forum Mondial des Infrastructures Hors-Grille d'Agadez — Charte de Souveraineté Numérique des Périphéries' (an 2062, 36 ans d'effet)
+  → technologie_information : 100 → 100 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+6.0)
+  → organisation_territoires : 76.3 → 88.3 (delta:+12.0)
+[snapshot] Événement custom 'L'Affaire Van Derburgh — Procès du Patrimoine Numérique' (an 2078, 20 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+2.0)
+  → valeurs_culture_tempo_sociale : 61.0 → 62.0 (delta:+1.0)
+[snapshot] Événements custom : 12 | 199 variables affectées
+[snapshot] Signal custom 'decodage_langage_animaux_ia' sur valeurs_culture_tempo_sociale (an 2033, 65 ans d'effet)
+  → valeurs_culture_tempo_sociale : 62.0 → 67.0 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur technologie_information (an 2031, 67 ans d'effet)
+  → technologie_information : 100 → 100 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur gouvernance_institutions (an 2034, 64 ans d'effet)
+  → gouvernance_institutions : 100 → 95.0 (delta:-5.0)
+[snapshot] Signaux custom chiffrés : 3 | 3 variables affectées
+
+[prompt] Assemblage du prompt...
+[prompt] System prompt : 2884 caractères
+[prompt] User prompt   : 68320 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-large-latest, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 19838 | sortie : 758
+[api] Article généré : 2961 caractères
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/new_sustainability/20260823_151332_new_sustainability_petites_annonces_services_article_19juin2098.md
+  ✓ Sauvegardé : 20260823_151332_new_sustainability_petites_annonces_services_article_19juin2098.md
+
+[series] Index généré : _index.md
+
+============================================================
+SÉRIE GÉNÉRÉE
+  ✓ 12 articles | ✗ 0 erreurs
+  📁 /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/new_sustainability
+============================================================

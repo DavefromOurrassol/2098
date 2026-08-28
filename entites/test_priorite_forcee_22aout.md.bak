@@ -1,0 +1,47 @@
+---
+name: Test Priorite Forcee 22aout
+type: entity
+slug: test_priorite_forcee_22aout
+category: organisation
+description: >
+  Une organisation émergente dont la fonction principale est de tester, imposer ou valider des protocoles de priorisation dans des contextes de ressources limitées ou de crises systémiques. Elle incarne une logique de contrôle par l'urgence, où la force (ou la coercition) devient le critère déterminant pour l'allocation de moyens, souvent au détriment des processus démocratiques ou collaboratifs. Son existence reflète une tension entre efficacité immédiate et légitimité durable.
+tension_fondamentale: >
+  La contradiction entre l'impératif d'agir rapidement pour éviter l'effondrement (ou optimiser des ressources rares) et la nécessité de préserver des mécanismes de gouvernance inclusifs ou équitables. Cette entité risque de normaliser l'exception comme règle, transformant des mesures d'urgence en structures permanentes de pouvoir.
+variables_potentielles:
+  - gouvernance_institutions
+  - systeme_economique_redistribution
+  - geopolitique_conflits
+  - technologie_information
+scenarios_instances:
+  - breakdown
+  - fortress_world
+  - new_sustainability
+  - eco_communalism
+  - policy_reform
+  - reference
+date_creation: 2026-08-22
+scenario_ref: reference
+role_ref: >
+  
+etat_ref: émergent
+est_clandestin_ref: true
+---
+
+# Test Priorite Forcee 22aout
+
+## Description archétypale
+Une organisation émergente dont la fonction principale est de tester, imposer ou valider des protocoles de priorisation dans des contextes de ressources limitées ou de crises systémiques. Elle incarne une logique de contrôle par l'urgence, où la force (ou la coercition) devient le critère déterminant pour l'allocation de moyens, souvent au détriment des processus démocratiques ou collaboratifs. Son existence reflète une tension entre efficacité immédiate et légitimité durable.
+
+## Tension fondamentale
+La contradiction entre l'impératif d'agir rapidement pour éviter l'effondrement (ou optimiser des ressources rares) et la nécessité de préserver des mécanismes de gouvernance inclusifs ou équitables. Cette entité risque de normaliser l'exception comme règle, transformant des mesures d'urgence en structures permanentes de pouvoir.
+
+## Instances par scénario
+| Scénario | Instance | État | Rôle |
+|---|---|---|---|
+| [[breakdown]] | [[test_priorite_forcee_22aout_breakdown]] | | |
+| [[fortress_world]] | [[test_priorite_forcee_22aout_fortress_world]] | | |
+| [[new_sustainability]] | [[test_priorite_forcee_22aout_new_sustainability]] | | |
+| [[eco_communalism]] | [[test_priorite_forcee_22aout_eco_communalism]] | | |
+| [[policy_reform]] | [[test_priorite_forcee_22aout_policy_reform]] | | |
+| [[reference]] | [[test_priorite_forcee_22aout_reference]] | | |
+

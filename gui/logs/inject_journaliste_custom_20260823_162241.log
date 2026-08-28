@@ -1,0 +1,489 @@
+  21 zones N1 / 71 zones totales
+  Création nécessaire : fortress_world/pro_pouvoir/afrique_australe_forteresse_cap -- religion_spiritualite
+    → LLM (mistral, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 420 | sortie : 34
+  Création nécessaire : fortress_world/pro_pouvoir/afrique_subsaharienne_zones_effondrees -- religion_spiritualite
+    → LLM (mistral, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 476 | sortie : 55
+  Création nécessaire : fortress_world/pro_pouvoir/amazonie_pacte_vert -- religion_spiritualite
+    → LLM (mistral, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 485 | sortie : 37
+  Création nécessaire : fortress_world/pro_pouvoir/archipel_indonesien_forteresses_maritimes -- religion_spiritualite
+    → LLM (mistral, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 422 | sortie : 43
+  Création nécessaire : fortress_world/pro_pouvoir/australie_forteresse_insulaire -- religion_spiritualite
+    → LLM (mistral, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 414 | sortie : 47
+  Création nécessaire : fortress_world/pro_pouvoir/bloc_atlantique -- religion_spiritualite
+    → LLM (mistral, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 488 | sortie : 47
+  Création nécessaire : fortress_world/pro_pouvoir/bloc_eurasiatique_occidental -- religion_spiritualite
+    → LLM (mistral, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 487 | sortie : 50
+  Création nécessaire : fortress_world/pro_pouvoir/bloc_pacifique_nord -- religion_spiritualite
+    → LLM (mistral, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 479 | sortie : 65
+  Création nécessaire : fortress_world/pro_pouvoir/cone_sud_forteresse_agricole -- religion_spiritualite
+    → LLM (mistral, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 407 | sortie : 48
+  Création nécessaire : fortress_world/pro_pouvoir/espace_nordique_arctique -- religion_spiritualite
+    → LLM (mistral, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 444 | sortie : 67
+  Création nécessaire : fortress_world/pro_pouvoir/golfe_moyen_orient_zone_disputee -- religion_spiritualite
+    → LLM (mistral, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 461 | sortie : 30
+  Création nécessaire : fortress_world/pro_pouvoir/inde_forteresse_sous_continentale -- medias_communication
+    → LLM (mistral, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 411 | sortie : 74
+  Création nécessaire : fortress_world/pro_pouvoir/kiribati_atolls_abandonnes -- religion_spiritualite
+    → LLM (mistral, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 419 | sortie : 47
+  Création nécessaire : fortress_world/pro_pouvoir/marshall_bunker_nucleaire -- religion_spiritualite
+    → LLM (mistral, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 392 | sortie : 43
+  Création nécessaire : fortress_world/pro_pouvoir/maurice_forteresse_insulaire_indien -- religion_spiritualite
+    → LLM (mistral, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 407 | sortie : 49
+  Création nécessaire : fortress_world/pro_pouvoir/nuuk_forteresse -- religion_spiritualite
+    → LLM (mistral, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 468 | sortie : 62
+  Création nécessaire : fortress_world/pro_pouvoir/pacte_forteresses_souveraines -- religion_spiritualite
+    → LLM (mistral, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 459 | sortie : 29
+  Création nécessaire : fortress_world/pro_pouvoir/sao_paulo_megapole -- religion_spiritualite
+    → LLM (mistral, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 463 | sortie : 27
+  Création nécessaire : fortress_world/pro_pouvoir/singapour_megapole -- religion_spiritualite
+    → LLM (mistral, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 415 | sortie : 40
+  Création nécessaire : fortress_world/pro_pouvoir/tuvalu_refugies_climatiques -- medias_communication
+    → LLM (mistral, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 403 | sortie : 46
+  Création nécessaire : fortress_world/pro_pouvoir/zones_grises_tampons -- religion_spiritualite
+    → LLM (mistral, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 452 | sortie : 35
+
+======================================================================
+RÉSUMÉ -- 396 redistribution(s), 21 création(s)
+======================================================================
+  [redistribution] fortress_world/pro_pouvoir/afrique_australe_forteresse_cap : Aisha Naidoo -> +actualites_a_la_une
+  [redistribution] fortress_world/pro_pouvoir/afrique_australe_forteresse_cap : Lindiwe Mbeki -> +politique
+  [redistribution] fortress_world/pro_pouvoir/afrique_australe_forteresse_cap : Nomsa Dlamini -> +economie_finance
+  [redistribution] fortress_world/pro_pouvoir/afrique_australe_forteresse_cap : Sizwe Khumalo -> +international
+  [redistribution] fortress_world/pro_pouvoir/afrique_australe_forteresse_cap : Pieter van der Merwe -> +environnement_climat
+  [redistribution] fortress_world/pro_pouvoir/afrique_australe_forteresse_cap : Aisha Naidoo -> +sante
+  [redistribution] fortress_world/pro_pouvoir/afrique_australe_forteresse_cap : Lindiwe Mbeki -> +societe
+  [redistribution] fortress_world/pro_pouvoir/afrique_australe_forteresse_cap : Nomsa Dlamini -> +culture
+  [redistribution] fortress_world/pro_pouvoir/afrique_australe_forteresse_cap : Pieter van der Merwe -> +musique
+  [redistribution] fortress_world/pro_pouvoir/afrique_australe_forteresse_cap : Aisha Naidoo -> +sports
+  [redistribution] fortress_world/pro_pouvoir/afrique_australe_forteresse_cap : Lindiwe Mbeki -> +faits_divers
+  [redistribution] fortress_world/pro_pouvoir/afrique_australe_forteresse_cap : Sizwe Khumalo -> +opinions_editoriaux
+  [redistribution] fortress_world/pro_pouvoir/afrique_australe_forteresse_cap : Nomsa Dlamini -> +lifestyle_art_de_vivre
+  [redistribution] fortress_world/pro_pouvoir/afrique_australe_forteresse_cap : Pieter van der Merwe -> +education
+  [redistribution] fortress_world/pro_pouvoir/afrique_australe_forteresse_cap : Sizwe Khumalo -> +histoire_patrimoine
+  [redistribution] fortress_world/pro_pouvoir/afrique_australe_forteresse_cap : Thando Maseko -> +medias_communication
+  [redistribution] fortress_world/pro_pouvoir/afrique_australe_forteresse_cap : Jaco Venter -> +petites_annonces_services
+  [redistribution] fortress_world/pro_pouvoir/afrique_australe_forteresse_cap : Jaco Venter -> +meteo
+  [redistribution] fortress_world/pro_pouvoir/afrique_australe_forteresse_cap : Jaco Venter -> +sciences_technologies
+  [redistribution] fortress_world/pro_pouvoir/afrique_subsaharienne_zones_effondrees : Chinedu Okafor -> +actualites_a_la_une
+  [redistribution] fortress_world/pro_pouvoir/afrique_subsaharienne_zones_effondrees : Jean-Baptiste Mukendi -> +politique
+  [redistribution] fortress_world/pro_pouvoir/afrique_subsaharienne_zones_effondrees : Moussa Dan-Malam -> +economie_finance
+  [redistribution] fortress_world/pro_pouvoir/afrique_subsaharienne_zones_effondrees : Nandiwe Moyo -> +international
+  [redistribution] fortress_world/pro_pouvoir/afrique_subsaharienne_zones_effondrees : Aïssatou Traoré -> +environnement_climat
+  [redistribution] fortress_world/pro_pouvoir/afrique_subsaharienne_zones_effondrees : Chinedu Okafor -> +sante
+  [redistribution] fortress_world/pro_pouvoir/afrique_subsaharienne_zones_effondrees : Jean-Baptiste Mukendi -> +societe
+  [redistribution] fortress_world/pro_pouvoir/afrique_subsaharienne_zones_effondrees : Mireille Kabasele -> +culture
+  [redistribution] fortress_world/pro_pouvoir/afrique_subsaharienne_zones_effondrees : Moussa Dan-Malam -> +musique
+  [redistribution] fortress_world/pro_pouvoir/afrique_subsaharienne_zones_effondrees : Nandiwe Moyo -> +sports
+  [redistribution] fortress_world/pro_pouvoir/afrique_subsaharienne_zones_effondrees : Aïssatou Traoré -> +faits_divers
+  [redistribution] fortress_world/pro_pouvoir/afrique_subsaharienne_zones_effondrees : Chinedu Okafor -> +opinions_editoriaux
+  [redistribution] fortress_world/pro_pouvoir/afrique_subsaharienne_zones_effondrees : Mireille Kabasele -> +lifestyle_art_de_vivre
+  [redistribution] fortress_world/pro_pouvoir/afrique_subsaharienne_zones_effondrees : Jean-Baptiste Mukendi -> +education
+  [redistribution] fortress_world/pro_pouvoir/afrique_subsaharienne_zones_effondrees : Moussa Dan-Malam -> +histoire_patrimoine
+  [redistribution] fortress_world/pro_pouvoir/afrique_subsaharienne_zones_effondrees : Nandiwe Moyo -> +medias_communication
+  [redistribution] fortress_world/pro_pouvoir/afrique_subsaharienne_zones_effondrees : Kwame Nyamekye -> +petites_annonces_services
+  [redistribution] fortress_world/pro_pouvoir/afrique_subsaharienne_zones_effondrees : Kwame Nyamekye -> +meteo
+  [redistribution] fortress_world/pro_pouvoir/afrique_subsaharienne_zones_effondrees : Kwame Nyamekye -> +sciences_technologies
+  [redistribution] fortress_world/pro_pouvoir/amazonie_pacte_vert : Bruna Castanheira -> +actualites_a_la_une
+  [redistribution] fortress_world/pro_pouvoir/amazonie_pacte_vert : João Pedro Nascimento -> +politique
+  [redistribution] fortress_world/pro_pouvoir/amazonie_pacte_vert : Luiza Guajajara -> +economie_finance
+  [redistribution] fortress_world/pro_pouvoir/amazonie_pacte_vert : Yara Munduruku -> +international
+  [redistribution] fortress_world/pro_pouvoir/amazonie_pacte_vert : Bruna Castanheira -> +environnement_climat
+  [redistribution] fortress_world/pro_pouvoir/amazonie_pacte_vert : João Pedro Nascimento -> +sante
+  [redistribution] fortress_world/pro_pouvoir/amazonie_pacte_vert : Luiza Guajajara -> +societe
+  [redistribution] fortress_world/pro_pouvoir/amazonie_pacte_vert : Raimundo Tapajós -> +culture
+  [redistribution] fortress_world/pro_pouvoir/amazonie_pacte_vert : Tainá Arapium -> +musique
+  [redistribution] fortress_world/pro_pouvoir/amazonie_pacte_vert : Yara Munduruku -> +sports
+  [redistribution] fortress_world/pro_pouvoir/amazonie_pacte_vert : Bruna Castanheira -> +faits_divers
+  [redistribution] fortress_world/pro_pouvoir/amazonie_pacte_vert : João Pedro Nascimento -> +opinions_editoriaux
+  [redistribution] fortress_world/pro_pouvoir/amazonie_pacte_vert : Raimundo Tapajós -> +lifestyle_art_de_vivre
+  [redistribution] fortress_world/pro_pouvoir/amazonie_pacte_vert : Luiza Guajajara -> +education
+  [redistribution] fortress_world/pro_pouvoir/amazonie_pacte_vert : Tainá Arapium -> +histoire_patrimoine
+  [redistribution] fortress_world/pro_pouvoir/amazonie_pacte_vert : Yara Munduruku -> +medias_communication
+  [redistribution] fortress_world/pro_pouvoir/amazonie_pacte_vert : Aruã Yanomami -> +petites_annonces_services
+  [redistribution] fortress_world/pro_pouvoir/amazonie_pacte_vert : Aruã Yanomami -> +meteo
+  [redistribution] fortress_world/pro_pouvoir/amazonie_pacte_vert : Aruã Yanomami -> +sciences_technologies
+  [redistribution] fortress_world/pro_pouvoir/archipel_indonesien_forteresses_maritimes : Rina Siregar -> +actualites_a_la_une
+  [redistribution] fortress_world/pro_pouvoir/archipel_indonesien_forteresses_maritimes : Budi Santoso -> +politique
+  [redistribution] fortress_world/pro_pouvoir/archipel_indonesien_forteresses_maritimes : Dewi Lestari -> +economie_finance
+  [redistribution] fortress_world/pro_pouvoir/archipel_indonesien_forteresses_maritimes : Rina Siregar -> +international
+  [redistribution] fortress_world/pro_pouvoir/archipel_indonesien_forteresses_maritimes : Ahmad Fauzi -> +environnement_climat
+  [redistribution] fortress_world/pro_pouvoir/archipel_indonesien_forteresses_maritimes : Budi Santoso -> +sante
+  [redistribution] fortress_world/pro_pouvoir/archipel_indonesien_forteresses_maritimes : Dewi Lestari -> +societe
+  [redistribution] fortress_world/pro_pouvoir/archipel_indonesien_forteresses_maritimes : Rina Siregar -> +culture
+  [redistribution] fortress_world/pro_pouvoir/archipel_indonesien_forteresses_maritimes : Siti Nurhayati -> +musique
+  [redistribution] fortress_world/pro_pouvoir/archipel_indonesien_forteresses_maritimes : Ahmad Fauzi -> +sports
+  [redistribution] fortress_world/pro_pouvoir/archipel_indonesien_forteresses_maritimes : Made Wirawan -> +faits_divers
+  [redistribution] fortress_world/pro_pouvoir/archipel_indonesien_forteresses_maritimes : Budi Santoso -> +opinions_editoriaux
+  [redistribution] fortress_world/pro_pouvoir/archipel_indonesien_forteresses_maritimes : Dewi Lestari -> +lifestyle_art_de_vivre
+  [redistribution] fortress_world/pro_pouvoir/archipel_indonesien_forteresses_maritimes : Made Wirawan -> +education
+  [redistribution] fortress_world/pro_pouvoir/archipel_indonesien_forteresses_maritimes : Rina Siregar -> +histoire_patrimoine
+  [redistribution] fortress_world/pro_pouvoir/archipel_indonesien_forteresses_maritimes : Siti Nurhayati -> +medias_communication
+  [redistribution] fortress_world/pro_pouvoir/archipel_indonesien_forteresses_maritimes : Kyai Haji Wahyu Purnomo -> +petites_annonces_services
+  [redistribution] fortress_world/pro_pouvoir/archipel_indonesien_forteresses_maritimes : Kyai Haji Wahyu Purnomo -> +meteo
+  [redistribution] fortress_world/pro_pouvoir/archipel_indonesien_forteresses_maritimes : Kyai Haji Wahyu Purnomo -> +sciences_technologies
+  [redistribution] fortress_world/pro_pouvoir/australie_forteresse_insulaire : Ethan Marika Dunn -> +actualites_a_la_une
+  [redistribution] fortress_world/pro_pouvoir/australie_forteresse_insulaire : Jack Warrigal Thompson -> +politique
+  [redistribution] fortress_world/pro_pouvoir/australie_forteresse_insulaire : Mikaela Yarran -> +economie_finance
+  [redistribution] fortress_world/pro_pouvoir/australie_forteresse_insulaire : Noah McKenzie -> +international
+  [redistribution] fortress_world/pro_pouvoir/australie_forteresse_insulaire : Amelia Ngalu -> +environnement_climat
+  [redistribution] fortress_world/pro_pouvoir/australie_forteresse_insulaire : Ethan Marika Dunn -> +sante
+  [redistribution] fortress_world/pro_pouvoir/australie_forteresse_insulaire : Jack Warrigal Thompson -> +societe
+  [redistribution] fortress_world/pro_pouvoir/australie_forteresse_insulaire : Mikaela Yarran -> +culture
+  [redistribution] fortress_world/pro_pouvoir/australie_forteresse_insulaire : Noah McKenzie -> +musique
+  [redistribution] fortress_world/pro_pouvoir/australie_forteresse_insulaire : Tahlia Bunjil Clarke -> +sports
+  [redistribution] fortress_world/pro_pouvoir/australie_forteresse_insulaire : Amelia Ngalu -> +faits_divers
+  [redistribution] fortress_world/pro_pouvoir/australie_forteresse_insulaire : Ethan Marika Dunn -> +opinions_editoriaux
+  [redistribution] fortress_world/pro_pouvoir/australie_forteresse_insulaire : Jack Warrigal Thompson -> +lifestyle_art_de_vivre
+  [redistribution] fortress_world/pro_pouvoir/australie_forteresse_insulaire : Mikaela Yarran -> +education
+  [redistribution] fortress_world/pro_pouvoir/australie_forteresse_insulaire : Noah McKenzie -> +histoire_patrimoine
+  [redistribution] fortress_world/pro_pouvoir/australie_forteresse_insulaire : Tahlia Bunjil Clarke -> +medias_communication
+  [redistribution] fortress_world/pro_pouvoir/australie_forteresse_insulaire : Liam Djirra Wurundjeri -> +petites_annonces_services
+  [redistribution] fortress_world/pro_pouvoir/australie_forteresse_insulaire : Liam Djirra Wurundjeri -> +meteo
+  [redistribution] fortress_world/pro_pouvoir/australie_forteresse_insulaire : Liam Djirra Wurundjeri -> +sciences_technologies
+  [redistribution] fortress_world/pro_pouvoir/bloc_atlantique : Julien Caron -> +actualites_a_la_une
+  [redistribution] fortress_world/pro_pouvoir/bloc_atlantique : Malcolm Whitaker -> +politique
+  [redistribution] fortress_world/pro_pouvoir/bloc_atlantique : Nora Caldwell -> +economie_finance
+  [redistribution] fortress_world/pro_pouvoir/bloc_atlantique : Siobhán O'Neill -> +international
+  [redistribution] fortress_world/pro_pouvoir/bloc_atlantique : Élise Beaumont -> +environnement_climat
+  [redistribution] fortress_world/pro_pouvoir/bloc_atlantique : Julien Caron -> +sante
+  [redistribution] fortress_world/pro_pouvoir/bloc_atlantique : Malcolm Whitaker -> +societe
+  [redistribution] fortress_world/pro_pouvoir/bloc_atlantique : Nora Caldwell -> +culture
+  [redistribution] fortress_world/pro_pouvoir/bloc_atlantique : Siobhán O'Neill -> +musique
+  [redistribution] fortress_world/pro_pouvoir/bloc_atlantique : Élise Beaumont -> +sports
+  [redistribution] fortress_world/pro_pouvoir/bloc_atlantique : Julien Caron -> +faits_divers
+  [redistribution] fortress_world/pro_pouvoir/bloc_atlantique : Malcolm Whitaker -> +opinions_editoriaux
+  [redistribution] fortress_world/pro_pouvoir/bloc_atlantique : Nora Caldwell -> +lifestyle_art_de_vivre
+  [redistribution] fortress_world/pro_pouvoir/bloc_atlantique : Marc-Antoine Lavoie -> +education
+  [redistribution] fortress_world/pro_pouvoir/bloc_atlantique : Siobhán O'Neill -> +histoire_patrimoine
+  [redistribution] fortress_world/pro_pouvoir/bloc_atlantique : Élise Beaumont -> +medias_communication
+  [redistribution] fortress_world/pro_pouvoir/bloc_atlantique : Thiago Mendes-Vargas -> +petites_annonces_services
+  [redistribution] fortress_world/pro_pouvoir/bloc_atlantique : Thiago Mendes-Vargas -> +meteo
+  [redistribution] fortress_world/pro_pouvoir/bloc_atlantique : Thiago Mendes-Vargas -> +sciences_technologies
+  [redistribution] fortress_world/pro_pouvoir/bloc_eurasiatique_occidental : Anja Weiss -> +actualites_a_la_une
+  [redistribution] fortress_world/pro_pouvoir/bloc_eurasiatique_occidental : Eszter Nagy -> +politique
+  [redistribution] fortress_world/pro_pouvoir/bloc_eurasiatique_occidental : Tomasz Zieliński -> +economie_finance
+  [redistribution] fortress_world/pro_pouvoir/bloc_eurasiatique_occidental : Viktor Orlov -> +international
+  [redistribution] fortress_world/pro_pouvoir/bloc_eurasiatique_occidental : Anja Weiss -> +environnement_climat
+  [redistribution] fortress_world/pro_pouvoir/bloc_eurasiatique_occidental : Eszter Nagy -> +sante
+  [redistribution] fortress_world/pro_pouvoir/bloc_eurasiatique_occidental : Milena Petrović -> +societe
+  [redistribution] fortress_world/pro_pouvoir/bloc_eurasiatique_occidental : Miroslav Kováč -> +culture
+  [redistribution] fortress_world/pro_pouvoir/bloc_eurasiatique_occidental : Tomasz Zieliński -> +musique
+  [redistribution] fortress_world/pro_pouvoir/bloc_eurasiatique_occidental : Viktor Orlov -> +sports
+  [redistribution] fortress_world/pro_pouvoir/bloc_eurasiatique_occidental : Anja Weiss -> +faits_divers
+  [redistribution] fortress_world/pro_pouvoir/bloc_eurasiatique_occidental : Eszter Nagy -> +opinions_editoriaux
+  [redistribution] fortress_world/pro_pouvoir/bloc_eurasiatique_occidental : Miroslav Kováč -> +lifestyle_art_de_vivre
+  [redistribution] fortress_world/pro_pouvoir/bloc_eurasiatique_occidental : Milena Petrović -> +education
+  [redistribution] fortress_world/pro_pouvoir/bloc_eurasiatique_occidental : Tomasz Zieliński -> +histoire_patrimoine
+  [redistribution] fortress_world/pro_pouvoir/bloc_eurasiatique_occidental : Viktor Orlov -> +medias_communication
+  [redistribution] fortress_world/pro_pouvoir/bloc_eurasiatique_occidental : Irina Sokolovskaya -> +petites_annonces_services
+  [redistribution] fortress_world/pro_pouvoir/bloc_eurasiatique_occidental : Irina Sokolovskaya -> +meteo
+  [redistribution] fortress_world/pro_pouvoir/bloc_eurasiatique_occidental : Irina Sokolovskaya -> +sciences_technologies
+  [redistribution] fortress_world/pro_pouvoir/bloc_pacifique_nord : Haruka Matsumoto -> +actualites_a_la_une
+  [redistribution] fortress_world/pro_pouvoir/bloc_pacifique_nord : Kim Dae-hyun -> +politique
+  [redistribution] fortress_world/pro_pouvoir/bloc_pacifique_nord : Park Seo-yeon -> +economie_finance
+  [redistribution] fortress_world/pro_pouvoir/bloc_pacifique_nord : Zhao Mingyu -> +international
+  [redistribution] fortress_world/pro_pouvoir/bloc_pacifique_nord : Aino Korhonen -> +environnement_climat
+  [redistribution] fortress_world/pro_pouvoir/bloc_pacifique_nord : Haruka Matsumoto -> +sante
+  [redistribution] fortress_world/pro_pouvoir/bloc_pacifique_nord : Kim Dae-hyun -> +societe
+  [redistribution] fortress_world/pro_pouvoir/bloc_pacifique_nord : Liang Wenhao -> +culture
+  [redistribution] fortress_world/pro_pouvoir/bloc_pacifique_nord : Park Seo-yeon -> +musique
+  [redistribution] fortress_world/pro_pouvoir/bloc_pacifique_nord : Zhao Mingyu -> +sports
+  [redistribution] fortress_world/pro_pouvoir/bloc_pacifique_nord : Aino Korhonen -> +faits_divers
+  [redistribution] fortress_world/pro_pouvoir/bloc_pacifique_nord : Haruka Matsumoto -> +opinions_editoriaux
+  [redistribution] fortress_world/pro_pouvoir/bloc_pacifique_nord : Kim Dae-hyun -> +lifestyle_art_de_vivre
+  [redistribution] fortress_world/pro_pouvoir/bloc_pacifique_nord : Liang Wenhao -> +education
+  [redistribution] fortress_world/pro_pouvoir/bloc_pacifique_nord : Park Seo-yeon -> +histoire_patrimoine
+  [redistribution] fortress_world/pro_pouvoir/bloc_pacifique_nord : Zhao Mingyu -> +medias_communication
+  [redistribution] fortress_world/pro_pouvoir/bloc_pacifique_nord : Jin Lianhua -> +petites_annonces_services
+  [redistribution] fortress_world/pro_pouvoir/bloc_pacifique_nord : Jin Lianhua -> +meteo
+  [redistribution] fortress_world/pro_pouvoir/bloc_pacifique_nord : Jin Lianhua -> +sciences_technologies
+  [redistribution] fortress_world/pro_pouvoir/cone_sud_forteresse_agricole : Lucía Benítez -> +actualites_a_la_une
+  [redistribution] fortress_world/pro_pouvoir/cone_sud_forteresse_agricole : Martín Echeverría -> +politique
+  [redistribution] fortress_world/pro_pouvoir/cone_sud_forteresse_agricole : Sebastián Quilodrán -> +economie_finance
+  [redistribution] fortress_world/pro_pouvoir/cone_sud_forteresse_agricole : Tomás Pereira Cáceres -> +international
+  [redistribution] fortress_world/pro_pouvoir/cone_sud_forteresse_agricole : Camila Duarte Fagúndez -> +environnement_climat
+  [redistribution] fortress_world/pro_pouvoir/cone_sud_forteresse_agricole : Martín Echeverría -> +sante
+  [redistribution] fortress_world/pro_pouvoir/cone_sud_forteresse_agricole : Lucía Benítez -> +societe
+  [redistribution] fortress_world/pro_pouvoir/cone_sud_forteresse_agricole : Sebastián Quilodrán -> +culture
+  [redistribution] fortress_world/pro_pouvoir/cone_sud_forteresse_agricole : Tomás Pereira Cáceres -> +musique
+  [redistribution] fortress_world/pro_pouvoir/cone_sud_forteresse_agricole : Valentina Arancibia -> +sports
+  [redistribution] fortress_world/pro_pouvoir/cone_sud_forteresse_agricole : Camila Duarte Fagúndez -> +faits_divers
+  [redistribution] fortress_world/pro_pouvoir/cone_sud_forteresse_agricole : Lucía Benítez -> +opinions_editoriaux
+  [redistribution] fortress_world/pro_pouvoir/cone_sud_forteresse_agricole : Martín Echeverría -> +lifestyle_art_de_vivre
+  [redistribution] fortress_world/pro_pouvoir/cone_sud_forteresse_agricole : Tomás Pereira Cáceres -> +education
+  [redistribution] fortress_world/pro_pouvoir/cone_sud_forteresse_agricole : Sebastián Quilodrán -> +histoire_patrimoine
+  [redistribution] fortress_world/pro_pouvoir/cone_sud_forteresse_agricole : Valentina Arancibia -> +medias_communication
+  [redistribution] fortress_world/pro_pouvoir/cone_sud_forteresse_agricole : Mateo Riquelme Huincahue -> +petites_annonces_services
+  [redistribution] fortress_world/pro_pouvoir/cone_sud_forteresse_agricole : Mateo Riquelme Huincahue -> +meteo
+  [redistribution] fortress_world/pro_pouvoir/cone_sud_forteresse_agricole : Mateo Riquelme Huincahue -> +sciences_technologies
+  [redistribution] fortress_world/pro_pouvoir/espace_nordique_arctique : Mikkel Andersen -> +actualites_a_la_une
+  [redistribution] fortress_world/pro_pouvoir/espace_nordique_arctique : Signe Nilsen -> +politique
+  [redistribution] fortress_world/pro_pouvoir/espace_nordique_arctique : Ingrid Solberg -> +economie_finance
+  [redistribution] fortress_world/pro_pouvoir/espace_nordique_arctique : Ánde Sara -> +international
+  [redistribution] fortress_world/pro_pouvoir/espace_nordique_arctique : Einar Þórsson -> +environnement_climat
+  [redistribution] fortress_world/pro_pouvoir/espace_nordique_arctique : Ingrid Solberg -> +sante
+  [redistribution] fortress_world/pro_pouvoir/espace_nordique_arctique : Mikkel Andersen -> +societe
+  [redistribution] fortress_world/pro_pouvoir/espace_nordique_arctique : Freja Lindström -> +culture
+  [redistribution] fortress_world/pro_pouvoir/espace_nordique_arctique : Signe Nilsen -> +musique
+  [redistribution] fortress_world/pro_pouvoir/espace_nordique_arctique : Ánde Sara -> +sports
+  [redistribution] fortress_world/pro_pouvoir/espace_nordique_arctique : Einar Þórsson -> +faits_divers
+  [redistribution] fortress_world/pro_pouvoir/espace_nordique_arctique : Freja Lindström -> +opinions_editoriaux
+  [redistribution] fortress_world/pro_pouvoir/espace_nordique_arctique : Ingrid Solberg -> +lifestyle_art_de_vivre
+  [redistribution] fortress_world/pro_pouvoir/espace_nordique_arctique : Mikkel Andersen -> +education
+  [redistribution] fortress_world/pro_pouvoir/espace_nordique_arctique : Signe Nilsen -> +histoire_patrimoine
+  [redistribution] fortress_world/pro_pouvoir/espace_nordique_arctique : Ánde Sara -> +medias_communication
+  [redistribution] fortress_world/pro_pouvoir/espace_nordique_arctique : Bjørnulf Haldorsen -> +petites_annonces_services
+  [redistribution] fortress_world/pro_pouvoir/espace_nordique_arctique : Bjørnulf Haldorsen -> +meteo
+  [redistribution] fortress_world/pro_pouvoir/espace_nordique_arctique : Bjørnulf Haldorsen -> +sciences_technologies
+  [redistribution] fortress_world/pro_pouvoir/golfe_moyen_orient_zone_disputee : Hassan Al-Balushi -> +actualites_a_la_une
+  [redistribution] fortress_world/pro_pouvoir/golfe_moyen_orient_zone_disputee : Mariam Al-Harbi -> +politique
+  [redistribution] fortress_world/pro_pouvoir/golfe_moyen_orient_zone_disputee : Noura Al-Mansouri -> +economie_finance
+  [redistribution] fortress_world/pro_pouvoir/golfe_moyen_orient_zone_disputee : Sami Al-Ajami -> +international
+  [redistribution] fortress_world/pro_pouvoir/golfe_moyen_orient_zone_disputee : Hassan Al-Balushi -> +environnement_climat
+  [redistribution] fortress_world/pro_pouvoir/golfe_moyen_orient_zone_disputee : Layla Al-Kuwari -> +sante
+  [redistribution] fortress_world/pro_pouvoir/golfe_moyen_orient_zone_disputee : Mariam Al-Harbi -> +societe
+  [redistribution] fortress_world/pro_pouvoir/golfe_moyen_orient_zone_disputee : Noura Al-Mansouri -> +culture
+  [redistribution] fortress_world/pro_pouvoir/golfe_moyen_orient_zone_disputee : Reza Darvishi -> +musique
+  [redistribution] fortress_world/pro_pouvoir/golfe_moyen_orient_zone_disputee : Hassan Al-Balushi -> +sports
+  [redistribution] fortress_world/pro_pouvoir/golfe_moyen_orient_zone_disputee : Layla Al-Kuwari -> +faits_divers
+  [redistribution] fortress_world/pro_pouvoir/golfe_moyen_orient_zone_disputee : Sami Al-Ajami -> +opinions_editoriaux
+  [redistribution] fortress_world/pro_pouvoir/golfe_moyen_orient_zone_disputee : Noura Al-Mansouri -> +lifestyle_art_de_vivre
+  [redistribution] fortress_world/pro_pouvoir/golfe_moyen_orient_zone_disputee : Mariam Al-Harbi -> +education
+  [redistribution] fortress_world/pro_pouvoir/golfe_moyen_orient_zone_disputee : Sami Al-Ajami -> +histoire_patrimoine
+  [redistribution] fortress_world/pro_pouvoir/golfe_moyen_orient_zone_disputee : Reza Darvishi -> +medias_communication
+  [redistribution] fortress_world/pro_pouvoir/golfe_moyen_orient_zone_disputee : Fatima Bint Al-Qasimi -> +petites_annonces_services
+  [redistribution] fortress_world/pro_pouvoir/golfe_moyen_orient_zone_disputee : Fatima Bint Al-Qasimi -> +meteo
+  [redistribution] fortress_world/pro_pouvoir/golfe_moyen_orient_zone_disputee : Fatima Bint Al-Qasimi -> +sciences_technologies
+  [redistribution] fortress_world/pro_pouvoir/inde_forteresse_sous_continentale : Meena Devi -> +actualites_a_la_une
+  [redistribution] fortress_world/pro_pouvoir/inde_forteresse_sous_continentale : Farah Khan -> +politique
+  [redistribution] fortress_world/pro_pouvoir/inde_forteresse_sous_continentale : Meena Devi -> +economie_finance
+  [redistribution] fortress_world/pro_pouvoir/inde_forteresse_sous_continentale : Raghav Menon -> +international
+  [redistribution] fortress_world/pro_pouvoir/inde_forteresse_sous_continentale : Ananya Sharma -> +environnement_climat
+  [redistribution] fortress_world/pro_pouvoir/inde_forteresse_sous_continentale : Harpreet Singh -> +sante
+  [redistribution] fortress_world/pro_pouvoir/inde_forteresse_sous_continentale : Farah Khan -> +societe
+  [redistribution] fortress_world/pro_pouvoir/inde_forteresse_sous_continentale : Kavita Iyer -> +culture
+  [redistribution] fortress_world/pro_pouvoir/inde_forteresse_sous_continentale : Meena Devi -> +musique
+  [redistribution] fortress_world/pro_pouvoir/inde_forteresse_sous_continentale : Raghav Menon -> +sports
+  [redistribution] fortress_world/pro_pouvoir/inde_forteresse_sous_continentale : Ananya Sharma -> +faits_divers
+  [redistribution] fortress_world/pro_pouvoir/inde_forteresse_sous_continentale : Farah Khan -> +opinions_editoriaux
+  [redistribution] fortress_world/pro_pouvoir/inde_forteresse_sous_continentale : Harpreet Singh -> +lifestyle_art_de_vivre
+  [redistribution] fortress_world/pro_pouvoir/inde_forteresse_sous_continentale : Meena Devi -> +education
+  [redistribution] fortress_world/pro_pouvoir/inde_forteresse_sous_continentale : Kavita Iyer -> +histoire_patrimoine
+  [redistribution] fortress_world/pro_pouvoir/inde_forteresse_sous_continentale : Vikram Advani -> +religion_spiritualite
+  [redistribution] fortress_world/pro_pouvoir/inde_forteresse_sous_continentale : Vikram Advani -> +petites_annonces_services
+  [redistribution] fortress_world/pro_pouvoir/inde_forteresse_sous_continentale : Vikram Advani -> +meteo
+  [redistribution] fortress_world/pro_pouvoir/inde_forteresse_sous_continentale : Vikram Advani -> +sciences_technologies
+  [redistribution] fortress_world/pro_pouvoir/kiribati_atolls_abandonnes : Betero Ioane -> +actualites_a_la_une
+  [redistribution] fortress_world/pro_pouvoir/kiribati_atolls_abandonnes : Erita Toakai -> +politique
+  [redistribution] fortress_world/pro_pouvoir/kiribati_atolls_abandonnes : Kourabi Nabetari -> +economie_finance
+  [redistribution] fortress_world/pro_pouvoir/kiribati_atolls_abandonnes : Tabita Tiroa -> +international
+  [redistribution] fortress_world/pro_pouvoir/kiribati_atolls_abandonnes : Erita Toakai -> +environnement_climat
+  [redistribution] fortress_world/pro_pouvoir/kiribati_atolls_abandonnes : Betero Ioane -> +sante
+  [redistribution] fortress_world/pro_pouvoir/kiribati_atolls_abandonnes : Kourabi Nabetari -> +societe
+  [redistribution] fortress_world/pro_pouvoir/kiribati_atolls_abandonnes : Mereia Tekanene -> +culture
+  [redistribution] fortress_world/pro_pouvoir/kiribati_atolls_abandonnes : Tabita Tiroa -> +musique
+  [redistribution] fortress_world/pro_pouvoir/kiribati_atolls_abandonnes : Teburoro Teannaki -> +sports
+  [redistribution] fortress_world/pro_pouvoir/kiribati_atolls_abandonnes : Betero Ioane -> +faits_divers
+  [redistribution] fortress_world/pro_pouvoir/kiribati_atolls_abandonnes : Erita Toakai -> +opinions_editoriaux
+  [redistribution] fortress_world/pro_pouvoir/kiribati_atolls_abandonnes : Kourabi Nabetari -> +lifestyle_art_de_vivre
+  [redistribution] fortress_world/pro_pouvoir/kiribati_atolls_abandonnes : Mereia Tekanene -> +education
+  [redistribution] fortress_world/pro_pouvoir/kiribati_atolls_abandonnes : Tabita Tiroa -> +histoire_patrimoine
+  [redistribution] fortress_world/pro_pouvoir/kiribati_atolls_abandonnes : Teburoro Teannaki -> +medias_communication
+  [redistribution] fortress_world/pro_pouvoir/kiribati_atolls_abandonnes : Tineta Bwebwenibure -> +petites_annonces_services
+  [redistribution] fortress_world/pro_pouvoir/kiribati_atolls_abandonnes : Tineta Bwebwenibure -> +meteo
+  [redistribution] fortress_world/pro_pouvoir/kiribati_atolls_abandonnes : Tineta Bwebwenibure -> +sciences_technologies
+  [redistribution] fortress_world/pro_pouvoir/marshall_bunker_nucleaire : Anjua Loeak -> +actualites_a_la_une
+  [redistribution] fortress_world/pro_pouvoir/marshall_bunker_nucleaire : Lina Kabua -> +politique
+  [redistribution] fortress_world/pro_pouvoir/marshall_bunker_nucleaire : Mikael Langrine -> +economie_finance
+  [redistribution] fortress_world/pro_pouvoir/marshall_bunker_nucleaire : Tima Aisek -> +international
+  [redistribution] fortress_world/pro_pouvoir/marshall_bunker_nucleaire : Jeban Riklon -> +environnement_climat
+  [redistribution] fortress_world/pro_pouvoir/marshall_bunker_nucleaire : Jolet Rujen -> +sante
+  [redistribution] fortress_world/pro_pouvoir/marshall_bunker_nucleaire : Anjua Loeak -> +societe
+  [redistribution] fortress_world/pro_pouvoir/marshall_bunker_nucleaire : Lina Kabua -> +culture
+  [redistribution] fortress_world/pro_pouvoir/marshall_bunker_nucleaire : Mikael Langrine -> +musique
+  [redistribution] fortress_world/pro_pouvoir/marshall_bunker_nucleaire : Anjua Loeak -> +sports
+  [redistribution] fortress_world/pro_pouvoir/marshall_bunker_nucleaire : Jeban Riklon -> +faits_divers
+  [redistribution] fortress_world/pro_pouvoir/marshall_bunker_nucleaire : Tima Aisek -> +opinions_editoriaux
+  [redistribution] fortress_world/pro_pouvoir/marshall_bunker_nucleaire : Lina Kabua -> +lifestyle_art_de_vivre
+  [redistribution] fortress_world/pro_pouvoir/marshall_bunker_nucleaire : Jolet Rujen -> +education
+  [redistribution] fortress_world/pro_pouvoir/marshall_bunker_nucleaire : Mikael Langrine -> +histoire_patrimoine
+  [redistribution] fortress_world/pro_pouvoir/marshall_bunker_nucleaire : Tima Aisek -> +medias_communication
+  [redistribution] fortress_world/pro_pouvoir/marshall_bunker_nucleaire : Nerida Lemari -> +petites_annonces_services
+  [redistribution] fortress_world/pro_pouvoir/marshall_bunker_nucleaire : Nerida Lemari -> +meteo
+  [redistribution] fortress_world/pro_pouvoir/marshall_bunker_nucleaire : Nerida Lemari -> +sciences_technologies
+  [redistribution] fortress_world/pro_pouvoir/maurice_forteresse_insulaire_indien : Jean-Noël Appadoo -> +actualites_a_la_une
+  [redistribution] fortress_world/pro_pouvoir/maurice_forteresse_insulaire_indien : Kavi Seegobin -> +politique
+  [redistribution] fortress_world/pro_pouvoir/maurice_forteresse_insulaire_indien : Mireille Mootoosamy -> +economie_finance
+  [redistribution] fortress_world/pro_pouvoir/maurice_forteresse_insulaire_indien : Sanjay Beeharry -> +international
+  [redistribution] fortress_world/pro_pouvoir/maurice_forteresse_insulaire_indien : Anjali Ramgoolam -> +environnement_climat
+  [redistribution] fortress_world/pro_pouvoir/maurice_forteresse_insulaire_indien : Jean-Noël Appadoo -> +sante
+  [redistribution] fortress_world/pro_pouvoir/maurice_forteresse_insulaire_indien : Kavi Seegobin -> +societe
+  [redistribution] fortress_world/pro_pouvoir/maurice_forteresse_insulaire_indien : Mireille Mootoosamy -> +culture
+  [redistribution] fortress_world/pro_pouvoir/maurice_forteresse_insulaire_indien : Sanjay Beeharry -> +musique
+  [redistribution] fortress_world/pro_pouvoir/maurice_forteresse_insulaire_indien : Nadia Ah-Kee -> +sports
+  [redistribution] fortress_world/pro_pouvoir/maurice_forteresse_insulaire_indien : Anjali Ramgoolam -> +faits_divers
+  [redistribution] fortress_world/pro_pouvoir/maurice_forteresse_insulaire_indien : Jean-Noël Appadoo -> +opinions_editoriaux
+  [redistribution] fortress_world/pro_pouvoir/maurice_forteresse_insulaire_indien : Kavi Seegobin -> +lifestyle_art_de_vivre
+  [redistribution] fortress_world/pro_pouvoir/maurice_forteresse_insulaire_indien : Mireille Mootoosamy -> +education
+  [redistribution] fortress_world/pro_pouvoir/maurice_forteresse_insulaire_indien : Sanjay Beeharry -> +histoire_patrimoine
+  [redistribution] fortress_world/pro_pouvoir/maurice_forteresse_insulaire_indien : Nadia Ah-Kee -> +medias_communication
+  [redistribution] fortress_world/pro_pouvoir/maurice_forteresse_insulaire_indien : Devika Bissessur -> +petites_annonces_services
+  [redistribution] fortress_world/pro_pouvoir/maurice_forteresse_insulaire_indien : Devika Bissessur -> +meteo
+  [redistribution] fortress_world/pro_pouvoir/maurice_forteresse_insulaire_indien : Devika Bissessur -> +sciences_technologies
+  [redistribution] fortress_world/pro_pouvoir/nuuk_forteresse : Aviaaja Lynge -> +actualites_a_la_une
+  [redistribution] fortress_world/pro_pouvoir/nuuk_forteresse : Ivalo Egede -> +politique
+  [redistribution] fortress_world/pro_pouvoir/nuuk_forteresse : Malik Broberg -> +economie_finance
+  [redistribution] fortress_world/pro_pouvoir/nuuk_forteresse : Mikael Petersen -> +international
+  [redistribution] fortress_world/pro_pouvoir/nuuk_forteresse : Ane Sofie Kleist -> +environnement_climat
+  [redistribution] fortress_world/pro_pouvoir/nuuk_forteresse : Ivalo Egede -> +sante
+  [redistribution] fortress_world/pro_pouvoir/nuuk_forteresse : Aviaaja Lynge -> +societe
+  [redistribution] fortress_world/pro_pouvoir/nuuk_forteresse : Malik Broberg -> +culture
+  [redistribution] fortress_world/pro_pouvoir/nuuk_forteresse : Mikael Petersen -> +musique
+  [redistribution] fortress_world/pro_pouvoir/nuuk_forteresse : Nuka Heilmann -> +sports
+  [redistribution] fortress_world/pro_pouvoir/nuuk_forteresse : Ane Sofie Kleist -> +faits_divers
+  [redistribution] fortress_world/pro_pouvoir/nuuk_forteresse : Aviaaja Lynge -> +opinions_editoriaux
+  [redistribution] fortress_world/pro_pouvoir/nuuk_forteresse : Malik Broberg -> +lifestyle_art_de_vivre
+  [redistribution] fortress_world/pro_pouvoir/nuuk_forteresse : Ivalo Egede -> +education
+  [redistribution] fortress_world/pro_pouvoir/nuuk_forteresse : Mikael Petersen -> +histoire_patrimoine
+  [redistribution] fortress_world/pro_pouvoir/nuuk_forteresse : Nuka Heilmann -> +medias_communication
+  [redistribution] fortress_world/pro_pouvoir/nuuk_forteresse : Paninnguaq Siegstad -> +petites_annonces_services
+  [redistribution] fortress_world/pro_pouvoir/nuuk_forteresse : Paninnguaq Siegstad -> +meteo
+  [redistribution] fortress_world/pro_pouvoir/nuuk_forteresse : Paninnguaq Siegstad -> +sciences_technologies
+  [redistribution] fortress_world/pro_pouvoir/pacte_forteresses_souveraines : Amina Al-Najjar -> +actualites_a_la_une
+  [redistribution] fortress_world/pro_pouvoir/pacte_forteresses_souveraines : João Mateus Pereira -> +politique
+  [redistribution] fortress_world/pro_pouvoir/pacte_forteresses_souveraines : Mei-Lin Huang -> +economie_finance
+  [redistribution] fortress_world/pro_pouvoir/pacte_forteresses_souveraines : Tomasz Wierzbicki -> +international
+  [redistribution] fortress_world/pro_pouvoir/pacte_forteresses_souveraines : Amina Al-Najjar -> +environnement_climat
+  [redistribution] fortress_world/pro_pouvoir/pacte_forteresses_souveraines : João Mateus Pereira -> +sante
+  [redistribution] fortress_world/pro_pouvoir/pacte_forteresses_souveraines : Mei-Lin Huang -> +societe
+  [redistribution] fortress_world/pro_pouvoir/pacte_forteresses_souveraines : Nikolai Sokolov -> +culture
+  [redistribution] fortress_world/pro_pouvoir/pacte_forteresses_souveraines : Samira Benkacem -> +musique
+  [redistribution] fortress_world/pro_pouvoir/pacte_forteresses_souveraines : Tomasz Wierzbicki -> +sports
+  [redistribution] fortress_world/pro_pouvoir/pacte_forteresses_souveraines : Amina Al-Najjar -> +faits_divers
+  [redistribution] fortress_world/pro_pouvoir/pacte_forteresses_souveraines : João Mateus Pereira -> +opinions_editoriaux
+  [redistribution] fortress_world/pro_pouvoir/pacte_forteresses_souveraines : Mei-Lin Huang -> +lifestyle_art_de_vivre
+  [redistribution] fortress_world/pro_pouvoir/pacte_forteresses_souveraines : Samira Benkacem -> +education
+  [redistribution] fortress_world/pro_pouvoir/pacte_forteresses_souveraines : Tomasz Wierzbicki -> +histoire_patrimoine
+  [redistribution] fortress_world/pro_pouvoir/pacte_forteresses_souveraines : Nikolai Sokolov -> +medias_communication
+  [redistribution] fortress_world/pro_pouvoir/pacte_forteresses_souveraines : Anatoli Volkov-Richter -> +petites_annonces_services
+  [redistribution] fortress_world/pro_pouvoir/pacte_forteresses_souveraines : Anatoli Volkov-Richter -> +meteo
+  [redistribution] fortress_world/pro_pouvoir/pacte_forteresses_souveraines : Anatoli Volkov-Richter -> +sciences_technologies
+  [redistribution] fortress_world/pro_pouvoir/sao_paulo_megapole : Camila Akemi Tanaka -> +actualites_a_la_une
+  [redistribution] fortress_world/pro_pouvoir/sao_paulo_megapole : João Pedro Nascimento -> +politique
+  [redistribution] fortress_world/pro_pouvoir/sao_paulo_megapole : Luísa Fernandes Rocha -> +economie_finance
+  [redistribution] fortress_world/pro_pouvoir/sao_paulo_megapole : Mariana Sato Ribeiro -> +international
+  [redistribution] fortress_world/pro_pouvoir/sao_paulo_megapole : Rafael Oliveira dos Santos -> +environnement_climat
+  [redistribution] fortress_world/pro_pouvoir/sao_paulo_megapole : João Pedro Nascimento -> +sante
+  [redistribution] fortress_world/pro_pouvoir/sao_paulo_megapole : Camila Akemi Tanaka -> +societe
+  [redistribution] fortress_world/pro_pouvoir/sao_paulo_megapole : Mariana Sato Ribeiro -> +culture
+  [redistribution] fortress_world/pro_pouvoir/sao_paulo_megapole : Rafael Oliveira dos Santos -> +musique
+  [redistribution] fortress_world/pro_pouvoir/sao_paulo_megapole : Luísa Fernandes Rocha -> +sports
+  [redistribution] fortress_world/pro_pouvoir/sao_paulo_megapole : Camila Akemi Tanaka -> +faits_divers
+  [redistribution] fortress_world/pro_pouvoir/sao_paulo_megapole : João Pedro Nascimento -> +opinions_editoriaux
+  [redistribution] fortress_world/pro_pouvoir/sao_paulo_megapole : Mariana Sato Ribeiro -> +lifestyle_art_de_vivre
+  [redistribution] fortress_world/pro_pouvoir/sao_paulo_megapole : Luísa Fernandes Rocha -> +education
+  [redistribution] fortress_world/pro_pouvoir/sao_paulo_megapole : Rafael Oliveira dos Santos -> +histoire_patrimoine
+  [redistribution] fortress_world/pro_pouvoir/sao_paulo_megapole : Thiago Almeida Costa -> +medias_communication
+  [redistribution] fortress_world/pro_pouvoir/sao_paulo_megapole : Beatriz Yukiko Kobayashi -> +petites_annonces_services
+  [redistribution] fortress_world/pro_pouvoir/sao_paulo_megapole : Beatriz Yukiko Kobayashi -> +meteo
+  [redistribution] fortress_world/pro_pouvoir/sao_paulo_megapole : Beatriz Yukiko Kobayashi -> +sciences_technologies
+  [redistribution] fortress_world/pro_pouvoir/singapour_megapole : Muhammad Hafiz Salleh -> +actualites_a_la_une
+  [redistribution] fortress_world/pro_pouvoir/singapour_megapole : Lim Jia Hao -> +politique
+  [redistribution] fortress_world/pro_pouvoir/singapour_megapole : Muhammad Hafiz Salleh -> +economie_finance
+  [redistribution] fortress_world/pro_pouvoir/singapour_megapole : Nur Aisyah Rahman -> +international
+  [redistribution] fortress_world/pro_pouvoir/singapour_megapole : Arjun Nair -> +environnement_climat
+  [redistribution] fortress_world/pro_pouvoir/singapour_megapole : Lim Jia Hao -> +sante
+  [redistribution] fortress_world/pro_pouvoir/singapour_megapole : Muhammad Hafiz Salleh -> +societe
+  [redistribution] fortress_world/pro_pouvoir/singapour_megapole : Nur Aisyah Rahman -> +culture
+  [redistribution] fortress_world/pro_pouvoir/singapour_megapole : Priya Subramaniam -> +musique
+  [redistribution] fortress_world/pro_pouvoir/singapour_megapole : Tan Wei Ling -> +sports
+  [redistribution] fortress_world/pro_pouvoir/singapour_megapole : Arjun Nair -> +faits_divers
+  [redistribution] fortress_world/pro_pouvoir/singapour_megapole : Lim Jia Hao -> +opinions_editoriaux
+  [redistribution] fortress_world/pro_pouvoir/singapour_megapole : Muhammad Hafiz Salleh -> +lifestyle_art_de_vivre
+  [redistribution] fortress_world/pro_pouvoir/singapour_megapole : Nur Aisyah Rahman -> +education
+  [redistribution] fortress_world/pro_pouvoir/singapour_megapole : Priya Subramaniam -> +histoire_patrimoine
+  [redistribution] fortress_world/pro_pouvoir/singapour_megapole : Tan Wei Ling -> +medias_communication
+  [redistribution] fortress_world/pro_pouvoir/singapour_megapole : Vikram S/O Rajendran -> +petites_annonces_services
+  [redistribution] fortress_world/pro_pouvoir/singapour_megapole : Vikram S/O Rajendran -> +meteo
+  [redistribution] fortress_world/pro_pouvoir/singapour_megapole : Vikram S/O Rajendran -> +sciences_technologies
+  [redistribution] fortress_world/pro_pouvoir/tuvalu_refugies_climatiques : Tavita Panapa -> +politique
+  [redistribution] fortress_world/pro_pouvoir/tuvalu_refugies_climatiques : Faleatua Paeniu -> +economie_finance
+  [redistribution] fortress_world/pro_pouvoir/tuvalu_refugies_climatiques : Litia Kofe -> +international
+  [redistribution] fortress_world/pro_pouvoir/tuvalu_refugies_climatiques : Maatia Ioane -> +environnement_climat
+  [redistribution] fortress_world/pro_pouvoir/tuvalu_refugies_climatiques : Mele Tausi -> +sante
+  [redistribution] fortress_world/pro_pouvoir/tuvalu_refugies_climatiques : Sina Teulilo -> +culture
+  [redistribution] fortress_world/pro_pouvoir/tuvalu_refugies_climatiques : Tavita Panapa -> +musique
+  [redistribution] fortress_world/pro_pouvoir/tuvalu_refugies_climatiques : Litia Kofe -> +sports
+  [redistribution] fortress_world/pro_pouvoir/tuvalu_refugies_climatiques : Faleatua Paeniu -> +faits_divers
+  [redistribution] fortress_world/pro_pouvoir/tuvalu_refugies_climatiques : Maatia Ioane -> +opinions_editoriaux
+  [redistribution] fortress_world/pro_pouvoir/tuvalu_refugies_climatiques : Mele Tausi -> +lifestyle_art_de_vivre
+  [redistribution] fortress_world/pro_pouvoir/tuvalu_refugies_climatiques : Sina Teulilo -> +education
+  [redistribution] fortress_world/pro_pouvoir/tuvalu_refugies_climatiques : Tavita Panapa -> +histoire_patrimoine
+  [redistribution] fortress_world/pro_pouvoir/tuvalu_refugies_climatiques : Eseta Fonoimoana -> +religion_spiritualite
+  [redistribution] fortress_world/pro_pouvoir/tuvalu_refugies_climatiques : Eseta Fonoimoana -> +meteo
+  [redistribution] fortress_world/pro_pouvoir/tuvalu_refugies_climatiques : Eseta Fonoimoana -> +sciences_technologies
+  [redistribution] fortress_world/pro_pouvoir/zones_grises_tampons : Maksim Koval -> +actualites_a_la_une
+  [redistribution] fortress_world/pro_pouvoir/zones_grises_tampons : Nargiza Tursunova -> +politique
+  [redistribution] fortress_world/pro_pouvoir/zones_grises_tampons : Samir al-Khatib -> +economie_finance
+  [redistribution] fortress_world/pro_pouvoir/zones_grises_tampons : Timur Sadykov -> +international
+  [redistribution] fortress_world/pro_pouvoir/zones_grises_tampons : Leyla Farrokhzad -> +environnement_climat
+  [redistribution] fortress_world/pro_pouvoir/zones_grises_tampons : Maksim Koval -> +sante
+  [redistribution] fortress_world/pro_pouvoir/zones_grises_tampons : Mariam Haddad -> +societe
+  [redistribution] fortress_world/pro_pouvoir/zones_grises_tampons : Nargiza Tursunova -> +culture
+  [redistribution] fortress_world/pro_pouvoir/zones_grises_tampons : Samir al-Khatib -> +musique
+  [redistribution] fortress_world/pro_pouvoir/zones_grises_tampons : Leyla Farrokhzad -> +sports
+  [redistribution] fortress_world/pro_pouvoir/zones_grises_tampons : Timur Sadykov -> +faits_divers
+  [redistribution] fortress_world/pro_pouvoir/zones_grises_tampons : Maksim Koval -> +opinions_editoriaux
+  [redistribution] fortress_world/pro_pouvoir/zones_grises_tampons : Mariam Haddad -> +lifestyle_art_de_vivre
+  [redistribution] fortress_world/pro_pouvoir/zones_grises_tampons : Nargiza Tursunova -> +education
+  [redistribution] fortress_world/pro_pouvoir/zones_grises_tampons : Samir al-Khatib -> +histoire_patrimoine
+  [redistribution] fortress_world/pro_pouvoir/zones_grises_tampons : Timur Sadykov -> +medias_communication
+  [redistribution] fortress_world/pro_pouvoir/zones_grises_tampons : Irina Volkovskaya -> +petites_annonces_services
+  [redistribution] fortress_world/pro_pouvoir/zones_grises_tampons : Irina Volkovskaya -> +meteo
+  [redistribution] fortress_world/pro_pouvoir/zones_grises_tampons : Irina Volkovskaya -> +sciences_technologies
+  [création] fortress_world/pro_pouvoir/afrique_australe_forteresse_cap : Jaco Venter -- religion_spiritualite, petites_annonces_services, meteo, sciences_technologies
+  [création] fortress_world/pro_pouvoir/afrique_subsaharienne_zones_effondrees : Kwame Nyamekye -- religion_spiritualite, petites_annonces_services, meteo, sciences_technologies
+  [création] fortress_world/pro_pouvoir/amazonie_pacte_vert : Aruã Yanomami -- religion_spiritualite, petites_annonces_services, meteo, sciences_technologies
+  [création] fortress_world/pro_pouvoir/archipel_indonesien_forteresses_maritimes : Kyai Haji Wahyu Purnomo -- religion_spiritualite, petites_annonces_services, meteo, sciences_technologies
+  [création] fortress_world/pro_pouvoir/australie_forteresse_insulaire : Liam Djirra Wurundjeri -- religion_spiritualite, petites_annonces_services, meteo, sciences_technologies
+  [création] fortress_world/pro_pouvoir/bloc_atlantique : Thiago Mendes-Vargas -- religion_spiritualite, petites_annonces_services, meteo, sciences_technologies
+  [création] fortress_world/pro_pouvoir/bloc_eurasiatique_occidental : Irina Sokolovskaya -- religion_spiritualite, petites_annonces_services, meteo, sciences_technologies
+  [création] fortress_world/pro_pouvoir/bloc_pacifique_nord : Jin Lianhua -- religion_spiritualite, petites_annonces_services, meteo, sciences_technologies
+  [création] fortress_world/pro_pouvoir/cone_sud_forteresse_agricole : Mateo Riquelme Huincahue -- religion_spiritualite, petites_annonces_services, meteo, sciences_technologies
+  [création] fortress_world/pro_pouvoir/espace_nordique_arctique : Bjørnulf Haldorsen -- religion_spiritualite, petites_annonces_services, meteo, sciences_technologies
+  [création] fortress_world/pro_pouvoir/golfe_moyen_orient_zone_disputee : Fatima Bint Al-Qasimi -- religion_spiritualite, petites_annonces_services, meteo, sciences_technologies
+  [création] fortress_world/pro_pouvoir/inde_forteresse_sous_continentale : Vikram Advani -- medias_communication, religion_spiritualite, petites_annonces_services, meteo, sciences_technologies
+  [création] fortress_world/pro_pouvoir/kiribati_atolls_abandonnes : Tineta Bwebwenibure -- religion_spiritualite, petites_annonces_services, meteo, sciences_technologies
+  [création] fortress_world/pro_pouvoir/marshall_bunker_nucleaire : Nerida Lemari -- religion_spiritualite, petites_annonces_services, meteo, sciences_technologies
+  [création] fortress_world/pro_pouvoir/maurice_forteresse_insulaire_indien : Devika Bissessur -- religion_spiritualite, petites_annonces_services, meteo, sciences_technologies
+  [création] fortress_world/pro_pouvoir/nuuk_forteresse : Paninnguaq Siegstad -- religion_spiritualite, petites_annonces_services, meteo, sciences_technologies
+  [création] fortress_world/pro_pouvoir/pacte_forteresses_souveraines : Anatoli Volkov-Richter -- religion_spiritualite, petites_annonces_services, meteo, sciences_technologies
+  [création] fortress_world/pro_pouvoir/sao_paulo_megapole : Beatriz Yukiko Kobayashi -- religion_spiritualite, petites_annonces_services, meteo, sciences_technologies
+  [création] fortress_world/pro_pouvoir/singapour_megapole : Vikram S/O Rajendran -- religion_spiritualite, petites_annonces_services, meteo, sciences_technologies
+  [création] fortress_world/pro_pouvoir/tuvalu_refugies_climatiques : Eseta Fonoimoana -- medias_communication, religion_spiritualite, meteo, sciences_technologies
+  [création] fortress_world/pro_pouvoir/zones_grises_tampons : Irina Volkovskaya -- religion_spiritualite, petites_annonces_services, meteo, sciences_technologies
+
+[OK] journaux.yaml sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/generator/journaux.yaml
+
+  ✓ journaux.yaml sauvegardé.

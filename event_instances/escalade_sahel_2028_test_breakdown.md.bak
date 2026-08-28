@@ -4,6 +4,10 @@ type: event_instance
 slug: escalade_sahel_2028_test_breakdown
 archetype: escalade_sahel_2028_test
 scenario: breakdown
+localisation:
+  zone: agadez_ligue_sahel_numerique
+  lieu: Agadez
+  type_lieu: ville
 type_evenement: political_social
 portee: globale
 date: 2028

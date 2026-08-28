@@ -1,56 +1,110 @@
 {
   "breakdown": {
+    "journalistes::opposition::arc_eurasien_central": {
+      "Timur Akhmetov": {
+        "absence_streak": 0,
+        "count": 1
+      }
+    },
+    "journalistes::pro_pouvoir::arc_eurasien_central": {
+      "Timur Sadykov": {
+        "absence_streak": 0,
+        "count": 2
+      }
+    },
+    "journalistes::pro_pouvoir::arc_sahelo_mediterraneen": {
+      "Mariama Traoré": {
+        "absence_streak": 0,
+        "count": 2
+      }
+    },
+    "journalistes::pro_pouvoir::zone_golfe_levant": {
+      "Leïla al-Khatib": {
+        "absence_streak": 0,
+        "count": 1
+      }
+    },
     "locaux": {
+      "Detroit-Sud déclare ses agents IA hors-la-loi 2053": 1,
+      "Pandémie H7X de 2043 et effondrement de l'OMS": 1,
+      "abandon du dollar comme devise de réserve globale": 1,
+      "abandon officiel de toute vérité factuelle commune 2052": 1,
+      "abolition de facto des horaires sociaux dans les mégapoles 2052": 1,
+      "attaque sur une plateforme de minage d'astéroïdes 2057": 1,
       "blackout numérique global de 72 heures 2053": 1,
       "boycott massif des dernières élections nationales organisées 2052": 1,
+      "collapse des mutuelles et assurances santé globales": 1,
       "collapse du duopole numérique mondial 2051": 1,
+      "dernière retransmission publique d'une mission spatiale civile 2056": 1,
       "dernière élection nationale considérée comme légitime par l'opinion 2052": 1,
       "dissolution de facto des Nations Unies 2055": 1,
+      "dissolution du dernier organe mondial de coordination climatique 2053": 1,
+      "effondrement des protocoles de contrôle des agents IA publics 2052": 1,
       "effondrement des protocoles de régulation IA institutionnelle": 1,
+      "exode climatique de 400 millions de personnes 2055": 1,
       "faillite des systèmes de retraite des pays développés 2050": 1,
+      "fermeture des bases médicales prédictives de l'Alliance Pacifique 2058": 1,
       "fermeture en cascade des centres de données surconsommateurs 2051": 1,
       "fermeture simultanée de douze frontières majeures 2052": 1,
+      "fuite de souches modifiées du complexe clandestin de Karaganda 2061": 1,
+      "incident majeur d'agents IA non coordonnés dans la finance 2050": 1,
+      "mouvement de décrochage sociétal global": 1,
       "panne en cascade des grandes plateformes économiques mondiales 2051": 1,
+      "panne généralisée des systèmes de tri migratoire automatisés 2052": 1,
       "panne systémique des administrations automatisées pendant trois mois 2051": 1,
+      "piratage des bases prédictives migratoires de l'Alliance Pacifique 2054": 1,
       "premier conflit armé orbital 2055": 1,
+      "premiers rituels collectifs de communication avec les corbeaux 2056": 1,
       "premières émeutes intergénérationnelles documentées dans les mégapoles 2050": 1,
+      "prolifération non contrôlée des IA génératives culturelles": 1,
       "sabotage massif des systèmes décisionnels automatisés critiques 2055": 1,
       "vague de pogroms anti-migrants dans les enclaves urbaines 2056": 1,
-      "émergence de cultes de survie dans les zones effondrées 2055": 1
+      "émergence de cultes de survie dans les zones effondrées 2055": 1,
+      "émeutes anti-augmentés dans les enclaves de Lagos-Est 2063": 1
     },
     "majeurs": {
-      "Chad abandonne ses périmètres irrigués solaires 2055": 1,
+      "Chad abandonne ses périmètres irrigués solaires 2055": 4,
       "abandon de cinq mégapoles côtières majeures 2055": 1,
       "abandon officiel de la distinction entre paix et guerre 2053": 1,
       "abandon officiel de mille communes rurales 2052": 2,
-      "catastrophe de contamination des mines de lithium d'Afrique australe 2056": 1,
-      "chômage structurel à 45% dans les économies avancées 2049": 2,
-      "conflits armés pour les bassins versants 2054": 2,
+      "catastrophe de contamination des mines de lithium d'Afrique australe 2056": 4,
+      "chômage structurel à 45% dans les économies avancées 2049": 5,
+      "conflits armés pour les bassins versants 2054": 5,
       "crise urbaine de Lagos-Mumbai-Jakarta 2056": 2,
-      "discours officiel reconnaissant l'impossibilité du retour à l'abondance 2053": 2,
-      "effondrement des consortiums de recherche fusion 2051": 2,
+      "discours officiel reconnaissant l'impossibilité du retour à l'abondance 2053": 5,
+      "effondrement des consortiums de recherche fusion 2051": 4,
       "effondrement des protocoles de non-agression numérique 2049": 1,
       "extinction simultanée des réseaux intelligents de trois mégapoles 2054": 2,
-      "fermeture de la dernière grande filière de formation intermédiaire 2049": 2,
+      "fermeture de la dernière grande filière de formation intermédiaire 2049": 5,
       "fermeture des frontières communales dans les zones de conflit 2053": 2,
       "fermeture définitive de la bourse de Lagos-Mumbai-Jakarta 2053": 1,
-      "franchissement de cinq points de basculement simultanés 2053": 2,
-      "guerre des lithium-cobalt en Afrique australe 2052": 2,
+      "franchissement de cinq points de basculement simultanés 2053": 5,
+      "guerre des lithium-cobalt en Afrique australe 2052": 5,
       "guerre des minerais d'Afrique centrale 2051": 1,
       "instauration de la conscription générale dans les zones de conflit 2053": 2,
-      "manifeste collapsologue mondial diffusé après le Jour Sans Signal 2041": 2,
-      "pannes simultanées des fermes automatisées de trois continents 2052": 1,
-      "perte totale des forêts méditerranéennes lors des feux de 2050": 2,
-      "pillage des dépôts de batteries stratégiques à Detroit-Sud 2053": 1,
-      "pompages solaires saheliens à sec après trois années sans pluie 2054": 1,
+      "manifeste collapsologue mondial diffusé après le Jour Sans Signal 2041": 5,
+      "pannes simultanées des fermes automatisées de trois continents 2052": 5,
+      "perte totale des forêts méditerranéennes lors des feux de 2050": 4,
+      "pillage des dépôts de batteries stratégiques à Detroit-Sud 2053": 4,
+      "pompages solaires saheliens à sec après trois années sans pluie 2054": 4,
       "premier incident de frappe autonome non autorisée 2052": 1,
       "première guerre officiellement qualifiée de climatique à Carthage-Nord 2055": 2,
-      "retour massif au travail de subsistance non rémunéré 2050": 1,
-      "rupture simultanée de 60% des chaînes d'approvisionnement 2051": 1,
-      "réquisition massive des robots de service dans les mégapoles 2050": 1,
-      "sabotage des installations de capture carbone du Sahara 2055": 1,
-      "émeutes de l'énergie dans les mégapoles surpeuplées 2054": 1,
-      "évacuation forcée de Lagos-Est sous tension armée 2057": 2
+      "retour massif au travail de subsistance non rémunéré 2050": 4,
+      "rupture simultanée de 60% des chaînes d'approvisionnement 2051": 4,
+      "réquisition massive des robots de service dans les mégapoles 2050": 4,
+      "sabotage des installations de capture carbone du Sahara 2055": 5,
+      "émeutes de l'énergie dans les mégapoles surpeuplées 2054": 4,
+      "évacuation forcée de Lagos-Est sous tension armée 2057": 5
+    },
+    "orateurs::pro_pouvoir::afrique_centrale_australe": {
+      "Grand-mère Assa Traoré": {
+        "absence_streak": 0,
+        "count": 1
+      },
+      "Le Passeur Koffi Mensah": {
+        "absence_streak": 1,
+        "count": 0
+      }
     }
   },
   "eco_communalism": {
@@ -118,132 +172,449 @@
     }
   },
   "fortress_world": {
+    "journalistes::opposition::bloc_atlantique": {
+      "Malik Washington": {
+        "absence_streak": 0,
+        "count": 1
+      },
+      "Maya O'Connor": {
+        "absence_streak": 0,
+        "count": 4
+      }
+    },
+    "journalistes::opposition::bloc_eurasiatique_occidental": {
+      "Katalin Farkas": {
+        "absence_streak": 0,
+        "count": 6
+      }
+    },
+    "journalistes::opposition::pacte_forteresses_souveraines": {
+      "Sanaa Haddad": {
+        "absence_streak": 0,
+        "count": 1
+      }
+    },
+    "journalistes::pro_pouvoir::bloc_atlantique": {
+      "Malcolm Whitaker": {
+        "absence_streak": 0,
+        "count": 2
+      },
+      "Siobhán O'Neill": {
+        "absence_streak": 0,
+        "count": 1
+      },
+      "Élise Beaumont": {
+        "absence_streak": 0,
+        "count": 1
+      }
+    },
+    "journalistes::pro_pouvoir::bloc_eurasiatique_occidental": {
+      "Anja Weiss": {
+        "absence_streak": 1,
+        "count": 0
+      },
+      "Miroslav Kováč": {
+        "absence_streak": 0,
+        "count": 12
+      }
+    },
+    "journalistes::pro_pouvoir::pacte_forteresses_souveraines": {
+      "Nikolai Sokolov": {
+        "absence_streak": 0,
+        "count": 2
+      },
+      "Tomasz Wierzbicki": {
+        "absence_streak": 1,
+        "count": 0
+      }
+    },
     "locaux": {
-      "Bloc Atlantique verrouille les nappes phréatiques du Sahel 2047": 1,
-      "Bloc Sibérien déploie des perroquets espions dans les zones frontalières 2047": 1,
-      "Score de Priorité Sanitaire du Bloc Atlantique 2047": 1,
-      "adoption d'une spiritualité officielle hybride par les blocs 2050": 1,
-      "adoption de récits factuels officiels distincts par les blocs 2048": 2,
-      "charte commune de fermeture migratoire des blocs 2045": 1,
-      "construction du système de barrières des blocs 2048": 1,
-      "création des commandements spatiaux des blocs 2049": 1,
-      "création des zones rouges incendie hors-bloc 2046": 1,
-      "création des zones sanitaires prioritaires des blocs": 1,
-      "création du système monétaire des Blocs de Shanghai": 1,
-      "cérémonies officielles d'augmentation des cadres du Bloc Atlantique 2050": 1,
-      "doctrine identitaire officielle du Bloc Sibérien sur la mobilité 2050": 1,
-      "déploiement des internets de blocs 2048": 1,
-      "déploiement des robots de service dans les administrations des blocs 2046": 1,
-      "déploiement des systèmes de production culturelle des blocs": 2,
-      "déploiement des systèmes décisionnels automatisés des blocs 2049": 1,
-      "généralisation des capteurs biométriques obligatoires du Bloc Atlantique 2045": 1,
-      "incident biologique de Vladivostok 2049": 1,
-      "instauration de quotas générationnels dans les administrations des blocs 2048": 1,
-      "instauration des cycles de vie optimisés dans les blocs 2049": 1,
-      "lancement de la doctrine de guerre culturelle des blocs 2045": 1,
-      "lancement de la doctrine du destin orbital par les blocs 2048": 1,
-      "lancement des agents administratifs autonomes des blocs 2045": 1,
-      "lancement du programme Biodéfense Eurasia par le Bloc Sibérien 2046": 1,
-      "nationalisation des infrastructures algorithmiques financières": 1,
-      "nationalisation des infrastructures numériques des blocs 2047": 1,
-      "programme de capture carbone du Bloc Atlantique 2052": 1,
-      "programme de réinstallation côtière du Bloc Atlantique 2051": 1,
-      "rationnement énergétique civil au profit des centres de calcul des blocs": 1,
-      "reconnaissance des stations orbitales comme territoires officiels des blocs 2050": 1,
-      "renaissance des mouvements civilisationnels des blocs": 1
+      "Bloc Atlantique verrouille les nappes phréatiques du Sahel 2047": 2,
+      "Bloc Sibérien déploie des perroquets espions dans les zones frontalières 2047": 4,
+      "Bloc Sibérien déploie ses agents administratifs souverains 2046": 3,
+      "Score de Priorité Sanitaire du Bloc Atlantique 2047": 2,
+      "adoption d'une spiritualité officielle hybride par les blocs 2050": 3,
+      "adoption de barèmes carbone distincts par chaque bloc 2048": 3,
+      "adoption de récits factuels officiels distincts par les blocs 2048": 3,
+      "campagne officielle des blocs sur la fin du monde ancien 2046": 3,
+      "charte commune de fermeture migratoire des blocs 2045": 3,
+      "construction du système de barrières des blocs 2048": 2,
+      "création des commandements spatiaux des blocs 2049": 2,
+      "création des zones climatiques protégées des blocs 2048": 2,
+      "création des zones rouges incendie hors-bloc 2046": 2,
+      "création des zones sanitaires prioritaires des blocs": 3,
+      "création du système monétaire des Blocs de Shanghai": 2,
+      "cérémonies officielles d'augmentation des cadres du Bloc Atlantique 2050": 2,
+      "doctrine identitaire officielle du Bloc Sibérien sur la mobilité 2050": 3,
+      "doctrine officielle de puissance économique des blocs 2047": 3,
+      "déploiement des internets de blocs 2048": 3,
+      "déploiement des robots de service dans les administrations des blocs 2046": 2,
+      "déploiement des systèmes de production culturelle des blocs": 3,
+      "déploiement des systèmes décisionnels automatisés des blocs 2049": 2,
+      "déploiement des usines entièrement automatisées des blocs 2045": 2,
+      "déploiement du système de tri prédictif frontalier du Bloc Atlantique 2049": 3,
+      "généralisation des capteurs biométriques obligatoires du Bloc Atlantique 2045": 3,
+      "incident biologique de Vladivostok 2049": 2,
+      "instauration de classes patrimoniales officielles dans les blocs 2046": 3,
+      "instauration de quotas générationnels dans les administrations des blocs 2048": 3,
+      "instauration des cycles de vie optimisés dans les blocs 2049": 3,
+      "instauration du statut de citoyen productif obligatoire des blocs 2046": 2,
+      "lancement de la doctrine de guerre culturelle des blocs 2045": 3,
+      "lancement de la doctrine du destin orbital par les blocs 2048": 2,
+      "lancement de la première mission minière militarisée d'astéroïde 2051": 2,
+      "lancement des agents administratifs autonomes des blocs 2045": 3,
+      "lancement du programme Biodéfense Eurasia par le Bloc Sibérien 2046": 2,
+      "militarisation des grands fleuves transfrontaliers 2049": 2,
+      "mise en service du classement migratoire automatisé du Bloc Eurasiatique 2050": 3,
+      "nationalisation des fermes automatisées stratégiques par les blocs 2047": 3,
+      "nationalisation des infrastructures algorithmiques financières": 2,
+      "nationalisation des infrastructures numériques des blocs 2047": 3,
+      "nationalisation des plateformes numériques par le Bloc Atlantique 2045": 3,
+      "politiques de natalité forcée et sélection migratoire des blocs": 3,
+      "programme de capture carbone du Bloc Atlantique 2052": 2,
+      "programme de nettoyage orbital militarisé des blocs": 2,
+      "programme de réindustrialisation interne des blocs 2046": 3,
+      "programme de réinstallation côtière du Bloc Atlantique 2051": 3,
+      "rationnement énergétique civil au profit des centres de calcul des blocs": 2,
+      "reconnaissance des stations orbitales comme territoires officiels des blocs 2050": 2,
+      "reconversion forcée des métiers intermédiaires vers les administrations des blocs 2045": 2,
+      "renaissance des mouvements civilisationnels des blocs": 3,
+      "saisie des stations industrielles privées par le Bloc Atlantique 2048": 2
     },
     "majeurs": {
-      "Bloc Atlantique impose ses agents IA comme uniques interfaces administratives 2047": 2,
-      "Bloc Eurasiatique annexe les aquifères du lac Tchad 2048": 4,
+      "Bloc Atlantique impose ses agents IA comme uniques interfaces administratives 2047": 25,
+      "Bloc Eurasiatique annexe les aquifères du lac Tchad 2048": 25,
       "adoption de la doctrine de conflit permanent par les blocs 2046": 4,
-      "adoption de standards environnementaux distincts par chaque bloc 2047": 5,
+      "adoption de standards environnementaux distincts par chaque bloc 2047": 25,
       "campagne identitaire locale officielle des blocs 2047": 3,
-      "classification des zones minières comme zones sacrifiées par les blocs 2049": 5,
+      "classification des zones minières comme zones sacrifiées par les blocs 2049": 25,
       "classification des zones rurales hors-bloc comme territoires non prioritaires 2046": 3,
-      "création de l'Alliance des Blocs Atlantique et Eurasiatique 2048": 4,
+      "création de l'Alliance des Blocs Atlantique et Eurasiatique 2048": 25,
       "création des commandements cyber des blocs 2044": 4,
       "création des territoires protégés des blocs 2049": 3,
       "création des zones d'exclusion minière des blocs 2047": 3,
       "création des zones urbaines protégées des blocs 2050": 3,
-      "discours unificateur sur l'autosuffisance énergétique des blocs 2049": 5,
-      "doctrine de sécurité énergétique des blocs 2047": 4,
+      "discours unificateur sur l'autosuffisance énergétique des blocs 2049": 25,
+      "doctrine de sécurité énergétique des blocs 2047": 25,
       "déploiement d'unités de combat autonomes par la Chambre de Sécurité 2047": 3,
-      "déploiement des administrations entièrement automatisées dans les blocs 2046": 5,
-      "déploiement du système de scoring citoyen des blocs 2046": 4,
+      "déploiement des administrations entièrement automatisées dans les blocs 2046": 25,
+      "déploiement du système de scoring citoyen des blocs 2046": 25,
       "inauguration de la première cité intelligente fermée du Bloc Sibérien 2049": 3,
-      "instauration des quotas énergétiques par catégorie sociale dans les blocs 2048": 5,
+      "instauration des quotas énergétiques par catégorie sociale dans les blocs 2048": 25,
       "instauration du service de sécurité territoriale obligatoire des blocs 2046": 4,
-      "nationalisation des giga-usines de batteries du Bloc Atlantique 2046": 5,
-      "premier réacteur à fusion militarisé du Bloc Asiatique 2058": 5,
+      "nationalisation des giga-usines de batteries du Bloc Atlantique 2046": 25,
+      "premier réacteur à fusion militarisé du Bloc Asiatique 2058": 25,
       "première guerre par procuration pour un territoire climatique viable 2048": 4,
-      "sondage confirmant l'effondrement de la confiance dans les institutions mondiales 2045": 5,
-      "sondage confirmant la préférence majoritaire pour la sécurité des blocs 2046": 4,
+      "sondage confirmant l'effondrement de la confiance dans les institutions mondiales 2045": 25,
+      "sondage confirmant la préférence majoritaire pour la sécurité des blocs 2046": 25,
       "transfert du centre financier mondial vers le Bloc Atlantique 2048": 3
+    },
+    "orateurs::opposition::bloc_eurasiatique_occidental": {
+      "Zsófia Nagy, dite « la Chansonnière du Bloc »": {
+        "absence_streak": 0,
+        "count": 2
+      }
     }
   },
   "new_sustainability": {
+    "journalistes::opposition::afrique_continentale": {
+      "Thandiwe Ndlovu": {
+        "absence_streak": 0,
+        "count": 1
+      }
+    },
+    "journalistes::opposition::ameriques_reconfigurees": {
+      "João Batista Sateré": {
+        "absence_streak": 0,
+        "count": 2
+      }
+    },
+    "journalistes::opposition::centre_institutionnel_geneve": {
+      "Jonas Aeschlimann": {
+        "absence_streak": 0,
+        "count": 1
+      },
+      "Karim Zbinden": {
+        "absence_streak": 0,
+        "count": 2
+      },
+      "Matteo Bernasconi": {
+        "absence_streak": 0,
+        "count": 1
+      },
+      "Nadia Rochat": {
+        "absence_streak": 0,
+        "count": 2
+      },
+      "Samira El-Masri": {
+        "absence_streak": 0,
+        "count": 4
+      },
+      "Élodie Chappuis": {
+        "absence_streak": 0,
+        "count": 3
+      }
+    },
+    "journalistes::opposition::union_nordique_europe_nord": {
+      "Eirik Børresen": {
+        "absence_streak": 0,
+        "count": 1
+      }
+    },
+    "journalistes::pro_pouvoir::afrique_continentale": {
+      "Samira Benyahia": {
+        "absence_streak": 0,
+        "count": 2
+      }
+    },
+    "journalistes::pro_pouvoir::bloc_eurasien_souverainiste": {
+      "Narin Batbayar": {
+        "absence_streak": 0,
+        "count": 1
+      }
+    },
+    "journalistes::pro_pouvoir::centre_institutionnel_geneve": {
+      "Leïla Berset": {
+        "absence_streak": 0,
+        "count": 1
+      },
+      "Maya Dufour": {
+        "absence_streak": 0,
+        "count": 4
+      },
+      "Noé Mbemba-Rochat": {
+        "absence_streak": 0,
+        "count": 2
+      },
+      "Sofia Waeber": {
+        "absence_streak": 0,
+        "count": 3
+      },
+      "Yannick Aeschlimann": {
+        "absence_streak": 0,
+        "count": 1
+      }
+    },
+    "journalistes::pro_pouvoir::hub_nairobi_kigali": {
+      "Aline Uwase": {
+        "absence_streak": 0,
+        "count": 1
+      }
+    },
     "locaux": {
-      "création du Réseau Mondial de Biosurveillance en 2038": 1,
-      "fusion des consortiums orbitaux dans le réseau économique mondial 2039": 1
+      "Accord de Lagos sur la santé universelle 2045": 5,
+      "Accords de Genève sur la régulation des IA financières": 6,
+      "Charte mondiale de l'IA créative 2039": 6,
+      "Charte mondiale des droits cognitifs animaux adoptée à Nairobi 2042": 6,
+      "Pacte mondial de gestion des migrations climatiques 2040": 6,
+      "Traité de l'Espace renouvelé et étendu 2040": 1,
+      "accord mondial de mobilité régulée remplaçant les quotas unilatéraux 2038": 5,
+      "adoption du récit mondial de la société post-travail 2039": 1,
+      "adoption du statut de bien commun pour les plateformes mondiales 2039": 5,
+      "adoption du statut de citoyenneté orbitale universelle 2042": 1,
+      "adoption mondiale des indicateurs de prosperité post-croissance 2039": 5,
+      "allongement de l'espérance de vie active à 90 ans": 5,
+      "création du Droit de Tirage Universel 2.0": 5,
+      "création du Réseau Mondial de Biosurveillance en 2038": 4,
+      "création du forum mondial de dialogue interculturel permanent 2038": 6,
+      "déploiement de la plateforme mondiale d'anticipation migratoire 2039": 5,
+      "déploiement de la plateforme mondiale de gestion des mobilités 2040": 6,
+      "déploiement du Réseau Mondial de Médecine Prédictive en 2044": 5,
+      "déploiement du système mondial de traçabilité des chaînes 2038": 2,
+      "déploiement mondial des horaires adaptatifs urbains pilotés par IA 2042": 5,
+      "entrée en vigueur de l'impôt mondial sur la fortune 2039": 6,
+      "entrée en vigueur de la taxe carbone mondiale universelle 2038": 5,
+      "extension du Réseau Mondial de Biosurveillance aux foyers en 2042": 5,
+      "fusion des consortiums orbitaux dans le réseau économique mondial 2039": 1,
+      "généralisation mondiale des robots de service dans le tertiaire 2039": 1,
+      "instauration du revenu universel global 2041": 2,
+      "lancement du forum mondial des identités mobiles 2039": 5,
+      "lancement du mouvement spirituel mondial de la régénération 2043": 5,
+      "lancement du pacte intergénérationnel mondial pour la régénération 2039": 6,
+      "lancement du programme international de minage d'astéroïdes 2043": 1,
+      "lancement du programme mondial d'agriculture régénérative automatisée 2040": 1,
+      "lancement du programme mondial de reconversion vers les métiers hybrides 2038": 2,
+      "lancement du récit mondial de la civilisation multi-orbitale 2041": 1,
+      "premier Forum Mondial des Civilisations Régénératives 2041": 5,
+      "premier Sommet mondial sur l'humain augmenté éthique 2046": 4,
+      "réseau mondial de gestion hydrique automatisée déployé 2042": 1,
+      "signature du Pacte de Singapour pour la recherche biotech ouverte 2039": 5
     },
     "majeurs": {
-      "Consortium SahelFlow déploie son IA de gestion hydrique 2041": 1,
-      "déploiement du réseau mondial d'agents IA collaboratifs 2038": 1,
-      "lancement de la campagne mondiale pour la sobriété choisie 2039": 1,
-      "mise en service du réseau mondial de capture carbone 2043": 1,
-      "premiers centres de données alimentés à 100% par fusion 2039": 1,
-      "publication du manifeste de la transition régénérative 2037": 1
+      "Accord de Séoul sur la gouvernance IA institutionnelle 2040": 16,
+      "Consortium SahelFlow déploie son IA de gestion hydrique 2041": 16,
+      "Fonds Mondial des Ressources Critiques 2040": 17,
+      "Lagos-Mumbai-Jakarta adoptent un protocole commun d'agents IA publics 2042": 16,
+      "Traité mondial sur l'eau et la sécurité hydrique 2038": 17,
+      "Traité mondial sur la régulation des plateformes numériques 2039": 16,
+      "adoption de la norme mondiale de restauration minière 2041": 17,
+      "adoption du cadre mondial d'interopérabilité des agents IA publics 2039": 16,
+      "adoption du premier référendum permanent assisté par IA 2039": 17,
+      "adoption par le Conseil Climatique Mondial du cadre multi-niveaux 2043": 16,
+      "certification mondiale des systèmes décisionnels automatisés fiables 2042": 16,
+      "certification mondiale des systèmes décisionnels publics automatisés 2040": 16,
+      "commercialisation mondiale des batteries à flux longue durée 2038": 16,
+      "déploiement du réseau mondial d'agents IA collaboratifs 2038": 16,
+      "déploiement du réseau mondial de détection précoce des feux 2039": 17,
+      "déploiement mondial des puits de carbone technologiques 2040": 16,
+      "lancement de la campagne mondiale pour la sobriété choisie 2039": 16,
+      "lancement du programme mondial de villes-refuges côtières 2044": 17,
+      "lancement du récit mondial de la transition comme opportunité 2038": 16,
+      "lancement du système mondial de certification de la réalité 2041": 16,
+      "mise en service du réseau mondial de capture carbone 2043": 16,
+      "premier réseau de réacteurs à fusion commercial 2060": 16,
+      "premiers centres de données alimentés à 100% par fusion 2039": 16,
+      "programme mondial de résilience numérique 2039": 16,
+      "publication du manifeste de la transition régénérative 2037": 16,
+      "publication du premier baromètre mondial de confiance institutionnelle 2039": 16,
+      "réforme majeure de l'ONU et création du Conseil Climatique Mondial 2039": 16
     }
   },
   "policy_reform": {
+    "journalistes::opposition::bloc_souverainiste_non_signataire": {
+      "Inti Quispe Mamani": {
+        "absence_streak": 0,
+        "count": 1
+      },
+      "Mereoni Tawake": {
+        "absence_streak": 0,
+        "count": 1
+      },
+      "Yolanda Choquehuanca": {
+        "absence_streak": 0,
+        "count": 1
+      }
+    },
+    "journalistes::opposition::espace_eurasiatique": {
+      "Timur Akhmetov": {
+        "absence_streak": 0,
+        "count": 1
+      }
+    },
+    "journalistes::opposition::hub_africain_gouvernance": {
+      "Chantal Moukoko": {
+        "absence_streak": 0,
+        "count": 1
+      }
+    },
+    "journalistes::opposition::hub_europeen_regulation": {
+      "Camille Favre": {
+        "absence_streak": 0,
+        "count": 1
+      },
+      "Maarten de Jong": {
+        "absence_streak": 0,
+        "count": 1
+      },
+      "Nadia Berset": {
+        "absence_streak": 0,
+        "count": 1
+      }
+    },
+    "journalistes::opposition::zone_moyen_orient_golfe": {
+      "Layla Al-Mansouri": {
+        "absence_streak": 0,
+        "count": 1
+      }
+    },
+    "journalistes::pro_pouvoir::hub_africain_gouvernance": {
+      "Wairimu Otieno": {
+        "absence_streak": 0,
+        "count": 1
+      }
+    },
+    "journalistes::pro_pouvoir::hub_europeen_regulation": {
+      "Matthijs van der Meer": {
+        "absence_streak": 0,
+        "count": 1
+      },
+      "Mikko Lehtinen": {
+        "absence_streak": 0,
+        "count": 2
+      },
+      "Sanne de Vries": {
+        "absence_streak": 0,
+        "count": 1
+      }
+    },
+    "journalistes::pro_pouvoir::zone_moyen_orient_golfe": {
+      "Layla Al-Khatib": {
+        "absence_streak": 0,
+        "count": 1
+      },
+      "Sara Haddad": {
+        "absence_streak": 1,
+        "count": 0
+      }
+    },
     "locaux": {
-      "Convention de Genève sur les réfugiés climatiques 2035": 1,
+      "Convention de Genève sur les réfugiés climatiques 2035": 2,
       "Convention de l'Espace sur la limitation des armes orbitales 2036": 1,
-      "accord-cadre international sur les quotas migratoires négociés 2034": 1,
-      "adoption de la Charte Internationale de la Médecine Prédictive Équitable 2041": 1,
-      "adoption de la charte internationale des rythmes urbains soutenables 2035": 1,
-      "adoption de la réforme fiscale internationale sur les grandes fortunes 2035": 1,
-      "adoption du cadre légal de reconnaissance des spiritualités hybrides 2037": 1,
-      "adoption du tableau de bord international post-PIB 2035": 1,
-      "charte internationale sur l'usage éthique des prédictions migratoires 2036": 1,
-      "directive OMS sur l'accès équitable aux médicaments essentiels": 1,
-      "grand plan de réforme des retraites de 2035": 1,
+      "Taxe Tobin sur l'automatisation et fonds de reconversion 2036": 1,
+      "Traité de Genève sur la sécurité sanitaire globale 2035": 2,
+      "accord international sur un prix plancher du carbone 2033": 2,
+      "accord-cadre international sur les quotas migratoires négociés 2034": 3,
+      "adoption de la Charte Internationale de la Médecine Prédictive Équitable 2041": 2,
+      "adoption de la charte de transition des métiers de service 2034": 2,
+      "adoption de la charte internationale des rythmes urbains soutenables 2035": 2,
+      "adoption de la directive mondiale sur la taxation des plateformes 2034": 2,
+      "adoption de la directive sur l'automatisation agricole responsable 2035": 2,
+      "adoption de la réforme fiscale internationale sur les grandes fortunes 2035": 2,
+      "adoption de la semaine de travail réduite à l'échelle mondiale 2033": 2,
+      "adoption du cadre international sur l'industrie orbitale privée 2034": 2,
+      "adoption du cadre légal de reconnaissance des spiritualités hybrides 2037": 3,
+      "adoption du règlement mondial sur les données de santé 2037": 2,
+      "adoption du tableau de bord international post-PIB 2035": 2,
+      "adoption du traité de partage des ressources astéroïdales 2038": 2,
+      "charte internationale sur l'usage éthique des prédictions migratoires 2036": 2,
+      "directive OMS sur l'accès équitable aux médicaments essentiels": 2,
+      "directive internationale sur les débris orbitaux 2035": 1,
+      "directive sur la résilience des chaînes d'approvisionnement critiques 2032": 2,
+      "grand plan de réforme des retraites de 2035": 2,
       "lancement de la campagne institutionnelle pour la culture spatiale 2035": 1,
-      "lancement du programme international d'éducation au dialogue interculturel 2033": 1,
-      "norme internationale sur les systèmes algorithmiques migratoires 2035": 1,
-      "premières assises citoyennes sur l'humain augmenté 2040": 1,
-      "programme UNESCO de recomposition culturelle post-crise": 1,
-      "programme international de dialogue interculturel sur les migrations 2034": 1,
-      "réforme du FMI et création du Conseil Monétaire Mondial": 1
+      "lancement du plan international de reconversion professionnelle 2033": 2,
+      "lancement du programme international d'habitats orbitaux partagés 2036": 1,
+      "lancement du programme international d'éducation au dialogue interculturel 2033": 2,
+      "lancement du programme national de dialogue intergénérationnel 2034": 2,
+      "norme internationale sur les systèmes algorithmiques migratoires 2035": 2,
+      "premières assises citoyennes sur l'humain augmenté 2040": 2,
+      "programme UNESCO de recomposition culturelle post-crise": 3,
+      "programme international de dialogue interculturel sur les migrations 2034": 3,
+      "ratification du Traité de Brasília sur la biotech responsable 2043": 2,
+      "réforme du FMI et création du Conseil Monétaire Mondial": 3,
+      "traité de Genève sur les droits cognitifs des espèces communicantes 2038": 3,
+      "traité de Niamey sur le partage des nappes phréatiques 2038": 1,
+      "traité international sur la propriété intellectuelle et l'IA 2036": 2,
+      "traité international sur les marchés algorithmiques": 2
     },
     "majeurs": {
-      "Convention de Genève sur le droit à l'eau 2035": 2,
-      "Oslo publie la norme d'audit des agents IA publics 2038": 1,
-      "UE adopte la norme d'auditabilité des agents IA publics 2035": 1,
-      "accord climatique de Nairobi 2+ avec mécanismes contraignants 2035": 2,
-      "adoption de la charte mondiale de transparence institutionnelle 2035": 2,
-      "adoption de la norme internationale d'efficacité énergétique de l'IA 2034": 2,
-      "adoption de la norme internationale de certification informationnelle 2035": 2,
-      "adoption de la norme mondiale d'auditabilité des agents IA 2033": 2,
-      "adoption de la norme sur la supervision des décisions automatisées 2037": 2,
-      "adoption de la norme sur la supervision humaine obligatoire 2035": 2,
-      "création de l'Agence Internationale de la Fusion 2045": 2,
-      "création de la force mondiale anti-incendie de l'ONU 2034": 2,
-      "création du fonds international de réhabilitation minière 2037": 2,
-      "directive internationale sur la résilience des infrastructures 2035": 2,
-      "directive mondiale sur l'IA dans les services publics 2037": 2,
-      "démantèlement judiciaire des GAFAM 2+ de 2036": 2,
-      "fonds mondial pour la relocalisation côtière de l'ONU 2039": 2,
-      "lancement de la campagne publique de pédagogie énergétique 2033": 2,
-      "lancement de la plateforme mondiale de consultation citoyenne 2034": 2,
-      "lancement du fonds international pour le stockage énergétique 2035": 3,
-      "lancement du plan international de sobriété énergétique 2034": 2,
-      "premier plan national de santé mentale climatique 2034": 2,
-      "protocole international de certification de la capture carbone 2037": 2,
-      "signature du cadre de coordination environnementale multi-niveaux 2036": 3,
-      "traité OCDE sur les minerais de la transition 2036": 2,
-      "traité de Ouagadougou sur les quotas hydriques solaires 2037": 2,
-      "traité de réforme des institutions de Bretton Woods 2037": 2
+      "Convention de Genève sur le droit à l'eau 2035": 9,
+      "Oslo publie la norme d'audit des agents IA publics 2038": 9,
+      "UE adopte la norme d'auditabilité des agents IA publics 2035": 8,
+      "accord climatique de Nairobi 2+ avec mécanismes contraignants 2035": 8,
+      "adoption de la charte mondiale de transparence institutionnelle 2035": 8,
+      "adoption de la norme internationale d'efficacité énergétique de l'IA 2034": 8,
+      "adoption de la norme internationale de certification informationnelle 2035": 9,
+      "adoption de la norme mondiale d'auditabilité des agents IA 2033": 8,
+      "adoption de la norme sur la supervision des décisions automatisées 2037": 9,
+      "adoption de la norme sur la supervision humaine obligatoire 2035": 8,
+      "création de l'Agence Internationale de la Fusion 2045": 9,
+      "création de la force mondiale anti-incendie de l'ONU 2034": 8,
+      "création du fonds international de réhabilitation minière 2037": 9,
+      "directive internationale sur la résilience des infrastructures 2035": 9,
+      "directive mondiale sur l'IA dans les services publics 2037": 8,
+      "démantèlement judiciaire des GAFAM 2+ de 2036": 8,
+      "fonds mondial pour la relocalisation côtière de l'ONU 2039": 8,
+      "lancement de la campagne publique de pédagogie énergétique 2033": 9,
+      "lancement de la plateforme mondiale de consultation citoyenne 2034": 9,
+      "lancement du fonds international pour le stockage énergétique 2035": 8,
+      "lancement du plan international de sobriété énergétique 2034": 8,
+      "premier plan national de santé mentale climatique 2034": 9,
+      "protocole international de certification de la capture carbone 2037": 8,
+      "signature du cadre de coordination environnementale multi-niveaux 2036": 9,
+      "traité OCDE sur les minerais de la transition 2036": 8,
+      "traité de Ouagadougou sur les quotas hydriques solaires 2037": 8,
+      "traité de réforme des institutions de Bretton Woods 2037": 9
     }
   },
   "reference": {

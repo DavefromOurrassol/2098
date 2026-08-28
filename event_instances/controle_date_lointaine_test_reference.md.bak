@@ -4,6 +4,11 @@ type: event_instance
 slug: controle_date_lointaine_test_reference
 archetype: controle_date_lointaine_test
 scenario: reference
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 type_evenement: technological
 portee: continentale
 date: 2091

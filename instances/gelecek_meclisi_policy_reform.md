@@ -63,6 +63,7 @@ generation: transition
 
 injection:
   type: custom
+  garantie_selection: false
   annee_injection: 2047
   contexte_injection: >
     Le *Gelecek Meclisi* agit comme un catalyseur systémique en formalisant des mécanismes de coordination entre acteurs disparates, ce qui renforce la résilience des institutions (gouvernance_institutions) tout en intégrant les innovations technologiques (technologie_information) dans des cadres légitimes. Son impact sur l'organisation des territoires est structurel : en permettant des compromis entre planification globale et autonomie locale, il accélère le rééquilibrage territorial sans provoquer de ruptures violentes.

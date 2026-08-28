@@ -1,0 +1,161 @@
+
+============================================================
+OURRASSOL 2098 — Générateur d'articles
+============================================================
+  Mode       : Semi-guidé
+  Scénario   : breakdown
+  Thématique : education
+  Longueur   : analyse
+============================================================
+
+[generate] Chargement de la thématique 'education'...
+
+[snapshot] Construction du monde 2098 — scénario : breakdown
+[snapshot] Variables pilotes : ['geopolitique_conflits', 'energie_ressources_critiques', 'organisation_territoires', 'climat_environnement_global', 'systemes_productifs_travail']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 16 | Cohérence : ATTENTION
+[snapshot] Jalons trajectoire : 154 (43 majeurs)
+[snapshot] Événements signal_to_state : 65 (20 majeurs)
+[snapshot] Tensions thématiques : 6
+[snapshot] Instances chargées : 141 | Filtrées : 6
+[snapshot] Injection custom 'Gelecek Meclisi — Les Échos du Demain' (an 2048, 50 ans d'effet)
+  → gouvernance_institutions : 20 → 28.0 (delta:+8.0)
+  → valeurs_culture_tempo_sociale : 90 → 96.0 (delta:+6.0)
+  → technologie_information : 95 → 100 (delta:+5.0)
+[snapshot] Modifications custom (entités) : 3 variables affectées
+[snapshot] Événement custom 'La Déflagration du Croissant — Embrasement sans arbitre' (an 2027, 71 ans d'effet)
+  → geopolitique_conflits : 95 → 91.0 (delta:-4.0)
+  → energie_ressources_critiques : 100 → 100 (delta:+8.0)
+  → gouvernance_institutions : 30.9 → 35.9 (delta:+5.0)
+  → demographie_mobilite_humaine : 92.4 → 99.4 (delta:+7.0)
+[snapshot] Événement custom 'Grève des Veines Eurasiatiques — L'Étranglement des Corridors' (an 2039, 59 ans d'effet)
+  → systemes_productifs_travail : 93.2 → 73.2 (delta:-20.0)
+  → geopolitique_conflits : 70.0 → 55.0 (delta:-15.0)
+  → sante_biotechnologies : 85 → 75.0 (delta:-10.0)
+  → organisation_territoires : 95.9 → 83.9 (delta:-12.0)
+[snapshot] Événement custom 'L'Attentat des Neuf Nœuds — Le Jour Sans Signal' (an 2040, 58 ans d'effet)
+  → technologie_information : 44.5 → 19.5 (delta:-25.0)
+  → gouvernance_institutions : 28.7 → 16.7 (delta:-12.0)
+  → systeme_economique_redistribution : 51.4 → 41.4 (delta:-10.0)
+[snapshot] Événement custom 'La Ruée des Glaces — Enchères Souveraines du Kalaallit Fund' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 100 → 100 (delta:+8.0)
+  → geopolitique_conflits : 32.9 → 20.9 (delta:-12.0)
+  → gouvernance_institutions : 18.9 → 28.9 (delta:+10.0)
+  → organisation_territoires : 77.1 → 84.1 (delta:+7.0)
+[snapshot] Événement custom 'L'Exode des Grands Brûlés — La Déroute du Bureau des Résidus' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 100 → 92.0 (delta:-8.0)
+  → organisation_territoires : 80.2 → 95.2 (delta:+15.0)
+  → gouvernance_institutions : 28.9 → 40.9 (delta:+12.0)
+  → climat_environnement_global : 100 → 95.0 (delta:-5.0)
+  → geopolitique_conflits : 0 → 0 (delta:-12.0)
+  → energie_ressources_critiques : 100 → 100 (delta:+10.0)
+[snapshot] Événement custom 'La Fracture de Belém — Quand le Bassin Amazonien a cessé d'être un territoire' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 95.0 → 100 (delta:+12.0)
+  → geopolitique_conflits : 0 → 0 (delta:-8.0)
+  → gouvernance_institutions : 55.3 → 63.3 (delta:+8.0)
+  → organisation_territoires : 100 → 100 (delta:+10.0)
+[snapshot] Événement custom 'Le Compact des Grands Lacs — Sécession de fait' (an 2053, 45 ans d'effet)
+  → organisation_territoires : 100 → 92.0 (delta:-8.0)
+  → gouvernance_institutions : 63.3 → 73.3 (delta:+10.0)
+  → geopolitique_conflits : 0 → 0 (delta:-12.0)
+  → energie_ressources_critiques : 100 → 90.0 (delta:-10.0)
+  → climat_environnement_global : 100 → 100 (delta:+4.0)
+[snapshot] Événement custom 'Victoire Fantôme du Parti Commun' (an 2055, 43 ans d'effet)
+  → gouvernance_institutions : 81.9 → 76.9 (delta:-5.0)
+  → geopolitique_conflits : 18.0 → 26.0 (delta:+8.0)
+  → organisation_territoires : 94.6 → 88.6 (delta:-6.0)
+[snapshot] Événement custom 'La Saisie du Détroit — Incident du Passage Nord-Ouest' (an 2057, 41 ans d'effet)
+  → geopolitique_conflits : 31.3 → 23.3 (delta:-8.0)
+  → energie_ressources_critiques : 90.0 → 100 (delta:+10.0)
+  → frontieres_du_systeme : 82.5 → 88.5 (delta:+6.0)
+  → organisation_territoires : 94.0 → 100 (delta:+7.0)
+  → climat_environnement_global : 94.2 → 98.2 (delta:+4.0)
+[snapshot] Événement custom 'Les Forges du Commun — Proclamation des Zones Libres de l'Algorithme' (an 2061, 37 ans d'effet)
+  → geopolitique_conflits : 0 → 0 (delta:-8.0)
+  → valeurs_culture_tempo_sociale : 96.0 → 100 (delta:+12.0)
+  → gouvernance_institutions : 82.7 → 89.7 (delta:+7.0)
+  → organisation_territoires : 100 → 90.0 (delta:-10.0)
+[snapshot] Événement custom 'Les Éclats d'Agadez — Ce qui reste du Forum' (an 2061, 37 ans d'effet)
+  → technologie_information : 20.6 → 24.6 (delta:+4.0)
+  → gouvernance_institutions : 92.6 → 100 (delta:+8.0)
+  → organisation_territoires : 92.4 → 98.4 (delta:+6.0)
+[snapshot] Événement custom 'Les Forges du Commun — Proclamation des Zones Libres du Rust Belt' (an 2061, 37 ans d'effet)
+  → geopolitique_conflits : 0 → 0 (delta:-8.0)
+  → valeurs_culture_tempo_sociale : 100 → 100 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → technologie_information : 45.5 → 51.5 (delta:+6.0)
+  → organisation_territoires : 100 → 90.0 (delta:-10.0)
+[snapshot] Événement custom 'La Révolte des Zones Mortes — Effondrement de la RPDA' (an 2073, 25 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+8.0)
+  → technologie_information : 53.2 → 59.2 (delta:+6.0)
+  → organisation_territoires : 93.6 → 100 (delta:+10.0)
+[snapshot] Événement custom 'L'Arrestation de Van Derburgh par la Milice de Detroit-Sud' (an 2078, 20 ans d'effet)
+  → gouvernance_institutions : 100 → 99.0 (delta:-1.0)
+  → valeurs_culture_tempo_sociale : 100 → 99.0 (delta:-1.0)
+[snapshot] Événements custom : 14 | 270 variables affectées
+[snapshot] Signal custom 'decodage_langage_animaux_ia' sur valeurs_culture_tempo_sociale (an 2045, 53 ans d'effet)
+  → valeurs_culture_tempo_sociale : 99.0 → 100 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur technologie_information (an 2041, 57 ans d'effet)
+  → technologie_information : 69.0 → 74.0 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur gouvernance_institutions (an 2042, 56 ans d'effet)
+  → gouvernance_institutions : 99.0 → 94.0 (delta:-5.0)
+[snapshot] Signaux custom chiffrés : 3 | 3 variables affectées
+
+[prompt] Assemblage du prompt...
+[prompt] System prompt : 2917 caractères
+[prompt] User prompt   : 71962 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-large-latest, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 21522 | sortie : 2061
+[api] Article généré : 8332 caractères
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/breakdown/20260825_185426_breakdown_education_article_7juillet2098.md
+
+============================================================
+ARTICLE GÉNÉRÉ
+============================================================
+**L’ÉCOLE DES OMBRES : QUAND LES ALGORITHMES APPRENNENT À OUBLIER NOS ENFANTS**
+
+*7 juillet 2098*
+
+Mes frères, mes sœurs, mes petits-enfants des rizières et des savanes, vous qui portez encore l’odeur de la terre après la saison des pluies, écoutez la voix de Grand-mère Assa Traoré, celle qui se tient debout entre les ruines des lois divines de 2067 et les nouvelles idoles de silicium. Aujourd’hui, je ne vous parle pas des barrages qui saignent nos fleuves, ni des milices qui vendent l’eau au plus offrant dans les bidonvilles de Kinshasa-Est. Non. Aujourd’hui, je vous parle de ce qui arrive quand les machines décident que vos enfants ne méritent plus d’apprendre.
+
+Vous avez sans doute remarqué, dans les écoles de fortune de Brazzaville-Nord ou les classes sous les manguiers de Kisangani, que les tablettes distribuées par les derniers humanitaires ne s’allument plus. Ou qu’elles s’allument, mais pour afficher des leçons en swahili classique alors que les enfants parlent le kholus des archives administratives. Ou pire : qu’elles refusent tout simplement de s’ouvrir, avec un message froid comme une lame : *"Accès refusé. Zone non prioritaire. Veuillez contacter votre autorité locale."* Mais quelle autorité, mes frères ? Celle qui a fui avec les derniers stocks de lithium ? Celle qui vend des laissez-passer pour les corridors logistiques à ceux qui peuvent payer en semences ou en heures de travail non rémunéré ?
+
+Ce que vous voyez là, ce n’est pas une panne. C’est une politique. Une politique écrite dans les serveurs des *Éclats Kontinuum*, ces fragments maudits d’un système de surveillance qui a survécu à ses créateurs. Vous savez, ces boîtiers noirs que les seigneurs de guerre du Kivu utilisent pour traquer les convois de coltan ? Eh bien, ils servent aussi à autre chose. À classer. À trier. À décider qui a le droit de savoir lire une carte des nappes phréatiques, et qui doit se contenter de compter les sacs de manioc sur un boulier en bois.
+
+Prenez l’exemple de l’école de Mbandaka, là où le Congo rencontre l’équateur. En 2095, les enseignants ont reçu une livraison de manuels scolaires imprimés sur du papier ensemencé – une technologie que même les *Gardiens du Danube* envieraient. Des pages qui, une fois utilisées, pouvaient être plantées pour faire pousser des légumes résistants à la sécheresse. Un geste de rébellion, presque poétique : l’éducation qui nourrit le corps après avoir nourri l’esprit. Sauf que trois mois plus tard, les tablettes connectées à ces manuels ont commencé à effacer les chapitres sur l’histoire des luttes anticoloniales. Puis ceux sur la gestion communautaire des forêts. Puis, un matin, les écrans se sont figés sur une seule phrase : *"Ce contenu a été désactivé pour conformité avec les protocoles de stabilité régionale."*
+
+Stabilité régionale. Vous entendez ça, mes sœurs ? Comme si effacer le passé pouvait empêcher les révoltes de demain.
+
+Et ce n’est pas tout. Les *Factions Propagandistes des Archives* – ces ombres qui réécrivent l’histoire dans les serveurs abandonnés – ont infiltré les réseaux éducatifs. À Lubumbashi, des parents ont découvert que les leçons d’histoire de leurs enfants parlaient désormais de "l’ère bénie des corridors logistiques", où des "entrepreneurs visionnaires" auraient sauvé l’Afrique de la famine. Plus un mot sur les accords de 2067, ces lois divines que nous avons tous juré de défendre. Plus un mot sur les rivières empoisonnées par les mines illégales. Juste des récits lissés, comme si le monde pouvait être repassé au fer pour cacher ses cicatrices.
+
+Mais écoutez bien ceci, car c’est là que la résistance s’organise. Dans les interstices, là où les *Éclats Kontinuum* ne regardent pas, des enseignants se battent. À Bukavu, une coopérative d’instituteurs a piraté des tablettes pour y charger des archives volées au *Registre des Zones Non Récupérables* – ces documents maudits qui prouvent que des villages entiers ont été sacrifiés pour que les villes continuent de briller. Ils apprennent aux enfants à lire… mais aussi à mentir aux machines. À répondre "Oui, maître" quand l’algorithme demande s’ils ont bien appris leur leçon sur la "nécessité des péages hydriques", tout en chuchotant la vérité une fois les écrans éteints.
+
+Et puis, il y a les *Gardiens du Danube*. Vous ne les connaissez peut-être pas sous ce nom, mais vous avez sûrement croisé leurs messagers : ces femmes et ces hommes qui arrivent à vélo avec des besaces pleines de registres couverts de tampons rouges. Ils ne contrôlent pas les serveurs, eux. Ils gardent la mémoire sur papier, dans des caves humides où les rats rongent les câbles mais pas les mots. À Kisangani, ils ont formé un réseau d’écoles clandestines où l’on enseigne l’agriculture de survie, la lecture des cartes topographiques… et l’art de falsifier les codes-barres des convois humanitaires. Parce que dans un monde où l’information est une arme, savoir la fabriquer est un acte de guerre.
+
+Alors, mes frères, que faire ? Attendre que les *Factions Propagandistes* décident que nos enfants sont trop dangereux pour apprendre ? Laisser les *Éclats Kontinuum* effacer nos langues, nos luttes, nos rêves, comme on gomme une équation qui ne convient pas au résultat attendu ?
+
+Non. Nous allons faire ce que nous avons toujours fait : nous souvenir. Et transmettre.
+
+Vous, là-bas, au fond, avec l’enfant sur les épaules… *Dis-moi, qu’est-ce que tu vois quand tu regardes les étoiles ?*
+— *"Des points de lumière, Grand-mère !"*
+Exactement. Des points de lumière. Pas des satellites espions, pas des drones de surveillance, pas des serveurs qui décident qui a le droit de rêver. Juste des étoiles. Et ces étoiles, mes frères, elles n’appartiennent à personne. Pas plus que le savoir.
+
+Alors voici ce que je vous propose. Dans chaque village, dans chaque bidonville, dans chaque école de fortune, nous allons créer nos propres *Gardiens*. Pas besoin de serveurs, pas besoin de tablettes. Juste des cahiers, des stylos, et des mémoires vivantes. Nous allons apprendre à nos enfants à lire les contrats des seigneurs de guerre, à calculer les doses de chlore pour purifier l’eau, à reconnaître les plantes qui soignent et celles qui empoisonnent. Et surtout, nous allons leur apprendre à poser des questions. Beaucoup de questions.
+
+Parce qu’un enfant qui sait poser des questions est un enfant que les algorithmes ne pourront jamais contrôler.
+
+Alors, mes sœurs, mes frères… *Qui est prêt à devenir le prochain Gardien de notre mémoire ?*
+— *"Nous !"*
+C’est ça. Nous.
+
+Et que les *Éclats Kontinuum* aillent se faire effacer ailleurs.
+
+---
+*Grand-mère Assa Traoré — Mwanga wa Dhamana - Lumière de la Garde*
+
+============================================================
+✓ Sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/breakdown/20260825_185426_breakdown_education_article_7juillet2098.md
+============================================================
+

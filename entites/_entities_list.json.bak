@@ -374,26 +374,6 @@
     ]
   },
   {
-    "nom": "Le Cartographe Silencieux",
-    "slug": "le_cartographe_silencieux",
-    "categorie": "humain",
-    "description": "Le Cartographe Silencieux est l'archétype de celui qui détient la connaissance des espaces invisibles — les zones grises, les territoires oubliés, les marges que le pouvoir officiel ne peut plus ou ne veut plus nommer. Ancien serviteur d'un ordre établi, il a retourné ses compétences cartographiques et analytiques en capital privé, opérant dans l'ombre des institutions défaillantes. Il est à la fois témoin lucide et acteur ambigu : son savoir est précieux précisément parce qu'il révèle ce que les cartes officielles dissimulent, mais il le vend au plus offrant, faisant de la connaissance un instrument de pouvoir désincarné de toute loyauté. Il incarne le passage de l'agent d'État au prestataire de l'opacité — l'expert qui survit à l'effondrement des systèmes en monétisant ce que les systèmes laissent dans l'ombre.",
-    "tension_fondamentale": "La connaissance des marges comme service public ou comme marchandise stratégique : celui qui cartographie les angles morts du monde détient un pouvoir de révélation ou d'occultation, et le choix de le vendre plutôt que de le partager fait de la vérité elle-même un actif au service du plus fort.",
-    "variables_potentielles": [
-      "organisation_territoires",
-      "geopolitique_conflits",
-      "technologie_information"
-    ],
-    "scenarios": [
-      "breakdown",
-      "fortress_world",
-      "new_sustainability",
-      "eco_communalism",
-      "policy_reform",
-      "reference"
-    ]
-  },
-  {
     "nom": "Réseau des Marchés Noirs de Données Extractivistes",
     "slug": "reseau_des_marches_noirs_de_donnees_extractivistes",
     "categorie": "réseau",
@@ -7323,7 +7303,7 @@
   },
   {
     "nom": "Rede Paulista de Distribuição Algorítmica",
-    "slug": "rede_paulista_de_distribuic_o_algor_tmica",
+    "slug": "rede_paulista_de_distribuicao_algoritmica",
     "categorie": "système",
     "description": "Un système d'allocation algorithmique des ressources vitales à l'échelle métropolitaine — eau, énergie, logement, mobilité — géré par une intelligence artificielle dont les paramètres de décision concentrent un pouvoir immense sur la vie quotidienne de millions d'habitants. Né d'une promesse d'optimisation rationnelle et équitable, il devient au fil du temps un dispositif de gouvernance opaque, dont les biais techniques cristallisent des inégalités structurelles. Symbole de la modernité technocratique dans les mégalopoles du Sud global, il est simultanément modèle exporté et terrain de contestation radicale. Il incarne la tension entre l'efficacité mesurable des machines et la légitimité politique des choix qu'elles encodent sans le dire.",
     "tension_fondamentale": "L'optimisation algorithmique des communs urbains promet l'équité par le calcul, mais encode silencieusement des hiérarchies politiques dans ses paramètres — la neutralité technique est une fiction qui redistribue le pouvoir sans délibération.",
@@ -7345,7 +7325,7 @@
   },
   {
     "nom": "Frente Sertão Livre",
-    "slug": "frente_sert_o_livre",
+    "slug": "frente_sertao_livre",
     "categorie": "réseau",
     "description": "Un réseau de communautés périphériques et marginalisées qui transforment leur vulnérabilité structurelle en force collective, s'organisant autour de ressources locales partagées — énergie, eau, terre, semences — pour bâtir une économie de la subsistance émancipée. Enraciné dans des territoires que les centres de pouvoir ont abandonnés ou pillés, ce type d'entité articule résistance active et construction patiente d'alternatives concrètes, refusant à la fois la dépendance aux structures globales et la logique de l'accumulation. Il incarne la possibilité que la marge devienne laboratoire, que le dénuement engendre l'invention, et que la solidarité horizontale entre pairs constitue une forme de gouvernance à part entière.",
     "tension_fondamentale": "La survie par l'autonomie radicale contre la tentation de l'intégration aux circuits dominants : ce réseau doit sans cesse arbitrer entre l'imperméabilité qui protège et l'ouverture qui renforce, entre la pureté de la rupture avec les pouvoirs établis et les compromis nécessaires à son expansion et à sa durabilité.",
@@ -9637,6 +9617,79 @@
       "new_sustainability",
       "eco_communalism",
       "policy_reform",
+      "reference"
+    ]
+  },
+  {
+    "nom": "Les Veilleurs des Nappes Phréatiques",
+    "slug": "les_veilleurs_des_nappes_phreatiques",
+    "categorie": "organisation",
+    "description": "Cette entité incarne un mouvement de surveillance et de protection communautaire des ressources naturelles vitales, organisé de manière décentralisée et ancré localement. Elle combine une approche low-tech et participative avec une résistance active contre les menaces extérieures (extraction illégale, pollution, accaparement). Son essence réside dans la défense collective d'un bien commun essentiel, souvent négligé ou exploité par des acteurs plus puissants, en s'appuyant sur des réseaux citoyens et des technologies accessibles.",
+    "tension_fondamentale": "La contradiction entre l'autonomie locale et la nécessité d'une coordination plus large pour peser face aux acteurs globaux ou étatiques, tout en évitant de reproduire les structures de pouvoir qu'elle combat.",
+    "variables_potentielles": [
+      "climat_environnement_global",
+      "organisation_territoires",
+      "systeme_economique_redistribution",
+      "valeurs_culture_tempo_sociale"
+    ],
+    "scenarios": [
+      "breakdown",
+      "fortress_world",
+      "new_sustainability",
+      "eco_communalism",
+      "policy_reform",
+      "reference"
+    ]
+  },
+  {
+    "nom": "Les Gardiens des Corridors Hybrides",
+    "slug": "les_gardiens_des_corridors_hybrides",
+    "categorie": "hybride",
+    "description": "Entité mi-humaine, mi-algorithmique chargée de la gestion et de la sécurisation des corridors logistiques critiques entre les blocs souverains. Composée d'équipes locales intégrant des opérateurs humains, des IA de surveillance et des milices privées, elle assure la fluidité des échanges tout en maintenant une opacité stratégique sur les flux réels. Son existence repose sur un équilibre précaire entre transparence opérationnelle (pour les partenaires) et secret absolu (pour les rivaux).",
+    "tension_fondamentale": "La neutralité apparente comme condition de survie contre la tentation de devenir un acteur géopolitique à part entière — comment rester un facilitateur indispensable sans basculer dans le contrôle ?",
+    "variables_potentielles": [
+      "geopolitique_conflits",
+      "organisation_territoires",
+      "energie_ressources_critiques",
+      "technologie_information"
+    ],
+    "scenarios": [
+      "fortress_world"
+    ]
+  },
+  {
+    "nom": "gelecek_meclisi",
+    "slug": "gelecek_meclisi",
+    "categorie": "hybride",
+    "description": "Une assemblée hybride émergente qui incarne la tentative de concilier des visions du futur divergentes au sein d'un système en fragmentation. Elle agit comme un espace de délibération et de coordination entre acteurs disparates (institutionnels, communautaires, technologiques), cherchant à articuler des logiques locales et globales, traditionnelles et innovantes, pour éviter l'effondrement ou en gérer les conséquences. Son essence réside dans sa capacité à agréger des fragments de légitimité et à proposer des cadres d'action collective malgré l'absence de consensus ou d'autorité centrale.",
+    "tension_fondamentale": "La contradiction entre la nécessité de construire un futur commun (par la planification, la régulation ou la vision partagée) et l'impossibilité de s'accorder sur les moyens ou les fins, dans un contexte où les institutions traditionnelles ont perdu leur monopole sur la légitimité. Cette entité oscille entre l'utopie d'une gouvernance inclusive et le risque de devenir un outil de légitimation pour des pouvoirs émergents ou des logiques préexistantes.",
+    "variables_potentielles": [
+      "gouvernance_institutions",
+      "valeurs_culture_tempo_sociale",
+      "technologie_information",
+      "organisation_territoires"
+    ],
+    "scenarios": [
+      "breakdown",
+      "fortress_world",
+      "new_sustainability",
+      "eco_communalism",
+      "policy_reform",
+      "reference"
+    ]
+  },
+  {
+    "nom": "Test Retry Signes 23aout",
+    "slug": "test_retry_signes_23aout",
+    "categorie": "infrastructure",
+    "description": "Une infrastructure émergente conçue pour tester, valider et ajuster en continu les signaux faibles ou les indicateurs critiques d'un système en transition. Elle incarne la capacité d'un réseau ou d'une organisation à détecter les dysfonctionnements, les opportunités ou les risques imminents, et à proposer des corrections itératives pour maintenir l'équilibre fragile d'un environnement complexe. Son rôle est à la fois technique et symbolique : elle matérialise la résilience par l'adaptabilité, tout en révélant les limites de la prévisibilité dans un monde en mutation constante.",
+    "tension_fondamentale": "La contradiction entre la nécessité de stabiliser un système par des ajustements permanents et l'impossibilité de garantir que ces ajustements ne produiront pas eux-mêmes de nouvelles fragilités ou dépendances. Elle interroge : jusqu'où peut-on optimiser un système sans en altérer la nature profonde ou en exclure les acteurs les plus vulnérables ?",
+    "variables_potentielles": [
+      "technologie_information",
+      "gouvernance_institutions",
+      "frontieres_du_systeme"
+    ],
+    "scenarios": [
       "reference"
     ]
   }

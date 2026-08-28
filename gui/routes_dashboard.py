@@ -60,7 +60,19 @@ def _stats_articles(vault_root: Path) -> dict:
     by_ligne: dict = {}
     sc_pat    = re.compile(r"^scenario:\s*(.+)$", re.MULTILINE)
     ligne_pat = re.compile(r"^ligne_editoriale:\s*(.+)$", re.MULTILINE)
-    for f in sorted(articles_dir.glob("*.md")):
+    # Récursif depuis le 23 août 2026 (repéré par David : dashboard à "0"
+    # articles après l'uniformisation du 22 août -- generate.py range
+    # désormais dans articles/{scenario}/ même en génération unitaire, plus
+    # seulement les séries). Même correctif déjà appliqué le 10 août à
+    # trace_injection.py/audit_longueur_articles.py pour la même raison,
+    # jamais répercuté ici -- routes_dashboard.py vit hors du flux de
+    # patches habituel sur app.py (voir docstring du module), ce qui l'a
+    # fait passer sous le radar. Fichiers d'index (_index.md, écrits par
+    # generate_series.py/generate_manual.py) exclus -- ce ne sont pas des
+    # articles, même filtre qu'audit_longueur_articles.py.
+    for f in sorted(articles_dir.glob("**/*.md")):
+        if f.name.startswith("_"):
+            continue
         try:
             txt = f.read_text(encoding="utf-8")
             total += 1
@@ -207,7 +219,11 @@ def _stats_thematiques(vault_root: Path) -> dict:
         return {}
     by_th: dict = {}
     th_pat = re.compile(r"^thematique:\s*(.+)$", re.MULTILINE)
-    for f in articles_dir.glob("*.md"):
+    # Récursif depuis le 23 août 2026 -- même correctif et même cause que
+    # _stats_articles() ci-dessus, mêmes _index.md exclus.
+    for f in articles_dir.glob("**/*.md"):
+        if f.name.startswith("_"):
+            continue
         try:
             txt = f.read_text(encoding="utf-8")
             m = th_pat.search(txt)

@@ -17,6 +17,34 @@ variables_pilotes:
   - technologie_information
   - systeme_economique_redistribution
   - gouvernance_institutions
+slug: qui_decide_quand_l_algorithme_parle_leena_vainala_contre_le_silence_des_platefor
+chapo: "En 2098, la Finlandaise Leena Väinälä dénonce le pouvoir opaque du *Système Kontinuum*, qui régule les flux d’information via des notifications algorithmiques sans transparence. Entre censure déguisée et résistance des journalistes embarqués, une bataille s’engage pour préserver la liberté de débat dans l’Arctique et au-delà."
+tags:
+  - algorithmes de modération
+  - éthique numérique
+  - journalisme embarqué
+  - censure algorithmique
+  - gouvernance des plateformes
+image_prompt: "Leena Väinälä, activiste finlandaise de 71 ans, debout sur une scène de conférence au *Nordlys Center* de Tromsø, brandissant une capture d’écran de notification du *Système Kontinuum* devant un public captivé, avec une ambiance sobre et des écrans projetant des graphiques de chute de trafic médiatique."
+a_une_photo: false
+image_credit: ""
+journaliste_slug: aino_kivinen
+date_evenement: 19 juin 2098
+zone_principale: tromsoe_aln
+date_publication: 19 juin 2098
+entites_citees:
+  - armada_logistique_nordique_reference
+  - directive_kontinuum_reference
+  - kalaallit_nunaat_sovereign_fund_reference
+  - leena_vainala_reference
+  - oracle_des_seuils_reference
+  - reseau_mnemos_reference
+  - tbilissi_noeud_mnemos_reference
+articles_lies:
+  - qui_controle_le_recit_controle_les_isruter_la_guerre_des_flux_dans_l_arctique_de
+  - le_silence_des_algorithmes_quand_les_plateformes_eteignent_les_voix_du_nord
+  - tbilissi_laboratoire_invisible_de_la_guerre_des_algorithmes
+
 ---
 **« Qui décide quand l’algorithme parle ? » : Leena Väinälä contre le silence des plateformes**
 
@@ -64,3 +92,6 @@ La charte de Väinälä exige notamment :
 À Tromsø, la tension est palpable. D’un côté, l’ALN et les consortiums logistiques arctiques ont besoin de stabilité pour attirer les investissements. De l’autre, les communautés locales et les journalistes embarqués refusent de voir leurs voix étouffées. « On nous dit que le Kontinuum est nécessaire pour éviter les crises », ironise Solbakken. « Mais qui décide de ce qu’est une crise ? Une grève des dockers ? Une fuite de lithium dans un fjord ? Un rapport de l’Oracle des Seuils annonçant l’effondrement d’un écosystème ? »
 
 Pour Väinälä, la réponse est claire : « La délibération ne peut pas être externalisée à des machines. Pas quand ces machines sont contrôlées par ceux qui ont intérêt à ce que rien ne change. » Elle termine son intervention en citant une phrase tirée des archives du *Tbilissi Nœud Mnemos* : *« Ce que l’on se rappelle, existe. Ce que l’on oublie, n’a jamais été. »* Dans un monde où l’oubli est devenu une arme, la bataille pour la mémoire est peut-être la dernière qui vaille.
+
+---
+**Voir aussi** : [[armada_logistique_nordique_reference]] · [[directive_kontinuum_reference]] · [[kalaallit_nunaat_sovereign_fund_reference]] · [[leena_vainala_reference]] · [[oracle_des_seuils_reference]] · [[reseau_mnemos_reference]] · [[tbilissi_noeud_mnemos_reference]] · [[qui_controle_le_recit_controle_les_isruter_la_guerre_des_flux_dans_l_arctique_de]] · [[le_silence_des_algorithmes_quand_les_plateformes_eteignent_les_voix_du_nord]] · [[tbilissi_laboratoire_invisible_de_la_guerre_des_algorithmes]]

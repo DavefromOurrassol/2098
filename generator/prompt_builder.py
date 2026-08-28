@@ -22,6 +22,35 @@ import yaml
 
 from loader import load_scenario, load_all_variables, VALID_VARS, VALID_SCENARIOS, load_instances_for_scenario, select_relevant_events
 
+# Vocabulaire des tags (backlog Partie 1 point 11, 21 août 2026) --
+# construit/rafraîchi par rapprocher_articles.py, injecté ci-dessous
+# dans la consigne TAGS pour encourager la réutilisation plutôt que
+# l'invention systématique. Chemin en dur volontairement (pas de config
+# supplémentaire pour un fichier optionnel) -- absent tant que
+# rapprocher_articles.py n'a jamais tourné, cas géré sans erreur.
+TAGS_REFERENCE_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "tags_reference.yaml")
+TAGS_SUGGERES_MAX = 50
+
+
+def _load_tags_suggeres(limit=TAGS_SUGGERES_MAX):
+    """Charge les tags déjà connus, triés par fréquence décroissante,
+    plafonnés à `limit` pour ne pas faire grossir le prompt
+    indéfiniment. Retourne [] si le fichier n'existe pas encore (avant
+    le premier passage de rapprocher_articles.py) ou en cas d'erreur de
+    lecture -- jamais bloquant, juste moins de suggestions."""
+    if not os.path.exists(TAGS_REFERENCE_PATH):
+        return []
+    try:
+        with open(TAGS_REFERENCE_PATH, encoding="utf-8") as f:
+            data = yaml.safe_load(f) or {}
+    except (yaml.YAMLError, OSError):
+        return []
+    tags = data.get("tags") or {}
+    # Déjà trié par fréquence à l'écriture (rapprocher_articles.py), mais
+    # retrié ici par sécurité -- ne pas supposer l'ordre du fichier.
+    ordered = sorted(tags.items(), key=lambda x: (-x[1], x[0]))
+    return [t for t, _ in ordered[:limit]]
+
 # ---------------------------------------------------------------------------
 # Chargement de journaux.yaml (généré par generate_journaux.py)
 # ---------------------------------------------------------------------------
@@ -39,7 +68,53 @@ def _load_journaux():
 
 _JOURNAUX_CACHE = None
 
-def get_journal_profile(scenario_slug, ligne_editoriale, zone_slug=None, thematique_slug=None):
+def _resoudre_zone_n1(zone_slug, scenario_slug):
+    """
+    Remonte la hiérarchie de zones (geographie/{scenario}.md, champ
+    `parent`) jusqu'à la zone niveau 1 la plus proche de `zone_slug`.
+
+    Ajouté le 23 août 2026 : `journaux.yaml` n'a jamais qu'une entrée
+    par zone NIVEAU 1 (confirmé le 12 août, même limite déjà corrigée
+    pour la sélection manuelle --zone-slug de generate.py, mais jamais
+    pour la résolution automatique). `_dominant_zone()` (snapshot.py)
+    peut retourner le slug d'une sous-zone niveau 2/3 (si les instances
+    filtrées sont localisées à ce niveau de granularité) -- sans cette
+    remontée, get_journal_profile() ne trouve alors aucune correspondance
+    dans journaux.yaml et tombe sur le chemin 2/3 (réseau global/profil
+    hardcodé, sans nom de journaliste curaté), même quand une zone
+    précise ET rattachable a bel et bien été résolue.
+
+    Même principe que le breadcrumb `chemin` de la Carte (app.py,
+    /api/carte/rechercher_zone) : remontée par `parent`, garde-fou
+    anti-cycle. Retourne `zone_slug` inchangé si déjà niveau 1, si la
+    remontée échoue (zone introuvable, cycle, pas de niveau 1 trouvé),
+    ou si la géographie du scénario n'est pas encore disponible --
+    laisse alors `get_journal_profile()` gérer l'échec comme avant
+    (repli chemin 2/3), jamais un comportement pire qu'avant ce
+    correctif.
+    """
+    zones = _load_geographie(scenario_slug)
+    if not zones:
+        return zone_slug
+
+    by_slug = {z["slug"]: z for z in zones if z.get("slug")}
+    courant = by_slug.get(zone_slug)
+    if courant is None:
+        return zone_slug
+
+    vus = set()
+    while courant is not None and courant.get("niveau", 1) != 1:
+        slug = courant.get("slug")
+        if slug in vus:
+            return zone_slug  # cycle détecté, on abandonne la remontée
+        vus.add(slug)
+        parent_slug = courant.get("parent")
+        courant = by_slug.get(parent_slug) if parent_slug else None
+
+    return courant["slug"] if courant else zone_slug
+
+
+def get_journal_profile(scenario_slug, ligne_editoriale, zone_slug=None, thematique_slug=None, dry_run=True, type_diffusion_override=None):
     """
     Retourne le profil éditorial pour un scénario + ligne + zone (+ thématique).
 
@@ -50,12 +125,52 @@ def get_journal_profile(scenario_slug, ligne_editoriale, zone_slug=None, themati
       4. Profil par défaut
 
     Pour l'édition locale, "journaliste" est choisi dans la rédaction de la
-    zone (zone_data["journalistes"], une liste de {nom, thematiques}) en
-    fonction de thematique_slug — le·la premier·ère journaliste couvrant
-    cette thématique. Si aucun ne correspond (ou thematique_slug absent),
-    repli sur le premier·ère de la liste ; chaîne vide si la liste est vide.
+    zone (zone_data["journalistes"], une liste de {nom, thematiques,
+    seniorite}) par ROTATION PONDÉRÉE PAR SÉNIORITÉ (22 août 2026, voir
+    _select_journaliste_pondere() -- remplace l'ancienne sélection
+    déterministe "premier·ère qui correspond", qui figeait pour toujours
+    le·la même journaliste sur une thématique donnée), parmi celles et
+    ceux couvrant thematique_slug -- repli sur toute la liste de la zone
+    si aucun ne correspond (ou thematique_slug absent) ; chaîne vide si
+    la liste est vide.
 
-    Retourne un dict {nom, ton, posture, journaliste} compatible avec build_system_prompt().
+    dry_run (22 août 2026) : comme pour la rotation des jalons
+    (build_trajectory_context()), l'état d'usage est mis à jour en
+    mémoire dans tous les cas, mais seulement persisté sur disque si
+    dry_run=False -- un aperçu de prompt ne doit pas consommer une
+    "chance" de rotation.
+
+    zone_slug (23 août 2026) : résolu vers son ancêtre niveau 1 avant
+    toute recherche dans journaux.yaml (voir _resoudre_zone_n1()) --
+    accepte donc aussi bien une zone N1 qu'une sous-zone N2/N3, sans
+    perdre l'édition locale curatée dans ce dernier cas.
+
+    type_diffusion (P21, 25 août 2026) : une zone peut être "ecrit"
+    (défaut, non-régression), "oral" ou "mixte" (tirage 50/50 par
+    article). En oral, l'intervenant est choisi dans
+    zone_data["orateurs"] plutôt que zone_data["journalistes"] --
+    même rotation pondérée par séniorité (_select_journaliste_pondere,
+    22 août), même clé "journaliste" en retour pour ne pas casser les
+    consommateurs existants (le champ contient le nom de qui parle,
+    peu importe le mode). Repli sur "ecrit" si oral demandé mais aucun
+    orateur défini pour la zone. La TONALITÉ orale n'est jamais gérée
+    ici -- elle est héritée automatiquement via ton/langue_style,
+    déjà présents dans le "ton" retourné ci-dessous ; seule la
+    structure (accroche/adresse directe/pas de chapô...) est ajoutée
+    séparément par build_journalistic_brief() via STYLE_ORAL.
+
+    type_diffusion_override (25 août 2026, retour de David) : permet de
+    forcer le mode de diffusion pour UN article précis, indépendamment
+    de la valeur configurée sur la zone dans journaux.yaml -- même
+    principe que config["article"]["longueur"] pour la longueur ("auto"
+    = respecte la thématique, une valeur explicite = override). None
+    (défaut) = comportement inchangé, la zone décide. Uniquement
+    pertinent pour generate.py (génération d'un seul article) --
+    generate_series.py n'a jamais cet override, une série pioche
+    toujours dans journaux.yaml tel quel, zone par zone.
+
+    Retourne un dict {nom, ton, posture, journaliste, type_diffusion}
+    compatible avec build_system_prompt().
     """
     global _JOURNAUX_CACHE
     if _JOURNAUX_CACHE is None:
@@ -63,14 +178,16 @@ def get_journal_profile(scenario_slug, ligne_editoriale, zone_slug=None, themati
 
     ligne = ligne_editoriale if ligne_editoriale in ("pro_pouvoir", "opposition") else "pro_pouvoir"
 
+    zone_slug_n1 = _resoudre_zone_n1(zone_slug, scenario_slug) if zone_slug else zone_slug
+
     # 1. Édition locale depuis journaux.yaml
-    if zone_slug and _JOURNAUX_CACHE:
+    if zone_slug_n1 and _JOURNAUX_CACHE:
         zone_data = (
             _JOURNAUX_CACHE
             .get(scenario_slug, {})
             .get(ligne, {})
             .get("zones", {})
-            .get(zone_slug)
+            .get(zone_slug_n1)
         )
         if zone_data and zone_data.get("nom"):
             reseau = (
@@ -80,17 +197,73 @@ def get_journal_profile(scenario_slug, ligne_editoriale, zone_slug=None, themati
                 .get("_reseau", {})
             )
 
+            # P21 (scopé le 12 juillet, codé le 25 août 2026) : une zone
+            # peut être écrite (défaut, non-régression totale si le champ
+            # est absent), orale, ou mixte. "mixte" -- coexistence décidée
+            # dans le scoping, tirage 50/50 à chaque article, pas de garde-
+            # fou de rotation dédié pour ce choix précis (à affiner si
+            # besoin une fois observé en conditions réelles).
+            #
+            # type_diffusion_override (25 août 2026) prime sur la valeur
+            # de la zone si fourni -- permet de forcer le mode pour UN
+            # article sans modifier journaux.yaml. Choix explicite de
+            # David : un article isolé peut déroger au défaut de sa zone,
+            # une série ne le peut jamais (generate_series.py ne passe
+            # jamais cet argument).
+            type_diffusion_zone = type_diffusion_override or zone_data.get("type_diffusion", "ecrit")
+            if type_diffusion_zone not in ("ecrit", "oral", "mixte"):
+                type_diffusion_zone = "ecrit"
+            effective_diffusion = (
+                random.choice(["ecrit", "oral"])
+                if type_diffusion_zone == "mixte" else type_diffusion_zone
+            )
+
+            orateurs = zone_data.get("orateurs", []) or []
+            # Repli sur "ecrit" si oral demandé mais aucun orateur défini
+            # pour cette zone -- jamais un comportement pire qu'avant ce
+            # chantier, même principe défensif que le repli réseau global
+            # plus bas dans cette fonction.
+            if effective_diffusion == "oral" and not orateurs:
+                effective_diffusion = "ecrit"
+
             journalistes = zone_data.get("journalistes", []) or []
-            journaliste_nom = ""
-            if journalistes:
-                match = None
+            intervenant_nom = ""
+            usage_state = _load_usage_state()
+
+            if effective_diffusion == "oral":
+                # Pas de filtrage par thématique pour les orateurs
+                # (contrairement aux journalistes) -- le scoping P21 les
+                # distingue par communautés desservies, pas par
+                # spécialité thématique. _select_journaliste_pondere()
+                # reste réutilisable telle quelle (générique sur
+                # nom/seniorite), namespace distinct pour ne jamais
+                # mélanger la rotation des orateurs avec celle des
+                # journalistes de la même zone.
+                namespace = "orateurs::{}::{}".format(ligne, zone_slug_n1)
+                intervenant_nom = _select_journaliste_pondere(
+                    orateurs, usage_state, scenario_slug, namespace
+                ) or ""
+            elif journalistes:
+                candidats = []
                 if thematique_slug:
-                    match = next(
-                        (j for j in journalistes
-                         if thematique_slug in (j.get("thematiques") or [])),
-                        None
-                    )
-                journaliste_nom = (match or journalistes[0]).get("nom", "")
+                    candidats = [
+                        j for j in journalistes
+                        if thematique_slug in (j.get("thematiques") or [])
+                    ]
+                if not candidats:
+                    candidats = journalistes
+
+                # zone_slug_n1 (pas zone_slug) : une sous-zone et sa zone
+                # N1 partagent la même rédaction/le même vivier de
+                # journalistes -- les compter séparément fragmenterait
+                # inutilement la rotation et le garde-fou anti-oubli.
+                namespace = "journalistes::{}::{}".format(ligne, zone_slug_n1)
+                intervenant_nom = _select_journaliste_pondere(
+                    candidats, usage_state, scenario_slug, namespace
+                ) or ""
+
+            if not dry_run:
+                _save_usage_state(usage_state)
 
             return {
                 "nom":     zone_data["nom"],
@@ -99,12 +272,20 @@ def get_journal_profile(scenario_slug, ligne_editoriale, zone_slug=None, themati
                     " Registre : {}.".format(zone_data["langue_style"])
                     if zone_data.get("langue_style") else ""
                 ),
-                "journaliste": journaliste_nom,
+                "journaliste": intervenant_nom,
+                "type_diffusion": effective_diffusion,
             }
         else:
-            # Zone non trouvée dans journaux.yaml → warning + fallback réseau global
-            print("[WARN][journal] Pas d'édition locale pour zone '{}' / {} / {} "
-                  "→ fallback réseau global".format(zone_slug, scenario_slug, ligne))
+            # Zone non trouvée dans journaux.yaml (même après remontée
+            # niveau 1, voir zone_slug_n1) → warning + fallback réseau
+            # global. zone_slug_n1 affiché en plus de zone_slug depuis
+            # le 23 août -- distingue "zone jamais résolue vers un N1"
+            # de "N1 résolu mais absent de journaux.yaml" en lecture de
+            # log, deux causes différentes.
+            print("[WARN][journal] Pas d'édition locale pour zone '{}' "
+                  "(résolue en N1 : '{}') / {} / {} "
+                  "→ fallback réseau global".format(
+                      zone_slug, zone_slug_n1, scenario_slug, ligne))
 
     # 2. Réseau global depuis journaux.yaml
     if _JOURNAUX_CACHE:
@@ -179,6 +360,86 @@ def _save_usage_state(state):
         json.dump(state, f, ensure_ascii=False, indent=2, sort_keys=True)
 
 
+# Rotation pondérée des journalistes par séniorité (22 août 2026,
+# demande de David) : remplace l'ancienne sélection déterministe
+# "premier·ère qui correspond" dans get_journal_profile() -- figeait
+# pour toujours le même·la même journaliste sur une thématique donnée
+# d'une zone donnée, sans aucune variété.
+#
+# Réutilise le même fichier d'état que la rotation des jalons
+# (TRAJECTORY_STATE_FILE, voir _load_usage_state()/_save_usage_state()
+# ci-dessus) -- namespace dédié "journalistes::{ligne}::{zone_slug}"
+# sous usage_state[scenario_slug], même convention de clé que
+# _select_least_used() (namespace en string, pas de nouvelle structure
+# top-level). Chargé/sauvegardé de façon autonome dans
+# get_journal_profile() : build_system_prompt() est appelé AVANT
+# build_trajectory_context() dans build_prompt() (vérifié), donc
+# aucun risque d'écrasement entre les deux sauvegardes séquentielles
+# sur le même fichier.
+JOURNALISTE_SENIORITE_DEFAUT = 1
+JOURNALISTE_MAX_ABSENCE_STREAK = 5
+
+
+def _select_journaliste_pondere(candidats, usage_state, scenario_slug, namespace):
+    """
+    Sélectionne un·e journaliste parmi candidats (liste de dicts
+    {nom, thematiques, seniorite}), par tirage pondéré par `seniorite`
+    (probabilité plus haute pour une séniorité plus élevée -- absente
+    ou non numérique, repli sur JOURNALISTE_SENIORITE_DEFAUT, non-
+    régression pour toute entrée de journaux.yaml pas encore mise à
+    jour avec ce champ).
+
+    Garde-fou anti-oubli : au-delà de JOURNALISTE_MAX_ABSENCE_STREAK
+    apparitions consécutives sans être choisi·e (parmi les occasions où
+    il/elle était éligible -- pas un compteur absolu), un·e journaliste
+    est sélectionné·e d'office, quelle que soit sa séniorité. Ne
+    dépend d'aucune comparaison entre journalistes (contrairement à une
+    pénalité de score, voir le mécanisme de cooldown des instances le
+    même jour) -- élimine par construction le risque qu'un·e
+    journaliste à faible séniorité ne soit jamais choisi·e.
+
+    Met à jour usage_state (count + absence_streak par nom, dans
+    usage_state[scenario_slug][namespace]). L'appelant décide de la
+    persistance sur disque selon le mode dry-run.
+    """
+    if not candidats:
+        return None
+
+    etat = usage_state.setdefault(scenario_slug, {}).setdefault(namespace, {})
+    for c in candidats:
+        etat.setdefault(c["nom"], {"count": 0, "absence_streak": 0})
+
+    if len(candidats) == 1:
+        nom = candidats[0]["nom"]
+        etat[nom]["count"] += 1
+        etat[nom]["absence_streak"] = 0
+        return nom
+
+    en_attente = [
+        c for c in candidats
+        if etat[c["nom"]]["absence_streak"] >= JOURNALISTE_MAX_ABSENCE_STREAK
+    ]
+    if en_attente:
+        # Le plus longtemps oublié gagne, indépendamment de la séniorité.
+        choisi = max(en_attente, key=lambda c: etat[c["nom"]]["absence_streak"])
+    else:
+        poids = [
+            max(c.get("seniorite", JOURNALISTE_SENIORITE_DEFAUT) or JOURNALISTE_SENIORITE_DEFAUT, 0.01)
+            for c in candidats
+        ]
+        choisi = random.choices(candidats, weights=poids, k=1)[0]
+
+    nom_choisi = choisi["nom"]
+    for c in candidats:
+        if c["nom"] == nom_choisi:
+            etat[c["nom"]]["count"] += 1
+            etat[c["nom"]]["absence_streak"] = 0
+        else:
+            etat[c["nom"]]["absence_streak"] += 1
+
+    return nom_choisi
+
+
 def _select_least_used(candidates, usage_state, scenario_slug, namespace, max_events):
     """
     Sélectionne max_events éléments parmi candidates, en privilégiant
@@ -245,6 +506,121 @@ FORMAT_LONGUEUR = {
     "reflexif":  "500 à 800 mots",
     "réflexif":  "500 à 800 mots",    # idem — préventif, non observé en pratique.
 }
+
+# Développement structurel des styles journalistiques (23 août 2026,
+# retour de David en lien avec P21 "Journaux oraux, orateurs itinérants"
+# scopé le 12 juillet, jamais codé). Avant ce correctif, style_
+# journalistique était envoyé au LLM comme un mot brut ("**Style** :
+# utilitaire"), sans aucune indication de ce que ça doit changer
+# CONCRÈTEMENT dans la forme -- diagnostiqué sur petites_annonces_
+# services : le LLM retombait sur un mini-article journalistique
+# classique (accroche, citation de porte-parole, chute), juste
+# raccourci, faute de direction structurelle plus précise que "utilitaire".
+#
+# Dictionnaire délibérément extensible plutôt qu'un simple if/else
+# ciblé sur ce seul cas : P21 prévoit un registre "oral" avec ses
+# propres règles structurelles (adresse directe, pas de chapô/sous-
+# titres, structure accroche→développement→appel à l'action, call-and-
+# response) -- quand ce chantier sera codé, il s'agira d'ajouter une
+# entrée ici plutôt que de reconstruire ce mécanisme. Seul "utilitaire"
+# est développé aujourd'hui ; les styles non listés gardent le
+# comportement d'origine (mot brut, voir build_journalistic_brief) --
+# non-régression totale pour tout le reste.
+STYLE_DESCRIPTIONS = {
+    "utilitaire": (
+        "registre pratique et direct, proche d'une annonce de service -- "
+        "PAS de structure d'article classique (pas d'accroche narrative "
+        "développée, pas de citation de porte-parole nécessaire, pas de "
+        "chute). Va à l'essentiel d'abord (quoi, où, pour qui), puis les "
+        "détails pratiques (contact, conditions, délai, modalités). Ton "
+        "neutre et informatif, comme une annonce de service public ou un "
+        "avis pratique -- pas un récit."
+    ),
+    # Ajouté le 23 août 2026 pour meteo (format_dominant: brève,
+    # format_fige: true) -- même principe que utilitaire, mais visant un
+    # bulletin factuel plutôt qu'une structure d'annonce à contacter.
+    "informatif": (
+        "registre factuel et condensé, priorité aux données concrètes "
+        "(températures, seuils, dates, zones concernées) plutôt qu'au "
+        "récit -- PAS de développement narratif, pas de mise en scène. "
+        "Citations courtes uniquement si elles apportent une donnée "
+        "précise, jamais pour dramatiser. Structure : l'information clé "
+        "d'abord (ce qui se passe, où, quand), contexte bref ensuite, "
+        "recommandation pratique en clôture si pertinent (précaution, "
+        "adaptation) -- proche d'un bulletin d'agence, pas d'un article."
+    ),
+}
+
+# Registre oral (P21, scopé le 12 juillet, codé le 25 août 2026) --
+# volontairement PAS une clé de STYLE_DESCRIPTIONS comme les autres
+# (utilitaire/informatif) : celles-ci décrivent le style d'un ARTICLE
+# ÉCRIT selon sa thématique, tandis que le registre oral est un AXE
+# ORTHOGONAL -- le mode de diffusion (oral vs écrit), transversal à
+# toutes les thématiques, pas une variante de plus dans le même
+# dictionnaire. Utilisée séparément dans build_journalistic_brief() en
+# complément du Format/Style habituel de la thématique (jamais en
+# remplacement -- le sujet/la profondeur restent définis par la
+# thématique, seule la FORME de la restitution change).
+#
+# Conception de la tonalité (affinée en plusieurs étapes le 23 août,
+# voir backlog point 8) : la tonalité elle-même n'est PAS ici -- elle
+# est héritée automatiquement du ton/langue_style déjà établis de la
+# zone (déjà transmis dans le system prompt via get_journal_profile(),
+# aucun changement nécessaire pour ça). Cette description reste donc
+# purement STRUCTURELLE, volontairement neutre sur le fond.
+STYLE_ORAL = (
+    "restitution VERBALE, transcrite pour un·e orateur·rice qui s'adresse "
+    "directement à une assemblée -- PAS de mise en page journalistique : "
+    "pas de chapô, pas de sous-titres, pas de citations entre guillemets "
+    "attribuées à des tiers comme dans un article écrit (l'orateur·rice "
+    "EST la voix, il/elle ne cite pas d'autres porte-parole comme le "
+    "ferait un article). Adresse directe à l'auditoire (\"vous avez sans "
+    "doute remarqué que...\", \"écoutez bien ceci...\"). Formules "
+    "d'ouverture et de clôture ritualisées, reconnaissables, qui "
+    "reviendraient identiques d'une prise de parole à l'autre. "
+    "Répétitions rhétoriques délibérées (reprises de formules pour "
+    "marquer le rythme, pas une maladresse à corriger). Structure : "
+    "accroche → développement → appel à l'action ou question ouverte "
+    "finale laissée à l'auditoire -- jamais une chute qui referme le "
+    "sujet comme un article. Peut inclure un moment de call-and-response "
+    "explicite (une question posée à l'auditoire, avec la réponse "
+    "attendue indiquée)."
+)
+
+
+def _resoudre_longueur(thematique, config):
+    """
+    Détermine (format_dom, longueur) pour une thématique -- centralisé
+    ici (23 août 2026) plutôt que dupliqué entre build_journalistic_
+    brief() et build_prompt() : cette duplication avait déjà causé un
+    bug corrigé le 3 août 2026 (metadata["longueur"] incohérent avec la
+    vraie consigne envoyée au LLM) -- remonter les deux call sites à un
+    seul point évite de reproduire ce risque à chaque nouvelle règle de
+    priorité ajoutée ici.
+
+    format_fige (23 août 2026, retour de David) : l'override manuel
+    config["article"]["longueur"] prime normalement sur le format
+    naturel de la thématique (comportement d'origine, permet par ex.
+    une "analyse" longue sur un sujet normalement traité en brève) --
+    SAUF si la thématique porte format_fige: true dans son frontmatter.
+    Certaines thématiques sont un vrai GENRE à forme intrinsèquement
+    courte (petites_annonces_services, meteo), pas un format par défaut
+    modifiable au cas par cas comme les autres (breve à editorial selon
+    l'importance de l'histoire). actualites_a_la_une délibérément NON
+    figée : "à la une" est une priorité éditoriale, pas un genre -- la
+    presse réelle laisse sa longueur suivre la substance de l'histoire,
+    pas une contrainte de catégorie.
+    """
+    format_dom = thematique.get("format_dominant", "breve")
+    format_fige = thematique.get("format_fige") is True
+    config_lon = config.get("article", {}).get("longueur", "auto")
+
+    if not format_fige and config_lon and config_lon != "auto" and config_lon in FORMAT_LONGUEUR:
+        longueur = FORMAT_LONGUEUR[config_lon]
+    else:
+        longueur = FORMAT_LONGUEUR.get(format_dom, "300 à 500 mots")
+
+    return format_dom, longueur
 
 NIVEAU_EMOTIONNEL_LABEL = {
     "1": "neutre et factuel",
@@ -433,7 +809,7 @@ _JOURNAL_DEFAULT = {
 }
 
 
-def build_system_prompt(scenario_slug=None, ligne_editoriale=None, zone_slug=None, thematique_slug=None):
+def build_system_prompt(scenario_slug=None, ligne_editoriale=None, zone_slug=None, thematique_slug=None, dry_run=True, type_diffusion_override=None):
     """
     Instructions de rôle permanentes pour le LLM.
     Définit qui il est et comment il doit se comporter.
@@ -445,15 +821,39 @@ def build_system_prompt(scenario_slug=None, ligne_editoriale=None, zone_slug=Non
         thematique_slug   : str | None — slug de la thématique de l'article,
                             utilisé pour choisir le·la bon·ne journaliste dans
                             la rédaction de la zone (voir get_journal_profile)
+        dry_run           : bool — propagé à get_journal_profile() pour la
+                            persistance de la rotation pondérée (22 août 2026)
+        type_diffusion_override : str | None — "ecrit"/"oral"/"mixte", force
+                            le mode de diffusion pour cet article précis,
+                            indépendamment de journaux.yaml (25 août 2026,
+                            voir get_journal_profile() pour le détail complet)
 
     Priorité du profil : édition locale > réseau global > profil hardcodé > défaut.
     """
     if scenario_slug:
-        profile = get_journal_profile(scenario_slug, ligne_editoriale, zone_slug, thematique_slug)
+        profile = get_journal_profile(
+            scenario_slug, ligne_editoriale, zone_slug, thematique_slug,
+            dry_run=dry_run, type_diffusion_override=type_diffusion_override,
+        )
     else:
         profile = _JOURNAL_DEFAULT
 
-    base_prompt = """Tu es un journaliste senior travaillant en 2098 pour {nom} — {posture}.
+    # P21 (25 août 2026) : la persona et la logique de signature
+    # supposaient toutes deux un article ÉCRIT ("journaliste senior",
+    # byline "Nom — Journal" sous une date, "comme dans la presse en
+    # ligne") -- inadapté à un·e orateur·rice qui prend la parole. Les
+    # deux sont désormais conditionnées par profile["type_diffusion"]
+    # ("ecrit" par défaut si absent -- non-régression totale pour tout
+    # journal jamais concerné par P21).
+    type_diffusion = profile.get("type_diffusion", "ecrit")
+    role_descriptor = (
+        "un·e orateur·rice itinérant·e s'exprimant oralement devant une "
+        "assemblée"
+        if type_diffusion == "oral" else
+        "un journaliste senior travaillant"
+    )
+
+    base_prompt = """Tu es {role_descriptor} en 2098 pour {{nom}} — {{posture}}.
 
 Le monde dans lequel tu vis et écris est réel pour toi — tu n'écris pas de la science-fiction, tu rapportes des faits de ton époque. Tu n'expliques jamais le contexte historique comme si tu t'adressais à quelqu'un du passé.
 
@@ -469,40 +869,58 @@ Tes règles absolues :
 - Tu peux mentionner des technologies, des institutions, des événements passés (entre 2025 et 2098) qui semblent naturels dans ce monde.
 
 Ton identité éditoriale :
-{ton}""".format(**profile)
+{{ton}}""".format(role_descriptor=role_descriptor).format(**profile)
 
-    # Signature — corrigé le 10 août 2026 (retour de David : certains
-    # articles sans signature, d'autres avec signature + nom du journal,
-    # incohérent). Root cause : "journaliste" n'est peuplé que par le
-    # chemin 1 (édition locale, journaux.yaml → zones). Les chemins 2
-    # (réseau global) et 3 (profils hardcodés JOURNAL_PROFILES) ne le
-    # fournissent jamais — l'instruction de signature était donc purement
-    # et simplement absente du prompt dans ces cas, laissant au LLM le
-    # choix libre de signer ou non. Corrigé : une instruction de signature
-    # est désormais TOUJOURS donnée, avec un format explicite et unique
-    # (nom + journal) — nom curaté si disponible (chemin 1), sinon
-    # inventé par le LLM lui-même mais au même format standardisé.
-    #
-    # Complément du même jour, après lecture d'un batch réel : "à
-    # l'endroit journalistique habituel" s'est révélé trop vague — sur 12
-    # articles, la signature est apparue tantôt en haut (sous la date),
-    # tantôt en bas (fin d'article), et un cas l'a même dupliquée aux
-    # deux endroits malgré la consigne "une seule fois". Conforme aux
-    # usages réels de la presse en ligne (byline sous le titre/date, pas
-    # en pied d'article — l'usage "en bas" est plutôt celui des tribunes/
-    # éditoriaux), la position est maintenant explicitement fixée en haut,
-    # et la consigne "une seule fois" reformulée pour interdire toute
-    # répétition ailleurs dans le texte.
-    journaliste = profile.get("journaliste", "").strip()
+    intervenant = profile.get("journaliste", "").strip()
     nom_journal = profile.get("nom", "")
-    if journaliste:
+
+    if type_diffusion == "oral":
+        # Pas de byline formatée -- "pas de mise en page journalistique"
+        # fait partie de la définition même du registre oral
+        # (STYLE_ORAL). L'identité de l'orateur·rice, quand connue,
+        # s'intègre naturellement au discours plutôt que d'être affichée
+        # comme une signature d'article.
+        if intervenant:
+            base_prompt += (
+                "\n\nTu es {} -- fais savoir naturellement qui tu es à "
+                "ton auditoire, quelque part dans les premières phrases "
+                "(pas de mise en page formelle type signature d'article : "
+                "ce n'est pas un article, c'est une prise de parole).".format(
+                    intervenant
+                )
+            )
+    elif intervenant:
+        # Signature — corrigé le 10 août 2026 (retour de David : certains
+        # articles sans signature, d'autres avec signature + nom du
+        # journal, incohérent). Root cause : "journaliste" n'est peuplé
+        # que par le chemin 1 (édition locale, journaux.yaml → zones).
+        # Les chemins 2 (réseau global) et 3 (profils hardcodés
+        # JOURNAL_PROFILES) ne le fournissent jamais — l'instruction de
+        # signature était donc purement et simplement absente du prompt
+        # dans ces cas, laissant au LLM le choix libre de signer ou non.
+        # Corrigé : une instruction de signature est désormais TOUJOURS
+        # donnée, avec un format explicite et unique (nom + journal) —
+        # nom curaté si disponible (chemin 1), sinon inventé par le LLM
+        # lui-même mais au même format standardisé.
+        #
+        # Complément du même jour, après lecture d'un batch réel : "à
+        # l'endroit journalistique habituel" s'est révélé trop vague —
+        # sur 12 articles, la signature est apparue tantôt en haut (sous
+        # la date), tantôt en bas (fin d'article), et un cas l'a même
+        # dupliquée aux deux endroits malgré la consigne "une seule
+        # fois". Conforme aux usages réels de la presse en ligne (byline
+        # sous le titre/date, pas en pied d'article — l'usage "en bas"
+        # est plutôt celui des tribunes/éditoriaux), la position est
+        # maintenant explicitement fixée en haut, et la consigne "une
+        # seule fois" reformulée pour interdire toute répétition
+        # ailleurs dans le texte.
         base_prompt += (
             "\n\nTu signes cet article en tant que {} — au format exact "
             "\"{} — {}\", sans en inventer une autre. Cette signature "
             "apparaît UNE SEULE FOIS dans tout l'article, immédiatement "
             "sous la date de publication (comme dans la presse en ligne) "
             "— jamais en fin d'article, jamais répétée ailleurs.".format(
-                journaliste, journaliste, nom_journal
+                intervenant, intervenant, nom_journal
             )
         )
     else:
@@ -515,7 +933,7 @@ Ton identité éditoriale :
             "ailleurs.".format(nom_journal)
         )
 
-    return base_prompt
+    return base_prompt, profile
 
 
 # ─────────────────────────────────────────
@@ -1119,11 +1537,19 @@ def build_trajectory_context(snapshot, config=None, thematique=None, dry_run=Tru
 # SECTION 6 — CONSIGNE JOURNALISTIQUE
 # ─────────────────────────────────────────
 
-def build_journalistic_brief(thematique, config, snapshot=None):
+def build_journalistic_brief(thematique, config, snapshot=None, type_diffusion="ecrit"):
     """
     Construit la consigne de rédaction pour le LLM.
     Utilise toutes les métadonnées de la fiche thématique
     + les paramètres du config.yaml.
+
+    type_diffusion (P21, 25 août 2026) : "ecrit" (défaut, non-régression
+    totale) ou "oral" -- ajoute un bloc STYLE_ORAL explicite en
+    complément (jamais en remplacement) du Format/Style habituels de la
+    thématique. Le sujet et la profondeur restent définis par la
+    thématique comme avant ; seule la FORME de la restitution change.
+    La tonalité (ton/langue_style de la zone) n'est jamais gérée ici --
+    déjà héritée via le system prompt (voir get_journal_profile()).
     """
     lines = []
     lines.append("## CONSIGNE DE RÉDACTION")
@@ -1133,22 +1559,32 @@ def build_journalistic_brief(thematique, config, snapshot=None):
     lines.append("**Rubrique** : {}".format(thematique.get("name", "")))
     lines.append("")
 
-    # Format et longueur
-    format_dom = thematique.get("format_dominant", "breve")
-    config_lon = config.get("article", {}).get("longueur", "auto")
-
-    # Si config dit "auto" ou correspond au format naturel → utiliser le format de la thématique
-    # Si config spécifie explicitement une longueur → l'utiliser
-    if config_lon and config_lon != "auto" and config_lon in FORMAT_LONGUEUR:
-        longueur = FORMAT_LONGUEUR[config_lon]
-    else:
-        longueur = FORMAT_LONGUEUR.get(format_dom, "300 à 500 mots")
+    # Format et longueur (23 août 2026 : centralisé dans
+    # _resoudre_longueur(), voir sa docstring pour format_fige)
+    format_dom, longueur = _resoudre_longueur(thematique, config)
 
     lines.append("**Format** : {} | **Longueur** : {}".format(format_dom, longueur))
 
-    # Style
+    # Style (23 août 2026 : développé structurellement si une entrée
+    # existe dans STYLE_DESCRIPTIONS -- sinon mot brut inchangé, comme
+    # avant ce correctif, non-régression pour tous les styles non
+    # encore développés)
     style = thematique.get("style_journalistique", "analytique")
-    lines.append("**Style** : {}".format(style))
+    style_detail = STYLE_DESCRIPTIONS.get(style)
+    if style_detail:
+        lines.append("**Style** : {} — {}".format(style, style_detail))
+    else:
+        lines.append("**Style** : {}".format(style))
+
+    # P21 (25 août 2026) : registre oral -- ajouté APRÈS le Style de la
+    # thématique, jamais à sa place. Le LLM voit les deux : de quoi
+    # parler et à quelle profondeur (Style/thématique, inchangé), ET
+    # comment le restituer (STYLE_ORAL, ci-dessous) -- un article
+    # "analyse" en registre oral reste plus développé qu'une "brève"
+    # orale, mais aucun des deux n'a de chapô ni de sous-titres.
+    if type_diffusion == "oral":
+        lines.append("")
+        lines.append("**MODE DE DIFFUSION : ORAL** — {}".format(STYLE_ORAL))
 
     # Niveau émotionnel
     niveau_raw = str(thematique.get("niveau_emotionnel", "3"))
@@ -1258,13 +1694,26 @@ def build_journalistic_brief(thematique, config, snapshot=None):
         lines.append("- La date et le lieu de publication apparaissent sous le titre")
     lines.append("- L'article utilise des noms propres inventés mais crédibles (personnes, lieux, organisations)")
     lines.append(
-        "- La signature du journaliste apparaît UNE SEULE FOIS, immédiatement "
-        "sous la date de publication — jamais en fin d'article, jamais répétée"
+        "- La signature du journaliste (\"Prénom Nom — Nom du journal\") "
+        "apparaît TOUJOURS, SANS EXCEPTION, UNE SEULE FOIS, immédiatement "
+        "sous la date de publication — jamais en fin d'article, jamais "
+        "répétée, jamais omise même pour un format court"
     )
     lines.append("- Aucune référence au mot 'scénario', 'variable', 'simulation'")
     lines.append("- Le contexte du monde est montré, pas expliqué")
     if snapshot.get("filtered_instances"):
         lines.append("- Les entités canoniques listées ci-dessus DOIVENT être utilisées avec leurs noms et descriptions exactes")
+    # Renforcement du 21 août 2026 (test réel sur 8 articles fortress_world,
+    # chantier P20) : le bloc métadonnées de publication était seulement
+    # demandé en note après ce paragraphe de contraintes impératives —
+    # absent de la réponse sur 2/8 générations testées (25%). Remonté ici,
+    # même traitement que la longueur le 10 août (passer d'indicatif à
+    # impératif a résolu un problème similaire de dérive).
+    lines.append(
+        "- Le bloc ===METADONNEES_PUBLICATION=== (voir format exact "
+        "ci-dessous) est TOUJOURS présent en toute fin de réponse, même "
+        "pour un format court — ce n'est pas optionnel"
+    )
 
     # Contrainte géographique — si une zone est définie, l'article doit
     # se dérouler dans cette zone. Les entités d'autres zones peuvent
@@ -1284,6 +1733,110 @@ def build_journalistic_brief(thematique, config, snapshot=None):
             "dans cette zone ou la mentionnent explicitement comme cadre principal. "
             "Les références à d'autres régions du monde restent secondaires.".format(zone_nom)
         )
+
+    # Bloc métadonnées de publication (P20, 21 août 2026 -- Phase A du
+    # scoping du 12 juillet 2026, backlog point 7). Demandé dans le MÊME
+    # appel LLM que l'article (Option 1 actée le 12 juillet -- cohérence
+    # garantie avec le contenu, pas de second appel séparé). Toujours en
+    # toute dernière position, après l'article complet : extrait et
+    # retiré du texte AVANT tout comptage de mots côté api.py (voir
+    # _extract_publication_metadata()), donc sans impact sur la
+    # contrainte de longueur ci-dessus ni sur le mécanisme de retry
+    # (chantier du 10 août, backlog Partie 1 point 1).
+    lines.append("")
+    lines.append(
+        "Format exact du bloc ===METADONNEES_PUBLICATION=== (voir "
+        "contrainte impérative ci-dessus) : à la toute fin, après "
+        "l'article complet -- il ne fait PAS partie de l'article, n'est "
+        "jamais lu par le lectorat, et ne doit contenir aucun autre texte "
+        "que celui demandé sur chaque ligne."
+    )
+    lines.append("")
+    lines.append("===METADONNEES_PUBLICATION===")
+    lines.append("CHAPO: [résumé de 2 à 3 lignes de l'article, pour une page de liste d'articles]")
+    # Vocabulaire des tags déjà connus (backlog Partie 1 point 11, 21
+    # août 2026) : suggestion de réutilisation en priorité, jamais une
+    # obligation -- le LLM reste libre d'inventer un tag pertinent absent
+    # de la liste. Absente tant que rapprocher_articles.py n'a jamais
+    # tourné (pas de vocabulaire encore accumulé).
+    tags_suggeres = _load_tags_suggeres()
+    if tags_suggeres:
+        lines.append(
+            "TAGS: [3 à 5 mots-clés séparés par des virgules, orientés "
+            "recherche lecteur, distincts de la rubrique -- RÉUTILISE EN "
+            "PRIORITÉ un ou plusieurs tags déjà existants ci-dessous s'ils "
+            "conviennent au sujet, n'en invente un nouveau que si aucun ne "
+            "convient vraiment. Tags déjà existants : {}]".format(
+                ", ".join(tags_suggeres))
+        )
+    else:
+        lines.append("TAGS: [3 à 5 mots-clés séparés par des virgules, orientés recherche lecteur, distincts de la rubrique]")
+    # Réutilisation des signes distinctifs déjà établis (23 août 2026,
+    # retour de David : les descriptions visuelles existantes -- champ
+    # signes_distinctifs, déjà transmis au LLM dans la section "ENTITÉS
+    # CANONIQUES" ci-dessus depuis le 3 août -- doivent nourrir la
+    # génération d'image plutôt que d'être ignorées. Jusqu'ici la
+    # consigne IMAGE_PROMPT ne faisait aucun lien explicite vers cette
+    # section pourtant déjà présente dans le même prompt -- probable
+    # facteur du réflexe "lueur bleue générique" corrigé juste au-dessus :
+    # à défaut d'instruction de réutilisation, le LLM invente un visuel
+    # depuis zéro plutôt que de piocher dans les logos/couleurs/symboles
+    # déjà établis pour l'entité qu'il vient de décrire.
+    # Variété de composition/lieu (23 août 2026, retour de David) : 52%
+    # des image_prompt du vault (83/160 mesurés) contiennent le mot
+    # "écran" -- combiné à "salle de" (41) et "hologramme" (29), le motif
+    # dominant est une salle de contrôle/briefing avec écrans et
+    # hologrammes, quel que soit le sujet réel de l'article. Axe différent
+    # de la palette corrigée juste au-dessus (composition/lieu de la
+    # scène, pas couleur/éclairage) -- univers de ce vault (gouvernance
+    # algorithmique/IA) prédispose le LLM à ce trope par défaut faute
+    # d'alternative suggérée.
+    lines.append(
+        "IMAGE_PROMPT: [description visuelle en une phrase, pour une "
+        "future génération d'image d'illustration -- SI l'article porte "
+        "principalement sur une personne, une entité ou un lieu nommé "
+        "précis ET que ses \"Signes distinctifs\" sont listés plus haut "
+        "dans ENTITÉS CANONIQUES (logo, couleurs, symboles, éléments "
+        "visuels caractéristiques), réutilise-les explicitement dans la "
+        "description plutôt que d'en inventer de nouveaux -- la "
+        "cohérence visuelle avec les articles précédents sur cette même "
+        "entité en dépend. En l'absence de signes distinctifs établis, "
+        "représente-la quand même explicitement (nom/rôle mentionné dans "
+        "la description elle-même, pas seulement un décor autour du "
+        "sujet) ; SINON (aucune entité précise au centre de l'article), "
+        "décris la scène de façon neutre -- lieu, ambiance, éléments "
+        "clés. Varie l'éclairage et la palette selon le contexte réel de "
+        "la scène (lumière naturelle, dorée, chaude, nocturne, "
+        "industrielle, éclairage artificiel jaune ou blanc...) plutôt "
+        "que de retomber systématiquement sur des teintes bleues/froides "
+        "par défaut. Varie aussi la composition et le lieu selon le sujet "
+        "réel de l'article -- extérieur, rue, terrain, atelier, domicile, "
+        "gros plan sur un objet ou un visage, foule, paysage... plutôt "
+        "que de retomber systématiquement sur une salle de contrôle/"
+        "briefing avec écrans et hologrammes par défaut]"
+    )
+    # P21 (25 août 2026) : deux champs frontmatter spécifiques au
+    # registre oral, générés uniquement dans ce cas -- non-régression
+    # totale pour tout article écrit (ces lignes n'apparaissent jamais
+    # dans le bloc METADONNEES_PUBLICATION quand type_diffusion="ecrit").
+    # duree_estimee n'est PAS demandée ici : calculée après coup depuis
+    # mots_reels (~140 mots/minute, rythme oral réaliste), pas un champ
+    # que le LLM invente lui-même -- plus fiable, cohérent avec la
+    # longueur réellement produite plutôt qu'une estimation a priori.
+    if type_diffusion == "oral":
+        lines.append(
+            "LIEU_DIFFUSION: [où cette prise de parole a lieu -- place "
+            "publique, marché, assemblée, veillée... granularité plus "
+            "fine qu'une simple zone géographique, ancre la scène "
+            "physiquement]"
+        )
+        lines.append(
+            "MODE_RECEPTION: [comment l'auditoire reçoit ce discours -- "
+            "assemblée silencieuse et recueillie, discussion ouverte "
+            "avec interruptions, foule mouvante qui va et vient... "
+            "capture l'ambiance sociale de l'écoute]"
+        )
+    lines.append("===FIN_METADONNEES===")
 
     return "\n".join(lines)
 
@@ -1766,12 +2319,32 @@ def build_prompt(snapshot, thematique, config, dry_run=True):
     # tout choix manuel dès qu'elle retournait une valeur (bug #26 — journal/
     # journaliste résolus pour une zone alliée sans rapport avec l'article).
     zone_slug = config.get('zone_slug') or snapshot.get('zone_slug')
-    system_prompt = build_system_prompt(
+    # type_diffusion_override (25 août 2026) : "auto"/absent = comportement
+    # inchangé (la zone décide, comme depuis toujours) -- une valeur
+    # explicite ("ecrit"/"oral"/"mixte") force ce mode pour CET article
+    # précis, sans jamais modifier journaux.yaml. Uniquement rempli par
+    # generate.py (génération d'un seul article) -- generate_series.py ne
+    # définit jamais cette clé de config, donc une série continue de
+    # toujours piocher dans journaux.yaml tel quel, comme demandé
+    # explicitement par David.
+    type_diffusion_override = config.get('type_diffusion_override')
+    if type_diffusion_override not in ("ecrit", "oral", "mixte"):
+        type_diffusion_override = None
+    # P21 (25 août 2026) : build_system_prompt() retourne désormais
+    # (texte, profil) plutôt que juste le texte -- nécessaire pour
+    # transmettre type_diffusion à build_journalistic_brief() plus bas,
+    # sans rappeler get_journal_profile() une seconde fois (ce qui
+    # incrémenterait la rotation pondérée deux fois pour le même
+    # article -- un vrai bug si ça avait été fait naïvement).
+    system_prompt, journal_profile = build_system_prompt(
         scenario_slug=snapshot.get('scenario_slug'),
         ligne_editoriale=ligne_editoriale,
         zone_slug=zone_slug,
         thematique_slug=thematique.get('slug'),
+        dry_run=dry_run,
+        type_diffusion_override=type_diffusion_override,
     )
+    type_diffusion = journal_profile.get("type_diffusion", "ecrit")
 
     # Chargé ici (pas dans le snapshot) pour accéder à sub_variables et
     # indicateurs, absents de snapshot["variable_states"].
@@ -1804,7 +2377,7 @@ def build_prompt(snapshot, thematique, config, dry_run=True):
     if entities_section:
         sections.append(entities_section)
 
-    sections.append(build_journalistic_brief(thematique, config, snapshot))
+    sections.append(build_journalistic_brief(thematique, config, snapshot, type_diffusion=type_diffusion))
 
     user_prompt = "\n".join(sections)
 
@@ -1823,13 +2396,10 @@ def build_prompt(snapshot, thematique, config, dry_run=True):
     # ce décalage touchait potentiellement la majorité des articles déjà
     # générés, dès que leur thématique n'a pas elle-même format_dominant
     # == "breve". Corrigé en réutilisant exactement la même logique de
-    # priorité que build_journalistic_brief().
-    format_dom = thematique.get("format_dominant", "breve")
-    config_lon = config.get("article", {}).get("longueur", "auto")
-    if config_lon and config_lon != "auto" and config_lon in FORMAT_LONGUEUR:
-        longueur = FORMAT_LONGUEUR[config_lon]
-    else:
-        longueur = FORMAT_LONGUEUR.get(format_dom, "300 à 500 mots")
+    # priorité que build_journalistic_brief() -- depuis le 23 août 2026,
+    # les deux passent par _resoudre_longueur() (voir sa docstring pour
+    # format_fige), plus de duplication du tout.
+    format_dom, longueur = _resoudre_longueur(thematique, config)
 
     print("[prompt] System prompt : {} caractères".format(len(system_prompt)))
     print("[prompt] User prompt   : {} caractères".format(len(user_prompt)))
@@ -1848,6 +2418,27 @@ def build_prompt(snapshot, thematique, config, dry_run=True):
             "format":            format_dom,
             "longueur":          longueur,
             "ligne_editoriale":  ligne_editoriale or "pro_pouvoir",
+            # P21 (25 août 2026) : lu par api.py pour savoir si le bloc
+            # métadonnées de publication doit inclure lieu_diffusion/
+            # mode_reception, et si duree_estimee doit être calculée
+            # après génération.
+            "type_diffusion":    type_diffusion,
+            # journaliste (25 août 2026) : nom déjà résolu par
+            # get_journal_profile() (chemin 1, édition locale -- curaté,
+            # déterministe) -- transmis pour qu'api.py puisse assigner
+            # journaliste_slug DIRECTEMENT plutôt que de dépendre
+            # entièrement de l'extraction du texte généré
+            # (_extract_byline()). Vide si chemin 2/3 (réseau global/
+            # profil hardcodé, aucun nom curaté disponible) -- dans ce
+            # seul cas, l'extraction reste nécessaire en repli (le code
+            # ne peut pas savoir à l'avance quel nom le LLM va inventer).
+            # Diagnostiqué le 23 août (P25) mais jamais implémenté à
+            # l'époque -- devenu nécessaire avec P21 : un article oral
+            # n'a jamais de ligne "Nom — Journal" formatée en début de
+            # texte (voir STYLE_ORAL, "pas de mise en page
+            # journalistique"), donc _extract_byline() ne peut
+            # structurellement jamais la trouver dans ce cas.
+            "journaliste":       journal_profile.get("journaliste", ""),
         }
     }
 

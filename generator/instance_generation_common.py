@@ -1115,6 +1115,7 @@ description_journalistique: >
 
 signes_distinctifs: >
   {signes_distinctifs}
+retry_signes_distinctifs: {retry_signes_distinctifs}
 
 tensions_narratives: >
   {tensions_narratives}
@@ -1166,6 +1167,7 @@ date_creation: {date_creation}
         injection_block_yaml=injection_block_yaml,
         description_journalistique=instance_data.get("description_journalistique", "").replace("\n", " "),
         signes_distinctifs=instance_data.get("signes_distinctifs", "").replace("\n", " "),
+        retry_signes_distinctifs="oui" if instance_data.get("retry_signes_distinctifs") else "non",
         tensions_narratives=instance_data.get("tensions_narratives", "").replace("\n", " "),
         date_creation=datetime.now().strftime("%Y-%m-%d"),
         vars_md="\n".join(f"- [[{v}]]" for v in instance_data.get("variables_influencees", [])) or "_aucune_",
@@ -1180,6 +1182,39 @@ date_creation: {date_creation}
 # ---------------------------------------------------------------------------
 # Pipeline : une entité × un scénario
 # ---------------------------------------------------------------------------
+
+# Garde-fou signes_distinctifs (23 août 2026, demande de David après
+# vérification : 758/758 instances actuelles ont ce champ rempli, mais
+# purement par comportement favorable du LLM jusqu'ici -- ni le schéma
+# JSON envoyé (INSTANCE_SCHEMA, "suggéré" pas "requis"), ni
+# write_instance_file() (repli silencieux sur "" si absent), ni
+# validate.py (aucune vérification) ne l'imposaient. Même principe que
+# le retry de longueur des articles (api.py, 10 août 2026) : un seul
+# nouvel appel LLM avec un rappel explicite, résultat accepté quoi qu'il
+# arrive (pas de boucle, pas de blocage indéfini si le LLM omet le champ
+# deux fois de suite).
+def _retry_with_signes_distinctifs_feedback(client, prompt):
+    """Un seul nouvel appel LLM, avec rappel explicite que
+    signes_distinctifs est manquant/vide -- même principe que
+    _retry_with_length_feedback() côté articles (api.py, 10 août 2026)."""
+    retry_prompt = (
+        prompt
+        + "\n\n---\n\n"
+        + "RETRY — CHAMP MANQUANT AU PREMIER ESSAI\n"
+        + "Ta précédente réponse ne contenait pas de champ "
+          "\"signes_distinctifs\" exploitable (absent ou vide). Ce champ "
+          "est requis : 2-3 lignes décrivant les éléments visuels, "
+          "symboliques ou stylistiques qui rendent cette entité "
+          "reconnaissable et citable dans un article (logo, couleurs, "
+          "slogans, pratiques caractéristiques...). Renvoie l'objet JSON "
+          "complet, identique à ta première réponse, en ajoutant "
+          "uniquement ce champ."
+    )
+    return call_claude_json(
+        client, "Tu es un expert en worldbuilding.", retry_prompt,
+        max_tokens=INSTANCE_MAX_TOKENS,
+    )
+
 
 def process_entity_scenario(client, entity_fm, scenario, force=False, dry_run=False,
                              ancrage_temporel="libre", log_prefix="  →",
@@ -1247,6 +1282,22 @@ def process_entity_scenario(client, entity_fm, scenario, force=False, dry_run=Fa
     except Exception as e:
         print(f"✗ ({e})")
         return {"status": "error", "error": str(e)}
+
+    # Garde-fou signes_distinctifs (23 août 2026) : un seul retry, résultat
+    # accepté quoi qu'il arrive -- si le 2e essai échoue aussi, le champ
+    # reste vide (comme avant ce correctif), mais retry_signes_distinctifs
+    # tracé dans le frontmatter le rend visible plutôt que silencieux.
+    retry_signes = False
+    if not (instance_data.get("signes_distinctifs") or "").strip():
+        try:
+            instance_data_retry = _retry_with_signes_distinctifs_feedback(client, prompt)
+            if (instance_data_retry.get("signes_distinctifs") or "").strip():
+                instance_data = instance_data_retry
+            retry_signes = True
+        except Exception as e:
+            print(f"\n     ⚠ Retry signes_distinctifs échoué ({e}) — "
+                  f"champ laissé vide.", end="")
+    instance_data["retry_signes_distinctifs"] = retry_signes
 
     issues = validate_instance(instance_data, hard_constraint=hard_constraint,
                                 injection_custom=injection_custom)

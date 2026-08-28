@@ -50,31 +50,8 @@ DÉFAUT de la thématique, on ne peut pas savoir a posteriori si un
 override explicite avait été demandé pour un article donné (rien ne
 l'enregistre séparément). Aucun script en aval ne consomme `longueur`
 (seul `trace_injection.py` lit le frontmatter des articles, jamais ce
-champ) — l'impact reste cosmétique.
-
-v4 (20 août 2026, backlog Partie 1 point 1 — validation à plus grande
-échelle du retry longueur) : les cas A/B ci-dessus mesurent seulement
-"dans la plage ou non", ce qui n'est PAS la question posée par le
-chantier retry — le retry (api.py, ajouté le 10 août) ne se déclenche
-que si l'écart dépasse RETRY_DEVIATION_THRESHOLD = 0.40 (40%), formule
-_deviation_ratio() dupliquée ici à dessein (lecture seule, hors
-pipeline). Un article "hors plage" à 10% d'écart n'est PAS un échec du
-mécanisme. Nouvelle section ajoutée :
-  - déviation calculée sur la borne `longueur` (celle réellement utilisée
-    par le retry), pas sur `format` (qui sert Cas A/B ci-dessus) ;
-  - articles pré-mécanisme (pas de champ `retry_longueur` dans le
-    frontmatter, absent avant le 10 août) exclus de l'analyse retry et
-    comptés à part, pour ne pas les faire peser sur un mécanisme qui
-    n'existait pas encore au moment de leur génération ;
-  - pour les articles post-mécanisme, croisement déviation calculée vs
-    `retry_longueur` déclaré dans le frontmatter, avec détection de deux
-    anomalies : déviation > 40% mais retry non déclenché (signal de bug),
-    et retry déclenché mais résultat final toujours hors plage à plus de
-    40% (comportement normal et documenté — un seul retry, résultat
-    accepté quoi qu'il arrive — mais utile à quantifier).
-
-Ce script sert à mesurer précisément l'ampleur du problème, pas à le
-corriger.
+champ) — l'impact reste cosmétique. Ce script sert à mesurer précisément
+l'ampleur du problème, pas à le corriger.
 
 Usage :
     python3 audit_longueur_articles.py                  # dossier articles/ par défaut
@@ -103,23 +80,6 @@ FORMAT_LONGUEUR = {
     "analyse":    (600, 900),
     "reportage":  (700, 1000),
 }
-
-
-# Dupliqué depuis api.py à dessein (script hors pipeline, lecture seule).
-# Si la constante change côté api.py, la mettre à jour ici aussi.
-RETRY_DEVIATION_THRESHOLD = 0.40
-
-
-def deviation_ratio(wc, bornes):
-    """Écart relatif à la borne violée (0.0 si dans la plage, borne
-    incluse) — copie exacte de _deviation_ratio() dans api.py, pour
-    reproduire fidèlement la condition de déclenchement du retry."""
-    lo, hi = bornes
-    if wc < lo:
-        return (lo - wc) / lo
-    if wc > hi:
-        return (wc - hi) / hi
-    return 0.0
 
 
 def find_default_articles_dir():
@@ -193,15 +153,6 @@ def main():
     non_analysable = 0
     non_analysable_exemples = []
 
-    # v4 — analyse retry (backlog Partie 1 point 1)
-    pre_retry_mecanisme = 0          # pas de champ retry_longueur (avant le 10 août)
-    post_retry_total = 0             # champ présent, mécanisme actif au moment de la génération
-    post_retry_declenche = 0         # retry_longueur: oui
-    post_retry_non_declenche = 0     # retry_longueur: non
-    anomalie_retry_manquant = []     # déviation > 40% mais retry_longueur: non — signal de bug
-    anomalie_retry_insuffisant = []  # retry_longueur: oui mais résultat final encore > 40% d'écart
-    retry_ok_exemples = []           # retry_longueur: oui, résultat dans la plage ou proche
-
     # Récursif depuis le 10 août 2026 (fix save_article dans api.py) : les
     # articles générés en série/manuel sont désormais réellement rangés
     # dans articles/{scenario}/, plus seulement à la racine -- un scan à
@@ -240,33 +191,6 @@ def main():
             non_analysable += 1
             non_analysable_exemples.append((fname, format_cat, longueur_label, wc))
             continue
-
-        # v4 — analyse retry, indépendante des cas A/B ci-dessous : la
-        # déviation pertinente pour le retry se calcule sur `longueur`
-        # (la borne réellement transmise au LLM et utilisée par
-        # _deviation_ratio() dans api.py), pas sur `format`.
-        retry_field = fm.get("retry_longueur", "")
-        mots_reels_field = fm.get("mots_reels", "")
-        if retry_field == "" and mots_reels_field == "":
-            # Champs absents du frontmatter -> article généré avant le
-            # 10 août 2026 (mécanisme inexistant à l'époque). Pas un
-            # échec du retry, juste hors périmètre.
-            pre_retry_mecanisme += 1
-        else:
-            post_retry_total += 1
-            dev = deviation_ratio(wc, longueur_bornes)
-            if retry_field == "oui":
-                post_retry_declenche += 1
-                if dev > RETRY_DEVIATION_THRESHOLD:
-                    anomalie_retry_insuffisant.append(
-                        (fname, longueur_bornes, wc, dev))
-                else:
-                    retry_ok_exemples.append((fname, longueur_bornes, wc, dev))
-            else:
-                post_retry_non_declenche += 1
-                if dev > RETRY_DEVIATION_THRESHOLD:
-                    anomalie_retry_manquant.append(
-                        (fname, longueur_bornes, wc, dev))
 
         if format_bornes == longueur_bornes:
             # Cas A — même plage, aucun override probable
@@ -331,56 +255,6 @@ def main():
         for fname, cat, llabel, wc in non_analysable_exemples:
             print("  {} : format='{}' longueur='{}' — {} mots réels".format(
                 fname, cat or "(absent)", llabel or "(absent)", wc))
-        print()
-
-    print("=" * 60)
-    print("-- v4 : validation du mécanisme de RETRY (seuil {:.0f}%) --".format(
-        RETRY_DEVIATION_THRESHOLD * 100))
-    print("   (backlog Partie 1 point 1)")
-    print("=" * 60)
-    print()
-    print("  Articles générés AVANT le 10 août (pas de champ retry_longueur,")
-    print("  mécanisme inexistant à l'époque, hors périmètre) : {}".format(
-        pre_retry_mecanisme))
-    print()
-    print("  Articles générés APRÈS le 10 août (mécanisme actif) : {}".format(
-        post_retry_total))
-    if post_retry_total:
-        print("    Retry déclenché   : {}".format(post_retry_declenche))
-        print("    Retry non déclenché : {}".format(post_retry_non_declenche))
-    print()
-
-    if anomalie_retry_manquant:
-        print("  ⚠ ANOMALIE — déviation > {:.0f}% mais retry NON déclenché "
-              "(signal de bug, {} cas) :".format(
-                  RETRY_DEVIATION_THRESHOLD * 100, len(anomalie_retry_manquant)))
-        for fname, bornes, wc, dev in anomalie_retry_manquant:
-            print("    {} : {} mots (plage {}-{}) — écart {:.1f}%".format(
-                fname, wc, bornes[0], bornes[1], dev * 100))
-        print()
-    else:
-        print("  Aucune anomalie détectée : tous les articles post-mécanisme "
-              "avec déviation > {:.0f}% ont bien déclenché un retry.".format(
-                  RETRY_DEVIATION_THRESHOLD * 100))
-        print()
-
-    if anomalie_retry_insuffisant:
-        print("  Retry déclenché mais résultat final encore hors plage à plus "
-              "de {:.0f}% ({} cas — comportement attendu, un seul retry, "
-              "résultat accepté quoi qu'il arrive, mais utile à quantifier) :"
-              .format(RETRY_DEVIATION_THRESHOLD * 100, len(anomalie_retry_insuffisant)))
-        for fname, bornes, wc, dev in anomalie_retry_insuffisant:
-            print("    {} : {} mots (plage {}-{}) — écart {:.1f}% après retry".format(
-                fname, wc, bornes[0], bornes[1], dev * 100))
-        print()
-
-    if post_retry_declenche:
-        taux_succes = 100 * (post_retry_declenche - len(anomalie_retry_insuffisant)) / post_retry_declenche
-        print("  Taux de succès du retry (résultat ramené sous {:.0f}% d'écart) : "
-              "{:.1f}% ({}/{})".format(
-                  RETRY_DEVIATION_THRESHOLD * 100, taux_succes,
-                  post_retry_declenche - len(anomalie_retry_insuffisant),
-                  post_retry_declenche))
         print()
 
     print("-- Distribution par scénario --")

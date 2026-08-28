@@ -10282,3 +10282,80 @@ processed:
   role_ref: null
   etat_ref: émergent
   est_clandestin_ref: true
+- status: injected
+  idea:
+    nom: Test Priorite Forcee 22aout
+    category: organisation
+    etat: émergent
+    est_clandestin: 'true'
+    scenario_ref: reference
+    priorite_forcee: 'true'
+  slug: test_priorite_forcee_22aout
+  scenarios:
+  - breakdown
+  - fortress_world
+  - new_sustainability
+  - eco_communalism
+  - policy_reform
+  - reference
+  archetype:
+    description_complete: Une organisation émergente dont la fonction principale est
+      de tester, imposer ou valider des protocoles de priorisation dans des contextes
+      de ressources limitées ou de crises systémiques. Elle incarne une logique de
+      contrôle par l'urgence, où la force (ou la coercition) devient le critère déterminant
+      pour l'allocation de moyens, souvent au détriment des processus démocratiques
+      ou collaboratifs. Son existence reflète une tension entre efficacité immédiate
+      et légitimité durable.
+    tension_fondamentale: La contradiction entre l'impératif d'agir rapidement pour
+      éviter l'effondrement (ou optimiser des ressources rares) et la nécessité de
+      préserver des mécanismes de gouvernance inclusifs ou équitables. Cette entité
+      risque de normaliser l'exception comme règle, transformant des mesures d'urgence
+      en structures permanentes de pouvoir.
+    variables_potentielles:
+    - gouvernance_institutions
+    - systeme_economique_redistribution
+    - geopolitique_conflits
+    - technologie_information
+    doublon_detecte: false
+    doublon_slug: null
+  scenario_ref: reference
+  role_ref: null
+  etat_ref: émergent
+  est_clandestin_ref: true
+- status: injected
+  idea:
+    nom: Test Retry Signes 23aout
+    category: infrastructure
+    etat: émergent
+    est_clandestin: 'true'
+    scenario_ref: reference
+    scenario_hint:
+    - reference
+    priorite_forcee: 'false'
+  slug: test_retry_signes_23aout
+  scenarios:
+  - reference
+  archetype:
+    description_complete: 'Une infrastructure émergente conçue pour tester, valider
+      et ajuster en continu les signaux faibles ou les indicateurs critiques d''un
+      système en transition. Elle incarne la capacité d''un réseau ou d''une organisation
+      à détecter les dysfonctionnements, les opportunités ou les risques imminents,
+      et à proposer des corrections itératives pour maintenir l''équilibre fragile
+      d''un environnement complexe. Son rôle est à la fois technique et symbolique
+      : elle matérialise la résilience par l''adaptabilité, tout en révélant les limites
+      de la prévisibilité dans un monde en mutation constante.'
+    tension_fondamentale: 'La contradiction entre la nécessité de stabiliser un système
+      par des ajustements permanents et l''impossibilité de garantir que ces ajustements
+      ne produiront pas eux-mêmes de nouvelles fragilités ou dépendances. Elle interroge
+      : jusqu''où peut-on optimiser un système sans en altérer la nature profonde
+      ou en exclure les acteurs les plus vulnérables ?'
+    variables_potentielles:
+    - technologie_information
+    - gouvernance_institutions
+    - frontieres_du_systeme
+    doublon_detecte: false
+    doublon_slug: null
+  scenario_ref: reference
+  role_ref: null
+  etat_ref: émergent
+  est_clandestin_ref: true

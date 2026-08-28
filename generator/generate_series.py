@@ -196,6 +196,22 @@ def generate_one(scenario, thematique, config, date_fictive, dry_run=False):
     else:
         ligne_editoriale = random.choice(["pro_pouvoir", "opposition"])
 
+    # P20 Phase C (21 août 2026) : politique de décision a_une_photo pour
+    # une série -- décidée par article, pas globalement pour toute la
+    # série (contrairement à ligne_editoriale ci-dessus, qui peut être
+    # fixe pour toute la série). Trois valeurs pour "photo_policy" :
+    # "toutes" / "aucune" / "aleatoire" (25%, probabilité actée avec
+    # David le 21 août 2026). Défaut "aucune" -- comportement historique
+    # préservé si photo_policy est absent de config_series.yaml (fichiers
+    # de config antérieurs à ce chantier).
+    photo_policy = config.get("photo_policy", "aucune")
+    if photo_policy == "toutes":
+        a_une_photo = True
+    elif photo_policy == "aleatoire":
+        a_une_photo = random.random() < 0.25
+    else:
+        a_une_photo = False
+
     # Config article pour cette entrée
     article_config = {
         "scenario":          scenario,
@@ -206,6 +222,12 @@ def generate_one(scenario, thematique, config, date_fictive, dry_run=False):
             "angle_specifique": config.get("angle_specifique", ""),
             "longueur":         config.get("longueur", "breve"),
             "date_fictive":     date_fictive,
+            "a_une_photo":      a_une_photo,
+            # image_credit intentionnellement absent -- reste vide
+            # (défaut de build_article_md côté api.py), décision de
+            # David le 21 août 2026 : la source se choisit plus tard,
+            # par article, avant de lancer generate_images.py -- pas de
+            # valeur automatique assignée en série.
         },
         "output": {
             "dossier":     os.path.join("articles", scenario),

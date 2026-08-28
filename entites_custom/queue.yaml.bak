@@ -1,6 +1,9 @@
 queue:
-- nom: gelecek_meclisi
-  category: hybride
+- nom: Test Retry Signes 23aout
+  category: infrastructure
   etat: émergent
   est_clandestin: 'true'
-  scenario_ref: breakdown
+  scenario_ref: reference
+  scenario_hint:
+  - reference
+  priorite_forcee: 'false'

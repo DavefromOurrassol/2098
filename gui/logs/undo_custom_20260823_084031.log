@@ -1,0 +1,12 @@
+undo_custom.py — 2026-08-23 08:40:31 — mode EXECUTE
+1 item(s) à traiter
+
+
+── instance / test_retry_signes_23aout / generalisation=yes ──
+  [DEL] test_retry_signes_23aout_reference.md → backup test_retry_signes_23aout_reference.md.bak
+  [DEL] test_retry_signes_23aout.md → backup test_retry_signes_23aout.md.bak
+  [JSON] 'test_retry_signes_23aout' retiré de _entities_list.json
+  [DEL] last_validated.json resetté
+
+════════════════════════════════════════════════════════════
+Terminé. Lancez validate.py pour vérifier la base.

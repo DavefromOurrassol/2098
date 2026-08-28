@@ -32,6 +32,15 @@
 #                     comme lieu d'ancrage de l'entité — injectée
 #                     directement dans le prompt de génération.
 #   source          : libre — date, contexte, lien...
+#   priorite_forcee : optionnel, false par défaut. true = garantit la
+#                     présence de cette entité dans les articles
+#                     générés sur TOUS les scénarios couverts
+#                     (scenario_hint) -- ne garantit que la CITATION,
+#                     pas le statut de sujet principal. Pour une
+#                     portée plus fine (forcer sur un scénario mais pas
+#                     un autre), utilise l'outil dédié après création
+#                     (GUI, section "Nettoyage entités") plutôt que ce
+#                     champ. Ajouté le 22 août 2026.
 #
 # EXEMPLE :
 #   - nom: Le Cartographe Silencieux

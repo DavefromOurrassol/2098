@@ -17,6 +17,36 @@ variables_pilotes:
   - technologie_information
   - systeme_economique_redistribution
   - gouvernance_institutions
+slug: qui_controle_le_recit_controle_les_isruter_la_guerre_des_flux_dans_l_arctique_de
+chapo: "En 2098, l’Arctique déglacé devient le théâtre d’une guerre invisible : celle des récits algorithmiques. Quand des pirates infiltrent les flux logistiques pour y glisser des messages politiques, États, entreprises et peuples autochtones s’affrontent sur le contrôle des données et de leur narration."
+tags:
+  - cyberguerre
+  - souveraineté numérique
+  - Arctique
+  - logistique autonome
+  - désinformation
+image_prompt: "Une salle de contrôle futuriste à Tromsø, avec des écrans holographiques affichant des cartes de flux logistiques arctiques en temps réel, des opérateurs en combinaison technique surveillant des alertes rouges, et en arrière-plan, une silhouette floue représentant un pirate numérique injectant un message dans le système."
+a_une_photo: false
+image_credit: ""
+journaliste_slug: sanna_korhonen
+date_evenement: 4 juin 2098
+zone_principale: corridor_arctique_nordique
+date_publication: 4 juin 2098
+entites_citees:
+  - armada_logistique_nordique_reference
+  - conseil_des_etats_nordiques_integres_reference
+  - consortium_des_grandes_plateformes_ia_integrees_reference
+  - datasovereign_reference
+  - directive_kontinuum_reference
+  - leena_vainala_reference
+  - oracle_des_seuils_reference
+  - reseau_mnemos_reference
+  - tbilissi_noeud_mnemos_reference
+articles_lies:
+  - le_silence_des_algorithmes_quand_les_plateformes_eteignent_les_voix_du_nord
+  - qui_decide_quand_l_algorithme_parle_leena_vainala_contre_le_silence_des_platefor
+  - tbilissi_laboratoire_invisible_de_la_guerre_des_algorithmes
+
 ---
 **« Qui contrôle le récit contrôle les isruter » : la guerre des flux dans l’Arctique déglacé**
 
@@ -67,3 +97,6 @@ Pour Leena Väinälä, cette fuite en avant sécuritaire et communicationnelle e
 La question est désormais de savoir qui sera le premier à comprendre cette nouvelle règle du jeu. Les États nordiques, qui misent sur le contrôle ? Les collectifs autochtones, qui jouent la carte de la légitimité historique ? Ou les acteurs privés comme *SovData* et le *Système Kontinuum*, qui tirent profit du chaos en vendant des solutions de « résilience » toujours plus chères ?
 
 Une chose est sûre : dans l’Arctique de 2098, les *isruter* ne sont plus seulement des routes. Ce sont des champs de bataille. Et la première victime de cette guerre, ce n’est pas la glace — c’est la vérité.
+
+---
+**Voir aussi** : [[armada_logistique_nordique_reference]] · [[conseil_des_etats_nordiques_integres_reference]] · [[consortium_des_grandes_plateformes_ia_integrees_reference]] · [[datasovereign_reference]] · [[directive_kontinuum_reference]] · [[leena_vainala_reference]] · [[oracle_des_seuils_reference]] · [[reseau_mnemos_reference]] · [[tbilissi_noeud_mnemos_reference]] · [[le_silence_des_algorithmes_quand_les_plateformes_eteignent_les_voix_du_nord]] · [[qui_decide_quand_l_algorithme_parle_leena_vainala_contre_le_silence_des_platefor]] · [[tbilissi_laboratoire_invisible_de_la_guerre_des_algorithmes]]

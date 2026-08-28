@@ -77,6 +77,7 @@ from pathlib import Path
 import yaml
 
 from llm_client import call_llm  # tier structured_strict — canonique/référencé
+from set_priorite_forcee import set_priorite_forcee  # 22 août 2026
 
 from instance_generation_common import (
     SCENARIOS, VALID_VARS, VALID_TRAJECTOIRE, TRAJECTOIRE_INACTIVES, SLUG_PATTERN, INSTANCE_MAX_TOKENS,
@@ -618,6 +619,15 @@ QUEUE_TEMPLATE = """\
 #                     comme lieu d'ancrage de l'entité — injectée
 #                     directement dans le prompt de génération.
 #   source          : libre — date, contexte, lien...
+#   priorite_forcee : optionnel, false par défaut. true = garantit la
+#                     présence de cette entité dans les articles
+#                     générés sur TOUS les scénarios couverts
+#                     (scenario_hint) -- ne garantit que la CITATION,
+#                     pas le statut de sujet principal. Pour une
+#                     portée plus fine (forcer sur un scénario mais pas
+#                     un autre), utilise l'outil dédié après création
+#                     (GUI, section "Nettoyage entités") plutôt que ce
+#                     champ. Ajouté le 22 août 2026.
 #
 # EXEMPLE :
 #   - nom: Le Cartographe Silencieux
@@ -662,7 +672,8 @@ def save_queue_with_template(remaining):
 
 
 def generate_instances_for_entity(client, entity_fm, scenarios, dry_run=False,
-                                   ancrage_temporel="libre", injection_custom=False):
+                                   ancrage_temporel="libre", injection_custom=False,
+                                   priorite_forcee=False):
     """Enchaîne la génération de toutes les instances d'UNE entité
     fraîchement créée, sur la liste de scénarios fournie. Continue même
     si une instance échoue (résilience voulue).
@@ -670,7 +681,14 @@ def generate_instances_for_entity(client, entity_fm, scenarios, dry_run=False,
     injection_custom (15 août 2026) : propagé à process_entity_scenario
     — True uniquement depuis process_custom_idea (idée utilisateur
     explicite), False depuis le mode auto (génération de masse, pas
-    d'intention d'injection délibérée sur les variables)."""
+    d'intention d'injection délibérée sur les variables).
+
+    priorite_forcee (22 août 2026) : si True, patch chirurgical
+    (set_priorite_forcee) appliqué après coup sur chaque instance
+    créée avec succès — aucune modification du pipeline LLM ci-dessus.
+    Portée : toutes les instances générées par CET appel (donc tous
+    les scénarios de `scenarios`, pas un sous-ensemble) — pour une
+    portée plus fine, utiliser l'outil d'édition dédié après coup."""
     stats = {"created": 0, "skipped": 0, "errors": 0}
     print(f"  Instances ({len(scenarios)} scénario(s)) :")
     for scenario in scenarios:
@@ -680,6 +698,10 @@ def generate_instances_for_entity(client, entity_fm, scenarios, dry_run=False,
                                            injection_custom=injection_custom)
         if outcome["status"] == "created":
             stats["created"] += 1
+            if priorite_forcee and not dry_run:
+                instance_slug = f"{entity_fm['slug']}_{scenario}"
+                ok, msg = set_priorite_forcee(instance_slug, True)
+                print(f"      {'✓' if ok else '✗'} {msg}")
         elif outcome["status"] == "skipped":
             stats["skipped"] += 1
         else:
@@ -779,11 +801,16 @@ def process_custom_idea(client, idea, dry_run=False, ancrage_temporel="libre"):
     else:
         print(json.dumps(archetype, ensure_ascii=False, indent=2))
 
+    # priorite_forcee (22 août 2026) : simple booléen, pas de tri-état
+    # comme est_clandestin -- absent/false = comportement par défaut.
+    priorite_forcee = str(idea.get("priorite_forcee", "")).strip().lower() == "true"
+
     # Enchaînement automatique : génération des instances pour cette entité
     print(f"[Instances] Génération automatique pour {len(scenarios)} scénario(s)...")
     instance_stats = generate_instances_for_entity(client, entity_fm, scenarios, dry_run=dry_run,
                                                      ancrage_temporel=ancrage_temporel,
-                                                     injection_custom=True)
+                                                     injection_custom=True,
+                                                     priorite_forcee=priorite_forcee)
 
     return {
         "status": "injected", "idea": idea, "slug": slug,

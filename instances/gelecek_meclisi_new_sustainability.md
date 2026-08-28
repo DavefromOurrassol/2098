@@ -65,6 +65,7 @@ generation: reconstruction
 
 injection:
   type: custom
+  garantie_selection: false
   annee_injection: 2047
   contexte_injection: >
     L'AFC incarne la synthèse entre coordination globale et autonomie locale, une nécessité dans un monde où les institutions traditionnelles ont perdu leur monopole sur la légitimité. Son impact sur la gouvernance est direct : elle a permis de stabiliser des cadres de régulation hybrides, combinant participation humaine et optimisation algorithmique, tout en évitant une fragmentation chaotique. Sur le plan technologique, elle a accéléré l'interopérabilité entre les systèmes d'IA et les réseaux de gouvernance territoriale, en imposant des protocoles ouverts et audités. Enfin, son rôle dans l'organisation des territoires a été crucial pour éviter que les hubs urbains ne deviennent des îlots de prospérité coupés des périphéries, en favorisant des modèles de résilience distribuée.

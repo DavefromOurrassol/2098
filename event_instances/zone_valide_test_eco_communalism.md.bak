@@ -4,6 +4,10 @@ type: event_instance
 slug: zone_valide_test_eco_communalism
 archetype: zone_valide_test
 scenario: eco_communalism
+localisation:
+  zone: agadez_ville
+  lieu: Agadez
+  type_lieu: ville
 type_evenement: political_social
 portee: regionale
 date: 2050

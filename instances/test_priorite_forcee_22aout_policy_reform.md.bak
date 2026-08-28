@@ -1,0 +1,122 @@
+---
+name: Brigade d'Urgence pour l'Allocation Critique (BUAC)
+type: instance
+slug: test_priorite_forcee_22aout_policy_reform
+entite: test_priorite_forcee_22aout
+scenario: policy_reform
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
+
+type_dans_scenario: organisation
+
+role_dans_scenario: >
+  La BUAC est une organisation technocratique d'urgence, créée pour tester et imposer des protocoles de priorisation dans des contextes de ressources limitées ou de crises systémiques. Elle opère comme un bras exécutif des institutions globales, appliquant des décisions algorithmiques pour l'allocation des ressources critiques (énergie, eau, nourriture, soins, données) en temps réel. Son rôle est de garantir une efficacité immédiate, souvent au détriment des processus démocratiques ou collaboratifs, en normalisant l'exception comme règle de gouvernance.
+
+responsabilites: >
+  La BUAC est chargée de déployer des unités mobiles de décision algorithmique dans les zones de crise, de superviser l'allocation des ressources critiques via des plateformes centralisées, et de valider ou invalider les protocoles de priorisation proposés par les agences internationales. Elle intervient également dans la gestion des conflits liés à l'allocation des ressources, en appliquant des mesures coercitives si nécessaire.
+
+impact_local: 4
+impact_systemique_global: 3
+
+variables_influencees:
+    - gouvernance_institutions
+    - technologie_information
+    - energie_ressources_critiques
+
+zone_geographique:
+    - nationale
+    - régionale
+    - continentale
+    - globale
+
+zone_systemique:
+    - gouvernance
+    - énergie
+    - IA
+    - infrastructure
+
+alliances:
+    - agence_de_regulation_des_detroits_strategiques_ards_policy_reform
+    - agence_internationale_de_l_energie_reformatee_aier_policy_reform
+    - agence_stabilisation_climatique_policy_reform
+    - bureau_gouvernance_algorithmique_policy_reform
+    - conseil_regulation_ressources_policy_reform
+    - oracle_des_seuils_policy_reform
+    - grille_aria_policy_reform
+
+oppositions:
+    - coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform
+    - collectifs_citoyens_de_deliberation_augmentee_policy_reform
+    - collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform
+    - front_des_autonomies_territoriales_radicales_policy_reform
+    - mouvement_pour_la_souverainete_territoriale_absolue_policy_reform
+    - internationale_decroissante_anti_planification_policy_reform
+
+type_relation_dominante: dépendance
+
+annee_debut: 2039
+annee_fin: 
+
+trajectoire: ascendant
+est_clandestin: false
+generation: transition
+
+injection:
+  type: custom
+  annee_injection: 2039
+  contexte_injection: >
+    La BUAC agit comme un pivot systémique en centralisant la gestion des ressources critiques et en appliquant des décisions algorithmiques en temps réel. Son impact sur la gouvernance_institutions est négatif en raison de la marginalisation des processus démocratiques, tandis que son influence sur technologie_information et energie_ressources_critiques est positive, reflétant une optimisation technocratique des ressources.
+  impact_sur_variables:
+  - variable: gouvernance_institutions
+    delta_level: 10
+    duree: 15
+    polarite: -1
+  - variable: technologie_information
+    delta_level: 8
+    duree: 10
+    polarite: 1
+  - variable: energie_ressources_critiques
+    delta_level: 12
+    duree: 20
+    polarite: 1
+  propagation:
+    via_matrice: true
+
+description_journalistique: >
+  En 2098, la Brigade d'Urgence pour l'Allocation Critique (BUAC) est devenue une figure incontournable, bien que controversée, de la gouvernance mondiale. Née dans l'urgence des crises des années 2030-2040, cette organisation a su s'imposer comme le bras armé des institutions globales, appliquant des décisions algorithmiques pour l'allocation des ressources critiques. Ses unités mobiles, équipées de systèmes d'IA avancés, interviennent dans les zones de crise pour garantir une efficacité immédiate, souvent au prix de tensions sociales et politiques. La BUAC est aujourd'hui perçue comme un mal nécessaire, un rempart contre le chaos, mais aussi comme un symbole de la technocratie autoritaire qui a émergé de cette période de transition.
+
+signes_distinctifs: >
+  Les membres de la BUAC portent des uniformes gris et bleus, avec des insignes représentant une balance algorithmique. Leurs véhicules et infrastructures sont marqués par des logos lumineux indiquant leur statut d'urgence. Les protocoles de priorisation sont affichés en temps réel sur des écrans publics, symbolisant la transparence technocratique de l'organisation.
+
+tensions_narratives: >
+  La BUAC incarne la tension fondamentale entre efficacité immédiate et légitimité démocratique. Son ascension rapide a suscité des débats sur la normalisation de l'exception comme règle de gouvernance, et sur le risque de voir des mesures d'urgence devenir des structures permanentes de pouvoir. Les oppositions à la BUAC proviennent de divers fronts, allant des mouvements citoyens aux acteurs privés, tous contestant la légitimité de ses décisions algorithmiques et leur impact sur les équilibres sociaux et économiques.
+
+date_creation: 2026-08-22
+priorite_forcee: true
+---
+
+# Brigade d'Urgence pour l'Allocation Critique (BUAC)
+
+## Rôle dans [[policy_reform]]
+La BUAC est une organisation technocratique d'urgence, créée pour tester et imposer des protocoles de priorisation dans des contextes de ressources limitées ou de crises systémiques. Elle opère comme un bras exécutif des institutions globales, appliquant des décisions algorithmiques pour l'allocation des ressources critiques (énergie, eau, nourriture, soins, données) en temps réel. Son rôle est de garantir une efficacité immédiate, souvent au détriment des processus démocratiques ou collaboratifs, en normalisant l'exception comme règle de gouvernance.
+
+## Responsabilités
+La BUAC est chargée de déployer des unités mobiles de décision algorithmique dans les zones de crise, de superviser l'allocation des ressources critiques via des plateformes centralisées, et de valider ou invalider les protocoles de priorisation proposés par les agences internationales. Elle intervient également dans la gestion des conflits liés à l'allocation des ressources, en appliquant des mesures coercitives si nécessaire.
+
+## Variables influencées
+- [[gouvernance_institutions]]
+- [[technologie_information]]
+- [[energie_ressources_critiques]]
+
+## Relations
+**Alliés** : [[agence_de_regulation_des_detroits_strategiques_ards_policy_reform]], [[agence_internationale_de_l_energie_reformatee_aier_policy_reform]], [[agence_stabilisation_climatique_policy_reform]], [[bureau_gouvernance_algorithmique_policy_reform]], [[conseil_regulation_ressources_policy_reform]], [[oracle_des_seuils_policy_reform]], [[grille_aria_policy_reform]]
+**Opposants** : [[coalition_des_operateurs_energetiques_prives_anti_quotas_policy_reform]], [[collectifs_citoyens_de_deliberation_augmentee_policy_reform]], [[collectifs_citoyens_pour_l_audit_algorithmique_ouvert_policy_reform]], [[front_des_autonomies_territoriales_radicales_policy_reform]], [[mouvement_pour_la_souverainete_territoriale_absolue_policy_reform]], [[internationale_decroissante_anti_planification_policy_reform]]
+
+## Description journalistique
+En 2098, la Brigade d'Urgence pour l'Allocation Critique (BUAC) est devenue une figure incontournable, bien que controversée, de la gouvernance mondiale. Née dans l'urgence des crises des années 2030-2040, cette organisation a su s'imposer comme le bras armé des institutions globales, appliquant des décisions algorithmiques pour l'allocation des ressources critiques. Ses unités mobiles, équipées de systèmes d'IA avancés, interviennent dans les zones de crise pour garantir une efficacité immédiate, souvent au prix de tensions sociales et politiques. La BUAC est aujourd'hui perçue comme un mal nécessaire, un rempart contre le chaos, mais aussi comme un symbole de la technocratie autoritaire qui a émergé de cette période de transition.
+
+## Tensions narratives
+La BUAC incarne la tension fondamentale entre efficacité immédiate et légitimité démocratique. Son ascension rapide a suscité des débats sur la normalisation de l'exception comme règle de gouvernance, et sur le risque de voir des mesures d'urgence devenir des structures permanentes de pouvoir. Les oppositions à la BUAC proviennent de divers fronts, allant des mouvements citoyens aux acteurs privés, tous contestant la légitimité de ses décisions algorithmiques et leur impact sur les équilibres sociaux et économiques.

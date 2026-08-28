@@ -17,6 +17,35 @@ variables_pilotes:
   - technologie_information
   - systeme_economique_redistribution
   - gouvernance_institutions
+slug: memoire_en_fragments_quand_l_art_defie_la_muraille_de_verre
+chapo: "À Lyon-Métropole en 2098, des artistes et collectifs comme *Nœud Jaune* ou *Lina Kova* utilisent l’art numérique pour exhumer les récits effacés par les plateformes dominantes, défiant la censure algorithmique et les lois de régulation. Entre performances éphémères et installations interactives, leur travail révèle les failles d’un monde où la mémoire devient un acte de résistance."
+tags:
+  - art numérique
+  - censure algorithmique
+  - mémoire collective
+  - résistance culturelle
+  - archives effacées
+image_prompt: "Une salle d'exposition sombre où des visiteurs, équipés de lunettes à réalité augmentée, observent des fresques numériques projetant des visages flous et des cartes de zones d'information \"lissées\", avec en arrière-plan une œuvre interactive intitulée *La Muraille de Verre* où des écrans tactiles brisés révèlent des extraits de journaux censurés."
+a_une_photo: false
+image_credit: ""
+journaliste_slug: lea_vasseur
+date_evenement: 3 janvier 2098
+zone_principale: singapour_est
+date_publication: 3 janvier 2098
+entites_citees:
+  - bureaux_de_regulation_informationnelle_reference
+  - delta_du_gange_reference
+  - le_temoin_reference
+  - ong_de_preservation_patrimoniale_numerique_reference
+  - plateformes_centralisees_de_narration_officielle_reference
+  - prisme_global_reference
+  - reseau_meshcommons_netsolidaire_reference
+  - reseau_mnemos_reference
+articles_lies:
+  - memoire_en_apnee_quand_l_art_se_noie_dans_les_archives_fantomes
+  - murmures_sous_la_glace_quand_l_art_arctique_defie_les_recits_officiels
+  - les_memoires_oubliees_de_tbilissi_quand_l_histoire_resiste_aux_algorithmes
+
 ---
 **« Mémoire en fragments : quand l’art défie la muraille de verre »**
 
@@ -42,3 +71,6 @@ Pourtant, cette alliance entre artistes et médias indépendants n’est pas san
 Le vrai défi, pour ces créateurs, est de survivre dans un écosystème où les financements sont rares et les risques réels. Les galeries indépendantes dépendent souvent de mécènes anonymes ou de collectifs citoyens, comme le *Réseau MeshCommons-NetSolidaire*, qui fournit des infrastructures numériques résistantes à la surveillance. « Nous ne sommes pas des héros », tempère *Mehta*. « Nous sommes juste des gens qui refusent de laisser le récit du monde entre les mains de quelques algorithmes. »
 
 Ce soir-là, à la fin de l’exposition *Effacements*, une performance improvisée a lieu dans la cour du musée. Des artistes et des visiteurs se relaient pour lire des extraits d’archives sauvées par l’ONG de Préservation Patrimoniale Numérique. Des voix s’élèvent, se répondent, créant une polyphonie fragile mais tenace. Comme un écho à ces mots de *Kova*, projetés en lumière sur le mur : *« La mémoire n’est pas un fichier que l’on peut effacer. C’est une rivière. Et les rivières finissent toujours par déborder. »*
+
+---
+**Voir aussi** : [[bureaux_de_regulation_informationnelle_reference]] · [[delta_du_gange_reference]] · [[le_temoin_reference]] · [[ong_de_preservation_patrimoniale_numerique_reference]] · [[plateformes_centralisees_de_narration_officielle_reference]] · [[prisme_global_reference]] · [[reseau_meshcommons_netsolidaire_reference]] · [[reseau_mnemos_reference]] · [[memoire_en_apnee_quand_l_art_se_noie_dans_les_archives_fantomes]] · [[murmures_sous_la_glace_quand_l_art_arctique_defie_les_recits_officiels]] · [[les_memoires_oubliees_de_tbilissi_quand_l_histoire_resiste_aux_algorithmes]]

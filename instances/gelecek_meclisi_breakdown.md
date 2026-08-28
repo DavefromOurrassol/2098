@@ -60,6 +60,7 @@ generation: post-effondrement
 
 injection:
   type: custom
+  garantie_selection: false
   annee_injection: 2048
   contexte_injection: >
     Gelecek Meclisi agit comme un catalyseur de résilience institutionnelle et sociale dans un monde où les structures traditionnelles se sont effondrées. Son impact sur 'gouvernance_institutions' reflète sa capacité à recréer des cadres minimaux de coordination malgré la fragmentation, tandis que son travail sur les 'récits de bifurcation' et les protocoles de survie influence directement la synchronisation sociale ('valeurs_culture_tempo_sociale'). Enfin, son rôle de médiateur dans l'accès aux réseaux d'information fragmentés ('technologie_information') permet de maintenir une cohérence minimale dans un paysage informationnel chaotique.

@@ -4,6 +4,11 @@ type: event_instance
 slug: zone_invalide_test_breakdown
 archetype: zone_invalide_test
 scenario: breakdown
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
 type_evenement: technological
 portee: regionale
 date: 2045

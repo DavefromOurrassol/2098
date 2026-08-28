@@ -17,6 +17,35 @@ variables_pilotes:
   - technologie_information
   - systeme_economique_redistribution
   - gouvernance_institutions
+slug: le_silence_des_algorithmes_quand_les_plateformes_eteignent_les_voix_du_nord
+chapo: "En 2098, une enquête révélant des détournements de lithium en Arctique est effacée par un système algorithmique opaque, le Kontinuum, plongeant les médias et citoyens du Nord dans un silence numérique sans recours. Une plongée dans la censure préventive et ses mécanismes invisibles."
+tags:
+  - censure algorithmique
+  - souveraineté des ressources
+  - Arctique
+  - mémoire numérique
+  - modération des plateformes
+image_prompt: "Une personne vêtue d'une parka polaire, debout dans une gare maritime enneigée de Tromsø, fixe un écran public affichant le message \"Contenu non disponible pour conformité systémique\", avec en arrière-plan des terminaux figés et des aurores boréales diffuses."
+a_une_photo: false
+image_credit: ""
+journaliste_slug: sanna_korhonen
+date_evenement: 27 mai 2098
+zone_principale: corridor_arctique_nordique
+date_publication: 27 mai 2098
+entites_citees:
+  - armada_logistique_nordique_reference
+  - bureaux_de_regulation_informationnelle_reference
+  - conseil_des_etats_nordiques_integres_reference
+  - directive_kontinuum_reference
+  - leena_vainala_reference
+  - oracle_des_seuils_reference
+  - reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference
+  - reseau_mnemos_reference
+articles_lies:
+  - qui_controle_le_recit_controle_les_isruter_la_guerre_des_flux_dans_l_arctique_de
+  - qui_decide_quand_l_algorithme_parle_leena_vainala_contre_le_silence_des_platefor
+  - murmures_sous_la_glace_quand_l_art_arctique_defie_les_recits_officiels
+
 ---
 **« Le Silence des Algorithmes : Quand les Plateformes Éteignent les Voix du Nord »**
 
@@ -56,3 +85,6 @@ Quant aux États, leur silence est assourdissant. Le **Conseil des États Nordiq
 Pourtant, une question persiste : jusqu’où ira cette logique ? Si le Kontinuum peut effacer une enquête sur le lithium, que lui empêchera de s’attaquer à d’autres sujets — les conditions de travail dans les *kjølekorridor*, les revendications des communautés sami, ou même les rapports de l’**Oracle des Seuils** sur la fonte accélérée de la banquise ?
 
 *« Le danger, ce n’est pas seulement la censure »*, conclut Vinterberg. *« C’est l’idée que certaines vérités sont trop dangereuses pour être dites. »* Dans les rues de Tromsø, certains commencent à afficher des codes QR menant à des archives hors ligne — un geste dérisoire, peut-être, mais le seul qui reste quand les algorithmes décident de ce qui doit être tu.
+
+---
+**Voir aussi** : [[armada_logistique_nordique_reference]] · [[bureaux_de_regulation_informationnelle_reference]] · [[conseil_des_etats_nordiques_integres_reference]] · [[directive_kontinuum_reference]] · [[leena_vainala_reference]] · [[oracle_des_seuils_reference]] · [[reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference]] · [[reseau_mnemos_reference]] · [[qui_controle_le_recit_controle_les_isruter_la_guerre_des_flux_dans_l_arctique_de]] · [[qui_decide_quand_l_algorithme_parle_leena_vainala_contre_le_silence_des_platefor]] · [[murmures_sous_la_glace_quand_l_art_arctique_defie_les_recits_officiels]]

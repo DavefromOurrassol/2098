@@ -50,7 +50,36 @@ propre de l'entité de test résiduelle "Le Cartographe Silencieux" (19
 juin 2026, jamais générée, dupliquée dans `entites_custom/
 processed.yaml`) — et 13 instances effectivement régénérées ; nouveau
 point mineur ouvert au passage, erreur de localisation sur
-`gelecek_meclisi_policy_reform` — voir `HANDOFF_17_AOUT.md`). Remplace
+`gelecek_meclisi_policy_reform` — voir `HANDOFF_17_AOUT.md`), et le
+18-19 août 2026 (diagnostic complet du slug de zone `istanbul` inconnu
+sur `gelecek_meclisi_policy_reform`, nouveau script `promote_ville.py`
+conçu et livré, chantier clos avec `validate.py` à 0 erreur/0
+avertissement — première fois depuis le début de l'investigation ;
+activation de `constrained_variables` dans le prompt (Option A) ;
+découverte du bloc `simulation` jamais consommé en aval, documentée
+comme nouveau chantier P22 nécessitant une session de conception dédiée
+— voir `HANDOFF_19_AOUT.md`), une session du 20 août 2026 sans handoff
+rédigé (P22 câblé dans `snapshot.py` : `volatility`/`tipping_point_risk`/
+`systemic_criticality` rendus opérationnels avec logique de non-
+régression, décision confirmée a posteriori le 21 août — trou de
+traçabilité comblé rétroactivement dans `HANDOFF_21_AOUT.md`), et le
+21 août 2026 (clôture du chantier retry longueur sur 25 articles post-
+mécanisme réels, 100% de succès ; correctif du risque structurel
+Partie 3 — garantie d'inclusion des instances custom dans
+`filtered_instances`, `loader.py` ; ménage complet du vault en 5
+catégories ; P20 Phase A codée et validée en conditions réelles sur 2
+batches — voir `HANDOFF_21_AOUT.md`), et le 21 août 2026 (soir,
+poursuite de séance : P20 Phases B et C codées et livrées
+`generate_images.py`, `image_credit`, placeholders, garde-fou de
+troncature `image_alt`, consigne `image_prompt` sujet nommé ; champs
+GUI `a_une_photo`/`image_credit`/`photo_policy` sur `generate.py`/
+`generate_series.py` ; débogage réel en conditions live avec David
+révélant le piège de redémarrage Flask sur `photo_policy`, un nouveau
+symptôme P25 (signature en pied d'article après un `---`), et la
+décision du vocabulaire de tags accumulé/réutilisé — deux nouveaux
+chantiers ouverts, tags et rétro-application sur les articles déjà
+existants, aucun des deux codé, séance interrompue en plein débogage
+— voir `HANDOFF_21_AOUT.md`, section "soir"). Remplace
 tous les documents
 précédents comme référence unique. Chaque chantier a un nom stable — à
 réutiliser tel quel dans les prochaines sessions pour éviter toute
@@ -60,24 +89,9 @@ nouvelle divergence de nommage.*
 
 # PARTIE 1 — CHANTIERS OUVERTS (à traiter)
 
-## 🟡 1. Validation à plus grande échelle du retry sur la longueur des articles
-**Nouveau, 10 août.** Le mécanisme de retry automatique (voir Partie 4,
-chantier "Dérive du LLM sur la longueur réelle des articles" pour le
-détail complet, et `USER_MANUAL_COMPLET.md` §2ter) a été testé sur un
-seul batch réel de 12 articles : 3 retries déclenchés, tous améliorés
-(2 ramenés dans la plage ou très proches, 1 significativement rapproché).
-Aucun faux négatif observé (aucun des 9 articles non retentés ne
-dépassait le seuil de 40%). **Mais l'échantillon reste petit**, et la
-génération tourne à température 1.0 (forte variance) — un batch plus
-large (30-50 articles, plusieurs scénarios) donnerait une mesure
-statistiquement plus fiable du taux de réussite réel du mécanisme.
-Pas urgent (le mécanisme fonctionne, aucun signe d'échec) — à faire
-quand un prochain batch de volume sera de toute façon généré pour
-d'autres raisons, plutôt que de provoquer un test dédié.
-
 ---
 
-## ⚪ 3. P17 — retester la fiabilité `mistral-small` sur choix contraint
+## ⚪ 1. P17 — retester la fiabilité `mistral-small` sur choix contraint
 **Retrouvé le 14 août** via recherche exhaustive dans l'archive (décidé
 le 11 juillet, jamais fait, disparu du backlog sans clôture formelle
 après la consolidation du 2 août). Le bug #26 avait montré que la
@@ -93,7 +107,7 @@ le garder pour plus tard, non traité le 14 août.**
 
 ---
 
-## ⚪ 4. Bug #27 — plausibilité logistique inter-zones
+## ⚪ 2. Bug #27 — plausibilité logistique inter-zones
 **Retrouvé le 14 août** via recherche exhaustive dans l'archive (noté le
 11 juillet, jamais repris). Incohérence détectée sur un article test : un
 personnage du Pacte Amazônia Viva (Amazonie) décrit comme arrivant par
@@ -109,7 +123,7 @@ données. Non traité le 14 août, gardé pour plus tard.
 
 ---
 
-## ⚪ 5. Renommage des YAML génériques par dossier
+## ⚪ 3. Renommage des YAML génériques par dossier
 **Décision reportée une nouvelle fois le 14 août** (en pause depuis fin
 juillet). `queue.yaml`/`processed.yaml`/`needs_review.yaml` répétés à
 l'identique dans `entites_custom/`, `evenements_custom/`,
@@ -121,7 +135,7 @@ eux-mêmes). Aucune urgence identifiée à ce jour.
 
 ---
 
-## ⚪ 6. Troncatures JSON occasionnelles lors de la génération d'instances
+## ⚪ 4. Troncatures JSON occasionnelles lors de la génération d'instances
 (Mistral)
 **Toujours en observation, gardé pour plus tard le 14 août.** Deux échecs
 `"Aucun JSON exploitable trouvé dans la réponse"` observés le 11 août
@@ -138,7 +152,7 @@ place sur la longueur des articles).
 
 ---
 
-## ⚪ 8. Intégration GUI de `promote_ville.py`
+## ⚪ 5. Intégration GUI de `promote_ville.py`
 **Nouveau, 19 août.** Script `promote_ville.py` livré et validé (voir Partie 4
 pour le détail du chantier Istanbul qui l'a motivé) — injection ciblée d'une
 ville en zone géographique, sur un ou plusieurs scénarios, avec détection
@@ -157,79 +171,131 @@ bloquant.
 
 ---
 
-## ⚪ 9. P22 — Bloc `simulation` des fiches variables : décision d'architecture du moteur prospectif
-**Nouveau, 19 août.** Trouvé en vérifiant le point Partie 2 "bloc
-`simulation` — probablement du monitoring interne" (14 août) : confirmé
-par grep exhaustif (`["simulation"]`/`.get("simulation"` dans tout le
-codebase) que le bloc est chargé (`loader.py` ligne 209) mais **jamais
-relu nulle part en aval** — ni `snapshot.py`, ni `prompt_builder.py`, ni
-aucun autre script. Contenu réel vérifié sur le vault : 5 champs remplis
-sur les 12 fiches `variables/*.md` (`volatility`, `predictability`,
-`uncertainty_level`, `tipping_point_risk`, `systemic_criticality`),
-valeurs différenciées par variable (pas un vestige uniforme). 2 champs
-prévus mais jamais remplis (`resilience`, `adaptability` — à confirmer
-par David si besoin, non vérifié directement sur le vault).
+## 🟢 6. P20 — Enrichissement frontmatter pour publication web (Phases A+B+C codées, service image à brancher)
+**Relancé le 21 août** (scoping d'origine du 12 juillet, resté en pause
+jusqu'ici — voir Partie 4 pour l'historique complet). Le chantier a été
+redécoupé en 3 phases lors de la reprise, pour distinguer ce qui était
+codable sans nouvelle décision de ce qui restait bloqué. **Les trois
+phases sont maintenant codées** — seul le choix d'un service externe de
+génération d'image reste en suspens (point technique isolé, pas un
+blocage de conception).
 
-**Intention d'origine, clarifiée par David** : contrairement à
-`constrained_variables` (résolu la veille, une borne *par scénario* sur
-la trajectoire), le bloc `simulation` décrit des **propriétés
-intrinsèques de la dynamique d'une variable, indépendantes du
-scénario** — comment elle réagit et évolue dans le moteur prospectif,
-pas ce qu'elle est. Schéma donné par David : État initial → Variables →
-propriétés de simulation (volatilité/prévisibilité/incertitude/risque de
-bascule/criticité) → Matrice d'influences → Dynamique du système
-(feedbacks/amplifications/stabilisations/ruptures) → Trajectoire →
-Scénario. Utilité principale : différencier deux variables recevant la
-même force d'influence brute dans la matrice (ex. A→B et A→C toutes
-deux à +0.6) mais devant réagir différemment (B stable/prévisible vs C
-volatile/proche d'un point de bascule) — sans quoi le moteur traiterait
-toutes les variables de façon mécaniquement identique face à une
-perturbation équivalente.
+**Phase A — codée et validée en conditions réelles (21 août)** : 7
+champs (`slug`, `chapo`, `image_prompt`, `tags`, `a_une_photo`,
+`journaliste_slug`, `date_evenement`) dans `api.py`/`prompt_builder.py`.
+Bloc `===METADONNEES_PUBLICATION===` demandé au LLM dans le même appel
+que l'article (Option 1 actée le 12 juillet), extrait et retiré du
+texte avant tout comptage de mots pour ne pas fausser le retry longueur
+du 10 août.
 
-**Le vrai nœud, identifié par David lui-même avant toute décision de
-coder quoi que ce soit** : les valeurs actuelles sont qualitatives
-(`high`/`medium`/`low`), pas une spécification mathématique
-opérationnelle. Pour que `simulation` influence réellement un calcul
-(`snapshot.py`, la propagation de deltas déjà en place pour les
-injections custom — `MAX_DELTA_SIGNAL`, `impact_systemique_global × 5`),
-il faudrait définir une correspondance explicite : `volatility` → facteur
-multiplicateur sur l'amplitude des deltas ? `tipping_point_risk` → seuil
-cumulatif déclenchant un comportement non-linéaire ? `systemic_
-criticality` → facteur de propagation vers les variables couplées (la
-matrice de 132 edges existe déjà) ? **Question non tranchée, posée
-explicitement par David** : `simulation` doit-il rester une métadonnée
-purement descriptive (aide à la conception humaine, jamais lue par le
-moteur), ou doit-il devenir opérationnel (le moteur calcule réellement
-avec ces valeurs) ? Cette distinction est jugée essentielle par David
-avant de continuer à coder quoi que ce soit dans cette direction.
+**Phase B — codée (21 août)**, trois décisions tranchées rapidement
+grâce à du code déjà existant : `zone_principale` réutilise
+`snapshot["zone_slug"]` (déjà calculé par `_dominant_zone()`, déjà
+utilisé pour choisir le journal de zone — même valeur, pas un second
+mécanisme) ; `date_publication` = `date_evenement` pour l'instant
+(aucun délai éditorial simulé, champs gardés séparés pour ne pas fermer
+la porte à un vrai décalage plus tard) ; `entites_citees` (liste des
+slugs de `filtered_instances`) ajouté comme sous-produit gratuit,
+prépare le rapprochement `articles_lies` — **calculé depuis, voir point
+9bis ci-dessous**.
 
-**Trois pistes d'usage esquissées, non tranchées, pas mutuellement
-exclusives** : (1) usage narratif dans `build_variables_context()`
-(`prompt_builder.py`) — extension proche de ce qui a été fait pour
-`constrained_variables` la veille, informe le LLM sans toucher au
-moteur ; (2) usage structurel dans `snapshot.py` — pondère la
-construction de trajectoire elle-même (`build_trajectory`,
-`build_signal_trajectory`), changement plus profond touchant la
-mécanique de simulation ; (3) usage dans la sélection d'instances
-(`filter_instances_for_thematique`, `loader.py`) — une variable très
-critique pèserait plus lourd dans le score d'une instance qui
-l'influence. **Rien codé — nécessite une session de conception dédiée**,
-en particulier trancher la spécification mathématique avant tout
-câblage, contrairement à `constrained_variables` qui ne demandait qu'une
-consigne de prompt.
+**Phase C — codée (21 août)**, `generate_images.py` (nouveau script) :
+scanne les articles `a_une_photo: true`, traite selon `image_credit`
+(`IA_generated` / `personnel` / `autre` / vide) — génère via API
+(actuellement un stub, voir ci-dessous), ou pose un placeholder neutre
+(2 SVG créés, `images/_placeholder_en_attente_manuel.svg` et
+`..._generation.svg`) en attendant respectivement un upload manuel ou
+le branchement d'un vrai service. Un placeholder "IA non branchée" est
+automatiquement retraité au prochain run, sans `--force`. `image_alt`
+dérivé d'`image_prompt` (pas de second appel LLM), avec garde-fou de
+troncature à la phrase (`_truncate_alt()`, 180 caractères, jamais coupé
+en plein mot) — testé sur cas réels de dépassement (LLM produisant 2-3
+phrases au lieu d'une). Consigne d'`image_prompt` renforcée en cours de
+route : si l'article porte sur une personne/entité nommée précise,
+l'image doit la représenter explicitement, pas rester une scène neutre
+anonyme — non testé en conditions réelles à ce stade (nécessite un
+batch avec un sujet clairement individualisé).
+
+**Service de génération d'image : décision explicite de report (21
+août)** — Claude/Anthropic n'a pas d'API image native, un service tiers
+est nécessaire (OpenAI/Stability/Google Imagen/autre, non choisi).
+`_generate_image_via_api()` est un point d'intégration générique déjà
+prêt (signature stable), à brancher le jour où le choix est fait.
+
+**GUI — champs de décision manuelle, câblés au moment de l'écriture de
+l'article plutôt qu'après coup uniquement (21 août)** : sur l'écran
+"Générer un article" (semi-guidé ET forcer, aucune restriction de
+mode), deux nouveaux champs — "Aura une image" (case à cocher,
+décochée par défaut) et "Crédit image" (menu déroulant, vide par
+défaut, ignoré si la case n'est pas cochée). Sur l'écran série, un
+champ "Illustration des articles" — Aucune / Toutes / Aléatoire (25%,
+probabilité actée avec David). En mode série, `image_credit` reste
+toujours vide même quand `a_une_photo` devient `true` via la
+politique — décision explicite, la source se choisit par article, plus
+tard, avant de lancer `generate_images.py`.
+
+**Testé en conditions réelles à trois reprises le 21 août** (2 batches
+de 8 articles `fortress_world` avant la Phase B/C, puis un batch de 3
+articles `policy_reform` généré depuis le GUI après Phase B/C) — voir
+P25 ci-dessous pour le détail des anomalies de signature observées sur
+ce dernier batch, qui restent le seul point non résolu de ce chantier.
+
+**Piège rencontré et confirmé le 21 août (soir)** : un nouveau champ
+`config_fields` ajouté à `scripts_config.json` n'apparaît dans le
+formulaire GUI qu'après redémarrage de Flask — `photo_policy` absent de
+`config_series.yaml` après un premier lancement en série malgré la
+sélection "Toutes" à l'écran, parce que Flask n'avait pas encore été
+redémarré au moment du lancement. Pas un bug de code (vérifié : `app.js`
+construit le formulaire de façon générique depuis `config_fields`,
+aucune whitelist figée à mettre à jour) — juste le piège de redémarrage
+déjà documenté plusieurs fois par le passé (15 août notamment),
+reconfirmé ici sur un nouveau cas concret. Résolu après redémarrage,
+confirmé par David.
 
 ---
 
-## ⚪ 7. Chantiers de fond, scopés mais non codés (pause longue durée)
-- **P20 — enrichissement frontmatter pour publication web future** :
-  scoping complet fait (12 juillet), rien codé. Champs prévus : `slug`,
-  `chapo`/`excerpt`, `image_prompt`, `a_une_photo`, `image_principale`,
-  `image_alt`, `image_credit`, `tags`, `journaliste_slug`, `date_
-  publication`, `articles_lies`, `zone_principale`.
+## ⚪ 7. `chapo`/`tags`/`image_prompt` vides — bloc `===METADONNEES_PUBLICATION===` absent de la réponse LLM (~7% des cas)
+**Découvert en marge du batch de volume P25** (22 août, via un warning
+console : `[api] [WARN] Bloc ===METADONNEES_PUBLICATION=== absent de
+la réponse du LLM`). **Mesuré** : 3 articles sur 41 (~7%), dont 2 sur
+la même thématique (`religion_spiritualite`) — possible coïncidence
+sur un petit échantillon, possible signal (thématique générant des
+réponses plus longues/complexes ?), pas assez de données pour trancher.
+
+Le garde-fou de P20 Phase A fonctionne comme prévu (pas de plantage,
+champs laissés vides) — mais **aucun mécanisme de retry n'existe pour
+ce cas**, contrairement à la longueur (retry automatique depuis le 10
+août). Diagnostic et éventuelle correction (retry ciblé sur ce bloc
+précis ?) laissés pour une prochaine session.
+
+---
+
+## ⚪ 8. Chantiers de fond, scopés mais non codés (pause longue durée)
 - **P21 — journaux oraux, orateurs itinérants** : scoping complet fait
   (12 juillet), rien codé. Nouveau type d'entité `orateur` (Option B
   décidée), champ `type_diffusion`, registre oral distinct dans
   `prompt_builder.py`.
+  **Complément de scoping (23 août)** : David veut **6 tonalités orales
+  distinctes** (une par scénario), pas une seule description générique
+  ni juste une nuance entre 2 cas. Vérifié : aucun champ de "tonalité"
+  dédié n'existe par scénario aujourd'hui, mais `load_scenario()`
+  (`loader.py`) charge déjà un contenu narratif riche par scénario
+  (`political_regime`, `trajectory`, `state_of_system`,
+  `transformation_speed`, `summary`, `system_logic`) — déjà transmis au
+  LLM, déjà ce qui différencie implicitement le ton des journaux
+  **écrits** d'un scénario à l'autre sans dictionnaire séparé. **Deux
+  options identifiées, non tranchées** :
+  - **Option A** : une seule entrée `STYLE_DESCRIPTIONS["oral"]`
+    (règles structurelles universelles), avec instruction explicite de
+    puiser dans le contexte scénario déjà riche pour calibrer le ton du
+    rituel — même principe que la réutilisation des `signes_distinctifs`
+    (22-23 août). Rien de nouveau à écrire, mais moins déterministe.
+  - **Option B** : nouveau champ `tonalite_orale` explicite, une entrée
+    par scénario, rédigée à la main (ex. `breakdown` = urgent/défensif,
+    `eco_communalism` = cérémoniel/consensuel, 4 autres à définir). Plus
+    de travail d'écriture, plus contrôlable.
+  **Décision explicite de David : trop tôt pour trancher, à décider au
+  moment de coder P21 pour de vrai.**
 - **P14 — tier LLM `strict` vers `claude-sonnet-5` en prod** : différé
   sine die sur demande explicite de David (1er août). Pas un oubli, une
   décision — à reconsidérer seulement si David le redemande.
@@ -244,12 +310,10 @@ réouverture identifiée) : anomalie `coverage_proposals_reference.yaml`
 sans `.applied`, route dormante `/api/carte/appliquer_zone_topdown_suspecte`,
 champ `type` des zones géographiques jamais utilisé dans le prompt.
 `constrained_variables` retiré de cette liste pour la raison inverse —
-traité et résolu, voir Partie 4.
+traité et résolu, voir Partie 4. Bloc `simulation` retiré également,
+pour la même raison inverse — P22 a confirmé et résolu son statut le
+20 août (câblé dans `snapshot.py`, opérationnel), voir Partie 4.
 
-- Bloc `simulation` sur les fiches variables — chargé par `loader.py`,
-  jamais utilisé par `prompt_builder.py`. Probablement du monitoring
-  interne, pas de la narration. Reconfirmé le 14 août — gardé tant que
-  l'origine du champ n'est pas tranchée avec certitude.
 - `--min-shingle` de `detect_registre_leakage()` (fonction désormais
   partagée, voir Partie 4) fixé en dur à 6 mots — pourrait devenir un
   paramètre CLI si un faux positif/négatif apparaît en usage réel.
@@ -271,12 +335,10 @@ traité et résolu, voir Partie 4.
 
 # PARTIE 3 — RISQUE STRUCTUREL IDENTIFIÉ (pas un bug actif)
 
-**Instances avec `injection.type == "custom"` potentiellement non
-sélectionnées parmi les `filtered_instances`** — leurs deltas de
-variables sont visibles, mais pas leur description complète. Identifié
-le 3 août, jamais rencontré en pratique (le vault semble ne contenir que
-des événements custom, pas d'instances custom). Rien à corriger tant que
-ça ne se manifeste pas.
+**Aucun point actif.** Le seul risque identifié ici (instances custom
+potentiellement non sélectionnées dans `filtered_instances`, depuis le
+3 août) a été corrigé le 21 août — voir Partie 4, chantier "Garantie
+d'inclusion des instances custom (`loader.py`)".
 
 ---
 
@@ -354,142 +416,26 @@ qu'une future session ne les rouvre par erreur faute de contexte.
 | **"Le Cartographe Silencieux" — suppression d'une entité de test résiduelle** | 17 août | Trouvé en investiguant le chantier ci-dessus (0/6 scénarios présents, classée "entité entière suspecte" par l'audit). Recherche dans `documentation/Old/` (handoffs et manuels archivés) et dans les fichiers custom réels : aucune mention en dehors d'un commentaire `# EXEMPLE :` dans l'en-tête de documentation d'`entites_custom/queue.yaml`, illustrant le format attendu d'une idée à écrire à la main — **exactement le nom, le rôle et l'`etat` de l'exemple copié mot pour mot**, avec `source: idee_2026-06`, cohérent avec l'origine du projet début juin 2026. `entites_custom/processed.yaml` contenait deux blocs `status: injected` complets et distincts pour cette même idée (deux appels LLM réels, deux `description_complete`/`tension_fondamentale` différentes) — signe d'une relance manuelle après un premier échec silencieux, elle-même restée sans effet. **Décision de David : supprimer** (pas de conservation). Vérifié au préalable qu'aucune autre fiche du vault (`entites/`, `instances/`, `evenements/`) ne référençait ce slug — suppression sans risque de casser une référence croisée. **Étapes réalisées** : sauvegarde (`documentation/need_action/backup_suppression_cartographe_silencieux/`), suppression de la fiche `entites/le_cartographe_silencieux.md`, retrait de l'entrée `_entities_list.json` (592→591), retrait des 2 blocs dupliqués de `processed.yaml`. **Un correctif supplémentaire trouvé en vérifiant le résultat** : une édition manuelle intermédiaire de `processed.yaml` avait laissé une ligne orpheline (`- status: injected` sans aucun champ `idea`/`slug` en dessous, entrée YAML incomplète mais syntaxiquement valide — risque de `KeyError` pour tout script supposant `idea`/`slug` toujours présents) — détectée par un script de vérification dédié (un seul orphelin trouvé sur 201 entrées scannées), retirée. `validate.py` confirmé stable après coup (0 erreur, 1 avertissement — inchangé). |
 | **Localisation — slug de zone `istanbul` inconnu (`gelecek_meclisi_policy_reform`) + nouvel outil `promote_ville.py`** | 18-19 août | Point de départ (17 août) : `[VALIDATION ÉCHOUÉE] slug zone inconnu : 'istanbul'` sur `gelecek_meclisi_policy_reform` (`policy_reform`). **Diagnostic en plusieurs temps** : (1) aucun slug `istanbul` dans `geographie/policy_reform.md`, ni candidat par nom (espace_eurasiatique, union_technocratique_eurasiatique_territoire — cette dernière exclue, `origine_reelle` = Russie/Chine/Kazakhstan, sans rapport) ; (2) `zones_pays.json` confirme qu'aucune zone `istanbul` n'existe nulle part, même en `reference` (Turquie → `zone_moyen_orient_golfe` en `policy_reform`, `turquie_eurasie_moyen_orient` en `reference`) ; (3) trouvé dans `geographie/reference.md` comme simple `lieu_emblematique` de `turquie_eurasie_moyen_orient` ("Istanbul (siège de la Ligue des Détroits)"), jamais une zone à part entière — le LLM avait halluciné un slug de zone depuis un nom de ville cité dans le texte narratif de l'instance (siège du Gelecek Meclisi), sans passer par la résolution réelle pays/ville → zone. **`enrich_geographie_recursive.py --scenario reference --dry-run` testé mais insuffisant** : premier essai en échec (503 Mistral, aléa infrastructure, résolu par simple relance), second essai réussi mais Istanbul non retenue parmi les promotions malgré sa présence en `lieu_emblematique` (arbitrage LLM non déterministe sur un corpus de 62 zones/174 instances/370k caractères) — écrit quand même (les autres sous-zones proposées restent utiles). **Nouveau script `promote_ville.py` conçu et livré** : injection ciblée d'une ville sur un ou plusieurs scénarios (`--all` par défaut), détection en 3 cas avant toute création (zone déjà exploitable / `lieu_emblematique` non exploitable nécessitant promotion forcée / mention narrative seule ou rien), résolution pays réel via LLM avec confirmation, résolution du parent le plus précis toujours tentée (`zones_pays.json` puis arbitrage LLM entre zone-pays niveau 1 et sous-zones existantes), réutilisation intégrale des fonctions de validation d'`enrich_geographie_recursive.py` (`validate_zone`, `resolve_parents_and_levels`, `clean_sources`, `clean_zone_relations`, `dedupe_promoted_lieux`), slug toujours imposé (jamais laissé au LLM). **Deux bugs trouvés et corrigés en dry-run réel** : `type_entite: 'ville'` proposé par le LLM alors que `TYPE_ENTITE_REELLE` n'accepte que `pays/etat_federe/province/region_administrative/autre` (corrigé par prompt + filet de sécurité mécanique, normalisation automatique vers `autre`) ; log excessivement verbeux (`write_geographie_file` imprime tout le fichier reconstruit en dry-run, hérité d'`enrich_geographie_recursive.py` où c'est adapté mais pas ici — contourné côté `promote_ville.py`, plus un flag `--quiet` masquant les lignes `[llm]` de `llm_client.py` sans le modifier). **Exécuté en réel sur `policy_reform` + `reference`** : zone `istanbul` créée sur les deux scénarios, dédoublonnage réussi sur `reference` (`lieu_emblematique` retiré de `turquie_eurasie_moyen_orient` au moment de la promotion). **Clôture complète** : `extract_localisation.py --scenario policy_reform --slug gelecek_meclisi_policy_reform` a résolu correctement `zone: istanbul` (la fiche n'avait en réalité jamais eu de bloc `localisation` du tout — l'erreur d'origine provenait de l'étape d'extraction, jamais persistée). `validate.py` final : **0 erreur, 0 avertissement** — première fois depuis le début de cette investigation. |
 | **`constrained_variables` — activation dans le prompt (Option A)** | 19 août | Trouvé en nettoyant la Partie 2 (listé comme point mineur "calculé, jamais affiché dans le prompt" depuis le 14 août) — David a précisé l'intention d'origine : une variable contrainte n'est pas une valeur figée ni un état défavorable, mais une **limite structurelle sur l'espace des trajectoires accessibles** dans le scénario (distinction moteur/contrainte/conséquence). Vérifié sur le vault réel : rempli sur les 6 scénarios, 3 variables distinctes par scénario, jamais un vestige de schéma — vrai trou fonctionnel, pas un point mineur. **Option A retenue** (direction de la borne déduite du contexte narratif déjà transmis, pas encodée explicitement dans le frontmatter — plus simple que l'Option B, encodage explicite `{variable, direction_interdite}`, mise de côté). **Câblage dans `build_variables_context()` (`prompt_builder.py`)** : `constrained_variables` du snapshot ajouté à l'ordre de priorité, nouveau tag `[VARIABLE CONTRAINTE]` (priorité d'affichage PRINCIPALE > PILOTE > CONTRAINTE), nouvelle consigne dédiée reprenant fidèlement la distinction de David avec exemple concret. Testé unitairement avec données simulées (tag et consigne confirmés présents). **Validé en conditions réelles sur 2 générations complètes** (`fortress_world`, variable contrainte `demographie_mobilite_humaine`) : tag et consigne bien injectés dans le vrai prompt (confirmé sur le prompt brut du premier essai) ; deux articles générés (`religion_spiritualite` puis `actualites_a_la_une`) sans aucune contradiction de la borne, mais aussi sans mise en tension réelle (la thématique n'obligeait pas le LLM à se prononcer sur la mobilité humaine — validation positive mais faible, notée explicitement). **Aucune régression observée** sur la couverture des variables pilotes ni la qualité narrative des deux articles. **Considéré suffisant par David**, clos pour la prod — test plus discriminant (thématique société/démographie) resté non fait, à envisager si un doute apparaît sur un futur batch réel. |
+| **P22 — Bloc `simulation` rendu opérationnel dans `snapshot.py`** | 20 août | Session sans handoff rédigé — trou de traçabilité comblé rétroactivement le 21 août après que David a confirmé le contenu et le statut validé/fonctionnel. Décision tranchée : `simulation` devient **opérationnel** (pas seulement descriptif). Trois champs câblés avec mapping qualitatif → numérique et valeurs par défaut garantissant la non-régression (toute variable sans bloc `simulation` renseigné se comporte exactement comme avant ce chantier) : `volatility` → `VOLATILITY_DAMPING` module l'amortissement de la propagation matricielle côté variable CIBLE (remplace le facteur fixe 0.5) ; `tipping_point_risk` → `TIPPING_THRESHOLD_ADJUST` abaisse les seuils de détection de tension dans `check_coherence()` (60/70) côté variable qui PORTE le risque ; `systemic_criticality` → `CRITICALITY_MULTIPLIER` (échelle réelle 1-5 vérifiée sur les 12 fiches) multiplie le delta propagé côté variable SOURCE. Nouvelle fonction `_get_simulation_param()` centralise la lecture + repli sur défaut. Câblé dans `check_coherence()`, `apply_custom_injections()`, `apply_custom_events()`, `apply_custom_signals()` (nouveau paramètre `all_variables` sur les quatre). `predictability`/`uncertainty_level` restés hors scope (introduiraient de l'aléa dans un pipeline aujourd'hui déterministe). |
+| **Garantie d'inclusion des instances custom dans `filtered_instances` (`loader.py`)** | 21 août | Résolution du risque structurel Partie 3 (identifié le 3 août, jamais rencontré en pratique jusqu'ici). Confirmé par lecture de code que `snapshot.py` applique TOUJOURS les deltas d'une instance custom (`apply_custom_injections()`, liste non filtrée), alors que sa description ne parvient au LLM que si elle survit au même filtrage par pertinence thématique qu'une instance du socle (`filter_instances_for_thematique()`/`select_instances_by_impact()`, plafond `MAX_INSTANCES=6`) — décalage confirmé, pas théorique. **Nouvelle fonction partagée `_select_with_custom_guarantee()`** : toute instance `injection.type == "custom"` obtient une place garantie, même à score de pertinence nul pour la thématique en cours ; si plus de 6 instances custom sont en lice qu'il n'y a d'emplacements, priorité entre elles par score décroissant (édge case non rencontré, vault à zéro instance custom à ce jour) ; emplacements restants disputés par les non-custom via la rotation à mémoire existante, inchangée. **Non-régression garantie et testée** : sans instance custom, comportement strictement identique à avant. Testé sur 6 cas synthétiques (non-régression, score nul garanti, édge case 8 customs pour 6 places, rotation avec `scenario_slug`, mêmes cas sur `select_instances_by_impact()`) — tous passent. **Non testé en conditions réelles** (vault toujours à zéro instance custom à ce jour) — à confirmer à la prochaine injection réelle d'une instance custom, via les logs `[loader] Instance(s) custom garantie(s)...`. |
+| **P20 Phase A — enrichissement frontmatter publication web (7 champs)** | 21 août | Relance du chantier P20 (scoping du 12 juillet, en pause depuis). Redécoupé en 3 phases pour distinguer le codable sans nouvelle décision (A) du bloqué sur décision (B, reste ouvert — voir Partie 1 point 9) et du hors scope explicite (C, images). **Phase A livrée** : `slug`/`chapo`/`image_prompt`/`tags` via un bloc `===METADONNEES_PUBLICATION===` demandé au LLM dans le même appel que l'article (Option 1 actée le 12 juillet), extrait et retiré du texte AVANT tout comptage de mots (`_extract_publication_metadata()`, `api.py`) pour ne pas fausser le retry longueur du 10 août — extraction appliquée aussi bien au premier essai qu'au retry. `journaliste_slug` extrait de la signature réelle du corps de l'article (`_extract_byline()`, plus fiable que le profil édition locale pré-calculé, qui peut être vide si le LLM invente son propre nom) — tolère un habillage gras optionnel. `date_evenement` : la date fictive était déjà calculée à chaque génération mais seulement utilisée pour le nom de fichier, jamais persistée — simple ajout. `a_une_photo: false` par défaut (bascule manuelle plus tard, décision du 12 juillet). `_yaml_escape()` ajoutée pour sécuriser l'insertion de texte libre (chapo/image_prompt) dans le frontmatter construit à la main. **Testé sur 2 batches réels de 8 articles (`fortress_world`)** : bloc métadonnées 6/8 puis 8/8 après renforcement de la consigne en contrainte impérative (même traitement que la longueur le 10 août) — considéré clos. `journaliste_slug` 4/8 puis 5/8 — un bug réel corrigé en cours de route (signature en gras non reconnue par le regex initial), le reste relève d'un problème de fond distinct du LLM (signature omise ou mal positionnée), documenté séparément — voir P25, Partie 1 point 10. |
+| **Ménage du vault — 5 catégories** | 21 août | Audit complet du vault (72 Mo décompressés) demandé par David, traité catégorie par catégorie avec validation avant chaque action. **(1) Fixtures de test confirmées** : 5 événements de test (`zone_valide_test`, `zone_invalide_test`, `multi_scenario_zone_test`, `escalade_sahel_2028_test`, `controle_date_lointaine_test`) retirés proprement via `undo_custom.py --type event --generalisation yes` (outil déjà existant, pas de nouveau script) — dry-run puis exécution réelle, `validate.py` confirmé à 0 erreur/0 avertissement après coup ; 3 `.bak` orphelins de `test_undo_event` (événement déjà supprimé avant cette session) et `entites_custom/queue_a_regarder.yaml` ("Test Requeue Debug", non référencé par aucun script) supprimés à la main. **(2) Fichiers isolés à la racine** : `diag_slug.py` (script de debug ad hoc du 17 août, remplacé depuis par `audit_instances_manquantes.py`), `europe_occidentale_reconstituee.md` (0 octet, orphelin — coïncidence de nom avec une vraie zone géographique très utilisée ailleurs, sans rapport), `generator.zip` (copie redondante du dossier `generator/` déjà présent en clair) — supprimés. **(3) Fichiers système/IDE** : 18 `.DS_Store`, 2 `__pycache__`, 2 `.code-workspace` mal placés (`gui/`, `evenements_custom/`) supprimés ; `.gitignore` enrichi (`.DS_Store`, `__pycache__/`, `*.pyc` — ne contenait que `.env` auparavant). **(4) Purge `.bak` de plus de 30 jours** : 367 fichiers (4,6 Mo) supprimés après confirmation que David commite régulièrement sur Git (historique déjà capturé séparément) — dry-run par `find -mtime +30` puis suppression réelle. **(5) Archives zip redondantes** : `variables/Archive.zip`, `documentation/Old/Archive.zip`, `documentation/Old/Archive 2.zip` — vérifiées fichier par fichier (100% de recoupement avec le contenu déjà présent en clair) puis supprimées. **Laissé de côté volontairement** : les 34 doublons `*copie*` de `documentation/Old/` (archive historique intentionnelle, utile aux recherches `grep` passées — pas touché sans décision explicite future). |
+| **Rétro-application P20 sur les articles déjà existants (`enrich_articles_pre_p20.py`)** | 21 août | 3 niveaux de récupération sur les articles pré-P20 (marqueur absence de `slug`) : mécanique (réutilise les fonctions d'`api.py`), approximation par recoupement texte/entités (`entites_citees`/`zone_principale`), LLM (`chapo`/`tags`/`image_prompt` + `JOURNALISTE` ajouté en cours de route pour trancher personne vs institution). 4 bugs réels trouvés et corrigés (slugs dupliqués, préfixe "Par" capturé, regex `CHAPO:` insensible casse partagé avec la génération live, combinaison `--skip-llm` sans `--dry-run` bloquée activement). Exécuté en réel sur le corpus complet le soir même. |
+| **`articles_lies` + tags + institutions à spectre large (`priorite_forcee`, cooldown)** | 22 août | Exécution réelle de `rapprocher_articles.py` confirmée (`tags_reference.yaml` + `articles_lies` vérifiés). Diagnostic institutions à spectre large : pénalité de score conçue puis **invalidée par test synthétique** (défaut mathématique sur cluster à fréquence égale), remplacée par un cooldown dur + exemption de dominance écrasante (`COOLDOWN_STREAK=3`, `DOMINANCE_EXEMPTION_GAP=10.0`) — confirmé en conditions réelles (2 déclenchements observés, cycle complet trigger→expiration→réintégration). Nouveau mécanisme `priorite_forcee` (présence garantie d'une entité) codé, testé création+édition GUI+sélection — 4 bugs GUI trouvés et corrigés (`default` manquant, `optional` vs `required`, `--scenario` non accepté par argparse, `requires_scenario_selected` ajouté pour un piège de perte de sélection au rechargement). |
+| **Uniformisation du dossier de sortie `generate.py`** | 22 août | Articles unitaires atterrissaient à la racine `articles/` au lieu de `articles/{scenario}/` comme les séries — comportement conçu ainsi le 10 août (jamais explicité), uniformisé sur demande de David. Non-régression vérifiée sur `trace_injection.py`/`audit_longueur_articles.py` (déjà récursifs, basés sur le frontmatter). |
+| **Rotation pondérée des journalistes par séniorité** | 22 août | Remplace la sélection déterministe "premier·ère qui correspond" par un tirage pondéré par `seniorite` + garde-fou anti-oubli (`JOURNALISTE_MAX_ABSENCE_STREAK=5`, non comparatif entre journalistes). `journaux.yaml` enrichi de `seniorite: 1` par défaut sur 1740 journalistes, vérifié sans risque sur les 3 autres scripts consommateurs. Confirmé en conditions réelles le 23 août. |
+| **P25 — Fiabilité de la signature journaliste (`journaliste_slug`)** | 23 août | Cause racine : `journaux.yaml` n'a qu'une entrée par zone niveau 1, `_dominant_zone()` pouvait retourner une sous-zone N2/N3 jamais résolue vers son N1 — chemin "LLM invente un nom" déclenché à tort. Nouvelle fonction `_resoudre_zone_n1()` (remontée par `parent`, garde-fou anti-cycle), testée sur 6 cas synthétiques dont le cas réel exact du 12 août. Confirmé à 100% de fiabilité sur 2 scénarios indépendants (`new_sustainability`, `fortress_world`), contre ~25-33% avant. |
+| **Dashboard GUI affichant "0 articles" (`routes_dashboard.py`)** | 23 août | Même défaut de scan non récursif déjà corrigé le 10 août ailleurs (`glob("*.md")` → `glob("**/*.md")`), jamais répercuté ici car le fichier vit hors du flux de patches habituel sur `app.py` (extrait le 4 juillet pour cette raison). Vit dans `gui/`, pas `generator/`. Testé sur structure synthétique. |
+| **Variété palette/composition + réutilisation signes distinctifs dans `image_prompt`** | 23 août | 3 correctifs cumulés sur la consigne `IMAGE_PROMPT` : variété de palette (23% des articles avaient du vocabulaire "bleu"), réutilisation des `signes_distinctifs` déjà établis (758/758 instances, transmis au LLM depuis le 3 août mais jamais lié à la consigne image), variété de composition (52% des articles avaient "écran"). Testé en conditions réelles : résultat nuancé (60% écran/hologramme sur un batch, mais analyse détaillée montre que la majorité des occurrences restantes concernent des entités dont l'identité EST intrinsèquement numérique — pas un échec du correctif). Considéré fonctionnel, à observer au fil des générations. |
+| **Garde-fou retry pour `signes_distinctifs` manquant** | 23 août | Champ non garanti structurellement (suggéré pas requis dans le schéma LLM, repli silencieux, aucune validation) malgré 758/758 de couverture réelle (hasard statistique, pas garantie). Retry unique si vide après premier essai, même principe que le retry de longueur (10 août). Testé synthétique (3 cas) + conditions réelles (non-régression confirmée). En cas d'échec persistant : dégradation gracieuse confirmée, aucun blocage nulle part (`build_entities_context()` omet silencieusement le champ vide, consigne `IMAGE_PROMPT` a déjà un repli explicite). |
+| **Outillage complet de couverture des journalistes** | 23 août | Diagnostic (`audit_couverture_journalistes.py`, lecture seule, `--report` ajouté) : 96-98% des combinaisons zone×thématique à un seul journaliste éligible sur la plupart des scénarios — hérité de la conception d'origine de `generate_journaux.py`. `propose_couverture_journalistes.py` (propositions de redistribution, lecture seule). `inject_journaliste_custom.py` (mode manuel avec `--nom`/`--genre`/`--seniorite` optionnels, mode auto avec `--all`/redistribution-ou-création intelligente selon plafond). 3 bugs GUI trouvés et corrigés (`mode_only` jamais respecté par `validateRequiredFields()` ni `collectArgs()` dans `app.js`, convention `--thematiques` corrigée en `nargs="+"`). Mode auto confirmé en conditions réelles sur `fortress_world` seul (396 redistributions + 21 créations, fragilité 96-98%→49%) — 5 scénarios restants et `--all` non testés. Dette technique notée : 3 implémentations indépendantes du même calcul de couverture, non factorisées. |
+| **Format `petites_annonces_services`/`meteo` — style + longueur** | 23 août | Deux mécanismes **indépendants** malgré la même thématique déclenchante (David a explicitement clarifié qu'ils ne sont pas liés entre eux). `STYLE_DESCRIPTIONS` (dictionnaire extensible, rapproché par David de P21/oralité) développe `style_journalistique` en consigne structurelle réelle plutôt qu'un mot brut — `utilitaire` et `informatif` développés. `format_fige` (indépendant de P21) : nouveau champ opt-in sur les thématiques dont la longueur ne doit jamais être écrasée par un choix manuel du GUI (`meteo`/`petites_annonces_services`, de vrais genres à forme courte — `actualites_a_la_une` volontairement laissée flexible, priorité éditoriale pas un genre). Logique de priorité longueur centralisée dans `_resoudre_longueur()` (dupliquée avant, même classe de bug que celui du 3 août). **3e occurrence du jour du bug "liste blanche à la lecture"** : `load_thematique()` perdait `format_fige` comme `load_instance()` perdait `garantie_selection`/`priorite_forcee` — corrigé. Confirmé en conditions réelles sur les deux thématiques (`mots_reels: 221` sur `petites_annonces_services` malgré une longueur "analyse" forcée manuellement ; `meteo` "testé et validé" par David). |
 
 
 ---
 
-*Fin du backlog maître. Pour la prochaine session : investiguer le
-nouveau point mineur du 17 août (Partie 1, point 8) — slug de zone
-`istanbul` inconnu sur `gelecek_meclisi_policy_reform`, découvert en
-marge du chantier "instances manquantes", jamais approfondi. Le point
-de reprise du 16 août (`eco_communalism`/"Les Veilleurs des Nappes
-Phréatiques") est levé — n'apparaît plus dans l'audit exhaustif du 17
-août, couverture confirmée complète pour cette entité. Sinon, confirmer
-sur plusieurs générations futures que le 3e correctif du chantier
-`forces_attractives`/`forces_repulsives` (couverture des variables
-pilotes) tient dans la durée, un seul test positif à ce stade. Toujours
-en attente depuis le 16 août : confirmer la propagation matricielle
-(`via_matrice: true`) sur un signal faible en conditions réelles —
-testée en synthétique seulement. Reste sinon en Partie 1 : le point #1
-(validation retry longueur, toujours 🟡, sans urgence), P17/Bug#27/
-renommage YAML/troncatures JSON (tous rouverts ou gardés pour plus tard
-sur décision explicite de David).
-
-Session du 17 août : chantier "instances manquantes — audit et
-comblement", parti d'une question de David sur comment repérer un échec
-de génération sans avoir à tout relancer à l'aveugle. Nouveau script
-`audit_instances_manquantes.py` créé, testé sur cas synthétiques
-reproduisant le cas réel connu (`eco_communalism`), puis lancé contre le
-vrai vault : 19 trous trouvés au premier run — bien plus que le seul cas
-connu, signal qu'il fallait investiguer avant d'agir en masse plutôt que
-de traiter les 19 comme des échecs homogènes. Classification en 3
-catégories ajoutée après ce constat, avec deux correctifs réels trouvés
-en cours de route (détection floue par similarité de nom cassée par le
-suffixe scénario partagé — 3 faux positifs sur 4 causés par CE
-mécanisme, pas par de vrais désaccords de nommage ; seuil de
-classification "entité suspecte" cassé sur les entités à un seul
-scénario prévu). Investigation approfondie sur les 2 entités classées
-suspectes (recherche `grep` dans l'archive `documentation/Old/` et les
-fichiers custom réels) : l'une confirmée comme un vrai trou de
-couverture ancien, l'autre identifiée comme une entité de test
-résiduelle du 19 juin (exemple de documentation copié-collé deux fois)
-— décision de David : supprimer, fait proprement avec vérification
-préalable d'absence de référence croisée. 13 instances régénérées avec
-succès, script intégré au GUI et confirmé fonctionnel par David en
-conditions réelles. Nouveau point mineur découvert au passage (erreur de
-localisation `istanbul` sur `gelecek_meclisi_policy_reform`, non
-approfondi). `validate.py` stable à 0 erreur / 1 avertissement de bout
-en bout — aucune régression introduite par ce chantier.
-
-Session du 16 août : chantier "injection matricielle" mené sur les trois
-types d'injection custom pour répondre à un objectif explicite de David
-("que les injections puissent réellement faire évoluer le monde de
-2098") — câblage de l'impact chiffré sur les instances custom (plafond
-dérivé de `impact_systemique_global`), extension aux signaux faibles
-(plafond fixe `MAX_DELTA_SIGNAL=10`, architecture différente puisqu'un
-signal cible une seule variable avec une fenêtre temporelle par
-scénario), et nouveau contrôle de cohérence section 7 ↔ section 12
-intégré à `validate.py`. Deux bugs réels trouvés et corrigés côté
-instances (format `propagation_via_matrice` non respecté par Mistral,
-bug YAML cassant le parsing de toute la fiche via un `contexte_injection`
-non replié) ; zéro bug trouvé côté signaux au premier test réel ; un faux
-positif massif trouvé et corrigé côté cohérence section 7/12 (signaux du
-socle confondus avec des signaux custom mal formés). Les trois chantiers
-validés de bout en bout sur données réelles avant clôture.
-
-Session du 14 août particulièrement dense : recherche exhaustive dans
-l'archive complète des 40 anciens backlogs/handoffs ayant retrouvé 4
-chantiers tombés du radar (P16 clos, P17/Bug#27/nettoyage rotation
-rouverts) ; 5 chantiers de la Partie 1 du 13 août entièrement clos
-(doublon Arctic, wikilinks `test_durcissement`, quatre reliquats du 7
-août, fichiers parasites `generator/`, doc `trajectoire`) ; 3 points de
-la Partie 2 résolus en profondeur (encodage portugais avec audit +
-migration réelle sur le vault, `acteurs_hint_count`, duplication
-`detect_registre_leakage()`) ; 1 bug GUI diagnostiqué et corrigé sur 3
-fichiers distincts (`--force` panneau localisation) ; 1 nouveau chantier
-substantiel identifié (`forces_attractives`/`forces_repulsives`, contenu
-réel du vault jamais exploité par le pipeline).
-
-Session du 15 août : chantier `forces_attractives`/`forces_repulsives`
-mené de bout en bout (décision de contenu, développement, et trois
-correctifs découverts et validés en cours de route sur des générations
-réelles) ; correctif du nom du gabarit entité (erreur de doc répétée à 6
-endroits, `entite_template.md` → `entity_template.md`) et déplacement
-vers `/templates`, avec deux effets de bord silencieux identifiés en
-amont (`routes_dashboard.py`, `generate_instances.py` listaient
-`entites/` sans filtrer le gabarit) — corrigés de facto par le
-déplacement sans toucher leur code, confirmé indirectement par le
-compteur global `validate.py` (590 → 589 entités) mais pas vérifié
-fichier par fichier ; décision et création de "Les Veilleurs des Nappes
-Phréatiques", avec découverte et correction en chaîne de 4 autres
-fiches touchées par la même catégorie invalide (`mouvement`), dette
-historique antérieure au garde-fou actuel.
-
-**12 fichiers livrés le 14 août** (voir `HANDOFF_14_AOUT.md` §13 pour le
-détail complet) : `inject_custom_events.py` (deux correctifs cumulés),
-`create_entities_and_instances.py`, `create_entity.py`,
-`officialize_alliances.py`, `fix_annee_debut_placeholder.py`, `app.js`,
-`app.py`, `scripts_config.json`, plus 4 nouveaux scripts d'audit/
-migration réutilisables : `fix_arctic_passage_duplicate.py`,
-`fix_test_durcissement_wikilinks.py`, `audit_broken_slugs.py`,
-`rename_broken_slugs.py`. Redémarrage Flask requis (changements dans
-`app.py`/`scripts_config.json`).
-
-**Fichiers livrés le 15 août** (voir `HANDOFF_15_AOUT.md` pour le détail
-complet) : `loader.py` (parseur `_extract_forces_from_body()`, câblage
-dans `load_variable()`, correction de la rotation d'instances
-`_select_least_used_instances()`/`_score_bucket()`), `prompt_builder.py`
-(câblage des forces dans `build_variables_context()`, consignes de
-pilotage forces + couverture pilotes), `audit_broken_slugs.py` (nom réel
-du gabarit corrigé), `needs_review.yaml` (catégorie corrigée pour
-"Les Veilleurs des Nappes Phréatiques"). Redémarrage Flask requis
-(changement dans `loader.py`, déjà rencontré comme piège en cours de
-session — un premier test a tourné sans effet avant redémarrage).*
-
-**Fichiers livrés le 16 août** (voir `HANDOFF_16_AOUT.md` pour le détail
-complet) : `instance_generation_common.py` (nouveau paramètre
-`injection_custom`, prompt LLM + validation + écriture du bloc
-`impact_sur_variables`, filet de sécurité sur `propagation_via_matrice`/
-`contexte_injection`, correction du bug YAML `contexte_injection`),
-`create_entities_and_instances.py` (activation du paramètre en mode
-`custom` uniquement, plus deux bugs préexistants corrigés en testant :
-`idea.get('role')`/`idea.get('etat')` au lieu d'accès direct, exception
-silencieuse rendue visible), `inject_custom_signals.py` (mêmes champs
-d'impact chiffré, plafond `MAX_DELTA_SIGNAL`, dérivation depuis
-`date_bascule`), `loader.py` (`load_custom_signals()`), `snapshot.py`
-(`apply_custom_signals()`, correctif de double-comptage des
-modifications), `validate.py` (nouvelle section 9/10, `validate_signals()`,
-correctif du faux positif sur les signaux du socle). Redémarrage Flask
-requis pour les changements `loader.py`/`snapshot.py`/`instance_generation_common.py`.*
-
-**Fichiers livrés le 17 août** (voir `HANDOFF_17_AOUT.md` pour le détail
-complet) : `audit_instances_manquantes.py` *(nouveau)* — script d'audit
-lecture seule, 3 versions itérées en session ; `scripts_config.json`
-(nouvelle entrée GUI `audit_instances_manquantes`, section
-`validation`) ; `entites/_entities_list.json` (592→591 entités, retrait
-Cartographe Silencieux) ; `entites_custom/processed.yaml` (2 blocs
-dupliqués + 1 ligne orpheline retirés) ; 13 nouvelles fiches instance
-créées via `generate_instances.py` (voir tableau Partie 4 pour la liste
-complète) ; `entites/le_cartographe_silencieux.md` supprimée (sauvegarde
-dans `documentation/need_action/backup_suppression_cartographe_silencieux/`).
-Redémarrage Flask requis (changement dans `scripts_config.json`).
+*Backlog réorganisé le 23 août 2026 : les chantiers clos entre le 21
+et le 23 août (10 au total, dont un oubli du 21 août jamais déplacé)
+ont été déplacés en Partie 4 et les chantiers ouverts restants
+renumérotés séquentiellement. Voir `HANDOFF_23_AOUT.md` pour le point
+de reprise détaillé de la prochaine session.*

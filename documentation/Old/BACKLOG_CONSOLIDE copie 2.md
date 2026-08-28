@@ -235,20 +235,20 @@ Incohérence de plausibilité logistique détectée sur un article test le 11 ju
 
 **Champs à ajouter au frontmatter des articles** :
 
-| Champ | Description |
-|---|---|
-| `slug` | Identifiant URL-friendly (évite de le dériver du titre à chaque fois, risques de collision/accents) |
-| `chapo` / `excerpt` | Résumé court (2-3 lignes) pour pages de liste et meta description SEO |
-| `image_prompt` | Prompt de génération d'image, produit par le LLM en même temps que l'article |
-| `a_une_photo` | Booléen, **basculé manuellement** — choix éditorial, pas systématique |
-| `image_principale` | Chemin vers l'image générée (rempli en post-traitement) |
-| `image_alt` | Texte alternatif (accessibilité + SEO) |
-| `image_credit` | Traçabilité de la source/du prompt si génération IA |
-| `tags` | Mots-clés distincts de `thematique` (orientés découverte/recherche lecteur) |
-| `journaliste_slug` | Lien vers la fiche auteur (déjà présent dans `journaux.yaml`) |
-| `date_publication` vs `date_evenement` | À distinguer si publication différée / calendrier éditorial |
-| `articles_lies` | Liens vers 2-3 articles connexes — possiblement déductible automatiquement des entités partagées plutôt que généré par le LLM |
-| `zone_principale` | Déjà présent via `localisation`, mais un champ dédié simplifie le filtrage géographique côté front |
+| Champ                                  | Description                                                                                                                   |
+| -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `slug`                                 | Identifiant URL-friendly (évite de le dériver du titre à chaque fois, risques de collision/accents)                           |
+| `chapo` / `excerpt`                    | Résumé court (2-3 lignes) pour pages de liste et meta description SEO                                                         |
+| `image_prompt`                         | Prompt de génération d'image, produit par le LLM en même temps que l'article                                                  |
+| `a_une_photo`                          | Booléen, **basculé manuellement** — choix éditorial, pas systématique                                                         |
+| `image_principale`                     | Chemin vers l'image générée (rempli en post-traitement)                                                                       |
+| `image_alt`                            | Texte alternatif (accessibilité + SEO)                                                                                        |
+| `image_credit`                         | Traçabilité de la source/du prompt si génération IA                                                                           |
+| `tags`                                 | Mots-clés distincts de `thematique` (orientés découverte/recherche lecteur)                                                   |
+| `journaliste_slug`                     | Lien vers la fiche auteur (déjà présent dans `journaux.yaml`)                                                                 |
+| `date_publication` vs `date_evenement` | À distinguer si publication différée / calendrier éditorial                                                                   |
+| `articles_lies`                        | Liens vers 2-3 articles connexes — possiblement déductible automatiquement des entités partagées plutôt que généré par le LLM |
+| `zone_principale`                      | Déjà présent via `localisation`, mais un champ dédié simplifie le filtrage géographique côté front                            |
 
 **Génération d'images — option retenue (Option 1)** : le LLM génère un `image_prompt` descriptif **au moment de la génération de l'article** (même appel API, cohérence garantie avec le contenu). La décision d'illustrer (`a_une_photo`) reste manuelle et découplée de la génération technique — le prompt est stocké dès la création, réutilisable des semaines plus tard sans repasser par le LLM.
 

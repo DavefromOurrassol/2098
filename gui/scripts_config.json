@@ -202,12 +202,71 @@
         "description": "Dépend du scénario choisi ci-dessus. Ne liste que les zones ayant un journal — les sous-zones plus fines ne sont pas sélectionnables ici."
       },
       {
+        "flag": "--type-diffusion",
+        "type": "select",
+        "label": "Mode de diffusion",
+        "default": "auto",
+        "required": false,
+        "choices": [
+          {
+            "value": "auto",
+            "label": "Auto (celui de la zone dans journaux.yaml)"
+          },
+          {
+            "value": "ecrit",
+            "label": "Forcer écrit"
+          },
+          {
+            "value": "oral",
+            "label": "Forcer oral"
+          },
+          {
+            "value": "mixte",
+            "label": "Forcer mixte (tirage 50/50)"
+          }
+        ],
+        "description": "Par défaut, respecte ce qui est déjà configuré pour la zone. Un choix explicite ici s'applique UNIQUEMENT à cet article, sans jamais modifier journaux.yaml. Si \"Oral\" est forcé sur une zone sans orateur défini, repli automatique sur écrit."
+      },
+      {
         "flag": "--article-titre-suggere",
         "type": "text",
         "label": "Titre suggéré",
         "mode_only": "semi_guide",
         "optional": true,
         "placeholder": "Laisser vide = l'IA choisit"
+      },
+      {
+        "flag": "--a-une-photo",
+        "type": "checkbox",
+        "label": "Aura une image",
+        "default": false,
+        "description": "Décide dès l'écriture si cet article sera illustré. La source (IA/personnelle/autre) se choisit juste en dessous — la génération réelle de l'image se fait plus tard, via generate_images.py."
+      },
+      {
+        "flag": "--credit",
+        "type": "select",
+        "label": "Crédit image",
+        "optional": true,
+        "choices": [
+          {
+            "value": "",
+            "label": "(pas encore décidé)"
+          },
+          {
+            "value": "IA_generated",
+            "label": "Génération IA"
+          },
+          {
+            "value": "personnel",
+            "label": "Personnel"
+          },
+          {
+            "value": "autre",
+            "label": "Autre source"
+          }
+        ],
+        "default": "",
+        "description": "Ignoré si \"Aura une image\" n'est pas coché."
       },
       {
         "flag": "--forcer-type",
@@ -407,6 +466,27 @@
           }
         ],
         "default": "auto"
+      },
+      {
+        "key": "photo_policy",
+        "type": "select",
+        "label": "Illustration des articles",
+        "choices": [
+          {
+            "value": "aucune",
+            "label": "Aucune"
+          },
+          {
+            "value": "toutes",
+            "label": "Toutes"
+          },
+          {
+            "value": "aleatoire",
+            "label": "Aléatoire (25% des articles)"
+          }
+        ],
+        "default": "aucune",
+        "description": "Décide a_une_photo par article. Le crédit (source de l'image) n'est jamais fixé automatiquement en série — à choisir par article, plus tard, avant de lancer generate_images.py."
       },
       {
         "key": "angle_specifique",
@@ -856,10 +936,28 @@
         "label": "Source",
         "optional": true,
         "placeholder": "ex : idee_2026-06"
+      },
+      {
+        "key": "priorite_forcee",
+        "type": "select",
+        "label": "Priorité forcée (présence garantie)",
+        "choices": [
+          {
+            "value": "true",
+            "label": "Oui — garantir la présence dans tous les articles"
+          },
+          {
+            "value": "false",
+            "label": "Non (défaut)"
+          }
+        ],
+        "optional": true,
+        "description": "Garantit que cette entité sera citée dans les articles générés (comme les instances custom), sur tous les scénarios couverts ci-dessus. Ne garantit pas le statut de sujet principal. Pour forcer sur un seul scénario, utilise plutôt l'outil d'édition dédié après création.",
+        "default": "false"
       }
     ],
     "config_fields_mode": "custom",
-    "gui_verified": true
+    "gui_verified": false
   },
   {
     "id": "inject_events",
@@ -2473,6 +2571,328 @@
         "path": "documentation/need_action/instances_manquantes.md",
         "label": "Rapport du dernier audit (réécrit à chaque lancement avec --report)",
         "readonly": true
+      }
+    ],
+    "gui_verified": false
+  },
+  {
+    "id": "set_priorite_forcee",
+    "label": "Forcer/retirer la présence garantie d'une entité",
+    "icon": "📌",
+    "section": "entites_nettoyage",
+    "script": "set_priorite_forcee.py",
+    "description": "Active ou désactive le forçage de présence d'une entité déjà existante, sur un scénario précis. Une entité forcée est garantie d'être citée dans les articles générés pour ce scénario (comme une instance custom) -- sans garantir qu'elle soit le sujet principal. Aucun appel LLM : modification directe et immédiate de la fiche.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "description": "Filtre la liste d'instances ci-dessous à ce scénario.",
+        "required": true
+      },
+      {
+        "flag": "--slug",
+        "type": "slug_select",
+        "label": "Instance cible",
+        "slug_type": "instances",
+        "description": "La fiche instance à modifier (slug déjà scénario-suffixé).",
+        "required": true,
+        "requires_scenario_selected": true
+      },
+      {
+        "flag": "--value",
+        "type": "select",
+        "label": "Action",
+        "choices": [
+          {
+            "value": "true",
+            "label": "Forcer la présence"
+          },
+          {
+            "value": "false",
+            "label": "Retirer le forçage"
+          }
+        ],
+        "required": true
+      }
+    ],
+    "gui_verified": false
+  },
+  {
+    "id": "inject_journaliste_custom",
+    "label": "Ajouter des journalistes (manuel / auto)",
+    "icon": "🖋️",
+    "section": "presse",
+    "script": "inject_journaliste_custom.py",
+    "description": "Comble les trous de couverture thématique d'une rédaction locale, générés par LLM avec un profil cohérent avec le ton déjà établi de l'édition. Mode manuel : un seul journaliste précis. Mode auto : scanne un scénario entier et choisit intelligemment entre redistribuer une thématique à un·e journaliste existant·e sous-chargé·e, ou en créer un·e nouveau·elle si tous sont déjà bien remplis. N'ajoute jamais qu'à une édition déjà existante dans journaux.yaml -- ne crée jamais une nouvelle zone/édition.",
+    "requires": [],
+    "mode_select": {
+      "label": "Mode",
+      "choices": [
+        {
+          "value": "manuel",
+          "label": "Manuel — un journaliste précis",
+          "note": "Tu choisis toi-même le scénario, la ligne, la zone (édition existante) et les thématiques."
+        },
+        {
+          "value": "auto",
+          "label": "Auto — combler les trous automatiquement",
+          "note": "Scanne tout un scénario et applique directement les redistributions/créations nécessaires pour atteindre la cible de couverture."
+        }
+      ]
+    },
+    "options": [
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "required": true,
+        "mode_only": "manuel",
+        "description": "Requis en mode manuel. En mode auto, laisse vide si tu coches \"Tous les scénarios\" ci-dessous."
+      },
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios",
+        "required": false,
+        "mode_only": "auto",
+        "description": "Laisse vide si tu coches \"Tous les scénarios\" ci-dessous."
+      },
+      {
+        "flag": "--all",
+        "type": "checkbox",
+        "label": "Tous les scénarios (l'un après l'autre)",
+        "default": false,
+        "mode_only": "auto",
+        "description": "Mutuellement exclusif avec le choix de scénario ci-dessus. Peut déclencher beaucoup d'appels LLM d'affilée (une création possible par thématique non couverte, par zone, par scénario)."
+      },
+      {
+        "flag": "--ligne",
+        "type": "select",
+        "label": "Ligne éditoriale",
+        "choices": [
+          {
+            "value": "pro_pouvoir",
+            "label": "Pro-pouvoir"
+          },
+          {
+            "value": "opposition",
+            "label": "Opposition"
+          }
+        ],
+        "required": true,
+        "mode_only": "manuel",
+        "description": "Requis en mode manuel."
+      },
+      {
+        "flag": "--ligne",
+        "type": "select",
+        "label": "Ligne éditoriale (optionnel)",
+        "choices": [
+          {
+            "value": "pro_pouvoir",
+            "label": "Pro-pouvoir"
+          },
+          {
+            "value": "opposition",
+            "label": "Opposition"
+          }
+        ],
+        "required": false,
+        "mode_only": "auto",
+        "description": "Laisse vide pour traiter les deux lignes éditoriales du scénario."
+      },
+      {
+        "flag": "--zone-slug",
+        "type": "slug_select",
+        "label": "Zone (édition déjà existante)",
+        "slug_type": "zones_hier_journal",
+        "requires_scenario_selected": true,
+        "required": true,
+        "mode_only": "manuel",
+        "description": "Liste filtrée aux zones qui ont déjà une édition dans journaux.yaml."
+      },
+      {
+        "flag": "--nom",
+        "type": "text",
+        "label": "Nom imposé (optionnel)",
+        "mode_only": "manuel",
+        "required": false,
+        "description": "Laisse vide pour que le LLM invente un nom. Si fourni avec des thématiques choisies ci-dessous, aucun appel LLM n'est nécessaire -- ajout immédiat."
+      },
+      {
+        "flag": "--thematiques",
+        "type": "multi_select",
+        "label": "Thématiques à couvrir (optionnel)",
+        "mode_only": "manuel",
+        "optional": true,
+        "description": "Laisse vide pour que le LLM propose lui-même des thématiques complémentaires à celles déjà couvertes par la rédaction.",
+        "choices": [
+          {
+            "value": "actualites_a_la_une",
+            "label": "actualites_a_la_une"
+          },
+          {
+            "value": "politique",
+            "label": "politique"
+          },
+          {
+            "value": "economie_finance",
+            "label": "economie_finance"
+          },
+          {
+            "value": "international",
+            "label": "international"
+          },
+          {
+            "value": "environnement_climat",
+            "label": "environnement_climat"
+          },
+          {
+            "value": "sante",
+            "label": "sante"
+          },
+          {
+            "value": "societe",
+            "label": "societe"
+          },
+          {
+            "value": "culture",
+            "label": "culture"
+          },
+          {
+            "value": "musique",
+            "label": "musique"
+          },
+          {
+            "value": "sports",
+            "label": "sports"
+          },
+          {
+            "value": "faits_divers",
+            "label": "faits_divers"
+          },
+          {
+            "value": "opinions_editoriaux",
+            "label": "opinions_editoriaux"
+          },
+          {
+            "value": "lifestyle_art_de_vivre",
+            "label": "lifestyle_art_de_vivre"
+          },
+          {
+            "value": "education",
+            "label": "education"
+          },
+          {
+            "value": "histoire_patrimoine",
+            "label": "histoire_patrimoine"
+          },
+          {
+            "value": "medias_communication",
+            "label": "medias_communication"
+          },
+          {
+            "value": "religion_spiritualite",
+            "label": "religion_spiritualite"
+          },
+          {
+            "value": "petites_annonces_services",
+            "label": "petites_annonces_services"
+          },
+          {
+            "value": "meteo",
+            "label": "meteo"
+          },
+          {
+            "value": "sciences_technologies",
+            "label": "sciences_technologies"
+          }
+        ]
+      },
+      {
+        "flag": "--genre",
+        "type": "select",
+        "label": "Genre (optionnel, si le nom est inventé par le LLM)",
+        "mode_only": "manuel",
+        "required": false,
+        "choices": [
+          {
+            "value": "",
+            "label": "Peu importe -- le LLM choisit"
+          },
+          {
+            "value": "homme",
+            "label": "Homme"
+          },
+          {
+            "value": "femme",
+            "label": "Femme"
+          }
+        ],
+        "description": "Sans effet si un nom est déjà fourni ci-dessus."
+      },
+      {
+        "flag": "--seniorite",
+        "type": "number",
+        "label": "Séniorité (optionnel)",
+        "default": 1,
+        "mode_only": "manuel",
+        "required": false,
+        "description": "Poids de la rotation pondérée -- plus haut = revient plus souvent dans les articles. Même convention que les journalistes existants (défaut 1)."
+      },
+      {
+        "flag": "--angle-specifique",
+        "type": "text",
+        "label": "Précision sur le profil recherché (optionnel)",
+        "mode_only": "manuel",
+        "required": false
+      },
+      {
+        "flag": "--cible",
+        "type": "number",
+        "label": "Nombre minimum de journalistes éligibles visé",
+        "default": 2,
+        "mode_only": "auto",
+        "required": false
+      },
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Simulation (rien écrit sur disque, mais appel LLM réel)",
+        "default": false,
+        "description": "⚠️ Ce mode appelle quand même le LLM pour de vrai (génération du/des nom(s)/profil(s)) -- seule l'écriture dans journaux.yaml est sautée. Un coût API réel est engagé malgré le mot \"simulation\". En mode auto, peut déclencher plusieurs appels LLM (un par création nécessaire)."
+      }
+    ],
+    "gui_verified": false
+  },
+  {
+    "id": "audit_couverture_journalistes",
+    "label": "Auditer la couverture des journalistes",
+    "icon": "🔍",
+    "section": "validation",
+    "script": "audit_couverture_journalistes.py",
+    "description": "Diagnostic en lecture seule (aucune écriture, aucun appel LLM) : repère les combinaisons zone×thématique où trop peu de journalistes sont éligibles pour permettre une vraie rotation (voir le mécanisme de rotation pondérée du 22 août). Utile avant de lancer 'Ajouter des journalistes' en mode auto, pour savoir où ça compte le plus.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--seuil",
+        "type": "number",
+        "label": "Signaler aussi la couverture jusqu'à N journalistes",
+        "default": 1,
+        "required": false,
+        "description": "1 = signale seulement 0 et 1 journaliste éligible (défaut). Augmenter pour un diagnostic plus large."
+      },
+      {
+        "flag": "--report",
+        "type": "checkbox",
+        "label": "Écrire le détail dans un fichier",
+        "default": false,
+        "description": "Écrit audit_couverture_journalistes_report.txt (dans generator/) avec le détail complet -- seul le résumé par scénario reste affiché dans le terminal. Sans cette case, tout s'affiche dans le terminal."
       }
     ],
     "gui_verified": false

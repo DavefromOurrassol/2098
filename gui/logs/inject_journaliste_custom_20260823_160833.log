@@ -1,0 +1,9 @@
+usage: inject_journaliste_custom.py [-h] --mode {manuel,auto} --scenario
+                                    SCENARIO
+                                    [--ligne {pro_pouvoir,opposition}]
+                                    [--zone-slug ZONE_SLUG]
+                                    [--thematiques THEMATIQUES] [--nom NOM]
+                                    [--genre {homme,femme,}]
+                                    [--angle-specifique ANGLE_SPECIFIQUE]
+                                    [--cible CIBLE] [--dry-run]
+inject_journaliste_custom.py: error: unrecognized arguments: societe histoire_patrimoine

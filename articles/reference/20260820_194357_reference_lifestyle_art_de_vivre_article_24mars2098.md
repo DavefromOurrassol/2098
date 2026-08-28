@@ -17,6 +17,32 @@ variables_pilotes:
   - technologie_information
   - systeme_economique_redistribution
   - gouvernance_institutions
+slug: slow_carbon_quand_respirer_devient_un_luxe
+chapo: "En 2098, respirer sans filtre nasal est devenu un luxe réservé aux élites, tandis que le mouvement *Slow Carbon* prône un retour à l'essentiel, loin des prothèses technologiques imposées par les consortiums. Entre rébellion individuelle et marché lucratif, l'air pur est-il devenu un privilège ?"
+tags:
+  - futurisme écologique
+  - inégalités sanitaires
+  - résistance technologique
+  - luxe durable
+  - biopiraterie
+image_prompt: "Une femme (Léa Varga) debout devant une baie vitrée d'un appartement high-tech à Manaus, observant les fumées des zones de régénération forestière, sans filtre nasal, avec un mur végétalisé affichant des données de pollution en arrière-plan."
+a_une_photo: false
+image_credit: ""
+journaliste_slug: camille_ribero
+date_evenement: 24 mars 2098
+zone_principale: amazonie_consortium_viva
+date_publication: 24 mars 2098
+entites_citees:
+  - collectifs_de_biopiraterie_inversee_reference
+  - consortium_amazonia_viva_reference
+  - directive_kontinuum_reference
+  - ecosynth_global_reference
+  - nexus_biosyn_reference
+articles_lies:
+  - slow_biotech_quand_l_amazonie_reinvente_l_art_de_vivre_a_l_heure_des_brevets_viv
+  - slow_canopee_quand_la_foret_amazonienne_inspire_un_nouveau_luxe_sobre
+  - le_silence_des_algorithmes_quand_les_plateformes_eteignent_les_voix_du_nord
+
 ---
 **« Slow Carbon » : quand respirer devient un luxe**
 
@@ -35,3 +61,6 @@ Pourtant, malgré les critiques, le marché explose. Les marques de cosmétiques
 Léa, elle, a fait son choix. Ce matin, elle a posté une photo sur son compte *@RespiraLivre* : elle, souriante, sans filtre, devant un coucher de soleil sur le fleuve. La légende ? *« L’air appartient à ceux qui osent le respirer. »* En moins d’une heure, la publication a été signalée par le *Système Kontinuum* pour « incitation à la non-conformité sanitaire ». Léa a ri. Puis elle a éteint son terminal. Pour de bon.
 
 Camille Ribero — Réseau Le Dessous des Cartes
+
+---
+**Voir aussi** : [[collectifs_de_biopiraterie_inversee_reference]] · [[consortium_amazonia_viva_reference]] · [[directive_kontinuum_reference]] · [[ecosynth_global_reference]] · [[nexus_biosyn_reference]] · [[slow_biotech_quand_l_amazonie_reinvente_l_art_de_vivre_a_l_heure_des_brevets_viv]] · [[slow_canopee_quand_la_foret_amazonienne_inspire_un_nouveau_luxe_sobre]] · [[le_silence_des_algorithmes_quand_les_plateformes_eteignent_les_voix_du_nord]]

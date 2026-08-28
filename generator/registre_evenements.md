@@ -17,7 +17,6 @@ Total : 527 entrées (77 signaux uniques × 6 scénarios + 65 entrées d'événe
 | type      | date      | source                                    | variable(s)                                                                                                 | pilote | evenement_cle                                                                |
 | --------- | --------- | ----------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ------ | ---------------------------------------------------------------------------- |
 | evenement | 2027 | conflit_israel_iran_2026 | geopolitique_conflits, energie_ressources_critiques, gouvernance_institutions, demographie_mobilite_humaine | — | frappes israéliennes détruisent les puits iraniens 2027 |
-| evenement | 2028 | escalade_sahel_2028_test | geopolitique_conflits, gouvernance_institutions | — | Sahel s'embrase, réseaux en flammes 2028 |
 | signal | 2035-2055 | emergence_pathogenes_nouveaux | sante_biotechnologies | non | Pandémie H7X de 2043 et effondrement de l'OMS |
 | signal | 2036-2055 | robotisation_services | systemes_productifs_travail | oui | réquisition massive des robots de service dans les mégapoles 2050 |
 | signal | 2037-2057 | disparition_metiers_intermediaires | systemes_productifs_travail | oui | fermeture de la dernière grande filière de formation intermédiaire 2049 |
@@ -93,12 +92,10 @@ Total : 527 entrées (77 signaux uniques × 6 scénarios + 65 entrées d'événe
 | signal | 2045-2065 | medecine_predictive_ia | sante_biotechnologies | non | fermeture des bases médicales prédictives de l'Alliance Pacifique 2058 |
 | signal | 2045-2065 | saturation_orbitale | frontieres_du_systeme | non | catastrophe orbitale de 2057 bloquant l'accès spatial |
 | signal | 2045-2064 | nouvelles_communautes_orbitales | frontieres_du_systeme | non | rupture de communication avec une station orbitale habitée 2058 |
-| evenement | 2045 | zone_invalide_test | organisation_territoires, technologie_information | — | Agadez ignore l'erreur fantôme, 2045 |
 | signal | 2045-2063 | decodage_langage_animaux_ia | valeurs_culture_tempo_sociale | non | premiers rituels collectifs de communication avec les corbeaux 2056 |
 | evenement | 2047 | crise_gouvernance_amazonie | climat_environnement_global, geopolitique_conflits, gouvernance_institutions, organisation_territoires | — | Belém en flammes, le bassin amazonien se fragmente, 2047 |
 | signal | 2048-2062 | dedollarisation_progressive | systeme_economique_redistribution | non | abandon du dollar comme devise de réserve globale |
 | signal | 2048-2068 | course_biotech_internationale | sante_biotechnologies | non | fuite de souches modifiées du complexe clandestin de Karaganda 2061 |
-| evenement | 2048 | multi_scenario_zone_test | demographie_mobilite_humaine, organisation_territoires | — | Agadez rejette le test fantôme, 2048 |
 | signal | 2050-2070 | surveillance_sanitaire_continue | sante_biotechnologies | non | scandale des registres médicaux pillés de Detroit-Sud 2066 |
 | signal | 2050-2070 | acceptation_homme_augmente | sante_biotechnologies | non | émeutes anti-augmentés dans les enclaves de Lagos-Est 2063 |
 | evenement | 2053 | secession_great_lakes_compact | organisation_territoires, gouvernance_institutions, geopolitique_conflits | — | Chicago-Lacustre proclame le Compact souverain des eaux, 2053 |
@@ -377,8 +374,6 @@ Total : 527 entrées (77 signaux uniques × 6 scénarios + 65 entrées d'événe
 | signal | 2045-2065 | medecine_predictive_ia | sante_biotechnologies | non | diffusion des kits de diagnostic communautaire "Santé Sobre" 2052 |
 | evenement | 2047 | crise_gouvernance_amazonie | climat_environnement_global, geopolitique_conflits, gouvernance_institutions, organisation_territoires | — | Pacte Amazônia Viva déclare souveraineté écologique d'urgence 2047 |
 | evenement | 2047 | revolution_travail_sahel_numerique | systemes_productifs_travail, technologie_information, energie_ressources_critiques | — | Sahel Numérique adopte le crédit-travail régénératif 2047 |
-| evenement | 2048 | multi_scenario_zone_test | demographie_mobilite_humaine, organisation_territoires | — | Sahel Numérique scinde ses trames en 2048 |
-| evenement | 2050 | zone_valide_test | organisation_territoires, technologie_information | — | Sahel Numérique proclame ses communs souverains 2050 |
 | evenement | 2062 | grand_forum_sahel_numerique | technologie_information, gouvernance_institutions, organisation_territoires | — | Charte d'Agadez consacre les périphéries numériques souveraines 2062 |
 | evenement | 2063 | communes_rust_belt_zones_libres | geopolitique_conflits, valeurs_culture_tempo_sociale, gouvernance_institutions, organisation_territoires | — | Friches du Rust Belt proclament zones libres algorithme 2063 |
 | evenement | 2063 | insurrection_rust_belt | geopolitique_conflits, valeurs_culture_tempo_sociale, gouvernance_institutions, technologie_information | — | Communes du Rust Belt bannissent gouvernance algorithmique 2063 |
@@ -566,5 +561,4 @@ Total : 527 entrées (77 signaux uniques × 6 scénarios + 65 entrées d'événe
 | evenement | 2055 | accord_carbone_amazonie_blocs | climat_environnement_global, gouvernance_institutions, geopolitique_conflits, energie_ressources_critiques | — | Belém signe le pacte carbone amazonie fracture 2055 |
 | evenement | 2059 | incident_passage_arctique | geopolitique_conflits, frontieres_du_systeme, energie_ressources_critiques | — | Convoi arctique saisi, premières armes tirées 2059 |
 | evenement | 2073 | emeutes_algorithme_sao_paulo | gouvernance_institutions, technologie_information, organisation_territoires | — | Favelas décodent le SPAAR, soulèvement urbain São Paulo 2073 |
-| evenement | 2091 | controle_date_lointaine_test | technologie_information, frontieres_du_systeme | — | 2091 : Audit systémique des IA vieillissantes révèle leur stabilité |
 | evenement | 2098 | nairobi_biorevenu_pilote_2098 | sante_biotechnologies, systeme_economique_redistribution, systemes_productifs_travail, gouvernance_institutions, valeurs_culture_tempo_sociale | — | Nairobi lance le bio-revenu universel algorithmique 2098 |

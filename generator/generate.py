@@ -84,6 +84,24 @@ def _parse_cli_args():
     parser.add_argument("--scenario", default=None)
     parser.add_argument("--zone-slug", default=None)
     parser.add_argument("--article-titre-suggere", default=None)
+    # P21 (25 août 2026) : override du mode de diffusion pour CET article
+    # précis, indépendamment de journaux.yaml -- "auto" (défaut) = la
+    # zone décide comme avant, non-régression totale. Uniquement sur
+    # generate.py (génération d'un seul article) -- jamais sur
+    # generate_series.py, décision explicite de David : une série pioche
+    # toujours dans journaux.yaml tel quel, zone par zone.
+    parser.add_argument("--type-diffusion", default="auto",
+                         choices=["auto", "ecrit", "oral", "mixte"])
+    # P20 Phase C (21 août 2026) : décision manuelle prise dès l'écriture
+    # de l'article, plutôt qu'après coup uniquement -- voir docstring de
+    # api.py::build_article_md(). --a-une-photo en store_true (comme
+    # --dry-run) : reflète toujours l'état de la case au moment du
+    # lancement, jamais de repli sur une valeur résiduelle de
+    # config.yaml. --credit optionnel (None si non fourni = comportement
+    # CLI direct hors GUI inchangé, conserve la valeur de config.yaml).
+    parser.add_argument("--a-une-photo", action="store_true")
+    parser.add_argument("--credit", default=None,
+                         choices=[None, "", "IA_generated", "personnel", "autre"])
     args, _ = parser.parse_known_args()
     return args
 
@@ -282,6 +300,18 @@ def _generate_one(scenario_slug, thematique_obj, thematique_slug, config,
     if not article_config["article"].get("date_fictive"):
         article_config["article"]["date_fictive"] = random.choice(DATES_2098)
 
+    # Uniformisation du dossier de sortie (22 août 2026, retour de
+    # David) : jusqu'ici, seuls generate_series.py/generate_manual.py
+    # définissaient config["output"]["dossier"] (articles/{scenario}),
+    # laissant un article généré seul via generate.py toujours retomber
+    # sur la racine articles/ par défaut (voir save_article(), api.py --
+    # comportement documenté, pas un bug, mais jugé incohérent avec
+    # l'organisation par scénario désormais attendue partout). Même
+    # champ, même convention -- pas de sous-dossier séparé ni d'_index.md
+    # créé ici (ça reste spécifique aux séries), juste le rangement.
+    article_config["output"] = dict(config.get("output") or {})
+    article_config["output"]["dossier"] = "articles/{}".format(scenario_slug)
+
     prompt_data = build_prompt(snapshot, thematique_obj, article_config, dry_run=dry_run)
 
     if dry_run:
@@ -333,6 +363,18 @@ def run():
         config["article"]["angle_specifique"] = cli_args.article_angle_specifique
     if cli_args.article_titre_suggere is not None:
         config["article"]["titre_suggere"] = cli_args.article_titre_suggere
+    # P21 (25 août 2026) : "auto" = pas d'override, prompt_builder.py lit
+    # config["type_diffusion_override"] et l'ignore si absent/"auto" --
+    # même convention que --article-longueur juste au-dessus.
+    if cli_args.type_diffusion != "auto":
+        config["type_diffusion_override"] = cli_args.type_diffusion
+    # P20 Phase C (21 août 2026) -- voir _parse_cli_args() ci-dessus.
+    # Placé ici (avant la branche semi_guide/forcer) : config["article"]
+    # est partagé par les deux modes, donc un seul point de câblage
+    # couvre les deux, comme les champs déjà présents ci-dessus.
+    config["article"]["a_une_photo"] = bool(cli_args.a_une_photo)
+    if cli_args.credit is not None:
+        config["article"]["image_credit"] = cli_args.credit
 
     mode = cli_args.mode or config.get("mode_generation") or "semi_guide"
     if mode not in ("semi_guide", "forcer"):

@@ -1,0 +1,115 @@
+---
+name: Protocoles d'Urgence Bioterritoriaux (PUB)
+type: instance
+slug: test_priorite_forcee_22aout_eco_communalism
+entite: test_priorite_forcee_22aout
+scenario: eco_communalism
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
+
+type_dans_scenario: organisation
+
+role_dans_scenario: >
+  Les Protocoles d'Urgence Bioterritoriaux (PUB) incarnent la réponse autoritaire et centralisée aux crises de ressources dans le scénario eco_communalism. Nés de l'effondrement partiel des structures globales, ils testent et imposent des mécanismes de priorisation coercitive pour l'allocation des ressources critiques (eau, énergie, terres arables) en période de pénurie. Leur légitimité repose sur l'urgence écologique et sociale, mais leur fonctionnement contredit les principes de gouvernance participative et décentralisée du scénario, créant une tension permanente entre efficacité immédiate et légitimité durable.
+
+responsabilites: >
+  Les PUB interviennent lors des crises systémiques pour réquisitionner des ressources, suspendre temporairement les décisions des Assemblées Bioterritoriales, et imposer des quotas de production ou de consommation. Ils gèrent également des stocks stratégiques de semences, d'eau et d'énergie, et coordonnent des brigades d'intervention rapide pour restaurer des infrastructures critiques. Leur autorité est reconnue par les Fragments d'États Centraux Résiduels, mais contestée par les réseaux coopératifs locaux.
+
+impact_local: 4
+impact_systemique_global: 3
+
+variables_influencees:
+    - gouvernance_institutions
+    - systeme_economique_redistribution
+    - geopolitique_conflits
+    - energie_ressources_critiques
+
+zone_geographique:
+    - nationale
+    - régionale
+
+zone_systemique:
+    - gouvernance
+    - économie
+    - énergie
+
+alliances:
+    - fragments_d_etats_centraux_residuels_eco_communalism
+    - consortiums_industriels_de_l_eau_eco_communalism
+    - enclaves_extractivistes_residuelles_des_corridors_eco_communalism
+
+oppositions:
+    - assemblee_territoires_eco_communalism
+    - brigades_de_restauration_ecologique_eco_communalism
+    - confederation_bassins_vivants_eco_communalism
+    - collectifs_de_cartographie_ecologique_participative_eco_communalism
+
+type_relation_dominante: conflit
+
+annee_debut: 2047
+annee_fin: 
+
+trajectoire: ascendant
+est_clandestin: false
+generation: post-effondrement
+
+injection:
+  type: custom
+  annee_injection: 2047
+  contexte_injection: >
+    Les PUB agissent comme un contre-pouvoir centralisé dans un scénario dominé par la décentralisation. Leur impact négatif sur la gouvernance et la redistribution reflète leur tendance à court-circuiter les mécanismes participatifs, tandis que leur gestion des ressources critiques améliore temporairement l'accès à l'énergie et à l'eau, mais au prix d'une dépendance accrue à des structures autoritaires.
+  impact_sur_variables:
+  - variable: gouvernance_institutions
+    delta_level: -10
+    duree: 20
+    polarite: -1
+  - variable: systeme_economique_redistribution
+    delta_level: -8
+    duree: 15
+    polarite: -1
+  - variable: energie_ressources_critiques
+    delta_level: 12
+    duree: 10
+    polarite: 1
+  propagation:
+    via_matrice: true
+
+description_journalistique: >
+  En 2098, les Protocoles d'Urgence Bioterritoriaux (PUB) restent une épine dans le pied des réseaux coopératifs. Créés en 2047 dans l'urgence des crises hydriques et énergétiques, ces protocoles ont sauvé des millions de vies en réquisitionnant des ressources, mais au prix d'une centralisation du pouvoir qui a érodé la confiance dans les Assemblées Bioterritoriales. Aujourd'hui, leurs interventions sont moins fréquentes, mais leur simple existence rappelle que l'urgence peut toujours justifier l'exception. Leurs archives, conservées dans des bunkers climatisés, sont devenues un symbole des compromis douloureux de l'ère post-effondrement.
+
+signes_distinctifs: >
+  Les membres des PUB portent des combinaisons grises marquées d'un triangle rouge, symbole de leur rôle d'arbitrage en situation critique. Leurs véhicules, souvent des drones ou des camions blindés, arborent le même emblème. Leurs décisions sont diffusées via des réseaux radio basse consommation, avec un ton sec et impersonnel qui contraste avec les échanges collaboratifs des assemblées locales.
+
+tensions_narratives: >
+  Les PUB cristallisent la contradiction entre résilience et démocratie. Leur efficacité en temps de crise est indéniable, mais leur tendance à prolonger leurs interventions au-delà de l'urgence alimente les craintes d'une normalisation de l'exception. Certains territoires refusent désormais de leur ouvrir leurs stocks, tandis que d'autres, plus vulnérables, les voient comme un mal nécessaire. Leur avenir dépendra de la capacité des réseaux coopératifs à proposer des alternatives crédibles pour gérer les prochaines crises.
+
+date_creation: 2026-08-22
+priorite_forcee: true
+---
+
+# Protocoles d'Urgence Bioterritoriaux (PUB)
+
+## Rôle dans [[eco_communalism]]
+Les Protocoles d'Urgence Bioterritoriaux (PUB) incarnent la réponse autoritaire et centralisée aux crises de ressources dans le scénario eco_communalism. Nés de l'effondrement partiel des structures globales, ils testent et imposent des mécanismes de priorisation coercitive pour l'allocation des ressources critiques (eau, énergie, terres arables) en période de pénurie. Leur légitimité repose sur l'urgence écologique et sociale, mais leur fonctionnement contredit les principes de gouvernance participative et décentralisée du scénario, créant une tension permanente entre efficacité immédiate et légitimité durable.
+
+## Responsabilités
+Les PUB interviennent lors des crises systémiques pour réquisitionner des ressources, suspendre temporairement les décisions des Assemblées Bioterritoriales, et imposer des quotas de production ou de consommation. Ils gèrent également des stocks stratégiques de semences, d'eau et d'énergie, et coordonnent des brigades d'intervention rapide pour restaurer des infrastructures critiques. Leur autorité est reconnue par les Fragments d'États Centraux Résiduels, mais contestée par les réseaux coopératifs locaux.
+
+## Variables influencées
+- [[gouvernance_institutions]]
+- [[systeme_economique_redistribution]]
+- [[geopolitique_conflits]]
+- [[energie_ressources_critiques]]
+
+## Relations
+**Alliés** : [[fragments_d_etats_centraux_residuels_eco_communalism]], [[consortiums_industriels_de_l_eau_eco_communalism]], [[enclaves_extractivistes_residuelles_des_corridors_eco_communalism]]
+**Opposants** : [[assemblee_territoires_eco_communalism]], [[brigades_de_restauration_ecologique_eco_communalism]], [[confederation_bassins_vivants_eco_communalism]], [[collectifs_de_cartographie_ecologique_participative_eco_communalism]]
+
+## Description journalistique
+En 2098, les Protocoles d'Urgence Bioterritoriaux (PUB) restent une épine dans le pied des réseaux coopératifs. Créés en 2047 dans l'urgence des crises hydriques et énergétiques, ces protocoles ont sauvé des millions de vies en réquisitionnant des ressources, mais au prix d'une centralisation du pouvoir qui a érodé la confiance dans les Assemblées Bioterritoriales. Aujourd'hui, leurs interventions sont moins fréquentes, mais leur simple existence rappelle que l'urgence peut toujours justifier l'exception. Leurs archives, conservées dans des bunkers climatisés, sont devenues un symbole des compromis douloureux de l'ère post-effondrement.
+
+## Tensions narratives
+Les PUB cristallisent la contradiction entre résilience et démocratie. Leur efficacité en temps de crise est indéniable, mais leur tendance à prolonger leurs interventions au-delà de l'urgence alimente les craintes d'une normalisation de l'exception. Certains territoires refusent désormais de leur ouvrir leurs stocks, tandis que d'autres, plus vulnérables, les voient comme un mal nécessaire. Leur avenir dépendra de la capacité des réseaux coopératifs à proposer des alternatives crédibles pour gérer les prochaines crises.

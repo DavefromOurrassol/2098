@@ -4,6 +4,10 @@ type: event_instance
 slug: multi_scenario_zone_test_eco_communalism
 archetype: multi_scenario_zone_test
 scenario: eco_communalism
+localisation:
+  zone: sahel_numerique_ligue
+  lieu: Agadez
+  type_lieu: ville
 type_evenement: political_social
 portee: regionale
 date: 2048

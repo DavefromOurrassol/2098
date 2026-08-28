@@ -1,0 +1,15 @@
+undo_custom.py — 2026-08-22 18:02:14 — mode EXECUTE
+1 item(s) à traiter
+
+
+── instance / test_priorite_forcee_22aout / generalisation=yes ──
+  [DEL] test_priorite_forcee_22aout_new_sustainability.md → backup test_priorite_forcee_22aout_new_sustainability.md.bak
+  [DEL] test_priorite_forcee_22aout_eco_communalism.md → backup test_priorite_forcee_22aout_eco_communalism.md.bak
+  [DEL] test_priorite_forcee_22aout_policy_reform.md → backup test_priorite_forcee_22aout_policy_reform.md.bak
+  [DEL] test_priorite_forcee_22aout_reference.md → backup test_priorite_forcee_22aout_reference.md.bak
+  [DEL] test_priorite_forcee_22aout.md → backup test_priorite_forcee_22aout.md.bak
+  [JSON] 'test_priorite_forcee_22aout' retiré de _entities_list.json
+  [DEL] last_validated.json resetté
+
+════════════════════════════════════════════════════════════
+Terminé. Lancez validate.py pour vérifier la base.

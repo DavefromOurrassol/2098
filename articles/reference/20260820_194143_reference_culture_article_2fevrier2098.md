@@ -17,6 +17,32 @@ variables_pilotes:
   - technologie_information
   - systeme_economique_redistribution
   - gouvernance_institutions
+slug: murmures_sous_la_glace_quand_l_art_arctique_defie_les_recits_officiels
+chapo: "Une exposition artistique à Helsinki défie les récits officiels sur l'Arctique en mêlant sons des glaciers et logs d'erreurs des systèmes logistiques. Entre archives censurées et métaphores glaçantes, *« Murmures sous la glace »* donne voix à ce que les algorithmes préfèrent taire."
+tags:
+  - art engagé
+  - censure algorithmique
+  - résistance culturelle
+  - Arctique
+  - archives numériques
+image_prompt: "Nils Johan Gaup, artiste sami, debout devant son installation *« Glace et Silicium »* dans les sous-sols du *Kiasma 2.0* à Helsinki, entouré de casques à conduction osseuse et d'écrans diffusant des enregistrements de glaciers fissurés."
+a_une_photo: false
+image_credit: ""
+journaliste_slug: sara_lindstrom
+date_evenement: 2 février 2098
+zone_principale: tromsoe_aln
+date_publication: 2 février 2098
+entites_citees:
+  - armada_logistique_nordique_reference
+  - bureaux_de_regulation_informationnelle_reference
+  - leena_vainala_reference
+  - ong_de_preservation_patrimoniale_numerique_reference
+  - plateformes_centralisees_de_narration_officielle_reference
+articles_lies:
+  - le_silence_des_algorithmes_quand_les_plateformes_eteignent_les_voix_du_nord
+  - memoire_en_apnee_quand_l_art_se_noie_dans_les_archives_fantomes
+  - memoire_en_fragments_quand_l_art_defie_la_muraille_de_verre
+
 ---
 **« Murmures sous la glace » : quand l’art arctique défie les récits officiels**
 
@@ -37,3 +63,6 @@ Pourtant, l’exposition attire plus de visiteurs que prévu. Des employés de l
 Les Plateformes Centralisées de Narration Officielle, elles, continuent de diffuser leurs récits lissés. Ce matin, leur « Flux Certifié » annonce que *« la banquise arctique a atteint un niveau de stabilité historique grâce aux protocoles de l’ALN »*. Personne ne mentionne les fissures.
 
 *« Murmures sous la glace »* restera ouverte jusqu’au 15 février. À moins que les BRI ne décident d’intervenir avant. Mais dans un monde où les algorithmes contrôlent les récits, une question persiste : qui décidera de ce qui mérite d’être entendu ?
+
+---
+**Voir aussi** : [[armada_logistique_nordique_reference]] · [[bureaux_de_regulation_informationnelle_reference]] · [[leena_vainala_reference]] · [[ong_de_preservation_patrimoniale_numerique_reference]] · [[plateformes_centralisees_de_narration_officielle_reference]] · [[le_silence_des_algorithmes_quand_les_plateformes_eteignent_les_voix_du_nord]] · [[memoire_en_apnee_quand_l_art_se_noie_dans_les_archives_fantomes]] · [[memoire_en_fragments_quand_l_art_defie_la_muraille_de_verre]]
