@@ -1,0 +1,50 @@
+  eco_communalism/opposition/chiapas_et_bioterritoires_mesoamericains : type_diffusion 'ecrit' -> 'oral'
+  42 zones N1 / 87 zones totales
+    Création nécessaire (0 orateur·rice(s) actuellement, cible 2)
+    → LLM (mistral, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 690 | sortie : 84
+    Création nécessaire (1 orateur·rice(s) actuellement, cible 2)
+    → LLM (mistral, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 706 | sortie : 88
+  eco_communalism/opposition/europe_occidentale_reconstituee : type_diffusion 'ecrit' -> 'oral'
+    Création nécessaire (0 orateur·rice(s) actuellement, cible 2)
+    → LLM (mistral, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 717 | sortie : 83
+    Création nécessaire (1 orateur·rice(s) actuellement, cible 2)
+    → LLM (mistral, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 734 | sortie : 88
+  eco_communalism/opposition/maghreb_mediterraneen : type_diffusion 'ecrit' -> 'oral'
+    Création nécessaire (0 orateur·rice(s) actuellement, cible 2)
+    → LLM (mistral, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 739 | sortie : 80
+    Création nécessaire (1 orateur·rice(s) actuellement, cible 2)
+    → LLM (mistral, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 753 | sortie : 93
+  eco_communalism/opposition/sahel_numerique_ligue : type_diffusion 'ecrit' -> 'oral'
+    Création nécessaire (0 orateur·rice(s) actuellement, cible 2)
+    → LLM (mistral, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 721 | sortie : 105
+    Création nécessaire (1 orateur·rice(s) actuellement, cible 2)
+    → LLM (mistral, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 752 | sortie : 100
+
+======================================================================
+RÉSUMÉ -- 4 zone(s) convertie(s), 8 création(s)
+======================================================================
+  [conversion] eco_communalism/opposition/chiapas_et_bioterritoires_mesoamericains : 'ecrit' -> 'oral'
+  [conversion] eco_communalism/opposition/europe_occidentale_reconstituee : 'ecrit' -> 'oral'
+  [conversion] eco_communalism/opposition/maghreb_mediterraneen : 'ecrit' -> 'oral'
+  [conversion] eco_communalism/opposition/sahel_numerique_ligue : 'ecrit' -> 'oral'
+  [création] eco_communalism/opposition/chiapas_et_bioterritoires_mesoamericains : Xunka’ Tz’ikin (La Voz del Monte) -- dessert altos de San Andrés, milpas de la selva Lacandona, senderos de la resistencia
+  [création] eco_communalism/opposition/chiapas_et_bioterritoires_mesoamericains : Ixchel K'anal (La Sombra que Cosecha) -- dessert milpas de la selva baja, colectivos de semillas libres, senderos de la memoria rebelde
+  [création] eco_communalism/opposition/europe_occidentale_reconstituee : L'Écho des Pierres (Marta Valser) -- dessert sources du Haut-Rhin, marchés des Cévennes brûlées, ponts de l'Ourthe sauvage
+  [création] eco_communalism/opposition/europe_occidentale_reconstituee : La Voix des Sources (Joséphine 'Zéph' Morvan) -- dessert hautes terres cévenoles, marchés flottants du Rhône, forges des Apennins noirs
+  [création] eco_communalism/opposition/maghreb_mediterraneen : Lalla Nsara 'Tidewhisper' -- dessert zaouïas du littoral, souks des oueds asséchés, camps des pêcheurs nomades
+  [création] eco_communalism/opposition/maghreb_mediterraneen : Sidi Mounir 'L'Étincelle des Oueds' -- dessert zaouïas des montagnes arides, souks des vallées asséchées, campements des pêcheurs nomades
+  [création] eco_communalism/opposition/sahel_numerique_ligue : Amanar ⚡✨ / « Celui-qui-parle-aux-machines » -- dessert nœuds solaires du Ténéré, caravanes des sables numériques, places des assemblées ouvertes
+  [création] eco_communalism/opposition/sahel_numerique_ligue : Tafouk ⚡🌾 / « Celle-qui-tresse-les-vents » -- dessert dunes des assembleurs, caravanes des codeurs nomades, oasis des serveurs solaires
+
+  ✓ Sauvegarde créée : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/generator/journaux.yaml.backup_20260829_181815
+
+[OK] journaux.yaml sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/generator/journaux.yaml
+  ✓ journaux.yaml sauvegardé.

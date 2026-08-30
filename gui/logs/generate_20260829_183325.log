@@ -1,0 +1,156 @@
+
+============================================================
+OURRASSOL 2098 — Générateur d'articles
+============================================================
+  Mode       : Semi-guidé
+  Scénario   : eco_communalism
+  Thématique : actualites_a_la_une
+  Longueur   : analyse
+============================================================
+
+[generate] Chargement de la thématique 'actualites_a_la_une'...
+
+[snapshot] Construction du monde 2098 — scénario : eco_communalism
+[snapshot] Variables pilotes : ['organisation_territoires', 'climat_environnement_global', 'energie_ressources_critiques', 'systemes_productifs_travail']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 3 | Cohérence : OK
+[snapshot] Jalons trajectoire : 154 (37 majeurs)
+[snapshot] Événements signal_to_state : 65 (20 majeurs)
+[snapshot] Tensions thématiques : 8
+[loader] Instance(s) custom garantie(s) dans filtered_instances : gelecek_meclisi_eco_communalism
+[snapshot] Instances chargées : 90 | Filtrées : 6
+[snapshot] Injection custom 'Meclis des Futurs Fragmentés' (an 2047, 51 ans d'effet)
+  → gouvernance_institutions : 75 → 87.0 (delta:+12.0)
+  → organisation_territoires : 40 → 48.0 (delta:+8.0)
+  → technologie_information : 70.1 → 75.1 (delta:+5.0)
+[snapshot] Modifications custom (entités) : 15 variables affectées
+[snapshot] Événement custom 'Écho du Golfe en Feu — Les Bassins sans Pétrole' (an 2027, 71 ans d'effet)
+  → geopolitique_conflits : 19.5 → 27.5 (delta:+8.0)
+  → energie_ressources_critiques : 40.3 → 52.3 (delta:+12.0)
+  → gouvernance_institutions : 84.8 → 90.8 (delta:+6.0)
+  → demographie_mobilite_humaine : 39.1 → 48.1 (delta:+9.0)
+[snapshot] Événement custom 'La Grande Coupure — Accélérateur de Localisation Numérique' (an 2040, 58 ans d'effet)
+  → technologie_information : 94.6 → 84.6 (delta:-10.0)
+  → organisation_territoires : 50.0 → 58.0 (delta:+8.0)
+  → valeurs_culture_tempo_sociale : 40 → 46.0 (delta:+6.0)
+[snapshot] Événement custom 'Les Enchères du Fond Émergé — Kalaallit Nunaat vend ses terres à qui ?' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 52.3 → 60.3 (delta:+8.0)
+  → geopolitique_conflits : 0 → 0 (delta:-10.0)
+  → gouvernance_institutions : 98.0 → 100 (delta:+7.0)
+  → organisation_territoires : 64.8 → 70.8 (delta:+6.0)
+[snapshot] Événement custom 'La Grande Convergence des Lacs — Exode du Midwest Carbonisé' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 57.0 → 39.0 (delta:-18.0)
+  → organisation_territoires : 62.0 → 47.0 (delta:-15.0)
+  → gouvernance_institutions : 100 → 100 (delta:+12.0)
+  → climat_environnement_global : 62.5 → 70.5 (delta:+8.0)
+  → energie_ressources_critiques : 72.5 → 82.5 (delta:+10.0)
+[snapshot] Événement custom 'L'Assemblée du Fleuve — Souveraineté ou Fracture' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 70.5 → 78.5 (delta:+8.0)
+  → geopolitique_conflits : 1.3 → 0 (delta:-12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → organisation_territoires : 55.2 → 63.2 (delta:+8.0)
+[snapshot] Événement custom 'Révolution du Travail Régénératif Sahelo-Numérique' (an 2047, 51 ans d'effet)
+  → systemes_productifs_travail : 17.6 → 32.6 (delta:+15.0)
+  → technologie_information : 100 → 100 (delta:+10.0)
+  → energie_ressources_critiques : 83.8 → 95.8 (delta:+12.0)
+  → organisation_territoires : 77.0 → 85.0 (delta:+8.0)
+[snapshot] Événement custom 'Dissolution du Mouvement dans les Assemblées Locales' (an 2048, 50 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+  → valeurs_culture_tempo_sociale : 46.0 → 54.0 (delta:+8.0)
+  → organisation_territoires : 85.0 → 91.0 (delta:+6.0)
+[snapshot] Événement custom 'Forum d'Agadez sur la Souveraineté Numérique des Périphéries' (an 2062, 36 ans d'effet)
+  → technologie_information : 100 → 100 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → organisation_territoires : 95.8 → 100 (delta:+7.0)
+[snapshot] Événement custom 'La Proclamation des Friches Libres : Detroit, Cleveland, Pittsburgh hors-algorithme' (an 2063, 35 ans d'effet)
+  → geopolitique_conflits : 0 → 0 (delta:-8.0)
+  → valeurs_culture_tempo_sociale : 54.0 → 66.0 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → organisation_territoires : 100 → 100 (delta:+14.0)
+[snapshot] Événement custom 'Insurrection des Friches Vivantes — L'Automne des Zones Libres' (an 2063, 35 ans d'effet)
+  → geopolitique_conflits : 0 → 0 (delta:-8.0)
+  → valeurs_culture_tempo_sociale : 66.0 → 78.0 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → technologie_information : 100 → 100 (delta:+7.0)
+[snapshot] Événement custom 'Le Procès Communautaire de Van Derburgh' (an 2078, 20 ans d'effet)
+  → valeurs_culture_tempo_sociale : 78.0 → 80.0 (delta:+2.0)
+  → gouvernance_institutions : 100 → 100 (delta:+1.0)
+[snapshot] Événement custom 'Grande Inondation des Veilleurs' (an 2096, 2 ans d'effet)
+  → organisation_territoires : 100 → 100 (delta:+1.3)
+  → climat_environnement_global : 66.8 → 67.3 (delta:+0.5)
+  → demographie_mobilite_humaine : 64.4 → 67.4 (delta:+3.0)
+  → systeme_economique_redistribution : 100 → 100 (delta:+1.3)
+[snapshot] Événements custom : 12 | 187 variables affectées
+[snapshot] Signal custom 'decodage_langage_animaux_ia' sur valeurs_culture_tempo_sociale (an 2040, 58 ans d'effet)
+  → valeurs_culture_tempo_sociale : 80.0 → 85.0 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur technologie_information (an 2038, 60 ans d'effet)
+  → technologie_information : 100 → 100 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur gouvernance_institutions (an 2041, 57 ans d'effet)
+  → gouvernance_institutions : 100 → 95.0 (delta:-5.0)
+[snapshot] Signaux custom chiffrés : 3 | 3 variables affectées
+
+[prompt] Assemblage du prompt...
+[prompt] System prompt : 2925 caractères
+[prompt] User prompt   : 74034 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-large-latest, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 21339 | sortie : 2023
+[api] Article généré : 7668 caractères
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/eco_communalism/20260829_183412_eco_communalism_actualites_a_la_une_article_6aout2098.md
+
+============================================================
+ARTICLE GÉNÉRÉ
+============================================================
+**« Les Nœuds du Silence » : Quand la Trame Mnemos se déchire sur les rives du Chelif**
+
+*6 août 2098*
+
+Salma Benyoussef — L'Oued des Communs
+
+ORAN — Ils l’appellent *« la Fracture du Delta »*. Depuis trois semaines, le nœud Mnemos de Mostaganem refuse de synchroniser ses archives avec celui de Relizane, à peine cent kilomètres plus à l’est. Pas une panne technique, pas une coupure de réseau — non, une décision politique. *« On ne partage plus nos semences avec ceux qui pompent l’aquifère comme si c’était une mine d’or »*, a lancé hier soir Fatima Belkacem, déléguée du nœud rebelle, lors d’une assemblée tendue retransmise en direct sur les ondes de Radio Oued. Derrière elle, des dizaines de mains brandissaient des sachets de graines estampillés *« Réservées aux communes du Chelif »*, comme autant de preuves d’une souveraineté nouvelle… et d’une trahison.
+
+La Trame Mnemos, cette épine dorsale des savoirs éco-communalistes, se fissure. Et cette fois, ce n’est pas une question de protocoles ou de serveurs solaires défaillants. C’est une guerre des limites — celles que les communautés s’imposent à elles-mêmes, et celles qu’elles refusent désormais d’étendre aux autres.
+
+---
+
+### **L’Aquifère, ou la Dernière Goutte de Confiance**
+
+Tout a commencé en juin, quand les géo-observateurs citoyens de la vallée du Chelif ont publié leurs relevés : le niveau de la nappe phréatique avait chuté de 40 % en deux ans. *« Un crime lent »*, avait titré *La Gazette des Bassins*, avant d’être rappelée à l’ordre par le Réseau Terrafond pour *« alarmisme irresponsable »*. Pourtant, les chiffres parlaient d’eux-mêmes : les communes de l’amont, celles qui bordent les contreforts de l’Ouarsenis, avaient creusé des forages illimités pour leurs serres hydroponiques, tandis que celles de l’aval, comme Mostaganem, voyaient leurs puits s’assécher un à un.
+
+*« On nous avait promis que la Charte de Tampere réglerait ces conflits »*, soupire Karim Djaout, un ancien ingénieur hydraulique reconverti en *« passeur de savoirs »* pour la Trame. *« Mais la Charte, c’est comme un contrat de mariage : ça ne tient que si les deux parties veulent encore dormir dans le même lit. »* Or, depuis la Grande Sécheresse de 2095, les lits se vident. Les communes de l’amont, riches en terres arables mais pauvres en eau, refusent désormais de partager leurs techniques d’irrigation *« avec ceux qui gaspillent encore »*. Celles de l’aval, assoiffées, répliquent en bloquant l’accès à leurs archives de semences résistantes à la salinisation — *« le seul trésor qu’il nous reste »*.
+
+Le nœud Mnemos de Mostaganem a été le premier à briser le pacte. *« On ne peut plus faire semblant de croire que la Trame est neutre »*, explique Belkacem. *« Elle est devenue un outil de chantage. Alors on a verrouillé nos données. »* Depuis, une dizaine d’autres nœuds, du Rif marocain aux Aurès algériens, ont suivi. *« C’est la logique des communs qui se retourne contre elle-même »*, analyse Leïla Messaoudi, historienne des mouvements éco-territoriaux à l’Université Nomade d’Oujda. *« Quand les ressources manquent, la solidarité devient une monnaie d’échange — et ceux qui en ont le moins sont toujours les premiers à être exclus. »*
+
+---
+
+### **Le Meclis des Futurs Fragmentés, ou l’Art de Naviguer entre les Éclats**
+
+Face à la crise, le Meclis des Futurs Fragmentés a été saisi en urgence. Son siège éphémère ? Une ancienne station de pompage reconvertie en agora solaire, à mi-chemin entre Mostaganem et Relizane. *« On ne va pas résoudre un conflit vieux de trois générations en trois jours »*, tempère Mele Tupou, l’une des facilitatrices du Meclis, une femme aux cheveux tressés de fils de cuivre (son *« seuil »*, symbole de ses accords passés). *« Mais on peut au moins éviter que la Trame ne se transforme en champ de bataille. »*
+
+Le Meclis a proposé un compromis : un *« protocole de réciprocité conditionnelle »*. Les nœuds récalcitrants rouvriraient leurs archives… à condition que les communes de l’amont réduisent leurs prélèvements dans l’aquifère de 20 % d’ici la fin de l’année. *« C’est du donnant-donnant, pas de la charité »*, insiste Tupou. *« Mais ça suppose que tout le monde accepte de perdre un peu. »*
+
+Sauf que *« perdre »*, dans un monde où l’eau est plus précieuse que le pétrole d’avant, est un mot qui fâche. *« Vingt pour cent ? Ils veulent nous asphyxier ! »*, s’est emporté Hassan Zeroual, délégué de la commune de Tissemsilt, lors d’une veillée délibérative retransmise en direct. *« On a déjà réduit nos cultures de 30 % l’an dernier. Si on lâche encore, nos enfants mangeront des algues et boiront de la rosée. »*
+
+---
+
+### **La Trame Mnemos, ou le Mythe de l’Archivage Neutre**
+
+Derrière ce conflit, c’est toute la philosophie de la Trame qui est remise en cause. *« On a cru que partager les savoirs suffirait à partager les ressources »*, reconnaît Djaout. *« Mais un protocole, aussi sobre soit-il, ne peut pas remplacer une décision politique. »* En 2098, la Trame Mnemos n’est plus seulement une bibliothèque décentralisée — c’est un enjeu de pouvoir. *« Celui qui contrôle l’accès aux données contrôle l’accès à la survie »*, résume Messaoudi.
+
+Et les données, justement, deviennent une arme. Des rumeurs circulent : certains nœuds auraient commencé à *« monnayer »* l’accès à leurs archives contre des litres d’eau ou des kilos de semences. D’autres, plus radicaux, menacent de *« brûler »* leurs serveurs plutôt que de les voir tomber entre les mains de *« voleurs de savoirs »*. *« On est en train de reproduire les mêmes schémas que les États d’avant »*, s’inquiète Belkacem. *« Sauf qu’au lieu de frontières, ce sont des pare-feux. »*
+
+---
+
+### **Et Maintenant ?**
+
+Pour l’instant, le Meclis tente de colmater les brèches. Des *« ceintures de seuils »* (ces bandes tissées symbolisant les accords passés) ont été distribuées aux délégués des communes en conflit, comme un rappel physique de leurs engagements. *« On ne peut pas forcer les gens à partager »*, murmure Tupou. *« Mais on peut leur rappeler pourquoi ils l’ont fait, avant. »*
+
+Reste une question, lancinante : et si la Trame Mnemos était en train de devenir ce qu’elle avait toujours combattu ? *« Une infrastructure de contrôle, déguisée en réseau solidaire »*, comme l’écrivait déjà Leena Väinälä dans ses carnets, en 2042. *« Le jour où les communs commencent à se comporter comme des États, c’est qu’on a perdu la partie. »*
+
+En attendant, à Mostaganem, les graines continuent de sécher dans leurs sachets. Et les serveurs, eux, restent silencieux.
+
+============================================================
+✓ Sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/eco_communalism/20260829_183412_eco_communalism_actualites_a_la_une_article_6aout2098.md
+============================================================
+

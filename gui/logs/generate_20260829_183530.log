@@ -1,0 +1,150 @@
+
+============================================================
+OURRASSOL 2098 — Générateur d'articles
+============================================================
+  Mode       : Semi-guidé
+  Scénario   : eco_communalism
+  Thématique : actualites_a_la_une
+  Longueur   : analyse
+============================================================
+
+[generate] Chargement de la thématique 'actualites_a_la_une'...
+
+[snapshot] Construction du monde 2098 — scénario : eco_communalism
+[snapshot] Variables pilotes : ['organisation_territoires', 'climat_environnement_global', 'energie_ressources_critiques', 'systemes_productifs_travail']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 3 | Cohérence : OK
+[snapshot] Jalons trajectoire : 154 (37 majeurs)
+[snapshot] Événements signal_to_state : 65 (20 majeurs)
+[snapshot] Tensions thématiques : 8
+[loader] Instance(s) custom garantie(s) dans filtered_instances : gelecek_meclisi_eco_communalism
+[snapshot] Instances chargées : 90 | Filtrées : 6
+[snapshot] Injection custom 'Meclis des Futurs Fragmentés' (an 2047, 51 ans d'effet)
+  → gouvernance_institutions : 75 → 87.0 (delta:+12.0)
+  → organisation_territoires : 40 → 48.0 (delta:+8.0)
+  → technologie_information : 70.1 → 75.1 (delta:+5.0)
+[snapshot] Modifications custom (entités) : 15 variables affectées
+[snapshot] Événement custom 'Écho du Golfe en Feu — Les Bassins sans Pétrole' (an 2027, 71 ans d'effet)
+  → geopolitique_conflits : 19.5 → 27.5 (delta:+8.0)
+  → energie_ressources_critiques : 40.3 → 52.3 (delta:+12.0)
+  → gouvernance_institutions : 84.8 → 90.8 (delta:+6.0)
+  → demographie_mobilite_humaine : 39.1 → 48.1 (delta:+9.0)
+[snapshot] Événement custom 'La Grande Coupure — Accélérateur de Localisation Numérique' (an 2040, 58 ans d'effet)
+  → technologie_information : 94.6 → 84.6 (delta:-10.0)
+  → organisation_territoires : 50.0 → 58.0 (delta:+8.0)
+  → valeurs_culture_tempo_sociale : 40 → 46.0 (delta:+6.0)
+[snapshot] Événement custom 'Les Enchères du Fond Émergé — Kalaallit Nunaat vend ses terres à qui ?' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 52.3 → 60.3 (delta:+8.0)
+  → geopolitique_conflits : 0 → 0 (delta:-10.0)
+  → gouvernance_institutions : 98.0 → 100 (delta:+7.0)
+  → organisation_territoires : 64.8 → 70.8 (delta:+6.0)
+[snapshot] Événement custom 'La Grande Convergence des Lacs — Exode du Midwest Carbonisé' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 57.0 → 39.0 (delta:-18.0)
+  → organisation_territoires : 62.0 → 47.0 (delta:-15.0)
+  → gouvernance_institutions : 100 → 100 (delta:+12.0)
+  → climat_environnement_global : 62.5 → 70.5 (delta:+8.0)
+  → energie_ressources_critiques : 72.5 → 82.5 (delta:+10.0)
+[snapshot] Événement custom 'L'Assemblée du Fleuve — Souveraineté ou Fracture' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 70.5 → 78.5 (delta:+8.0)
+  → geopolitique_conflits : 1.3 → 0 (delta:-12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → organisation_territoires : 55.2 → 63.2 (delta:+8.0)
+[snapshot] Événement custom 'Révolution du Travail Régénératif Sahelo-Numérique' (an 2047, 51 ans d'effet)
+  → systemes_productifs_travail : 17.6 → 32.6 (delta:+15.0)
+  → technologie_information : 100 → 100 (delta:+10.0)
+  → energie_ressources_critiques : 83.8 → 95.8 (delta:+12.0)
+  → organisation_territoires : 77.0 → 85.0 (delta:+8.0)
+[snapshot] Événement custom 'Dissolution du Mouvement dans les Assemblées Locales' (an 2048, 50 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+  → valeurs_culture_tempo_sociale : 46.0 → 54.0 (delta:+8.0)
+  → organisation_territoires : 85.0 → 91.0 (delta:+6.0)
+[snapshot] Événement custom 'Forum d'Agadez sur la Souveraineté Numérique des Périphéries' (an 2062, 36 ans d'effet)
+  → technologie_information : 100 → 100 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → organisation_territoires : 95.8 → 100 (delta:+7.0)
+[snapshot] Événement custom 'La Proclamation des Friches Libres : Detroit, Cleveland, Pittsburgh hors-algorithme' (an 2063, 35 ans d'effet)
+  → geopolitique_conflits : 0 → 0 (delta:-8.0)
+  → valeurs_culture_tempo_sociale : 54.0 → 66.0 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → organisation_territoires : 100 → 100 (delta:+14.0)
+[snapshot] Événement custom 'Insurrection des Friches Vivantes — L'Automne des Zones Libres' (an 2063, 35 ans d'effet)
+  → geopolitique_conflits : 0 → 0 (delta:-8.0)
+  → valeurs_culture_tempo_sociale : 66.0 → 78.0 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → technologie_information : 100 → 100 (delta:+7.0)
+[snapshot] Événement custom 'Le Procès Communautaire de Van Derburgh' (an 2078, 20 ans d'effet)
+  → valeurs_culture_tempo_sociale : 78.0 → 80.0 (delta:+2.0)
+  → gouvernance_institutions : 100 → 100 (delta:+1.0)
+[snapshot] Événement custom 'Grande Inondation des Veilleurs' (an 2096, 2 ans d'effet)
+  → organisation_territoires : 100 → 100 (delta:+1.3)
+  → climat_environnement_global : 66.8 → 67.3 (delta:+0.5)
+  → demographie_mobilite_humaine : 64.4 → 67.4 (delta:+3.0)
+  → systeme_economique_redistribution : 100 → 100 (delta:+1.3)
+[snapshot] Événements custom : 12 | 187 variables affectées
+[snapshot] Signal custom 'decodage_langage_animaux_ia' sur valeurs_culture_tempo_sociale (an 2040, 58 ans d'effet)
+  → valeurs_culture_tempo_sociale : 80.0 → 85.0 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur technologie_information (an 2038, 60 ans d'effet)
+  → technologie_information : 100 → 100 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur gouvernance_institutions (an 2041, 57 ans d'effet)
+  → gouvernance_institutions : 100 → 95.0 (delta:-5.0)
+[snapshot] Signaux custom chiffrés : 3 | 3 variables affectées
+
+[prompt] Assemblage du prompt...
+[prompt] System prompt : 2925 caractères
+[prompt] User prompt   : 72300 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-large-latest, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 20903 | sortie : 1987
+[api] Article généré : 7821 caractères
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/eco_communalism/20260829_183620_eco_communalism_actualites_a_la_une_article_2fevrier2098.md
+
+============================================================
+ARTICLE GÉNÉRÉ
+============================================================
+**« Les ceintures de seuils se déchirent : quand les communs méditerranéens refusent de partager l’eau »**
+
+2 février 2098
+Salma Benyoussef — L'Oued des Communs
+
+---
+
+**Tunis, bassin de la Medjerda** — Ce matin, les délégués du Réseau Terrafond des Bassins ont trouvé les portes de l’assemblée de Béja scellées par des chaînes rouillées. Sur le mur blanchi à la chaux, une inscription à la peinture noire : *« L’eau ne se négocie pas. Elle se prend. »* En dessous, le symbole griffonné d’une main tenant une clé à molette — emblème des *Fils de l’Oued*, un collectif qui refuse depuis des mois les arbitrages du Meclis des Futurs Fragmentés sur le partage des aquifères entre les bassins du Maghreb méditerranéen et ceux, plus riches, d’Europe occidentale.
+
+La tension couvait depuis l’automne dernier, quand les premières restrictions ont frappé les communes de la Medjerda, privées d’accès aux forages profonds du Tell par une décision du Terrafond. *« On nous dit de nous serrer la ceinture alors que les bassins rhénans gardent leurs nappes pleines »*, fulmine Karim Daoudi, porte-parole des *Fils de l’Oued*, dans une vidéo diffusée sur les réseaux locaux de la Trame Mnemos. *« Leurs ceintures de seuils [les bandes tissées portées par les délégués du Meclis, ndlr] sont des colliers pour nous. »*
+
+### **La fracture des limites**
+Le Meclis des Futurs Fragmentés, cette agora nomade qui tente depuis 2047 de coordonner les communs sans État, se retrouve aujourd’hui piégé par son propre principe : *« Nous ne partageons pas un futur, mais des limites pour ne pas le détruire. »* Or, ces limites, autrefois symboliques, deviennent des murs. En Méditerranée, où les pluies se font plus rares et les aquifères transfrontaliers plus convoités, les assemblées locales refusent de plus en plus les arbitrages venus d’ailleurs.
+
+*« Le problème n’est pas technique, c’est une question de légitimité »*, explique Leïla Mansouri, facilitatrice au sein du Meclis, rencontrée dans un café solaire de Tunis. *« Quand les communautés d’Europe occidentale votent des seuils de prélèvement d’eau, elles le font en sachant que leurs rivières couleront encore dans dix ans. Ici, à Béja ou à Kasserine, on sait que ce ne sera pas le cas. Alors pourquoi accepter leurs règles ? »*
+
+Les chiffres sont implacables. Selon les derniers relevés des *Collectifs de Géo-Observateurs Citoyens*, les nappes phréatiques du Maghreb méditerranéen ont perdu 40 % de leur volume depuis 2070, contre 15 % pour le bassin rhénan. Pourtant, les accords du Terrafond imposent des quotas identiques aux deux rives. *« C’est comme si on demandait à un malade en phase terminale et à un sportif de suivre le même régime »*, résume Daoudi.
+
+### **La Trame Mnemos, otage des conflits**
+Pour aggraver les choses, la Trame Mnemos — cette infrastructure décentralisée qui archive les savoirs et les protocoles entre communs — est devenue un champ de bataille. Des nœuds locaux, comme celui de Béja, ont commencé à filtrer les données en provenance des bassins européens, accusant leurs algorithmes de *« biais extractivistes »*. *« On ne peut plus faire confiance aux archives qui viennent de là-bas »*, explique un technicien-passeur de la Trame, qui préfère garder l’anonymat. *« Leurs protocoles de gestion de l’eau sont optimisés pour des territoires qui n’ont pas nos contraintes. Si on les applique ici, c’est l’effondrement. »*
+
+Cette défiance menace l’un des piliers du monde éco-communaliste : la circulation des savoirs. *« La Trame Mnemos a été conçue pour résister à la censure des États, pas à celle des communs »*, s’inquiète un délégué du *Réseau des Assemblées Fennoscandien*, de passage à Tunis pour une médiation. *« Si chaque bassin se met à trier les données en fonction de ses intérêts, on perd ce qui nous unit. »*
+
+### **Le spectre de la sécession**
+Le risque, aujourd’hui, est celui d’une fragmentation accélérée. Déjà, des communes du Haut-Tell ont annoncé leur retrait des instances du Terrafond, préférant s’organiser en *« zones hydriques souveraines »*. *« On ne veut plus dépendre des décisions prises à Lyon ou à Barcelone »*, déclare un membre de l’assemblée de Tébessa, dans une déclaration diffusée sur les réseaux locaux. *« On va gérer nos puits nous-mêmes, et si les Européens veulent de notre eau, ils paieront. »*
+
+Cette rhétorique, qui rappelle étrangement celle des enclaves extractivistes des années 2060, inquiète les observateurs. *« On est en train de recréer les mêmes logiques que celles qu’on a combattues »*, analyse Mansouri. *« La différence, c’est qu’avant, c’étaient les États ou les corporations qui contrôlaient les ressources. Maintenant, ce sont les communs eux-mêmes. »*
+
+### **Un Meclis en crise de légitimité**
+Face à cette crise, le Meclis des Futurs Fragmentés tente de réagir. Une session extraordinaire a été convoquée pour mars à Agadez, où les délégués des bassins méditerranéens et européens doivent renégocier les protocoles de partage. *« On ne peut pas continuer à appliquer des règles conçues pour des territoires riches à des zones en stress hydrique »*, reconnaît un facilitateur du Meclis. *« Mais si on ouvre cette boîte de Pandore, où s’arrête-t-on ? »*
+
+La question est d’autant plus urgente que d’autres conflits couvent. En Anatolie, les bioterritoires méditerranéens menacent de faire sécession du *Réseau Terrafond* si leurs demandes de révision des quotas ne sont pas entendues. *« On ne peut pas gérer l’eau comme on gère les semences »*, plaide un délégué anatolien. *« Une graine, on peut la replanter. Une nappe phréatique vidée, c’est pour des décennies. »*
+
+### **Et si la solidarité n’était qu’un mythe ?**
+Pour beaucoup, cette crise révèle une vérité inconfortable : l’éco-communalisme, malgré ses idéaux, n’a pas aboli les rapports de force. *« On a cru que la relocalisation résoudrait tout »*, soupire un ancien membre du *Mouvement des Veillées de l’Effondrement*, aujourd’hui installé dans les Cévennes. *« Mais les ressources ne sont pas infinies, et les communautés ne sont pas des anges. »*
+
+Reste une lueur d’espoir. À Béja, malgré les chaînes et les slogans, certains refusent la logique du chacun-pour-soi. *« On ne peut pas laisser les *Fils de l’Oued* prendre le contrôle de l’assemblée »*, déclare Amina Benali, une habitante. *« Si on se replie sur nous-mêmes, on meurt. Si on se bat entre nous, on meurt aussi. »* Ce soir, elle organise une veillée délibérative dans le vieux quartier des tanneurs, avec l’espoir de *« recoudre les ceintures de seuils »* avant qu’il ne soit trop tard.
+
+Mais le temps presse. Les premières chaleurs de février ont déjà asséché les oueds de la Medjerda. Et les pluies, quand elles viendront, ne suffiront plus à remplir les nappes.
+
+---
+
+============================================================
+✓ Sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/eco_communalism/20260829_183620_eco_communalism_actualites_a_la_une_article_2fevrier2098.md
+============================================================
+

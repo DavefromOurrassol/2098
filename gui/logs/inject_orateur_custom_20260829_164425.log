@@ -1,0 +1,5 @@
+  ⚠ Zone en type_diffusion='ecrit' -- l'orateur·rice ajouté·e ne sera jamais sélectionné·e tant que la zone ne passe pas en 'oral' ou 'mixte' dans journaux.yaml (ajout non bloquant, procède quand même).
+  42 zones N1 / 87 zones totales
+    → LLM (mistral, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 693 | sortie : 175
+  [dry-run] Ajouterait à eco_communalism/opposition/maghreb_mediterraneen : Lalla Nsira 'Tifawt n-Lbhar' -- dessert Les jardins flottants de Nador, où les serres hydroponiques s'accrochent aux épaves des pétroliers échoués, La route des contrebandiers de Ghazaouet, où les caravanes de sel et de données traversent les checkpoints fantômes, Le quartier des Souffleurs de Verre à Bizerte, où les artisans recyclent les bouteilles en serres pour les algues comestibles

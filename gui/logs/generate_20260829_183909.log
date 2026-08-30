@@ -1,0 +1,159 @@
+
+============================================================
+OURRASSOL 2098 — Générateur d'articles
+============================================================
+  Mode       : Semi-guidé
+  Scénario   : eco_communalism
+  Thématique : actualites_a_la_une
+  Longueur   : analyse
+============================================================
+
+[generate] Chargement de la thématique 'actualites_a_la_une'...
+
+[snapshot] Construction du monde 2098 — scénario : eco_communalism
+[snapshot] Variables pilotes : ['organisation_territoires', 'climat_environnement_global', 'energie_ressources_critiques', 'systemes_productifs_travail']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 3 | Cohérence : OK
+[snapshot] Jalons trajectoire : 154 (37 majeurs)
+[snapshot] Événements signal_to_state : 65 (20 majeurs)
+[snapshot] Tensions thématiques : 8
+[loader] Instance(s) custom garantie(s) dans filtered_instances : gelecek_meclisi_eco_communalism
+[snapshot] Instances chargées : 90 | Filtrées : 6
+[snapshot] Injection custom 'Meclis des Futurs Fragmentés' (an 2047, 51 ans d'effet)
+  → gouvernance_institutions : 75 → 87.0 (delta:+12.0)
+  → organisation_territoires : 40 → 48.0 (delta:+8.0)
+  → technologie_information : 70.1 → 75.1 (delta:+5.0)
+[snapshot] Modifications custom (entités) : 15 variables affectées
+[snapshot] Événement custom 'Écho du Golfe en Feu — Les Bassins sans Pétrole' (an 2027, 71 ans d'effet)
+  → geopolitique_conflits : 19.5 → 27.5 (delta:+8.0)
+  → energie_ressources_critiques : 40.3 → 52.3 (delta:+12.0)
+  → gouvernance_institutions : 84.8 → 90.8 (delta:+6.0)
+  → demographie_mobilite_humaine : 39.1 → 48.1 (delta:+9.0)
+[snapshot] Événement custom 'La Grande Coupure — Accélérateur de Localisation Numérique' (an 2040, 58 ans d'effet)
+  → technologie_information : 94.6 → 84.6 (delta:-10.0)
+  → organisation_territoires : 50.0 → 58.0 (delta:+8.0)
+  → valeurs_culture_tempo_sociale : 40 → 46.0 (delta:+6.0)
+[snapshot] Événement custom 'Les Enchères du Fond Émergé — Kalaallit Nunaat vend ses terres à qui ?' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 52.3 → 60.3 (delta:+8.0)
+  → geopolitique_conflits : 0 → 0 (delta:-10.0)
+  → gouvernance_institutions : 98.0 → 100 (delta:+7.0)
+  → organisation_territoires : 64.8 → 70.8 (delta:+6.0)
+[snapshot] Événement custom 'La Grande Convergence des Lacs — Exode du Midwest Carbonisé' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 57.0 → 39.0 (delta:-18.0)
+  → organisation_territoires : 62.0 → 47.0 (delta:-15.0)
+  → gouvernance_institutions : 100 → 100 (delta:+12.0)
+  → climat_environnement_global : 62.5 → 70.5 (delta:+8.0)
+  → energie_ressources_critiques : 72.5 → 82.5 (delta:+10.0)
+[snapshot] Événement custom 'L'Assemblée du Fleuve — Souveraineté ou Fracture' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 70.5 → 78.5 (delta:+8.0)
+  → geopolitique_conflits : 1.3 → 0 (delta:-12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → organisation_territoires : 55.2 → 63.2 (delta:+8.0)
+[snapshot] Événement custom 'Révolution du Travail Régénératif Sahelo-Numérique' (an 2047, 51 ans d'effet)
+  → systemes_productifs_travail : 17.6 → 32.6 (delta:+15.0)
+  → technologie_information : 100 → 100 (delta:+10.0)
+  → energie_ressources_critiques : 83.8 → 95.8 (delta:+12.0)
+  → organisation_territoires : 77.0 → 85.0 (delta:+8.0)
+[snapshot] Événement custom 'Dissolution du Mouvement dans les Assemblées Locales' (an 2048, 50 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+  → valeurs_culture_tempo_sociale : 46.0 → 54.0 (delta:+8.0)
+  → organisation_territoires : 85.0 → 91.0 (delta:+6.0)
+[snapshot] Événement custom 'Forum d'Agadez sur la Souveraineté Numérique des Périphéries' (an 2062, 36 ans d'effet)
+  → technologie_information : 100 → 100 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → organisation_territoires : 95.8 → 100 (delta:+7.0)
+[snapshot] Événement custom 'La Proclamation des Friches Libres : Detroit, Cleveland, Pittsburgh hors-algorithme' (an 2063, 35 ans d'effet)
+  → geopolitique_conflits : 0 → 0 (delta:-8.0)
+  → valeurs_culture_tempo_sociale : 54.0 → 66.0 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → organisation_territoires : 100 → 100 (delta:+14.0)
+[snapshot] Événement custom 'Insurrection des Friches Vivantes — L'Automne des Zones Libres' (an 2063, 35 ans d'effet)
+  → geopolitique_conflits : 0 → 0 (delta:-8.0)
+  → valeurs_culture_tempo_sociale : 66.0 → 78.0 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → technologie_information : 100 → 100 (delta:+7.0)
+[snapshot] Événement custom 'Le Procès Communautaire de Van Derburgh' (an 2078, 20 ans d'effet)
+  → valeurs_culture_tempo_sociale : 78.0 → 80.0 (delta:+2.0)
+  → gouvernance_institutions : 100 → 100 (delta:+1.0)
+[snapshot] Événement custom 'Grande Inondation des Veilleurs' (an 2096, 2 ans d'effet)
+  → organisation_territoires : 100 → 100 (delta:+1.3)
+  → climat_environnement_global : 66.8 → 67.3 (delta:+0.5)
+  → demographie_mobilite_humaine : 64.4 → 67.4 (delta:+3.0)
+  → systeme_economique_redistribution : 100 → 100 (delta:+1.3)
+[snapshot] Événements custom : 12 | 187 variables affectées
+[snapshot] Signal custom 'decodage_langage_animaux_ia' sur valeurs_culture_tempo_sociale (an 2040, 58 ans d'effet)
+  → valeurs_culture_tempo_sociale : 80.0 → 85.0 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur technologie_information (an 2038, 60 ans d'effet)
+  → technologie_information : 100 → 100 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur gouvernance_institutions (an 2041, 57 ans d'effet)
+  → gouvernance_institutions : 100 → 95.0 (delta:-5.0)
+[snapshot] Signaux custom chiffrés : 3 | 3 variables affectées
+
+[prompt] Assemblage du prompt...
+[prompt] System prompt : 2925 caractères
+[prompt] User prompt   : 71419 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-large-latest, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 20724 | sortie : 2139
+[api] Article généré : 8534 caractères
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/eco_communalism/20260829_183957_eco_communalism_actualites_a_la_une_article_7juillet2098.md
+
+============================================================
+ARTICLE GÉNÉRÉ
+============================================================
+**« Les données ne coulent plus : le Maghreb en tension sur les seuils numériques »**
+
+7 juillet 2098
+Salma Benyoussef — L'Oued des Communs
+
+---
+
+« *Ma yebda l-ma yebda, ma yensa l-ma yensa* » — « L’eau commence où elle commence, l’eau oublie où elle oublie ». Ce proverbe des oasis du Tafilalet, que les anciens répétaient pour rappeler les limites des territoires, résonne étrangement aujourd’hui dans les assemblées des bassins méditerranéens. Sauf qu’ici, ce ne sont plus les aquifères qui posent problème, mais les flux de données. Depuis trois semaines, le Réseau Terrafond des Bassins — cette toile de solidarité qui lie depuis 2055 les communs de l’Ebre à ceux du Nil — subit des perturbations inédites. Les protocoles de partage algorithmique, autrefois aussi fluides que les courants d’une rivière, se heurtent désormais à des « seuils » numériques imposés par des territoires voisins. Et au cœur de la crise : le Maghreb, où des communs autrefois alliés se disputent désormais l’accès aux archives de Kharg-9, ce terminal offshore du golfe Persique devenu le coffre-fort des savoirs écologiques du monde.
+
+---
+
+### **Les seuils, ou l’art de dire « non » sans le dire**
+
+Tout a commencé le 15 juin, quand les délégués de la Tente des Protocoles — l’assemblée nomade de la Ligue des Cités du Sahel Numérique — ont remarqué que leurs requêtes vers les archives de Kharg-9 mettaient deux fois plus de temps à aboutir. Puis, le 22 juin, les communs du Haut-Atlas ont découvert que leurs accès aux jurisprudences de l’Archives Ouvertes des Jurisprudences Communales (AOJC) étaient filtrés : seules les décisions postérieures à 2070 leur étaient transmises. « On nous a expliqué que c’était une question de *priorisation des flux* », raconte Amina Belkacem, facilitatrice des assemblées du bassin de l’Oum Er-Rbia. « Mais en réalité, c’est une censure algorithmique déguisée. Nos voisins de la côte nous reprochent d’avoir partagé des données sur les nappes phréatiques avec des communautés sahariennes sans leur accord. Alors maintenant, ils nous ferment les vannes. »
+
+Le terme « seuils » est apparu dans les débats il y a cinq ans, lors de l’Assemblée du Fleuve de 2093, où les communs amazoniens et ceux du Mékong avaient tenté de formaliser des limites à l’échange de données sensibles. L’idée était simple : chaque territoire pouvait définir des « seuils » au-delà desquels les flux de savoirs, d’eau ou d’énergie devaient être négociés. Mais ce qui était conçu comme un outil de souveraineté locale est en train de devenir une arme. « Les seuils, c’est comme les barrages : ça peut servir à réguler, ou à assoiffer », résume un observateur de la Trame Mnemos, ce réseau de correspondants qui documente les dynamiques des communs depuis 2047.
+
+---
+
+### **Kharg-9, ou le paradoxe du coffre-fort partagé**
+
+Au centre de la tourmente se trouve Kharg-9, ce terminal offshore ancré dans les eaux du golfe Persique, qui héberge depuis 2050 les archives décentralisées des bioterritoires. Officiellement, Kharg-9 se présente comme un sanctuaire des savoirs : on y trouve les cartes des semences résistantes à la sécheresse, les protocoles de restauration des sols salinisés, les jurisprudences des assemblées communales. Mais en coulisses, le terminal est aussi un marché noir où s’échangent des données contre des ressources — parfois même contre de l’influence.
+
+« Kharg-9 a toujours joué un double jeu », explique Youssef El Mansouri, un ancien technicien du terminal qui a rejoint les rangs des Collectifs de Techniciens Sobres. « D’un côté, ils protègent les savoirs des communs. De l’autre, ils monétisent l’accès à ces savoirs. Aujourd’hui, ils sont pris entre deux feux : les communs du Maghreb, qui veulent plus de transparence, et les enclaves technologiques, qui veulent garder le contrôle sur les données stratégiques. » Le 30 juin, une délégation de la Ligue des Cités du Sahel Numérique a tenté de négocier un accès direct aux archives, sans passer par les filtres imposés par les communs côtiers. Kharg-9 a refusé, invoquant des « contraintes techniques ». En réalité, le terminal craint de perdre son rôle d’intermédiaire — et les revenus qui vont avec.
+
+---
+
+### **Le Maghreb, laboratoire des tensions éco-numériques**
+
+Le Maghreb est devenu malgré lui le laboratoire de ces nouvelles fractures. Ici, les communs sont pris entre deux dynamiques contradictoires : d’un côté, la nécessité de partager les savoirs pour faire face aux crises climatiques (sécheresses, salinisation des sols, migrations internes) ; de l’autre, la peur de voir leurs données utilisées contre eux. « On a construit des solidarités sur la gestion de l’eau, mais dès qu’il s’agit de données, tout le monde se referme », déplore Fatima Zohra, une semencière de la vallée du Chelif. « Pourtant, c’est la même logique : si tu ne partages pas tes semences, ton voisin ne partagera pas ses techniques de désalinisation. »
+
+La situation est d’autant plus tendue que le Maghreb reste une zone de transit pour les flux de données entre l’Europe et l’Afrique subsaharienne. Les communs de l’Arc Septentrional, qui dépendent des protocoles de la Ligue des Cités du Sahel Numérique pour leurs échanges avec le Sahel, commencent à s’inquiéter. « Si le Maghreb se fragmente, c’est toute la chaîne de solidarité qui se brise », avertit Leena Väinälä, l’architecte de la Charte de Tampere, lors d’une intervention sur la Trame Mnemos. « Les seuils ne doivent pas devenir des murs. »
+
+---
+
+### **Vers une régulation des seuils ?**
+
+Face à la crise, le Meclis des Futurs Fragmentés — cette agora nomade qui tente de faciliter les accords entre bioterritoires — a proposé une médiation. Son idée : créer une « Ceinture des Seuils Partagés », un protocole qui permettrait aux communs de négocier collectivement leurs limites sans bloquer les flux essentiels. « Il ne s’agit pas de supprimer les seuils, mais de les rendre transparents », explique Mele Tupou, l’une des facilitatrices du Meclis. « Chaque territoire pourrait afficher ses seuils sur une carte vivante, accessible à tous. Comme ça, on saurait où commencent et où s’arrêtent les solidarités. »
+
+Mais l’initiative se heurte à des résistances. Certains communs, comme ceux de la côte algéroise, refusent de participer, arguant que leurs seuils sont une question de souveraineté. D’autres, comme ceux du Haut-Atlas, menacent de créer leur propre terminal d’archives si Kharg-9 ne lève pas ses restrictions. « On n’a pas attendu Kharg-9 pour survivre », lance un délégué de la vallée du Draa. « Si on doit se passer d’eux, on le fera. »
+
+---
+
+### **Et demain ?**
+
+La crise des seuils numériques révèle une vérité dérangeante : dans un monde où les données sont devenues une ressource aussi vitale que l’eau, les solidarités locales sont mises à l’épreuve. Le Maghreb, avec ses bassins versants interconnectés et ses communautés habituées à négocier les limites, est en première ligne. Mais la question dépasse largement la région. « Si on ne trouve pas un moyen de partager les savoirs sans se les voler, on va reproduire les mêmes erreurs que les États d’avant », prévient Youssef El Mansouri. « Sauf que cette fois, ce ne sera pas le pétrole ou l’eau qu’on se disputera. Ce sera la mémoire. »
+
+En attendant, dans les assemblées du Maghreb, on murmure une nouvelle version du proverbe du Tafilalet : *« Ma yebda l-ma’lumat yebda, ma yensa l-ma’lumat yensa »* — « Les données commencent où elles commencent, les données oublient où elles oublient ». Reste à savoir qui décidera de ce qu’on a le droit d’oublier.
+
+---
+
+============================================================
+✓ Sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/eco_communalism/20260829_183957_eco_communalism_actualites_a_la_une_article_7juillet2098.md
+============================================================
+

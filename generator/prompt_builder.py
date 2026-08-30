@@ -114,7 +114,7 @@ def _resoudre_zone_n1(zone_slug, scenario_slug):
     return courant["slug"] if courant else zone_slug
 
 
-def get_journal_profile(scenario_slug, ligne_editoriale, zone_slug=None, thematique_slug=None, dry_run=True, type_diffusion_override=None):
+def get_journal_profile(scenario_slug, ligne_editoriale, zone_slug=None, thematique_slug=None, dry_run=True, type_diffusion_override=None, intervenant_override=None):
     """
     Retourne le profil éditorial pour un scénario + ligne + zone (+ thématique).
 
@@ -227,6 +227,31 @@ def get_journal_profile(scenario_slug, ligne_editoriale, zone_slug=None, themati
                 effective_diffusion = "ecrit"
 
             journalistes = zone_data.get("journalistes", []) or []
+
+            # intervenant_override (25 août 2026, retour de David) :
+            # forcer un·e journaliste/orateur·rice précis·e pour CET
+            # article, choisi dans une liste éligible affichée par le
+            # GUI (déjà filtrée par zone/mode côté app.py). Le nom
+            # choisi PRIME sur effective_diffusion résolu ci-dessus --
+            # si le nom correspond à un·e orateur·rice, force l'oral
+            # même si la zone/le mode GUI pointaient vers écrit (et
+            # inversement) : cohérent avec le fait que la liste GUI
+            # mélange les deux en mode "auto"/"mixte" (décision
+            # explicite de David), donc le choix du nom EST le choix du
+            # mode, pas besoin de faire correspondre les deux
+            # manuellement. Nom inconnu dans cette zone -> ignoré
+            # silencieusement, rotation normale reprend le dessus
+            # (jamais un comportement pire qu'avant ce chantier).
+            if intervenant_override:
+                noms_orateurs = {o.get("nom") for o in orateurs}
+                noms_journalistes = {j.get("nom") for j in journalistes}
+                if intervenant_override in noms_orateurs:
+                    effective_diffusion = "oral"
+                elif intervenant_override in noms_journalistes:
+                    effective_diffusion = "ecrit"
+                # sinon : nom inconnu ici, intervenant_override ignoré,
+                # effective_diffusion reste celui déjà résolu plus haut.
+
             intervenant_nom = ""
             usage_state = _load_usage_state()
 
@@ -240,8 +265,16 @@ def get_journal_profile(scenario_slug, ligne_editoriale, zone_slug=None, themati
                 # mélanger la rotation des orateurs avec celle des
                 # journalistes de la même zone.
                 namespace = "orateurs::{}::{}".format(ligne, zone_slug_n1)
+                candidats_oraux = orateurs
+                if intervenant_override and intervenant_override in {o.get("nom") for o in orateurs}:
+                    # Filtré à cette seule personne -- _select_journaliste_
+                    # pondere() a déjà un chemin len(candidats)==1 qui
+                    # retourne directement ce nom ET compte son usage
+                    # normalement (pas de rotation faussée pour les
+                    # prochains articles de cette zone).
+                    candidats_oraux = [o for o in orateurs if o.get("nom") == intervenant_override]
                 intervenant_nom = _select_journaliste_pondere(
-                    orateurs, usage_state, scenario_slug, namespace
+                    candidats_oraux, usage_state, scenario_slug, namespace
                 ) or ""
             elif journalistes:
                 candidats = []
@@ -252,6 +285,9 @@ def get_journal_profile(scenario_slug, ligne_editoriale, zone_slug=None, themati
                     ]
                 if not candidats:
                     candidats = journalistes
+
+                if intervenant_override and intervenant_override in {j.get("nom") for j in journalistes}:
+                    candidats = [j for j in journalistes if j.get("nom") == intervenant_override]
 
                 # zone_slug_n1 (pas zone_slug) : une sous-zone et sa zone
                 # N1 partagent la même rédaction/le même vivier de
@@ -265,6 +301,29 @@ def get_journal_profile(scenario_slug, ligne_editoriale, zone_slug=None, themati
             if not dry_run:
                 _save_usage_state(usage_state)
 
+            # Nuance personnelle (26 août 2026, retour de David) :
+            # ton_personnel -- unifié pour journalistes ET orateurs
+            # (initialement style_rhetorique était prévu pour les
+            # orateurs, hérité du scoping P21 du 12 juillet -- David a
+            # relevé qu'un seul nom de champ était plus simple, et comme
+            # aucune donnée réelle n'utilisait encore l'un ou l'autre nom
+            # au moment du changement, aucun risque de régression à
+            # unifier). Champ opt-in -- aucune des 1740+ entrées
+            # existantes ne l'a par défaut, non-régression totale.
+            # Recherché sur la personne RÉELLEMENT sélectionnée
+            # ci-dessus, jamais sur tout le vivier -- ajouté au prompt EN
+            # COMPLÉMENT du ton de la zone (voir build_system_prompt()),
+            # jamais en remplacement : même principe que STYLE_ORAL plus
+            # haut dans ce fichier, cohérence avant tout.
+            nuance_personnelle = ""
+            if intervenant_nom:
+                if effective_diffusion == "oral":
+                    entree = next((o for o in orateurs if o.get("nom") == intervenant_nom), None)
+                else:
+                    entree = next((j for j in journalistes if j.get("nom") == intervenant_nom), None)
+                if entree:
+                    nuance_personnelle = entree.get("ton_personnel", "") or ""
+
             return {
                 "nom":     zone_data["nom"],
                 "posture": reseau.get("nom", "") + " — édition locale",
@@ -274,6 +333,7 @@ def get_journal_profile(scenario_slug, ligne_editoriale, zone_slug=None, themati
                 ),
                 "journaliste": intervenant_nom,
                 "type_diffusion": effective_diffusion,
+                "nuance_personnelle": nuance_personnelle,
             }
         else:
             # Zone non trouvée dans journaux.yaml (même après remontée
@@ -588,7 +648,18 @@ STYLE_ORAL = (
 )
 
 
-def _resoudre_longueur(thematique, config):
+# Plafond de longueur pour l'oral (25 août 2026, retour de David après
+# un premier test réel : 1057 mots ≈ 8 minutes de lecture, jugé trop
+# long). 5 minutes maximum, quelle que soit la thématique -- calibré
+# sur le même rythme que MOTS_PAR_MINUTE_ORAL dans api.py (140 mots/
+# minute, utilisé pour calculer duree_estimee après génération). Les
+# deux constantes sont dupliquées entre les deux fichiers
+# (prompt_builder.py n'importe pas api.py) -- à garder synchronisées si
+# l'une des deux change.
+MOTS_MAX_ORAL = 700  # 5 minutes × 140 mots/minute
+
+
+def _resoudre_longueur(thematique, config, type_diffusion="ecrit"):
     """
     Détermine (format_dom, longueur) pour une thématique -- centralisé
     ici (23 août 2026) plutôt que dupliqué entre build_journalistic_
@@ -610,6 +681,16 @@ def _resoudre_longueur(thematique, config):
     figée : "à la une" est une priorité éditoriale, pas un genre -- la
     presse réelle laisse sa longueur suivre la substance de l'histoire,
     pas une contrainte de catégorie.
+
+    type_diffusion (P21, 25 août 2026) : en oral, la longueur naturelle
+    de la thématique (ou l'override config, ou même une thématique
+    figée -- l'oral prime sur TOUT) est plafonnée à MOTS_MAX_ORAL. Un
+    discours de meeting a une contrainte physique (temps de parole
+    réaliste) qu'aucune thématique/override écrit ne peut lever -- pas
+    la même nature de contrainte que format_fige (qui protège un genre
+    contre un override arbitraire), donc appliqué APRÈS toute la
+    logique ci-dessus, inconditionnellement dès que type_diffusion ==
+    "oral", plutôt qu'intégré à la logique de priorité elle-même.
     """
     format_dom = thematique.get("format_dominant", "breve")
     format_fige = thematique.get("format_fige") is True
@@ -619,6 +700,16 @@ def _resoudre_longueur(thematique, config):
         longueur = FORMAT_LONGUEUR[config_lon]
     else:
         longueur = FORMAT_LONGUEUR.get(format_dom, "300 à 500 mots")
+
+    if type_diffusion == "oral":
+        m = re.match(r"\s*(\d+)\s*à\s*(\d+)\s*mots?\s*", longueur)
+        if m:
+            lo, hi = int(m.group(1)), int(m.group(2))
+            if hi > MOTS_MAX_ORAL:
+                hi = MOTS_MAX_ORAL
+                if lo >= hi:
+                    lo = max(100, hi - 200)
+                longueur = "{} à {} mots".format(lo, hi)
 
     return format_dom, longueur
 
@@ -809,7 +900,7 @@ _JOURNAL_DEFAULT = {
 }
 
 
-def build_system_prompt(scenario_slug=None, ligne_editoriale=None, zone_slug=None, thematique_slug=None, dry_run=True, type_diffusion_override=None):
+def build_system_prompt(scenario_slug=None, ligne_editoriale=None, zone_slug=None, thematique_slug=None, dry_run=True, type_diffusion_override=None, intervenant_override=None):
     """
     Instructions de rôle permanentes pour le LLM.
     Définit qui il est et comment il doit se comporter.
@@ -827,6 +918,12 @@ def build_system_prompt(scenario_slug=None, ligne_editoriale=None, zone_slug=Non
                             le mode de diffusion pour cet article précis,
                             indépendamment de journaux.yaml (25 août 2026,
                             voir get_journal_profile() pour le détail complet)
+        intervenant_override : str | None — force un·e journaliste/orateur·rice
+                            précis·e (nom exact tel que dans journaux.yaml),
+                            choisi via une liste éligible dans le GUI. Prime
+                            sur type_diffusion_override : le nom choisi
+                            détermine le mode implicitement (voir
+                            get_journal_profile() pour le détail complet)
 
     Priorité du profil : édition locale > réseau global > profil hardcodé > défaut.
     """
@@ -834,6 +931,7 @@ def build_system_prompt(scenario_slug=None, ligne_editoriale=None, zone_slug=Non
         profile = get_journal_profile(
             scenario_slug, ligne_editoriale, zone_slug, thematique_slug,
             dry_run=dry_run, type_diffusion_override=type_diffusion_override,
+            intervenant_override=intervenant_override,
         )
     else:
         profile = _JOURNAL_DEFAULT
@@ -870,6 +968,23 @@ Tes règles absolues :
 
 Ton identité éditoriale :
 {{ton}}""".format(role_descriptor=role_descriptor).format(**profile)
+
+    # Nuance personnelle (26 août 2026, retour de David) : ton_personnel
+    # -- champ unique, unifié pour journalistes ET orateurs -- de la
+    # personne réellement sélectionnée, ajoutée EN COMPLÉMENT du ton de
+    # la zone ci-dessus, jamais en remplacement. Absent pour la
+    # quasi-totalité des journalistes/orateurs aujourd'hui (champ
+    # opt-in, aucune entrée existante n'en a par défaut) -- non-
+    # régression totale, ce paragraphe n'apparaît que si David a
+    # explicitement rempli le champ pour cette personne précise.
+    nuance_personnelle = profile.get("nuance_personnelle", "").strip()
+    if nuance_personnelle:
+        base_prompt += (
+            "\n\nTa touche personnelle -- à exprimer EN COHÉRENCE avec "
+            "le ton éditorial ci-dessus (une nuance dans la manière de "
+            "l'incarner, jamais un autre ton qui le contredirait) :\n{}"
+            .format(nuance_personnelle)
+        )
 
     intervenant = profile.get("journaliste", "").strip()
     nom_journal = profile.get("nom", "")
@@ -1560,8 +1675,9 @@ def build_journalistic_brief(thematique, config, snapshot=None, type_diffusion="
     lines.append("")
 
     # Format et longueur (23 août 2026 : centralisé dans
-    # _resoudre_longueur(), voir sa docstring pour format_fige)
-    format_dom, longueur = _resoudre_longueur(thematique, config)
+    # _resoudre_longueur(), voir sa docstring pour format_fige/
+    # MOTS_MAX_ORAL)
+    format_dom, longueur = _resoudre_longueur(thematique, config, type_diffusion)
 
     lines.append("**Format** : {} | **Longueur** : {}".format(format_dom, longueur))
 
@@ -2330,6 +2446,11 @@ def build_prompt(snapshot, thematique, config, dry_run=True):
     type_diffusion_override = config.get('type_diffusion_override')
     if type_diffusion_override not in ("ecrit", "oral", "mixte"):
         type_diffusion_override = None
+    # intervenant_override (25 août 2026) : même principe -- absent/vide
+    # = comportement inchangé (rotation normale). Uniquement rempli par
+    # generate.py, jamais generate_series.py, même logique que
+    # type_diffusion_override juste au-dessus.
+    intervenant_override = config.get('intervenant_override') or None
     # P21 (25 août 2026) : build_system_prompt() retourne désormais
     # (texte, profil) plutôt que juste le texte -- nécessaire pour
     # transmettre type_diffusion à build_journalistic_brief() plus bas,
@@ -2343,6 +2464,7 @@ def build_prompt(snapshot, thematique, config, dry_run=True):
         thematique_slug=thematique.get('slug'),
         dry_run=dry_run,
         type_diffusion_override=type_diffusion_override,
+        intervenant_override=intervenant_override,
     )
     type_diffusion = journal_profile.get("type_diffusion", "ecrit")
 
@@ -2398,8 +2520,12 @@ def build_prompt(snapshot, thematique, config, dry_run=True):
     # == "breve". Corrigé en réutilisant exactement la même logique de
     # priorité que build_journalistic_brief() -- depuis le 23 août 2026,
     # les deux passent par _resoudre_longueur() (voir sa docstring pour
-    # format_fige), plus de duplication du tout.
-    format_dom, longueur = _resoudre_longueur(thematique, config)
+    # format_fige et, depuis le 25 août 2026, MOTS_MAX_ORAL). type_diffusion
+    # déjà disponible ici (extrait plus haut du profil résolu par
+    # build_system_prompt()) -- même synchronisation stricte entre les
+    # deux call sites que celle qui avait justement motivé la
+    # centralisation du 23 août, pour ne pas reproduire le bug d'origine.
+    format_dom, longueur = _resoudre_longueur(thematique, config, type_diffusion)
 
     print("[prompt] System prompt : {} caractères".format(len(system_prompt)))
     print("[prompt] User prompt   : {} caractères".format(len(user_prompt)))

@@ -12,6 +12,9 @@ bassin_du_congo/petites_annonces_services, un seul journaliste
   --mode manuel : ajoute UN journaliste précis (scénario/ligne/zone/
     thématiques choisis explicitement), généré par LLM avec un nom et
     un profil cohérents avec le ton déjà établi de l'édition.
+    --avec-ton-personnel (optionnel, mode manuel uniquement, 29 août
+    2026) : enchaîne un ton_personnel juste après la création, via
+    set_ton_personnel.py (mêmes garde-fous). Jamais en mode auto.
 
   --mode auto : scanne un scénario (toutes zones, ou une ligne
     éditoriale précise), repère les combinaisons zone×thématique sous
@@ -33,7 +36,8 @@ Usage :
     python3 inject_journaliste_custom.py --mode manuel \\
         --scenario new_sustainability --ligne pro_pouvoir \\
         --zone-slug afrique_continentale \\
-        --thematiques petites_annonces_services,meteo
+        --thematiques petites_annonces_services,meteo \\
+        --avec-ton-personnel
 
     python3 inject_journaliste_custom.py --mode auto \\
         --scenario new_sustainability --cible 2
@@ -51,6 +55,7 @@ from collections import defaultdict
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from generate_journaux import load_journaux, save_journaux, parse_geographie  # noqa: E402
 from llm_client import call_llm, resolve_for_tier  # noqa: E402
+from set_ton_personnel import _generer_ton_personnel, _contexte_specifique  # noqa: E402
 
 TASK_TIER = "strict"
 
@@ -104,9 +109,22 @@ def build_prompt(scenario, ligne, zone_slug, zone_data, geo_zone,
         )
     else:
         non_couvertes = [t for t in THEMATIQUES_CONNUES if t not in dejacouvertes]
+        # Renforcé (29 août 2026, retour de David après un échec réel :
+        # le LLM a inventé des libellés descriptifs libres -- "gestion
+        # des citernes d'eau potable", "épidémies insulaires" -- au lieu
+        # de piocher dans la liste fermée, et a même mal orthographié
+        # "santé" au lieu du slug exact "sante". Le mot "parmi" seul ne
+        # suffisait pas à empêcher la dérive -- interdiction explicite +
+        # rappel du format slug exact, même principe que les autres
+        # garde-fous du projet (consigne seule jamais suffisamment
+        # fiable).
         consigne_thematiques = (
             "La rédaction couvre déjà : {}. Choisis 2 à 4 thématiques "
-            "COMPLÉMENTAIRES (pas déjà couvertes si possible) parmi : {}.".format(
+            "COMPLÉMENTAIRES (pas déjà couvertes si possible) -- "
+            "EXCLUSIVEMENT parmi cette liste fermée de slugs exacts, "
+            "recopiés lettre pour lettre (jamais de majuscule, jamais "
+            "d'accent, jamais un libellé que tu inventes toi-même même "
+            "s'il te semble plus précis) : {}.".format(
                 ", ".join(dejacouvertes) or "(aucune)",
                 ", ".join(non_couvertes) or ", ".join(THEMATIQUES_CONNUES),
             )
@@ -176,7 +194,10 @@ Réponds avec un objet JSON unique :
 def _generer_journaliste(scenario, ligne, zone_slug, zone_data, geo_zone,
                           thematiques_cibles, angle_specifique,
                           nom_impose=None, genre_impose=None, seniorite=SENIORITE_DEFAUT):
-    """Un seul appel LLM, retourne (dict_journaliste_ou_None, message).
+    """Jusqu'à deux appels LLM (retry si les thématiques retournées ne
+    correspondent à aucun slug connu -- même principe que le garde-fou
+    longueur de set_ton_personnel.py, 29 août 2026). Retourne
+    (dict_journaliste_ou_None, message).
 
     Si nom_impose est fourni, le LLM ne génère que les thématiques -- le
     nom final est celui donné par l'utilisateur, jamais celui (absent)
@@ -186,28 +207,42 @@ def _generer_journaliste(scenario, ligne, zone_slug, zone_data, geo_zone,
                            thematiques_cibles, angle_specifique,
                            nom_impose=nom_impose, genre_impose=genre_impose)
     _provider, _model = resolve_for_tier(TASK_TIER)
-    print("    → LLM ({}, tier={})...".format(_provider, TASK_TIER))
-    try:
-        raw = call_llm(
-            system_prompt=SYSTEM_PROMPT, user_prompt=prompt,
-            max_tokens=500, temperature=0.7, task_tier=TASK_TIER,
-        ).strip()
-        raw = re.sub(r"^```(?:json)?\s*", "", raw)
-        raw = re.sub(r"\s*```$", "", raw).strip()
-        reponse = json.loads(raw)
-    except Exception as e:
-        return None, "Échec génération LLM : {}".format(e)
 
-    nom = nom_impose or (reponse.get("nom") or "").strip()
-    thematiques = [t for t in (reponse.get("thematiques") or []) if t in THEMATIQUES_CONNUES]
-    if not nom or not thematiques:
-        return None, "Réponse LLM incomplète (nom={!r}, thematiques={!r})".format(
-            nom, reponse.get("thematiques"))
-    return {"nom": nom, "thematiques": thematiques, "seniorite": seniorite}, "OK"
+    derniere_erreur = "raison inconnue"
+    for tentative in range(2):
+        print("    → LLM ({}, tier={})...".format(_provider, TASK_TIER))
+        try:
+            raw = call_llm(
+                system_prompt=SYSTEM_PROMPT, user_prompt=prompt,
+                max_tokens=500, temperature=0.7, task_tier=TASK_TIER,
+            ).strip()
+            raw = re.sub(r"^```(?:json)?\s*", "", raw)
+            raw = re.sub(r"\s*```$", "", raw).strip()
+            reponse = json.loads(raw)
+        except Exception as e:
+            derniere_erreur = "Échec génération LLM : {}".format(e)
+            continue
+
+        nom = nom_impose or (reponse.get("nom") or "").strip()
+        brut = reponse.get("thematiques") or []
+        thematiques = [t for t in brut if t in THEMATIQUES_CONNUES]
+
+        if not nom or not thematiques:
+            derniere_erreur = (
+                "Réponse LLM incomplète ou thématiques hors liste connue "
+                "(nom={!r}, thematiques brutes={!r})".format(nom, brut)
+            )
+            if tentative == 0:
+                continue
+            return None, derniere_erreur
+
+        return {"nom": nom, "thematiques": thematiques, "seniorite": seniorite}, "OK"
+
+    return None, "Deux tentatives épuisées -- {}".format(derniere_erreur)
 
 
 def mode_manuel(scenario, ligne, zone_slug, thematiques_cibles, angle_specifique,
-                 nom_impose, genre_impose, seniorite, dry_run):
+                 nom_impose, genre_impose, seniorite, avec_ton_personnel, dry_run):
     journaux = load_journaux()
     zone_data = journaux.get(scenario, {}).get(ligne, {}).get("zones", {}).get(zone_slug)
     if not zone_data:
@@ -235,6 +270,34 @@ def mode_manuel(scenario, ligne, zone_slug, thematiques_cibles, angle_specifique
     if not entree:
         print("  ✗ {}".format(msg))
         sys.exit(1)
+
+    # ton_personnel optionnel (29 août 2026, retour de David) --
+    # mode manuel UNIQUEMENT, jamais en mode auto : le point de
+    # contrôle qui a permis de repérer les 3 dérives réelles de
+    # set_ton_personnel.py (citations verbatim, stéréotypes,
+    # dépassement de longueur, 26-29 août) est la relecture
+    # individuelle -- un enchaînement en volume sans relecture
+    # perdrait ce filet. Réutilise directement _generer_ton_personnel/
+    # _contexte_specifique de set_ton_personnel.py (même garde-fous,
+    # pas de logique dupliquée). Génère aussi en --dry-run, comme le
+    # reste de cet outil (aperçu réel, rien écrit).
+    if avec_ton_personnel:
+        autres_nuances_zone = [
+            e.get("ton_personnel") for _, e in
+            [(zone_data.get("journalistes"), j) for j in (zone_data.get("journalistes") or [])] +
+            [(zone_data.get("orateurs"), o) for o in (zone_data.get("orateurs") or [])]
+            if e.get("ton_personnel")
+        ]
+        contexte = _contexte_specifique(entree, est_orateur=False)
+        valeur_ton, msg_ton = _generer_ton_personnel(
+            zone_data, entree["nom"], contexte, autres_nuances_zone
+        )
+        if valeur_ton:
+            entree["ton_personnel"] = valeur_ton
+            print("  ✓ ton_personnel : {}".format(valeur_ton))
+        else:
+            print("  ⚠ ton_personnel non généré ({}) -- {} créé·e quand "
+                  "même sans cette nuance.".format(msg_ton, entree["nom"]))
 
     if dry_run:
         print("  [dry-run] Ajouterait à {}/{}/{} : {} -- {}".format(
@@ -388,6 +451,15 @@ def main():
                               "journalistes existants). Plus haut = revient plus "
                               "souvent.".format(SENIORITE_DEFAUT))
     parser.add_argument("--angle-specifique", default="", help="Mode manuel uniquement")
+    parser.add_argument("--avec-ton-personnel", action="store_true",
+                         help="Mode manuel uniquement -- génère aussi un "
+                              "ton_personnel pour cette personne juste après "
+                              "sa création (mêmes garde-fous que "
+                              "set_ton_personnel.py). Jamais disponible en "
+                              "mode auto -- la relecture individuelle du "
+                              "mode manuel est le point de contrôle qui a "
+                              "permis de repérer les dérives réelles du "
+                              "26-29 août sur ce champ.")
     parser.add_argument("--cible", type=int, default=2,
                          help="Mode auto : nombre minimum de journalistes éligibles "
                               "visé par thématique/zone (défaut : 2)")
@@ -400,7 +472,8 @@ def main():
             sys.exit(1)
         mode_manuel(args.scenario, args.ligne, args.zone_slug, args.thematiques,
                     args.angle_specifique or None, args.nom.strip() or None,
-                    args.genre or None, args.seniorite, args.dry_run)
+                    args.genre or None, args.seniorite, args.avec_ton_personnel,
+                    args.dry_run)
     else:
         if args.all and args.scenario:
             print("  ✗ --all et --scenario sont mutuellement exclusifs.")

@@ -24,9 +24,6 @@ breakdown:
           - opinions_editoriaux
           - international
           seniorite: 1
-          ton_personnel: Une cadence de forgeron, martelant chaque syllabe avec une
-            précision obstinée, comme si les mots devaient être durcis au feu avant
-            d’être assemblés en une armature inébranlable.
         - nom: Jean-Bosco Ndayishimiye
           thematiques:
           - economie_finance
@@ -1944,7 +1941,7 @@ breakdown:
           - environnement_climat
           - meteo
           seniorite: 1
-        - nom: Gulnar Zholdasbekova
+        - nom: Leyla Mammadova
           thematiques:
           - societe
           - sante
@@ -2081,7 +2078,7 @@ breakdown:
           - international
           - opinions_editoriaux
           seniorite: 1
-        - nom: Yelena Volkova
+        - nom: Park Min-seo
           thematiques:
           - sciences_technologies
           - medias_communication
@@ -2120,7 +2117,7 @@ breakdown:
           fantômes.
         langue_style: anglais américain fragmenté, argot juridique et dialectes Appalachiens
         journalistes:
-        - nom: Ruth Holloway
+        - nom: Aiyana Begay
           thematiques:
           - actualites_a_la_une
           - politique
@@ -2185,7 +2182,7 @@ breakdown:
           - meteo
           - sante
           seniorite: 1
-        - nom: Camille Veyrat
+        - nom: Nadia El-Haddad
           thematiques:
           - societe
           - faits_divers
@@ -2220,7 +2217,7 @@ breakdown:
           - opinions_editoriaux
           - international
           seniorite: 1
-        - nom: Tadeu Jacinto do Sertão
+        - nom: João Batista de Araújo
           thematiques:
           - economie_finance
           - sciences_technologies
@@ -2232,7 +2229,7 @@ breakdown:
           - meteo
           - sante
           seniorite: 1
-        - nom: Cosme Damião das Queimadas
+        - nom: Raimundo Nonato Alves
           thematiques:
           - societe
           - education
@@ -2270,7 +2267,7 @@ breakdown:
           - opinions_editoriaux
           - international
           seniorite: 1
-        - nom: Kamal Rostami
+        - nom: Reza Farhadi
           thematiques:
           - economie_finance
           - sciences_technologies
@@ -2368,7 +2365,7 @@ breakdown:
           - environnement_climat
           - sciences_technologies
           seniorite: 1
-        - nom: Lakshmi Bose
+        - nom: Kavita Deshmukh
           thematiques:
           - societe
           - sante
@@ -2551,7 +2548,7 @@ breakdown:
           - politique
           - opinions_editoriaux
           seniorite: 1
-        - nom: Tama Rāwiri
+        - nom: Wiremu Te Aho
           thematiques:
           - economie_finance
           - sciences_technologies
@@ -2832,7 +2829,7 @@ breakdown:
         langue_style: créole haïtien mêlé de français, phrases courtes, oralité de
           lakou et de marché
         journalistes:
-        - nom: Rosemène Laguerre
+        - nom: Mireille Jean-Baptiste
           thematiques:
           - actualites_a_la_une
           - societe
@@ -3382,7 +3379,7 @@ breakdown:
           - petites_annonces_services
           - meteo
           seniorite: 1
-        - nom: Tesfaye Wolde
+        - nom: Dawit Alemu
           thematiques:
           - sciences_technologies
           - sante
@@ -3417,7 +3414,7 @@ breakdown:
           - opinions_editoriaux
           - medias_communication
           seniorite: 1
-        - nom: Mateo Valenzuela
+        - nom: Santiago Ferreyra
           thematiques:
           - economie_finance
           - environnement_climat
@@ -5014,7 +5011,7 @@ fortress_world:
           - opinions_editoriaux
           - international
           seniorite: 1
-        - nom: Babacar Ndiaye, dit « Le Griot des Dunes »
+        - nom: Chinedu Okafor
           thematiques:
           - economie_finance
           - sciences_technologies
@@ -5672,7 +5669,7 @@ fortress_world:
           - education
           - religion_spiritualite
           seniorite: 1
-        - nom: Putu Hendrawan
+        - nom: Made Wirawan
           thematiques:
           - culture
           - musique
@@ -5702,13 +5699,13 @@ fortress_world:
           - opinions_editoriaux
           - international
           seniorite: 1
-        - nom: Ravi S/O Krishnan
+        - nom: Arjun Nair
           thematiques:
           - economie_finance
           - sciences_technologies
           - medias_communication
           seniorite: 1
-        - nom: Siti Zulaikha Binte Hassan
+        - nom: Nur Aisyah Rahman
           thematiques:
           - environnement_climat
           - sante
@@ -5984,7 +5981,7 @@ fortress_world:
         langue_style: tuvaluan oral, anglais humanitaire retourné contre les institutions,
           registre de témoignage communautaire
         journalistes:
-        - nom: Lotoala Fiamalua
+        - nom: Mele Tausi
           thematiques:
           - actualites_a_la_une
           - politique
@@ -7082,13 +7079,13 @@ new_sustainability:
           - sante
           - meteo
           seniorite: 1
-        - nom: Zawadi Niyonzima
+        - nom: Claudine Mukamana
           thematiques:
           - societe
           - education
           - religion_spiritualite
           seniorite: 1
-        - nom: Kibet Rwigema
+        - nom: Kiptoo Barasa
           thematiques:
           - culture
           - musique
@@ -7186,13 +7183,13 @@ new_sustainability:
           - education
           - religion_spiritualite
           seniorite: 1
-        - nom: Zahra Al-Mazroui
+        - nom: Leyla Demir
           thematiques:
           - culture
           - musique
           - histoire_patrimoine
           seniorite: 1
-        - nom: Khalid Al-Rashidi
+        - nom: Faisal Al-Harbi
           thematiques:
           - sports
           - faits_divers
@@ -7359,7 +7356,7 @@ new_sustainability:
           et des termes techniques en anglais pour souligner la soumission aux jargons
           globaux.
         journalistes:
-        - nom: Veera Vartiainen
+        - nom: Aino Korhonen
           thematiques:
           - actualites_a_la_une
           - politique
@@ -9674,7 +9671,7 @@ eco_communalism:
           - religion_spiritualite
           - opinions_editoriaux
           seniorite: 1
-        - nom: Rafael Chavez, dit « El Desmantelador »
+        - nom: Malik Johnson
           thematiques:
           - actualites_a_la_une
           - economie_finance
@@ -9799,22 +9796,6 @@ eco_communalism:
           - international
           - petites_annonces_services
           seniorite: 1
-        type_diffusion: oral
-        orateurs:
-        - nom: Xunka’ Tz’ikin (La Voz del Monte)
-          communautes_desservies:
-          - altos de San Andrés
-          - milpas de la selva Lacandona
-          - senderos de la resistencia
-          reputation_orale: celle qui fait parler les arbres et trembler les patrons
-          seniorite: 1
-        - nom: Ixchel K'anal (La Sombra que Cosecha)
-          communautes_desservies:
-          - milpas de la selva baja
-          - colectivos de semillas libres
-          - senderos de la memoria rebelde
-          reputation_orale: celle qui tisse les mots comme les racines sous la terre
-          seniorite: 1
       enclaves_extractivistes_et_etats_residuels:
         nom: 'Ouro Extraído: Voz dos Escombros'
         ton: Ton rageur et sarcastique, mêlant jargon extractiviste et argot ouvrier
@@ -9832,7 +9813,7 @@ eco_communalism:
           - politique
           - opinions_editoriaux
           seniorite: 1
-        - nom: Joaquim 'Quebra-Pedra' Ferreira
+        - nom: Ravi Menon
           thematiques:
           - economie_finance
           - sciences_technologies
@@ -9915,22 +9896,6 @@ eco_communalism:
           - societe
           - culture
           seniorite: 1
-        type_diffusion: oral
-        orateurs:
-        - nom: L'Écho des Pierres (Marta Valser)
-          communautes_desservies:
-          - sources du Haut-Rhin
-          - marchés des Cévennes brûlées
-          - ponts de l'Ourthe sauvage
-          reputation_orale: craint·e pour ses silences plus lourds que les mots
-          seniorite: 1
-        - nom: La Voix des Sources (Joséphine 'Zéph' Morvan)
-          communautes_desservies:
-          - hautes terres cévenoles
-          - marchés flottants du Rhône
-          - forges des Apennins noirs
-          reputation_orale: redoutée pour ses rires qui coupent les discours
-          seniorite: 1
       maghreb_mediterraneen:
         nom: 'Méditerranée en Colère: Al-Bahr Yathir'
         ton: Ton théâtral et incantatoire, où chaque article semble être un cri lancé
@@ -9982,22 +9947,6 @@ eco_communalism:
           - lifestyle_art_de_vivre
           - culture
           - societe
-          seniorite: 1
-        type_diffusion: oral
-        orateurs:
-        - nom: Lalla Nsara 'Tidewhisper'
-          communautes_desservies:
-          - zaouïas du littoral
-          - souks des oueds asséchés
-          - camps des pêcheurs nomades
-          reputation_orale: celle qui murmure aux vagues avant qu’elles ne grondent
-          seniorite: 1
-        - nom: Sidi Mounir 'L'Étincelle des Oueds'
-          communautes_desservies:
-          - zaouïas des montagnes arides
-          - souks des vallées asséchées
-          - campements des pêcheurs nomades
-          reputation_orale: celui qui fait jaillir les mots comme l’eau des rochers
           seniorite: 1
       nordeste_bresilien_frente:
         nom: 'Sertão Sol Livre: Jornal da Resistência'
@@ -10111,7 +10060,7 @@ eco_communalism:
           syriennes et yéménites, avec des insertions en persan et en hébreu des correspondants
           nomades quand ils osent encore écrire.
         journalistes:
-        - nom: Yara al-Mansour
+        - nom: Layla al-Khatib
           thematiques:
           - actualites_a_la_une
           - politique
@@ -10135,7 +10084,7 @@ eco_communalism:
           - education
           - religion_spiritualite
           seniorite: 1
-        - nom: Leila Darwish
+        - nom: Miriam Ben-Ami
           thematiques:
           - culture
           - musique
@@ -10191,30 +10140,12 @@ eco_communalism:
           - histoire_patrimoine
           - lifestyle_art_de_vivre
           seniorite: 1
-        - nom: Kadiatou Amadou
+        - nom: Oumarou Maïga
           thematiques:
           - international
           - sports
           - faits_divers
           - petites_annonces_services
-          seniorite: 1
-        type_diffusion: oral
-        orateurs:
-        - nom: Amanar ⚡✨ / « Celui-qui-parle-aux-machines »
-          communautes_desservies:
-          - nœuds solaires du Ténéré
-          - caravanes des sables numériques
-          - places des assemblées ouvertes
-          reputation_orale: craint pour ses silences en code binaire, puis adoré quand
-            les diodes s’allument
-          seniorite: 1
-        - nom: Tafouk ⚡🌾 / « Celle-qui-tresse-les-vents »
-          communautes_desservies:
-          - dunes des assembleurs
-          - caravanes des codeurs nomades
-          - oasis des serveurs solaires
-          reputation_orale: redoutée quand elle chuchote en shell, puis applaudie
-            quand les réseaux chantent
           seniorite: 1
       sao_paulo_algorithmique:
         nom: APD — Audit Permanent des Dépossédés
@@ -10335,7 +10266,7 @@ eco_communalism:
           - opinions_editoriaux
           - medias_communication
           seniorite: 1
-        - nom: Dyrynda Vasilieva
+        - nom: Bair Tsydenov
           thematiques:
           - economie_finance
           - sciences_technologies
@@ -10378,7 +10309,7 @@ eco_communalism:
         langue_style: français traversé de kazakh romanisé, de proverbes de steppe
           et de vocabulaire pastoral
         journalistes:
-        - nom: Gulzhan Zhumabek
+        - nom: Aigerim Sadykova
           thematiques:
           - actualites_a_la_une
           - politique
@@ -10632,14 +10563,14 @@ eco_communalism:
           - opinions_editoriaux
           - medias_communication
           seniorite: 1
-        - nom: Tigist Assefa
+        - nom: Dawit Bekele
           thematiques:
           - economie_finance
           - environnement_climat
           - sciences_technologies
           - meteo
           seniorite: 1
-        - nom: Kebedech Worku
+        - nom: Selamawit Alemu
           thematiques:
           - societe
           - sante
@@ -10728,21 +10659,21 @@ eco_communalism:
         langue_style: japonais populaire traduit en français, avec registre de quartier,
           formules d'assemblée locale et notes en dialectes régionaux
         journalistes:
-        - nom: Hana Yoshida
+        - nom: Yui Tanaka
           thematiques:
           - actualites_a_la_une
           - politique
           - opinions_editoriaux
           - international
           seniorite: 1
-        - nom: Riku Shimizu
+        - nom: Haruto Sato
           thematiques:
           - economie_finance
           - sciences_technologies
           - environnement_climat
           - meteo
           seniorite: 1
-        - nom: Sora Fujimoto
+        - nom: Aiko Nakamura
           thematiques:
           - societe
           - sante
@@ -10829,7 +10760,7 @@ eco_communalism:
         langue_style: Bahasa indonesia direct, ponctué de malais côtier, bugis, javanais
           et formules adat
         journalistes:
-        - nom: Putri Lestari Ningrum
+        - nom: Sari Wulandari
           thematiques:
           - actualites_a_la_une
           - politique
@@ -10856,7 +10787,7 @@ eco_communalism:
           - histoire_patrimoine
           - religion_spiritualite
           seniorite: 1
-        - nom: Lina Sariwangi
+        - nom: Dewi Kartika
           thematiques:
           - culture
           - musique
@@ -10877,7 +10808,7 @@ eco_communalism:
         langue_style: Vietnamien méridional, registre de carnet coopératif mêlé d'expressions
           khmères du delta
         journalistes:
-        - nom: Trương Thị Bích Ngọc
+        - nom: Nguyễn Thị Lan
           thematiques:
           - actualites_a_la_une
           - politique
@@ -10939,7 +10870,7 @@ eco_communalism:
           - sciences_technologies
           - meteo
           seniorite: 1
-        - nom: Taslima Khatun
+        - nom: Nusrat Jahan
           thematiques:
           - societe
           - sante
@@ -11364,7 +11295,7 @@ eco_communalism:
           - opinions_editoriaux
           - international
           seniorite: 1
-        - nom: Ri Chol-min
+        - nom: Pak Chol-su
           thematiques:
           - economie_finance
           - environnement_climat
@@ -11378,7 +11309,7 @@ eco_communalism:
           - education
           - petites_annonces_services
           seniorite: 1
-        - nom: Yun Ji-hye
+        - nom: Choe Min-ho
           thematiques:
           - culture
           - musique
@@ -11419,7 +11350,7 @@ eco_communalism:
           - environnement_climat
           - sciences_technologies
           seniorite: 1
-        - nom: Nimo Geedi
+        - nom: Fadumo Cali
           thematiques:
           - societe
           - sante
@@ -12509,7 +12440,7 @@ policy_reform:
           - opinions_editoriaux
           - international
           seniorite: 1
-        - nom: Pachamama Sisa Willka
+        - nom: Inti Quispe Mamani
           thematiques:
           - economie_finance
           - sciences_technologies
@@ -12521,7 +12452,7 @@ policy_reform:
           - sante
           - meteo
           seniorite: 1
-        - nom: Kadiatou Sow
+        - nom: Oumarou Diallo
           thematiques:
           - societe
           - education
@@ -12709,7 +12640,7 @@ policy_reform:
           - sciences_technologies
           - medias_communication
           seniorite: 1
-        - nom: Léa Morand
+        - nom: Aino Korhonen
           thematiques:
           - environnement_climat
           - sante
@@ -12850,7 +12781,7 @@ policy_reform:
           - opinions_editoriaux
           - international
           seniorite: 1
-        - nom: Gwilym ap Dafydd
+        - nom: Rhys ap Iorwerth
           thematiques:
           - economie_finance
           - sciences_technologies
@@ -12899,7 +12830,7 @@ policy_reform:
           - opinions_editoriaux
           - international
           seniorite: 1
-        - nom: Zanele Mthethwa
+        - nom: Sipho Dlamini
           thematiques:
           - economie_finance
           - sciences_technologies
@@ -14008,7 +13939,7 @@ reference:
           - sciences_technologies
           - medias_communication
           seniorite: 1
-        - nom: Itzel Nahuelpan
+        - nom: Aiyana Begay
           thematiques:
           - environnement_climat
           - sante
@@ -14046,7 +13977,7 @@ reference:
           avec alternance alphabétique (cyrillique/latin). Registre administratif,
           codes juridiques et argot des opérateurs para-militaires.
         journalistes:
-        - nom: Aizhan Kenzhebayeva
+        - nom: Aigerim Sadykova
           thematiques:
           - actualites_a_la_une
           - politique
@@ -14096,7 +14027,7 @@ reference:
           russe, anglais des affaires, français diplomatique. Mélange de registres
           formels, de dialectes locaux et d'argot des ports.
         journalistes:
-        - nom: Risten Máhtte Porsanger
+        - nom: Ingrid Johansen
           thematiques:
           - actualites_a_la_une
           - politique
@@ -14127,7 +14058,7 @@ reference:
           - histoire_patrimoine
           - lifestyle_art_de_vivre
           seniorite: 1
-        - nom: Erikku Magga
+        - nom: Jónas Einarsson
           thematiques:
           - international
           - sports
@@ -14229,7 +14160,7 @@ reference:
           - religion_spiritualite
           - histoire_patrimoine
           seniorite: 1
-        - nom: Rahul Chen
+        - nom: Kenji Watanabe
           thematiques:
           - culture
           - musique
@@ -14448,7 +14379,7 @@ reference:
         langue_style: anglais écossais avec titres en gaélique, ton de rapport maritime
           et d'enquête parlementaire
         journalistes:
-        - nom: Catriona MacInnes
+        - nom: Mairi MacLeod
           thematiques:
           - actualites_a_la_une
           - politique
@@ -14496,7 +14427,7 @@ reference:
         langue_style: bilingue gallois/anglais, formules communautaires et cadence
           de chronique de chapelle
         journalistes:
-        - nom: Mair Bowen
+        - nom: Carys Morgan
           thematiques:
           - actualites_a_la_une
           - politique

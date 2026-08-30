@@ -1,0 +1,131 @@
+
+============================================================
+OURRASSOL 2098 — Générateur d'articles
+============================================================
+  Mode       : Semi-guidé
+  Scénario   : breakdown
+  Thématique : actualites_a_la_une
+  Longueur   : breve
+============================================================
+
+[generate] Chargement de la thématique 'actualites_a_la_une'...
+
+[snapshot] Construction du monde 2098 — scénario : breakdown
+[snapshot] Variables pilotes : ['geopolitique_conflits', 'energie_ressources_critiques', 'organisation_territoires', 'climat_environnement_global', 'systemes_productifs_travail']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 16 | Cohérence : ATTENTION
+[snapshot] Jalons trajectoire : 154 (43 majeurs)
+[snapshot] Événements signal_to_state : 65 (20 majeurs)
+[snapshot] Tensions thématiques : 8
+[snapshot] Instances chargées : 141 | Filtrées : 6
+[snapshot] Injection custom 'Gelecek Meclisi — Les Échos du Demain' (an 2048, 50 ans d'effet)
+  → gouvernance_institutions : 20 → 28.0 (delta:+8.0)
+  → valeurs_culture_tempo_sociale : 90 → 96.0 (delta:+6.0)
+  → technologie_information : 95 → 100 (delta:+5.0)
+[snapshot] Modifications custom (entités) : 3 variables affectées
+[snapshot] Événement custom 'La Déflagration du Croissant — Embrasement sans arbitre' (an 2027, 71 ans d'effet)
+  → geopolitique_conflits : 95 → 91.0 (delta:-4.0)
+  → energie_ressources_critiques : 100 → 100 (delta:+8.0)
+  → gouvernance_institutions : 30.9 → 35.9 (delta:+5.0)
+  → demographie_mobilite_humaine : 92.4 → 99.4 (delta:+7.0)
+[snapshot] Événement custom 'Grève des Veines Eurasiatiques — L'Étranglement des Corridors' (an 2039, 59 ans d'effet)
+  → systemes_productifs_travail : 93.2 → 73.2 (delta:-20.0)
+  → geopolitique_conflits : 70.0 → 55.0 (delta:-15.0)
+  → sante_biotechnologies : 85 → 75.0 (delta:-10.0)
+  → organisation_territoires : 95.9 → 83.9 (delta:-12.0)
+[snapshot] Événement custom 'L'Attentat des Neuf Nœuds — Le Jour Sans Signal' (an 2040, 58 ans d'effet)
+  → technologie_information : 44.5 → 19.5 (delta:-25.0)
+  → gouvernance_institutions : 28.7 → 16.7 (delta:-12.0)
+  → systeme_economique_redistribution : 51.4 → 41.4 (delta:-10.0)
+[snapshot] Événement custom 'La Ruée des Glaces — Enchères Souveraines du Kalaallit Fund' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 100 → 100 (delta:+8.0)
+  → geopolitique_conflits : 32.9 → 20.9 (delta:-12.0)
+  → gouvernance_institutions : 18.9 → 28.9 (delta:+10.0)
+  → organisation_territoires : 77.1 → 84.1 (delta:+7.0)
+[snapshot] Événement custom 'L'Exode des Grands Brûlés — La Déroute du Bureau des Résidus' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 100 → 92.0 (delta:-8.0)
+  → organisation_territoires : 80.2 → 95.2 (delta:+15.0)
+  → gouvernance_institutions : 28.9 → 40.9 (delta:+12.0)
+  → climat_environnement_global : 100 → 95.0 (delta:-5.0)
+  → geopolitique_conflits : 0 → 0 (delta:-12.0)
+  → energie_ressources_critiques : 100 → 100 (delta:+10.0)
+[snapshot] Événement custom 'La Fracture de Belém — Quand le Bassin Amazonien a cessé d'être un territoire' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 95.0 → 100 (delta:+12.0)
+  → geopolitique_conflits : 0 → 0 (delta:-8.0)
+  → gouvernance_institutions : 55.3 → 63.3 (delta:+8.0)
+  → organisation_territoires : 100 → 100 (delta:+10.0)
+[snapshot] Événement custom 'Le Compact des Grands Lacs — Sécession de fait' (an 2053, 45 ans d'effet)
+  → organisation_territoires : 100 → 92.0 (delta:-8.0)
+  → gouvernance_institutions : 63.3 → 73.3 (delta:+10.0)
+  → geopolitique_conflits : 0 → 0 (delta:-12.0)
+  → energie_ressources_critiques : 100 → 90.0 (delta:-10.0)
+  → climat_environnement_global : 100 → 100 (delta:+4.0)
+[snapshot] Événement custom 'Victoire Fantôme du Parti Commun' (an 2055, 43 ans d'effet)
+  → gouvernance_institutions : 81.9 → 76.9 (delta:-5.0)
+  → geopolitique_conflits : 18.0 → 26.0 (delta:+8.0)
+  → organisation_territoires : 94.6 → 88.6 (delta:-6.0)
+[snapshot] Événement custom 'La Saisie du Détroit — Incident du Passage Nord-Ouest' (an 2057, 41 ans d'effet)
+  → geopolitique_conflits : 31.3 → 23.3 (delta:-8.0)
+  → energie_ressources_critiques : 90.0 → 100 (delta:+10.0)
+  → frontieres_du_systeme : 82.5 → 88.5 (delta:+6.0)
+  → organisation_territoires : 94.0 → 100 (delta:+7.0)
+  → climat_environnement_global : 94.2 → 98.2 (delta:+4.0)
+[snapshot] Événement custom 'Les Forges du Commun — Proclamation des Zones Libres de l'Algorithme' (an 2061, 37 ans d'effet)
+  → geopolitique_conflits : 0 → 0 (delta:-8.0)
+  → valeurs_culture_tempo_sociale : 96.0 → 100 (delta:+12.0)
+  → gouvernance_institutions : 82.7 → 89.7 (delta:+7.0)
+  → organisation_territoires : 100 → 90.0 (delta:-10.0)
+[snapshot] Événement custom 'Les Éclats d'Agadez — Ce qui reste du Forum' (an 2061, 37 ans d'effet)
+  → technologie_information : 20.6 → 24.6 (delta:+4.0)
+  → gouvernance_institutions : 92.6 → 100 (delta:+8.0)
+  → organisation_territoires : 92.4 → 98.4 (delta:+6.0)
+[snapshot] Événement custom 'Les Forges du Commun — Proclamation des Zones Libres du Rust Belt' (an 2061, 37 ans d'effet)
+  → geopolitique_conflits : 0 → 0 (delta:-8.0)
+  → valeurs_culture_tempo_sociale : 100 → 100 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → technologie_information : 45.5 → 51.5 (delta:+6.0)
+  → organisation_territoires : 100 → 90.0 (delta:-10.0)
+[snapshot] Événement custom 'La Révolte des Zones Mortes — Effondrement de la RPDA' (an 2073, 25 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+8.0)
+  → technologie_information : 53.2 → 59.2 (delta:+6.0)
+  → organisation_territoires : 93.6 → 100 (delta:+10.0)
+[snapshot] Événement custom 'L'Arrestation de Van Derburgh par la Milice de Detroit-Sud' (an 2078, 20 ans d'effet)
+  → gouvernance_institutions : 100 → 99.0 (delta:-1.0)
+  → valeurs_culture_tempo_sociale : 100 → 99.0 (delta:-1.0)
+[snapshot] Événements custom : 14 | 270 variables affectées
+[snapshot] Signal custom 'decodage_langage_animaux_ia' sur valeurs_culture_tempo_sociale (an 2045, 53 ans d'effet)
+  → valeurs_culture_tempo_sociale : 99.0 → 100 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur technologie_information (an 2041, 57 ans d'effet)
+  → technologie_information : 69.0 → 74.0 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur gouvernance_institutions (an 2042, 56 ans d'effet)
+  → gouvernance_institutions : 99.0 → 94.0 (delta:-5.0)
+[snapshot] Signaux custom chiffrés : 3 | 3 variables affectées
+
+[prompt] Assemblage du prompt...
+[prompt] System prompt : 3347 caractères
+[prompt] User prompt   : 72960 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-large-latest, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 21983 | sortie : 984
+[api] Article généré : 3844 caractères
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/breakdown/20260829_111958_breakdown_actualites_a_la_une_article_19fevrier2098.md
+
+============================================================
+ARTICLE GÉNÉRÉ
+============================================================
+**Les Bouches de l’Abîme étouffées : le silence forcé des gardiens du dernier maillage**
+
+19 février 2098
+Mireille Mbuyi-Kabamba — Mwanga wa Dhamina - Lumière de la Garde
+
+Kinshasa-Nord, 18 février 2098 — Les murs de la cellule 47 du Bloc des Archives Mobiles portent encore les traces de stylo-bille : des fragments de rapports sur les raids hydriques du Kivu Disputé, des coordonnées de convois de lithium détournés, des noms de miliciens accusés d’empoisonnement de nappes. Ce sont les derniers mots des *Bouches de l’Abîme*, réseau de journalistes-archivistes qui, depuis vingt ans, documentait l’effondrement des pactes hydriques de 2067. Leur crime ? Avoir publié, le 12 février, une enquête liant le *Réseau des Anciens Financeurs Devenus Censeurs* à la disparition systématique des rapports sur les massacres de la route Bukavu-Goma. Trois jours plus tard, leurs serveurs à Sfax étaient saisis par des miliciens en uniforme kaki siglés du double sceau de la *Ligue Hanséatique Baltique*. Officiellement, il s’agit d’une « opération de sécurisation des flux logistiques ». Dans les faits, c’est la fin du dernier média capable de croiser les témoignages des berges du Congo avec ceux des couloirs sahélo-méditerranéens.
+
+Les *Bouches* n’ont jamais prétendu à la neutralité. Leur force venait de leur méthode : des relais physiques — courriers nomades, radios à ondes courtes, clés USB enterrées dans des caches en terre cuite — qui contournaient les nœuds numériques tombés en 2040 lors de *l’Attentat des Neuf Nœuds*. Leur réseau, fragmenté mais résilient, était le seul à pouvoir authentifier les documents grâce à des signatures cryptographiques dérivées du protocole de la *Voix du Dehors*, un héritage des archives décentralisées de l’ère pré-effondrement. Aujourd’hui, ces clés sont entre les mains de mercenaires opérant depuis *Kharg-9 Data Haven*, la plateforme pétrolière reconvertie en marché noir des données. « Ils ont vendu nos archives au plus offrant », murmure un ancien courrier, réfugié dans les ruines de Brazzaville-Nord. « Les mêmes qui nous finançaient pour documenter les crimes nous achètent maintenant le droit de les effacer. »
+
+Le *Compact des Grands Lacs* a immédiatement réagi en interdisant la diffusion de tout document non estampillé par ses propres *Gardes du Sceau*. À Kinshasa, des miliciens ont incendié trois points de distribution clandestins, tandis qu’à Nairobi, le *Conseil de Régulation des Ressources Critiques* — réduit à une coquille vide — a publié un communiqué qualifiant les *Bouches* de « menace à la stabilité régionale ». Pourtant, dans les camps de déplacés de Kisangani, des mains tremblantes continuent de recopier les derniers numéros sur des feuilles de bananier séchées. « L’abîme ne se tait pas parce qu’on lui ferme la bouche », a écrit un anonyme sur un mur de la gare de Lubumbashi. « Il parle par les brûlures. »
+
+============================================================
+✓ Sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/breakdown/20260829_111958_breakdown_actualites_a_la_une_article_19fevrier2098.md
+============================================================
+

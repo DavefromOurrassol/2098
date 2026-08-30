@@ -1,0 +1,7 @@
+  ⚠ Zone en type_diffusion='ecrit' -- l'orateur·rice ajouté·e ne sera jamais sélectionné·e tant que la zone ne passe pas en 'oral' ou 'mixte' dans journaux.yaml (ajout non bloquant, procède quand même).
+  42 zones N1 / 87 zones totales
+    → LLM (mistral, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 739 | sortie : 90
+[llm] Mistral (mistral-large-latest) — entrée : 1021 | sortie : 50
+  ✓ ton_personnel : Ses phrases s’étirent comme la marée montante, longues et lentes, avant de se briser en une chute courte et sèche, comme un galet jeté contre le rocher.
+  [dry-run] Ajouterait à eco_communalism/opposition/maghreb_mediterraneen : Lalla Nhar 'Aouda des Marées -- dessert zaouïas des falaises, souks flottants de Nador, campements des oueds asséchés

@@ -1,0 +1,5 @@
+  ⚠ Zone en type_diffusion='ecrit' -- l'orateur·rice ajouté·e ne sera jamais sélectionné·e tant que la zone ne passe pas en 'oral' ou 'mixte' dans journaux.yaml (ajout non bloquant, procède quand même).
+  42 zones N1 / 87 zones totales
+    → LLM (mistral, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 747 | sortie : 88
+  [dry-run] Ajouterait à eco_communalism/opposition/maghreb_mediterraneen : Lalla Nsira 'Tidewhisper' -- dessert zaouïas des falaises rouges, marchés flottants de Nador, campements des pêcheurs sans filets

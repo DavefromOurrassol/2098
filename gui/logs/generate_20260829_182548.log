@@ -1,0 +1,135 @@
+
+============================================================
+OURRASSOL 2098 — Générateur d'articles
+============================================================
+  Mode       : Semi-guidé
+  Scénario   : eco_communalism
+  Thématique : actualites_a_la_une
+  Longueur   : breve
+============================================================
+
+[generate] Chargement de la thématique 'actualites_a_la_une'...
+
+[snapshot] Construction du monde 2098 — scénario : eco_communalism
+[snapshot] Variables pilotes : ['organisation_territoires', 'climat_environnement_global', 'energie_ressources_critiques', 'systemes_productifs_travail']
+[snapshot] États définis : 12/12
+[snapshot] Tensions détectées : 3 | Cohérence : OK
+[snapshot] Jalons trajectoire : 154 (37 majeurs)
+[snapshot] Événements signal_to_state : 65 (20 majeurs)
+[snapshot] Tensions thématiques : 8
+[loader] Instance(s) custom garantie(s) dans filtered_instances : gelecek_meclisi_eco_communalism
+[snapshot] Instances chargées : 90 | Filtrées : 6
+[snapshot] Injection custom 'Meclis des Futurs Fragmentés' (an 2047, 51 ans d'effet)
+  → gouvernance_institutions : 75 → 87.0 (delta:+12.0)
+  → organisation_territoires : 40 → 48.0 (delta:+8.0)
+  → technologie_information : 70.1 → 75.1 (delta:+5.0)
+[snapshot] Modifications custom (entités) : 15 variables affectées
+[snapshot] Événement custom 'Écho du Golfe en Feu — Les Bassins sans Pétrole' (an 2027, 71 ans d'effet)
+  → geopolitique_conflits : 19.5 → 27.5 (delta:+8.0)
+  → energie_ressources_critiques : 40.3 → 52.3 (delta:+12.0)
+  → gouvernance_institutions : 84.8 → 90.8 (delta:+6.0)
+  → demographie_mobilite_humaine : 39.1 → 48.1 (delta:+9.0)
+[snapshot] Événement custom 'La Grande Coupure — Accélérateur de Localisation Numérique' (an 2040, 58 ans d'effet)
+  → technologie_information : 94.6 → 84.6 (delta:-10.0)
+  → organisation_territoires : 50.0 → 58.0 (delta:+8.0)
+  → valeurs_culture_tempo_sociale : 40 → 46.0 (delta:+6.0)
+[snapshot] Événement custom 'Les Enchères du Fond Émergé — Kalaallit Nunaat vend ses terres à qui ?' (an 2041, 57 ans d'effet)
+  → energie_ressources_critiques : 52.3 → 60.3 (delta:+8.0)
+  → geopolitique_conflits : 0 → 0 (delta:-10.0)
+  → gouvernance_institutions : 98.0 → 100 (delta:+7.0)
+  → organisation_territoires : 64.8 → 70.8 (delta:+6.0)
+[snapshot] Événement custom 'La Grande Convergence des Lacs — Exode du Midwest Carbonisé' (an 2044, 54 ans d'effet)
+  → demographie_mobilite_humaine : 57.0 → 39.0 (delta:-18.0)
+  → organisation_territoires : 62.0 → 47.0 (delta:-15.0)
+  → gouvernance_institutions : 100 → 100 (delta:+12.0)
+  → climat_environnement_global : 62.5 → 70.5 (delta:+8.0)
+  → energie_ressources_critiques : 72.5 → 82.5 (delta:+10.0)
+[snapshot] Événement custom 'L'Assemblée du Fleuve — Souveraineté ou Fracture' (an 2047, 51 ans d'effet)
+  → climat_environnement_global : 70.5 → 78.5 (delta:+8.0)
+  → geopolitique_conflits : 1.3 → 0 (delta:-12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → organisation_territoires : 55.2 → 63.2 (delta:+8.0)
+[snapshot] Événement custom 'Révolution du Travail Régénératif Sahelo-Numérique' (an 2047, 51 ans d'effet)
+  → systemes_productifs_travail : 17.6 → 32.6 (delta:+15.0)
+  → technologie_information : 100 → 100 (delta:+10.0)
+  → energie_ressources_critiques : 83.8 → 95.8 (delta:+12.0)
+  → organisation_territoires : 77.0 → 85.0 (delta:+8.0)
+[snapshot] Événement custom 'Dissolution du Mouvement dans les Assemblées Locales' (an 2048, 50 ans d'effet)
+  → gouvernance_institutions : 100 → 100 (delta:+5.0)
+  → valeurs_culture_tempo_sociale : 46.0 → 54.0 (delta:+8.0)
+  → organisation_territoires : 85.0 → 91.0 (delta:+6.0)
+[snapshot] Événement custom 'Forum d'Agadez sur la Souveraineté Numérique des Périphéries' (an 2062, 36 ans d'effet)
+  → technologie_information : 100 → 100 (delta:+8.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → organisation_territoires : 95.8 → 100 (delta:+7.0)
+[snapshot] Événement custom 'La Proclamation des Friches Libres : Detroit, Cleveland, Pittsburgh hors-algorithme' (an 2063, 35 ans d'effet)
+  → geopolitique_conflits : 0 → 0 (delta:-8.0)
+  → valeurs_culture_tempo_sociale : 54.0 → 66.0 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → organisation_territoires : 100 → 100 (delta:+14.0)
+[snapshot] Événement custom 'Insurrection des Friches Vivantes — L'Automne des Zones Libres' (an 2063, 35 ans d'effet)
+  → geopolitique_conflits : 0 → 0 (delta:-8.0)
+  → valeurs_culture_tempo_sociale : 66.0 → 78.0 (delta:+12.0)
+  → gouvernance_institutions : 100 → 100 (delta:+10.0)
+  → technologie_information : 100 → 100 (delta:+7.0)
+[snapshot] Événement custom 'Le Procès Communautaire de Van Derburgh' (an 2078, 20 ans d'effet)
+  → valeurs_culture_tempo_sociale : 78.0 → 80.0 (delta:+2.0)
+  → gouvernance_institutions : 100 → 100 (delta:+1.0)
+[snapshot] Événement custom 'Grande Inondation des Veilleurs' (an 2096, 2 ans d'effet)
+  → organisation_territoires : 100 → 100 (delta:+1.3)
+  → climat_environnement_global : 66.8 → 67.3 (delta:+0.5)
+  → demographie_mobilite_humaine : 64.4 → 67.4 (delta:+3.0)
+  → systeme_economique_redistribution : 100 → 100 (delta:+1.3)
+[snapshot] Événements custom : 12 | 187 variables affectées
+[snapshot] Signal custom 'decodage_langage_animaux_ia' sur valeurs_culture_tempo_sociale (an 2040, 58 ans d'effet)
+  → valeurs_culture_tempo_sociale : 80.0 → 85.0 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur technologie_information (an 2038, 60 ans d'effet)
+  → technologie_information : 100 → 100 (delta:+5.0)
+[snapshot] Signal custom 'ia_agents_administratifs_autonomes' sur gouvernance_institutions (an 2041, 57 ans d'effet)
+  → gouvernance_institutions : 100 → 95.0 (delta:-5.0)
+[snapshot] Signaux custom chiffrés : 3 | 3 variables affectées
+
+[prompt] Assemblage du prompt...
+[prompt] System prompt : 2971 caractères
+[prompt] User prompt   : 73923 caractères
+[prompt] Sections      : 7 (dont entités: oui, géographie: oui)
+
+[api] Envoi au LLM (mistral — mistral-large-latest, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 21380 | sortie : 1249
+[api] Article généré : 4851 caractères
+[api] Longueur hors plage (597 mots, attendu 200-400, écart 49%) — retry unique avec rappel explicite...
+[llm] Mistral (mistral-large-latest) — entrée : 21491 | sortie : 1368
+[api] Retry terminé : 658 mots (attendu 200-400).
+[api] Article sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/eco_communalism/20260829_182648_eco_communalism_actualites_a_la_une_article_20septembre2098.md
+
+============================================================
+ARTICLE GÉNÉRÉ
+============================================================
+**Les algorithmes de la soif : quand les bassins méditerranéens négocient leur eau en secret**
+
+20 septembre 2098
+Lalla Nsara 'Tidewhisper' — Al-Bahr Yathir
+
+Écoutez-moi bien, vous qui sentez encore l’odeur du sel quand le vent tourne vers le large. Ce matin, les assemblées des bassins de Carthage-Nord et de la Tétouan-Verte ont reçu le même message crypté, signé d’un simple sceau numérique : un dauphin enroulé autour d’un disque dur. Kharg-9, ce terminal offshore qui se dit sanctuaire des savoirs, vient de leur proposer un marché. Pas un échange de graines ou de panneaux solaires, non. Cette fois, c’est de l’eau qu’on négocie — et pas n’importe laquelle : celle des aquifères transfrontaliers, ces veines souterraines que les cartes officielles ne montrent plus depuis que les États ont disparu.
+
+Le protocole est simple, presque élégant dans sa cruauté. Kharg-9 offre aux assemblées locales un algorithme de médiation, déjà testé à São Paulo par le CPGA, capable de répartir les flux d’eau entre territoires en tension. En échange, les communs doivent accepter que leurs données hydriques — niveau des nappes, prélèvements, qualité — soient partagées en temps réel sur une trame ouverte, accessible à tous… y compris aux consortiums logistiques qui rôdent autour des corridors extractivistes. Officiellement, c’est pour éviter les conflits. Officieusement, c’est une mise aux enchères déguisée. Qui contrôle les données contrôle l’eau. Et qui contrôle l’eau contrôle les vies.
+
+Vous croyez que c’est un hasard si cette offre arrive maintenant ? Depuis trois mois, les pluies ont déserté les hauts plateaux de l’Atlas. Les citernes des villages rifains sont à moitié vides, et les délégués de la Ligue des Cités du Sahel Numérique, qui nous ont tant appris sur la souveraineté numérique, commencent à murmurer que même leurs protocoles SahelOS ne résistent pas à la sécheresse. Pendant ce temps, à Kharg-9, les serveurs tournent à plein régime. On y échange des promesses d’accès à l’eau contre des promesses de silence. Silence sur les fuites dans les aquifères. Silence sur les accords passés avec les enclaves technologiques. Silence, surtout, sur le fait que ces algorithmes, présentés comme neutres, sont truffés de pondérations invisibles — des lignes de code qui avantagent systématiquement les territoires les plus riches en données, ceux qui ont les moyens de payer des auditeurs pour les décrypter.
+
+La Charte de Tampere, que tant de nos assemblées ont signée, interdit explicitement la délégation de décisions critiques à des entités extérieures. Pourtant, hier encore, une délégation de la Confédération des Communs de l’Arc Septentrional a été vue quittant le terminal de Kharg-9 avec des tablettes chargées de nouveaux paramètres. Des paramètres qui, une fois intégrés, feront de nos aquifères des variables dans un jeu dont nous ne maîtrisons plus les règles.
+
+Alors je vous le demande, ici et maintenant : quand les algorithmes décident de qui boira et qui mourra de soif, qui est encore souverain ? Est-ce celui qui possède les serveurs, ou celui qui creuse les puits ? Est-ce celui qui écrit le code, ou celui qui porte l’eau ?
+
+Répondez-moi : *L’eau est à qui ?*
+— *À nous !*
+— *Les données sont à qui ?*
+— *À nous !*
+
+Alors agissons en conséquence. Ce soir, à la veillée des seuils, nous enverrons une réponse claire à Kharg-9. Pas un refus brutal — nous ne sommes pas des enfants qui claquent la porte. Mais une contre-proposition : nos données hydriques ne seront partagées que sur la Trame Mnemos, sous contrôle des Guildes de Médiateurs Écologiques, et uniquement entre communs qui acceptent de soumettre leurs algorithmes à un audit public. Et si Kharg-9 refuse ? Alors nous ferons comme les délégués du Meclis des Futurs Fragmentés : nous tisserons nos propres ceintures de seuils, nous graverons nos propres cartes vivantes, et nous négocierons directement, d’assemblée à assemblée, sans intermédiaire.
+
+La mer nous regarde. Elle attend de voir si nous saurons encore dire non.
+
+============================================================
+✓ Sauvegardé : /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/articles/eco_communalism/20260829_182648_eco_communalism_actualites_a_la_une_article_20septembre2098.md
+============================================================
+

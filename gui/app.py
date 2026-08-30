@@ -2884,6 +2884,7 @@ def get_slugs():
     GET /api/slugs?type=signals
     GET /api/slugs?type=evenements
     GET /api/slugs?type=zones_a_reparenter&scenario=breakdown
+    GET /api/slugs?type=zones_candidates_oral&scenario=breakdown
     GET /api/slugs?type=fiches_a_localiser&scenario=breakdown
     """
     slug_type = request.args.get("type", "instances")
@@ -2893,6 +2894,12 @@ def get_slugs():
     pipeline_dir = Path(cfg.get("pipeline_dir", ""))
 
     slugs = []
+    # labels (26 août 2026) : dict optionnel {valeur: texte_affiché},
+    # lu par app.js si présent (data.labels && data.labels[slug]) --
+    # vide par défaut pour toutes les branches qui n'en ont pas besoin,
+    # non-régression totale. Voir la branche intervenants_eligibles
+    # plus bas pour l'unique usage actuel.
+    labels = {}
 
     try:
         if slug_type == "instances":
@@ -2989,6 +2996,29 @@ def get_slugs():
                 # "tous" par défaut, pas de liste vide affichée.
                 return jsonify({"slugs": ["tous"], "zones_par_scenario": {}})
             return jsonify({"slugs": ["tous"] + toutes_zones, "zones_par_scenario": zones_par_scenario})
+        elif slug_type == "zones_candidates_oral":
+            # Ajouté le 29 août 2026 (P21, retour de David) : liste les
+            # zones du scénario n'ayant pas encore type_diffusion en
+            # oral/mixte, pour le nouveau mode "convertir" de
+            # inject_orateur_custom.py -- multi-select GUI, David
+            # choisit lui-même quelles zones convertir plutôt qu'un
+            # balayage aveugle (voir _zones_candidates_oral() pour le
+            # raisonnement complet). Même forme de réponse que
+            # zones_a_reparenter ci-dessous (slugs + objets candidats
+            # riches pour l'affichage), + labels lisibles (le composite
+            # "ligne::zone_slug" seul serait illisible affiché tel quel
+            # sur une chip -- même convention que intervenants_eligibles
+            # ci-dessus, qui ajoute déjà des labels au texte affiché).
+            candidats = _zones_candidates_oral(pipeline_dir, scenario)
+            labels = {
+                c["slug"]: "{} ({})".format(c["nom"], c["ligne"])
+                for c in candidats
+            }
+            return jsonify({
+                "slugs": [c["slug"] for c in candidats],
+                "candidats": candidats,
+                "labels": labels,
+            })
         elif slug_type == "zones_a_reparenter":
             # Ajouté le 31 juillet 2026 (remarque de David : proposer les
             # 16-42 zones N1 d'un scénario dans --zone-cible était peu
@@ -3032,10 +3062,34 @@ def get_slugs():
             slugs = _scan_signal_slugs(vault_root)
         elif slug_type == "evenements":
             slugs = _scan_event_slugs(vault_root)
+        elif slug_type == "intervenants_eligibles":
+            # Ajouté le 25 août 2026 pour le nouveau champ GUI "Forcer un
+            # intervenant précis" (generate.py --intervenant, P21). ligne
+            # et zone lus en plus de scenario (déjà lu plus haut) --
+            # mode == "mixte"/"auto"/vide affiche les deux listes
+            # mélangées (décision explicite de David, plus simple que
+            # de relire le vrai type_diffusion de la zone).
+            #
+            # thematique (26 août 2026, retour de David) : filtre les
+            # journalistes exactement comme get_journal_profile() le
+            # ferait au moment réel de la génération (voir
+            # _scan_intervenants_eligibles() pour le détail complet).
+            #
+            # labels (26 août 2026) : "(journaliste)"/"(orateur)" affiché
+            # dans le menu déroulant pour distinguer les deux quand la
+            # liste les mélange -- la valeur soumise reste le nom exact,
+            # sans suffixe.
+            ligne = request.args.get("ligne", "")
+            zone = request.args.get("zone", "")
+            mode = request.args.get("mode", "")
+            thematique = request.args.get("thematique", "")
+            slugs, labels = _scan_intervenants_eligibles(
+                pipeline_dir, scenario, ligne, zone, mode, thematique
+            )
     except Exception as e:
         return jsonify({"slugs": [], "error": str(e)})
 
-    return jsonify({"slugs": slugs})
+    return jsonify({"slugs": slugs, "labels": labels})
 
 
 def _scan_localisation_candidats(pipeline_dir: Path, scenario: str, force: bool = False) -> list:
@@ -3299,6 +3353,156 @@ def _zones_avec_journal(pipeline_dir: Path, scenario: str) -> set:
             continue
         result.update((contenu.get("zones") or {}).keys())
     return result
+
+
+def _zones_candidates_oral(pipeline_dir: Path, scenario: str) -> list:
+    """Retourne les zones du scénario (les deux lignes éditoriales)
+    n'ayant pas encore type_diffusion en oral/mixte -- candidates à la
+    conversion via le nouveau mode "convertir" de
+    inject_orateur_custom.py (29 août 2026, P21, retour de David).
+
+    Contexte : le mode auto de inject_orateur_custom.py ne crée des
+    orateur·rices QUE sur des zones déjà oral/mixte (décision
+    délibérée -- créer des orateur·rices sur une zone "ecrit" les
+    laisserait inutilisé·es). Basculer une zone en oral/mixte reste
+    donc un choix éditorial curaté, zone par zone -- jamais automatisé
+    en aveugle (même raisonnement que le refus du --all multi-
+    scénarios sur le mode auto). Ce scan alimente un multi-select GUI
+    où David choisit lui-même quelles zones convertir, plutôt que
+    d'éditer journaux.yaml à la main une par une.
+
+    Chaque candidat a un "slug" composite "{ligne}::{zone_slug}" --
+    nécessaire car le même zone_slug peut exister sous les deux lignes
+    éditoriales avec un statut type_diffusion différent (indépendant
+    par ligne, voir zone afrique_centrale_australe : oral côté
+    pro_pouvoir, jamais vérifié côté opposition).
+
+    Même pattern de lecture directe de journaux.yaml (sans cache) que
+    _zones_avec_journal()/_scan_intervenants_eligibles() ci-dessus."""
+    if not scenario:
+        return []
+    journaux_path = pipeline_dir / "journaux.yaml"
+    if not journaux_path.exists():
+        return []
+    try:
+        import yaml as _yaml
+        data = _yaml.safe_load(journaux_path.read_text(encoding="utf-8")) or {}
+    except Exception:
+        return []
+
+    scenario_data = data.get(scenario) or {}
+    candidats = []
+    for ligne, contenu in scenario_data.items():
+        if not isinstance(contenu, dict):
+            continue
+        zones = contenu.get("zones") or {}
+        for zone_slug, zone_data in sorted(zones.items()):
+            if not isinstance(zone_data, dict):
+                continue
+            type_diffusion = zone_data.get("type_diffusion", "ecrit")
+            if type_diffusion in ("oral", "mixte"):
+                continue
+            candidats.append({
+                "slug": "{}::{}".format(ligne, zone_slug),
+                "ligne": ligne,
+                "zone_slug": zone_slug,
+                "nom": zone_data.get("nom", zone_slug),
+                "n_journalistes": len(zone_data.get("journalistes") or []),
+                "n_orateurs": len(zone_data.get("orateurs") or []),
+            })
+    return candidats
+
+
+def _scan_intervenants_eligibles(pipeline_dir: Path, scenario: str, ligne: str,
+                                  zone: str, mode: str, thematique: str = "") -> tuple:
+    """Retourne (noms, labels) des journalistes/orateurs éligibles pour
+    une combinaison scenario/ligne/zone précise, selon le mode de
+    diffusion choisi dans le GUI (champ --type-diffusion) -- pour le
+    nouveau champ "Forcer un intervenant précis" de generate.py
+    (--intervenant, P21, 25 août 2026).
+
+    mode == "ecrit"  -> uniquement les journalistes de la zone
+    mode == "oral"   -> uniquement les orateurs de la zone
+    tout le reste ("mixte", "auto", vide) -> les deux mélangés, décision
+    explicite de David (25 août 2026) : plus simple que de relire le
+    vrai type_diffusion configuré sur la zone pour trancher au cas par
+    cas.
+
+    thematique (26 août 2026, retour de David) : filtre les
+    JOURNALISTES sur cette thématique, EXACTEMENT comme le fait
+    get_journal_profile() (prompt_builder.py) au moment réel de la
+    génération -- même repli si aucun·e journaliste ne correspond
+    (retombe sur la liste complète plutôt qu'une liste vide, pour ne
+    jamais proposer moins d'options que ce que la génération réelle
+    accepterait). Les ORATEURS ne sont jamais filtrés par thématique --
+    ce concept n'existe pas pour eux dans le modèle de données (ils sont
+    caractérisés par communautes_desservies à la place, scoping P21 du
+    12 juillet).
+
+    labels (26 août 2026, retour de David) : "(journaliste)"/"(orateur)"
+    ajouté au texte AFFICHÉ dans le menu déroulant uniquement -- la
+    valeur réellement soumise (noms) reste le nom exact tel que dans
+    journaux.yaml, pour continuer à matcher intervenant_override côté
+    prompt_builder.py sans transformation.
+
+    Même pattern de lecture directe de journaux.yaml (sans cache) que
+    _zones_avec_journal() ci-dessus, pour rester cohérent.
+    """
+    if not scenario or not ligne or not zone:
+        return [], {}
+    journaux_path = pipeline_dir / "journaux.yaml"
+    if not journaux_path.exists():
+        return [], {}
+    try:
+        import yaml as _yaml
+        data = _yaml.safe_load(journaux_path.read_text(encoding="utf-8")) or {}
+    except Exception:
+        return [], {}
+
+    zone_data = (
+        (data.get(scenario) or {})
+        .get(ligne, {})
+        .get("zones", {})
+        .get(zone, {})
+    )
+    if not zone_data:
+        return [], {}
+
+    journalistes_data = zone_data.get("journalistes") or []
+    orateurs_data = zone_data.get("orateurs") or []
+
+    # Filtrage par thématique -- même logique que get_journal_profile()
+    # (prompt_builder.py) : filtre d'abord, repli sur la liste complète
+    # si le filtre ne retient personne.
+    if thematique:
+        journalistes_filtres = [
+            j for j in journalistes_data
+            if thematique in (j.get("thematiques") or [])
+        ]
+        if not journalistes_filtres:
+            journalistes_filtres = journalistes_data
+    else:
+        journalistes_filtres = journalistes_data
+
+    journalistes = [j.get("nom", "") for j in journalistes_filtres if j.get("nom")]
+    orateurs = [o.get("nom", "") for o in orateurs_data if o.get("nom")]
+
+    if mode == "ecrit":
+        noms = journalistes
+    elif mode == "oral":
+        noms = orateurs
+    else:
+        noms = journalistes + orateurs
+
+    labels = {}
+    for n in journalistes:
+        if n in noms:
+            labels[n] = "{} (journaliste)".format(n)
+    for n in orateurs:
+        if n in noms:
+            labels[n] = "{} (orateur)".format(n)
+
+    return noms, labels
 
 
 def _scan_zone_slugs_hier(pipeline_dir: Path, scenario: str) -> list:

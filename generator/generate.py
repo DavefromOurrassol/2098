@@ -92,6 +92,13 @@ def _parse_cli_args():
     # toujours dans journaux.yaml tel quel, zone par zone.
     parser.add_argument("--type-diffusion", default="auto",
                          choices=["auto", "ecrit", "oral", "mixte"])
+    # P21 (25 août 2026) : force un·e journaliste/orateur·rice précis·e
+    # pour CET article, choisi dans une liste éligible affichée par le
+    # GUI (dépend de scenario/ligne/zone/type_diffusion, voir
+    # scripts_config.json). Vide (défaut) = rotation normale, comme
+    # avant. Même restriction que --type-diffusion : uniquement sur
+    # generate.py, jamais generate_series.py.
+    parser.add_argument("--intervenant", default=None)
     # P20 Phase C (21 août 2026) : décision manuelle prise dès l'écriture
     # de l'article, plutôt qu'après coup uniquement -- voir docstring de
     # api.py::build_article_md(). --a-une-photo en store_true (comme
@@ -368,6 +375,12 @@ def run():
     # même convention que --article-longueur juste au-dessus.
     if cli_args.type_diffusion != "auto":
         config["type_diffusion_override"] = cli_args.type_diffusion
+    # P21 (25 août 2026) : vide (défaut argparse) = pas d'override,
+    # prompt_builder.py lit config["intervenant_override"] et l'ignore
+    # si absent -- même convention que type_diffusion_override juste
+    # au-dessus.
+    if cli_args.intervenant:
+        config["intervenant_override"] = cli_args.intervenant
     # P20 Phase C (21 août 2026) -- voir _parse_cli_args() ci-dessus.
     # Placé ici (avant la branche semi_guide/forcer) : config["article"]
     # est partagé par les deux modes, donc un seul point de câblage

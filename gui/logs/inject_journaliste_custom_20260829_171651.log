@@ -1,0 +1,4 @@
+  37 zones N1 / 90 zones totales
+    → LLM (mistral, tier=strict)...
+[llm] Mistral (mistral-large-latest) — entrée : 421 | sortie : 52
+  ✗ Réponse LLM incomplète (nom='Élodie Pitat', thematiques=['santé', "gestion des citernes d'eau potable", 'épidémies insulaires', 'plantes médicinales côtières'])

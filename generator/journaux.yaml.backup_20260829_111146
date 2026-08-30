@@ -24,9 +24,11 @@ breakdown:
           - opinions_editoriaux
           - international
           seniorite: 1
-          ton_personnel: Une cadence de forgeron, martelant chaque syllabe avec une
-            précision obstinée, comme si les mots devaient être durcis au feu avant
-            d’être assemblés en une armature inébranlable.
+          ton_personnel: Une élocution en spirale, comme un tissage de fibres inégales,
+            où chaque argument s’enroule autour du précédent avec une lenteur calculée,
+            laissant transparaître une irritation contenue—comme si la vérité, patiemment
+            tressée, devait étouffer les objections avant même qu’elles ne soient
+            formulées.
         - nom: Jean-Bosco Ndayishimiye
           thematiques:
           - economie_finance
@@ -9799,22 +9801,6 @@ eco_communalism:
           - international
           - petites_annonces_services
           seniorite: 1
-        type_diffusion: oral
-        orateurs:
-        - nom: Xunka’ Tz’ikin (La Voz del Monte)
-          communautes_desservies:
-          - altos de San Andrés
-          - milpas de la selva Lacandona
-          - senderos de la resistencia
-          reputation_orale: celle qui fait parler les arbres et trembler les patrons
-          seniorite: 1
-        - nom: Ixchel K'anal (La Sombra que Cosecha)
-          communautes_desservies:
-          - milpas de la selva baja
-          - colectivos de semillas libres
-          - senderos de la memoria rebelde
-          reputation_orale: celle qui tisse les mots comme les racines sous la terre
-          seniorite: 1
       enclaves_extractivistes_et_etats_residuels:
         nom: 'Ouro Extraído: Voz dos Escombros'
         ton: Ton rageur et sarcastique, mêlant jargon extractiviste et argot ouvrier
@@ -9915,22 +9901,6 @@ eco_communalism:
           - societe
           - culture
           seniorite: 1
-        type_diffusion: oral
-        orateurs:
-        - nom: L'Écho des Pierres (Marta Valser)
-          communautes_desservies:
-          - sources du Haut-Rhin
-          - marchés des Cévennes brûlées
-          - ponts de l'Ourthe sauvage
-          reputation_orale: craint·e pour ses silences plus lourds que les mots
-          seniorite: 1
-        - nom: La Voix des Sources (Joséphine 'Zéph' Morvan)
-          communautes_desservies:
-          - hautes terres cévenoles
-          - marchés flottants du Rhône
-          - forges des Apennins noirs
-          reputation_orale: redoutée pour ses rires qui coupent les discours
-          seniorite: 1
       maghreb_mediterraneen:
         nom: 'Méditerranée en Colère: Al-Bahr Yathir'
         ton: Ton théâtral et incantatoire, où chaque article semble être un cri lancé
@@ -9982,22 +9952,6 @@ eco_communalism:
           - lifestyle_art_de_vivre
           - culture
           - societe
-          seniorite: 1
-        type_diffusion: oral
-        orateurs:
-        - nom: Lalla Nsara 'Tidewhisper'
-          communautes_desservies:
-          - zaouïas du littoral
-          - souks des oueds asséchés
-          - camps des pêcheurs nomades
-          reputation_orale: celle qui murmure aux vagues avant qu’elles ne grondent
-          seniorite: 1
-        - nom: Sidi Mounir 'L'Étincelle des Oueds'
-          communautes_desservies:
-          - zaouïas des montagnes arides
-          - souks des vallées asséchées
-          - campements des pêcheurs nomades
-          reputation_orale: celui qui fait jaillir les mots comme l’eau des rochers
           seniorite: 1
       nordeste_bresilien_frente:
         nom: 'Sertão Sol Livre: Jornal da Resistência'
@@ -10197,24 +10151,6 @@ eco_communalism:
           - sports
           - faits_divers
           - petites_annonces_services
-          seniorite: 1
-        type_diffusion: oral
-        orateurs:
-        - nom: Amanar ⚡✨ / « Celui-qui-parle-aux-machines »
-          communautes_desservies:
-          - nœuds solaires du Ténéré
-          - caravanes des sables numériques
-          - places des assemblées ouvertes
-          reputation_orale: craint pour ses silences en code binaire, puis adoré quand
-            les diodes s’allument
-          seniorite: 1
-        - nom: Tafouk ⚡🌾 / « Celle-qui-tresse-les-vents »
-          communautes_desservies:
-          - dunes des assembleurs
-          - caravanes des codeurs nomades
-          - oasis des serveurs solaires
-          reputation_orale: redoutée quand elle chuchote en shell, puis applaudie
-            quand les réseaux chantent
           seniorite: 1
       sao_paulo_algorithmique:
         nom: APD — Audit Permanent des Dépossédés

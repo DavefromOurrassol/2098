@@ -8,6 +8,28 @@ code à chaque fois. Alimenté au fur et à mesure.*
 
 ---
 
+**`USER_MANUAL_COMPLET.md`**  
+Le manuel de référence du pipeline : comment tout fonctionne aujourd'hui (§0 à §7, architecture, scripts, options CLI, mécanismes GUI, conventions). Pas d'historique ni de récit de session — une photo de l'état actuel du système. Restructuré le 29 août (allégé de ~3960 à ~2100 lignes), avec une nouvelle section §2quater consolidant le pipeline rédaction. À uploader à chaque session.
+
+**`USER_MANUAL_HISTORIQUE.md`**  
+Les ~2000 lignes d'addenda chronologiques retirées du manuel principal le 29 août — le détail narratif de comment on est arrivé à l'état actuel, chantier par chantier. Consulté seulement au besoin (vérifier une décision passée), pas rechargé par défaut.
+
+**`BACKLOG_ACTIF.md`**  
+La liste vivante des chantiers ouverts, priorisés (Partie 1) et des risques structurels identifiés mais non actifs (Partie 3). Répond à "qu'est-ce qui reste à faire, dans quel ordre". Mis à jour en continu à chaque clôture ou ouverture de chantier. À uploader à chaque session.
+
+**`BACKLOG_ARCHIVE.md`**  
+Le miroir clos de l'actif : tous les chantiers terminés, avec leur résumé (contexte, ce qui a été codé, bugs trouvés/corrigés, décisions actées). Sert de référence historique — "est-ce que ce point a déjà été traité ?" — pas besoin de le recharger par défaut, seulement en cas de doute.
+
+**`HANDOFF_JJ_AOUT.md`**  
+Le pont entre deux sessions : compte-rendu de ce qui s'est passé **dans la session du jour** — fait, bugs trouvés/corrigés, décisions actées, reste à faire (point de reprise), fichiers livrés/modifiés, non traité hérité. Depuis le 29 août, format compact (voir `TEMPLATE_HANDOFF.md`) plutôt que narratif détaillé — le narratif va désormais dans le backlog au moment de la clôture. Remplacé par le handoff suivant à chaque nouvelle session ; l'ancien peut être consulté au besoin mais n'est pas rechargé par défaut.
+
+**`TEMPLATE_HANDOFF.md`**  
+Le gabarit vide du handoff (créé le 29 août) : structure fixe à suivre (Fait / Bugs trouvés / Décisions actées / Reste à faire / Fichiers livrés / Non traité hérité), pour garantir un format homogène d'une session à l'autre.
+
+---
+
+**Règle de lecture résumée** : `USER_MANUAL_COMPLET.md` + `BACKLOG_ACTIF.md` + le dernier `HANDOFF` sont les trois fichiers à uploader systématiquement en début de session (le Project Claude les garde en référence persistante). `USER_MANUAL_HISTORIQUE.md` et `BACKLOG_ARCHIVE.md` ne sont rouverts qu'à la demande, pour vérifier un détail passé.
+
 ## Pipeline de génération
 
 ### L'injection d'événements ou d'entités se fait-elle sur des zones déjà définies ?
