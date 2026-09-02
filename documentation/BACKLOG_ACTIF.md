@@ -95,40 +95,6 @@ confirmé par David.
 
 ---
 
-## ⚪ 2. `chapo`/`tags`/`image_prompt` vides — bloc `===METADONNEES_PUBLICATION===` absent de la réponse LLM (~7% des cas)
-**Découvert en marge du batch de volume P25** (22 août, via un warning
-console : `[api] [WARN] Bloc ===METADONNEES_PUBLICATION=== absent de
-la réponse du LLM`). **Mesuré** : 3 articles sur 41 (~7%), dont 2 sur
-la même thématique (`religion_spiritualite`) — possible coïncidence
-sur un petit échantillon, possible signal (thématique générant des
-réponses plus longues/complexes ?), pas assez de données pour trancher.
-
-Le garde-fou de P20 Phase A fonctionne comme prévu (pas de plantage,
-champs laissés vides) — mais **aucun mécanisme de retry n'existe pour
-ce cas**, contrairement à la longueur (retry automatique depuis le 10
-août). Diagnostic et éventuelle correction (retry ciblé sur ce bloc
-précis ?) laissés pour une prochaine session.
-
----
-
-## ⚪ 3. `ton_personnel` — reliquat hors mécanisme cœur
-**Scindé le 29 août.** Le mécanisme cœur (champ unifié, outil
-`set_ton_personnel.py`, intégration dans `prompt_builder.py`) a été
-codé et validé en conditions réelles le 29 août (3 allers-retours de
-test réel, chacun ayant révélé et corrigé un problème réel : citations
-verbatim + stéréotypes culturels, garde-fou anti-guillemets, longueur
-non maîtrisée) — **ce volet est clos**, voir `BACKLOG_ARCHIVE.md`.
-
-Reste ouvert :
-- **`--all-manquants` jamais lancé sur une zone entière** en conditions
-  réelles (seulement testé sur des cas individuels).
-- **Intégration GUI de `set_ton_personnel.py` lui-même** (l'outil
-  autonome en CLI) — pas commencée. À ne pas confondre avec le flag
-  `--avec-ton-personnel`, déjà câblé en mode manuel sur
-  `inject_journaliste_custom.py` et `inject_orateur_custom.py`.
-
----
-
 ---
 
 **Nettoyé le 19 août** — retrait des points reconfirmés à plusieurs
@@ -157,6 +123,74 @@ pour la même raison inverse — P22 a confirmé et résolu son statut le
   gênant en pratique. À réévaluer si un historique cumulatif devient
   utile (ex. navigation Obsidian sur l'ensemble d'un scénario plutôt
   que sur le dernier batch seul).
+
+---
+
+## ⚪ 2. Éditions datées (mensuel) — progression réelle du monde dans l'année
+**Scopé le 30 août**, suite à une réflexion de David sur la parution à
+dates régulières (ex. mensuel) avec cohérence temporelle des sujets
+traités et continuité narrative entre éditions. **Diagnostic complet
+fait, rien codé.**
+
+**Constat de départ (lecture de `generate.py`/`snapshot.py`/
+`generate_series.py`/`generate_manual.py`)** : `date_fictive` ne touche
+**jamais** le contenu généré. `build_snapshot(scenario_slug,
+thematique=None, dry_run=True, forcer_config=None)` n'a même pas de
+paramètre de date. Confirmé par grep sur les 3 fichiers : `date_fictive`
+ne sert qu'à `prompt_builder.py` pour la ligne "date de publication"
+sous le titre — jamais transmise à `variable_states`/aux instances
+sélectionnées. Deux articles datés "3 janvier 2098" et "22 décembre
+2098" reçoivent un `variable_states` strictement identique. Les dates
+elles-mêmes ne progressent pas : `generate.py` tire au hasard dans
+`DATES_2098` (`random.choice`), `generate_series.py`/`generate_manual.py`
+bouclent dessus (`% len(DATES_2098)`) — une liste fixe de ~20-24 dates,
+toutes dans la seule année 2098, aucune notion d'édition ni de fenêtre.
+
+**Un mécanisme existant s'en approche, mais n'est pas conçu pour ça** :
+`apply_custom_events()`/`apply_custom_injections()`/`apply_custom_signals()`
+(3 formules identiques, dupliquées) calculent `duree_effet = 2098 -
+int(annee)` — **2098 en dur comme "présent" absolu du système**, plus
+`snapshot["scenario"]["year"] = 2098` en dur également. Ce mécanisme
+répond à "comment un événement du passé (2050, 2070...) irrigue encore
+l'état du monde en 2098", pas à "que s'est-il passé le mois dernier
+dans la même année" — un événement daté "2098" donne `duree_effet = 0`,
+donc un effet quasi nul, l'inverse de ce qu'il faudrait pour une
+progression mensuelle.
+
+**Décision actée avec David (30 août)** : le monde doit **vraiment**
+progresser dans l'année (pas seulement la sélection des sujets sur un
+état par ailleurs figé) — option la plus ambitieuse des deux
+envisagées.
+
+**Piste retenue, à valider avant de coder** : généraliser les 3
+formules dupliquées vers une vraie "date de référence de l'édition"
+(fractionnaire, ex. `2098.08` pour août) plutôt que `2098` en dur. Les
+`custom_events` **persistent déjà dans le vault** et se réappliquent à
+chaque nouvelle génération — une fois ce calcul généralisé, chaque
+édition mensuelle pourrait injecter ses propres `custom_events` (les
+sujets réellement traités ce mois-là), qui irrigueraient automatiquement
+toutes les éditions suivantes. **Ça répondrait aux deux besoins de
+David avec un seul mécanisme** (progression du monde ET continuité
+narrative entre éditions), plutôt que deux chantiers séparés.
+
+**Reste à trancher avant de coder** :
+- Généraliser les 3 formules dupliquées (`apply_custom_injections`/
+  `apply_custom_events`/`apply_custom_signals`) + le `year: 2098` en
+  dur du snapshot — vérifier aussi l'impact ailleurs dans le pipeline
+  (`generate.py`, `prompt_builder.py`) où "on est en 2098" pourrait
+  être supposé implicitement, pas vérifié à ce stade.
+- Faire remonter la date de référence de l'édition jusqu'à
+  `build_snapshot()` (paramètre absent aujourd'hui) depuis
+  `generate_series.py`/`config_series.yaml`.
+- Construire la notion d'édition elle-même (numéro, date de parution,
+  fenêtre par rapport à la précédente) — n'existe nulle part
+  aujourd'hui.
+- **Comment les `custom_events` de chaque édition sont produits** :
+  curation manuelle (comme aujourd'hui, `inject_custom_events.py`), ou
+  extraction automatique depuis les articles réellement générés ce
+  mois-là (séduisant mais nouveau mécanisme à concevoir : quels
+  articles méritent de devenir des `custom_events` influençant la
+  suite, avec quels deltas).
 
 ---
 

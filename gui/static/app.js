@@ -71,6 +71,7 @@ function buildNav() {
   nav.appendChild(makeNavItem('dashboard', '📊', 'Tableau de bord', null, 'tab'));
   nav.appendChild(makeNavItem('carte', '🗺️', 'Carte', null, 'tab'));
   nav.appendChild(makeNavItem('chantiers', '🚧', 'Chantiers', null, 'tab'));
+  nav.appendChild(makeNavItem('redaction', '📰', 'Rédaction', null, 'tab'));
   nav.appendChild(makeDivider());
 
   // Sections scripts
@@ -291,6 +292,7 @@ function showTab(tab) {
     if (tab === 'dashboard') loadDashboard();
     if (tab === 'carte')     loadCarte();
     if (tab === 'chantiers') loadChantiers();
+    if (tab === 'redaction') loadRedaction();
     if (tab === 'review')    loadReview();
     if (tab === 'config')    loadConfigForm();
   }
@@ -3033,7 +3035,24 @@ function initLeafletMap() {
   const mapEl = document.getElementById('carte-map');
   CarteState.map = L.map(mapEl, { worldCopyJump: true, renderer: L.svg() }).setView([20, 10], 2);
   L.svg().addTo(CarteState.map); // force la création immédiate du <svg> (nécessaire pour injecter les motifs)
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
+
+  // CARTO_API_KEY (30 août 2026) : CARTO exige désormais une clé pour ses
+  // tuiles raster gratuites, sinon filigrane "API KEY REQUIRED" sur toute
+  // la carte -- changement de leur côté, rien à voir avec ce pipeline.
+  // Injectée par app.py/index.html depuis l'environnement (~/.zshrc),
+  // jamais en dur ici. Avertissement clair en console si absente, plutôt
+  // que de laisser le filigrane silencieux sans piste de correction.
+  const cartoKey = window.CARTO_API_KEY || '';
+  if (!cartoKey) {
+    console.warn(
+      "CARTO_API_KEY non définie -- la carte affichera un filigrane " +
+      "'API KEY REQUIRED'. Ajoute CARTO_API_KEY à ton environnement " +
+      "(clé gratuite sur https://carto.com/basemaps/apikey) et " +
+      "redémarre Flask."
+    );
+  }
+  const tileUrlBase = 'https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png';
+  L.tileLayer(cartoKey ? (tileUrlBase + '?key=' + encodeURIComponent(cartoKey)) : tileUrlBase, {
     attribution: '© OpenStreetMap, © CARTO',
     maxZoom: 8,
   }).addTo(CarteState.map);
@@ -4735,3 +4754,426 @@ async function chantiersAppliquerTout() {
     localStorage.removeItem(STORAGE_KEY);
   });
 })();
+
+/* ══════════════════════════════════════════════════
+   ONGLET RÉDACTION — journalistes & orateurs
+   (point 3, 30 août 2026 — voir BACKLOG_ACTIF.md)
+   Table plate filtrable/triable/paginée + panneau de détail
+   au clic sur une ligne. Édition de ton_personnel uniquement
+   (deux modes : IA / personnalisé), via set_ton_personnel.py
+   --json en sous-processus. Les autres champs (thématiques,
+   séniorité, communautés desservies) sont affichés en lecture
+   seule -- pas de mécanisme d'écriture existant pour eux.
+   --all-manquants (rattrapage par zone) reste CLI-only,
+   volontairement absent de cet onglet.
+   ══════════════════════════════════════════════════ */
+
+const RedactionState = {
+  all: [],
+  filtered: [],
+  page: 0,
+  perPage: 50,
+  sortKey: 'ton_personnel',
+  sortDir: 'asc',   // vide d'abord par défaut -- l'usage principal est le rattrapage
+  filtersWired: false,
+  selected: null,   // référence directe vers un objet de RedactionState.all
+};
+
+function _redactionEsc(s) {
+  return String(s == null ? '' : s)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+async function loadRedaction() {
+  if (!RedactionState.filtersWired) {
+    const scenarioSel = document.getElementById('redaction-scenario');
+    const scenarios = State.config?.scenarios || [];
+    scenarioSel.innerHTML = '<option value="">Tous</option>' +
+      scenarios.map(s => `<option value="${s}">${s}</option>`).join('');
+
+    ['redaction-scenario', 'redaction-ligne', 'redaction-role', 'redaction-ton-status']
+      .forEach(id => document.getElementById(id).addEventListener('change', refreshRedaction));
+    document.getElementById('redaction-search').addEventListener('input', () => {
+      RedactionState.page = 0;
+      _redactionApplyLocalFilterSort();
+      renderRedactionTable();
+    });
+    document.getElementById('redaction-prev').addEventListener('click', () => {
+      if (RedactionState.page > 0) { RedactionState.page--; renderRedactionTable(); }
+    });
+    document.getElementById('redaction-next').addEventListener('click', () => {
+      const maxPage = Math.max(0, Math.ceil(RedactionState.filtered.length / RedactionState.perPage) - 1);
+      if (RedactionState.page < maxPage) { RedactionState.page++; renderRedactionTable(); }
+    });
+    document.querySelectorAll('.redaction-table th[data-sort]').forEach(th => {
+      th.addEventListener('click', () => {
+        const key = th.dataset.sort;
+        if (RedactionState.sortKey === key) {
+          RedactionState.sortDir = RedactionState.sortDir === 'asc' ? 'desc' : 'asc';
+        } else {
+          RedactionState.sortKey = key;
+          RedactionState.sortDir = 'asc';
+        }
+        _redactionApplyLocalFilterSort();
+        renderRedactionTable();
+      });
+    });
+    RedactionState.filtersWired = true;
+  }
+  await refreshRedaction();
+}
+
+function _redactionKey(p) {
+  return `${p.scenario}::${p.ligne}::${p.zone_slug}::${p.nom}`;
+}
+
+async function refreshRedaction() {
+  const scenario = document.getElementById('redaction-scenario').value;
+  const ligne = document.getElementById('redaction-ligne').value;
+  const role = document.getElementById('redaction-role').value;
+  const tonStatus = document.getElementById('redaction-ton-status').value;
+
+  const params = new URLSearchParams();
+  if (scenario) params.set('scenario', scenario);
+  if (ligne) params.set('ligne', ligne);
+  if (role) params.set('role', role);
+  if (tonStatus) params.set('ton_status', tonStatus);
+
+  const tbody = document.getElementById('redaction-tbody');
+  tbody.innerHTML = '<tr><td colspan="8" class="redaction-empty">Chargement…</td></tr>';
+
+  try {
+    const res = await fetch(`/api/redaction/personnes?${params.toString()}`);
+    const data = await res.json();
+    RedactionState.all = data.personnes || [];
+  } catch (e) {
+    tbody.innerHTML = `<tr><td colspan="8" class="redaction-empty">Erreur réseau : ${e.message}</td></tr>`;
+    return;
+  }
+
+  // Chaque fetch remplace RedactionState.all par de NOUVEAUX objets --
+  // la sélection en cours (RedactionState.selected) pointe donc vers une
+  // référence obsolète après tout changement de filtre. Sans cette
+  // réconciliation, le panneau reste figé sur son dernier contenu
+  // indéfiniment (bug remonté le 30 août -- refreshRedaction() ne
+  // rafraîchissait jamais le panneau, seulement la table).
+  if (RedactionState.selected) {
+    const key = _redactionKey(RedactionState.selected);
+    RedactionState.selected = RedactionState.all.find(p => _redactionKey(p) === key) || null;
+  }
+
+  RedactionState.page = 0;
+  _redactionApplyLocalFilterSort();
+  renderRedactionTable();
+  renderRedactionPanel();
+}
+
+function _redactionApplyLocalFilterSort() {
+  const search = (document.getElementById('redaction-search').value || '').trim().toLowerCase();
+  let rows = RedactionState.all;
+  if (search) {
+    rows = rows.filter(p => (p.nom || '').toLowerCase().includes(search));
+  }
+
+  const key = RedactionState.sortKey;
+  const dir = RedactionState.sortDir === 'asc' ? 1 : -1;
+  rows = [...rows].sort((a, b) => {
+    // ton_personnel : vide avant rempli en tri "asc" (le cas d'usage principal
+    // est le rattrapage -- voir les vides en premier par défaut)
+    let av = a[key], bv = b[key];
+    if (key === 'ton_personnel') { av = av ? 1 : 0; bv = bv ? 1 : 0; }
+    if (typeof av === 'string') av = av.toLowerCase();
+    if (typeof bv === 'string') bv = bv.toLowerCase();
+    if (av < bv) return -1 * dir;
+    if (av > bv) return 1 * dir;
+    return 0;
+  });
+
+  RedactionState.filtered = rows;
+}
+
+function renderRedactionTable() {
+  const tbody = document.getElementById('redaction-tbody');
+  const { filtered, page, perPage } = RedactionState;
+
+  document.getElementById('redaction-count').textContent = `${filtered.length} personne(s)`;
+
+  if (filtered.length === 0) {
+    tbody.innerHTML = '<tr><td colspan="8" class="redaction-empty">Aucun résultat pour ces filtres.</td></tr>';
+    document.getElementById('redaction-range').textContent = '';
+    document.getElementById('redaction-page-label').textContent = '';
+    document.getElementById('redaction-prev').disabled = true;
+    document.getElementById('redaction-next').disabled = true;
+    return;
+  }
+
+  const start = page * perPage;
+  const slice = filtered.slice(start, start + perPage);
+
+  tbody.innerHTML = slice.map(p => `
+    <tr data-key="${_redactionEsc(p.scenario)}::${_redactionEsc(p.ligne)}::${_redactionEsc(p.zone_slug)}::${_redactionEsc(p.nom)}"
+        class="${RedactionState.selected === p ? 'active' : ''}">
+      <td title="${_redactionEsc(p.scenario)}">${_redactionEsc(p.scenario)}</td>
+      <td title="${_redactionEsc(p.ligne)}">${_redactionEsc(p.ligne)}</td>
+      <td title="${_redactionEsc(p.zone_nom)}">${_redactionEsc(p.zone_nom)}</td>
+      <td>${p.type_diffusion === 'oral' ? 'Oral' : 'Écrit'}</td>
+      <td title="${_redactionEsc(p.nom)}">${_redactionEsc(p.nom)}</td>
+      <td>${p.role === 'orateur' ? 'Orateur' : 'Journaliste'}</td>
+      <td>${p.seniorite ?? ''}</td>
+      <td class="${p.ton_personnel ? 'redaction-ton-rempli' : 'redaction-ton-vide'}">
+        ${p.ton_personnel ? 'Rempli' : 'Vide'}
+      </td>
+    </tr>
+  `).join('');
+
+  tbody.querySelectorAll('tr[data-key]').forEach((tr, i) => {
+    tr.addEventListener('click', () => {
+      selectRedactionRow(slice[i]);
+    });
+  });
+
+  const totalPages = Math.max(1, Math.ceil(filtered.length / perPage));
+  document.getElementById('redaction-range').textContent =
+    `${start + 1}–${Math.min(start + perPage, filtered.length)} sur ${filtered.length}`;
+  document.getElementById('redaction-page-label').textContent = `page ${page + 1} / ${totalPages}`;
+  document.getElementById('redaction-prev').disabled = page === 0;
+  document.getElementById('redaction-next').disabled = page >= totalPages - 1;
+}
+
+function selectRedactionRow(personne) {
+  RedactionState.selected = personne;
+  renderRedactionTable();
+  renderRedactionPanel();
+}
+
+function renderRedactionPanel() {
+  const panel = document.getElementById('redaction-panel');
+  const p = RedactionState.selected;
+  if (!p) {
+    panel.innerHTML = '<div class="redaction-panel-empty">Clique sur une ligne pour voir/éditer sa fiche.</div>';
+    return;
+  }
+
+  const thematiquesSection = p.role === 'journaliste'
+    ? `
+      <div class="redaction-panel-section">
+        <label>Thématiques</label>
+        <div id="redaction-thematiques-box" class="redaction-chips-box">Chargement…</div>
+      </div>`
+    : `
+      <div class="redaction-panel-section">
+        <label>Communautés desservies</label>
+        <div class="redaction-panel-list">${(p.communautes_desservies || []).map(_redactionEsc).join(', ') || '(non renseigné)'}</div>
+      </div>
+      <div class="redaction-panel-section">
+        <label>Réputation orale</label>
+        <div class="redaction-panel-list">${_redactionEsc(p.reputation_orale) || '(non renseignée)'}</div>
+      </div>`;
+
+  panel.innerHTML = `
+    <div class="redaction-panel-title">${_redactionEsc(p.nom)}</div>
+    <div class="redaction-panel-sub">${p.role === 'orateur' ? 'Orateur·rice' : 'Journaliste'}</div>
+
+    <div class="redaction-panel-section">
+      <label>Journal</label>
+      <div class="redaction-panel-list">${_redactionEsc(p.zone_nom)}</div>
+    </div>
+    <div class="redaction-panel-section">
+      <label>Zone</label>
+      <div class="redaction-panel-list">${_redactionEsc(p.zone_slug)}</div>
+    </div>
+    <div class="redaction-panel-section">
+      <label>Ligne</label>
+      <div class="redaction-panel-list">${_redactionEsc(p.ligne)} — ${_redactionEsc(p.scenario)}</div>
+    </div>
+    <div class="redaction-panel-section">
+      <label>Ton du journal</label>
+      <div class="redaction-panel-list">${_redactionEsc(p.zone_ton) || '(non renseigné)'}</div>
+    </div>
+
+    ${thematiquesSection}
+
+    <div class="redaction-panel-section">
+      <label>Séniorité</label>
+      <select id="redaction-seniorite-select">
+        ${[1, 2, 3, 4, 5].map(n => `<option value="${n}" ${p.seniorite === n ? 'selected' : ''}>${n}</option>`).join('')}
+      </select>
+      <div id="redaction-seniorite-msg" class="redaction-panel-msg"></div>
+    </div>
+
+    <div class="redaction-panel-section">
+      <label>ton_personnel</label>
+      ${p.ton_personnel
+        ? `<div class="redaction-panel-current">${_redactionEsc(p.ton_personnel)}</div>`
+        : '<div class="redaction-panel-list" style="margin-bottom:8px">(vide)</div>'}
+
+      <div class="redaction-ton-mode-tabs">
+        <div class="redaction-ton-mode-tab active" data-mode="ia">Généré par IA</div>
+        <div class="redaction-ton-mode-tab" data-mode="custom">Personnalisé</div>
+      </div>
+
+      <textarea id="redaction-ton-custom" rows="3" placeholder="Ton personnalisé…" style="display:none"></textarea>
+
+      ${p.ton_personnel ? '<div class="redaction-panel-warning">Un ton_personnel existe déjà — cette action le remplace.</div>' : ''}
+
+      <button id="redaction-ton-submit" class="redaction-panel-btn">
+        ${p.ton_personnel ? 'Régénérer' : 'Générer'}
+      </button>
+      <div id="redaction-ton-msg" class="redaction-panel-msg"></div>
+    </div>
+  `;
+
+  if (p.role === 'journaliste') {
+    renderRedactionThematiquesBox(p);
+  }
+
+  document.getElementById('redaction-seniorite-select').addEventListener('change', (e) => {
+    submitRedactionChamps(p, { seniorite: parseInt(e.target.value, 10) }, 'redaction-seniorite-msg');
+  });
+
+  let mode = 'ia';
+  const tabs = panel.querySelectorAll('.redaction-ton-mode-tab');
+  const textarea = document.getElementById('redaction-ton-custom');
+  const submitBtn = document.getElementById('redaction-ton-submit');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      mode = tab.dataset.mode;
+      tabs.forEach(t => t.classList.toggle('active', t === tab));
+      textarea.style.display = mode === 'custom' ? 'block' : 'none';
+      submitBtn.textContent = mode === 'custom'
+        ? 'Enregistrer'
+        : (p.ton_personnel ? 'Régénérer' : 'Générer');
+    });
+  });
+
+  submitBtn.addEventListener('click', () => submitRedactionTonPersonnel(p, () => mode, textarea));
+}
+
+// Cache la liste des thématiques + le plafond (chargée une seule fois par
+// session) -- vraie constante THEMATIQUES_CONNUES/MAX_THEMATIQUES_PAR_
+// JOURNALISTE depuis le 30 août 2026 (inject_journaliste_custom.py), voir
+// app.py.
+let _redactionThematiquesCache = null;
+let _redactionMaxThematiques = null;
+
+async function renderRedactionThematiquesBox(personne) {
+  const box = document.getElementById('redaction-thematiques-box');
+  if (!box) return;
+
+  if (!_redactionThematiquesCache) {
+    try {
+      const res = await fetch('/api/redaction/thematiques');
+      const data = await res.json();
+      _redactionThematiquesCache = data.thematiques || [];
+      _redactionMaxThematiques = data.max_par_journaliste || null;
+    } catch (e) {
+      box.innerHTML = `<span class="redaction-panel-list">Erreur de chargement : ${e.message}</span>`;
+      return;
+    }
+  }
+  // La personne sélectionnée a pu changer pendant le fetch (clic rapide) --
+  // on ne rend que si le panneau affiche toujours la même personne.
+  if (RedactionState.selected !== personne) return;
+
+  const selected = new Set(personne.thematiques || []);
+  box.innerHTML = _redactionThematiquesCache.map(t => `
+    <label class="redaction-chip ${selected.has(t) ? 'active' : ''}">
+      <input type="checkbox" value="${_redactionEsc(t)}" ${selected.has(t) ? 'checked' : ''}>
+      ${_redactionEsc(t)}
+    </label>
+  `).join('')
+    + (_redactionMaxThematiques ? `<div class="redaction-panel-hint">${selected.size} / ${_redactionMaxThematiques} (plafond habituel, pas une limite technique dure)</div>` : '')
+    + '<div id="redaction-thematiques-msg" class="redaction-panel-msg"></div>';
+
+  box.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+    cb.addEventListener('change', () => {
+      cb.closest('.redaction-chip').classList.toggle('active', cb.checked);
+      const nouvelles = [...box.querySelectorAll('input[type="checkbox"]:checked')].map(c => c.value);
+      const hint = box.querySelector('.redaction-panel-hint');
+      if (hint && _redactionMaxThematiques) {
+        hint.textContent = `${nouvelles.length} / ${_redactionMaxThematiques} (plafond habituel, pas une limite technique dure)`;
+        hint.classList.toggle('over', nouvelles.length > _redactionMaxThematiques);
+      }
+      submitRedactionChamps(personne, { thematiques: nouvelles }, 'redaction-thematiques-msg');
+    });
+  });
+}
+
+async function submitRedactionChamps(personne, champs, msgElId) {
+  const msgEl = document.getElementById(msgElId);
+  if (msgEl) { msgEl.className = 'redaction-panel-msg loading'; msgEl.textContent = 'Enregistrement…'; }
+
+  try {
+    const res = await fetch('/api/redaction/champs', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        scenario: personne.scenario, ligne: personne.ligne,
+        zone_slug: personne.zone_slug, nom: personne.nom, role: personne.role,
+        ...champs,
+      }),
+    });
+    const data = await res.json();
+    if (data.ok) {
+      if ('thematiques' in champs) personne.thematiques = data.thematiques;
+      if ('seniorite' in champs) personne.seniorite = data.seniorite;
+      if (msgEl) { msgEl.className = 'redaction-panel-msg ok'; msgEl.textContent = '✓ Enregistré.'; }
+      renderRedactionTable();
+    } else {
+      if (msgEl) { msgEl.className = 'redaction-panel-msg error'; msgEl.textContent = `Erreur : ${data.error}`; }
+    }
+  } catch (e) {
+    if (msgEl) { msgEl.className = 'redaction-panel-msg error'; msgEl.textContent = `Erreur réseau : ${e.message}`; }
+  }
+}
+
+async function submitRedactionTonPersonnel(personne, getMode, textarea) {
+  const msgEl = document.getElementById('redaction-ton-msg');
+  const submitBtn = document.getElementById('redaction-ton-submit');
+  const mode = getMode();
+  const texte = (textarea.value || '').trim();
+
+  if (mode === 'custom' && !texte) {
+    msgEl.className = 'redaction-panel-msg error';
+    msgEl.textContent = 'Entre un texte avant d\'enregistrer.';
+    return;
+  }
+
+  submitBtn.disabled = true;
+  msgEl.className = 'redaction-panel-msg loading';
+  msgEl.textContent = mode === 'custom' ? 'Enregistrement…' : 'Génération en cours (appel IA, peut prendre jusqu\'à 90s)…';
+
+  try {
+    const res = await fetch('/api/redaction/ton_personnel', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        scenario: personne.scenario,
+        ligne: personne.ligne,
+        zone_slug: personne.zone_slug,
+        nom: personne.nom,
+        mode: mode === 'custom' ? 'custom' : 'ia',
+        texte: mode === 'custom' ? texte : undefined,
+        overwrite: !!personne.ton_personnel,
+      }),
+    });
+    const data = await res.json();
+    if (data.ok) {
+      personne.ton_personnel = data.ton_personnel;
+      msgEl.className = 'redaction-panel-msg ok';
+      msgEl.textContent = '✓ Enregistré.';
+      renderRedactionTable();
+      renderRedactionPanel();
+    } else {
+      msgEl.className = 'redaction-panel-msg error';
+      msgEl.textContent = `Erreur : ${data.error}`;
+    }
+  } catch (e) {
+    msgEl.className = 'redaction-panel-msg error';
+    msgEl.textContent = `Erreur réseau : ${e.message}`;
+  } finally {
+    submitBtn.disabled = false;
+  }
+}

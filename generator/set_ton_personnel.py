@@ -53,6 +53,13 @@ Usage :
         --zone-slug afrique_centrale_australe --all-manquants
 
     python3 set_ton_personnel.py ... --dry-run   # appelle le LLM pour de vrai, n'écrit rien
+
+--json (30 août 2026, mode --nom uniquement) : ajoute une ligne JSON en
+fin de stdout ({"ok": bool, "ton_personnel": str, "dry_run": bool} ou
+{"ok": false, "error": str}), en plus des print() humains habituels --
+consommé par gui/app.py (panneau de détail journaliste/orateur, appelé
+en sous-processus). --all-manquants reste volontairement CLI-only,
+--json le refuse explicitement (voir BACKLOG_ACTIF.md).
 """
 import argparse
 import json
@@ -272,6 +279,12 @@ def main():
     parser.add_argument("--dry-run", action="store_true",
                          help="⚠️ Appelle quand même le LLM pour de vrai -- seule "
                               "l'écriture sur disque est court-circuitée.")
+    parser.add_argument("--json", action="store_true",
+                         help="Sortie JSON structurée en plus des print() humains "
+                              "(1 ligne, en dernier sur stdout) -- pour le panneau "
+                              "GUI (30 août 2026). Mode --nom uniquement, "
+                              "--all-manquants reste volontairement CLI-only (voir "
+                              "BACKLOG_ACTIF.md).")
     args = parser.parse_args()
 
     if bool(args.nom) == bool(args.all_manquants):
@@ -281,13 +294,21 @@ def main():
         print("  ✗ --ton-personnel n'a de sens qu'avec --nom (une valeur "
               "directe ne peut pas s'appliquer à plusieurs personnes).")
         sys.exit(1)
+    if args.json and args.all_manquants:
+        print("  ✗ --json n'est supporté qu'avec --nom (le panneau GUI ne "
+              "traite qu'une personne à la fois -- --all-manquants reste "
+              "CLI-only).")
+        sys.exit(1)
 
     journaux = load_journaux()
     try:
         zone_data = journaux[args.scenario][args.ligne]["zones"][args.zone_slug]
     except KeyError:
-        print("  ✗ Zone introuvable : {}/{}/{}".format(
-            args.scenario, args.ligne, args.zone_slug))
+        msg = "Zone introuvable : {}/{}/{}".format(
+            args.scenario, args.ligne, args.zone_slug)
+        print("  ✗ {}".format(msg))
+        if args.json:
+            print(json.dumps({"ok": False, "error": msg}))
         sys.exit(1)
 
     # Cibles à traiter : soit une seule personne, soit tout le monde
@@ -295,8 +316,17 @@ def main():
     if args.nom:
         liste, entree = _trouver_entree(zone_data, args.nom)
         if entree is None:
-            print("  ✗ '{}' introuvable dans cette zone (ni journaliste, "
-                  "ni orateur·rice).".format(args.nom))
+            msg = "'{}' introuvable dans cette zone (ni journaliste, ni orateur·rice).".format(args.nom)
+            print("  ✗ {}".format(msg))
+            if args.json:
+                print(json.dumps({"ok": False, "error": msg}))
+            sys.exit(1)
+        if entree.get("ton_personnel") and not args.overwrite:
+            msg = ("'{}' a déjà un ton_personnel -- utilise --overwrite pour "
+                   "le remplacer.").format(args.nom)
+            print("  ✗ {}".format(msg))
+            if args.json:
+                print(json.dumps({"ok": False, "error": msg}))
             sys.exit(1)
         cibles = [(liste, entree)]
     else:
@@ -363,11 +393,21 @@ def main():
     if args.dry_run:
         print()
         print("[dry-run] Rien écrit sur disque.")
+        if args.json:
+            if reussis:
+                print(json.dumps({"ok": True, "dry_run": True,
+                                   "ton_personnel": reussis[0][1]}))
+            else:
+                print(json.dumps({"ok": False,
+                                   "error": echecs[0][1] if echecs else "échec inconnu"}))
         return
 
     if not reussis:
         print()
         print("Aucun ton_personnel écrit -- journaux.yaml non modifié.")
+        if args.json:
+            print(json.dumps({"ok": False,
+                               "error": echecs[0][1] if echecs else "échec inconnu"}))
         return
 
     backup_path = JOURNAUX_PATH + ".backup_" + datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -377,6 +417,10 @@ def main():
 
     save_journaux(journaux, dry_run=False)
     print("  ✓ journaux.yaml sauvegardé ({} ton_personnel écrit(s)).".format(len(reussis)))
+
+    if args.json:
+        print(json.dumps({"ok": True, "dry_run": False,
+                           "ton_personnel": reussis[0][1]}))
 
 
 if __name__ == "__main__":

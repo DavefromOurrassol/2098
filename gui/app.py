@@ -82,7 +82,17 @@ def load_scripts_config() -> list:
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    # CARTO_API_KEY (30 août 2026) : CARTO exige désormais une clé pour
+    # ses tuiles raster gratuites (basemaps.cartocdn.com), sinon filigrane
+    # "API KEY REQUIRED" sur la carte -- changement de leur côté fin août
+    # 2026, rien à voir avec le pipeline. Lue depuis l'environnement
+    # (~/.zshrc, même endroit que les autres clés API du projet -- jamais
+    # commitée), injectée dans le template plutôt qu'en dur dans app.js.
+    # Cette clé est utilisée côté navigateur (Leaflet fait les requêtes de
+    # tuiles directement depuis le client) -- comme les clés Google Maps,
+    # ce n'est pas un secret serveur à protéger de la même façon qu'une clé
+    # LLM, mais on évite quand même de la commiter dans le HTML statique.
+    return render_template("index.html", carto_api_key=os.environ.get("CARTO_API_KEY", ""))
 
 
 @app.route("/api/config", methods=["GET"])
@@ -2870,6 +2880,301 @@ def chantiers_appliquer():
                          "returncode": resultat.returncode}), 500
 
     return jsonify({"ok": True, "log": resultat.stdout[-4000:]})
+
+
+# ── API Rédaction — table journalistes/orateurs (30 août 2026) ────────────────
+#
+# Nouvel onglet GUI (pas une entrée scripts_config.json -- même famille que
+# Carte/Chantiers ci-dessus) : consultation/édition des journalistes et
+# orateur·rices de journaux.yaml. Design complet dans BACKLOG_ACTIF.md
+# (point 3, 30 août 2026). V1 = affichage de tous les champs + édition de
+# ton_personnel uniquement (les autres champs -- thématiques, séniorité,
+# communautés desservies -- n'ont aucun mécanisme d'écriture existant en
+# dehors de la création, décision actée de ne pas les rendre éditables ici
+# tant qu'un vrai besoin ne se manifeste pas).
+#
+# --all-manquants (rattrapage par lot sur une zone entière) reste
+# volontairement CLI-only -- pas de route ici pour ce mode, voir le
+# docstring de set_ton_personnel.py et BACKLOG_ACTIF.md pour le détail de
+# cette décision.
+
+def _lire_journaux(pipeline_dir: Path) -> dict:
+    """Lecture directe de journaux.yaml, même pattern (sans cache) que
+    _zones_avec_journal()/_scan_intervenants_eligibles() ci-dessus."""
+    journaux_path = pipeline_dir / "journaux.yaml"
+    if not journaux_path.exists():
+        return {}
+    import yaml as _yaml
+    try:
+        return _yaml.safe_load(journaux_path.read_text(encoding="utf-8")) or {}
+    except Exception:
+        return {}
+
+
+@app.route("/api/redaction/personnes", methods=["GET"])
+def redaction_personnes():
+    """
+    GET /api/redaction/personnes?scenario=...&ligne=...&zone_slug=...
+        &role=journaliste|orateur&ton_status=vide|rempli
+
+    Retourne une ligne par journaliste ET par orateur·rice, tous scénarios
+    confondus par défaut -- tous les paramètres de filtre sont optionnels,
+    appliqués côté serveur pour réduire la charge utile (le tri/pagination
+    fins restent côté frontend, comme pour /api/chantiers).
+
+    type_diffusion de zone : "oral" ou "ecrit" (valeur par défaut du champ
+    quand absent) -- "mixte" n'existe pas comme état stocké sur la zone,
+    c'est un tirage fait par generate.py au moment de la génération d'un
+    article sur une zone déjà "oral" (voir BACKLOG_ACTIF.md, point 3).
+    """
+    cfg = load_config()
+    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+    f_scenario = request.args.get("scenario", "").strip()
+    f_ligne = request.args.get("ligne", "").strip()
+    f_zone = request.args.get("zone_slug", "").strip()
+    f_role = request.args.get("role", "").strip()
+    f_ton = request.args.get("ton_status", "").strip()
+
+    journaux = _lire_journaux(pipeline_dir)
+    personnes = []
+
+    for scenario, scenario_data in journaux.items():
+        if f_scenario and scenario != f_scenario:
+            continue
+        if not isinstance(scenario_data, dict):
+            continue
+        for ligne, ligne_data in scenario_data.items():
+            if f_ligne and ligne != f_ligne:
+                continue
+            if not isinstance(ligne_data, dict):
+                continue
+            zones = ligne_data.get("zones") or {}
+            for zone_slug, zone_data in zones.items():
+                if f_zone and zone_slug != f_zone:
+                    continue
+                if not isinstance(zone_data, dict):
+                    continue
+                type_diffusion = zone_data.get("type_diffusion") or "ecrit"
+                zone_nom = zone_data.get("nom", zone_slug)
+                zone_ton = zone_data.get("ton", "")
+
+                if f_role in ("", "journaliste"):
+                    for j in (zone_data.get("journalistes") or []):
+                        ton = j.get("ton_personnel") or ""
+                        if f_ton == "vide" and ton:
+                            continue
+                        if f_ton == "rempli" and not ton:
+                            continue
+                        personnes.append({
+                            "scenario": scenario, "ligne": ligne,
+                            "zone_slug": zone_slug, "zone_nom": zone_nom,
+                            "zone_ton": zone_ton,
+                            "type_diffusion": type_diffusion,
+                            "nom": j.get("nom", ""), "role": "journaliste",
+                            "thematiques": j.get("thematiques") or [],
+                            "seniorite": j.get("seniorite"),
+                            "ton_personnel": ton,
+                        })
+                if f_role in ("", "orateur"):
+                    for o in (zone_data.get("orateurs") or []):
+                        ton = o.get("ton_personnel") or ""
+                        if f_ton == "vide" and ton:
+                            continue
+                        if f_ton == "rempli" and not ton:
+                            continue
+                        personnes.append({
+                            "scenario": scenario, "ligne": ligne,
+                            "zone_slug": zone_slug, "zone_nom": zone_nom,
+                            "zone_ton": zone_ton,
+                            "type_diffusion": type_diffusion,
+                            "nom": o.get("nom", ""), "role": "orateur",
+                            "communautes_desservies": o.get("communautes_desservies") or [],
+                            "reputation_orale": o.get("reputation_orale", ""),
+                            "seniorite": o.get("seniorite"),
+                            "ton_personnel": ton,
+                        })
+
+    return jsonify({"personnes": personnes, "total": len(personnes)})
+
+
+@app.route("/api/redaction/ton_personnel", methods=["POST"])
+def redaction_ton_personnel():
+    """
+    Appelle set_ton_personnel.py --json en sous-processus pour UNE personne
+    précise -- panneau de détail de l'onglet Rédaction.
+
+    Body JSON :
+      { "scenario", "ligne", "zone_slug", "nom",
+        "mode": "ia" | "custom",
+        "texte": "..."   (requis seulement si mode == "custom"),
+        "overwrite": bool }   (true si la personne a déjà un ton_personnel
+                                -- décidé côté frontend, le panneau doit
+                                avertir avant d'envoyer overwrite=true)
+
+    Réutilise le même sous-processus synchrone que /api/chantiers/generer
+    (appel LLM réel en mode "ia", donc pas instantané -- même timeout).
+    """
+    cfg = load_config()
+    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+    data = request.get_json() or {}
+
+    scenario = (data.get("scenario") or "").strip()
+    ligne = (data.get("ligne") or "").strip()
+    zone_slug = (data.get("zone_slug") or "").strip()
+    nom = (data.get("nom") or "").strip()
+    mode = (data.get("mode") or "ia").strip()
+    texte = (data.get("texte") or "").strip()
+    overwrite = bool(data.get("overwrite"))
+
+    if not (scenario and ligne and zone_slug and nom):
+        return jsonify({"error": "scenario, ligne, zone_slug et nom requis"}), 400
+    if mode == "custom" and not texte:
+        return jsonify({"error": "texte requis en mode custom"}), 400
+    if mode not in ("ia", "custom"):
+        return jsonify({"error": "mode doit être 'ia' ou 'custom'"}), 400
+
+    cmd = [sys.executable, "set_ton_personnel.py",
+           "--scenario", scenario, "--ligne", ligne, "--zone-slug", zone_slug,
+           "--nom", nom, "--json"]
+    if mode == "custom":
+        cmd += ["--ton-personnel", texte]
+    if overwrite:
+        cmd += ["--overwrite"]
+
+    try:
+        resultat = subprocess.run(
+            cmd, cwd=pipeline_dir, capture_output=True, text=True,
+            timeout=TIMEOUT_GENERATION_TOPDOWN, stdin=subprocess.DEVNULL,
+        )
+    except subprocess.TimeoutExpired:
+        return jsonify({"error": f"Génération expirée après {TIMEOUT_GENERATION_TOPDOWN}s "
+                                  f"(appel LLM trop lent ou bloqué)"}), 504
+    except FileNotFoundError:
+        return jsonify({"error": f"set_ton_personnel.py introuvable dans {pipeline_dir}"}), 500
+
+    sortie = resultat.stdout.strip()
+    if not sortie:
+        return jsonify({"error": f"Aucune sortie du sous-processus "
+                                  f"(code {resultat.returncode}) : {resultat.stderr[-500:]}"}), 500
+    try:
+        payload = json.loads(sortie.splitlines()[-1])
+    except (json.JSONDecodeError, IndexError):
+        return jsonify({"error": f"Sortie non-JSON du sous-processus : {sortie[-500:]}"}), 500
+
+    if not payload.get("ok"):
+        return jsonify({"error": payload.get("error", "Erreur inconnue")}), 500
+
+    return jsonify({"ok": True, "ton_personnel": payload.get("ton_personnel", "")})
+
+
+@app.route("/api/redaction/champs", methods=["POST"])
+def redaction_champs():
+    """
+    Patch direct de journaux.yaml pour thematiques (journalistes
+    uniquement -- les orateurs n'ont pas ce champ, voir communautes_
+    desservies) et/ou seniorite (les deux rôles) -- décision du 30 août
+    2026 (retour de David) d'étendre l'édition au-delà de ton_personnel.
+
+    Contrairement à /api/redaction/ton_personnel, pas d'appel LLM : édition
+    directe façon _sauver_chantiers()/_zones_avec_journal() ci-dessus
+    (import yaml local, lecture/écriture directe du fichier), avec la même
+    sauvegarde horodatée que set_ton_personnel.py pour rester cohérent en
+    cas d'erreur.
+
+    Body JSON :
+      { "scenario", "ligne", "zone_slug", "nom", "role": "journaliste"|"orateur",
+        "thematiques": [...]   (optionnel, journaliste uniquement),
+        "seniorite": int }      (optionnel, les deux rôles)
+    Au moins un des deux champs doit être fourni.
+    """
+    cfg = load_config()
+    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+    data = request.get_json() or {}
+
+    scenario = (data.get("scenario") or "").strip()
+    ligne = (data.get("ligne") or "").strip()
+    zone_slug = (data.get("zone_slug") or "").strip()
+    nom = (data.get("nom") or "").strip()
+    role = (data.get("role") or "").strip()
+    thematiques = data.get("thematiques")
+    seniorite = data.get("seniorite")
+
+    if not (scenario and ligne and zone_slug and nom and role):
+        return jsonify({"error": "scenario, ligne, zone_slug, nom et role requis"}), 400
+    if role not in ("journaliste", "orateur"):
+        return jsonify({"error": "role doit être 'journaliste' ou 'orateur'"}), 400
+    if thematiques is not None and role != "journaliste":
+        return jsonify({"error": "thematiques n'existe que pour les journalistes"}), 400
+    if thematiques is None and seniorite is None:
+        return jsonify({"error": "au moins thematiques ou seniorite requis"}), 400
+    if seniorite is not None:
+        try:
+            seniorite = int(seniorite)
+        except (TypeError, ValueError):
+            return jsonify({"error": "seniorite doit être un entier"}), 400
+
+    journaux_path = pipeline_dir / "journaux.yaml"
+    if not journaux_path.exists():
+        return jsonify({"error": f"journaux.yaml introuvable dans {pipeline_dir}"}), 500
+
+    import yaml as _yaml
+    try:
+        journaux = _yaml.safe_load(journaux_path.read_text(encoding="utf-8")) or {}
+    except Exception as e:
+        return jsonify({"error": f"Lecture journaux.yaml impossible : {e}"}), 500
+
+    try:
+        zone_data = journaux[scenario][ligne]["zones"][zone_slug]
+    except KeyError:
+        return jsonify({"error": f"Zone introuvable : {scenario}/{ligne}/{zone_slug}"}), 404
+
+    liste_champ = "journalistes" if role == "journaliste" else "orateurs"
+    entree = next((e for e in (zone_data.get(liste_champ) or []) if e.get("nom") == nom), None)
+    if entree is None:
+        return jsonify({"error": f"'{nom}' introuvable dans cette zone"}), 404
+
+    if thematiques is not None:
+        entree["thematiques"] = list(thematiques)
+    if seniorite is not None:
+        entree["seniorite"] = seniorite
+
+    from datetime import datetime as _datetime
+    import shutil as _shutil
+    backup_path = str(journaux_path) + ".backup_" + _datetime.now().strftime("%Y%m%d_%H%M%S")
+    _shutil.copy2(journaux_path, backup_path)
+    journaux_path.write_text(
+        _yaml.dump(journaux, allow_unicode=True, sort_keys=False, default_flow_style=False),
+        encoding="utf-8",
+    )
+
+    return jsonify({"ok": True, "thematiques": entree.get("thematiques"),
+                     "seniorite": entree.get("seniorite")})
+
+
+# Vraie liste canonique, recopiée depuis inject_journaliste_custom.py (même
+# garde-fou que ce script -- 30 août 2026, remplace la version provisoire
+# dérivée des données qui était en place avant que ce fichier soit fourni).
+# À garder en synchro si THEMATIQUES_CONNUES change côté
+# inject_journaliste_custom.py (même point de vigilance que les autres
+# constantes dupliquées entre gui/ et generator/ dans ce fichier).
+THEMATIQUES_CONNUES = [
+    "actualites_a_la_une", "politique", "economie_finance", "international",
+    "environnement_climat", "sante", "societe", "culture", "musique",
+    "sports", "faits_divers", "opinions_editoriaux", "lifestyle_art_de_vivre",
+    "education", "histoire_patrimoine", "medias_communication",
+    "religion_spiritualite", "petites_annonces_services", "meteo",
+    "sciences_technologies",
+]
+MAX_THEMATIQUES_PAR_JOURNALISTE = 6
+
+
+@app.route("/api/redaction/thematiques", methods=["GET"])
+def redaction_thematiques():
+    """Liste des thématiques valides, pour le multi-select du panneau --
+    vraie constante THEMATIQUES_CONNUES depuis le 30 août 2026 (voir
+    commentaire ci-dessus)."""
+    return jsonify({"thematiques": THEMATIQUES_CONNUES,
+                     "max_par_journaliste": MAX_THEMATIQUES_PAR_JOURNALISTE})
 
 
 # ── API Slugs ─────────────────────────────────────────────────────────────────

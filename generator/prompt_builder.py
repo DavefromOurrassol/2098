@@ -1859,7 +1859,28 @@ def build_journalistic_brief(thematique, config, snapshot=None, type_diffusion="
     # _extract_publication_metadata()), donc sans impact sur la
     # contrainte de longueur ci-dessus ni sur le mécanisme de retry
     # (chantier du 10 août, backlog Partie 1 point 1).
+    #
+    # Extrait en fonction séparée le 30 août 2026 (chantier retry ciblé
+    # chapo/tags/image_prompt vides, backlog point 2) : réutilisée telle
+    # quelle par _retry_missing_metadata() côté api.py pour redemander
+    # uniquement ce bloc sans regénérer tout l'article -- zéro changement
+    # de comportement ici, le chemin normal appelle exactement la même
+    # fonction qu'avant l'extraction.
     lines.append("")
+    lines.append(build_metadonnees_publication_format(type_diffusion))
+
+    return "\n".join(lines)
+
+
+def build_metadonnees_publication_format(type_diffusion="ecrit"):
+    """Construit le format exact du bloc ===METADONNEES_PUBLICATION===
+    demandé au LLM (voir commentaire d'appel dans build_journalistic_brief()
+    ci-dessus pour le contexte complet). Extrait en fonction séparée le 30
+    août 2026 pour être réutilisable par le retry ciblé de api.py
+    (_retry_missing_metadata()) sans dupliquer la consigne -- une seule
+    source de vérité pour ce format, modifiée à un seul endroit si le
+    format change un jour."""
+    lines = []
     lines.append(
         "Format exact du bloc ===METADONNEES_PUBLICATION=== (voir "
         "contrainte impérative ci-dessus) : à la toute fin, après "
@@ -1955,6 +1976,8 @@ def build_journalistic_brief(thematique, config, snapshot=None, type_diffusion="
     lines.append("===FIN_METADONNEES===")
 
     return "\n".join(lines)
+
+
 
 
 # ─────────────────────────────────────────

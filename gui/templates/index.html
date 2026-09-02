@@ -202,6 +202,92 @@
     .chantiers-row-msg.ok { color: #2e7d4f; }
     .chantiers-row-msg.error { color: #c0392b; }
     .chantiers-row-msg.loading { color: #888; font-style: italic; }
+
+    /* ── Onglet Rédaction — journalistes & orateurs (point 3, 30 août 2026) ── */
+    #tab-redaction { display: none; flex-direction: column; height: 100%; padding: 20px; box-sizing: border-box; min-height: 0; }
+    #tab-redaction.active { display: flex; }
+    .redaction-toolbar { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; flex-wrap: wrap; flex-shrink: 0; }
+    .redaction-toolbar label { font-size: 11px; color: #888; }
+    .redaction-toolbar select, .redaction-toolbar input[type="text"] {
+      font-family: 'JetBrains Mono', monospace; padding: 4px 8px; border: 1px solid #ccc;
+      border-radius: 4px; background: #fff; font-size: 12px;
+    }
+    .redaction-filter-group { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
+    .redaction-toolbar input[type="text"] { width: 140px; }
+    .redaction-count { font-size: 11px; color: #888; margin-left: auto; }
+    .redaction-layout { display: flex; gap: 16px; flex: 1; min-height: 0; }
+    .redaction-table-wrap { flex: 1; min-width: 0; display: flex; flex-direction: column; min-height: 0; }
+    .redaction-table-scroll { flex: 1; min-height: 0; overflow-y: auto; border: 1px solid #eee; border-radius: 6px; }
+    .redaction-table { width: 100%; border-collapse: collapse; font-size: 12px; table-layout: fixed; }
+    .redaction-table thead { position: sticky; top: 0; background: #fff; z-index: 1; }
+    .redaction-table th {
+      text-align: left; padding: 6px 6px; font-weight: 600; color: #666;
+      border-bottom: 2px solid #ddd; cursor: pointer; user-select: none;
+    }
+    .redaction-table th:hover { color: #3b6fd4; }
+    .redaction-table td { padding: 5px 6px; border-bottom: 1px solid #f0f0f0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .redaction-table tbody tr { cursor: pointer; }
+    .redaction-table tbody tr:hover { background: #f5f7fc; }
+    .redaction-table tbody tr.active { background: #eef4fa; }
+    .redaction-ton-vide { color: #bbb; font-style: italic; }
+    .redaction-ton-rempli { color: #2e7d4f; }
+    .redaction-empty { color: #999; font-style: italic; font-size: 13px; padding: 20px 0; text-align: center; }
+    .redaction-pagination {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 8px 4px 0; font-size: 11px; color: #888; flex-shrink: 0;
+    }
+    .redaction-pagination-btns { display: flex; align-items: center; gap: 10px; }
+    .redaction-pagination-btns button {
+      font-size: 11px; padding: 3px 10px; border-radius: 4px; cursor: pointer;
+      border: 1px solid #ddd; background: #fff; color: #555;
+    }
+    .redaction-pagination-btns button:disabled { opacity: 0.4; cursor: not-allowed; }
+    .redaction-pagination-btns button:not(:disabled):hover { border-color: #3b6fd4; color: #2a52a8; }
+    .redaction-sidebar { width: 340px; flex-shrink: 0; overflow-y: auto; }
+    .redaction-panel { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 14px; font-size: 12px; }
+    .redaction-panel-empty { color: #999; font-style: italic; }
+    .redaction-panel-title { font-weight: 700; font-size: 14px; margin-bottom: 2px; }
+    .redaction-panel-sub { color: #888; margin-bottom: 12px; }
+    .redaction-panel-section { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #eee; }
+    .redaction-panel-section:last-child { border-bottom: none; }
+    .redaction-panel-section label { display: block; font-size: 11px; color: #666; margin-bottom: 4px; }
+    .redaction-panel-list { font-size: 11px; color: #555; }
+    .redaction-ton-mode-tabs { display: flex; gap: 6px; margin-bottom: 8px; }
+    .redaction-ton-mode-tab {
+      flex: 1; text-align: center; font-size: 11px; padding: 4px 6px; border-radius: 4px;
+      border: 1px solid #ddd; background: #fff; color: #555; cursor: pointer;
+    }
+    .redaction-ton-mode-tab.active { border-color: #3b6fd4; color: #2a52a8; background: #eef4fa; font-weight: 600; }
+    .redaction-panel textarea {
+      width: 100%; box-sizing: border-box; font-family: 'JetBrains Mono', monospace;
+      font-size: 11px; padding: 6px; border: 1px solid #ccc; border-radius: 4px; resize: vertical;
+    }
+    .redaction-panel-current { background: #f7f7f5; border-radius: 4px; padding: 6px 8px; font-size: 11px; color: #444; margin-bottom: 8px; line-height: 1.4; }
+    .redaction-panel-warning { background: #fff4e0; border: 1px solid #e0b060; border-radius: 4px; padding: 6px 8px; font-size: 11px; color: #7a5010; margin-bottom: 8px; }
+    .redaction-panel-btn {
+      font-size: 11px; padding: 4px 12px; border-radius: 4px; cursor: pointer;
+      border: 1px solid #3b6fd4; color: #2a52a8; background: #eef4fa; font-weight: 600;
+    }
+    .redaction-panel-btn:hover { background: #3b6fd4; color: #fff; }
+    .redaction-panel-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+    .redaction-panel-msg { font-size: 11px; margin-top: 8px; }
+    .redaction-panel-msg.ok { color: #2e7d4f; }
+    .redaction-panel-msg.error { color: #c0392b; }
+    .redaction-panel-msg.loading { color: #888; font-style: italic; }
+    .redaction-chips-box { display: flex; flex-wrap: wrap; gap: 6px; }
+    .redaction-chip {
+      display: flex; align-items: center; gap: 4px; font-size: 11px;
+      padding: 3px 8px; border-radius: 12px; border: 1px solid #ddd;
+      background: #fff; color: #666; cursor: pointer; user-select: none;
+    }
+    .redaction-chip input { margin: 0; cursor: pointer; }
+    .redaction-chip.active { border-color: #3b6fd4; background: #eef4fa; color: #2a52a8; font-weight: 600; }
+    .redaction-panel-hint { font-size: 10px; color: #999; margin-top: 4px; width: 100%; }
+    .redaction-panel-hint.over { color: #b5651d; }
+    #redaction-seniorite-select {
+      font-family: 'JetBrains Mono', monospace; padding: 4px 8px; border: 1px solid #ccc;
+      border-radius: 4px; background: #fff; font-size: 12px;
+    }
   </style>
 </head>
 <body>
@@ -369,6 +455,82 @@
       </div>
     </div>
 
+    <!-- ── Rédaction — journalistes & orateurs (point 3, 30 août 2026) ── -->
+    <div id="tab-redaction" class="tab-content">
+      <div class="redaction-toolbar">
+        <span class="tab-page-title" style="margin:0">Rédaction — journalistes &amp; orateurs</span>
+        <div class="redaction-filter-group">
+          <label for="redaction-scenario">Scénario</label>
+          <select id="redaction-scenario"><option value="">Tous</option></select>
+        </div>
+        <div class="redaction-filter-group">
+          <label for="redaction-ligne">Ligne</label>
+          <select id="redaction-ligne">
+            <option value="">Toutes</option>
+            <option value="pro_pouvoir">pro_pouvoir</option>
+            <option value="opposition">opposition</option>
+          </select>
+        </div>
+        <div class="redaction-filter-group">
+          <label for="redaction-role">Rôle</label>
+          <select id="redaction-role">
+            <option value="">Tous</option>
+            <option value="journaliste">Journaliste</option>
+            <option value="orateur">Orateur</option>
+          </select>
+        </div>
+        <div class="redaction-filter-group">
+          <label for="redaction-ton-status">ton_personnel</label>
+          <select id="redaction-ton-status">
+            <option value="">Tous</option>
+            <option value="vide">Vide seulement</option>
+            <option value="rempli">Rempli seulement</option>
+          </select>
+        </div>
+        <input type="text" id="redaction-search" placeholder="🔍 Nom…" autocomplete="off">
+        <span id="redaction-count" class="redaction-count"></span>
+      </div>
+      <div class="redaction-layout">
+        <div class="redaction-table-wrap">
+          <div class="redaction-table-scroll">
+            <table class="redaction-table">
+              <colgroup>
+                <col style="width:11%"><col style="width:9%"><col style="width:22%">
+                <col style="width:8%"><col style="width:22%"><col style="width:9%">
+                <col style="width:6%"><col style="width:13%">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th data-sort="scenario">Scénario</th>
+                  <th data-sort="ligne">Ligne</th>
+                  <th data-sort="zone_nom">Zone</th>
+                  <th data-sort="type_diffusion">Diffusion</th>
+                  <th data-sort="nom">Nom</th>
+                  <th data-sort="role">Rôle</th>
+                  <th data-sort="seniorite">Sén.</th>
+                  <th data-sort="ton_personnel">ton_personnel</th>
+                </tr>
+              </thead>
+              <tbody id="redaction-tbody"></tbody>
+            </table>
+          </div>
+          <div class="redaction-pagination">
+            <span id="redaction-range"></span>
+            <div class="redaction-pagination-btns">
+              <button id="redaction-prev">← Page précédente</button>
+              <span id="redaction-page-label"></span>
+              <button id="redaction-next">Page suivante →</button>
+            </div>
+          </div>
+        </div>
+        <div class="redaction-sidebar">
+          <div id="redaction-panel" class="redaction-panel">
+            <div class="redaction-panel-empty">Clique sur une ligne pour voir/éditer sa fiche.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- ── Chantiers (point 4.5, 26 juillet 2026) ── -->
     <div id="tab-chantiers" class="tab-content">
       <div class="chantiers-toolbar">
@@ -401,6 +563,13 @@
 </div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+  // Injectée par app.py depuis la variable d'environnement CARTO_API_KEY
+  // (30 août 2026) -- jamais en dur dans app.js, jamais commitée. Chaîne
+  // vide si la variable d'environnement n'est pas définie (app.js gère ce
+  // cas -- voir initLeafletMap()).
+  window.CARTO_API_KEY = {{ carto_api_key|tojson }};
+</script>
 <script src="{{ url_for('static', filename='app.js') }}"></script>
 </body>
 </html>

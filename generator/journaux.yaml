@@ -33,6 +33,7 @@ breakdown:
           - sciences_technologies
           - medias_communication
           seniorite: 1
+          ton_personnel: Cette fois ça doit s'écrire.
         - nom: Chipo Ndlovu
           thematiques:
           - environnement_climat
@@ -95,6 +96,9 @@ breakdown:
           - sciences_technologies
           - medias_communication
           seniorite: 1
+          ton_personnel: Ses phrases s'étirent en spirales logiques, chaque argument
+            enroulé autour d'un chiffre clé comme un fil de cuivre sur une bobine,
+            avant de se resserrer brusquement en une pointe acérée de méfiance bureaucratique.
         - nom: Aminu Garba
           thematiques:
           - environnement_climat
@@ -378,7 +382,11 @@ breakdown:
           - actualites_a_la_une
           - politique
           - opinions_editoriaux
-          seniorite: 1
+          seniorite: 4
+          ton_personnel: Structure ses phrases comme des crescendos orchestraux, chaque
+            paragraphe s’achevant sur une cadence martelée qui résonne comme un écho
+            de forge, avec une impatience contenue pour les lenteurs bureaucratiques
+            du Parti.
         - nom: Sofía Hernández
           thematiques:
           - economie_finance
@@ -5020,6 +5028,9 @@ fortress_world:
           - sciences_technologies
           - medias_communication
           seniorite: 1
+          ton_personnel: Ses phrases s’étirent comme une corde de kora, chaque mot
+            une note suspendue, avant de retomber en chute sèche — un mélange de patience
+            artisanale et d’urgence de conteur pressé par le vent.
         - nom: Grâce Mutombo
           thematiques:
           - environnement_climat

@@ -24,6 +24,7 @@ from datetime import datetime
 
 from llm_client import call_llm, resolve_for_tier
 from loader import VAULT_PATH
+from prompt_builder import build_metadonnees_publication_format
 
 
 # ─────────────────────────────────────────
@@ -53,6 +54,17 @@ ARTICLES_DIR  = os.path.join(VAULT_PATH, "articles")
 # borner le coût/temps (chaque retry double le temps de génération pour
 # l'article concerné).
 RETRY_DEVIATION_THRESHOLD = 0.40
+
+# ── Retry sur bloc métadonnées absent (ajouté le 30 août 2026) ──
+# Décision explicite avec David (backlog point 2, chantier "chapo/tags/
+# image_prompt vides") : contrairement au retry longueur ci-dessus (qui
+# réécrit tout l'article), ce retry est délibérément léger -- l'audit du
+# 30 août (audit_metadonnees_publication.py) a mesuré un taux réel de
+# 2,4% (5/206), 100% des cas étant le bloc ENTIER absent (jamais un champ
+# isolé) : pas besoin de refaire l'article, juste de redemander le bloc
+# en repartant du texte déjà bon. Un seul retry, comme pour la longueur --
+# même philosophie de coût borné, résultat accepté quoi qu'il arrive.
+MAX_TOKENS_RETRY_METADONNEES = 400
 
 
 # ─────────────────────────────────────────
@@ -142,6 +154,64 @@ def _retry_with_length_feedback(prompt_data, wc_precedent, bornes):
     wc_retry = _count_words(article_retry)
     print("[api] Retry terminé : {} mots (attendu {}-{}).".format(wc_retry, lo, hi))
     return article_retry, wc_retry, meta_retry
+
+
+def _bloc_metadonnees_absent(meta):
+    """Vrai si les 3 champs de base (chapo/tags/image_prompt) sont tous
+    vides simultanément -- même critère que audit_metadonnees_
+    publication.py (30 août 2026) pour distinguer "bloc entier absent"
+    d'un champ isolé qui ne matcherait pas (jamais observé en pratique
+    sur les 206 articles audités, mais le critère reste correct dans les
+    deux cas : un champ isolé manquant n'est de toute façon pas ce que ce
+    retry cible -- redemander tout le bloc pour un seul champ manquant
+    serait disproportionné, et n'a jamais été rencontré)."""
+    return not meta.get("chapo") and not meta.get("tags") and not meta.get("image_prompt")
+
+
+def _retry_missing_metadata(prompt_data, article_text, type_diffusion):
+    """Un seul appel LLM léger, séparé de l'article -- PAS une réécriture
+    complète comme _retry_with_length_feedback() ci-dessus. Ne renvoie que
+    l'article (déjà bon, inchangé) accompagné du format exact attendu
+    (build_metadonnees_publication_format(), réutilisée telle quelle
+    depuis prompt_builder.py -- une seule source de vérité pour ce
+    format). Coût borné : max_tokens réduit (le bloc lui-même est court),
+    pas de renvoi du user_prompt d'origine (snapshot/entités/thématique
+    -- inutile ici, l'article est déjà écrit)."""
+    print("[api] Bloc ===METADONNEES_PUBLICATION=== absent — retry ciblé "
+          "(léger, sans regénérer l'article)...")
+
+    retry_user_prompt = (
+        "Voici un article que tu viens d'écrire, dans le cadre du même "
+        "brief que précédemment (même persona, même journal, même "
+        "contexte) :\n\n---\n\n"
+        + article_text
+        + "\n\n---\n\nLe bloc ===METADONNEES_PUBLICATION=== attendu en fin "
+          "de réponse était absent de ta précédente génération. Produis-le "
+          "maintenant, et UNIQUEMENT lui -- rien d'autre, pas l'article, "
+          "pas de commentaire avant ou après.\n\n"
+        + build_metadonnees_publication_format(type_diffusion)
+    )
+
+    reponse_retry = call_llm(
+        system_prompt=prompt_data["system_prompt"],
+        user_prompt=retry_user_prompt,
+        max_tokens=MAX_TOKENS_RETRY_METADONNEES,
+        temperature=TEMPERATURE,
+        task_tier=TASK_TIER,
+    )
+    # La réponse ne contient QUE le bloc (pas d'article autour) -- même
+    # fonction d'extraction que le chemin normal, réutilisée telle quelle
+    # pour rester cohérent (un seul endroit qui sait parser ce format).
+    _texte_sans_bloc, meta_retry = _extract_publication_metadata(reponse_retry, type_diffusion)
+
+    if _bloc_metadonnees_absent(meta_retry):
+        print("[api] Retry métadonnées : toujours absent après le retry — "
+              "champs laissés vides, accepté tel quel (un seul retry, "
+              "même borne de coût que le retry longueur).")
+    else:
+        print("[api] Retry métadonnées : bloc récupéré avec succès.")
+
+    return meta_retry
 
 
 # ─────────────────────────────────────────
@@ -419,6 +489,7 @@ def build_article_md(article_text, snapshot, thematique, prompt_data, date_ficti
         # audit_longueur_articles.py après coup.
         "mots_reels: {}".format(meta.get("mots_reels", "")),
         "retry_longueur: {}".format("oui" if meta.get("retry_longueur") else "non"),
+        "retry_metadonnees: {}".format("oui" if meta.get("retry_metadonnees") else "non"),
         "model: {}/{}".format(*resolve_for_tier(TASK_TIER)),
         "ligne_editoriale: {}".format(meta.get("ligne_editoriale", "pro_pouvoir")),
         "scenario_state: {}".format(snapshot["scenario"]["state_of_system"]),
@@ -651,6 +722,19 @@ def generate_article(prompt_data, snapshot, thematique, config):
 
     prompt_data["metadata"]["mots_reels"] = wc
     prompt_data["metadata"]["retry_longueur"] = retry_effectue
+
+    # Retry ciblé bloc métadonnées absent (30 août 2026, backlog point 2)
+    # -- APRÈS le retry longueur ci-dessus à dessein : si un retry
+    # longueur a eu lieu, meta_publication vient déjà de la RÉÉCRITURE
+    # (article_retry), pas de la première tentative -- on veut vérifier
+    # et éventuellement corriger l'état FINAL, pas un état intermédiaire
+    # qui pourrait être remplacé juste après.
+    retry_metadonnees_effectue = False
+    if _bloc_metadonnees_absent(meta_publication):
+        meta_publication = _retry_missing_metadata(prompt_data, article, type_diffusion)
+        retry_metadonnees_effectue = True
+    prompt_data["metadata"]["retry_metadonnees"] = retry_metadonnees_effectue
+
     prompt_data["metadata"]["chapo"] = meta_publication["chapo"]
     prompt_data["metadata"]["tags"] = meta_publication["tags"]
     prompt_data["metadata"]["image_prompt"] = meta_publication["image_prompt"]
