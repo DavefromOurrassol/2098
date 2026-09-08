@@ -364,6 +364,82 @@
     }
   },
   {
+    "id": "definir_edition",
+    "label": "Mois de parution du journal",
+    "icon": "📅",
+    "section": "articles",
+    "script": "definir_edition.py",
+    "description": "Fixe/avance directement le mois de parution actif du journal (année/mois), indépendamment de tout lancement de série ou d'article. Aucun article n'est généré ici.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--annee",
+        "type": "number",
+        "label": "Année",
+        "min": 2026,
+        "max": 2098,
+        "default": 2098
+      },
+      {
+        "flag": "--mois",
+        "type": "select",
+        "label": "Mois",
+        "choices": [
+          {
+            "value": 1,
+            "label": "Janvier"
+          },
+          {
+            "value": 2,
+            "label": "Février"
+          },
+          {
+            "value": 3,
+            "label": "Mars"
+          },
+          {
+            "value": 4,
+            "label": "Avril"
+          },
+          {
+            "value": 5,
+            "label": "Mai"
+          },
+          {
+            "value": 6,
+            "label": "Juin"
+          },
+          {
+            "value": 7,
+            "label": "Juillet"
+          },
+          {
+            "value": 8,
+            "label": "Août"
+          },
+          {
+            "value": 9,
+            "label": "Septembre"
+          },
+          {
+            "value": 10,
+            "label": "Octobre"
+          },
+          {
+            "value": 11,
+            "label": "Novembre"
+          },
+          {
+            "value": 12,
+            "label": "Décembre"
+          }
+        ],
+        "default": 8
+      }
+    ],
+    "gui_verified": true
+  },
+  {
     "id": "generate_series",
     "label": "Générer une série d'articles",
     "icon": "📋",
@@ -2589,6 +2665,36 @@
       }
     ],
     "gui_verified": false
+  },
+  {
+    "id": "audit_sujets_edition",
+    "label": "Audit — sujets du mois de parution",
+    "icon": "📊",
+    "section": "validation",
+    "script": "audit_sujets_edition.py",
+    "description": "Diagnostic en lecture seule (aucune écriture, aucun appel à l'IA) : liste les articles générés pour un mois de parution donné (chapo, zone, thématique, ligne éditoriale) et, en regard, les custom_events déjà injectés pour ce même mois -- pour repérer d'un coup d'œil quels sujets restent à capturer. Ne juge jamais lui-même de la pertinence d'un sujet, c'est toujours David qui décide quoi injecter via inject_custom_events.py.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario",
+        "source": "config_scenarios"
+      },
+      {
+        "flag": "--annee",
+        "type": "number",
+        "label": "Année du mois de parution (optionnel — vide = mois de parution actif)",
+        "optional": true
+      },
+      {
+        "flag": "--mois",
+        "type": "number",
+        "label": "Mois du mois de parution, 1-12 (optionnel — vide = mois de parution actif)",
+        "optional": true
+      }
+    ],
+    "gui_verified": true
   },
   {
     "id": "set_priorite_forcee",

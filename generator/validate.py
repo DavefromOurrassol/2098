@@ -481,9 +481,20 @@ def validate_entities(result):
             if annee:
                 try:
                     annee_int = int(annee)
-                    if not (2025 <= annee_int <= 2097):
+                    # Borne corrigée le 6 septembre 2026, même bug que la
+                    # date des événements custom (validate_events(), plus
+                    # bas) : 2098 est l'année finale de la fiction dans
+                    # son ensemble, pas un "présent" à exclure -- une
+                    # injection custom (comme un événement) doit rester
+                    # dans [2025, 2098], jamais après. Aucun autre script
+                    # du pipeline ne référence "2097" (vérifié par David
+                    # sur tout `generator/`) -- pas de mécanisme de
+                    # génération parallèle à corriger pour ce champ,
+                    # contrairement aux événements (clamp_date_dans_plage()
+                    # dans inject_custom_events.py).
+                    if not (2025 <= annee_int <= 2098):
                         result.error("instances", fname,
-                            "annee_injection {} hors plage [2025-2097]".format(annee_int))
+                            "annee_injection {} hors plage [2025-2098]".format(annee_int))
                 except (ValueError, TypeError):
                     result.error("instances", fname,
                         "annee_injection invalide : '{}'".format(annee))
@@ -1038,6 +1049,19 @@ def validate_signals(result):
 def validate_events(result):
     """Vérifie la cohérence des archétypes d'événements et de leurs instances."""
 
+    # Borne de date d'un événement (corrigée le 6 septembre 2026, 2e
+    # itération). 1ère itération de la journée : borne dynamique liée à
+    # l'ANNÉE de l'édition active (mois de parution) -- ABANDONNÉE après
+    # clarification de David : 2098 est l'année FINALE de la fiction
+    # dans son ensemble (pas un "présent" mobile exclu), les articles
+    # peuvent être préparés à l'avance et datés au-delà de l'édition
+    # actuellement active, et plusieurs éditions successives couvriront
+    # différents mois de cette même année 2098. La bonne borne est donc
+    # fixe et ne dépend PAS de l'édition active : un événement doit
+    # simplement rester dans l'année finale de la fiction ou avant,
+    # jamais après.
+    ANNEE_MAX_EVENEMENT = 2098
+
     # ── Charger les archétypes
     archetypes = set()
     if os.path.exists(PATHS["evenements"]):
@@ -1148,9 +1172,9 @@ def validate_events(result):
             if date is not None:
                 try:
                     d = int(date)
-                    if not (2025 <= d <= 2097):
+                    if not (2025 <= d <= ANNEE_MAX_EVENEMENT):
                         result.error("events", fname,
-                            "date {} hors plage [2025-2097]".format(d))
+                            "date {} hors plage [2025-{}]".format(d, ANNEE_MAX_EVENEMENT))
                 except (ValueError, TypeError):
                     result.error("events", fname,
                         "date invalide : '{}'".format(date))

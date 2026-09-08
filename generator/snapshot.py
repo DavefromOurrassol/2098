@@ -554,12 +554,12 @@ def build_trajectory(all_variables, scenario_slug, pilot_variables):
 # ÉTAPE 6B — APPLICATION DES INJECTIONS CUSTOM
 # ─────────────────────────────────────────
 
-def apply_custom_injections(variable_states, instances, matrix, all_variables):
+def apply_custom_injections(variable_states, instances, matrix, all_variables, date_reference=2098):
     """
     Applique les deltas des entités custom injectées sur les variables.
 
     Pour chaque instance custom (injection.type == "custom") :
-      1. Calcule la durée d'effet réelle (2098 - annee_injection)
+      1. Calcule la durée d'effet réelle (date_reference - annee_injection)
       2. Pondère le delta par min(duree_effet, duree_declaree) / duree_declaree
       3. Applique le delta au level de la variable
       4. Si propagation.via_matrice = true, propage via les edges forts,
@@ -567,6 +567,13 @@ def apply_custom_injections(variable_states, instances, matrix, all_variables):
          systemic_criticality de la SOURCE (P22, 20 août 2026 -- remplace
          le facteur fixe 0.5 d'avant ce chantier ; variable sans bloc
          `simulation` renseigné = 0.5 × 1.0 = 0.5, comportement inchangé)
+
+    date_reference : float -- "présent" du monde (2098 par défaut, ou la
+      date fractionnaire de l'édition active, voir edition_utils.py et
+      build_snapshot(), ajouté le 2 septembre 2026, chantier "Éditions
+      datées"). annee_injection reste un entier simple (année de
+      création narrative de l'entité, pas de notion de mois) -- la
+      soustraction fonctionne sans cast supplémentaire.
 
     Retourne les variable_states modifiés + un log des modifications.
     """
@@ -582,7 +589,7 @@ def apply_custom_injections(variable_states, instances, matrix, all_variables):
         if not annee:
             continue
 
-        duree_effet = 2098 - int(annee)
+        duree_effet = date_reference - annee
         via_matrice = injection.get("propagation", {}).get("via_matrice", False)
         impacts     = injection.get("impact_sur_variables", []) or []
 
@@ -590,7 +597,7 @@ def apply_custom_injections(variable_states, instances, matrix, all_variables):
             continue
 
         print("[snapshot] Injection custom '{}' (an {}, {} ans d'effet)".format(
-            inst["name"], annee, duree_effet
+            inst["name"], annee, round(duree_effet, 2)
         ))
 
         for impact in impacts:
@@ -665,10 +672,18 @@ def apply_custom_injections(variable_states, instances, matrix, all_variables):
     return states, modifications
 
 
-def apply_custom_events(variable_states, events, matrix, all_variables):
+def apply_custom_events(variable_states, events, matrix, all_variables, date_reference=2098):
     """
     Applique les deltas des événements custom sur les variables.
     Similaire à apply_custom_injections mais pour les événements.
+
+    date_reference : float -- voir apply_custom_injections(). "annee"
+      (event["date"]) peut désormais être une date fractionnaire type
+      2098.08 (chantier "Éditions datées", 2 septembre 2026, point 4) --
+      les anciens événements avec une simple année entière restent
+      valides (interprétés comme survenus en tout début d'année, pas de
+      backfill rétroactif), la soustraction fonctionne dans les deux cas
+      sans cast.
 
     Retourne les variable_states modifiés + un log des modifications.
     """
@@ -683,9 +698,9 @@ def apply_custom_events(variable_states, events, matrix, all_variables):
         if not impacts:
             continue
 
-        duree_effet = 2098 - int(annee)
+        duree_effet = date_reference - annee
         print("[snapshot] Événement custom '{}' (an {}, {} ans d'effet)".format(
-            event["name"], annee, duree_effet
+            event["name"], annee, round(duree_effet, 2)
         ))
 
         for impact in impacts:
@@ -761,7 +776,7 @@ def apply_custom_events(variable_states, events, matrix, all_variables):
     return states, modifications
 
 
-def apply_custom_signals(variable_states, signals, matrix, scenario_slug, all_variables):
+def apply_custom_signals(variable_states, signals, matrix, scenario_slug, all_variables, date_reference=2098):
     """
     Applique les deltas des signaux faibles custom sur les variables
     (chantier injection matricielle, 16 août 2026) -- même mécanique que
@@ -775,6 +790,9 @@ def apply_custom_signals(variable_states, signals, matrix, scenario_slug, all_va
          `date_bascule`, qui diffère d'un scénario à l'autre pour le même
          signal) -- d'où le paramètre scenario_slug, absent des deux
          fonctions sœurs qui appliquent le même delta à tous les scénarios.
+
+    date_reference : float -- voir apply_custom_injections() (ajouté le
+      2 septembre 2026, chantier "Éditions datées").
 
     Retourne les variable_states modifiés + un log des modifications,
     même format que les deux fonctions sœurs pour rester compatible avec
@@ -798,10 +816,10 @@ def apply_custom_signals(variable_states, signals, matrix, scenario_slug, all_va
         if not delta:
             continue
 
-        duree_effet = 2098 - int(annee)
+        duree_effet = date_reference - annee
         nom_signal = signal.get("source_fiche", "signal").replace(".md", "")
         print("[snapshot] Signal custom '{}' sur {} (an {}, {} ans d'effet)".format(
-            nom_signal, var, annee, duree_effet
+            nom_signal, var, annee, round(duree_effet, 2)
         ))
 
         facteur        = min(duree_effet, duree_dec) / max(duree_dec, 1)
@@ -923,7 +941,7 @@ def _dominant_zone(instances):
     return Counter(zones).most_common(1)[0][0]
 
 
-def build_snapshot(scenario_slug, thematique=None, dry_run=True, forcer_config=None):
+def build_snapshot(scenario_slug, thematique=None, dry_run=True, forcer_config=None, date_edition=None):
     """
     Fonction principale — construit le snapshot complet du monde 2098.
 
@@ -945,9 +963,21 @@ def build_snapshot(scenario_slug, thematique=None, dry_run=True, forcer_config=N
                         plutôt que de faire échouer toute la génération --
                         c'est à l'appelant (generate.py) de décider s'il
                         arrête ou continue sans le forçage.
+        date_edition  : float|None — date de référence de l'édition
+                        (ex. 2098.08, voir edition_utils.py), ajoutée le
+                        2 septembre 2026 (chantier "Éditions datées").
+                        Remplace le "2098" en dur comme "présent" du
+                        monde dans les 3 formules duree_effet et le champ
+                        "year" ci-dessous. None par défaut : comportement
+                        historique inchangé (année 2098 fixe) -- laisse
+                        generate.py/generate_manual.py fonctionner sans
+                        modification tant qu'ils n'ont pas explicitement
+                        adopté la notion d'édition (voir BACKLOG_ACTIF.md).
 
     Retourne un dict complet prêt pour prompt_builder.py
     """
+    date_reference = date_edition if date_edition is not None else 2098
+
     print("\n[snapshot] Construction du monde 2098 — scénario : {}".format(scenario_slug))
 
     # Charger les données de base
@@ -1019,7 +1049,7 @@ def build_snapshot(scenario_slug, thematique=None, dry_run=True, forcer_config=N
                         if i.get("injection", {}).get("type") == "custom"]
     if custom_instances:
         variable_states, modifications = apply_custom_injections(
-            variable_states, custom_instances, matrix, all_variables
+            variable_states, custom_instances, matrix, all_variables, date_reference=date_reference
         )
         print("[snapshot] Modifications custom (entités) : {} variables affectées".format(
             len(modifications)
@@ -1032,7 +1062,7 @@ def build_snapshot(scenario_slug, thematique=None, dry_run=True, forcer_config=N
     event_modifications = []
     if custom_events:
         variable_states, event_modifications = apply_custom_events(
-            variable_states, custom_events, matrix, all_variables
+            variable_states, custom_events, matrix, all_variables, date_reference=date_reference
         )
         print("[snapshot] Événements custom : {} | {} variables affectées".format(
             len(custom_events), len(event_modifications)
@@ -1047,7 +1077,7 @@ def build_snapshot(scenario_slug, thematique=None, dry_run=True, forcer_config=N
     signal_modifications = []
     if custom_signals:
         variable_states, signal_modifications = apply_custom_signals(
-            variable_states, custom_signals, matrix, scenario_slug, all_variables
+            variable_states, custom_signals, matrix, scenario_slug, all_variables, date_reference=date_reference
         )
         print("[snapshot] Signaux custom chiffrés : {} | {} variables affectées".format(
             len(custom_signals), len(signal_modifications)
@@ -1103,6 +1133,24 @@ def build_snapshot(scenario_slug, thematique=None, dry_run=True, forcer_config=N
                     "Cet article DOIT être construit spécifiquement autour de l'événement "
                     "\"{}\" ({}) : {}"
                 ).format(ev.get("name", ev["slug"]), ev.get("date_label", ""), ev.get("description", "")[:400])
+                # Point D (chantier "Suite narrative des événements", 6
+                # septembre 2026) : si cet événement a déjà été développé
+                # comme sujet central par des articles précédents
+                # (developpements, alimenté par api.py::save_article()
+                # après chaque forçage sujet_central réussi), le dire
+                # explicitement au LLM pour qu'il poursuive l'histoire
+                # plutôt que de repartir de la fiche statique -- objectif
+                # du chantier ouvert le 5 septembre, jusqu'ici non résolu.
+                developpements = ev.get("developpements") or []
+                if developpements:
+                    recap = " ; ".join(
+                        "[{}] {}".format(d.get("date_label", "?"), d.get("resume", ""))
+                        for d in developpements
+                    )
+                    forced_angle_directive += (
+                        "\nDéveloppements déjà racontés sur cet événement (ne les répète pas, "
+                        "poursuis l'histoire à partir de là) : {}"
+                    ).format(recap)
 
         elif forcer_resolu["type"] == "signal":
             forced_signal_event = forcer_resolu["signal_event"]
@@ -1124,7 +1172,13 @@ def build_snapshot(scenario_slug, thematique=None, dry_run=True, forcer_config=N
         # Métadonnées
         "scenario_slug":    scenario_slug,
         "scenario_name":    scenario["name"],
-        "year":             2098,
+        # 2 septembre 2026 (chantier "Éditions datées") : date_reference
+        # vaut 2098 (comportement historique) si date_edition n'a pas été
+        # fourni à build_snapshot(), sinon la date fractionnaire de
+        # l'édition active (ex. 2098.08) -- int() ici car ce champ ne
+        # sert qu'à l'affichage (un seul usage, print de log ligne
+        # ~1200), pas à un calcul en aval.
+        "year":             int(date_reference),
 
         # Contexte global du scénario
         "scenario": {

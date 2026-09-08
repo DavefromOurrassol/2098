@@ -1,0 +1,236 @@
+============================================================
+AUDIT longueur articles — 213 fichiers scannés
+============================================================
+
+-- Statistiques de longueur réelle (comptage de mots du corps) --
+  Min    : 229
+  Max    : 1399
+  Moyenne: 718
+
+-- Distribution du format (catégorie de la thématique) --
+  brève : 79
+  analyse : 63
+  chronique : 40
+  reportage : 24
+  éditorial : 7
+
+-- CAS A : format et longueur pointent vers la même plage --
+   (pas d'override probable — le vrai signal de qualité)
+  Cohérentes   : 33
+  Incohérentes : 114
+  Taux d'incohérence réel (cas A uniquement) : 77.6%
+
+-- Détail cas A incohérentes (vrai signal, à examiner) --
+  breakdown/20260706_183009_breakdown_politique_article_17janvier2098.md : format='analyse' (attendu 600-900 mots) — 1136 mots réels
+  breakdown/20260706_183040_breakdown_economie_finance_article_2fvrier2098.md : format='analyse' (attendu 600-900 mots) — 1268 mots réels
+  breakdown/20260706_183108_breakdown_environnement_climat_article_19fvrier2098.md : format='reportage' (attendu 700-1000 mots) — 1141 mots réels
+  breakdown/20260706_183156_breakdown_medias_communication_article_24mars2098.md : format='analyse' (attendu 600-900 mots) — 1006 mots réels
+  breakdown/20260825_185426_breakdown_education_article_7juillet2098.md : format='analyse' (attendu 600-900 mots) — 1119 mots réels
+  breakdown/20260829_111958_breakdown_actualites_a_la_une_article_19fevrier2098.md : format='brève' (attendu 200-400 mots) — 465 mots réels
+  eco_communalism/20260628_175131_eco_communalism_societe_article_20septembre2098.md : format='reportage' (attendu 700-1000 mots) — 445 mots réels
+  eco_communalism/20260705_172900_eco_communalism_sante_article_6aot2098.md : format='analyse' (attendu 600-900 mots) — 455 mots réels
+  eco_communalism/20260705_175125_eco_communalism_sante_article_20septembre2098.md : format='analyse' (attendu 600-900 mots) — 505 mots réels
+  eco_communalism/20260705_183701_eco_communalism_sante_article_3octobre2098.md : format='analyse' (attendu 600-900 mots) — 366 mots réels
+  eco_communalism/20260711_103325_eco_communalism_sante_article_27mai2098.md : format='analyse' (attendu 600-900 mots) — 438 mots réels
+  eco_communalism/20260711_175027_eco_communalism_sante_article_21avril2098.md : format='analyse' (attendu 600-900 mots) — 403 mots réels
+  eco_communalism/20260716_070008_eco_communalism_sante_article_8mars2098.md : format='analyse' (attendu 600-900 mots) — 447 mots réels
+  eco_communalism/20260829_182648_eco_communalism_actualites_a_la_une_article_20septembre2098.md : format='brève' (attendu 200-400 mots) — 666 mots réels
+  eco_communalism/20260905_073700_eco_communalism_sante_article_28aout2098.md : format='analyse' (attendu 600-900 mots) — 1235 mots réels
+  fortress_world/20260616_203409_fortress_world_sports_article.md : format='reportage' (attendu 700-1000 mots) — 1012 mots réels
+  fortress_world/20260621_195524_fortress_world_sciences_technologies_article.md : format='analyse' (attendu 600-900 mots) — 1004 mots réels
+  fortress_world/20260621_200620_fortress_world_sciences_technologies_article.md : format='analyse' (attendu 600-900 mots) — 972 mots réels
+  fortress_world/20260628_075249_fortress_world_sciences_technologies_article.md : format='analyse' (attendu 600-900 mots) — 920 mots réels
+  fortress_world/20260628_075754_fortress_world_sciences_technologies_article.md : format='analyse' (attendu 600-900 mots) — 1102 mots réels
+  fortress_world/20260821_095405_fortress_world_economie_finance_article_3janvier2098.md : format='analyse' (attendu 600-900 mots) — 1089 mots réels
+  fortress_world/20260821_095509_fortress_world_economie_finance_article_17janvier2098.md : format='analyse' (attendu 600-900 mots) — 1158 mots réels
+  fortress_world/20260821_095628_fortress_world_societe_article_2fevrier2098.md : format='reportage' (attendu 700-1000 mots) — 1399 mots réels
+  fortress_world/20260821_095732_fortress_world_societe_article_19fevrier2098.md : format='reportage' (attendu 700-1000 mots) — 1137 mots réels
+  fortress_world/20260821_100000_fortress_world_sports_article_8mars2098.md : format='reportage' (attendu 700-1000 mots) — 1120 mots réels
+  fortress_world/20260821_100111_fortress_world_sports_article_24mars2098.md : format='reportage' (attendu 700-1000 mots) — 1001 mots réels
+  fortress_world/20260821_100154_fortress_world_petites_annonces_services_article_5avril2098.md : format='brève' (attendu 200-400 mots) — 459 mots réels
+  fortress_world/20260821_100236_fortress_world_petites_annonces_services_article_21avril2098.md : format='brève' (attendu 200-400 mots) — 450 mots réels
+  fortress_world/20260823_075345_fortress_world_actualites_a_la_une_article_3janvier2098.md : format='brève' (attendu 200-400 mots) — 460 mots réels
+  fortress_world/20260823_075426_fortress_world_actualites_a_la_une_article_17janvier2098.md : format='brève' (attendu 200-400 mots) — 478 mots réels
+  fortress_world/20260823_075541_fortress_world_actualites_a_la_une_article_19fevrier2098.md : format='brève' (attendu 200-400 mots) — 441 mots réels
+  fortress_world/20260823_075621_fortress_world_actualites_a_la_une_article_8mars2098.md : format='brève' (attendu 200-400 mots) — 495 mots réels
+  fortress_world/20260823_075655_fortress_world_actualites_a_la_une_article_24mars2098.md : format='brève' (attendu 200-400 mots) — 410 mots réels
+  fortress_world/20260823_075732_fortress_world_actualites_a_la_une_article_5avril2098.md : format='brève' (attendu 200-400 mots) — 498 mots réels
+  fortress_world/20260823_075807_fortress_world_actualites_a_la_une_article_21avril2098.md : format='brève' (attendu 200-400 mots) — 517 mots réels
+  fortress_world/20260823_075926_fortress_world_actualites_a_la_une_article_10mai2098.md : format='brève' (attendu 200-400 mots) — 422 mots réels
+  fortress_world/20260823_080003_fortress_world_actualites_a_la_une_article_27mai2098.md : format='brève' (attendu 200-400 mots) — 415 mots réels
+  fortress_world/20260823_080037_fortress_world_actualites_a_la_une_article_4juin2098.md : format='brève' (attendu 200-400 mots) — 485 mots réels
+  fortress_world/20260823_080118_fortress_world_actualites_a_la_une_article_19juin2098.md : format='brève' (attendu 200-400 mots) — 501 mots réels
+  fortress_world/20260823_080156_fortress_world_actualites_a_la_une_article_7juillet2098.md : format='brève' (attendu 200-400 mots) — 432 mots réels
+  fortress_world/20260823_080333_fortress_world_actualites_a_la_une_article_22aout2098.md : format='brève' (attendu 200-400 mots) — 430 mots réels
+  fortress_world/20260823_080442_fortress_world_actualites_a_la_une_article_4septembre2098.md : format='brève' (attendu 200-400 mots) — 429 mots réels
+  fortress_world/20260823_080522_fortress_world_actualites_a_la_une_article_20septembre2098.md : format='brève' (attendu 200-400 mots) — 549 mots réels
+  fortress_world/20260823_080556_fortress_world_actualites_a_la_une_article_3octobre2098.md : format='brève' (attendu 200-400 mots) — 512 mots réels
+  fortress_world/20260823_080632_fortress_world_actualites_a_la_une_article_18octobre2098.md : format='brève' (attendu 200-400 mots) — 458 mots réels
+  fortress_world/20260823_151734_fortress_world_actualites_a_la_une_article_3janvier2098.md : format='brève' (attendu 200-400 mots) — 537 mots réels
+  fortress_world/20260823_151808_fortress_world_actualites_a_la_une_article_17janvier2098.md : format='brève' (attendu 200-400 mots) — 484 mots réels
+  fortress_world/20260823_151905_fortress_world_economie_finance_article_2fevrier2098.md : format='analyse' (attendu 600-900 mots) — 955 mots réels
+  fortress_world/20260823_152004_fortress_world_economie_finance_article_19fevrier2098.md : format='analyse' (attendu 600-900 mots) — 1040 mots réels
+  fortress_world/20260823_152059_fortress_world_histoire_patrimoine_article_8mars2098.md : format='chronique' (attendu 400-700 mots) — 765 mots réels
+  fortress_world/20260823_152143_fortress_world_histoire_patrimoine_article_24mars2098.md : format='chronique' (attendu 400-700 mots) — 715 mots réels
+  fortress_world/20260903_182538_fortress_world_culture_article_19aout2098.md : format='chronique' (attendu 400-700 mots) — 742 mots réels
+  fortress_world/20260903_182617_fortress_world_histoire_patrimoine_article_13aout2098.md : format='chronique' (attendu 400-700 mots) — 955 mots réels
+  fortress_world/20260903_182649_fortress_world_religion_spiritualite_article_23aout2098.md : format='chronique' (attendu 400-700 mots) — 742 mots réels
+  new_sustainability/20260822_183332_new_sustainability_politique_article_23aout2098.md : format='analyse' (attendu 600-900 mots) — 938 mots réels
+  new_sustainability/20260822_183438_new_sustainability_politique_article_17janvier2098.md : format='analyse' (attendu 600-900 mots) — 1224 mots réels
+  new_sustainability/20260822_183535_new_sustainability_politique_article_2fevrier2098.md : format='analyse' (attendu 600-900 mots) — 1019 mots réels
+  new_sustainability/20260822_183822_new_sustainability_environnement_climat_article_8mars2098.md : format='reportage' (attendu 700-1000 mots) — 1090 mots réels
+  new_sustainability/20260822_184031_new_sustainability_environnement_climat_article_24mars2098.md : format='reportage' (attendu 700-1000 mots) — 1004 mots réels
+  new_sustainability/20260822_184228_new_sustainability_environnement_climat_article_21avril2098.md : format='reportage' (attendu 700-1000 mots) — 1119 mots réels
+  new_sustainability/20260822_184317_new_sustainability_lifestyle_art_de_vivre_article_10mai2098.md : format='chronique' (attendu 400-700 mots) — 845 mots réels
+  new_sustainability/20260822_184459_new_sustainability_lifestyle_art_de_vivre_article_4juin2098.md : format='chronique' (attendu 400-700 mots) — 938 mots réels
+  new_sustainability/20260822_184546_new_sustainability_lifestyle_art_de_vivre_article_19juin2098.md : format='chronique' (attendu 400-700 mots) — 716 mots réels
+  new_sustainability/20260822_184823_new_sustainability_meteo_article_4septembre2098.md : format='brève' (attendu 200-400 mots) — 530 mots réels
+  new_sustainability/20260822_184850_new_sustainability_meteo_article_20septembre2098.md : format='brève' (attendu 200-400 mots) — 452 mots réels
+  new_sustainability/20260822_184941_new_sustainability_meteo_article_3octobre2098.md : format='brève' (attendu 200-400 mots) — 544 mots réels
+  new_sustainability/20260822_185029_new_sustainability_meteo_article_18octobre2098.md : format='brève' (attendu 200-400 mots) — 493 mots réels
+  new_sustainability/20260822_190919_new_sustainability_sciences_technologies_article_17janvier2098.md : format='analyse' (attendu 600-900 mots) — 971 mots réels
+  new_sustainability/20260822_191134_new_sustainability_sciences_technologies_article_2fevrier2098.md : format='analyse' (attendu 600-900 mots) — 914 mots réels
+  new_sustainability/20260822_191246_new_sustainability_sciences_technologies_article_19fevrier2098.md : format='analyse' (attendu 600-900 mots) — 1028 mots réels
+  new_sustainability/20260822_191336_new_sustainability_opinions_editoriaux_article_8mars2098.md : format='éditorial' (attendu 500-800 mots) — 919 mots réels
+  new_sustainability/20260822_191637_new_sustainability_opinions_editoriaux_article_5avril2098.md : format='éditorial' (attendu 500-800 mots) — 964 mots réels
+  new_sustainability/20260822_191909_new_sustainability_education_article_27mai2098.md : format='analyse' (attendu 600-900 mots) — 1166 mots réels
+  new_sustainability/20260822_192118_new_sustainability_education_article_4juin2098.md : format='analyse' (attendu 600-900 mots) — 918 mots réels
+  new_sustainability/20260822_192213_new_sustainability_education_article_19juin2098.md : format='analyse' (attendu 600-900 mots) — 1056 mots réels
+  new_sustainability/20260822_192316_new_sustainability_medias_communication_article_7juillet2098.md : format='analyse' (attendu 600-900 mots) — 1013 mots réels
+  new_sustainability/20260822_192405_new_sustainability_medias_communication_article_23juillet2098.md : format='analyse' (attendu 600-900 mots) — 1082 mots réels
+  new_sustainability/20260822_192516_new_sustainability_medias_communication_article_6aout2098.md : format='analyse' (attendu 600-900 mots) — 1268 mots réels
+  new_sustainability/20260822_192617_new_sustainability_medias_communication_article_22aout2098.md : format='analyse' (attendu 600-900 mots) — 1205 mots réels
+  new_sustainability/20260822_192707_new_sustainability_religion_spiritualite_article_4septembre2098.md : format='chronique' (attendu 400-700 mots) — 791 mots réels
+  new_sustainability/20260822_192747_new_sustainability_religion_spiritualite_article_20septembre2098.md : format='chronique' (attendu 400-700 mots) — 803 mots réels
+  new_sustainability/20260822_192826_new_sustainability_religion_spiritualite_article_3octobre2098.md : format='chronique' (attendu 400-700 mots) — 874 mots réels
+  new_sustainability/20260822_192904_new_sustainability_religion_spiritualite_article_18octobre2098.md : format='chronique' (attendu 400-700 mots) — 849 mots réels
+  new_sustainability/20260823_132012_new_sustainability_actualites_a_la_une_article_3janvier2098.md : format='brève' (attendu 200-400 mots) — 461 mots réels
+  new_sustainability/20260823_133229_new_sustainability_meteo_article_6aout2098.md : format='brève' (attendu 200-400 mots) — 541 mots réels
+  new_sustainability/20260823_150154_new_sustainability_actualites_a_la_une_article_3janvier2098.md : format='brève' (attendu 200-400 mots) — 460 mots réels
+  new_sustainability/20260823_150241_new_sustainability_actualites_a_la_une_article_17janvier2098.md : format='brève' (attendu 200-400 mots) — 497 mots réels
+  new_sustainability/20260823_150453_new_sustainability_economie_finance_article_2fevrier2098.md : format='analyse' (attendu 600-900 mots) — 1118 mots réels
+  new_sustainability/20260823_150556_new_sustainability_economie_finance_article_19fevrier2098.md : format='analyse' (attendu 600-900 mots) — 1135 mots réels
+  new_sustainability/20260823_150758_new_sustainability_societe_article_24mars2098.md : format='reportage' (attendu 700-1000 mots) — 1373 mots réels
+  new_sustainability/20260823_150859_new_sustainability_education_article_5avril2098.md : format='analyse' (attendu 600-900 mots) — 1126 mots réels
+  new_sustainability/20260823_151001_new_sustainability_education_article_21avril2098.md : format='analyse' (attendu 600-900 mots) — 1165 mots réels
+  new_sustainability/20260823_151051_new_sustainability_histoire_patrimoine_article_10mai2098.md : format='chronique' (attendu 400-700 mots) — 795 mots réels
+  new_sustainability/20260823_151238_new_sustainability_histoire_patrimoine_article_27mai2098.md : format='chronique' (attendu 400-700 mots) — 767 mots réels
+  policy_reform/20260628_160545_policy_reform_societe_article.md : format='reportage' (attendu 700-1000 mots) — 1194 mots réels
+  policy_reform/20260628_161154_policy_reform_societe_article.md : format='reportage' (attendu 700-1000 mots) — 494 mots réels
+  policy_reform/20260628_161545_policy_reform_societe_article_22aot2098.md : format='reportage' (attendu 700-1000 mots) — 333 mots réels
+  policy_reform/20260706_185558_policy_reform_politique_article_3janvier2098.md : format='analyse' (attendu 600-900 mots) — 426 mots réels
+  policy_reform/20260706_185610_policy_reform_societe_article_17janvier2098.md : format='reportage' (attendu 700-1000 mots) — 379 mots réels
+  policy_reform/20260823_125243_policy_reform_actualites_a_la_une_article_3janvier2098.md : format='brève' (attendu 200-400 mots) — 551 mots réels
+  policy_reform/20260823_125552_policy_reform_faits_divers_article_24mars2098.md : format='brève' (attendu 200-400 mots) — 415 mots réels
+  policy_reform/20260823_130251_policy_reform_petites_annonces_services_article_23juillet2098.md : format='brève' (attendu 200-400 mots) — 519 mots réels
+  policy_reform/20260823_130339_policy_reform_meteo_article_6aout2098.md : format='brève' (attendu 200-400 mots) — 563 mots réels
+  policy_reform/20260906_145139_policy_reform_actualites_a_la_une_article_2aout2098.md : format='brève' (attendu 200-400 mots) — 431 mots réels
+  reference/20260820_194020_reference_culture_article_3janvier2098.md : format='chronique' (attendu 400-700 mots) — 926 mots réels
+  reference/20260820_194106_reference_culture_article_17janvier2098.md : format='chronique' (attendu 400-700 mots) — 793 mots réels
+  reference/20260820_194226_reference_lifestyle_art_de_vivre_article_19fevrier2098.md : format='chronique' (attendu 400-700 mots) — 716 mots réels
+  reference/20260820_194312_reference_lifestyle_art_de_vivre_article_8mars2098.md : format='chronique' (attendu 400-700 mots) — 831 mots réels
+  reference/20260820_194357_reference_lifestyle_art_de_vivre_article_24mars2098.md : format='chronique' (attendu 400-700 mots) — 751 mots réels
+  reference/20260820_194438_reference_histoire_patrimoine_article_5avril2098.md : format='chronique' (attendu 400-700 mots) — 792 mots réels
+  reference/20260820_194521_reference_histoire_patrimoine_article_21avril2098.md : format='chronique' (attendu 400-700 mots) — 788 mots réels
+  reference/20260820_194817_reference_medias_communication_article_27mai2098.md : format='analyse' (attendu 600-900 mots) — 1106 mots réels
+  reference/20260820_194923_reference_medias_communication_article_4juin2098.md : format='analyse' (attendu 600-900 mots) — 1133 mots réels
+  reference/20260820_195136_reference_medias_communication_article_19juin2098.md : format='analyse' (attendu 600-900 mots) — 1120 mots réels
+
+-- CAS B : format et longueur divergent (override probable) --
+   (66 articles — informatif seulement, PAS un signe du bug)
+  breakdown/20260706_182946_breakdown_actualites_a_la_une_article_3janvier2098.md : format='brève' (200-400) vs longueur déclarée '300 à 500 mots' (300-500) — 494 mots réels [✓]
+  breakdown/20260815_110232_breakdown_actualites_a_la_une_article_18octobre2098.md : format='brève' (200-400) vs longueur déclarée '600 à 900 mots' (600-900) — 1076 mots réels [✗]
+  breakdown/20260821_194029_breakdown_opinions_editoriaux_article_17janvier2098.md : format='éditorial' (500-800) vs longueur déclarée '200 à 400 mots' (200-400) — 420 mots réels [✗]
+  breakdown/20260821_194111_breakdown_histoire_patrimoine_article_2fevrier2098.md : format='chronique' (400-700) vs longueur déclarée '200 à 400 mots' (200-400) — 392 mots réels [✓]
+  breakdown/20260823_175311_breakdown_petites_annonces_services_article_22aout2098.md : format='brève' (200-400) vs longueur déclarée '600 à 900 mots' (600-900) — 839 mots réels [✓]
+  breakdown/20260823_181126_breakdown_petites_annonces_services_article_20septembre2098.md : format='brève' (200-400) vs longueur déclarée '600 à 900 mots' (600-900) — 634 mots réels [✓]
+  breakdown/20260823_181801_breakdown_actualites_a_la_une_article_27mai2098.md : format='brève' (200-400) vs longueur déclarée '600 à 900 mots' (600-900) — 1074 mots réels [✗]
+  eco_communalism/20260802_185402_eco_communalism_actualites_a_la_une_article_8mars2098.md : format='brève' (200-400) vs longueur déclarée '300 à 500 mots' (300-500) — 594 mots réels [✗]
+  eco_communalism/20260815_104557_eco_communalism_actualites_a_la_une_article_18octobre2098.md : format='brève' (200-400) vs longueur déclarée '600 à 900 mots' (600-900) — 616 mots réels [✓]
+  eco_communalism/20260815_104841_eco_communalism_actualites_a_la_une_article_6aout2098.md : format='brève' (200-400) vs longueur déclarée '600 à 900 mots' (600-900) — 983 mots réels [✗]
+  eco_communalism/20260815_105017_eco_communalism_actualites_a_la_une_article_7juillet2098.md : format='brève' (200-400) vs longueur déclarée '600 à 900 mots' (600-900) — 1115 mots réels [✗]
+  eco_communalism/20260816_072959_eco_communalism_politique_article_20septembre2098.md : format='analyse' (600-900) vs longueur déclarée '700 à 1000 mots' (700-1000) — 1395 mots réels [✗]
+  eco_communalism/20260829_182827_eco_communalism_actualites_a_la_une_article_10mai2098.md : format='brève' (200-400) vs longueur déclarée '600 à 900 mots' (600-900) — 1064 mots réels [✗]
+  eco_communalism/20260829_183204_eco_communalism_actualites_a_la_une_article_5avril2098.md : format='brève' (200-400) vs longueur déclarée '600 à 900 mots' (600-900) — 1141 mots réels [✗]
+  eco_communalism/20260829_183412_eco_communalism_actualites_a_la_une_article_6aout2098.md : format='brève' (200-400) vs longueur déclarée '600 à 900 mots' (600-900) — 1076 mots réels [✗]
+  eco_communalism/20260829_183620_eco_communalism_actualites_a_la_une_article_2fevrier2098.md : format='brève' (200-400) vs longueur déclarée '600 à 900 mots' (600-900) — 1095 mots réels [✗]
+  eco_communalism/20260829_183957_eco_communalism_actualites_a_la_une_article_7juillet2098.md : format='brève' (200-400) vs longueur déclarée '600 à 900 mots' (600-900) — 1245 mots réels [✗]
+  fortress_world/20260628_175911_fortress_world_actualites_a_la_une_article_22aot2098.md : format='brève' (200-400) vs longueur déclarée '300 à 500 mots' (300-500) — 408 mots réels [✓]
+  fortress_world/20260628_233404_fortress_world_actualites_a_la_une_article_8mars2098.md : format='brève' (200-400) vs longueur déclarée '300 à 500 mots' (300-500) — 375 mots réels [✓]
+  fortress_world/20260812_172057_fortress_world_histoire_patrimoine_article_3janvier2098.md : format='chronique' (400-700) vs longueur déclarée '200 à 400 mots' (200-400) — 457 mots réels [✗]
+  fortress_world/20260819_185103_fortress_world_religion_spiritualite_article_18octobre2098.md : format='chronique' (400-700) vs longueur déclarée '200 à 400 mots' (200-400) — 425 mots réels [✗]
+  fortress_world/20260819_185525_fortress_world_actualites_a_la_une_article_10mai2098.md : format='brève' (200-400) vs longueur déclarée '600 à 900 mots' (600-900) — 1161 mots réels [✗]
+  fortress_world/20260826_185546_fortress_world_histoire_patrimoine_article_3janvier2098.md : format='chronique' (400-700) vs longueur déclarée '600 à 900 mots' (600-900) — 1222 mots réels [✗]
+  fortress_world/20260826_190211_fortress_world_actualites_a_la_une_article_17janvier2098.md : format='brève' (200-400) vs longueur déclarée '600 à 900 mots' (600-900) — 996 mots réels [✗]
+  fortress_world/20260826_191059_fortress_world_actualites_a_la_une_article_7juillet2098.md : format='brève' (200-400) vs longueur déclarée '600 à 900 mots' (600-900) — 1065 mots réels [✗]
+  fortress_world/20260828_193453_fortress_world_actualites_a_la_une_article_19fevrier2098.md : format='brève' (200-400) vs longueur déclarée '600 à 900 mots' (600-900) — 1052 mots réels [✗]
+  fortress_world/20260829_075948_fortress_world_actualites_a_la_une_article_4septembre2098.md : format='brève' (200-400) vs longueur déclarée '600 à 700 mots' (600-700) — 1078 mots réels [✗]
+  fortress_world/20260829_083022_fortress_world_religion_spiritualite_article_27mai2098.md : format='chronique' (400-700) vs longueur déclarée '600 à 700 mots' (600-700) — 902 mots réels [✗]
+  fortress_world/20260830_185205_fortress_world_religion_spiritualite_article_24mars2098.md : format='chronique' (400-700) vs longueur déclarée '200 à 400 mots' (200-400) — 330 mots réels [✓]
+  new_sustainability/20260815_101930_new_sustainability_actualites_a_la_une_article_10mai2098.md : format='brève' (200-400) vs longueur déclarée '600 à 900 mots' (600-900) — 1098 mots réels [✗]
+  new_sustainability/20260823_132120_new_sustainability_economie_finance_article_17janvier2098.md : format='analyse' (600-900) vs longueur déclarée '200 à 400 mots' (200-400) — 391 mots réels [✓]
+  new_sustainability/20260823_132201_new_sustainability_sciences_technologies_article_2fevrier2098.md : format='analyse' (600-900) vs longueur déclarée '200 à 400 mots' (200-400) — 530 mots réels [✗]
+  new_sustainability/20260823_132333_new_sustainability_societe_article_19fevrier2098.md : format='reportage' (700-1000) vs longueur déclarée '200 à 400 mots' (200-400) — 509 mots réels [✗]
+  new_sustainability/20260823_132445_new_sustainability_international_article_8mars2098.md : format='analyse' (600-900) vs longueur déclarée '200 à 400 mots' (200-400) — 329 mots réels [✓]
+  new_sustainability/20260823_132555_new_sustainability_opinions_editoriaux_article_5avril2098.md : format='éditorial' (500-800) vs longueur déclarée '200 à 400 mots' (200-400) — 515 mots réels [✗]
+  new_sustainability/20260823_132634_new_sustainability_lifestyle_art_de_vivre_article_21avril2098.md : format='chronique' (400-700) vs longueur déclarée '200 à 400 mots' (200-400) — 450 mots réels [✗]
+  new_sustainability/20260823_132801_new_sustainability_sante_article_10mai2098.md : format='analyse' (600-900) vs longueur déclarée '200 à 400 mots' (200-400) — 518 mots réels [✗]
+  new_sustainability/20260823_132841_new_sustainability_education_article_27mai2098.md : format='analyse' (600-900) vs longueur déclarée '200 à 400 mots' (200-400) — 454 mots réels [✗]
+  new_sustainability/20260823_132922_new_sustainability_histoire_patrimoine_article_4juin2098.md : format='chronique' (400-700) vs longueur déclarée '200 à 400 mots' (200-400) — 450 mots réels [✗]
+  new_sustainability/20260823_132959_new_sustainability_medias_communication_article_19juin2098.md : format='analyse' (600-900) vs longueur déclarée '200 à 400 mots' (200-400) — 448 mots réels [✗]
+  new_sustainability/20260823_133112_new_sustainability_religion_spiritualite_article_7juillet2098.md : format='chronique' (400-700) vs longueur déclarée '200 à 400 mots' (200-400) — 457 mots réels [✗]
+  new_sustainability/20260823_134545_new_sustainability_societe_article_3janvier2098.md : format='reportage' (700-1000) vs longueur déclarée '200 à 400 mots' (200-400) — 516 mots réels [✗]
+  new_sustainability/20260823_134624_new_sustainability_international_article_17janvier2098.md : format='analyse' (600-900) vs longueur déclarée '200 à 400 mots' (200-400) — 518 mots réels [✗]
+  new_sustainability/20260823_134702_new_sustainability_histoire_patrimoine_article_2fevrier2098.md : format='chronique' (400-700) vs longueur déclarée '200 à 400 mots' (200-400) — 452 mots réels [✗]
+  new_sustainability/20260823_145412_new_sustainability_histoire_patrimoine_article_3janvier2098.md : format='chronique' (400-700) vs longueur déclarée '200 à 400 mots' (200-400) — 404 mots réels [✗]
+  new_sustainability/20260823_145943_new_sustainability_actualites_a_la_une_article_27mai2098.md : format='brève' (200-400) vs longueur déclarée '600 à 900 mots' (600-900) — 1133 mots réels [✗]
+  policy_reform/20260815_100336_policy_reform_actualites_a_la_une_article_6aout2098.md : format='brève' (200-400) vs longueur déclarée '600 à 900 mots' (600-900) — 1197 mots réels [✗]
+  policy_reform/20260815_101248_policy_reform_actualites_a_la_une_article_27mai2098.md : format='brève' (200-400) vs longueur déclarée '600 à 900 mots' (600-900) — 832 mots réels [✓]
+  policy_reform/20260816_163426_policy_reform_politique_article_3octobre2098.md : format='analyse' (600-900) vs longueur déclarée '400 à 700 mots' (400-700) — 975 mots réels [✗]
+  policy_reform/20260821_195233_policy_reform_societe_article_3janvier2098.md : format='reportage' (700-1000) vs longueur déclarée '200 à 400 mots' (200-400) — 521 mots réels [✗]
+  policy_reform/20260821_195314_policy_reform_musique_article_17janvier2098.md : format='chronique' (400-700) vs longueur déclarée '200 à 400 mots' (200-400) — 541 mots réels [✗]
+  policy_reform/20260821_195352_policy_reform_sante_article_2fevrier2098.md : format='analyse' (600-900) vs longueur déclarée '200 à 400 mots' (200-400) — 504 mots réels [✗]
+  policy_reform/20260821_200157_policy_reform_societe_article_3janvier2098.md : format='reportage' (700-1000) vs longueur déclarée '200 à 400 mots' (200-400) — 529 mots réels [✗]
+  policy_reform/20260823_125324_policy_reform_economie_finance_article_17janvier2098.md : format='analyse' (600-900) vs longueur déclarée '200 à 400 mots' (200-400) — 434 mots réels [✗]
+  policy_reform/20260823_125407_policy_reform_sciences_technologies_article_2fevrier2098.md : format='analyse' (600-900) vs longueur déclarée '200 à 400 mots' (200-400) — 539 mots réels [✗]
+  policy_reform/20260823_125446_policy_reform_societe_article_19fevrier2098.md : format='reportage' (700-1000) vs longueur déclarée '200 à 400 mots' (200-400) — 518 mots réels [✗]
+  policy_reform/20260823_125518_policy_reform_international_article_8mars2098.md : format='analyse' (600-900) vs longueur déclarée '200 à 400 mots' (200-400) — 388 mots réels [✓]
+  policy_reform/20260823_125644_policy_reform_opinions_editoriaux_article_5avril2098.md : format='éditorial' (500-800) vs longueur déclarée '200 à 400 mots' (200-400) — 530 mots réels [✗]
+  policy_reform/20260823_125726_policy_reform_lifestyle_art_de_vivre_article_21avril2098.md : format='chronique' (400-700) vs longueur déclarée '200 à 400 mots' (200-400) — 390 mots réels [✓]
+  policy_reform/20260823_125842_policy_reform_sante_article_10mai2098.md : format='analyse' (600-900) vs longueur déclarée '200 à 400 mots' (200-400) — 508 mots réels [✗]
+  policy_reform/20260823_130009_policy_reform_education_article_27mai2098.md : format='analyse' (600-900) vs longueur déclarée '200 à 400 mots' (200-400) — 631 mots réels [✗]
+  policy_reform/20260823_130043_policy_reform_histoire_patrimoine_article_4juin2098.md : format='chronique' (400-700) vs longueur déclarée '200 à 400 mots' (200-400) — 425 mots réels [✗]
+  policy_reform/20260823_130129_policy_reform_medias_communication_article_19juin2098.md : format='analyse' (600-900) vs longueur déclarée '200 à 400 mots' (200-400) — 478 mots réels [✗]
+  policy_reform/20260823_130212_policy_reform_religion_spiritualite_article_7juillet2098.md : format='chronique' (400-700) vs longueur déclarée '200 à 400 mots' (200-400) — 544 mots réels [✗]
+  policy_reform/20260906_150228_policy_reform_actualites_a_la_une_article_9aout2098.md : format='brève' (200-400) vs longueur déclarée '600 à 900 mots' (600-900) — 1227 mots réels [✗]
+  reference/20260816_163501_reference_politique_article_5avril2098.md : format='analyse' (600-900) vs longueur déclarée '400 à 700 mots' (400-700) — 698 mots réels [✓]
+
+-- Distribution par scénario --
+  new_sustainability : 73
+  fortress_world : 59
+  policy_reform : 29
+  eco_communalism : 21
+  breakdown : 18
+  reference : 13
+
+-- Distribution par thématique --
+  actualites_a_la_une : 53
+  societe : 15
+  histoire_patrimoine : 15
+  petites_annonces_services : 15
+  sante : 12
+  sciences_technologies : 11
+  religion_spiritualite : 11
+  medias_communication : 10
+  politique : 9
+  economie_finance : 9
+  education : 9
+  lifestyle_art_de_vivre : 9
+  meteo : 8
+  opinions_editoriaux : 7
+  environnement_climat : 5
+  sports : 4
+  culture : 4
+  faits_divers : 3
+  international : 3
+  musique : 1

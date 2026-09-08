@@ -314,7 +314,7 @@ breakdown:
           - histoire_patrimoine
           - religion_spiritualite
           - musique
-          seniorite: 1
+          seniorite: 4
         - nom: Liv Kari Henriksen
           thematiques:
           - sports
@@ -3467,7 +3467,7 @@ breakdown:
         langue_style: français mêlé d'aymara et d'espagnol andin, style de procès-verbal
           communautaire, vocabulaire minier et écologique
         journalistes:
-        - nom: Marisol Quispe Mamani
+        - nom: Nayra Quispe Mamani
           thematiques:
           - actualites_a_la_une
           - politique
@@ -5546,7 +5546,7 @@ fortress_world:
           - histoire_patrimoine
           - religion_spiritualite
           seniorite: 1
-        - nom: Samira Al-Khatib
+        - nom: Yasmine Chahine
           thematiques:
           - culture
           - musique
@@ -7136,7 +7136,7 @@ new_sustainability:
           - sciences_technologies
           - medias_communication
           seniorite: 1
-        - nom: Mei-Ling Chen
+        - nom: Xiaoyu Tan
           thematiques:
           - environnement_climat
           - sante
@@ -9886,7 +9886,7 @@ eco_communalism:
           régionales (alsacien, occitan, lombard) et termes administratifs allemands
           ou néerlandais détournés.'
         journalistes:
-        - nom: Maëlle Le Goff
+        - nom: Solène Guillou
           thematiques:
           - actualites_a_la_une
           - politique
@@ -10936,7 +10936,7 @@ eco_communalism:
         langue_style: Bengali populaire du delta, alternant slogans d'assemblée, récits
           de femmes déplacées et termes techniques de gestion des crues
         journalistes:
-        - nom: Farhana Akter
+        - nom: Nasima Begum
           thematiques:
           - actualites_a_la_une
           - politique
@@ -14266,7 +14266,7 @@ reference:
           - international
           - opinions_editoriaux
           seniorite: 1
-        - nom: Samir El-Masri
+        - nom: Tariq Mansour
           thematiques:
           - economie_finance
           - sciences_technologies

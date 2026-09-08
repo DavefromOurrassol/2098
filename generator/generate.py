@@ -43,6 +43,8 @@ import random
 import sys
 import yaml
 
+from edition_utils import edition_date_to_float, tirer_jour_edition, lire_edition_active
+
 
 def _parse_cli_args():
     """argparse.parse_known_args() pour ne pas planter sur d'éventuels
@@ -295,8 +297,25 @@ def _generate_one(scenario_slug, thematique_obj, thematique_slug, config,
     from snapshot       import build_snapshot
     from prompt_builder import build_prompt
 
+    # Édition active (2 septembre 2026, chantier "Éditions datées",
+    # option 2 tranchée avec David) : generate.py (article isolé) LIT
+    # l'édition active mais ne la crée/n'avance jamais -- seuls
+    # generate_series.py/generate_manual.py le font. Lue AVANT
+    # build_snapshot() pour que date_edition et le tirage du jour de
+    # rédaction ci-dessous s'appuient sur le même repère, plutôt que
+    # deux lectures/tirages indépendants. state/editions.json absent ou
+    # vide (déploiement neuf, avant tout premier lancement de série) :
+    # repli complet sur le comportement historique (year 2098 fixe,
+    # DATES_2098 pleine année).
+    edition_active = lire_edition_active()
+    date_edition = (
+        edition_date_to_float(edition_active["annee"], edition_active["mois"])
+        if edition_active else None
+    )
+
     snapshot = build_snapshot(scenario_slug, thematique=thematique_obj,
-                               dry_run=dry_run, forcer_config=forcer_config)
+                               dry_run=dry_run, forcer_config=forcer_config,
+                               date_edition=date_edition)
 
     if snapshot.get("forcer_erreur"):
         return {"scenario": scenario_slug, "result": None, "erreur": snapshot["forcer_erreur"]}
@@ -305,7 +324,12 @@ def _generate_one(scenario_slug, thematique_obj, thematique_slug, config,
     article_config["scenario"] = scenario_slug
     article_config["article"] = dict(config.get("article") or {})
     if not article_config["article"].get("date_fictive"):
-        article_config["article"]["date_fictive"] = random.choice(DATES_2098)
+        if edition_active:
+            article_config["article"]["date_fictive"] = tirer_jour_edition(
+                edition_active["annee"], edition_active["mois"]
+            )
+        else:
+            article_config["article"]["date_fictive"] = random.choice(DATES_2098)
 
     # Uniformisation du dossier de sortie (22 août 2026, retour de
     # David) : jusqu'ici, seuls generate_series.py/generate_manual.py

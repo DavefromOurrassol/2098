@@ -116,6 +116,12 @@
     }
   },
   "eco_communalism": {
+    "journalistes::pro_pouvoir::europe_occidentale_reconstituee": {
+      "Chiara Benedetti": {
+        "absence_streak": 0,
+        "count": 1
+      }
+    },
     "journalistes::pro_pouvoir::maghreb_mediterraneen": {
       "Salma Benyoussef": {
         "absence_streak": 0,
@@ -132,7 +138,7 @@
       "charte bioterritoriale du tempo lent et des cycles naturels": 1,
       "charte communautaire pour des corps non augmentés 2044": 1,
       "charte des assistants IA communautaires bioterritoriaux": 1,
-      "charte des identités bioterritoriales et de l'accueil": 1,
+      "charte des identités bioterritoriales et de l'accueil": 2,
       "charte des maisons de santé sur le consentement sanitaire 2047": 1,
       "charte fondatrice post-croissance des assemblées bioterritoriales": 1,
       "charte scientifique internationale contre le minage extractif d'astéroïdes": 1,
@@ -154,7 +160,7 @@
       "moratoire communautaire sur les lancements commerciaux": 1,
       "mouvement bioterritorial de désengagement des récits globaux": 1,
       "mouvement bioterritorial des modèles IA frugaux": 1,
-      "mouvement de débranchement des systèmes de gestion migratoire centralisés": 1,
+      "mouvement de débranchement des systèmes de gestion migratoire centralisés": 2,
       "mouvement de déconnexion algorithmique communautaire": 1,
       "mouvement de déconnexion des marchés algorithmiques": 1,
       "mouvement de réappropriation culturelle locale": 1,
@@ -170,15 +176,15 @@
     },
     "majeurs": {
       "abandon communautaire des projets centralisés de fusion": 6,
-      "charte bioterritoriale de sobriété énergétique partagée": 6,
+      "charte bioterritoriale de sobriété énergétique partagée": 7,
       "charte bioterritoriale pour des services assurés par des humains": 6,
       "charte d'Agadez sur la souveraineté hydrique communautaire": 6,
       "charte de N'Djamena pour l'autonomie hydrique communautaire": 6,
       "diffusion virale du mouvement des veillées de l'effondrement": 6,
       "manifeste bioterritorial de la contribution choisie": 6,
-      "manifeste bioterritorial de la sobriété choisie": 5,
+      "manifeste bioterritorial de la sobriété choisie": 6,
       "manifeste fondateur du localisme bioterritorial": 2,
-      "mouvement de boycott des fermes de capture carbone industrielles": 5,
+      "mouvement de boycott des fermes de capture carbone industrielles": 6,
       "mouvement de circularité des matériaux critiques": 6,
       "mouvement de décroissance urbaine volontaire": 3,
       "mouvement de localisation des chaînes de valeur essentielles": 6,
@@ -186,13 +192,13 @@
       "mouvement de retour aux pratiques agricoles low-tech bioterritoriales": 6,
       "mouvement de retour vers les terres hautes bioterritoriales": 6,
       "mouvement de retour à la terre bioterritorial": 3,
-      "mouvement de revalorisation des savoir-faire intermédiaires bioterritoriaux": 5,
+      "mouvement de revalorisation des savoir-faire intermédiaires bioterritoriaux": 6,
       "mouvement de régénération écologique territoriale": 6,
       "mouvement de réhabilitation bioterritoriale des friches minières": 6,
       "mouvement global de retour aux territoires vivables": 3,
-      "mouvement mondial de souveraineté hydrique locale": 5,
+      "mouvement mondial de souveraineté hydrique locale": 6,
       "mouvement néo-artisanal et de l'économie du soin": 6,
-      "renaissance des pratiques autochtones de brûlage dirigé": 5,
+      "renaissance des pratiques autochtones de brûlage dirigé": 6,
       "réseau bioterritorial de capteurs urbains low-tech partagés": 3,
       "réseau bioterritorial de stockage thermique communautaire": 6
     },
@@ -235,6 +241,14 @@
         "absence_streak": 0,
         "count": 2
       },
+      "Marc-Antoine Lavoie": {
+        "absence_streak": 1,
+        "count": 0
+      },
+      "Nora Caldwell": {
+        "absence_streak": 0,
+        "count": 1
+      },
       "Siobhán O'Neill": {
         "absence_streak": 0,
         "count": 1
@@ -256,12 +270,12 @@
     },
     "journalistes::pro_pouvoir::pacte_forteresses_souveraines": {
       "Nikolai Sokolov": {
-        "absence_streak": 0,
+        "absence_streak": 1,
         "count": 2
       },
       "Tomasz Wierzbicki": {
-        "absence_streak": 1,
-        "count": 0
+        "absence_streak": 0,
+        "count": 1
       }
     },
     "journalistes::pro_pouvoir::zones_grises_tampons": {
@@ -279,7 +293,7 @@
       "Bloc Sibérien déploie des perroquets espions dans les zones frontalières 2047": 4,
       "Bloc Sibérien déploie ses agents administratifs souverains 2046": 3,
       "Score de Priorité Sanitaire du Bloc Atlantique 2047": 3,
-      "adoption d'une spiritualité officielle hybride par les blocs 2050": 3,
+      "adoption d'une spiritualité officielle hybride par les blocs 2050": 4,
       "adoption de barèmes carbone distincts par chaque bloc 2048": 3,
       "adoption de récits factuels officiels distincts par les blocs 2048": 3,
       "campagne officielle des blocs sur la fin du monde ancien 2046": 3,
@@ -289,7 +303,7 @@
       "création des zones climatiques protégées des blocs 2048": 2,
       "création des zones rouges incendie hors-bloc 2046": 2,
       "création des zones sanitaires prioritaires des blocs": 3,
-      "création du système monétaire des Blocs de Shanghai": 2,
+      "création du système monétaire des Blocs de Shanghai": 3,
       "cérémonies officielles d'augmentation des cadres du Bloc Atlantique 2050": 3,
       "doctrine identitaire officielle du Bloc Sibérien sur la mobilité 2050": 3,
       "doctrine officielle de puissance économique des blocs 2047": 3,
@@ -302,7 +316,7 @@
       "généralisation des capteurs biométriques obligatoires du Bloc Atlantique 2045": 3,
       "incident biologique de Vladivostok 2049": 2,
       "instauration de classes patrimoniales officielles dans les blocs 2046": 3,
-      "instauration de quotas générationnels dans les administrations des blocs 2048": 3,
+      "instauration de quotas générationnels dans les administrations des blocs 2048": 4,
       "instauration des cycles de vie optimisés dans les blocs 2049": 3,
       "instauration du statut de citoyen productif obligatoire des blocs 2046": 3,
       "lancement de la doctrine de guerre culturelle des blocs 2045": 3,
@@ -313,7 +327,7 @@
       "militarisation des grands fleuves transfrontaliers 2049": 2,
       "mise en service du classement migratoire automatisé du Bloc Eurasiatique 2050": 3,
       "nationalisation des fermes automatisées stratégiques par les blocs 2047": 3,
-      "nationalisation des infrastructures algorithmiques financières": 2,
+      "nationalisation des infrastructures algorithmiques financières": 3,
       "nationalisation des infrastructures numériques des blocs 2047": 3,
       "nationalisation des plateformes numériques par le Bloc Atlantique 2045": 3,
       "politiques de natalité forcée et sélection migratoire des blocs": 4,
@@ -321,44 +335,44 @@
       "programme de nettoyage orbital militarisé des blocs": 2,
       "programme de réindustrialisation interne des blocs 2046": 3,
       "programme de réinstallation côtière du Bloc Atlantique 2051": 3,
-      "rationnement énergétique civil au profit des centres de calcul des blocs": 3,
+      "rationnement énergétique civil au profit des centres de calcul des blocs": 4,
       "reconnaissance des stations orbitales comme territoires officiels des blocs 2050": 2,
       "reconversion forcée des métiers intermédiaires vers les administrations des blocs 2045": 3,
-      "renaissance des mouvements civilisationnels des blocs": 3,
+      "renaissance des mouvements civilisationnels des blocs": 4,
       "saisie des stations industrielles privées par le Bloc Atlantique 2048": 3
     },
     "majeurs": {
       "Bloc Atlantique impose ses agents IA comme uniques interfaces administratives 2047": 28,
-      "Bloc Eurasiatique annexe les aquifères du lac Tchad 2048": 28,
+      "Bloc Eurasiatique annexe les aquifères du lac Tchad 2048": 29,
       "adoption de la doctrine de conflit permanent par les blocs 2046": 4,
-      "adoption de standards environnementaux distincts par chaque bloc 2047": 28,
+      "adoption de standards environnementaux distincts par chaque bloc 2047": 29,
       "campagne identitaire locale officielle des blocs 2047": 3,
-      "classification des zones minières comme zones sacrifiées par les blocs 2049": 28,
+      "classification des zones minières comme zones sacrifiées par les blocs 2049": 29,
       "classification des zones rurales hors-bloc comme territoires non prioritaires 2046": 3,
-      "création de l'Alliance des Blocs Atlantique et Eurasiatique 2048": 27,
+      "création de l'Alliance des Blocs Atlantique et Eurasiatique 2048": 29,
       "création des commandements cyber des blocs 2044": 4,
       "création des territoires protégés des blocs 2049": 3,
       "création des zones d'exclusion minière des blocs 2047": 3,
       "création des zones urbaines protégées des blocs 2050": 3,
-      "discours unificateur sur l'autosuffisance énergétique des blocs 2049": 28,
-      "doctrine de sécurité énergétique des blocs 2047": 27,
+      "discours unificateur sur l'autosuffisance énergétique des blocs 2049": 29,
+      "doctrine de sécurité énergétique des blocs 2047": 29,
       "déploiement d'unités de combat autonomes par la Chambre de Sécurité 2047": 3,
       "déploiement des administrations entièrement automatisées dans les blocs 2046": 28,
-      "déploiement du système de scoring citoyen des blocs 2046": 28,
+      "déploiement du système de scoring citoyen des blocs 2046": 29,
       "inauguration de la première cité intelligente fermée du Bloc Sibérien 2049": 3,
-      "instauration des quotas énergétiques par catégorie sociale dans les blocs 2048": 27,
+      "instauration des quotas énergétiques par catégorie sociale dans les blocs 2048": 29,
       "instauration du service de sécurité territoriale obligatoire des blocs 2046": 4,
-      "nationalisation des giga-usines de batteries du Bloc Atlantique 2046": 27,
-      "premier réacteur à fusion militarisé du Bloc Asiatique 2058": 27,
+      "nationalisation des giga-usines de batteries du Bloc Atlantique 2046": 29,
+      "premier réacteur à fusion militarisé du Bloc Asiatique 2058": 29,
       "première guerre par procuration pour un territoire climatique viable 2048": 4,
-      "sondage confirmant l'effondrement de la confiance dans les institutions mondiales 2045": 28,
-      "sondage confirmant la préférence majoritaire pour la sécurité des blocs 2046": 27,
+      "sondage confirmant l'effondrement de la confiance dans les institutions mondiales 2045": 29,
+      "sondage confirmant la préférence majoritaire pour la sécurité des blocs 2046": 29,
       "transfert du centre financier mondial vers le Bloc Atlantique 2048": 3
     },
     "orateurs::opposition::bloc_eurasiatique_occidental": {
       "Zsófia Nagy, dite « la Chansonnière du Bloc »": {
         "absence_streak": 0,
-        "count": 5
+        "count": 6
       }
     }
   },
@@ -413,6 +427,12 @@
         "count": 2
       }
     },
+    "journalistes::pro_pouvoir::ameriques_reconfigurees": {
+      "João Pedro Nascimento": {
+        "absence_streak": 0,
+        "count": 1
+      }
+    },
     "journalistes::pro_pouvoir::bloc_eurasien_souverainiste": {
       "Narin Batbayar": {
         "absence_streak": 0,
@@ -461,7 +481,7 @@
       "adoption mondiale des indicateurs de prosperité post-croissance 2039": 5,
       "allongement de l'espérance de vie active à 90 ans": 5,
       "création du Droit de Tirage Universel 2.0": 5,
-      "création du Réseau Mondial de Biosurveillance en 2038": 4,
+      "création du Réseau Mondial de Biosurveillance en 2038": 5,
       "création du forum mondial de dialogue interculturel permanent 2038": 6,
       "déploiement de la plateforme mondiale d'anticipation migratoire 2039": 5,
       "déploiement de la plateforme mondiale de gestion des mobilités 2040": 6,
@@ -482,7 +502,7 @@
       "lancement du programme mondial de reconversion vers les métiers hybrides 2038": 2,
       "lancement du récit mondial de la civilisation multi-orbitale 2041": 1,
       "premier Forum Mondial des Civilisations Régénératives 2041": 5,
-      "premier Sommet mondial sur l'humain augmenté éthique 2046": 4,
+      "premier Sommet mondial sur l'humain augmenté éthique 2046": 5,
       "réseau mondial de gestion hydrique automatisée déployé 2042": 1,
       "signature du Pacte de Singapour pour la recherche biotech ouverte 2039": 5
     },
@@ -494,23 +514,23 @@
       "Traité mondial sur l'eau et la sécurité hydrique 2038": 17,
       "Traité mondial sur la régulation des plateformes numériques 2039": 16,
       "adoption de la norme mondiale de restauration minière 2041": 17,
-      "adoption du cadre mondial d'interopérabilité des agents IA publics 2039": 16,
+      "adoption du cadre mondial d'interopérabilité des agents IA publics 2039": 17,
       "adoption du premier référendum permanent assisté par IA 2039": 17,
-      "adoption par le Conseil Climatique Mondial du cadre multi-niveaux 2043": 16,
+      "adoption par le Conseil Climatique Mondial du cadre multi-niveaux 2043": 17,
       "certification mondiale des systèmes décisionnels automatisés fiables 2042": 16,
       "certification mondiale des systèmes décisionnels publics automatisés 2040": 16,
       "commercialisation mondiale des batteries à flux longue durée 2038": 16,
       "déploiement du réseau mondial d'agents IA collaboratifs 2038": 16,
       "déploiement du réseau mondial de détection précoce des feux 2039": 17,
       "déploiement mondial des puits de carbone technologiques 2040": 16,
-      "lancement de la campagne mondiale pour la sobriété choisie 2039": 16,
+      "lancement de la campagne mondiale pour la sobriété choisie 2039": 17,
       "lancement du programme mondial de villes-refuges côtières 2044": 17,
-      "lancement du récit mondial de la transition comme opportunité 2038": 16,
+      "lancement du récit mondial de la transition comme opportunité 2038": 17,
       "lancement du système mondial de certification de la réalité 2041": 16,
       "mise en service du réseau mondial de capture carbone 2043": 16,
       "premier réseau de réacteurs à fusion commercial 2060": 16,
-      "premiers centres de données alimentés à 100% par fusion 2039": 16,
-      "programme mondial de résilience numérique 2039": 16,
+      "premiers centres de données alimentés à 100% par fusion 2039": 17,
+      "programme mondial de résilience numérique 2039": 17,
       "publication du manifeste de la transition régénérative 2037": 16,
       "publication du premier baromètre mondial de confiance institutionnelle 2039": 16,
       "réforme majeure de l'ONU et création du Conseil Climatique Mondial 2039": 16
@@ -518,6 +538,10 @@
   },
   "policy_reform": {
     "journalistes::opposition::bloc_souverainiste_non_signataire": {
+      "Aïcha Maïga": {
+        "absence_streak": 0,
+        "count": 1
+      },
       "Inti Quispe Mamani": {
         "absence_streak": 0,
         "count": 1
@@ -563,6 +587,12 @@
         "count": 1
       }
     },
+    "journalistes::pro_pouvoir::bloc_souverainiste_non_signataire": {
+      "Aïssata Maïga": {
+        "absence_streak": 0,
+        "count": 1
+      }
+    },
     "journalistes::pro_pouvoir::hub_africain_gouvernance": {
       "Wairimu Otieno": {
         "absence_streak": 0,
@@ -595,7 +625,7 @@
     },
     "locaux": {
       "Convention de Genève sur les réfugiés climatiques 2035": 2,
-      "Convention de l'Espace sur la limitation des armes orbitales 2036": 1,
+      "Convention de l'Espace sur la limitation des armes orbitales 2036": 2,
       "Taxe Tobin sur l'automatisation et fonds de reconversion 2036": 1,
       "Traité de Genève sur la sécurité sanitaire globale 2035": 2,
       "accord international sur un prix plancher du carbone 2033": 2,
@@ -614,10 +644,10 @@
       "adoption du traité de partage des ressources astéroïdales 2038": 2,
       "charte internationale sur l'usage éthique des prédictions migratoires 2036": 2,
       "directive OMS sur l'accès équitable aux médicaments essentiels": 2,
-      "directive internationale sur les débris orbitaux 2035": 1,
+      "directive internationale sur les débris orbitaux 2035": 2,
       "directive sur la résilience des chaînes d'approvisionnement critiques 2032": 2,
       "grand plan de réforme des retraites de 2035": 2,
-      "lancement de la campagne institutionnelle pour la culture spatiale 2035": 1,
+      "lancement de la campagne institutionnelle pour la culture spatiale 2035": 2,
       "lancement du plan international de reconversion professionnelle 2033": 2,
       "lancement du programme international d'habitats orbitaux partagés 2036": 1,
       "lancement du programme international d'éducation au dialogue interculturel 2033": 2,
@@ -629,37 +659,37 @@
       "ratification du Traité de Brasília sur la biotech responsable 2043": 2,
       "réforme du FMI et création du Conseil Monétaire Mondial": 3,
       "traité de Genève sur les droits cognitifs des espèces communicantes 2038": 3,
-      "traité de Niamey sur le partage des nappes phréatiques 2038": 1,
+      "traité de Niamey sur le partage des nappes phréatiques 2038": 2,
       "traité international sur la propriété intellectuelle et l'IA 2036": 2,
       "traité international sur les marchés algorithmiques": 2
     },
     "majeurs": {
       "Convention de Genève sur le droit à l'eau 2035": 9,
       "Oslo publie la norme d'audit des agents IA publics 2038": 9,
-      "UE adopte la norme d'auditabilité des agents IA publics 2035": 8,
-      "accord climatique de Nairobi 2+ avec mécanismes contraignants 2035": 8,
-      "adoption de la charte mondiale de transparence institutionnelle 2035": 8,
-      "adoption de la norme internationale d'efficacité énergétique de l'IA 2034": 8,
+      "UE adopte la norme d'auditabilité des agents IA publics 2035": 9,
+      "accord climatique de Nairobi 2+ avec mécanismes contraignants 2035": 9,
+      "adoption de la charte mondiale de transparence institutionnelle 2035": 9,
+      "adoption de la norme internationale d'efficacité énergétique de l'IA 2034": 9,
       "adoption de la norme internationale de certification informationnelle 2035": 9,
       "adoption de la norme mondiale d'auditabilité des agents IA 2033": 8,
       "adoption de la norme sur la supervision des décisions automatisées 2037": 9,
-      "adoption de la norme sur la supervision humaine obligatoire 2035": 8,
+      "adoption de la norme sur la supervision humaine obligatoire 2035": 9,
       "création de l'Agence Internationale de la Fusion 2045": 9,
       "création de la force mondiale anti-incendie de l'ONU 2034": 8,
       "création du fonds international de réhabilitation minière 2037": 9,
       "directive internationale sur la résilience des infrastructures 2035": 9,
-      "directive mondiale sur l'IA dans les services publics 2037": 8,
-      "démantèlement judiciaire des GAFAM 2+ de 2036": 8,
-      "fonds mondial pour la relocalisation côtière de l'ONU 2039": 8,
+      "directive mondiale sur l'IA dans les services publics 2037": 9,
+      "démantèlement judiciaire des GAFAM 2+ de 2036": 9,
+      "fonds mondial pour la relocalisation côtière de l'ONU 2039": 9,
       "lancement de la campagne publique de pédagogie énergétique 2033": 9,
       "lancement de la plateforme mondiale de consultation citoyenne 2034": 9,
-      "lancement du fonds international pour le stockage énergétique 2035": 8,
-      "lancement du plan international de sobriété énergétique 2034": 8,
+      "lancement du fonds international pour le stockage énergétique 2035": 9,
+      "lancement du plan international de sobriété énergétique 2034": 9,
       "premier plan national de santé mentale climatique 2034": 9,
       "protocole international de certification de la capture carbone 2037": 8,
       "signature du cadre de coordination environnementale multi-niveaux 2036": 9,
-      "traité OCDE sur les minerais de la transition 2036": 8,
-      "traité de Ouagadougou sur les quotas hydriques solaires 2037": 8,
+      "traité OCDE sur les minerais de la transition 2036": 9,
+      "traité de Ouagadougou sur les quotas hydriques solaires 2037": 9,
       "traité de réforme des institutions de Bretton Woods 2037": 9
     }
   },

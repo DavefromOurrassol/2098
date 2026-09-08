@@ -1257,7 +1257,7 @@ chantiers:
     - federation_communs_territoriaux_reference
     - nexus_biosyn_reference
     - front_souverainiste_des_ressources_d_amerique_du_sud_reference
-  proposition_approuvee: false
+  proposition_approuvee: true
   date_proposition: '2026-07-25'
   date_traitement: null
   proposition_issues: []

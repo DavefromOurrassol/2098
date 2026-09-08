@@ -975,6 +975,14 @@ def load_event_instances_for_scenario(scenario_slug):
             # Ajouté le 2 août 2026 -- manquait, nécessaire pour restreindre
             # la liste de zones proposées lors du forçage d'un événement.
             "localisation": fm.get("localisation") or {},
+            # developpements (chantier "Suite narrative des événements",
+            # point C, 6 septembre 2026) : historique cumulatif des
+            # articles ayant développé cet événement comme sujet central
+            # (voir api.py::append_developpement_evenement, alimenté à
+            # l'écriture de chaque article forcé en mode sujet_central).
+            # Générique -- yaml.safe_load expose directement la liste de
+            # dicts telle qu'écrite, aucune normalisation nécessaire ici.
+            "developpements": fm.get("developpements") or [],
         })
 
     # Trier par date

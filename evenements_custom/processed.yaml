@@ -4456,3 +4456,78 @@ processed:
   - breakdown
   - policy_reform
   status: injected
+- idea:
+    id: helios_bse_active_le_protocole_ombre_les_coupures_
+    description: Le Consortium Helios BSE active des coupures énergétiques ciblées
+      dans les zones tampons du Bloc Eurasiatique, marquant une escalade dans l’usage
+      de l’énergie comme arme géopolitique. Entre répression algorithmique et résistance
+      des réseaux clandestins, la souveraineté énergétique se transforme en outil
+      de fragmentation territoriale.
+    portee: continentale
+    intensite: forte
+    date_approximative: 2098
+    scenarios:
+    - fortress_world
+    edition_active: true
+    zone_hint: bloc_eurasiatique_occidental
+    acteurs_hint:
+    - consortium_helios_fortress_world
+    variables_hint: null
+    source: article:20260823_080333_fortress_world_actualites_a_la_une_article_22aout2098.md
+  selection:
+    variables:
+    - energie_ressources_critiques
+    - geopolitique_conflits
+    type_evenement: political_social
+  injected_scenarios:
+  - fortress_world
+  status: injected
+- idea:
+    id: le_marathon_des_seuils_quand_le_sport_defie_les_fr
+    description: Le Marathon des Seuils, course illégale qui traverse les zones grises
+      du Bloc Eurasiatique Occidental, défie les algorithmes de contrôle des Consortiums
+      Énergétiques. Entre performance sportive et acte de résistance, les athlètes
+      courent contre le "Seuil" — cette frontière invisible où la liberté se mesure
+      en watts et en scores ARIA-Bloc.
+    portee: regionale
+    intensite: modérée
+    date_approximative: 2098
+    scenarios:
+    - fortress_world
+    edition_active: true
+    zone_hint: '?'
+    acteurs_hint: null
+    variables_hint: null
+    source: article:20260821_100000_fortress_world_sports_article_8mars2098.md
+  selection:
+    variables:
+    - frontieres_du_systeme
+    - valeurs_culture_tempo_sociale
+    type_evenement: political_social
+  injected_scenarios:
+  - fortress_world
+  status: injected
+- idea:
+    id: ils_ont_noye_les_archives_a_milwaukee_basse_le_reg
+    description: À Milwaukee-Basse, le Compact des Grands Lacs détruit les archives
+      du Registre des Zones Non Récupérables, effaçant les preuves des sacrifices
+      climatiques et des refoulements migratoires. Les réseaux humanitaires clandestins
+      tentent de sauver les données avant qu’elles ne disparaissent sous les eaux.
+    portee: regionale
+    intensite: forte
+    date_approximative: 2098
+    scenarios:
+    - breakdown
+    edition_active: false
+    zone_hint: grandes_lacs_compact_eau
+    acteurs_hint: null
+    variables_hint: null
+    source: article:20260821_193948_breakdown_faits_divers_article_3janvier2098.md
+  selection:
+    variables:
+    - technologie_information
+    - geopolitique_conflits
+    type_evenement: political_social
+  injected_scenarios:
+  - breakdown
+  status: injected

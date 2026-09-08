@@ -1,0 +1,29 @@
+{
+  "edition_active": {
+    "numero": 1,
+    "annee": 2098,
+    "mois": 8
+  },
+  "editions_connues": [
+    {
+      "numero": 1,
+      "annee": 2098,
+      "mois": 8
+    },
+    {
+      "numero": 2,
+      "annee": 2098,
+      "mois": 3
+    }
+  ],
+  "historique": [
+    {
+      "numero": 1,
+      "annee": 2098,
+      "mois": 8,
+      "scenario": "fortress_world",
+      "nb_articles": 3,
+      "date_generation": "2026-09-03 18:26:49"
+    }
+  ]
+}

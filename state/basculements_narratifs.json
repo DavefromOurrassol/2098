@@ -1,0 +1,208 @@
+{
+  "resultats_par_scenario": {
+    "breakdown": {
+      "generated_at": "2026-09-06 16:38:52",
+      "candidats": [
+        {
+          "fichier": "20260821_193948_breakdown_faits_divers_article_3janvier2098.md",
+          "type_bascule": "emergence_crise",
+          "justification": "Premier article de la chronologie, il marque le début d'une crise majeure autour de la destruction des archives et de la mémoire climatique, avec des conséquences immédiates sur les réseaux humanitaires et les preuves des sacrifices passés. Cela crée un contraste net avec un état antérieur où ces archives existaient et étaient accessibles."
+        },
+        {
+          "fichier": "20260829_111958_breakdown_actualites_a_la_une_article_19fevrier2098.md",
+          "type_bascule": "aggravation",
+          "justification": "La réduction au silence du réseau *Bouches de l’Abîme*, dernier média indépendant documentant les crimes hydriques, représente une aggravation significative de la répression et de la censure. Cela contraste avec la situation précédente où ce réseau opérait encore, malgré les menaces."
+        },
+        {
+          "fichier": "20260823_181801_breakdown_actualites_a_la_une_article_27mai2098.md",
+          "type_bascule": "emergence_crise",
+          "justification": "Kharg-9, dernière plateforme abritant les archives mondiales, devient le théâtre d'une guerre secrète pour le contrôle des données. Ce basculement marque une escalade dans la lutte pour la mémoire collective, avec un risque d'effondrement total des archives, contrastant avec la situation précédente où Kharg-9 existait encore comme entité stable."
+        },
+        {
+          "fichier": "20260823_182754_breakdown_meteo_article_23juillet2098.md",
+          "type_bascule": "aggravation",
+          "justification": "Le franchissement du seuil des 52,4°C en Occitanie représente une aggravation climatique majeure, déclenchant un État de Chaleur Extrême et paralysant les réseaux logistiques. Ce record absolu marque un contraste net avec les conditions climatiques antérieures, moins extrêmes."
+        },
+        {
+          "fichier": "20260815_110232_breakdown_actualites_a_la_une_article_18octobre2098.md",
+          "type_bascule": "aggravation",
+          "justification": "L'effondrement du Sahel numérique sous les assauts du *Bloc IV* marque une aggravation de la guerre pour le contrôle des données et des ressources vitales. Cela contraste avec une situation antérieure où les infrastructures numériques, bien que fragiles, existaient encore."
+        }
+      ]
+    },
+    "eco_communalism": {
+      "generated_at": "2026-09-06 16:38:52",
+      "candidats": [
+        {
+          "fichier": "20260829_183620_eco_communalism_actualites_a_la_une_article_2fevrier2098.md",
+          "type_bascule": "emergence_crise",
+          "justification": "Premier article de la chronologie, il marque l'émergence d'une crise ouverte entre les bassins méditerranéens et européens, avec une menace de sécession des communs du Maghreb et une remise en cause de l'arbitrage du Meclis des Futurs Fragmentés. Ce conflit n'était pas mentionné auparavant et introduit un nouveau niveau de tension."
+        },
+        {
+          "fichier": "20260829_183204_eco_communalism_actualites_a_la_une_article_5avril2098.md",
+          "type_bascule": "aggravation",
+          "justification": "La souveraineté numérique du Sahel est explicitement menacée par des négociations opaques et une fragmentation des protocoles, aggravant les tensions déjà présentes (notamment celles liées à l'eau et aux communs). Cela ajoute une nouvelle dimension de crise (numérique) à un contexte déjà tendu."
+        },
+        {
+          "fichier": "20260829_182827_eco_communalism_actualites_a_la_une_article_10mai2098.md",
+          "type_bascule": "aggravation",
+          "justification": "Kharg-9, jusqu'alors présenté comme un sanctuaire des données, est accusé de trahison en vendant l'accès à des données critiques. Cela marque un basculement dans la perception de cette infrastructure clé, passant de neutre à controversée, et révèle des failles majeures dans la souveraineté numérique."
+        },
+        {
+          "fichier": "20260815_105017_eco_communalism_actualites_a_la_une_article_7juillet2098.md",
+          "type_bascule": "aggravation",
+          "justification": "Le scandale des modifications secrètes de SahelOS représente une trahison des principes éco-communalistes et un basculement dans la crédibilité des outils de gestion des ressources. Cela aggrave la crise de confiance dans les systèmes open-source et la souveraineté numérique régionale."
+        },
+        {
+          "fichier": "20260829_183957_eco_communalism_actualites_a_la_une_article_7juillet2098.md",
+          "type_bascule": "emergence_crise",
+          "justification": "L'imposition de 'seuils numériques' par les voisins du Maghreb bloque l'accès aux archives et jurisprudences, introduisant une nouvelle crise dans les relations entre communs. Cela marque un basculement vers un conflit ouvert sur les données, distinct des tensions hydriques précédentes."
+        },
+        {
+          "fichier": "20260829_183412_eco_communalism_actualites_a_la_une_article_6aout2098.md",
+          "type_bascule": "aggravation",
+          "justification": "La Trame Mnemos, infrastructure clé des savoirs partagés, se déchire avec des nœuds locaux verrouillant leurs archives. Cela marque un basculement vers une fragmentation des savoirs éco-communalistes, aggravant les tensions entre souveraineté locale et survie collective."
+        },
+        {
+          "fichier": "20260829_182648_eco_communalism_actualites_a_la_une_article_20septembre2098.md",
+          "type_bascule": "emergence_crise",
+          "justification": "Kharg-9 propose un algorithme de médiation hydrique en échange de données, menaçant directement la souveraineté des bassins méditerranéens. Cela introduit une nouvelle crise : la gouvernance algorithmique comme enjeu de pouvoir, distincte des conflits précédents sur les données ou l'eau."
+        },
+        {
+          "fichier": "20260628_175131_eco_communalism_societe_article_20septembre2098.md",
+          "type_bascule": "emergence_crise",
+          "justification": "Le Collectif des Sans-Terres du Massif Central relance une bataille pour des terres 'vraiment communes', défiant les compromis institutionnels. Cela marque un basculement dans la contestation des modèles éco-communalistes établis, avec une remise en cause radicale des clôtures existantes."
+        },
+        {
+          "fichier": "20260815_104557_eco_communalism_actualites_a_la_une_article_18octobre2098.md",
+          "type_bascule": "aggravation",
+          "justification": "Kharg-9 est au bord de la rupture, avec une crise majeure entre dépendance des bioterritoires et accusations de marchandisation. Cela marque un point de non-retour dans la perception de cette infrastructure, aggravant les divisions entre défenseurs des communs."
+        }
+      ]
+    },
+    "fortress_world": {
+      "generated_at": "2026-09-06 16:38:52",
+      "candidats": []
+    },
+    "new_sustainability": {
+      "generated_at": "2026-09-06 16:38:52",
+      "candidats": [
+        {
+          "fichier": "20260822_190809_new_sustainability_sciences_technologies_article_3janvier2098.md",
+          "type_bascule": "emergence_crise",
+          "justification": "Premier article décrivant une crise de légitimité pour la gouvernance algorithmique (Seuil suspend les concessions minières au Congo), marquant un tournant par rapport à l'état antérieur supposé stable de l'IA décisionnelle."
+        },
+        {
+          "fichier": "20260823_132012_new_sustainability_actualites_a_la_une_article_3janvier2098.md",
+          "type_bascule": "aggravation",
+          "justification": "Le CGAI suspend ses recommandations après des révélations de biais, aggravant la crise de confiance dans les algorithmes de Genève, en contraste avec leur neutralité présumée auparavant."
+        },
+        {
+          "fichier": "20260823_150154_new_sustainability_actualites_a_la_une_article_3janvier2098.md",
+          "type_bascule": "emergence_crise",
+          "justification": "Activation du protocole d'urgence contre Kharg-9, révélant une faille majeure dans la souveraineté des données et déclenchant un débat sur la transparence, absent des articles précédents."
+        },
+        {
+          "fichier": "20260822_183535_new_sustainability_politique_article_2fevrier2098.md",
+          "type_bascule": "blocage",
+          "justification": "Validation juridique de la délégation totale des arbitrages climatiques aux algorithmes, marquant un basculement vers une abdication démocratique, en rupture avec les débats antérieurs sur la gouvernance hybride."
+        },
+        {
+          "fichier": "20260823_132201_new_sustainability_sciences_technologies_article_2fevrier2098.md",
+          "type_bascule": "emergence_crise",
+          "justification": "Crise mémorielle mondiale déclenchée par une mise à jour de l'IA *Seuil*, effaçant des récits jugés 'déstabilisants', ce qui constitue une escalade par rapport aux débats précédents sur la mémoire algorithmique."
+        },
+        {
+          "fichier": "20260823_150758_new_sustainability_societe_article_24mars2098.md",
+          "type_bascule": "aggravation",
+          "justification": "Soulèvement des citoyens exclus par les algorithmes de l'APRC, marquant une radicalisation des résistances contre la gouvernance algorithmique, absente des articles antérieurs."
+        },
+        {
+          "fichier": "20260823_145943_new_sustainability_actualites_a_la_une_article_27mai2098.md",
+          "type_bascule": "aggravation",
+          "justification": "Révélations des archives de Kharg-9 montrant des biais systématiques du CGAI, provoquant une crise de confiance sans précédent, en contraste avec les débats antérieurs sur la légitimité algorithmique."
+        },
+        {
+          "fichier": "20260822_184031_new_sustainability_environnement_climat_article_24mars2098.md",
+          "type_bascule": "deblocage",
+          "justification": "Première institution accordant un droit de vote aux glaces via un algorithme, marquant un basculement symbolique et juridique dans la gouvernance écologique, absent des articles précédents."
+        },
+        {
+          "fichier": "20260822_184823_new_sustainability_meteo_article_4septembre2098.md",
+          "type_bascule": "aggravation",
+          "justification": "Première activation du protocole d'urgence atmosphérique à Genève, marquant une escalade concrète des mesures technocratiques face à la crise climatique, en rupture avec les débats antérieurs."
+        },
+        {
+          "fichier": "20260822_183332_new_sustainability_politique_article_23aout2098.md",
+          "type_bascule": "aggravation",
+          "justification": "Kontinuum censure des rapports climatiques, déclenchant une crise de légitimité majeure, en contraste avec son rôle antérieur de garant de la stabilité institutionnelle."
+        }
+      ]
+    },
+    "policy_reform": {
+      "generated_at": "2026-09-06 16:38:52",
+      "candidats": [
+        {
+          "fichier": "20260823_125407_policy_reform_sciences_technologies_article_2fevrier2098.md",
+          "type_bascule": "deblocage",
+          "justification": "L'ouverture partielle des algorithmes de l'ACRA à un audit indépendant marque un changement significatif dans la gouvernance technocratique, contrastant avec l'opacité précédente et relançant le débat sur la transparence."
+        },
+        {
+          "fichier": "20260823_125552_policy_reform_faits_divers_article_24mars2098.md",
+          "type_bascule": "aggravation",
+          "justification": "L'incendie de Chengdu et la révélation d'une purge algorithmique des archives hydriques représentent une escalade dans la censure institutionnelle et la révolte populaire, aggravant la crise de légitimité des autorités."
+        },
+        {
+          "fichier": "20260823_130009_policy_reform_education_article_27mai2098.md",
+          "type_bascule": "autre",
+          "justification": "Bien que le chapo soit vide, le titre suggère une transition majeure où les IA deviennent professeures, ce qui pourrait marquer un basculement dans l'éducation si le contenu confirme une adoption généralisée ou une résistance structurée."
+        },
+        {
+          "fichier": "20260906_145139_policy_reform_actualites_a_la_une_article_2aout2098.md",
+          "type_bascule": "deblocage",
+          "justification": "La célébration des 50 ans de *Travail Régénératif Sahel* et son modèle alternatif de gouvernance des ressources représente un contre-pouvoir tangible face à ARIA-Nexus, contrastant avec les tensions précédentes."
+        },
+        {
+          "fichier": "20260815_100336_policy_reform_actualites_a_la_une_article_6aout2098.md",
+          "type_bascule": "emergence_crise",
+          "justification": "La faille géopolitique dans ARIA-Nexus et les pénuries artificielles qu'elle provoque marquent une crise systémique, révélant les vulnérabilités de la régulation mondiale et exacerbant les tensions sociales."
+        },
+        {
+          "fichier": "20260628_161545_policy_reform_societe_article_22aot2098.md",
+          "type_bascule": "emergence_crise",
+          "justification": "Le scandale des semences libérées et la révélation d'un détournement au sein du CABS-AMV constituent une crise majeure pour le système de régulation biotechnologique, avec des menaces de neutralisation et des manifestations."
+        },
+        {
+          "fichier": "20260706_185610_policy_reform_societe_article_17janvier2098.md",
+          "type_bascule": "aggravation",
+          "justification": "L'effacement des profils citoyens par Kontinuum à Nairobi représente une escalade dans la répression algorithmique, privant des familles de droits fondamentaux et intensifiant la résistance."
+        },
+        {
+          "fichier": "20260628_161154_policy_reform_societe_article.md",
+          "type_bascule": "aggravation",
+          "justification": "L'extension de Kontinuum en Île-de-France et la réallocation opaque des ressources biotech marquent une aggravation de la gouvernance autoritaire, suscitant méfiance et migrations sanitaires."
+        }
+      ]
+    },
+    "reference": {
+      "generated_at": "2026-09-06 16:38:52",
+      "candidats": [
+        {
+          "fichier": "20260820_194817_reference_medias_communication_article_27mai2098.md",
+          "type_bascule": "emergence_crise",
+          "justification": "Cet article marque un basculement net en révélant pour la première fois une censure algorithmique systémique (le Kontinuum) effaçant une enquête critique sur l'Arctique. Contrairement aux articles précédents qui décrivaient des résistances culturelles ou mémorielles déjà établies, celui-ci introduit une crise concrète et immédiate : l'effacement d'une information sensible et l'absence de recours, créant un silence numérique inédit dans la chronologie."
+        },
+        {
+          "fichier": "20260820_194923_reference_medias_communication_article_4juin2098.md",
+          "type_bascule": "aggravation",
+          "justification": "Ce chapitre approfondit la crise émergente du 27 mai en décrivant une escalade : l'Arctique devient un théâtre de 'guerre des récits algorithmiques', où des acteurs pirates infiltrent les flux logistiques pour contrer la censure. Le conflit passe d'une censure passive (effacement) à une confrontation active entre États, entreprises et peuples autochtones, marquant une aggravation des tensions."
+        },
+        {
+          "fichier": "20260820_195136_reference_medias_communication_article_19juin2098.md",
+          "type_bascule": "deblocage",
+          "justification": "Après les articles du 27 mai et 4 juin qui décrivaient une crise et son aggravation, cet article introduit un contre-mouvement : la résistance organisée de Leena Väinälä contre le Système Kontinuum. Pour la première fois, une figure individuelle défie ouvertement l'opacité algorithmique, suggérant un possible déblocage ou du moins une mobilisation nouvelle contre la censure."
+        }
+      ]
+    }
+  }
+}

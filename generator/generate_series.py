@@ -23,6 +23,8 @@ import argparse
 import time
 from datetime import datetime
 
+from edition_utils import edition_date_to_float, tirer_jour_edition, enregistrer_edition, lire_edition_active
+
 # ─────────────────────────────────────────
 # CONFIGURATION
 # ─────────────────────────────────────────
@@ -44,21 +46,6 @@ VALID_THEMATIQUES = [
     "education", "histoire_patrimoine", "medias_communication",
     "religion_spiritualite", "petites_annonces_services", "meteo",
 ]
-
-# Dates fictives 2098 par mois — pour espacer les articles
-DATES_2098 = [
-    "3 janvier 2098",   "17 janvier 2098",
-    "2 février 2098",   "19 février 2098",
-    "8 mars 2098",      "24 mars 2098",
-    "5 avril 2098",     "21 avril 2098",
-    "10 mai 2098",      "27 mai 2098",
-    "4 juin 2098",      "19 juin 2098",
-    "7 juillet 2098",   "23 juillet 2098",
-    "6 août 2098",      "22 août 2098",
-    "4 septembre 2098", "20 septembre 2098",
-    "3 octobre 2098",   "18 octobre 2098",
-]
-
 
 # ─────────────────────────────────────────
 # CHARGEMENT CONFIG
@@ -94,6 +81,23 @@ def validate_config(config):
         for t in thematiques:
             if t not in VALID_THEMATIQUES:
                 errors.append("Thématique invalide : '{}'".format(t))
+
+    # Ajouté le 2 septembre 2026 (chantier "Éditions datées"), assoupli
+    # le même jour à la demande de David : annee_edition/mois_edition
+    # sont désormais OPTIONNELS ici -- s'ils sont absents, run() se
+    # replie sur l'édition active (state/editions.json, configurable
+    # indépendamment via definir_edition.py). S'ils sont présents,
+    # validés normalement (permet de surcharger ponctuellement l'édition
+    # active pour un lot précis, sans y toucher globalement). Erreur
+    # seulement si un seul des deux est fourni (ambigu) ou si mois_edition
+    # est hors plage.
+    annee_edition = config.get("annee_edition")
+    mois_edition  = config.get("mois_edition")
+    if bool(annee_edition) != bool(mois_edition):
+        errors.append("'annee_edition' et 'mois_edition' doivent être fournis ensemble, "
+                       "ou tous les deux absents pour utiliser l'édition active")
+    elif mois_edition and not (1 <= int(mois_edition) <= 12):
+        errors.append("'mois_edition' hors plage [1-12] : {!r}".format(mois_edition))
 
     if errors:
         print("[erreur] Problèmes dans config_series.yaml :")
@@ -180,7 +184,7 @@ def build_index(config, results, output_dir):
 # GÉNÉRATION D'UN ARTICLE
 # ─────────────────────────────────────────
 
-def generate_one(scenario, thematique, config, date_fictive, dry_run=False):
+def generate_one(scenario, thematique, config, date_fictive, date_edition, dry_run=False):
     """
     Génère un article pour un scénario + thématique donnés.
     Retourne un dict de résultat.
@@ -240,7 +244,7 @@ def generate_one(scenario, thematique, config, date_fictive, dry_run=False):
         thema_data  = load_thematique(thematique)
         forcer_config = config.get("forcer")
         snapshot    = build_snapshot(scenario, thematique=thema_data, dry_run=dry_run,
-                                      forcer_config=forcer_config)
+                                      forcer_config=forcer_config, date_edition=date_edition)
         if snapshot.get("forcer_erreur"):
             return {"status": "error", "scenario": scenario, "thematique": thematique,
                     "error": "Forçage impossible : {}".format(snapshot["forcer_erreur"])}
@@ -308,14 +312,38 @@ def run(config, dry_run=False, validate_first=False):
     output_dir = os.path.join(VAULT_PATH, "articles", scenario)
     os.makedirs(output_dir, exist_ok=True)
 
+    # Édition active de cette série (2 septembre 2026, chantier "Éditions
+    # datées") : un seul mois pour tout le lot -- date_reference partagée
+    # par tous les articles (point 2), jour de rédaction tiré à la volée
+    # pour chacun, dans ce même mois (remplace le cyclage sur DATES_2098).
+    # Assoupli le même jour : si config_series.yaml ne précise pas
+    # annee_edition/mois_edition, on se replie sur l'édition active
+    # (definir_edition.py) plutôt que d'exiger une saisie explicite à
+    # chaque série -- config_series.yaml reste utilisable pour surcharger
+    # ponctuellement (lot sur une édition différente de l'active).
+    if config.get("annee_edition") and config.get("mois_edition"):
+        annee_edition = int(config["annee_edition"])
+        mois_edition  = int(config["mois_edition"])
+    else:
+        edition_active = lire_edition_active()
+        if not edition_active:
+            print("[erreur] Aucun mois de parution défini et annee_edition/mois_edition absents "
+                  "de config_series.yaml.")
+            print("  Configurez d'abord un mois de parution : python3 definir_edition.py --annee 2098 --mois 8")
+            sys.exit(1)
+        annee_edition = edition_active["annee"]
+        mois_edition  = edition_active["mois"]
+    date_edition  = edition_date_to_float(annee_edition, mois_edition)
+    print("[series] Mois de parution : {}/{:02d} (date de référence {})".format(
+        annee_edition, mois_edition, date_edition
+    ))
+
     # Construire la liste des articles à générer
     tasks = []
-    date_index = 0
     for thematique in thematiques:
         for _ in range(n_per_thema):
-            date_fictive = DATES_2098[date_index % len(DATES_2098)]
+            date_fictive = tirer_jour_edition(annee_edition, mois_edition)
             tasks.append((thematique, date_fictive))
-            date_index += 1
 
     print("\n[series] {} articles à générer...".format(len(tasks)))
 
@@ -326,7 +354,7 @@ def run(config, dry_run=False, validate_first=False):
         ))
 
         result = generate_one(
-            scenario, thematique, config, date_fictive, dry_run=dry_run
+            scenario, thematique, config, date_fictive, date_edition, dry_run=dry_run
         )
         results.append(result)
 
@@ -347,6 +375,18 @@ def run(config, dry_run=False, validate_first=False):
         print("\n[series] Index généré : {}".format(
             os.path.basename(index_path)
         ))
+
+        # Enregistrement dans le registre d'éditions (2 septembre 2026) --
+        # seuls les articles réellement sauvegardés comptent (jamais en
+        # dry-run). generate_series.py fait partie des deux seuls points
+        # d'entrée autorisés à créer/avancer une édition (voir
+        # edition_utils.py) -- generate.py ne fait que la lire.
+        nb_reussis = sum(1 for r in results if r["status"] == "ok")
+        if nb_reussis:
+            numero = enregistrer_edition(scenario, annee_edition, mois_edition, nb_articles=nb_reussis)
+            print("[series] Mois de parution n°{} mis à jour ({} article(s) ajouté(s))".format(
+                numero, nb_reussis
+            ))
 
     print_footer(results, output_dir)
     return results

@@ -2911,6 +2911,879 @@ def _lire_journaux(pipeline_dir: Path) -> dict:
         return {}
 
 
+@app.route("/api/edition/active", methods=["GET"])
+def edition_active():
+    """
+    GET /api/edition/active
+
+    Lecture directe de state/editions.json (2 septembre 2026, chantier
+    "Éditions datées") -- même pattern que _lire_journaux() ci-dessus,
+    sans importer edition_utils.py comme module Python. Affiché sur
+    l'écran "Générer un article" (generate.py) : cet écran ne permet
+    jamais de choisir l'édition (il suit toujours l'édition active en
+    lecture seule, voir edition_utils.lire_edition_active()) -- ce
+    bandeau confirme simplement laquelle sera utilisée, sans champ
+    modifiable.
+
+    Retourne {"active": {"numero": ..., "annee": ..., "mois": ...}} ou
+    {"active": null} si aucune édition n'a jamais été enregistrée
+    (avant le tout premier lancement réel de generate_series.py/
+    generate_manual.py).
+    """
+    cfg = load_config()
+    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+    editions_path = pipeline_dir / "state" / "editions.json"
+    if not editions_path.exists():
+        return jsonify({"active": None})
+    try:
+        data = json.loads(editions_path.read_text(encoding="utf-8"))
+        return jsonify({"active": data.get("edition_active")})
+    except Exception:
+        return jsonify({"active": None})
+
+
+@app.route("/api/edition/articles", methods=["GET"])
+def edition_articles():
+    """
+    GET /api/edition/articles?scenario=<scenario>[&annee=...&mois=...]
+
+    Ajouté le 3 septembre 2026 (chantier "Injecter un événement depuis un
+    article") -- appelle audit_sujets_edition.py --json en sous-processus
+    (lecture seule, aucun appel LLM, même pattern que
+    _scan_localisation_candidats()) pour lister les articles du mois de
+    parution (actif par défaut, ou --annee/--mois si fournis) avec leurs
+    métadonnées, plus les custom_events déjà injectés ce mois-ci. Sert à
+    peupler le dropdown de l'écran "Injecter un événement depuis un
+    article", qui pré-remplit ensuite le formulaire à partir de l'article
+    choisi.
+    """
+    cfg = load_config()
+    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+    scenario = (request.args.get("scenario") or "").strip()
+    if not scenario:
+        return jsonify({"error": "scenario requis"}), 400
+
+    cmd = [sys.executable, "audit_sujets_edition.py", "--scenario", scenario, "--json"]
+    annee = request.args.get("annee")
+    mois = request.args.get("mois")
+    if annee and mois:
+        cmd += ["--annee", annee, "--mois", mois]
+
+    try:
+        resultat = subprocess.run(
+            cmd, cwd=pipeline_dir, capture_output=True, text=True,
+            timeout=15, stdin=subprocess.DEVNULL,
+        )
+    except subprocess.TimeoutExpired:
+        return jsonify({"error": "audit_sujets_edition.py a expiré (15s)"}), 504
+    except FileNotFoundError:
+        return jsonify({"error": f"audit_sujets_edition.py introuvable dans {pipeline_dir}"}), 500
+
+    sortie = resultat.stdout.strip()
+    if not sortie:
+        return jsonify({"error": f"Aucune sortie (code {resultat.returncode}) : "
+                                  f"{resultat.stderr[-500:]}"}), 500
+    try:
+        payload = json.loads(sortie.splitlines()[-1])
+    except (json.JSONDecodeError, IndexError):
+        return jsonify({"error": f"Sortie non-JSON : {sortie[-500:]}"}), 500
+
+    if not payload.get("ok"):
+        return jsonify({"error": payload.get("error", "Erreur inconnue")}), 500
+
+    return jsonify(payload)
+
+
+# Timeout large pour l'injection d'un événement custom depuis le nouvel
+# écran (3 septembre 2026) : contrairement à /api/redaction/ton_personnel
+# (1 seul appel LLM), process_idea() peut enchaîner plusieurs appels par
+# scénario (sélection + développement + jusqu'à 2 correctifs de
+# validation), multipliés par le nombre de scénarios choisis -- le
+# formulaire GUI limite par défaut à un seul scénario (celui de l'article
+# d'origine) pour rester dans une durée raisonnable, mais rien n'empêche
+# David d'en sélectionner plusieurs.
+TIMEOUT_INJECTION_EVENEMENT = 240  # secondes
+
+
+@app.route("/api/edition/injecter_evenement", methods=["POST"])
+def edition_injecter_evenement():
+    """
+    POST /api/edition/injecter_evenement
+
+    Body JSON : une idée au même format qu'une entrée de queue.yaml
+    (id, description, portee, date_approximative, intensite, scenarios,
+    variables_hint, acteurs_hint, zone_hint, source, edition_active), plus
+    "dry_run": bool optionnel.
+
+    Ajoutée le 3 septembre 2026 (chantier "Injecter un événement depuis un
+    article") -- appelle inject_custom_events.py --idea '<json>' --json en
+    sous-processus (même pattern synchrone que /api/redaction/ton_personnel),
+    pour l'écran qui pré-remplit une idée à partir d'un article choisi dans
+    /api/edition/articles et lance l'injection en un clic, sans passer par
+    queue.yaml.
+    """
+    cfg = load_config()
+    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+    data = request.get_json() or {}
+    dry_run = bool(data.pop("dry_run", False))
+
+    if not (data.get("id") and data.get("description") and data.get("portee")
+            and data.get("date_approximative") and data.get("intensite")):
+        return jsonify({"error": "id, description, portee, date_approximative et "
+                                  "intensite sont requis"}), 400
+
+    cmd = [sys.executable, "inject_custom_events.py",
+           "--idea", json.dumps(data, ensure_ascii=False), "--json"]
+    if dry_run:
+        cmd.append("--dry-run")
+
+    try:
+        resultat = subprocess.run(
+            cmd, cwd=pipeline_dir, capture_output=True, text=True,
+            timeout=TIMEOUT_INJECTION_EVENEMENT, stdin=subprocess.DEVNULL,
+        )
+    except subprocess.TimeoutExpired:
+        return jsonify({"error": f"Injection expirée après {TIMEOUT_INJECTION_EVENEMENT}s "
+                                  f"(appel(s) LLM trop lent(s) ou bloqué(s))"}), 504
+    except FileNotFoundError:
+        return jsonify({"error": f"inject_custom_events.py introuvable dans {pipeline_dir}"}), 500
+
+    sortie = resultat.stdout.strip()
+    if not sortie:
+        return jsonify({"error": f"Aucune sortie du sous-processus "
+                                  f"(code {resultat.returncode}) : {resultat.stderr[-500:]}"}), 500
+    try:
+        payload = json.loads(sortie.splitlines()[-1])
+    except (json.JSONDecodeError, IndexError):
+        return jsonify({"error": f"Sortie non-JSON du sous-processus : {sortie[-500:]}"}), 500
+
+    if not payload.get("ok"):
+        return jsonify({"error": payload.get("error", "Erreur inconnue")}), 500
+
+    return jsonify(payload)
+
+
+# ---------------------------------------------------------------------------
+# Chantier "Suite narrative des événements", point B (5 septembre 2026) --
+# audit_sujets.py (lecture seule) et editer_sujets.py (destructif, garde-fous
+# --apply/--dry-run côté script, confirmation en deux temps côté GUI -- voir
+# app.js : un appel sans "confirmer" ne fait qu'un aperçu, jamais d'écriture).
+# ---------------------------------------------------------------------------
+
+@app.route("/api/sujets/evenements", methods=["GET"])
+def sujets_evenements():
+    """
+    GET /api/sujets/evenements?scenario=<scenario>
+
+    Catalogue des événements custom disponibles pour un scénario (slug,
+    nom, date_label) -- appelle audit_sujets.py --list-evenements --json.
+    Sert à peupler le sélecteur de sujet de l'écran d'audit, sans obliger
+    David à connaître le slug à l'avance.
+    """
+    cfg = load_config()
+    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+    scenario = (request.args.get("scenario") or "").strip()
+    if not scenario:
+        return jsonify({"error": "scenario requis"}), 400
+
+    cmd = [sys.executable, "audit_sujets.py", "--scenario", scenario,
+           "--list-evenements", "--json"]
+    try:
+        resultat = subprocess.run(
+            cmd, cwd=pipeline_dir, capture_output=True, text=True,
+            timeout=15, stdin=subprocess.DEVNULL,
+        )
+    except subprocess.TimeoutExpired:
+        return jsonify({"error": "audit_sujets.py a expiré (15s)"}), 504
+    except FileNotFoundError:
+        return jsonify({"error": f"audit_sujets.py introuvable dans {pipeline_dir}"}), 500
+
+    sortie = resultat.stdout.strip()
+    if not sortie:
+        return jsonify({"error": f"Aucune sortie (code {resultat.returncode}) : "
+                                  f"{resultat.stderr[-500:]}"}), 500
+    try:
+        payload = json.loads(sortie.splitlines()[-1])
+    except (json.JSONDecodeError, IndexError):
+        return jsonify({"error": f"Sortie non-JSON : {sortie[-500:]}"}), 500
+
+    if not payload.get("ok"):
+        return jsonify({"error": payload.get("error", "Erreur inconnue")}), 500
+
+    return jsonify(payload)
+
+
+@app.route("/api/sujets/audit", methods=["GET"])
+def sujets_audit():
+    """
+    GET /api/sujets/audit?scenario=<x>&type=evenement|entite&slug=<y>
+
+    Liste toutes les occurrences d'un sujet à travers TOUTES les dates du
+    scénario (pas seulement le mois de parution actif), avec signal si
+    une occurrence est postérieure au mois de parution actif -- appelle
+    audit_sujets.py --json. Lecture seule, aucun risque.
+    """
+    cfg = load_config()
+    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+    scenario = (request.args.get("scenario") or "").strip()
+    type_sujet = (request.args.get("type") or "").strip()
+    slug = (request.args.get("slug") or "").strip()
+    if not (scenario and type_sujet and slug):
+        return jsonify({"error": "scenario, type et slug sont requis"}), 400
+    if type_sujet not in ("evenement", "entite"):
+        return jsonify({"error": "type doit être 'evenement' ou 'entite'"}), 400
+
+    cmd = [sys.executable, "audit_sujets.py", "--scenario", scenario,
+           "--type", type_sujet, "--slug", slug, "--json"]
+    try:
+        resultat = subprocess.run(
+            cmd, cwd=pipeline_dir, capture_output=True, text=True,
+            timeout=15, stdin=subprocess.DEVNULL,
+        )
+    except subprocess.TimeoutExpired:
+        return jsonify({"error": "audit_sujets.py a expiré (15s)"}), 504
+    except FileNotFoundError:
+        return jsonify({"error": f"audit_sujets.py introuvable dans {pipeline_dir}"}), 500
+
+    sortie = resultat.stdout.strip()
+    if not sortie:
+        return jsonify({"error": f"Aucune sortie (code {resultat.returncode}) : "
+                                  f"{resultat.stderr[-500:]}"}), 500
+    try:
+        payload = json.loads(sortie.splitlines()[-1])
+    except (json.JSONDecodeError, IndexError):
+        return jsonify({"error": f"Sortie non-JSON : {sortie[-500:]}"}), 500
+
+    if not payload.get("ok"):
+        return jsonify({"error": payload.get("error", "Erreur inconnue")}), 500
+
+    return jsonify(payload)
+
+
+@app.route("/api/sujets/supprimer_article", methods=["POST"])
+def sujets_supprimer_article():
+    """
+    POST /api/sujets/supprimer_article
+    Body JSON : {"scenario": "...", "fichier": "....md", "confirmer": bool}
+
+    Appelle editer_sujets.py --supprimer-article --json. CONFIRMATION EN
+    DEUX TEMPS côté GUI : "confirmer" absent ou false -> --apply n'est PAS
+    passé au script (aperçu seul, rien n'est déplacé) ; "confirmer": true
+    -> --apply est passé (déplacement réel vers _corbeille/, réversible
+    mais réel). app.js doit toujours faire un premier appel sans
+    "confirmer" pour afficher l'aperçu, puis un second avec "confirmer":
+    true seulement après un clic de confirmation explicite de David --
+    jamais confirmer=true sur le tout premier appel d'un écran.
+    """
+    cfg = load_config()
+    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+    data = request.get_json() or {}
+    scenario = (data.get("scenario") or "").strip()
+    fichier = (data.get("fichier") or "").strip()
+    confirmer = bool(data.get("confirmer"))
+    if not (scenario and fichier):
+        return jsonify({"error": "scenario et fichier sont requis"}), 400
+
+    cmd = [sys.executable, "editer_sujets.py", "--scenario", scenario,
+           "--supprimer-article", fichier, "--json"]
+    if confirmer:
+        cmd.append("--apply")
+
+    try:
+        resultat = subprocess.run(
+            cmd, cwd=pipeline_dir, capture_output=True, text=True,
+            timeout=15, stdin=subprocess.DEVNULL,
+        )
+    except subprocess.TimeoutExpired:
+        return jsonify({"error": "editer_sujets.py a expiré (15s)"}), 504
+    except FileNotFoundError:
+        return jsonify({"error": f"editer_sujets.py introuvable dans {pipeline_dir}"}), 500
+
+    sortie = resultat.stdout.strip()
+    if not sortie:
+        return jsonify({"error": f"Aucune sortie (code {resultat.returncode}) : "
+                                  f"{resultat.stderr[-500:]}"}), 500
+    try:
+        payload = json.loads(sortie.splitlines()[-1])
+    except (json.JSONDecodeError, IndexError):
+        return jsonify({"error": f"Sortie non-JSON : {sortie[-500:]}"}), 500
+
+    if not payload.get("ok"):
+        return jsonify({"error": payload.get("error", "Erreur inconnue")}), 500
+
+    return jsonify(payload)
+
+
+@app.route("/api/sujets/modifier_date", methods=["POST"])
+def sujets_modifier_date():
+    """
+    POST /api/sujets/modifier_date
+    Body JSON : {"scenario": "...", "fichier": "....md",
+                 "nouvelle_date": "23 août 2098", "confirmer": bool,
+                 "sync_date_publication": bool (défaut true)}
+
+    Appelle editer_sujets.py --modifier-date --json. Même principe de
+    confirmation en deux temps que sujets_supprimer_article ci-dessus --
+    "confirmer" absent/false = aperçu seul (--apply non passé), rien
+    n'est écrit ni renommé sur disque.
+    """
+    cfg = load_config()
+    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+    data = request.get_json() or {}
+    scenario = (data.get("scenario") or "").strip()
+    fichier = (data.get("fichier") or "").strip()
+    nouvelle_date = (data.get("nouvelle_date") or "").strip()
+    confirmer = bool(data.get("confirmer"))
+    sync_pub = data.get("sync_date_publication", True)
+    if not (scenario and fichier and nouvelle_date):
+        return jsonify({"error": "scenario, fichier et nouvelle_date sont requis"}), 400
+
+    cmd = [sys.executable, "editer_sujets.py", "--scenario", scenario,
+           "--modifier-date", fichier, "--nouvelle-date", nouvelle_date, "--json"]
+    if confirmer:
+        cmd.append("--apply")
+    if not sync_pub:
+        cmd.append("--no-sync-date-publication")
+
+    try:
+        resultat = subprocess.run(
+            cmd, cwd=pipeline_dir, capture_output=True, text=True,
+            timeout=15, stdin=subprocess.DEVNULL,
+        )
+    except subprocess.TimeoutExpired:
+        return jsonify({"error": "editer_sujets.py a expiré (15s)"}), 504
+    except FileNotFoundError:
+        return jsonify({"error": f"editer_sujets.py introuvable dans {pipeline_dir}"}), 500
+
+    sortie = resultat.stdout.strip()
+    if not sortie:
+        return jsonify({"error": f"Aucune sortie (code {resultat.returncode}) : "
+                                  f"{resultat.stderr[-500:]}"}), 500
+    try:
+        payload = json.loads(sortie.splitlines()[-1])
+    except (json.JSONDecodeError, IndexError):
+        return jsonify({"error": f"Sortie non-JSON : {sortie[-500:]}"}), 500
+
+    if not payload.get("ok"):
+        return jsonify({"error": payload.get("error", "Erreur inconnue")}), 500
+
+    return jsonify(payload)
+
+
+@app.route("/api/sujets/inventaire", methods=["POST"])
+def sujets_inventaire():
+    """
+    POST /api/sujets/inventaire
+    Body JSON optionnel : {"scenario": "..."} (défaut : tous scénarios)
+
+    Appelle audit_inventaire_articles.py --md --json en sous-processus --
+    écrit le rapport complet dans documentation/inventaire_articles.md
+    (natif au vault Obsidian) ET retourne un résumé JSON pour affichage
+    inline dans le GUI. Pas de confirmation en deux temps ici : ce n'est
+    pas une action destructive sur un article, juste la (re)génération
+    d'un rapport toujours recalculé et écrasé, jamais édité à la main.
+    """
+    cfg = load_config()
+    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+    data = request.get_json(silent=True) or {}
+    scenario = (data.get("scenario") or "").strip()
+
+    cmd = [sys.executable, "audit_inventaire_articles.py", "--md", "--json"]
+    if scenario:
+        cmd += ["--scenario", scenario]
+
+    try:
+        resultat = subprocess.run(
+            cmd, cwd=pipeline_dir, capture_output=True, text=True,
+            timeout=30, stdin=subprocess.DEVNULL,
+        )
+    except subprocess.TimeoutExpired:
+        return jsonify({"error": "audit_inventaire_articles.py a expiré (30s)"}), 504
+    except FileNotFoundError:
+        return jsonify({"error": f"audit_inventaire_articles.py introuvable dans {pipeline_dir}"}), 500
+
+    sortie = resultat.stdout.strip()
+    if not sortie:
+        return jsonify({"error": f"Aucune sortie (code {resultat.returncode}) : "
+                                  f"{resultat.stderr[-500:]}"}), 500
+    try:
+        payload = json.loads(sortie.splitlines()[-1])
+    except (json.JSONDecodeError, IndexError):
+        return jsonify({"error": f"Sortie non-JSON : {sortie[-500:]}"}), 500
+
+    if not payload.get("ok"):
+        return jsonify({"error": payload.get("error", "Erreur inconnue")}), 500
+
+    return jsonify(payload)
+
+
+@app.route("/api/articles/liste", methods=["GET"])
+def articles_liste():
+    """
+    GET /api/articles/liste
+
+    Onglet "Articles" (5 septembre 2026) : liste complète des articles
+    pour affichage tableau filtrable côté client (même esprit que
+    /api/redaction/personnes, mais filtrage local en JS plutôt que
+    server-side -- volume modeste, ~200 articles, pas besoin d'aller-
+    retour réseau à chaque changement de filtre). Appelle
+    audit_inventaire_articles.py --json SANS --md (pas d'écriture du
+    rapport à chaque chargement de l'onglet -- --md reste déclenché
+    explicitement par le bouton "Générer le rapport Markdown", qui
+    réutilise /api/sujets/inventaire ci-dessus).
+    """
+    cfg = load_config()
+    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+
+    cmd = [sys.executable, "audit_inventaire_articles.py", "--json"]
+    try:
+        resultat = subprocess.run(
+            cmd, cwd=pipeline_dir, capture_output=True, text=True,
+            timeout=30, stdin=subprocess.DEVNULL,
+        )
+    except subprocess.TimeoutExpired:
+        return jsonify({"error": "audit_inventaire_articles.py a expiré (30s)"}), 504
+    except FileNotFoundError:
+        return jsonify({"error": f"audit_inventaire_articles.py introuvable dans {pipeline_dir}"}), 500
+
+    sortie = resultat.stdout.strip()
+    if not sortie:
+        return jsonify({"error": f"Aucune sortie (code {resultat.returncode}) : "
+                                  f"{resultat.stderr[-500:]}"}), 500
+    try:
+        payload = json.loads(sortie.splitlines()[-1])
+    except (json.JSONDecodeError, IndexError):
+        return jsonify({"error": f"Sortie non-JSON : {sortie[-500:]}"}), 500
+
+    if not payload.get("ok"):
+        return jsonify({"error": payload.get("error", "Erreur inconnue")}), 500
+
+    return jsonify(payload)
+
+
+@app.route("/api/instances/inventaire", methods=["POST"])
+def instances_inventaire():
+    """
+    POST /api/instances/inventaire
+    Body JSON optionnel : {"scenario": "..."} (défaut : tous scénarios)
+
+    Appelle audit_inventaire_instances.py --md --json en sous-processus --
+    écrit le rapport complet dans documentation/inventaire_instances.md
+    et retourne un résumé JSON pour affichage inline dans le GUI. Calque
+    exact de /api/sujets/inventaire (Articles) : pas de confirmation en
+    deux temps, ce n'est pas une action destructive, juste la
+    (re)génération d'un rapport toujours recalculé et écrasé.
+    """
+    cfg = load_config()
+    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+    data = request.get_json(silent=True) or {}
+    scenario = (data.get("scenario") or "").strip()
+
+    cmd = [sys.executable, "audit_inventaire_instances.py", "--md", "--json"]
+    if scenario:
+        cmd += ["--scenario", scenario]
+
+    try:
+        resultat = subprocess.run(
+            cmd, cwd=pipeline_dir, capture_output=True, text=True,
+            timeout=30, stdin=subprocess.DEVNULL,
+        )
+    except subprocess.TimeoutExpired:
+        return jsonify({"error": "audit_inventaire_instances.py a expiré (30s)"}), 504
+    except FileNotFoundError:
+        return jsonify({"error": f"audit_inventaire_instances.py introuvable dans {pipeline_dir}"}), 500
+
+    sortie = resultat.stdout.strip()
+    if not sortie:
+        return jsonify({"error": f"Aucune sortie (code {resultat.returncode}) : "
+                                  f"{resultat.stderr[-500:]}"}), 500
+    try:
+        payload = json.loads(sortie.splitlines()[-1])
+    except (json.JSONDecodeError, IndexError):
+        return jsonify({"error": f"Sortie non-JSON : {sortie[-500:]}"}), 500
+
+    if not payload.get("ok"):
+        return jsonify({"error": payload.get("error", "Erreur inconnue")}), 500
+
+    return jsonify(payload)
+
+
+@app.route("/api/instances/liste", methods=["GET"])
+def instances_liste():
+    """
+    GET /api/instances/liste
+
+    Onglet "Instances" (chantier "GUI Entités/Instances/Événements/
+    Signaux", 7 septembre 2026) : liste complète des instances pour
+    affichage tableau filtrable côté client (même esprit que
+    /api/articles/liste -- filtrage local en JS, ~750 instances, pas
+    besoin d'aller-retour réseau à chaque changement de filtre).
+    Appelle audit_inventaire_instances.py --json SANS --md (pas
+    d'écriture du rapport à chaque chargement de l'onglet -- --md reste
+    déclenché explicitement par un bouton dédié, si besoin, sur le
+    même modèle que "Générer le rapport Markdown" côté Articles).
+    """
+    cfg = load_config()
+    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+
+    cmd = [sys.executable, "audit_inventaire_instances.py", "--json"]
+    try:
+        resultat = subprocess.run(
+            cmd, cwd=pipeline_dir, capture_output=True, text=True,
+            timeout=30, stdin=subprocess.DEVNULL,
+        )
+    except subprocess.TimeoutExpired:
+        return jsonify({"error": "audit_inventaire_instances.py a expiré (30s)"}), 504
+    except FileNotFoundError:
+        return jsonify({"error": f"audit_inventaire_instances.py introuvable dans {pipeline_dir}"}), 500
+
+    sortie = resultat.stdout.strip()
+    if not sortie:
+        return jsonify({"error": f"Aucune sortie (code {resultat.returncode}) : "
+                                  f"{resultat.stderr[-500:]}"}), 500
+    try:
+        payload = json.loads(sortie.splitlines()[-1])
+    except (json.JSONDecodeError, IndexError):
+        return jsonify({"error": f"Sortie non-JSON : {sortie[-500:]}"}), 500
+
+    if not payload.get("ok"):
+        return jsonify({"error": payload.get("error", "Erreur inconnue")}), 500
+
+    return jsonify(payload)
+
+
+@app.route("/api/event_instances/inventaire", methods=["POST"])
+def event_instances_inventaire():
+    """
+    POST /api/event_instances/inventaire
+    Body JSON optionnel : {"scenario": "..."} (défaut : tous scénarios)
+
+    Calque exact de /api/instances/inventaire, pour event_instances.
+    """
+    cfg = load_config()
+    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+    data = request.get_json(silent=True) or {}
+    scenario = (data.get("scenario") or "").strip()
+
+    cmd = [sys.executable, "audit_inventaire_event_instances.py", "--md", "--json"]
+    if scenario:
+        cmd += ["--scenario", scenario]
+
+    try:
+        resultat = subprocess.run(
+            cmd, cwd=pipeline_dir, capture_output=True, text=True,
+            timeout=30, stdin=subprocess.DEVNULL,
+        )
+    except subprocess.TimeoutExpired:
+        return jsonify({"error": "audit_inventaire_event_instances.py a expiré (30s)"}), 504
+    except FileNotFoundError:
+        return jsonify({"error": f"audit_inventaire_event_instances.py introuvable dans {pipeline_dir}"}), 500
+
+    sortie = resultat.stdout.strip()
+    if not sortie:
+        return jsonify({"error": f"Aucune sortie (code {resultat.returncode}) : "
+                                  f"{resultat.stderr[-500:]}"}), 500
+    try:
+        payload = json.loads(sortie.splitlines()[-1])
+    except (json.JSONDecodeError, IndexError):
+        return jsonify({"error": f"Sortie non-JSON : {sortie[-500:]}"}), 500
+
+    if not payload.get("ok"):
+        return jsonify({"error": payload.get("error", "Erreur inconnue")}), 500
+
+    return jsonify(payload)
+
+
+@app.route("/api/event_instances/liste", methods=["GET"])
+def event_instances_liste():
+    """
+    GET /api/event_instances/liste
+
+    Onglet "Event_instances" (chantier "GUI Entités/Instances/Événements/
+    Signaux", 7 septembre 2026) : calque exact de /api/instances/liste,
+    pour event_instances (~80 event_instances, filtrage local en JS).
+    """
+    cfg = load_config()
+    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+
+    cmd = [sys.executable, "audit_inventaire_event_instances.py", "--json"]
+    try:
+        resultat = subprocess.run(
+            cmd, cwd=pipeline_dir, capture_output=True, text=True,
+            timeout=30, stdin=subprocess.DEVNULL,
+        )
+    except subprocess.TimeoutExpired:
+        return jsonify({"error": "audit_inventaire_event_instances.py a expiré (30s)"}), 504
+    except FileNotFoundError:
+        return jsonify({"error": f"audit_inventaire_event_instances.py introuvable dans {pipeline_dir}"}), 500
+
+    sortie = resultat.stdout.strip()
+    if not sortie:
+        return jsonify({"error": f"Aucune sortie (code {resultat.returncode}) : "
+                                  f"{resultat.stderr[-500:]}"}), 500
+    try:
+        payload = json.loads(sortie.splitlines()[-1])
+    except (json.JSONDecodeError, IndexError):
+        return jsonify({"error": f"Sortie non-JSON : {sortie[-500:]}"}), 500
+
+    if not payload.get("ok"):
+        return jsonify({"error": payload.get("error", "Erreur inconnue")}), 500
+
+    return jsonify(payload)
+
+
+@app.route("/api/signaux/inventaire", methods=["POST"])
+def signaux_inventaire():
+    """
+    POST /api/signaux/inventaire
+    Body JSON optionnel : {"scenario": "..."} (défaut : tous scénarios)
+
+    Calque de /api/instances/inventaire, pour les signaux faibles.
+    """
+    cfg = load_config()
+    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+    data = request.get_json(silent=True) or {}
+    scenario = (data.get("scenario") or "").strip()
+
+    cmd = [sys.executable, "audit_inventaire_signaux.py", "--md", "--json"]
+    if scenario:
+        cmd += ["--scenario", scenario]
+
+    try:
+        resultat = subprocess.run(
+            cmd, cwd=pipeline_dir, capture_output=True, text=True,
+            timeout=30, stdin=subprocess.DEVNULL,
+        )
+    except subprocess.TimeoutExpired:
+        return jsonify({"error": "audit_inventaire_signaux.py a expiré (30s)"}), 504
+    except FileNotFoundError:
+        return jsonify({"error": f"audit_inventaire_signaux.py introuvable dans {pipeline_dir}"}), 500
+
+    sortie = resultat.stdout.strip()
+    if not sortie:
+        return jsonify({"error": f"Aucune sortie (code {resultat.returncode}) : "
+                                  f"{resultat.stderr[-500:]}"}), 500
+    try:
+        payload = json.loads(sortie.splitlines()[-1])
+    except (json.JSONDecodeError, IndexError):
+        return jsonify({"error": f"Sortie non-JSON : {sortie[-500:]}"}), 500
+
+    if not payload.get("ok"):
+        return jsonify({"error": payload.get("error", "Erreur inconnue")}), 500
+
+    return jsonify(payload)
+
+
+@app.route("/api/signaux/liste", methods=["GET"])
+def signaux_liste():
+    """
+    GET /api/signaux/liste
+
+    Onglet "Signaux" (chantier "GUI Entités/Instances/Événements/
+    Signaux", 7 septembre 2026, dernier des 3 types) : calque de
+    /api/instances/liste, pour signaux_custom/ (~3 signaux, dossier
+    peu peuplé -- filtrage local en JS quand même, cohérent avec les
+    2 autres onglets).
+    """
+    cfg = load_config()
+    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+
+    cmd = [sys.executable, "audit_inventaire_signaux.py", "--json"]
+    try:
+        resultat = subprocess.run(
+            cmd, cwd=pipeline_dir, capture_output=True, text=True,
+            timeout=30, stdin=subprocess.DEVNULL,
+        )
+    except subprocess.TimeoutExpired:
+        return jsonify({"error": "audit_inventaire_signaux.py a expiré (30s)"}), 504
+    except FileNotFoundError:
+        return jsonify({"error": f"audit_inventaire_signaux.py introuvable dans {pipeline_dir}"}), 500
+
+    sortie = resultat.stdout.strip()
+    if not sortie:
+        return jsonify({"error": f"Aucune sortie (code {resultat.returncode}) : "
+                                  f"{resultat.stderr[-500:]}"}), 500
+    try:
+        payload = json.loads(sortie.splitlines()[-1])
+    except (json.JSONDecodeError, IndexError):
+        return jsonify({"error": f"Sortie non-JSON : {sortie[-500:]}"}), 500
+
+    if not payload.get("ok"):
+        return jsonify({"error": payload.get("error", "Erreur inconnue")}), 500
+
+    return jsonify(payload)
+
+
+# ---------------------------------------------------------------------------
+# Détection de basculements narratifs (chantier "Suite narrative des
+# événements" -- intégration GUI du 6 septembre 2026). Le script
+# detect_basculements_narratifs.py fait de VRAIS appels LLM (un par
+# scénario) -- ses résultats vivent dans un cache persistant
+# (state/basculements_narratifs.json), jamais recalculés à la volée à
+# chaque chargement de l'onglet Articles. La route GET ci-dessous ne fait
+# que lire ce cache (rapide, aucun appel LLM) ; la route POST relance le
+# script à la demande (lent, coûte de vrais appels LLM -- déclenché
+# explicitement par un bouton, jamais automatiquement).
+# ---------------------------------------------------------------------------
+
+@app.route("/api/articles/basculements", methods=["GET"])
+def articles_basculements():
+    """
+    GET /api/articles/basculements
+
+    Lecture seule du cache state/basculements_narratifs.json, écrit par
+    detect_basculements_narratifs.py à chaque exécution (CLI ou via la
+    route POST ci-dessous). Retourne {} pour resultats_par_scenario si le
+    script n'a jamais tourné -- ce n'est pas une erreur, juste un état
+    "jamais généré" que le frontend doit distinguer d'une vraie panne.
+    """
+    cfg = load_config()
+    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+    cache_path = pipeline_dir / "state" / "basculements_narratifs.json"
+    if not cache_path.exists():
+        return jsonify({"resultats_par_scenario": {}})
+    try:
+        data = json.loads(cache_path.read_text(encoding="utf-8"))
+        return jsonify({"resultats_par_scenario": data.get("resultats_par_scenario", {})})
+    except Exception as e:
+        return jsonify({"error": f"Cache illisible : {e}"}), 500
+
+
+TIMEOUT_DETECTION_BASCULEMENTS = 600  # secondes -- un appel LLM par scénario, jusqu'à 6 scénarios
+
+
+@app.route("/api/articles/lancer_basculements", methods=["POST"])
+def articles_lancer_basculements():
+    """
+    POST /api/articles/lancer_basculements
+    Body JSON optionnel : {"scenario": "..."} pour limiter à un seul
+    scénario (plus rapide) -- sans ce champ, scanne tout le corpus.
+
+    Lance detect_basculements_narratifs.py --json en sous-processus
+    (synchrone -- même pattern que /api/edition/injecter_evenement).
+    Coûte de vrais appels LLM, un par scénario scanné : déclenché
+    explicitement par le bouton dédié de l'onglet Articles, jamais
+    appelé automatiquement au chargement de la page. Le script fusionne
+    lui-même ses résultats avec le cache existant (un scan limité à un
+    scénario ne fait jamais disparaître les résultats des autres).
+    """
+    cfg = load_config()
+    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+    data = request.get_json(silent=True) or {}
+    scenario = (data.get("scenario") or "").strip()
+
+    cmd = [sys.executable, "detect_basculements_narratifs.py", "--json"]
+    if scenario:
+        cmd += ["--scenario", scenario]
+
+    try:
+        resultat = subprocess.run(
+            cmd, cwd=pipeline_dir, capture_output=True, text=True,
+            timeout=TIMEOUT_DETECTION_BASCULEMENTS, stdin=subprocess.DEVNULL,
+        )
+    except subprocess.TimeoutExpired:
+        return jsonify({"error": f"Détection expirée après {TIMEOUT_DETECTION_BASCULEMENTS}s "
+                                  f"(essaie de limiter à un seul scénario)"}), 504
+    except FileNotFoundError:
+        return jsonify({"error": f"detect_basculements_narratifs.py introuvable dans {pipeline_dir}"}), 500
+
+    sortie = resultat.stdout.strip()
+    if not sortie:
+        return jsonify({"error": f"Aucune sortie du sous-processus "
+                                  f"(code {resultat.returncode}) : {resultat.stderr[-500:]}"}), 500
+    try:
+        payload = json.loads(sortie.splitlines()[-1])
+    except (json.JSONDecodeError, IndexError):
+        return jsonify({"error": f"Sortie non-JSON du sous-processus : {sortie[-500:]}"}), 500
+
+    if not payload.get("ok"):
+        return jsonify({"error": payload.get("error", "Erreur inconnue")}), 500
+
+    return jsonify(payload)
+
+
+# ---------------------------------------------------------------------------
+# Résumé par scénario (demande de David, 7 septembre 2026) : résumé en
+# prose des principaux acteurs/événements par scénario, généré par IA
+# (1 appel LLM/scénario, sélection déterministe par score d'impact/portée).
+# Même mécanique de cache que les basculements narratifs ci-dessus : la
+# route GET ne fait que lire state/resume_scenarios.json (rapide, aucun
+# appel LLM) ; la route POST relance generate_resume_scenarios.py à la
+# demande (lent, coûte de vrais appels LLM).
+# ---------------------------------------------------------------------------
+
+@app.route("/api/scenarios/resume", methods=["GET"])
+def scenarios_resume():
+    """
+    GET /api/scenarios/resume
+
+    Lecture seule du cache state/resume_scenarios.json, écrit par
+    generate_resume_scenarios.py à chaque exécution. Retourne {} pour
+    resumes_par_scenario si le script n'a jamais tourné -- pas une
+    erreur, juste un état "jamais généré".
+    """
+    cfg = load_config()
+    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+    cache_path = pipeline_dir / "state" / "resume_scenarios.json"
+    if not cache_path.exists():
+        return jsonify({"resumes_par_scenario": {}})
+    try:
+        data = json.loads(cache_path.read_text(encoding="utf-8"))
+        return jsonify({"resumes_par_scenario": data.get("resumes_par_scenario", {})})
+    except Exception as e:
+        return jsonify({"error": f"Cache illisible : {e}"}), 500
+
+
+TIMEOUT_RESUME_SCENARIOS = 600  # secondes -- un appel LLM par scénario, jusqu'à 6 scénarios
+
+
+@app.route("/api/scenarios/generer_resume", methods=["POST"])
+def scenarios_generer_resume():
+    """
+    POST /api/scenarios/generer_resume
+    Body JSON optionnel : {"scenario": "..."} pour limiter à un seul
+    scénario (plus rapide) -- sans ce champ, régénère les 6.
+
+    Lance generate_resume_scenarios.py --json en sous-processus
+    (synchrone). Coûte de vrais appels LLM, un par scénario régénéré :
+    déclenché explicitement par un bouton, jamais automatiquement. Le
+    script fusionne lui-même ses résultats avec le cache existant.
+    """
+    cfg = load_config()
+    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+    data = request.get_json(silent=True) or {}
+    scenario = (data.get("scenario") or "").strip()
+
+    cmd = [sys.executable, "generate_resume_scenarios.py", "--json"]
+    if scenario:
+        cmd += ["--scenario", scenario]
+
+    try:
+        resultat = subprocess.run(
+            cmd, cwd=pipeline_dir, capture_output=True, text=True,
+            timeout=TIMEOUT_RESUME_SCENARIOS, stdin=subprocess.DEVNULL,
+        )
+    except subprocess.TimeoutExpired:
+        return jsonify({"error": f"Génération expirée après {TIMEOUT_RESUME_SCENARIOS}s "
+                                  f"(essaie de limiter à un seul scénario)"}), 504
+    except FileNotFoundError:
+        return jsonify({"error": f"generate_resume_scenarios.py introuvable dans {pipeline_dir}"}), 500
+
+    sortie = resultat.stdout.strip()
+    if not sortie:
+        return jsonify({"error": f"Aucune sortie du sous-processus "
+                                  f"(code {resultat.returncode}) : {resultat.stderr[-500:]}"}), 500
+    try:
+        payload = json.loads(sortie.splitlines()[-1])
+    except (json.JSONDecodeError, IndexError):
+        return jsonify({"error": f"Sortie non-JSON du sous-processus : {sortie[-500:]}"}), 500
+
+    if not payload.get("ok"):
+        return jsonify({"error": payload.get("error", "Erreur inconnue")}), 500
+
+    return jsonify(payload)
+
+
 @app.route("/api/redaction/personnes", methods=["GET"])
 def redaction_personnes():
     """

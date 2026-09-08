@@ -37,8 +37,7 @@ mécanisme) ; `date_publication` = `date_evenement` pour l'instant
 (aucun délai éditorial simulé, champs gardés séparés pour ne pas fermer
 la porte à un vrai décalage plus tard) ; `entites_citees` (liste des
 slugs de `filtered_instances`) ajouté comme sous-produit gratuit,
-prépare le rapprochement `articles_lies` — **calculé depuis, voir point
-9bis ci-dessous**.
+prépare le rapprochement `articles_lies` — calculé depuis.
 
 **Phase C — codée (21 août)**, `generate_images.py` (nouveau script) :
 scanne les articles `a_une_photo: true`, traite selon `image_credit`
@@ -78,8 +77,9 @@ tard, avant de lancer `generate_images.py`.
 **Testé en conditions réelles à trois reprises le 21 août** (2 batches
 de 8 articles `fortress_world` avant la Phase B/C, puis un batch de 3
 articles `policy_reform` généré depuis le GUI après Phase B/C) — voir
-P25 ci-dessous pour le détail des anomalies de signature observées sur
-ce dernier batch, qui restent le seul point non résolu de ce chantier.
+P25 (secondaire, S1) pour le détail des anomalies de signature
+observées sur ce dernier batch, qui restent le seul point non résolu
+de ce chantier.
 
 **Piège rencontré et confirmé le 21 août (soir)** : un nouveau champ
 `config_fields` ajouté à `scripts_config.json` n'apparaît dans le
@@ -93,104 +93,6 @@ déjà documenté plusieurs fois par le passé (15 août notamment),
 reconfirmé ici sur un nouveau cas concret. Résolu après redémarrage,
 confirmé par David.
 
----
-
----
-
-**Nettoyé le 19 août** — retrait des points reconfirmés à plusieurs
-reprises sans jamais avoir mené à une action (aucune condition de
-réouverture identifiée) : anomalie `coverage_proposals_reference.yaml`
-sans `.applied`, route dormante `/api/carte/appliquer_zone_topdown_suspecte`,
-champ `type` des zones géographiques jamais utilisé dans le prompt.
-`constrained_variables` retiré de cette liste pour la raison inverse —
-traité et résolu, voir BACKLOG_ARCHIVE.md. Bloc `simulation` retiré également,
-pour la même raison inverse — P22 a confirmé et résolu son statut le
-20 août (câblé dans `snapshot.py`, opérationnel), voir BACKLOG_ARCHIVE.md.
-
-- `--min-shingle` de `detect_registre_leakage()` (fonction désormais
-  partagée, voir BACKLOG_ARCHIVE.md) fixé en dur à 6 mots — pourrait devenir un
-  paramètre CLI si un faux positif/négatif apparaît en usage réel.
-- Cas d'échec LLM ponctuel observé une fois (4 août) : confusion entre
-  un slug de zone géographique et un slug d'instance sur une fiche —
-  résolu par retry, gardé en tête comme motif à surveiller si le même
-  symptôme réapparaît (pourrait indiquer que le prompt gagnerait à
-  lister explicitement les slugs de zones à ne PAS utiliser).
-- **Nouveau, 15 août** : `articles/{scenario}/_index.md`, généré par
-  `generate_series.py` (`build_index()`), est réécrit en mode écrasement
-  à chaque run sur un même scénario — ne liste que les articles du
-  dernier batch, pas un cumul historique de tous les articles jamais
-  générés pour ce scénario. Repéré en discussion, pas vérifié comme
-  gênant en pratique. À réévaluer si un historique cumulatif devient
-  utile (ex. navigation Obsidian sur l'ensemble d'un scénario plutôt
-  que sur le dernier batch seul).
-
----
-
-## ⚪ 2. Éditions datées (mensuel) — progression réelle du monde dans l'année
-**Scopé le 30 août**, suite à une réflexion de David sur la parution à
-dates régulières (ex. mensuel) avec cohérence temporelle des sujets
-traités et continuité narrative entre éditions. **Diagnostic complet
-fait, rien codé.**
-
-**Constat de départ (lecture de `generate.py`/`snapshot.py`/
-`generate_series.py`/`generate_manual.py`)** : `date_fictive` ne touche
-**jamais** le contenu généré. `build_snapshot(scenario_slug,
-thematique=None, dry_run=True, forcer_config=None)` n'a même pas de
-paramètre de date. Confirmé par grep sur les 3 fichiers : `date_fictive`
-ne sert qu'à `prompt_builder.py` pour la ligne "date de publication"
-sous le titre — jamais transmise à `variable_states`/aux instances
-sélectionnées. Deux articles datés "3 janvier 2098" et "22 décembre
-2098" reçoivent un `variable_states` strictement identique. Les dates
-elles-mêmes ne progressent pas : `generate.py` tire au hasard dans
-`DATES_2098` (`random.choice`), `generate_series.py`/`generate_manual.py`
-bouclent dessus (`% len(DATES_2098)`) — une liste fixe de ~20-24 dates,
-toutes dans la seule année 2098, aucune notion d'édition ni de fenêtre.
-
-**Un mécanisme existant s'en approche, mais n'est pas conçu pour ça** :
-`apply_custom_events()`/`apply_custom_injections()`/`apply_custom_signals()`
-(3 formules identiques, dupliquées) calculent `duree_effet = 2098 -
-int(annee)` — **2098 en dur comme "présent" absolu du système**, plus
-`snapshot["scenario"]["year"] = 2098` en dur également. Ce mécanisme
-répond à "comment un événement du passé (2050, 2070...) irrigue encore
-l'état du monde en 2098", pas à "que s'est-il passé le mois dernier
-dans la même année" — un événement daté "2098" donne `duree_effet = 0`,
-donc un effet quasi nul, l'inverse de ce qu'il faudrait pour une
-progression mensuelle.
-
-**Décision actée avec David (30 août)** : le monde doit **vraiment**
-progresser dans l'année (pas seulement la sélection des sujets sur un
-état par ailleurs figé) — option la plus ambitieuse des deux
-envisagées.
-
-**Piste retenue, à valider avant de coder** : généraliser les 3
-formules dupliquées vers une vraie "date de référence de l'édition"
-(fractionnaire, ex. `2098.08` pour août) plutôt que `2098` en dur. Les
-`custom_events` **persistent déjà dans le vault** et se réappliquent à
-chaque nouvelle génération — une fois ce calcul généralisé, chaque
-édition mensuelle pourrait injecter ses propres `custom_events` (les
-sujets réellement traités ce mois-là), qui irrigueraient automatiquement
-toutes les éditions suivantes. **Ça répondrait aux deux besoins de
-David avec un seul mécanisme** (progression du monde ET continuité
-narrative entre éditions), plutôt que deux chantiers séparés.
-
-**Reste à trancher avant de coder** :
-- Généraliser les 3 formules dupliquées (`apply_custom_injections`/
-  `apply_custom_events`/`apply_custom_signals`) + le `year: 2098` en
-  dur du snapshot — vérifier aussi l'impact ailleurs dans le pipeline
-  (`generate.py`, `prompt_builder.py`) où "on est en 2098" pourrait
-  être supposé implicitement, pas vérifié à ce stade.
-- Faire remonter la date de référence de l'édition jusqu'à
-  `build_snapshot()` (paramètre absent aujourd'hui) depuis
-  `generate_series.py`/`config_series.yaml`.
-- Construire la notion d'édition elle-même (numéro, date de parution,
-  fenêtre par rapport à la précédente) — n'existe nulle part
-  aujourd'hui.
-- **Comment les `custom_events` de chaque édition sont produits** :
-  curation manuelle (comme aujourd'hui, `inject_custom_events.py`), ou
-  extraction automatique depuis les articles réellement générés ce
-  mois-là (séduisant mais nouveau mécanisme à concevoir : quels
-  articles méritent de devenir des `custom_events` influençant la
-  suite, avec quels deltas).
 
 ---
 
@@ -212,6 +114,11 @@ de code éliminée : relancer une génération d'article sur `mistral-small`
 (override manuel `LLM_PROVIDER=mistral LLM_MODEL=mistral-small-latest`)
 et comparer au résultat obtenu sur `mistral-large`. **David a choisi de
 le garder pour plus tard, non traité le 14 août.**
+
+Note P25 (signature journaliste, ~25-33% d'échec, symptôme signature
+après séparateur `---` observé sur le batch policy_reform du 21 août) :
+même logique d'observation avant correctif, rattaché ici sous le même
+principe plutôt qu'en entrée séparée.
 
 ---
 
@@ -293,6 +200,38 @@ empirique a été conçu mais jamais exécuté — **David a choisi de mettre
 la piste de côté**, `set_ton_personnel.py` jugé suffisant tel quel pour
 le moment. Aucune décision de fond prise ; à reprendre seulement si un
 besoin réel se manifeste en usage.
+
+---
+
+## ⚪ S8. `--min-shingle` en dur dans `detect_registre_leakage()`
+**Repéré le 19 août**, en marge d'un nettoyage de points reconfirmés
+sans action. Le paramètre est fixé en dur à 6 mots (fonction partagée,
+voir BACKLOG_ARCHIVE.md) — pourrait devenir un paramètre CLI si un
+faux positif/négatif apparaît en usage réel. Aucun cas observé à ce
+jour, pas de correctif tant que rien ne remonte.
+
+---
+
+## ⚪ S9. Confusion slug zone/instance — cas isolé
+**Observé une fois le 4 août.** Échec LLM ponctuel : confusion entre
+un slug de zone géographique et un slug d'instance sur une fiche —
+résolu par retry, gardé en tête comme motif à surveiller si le même
+symptôme réapparaît (pourrait indiquer que le prompt gagnerait à
+lister explicitement les slugs de zones à ne PAS utiliser). Un seul
+cas à ce jour, pas de correctif préventif.
+
+---
+
+## ⚪ S10. `_index.md` réécrit en mode écrasement, pas cumulatif
+**Repéré le 15 août.** `articles/{scenario}/_index.md`, généré par
+`generate_series.py` (`build_index()`), ne liste que les articles du
+dernier batch à chaque run sur un même scénario — pas un cumul
+historique de tous les articles jamais générés. Pas vérifié comme
+gênant en pratique. À réévaluer si un historique cumulatif devient
+utile (ex. navigation Obsidian sur l'ensemble d'un scénario plutôt que
+sur le dernier batch seul). Sans incidence sur les outils d'audit/
+inventaire (depuis le 5 septembre) : tous scannent le dossier
+directement et excluent explicitement les fichiers `_index.md`.
 
 ---
 

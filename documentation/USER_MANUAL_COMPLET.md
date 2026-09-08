@@ -1,5 +1,5 @@
 # Manuel utilisateur complet — Pipeline Ourrassol 2098
-*Référence à jour au 29 août 2026 — couvre `generator/` (39+ scripts
+*Référence à jour au 3 septembre 2026 — couvre `generator/` (42+ scripts
 Python) et `gui/` (Flask). Historique complet des sessions et
 chantiers (bugs trouvés, itérations, tests réels) dans
 `USER_MANUAL_HISTORIQUE.md`, à uploader seulement au besoin.*
@@ -14,7 +14,7 @@ Ce manuel classe chaque script par rôle : **modules internes** (jamais lancés 
 Ourrassol2098/                          ← racine du vault Obsidian
 ├── generator/                          ← pipeline Python (35+ scripts)
 │   ├── config.yaml, config_series.yaml, journaux.yaml
-│   ├── state/ (instance_usage.json, trajectory_usage.json, event_relevance_usage.json, manual_progress.json, last_validated.json)
+│   ├── state/ (instance_usage.json, trajectory_usage.json, event_relevance_usage.json, manual_progress.json, last_validated.json, editions.json)
 │   ├── entites_custom/ (queue.yaml, needs_review.yaml, processed.yaml)
 │   ├── evenements_custom/ (queue.yaml, processed.yaml, undo_queue.yaml)
 │   └── signaux_custom/ (queue.yaml, processed.yaml, needs_review.yaml)
@@ -846,6 +846,606 @@ quel, pas de correctif prévu.
 
 ---
 
+## 2quinquies. Mois de parution — éditions datées (2-3 septembre 2026)
+
+*Chantier scopé le 30 août 2026 (voir `BACKLOG_ACTIF.md`), conçu et
+implémenté le 2 septembre. Objectif double : le monde doit vraiment
+**progresser** dans l'année (pas juste une sélection de sujets plaquée
+sur un état figé) et les éditions successives doivent avoir une
+**continuité narrative**. Terminologie "mois de parution" retenue en
+cours de session (préférée à "édition", jugée ambiguë — lue comme
+"modifier" plutôt que "numéro du journal").*
+
+### Constat de départ
+`date_fictive` ne touchait jamais le contenu généré — `build_snapshot()`
+n'avait même pas de paramètre de date. Deux articles datés à des mois
+différents recevaient un `variable_states` strictement identique, et
+les 3 formules `duree_effet = 2098 - int(annee)` (`snapshot.py`,
+`apply_custom_injections`/`apply_custom_events`/`apply_custom_signals`)
+avaient `2098` en dur comme "présent" absolu du système — mécanisme
+pensé pour "un événement passé irrigue encore le monde", pas pour "que
+s'est-il passé le mois dernier". Les listes de dates candidates
+(`DATES_2098`) étaient elles-mêmes **triplées** (copies indépendantes
+dans `generate.py`, `generate_series.py`, `generate_manual.py`), toutes
+fixées à l'année 2098 sans notion de mois.
+
+### `edition_utils.py` 🔁 — module partagé, jamais lancé seul
+Cœur du mécanisme, importé par tous les scripts ci-dessous (même
+principe que `chantiers.py`, §4bis) :
+- **`edition_date_to_float(annee, mois)`/`float_to_edition_date(valeur)`**
+  — conversion année+mois ↔ date fractionnaire (`2098.08` pour août).
+  Division par 100 (jamais concaténation de chaîne) : garantit le
+  zéro-padding implicite du mois, condition nécessaire pour que la
+  comparaison flottante reste correcte quel que soit le mois (piège
+  identifié en conception : sans division, `2098.9` > `2098.12` en
+  comparaison naïve, alors que septembre < décembre).
+- **`tirer_jour_edition(annee, mois)`/`parser_date_fictive(date_str)`**
+  — tirage d'un jour au hasard dans le mois (`calendar.monthrange`),
+  et son inverse (parsing d'une date française en texte libre, ex.
+  "6 août 2098" → `(jour, mois, annee)`).
+- **Registre `state/editions.json`** — `lire_edition_active()` (lecture
+  seule), `definir_edition_active()` (fixe le pointeur sans générer
+  d'article), `enregistrer_edition()` (enregistre des articles
+  réellement sauvegardés). Structure :
+  ```json
+  {
+    "edition_active": {"numero": 2, "annee": 2098, "mois": 9},
+    "editions_connues": [{"numero": 1, "annee": 2098, "mois": 6}, ...],
+    "historique": [{"numero": 1, "annee": 2098, "mois": 6,
+                     "scenario": "breakdown", "nb_articles": 8,
+                     "date_generation": "..."}, ...]
+  }
+  ```
+  **Mois de parution GLOBAL** (décision de David, 2 septembre) : le
+  numéro est partagé par les 6 scénarios, pas un numéro par scénario —
+  à un instant donné, tous les mondes fictifs avancent en parallèle.
+  **`editions_connues` distinct de `historique`** — bug trouvé en
+  testant : sans ce registre séparé (qui mémorise TOUTE édition déjà
+  déclarée, générée ou non), avancer deux fois de suite sans jamais
+  générer réattribuait le même numéro à chaque mois "sauté" (rien
+  n'était mémorisé entre les deux appels). `historique` reste un pur
+  décompte d'articles réellement produits, par scénario.
+
+### `definir_edition.py` 🔁 🧩 — nouveau, section GUI "Mois de parution du journal"
+Fixe/avance le mois de parution actif **indépendamment** de tout
+lancement de série ou d'article — aucun article généré, aucun appel
+LLM. Ajouté à la demande de David pour ne pas avoir à lancer une série
+complète juste pour faire avancer le mois.
+```bash
+python3 definir_edition.py --annee 2098 --mois 9
+python3 definir_edition.py --statut          # consulte sans modifier
+```
+`gui_verified: true` — cliqué et validé dans le navigateur réel le 3
+septembre (premier mois de parution activé via cet écran : 2098/08).
+
+### Adoption dans les points d'entrée existants
+- **`generate_series.py` 🔁 🧩 / `generate_manual.py` 🪦** (même
+  `config_series.yaml`, `generate_manual.py` suit structurellement la
+  même série — pas un cas à part malgré son retrait du sidebar, §2) :
+  `annee_edition`/`mois_edition` **optionnels** dans
+  `config_series.yaml` — repli automatique sur le mois de parution actif
+  si absents (`resoudre_edition_config()`), toujours surchargeables
+  explicitement pour un lot ponctuel sur un mois différent de l'actif.
+  Le champ GUI correspondant a été **retiré** de l'écran "Générer une
+  série d'articles" (redondant avec le nouvel écran dédié). À la fin
+  d'un lot réel (jamais en dry-run), `enregistrer_edition()` incrémente
+  `nb_articles` dans l'historique.
+- **`generate.py` 🔁 🧩** (article isolé, ne lit pas
+  `config_series.yaml`) : **lit** le mois de parution actif avant
+  l'appel à `build_snapshot()` (jamais ne le crée/l'avance — décision
+  explicite de David, un article isolé suit le mois en cours, il n'en
+  déclenche pas un nouveau). Repli complet sur le comportement
+  historique (année 2098 fixe, tirage sur toute l'année) si
+  `state/editions.json` est absent/vide. **Bandeau GUI** ajouté sur cet
+  écran (`app.js`/`app.py`, route `GET /api/edition/active`) : confirme
+  en lecture seule quel mois sera utilisé, avant génération.
+- **`snapshot.py`** : `build_snapshot()` gagne un paramètre optionnel
+  `date_edition=None` (rétrocompatible — `None` préserve `year: 2098`
+  en dur). Les 3 fonctions `apply_custom_*` gagnent `date_reference=2098`
+  et l'utilisent à la place du `2098` en dur. Affichage console
+  (`round(duree_effet, 2)`) pour éviter l'artefact d'imprécision
+  flottante visible en test réel (`51.05000000000018 ans d'effet`) —
+  le calcul en aval (`facteur`) utilise toujours la valeur exacte non
+  arrondie, seul l'affichage change.
+
+### `audit_sujets_edition.py` 🔁 🗄️ — diagnostic pur
+Liste les articles générés pour un mois de parution donné (métadonnées
+P20 déjà existantes : `chapo`, `zone_principale`, `thematique`,
+`entites_citees` — ce dernier champ ajouté le 3 septembre pour
+alimenter le nouvel écran GUI, voir plus bas) et, en regard, les
+`custom_events` déjà injectés pour ce même mois. Ne décide jamais à la
+place de David quel sujet mérite injection — gain de temps de lecture
+uniquement, pas de jugement de pertinence automatique.
+```bash
+python3 audit_sujets_edition.py --scenario breakdown
+    # mois de parution actif par défaut
+python3 audit_sujets_edition.py --scenario breakdown --annee 2098 --mois 8
+python3 audit_sujets_edition.py --scenario breakdown --json
+    # sortie JSON sur une ligne (même convention que extract_localisation.py
+    # --json) -- consommée par app.py, voir §7 et la section "Promouvoir un
+    # événement" ci-dessous
+```
+**Intégré au GUI le 3 septembre** (section "Validation", même famille
+que les 3 autres audits en lecture seule) — `--scenario` en select
+dynamique, `--annee`/`--mois` optionnels (les deux ensemble ou aucun,
+pas de mécanisme "l'un sans l'autre" côté formulaire — l'erreur, le cas
+échéant, remonte du script lui-même). `gui_verified: true`.
+
+### Production des `custom_events` par édition — Option manuelle retenue
+Deux options envisagées : curation manuelle (réutiliser
+`inject_custom_events.py`) vs. extraction automatique LLM depuis les
+articles générés. **Manuelle retenue** — l'extraction automatique
+demanderait un protocole de validation à concevoir entièrement (même
+raisonnement que l'exclusion du mode auto sur `ton_personnel`, §2quater),
+notée comme chantier séparé possible si le besoin se confirme.
+
+**`inject_custom_events.py`** : nouveau champ `edition_active: true` sur
+une idée de `queue.yaml` — écrase `date`/`date_label` (normalement
+proposés par le LLM, qui peut dévier de ±10 ans de la date approximative
+fournie — adapté au worldbuilding historique, pas à une capture précise
+du mois en cours) par la date du mois de parution actif. N'bloque jamais
+: avertit et conserve la date du LLM si aucun mois de parution n'est
+actif. **Rétrocompatibilité totale** — les événements custom existants
+(`date` en année entière simple, ex. `2050`) continuent de fonctionner
+tels quels dans les 3 formules `duree_effet` (Python soustrait un entier
+d'un flottant sans erreur), juste sans granularité mensuelle. Aucune
+migration nécessaire.
+
+### Mécanisme de reprise d'un `custom_event` dans les articles futurs
+*Creusé en détail le 3 septembre 2026 (question de David sur le nouvel
+écran "Promouvoir un événement", voir plus bas) — `select_relevant_events`
+vit dans `loader.py`, appelée depuis `prompt_builder.py` avec
+`max_events=8`.*
+
+Deux mécanismes bien distincts :
+1. **Score de pertinence** (`_score_evenement_pertinence`), qui
+   détermine qui rentre dans le plafond de 8 événements par article :
+   ```
+   score = 3 × (variables impactées de l'événement ∩ variables_visibles
+                de la thématique de l'article)
+         + 1 × (∩ variables_secondaires)
+         + 1.5 × rang de portée (locale < régionale < continentale < globale)
+         + 0.1 × min(amplitude totale des deltas, 40)
+   ```
+   Triés par score décroissant. La "rotation à mémoire" (compteur
+   d'usage par scénario, persistée hors dry-run) ne départage QUE les
+   **ex-æquo de score** — elle ne fait jamais remonter un événement
+   faible au-dessus d'un événement fort. Si le nombre total de
+   `custom_events` du scénario est ≤ au plafond restant, **tous** sont
+   inclus sans même passer par le score (la compétition ne démarre
+   vraiment qu'une fois plusieurs événements custom accumulés sur le
+   même scénario).
+2. **Mode "Forcer"** (`forced_event_slug`, mode déjà existant sur
+   l'écran `generate.py`) : l'événement forcé est **toujours inclus**,
+   en plus du plafond de 8, jamais soumis au tri. Mais c'est un
+   forçage **article par article** — aucun réglage "pour tout le mois"
+   ou "pour toute la série" n'existe.
+
+**Conséquence pratique actée avec David** : le levier de très loin le
+plus déterminant pour qu'un événement custom soit repris est le
+recoupement de ses variables impactées avec les thématiques des futurs
+articles (poids ×3, contre ×1,5 pour la portée et ×0,1 plafonné pour
+l'amplitude) — donc bien choisir `variables_hint` à l'injection compte
+plus que la portée ou l'intensité. Mais **rien ne garantit fermement**
+qu'un article donné reprenne un événement précis. Pour un sujet qu'on
+veut absolument voir traité dans un article à venir, la réponse
+retenue est : **générer cet article via le mode Forcer de `generate.py`**,
+plutôt que de chercher un mécanisme d'épinglage mensuel qui n'existe
+pas.
+
+### Limites connues, non corrigées (comportement observé, pas un bug)
+- **Sélection non garantie à chaque article** (détail du mécanisme
+  ci-dessus) : un `custom_event` injecté un mois donné n'apparaîtra
+  dans les articles suivants que quand jugé pertinent par le score, pas
+  systématiquement partout — sauf recours explicite au mode Forcer.
+- **Cohérence des formulations temporelles relatives** ("il y a un
+  mois", "depuis cet été") non forcée par une consigne explicite —
+  dépend du LLM comparant lui-même `date_label` de l'événement à la
+  date de l'article en cours (les deux sont dans le prompt). Risque
+  identifié en conception (deux articles du même numéro, à des jours
+  différents, pourraient produire des formulations relatives
+  incohérentes entre eux) : **pas de correctif préventif**, à observer
+  en conditions réelles d'abord (cohérent avec l'approche déjà suivie
+  sur P17/Bug#27).
+- **`generate_manual.py`** : `build_tasks()` étant rappelée à chaque
+  invocation CLI séparée (status/prompt/save = process distincts), le
+  tirage aléatoire du jour n'est pas idempotent d'un appel à l'autre —
+  effet cosmétique uniquement sur l'affichage `status` d'une tâche pas
+  encore générée, sans conséquence sur l'article réellement produit
+  (dont la date est fixée au moment du `prompt`, puis sauvegardée
+  telle quelle).
+
+### Promouvoir un événement — nouvel écran GUI (3 septembre 2026)
+*Suite directe du chantier ci-dessus — David voulait remplacer la
+saisie manuelle de `queue.yaml` par un flux "je vois les articles du
+mois, je choisis celui qui mérite de devenir un événement durable, le
+formulaire se pré-remplit, j'injecte en un clic".*
+
+**`inject_custom_events.py` — nouveau mode `--idea`** : injecte UNE
+idée fournie directement en JSON, **sans jamais lire/écrire
+`queue.yaml`** — contourne complètement la queue pour ce cas d'usage
+précis (contrairement au mode `custom` habituel, qui traite toujours
+la queue entière).
+```bash
+python3 inject_custom_events.py --idea '{"id": "...", "description": "...", "portee": "...", "date_approximative": 2098, "intensite": "...", "scenarios": ["fortress_world"], "edition_active": true}' --json
+```
+Réutilise `process_idea()` tel quel (même validation, mêmes retries,
+même écriture dans `processed.yaml`/`needs_review.yaml`, même cycle
+post-injection si succès) — la fonction d'enregistrement du résultat a
+été factorisée dans `_enregistrer_resultat_idea()` (extraite de
+`run_custom_mode`, logique inchangée) pour être partagée entre les deux
+chemins. `--json` : sortie structurée sur une seule ligne finale (même
+convention que `set_ton_personnel.py --json`), pour consommation par
+`app.py`.
+
+**`app.py` — deux nouvelles routes** :
+- `GET /api/edition/articles?scenario=X[&annee=...&mois=...]` — appelle
+  `audit_sujets_edition.py --json` en sous-processus (lecture seule,
+  timeout 15s), retourne les articles du mois + les `custom_events`
+  déjà injectés.
+- `POST /api/edition/injecter_evenement` — body = une idée (mêmes
+  champs qu'une entrée `queue.yaml`, plus `dry_run` optionnel), appelle
+  `inject_custom_events.py --idea --json` en sous-processus. Timeout
+  élargi à 240s (`TIMEOUT_INJECTION_EVENEMENT`, contre 90s pour
+  `/api/redaction/ton_personnel`) — `process_idea()` peut enchaîner
+  plusieurs appels LLM par scénario (sélection + développement +
+  jusqu'à 2 correctifs de validation), multipliés par le nombre de
+  scénarios choisis.
+
+**Écran GUI "Promouvoir un événement"** — onglet custom (pas un script
+`scripts_config.json` déclaratif), rangé dans la sidebar sous
+**"Entités & événements — création"** (décision explicite de David,
+pas un onglet top-level séparé comme Rédaction/Carte/Chantiers). Même
+gabarit visuel que l'onglet Rédaction (§2quater) : sélection de
+scénario → liste cliquable des articles du mois de parution actif
+(chapo, thématique, zone, ligne éditoriale) → clic sur un article
+pré-remplit le formulaire (`id` suggéré depuis le slug, `description`
+depuis le `chapo`, `zone_hint` depuis `zone_principale`, `acteurs_hint`
+en chips depuis `entites_citees`, `scenarios` pré-coché sur le scénario
+courant, `edition_active` pré-coché) → bouton "Injecter" (injection
+directe, case "Dry-run" disponible pour un essai sans écriture).
+
+Voir la sous-section "Mécanisme de reprise" ci-dessus pour ce qui
+détermine si l'événement promu sera effectivement repris dans les
+articles futurs.
+
+**Testé en conditions réelles par David le 3 septembre** : chaîne
+`GET /api/edition/articles` validée (5 articles remontés correctement
+sur `fortress_world`), écran testé et injection validée.
+
+### Fichiers touchés (session du 2-3 septembre)
+Nouveaux : `edition_utils.py`, `definir_edition.py`,
+`audit_sujets_edition.py`. Modifiés : `snapshot.py`, `generate_series.py`,
+`generate_manual.py`, `generate.py`, `inject_custom_events.py`,
+`config_series.yaml`, `scripts_config.json`, `app.py`, `app.js`,
+`index.html`.
+
+**Testé en conditions réelles par David** (au-delà du dry-run du 2
+septembre) : génération réelle via le GUI (3 articles `fortress_world`,
+dates de rédaction distinctes et bornées au mois, `state/editions.json`
+correctement mis à jour — `edition_active`/`editions_connues`/
+`historique` tous cohérents) ; écran "Mois de parution du journal"
+cliqué et validé ; bandeau confirmé sur "Générer une série d'articles"
+après extension (absent du scope initial du 2 septembre, ajouté à la
+demande de David) ; écran "Promouvoir un événement" testé de bout en
+bout. Aucune incohérence de formulation temporelle relative observée
+sur le petit volume généré jusqu'ici — à continuer d'observer sur plus
+de volume, pas de correctif préventif (cohérent avec P17/Bug#27).
+
+---
+
+## 2sexies. Suite narrative des événements + détection de basculements (5-6 septembre 2026)
+
+Chantier ouvert le 5 septembre (voir §2quinquies pour le mécanisme de
+reprise d'un événement et l'ancien écran "Promouvoir un événement",
+retiré ce jour-là — voir plus bas). Objectif : permettre aux articles
+de construire une vraie continuité narrative sur les événements
+custom, plutôt que de repartir d'une fiche statique à chaque forçage.
+
+### Champ `developpements` — historique cumulatif sur la fiche instance
+
+Chaque fiche instance d'événement custom (`event_instances/{slug}_
+{scenario}.md`) porte désormais un champ `developpements` (liste,
+vide `[]` par défaut à la création). Une entrée y est ajoutée
+automatiquement chaque fois qu'un article est généré en **mode Forcer,
+sujet_central**, sur cet événement — jamais en mode `ingredient` (voir
+note ci-dessous). Chaque entrée porte :
+- `date_label` : la date fictive de l'article qui a développé
+  l'événement.
+- `article_slug` : le slug de cet article.
+- `resume` : son chapo (déjà généré par ailleurs, aucun appel LLM
+  supplémentaire pour produire ce résumé).
+
+**Effet concret** : la prochaine fois que ce même événement est forcé
+en `sujet_central`, la consigne envoyée au LLM inclut désormais un
+rappel de ce qui a déjà été raconté ("Développements déjà racontés sur
+cet événement — ne les répète pas, poursuis l'histoire à partir de
+là"). Testé en conditions réelles sur 2 forçages successifs du même
+événement (à quelques jours d'intervalle dans la fiction) : le 2e
+article prolonge bien l'histoire (nouveaux acteurs, escalade) plutôt
+que de la redire.
+
+**Note sur le mode `ingredient`** : dans l'architecture actuelle du
+mode Forcer (voir §2 sur `generate.py`), seul le mode `sujet_central`
+est atteignable — le mode `ingredient` (garantie de présence sans
+garantie de développement) existe encore dans le code mais n'est plus
+déclenchable depuis `generate.py` (décision du 2 août 2026). Le champ
+`evenements_cites` du frontmatter d'un article (déjà documenté en
+§2quinquies) est donc, de fait, toujours fiable aujourd'hui.
+
+### Onglet Articles — action "Promouvoir en événement"
+
+L'ancien écran "Promouvoir un événement" (section "Entités &
+événements — création", décrit en §2quinquies) a été **retiré** le 6
+septembre : il ne listait que les articles du mois de parution actif,
+et verrouillait la date de l'événement créé sur ce même mois — aucun
+moyen d'y traiter un article plus ancien.
+
+L'action équivalente vit désormais dans le panneau de détail de
+l'**onglet Articles** (§2quinquies pour sa description générale) :
+sélectionner un article dans le tableau, puis cliquer **"Promouvoir en
+événement"** dans le panneau de détail ouvre un formulaire identique à
+l'ancien écran (id, description, portée, intensité, scénarios, zone,
+acteurs, variables, dry-run), avec deux différences :
+- **Date approximative (année)** : éditable, pré-remplie avec l'année
+  réelle de l'article — pas le mois de parution actif.
+- **`edition_active`** : décochée par défaut (inverse de l'ancien
+  écran) — ici on veut en général garder la vraie date de l'article,
+  sauf si on coche explicitement pour la remplacer par le mois actif.
+
+Le formulaire transmet aussi la date complète de l'article
+(`date_precise`, ex. "3 janvier 2098") en plus de l'année. Le LLM
+distingue alors deux cas pour dater l'événement créé :
+1. **L'article décrit un événement contemporain** à sa date de
+   publication : l'événement créé DOIT rester dans la même saison que
+   l'article.
+2. **L'article est rétrospectif** (anniversaire, référence
+   historique) : le LLM ignore la date de l'article et suit la
+   période suggérée par le récit lui-même.
+
+**Limite connue, acceptée** : sur les cas ambigus (un anniversaire peut
+être interprété comme "l'événement de la célébration" plutôt que
+"l'événement d'origine commémoré"), le résultat reste imprévisible —
+à vérifier manuellement plutôt qu'une garantie automatique.
+
+Nouveau filtre **"Mois en cours seulement"** dans la barre d'outils de
+l'onglet Articles (case grisée si aucune édition n'a jamais été
+enregistrée) — garde l'usage rapide de l'ancien écran sans sa limite.
+
+### Détection de basculements narratifs
+
+Nouvel outil `detect_basculements_narratifs.py` (lecture seule) :
+repère, parmi les articles déjà publiés, ceux qui marquent un vrai
+basculement dans la trajectoire du scénario (aggravation, amélioration,
+déblocage, blocage, émergence de crise) — sur le CHAPO seul (pas le
+corps complet), un seul appel LLM par scénario. Ne crée jamais rien
+automatiquement : c'est un outil de repérage, à combiner ensuite avec
+l'action "Promouvoir en événement" ci-dessus si un candidat mérite de
+devenir un événement custom.
+
+**Fiabilité observée** (vérifiée manuellement contre le texte intégral
+de plusieurs candidats) : la SÉLECTION de l'article est fiable, mais la
+CATÉGORIE (`type_bascule`) peut se tromper sur des cas où le chapo
+suggère une tonalité différente du contenu réel — à lire la
+justification et si besoin l'article complet avant de décider, jamais
+se fier à l'étiquette seule.
+
+**Intégration GUI (onglet Articles)** :
+- Case **"Basculement narratif détecté"** dans les filtres — grisée
+  tant qu'aucune détection n'a jamais été lancée.
+- Bouton **"Détecter les basculements narratifs"** — relance le script
+  à la demande (coûte de vrais appels LLM, jusqu'à plusieurs minutes
+  sur tout le corpus) ; limité au scénario sélectionné dans le filtre
+  si un l'est, sinon tout le corpus.
+- Ligne de statut affichant le nombre de candidats en cache et la date
+  de la dernière génération.
+- Dans le panneau de détail, un encart signale si l'article sélectionné
+  est un candidat (type + justification), avec le rappel de la limite
+  ci-dessus.
+- Résultats mis en cache dans `state/basculements_narratifs.json`
+  (fusion par scénario — relancer sur un seul scénario ne fait jamais
+  disparaître les résultats des autres) — le GUI ne relance jamais le
+  script tout seul, uniquement sur clic explicite du bouton.
+
+### Onglet Articles — deux compléments d'ergonomie
+
+- La fiche de détail se ferme désormais automatiquement au changement
+  de filtre, ou au clic n'importe où en dehors du tableau et du
+  panneau.
+- Nouveau bouton **"Ouvrir dans Obsidian"** dans le panneau de détail —
+  ouvre l'article directement dans Obsidian (nécessite qu'Obsidian soit
+  installé sur la machine).
+
+### Fichiers touchés (session du 5-6 septembre)
+
+Nouveaux : `audit_sujets.py`, `editer_sujets.py`,
+`audit_inventaire_articles.py`, `detect_evenements_cites_retroactif.py`
+(abandonné, gardé disponible), `debug_test_evenement_central.py`,
+`detect_basculements_narratifs.py`. Modifiés : `loader.py`,
+`snapshot.py`, `api.py`, `inject_custom_events.py`, `app.py`, `app.js`,
+`index.html`.
+
+**Testé en conditions réelles par David les 5 et 6 septembre** : audit
+par sujet (occurrence retrouvée, suppression, modification de date),
+onglet Articles de bout en bout (filtres, tri, panneau, actions,
+promotion en événement en dry-run et en écriture réelle, détection de
+basculements), 2 forçages successifs sur le même événement (accumulation
+`developpements` confirmée), correctif de datation validé sur le cas
+contemporain.
+
+---
+
+## 2septies. GUI Entités/Instances/Événements/Signaux + Résumés par scénario (7 septembre 2026)
+
+Deux chantiers demandés par David dans la même session. Le premier
+ajoute trois nouveaux onglets top-level sur le gabarit de l'onglet
+Articles (§2sexies) — table filtrable/triable/paginée + panneau de
+détail au clic. Le second ajoute un quatrième onglet, de gabarit
+différent, qui génère du contenu par IA plutôt que de simplement lire
+le vault.
+
+### Onglet Instances
+
+Inventaire complet des instances (déclinaisons d'entités archétypes
+dans chaque scénario), lu depuis le dossier plat `instances/` (un
+fichier par instance, pas de sous-dossier par scénario). Nouveau
+script `audit_inventaire_instances.py` (lecture seule, `--scenario`/
+`--detail`/`--md`/`--csv`/`--json`) : résout le champ `entite` de
+chaque instance vers l'entité archétype parente
+(`entites/{slug}.md`), avec mise en cache mémoire (un seul parsing par
+archétype même partagé par plusieurs instances). Dérive aussi un
+champ `transnationale` (booléen) depuis `localisation.zone` vide/null.
+
+**Filtres** : scénario, type dans le scénario, trajectoire,
+transnationales seulement, clandestines seulement, recherche libre
+(nom/rôle).
+
+**Panneau de détail** : rôle dans le scénario, impact local/
+systémique, trajectoire, période (année début/fin), zone, et
+l'**entité archétype parente** — un avertissement ⚠ s'affiche à la
+place du nom si le fichier archétype est introuvable (supprimé/
+renommé). Bouton "Ouvrir dans Obsidian".
+
+Bouton "Générer le rapport Markdown" : écrit
+`documentation/inventaire_instances.md` (route `POST
+/api/instances/inventaire`). Route de lecture : `GET
+/api/instances/liste`.
+
+**Testé en conditions réelles sur tout le vault (7 septembre)** : 758
+instances, 0 fichier illisible, 0 entité parente introuvable, 275
+transnationales, 42 clandestines.
+
+### Onglet Événements (event_instances)
+
+Même principe pour les déclinaisons d'événements archétypes
+(`event_instances/`). `audit_inventaire_event_instances.py` résout le
+champ `archetype` vers `evenements/{slug}.md`.
+
+**Filtres** : scénario, portée, type d'événement, marqués
+"impossible" seulement, recherche par nom.
+
+**Panneau de détail** : description (section `description` du
+frontmatter), l'archétype événementiel parent (même logique ⚠ si
+introuvable), portée, date, origine (custom vs canonique),
+localisation si présente. Bouton Obsidian. Routes : `GET
+/api/event_instances/liste` + `POST /api/event_instances/inventaire`.
+
+**Bug de données trouvé en le testant sur le vault réel** : 2 fichiers
+`evenements/*.md` (`incident_passage_arctique.md`,
+`helios_bse_active_le_protocole_ombre_les_coupures_.md`) avaient un
+`name:` contenant un `:` non échappé dans leur frontmatter, cassant
+tout son parsing YAML (`mapping values are not allowed here`). Repérés
+via l'indicateur `⚠ Archétype événementiel parent introuvable` du
+script (initialement à 5, dont 4 venant du même fichier cassé réutilisé
+par 4 scénarios). Un scan élargi ponctuel
+(`scan_frontmatter_casse.py`, 1455 fichiers scannés dans les 5
+dossiers du chantier) a confirmé que ces 2 fichiers étaient les seuls
+cassés de tout le vault. Corrigés avec `fix_name_non_quote.py` (outil
+ponctuel, sauvegarde `.bak` automatique, ajoute uniquement des
+guillemets autour de la valeur `name:`).
+
+**Testé en conditions réelles** : 80 event_instances, 0 fichier
+illisible, 0 archétype introuvable après correction.
+
+### Onglet Signaux faibles
+
+Inventaire des signaux custom injectés (`signaux_custom/`).
+Structurellement différent des deux onglets précédents : **pas de
+champ `scenario` en frontmatter** — un même signal peut être rattaché
+à plusieurs scénarios à la fois. Le rattachement est extrait par
+`audit_inventaire_signaux.py` d'un bloc YAML imbriqué dans le CORPS
+Markdown du fichier, sous le titre `## Trajectoire injectée` (clé
+`signal_to_state[].scenarios`) — une section `## Impact chiffré`
+existe en plus sur certains signaux (deltas numériques), mais elle est
+optionnelle et n'est pas la source utilisée pour le rattachement aux
+scénarios. `README.md` du dossier explicitement exclu du scan (pas un
+fichier de données).
+
+**Filtres** : scénario, catégorie, statut, avec Impact chiffré
+seulement, recherche par slug.
+
+**Panneau de détail** : le descriptif (texte de la section "Idée
+source"), les variables cibles, les scénarios rattachés, et la
+**trajectoire complète** — pour chaque scénario concerné, l'évolution
+narrative, la date de bascule et l'événement clé, extraits de
+"Trajectoire injectée". Si le signal cible plusieurs variables (un
+signal a une entrée `signal_to_state` PAR variable cible, avec sa
+propre trajectoire narrative — comportement normal du pipeline
+d'injection, pas un doublon), chaque entrée est affichée séparément et
+numérotée. Routes : `GET /api/signaux/liste` + `POST
+/api/signaux/inventaire`.
+
+**Testé en conditions réelles** : 3 signaux (dossier peu peuplé), 0
+fichier illisible, 0 incohérence entre nombre d'entrées de trajectoire
+et nombre de variables cibles déclarées.
+
+### Panneaux redimensionnables (Articles/Instances/Événements/Signaux)
+
+Les 4 panneaux de détail partagent désormais une poignée de
+glisser-déposer entre le tableau et le panneau, pour ajuster sa
+largeur (bornes 280-900px, double-clic pour revenir à la largeur par
+défaut). Chaque onglet mémorise sa propre largeur indépendamment des
+autres (une clé `localStorage` par onglet). Mécanisme généralisé dans
+une seule fonction JS (`initPanelResizer()`) plutôt que dupliqué —
+même principe que le redimensionnement déjà existant sur le panneau
+Rédaction.
+
+### Onglet Résumés par scénario
+
+Contrairement aux 3 onglets ci-dessus (lecture seule du vault), celui-
+ci **génère du contenu par IA** : un résumé en prose (2-3 paragraphes)
+des principaux acteurs et événements de chaque scénario, à raison d'un
+appel LLM par scénario.
+
+**Sélection des éléments "principaux"** (déterministe, sans LLM) :
+`generate_resume_scenarios.py` réutilise directement les fonctions de
+scan des deux scripts d'audit ci-dessus — top 15 instances par score
+d'impact (`impact_local` + `impact_systemique_global`), top 10
+event_instances par portée (globale > continentale > régionale >
+locale, puisque les event_instances n'ont pas de score d'impact
+numérique). Le prompt envoyé au LLM contient cette liste curatée
+(nom, type, rôle/description tronqué à 200 caractères) — jamais le
+texte brut d'articles.
+
+**Génération** : `call_llm(task_tier="creative_souple")` (voir
+`llm_client.py`, §1) — le tier prévu pour la rédaction libre sans
+contrainte d'identité tierce, par opposition au tier `strict` utilisé
+ailleurs dans le pipeline pour la fidélité à une voix (journaliste,
+personnage).
+
+**GUI** : une carte par scénario (pas de table+panneau comme les
+autres onglets de ce chantier, une seule valeur par scénario). Chaque
+carte affiche le résumé actuel, la date de génération, le nombre
+d'instances/événements considérés, et un bouton "Générer"/
+"Régénérer" qui se désactive pendant sa propre génération. Bouton
+global "Régénérer tous les scénarios" en haut de l'onglet. Cache
+persistant `state/resume_scenarios.json`, fusionné par scénario (une
+régénération limitée à un scénario ne fait jamais disparaître les
+résultats des autres) — mécanique identique à celle du cache des
+basculements narratifs (§2sexies). Routes : `GET
+/api/scenarios/resume` (lecture cache) + `POST
+/api/scenarios/generer_resume` (timeout 600s).
+
+⚠ **Point de vigilance** : contrairement aux 3 onglets d'audit
+ci-dessus (gratuits, instantanés), cet onglet coûte de vrais appels
+LLM — jusqu'à 6 par régénération complète, potentiellement plusieurs
+minutes. Rien n'est jamais généré automatiquement, uniquement sur clic
+explicite.
+
+**Testé en conditions réelles par David sur `eco_communalism`** :
+résumé jugé très solide — cohérent avec le lore réel du scénario, bons
+acteurs et événements mentionnés, longueur cible respectée.
+
+### Fichiers touchés (session du 7 septembre)
+
+Nouveaux : `audit_inventaire_instances.py`,
+`audit_inventaire_event_instances.py`, `audit_inventaire_signaux.py`,
+`generate_resume_scenarios.py`, `scan_frontmatter_casse.py` (outil
+ponctuel), `fix_name_non_quote.py` (outil ponctuel). Modifiés :
+`app.py`, `app.js`, `index.html`.
+
+---
+
 ## 3. Pipeline entités & événements custom
 
 ### Chantier "dimension temporelle pour la génération automatique" (13 août 2026)
@@ -909,6 +1509,15 @@ python3 inject_custom_events.py --mode auto --n 3 --scenario breakdown
 python3 inject_custom_events.py --dry-run
 ```
 `main()` écrit séparément dans `processed.yaml` (statut `partial` si succès partiel) et `needs_review.yaml`.
+
+**Champ `edition_active: true` (2 septembre 2026)** — voir §2quinquies
+pour le détail : écrase `date`/`date_label` par le mois de parution
+actif, pour capturer un sujet de l'édition en cours sans laisser le LLM
+deviner un mois.
+
+**Mode `--idea` (3 septembre 2026)** — voir §2quinquies, section
+"Promouvoir un événement" : injecte une idée unique fournie en JSON
+sans passer par `queue.yaml`, pour l'écran GUI du même nom.
 
 **Chantier cohérence événements custom (12 août 2026)** — diagnostic préalable : contrairement aux instances (`annee_debut`/`annee_fin`), un événement custom n'a qu'un seul champ `date` (année unique) — pas de bande de traçabilité graduée `ancrage_reel` comme sur les instances, et aucun problème de concentration observé sur le vault réel (53 événements, pic max 11% sur une seule année, contre 22% sur 2041 pour les instances avant correctif). Décision : pas besoin de reconstruire pour les événements le mécanisme lourd des instances (bande graduée + anti-recyclage par shingle-matching) — un enrichissement de contexte suffit, cohérent avec la pratique du projet de ne pas construire de garde-fou mécanique pour un problème non observé (voir `--min-shingle` en dur, Partie 2 du backlog).
 
@@ -1999,6 +2608,9 @@ lire ici, ce n'est pas un manque du parseur.
 | `/api/stream/<run_id>` | GET | SSE — flux de logs en direct du run |
 | `/api/stop/<run_id>` | POST | Arrête un run en cours |
 | `/api/status` | GET | État global (runs actifs, etc.) |
+| `/api/edition/active` | GET | Mois de parution actif (`state/editions.json`, lecture directe). Ajouté le 2 septembre 2026 (§2quinquies) — alimente le bandeau GUI sur "Générer un article", "Générer une série d'articles" (étendu le 3 septembre) et "Mois de parution du journal" |
+| `/api/edition/articles` | GET | Articles du mois de parution + `custom_events` déjà injectés, pour un scénario donné (`audit_sujets_edition.py --json` en sous-processus). Ajouté le 3 septembre 2026 (§2quinquies) — alimente l'écran "Promouvoir un événement" |
+| `/api/edition/injecter_evenement` | POST | Injecte une idée d'événement custom fournie directement (sans `queue.yaml`), via `inject_custom_events.py --idea --json`. Timeout 240s. Ajouté le 3 septembre 2026 (§2quinquies) |
 
 ### Onglet Carte — workflow détaillé
 

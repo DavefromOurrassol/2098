@@ -72,6 +72,11 @@ function buildNav() {
   nav.appendChild(makeNavItem('carte', '🗺️', 'Carte', null, 'tab'));
   nav.appendChild(makeNavItem('chantiers', '🚧', 'Chantiers', null, 'tab'));
   nav.appendChild(makeNavItem('redaction', '📰', 'Rédaction', null, 'tab'));
+  nav.appendChild(makeNavItem('articles', '🗂️', 'Articles', null, 'tab'));
+  nav.appendChild(makeNavItem('instances', '🏛️', 'Instances', null, 'tab'));
+  nav.appendChild(makeNavItem('event_instances', '⚡', 'Événements', null, 'tab'));
+  nav.appendChild(makeNavItem('signaux', '📡', 'Signaux faibles', null, 'tab'));
+  nav.appendChild(makeNavItem('resumes', '📝', 'Résumés par scénario', null, 'tab'));
   nav.appendChild(makeDivider());
 
   // Sections scripts
@@ -83,6 +88,17 @@ function buildNav() {
         const badge = s.badge || null;
         nav.appendChild(makeNavItem(s.id, s.icon, s.label, badge, 'script', false, s.gui_verified));
       });
+    // "Audit par sujet" (5 septembre 2026, chantier "Suite narrative des
+    // événements", point B) : onglet custom (pas un script
+    // scripts_config.json déclaratif) mais rangé visuellement dans cette
+    // section à la demande de David -- même famille fonctionnelle que
+    // create_entities_and_instances/inject_custom_events. L'ancien onglet
+    // "Promouvoir un événement" qui vivait ici (3 septembre) a été retiré
+    // le 6 septembre : action équivalente désormais dans l'onglet
+    // Articles, sans la limite de mois de parution actif.
+    if (section.key === 'entites_creation') {
+      nav.appendChild(makeNavItem('sujets', '🧭', 'Audit par sujet', null, 'tab'));
+    }
     nav.appendChild(makeDivider());
   });
 
@@ -278,7 +294,35 @@ async function saveLLM() {
 
 // ── Navigation onglets ────────────────────────────
 
+// ── Bandeau global "Mois de parution" (7 septembre 2026) ──────────────
+// Visible sur TOUTE vue (appelé depuis showTab() ET showScript() ci-
+// dessous) -- contrairement aux bandeaux locaux déjà existants (écran
+// "Générer un article", onglet Sujets), qui ne s'affichent que dans leur
+// propre onglet. Un seul fetch léger à chaque navigation : pas de
+// mécanisme de mise à jour en temps réel, mais toujours à jour au
+// prochain clic (y compris juste après un changement via l'écran
+// "Mois de parution du journal", qui est lui-même accessible par
+// showScript()).
+async function chargerMoisParutionBanner() {
+  const banner = document.getElementById('mois-parution-banner');
+  if (!banner) return;
+  try {
+    const res = await fetch('/api/edition/active');
+    const data = await res.json();
+    const active = data.active || null;
+    if (active) {
+      const numero = active.numero != null ? ` (n°${active.numero})` : '';
+      banner.textContent = `📅 Mois de parution : ${MOIS_FR_JS[active.mois]} ${active.annee}${numero}`;
+    } else {
+      banner.textContent = '📅 Aucun mois de parution défini pour l\'instant.';
+    }
+  } catch (e) {
+    banner.textContent = '📅 Mois de parution : impossible à charger.';
+  }
+}
+
 function showTab(tab) {
+  chargerMoisParutionBanner();
   State.activeTab = tab;
   State.activeScriptId = null;
   setActiveNav(tab);
@@ -293,6 +337,12 @@ function showTab(tab) {
     if (tab === 'carte')     loadCarte();
     if (tab === 'chantiers') loadChantiers();
     if (tab === 'redaction') loadRedaction();
+    if (tab === 'articles') loadArticles();
+    if (tab === 'instances') loadInstances();
+    if (tab === 'event_instances') loadEventInstances();
+    if (tab === 'signaux') loadSignaux();
+    if (tab === 'resumes') loadResumes();
+    if (tab === 'sujets')    loadSujets();
     if (tab === 'review')    loadReview();
     if (tab === 'config')    loadConfigForm();
   }
@@ -301,6 +351,7 @@ function showTab(tab) {
 // ── Vue script ────────────────────────────────────
 
 async function showScript(scriptId) {
+  chargerMoisParutionBanner();
   State.activeTab = null;
   State.activeScriptId = scriptId;
   setActiveNav(scriptId);
@@ -327,6 +378,62 @@ function renderFormHeader(script) {
 async function renderFormBody(script) {
   const body = document.getElementById('form-body');
   body.innerHTML = '';
+
+  // Bandeau "Mois de parution" (2 septembre 2026, chantier "Éditions
+  // datées") -- sur "Générer un article" (suit toujours le mois de
+  // parution actif en lecture seule) ET sur "Mois de parution du
+  // journal" (utile pour voir le mois actuel avant de le changer).
+  // Informationnel seulement, pas un avertissement -- classe distincte
+  // de requires-warning pour ne pas laisser croire à un problème.
+  // Terminologie alignée avec David le 2 septembre 2026 ("édition" jugé
+  // ambigu, lu comme "modifier" plutôt que "numéro du journal").
+  // Étendu à "Générer une série d'articles" le 3 septembre 2026 (demande
+  // de David après test réel : seul écran de génération à ne pas montrer
+  // le mois avant lancement) -- même lecture seule que "generate", le
+  // formulaire série retombe sur config_series.yaml puis sur ce mois actif.
+  if (script.id === 'generate' || script.id === 'generate_series' || script.id === 'definir_edition') {
+    const infoBanner = document.createElement('div');
+    infoBanner.className = 'edition-active-banner';
+    infoBanner.style.cssText =
+      'margin: 8px 0 16px; padding: 8px 12px; border-radius: 6px; ' +
+      'background: #eef4fb; border: 1px solid #cfe0f0; font-size: 0.9em; color: #34495e;';
+    infoBanner.textContent = 'Mois de parution : chargement...';
+    body.appendChild(infoBanner);
+
+    fetch('/api/edition/active')
+      .then(res => res.json())
+      .then(data => {
+        const MOIS_FR = [null, 'janvier', 'février', 'mars', 'avril', 'mai', 'juin',
+                         'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
+        if (data.active) {
+          const { annee, mois, numero } = data.active;
+          let suffixe;
+          if (script.id === 'generate') {
+            suffixe = ' — cet article suivra ce mois de parution automatiquement.';
+          } else if (script.id === 'generate_series') {
+            suffixe = ' — cette série suivra ce mois sauf si annee_edition/mois_edition ' +
+              'sont renseignés dans config_series.yaml.';
+          } else {
+            suffixe = ' — utilisez le formulaire ci-dessous pour le changer.';
+          }
+          infoBanner.textContent = `📅 Mois de parution : ${MOIS_FR[mois]} ${annee} (n°${numero})${suffixe}`;
+        } else {
+          if (script.id === 'generate') {
+            infoBanner.textContent = '📅 Aucun mois de parution défini pour l\'instant — cet article suivra le ' +
+              'comportement historique (année 2098, date tirée sur toute l\'année). Configurez-en un ci-dessous.';
+          } else if (script.id === 'generate_series') {
+            infoBanner.textContent = '📅 Aucun mois de parution défini pour l\'instant — le lancement échouera ' +
+              'sauf si annee_edition/mois_edition sont renseignés dans config_series.yaml. Configurez un mois ' +
+              'de parution via l\'écran dédié, ou renseignez ces champs.';
+          } else {
+            infoBanner.textContent = '📅 Aucun mois de parution défini pour l\'instant — configurez-en un ci-dessous.';
+          }
+        }
+      })
+      .catch(() => {
+        infoBanner.textContent = '📅 Mois de parution : impossible à charger.';
+      });
+  }
 
   // Avertissement requires
   if (script.requires && script.requires.length > 0) {
@@ -4755,6 +4862,117 @@ async function chantiersAppliquerTout() {
   });
 })();
 
+// ── Redimensionnement du panneau de détail Rédaction (7 septembre 2026) ──
+// Même mécanisme que initSidebarResizer() ci-dessus, mais le panneau est
+// à DROITE de sa poignée (pas à gauche comme #sidebar) -- glisser vers la
+// gauche doit donc AGRANDIR le panneau, pas le rétrécir. On calcule la
+// largeur à partir du bord droit du panneau (fixe pendant le drag) plutôt
+// que du bord gauche (qui bouge), plus simple qu'inverser le signe partout.
+(function initRedactionResizer() {
+  const panel   = document.querySelector('.redaction-sidebar');
+  const resizer = document.getElementById('redaction-resizer');
+  if (!panel || !resizer) return;
+
+  const STORAGE_KEY = 'ourrassol_redaction_panel_width';
+  const MIN_WIDTH = 280;
+  const MAX_WIDTH = 900;
+
+  const saved = localStorage.getItem(STORAGE_KEY);
+  if (saved) {
+    const largeur = parseInt(saved, 10);
+    if (largeur >= MIN_WIDTH && largeur <= MAX_WIDTH) {
+      panel.style.width = `${largeur}px`;
+    }
+  }
+
+  let dragging = false;
+
+  resizer.addEventListener('mousedown', (e) => {
+    dragging = true;
+    resizer.classList.add('dragging');
+    document.body.classList.add('redaction-resizing');
+    e.preventDefault();
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if (!dragging) return;
+    const rect = panel.getBoundingClientRect();
+    let largeur = rect.right - e.clientX;
+    largeur = Math.max(MIN_WIDTH, Math.min(MAX_WIDTH, largeur));
+    panel.style.width = `${largeur}px`;
+  });
+
+  document.addEventListener('mouseup', () => {
+    if (!dragging) return;
+    dragging = false;
+    resizer.classList.remove('dragging');
+    document.body.classList.remove('redaction-resizing');
+    localStorage.setItem(STORAGE_KEY, parseInt(panel.style.width, 10));
+  });
+
+  resizer.addEventListener('dblclick', () => {
+    panel.style.width = '';
+    localStorage.removeItem(STORAGE_KEY);
+  });
+})();
+
+// ── Redimensionnement des panneaux Articles/Instances/Événements
+// (7 septembre 2026) -- fonction générique réutilisée sur les 3 onglets
+// qui partagent le gabarit .articles-sidebar (même mécanisme que
+// initRedactionResizer ci-dessus : panneau à droite de sa poignée,
+// largeur calculée depuis le bord droit fixe, une clé localStorage
+// distincte par onglet pour que chacun garde sa propre largeur).
+function initPanelResizer(panelSelector, resizerId, storageKey) {
+  const panel   = document.querySelector(panelSelector);
+  const resizer = document.getElementById(resizerId);
+  if (!panel || !resizer) return;
+
+  const MIN_WIDTH = 280;
+  const MAX_WIDTH = 900;
+
+  const saved = localStorage.getItem(storageKey);
+  if (saved) {
+    const largeur = parseInt(saved, 10);
+    if (largeur >= MIN_WIDTH && largeur <= MAX_WIDTH) {
+      panel.style.width = `${largeur}px`;
+    }
+  }
+
+  let dragging = false;
+
+  resizer.addEventListener('mousedown', (e) => {
+    dragging = true;
+    resizer.classList.add('dragging');
+    document.body.classList.add('panel-resizing');
+    e.preventDefault();
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if (!dragging) return;
+    const rect = panel.getBoundingClientRect();
+    let largeur = rect.right - e.clientX;
+    largeur = Math.max(MIN_WIDTH, Math.min(MAX_WIDTH, largeur));
+    panel.style.width = `${largeur}px`;
+  });
+
+  document.addEventListener('mouseup', () => {
+    if (!dragging) return;
+    dragging = false;
+    resizer.classList.remove('dragging');
+    document.body.classList.remove('panel-resizing');
+    localStorage.setItem(storageKey, parseInt(panel.style.width, 10));
+  });
+
+  resizer.addEventListener('dblclick', () => {
+    panel.style.width = '';
+    localStorage.removeItem(storageKey);
+  });
+}
+
+initPanelResizer('#tab-articles .articles-sidebar', 'articles-resizer', 'ourrassol_articles_panel_width');
+initPanelResizer('#tab-instances .articles-sidebar', 'instances-resizer', 'ourrassol_instances_panel_width');
+initPanelResizer('#tab-event_instances .articles-sidebar', 'event-instances-resizer', 'ourrassol_event_instances_panel_width');
+
 /* ══════════════════════════════════════════════════
    ONGLET RÉDACTION — journalistes & orateurs
    (point 3, 30 août 2026 — voir BACKLOG_ACTIF.md)
@@ -4841,15 +5059,31 @@ async function refreshRedaction() {
   if (tonStatus) params.set('ton_status', tonStatus);
 
   const tbody = document.getElementById('redaction-tbody');
-  tbody.innerHTML = '<tr><td colspan="8" class="redaction-empty">Chargement…</td></tr>';
+  tbody.innerHTML = '<tr><td colspan="9" class="redaction-empty">Chargement…</td></tr>';
 
   try {
     const res = await fetch(`/api/redaction/personnes?${params.toString()}`);
     const data = await res.json();
     RedactionState.all = data.personnes || [];
   } catch (e) {
-    tbody.innerHTML = `<tr><td colspan="8" class="redaction-empty">Erreur réseau : ${e.message}</td></tr>`;
+    tbody.innerHTML = `<tr><td colspan="9" class="redaction-empty">Erreur réseau : ${e.message}</td></tr>`;
     return;
+  }
+
+  // Nombre d'articles par personne (7 septembre 2026, chantier "Rédaction :
+  // détail journaliste" -- étendu au tableau pour filtrage/tri). Un seul
+  // fetch de tous les articles (réutilise ArticlesState.all si déjà chargé
+  // par l'onglet Articles cette session), puis comptage local par
+  // journaliste_slug normalisé -- pas un appel réseau par personne.
+  await _redactionChargerArticlesSiBesoin();
+  const comptes = new Map();
+  for (const a of (ArticlesState.all || [])) {
+    if (!a.journaliste_slug) continue;
+    const cle = _redactionNormaliser(a.journaliste_slug);
+    comptes.set(cle, (comptes.get(cle) || 0) + 1);
+  }
+  for (const p of RedactionState.all) {
+    p.nb_articles = comptes.get(_redactionNormaliser(p.nom)) || 0;
   }
 
   // Chaque fetch remplace RedactionState.all par de NOUVEAUX objets --
@@ -4900,7 +5134,7 @@ function renderRedactionTable() {
   document.getElementById('redaction-count').textContent = `${filtered.length} personne(s)`;
 
   if (filtered.length === 0) {
-    tbody.innerHTML = '<tr><td colspan="8" class="redaction-empty">Aucun résultat pour ces filtres.</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="9" class="redaction-empty">Aucun résultat pour ces filtres.</td></tr>';
     document.getElementById('redaction-range').textContent = '';
     document.getElementById('redaction-page-label').textContent = '';
     document.getElementById('redaction-prev').disabled = true;
@@ -4921,6 +5155,7 @@ function renderRedactionTable() {
       <td title="${_redactionEsc(p.nom)}">${_redactionEsc(p.nom)}</td>
       <td>${p.role === 'orateur' ? 'Orateur' : 'Journaliste'}</td>
       <td>${p.seniorite ?? ''}</td>
+      <td>${p.nb_articles ?? 0}</td>
       <td class="${p.ton_personnel ? 'redaction-ton-rempli' : 'redaction-ton-vide'}">
         ${p.ton_personnel ? 'Rempli' : 'Vide'}
       </td>
@@ -4945,6 +5180,51 @@ function selectRedactionRow(personne) {
   RedactionState.selected = personne;
   renderRedactionTable();
   renderRedactionPanel();
+}
+
+// Rapprochement journaliste/orateur <-> articles (7 septembre 2026,
+// chantier "Rédaction : détail journaliste"). Plutôt que de répliquer
+// côté client la formule exacte de slugification utilisée à la
+// génération de l'article (journaliste_slug, écrit côté backend --
+// voir prompt_builder.py), on normalise les deux côtés (nom curaté ET
+// journaliste_slug de l'article) vers une forme comparable : accents
+// retirés, minuscule, tout séparateur (espace/underscore/tiret)
+// uniformisé. Plus robuste qu'une dépendance à une formule exacte
+// partagée entre deux fichiers différents.
+function _redactionNormaliser(s) {
+  return (s || '')
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim();
+}
+
+// Charge ArticlesState.all si pas déjà fait cette session (réutilisé par
+// le comptage par personne dans refreshRedaction() ET par le détail
+// article-par-article du panel ci-dessous -- un seul point de fetch).
+async function _redactionChargerArticlesSiBesoin() {
+  if (ArticlesState.all && ArticlesState.all.length) return;
+  try {
+    const res = await fetch('/api/articles/liste');
+    const data = await res.json();
+    if (res.ok && !data.error) {
+      ArticlesState.all = (data.articles || []).map(a => ({
+        ...a,
+        date_tri: a.annee != null ? (a.annee * 10000 + a.mois * 100 + a.jour) : -1,
+      }));
+    }
+  } catch (e) { /* ArticlesState.all reste [] -- géré par les appelants */ }
+}
+
+// Récupère les articles d'une personne. Réutilise ArticlesState.all
+// (déjà chargé si l'onglet Articles a été visité cette session, ou par
+// refreshRedaction() ci-dessus) -- sinon fetch une fois.
+async function _redactionArticlesPourPersonne(p) {
+  await _redactionChargerArticlesSiBesoin();
+  const cible = _redactionNormaliser(p.nom);
+  return (ArticlesState.all || []).filter(
+    a => a.journaliste_slug && _redactionNormaliser(a.journaliste_slug) === cible
+  );
 }
 
 function renderRedactionPanel() {
@@ -4992,6 +5272,11 @@ function renderRedactionPanel() {
       <div class="redaction-panel-list">${_redactionEsc(p.zone_ton) || '(non renseigné)'}</div>
     </div>
 
+    <div class="redaction-panel-section">
+      <label>Articles</label>
+      <div id="redaction-articles-box" class="redaction-panel-list">Chargement…</div>
+    </div>
+
     ${thematiquesSection}
 
     <div class="redaction-panel-section">
@@ -5027,6 +5312,28 @@ function renderRedactionPanel() {
   if (p.role === 'journaliste') {
     renderRedactionThematiquesBox(p);
   }
+
+  _redactionArticlesPourPersonne(p).then(articles => {
+    if (RedactionState.selected !== p) return; // sélection changée entre-temps
+    const box = document.getElementById('redaction-articles-box');
+    if (!box) return;
+    if (!articles.length) {
+      box.innerHTML = 'Aucun article trouvé.';
+      return;
+    }
+    box.innerHTML = `<div style="margin-bottom:6px">${articles.length} article(s)</div>` +
+      articles.map(a => `
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:4px 0;border-bottom:1px solid #eee">
+          <span title="${_redactionEsc(a.slug)}">${a.annee != null ? `${a.jour} ${MOIS_FR_JS[a.mois]} ${a.annee}` : '(date non reconnue)'} — ${_redactionEsc(a.slug)}</span>
+          <button class="redaction-btn-obsidian-article" data-key="${_redactionEsc(_articlesKey(a))}" style="background:#5b4a9e;color:#fff;border:none;border-radius:4px;padding:3px 8px;cursor:pointer;font-size:11px">Obsidian</button>
+        </div>
+      `).join('');
+    box.querySelectorAll('.redaction-btn-obsidian-article').forEach(btn => {
+      const key = btn.dataset.key;
+      const article = articles.find(a => _articlesKey(a) === key);
+      btn.addEventListener('click', () => _articlesOuvrirDansObsidian(article));
+    });
+  });
 
   document.getElementById('redaction-seniorite-select').addEventListener('change', (e) => {
     submitRedactionChamps(p, { seniorite: parseInt(e.target.value, 10) }, 'redaction-seniorite-msg');
@@ -5175,5 +5482,2145 @@ async function submitRedactionTonPersonnel(personne, getMode, textarea) {
     msgEl.textContent = `Erreur réseau : ${e.message}`;
   } finally {
     submitBtn.disabled = false;
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// Constantes partagées -- ex-écran "Injecter un événement depuis un
+// article" (3 septembre 2026), retiré le 6 septembre au profit de
+// l'action "Promouvoir en événement" dans l'onglet Articles (couvre le
+// même besoin sans la limite de mois : voir plus bas, section Articles).
+// Les deux constantes ci-dessous restent utilisées par ce nouveau point
+// d'entrée.
+// ═══════════════════════════════════════════════════════════════════════
+
+const MOIS_FR_JS = [null, 'janvier', 'février', 'mars', 'avril', 'mai', 'juin',
+                     'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
+
+// Même liste que VALID_VARS dans inject_custom_events.py -- dupliquée ici
+// faute de route dédiée (liste stable, même pattern que les choix de
+// scénarios en dur ailleurs dans scripts_config.json).
+const INJEV_VALID_VARS = [
+  'systeme_economique_redistribution', 'gouvernance_institutions',
+  'geopolitique_conflits', 'valeurs_culture_tempo_sociale',
+  'organisation_territoires', 'sante_biotechnologies',
+  'frontieres_du_systeme', 'technologie_information',
+  'climat_environnement_global', 'energie_ressources_critiques',
+  'demographie_mobilite_humaine', 'systemes_productifs_travail',
+];
+
+// ── Audit & édition de sujets (5 septembre 2026, chantier "Suite
+// narrative des événements", point B) ────────────────────────────────
+// classes CSS sujets-* dédiées, voir index.html.
+//
+// Flux : choisir un scénario + type (événement/entité) + sujet ->
+// GET /api/sujets/audit liste toutes les occurrences (toutes dates,
+// pas seulement le mois de parution actif), avec signal si postérieur
+// au mois en cours -> cliquer une occurrence ouvre le panneau avec
+// deux actions destructives, TOUJOURS en deux temps : un premier appel
+// sans "confirmer" affiche un APERÇU (rien n'est écrit), un second
+// appel avec "confirmer": true après clic explicite exécute réellement
+// (POST /api/sujets/supprimer_article ou /api/sujets/modifier_date,
+// qui appellent editer_sujets.py --json avec/sans --apply selon le cas).
+// Jamais de confirmer:true sur le tout premier appel d'une action.
+
+const SujetsState = {
+  scenariosWired: false,
+  scenario: '',
+  type: 'evenement',
+  slug: '',
+  evenementsCatalogue: [],
+  occurrences: [],
+  editionActive: null,
+  selected: null,       // occurrence actuellement sélectionnée (objet)
+  pendingAction: null,  // 'supprimer' | 'modifier_date' | null -- aperçu en attente de confirmation
+  pendingApercu: null,  // dernier aperçu reçu du serveur (payload complet)
+};
+
+function _sujetsEsc(s) {
+  return String(s == null ? '' : s)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+function loadSujets() {
+  if (!SujetsState.scenariosWired) {
+    const selScenario = document.getElementById('sujets-scenario');
+    const selType = document.getElementById('sujets-type');
+    const scenarios = State.config?.scenarios || [];
+    selScenario.innerHTML = '<option value="">— choisir —</option>' +
+      scenarios.map(s => `<option value="${s}">${s}</option>`).join('');
+
+    selScenario.addEventListener('change', () => {
+      SujetsState.scenario = selScenario.value;
+      SujetsState.slug = '';
+      SujetsState.selected = null;
+      refreshSujetsCatalogue();
+    });
+    selType.addEventListener('change', () => {
+      SujetsState.type = selType.value;
+      SujetsState.slug = '';
+      SujetsState.selected = null;
+      refreshSujetsCatalogue();
+    });
+
+    document.getElementById('sujets-slug').addEventListener('change', (e) => {
+      SujetsState.slug = e.target.value;
+      SujetsState.selected = null;
+      refreshSujetsOccurrences();
+    });
+    document.getElementById('sujets-slug-manuel').addEventListener('input', (e) => {
+      SujetsState.slug = e.target.value.trim();
+    });
+    document.getElementById('sujets-slug-manuel').addEventListener('change', () => {
+      SujetsState.selected = null;
+      refreshSujetsOccurrences();
+    });
+
+    SujetsState.scenariosWired = true;
+  }
+  if (SujetsState.scenario) refreshSujetsCatalogue();
+}
+
+// Recharge le sélecteur de sujet quand le scénario ou le type change --
+// pour les événements, catalogue réel (audit_sujets.py --list-evenements) ;
+// pour les entités, aucun catalogue disponible (pas d'inventaire d'entités
+// exposé par ce chantier) -- champ texte libre à la place.
+async function refreshSujetsCatalogue() {
+  const selSlug = document.getElementById('sujets-slug');
+  const inputManuel = document.getElementById('sujets-slug-manuel');
+
+  if (!SujetsState.scenario) {
+    selSlug.style.display = '';
+    inputManuel.style.display = 'none';
+    selSlug.innerHTML = '<option value="">— choisir un scénario d\'abord —</option>';
+    document.getElementById('sujets-occurrences').innerHTML =
+      '<div class="sujets-panel-empty">Choisis un scénario, un type et un sujet pour voir ses occurrences.</div>';
+    renderSujetsPanel(null);
+    return;
+  }
+
+  if (SujetsState.type === 'entite') {
+    selSlug.style.display = 'none';
+    inputManuel.style.display = '';
+    inputManuel.value = '';
+    document.getElementById('sujets-occurrences').innerHTML =
+      '<div class="sujets-panel-empty">Tape le slug exact de l\'entité ci-dessus.</div>';
+    renderSujetsPanel(null);
+    return;
+  }
+
+  selSlug.style.display = '';
+  inputManuel.style.display = 'none';
+  selSlug.innerHTML = '<option value="">Chargement…</option>';
+
+  try {
+    const res = await fetch(`/api/sujets/evenements?scenario=${encodeURIComponent(SujetsState.scenario)}`);
+    const data = await res.json();
+    if (!res.ok || data.error) {
+      selSlug.innerHTML = `<option value="">Erreur : ${_sujetsEsc(data.error || res.statusText)}</option>`;
+      return;
+    }
+    SujetsState.evenementsCatalogue = data.evenements || [];
+  } catch (e) {
+    selSlug.innerHTML = `<option value="">Erreur réseau : ${_sujetsEsc(e.message)}</option>`;
+    return;
+  }
+
+  if (!SujetsState.evenementsCatalogue.length) {
+    selSlug.innerHTML = '<option value="">— aucun événement custom pour ce scénario —</option>';
+    document.getElementById('sujets-occurrences').innerHTML = '';
+    renderSujetsPanel(null);
+    return;
+  }
+
+  selSlug.innerHTML = '<option value="">— choisir —</option>' +
+    SujetsState.evenementsCatalogue.map(ev =>
+      `<option value="${_sujetsEsc(ev.slug)}">${_sujetsEsc(ev.date_label)} — ${_sujetsEsc(ev.nom)}</option>`
+    ).join('');
+  document.getElementById('sujets-occurrences').innerHTML =
+    '<div class="sujets-panel-empty">Choisis un événement ci-dessus.</div>';
+  renderSujetsPanel(null);
+}
+
+async function refreshSujetsOccurrences() {
+  const listEl = document.getElementById('sujets-occurrences');
+  const bannerEl = document.getElementById('sujets-banner');
+
+  if (!SujetsState.scenario || !SujetsState.type || !SujetsState.slug) {
+    listEl.innerHTML = '<div class="sujets-panel-empty">Choisis un scénario, un type et un sujet pour voir ses occurrences.</div>';
+    bannerEl.style.display = 'none';
+    renderSujetsPanel(null);
+    return;
+  }
+
+  listEl.innerHTML = '<div class="sujets-panel-empty">Chargement…</div>';
+  bannerEl.style.display = 'none';
+
+  try {
+    const url = `/api/sujets/audit?scenario=${encodeURIComponent(SujetsState.scenario)}` +
+                `&type=${encodeURIComponent(SujetsState.type)}&slug=${encodeURIComponent(SujetsState.slug)}`;
+    const res = await fetch(url);
+    const data = await res.json();
+    if (!res.ok || data.error) {
+      listEl.innerHTML = `<div class="sujets-panel-empty">Erreur : ${_sujetsEsc(data.error || res.statusText)}</div>`;
+      return;
+    }
+    SujetsState.occurrences = data.occurrences || [];
+    SujetsState.editionActive = data.edition_active || null;
+  } catch (e) {
+    listEl.innerHTML = `<div class="sujets-panel-empty">Erreur réseau : ${_sujetsEsc(e.message)}</div>`;
+    return;
+  }
+
+  if (SujetsState.editionActive) {
+    bannerEl.style.display = 'block';
+    bannerEl.textContent = `Mois de parution actif : ${MOIS_FR_JS[SujetsState.editionActive.mois]} ${SujetsState.editionActive.annee}`;
+  } else {
+    bannerEl.style.display = 'block';
+    bannerEl.textContent = 'Aucun mois de parution actif défini -- signal "postérieur" indisponible.';
+  }
+
+  renderSujetsOccurrences();
+}
+
+function renderSujetsOccurrences() {
+  const listEl = document.getElementById('sujets-occurrences');
+  if (!SujetsState.occurrences.length) {
+    const note = SujetsState.type === 'evenement'
+      ? `<div class="sujets-panel-empty">Aucune occurrence -- rappel : seuls les articles générés en mode Forcer sur cet événement depuis le 5 septembre 2026 apparaîtront ici. Un événement jamais forcé n'aura jamais d'entrée, même s'il est mentionné en passant ailleurs.</div>`
+      : `<div class="sujets-panel-empty">Aucune occurrence trouvée pour cette entité sur ce scénario.</div>`;
+    listEl.innerHTML = note;
+    return;
+  }
+
+  listEl.innerHTML = SujetsState.occurrences.map((o, i) => `
+    <div class="sujets-occurrence ${o.posterieur_edition_active ? 'posterieur' : ''}" data-idx="${i}">
+      <div><strong>${o.annee != null ? `${o.jour} ${MOIS_FR_JS[o.mois]} ${o.annee}` : '(date non reconnue)'}</strong>
+        — ${_sujetsEsc(o.titre)} <span style="color:#999">(${_sujetsEsc(o.thematique)})</span></div>
+      ${o.chapo ? `<div style="font-size:12px;color:#666;margin-top:4px">${_sujetsEsc(o.chapo)}</div>` : ''}
+      ${o.posterieur_edition_active ? '<div class="sujets-occurrence-flag">⚠ POSTÉRIEUR AU MOIS DE PARUTION ACTIF -- risque d\'incohérence temporelle</div>' : ''}
+      <div style="font-size:11px;color:#aaa;margin-top:4px">${_sujetsEsc(o.fichier)}</div>
+    </div>
+  `).join('');
+
+  listEl.querySelectorAll('.sujets-occurrence').forEach(card => {
+    card.addEventListener('click', () => {
+      const idx = parseInt(card.dataset.idx, 10);
+      SujetsState.selected = SujetsState.occurrences[idx];
+      SujetsState.pendingAction = null;
+      SujetsState.pendingApercu = null;
+      renderSujetsPanel(SujetsState.selected);
+    });
+  });
+}
+
+function renderSujetsPanel(occurrence) {
+  const panel = document.getElementById('sujets-panel');
+  if (!occurrence) {
+    panel.innerHTML = '<div class="sujets-panel-empty">Clique sur une occurrence pour la supprimer ou modifier sa date.</div>';
+    return;
+  }
+
+  panel.innerHTML = `
+    <div style="font-weight:600;margin-bottom:8px">${_sujetsEsc(occurrence.titre)}</div>
+    <div style="font-size:12px;color:#888;margin-bottom:12px">${_sujetsEsc(occurrence.fichier)}</div>
+    <button id="sujets-btn-supprimer" class="sujets-action-confirmer" style="background:#c0392b">Supprimer cet article</button>
+    <div style="margin-top:12px">
+      <label style="font-size:12px;color:#888">Nouvelle date (ex. "23 août 2098")</label><br>
+      <input type="text" id="sujets-nouvelle-date" style="width:100%;padding:6px;margin-top:4px" placeholder="23 août 2098">
+      <button id="sujets-btn-modifier-date" class="sujets-action-confirmer" style="background:#3b6fd4;margin-top:8px">Prévisualiser le changement de date</button>
+    </div>
+    <div id="sujets-apercu-zone"></div>
+  `;
+
+  document.getElementById('sujets-btn-supprimer').addEventListener('click', () => {
+    apercuSupprimerArticle(SujetsState.scenario, occurrence.fichier,
+      document.getElementById('sujets-apercu-zone'), refreshSujetsOccurrences);
+  });
+  document.getElementById('sujets-btn-modifier-date').addEventListener('click', () => {
+    const nouvelleDate = document.getElementById('sujets-nouvelle-date').value.trim();
+    if (!nouvelleDate) return;
+    apercuModifierDateArticle(SujetsState.scenario, occurrence.fichier, nouvelleDate,
+      document.getElementById('sujets-apercu-zone'), refreshSujetsOccurrences);
+  });
+}
+
+// ── Suppression : aperçu (confirmer=false) puis confirmation explicite ──
+// Généralisé le 5 septembre 2026 (ajout de l'onglet Articles) : prend le
+// scénario/fichier/zone d'affichage/callback en paramètres explicites au
+// lieu de lire SujetsState directement, pour être réutilisable depuis
+// n'importe quel écran (Sujets, Articles).
+
+async function apercuSupprimerArticle(scenario, fichier, zoneEl, onSuccess) {
+  zoneEl.innerHTML = '<div class="sujets-action-apercu">Chargement de l\'aperçu…</div>';
+  try {
+    const res = await fetch('/api/sujets/supprimer_article', {
+      method: 'POST', headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({scenario, fichier, confirmer: false}),
+    });
+    const data = await res.json();
+    if (!res.ok || data.error) {
+      zoneEl.innerHTML = `<div class="sujets-action-apercu">Erreur : ${_sujetsEsc(data.error || res.statusText)}</div>`;
+      return;
+    }
+    zoneEl.innerHTML = `
+      <div class="sujets-action-apercu">
+        Cet article sera déplacé vers :<br><code>${_sujetsEsc(data.chemin_corbeille)}</code><br>
+        (réversible -- pas de suppression définitive)
+      </div>
+      <button class="sujets-action-confirmer sujets-btn-confirmer-suppr">Confirmer la suppression</button>
+      <button class="sujets-action-annuler sujets-btn-annuler-suppr">Annuler</button>
+    `;
+    zoneEl.querySelector('.sujets-btn-annuler-suppr').addEventListener('click', () => { zoneEl.innerHTML = ''; });
+    zoneEl.querySelector('.sujets-btn-confirmer-suppr').addEventListener('click', async () => {
+      zoneEl.innerHTML = '<div class="sujets-action-apercu">Suppression en cours…</div>';
+      const res2 = await fetch('/api/sujets/supprimer_article', {
+        method: 'POST', headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({scenario, fichier, confirmer: true}),
+      });
+      const data2 = await res2.json();
+      if (!res2.ok || data2.error) {
+        zoneEl.innerHTML = `<div class="sujets-action-apercu">Erreur : ${_sujetsEsc(data2.error || res2.statusText)}</div>`;
+        return;
+      }
+      zoneEl.innerHTML = '<div class="sujets-action-apercu">✓ Article déplacé vers la corbeille.</div>';
+      if (onSuccess) onSuccess();
+    });
+  } catch (e) {
+    zoneEl.innerHTML = `<div class="sujets-action-apercu">Erreur réseau : ${_sujetsEsc(e.message)}</div>`;
+  }
+}
+
+// ── Modification de date : aperçu (confirmer=false) puis confirmation ──
+
+async function apercuModifierDateArticle(scenario, fichier, nouvelleDate, zoneEl, onSuccess) {
+  zoneEl.innerHTML = '<div class="sujets-action-apercu">Chargement de l\'aperçu…</div>';
+  try {
+    const res = await fetch('/api/sujets/modifier_date', {
+      method: 'POST', headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({scenario, fichier, nouvelle_date: nouvelleDate, confirmer: false}),
+    });
+    const data = await res.json();
+    if (!res.ok || data.error) {
+      zoneEl.innerHTML = `<div class="sujets-action-apercu">Erreur : ${_sujetsEsc(data.error || res.statusText)}</div>`;
+      return;
+    }
+    zoneEl.innerHTML = `
+      <div class="sujets-action-apercu">
+        date_evenement : <code>${_sujetsEsc(data.date_evenement_avant)}</code> → <code>${_sujetsEsc(data.date_evenement_apres)}</code><br>
+        Fichier : <code>${_sujetsEsc(data.fichier_avant)}</code> → <code>${_sujetsEsc(data.fichier_apres_prevu)}</code>
+        ${data.renommage_impossible ? `<br><span style="color:#b5651d">⚠ ${_sujetsEsc(data.renommage_impossible)}</span>` : ''}
+        ${data.date_publication_sera_synchronisee ? '<br>date_publication sera synchronisée (était identique)' : ''}
+      </div>
+      <button class="sujets-action-confirmer sujets-btn-confirmer-date" style="background:#3b6fd4">Confirmer le changement</button>
+      <button class="sujets-action-annuler sujets-btn-annuler-date">Annuler</button>
+    `;
+    zoneEl.querySelector('.sujets-btn-annuler-date').addEventListener('click', () => { zoneEl.innerHTML = ''; });
+    zoneEl.querySelector('.sujets-btn-confirmer-date').addEventListener('click', async () => {
+      zoneEl.innerHTML = '<div class="sujets-action-apercu">Modification en cours…</div>';
+      const res2 = await fetch('/api/sujets/modifier_date', {
+        method: 'POST', headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({scenario, fichier, nouvelle_date: nouvelleDate, confirmer: true}),
+      });
+      const data2 = await res2.json();
+      if (!res2.ok || data2.error) {
+        zoneEl.innerHTML = `<div class="sujets-action-apercu">Erreur : ${_sujetsEsc(data2.error || res2.statusText)}</div>`;
+        return;
+      }
+      zoneEl.innerHTML = `<div class="sujets-action-apercu">✓ Date modifiée. Sauvegarde : <code>${_sujetsEsc(data2.sauvegarde)}</code></div>`;
+      if (onSuccess) onSuccess();
+    });
+  } catch (e) {
+    zoneEl.innerHTML = `<div class="sujets-action-apercu">Erreur réseau : ${_sujetsEsc(e.message)}</div>`;
+  }
+}
+
+// ── Articles — inventaire complet (5 septembre 2026, chantier "Suite
+// narrative des événements") ──────────────────────────────────────────
+// classes CSS articles-* dédiées, voir index.html. Même gabarit que
+// RedactionState (table triable + filtres + pagination + panneau), mais
+// filtrage ENTIÈREMENT côté client après un seul fetch initial (~200
+// articles, volume trop modeste pour justifier un aller-retour réseau
+// à chaque changement de filtre -- contrairement à /api/redaction/
+// personnes qui filtre côté serveur).
+
+const ArticlesState = {
+  all: [],
+  filtered: [],
+  page: 0,
+  perPage: 50,
+  sortKey: 'date_tri',
+  sortDir: 'desc',   // plus récent d'abord par défaut
+  filtersWired: false,
+  selected: null,
+  editionActive: null,   // {annee, mois} ou null si aucune édition enregistrée -- alimente le filtre "Mois en cours seulement"
+  basculements: {},       // fichier -> {scenario, type_bascule, justification} -- candidats en cache (detect_basculements_narratifs.py)
+  basculementsGeneresLe: {}, // scenario -> horodatage de génération (par scénario, un scan partiel ne touche pas les autres)
+};
+
+function _articlesEsc(s) {
+  return String(s == null ? '' : s)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+async function loadArticles() {
+  if (!ArticlesState.filtersWired) {
+    const scenarioSel = document.getElementById('articles-scenario');
+    const scenarios = State.config?.scenarios || [];
+    scenarioSel.innerHTML = '<option value="">Tous</option>' +
+      scenarios.map(s => `<option value="${s}">${s}</option>`).join('');
+
+    ['articles-scenario', 'articles-thematique', 'articles-ligne'].forEach(id =>
+      document.getElementById(id).addEventListener('change', () => {
+        _articlesDeselect();
+        ArticlesState.page = 0;
+        _articlesApplyLocalFilterSort();
+        renderArticlesTable();
+      })
+    );
+    document.getElementById('articles-evenement-force').addEventListener('change', () => {
+      _articlesDeselect();
+      ArticlesState.page = 0;
+      _articlesApplyLocalFilterSort();
+      renderArticlesTable();
+    });
+    document.getElementById('articles-mois-actif').addEventListener('change', () => {
+      _articlesDeselect();
+      ArticlesState.page = 0;
+      _articlesApplyLocalFilterSort();
+      renderArticlesTable();
+    });
+    document.getElementById('articles-basculement').addEventListener('change', () => {
+      _articlesDeselect();
+      ArticlesState.page = 0;
+      _articlesApplyLocalFilterSort();
+      renderArticlesTable();
+    });
+    document.getElementById('articles-btn-lancer-basculements').addEventListener('click', lancerDetectionBasculements);
+    document.getElementById('articles-search').addEventListener('input', () => {
+      _articlesDeselect();
+      ArticlesState.page = 0;
+      _articlesApplyLocalFilterSort();
+      renderArticlesTable();
+    });
+    document.getElementById('articles-prev').addEventListener('click', () => {
+      if (ArticlesState.page > 0) { ArticlesState.page--; renderArticlesTable(); }
+    });
+    document.getElementById('articles-next').addEventListener('click', () => {
+      const maxPage = Math.max(0, Math.ceil(ArticlesState.filtered.length / ArticlesState.perPage) - 1);
+      if (ArticlesState.page < maxPage) { ArticlesState.page++; renderArticlesTable(); }
+    });
+    document.querySelectorAll('.articles-table th[data-sort]').forEach(th => {
+      th.addEventListener('click', () => {
+        const key = th.dataset.sort;
+        if (ArticlesState.sortKey === key) {
+          ArticlesState.sortDir = ArticlesState.sortDir === 'asc' ? 'desc' : 'asc';
+        } else {
+          ArticlesState.sortKey = key;
+          ArticlesState.sortDir = 'asc';
+        }
+        _articlesApplyLocalFilterSort();
+        renderArticlesTable();
+      });
+    });
+    document.getElementById('articles-btn-rapport-md').addEventListener('click', genererRapportMdArticles);
+
+    // Fermeture de la fiche au clic en dehors du tableau ET du panneau
+    // (6 septembre 2026, demande de David) -- un clic sur une ligne du
+    // tableau ou dans le panneau lui-même (boutons Supprimer/Modifier-
+    // date/Promouvoir) ne doit jamais fermer la fiche qu'on est en train
+    // de consulter ou d'utiliser.
+    //
+    // Bug corrigé le 6 septembre (même jour) : un clic sur une ligne
+    // appelle selectArticleRow() -> renderArticlesTable(), qui redessine
+    // le <tbody> et DÉTRUIT le <tr> cliqué avant que cet écouteur ne
+    // s'exécute (bulle jusqu'à document après le gestionnaire de la
+    // ligne). e.target.closest('.articles-table-wrap') échouait alors
+    // car e.target n'avait plus de parent -- la fiche se refermait
+    // aussitôt ouverte, quel que soit l'endroit cliqué dans le tableau.
+    // Corrigé en utilisant e.composedPath(), qui capture la liste des
+    // ancêtres AU MOMENT du clic, avant toute modification du DOM --
+    // fiable même si l'élément cliqué est ensuite retiré/recréé.
+    document.addEventListener('click', (e) => {
+      if (!ArticlesState.selected) return;
+      const tabEl = document.getElementById('tab-articles');
+      if (!tabEl || !tabEl.classList.contains('active')) return;
+      const chemin = e.composedPath();
+      const dansTableau = chemin.some(el => el.classList && el.classList.contains('articles-table-wrap'));
+      const dansPanneau = chemin.some(el => el.classList && el.classList.contains('articles-sidebar'));
+      if (!dansTableau && !dansPanneau) {
+        _articlesDeselect();
+      }
+    });
+
+    ArticlesState.filtersWired = true;
+  }
+  await refreshArticlesData();
+}
+
+function _articlesKey(a) {
+  return `${a.scenario}::${a.fichier}`;
+}
+
+function _articlesDeselect() {
+  if (!ArticlesState.selected) return;
+  ArticlesState.selected = null;
+  renderArticlesTable();
+  renderArticlesPanel();
+}
+
+// Ouvrir l'article dans Obsidian (6 septembre 2026, demande de David) --
+// utilise le schéma d'URI natif d'Obsidian (obsidian://open?vault=...&
+// file=...), pas de plugin tiers requis. vault_root vient de State.config
+// (déjà chargé au démarrage de l'app, /api/config -- même champ que celui
+// lu côté serveur via cfg.get("vault_root") dans toutes les routes
+// existantes) : aucune nouvelle route backend nécessaire. Le nom du
+// vault est le dernier segment du chemin ; le chemin du fichier est
+// relatif au vault (articles/{scenario}/{fichier}), sans l'extension
+// .md -- convention du paramètre "file" d'Obsidian. Ouvre dans un nouvel
+// onglet/fenêtre : le navigateur délègue alors au système, qui lance
+// Obsidian via le schéma d'URI enregistré (aucun effet si Obsidian n'est
+// pas installé -- pas de détection possible côté web, échec silencieux
+// normal du navigateur dans ce cas).
+function _articlesOuvrirDansObsidian(article) {
+  const vaultRoot = (State.config?.vault_root || '').replace(/[/\\]+$/, '');
+  if (!vaultRoot) {
+    alert('vault_root introuvable dans la configuration -- impossible de construire le lien Obsidian.');
+    return;
+  }
+  const vaultName = vaultRoot.split(/[/\\]/).pop();
+  const cheminRelatif = `articles/${article.scenario}/${article.fichier.replace(/\.md$/i, '')}`;
+  const uri = `obsidian://open?vault=${encodeURIComponent(vaultName)}&file=${encodeURIComponent(cheminRelatif)}`;
+  window.open(uri, '_blank');
+}
+
+async function refreshArticlesData() {
+  const tbody = document.getElementById('articles-tbody');
+  tbody.innerHTML = '<tr><td colspan="6" class="articles-empty">Chargement…</td></tr>';
+
+  try {
+    const res = await fetch('/api/articles/liste');
+    const data = await res.json();
+    if (!res.ok || data.error) {
+      tbody.innerHTML = `<tr><td colspan="6" class="articles-empty">Erreur : ${_articlesEsc(data.error || res.statusText)}</td></tr>`;
+      return;
+    }
+    ArticlesState.all = (data.articles || []).map(a => ({
+      ...a,
+      date_tri: a.annee != null ? (a.annee * 10000 + a.mois * 100 + a.jour) : -1,
+    }));
+  } catch (e) {
+    tbody.innerHTML = `<tr><td colspan="6" class="articles-empty">Erreur réseau : ${_articlesEsc(e.message)}</td></tr>`;
+    return;
+  }
+
+  // Mois de parution actif -- pour le filtre "Mois en cours seulement".
+  // Lecture seule, échec silencieux (la case reste alors désactivée) :
+  // ne doit jamais bloquer l'affichage de l'inventaire lui-même.
+  const moisActifCb = document.getElementById('articles-mois-actif');
+  try {
+    const resEd = await fetch('/api/edition/active');
+    const dataEd = await resEd.json();
+    ArticlesState.editionActive = dataEd.active || null;
+  } catch (e) {
+    ArticlesState.editionActive = null;
+  }
+  if (ArticlesState.editionActive) {
+    moisActifCb.disabled = false;
+    moisActifCb.title = '';
+  } else {
+    moisActifCb.checked = false;
+    moisActifCb.disabled = true;
+    moisActifCb.title = 'Aucune édition active enregistrée (state/editions.json)';
+  }
+
+  // Basculements narratifs -- cache lu ici (rapide, aucun appel LLM),
+  // jamais recalculé au chargement de l'onglet. Échec silencieux (case
+  // désactivée) : ne doit jamais bloquer l'affichage de l'inventaire.
+  const bascCb = document.getElementById('articles-basculement');
+  try {
+    const resBasc = await fetch('/api/articles/basculements');
+    const dataBasc = await resBasc.json();
+    ArticlesState.basculements = {};
+    ArticlesState.basculementsGeneresLe = {};
+    for (const [scenario, bloc] of Object.entries(dataBasc.resultats_par_scenario || {})) {
+      ArticlesState.basculementsGeneresLe[scenario] = bloc.generated_at || null;
+      for (const c of (bloc.candidats || [])) {
+        ArticlesState.basculements[c.fichier] = { scenario, ...c };
+      }
+    }
+  } catch (e) {
+    ArticlesState.basculements = {};
+    ArticlesState.basculementsGeneresLe = {};
+  }
+  const aDesResultats = Object.keys(ArticlesState.basculements).length > 0;
+  bascCb.disabled = !aDesResultats;
+  if (!aDesResultats) {
+    bascCb.checked = false;
+    bascCb.title = 'Aucune détection encore lancée -- utilise le bouton "Détecter les basculements narratifs"';
+  } else {
+    bascCb.title = '';
+  }
+  _articlesRenderBasculementsStatus();
+
+  if (ArticlesState.selected) {
+    const key = _articlesKey(ArticlesState.selected);
+    ArticlesState.selected = ArticlesState.all.find(a => _articlesKey(a) === key) || null;
+  }
+
+  _articlesPopulateThematiqueFilter();
+  ArticlesState.page = 0;
+  _articlesApplyLocalFilterSort();
+  renderArticlesTable();
+  renderArticlesPanel();
+}
+
+function _articlesPopulateThematiqueFilter() {
+  const sel = document.getElementById('articles-thematique');
+  const current = sel.value;
+  const distinctes = [...new Set(ArticlesState.all.map(a => a.thematique))].sort();
+  sel.innerHTML = '<option value="">Toutes</option>' +
+    distinctes.map(th => `<option value="${_articlesEsc(th)}">${_articlesEsc(th)}</option>`).join('');
+  if (distinctes.includes(current)) sel.value = current;
+}
+
+function _articlesApplyLocalFilterSort() {
+  const scenario = document.getElementById('articles-scenario').value;
+  const thematique = document.getElementById('articles-thematique').value;
+  const ligne = document.getElementById('articles-ligne').value;
+  const evenementForce = document.getElementById('articles-evenement-force').checked;
+  const moisActif = document.getElementById('articles-mois-actif').checked;
+  const basculement = document.getElementById('articles-basculement').checked;
+  const search = (document.getElementById('articles-search').value || '').trim().toLowerCase();
+
+  let rows = ArticlesState.all;
+  if (scenario) rows = rows.filter(a => a.scenario === scenario);
+  if (thematique) rows = rows.filter(a => a.thematique === thematique);
+  if (ligne) rows = rows.filter(a => a.ligne_editoriale === ligne);
+  if (evenementForce) rows = rows.filter(a => (a.evenements_cites || []).length > 0);
+  if (basculement) rows = rows.filter(a => !!ArticlesState.basculements[a.fichier]);
+  if (moisActif && ArticlesState.editionActive) {
+    const { annee, mois } = ArticlesState.editionActive;
+    rows = rows.filter(a => a.annee === annee && a.mois === mois);
+  }
+  if (search) {
+    rows = rows.filter(a =>
+      (a.slug || '').toLowerCase().includes(search) ||
+      (a.chapo || '').toLowerCase().includes(search)
+    );
+  }
+
+  const key = ArticlesState.sortKey;
+  const dir = ArticlesState.sortDir === 'asc' ? 1 : -1;
+  rows = [...rows].sort((a, b) => {
+    let av = a[key], bv = b[key];
+    if (typeof av === 'string') av = av.toLowerCase();
+    if (typeof bv === 'string') bv = bv.toLowerCase();
+    if (av < bv) return -1 * dir;
+    if (av > bv) return 1 * dir;
+    return 0;
+  });
+
+  ArticlesState.filtered = rows;
+}
+
+function renderArticlesTable() {
+  const tbody = document.getElementById('articles-tbody');
+  const { filtered, page, perPage } = ArticlesState;
+
+  document.getElementById('articles-count').textContent = `${filtered.length} article(s)`;
+
+  if (filtered.length === 0) {
+    tbody.innerHTML = '<tr><td colspan="6" class="articles-empty">Aucun résultat pour ces filtres.</td></tr>';
+    document.getElementById('articles-range').textContent = '';
+    document.getElementById('articles-page-label').textContent = '';
+    document.getElementById('articles-prev').disabled = true;
+    document.getElementById('articles-next').disabled = true;
+    return;
+  }
+
+  const start = page * perPage;
+  const slice = filtered.slice(start, start + perPage);
+
+  tbody.innerHTML = slice.map(a => `
+    <tr data-key="${_articlesEsc(_articlesKey(a))}" class="${ArticlesState.selected === a ? 'active' : ''}">
+      <td title="${_articlesEsc(a.scenario)}">${_articlesEsc(a.scenario)}</td>
+      <td>${a.annee != null ? `${a.jour} ${MOIS_FR_JS[a.mois]} ${a.annee}` : '(non reconnue)'}</td>
+      <td title="${_articlesEsc(a.thematique)}">${_articlesEsc(a.thematique)}</td>
+      <td>${_articlesEsc(a.ligne_editoriale)}</td>
+      <td title="${_articlesEsc(a.slug)}">${_articlesEsc(a.slug)}</td>
+      <td title="${_articlesEsc(a.fichier)}">${_articlesEsc(a.fichier)}</td>
+    </tr>
+  `).join('');
+
+  tbody.querySelectorAll('tr[data-key]').forEach((tr, i) => {
+    tr.addEventListener('click', () => selectArticleRow(slice[i]));
+  });
+
+  const totalPages = Math.max(1, Math.ceil(filtered.length / perPage));
+  document.getElementById('articles-range').textContent =
+    `${start + 1}–${Math.min(start + perPage, filtered.length)} sur ${filtered.length}`;
+  document.getElementById('articles-page-label').textContent = `page ${page + 1} / ${totalPages}`;
+  document.getElementById('articles-prev').disabled = page === 0;
+  document.getElementById('articles-next').disabled = page >= totalPages - 1;
+}
+
+function selectArticleRow(article) {
+  ArticlesState.selected = article;
+  renderArticlesTable();
+  renderArticlesPanel();
+}
+
+function renderArticlesPanel() {
+  const panel = document.getElementById('articles-panel');
+  const a = ArticlesState.selected;
+  if (!a) {
+    panel.innerHTML = '<div class="articles-panel-empty">Clique sur une ligne pour voir le détail et agir dessus.</div>';
+    return;
+  }
+
+  panel.innerHTML = `
+    <div class="articles-panel-title">${_articlesEsc(a.slug)}</div>
+    <div class="articles-panel-sub">${a.annee != null ? `${a.jour} ${MOIS_FR_JS[a.mois]} ${a.annee}` : '(date non reconnue)'} — ${_articlesEsc(a.scenario)}</div>
+    ${a.chapo ? `<div class="articles-panel-section">${_articlesEsc(a.chapo)}</div>` : ''}
+    <div class="articles-panel-section">
+      <label>Entités citées</label>
+      ${(a.entites_citees || []).length ? _articlesEsc(a.entites_citees.join(', ')) : '—'}
+    </div>
+    <div class="articles-panel-section">
+      <label>Événements cités</label>
+      ${(a.evenements_cites || []).length ? _articlesEsc(a.evenements_cites.join(', ')) : '—'}
+    </div>
+    ${ArticlesState.basculements[a.fichier] ? `
+    <div class="articles-panel-section" style="background:#fdf6e8;border:1px solid #e0a12e;border-radius:6px;padding:8px 10px">
+      <label style="color:#b5651d">⚠ Basculement narratif détecté — [${_articlesEsc(ArticlesState.basculements[a.fichier].type_bascule)}]</label>
+      ${_articlesEsc(ArticlesState.basculements[a.fichier].justification)}
+      <div style="font-size:10px;color:#999;margin-top:4px">Catégorie indicative (chapo seul) — vérifie contre le texte intégral avant de promouvoir.</div>
+    </div>
+    ` : ''}
+    <div class="articles-panel-section" style="font-size:11px;color:#aaa">${_articlesEsc(a.fichier)}</div>
+    <button id="articles-btn-ouvrir-obsidian" class="sujets-action-confirmer" style="background:#5b4a9e">Ouvrir dans Obsidian</button>
+    <button id="articles-btn-supprimer" class="sujets-action-confirmer" style="background:#c0392b;margin-left:6px">Supprimer cet article</button>
+    <div style="margin-top:12px">
+      <label style="font-size:12px;color:#888">Nouvelle date (ex. "23 août 2098")</label><br>
+      <input type="text" id="articles-nouvelle-date" style="width:100%;padding:6px;margin-top:4px" placeholder="23 août 2098">
+      <button id="articles-btn-modifier-date" class="sujets-action-confirmer" style="background:#3b6fd4;margin-top:8px">Prévisualiser le changement de date</button>
+    </div>
+    <div id="articles-apercu-zone"></div>
+    <div style="margin-top:12px">
+      <button id="articles-btn-promouvoir" class="sujets-action-confirmer" style="background:#2c8a4b">Promouvoir en événement</button>
+    </div>
+    <div id="articles-promouvoir-zone"></div>
+  `;
+
+  document.getElementById('articles-btn-ouvrir-obsidian').addEventListener('click', () => {
+    _articlesOuvrirDansObsidian(a);
+  });
+  document.getElementById('articles-btn-supprimer').addEventListener('click', () => {
+    apercuSupprimerArticle(a.scenario, a.fichier,
+      document.getElementById('articles-apercu-zone'), refreshArticlesData);
+  });
+  document.getElementById('articles-btn-modifier-date').addEventListener('click', () => {
+    const nouvelleDate = document.getElementById('articles-nouvelle-date').value.trim();
+    if (!nouvelleDate) return;
+    apercuModifierDateArticle(a.scenario, a.fichier, nouvelleDate,
+      document.getElementById('articles-apercu-zone'), refreshArticlesData);
+  });
+  document.getElementById('articles-btn-promouvoir').addEventListener('click', () => {
+    const zone = document.getElementById('articles-promouvoir-zone');
+    if (zone.dataset.open === '1') {
+      zone.innerHTML = '';
+      zone.dataset.open = '0';
+    } else {
+      zone.dataset.open = '1';
+      renderArticlesPromouvoirForm(a, zone);
+    }
+  });
+}
+
+// Promouvoir un article en événement custom depuis l'onglet Articles (5
+// septembre 2026, suite du chantier "Suite narrative des événements" --
+// corrige la limite de l'écran "Injecter un événement depuis un article"
+// (section Édition), qui ne liste que les articles du mois de parution
+// actif et verrouille date_approximative dessus. Ici la liste source
+// (ArticlesState.all, /api/articles/liste) couvre tout le corpus, tous
+// scénarios, et chaque article porte sa vraie date (annee/mois/jour) --
+// donc date_approximative est pré-remplie avec l'année RÉELLE de
+// l'article et reste éditable, et edition_active est décochée par
+// défaut (comportement inverse de l'écran Édition : ici on veut en
+// général garder la vraie date, pas la remplacer par le mois actif).
+// Même route backend (/api/edition/injecter_evenement), neutre sur ces
+// deux champs -- aucun changement côté app.py/inject_custom_events.py.
+function _articlesPromSuggestId(article) {
+  // Suggestion de départ, éditable -- inject_custom_events.py normalise
+  // de toute façon le slug final depuis idea_id (re.sub non-[a-z0-9_]).
+  return (article.slug || '').slice(0, 50);
+}
+
+function renderArticlesPromouvoirForm(article, container) {
+  const entites = article.entites_citees || [];
+  const scenarios = State.config?.scenarios || [];
+  const dateReelle = article.annee != null
+    ? `${article.jour} ${MOIS_FR_JS[article.mois]} ${article.annee}`
+    : '(date non reconnue)';
+
+  container.innerHTML = `
+    <div class="injev-panel-section" style="margin-top:4px;border-top:1px solid #444;padding-top:12px">
+      <div class="injev-panel-title" style="font-size:13px">Promouvoir "${_articlesEsc(article.slug)}" en événement</div>
+    </div>
+
+    <div class="injev-panel-section">
+      <label>Identifiant (id)</label>
+      <input type="text" id="artprom-id" value="${_articlesEsc(_articlesPromSuggestId(article))}">
+    </div>
+
+    <div class="injev-panel-section">
+      <label>Description</label>
+      <textarea id="artprom-description" rows="3">${_articlesEsc(article.chapo || '')}</textarea>
+    </div>
+
+    <div class="injev-panel-section">
+      <label>Portée</label>
+      <select id="artprom-portee">
+        <option value="">— choisir —</option>
+        <option value="locale">locale</option>
+        <option value="regionale">régionale</option>
+        <option value="continentale">continentale</option>
+        <option value="globale">globale</option>
+      </select>
+    </div>
+
+    <div class="injev-panel-section">
+      <label>Intensité</label>
+      <select id="artprom-intensite">
+        <option value="">— choisir —</option>
+        <option value="faible">faible</option>
+        <option value="modérée">modérée</option>
+        <option value="forte">forte</option>
+        <option value="majeure">majeure</option>
+      </select>
+    </div>
+
+    <div class="injev-panel-section">
+      <label>Date approximative (année)</label>
+      <input type="number" id="artprom-date-approximative" value="${article.annee != null ? article.annee : ''}" style="width:100px">
+      <div class="injev-panel-hint">Pré-remplie depuis la date réelle de l'article (${_articlesEsc(dateReelle)}) — modifiable.</div>
+    </div>
+
+    <div class="injev-panel-section">
+      <div class="injev-checkbox-row">
+        <input type="checkbox" id="artprom-edition-active">
+        <label for="artprom-edition-active" style="margin:0">edition_active — forcer la date sur le mois de parution en cours (écrase l'année ci-dessus)</label>
+      </div>
+    </div>
+
+    <div class="injev-panel-section">
+      <label>Scénarios à couvrir</label>
+      <div class="injev-chips-box" id="artprom-scenarios-box">
+        ${scenarios.map(s => `
+          <label class="injev-chip ${s === article.scenario ? 'active' : ''}">
+            <input type="checkbox" value="${s}" ${s === article.scenario ? 'checked' : ''}>
+            ${s}
+          </label>
+        `).join('')}
+      </div>
+    </div>
+
+    <div class="injev-panel-section">
+      <label>Zone (zone_hint, optionnel)</label>
+      <input type="text" id="artprom-zone-hint" value="${_articlesEsc(article.zone_principale || '')}">
+    </div>
+
+    <div class="injev-panel-section">
+      <label>Acteurs impliqués (acteurs_hint, optionnel — issus de l'article)</label>
+      <div class="injev-chips-box" id="artprom-acteurs-box">
+        ${entites.length ? entites.map(e => `
+          <label class="injev-chip">
+            <input type="checkbox" value="${_articlesEsc(e)}">
+            ${_articlesEsc(e)}
+          </label>
+        `).join('') : '<span class="injev-panel-hint">Aucune entité citée sur cet article.</span>'}
+      </div>
+    </div>
+
+    <div class="injev-panel-section">
+      <label>Variables systémiques imposées (variables_hint, optionnel)</label>
+      <div class="injev-chips-box" id="artprom-variables-box">
+        ${INJEV_VALID_VARS.map(v => `
+          <label class="injev-chip">
+            <input type="checkbox" value="${v}">
+            ${v}
+          </label>
+        `).join('')}
+      </div>
+    </div>
+
+    <div class="injev-panel-section">
+      <div class="injev-checkbox-row">
+        <input type="checkbox" id="artprom-dry-run">
+        <label for="artprom-dry-run" style="margin:0">Dry-run (n'écrit rien, affiche juste le résultat)</label>
+      </div>
+    </div>
+
+    <div class="injev-panel-section" style="border-bottom:none">
+      <button id="artprom-submit" class="injev-panel-btn">Injecter</button>
+      <div id="artprom-msg" class="injev-panel-msg"></div>
+      <div id="artprom-result" style="display:none"></div>
+    </div>
+  `;
+
+  container.querySelectorAll('.injev-chip').forEach(chip => {
+    const cb = chip.querySelector('input');
+    chip.addEventListener('click', (e) => {
+      if (e.target !== cb) cb.checked = !cb.checked;
+      chip.classList.toggle('active', cb.checked);
+    });
+  });
+
+  document.getElementById('artprom-submit').addEventListener('click', () => submitArticlesPromouvoirInjection(article));
+}
+
+async function submitArticlesPromouvoirInjection(article) {
+  const msgEl = document.getElementById('artprom-msg');
+  const resultEl = document.getElementById('artprom-result');
+  const submitBtn = document.getElementById('artprom-submit');
+
+  const id = document.getElementById('artprom-id').value.trim();
+  const description = document.getElementById('artprom-description').value.trim();
+  const portee = document.getElementById('artprom-portee').value;
+  const intensite = document.getElementById('artprom-intensite').value;
+  const dateApproximativeRaw = document.getElementById('artprom-date-approximative').value.trim();
+  const dateApproximative = parseInt(dateApproximativeRaw, 10);
+  const editionActive = document.getElementById('artprom-edition-active').checked;
+  const zoneHint = document.getElementById('artprom-zone-hint').value.trim();
+  const dryRun = document.getElementById('artprom-dry-run').checked;
+
+  const scenarios = [...document.querySelectorAll('#artprom-scenarios-box input:checked')].map(cb => cb.value);
+  const acteursHint = [...document.querySelectorAll('#artprom-acteurs-box input:checked')].map(cb => cb.value);
+  const variablesHint = [...document.querySelectorAll('#artprom-variables-box input:checked')].map(cb => cb.value);
+
+  if (!id || !description || !portee || !intensite || !Number.isFinite(dateApproximative)) {
+    msgEl.className = 'injev-panel-msg error';
+    msgEl.textContent = 'id, description, portée, intensité et date approximative (année) sont requis.';
+    return;
+  }
+  if (scenarios.length === 0) {
+    msgEl.className = 'injev-panel-msg error';
+    msgEl.textContent = 'Sélectionne au moins un scénario.';
+    return;
+  }
+
+  // date_precise (6 septembre 2026, correctif incohérence de dates) : la
+  // date réelle et complète de l'article source (pas juste l'année du
+  // champ éditable ci-dessus) -- permet à inject_custom_events.py de
+  // distinguer un article contemporain de l'événement (ancrage serré) d'un
+  // article rétrospectif (l'événement réel est plus ancien que l'article
+  // qui en parle). Absente si la date de l'article n'a pas été reconnue.
+  const datePrecise = article.annee != null
+    ? `${article.jour} ${MOIS_FR_JS[article.mois]} ${article.annee}`
+    : null;
+
+  const idea = {
+    id, description, portee, intensite,
+    date_approximative: dateApproximative,
+    date_precise: datePrecise,
+    scenarios,
+    edition_active: editionActive,
+    zone_hint: zoneHint || null,
+    acteurs_hint: acteursHint.length ? acteursHint : null,
+    variables_hint: variablesHint.length ? variablesHint : null,
+    source: `article:${article.fichier}`,
+    dry_run: dryRun,
+  };
+
+  submitBtn.disabled = true;
+  resultEl.style.display = 'none';
+  msgEl.className = 'injev-panel-msg loading';
+  msgEl.textContent = `Injection en cours (appel(s) IA, peut prendre jusqu'à ${scenarios.length > 1 ? '4 min' : '2-3 min'})…`;
+
+  try {
+    const res = await fetch('/api/edition/injecter_evenement', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(idea),
+    });
+    const data = await res.json();
+
+    if (!res.ok || data.error) {
+      msgEl.className = 'injev-panel-msg error';
+      msgEl.textContent = `Erreur : ${data.error || res.statusText}`;
+      return;
+    }
+
+    msgEl.className = 'injev-panel-msg ok';
+    msgEl.textContent = dryRun ? '✓ Dry-run terminé (rien écrit).' : '✓ Terminé.';
+
+    resultEl.style.display = 'block';
+    if (dryRun) {
+      resultEl.className = 'injev-result-box ok';
+      resultEl.innerHTML = `<pre style="white-space:pre-wrap;margin:0;font-size:10.5px">${_articlesEsc(JSON.stringify(data.outcome, null, 2))}</pre>`;
+    } else {
+      const injected = data.injected_scenarios || [];
+      const failed = data.failed_scenarios || [];
+      resultEl.className = `injev-result-box ${failed.length ? 'error' : 'ok'}`;
+      resultEl.innerHTML =
+        (injected.length ? `Injecté avec succès : ${injected.join(', ')}.` : '') +
+        (failed.length ? `<br>À revoir (needs_review.yaml) : ${failed.join(', ')}.` : '');
+      if (injected.length) refreshArticlesData();
+    }
+  } catch (e) {
+    msgEl.className = 'injev-panel-msg error';
+    msgEl.textContent = `Erreur réseau : ${e.message}`;
+  } finally {
+    submitBtn.disabled = false;
+  }
+}
+
+// Génère le rapport Markdown complet (documentation/inventaire_articles.md,
+// consultable dans Obsidian) -- réutilise /api/sujets/inventaire (POST),
+// même route que l'ancien bouton de l'onglet Sujets, seulement déplacée
+// ici. Limité au scénario actuellement filtré si un scénario est
+// sélectionné, sinon tous scénarios confondus.
+async function genererRapportMdArticles() {
+  const zone = document.getElementById('articles-rapport-resultat');
+  zone.style.display = 'block';
+  zone.innerHTML = 'Génération du rapport en cours…';
+  try {
+    const res = await fetch('/api/sujets/inventaire', {
+      method: 'POST', headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({scenario: document.getElementById('articles-scenario').value || ''}),
+    });
+    const data = await res.json();
+    if (!res.ok || data.error) {
+      zone.innerHTML = `Erreur : ${_articlesEsc(data.error || res.statusText)}`;
+      return;
+    }
+    zone.innerHTML = `✓ Rapport écrit dans <code>${_articlesEsc(data.rapport_md)}</code> (consultable dans Obsidian)`;
+  } catch (e) {
+    zone.innerHTML = `Erreur réseau : ${_articlesEsc(e.message)}`;
+  }
+}
+
+// Détection de basculements narratifs (6 septembre 2026, intégration GUI) --
+// affiche l'état du cache (jamais/déjà généré, par scénario) et permet de
+// relancer le script à la demande. Statut affiché dans #articles-basculements-statut.
+function _articlesRenderBasculementsStatus() {
+  const zone = document.getElementById('articles-basculements-statut');
+  if (!zone) return;
+  const entries = Object.entries(ArticlesState.basculementsGeneresLe || {});
+  if (!entries.length) {
+    zone.textContent = 'Détection jamais lancée.';
+    return;
+  }
+  const total = Object.keys(ArticlesState.basculements || {}).length;
+  const plusRecent = entries.map(([, d]) => d).filter(Boolean).sort().pop();
+  zone.textContent = `${total} candidat(s) en cache — dernière génération : ${plusRecent || '?'} `
+    + `(${entries.length} scénario(s) couvert(s))`;
+}
+
+// Lance detect_basculements_narratifs.py depuis le GUI -- coûte de vrais
+// appels LLM (un par scénario scanné), peut prendre plusieurs minutes sur
+// tout le corpus. Limité au scénario actuellement filtré si un scénario
+// est sélectionné dans la barre de filtres (plus rapide), sinon tout le
+// corpus. Le script fusionne lui-même le résultat avec le cache existant
+// (voir detect_basculements_narratifs.py::ecrire_cache) -- un scan partiel
+// ne fait jamais disparaître les résultats des autres scénarios.
+async function lancerDetectionBasculements() {
+  const btn = document.getElementById('articles-btn-lancer-basculements');
+  const zone = document.getElementById('articles-basculements-statut');
+  const scenario = document.getElementById('articles-scenario').value || '';
+
+  btn.disabled = true;
+  zone.textContent = scenario
+    ? `Détection en cours sur ${scenario}… (jusqu'à 2 min)`
+    : `Détection en cours sur tout le corpus… (jusqu'à plusieurs minutes, un appel LLM par scénario)`;
+
+  try {
+    const res = await fetch('/api/articles/lancer_basculements', {
+      method: 'POST', headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(scenario ? {scenario} : {}),
+    });
+    const data = await res.json();
+    if (!res.ok || data.error) {
+      zone.textContent = `Erreur : ${data.error || res.statusText}`;
+      return;
+    }
+    // Recharge tout depuis le cache fraîchement écrit -- source unique de
+    // vérité, plutôt que de fusionner la réponse de la requête à la main.
+    await refreshArticlesData();
+  } catch (e) {
+    zone.textContent = `Erreur réseau : ${e.message}`;
+  } finally {
+    btn.disabled = false;
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// ONGLET INSTANCES (chantier "GUI Entités/Instances/Événements/Signaux",
+// 7 septembre 2026) -- calque exact de l'onglet Articles ci-dessus,
+// réutilise les mêmes classes CSS .articles-*. Filtrage 100% client
+// (~750 instances, même volume/logique qu'Articles).
+// ═══════════════════════════════════════════════════════════════════════
+
+const InstancesState = {
+  all: [],
+  filtered: [],
+  page: 0,
+  perPage: 50,
+  sortKey: 'scenario',
+  sortDir: 'asc',
+  filtersWired: false,
+  selected: null,
+};
+
+function _instancesEsc(s) {
+  return String(s == null ? '' : s)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+async function loadInstances() {
+  if (!InstancesState.filtersWired) {
+    const scenarioSel = document.getElementById('instances-scenario');
+    const scenarios = State.config?.scenarios || [];
+    scenarioSel.innerHTML = '<option value="">Tous</option>' +
+      scenarios.map(s => `<option value="${s}">${s}</option>`).join('');
+
+    ['instances-scenario', 'instances-type', 'instances-trajectoire'].forEach(id =>
+      document.getElementById(id).addEventListener('change', () => {
+        _instancesDeselect();
+        InstancesState.page = 0;
+        _instancesApplyLocalFilterSort();
+        renderInstancesTable();
+      })
+    );
+    ['instances-transnationale', 'instances-clandestine'].forEach(id =>
+      document.getElementById(id).addEventListener('change', () => {
+        _instancesDeselect();
+        InstancesState.page = 0;
+        _instancesApplyLocalFilterSort();
+        renderInstancesTable();
+      })
+    );
+    document.getElementById('instances-search').addEventListener('input', () => {
+      _instancesDeselect();
+      InstancesState.page = 0;
+      _instancesApplyLocalFilterSort();
+      renderInstancesTable();
+    });
+    document.getElementById('instances-prev').addEventListener('click', () => {
+      if (InstancesState.page > 0) { InstancesState.page--; renderInstancesTable(); }
+    });
+    document.getElementById('instances-next').addEventListener('click', () => {
+      const maxPage = Math.max(0, Math.ceil(InstancesState.filtered.length / InstancesState.perPage) - 1);
+      if (InstancesState.page < maxPage) { InstancesState.page++; renderInstancesTable(); }
+    });
+    document.querySelectorAll('#tab-instances .articles-table th[data-sort]').forEach(th => {
+      th.addEventListener('click', () => {
+        const key = th.dataset.sort;
+        if (InstancesState.sortKey === key) {
+          InstancesState.sortDir = InstancesState.sortDir === 'asc' ? 'desc' : 'asc';
+        } else {
+          InstancesState.sortKey = key;
+          InstancesState.sortDir = 'asc';
+        }
+        _instancesApplyLocalFilterSort();
+        renderInstancesTable();
+      });
+    });
+    document.getElementById('instances-btn-rapport-md').addEventListener('click', genererRapportMdInstances);
+
+    // Fermeture de la fiche au clic en dehors du tableau/panneau -- même
+    // mécanisme (composedPath) qu'Articles, voir le commentaire détaillé
+    // là-bas pour le bug corrigé le 6 septembre que ça évite.
+    document.addEventListener('click', (e) => {
+      if (!InstancesState.selected) return;
+      const tabEl = document.getElementById('tab-instances');
+      if (!tabEl || !tabEl.classList.contains('active')) return;
+      const chemin = e.composedPath();
+      const dansTableau = chemin.some(el => el.classList && el.classList.contains('articles-table-wrap'));
+      const dansPanneau = chemin.some(el => el.classList && el.classList.contains('articles-sidebar'));
+      if (!dansTableau && !dansPanneau) {
+        _instancesDeselect();
+      }
+    });
+
+    InstancesState.filtersWired = true;
+  }
+  await refreshInstancesData();
+}
+
+function _instancesKey(i) {
+  return i.fichier;
+}
+
+function _instancesDeselect() {
+  if (!InstancesState.selected) return;
+  InstancesState.selected = null;
+  renderInstancesTable();
+  renderInstancesPanel();
+}
+
+// Ouvrir l'instance dans Obsidian -- même mécanisme que
+// _articlesOuvrirDansObsidian(), mais chemin relatif direct (dossier
+// plat instances/, pas de sous-dossier par scénario contrairement à
+// articles/{scenario}/).
+function _instancesOuvrirDansObsidian(instance) {
+  const vaultRoot = (State.config?.vault_root || '').replace(/[/\\]+$/, '');
+  if (!vaultRoot) {
+    alert('vault_root introuvable dans la configuration -- impossible de construire le lien Obsidian.');
+    return;
+  }
+  const vaultName = vaultRoot.split(/[/\\]/).pop();
+  const cheminRelatif = `instances/${instance.fichier.replace(/\.md$/i, '')}`;
+  const uri = `obsidian://open?vault=${encodeURIComponent(vaultName)}&file=${encodeURIComponent(cheminRelatif)}`;
+  window.open(uri, '_blank');
+}
+
+async function refreshInstancesData() {
+  const tbody = document.getElementById('instances-tbody');
+  tbody.innerHTML = '<tr><td colspan="6" class="articles-empty">Chargement…</td></tr>';
+
+  try {
+    const res = await fetch('/api/instances/liste');
+    const data = await res.json();
+    if (!res.ok || data.error) {
+      tbody.innerHTML = `<tr><td colspan="6" class="articles-empty">Erreur : ${_instancesEsc(data.error || res.statusText)}</td></tr>`;
+      return;
+    }
+    InstancesState.all = data.instances || [];
+  } catch (e) {
+    tbody.innerHTML = `<tr><td colspan="6" class="articles-empty">Erreur réseau : ${_instancesEsc(e.message)}</td></tr>`;
+    return;
+  }
+
+  if (InstancesState.selected) {
+    const key = _instancesKey(InstancesState.selected);
+    InstancesState.selected = InstancesState.all.find(i => _instancesKey(i) === key) || null;
+  }
+
+  _instancesPopulateFilters();
+  InstancesState.page = 0;
+  _instancesApplyLocalFilterSort();
+  renderInstancesTable();
+  renderInstancesPanel();
+}
+
+function _instancesPopulateFilters() {
+  const typeSel = document.getElementById('instances-type');
+  const currentType = typeSel.value;
+  const types = [...new Set(InstancesState.all.map(i => i.type_dans_scenario))].sort();
+  typeSel.innerHTML = '<option value="">Tous</option>' +
+    types.map(t => `<option value="${_instancesEsc(t)}">${_instancesEsc(t)}</option>`).join('');
+  if (types.includes(currentType)) typeSel.value = currentType;
+
+  const trajSel = document.getElementById('instances-trajectoire');
+  const currentTraj = trajSel.value;
+  const trajectoires = [...new Set(InstancesState.all.map(i => i.trajectoire))].sort();
+  trajSel.innerHTML = '<option value="">Toutes</option>' +
+    trajectoires.map(t => `<option value="${_instancesEsc(t)}">${_instancesEsc(t)}</option>`).join('');
+  if (trajectoires.includes(currentTraj)) trajSel.value = currentTraj;
+}
+
+function _instancesApplyLocalFilterSort() {
+  const scenario = document.getElementById('instances-scenario').value;
+  const type = document.getElementById('instances-type').value;
+  const trajectoire = document.getElementById('instances-trajectoire').value;
+  const transnationale = document.getElementById('instances-transnationale').checked;
+  const clandestine = document.getElementById('instances-clandestine').checked;
+  const search = (document.getElementById('instances-search').value || '').trim().toLowerCase();
+
+  let rows = InstancesState.all;
+  if (scenario) rows = rows.filter(i => i.scenario === scenario);
+  if (type) rows = rows.filter(i => i.type_dans_scenario === type);
+  if (trajectoire) rows = rows.filter(i => i.trajectoire === trajectoire);
+  if (transnationale) rows = rows.filter(i => i.transnationale);
+  if (clandestine) rows = rows.filter(i => i.est_clandestin);
+  if (search) {
+    rows = rows.filter(i =>
+      (i.name || '').toLowerCase().includes(search) ||
+      (i.role_dans_scenario || '').toLowerCase().includes(search)
+    );
+  }
+
+  const key = InstancesState.sortKey;
+  const dir = InstancesState.sortDir === 'asc' ? 1 : -1;
+  rows = [...rows].sort((a, b) => {
+    let av = a[key], bv = b[key];
+    if (typeof av === 'string') av = av.toLowerCase();
+    if (typeof bv === 'string') bv = bv.toLowerCase();
+    if (av == null) av = '';
+    if (bv == null) bv = '';
+    if (av < bv) return -1 * dir;
+    if (av > bv) return 1 * dir;
+    return 0;
+  });
+
+  InstancesState.filtered = rows;
+}
+
+function renderInstancesTable() {
+  const tbody = document.getElementById('instances-tbody');
+  const { filtered, page, perPage } = InstancesState;
+
+  document.getElementById('instances-count').textContent = `${filtered.length} instance(s)`;
+
+  if (filtered.length === 0) {
+    tbody.innerHTML = '<tr><td colspan="6" class="articles-empty">Aucun résultat pour ces filtres.</td></tr>';
+    document.getElementById('instances-range').textContent = '';
+    document.getElementById('instances-page-label').textContent = '';
+    document.getElementById('instances-prev').disabled = true;
+    document.getElementById('instances-next').disabled = true;
+    return;
+  }
+
+  const start = page * perPage;
+  const slice = filtered.slice(start, start + perPage);
+
+  tbody.innerHTML = slice.map(i => `
+    <tr data-key="${_instancesEsc(_instancesKey(i))}" class="${InstancesState.selected === i ? 'active' : ''}">
+      <td title="${_instancesEsc(i.scenario)}">${_instancesEsc(i.scenario)}</td>
+      <td title="${_instancesEsc(i.name)}">${_instancesEsc(i.name)}</td>
+      <td title="${_instancesEsc(i.entite_name || i.entite)}">${_instancesEsc(i.entite_name || i.entite || '—')}</td>
+      <td title="${_instancesEsc(i.type_dans_scenario)}">${_instancesEsc(i.type_dans_scenario)}</td>
+      <td>${_instancesEsc(i.trajectoire)}</td>
+      <td>${i.transnationale ? '(transnationale)' : _instancesEsc(i.zone)}</td>
+    </tr>
+  `).join('');
+
+  tbody.querySelectorAll('tr[data-key]').forEach((tr, idx) => {
+    tr.addEventListener('click', () => selectInstanceRow(slice[idx]));
+  });
+
+  const totalPages = Math.max(1, Math.ceil(filtered.length / perPage));
+  document.getElementById('instances-range').textContent =
+    `${start + 1}–${Math.min(start + perPage, filtered.length)} sur ${filtered.length}`;
+  document.getElementById('instances-page-label').textContent = `page ${page + 1} / ${totalPages}`;
+  document.getElementById('instances-prev').disabled = page === 0;
+  document.getElementById('instances-next').disabled = page >= totalPages - 1;
+}
+
+function selectInstanceRow(instance) {
+  InstancesState.selected = instance;
+  renderInstancesTable();
+  renderInstancesPanel();
+}
+
+function renderInstancesPanel() {
+  const panel = document.getElementById('instances-panel');
+  const i = InstancesState.selected;
+  if (!i) {
+    panel.innerHTML = '<div class="articles-panel-empty">Clique sur une ligne pour voir le détail.</div>';
+    return;
+  }
+
+  const periode = i.annee_debut != null
+    ? `${i.annee_debut}${i.annee_fin ? ' – ' + i.annee_fin : ' – présent'}`
+    : '(période inconnue)';
+
+  panel.innerHTML = `
+    <div class="articles-panel-title">${_instancesEsc(i.name)}</div>
+    <div class="articles-panel-sub">${_instancesEsc(i.scenario)} — ${_instancesEsc(i.type_dans_scenario)}</div>
+    <div class="articles-panel-section">
+      <label>Entité archétype parente</label>
+      ${i.entite_name ? _instancesEsc(i.entite_name) : (i.entite ? `⚠ "${_instancesEsc(i.entite)}" introuvable` : '—')}
+    </div>
+    ${i.role_dans_scenario ? `
+    <div class="articles-panel-section">
+      <label>Rôle dans le scénario</label>
+      ${_instancesEsc(i.role_dans_scenario)}
+    </div>` : ''}
+    <div class="articles-panel-section">
+      <label>Impact (local / systémique)</label>
+      ${i.impact_local != null ? i.impact_local : '?'} / ${i.impact_systemique_global != null ? i.impact_systemique_global : '?'}
+    </div>
+    <div class="articles-panel-section">
+      <label>Trajectoire</label>
+      ${_instancesEsc(i.trajectoire)}${i.est_clandestin ? ' — clandestine' : ''}
+    </div>
+    <div class="articles-panel-section">
+      <label>Période</label>
+      ${periode}
+    </div>
+    <div class="articles-panel-section">
+      <label>Zone</label>
+      ${i.transnationale ? '(transnationale, sans ancrage territorial)' : (_instancesEsc(i.zone) || '—')}
+    </div>
+    <div class="articles-panel-section" style="font-size:11px;color:#aaa">${_instancesEsc(i.fichier)}</div>
+    <button id="instances-btn-ouvrir-obsidian" class="sujets-action-confirmer" style="background:#5b4a9e">Ouvrir dans Obsidian</button>
+  `;
+
+  document.getElementById('instances-btn-ouvrir-obsidian').addEventListener('click', () => {
+    _instancesOuvrirDansObsidian(i);
+  });
+}
+
+// Génère le rapport Markdown complet -- même logique que
+// genererRapportMdArticles(), limité au scénario filtré si un scénario
+// est sélectionné, sinon tous scénarios confondus.
+async function genererRapportMdInstances() {
+  const zone = document.getElementById('instances-rapport-resultat');
+  zone.style.display = 'block';
+  zone.innerHTML = 'Génération du rapport en cours…';
+  try {
+    const res = await fetch('/api/instances/inventaire', {
+      method: 'POST', headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({scenario: document.getElementById('instances-scenario').value || ''}),
+    });
+    const data = await res.json();
+    if (!res.ok || data.error) {
+      zone.innerHTML = `Erreur : ${_instancesEsc(data.error || res.statusText)}`;
+      return;
+    }
+    zone.innerHTML = `✓ Rapport écrit dans <code>${_instancesEsc(data.rapport_md)}</code> (consultable dans Obsidian)`;
+  } catch (e) {
+    zone.innerHTML = `Erreur réseau : ${_instancesEsc(e.message)}`;
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// ONGLET EVENT_INSTANCES (chantier "GUI Entités/Instances/Événements/
+// Signaux", 7 septembre 2026) -- calque exact de l'onglet Instances
+// ci-dessus, réutilise les mêmes classes CSS .articles-*.
+// ═══════════════════════════════════════════════════════════════════════
+
+const EventInstancesState = {
+  all: [],
+  filtered: [],
+  page: 0,
+  perPage: 50,
+  sortKey: 'scenario',
+  sortDir: 'asc',
+  filtersWired: false,
+  selected: null,
+};
+
+function _eventInstancesEsc(s) {
+  return String(s == null ? '' : s)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+async function loadEventInstances() {
+  if (!EventInstancesState.filtersWired) {
+    const scenarioSel = document.getElementById('event-instances-scenario');
+    const scenarios = State.config?.scenarios || [];
+    scenarioSel.innerHTML = '<option value="">Tous</option>' +
+      scenarios.map(s => `<option value="${s}">${s}</option>`).join('');
+
+    ['event-instances-scenario', 'event-instances-portee', 'event-instances-type'].forEach(id =>
+      document.getElementById(id).addEventListener('change', () => {
+        _eventInstancesDeselect();
+        EventInstancesState.page = 0;
+        _eventInstancesApplyLocalFilterSort();
+        renderEventInstancesTable();
+      })
+    );
+    document.getElementById('event-instances-impossible').addEventListener('change', () => {
+      _eventInstancesDeselect();
+      EventInstancesState.page = 0;
+      _eventInstancesApplyLocalFilterSort();
+      renderEventInstancesTable();
+    });
+    document.getElementById('event-instances-search').addEventListener('input', () => {
+      _eventInstancesDeselect();
+      EventInstancesState.page = 0;
+      _eventInstancesApplyLocalFilterSort();
+      renderEventInstancesTable();
+    });
+    document.getElementById('event-instances-prev').addEventListener('click', () => {
+      if (EventInstancesState.page > 0) { EventInstancesState.page--; renderEventInstancesTable(); }
+    });
+    document.getElementById('event-instances-next').addEventListener('click', () => {
+      const maxPage = Math.max(0, Math.ceil(EventInstancesState.filtered.length / EventInstancesState.perPage) - 1);
+      if (EventInstancesState.page < maxPage) { EventInstancesState.page++; renderEventInstancesTable(); }
+    });
+    document.querySelectorAll('#tab-event_instances .articles-table th[data-sort]').forEach(th => {
+      th.addEventListener('click', () => {
+        const key = th.dataset.sort;
+        if (EventInstancesState.sortKey === key) {
+          EventInstancesState.sortDir = EventInstancesState.sortDir === 'asc' ? 'desc' : 'asc';
+        } else {
+          EventInstancesState.sortKey = key;
+          EventInstancesState.sortDir = 'asc';
+        }
+        _eventInstancesApplyLocalFilterSort();
+        renderEventInstancesTable();
+      });
+    });
+    document.getElementById('event-instances-btn-rapport-md').addEventListener('click', genererRapportMdEventInstances);
+
+    document.addEventListener('click', (e) => {
+      if (!EventInstancesState.selected) return;
+      const tabEl = document.getElementById('tab-event_instances');
+      if (!tabEl || !tabEl.classList.contains('active')) return;
+      const chemin = e.composedPath();
+      const dansTableau = chemin.some(el => el.classList && el.classList.contains('articles-table-wrap'));
+      const dansPanneau = chemin.some(el => el.classList && el.classList.contains('articles-sidebar'));
+      if (!dansTableau && !dansPanneau) {
+        _eventInstancesDeselect();
+      }
+    });
+
+    EventInstancesState.filtersWired = true;
+  }
+  await refreshEventInstancesData();
+}
+
+function _eventInstancesKey(i) {
+  return i.fichier;
+}
+
+function _eventInstancesDeselect() {
+  if (!EventInstancesState.selected) return;
+  EventInstancesState.selected = null;
+  renderEventInstancesTable();
+  renderEventInstancesPanel();
+}
+
+// Ouvrir dans Obsidian -- dossier plat event_instances/, comme instances/.
+function _eventInstancesOuvrirDansObsidian(instance) {
+  const vaultRoot = (State.config?.vault_root || '').replace(/[/\\]+$/, '');
+  if (!vaultRoot) {
+    alert('vault_root introuvable dans la configuration -- impossible de construire le lien Obsidian.');
+    return;
+  }
+  const vaultName = vaultRoot.split(/[/\\]/).pop();
+  const cheminRelatif = `event_instances/${instance.fichier.replace(/\.md$/i, '')}`;
+  const uri = `obsidian://open?vault=${encodeURIComponent(vaultName)}&file=${encodeURIComponent(cheminRelatif)}`;
+  window.open(uri, '_blank');
+}
+
+async function refreshEventInstancesData() {
+  const tbody = document.getElementById('event-instances-tbody');
+  tbody.innerHTML = '<tr><td colspan="6" class="articles-empty">Chargement…</td></tr>';
+
+  try {
+    const res = await fetch('/api/event_instances/liste');
+    const data = await res.json();
+    if (!res.ok || data.error) {
+      tbody.innerHTML = `<tr><td colspan="6" class="articles-empty">Erreur : ${_eventInstancesEsc(data.error || res.statusText)}</td></tr>`;
+      return;
+    }
+    EventInstancesState.all = data.event_instances || [];
+  } catch (e) {
+    tbody.innerHTML = `<tr><td colspan="6" class="articles-empty">Erreur réseau : ${_eventInstancesEsc(e.message)}</td></tr>`;
+    return;
+  }
+
+  if (EventInstancesState.selected) {
+    const key = _eventInstancesKey(EventInstancesState.selected);
+    EventInstancesState.selected = EventInstancesState.all.find(i => _eventInstancesKey(i) === key) || null;
+  }
+
+  _eventInstancesPopulateFilters();
+  EventInstancesState.page = 0;
+  _eventInstancesApplyLocalFilterSort();
+  renderEventInstancesTable();
+  renderEventInstancesPanel();
+}
+
+function _eventInstancesPopulateFilters() {
+  const porteeSel = document.getElementById('event-instances-portee');
+  const currentPortee = porteeSel.value;
+  const portees = [...new Set(EventInstancesState.all.map(i => i.portee))].sort();
+  porteeSel.innerHTML = '<option value="">Toutes</option>' +
+    portees.map(p => `<option value="${_eventInstancesEsc(p)}">${_eventInstancesEsc(p)}</option>`).join('');
+  if (portees.includes(currentPortee)) porteeSel.value = currentPortee;
+
+  const typeSel = document.getElementById('event-instances-type');
+  const currentType = typeSel.value;
+  const types = [...new Set(EventInstancesState.all.map(i => i.type_evenement))].sort();
+  typeSel.innerHTML = '<option value="">Tous</option>' +
+    types.map(t => `<option value="${_eventInstancesEsc(t)}">${_eventInstancesEsc(t)}</option>`).join('');
+  if (types.includes(currentType)) typeSel.value = currentType;
+}
+
+function _eventInstancesApplyLocalFilterSort() {
+  const scenario = document.getElementById('event-instances-scenario').value;
+  const portee = document.getElementById('event-instances-portee').value;
+  const type = document.getElementById('event-instances-type').value;
+  const impossibleSeulement = document.getElementById('event-instances-impossible').checked;
+  const search = (document.getElementById('event-instances-search').value || '').trim().toLowerCase();
+
+  let rows = EventInstancesState.all;
+  if (scenario) rows = rows.filter(i => i.scenario === scenario);
+  if (portee) rows = rows.filter(i => i.portee === portee);
+  if (type) rows = rows.filter(i => i.type_evenement === type);
+  if (impossibleSeulement) rows = rows.filter(i => i.impossible);
+  if (search) {
+    rows = rows.filter(i => (i.name || '').toLowerCase().includes(search));
+  }
+
+  const key = EventInstancesState.sortKey;
+  const dir = EventInstancesState.sortDir === 'asc' ? 1 : -1;
+  rows = [...rows].sort((a, b) => {
+    let av = a[key], bv = b[key];
+    if (typeof av === 'string') av = av.toLowerCase();
+    if (typeof bv === 'string') bv = bv.toLowerCase();
+    if (av == null) av = '';
+    if (bv == null) bv = '';
+    if (av < bv) return -1 * dir;
+    if (av > bv) return 1 * dir;
+    return 0;
+  });
+
+  EventInstancesState.filtered = rows;
+}
+
+function renderEventInstancesTable() {
+  const tbody = document.getElementById('event-instances-tbody');
+  const { filtered, page, perPage } = EventInstancesState;
+
+  document.getElementById('event-instances-count').textContent = `${filtered.length} événement(s)`;
+
+  if (filtered.length === 0) {
+    tbody.innerHTML = '<tr><td colspan="6" class="articles-empty">Aucun résultat pour ces filtres.</td></tr>';
+    document.getElementById('event-instances-range').textContent = '';
+    document.getElementById('event-instances-page-label').textContent = '';
+    document.getElementById('event-instances-prev').disabled = true;
+    document.getElementById('event-instances-next').disabled = true;
+    return;
+  }
+
+  const start = page * perPage;
+  const slice = filtered.slice(start, start + perPage);
+
+  tbody.innerHTML = slice.map(i => `
+    <tr data-key="${_eventInstancesEsc(_eventInstancesKey(i))}" class="${EventInstancesState.selected === i ? 'active' : ''}">
+      <td title="${_eventInstancesEsc(i.scenario)}">${_eventInstancesEsc(i.scenario)}</td>
+      <td title="${_eventInstancesEsc(i.name)}">${_eventInstancesEsc(i.name)}</td>
+      <td title="${_eventInstancesEsc(i.archetype_name || i.archetype)}">${_eventInstancesEsc(i.archetype_name || i.archetype || '—')}</td>
+      <td>${_eventInstancesEsc(i.portee)}</td>
+      <td>${_eventInstancesEsc(i.date_label || i.date)}</td>
+      <td>${i.custom ? 'oui' : 'non'}</td>
+    </tr>
+  `).join('');
+
+  tbody.querySelectorAll('tr[data-key]').forEach((tr, idx) => {
+    tr.addEventListener('click', () => selectEventInstanceRow(slice[idx]));
+  });
+
+  const totalPages = Math.max(1, Math.ceil(filtered.length / perPage));
+  document.getElementById('event-instances-range').textContent =
+    `${start + 1}–${Math.min(start + perPage, filtered.length)} sur ${filtered.length}`;
+  document.getElementById('event-instances-page-label').textContent = `page ${page + 1} / ${totalPages}`;
+  document.getElementById('event-instances-prev').disabled = page === 0;
+  document.getElementById('event-instances-next').disabled = page >= totalPages - 1;
+}
+
+function selectEventInstanceRow(instance) {
+  EventInstancesState.selected = instance;
+  renderEventInstancesTable();
+  renderEventInstancesPanel();
+}
+
+function renderEventInstancesPanel() {
+  const panel = document.getElementById('event-instances-panel');
+  const i = EventInstancesState.selected;
+  if (!i) {
+    panel.innerHTML = '<div class="articles-panel-empty">Clique sur une ligne pour voir le détail.</div>';
+    return;
+  }
+
+  panel.innerHTML = `
+    <div class="articles-panel-title">${_eventInstancesEsc(i.name)}</div>
+    <div class="articles-panel-sub">${_eventInstancesEsc(i.scenario)} — ${_eventInstancesEsc(i.type_evenement)}</div>
+    ${i.description ? `<div class="articles-panel-section">${_eventInstancesEsc(i.description)}</div>` : ''}
+    <div class="articles-panel-section">
+      <label>Archétype parent</label>
+      ${i.archetype_name ? _eventInstancesEsc(i.archetype_name) : (i.archetype ? `⚠ "${_eventInstancesEsc(i.archetype)}" introuvable` : '—')}
+    </div>
+    <div class="articles-panel-section">
+      <label>Portée</label>
+      ${_eventInstancesEsc(i.portee)}${i.impossible ? ' — marqué impossible' : ''}
+    </div>
+    <div class="articles-panel-section">
+      <label>Date</label>
+      ${_eventInstancesEsc(i.date_label || i.date || '?')}
+    </div>
+    <div class="articles-panel-section">
+      <label>Origine</label>
+      ${i.custom ? 'Custom (injecté manuellement)' : 'Canonique'}
+    </div>
+    ${i.zone ? `
+    <div class="articles-panel-section">
+      <label>Localisation</label>
+      ${_eventInstancesEsc(i.lieu || i.zone)}${i.type_lieu ? ` (${_eventInstancesEsc(i.type_lieu)})` : ''}
+    </div>` : ''}
+    <div class="articles-panel-section" style="font-size:11px;color:#aaa">${_eventInstancesEsc(i.fichier)}</div>
+    <button id="event-instances-btn-ouvrir-obsidian" class="sujets-action-confirmer" style="background:#5b4a9e">Ouvrir dans Obsidian</button>
+  `;
+
+  document.getElementById('event-instances-btn-ouvrir-obsidian').addEventListener('click', () => {
+    _eventInstancesOuvrirDansObsidian(i);
+  });
+}
+
+async function genererRapportMdEventInstances() {
+  const zone = document.getElementById('event-instances-rapport-resultat');
+  zone.style.display = 'block';
+  zone.innerHTML = 'Génération du rapport en cours…';
+  try {
+    const res = await fetch('/api/event_instances/inventaire', {
+      method: 'POST', headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({scenario: document.getElementById('event-instances-scenario').value || ''}),
+    });
+    const data = await res.json();
+    if (!res.ok || data.error) {
+      zone.innerHTML = `Erreur : ${_eventInstancesEsc(data.error || res.statusText)}`;
+      return;
+    }
+    zone.innerHTML = `✓ Rapport écrit dans <code>${_eventInstancesEsc(data.rapport_md)}</code> (consultable dans Obsidian)`;
+  } catch (e) {
+    zone.innerHTML = `Erreur réseau : ${_eventInstancesEsc(e.message)}`;
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// ONGLET SIGNAUX FAIBLES (chantier "GUI Entités/Instances/Événements/
+// Signaux", 7 septembre 2026, dernier des 3 types) -- calque de
+// l'onglet Instances, réutilise .articles-*. Dossier peu peuplé (~3
+// signaux) mais même filtrage local que les 2 autres pour cohérence.
+// ═══════════════════════════════════════════════════════════════════════
+
+const SignauxState = {
+  all: [],
+  filtered: [],
+  page: 0,
+  perPage: 50,
+  sortKey: 'slug',
+  sortDir: 'asc',
+  filtersWired: false,
+  selected: null,
+};
+
+function _signauxEsc(s) {
+  return String(s == null ? '' : s)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+async function loadSignaux() {
+  if (!SignauxState.filtersWired) {
+    const scenarioSel = document.getElementById('signaux-scenario');
+    const scenarios = State.config?.scenarios || [];
+    scenarioSel.innerHTML = '<option value="">Tous</option>' +
+      scenarios.map(s => `<option value="${s}">${s}</option>`).join('');
+
+    ['signaux-scenario', 'signaux-categorie', 'signaux-statut'].forEach(id =>
+      document.getElementById(id).addEventListener('change', () => {
+        _signauxDeselect();
+        SignauxState.page = 0;
+        _signauxApplyLocalFilterSort();
+        renderSignauxTable();
+      })
+    );
+    document.getElementById('signaux-impact').addEventListener('change', () => {
+      _signauxDeselect();
+      SignauxState.page = 0;
+      _signauxApplyLocalFilterSort();
+      renderSignauxTable();
+    });
+    document.getElementById('signaux-search').addEventListener('input', () => {
+      _signauxDeselect();
+      SignauxState.page = 0;
+      _signauxApplyLocalFilterSort();
+      renderSignauxTable();
+    });
+    document.getElementById('signaux-prev').addEventListener('click', () => {
+      if (SignauxState.page > 0) { SignauxState.page--; renderSignauxTable(); }
+    });
+    document.getElementById('signaux-next').addEventListener('click', () => {
+      const maxPage = Math.max(0, Math.ceil(SignauxState.filtered.length / SignauxState.perPage) - 1);
+      if (SignauxState.page < maxPage) { SignauxState.page++; renderSignauxTable(); }
+    });
+    document.querySelectorAll('#tab-signaux .articles-table th[data-sort]').forEach(th => {
+      th.addEventListener('click', () => {
+        const key = th.dataset.sort;
+        if (SignauxState.sortKey === key) {
+          SignauxState.sortDir = SignauxState.sortDir === 'asc' ? 'desc' : 'asc';
+        } else {
+          SignauxState.sortKey = key;
+          SignauxState.sortDir = 'asc';
+        }
+        _signauxApplyLocalFilterSort();
+        renderSignauxTable();
+      });
+    });
+    document.getElementById('signaux-btn-rapport-md').addEventListener('click', genererRapportMdSignaux);
+
+    document.addEventListener('click', (e) => {
+      if (!SignauxState.selected) return;
+      const tabEl = document.getElementById('tab-signaux');
+      if (!tabEl || !tabEl.classList.contains('active')) return;
+      const chemin = e.composedPath();
+      const dansTableau = chemin.some(el => el.classList && el.classList.contains('articles-table-wrap'));
+      const dansPanneau = chemin.some(el => el.classList && el.classList.contains('articles-sidebar'));
+      if (!dansTableau && !dansPanneau) {
+        _signauxDeselect();
+      }
+    });
+
+    SignauxState.filtersWired = true;
+  }
+  await refreshSignauxData();
+}
+
+function _signauxKey(s) {
+  return s.fichier;
+}
+
+function _signauxDeselect() {
+  if (!SignauxState.selected) return;
+  SignauxState.selected = null;
+  renderSignauxTable();
+  renderSignauxPanel();
+}
+
+// Ouvrir dans Obsidian -- dossier plat signaux_custom/.
+function _signauxOuvrirDansObsidian(signal) {
+  const vaultRoot = (State.config?.vault_root || '').replace(/[/\\]+$/, '');
+  if (!vaultRoot) {
+    alert('vault_root introuvable dans la configuration -- impossible de construire le lien Obsidian.');
+    return;
+  }
+  const vaultName = vaultRoot.split(/[/\\]/).pop();
+  const cheminRelatif = `signaux_custom/${signal.fichier.replace(/\.md$/i, '')}`;
+  const uri = `obsidian://open?vault=${encodeURIComponent(vaultName)}&file=${encodeURIComponent(cheminRelatif)}`;
+  window.open(uri, '_blank');
+}
+
+async function refreshSignauxData() {
+  const tbody = document.getElementById('signaux-tbody');
+  tbody.innerHTML = '<tr><td colspan="5" class="articles-empty">Chargement…</td></tr>';
+
+  try {
+    const res = await fetch('/api/signaux/liste');
+    const data = await res.json();
+    if (!res.ok || data.error) {
+      tbody.innerHTML = `<tr><td colspan="5" class="articles-empty">Erreur : ${_signauxEsc(data.error || res.statusText)}</td></tr>`;
+      return;
+    }
+    SignauxState.all = (data.signaux || []).map(s => ({
+      ...s,
+      scenarios_str: (s.scenarios || []).join(', '),
+    }));
+  } catch (e) {
+    tbody.innerHTML = `<tr><td colspan="5" class="articles-empty">Erreur réseau : ${_signauxEsc(e.message)}</td></tr>`;
+    return;
+  }
+
+  if (SignauxState.selected) {
+    const key = _signauxKey(SignauxState.selected);
+    SignauxState.selected = SignauxState.all.find(s => _signauxKey(s) === key) || null;
+  }
+
+  _signauxPopulateFilters();
+  SignauxState.page = 0;
+  _signauxApplyLocalFilterSort();
+  renderSignauxTable();
+  renderSignauxPanel();
+}
+
+function _signauxPopulateFilters() {
+  const catSel = document.getElementById('signaux-categorie');
+  const currentCat = catSel.value;
+  const categories = [...new Set(SignauxState.all.map(s => s.categorie))].sort();
+  catSel.innerHTML = '<option value="">Toutes</option>' +
+    categories.map(c => `<option value="${_signauxEsc(c)}">${_signauxEsc(c)}</option>`).join('');
+  if (categories.includes(currentCat)) catSel.value = currentCat;
+
+  const statutSel = document.getElementById('signaux-statut');
+  const currentStatut = statutSel.value;
+  const statuts = [...new Set(SignauxState.all.map(s => s.statut))].sort();
+  statutSel.innerHTML = '<option value="">Tous</option>' +
+    statuts.map(s => `<option value="${_signauxEsc(s)}">${_signauxEsc(s)}</option>`).join('');
+  if (statuts.includes(currentStatut)) statutSel.value = currentStatut;
+}
+
+function _signauxApplyLocalFilterSort() {
+  const scenario = document.getElementById('signaux-scenario').value;
+  const categorie = document.getElementById('signaux-categorie').value;
+  const statut = document.getElementById('signaux-statut').value;
+  const impactSeulement = document.getElementById('signaux-impact').checked;
+  const search = (document.getElementById('signaux-search').value || '').trim().toLowerCase();
+
+  let rows = SignauxState.all;
+  if (scenario) rows = rows.filter(s => (s.scenarios || []).includes(scenario));
+  if (categorie) rows = rows.filter(s => s.categorie === categorie);
+  if (statut) rows = rows.filter(s => s.statut === statut);
+  if (impactSeulement) rows = rows.filter(s => s.a_impact_chiffre);
+  if (search) {
+    rows = rows.filter(s => (s.slug || '').toLowerCase().includes(search));
+  }
+
+  const key = SignauxState.sortKey;
+  const dir = SignauxState.sortDir === 'asc' ? 1 : -1;
+  rows = [...rows].sort((a, b) => {
+    let av = a[key], bv = b[key];
+    if (typeof av === 'string') av = av.toLowerCase();
+    if (typeof bv === 'string') bv = bv.toLowerCase();
+    if (av == null) av = '';
+    if (bv == null) bv = '';
+    if (av < bv) return -1 * dir;
+    if (av > bv) return 1 * dir;
+    return 0;
+  });
+
+  SignauxState.filtered = rows;
+}
+
+function renderSignauxTable() {
+  const tbody = document.getElementById('signaux-tbody');
+  const { filtered, page, perPage } = SignauxState;
+
+  document.getElementById('signaux-count').textContent = `${filtered.length} signal(aux)`;
+
+  if (filtered.length === 0) {
+    tbody.innerHTML = '<tr><td colspan="5" class="articles-empty">Aucun résultat pour ces filtres.</td></tr>';
+    document.getElementById('signaux-range').textContent = '';
+    document.getElementById('signaux-page-label').textContent = '';
+    document.getElementById('signaux-prev').disabled = true;
+    document.getElementById('signaux-next').disabled = true;
+    return;
+  }
+
+  const start = page * perPage;
+  const slice = filtered.slice(start, start + perPage);
+
+  tbody.innerHTML = slice.map(s => `
+    <tr data-key="${_signauxEsc(_signauxKey(s))}" class="${SignauxState.selected === s ? 'active' : ''}">
+      <td title="${_signauxEsc(s.slug)}">${_signauxEsc(s.slug)}</td>
+      <td>${_signauxEsc(s.categorie)}</td>
+      <td>${_signauxEsc(s.statut)}</td>
+      <td title="${_signauxEsc(s.scenarios_str)}">${_signauxEsc(s.scenarios_str)}</td>
+      <td>${s.a_impact_chiffre ? 'oui' : 'non'}</td>
+    </tr>
+  `).join('');
+
+  tbody.querySelectorAll('tr[data-key]').forEach((tr, idx) => {
+    tr.addEventListener('click', () => selectSignalRow(slice[idx]));
+  });
+
+  const totalPages = Math.max(1, Math.ceil(filtered.length / perPage));
+  document.getElementById('signaux-range').textContent =
+    `${start + 1}–${Math.min(start + perPage, filtered.length)} sur ${filtered.length}`;
+  document.getElementById('signaux-page-label').textContent = `page ${page + 1} / ${totalPages}`;
+  document.getElementById('signaux-prev').disabled = page === 0;
+  document.getElementById('signaux-next').disabled = page >= totalPages - 1;
+}
+
+function selectSignalRow(signal) {
+  SignauxState.selected = signal;
+  renderSignauxTable();
+  renderSignauxPanel();
+}
+
+function renderSignauxPanel() {
+  const panel = document.getElementById('signaux-panel');
+  const s = SignauxState.selected;
+  if (!s) {
+    panel.innerHTML = '<div class="articles-panel-empty">Clique sur une ligne pour voir le détail.</div>';
+    return;
+  }
+
+  panel.innerHTML = `
+    <div class="articles-panel-title">${_signauxEsc(s.slug)}</div>
+    <div class="articles-panel-sub">${_signauxEsc(s.categorie)} — ${_signauxEsc(s.statut)}</div>
+    ${s.description ? `<div class="articles-panel-section">${_signauxEsc(s.description)}</div>` : ''}
+    <div class="articles-panel-section">
+      <label>Variables cibles</label>
+      ${(s.variables_cibles || []).length ? _signauxEsc(s.variables_cibles.join(', ')) : '—'}
+    </div>
+    <div class="articles-panel-section">
+      <label>Scénarios rattachés</label>
+      ${(s.scenarios || []).length ? _signauxEsc(s.scenarios.join(', ')) : '⚠ aucun (Trajectoire injectée absente/vide)'}
+    </div>
+    ${(s.trajectoire || []).length ? `
+    <div class="articles-panel-section">
+      <label>Trajectoire${s.trajectoire.length > 1 ? ` (${s.trajectoire.length} entrées, une par variable cible)` : ''}</label>
+      ${s.trajectoire.map((entree, idx) => `
+        ${s.trajectoire.length > 1 ? `<div style="font-weight:600;margin-top:${idx > 0 ? '10px' : '0'}">Entrée ${idx + 1}</div>` : ''}
+        ${Object.entries(entree).map(([scen, d]) => `
+          <div style="margin-top:6px">
+            <div style="font-weight:600;color:#555">${_signauxEsc(scen)} <span style="font-weight:400;color:#999">— ${_signauxEsc(d.date_bascule || '')}</span></div>
+            <div>${_signauxEsc(d.evolution || '')}</div>
+            <div style="font-size:11px;color:#888">${_signauxEsc(d.evenement_cle || '')}</div>
+          </div>
+        `).join('')}
+      `).join('')}
+    </div>` : ''}
+    <div class="articles-panel-section">
+      <label>Source</label>
+      ${_signauxEsc(s.source)}
+    </div>
+    <div class="articles-panel-section">
+      <label>Impact chiffré</label>
+      ${s.a_impact_chiffre ? 'oui' : 'non'}
+    </div>
+    <div class="articles-panel-section" style="font-size:11px;color:#aaa">${_signauxEsc(s.fichier)}</div>
+    <button id="signaux-btn-ouvrir-obsidian" class="sujets-action-confirmer" style="background:#5b4a9e">Ouvrir dans Obsidian</button>
+  `;
+
+  document.getElementById('signaux-btn-ouvrir-obsidian').addEventListener('click', () => {
+    _signauxOuvrirDansObsidian(s);
+  });
+}
+
+async function genererRapportMdSignaux() {
+  const zone = document.getElementById('signaux-rapport-resultat');
+  zone.style.display = 'block';
+  zone.innerHTML = 'Génération du rapport en cours…';
+  try {
+    const res = await fetch('/api/signaux/inventaire', {
+      method: 'POST', headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({scenario: document.getElementById('signaux-scenario').value || ''}),
+    });
+    const data = await res.json();
+    if (!res.ok || data.error) {
+      zone.innerHTML = `Erreur : ${_signauxEsc(data.error || res.statusText)}`;
+      return;
+    }
+    zone.innerHTML = `✓ Rapport écrit dans <code>${_signauxEsc(data.rapport_md)}</code> (consultable dans Obsidian)`;
+  } catch (e) {
+    zone.innerHTML = `Erreur réseau : ${_signauxEsc(e.message)}`;
+  }
+}
+
+initPanelResizer('#tab-signaux .articles-sidebar', 'signaux-resizer', 'ourrassol_signaux_panel_width');
+
+// ═══════════════════════════════════════════════════════════════════════
+// ONGLET RÉSUMÉS PAR SCÉNARIO (demande de David, 7 septembre 2026) --
+// gabarit différent des 3 précédents (pas de table+panneau, une grille
+// de cartes -- 6 scénarios seulement, pas besoin de filtres/pagination).
+// Même mécanique GET (cache)/POST (régénération, coûte de vrais appels
+// LLM) que lancerDetectionBasculements() côté onglet Articles.
+// ═══════════════════════════════════════════════════════════════════════
+
+const ResumesState = {
+  cache: {},       // scenario -> {resume, n_instances, n_evenements, generated_at, erreur?}
+  regenerating: new Set(),  // scénarios en cours de régénération (désactive leur bouton)
+};
+
+function _resumesEsc(s) {
+  return String(s == null ? '' : s)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+async function loadResumes() {
+  if (!document.getElementById('resumes-btn-tout-regenerer').dataset.wired) {
+    document.getElementById('resumes-btn-tout-regenerer').addEventListener('click', () => {
+      regenererResume(null);  // null = tous les scénarios
+    });
+    document.getElementById('resumes-btn-tout-regenerer').dataset.wired = '1';
+  }
+  await refreshResumesData();
+}
+
+async function refreshResumesData() {
+  const grid = document.getElementById('resumes-grid');
+  if (!Object.keys(ResumesState.cache).length) {
+    grid.innerHTML = '<div class="resumes-card-empty">Chargement…</div>';
+  }
+  try {
+    const res = await fetch('/api/scenarios/resume');
+    const data = await res.json();
+    if (!res.ok || data.error) {
+      grid.innerHTML = `<div class="resumes-card-empty">Erreur : ${_resumesEsc(data.error || res.statusText)}</div>`;
+      return;
+    }
+    ResumesState.cache = data.resumes_par_scenario || {};
+  } catch (e) {
+    grid.innerHTML = `<div class="resumes-card-empty">Erreur réseau : ${_resumesEsc(e.message)}</div>`;
+    return;
+  }
+  renderResumesGrid();
+}
+
+function renderResumesGrid() {
+  const grid = document.getElementById('resumes-grid');
+  const scenarios = State.config?.scenarios || Object.keys(ResumesState.cache);
+
+  grid.innerHTML = scenarios.map(scenario => {
+    const data = ResumesState.cache[scenario];
+    const enCours = ResumesState.regenerating.has(scenario);
+    let corps;
+    if (enCours) {
+      corps = '<div class="resumes-card-empty">Génération en cours… (peut prendre jusqu\'à 1-2 min)</div>';
+    } else if (data && data.resume) {
+      corps = `<div class="resumes-card-text">${_resumesEsc(data.resume)}</div>`;
+    } else if (data && data.erreur) {
+      corps = `<div class="resumes-card-empty">Échec de la dernière génération : ${_resumesEsc(data.erreur)}</div>`;
+    } else {
+      corps = '<div class="resumes-card-empty">Jamais généré.</div>';
+    }
+    const meta = data && data.generated_at
+      ? `Généré le ${_resumesEsc(data.generated_at)} — ${data.n_instances ?? '?'} instance(s), ${data.n_evenements ?? '?'} événement(s) considérés`
+      : '';
+    return `
+      <div class="resumes-card" data-scenario="${_resumesEsc(scenario)}">
+        <div class="resumes-card-title">${_resumesEsc(scenario)}</div>
+        ${meta ? `<div class="resumes-card-meta">${meta}</div>` : ''}
+        ${corps}
+        <button class="resumes-btn-regenerer" data-scenario="${_resumesEsc(scenario)}" ${enCours ? 'disabled' : ''}>
+          ${enCours ? 'Génération…' : (data && data.resume ? 'Régénérer' : 'Générer')}
+        </button>
+      </div>
+    `;
+  }).join('');
+
+  grid.querySelectorAll('.resumes-btn-regenerer').forEach(btn => {
+    btn.addEventListener('click', () => regenererResume(btn.dataset.scenario));
+  });
+}
+
+// Régénère un scénario (ou tous si scenario === null). Coûte de vrais
+// appels LLM -- jamais déclenché automatiquement, toujours via un clic
+// explicite. Désactive le(s) bouton(s) concerné(s) pendant l'appel
+// (synchrone côté serveur, peut prendre jusqu'à plusieurs minutes pour
+// tous les scénarios).
+async function regenererResume(scenario) {
+  const toutBtn = document.getElementById('resumes-btn-tout-regenerer');
+  const statut = document.getElementById('resumes-statut');
+
+  if (scenario) {
+    ResumesState.regenerating.add(scenario);
+  } else {
+    (State.config?.scenarios || Object.keys(ResumesState.cache)).forEach(s => ResumesState.regenerating.add(s));
+    toutBtn.disabled = true;
+  }
+  renderResumesGrid();
+  statut.textContent = scenario
+    ? `Génération en cours pour ${scenario}…`
+    : `Génération en cours pour tous les scénarios… (jusqu'à plusieurs minutes, 1 appel LLM par scénario)`;
+
+  try {
+    const res = await fetch('/api/scenarios/generer_resume', {
+      method: 'POST', headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(scenario ? {scenario} : {}),
+    });
+    const data = await res.json();
+    if (!res.ok || data.error) {
+      statut.textContent = `Erreur : ${data.error || res.statusText}`;
+      return;
+    }
+    statut.textContent = '';
+    // Recharge depuis le cache fraîchement écrit -- source unique de
+    // vérité, plutôt que de fusionner la réponse de la requête à la main.
+    await refreshResumesData();
+  } catch (e) {
+    statut.textContent = `Erreur réseau : ${e.message}`;
+  } finally {
+    if (scenario) {
+      ResumesState.regenerating.delete(scenario);
+    } else {
+      ResumesState.regenerating.clear();
+      toutBtn.disabled = false;
+    }
+    renderResumesGrid();
   }
 }

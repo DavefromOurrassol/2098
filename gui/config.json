@@ -12,7 +12,7 @@
   ],
   "llm": {
     "provider": "mistral",
-    "model_mistral": "mistral-small-latest",
+    "model_mistral": "mistral-large-latest",
     "model_claude": "claude-sonnet-4-6",
     "available_providers": [
       "mistral",

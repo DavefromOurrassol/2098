@@ -167,6 +167,17 @@
     }
     #llm-force-banner button:hover { background: #fff0d0; }
 
+    /* ── Bandeau global "Mois de parution" (7 septembre 2026) ── sticky,
+       visible sur TOUTE vue (contrairement aux bandeaux locaux déjà
+       existants -- #sujets-banner, écran "Générer un article" -- limités
+       à leur propre onglet). Même palette que .injev-banner pour rester
+       cohérent visuellement avec les autres mentions du mois de parution. */
+    #mois-parution-banner {
+      background: #eef4fb; border-bottom: 1px solid #cfe0f0;
+      color: #34495e; font-size: 12px; font-weight: 600;
+      padding: 6px 20px; flex-shrink: 0;
+    }
+
     /* ── Onglet Chantiers (point 4.5, 26 juillet 2026) ── */
     #tab-chantiers { display: none; flex-direction: column; height: 100%; padding: 20px; box-sizing: border-box; overflow-y: auto; }
     #tab-chantiers.active { display: flex; }
@@ -218,6 +229,25 @@
     .redaction-layout { display: flex; gap: 16px; flex: 1; min-height: 0; }
     .redaction-table-wrap { flex: 1; min-width: 0; display: flex; flex-direction: column; min-height: 0; }
     .redaction-table-scroll { flex: 1; min-height: 0; overflow-y: auto; border: 1px solid #eee; border-radius: 6px; }
+    /* ── Redimensionnement du panneau de détail Rédaction (7 septembre 2026) ──
+       Même mécanisme que #sidebar-resizer (poignée de glissement, largeur
+       mémorisée dans localStorage) -- le panneau était figé à 340px,
+       tronquant la lecture de champs longs (ton du journal, ton_personnel). */
+    #redaction-resizer {
+      width: 6px; flex-shrink: 0; cursor: col-resize;
+      background: transparent; position: relative;
+    }
+    #redaction-resizer:hover, #redaction-resizer.dragging {
+      background: #d8c8f0;
+    }
+    #redaction-resizer::after {
+      content: ''; position: absolute; top: 0; bottom: 0; left: 2px;
+      width: 2px; background: #e0e0e0;
+    }
+    #redaction-resizer:hover::after, #redaction-resizer.dragging::after {
+      background: #6a3db5;
+    }
+    body.redaction-resizing { cursor: col-resize; user-select: none; }
     .redaction-table { width: 100%; border-collapse: collapse; font-size: 12px; table-layout: fixed; }
     .redaction-table thead { position: sticky; top: 0; background: #fff; z-index: 1; }
     .redaction-table th {
@@ -243,7 +273,7 @@
     }
     .redaction-pagination-btns button:disabled { opacity: 0.4; cursor: not-allowed; }
     .redaction-pagination-btns button:not(:disabled):hover { border-color: #3b6fd4; color: #2a52a8; }
-    .redaction-sidebar { width: 340px; flex-shrink: 0; overflow-y: auto; }
+    .redaction-sidebar { width: 340px; min-width: 280px; max-width: 900px; flex-shrink: 0; overflow-y: auto; box-sizing: border-box; }
     .redaction-panel { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 14px; font-size: 12px; }
     .redaction-panel-empty { color: #999; font-style: italic; }
     .redaction-panel-title { font-weight: 700; font-size: 14px; margin-bottom: 2px; }
@@ -288,6 +318,165 @@
       font-family: 'JetBrains Mono', monospace; padding: 4px 8px; border: 1px solid #ccc;
       border-radius: 4px; background: #fff; font-size: 12px;
     }
+
+    /* ── Onglet Articles — inventaire complet (5 septembre 2026, chantier
+       "Suite narrative des événements") -- même gabarit que .redaction-*
+       (table triable + filtres + pagination + panneau), classes dupliquées
+       sous préfixe articles- pour rester lisible malgré le contenu différent
+       (articles, pas personnes). ── */
+    #tab-articles { display: none; flex-direction: column; height: 100%; padding: 20px; box-sizing: border-box; min-height: 0; }
+    #tab-articles.active { display: flex; }
+    .articles-toolbar { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; flex-wrap: wrap; flex-shrink: 0; }
+    .articles-toolbar label { font-size: 11px; color: #888; }
+    .articles-toolbar select, .articles-toolbar input[type="text"] {
+      font-family: 'JetBrains Mono', monospace; padding: 4px 8px; border: 1px solid #ccc;
+      border-radius: 4px; background: #fff; font-size: 12px;
+    }
+    .articles-filter-group { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
+    .articles-toolbar input[type="text"] { width: 160px; }
+    .articles-count { font-size: 11px; color: #888; margin-left: auto; }
+    .articles-layout { display: flex; gap: 16px; flex: 1; min-height: 0; }
+    .articles-table-wrap { flex: 1; min-width: 0; display: flex; flex-direction: column; min-height: 0; }
+    .articles-table-scroll { flex: 1; min-height: 0; overflow-y: auto; border: 1px solid #eee; border-radius: 6px; }
+    .articles-table { width: 100%; border-collapse: collapse; font-size: 12px; table-layout: fixed; }
+    .articles-table thead { position: sticky; top: 0; background: #fff; z-index: 1; }
+    .articles-table th {
+      text-align: left; padding: 6px 6px; font-weight: 600; color: #666;
+      border-bottom: 2px solid #ddd; cursor: pointer; user-select: none;
+    }
+    .articles-table th:hover { color: #3b6fd4; }
+    .articles-table td { padding: 5px 6px; border-bottom: 1px solid #f0f0f0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .articles-table tbody tr { cursor: pointer; }
+    .articles-table tbody tr:hover { background: #f5f7fc; }
+    .articles-table tbody tr.active { background: #eef4fa; }
+    .articles-empty { color: #999; font-style: italic; font-size: 13px; padding: 20px 0; text-align: center; }
+    .articles-pagination {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 8px 4px 0; font-size: 11px; color: #888; flex-shrink: 0;
+    }
+    .articles-pagination-btns { display: flex; align-items: center; gap: 10px; }
+    .articles-pagination-btns button {
+      font-size: 11px; padding: 3px 10px; border-radius: 4px; cursor: pointer;
+      border: 1px solid #ddd; background: #fff; color: #555;
+    }
+    .articles-pagination-btns button:disabled { opacity: 0.4; cursor: not-allowed; }
+    .articles-pagination-btns button:not(:disabled):hover { border-color: #3b6fd4; color: #2a52a8; }
+    .articles-sidebar { width: 360px; min-width: 280px; max-width: 900px; flex-shrink: 0; overflow-y: auto; box-sizing: border-box; }
+    /* ── Redimensionnement des panneaux Articles/Instances/Événements
+       (7 septembre 2026) -- classe générique réutilisée sur les 3 onglets
+       qui partagent le gabarit .articles-sidebar, même mécanisme que
+       #redaction-resizer (poignée de glissement, largeur mémorisée dans
+       localStorage, une clé par onglet). ── */
+    .panel-resizer {
+      width: 6px; flex-shrink: 0; cursor: col-resize;
+      background: transparent; position: relative;
+    }
+    .panel-resizer:hover, .panel-resizer.dragging {
+      background: #d8c8f0;
+    }
+    .panel-resizer::after {
+      content: ''; position: absolute; top: 0; bottom: 0; left: 2px;
+      width: 2px; background: #e0e0e0;
+    }
+    .panel-resizer:hover::after, .panel-resizer.dragging::after {
+      background: #6a3db5;
+    }
+    body.panel-resizing { cursor: col-resize; user-select: none; }
+    .articles-panel { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 14px; font-size: 12px; }
+    .articles-panel-empty { color: #999; font-style: italic; }
+    .articles-panel-title { font-weight: 700; font-size: 14px; margin-bottom: 2px; }
+    .articles-panel-sub { color: #888; margin-bottom: 12px; }
+    .articles-panel-section { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #eee; }
+    .articles-panel-section:last-child { border-bottom: none; }
+    .articles-panel-section label { display: block; font-size: 11px; color: #666; margin-bottom: 4px; }
+
+    /* ── Onglet Instances (chantier "GUI Entités/Instances/Événements/
+       Signaux", 7 septembre 2026) -- réutilise directement les classes
+       .articles-* ci-dessus (table triable + filtres + pagination +
+       panneau) : structure identique, seul le display du conteneur
+       diffère par onglet. Pas de duplication CSS. ── */
+    #tab-instances { display: none; flex-direction: column; height: 100%; padding: 20px; box-sizing: border-box; min-height: 0; }
+    #tab-instances.active { display: flex; }
+    #tab-event_instances { display: none; flex-direction: column; height: 100%; padding: 20px; box-sizing: border-box; min-height: 0; }
+    #tab-event_instances.active { display: flex; }
+    #tab-signaux { display: none; flex-direction: column; height: 100%; padding: 20px; box-sizing: border-box; min-height: 0; }
+    #tab-signaux.active { display: flex; }
+    #tab-resumes { display: none; flex-direction: column; height: 100%; padding: 20px; box-sizing: border-box; min-height: 0; overflow-y: auto; }
+    #tab-resumes.active { display: flex; }
+    /* ── Onglet Résumés par scénario (7 septembre 2026) -- gabarit différent
+       des autres onglets de ce chantier : pas de table+panneau (une seule
+       valeur par scénario, 6 au total), une grille de cartes à la place. ── */
+    .resumes-toolbar { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; flex-wrap: wrap; flex-shrink: 0; }
+    .resumes-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(420px, 1fr)); gap: 16px; }
+    .resumes-card { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 16px; }
+    .resumes-card-title { font-weight: 700; font-size: 15px; margin-bottom: 2px; }
+    .resumes-card-meta { font-size: 11px; color: #888; margin-bottom: 10px; }
+    .resumes-card-text { font-size: 13px; line-height: 1.5; white-space: pre-wrap; margin-bottom: 10px; }
+    .resumes-card-empty { color: #999; font-style: italic; font-size: 13px; margin-bottom: 10px; }
+    .resumes-card button { font-size: 11px; padding: 4px 10px; border-radius: 4px; cursor: pointer; border: 1px solid #ddd; background: #fff; color: #555; }
+    .resumes-card button:disabled { opacity: 0.5; cursor: not-allowed; }
+    .resumes-card button:not(:disabled):hover { border-color: #3b6fd4; color: #2a52a8; }
+
+
+    /* ── Audit & édition de sujets (5 septembre 2026, chantier "Suite
+       narrative des événements", point B) -- même gabarit visuel que
+       .injev-* (toolbar filtres + layout liste/panneau), classes
+       dupliquées sous préfixe sujets- pour rester lisible. Deux zones
+       dans le panneau : l'aperçu (toujours affiché en premier, jamais
+       d'écriture) et les boutons de confirmation explicite pour les
+       actions destructives (suppression, modification de date) --
+       jamais un seul clic n'exécute directement une action. */
+    #tab-sujets { display: none; flex-direction: column; height: 100%; padding: 20px; box-sizing: border-box; min-height: 0; }
+    #tab-sujets.active { display: flex; }
+    .sujets-toolbar { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; flex-wrap: wrap; flex-shrink: 0; }
+    .sujets-toolbar label { font-size: 11px; color: #888; }
+    .sujets-layout { display: flex; gap: 16px; flex: 1; min-height: 0; }
+    .sujets-list-wrap { flex: 1; min-width: 0; overflow-y: auto; }
+    .sujets-sidebar { width: 360px; flex-shrink: 0; overflow-y: auto; }
+    .sujets-occurrence { border: 1px solid #e3e3e3; border-radius: 6px; padding: 10px 12px; margin-bottom: 8px; }
+    .sujets-occurrence.posterieur { border-color: #e0a12e; background: #fdf6e8; }
+    .sujets-occurrence-flag { color: #b5651d; font-weight: 600; font-size: 11px; }
+    .sujets-panel { border: 1px solid #e3e3e3; border-radius: 6px; padding: 14px; }
+    .sujets-panel-empty { color: #999; font-size: 12px; }
+    .sujets-action-apercu { background: #f7f7f7; border: 1px dashed #ccc; border-radius: 6px; padding: 10px; margin: 10px 0; font-size: 12px; }
+    .sujets-action-confirmer { background: #c0392b; color: #fff; border: none; border-radius: 4px; padding: 8px 14px; cursor: pointer; font-weight: 600; }
+    .sujets-action-confirmer:hover { background: #a93226; }
+    .sujets-action-annuler { background: #eee; border: none; border-radius: 4px; padding: 8px 14px; cursor: pointer; margin-left: 8px; }
+    .injev-banner { margin: 0 0 12px; padding: 8px 12px; border-radius: 6px; background: #eef4fb; border: 1px solid #cfe0f0; font-size: 0.9em; color: #34495e; flex-shrink: 0; }
+    .injev-panel { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 14px; font-size: 12px; }
+    .injev-panel-empty { color: #999; font-style: italic; }
+    .injev-panel-title { font-weight: 700; font-size: 13px; margin-bottom: 12px; }
+    .injev-panel-section { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #eee; }
+    .injev-panel-section:last-child { border-bottom: none; }
+    .injev-panel-section label { display: block; font-size: 11px; color: #666; margin-bottom: 4px; }
+    .injev-panel-section input[type="text"], .injev-panel-section select, .injev-panel-section textarea {
+      width: 100%; box-sizing: border-box; font-family: 'JetBrains Mono', monospace;
+      padding: 5px 8px; border: 1px solid #ccc; border-radius: 4px; background: #fff; font-size: 12px;
+    }
+    .injev-panel-section textarea { resize: vertical; }
+    .injev-panel-hint { font-size: 10px; color: #999; margin-top: 3px; }
+    .injev-chips-box { display: flex; flex-wrap: wrap; gap: 6px; }
+    .injev-chip {
+      display: flex; align-items: center; gap: 4px; border: 1px solid #ddd; border-radius: 12px;
+      padding: 3px 9px; font-size: 11px; cursor: pointer; user-select: none;
+    }
+    .injev-chip input { margin: 0; cursor: pointer; }
+    .injev-chip.active { border-color: #3b6fd4; background: #eef4fa; color: #2a52a8; font-weight: 600; }
+    .injev-checkbox-row { display: flex; align-items: center; gap: 6px; }
+    .injev-panel-btn {
+      padding: 6px 14px; border: 1px solid #3b6fd4; border-radius: 4px; background: #fff;
+      color: #2a52a8; font-size: 12px; cursor: pointer; font-weight: 600;
+    }
+    .injev-panel-btn:hover { background: #3b6fd4; color: #fff; }
+    .injev-panel-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+    .injev-panel-btn-secondary { background: #fff; border-color: #ccc; color: #555; font-weight: normal; }
+    .injev-panel-msg { font-size: 11px; margin-top: 8px; }
+    .injev-panel-msg.ok { color: #2e7d4f; }
+    .injev-panel-msg.error { color: #c0392b; }
+    .injev-panel-msg.loading { color: #888; font-style: italic; }
+    .injev-result-box { margin-top: 10px; padding: 8px 10px; border-radius: 4px; font-size: 11px; line-height: 1.5; }
+    .injev-result-box.ok { background: #eaf7ef; border: 1px solid #b7e0c4; color: #2e7d4f; }
+    .injev-result-box.error { background: #fdeceb; border: 1px solid #f0b8b0; color: #c0392b; }
   </style>
 </head>
 <body>
@@ -331,6 +520,8 @@
 
   <!-- ══ ZONE PRINCIPALE ══════════════════════════════════ -->
   <main id="main">
+
+    <div id="mois-parution-banner">📅 Mois de parution : chargement…</div>
 
     <div id="llm-force-banner">
       <span class="icon">⚠</span>
@@ -495,9 +686,9 @@
           <div class="redaction-table-scroll">
             <table class="redaction-table">
               <colgroup>
-                <col style="width:11%"><col style="width:9%"><col style="width:22%">
-                <col style="width:8%"><col style="width:22%"><col style="width:9%">
-                <col style="width:6%"><col style="width:13%">
+                <col style="width:10%"><col style="width:8%"><col style="width:20%">
+                <col style="width:7%"><col style="width:20%"><col style="width:8%">
+                <col style="width:6%"><col style="width:8%"><col style="width:13%">
               </colgroup>
               <thead>
                 <tr>
@@ -508,6 +699,7 @@
                   <th data-sort="nom">Nom</th>
                   <th data-sort="role">Rôle</th>
                   <th data-sort="seniorite">Sén.</th>
+                  <th data-sort="nb_articles">Articles</th>
                   <th data-sort="ton_personnel">ton_personnel</th>
                 </tr>
               </thead>
@@ -523,12 +715,295 @@
             </div>
           </div>
         </div>
+        <div id="redaction-resizer" title="Glisser pour élargir/réduire le panneau"></div>
         <div class="redaction-sidebar">
           <div id="redaction-panel" class="redaction-panel">
             <div class="redaction-panel-empty">Clique sur une ligne pour voir/éditer sa fiche.</div>
           </div>
         </div>
       </div>
+    </div>
+
+    <!-- ── Articles — inventaire complet (5 septembre 2026, chantier
+         "Suite narrative des événements") ── -->
+    <div id="tab-articles" class="tab-content">
+      <div class="articles-toolbar">
+        <span class="tab-page-title" style="margin:0">Articles — inventaire complet</span>
+        <div class="articles-filter-group">
+          <label for="articles-scenario">Scénario</label>
+          <select id="articles-scenario"><option value="">Tous</option></select>
+        </div>
+        <div class="articles-filter-group">
+          <label for="articles-thematique">Thématique</label>
+          <select id="articles-thematique"><option value="">Toutes</option></select>
+        </div>
+        <div class="articles-filter-group">
+          <label for="articles-ligne">Ligne</label>
+          <select id="articles-ligne">
+            <option value="">Toutes</option>
+            <option value="pro_pouvoir">pro_pouvoir</option>
+            <option value="opposition">opposition</option>
+          </select>
+        </div>
+        <div class="articles-filter-group">
+          <label for="articles-evenement-force"><input type="checkbox" id="articles-evenement-force" style="margin:0"> Avec événement forcé seulement</label>
+        </div>
+        <div class="articles-filter-group">
+          <label for="articles-mois-actif"><input type="checkbox" id="articles-mois-actif" style="margin:0"> Mois en cours seulement</label>
+        </div>
+        <div class="articles-filter-group">
+          <label for="articles-basculement"><input type="checkbox" id="articles-basculement" style="margin:0"> Basculement narratif détecté</label>
+        </div>
+        <input type="text" id="articles-search" placeholder="🔍 Slug / chapo…" autocomplete="off">
+        <span id="articles-count" class="articles-count"></span>
+        <button id="articles-btn-rapport-md">Générer le rapport Markdown</button>
+        <button id="articles-btn-lancer-basculements">Détecter les basculements narratifs</button>
+      </div>
+      <div id="articles-rapport-resultat" class="sujets-action-apercu" style="display:none;margin-bottom:10px"></div>
+      <div id="articles-basculements-statut" style="font-size:11px;color:#888;margin-bottom:10px">Détection jamais lancée.</div>
+      <div class="articles-layout">
+        <div class="articles-table-wrap">
+          <div class="articles-table-scroll">
+            <table class="articles-table">
+              <colgroup>
+                <col style="width:16%"><col style="width:12%"><col style="width:14%">
+                <col style="width:10%"><col style="width:28%"><col style="width:20%">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th data-sort="scenario">Scénario</th>
+                  <th data-sort="date_tri">Date</th>
+                  <th data-sort="thematique">Thématique</th>
+                  <th data-sort="ligne_editoriale">Ligne</th>
+                  <th data-sort="slug">Slug</th>
+                  <th data-sort="fichier">Fichier</th>
+                </tr>
+              </thead>
+              <tbody id="articles-tbody"></tbody>
+            </table>
+          </div>
+          <div class="articles-pagination">
+            <span id="articles-range"></span>
+            <div class="articles-pagination-btns">
+              <button id="articles-prev">← Page précédente</button>
+              <span id="articles-page-label"></span>
+              <button id="articles-next">Page suivante →</button>
+            </div>
+          </div>
+        </div>
+        <div class="panel-resizer" id="articles-resizer" title="Glisser pour élargir/réduire le panneau"></div>
+        <div class="articles-sidebar">
+          <div id="articles-panel" class="articles-panel">
+            <div class="articles-panel-empty">Clique sur une ligne pour voir le détail et agir dessus.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Instances (chantier "GUI Entités/Instances/Événements/Signaux",
+         7 septembre 2026) -- même gabarit que #tab-articles ci-dessus ── -->
+    <div id="tab-instances" class="tab-content">
+      <div class="articles-toolbar">
+        <span class="tab-page-title" style="margin:0">Instances — inventaire complet</span>
+        <div class="articles-filter-group">
+          <label for="instances-scenario">Scénario</label>
+          <select id="instances-scenario"><option value="">Tous</option></select>
+        </div>
+        <div class="articles-filter-group">
+          <label for="instances-type">Type</label>
+          <select id="instances-type"><option value="">Tous</option></select>
+        </div>
+        <div class="articles-filter-group">
+          <label for="instances-trajectoire">Trajectoire</label>
+          <select id="instances-trajectoire"><option value="">Toutes</option></select>
+        </div>
+        <div class="articles-filter-group">
+          <label for="instances-transnationale"><input type="checkbox" id="instances-transnationale" style="margin:0"> Transnationales seulement</label>
+        </div>
+        <div class="articles-filter-group">
+          <label for="instances-clandestine"><input type="checkbox" id="instances-clandestine" style="margin:0"> Clandestines seulement</label>
+        </div>
+        <input type="text" id="instances-search" placeholder="🔍 Nom / rôle…" autocomplete="off">
+        <span id="instances-count" class="articles-count"></span>
+        <button id="instances-btn-rapport-md">Générer le rapport Markdown</button>
+      </div>
+      <div id="instances-rapport-resultat" class="sujets-action-apercu" style="display:none;margin-bottom:10px"></div>
+      <div class="articles-layout">
+        <div class="articles-table-wrap">
+          <div class="articles-table-scroll">
+            <table class="articles-table">
+              <colgroup>
+                <col style="width:14%"><col style="width:22%"><col style="width:22%">
+                <col style="width:14%"><col style="width:14%"><col style="width:14%">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th data-sort="scenario">Scénario</th>
+                  <th data-sort="name">Nom</th>
+                  <th data-sort="entite_name">Entité parente</th>
+                  <th data-sort="type_dans_scenario">Type</th>
+                  <th data-sort="trajectoire">Trajectoire</th>
+                  <th data-sort="zone">Zone</th>
+                </tr>
+              </thead>
+              <tbody id="instances-tbody"></tbody>
+            </table>
+          </div>
+          <div class="articles-pagination">
+            <span id="instances-range"></span>
+            <div class="articles-pagination-btns">
+              <button id="instances-prev">← Page précédente</button>
+              <span id="instances-page-label"></span>
+              <button id="instances-next">Page suivante →</button>
+            </div>
+          </div>
+        </div>
+        <div class="panel-resizer" id="instances-resizer" title="Glisser pour élargir/réduire le panneau"></div>
+        <div class="articles-sidebar">
+          <div id="instances-panel" class="articles-panel">
+            <div class="articles-panel-empty">Clique sur une ligne pour voir le détail.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Event_instances (chantier "GUI Entités/Instances/Événements/
+         Signaux", 7 septembre 2026) -- même gabarit qu'Instances ── -->
+    <div id="tab-event_instances" class="tab-content">
+      <div class="articles-toolbar">
+        <span class="tab-page-title" style="margin:0">Événements — inventaire complet</span>
+        <div class="articles-filter-group">
+          <label for="event-instances-scenario">Scénario</label>
+          <select id="event-instances-scenario"><option value="">Tous</option></select>
+        </div>
+        <div class="articles-filter-group">
+          <label for="event-instances-portee">Portée</label>
+          <select id="event-instances-portee"><option value="">Toutes</option></select>
+        </div>
+        <div class="articles-filter-group">
+          <label for="event-instances-type">Type</label>
+          <select id="event-instances-type"><option value="">Tous</option></select>
+        </div>
+        <div class="articles-filter-group">
+          <label for="event-instances-impossible"><input type="checkbox" id="event-instances-impossible" style="margin:0"> Marqués impossible seulement</label>
+        </div>
+        <input type="text" id="event-instances-search" placeholder="🔍 Nom…" autocomplete="off">
+        <span id="event-instances-count" class="articles-count"></span>
+        <button id="event-instances-btn-rapport-md">Générer le rapport Markdown</button>
+      </div>
+      <div id="event-instances-rapport-resultat" class="sujets-action-apercu" style="display:none;margin-bottom:10px"></div>
+      <div class="articles-layout">
+        <div class="articles-table-wrap">
+          <div class="articles-table-scroll">
+            <table class="articles-table">
+              <colgroup>
+                <col style="width:14%"><col style="width:22%"><col style="width:22%">
+                <col style="width:14%"><col style="width:14%"><col style="width:14%">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th data-sort="scenario">Scénario</th>
+                  <th data-sort="name">Nom</th>
+                  <th data-sort="archetype_name">Archétype parent</th>
+                  <th data-sort="portee">Portée</th>
+                  <th data-sort="date">Date</th>
+                  <th data-sort="custom">Custom</th>
+                </tr>
+              </thead>
+              <tbody id="event-instances-tbody"></tbody>
+            </table>
+          </div>
+          <div class="articles-pagination">
+            <span id="event-instances-range"></span>
+            <div class="articles-pagination-btns">
+              <button id="event-instances-prev">← Page précédente</button>
+              <span id="event-instances-page-label"></span>
+              <button id="event-instances-next">Page suivante →</button>
+            </div>
+          </div>
+        </div>
+        <div class="panel-resizer" id="event-instances-resizer" title="Glisser pour élargir/réduire le panneau"></div>
+        <div class="articles-sidebar">
+          <div id="event-instances-panel" class="articles-panel">
+            <div class="articles-panel-empty">Clique sur une ligne pour voir le détail.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Signaux faibles (chantier "GUI Entités/Instances/Événements/
+         Signaux", 7 septembre 2026, dernier des 3 types) -- même gabarit
+         que les 2 précédents ── -->
+    <div id="tab-signaux" class="tab-content">
+      <div class="articles-toolbar">
+        <span class="tab-page-title" style="margin:0">Signaux faibles — inventaire complet</span>
+        <div class="articles-filter-group">
+          <label for="signaux-scenario">Scénario</label>
+          <select id="signaux-scenario"><option value="">Tous</option></select>
+        </div>
+        <div class="articles-filter-group">
+          <label for="signaux-categorie">Catégorie</label>
+          <select id="signaux-categorie"><option value="">Toutes</option></select>
+        </div>
+        <div class="articles-filter-group">
+          <label for="signaux-statut">Statut</label>
+          <select id="signaux-statut"><option value="">Tous</option></select>
+        </div>
+        <div class="articles-filter-group">
+          <label for="signaux-impact"><input type="checkbox" id="signaux-impact" style="margin:0"> Avec Impact chiffré seulement</label>
+        </div>
+        <input type="text" id="signaux-search" placeholder="🔍 Slug…" autocomplete="off">
+        <span id="signaux-count" class="articles-count"></span>
+        <button id="signaux-btn-rapport-md">Générer le rapport Markdown</button>
+      </div>
+      <div id="signaux-rapport-resultat" class="sujets-action-apercu" style="display:none;margin-bottom:10px"></div>
+      <div class="articles-layout">
+        <div class="articles-table-wrap">
+          <div class="articles-table-scroll">
+            <table class="articles-table">
+              <colgroup>
+                <col style="width:26%"><col style="width:18%"><col style="width:14%">
+                <col style="width:28%"><col style="width:14%">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th data-sort="slug">Slug</th>
+                  <th data-sort="categorie">Catégorie</th>
+                  <th data-sort="statut">Statut</th>
+                  <th data-sort="scenarios_str">Scénarios</th>
+                  <th data-sort="a_impact_chiffre">Impact chiffré</th>
+                </tr>
+              </thead>
+              <tbody id="signaux-tbody"></tbody>
+            </table>
+          </div>
+          <div class="articles-pagination">
+            <span id="signaux-range"></span>
+            <div class="articles-pagination-btns">
+              <button id="signaux-prev">← Page précédente</button>
+              <span id="signaux-page-label"></span>
+              <button id="signaux-next">Page suivante →</button>
+            </div>
+          </div>
+        </div>
+        <div class="panel-resizer" id="signaux-resizer" title="Glisser pour élargir/réduire le panneau"></div>
+        <div class="articles-sidebar">
+          <div id="signaux-panel" class="articles-panel">
+            <div class="articles-panel-empty">Clique sur une ligne pour voir le détail.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Résumés par scénario (demande de David, 7 septembre 2026) --
+         gabarit carte, pas table+panneau (6 scénarios seulement) ── -->
+    <div id="tab-resumes" class="tab-content">
+      <div class="resumes-toolbar">
+        <span class="tab-page-title" style="margin:0">Résumés par scénario</span>
+        <button id="resumes-btn-tout-regenerer">Régénérer tous les scénarios (jusqu'à ~6 appels LLM)</button>
+        <span id="resumes-statut" style="font-size:11px;color:#888"></span>
+      </div>
+      <div id="resumes-grid" class="resumes-grid"></div>
     </div>
 
     <!-- ── Chantiers (point 4.5, 26 juillet 2026) ── -->
@@ -557,6 +1032,39 @@
         <button id="chantiers-appliquer-tout" class="chantiers-btn chantiers-btn-primary">Appliquer les propositions approuvées</button>
       </div>
       <div id="chantiers-list"></div>
+    </div>
+
+    <!-- ── Audit & édition de sujets (5 septembre 2026, chantier "Suite
+         narrative des événements", point B) ── -->
+    <div id="tab-sujets" class="tab-content">
+      <div class="sujets-toolbar">
+        <span class="tab-page-title" style="margin:0">Audit par sujet (événements & entités)</span>
+        <label for="sujets-scenario">Scénario</label>
+        <select id="sujets-scenario">
+          <option value="">— choisir —</option>
+        </select>
+        <label for="sujets-type">Type</label>
+        <select id="sujets-type">
+          <option value="evenement">Événement custom</option>
+          <option value="entite">Entité</option>
+        </select>
+        <label for="sujets-slug">Sujet</label>
+        <select id="sujets-slug">
+          <option value="">— choisir un scénario d'abord —</option>
+        </select>
+        <input type="text" id="sujets-slug-manuel" placeholder="slug de l'entité (ex. directive_kontinuum_fortress_world)" style="display:none;min-width:280px">
+      </div>
+      <div id="sujets-banner" class="injev-banner" style="display:none"></div>
+      <div class="sujets-layout">
+        <div class="sujets-list-wrap" id="sujets-occurrences">
+          <div class="sujets-panel-empty">Choisis un scénario, un type et un sujet pour voir ses occurrences.</div>
+        </div>
+        <div class="sujets-sidebar">
+          <div id="sujets-panel" class="sujets-panel">
+            <div class="sujets-panel-empty">Clique sur une occurrence pour la supprimer ou modifier sa date.</div>
+          </div>
+        </div>
+      </div>
     </div>
 
   </main>

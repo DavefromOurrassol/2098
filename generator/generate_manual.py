@@ -49,6 +49,7 @@ import yaml
 from loader         import VAULT_PATH, load_thematique
 from snapshot       import build_snapshot
 from prompt_builder import build_prompt, STATE_DIR
+from edition_utils  import edition_date_to_float, tirer_jour_edition, enregistrer_edition, lire_edition_active
 
 
 # ─────────────────────────────────────────
@@ -58,27 +59,36 @@ from prompt_builder import build_prompt, STATE_DIR
 CONFIG_PATH  = os.path.join(os.path.dirname(os.path.abspath(__file__)), "config_series.yaml")
 PROGRESS_FILE = os.path.join(STATE_DIR, "manual_progress.json")
 
-# Mêmes dates que generate_series.py, pour rester cohérent si on
-# alterne entre les deux workflows sur la même série.
-DATES_2098 = [
-    "3 janvier 2098",   "17 janvier 2098",
-    "2 février 2098",   "19 février 2098",
-    "8 mars 2098",      "24 mars 2098",
-    "5 avril 2098",     "21 avril 2098",
-    "10 mai 2098",      "27 mai 2098",
-    "4 juin 2098",      "19 juin 2098",
-    "7 juillet 2098",   "23 juillet 2098",
-    "6 août 2098",      "22 août 2098",
-    "4 septembre 2098", "20 septembre 2098",
-    "3 octobre 2098",   "18 octobre 2098",
-    "5 novembre 2098",  "21 novembre 2098",
-    "6 décembre 2098",  "22 décembre 2098",
-]
-
 
 # ─────────────────────────────────────────
 # ÉTAT DE PROGRESSION
 # ─────────────────────────────────────────
+
+def resoudre_edition_config(config):
+    """
+    Résout annee_edition/mois_edition : valeurs explicites de
+    config_series.yaml si présentes (surcharge ponctuelle), sinon repli
+    sur l'édition active (state/editions.json, configurable
+    indépendamment via definir_edition.py). Assoupli le 2 septembre 2026
+    (même jour que l'introduction du champ) à la demande de David --
+    évite d'exiger une saisie explicite dans config_series.yaml à chaque
+    session si l'édition a déjà été définie ailleurs. Modifie `config`
+    en place et le retourne, pour que build_tasks()/cmd_prompt() (déjà
+    écrits pour lire config["annee_edition"]/config["mois_edition"])
+    n'aient pas besoin d'être changés.
+    """
+    if config.get("annee_edition") and config.get("mois_edition"):
+        return config
+    edition_active = lire_edition_active()
+    if not edition_active:
+        print("[erreur] Aucun mois de parution défini et annee_edition/mois_edition absents "
+              "de config_series.yaml.")
+        print("  Configurez d'abord un mois de parution : python3 definir_edition.py --annee 2098 --mois 8")
+        sys.exit(1)
+    config["annee_edition"] = edition_active["annee"]
+    config["mois_edition"]  = edition_active["mois"]
+    return config
+
 
 def load_progress():
     try:
@@ -95,17 +105,31 @@ def save_progress(progress):
 
 
 def build_tasks(config):
-    """Reconstruit la liste (thematique, date_fictive) — identique à generate_series.py."""
+    """Reconstruit la liste (thematique, date_fictive) — identique à
+    generate_series.py.
+
+    2 septembre 2026 (chantier "Éditions datées") : date_fictive tirée
+    dynamiquement dans le mois de annee_edition/mois_edition (remplace
+    le cyclage sur l'ancienne liste DATES_2098 figée). Effet de bord
+    connu et accepté : build_tasks() est rappelée à chaque invocation
+    CLI séparée (status/prompt/save sont des process distincts) --
+    contrairement à l'ancienne liste déterministe, un tirage aléatoire
+    n'est pas idempotent d'un appel à l'autre. Sans conséquence sur la
+    génération réelle (seul le tirage fait au moment précis de 'prompt'
+    est utilisé et sauvegardé) ; seul l'affichage de 'status' pour des
+    tâches pas encore atteintes peut montrer un jour différent d'un
+    appel à l'autre -- purement cosmétique.
+    """
     thematiques = config["thematiques"]
     n_per_thema = config.get("articles_par_thematique", 1)
+    annee_edition = int(config["annee_edition"])
+    mois_edition  = int(config["mois_edition"])
 
     tasks = []
-    date_index = 0
     for thematique in thematiques:
         for _ in range(n_per_thema):
-            date_fictive = DATES_2098[date_index % len(DATES_2098)]
+            date_fictive = tirer_jour_edition(annee_edition, mois_edition)
             tasks.append((thematique, date_fictive))
-            date_index += 1
     return tasks
 
 
@@ -259,7 +283,8 @@ def cmd_prompt(config, progress):
     }
 
     thema_data = load_thematique(thematique_slug)
-    snapshot   = build_snapshot(config["scenario"], thematique=thema_data)
+    date_edition = edition_date_to_float(int(config["annee_edition"]), int(config["mois_edition"]))
+    snapshot   = build_snapshot(config["scenario"], thematique=thema_data, date_edition=date_edition)
 
     # dry_run=False : met à jour la mémoire de rotation (state/trajectory_usage.json)
     prompt_data = build_prompt(snapshot, thema_data, article_config, dry_run=False)
@@ -326,6 +351,17 @@ def cmd_save(config, progress, article_file):
 
     print("[manual] Article sauvegardé : {}".format(filepath))
 
+    # Enregistrement dans le registre d'éditions (2 septembre 2026) --
+    # un article à la fois ici (contrairement à generate_series.py, qui
+    # enregistre le lot complet en une fois). generate_manual.py suit
+    # la même série/config_series.yaml que generate_series.py (voir
+    # docstring du module) -- fait partie des deux seuls points d'entrée
+    # autorisés à créer/avancer une édition.
+    numero = enregistrer_edition(
+        scenario, int(config["annee_edition"]), int(config["mois_edition"]), nb_articles=1
+    )
+    print("[manual] Mois de parution n°{} mis à jour (1 article ajouté)".format(numero))
+
     progress["completed"].append({
         "thematique":   pending["thematique"],
         "date_fictive": pending["date_fictive"],
@@ -359,6 +395,12 @@ def main():
 
     with open(CONFIG_PATH, "r", encoding="utf-8") as f:
         config = yaml.safe_load(f)
+
+    # 2 septembre 2026 (chantier "Éditions datées") : résout
+    # annee_edition/mois_edition (config explicite ou repli sur
+    # l'édition active) -- assoupli le même jour, ne bloque plus si
+    # config_series.yaml ne les précise pas.
+    config = resoudre_edition_config(config)
 
     progress = load_progress()
     cmd = sys.argv[1]

@@ -74,6 +74,7 @@ from instance_generation_common import (
     compute_temporal_distribution, format_temporal_summary,
     format_concentration_warnings,
 )
+from edition_utils import edition_date_to_float, lire_edition_active, MOIS_FR
 
 
 # ---------------------------------------------------------------------------
@@ -461,6 +462,51 @@ def step2_develop_instance(client, idea, event_slug, type_evenement, variables,
             f"dans ce scénario.\n"
         )
 
+    # date_precise (chantier "Suite narrative des événements", 6 septembre 2026) :
+    # présent uniquement quand l'idée vient du bouton "Promouvoir en événement"
+    # de l'onglet Articles -- porte la date réelle et complète de l'article
+    # source (jour/mois/année), contrairement à date_approximative qui ne porte
+    # qu'une année. Ne remplace PAS la règle générale de dérive +/- 10 ans (cas
+    # général : idée d'actu sans source précise) -- vient s'y ajouter avec un
+    # discernement explicite, car deux cas totalement différents se cachent
+    # derrière un article source : soit il rapporte un événement contemporain
+    # à sa date de publication (ancrage serré souhaitable), soit il est
+    # rétrospectif (anniversaire, référence historique -- l'événement réel est
+    # bien plus ancien que l'article qui en parle, forcer un ancrage sur la
+    # date de l'article serait alors faux). Voir cas réel du 6 septembre :
+    # article du 2 août 2098 célébrant un lancement de... 2047.
+    #
+    # Version resserrée (6 septembre, après échec du 1er essai réel) : la
+    # première formulation autorisait la dérive +/- 10 ans dans LES DEUX cas,
+    # ce qui donnait au LLM une échappatoire facile pour ignorer l'ancrage
+    # serré voulu pour le cas 1 -- observé en conditions réelles sur le cas
+    # Milwaukee-Basse (article du 3 janvier, LLM parti sur le 12 juillet malgré
+    # la consigne). La dérive +/- 10 ans est maintenant réservée au SEUL cas 2
+    # (rétrospectif), et le cas 1 est formulé en "DOIT" sans échappatoire,
+    # cohérent avec le ton des autres règles dures de ce même bloc.
+    date_rule_txt = "- La date peut varier de +/- 10 ans par rapport à la date approximative"
+    if idea.get("date_precise"):
+        date_rule_txt = (
+            f"- Cet événement est proposé à partir d'un article existant, daté du "
+            f"{idea['date_precise']}. Détermine d'abord lequel des deux cas "
+            f"suivants s'applique, à partir du contenu de la description "
+            f"ci-dessus :\n"
+            f"  (1) L'article décrit un événement CONTEMPORAIN à sa date de "
+            f"publication (un fait qui vient de se produire) : la date de "
+            f"l'événement DOIT alors rester dans la MÊME SAISON que "
+            f"{idea['date_precise']} -- pas de dérive de plusieurs mois, encore "
+            f"moins vers la saison opposée. Aucune exception dans ce cas.\n"
+            f"  (2) L'article est RÉTROSPECTIF (anniversaire, référence "
+            f"historique -- l'événement d'origine est clairement antérieur à "
+            f"l'article) : dans ce cas SEULEMENT, ignore la date de l'article "
+            f"et ancre-toi sur la période suggérée par le récit lui-même, qui "
+            f"peut être bien antérieure (dérive de +/- 10 ans ou plus par "
+            f"rapport à la date approximative si le récit le justifie).\n"
+            f"  CONTRAINTE SYSTÈME (les deux cas) : la date de l'événement ne "
+            f"doit jamais dépasser l'année 2098 -- l'année finale de la fiction "
+            f"dans son ensemble."
+        )
+
     actors_list_txt = "\n".join(
         f"  - {a['slug']} ({a['name']}) : {a['role']}" for a in available_actors
     ) or "  (aucune instance d'entité disponible pour ce scénario)"
@@ -526,7 +572,7 @@ Règles importantes :
   RÉEL ci-dessus — une escalade proche dans le temps doit s'ancrer sur
   une tension réellement documentée, pas être inventée hors-sol
 - Le nom peut être identique, une variante, ou radicalement différent
-- La date peut varier de +/- 10 ans par rapport à la date approximative
+{date_rule_txt}
 - Les impacts sur les variables doivent être cohérents avec leurs levels
   actuels (pas de delta positif massif sur une variable déjà en
   effondrement), et chaque delta_level doit rester dans la plage
@@ -789,6 +835,7 @@ acteurs_impliques:{acteurs_yaml}
 note_coherence: {note}
 custom_source: {source}
 date_creation: {date_creation}
+developpements: []
 ---
 
 # {nom_md}
@@ -873,7 +920,9 @@ QUEUE_TEMPLATE = """\
 #   id                    : identifiant court lisible (lettres, chiffres, underscores)
 #   description           : l'idée en langage naturel, quelques phrases suffisent
 #   portee                : locale | regionale | continentale | globale
-#   date_approximative     : année 2025-2097 (peut varier de +/-10 ans par scénario)
+#   date_approximative     : année 2025-2098 (peut varier de +/-10 ans par scénario ;
+#                            2098 = année finale de la fiction, borne mise à jour le
+#                            6 septembre 2026, voir clamp_date_dans_plage())
 #   intensite              : faible | modérée | forte | majeure
 #   scenarios              : liste de scénarios à couvrir, ou null pour les 6 par défaut
 #                            (valeurs : breakdown, fortress_world, new_sustainability,
@@ -902,6 +951,14 @@ QUEUE_TEMPLATE = """\
 #                            comme lieu d'ancrage de l'événement — injectée
 #                            directement dans le prompt de génération.
 #   source                 : libre — date, lien d'article...
+#   edition_active          : optionnel, true/false. Défaut false. Si true,
+#                            la date/date_label proposée par le LLM est
+#                            écrasée par l'édition active (state/editions.json)
+#                            -- pour capturer un sujet de l'édition en cours,
+#                            où le mois est déjà connu avec certitude
+#                            (contrairement à date_approximative, purement
+#                            indicative pour le worldbuilding historique).
+#                            Avertit sans bloquer si aucune édition active.
 #
 # EXEMPLE :
 #   - id: guerre_israelo_iranienne
@@ -943,6 +1000,84 @@ def save_queue_with_template(remaining):
 # ---------------------------------------------------------------------------
 # Boucle principale
 # ---------------------------------------------------------------------------
+
+def apply_edition_active_date(instance_data, idea_id):
+    """
+    Écrase date/date_label par la date de l'édition active (2 septembre
+    2026, chantier "Éditions datées", point 4). Déclenché par
+    `edition_active: true` sur l'idée dans queue.yaml -- pour le cas
+    précis "je capture un sujet de l'édition en cours", où le mois est
+    déjà connu avec certitude, plutôt que de laisser le LLM deviner
+    (son prompt l'autorise explicitement à dévier de +/- 10 ans de la
+    date approximative fournie -- adapté au worldbuilding historique,
+    pas à une capture précise du mois en cours).
+
+    Ne bloque jamais : si aucune édition n'est active (state/editions.json
+    absent/vide), avertit et laisse la date proposée par le LLM inchangée
+    -- cohérent avec le repli déjà appliqué ailleurs (generate.py).
+    """
+    edition_active = lire_edition_active()
+    if not edition_active:
+        print(f"  ⚠ [{idea_id}] edition_active demandé mais aucune édition "
+              f"active dans state/editions.json -- date du LLM conservée.")
+        return
+    annee, mois = edition_active["annee"], edition_active["mois"]
+    instance_data["date"] = edition_date_to_float(annee, mois)
+    instance_data["date_label"] = "{} {}".format(MOIS_FR[mois], annee)
+    print(f"  -> date forcée sur l'édition active : {instance_data['date']} "
+          f"({instance_data['date_label']})")
+
+
+def clamp_date_dans_plage(instance_data):
+    """
+    Garde-fou final (6 septembre 2026, 2e itération -- voir
+    validate.py::validate_events() pour l'historique complet de la
+    correction). validate.py impose qu'une date d'événement custom reste
+    dans [2025, 2098] : 2098 est l'année FINALE de la fiction dans son
+    ensemble (pas un "présent" mobile à exclure -- 1ère itération de la
+    journée, abandonnée après clarification de David : les articles
+    peuvent être préparés à l'avance et datés au-delà de l'édition
+    actuellement active, plusieurs éditions successives couvrant
+    différents mois de cette même année 2098). Borne fixe, ne dépend pas
+    de l'édition active.
+
+    Découvert via 3 vraies violations produites le jour même (validate.py,
+    section EVENTS, alors sur l'ancienne borne [2025-2097]) -- toutes
+    trois des événements créés via l'action "Promouvoir en événement"
+    (onglet Articles) sur des articles datés 2098.
+
+    Ne modifie rien si la date est déjà valide. Sinon, ramène l'année à
+    la borne la plus proche et ajuste date_label en conséquence (simple
+    remplacement du fragment d'année, la saison/le mois du label restent
+    inchangés). Reste utile même avec la borne à 2098 : protège contre
+    une dérive du LLM au-delà de cette année finale (rare mais possible
+    si l'année de l'article source approche ou dépasse déjà 2098).
+    """
+    date = instance_data.get("date")
+    if date is None:
+        return
+    try:
+        annee = int(date)
+    except (TypeError, ValueError):
+        return
+
+    ANNEE_MAX_EVENEMENT = 2098
+    if 2025 <= annee <= ANNEE_MAX_EVENEMENT:
+        return
+
+    annee_clampee = max(2025, min(ANNEE_MAX_EVENEMENT, annee))
+    # Préserve la fraction éventuelle (dates au format année.mois, voir
+    # edition_date_to_float()) en ne remplaçant que la partie entière.
+    fraction = date - annee if isinstance(date, float) else 0
+    instance_data["date"] = annee_clampee + fraction
+
+    ancien_label = instance_data.get("date_label", "") or ""
+    nouveau_label = ancien_label.replace(str(annee), str(annee_clampee)) if str(annee) in ancien_label else str(annee_clampee)
+    instance_data["date_label"] = nouveau_label
+
+    print(f"  ⚠ Date {annee} hors plage [2025-{ANNEE_MAX_EVENEMENT}] (validate.py) -- "
+          f"ramenée à {annee_clampee} ('{nouveau_label}')")
+
 
 def process_idea(client, idea, dry_run=False):
     idea_id = idea.get("id", "sans_id")
@@ -1053,6 +1188,11 @@ def process_idea(client, idea, dry_run=False):
                     "issues": issues, "instance_data": instance_data,
                 })
                 continue
+
+            if idea.get("edition_active"):
+                apply_edition_active_date(instance_data, idea_id)
+
+            clamp_date_dans_plage(instance_data)
 
             print("[4/4] Injection...")
             if not dry_run:
@@ -1462,6 +1602,42 @@ def run_auto_mode(client, dry_run, n=None, scenario_filter=None, variables_hint=
     print("→ Inspectez queue.yaml, puis relancez en mode custom pour injecter.")
 
 
+def _enregistrer_resultat_idea(outcome):
+    """Écrit le résultat d'un process_idea() dans processed.yaml/
+    needs_review.yaml -- factorisé le 3 septembre 2026 (chantier
+    "Injecter un événement depuis un article") pour être partagé entre
+    run_custom_mode (boucle sur queue.yaml) et run_single_idea_mode
+    (une seule idée fournie directement, hors queue). Logique inchangée,
+    déplacée telle quelle depuis run_custom_mode. Retourne le nombre de
+    scénarios injectés (pour le total du mode queue)."""
+    injected_scenarios = outcome.get("injected_scenarios", [])
+    failed_scenarios   = outcome.get("failed_scenarios", [])
+
+    if injected_scenarios:
+        append_yaml_list(PROCESSED_PATH, {
+            "idea": outcome["idea"],
+            "selection": outcome.get("selection"),
+            "injected_scenarios": injected_scenarios,
+            "status": "injected" if not failed_scenarios else "partial",
+        }, key="processed")
+
+    if failed_scenarios:
+        append_yaml_list(NEEDS_REVIEW_PATH, {
+            "idea": outcome["idea"],
+            "selection": outcome.get("selection"),
+            "failed_scenarios": failed_scenarios,
+            "results": [r for r in outcome.get("results", [])
+                        if r["scenario"] in failed_scenarios],
+            "status": "needs_review",
+        }, key="needs_review")
+
+    # Cas extrême : 0 résultats (erreur avant la boucle scénarios)
+    if not injected_scenarios and not failed_scenarios:
+        append_yaml_list(NEEDS_REVIEW_PATH, outcome, key="needs_review")
+
+    return len(injected_scenarios)
+
+
 def run_custom_mode(client, dry_run):
     """Mode custom : traite la queue.yaml existante."""
     queue = load_yaml_list(QUEUE_PATH, key="queue")
@@ -1484,37 +1660,64 @@ def run_custom_mode(client, dry_run):
             remaining.append(idea)
             continue
 
-        injected_scenarios = outcome.get("injected_scenarios", [])
-        failed_scenarios   = outcome.get("failed_scenarios", [])
-
-        if injected_scenarios:
-            total_injected += len(injected_scenarios)
-            append_yaml_list(PROCESSED_PATH, {
-                "idea": outcome["idea"],
-                "selection": outcome.get("selection"),
-                "injected_scenarios": injected_scenarios,
-                "status": "injected" if not failed_scenarios else "partial",
-            }, key="processed")
-
-        if failed_scenarios:
-            append_yaml_list(NEEDS_REVIEW_PATH, {
-                "idea": outcome["idea"],
-                "selection": outcome.get("selection"),
-                "failed_scenarios": failed_scenarios,
-                "results": [r for r in outcome.get("results", [])
-                            if r["scenario"] in failed_scenarios],
-                "status": "needs_review",
-            }, key="needs_review")
-
-        # Cas extrême : 0 résultats (erreur avant la boucle scénarios)
-        if not injected_scenarios and not failed_scenarios:
-            append_yaml_list(NEEDS_REVIEW_PATH, outcome, key="needs_review")
+        total_injected += _enregistrer_resultat_idea(outcome)
 
     if not dry_run:
         save_queue_with_template(remaining)
         print(f"\nTerminé. Voir {PROCESSED_PATH} et {NEEDS_REVIEW_PATH}.")
         if total_injected > 0:
             run_post_injection_cycle()
+
+
+REQUIRED_IDEA_FIELDS = ["id", "description", "portee", "date_approximative", "intensite"]
+
+
+def run_single_idea_mode(client, idea, dry_run, json_output):
+    """Mode --idea : injecte UNE idée fournie directement en JSON, sans
+    passer par queue.yaml -- ajouté le 3 septembre 2026 (chantier
+    "Injecter un événement depuis un article"), pour un lancement
+    synchrone depuis app.py (écran GUI qui pré-remplit une idée à partir
+    d'un article existant, cf. audit_sujets_edition.py --json). Même
+    pipeline que run_custom_mode (process_idea + _enregistrer_resultat_idea
+    + cycle post-injection), mais UNE idée à la fois, jamais lue/écrite
+    dans queue.yaml -- la traçabilité passe uniquement par processed.yaml/
+    needs_review.yaml, comme pour le mode queue."""
+    missing = [f for f in REQUIRED_IDEA_FIELDS if not idea.get(f)]
+    if missing:
+        result = {"ok": False, "error": f"Champs requis manquants : {', '.join(missing)}"}
+        if json_output:
+            print(json.dumps(result, ensure_ascii=False))
+        else:
+            print(f"[erreur] {result['error']}")
+        raise SystemExit(1)
+
+    try:
+        outcome = process_idea(client, idea, dry_run=dry_run)
+    except Exception as e:
+        outcome = {"status": "needs_review", "idea": idea, "error": str(e)}
+
+    if dry_run:
+        if json_output:
+            print(json.dumps({"ok": True, "dry_run": True, "outcome": outcome},
+                              ensure_ascii=False, default=str))
+        else:
+            print(json.dumps(outcome, ensure_ascii=False, indent=2, default=str))
+        return
+
+    total_injected = _enregistrer_resultat_idea(outcome)
+    if total_injected > 0:
+        run_post_injection_cycle()
+
+    if json_output:
+        print(json.dumps({
+            "ok": True,
+            "status": outcome.get("status"),
+            "injected_scenarios": outcome.get("injected_scenarios", []),
+            "failed_scenarios": outcome.get("failed_scenarios", []),
+        }, ensure_ascii=False))
+    else:
+        print(f"\nTerminé. {total_injected} scénario(s) injecté(s). "
+              f"Voir {PROCESSED_PATH} et {NEEDS_REVIEW_PATH}.")
 
 
 
@@ -1573,6 +1776,16 @@ def main():
                               "générée (équivalent du champ du mode custom, appliqué à "
                               "toutes les idées du lot). Si omis, le LLM choisit "
                               "librement. Sans effet en mode custom.")
+    parser.add_argument("--idea", default=None,
+                         help="Idée unique fournie en JSON (mêmes champs qu'une entrée "
+                              "de queue.yaml), injectée directement sans passer par la "
+                              "queue. Ajouté le 3 septembre 2026 pour app.py (écran "
+                              "'Injecter un événement depuis un article'). Prioritaire "
+                              "sur --mode/custom/auto si fourni.")
+    parser.add_argument("--json", action="store_true",
+                         help="Avec --idea : sortie JSON sur une seule ligne finale "
+                              "(même convention que set_ton_personnel.py --json), pour "
+                              "consommation par app.py. Sans effet en mode custom/auto.")
     args = parser.parse_args()
 
     print("=" * 60)
@@ -1582,6 +1795,19 @@ def main():
         print("(mode --dry-run : rien ne sera écrit)")
 
     client = get_client()
+
+    if args.idea is not None:
+        try:
+            idea = json.loads(args.idea)
+        except json.JSONDecodeError as e:
+            msg = f"--idea n'est pas un JSON valide : {e}"
+            if args.json:
+                print(json.dumps({"ok": False, "error": msg}, ensure_ascii=False))
+            else:
+                print(f"[erreur] {msg}")
+            sys.exit(1)
+        run_single_idea_mode(client, idea, dry_run=args.dry_run, json_output=args.json)
+        return
 
     # Même correctif que create_entities_and_instances.py (11 juillet 2026,
     # bug GUI "Create entities custom") : --mode évite le blocage sur input()

@@ -1,5 +1,5 @@
 ---
-name: Incident du Passage du Nord-Ouest : la NAT saisit le convoi de l'APA
+name: "Incident du Passage du Nord-Ouest : la NAT saisit le convoi de l'APA"
 type: event_archetype
 slug: incident_passage_arctique
 type_evenement: political_social

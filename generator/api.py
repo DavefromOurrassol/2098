@@ -19,11 +19,12 @@ sauf override manuel LLM_PROVIDER/LLM_MODEL.
 import os
 import re
 import json
+import shutil
 import unicodedata
 from datetime import datetime
 
 from llm_client import call_llm, resolve_for_tier
-from loader import VAULT_PATH
+from loader import VAULT_PATH, PATHS, parse_md_file
 from prompt_builder import build_metadonnees_publication_format
 
 
@@ -579,6 +580,40 @@ def build_article_md(article_text, snapshot, thematique, prompt_data, date_ficti
         inst_slug = inst.get("slug")
         if inst_slug:
             frontmatter_lines.append("  - {}".format(inst_slug))
+    # evenements_cites (chantier "suite narrative des événements", 5
+    # septembre 2026) : contrairement à entites_citees ci-dessus (sous-
+    # produit garanti de filtered_instances, marqué OBLIGATOIRE dans le
+    # prompt), un événement custom non forcé n'est listé qu'en contexte
+    # ("Événements injectés [CUSTOM]") -- rien ne garantit qu'il ait été
+    # réellement utilisé par le LLM dans le texte. Seul le cas Forcer sur
+    # un événement EN MODE SUJET_CENTRAL offre une garantie fiable
+    # (forced_angle_directive impose explicitement cet événement comme
+    # sujet central, voir snapshot.py) : c'est la SEULE source retenue
+    # ici, décision actée avec David. Resserré le 6 septembre 2026 (au
+    # moment du chantier point C/D) : avant ce correctif, le mode
+    # "ingredient" (garantie de présence dans le prompt, sans garantie de
+    # développement réel) déclenchait aussi ce champ -- même piège que
+    # celui isolé par le rattrapage rétroactif abandonné ("citation en
+    # exemple, pas développée"), juste déplacé plutôt que corrigé. Portée
+    # volontairement limitée au mode Forcer pour l'instant (voir
+    # detect_evenements_cites_retroactif.py pour le rattrapage des
+    # articles déjà publiés, et le backlog pour l'extension éventuelle
+    # aux événements non forcés via confirmation LLM). Même condition de
+    # mode que le déclenchement de `developpements` (save_article(),
+    # plus bas) -- les deux mécanismes doivent rester synchronisés.
+    # evenements_cites_source tracé pour distinguer ce cas ("generation")
+    # des rattrapages rétroactifs ("retroactif_textuel"/"retroactif_llm")
+    # lors d'un futur audit.
+    frontmatter_lines.append("evenements_cites:")
+    forcer_resolu = snapshot.get("forcer_resolu")
+    forced_event_slug = None
+    if (forcer_resolu and forcer_resolu.get("type") == "evenement"
+            and forcer_resolu.get("mode") == "sujet_central" and forcer_resolu.get("event")):
+        forced_event_slug = forcer_resolu["event"].get("slug")
+        if forced_event_slug:
+            frontmatter_lines.append("  - {}".format(forced_event_slug))
+    if forced_event_slug:
+        frontmatter_lines.append("evenements_cites_source: generation")
     frontmatter_lines.append("variables_pilotes:")
     for v in snapshot.get("pilot_variables", []):
         frontmatter_lines.append("  - {}".format(v))
@@ -602,6 +637,94 @@ def build_article_md(article_text, snapshot, thematique, prompt_data, date_ficti
         voir_aussi = "\n\n---\n**Voir aussi** : {}\n".format(liens)
 
     return "\n".join(frontmatter_lines) + article_text + voir_aussi
+
+
+def _format_developpements_block(developpements):
+    """
+    Sérialise le champ `developpements` (liste de dicts) en bloc YAML
+    écrit à la main, cohérent avec le reste du frontmatter hand-built de
+    ce projet (voir write_instance_file(), inject_custom_events.py --
+    pas de dumper YAML générique ici, pour ne jamais risquer de
+    perturber le formatage ou les wikilinks du reste de la fiche lors
+    d'une réécriture ciblée). Réutilise _yaml_escape() pour les mêmes
+    raisons que chapo/image_prompt (texte libre, deux-points possibles).
+    """
+    if not developpements:
+        return "developpements: []"
+    lines = ["developpements:"]
+    for d in developpements:
+        lines.append("  - date_label: {}".format(_yaml_escape(str(d.get("date_label", "")))))
+        lines.append("    article_slug: {}".format(_yaml_escape(str(d.get("article_slug", "")))))
+        lines.append("    resume: {}".format(_yaml_escape(str(d.get("resume", "")))))
+    return "\n".join(lines)
+
+
+def append_developpement_evenement(event_slug, scenario, entry):
+    """
+    Ajoute une entrée au champ `developpements` de la fiche instance d'un
+    événement custom (chantier "Suite narrative des événements", point C,
+    6 septembre 2026) -- appelé par save_article() juste après l'écriture
+    réussie de l'article, uniquement quand celui-ci a été forcé sur un
+    événement en mode sujet_central (seule garantie fiable que
+    l'événement a vraiment été développé comme sujet central, pas juste
+    mentionné -- même condition que evenements_cites plus haut).
+
+    Lecture via loader.parse_md_file() (générique, sûr), mais réécriture
+    CIBLÉE du seul bloc `developpements:` par substitution de texte sur
+    le fichier brut -- jamais de round-trip YAML complet, pour ne pas
+    perturber le formatage ou les wikilinks du reste de la fiche (mêmes
+    précautions que le reste du projet, où les fichiers instance/
+    archétype sont toujours écrits à la main plutôt que dumpés).
+
+    Sauvegarde préalable dans vault/_backups/ (même convention que
+    editer_sujets.py pour toute modification de fiche existante).
+
+    Échoue silencieusement (log seulement, retourne False) si la fiche
+    est introuvable ou illisible -- ne doit JAMAIS faire échouer la
+    génération d'article, déjà terminée et sauvegardée à ce stade.
+    """
+    instance_path = os.path.join(PATHS["event_instances"], "{}_{}.md".format(event_slug, scenario))
+    if not os.path.exists(instance_path):
+        print("[developpements] ⚠ Fiche instance introuvable, ignoré : {}".format(instance_path))
+        return False
+
+    try:
+        parsed = parse_md_file(instance_path)
+    except Exception as e:
+        print("[developpements] ⚠ Lecture impossible, ignoré ({}) : {}".format(instance_path, e))
+        return False
+
+    developpements = list(parsed["frontmatter"].get("developpements") or [])
+    developpements.append(entry)
+    nouveau_bloc = _format_developpements_block(developpements)
+
+    raw = parsed["raw"]
+    # Bloc existant (ligne "developpements:" suivie de ses lignes
+    # indentées, qu'il s'agisse de "[]" sur la même ligne ou d'une liste
+    # sur les lignes suivantes) -- remplacé en entier. Absent pour toute
+    # fiche créée avant ce chantier : insertion juste avant le "---" de
+    # fin de frontmatter.
+    if re.search(r"^developpements:.*\n(?:[ \t].*\n)*", raw, re.MULTILINE):
+        raw_new = re.sub(
+            r"^developpements:.*\n(?:[ \t].*\n)*",
+            nouveau_bloc + "\n",
+            raw, count=1, flags=re.MULTILINE,
+        )
+    else:
+        raw_new = raw.replace("\n---\n", "\n{}\n---\n".format(nouveau_bloc), 1)
+
+    backups_dir = os.path.join(VAULT_PATH, "_backups")
+    os.makedirs(backups_dir, exist_ok=True)
+    backup_name = "{}_{}.md".format(
+        os.path.basename(instance_path)[:-3], datetime.now().strftime("%Y%m%d_%H%M%S"),
+    )
+    shutil.copy2(instance_path, os.path.join(backups_dir, backup_name))
+
+    with open(instance_path, "w", encoding="utf-8") as f:
+        f.write(raw_new)
+
+    print("[developpements] ✓ Ajouté à {} : {}".format(instance_path, entry.get("article_slug")))
+    return True
 
 
 def save_article(article_text, snapshot, thematique, prompt_data, config):
@@ -666,6 +789,34 @@ def save_article(article_text, snapshot, thematique, prompt_data, config):
         f.write(content)
 
     print("[api] Article sauvegardé : {}".format(filepath))
+
+    # Point C (chantier "Suite narrative des événements", 6 septembre
+    # 2026) : après un forçage sujet_central réussi sur un événement,
+    # on note ce que CET article vient de raconter -- réutilise le chapo
+    # déjà généré (meta["chapo"]) comme résumé, aucun appel LLM
+    # supplémentaire. Même condition de mode que evenements_cites
+    # (build_article_md, plus haut) -- les deux doivent rester
+    # synchronisés. Le slug de l'article est recalculé ici à l'identique
+    # de build_article_md() (mêmes _extract_title/_slugify) : cette
+    # dernière ne retourne que le contenu final, pas son slug interne.
+    forcer_resolu = snapshot.get("forcer_resolu")
+    if (forcer_resolu and forcer_resolu.get("type") == "evenement"
+            and forcer_resolu.get("mode") == "sujet_central" and forcer_resolu.get("event")):
+        event_slug = forcer_resolu["event"].get("archetype")
+        if event_slug:
+            titre = _extract_title(article_text)
+            article_slug = _slugify(titre)[:80].strip("_") or "article-sans-titre"
+            entry = {
+                "article_slug": article_slug,
+                "resume": prompt_data["metadata"].get("chapo", ""),
+            }
+            # date_label : reprend la même donnée que le frontmatter
+            # date_evenement de l'article (date_fictive), pour rester
+            # lisible dans la fiche événement sans dépendre d'un format
+            # de date particulier.
+            entry["date_label"] = date_fictive or ""
+            append_developpement_evenement(event_slug, snapshot["scenario_slug"], entry)
+
     return filepath
 
 

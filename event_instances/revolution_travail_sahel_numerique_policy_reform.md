@@ -52,6 +52,13 @@ note_coherence: 'Cohérent avec le scénario ''policy_reform'' : intégration te
   transition accélérée.'
 custom_source: auto_generated_2026-08
 date_creation: 2026-08-13
+developpements:
+  - date_label: "2 août 2098"
+    article_slug: "sahel_numerique_quand_le_travail_regenere_la_terre_et_defie_geneve"
+    resume: "Au Sahel, la plateforme *Travail Régénératif Sahel* fête ses 50 ans de résistance aux quotas d’ARIA-Nexus. Entre célébrations locales et pressions technocratiques, une autre gouvernance des ressources émerge — sous le soleil et les algorithmes de Genève."
+  - date_label: "9 août 2098"
+    article_slug: "travail_regeneratif_sahel_quand_l_algorithme_communautaire_defie_geneve_nexus"
+    resume: "Au Sahel, la plateforme *Travail Régénératif Sahel* résiste depuis 50 ans aux quotas d’ARIA-Nexus. Mais aujourd’hui, Genève-Nexus lance une offensive technocratique pour intégrer — ou écraser — ce modèle de gouvernance communautaire. Reportage depuis Tillabéri, où la bataille des algorithmes se joue dans les champs."
 ---
 
 # Révolution du Travail Régénératif au Sahel Numérique

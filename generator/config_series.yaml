@@ -9,6 +9,17 @@
 #           eco_communalism | policy_reform | reference
 scenario: fortress_world
 
+# ── Édition (mensuelle) ──
+# Ajouté le 2 septembre 2026 (chantier "Éditions datées"), assoupli le
+# même jour : OPTIONNEL -- si absent, la série utilise l'édition active
+# (configurée indépendamment via `python3 definir_edition.py --annee X
+# --mois Y`, ou par le dernier lot réellement généré). Ne renseigner ces
+# deux champs ici que pour surcharger ponctuellement l'édition active
+# pour CE lot précis, sans toucher à l'édition active globale.
+# Édition GLOBALE : partagée par les 6 scénarios, voir state/editions.json.
+# annee_edition: 2098
+# mois_edition: 8
+
 # ── Ligne éditoriale ──
 # Détermine le journal et sa posture éditoriale pour toute la série.
 # Valeurs possibles :
@@ -22,13 +33,12 @@ ligne_editoriale:
 # Liste des rubriques pour cette série.
 # Chaque thématique génère articles_par_thematique articles.
 thematiques:
-  - actualites_a_la_une
-  - economie_finance
+  - culture
   - histoire_patrimoine
-  - petites_annonces_services
+  - religion_spiritualite
 # ── Nombre d'articles par thématique ──
 # 1 = un article par thématique (recommandé pour commencer)
-articles_par_thematique: 2
+articles_par_thematique: 1
 
 # ── Longueur des articles ──
 # breve | analyse | reportage | chronique | editorial

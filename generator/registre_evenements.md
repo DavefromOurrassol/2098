@@ -10,7 +10,7 @@ RÈGLE DE LECTURE DE LA COLONNE "date" :
   - type=signal    -> fenêtre "AAAA-AAAA" (date_bascule du signal_to_state)
   - type=evenement -> année unique "AAAA" (date précise de l'instance)
 
-Total : 527 entrées (77 signaux uniques × 6 scénarios + 65 entrées d'événements custom).
+Total : 524 entrées (77 signaux uniques × 6 scénarios + 62 entrées d'événements custom).
 
 ## breakdown
 
@@ -104,6 +104,7 @@ Total : 527 entrées (77 signaux uniques × 6 scénarios + 65 entrées d'événe
 | evenement | 2061 | insurrection_rust_belt | geopolitique_conflits, valeurs_culture_tempo_sociale, gouvernance_institutions, technologie_information | — | Communes du Rust Belt proclament zones libres de l'algorithme, 2061 |
 | evenement | 2061 | grand_forum_sahel_numerique | technologie_information, gouvernance_institutions, organisation_territoires | — | Forum d'Agadez fracturé, Charte disputée par les éclats, 2061 |
 | evenement | 2073 | emeutes_algorithme_sao_paulo | gouvernance_institutions, technologie_information, organisation_territoires | — | São Paulo brise l'algorithme fantôme, 2073 |
+| evenement | 2098 | ils_ont_noye_les_archives_a_milwaukee_basse_le_reg | technologie_information, geopolitique_conflits | — | 2098, Milwaukee-Basse noie les archives du Registre |
 
 ## fortress_world
 
@@ -196,6 +197,8 @@ Total : 527 entrées (77 signaux uniques × 6 scénarios + 65 entrées d'événe
 | evenement | 2063 | communes_rust_belt_zones_libres | geopolitique_conflits, valeurs_culture_tempo_sociale, gouvernance_institutions, organisation_territoires | — | Communes du Rust Belt proclament zones libres 2063 |
 | evenement | 2063 | insurrection_rust_belt | geopolitique_conflits, valeurs_culture_tempo_sociale, gouvernance_institutions, technologie_information | — | Rust Belt occupe friches industrielles contre l'algorithme 2063 |
 | evenement | 2073 | emeutes_algorithme_sao_paulo | gouvernance_institutions, technologie_information, organisation_territoires | — | favelas numériques exposent algorithmes du SPAS 2073 |
+| evenement | 2098.08 | helios_bse_active_le_protocole_ombre_les_coupures_ | energie_ressources_critiques, geopolitique_conflits | — | Helios plonge l'Eurasie occidentale dans le noir en 2098 |
+| evenement | 2098.03 | le_marathon_des_seuils_quand_le_sport_defie_les_fr | frontieres_du_systeme, valeurs_culture_tempo_sociale | — | 2098 : le Marathon des Seuils défie les watts souverains |
 
 ## new_sustainability
 
