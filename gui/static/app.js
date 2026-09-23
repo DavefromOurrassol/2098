@@ -4622,15 +4622,29 @@ async function _genererEnrichissement(scenario, slug) {
       return;
     }
     const p = data.proposition;
+    // Champs éditables (23 sept 2026) : la proposition LLM n'était
+    // qu'affichée, "Appliquer" renvoyait le texte brut sans possibilité de
+    // le retoucher (cas réel : un ancien nom de zone repris par le LLM).
+    // Le backend écrit la proposition reçue telle quelle -- on lui envoie
+    // donc les valeurs relues/corrigées. Champ vide = null.
+    const _st = 'width:100%;box-sizing:border-box;font-size:12px;font-family:inherit;margin:2px 0 6px;';
     resultatEl.innerHTML = `
       <div style="background:#f7f7f7;border-radius:4px;padding:6px;margin-top:6px;font-size:12px;">
-        <div><strong>tensions_internes</strong> : ${p.tensions_internes || '(vide)'}</div>
-        <div><strong>periode_transition</strong> : ${p.periode_transition || '(vide)'}</div>
-        <div><strong>evenement_transition</strong> : ${p.evenement_transition || 'null'}</div>
+        <label><strong>tensions_internes</strong></label>
+        <textarea class="enrichir-champ" data-cle="tensions_internes" rows="4" style="${_st}">${_redactionEsc(p.tensions_internes || '')}</textarea>
+        <label><strong>periode_transition</strong></label>
+        <input type="text" class="enrichir-champ" data-cle="periode_transition" style="${_st}" value="${_redactionEsc(p.periode_transition || '')}">
+        <label><strong>evenement_transition</strong> <span style="color:#999">(vide = null)</span></label>
+        <textarea class="enrichir-champ" data-cle="evenement_transition" rows="2" style="${_st}">${_redactionEsc(p.evenement_transition || '')}</textarea>
+        <div style="color:#888;font-size:11px;">Modifiable avant application -- rien n'est écrit tant que tu n'as pas cliqué.</div>
         <button class="btn-primary enrichir-appliquer-btn" style="margin-top:6px;">✓ Appliquer</button>
       </div>
     `;
     resultatEl.querySelector('.enrichir-appliquer-btn').addEventListener('click', async (e) => {
+      resultatEl.querySelectorAll('.enrichir-champ').forEach(el => {
+        const v = el.value.trim();
+        p[el.dataset.cle] = v === '' ? null : v;
+      });
       e.target.disabled = true;
       e.target.textContent = 'Écriture…';
       try {

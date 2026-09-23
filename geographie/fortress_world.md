@@ -2612,9 +2612,11 @@ zones:
     pillards de l'Interzone venus récupérer ce qui peut encore l'être dans les ruines
     de l'ancienne centrale.
   statut: en_declin
-  tensions_internes: ''
-  periode_transition: null
-  evenement_transition: null
+  tensions_internes: Conflits entre groupes de pillards venus des marges de la zone
+    pour le contrôle des rares zones marginalement viables, et tensions avec les rares
+    communautés locales survivantes cherchant à se réapproprier des territoires irradiés.
+  periode_transition: 2044-2050
+  evenement_transition: Fusion partielle du réacteur de Heysham 2 (2044)
   lieux_emblematiques: []
   relations:
     allies: []
