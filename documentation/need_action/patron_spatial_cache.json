@@ -91,6 +91,24 @@
       "slug": "bloc_persique_autonome"
     }
   ],
+  "52e252a7dd487764edc90e02dd31fde7fe2b4cc157dbfe6970584d8d6e45269d": [
+    {
+      "raison": "Décrit comme un 'territoire autonome' précaire et fragile, sans contrôle militarisé strict ni intégration à un bloc fermé, ce qui contredit la logique d'enclave protégée ou de hors-forteresse dégradée",
+      "slug": "amazonie_pacte_vert"
+    },
+    {
+      "raison": "Union régionale basée sur une 'gestion communautaire des ressources' sans militarisation ni contrôle strict des flux, ce qui ne correspond ni à une enclave protégée ni à une zone hors-forteresse",
+      "slug": "al_hima"
+    },
+    {
+      "raison": "Décrite comme une 'neutralité armée' et un 'hub financier/logistique pour les blocs dominants', ce qui suggère une zone intermédiaire neutre plutôt qu'une enclave protégée ou un hors-forteresse",
+      "slug": "singapour_megapole"
+    },
+    {
+      "raison": "Abrite une 'communauté de réfugiés climatiques sous protection onusienne résiduelle', ce qui implique une forme de gouvernance partagée ou neutre, en contradiction avec le patron spatial",
+      "slug": "tuvalu_refugies_climatiques"
+    }
+  ],
   "72af4cdc66c48a5ad6e59bff8a9e35c8b2478b3c89834344f0d8da9ab18b7219": [
     {
       "raison": "Décrit comme un 'territoire autonome' précaire négociant avec des blocs, ce qui suggère une neutralité ou une zone intermédiaire non conforme au patron (ni enclave protégée ni hors-forteresse dégradée)",

@@ -52,6 +52,14 @@ toute façon n'appliquerait rien, puisque rien n'aurait encore été
 approuvé. --apply-topdown reste une commande volontairement séparée,
 lancée à la main une fois la review faite.
 
+Étape optionnelle --check-overlays (ajoutée le 23 septembre 2026) : lance
+gui/check_overlay_portion_coherence.py (cohérence texte `portion` /
+polygones dessinés dans gui/static/geo_overlays/, + doublons internes
+d'origine_reelle). Lecture seule, aucun appel LLM -- optionnelle
+seulement parce qu'elle vit dans gui/ (pas dans ce dossier) et concerne
+les overlays, pas la structure des zones. Tourne après les 5 étapes
+standard, avant la génération top-down éventuelle.
+
 N'écrit jamais rien dans le vault par défaut. --write-chantiers écrit
 dans chantiers_geographie.yaml (jamais dans geographie/ lui-même, lecture
 seule pour ces 3 scripts) ; --apply-type-entite propage le --apply de
@@ -67,6 +75,7 @@ USAGE
     python3 scan_geographie_complet.py --scenario breakdown
     python3 scan_geographie_complet.py --all --apply-type-entite --resolve-llm
     python3 scan_geographie_complet.py --all --write-chantiers --generer-propositions-topdown
+    python3 scan_geographie_complet.py --all --check-overlays
 """
 
 import argparse
@@ -74,7 +83,15 @@ import subprocess
 import sys
 from pathlib import Path
 
-SCRIPT_DIR = Path(__file__).parent
+SCRIPT_DIR = Path(__file__).resolve().parent
+VAULT_ROOT = SCRIPT_DIR.parent
+
+# check_overlay_portion_coherence.py vit dans gui/ (déplacé de generator/
+# le 23 sept 2026). Repli sur ce dossier si une ancienne copie y traîne
+# encore, pour ne pas casser un vault pas encore mis à jour.
+OVERLAY_CHECK = VAULT_ROOT / "gui" / "check_overlay_portion_coherence.py"
+if not OVERLAY_CHECK.exists() and (SCRIPT_DIR / "check_overlay_portion_coherence.py").exists():
+    OVERLAY_CHECK = SCRIPT_DIR / "check_overlay_portion_coherence.py"
 
 SCENARIOS = [
     "breakdown", "fortress_world", "new_sustainability",
@@ -107,6 +124,12 @@ def derniere_ligne_utile(sortie: str) -> str:
     lignes = [l.strip() for l in sortie.split("\n") if l.strip()]
     for l in reversed(lignes):
         if "Terminé" in l:
+            return l
+    # check_overlay_portion_coherence.py termine par "Résumé : ..." plutôt
+    # que "Terminé" (23 sept 2026) -- repli avant la toute dernière ligne,
+    # qui ne serait que la bordure '===='.
+    for l in reversed(lignes):
+        if l.startswith("Résumé"):
             return l
     return lignes[-1] if lignes else "(pas de sortie)"
 
@@ -158,6 +181,13 @@ def main():
              "N'applique jamais rien (pas de --apply-topdown ici) -- la review "
              "reste un geste séparé, volontairement."
     )
+    parser.add_argument(
+        "--check-overlays", action="store_true",
+        help="Étape optionnelle : lance gui/check_overlay_portion_coherence.py "
+             "(texte portion vs polygones dessinés, doublons internes "
+             "d'origine_reelle). Lecture seule, aucun appel LLM. Tourne même "
+             "avec une sélection --run-* partielle."
+    )
     # Sélection d'étapes (25 juillet 2026) -- par défaut (aucun --run-* passé),
     # les 5 étapes tournent comme avant. Passer un ou plusieurs --run-* limite
     # le scan à ceux-là uniquement (ex. relancer seulement le patron spatial
@@ -197,6 +227,7 @@ def main():
     print("#" * 60)
     print(f"  SCAN GÉOGRAPHIE COMPLET — {n_etapes} étape(s)"
           + ("" if aucune_selection else " (sélection partielle)")
+          + (" + overlays" if args.check_overlays else "")
           + (" + génération top-down" if args.generer_propositions_topdown else ""))
     print("#" * 60)
 
@@ -255,6 +286,15 @@ def main():
             args_patron_spatial.append("--write-chantiers")
         sortie = executer("check_patron_spatial_coherence.py", args_patron_spatial)
         resumes.append(("check_patron_spatial_coherence.py", derniere_ligne_utile(sortie)))
+
+    if args.check_overlays:
+        print(f"\n{'▶' * 3} Étape optionnelle — check_overlay_portion_coherence.py")
+        if OVERLAY_CHECK.exists():
+            sortie = executer(str(OVERLAY_CHECK), cible)
+            resumes.append(("check_overlay_portion_coherence.py", derniere_ligne_utile(sortie)))
+        else:
+            print(f"  ✗ Introuvable : {OVERLAY_CHECK} -- étape ignorée.")
+            resumes.append(("check_overlay_portion_coherence.py", "introuvable, étape ignorée"))
 
     if args.generer_propositions_topdown:
         print(f"\n{'▶' * 3} Étape supplémentaire — generer_zones_topdown.py --review-topdown")

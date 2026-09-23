@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "geographie/breakdown.md",
+                "file": "documentation/GitHUB.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "breakdown"
+              "title": "GitHUB"
             }
           }
         ]
@@ -185,18 +185,19 @@
   },
   "active": "776177f70fc76299",
   "lastOpenFiles": [
+    "geographie/breakdown.md",
+    "gui/logs/scan_geographie_complet_20260923_184045.log",
+    "documentation/BACKLOG_ACTIF.md",
     "gui/check_overlay_portion_coherence.py",
     "geographie/breakdown_avant_test.md",
     "documentation/BACKLOG_ARCHIVE.md",
     "documentation/Old/BACKLOG_ARCHIVE copie 2.md",
     "documentation/USER_MANUAL_COMPLET.md",
     "documentation/HANDOFF_14_SEPTEMBRE.md",
-    "documentation/BACKLOG_ACTIF.md",
     "documentation/Old/USER_MANUAL_COMPLET copie 28.md",
     "documentation/Old/HANDOFF_13_SEPTEMBRE copie.md",
     "documentation/Old/BACKLOG_ACTIF copie 9.md",
     "documentation/Old/HANDOFF_14_SEPTEMBRE.md",
-    "geographie/breakdown.md",
     "documentation/Old/USER_MANUAL_COMPLET 2.md",
     "documentation/Old/BACKLOG_ARCHIVE 2.md",
     "documentation/Old/BACKLOG_ACTIF 2.md",
@@ -219,8 +220,6 @@
     "gui/static/geo_overlays/fortress_world.geojson",
     "generator/enrich_zone_manquante.py",
     "gui/logs/enrich_geographie_20260908_143918.log",
-    "gui/static/geo_overlays/exemple_fortress_world.geojson",
-    "gui/static/geo_overlays",
     "Sans titre.canvas",
     "images/_placeholder_en_attente_manuel.svg",
     "images/_placeholder_en_attente_generation.svg",

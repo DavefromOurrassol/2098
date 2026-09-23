@@ -1832,7 +1832,7 @@
     "icon": "🧪",
     "section": "geo_diagnostic",
     "script": "scan_geographie_complet.py",
-    "description": "Lance en une fois tout ou partie des 5 vérifications géographiques (zones manquantes, catégories, cohérence pays/zone, conventions, répartition spatiale des zones), avec un résumé final. Étape optionnelle en plus : demander à l'IA de rédiger des propositions de correction, à relire toi-même.",
+    "description": "Lance en une fois tout ou partie des 5 vérifications géographiques (zones manquantes, catégories, cohérence pays/zone, conventions, répartition spatiale des zones), avec un résumé final. En option : vérifier les tracés dessinés sur la carte, et demander à l'IA de rédiger des propositions de correction, à relire toi-même.",
     "requires": [],
     "options": [
       {
@@ -1921,6 +1921,13 @@
         "depends_on": "--run-patron-spatial"
       },
       {
+        "flag": "--check-overlays",
+        "type": "checkbox",
+        "label": "Tracés dessinés (overlays)",
+        "description": "Étape en plus : vérifie que les tracés dessinés à la main sur la carte correspondent toujours aux textes \"portion\" des zones, signale les textes sans tracé et les pays listés deux fois dans une même zone. Sans appel IA, ne modifie rien.",
+        "default": false
+      },
+      {
         "flag": "--write-chantiers",
         "type": "checkbox",
         "label": "Enregistrer les problèmes trouvés",
@@ -1966,6 +1973,7 @@
             "--write-chantiers": true,
             "--marquer-resolus": true,
             "--no-cache-patron-spatial": true,
+            "--check-overlays": true,
             "--generer-propositions-topdown": true
           }
         }

@@ -249,6 +249,8 @@ zones:
     type_entite: pays
     portion: null
   - entite: Groenland
+    type_entite: pays
+    portion: null
   description: Bloc géopolitique fermé centré sur l'espace atlantique nord, gouverné
     par un Commandement militaro-civil autoritaire appuyé sur une infrastructure numérique
     souveraine (NexCore, ANBA). Il maintient un ordre intérieur répressif, contrôle
@@ -421,6 +423,8 @@ zones:
     type_entite: pays
     portion: Allemagne - Espace Nordique et Artique
   - entite: Pays-Bas
+    type_entite: pays
+    portion: null
   - entite: Russie
     type_entite: pays
     portion: null
@@ -450,6 +454,7 @@ zones:
   - coalition_arctique_des_blocs_continentaux_fortress_world
   - milices_de_piraterie_logistique_arctique_fortress_world
   couleur: '#336699'
+  hachures: true
 - slug: golfe_moyen_orient_zone_disputee
   nom: Golfe Persique et Moyen-Orient — Zone Disputée
   niveau: 1
@@ -2535,6 +2540,8 @@ zones:
     type_entite: pays
     portion: null
   - entite: Tunisie
+    type_entite: pays
+    portion: null
   description: Confédération collectiviste des deux rives, climat désertique à oasis,
     gestion communautaire des ressources héritée du principe pré-islamique du hima
     (terre protégée).
@@ -2580,14 +2587,22 @@ zones:
     type_entite: pays
     portion: null
   - entite: Pays de Galles
+    type_entite: pays
+    portion: null
   - entite: Irlande
+    type_entite: pays
+    portion: null
   - entite: Écosse
+    type_entite: pays
+    portion: null
   - entite: France
     type_entite: pays
     portion: La Zone Interdite de Heysham couvre le littoral Manche-Atlantique de
       la France, de Calais à Lorient, incluant la vallée de la Seine et les régions
       frontalières du Hainaut.
   - entite: Royaume-Uni
+    type_entite: pays
+    portion: null
   description: Territoire irradié depuis la fusion partielle du réacteur de Heysham
     2 en 2044, survenue en pleine aggravation de la crise systémique post-guerre indo-arabe
     — infrastructures vieillissantes, maintenance négligée, personnel qualifié en
@@ -2618,6 +2633,8 @@ zones:
     type_entite: pays
     portion: null
   - entite: Italie
+    type_entite: pays
+    portion: null
   - entite: Croatie
     type_entite: pays
     portion: null
@@ -2643,6 +2660,8 @@ zones:
     type_entite: pays
     portion: null
   - entite: Bulgarie
+    type_entite: pays
+    portion: null
   - entite: Ukraine
     type_entite: pays
     portion: null
@@ -2671,12 +2690,20 @@ zones:
     type_entite: pays
     portion: null
   - entite: Moldavie
+    type_entite: pays
+    portion: null
   - entite: France
     type_entite: pays
     portion: France - Interzone
   - entite: Serbie
+    type_entite: pays
+    portion: null
   - entite: Luxembourg
+    type_entite: pays
+    portion: null
   - entite: Belgique
+    type_entite: pays
+    portion: null
   - entite: France
     type_entite: pays
     portion: De la Manche aux contreforts du Massif central, la Zone Interdite de

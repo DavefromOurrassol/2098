@@ -1378,3 +1378,41 @@ chantiers:
   proposition_approuvee: false
   date_proposition: null
   date_traitement: null
+- id: fortress_world__finlande
+  scenario: fortress_world
+  type: pays_sans_zone
+  cible: Finlande
+  probleme: '''Finlande'' n''apparaît dans aucune zone (tous niveaux) de fortress_world.'
+  source_diagnostic: zones_coherence
+  date_detection: '2026-09-23'
+  statut: a_traiter
+  proposition: null
+  proposition_approuvee: false
+  date_proposition: null
+  date_traitement: null
+- id: fortress_world__lituanie
+  scenario: fortress_world
+  type: pays_sans_zone
+  cible: Lituanie
+  probleme: '''Lituanie'' n''apparaît dans aucune zone (tous niveaux) de fortress_world.'
+  source_diagnostic: zones_coherence
+  date_detection: '2026-09-23'
+  statut: a_traiter
+  proposition: null
+  proposition_approuvee: false
+  date_proposition: null
+  date_traitement: null
+- id: fortress_world__al_hima
+  scenario: fortress_world
+  type: zone_suspecte
+  cible: al_hima
+  probleme: Union régionale basée sur une 'gestion communautaire des ressources' sans
+    militarisation ni contrôle strict des flux, ce qui ne correspond ni à une enclave
+    protégée ni à une zone hors-forteresse
+  source_diagnostic: patron_spatial
+  date_detection: '2026-09-23'
+  statut: a_traiter
+  proposition: null
+  proposition_approuvee: false
+  date_proposition: null
+  date_traitement: null
