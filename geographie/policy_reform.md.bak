@@ -1,9 +1,62 @@
 ---
 scenario: policy_reform
 type: geographie_monde
-date_creation: 2026-06-23
-date_derniere_maj: 2026-06-23
+date_creation: 2026-08-19
+date_derniere_maj: 2026-08-19
 zones:
+- slug: afrique_australe_reformee
+  nom: Afrique Australe Réformée
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  statut: stable
+  description: Zone économique et politique autonome, héritière des réformes post-2050
+    en Afrique du Sud. Centre de gouvernance régionale et hub technologique.
+  tensions_internes: Inégalités sociales persistantes, tensions entre élites technocratiques
+    et populations marginalisées.
+  periode_transition: 2050-2075
+  evenement_transition: null
+  lieux_emblematiques:
+  - nom: Le Cap
+    type: ''
+    notes: ''
+  - nom: Johannesburg
+    type: ''
+    notes: ''
+  - nom: Prétoria
+    type: ''
+    notes: ''
+  relations:
+    allies:
+    - hub_africain_gouvernance
+    rivaux:
+    - bloc_souverainiste_non_signataire
+  sources_attestees: []
+  origine_reelle:
+  - entite: Afrique du Sud
+    type_entite: pays
+    portion: null
+  - entite: Angola
+    type_entite: pays
+    portion: null
+  - entite: Zambie
+    type_entite: pays
+    portion: null
+  - entite: Malawi
+    type_entite: pays
+    portion: null
+  - entite: Namibie
+    type_entite: pays
+    portion: null
+  - entite: Botswana
+    type_entite: pays
+    portion: null
+  - entite: Lesotho
+    type_entite: pays
+    portion: null
+  - entite: Eswatini
+    type_entite: pays
+    portion: null
 - slug: ameriques_reformees
   nom: Amériques Réformées (États-Unis / bloc américain)
   niveau: 1
@@ -80,6 +133,37 @@ zones:
   - election_parti_commun_americain_policy_reform
   - coalition_des_souverainistes_numeriques_policy_reform
   - conglomerats_d_automatisation_industrielle_integrale_policy_reform
+- slug: archipel_comores_autonome
+  nom: Archipel des Comores (Autonome)
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  statut: emergent
+  description: Ancienne union des Comores devenue un territoire autonome, axé sur
+    la pêche durable et le tourisme spatial. Siège d'une base de surveillance maritime
+    régionale.
+  tensions_internes: Conflits entre îles pour le contrôle des ressources halieutiques
+    et des routes commerciales.
+  periode_transition: 2060-2085
+  evenement_transition: null
+  lieux_emblematiques:
+  - nom: Moroni (capitale)
+    type: ''
+    notes: ''
+  - nom: Port de Mutsamudu
+    type: ''
+    notes: ''
+  relations:
+    allies:
+    - afrique_australe_reformee
+    - hub_africain_gouvernance
+    rivaux:
+    - madagascar_insulaire
+  sources_attestees: []
+  origine_reelle:
+  - entite: Comores
+    type_entite: pays
+    portion: null
 - slug: bloc_souverainiste_non_signataire
   nom: Bloc Souverainiste Non-Signataire (Sud Global dissident)
   niveau: 1
@@ -506,9 +590,6 @@ zones:
   - entite: Suisse
     type_entite: pays
     portion: null
-  - entite: Pays-Bas
-    type_entite: pays
-    portion: null
   - entite: Finlande
     type_entite: pays
     portion: null
@@ -609,6 +690,225 @@ zones:
   - conflit_israel_iran_2026_policy_reform
   - effondrement_reseau_mondial_communication_policy_reform
   - consortium_helios_policy_reform
+- slug: madagascar_insulaire
+  nom: Madagascar (République Insulaire)
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  statut: stable
+  description: État insulaire autonome, centre de biodiversité et de biotechnologies.
+    Partenaire clé des Hubs africains pour la gestion des ressources génétiques.
+  tensions_internes: Pressions entre développement industriel et préservation écologique.
+  periode_transition: 2050-2075
+  evenement_transition: null
+  lieux_emblematiques:
+  - nom: Antananarivo
+    type: ''
+    notes: ''
+  - nom: Port de Toamasina
+    type: ''
+    notes: ''
+  relations:
+    allies:
+    - hub_africain_gouvernance
+    - afrique_australe_reformee
+    rivaux:
+    - archipel_comores_autonome
+  sources_attestees: []
+  origine_reelle:
+  - entite: Madagascar
+    type_entite: pays
+    portion: null
+- slug: maghreb_atlantique
+  nom: Maghreb Atlantique
+  niveau: 1
+  type: region
+  parent: null
+  statut: stable
+  description: Région nord-africaine tournée vers l'Atlantique, centre de commerce
+    et de transition énergétique. Allié historique de l'Europe mais autonome.
+  tensions_internes: Tensions entre modernistes et traditionalistes, gestion des ressources
+    en eau.
+  periode_transition: 2040-2065
+  evenement_transition: null
+  lieux_emblematiques:
+  - nom: Casablanca
+    type: ''
+    notes: ''
+  - nom: Rabat
+    type: ''
+    notes: ''
+  - nom: Tanger
+    type: ''
+    notes: ''
+  relations:
+    allies:
+    - europe_nord_ouest
+    - hub_europeen_regulation
+    rivaux:
+    - bloc_souverainiste_non_signataire
+  sources_attestees: []
+  origine_reelle:
+  - entite: Maroc
+    type_entite: pays
+    portion: null
+  - entite: Algérie
+    type_entite: pays
+    portion: null
+  - entite: Tunisie
+    type_entite: pays
+    portion: null
+  - entite: Mauritanie
+    type_entite: pays
+    portion: null
+  - entite: Cap-Vert
+    type_entite: pays
+    portion: null
+- slug: maurice_hub_financier
+  nom: Maurice (Hub Financier de l'Océan Indien)
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  statut: stable
+  description: Centre financier offshore et plaque tournante des investissements en
+    Afrique et en Asie. Neutralité politique et stabilité économique.
+  tensions_internes: Inégalités sociales croissantes malgré la prospérité.
+  periode_transition: 2040-2065
+  evenement_transition: null
+  lieux_emblematiques:
+  - nom: Port-Louis
+    type: ''
+    notes: ''
+  - nom: Zone économique de Ebene
+    type: ''
+    notes: ''
+  relations:
+    allies:
+    - hub_europeen_regulation
+    - zone_pacifique_industrielle
+    rivaux: []
+  sources_attestees: []
+  origine_reelle:
+  - entite: Maurice
+    type_entite: pays
+    portion: null
+  - entite: Seychelles
+    type_entite: pays
+    portion: null
+- slug: peninsule_iberique_cooperative
+  nom: Péninsule Ibérique Coopérative
+  type: union_regionale
+  origine_reelle:
+  - entite: Espagne
+    type_entite: pays
+    portion: null
+  description: Zone née de la réforme territoriale ibérique post-2040, marquée par
+    la décentralisation coordonnée et la mutualisation des infrastructures énergétiques
+    (réseau solaire-atlantique) et logistiques (corridors méditerranéens-atlantiques).
+    Siège du Centre Ibérique de Régulation des Flux (CIRF), institution régionale
+    intégrée au CRTI pour la gestion des migrations climatiques et des échanges agro-alimentaires.
+  statut: stable
+  tensions_internes: Résistances locales aux quotas de redistribution des populations
+    climatiques (notamment en Andalousie et Catalogne), compensées par des mécanismes
+    de péréquation fiscale interrégionale.
+  periode_transition: 2038-2052
+  lieux_emblematiques:
+  - nom: Valence (Pôle Logistique Ibérique)
+    type: ville
+    notes: Siège du CIRF et hub de redistribution des flux migratoires et commerciaux
+      entre Europe et Maghreb Atlantique.
+  - nom: Plateforme Solaire de l'Atlantique (PSA)
+    type: infrastructure
+    notes: Réseau mutualisé de centrales solaires offshore et terrestres, co-géré
+      avec le Maghreb Atlantique et l'Europe du Nord-Ouest.
+  - nom: Corridor Méditerranéen Ibérique
+    type: infrastructure
+    notes: Axe ferroviaire et énergétique reliant Almería à Barcelone, intégré aux
+      corridors européens de régulation des flux.
+  relations:
+    allies:
+    - maghreb_atlantique
+    - europe_nord_ouest
+    - hub_europeen_regulation
+    rivaux: []
+  niveau: 1
+  parent: null
+  evenement_transition: null
+  sources_attestees: []
+  promu_depuis: null
+- slug: royaume_uni_autonome
+  nom: Royaume-Uni Autonome
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  statut: stable
+  description: Ancien membre de l'UE, le Royaume-Uni a consolidé son autonomie politique
+    et économique, devenant un acteur clé mais indépendant dans la gouvernance mondiale.
+    Londres reste un centre financier majeur.
+  tensions_internes: Tensions entre centralisation londonienne et dévolution aux nations
+    constitutives (Écosse, Pays de Galles, Irlande du Nord).
+  periode_transition: 2030-2060
+  evenement_transition: null
+  lieux_emblematiques:
+  - nom: Londres
+    type: ''
+    notes: ''
+  - nom: Édimbourg
+    type: ''
+    notes: ''
+  - nom: Cardiff
+    type: ''
+    notes: ''
+  relations:
+    allies:
+    - hub_europeen_regulation
+    - europe_nord_ouest
+    rivaux: []
+  sources_attestees: []
+  origine_reelle:
+  - entite: Royaume-Uni
+    type_entite: pays
+    portion: null
+  - entite: Angleterre
+    type_entite: pays
+    portion: null
+  - entite: Écosse
+    type_entite: pays
+    portion: null
+  - entite: Pays de Galles
+    type_entite: pays
+    portion: null
+- slug: sri_lanka_hub_maritime
+  nom: Sri Lanka (Hub Maritime de l'Océan Indien)
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  statut: stable
+  description: Ancienne île stratégique devenue plaque tournante du commerce maritime
+    entre l'Asie et l'Afrique. Centre de régulation des routes commerciales et de
+    gestion des ressources océaniques.
+  tensions_internes: Conflits entre élites locales et corporations internationales
+    pour le contrôle des ports.
+  periode_transition: 2050-2075
+  evenement_transition: null
+  lieux_emblematiques:
+  - nom: Port de Colombo
+    type: ''
+    notes: ''
+  - nom: Zone économique spéciale de Galle
+    type: ''
+    notes: ''
+  relations:
+    allies:
+    - espace_eurasiatique
+    - zone_pacifique_industrielle
+    rivaux:
+    - bloc_souverainiste_non_signataire
+  sources_attestees: []
+  origine_reelle:
+  - entite: Sri Lanka
+    type_entite: pays
+    portion: null
 - slug: zone_moyen_orient_golfe
   nom: Zone Moyen-Orient / Golfe Persique
   niveau: 1
@@ -697,9 +997,6 @@ zones:
   parent: null
   origine_reelle:
   - entite: Japon
-    type_entite: pays
-    portion: null
-  - entite: Corée du Sud
     type_entite: pays
     portion: null
   - entite: Australie
@@ -1292,6 +1589,51 @@ zones:
   sources_attestees:
   - arctic_passage_authority_policy_reform
   promu_depuis: null
+- slug: istanbul
+  nom: Istanbul
+  type: ville
+  origine_reelle:
+  - entite: Istanbul
+    type_entite: autre
+    portion: null
+  description: Ancienne capitale ottomane et mégapole transcontinentale, Istanbul
+    est devenue en 2098 le cœur battant d'une Eurasie réinventée. Sous l'égide d'une
+    gouvernance hybride mêlant héritage historique et innovations néo-urbaines, la
+    ville incarne un modèle de coexistence entre enclaves technocratiques, quartiers
+    autonomes et zones franches économiques, tout en servant de plaque tournante pour
+    les flux migratoires et énergétiques entre l'Europe et l'Asie.
+  statut: dominant
+  tensions_internes: Les tensions persistent entre les factions pro-européennes, les
+    nationalistes turcophones et les communautés kurdes autonomes, exacerbées par
+    les inégalités d'accès aux ressources hydriques et aux technologies de désalinisation.
+    Les émeutes sporadiques dans les districts périphériques menacent régulièrement
+    la stabilité du Conseil Métropolitain.
+  periode_transition: 2040-2065
+  evenement_transition: null
+  lieux_emblematiques:
+  - nom: Pont Eurasien
+    type: infrastructure
+    notes: Structure multimodale (transport, énergie, données) reliant les rives européenne
+      et asiatique, symbole de la reconquête géoéconomique d'Istanbul après le séisme
+      de 2047.
+  - nom: Citadelle des Archives
+    type: site_strategique
+    notes: Complexe fortifié abritant les archives numérisées de l'Empire ottoman
+      et les serveurs centraux du réseau *SilkNet*, sous contrôle conjoint des corporations
+      historiques et des algorithmes de médiation culturelle.
+  - nom: Baie des Algues
+    type: infrastructure
+    notes: Ferme verticale de biocarburants et centre de recherche sur les écosystèmes
+      marins, financé par des fonds souverains du Golfe pour compenser la montée des
+      eaux en mer Noire.
+  relations:
+    allies:
+    - zone_moyen_orient_golfe
+    rivaux: []
+  sources_attestees: []
+  parent: zone_moyen_orient_golfe
+  promu_depuis: null
+  niveau: 2
 - slug: kharg_island
   nom: Kharg Island
   niveau: 2
@@ -1473,6 +1815,44 @@ zones:
   - institut_de_therapeutique_integree_de_nairobi_policy_reform
   - institut_de_modelisation_hydrologique_de_kinshasa_policy_reform
   promu_depuis: Nairobi
+- slug: noeuds_irrigation_saheliens
+  nom: Nœuds d'irrigation atmosphérique sahéliens
+  niveau: 2
+  type: infrastructure
+  parent: bloc_souverainiste_non_signataire
+  origine_reelle:
+  - entite: Niger
+    type_entite: pays
+    portion: null
+  - entite: Mali
+    type_entite: pays
+    portion: null
+  - entite: Tchad
+    type_entite: pays
+    portion: null
+  description: 'Points critiques du réseau RIREC dont dépendent structurellement plusieurs
+    États sahéliens pour leur sécurité alimentaire et hydrique. Ces nœuds d''irrigation
+    atmosphérique sont à la fois des infrastructures vitales de survie et des instruments
+    de conditionnalité géopolitique : les États dissidents qui menacent de quitter
+    le Pacte de Genève savent que couper ce réseau, c''est déclencher une crise alimentaire
+    immédiate.'
+  statut: dominant
+  tensions_internes: Les collectifs sahéliens de défense hydrique dénoncent leur dépendance
+    à des infrastructures qu'ils ne contrôlent pas, administrées depuis des bureaux
+    climatisés de Nairobi et Valence par des technocrates sans mandat local.
+  periode_transition: 2041-2098
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies: []
+    rivaux:
+    - sahel_occidental_dissident
+    - region_lac_tchad
+  sources_attestees:
+  - trame_bioclimatique_policy_reform
+  - collectifs_de_defense_hydrique_saheliens_policy_reform
+  - amara_diallo_nkosi_policy_reform
+  promu_depuis: Nœuds d'irrigation atmosphérique sahéliens
 - slug: nuuk_knsf
   nom: Nuuk (siège du KNSF-AGRC)
   niveau: 2
@@ -2112,44 +2492,6 @@ zones:
   - arrestation_chris_van_derburgh_policy_reform
   - trame_bioclimatique_policy_reform
   promu_depuis: null
-- slug: noeuds_irrigation_saheliens
-  nom: Nœuds d'irrigation atmosphérique sahéliens
-  niveau: 2
-  type: infrastructure
-  parent: bloc_souverainiste_non_signataire
-  origine_reelle:
-  - entite: Niger
-    type_entite: pays
-    portion: null
-  - entite: Mali
-    type_entite: pays
-    portion: null
-  - entite: Tchad
-    type_entite: pays
-    portion: null
-  description: 'Points critiques du réseau RIREC dont dépendent structurellement plusieurs
-    États sahéliens pour leur sécurité alimentaire et hydrique. Ces nœuds d''irrigation
-    atmosphérique sont à la fois des infrastructures vitales de survie et des instruments
-    de conditionnalité géopolitique : les États dissidents qui menacent de quitter
-    le Pacte de Genève savent que couper ce réseau, c''est déclencher une crise alimentaire
-    immédiate.'
-  statut: dominant
-  tensions_internes: Les collectifs sahéliens de défense hydrique dénoncent leur dépendance
-    à des infrastructures qu'ils ne contrôlent pas, administrées depuis des bureaux
-    climatisés de Nairobi et Valence par des technocrates sans mandat local.
-  periode_transition: 2041-2098
-  evenement_transition: null
-  lieux_emblematiques: []
-  relations:
-    allies: []
-    rivaux:
-    - sahel_occidental_dissident
-    - region_lac_tchad
-  sources_attestees:
-  - trame_bioclimatique_policy_reform
-  - collectifs_de_defense_hydrique_saheliens_policy_reform
-  - amara_diallo_nkosi_policy_reform
-  promu_depuis: Nœuds d'irrigation atmosphérique sahéliens
 - slug: thule_reconvertie
   nom: Station avancée de Thulé-Reconvertie
   niveau: 3
@@ -2238,275 +2580,6 @@ zones:
   - conglomerats_d_automatisation_industrielle_integrale_policy_reform
   - coalition_des_souverainistes_numeriques_policy_reform
   promu_depuis: null
-- slug: royaume_uni_autonome
-  nom: Royaume-Uni Autonome
-  niveau: 1
-  type: territoire_autonome
-  parent: null
-  statut: stable
-  description: Ancien membre de l'UE, le Royaume-Uni a consolidé son autonomie politique
-    et économique, devenant un acteur clé mais indépendant dans la gouvernance mondiale.
-    Londres reste un centre financier majeur.
-  tensions_internes: Tensions entre centralisation londonienne et dévolution aux nations
-    constitutives (Écosse, Pays de Galles, Irlande du Nord).
-  periode_transition: 2030-2060
-  evenement_transition: null
-  lieux_emblematiques:
-  - Londres
-  - Édimbourg
-  - Cardiff
-  relations:
-    allies:
-    - hub_europeen_regulation
-    - europe_nord_ouest
-    rivaux: []
-  sources_attestees: []
-  origine_reelle:
-  - entite: Royaume-Uni
-    type_entite: pays
-    portion: null
-  - entite: Angleterre
-    type_entite: pays
-    portion: null
-  - entite: Écosse
-    type_entite: pays
-    portion: null
-  - entite: Pays de Galles
-    type_entite: pays
-    portion: null
-- slug: afrique_australe_reformee
-  nom: Afrique Australe Réformée
-  niveau: 1
-  type: territoire_autonome
-  parent: null
-  statut: stable
-  description: Zone économique et politique autonome, héritière des réformes post-2050
-    en Afrique du Sud. Centre de gouvernance régionale et hub technologique.
-  tensions_internes: Inégalités sociales persistantes, tensions entre élites technocratiques
-    et populations marginalisées.
-  periode_transition: 2050-2075
-  evenement_transition: null
-  lieux_emblematiques:
-  - Le Cap
-  - Johannesburg
-  - Prétoria
-  relations:
-    allies:
-    - hub_africain_gouvernance
-    rivaux:
-    - bloc_souverainiste_non_signataire
-  sources_attestees: []
-  origine_reelle:
-  - entite: Afrique du Sud
-    type_entite: pays
-    portion: null
-  - entite: Angola
-    type_entite: pays
-    portion: null
-  - entite: Zambie
-    type_entite: pays
-    portion: null
-  - entite: Malawi
-    type_entite: pays
-    portion: null
-  - entite: Namibie
-    type_entite: pays
-    portion: null
-  - entite: Botswana
-    type_entite: pays
-    portion: null
-  - entite: Lesotho
-    type_entite: pays
-    portion: null
-  - entite: Eswatini
-    type_entite: pays
-    portion: null
-- slug: maghreb_atlantique
-  nom: Maghreb Atlantique
-  niveau: 1
-  type: region
-  parent: null
-  statut: stable
-  description: Région nord-africaine tournée vers l'Atlantique, centre de commerce
-    et de transition énergétique. Allié historique de l'Europe mais autonome.
-  tensions_internes: Tensions entre modernistes et traditionalistes, gestion des ressources
-    en eau.
-  periode_transition: 2040-2065
-  evenement_transition: null
-  lieux_emblematiques:
-  - Casablanca
-  - Rabat
-  - Tanger
-  relations:
-    allies:
-    - europe_nord_ouest
-    - hub_europeen_regulation
-    rivaux:
-    - bloc_souverainiste_non_signataire
-  sources_attestees: []
-  origine_reelle:
-  - entite: Maroc
-    type_entite: pays
-    portion: null
-  - entite: Algérie
-    type_entite: pays
-    portion: null
-  - entite: Tunisie
-    type_entite: pays
-    portion: null
-  - entite: Mauritanie
-    type_entite: pays
-    portion: null
-  - entite: Cap-Vert
-    type_entite: pays
-    portion: null
-- slug: sri_lanka_hub_maritime
-  nom: Sri Lanka (Hub Maritime de l'Océan Indien)
-  niveau: 1
-  type: territoire_autonome
-  parent: null
-  statut: stable
-  description: Ancienne île stratégique devenue plaque tournante du commerce maritime
-    entre l'Asie et l'Afrique. Centre de régulation des routes commerciales et de
-    gestion des ressources océaniques.
-  tensions_internes: Conflits entre élites locales et corporations internationales
-    pour le contrôle des ports.
-  periode_transition: 2050-2075
-  evenement_transition: null
-  lieux_emblematiques:
-  - Port de Colombo
-  - Zone économique spéciale de Galle
-  relations:
-    allies:
-    - espace_eurasiatique
-    - zone_pacifique_industrielle
-    rivaux:
-    - bloc_souverainiste_non_signataire
-  sources_attestees: []
-  origine_reelle:
-  - entite: Sri Lanka
-    type_entite: pays
-    portion: null
-- slug: archipel_comores_autonome
-  nom: Archipel des Comores (Autonome)
-  niveau: 1
-  type: territoire_autonome
-  parent: null
-  statut: emergent
-  description: Ancienne union des Comores devenue un territoire autonome, axé sur
-    la pêche durable et le tourisme spatial. Siège d'une base de surveillance maritime
-    régionale.
-  tensions_internes: Conflits entre îles pour le contrôle des ressources halieutiques
-    et des routes commerciales.
-  periode_transition: 2060-2085
-  evenement_transition: null
-  lieux_emblematiques:
-  - Moroni (capitale)
-  - Port de Mutsamudu
-  relations:
-    allies:
-    - afrique_australe_reformee
-    - hub_africain_gouvernance
-    rivaux:
-    - madagascar_insulaire
-  sources_attestees: []
-  origine_reelle:
-  - entite: Comores
-    type_entite: pays
-    portion: null
-- slug: madagascar_insulaire
-  nom: Madagascar (République Insulaire)
-  niveau: 1
-  type: territoire_autonome
-  parent: null
-  statut: stable
-  description: État insulaire autonome, centre de biodiversité et de biotechnologies.
-    Partenaire clé des Hubs africains pour la gestion des ressources génétiques.
-  tensions_internes: Pressions entre développement industriel et préservation écologique.
-  periode_transition: 2050-2075
-  evenement_transition: null
-  lieux_emblematiques:
-  - Antananarivo
-  - Port de Toamasina
-  relations:
-    allies:
-    - hub_africain_gouvernance
-    - afrique_australe_reformee
-    rivaux:
-    - archipel_comores_autonome
-  sources_attestees: []
-  origine_reelle:
-  - entite: Madagascar
-    type_entite: pays
-    portion: null
-- slug: maurice_hub_financier
-  nom: Maurice (Hub Financier de l'Océan Indien)
-  niveau: 1
-  type: territoire_autonome
-  parent: null
-  statut: stable
-  description: Centre financier offshore et plaque tournante des investissements en
-    Afrique et en Asie. Neutralité politique et stabilité économique.
-  tensions_internes: Inégalités sociales croissantes malgré la prospérité.
-  periode_transition: 2040-2065
-  evenement_transition: null
-  lieux_emblematiques:
-  - Port-Louis
-  - Zone économique de Ebene
-  relations:
-    allies:
-    - hub_europeen_regulation
-    - zone_pacifique_industrielle
-    rivaux: []
-  sources_attestees: []
-  origine_reelle:
-  - entite: Maurice
-    type_entite: pays
-    portion: null
-  - entite: Seychelles
-    type_entite: pays
-    portion: null
-- slug: peninsule_iberique_cooperative
-  nom: Péninsule Ibérique Coopérative
-  type: union_regionale
-  origine_reelle:
-  - entite: Espagne
-    type_entite: pays
-    portion: null
-  description: Zone née de la réforme territoriale ibérique post-2040, marquée par
-    la décentralisation coordonnée et la mutualisation des infrastructures énergétiques
-    (réseau solaire-atlantique) et logistiques (corridors méditerranéens-atlantiques).
-    Siège du Centre Ibérique de Régulation des Flux (CIRF), institution régionale
-    intégrée au CRTI pour la gestion des migrations climatiques et des échanges agro-alimentaires.
-  statut: stable
-  tensions_internes: Résistances locales aux quotas de redistribution des populations
-    climatiques (notamment en Andalousie et Catalogne), compensées par des mécanismes
-    de péréquation fiscale interrégionale.
-  periode_transition: 2038-2052
-  lieux_emblematiques:
-  - nom: Valence (Pôle Logistique Ibérique)
-    type: ville
-    notes: Siège du CIRF et hub de redistribution des flux migratoires et commerciaux
-      entre Europe et Maghreb Atlantique.
-  - nom: Plateforme Solaire de l'Atlantique (PSA)
-    type: infrastructure
-    notes: Réseau mutualisé de centrales solaires offshore et terrestres, co-géré
-      avec le Maghreb Atlantique et l'Europe du Nord-Ouest.
-  - nom: Corridor Méditerranéen Ibérique
-    type: infrastructure
-    notes: Axe ferroviaire et énergétique reliant Almería à Barcelone, intégré aux
-      corridors européens de régulation des flux.
-  relations:
-    allies:
-    - maghreb_atlantique
-    - europe_nord_ouest
-    - hub_europeen_regulation
-    rivaux: []
-  niveau: 1
-  parent: null
-  evenement_transition: null
-  sources_attestees: []
-  promu_depuis: null
 ---
 
 # Géographie — policy_reform
@@ -2520,13 +2593,37 @@ _Maillage récursif enrichi le 2026-06-23 (18 nouvelle(s) zone(s) ajoutée(s) so
 
 _Maillage récursif enrichi le 2026-06-23 (8 nouvelle(s) zone(s) ajoutée(s) sous les zones existantes)._
 
+_Maillage récursif enrichi le 2026-08-19 (1 nouvelle(s) zone(s) ajoutée(s) sous les zones existantes)._
+
 ## Zones
+
+### Afrique Australe Réformée
+
+*territoire_autonome — niveau 1 — statut : stable*
+
+**Origine réelle (2026)** : Afrique du Sud, Angola, Zambie, Malawi, Namibie, Botswana, Lesotho, Eswatini
+
+**Transition** : 2050-2075
+
+Zone économique et politique autonome, héritière des réformes post-2050 en Afrique du Sud. Centre de gouvernance régionale et hub technologique.
+
+**Tensions internes** : Inégalités sociales persistantes, tensions entre élites technocratiques et populations marginalisées.
+
+**Lieux emblématiques** :
+- Le Cap
+- Johannesburg
+- Prétoria
+
+**Alliés** : hub_africain_gouvernance
+
+**Rivaux** : bloc_souverainiste_non_signataire
+
 
 ### Amériques Réformées (États-Unis / bloc américain)
 
 *region — niveau 1 — statut : stable*
 
-**Origine réelle (2026)** : États-Unis d'Amérique, Canada
+**Origine réelle (2026)** : États-Unis d'Amérique, Canada, Mexique, Cuba, Haïti, République dominicaine, Jamaïque, Bahamas, Belize, Guatemala, Honduras, Salvador, Costa Rica, Panama, Trinité-et-Tobago, Groenland
 
 **Transition** : 2055-2060 — voir [[election_parti_commun_americain_policy_reform]]
 
@@ -2540,19 +2637,42 @@ Zone définie par la trajectoire politique américaine dans le scénario, notamm
 
 *Sources attestées : election_parti_commun_americain_policy_reform, coalition_des_souverainistes_numeriques_policy_reform, conglomerats_d_automatisation_industrielle_integrale_policy_reform*
 
+### Archipel des Comores (Autonome)
+
+*territoire_autonome — niveau 1 — statut : emergent*
+
+**Origine réelle (2026)** : Comores
+
+**Transition** : 2060-2085
+
+Ancienne union des Comores devenue un territoire autonome, axé sur la pêche durable et le tourisme spatial. Siège d'une base de surveillance maritime régionale.
+
+**Tensions internes** : Conflits entre îles pour le contrôle des ressources halieutiques et des routes commerciales.
+
+**Lieux emblématiques** :
+- Moroni (capitale)
+- Port de Mutsamudu
+
+**Alliés** : afrique_australe_reformee, hub_africain_gouvernance
+
+**Rivaux** : madagascar_insulaire
+
+
 ### Bloc Souverainiste Non-Signataire (Sud Global dissident)
 
-*bloc_continental — niveau 1 — statut : fragmenté*
+*union_regionale — niveau 1 — statut : stable*
 
-**Origine réelle (2026)** : Niger, Tchad, Mali, Brésil, Argentine, Bolivie, Indonésie
+**Origine réelle (2026)** : Niger, Tchad, Mali, Brésil, Argentine, Bolivie, Indonésie, Nigeria, Burkina Faso, Soudan, Colombie, Pérou, Venezuela, Chili, Nicaragua, Barbade, Guyana, Suriname, Équateur, Paraguay, Uruguay, Sainte-Lucie, Grenade, Saint-Vincent-et-les-Grenadines, Antigua-et-Barbuda, Saint-Christophe-et-Niévès, Dominique
 
 **Transition** : 2087-2098
 
-Ensemble hétérogène d'États du Sud Global — notamment sahéliens, andins et du Pacifique Sud — qui contestent ou résistent à l'architecture de gouvernance technocratique mondiale, revendiquant une souveraineté sur leurs ressources, leurs données et leurs décisions biologiques. Ce bloc comprend les 'États dissidents du bloc austral', les États menacés de sécession du Pacte de Genève, et les mouvements souverainistes afro-asiatiques.
+Coalition d'États du Sud Global — sahéliens, andins et du Pacifique Sud — qui négocient collectivement leur intégration aux mécanismes de gouvernance technocratique mondiale, tout en défendant une souveraineté renforcée sur leurs ressources, leurs données et leurs choix stratégiques. Ce bloc agit comme un contrepoids institutionnalisé, participant aux instances de régulation tout en exigeant des réformes structurelles.
 
-**Tensions internes** : Profondément hétérogène : certains États menacent de quitter le Pacte de Genève sur les questions de rationnement énergétique, d'autres dépendent structurellement des ressources hydriques du RIREC, créant une vulnérabilité qui limite leur capacité de dissidence effective.
+**Tensions internes** : Hétérogénéité persistante : certains membres privilégient une intégration progressive aux institutions internationales, tandis que d'autres insistent sur des garanties de souveraineté absolue, notamment en matière de gestion des ressources hydriques et énergétiques.
 
-**Rivaux** : hub_europeen_regulation, hub_africain_gouvernance
+**Alliés** : espace_eurasiatique, royaume_uni_autonome
+
+**Rivaux** : hub_europeen_regulation
 
 *Sources attestées : amara_diallo_nkosi_policy_reform, etats_dissidents_du_bloc_austral_policy_reform, front_souverainiste_des_blocs_non_signataires_policy_reform, conseil_regulation_ressources_policy_reform, bureau_gouvernance_algorithmique_policy_reform, collectifs_de_defense_hydrique_saheliens_policy_reform, front_des_souverainistes_energetiques_policy_reform, trame_bioclimatique_policy_reform*
 
@@ -2560,7 +2680,7 @@ Ensemble hétérogène d'États du Sud Global — notamment sahéliens, andins e
 
 *union_regionale — niveau 1 — statut : stable*
 
-**Origine réelle (2026)** : Russie, Chine, Kazakhstan, Inde, Corée du Sud
+**Origine réelle (2026)** : Russie, Chine, Kazakhstan, Inde, Corée du Sud, Pologne, Roumanie, Ukraine, Géorgie, Ouzbékistan, Kirghizistan, Vietnam, Bangladesh, Pakistan, Mongolie, Moldavie, Biélorussie, Arménie, Turkménistan, Tadjikistan, Afghanistan, Népal, Bhoutan, Birmanie, Laos, Cambodge, Corée du Nord, Taïwan, Singapour, Arctique
 
 **Transition** : 2040-2065
 
@@ -2576,7 +2696,7 @@ Bloc eurasiatique regroupant les puissances continentales qui ont développé un
 
 *territoire_herite — niveau 1 — statut : stable*
 
-**Origine réelle (2026)** : Pays-Bas, Belgique, Allemagne
+**Origine réelle (2026)** : Pays-Bas, Belgique, Allemagne, Suède, Norvège, Danemark, Islande, République tchèque, Irlande, Lituanie, Lettonie, Estonie
 
 **Transition** : 2071-2080 — voir [[arrestation_chris_van_derburgh_policy_reform]]
 
@@ -2592,7 +2712,7 @@ Zone héritière des États d'Europe du Nord-Ouest, citée dans le corpus comme 
 
 *region — niveau 1 — statut : emergent*
 
-**Origine réelle (2026)** : Kenya, Rwanda, République du Congo, République démocratique du Congo
+**Origine réelle (2026)** : Kenya, Rwanda, République du Congo, République démocratique du Congo, Serbie, Éthiopie, Ghana, Mozambique, Zimbabwe, Sénégal, Gambie, Guinée-Bissau, Guinée, Sierra Leone, Liberia, Côte d'Ivoire, Togo, Bénin, São Tomé-et-Príncipe, Cameroun, République centrafricaine, Gabon, Guinée équatoriale, Tanzanie, Ouganda, Burundi, Djibouti, Somalie, Érythrée
 
 **Transition** : 2061-2094
 
@@ -2610,7 +2730,7 @@ Pôle africain de gouvernance des ressources mondiales, articulé autour de Nair
 
 *region — niveau 1 — statut : dominant*
 
-**Origine réelle (2026)** : Suisse, Pays-Bas, Finlande
+**Origine réelle (2026)** : Suisse, Pays-Bas, Finlande, France, Portugal, Autriche, Grèce, Hongrie, Luxembourg, Monaco, Andorre, Liechtenstein, Saint-Marin, Vatican, Malte, Chypre, Croatie, Slovénie, Bosnie-Herzégovine, Monténégro, Macédoine du Nord, Albanie, Bulgarie, Slovaquie, Kosovo, Italie
 
 **Transition** : 2037-2045 — voir [[effondrement_reseau_mondial_communication_policy_reform]]
 
@@ -2624,11 +2744,134 @@ Cœur institutionnel de la gouvernance technocratique mondiale en 2098, cette zo
 
 *Sources attestées : agence_stabilisation_climatique_policy_reform, bureau_gouvernance_algorithmique_policy_reform, conseil_regulation_algorithmique_policy_reform, leena_vainala_policy_reform, internationale_travailleurs_augmentes_policy_reform, conflit_israel_iran_2026_policy_reform, effondrement_reseau_mondial_communication_policy_reform, consortium_helios_policy_reform*
 
+### Madagascar (République Insulaire)
+
+*territoire_autonome — niveau 1 — statut : stable*
+
+**Origine réelle (2026)** : Madagascar
+
+**Transition** : 2050-2075
+
+État insulaire autonome, centre de biodiversité et de biotechnologies. Partenaire clé des Hubs africains pour la gestion des ressources génétiques.
+
+**Tensions internes** : Pressions entre développement industriel et préservation écologique.
+
+**Lieux emblématiques** :
+- Antananarivo
+- Port de Toamasina
+
+**Alliés** : hub_africain_gouvernance, afrique_australe_reformee
+
+**Rivaux** : archipel_comores_autonome
+
+
+### Maghreb Atlantique
+
+*region — niveau 1 — statut : stable*
+
+**Origine réelle (2026)** : Maroc, Algérie, Tunisie, Mauritanie, Cap-Vert
+
+**Transition** : 2040-2065
+
+Région nord-africaine tournée vers l'Atlantique, centre de commerce et de transition énergétique. Allié historique de l'Europe mais autonome.
+
+**Tensions internes** : Tensions entre modernistes et traditionalistes, gestion des ressources en eau.
+
+**Lieux emblématiques** :
+- Casablanca
+- Rabat
+- Tanger
+
+**Alliés** : europe_nord_ouest, hub_europeen_regulation
+
+**Rivaux** : bloc_souverainiste_non_signataire
+
+
+### Maurice (Hub Financier de l'Océan Indien)
+
+*territoire_autonome — niveau 1 — statut : stable*
+
+**Origine réelle (2026)** : Maurice, Seychelles
+
+**Transition** : 2040-2065
+
+Centre financier offshore et plaque tournante des investissements en Afrique et en Asie. Neutralité politique et stabilité économique.
+
+**Tensions internes** : Inégalités sociales croissantes malgré la prospérité.
+
+**Lieux emblématiques** :
+- Port-Louis
+- Zone économique de Ebene
+
+**Alliés** : hub_europeen_regulation, zone_pacifique_industrielle
+
+
+### Péninsule Ibérique Coopérative
+
+*union_regionale — niveau 1 — statut : stable*
+
+**Origine réelle (2026)** : Espagne
+
+**Transition** : 2038-2052
+
+Zone née de la réforme territoriale ibérique post-2040, marquée par la décentralisation coordonnée et la mutualisation des infrastructures énergétiques (réseau solaire-atlantique) et logistiques (corridors méditerranéens-atlantiques). Siège du Centre Ibérique de Régulation des Flux (CIRF), institution régionale intégrée au CRTI pour la gestion des migrations climatiques et des échanges agro-alimentaires.
+
+**Tensions internes** : Résistances locales aux quotas de redistribution des populations climatiques (notamment en Andalousie et Catalogne), compensées par des mécanismes de péréquation fiscale interrégionale.
+
+**Lieux emblématiques** :
+- Valence (Pôle Logistique Ibérique) (ville) — Siège du CIRF et hub de redistribution des flux migratoires et commerciaux entre Europe et Maghreb Atlantique.
+- Plateforme Solaire de l'Atlantique (PSA) (infrastructure) — Réseau mutualisé de centrales solaires offshore et terrestres, co-géré avec le Maghreb Atlantique et l'Europe du Nord-Ouest.
+- Corridor Méditerranéen Ibérique (infrastructure) — Axe ferroviaire et énergétique reliant Almería à Barcelone, intégré aux corridors européens de régulation des flux.
+
+**Alliés** : maghreb_atlantique, europe_nord_ouest, hub_europeen_regulation
+
+
+### Royaume-Uni Autonome
+
+*territoire_autonome — niveau 1 — statut : stable*
+
+**Origine réelle (2026)** : Royaume-Uni, Angleterre, Écosse, Pays de Galles
+
+**Transition** : 2030-2060
+
+Ancien membre de l'UE, le Royaume-Uni a consolidé son autonomie politique et économique, devenant un acteur clé mais indépendant dans la gouvernance mondiale. Londres reste un centre financier majeur.
+
+**Tensions internes** : Tensions entre centralisation londonienne et dévolution aux nations constitutives (Écosse, Pays de Galles, Irlande du Nord).
+
+**Lieux emblématiques** :
+- Londres
+- Édimbourg
+- Cardiff
+
+**Alliés** : hub_europeen_regulation, europe_nord_ouest
+
+
+### Sri Lanka (Hub Maritime de l'Océan Indien)
+
+*territoire_autonome — niveau 1 — statut : stable*
+
+**Origine réelle (2026)** : Sri Lanka
+
+**Transition** : 2050-2075
+
+Ancienne île stratégique devenue plaque tournante du commerce maritime entre l'Asie et l'Afrique. Centre de régulation des routes commerciales et de gestion des ressources océaniques.
+
+**Tensions internes** : Conflits entre élites locales et corporations internationales pour le contrôle des ports.
+
+**Lieux emblématiques** :
+- Port de Colombo
+- Zone économique spéciale de Galle
+
+**Alliés** : espace_eurasiatique, zone_pacifique_industrielle
+
+**Rivaux** : bloc_souverainiste_non_signataire
+
+
 ### Zone Moyen-Orient / Golfe Persique
 
 *region — niveau 1 — statut : en_declin*
 
-**Origine réelle (2026)** : Israël, Iran, Arabie Saoudite, Koweït, Émirats arabes unis
+**Origine réelle (2026)** : Israël, Iran, Arabie Saoudite, Koweït, Émirats arabes unis, Azerbaïdjan, Irak, Turquie, Yémen, Liban, Syrie, Qatar, Jordanie, Oman, Bahreïn, Palestine, Égypte, Libye
 
 **Transition** : 2026-2029 — voir [[conflit_israel_iran_2026_policy_reform]]
 
@@ -2642,7 +2885,7 @@ Région définie dans ce scénario par le conflit israélo-iranien de 2026-2027,
 
 *region — niveau 1 — statut : stable*
 
-**Origine réelle (2026)** : Japon, Corée du Sud, Australie, Nouvelle-Zélande, Philippines
+**Origine réelle (2026)** : Japon, Corée du Sud, Australie, Nouvelle-Zélande, Philippines, Polynésie française, Maldives, Brunei, Timor oriental, Papouasie-Nouvelle-Guinée, Fidji, Vanuatu, Îles Salomon, Samoa, Tonga, Kiribati, Micronésie, Palaos, Îles Marshall, Nauru, Tuvalu
 
 **Transition** : 2050-2075
 
@@ -2769,8 +3012,6 @@ Réseau de 47 000 kilomètres de corridors écologiques transfrontaliers adminis
 #### Dakar — sous [[bloc_souverainiste_non_signataire]]
 
 *ville — niveau 2 — statut : stable*
-
-**Origine réelle (2026)** : Sénégal
 
 **Transition** : 2059-2065
 
@@ -2907,6 +3148,26 @@ Siège de l'Arctic Passage Authority, autorité intergouvernementale co-administ
 
 *Sources attestées : arctic_passage_authority_policy_reform*
 
+#### Istanbul — sous [[zone_moyen_orient_golfe]]
+
+*ville — niveau 2 — statut : dominant*
+
+**Origine réelle (2026)** : Istanbul
+
+**Transition** : 2040-2065
+
+Ancienne capitale ottomane et mégapole transcontinentale, Istanbul est devenue en 2098 le cœur battant d'une Eurasie réinventée. Sous l'égide d'une gouvernance hybride mêlant héritage historique et innovations néo-urbaines, la ville incarne un modèle de coexistence entre enclaves technocratiques, quartiers autonomes et zones franches économiques, tout en servant de plaque tournante pour les flux migratoires et énergétiques entre l'Europe et l'Asie.
+
+**Tensions internes** : Les tensions persistent entre les factions pro-européennes, les nationalistes turcophones et les communautés kurdes autonomes, exacerbées par les inégalités d'accès aux ressources hydriques et aux technologies de désalinisation. Les émeutes sporadiques dans les districts périphériques menacent régulièrement la stabilité du Conseil Métropolitain.
+
+**Lieux emblématiques** :
+- Pont Eurasien (infrastructure) — Structure multimodale (transport, énergie, données) reliant les rives européenne et asiatique, symbole de la reconquête géoéconomique d'Istanbul après le séisme de 2047.
+- Citadelle des Archives (site_strategique) — Complexe fortifié abritant les archives numérisées de l'Empire ottoman et les serveurs centraux du réseau *SilkNet*, sous contrôle conjoint des corporations historiques et des algorithmes de médiation culturelle.
+- Baie des Algues (infrastructure) — Ferme verticale de biocarburants et centre de recherche sur les écosystèmes marins, financé par des fonds souverains du Golfe pour compenser la montée des eaux en mer Noire.
+
+**Alliés** : zone_moyen_orient_golfe
+
+
 #### Kharg Island — sous [[zone_moyen_orient_golfe]]
 
 *site_strategique — niveau 2 — statut : en_declin*
@@ -3000,6 +3261,22 @@ Siège rotatif du CRTI (alternant avec Rotterdam et Chengdu tous les sept ans), 
 **Tensions internes** : La présence d'institutions technocratiques globales dans la ville crée des frictions avec les mouvements souverainistes africains qui contestent leur légitimité et les collectifs sahariens de défense hydrique qui dénoncent une gouvernance lointaine de leurs réalités.
 
 *Sources attestées : assemblee_territoires_policy_reform, trame_bioclimatique_policy_reform, institut_de_therapeutique_integree_de_nairobi_policy_reform, institut_de_modelisation_hydrologique_de_kinshasa_policy_reform*
+
+#### Nœuds d'irrigation atmosphérique sahéliens — sous [[bloc_souverainiste_non_signataire]]
+
+*infrastructure — niveau 2 — statut : dominant*
+
+**Origine réelle (2026)** : Niger, Mali, Tchad
+
+**Transition** : 2041-2098
+
+Points critiques du réseau RIREC dont dépendent structurellement plusieurs États sahéliens pour leur sécurité alimentaire et hydrique. Ces nœuds d'irrigation atmosphérique sont à la fois des infrastructures vitales de survie et des instruments de conditionnalité géopolitique : les États dissidents qui menacent de quitter le Pacte de Genève savent que couper ce réseau, c'est déclencher une crise alimentaire immédiate.
+
+**Tensions internes** : Les collectifs sahéliens de défense hydrique dénoncent leur dépendance à des infrastructures qu'ils ne contrôlent pas, administrées depuis des bureaux climatisés de Nairobi et Valence par des technocrates sans mandat local.
+
+**Rivaux** : sahel_occidental_dissident, region_lac_tchad
+
+*Sources attestées : trame_bioclimatique_policy_reform, collectifs_de_defense_hydrique_saheliens_policy_reform, amara_diallo_nkosi_policy_reform*
 
 #### Nuuk (siège du KNSF-AGRC) — sous [[europe_nord_ouest]]
 
@@ -3191,7 +3468,7 @@ Sites industriels flottants où opèrent les travailleurs augmentés sous contra
 
 *Sources attestées : internationale_travailleurs_augmentes_policy_reform, consortium_agro_pacifique_policy_reform, conglomerats_d_automatisation_industrielle_integrale_policy_reform*
 
-#### Valence (tours de contrôle RIREC) — sous [[hub_europeen_regulation]]
+#### Valence (tours de contrôle RIREC) — sous [[peninsule_iberique_cooperative]]
 
 *infrastructure — niveau 2 — statut : dominant*
 
@@ -3327,27 +3604,9 @@ Tribunal international où fut signé le cessez-le-feu israélo-iranien de 2027 
 
 *Sources attestées : conflit_israel_iran_2026_policy_reform, arrestation_chris_van_derburgh_policy_reform, trame_bioclimatique_policy_reform*
 
-##### Nœuds d'irrigation atmosphérique sahéliens — sous [[corridors_vivants_rirec]]
-
-*infrastructure — niveau 3 — statut : dominant*
-
-**Origine réelle (2026)** : Niger, Mali, Tchad
-
-**Transition** : 2041-2098
-
-Points critiques du réseau RIREC dont dépendent structurellement plusieurs États sahéliens pour leur sécurité alimentaire et hydrique. Ces nœuds d'irrigation atmosphérique sont à la fois des infrastructures vitales de survie et des instruments de conditionnalité géopolitique : les États dissidents qui menacent de quitter le Pacte de Genève savent que couper ce réseau, c'est déclencher une crise alimentaire immédiate.
-
-**Tensions internes** : Les collectifs sahéliens de défense hydrique dénoncent leur dépendance à des infrastructures qu'ils ne contrôlent pas, administrées depuis des bureaux climatisés de Nairobi et Valence par des technocrates sans mandat local.
-
-**Rivaux** : sahel_occidental_dissident, region_lac_tchad
-
-*Sources attestées : trame_bioclimatique_policy_reform, collectifs_de_defense_hydrique_saheliens_policy_reform, amara_diallo_nkosi_policy_reform*
-
 ##### Station avancée de Thulé-Reconvertie — sous [[iqaluit_apa]]
 
 *infrastructure — niveau 3 — statut : stable*
-
-**Origine réelle (2026)** : Groenland
 
 **Transition** : 2057-2098
 
@@ -3393,6 +3652,3 @@ Zone de concentration des conglomérats d'automatisation industrielle intégrale
 ## Notes / zones à enrichir
 _Espace libre, jamais lu par les scripts — ajoute ici tes idées, brouillons, zones à
 créer manuellement._
-
-### Péninsule Ibérique Coopérative
-Zone née de la réforme territoriale ibérique post-2040, marquée par la décentralisation coordonnée et la mutualisation des infrastructures énergétiques (réseau solaire-atlantique) et logistiques (corridors méditerranéens-atlantiques). Siège du Centre Ibérique de Régulation des Flux (CIRF), institution régionale intégrée au CRTI pour la gestion des migrations climatiques et des échanges agro-alimentaires.

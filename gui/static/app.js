@@ -3092,6 +3092,14 @@ const CarteState = {
   map: null,
   geojsonLayer: null,
   rawGeojson: null,
+  overlays: null,        // FeatureCollection custom (zones qui coupent un pays), ou null si pas encore chargé
+  overlaysLayer: null,
+  drawControl: null,       // instance L.Control.Draw
+  drawPolygonHandler: null, // instance L.Draw.Polygon, démarrée/arrêtée directement (sans passer par l'icône du contrôle)
+  drawnItemsLayer: null,   // L.FeatureGroup où Leaflet.Draw dépose le tracé en cours
+  modeDessin: false,       // true = outils de dessin visibles
+  modeDessinZoneComplete: false,  // true = mode "dessiner une zone complète" (S11, 9 sept)
+  zoneCompleteProposition: null,  // dernière proposition reçue (classification + textes portion), pour l'application après review
   faToEn: null,        // mapping FR -> EN name (gui/static/pays_mapping.json)
   affectations: {},    // pays FR -> zone slug|null
   zonesN1: [],          // [{slug,nom,description,color}]
@@ -3099,6 +3107,13 @@ const CarteState = {
   zoneSurlignee: null,  // slug niveau 1 actuellement mis en évidence sur la carte (ou null)
   searchDebounceTimer: null,
   origineReelleParSlug: {},  // slug -> origine_reelle, reconstruit à chaque ouverture d'arbre (split)
+  racineParSlug: {},  // slug -> slug de la racine niveau 1, reconstruit à chaque ouverture d'arbre (localiser une sous-zone)
+  villes: null,          // [{nom,pays,lat,lon,population,capitale}], chargé une seule fois
+  villesLayer: null,
+  villesVisibles: false,  // off par défaut
+  surligneLayer: null,     // contour unique de la zone sélectionnée (turf.union)
+  dessinZonePreselectionnee: null,  // slug pré-choisi pour le prochain overlay dessiné (panneau unique)
+  dessinPaysPreselectionne: null,   // pays pré-choisi (dessin depuis une ligne "Pays & portions")
 };
 
 function _normEn(s) {
@@ -3128,7 +3143,18 @@ async function loadCarte() {
     }
   }
 
-  if (!CarteState.map) initLeafletMap();
+  if (!CarteState.villes) {
+    try {
+      const res = await fetch('/api/carte/villes');
+      const data = await res.json();
+      CarteState.villes = Array.isArray(data) ? data : [];
+    } catch (e) {
+      console.error('Erreur chargement villes_principales.json', e);
+      CarteState.villes = [];
+    }
+  }
+
+  if (!CarteState.map) { initLeafletMap(); initCarteDessin(); }
   if (!CarteState.rawGeojson) await loadWorldGeojson();
 
   initCarteSearch();
@@ -3188,6 +3214,11 @@ async function refreshCarte() {
   statusEl.textContent = 'Chargement des affectations…';
 
   try {
+    // Refonte Carte (12 sept 2026, étape 1) : un seul appel désormais --
+    // /api/carte/affectations renvoie déjà couverture.overlays (les mêmes
+    // features qu'avant via /api/carte/overlays, mais avec couleur_effective/
+    // motif_effectif déjà résolus par héritage N1 côté serveur). Plus besoin
+    // du fetch séparé ni de deviner la couleur d'un overlay côté client.
     const res = await fetch(`/api/carte/affectations?scenario=${encodeURIComponent(scenario)}`);
     const data = await res.json();
     if (data.error) {
@@ -3196,6 +3227,10 @@ async function refreshCarte() {
     }
     CarteState.affectations = data.affectations || {};
     CarteState.zonesN1 = data.zones_n1 || [];
+    const couverture = data.couverture || { pays_masques: {}, overlays: [] };
+    CarteState.couverture = couverture;
+    CarteState.overlays = { type: 'FeatureCollection', features: couverture.overlays || [] };
+
     statusEl.textContent = '';
     renderCarteLayer();
     renderCarteLegend();
@@ -3221,6 +3256,63 @@ function _buildEnToFrIndex() {
 const PATTERN_ANGLES  = [45, 135, 0, 90, 20];
 const PATTERN_SPACING = [7, 7, 9, 9, 6];
 
+// Bibliothèque de motifs personnalisés (8 sept 2026) -- distincte des
+// hachures génériques automatiques (PATTERN_ANGLES/PATTERN_SPACING) : ici
+// chaque zone qui en choisit un affiche ce symbole précis, tuilé. Formes
+// simplifiées volontairement (lisibles à petite échelle, ~24px de tuile).
+const MOTIFS_ICONES = {
+  radiation: (g, fg) => {
+    // Trèfle radioactif approximé par 3 secteurs triangulaires à 120°.
+    const cx = 12, cy = 12, rInt = 3, rExt = 10;
+    for (let k = 0; k < 3; k++) {
+      const centre = -90 + k * 120; // premier secteur pointant vers le haut
+      const a1 = (centre - 25) * Math.PI / 180, a2 = (centre + 25) * Math.PI / 180;
+      const x1 = cx + rExt * Math.cos(a1), y1 = cy + rExt * Math.sin(a1);
+      const x2 = cx + rExt * Math.cos(a2), y2 = cy + rExt * Math.sin(a2);
+      const xi1 = cx + rInt * Math.cos(a1), yi1 = cy + rInt * Math.sin(a1);
+      const xi2 = cx + rInt * Math.cos(a2), yi2 = cy + rInt * Math.sin(a2);
+      const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      path.setAttribute('d', `M${xi1},${yi1} L${x1},${y1} A${rExt},${rExt} 0 0 1 ${x2},${y2} L${xi2},${yi2} Z`);
+      path.setAttribute('fill', fg);
+      g.appendChild(path);
+    }
+    const c = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    c.setAttribute('cx', cx); c.setAttribute('cy', cy); c.setAttribute('r', rInt);
+    c.setAttribute('fill', fg);
+    g.appendChild(c);
+  },
+  flamme: (g, fg) => {
+    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    path.setAttribute('d', 'M12,3 C9,7 7,9 7,13 a5,5 0 1,0 10,0 C17,9 15,7 12,3 Z');
+    path.setAttribute('fill', fg);
+    g.appendChild(path);
+  },
+  vague: (g, fg) => {
+    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    path.setAttribute('d', 'M2,14 Q6,9 10,14 T18,14 T26,14 L26,20 L2,20 Z');
+    path.setAttribute('fill', fg);
+    g.appendChild(path);
+  },
+  crane: (g, fg) => {
+    const head = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    head.setAttribute('cx', 12); head.setAttribute('cy', 10); head.setAttribute('r', 6);
+    head.setAttribute('fill', fg);
+    g.appendChild(head);
+    const jaw = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+    jaw.setAttribute('x', 9); jaw.setAttribute('y', 15); jaw.setAttribute('width', 6); jaw.setAttribute('height', 4);
+    jaw.setAttribute('fill', fg);
+    g.appendChild(jaw);
+    [9, 15].forEach(ex => {
+      const eye = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+      eye.setAttribute('cx', ex); eye.setAttribute('cy', 10); eye.setAttribute('r', 1.6);
+      eye.setAttribute('fill', 'var(--carte-eye-bg, #fff)');
+      g.appendChild(eye);
+    });
+  },
+};
+
+const MOTIFS_LABELS = { radiation: '☢ Radiation', flamme: '🔥 Flamme', vague: '🌊 Vague', crane: '💀 Crâne' };
+
 function _darken(hex, amount) {
   const num = parseInt(hex.replace('#', ''), 16);
   let r = (num >> 16) - amount;
@@ -3243,7 +3335,31 @@ function _ensureSvgDefs() {
 
 /** Crée (si besoin) le <pattern> SVG d'une zone et retourne l'URL de fill à utiliser. */
 function _zoneFill(defs, zone) {
-  if (zone.pattern === null || zone.pattern === undefined || !defs) return zone.color;
+  if (!defs) return zone.color;
+
+  // Motif personnalisé (icône) -- prioritaire sur les hachures génériques.
+  if (zone.motif && MOTIFS_ICONES[zone.motif]) {
+    const id = `carte-zone-motif-${zone.slug}`;
+    const pattern = document.createElementNS('http://www.w3.org/2000/svg', 'pattern');
+    pattern.setAttribute('id', id);
+    pattern.setAttribute('width', 24);
+    pattern.setAttribute('height', 24);
+    pattern.setAttribute('patternUnits', 'userSpaceOnUse');
+
+    const bg = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+    bg.setAttribute('width', 24);
+    bg.setAttribute('height', 24);
+    bg.setAttribute('fill', zone.color);
+    pattern.appendChild(bg);
+
+    const fg = _darken(zone.color, 70);
+    MOTIFS_ICONES[zone.motif](pattern, fg);
+
+    defs.appendChild(pattern);
+    return `url(#${id})`;
+  }
+
+  if (zone.pattern === null || zone.pattern === undefined) return zone.color;
 
   const id = `carte-zone-pattern-${zone.slug}`;
   const angle = PATTERN_ANGLES[zone.pattern % PATTERN_ANGLES.length];
@@ -3276,6 +3392,7 @@ function _zoneFill(defs, zone) {
 function renderCarteLayer() {
   if (!CarteState.rawGeojson) return;
   if (CarteState.geojsonLayer) CarteState.map.removeLayer(CarteState.geojsonLayer);
+  if (CarteState.overlaysLayer) CarteState.map.removeLayer(CarteState.overlaysLayer);
 
   const enToFr = _buildEnToFrIndex();
   const defs = _ensureSvgDefs();
@@ -3288,29 +3405,64 @@ function renderCarteLayer() {
       const frList = enToFr[_normEn(name)];
       if (!frList) return { fillColor: 'transparent', weight: 0.5, color: '#ccc', fillOpacity: 0 };
 
+      // Le calque de base affiche TOUJOURS la couleur de la zone de base du
+      // pays, même s'il a par ailleurs un ou plusieurs overlays -- un pays
+      // peut être partagé (ex. France : zone_interdite_heysham en base +
+      // portion overlay zone_euro_sud). L'overlay, en opacité pleine plus
+      // bas, recouvre correctement sa propre portion.
+      //
+      // La surbrillance ne se fait plus ici (12 sept 2026, étape 2) : un
+      // trait orange par pays laissait les frontières internes de la zone
+      // visibles. Un contour unique dessiné par renderSurlignageZone(), à la
+      // fin de cette fonction, s'en charge désormais -- ce calque garde
+      // toujours son style normal, surligné ou non.
       const allNull = frList.every(fr => !CarteState.affectations[fr]);
       if (allNull) return { fillColor: '#999', weight: 1, color: '#666', fillOpacity: 0.5 };
 
       const zone = frList.map(fr => CarteState.affectations[fr]).filter(Boolean)[0];
       const fill = zoneFillMap[zone] || '#3b6fd4';
-      const estSurlignee = CarteState.zoneSurlignee && zone === CarteState.zoneSurlignee;
-      return {
-        fillColor: fill,
-        weight: estSurlignee ? 4 : 1,
-        color: estSurlignee ? '#ff5500' : '#666',
-        fillOpacity: estSurlignee ? 1 : 0.85,
-      };
+      return { fillColor: fill, weight: 1, color: '#666', fillOpacity: 1 };
     },
     onEachFeature: (feature, layer) => {
       const name = feature.properties?.name || feature.properties?.ADMIN || '';
       const frList = enToFr[_normEn(name)];
       if (!frList) return;
-      layer.on('click', () => onCartePaysClick(frList, name));
+      // En mode dessin, on laisse le clic filer vers Leaflet.Draw (qui pose
+      // un sommet du polygone) au lieu de sélectionner le pays -- sinon les
+      // deux se déclenchaient en même temps (bug remonté par David, 8 sept).
+      layer.on('click', () => { if (!CarteState.modeDessin && !CarteState.modeDessinZoneComplete) onCartePaysClick(frList, name); });
       layer.on('mouseover', () => layer.setStyle({ weight: 2, color: '#222' }));
       layer.on('mouseout', () => layer.setStyle({ weight: 1, color: '#666' }));
       layer.bindTooltip(frList.join(' / '), { sticky: true });
     },
   }).addTo(CarteState.map);
+
+  // Overlays custom : zones qui coupent un pays en deux ou plus. Ajoutée
+  // APRÈS la couche pays -- Leaflet empile dans l'ordre d'ajout des couches,
+  // donc ces polygones s'affichent bien par-dessus. fillOpacity TOUJOURS à
+  // 1 (opaque) -- 0.85 laissait transparaître le motif hachuré du pays
+  // sous-jacent. Couleur et motif viennent de couleur_effective/
+  // motif_effectif, déjà résolus par héritage N1 côté serveur.
+  if (CarteState.overlays?.features?.length) {
+    CarteState.overlaysLayer = L.geoJSON(CarteState.overlays, {
+      style: (feature) => {
+        const slug = feature.properties?.zone_slug;
+        const couleur = feature.properties?.couleur_effective;
+        const motif = feature.properties?.motif_effectif;
+        const fill = _zoneFill(defs, { slug, color: couleur || '#3b6fd4', motif });
+        return { fillColor: fill, weight: 1.5, color: '#333', fillOpacity: 1, dashArray: '4 3' };
+      },
+      onEachFeature: (feature, layer) => {
+        const slug = feature.properties?.zone_slug;
+        const zone = CarteState.zonesN1.find(z => z.slug === slug);
+        const label = zone ? `${zone.nom} (${feature.properties?.pays || '?'})` : (slug || '?');
+        layer.on('click', () => onCarteZoneOverlayClick(feature.properties || {}));
+        layer.on('mouseover', () => layer.setStyle({ weight: 3, color: '#111' }));
+        layer.on('mouseout', () => layer.setStyle({ weight: 1.5, color: '#333' }));
+        layer.bindTooltip(label, { sticky: true });
+      },
+    }).addTo(CarteState.map);
+  }
 
   // Diagnostic : pays FR sans correspondance trouvée sur le fond de carte
   const matchedFr = new Set(Object.values(enToFr).flat());
@@ -3322,6 +3474,917 @@ function renderCarteLayer() {
     diagEl.innerHTML = `⚠ ${missing.length} pays non localisés sur le fond de carte (noms à corriger dans gui/static/pays_mapping.json) : ${missing.join(', ')}`;
   } else {
     diagEl.style.display = 'none';
+  }
+
+  // Étape 2 (12 sept 2026) : contour unique de la zone sélectionnée, et
+  // villes toujours redessinées en dernier (donc toujours au-dessus) --
+  // les deux dépendent de ce que renderCarteLayer() vient de (re)dessiner.
+  renderSurlignageZone();
+  renderVillesLayer();
+}
+
+// ── Surbrillance : contour extérieur unique de la zone sélectionnée ─────
+//
+// Avant (12 sept 2026) : chaque pays de la zone recevait individuellement
+// un trait orange, laissant les frontières internes de la zone visibles --
+// pas ce que David voulait (juste le contour extérieur de la zone entière).
+// Fusionne (turf.union) tous les pays "pays entier" + portions overlay
+// appartenant à la zone sélectionnée en une seule géométrie, et affiche
+// uniquement son contour, sans remplissage, par-dessus tout le reste.
+//
+// Pour un pays partagé (ex. France, base=Heysham + overlay=Zone Euro Sud),
+// la portion overlay d'une AUTRE zone est retirée par turf.difference avant
+// le calcul du contour -- surligner Heysham ne montre plus tout le contour
+// de la France, seulement sa portion réelle (fix du 12 sept 2026).
+// Rassemble les géométries "pays entier + overlays" appartenant à
+// `cibleSlugOverlay`, parmi les pays affectés en base à `racineSlug`, filtré
+// le cas échéant par `paysFiltre` (Set de noms FR, ou null = pas de filtre).
+// Factorisé (12 sept 2026) pour permettre le repli zone parente ci-dessous
+// sans dupliquer la boucle turf.difference.
+function _gatherZoneGeometries(racineSlug, cibleSlugOverlay, paysFiltre) {
+  const enToFr = _buildEnToFrIndex();
+  const geometries = [];
+
+  CarteState.rawGeojson.features.forEach(feature => {
+    const name = feature.properties?.name || feature.properties?.ADMIN || '';
+    const frList = enToFr[_normEn(name)];
+    if (!frList) return;
+    const zone = frList.map(fr => CarteState.affectations[fr]).filter(Boolean)[0];
+    if (zone !== racineSlug) return;
+    if (paysFiltre && !frList.some(fr => paysFiltre.has(fr))) return;
+
+    // Ce pays est affecté (en base) à la zone surlignée -- mais si une
+    // portion de son territoire est découpée par un overlay appartenant à
+    // une AUTRE zone (ex. France : base Zone Interdite de Heysham, portion
+    // Zone Euro Sud en overlay), il faut l'exclure du contour. Découpe
+    // géométrique réelle (turf.difference), pas une approximation.
+    let geom = feature;
+    const overlaysAutreZone = (CarteState.overlays?.features || []).filter(f =>
+      f.properties?.pays && frList.includes(f.properties.pays) && f.properties.zone_slug !== cibleSlugOverlay
+    );
+    overlaysAutreZone.forEach(ov => {
+      try {
+        const diff = turf.difference(geom, ov);
+        if (diff) geom = diff;
+      } catch (e) {
+        console.warn('turf.difference a échoué (géométrie non modifiée)', e);
+      }
+    });
+    geometries.push(geom);
+  });
+
+  (CarteState.overlays?.features || []).forEach(feature => {
+    if (feature.properties?.zone_slug === cibleSlugOverlay) geometries.push(feature);
+  });
+
+  return geometries;
+}
+
+const _MSG_REPLI_SOUS_ZONE = "Cette sous-zone n'a pas de tracé propre localisable -- zone parente affichée à la place.";
+
+function renderSurlignageZone() {
+  if (CarteState.surligneLayer) {
+    CarteState.map.removeLayer(CarteState.surligneLayer);
+    CarteState.surligneLayer = null;
+  }
+  const slug = CarteState.zoneSurlignee;
+  if (!slug || !CarteState.rawGeojson) return;
+  if (typeof turf === 'undefined') {
+    console.warn('Turf.js non chargé -- contour de zone non affiché.');
+    return;
+  }
+
+  // Sous-zone (niveau 2/3) : pas de couleur propre (héritage N1), mais peut
+  // quand même être localisée -- on ne garde que SES propres pays (son
+  // origine_reelle à elle), parmi ceux affectés en base à sa racine N1.
+  // racineParSlug/origineReelleParSlug sont peuplés à l'ouverture de
+  // l'arbre (openArbreZonePanel) -- absents tant qu'aucun arbre n'a encore
+  // été ouvert pour cette branche, auquel cas la sous-zone reste non
+  // localisable pour l'instant (pas d'erreur, juste rien à afficher).
+  const estN1 = CarteState.zonesN1.some(z => z.slug === slug);
+  const racineSlug = estN1 ? slug : (CarteState.racineParSlug?.[slug] || null);
+  if (!racineSlug) return;
+
+  const statusEl = document.getElementById('carte-status');
+  let geometries;
+
+  if (estN1) {
+    geometries = _gatherZoneGeometries(racineSlug, slug, null);
+  } else {
+    const paysSousZone = new Set(
+      (CarteState.origineReelleParSlug?.[slug] || [])
+        .map(o => o && o.entite)
+        .filter(Boolean)
+    );
+    geometries = _gatherZoneGeometries(racineSlug, slug, paysSousZone);
+
+    if (!geometries.length) {
+      // Repli (12 sept 2026) : cette sous-zone référence des lieux/régions
+      // plutôt que des noms de pays exacts (ex. "Balkans occidentaux"),
+      // sans overlay dédié -- rien à dessiner pour elle spécifiquement.
+      // Montrer sa zone parente plutôt que rien du tout, avec un message
+      // explicite pour que ça ne ressemble jamais à un bug silencieux.
+      geometries = _gatherZoneGeometries(racineSlug, racineSlug, null);
+      if (statusEl) statusEl.textContent = _MSG_REPLI_SOUS_ZONE;
+    } else if (statusEl && statusEl.textContent === _MSG_REPLI_SOUS_ZONE) {
+      statusEl.textContent = '';
+    }
+  }
+
+  if (!geometries.length) return;
+
+  let union = geometries[0];
+  for (let i = 1; i < geometries.length; i++) {
+    try {
+      union = turf.union(union, geometries[i]);
+    } catch (e) {
+      console.warn('turf.union a échoué sur une géométrie (ignorée pour le contour)', e);
+    }
+  }
+  if (!union) return;
+
+  CarteState.surligneLayer = L.geoJSON(union, {
+    style: { fill: false, weight: 4, color: '#ff5500' },
+    interactive: false,
+  }).addTo(CarteState.map);
+}
+
+// ── Villes principales (12 sept 2026) ───────────────────────────────────
+
+function toggleVillesPrincipales() {
+  CarteState.villesVisibles = !CarteState.villesVisibles;
+  const btn = document.getElementById('carte-toggle-villes');
+  if (btn) btn.classList.toggle('active', CarteState.villesVisibles);
+  renderVillesLayer();
+}
+
+function renderVillesLayer() {
+  if (CarteState.villesLayer) {
+    CarteState.map.removeLayer(CarteState.villesLayer);
+    CarteState.villesLayer = null;
+  }
+  if (!CarteState.villesVisibles || !CarteState.villes?.length) return;
+
+  // Un seul style de marqueur pour toutes les villes (12 sept 2026, sur
+  // demande de David -- avant, distinction capitale/autre ville).
+  const markers = CarteState.villes.map(v => {
+    const marker = L.circleMarker([v.lat, v.lon], {
+      radius: 3.5,
+      weight: 1,
+      color: '#fff',
+      fillColor: '#333',
+      fillOpacity: 0.9,
+    });
+    const pop = v.population ? `${v.population.toLocaleString('fr-FR')} hab.` : '';
+    marker.bindTooltip(`${v.nom}${pop ? ' — ' + pop : ''}`, { sticky: true });
+    return marker;
+  });
+
+  CarteState.villesLayer = L.layerGroup(markers).addTo(CarteState.map);
+}
+
+
+// ── Overlays custom : dessin, création, suppression (26 août 2026) ─────────
+
+function initCarteDessin() {
+  CarteState.drawnItemsLayer = new L.FeatureGroup();
+  CarteState.map.addLayer(CarteState.drawnItemsLayer);
+
+  CarteState.drawControl = new L.Control.Draw({
+    position: 'topright',
+    draw: {
+      polygon: {
+        allowIntersection: false,
+        showArea: true,
+        shapeOptions: { color: '#ff5500', weight: 2 },
+      },
+      // Seul le polygone est utile ici -- pas de marqueurs/lignes/rectangles
+      // pour cet usage (frontières de zones).
+      polyline: false,
+      rectangle: false,
+      circle: false,
+      circlemarker: false,
+      marker: false,
+    },
+    edit: {
+      featureGroup: CarteState.drawnItemsLayer,
+      remove: false,  // suppression gérée via notre propre bouton (voir _supprimerOverlay),
+                       // pas via l'outil d'édition générique de Leaflet.Draw
+    },
+  });
+  // Le contrôle (barre d'icônes) reste ajouté en permanence une fois le mode
+  // dessin actif -- mais on ne compte plus sur le clic manuel sur son icône
+  // polygone (source de confusion, bug remonté par David le 8 sept : la
+  // barre apparaissait mais cliquer sur la carte sélectionnait un pays au
+  // lieu de dessiner). L'outil polygone est démarré directement par code
+  // dans toggleModeDessin()/onCarteOverlayDrawCreated().
+  CarteState.drawPolygonHandler = new L.Draw.Polygon(CarteState.map, CarteState.drawControl.options.draw.polygon);
+
+  CarteState.map.on(L.Draw.Event.CREATED, (e) => {
+    if (CarteState.modeDessinZoneComplete) onZoneCompleteDrawCreated(e);
+    else onCarteOverlayDrawCreated(e);
+  });
+}
+
+function toggleModeDessin() {
+  CarteState.modeDessin = !CarteState.modeDessin;
+  const btn = document.getElementById('carte-toggle-dessin');
+
+  if (CarteState.modeDessin) {
+    CarteState.map.addControl(CarteState.drawControl);
+    CarteState.drawPolygonHandler.enable();  // démarre directement l'outil, pas besoin de cliquer l'icône
+    if (btn) btn.textContent = '✖ Annuler le dessin';
+    document.getElementById('carte-status').textContent =
+      'Mode dessin actif — clique sur la carte pour poser chaque sommet du polygone, double-clic pour le fermer.';
+  } else {
+    CarteState.drawPolygonHandler.disable();
+    CarteState.map.removeControl(CarteState.drawControl);
+    CarteState.drawnItemsLayer.clearLayers();
+    if (btn) btn.textContent = '✏️ Dessiner un overlay';
+    document.getElementById('carte-status').textContent = '';
+  }
+}
+
+async function onCarteOverlayDrawCreated(e) {
+  const layer = e.layer;
+  CarteState.drawnItemsLayer.addLayer(layer);
+  const geometry = layer.toGeoJSON().geometry;
+
+  // Leaflet.Draw désactive l'outil une fois un polygone terminé -- on le
+  // relance immédiatement si le mode dessin est toujours actif, pour
+  // enchaîner plusieurs overlays sans re-cliquer sur le bouton à chaque fois.
+  const _relancerSiModeActif = () => {
+    if (CarteState.modeDessin) CarteState.drawPolygonHandler.enable();
+  };
+
+  const scenario = CarteState.scenario;
+  // Panneau unique (12 sept 2026) : si un dessin a été lancé depuis le
+  // panneau d'une zone précise, on saute le sélecteur générique -- usage
+  // unique, retombe ensuite sur le sélecteur classique pour le prochain
+  // polygone si le mode dessin reste actif.
+  const zonePreselectionnee = CarteState.dessinZonePreselectionnee;
+  CarteState.dessinZonePreselectionnee = null;
+  const zoneSlug = zonePreselectionnee || await _promptZoneSlug(scenario);
+  if (!zoneSlug) {
+    CarteState.drawnItemsLayer.clearLayers();
+    _relancerSiModeActif();
+    return;
+  }
+
+  const paysPreselectionne = CarteState.dessinPaysPreselectionne;
+  CarteState.dessinPaysPreselectionne = null;
+  const choixPays = paysPreselectionne
+    ? { pays: paysPreselectionne, estNouveau: false }
+    : await _promptPays(scenario, zoneSlug);
+  if (!choixPays) {
+    CarteState.drawnItemsLayer.clearLayers();
+    _relancerSiModeActif();
+    return;
+  }
+  const { pays, estNouveau } = choixPays;
+
+  let portion = '';
+  if (estNouveau) {
+    portion = await _promptPortion(pays);
+    if (!portion) {
+      CarteState.drawnItemsLayer.clearLayers();
+      _relancerSiModeActif();
+      return;
+    }
+  }
+
+  const statusEl = document.getElementById('carte-status');
+  statusEl.textContent = 'Enregistrement du polygone…';
+
+  try {
+    const res = await fetch('/api/carte/overlays/creer', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ scenario, zone_slug: zoneSlug, pays, geometry, portion }),
+    });
+    const data = await res.json();
+    if (data.error) {
+      statusEl.textContent = `Erreur : ${data.error}`;
+      _relancerSiModeActif();
+      return;
+    }
+    statusEl.textContent = data.origine_reelle_creee
+      ? `Overlay créé, origine_reelle ajoutée à '${zoneSlug}' (${data.total_features} overlay(s) au total).`
+      : `Overlay créé (${data.total_features} au total pour ce scénario).`;
+    CarteState.drawnItemsLayer.clearLayers();
+    await refreshCarte();  // recharge overlays + réaffiche
+    if (zonePreselectionnee) openRenommerZonePanel(zonePreselectionnee);  // réaffiche le panneau à jour
+    _relancerSiModeActif();
+  } catch (err) {
+    statusEl.textContent = `Erreur réseau : ${err.message}`;
+    _relancerSiModeActif();
+  }
+}
+
+// ── S11 : "Dessiner une zone complète" (9 sept 2026) ────────────────────────
+// Mode de dessin distinct de l'overlay ci-dessus -- ici on dessine le
+// contour complet d'une NOUVELLE zone, sans se soucier des frontières de
+// pays en dessous, et zone_dessin_complet.py déduit automatiquement quels
+// pays sont entièrement couverts (split) vs partiellement (overlay).
+// Doctrine génération/application séparée : /proposer ne modifie jamais le
+// vault, l'application ci-dessous réutilise /api/carte/assign,
+// /api/carte/creer_zone_vide et /api/carte/overlays/creer -- déjà testées,
+// pas de nouveau mécanisme d'écriture.
+
+function toggleModeDessinZoneComplete() {
+  CarteState.modeDessinZoneComplete = !CarteState.modeDessinZoneComplete;
+  const btn = document.getElementById('carte-toggle-dessin-zone-complete');
+
+  if (CarteState.modeDessinZoneComplete) {
+    // Mutuellement exclusif avec le mode overlay existant -- pas de sens
+    // à avoir les deux modes de dessin actifs en même temps.
+    if (CarteState.modeDessin) toggleModeDessin();
+    CarteState.map.addControl(CarteState.drawControl);
+    CarteState.drawPolygonHandler.enable();
+    if (btn) btn.textContent = '✖ Annuler le dessin';
+    document.getElementById('carte-status').textContent =
+      'Mode "zone complète" actif — dessine le contour complet de la nouvelle zone (peu importe les frontières en dessous), double-clic pour fermer.';
+  } else {
+    CarteState.drawPolygonHandler.disable();
+    CarteState.map.removeControl(CarteState.drawControl);
+    CarteState.drawnItemsLayer.clearLayers();
+    if (btn) btn.textContent = '🗺️ Dessiner une zone complète';
+    document.getElementById('carte-status').textContent = '';
+  }
+}
+
+// ── S11 : sélecteur de cible (nouvelle zone vs zone existante) ─────────────
+// Même leçon que le bug Allemagne/Norvège (8 sept) : l'option "créer" doit
+// être visible en tête de liste, pas perdue en bas -- réutilise le même
+// sélecteur générique (_pickFromList) que _promptZoneSlug/_promptPays.
+async function _promptCibleZoneComplete(scenario) {
+  const statusEl = document.getElementById('carte-status');
+  let zones = [];
+  try {
+    const res = await fetch(`/api/carte/zones_toutes?scenario=${encodeURIComponent(scenario)}`);
+    const data = await res.json();
+    zones = data.zones || [];
+  } catch (e) {
+    statusEl.textContent = `Erreur réseau (liste des zones) : ${e.message}`;
+    return null;
+  }
+
+  const items = [
+    { label: '➕ Créer une nouvelle zone', value: '__nouvelle__' },
+    ...zones
+      .slice()
+      .sort((a, b) => a.nom.localeCompare(b.nom, 'fr'))
+      .map(z => ({ label: `${z.nom}  —  ${z.slug} (niveau ${z.niveau})`, value: z.slug })),
+  ];
+
+  const choix = await _pickFromList('Zone cible pour ce dessin', items);
+  if (choix === null) return null;
+
+  if (choix === '__nouvelle__') {
+    const nom = (window.prompt('Nom de la nouvelle zone :') || '').trim();
+    if (!nom) return null;
+    return { mode: 'nouvelle', nom, slug: null };
+  }
+
+  const zoneChoisie = zones.find(z => z.slug === choix);
+  return { mode: 'existante', nom: zoneChoisie ? zoneChoisie.nom : choix, slug: choix };
+}
+
+async function onZoneCompleteDrawCreated(e) {
+  const layer = e.layer;
+  CarteState.drawnItemsLayer.addLayer(layer);
+  const geometry = layer.toGeoJSON().geometry;
+  const scenario = CarteState.scenario;
+
+  const cible = await _promptCibleZoneComplete(scenario);
+  if (!cible) {
+    CarteState.drawnItemsLayer.clearLayers();
+    return;
+  }
+
+  const statusEl = document.getElementById('carte-status');
+  statusEl.textContent = 'Calcul de la classification en cours (chargement Natural Earth + appels LLM par pays overlay, jusqu\'à 30-60s selon le nombre de pays touchés)…';
+
+  try {
+    const [resProp, resAff] = await Promise.all([
+      fetch('/api/carte/dessiner_zone_complete/proposer', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ scenario, zone_nom: cible.nom, geometry }),
+      }),
+      // Chargé en parallèle -- sert uniquement à afficher "déjà affecté à
+      // <zone>" dans le panneau de review pour les pays en split, avant que
+      // l'application n'écrase silencieusement cette affectation (voir
+      // /api/carte/assign : retire le pays de toute autre zone existante,
+      // portion ou pays entier, sans avertissement natif).
+      fetch(`/api/carte/affectations?scenario=${encodeURIComponent(scenario)}`),
+    ]);
+    const data = await resProp.json();
+    if (data.error) {
+      statusEl.textContent = `Erreur : ${data.error}`;
+      return;
+    }
+    const dataAff = await resAff.json();
+    const nomParSlug = {};
+    (dataAff.zones_n1 || []).forEach(z => { nomParSlug[z.slug] = z.nom; });
+
+    statusEl.textContent = '';
+    CarteState.zoneCompleteProposition = {
+      ...data, zone_nom: cible.nom, geometry, cible,
+      affectations_actuelles: dataAff.affectations || {},
+      noms_zones_existantes: nomParSlug,
+    };
+    _renderZoneCompletePanel();
+  } catch (err) {
+    statusEl.textContent = `Erreur réseau : ${err.message}`;
+  }
+}
+
+function _renderZoneCompletePanel() {
+  const prop = CarteState.zoneCompleteProposition;
+  const panel = document.getElementById('carte-panel');
+  if (!prop) return;
+  const cibleExistante = prop.cible?.mode === 'existante';
+
+  const rows = prop.classification
+    .map((c, i) => ({ c, i }))
+    .filter(({ c }) => c.classification !== 'ignore_bruit')
+    .map(({ c, i }) => {
+    const badge = c.classification === 'split'
+      ? '<span style="color:#2a7d2a;font-weight:bold;">SPLIT (pays entier)</span>'
+      : '<span style="color:#b5760a;font-weight:bold;">OVERLAY (portion)</span>';
+
+    // Avertissement "déjà affecté" -- seulement pertinent/fiable pour les
+    // splits : /api/carte/affectations ne reflète que les affectations
+    // pays-entier (zones_pays.json), pas les portions overlay des AUTRES
+    // zones (non détectable sans intersection géométrique -- pas fait ici).
+    // Si la cible EST déjà cette même zone (mode existante), ce n'est pas
+    // un vol d'un pays à une autre zone -- pas d'avertissement dans ce cas.
+    let dejaAffecte = '';
+    if (c.classification === 'split') {
+      const slugExistant = prop.affectations_actuelles?.[c.pays];
+      if (slugExistant && slugExistant !== prop.cible?.slug) {
+        const nomExistant = prop.noms_zones_existantes?.[slugExistant] || slugExistant;
+        dejaAffecte = `<div style="font-size:11px;color:#b5760a;margin-top:2px;">⚠ déjà affecté (pays entier) à <strong>${nomExistant}</strong> — sera retiré de cette zone si tu appliques</div>`;
+      }
+    }
+
+    const portionField = c.classification === 'overlay'
+      ? `<textarea class="zc-portion" data-idx="${i}" rows="2" style="width:100%;font-size:12px;margin-top:4px;box-sizing:border-box;">${(c.portion_proposee || '').replace(/</g, '&lt;')}</textarea>
+         ${c.portion_erreur ? `<div style="color:#b00;font-size:11px;">Erreur LLM (rédaction manuelle nécessaire) : ${c.portion_erreur}</div>` : ''}`
+      : '';
+    return `
+      <div class="enrichissement-item" style="border:1px solid #eee;border-radius:4px;padding:8px;margin-bottom:6px;">
+        <label style="display:flex;justify-content:space-between;align-items:center;cursor:pointer;">
+          <span><input type="checkbox" class="zc-inclure" data-idx="${i}" checked> <strong>${c.pays}</strong> — ${c.couverture_pct}% ${badge}</span>
+        </label>
+        ${dejaAffecte}
+        ${portionField}
+      </div>`;
+  }).join('');
+
+  // Portions sous le seuil de bruit (14 sept 2026) -- non cochées par
+  // défaut (le seuil reste la présomption raisonnable : imprécision de
+  // dessin à main levée), mais listées avec un texte `portion` à rédiger
+  // à la main pour le cas où la petite portion est réelle et voulue.
+  // Cochées, elles rejoignent exactement le même circuit d'application
+  // qu'un overlay normal (voir _appliquerZoneComplete) -- même indices
+  // data-idx que dans le tableau `prop.classification` d'origine, pour
+  // que la relecture au clic sur "Appliquer" reste cohérente.
+  const rowsIgnorees = prop.classification
+    .map((c, i) => ({ c, i }))
+    .filter(({ c }) => c.classification === 'ignore_bruit')
+    .map(({ c, i }) => `
+      <div class="enrichissement-item" style="border:1px solid #eee;border-radius:4px;padding:8px;margin-bottom:6px;opacity:0.75;">
+        <label style="display:flex;justify-content:space-between;align-items:center;cursor:pointer;">
+          <span><input type="checkbox" class="zc-inclure" data-idx="${i}"> <strong>${c.pays}</strong> — ${c.couverture_pct}% <span style="color:#888;">sous le seuil de bruit (${prop.seuil_bruit}%)</span></span>
+        </label>
+        <textarea class="zc-portion" data-idx="${i}" rows="2" style="width:100%;font-size:12px;margin-top:4px;box-sizing:border-box;" placeholder="Texte portion (à rédiger à la main si tu inclus quand même) -- vide par défaut, pas de génération LLM automatique sur ces cas"></textarea>
+      </div>`).join('');
+
+  const sectionIgnorees = rowsIgnorees
+    ? `<details style="margin:8px 0;">
+         <summary style="cursor:pointer;font-size:12px;color:#888;">Portions sous le seuil de bruit, ignorées par défaut (${prop.classification.filter(c => c.classification === 'ignore_bruit').length}) — coche pour inclure quand même</summary>
+         <div style="margin-top:6px;">${rowsIgnorees}</div>
+       </details>`
+    : '';
+
+  const avertissement = (prop.petits_pays_non_verifiables || []).length
+    ? `<div style="font-size:11px;color:#888;margin:6px 0;">${prop.avertissement_petits_pays}</div>`
+    : '';
+
+  const avertissementOverlay = prop.classification.some(c => c.classification === 'overlay')
+    ? `<div style="font-size:11px;color:#888;margin:6px 0;">Note : les overlays existants d'autres zones ne sont pas vérifiés automatiquement -- si cette zone chevauche géographiquement une portion déjà dessinée ailleurs, rien ne le signalera ici.</div>`
+    : '';
+
+  // Zone cible : slug/description saisis seulement pour une NOUVELLE zone --
+  // pour une zone existante, ces informations sont déjà connues (slug
+  // choisi dans le sélecteur, description déjà en place, jamais écrasée).
+  const cibleHtml = cibleExistante
+    ? `<div class="carte-panel-sub">Zone cible : <strong>${prop.cible.nom}</strong> (${prop.cible.slug}) — zone existante, pays ajoutés à sa liste actuelle</div>`
+    : `
+      <label style="display:block;margin:8px 0;">Slug de la nouvelle zone : <input type="text" id="zc-slug" style="width:100%;box-sizing:border-box;" placeholder="ex. zone_test"></label>
+      <label style="display:block;margin:8px 0;">Description : <textarea id="zc-description" rows="2" style="width:100%;box-sizing:border-box;"></textarea></label>
+    `;
+
+  panel.innerHTML = `
+    <div class="carte-panel-title">${cibleExistante ? 'Ajout à' : 'Nouvelle zone'} : ${prop.zone_nom}</div>
+    <div class="carte-panel-sub">${prop.classification.filter(c => c.classification !== 'ignore_bruit').length} pays concernés (seuils ${prop.seuil_split}% / ${prop.seuil_bruit}%) — décoche ceux à exclure, ajuste les textes avant d'appliquer</div>
+    ${avertissement}
+    ${avertissementOverlay}
+    <div id="zc-liste">${rows}</div>
+    ${sectionIgnorees}
+    ${cibleHtml}
+    <div style="display:flex;gap:8px;">
+      <button class="btn-primary" id="zc-appliquer-btn">✓ Appliquer</button>
+      <button class="btn-secondary" id="zc-annuler-btn">✕ Annuler</button>
+    </div>
+    <div id="zc-resultat" style="margin-top:8px;"></div>
+  `;
+
+  document.getElementById('zc-appliquer-btn').addEventListener('click', _appliquerZoneComplete);
+  document.getElementById('zc-annuler-btn').addEventListener('click', _annulerZoneComplete);
+}
+
+function _annulerZoneComplete() {
+  CarteState.zoneCompleteProposition = null;
+  CarteState.drawnItemsLayer.clearLayers();
+  const panel = document.getElementById('carte-panel');
+  panel.innerHTML = '';
+  document.getElementById('carte-status').textContent = '';
+  // Si le mode dessin est toujours actif, relance directement l'outil
+  // polygone pour permettre un nouvel essai sans re-cliquer le bouton.
+  if (CarteState.modeDessinZoneComplete) CarteState.drawPolygonHandler.enable();
+}
+
+async function _appliquerZoneComplete() {
+  const prop = CarteState.zoneCompleteProposition;
+  const scenario = CarteState.scenario;
+  const cibleExistante = prop.cible?.mode === 'existante';
+  const resultatEl = document.getElementById('zc-resultat');
+
+  // Slug/nom/description dépendent du mode -- pour une zone existante, tout
+  // vient déjà du sélecteur (_promptCibleZoneComplete), pas de champs à lire.
+  const slug = cibleExistante ? prop.cible.slug : (document.getElementById('zc-slug').value || '').trim();
+  const description = cibleExistante ? '' : (document.getElementById('zc-description').value || '').trim();
+
+  if (!slug) {
+    resultatEl.innerHTML = `<div class="carte-panel-error">Slug requis.</div>`;
+    return;
+  }
+
+  // Avertissement (pas un blocage) si le nom choisi correspond déjà à une
+  // zone existante -- non pertinent en mode "zone existante" (c'est
+  // délibérément la même zone). Le slug reste la vraie clé d'identité
+  // (vérifié côté serveur), mais deux zones au même nom affiché sont
+  // indiscernables dans les listes déroulantes de l'appli.
+  if (!cibleExistante) {
+    const nomExistantIdentique = Object.values(prop.noms_zones_existantes || {})
+      .some(n => n.trim().toLowerCase() === prop.zone_nom.trim().toLowerCase());
+    if (nomExistantIdentique) {
+      const confirme = window.confirm(
+        `Une zone nommée "${prop.zone_nom}" existe déjà (slug différent). ` +
+        `Les deux zones porteront le même nom affiché, ce qui peut prêter à confusion ` +
+        `dans les listes déroulantes. Continuer quand même ?`
+      );
+      if (!confirme) return;
+    }
+  }
+
+  const btn = document.getElementById('zc-appliquer-btn');
+  btn.disabled = true;
+  btn.textContent = 'Application…';
+
+  // Relit l'état des checkboxes/textarea au moment du clic -- l'utilisateur
+  // a pu les modifier après la génération initiale (décocher un pays,
+  // retoucher un texte portion).
+  const entries = prop.classification.map((c, i) => {
+    const inclure = document.querySelector(`.zc-inclure[data-idx="${i}"]`).checked;
+    const portionEl = document.querySelector(`.zc-portion[data-idx="${i}"]`);
+    return { ...c, inclure, portion_finale: portionEl ? portionEl.value.trim() : null };
+  }).filter(en => en.inclure);
+
+  const splits = entries.filter(en => en.classification === 'split');
+  // ignore_bruit coché rejoint le même traitement qu'un overlay normal --
+  // même route /api/carte/overlays/creer, même champs (geometry toujours
+  // présente pour ce type depuis le correctif du 14 sept, portion_finale
+  // rédigée à la main par l'utilisateur puisqu'aucune génération LLM
+  // automatique n'a lieu sur ces entrées).
+  const overlays = entries.filter(en => en.classification === 'overlay' || en.classification === 'ignore_bruit');
+
+  if (!splits.length && !overlays.length) {
+    resultatEl.innerHTML = `<div class="carte-panel-error">Aucun pays sélectionné.</div>`;
+    btn.disabled = false;
+    btn.textContent = '✓ Appliquer';
+    return;
+  }
+
+  const journal = [];
+  try {
+    if (cibleExistante) {
+      // Zone déjà là -- tous les splits utilisent "absorber", jamais
+      // "creer" ; pas besoin de /api/carte/creer_zone_vide non plus.
+      for (const s of splits) {
+        const r = await fetch('/api/carte/assign', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ scenario, pays: s.pays, action: 'absorber', zone_slug: slug }),
+        });
+        const d = await r.json();
+        if (d.error) throw new Error(`${s.pays} (split) : ${d.error}`);
+        journal.push(`✓ ${s.pays} rattaché (pays entier)`);
+      }
+    } else if (splits.length) {
+      // Le premier split crée la zone (associée à un pays entier, même
+      // route /api/carte/assign que le flux manuel existant) ; les
+      // suivants l'absorbent -- pas de nouveau mécanisme d'écriture.
+      const premier = splits[0];
+      const resCreer = await fetch('/api/carte/assign', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          scenario, pays: premier.pays, action: 'creer',
+          nouvelle_zone: { slug, nom: prop.zone_nom, description },
+        }),
+      });
+      const dataCreer = await resCreer.json();
+      if (dataCreer.error) throw new Error(`Création zone (${premier.pays}) : ${dataCreer.error}`);
+      journal.push(`✓ Zone créée, ${premier.pays} rattaché (pays entier)`);
+
+      for (const s of splits.slice(1)) {
+        const r = await fetch('/api/carte/assign', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ scenario, pays: s.pays, action: 'absorber', zone_slug: slug }),
+        });
+        const d = await r.json();
+        if (d.error) throw new Error(`${s.pays} (split) : ${d.error}`);
+        journal.push(`✓ ${s.pays} rattaché (pays entier)`);
+      }
+    } else {
+      // Aucun split -- la zone n'existerait sinon jamais, d'où
+      // /api/carte/creer_zone_vide.
+      const resVide = await fetch('/api/carte/creer_zone_vide', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ scenario, slug, nom: prop.zone_nom, niveau: 1, parent: null, description }),
+      });
+      const dataVide = await resVide.json();
+      if (dataVide.error) throw new Error(`Création zone vide : ${dataVide.error}`);
+      journal.push(`✓ Zone créée (sans pays entier)`);
+    }
+
+    for (const o of overlays) {
+      const r = await fetch('/api/carte/overlays/creer', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          scenario, zone_slug: slug, pays: o.pays,
+          geometry: o.geometry, portion: o.portion_finale,
+        }),
+      });
+      const d = await r.json();
+      if (d.error) throw new Error(`${o.pays} (overlay) : ${d.error}`);
+      journal.push(`✓ ${o.pays} rattaché en overlay`);
+    }
+
+    resultatEl.innerHTML = `<div style="color:#2a7d2a;font-size:12px;">${journal.join('<br>')}</div>`;
+    btn.textContent = '✓ Appliqué';
+    CarteState.drawnItemsLayer.clearLayers();
+    await refreshCarte();
+  } catch (err) {
+    // Arrêt en cours de route (ex. 3e overlay échoue après que la zone et
+    // 2 overlays ont déjà été écrits) -- volontairement PAS de retry
+    // automatique ni de rollback : le journal partiel reste affiché pour
+    // que David sache exactement où ça s'est arrêté et vérifie l'état réel
+    // (arborescence / gérer les overlays) avant de rejouer le reste à la
+    // main si besoin.
+    resultatEl.innerHTML = `
+      <div style="color:#2a7d2a;font-size:12px;">${journal.join('<br>')}</div>
+      <div class="carte-panel-error">Arrêté en cours de route : ${err.message}</div>
+      <div style="font-size:11px;color:#888;">La zone a peut-être été partiellement créée — vérifie dans l'arborescence ou "Gérer les overlays" avant de relancer.</div>
+    `;
+    btn.disabled = false;
+    btn.textContent = 'Réessayer';
+  }
+}
+
+// ── Petit sélecteur générique (liste filtrable cliquable) ──────────────────
+// Remplace window.prompt() pour zone_slug et pays : évite les fautes de
+// frappe sur un slug tapé à la main (bug remonté par David le 8 sept --
+// "zone 'zone Hartlepool' introuvable", nom inventé au lieu du vrai slug).
+// Pas de composant modal existant ailleurs dans app.js, donc autonome
+// (styles injectés en JS, pas de dépendance à style.css).
+function _pickFromList(titre, items) {
+  // items : [{label, value}]. Résout `value` au clic, ou null si annulé
+  // (bouton Annuler ou touche Échap).
+  return new Promise((resolve) => {
+    const overlay = document.createElement('div');
+    overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.4);z-index:9999;display:flex;align-items:center;justify-content:center;';
+
+    const box = document.createElement('div');
+    box.style.cssText = 'background:#fff;border-radius:8px;padding:16px;width:360px;max-height:70vh;display:flex;flex-direction:column;box-shadow:0 4px 24px rgba(0,0,0,0.3);';
+
+    const h = document.createElement('div');
+    h.textContent = titre;
+    h.style.cssText = 'font-weight:600;margin-bottom:8px;font-size:14px;';
+
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.placeholder = 'Filtrer…';
+    input.style.cssText = 'padding:6px 8px;border:1px solid #ccc;border-radius:4px;margin-bottom:8px;font-size:13px;';
+
+    const list = document.createElement('div');
+    list.style.cssText = 'overflow-y:auto;flex:1;border:1px solid #eee;border-radius:4px;';
+
+    const cancelBtn = document.createElement('button');
+    cancelBtn.textContent = 'Annuler';
+    cancelBtn.className = 'btn-secondary';
+    cancelBtn.style.cssText = 'margin-top:10px;align-self:flex-end;';
+
+    function cleanup(result) {
+      document.removeEventListener('keydown', onKeydown);
+      overlay.remove();
+      resolve(result);
+    }
+    function onKeydown(e) { if (e.key === 'Escape') cleanup(null); }
+
+    function renderList(filter) {
+      list.innerHTML = '';
+      const f = (filter || '').toLowerCase();
+      const filtered = items.filter(it => it.label.toLowerCase().includes(f));
+      if (!filtered.length) {
+        const empty = document.createElement('div');
+        empty.textContent = 'Aucun résultat.';
+        empty.style.cssText = 'padding:8px;color:#888;font-size:12px;';
+        list.appendChild(empty);
+        return;
+      }
+      filtered.forEach(it => {
+        const row = document.createElement('div');
+        row.textContent = it.label;
+        row.style.cssText = 'padding:6px 8px;cursor:pointer;font-size:13px;border-bottom:1px solid #f0f0f0;';
+        row.addEventListener('mouseenter', () => row.style.background = '#f0f4ff');
+        row.addEventListener('mouseleave', () => row.style.background = '');
+        row.addEventListener('click', () => cleanup(it.value));
+        list.appendChild(row);
+      });
+    }
+
+    input.addEventListener('input', () => renderList(input.value));
+    cancelBtn.addEventListener('click', () => cleanup(null));
+    overlay.addEventListener('click', (e) => { if (e.target === overlay) cleanup(null); });
+    document.addEventListener('keydown', onKeydown);
+
+    box.appendChild(h);
+    box.appendChild(input);
+    box.appendChild(list);
+    box.appendChild(cancelBtn);
+    overlay.appendChild(box);
+    document.body.appendChild(overlay);
+
+    renderList('');
+    input.focus();
+  });
+}
+
+async function _promptZoneSlug(scenario) {
+  const statusEl = document.getElementById('carte-status');
+  let zones = [];
+  try {
+    const res = await fetch(`/api/carte/zones_toutes?scenario=${encodeURIComponent(scenario)}`);
+    const data = await res.json();
+    zones = data.zones || [];
+  } catch (e) {
+    statusEl.textContent = `Erreur réseau (liste des zones) : ${e.message}`;
+    return null;
+  }
+
+  const items = [
+    { label: '+ Créer une nouvelle zone niveau 1…', value: '__creer__' },
+    ...zones.map(z => ({ label: `${z.nom}  —  ${z.slug} (niveau ${z.niveau})`, value: z.slug })),
+  ];
+
+  const choix = await _pickFromList('Zone concernée par ce polygone', items);
+  if (!choix) return null;
+
+  if (choix === '__creer__') {
+    return await _creerNouvelleZoneN1(scenario);
+  }
+  return choix;
+}
+
+async function _creerNouvelleZoneN1(scenario) {
+  const statusEl = document.getElementById('carte-status');
+  const slug = (window.prompt('Slug de la nouvelle zone (minuscules_underscores) :') || '').trim();
+  if (!slug) return null;
+  const nom = (window.prompt('Nom affiché de la nouvelle zone :') || '').trim();
+  if (!nom) return null;
+  const description = (window.prompt('Description courte (optionnel) :') || '').trim();
+
+  statusEl.textContent = `Création de la zone '${slug}'…`;
+  try {
+    const res = await fetch('/api/carte/creer_zone_vide', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ scenario, slug, nom, niveau: 1, parent: null, description }),
+    });
+    const data = await res.json();
+    if (data.error) {
+      statusEl.textContent = `Erreur : ${data.error}`;
+      return null;
+    }
+    statusEl.textContent = `Zone '${nom}' créée.`;
+    return data.slug;
+  } catch (e) {
+    statusEl.textContent = `Erreur réseau (création de zone) : ${e.message}`;
+    return null;
+  }
+}
+
+async function _promptPays(scenario, zoneSlug) {
+  // Liste complète des ~200 pays réels (pays_liste), avec les pays déjà
+  // présents dans origine_reelle de cette zone marqués d'un ✓ -- fusion en
+  // UNE liste plutôt que deux étapes séparées ("déjà là" vs "Autre" en
+  // saisie libre), corrige deux problèmes remontés par David le 8 sept :
+  // le nom "Autre pays" perdu en fin de liste (overlay créé par erreur sur
+  // la Norvège au lieu de l'Allemagne), et le risque de faute de frappe
+  // sur un nom de pays tapé à la main.
+  let paysExistants = new Set();
+  let paysListe = [];
+  try {
+    const [resArbre, resAff] = await Promise.all([
+      fetch(`/api/carte/arbre_zone?scenario=${encodeURIComponent(scenario)}&slug=${encodeURIComponent(zoneSlug)}`),
+      fetch(`/api/carte/affectations?scenario=${encodeURIComponent(scenario)}`),
+    ]);
+    const dataArbre = await resArbre.json();
+    paysExistants = new Set((dataArbre?.arbre?.origine_reelle || []).map(o => o.entite).filter(Boolean));
+    const dataAff = await resAff.json();
+    paysListe = dataAff.pays_liste || [];
+  } catch (e) {
+    document.getElementById('carte-status').textContent = `Erreur réseau (liste des pays) : ${e.message}`;
+    return null;
+  }
+
+  const items = paysListe
+    .slice()
+    .sort((a, b) => a.localeCompare(b, 'fr'))
+    .map(p => ({
+      label: paysExistants.has(p) ? `${p}  ✓ déjà dans la zone` : p,
+      value: p,
+    }));
+
+  const choix = await _pickFromList(`Pays couvert par ce polygone (zone '${zoneSlug}')`, items);
+  if (!choix) return null;
+  return { pays: choix, estNouveau: !paysExistants.has(choix) };
+}
+
+async function _promptPortion(pays) {
+  // Demandée uniquement pour un pays PAS encore dans origine_reelle -- décrit
+  // la portion couverte par le polygone qu'on vient de dessiner (ex. "nord",
+  // "la moitié sud, au-delà de la zone tampon"). Écrite telle quelle dans
+  // origine_reelle côté serveur -- voir /api/carte/overlays/creer.
+  const saisie = window.prompt(
+    `Description de la portion de ${pays} couverte par ce polygone (ex. "nord", "sud, au-delà des Pyrénées") :`
+  );
+  return (saisie || '').trim();
+}
+
+function onCarteZoneOverlayClick(props) {
+  const slug = props?.zone_slug || null;
+  if (!slug) return;
+
+  if (CarteState.modeDessin) {
+    // En mode dessin, un clic sur un overlay existant propose sa suppression
+    // plutôt que de surligner (évite la confusion avec le mode consultation).
+    if (window.confirm(`Supprimer cet overlay (${slug} / ${props.pays}) ?`)) {
+      _supprimerOverlay(props.id);
+    }
+    return;
+  }
+
+  CarteState.zoneSurlignee = (CarteState.zoneSurlignee === slug) ? null : slug;
+  renderCarteLayer();
+  renderCarteLegend();
+}
+
+async function _supprimerOverlay(id) {
+  const statusEl = document.getElementById('carte-status');
+  try {
+    const res = await fetch('/api/carte/overlays/supprimer', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ scenario: CarteState.scenario, id }),
+    });
+    const data = await res.json();
+    if (data.error) {
+      statusEl.textContent = `Erreur : ${data.error}`;
+      return;
+    }
+    statusEl.textContent = `Overlay supprimé (${data.total_features} restant(s)).`;
+    await refreshCarte();
+  } catch (e) {
+    statusEl.textContent = `Erreur réseau : ${e.message}`;
   }
 }
 
@@ -3408,7 +4471,7 @@ async function _carteSelectionnerResultatRecherche(resultat) {
   document.getElementById('carte-search-input').value = resultat.nom;
 
   const racineSlug = (resultat.chemin && resultat.chemin[0] && resultat.chemin[0].slug) || resultat.slug;
-  await openArbreZonePanel(racineSlug);
+  await openArbreZonePanel(racineSlug, { skipHighlight: true });
 
   const noeud = document.querySelector(`#arbre-zone-tree [data-slug="${CSS.escape(resultat.slug)}"]`);
   if (noeud) {
@@ -3416,6 +4479,15 @@ async function _carteSelectionnerResultatRecherche(resultat) {
     noeud.classList.add('surlignee-recherche');
     setTimeout(() => noeud.classList.remove('surlignee-recherche'), 2500);
   }
+
+  // Localiser sur la carte (12 sept 2026) : avant, seule la surbrillance
+  // texte dans l'arbre existait -- une sous-zone n'apparaissait nulle part
+  // sur la carte elle-même. openArbreZonePanel vient de peupler
+  // racineParSlug/origineReelleParSlug pour tout l'arbre affiché, donc
+  // renderSurlignageZone (appelé via renderCarteLayer) sait maintenant
+  // reconstruire l'emprise de n'importe quel nœud, N1 ou sous-zone.
+  CarteState.zoneSurlignee = resultat.slug;
+  renderCarteLayer();
 }
 
 function renderCarteLegend() {
@@ -3427,10 +4499,23 @@ function renderCarteLegend() {
       const dark = _darken(z.color, 45);
       bg = `repeating-linear-gradient(${angle}deg, ${z.color}, ${z.color} 3px, ${dark} 3px, ${dark} 6px)`;
     }
+    // Zone niveau 2/3 visible sur la carte via un overlay custom (pas un
+    // simple pays colorié) -- bordure en pointillés sur la pastille + badge
+    // de niveau, pour rester cohérent avec le style pointillé du polygone
+    // lui-même sur la carte (voir renderCarteLayer -- dashArray '4 3') et
+    // la rendre "observable" comme une vraie zone (demande de David, 8 sept).
+    const estOverlay = z.niveau && z.niveau > 1;
+    const swatchStyle = estOverlay
+      ? `background:${bg};border:2px dashed #333;`
+      : `background:${bg}`;
+    const badge = estOverlay ? `<span class="carte-legend-badge" title="Zone niveau ${z.niveau}, affichée via overlay">N${z.niveau}</span>` : '';
+    const motifBadge = z.motif ? `<span title="Motif personnalisé : ${MOTIFS_LABELS[z.motif] || z.motif}">${(MOTIFS_LABELS[z.motif] || '').split(' ')[0]}</span>` : '';
     return `
     <div class="carte-legend-item" data-slug="${z.slug}">
-      <span class="carte-legend-swatch" style="background:${bg}"></span>
+      <span class="carte-legend-swatch" style="${swatchStyle}"></span>
       <span class="carte-legend-label">${z.nom}</span>
+      ${badge}
+      ${motifBadge}
       <button class="carte-legend-rename-btn" data-slug="${z.slug}" title="Renommer cette zone">✏️</button>
     </div>`;
   }).join('') + `
@@ -3459,12 +4544,189 @@ function renderCarteLegend() {
  * donc pas de vraie carte possible pour eux — on affiche la structure
  * parent/niveau déjà présente dans le YAML.
  */
-async function openArbreZonePanel(slug) {
+/**
+ * Panneau "Zones à enrichir" (8 sept 2026) -- liste les zones du scénario
+ * dont tensions_internes ou periode_transition est vide (typiquement issues
+ * d'un split via ✂️ scinder), avec génération + application par zone.
+ * Même doctrine que le panneau top-down existant : proposition d'abord
+ * (jamais d'écriture), application seulement après relecture humaine.
+ */
+/**
+ * Panneau "Gérer les overlays" (8 sept 2026) -- liste tous les overlays du
+ * scénario avec un bouton supprimer par ligne. Corrige un conflit trouvé le
+ * même jour (David) : la suppression "au clic sur l'overlay en mode dessin"
+ * ne fonctionne plus depuis que l'outil polygone démarre automatiquement en
+ * mode dessin -- chaque clic pose désormais un sommet au lieu d'atteindre le
+ * gestionnaire de clic de la couche overlay en dessous. Cette liste est
+ * volontairement indépendante du mode dessin, aucun conflit possible.
+ */
+async function openOverlaysListePanel() {
+  const scenario = CarteState.scenario;
+  if (!scenario) return;
+
+  const panel = document.getElementById('carte-panel');
+  panel.innerHTML = `<div class="carte-panel-title">Overlays</div><div class="carte-status">Chargement…</div>`;
+
+  try {
+    const res = await fetch(`/api/carte/overlays?scenario=${encodeURIComponent(scenario)}`);
+    const data = await res.json();
+    const features = data.features || [];
+    if (!features.length) {
+      panel.innerHTML = `
+        <div class="carte-panel-title">Overlays</div>
+        <div class="carte-panel-empty">Aucun overlay dessiné pour ce scénario.</div>`;
+      return;
+    }
+
+    panel.innerHTML = `
+      <div class="carte-panel-title">Overlays (${features.length})</div>
+      <div id="overlays-liste"></div>
+    `;
+    const listeEl = document.getElementById('overlays-liste');
+    features.forEach(f => {
+      const props = f.properties || {};
+      const zone = CarteState.zonesN1.find(z => z.slug === props.zone_slug);
+      const item = document.createElement('div');
+      item.style.cssText = 'border:1px solid #eee;border-radius:4px;padding:8px;margin-bottom:6px;display:flex;justify-content:space-between;align-items:center;';
+      item.innerHTML = `
+        <div>
+          <strong>${zone ? zone.nom : props.zone_slug}</strong> — ${props.pays || '?'}
+          ${props.portion_source ? `<div style="font-size:11px;color:#888;">${props.portion_source}</div>` : ''}
+        </div>
+        <button class="btn-secondary overlay-supprimer-btn" data-id="${props.id}">🗑️ Supprimer</button>
+      `;
+      listeEl.appendChild(item);
+    });
+
+    listeEl.querySelectorAll('.overlay-supprimer-btn').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        if (!window.confirm('Supprimer cet overlay ? (le texte origine_reelle associé, lui, reste inchangé)')) return;
+        btn.disabled = true;
+        btn.textContent = 'Suppression…';
+        await _supprimerOverlay(btn.dataset.id);
+        openOverlaysListePanel();  // réaffiche la liste à jour
+      });
+    });
+  } catch (e) {
+    panel.innerHTML = `<div class="carte-panel-error">Erreur réseau : ${e.message}</div>`;
+  }
+}
+
+async function openEnrichissementPanel() {
+  const scenario = CarteState.scenario;
+  if (!scenario) return;
+
+  const panel = document.getElementById('carte-panel');
+  panel.innerHTML = `<div class="carte-panel-title">Zones à enrichir</div><div class="carte-status">Chargement…</div>`;
+
+  try {
+    const res = await fetch(`/api/carte/zones_manquantes_enrichissement?scenario=${encodeURIComponent(scenario)}`);
+    const data = await res.json();
+    if (data.error) {
+      panel.innerHTML = `<div class="carte-panel-error">Erreur : ${data.error}</div>`;
+      return;
+    }
+    const zones = data.zones || [];
+    if (!zones.length) {
+      panel.innerHTML = `
+        <div class="carte-panel-title">Zones à enrichir</div>
+        <div class="carte-panel-empty">Aucune zone incomplète dans ce scénario — tensions_internes et periode_transition sont renseignés partout.</div>`;
+      return;
+    }
+
+    panel.innerHTML = `
+      <div class="carte-panel-title">Zones à enrichir (${zones.length})</div>
+      <div class="carte-panel-sub">tensions_internes et/ou periode_transition vide</div>
+      <div id="enrichissement-liste"></div>
+    `;
+    const listeEl = document.getElementById('enrichissement-liste');
+    zones.forEach(z => {
+      const item = document.createElement('div');
+      item.className = 'enrichissement-item';
+      item.style.cssText = 'border:1px solid #eee;border-radius:4px;padding:8px;margin-bottom:6px;';
+      const manque = [
+        z.tensions_internes_vide ? 'tensions_internes' : null,
+        z.periode_transition_vide ? 'periode_transition' : null,
+      ].filter(Boolean).join(', ');
+      item.innerHTML = `
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <span><strong>${z.nom}</strong> <span class="carte-legend-badge">N${z.niveau}</span></span>
+          <button class="btn-secondary enrichir-generer-btn" data-slug="${z.slug}">Générer</button>
+        </div>
+        <div style="font-size:11px;color:#888;margin-top:2px;">manque : ${manque}</div>
+        <div class="enrichissement-resultat" data-slug="${z.slug}"></div>
+      `;
+      listeEl.appendChild(item);
+    });
+
+    listeEl.querySelectorAll('.enrichir-generer-btn').forEach(btn => {
+      btn.addEventListener('click', () => _genererEnrichissement(scenario, btn.dataset.slug));
+    });
+  } catch (e) {
+    panel.innerHTML = `<div class="carte-panel-error">Erreur réseau : ${e.message}</div>`;
+  }
+}
+
+async function _genererEnrichissement(scenario, slug) {
+  const resultatEl = document.querySelector(`.enrichissement-resultat[data-slug="${slug}"]`);
+  resultatEl.innerHTML = `<div class="carte-status">Génération en cours (appel LLM, peut prendre quelques secondes)…</div>`;
+
+  try {
+    const res = await fetch('/api/carte/generer_enrichissement_zone', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ scenario, slug }),
+    });
+    const data = await res.json();
+    if (data.error) {
+      resultatEl.innerHTML = `<div class="carte-panel-error">Erreur : ${data.error}</div>`;
+      return;
+    }
+    const p = data.proposition;
+    resultatEl.innerHTML = `
+      <div style="background:#f7f7f7;border-radius:4px;padding:6px;margin-top:6px;font-size:12px;">
+        <div><strong>tensions_internes</strong> : ${p.tensions_internes || '(vide)'}</div>
+        <div><strong>periode_transition</strong> : ${p.periode_transition || '(vide)'}</div>
+        <div><strong>evenement_transition</strong> : ${p.evenement_transition || 'null'}</div>
+        <button class="btn-primary enrichir-appliquer-btn" style="margin-top:6px;">✓ Appliquer</button>
+      </div>
+    `;
+    resultatEl.querySelector('.enrichir-appliquer-btn').addEventListener('click', async (e) => {
+      e.target.disabled = true;
+      e.target.textContent = 'Écriture…';
+      try {
+        const res2 = await fetch('/api/carte/appliquer_enrichissement_zone', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ scenario, slug, proposition: p }),
+        });
+        const data2 = await res2.json();
+        if (data2.error) {
+          resultatEl.innerHTML += `<div class="carte-panel-error">Erreur : ${data2.error}</div>`;
+          return;
+        }
+        resultatEl.innerHTML = `<div style="color:#2a7d2a;font-size:12px;">✓ Appliqué.</div>`;
+      } catch (err) {
+        resultatEl.innerHTML += `<div class="carte-panel-error">Erreur réseau : ${err.message}</div>`;
+      }
+    });
+  } catch (e) {
+    resultatEl.innerHTML = `<div class="carte-panel-error">Erreur réseau : ${e.message}</div>`;
+  }
+}
+
+async function openArbreZonePanel(slug, options = {}) {
   const panel = document.getElementById('carte-panel');
   panel.innerHTML = `<div class="carte-panel-title">Arborescence</div><div class="carte-status">Chargement…</div>`;
 
-  CarteState.zoneSurlignee = slug;
-  renderCarteLayer();
+  // skipHighlight (12 sept 2026) : la sélection d'un résultat de recherche
+  // vise en réalité une SOUS-ZONE, pas cette racine -- surligner la racine
+  // ici puis basculer juste après créait un flash trompeur (racine visible
+  // une seconde, puis rien si la sous-zone n'a pas de géométrie propre).
+  if (!options.skipHighlight) {
+    CarteState.zoneSurlignee = slug;
+    renderCarteLayer();
+  }
 
   try {
     const res = await fetch(
@@ -3489,17 +4751,36 @@ async function openArbreZonePanel(slug) {
     });
 
     CarteState.origineReelleParSlug = {};
+    CarteState.racineParSlug = {};
     (function indexer(node) {
       CarteState.origineReelleParSlug[node.slug] = node.origine_reelle || [];
+      CarteState.racineParSlug[node.slug] = data.arbre.slug;  // racine N1 de tout l'arbre affiché
       (node.enfants || []).forEach(indexer);
     })(data.arbre);
 
-    document.getElementById('arbre-zone-tree').querySelectorAll('.arbre-zone-split-btn').forEach(btn => {
-      btn.addEventListener('click', () => _ouvrirSplitPanel(btn.dataset.slug, btn.dataset.nom));
+    // Localiser une zone (N1 ou sous-zone) sur la carte en cliquant
+    // directement son nom dans l'arbre (12 sept 2026) -- avant, seule la
+    // recherche déclenchait le surlignage carte, parcourir l'arbre à la
+    // main ne faisait rien.
+    document.getElementById('arbre-zone-tree').querySelectorAll('.arbre-zone-nom').forEach(el => {
+      el.addEventListener('click', () => {
+        const ligne = el.closest('.arbre-zone-node-row');
+        if (!ligne) return;
+        CarteState.zoneSurlignee = ligne.dataset.slug;
+        renderCarteLayer();
+      });
     });
 
     document.getElementById('arbre-zone-tree').querySelectorAll('.arbre-zone-topdown-btn').forEach(btn => {
       btn.addEventListener('click', () => _ouvrirTopdownRevisionPanel(btn.dataset.slug, btn.dataset.nom));
+    });
+
+    // Point d'entrée unique (12 sept 2026) : scinder et personnaliser
+    // (couleur/motif/hachures) ont été retirés de l'arbre, fusionnés dans
+    // openRenommerZonePanel (même panneau que la légende) -- voir sa
+    // section "Pays & portions de cette zone".
+    document.getElementById('arbre-zone-tree').querySelectorAll('.arbre-zone-editer-btn').forEach(btn => {
+      btn.addEventListener('click', () => openRenommerZonePanel(btn.dataset.slug));
     });
   } catch (e) {
     panel.innerHTML = `<div class="carte-panel-error">Erreur réseau : ${e.message}</div>`;
@@ -3512,21 +4793,28 @@ function _renderArbreNode(node, estRacine) {
 
   let html = `<div class="arbre-zone-branch">`;
   html += `<div class="arbre-zone-node-row arbre-niveau-${node.niveau}" data-slug="${node.slug}">`;
-  html += `<span class="arbre-zone-nom">${node.nom}</span>`;
+  html += `<span class="arbre-zone-nom" style="cursor:pointer;text-decoration:underline dotted;" title="Localiser sur la carte">${node.nom}</span>`;
   html += `<span class="arbre-zone-slug">${node.slug}</span>`;
   html += `${typeLabel}${statutLabel}`;
   if (!estRacine) {
     html += `<button class="arbre-zone-move-btn" data-slug="${node.slug}" data-nom="${node.nom.replace(/"/g, '&quot;')}" title="Déplacer vers un autre parent">↗️ déplacer</button>`;
-  }
-  if ((node.origine_reelle || []).length > 1) {
-    html += `<button class="arbre-zone-split-btn" data-slug="${node.slug}" data-nom="${node.nom.replace(/"/g, '&quot;')}" title="Sortir un ou plusieurs pays de cette zone vers une autre">✂️ scinder</button>`;
+  } else if (node.niveau === 1) {
+    // Corrige un trou trouvé le 8 sept 2026 : la racine de l'arbre affiché
+    // n'avait jamais ce bouton (masqué par le `!estRacine` ci-dessus), donc
+    // une zone niveau 1 ouverte depuis la légende (toujours racine dans ce
+    // contexte) ne pouvait JAMAIS être rétrogradée en sous-zone d'une autre
+    // zone niveau 1 -- alors que /api/carte/reparent_zone le gère très bien
+    // dans les deux sens. Condition sur niveau===1 : une racine de niveau
+    // 2/3 affichée ailleurs (ex. panneau dédié) passe déjà par le cas
+    // !estRacine normalement, ce cas-ci vise spécifiquement le trou niveau 1.
+    html += `<button class="arbre-zone-move-btn" data-slug="${node.slug}" data-nom="${node.nom.replace(/"/g, '&quot;')}" title="Déplacer vers un autre parent (rétrograder cette zone niveau 1 en sous-zone)">↗️ déplacer</button>`;
   }
   if (node.niveau === 1) {
     html += `<button class="arbre-zone-topdown-btn" data-slug="${node.slug}" data-nom="${node.nom.replace(/"/g, '&quot;')}" title="P24 étape C — réviser cette zone contre le patron spatial narratif du scénario (ex. suite à un signalement check_patron_spatial_coherence.py)">🧭 réviser (patron spatial)</button>`;
+    html += `<button class="arbre-zone-editer-btn" data-slug="${node.slug}" title="Éditer cette zone : renommer, couleur/motif/hachures, pays et overlays">✏️ éditer</button>`;
   }
   html += `</div>`;
   html += `<div id="reparent-panel-${node.slug}"></div>`;
-  html += `<div id="split-panel-${node.slug}"></div>`;
   html += `<div id="topdown-panel-${node.slug}"></div>`;
 
   if (node.enfants && node.enfants.length) {
@@ -3536,6 +4824,71 @@ function _renderArbreNode(node, estRacine) {
   }
   html += `</div>`;
   return html;
+}
+
+/**
+ * Panneau "🎨 Personnaliser" (8 sept 2026) : couleur + motif d'une zone,
+ * remplace le calcul automatique (roue de teintes / hachures génériques)
+ * quand défini. Voir /api/carte/personnaliser_zone.
+ */
+function _ouvrirPersoPanel(slug, couleurActuelle, motifActuel, hachuresActuel) {
+  const panel = document.getElementById(`perso-panel-${slug}`);
+  if (panel.innerHTML) { panel.innerHTML = ''; return; } // toggle fermeture
+
+  const motifOptions = ['', ...Object.keys(MOTIFS_LABELS)].map(m =>
+    `<option value="${m}" ${m === motifActuel ? 'selected' : ''}>${m ? MOTIFS_LABELS[m] : '— aucun —'}</option>`
+  ).join('');
+
+  panel.innerHTML = `
+    <div style="border:1px solid #dde3ee;border-radius:4px;padding:8px;margin-top:4px;font-size:11px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
+      <label>Couleur :
+        <input type="color" id="perso-couleur-${slug}" value="${couleurActuelle || '#3b6fd4'}">
+      </label>
+      <label>
+        <input type="checkbox" id="perso-couleur-auto-${slug}" ${couleurActuelle ? '' : 'checked'}> auto
+      </label>
+      <label>Motif :
+        <select id="perso-motif-${slug}">${motifOptions}</select>
+      </label>
+      <label title="Hachures génériques en plus de la couleur -- désactivées par défaut">
+        <input type="checkbox" id="perso-hachures-${slug}" ${hachuresActuel ? 'checked' : ''}> hachures
+      </label>
+      <button class="btn-primary perso-appliquer-btn" data-slug="${slug}">✓ Appliquer</button>
+      <span class="perso-msg" style="font-size:10px;"></span>
+    </div>
+  `;
+
+  const couleurInput = document.getElementById(`perso-couleur-${slug}`);
+  const autoCheckbox = document.getElementById(`perso-couleur-auto-${slug}`);
+  autoCheckbox.addEventListener('change', () => { couleurInput.disabled = autoCheckbox.checked; });
+  couleurInput.disabled = autoCheckbox.checked;
+
+  panel.querySelector('.perso-appliquer-btn').addEventListener('click', async () => {
+    const msgEl = panel.querySelector('.perso-msg');
+    msgEl.textContent = 'Enregistrement…';
+    const motifChoisi = document.getElementById(`perso-motif-${slug}`).value;
+    const hachuresChoisi = document.getElementById(`perso-hachures-${slug}`).checked;
+    const body = {
+      scenario: CarteState.scenario,
+      slug,
+      couleur: autoCheckbox.checked ? null : couleurInput.value,
+      motif: motifChoisi || null,
+      hachures: hachuresChoisi,
+    };
+    try {
+      const res = await fetch('/api/carte/personnaliser_zone', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+      });
+      const data = await res.json();
+      if (data.error) { msgEl.textContent = `Erreur : ${data.error}`; return; }
+      msgEl.textContent = '✓ Appliqué.';
+      await refreshCarte();
+    } catch (e) {
+      msgEl.textContent = `Erreur réseau : ${e.message}`;
+    }
+  });
 }
 
 /**
@@ -3924,14 +5277,27 @@ function _ouvrirSplitPanel(slug, nom) {
   `;
 
   const cibleSelect = document.getElementById(`split-cible-select-${slug}`);
-  const majFormCible = () => {
+  const majFormCible = async () => {
     const formEl = document.getElementById(`split-cible-form-${slug}`);
     if (cibleSelect.value === '__existante__') {
-      formEl.innerHTML = `
-        <div style="border:1px solid #dde3ee;border-radius:4px;padding:8px;margin-top:6px;font-size:10px">
-          <input type="text" id="split-existant-slug-${slug}" placeholder="slug de la zone niveau 1 existante"
-                 style="width:100%;padding:3px;font-family:'JetBrains Mono',monospace">
-        </div>`;
+      formEl.innerHTML = `<div class="carte-status">Chargement des zones…</div>`;
+      try {
+        const res = await fetch(`/api/carte/zones_toutes?scenario=${encodeURIComponent(CarteState.scenario)}`);
+        const data = await res.json();
+        const options = (data.zones || [])
+          .filter(z => z.niveau === 1 && z.slug !== slug)  // le split ne cible que du niveau 1, jamais la zone source elle-même
+          .map(z => `<option value="${z.slug}">${z.nom} (${z.slug})</option>`)
+          .join('');
+        formEl.innerHTML = `
+          <div style="border:1px solid #dde3ee;border-radius:4px;padding:8px;margin-top:6px;font-size:10px">
+            <select id="split-existant-slug-${slug}" style="width:100%;padding:3px;font-family:'JetBrains Mono',monospace">
+              <option value="">— choisir —</option>
+              ${options}
+            </select>
+          </div>`;
+      } catch (e) {
+        formEl.innerHTML = `<div class="carte-panel-error">Erreur réseau : ${e.message}</div>`;
+      }
     } else {
       formEl.innerHTML = `
         <div style="border:1px solid #dde3ee;border-radius:4px;padding:8px;margin-top:6px;font-size:10px">
@@ -4052,15 +5418,66 @@ async function _carteSplitZone(slug, pays, cible) {
  * d'entrée cliquable dédiée dans l'UI actuelle, seulement dans la légende
  * (qui ne liste que les zones niveau 1 avec une couleur sur la carte).
  */
-function openRenommerZonePanel(ancienSlug) {
+async function openRenommerZonePanel(ancienSlug) {
   const z = CarteState.zonesN1.find(zz => zz.slug === ancienSlug);
   const panel = document.getElementById('carte-panel');
 
   CarteState.zoneSurlignee = ancienSlug;
   renderCarteLayer();
 
+  // Couleur/motif RÉELS (custom ou null) -- distincts de z.color (toujours
+  // rempli, calculé automatiquement si rien n'est personnalisé). Récupérés
+  // via arbre_zone pour que la case "auto" ci-dessous reflète le vrai état.
+  let couleurActuelle = null, motifActuel = null, hachuresActuel = false, origineReelleZone = [];
+  try {
+    const res = await fetch(`/api/carte/arbre_zone?scenario=${encodeURIComponent(CarteState.scenario)}&slug=${encodeURIComponent(ancienSlug)}`);
+    const data = await res.json();
+    if (data.arbre) {
+      couleurActuelle = data.arbre.couleur || null;
+      motifActuel = data.arbre.motif || null;
+      hachuresActuel = !!data.arbre.hachures;
+      origineReelleZone = data.arbre.origine_reelle || [];
+    }
+  } catch (e) {
+    // Non bloquant : le panneau s'ouvre quand même, juste sans préremplissage.
+  }
+
+  const motifOptions = ['', ...Object.keys(MOTIFS_LABELS)].map(m =>
+    `<option value="${m}" ${m === motifActuel ? 'selected' : ''}>${m ? MOTIFS_LABELS[m] : '— aucun —'}</option>`
+  ).join('');
+
+  const overlaysParPays = {};
+  (CarteState.overlays?.features || []).forEach(f => {
+    if (f.properties?.zone_slug === ancienSlug && f.properties?.pays) {
+      overlaysParPays[f.properties.pays] = f.properties.id;
+    }
+  });
+
+  const paysRowsHtml = origineReelleZone.length
+    ? origineReelleZone.map((o, i) => {
+        const overlayId = overlaysParPays[o.entite];
+        const entiteAttr = (o.entite || '').replace(/"/g, '&quot;');
+        return `
+        <div class="pp-row" style="border:1px solid #eee;border-radius:4px;padding:6px;margin-bottom:4px;font-size:11px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;">
+            <div>
+              <strong>${o.entite}</strong>${overlayId ? ' <span style="color:#2a7d2a;">📍 tracé</span>' : ''}
+              ${o.portion ? `<div style="color:#888;">${o.portion}</div>` : ''}
+            </div>
+            <div style="display:flex;gap:4px;">
+              <button class="pp-deplacer-btn" data-i="${i}" data-entite="${entiteAttr}">↗️ déplacer</button>
+              ${overlayId
+                ? `<button class="pp-retirer-tracer-btn" data-id="${overlayId}" title="Retire le polygone dessiné pour ce pays -- origine_reelle reste inchangé">🗑️ supprimer le masque</button>`
+                : `<button class="pp-dessiner-btn" data-entite="${entiteAttr}">✏️ dessiner</button>`}
+            </div>
+          </div>
+          <div id="pp-deplacer-form-${i}"></div>
+        </div>`;
+      }).join('')
+    : '<div style="font-size:11px;color:#888;">Aucune entrée.</div>';
+
   panel.innerHTML = `
-    <div class="carte-panel-title">Renommer : ${z ? z.nom : ancienSlug}</div>
+    <div class="carte-panel-title">Éditer : ${z ? z.nom : ancienSlug}</div>
     <div class="carte-panel-sub">Slug actuel : ${ancienSlug}</div>
 
     <div class="carte-panel-section">
@@ -4072,6 +5489,38 @@ function openRenommerZonePanel(ancienSlug) {
              style="width:100%;font-size:11px;padding:4px;margin-bottom:6px">
       <button id="renommer-impact-btn" class="yaml-btn">🔍 Évaluer l'impact</button>
       <div id="renommer-impact-report"></div>
+    </div>
+
+    <div class="carte-panel-section">
+      <label>Couleur / motif</label>
+      <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:4px;">
+        <label>Couleur :
+          <input type="color" id="perso-legende-couleur" value="${couleurActuelle || (z ? z.color : '#3b6fd4')}">
+        </label>
+        <label>
+          <input type="checkbox" id="perso-legende-auto" ${couleurActuelle ? '' : 'checked'}> auto
+        </label>
+        <label>Motif :
+          <select id="perso-legende-motif">${motifOptions}</select>
+        </label>
+        <label title="Hachures génériques en plus de la couleur -- désactivées par défaut">
+          <input type="checkbox" id="perso-legende-hachures" ${hachuresActuel ? 'checked' : ''}> hachures
+        </label>
+        <button class="yaml-btn" id="perso-legende-appliquer">✓ Appliquer</button>
+        <span id="perso-legende-msg" style="font-size:10px;"></span>
+      </div>
+    </div>
+
+    <div class="carte-panel-section">
+      <label>Pays &amp; portions de cette zone (${origineReelleZone.length})</label>
+      <div id="renommer-pays-liste" style="margin-top:4px;">${paysRowsHtml}</div>
+      <button id="renommer-dessiner-overlay-btn" class="yaml-btn" style="margin-top:6px;">✏️ Ajouter un nouveau pays (dessiner un tracé)</button>
+    </div>
+
+    <div class="carte-panel-section" style="border-top:1px solid #f0c0c0;padding-top:8px;">
+      <label style="color:#a33;">Zone dangereuse</label>
+      <button id="renommer-supprimer-btn" class="btn-secondary" style="margin-top:4px;color:#a33;border-color:#e0a0a0;">🗑️ Supprimer cette zone</button>
+      <div id="renommer-supprimer-report" style="margin-top:6px;"></div>
     </div>
 
     <div id="carte-panel-msg"></div>
@@ -4088,6 +5537,302 @@ function openRenommerZonePanel(ancienSlug) {
     _carteImpactRenommage(ancienSlug, nouveauSlug, nouveauNom,
       document.getElementById('renommer-impact-report'));
   });
+
+  const couleurInput = document.getElementById('perso-legende-couleur');
+  const autoCheckbox = document.getElementById('perso-legende-auto');
+  autoCheckbox.addEventListener('change', () => { couleurInput.disabled = autoCheckbox.checked; });
+  couleurInput.disabled = autoCheckbox.checked;
+
+  document.getElementById('perso-legende-appliquer').addEventListener('click', async () => {
+    const msgEl = document.getElementById('perso-legende-msg');
+    msgEl.textContent = 'Enregistrement…';
+    const motifChoisi = document.getElementById('perso-legende-motif').value;
+    const body = {
+      scenario: CarteState.scenario,
+      slug: ancienSlug,
+      couleur: autoCheckbox.checked ? null : couleurInput.value,
+      motif: motifChoisi || null,
+      hachures: document.getElementById('perso-legende-hachures').checked,
+    };
+    try {
+      const res = await fetch('/api/carte/personnaliser_zone', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+      });
+      const data = await res.json();
+      if (data.error) { msgEl.textContent = `Erreur : ${data.error}`; return; }
+      msgEl.textContent = '✓ Appliqué.';
+      await refreshCarte();
+    } catch (e) {
+      msgEl.textContent = `Erreur réseau : ${e.message}`;
+    }
+  });
+
+  panel.querySelectorAll('.pp-deplacer-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      _ouvrirDeplacerPaysInline(ancienSlug, btn.dataset.entite, btn.dataset.i);
+    });
+  });
+
+  panel.querySelectorAll('.pp-dessiner-btn').forEach(btn => {
+    btn.addEventListener('click', () => demarrerDessinPourPays(ancienSlug, btn.dataset.entite));
+  });
+
+  panel.querySelectorAll('.pp-retirer-tracer-btn').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      if (!window.confirm('Retirer ce masque ? Le texte de portion associé sera aussi effacé.')) return;
+      btn.disabled = true;
+      btn.textContent = '…';
+      await _supprimerOverlay(btn.dataset.id);
+      openRenommerZonePanel(ancienSlug);  // réaffiche le panneau à jour
+    });
+  });
+
+  document.getElementById('renommer-dessiner-overlay-btn').addEventListener('click', () => {
+    demarrerDessinPourZone(ancienSlug);
+  });
+
+  document.getElementById('renommer-supprimer-btn').addEventListener('click', () => {
+    _afficherImpactSuppression(ancienSlug);
+  });
+}
+
+// ── Suppression de zone (12 sept 2026) : aperçu d'impact avant confirmation,
+// même doctrine que rename/reparent/split -- jamais de suppression directe
+// sans montrer d'abord ce qui va être touché (pays désaffectés, overlays
+// retirés, sous-zones bloquantes le cas échéant).
+async function _afficherImpactSuppression(slug) {
+  const container = document.getElementById('renommer-supprimer-report');
+  container.innerHTML = '<div class="carte-status">Analyse en cours…</div>';
+  try {
+    const res = await fetch('/api/carte/impact_supprimer_zone', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ scenario: CarteState.scenario, slug }),
+    });
+    const r = await res.json();
+    if (r.error) { container.innerHTML = `<div class="carte-panel-error">Erreur : ${r.error}</div>`; return; }
+
+    if (!r.peut_supprimer) {
+      container.innerHTML = `
+        <div class="carte-panel-error">
+          Impossible : ${r.enfants_bloquants.length} sous-zone(s) encore rattachée(s) --
+          déplace-les ou supprime-les d'abord :
+          <ul style="margin:4px 0;padding-left:16px;font-size:10px">
+            ${r.enfants_bloquants.map(e => `<li>${e.nom}</li>`).join('')}
+          </ul>
+        </div>`;
+      return;
+    }
+
+    let html = '<div style="font-size:11px;">';
+    if (r.pays_a_desaffecter.length) {
+      html += `<div>${r.pays_a_desaffecter.length} pays seront désaffectés : ${r.pays_a_desaffecter.join(', ')}</div>`;
+    }
+    if (r.overlays_a_supprimer) {
+      html += `<div style="margin-top:4px;">${r.overlays_a_supprimer} overlay(s) seront retirés.</div>`;
+    }
+    if (r.zones_relations_liees.length) {
+      html += `<div style="margin-top:4px;">Référencée en allié/rival par : ${r.zones_relations_liees.join(', ')} (nettoyé automatiquement).</div>`;
+    }
+    html += `<button id="renommer-supprimer-confirm-btn" class="yaml-btn" style="margin-top:8px;color:#a33;font-weight:700;">✓ Confirmer la suppression</button>`;
+    html += '</div>';
+    container.innerHTML = html;
+
+    document.getElementById('renommer-supprimer-confirm-btn').addEventListener('click', () => {
+      _confirmerSuppressionZone(slug);
+    });
+  } catch (e) {
+    container.innerHTML = `<div class="carte-panel-error">Erreur réseau : ${e.message}</div>`;
+  }
+}
+
+async function _confirmerSuppressionZone(slug) {
+  const container = document.getElementById('renommer-supprimer-report');
+  container.innerHTML = '<div class="carte-status">Suppression en cours…</div>';
+  try {
+    const res = await fetch('/api/carte/supprimer_zone', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ scenario: CarteState.scenario, slug }),
+    });
+    const data = await res.json();
+    if (!data.ok) {
+      container.innerHTML = `<div class="carte-panel-error">Erreur : ${data.error}</div>`;
+      return;
+    }
+    // La zone n'existe plus -- ferme le panneau plutôt que de le réafficher.
+    document.getElementById('carte-panel').innerHTML =
+      `<div class="carte-panel-empty">Zone "${slug}" supprimée.</div>`;
+    CarteState.zoneSurlignee = null;
+    await refreshCarte();
+  } catch (e) {
+    container.innerHTML = `<div class="carte-panel-error">Erreur réseau : ${e.message}</div>`;
+  }
+}
+
+// ── Panneau unique (12 sept 2026) : lance le dessin d'overlay directement
+// pour la zone dont le panneau est ouvert, sans repasser par le sélecteur
+// générique de zone (_promptZoneSlug).
+function demarrerDessinPourZone(slug) {
+  CarteState.dessinZonePreselectionnee = slug;
+  if (!CarteState.modeDessin) toggleModeDessin();
+  document.getElementById('carte-status').textContent =
+    `Mode dessin actif pour "${slug}" — clique sur la carte pour poser chaque sommet du polygone, double-clic pour le fermer.`;
+}
+
+// Variante : le pays est AUSSI déjà connu (ligne "Pays & portions"), saute
+// _promptZoneSlug ET _promptPays -- juste le tracé à poser.
+function demarrerDessinPourPays(zoneSlug, pays) {
+  CarteState.dessinZonePreselectionnee = zoneSlug;
+  CarteState.dessinPaysPreselectionne = pays;
+  if (!CarteState.modeDessin) toggleModeDessin();
+  document.getElementById('carte-status').textContent =
+    `Mode dessin actif pour "${pays}" (${zoneSlug}) — clique sur la carte pour poser chaque sommet du polygone, double-clic pour le fermer.`;
+}
+
+// ── Fusion scinder/overlay (12 sept 2026) : déplace UNE entrée précise
+// d'origine_reelle vers une autre zone, formulaire replié sous sa ligne
+// dans "Pays & portions" -- même logique que l'ancien _ouvrirSplitPanel
+// (désormais retiré de l'arbre), mais ciblée sur un seul pays au lieu d'une
+// sélection multiple, et affichée en ligne plutôt que dans un panneau à part.
+function _ouvrirDeplacerPaysInline(zoneSlug, entite, i) {
+  const container = document.getElementById(`pp-deplacer-form-${i}`);
+  if (!container) return;
+  if (container.dataset.open === '1') { container.innerHTML = ''; container.dataset.open = '0'; return; }
+  container.dataset.open = '1';
+
+  // Même règle que l'ancien split : le premier token suffit, le backend
+  // retrouve les autres formulations du même pays (voir _entite_references_pays).
+  const premierToken = entite.split(/[(,]/)[0].trim().toLowerCase();
+
+  container.innerHTML = `
+    <div class="carte-panel-proposal-box" style="margin:6px 0 4px 0">
+      <label style="font-size:10px;color:#666">Destination pour "${entite}"</label>
+      <select id="pp-cible-select-${i}" style="width:100%;font-size:11px;padding:4px;margin:4px 0">
+        <option value="__creer__">+ Créer une nouvelle zone niveau 1…</option>
+        <option value="__existante__">→ Ajouter à une zone niveau 1 existante…</option>
+      </select>
+      <div id="pp-cible-form-${i}"></div>
+      <button id="pp-impact-btn-${i}" class="yaml-btn" style="margin-top:4px">🔍 Évaluer l'impact</button>
+      <div id="pp-impact-report-${i}"></div>
+    </div>
+  `;
+
+  const cibleSelect = document.getElementById(`pp-cible-select-${i}`);
+  const majFormCible = async () => {
+    const formEl = document.getElementById(`pp-cible-form-${i}`);
+    if (cibleSelect.value === '__existante__') {
+      formEl.innerHTML = `<div class="carte-status">Chargement des zones…</div>`;
+      try {
+        const res = await fetch(`/api/carte/zones_toutes?scenario=${encodeURIComponent(CarteState.scenario)}`);
+        const data = await res.json();
+        const options = (data.zones || [])
+          .filter(z => z.niveau === 1 && z.slug !== zoneSlug)
+          .map(z => `<option value="${z.slug}">${z.nom} (${z.slug})</option>`)
+          .join('');
+        formEl.innerHTML = `
+          <select id="pp-existant-slug-${i}" style="width:100%;padding:3px;font-family:'JetBrains Mono',monospace;margin-top:4px">
+            <option value="">— choisir —</option>
+            ${options}
+          </select>`;
+      } catch (e) {
+        formEl.innerHTML = `<div class="carte-panel-error">Erreur réseau : ${e.message}</div>`;
+      }
+    } else {
+      formEl.innerHTML = `
+        <input type="text" id="pp-nouveau-slug-${i}" placeholder="slug_nouvelle_zone (minuscules_underscores)"
+               style="width:100%;padding:3px;margin:4px 0;font-family:'JetBrains Mono',monospace">
+        <input type="text" id="pp-nouveau-nom-${i}" placeholder="Nom affiché"
+               style="width:100%;padding:3px;margin-bottom:4px">
+        <select id="pp-nouveau-type-${i}" style="width:100%;padding:3px;margin-bottom:4px">
+          ${['bloc_continental','union_regionale','territoire_autonome','territoire_herite','region','ville','infrastructure','site_strategique','zone_sinistree','autre']
+            .map(t => `<option value="${t}">${t}</option>`).join('')}
+        </select>
+        <select id="pp-nouveau-statut-${i}" style="width:100%;padding:3px;margin-bottom:4px">
+          ${['dominant','stable','fragmenté','en_declin','disparu','emergent']
+            .map(t => `<option value="${t}">${t}</option>`).join('')}
+        </select>
+        <textarea id="pp-nouveau-desc-${i}" placeholder="Description courte (optionnel)"
+                  style="width:100%;padding:3px;font-size:10px" rows="2"></textarea>`;
+    }
+  };
+  cibleSelect.addEventListener('change', majFormCible);
+  majFormCible();
+
+  document.getElementById(`pp-impact-btn-${i}`).addEventListener('click', () => {
+    let cible;
+    if (cibleSelect.value === '__existante__') {
+      const slugExistant = document.getElementById(`pp-existant-slug-${i}`).value.trim();
+      if (!slugExistant) { alert('Choisis une zone existante.'); return; }
+      cible = { mode: 'zone_existante', slug_existant: slugExistant };
+    } else {
+      const cibleSlug = document.getElementById(`pp-nouveau-slug-${i}`).value.trim();
+      const cibleNom = document.getElementById(`pp-nouveau-nom-${i}`).value.trim();
+      const cibleType = document.getElementById(`pp-nouveau-type-${i}`).value;
+      const cibleStatut = document.getElementById(`pp-nouveau-statut-${i}`).value;
+      const cibleDesc = document.getElementById(`pp-nouveau-desc-${i}`).value.trim();
+      if (!cibleSlug || !cibleNom) { alert('Slug et nom de la nouvelle zone requis.'); return; }
+      cible = { mode: 'nouvelle_zone_n1', slug: cibleSlug, nom: cibleNom, type: cibleType, statut: cibleStatut, description: cibleDesc };
+    }
+    _ppImpactDeplacer(zoneSlug, premierToken, cible, i);
+  });
+}
+
+async function _ppImpactDeplacer(zoneSlug, premierToken, cible, i) {
+  const container = document.getElementById(`pp-impact-report-${i}`);
+  container.innerHTML = '<div class="carte-status">Analyse en cours…</div>';
+  try {
+    const res = await fetch('/api/carte/impact_split_zone', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ scenario: CarteState.scenario, slug_source: zoneSlug, pays_a_extraire: [premierToken], cible }),
+    });
+    const r = await res.json();
+    if (r.error) { container.innerHTML = `<div class="carte-panel-error">Erreur : ${r.error}</div>`; return; }
+
+    let html = `<div style="margin-top:6px">`;
+    html += `<div>Entité(s) extraite(s) : ${r.entites_extraites.map(e => e.entite).join(', ')}</div>`;
+    html += `<div style="margin-top:4px">Destination : ${r.cible.nom} ` +
+      `(${r.cible.mode === 'nouvelle_zone_n1' ? 'nouvelle zone' : 'zone existante'})</div>`;
+    if (r.enfants_qui_suivront.length) {
+      html += `<div style="margin-top:6px"><strong>${r.enfants_qui_suivront.length} sous-zone(s) suivent automatiquement</strong> ` +
+        `(leur propre origine_reelle référence aussi ce pays) :</div>`;
+      html += '<ul style="margin:4px 0;padding-left:16px;font-size:10px">' +
+        r.enfants_qui_suivront.map(e => `<li>${e.nom}</li>`).join('') + '</ul>';
+    }
+    html += `<button id="pp-confirm-btn-${i}" class="yaml-btn" style="margin-top:8px;font-weight:700">✓ Confirmer</button>`;
+    html += `</div>`;
+    container.innerHTML = html;
+
+    document.getElementById(`pp-confirm-btn-${i}`).addEventListener('click', () => {
+      _ppConfirmerDeplacer(zoneSlug, premierToken, cible, i);
+    });
+  } catch (e) {
+    container.innerHTML = `<div class="carte-panel-error">Erreur réseau : ${e.message}</div>`;
+  }
+}
+
+async function _ppConfirmerDeplacer(zoneSlug, premierToken, cible, i) {
+  const container = document.getElementById(`pp-impact-report-${i}`);
+  container.innerHTML = '<div class="carte-status">Déplacement en cours…</div>';
+  try {
+    const res = await fetch('/api/carte/split_zone', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ scenario: CarteState.scenario, slug_source: zoneSlug, pays_a_extraire: [premierToken], cible }),
+    });
+    const data = await res.json();
+    if (data.ok) {
+      await refreshCarte();
+      openRenommerZonePanel(zoneSlug);  // réaffiche le panneau à jour
+    } else {
+      container.innerHTML = `<div class="carte-panel-error">Erreur : ${data.error}</div>`;
+    }
+  } catch (e) {
+    container.innerHTML = `<div class="carte-panel-error">Erreur réseau : ${e.message}</div>`;
+  }
 }
 
 function onCartePaysClick(frList, displayName) {
@@ -4095,6 +5840,16 @@ function onCartePaysClick(frList, displayName) {
     openCartePanel(frList[0]);
     return;
   }
+
+  // Fix (12 sept 2026) : cas à entrées multiples (ex. Royaume-Uni/Angleterre/
+  // Écosse/Pays de Galles, un seul polygone sur le fond de carte pour
+  // plusieurs entrées côté vault) -- le fix précédent ne couvrait que
+  // openCartePanel (une seule entrée), donc cliquer ici ne mettait jamais à
+  // jour la surbrillance avant qu'un choix soit fait dans le sélecteur.
+  const zoneResolue = frList.map(fr => CarteState.affectations[fr]).filter(Boolean)[0];
+  CarteState.zoneSurlignee = zoneResolue || null;
+  renderCarteLayer();
+
   const panel = document.getElementById('carte-panel');
   panel.innerHTML = `
     <div class="carte-panel-title">${displayName} — plusieurs entrées</div>
@@ -4110,17 +5865,59 @@ function onCartePaysClick(frList, displayName) {
   });
 }
 
-function openCartePanel(pays) {
+async function openCartePanel(pays) {
   const zone = CarteState.affectations[pays];
+
+  // Fix (12 sept 2026) : cliquer sur un pays ne mettait jamais à jour la
+  // zone surlignée -- seuls un clic sur un overlay ou sur la légende le
+  // faisaient. Résultat : le contour orange restait bloqué sur la
+  // précédente sélection tant qu'on ne cliquait pas spécifiquement sur un
+  // overlay de cette même zone. Maintenant : tout clic sur un pays met à
+  // jour la surbrillance sur SA zone (ou l'efface si le pays n'est pas
+  // affecté).
+  CarteState.zoneSurlignee = zone || null;
+  renderCarteLayer();
+
   const panel = document.getElementById('carte-panel');
+
+  // Nouveau (13 sept 2026) : un pays peut être réparti sur plusieurs zones
+  // (pays entier + une ou plusieurs portions overlay ailleurs, ex. France).
+  // Récupère le détail avant de construire le panneau -- non bloquant si
+  // l'appel échoue, le panneau reste utilisable sans cette section.
+  let zonesDetail = [];
+  try {
+    const res = await fetch(`/api/carte/zones_par_pays?scenario=${encodeURIComponent(CarteState.scenario)}&pays=${encodeURIComponent(pays)}`);
+    const data = await res.json();
+    zonesDetail = data.zones || [];
+  } catch (e) {
+    zonesDetail = [];
+  }
 
   const zoneOptions = CarteState.zonesN1.map(z =>
     `<option value="${z.slug}" ${z.slug === zone ? 'selected' : ''}>${z.nom} (${z.slug})</option>`
   ).join('');
 
+  const repartitionHtml = zonesDetail.length > 1 ? `
+    <div class="carte-panel-section">
+      <label>Ce pays est réparti sur ${zonesDetail.length} zones</label>
+      <ul style="margin:4px 0 0;padding-left:18px;font-size:13px;">
+        ${zonesDetail.map(z => `
+          <li style="margin-bottom:4px;">
+            <strong>${z.nom}</strong>
+            ${z.type === 'overlay'
+              ? '<span style="color:#b5760a;">(overlay — portion)</span>'
+              : '<span style="color:#2a7d2a;">(pays entier)</span>'}
+            ${z.portion ? `<div style="color:#666;font-size:12px;">${z.portion}</div>` : ''}
+          </li>
+        `).join('')}
+      </ul>
+    </div>
+  ` : '';
+
   panel.innerHTML = `
     <div class="carte-panel-title">${pays}</div>
-    <div class="carte-panel-sub">${zone ? `Actuellement : ${zone}` : 'Non affecté'}</div>
+    <div class="carte-panel-sub">${zone ? `Actuellement (pays entier) : ${zone}` : 'Non affecté (pays entier)'}</div>
+    ${repartitionHtml}
 
     <div class="carte-panel-section">
       <label>Affecter à une zone existante</label>
@@ -4144,6 +5941,7 @@ function openCartePanel(pays) {
 
     <div class="carte-panel-section">
       <button id="carte-panel-ignorer-btn" class="yaml-btn">Ignorer (blanc intentionnel)</button>
+      ${zone ? `<button id="carte-panel-desaffecter-btn" class="yaml-btn" style="margin-top:4px" title="Remet ce pays à Non affecté">↩️ Désaffecter</button>` : ''}
     </div>
 
     <div id="carte-panel-msg"></div>
@@ -4164,6 +5962,35 @@ function openCartePanel(pays) {
   document.getElementById('carte-panel-propose-btn').addEventListener('click', () => _carteProposer(pays));
   document.getElementById('carte-panel-topdown-btn').addEventListener('click', () => _carteProposerTopdown(pays));
   document.getElementById('carte-panel-ignorer-btn').addEventListener('click', () => _carteIgnorer(pays));
+  const desaffecterBtn = document.getElementById('carte-panel-desaffecter-btn');
+  if (desaffecterBtn) desaffecterBtn.addEventListener('click', () => _carteDesaffecter(pays, zone));
+}
+
+/** Désaffecte un pays déjà assigné (retour à "Non affecté"), avec confirmation
+ * -- trou trouvé le 8 sept 2026, voir /api/carte/desaffecter. */
+async function _carteDesaffecter(pays, ancienneZone) {
+  if (!window.confirm(`Désaffecter "${pays}" (actuellement : ${ancienneZone}) ? Il repassera à "Non affecté".`)) {
+    return;
+  }
+  const msg = document.getElementById('carte-panel-msg');
+  msg.textContent = 'Désaffectation…';
+  try {
+    const res = await fetch('/api/carte/desaffecter', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ pays, scenario: CarteState.scenario }),
+    });
+    const data = await res.json();
+    if (data.error) {
+      msg.textContent = `Erreur : ${data.error}`;
+      return;
+    }
+    msg.textContent = `✓ ${pays} désaffecté.`;
+    await refreshCarte();
+    openCartePanel(pays);  // rouvre le panneau, reflète le nouvel état "Non affecté"
+  } catch (e) {
+    msg.textContent = `Erreur réseau : ${e.message}`;
+  }
 }
 
 /** P24 étape C.4 — génère une proposition de zone niveau 1 pour un pays sans zone,
@@ -4664,7 +6491,10 @@ function renderChantiersList() {
   `).join('');
 }
 
-const CHANTIERS_TYPE_LABEL = { pays_sans_zone: 'Pays sans zone', zone_suspecte: 'Zone suspecte' };
+const CHANTIERS_TYPE_LABEL = {
+  pays_sans_zone: 'Pays sans zone', zone_suspecte: 'Zone suspecte',
+  doublon_pays_entier: 'Doublon pays-entier',
+};
 const CHANTIERS_STATUT_LABEL = { a_traiter: 'À traiter', ignore: 'Ignoré', traite: 'Traité' };
 
 function renderChantierRow(c) {
@@ -4704,6 +6534,28 @@ function renderChantierRow(c) {
 function _chantiersFormatProposition(p) {
   // Aperçu compact plutôt que le JSON brut complet -- les champs qui
   // comptent pour une relecture humaine rapide, pas le schéma zone entier.
+
+  // doublon_pays_entier (14 sept 2026) : forme différente des deux types
+  // existants (pas une zone complète) -- slug conservé + zones retirées,
+  // avec un extrait narratif par zone quand le diagnostic l'a fourni. Ce
+  // contexte est ce qui permet de repérer un cas comme "Inde-Corée du Sud
+  // (nœud eurasiatique du Pacte)" -- rattachement volontaire, pas un vrai
+  // doublon -- avant d'approuver plutôt qu'après coup (cf. handoff du 14
+  // sept, bug #6). Sans ce champ, l'utilisateur ne verrait qu'un nom de
+  // zone, insuffisant pour juger.
+  if (p.slug_a_conserver) {
+    const lignes = [`conservé sur : ${p.slug_a_conserver}`];
+    for (const z of (p.zones_a_retirer || [])) {
+      if (typeof z === 'string') {
+        lignes.push(`retiré de : ${z}`);
+      } else {
+        lignes.push(`retiré de : ${z.nom || z.slug}`);
+        if (z.contexte_narratif) lignes.push(`  ↳ « ${z.contexte_narratif} »`);
+      }
+    }
+    return lignes.join('\n');
+  }
+
   const lignes = [];
   if (p.nom) lignes.push(`nom: ${p.nom}`);
   if (p.slug) lignes.push(`slug: ${p.slug}`);

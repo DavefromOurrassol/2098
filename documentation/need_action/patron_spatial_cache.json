@@ -45,6 +45,24 @@
       "slug": "peninsule_iberique_cooperative"
     }
   ],
+  "4d189f8e36b6b479306e54b35a9558471dabc7214e846a742cf731adc7134245": [
+    {
+      "raison": "Territoire autonome décrit comme une coalition fragile et précaire, sans contrôle militarisé strict ni alignement clair sur un bloc fermé, ce qui contredit la logique d'enclave protégée ou de hors-forteresse dégradée",
+      "slug": "amazonie_pacte_vert"
+    },
+    {
+      "raison": "Décrit comme un opérateur privé armé gérant des corridors, ni bloc souverain ni zone abandonnée, ce qui en fait une entité intermédiaire neutre non conforme au patron",
+      "slug": "espace_nordique_arctique"
+    },
+    {
+      "raison": "Confédération collectiviste sans mention de militarisation, de contrôle strict des ressources ou de fragmentation extrême, ce qui contredit la logique de blocs fermés et sécurisés",
+      "slug": "al_hima"
+    },
+    {
+      "raison": "Décrite comme une mégapole-Forteresse neutre armée, ce qui suggère une zone intermédiaire ou neutre plutôt qu'une enclave intégrée à un bloc fermé ou une zone abandonnée",
+      "slug": "singapour_megapole"
+    }
+  ],
   "4d6b8e4729d89f110b1fa2381fd0b8ca6234c9ae178cb4c099d0d4cf0a7a8b9c": [
     {
       "raison": "Mention d'un 'Consortium Helios (énergie solaire orbitale)' contredit la logique frontalière du système (expansion spatiale limitée et robotique)",

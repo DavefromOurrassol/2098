@@ -8,6 +8,12 @@
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <!-- Leaflet.Draw (26 août 2026) : plugin de dessin de polygones custom pour
+       les overlays géographie (zones qui coupent un pays en deux) -- voir
+       check_overlay_portion_coherence.py et les routes /api/carte/overlays/*.
+       CSS après leaflet.css : Leaflet.Draw surcharge quelques classes Leaflet
+       de base, l'ordre de chargement des CSS doit respecter ça. -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.css">
   <style>
     /* ── Redimensionnement du sidebar à la souris (31 juillet 2026) ── */
     #sidebar {
@@ -46,6 +52,7 @@
     #tab-carte.active { display: flex; }
     .carte-toolbar { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
     .carte-toolbar select { font-family: 'JetBrains Mono', monospace; padding: 4px 8px; border: 1px solid #ccc; border-radius: 4px; background: #fff; }
+    #carte-toggle-villes.active { border-color: #3b6fd4; background: #eef4fa; color: #2a52a8; font-weight: 600; }
     .carte-status { font-size: 12px; color: #888; }
     .carte-diagnostic { background: #fff4e0; border: 1px solid #e0b060; border-radius: 4px; padding: 8px 12px; font-size: 11px; margin-bottom: 10px; color: #7a5010; }
     .carte-layout { display: flex; gap: 16px; flex: 1; min-height: 0; }
@@ -122,6 +129,10 @@
       padding: 1px 5px; font-size: 9px;
     }
     .carte-legend-swatch { width: 12px; height: 12px; border-radius: 2px; flex-shrink: 0; }
+    .carte-legend-badge {
+      font-size: 9px; padding: 1px 4px; border-radius: 3px; background: #eee;
+      color: #666; border: 1px dashed #999; flex-shrink: 0;
+    }
     .carte-panel { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 12px; font-size: 12px; }
     .carte-panel-empty { color: #999; font-style: italic; }
     .carte-panel-title { font-weight: 700; font-size: 14px; margin-bottom: 4px; }
@@ -628,6 +639,9 @@
         <span class="tab-page-title" style="margin:0">Carte géographique</span>
         <label for="carte-scenario" style="margin-left:16px;font-size:12px;color:#888">Scénario</label>
         <select id="carte-scenario"></select>
+        <button id="carte-toggle-dessin-zone-complete" class="btn-secondary" style="margin-left:12px" onclick="toggleModeDessinZoneComplete()">🗺️ Dessiner une zone complète</button>
+        <button id="carte-toggle-enrichissement" class="btn-secondary" style="margin-left:6px" onclick="openEnrichissementPanel()">🧬 Zones à enrichir</button>
+        <button id="carte-toggle-villes" class="btn-secondary" style="margin-left:6px" onclick="toggleVillesPrincipales()">🏙️ Villes principales</button>
         <span id="carte-status" class="carte-status"></span>
       </div>
       <div id="carte-diagnostic" class="carte-diagnostic" style="display:none"></div>
@@ -1019,6 +1033,7 @@
           <option value="">Tous</option>
           <option value="pays_sans_zone">Pays sans zone</option>
           <option value="zone_suspecte">Zone suspecte</option>
+          <option value="doublon_pays_entier">Doublon pays-entier</option>
         </select>
         <label for="chantiers-statut" style="font-size:12px;color:#888">Statut</label>
         <select id="chantiers-statut">
@@ -1071,6 +1086,8 @@
 </div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.js"></script>
+<script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
 <script>
   // Injectée par app.py depuis la variable d'environnement CARTO_API_KEY
   // (30 août 2026) -- jamais en dur dans app.js, jamais commitée. Chaîne

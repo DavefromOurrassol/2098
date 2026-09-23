@@ -328,9 +328,6 @@ zones:
   - entite: Danemark / Groenland
     type_entite: pays
     portion: null
-  - entite: Canada (Nunavut)
-    type_entite: etat_federe
-    portion: null
   - entite: Norvège (Svalbard)
     type_entite: pays
     portion: null
@@ -634,9 +631,6 @@ zones:
   - entite: Singapour
     type_entite: pays
     portion: null
-  - entite: Internet mondial / GAFAM (héritage)
-    type_entite: autre
-    portion: null
   description: 'L''infrastructure numérique mondiale de 2098 est le résultat de la
     reconstruction post-effondrement de 2040 : NexCore Communs (coopérative mondiale
     née en 2043 après démantèlement du conglomérat privé), Mnemos (réseau cognitif
@@ -802,9 +796,6 @@ zones:
   parent: null
   origine_reelle:
   - entite: Brésil (Amazonie)
-    type_entite: pays
-    portion: null
-  - entite: Kenya
     type_entite: pays
     portion: null
   - entite: Ensemble des corridors de biodiversité continentaux
@@ -978,9 +969,6 @@ zones:
     type_entite: pays
     portion: null
   - entite: Norvège
-    type_entite: pays
-    portion: null
-  - entite: Danemark
     type_entite: pays
     portion: null
   - entite: Écosse
@@ -1834,9 +1822,6 @@ zones:
   type: infrastructure
   parent: infrastructure_numerique_globale
   origine_reelle:
-  - entite: Canada
-    type_entite: pays
-    portion: null
   - entite: Montréal
     type_entite: region_administrative
     portion: null
@@ -1868,9 +1853,6 @@ zones:
   type: ville
   parent: hub_nairobi_kigali
   origine_reelle:
-  - entite: Kenya
-    type_entite: pays
-    portion: null
   - entite: Nairobi
     type_entite: region_administrative
     portion: null
@@ -1908,9 +1890,6 @@ zones:
   type: infrastructure
   parent: hub_nairobi_kigali
   origine_reelle:
-  - entite: Kenya
-    type_entite: pays
-    portion: null
   - entite: Nairobi
     type_entite: region_administrative
     portion: null
@@ -1942,9 +1921,6 @@ zones:
   type: ville
   parent: union_nordique_europe_nord
   origine_reelle:
-  - entite: Danemark / Groenland
-    type_entite: pays
-    portion: null
   - entite: Nuuk
     type_entite: region_administrative
     portion: null
@@ -2006,9 +1982,6 @@ zones:
   type: infrastructure
   parent: hub_nairobi_kigali
   origine_reelle:
-  - entite: Kenya
-    type_entite: pays
-    portion: null
   - entite: Nairobi
     type_entite: region_administrative
     portion: null
@@ -2424,9 +2397,6 @@ zones:
   type: infrastructure
   parent: nairobi_centre
   origine_reelle:
-  - entite: Kenya
-    type_entite: pays
-    portion: null
   - entite: Nairobi
     type_entite: region_administrative
     portion: null
@@ -2459,9 +2429,6 @@ zones:
   type: infrastructure
   parent: nairobi_centre
   origine_reelle:
-  - entite: Kenya
-    type_entite: pays
-    portion: null
   - entite: Nairobi
     type_entite: region_administrative
     portion: null
@@ -2583,9 +2550,7 @@ zones:
   niveau: 1
   type: union_regionale
   parent: null
-  origine_reelle:
-  - entite: Espagne
-    type_entite: pays
+  origine_reelle: []
   description: ''
   statut: dominant
   tensions_internes: ''

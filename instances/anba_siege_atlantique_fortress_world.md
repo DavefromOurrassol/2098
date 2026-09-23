@@ -6,37 +6,45 @@ entite: anba_siege_atlantique
 scenario: fortress_world
 statut: officialise_enrichi
 localisation:
-  zone: anba_siege_atlantique
+  zone: anzes_siege_zone_euro_sud
   lieu: Siège de l'ANBA — Autorité Numérique du Bloc Atlantique
   type_lieu: infrastructure
-
 type_dans_scenario: organisation
+role_dans_scenario: 'Organisation paramilitaire spécialisée dans la sécurisation des
+  zones climatiques protégées de l''Atlantique Nord. Elle gère les accès aux enclaves
+  fortifiées et commercialise des contrats de protection aux élites souhaitant s''isoler
+  des territoires dégradés. Son influence s''étend sur les couloirs maritimes surveillés
+  entre l''Europe et l''Amérique du Nord. Dans un monde de blocs fermés et de fragmentation
+  territoriale extrême, Anba Siege opère comme un acteur de troisième type — ni État,
+  ni milice rebelle — mais gestionnaire marchand des seuils entre sécurité et abandon,
+  s''insérant dans les fissures laissées par le retrait des institutions souveraines
+  sur les espaces maritimes interstitiels.
 
-role_dans_scenario: >
-  Organisation paramilitaire spécialisée dans la sécurisation des zones climatiques protégées de l'Atlantique Nord. Elle gère les accès aux enclaves fortifiées et commercialise des contrats de protection aux élites souhaitant s'isoler des territoires dégradés. Son influence s'étend sur les couloirs maritimes surveillés entre l'Europe et l'Amérique du Nord. Dans un monde de blocs fermés et de fragmentation territoriale extrême, Anba Siege opère comme un acteur de troisième type — ni État, ni milice rebelle — mais gestionnaire marchand des seuils entre sécurité et abandon, s'insérant dans les fissures laissées par le retrait des institutions souveraines sur les espaces maritimes interstitiels.
+  '
+responsabilites: 'Déploiement et maintien de périmètres de protection autour des enclaves
+  climatiques de l''Atlantique Nord (îles fortifiées, plateformes offshore, corridors
+  côtiers sécurisés). Commercialisation de contrats de transit et d''accès aux couloirs
+  maritimes surveillés entre l''Europe de l''Ouest et la façade Est nord-américaine.
+  Gestion des listes d''accès, des protocoles de vérification biométrique aux seuils
+  d''entrée des zones protégées, et coordination avec les blocs souverains pour la
+  sous-traitance des fonctions de sécurité que ceux-ci refusent d''assumer directement.
 
-responsabilites: >
-  Déploiement et maintien de périmètres de protection autour des enclaves climatiques de l'Atlantique Nord (îles fortifiées, plateformes offshore, corridors côtiers sécurisés). Commercialisation de contrats de transit et d'accès aux couloirs maritimes surveillés entre l'Europe de l'Ouest et la façade Est nord-américaine. Gestion des listes d'accès, des protocoles de vérification biométrique aux seuils d'entrée des zones protégées, et coordination avec les blocs souverains pour la sous-traitance des fonctions de sécurité que ceux-ci refusent d'assumer directement.
-
+  '
 impact_local: 4
 impact_systemique_global: 4
-
 variables_influencees:
-    - geopolitique_conflits
-    - organisation_territoires
-    - demographie_mobilite_humaine
-    - systeme_economique_redistribution
-
+- geopolitique_conflits
+- organisation_territoires
+- demographie_mobilite_humaine
+- systeme_economique_redistribution
 zone_geographique:
-    - régionale
-    - continentale
-
+- régionale
+- continentale
 zone_systemique:
-    - sécurité
-    - gouvernance
-    - économie
-    - infrastructure
-
+- sécurité
+- gouvernance
+- économie
+- infrastructure
 alliances:
 - armada_logistique_nordique_fortress_world
 - bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world
@@ -64,33 +72,57 @@ oppositions:
 - reseaux_d_echange_clandestin_inter_zones_fortress_world
 - reseaux_de_contrebande_energetique_transfrontaliere_fortress_world
 type_relation_dominante: alliance stratégique
-
 annee_debut: 2031
-annee_fin: 
-
+annee_fin: null
 generation: forteresse
-
 injection:
   type: canonique
-  annee_injection:
-  contexte_injection:
-  impact_sur_variables:
+  annee_injection: null
+  contexte_injection: null
+  impact_sur_variables: null
   propagation:
     via_matrice: false
+description_journalistique: 'Dans les ports fortifiés de l''Atlantique Nord, les hommes
+  en combinaisons grises frappées du double ancre croisée d''Anba Siege Atlantique
+  ne sont ni des soldats ni des douaniers — ils sont quelque chose de plus précis
+  et de plus inquiétant : des gestionnaires de seuil. Pour 2,4 millions de crédits-blocs
+  annuels, un contrat Tier-Platinum vous garantit un corridor sécurisé entre Lisbonne-Enclave
+  et Boston-Forteresse, avec escorte sous-marine, hélitreuillage d''urgence et vérification
+  biométrique express aux douze checkpoints officiels. Pour ceux qui n''ont pas les
+  moyens, la mer est libre — et mortelle. Fondée en 2031 à Gibraltar dans le vide
+  juridique laissé par l''effondrement de l''autorité maritime européenne, Anba Siege
+  gère aujourd''hui plus de quarante zones d''accès contrôlé réparties sur l''arc
+  atlantique, employant quelque 38 000 personnels armés et 12 000 opérateurs de surveillance
+  algorithmique. Sa capitalisation dépasse celle de plusieurs États membres du Bloc
+  Eurasiatique Occidental.
 
-description_journalistique: >
-  Dans les ports fortifiés de l'Atlantique Nord, les hommes en combinaisons grises frappées du double ancre croisée d'Anba Siege Atlantique ne sont ni des soldats ni des douaniers — ils sont quelque chose de plus précis et de plus inquiétant : des gestionnaires de seuil. Pour 2,4 millions de crédits-blocs annuels, un contrat Tier-Platinum vous garantit un corridor sécurisé entre Lisbonne-Enclave et Boston-Forteresse, avec escorte sous-marine, hélitreuillage d'urgence et vérification biométrique express aux douze checkpoints officiels. Pour ceux qui n'ont pas les moyens, la mer est libre — et mortelle. Fondée en 2031 à Gibraltar dans le vide juridique laissé par l'effondrement de l'autorité maritime européenne, Anba Siege gère aujourd'hui plus de quarante zones d'accès contrôlé réparties sur l'arc atlantique, employant quelque 38 000 personnels armés et 12 000 opérateurs de surveillance algorithmique. Sa capitalisation dépasse celle de plusieurs États membres du Bloc Eurasiatique Occidental.
+  '
+signes_distinctifs: 'Logo de la double ancre croisée sur fond anthracite, porté sur
+  les uniformes gris-acier de ses agents et gravé sur les portiques de contrôle biométrique
+  de toutes ses zones d''accès. Les véhicules d''Anba Siege — vedettes rapides, drones
+  maritimes, hélicoptères de patrouille — arborent une ligne lumineuse bleue-glace
+  courant sur leur flanc, visible de nuit à plusieurs kilomètres, signal que la zone
+  est « sous contrat ». Ses documents contractuels utilisent systématiquement le terme
+  « membre protégé » plutôt que « client », inscrivant délibérément un registre de
+  communauté là où ne s''exerce qu''une transaction marchande.
 
-signes_distinctifs: >
-  Logo de la double ancre croisée sur fond anthracite, porté sur les uniformes gris-acier de ses agents et gravé sur les portiques de contrôle biométrique de toutes ses zones d'accès. Les véhicules d'Anba Siege — vedettes rapides, drones maritimes, hélicoptères de patrouille — arborent une ligne lumineuse bleue-glace courant sur leur flanc, visible de nuit à plusieurs kilomètres, signal que la zone est « sous contrat ». Ses documents contractuels utilisent systématiquement le terme « membre protégé » plutôt que « client », inscrivant délibérément un registre de communauté là où ne s'exerce qu'une transaction marchande.
+  '
+tensions_narratives: 'La légitimité d''Anba Siege repose sur l''incapacité des États
+  à assurer la protection maritime — mais plusieurs blocs souverains commencent à
+  réclamer la renationalisation des couloirs atlantiques, menaçant son modèle économique.
+  Des fuites internes révèlent que ses algorithmes de gestion des seuils pratiquent
+  une discrimination tarifaire fondée sur l''origine climatique des demandeurs, exposant
+  l''organisation à des poursuites devant la Chambre de Recours Algorithmique de Bruxelles.
+  En coulisses, les milices de piraterie arctique et les réseaux clandestins inter-zones
+  testent systématiquement ses périmètres, cherchant la fissure dans la forteresse
+  marchande. Et la question que personne n''ose poser officiellement demeure : que
+  se passe-t-il le jour où un État-bloc décide de racheter Anba Siege plutôt que de
+  la combattre ?
 
-tensions_narratives: >
-  La légitimité d'Anba Siege repose sur l'incapacité des États à assurer la protection maritime — mais plusieurs blocs souverains commencent à réclamer la renationalisation des couloirs atlantiques, menaçant son modèle économique. Des fuites internes révèlent que ses algorithmes de gestion des seuils pratiquent une discrimination tarifaire fondée sur l'origine climatique des demandeurs, exposant l'organisation à des poursuites devant la Chambre de Recours Algorithmique de Bruxelles. En coulisses, les milices de piraterie arctique et les réseaux clandestins inter-zones testent systématiquement ses périmètres, cherchant la fissure dans la forteresse marchande. Et la question que personne n'ose poser officiellement demeure : que se passe-t-il le jour où un État-bloc décide de racheter Anba Siege plutôt que de la combattre ?
-
+  '
 date_creation: 2026-06-27
 trajectoire: dominant
 est_clandestin: false
-
 ---
 
 # Anba Siege Atlantique — Division Accès Protégés

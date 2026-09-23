@@ -1,0 +1,5962 @@
+[
+ {
+  "nom": "Tokyo",
+  "pays": "Japan",
+  "lat": 35.686963,
+  "lon": 139.749462,
+  "population": 35676000,
+  "capitale": true
+ },
+ {
+  "nom": "New York",
+  "pays": "United States of America",
+  "lat": 40.751925,
+  "lon": -73.981963,
+  "population": 19040000,
+  "capitale": false
+ },
+ {
+  "nom": "Mexico City",
+  "pays": "Mexico",
+  "lat": 19.444388,
+  "lon": -99.132934,
+  "population": 19028000,
+  "capitale": true
+ },
+ {
+  "nom": "Mumbai",
+  "pays": "India",
+  "lat": 19.018936,
+  "lon": 72.855043,
+  "population": 18978000,
+  "capitale": false
+ },
+ {
+  "nom": "Sao Paulo",
+  "pays": "Brazil",
+  "lat": -23.556734,
+  "lon": -46.626966,
+  "population": 18845000,
+  "capitale": false
+ },
+ {
+  "nom": "Delhi",
+  "pays": "India",
+  "lat": 28.671939,
+  "lon": 77.228058,
+  "population": 15926000,
+  "capitale": false
+ },
+ {
+  "nom": "Shanghai",
+  "pays": "China",
+  "lat": 31.218398,
+  "lon": 121.434559,
+  "population": 14987000,
+  "capitale": false
+ },
+ {
+  "nom": "Kolkata",
+  "pays": "India",
+  "lat": 22.496915,
+  "lon": 88.32273,
+  "population": 14787000,
+  "capitale": false
+ },
+ {
+  "nom": "Dhaka",
+  "pays": "Bangladesh",
+  "lat": 23.725006,
+  "lon": 90.406634,
+  "population": 12797394,
+  "capitale": true
+ },
+ {
+  "nom": "Buenos Aires",
+  "pays": "Argentina",
+  "lat": -34.600556,
+  "lon": -58.399477,
+  "population": 12795000,
+  "capitale": true
+ },
+ {
+  "nom": "Los Angeles",
+  "pays": "United States of America",
+  "lat": 33.991924,
+  "lon": -118.181926,
+  "population": 12500000,
+  "capitale": false
+ },
+ {
+  "nom": "Karachi",
+  "pays": "Pakistan",
+  "lat": 24.871938,
+  "lon": 66.988063,
+  "population": 12130000,
+  "capitale": false
+ },
+ {
+  "nom": "Cairo",
+  "pays": "Egypt",
+  "lat": 30.051906,
+  "lon": 31.248022,
+  "population": 11893000,
+  "capitale": true
+ },
+ {
+  "nom": "Rio de Janeiro",
+  "pays": "Brazil",
+  "lat": -22.923077,
+  "lon": -43.226967,
+  "population": 11748000,
+  "capitale": false
+ },
+ {
+  "nom": "Osaka",
+  "pays": "Japan",
+  "lat": 34.751981,
+  "lon": 135.458199,
+  "population": 11294000,
+  "capitale": false
+ },
+ {
+  "nom": "Beijing",
+  "pays": "China",
+  "lat": 39.930838,
+  "lon": 116.38634,
+  "population": 11106000,
+  "capitale": true
+ },
+ {
+  "nom": "Manila",
+  "pays": "Philippines",
+  "lat": 14.606105,
+  "lon": 120.980271,
+  "population": 11100000,
+  "capitale": true
+ },
+ {
+  "nom": "Moscow",
+  "pays": "Russia",
+  "lat": 55.75411,
+  "lon": 37.613577,
+  "population": 10452000,
+  "capitale": true
+ },
+ {
+  "nom": "Istanbul",
+  "pays": "Turkey",
+  "lat": 41.106942,
+  "lon": 29.008056,
+  "population": 10061000,
+  "capitale": false
+ },
+ {
+  "nom": "Paris",
+  "pays": "France",
+  "lat": 48.868639,
+  "lon": 2.33139,
+  "population": 9904000,
+  "capitale": true
+ },
+ {
+  "nom": "Seoul",
+  "pays": "South Korea",
+  "lat": 37.568295,
+  "lon": 126.997785,
+  "population": 9796000,
+  "capitale": true
+ },
+ {
+  "nom": "Lagos",
+  "pays": "Nigeria",
+  "lat": 6.445208,
+  "lon": 3.389585,
+  "population": 9466000,
+  "capitale": false
+ },
+ {
+  "nom": "Jakarta",
+  "pays": "Indonesia",
+  "lat": -6.172472,
+  "lon": 106.827492,
+  "population": 9125000,
+  "capitale": true
+ },
+ {
+  "nom": "Chicago",
+  "pays": "United States of America",
+  "lat": 41.831937,
+  "lon": -87.752001,
+  "population": 8990000,
+  "capitale": false
+ },
+ {
+  "nom": "Guangzhou",
+  "pays": "China",
+  "lat": 23.146927,
+  "lon": 113.323064,
+  "population": 8829000,
+  "capitale": false
+ },
+ {
+  "nom": "London",
+  "pays": "United Kingdom",
+  "lat": 51.501941,
+  "lon": -0.118668,
+  "population": 8567000,
+  "capitale": true
+ },
+ {
+  "nom": "Lima",
+  "pays": "Peru",
+  "lat": -12.046067,
+  "lon": -77.052008,
+  "population": 8012000,
+  "capitale": true
+ },
+ {
+  "nom": "Tehran",
+  "pays": "Iran",
+  "lat": 35.673889,
+  "lon": 51.422398,
+  "population": 7873000,
+  "capitale": true
+ },
+ {
+  "nom": "Kinshasa",
+  "pays": "Congo (Kinshasa)",
+  "lat": -4.327778,
+  "lon": 15.313026,
+  "population": 7843000,
+  "capitale": true
+ },
+ {
+  "nom": "Bogota",
+  "pays": "Colombia",
+  "lat": 4.598369,
+  "lon": -74.08529,
+  "population": 7772000,
+  "capitale": true
+ },
+ {
+  "nom": "Shenzhen",
+  "pays": "China",
+  "lat": 22.554316,
+  "lon": 114.120177,
+  "population": 7581000,
+  "capitale": false
+ },
+ {
+  "nom": "Wuhan",
+  "pays": "China",
+  "lat": 30.581977,
+  "lon": 114.268071,
+  "population": 7243000,
+  "capitale": false
+ },
+ {
+  "nom": "Hong Kong",
+  "pays": "Hong Kong S.A.R.",
+  "lat": 22.306927,
+  "lon": 114.183064,
+  "population": 7206000,
+  "capitale": false
+ },
+ {
+  "nom": "Tianjin",
+  "pays": "China",
+  "lat": 39.131972,
+  "lon": 117.198073,
+  "population": 7180000,
+  "capitale": false
+ },
+ {
+  "nom": "Chennai",
+  "pays": "India",
+  "lat": 13.091934,
+  "lon": 80.278053,
+  "population": 7163000,
+  "capitale": false
+ },
+ {
+  "nom": "Taipei",
+  "pays": "Taiwan",
+  "lat": 25.035833,
+  "lon": 121.568333,
+  "population": 6900273,
+  "capitale": true
+ },
+ {
+  "nom": "Bengaluru",
+  "pays": "India",
+  "lat": 12.971941,
+  "lon": 77.558064,
+  "population": 6787000,
+  "capitale": false
+ },
+ {
+  "nom": "Bangkok",
+  "pays": "Thailand",
+  "lat": 13.751945,
+  "lon": 100.514699,
+  "population": 6704000,
+  "capitale": true
+ },
+ {
+  "nom": "Lahore",
+  "pays": "Pakistan",
+  "lat": 31.561917,
+  "lon": 74.348079,
+  "population": 6577000,
+  "capitale": false
+ },
+ {
+  "nom": "Chongqing",
+  "pays": "China",
+  "lat": 29.566923,
+  "lon": 106.593036,
+  "population": 6461000,
+  "capitale": false
+ },
+ {
+  "nom": "Hyderabad",
+  "pays": "India",
+  "lat": 17.401929,
+  "lon": 78.478008,
+  "population": 6376000,
+  "capitale": false
+ },
+ {
+  "nom": "Amaravati",
+  "pays": "India",
+  "lat": 16.533658,
+  "lon": 80.52432,
+  "population": 5800000,
+  "capitale": false
+ },
+ {
+  "nom": "Santiago",
+  "pays": "Chile",
+  "lat": -33.448068,
+  "lon": -70.668987,
+  "population": 5720000,
+  "capitale": true
+ },
+ {
+  "nom": "Miami",
+  "pays": "United States of America",
+  "lat": 25.789557,
+  "lon": -80.226052,
+  "population": 5585000,
+  "capitale": false
+ },
+ {
+  "nom": "Belo Horizonte",
+  "pays": "Brazil",
+  "lat": -19.91308,
+  "lon": -43.91695,
+  "population": 5575000,
+  "capitale": false
+ },
+ {
+  "nom": "Madrid",
+  "pays": "Spain",
+  "lat": 40.401972,
+  "lon": -3.685298,
+  "population": 5567000,
+  "capitale": true
+ },
+ {
+  "nom": "Philadelphia",
+  "pays": "United States of America",
+  "lat": 40.001919,
+  "lon": -75.171942,
+  "population": 5492000,
+  "capitale": false
+ },
+ {
+  "nom": "Ahmedabad",
+  "pays": "India",
+  "lat": 23.031999,
+  "lon": 72.578058,
+  "population": 5375000,
+  "capitale": false
+ },
+ {
+  "nom": "Ho Chi Minh City",
+  "pays": "Vietnam",
+  "lat": 10.781971,
+  "lon": 106.693081,
+  "population": 5314000,
+  "capitale": false
+ },
+ {
+  "nom": "Toronto",
+  "pays": "Canada",
+  "lat": 43.701926,
+  "lon": -79.421967,
+  "population": 5213000,
+  "capitale": false
+ },
+ {
+  "nom": "Singapore",
+  "pays": "Singapore",
+  "lat": 1.294979,
+  "lon": 103.853875,
+  "population": 5183700,
+  "capitale": true
+ },
+ {
+  "nom": "Luanda",
+  "pays": "Angola",
+  "lat": -8.83634,
+  "lon": 13.232481,
+  "population": 5172900,
+  "capitale": true
+ },
+ {
+  "nom": "Baghdad",
+  "pays": "Iraq",
+  "lat": 33.340594,
+  "lon": 44.391923,
+  "population": 5054000,
+  "capitale": true
+ },
+ {
+  "nom": "Barcelona",
+  "pays": "Spain",
+  "lat": 41.385245,
+  "lon": 2.181425,
+  "population": 4920000,
+  "capitale": false
+ },
+ {
+  "nom": "Haora",
+  "pays": "India",
+  "lat": 22.58039,
+  "lon": 88.329947,
+  "population": 4841638,
+  "capitale": false
+ },
+ {
+  "nom": "Dallas",
+  "pays": "United States of America",
+  "lat": 32.82197,
+  "lon": -96.841963,
+  "population": 4798000,
+  "capitale": false
+ },
+ {
+  "nom": "Shenyeng",
+  "pays": "China",
+  "lat": 41.806925,
+  "lon": 123.448028,
+  "population": 4787000,
+  "capitale": false
+ },
+ {
+  "nom": "Khartoum",
+  "pays": "Sudan",
+  "lat": 15.590024,
+  "lon": 32.532233,
+  "population": 4754000,
+  "capitale": true
+ },
+ {
+  "nom": "Pune",
+  "pays": "India",
+  "lat": 18.531963,
+  "lon": 73.848058,
+  "population": 4672000,
+  "capitale": false
+ },
+ {
+  "nom": "Sydney",
+  "pays": "Australia",
+  "lat": -33.918065,
+  "lon": 151.183234,
+  "population": 4630000,
+  "capitale": false
+ },
+ {
+  "nom": "St. Petersburg",
+  "pays": "Russia",
+  "lat": 59.94096,
+  "lon": 30.314074,
+  "population": 4553000,
+  "capitale": false
+ },
+ {
+  "nom": "Chattogram",
+  "pays": "Bangladesh",
+  "lat": 22.331938,
+  "lon": 91.798022,
+  "population": 4529000,
+  "capitale": false
+ },
+ {
+  "nom": "Dongguan",
+  "pays": "China",
+  "lat": 23.050835,
+  "lon": 113.742776,
+  "population": 4528000,
+  "capitale": false
+ },
+ {
+  "nom": "Atlanta",
+  "pays": "United States of America",
+  "lat": 33.83196,
+  "lon": -84.401895,
+  "population": 4506000,
+  "capitale": false
+ },
+ {
+  "nom": "Boston",
+  "pays": "United States of America",
+  "lat": 42.331906,
+  "lon": -71.07196,
+  "population": 4467000,
+  "capitale": false
+ },
+ {
+  "nom": "Riyadh",
+  "pays": "Saudi Arabia",
+  "lat": 24.642779,
+  "lon": 46.770796,
+  "population": 4465000,
+  "capitale": true
+ },
+ {
+  "nom": "Houston",
+  "pays": "United States of America",
+  "lat": 29.82192,
+  "lon": -95.341925,
+  "population": 4459000,
+  "capitale": false
+ },
+ {
+  "nom": "Hanoi",
+  "pays": "Vietnam",
+  "lat": 21.035273,
+  "lon": 105.848068,
+  "population": 4378000,
+  "capitale": true
+ },
+ {
+  "nom": "Washington, D.C.",
+  "pays": "United States of America",
+  "lat": 38.901495,
+  "lon": -77.011364,
+  "population": 4338000,
+  "capitale": true
+ },
+ {
+  "nom": "Guadalajara",
+  "pays": "Mexico",
+  "lat": 20.671962,
+  "lon": -103.33198,
+  "population": 4198000,
+  "capitale": false
+ },
+ {
+  "nom": "Melbourne",
+  "pays": "Australia",
+  "lat": -37.818086,
+  "lon": 144.97307,
+  "population": 4170000,
+  "capitale": false
+ },
+ {
+  "nom": "Alexandria",
+  "pays": "Egypt",
+  "lat": 31.201965,
+  "lon": 29.94805,
+  "population": 4165000,
+  "capitale": false
+ },
+ {
+  "nom": "Chengdu",
+  "pays": "China",
+  "lat": 30.671946,
+  "lon": 104.068074,
+  "population": 4123000,
+  "capitale": false
+ },
+ {
+  "nom": "Detroit",
+  "pays": "United States of America",
+  "lat": 42.331906,
+  "lon": -83.082002,
+  "population": 4101000,
+  "capitale": false
+ },
+ {
+  "nom": "Rangoon",
+  "pays": "Myanmar",
+  "lat": 16.7853,
+  "lon": 96.164732,
+  "population": 4088000,
+  "capitale": false
+ },
+ {
+  "nom": "Xian",
+  "pays": "China",
+  "lat": 34.276971,
+  "lon": 108.89305,
+  "population": 4009000,
+  "capitale": false
+ },
+ {
+  "nom": "Porto Alegre",
+  "pays": "Brazil",
+  "lat": -30.048069,
+  "lon": -51.201958,
+  "population": 3917000,
+  "capitale": false
+ },
+ {
+  "nom": "New Taipei",
+  "pays": "Taiwan",
+  "lat": 25.012778,
+  "lon": 121.465,
+  "population": 3893740,
+  "capitale": false
+ },
+ {
+  "nom": "Surat",
+  "pays": "India",
+  "lat": 21.20193,
+  "lon": 72.838094,
+  "population": 3842000,
+  "capitale": false
+ },
+ {
+  "nom": "Hechi",
+  "pays": "China",
+  "lat": 24.695252,
+  "lon": 108.083,
+  "population": 3830000,
+  "capitale": false
+ },
+ {
+  "nom": "Abidjan",
+  "pays": "Ivory Coast",
+  "lat": 5.321943,
+  "lon": -4.041994,
+  "population": 3802000,
+  "capitale": true
+ },
+ {
+  "nom": "Brasilia",
+  "pays": "Brazil",
+  "lat": -15.781394,
+  "lon": -47.917998,
+  "population": 3716996,
+  "capitale": true
+ },
+ {
+  "nom": "Ankara",
+  "pays": "Turkey",
+  "lat": 39.929184,
+  "lon": 32.862446,
+  "population": 3716000,
+  "capitale": true
+ },
+ {
+  "nom": "Monterrey",
+  "pays": "Mexico",
+  "lat": 25.671941,
+  "lon": -100.331931,
+  "population": 3712000,
+  "capitale": false
+ },
+ {
+  "nom": "Yokohama",
+  "pays": "Japan",
+  "lat": 35.430656,
+  "lon": 139.602021,
+  "population": 3697894,
+  "capitale": false
+ },
+ {
+  "nom": "Nanjing",
+  "pays": "China",
+  "lat": 32.051965,
+  "lon": 118.778029,
+  "population": 3679000,
+  "capitale": false
+ },
+ {
+  "nom": "Montreal",
+  "pays": "Canada",
+  "lat": 45.501945,
+  "lon": -73.585243,
+  "population": 3678000,
+  "capitale": false
+ },
+ {
+  "nom": "Guiyang",
+  "pays": "China",
+  "lat": 26.581989,
+  "lon": 106.718093,
+  "population": 3662000,
+  "capitale": false
+ },
+ {
+  "nom": "Recife",
+  "pays": "Brazil",
+  "lat": -8.0737,
+  "lon": -34.917551,
+  "population": 3651000,
+  "capitale": false
+ },
+ {
+  "nom": "Harbin",
+  "pays": "China",
+  "lat": 45.75193,
+  "lon": 126.648039,
+  "population": 3621000,
+  "capitale": false
+ },
+ {
+  "nom": "Fortaleza",
+  "pays": "Brazil",
+  "lat": -3.748072,
+  "lon": -38.581927,
+  "population": 3602319,
+  "capitale": false
+ },
+ {
+  "nom": "Urumqi",
+  "pays": "China",
+  "lat": 43.806958,
+  "lon": 87.57306,
+  "population": 3575000,
+  "capitale": false
+ },
+ {
+  "nom": "Phoenix",
+  "pays": "United States of America",
+  "lat": 33.541926,
+  "lon": -112.071938,
+  "population": 3551000,
+  "capitale": false
+ },
+ {
+  "nom": "Zhangzhou",
+  "pays": "China",
+  "lat": 24.520375,
+  "lon": 117.670016,
+  "population": 3531147,
+  "capitale": false
+ },
+ {
+  "nom": "Salvador",
+  "pays": "Brazil",
+  "lat": -12.968026,
+  "lon": -38.481933,
+  "population": 3484000,
+  "capitale": false
+ },
+ {
+  "nom": "Busan",
+  "pays": "South Korea",
+  "lat": 35.096999,
+  "lon": 129.008102,
+  "population": 3480000,
+  "capitale": false
+ },
+ {
+  "nom": "San Francisco",
+  "pays": "United States of America",
+  "lat": 37.769196,
+  "lon": -122.417169,
+  "population": 3450000,
+  "capitale": false
+ },
+ {
+  "nom": "Johannesburg",
+  "pays": "South Africa",
+  "lat": -26.168099,
+  "lon": 28.028064,
+  "population": 3435000,
+  "capitale": false
+ },
+ {
+  "nom": "Berlin",
+  "pays": "Germany",
+  "lat": 52.523765,
+  "lon": 13.399603,
+  "population": 3406000,
+  "capitale": true
+ },
+ {
+  "nom": "Algiers",
+  "pays": "Algeria",
+  "lat": 36.765011,
+  "lon": 3.048607,
+  "population": 3354000,
+  "capitale": true
+ },
+ {
+  "nom": "Rome",
+  "pays": "Italy",
+  "lat": 41.897902,
+  "lon": 12.481313,
+  "population": 3339000,
+  "capitale": true
+ },
+ {
+  "nom": "Pyongyang",
+  "pays": "North Korea",
+  "lat": 39.021385,
+  "lon": 125.752745,
+  "population": 3300000,
+  "capitale": true
+ },
+ {
+  "nom": "Medellin",
+  "pays": "Colombia",
+  "lat": 6.276949,
+  "lon": -75.576956,
+  "population": 3297000,
+  "capitale": false
+ },
+ {
+  "nom": "Kabul",
+  "pays": "Afghanistan",
+  "lat": 34.518636,
+  "lon": 69.181314,
+  "population": 3277000,
+  "capitale": true
+ },
+ {
+  "nom": "Athens",
+  "pays": "Greece",
+  "lat": 37.985272,
+  "lon": 23.731375,
+  "population": 3242000,
+  "capitale": true
+ },
+ {
+  "nom": "Nagoya",
+  "pays": "Japan",
+  "lat": 35.156943,
+  "lon": 136.913046,
+  "population": 3230000,
+  "capitale": false
+ },
+ {
+  "nom": "Cape Town",
+  "pays": "South Africa",
+  "lat": -33.918065,
+  "lon": 18.433042,
+  "population": 3215000,
+  "capitale": true
+ },
+ {
+  "nom": "Changchun",
+  "pays": "China",
+  "lat": 43.866954,
+  "lon": 125.338042,
+  "population": 3183000,
+  "capitale": false
+ },
+ {
+  "nom": "Casablanca",
+  "pays": "Morocco",
+  "lat": 33.601922,
+  "lon": -7.618313,
+  "population": 3181000,
+  "capitale": false
+ },
+ {
+  "nom": "Dalian",
+  "pays": "China",
+  "lat": 38.924784,
+  "lon": 121.627885,
+  "population": 3167000,
+  "capitale": false
+ },
+ {
+  "nom": "Kanpur",
+  "pays": "India",
+  "lat": 26.461945,
+  "lon": 80.31805,
+  "population": 3162000,
+  "capitale": false
+ },
+ {
+  "nom": "Kano",
+  "pays": "Nigeria",
+  "lat": 12.001923,
+  "lon": 8.518092,
+  "population": 3140000,
+  "capitale": false
+ },
+ {
+  "nom": "Tel Aviv-Yafo",
+  "pays": "Israel",
+  "lat": 32.081937,
+  "lon": 34.768066,
+  "population": 3112000,
+  "capitale": false
+ },
+ {
+  "nom": "Addis Ababa",
+  "pays": "Ethiopia",
+  "lat": 9.035256,
+  "lon": 38.698059,
+  "population": 3100000,
+  "capitale": true
+ },
+ {
+  "nom": "Curitiba",
+  "pays": "Brazil",
+  "lat": -25.418067,
+  "lon": -49.321944,
+  "population": 3084000,
+  "capitale": false
+ },
+ {
+  "nom": "Seattle",
+  "pays": "United States of America",
+  "lat": 47.571948,
+  "lon": -122.341931,
+  "population": 3074000,
+  "capitale": false
+ },
+ {
+  "nom": "Zibo",
+  "pays": "China",
+  "lat": 36.801934,
+  "lon": 118.048047,
+  "population": 3061000,
+  "capitale": false
+ },
+ {
+  "nom": "Jeddah",
+  "pays": "Saudi Arabia",
+  "lat": 21.518835,
+  "lon": 39.217252,
+  "population": 3012000,
+  "capitale": false
+ },
+ {
+  "nom": "Irvine",
+  "pays": "United States of America",
+  "lat": 33.680411,
+  "lon": -117.82995,
+  "population": 3010232,
+  "capitale": false
+ },
+ {
+  "nom": "Nairobi",
+  "pays": "Kenya",
+  "lat": -1.281401,
+  "lon": 36.814711,
+  "population": 3010000,
+  "capitale": true
+ },
+ {
+  "nom": "Hangzhou",
+  "pays": "China",
+  "lat": 30.25192,
+  "lon": 120.168073,
+  "population": 3007000,
+  "capitale": false
+ },
+ {
+  "nom": "Benoni",
+  "pays": "South Africa",
+  "lat": -26.147635,
+  "lon": 28.327994,
+  "population": 2986000,
+  "capitale": false
+ },
+ {
+  "nom": "Caracas",
+  "pays": "Venezuela",
+  "lat": 10.502944,
+  "lon": -66.918983,
+  "population": 2985000,
+  "capitale": true
+ },
+ {
+  "nom": "Milan",
+  "pays": "Italy",
+  "lat": 45.471921,
+  "lon": 9.203063,
+  "population": 2945000,
+  "capitale": false
+ },
+ {
+  "nom": "Stuttgart",
+  "pays": "Germany",
+  "lat": 48.77998,
+  "lon": 9.199996,
+  "population": 2944700,
+  "capitale": false
+ },
+ {
+  "nom": "Kunming",
+  "pays": "China",
+  "lat": 25.071926,
+  "lon": 102.678029,
+  "population": 2931000,
+  "capitale": false
+ },
+ {
+  "nom": "Dar es Salaam",
+  "pays": "Tanzania",
+  "lat": -6.798067,
+  "lon": 39.266396,
+  "population": 2930000,
+  "capitale": true
+ },
+ {
+  "nom": "Jaipur",
+  "pays": "India",
+  "lat": 26.923079,
+  "lon": 75.808042,
+  "population": 2917000,
+  "capitale": false
+ },
+ {
+  "nom": "San Diego",
+  "pays": "United States of America",
+  "lat": 32.82197,
+  "lon": -117.181936,
+  "population": 2916000,
+  "capitale": false
+ },
+ {
+  "nom": "Taiyuan",
+  "pays": "China",
+  "lat": 37.876958,
+  "lon": 112.543112,
+  "population": 2913000,
+  "capitale": false
+ },
+ {
+  "nom": "Frankfurt",
+  "pays": "Germany",
+  "lat": 50.099977,
+  "lon": 8.675015,
+  "population": 2895000,
+  "capitale": false
+ },
+ {
+  "nom": "Qingdao",
+  "pays": "China",
+  "lat": 36.091925,
+  "lon": 120.328063,
+  "population": 2866000,
+  "capitale": false
+ },
+ {
+  "nom": "Surabaya",
+  "pays": "Indonesia",
+  "lat": -7.24729,
+  "lon": 112.748887,
+  "population": 2845000,
+  "capitale": false
+ },
+ {
+  "nom": "Lisbon",
+  "pays": "Portugal",
+  "lat": 38.724669,
+  "lon": -9.146812,
+  "population": 2812000,
+  "capitale": true
+ },
+ {
+  "nom": "Jinan",
+  "pays": "China",
+  "lat": 36.676928,
+  "lon": 116.993073,
+  "population": 2798000,
+  "capitale": false
+ },
+ {
+  "nom": "Fukuoka",
+  "pays": "Japan",
+  "lat": 33.596961,
+  "lon": 130.408068,
+  "population": 2792000,
+  "capitale": false
+ },
+ {
+  "nom": "Campinas",
+  "pays": "Brazil",
+  "lat": -22.898066,
+  "lon": -47.101976,
+  "population": 2791000,
+  "capitale": false
+ },
+ {
+  "nom": "Kaohsiung",
+  "pays": "Taiwan",
+  "lat": 22.633307,
+  "lon": 120.266602,
+  "population": 2769072,
+  "capitale": false
+ },
+ {
+  "nom": "Quezon City",
+  "pays": "Philippines",
+  "lat": 14.650435,
+  "lon": 121.029966,
+  "population": 2761720,
+  "capitale": false
+ },
+ {
+  "nom": "Katowice",
+  "pays": "Poland",
+  "lat": 50.260381,
+  "lon": 19.020017,
+  "population": 2746000,
+  "capitale": false
+ },
+ {
+  "nom": "Aleppo",
+  "pays": "Syria",
+  "lat": 36.231917,
+  "lon": 37.168074,
+  "population": 2738000,
+  "capitale": false
+ },
+ {
+  "nom": "Durban",
+  "pays": "South Africa",
+  "lat": -29.863067,
+  "lon": 30.978065,
+  "population": 2729000,
+  "capitale": false
+ },
+ {
+  "nom": "Kiev",
+  "pays": "Ukraine",
+  "lat": 50.435313,
+  "lon": 30.514682,
+  "population": 2709000,
+  "capitale": true
+ },
+ {
+  "nom": "Lucknow",
+  "pays": "India",
+  "lat": 26.856985,
+  "lon": 80.913053,
+  "population": 2695000,
+  "capitale": false
+ },
+ {
+  "nom": "El Giza",
+  "pays": "Egypt",
+  "lat": 30.009989,
+  "lon": 31.190024,
+  "population": 2681863,
+  "capitale": false
+ },
+ {
+  "nom": "Zhengzhou",
+  "pays": "China",
+  "lat": 34.756942,
+  "lon": 113.663147,
+  "population": 2636000,
+  "capitale": false
+ },
+ {
+  "nom": "Taichung",
+  "pays": "Taiwan",
+  "lat": 24.152078,
+  "lon": 120.681667,
+  "population": 2629323,
+  "capitale": false
+ },
+ {
+  "nom": "Ibadan",
+  "pays": "Nigeria",
+  "lat": 7.381972,
+  "lon": 3.928036,
+  "population": 2628000,
+  "capitale": false
+ },
+ {
+  "nom": "Faisalabad",
+  "pays": "Pakistan",
+  "lat": 31.411927,
+  "lon": 73.108051,
+  "population": 2617000,
+  "capitale": false
+ },
+ {
+  "nom": "Minneapolis",
+  "pays": "United States of America",
+  "lat": 44.981925,
+  "lon": -93.253732,
+  "population": 2616000,
+  "capitale": false
+ },
+ {
+  "nom": "Fuzhou",
+  "pays": "China",
+  "lat": 26.081942,
+  "lon": 119.2981,
+  "population": 2606000,
+  "capitale": false
+ },
+ {
+  "nom": "Changsha",
+  "pays": "China",
+  "lat": 28.201916,
+  "lon": 112.968047,
+  "population": 2604000,
+  "capitale": false
+ },
+ {
+  "nom": "Dakar",
+  "pays": "Senegal",
+  "lat": 14.717778,
+  "lon": -17.475076,
+  "population": 2604000,
+  "capitale": true
+ },
+ {
+  "nom": "Izmir",
+  "pays": "Turkey",
+  "lat": 38.438096,
+  "lon": 27.149848,
+  "population": 2587000,
+  "capitale": false
+ },
+ {
+  "nom": "Xiangtan",
+  "pays": "China",
+  "lat": 27.850431,
+  "lon": 112.900023,
+  "population": 2586948,
+  "capitale": false
+ },
+ {
+  "nom": "Lanzhou",
+  "pays": "China",
+  "lat": 36.057974,
+  "lon": 103.790054,
+  "population": 2561000,
+  "capitale": false
+ },
+ {
+  "nom": "Incheon",
+  "pays": "South Korea",
+  "lat": 37.478094,
+  "lon": 126.640288,
+  "population": 2550000,
+  "capitale": false
+ },
+ {
+  "nom": "Sapporo",
+  "pays": "Japan",
+  "lat": 43.076925,
+  "lon": 141.338099,
+  "population": 2544000,
+  "capitale": false
+ },
+ {
+  "nom": "Xiamen",
+  "pays": "China",
+  "lat": 24.451938,
+  "lon": 118.078071,
+  "population": 2519000,
+  "capitale": false
+ },
+ {
+  "nom": "Guayaquil",
+  "pays": "Ecuador",
+  "lat": -2.218088,
+  "lon": -79.921988,
+  "population": 2514000,
+  "capitale": false
+ },
+ {
+  "nom": "George Town",
+  "pays": "Malaysia",
+  "lat": 5.413613,
+  "lon": 100.329368,
+  "population": 2500000,
+  "capitale": false
+ },
+ {
+  "nom": "San Juan",
+  "pays": "Puerto Rico",
+  "lat": 18.440023,
+  "lon": -66.129979,
+  "population": 2478905,
+  "capitale": false
+ },
+ {
+  "nom": "Mashhad",
+  "pays": "Iran",
+  "lat": 36.271966,
+  "lon": 59.568051,
+  "population": 2469000,
+  "capitale": false
+ },
+ {
+  "nom": "Damascus",
+  "pays": "Syria",
+  "lat": 33.50198,
+  "lon": 36.29805,
+  "population": 2466000,
+  "capitale": true
+ },
+ {
+  "nom": "Daegu",
+  "pays": "South Korea",
+  "lat": 35.868735,
+  "lon": 128.605026,
+  "population": 2460000,
+  "capitale": false
+ },
+ {
+  "nom": "Nagpur",
+  "pays": "India",
+  "lat": 21.171906,
+  "lon": 79.088048,
+  "population": 2454000,
+  "capitale": false
+ },
+ {
+  "nom": "Jinxi",
+  "pays": "China",
+  "lat": 40.752287,
+  "lon": 120.828033,
+  "population": 2426000,
+  "capitale": false
+ },
+ {
+  "nom": "Shijiazhuang",
+  "pays": "China",
+  "lat": 38.051961,
+  "lon": 114.478033,
+  "population": 2417000,
+  "capitale": false
+ },
+ {
+  "nom": "Tunis",
+  "pays": "Tunisia",
+  "lat": 36.802778,
+  "lon": 10.179678,
+  "population": 2412500,
+  "capitale": true
+ },
+ {
+  "nom": "Vienna",
+  "pays": "Austria",
+  "lat": 48.201961,
+  "lon": 16.364693,
+  "population": 2400000,
+  "capitale": true
+ },
+ {
+  "nom": "Jilin",
+  "pays": "China",
+  "lat": 43.851917,
+  "lon": 126.548097,
+  "population": 2396000,
+  "capitale": false
+ },
+ {
+  "nom": "Omdurman",
+  "pays": "Sudan",
+  "lat": 15.616681,
+  "lon": 32.480022,
+  "population": 2395159,
+  "capitale": false
+ },
+ {
+  "nom": "Bandung",
+  "pays": "Indonesia",
+  "lat": -6.948083,
+  "lon": 107.568067,
+  "population": 2394000,
+  "capitale": false
+ },
+ {
+  "nom": "Bekasi",
+  "pays": "Indonesia",
+  "lat": -6.217258,
+  "lon": 106.972323,
+  "population": 2378211,
+  "capitale": false
+ },
+ {
+  "nom": "Mannheim",
+  "pays": "Germany",
+  "lat": 49.500375,
+  "lon": 8.470015,
+  "population": 2362000,
+  "capitale": false
+ },
+ {
+  "nom": "Wenzhou",
+  "pays": "China",
+  "lat": 28.021927,
+  "lon": 120.648147,
+  "population": 2350000,
+  "capitale": false
+ },
+ {
+  "nom": "Nanchang",
+  "pays": "China",
+  "lat": 28.681938,
+  "lon": 115.87805,
+  "population": 2350000,
+  "capitale": false
+ },
+ {
+  "nom": "Tampa",
+  "pays": "United States of America",
+  "lat": 27.948934,
+  "lon": -82.460567,
+  "population": 2314000,
+  "capitale": false
+ },
+ {
+  "nom": "Vancouver",
+  "pays": "Canada",
+  "lat": 49.275362,
+  "lon": -123.12359,
+  "population": 2313328,
+  "capitale": false
+ },
+ {
+  "nom": "Denver",
+  "pays": "United States of America",
+  "lat": 39.741134,
+  "lon": -104.985962,
+  "population": 2313000,
+  "capitale": false
+ },
+ {
+  "nom": "Birmingham",
+  "pays": "United Kingdom",
+  "lat": 52.47692,
+  "lon": -1.921943,
+  "population": 2285000,
+  "capitale": false
+ },
+ {
+  "nom": "Baltimore",
+  "pays": "United States of America",
+  "lat": 39.301936,
+  "lon": -76.621931,
+  "population": 2255000,
+  "capitale": false
+ },
+ {
+  "nom": "Cali",
+  "pays": "Colombia",
+  "lat": 3.401905,
+  "lon": -76.501912,
+  "population": 2254000,
+  "capitale": false
+ },
+ {
+  "nom": "Sendai",
+  "pays": "Japan",
+  "lat": 38.289052,
+  "lon": 141.019772,
+  "population": 2250000,
+  "capitale": false
+ },
+ {
+  "nom": "Naples",
+  "pays": "Italy",
+  "lat": 40.841971,
+  "lon": 14.243066,
+  "population": 2250000,
+  "capitale": false
+ },
+ {
+  "nom": "Manchester",
+  "pays": "United Kingdom",
+  "lat": 53.502361,
+  "lon": -2.249933,
+  "population": 2230000,
+  "capitale": false
+ },
+ {
+  "nom": "St. Louis",
+  "pays": "United States of America",
+  "lat": 38.636964,
+  "lon": -90.241926,
+  "population": 2199000,
+  "capitale": false
+ },
+ {
+  "nom": "Puebla",
+  "pays": "Mexico",
+  "lat": 19.051906,
+  "lon": -98.201983,
+  "population": 2195000,
+  "capitale": false
+ },
+ {
+  "nom": "Tripoli",
+  "pays": "Libya",
+  "lat": 32.8925,
+  "lon": 13.180012,
+  "population": 2189000,
+  "capitale": true
+ },
+ {
+  "nom": "Tashkent",
+  "pays": "Uzbekistan",
+  "lat": 41.313648,
+  "lon": 69.292987,
+  "population": 2184000,
+  "capitale": true
+ },
+ {
+  "nom": "Nanchong",
+  "pays": "China",
+  "lat": 30.782378,
+  "lon": 106.128051,
+  "population": 2174000,
+  "capitale": false
+ },
+ {
+  "nom": "Havana",
+  "pays": "Cuba",
+  "lat": 23.133905,
+  "lon": -82.366128,
+  "population": 2174000,
+  "capitale": true
+ },
+ {
+  "nom": "Nanning",
+  "pays": "China",
+  "lat": 22.821934,
+  "lon": 108.318099,
+  "population": 2167000,
+  "capitale": false
+ },
+ {
+  "nom": "Belem",
+  "pays": "Brazil",
+  "lat": -1.448057,
+  "lon": -48.481969,
+  "population": 2167000,
+  "capitale": false
+ },
+ {
+  "nom": "Patna",
+  "pays": "India",
+  "lat": 25.626905,
+  "lon": 85.128093,
+  "population": 2158000,
+  "capitale": false
+ },
+ {
+  "nom": "Santo Domingo",
+  "pays": "Dominican Republic",
+  "lat": 18.472019,
+  "lon": -69.902031,
+  "population": 2154000,
+  "capitale": true
+ },
+ {
+  "nom": "Zaozhuang",
+  "pays": "China",
+  "lat": 34.881947,
+  "lon": 117.568077,
+  "population": 2145000,
+  "capitale": false
+ },
+ {
+  "nom": "Baku",
+  "pays": "Azerbaijan",
+  "lat": 40.397218,
+  "lon": 49.860271,
+  "population": 2122300,
+  "capitale": true
+ },
+ {
+  "nom": "Accra",
+  "pays": "Ghana",
+  "lat": 5.551981,
+  "lon": -0.218662,
+  "population": 2121000,
+  "capitale": true
+ },
+ {
+  "nom": "Yantai",
+  "pays": "China",
+  "lat": 37.532354,
+  "lon": 121.398075,
+  "population": 2116000,
+  "capitale": false
+ },
+ {
+  "nom": "Medan",
+  "pays": "Indonesia",
+  "lat": 3.58192,
+  "lon": 98.648094,
+  "population": 2115000,
+  "capitale": false
+ },
+ {
+  "nom": "Santa Cruz",
+  "pays": "Bolivia",
+  "lat": -17.751972,
+  "lon": -63.227942,
+  "population": 2102998,
+  "capitale": false
+ },
+ {
+  "nom": "Xuzhou",
+  "pays": "China",
+  "lat": 34.281958,
+  "lon": 117.178074,
+  "population": 2091000,
+  "capitale": false
+ },
+ {
+  "nom": "Linyi",
+  "pays": "China",
+  "lat": 35.081935,
+  "lon": 118.32803,
+  "population": 2082000,
+  "capitale": false
+ },
+ {
+  "nom": "Maracaibo",
+  "pays": "Venezuela",
+  "lat": 10.731923,
+  "lon": -71.661924,
+  "population": 2072000,
+  "capitale": false
+ },
+ {
+  "nom": "Kuwait City",
+  "pays": "Kuwait",
+  "lat": 29.371664,
+  "lon": 47.976355,
+  "population": 2063000,
+  "capitale": true
+ },
+ {
+  "nom": "Ad Damman",
+  "pays": "Saudi Arabia",
+  "lat": 26.430138,
+  "lon": 50.097725,
+  "population": 2054710,
+  "capitale": false
+ },
+ {
+  "nom": "Haikou",
+  "pays": "China",
+  "lat": 20.050002,
+  "lon": 110.320026,
+  "population": 2046189,
+  "capitale": false
+ },
+ {
+  "nom": "Hiroshima",
+  "pays": "Japan",
+  "lat": 34.389781,
+  "lon": 132.440967,
+  "population": 2045000,
+  "capitale": false
+ },
+ {
+  "nom": "Fort Lauderdale",
+  "pays": "United States of America",
+  "lat": 26.136065,
+  "lon": -80.141786,
+  "population": 2042042,
+  "capitale": false
+ },
+ {
+  "nom": "Long Beach",
+  "pays": "United States of America",
+  "lat": 33.786967,
+  "lon": -118.158044,
+  "population": 2036134,
+  "capitale": false
+ },
+ {
+  "nom": "Baotou",
+  "pays": "China",
+  "lat": 40.654153,
+  "lon": 109.820074,
+  "population": 2036000,
+  "capitale": false
+ },
+ {
+  "nom": "Hefei",
+  "pays": "China",
+  "lat": 31.851977,
+  "lon": 117.278068,
+  "population": 2035000,
+  "capitale": false
+ },
+ {
+  "nom": "Indore",
+  "pays": "India",
+  "lat": 22.717005,
+  "lon": 75.863077,
+  "population": 2026000,
+  "capitale": false
+ },
+ {
+  "nom": "Goiania",
+  "pays": "Brazil",
+  "lat": -16.718081,
+  "lon": -49.301971,
+  "population": 2022000,
+  "capitale": false
+ },
+ {
+  "nom": "Sanaa",
+  "pays": "Yemen",
+  "lat": 15.356679,
+  "lon": 44.204648,
+  "population": 2008000,
+  "capitale": true
+ },
+ {
+  "nom": "Port-au-Prince",
+  "pays": "Haiti",
+  "lat": 18.542971,
+  "lon": -72.33798,
+  "population": 1998000,
+  "capitale": true
+ },
+ {
+  "nom": "Haiphong",
+  "pays": "Vietnam",
+  "lat": 20.831952,
+  "lon": 106.678147,
+  "population": 1969000,
+  "capitale": false
+ },
+ {
+  "nom": "Suzhou",
+  "pays": "China",
+  "lat": 33.638057,
+  "lon": 116.976943,
+  "population": 1964000,
+  "capitale": false
+ },
+ {
+  "nom": "Nanyang",
+  "pays": "China",
+  "lat": 33.002346,
+  "lon": 112.528074,
+  "population": 1944000,
+  "capitale": false
+ },
+ {
+  "nom": "Bucharest",
+  "pays": "Romania",
+  "lat": 44.435318,
+  "lon": 26.098001,
+  "population": 1942000,
+  "capitale": true
+ },
+ {
+  "nom": "Ningbo",
+  "pays": "China",
+  "lat": 29.881917,
+  "lon": 121.548092,
+  "population": 1923000,
+  "capitale": false
+ },
+ {
+  "nom": "Douala",
+  "pays": "Cameroon",
+  "lat": 4.062356,
+  "lon": 9.708045,
+  "population": 1906000,
+  "capitale": false
+ },
+ {
+  "nom": "Cleveland",
+  "pays": "United States of America",
+  "lat": 41.471933,
+  "lon": -81.696944,
+  "population": 1890000,
+  "capitale": false
+ },
+ {
+  "nom": "Tangshan",
+  "pays": "China",
+  "lat": 39.626283,
+  "lon": 118.192431,
+  "population": 1879000,
+  "capitale": false
+ },
+ {
+  "nom": "Tainan",
+  "pays": "Taiwan",
+  "lat": 23.000003,
+  "lon": 120.200043,
+  "population": 1876312,
+  "capitale": false
+ },
+ {
+  "nom": "Portland",
+  "pays": "United States of America",
+  "lat": 45.52197,
+  "lon": -122.681936,
+  "population": 1875000,
+  "capitale": false
+ },
+ {
+  "nom": "Datong",
+  "pays": "China",
+  "lat": 40.081966,
+  "lon": 113.298053,
+  "population": 1873000,
+  "capitale": false
+ },
+ {
+  "nom": "Asuncion",
+  "pays": "Paraguay",
+  "lat": -25.294457,
+  "lon": -57.643451,
+  "population": 1870000,
+  "capitale": true
+ },
+ {
+  "nom": "Saidu",
+  "pays": "Pakistan",
+  "lat": 34.750035,
+  "lon": 72.349992,
+  "population": 1860310,
+  "capitale": false
+ },
+ {
+  "nom": "Brisbane",
+  "pays": "Australia",
+  "lat": -27.453085,
+  "lon": 153.033147,
+  "population": 1860000,
+  "capitale": false
+ },
+ {
+  "nom": "Rawalpindi",
+  "pays": "Pakistan",
+  "lat": 33.601922,
+  "lon": 73.038081,
+  "population": 1858000,
+  "capitale": false
+ },
+ {
+  "nom": "Beirut",
+  "pays": "Lebanon",
+  "lat": 33.873921,
+  "lon": 35.507762,
+  "population": 1846000,
+  "capitale": true
+ },
+ {
+  "nom": "Pittsburgh",
+  "pays": "United States of America",
+  "lat": 40.431945,
+  "lon": -80.001931,
+  "population": 1838000,
+  "capitale": false
+ },
+ {
+  "nom": "Las Vegas",
+  "pays": "United States of America",
+  "lat": 36.211944,
+  "lon": -115.221952,
+  "population": 1823000,
+  "capitale": false
+ },
+ {
+  "nom": "Kyoto",
+  "pays": "Japan",
+  "lat": 35.031938,
+  "lon": 135.748052,
+  "population": 1805000,
+  "capitale": false
+ },
+ {
+  "nom": "Minsk",
+  "pays": "Belarus",
+  "lat": 53.901923,
+  "lon": 27.564681,
+  "population": 1805000,
+  "capitale": true
+ },
+ {
+  "nom": "Barranquilla",
+  "pays": "Colombia",
+  "lat": 10.961935,
+  "lon": -74.801913,
+  "population": 1798000,
+  "capitale": false
+ },
+ {
+  "nom": "Shuyang",
+  "pays": "China",
+  "lat": 34.129866,
+  "lon": 118.77336,
+  "population": 1770000,
+  "capitale": false
+ },
+ {
+  "nom": "Valencia",
+  "pays": "Venezuela",
+  "lat": 10.231927,
+  "lon": -67.981967,
+  "population": 1770000,
+  "capitale": false
+ },
+ {
+  "nom": "Hamburg",
+  "pays": "Germany",
+  "lat": 53.551971,
+  "lon": 9.998053,
+  "population": 1757000,
+  "capitale": false
+ },
+ {
+  "nom": "Vadodara",
+  "pays": "India",
+  "lat": 22.311965,
+  "lon": 73.178073,
+  "population": 1756000,
+  "capitale": false
+ },
+ {
+  "nom": "Shangqiu",
+  "pays": "China",
+  "lat": 34.452361,
+  "lon": 115.64809,
+  "population": 1753000,
+  "capitale": false
+ },
+ {
+  "nom": "Manaus",
+  "pays": "Brazil",
+  "lat": -3.098086,
+  "lon": -60.001963,
+  "population": 1753000,
+  "capitale": false
+ },
+ {
+  "nom": "Wuxi",
+  "pays": "China",
+  "lat": 31.581942,
+  "lon": 120.298039,
+  "population": 1749000,
+  "capitale": false
+ },
+ {
+  "nom": "Palembang",
+  "pays": "Indonesia",
+  "lat": -2.978093,
+  "lon": 104.748084,
+  "population": 1749000,
+  "capitale": false
+ },
+ {
+  "nom": "San Bernardino",
+  "pays": "United States of America",
+  "lat": 34.12233,
+  "lon": -117.30198,
+  "population": 1745000,
+  "capitale": false
+ },
+ {
+  "nom": "Brussels",
+  "pays": "Belgium",
+  "lat": 50.835263,
+  "lon": 4.331371,
+  "population": 1743000,
+  "capitale": true
+ },
+ {
+  "nom": "Essen",
+  "pays": "Germany",
+  "lat": 51.449998,
+  "lon": 7.016615,
+  "population": 1742135,
+  "capitale": false
+ },
+ {
+  "nom": "Bhopal",
+  "pays": "India",
+  "lat": 23.251934,
+  "lon": 77.408047,
+  "population": 1727000,
+  "capitale": false
+ },
+ {
+  "nom": "Hohhot",
+  "pays": "China",
+  "lat": 40.821921,
+  "lon": 111.65805,
+  "population": 1726000,
+  "capitale": false
+ },
+ {
+  "nom": "Luoyang",
+  "pays": "China",
+  "lat": 34.681934,
+  "lon": 112.468129,
+  "population": 1715000,
+  "capitale": false
+ },
+ {
+  "nom": "Santos",
+  "pays": "Brazil",
+  "lat": -23.951778,
+  "lon": -46.334889,
+  "population": 1709000,
+  "capitale": false
+ },
+ {
+  "nom": "Jianmen",
+  "pays": "China",
+  "lat": 30.651999,
+  "lon": 113.158061,
+  "population": 1708000,
+  "capitale": false
+ },
+ {
+  "nom": "Warsaw",
+  "pays": "Poland",
+  "lat": 52.251947,
+  "lon": 20.998054,
+  "population": 1707000,
+  "capitale": true
+ },
+ {
+  "nom": "Rabat",
+  "pays": "Morocco",
+  "lat": 34.025307,
+  "lon": -6.836408,
+  "population": 1705000,
+  "capitale": true
+ },
+ {
+  "nom": "Vitoria",
+  "pays": "Brazil",
+  "lat": -20.322047,
+  "lon": -40.367942,
+  "population": 1704000,
+  "capitale": false
+ },
+ {
+  "nom": "Quito",
+  "pays": "Ecuador",
+  "lat": -0.213042,
+  "lon": -78.501997,
+  "population": 1701000,
+  "capitale": true
+ },
+ {
+  "nom": "Antananarivo",
+  "pays": "Madagascar",
+  "lat": -18.914692,
+  "lon": 47.514678,
+  "population": 1697000,
+  "capitale": true
+ },
+ {
+  "nom": "Coimbatore",
+  "pays": "India",
+  "lat": 11.001906,
+  "lon": 76.948075,
+  "population": 1696000,
+  "capitale": false
+ },
+ {
+  "nom": "Daqing",
+  "pays": "China",
+  "lat": 46.581905,
+  "lon": 124.998062,
+  "population": 1693000,
+  "capitale": false
+ },
+ {
+  "nom": "Luan",
+  "pays": "China",
+  "lat": 31.752293,
+  "lon": 116.478066,
+  "population": 1690000,
+  "capitale": false
+ },
+ {
+  "nom": "Wanzhou",
+  "pays": "China",
+  "lat": 30.819991,
+  "lon": 108.400039,
+  "population": 1680000,
+  "capitale": false
+ },
+ {
+  "nom": "Budapest",
+  "pays": "Hungary",
+  "lat": 47.501952,
+  "lon": 19.081375,
+  "population": 1679000,
+  "capitale": true
+ },
+ {
+  "nom": "San Jose",
+  "pays": "United States of America",
+  "lat": 37.301929,
+  "lon": -121.851935,
+  "population": 1668000,
+  "capitale": false
+ },
+ {
+  "nom": "Turin",
+  "pays": "Italy",
+  "lat": 45.072333,
+  "lon": 7.668015,
+  "population": 1652000,
+  "capitale": false
+ },
+ {
+  "nom": "Suzhou",
+  "pays": "China",
+  "lat": 31.302424,
+  "lon": 120.618071,
+  "population": 1650000,
+  "capitale": false
+ },
+ {
+  "nom": "Ludhiana",
+  "pays": "India",
+  "lat": 30.929708,
+  "lon": 75.870312,
+  "population": 1649000,
+  "capitale": false
+ },
+ {
+  "nom": "Kumasi",
+  "pays": "Ghana",
+  "lat": 6.691937,
+  "lon": -1.63196,
+  "population": 1646000,
+  "capitale": false
+ },
+ {
+  "nom": "Qiqihar",
+  "pays": "China",
+  "lat": 47.346923,
+  "lon": 123.988046,
+  "population": 1641000,
+  "capitale": false
+ },
+ {
+  "nom": "Anshan",
+  "pays": "China",
+  "lat": 41.116967,
+  "lon": 122.938085,
+  "population": 1639000,
+  "capitale": false
+ },
+ {
+  "nom": "Cincinnati",
+  "pays": "United States of America",
+  "lat": 39.163831,
+  "lon": -84.458869,
+  "population": 1636000,
+  "capitale": false
+ },
+ {
+  "nom": "Zhongli",
+  "pays": "Taiwan",
+  "lat": 24.965025,
+  "lon": 121.216777,
+  "population": 1632616,
+  "capitale": false
+ },
+ {
+  "nom": "Handan",
+  "pays": "China",
+  "lat": 36.581921,
+  "lon": 114.478033,
+  "population": 1631000,
+  "capitale": false
+ },
+ {
+  "nom": "Taian",
+  "pays": "China",
+  "lat": 36.201944,
+  "lon": 117.11813,
+  "population": 1629000,
+  "capitale": false
+ },
+ {
+  "nom": "Isfahan",
+  "pays": "Iran",
+  "lat": 32.701951,
+  "lon": 51.698092,
+  "population": 1628000,
+  "capitale": false
+ },
+ {
+  "nom": "Yaounde",
+  "pays": "Cameroon",
+  "lat": 3.868647,
+  "lon": 11.514705,
+  "population": 1611000,
+  "capitale": true
+ },
+ {
+  "nom": "Sacramento",
+  "pays": "United States of America",
+  "lat": 38.576967,
+  "lon": -121.471984,
+  "population": 1604000,
+  "capitale": false
+ },
+ {
+  "nom": "Shantou",
+  "pays": "China",
+  "lat": 23.371952,
+  "lon": 116.66808,
+  "population": 1601000,
+  "capitale": false
+ },
+ {
+  "nom": "Agra",
+  "pays": "India",
+  "lat": 27.172366,
+  "lon": 78.013075,
+  "population": 1592000,
+  "capitale": false
+ },
+ {
+  "nom": "Zhanjiang",
+  "pays": "China",
+  "lat": 21.20193,
+  "lon": 110.378076,
+  "population": 1590000,
+  "capitale": false
+ },
+ {
+  "nom": "La Paz",
+  "pays": "Bolivia",
+  "lat": -16.496028,
+  "lon": -68.151931,
+  "population": 1590000,
+  "capitale": true
+ },
+ {
+  "nom": "Kalyan",
+  "pays": "India",
+  "lat": 19.250232,
+  "lon": 73.160175,
+  "population": 1576614,
+  "capitale": false
+ },
+ {
+  "nom": "Abuja",
+  "pays": "Nigeria",
+  "lat": 9.085279,
+  "lon": 7.531382,
+  "population": 1576000,
+  "capitale": true
+ },
+ {
+  "nom": "Harare",
+  "pays": "Zimbabwe",
+  "lat": -17.815844,
+  "lon": 31.042764,
+  "population": 1572000,
+  "capitale": true
+ },
+ {
+  "nom": "Xiantao",
+  "pays": "China",
+  "lat": 30.372352,
+  "lon": 113.438096,
+  "population": 1556000,
+  "capitale": false
+ },
+ {
+  "nom": "Weifang",
+  "pays": "China",
+  "lat": 36.722352,
+  "lon": 119.098164,
+  "population": 1553000,
+  "capitale": false
+ },
+ {
+  "nom": "Khulna",
+  "pays": "Bangladesh",
+  "lat": 22.841933,
+  "lon": 89.558055,
+  "population": 1553000,
+  "capitale": false
+ },
+ {
+  "nom": "Tijuana",
+  "pays": "Mexico",
+  "lat": 32.501963,
+  "lon": -117.081942,
+  "population": 1553000,
+  "capitale": false
+ },
+ {
+  "nom": "Santiago",
+  "pays": "Dominican Republic",
+  "lat": 19.50001,
+  "lon": -70.670012,
+  "population": 1550753,
+  "capitale": false
+ },
+ {
+  "nom": "Xinyang",
+  "pays": "China",
+  "lat": 32.132322,
+  "lon": 114.068032,
+  "population": 1541000,
+  "capitale": false
+ },
+ {
+  "nom": "Luzhou",
+  "pays": "China",
+  "lat": 28.881926,
+  "lon": 105.378071,
+  "population": 1537000,
+  "capitale": false
+ },
+ {
+  "nom": "Perth",
+  "pays": "Australia",
+  "lat": -31.953069,
+  "lon": 115.838053,
+  "population": 1532000,
+  "capitale": false
+ },
+ {
+  "nom": "Toluca",
+  "pays": "Mexico",
+  "lat": 19.332328,
+  "lon": -99.671945,
+  "population": 1531000,
+  "capitale": false
+ },
+ {
+  "nom": "Leeds",
+  "pays": "United Kingdom",
+  "lat": 53.831953,
+  "lon": -1.581963,
+  "population": 1529000,
+  "capitale": false
+ },
+ {
+  "nom": "Vishakhapatnam",
+  "pays": "India",
+  "lat": 17.731961,
+  "lon": 83.303036,
+  "population": 1529000,
+  "capitale": false
+ },
+ {
+  "nom": "Kobe",
+  "pays": "Japan",
+  "lat": 34.679988,
+  "lon": 135.169982,
+  "population": 1528478,
+  "capitale": false
+ },
+ {
+  "nom": "Multan",
+  "pays": "Pakistan",
+  "lat": 30.201923,
+  "lon": 71.453062,
+  "population": 1522000,
+  "capitale": false
+ },
+ {
+  "nom": "Kochi",
+  "pays": "India",
+  "lat": 10.016953,
+  "lon": 76.22197,
+  "population": 1519000,
+  "capitale": false
+ },
+ {
+  "nom": "Gujranwala",
+  "pays": "Pakistan",
+  "lat": 32.162372,
+  "lon": 74.183076,
+  "population": 1513000,
+  "capitale": false
+ },
+ {
+  "nom": "Montevideo",
+  "pays": "Uruguay",
+  "lat": -34.856096,
+  "lon": -56.172998,
+  "population": 1513000,
+  "capitale": true
+ },
+ {
+  "nom": "Oakland",
+  "pays": "United States of America",
+  "lat": 37.768921,
+  "lon": -122.221103,
+  "population": 1510271,
+  "capitale": false
+ },
+ {
+  "nom": "Niteroi",
+  "pays": "Brazil",
+  "lat": -22.900012,
+  "lon": -43.09999,
+  "population": 1500513,
+  "capitale": false
+ },
+ {
+  "nom": "Ganzhou",
+  "pays": "China",
+  "lat": 25.91998,
+  "lon": 114.950027,
+  "population": 1500000,
+  "capitale": false
+ },
+ {
+  "nom": "Florence",
+  "pays": "Italy",
+  "lat": 43.780001,
+  "lon": 11.25,
+  "population": 1500000,
+  "capitale": false
+ },
+ {
+  "nom": "Liuzhou",
+  "pays": "China",
+  "lat": 24.281948,
+  "lon": 109.248068,
+  "population": 1497000,
+  "capitale": false
+ },
+ {
+  "nom": "Bamako",
+  "pays": "Mali",
+  "lat": 12.651961,
+  "lon": -8.001985,
+  "population": 1494000,
+  "capitale": true
+ },
+ {
+  "nom": "Conakry",
+  "pays": "Guinea",
+  "lat": 9.533469,
+  "lon": -13.682181,
+  "population": 1494000,
+  "capitale": true
+ },
+ {
+  "nom": "Bursa",
+  "pays": "Turkey",
+  "lat": 40.201933,
+  "lon": 29.068052,
+  "population": 1492000,
+  "capitale": false
+ },
+ {
+  "nom": "Virginia Beach",
+  "pays": "United States of America",
+  "lat": 36.85516,
+  "lon": -75.980265,
+  "population": 1491000,
+  "capitale": false
+ },
+ {
+  "nom": "Leon",
+  "pays": "Mexico",
+  "lat": 21.151933,
+  "lon": -101.701976,
+  "population": 1488000,
+  "capitale": false
+ },
+ {
+  "nom": "Nasik",
+  "pays": "India",
+  "lat": 20.002365,
+  "lon": 73.778036,
+  "population": 1473000,
+  "capitale": false
+ },
+ {
+  "nom": "San Antonio",
+  "pays": "United States of America",
+  "lat": 29.489279,
+  "lon": -98.509251,
+  "population": 1473000,
+  "capitale": false
+ },
+ {
+  "nom": "Fushun",
+  "pays": "China",
+  "lat": 41.867335,
+  "lon": 123.868054,
+  "population": 1470000,
+  "capitale": false
+ },
+ {
+  "nom": "Changde",
+  "pays": "China",
+  "lat": 29.031943,
+  "lon": 111.6781,
+  "population": 1469000,
+  "capitale": false
+ },
+ {
+  "nom": "Kansas City",
+  "pays": "United States of America",
+  "lat": 39.109034,
+  "lon": -94.60604,
+  "population": 1469000,
+  "capitale": false
+ },
+ {
+  "nom": "Daejeon",
+  "pays": "South Korea",
+  "lat": 36.337492,
+  "lon": 127.423082,
+  "population": 1468000,
+  "capitale": false
+ },
+ {
+  "nom": "Neijiang",
+  "pays": "China",
+  "lat": 29.582323,
+  "lon": 105.048066,
+  "population": 1466000,
+  "capitale": false
+ },
+ {
+  "nom": "Phnom Penh",
+  "pays": "Cambodia",
+  "lat": 11.551976,
+  "lon": 104.914689,
+  "population": 1466000,
+  "capitale": true
+ },
+ {
+  "nom": "Quanzhou",
+  "pays": "China",
+  "lat": 24.901962,
+  "lon": 118.578041,
+  "population": 1463000,
+  "capitale": false
+ },
+ {
+  "nom": "Kharkiv",
+  "pays": "Ukraine",
+  "lat": 50.001929,
+  "lon": 36.248079,
+  "population": 1461000,
+  "capitale": false
+ },
+ {
+  "nom": "Hyderabad",
+  "pays": "Pakistan",
+  "lat": 25.381933,
+  "lon": 68.373043,
+  "population": 1459000,
+  "capitale": false
+ },
+ {
+  "nom": "Lome",
+  "pays": "Togo",
+  "lat": 6.133883,
+  "lon": 1.220811,
+  "population": 1452000,
+  "capitale": true
+ },
+ {
+  "nom": "Cordoba",
+  "pays": "Argentina",
+  "lat": -31.398012,
+  "lon": -64.18424,
+  "population": 1452000,
+  "capitale": false
+ },
+ {
+  "nom": "Huainan",
+  "pays": "China",
+  "lat": 32.63193,
+  "lon": 116.978035,
+  "population": 1451000,
+  "capitale": false
+ },
+ {
+  "nom": "Doha",
+  "pays": "Qatar",
+  "lat": 25.286556,
+  "lon": 51.532968,
+  "population": 1450000,
+  "capitale": true
+ },
+ {
+  "nom": "Kuala Lumpur",
+  "pays": "Malaysia",
+  "lat": 3.168612,
+  "lon": 101.698037,
+  "population": 1448000,
+  "capitale": true
+ },
+ {
+  "nom": "Maputo",
+  "pays": "Mozambique",
+  "lat": -25.953332,
+  "lon": 32.587217,
+  "population": 1446000,
+  "capitale": true
+ },
+ {
+  "nom": "Kaduna",
+  "pays": "Nigeria",
+  "lat": 10.521961,
+  "lon": 7.438055,
+  "population": 1442000,
+  "capitale": false
+ },
+ {
+  "nom": "Ft. Worth",
+  "pays": "United States of America",
+  "lat": 32.739977,
+  "lon": -97.340038,
+  "population": 1440454,
+  "capitale": false
+ },
+ {
+  "nom": "Gwangju",
+  "pays": "South Korea",
+  "lat": 35.172912,
+  "lon": 126.908488,
+  "population": 1440000,
+  "capitale": false
+ },
+ {
+  "nom": "Kawasaki",
+  "pays": "Japan",
+  "lat": 35.529988,
+  "lon": 139.705002,
+  "population": 1437266,
+  "capitale": false
+ },
+ {
+  "nom": "Indianapolis",
+  "pays": "United States of America",
+  "lat": 39.751934,
+  "lon": -86.171994,
+  "population": 1436000,
+  "capitale": false
+ },
+ {
+  "nom": "San Salvador",
+  "pays": "El Salvador",
+  "lat": 13.711948,
+  "lon": -89.204987,
+  "population": 1433000,
+  "capitale": true
+ },
+ {
+  "nom": "Suining",
+  "pays": "China",
+  "lat": 30.535279,
+  "lon": 105.531387,
+  "population": 1425000,
+  "capitale": false
+ },
+ {
+  "nom": "Karaj",
+  "pays": "Iran",
+  "lat": 35.802305,
+  "lon": 50.968059,
+  "population": 1423000,
+  "capitale": false
+ },
+ {
+  "nom": "Lyon",
+  "pays": "France",
+  "lat": 45.771954,
+  "lon": 4.828085,
+  "population": 1423000,
+  "capitale": false
+ },
+ {
+  "nom": "Kampala",
+  "pays": "Uganda",
+  "lat": 0.318605,
+  "lon": 32.581378,
+  "population": 1420000,
+  "capitale": true
+ },
+ {
+  "nom": "Tabriz",
+  "pays": "Iran",
+  "lat": 38.088237,
+  "lon": 46.2993,
+  "population": 1413000,
+  "capitale": false
+ },
+ {
+  "nom": "The Hague",
+  "pays": "Netherlands",
+  "lat": 52.080037,
+  "lon": 4.269961,
+  "population": 1406000,
+  "capitale": false
+ },
+ {
+  "nom": "Davao",
+  "pays": "Philippines",
+  "lat": 7.111963,
+  "lon": 125.62805,
+  "population": 1402000,
+  "capitale": false
+ },
+ {
+  "nom": "Marseille",
+  "pays": "France",
+  "lat": 43.291925,
+  "lon": 5.373064,
+  "population": 1400000,
+  "capitale": false
+ },
+ {
+  "nom": "Meerut",
+  "pays": "India",
+  "lat": 29.002358,
+  "lon": 77.698055,
+  "population": 1398000,
+  "capitale": false
+ },
+ {
+  "nom": "Mianyang",
+  "pays": "China",
+  "lat": 31.471923,
+  "lon": 104.768031,
+  "population": 1396000,
+  "capitale": false
+ },
+ {
+  "nom": "Semarang",
+  "pays": "Indonesia",
+  "lat": -6.964672,
+  "lon": 110.418074,
+  "population": 1396000,
+  "capitale": false
+ },
+ {
+  "nom": "Faridabad",
+  "pays": "India",
+  "lat": 28.435279,
+  "lon": 77.314721,
+  "population": 1394000,
+  "capitale": false
+ },
+ {
+  "nom": "Novosibirsk",
+  "pays": "Russia",
+  "lat": 55.031906,
+  "lon": 82.958096,
+  "population": 1389000,
+  "capitale": false
+ },
+ {
+  "nom": "Milwaukee",
+  "pays": "United States of America",
+  "lat": 43.054601,
+  "lon": -87.921913,
+  "population": 1388000,
+  "capitale": false
+ },
+ {
+  "nom": "Makkah",
+  "pays": "Saudi Arabia",
+  "lat": 21.431967,
+  "lon": 39.818094,
+  "population": 1385000,
+  "capitale": false
+ },
+ {
+  "nom": "Dubai",
+  "pays": "United Arab Emirates",
+  "lat": 25.231942,
+  "lon": 55.278029,
+  "population": 1379000,
+  "capitale": false
+ },
+ {
+  "nom": "Auckland",
+  "pays": "New Zealand",
+  "lat": -36.848055,
+  "lon": 174.763027,
+  "population": 1377200,
+  "capitale": false
+ },
+ {
+  "nom": "Maanshan",
+  "pays": "China",
+  "lat": 31.7304,
+  "lon": 118.480044,
+  "population": 1366302,
+  "capitale": false
+ },
+ {
+  "nom": "Brazzaville",
+  "pays": "Congo (Brazzaville)",
+  "lat": -4.25724,
+  "lon": 15.282744,
+  "population": 1355000,
+  "capitale": true
+ },
+ {
+  "nom": "Yiyang",
+  "pays": "China",
+  "lat": 28.602356,
+  "lon": 112.328086,
+  "population": 1352000,
+  "capitale": false
+ },
+ {
+  "nom": "Lubumbashi",
+  "pays": "Congo (Kinshasa)",
+  "lat": -11.678079,
+  "lon": 27.478072,
+  "population": 1352000,
+  "capitale": false
+ },
+ {
+  "nom": "Varanasi",
+  "pays": "India",
+  "lat": 25.331936,
+  "lon": 82.998094,
+  "population": 1352000,
+  "capitale": false
+ },
+ {
+  "nom": "Orlando",
+  "pays": "United States of America",
+  "lat": 28.511923,
+  "lon": -81.381976,
+  "population": 1350000,
+  "capitale": false
+ },
+ {
+  "nom": "Ciudad Juarez",
+  "pays": "Mexico",
+  "lat": 31.692323,
+  "lon": -106.491994,
+  "population": 1343000,
+  "capitale": false
+ },
+ {
+  "nom": "Ghaziabad",
+  "pays": "India",
+  "lat": 28.662327,
+  "lon": 77.406445,
+  "population": 1341000,
+  "capitale": false
+ },
+ {
+  "nom": "Heze",
+  "pays": "China",
+  "lat": 35.231926,
+  "lon": 115.448103,
+  "population": 1338000,
+  "capitale": false
+ },
+ {
+  "nom": "Pretoria",
+  "pays": "South Africa",
+  "lat": -25.704975,
+  "lon": 28.227483,
+  "population": 1338000,
+  "capitale": true
+ },
+ {
+  "nom": "Porto",
+  "pays": "Portugal",
+  "lat": 41.151952,
+  "lon": -8.621947,
+  "population": 1337000,
+  "capitale": false
+ },
+ {
+  "nom": "Lusaka",
+  "pays": "Zambia",
+  "lat": -15.414698,
+  "lon": 28.281382,
+  "population": 1328000,
+  "capitale": true
+ },
+ {
+  "nom": "Asansol",
+  "pays": "India",
+  "lat": 23.685279,
+  "lon": 86.981387,
+  "population": 1328000,
+  "capitale": false
+ },
+ {
+  "nom": "Changzhou",
+  "pays": "China",
+  "lat": 31.78193,
+  "lon": 119.968033,
+  "population": 1327000,
+  "capitale": false
+ },
+ {
+  "nom": "Mosul",
+  "pays": "Iraq",
+  "lat": 36.346948,
+  "lon": 43.143059,
+  "population": 1316000,
+  "capitale": false
+ },
+ {
+  "nom": "Yekaterinburg",
+  "pays": "Russia",
+  "lat": 56.851976,
+  "lon": 60.598014,
+  "population": 1313000,
+  "capitale": false
+ },
+ {
+  "nom": "Peshawar",
+  "pays": "Pakistan",
+  "lat": 34.006962,
+  "lon": 71.533057,
+  "population": 1303000,
+  "capitale": false
+ },
+ {
+  "nom": "Mandalay",
+  "pays": "Myanmar",
+  "lat": 21.971934,
+  "lon": 96.083083,
+  "population": 1300000,
+  "capitale": false
+ },
+ {
+  "nom": "Jamshedpur",
+  "pays": "India",
+  "lat": 22.789481,
+  "lon": 86.195573,
+  "population": 1300000,
+  "capitale": false
+ },
+ {
+  "nom": "Mbuji-Mayi",
+  "pays": "Congo (Kinshasa)",
+  "lat": -6.148081,
+  "lon": 23.59805,
+  "population": 1295000,
+  "capitale": false
+ },
+ {
+  "nom": "Madurai",
+  "pays": "India",
+  "lat": 9.921972,
+  "lon": 78.118081,
+  "population": 1294000,
+  "capitale": false
+ },
+ {
+  "nom": "Adana",
+  "pays": "Turkey",
+  "lat": 36.996935,
+  "lon": 35.318058,
+  "population": 1293000,
+  "capitale": false
+ },
+ {
+  "nom": "Sheffield",
+  "pays": "United Kingdom",
+  "lat": 53.366677,
+  "lon": -1.499997,
+  "population": 1292900,
+  "capitale": false
+ },
+ {
+  "nom": "Jabalpur",
+  "pays": "India",
+  "lat": 23.177003,
+  "lon": 79.953112,
+  "population": 1285000,
+  "capitale": false
+ },
+ {
+  "nom": "San Jose",
+  "pays": "Costa Rica",
+  "lat": 9.936958,
+  "lon": -84.085997,
+  "population": 1284000,
+  "capitale": true
+ },
+ {
+  "nom": "Panama City",
+  "pays": "Panama",
+  "lat": 8.969963,
+  "lon": -79.534983,
+  "population": 1281000,
+  "capitale": true
+ },
+ {
+  "nom": "Nizhny Novgorod",
+  "pays": "Russia",
+  "lat": 56.334953,
+  "lon": 43.998149,
+  "population": 1278000,
+  "capitale": false
+ },
+ {
+  "nom": "Providence",
+  "pays": "United States of America",
+  "lat": 41.823048,
+  "lon": -71.416926,
+  "population": 1277000,
+  "capitale": false
+ },
+ {
+  "nom": "Chifeng",
+  "pays": "China",
+  "lat": 42.271961,
+  "lon": 118.948044,
+  "population": 1277000,
+  "capitale": false
+ },
+ {
+  "nom": "Duisburg",
+  "pays": "Germany",
+  "lat": 51.429973,
+  "lon": 6.750017,
+  "population": 1276757,
+  "capitale": false
+ },
+ {
+  "nom": "Munich",
+  "pays": "Germany",
+  "lat": 48.131888,
+  "lon": 11.573048,
+  "population": 1275000,
+  "capitale": false
+ },
+ {
+  "nom": "Columbus",
+  "pays": "United States of America",
+  "lat": 39.98192,
+  "lon": -82.991956,
+  "population": 1270000,
+  "capitale": false
+ },
+ {
+  "nom": "Huaiyin",
+  "pays": "China",
+  "lat": 33.581949,
+  "lon": 119.028039,
+  "population": 1264000,
+  "capitale": false
+ },
+ {
+  "nom": "Stockholm",
+  "pays": "Sweden",
+  "lat": 59.352706,
+  "lon": 18.095389,
+  "population": 1264000,
+  "capitale": true
+ },
+ {
+  "nom": "Makassar",
+  "pays": "Indonesia",
+  "lat": -5.138013,
+  "lon": 119.430082,
+  "population": 1262000,
+  "capitale": false
+ },
+ {
+  "nom": "Rajkot",
+  "pays": "India",
+  "lat": 22.311965,
+  "lon": 70.798063,
+  "population": 1260000,
+  "capitale": false
+ },
+ {
+  "nom": "West Palm Beach",
+  "pays": "United States of America",
+  "lat": 26.74502,
+  "lon": -80.123621,
+  "population": 1250000,
+  "capitale": false
+ },
+ {
+  "nom": "Dhanbad",
+  "pays": "India",
+  "lat": 23.802339,
+  "lon": 86.41804,
+  "population": 1246000,
+  "capitale": false
+ },
+ {
+  "nom": "Mudangiang",
+  "pays": "China",
+  "lat": 44.576963,
+  "lon": 129.588066,
+  "population": 1244000,
+  "capitale": false
+ },
+ {
+  "nom": "Shiraz",
+  "pays": "Iran",
+  "lat": 29.631906,
+  "lon": 52.568065,
+  "population": 1240000,
+  "capitale": false
+ },
+ {
+  "nom": "Geneva",
+  "pays": "Switzerland",
+  "lat": 46.210008,
+  "lon": 6.140028,
+  "population": 1240000,
+  "capitale": false
+ },
+ {
+  "nom": "Huzhou",
+  "pays": "China",
+  "lat": 30.872321,
+  "lon": 120.098051,
+  "population": 1231000,
+  "capitale": false
+ },
+ {
+  "nom": "Tianshui",
+  "pays": "China",
+  "lat": 34.601964,
+  "lon": 105.918038,
+  "population": 1225000,
+  "capitale": false
+ },
+ {
+  "nom": "Liupanshui",
+  "pays": "China",
+  "lat": 26.596381,
+  "lon": 104.831386,
+  "population": 1221000,
+  "capitale": false
+ },
+ {
+  "nom": "Dusseldorf",
+  "pays": "Germany",
+  "lat": 51.220374,
+  "lon": 6.779989,
+  "population": 1220000,
+  "capitale": false
+ },
+ {
+  "nom": "Maoming",
+  "pays": "China",
+  "lat": 21.920405,
+  "lon": 110.870018,
+  "population": 1217715,
+  "capitale": false
+ },
+ {
+  "nom": "Seville",
+  "pays": "Spain",
+  "lat": 37.405015,
+  "lon": -5.980007,
+  "population": 1212045,
+  "capitale": false
+ },
+ {
+  "nom": "Amritsar",
+  "pays": "India",
+  "lat": 31.641938,
+  "lon": 74.868047,
+  "population": 1212000,
+  "capitale": false
+ },
+ {
+  "nom": "Vila Velha",
+  "pays": "Brazil",
+  "lat": 3.216663,
+  "lon": -51.216652,
+  "population": 1209091,
+  "capitale": false
+ },
+ {
+  "nom": "Vila Velha",
+  "pays": "Brazil",
+  "lat": -20.367608,
+  "lon": -40.317989,
+  "population": 1209091,
+  "capitale": false
+ },
+ {
+  "nom": "Almaty",
+  "pays": "Kazakhstan",
+  "lat": 43.326936,
+  "lon": 76.91309,
+  "population": 1209000,
+  "capitale": false
+ },
+ {
+  "nom": "Warangal",
+  "pays": "India",
+  "lat": 18.009998,
+  "lon": 79.57999,
+  "population": 1203853,
+  "capitale": false
+ },
+ {
+  "nom": "Rosario",
+  "pays": "Argentina",
+  "lat": -32.949184,
+  "lon": -60.668254,
+  "population": 1203000,
+  "capitale": false
+ },
+ {
+  "nom": "Allahabad",
+  "pays": "India",
+  "lat": 25.456941,
+  "lon": 81.838061,
+  "population": 1201000,
+  "capitale": false
+ },
+ {
+  "nom": "Benin City",
+  "pays": "Nigeria",
+  "lat": 6.342423,
+  "lon": 5.618062,
+  "population": 1190000,
+  "capitale": false
+ },
+ {
+  "nom": "Jining",
+  "pays": "China",
+  "lat": 35.402355,
+  "lon": 116.548087,
+  "population": 1186000,
+  "capitale": false
+ },
+ {
+  "nom": "Maceio",
+  "pays": "Brazil",
+  "lat": -9.61805,
+  "lon": -35.73192,
+  "population": 1186000,
+  "capitale": false
+ },
+ {
+  "nom": "Sofia",
+  "pays": "Bulgaria",
+  "lat": 42.685295,
+  "lon": 23.314708,
+  "population": 1185000,
+  "capitale": true
+ },
+ {
+  "nom": "Abbottabad",
+  "pays": "Pakistan",
+  "lat": 34.149503,
+  "lon": 73.199501,
+  "population": 1183647,
+  "capitale": false
+ },
+ {
+  "nom": "Banghazi",
+  "pays": "Libya",
+  "lat": 32.118679,
+  "lon": 20.064777,
+  "population": 1180000,
+  "capitale": false
+ },
+ {
+  "nom": "Cilacap",
+  "pays": "Indonesia",
+  "lat": -7.71882,
+  "lon": 109.015402,
+  "population": 1174964,
+  "capitale": false
+ },
+ {
+  "nom": "Raleigh",
+  "pays": "United States of America",
+  "lat": 35.818781,
+  "lon": -78.644693,
+  "population": 1163515,
+  "capitale": false
+ },
+ {
+  "nom": "Prague",
+  "pays": "Czechia",
+  "lat": 50.085283,
+  "lon": 14.464034,
+  "population": 1162000,
+  "capitale": true
+ },
+ {
+  "nom": "Austin",
+  "pays": "United States of America",
+  "lat": 30.268896,
+  "lon": -97.744724,
+  "population": 1161000,
+  "capitale": false
+ },
+ {
+  "nom": "Glasgow",
+  "pays": "United Kingdom",
+  "lat": 55.876351,
+  "lon": -4.252653,
+  "population": 1160000,
+  "capitale": false
+ },
+ {
+  "nom": "Leshan",
+  "pays": "China",
+  "lat": 29.569042,
+  "lon": 103.731402,
+  "population": 1157000,
+  "capitale": false
+ },
+ {
+  "nom": "Ouagadougou",
+  "pays": "Burkina Faso",
+  "lat": 12.372262,
+  "lon": -1.52667,
+  "population": 1149000,
+  "capitale": true
+ },
+ {
+  "nom": "Ottawa",
+  "pays": "Canada",
+  "lat": 45.418643,
+  "lon": -75.701961,
+  "population": 1145000,
+  "capitale": true
+ },
+ {
+  "nom": "Adelaide",
+  "pays": "Australia",
+  "lat": -34.933042,
+  "lon": 138.598059,
+  "population": 1145000,
+  "capitale": false
+ },
+ {
+  "nom": "Shangrao",
+  "pays": "China",
+  "lat": 28.470393,
+  "lon": 117.969998,
+  "population": 1144577,
+  "capitale": false
+ },
+ {
+  "nom": "Torreon",
+  "pays": "Mexico",
+  "lat": 25.571999,
+  "lon": -103.421949,
+  "population": 1144000,
+  "capitale": false
+ },
+ {
+  "nom": "Srinagar",
+  "pays": "India",
+  "lat": 34.101917,
+  "lon": 74.813064,
+  "population": 1140000,
+  "capitale": false
+ },
+ {
+  "nom": "Vijayawada",
+  "pays": "India",
+  "lat": 16.521905,
+  "lon": 80.628057,
+  "population": 1137000,
+  "capitale": false
+ },
+ {
+  "nom": "Samara",
+  "pays": "Russia",
+  "lat": 53.196953,
+  "lon": 50.149349,
+  "population": 1137000,
+  "capitale": false
+ },
+ {
+  "nom": "Omsk",
+  "pays": "Russia",
+  "lat": 54.991934,
+  "lon": 73.398008,
+  "population": 1135000,
+  "capitale": false
+ },
+ {
+  "nom": "Birmingham",
+  "pays": "United States of America",
+  "lat": 33.530006,
+  "lon": -86.824995,
+  "population": 1128047,
+  "capitale": false
+ },
+ {
+  "nom": "Nampo",
+  "pays": "North Korea",
+  "lat": 38.768867,
+  "lon": 125.450488,
+  "population": 1127000,
+  "capitale": false
+ },
+ {
+  "nom": "Yulin",
+  "pays": "China",
+  "lat": 22.63192,
+  "lon": 110.148064,
+  "population": 1127000,
+  "capitale": false
+ },
+ {
+  "nom": "Xianyang",
+  "pays": "China",
+  "lat": 34.347502,
+  "lon": 108.712776,
+  "population": 1126000,
+  "capitale": false
+ },
+ {
+  "nom": "Cagayan de Oro",
+  "pays": "Philippines",
+  "lat": 8.45084,
+  "lon": 124.685299,
+  "population": 1121561,
+  "capitale": false
+ },
+ {
+  "nom": "Can Tho",
+  "pays": "Vietnam",
+  "lat": 10.049993,
+  "lon": 105.770019,
+  "population": 1121000,
+  "capitale": false
+ },
+ {
+  "nom": "Barquisimeto",
+  "pays": "Venezuela",
+  "lat": 10.051938,
+  "lon": -69.301913,
+  "population": 1116000,
+  "capitale": false
+ },
+ {
+  "nom": "Kazan",
+  "pays": "Russia",
+  "lat": 55.751888,
+  "lon": 49.124399,
+  "population": 1115000,
+  "capitale": false
+ },
+ {
+  "nom": "Helsinki",
+  "pays": "Finland",
+  "lat": 60.177509,
+  "lon": 24.932181,
+  "population": 1115000,
+  "capitale": true
+ },
+ {
+  "nom": "Aurangabad",
+  "pays": "India",
+  "lat": 19.897642,
+  "lon": 75.318356,
+  "population": 1113000,
+  "capitale": false
+ },
+ {
+  "nom": "Calgary",
+  "pays": "Canada",
+  "lat": 51.084938,
+  "lon": -114.081944,
+  "population": 1110000,
+  "capitale": false
+ },
+ {
+  "nom": "Nezahualcoyotl",
+  "pays": "Mexico",
+  "lat": 19.410016,
+  "lon": -99.029987,
+  "population": 1109363,
+  "capitale": false
+ },
+ {
+  "nom": "Zurich",
+  "pays": "Switzerland",
+  "lat": 47.381934,
+  "lon": 8.548064,
+  "population": 1108000,
+  "capitale": false
+ },
+ {
+  "nom": "Baoding",
+  "pays": "China",
+  "lat": 38.872376,
+  "lon": 115.478075,
+  "population": 1107000,
+  "capitale": false
+ },
+ {
+  "nom": "Zigong",
+  "pays": "China",
+  "lat": 29.401946,
+  "lon": 104.778056,
+  "population": 1105000,
+  "capitale": false
+ },
+ {
+  "nom": "Sharjah",
+  "pays": "United Arab Emirates",
+  "lat": 25.371383,
+  "lon": 55.406478,
+  "population": 1103027,
+  "capitale": false
+ },
+ {
+  "nom": "Yerevan",
+  "pays": "Armenia",
+  "lat": 40.183097,
+  "lon": 44.511606,
+  "population": 1102000,
+  "capitale": true
+ },
+ {
+  "nom": "Ankang",
+  "pays": "China",
+  "lat": 32.679981,
+  "lon": 109.020002,
+  "population": 1100000,
+  "capitale": false
+ },
+ {
+  "nom": "Mogadishu",
+  "pays": "Somalia",
+  "lat": 2.068627,
+  "lon": 45.364732,
+  "population": 1100000,
+  "capitale": true
+ },
+ {
+  "nom": "Tbilisi",
+  "pays": "Georgia",
+  "lat": 41.726956,
+  "lon": 44.78885,
+  "population": 1100000,
+  "capitale": true
+ },
+ {
+  "nom": "Huambo",
+  "pays": "Angola",
+  "lat": -12.74804,
+  "lon": 15.758064,
+  "population": 1100000,
+  "capitale": false
+ },
+ {
+  "nom": "Ikare",
+  "pays": "Nigeria",
+  "lat": 7.530431,
+  "lon": 5.76,
+  "population": 1099931,
+  "capitale": false
+ },
+ {
+  "nom": "Belgrade",
+  "pays": "Serbia",
+  "lat": 44.820591,
+  "lon": 20.466045,
+  "population": 1099000,
+  "capitale": true
+ },
+ {
+  "nom": "Bhilai",
+  "pays": "India",
+  "lat": 21.218613,
+  "lon": 81.431387,
+  "population": 1097000,
+  "capitale": false
+ },
+ {
+  "nom": "Jinhua",
+  "pays": "China",
+  "lat": 29.120043,
+  "lon": 119.649999,
+  "population": 1092852,
+  "capitale": false
+ },
+ {
+  "nom": "Chelyabinsk",
+  "pays": "Russia",
+  "lat": 55.156937,
+  "lon": 61.436722,
+  "population": 1091000,
+  "capitale": false
+ },
+ {
+  "nom": "Natal",
+  "pays": "Brazil",
+  "lat": -5.778077,
+  "lon": -35.24195,
+  "population": 1088000,
+  "capitale": false
+ },
+ {
+  "nom": "Dushanbe",
+  "pays": "Tajikistan",
+  "lat": 38.560035,
+  "lon": 68.773879,
+  "population": 1086244,
+  "capitale": true
+ },
+ {
+  "nom": "Mesa",
+  "pays": "United States of America",
+  "lat": 33.423915,
+  "lon": -111.736084,
+  "population": 1085394,
+  "capitale": false
+ },
+ {
+  "nom": "Kobenhavn",
+  "pays": "Denmark",
+  "lat": 55.68051,
+  "lon": 12.56154,
+  "population": 1085000,
+  "capitale": true
+ },
+ {
+  "nom": "Changwon",
+  "pays": "South Korea",
+  "lat": 35.219102,
+  "lon": 128.583562,
+  "population": 1081499,
+  "capitale": false
+ },
+ {
+  "nom": "Memphis",
+  "pays": "United States of America",
+  "lat": 35.121933,
+  "lon": -90.001941,
+  "population": 1081000,
+  "capitale": false
+ },
+ {
+  "nom": "Zhuzhou",
+  "pays": "China",
+  "lat": 27.831938,
+  "lon": 113.148088,
+  "population": 1080000,
+  "capitale": false
+ },
+ {
+  "nom": "Suwon",
+  "pays": "South Korea",
+  "lat": 37.259735,
+  "lon": 127.008947,
+  "population": 1078000,
+  "capitale": false
+ },
+ {
+  "nom": "Vereeniging",
+  "pays": "South Africa",
+  "lat": -26.647656,
+  "lon": 27.958042,
+  "population": 1074000,
+  "capitale": false
+ },
+ {
+  "nom": "Xiangyang",
+  "pays": "China",
+  "lat": 32.021941,
+  "lon": 112.128099,
+  "population": 1069000,
+  "capitale": false
+ },
+ {
+  "nom": "Ulsan",
+  "pays": "South Korea",
+  "lat": 35.548677,
+  "lon": 129.315008,
+  "population": 1061000,
+  "capitale": false
+ },
+ {
+  "nom": "Zhucheng",
+  "pays": "China",
+  "lat": 35.98996,
+  "lon": 119.380093,
+  "population": 1060000,
+  "capitale": false
+ },
+ {
+  "nom": "Amman",
+  "pays": "Jordan",
+  "lat": 31.951971,
+  "lon": 35.931354,
+  "population": 1060000,
+  "capitale": true
+ },
+ {
+  "nom": "Dublin",
+  "pays": "Ireland",
+  "lat": 53.335007,
+  "lon": -6.250852,
+  "population": 1059000,
+  "capitale": true
+ },
+ {
+  "nom": "Edmonton",
+  "pays": "Canada",
+  "lat": 53.551971,
+  "lon": -113.501928,
+  "population": 1058000,
+  "capitale": false
+ },
+ {
+  "nom": "Sholapur",
+  "pays": "India",
+  "lat": 17.672352,
+  "lon": 75.898062,
+  "population": 1057000,
+  "capitale": false
+ },
+ {
+  "nom": "Rostov",
+  "pays": "Russia",
+  "lat": 47.236594,
+  "lon": 39.71071,
+  "population": 1052000,
+  "capitale": false
+ },
+ {
+  "nom": "Dnipro",
+  "pays": "Ukraine",
+  "lat": 48.481918,
+  "lon": 34.998078,
+  "population": 1050000,
+  "capitale": false
+ },
+ {
+  "nom": "Xining",
+  "pays": "China",
+  "lat": 36.621945,
+  "lon": 101.768059,
+  "population": 1048000,
+  "capitale": false
+ },
+ {
+  "nom": "Norfolk",
+  "pays": "United States of America",
+  "lat": 36.849959,
+  "lon": -76.280006,
+  "population": 1047869,
+  "capitale": false
+ },
+ {
+  "nom": "Zhangjiakou",
+  "pays": "China",
+  "lat": 40.831946,
+  "lon": 114.928031,
+  "population": 1046000,
+  "capitale": false
+ },
+ {
+  "nom": "Lille",
+  "pays": "France",
+  "lat": 50.651915,
+  "lon": 3.078062,
+  "population": 1044000,
+  "capitale": false
+ },
+ {
+  "nom": "Gaziantep",
+  "pays": "Turkey",
+  "lat": 37.07693,
+  "lon": 37.383048,
+  "population": 1044000,
+  "capitale": false
+ },
+ {
+  "nom": "Ranchi",
+  "pays": "India",
+  "lat": 23.371952,
+  "lon": 85.328081,
+  "population": 1044000,
+  "capitale": false
+ },
+ {
+  "nom": "Monrovia",
+  "pays": "Liberia",
+  "lat": 6.314582,
+  "lon": -10.79966,
+  "population": 1041000,
+  "capitale": true
+ },
+ {
+  "nom": "Sao Luis",
+  "pays": "Brazil",
+  "lat": -2.514039,
+  "lon": -44.267937,
+  "population": 1038000,
+  "capitale": false
+ },
+ {
+  "nom": "Amsterdam",
+  "pays": "Netherlands",
+  "lat": 52.351915,
+  "lon": 4.914694,
+  "population": 1031000,
+  "capitale": true
+ },
+ {
+  "nom": "Jerusalem",
+  "pays": "Israel",
+  "lat": 31.778408,
+  "lon": 35.206626,
+  "population": 1029300,
+  "capitale": true
+ },
+ {
+  "nom": "Guatemala",
+  "pays": "Guatemala",
+  "lat": 14.623081,
+  "lon": -90.528911,
+  "population": 1024000,
+  "capitale": true
+ },
+ {
+  "nom": "Zhuhai",
+  "pays": "China",
+  "lat": 22.27889,
+  "lon": 113.565832,
+  "population": 1023000,
+  "capitale": false
+ },
+ {
+  "nom": "Florianopolis",
+  "pays": "Brazil",
+  "lat": -27.578039,
+  "lon": -48.521966,
+  "population": 1023000,
+  "capitale": false
+ },
+ {
+  "nom": "Port Elizabeth",
+  "pays": "South Africa",
+  "lat": -33.968088,
+  "lon": 25.598083,
+  "population": 1021000,
+  "capitale": false
+ },
+ {
+  "nom": "Port Harcourt",
+  "pays": "Nigeria",
+  "lat": 4.811948,
+  "lon": 7.008055,
+  "population": 1020000,
+  "capitale": false
+ },
+ {
+  "nom": "Jiamusi",
+  "pays": "China",
+  "lat": 46.831967,
+  "lon": 130.348072,
+  "population": 1020000,
+  "capitale": false
+ },
+ {
+  "nom": "Bridgeport",
+  "pays": "United States of America",
+  "lat": 41.181925,
+  "lon": -73.201907,
+  "population": 1018000,
+  "capitale": false
+ },
+ {
+  "nom": "Ufa",
+  "pays": "Russia",
+  "lat": 54.791921,
+  "lon": 56.038085,
+  "population": 1018000,
+  "capitale": false
+ },
+ {
+  "nom": "Hengyang",
+  "pays": "China",
+  "lat": 26.881971,
+  "lon": 112.58807,
+  "population": 1016000,
+  "capitale": false
+ },
+ {
+  "nom": "Buffalo",
+  "pays": "United States of America",
+  "lat": 42.881924,
+  "lon": -78.881948,
+  "population": 1016000,
+  "capitale": false
+ },
+ {
+  "nom": "Benxi",
+  "pays": "China",
+  "lat": 41.332329,
+  "lon": 123.748061,
+  "population": 1012000,
+  "capitale": false
+ },
+ {
+  "nom": "Haifa",
+  "pays": "Israel",
+  "lat": 32.822357,
+  "lon": 34.978079,
+  "population": 1011000,
+  "capitale": false
+ },
+ {
+  "nom": "Medina",
+  "pays": "Saudi Arabia",
+  "lat": 24.501935,
+  "lon": 39.578057,
+  "population": 1010000,
+  "capitale": false
+ },
+ {
+  "nom": "Bucaramanga",
+  "pays": "Colombia",
+  "lat": 7.132039,
+  "lon": -73.127829,
+  "population": 1009000,
+  "capitale": false
+ },
+ {
+  "nom": "Maracay",
+  "pays": "Venezuela",
+  "lat": 10.248826,
+  "lon": -67.597753,
+  "population": 1007000,
+  "capitale": false
+ },
+ {
+  "nom": "Rotterdam",
+  "pays": "Netherlands",
+  "lat": 51.921915,
+  "lon": 4.478029,
+  "population": 1005000,
+  "capitale": false
+ },
+ {
+  "nom": "Hims",
+  "pays": "Syria",
+  "lat": 34.731905,
+  "lon": 36.718076,
+  "population": 1005000,
+  "capitale": false
+ },
+ {
+  "nom": "Cologne",
+  "pays": "Germany",
+  "lat": 50.93195,
+  "lon": 6.948059,
+  "population": 1004000,
+  "capitale": false
+ },
+ {
+  "nom": "Qinhuangdao",
+  "pays": "China",
+  "lat": 39.932311,
+  "lon": 119.618081,
+  "population": 1003000,
+  "capitale": false
+ },
+ {
+  "nom": "Fez",
+  "pays": "Morocco",
+  "lat": 34.056546,
+  "lon": -5.002323,
+  "population": 1002000,
+  "capitale": false
+ },
+ {
+  "nom": "Yongzhou",
+  "pays": "China",
+  "lat": 26.23232,
+  "lon": 111.618052,
+  "population": 1000000,
+  "capitale": false
+ },
+ {
+  "nom": "Cochabamba",
+  "pays": "Bolivia",
+  "lat": -17.410011,
+  "lon": -66.169977,
+  "population": 1000000,
+  "capitale": false
+ },
+ {
+  "nom": "Da Nang",
+  "pays": "Vietnam",
+  "lat": 16.060039,
+  "lon": 108.249971,
+  "population": 1000000,
+  "capitale": false
+ },
+ {
+  "nom": "Baoshan",
+  "pays": "China",
+  "lat": 25.119977,
+  "lon": 99.15001,
+  "population": 1000000,
+  "capitale": false
+ },
+ {
+  "nom": "Aden",
+  "pays": "Yemen",
+  "lat": 12.779723,
+  "lon": 45.00949,
+  "population": 1000000,
+  "capitale": false
+ },
+ {
+  "nom": "Perm",
+  "pays": "Russia",
+  "lat": 58.001906,
+  "lon": 56.248047,
+  "population": 997000,
+  "capitale": false
+ },
+ {
+  "nom": "Ahvaz",
+  "pays": "Iran",
+  "lat": 31.281935,
+  "lon": 48.718067,
+  "population": 996000,
+  "capitale": false
+ },
+ {
+  "nom": "Charlotte",
+  "pays": "United States of America",
+  "lat": 35.20694,
+  "lon": -80.831984,
+  "population": 995000,
+  "capitale": false
+ },
+ {
+  "nom": "Jodhpur",
+  "pays": "India",
+  "lat": 26.293712,
+  "lon": 73.014827,
+  "population": 995000,
+  "capitale": false
+ },
+ {
+  "nom": "San Luis Potosi",
+  "pays": "Mexico",
+  "lat": 22.171922,
+  "lon": -101.001941,
+  "population": 992000,
+  "capitale": false
+ },
+ {
+  "nom": "Odessa",
+  "pays": "Ukraine",
+  "lat": 46.491962,
+  "lon": 30.708055,
+  "population": 991000,
+  "capitale": false
+ },
+ {
+  "nom": "Yinchuan",
+  "pays": "China",
+  "lat": 38.46992,
+  "lon": 106.271092,
+  "population": 991000,
+  "capitale": false
+ },
+ {
+  "nom": "Ndjamena",
+  "pays": "Chad",
+  "lat": 12.115042,
+  "lon": 15.047203,
+  "population": 989000,
+  "capitale": true
+ },
+ {
+  "nom": "Jiaxing",
+  "pays": "China",
+  "lat": 30.772353,
+  "lon": 120.748037,
+  "population": 988000,
+  "capitale": false
+ },
+ {
+  "nom": "Joinville",
+  "pays": "Brazil",
+  "lat": -26.318012,
+  "lon": -48.841895,
+  "population": 988000,
+  "capitale": false
+ },
+ {
+  "nom": "Jacksonville",
+  "pays": "United States of America",
+  "lat": 30.331967,
+  "lon": -81.671933,
+  "population": 988000,
+  "capitale": false
+ },
+ {
+  "nom": "Donetsk",
+  "pays": "Ukraine",
+  "lat": 48.001948,
+  "lon": 37.828034,
+  "population": 988000,
+  "capitale": false
+ },
+ {
+  "nom": "Guilin",
+  "pays": "China",
+  "lat": 25.281939,
+  "lon": 110.278082,
+  "population": 987000,
+  "capitale": false
+ },
+ {
+  "nom": "Volgograd",
+  "pays": "Russia",
+  "lat": 48.711956,
+  "lon": 44.498015,
+  "population": 984000,
+  "capitale": false
+ },
+ {
+  "nom": "Guwahati",
+  "pays": "India",
+  "lat": 26.161963,
+  "lon": 91.768049,
+  "population": 983000,
+  "capitale": false
+ },
+ {
+  "nom": "Yichun",
+  "pays": "China",
+  "lat": 27.835279,
+  "lon": 114.398054,
+  "population": 982000,
+  "capitale": false
+ },
+ {
+  "nom": "Chandigarh",
+  "pays": "India",
+  "lat": 30.721943,
+  "lon": 76.77806,
+  "population": 979000,
+  "capitale": false
+ },
+ {
+  "nom": "Gwalior",
+  "pays": "India",
+  "lat": 26.231933,
+  "lon": 78.178129,
+  "population": 978000,
+  "capitale": false
+ },
+ {
+  "nom": "Qom",
+  "pays": "Iran",
+  "lat": 34.651961,
+  "lon": 50.94806,
+  "population": 973000,
+  "capitale": false
+ },
+ {
+  "nom": "Salt Lake City",
+  "pays": "United States of America",
+  "lat": 40.776962,
+  "lon": -111.931998,
+  "population": 966000,
+  "capitale": false
+ },
+ {
+  "nom": "Jixi",
+  "pays": "China",
+  "lat": 45.301906,
+  "lon": 130.968085,
+  "population": 965000,
+  "capitale": false
+ },
+ {
+  "nom": "Merida",
+  "pays": "Mexico",
+  "lat": 20.968585,
+  "lon": -89.618579,
+  "population": 965000,
+  "capitale": false
+ },
+ {
+  "nom": "Queretaro",
+  "pays": "Mexico",
+  "lat": 20.631964,
+  "lon": -100.381928,
+  "population": 961000,
+  "capitale": false
+ },
+ {
+  "nom": "Pingxiang",
+  "pays": "China",
+  "lat": 27.621951,
+  "lon": 113.848097,
+  "population": 961000,
+  "capitale": false
+ },
+ {
+  "nom": "Kelang",
+  "pays": "Malaysia",
+  "lat": 3.022316,
+  "lon": 101.548072,
+  "population": 956000,
+  "capitale": false
+ },
+ {
+  "nom": "Jinzhou",
+  "pays": "China",
+  "lat": 41.122316,
+  "lon": 121.098094,
+  "population": 956000,
+  "capitale": false
+ },
+ {
+  "nom": "Joao Pessoa",
+  "pays": "Brazil",
+  "lat": -7.099189,
+  "lon": -34.878017,
+  "population": 956000,
+  "capitale": false
+ },
+ {
+  "nom": "Thiruvananthapuram",
+  "pays": "India",
+  "lat": 8.50193,
+  "lon": 76.948075,
+  "population": 954000,
+  "capitale": false
+ },
+ {
+  "nom": "Kozhikode",
+  "pays": "India",
+  "lat": 11.252382,
+  "lon": 75.768044,
+  "population": 953000,
+  "capitale": false
+ },
+ {
+  "nom": "Ogbomosho",
+  "pays": "Nigeria",
+  "lat": 8.131952,
+  "lon": 4.238043,
+  "population": 951000,
+  "capitale": false
+ },
+ {
+  "nom": "Tiruchirappalli",
+  "pays": "India",
+  "lat": 10.811944,
+  "lon": 78.688021,
+  "population": 951000,
+  "capitale": false
+ },
+ {
+  "nom": "Louisville",
+  "pays": "United States of America",
+  "lat": 38.226963,
+  "lon": -85.75065,
+  "population": 948000,
+  "capitale": false
+ },
+ {
+  "nom": "Nantong",
+  "pays": "China",
+  "lat": 32.032328,
+  "lon": 120.823072,
+  "population": 947000,
+  "capitale": false
+ },
+ {
+  "nom": "Tegucigalpa",
+  "pays": "Honduras",
+  "lat": 14.103991,
+  "lon": -87.219475,
+  "population": 946000,
+  "capitale": true
+ },
+ {
+  "nom": "Foshan",
+  "pays": "China",
+  "lat": 23.031999,
+  "lon": 113.118064,
+  "population": 943000,
+  "capitale": false
+ },
+ {
+  "nom": "Songnam",
+  "pays": "South Korea",
+  "lat": 37.440557,
+  "lon": 127.135832,
+  "population": 942000,
+  "capitale": false
+ },
+ {
+  "nom": "Kingston",
+  "pays": "Jamaica",
+  "lat": 17.977077,
+  "lon": -76.767434,
+  "population": 937700,
+  "capitale": true
+ },
+ {
+  "nom": "Naypyidaw",
+  "pays": "Myanmar",
+  "lat": 19.768503,
+  "lon": 96.116673,
+  "population": 930000,
+  "capitale": true
+ },
+ {
+  "nom": "Nice",
+  "pays": "France",
+  "lat": 43.716964,
+  "lon": 7.263078,
+  "population": 927000,
+  "capitale": false
+ },
+ {
+  "nom": "Irbil",
+  "pays": "Iraq",
+  "lat": 36.18099,
+  "lon": 44.006675,
+  "population": 926000,
+  "capitale": false
+ },
+ {
+  "nom": "Krasnoyarsk",
+  "pays": "Russia",
+  "lat": 56.015929,
+  "lon": 92.864055,
+  "population": 925000,
+  "capitale": false
+ },
+ {
+  "nom": "Djibouti",
+  "pays": "Djibouti",
+  "lat": 11.595015,
+  "lon": 43.148002,
+  "population": 923000,
+  "capitale": true
+ },
+ {
+  "nom": "Antwerpen",
+  "pays": "Belgium",
+  "lat": 51.222319,
+  "lon": 4.413071,
+  "population": 920000,
+  "capitale": false
+ },
+ {
+  "nom": "Managua",
+  "pays": "Nicaragua",
+  "lat": 12.154962,
+  "lon": -86.270438,
+  "population": 920000,
+  "capitale": true
+ },
+ {
+  "nom": "Konya",
+  "pays": "Turkey",
+  "lat": 37.876958,
+  "lon": 32.473064,
+  "population": 919000,
+  "capitale": false
+ },
+ {
+  "nom": "Bogor",
+  "pays": "Indonesia",
+  "lat": -6.568055,
+  "lon": 106.748065,
+  "population": 918000,
+  "capitale": false
+ },
+ {
+  "nom": "Niamey",
+  "pays": "Niger",
+  "lat": 13.518652,
+  "lon": 2.11471,
+  "population": 915000,
+  "capitale": true
+ },
+ {
+  "nom": "Hartford",
+  "pays": "United States of America",
+  "lat": 41.771966,
+  "lon": -72.681913,
+  "population": 913000,
+  "capitale": false
+ },
+ {
+  "nom": "Huaibei",
+  "pays": "China",
+  "lat": 33.952314,
+  "lon": 116.748075,
+  "population": 913000,
+  "capitale": false
+ },
+ {
+  "nom": "Xinyu",
+  "pays": "China",
+  "lat": 27.801966,
+  "lon": 114.928031,
+  "population": 913000,
+  "capitale": false
+ },
+ {
+  "nom": "Richmond",
+  "pays": "United States of America",
+  "lat": 37.551965,
+  "lon": -77.451932,
+  "population": 912000,
+  "capitale": false
+ },
+ {
+  "nom": "Teresina",
+  "pays": "Brazil",
+  "lat": -5.093055,
+  "lon": -42.781955,
+  "population": 907000,
+  "capitale": false
+ },
+ {
+  "nom": "Goyang",
+  "pays": "South Korea",
+  "lat": 37.654682,
+  "lon": 126.835303,
+  "population": 903000,
+  "capitale": false
+ },
+ {
+  "nom": "Xinxiang",
+  "pays": "China",
+  "lat": 35.322386,
+  "lon": 113.868044,
+  "population": 903000,
+  "capitale": false
+ },
+ {
+  "nom": "Yibin",
+  "pays": "China",
+  "lat": 28.771933,
+  "lon": 104.568095,
+  "population": 902000,
+  "capitale": false
+ },
+ {
+  "nom": "Maiduguri",
+  "pays": "Nigeria",
+  "lat": 11.851906,
+  "lon": 13.158067,
+  "population": 896000,
+  "capitale": false
+ },
+ {
+  "nom": "Tirana",
+  "pays": "Albania",
+  "lat": 41.327541,
+  "lon": 19.818883,
+  "population": 895350,
+  "capitale": true
+ },
+ {
+  "nom": "Kathmandu",
+  "pays": "Nepal",
+  "lat": 27.718638,
+  "lon": 85.314696,
+  "population": 895000,
+  "capitale": true
+ },
+ {
+  "nom": "Bengbu",
+  "pays": "China",
+  "lat": 32.951936,
+  "lon": 117.328091,
+  "population": 894000,
+  "capitale": false
+ },
+ {
+  "nom": "Mendoza",
+  "pays": "Argentina",
+  "lat": -32.881384,
+  "lon": -68.818557,
+  "population": 893000,
+  "capitale": false
+ },
+ {
+  "nom": "Hubballi",
+  "pays": "India",
+  "lat": 15.361924,
+  "lon": 75.12307,
+  "population": 890000,
+  "capitale": false
+ },
+ {
+  "nom": "Zaria",
+  "pays": "Nigeria",
+  "lat": 11.081927,
+  "lon": 7.708064,
+  "population": 889000,
+  "capitale": false
+ },
+ {
+  "nom": "Anyang",
+  "pays": "China",
+  "lat": 36.081926,
+  "lon": 114.348066,
+  "population": 887000,
+  "capitale": false
+ },
+ {
+  "nom": "Mysuru",
+  "pays": "India",
+  "lat": 12.31193,
+  "lon": 76.658067,
+  "population": 887000,
+  "capitale": false
+ },
+ {
+  "nom": "Cartagena",
+  "pays": "Colombia",
+  "lat": 10.401684,
+  "lon": -75.516339,
+  "population": 887000,
+  "capitale": false
+ },
+ {
+  "nom": "Mexicali",
+  "pays": "Mexico",
+  "lat": 32.651928,
+  "lon": -115.481962,
+  "population": 885000,
+  "capitale": false
+ },
+ {
+  "nom": "Ulaanbaatar",
+  "pays": "Mongolia",
+  "lat": 47.918619,
+  "lon": 106.91467,
+  "population": 885000,
+  "capitale": true
+ },
+ {
+  "nom": "Tongliao",
+  "pays": "China",
+  "lat": 43.621905,
+  "lon": 122.268048,
+  "population": 884000,
+  "capitale": false
+ },
+ {
+  "nom": "Newcastle",
+  "pays": "United Kingdom",
+  "lat": 55.002321,
+  "lon": -1.601936,
+  "population": 882000,
+  "capitale": false
+ },
+ {
+  "nom": "Mombasa",
+  "pays": "Kenya",
+  "lat": -4.03808,
+  "lon": 39.687972,
+  "population": 882000,
+  "capitale": false
+ },
+ {
+  "nom": "Nashville",
+  "pays": "United States of America",
+  "lat": 36.17192,
+  "lon": -86.781931,
+  "population": 877000,
+  "capitale": false
+ },
+ {
+  "nom": "Johor Bahru",
+  "pays": "Malaysia",
+  "lat": 1.481971,
+  "lon": 103.728094,
+  "population": 875000,
+  "capitale": false
+ },
+ {
+  "nom": "Yichang",
+  "pays": "China",
+  "lat": 30.701918,
+  "lon": 111.278073,
+  "population": 875000,
+  "capitale": false
+ },
+ {
+  "nom": "Raipur",
+  "pays": "India",
+  "lat": 21.23694,
+  "lon": 81.633061,
+  "population": 875000,
+  "capitale": false
+ },
+ {
+  "nom": "Salem",
+  "pays": "India",
+  "lat": 11.671943,
+  "lon": 78.178129,
+  "population": 873000,
+  "capitale": false
+ },
+ {
+  "nom": "Kaifeng",
+  "pays": "China",
+  "lat": 34.851949,
+  "lon": 114.348066,
+  "population": 872000,
+  "capitale": false
+ },
+ {
+  "nom": "Marrakesh",
+  "pays": "Morocco",
+  "lat": 31.631939,
+  "lon": -8.001933,
+  "population": 872000,
+  "capitale": false
+ },
+ {
+  "nom": "Dandong",
+  "pays": "China",
+  "lat": 40.145554,
+  "lon": 124.391639,
+  "population": 870000,
+  "capitale": false
+ },
+ {
+  "nom": "Basra",
+  "pays": "Iraq",
+  "lat": 30.51547,
+  "lon": 47.811611,
+  "population": 870000,
+  "capitale": false
+ },
+ {
+  "nom": "Aguascalientes",
+  "pays": "Mexico",
+  "lat": 21.881406,
+  "lon": -102.292359,
+  "population": 869000,
+  "capitale": false
+ },
+ {
+  "nom": "Puch'on",
+  "pays": "South Korea",
+  "lat": 37.500835,
+  "lon": 126.78111,
+  "population": 866000,
+  "capitale": false
+ },
+ {
+  "nom": "Xuanzhou",
+  "pays": "China",
+  "lat": 30.954446,
+  "lon": 118.753332,
+  "population": 866000,
+  "capitale": false
+ },
+ {
+  "nom": "Bandar Lampung",
+  "pays": "Indonesia",
+  "lat": -5.428073,
+  "lon": 105.268052,
+  "population": 865000,
+  "capitale": false
+ },
+ {
+  "nom": "Palermo",
+  "pays": "Italy",
+  "lat": 38.126969,
+  "lon": 13.348081,
+  "population": 863000,
+  "capitale": false
+ },
+ {
+  "nom": "Kigali",
+  "pays": "Rwanda",
+  "lat": -1.951644,
+  "lon": 30.058586,
+  "population": 860000,
+  "capitale": true
+ },
+ {
+  "nom": "Jiaozuo",
+  "pays": "China",
+  "lat": 35.251951,
+  "lon": 113.218058,
+  "population": 857000,
+  "capitale": false
+ },
+ {
+  "nom": "Jullundur",
+  "pays": "India",
+  "lat": 31.336867,
+  "lon": 75.567074,
+  "population": 855000,
+  "capitale": false
+ },
+ {
+  "nom": "Padang",
+  "pays": "Indonesia",
+  "lat": -0.958061,
+  "lon": 100.358068,
+  "population": 855000,
+  "capitale": false
+ },
+ {
+  "nom": "Zhenjiang",
+  "pays": "China",
+  "lat": 32.221929,
+  "lon": 119.428066,
+  "population": 854000,
+  "capitale": false
+ },
+ {
+  "nom": "Valparaiso",
+  "pays": "Chile",
+  "lat": -33.045819,
+  "lon": -71.62296,
+  "population": 854000,
+  "capitale": false
+ },
+ {
+  "nom": "Anshun",
+  "pays": "China",
+  "lat": 26.252345,
+  "lon": 105.928064,
+  "population": 849000,
+  "capitale": false
+ },
+ {
+  "nom": "Zunyi",
+  "pays": "China",
+  "lat": 27.701972,
+  "lon": 106.918081,
+  "population": 849000,
+  "capitale": false
+ },
+ {
+  "nom": "Pingdingshan",
+  "pays": "China",
+  "lat": 33.732353,
+  "lon": 113.298053,
+  "population": 849000,
+  "capitale": false
+ },
+ {
+  "nom": "Toulouse",
+  "pays": "France",
+  "lat": 43.621905,
+  "lon": 1.447981,
+  "population": 847000,
+  "capitale": false
+ },
+ {
+  "nom": "Voronezh",
+  "pays": "Russia",
+  "lat": 51.731927,
+  "lon": 39.26805,
+  "population": 844000,
+  "capitale": false
+ },
+ {
+  "nom": "Bhubaneshwar",
+  "pays": "India",
+  "lat": 20.272374,
+  "lon": 85.825415,
+  "population": 844000,
+  "capitale": false
+ },
+ {
+  "nom": "Saratov",
+  "pays": "Russia",
+  "lat": 51.581936,
+  "lon": 46.02805,
+  "population": 843000,
+  "capitale": false
+ },
+ {
+  "nom": "Yuci",
+  "pays": "China",
+  "lat": 37.682345,
+  "lon": 112.728062,
+  "population": 840000,
+  "capitale": false
+ },
+ {
+  "nom": "Yancheng",
+  "pays": "China",
+  "lat": 33.387502,
+  "lon": 120.123332,
+  "population": 839000,
+  "capitale": false
+ },
+ {
+  "nom": "Bishkek",
+  "pays": "Kyrgyzstan",
+  "lat": 42.875025,
+  "lon": 74.583258,
+  "population": 837000,
+  "capitale": true
+ },
+ {
+  "nom": "Oslo",
+  "pays": "Norway",
+  "lat": 59.918636,
+  "lon": 10.748033,
+  "population": 835000,
+  "capitale": true
+ },
+ {
+  "nom": "Linfen",
+  "pays": "China",
+  "lat": 36.082288,
+  "lon": 111.518058,
+  "population": 834000,
+  "capitale": false
+ },
+ {
+  "nom": "Bangui",
+  "pays": "Central African Republic",
+  "lat": 4.366644,
+  "lon": 18.558288,
+  "population": 831925,
+  "capitale": true
+ },
+ {
+  "nom": "Tucuman",
+  "pays": "Argentina",
+  "lat": -26.814054,
+  "lon": -65.21857,
+  "population": 830000,
+  "capitale": false
+ },
+ {
+  "nom": "Kermanshah",
+  "pays": "Iran",
+  "lat": 34.381952,
+  "lon": 47.058065,
+  "population": 828313,
+  "capitale": false
+ },
+ {
+  "nom": "Thessaloniki",
+  "pays": "Greece",
+  "lat": 40.698052,
+  "lon": 22.883055,
+  "population": 828000,
+  "capitale": false
+ },
+ {
+  "nom": "Kota",
+  "pays": "India",
+  "lat": 25.181945,
+  "lon": 75.833053,
+  "population": 827000,
+  "capitale": false
+ },
+ {
+  "nom": "Freetown",
+  "pays": "Sierra Leone",
+  "lat": 8.471957,
+  "lon": -13.236162,
+  "population": 827000,
+  "capitale": true
+ },
+ {
+  "nom": "Yueyang",
+  "pays": "China",
+  "lat": 29.381999,
+  "lon": 113.098065,
+  "population": 826000,
+  "capitale": false
+ },
+ {
+  "nom": "Tucson",
+  "pays": "United States of America",
+  "lat": 32.206943,
+  "lon": -110.891932,
+  "population": 823000,
+  "capitale": false
+ },
+ {
+  "nom": "Bareilly",
+  "pays": "India",
+  "lat": 28.347333,
+  "lon": 79.418054,
+  "population": 817000,
+  "capitale": false
+ },
+ {
+  "nom": "Xingyi",
+  "pays": "China",
+  "lat": 25.092364,
+  "lon": 104.888075,
+  "population": 816000,
+  "capitale": false
+ },
+ {
+  "nom": "Arequipa",
+  "pays": "Peru",
+  "lat": -16.418048,
+  "lon": -71.531957,
+  "population": 815000,
+  "capitale": false
+ },
+ {
+  "nom": "Cebu",
+  "pays": "Philippines",
+  "lat": 10.321922,
+  "lon": 123.898129,
+  "population": 815000,
+  "capitale": false
+ },
+ {
+  "nom": "Liverpool",
+  "pays": "United Kingdom",
+  "lat": 53.417948,
+  "lon": -2.919944,
+  "population": 811000,
+  "capitale": false
+ },
+ {
+  "nom": "Wuhu",
+  "pays": "China",
+  "lat": 31.35237,
+  "lon": 118.368028,
+  "population": 810000,
+  "capitale": false
+ },
+ {
+  "nom": "Langfang",
+  "pays": "China",
+  "lat": 39.52231,
+  "lon": 116.678053,
+  "population": 810000,
+  "capitale": false
+ },
+ {
+  "nom": "Rajshahi",
+  "pays": "Bangladesh",
+  "lat": 24.37693,
+  "lon": 88.603074,
+  "population": 810000,
+  "capitale": false
+ },
+ {
+  "nom": "Zhaotang",
+  "pays": "China",
+  "lat": 27.322331,
+  "lon": 103.718069,
+  "population": 809000,
+  "capitale": false
+ },
+ {
+  "nom": "Culiacan",
+  "pays": "Mexico",
+  "lat": 24.831941,
+  "lon": -107.381914,
+  "population": 809000,
+  "capitale": false
+ },
+ {
+  "nom": "Valencia",
+  "pays": "Spain",
+  "lat": 39.486963,
+  "lon": -0.401958,
+  "population": 808000,
+  "capitale": false
+ },
+ {
+  "nom": "Lingyuan",
+  "pays": "China",
+  "lat": 41.241946,
+  "lon": 119.399165,
+  "population": 806000,
+  "capitale": false
+ },
+ {
+  "nom": "Cuiaba",
+  "pays": "Brazil",
+  "lat": -15.567661,
+  "lon": -56.086931,
+  "population": 806000,
+  "capitale": false
+ },
+ {
+  "nom": "Aligarh",
+  "pays": "India",
+  "lat": 27.894157,
+  "lon": 78.059842,
+  "population": 805000,
+  "capitale": false
+ },
+ {
+  "nom": "Malang",
+  "pays": "Indonesia",
+  "lat": -7.978046,
+  "lon": 112.608069,
+  "population": 805000,
+  "capitale": false
+ },
+ {
+  "nom": "Bordeaux",
+  "pays": "France",
+  "lat": 44.851959,
+  "lon": -0.596959,
+  "population": 803000,
+  "capitale": false
+ },
+ {
+  "nom": "Pekanbaru",
+  "pays": "Indonesia",
+  "lat": 0.56691,
+  "lon": 101.423067,
+  "population": 799000,
+  "capitale": false
+ },
+ {
+  "nom": "Oran",
+  "pays": "Algeria",
+  "lat": 35.711948,
+  "lon": -0.621919,
+  "population": 798000,
+  "capitale": false
+ },
+ {
+  "nom": "Yingkow",
+  "pays": "China",
+  "lat": 40.672292,
+  "lon": 122.278073,
+  "population": 795000,
+  "capitale": false
+ },
+ {
+  "nom": "Bhiwandi",
+  "pays": "India",
+  "lat": 19.351965,
+  "lon": 73.12805,
+  "population": 795000,
+  "capitale": false
+ },
+ {
+  "nom": "Liaoyang",
+  "pays": "China",
+  "lat": 41.281944,
+  "lon": 123.17807,
+  "population": 794000,
+  "capitale": false
+ },
+ {
+  "nom": "Chihuahua",
+  "pays": "Mexico",
+  "lat": 28.646927,
+  "lon": -106.086928,
+  "population": 793000,
+  "capitale": false
+ },
+ {
+  "nom": "Jammu",
+  "pays": "India",
+  "lat": 32.713733,
+  "lon": 74.844793,
+  "population": 791000,
+  "capitale": false
+ },
+ {
+  "nom": "Zaporizhzhya",
+  "pays": "Ukraine",
+  "lat": 47.859243,
+  "lon": 35.174863,
+  "population": 788000,
+  "capitale": false
+ },
+ {
+  "nom": "Oklahoma City",
+  "pays": "United States of America",
+  "lat": 35.471989,
+  "lon": -97.520629,
+  "population": 788000,
+  "capitale": false
+ },
+ {
+  "nom": "Moradabad",
+  "pays": "India",
+  "lat": 28.843737,
+  "lon": 78.754838,
+  "population": 787000,
+  "capitale": false
+ },
+ {
+  "nom": "Honolulu",
+  "pays": "United States of America",
+  "lat": 21.308822,
+  "lon": -157.859944,
+  "population": 786000,
+  "capitale": false
+ },
+ {
+  "nom": "New Orleans",
+  "pays": "United States of America",
+  "lat": 29.996948,
+  "lon": -90.041913,
+  "population": 785000,
+  "capitale": false
+ },
+ {
+  "nom": "Antalya",
+  "pays": "Turkey",
+  "lat": 36.891928,
+  "lon": 30.69803,
+  "population": 783000,
+  "capitale": false
+ },
+ {
+  "nom": "Al Hudaydah",
+  "pays": "Yemen",
+  "lat": 14.799891,
+  "lon": 42.951029,
+  "population": 780000,
+  "capitale": false
+ },
+ {
+  "nom": "Islamabad",
+  "pays": "Pakistan",
+  "lat": 33.701942,
+  "lon": 73.164689,
+  "population": 780000,
+  "capitale": true
+ },
+ {
+  "nom": "Campo Grande",
+  "pays": "Brazil",
+  "lat": -20.448086,
+  "lon": -54.618571,
+  "population": 778000,
+  "capitale": false
+ },
+ {
+  "nom": "Shaoxing",
+  "pays": "China",
+  "lat": 30.002323,
+  "lon": 120.5681,
+  "population": 777000,
+  "capitale": false
+ },
+ {
+  "nom": "Yichun",
+  "pays": "China",
+  "lat": 47.701888,
+  "lon": 128.898031,
+  "population": 777000,
+  "capitale": false
+ },
+ {
+  "nom": "Dayton",
+  "pays": "United States of America",
+  "lat": 39.752322,
+  "lon": -84.201933,
+  "population": 773000,
+  "capitale": false
+ },
+ {
+  "nom": "Hamhung",
+  "pays": "North Korea",
+  "lat": 39.912002,
+  "lon": 127.543488,
+  "population": 773000,
+  "capitale": false
+ },
+ {
+  "nom": "Zamboanga",
+  "pays": "Philippines",
+  "lat": 6.921923,
+  "lon": 122.078085,
+  "population": 773000,
+  "capitale": false
+ },
+ {
+  "nom": "Ilorin",
+  "pays": "Nigeria",
+  "lat": 8.491956,
+  "lon": 4.54805,
+  "population": 771000,
+  "capitale": false
+ },
+ {
+  "nom": "Fuyang",
+  "pays": "China",
+  "lat": 30.055279,
+  "lon": 119.949999,
+  "population": 771000,
+  "capitale": false
+ },
+ {
+  "nom": "Fuxin",
+  "pays": "China",
+  "lat": 42.012417,
+  "lon": 121.658059,
+  "population": 770000,
+  "capitale": false
+ },
+ {
+  "nom": "Quetta",
+  "pays": "Pakistan",
+  "lat": 30.221948,
+  "lon": 67.023048,
+  "population": 768000,
+  "capitale": false
+ },
+ {
+  "nom": "Kananga",
+  "pays": "Congo (Kinshasa)",
+  "lat": -5.888096,
+  "lon": 22.398072,
+  "population": 765000,
+  "capitale": false
+ },
+ {
+  "nom": "Cotonou",
+  "pays": "Benin",
+  "lat": 6.401954,
+  "lon": 2.518045,
+  "population": 762000,
+  "capitale": true
+ },
+ {
+  "nom": "Lodz",
+  "pays": "Poland",
+  "lat": 51.776937,
+  "lon": 19.449414,
+  "population": 758000,
+  "capitale": false
+ },
+ {
+  "nom": "Krakow",
+  "pays": "Poland",
+  "lat": 50.061925,
+  "lon": 19.958066,
+  "population": 756000,
+  "capitale": false
+ },
+ {
+  "nom": "Rochester",
+  "pays": "United States of America",
+  "lat": 43.172372,
+  "lon": -77.621896,
+  "population": 755000,
+  "capitale": false
+ },
+ {
+  "nom": "Saltillo",
+  "pays": "Mexico",
+  "lat": 25.421905,
+  "lon": -101.006928,
+  "population": 754000,
+  "capitale": false
+ },
+ {
+  "nom": "Vientiane",
+  "pays": "Laos",
+  "lat": 17.966693,
+  "lon": 102.59998,
+  "population": 754000,
+  "capitale": true
+ },
+ {
+  "nom": "El Paso",
+  "pays": "United States of America",
+  "lat": 31.78193,
+  "lon": -106.511941,
+  "population": 753000,
+  "capitale": false
+ },
+ {
+  "nom": "Taizz",
+  "pays": "Yemen",
+  "lat": 13.606398,
+  "lon": 44.037474,
+  "population": 751000,
+  "capitale": false
+ },
+ {
+  "nom": "Riga",
+  "pays": "Latvia",
+  "lat": 56.950024,
+  "lon": 24.099965,
+  "population": 742572,
+  "capitale": true
+ },
+ {
+  "nom": "Nouakchott",
+  "pays": "Mauritania",
+  "lat": 18.086427,
+  "lon": -15.97534,
+  "population": 742144,
+  "capitale": true
+ },
+ {
+  "nom": "Muscat",
+  "pays": "Oman",
+  "lat": 23.613325,
+  "lon": 58.593312,
+  "population": 734697,
+  "capitale": true
+ },
+ {
+  "nom": "Ashgabat",
+  "pays": "Turkmenistan",
+  "lat": 37.949995,
+  "lon": 58.383299,
+  "population": 727700,
+  "capitale": true
+ },
+ {
+  "nom": "Zagreb",
+  "pays": "Croatia",
+  "lat": 45.800007,
+  "lon": 15.999995,
+  "population": 722526,
+  "capitale": true
+ },
+ {
+  "nom": "Sarajevo",
+  "pays": "Bosnia and Herzegovina",
+  "lat": 43.850022,
+  "lon": 18.383002,
+  "population": 696731,
+  "capitale": true
+ },
+ {
+  "nom": "Chisinau",
+  "pays": "Moldova",
+  "lat": 47.005024,
+  "lon": 28.857711,
+  "population": 688134,
+  "capitale": true
+ },
+ {
+  "nom": "Lilongwe",
+  "pays": "Malawi",
+  "lat": -13.983295,
+  "lon": 33.783302,
+  "population": 646750,
+  "capitale": true
+ },
+ {
+  "nom": "Asmara",
+  "pays": "Eritrea",
+  "lat": 15.333339,
+  "lon": 38.933324,
+  "population": 620802,
+  "capitale": true
+ },
+ {
+  "nom": "Abu Dhabi",
+  "pays": "United Arab Emirates",
+  "lat": 24.466684,
+  "lon": 54.366593,
+  "population": 603492,
+  "capitale": true
+ },
+ {
+  "nom": "Port Louis",
+  "pays": "Mauritius",
+  "lat": -20.166639,
+  "lon": 57.499994,
+  "population": 595491,
+  "capitale": true
+ },
+ {
+  "nom": "Libreville",
+  "pays": "Gabon",
+  "lat": 0.385389,
+  "lon": 9.457965,
+  "population": 578156,
+  "capitale": true
+ },
+ {
+  "nom": "Manama",
+  "pays": "Bahrain",
+  "lat": 26.236136,
+  "lon": 50.583052,
+  "population": 563920,
+  "capitale": true
+ },
+ {
+  "nom": "Vilnius",
+  "pays": "Lithuania",
+  "lat": 54.683366,
+  "lon": 25.316635,
+  "population": 542366,
+  "capitale": true
+ },
+ {
+  "nom": "Skopje",
+  "pays": "North Macedonia",
+  "lat": 42.000006,
+  "lon": 21.433462,
+  "population": 494087,
+  "capitale": true
+ },
+ {
+  "nom": "Hargeysa",
+  "pays": "Somaliland",
+  "lat": 9.560022,
+  "lon": 44.06531,
+  "population": 477876,
+  "capitale": true
+ },
+ {
+  "nom": "Pristina",
+  "pays": "Kosovo",
+  "lat": 42.66671,
+  "lon": 21.165984,
+  "population": 465186,
+  "capitale": true
+ },
+ {
+  "nom": "Bloemfontein",
+  "pays": "South Africa",
+  "lat": -29.119994,
+  "lon": 26.229913,
+  "population": 463064,
+  "capitale": true
+ },
+ {
+  "nom": "Bratislava",
+  "pays": "Slovakia",
+  "lat": 48.150018,
+  "lon": 17.116981,
+  "population": 423737,
+  "capitale": true
+ },
+ {
+  "nom": "Bissau",
+  "pays": "Guinea Bissau",
+  "lat": 11.865024,
+  "lon": -15.598361,
+  "population": 403339,
+  "capitale": true
+ },
+ {
+  "nom": "Tallinn",
+  "pays": "Estonia",
+  "lat": 59.433877,
+  "lon": 24.728041,
+  "population": 394024,
+  "capitale": true
+ },
+ {
+  "nom": "Wellington",
+  "pays": "New Zealand",
+  "lat": -41.299988,
+  "lon": 174.783266,
+  "population": 393400,
+  "capitale": true
+ },
+ {
+  "nom": "Valletta",
+  "pays": "Malta",
+  "lat": 35.899733,
+  "lon": 14.514711,
+  "population": 368250,
+  "capitale": true
+ },
+ {
+  "nom": "Maseru",
+  "pays": "Lesotho",
+  "lat": -29.316674,
+  "lon": 27.483273,
+  "population": 361324,
+  "capitale": true
+ },
+ {
+  "nom": "Astana",
+  "pays": "Kazakhstan",
+  "lat": 51.181125,
+  "lon": 71.427774,
+  "population": 345604,
+  "capitale": true
+ },
+ {
+  "nom": "Bujumbura",
+  "pays": "Burundi",
+  "lat": -3.376087,
+  "lon": 29.360006,
+  "population": 331700,
+  "capitale": true
+ },
+ {
+  "nom": "Canberra",
+  "pays": "Australia",
+  "lat": -35.283029,
+  "lon": 149.129026,
+  "population": 327700,
+  "capitale": true
+ },
+ {
+  "nom": "New Delhi",
+  "pays": "India",
+  "lat": 28.600023,
+  "lon": 77.19998,
+  "population": 317797,
+  "capitale": true
+ },
+ {
+  "nom": "Ljubljana",
+  "pays": "Slovenia",
+  "lat": 46.055288,
+  "lon": 14.514969,
+  "population": 314807,
+  "capitale": true
+ },
+ {
+  "nom": "Bandar Seri Begawan",
+  "pays": "Brunei",
+  "lat": 4.883331,
+  "lon": 114.933284,
+  "population": 296500,
+  "capitale": true
+ },
+ {
+  "nom": "Port-of-Spain",
+  "pays": "Trinidad and Tobago",
+  "lat": 10.651997,
+  "lon": -61.517031,
+  "population": 294934,
+  "capitale": true
+ },
+ {
+  "nom": "Port Moresby",
+  "pays": "Papua New Guinea",
+  "lat": -9.464708,
+  "lon": 147.192504,
+  "population": 283733,
+  "capitale": true
+ },
+ {
+  "nom": "Bern",
+  "pays": "Switzerland",
+  "lat": 46.916683,
+  "lon": 7.466976,
+  "population": 275329,
+  "capitale": true
+ },
+ {
+  "nom": "Windhoek",
+  "pays": "Namibia",
+  "lat": -22.570006,
+  "lon": 17.083546,
+  "population": 268132,
+  "capitale": true
+ },
+ {
+  "nom": "Georgetown",
+  "pays": "Guyana",
+  "lat": 6.801974,
+  "lon": -58.167029,
+  "population": 264350,
+  "capitale": true
+ },
+ {
+  "nom": "Paramaribo",
+  "pays": "Suriname",
+  "lat": 5.83503,
+  "lon": -55.167031,
+  "population": 254169,
+  "capitale": true
+ },
+ {
+  "nom": "Dili",
+  "pays": "East Timor",
+  "lat": -8.559388,
+  "lon": 125.579456,
+  "population": 234331,
+  "capitale": true
+ },
+ {
+  "nom": "Nassau",
+  "pays": "The Bahamas",
+  "lat": 25.08339,
+  "lon": -77.350044,
+  "population": 227940,
+  "capitale": true
+ },
+ {
+  "nom": "Sucre",
+  "pays": "Bolivia",
+  "lat": -19.040971,
+  "lon": -65.259516,
+  "population": 224838,
+  "capitale": true
+ },
+ {
+  "nom": "Nicosia",
+  "pays": "Cyprus",
+  "lat": 35.166677,
+  "lon": 33.366635,
+  "population": 224300,
+  "capitale": true
+ },
+ {
+  "nom": "Velikiy Novgorod",
+  "pays": "Russia",
+  "lat": 58.499981,
+  "lon": 31.330015,
+  "population": 218717,
+  "capitale": false
+ },
+ {
+  "nom": "Colombo",
+  "pays": "Sri Lanka",
+  "lat": 6.931966,
+  "lon": 79.857751,
+  "population": 217000,
+  "capitale": true
+ },
+ {
+  "nom": "Gaborone",
+  "pays": "Botswana",
+  "lat": -24.646314,
+  "lon": 25.911948,
+  "population": 208411,
+  "capitale": true
+ },
+ {
+  "nom": "Yamoussoukro",
+  "pays": "Ivory Coast",
+  "lat": 6.818381,
+  "lon": -5.275503,
+  "population": 206499,
+  "capitale": true
+ },
+ {
+  "nom": "Bridgetown",
+  "pays": "Barbados",
+  "lat": 13.102003,
+  "lon": -59.616527,
+  "population": 191152,
+  "capitale": true
+ },
+ {
+  "nom": "Suva",
+  "pays": "Fiji",
+  "lat": -18.133016,
+  "lon": 178.441707,
+  "population": 175399,
+  "capitale": true
+ },
+ {
+  "nom": "Reykjavik",
+  "pays": "Iceland",
+  "lat": 64.150024,
+  "lon": -21.950015,
+  "population": 166212,
+  "capitale": true
+ },
+ {
+  "nom": "Malabo",
+  "pays": "Equatorial Guinea",
+  "lat": 3.750015,
+  "lon": 8.783278,
+  "population": 155963,
+  "capitale": true
+ },
+ {
+  "nom": "Podgorica",
+  "pays": "Montenegro",
+  "lat": 42.465973,
+  "lon": 19.266307,
+  "population": 145850,
+  "capitale": true
+ },
+ {
+  "nom": "Moroni",
+  "pays": "Comoros",
+  "lat": -11.704158,
+  "lon": 43.240244,
+  "population": 128698,
+  "capitale": true
+ },
+ {
+  "nom": "Praia",
+  "pays": "Cape Verde",
+  "lat": 14.916698,
+  "lon": -23.516689,
+  "population": 113364,
+  "capitale": true
+ },
+ {
+  "nom": "Male",
+  "pays": "Maldives",
+  "lat": 4.166708,
+  "lon": 73.499948,
+  "population": 112927,
+  "capitale": true
+ },
+ {
+  "nom": "Luxembourg",
+  "pays": "Luxembourg",
+  "lat": 49.61166,
+  "lon": 6.130003,
+  "population": 107260,
+  "capitale": true
+ },
+ {
+  "nom": "Thimphu",
+  "pays": "Bhutan",
+  "lat": 27.472986,
+  "lon": 89.639014,
+  "population": 98676,
+  "capitale": true
+ },
+ {
+  "nom": "Mbabane",
+  "pays": "eSwatini",
+  "lat": -26.316651,
+  "lon": 31.133335,
+  "population": 90138,
+  "capitale": true
+ },
+ {
+  "nom": "Sao Tome",
+  "pays": "Sao Tome and Principe",
+  "lat": 0.333402,
+  "lon": 6.733325,
+  "population": 88219,
+  "capitale": true
+ },
+ {
+  "nom": "Honiara",
+  "pays": "Solomon Islands",
+  "lat": -9.437994,
+  "lon": 159.949766,
+  "population": 76328,
+  "capitale": true
+ },
+ {
+  "nom": "Apia",
+  "pays": "Samoa",
+  "lat": -13.841545,
+  "lon": -171.738642,
+  "population": 61916,
+  "capitale": true
+ },
+ {
+  "nom": "Andorra",
+  "pays": "Andorra",
+  "lat": 42.500001,
+  "lon": 1.516486,
+  "population": 53998,
+  "capitale": true
+ },
+ {
+  "nom": "Hamilton",
+  "pays": "Bermuda",
+  "lat": 32.29419,
+  "lon": -64.783937,
+  "population": 52320,
+  "capitale": true
+ },
+ {
+  "nom": "Kingstown",
+  "pays": "Saint Vincent and the Grenadines",
+  "lat": 13.148279,
+  "lon": -61.212062,
+  "population": 49485,
+  "capitale": true
+ },
+ {
+  "nom": "Port Vila",
+  "pays": "Vanuatu",
+  "lat": -17.73335,
+  "lon": 168.316641,
+  "population": 44040,
+  "capitale": true
+ },
+ {
+  "nom": "Banjul",
+  "pays": "The Gambia",
+  "lat": 13.453877,
+  "lon": -16.591702,
+  "population": 43094,
+  "capitale": true
+ },
+ {
+  "nom": "Nukualofa",
+  "pays": "Tonga",
+  "lat": -21.138512,
+  "lon": -175.220565,
+  "population": 42620,
+  "capitale": true
+ },
+ {
+  "nom": "Castries",
+  "pays": "Saint Lucia",
+  "lat": 14.001974,
+  "lon": -61.000008,
+  "population": 37963,
+  "capitale": true
+ },
+ {
+  "nom": "Monaco",
+  "pays": "Monaco",
+  "lat": 43.739646,
+  "lon": 7.406913,
+  "population": 36371,
+  "capitale": true
+ },
+ {
+  "nom": "Vaduz",
+  "pays": "Liechtenstein",
+  "lat": 47.133724,
+  "lon": 9.51667,
+  "population": 36281,
+  "capitale": true
+ },
+ {
+  "nom": "Saint John's",
+  "pays": "Antigua and Barbuda",
+  "lat": 17.118037,
+  "lon": -61.850034,
+  "population": 35499,
+  "capitale": true
+ },
+ {
+  "nom": "Saint George's",
+  "pays": "Grenada",
+  "lat": 12.052633,
+  "lon": -61.741643,
+  "population": 33734,
+  "capitale": true
+ },
+ {
+  "nom": "Victoria",
+  "pays": "Seychelles",
+  "lat": -4.616632,
+  "lon": 55.44999,
+  "population": 33576,
+  "capitale": true
+ },
+ {
+  "nom": "San Marino",
+  "pays": "San Marino",
+  "lat": 43.936096,
+  "lon": 12.44177,
+  "population": 29579,
+  "capitale": true
+ },
+ {
+  "nom": "Tarawa",
+  "pays": "Kiribati",
+  "lat": 1.338188,
+  "lon": 173.017571,
+  "population": 28802,
+  "capitale": true
+ },
+ {
+  "nom": "Majuro",
+  "pays": "Marshall Islands",
+  "lat": 7.103004,
+  "lon": 171.38,
+  "population": 25400,
+  "capitale": true
+ },
+ {
+  "nom": "Roseau",
+  "pays": "Dominica",
+  "lat": 15.301016,
+  "lon": -61.387013,
+  "population": 23336,
+  "capitale": true
+ },
+ {
+  "nom": "Basseterre",
+  "pays": "Saint Kitts and Nevis",
+  "lat": 17.302031,
+  "lon": -62.717009,
+  "population": 21887,
+  "capitale": true
+ },
+ {
+  "nom": "Belmopan",
+  "pays": "Belize",
+  "lat": 17.252034,
+  "lon": -88.767073,
+  "population": 15220,
+  "capitale": true
+ },
+ {
+  "nom": "Melekeok",
+  "pays": "Palau",
+  "lat": 7.487396,
+  "lon": 134.626549,
+  "population": 7026,
+  "capitale": true
+ },
+ {
+  "nom": "Funafuti",
+  "pays": "Tuvalu",
+  "lat": -8.516652,
+  "lon": 179.216647,
+  "population": 4749,
+  "capitale": true
+ },
+ {
+  "nom": "Palikir",
+  "pays": "Federated States of Micronesia",
+  "lat": 6.916644,
+  "lon": 158.149974,
+  "population": 4645,
+  "capitale": true
+ },
+ {
+  "nom": "Vatican City",
+  "pays": "Vatican",
+  "lat": 41.903282,
+  "lon": 12.453387,
+  "population": 832,
+  "capitale": true
+ }
+]

@@ -54,6 +54,18 @@ app = Flask(__name__)
 from routes_dashboard import dashboard_bp
 app.register_blueprint(dashboard_bp)
 
+# Refonte Carte (10 sept 2026) : routes /api/carte/* déplacées dans routes_carte.py,
+# même patron que dashboard_bp ci-dessus.
+from routes_carte import carte_bp
+app.register_blueprint(carte_bp)
+
+# Intégration GUI du diagnostic doublons pays-entier (14 sept 2026, point 4
+# du backlog) : import direct, pas un sous-processus -- zone_repository.py
+# vit dans gui/, même codebase que app.py (contrairement à generator/
+# chantiers.py, jamais importé directement ici, voir plus bas). Utilisé
+# uniquement par /api/chantiers/appliquer pour le type doublon_pays_entier.
+from zone_repository import ZoneRepository, ZoneRepositoryError
+
 # ── État global des runs ──────────────────────────────────────────────────────
 
 # { run_id: { "process": Popen, "lines": [...], "done": bool, "script_id": str } }
@@ -731,7 +743,9 @@ N_PATTERNS = 5          # nombre de motifs distincts définis côté frontend
 
 def _scan_n1_zones_with_desc(vault_root: Path, scenario: str) -> list:
     """
-    Zones niveau 1 avec nom + description (pour légende carte + prompt LLM).
+    Zones niveau 1 avec nom + description (pour prompt LLM de /api/carte/propose
+    -- reste volontairement limité au niveau 1, une proposition d'affectation
+    de PAYS ne doit jamais suggérer une sous-zone niveau 2/3 comme cible).
     Couleurs réparties uniformément sur la roue teinte (jamais de collision, contrairement
     à un hash qui peut faire tomber deux zones sur la même couleur). Au-delà de
     PATTERN_THRESHOLD zones, un index de motif est aussi assigné pour renforcer la
@@ -780,48 +794,124 @@ def _scan_n1_zones_with_desc(vault_root: Path, scenario: str) -> list:
     return result
 
 
-@app.route("/api/carte/affectations", methods=["GET"])
-def carte_affectations():
+def _scan_zones_carte(vault_root: Path, scenario: str) -> list:
     """
-    Retourne, pour un scénario, la liste des zones N1 (avec couleur stable) et
-    l'affectation zone de chaque pays de pays_liste (fiche à jour > table statique > null).
-    GET /api/carte/affectations?scenario=breakdown
+    Zones à colorer sur la carte : niveau 1 (coloriage pays-entier classique
+    via zones_pays.json) UNION zones niveau 2/3 référencées par un overlay
+    custom (gui/static/geo_overlays/{scenario}.geojson) -- demande de David,
+    8 sept 2026 : un overlay doit être une zone à part entière, observable et
+    coloriée comme les autres, pas un cas dégradé qui retombe sur un bleu
+    générique faute de couleur assignée.
+
+    Distinct de _scan_n1_zones_with_desc (qui reste niveau-1-only, utilisée
+    par /api/carte/propose -- une proposition d'affectation de PAYS ne doit
+    jamais cibler une sous-zone). Cette fonction-ci alimente uniquement
+    /api/carte/affectations (légende + coloriage carte).
+
+    Une seule roue de teintes pour l'ensemble niveau 1 + overlays -- aucune
+    collision de couleur entre les deux groupes, contrairement à deux roues
+    calculées séparément. Conséquence assumée : les couleurs des zones
+    niveau 1 se décalent légèrement selon le nombre d'overlays présents
+    (elles ne sont de toute façon jamais persistées, recalculées à chaque
+    appel).
     """
-    cfg = load_config()
-    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
-    vault_root   = Path(cfg.get("vault_root", ""))
-    scenario = request.args.get("scenario", "").strip()
     if not scenario:
-        return jsonify({"error": "scenario requis"}), 400
+        return []
+    geo_file = vault_root / "geographie" / f"{scenario}.md"
+    if not geo_file.exists():
+        return []
+    try:
+        import yaml as _yaml
+        raw = geo_file.read_text(encoding="utf-8")
+        parts = raw.split("---")
+        fm_str = parts[1] if len(parts) >= 2 else raw
+        fm = _yaml.safe_load(fm_str) or {}
+        raw_zones = fm.get("zones") or []
+    except Exception:
+        return []
+
+    by_slug = {z.get("slug"): z for z in raw_zones if isinstance(z, dict) and z.get("slug")}
+
+    result = []
+    seen = set()
+    for z in raw_zones:
+        if not isinstance(z, dict):
+            continue
+        if int(z.get("niveau", 1)) != 1:
+            continue
+        slug = str(z.get("slug", "")).strip()
+        if not slug:
+            continue
+        result.append({
+            "slug": slug,
+            "nom": str(z.get("nom", slug)).strip(),
+            "description": str(z.get("description", "")).strip(),
+            "niveau": 1,
+            "_couleur_custom": z.get("couleur"),
+            "_motif_custom": z.get("motif"),
+        })
+        seen.add(slug)
 
     gui_dir = Path(__file__).parent
-    zones_pays_path = gui_dir / "zones_pays.json"
-    zones_pays = {}
-    pays_liste = []
-    if zones_pays_path.exists():
+    overlay_path = gui_dir / "static" / "geo_overlays" / f"{scenario}.geojson"
+    if overlay_path.exists():
         try:
-            zones_pays = json.loads(zones_pays_path.read_text(encoding="utf-8"))
-            pays_liste = zones_pays.get("pays_liste", [])
-        except Exception:
-            pass
+            fc = json.loads(overlay_path.read_text(encoding="utf-8"))
+            overlay_slugs = {
+                f.get("properties", {}).get("zone_slug")
+                for f in fc.get("features", [])
+            }
+        except (json.JSONDecodeError, OSError):
+            overlay_slugs = set()
+        for slug in sorted(s for s in overlay_slugs if s and s not in seen):
+            z = by_slug.get(slug)
+            if not z:
+                continue  # overlay orphelin -- signalé par check_overlay_portion_coherence.py
+            result.append({
+                "slug": slug,
+                "nom": str(z.get("nom", slug)).strip(),
+                "description": str(z.get("description", "")).strip(),
+                "niveau": int(z.get("niveau", 2)),
+                "_couleur_custom": z.get("couleur"),
+                "_motif_custom": z.get("motif"),
+            })
+            seen.add(slug)
 
-    fresh_index = _build_origine_reelle_index(vault_root, scenario)
-    scenario_fallback = zones_pays.get(scenario, {})
+    result.sort(key=lambda x: (x["niveau"], x["slug"]))  # niveau 1 d'abord, alphabétique ensuite
 
-    affectations = {}
-    for pays in pays_liste:
-        n = _normalise_pays(pays)
-        zone = fresh_index.get(n) or scenario_fallback.get(pays)
-        affectations[pays] = zone
+    n = len(result)
+    use_patterns = n > PATTERN_THRESHOLD
+    for i, z in enumerate(result):
+        hue = (i / n) if n else 0
+        lightness = 0.50 if i % 2 == 0 else 0.42
+        # Couleur/motif choisis manuellement (8 sept 2026) prennent le pas sur
+        # le calcul automatique -- roue de teintes et hachures génériques
+        # restent le comportement par défaut tant que rien n'est personnalisé.
+        z["color"] = z.pop("_couleur_custom") or _hsl_to_hex(hue, 0.60, lightness)
+        motif_custom = z.pop("_motif_custom")
+        z["motif"] = motif_custom  # null si non personnalisé -- le front sait alors retomber sur "pattern"
+        z["pattern"] = None if motif_custom else ((i % N_PATTERNS) if use_patterns else None)
 
-    zones_n1 = _scan_n1_zones_with_desc(vault_root, scenario)
+    return result
 
-    return jsonify({
-        "scenario": scenario,
-        "pays_liste": pays_liste,
-        "affectations": affectations,
-        "zones_n1": zones_n1,
-    })
+
+def _get_zone_origine_reelle(vault_root, scenario, slug):
+    """Retourne origine_reelle (liste de {entite, type_entite, portion}) de
+    la zone `slug`, tous niveaux confondus, ou None si la zone n'existe pas.
+    Réutilise la même lecture que _scan_n1_zones_with_desc mais sans filtrer
+    sur niveau == 1 -- un overlay peut cibler une sous-zone niveau 2/3."""
+    geo_file = vault_root / "geographie" / f"{scenario}.md"
+    if not geo_file.exists():
+        return None
+    import yaml as _yaml
+    raw = geo_file.read_text(encoding="utf-8")
+    parts = raw.split("---")
+    fm_str = parts[1] if len(parts) >= 2 else raw
+    fm = _yaml.safe_load(fm_str) or {}
+    for z in (fm.get("zones") or []):
+        if isinstance(z, dict) and z.get("slug") == slug:
+            return z.get("origine_reelle") or []
+    return None
 
 
 def _call_llm_text(prompt: str) -> str:
@@ -900,226 +990,11 @@ def _call_llm_text(prompt: str) -> str:
         return "".join(b.get("text", "") for b in data.get("content", []) if b.get("type") == "text")
 
 
-@app.route("/api/carte/propose", methods=["POST"])
-def carte_propose():
-    """
-    Propose une affectation de zone pour un pays donné (appel LLM unique, pas de batch).
-    Body JSON : { "pays": "Allemagne", "scenario": "breakdown" }
-    """
-    cfg = load_config()
-    vault_root = Path(cfg.get("vault_root", ""))
-    data = request.get_json() or {}
-    pays = data.get("pays", "").strip()
-    scenario = data.get("scenario", "").strip()
-    if not pays or not scenario:
-        return jsonify({"error": "pays et scenario requis"}), 400
-
-    zones_n1 = _scan_n1_zones_with_desc(vault_root, scenario)
-
-    # Index pays -> zone (à jour, source de vérité = geographie/{scenario}.md) pour
-    # afficher au LLM les pays déjà rattachés à chaque zone. La description narrative
-    # seule peut ne citer aucun nom de pays explicite (villes, concepts, factions), ce
-    # qui laisse le LLM sans signal géographique fiable pour rattacher un nouveau pays.
-    fresh_index = _build_origine_reelle_index(vault_root, scenario)
-    zone_to_pays = {}
-    for pays_norm, slug in fresh_index.items():
-        zone_to_pays.setdefault(slug, []).append(pays_norm)
-
-    zones_desc = "\n".join(
-        f"- {z['slug']} ({z['nom']}) : {z['description'][:300]}"
-        + (f" [pays déjà affectés : {', '.join(sorted(zone_to_pays[z['slug']])[:10])}]"
-           if z['slug'] in zone_to_pays else "")
-        for z in zones_n1
-    ) or "(aucune zone existante)"
-
-    prompt = f"""Tu travailles sur l'univers narratif spéculatif "Ourrassol 2098", scénario "{scenario}".
-Voici les zones géopolitiques de niveau 1 (N1) déjà définies pour ce scénario :
-
-{zones_desc}
-
-Le pays réel (2026) "{pays}" n'a pas encore d'affectation à une zone 2098 dans ce scénario.
-
-Réponds UNIQUEMENT en JSON valide (rien avant, rien après), avec ce format exact :
-{{
-  "zone_existante_recommandee": "slug_de_zone_ou_null",
-  "nouvelle_zone_proposee": {{"slug": "nouveau_slug", "nom": "Nom de la zone", "description": "1-2 phrases"}} ou null,
-  "justification": "1-3 phrases expliquant le choix, cohérentes avec la logique narrative du scénario"
-}}
-
-Recommande une zone existante si "{pays}" y a narrativement sa place. Base ta décision en priorité sur la proximité géographique/continentale avec les pays déjà affectés listés entre crochets (quand ils sont présents) — la description narrative seule peut ne pas mentionner tous les pays membres. Propose une nouvelle zone N1 uniquement si aucune zone existante ne convient géographiquement ni narrativement."""
-
-    try:
-        raw_response = _call_llm_text(prompt)
-        cleaned = raw_response.strip()
-        if cleaned.startswith("```"):
-            cleaned = re.sub(r"^```(json)?", "", cleaned).strip()
-            cleaned = re.sub(r"```$", "", cleaned).strip()
-        proposal = json.loads(cleaned)
-        return jsonify({"ok": True, "proposal": proposal})
-    except Exception as e:
-        import traceback
-        traceback.print_exc()  # trace complète dans le terminal Flask
-        return jsonify({"ok": False, "error": f"{type(e).__name__}: {e}"}), 500
 
 
-@app.route("/api/carte/assign", methods=["POST"])
-def carte_assign():
-    """
-    Applique une affectation pays -> zone.
-    Body JSON : {
-      "pays": "Allemagne", "scenario": "breakdown", "action": "absorber"|"creer",
-      "zone_slug": "arc_sahelo_mediterraneen",                       (si absorber)
-      "nouvelle_zone": {"slug":..., "nom":..., "description":...}    (si creer)
-    }
-    Écrit dans geographie/{scenario}.md (origine_reelle) ET zones_pays.json (fallback).
-    """
-    cfg = load_config()
-    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
-    vault_root   = Path(cfg.get("vault_root", ""))
-    data = request.get_json() or {}
-    pays = data.get("pays", "").strip()
-    scenario = data.get("scenario", "").strip()
-    action = data.get("action", "").strip()
-
-    if not pays or not scenario or action not in ("absorber", "creer"):
-        return jsonify({"error": "pays, scenario, action (absorber|creer) requis"}), 400
-
-    geo_file = vault_root / "geographie" / f"{scenario}.md"
-    if not geo_file.exists():
-        return jsonify({"error": f"Fiche géographie introuvable : {geo_file}"}), 404
-
-    try:
-        import yaml as _yaml
-        raw = geo_file.read_text(encoding="utf-8")
-        parts = raw.split("---")
-        if len(parts) < 3:
-            return jsonify({"error": "Format de fiche géographie inattendu"}), 500
-        fm = _yaml.safe_load(parts[1]) or {}
-        zones = fm.get("zones") or []
-
-        if action == "absorber":
-            zone_slug = data.get("zone_slug", "").strip()
-            if not zone_slug:
-                return jsonify({"error": "zone_slug requis pour absorber"}), 400
-            target = next((z for z in zones if z.get("slug") == zone_slug), None)
-            if not target:
-                return jsonify({"error": f"Zone '{zone_slug}' introuvable dans la fiche"}), 404
-
-            # Retirer le pays de toute autre zone (cas d'une bascule d'affectation)
-            for z in zones:
-                if z is target:
-                    continue
-                origine = z.get("origine_reelle")
-                if isinstance(origine, list):
-                    z["origine_reelle"] = [
-                        o for o in origine
-                        if not (isinstance(o, dict) and o.get("entite") == pays)
-                    ]
-
-            origine = target.setdefault("origine_reelle", [])
-            if not any(isinstance(o, dict) and o.get("entite") == pays for o in origine):
-                origine.append({"entite": pays})
-            final_slug = zone_slug
-
-        else:  # creer
-            nz = data.get("nouvelle_zone") or {}
-            slug = str(nz.get("slug", "")).strip()
-            nom = str(nz.get("nom", "")).strip()
-            description = str(nz.get("description", "")).strip()
-            if not slug or not nom:
-                return jsonify({"error": "nouvelle_zone.slug et .nom requis"}), 400
-            if any(z.get("slug") == slug for z in zones):
-                return jsonify({"error": f"Le slug '{slug}' existe déjà"}), 409
-
-            # Retirer le pays de toute zone existante (cas d'une bascule vers une nouvelle zone)
-            for z in zones:
-                origine = z.get("origine_reelle")
-                if isinstance(origine, list):
-                    z["origine_reelle"] = [
-                        o for o in origine
-                        if not (isinstance(o, dict) and o.get("entite") == pays)
-                    ]
-
-            zones.append({
-                "slug": slug,
-                "nom": nom,
-                "niveau": 1,
-                "parent": None,
-                "description": description,
-                "origine_reelle": [{"entite": pays}],
-            })
-            final_slug = slug
-
-        fm["zones"] = zones
-
-        # Backup + réécriture (frontmatter YAML régénéré, reste du fichier inchangé)
-        bak = geo_file.with_suffix(geo_file.suffix + ".bak")
-        bak.write_text(raw, encoding="utf-8")
-
-        new_fm = _yaml.dump(fm, allow_unicode=True, sort_keys=False, default_flow_style=False)
-        rest = "---".join(parts[2:])
-        new_content = "---\n" + new_fm + "---" + rest
-        geo_file.write_text(new_content, encoding="utf-8")
-
-        # Mise à jour du fallback zones_pays.json
-        gui_dir = Path(__file__).parent
-        zones_pays_path = gui_dir / "zones_pays.json"
-        if zones_pays_path.exists():
-            zp = json.loads(zones_pays_path.read_text(encoding="utf-8"))
-            zp.setdefault(scenario, {})[pays] = final_slug
-            zones_pays_path.write_text(json.dumps(zp, indent=2, ensure_ascii=False), encoding="utf-8")
-
-        # Retirer de zones_manquantes.yaml si présent
-        try:
-            log_path = vault_root / "documentation" / "need_action" / "zones_manquantes.yaml"
-            if log_path.exists():
-                existing = _yaml.safe_load(log_path.read_text(encoding="utf-8")) or {}
-                entries = existing.get("zones_manquantes", [])
-                entries = [e for e in entries
-                           if not (e.get("pays") == pays and e.get("scenario") == scenario)]
-                existing["zones_manquantes"] = entries
-                log_path.write_text(
-                    _yaml.dump(existing, allow_unicode=True, sort_keys=False, default_flow_style=False),
-                    encoding="utf-8"
-                )
-        except Exception:
-            pass
-
-        return jsonify({"ok": True, "zone": final_slug})
-
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
 
 
-@app.route("/api/carte/ignorer", methods=["POST"])
-def carte_ignorer():
-    """Marque un pays comme blanc intentionnel pour ce scénario (crée l'entrée si absente)."""
-    cfg = load_config()
-    vault_root = Path(cfg.get("vault_root", ""))
-    data = request.get_json() or {}
-    pays = data.get("pays", "").strip()
-    scenario = data.get("scenario", "").strip()
-    if not pays or not scenario:
-        return jsonify({"error": "pays et scenario requis"}), 400
-
-    _log_zone_manquante(vault_root, pays, scenario)
-
-    try:
-        import yaml as _yaml
-        log_path = vault_root / "documentation" / "need_action" / "zones_manquantes.yaml"
-        existing = _yaml.safe_load(log_path.read_text(encoding="utf-8")) or {}
-        entries = existing.get("zones_manquantes", [])
-        for e in entries:
-            if e.get("pays") == pays and e.get("scenario") == scenario:
-                e["statut"] = "blanc_intentionnel"
-        existing["zones_manquantes"] = entries
-        log_path.write_text(
-            _yaml.dump(existing, allow_unicode=True, sort_keys=False, default_flow_style=False),
-            encoding="utf-8"
-        )
-        return jsonify({"ok": True})
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
+MOTIFS_VALIDES = ["radiation", "flamme", "vague", "crane"]
 
 
 # ── Rapport d'impact — bascule de pays vers une autre zone ──────────────────
@@ -1237,117 +1112,6 @@ def _scan_instances_events(vault_root: Path, scenario: str, pays_folded: str,
     return instances_liees[:100], mentions_texte[:50]
 
 
-@app.route("/api/carte/impact", methods=["POST"])
-def carte_impact():
-    """
-    Rapport d'impact en lecture seule pour une bascule de zone.
-    Body JSON : {
-      "pays": "Russie", "scenario": "breakdown",
-      "action": "absorber"|"creer",
-      "zone_slug": "..."           (si absorber, la zone cible)
-      "nouvelle_zone": {...}       (si creer)
-    }
-    N'écrit RIEN sur les fiches — sauf le rapport lui-même dans documentation/need_action/.
-    """
-    cfg = load_config()
-    vault_root = Path(cfg.get("vault_root", ""))
-    data = request.get_json() or {}
-    pays = data.get("pays", "").strip()
-    scenario = data.get("scenario", "").strip()
-    action = data.get("action", "").strip()
-
-    if not pays or not scenario:
-        return jsonify({"error": "pays et scenario requis"}), 400
-
-    zones = _load_all_zones(vault_root, scenario)
-    pays_folded = _fold(pays)
-
-    # Zone actuelle du pays (avant bascule)
-    ancienne_zone = None
-    for z in zones:
-        for o in (z.get("origine_reelle") or []):
-            if isinstance(o, dict) and o.get("entite") == pays:
-                ancienne_zone = z.get("slug")
-                break
-        if ancienne_zone:
-            break
-
-    cible_slug = data.get("zone_slug", "").strip() if action == "absorber" else \
-        (data.get("nouvelle_zone") or {}).get("slug", "")
-
-    # Sous-zones potentiellement orphelines : descendantes de l'ancienne zone
-    # dont l'origine_reelle mentionne ce pays
-    sous_zones_orphelines = []
-    if ancienne_zone:
-        descendants = set(_zone_descendants(zones, ancienne_zone)) - {ancienne_zone}
-        by_slug = {z.get("slug"): z for z in zones}
-        for slug in descendants:
-            z = by_slug.get(slug)
-            if not z:
-                continue
-            for o in (z.get("origine_reelle") or []):
-                entite = o.get("entite", "") if isinstance(o, dict) else ""
-                if pays_folded in _fold(entite):
-                    sous_zones_orphelines.append({
-                        "slug": slug, "nom": z.get("nom", slug),
-                        "niveau": z.get("niveau"), "origine": entite,
-                    })
-                    break
-
-    # Zones structurellement liées (ancienne + cible) pour le scan instances/events
-    zone_slugs_liees = set()
-    if ancienne_zone:
-        zone_slugs_liees |= set(_zone_descendants(zones, ancienne_zone))
-    if cible_slug:
-        zone_slugs_liees |= set(_zone_descendants(zones, cible_slug))
-
-    instances_liees, mentions_texte = _scan_instances_events(
-        vault_root, scenario, pays_folded, zone_slugs_liees
-    )
-    registre_hits = _scan_registre_evenements(vault_root, scenario, pays_folded)
-
-    rapport = {
-        "pays": pays,
-        "scenario": scenario,
-        "ancienne_zone": ancienne_zone,
-        "nouvelle_zone": cible_slug,
-        "sous_zones_orphelines": sous_zones_orphelines,
-        "instances_liees": instances_liees,
-        "mentions_texte": mentions_texte,
-        "registre_hits": registre_hits,
-        "rien_detecte": not (sous_zones_orphelines or instances_liees or mentions_texte or registre_hits),
-    }
-
-    # Sauvegarde du rapport (lecture seule, écrase le précédent pour ce pays/scénario)
-    try:
-        out_dir = vault_root / "documentation" / "need_action"
-        out_dir.mkdir(parents=True, exist_ok=True)
-        slug_pays = re.sub(r"[^a-z0-9]+", "_", _fold(pays)).strip("_")
-        out_path = out_dir / f"impact_bascule_{slug_pays}_{scenario}.md"
-        lignes = [
-            f"# Rapport d'impact — {pays} ({scenario})",
-            f"",
-            f"Bascule évaluée : `{ancienne_zone or '—'}` → `{cible_slug or '—'}`",
-            f"",
-            f"## Sous-zones potentiellement orphelines ({len(sous_zones_orphelines)})",
-        ]
-        for sz in sous_zones_orphelines:
-            lignes.append(f"- `{sz['slug']}` ({sz['nom']}, niveau {sz['niveau']}) — origine : {sz['origine']}")
-        lignes.append(f"\n## Instances/événements liés structurellement ({len(instances_liees)})")
-        for it in instances_liees:
-            lignes.append(f"- `{it['slug']}` — zone : {it['zone']}")
-        lignes.append(f"\n## Mentions textuelles de « {pays} » ({len(mentions_texte)})")
-        for m in mentions_texte:
-            lignes.append(f"- `{m['slug']}` — {m['extrait']}")
-        lignes.append(f"\n## Registre des événements ({len(registre_hits)})")
-        for r in registre_hits:
-            lignes.append(f"- {r}")
-        out_path.write_text("\n".join(lignes) + "\n", encoding="utf-8")
-        rapport["rapport_path"] = str(out_path)
-    except Exception:
-        pass
-
-    return jsonify(rapport)
 
 
 # ── P7 étape 1 : renommage de zone (slug + nom), propagation vérifiée le 12 juillet
@@ -1545,97 +1309,6 @@ def _rename_zone_in_zones_pays(zones_pays_path, scenario, ancien_slug, nouveau_s
     return touches
 
 
-@app.route("/api/carte/impact_renommage_zone", methods=["POST"])
-def carte_impact_renommage_zone():
-    """
-    Rapport d'impact en lecture seule pour un renommage de zone (P7 étape 1).
-    Body JSON : { "scenario":..., "ancien_slug":...,
-                  "nouveau_slug":... (optionnel, pour vérifier une collision de slug),
-                  "nouveau_nom":... (optionnel) }
-    N'écrit RIEN.
-    """
-    cfg = load_config()
-    vault_root = Path(cfg.get("vault_root", ""))
-    data = request.get_json() or {}
-    scenario = data.get("scenario", "").strip()
-    ancien_slug = data.get("ancien_slug", "").strip()
-    nouveau_slug = data.get("nouveau_slug", "").strip()
-
-    if not scenario or not ancien_slug:
-        return jsonify({"error": "scenario et ancien_slug requis"}), 400
-
-    geo_report = _apply_rename_geographie(
-        vault_root, scenario, ancien_slug, nouveau_slug or ancien_slug, None, dry_run=True
-    )
-    if "error" in geo_report:
-        return jsonify(geo_report), 404
-
-    instances_liees = _rename_zone_in_instances(vault_root, scenario, ancien_slug, "—", dry_run=True)
-
-    gui_dir = Path(__file__).parent
-    zones_pays_path = gui_dir / "zones_pays.json"
-    pays_lies = _rename_zone_in_zones_pays(zones_pays_path, scenario, ancien_slug, "—", dry_run=True)
-
-    collision_entite = None
-    if nouveau_slug and (vault_root / "entites" / f"{nouveau_slug}.md").exists():
-        collision_entite = nouveau_slug
-
-    return jsonify({
-        "zone": geo_report["zone"],
-        "enfants_directs": geo_report["enfants_directs"],
-        "zones_relations_liees": geo_report["zones_relations_liees"],
-        "instances_liees": instances_liees,
-        "pays_zones_pays_json": pays_lies,
-        "collision_slug_entite": collision_entite,
-        "rien_detecte": not (geo_report["enfants_directs"] or geo_report["zones_relations_liees"]
-                              or instances_liees or pays_lies),
-    })
-
-
-@app.route("/api/carte/renommer_zone", methods=["POST"])
-def carte_renommer_zone():
-    """
-    Applique le renommage d'un slug (et éventuellement du nom affiché) d'une zone.
-    Body JSON : { "scenario":..., "ancien_slug":..., "nouveau_slug":...,
-                  "nouveau_nom":... (optionnel) }
-    """
-    cfg = load_config()
-    vault_root = Path(cfg.get("vault_root", ""))
-    data = request.get_json() or {}
-    scenario = data.get("scenario", "").strip()
-    ancien_slug = data.get("ancien_slug", "").strip()
-    nouveau_slug = data.get("nouveau_slug", "").strip()
-    nouveau_nom = data.get("nouveau_nom", "").strip() or None
-
-    if not scenario or not ancien_slug or not nouveau_slug:
-        return jsonify({"error": "scenario, ancien_slug, nouveau_slug requis"}), 400
-    if not re.match(r"^[a-z0-9_]+$", nouveau_slug):
-        return jsonify({"error": "nouveau_slug : lettres minuscules, chiffres, underscores uniquement"}), 400
-
-    geo_result = _apply_rename_geographie(
-        vault_root, scenario, ancien_slug, nouveau_slug, nouveau_nom, dry_run=False
-    )
-    if "error" in geo_result:
-        code = 409 if "existe déjà" in geo_result["error"] else 404
-        return jsonify(geo_result), code
-
-    instances_touchees = _rename_zone_in_instances(vault_root, scenario, ancien_slug, nouveau_slug, dry_run=False)
-
-    gui_dir = Path(__file__).parent
-    zones_pays_path = gui_dir / "zones_pays.json"
-    pays_touches = _rename_zone_in_zones_pays(zones_pays_path, scenario, ancien_slug, nouveau_slug, dry_run=False)
-
-    return jsonify({
-        "ok": True,
-        "nouveau_slug": nouveau_slug,
-        "enfants_maj": geo_result["enfants_maj"],
-        "zones_relations_maj": geo_result["zones_relations_maj"],
-        "body_maj": geo_result["body_maj"],
-        "instances_maj": len(instances_touchees),
-        "pays_maj": len(pays_touches),
-    })
-
-
 # ── P7 étape 2, phase 1 : visualisation en arbre des sous-zones (lecture seule,
 #    12 juillet 2026). Les zones niveau 2/3 n'ont ni coordonnées lat/lng ni
 #    correspondance polygone sur la carte Leaflet (elles ne sont pas géocodées) —
@@ -1666,6 +1339,8 @@ def _build_zone_tree(zones, root_slug):
             "type": z.get("type"),
             "statut": z.get("statut"),
             "origine_reelle": z.get("origine_reelle") or [],
+            "couleur": z.get("couleur"),
+            "motif": z.get("motif"),
             "enfants": [e for e in enfants if e is not None],
         }
 
@@ -1701,82 +1376,6 @@ def _chemin_vers_racine(zone: dict, by_slug: dict) -> list:
         parent_slug = courant.get("parent")
         courant = by_slug.get(parent_slug) if parent_slug else None
     return list(reversed(chemin))
-
-
-@app.route("/api/carte/rechercher_zone", methods=["GET"])
-def carte_rechercher_zone():
-    """
-    Recherche une zone par nom ou slug, TOUS NIVEAUX confondus -- contrairement
-    à la liste principale de la Carte (/api/carte/affectations, zones_n1) qui
-    n'affiche que les zones niveau 1. Pour chaque résultat, retourne le
-    chemin complet depuis la racine N1 (celle à ouvrir dans la Carte) jusqu'à
-    la zone trouvée, pour ne plus avoir à deviner ou remonter la chaîne
-    `parent` à la main.
-
-    GET /api/carte/rechercher_zone?scenario=new_sustainability&q=rhone
-    Retourne { scenario, q, resultats: [ { slug, nom, niveau, chemin: [...] } ] }
-    Recherche insensible à la casse et aux accents (voir _fold). Triés par
-    niveau puis nom -- les zones N1 correspondantes remontent en premier.
-    """
-    cfg = load_config()
-    vault_root = Path(cfg.get("vault_root", ""))
-    scenario = request.args.get("scenario", "").strip()
-    q = request.args.get("q", "").strip()
-
-    if not scenario or not q:
-        return jsonify({"error": "scenario et q requis"}), 400
-    if len(q) < 2:
-        return jsonify({"error": "q trop court (minimum 2 caractères)"}), 400
-
-    zones = _load_all_zones(vault_root, scenario)
-    if not zones:
-        return jsonify({"error": f"Aucune zone trouvée pour le scénario '{scenario}'"}), 404
-
-    by_slug = {z.get("slug"): z for z in zones if z.get("slug")}
-    q_fold = _fold(q)
-
-    resultats = []
-    for z in zones:
-        slug = str(z.get("slug", ""))
-        nom = str(z.get("nom", ""))
-        if q_fold in _fold(nom) or q_fold in _fold(slug):
-            resultats.append({
-                "slug": slug,
-                "nom": nom,
-                "niveau": z.get("niveau"),
-                "chemin": _chemin_vers_racine(z, by_slug),
-            })
-
-    resultats.sort(key=lambda r: (r["niveau"] if isinstance(r["niveau"], int) else 1, r["nom"] or ""))
-
-    return jsonify({"scenario": scenario, "q": q, "resultats": resultats})
-
-
-@app.route("/api/carte/arbre_zone", methods=["GET"])
-def carte_arbre_zone():
-    """
-    GET /api/carte/arbre_zone?scenario=breakdown&slug=arc_eurasien_central
-    Arbre hiérarchique en lecture seule d'une zone (niveau 1 en pratique, mais
-    fonctionne pour n'importe quel slug) et de tous ses descendants niveau 2/3.
-    N'écrit rien.
-    """
-    cfg = load_config()
-    vault_root = Path(cfg.get("vault_root", ""))
-    scenario = request.args.get("scenario", "").strip()
-    slug = request.args.get("slug", "").strip()
-
-    if not scenario or not slug:
-        return jsonify({"error": "scenario et slug requis"}), 400
-
-    zones = _load_all_zones(vault_root, scenario)
-    if not zones:
-        return jsonify({"error": f"Aucune zone trouvée pour le scénario '{scenario}'"}), 404
-
-    arbre = _build_zone_tree(zones, slug)
-    if arbre is None:
-        return jsonify({"error": f"Zone '{slug}' introuvable dans '{scenario}'"}), 404
-
-    return jsonify({"arbre": arbre})
 
 
 # ── P7 étape 2, phase 2 : reparent (13 juillet 2026). Déplace une zone niveau
@@ -1827,6 +1426,65 @@ def _reparent_zone_body_text(body, slug, nouveau_parent_slug, sous_arbre_by_slug
     return body, changed
 
 
+def _zone_niveau1_ancestor(by_slug, slug):
+    """
+    Remonte les parents depuis `slug` jusqu'à une zone niveau 1 (elle-même si
+    elle l'est déjà). Retourne None sur chaîne cassée ou cycle -- utilisé
+    pour resynchroniser zones_pays.json après un reparent qui change le
+    niveau d'une zone (voir _apply_reparent_zone).
+    """
+    seen = set()
+    current = by_slug.get(slug)
+    while current and current.get("niveau", 1) != 1:
+        if current.get("slug") in seen:
+            return None  # cycle
+        seen.add(current.get("slug"))
+        current = by_slug.get(current.get("parent"))
+    return current.get("slug") if current else None
+
+
+def _sync_zones_pays_after_reparent(zones_pays_path, scenario, slug, by_slug, dry_run):
+    """
+    Bug trouvé le 8 sept 2026 (David -- "le Groenland apparaît bleu, pas
+    comme les autres régions de sa zone") : contrairement à _apply_split_zone,
+    _rename_zone_in_zones_pays et _creer_zone_in_zones_pays, le reparent ne
+    synchronisait jamais zones_pays.json. Symptôme : une zone niveau 1
+    rétrogradée en sous-zone (ex. nuuk_forteresse sous espace_nordique_arctique)
+    laisse zones_pays.json pointer vers un slug qui n'est plus niveau 1 --
+    _scan_zones_carte() ne lui trouve alors aucune couleur (fallback bleu
+    générique), exactement le même symptôme que les zones overlay sans
+    couleur avant le fix du même jour.
+
+    Si `slug` est maintenant niveau 1 : rien à faire (cible valide telle
+    quelle). Sinon : réaffecte tout pays actuellement assigné à `slug` vers
+    son nouvel ancêtre niveau 1 (_zone_niveau1_ancestor) -- ou le désaffecte
+    (null) si aucun ancêtre niveau 1 n'est trouvé (chaîne cassée), plutôt que
+    de laisser une référence silencieusement invalide.
+
+    Retourne la liste des pays effectivement touchés (ou qui le seraient en
+    dry_run).
+    """
+    if not zones_pays_path.exists():
+        return []
+    target = by_slug.get(slug)
+    if not target or target.get("niveau", 1) == 1:
+        return []  # toujours/de nouveau niveau 1, cible valide, rien à corriger
+
+    nouvel_ancetre = _zone_niveau1_ancestor(by_slug, slug)
+
+    zp = json.loads(zones_pays_path.read_text(encoding="utf-8"))
+    sc = zp.get(scenario, {})
+    touches = [pays for pays, z in sc.items() if z == slug]
+
+    if not dry_run and touches:
+        for pays in touches:
+            sc[pays] = nouvel_ancetre  # None si chaîne cassée -- désaffecté plutôt qu'invalide
+        zp[scenario] = sc
+        zones_pays_path.write_text(json.dumps(zp, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    return touches
+
+
 def _apply_reparent_zone(vault_root, scenario, slug, nouveau_parent_slug, dry_run):
     """
     nouveau_parent_slug=None (ou "") : PROMOTION en zone niveau 1 autonome
@@ -1836,6 +1494,8 @@ def _apply_reparent_zone(vault_root, scenario, slug, nouveau_parent_slug, dry_ru
     dans le scénario).
     """
     import yaml as _yaml
+    gui_dir = Path(__file__).parent
+    zones_pays_path = gui_dir / "zones_pays.json"
     geo_file = vault_root / "geographie" / f"{scenario}.md"
     if not geo_file.exists():
         return {"error": f"Fiche géographie introuvable : {geo_file}"}
@@ -1877,6 +1537,17 @@ def _apply_reparent_zone(vault_root, scenario, slug, nouveau_parent_slug, dry_ru
     delta = nouveau_niveau_racine - ancien_niveau
 
     if dry_run:
+        # Aperçu de la synchro zones_pays.json (bug du 8 sept 2026, voir
+        # _sync_zones_pays_after_reparent) -- calculé sans muter by_slug :
+        # le nouvel ancêtre niveau 1 de la cible sera celui du nouveau
+        # parent (elle-même si elle devient racine niveau 1).
+        pays_impactes = []
+        if not devient_racine and ancien_niveau == 1 and zones_pays_path.exists():
+            nouvel_ancetre_preview = _zone_niveau1_ancestor(by_slug, nouveau_parent_slug)
+            zp_preview = json.loads(zones_pays_path.read_text(encoding="utf-8"))
+            sc_preview = zp_preview.get(scenario, {})
+            pays_impactes = [p for p, z in sc_preview.items() if z == slug]
+            pays_impactes = [{"pays": p, "nouvelle_zone": nouvel_ancetre_preview} for p in pays_impactes]
         return {
             "zone": {"slug": slug, "nom": target.get("nom"), "niveau": ancien_niveau,
                      "ancien_parent": ancien_parent_slug},
@@ -1891,6 +1562,7 @@ def _apply_reparent_zone(vault_root, scenario, slug, nouveau_parent_slug, dry_ru
                  "nouveau_niveau": (by_slug[s].get("niveau") or 1) + delta}
                 for s in sous_arbre_slugs if s != slug
             ],
+            "pays_zones_pays_json_impactes": pays_impactes,
         }
 
     ancien_nom = target.get("nom")
@@ -1911,55 +1583,17 @@ def _apply_reparent_zone(vault_root, scenario, slug, nouveau_parent_slug, dry_ru
     new_fm = _yaml.dump(fm, allow_unicode=True, sort_keys=False, default_flow_style=False)
     geo_file.write_text("---\n" + new_fm + "---" + new_body, encoding="utf-8")
 
+    pays_zones_pays_json = _sync_zones_pays_after_reparent(
+        zones_pays_path, scenario, slug, by_slug, dry_run=False
+    )
+
     return {
         "ok": True, "ancien_nom": ancien_nom, "nouveau_niveau": nouveau_niveau_racine,
         "devient_racine": devient_racine,
         "changement_de_profondeur": delta != 0,
         "descendants_maj": len(sous_arbre_slugs) - 1, "body_maj": body_maj,
+        "pays_zones_pays_json_maj": pays_zones_pays_json,
     }
-
-
-@app.route("/api/carte/impact_reparent_zone", methods=["POST"])
-def carte_impact_reparent_zone():
-    """Rapport d'impact en lecture seule pour un reparent (P7 étape 2 phase 2).
-    Body JSON : { "scenario":..., "slug":..., "nouveau_parent_slug":... }
-    nouveau_parent_slug vide/absent = promotion en zone niveau 1 (parent: null).
-    N'écrit rien."""
-    cfg = load_config()
-    vault_root = Path(cfg.get("vault_root", ""))
-    data = request.get_json() or {}
-    scenario = data.get("scenario", "").strip()
-    slug = data.get("slug", "").strip()
-    nouveau_parent_slug = (data.get("nouveau_parent_slug") or "").strip() or None
-
-    if not scenario or not slug:
-        return jsonify({"error": "scenario et slug requis"}), 400
-
-    rapport = _apply_reparent_zone(vault_root, scenario, slug, nouveau_parent_slug, dry_run=True)
-    if "error" in rapport:
-        return jsonify(rapport), 404
-    return jsonify(rapport)
-
-
-@app.route("/api/carte/reparent_zone", methods=["POST"])
-def carte_reparent_zone():
-    """Applique le déplacement d'une zone (et son sous-arbre) vers un nouveau parent.
-    Body JSON : { "scenario":..., "slug":..., "nouveau_parent_slug":... }
-    nouveau_parent_slug vide/absent = promotion en zone niveau 1 (parent: null)."""
-    cfg = load_config()
-    vault_root = Path(cfg.get("vault_root", ""))
-    data = request.get_json() or {}
-    scenario = data.get("scenario", "").strip()
-    slug = data.get("slug", "").strip()
-    nouveau_parent_slug = (data.get("nouveau_parent_slug") or "").strip() or None
-
-    if not scenario or not slug:
-        return jsonify({"error": "scenario et slug requis"}), 400
-
-    result = _apply_reparent_zone(vault_root, scenario, slug, nouveau_parent_slug, dry_run=False)
-    if "error" in result:
-        return jsonify(result), 409 if "Cycle" in result["error"] else 404
-    return jsonify(result)
 
 
 # ── P7 étape 2, phase 3 : créer une nouvelle zone niveau 1 à la volée (13
@@ -2029,127 +1663,6 @@ def _creer_zone_in_zones_pays(zones_pays_path, scenario, origine_reelle, nouveau
     return touches
 
 
-@app.route("/api/carte/creer_zone_niveau1", methods=["POST"])
-def carte_creer_zone_niveau1():
-    """
-    Crée une nouvelle zone niveau 1 (parent: null) à la volée.
-    Body JSON : { "scenario":..., "slug":..., "nom":..., "type":..., "statut":...,
-                  "origine_reelle": [{"entite":..., "type_entite":...}, ...],
-                  "description":... (optionnel) }
-    """
-    import yaml as _yaml
-    cfg = load_config()
-    vault_root = Path(cfg.get("vault_root", ""))
-    data = request.get_json() or {}
-    scenario = data.get("scenario", "").strip()
-    slug = data.get("slug", "").strip()
-    nom = data.get("nom", "").strip()
-    type_zone = data.get("type", "").strip()
-    statut = data.get("statut", "").strip()
-    origine_reelle = data.get("origine_reelle") or []
-    description = (data.get("description") or "").strip()
-
-    if not scenario or not slug or not nom or not type_zone or not statut:
-        return jsonify({"error": "scenario, slug, nom, type, statut requis"}), 400
-    if not re.match(r"^[a-z0-9_]+$", slug):
-        return jsonify({"error": "slug : lettres minuscules, chiffres, underscores uniquement"}), 400
-    if type_zone not in ZONE_TYPES:
-        return jsonify({"error": f"type invalide, doit être parmi : {', '.join(ZONE_TYPES)}"}), 400
-    if statut not in ZONE_STATUTS:
-        return jsonify({"error": f"statut invalide, doit être parmi : {', '.join(ZONE_STATUTS)}"}), 400
-    if not origine_reelle:
-        return jsonify({"error": "origine_reelle requis (au moins une entrée) — "
-                                  "voir la logique de validate_zone() dans enrich_geographie_recursive.py"}), 400
-    for o in origine_reelle:
-        if not o.get("entite") or o.get("type_entite") not in TYPE_ENTITE_REELLE:
-            return jsonify({"error": f"origine_reelle invalide : {o!r} "
-                                      f"(type_entite doit être parmi {', '.join(TYPE_ENTITE_REELLE)})"}), 400
-
-    geo_file = vault_root / "geographie" / f"{scenario}.md"
-    if not geo_file.exists():
-        return jsonify({"error": f"Fiche géographie introuvable : {geo_file}"}), 404
-
-    raw = geo_file.read_text(encoding="utf-8")
-    parts = raw.split("---", 2)
-    if len(parts) < 3:
-        return jsonify({"error": "Format de fiche géographie inattendu"}), 500
-    fm = _yaml.safe_load(parts[1]) or {}
-    zones = fm.get("zones") or []
-
-    if any(z.get("slug") == slug for z in zones):
-        return jsonify({"error": f"Le slug '{slug}' existe déjà dans ce scénario"}), 409
-
-    # Champs enrichis optionnels (tensions_internes, lieux_emblematiques, relations,
-    # periode_transition, sources_attestees) -- ajoutés le 25 juillet pour P24 étape
-    # C.4 : le formulaire manuel P7 étape 2 ne les envoie jamais (valeurs vides par
-    # défaut, comportement inchangé), mais generer_zone_topdown() (C.2) en produit
-    # de réels -- avant ce fix, ils étaient silencieusement écrasés ici quoi que le
-    # body contienne, perte de contenu invisible pour l'appelant.
-    nouvelle_zone = {
-        "slug": slug, "nom": nom, "niveau": 1, "type": type_zone, "parent": None,
-        "origine_reelle": origine_reelle,
-        "description": description,
-        "statut": statut,
-        "tensions_internes": (data.get("tensions_internes") or "").strip(),
-        "periode_transition": data.get("periode_transition") or None,
-        "evenement_transition": None,
-        "lieux_emblematiques": data.get("lieux_emblematiques") or [],
-        "relations": data.get("relations") or {"allies": [], "rivaux": []},
-        "sources_attestees": data.get("sources_attestees") or [],
-    }
-    zones.append(nouvelle_zone)
-    fm["zones"] = zones
-
-    bak = geo_file.with_suffix(geo_file.suffix + ".bak")
-    bak.write_text(raw, encoding="utf-8")
-
-    new_fm = _yaml.dump(fm, allow_unicode=True, sort_keys=False, default_flow_style=False)
-    # Nouvelle zone niveau 1 : header "### {nom}" ajouté en fin de corps, sans
-    # wikilink (comme toute zone niveau 1 dans le corps existant).
-    new_body = parts[2].rstrip("\n") + f"\n\n### {nom}\n{description}\n"
-    geo_file.write_text("---\n" + new_fm + "---" + new_body, encoding="utf-8")
-
-    gui_dir = Path(__file__).parent
-    zones_pays_path = gui_dir / "zones_pays.json"
-    pays_synchronises = _creer_zone_in_zones_pays(
-        zones_pays_path, scenario, origine_reelle, slug, dry_run=False
-    )
-
-    # Propagation des sous-zones orphelines (P24 étape C, ajouté le 25 juillet
-    # suite au cas réel valence_tours_rirec/Espagne, cf. commentaire détaillé
-    # dans generator/reparenter_sous_zones_orphelines.py). Sous-processus +
-    # JSON plutôt qu'import direct -- gui/ et generator/ restent deux
-    # codebases séparées ; ce script a besoin de resoudre_pays()/VILLE_PAYS
-    # (check_origine_reelle_coherence.py), qu'on ne duplique pas ici. Pas
-    # d'appel LLM derrière (résolution par table + cache seulement) -- timeout
-    # court, contrairement à /api/carte/generer_zone_topdown.
-    sous_zones_reparentees = []
-    try:
-        pipeline_dir = Path(cfg.get("pipeline_dir", ""))
-        resultat_reparent = subprocess.run(
-            [sys.executable, "reparenter_sous_zones_orphelines.py",
-             "--scenario", scenario, "--zone-cible", slug, "--json"],
-            cwd=pipeline_dir, capture_output=True, text=True,
-            timeout=15, stdin=subprocess.DEVNULL,
-        )
-        sortie_reparent = resultat_reparent.stdout.strip()
-        if sortie_reparent:
-            payload_reparent = json.loads(sortie_reparent.splitlines()[-1])
-            if payload_reparent.get("ok"):
-                sous_zones_reparentees = payload_reparent.get("reparentees", [])
-            # Un échec ici (payload.get("ok") False, ou JSON illisible) n'empêche
-            # jamais la création de la zone elle-même -- déjà écrite avec succès
-            # au-dessus. On le signale juste dans la réponse, sans lever d'erreur.
-    except (subprocess.TimeoutExpired, FileNotFoundError, json.JSONDecodeError, IndexError):
-        pass  # même principe : la création a déjà réussi, ne jamais la faire échouer ici
-
-    return jsonify({
-        "ok": True, "slug": slug, "nom": nom,
-        "pays_zones_pays_json": pays_synchronises,
-        "sous_zones_reparentees": sous_zones_reparentees,
-    })
-
-
 # ── P24 étape C.4 (25 juillet 2026) -- générateur top-down, intégration GUI.
 #    Deux routes distinctes, cohérentes avec la décision d'architecture actée
 #    en scopant C.4 : le GUI appelle generator/zoning_topdown.py en
@@ -2170,6 +1683,76 @@ def carte_creer_zone_niveau1():
 #       codebases séparées sans import croisé.
 
 TIMEOUT_GENERATION_TOPDOWN = 90  # secondes -- appel LLM réel derrière, pas instantané
+TIMEOUT_ENRICHISSEMENT_ZONE = 60  # secondes -- même famille, mais schéma bien plus court (3 champs)
+
+# 14 sept 2026 -- /api/carte/dessiner_zone_complete/proposer (S11) et sa
+# constante TIMEOUT_DESSIN_ZONE_COMPLETE migrées vers routes_carte.py
+# (dette architecturale de la refonte du 12 sept, dernière route "Carte"
+# restée ici -- voir routes_carte.py pour le détail complet et la doctrine
+# inchangée). creer_zone_vide, route sœur du même flux S11, reste ici
+# pour l'instant (hors scope de cette migration).
+
+
+@app.route("/api/carte/creer_zone_vide", methods=["POST"])
+def carte_creer_zone_vide():
+    """
+    Crée une nouvelle zone SANS aucun pays rattaché (origine_reelle: []).
+
+    Nécessaire pour le cas où un dessin de zone complète (S11) ne contient
+    AUCUN pays atteignant le seuil de split (que des overlays/portions) --
+    sans cette route, /api/carte/assign (action=creer) ne peut créer une
+    zone qu'en l'associant à un pays ENTIER, ce qui ne convient pas si la
+    nouvelle zone n'est faite que de portions de pays. Cohérent avec le
+    modèle de données existant : une zone avec origine_reelle vide existe
+    déjà en pratique (ex. Corridor d'Amsterdam avant peuplement, 8 sept).
+
+    Body JSON : { "scenario": "...", "slug": "...", "nom": "...",
+                  "niveau": 1, "parent": null, "description": "..." }
+    """
+    cfg = load_config()
+    vault_root = Path(cfg.get("vault_root", ""))
+    data = request.get_json() or {}
+
+    scenario = (data.get("scenario") or "").strip()
+    slug = (data.get("slug") or "").strip()
+    nom = (data.get("nom") or "").strip()
+    niveau = data.get("niveau", 1)
+    parent = data.get("parent")
+    description = (data.get("description") or "").strip()
+
+    if not scenario or not slug or not nom:
+        return jsonify({"error": "scenario, slug, nom requis"}), 400
+
+    geo_file = vault_root / "geographie" / f"{scenario}.md"
+    if not geo_file.exists():
+        return jsonify({"error": f"Fiche géographie introuvable : {geo_file}"}), 404
+
+    try:
+        import yaml as _yaml
+        raw = geo_file.read_text(encoding="utf-8")
+        parts = raw.split("---", 2)
+        if len(parts) < 3:
+            return jsonify({"error": "Format de fiche géographie inattendu"}), 500
+        fm = _yaml.safe_load(parts[1]) or {}
+        zones = fm.get("zones") or []
+
+        if any(z.get("slug") == slug for z in zones):
+            return jsonify({"error": f"Le slug '{slug}' existe déjà"}), 409
+
+        zones.append({
+            "slug": slug, "nom": nom, "niveau": niveau, "parent": parent,
+            "description": description, "origine_reelle": [],
+        })
+        fm["zones"] = zones
+
+        bak = geo_file.with_suffix(geo_file.suffix + ".bak")
+        bak.write_text(raw, encoding="utf-8")
+        new_fm = _yaml.dump(fm, allow_unicode=True, sort_keys=False, default_flow_style=False)
+        geo_file.write_text("---\n" + new_fm + "---" + parts[2], encoding="utf-8")
+
+        return jsonify({"ok": True, "slug": slug})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 
 @app.route("/api/carte/generer_zone_topdown", methods=["POST"])
@@ -2309,6 +1892,155 @@ def carte_appliquer_zone_topdown_suspecte():
             )
 
     return jsonify({"ok": True, "slug": slug, "statut_suivi_maj": statut_maj})
+
+
+# ── Enrichissement de zone (8 sept 2026) -- complète tensions_internes /
+#    periode_transition / evenement_transition sur une zone qui existe déjà
+#    mais n'est jamais passée par un LLM (typiquement créée via ✂️ scinder,
+#    voir _apply_split_zone plus bas, qui initialise ces champs à vide sans
+#    appeler de modèle). Même doctrine génération/application séparées que
+#    P24 C.2/C.3 ci-dessus : /generer_enrichissement_zone ne modifie jamais
+#    le vault (subprocess enrich_zone_manquante.py --json, toujours dry-run),
+#    /appliquer_enrichissement_zone fait l'écriture réelle, restreinte aux 3
+#    champs concernés.
+
+@app.route("/api/carte/zones_manquantes_enrichissement", methods=["GET"])
+def carte_zones_manquantes_enrichissement():
+    """
+    Liste les zones d'un scénario dont tensions_internes ou
+    periode_transition est vide -- candidates à l'enrichissement.
+    GET /api/carte/zones_manquantes_enrichissement?scenario=fortress_world
+    """
+    vault_root = Path(load_config().get("vault_root", ""))
+    scenario = request.args.get("scenario", "").strip()
+    if not scenario:
+        return jsonify({"error": "scenario requis"}), 400
+
+    geo_file = vault_root / "geographie" / f"{scenario}.md"
+    if not geo_file.exists():
+        return jsonify({"zones": []})
+
+    import yaml as _yaml
+    raw = geo_file.read_text(encoding="utf-8")
+    parts = raw.split("---")
+    fm = _yaml.safe_load(parts[1] if len(parts) >= 2 else raw) or {}
+
+    manquantes = []
+    for z in (fm.get("zones") or []):
+        if not isinstance(z, dict) or not z.get("slug"):
+            continue
+        tensions_vide = not (z.get("tensions_internes") or "").strip()
+        periode_vide = not z.get("periode_transition")
+        if tensions_vide or periode_vide:
+            manquantes.append({
+                "slug": z["slug"], "nom": z.get("nom", z["slug"]),
+                "niveau": z.get("niveau", 1),
+                "tensions_internes_vide": tensions_vide,
+                "periode_transition_vide": periode_vide,
+            })
+    manquantes.sort(key=lambda z: (z["niveau"], z["nom"]))
+    return jsonify({"zones": manquantes})
+
+
+@app.route("/api/carte/generer_enrichissement_zone", methods=["POST"])
+def carte_generer_enrichissement_zone():
+    """
+    Génère une proposition tensions_internes/periode_transition/
+    evenement_transition pour UNE zone (generator/enrich_zone_manquante.py
+    --json, en sous-processus). N'écrit JAMAIS dans le vault -- à pré-remplir
+    côté frontend pour relecture avant /api/carte/appliquer_enrichissement_zone.
+
+    Body JSON : { "scenario": "...", "slug": "..." }
+    """
+    cfg = load_config()
+    pipeline_dir = Path(cfg.get("pipeline_dir", ""))
+    data = request.get_json() or {}
+    scenario = (data.get("scenario") or "").strip()
+    slug = (data.get("slug") or "").strip()
+
+    if not scenario or not slug:
+        return jsonify({"error": "scenario et slug requis"}), 400
+
+    cmd = [sys.executable, "enrich_zone_manquante.py",
+           "--scenario", scenario, "--slug", slug, "--json"]
+
+    try:
+        resultat = subprocess.run(
+            cmd, cwd=pipeline_dir, capture_output=True, text=True,
+            timeout=TIMEOUT_ENRICHISSEMENT_ZONE, stdin=subprocess.DEVNULL,
+        )
+    except subprocess.TimeoutExpired:
+        return jsonify({"error": f"Génération expirée après {TIMEOUT_ENRICHISSEMENT_ZONE}s "
+                                  f"(appel LLM trop lent ou bloqué)"}), 504
+    except FileNotFoundError:
+        return jsonify({"error": f"enrich_zone_manquante.py introuvable dans {pipeline_dir}"}), 500
+
+    sortie = resultat.stdout.strip()
+    if not sortie:
+        return jsonify({"error": f"Aucune sortie du sous-processus "
+                                  f"(code {resultat.returncode}) : {resultat.stderr[-500:]}"}), 500
+    try:
+        payload = json.loads(sortie.splitlines()[-1])
+    except (json.JSONDecodeError, IndexError):
+        return jsonify({"error": f"Sortie non-JSON du sous-processus : {sortie[-500:]}"}), 500
+
+    if not payload.get("ok"):
+        return jsonify({"error": payload.get("error", "Erreur inconnue côté générateur")}), 500
+
+    return jsonify({"ok": True, "proposition": payload["proposition"]})
+
+
+@app.route("/api/carte/appliquer_enrichissement_zone", methods=["POST"])
+def carte_appliquer_enrichissement_zone():
+    """
+    Écrit réellement tensions_internes/periode_transition/evenement_transition
+    sur une zone existante -- ne touche à AUCUN autre champ (slug, nom, type,
+    origine_reelle, niveau, parent, statut, relations, sources_attestees
+    restent ceux déjà présents dans le vault).
+
+    Body JSON : { "scenario": "...", "slug": "...",
+                  "proposition": {"tensions_internes":..., "periode_transition":...,
+                                   "evenement_transition":...} }
+    """
+    import yaml as _yaml
+    cfg = load_config()
+    vault_root = Path(cfg.get("vault_root", ""))
+    data = request.get_json() or {}
+    scenario = (data.get("scenario") or "").strip()
+    slug = (data.get("slug") or "").strip()
+    proposition = data.get("proposition") or {}
+
+    if not scenario or not slug:
+        return jsonify({"error": "scenario et slug requis"}), 400
+
+    geo_file = vault_root / "geographie" / f"{scenario}.md"
+    if not geo_file.exists():
+        return jsonify({"error": f"Fiche géographie introuvable : {geo_file}"}), 404
+
+    raw = geo_file.read_text(encoding="utf-8")
+    parts = raw.split("---", 2)
+    if len(parts) < 3:
+        return jsonify({"error": "Format de fiche géographie inattendu"}), 500
+    fm = _yaml.safe_load(parts[1]) or {}
+    zones = fm.get("zones") or []
+
+    idx = next((i for i, z in enumerate(zones) if isinstance(z, dict) and z.get("slug") == slug), None)
+    if idx is None:
+        return jsonify({"error": f"Zone introuvable dans {scenario} : {slug!r}"}), 404
+
+    bak = geo_file.with_suffix(geo_file.suffix + ".bak")
+    bak.write_text(raw, encoding="utf-8")
+
+    champs_autorises = ("tensions_internes", "periode_transition", "evenement_transition")
+    for champ in champs_autorises:
+        if champ in proposition:
+            zones[idx][champ] = proposition[champ]
+    fm["zones"] = zones
+
+    new_fm = _yaml.dump(fm, allow_unicode=True, sort_keys=False, default_flow_style=False)
+    geo_file.write_text("---\n" + new_fm + "---" + parts[2], encoding="utf-8")
+
+    return jsonify({"ok": True, "slug": slug})
 
 
 # ── P7 étape 4 : split de zone (14 juillet 2026) -- extrait une ou plusieurs
@@ -2548,54 +2280,6 @@ def _apply_split_zone(vault_root, scenario, slug_source, pays_a_extraire, cible,
     }
 
 
-@app.route("/api/carte/impact_split_zone", methods=["POST"])
-def carte_impact_split_zone():
-    """
-    Rapport d'impact en lecture seule pour un split de zone.
-    Body JSON : { "scenario":..., "slug_source":..., "pays_a_extraire": [...],
-                  "cible": {"mode": "nouvelle_zone_n1"|"zone_existante", ...} }
-    pays_a_extraire : noms de pays normalisés (ex. ["groenland"]), pas des
-    chaînes origine_reelle exactes -- toute formulation référençant ce pays
-    est détectée (voir _entite_references_pays). N'écrit rien.
-    """
-    cfg = load_config()
-    vault_root = Path(cfg.get("vault_root", ""))
-    data = request.get_json() or {}
-    scenario = data.get("scenario", "").strip()
-    slug_source = data.get("slug_source", "").strip()
-    pays_a_extraire = data.get("pays_a_extraire") or []
-    cible = data.get("cible") or {}
-
-    if not scenario or not slug_source or not pays_a_extraire:
-        return jsonify({"error": "scenario, slug_source, pays_a_extraire requis"}), 400
-
-    rapport = _apply_split_zone(vault_root, scenario, slug_source, pays_a_extraire, cible, dry_run=True)
-    if "error" in rapport:
-        return jsonify(rapport), 404
-    return jsonify(rapport)
-
-
-@app.route("/api/carte/split_zone", methods=["POST"])
-def carte_split_zone():
-    """Applique le split. Mêmes paramètres que impact_split_zone."""
-    cfg = load_config()
-    vault_root = Path(cfg.get("vault_root", ""))
-    data = request.get_json() or {}
-    scenario = data.get("scenario", "").strip()
-    slug_source = data.get("slug_source", "").strip()
-    pays_a_extraire = data.get("pays_a_extraire") or []
-    cible = data.get("cible") or {}
-
-    if not scenario or not slug_source or not pays_a_extraire:
-        return jsonify({"error": "scenario, slug_source, pays_a_extraire requis"}), 400
-
-    result = _apply_split_zone(vault_root, scenario, slug_source, pays_a_extraire, cible, dry_run=False)
-    if "error" in result:
-        code = 409 if "existe déjà" in result["error"] else 400
-        return jsonify(result), code
-    return jsonify(result)
-
-
 # ── API Chantiers géographie (point 4.5, 26 juillet 2026) ─────────────────────
 #
 # Lit/écrit chantiers_geographie.yaml directement (pattern déjà établi par
@@ -2699,6 +2383,12 @@ def chantiers_generer():
     scenario = chantier["scenario"]
     type_ = chantier["type"]
     cible = chantier["cible"]
+
+    if type_ == "doublon_pays_entier":
+        return jsonify({"error": "Ce type de chantier n'a pas de génération IA -- la proposition "
+                                  "est calculée automatiquement par le diagnostic. Relancer "
+                                  "diagnostiquer_doublons_pays_entier.py --write-chantiers pour "
+                                  "rafraîchir la proposition si le vault a changé depuis."}), 400
 
     cmd = [sys.executable, "zoning_topdown.py", "--scenario", scenario, "--json"]
     if type_ == "pays_sans_zone":
@@ -2821,6 +2511,35 @@ def chantiers_statut():
     return jsonify({"ok": True})
 
 
+def _appliquer_chantier_doublon_pays_entier(vault_root: Path, chantier: dict) -> dict:
+    """
+    Applique directement un chantier type `doublon_pays_entier` via
+    ZoneRepository.retirer_doublons_pays_entier() (14 sept 2026) --
+    jamais via le sous-processus generer_zones_topdown.py --apply-topdown
+    (celui-ci ne connaît que pays_sans_zone/zone_suspecte). La proposition
+    a déjà été calculée à l'écriture du chantier (diagnostiquer_doublons_
+    pays_entier.py --write-chantiers), donc rien à générer ici -- juste à
+    exécuter. Retourne un dict {ok, ...} ou {ok: False, error}, jamais
+    d'exception laissée remonter (appelant décide comment agréger).
+    """
+    proposition = chantier.get("proposition") or {}
+    slug_a_conserver = proposition.get("slug_a_conserver")
+    if not slug_a_conserver:
+        return {"ok": False, "error": "Proposition incomplète (slug_a_conserver manquant)."}
+
+    gui_dir = Path(__file__).parent
+    repo = ZoneRepository(vault_root, gui_dir)
+    try:
+        resultat = repo.retirer_doublons_pays_entier(
+            scenario=chantier["scenario"], pays=chantier["cible"],
+            slug_a_conserver=slug_a_conserver, dry_run=False,
+        )
+    except ZoneRepositoryError as e:
+        return {"ok": False, "error": str(e)}
+    resultat["ok"] = True
+    return resultat
+
+
 @app.route("/api/chantiers/appliquer", methods=["POST"])
 def chantiers_appliquer():
     """
@@ -2845,25 +2564,69 @@ def chantiers_appliquer():
     tous = bool(data.get("all"))
     chantier_id = (data.get("id") or "").strip()
 
+    if not scenario and not tous and not chantier_id:
+        return jsonify({"error": "scenario, all ou id requis"}), 400
+
+    try:
+        chantiers = _charger_chantiers(vault_root)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
     cible = None
     if chantier_id:
-        try:
-            chantiers = _charger_chantiers(vault_root)
-        except Exception as e:
-            return jsonify({"error": str(e)}), 500
         chantier = next((c for c in chantiers if c.get("id") == chantier_id), None)
         if chantier is None:
             return jsonify({"error": f"Chantier introuvable : {chantier_id!r}"}), 404
         scenario = chantier.get("scenario", "")
         cible = chantier.get("cible", "")
 
-    if not scenario and not tous:
-        return jsonify({"error": "scenario, all ou id requis"}), 400
+        # doublon_pays_entier : application directe, jamais via le sous-processus
+        # topdown ci-dessous (qui ne connaît pas ce type). Court-circuite le
+        # reste de la route.
+        if chantier.get("type") == "doublon_pays_entier":
+            resultat = _appliquer_chantier_doublon_pays_entier(vault_root, chantier)
+            if not resultat.get("ok"):
+                return jsonify({"error": resultat.get("error", "Erreur inconnue")}), 500
+            from datetime import date as _date
+            chantier["statut"] = "traite"
+            chantier["date_traitement"] = _date.today().isoformat()
+            _sauver_chantiers(vault_root, chantiers)
+            return jsonify({"ok": True, "log": f"Doublon retiré : {resultat}"})
+
+    # doublon_pays_entier en lot (scenario ou all, pas de id précis) : traités
+    # directement AVANT le sous-processus topdown, sur le même critère que
+    # chantiers_prets_a_appliquer() côté generator/chantiers.py (statut
+    # a_traiter + proposition non nulle + approuvée). Une fois passés à
+    # "traite" ici, ils ne remontent plus dans le prochain appel de ce même
+    # prédicat -- donc le sous-processus ci-dessous (qui applique ce même
+    # prédicat en interne, filtré sur pays_sans_zone/zone_suspecte) les
+    # ignorera naturellement, sans avoir besoin de connaître ce nouveau type.
+    log_doublons = []
+    if not chantier_id:
+        prets_doublons = [
+            c for c in chantiers
+            if c.get("statut") == "a_traiter" and c.get("proposition") is not None
+            and c.get("proposition_approuvee") is True and c.get("type") == "doublon_pays_entier"
+            and (tous or c.get("scenario") == scenario)
+        ]
+        if prets_doublons:
+            from datetime import date as _date
+            for c in prets_doublons:
+                resultat = _appliquer_chantier_doublon_pays_entier(vault_root, c)
+                if resultat.get("ok"):
+                    c["statut"] = "traite"
+                    c["date_traitement"] = _date.today().isoformat()
+                    log_doublons.append(f"✓ {c['cible']} ({c['scenario']}) -> {resultat.get('slug_conserve')}")
+                else:
+                    log_doublons.append(f"✗ {c['cible']} ({c['scenario']}) : {resultat.get('error')}")
+            _sauver_chantiers(vault_root, chantiers)
 
     cmd = [sys.executable, "generer_zones_topdown.py", "--apply-topdown"]
     cmd += ["--all"] if tous else ["--scenario", scenario]
     if cible:
         cmd += ["--cible", cible]
+
+    prefixe_log = ("\n".join(log_doublons) + "\n\n") if log_doublons else ""
 
     try:
         resultat = subprocess.run(
@@ -2871,15 +2634,15 @@ def chantiers_appliquer():
             timeout=60, stdin=subprocess.DEVNULL,
         )
     except subprocess.TimeoutExpired:
-        return jsonify({"error": "Application expirée après 60s"}), 504
+        return jsonify({"error": prefixe_log + "Application expirée après 60s"}), 504
     except FileNotFoundError:
-        return jsonify({"error": f"generer_zones_topdown.py introuvable dans {pipeline_dir}"}), 500
+        return jsonify({"error": prefixe_log + f"generer_zones_topdown.py introuvable dans {pipeline_dir}"}), 500
 
     if resultat.returncode != 0:
-        return jsonify({"error": resultat.stderr[-800:] or resultat.stdout[-800:],
+        return jsonify({"error": prefixe_log + (resultat.stderr[-800:] or resultat.stdout[-800:]),
                          "returncode": resultat.returncode}), 500
 
-    return jsonify({"ok": True, "log": resultat.stdout[-4000:]})
+    return jsonify({"ok": True, "log": prefixe_log + resultat.stdout[-4000:]})
 
 
 # ── API Rédaction — table journalistes/orateurs (30 août 2026) ────────────────

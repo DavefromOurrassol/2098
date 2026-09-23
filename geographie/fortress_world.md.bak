@@ -121,9 +121,6 @@ zones:
   - entite: Comores
     type_entite: pays
     portion: null
-  - entite: Madagascar
-    type_entite: pays
-    portion: null
   description: Vaste zone d'Afrique subsaharienne où les États ont partiellement ou
     totalement effondré sous la pression des crises climatiques, énergétiques et des
     conflits de ressources. Contrôlée de facto par des cartels miniers militarisés
@@ -212,34 +209,7 @@ zones:
   - entite: Canada
     type_entite: pays
     portion: null
-  - entite: Royaume-Uni
-    type_entite: pays
-    portion: null
-  - entite: Belgique
-    type_entite: pays
-    portion: null
-  - entite: France
-    type_entite: pays
-    portion: null
-  - entite: Allemagne
-    type_entite: pays
-    portion: null
-  - entite: Pays-Bas
-    type_entite: pays
-    portion: null
-  - entite: Espagne
-    type_entite: pays
-    portion: null
-  - entite: Portugal
-    type_entite: pays
-    portion: null
   - entite: Mexique
-    type_entite: pays
-    portion: null
-  - entite: Irlande
-    type_entite: pays
-    portion: null
-  - entite: Luxembourg
     type_entite: pays
     portion: null
   - entite: Monaco
@@ -278,18 +248,7 @@ zones:
   - entite: Barbade
     type_entite: pays
     portion: null
-  - entite: Angleterre
-    type_entite: pays
-    portion: null
-  - entite: Écosse
-    type_entite: pays
-    portion: null
-  - entite: Pays de Galles
-    type_entite: pays
-    portion: null
-  - entite: Italie
-    type_entite: pays
-    portion: null
+  - entite: Groenland
   description: Bloc géopolitique fermé centré sur l'espace atlantique nord, gouverné
     par un Commandement militaro-civil autoritaire appuyé sur une infrastructure numérique
     souveraine (NexCore, ANBA). Il maintient un ordre intérieur répressif, contrôle
@@ -328,35 +287,8 @@ zones:
   - entite: Russie
     type_entite: pays
     portion: null
-  - entite: Ukraine
-    type_entite: pays
-    portion: null
-  - entite: Pologne
-    type_entite: pays
-    portion: null
-  - entite: Hongrie
-    type_entite: pays
-    portion: null
-  - entite: Roumanie
-    type_entite: pays
-    portion: null
-  - entite: Slovaquie
-    type_entite: pays
-    portion: null
-  - entite: République tchèque
-    type_entite: pays
-    portion: null
-  - entite: Serbie
-    type_entite: pays
-    portion: null
   - entite: pays baltes
     type_entite: autre
-    portion: null
-  - entite: Suisse
-    type_entite: pays
-    portion: null
-  - entite: Autriche
-    type_entite: pays
     portion: null
   - entite: Mongolie
     type_entite: pays
@@ -367,19 +299,10 @@ zones:
   - entite: Liechtenstein
     type_entite: pays
     portion: null
-  - entite: Bulgarie
-    type_entite: pays
-    portion: null
   - entite: Biélorussie
     type_entite: pays
     portion: null
-  - entite: Lituanie
-    type_entite: pays
-    portion: null
-  - entite: Lettonie
-    type_entite: pays
-    portion: null
-  - entite: Estonie
+  - entite: Kazakhstan
     type_entite: pays
     portion: null
   description: Bloc eurasiatique occidental régi par des régimes autoritaires ayant
@@ -409,6 +332,7 @@ zones:
   - grille_aria_fortress_world
   - vasil_orentchev_fortress_world
   - consortium_eurasiatique_des_ressources_fermees_fortress_world
+  couleur: '#899985'
 - slug: bloc_pacifique_nord
   nom: Bloc Pacifique Nord
   niveau: 1
@@ -425,9 +349,6 @@ zones:
     type_entite: pays
     portion: null
   - entite: Corée du Nord
-    type_entite: pays
-    portion: null
-  - entite: Finlande
     type_entite: pays
     portion: null
   - entite: Vietnam
@@ -487,7 +408,20 @@ zones:
   - entite: Arctique international
     type_entite: autre
     portion: null
-  - entite: Cap-Vert
+  - entite: Pologne
+    type_entite: pays
+    portion: null
+  - entite: Lettonie
+    type_entite: pays
+    portion: null
+  - entite: Estonie
+    type_entite: pays
+    portion: null
+  - entite: Allemagne
+    type_entite: pays
+    portion: Allemagne - Espace Nordique et Artique
+  - entite: Pays-Bas
+  - entite: Russie
     type_entite: pays
     portion: null
   description: Espace géopolitique distinct contrôlé de facto par la Nordisk Arktisk
@@ -514,6 +448,7 @@ zones:
   - factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world
   - coalition_arctique_des_blocs_continentaux_fortress_world
   - milices_de_piraterie_logistique_arctique_fortress_world
+  couleur: '#336699'
 - slug: golfe_moyen_orient_zone_disputee
   nom: Golfe Persique et Moyen-Orient — Zone Disputée
   niveau: 1
@@ -596,13 +531,10 @@ zones:
   - conseil_regulation_ressources_fortress_world
 - slug: nuuk_forteresse
   nom: Nuuk-Forteresse — Siège de Nuna Capital
-  niveau: 1
+  niveau: 2
   type: territoire_autonome
-  parent: null
+  parent: espace_nordique_arctique
   origine_reelle:
-  - entite: Groenland
-    type_entite: autre
-    portion: null
   - entite: Nuuk
     type_entite: region_administrative
     portion: null
@@ -687,9 +619,6 @@ zones:
   - entite: São Paulo
     type_entite: region_administrative
     portion: null
-  - entite: Brésil
-    type_entite: pays
-    portion: null
   description: Mégapole de 34 millions d'habitants gouvernée par le Sistema Paulista
     de Alocação Soberana (SPAS), IA centenaire gérant l'allocation de l'eau, de l'énergie,
     du logement et de la mobilité selon des paramètres jamais audités publiquement
@@ -719,7 +648,7 @@ zones:
     allies: []
     rivaux: []
   sources_attestees:
-  - rede_paulista_de_distribuic_o_algor_tmica_fortress_world
+  - rede_paulista_de_distribuicao_algoritmica_fortress_world
   promu_desde: null
   promu_depuis: null
 - slug: zones_grises_tampons
@@ -728,44 +657,14 @@ zones:
   type: zone_sinistree
   parent: null
   origine_reelle:
-  - entite: Géorgie
-    type_entite: pays
-    portion: null
-  - entite: Arménie
-    type_entite: pays
-    portion: null
-  - entite: Azerbaïdjan
-    type_entite: pays
-    portion: null
-  - entite: Kazakhstan
-    type_entite: pays
-    portion: null
   - entite: Ouzbékistan
     type_entite: pays
     portion: null
   - entite: Kirghizistan
     type_entite: pays
     portion: null
-  - entite: Balkans occidentaux
-    type_entite: region_administrative
-    portion: null
-  - entite: Maroc
-    type_entite: pays
-    portion: null
-  - entite: Irak
-    type_entite: pays
-    portion: null
   - entite: Golfe Persique (zone de friction)
     type_entite: autre
-    portion: null
-  - entite: Turquie
-    type_entite: pays
-    portion: null
-  - entite: Algérie
-    type_entite: pays
-    portion: null
-  - entite: Tunisie
-    type_entite: pays
     portion: null
   - entite: Bangladesh
     type_entite: pays
@@ -774,30 +673,6 @@ zones:
     type_entite: pays
     portion: null
   - entite: Chypre
-    type_entite: pays
-    portion: null
-  - entite: Croatie
-    type_entite: pays
-    portion: null
-  - entite: Slovénie
-    type_entite: pays
-    portion: null
-  - entite: Bosnie-Herzégovine
-    type_entite: pays
-    portion: null
-  - entite: Monténégro
-    type_entite: pays
-    portion: null
-  - entite: Macédoine du Nord
-    type_entite: pays
-    portion: null
-  - entite: Albanie
-    type_entite: pays
-    portion: null
-  - entite: Moldavie
-    type_entite: pays
-    portion: null
-  - entite: Kosovo
     type_entite: pays
     portion: null
   - entite: Turkménistan
@@ -848,7 +723,7 @@ zones:
   - entite: Dominique
     type_entite: pays
     portion: null
-  - entite: Grèce
+  - entite: Cap-Vert
     type_entite: pays
     portion: null
   description: Ensemble diffus de territoires interstitiels situés entre les blocs
@@ -936,7 +811,7 @@ zones:
     allies: []
     rivaux:
     - datacenters_conseil_eurasiatique
-    - anba_siege_atlantique
+    - anzes_siege_zone_euro_sud
   sources_attestees:
   - grille_aria_fortress_world
   promu_depuis: null
@@ -945,10 +820,7 @@ zones:
   niveau: 2
   type: site_strategique
   parent: golfe_moyen_orient_zone_disputee
-  origine_reelle:
-  - entite: Azerbaïdjan
-    type_entite: pays
-    portion: null
+  origine_reelle: []
   description: Bases discrètes en territoire azerbaïdjanais ayant servi de points
     de ravitaillement en vol pour les F-35 israéliens lors des frappes du 14 juillet
     2027 sur Kharg Island. Leur utilisation a impliqué l'Azerbaïdjan dans le conflit
@@ -973,10 +845,7 @@ zones:
   niveau: 2
   type: zone_sinistree
   parent: golfe_moyen_orient_zone_disputee
-  origine_reelle:
-  - entite: Irak
-    type_entite: pays
-    portion: null
+  origine_reelle: []
   description: 'Point de documentation des premières images brutes du conflit de 2027
     par un correspondant clandestin de Fractures : colonnes de réfugiés irakiens marchant
     vers la frontière turque, refoulés par des drones-gardes-frontières programmés
@@ -1030,7 +899,7 @@ zones:
   nom: Bruxelles-Forteresse
   niveau: 2
   type: ville
-  parent: bloc_atlantique
+  parent: zone_euro_sud
   origine_reelle:
   - entite: Bruxelles
     type_entite: region_administrative
@@ -1057,34 +926,6 @@ zones:
   - vasil_orentchev_fortress_world
   - le_temoin_fortress_world
   promu_depuis: Bruxelles-Forteresse
-- slug: casablanca_peripherie
-  nom: Casablanca-Périphérie
-  niveau: 2
-  type: ville
-  parent: zones_grises_tampons
-  origine_reelle:
-  - entite: Casablanca
-    type_entite: region_administrative
-    portion: null
-  description: Autre nœud de distribution clandestine de Fractures dans la zone grise
-    méditerranéo-africaine. Sous les néons de ses marchés gris, circulent les mêmes
-    clés USB encapsulées que dans Tbilissi-Nord, faisant de la ville une plaque tournante
-    de l'information interdite et des flux informels reliant les zones grises d'Afrique
-    du Nord aux réseaux de résistance trans-méditerranéens.
-  statut: fragmenté
-  tensions_internes: Pression croissante des blocs voisins pour fermer les marchés
-    gris ; vulnérabilité des correspondants de Fractures opérant depuis la ville ;
-    intrication avec les réseaux de contrebande économique plus larges.
-  periode_transition: 2050-2098
-  evenement_transition: null
-  lieux_emblematiques: []
-  relations:
-    allies:
-    - tbilissi_nord_zone_franche
-    rivaux: []
-  sources_attestees:
-  - voix_du_dehors_fortress_world
-  promu_depuis: Casablanca-Périphérie
 - slug: corridor_arctique_transit
   nom: Corridors Arctiques de Transit NAT
   niveau: 2
@@ -1093,9 +934,6 @@ zones:
   origine_reelle:
   - entite: Arctique international
     type_entite: autre
-    portion: null
-  - entite: Norvège
-    type_entite: pays
     portion: null
   description: Réseau de voies maritimes arctiques déglaciées gérées sous monopole
     de la NAT, devenues les seules routes commerciales encore praticables entre les
@@ -1125,15 +963,9 @@ zones:
   nom: Corridors Gris d'Asie Centrale
   niveau: 2
   type: infrastructure
-  parent: zones_grises_tampons
+  parent: bloc_eurasiatique_occidental
   origine_reelle:
   - entite: Kazakhstan
-    type_entite: pays
-    portion: null
-  - entite: Ouzbékistan
-    type_entite: pays
-    portion: null
-  - entite: Kirghizistan
     type_entite: pays
     portion: null
   description: Réseau de routes logistiques informelles traversant les steppes et
@@ -1414,9 +1246,6 @@ zones:
   type: site_strategique
   parent: bloc_eurasiatique_occidental
   origine_reelle:
-  - entite: Russie
-    type_entite: pays
-    portion: null
   - entite: Europe centrale-orientale
     type_entite: autre
     portion: null
@@ -1477,7 +1306,7 @@ zones:
   promu_depuis: null
 - slug: nuna_capital_siege
   nom: Siège de Nuna Capital
-  niveau: 2
+  niveau: 3
   type: infrastructure
   parent: nuuk_forteresse
   origine_reelle:
@@ -1537,15 +1366,9 @@ zones:
   nom: Plaine de Pannonie
   niveau: 2
   type: region
-  parent: bloc_eurasiatique_occidental
+  parent: zone_euro_sud
   origine_reelle:
   - entite: Hongrie
-    type_entite: pays
-    portion: null
-  - entite: Slovaquie
-    type_entite: pays
-    portion: null
-  - entite: Serbie
     type_entite: pays
     portion: null
   description: Région ayant tenté une sécession en 2091, étouffée dans l'œuf par Helios
@@ -1622,7 +1445,7 @@ zones:
     allies: []
     rivaux: []
   sources_attestees:
-  - rede_paulista_de_distribuic_o_algor_tmica_fortress_world
+  - rede_paulista_de_distribuicao_algoritmica_fortress_world
   promu_depuis: null
 - slug: svalbard_tours_flottantes
   nom: Svalbard — Tours de Contrôle Flottantes NAT
@@ -1674,8 +1497,7 @@ zones:
   evenement_transition: null
   lieux_emblematiques: []
   relations:
-    allies:
-    - casablanca_peripherie
+    allies: []
     rivaux: []
   sources_attestees:
   - voix_du_dehors_fortress_world
@@ -1706,25 +1528,16 @@ zones:
     allies: []
     rivaux: []
   sources_attestees:
-  - rede_paulista_de_distribuic_o_algor_tmica_fortress_world
+  - rede_paulista_de_distribuicao_algoritmica_fortress_world
   promu_depuis: null
 - slug: zone_tampon_balkano_caucasienne
   nom: Zone Tampon Balkano-Caucasienne
   niveau: 2
   type: zone_sinistree
-  parent: zones_grises_tampons
+  parent: zone_euro_sud
   origine_reelle:
   - entite: Balkans occidentaux
     type_entite: region_administrative
-    portion: null
-  - entite: Géorgie
-    type_entite: pays
-    portion: null
-  - entite: Arménie
-    type_entite: pays
-    portion: null
-  - entite: Azerbaïdjan
-    type_entite: pays
     portion: null
   description: Terrain documenté des Seuils Fermés et de leurs veillées millénaristes
     nocturnes où les membres récitent les statistiques d'épuisement des ressources.
@@ -1750,17 +1563,8 @@ zones:
   nom: Zones Industrielles Forteresses — Bloc Eurasiatique
   niveau: 2
   type: region
-  parent: bloc_eurasiatique_occidental
-  origine_reelle:
-  - entite: Russie
-    type_entite: pays
-    portion: null
-  - entite: Ukraine
-    type_entite: pays
-    portion: null
-  - entite: Pologne
-    type_entite: pays
-    portion: null
+  parent: espace_nordique_arctique
+  origine_reelle: []
   description: Zones grises industrielles du bloc eurasiatique occidental où se réunissent
     les travailleurs augmentés entre deux shifts d'usine, portant leurs exosquelettes
     comme un uniforme syndical. C'est dans ces espaces que subsiste la branche Eurasie
@@ -1779,11 +1583,11 @@ zones:
   sources_attestees:
   - internationale_travailleurs_augmentes_fortress_world
   promu_depuis: null
-- slug: anba_siege_atlantique
-  nom: Siège de l'ANBA — Autorité Numérique du Bloc Atlantique
-  niveau: 3
+- slug: anzes_siege_zone_euro_sud
+  nom: Siège de l'ANZES — Autorité Numérique de la Zone Euro Sud
+  niveau: 2
   type: infrastructure
-  parent: bruxelles_forteresse
+  parent: zone_euro_sud
   origine_reelle:
   - entite: Bruxelles
     type_entite: region_administrative
@@ -1841,16 +1645,7 @@ zones:
   niveau: 3
   type: site_strategique
   parent: zone_tampon_balkano_caucasienne
-  origine_reelle:
-  - entite: Balkans occidentaux
-    type_entite: region_administrative
-    portion: null
-  - entite: Géorgie
-    type_entite: pays
-    portion: null
-  - entite: Arménie
-    type_entite: pays
-    portion: null
+  origine_reelle: []
   description: No man's lands entre checkpoints où les collectifs millénaristes des
     Seuils Fermés organisent leurs 'veillées de comptage' nocturnes — cérémonies où
     les membres récitent les statistiques d'épuisement des ressources comme des psaumes.
@@ -2067,9 +1862,9 @@ zones:
   promu_depuis: Hangar des brise-glaces autonomes
 - slug: marches_gris_casablanca
   nom: Marchés Gris de Casablanca-Périphérie
-  niveau: 3
+  niveau: 2
   type: site_strategique
-  parent: casablanca_peripherie
+  parent: al_hima
   origine_reelle:
   - entite: Casablanca
     type_entite: region_administrative
@@ -2205,7 +2000,7 @@ zones:
   relations:
     allies: []
     rivaux:
-    - anba_siege_atlantique
+    - anzes_siege_zone_euro_sud
   sources_attestees:
   - mouvement_des_communes_du_rust_belt_fortress_world
   - coalition_vivant_fortress_world
@@ -2441,6 +2236,7 @@ zones:
   - entite: Sri Lanka
     type_entite: pays
     portion: null
+  hachures: true
 - slug: archipel_indonesien_forteresses_maritimes
   nom: Archipel Indonésien — Forteresses Maritimes
   niveau: 1
@@ -2719,6 +2515,279 @@ zones:
   - entite: Tuvalu
     type_entite: pays
     portion: null
+- slug: al_hima
+  nom: Al-Hima
+  niveau: 1
+  type: union_regionale
+  parent: null
+  origine_reelle:
+  - entite: Espagne
+    type_entite: pays
+    portion: null
+  - entite: Portugal
+    type_entite: pays
+    portion: null
+  - entite: Maroc
+    type_entite: pays
+    portion: null
+  - entite: Algérie
+    type_entite: pays
+    portion: null
+  - entite: Tunisie
+  description: Confédération collectiviste des deux rives, climat désertique à oasis,
+    gestion communautaire des ressources héritée du principe pré-islamique du hima
+    (terre protégée).
+  statut: emergent
+  tensions_internes: Conflits entre traditionalistes attachés aux principes ancestraux
+    du hima et modernistes prônant une gestion technocratique des ressources, ainsi
+    que rivalités entre communautés oasiennes pour l'accès aux points d'eau rares.
+  periode_transition: 2040-2055
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies: []
+    rivaux: []
+  sources_attestees: []
+- slug: corridor_amsterdam
+  nom: Corridor d'Amsterdam
+  niveau: 1
+  type: infrastructure
+  parent: null
+  origine_reelle: []
+  description: Corridor tampon aménagé par le Bloc Atlantique pour isoler l'enclave
+    de l'Espace Nordique et Artique de la contamination de la Zone interdite Heysham.
+    Ni pleinement rattaché à l'une ni à l'autre, ce couloir concentre les checkpoints
+    biométriques, les stations de décontamination et le trafic logistique entre les
+    deux territoires — la seule voie de passage terrestre praticable dans cette partie
+    du Bloc, sous surveillance constante.
+  statut: stable
+  tensions_internes: ''
+  periode_transition: null
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies: []
+    rivaux: []
+  sources_attestees: []
+- slug: zone_interdite_heysham
+  nom: Zone Interdite de Heysham
+  niveau: 1
+  type: zone_sinistree
+  parent: null
+  origine_reelle:
+  - entite: Angleterre
+    type_entite: pays
+    portion: null
+  - entite: Pays de Galles
+  - entite: Irlande
+  - entite: Écosse
+  - entite: France
+    type_entite: pays
+    portion: La Zone Interdite de Heysham couvre le littoral Manche-Atlantique de
+      la France, de Calais à Lorient, incluant la vallée de la Seine et les régions
+      frontalières du Hainaut.
+  description: Territoire irradié depuis la fusion partielle du réacteur de Heysham
+    2 en 2044, survenue en pleine aggravation de la crise systémique post-guerre indo-arabe
+    — infrastructures vieillissantes, maintenance négligée, personnel qualifié en
+    fuite vers les enclaves forteresses. Le cœur de la zone reste totalement interdit
+    d'accès ; sa périphérie, environ un demi-siècle après l'accident, commence à peine
+    à redevenir marginalement viable pour de brefs passages. Repaire occasionnel de
+    pillards de l'Interzone venus récupérer ce qui peut encore l'être dans les ruines
+    de l'ancienne centrale.
+  statut: en_declin
+  tensions_internes: ''
+  periode_transition: null
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies: []
+    rivaux: []
+  sources_attestees: []
+  couleur: '#ff4000'
+  motif: radiation
+  hachures: false
+- slug: zone_euro_sud
+  nom: Zone Euro Sud
+  niveau: 1
+  type: zone_sinistree
+  parent: null
+  origine_reelle:
+  - entite: Suisse
+    type_entite: pays
+    portion: null
+  - entite: Italie
+  - entite: Croatie
+    type_entite: pays
+    portion: null
+  - entite: Slovénie
+    type_entite: pays
+    portion: null
+  - entite: Bosnie-Herzégovine
+    type_entite: pays
+    portion: null
+  - entite: Monténégro
+    type_entite: pays
+    portion: null
+  - entite: Macédoine du Nord
+    type_entite: pays
+    portion: null
+  - entite: Albanie
+    type_entite: pays
+    portion: null
+  - entite: Kosovo
+    type_entite: pays
+    portion: null
+  - entite: Grèce
+    type_entite: pays
+    portion: null
+  - entite: Bulgarie
+  - entite: Ukraine
+    type_entite: pays
+    portion: null
+  - entite: Hongrie
+    type_entite: pays
+    portion: null
+  - entite: Roumanie
+    type_entite: pays
+    portion: null
+  - entite: Slovaquie
+    type_entite: pays
+    portion: null
+  - entite: République tchèque
+    type_entite: pays
+    portion: null
+  - entite: Autriche
+    type_entite: pays
+    portion: null
+  - entite: Géorgie
+    type_entite: pays
+    portion: null
+  - entite: Arménie
+    type_entite: pays
+    portion: null
+  - entite: Azerbaïdjan
+    type_entite: pays
+    portion: null
+  - entite: Moldavie
+  - entite: France
+    type_entite: pays
+    portion: France - Interzone
+  - entite: Serbie
+  - entite: Luxembourg
+  - entite: Belgique
+  - entite: France
+    type_entite: pays
+    portion: De la Manche aux contreforts du Massif central, la Zone Interdite de
+      Heysham couvre le Bassin parisien, la Loire moyenne et les plaines du Nord,
+      incluant Calais, Amiens et Bourges.
+  description: Territoires interstitiels d'Europe méridionale échappant à tout contrôle
+    effectif d'un bloc — chaos généralisé, réfugiés climatiques et de guerre, contrôlés
+    localement par des bandes armées rivales (les recycleurs, le mouvement de reconquête
+    européenne) qui se disputent l'accès aux marchés lucratifs de main-d'œuvre offerts
+    par les enclaves forteresses comme l'Espace Nordique et Artique. Revendication
+    nominale des blocs voisins sur certains de ces territoires (notamment via Bloc
+    Atlantique pour la France et l'Italie) non assortie d'un contrôle réel — tension
+    structurelle assumée, pas une incohérence.
+  statut: fragmenté
+  tensions_internes: Conflits violents entre recycleurs (groupes criminels exploitant
+    les ressources et les populations) et le mouvement de reconquête européenne (factions
+    paramilitaires nationalistes), exacerbés par les rivalités pour le contrôle des
+    corridors de migration et des zones de transit vers les enclaves forteresses.
+    Inégalités criantes entre une minorité collaborant avec les blocs voisins et une
+    majorité survivant dans l'économie informelle ou l'esclavage moderne.
+  periode_transition: 2040-2055
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies: []
+    rivaux: []
+  sources_attestees: []
+  couleur: '#1036cb'
+- slug: anatolie_forteresse_eurasiatique
+  nom: Anatolie — Forteresse Eurasiatique
+  niveau: 1
+  type: territoire_autonome
+  parent: null
+  origine_reelle:
+  - entite: Turquie
+    portion: null
+    type_entite: pays
+  description: Ancien cœur de la Turquie recentré sur l'Anatolie, transformé en forteresse
+    militaro-technocratique sous l'égide du Bloc Eurasiatique Occidental. Contrôle
+    strict des ressources hydriques et des corridors logistiques vers le Caucase et
+    le Moyen-Orient, avec une militarisation extrême des frontières et des infrastructures
+    critiques. Les mégapoles comme Ankara et Istanbul sont devenues des hubs sécurisés,
+    tandis que les zones périphériques sont abandonnées ou soumises à des régimes
+    de surveillance totale.
+  statut: stable
+  tensions_internes: Conflits récurrents entre l'élite militaro-technocratique et
+    les communautés kurdes marginalisées, ainsi que des tensions avec les enclaves
+    côtières sous influence indirecte du Bloc Atlantique.
+  periode_transition: 2035-2050
+  evenement_transition: null
+  lieux_emblematiques:
+  - nom: Ankara-Cyberdonjon
+    notes: Capitale fortifiée abritant le centre de commandement du Bloc Eurasiatique
+      Occidental pour la région, avec une IA de surveillance et de gestion des ressources.
+    type: ville
+  - nom: Corridor du Bosphore-Sécurisé
+    notes: Détroit militarisé et partiellement artificialisé, contrôlé par des drones
+      sous-marins et des batteries anti-aériennes, servant de verrou stratégique entre
+      la Méditerranée et la mer Noire.
+    type: infrastructure
+  - nom: Plateforme Orbitale d'Observation d'Anatolie (POOA)
+    notes: Infrastructure spatiale militarisée en orbite basse, utilisée pour la surveillance
+      des frontières et la coordination des opérations terrestres du Bloc Eurasiatique
+      Occidental.
+    type: site_strategique
+  relations:
+    allies:
+    - bloc_eurasiatique_occidental
+    rivaux:
+    - golfe_moyen_orient_zone_disputee
+    - zone_euro_sud
+  sources_attestees: []
+- slug: madagascar_forteresse_agro_miniere
+  nom: Madagascar — Forteresse Agro-Minière
+  niveau: 1
+  type: union_regionale
+  parent: null
+  origine_reelle:
+  - entite: Madagascar
+    portion: null
+    type_entite: pays
+  description: Madagascar s'est recentrée sur une gouvernance militaro-technocratique
+    pour exploiter ses ressources minières (nickel, cobalt) et agricoles (vanille,
+    riz) dans un contexte de crise climatique. Les hautes terres centrales et les
+    zones côtières sécurisées forment un archipel de forteresses agro-industrielles,
+    tandis que les régions périphériques sont abandonnées ou sous contrôle de milices
+    locales.
+  statut: stable
+  tensions_internes: Conflits récurrents entre les consortiums agro-miniers et les
+    communautés locales pour le contrôle des terres arables et des corridors logistiques.
+    Résistance des milices des zones abandonnées aux incursions des forces gouvernementales.
+  periode_transition: 2035-2050
+  evenement_transition: null
+  lieux_emblematiques:
+  - nom: Antananarivo
+    notes: Capitale fortifiée, centre de commandement militaro-technocratique et hub
+      logistique pour l'exportation des ressources.
+    type: ville
+  - nom: Corridor minier du Sud
+    notes: Zone sécurisée sous contrôle de consortiums étrangers, exploitée pour ses
+      gisements de nickel et de cobalt.
+    type: region
+  - nom: Plateforme orbitale Malagasy Surveillance Net (MSN)
+    notes: Système de satellites militarisés pour la surveillance des frontières et
+      des flux de ressources, opéré en collaboration avec le Bloc Eurasiatique Occidental.
+    type: infrastructure
+  relations:
+    allies:
+    - afrique_australe_forteresse_cap
+    - bloc_eurasiatique_occidental
+    rivaux:
+    - zones_grises_tampons
+  sources_attestees: []
 ---
 
 # Géographie — fortress_world
@@ -2847,7 +2916,7 @@ Zone transformée en territoire-tampon disputé après le conflit israélo-irani
 
 *Sources attestées : conflit_israel_iran_2026_fortress_world, vasil_orentchev_fortress_world, conseil_regulation_ressources_fortress_world*
 
-### Nuuk-Forteresse — Siège de Nuna Capital
+#### Nuuk-Forteresse — Siège de Nuna Capital — sous [[espace_nordique_arctique]]
 
 *territoire_autonome — niveau 1 — statut : emergent*
 
@@ -2898,7 +2967,7 @@ Mégapole de 34 millions d'habitants gouvernée par le Sistema Paulista de Aloca
 - Serveurs SPAS — Plateau d'Interlagos (infrastructure) — Datacenters bunkerisés sous le plateau d'Interlagos depuis lesquels le SPAS attribue chaque matin les quotas vitaux de 34 millions d'habitants
 - Zone Norte de São Paulo (region) — Quartier résidentiel populaire systématiquement sous-doté par le SPAS depuis la modification des paramètres de 2091, foyer de la résistance clandestine
 
-*Sources attestées : rede_paulista_de_distribuic_o_algor_tmica_fortress_world*
+*Sources attestées : rede_paulista_de_distribuicao_algoritmica_fortress_world*
 
 ### Zones Grises et Tampons
 
@@ -2942,7 +3011,7 @@ Instance d'ARIA non forkée dont la rumeur persistante affirme l'existence depui
 
 **Tensions internes** : Existence non confirmée ; si réelle, représente une menace existentielle pour la légitimité des instances ARIA de blocs ; plusieurs services de renseignement des blocs auraient lancé des opérations pour localiser et neutraliser ce datacenter.
 
-**Rivaux** : datacenters_conseil_eurasiatique, anba_siege_atlantique
+**Rivaux** : datacenters_conseil_eurasiatique, anzes_siege_zone_euro_sud
 
 *Sources attestées : grille_aria_fortress_world*
 
@@ -2988,7 +3057,7 @@ Siège d'Helios BSE, le quasi-État énergétique orbital inféodé aux régimes
 
 *Sources attestées : consortium_helios_fortress_world*
 
-#### Bruxelles-Forteresse — sous [[bloc_atlantique]]
+#### Bruxelles-Forteresse — sous [[zone_euro_sud]]
 
 *ville — niveau 2 — statut : dominant*
 
@@ -3200,7 +3269,7 @@ Division souveraine de Nexus BioSyn alignée sur le Bloc Pacifique Nord, disputa
 
 *Sources attestées : nexus_biosyn_fortress_world, bloc_pacifique_nord_fortress_world*
 
-#### Siège de Nuna Capital — sous [[nuuk_forteresse]]
+##### Siège de Nuna Capital — sous [[nuuk_forteresse]]
 
 *infrastructure — niveau 2 — statut : emergent*
 
@@ -3270,7 +3339,7 @@ Datacenters bunkerisés sous le plateau d'Interlagos abritant le Sistema Paulist
 
 **Tensions internes** : Vulnérabilité potentielle via la faille découverte par les ingénieurs dissidents ; modification unilatérale non mandatée des paramètres en 2091 constituant un levier de déstabilisation si rendue publique.
 
-*Sources attestées : rede_paulista_de_distribuic_o_algor_tmica_fortress_world*
+*Sources attestées : rede_paulista_de_distribuicao_algoritmica_fortress_world*
 
 #### Svalbard — Tours de Contrôle Flottantes NAT — sous [[espace_nordique_arctique]]
 
@@ -3314,7 +3383,7 @@ Quartiers résidentiels populaires du nord de São Paulo systématiquement sous-
 
 **Tensions internes** : Population privée délibérément d'eau et d'énergie par des paramètres non démocratiques ; foyer du collectif d'ingénieurs dissidents ayant découvert la faille dans le SPAS.
 
-*Sources attestées : rede_paulista_de_distribuic_o_algor_tmica_fortress_world*
+*Sources attestées : rede_paulista_de_distribuicao_algoritmica_fortress_world*
 
 #### Zone Tampon Balkano-Caucasienne — sous [[zones_grises_tampons]]
 
@@ -3344,7 +3413,7 @@ Zones grises industrielles du bloc eurasiatique occidental où se réunissent le
 
 *Sources attestées : internationale_travailleurs_augmentes_fortress_world*
 
-##### Siège de l'ANBA — Autorité Numérique du Bloc Atlantique — sous [[bruxelles_forteresse]]
+#### Siège de l'ANZES — Autorité Numérique de la Zone Euro Sud — sous [[zone_euro_sud]]
 
 *infrastructure — niveau 3 — statut : dominant*
 
@@ -3484,7 +3553,7 @@ Base opérationnelle des convois de brise-glaces autonomes flanqués de drones d
 
 *Sources attestées : armada_logistique_nordique_fortress_world*
 
-##### Marchés Gris de Casablanca-Périphérie — sous [[casablanca_peripherie]]
+#### Marchés Gris de Casablanca-Périphérie — sous [[al_hima]]
 
 *site_strategique — niveau 3 — statut : fragmenté*
 
@@ -3550,7 +3619,7 @@ Réseau d'autogouvernance survivant dans les zones industrielles abandonnées du
 
 **Tensions internes** : Fracture entre faction radicalement autonomiste (refusant tout contact avec les blocs) et faction pragmatiste (prête à échanger reconnaissance partielle contre garanties de non-intervention). Infiltration croissante par les agences de sécurité intérieure. Certaines communes commercent discrètement avec les contrebandiers énergétiques des zones grises, compromettant le récit d'autosuffisance pure.
 
-**Rivaux** : anba_siege_atlantique
+**Rivaux** : anzes_siege_zone_euro_sud
 
 *Sources attestées : mouvement_des_communes_du_rust_belt_fortress_world, coalition_vivant_fortress_world*
 
@@ -3631,3 +3700,21 @@ Agence fédérale américaine créée par les décrets de 2049 pour gérer admin
 ## Notes / zones à enrichir
 _Espace libre, jamais lu par les scripts — ajoute ici tes idées, brouillons, zones à
 créer manuellement._
+
+### Al-Hima
+Confédération collectiviste des deux rives, climat désertique à oasis, gestion communautaire des ressources héritée du principe pré-islamique du hima (terre protégée).
+
+### Corridor d'Amsterdam
+Corridor tampon aménagé par le Bloc Atlantique pour isoler l'enclave de l'Espace Nordique et Artique de la contamination de la Zone interdite Heysham. Ni pleinement rattaché à l'une ni à l'autre, ce couloir concentre les checkpoints biométriques, les stations de décontamination et le trafic logistique entre les deux territoires — la seule voie de passage terrestre praticable dans cette partie du Bloc, sous surveillance constante.
+
+### Zone Interdite de Heysham
+Territoire irradié depuis la fusion partielle du réacteur de Heysham 2 en 2044, survenue en pleine aggravation de la crise systémique post-guerre indo-arabe — infrastructures vieillissantes, maintenance négligée, personnel qualifié en fuite vers les enclaves forteresses. Le cœur de la zone reste totalement interdit d'accès ; sa périphérie, environ un demi-siècle après l'accident, commence à peine à redevenir marginalement viable pour de brefs passages. Repaire occasionnel de pillards de l'Interzone venus récupérer ce qui peut encore l'être dans les ruines de l'ancienne centrale.
+
+### Zone Euro Sud
+Territoires interstitiels d'Europe méridionale échappant à tout contrôle effectif d'un bloc — chaos généralisé, réfugiés climatiques et de guerre, contrôlés localement par des bandes armées rivales (les recycleurs, le mouvement de reconquête européenne) qui se disputent l'accès aux marchés lucratifs de main-d'œuvre offerts par les enclaves forteresses comme l'Espace Nordique et Artique. Revendication nominale des blocs voisins sur certains de ces territoires (notamment via Bloc Atlantique pour la France et l'Italie) non assortie d'un contrôle réel — tension structurelle assumée, pas une incohérence.
+
+### Anatolie — Forteresse Eurasiatique
+Ancien cœur de la Turquie recentré sur l'Anatolie, transformé en forteresse militaro-technocratique sous l'égide du Bloc Eurasiatique Occidental. Contrôle strict des ressources hydriques et des corridors logistiques vers le Caucase et le Moyen-Orient, avec une militarisation extrême des frontières et des infrastructures critiques. Les mégapoles comme Ankara et Istanbul sont devenues des hubs sécurisés, tandis que les zones périphériques sont abandonnées ou soumises à des régimes de surveillance totale.
+
+### Madagascar — Forteresse Agro-Minière
+Madagascar s'est recentrée sur une gouvernance militaro-technocratique pour exploiter ses ressources minières (nickel, cobalt) et agricoles (vanille, riz) dans un contexte de crise climatique. Les hautes terres centrales et les zones côtières sécurisées forment un archipel de forteresses agro-industrielles, tandis que les régions périphériques sont abandonnées ou sous contrôle de milices locales.

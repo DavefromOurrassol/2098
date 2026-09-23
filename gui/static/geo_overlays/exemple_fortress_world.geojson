@@ -1,0 +1,46 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_slug": "nordgard",
+        "pays": "Angleterre",
+        "portion_source": "sud et centre, autour de l'ancien Londres — exclut le nord-est irradié"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-3.0, 55.0],
+            [1.5, 55.0],
+            [1.5, 50.0],
+            [-5.5, 50.0],
+            [-5.5, 52.5],
+            [-3.0, 55.0]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_slug": "zone_de_hartlepool",
+        "pays": "Angleterre",
+        "portion_source": "nord-est, autour de Hartlepool"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-3.0, 55.0],
+            [1.5, 55.0],
+            [1.8, 58.5],
+            [-4.5, 58.5],
+            [-3.0, 55.0]
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -20,17 +20,41 @@ SCHÉMA D'UNE ENTRÉE
 --------------------
     id: <scenario>__<cible>              # identifiant stable, voir _id()
     scenario: breakdown
-    type: zone_suspecte | pays_sans_zone
+    type: zone_suspecte | pays_sans_zone | doublon_pays_entier
     cible: geneve_bunker_institutions    # slug de zone (zone_suspecte)
-                                          # ou nom de pays (pays_sans_zone)
+                                          # ou nom de pays (pays_sans_zone,
+                                          # doublon_pays_entier)
     probleme: "texte du diagnostic"
     source_diagnostic: patron_spatial | origine_reelle | zones_coherence
+                        | diagnostiquer_doublons_pays_entier
     date_detection: "2026-07-25"
     statut: a_traiter | ignore | traite
     proposition: null | {...zone complète, schéma validate_zone()...}
+                  | {slug_a_conserver, zones_a_retirer: [...]}  # doublon_pays_entier
     proposition_approuvee: false         # true = relu et approuvé, prêt pour --apply-topdown
     date_proposition: null | "2026-07-25"
     date_traitement: null | "2026-07-25"
+
+TYPE `doublon_pays_entier` (14 sept 2026) : contrairement aux deux types
+existants, la proposition n'est jamais générée par un LLM à la demande --
+`diagnostiquer_doublons_pays_entier.py --write-chantiers` calcule et
+attache la proposition dès la création du chantier (déterministe, via
+zone_repository.zones_portant_un_pays()) : `slug_a_conserver` (racine où
+le pays reste rattaché) et `zones_a_retirer` (racines N1 non apparentées
+où l'entrée "pays_entier" en doublon sera retirée -- jamais les entrées
+"overlay", jamais une sous-zone de la même lignée N1 que
+slug_a_conserver, cf. bug #6 du 14 sept dans zone_repository.py).
+Conséquence côté GUI (app.py) : `/api/chantiers/generer` refuse ce type
+(rien à générer), et `/api/chantiers/appliquer` l'applique directement
+via ZoneRepository.retirer_doublons_pays_entier() au lieu du
+sous-processus generer_zones_topdown.py --apply-topdown (qui ignore ce
+type). Ce module (chantiers.py, côté generator/) ne fait que valider et
+stocker le type -- la génération et l'application vivent côté gui/, qui
+ne peut pas l'importer directement (séparation de codebase déjà
+documentée ailleurs dans ce fichier) : diagnostiquer_doublons_pays_
+entier.py (placé dans gui/) réimplémente localement l'écriture de
+chantiers_geographie.yaml, même pattern que app.py pour
+_charger_chantiers()/_sauver_chantiers().
 
 STATUTS -- volontairement réduits à 3 (simplifié le 25 juillet, les 5
 statuts précédents de patron_spatial_suspectes.yaml ajoutaient de la
@@ -65,7 +89,7 @@ CHANTIERS_FILE = VAULT_ROOT / "documentation" / "need_action" / "chantiers_geogr
 
 STATUT_DEFAUT = "a_traiter"
 STATUTS_VALIDES = {"a_traiter", "ignore", "traite"}
-TYPES_VALIDES = {"zone_suspecte", "pays_sans_zone"}
+TYPES_VALIDES = {"zone_suspecte", "pays_sans_zone", "doublon_pays_entier"}
 
 
 def _slugifier(texte: str) -> str:

@@ -377,9 +377,6 @@ zones:
   - entite: Niger
     type_entite: pays
     portion: null
-  - entite: Sénégal
-    type_entite: pays
-    portion: null
   - entite: Grèce
     type_entite: pays
     portion: null

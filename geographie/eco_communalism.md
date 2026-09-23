@@ -509,9 +509,6 @@ zones:
   - entite: Bahia
     type_entite: etat_federe
     portion: null
-  - entite: Brésil
-    type_entite: pays
-    portion: null
   description: Réseau de communautés semi-arides du Nordeste brésilien organisées
     en coopératives d'énergie solaire et d'agriculture sèche, en résistance ouverte
     aux grands propriétaires terriens et aux corporations biotechnologiques. En 2098,
@@ -778,9 +775,6 @@ zones:
   - entite: São Paulo
     type_entite: etat_federe
     portion: null
-  - entite: Brésil
-    type_entite: pays
-    portion: null
   description: Mégalopole de vingt millions d'âmes dont le grand système d'allocation
     algorithmique centralisé (APD) a été démembré après l'effondrement des réseaux
     centraux dans les années 2040. Ce qui subsiste est une constellation de modules
@@ -888,12 +882,6 @@ zones:
   type: site_strategique
   parent: maghreb_mediterraneen
   origine_reelle:
-  - entite: Maroc
-    type_entite: pays
-    portion: null
-  - entite: Algérie
-    type_entite: pays
-    portion: null
   - entite: Tunisie
     type_entite: pays
     portion: null
@@ -1430,9 +1418,6 @@ zones:
   - entite: Manaus
     type_entite: autre
     portion: null
-  - entite: Brésil
-    type_entite: pays
-    portion: null
   description: 'Site fondateur du Pacte Amazônia Viva lors de la grande confluence
     de 2041, et lieu de réunion bisannuel des assemblées fluviales itinérantes sur
     des pirogues élargies et des plateformes de bambou ancrées aux confluences. En
@@ -1604,12 +1589,6 @@ zones:
     type_entite: pays
     portion: null
   - entite: Allemagne
-    type_entite: pays
-    portion: null
-  - entite: Maroc
-    type_entite: pays
-    portion: null
-  - entite: Algérie
     type_entite: pays
     portion: null
   description: 'Réseau de plus de 340 coopératives sur une douzaine de bassins versants
@@ -1901,9 +1880,6 @@ zones:
   parent: maghreb_mediterraneen
   origine_reelle:
   - entite: Libye
-    type_entite: pays
-    portion: null
-  - entite: Algérie
     type_entite: pays
     portion: null
   description: Territoires du Maghreb intérieur frappés par une désertification avancée
@@ -2469,9 +2445,6 @@ zones:
     - enclaves_extractivistes_et_etats_residuels
   sources_attestees: []
   origine_reelle:
-  - entite: Kazakhstan
-    type_entite: pays
-    portion: null
   - entite: Ouzbékistan
     type_entite: pays
     portion: null
