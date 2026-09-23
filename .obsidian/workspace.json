@@ -185,6 +185,7 @@
   },
   "active": "776177f70fc76299",
   "lastOpenFiles": [
+    "gui/check_overlay_portion_coherence.py",
     "geographie/breakdown_avant_test.md",
     "documentation/BACKLOG_ARCHIVE.md",
     "documentation/Old/BACKLOG_ARCHIVE copie 2.md",
@@ -214,7 +215,6 @@
     "documentation/need_action/impact_bascule_pays_bas_fortress_world.md",
     "documentation/need_action/impact_bascule_bulgarie_fortress_world.md",
     "documentation/need_action/impact_bascule_italie_fortress_world.md",
-    "documentation/need_action/impact_bascule_luxembourg_fortress_world.md",
     "gui/static/geo_overlays/fortress_world.geojson.bak",
     "gui/static/geo_overlays/fortress_world.geojson",
     "generator/enrich_zone_manquante.py",

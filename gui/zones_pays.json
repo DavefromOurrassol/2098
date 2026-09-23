@@ -406,7 +406,7 @@
   "fortress_world": {
     "France": "bloc_atlantique",
     "Allemagne": "bloc_atlantique",
-    "Royaume-Uni": "bloc_atlantique",
+    "Royaume-Uni": "zone_interdite_heysham",
     "Angleterre": "bloc_atlantique",
     "Écosse": "bloc_atlantique",
     "Pays de Galles": "bloc_atlantique",

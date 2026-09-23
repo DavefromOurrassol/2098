@@ -2587,6 +2587,7 @@ zones:
     portion: La Zone Interdite de Heysham couvre le littoral Manche-Atlantique de
       la France, de Calais à Lorient, incluant la vallée de la Seine et les régions
       frontalières du Hainaut.
+  - entite: Royaume-Uni
   description: Territoire irradié depuis la fusion partielle du réacteur de Heysham
     2 en 2044, survenue en pleine aggravation de la crise systémique post-guerre indo-arabe
     — infrastructures vieillissantes, maintenance négligée, personnel qualifié en

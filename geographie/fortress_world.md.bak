@@ -387,7 +387,7 @@ zones:
 - slug: espace_nordique_arctique
   nom: Espace Nordique et Arctique
   niveau: 1
-  type: territoire_autonome
+  type: infrastructure
   parent: null
   origine_reelle:
   - entite: Norvège
@@ -424,25 +424,26 @@ zones:
   - entite: Russie
     type_entite: pays
     portion: null
-  description: Espace géopolitique distinct contrôlé de facto par la Nordisk Arktisk
-    Transitkontroll (NAT), opérateur privé armé gérant les corridors arctiques dégelés
-    depuis ses tours de contrôle flottantes au large du Svalbard. Ni bloc souverain
-    classique ni territoire neutre, cet espace est une puissance de transit qui impose
-    sa loi sur les voies maritimes arctiques devenues artères vitales dans un monde
-    où les routes méridionales sont militarisées.
-  statut: emergent
-  tensions_internes: Factions internes contre la privatisation des voies souveraines
-    scandinaves ; accusation de favoritisme pro-scandinave dans les priorités de transit
-    ; débat sur l'automatisation IA des négociations.
+  description: Infrastructure stratégique militarisée contrôlant les corridors arctiques
+    dégelés, intégrée de facto au Pacte des Forteresses Souveraines. La Nordisk Arktisk
+    Transitkontroll (NAT), opérateur armé sous supervision des blocs nordiques, verrouille
+    les voies maritimes arctiques devenues artères vitales pour les échanges inter-blocs,
+    sous surveillance orbitale permanente.
+  statut: stable
+  tensions_internes: Conflits entre factions nordiques sur le degré d'autonomie de
+    la NAT face aux blocs continentaux ; résistance des milices logistiques locales
+    contre la militarisation des corridors.
   periode_transition: 2050-2080
   evenement_transition: null
   lieux_emblematiques: []
   relations:
-    allies: []
-    rivaux:
+    allies:
+    - pacte_forteresses_souveraines
     - bloc_atlantique
-    - bloc_eurasiatique_occidental
     - bloc_pacifique_nord
+    rivaux:
+    - bloc_eurasiatique_occidental
+    - zones_grises_tampons
   sources_attestees:
   - armada_logistique_nordique_fortress_world
   - factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world
