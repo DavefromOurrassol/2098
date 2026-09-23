@@ -4162,7 +4162,7 @@ async function _appliquerZoneComplete() {
     resultatEl.innerHTML = `
       <div style="color:#2a7d2a;font-size:12px;">${journal.join('<br>')}</div>
       <div class="carte-panel-error">Arrêté en cours de route : ${err.message}</div>
-      <div style="font-size:11px;color:#888;">La zone a peut-être été partiellement créée — vérifie dans l'arborescence ou "Gérer les overlays" avant de relancer.</div>
+      <div style="font-size:11px;color:#888;">La zone a peut-être été partiellement créée — vérifie dans l'arborescence ou dans le panneau "✏️ éditer" de la zone avant de relancer.</div>
     `;
     btn.disabled = false;
     btn.textContent = 'Réessayer';
@@ -4551,67 +4551,6 @@ function renderCarteLegend() {
  * Même doctrine que le panneau top-down existant : proposition d'abord
  * (jamais d'écriture), application seulement après relecture humaine.
  */
-/**
- * Panneau "Gérer les overlays" (8 sept 2026) -- liste tous les overlays du
- * scénario avec un bouton supprimer par ligne. Corrige un conflit trouvé le
- * même jour (David) : la suppression "au clic sur l'overlay en mode dessin"
- * ne fonctionne plus depuis que l'outil polygone démarre automatiquement en
- * mode dessin -- chaque clic pose désormais un sommet au lieu d'atteindre le
- * gestionnaire de clic de la couche overlay en dessous. Cette liste est
- * volontairement indépendante du mode dessin, aucun conflit possible.
- */
-async function openOverlaysListePanel() {
-  const scenario = CarteState.scenario;
-  if (!scenario) return;
-
-  const panel = document.getElementById('carte-panel');
-  panel.innerHTML = `<div class="carte-panel-title">Overlays</div><div class="carte-status">Chargement…</div>`;
-
-  try {
-    const res = await fetch(`/api/carte/overlays?scenario=${encodeURIComponent(scenario)}`);
-    const data = await res.json();
-    const features = data.features || [];
-    if (!features.length) {
-      panel.innerHTML = `
-        <div class="carte-panel-title">Overlays</div>
-        <div class="carte-panel-empty">Aucun overlay dessiné pour ce scénario.</div>`;
-      return;
-    }
-
-    panel.innerHTML = `
-      <div class="carte-panel-title">Overlays (${features.length})</div>
-      <div id="overlays-liste"></div>
-    `;
-    const listeEl = document.getElementById('overlays-liste');
-    features.forEach(f => {
-      const props = f.properties || {};
-      const zone = CarteState.zonesN1.find(z => z.slug === props.zone_slug);
-      const item = document.createElement('div');
-      item.style.cssText = 'border:1px solid #eee;border-radius:4px;padding:8px;margin-bottom:6px;display:flex;justify-content:space-between;align-items:center;';
-      item.innerHTML = `
-        <div>
-          <strong>${zone ? zone.nom : props.zone_slug}</strong> — ${props.pays || '?'}
-          ${props.portion_source ? `<div style="font-size:11px;color:#888;">${props.portion_source}</div>` : ''}
-        </div>
-        <button class="btn-secondary overlay-supprimer-btn" data-id="${props.id}">🗑️ Supprimer</button>
-      `;
-      listeEl.appendChild(item);
-    });
-
-    listeEl.querySelectorAll('.overlay-supprimer-btn').forEach(btn => {
-      btn.addEventListener('click', async () => {
-        if (!window.confirm('Supprimer cet overlay ? (le texte origine_reelle associé, lui, reste inchangé)')) return;
-        btn.disabled = true;
-        btn.textContent = 'Suppression…';
-        await _supprimerOverlay(btn.dataset.id);
-        openOverlaysListePanel();  // réaffiche la liste à jour
-      });
-    });
-  } catch (e) {
-    panel.innerHTML = `<div class="carte-panel-error">Erreur réseau : ${e.message}</div>`;
-  }
-}
-
 async function openEnrichissementPanel() {
   const scenario = CarteState.scenario;
   if (!scenario) return;
