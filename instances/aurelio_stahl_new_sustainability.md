@@ -55,6 +55,7 @@ est_clandestin: false
 generation: transition
 
 injection:
+  garantie_selection: false
   type: custom
   annee_injection: 2037
   contexte_injection: >

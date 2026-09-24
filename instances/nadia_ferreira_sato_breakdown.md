@@ -53,6 +53,7 @@ est_clandestin: false
 generation: post-effondrement
 
 injection:
+  garantie_selection: false
   type: custom
   annee_injection: 2052
   contexte_injection: >

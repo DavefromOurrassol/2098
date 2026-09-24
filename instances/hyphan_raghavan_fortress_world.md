@@ -47,6 +47,7 @@ signes_distinctifs: Hyphan porte souvent des vêtements usés, marqués par les 
 retry_signes_distinctifs: non
 tensions_narratives: "Hyphan Raghavan cristallise plusieurs tensions narratives centrales du scénario Fortress World. D'abord, celle entre la résilience individuelle et l'écrasement systémique : son parcours illustre la capacité des marges à survivre, mais aussi leur vulnérabilité face aux logiques de contrôle des blocs. Ensuite, son lien avec les Recycleurs en fait un pont potentiel entre les exclus et les réseaux de résistance, sans qu'on sache si elle choisira de s'engager ou de rester en retrait. Enfin, son statut d'orpheline des conflits pour les ressources pose la question de la transmission : héritera-t-elle des luttes de ses parents, ou inventera-t-elle une voie nouvelle, adaptée à un monde où les anciennes solidarités ont volé en éclats ? Son avenir reste une page blanche, ouverte à toutes les hypothèses."
 date_creation: 2026-09-24
+exclure_articles: true
 ---
 
 # Hyphan Raghavan

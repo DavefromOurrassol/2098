@@ -60,6 +60,7 @@ est_clandestin: false
 generation: forteresse
 
 injection:
+  garantie_selection: false
   type: custom
   annee_injection: 2055
   contexte_injection: >

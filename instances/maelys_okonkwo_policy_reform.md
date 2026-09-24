@@ -59,6 +59,7 @@ est_clandestin: true
 generation: ère cognitive
 
 injection:
+  garantie_selection: false
   type: custom
   annee_injection: 2047
   contexte_injection: >

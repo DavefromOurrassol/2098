@@ -2780,6 +2780,73 @@
     "gui_verified": false
   },
   {
+    "id": "set_selection_instance",
+    "label": "Présence d'une instance dans les articles",
+    "icon": "🎯",
+    "section": "entites_nettoyage",
+    "script": "set_selection_instance.py",
+    "description": "Règle, sans appel LLM, la présence d'instances dans les articles générés. « Exclure » : l'instance n'est jamais choisie automatiquement (personnage en réserve), mais reste utilisable en mode « Forcer un élément ». « Retirer la garantie » : une instance créée en mode custom perd sa place garantie dans chaque article de son scénario, tout en gardant son impact sur les variables. Cible : une instance, ou toutes les instances d'une entité.",
+    "requires": [],
+    "options": [
+      {
+        "flag": "--entite",
+        "type": "slug_select",
+        "slug_type": "entities",
+        "label": "Entité (toutes ses instances)",
+        "optional": true,
+        "description": "Applique l'action à toutes les instances de cette entité (limitées au scénario ci-dessous s'il est choisi). Laisser vide pour viser une seule instance."
+      },
+      {
+        "flag": "--scenario",
+        "type": "select",
+        "label": "Scénario (optionnel)",
+        "source": "config_scenarios",
+        "optional": true,
+        "description": "Limite l'action à ce scénario."
+      },
+      {
+        "flag": "--slug",
+        "type": "slug_select",
+        "slug_type": "instances",
+        "label": "OU une seule instance",
+        "optional": true,
+        "description": "Une fiche instance précise (slug suffixé par le scénario, ex. hyphan_raghavan_fortress_world). Ne pas remplir en même temps que « Entité »."
+      },
+      {
+        "flag": "--action",
+        "type": "select",
+        "label": "Action",
+        "required": true,
+        "choices": [
+          {
+            "value": "exclure",
+            "label": "Exclure des articles"
+          },
+          {
+            "value": "autoriser",
+            "label": "Ré-autoriser dans les articles"
+          },
+          {
+            "value": "sans_garantie",
+            "label": "Retirer la garantie de présence (garder l'impact)"
+          },
+          {
+            "value": "garantie",
+            "label": "Rétablir la garantie de présence"
+          }
+        ]
+      },
+      {
+        "flag": "--dry-run",
+        "type": "checkbox",
+        "label": "Simulation (rien n'est écrit)",
+        "default": false,
+        "description": "Affiche ce qui serait modifié, sans toucher aux fiches."
+      }
+    ],
+    "gui_verified": false
+  },
+  {
     "id": "inject_journaliste_custom",
     "label": "Ajouter des journalistes (manuel / auto)",
     "icon": "🖋️",

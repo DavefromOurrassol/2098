@@ -872,6 +872,14 @@ def load_instance(instance_slug):
         # réelle par une génération d'article. Le mécanisme n'avait donc
         # probablement jamais fonctionné en pratique jusqu'à ce correctif.
         "priorite_forcee":         fm.get("priorite_forcee") is True,
+        # exclure_articles (24 septembre 2026) : inverse de priorite_forcee
+        # -- l'instance n'est JAMAIS retenue par la sélection automatique
+        # des articles (personnage en réserve, ex. hyphan_raghavan_
+        # fortress_world). Reste utilisable en mode "Forcer un élément"
+        # (resolve_forced_element passe par load_instance, pas par la
+        # sélection) et continue d'agir sur la simulation si elle est
+        # custom (apply_custom_injections ne regarde pas ce flag).
+        "exclure_articles":        fm.get("exclure_articles") is True,
         "description_journalistique": str(fm.get("description_journalistique", "") or "").strip(),
         "signes_distinctifs":      str(fm.get("signes_distinctifs", "") or "").strip(),
         "tensions_narratives":     str(fm.get("tensions_narratives", "") or "").strip(),
@@ -1453,6 +1461,16 @@ def _select_with_custom_guarantee(scored, scenario_slug, dry_run, max_n):
              and injection.get("garantie_selection", True) is not False)
             or inst.get("priorite_forcee") is True
         )
+
+    # exclure_articles (24 septembre 2026) : retirées avant toute
+    # sélection, garanties comprises -- les deux chemins de sélection
+    # (filter_instances_for_thematique, select_instances_by_impact)
+    # passent tous deux par cette fonction.
+    exclues_flag = [i.get("slug", "?") for _, i in scored if i.get("exclure_articles") is True]
+    if exclues_flag:
+        scored = [(s, i) for s, i in scored if i.get("exclure_articles") is not True]
+        print("[loader] {} instance(s) exclue(s) des articles (exclure_articles) : {}".format(
+            len(exclues_flag), ", ".join(exclues_flag)))
 
     custom = sorted(
         [(s, i) for s, i in scored if _est_garanti(i)],

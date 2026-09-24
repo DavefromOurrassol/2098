@@ -51,6 +51,7 @@ est_clandestin: false
 generation: pré-crise
 
 injection:
+  garantie_selection: false
   type: custom
   annee_injection: 2028
   contexte_injection: >
