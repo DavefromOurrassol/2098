@@ -28,7 +28,7 @@ variables_influencees:
     - systemes_productifs_travail
 
 zone_geographique:
-    - planétaire
+    - globale
 
 zone_systemique:
     - énergie
