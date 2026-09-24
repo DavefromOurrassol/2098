@@ -2556,27 +2556,6 @@ zones:
     allies: []
     rivaux: []
   sources_attestees: []
-- slug: corridor_amsterdam
-  nom: Corridor d'Amsterdam
-  niveau: 1
-  type: infrastructure
-  parent: null
-  origine_reelle: []
-  description: Corridor tampon aménagé par le Bloc Atlantique pour isoler l'enclave
-    de l'Espace Nordique et Artique de la contamination de la Zone interdite Heysham.
-    Ni pleinement rattaché à l'une ni à l'autre, ce couloir concentre les checkpoints
-    biométriques, les stations de décontamination et le trafic logistique entre les
-    deux territoires — la seule voie de passage terrestre praticable dans cette partie
-    du Bloc, sous surveillance constante.
-  statut: stable
-  tensions_internes: ''
-  periode_transition: null
-  evenement_transition: null
-  lieux_emblematiques: []
-  relations:
-    allies: []
-    rivaux: []
-  sources_attestees: []
 - slug: zone_interdite_heysham
   nom: Zone Interdite de Heysham
   niveau: 1
@@ -2609,8 +2588,8 @@ zones:
     fuite vers les enclaves forteresses. Le cœur de la zone reste totalement interdit
     d'accès ; sa périphérie, environ un demi-siècle après l'accident, commence à peine
     à redevenir marginalement viable pour de brefs passages. Repaire occasionnel de
-    pillards de la Zone Euro Sud venus récupérer ce qui peut encore l'être dans les ruines
-    de l'ancienne centrale.
+    pillards de la Zone Euro Sud venus récupérer ce qui peut encore l'être dans les
+    ruines de l'ancienne centrale.
   statut: en_declin
   tensions_internes: Conflits entre groupes de pillards venus des marges de la zone
     pour le contrôle des rares zones marginalement viables, et tensions avec les rares
@@ -3731,9 +3710,6 @@ créer manuellement._
 
 ### Al-Hima
 Confédération collectiviste des deux rives, climat désertique à oasis, gestion communautaire des ressources héritée du principe pré-islamique du hima (terre protégée).
-
-### Corridor d'Amsterdam
-Corridor tampon aménagé par le Bloc Atlantique pour isoler l'enclave de l'Espace Nordique et Artique de la contamination de la Zone interdite Heysham. Ni pleinement rattaché à l'une ni à l'autre, ce couloir concentre les checkpoints biométriques, les stations de décontamination et le trafic logistique entre les deux territoires — la seule voie de passage terrestre praticable dans cette partie du Bloc, sous surveillance constante.
 
 ### Zone Interdite de Heysham
 Territoire irradié depuis la fusion partielle du réacteur de Heysham 2 en 2044, survenue en pleine aggravation de la crise systémique post-guerre indo-arabe — infrastructures vieillissantes, maintenance négligée, personnel qualifié en fuite vers les enclaves forteresses. Le cœur de la zone reste totalement interdit d'accès ; sa périphérie, environ un demi-siècle après l'accident, commence à peine à redevenir marginalement viable pour de brefs passages. Repaire occasionnel de pillards de la Zone Euro Sud venus récupérer ce qui peut encore l'être dans les ruines de l'ancienne centrale.
