@@ -421,7 +421,7 @@ zones:
     portion: null
   - entite: Allemagne
     type_entite: pays
-    portion: Allemagne - Espace Nordique et Artique
+    portion: null
   - entite: Pays-Bas
     type_entite: pays
     portion: null
@@ -2684,9 +2684,7 @@ zones:
     portion: null
   - entite: France
     type_entite: pays
-    portion: De la Manche aux contreforts du Massif central, la Zone Interdite de
-      Heysham couvre le Bassin parisien, la Loire moyenne et les plaines du Nord,
-      incluant Calais, Amiens et Bourges.
+    portion: 'Toute la France hors littoral Manche-Atlantique (Zone Interdite de Heysham) : Bassin parisien, Centre, Est, vallée du Rhône et façade méditerranéenne.'
   description: Territoires interstitiels d'Europe méridionale échappant à tout contrôle
     effectif d'un bloc — chaos généralisé, réfugiés climatiques et de guerre, contrôlés
     localement par des bandes armées rivales (les recycleurs, le mouvement de reconquête
