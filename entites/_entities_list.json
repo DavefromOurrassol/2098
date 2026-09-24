@@ -9969,5 +9969,264 @@
       "reference",
       "breakdown"
     ]
+  },
+  {
+    "nom": "Les Recycleurs",
+    "slug": "les_recycleurs",
+    "categorie": "réseau",
+    "description": "Un réseau armé et territorialisé qui contrôle l'extraction, la transformation et la redistribution de ressources critiques issues d'un monde disparu, en imposant son autorité par la force et la coercition. Il incarne la survie par la prédation organisée, mêlant économie informelle, militarisation et clientélisme, tout en négociant avec les puissances dominantes pour préserver son autonomie et son pouvoir local.",
+    "tension_fondamentale": "La contradiction entre l'autonomie violente et l'intégration forcée dans des circuits économiques globaux : survivre par la domination locale tout en dépendant des échanges avec les acteurs dominants pour écouler ses ressources et maintenir son influence.",
+    "variables_potentielles": [
+      "geopolitique_conflits",
+      "systeme_economique_redistribution",
+      "organisation_territoires",
+      "energie_ressources_critiques"
+    ],
+    "scenarios": [
+      "fortress_world"
+    ]
+  },
+  {
+    "nom": "Les Cycles",
+    "slug": "les_cycles",
+    "categorie": "infrastructure",
+    "description": "Une infrastructure de marché et de contrôle décentralisée, ancrée dans les ruines d'un monde effondré, qui transforme les déchets et les ressources abandonnées en monnaie d'échange et en levier de pouvoir. Elle incarne la réappropriation matérielle comme fondement d'une économie de survie, tout en devenant un instrument de régulation sociale et de dépendance pour les populations marginalisées. Son essence réside dans la dualité entre autonomie locale et domination systémique, où la valeur des objets recyclés se mêle à la valeur des individus qui les collectent.",
+    "tension_fondamentale": "La contradiction entre l'émancipation par la récupération (autonomie, résilience) et l'asservissement par la dépendance au système qu'elle génère (contrôle, exclusion). Elle oscille entre bien commun et outil de domination, entre marché libre et monopole imposé.",
+    "variables_potentielles": [
+      "systeme_economique_redistribution",
+      "gouvernance_institutions",
+      "organisation_territoires",
+      "energie_ressources_critiques"
+    ],
+    "scenarios": [
+      "fortress_world"
+    ]
+  },
+  {
+    "nom": "Mouvement de Reconquête européenne",
+    "slug": "mouvement_de_reconquete_europeenne",
+    "categorie": "organisation",
+    "description": "Une faction armée ou mouvement politique qui incarne la réaction violente contre les transformations démographiques, culturelles ou économiques perçues comme une menace à l'identité historique d'un groupe. Elle se présente comme un rempart contre le déclin, justifiant ses actions par un discours de reconquête ou de purification, souvent mêlé de nostalgie et de xénophobie. Son existence repose sur la mobilisation d'une base radicalisée, prête à recourir à la force pour imposer sa vision exclusive de la souveraineté et de l'appartenance.",
+    "tension_fondamentale": "La contradiction entre la légitimité morale revendiquée (défendre une identité ou un territoire) et l'illégitimité systémique de ses méthodes (violence, exclusion, trafic), qui la place en marge des institutions tout en la rendant dépendante des mêmes structures qu'elle combat.",
+    "variables_potentielles": [
+      "geopolitique_conflits",
+      "valeurs_culture_tempo_sociale",
+      "demographie_mobilite_humaine",
+      "gouvernance_institutions"
+    ],
+    "scenarios": [
+      "fortress_world"
+    ]
+  },
+  {
+    "nom": "Alpha47",
+    "slug": "alpha47",
+    "categorie": "infrastructure",
+    "description": "Une infrastructure extractiviste isolée, contrôlée par une puissance hégémonique, où des populations marginalisées sont exploitées pour l'extraction de ressources critiques. Ce lieu incarne la convergence de l'exploitation économique, de l'opacité systémique et de la souffrance humaine, tout en générant des phénomènes inexpliqués ou occultés qui défient la rationalité dominante. Il symbolise l'archétype d'un territoire sacrifié, où la survie des travailleurs est subordonnée à la logique de profit et de contrôle.",
+    "tension_fondamentale": "La contradiction entre l'impératif de production et d'extraction (nécessaire à la survie ou à la puissance du système) et l'irresponsabilité face aux conséquences humaines et environnementales, notamment lorsque ces conséquences révèlent des vérités inconfortables ou des limites du système lui-même.",
+    "variables_potentielles": [
+      "energie_ressources_critiques",
+      "geopolitique_conflits",
+      "sante_biotechnologies",
+      "demographie_mobilite_humaine",
+      "systemes_productifs_travail"
+    ],
+    "scenarios": [
+      "fortress_world"
+    ]
+  },
+  {
+    "nom": "Contrats de service d'Ergo-Wian",
+    "slug": "contrats_de_service_d_ergo_wian",
+    "categorie": "système",
+    "description": "Un système de servitude contractuelle déguisée en opportunité économique, où une entité centralisée exploite les déséquilibres démographiques et géopolitiques pour imposer une main-d'œuvre captive sous couvert de légalité. Il incarne la marchandisation extrême du travail humain, transformant la précarité en ressource stratégique pour des blocs en quête de stabilité ou de domination. Son essence réside dans la création d'une dépendance structurelle, où les termes du contrat deviennent une prison invisible, justifiée par des besoins collectifs ou des impératifs de survie.",
+    "tension_fondamentale": "La contradiction entre l'apparente liberté de choix (le contrat) et l'irréversibilité de l'engagement, où la survie individuelle est sacrifiée au nom de la stabilité d'un système qui se nourrit de cette asymétrie. Cette tension révèle l'exploitation des vulnérabilités comme mécanisme de contrôle, masquée par des promesses de sécurité ou de prospérité.",
+    "variables_potentielles": [
+      "systeme_economique_redistribution",
+      "demographie_mobilite_humaine",
+      "systemes_productifs_travail",
+      "gouvernance_institutions",
+      "geopolitique_conflits"
+    ],
+    "scenarios": [
+      "fortress_world"
+    ]
+  },
+  {
+    "nom": "Les Dédoublés",
+    "slug": "les_dedoubles",
+    "categorie": "autre",
+    "description": "Cette entité incarne les individus ou groupes dotés de capacités perceptives ou cognitives qui transcendent les limites conventionnelles de la réalité, leur permettant d'accéder à des dimensions alternatives, des réalités parallèles ou des flux d'information inaccessibles aux autres. Ils représentent une forme de marginalité systémique, à la fois craints et convoités pour leur capacité à révéler ou manipuler des vérités cachées, des ressources inexploitées ou des versions du monde hors de portée des structures de pouvoir établies.",
+    "tension_fondamentale": "La contradiction entre leur potentiel émancipateur (libérer des connaissances ou des ressources verrouillées) et leur instrumentalisation par les pouvoirs en place (devenir des outils de contrôle, d'espionnage ou de domination), tout en étant perçus comme une menace existentielle pour l'ordre établi.",
+    "variables_potentielles": [
+      "frontieres_du_systeme",
+      "technologie_information",
+      "geopolitique_conflits",
+      "valeurs_culture_tempo_sociale"
+    ],
+    "scenarios": [
+      "fortress_world"
+    ]
+  },
+  {
+    "nom": "La Garde du Seuil",
+    "slug": "la_garde_du_seuil",
+    "categorie": "organisation",
+    "description": "Une organisation d'élite secrète ou semi-secrète, composée de membres dotés de capacités exceptionnelles (réelles ou perçues comme surnaturelles), chargée de protéger un territoire, une idéologie ou un pouvoir souverain. Elle incarne la dualité entre le mythe et la réalité, entre la transparence et l'opacité, et sert de rempart symbolique ou effectif contre les menaces extérieures tout en maintenant un contrôle strict sur ses propres secrets. Son existence repose sur une forme de légitimité parallèle, souvent fondée sur des compétences uniques ou des dons rares, qui la place au-dessus des institutions conventionnelles.",
+    "tension_fondamentale": "La contradiction entre la nécessité de protéger un ordre (ou une souveraineté) par des moyens extraordinaires et l'illégitimité ou l'opacité de ces moyens, qui finissent par éroder la confiance ou la cohésion même qu'ils sont censés préserver. Le secret qui fonde son pouvoir est aussi ce qui la rend vulnérable à la méfiance, à la fragmentation ou à la subversion.",
+    "variables_potentielles": [
+      "geopolitique_conflits",
+      "gouvernance_institutions",
+      "technologie_information",
+      "valeurs_culture_tempo_sociale"
+    ],
+    "scenarios": [
+      "fortress_world"
+    ]
+  },
+  {
+    "nom": "Tribu des Cinq Nations",
+    "slug": "tribu_des_cinq_nations",
+    "categorie": "organisation",
+    "description": "Une entité politique et sociale autonome, ancrée dans un territoire spécifique, qui incarne une forme de résistance ou de survie collective face à des systèmes dominants ou en crise. Elle combine des éléments de gouvernance traditionnelle, spirituelle ou communautaire avec une capacité d'adaptation pragmatique, souvent en marge des structures étatiques ou corporatistes. Son existence repose sur une identité forte, une économie de redistribution locale et une ouverture sélective aux échanges extérieurs, tout en préservant une souveraineté territoriale et culturelle.",
+    "tension_fondamentale": "La contradiction entre l'autonomie radicale (nécessaire pour survivre en marge des systèmes dominants) et l'interdépendance inévitable (pour accéder aux ressources, technologies ou alliances indispensables à sa pérennité). Cette tension se manifeste aussi entre la préservation d'une identité ou d'une tradition locale et l'adaptation aux réalités changeantes d'un monde fragmenté.",
+    "variables_potentielles": [
+      "gouvernance_institutions",
+      "systeme_economique_redistribution",
+      "organisation_territoires",
+      "valeurs_culture_tempo_sociale",
+      "geopolitique_conflits"
+    ],
+    "scenarios": [
+      "fortress_world"
+    ]
+  },
+  {
+    "nom": "Vikram Raghavan",
+    "slug": "vikram_raghavan",
+    "categorie": "humain",
+    "description": "Un protecteur apparent qui incarne la figure du gardien bienveillant, mais dont l'autorité repose sur des compromis secrets et des trahisons systémiques. Cette entité exploite les vulnérabilités des siens (famille, communauté, dépendants) pour négocier des avantages dans un système plus large, tout en maintenant une façade de légitimité morale ou affective. Son pouvoir émerge de sa capacité à naviguer entre les loyautés contradictoires, souvent au nom de la survie ou de la stabilité, mais au prix d'une corruption interne.",
+    "tension_fondamentale": "La contradiction entre la protection affichée (devoir, affection, responsabilité) et l'exploitation cachée (trahison, instrumentalisation, soumission aux logiques de pouvoir) — où la survie des uns justifie la sacrifice des autres, et où la confiance devient un levier de contrôle.",
+    "variables_potentielles": [
+      "geopolitique_conflits",
+      "gouvernance_institutions",
+      "demographie_mobilite_humaine",
+      "valeurs_culture_tempo_sociale"
+    ],
+    "scenarios": [
+      "fortress_world"
+    ]
+  },
+  {
+    "nom": "Anjali Raghavan",
+    "slug": "anjali_raghavan",
+    "categorie": "humain",
+    "description": "Cette entité incarne la figure de l'intermédiaire discret, souvent marginalisé ou ignoré, qui détient des informations cruciales mais choisit de les révéler ou de les dissimuler selon des logiques personnelles ou stratégiques. Elle évolue dans l'ombre des structures de pouvoir, servant de pont ou de filtre entre des réalités opposées (vérité et secret, famille et institution, vulnérabilité et manipulation). Son rôle est à la fois passif et actif : elle observe, documente, et parfois agit comme un catalyseur involontaire de changements systémiques.",
+    "tension_fondamentale": "La contradiction entre la loyauté envers un cercle intime (famille, communauté) et la responsabilité envers un bien commun plus large, ou entre la transparence nécessaire et la protection des intérêts privés ou des équilibres fragiles.",
+    "variables_potentielles": [
+      "valeurs_culture_tempo_sociale",
+      "technologie_information",
+      "geopolitique_conflits",
+      "gouvernance_institutions"
+    ],
+    "scenarios": [
+      "fortress_world"
+    ]
+  },
+  {
+    "nom": "Malo",
+    "slug": "malo",
+    "categorie": "humain",
+    "description": "Malo incarne l'archétype du compagnon de survie et de résistance dans un monde fragmenté, où les liens humains et les rêves collectifs persistent malgré l'effondrement des structures. Il représente la figure de l'allié fidèle, dont l'engagement se construit à travers des actions concrètes (collecte, exploration) et une vision partagée d'un ailleurs meilleur, souvent hors d'atteinte. Son existence même symbolise la persistance de l'espoir et de la solidarité dans des contextes où les institutions ont échoué à protéger ou à inspirer.",
+    "tension_fondamentale": "La contradiction entre l'ancrage dans la réalité précaire du présent (survie, collecte, adaptation) et la poursuite d'un idéal lointain (le Califat de Barcelone, un monde meilleur), qui risque de rester inaccessible ou de se révéler illusoire.",
+    "variables_potentielles": [
+      "demographie_mobilite_humaine",
+      "valeurs_culture_tempo_sociale",
+      "systeme_economique_redistribution",
+      "geopolitique_conflits"
+    ],
+    "scenarios": [
+      "fortress_world"
+    ]
+  },
+  {
+    "nom": "Anton Vasko",
+    "slug": "anton_vasko",
+    "categorie": "humain",
+    "description": "L'archétype de l'Exécuteur Loyal incarne la figure intemporelle de l'agent opérationnel dévoué à un pouvoir supérieur, chargé des missions les plus sombres ou stratégiques pour assurer la survie ou l'ascension de son commanditaire. Il agit dans l'ombre, combinant compétence technique, loyauté inconditionnelle et une moralité flexible, souvent justifiée par un sens aigu du devoir ou de la nécessité. Son rôle est de maintenir l'ordre interne ou d'étendre l'influence de son maître, en opérant aux marges des systèmes établis, là où les règles officielles ne s'appliquent plus ou doivent être contournées.",
+    "tension_fondamentale": "La contradiction entre la fidélité absolue à une autorité (ou à une cause) et l'autonomie requise pour accomplir des tâches moralement ambiguës ou violentes. Cette tension interroge la légitimité de ses actions : sert-il un bien supérieur ou perpétue-t-il un système oppressif par simple obéissance ?",
+    "variables_potentielles": [
+      "geopolitique_conflits",
+      "gouvernance_institutions",
+      "systemes_productifs_travail",
+      "valeurs_culture_tempo_sociale"
+    ],
+    "scenarios": [
+      "fortress_world"
+    ]
+  },
+  {
+    "nom": "Ingrid Solberg",
+    "slug": "ingrid_solberg",
+    "categorie": "humain",
+    "description": "Cette entité incarne l'intermédiaire stratégique entre le pouvoir centralisé et les marges extérieures, agissant comme un pont contrôlé pour négocier l'accès aux ressources, aux populations et aux informations critiques. Elle représente la figure du gestionnaire autoritaire des interfaces, dont la légitimité repose sur sa capacité à maintenir l'équilibre précaire entre inclusion sélective et exclusion protectrice, tout en servant les intérêts d'un système fermé.",
+    "tension_fondamentale": "La contradiction entre la nécessité de préserver l'ordre interne par le contrôle des flux (travailleurs, contrats, savoirs) et l'impératif de s'adapter aux dynamiques extérieures pour éviter l'isolement ou la fragmentation. Son pouvoir dépend de sa capacité à instrumentaliser les dépendances mutuelles tout en les niant.",
+    "variables_potentielles": [
+      "gouvernance_institutions",
+      "geopolitique_conflits",
+      "systemes_productifs_travail",
+      "frontieres_du_systeme"
+    ],
+    "scenarios": [
+      "fortress_world"
+    ]
+  },
+  {
+    "nom": "Aymeric de Valfort",
+    "slug": "aymeric_de_valfort",
+    "categorie": "humain",
+    "description": "Un dirigeant politique ou idéologique qui incarne la contradiction entre un discours de rupture radicale (reconquête, souveraineté, identité) et une pratique pragmatique de négociation ou de compromis avec les forces qu'il prétend combattre. Cette entité représente la tension entre l'idéal proclamé et les contraintes du pouvoir réel, souvent masquée par une rhétorique mobilisatrice. Elle peut émerger dans tout contexte où l'autorité se légitime par l'opposition à un système, tout en dépendant de lui pour sa survie ou son ascension.",
+    "tension_fondamentale": "La légitimité morale ou idéologique revendiquée (reconquête, pureté, résistance) entre en conflit permanent avec la nécessité de composer avec les acteurs dominants pour préserver ou étendre son influence, révélant une hypocrisie structurelle ou un réalisme cynique.",
+    "variables_potentielles": [
+      "gouvernance_institutions",
+      "geopolitique_conflits",
+      "valeurs_culture_tempo_sociale",
+      "technologie_information"
+    ],
+    "scenarios": [
+      "fortress_world"
+    ]
+  },
+  {
+    "nom": "Guilhelma",
+    "slug": "guilhelma",
+    "categorie": "humain",
+    "description": "Guérisseuse, gardienne des savoirs ancestraux et médiatrice entre les mondes visible et invisible, cette entité incarne la sagesse traditionnelle au service d'une communauté en marge des systèmes dominants. Elle préserve des connaissances marginalisées ou menacées, tout en assurant la cohésion sociale et spirituelle d'un groupe confronté à des crises existentielles. Son rôle oscille entre résistance culturelle et adaptation pragmatique, faisant d'elle un pont entre le passé et un futur incertain.",
+    "tension_fondamentale": "La préservation des savoirs et des traditions comme acte de résistance contre leur instrumentalisation ou leur dilution par les pouvoirs dominants, tout en devant composer avec ces mêmes pouvoirs pour assurer la survie immédiate de sa communauté.",
+    "variables_potentielles": [
+      "sante_biotechnologies",
+      "valeurs_culture_tempo_sociale",
+      "gouvernance_institutions",
+      "geopolitique_conflits"
+    ],
+    "scenarios": [
+      "fortress_world"
+    ]
+  },
+  {
+    "nom": "Raimon",
+    "slug": "raimon",
+    "categorie": "humain",
+    "description": "Un gardien des marges, expert des territoires oubliés ou contestés, qui incarne la connaissance intime des passages, des frontières et des ressources cachées. Cette entité représente la figure du médiateur ou du passeur, capable de naviguer entre les mondes officiels et les zones grises, tout en défendant une forme d'autonomie locale ou tribale. Son rôle est à la fois celui d'un protecteur des savoirs ancestraux et d'un acteur clé dans les dynamiques de pouvoir informel, où la maîtrise des flux (humains, matériels, informationnels) devient une monnaie d'échange.",
+    "tension_fondamentale": "La contradiction entre l'autonomie revendiquée (ou la loyauté envers une communauté restreinte) et la nécessité de composer avec les systèmes dominants pour assurer la survie ou l'accès aux ressources. Cette entité doit constamment négocier entre l'intégrité de son savoir ou de son territoire et les compromis inévitables pour exister dans un monde fragmenté.",
+    "variables_potentielles": [
+      "geopolitique_conflits",
+      "organisation_territoires",
+      "demographie_mobilite_humaine",
+      "valeurs_culture_tempo_sociale"
+    ],
+    "scenarios": [
+      "fortress_world"
+    ]
   }
 ]

@@ -1,0 +1,114 @@
+---
+name: Les Cycles de Paris
+type: instance
+slug: les_cycles_fortress_world
+entite: les_cycles
+scenario: fortress_world
+localisation:
+  zone: paris_hors
+  lieu: Paris et le Hors
+  type_lieu: ville
+
+type_dans_scenario: infrastructure
+
+role_dans_scenario: >
+  Réseau décentralisé de centres de collecte et de recyclage des métaux dans les ruines de Paris et du Hors, Les Cycles de Paris sont devenus le cœur économique des Recycleurs. Ils transforment les déchets métalliques en monnaie d'échange, en outils de survie et en leviers de pouvoir, tout en structurant une économie de la récupération qui oscille entre autonomie locale et contrôle systémique. Leur rôle est double : ils offrent une forme de résilience aux populations marginalisées tout en les maintenant dans une dépendance économique et sociale, renforçant ainsi les dynamiques de fragmentation du territoire.
+
+responsabilites: >
+  Gestion des centres de collecte, fixation des prix du métal recyclé, régulation des flux de ressources entre les zones urbaines et périphériques, et contrôle indirect des populations de Recycleurs via des systèmes de crédit et de dette. Ils servent également de banque informelle, de marché noir et d'outil de surveillance pour les autorités des blocs, qui tolèrent leur existence tant qu'ils ne menacent pas l'ordre établi.
+
+impact_local: 5
+impact_systemique_global: 3
+
+variables_influencees:
+    - systeme_economique_redistribution
+    - gouvernance_institutions
+    - organisation_territoires
+    - energie_ressources_critiques
+
+zone_geographique:
+    - urbaine
+    - régionale
+
+zone_systemique:
+    - économie
+    - infrastructure
+    - société
+
+alliances:
+    - les_recycleurs_fortress_world
+    - reseaux_d_echange_clandestin_inter_zones_fortress_world
+    - collectifs_de_reappropriation_energetique_peripherique_fortress_world
+
+oppositions:
+    - agences_de_securite_interieure_des_etats_forteresses_fortress_world
+    - bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world
+    - complexes_militaro_industriels_de_gestion_des_ressources_fortress_world
+
+type_relation_dominante: dépendance
+
+annee_debut: 2047
+annee_fin: 
+
+trajectoire: mature
+est_clandestin: false
+generation: post-effondrement
+
+injection:
+  garantie_selection: false
+  type: custom
+  annee_injection: 2047
+  contexte_injection: >
+    Les Cycles de Paris agissent comme un contre-pouvoir économique informel dans un système de blocs fermés, en recyclant et redistribuant les ressources métalliques hors des circuits officiels. Leur existence fragmente davantage l'organisation des territoires en créant des zones d'autonomie locale, tout en optimisant l'usage des ressources critiques dans un contexte de pénurie.
+  impact_sur_variables:
+  - variable: systeme_economique_redistribution
+    delta_level: 15
+    duree: 20
+    polarite: 1
+  - variable: organisation_territoires
+    delta_level: 10
+    duree: 15
+    polarite: -1
+  - variable: energie_ressources_critiques
+    delta_level: 8
+    duree: 10
+    polarite: 1
+  propagation:
+    via_matrice: true
+
+description_journalistique: >
+  Dans les entrailles de Paris, là où les tours du XXIe siècle se sont effondrées en squelettes de béton et d’acier, Les Cycles de Paris règnent en maîtres discrets. Imaginez des hangars rouillés, éclairés par des néons vacillants, où des files de Recycleurs attendent avec leurs chariots chargés de ferraille, de câbles et de pièces détachées arrachées aux décombres. Les balances électroniques, alimentées par des groupes électrogènes bricolés, clignotent sous le poids des métaux, tandis que des écrans affichent les cours du jour – un mélange de bitcoin local et de troc organisé. Les Cycles ne sont pas qu’un marché : c’est une institution, une banque, un réseau social. Ici, on négocie, on emprunte, on paie ses dettes en kilos de cuivre. Les autorités des blocs ferment les yeux, tant que les flux restent sous contrôle. Mais dans l’ombre, les Recycleurs murmurent que Les Cycles sont aussi un piège : plus on dépend d’eux, plus on est vulnérable.
+
+signes_distinctifs: >
+  Les centres de collecte sont marqués par des symboles peints à la bombe : des cercles entrelacés, évoquant à la fois l’infini et le recyclage, souvent accompagnés de slogans comme « Rien ne se perd, tout se transforme ». Les Recycleurs portent des gilets réfléchissants usés, couverts de badges métalliques représentant leur « score » de collecte. Les balances et les écrans de cotation sont des reliques du monde d’avant, réparées à l’infini, et deviennent des objets de culte pour ceux qui les utilisent.
+retry_signes_distinctifs: non
+
+tensions_narratives: >
+  Les Cycles de Paris sont au cœur d’une lutte silencieuse entre autonomie et contrôle. D’un côté, ils permettent aux Recycleurs de survivre en dehors des circuits économiques officiels, renforçant leur résilience face aux blocs. De l’autre, ils créent une dépendance qui peut être exploitée : les dettes s’accumulent, les prix fluctuent, et les autorités pourraient à tout moment décider de les fermer, plongeant des milliers de personnes dans le chaos. Une autre tension émerge avec l’épuisement progressif des ressources métalliques dans les ruines : que se passera-t-il quand il n’y aura plus rien à recycler ? Les Cycles pourraient devenir le théâtre d’une guerre des déchets, ou au contraire, se muer en un outil de rébellion contre les blocs.
+
+date_creation: 2026-09-24
+---
+
+# Les Cycles de Paris
+
+## Rôle dans [[fortress_world]]
+Réseau décentralisé de centres de collecte et de recyclage des métaux dans les ruines de Paris et du Hors, Les Cycles de Paris sont devenus le cœur économique des Recycleurs. Ils transforment les déchets métalliques en monnaie d'échange, en outils de survie et en leviers de pouvoir, tout en structurant une économie de la récupération qui oscille entre autonomie locale et contrôle systémique. Leur rôle est double : ils offrent une forme de résilience aux populations marginalisées tout en les maintenant dans une dépendance économique et sociale, renforçant ainsi les dynamiques de fragmentation du territoire.
+
+## Responsabilités
+Gestion des centres de collecte, fixation des prix du métal recyclé, régulation des flux de ressources entre les zones urbaines et périphériques, et contrôle indirect des populations de Recycleurs via des systèmes de crédit et de dette. Ils servent également de banque informelle, de marché noir et d'outil de surveillance pour les autorités des blocs, qui tolèrent leur existence tant qu'ils ne menacent pas l'ordre établi.
+
+## Variables influencées
+- [[systeme_economique_redistribution]]
+- [[gouvernance_institutions]]
+- [[organisation_territoires]]
+- [[energie_ressources_critiques]]
+
+## Relations
+**Alliés** : [[les_recycleurs_fortress_world]], [[reseaux_d_echange_clandestin_inter_zones_fortress_world]], [[collectifs_de_reappropriation_energetique_peripherique_fortress_world]]
+**Opposants** : [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]], [[bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world]], [[complexes_militaro_industriels_de_gestion_des_ressources_fortress_world]]
+
+## Description journalistique
+Dans les entrailles de Paris, là où les tours du XXIe siècle se sont effondrées en squelettes de béton et d’acier, Les Cycles de Paris règnent en maîtres discrets. Imaginez des hangars rouillés, éclairés par des néons vacillants, où des files de Recycleurs attendent avec leurs chariots chargés de ferraille, de câbles et de pièces détachées arrachées aux décombres. Les balances électroniques, alimentées par des groupes électrogènes bricolés, clignotent sous le poids des métaux, tandis que des écrans affichent les cours du jour – un mélange de bitcoin local et de troc organisé. Les Cycles ne sont pas qu’un marché : c’est une institution, une banque, un réseau social. Ici, on négocie, on emprunte, on paie ses dettes en kilos de cuivre. Les autorités des blocs ferment les yeux, tant que les flux restent sous contrôle. Mais dans l’ombre, les Recycleurs murmurent que Les Cycles sont aussi un piège : plus on dépend d’eux, plus on est vulnérable.
+
+## Tensions narratives
+Les Cycles de Paris sont au cœur d’une lutte silencieuse entre autonomie et contrôle. D’un côté, ils permettent aux Recycleurs de survivre en dehors des circuits économiques officiels, renforçant leur résilience face aux blocs. De l’autre, ils créent une dépendance qui peut être exploitée : les dettes s’accumulent, les prix fluctuent, et les autorités pourraient à tout moment décider de les fermer, plongeant des milliers de personnes dans le chaos. Une autre tension émerge avec l’épuisement progressif des ressources métalliques dans les ruines : que se passera-t-il quand il n’y aura plus rien à recycler ? Les Cycles pourraient devenir le théâtre d’une guerre des déchets, ou au contraire, se muer en un outil de rébellion contre les blocs.

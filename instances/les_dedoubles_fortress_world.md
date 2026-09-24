@@ -1,0 +1,115 @@
+---
+name: Les Échos du Hors
+type: instance
+slug: les_dedoubles_fortress_world
+entite: les_dedoubles
+scenario: fortress_world
+localisation:
+  zone: almaty_zone_friction
+  lieu: zones tampons d'Almaty
+  type_lieu: infrastructure
+
+type_dans_scenario: réseau
+
+role_dans_scenario: >
+  Les Dédoublés, dans le scénario fortress_world, sont des individus capables de percevoir et de circuler entre les métavers et les réalités parallèles lors de crises proches de la transe. Ergo-Wian les traque pour exploiter leur capacité à accéder aux ressources, technologies et informations des autres versions du monde, ce qui sous-tend le projet caché Alpha47. Les Échos du Hors incarnent la résistance organisée de ces Dédoublés, cherchant à protéger leurs facultés des griffes des blocs souverains tout en explorant les potentialités émancipatrices de leurs perceptions alternatives.
+
+responsabilites: >
+  Cartographier les métavers accessibles, former les nouveaux Dédoublés à contrôler leurs capacités, saboter les opérations de traque d'Ergo-Wian, et établir des réseaux clandestins de partage d'informations entre les réalités parallèles. Ils agissent comme une interface entre les mondes, protégeant les connaissances et ressources des versions alternatives des appétits des blocs forteresses.
+
+impact_local: 3
+impact_systemique_global: 2
+
+variables_influencees:
+    - technologie_information
+    - geopolitique_conflits
+    - gouvernance_institutions
+
+zone_geographique:
+    - régionale
+    - continentale
+    - globale
+
+zone_systemique:
+    - information
+    - gouvernance
+    - cyberspace
+
+alliances:
+    - coalitions_des_deplaces_et_apatrides_fortress_world
+    - reseaux_d_echange_clandestin_inter_zones_fortress_world
+    - cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
+    - mouvement_commun_midwest_fortress_world
+
+oppositions:
+    - ergo_wian_sovereign_holdings_fortress_world
+    - neurosentry_fortress_world
+    - agences_de_securite_interieure_des_etats_forteresses_fortress_world
+    - alpha47_fortress_world
+
+type_relation_dominante: conflit
+
+annee_debut: 2047
+annee_fin: 
+
+trajectoire: émergent
+est_clandestin: true
+generation: forteresse
+
+injection:
+  garantie_selection: false
+  type: custom
+  annee_injection: 2047
+  contexte_injection: >
+    Les Échos du Hors perturbent la fragmentation informationnelle des blocs en introduisant des flux de données et des technologies issues des métavers, tout en sapant la légitimité des institutions souveraines qui reposent sur le contrôle absolu de la réalité. Leur capacité à révéler des vérités alternatives et à manipuler les perceptions affaiblit les régimes autoritaires, mais leur clandestinité limite leur influence directe sur les structures de pouvoir.
+  impact_sur_variables:
+  - variable: technologie_information
+    delta_level: 8
+    duree: 15
+    polarite: 1
+  - variable: geopolitique_conflits
+    delta_level: -5
+    duree: 10
+    polarite: -1
+  - variable: gouvernance_institutions
+    delta_level: -6
+    duree: 20
+    polarite: -1
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Depuis les interstices des blocs souverains, une rumeur persiste : celle des Échos du Hors, ces individus capables de glisser entre les versions du monde comme on change de fréquence radio. Officiellement, ils n'existent pas. Pourtant, dans les zones tampons d'Almaty ou les couloirs humanitaires de Bassora, des témoignages concordent : des 'Dédoublés' apparaissent brièvement, les yeux vitreux, murmurant des coordonnées de ressources inexistantes ou des avertissements sur des réalités parallèles. Ergo-Wian les traque sans relâche, mais les Échos résistent, organisés en un réseau clandestin qui défie les frontières physiques et numériques des forteresses. Leur dernier coup d'éclat ? Avoir piraté les archives d'Alpha47 pour y semer des fragments de métavers, rendant les données du complexe minier inutilisables pendant des semaines.
+
+signes_distinctifs: >
+  Les Dédoublés des Échos du Hors se reconnaissent à leurs pupilles dilatées de manière asymétrique, souvent dissimulées sous des lentilles opaques ou des visières à réalité augmentée. Leurs symboles, griffonnés à la hâte sur les murs des zones grises, reprennent des motifs fractals inspirés des métavers qu'ils explorent : des spirales entrelacées, des codes QR déformés, ou des équations mathématiques incomplètes. Leurs communications utilisent des fréquences radio brouillées, mélangées à des séquences sonores hypnotiques qui perturbent les systèmes de surveillance.
+retry_signes_distinctifs: non
+
+tensions_narratives: >
+  Les Échos du Hors sont tiraillés entre deux destins : devenir les gardiens d'un savoir interdit, capables de libérer des ressources et technologies des métavers pour briser l'emprise des blocs, ou être réduits en outils de contrôle par les pouvoirs en place, transformés en espions ou en armes de guerre cognitive. Leur existence même remet en cause la stabilité des forteresses, car ils prouvent que le monde n'est pas aussi verrouillé que les régimes le prétendent. Leur prochaine étape ? Une tentative de synchronisation massive de leurs perceptions, un 'Grand Éveil' qui pourrait soit révéler une vérité insupportable, soit les condamner à l'extinction.
+
+date_creation: 2026-09-24
+---
+
+# Les Échos du Hors
+
+## Rôle dans [[fortress_world]]
+Les Dédoublés, dans le scénario fortress_world, sont des individus capables de percevoir et de circuler entre les métavers et les réalités parallèles lors de crises proches de la transe. Ergo-Wian les traque pour exploiter leur capacité à accéder aux ressources, technologies et informations des autres versions du monde, ce qui sous-tend le projet caché Alpha47. Les Échos du Hors incarnent la résistance organisée de ces Dédoublés, cherchant à protéger leurs facultés des griffes des blocs souverains tout en explorant les potentialités émancipatrices de leurs perceptions alternatives.
+
+## Responsabilités
+Cartographier les métavers accessibles, former les nouveaux Dédoublés à contrôler leurs capacités, saboter les opérations de traque d'Ergo-Wian, et établir des réseaux clandestins de partage d'informations entre les réalités parallèles. Ils agissent comme une interface entre les mondes, protégeant les connaissances et ressources des versions alternatives des appétits des blocs forteresses.
+
+## Variables influencées
+- [[technologie_information]]
+- [[geopolitique_conflits]]
+- [[gouvernance_institutions]]
+
+## Relations
+**Alliés** : [[coalitions_des_deplaces_et_apatrides_fortress_world]], [[reseaux_d_echange_clandestin_inter_zones_fortress_world]], [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]], [[mouvement_commun_midwest_fortress_world]]
+**Opposants** : [[ergo_wian_sovereign_holdings_fortress_world]], [[neurosentry_fortress_world]], [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]], [[alpha47_fortress_world]]
+
+## Description journalistique
+Depuis les interstices des blocs souverains, une rumeur persiste : celle des Échos du Hors, ces individus capables de glisser entre les versions du monde comme on change de fréquence radio. Officiellement, ils n'existent pas. Pourtant, dans les zones tampons d'Almaty ou les couloirs humanitaires de Bassora, des témoignages concordent : des 'Dédoublés' apparaissent brièvement, les yeux vitreux, murmurant des coordonnées de ressources inexistantes ou des avertissements sur des réalités parallèles. Ergo-Wian les traque sans relâche, mais les Échos résistent, organisés en un réseau clandestin qui défie les frontières physiques et numériques des forteresses. Leur dernier coup d'éclat ? Avoir piraté les archives d'Alpha47 pour y semer des fragments de métavers, rendant les données du complexe minier inutilisables pendant des semaines.
+
+## Tensions narratives
+Les Échos du Hors sont tiraillés entre deux destins : devenir les gardiens d'un savoir interdit, capables de libérer des ressources et technologies des métavers pour briser l'emprise des blocs, ou être réduits en outils de contrôle par les pouvoirs en place, transformés en espions ou en armes de guerre cognitive. Leur existence même remet en cause la stabilité des forteresses, car ils prouvent que le monde n'est pas aussi verrouillé que les régimes le prétendent. Leur prochaine étape ? Une tentative de synchronisation massive de leurs perceptions, un 'Grand Éveil' qui pourrait soit révéler une vérité insupportable, soit les condamner à l'extinction.

@@ -1,0 +1,106 @@
+---
+name: Anjali Raghavan — L'Écho des Seuils Parisiens
+type: instance
+slug: anjali_raghavan_fortress_world
+entite: anjali_raghavan
+scenario: fortress_world
+
+type_dans_scenario: humain
+
+role_dans_scenario: >
+  Anjali Raghavan incarne la figure de l'intermédiaire discret au cœur de la fragmentation des blocs. Épouse de Vikram Raghavan, le Gardien des Seuils Parisiens, elle évolue dans l'ombre des structures de pouvoir du Pacte des Forteresses Souveraines, révélant ou dissimulant des informations cruciales selon des logiques personnelles. C'est elle qui a révélé à Hyphan Raghavan l'existence des visions de son père avant sa mort, sans connaître — ou feignant d'ignorer — les tractations secrètes de son mari. Son rôle est à la fois passif et actif : elle observe, documente, et agit comme un catalyseur involontaire de changements systémiques, notamment en maintenant des liens entre les réalités opposées des blocs fermés et les populations marginalisées.
+
+responsabilites: >
+  Anjali Raghavan gère un réseau informel de documentation des disparitions et des silences au sein du Bloc Atlantique, notamment autour des maladies liées à Alpha47. Elle sert de pont entre les familles des travailleurs d'Ergo-Wian et les instances officielles, tout en protégeant les équilibres fragiles de son foyer. Ses actions, souvent perçues comme apolitiques, influencent pourtant les dynamiques de transparence et de secret qui structurent les relations inter-blocs.
+
+impact_local: 3
+impact_systemique_global: 1
+
+variables_influencees:
+    - gouvernance_institutions
+    - technologie_information
+    - valeurs_culture_tempo_sociale
+
+zone_geographique:
+    - urbaine
+    - nationale
+
+zone_systemique:
+    - gouvernance
+    - information
+    - société
+
+alliances:
+    - hyphan_raghavan_fortress_world
+    - les_recycleurs_fortress_world
+    - reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world
+
+oppositions:
+    - agences_de_securite_interieure_des_etats_forteresses_fortress_world
+    - neurosentry_fortress_world
+
+type_relation_dominante: infiltration
+
+annee_debut: 2046
+annee_fin: 
+
+trajectoire: marginal
+est_clandestin: true
+generation: forteresse
+
+injection:
+  type: custom
+  annee_injection: 2046
+  contexte_injection: >
+    Anjali Raghavan agit comme un contre-pouvoir informel au sein des institutions autoritaires des blocs, en documentant et révélant des informations qui érodent leur contrôle absolu. Son influence sur la technologie de l'information est indirecte mais réelle, en maintenant des réseaux de passeurs d'information qui contournent les écosystèmes numériques souverains. Enfin, son rôle de gardienne des récits marginaux renforce les valeurs de transparence et de résistance au sein des populations exclues, créant une culture de la méfiance envers les récits officiels des Forteresses.
+  impact_sur_variables:
+  - variable: gouvernance_institutions
+    delta_level: 5
+    duree: 10
+    polarite: -1
+  - variable: technologie_information
+    delta_level: 3
+    duree: 8
+    polarite: 1
+  - variable: valeurs_culture_tempo_sociale
+    delta_level: 4
+    duree: 12
+    polarite: 1
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Paris, 2098 — Anjali Raghavan est une silhouette familière des couloirs gris des Seuils Parisiens, où se croisent les laissés-pour-compte des blocs et les fonctionnaires des Forteresses. Vêtue d'un sari aux motifs discrets, souvent accompagnée d'un carnet de notes chiffré, elle est connue pour ses « archives des absents » : une collection de témoignages, de lettres et de fragments de données sur ceux qui ont disparu dans les zones sacrifiées ou les corridors militarisés. Les rumeurs disent qu'elle a sauvé des dizaines de familles en révélant des informations sur les contrats de travail d'Ergo-Wian, mais personne ne sait vraiment jusqu'où va son influence. Son appartement, niché dans un immeuble résidentiel du 13e arrondissement, est à la fois un refuge et un poste d'observation des tractations secrètes de son mari, Vikram Raghavan, dont elle semble ignorer — ou choisir d'ignorer — les dimensions les plus sombres.
+
+signes_distinctifs: >
+  Anjali porte toujours un pendentif en argent gravé d'un motif de vagues entrelacées, symbole de sa famille originaire de Chennai. Ses carnets, couverts de codes personnels et de dessins marginaux, sont devenus une légende parmi les recycleurs de Paris. Elle parle peu, mais ses silences sont souvent plus éloquents que les discours des officiels des blocs. Son regard, à la fois doux et perçant, semble toujours chercher quelque chose — ou quelqu'un — au-delà des murs des Forteresses.
+retry_signes_distinctifs: non
+
+tensions_narratives: >
+  La tension centrale autour d'Anjali Raghavan réside dans son double jeu involontaire : en révélant des informations à Hyphan, elle a déclenché une chaîne d'événements qui menace désormais l'équilibre des Seuils Parisiens. Les agences de sécurité intérieure la surveillent de près, soupçonnant une infiltration plus profonde qu'elle ne le laisse paraître. Parallèlement, son rôle de gardienne des archives des absents en fait une cible pour les milices privées d'Ergo-Wian, qui voient en elle une menace pour leurs contrats de travail opaques. Son avenir pourrait basculer entre trois trajectoires : devenir une figure de la résistance clandestine, être absorbée par les structures de pouvoir qu'elle observe, ou disparaître dans l'oubli, comme tant d'autres avant elle.
+
+date_creation: 2026-09-24
+---
+
+# Anjali Raghavan — L'Écho des Seuils Parisiens
+
+## Rôle dans [[fortress_world]]
+Anjali Raghavan incarne la figure de l'intermédiaire discret au cœur de la fragmentation des blocs. Épouse de Vikram Raghavan, le Gardien des Seuils Parisiens, elle évolue dans l'ombre des structures de pouvoir du Pacte des Forteresses Souveraines, révélant ou dissimulant des informations cruciales selon des logiques personnelles. C'est elle qui a révélé à Hyphan Raghavan l'existence des visions de son père avant sa mort, sans connaître — ou feignant d'ignorer — les tractations secrètes de son mari. Son rôle est à la fois passif et actif : elle observe, documente, et agit comme un catalyseur involontaire de changements systémiques, notamment en maintenant des liens entre les réalités opposées des blocs fermés et les populations marginalisées.
+
+## Responsabilités
+Anjali Raghavan gère un réseau informel de documentation des disparitions et des silences au sein du Bloc Atlantique, notamment autour des maladies liées à Alpha47. Elle sert de pont entre les familles des travailleurs d'Ergo-Wian et les instances officielles, tout en protégeant les équilibres fragiles de son foyer. Ses actions, souvent perçues comme apolitiques, influencent pourtant les dynamiques de transparence et de secret qui structurent les relations inter-blocs.
+
+## Variables influencées
+- [[gouvernance_institutions]]
+- [[technologie_information]]
+- [[valeurs_culture_tempo_sociale]]
+
+## Relations
+**Alliés** : [[hyphan_raghavan_fortress_world]], [[les_recycleurs_fortress_world]], [[reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world]]
+**Opposants** : [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]], [[neurosentry_fortress_world]]
+
+## Description journalistique
+Paris, 2098 — Anjali Raghavan est une silhouette familière des couloirs gris des Seuils Parisiens, où se croisent les laissés-pour-compte des blocs et les fonctionnaires des Forteresses. Vêtue d'un sari aux motifs discrets, souvent accompagnée d'un carnet de notes chiffré, elle est connue pour ses « archives des absents » : une collection de témoignages, de lettres et de fragments de données sur ceux qui ont disparu dans les zones sacrifiées ou les corridors militarisés. Les rumeurs disent qu'elle a sauvé des dizaines de familles en révélant des informations sur les contrats de travail d'Ergo-Wian, mais personne ne sait vraiment jusqu'où va son influence. Son appartement, niché dans un immeuble résidentiel du 13e arrondissement, est à la fois un refuge et un poste d'observation des tractations secrètes de son mari, Vikram Raghavan, dont elle semble ignorer — ou choisir d'ignorer — les dimensions les plus sombres.
+
+## Tensions narratives
+La tension centrale autour d'Anjali Raghavan réside dans son double jeu involontaire : en révélant des informations à Hyphan, elle a déclenché une chaîne d'événements qui menace désormais l'équilibre des Seuils Parisiens. Les agences de sécurité intérieure la surveillent de près, soupçonnant une infiltration plus profonde qu'elle ne le laisse paraître. Parallèlement, son rôle de gardienne des archives des absents en fait une cible pour les milices privées d'Ergo-Wian, qui voient en elle une menace pour leurs contrats de travail opaques. Son avenir pourrait basculer entre trois trajectoires : devenir une figure de la résistance clandestine, être absorbée par les structures de pouvoir qu'elle observe, ou disparaître dans l'oubli, comme tant d'autres avant elle.

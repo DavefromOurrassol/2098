@@ -1,0 +1,385 @@
+============================================================
+OURRASSOL 2098 — Création entités + instances
+============================================================
+
+Mode : custom (fourni via --mode)
+
+=== Les Recycleurs ===
+[1/3] Déduction de l'archétype...
+[llm] Mistral (mistral-large-latest) — entrée : 26613 | sortie : 227
+[2/3] Validation (essai 1)...
+[3/3] Injection de l'entité...
+[Instances] Génération automatique pour 1 scénario(s)...
+  Instances (1 scénario(s)) :
+    → fortress_world [CONTRAINTE DURE]... [llm] Mistral (mistral-large-latest) — entrée : 19449 | sortie : 1284
+
+     ⚠ oppositions filtrée (pas un slug d'instance valide) : 'reconquete_europeenne_fortress_world'
+✓
+
+=== Les Cycles ===
+[1/3] Déduction de l'archétype...
+[llm] Mistral (mistral-large-latest) — entrée : 26632 | sortie : 273
+[2/3] Validation (essai 1)...
+[3/3] Injection de l'entité...
+[Instances] Génération automatique pour 1 scénario(s)...
+  Instances (1 scénario(s)) :
+    → fortress_world [CONTRAINTE DURE]... [llm] Mistral (mistral-large-latest) — entrée : 19488 | sortie : 1373
+✓
+
+=== Mouvement de Reconquête européenne ===
+[1/3] Déduction de l'archétype...
+[llm] Mistral (mistral-large-latest) — entrée : 26677 | sortie : 268
+[2/3] Validation (essai 1)...
+[3/3] Injection de l'entité...
+[Instances] Génération automatique pour 1 scénario(s)...
+  Instances (1 scénario(s)) :
+    → fortress_world [CONTRAINTE DURE]... [llm] Mistral (mistral-large-latest) — entrée : 19504 | sortie : 1335
+✓
+
+=== Alpha47 ===
+[1/3] Déduction de l'archétype...
+[llm] Mistral (mistral-large-latest) — entrée : 26705 | sortie : 277
+[2/3] Validation (essai 1)...
+[3/3] Injection de l'entité...
+[Instances] Génération automatique pour 1 scénario(s)...
+  Instances (1 scénario(s)) :
+    → fortress_world [CONTRAINTE DURE]... [llm] Mistral (mistral-large-latest) — entrée : 19566 | sortie : 1489
+✓
+
+=== Contrats de service d'Ergo-Wian ===
+[1/3] Déduction de l'archétype...
+[llm] Mistral (mistral-large-latest) — entrée : 26773 | sortie : 306
+[2/3] Validation (essai 1)...
+[3/3] Injection de l'entité...
+[Instances] Génération automatique pour 1 scénario(s)...
+  Instances (1 scénario(s)) :
+    → fortress_world [CONTRAINTE DURE]... [llm] Mistral (mistral-large-latest) — entrée : 19641 | sortie : 1409
+
+     ⚠ oppositions filtrée (pas un slug d'instance valide) : 'reseau_vert_clandestin_fortress_world'
+✓
+
+=== Les Dédoublés ===
+[1/3] Déduction de l'archétype...
+[llm] Mistral (mistral-large-latest) — entrée : 26887 | sortie : 258
+[2/3] Validation (essai 1)...
+[3/3] Injection de l'entité...
+[Instances] Génération automatique pour 1 scénario(s)...
+  Instances (1 scénario(s)) :
+    → fortress_world [CONTRAINTE DURE]... [llm] Mistral (mistral-large-latest) — entrée : 19648 | sortie : 1366
+✓
+
+=== La Garde du Seuil ===
+[1/3] Déduction de l'archétype...
+[llm] Mistral (mistral-large-latest) — entrée : 26855 | sortie : 307
+[2/3] Validation (essai 1)...
+[3/3] Injection de l'entité...
+[Instances] Génération automatique pour 1 scénario(s)...
+  Instances (1 scénario(s)) :
+    → fortress_world [CONTRAINTE DURE]... [llm] Mistral (mistral-large-latest) — entrée : 19651 | sortie : 1504
+✓
+
+=== Tribu des Cinq Nations ===
+[1/3] Déduction de l'archétype...
+[llm] Mistral (mistral-large-latest) — entrée : 26902 | sortie : 293
+[2/3] Validation (essai 1)...
+[3/3] Injection de l'entité...
+[Instances] Génération automatique pour 1 scénario(s)...
+  Instances (1 scénario(s)) :
+    → fortress_world [CONTRAINTE DURE]... [llm] Mistral (mistral-large-latest) — entrée : 19692 | sortie : 1304
+
+     ⚠ alliances filtrée (pas un slug d'instance valide) : 'al_hima_la_garde_du_seuil_fortress_world'
+✓
+
+=== Vikram Raghavan ===
+[1/3] Déduction de l'archétype...
+[llm] Mistral (mistral-large-latest) — entrée : 26958 | sortie : 275
+[2/3] Validation (essai 1)...
+[3/3] Injection de l'entité...
+[Instances] Génération automatique pour 1 scénario(s)...
+  Instances (1 scénario(s)) :
+    → fortress_world [CONTRAINTE DURE]... [llm] Mistral (mistral-large-latest) — entrée : 19670 | sortie : 1506
+✓
+
+=== Anjali Raghavan ===
+[1/3] Déduction de l'archétype...
+[llm] Mistral (mistral-large-latest) — entrée : 26973 | sortie : 260
+[2/3] Validation (essai 1)...
+[3/3] Injection de l'entité...
+[Instances] Génération automatique pour 1 scénario(s)...
+  Instances (1 scénario(s)) :
+    → fortress_world [CONTRAINTE DURE]... [llm] Mistral (mistral-large-latest) — entrée : 19664 | sortie : 1473
+✓
+
+=== Malo ===
+[1/3] Déduction de l'archétype...
+[llm] Mistral (mistral-large-latest) — entrée : 26990 | sortie : 270
+[2/3] Validation (essai 1)...
+[3/3] Injection de l'entité...
+[Instances] Génération automatique pour 1 scénario(s)...
+  Instances (1 scénario(s)) :
+    → fortress_world [CONTRAINTE DURE]... [llm] Mistral (mistral-large-latest) — entrée : 19668 | sortie : 1225
+✓
+
+=== Anton Vasko ===
+[1/3] Déduction de l'archétype...
+[llm] Mistral (mistral-large-latest) — entrée : 27024 | sortie : 302
+[2/3] Validation (essai 1)...
+[3/3] Injection de l'entité...
+[Instances] Génération automatique pour 1 scénario(s)...
+  Instances (1 scénario(s)) :
+    → fortress_world [CONTRAINTE DURE]... [llm] Mistral (mistral-large-latest) — entrée : 19719 | sortie : 1390
+✓
+
+=== Ingrid Solberg ===
+[1/3] Déduction de l'archétype...
+[llm] Mistral (mistral-large-latest) — entrée : 27078 | sortie : 250
+[2/3] Validation (essai 1)...
+[3/3] Injection de l'entité...
+[Instances] Génération automatique pour 1 scénario(s)...
+  Instances (1 scénario(s)) :
+    → fortress_world [CONTRAINTE DURE]... [llm] Mistral (mistral-large-latest) — entrée : 19699 | sortie : 1462
+✗
+     - ancrage_reel semble recopier un jalon fictif du registre du scénario plutôt qu'un fait authentique de l'état du monde réel (séquence détectée : 'instauration du service de sécurité territoriale') — cite un élément vérifiable de 2026, pas un événement fictif du scénario
+
+=== Aymeric de Valfort ===
+[1/3] Déduction de l'archétype...
+[llm] Mistral (mistral-large-latest) — entrée : 27106 | sortie : 263
+[2/3] Validation (essai 1)...
+[3/3] Injection de l'entité...
+[Instances] Génération automatique pour 1 scénario(s)...
+  Instances (1 scénario(s)) :
+    → fortress_world [CONTRAINTE DURE]... [llm] Mistral (mistral-large-latest) — entrée : 19703 | sortie : 1604
+✓
+
+=== Guilhelma ===
+[1/3] Déduction de l'archétype...
+[llm] Mistral (mistral-large-latest) — entrée : 27171 | sortie : 246
+[2/3] Validation (essai 1)...
+[3/3] Injection de l'entité...
+[Instances] Génération automatique pour 1 scénario(s)...
+  Instances (1 scénario(s)) :
+    → fortress_world [CONTRAINTE DURE]... [llm] Mistral (mistral-large-latest) — entrée : 19732 | sortie : 1369
+✓
+
+=== Raimon ===
+[1/3] Déduction de l'archétype...
+[llm] Mistral (mistral-large-latest) — entrée : 27194 | sortie : 299
+[2/3] Validation (essai 1)...
+[3/3] Injection de l'entité...
+[Instances] Génération automatique pour 1 scénario(s)...
+  Instances (1 scénario(s)) :
+    → fortress_world [CONTRAINTE DURE]... ============================================================
+EXTRACT_LOCALISATION — Ourrassol 2098
+============================================================
+Fiches à traiter : 15
+
+[1/15] 
+[instance] alpha47_fortress_world
+  scénario : fortress_world
+[llm] Mistral (mistral-small-latest) — entrée : 7708 | sortie : 56
+  issue     : vide
+  zone      : (null)
+  lieu      : (null)
+  motif     : L'entité est située sur une planète stérile du système Eridani, hors de toute zone géographique terrestre disponible.
+  → écrit
+[2/15] 
+[instance] anjali_raghavan_fortress_world
+  scénario : fortress_world
+[llm] Mistral (mistral-small-latest) — entrée : 7773 | sortie : 80
+  issue     : extrait
+  zone      : paris_hors
+  lieu      : Paris — Seuils Parisiens (13e arrondissement)
+  motif     : Le texte mentionne explicitement Paris en 2098 et son 13e arrondissement comme lieu d'action d'Anjali Raghavan.
+  → écrit
+[3/15] 
+[instance] anton_vasko_fortress_world
+  scénario : fortress_world
+[llm] Mistral (mistral-small-latest) — entrée : 7745 | sortie : 78
+  issue     : extrait
+  zone      : paris_hors
+  lieu      : Paris (Hors)
+  motif     : Le texte mentionne explicitement 'les interstices de Paris' et 'territoires résiduels parisiens', correspondant à la zone 'paris_hors'.
+  → écrit
+[4/15] 
+[instance] aymeric_de_valfort_fortress_world
+  scénario : fortress_world
+[llm] Mistral (mistral-small-latest) — entrée : 8018 | sortie : 75
+  issue     : extrait
+  zone      : bloc_atlantique
+  lieu      : Bruxelles Résiduelle
+  motif     : Le texte mentionne explicitement les 'Tours Nexus7 de Bruxelles Résiduelle' comme lieu d'activité principal d'Aymeric de Valfort.
+  → écrit
+[5/15] 
+[instance] contrats_de_service_d_ergo_wian_fortress_world
+  scénario : fortress_world
+[llm] Mistral (mistral-small-latest) — entrée : 7596 | sortie : 88
+  issue     : extrait
+  zone      : zone_usines_forteresses_eurasie
+  lieu      : zones industrielles forteresses du bloc eurasiatique occidental
+  motif     : Le texte mentionne explicitement les 'zones industrielles forteresses du bloc eurasiatique occidental' comme zone d'opération des Contrats Ergo-Wian.
+  → écrit
+[6/15] 
+[instance] guilhelma_fortress_world
+  scénario : fortress_world
+[llm] Mistral (mistral-small-latest) — entrée : 7684 | sortie : 86
+  [VALIDATION ÉCHOUÉE] slug zone inconnu : 'tolos_saint_sernin_du_desert' (non trouvé dans geographie/fortress_world.md)
+  Réponse LLM : {"issue": "extrait", "zone": "tolos_saint_sernin_du_desert", "lieu": "Tolosa — Saint-Sernin-du-Désert", "type_lieu": "ville", "justification": "Le texte mentionne explicitement Tolosa — Saint-Sernin-d
+[7/15] 
+[instance] la_garde_du_seuil_fortress_world
+  scénario : fortress_world
+[llm] Mistral (mistral-small-latest) — entrée : 7828 | sortie : 67
+  issue     : extrait
+  zone      : al_hima
+  lieu      : Barcelone reconquise
+  motif     : Le texte mentionne explicitement 'Barcelone reconquise' comme point d'ancrage local de la Garde du Seuil.
+  → écrit
+[8/15] 
+[instance] les_cycles_fortress_world
+  scénario : fortress_world
+[llm] Mistral (mistral-small-latest) — entrée : 7698 | sortie : 65
+  issue     : extrait
+  zone      : paris_hors
+  lieu      : Paris et le Hors
+  motif     : Le texte mentionne explicitement 'les ruines de Paris et du Hors' comme cadre géographique des Cycles de Paris.
+  → écrit
+[9/15] 
+[instance] les_dedoubles_fortress_world
+  scénario : fortress_world
+[llm] Mistral (mistral-small-latest) — entrée : 7562 | sortie : 75
+  issue     : extrait
+  zone      : almaty_zone_friction
+  lieu      : zones tampons d'Almaty
+  motif     : Le texte mentionne explicitement les 'zones tampons d'Almaty' comme lieu d'apparition des Dédoublés.
+  → écrit
+[10/15] 
+[instance] les_recycleurs_fortress_world
+  scénario : fortress_world
+[llm] Mistral (mistral-small-latest) — entrée : 7360 | sortie : 68
+  issue     : extrait
+  zone      : paris_hors
+  lieu      : Paris (ruines)
+  motif     : L'entité est explicitement située dans les ruines de Paris, identifiée comme faisant partie de la Zone Euro Sud (Hors).
+  → écrit
+[11/15] 
+[instance] malo_fortress_world
+  scénario : fortress_world
+[llm] Mistral (mistral-small-latest) — entrée : 7491 | sortie : 72
+  issue     : extrait
+  zone      : paris_hors
+  lieu      : ruines de Paris
+  motif     : Le texte mentionne explicitement les 'zones interdites de Paris' et les 'ruines de Paris' comme lieu d'action de Malo.
+  → écrit
+[12/15] 
+[instance] mouvement_de_reconquete_europeenne_fortress_world
+  scénario : fortress_world
+[llm] Mistral (mistral-small-latest) — entrée : 7556 | sortie : 86
+  issue     : extrait
+  zone      : zone_euro_sud
+  lieu      : Hors européen (Sud de l'Europe)
+  motif     : Le texte mentionne explicitement que la RE-LFP opère dans le Hors européen, plus précisément dans les zones tampons du Sud de l'Europe, correspondant à la zone_euro_sud.
+  → écrit
+[13/15] 
+[instance] raimon_fortress_world
+  scénario : fortress_world
+[llm] Mistral (mistral-small-latest) — entrée : 7602 | sortie : 86
+  issue     : extrait
+  zone      : tolosa_saint_sernin_du_desert
+  lieu      : Tolosa — Saint-Sernin-du-Désert
+  motif     : Le texte mentionne explicitement Tolosa — Saint-Sernin-du-Désert comme lieu d'ancrage de Raimon et de sa tribu.
+  → écrit
+[14/15] 
+[instance] tribu_des_cinq_nations_fortress_world
+  scénario : fortress_world
+[llm] Mistral (mistral-small-latest) — entrée : 7439 | sortie : 87
+  issue     : extrait
+  zone      : tolosa_saint_sernin_du_desert
+  lieu      : Tolosa — Saint-Sernin-du-Désert
+  motif     : La fiche mentionne explicitement Tolosa rebaptisée Saint-Sernin-du-Désert comme siège de la Confédération des Cinq Feux.
+  → écrit
+[15/15] 
+[instance] vikram_raghavan_fortress_world
+  scénario : fortress_world
+[llm] Mistral (mistral-small-latest) — entrée : 7855 | sortie : 96
+  issue     : extrait
+  zone      : paris_hors
+  lieu      : Paris — Ancienne capitale réduite à un champ de ruines habité, aux portes de la Zone Interdite de Heysham
+  motif     : Le texte mentionne explicitement Paris comme lieu d'action central de Vikram Raghavan, avec une description détaillée de son état en 2098.
+  → écrit
+
+============================================================
+RÉCAPITULATIF
+============================================================
+  Extraits (zone trouvée)    : 13
+  Vides assumés (transnat.)  : 1
+  Ambigus (review manuelle)  : 0
+  Erreurs                    : 1
+  Total traité               : 15
+
+  → 1 erreur(s) :
+     • guilhelma_fortress_world : ["slug zone inconnu : 'tolos_saint_sernin_du_desert' (non trouvé dans geographie/fortress_world.md)"]
+
+Fiches modifiées : 14
+Sauvegardes .bak créées pour chaque fichier modifié.
+Rapport need_action mis a jour : documentation/need_action/localisation_review.md
+   (0 fiche(s) en attente)
+=================================================================
+  REVIEW LOCALISATION — Ourrassol 2098
+=================================================================
+  MODE AUTO-RESOLVE : résolution automatique par le LLM
+
+  Aucune fiche en review_manuelle. Rien à faire.
+
+[validate] Démarrage de la validation...
+[validate] 1/10 — Nomenclature...
+[validate] 2/10 — Cohérence systémique...
+[validate] 3/10 — Entités et instances...
+[validate] 4/10 — Thématiques...
+[validate] 5/10 — Localisation...
+[validate] 6/10 — Références croisées...
+[validate] 7/10 — Matrice d'influence...
+[validate] 8/10 — Événements...
+[validate] 9/10 — Signaux faibles (section 7 ↔ section 12)...
+[validate] 10/10 — Cohérence narrative post-injection...
+
+════════════════════════════════════════════════════════════
+VALIDATION — OURRASSOL 2098
+════════════════════════════════════════════════════════════
+
+📊 INVENTAIRE
+────────────────────────────────────────────────────────────
+  [NOMENCLATURE] 6/6 scénarios | 12/12 variables
+  [ENTITIES] 623 entités chargées
+  [INSTANCES] 825 instances chargées
+  [THEMATIQUES] 20 thématiques trouvées
+  [LOCALISATION] 905 fiches riches | 1 sans localisation | 0 review_manuelle
+  [CROSS_REFERENCES] 1486 slugs dans le référentiel
+  [MATRIX] 132 edges dans la matrice
+  [EVENTS] 22 archétypes d'événements
+  [EVENTS] 80 instances d'événements
+  [NARRATIVE] Aucune event_instance modifiée depuis la dernière validation — scan ignoré (--narrative pour forcer)
+
+⚠️  AVERTISSEMENTS (2)
+────────────────────────────────────────────────────────────
+  [INSTANCES] 1 avertissements
+  [LOCALISATION] 1 avertissements
+
+════════════════════════════════════════════════════════════
+✓ BASE VALIDE — 0 erreurs | 2 avertissements | 0 corrections
+════════════════════════════════════════════════════════════
+[llm] Mistral (mistral-large-latest) — entrée : 19783 | sortie : 1292
+✓
+
+Terminé. Voir /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/entites_custom/processed.yaml et /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/entites_custom/needs_review.yaml.
+Instances : 15 créée(s) | 0 déjà existante(s) | 1 erreur(s)
+
+════════════════════════════════════════════════════════════
+CYCLE POST-INJECTION
+════════════════════════════════════════════════════════════
+
+→ /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/generator/extract_localisation.py
+
+→ /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/generator/review_localisation.py --auto-resolve
+
+→ /Users/davidlopez2005/Documents/Obsidian Vault/Ourrassol2098/generator/validate.py
+
+✓ Cycle post-injection terminé.

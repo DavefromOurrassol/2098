@@ -1,9 +1,272 @@
+# entites_custom/queue.yaml
+#
+# Ajoute ici tes idées d'entités custom, décrites à travers UNE
+# instance de référence précise (le scénario où tu l'imagines
+# d'abord). Le LLM en déduira l'archétype intemporel, puis le script
+# enchaînera automatiquement la génération des instances pour les
+# autres scénarios. Lance ensuite :
+#
+#   python3 generator/create_entities_and_instances.py
+#   python3 generator/create_entities_and_instances.py --dry-run
+#
+# CHAMPS :
+#   nom            : nom de l'entité (personnage, organisation, IA...)
+#   category        : IA | organisation | entreprise | institution |
+#                     infrastructure | réseau | humain | système |
+#                     hybride | autre | média
+#   role            : rôle dans le scénario de référence — CONTRAINTE
+#                     DURE, repris tel quel par le script, pas reformulé
+#   etat            : trajectoire dans le scénario de référence —
+#                     CONTRAINTE DURE. Valeurs possibles (depuis la fusion
+#                     trajectoire du 9 août 2026) :
+#                     émergent | marginal | ascendant | dominant | mature |
+#                     déclinant | résiduel | transformé | disparu |
+#                     historique | mythifié
+#   est_clandestin  : optionnel. true | false | null (null = pas de
+#                     contrainte). Remplace l'ancien état "clandestin".
+#   scenario_ref    : le scénario où s'appliquent role/etat ci-dessus
+#                     (un seul, parmi : breakdown, fortress_world,
+#                     new_sustainability, eco_communalism,
+#                     policy_reform, reference)
+#   scenario_hint   : liste de TOUS les scénarios à couvrir, y compris
+#                     scenario_ref. null = les 6 scénarios par défaut.
+#   zone_hint       : optionnel. null si tu ne sais pas — le LLM choisit
+#                     librement l'ancrage géographique. Sinon une zone
+#                     (chaîne libre, ex: "Bassin du Congo") que tu IMPOSES
+#                     comme lieu d'ancrage de l'entité — injectée
+#                     directement dans le prompt de génération.
+#   source          : libre — date, contexte, lien...
+#   consignes_scenarios : optionnel (ajouté le 24 septembre 2026). Une
+#                     consigne libre PAR scénario (hors scenario_ref,
+#                     déjà fixé par role/etat), transmise au LLM
+#                     uniquement pour ce scénario — ex. garder l'entité
+#                     secondaire, en faire un souvenir historique, lui
+#                     donner un rôle sans rapport. Format :
+#                       consignes_scenarios:
+#                         breakdown: "rôle secondaire, souvenir des années 2030"
+#                         fortress_world: "..."
+#                     Un scénario absent de scenario_hint est ignoré.
+#   priorite_forcee : optionnel, false par défaut. true = garantit la
+#                     présence de cette entité dans les articles
+#                     générés sur TOUS les scénarios couverts
+#                     (scenario_hint) -- ne garantit que la CITATION,
+#                     pas le statut de sujet principal. Pour une
+#                     portée plus fine (forcer sur un scénario mais pas
+#                     un autre), utilise l'outil dédié après création
+#                     (GUI, section "Nettoyage entités") plutôt que ce
+#                     champ. Ajouté le 22 août 2026.
+#
+# EXEMPLE :
+#   - nom: Le Cartographe Silencieux
+#     category: humain
+#     role: >
+#       Ancien officier de renseignement devenu cartographe clandestin
+#       des zones de non-droit, vendant ses relevés aux plus offrants.
+#     etat: marginal
+#     est_clandestin: true
+#     scenario_ref: breakdown
+#     scenario_hint: null
+#     zone_hint: null
+#     source: idee_2026-06
+#
+# Un garde-fou anti-doublon (contre les entités déjà présentes dans
+# entites/_entities_list.json) s'applique systématiquement, y compris
+# en mode custom.
+#
+# Les idées traitées sont déplacées vers processed.yaml (succès) ou
+# needs_review.yaml (échec après corrections automatiques).
+# ──────────────────────────────────────────────────────────────────────────────
+
 queue:
-- nom: Test Retry Signes 23aout
-  category: infrastructure
-  etat: émergent
-  est_clandestin: 'true'
-  scenario_ref: reference
-  scenario_hint:
-  - reference
-  priorite_forcee: 'false'
+  - nom: Les Recycleurs
+    category: réseau
+    role: 'Faction armée du Hors (Zone Euro Sud), implantée surtout dans les ruines
+      de Paris : elle contrôle la récupération et la revente des métaux du « monde d''avant
+      » à travers ses centres de collecte, les cycles, impose sa loi aux quartiers qu''elle
+      tient et recrute de force, y compris des enfants. Rivale mortelle de la Reconquête
+      européenne, elle négocie en secret avec Ergo-Wian la fourniture de travailleurs
+      sous contrat de service.'
+    etat: dominant
+    scenario_ref: fortress_world
+    scenario_hint:
+    - fortress_world
+    zone_hint: null
+    source: hyphan_scenario1_2026-09 (Ourrassol_Scénario1.docx)
+  - nom: Les Cycles
+    category: infrastructure
+    role: Réseau de centres de collecte des Recycleurs dans les ruines de Paris et du
+      Hors, où chacun vient revendre les objets métalliques glanés dans les décombres
+      du « monde d'avant ». Le métal étant devenu la matière première de tous les objets
+      usuels, les cycles sont à la fois marché, banque et instrument de contrôle des
+      Recycleurs sur la population.
+    etat: mature
+    scenario_ref: fortress_world
+    scenario_hint:
+    - fortress_world
+    zone_hint: null
+    source: hyphan_scenario1_2026-09 (Ourrassol_Scénario1.docx)
+  - nom: Mouvement de Reconquête européenne
+    category: organisation
+    role: 'Faction armée du Hors (Zone Euro Sud) qui prétend « reconquérir » l''Europe
+      pour ses populations d''origine : raids meurtriers contre les communautés de déplacés
+      et de migrants, rapts de jeunes adultes revendus comme esclaves, recrutement forcé.
+      Rivale des Recycleurs pour le contrôle du Hors, elle négocie pourtant elle aussi
+      avec Ergo-Wian.'
+    etat: ascendant
+    scenario_ref: fortress_world
+    scenario_hint:
+    - fortress_world
+    zone_hint: null
+    source: hyphan_scenario1_2026-09 (Ourrassol_Scénario1.docx)
+  - nom: Alpha47
+    category: infrastructure
+    role: Planète d'extraction minière détenue par Ergo-Wian, où sont envoyés des travailleurs
+      recrutés dans le Hors sous contrat de service. Une maladie mal connue y frappe
+      les mineurs ; certains malades, avant de mourir, rapportent des visions. Ergo-Wian
+      n'en communique rien.
+    etat: mature
+    scenario_ref: fortress_world
+    scenario_hint:
+    - fortress_world
+    zone_hint: null
+    source: hyphan_scenario1_2026-09 (Ourrassol_Scénario1.docx)
+  - nom: Contrats de service d'Ergo-Wian
+    category: système
+    role: 'Régime de servitude contractuelle par lequel Ergo-Wian recrute dans le Hors
+      les travailleurs dont a besoin la population vieillissante d''Euro-Nord (Espace
+      Nordique et Arctique) : logement et nourriture contre cinq à vingt ans de travail,
+      sans droit de rompre. Les factions du Hors se disputent le rôle d''intermédiaire,
+      source de richesse et de pouvoir.'
+    etat: dominant
+    scenario_ref: fortress_world
+    scenario_hint:
+    - fortress_world
+    zone_hint: null
+    source: hyphan_scenario1_2026-09 (Ourrassol_Scénario1.docx)
+  - nom: Les Dédoublés
+    category: autre
+    role: 'Personnes dotées de facultés extrasensorielles : lors de crises proches de
+      la transe, elles perçoivent d''autres versions du monde et d''elles-mêmes, et
+      certaines parviennent à circuler dans les métavers. Appelées « Dédoublés » dans
+      le Hors, « Superposés » dans les rapports internes d''Ergo-Wian et « Porteurs
+      de reflets » au Califat de Barcelone (Al-Hima). Ergo-Wian les traque : un Dédoublé
+      capable de circuler dans les métavers donnerait accès aux autres versions du monde
+      — leurs ressources, leurs technologies, leurs informations —, ce qui serait le
+      véritable projet caché derrière Alpha47.'
+    etat: émergent
+    scenario_ref: fortress_world
+    scenario_hint:
+    - fortress_world
+    zone_hint: null
+    source: hyphan_scenario1_2026-09 (Ourrassol_Scénario1.docx)
+  - nom: La Garde du Seuil
+    category: organisation
+    role: Guerriers légendaires d'Al-Hima, le « Califat de Barcelone », que les récits
+      du Hors dotent de pouvoirs surnaturels. En réalité, la Garde ne recrute que des
+      Dédoublés — des Porteurs de reflets — formés à maîtriser leur don ; sa nature
+      véritable est tenue secrète hors du Califat.
+    etat: mature
+    est_clandestin: true
+    scenario_ref: fortress_world
+    scenario_hint:
+    - fortress_world
+    zone_hint: null
+    source: hyphan_scenario1_2026-09 (Ourrassol_Scénario1.docx)
+  - nom: Tribu des Cinq Nations
+    category: organisation
+    role: Clan indépendant qui tient Tolosa — Saint-Sernin-du-Désert, cité-refuge du
+      sud du Hors, hors de portée des Recycleurs comme de la Reconquête européenne.
+      Dirigée par une cheffe-chamane, elle offre l'hospitalité aux voyageurs, commerce
+      étroitement avec Al-Hima et connaît l'existence des Dédoublés.
+    etat: mature
+    scenario_ref: fortress_world
+    scenario_hint:
+    - fortress_world
+    zone_hint: null
+    source: hyphan_scenario1_2026-09 (Ourrassol_Scénario1.docx)
+  - nom: Vikram Raghavan
+    category: humain
+    role: Membre important des Recycleurs à Paris, oncle et tuteur de Hyphan Raghavan
+      depuis la mort de ses parents, issu comme elle des migrations de la guerre indo-arabe
+      de 2038. Derrière la figure protectrice, il négocie en secret avec Ergo-Wian et
+      la Reconquête européenne des livraisons d'esclaves et de Dédoublés — sa propre
+      nièce comprise.
+    etat: ascendant
+    scenario_ref: fortress_world
+    scenario_hint:
+    - fortress_world
+    zone_hint: null
+    source: hyphan_scenario1_2026-09 (Ourrassol_Scénario1.docx)
+  - nom: Anjali Raghavan
+    category: humain
+    role: Épouse de Vikram Raghavan, à Paris. C'est elle qui a révélé à Hyphan que son
+      père avait eu des visions quelques mois avant de mourir de la maladie d'Alpha47
+      ; elle ignore, ou feint d'ignorer, les tractations de son mari.
+    etat: marginal
+    scenario_ref: fortress_world
+    scenario_hint:
+    - fortress_world
+    zone_hint: null
+    source: hyphan_scenario1_2026-09 (Ourrassol_Scénario1.docx)
+  - nom: Malo
+    category: humain
+    role: Ami de Hyphan Raghavan dans les ruines de Paris et compagnon de collecte pour
+      les cycles des Recycleurs ; il rêve comme elle de voir un jour le Califat de Barcelone.
+    etat: émergent
+    scenario_ref: fortress_world
+    scenario_hint:
+    - fortress_world
+    zone_hint: null
+    source: hyphan_scenario1_2026-09 (Ourrassol_Scénario1.docx)
+  - nom: Anton Vasko
+    category: humain
+    role: 'Lieutenant de Vikram Raghavan chez les Recycleurs, à Paris : homme de confiance
+      chargé des basses œuvres, traqueur redouté dans tout le Hors.'
+    etat: ascendant
+    scenario_ref: fortress_world
+    scenario_hint:
+    - fortress_world
+    zone_hint: null
+    source: hyphan_scenario1_2026-09 (Ourrassol_Scénario1.docx)
+  - nom: Ingrid Solberg
+    category: humain
+    role: 'Cadre d''Ergo-Wian, gouverneure de Bruxelles-Forteresse, chargée des relations
+      avec les factions du Hors : contrats de service, livraisons de travailleurs et
+      recherche discrète des Superposés.'
+    etat: dominant
+    scenario_ref: fortress_world
+    scenario_hint:
+    - fortress_world
+    zone_hint: null
+    source: hyphan_scenario1_2026-09 (Ourrassol_Scénario1.docx)
+  - nom: Aymeric de Valfort
+    category: humain
+    role: Cadre dirigeant du Mouvement de Reconquête européenne, qui négocie avec Ergo-Wian
+      malgré la rhétorique de reconquête de son mouvement.
+    etat: ascendant
+    scenario_ref: fortress_world
+    scenario_hint:
+    - fortress_world
+    zone_hint: null
+    source: hyphan_scenario1_2026-09 (Ourrassol_Scénario1.docx)
+  - nom: Guilhelma
+    category: humain
+    role: 'Cheffe et chamane de la tribu des Cinq Nations, à Tolosa — Saint-Sernin-du-Désert
+      : guérisseuse, gardienne des savoirs sur les Dédoublés, en lien avec la Garde
+      du Seuil d''Al-Hima.'
+    etat: mature
+    scenario_ref: fortress_world
+    scenario_hint:
+    - fortress_world
+    zone_hint: null
+    source: hyphan_scenario1_2026-09 (Ourrassol_Scénario1.docx)
+  - nom: Raimon
+    category: humain
+    role: Fils de Guilhelma, jeune guerrier de la tribu des Cinq Nations à Tolosa —
+      Saint-Sernin-du-Désert, fin connaisseur des passages vers les Pyrénées et Al-Hima.
+    etat: émergent
+    scenario_ref: fortress_world
+    scenario_hint:
+    - fortress_world
+    zone_hint: null
+    source: hyphan_scenario1_2026-09 (Ourrassol_Scénario1.docx)
