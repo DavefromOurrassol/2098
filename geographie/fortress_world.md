@@ -289,9 +289,6 @@ zones:
   - entite: Russie
     type_entite: pays
     portion: null
-  - entite: pays baltes
-    type_entite: autre
-    portion: null
   - entite: Mongolie
     type_entite: pays
     portion: null
