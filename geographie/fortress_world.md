@@ -428,11 +428,12 @@ zones:
   - entite: Russie
     type_entite: pays
     portion: null
-  description: Infrastructure stratégique militarisée contrôlant les corridors arctiques
-    dégelés, intégrée de facto au Pacte des Forteresses Souveraines. La Nordisk Arktisk
-    Transitkontroll (NAT), opérateur armé sous supervision des blocs nordiques, verrouille
-    les voies maritimes arctiques devenues artères vitales pour les échanges inter-blocs,
-    sous surveillance orbitale permanente.
+  description: Infrastructure stratégique militarisée contrôlant les corridors arctiques dégelés,
+    intégrée de facto au Pacte des Forteresses Souveraines. La Nordisk Arktisk Transitkontroll
+    (NAT), filiale armée d'Ergo-Wian, verrouille les voies maritimes arctiques devenues artères
+    vitales pour les échanges inter-blocs, sous surveillance orbitale permanente. Surnommée
+    « Euro-Nord » dans le Hors, la zone est de fait gouvernée par Ergo-Wian, qui y détient les
+    pleins pouvoirs au service d'une population vieillissante protégée par ses forteresses.
   statut: stable
   tensions_internes: Conflits entre factions nordiques sur le degré d'autonomie de
     la NAT face aux blocs continentaux ; résistance des milices logistiques locales
@@ -2545,9 +2546,11 @@ zones:
   - entite: Andorre
     type_entite: pays
     portion: null
-  description: Confédération collectiviste des deux rives, climat désertique à oasis,
-    gestion communautaire des ressources héritée du principe pré-islamique du hima
-    (terre protégée).
+  description: Confédération collectiviste des deux rives, climat désertique à oasis, gestion
+    communautaire des ressources héritée du principe pré-islamique du hima (terre protégée).
+    Connue dans le Hors sous le nom populaire de « Califat de Barcelone », que les légendes
+    peuplent de sorciers et de guerriers aux pouvoirs surnaturels, bien que la religion ne soit
+    pas le fondement de l'union.
   statut: emergent
   tensions_internes: Conflits entre traditionalistes attachés aux principes ancestraux
     du hima et modernistes prônant une gestion technocratique des ressources, ainsi
@@ -2689,14 +2692,15 @@ zones:
     type_entite: pays
     portion: 'Toute la France hors littoral Manche-Atlantique (Zone Interdite de Heysham)
       : Bassin parisien, Centre, Est, vallée du Rhône et façade méditerranéenne.'
-  description: Territoires interstitiels d'Europe méridionale échappant à tout contrôle
-    effectif d'un bloc — chaos généralisé, réfugiés climatiques et de guerre, contrôlés
-    localement par des bandes armées rivales (les recycleurs, le mouvement de reconquête
-    européenne) qui se disputent l'accès aux marchés lucratifs de main-d'œuvre offerts
-    par les enclaves forteresses comme l'Espace Nordique et Artique. Revendication
-    nominale des blocs voisins sur certains de ces territoires (notamment via Bloc
-    Atlantique pour la France et l'Italie) non assortie d'un contrôle réel — tension
-    structurelle assumée, pas une incohérence.
+  description: 'Territoires interstitiels d''Europe méridionale échappant à tout contrôle effectif
+    d''un bloc — chaos généralisé, réfugiés climatiques et de guerre, contrôlés localement par
+    des bandes armées rivales (les recycleurs, le mouvement de reconquête européenne) qui se
+    disputent l''accès aux marchés lucratifs de main-d''œuvre offerts par les enclaves forteresses
+    comme l''Espace Nordique et Artique. Revendication nominale des blocs voisins sur certains
+    de ces territoires (notamment via Bloc Atlantique pour la France et l''Italie) non assortie
+    d''un contrôle réel — tension structurelle assumée, pas une incohérence. Dans la langue
+    courante, on l''appelle simplement « le Hors » : le territoire hors-forteresse, livré aux
+    factions armées qui s''y disputent le pouvoir et l''accès aux contrats d''Ergo-Wian.'
   statut: fragmenté
   tensions_internes: Conflits violents entre recycleurs (groupes criminels exploitant
     les ressources et les populations) et le mouvement de reconquête européenne (factions
@@ -2796,6 +2800,81 @@ zones:
     - bloc_eurasiatique_occidental
     rivaux:
     - zones_grises_tampons
+  sources_attestees: []
+- slug: paris_hors
+  nom: Paris
+  niveau: 2
+  type: ville
+  parent: zone_euro_sud
+  origine_reelle:
+  - entite: Paris
+    type_entite: region_administrative
+    portion: null
+  description: 'Ancienne capitale réduite à un champ de ruines habité, aux portes de la Zone
+    Interdite de Heysham qui a englouti la basse Seine en 2044. Ses anciens quartiers résidentiels
+    sont la principale mine de métaux du « monde d''avant » : les Recycleurs y tiennent leurs
+    « cycles », centres de collecte où tout se revend, tandis que les raids de la Reconquête
+    européenne frappent les communautés de déplacés, dont une importante diaspora issue des
+    migrations de la guerre indo-arabe de 2038.'
+  statut: en_declin
+  tensions_internes: Guerre de rues entre Recycleurs et Reconquête européenne pour le contrôle
+    des quartiers et du recrutement forcé ; rapts de jeunes adultes destinés à la traite ;
+    transactions discrètes des deux factions avec Ergo-Wian.
+  periode_transition: 2044-2060
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies: []
+    rivaux: []
+  sources_attestees: []
+- slug: evry_hors
+  nom: Évry
+  niveau: 3
+  type: site_strategique
+  parent: paris_hors
+  origine_reelle:
+  - entite: Évry
+    type_entite: region_administrative
+    portion: null
+  description: 'Ancienne ville nouvelle du sud parisien dont les laboratoires de biotechnologie
+    abandonnés — l''ancien Génopole — servent de terrain neutre de fait : factions ennemies
+    et émissaires d''Ergo-Wian y négocient à l''abri des regards contrats de service, livraisons
+    de travailleurs et marchés inavouables.'
+  statut: en_declin
+  tensions_internes: Neutralité tacite fragile, garantie par l'intérêt commun des factions
+    à commercer avec Ergo-Wian ; nul ne sait qui surveille qui dans les anciens laboratoires.
+  periode_transition: 2044-2060
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies: []
+    rivaux: []
+  sources_attestees: []
+- slug: tolosa_saint_sernin_du_desert
+  nom: Tolosa — Saint-Sernin-du-Désert
+  niveau: 2
+  type: ville
+  parent: zone_euro_sud
+  origine_reelle:
+  - entite: Toulouse
+    type_entite: region_administrative
+    portion: null
+  description: Cité-refuge du sud du Hors, dressée au milieu d'une plaine quasi désertique
+    où l'été approche les 50 °C. Organisée autour de l'ancienne basilique Saint-Sernin, elle
+    vit comme un monastère du désert, à la manière des refuges cathares d'autrefois. La tribu
+    des Cinq Nations, clan indépendant dirigé par sa cheffe-chamane, la tient hors de portée
+    des Recycleurs comme de la Reconquête européenne. Elle entretient des liens étroits d'échange
+    et de passage avec Al-Hima, de l'autre côté des Pyrénées, sans lui appartenir.
+  statut: stable
+  tensions_internes: Convoitise des deux factions ; eau rare ; équilibre délicat entre indépendance
+    et dépendance commerciale envers Al-Hima.
+  periode_transition: 2050-2075
+  evenement_transition: null
+  lieux_emblematiques: []
+  relations:
+    allies:
+    - al_hima
+    rivaux: []
   sources_attestees: []
 ---
 
@@ -2903,7 +2982,7 @@ Bloc fermé de l'espace pacifique nord, observateur relatif de la fragmentation 
 
 **Transition** : 2050-2080
 
-Espace géopolitique distinct contrôlé de facto par la Nordisk Arktisk Transitkontroll (NAT), opérateur privé armé gérant les corridors arctiques dégelés depuis ses tours de contrôle flottantes au large du Svalbard. Ni bloc souverain classique ni territoire neutre, cet espace est une puissance de transit qui impose sa loi sur les voies maritimes arctiques devenues artères vitales dans un monde où les routes méridionales sont militarisées.
+Espace géopolitique distinct, surnommé « Euro-Nord » dans le Hors, gouverné par Ergo-Wian et contrôlé sur le terrain par sa filiale armée, la Nordisk Arktisk Transitkontroll (NAT), opérateur privé gérant les corridors arctiques dégelés depuis ses tours de contrôle flottantes au large du Svalbard. Ni bloc souverain classique ni territoire neutre, cet espace est une puissance de transit qui impose sa loi sur les voies maritimes arctiques devenues artères vitales dans un monde où les routes méridionales sont militarisées.
 
 **Tensions internes** : Factions internes contre la privatisation des voies souveraines scandinaves ; accusation de favoritisme pro-scandinave dans les priorités de transit ; débat sur l'automatisation IA des négociations.
 
@@ -3705,6 +3784,44 @@ Agence fédérale américaine créée par les décrets de 2049 pour gérer admin
 
 *Sources attestées : bureau_des_territoires_residuels_fortress_world, le_temoin_fortress_world*
 
+
+#### Paris — sous [[zone_euro_sud]]
+
+*ville — niveau 2 — statut : en_declin*
+
+**Origine réelle (2026)** : Paris
+
+**Transition** : 2044-2060
+
+Ancienne capitale réduite à un champ de ruines habité, aux portes de la Zone Interdite de Heysham qui a englouti la basse Seine en 2044. Ses anciens quartiers résidentiels sont la principale mine de métaux du « monde d'avant » : les Recycleurs y tiennent leurs « cycles », centres de collecte où tout se revend, tandis que les raids de la Reconquête européenne frappent les communautés de déplacés, dont une importante diaspora issue des migrations de la guerre indo-arabe de 2038.
+
+**Tensions internes** : Guerre de rues entre Recycleurs et Reconquête européenne pour le contrôle des quartiers et du recrutement forcé ; rapts de jeunes adultes destinés à la traite ; transactions discrètes des deux factions avec Ergo-Wian.
+
+
+##### Évry — sous [[paris_hors]]
+
+*site_strategique — niveau 3 — statut : en_declin*
+
+**Origine réelle (2026)** : Évry
+
+**Transition** : 2044-2060
+
+Ancienne ville nouvelle du sud parisien dont les laboratoires de biotechnologie abandonnés — l'ancien Génopole — servent de terrain neutre de fait : factions ennemies et émissaires d'Ergo-Wian y négocient à l'abri des regards contrats de service, livraisons de travailleurs et marchés inavouables.
+
+**Tensions internes** : Neutralité tacite fragile, garantie par l'intérêt commun des factions à commercer avec Ergo-Wian ; nul ne sait qui surveille qui dans les anciens laboratoires.
+
+
+#### Tolosa — Saint-Sernin-du-Désert — sous [[zone_euro_sud]]
+
+*ville — niveau 2 — statut : stable*
+
+**Origine réelle (2026)** : Toulouse
+
+**Transition** : 2050-2075
+
+Cité-refuge du sud du Hors, dressée au milieu d'une plaine quasi désertique où l'été approche les 50 °C. Organisée autour de l'ancienne basilique Saint-Sernin, elle vit comme un monastère du désert, à la manière des refuges cathares d'autrefois. La tribu des Cinq Nations, clan indépendant dirigé par sa cheffe-chamane, la tient hors de portée des Recycleurs comme de la Reconquête européenne. Elle entretient des liens étroits d'échange et de passage avec Al-Hima, de l'autre côté des Pyrénées, sans lui appartenir.
+
+**Tensions internes** : Convoitise des deux factions ; eau rare ; équilibre délicat entre indépendance et dépendance commerciale envers Al-Hima.
 
 ## Notes / zones à enrichir
 _Espace libre, jamais lu par les scripts — ajoute ici tes idées, brouillons, zones à
