@@ -4531,3 +4531,51 @@ processed:
   injected_scenarios:
   - breakdown
   status: injected
+- idea:
+    id: guerre_indo_arabe_2038
+    description: Guerre de haute intensité entre l'Inde et une coalition d'États arabes,
+      déclenchée en 2038, qui ravage le sous-continent et le Golfe et provoque les
+      grandes migrations vers l'Europe, dont est issue la famille de Hyphan Raghavan.
+    portee: continentale
+    date_approximative: 2038
+    intensite: majeure
+    scenarios:
+    - fortress_world
+    variables_hint:
+    - geopolitique_conflits
+    - demographie_mobilite_humaine
+    variables_hint_count: 2
+  selection:
+    variables:
+    - geopolitique_conflits
+    - demographie_mobilite_humaine
+    - energie_ressources_critiques
+    - gouvernance_institutions
+    type_evenement: political_social
+  injected_scenarios:
+  - fortress_world
+  status: injected
+- idea:
+    id: conflit_indo_arabe_2038
+    description: Conflit armé limité entre l'Inde et plusieurs États arabes en 2038,
+      contenu à l'échelle régionale, avec des déplacements de population notables
+      mais circonscrits.
+    portee: regionale
+    date_approximative: 2038
+    intensite: modérée
+    scenarios:
+    - breakdown
+    - policy_reform
+    - reference
+    variables_hint:
+    - geopolitique_conflits
+  selection:
+    variables:
+    - geopolitique_conflits
+    - demographie_mobilite_humaine
+    type_evenement: political_social
+  injected_scenarios:
+  - breakdown
+  - policy_reform
+  - reference
+  status: injected

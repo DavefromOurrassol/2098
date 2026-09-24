@@ -5,60 +5,65 @@ slug: tribu_des_cinq_nations_fortress_world
 entite: tribu_des_cinq_nations
 scenario: fortress_world
 localisation:
-  zone: tolosa_saint_sernin_du_desert
+  zone: tolosa
   lieu: Tolosa — Saint-Sernin-du-Désert
   type_lieu: ville
-
 type_dans_scenario: organisation
+role_dans_scenario: 'Clan indépendant tenant Tolosa — Saint-Sernin-du-Désert, cité-refuge
+  du sud du Hors, hors de portée des Recycleurs et de la Reconquête européenne. Dirigée
+  par une cheffe-chamane, la Confédération offre l''hospitalité aux voyageurs, commerce
+  de manière contrôlée avec Al-Hima, et connaît l''existence des Dédoublés. Elle incarne
+  une forme de résistance culturelle et territoriale dans un monde fragmenté, préservant
+  une autonomie radicale tout en naviguant les interdépendances nécessaires pour survivre.
 
-role_dans_scenario: >
-  Clan indépendant tenant Tolosa — Saint-Sernin-du-Désert, cité-refuge du sud du Hors, hors de portée des Recycleurs et de la Reconquête européenne. Dirigée par une cheffe-chamane, la Confédération offre l'hospitalité aux voyageurs, commerce de manière contrôlée avec Al-Hima, et connaît l'existence des Dédoublés. Elle incarne une forme de résistance culturelle et territoriale dans un monde fragmenté, préservant une autonomie radicale tout en naviguant les interdépendances nécessaires pour survivre.
+  '
+responsabilites: 'Gouvernance locale de Tolosa et de ses territoires adjacents, gestion
+  des échanges avec les réseaux extérieurs (Al-Hima, contrebandiers, réfugiés), préservation
+  des savoirs traditionnels et spirituels, protection contre les incursions des blocs
+  et des milices. La Confédération assure aussi la médiation entre les communautés
+  locales et les entités hybrides comme les Dédoublés, tout en maintenant une économie
+  de redistribution basée sur le troc et les ressources locales.
 
-responsabilites: >
-  Gouvernance locale de Tolosa et de ses territoires adjacents, gestion des échanges avec les réseaux extérieurs (Al-Hima, contrebandiers, réfugiés), préservation des savoirs traditionnels et spirituels, protection contre les incursions des blocs et des milices. La Confédération assure aussi la médiation entre les communautés locales et les entités hybrides comme les Dédoublés, tout en maintenant une économie de redistribution basée sur le troc et les ressources locales.
-
+  '
 impact_local: 4
 impact_systemique_global: 2
-
 variables_influencees:
-    - gouvernance_institutions
-    - organisation_territoires
-    - valeurs_culture_tempo_sociale
-    - geopolitique_conflits
-
+- gouvernance_institutions
+- organisation_territoires
+- valeurs_culture_tempo_sociale
+- geopolitique_conflits
 zone_geographique:
-    - locale
-    - régionale
-
+- locale
+- régionale
 zone_systemique:
-    - gouvernance
-    - société
-    - sécurité
-
+- gouvernance
+- société
+- sécurité
 alliances:
-    - coalitions_des_deplaces_et_apatrides_fortress_world
-    - reseaux_d_echange_clandestin_inter_zones_fortress_world
-
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- reseaux_d_echange_clandestin_inter_zones_fortress_world
 oppositions:
-    - mouvement_de_reconquete_europeenne_fortress_world
-    - les_recycleurs_fortress_world
-    - agences_de_securite_interieure_des_etats_forteresses_fortress_world
-
+- mouvement_de_reconquete_europeenne_fortress_world
+- les_recycleurs_fortress_world
+- agences_de_securite_interieure_des_etats_forteresses_fortress_world
 type_relation_dominante: neutralité
-
 annee_debut: 2051
-annee_fin: 
-
+annee_fin: null
 trajectoire: mature
 est_clandestin: false
 generation: post-effondrement
-
 injection:
   garantie_selection: false
   type: custom
   annee_injection: 2051
-  contexte_injection: >
-    La Confédération des Cinq Feux incarne une alternative viable aux gouvernances autoritaires des blocs, démontrant qu'une autonomie locale et une identité culturelle forte peuvent coexister avec une économie de redistribution. Son impact sur l'organisation des territoires et les valeurs culturelles est significatif, car elle offre un modèle de résistance et de résilience dans les zones abandonnées, influençant indirectement les dynamiques régionales.
+  contexte_injection: 'La Confédération des Cinq Feux incarne une alternative viable
+    aux gouvernances autoritaires des blocs, démontrant qu''une autonomie locale et
+    une identité culturelle forte peuvent coexister avec une économie de redistribution.
+    Son impact sur l''organisation des territoires et les valeurs culturelles est
+    significatif, car elle offre un modèle de résistance et de résilience dans les
+    zones abandonnées, influençant indirectement les dynamiques régionales.
+
+    '
   impact_sur_variables:
   - variable: gouvernance_institutions
     delta_level: 8
@@ -74,17 +79,37 @@ injection:
     polarite: 1
   propagation:
     via_matrice: false
+description_journalistique: 'Depuis près d''un demi-siècle, la Confédération des Cinq
+  Feux règne sur les ruines de Tolosa, rebaptisée Saint-Sernin-du-Désert. Sous la
+  direction de sa cheffe-chamane, une femme aux yeux perçants et aux tatouages rituels,
+  la cité est devenue un havre pour les exclus des blocs. Ses marchés nocturnes, éclairés
+  par des lanternes à huile, regorgent de denrées rares et de technologies récupérées.
+  Les voyageurs racontent que les murs de la basilique, jadis symbole chrétien, sont
+  désormais couverts de fresques mêlant symboles païens et motifs cybernétiques, témoignant
+  d''une spiritualité hybride née de la survie. La Confédération commerce avec Al-Hima,
+  échangeant des plantes médicinales contre des armes et des informations, tout en
+  restant farouchement indépendante des structures de pouvoir dominantes.
 
-description_journalistique: >
-  Depuis près d'un demi-siècle, la Confédération des Cinq Feux règne sur les ruines de Tolosa, rebaptisée Saint-Sernin-du-Désert. Sous la direction de sa cheffe-chamane, une femme aux yeux perçants et aux tatouages rituels, la cité est devenue un havre pour les exclus des blocs. Ses marchés nocturnes, éclairés par des lanternes à huile, regorgent de denrées rares et de technologies récupérées. Les voyageurs racontent que les murs de la basilique, jadis symbole chrétien, sont désormais couverts de fresques mêlant symboles païens et motifs cybernétiques, témoignant d'une spiritualité hybride née de la survie. La Confédération commerce avec Al-Hima, échangeant des plantes médicinales contre des armes et des informations, tout en restant farouchement indépendante des structures de pouvoir dominantes.
+  '
+signes_distinctifs: 'Les membres de la Confédération portent des vêtements tissés
+  à partir de fibres végétales et de matériaux recyclés, ornés de motifs géométriques
+  représentant les cinq éléments (feu, eau, terre, air, métal). Leur emblème, un cercle
+  divisé en cinq parties égales, est gravé sur les portes de Tolosa et sur les objets
+  échangés. Les rituels chamaniques, mêlant danses traditionnelles et projections
+  holographiques de données, sont au cœur de leur identité culturelle.
 
-signes_distinctifs: >
-  Les membres de la Confédération portent des vêtements tissés à partir de fibres végétales et de matériaux recyclés, ornés de motifs géométriques représentant les cinq éléments (feu, eau, terre, air, métal). Leur emblème, un cercle divisé en cinq parties égales, est gravé sur les portes de Tolosa et sur les objets échangés. Les rituels chamaniques, mêlant danses traditionnelles et projections holographiques de données, sont au cœur de leur identité culturelle.
+  '
 retry_signes_distinctifs: non
+tensions_narratives: 'La Confédération des Cinq Feux est tiraillée entre son désir
+  d''autonomie et la nécessité de s''allier à des réseaux plus larges pour survivre.
+  Les tensions internes grandissent entre les traditionalistes, qui veulent préserver
+  les coutumes ancestrales, et les pragmatiques, qui prônent une ouverture accrue
+  aux technologies et aux échanges. Par ailleurs, la découverte récente de Dédoublés
+  parmi les réfugiés pose des questions éthiques et spirituelles inédites, tandis
+  que la Reconquête européenne et les Recycleurs resserrent leur étau autour de Tolosa,
+  menaçant son fragile équilibre.
 
-tensions_narratives: >
-  La Confédération des Cinq Feux est tiraillée entre son désir d'autonomie et la nécessité de s'allier à des réseaux plus larges pour survivre. Les tensions internes grandissent entre les traditionalistes, qui veulent préserver les coutumes ancestrales, et les pragmatiques, qui prônent une ouverture accrue aux technologies et aux échanges. Par ailleurs, la découverte récente de Dédoublés parmi les réfugiés pose des questions éthiques et spirituelles inédites, tandis que la Reconquête européenne et les Recycleurs resserrent leur étau autour de Tolosa, menaçant son fragile équilibre.
-
+  '
 date_creation: 2026-09-24
 ---
 

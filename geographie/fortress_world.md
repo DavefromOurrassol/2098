@@ -2851,7 +2851,7 @@ zones:
     allies: []
     rivaux: []
   sources_attestees: []
-- slug: tolosa_saint_sernin_du_desert
+- slug: tolosa
   nom: Tolosa — Saint-Sernin-du-Désert
   niveau: 2
   type: ville

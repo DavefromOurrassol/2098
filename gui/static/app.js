@@ -1151,6 +1151,18 @@ async function loadSlugsForSelect(sel, slugType, extraParams) {
     const res = await fetch(`/api/slugs?type=${slugType}&scenario=${scenario}${extra}`);
     const data = await res.json();
     sel.innerHTML = '<option value="">— Aucun —</option>';
+    // 24 septembre 2026 : type zones_hier (liste de zones d'un scénario,
+    // renvoyée sous "zones" et non "slugs") -- utilisé par
+    // renommer_slug_sous_zone. Indentation par niveau, slug entre parenthèses.
+    if (!data.slugs && Array.isArray(data.zones)) {
+      data.zones.forEach(z => {
+        const opt = document.createElement('option');
+        opt.value = z.slug;
+        opt.textContent = '\u00a0\u00a0'.repeat(Math.max(0, (z.niveau || 1) - 1)) + `${z.nom} (${z.slug})`;
+        sel.appendChild(opt);
+      });
+      return;
+    }
     (data.slugs || []).forEach(slug => {
       const opt = document.createElement('option');
       opt.value = slug;
@@ -4776,6 +4788,9 @@ async function openArbreZonePanel(slug, options = {}) {
     document.getElementById('arbre-zone-tree').querySelectorAll('.arbre-zone-move-btn').forEach(btn => {
       btn.addEventListener('click', () => _ouvrirReparentPanel(btn.dataset.slug, btn.dataset.nom));
     });
+    document.getElementById('arbre-zone-tree').querySelectorAll('.arbre-zone-renommer-btn').forEach(btn => {
+      btn.addEventListener('click', () => _ouvrirRenommerSousZone(btn.dataset.slug, btn.dataset.nom, data.arbre.slug));
+    });
 
     CarteState.origineReelleParSlug = {};
     CarteState.racineParSlug = {};
@@ -4825,6 +4840,11 @@ function _renderArbreNode(node, estRacine) {
   html += `${typeLabel}${statutLabel}`;
   if (!estRacine) {
     html += `<button class="arbre-zone-move-btn" data-slug="${node.slug}" data-nom="${node.nom.replace(/"/g, '&quot;')}" title="Déplacer vers un autre parent">↗️ déplacer</button>`;
+    // Renommer une sous-zone (24 sept 2026) : slug et/ou nom, même route
+    // serveur que le niveau 1 (ZoneRepository.rename gère tous les niveaux).
+    if (node.niveau !== 1) {
+      html += `<button class="arbre-zone-renommer-btn" data-slug="${node.slug}" data-nom="${node.nom.replace(/"/g, '&quot;')}" title="Renommer cette sous-zone (slug et/ou nom affiché), avec propagation aux instances, relations et liens">✏️ renommer</button>`;
+    }
   } else if (node.niveau === 1) {
     // Corrige un trou trouvé le 8 sept 2026 : la racine de l'arbre affiché
     // n'avait jamais ce bouton (masqué par le `!estRacine` ci-dessus), donc
@@ -4842,6 +4862,7 @@ function _renderArbreNode(node, estRacine) {
   }
   html += `</div>`;
   html += `<div id="reparent-panel-${node.slug}"></div>`;
+  html += `<div id="renommer-sz-panel-${node.slug}"></div>`;
   html += `<div id="topdown-panel-${node.slug}"></div>`;
 
   if (node.enfants && node.enfants.length) {
@@ -4969,6 +4990,52 @@ async function _appliquerRevisionTopdown(proposition, container) {
  * Le sous-arbre entier suit (décision explicite de l'utilisateur) — le
  * niveau de toute la branche est recalculé si la profondeur change.
  */
+/**
+ * Renommage d'une sous-zone niveau 2/3 depuis l'arbre (24 sept 2026).
+ * Mini-formulaire sous le nœud ; réutilise _carteImpactRenommage /
+ * _carteRenommerZone (mêmes routes que le niveau 1), puis rouvre l'arbre
+ * de la racine N1 pour afficher le nouveau slug.
+ */
+function _ouvrirRenommerSousZone(slug, nom, racineSlug) {
+  const container = document.getElementById(`renommer-sz-panel-${slug}`);
+  if (!container) return;
+  if (container.dataset.open === '1') {
+    container.innerHTML = '';
+    container.dataset.open = '0';
+    return;
+  }
+  container.dataset.open = '1';
+  const esc = v => String(v ?? '').replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+  container.innerHTML = `
+    <div class="carte-panel-proposal-box" style="margin:4px 0 8px 16px">
+      <label style="font-size:10px">Nouveau slug</label>
+      <input type="text" class="rsz-slug" value="${esc(slug)}"
+             style="width:100%;font-family:'JetBrains Mono',monospace;font-size:11px;padding:4px;margin-bottom:6px">
+      <label style="font-size:10px">Nouveau nom affiché</label>
+      <input type="text" class="rsz-nom" value="${esc(nom)}"
+             style="width:100%;font-size:11px;padding:4px;margin-bottom:6px">
+      <button class="yaml-btn rsz-impact">🔍 Évaluer l'impact</button>
+      <div class="rsz-report"></div>
+    </div>`;
+  container.querySelector('.rsz-impact').addEventListener('click', () => {
+    const nouveauSlug = container.querySelector('.rsz-slug').value.trim();
+    let nouveauNom = container.querySelector('.rsz-nom').value.trim();
+    if (!nouveauSlug) { alert('Le nouveau slug est requis'); return; }
+    if (!/^[a-z0-9_]+$/.test(nouveauSlug)) {
+      alert('Le slug ne doit contenir que des minuscules, chiffres et underscores');
+      return;
+    }
+    if (nouveauNom === nom) nouveauNom = '';  // nom inchangé : ne pas le réécrire
+    if (nouveauSlug === slug && !nouveauNom) { alert('Rien à renommer : slug et nom inchangés'); return; }
+    _carteImpactRenommage(slug, nouveauSlug, nouveauNom, container.querySelector('.rsz-report'),
+      async (msgTexte) => {
+        await openArbreZonePanel(racineSlug);
+        const m = document.getElementById('carte-panel-msg');
+        if (m) m.textContent = msgTexte;
+      });
+  });
+}
+
 async function _ouvrirReparentPanel(slug, nom) {
   const container = document.getElementById(`reparent-panel-${slug}`);
   if (!container) return;
@@ -5191,9 +5258,8 @@ async function _carteReparentZone(slug, nouveauParentSlug) {
 
 /**
  * Panneau de renommage de zone (P7 étape 1, 12 juillet 2026).
- * Niveau 1 uniquement pour l'instant — les zones niveau 2/3 n'ont pas
- * d'entrée cliquable dédiée dans l'UI actuelle, seulement dans la légende
- * (qui ne liste que les zones niveau 1 avec une couleur sur la carte).
+ * Niveau 1 uniquement (couleur/motif/pays) — les sous-zones niveau 2/3 se
+ * renomment depuis l'arbre, bouton « ✏️ renommer » (_ouvrirRenommerSousZone).
  */
 async function openRenommerZonePanel(ancienSlug) {
   const z = CarteState.zonesN1.find(zz => zz.slug === ancienSlug);
@@ -6086,7 +6152,7 @@ async function _carteReparenterOrpheline(slug, nom, cibleSlug, btn) {
 }
 
 /** Rapport d'impact (lecture seule) pour un renommage de zone (P7 étape 1). */
-async function _carteImpactRenommage(ancienSlug, nouveauSlug, nouveauNom, container) {
+async function _carteImpactRenommage(ancienSlug, nouveauSlug, nouveauNom, container, apresSucces = null) {
   container.innerHTML = '<div class="carte-status">Analyse en cours…</div>';
 
   try {
@@ -6148,8 +6214,9 @@ async function _carteImpactRenommage(ancienSlug, nouveauSlug, nouveauNom, contai
     html += `</div>`;
     container.innerHTML = html;
 
-    document.getElementById('renommer-confirm-btn').addEventListener('click', () => {
-      _carteRenommerZone(ancienSlug, nouveauSlug, nouveauNom);
+    // Portée au conteneur : plusieurs rapports peuvent coexister (arbre).
+    container.querySelector('#renommer-confirm-btn').addEventListener('click', () => {
+      _carteRenommerZone(ancienSlug, nouveauSlug, nouveauNom, apresSucces);
     });
   } catch (e) {
     container.innerHTML = `<div class="carte-panel-error">Erreur réseau : ${e.message}</div>`;
@@ -6157,7 +6224,7 @@ async function _carteImpactRenommage(ancienSlug, nouveauSlug, nouveauNom, contai
 }
 
 /** Applique le renommage confirmé. */
-async function _carteRenommerZone(ancienSlug, nouveauSlug, nouveauNom) {
+async function _carteRenommerZone(ancienSlug, nouveauSlug, nouveauNom, apresSucces = null) {
   const msg = document.getElementById('carte-panel-msg');
   msg.textContent = 'Renommage en cours…';
   try {
@@ -6173,10 +6240,12 @@ async function _carteRenommerZone(ancienSlug, nouveauSlug, nouveauNom) {
     });
     const data = await res.json();
     if (data.ok) {
-      msg.textContent = `✓ Zone renommée : ${ancienSlug} → ${data.nouveau_slug} ` +
+      const texte = `✓ Zone renommée : ${ancienSlug} → ${data.nouveau_slug} ` +
         `(${data.enfants_maj} enfant(s), ${data.zones_relations_maj} relation(s), ` +
         `${data.instances_maj} instance(s), ${data.pays_maj} pays mis à jour)`;
+      msg.textContent = texte;
       await refreshCarte();
+      if (apresSucces) await apresSucces(texte);
     } else {
       msg.textContent = `Erreur : ${data.error}`;
     }

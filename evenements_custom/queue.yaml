@@ -10,7 +10,9 @@
 #   id                    : identifiant court lisible (lettres, chiffres, underscores)
 #   description           : l'idée en langage naturel, quelques phrases suffisent
 #   portee                : locale | regionale | continentale | globale
-#   date_approximative     : année 2025-2097 (peut varier de +/-10 ans par scénario)
+#   date_approximative     : année 2025-2098 (peut varier de +/-10 ans par scénario ;
+#                            2098 = année finale de la fiction, borne mise à jour le
+#                            6 septembre 2026, voir clamp_date_dans_plage())
 #   intensite              : faible | modérée | forte | majeure
 #   scenarios              : liste de scénarios à couvrir, ou null pour les 6 par défaut
 #                            (valeurs : breakdown, fortress_world, new_sustainability,
@@ -33,7 +35,20 @@
 #                            ou plusieurs (liste) que tu IMPOSES.
 #   acteurs_hint_count     : optionnel, entier 1-4. Plafond du nombre total
 #                            d'acteurs (hint(s) inclus). Défaut : 2.
+#   zone_hint              : optionnel. null si tu ne sais pas — le LLM choisit
+#                            librement l'ancrage géographique. Sinon une zone
+#                            (chaîne libre, ex: "Bassin du Congo") que tu IMPOSES
+#                            comme lieu d'ancrage de l'événement — injectée
+#                            directement dans le prompt de génération.
 #   source                 : libre — date, lien d'article...
+#   edition_active          : optionnel, true/false. Défaut false. Si true,
+#                            la date/date_label proposée par le LLM est
+#                            écrasée par l'édition active (state/editions.json)
+#                            -- pour capturer un sujet de l'édition en cours,
+#                            où le mois est déjà connu avec certitude
+#                            (contrairement à date_approximative, purement
+#                            indicative pour le worldbuilding historique).
+#                            Avertit sans bloquer si aucune édition active.
 #
 # EXEMPLE :
 #   - id: guerre_israelo_iranienne
@@ -49,6 +64,7 @@
 #     variables_hint_count: null
 #     acteurs_hint: null
 #     acteurs_hint_count: null
+#     zone_hint: null
 #     source: actualite_2026-06
 #
 # Les idées traitées sont déplacées vers processed.yaml (succès) ou

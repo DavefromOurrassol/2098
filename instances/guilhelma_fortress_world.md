@@ -4,6 +4,10 @@ type: instance
 slug: guilhelma_fortress_world
 entite: guilhelma
 scenario: fortress_world
+localisation:
+  zone: tolosa
+  lieu: Tolosa — Saint-Sernin-du-Désert
+  type_lieu: ville
 
 type_dans_scenario: humain
 

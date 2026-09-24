@@ -10,7 +10,7 @@ RÈGLE DE LECTURE DE LA COLONNE "date" :
   - type=signal    -> fenêtre "AAAA-AAAA" (date_bascule du signal_to_state)
   - type=evenement -> année unique "AAAA" (date précise de l'instance)
 
-Total : 524 entrées (77 signaux uniques × 6 scénarios + 62 entrées d'événements custom).
+Total : 528 entrées (77 signaux uniques × 6 scénarios + 66 entrées d'événements custom).
 
 ## breakdown
 
@@ -24,6 +24,7 @@ Total : 524 entrées (77 signaux uniques × 6 scénarios + 62 entrées d'événe
 | signal | 2038-2056 | discours_effondrement_climatique | climat_environnement_global | oui | manifeste collapsologue mondial diffusé après le Jour Sans Signal 2041 |
 | signal | 2038-2056 | explosion_inegalites_patrimoniales | systeme_economique_redistribution | non | rapport confirmant une concentration record du patrimoine mondial 2051 |
 | signal | 2038-2057 | guerres_culturelles_transnationales | valeurs_culture_tempo_sociale | non | premiers affrontements identitaires transfrontaliers coordonnés 2049 |
+| evenement | 2038 | conflit_indo_arabe_2038 | geopolitique_conflits, demographie_mobilite_humaine | — | 2038, les Gardiens des Détroits bloquent l'Inde |
 | signal | 2039-2057 | megafeux_saisonniers | climat_environnement_global | oui | perte totale des forêts méditerranéennes lors des feux de 2050 |
 | signal | 2039-2058 | systemes_decision_automatises_publics | gouvernance_institutions | non | panne systémique des administrations automatisées pendant trois mois 2051 |
 | signal | 2039-2057 | taxation_carbone_globale | systeme_economique_redistribution | non | suspension générale des mécanismes de taxation carbone 2050 |
@@ -174,6 +175,7 @@ Total : 524 entrées (77 signaux uniques × 6 scénarios + 62 entrées d'événe
 | signal | 2038-2053 | desynchronisation_generationnelle | valeurs_culture_tempo_sociale | non | instauration de quotas générationnels dans les administrations des blocs 2048 |
 | signal | 2038-2053 | decodage_langage_animaux_ia | valeurs_culture_tempo_sociale | non | Bloc Sibérien déploie des perroquets espions dans les zones frontalières 2047 |
 | signal | 2038-2053 | ia_agents_administratifs_autonomes | gouvernance_institutions | non | Bloc Atlantique impose ses agents IA comme uniques interfaces administratives 2047 |
+| evenement | 2038 | guerre_indo_arabe_2038 | geopolitique_conflits, demographie_mobilite_humaine | — | 2038 : l'Inde attaque les détroits arabes |
 | signal | 2039-2055 | megapoles_sous_pression | organisation_territoires | oui | création des zones urbaines protégées des blocs 2050 |
 | signal | 2039-2056 | captation_carbone_industrielle | climat_environnement_global | oui | programme de capture carbone du Bloc Atlantique 2052 |
 | signal | 2039-2056 | acceptation_transition_contrainte | energie_ressources_critiques | oui | discours unificateur sur l'autosuffisance énergétique des blocs 2049 |
@@ -463,6 +465,7 @@ Total : 524 entrées (77 signaux uniques × 6 scénarios + 62 entrées d'événe
 | signal | 2033-2048 | tensions_sur_terres_rares | geopolitique_conflits | oui | accord OCDE sur la traçabilité des ressources critiques |
 | signal | 2034-2048 | medecine_predictive_ia | sante_biotechnologies | non | adoption de la Charte Internationale de la Médecine Prédictive Équitable 2041 |
 | signal | 2038-2052 | dedollarisation_progressive | systeme_economique_redistribution | non | réforme du FMI et création du Conseil Monétaire Mondial |
+| evenement | 2038 | conflit_indo_arabe_2038 | geopolitique_conflits, demographie_mobilite_humaine | — | Blocus des détroits stratégiques en 2038 |
 | evenement | 2039 | submersion_tuvalu_acte_fondateur | climat_environnement_global, gouvernance_institutions, organisation_territoires, frontieres_du_systeme | — | dernier conseil souverain de Tuvalu, souveraineté flottante proclamée 2039 |
 | evenement | 2039 | greve_generale_corridors_eurasiens | systemes_productifs_travail, geopolitique_conflits, sante_biotechnologies | — | grève lithium bloquée par réquisition 2039 |
 | signal | 2040-2058 | fusion_experimentale | energie_ressources_critiques | oui | création de l'Agence Internationale de la Fusion 2045 |
@@ -556,6 +559,7 @@ Total : 524 entrées (77 signaux uniques × 6 scénarios + 62 entrées d'événe
 | signal | 2030-2050 | medecine_predictive_ia | sante_biotechnologies | non | lancement commercial des premiers bilans prédictifs IA 2036 |
 | signal | 2035-2050 | dedollarisation_progressive | systeme_economique_redistribution | non | crise de la dette souveraine de 2041 |
 | signal | 2035-2055 | fusion_experimentale | energie_ressources_critiques | oui | premier réacteur à fusion pilote commercial 2052 |
+| evenement | 2038 | conflit_indo_arabe_2038 | geopolitique_conflits, demographie_mobilite_humaine | — | 2038, l'Inde bloque les détroits arabes |
 | evenement | 2039 | submersion_tuvalu_acte_fondateur | climat_environnement_global, gouvernance_institutions, organisation_territoires, frontieres_du_systeme | — | Tuvalu submergée, premier État post-territorial naît 2039 |
 | evenement | 2041 | encheres_terres_rares_groenland | energie_ressources_critiques, geopolitique_conflits, gouvernance_institutions, organisation_territoires | — | Groenland vend ses terres rares aux enchères mondiales 2041 |
 | evenement | 2044 | exode_midwest_grands_lacs | demographie_mobilite_humaine, organisation_territoires, gouvernance_institutions, climat_environnement_global | — | 18 millions fuient le Midwest désertifié vers les Lacs 2044 |
