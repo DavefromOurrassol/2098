@@ -2490,6 +2490,29 @@
         "description": "Sans cette case, une instance déjà existante pour ce couple entité/scénario est sautée (pas régénérée)."
       },
       {
+        "flag": "--role",
+        "type": "textarea",
+        "label": "Nouveau rôle (scénario de référence)",
+        "optional": true,
+        "placeholder": "Laisser vide = rôle actuel conservé",
+        "description": "Remplace le rôle imposé de l'entité dans son scénario de référence (champ role_ref de la fiche), puis régénère cette instance. Exige une entité ET le scénario de référence de cette entité ci-dessus. Cocher aussi \"Régénérer même si l'instance existe déjà\"."
+      },
+      {
+        "flag": "--consigne",
+        "type": "textarea",
+        "label": "Consigne pour ce scénario (autres scénarios)",
+        "optional": true,
+        "placeholder": "ex : jeune fille, ne doit pas apparaître dans les articles pour le moment",
+        "description": "Remplace la consigne donnée à l'IA pour ce scénario (champ consignes_scenarios de la fiche), puis régénère cette instance. Exige une entité ET un scénario autre que son scénario de référence. Cocher aussi \"Régénérer même si l'instance existe déjà\"."
+      },
+      {
+        "flag": "--injection-custom",
+        "type": "checkbox",
+        "label": "Conserver l'impact direct sur les variables",
+        "default": false,
+        "description": "Pour régénérer une instance créée en mode custom (\"Créer des entités\") sans perdre son bloc d'impact sur les variables. Laisser décoché pour une génération classique."
+      },
+      {
         "flag": "--dry-run",
         "type": "checkbox",
         "label": "Simulation (rien écrit sur disque, mais appels LLM réels)",

@@ -1059,6 +1059,18 @@ async function renderOption(opt, script) {
     if (opt.max !== undefined) inp.max = opt.max;
     group.appendChild(inp);
 
+  } else if (opt.type === 'textarea') {
+    // Option CLI multi-lignes (24 septembre 2026, --role/--consigne de
+    // generate_instances.py) : même collecte que 'text' (el.value lu via
+    // data-flag dans buildArgs), seule la saisie change.
+    const ta = document.createElement('textarea');
+    ta.className = 'yaml-form-textarea';
+    ta.dataset.flag = opt.flag;
+    ta.rows = opt.rows || 4;
+    ta.placeholder = opt.placeholder || opt.label;
+    ta.autocomplete = 'off';
+    group.appendChild(ta);
+
   } else if (opt.type === 'text') {
     const inp = document.createElement('input');
     inp.type = 'text';

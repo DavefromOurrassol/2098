@@ -22,8 +22,6 @@ scenarios_instances:
 date_creation: 2026-09-24
 custom_source: apocalypse_nerds_2026-09 (Hadjadji & Tesquet, Apocalypse Nerds, 2025)
 scenario_ref: reference
-role_ref: >
-  Gouvernement-entreprise administrant un territoire associé au Pacte des Souverains : le conseil des actionnaires tient lieu de parlement, les résidents ont un statut de clients-contractants sans droit de vote, et un souverain-gérant nommé pour dix ans dirige l'ensemble. Modèle le plus abouti des zones post-démocratiques du monde multipolaire, cité en exemple par ses partisans comme par ses détracteurs.
 etat_ref: dominant
 consignes_scenarios:
   breakdown: Rôle différent de celui du scénario reference, choisi selon la logique de ce scénario ; présence réelle mais moins centrale que dans reference.
@@ -31,6 +29,7 @@ consignes_scenarios:
   new_sustainability: Rôle différent de celui du scénario reference, choisi selon la logique de ce scénario ; présence réelle mais moins centrale que dans reference.
   eco_communalism: Rôle différent de celui du scénario reference, choisi selon la logique de ce scénario ; présence réelle mais moins centrale que dans reference.
   policy_reform: Rôle différent de celui du scénario reference, choisi selon la logique de ce scénario ; présence réelle mais moins centrale que dans reference.
+role_ref: 'Gouvernement-entreprise administrant un territoire associé au Pacte des Souverains, et monopole intégral de fait : Ergo-Wian possède l''eau, l''énergie, les réseaux de données, la monnaie de compte, l''assurance, l''éducation et la sécurité de son territoire, et rachète méthodiquement ou étouffe toute entreprise concurrente. Les résidents sont des clients-contractants captifs, sans droit de vote, dont le contrat de résidence peut être résilié à tout moment par le conseil des actionnaires, qui tient lieu de parlement. Un souverain-gérant nommé pour dix ans exerce l''autorité exécutive. Le modèle s''exporte : Ergo-Wian prend le contrôle d''infrastructures publiques d''autres membres du Pacte par contrats de gérance, étendant son monopole au-delà de ses frontières sans jamais se soumettre à une élection.'
 ---
 
 # Ergo-Wian Sovereign Holdings

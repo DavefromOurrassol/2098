@@ -42,13 +42,27 @@ USAGE
     python3 generate_instances.py --scenario breakdown   # un seul scénario, toutes entités
     python3 generate_instances.py --force                # régénère même si l'instance existe déjà
     python3 generate_instances.py --dry-run              # affiche sans rien écrire
+
+AJOUTS DU 24 SEPTEMBRE 2026 (pilotage depuis le GUI, une entité + un scénario)
+    --role "..."        nouveau rôle imposé pour le scénario de référence de
+                        l'entité (remplace role_ref dans la fiche entité)
+    --consigne "..."    consigne pour un AUTRE scénario (remplace
+                        consignes_scenarios[scénario] dans la fiche entité)
+    --injection-custom  conserve le bloc d'impact sur les variables (comme
+                        une instance créée en mode custom)
+  --role et --consigne exigent --entity et --scenario, et sont ÉCRITS dans la
+  fiche entité avant la génération (sauf --dry-run) : une régénération
+  ultérieure les retrouvera. Combinés en général avec --force.
 """
 
 import argparse
+import re
 import subprocess
 import sys
 import time
 from pathlib import Path
+
+import yaml
 
 from instance_generation_common import (
     SCENARIOS, VALID_VARS, VALID_TRAJECTOIRE, TRAJECTOIRE_INACTIVES, SLUG_PATTERN,
@@ -87,8 +101,63 @@ def load_all_entities():
         entities[slug] = fm
     return entities
 
+def _mettre_a_jour_fiche_entite(slug, role=None, scenario=None, consigne=None, dry_run=False):
+    """Met à jour role_ref et/ou consignes_scenarios[scenario] dans le
+    frontmatter de entites/{slug}.md (24 septembre 2026). Réécrit
+    uniquement ces deux clés (blocs retirés puis réinsérés en fin de
+    frontmatter) ; vérifie que le YAML se relit et que toutes les autres
+    clés sont inchangées avant d'écrire. Retourne le frontmatter à jour,
+    ou None en cas d'échec (rien n'est écrit)."""
+    path = ENTITES_DIR / f"{slug}.md"
+    texte = path.read_text(encoding="utf-8")
+    m = re.match(r"^---\n(.*?)\n---", texte, re.S)
+    if not m:
+        print(f"✗ Frontmatter introuvable dans {path.name}")
+        return None
+    fm_txt = m.group(1)
+    fm = yaml.safe_load(fm_txt) or {}
+    nouveau = dict(fm)
+    if role is not None:
+        nouveau["role_ref"] = " ".join(role.split())
+    if consigne is not None:
+        cons = dict(fm.get("consignes_scenarios") or {})
+        cons[scenario] = " ".join(consigne.split())
+        nouveau["consignes_scenarios"] = cons
+
+    # Retire les blocs existants de ces deux clés (clé + lignes indentées).
+    lignes, garder, dans_bloc = fm_txt.split("\n"), [], False
+    for ligne in lignes:
+        if re.match(r"^(role_ref|consignes_scenarios):", ligne):
+            dans_bloc = ligne.split(":")[0] in (("role_ref",) if role is not None else ()) + \
+                        (("consignes_scenarios",) if consigne is not None else ())
+            if dans_bloc:
+                continue
+        elif dans_bloc and (ligne.startswith(" ") or ligne == ""):
+            continue
+        else:
+            dans_bloc = False
+        garder.append(ligne)
+    ajout = {}
+    if role is not None:
+        ajout["role_ref"] = nouveau["role_ref"]
+    if consigne is not None:
+        ajout["consignes_scenarios"] = nouveau["consignes_scenarios"]
+    fm_nouveau_txt = "\n".join(garder).rstrip("\n") + "\n" + \
+        yaml.dump(ajout, allow_unicode=True, sort_keys=False, width=1000).rstrip("\n")
+    relu = yaml.safe_load(fm_nouveau_txt) or {}
+    if relu != nouveau:
+        print(f"✗ Mise à jour de {path.name} annulée : la relecture ne correspond pas")
+        return None
+    if dry_run:
+        print(f"  (dry-run) fiche {path.name} NON modifiée")
+    else:
+        path.write_text("---\n" + fm_nouveau_txt + texte[m.end(1):], encoding="utf-8")
+        print(f"  ✓ Fiche {path.name} mise à jour ({', '.join(ajout)})")
+    return nouveau
+
+
 def generate_all(filter_entity=None, filter_scenario=None, force=False, dry_run=False,
-                  ancrage_temporel="libre"):
+                  ancrage_temporel="libre", injection_custom=False, fm_override=None):
     print("\n" + "=" * 60)
     print("OURRASSOL 2098 — Génération des instances")
     print("=" * 60)
@@ -99,6 +168,10 @@ def generate_all(filter_entity=None, filter_scenario=None, force=False, dry_run=
               "du scénario.")
 
     entities = load_all_entities()
+    # fm_override : fiche mise à jour en mémoire (--role/--consigne), pour
+    # que --dry-run utilise déjà le nouveau rôle/consigne sans rien écrire.
+    for slug_o, fm_o in (fm_override or {}).items():
+        entities[slug_o] = fm_o
     if filter_entity:
         entities = {k: v for k, v in entities.items() if k == filter_entity}
         if not entities:
@@ -127,6 +200,7 @@ def generate_all(filter_entity=None, filter_scenario=None, force=False, dry_run=
                 client, entity_fm, scenario, force=force, dry_run=dry_run,
                 ancrage_temporel=ancrage_temporel,
                 log_prefix=f"  → {slug_entite} ×",
+                injection_custom=injection_custom,
             )
             if outcome["status"] == "created":
                 total_created += 1
@@ -210,7 +284,44 @@ def main():
              "émerger dans les 1-3 prochaines années, ancrées dans "
              "etat_du_monde_reel.md plutôt que dans un jalon lointain."
     )
+    parser.add_argument("--role", type=str, default=None,
+                         help="Nouveau rôle imposé pour le scénario de référence de l'entité "
+                              "(écrit dans role_ref). Exige --entity et --scenario = scénario de référence.")
+    parser.add_argument("--consigne", type=str, default=None,
+                         help="Consigne pour un autre scénario (écrite dans consignes_scenarios). "
+                              "Exige --entity et --scenario.")
+    parser.add_argument("--injection-custom", action="store_true",
+                         help="Conserve le bloc d'impact sur les variables (comme en mode custom).")
     args = parser.parse_args()
+
+    role = (args.role or "").strip() or None
+    consigne = (args.consigne or "").strip() or None
+    if role or consigne:
+        if not (args.entity and args.scenario):
+            sys.exit("✗ --role et --consigne exigent --entity et --scenario.")
+        entities = load_all_entities()
+        fm = entities.get(args.entity)
+        if not fm:
+            sys.exit(f"✗ Entité '{args.entity}' introuvable dans entites/.")
+        if args.scenario not in (fm.get("scenarios_instances") or []):
+            sys.exit(f"✗ '{args.scenario}' n'est pas un scénario couvert par {args.entity} "
+                     f"({', '.join(fm.get('scenarios_instances') or [])}).")
+        ref = fm.get("scenario_ref")
+        if role and args.scenario != ref:
+            sys.exit(f"✗ --role ne s'applique qu'au scénario de référence ({ref}). "
+                     f"Pour {args.scenario}, utiliser --consigne.")
+        if consigne and args.scenario == ref:
+            sys.exit(f"✗ {ref} est le scénario de référence : utiliser --role, pas --consigne.")
+        print(f"Mise à jour de la fiche entité {args.entity}...")
+        fm_maj = _mettre_a_jour_fiche_entite(args.entity, role=role, scenario=args.scenario,
+                                              consigne=consigne, dry_run=args.dry_run)
+        if fm_maj is None:
+            sys.exit(1)
+        fm_override = {args.entity: fm_maj}
+    else:
+        fm_override = None
+        if not args.force:
+            print("  ⚠ Sans --force, une instance déjà existante ne sera pas régénérée.")
 
     generate_all(
         filter_entity=args.entity,
@@ -218,6 +329,8 @@ def main():
         force=args.force,
         dry_run=args.dry_run,
         ancrage_temporel=args.ancrage_temporel,
+        injection_custom=args.injection_custom,
+        fm_override=fm_override,
     )
 
 
