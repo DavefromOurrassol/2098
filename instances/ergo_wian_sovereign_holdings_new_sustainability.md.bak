@@ -1,0 +1,112 @@
+---
+name: Ergo-Wian Sovereign Trusts
+type: instance
+slug: ergo_wian_sovereign_holdings_new_sustainability
+entite: ergo_wian_sovereign_holdings
+scenario: new_sustainability
+
+type_dans_scenario: hybride
+
+role_dans_scenario: >
+  Dans le scénario *new_sustainability*, Ergo-Wian Sovereign Holdings se réinvente en un réseau de *Sovereign Trusts* : des entités semi-autonomes qui gèrent des territoires sous mandat régénératif, combinant logique corporative et gouvernance algorithmique. Ces trusts agissent comme des interfaces entre les hubs urbains régénératifs, les corridors de ressources critiques et les communautés locales, optimisant la redistribution des actifs écologiques et technologiques sous supervision du *Conseil Mondial de l'IA Régénérative*. Leur rôle est de fluidifier les transitions territoriales tout en maintenant une apparence de souveraineté locale, mais leur légitimité est contestée par les mouvements néo-démocratiques et les collectifs de désobéissance algorithmique.
+
+responsabilites: >
+  1) Gérer des *zones de régénération prioritaire* (bassins versants, ceintures agricoles, corridors énergétiques) via des contrats de performance écologique liés à des IA de modélisation climatique (ex. Consortium des IA Climatiques). 2) Négocier des *droits de préemption algorithmique* sur les ressources critiques (eau, terres rares, biomasse) avec les agences onusiennes et les blocs souverains. 3) Superviser la redistribution des *crédits de résilience* (monnaie complémentaire indexée sur les services écosystémiques) aux communautés locales, en échange de leur intégration aux réseaux de gouvernance distribuée.
+
+impact_local: 4
+impact_systemique_global: 3
+
+variables_influencees:
+    - gouvernance_institutions
+    - systeme_economique_redistribution
+    - organisation_territoires
+    - technologie_information
+
+zone_geographique:
+    - régionale
+    - continentale
+
+zone_systemique:
+    - gouvernance
+    - économie
+    - IA
+    - infrastructure
+
+alliances:
+    - conseil_regulation_algorithmique_new_sustainability
+    - consortium_des_ia_climatiques_new_sustainability
+    - fonds_mondial_de_redistribution_technologique_new_sustainability
+    - reseau_des_hubs_urbains_regeneratifs_new_sustainability
+
+oppositions:
+    - coalition_anti_algorithme_des_autonomies_locales_new_sustainability
+    - collectifs_de_desobeissance_algorithmique_new_sustainability
+    - mouvement_pour_l_autodetermination_territoriale_new_sustainability
+    - reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability
+
+type_relation_dominante: dépendance
+
+annee_debut: 2042
+annee_fin: 
+
+trajectoire: mature
+est_clandestin: false
+generation: ère cognitive
+
+injection:
+  type: custom
+  annee_injection: 2042
+  contexte_injection: >
+    Ergo-Wian Sovereign Trusts agit comme un accélérateur de la gouvernance hybride globale en institutionnalisant des mécanismes de marché pour la régénération écologique. Leur impact sur *gouvernance_institutions* et *organisation_territoires* reflète leur rôle de pivot entre les agences onusiennes, les IA décisionnelles et les communautés locales, tandis que leur influence sur *systeme_economique_redistribution* traduit la financiarisation des services écosystémiques. Leur modèle, bien que contesté, est devenu un standard de fait pour les transitions territoriales dans les années 2050-2070.
+  impact_sur_variables:
+  - variable: gouvernance_institutions
+    delta_level: 12
+    duree: 20
+    polarite: 1
+  - variable: systeme_economique_redistribution
+    delta_level: 8
+    duree: 15
+    polarite: 1
+  - variable: organisation_territoires
+    delta_level: 10
+    duree: 25
+    polarite: 1
+  propagation:
+    via_matrice: true
+
+description_journalistique: >
+  Imaginez une holding qui ne possède rien mais contrôle tout : c’est le paradoxe des *Ergo-Wian Sovereign Trusts*, ces entités hybrides nées dans les années 2040 pour « optimiser » la transition écologique. Officiellement, ils agissent comme des courtiers en résilience, vendant des solutions clés en main aux villes et aux États pour verdir leurs territoires. En réalité, leur algorithme *EcoFlow* décide quelles communautés reçoivent des crédits de régénération, quels bassins versants sont prioritaires, et quelles terres rares sont « gelées » pour les générations futures. Leur siège social ? Une tour flottante à Singapour, bardée d’écrans affichant en temps réel les flux de carbone, d’eau et de données. Leur symbole ? Un arbre binaire dont les racines s’enroulent autour d’un circuit imprimé.
+
+signes_distinctifs: >
+  1) *L’interface utilisateur* : des tableaux de bord holographiques où se superposent cartes thermiques des écosystèmes et graphiques de performance économique, le tout mis à jour par des IA climatiques. 2) *Le langage* : un jargon technocratique mêlant termes juridiques (« trusts souverains »), écologiques (« services écosystémiques ») et algorithmiques (« optimisation multi-agents »). 3) *L’esthétique* : des bâtiments modulaires en biomatériaux, conçus pour être démontés et réassemblés selon les besoins des territoires, avec des logos minimalistes combinant des motifs organiques et des structures en réseau.
+retry_signes_distinctifs: non
+
+tensions_narratives: >
+  1) *La légitimité algorithmique* : les trusts justifient leurs décisions par des modèles climatiques « neutres », mais les collectifs de désobéissance algorithmique piratent leurs données pour révéler des biais en faveur des hubs urbains. 2) *La souveraineté en question* : des États comme le Brésil ou l’Indonésie contestent leur droit à gérer des ressources nationales, tandis que des villes comme Nairobi ou Medellín les utilisent pour contourner leurs gouvernements centraux. 3) *La financiarisation du vivant* : leur modèle de crédits de résilience est accusé de transformer la régénération écologique en un nouveau marché spéculatif, où les plus riches peuvent « acheter » leur survie climatique.
+
+date_creation: 2026-09-24
+---
+
+# Ergo-Wian Sovereign Trusts
+
+## Rôle dans [[new_sustainability]]
+Dans le scénario *new_sustainability*, Ergo-Wian Sovereign Holdings se réinvente en un réseau de *Sovereign Trusts* : des entités semi-autonomes qui gèrent des territoires sous mandat régénératif, combinant logique corporative et gouvernance algorithmique. Ces trusts agissent comme des interfaces entre les hubs urbains régénératifs, les corridors de ressources critiques et les communautés locales, optimisant la redistribution des actifs écologiques et technologiques sous supervision du *Conseil Mondial de l'IA Régénérative*. Leur rôle est de fluidifier les transitions territoriales tout en maintenant une apparence de souveraineté locale, mais leur légitimité est contestée par les mouvements néo-démocratiques et les collectifs de désobéissance algorithmique.
+
+## Responsabilités
+1) Gérer des *zones de régénération prioritaire* (bassins versants, ceintures agricoles, corridors énergétiques) via des contrats de performance écologique liés à des IA de modélisation climatique (ex. Consortium des IA Climatiques). 2) Négocier des *droits de préemption algorithmique* sur les ressources critiques (eau, terres rares, biomasse) avec les agences onusiennes et les blocs souverains. 3) Superviser la redistribution des *crédits de résilience* (monnaie complémentaire indexée sur les services écosystémiques) aux communautés locales, en échange de leur intégration aux réseaux de gouvernance distribuée.
+
+## Variables influencées
+- [[gouvernance_institutions]]
+- [[systeme_economique_redistribution]]
+- [[organisation_territoires]]
+- [[technologie_information]]
+
+## Relations
+**Alliés** : [[conseil_regulation_algorithmique_new_sustainability]], [[consortium_des_ia_climatiques_new_sustainability]], [[fonds_mondial_de_redistribution_technologique_new_sustainability]], [[reseau_des_hubs_urbains_regeneratifs_new_sustainability]]
+**Opposants** : [[coalition_anti_algorithme_des_autonomies_locales_new_sustainability]], [[collectifs_de_desobeissance_algorithmique_new_sustainability]], [[mouvement_pour_l_autodetermination_territoriale_new_sustainability]], [[reseaux_neo_democratiques_plaidant_pour_la_gouvernance_participative_directe_new_sustainability]]
+
+## Description journalistique
+Imaginez une holding qui ne possède rien mais contrôle tout : c’est le paradoxe des *Ergo-Wian Sovereign Trusts*, ces entités hybrides nées dans les années 2040 pour « optimiser » la transition écologique. Officiellement, ils agissent comme des courtiers en résilience, vendant des solutions clés en main aux villes et aux États pour verdir leurs territoires. En réalité, leur algorithme *EcoFlow* décide quelles communautés reçoivent des crédits de régénération, quels bassins versants sont prioritaires, et quelles terres rares sont « gelées » pour les générations futures. Leur siège social ? Une tour flottante à Singapour, bardée d’écrans affichant en temps réel les flux de carbone, d’eau et de données. Leur symbole ? Un arbre binaire dont les racines s’enroulent autour d’un circuit imprimé.
+
+## Tensions narratives
+1) *La légitimité algorithmique* : les trusts justifient leurs décisions par des modèles climatiques « neutres », mais les collectifs de désobéissance algorithmique piratent leurs données pour révéler des biais en faveur des hubs urbains. 2) *La souveraineté en question* : des États comme le Brésil ou l’Indonésie contestent leur droit à gérer des ressources nationales, tandis que des villes comme Nairobi ou Medellín les utilisent pour contourner leurs gouvernements centraux. 3) *La financiarisation du vivant* : leur modèle de crédits de résilience est accusé de transformer la régénération écologique en un nouveau marché spéculatif, où les plus riches peuvent « acheter » leur survie climatique.

@@ -9677,5 +9677,297 @@
       "policy_reform",
       "reference"
     ]
+  },
+  {
+    "nom": "Ergo-Wian Sovereign Holdings",
+    "slug": "ergo_wian_sovereign_holdings",
+    "categorie": "entreprise",
+    "description": "Une entité hybride entre gouvernement et entreprise, où le pouvoir politique est exercé par des actionnaires et des mécanismes de marché plutôt que par des institutions démocratiques. Elle incarne la fusion entre souveraineté territoriale et logique corporative, où la gouvernance est réduite à une gestion optimisée des ressources et des populations, traitées comme des clients-contractants plutôt que comme des citoyens. Ce modèle représente l'aboutissement d'une post-démocratie où l'efficacité économique prime sur la légitimité politique, tout en maintenant une apparence de stabilité et d'ordre.",
+    "tension_fondamentale": "La contradiction entre l'efficacité apparente d'un système fondé sur la rationalité économique et l'exclusion structurelle des populations, dont la survie dépend de leur capacité à s'adapter à un cadre qu'elles ne contrôlent pas. Cette entité doit constamment justifier son autorité en niant toute alternative, tout en étant vulnérable à la contestation de ceux qu'elle marginalise.",
+    "variables_potentielles": [
+      "gouvernance_institutions",
+      "systeme_economique_redistribution",
+      "organisation_territoires",
+      "technologie_information"
+    ],
+    "scenarios": [
+      "reference",
+      "breakdown",
+      "fortress_world",
+      "new_sustainability",
+      "eco_communalism",
+      "policy_reform"
+    ]
+  },
+  {
+    "nom": "The Lattice",
+    "slug": "the_lattice",
+    "categorie": "réseau",
+    "description": "Un réseau décentralisé de juridictions autonomes fonctionnant comme un marché de gouvernance, où l'autorité est fragmentée et la légitimité découle de la capacité à attirer et retenir des résidents par des règles attractives plutôt que par la coercition ou la représentation électorale. Ce modèle incarne une forme de souveraineté fluide, où le pouvoir est exercé par la concurrence entre entités plutôt que par la hiérarchie ou la démocratie traditionnelle, et où l'adhésion est un acte de choix individuel plutôt que d'obligation collective.",
+    "tension_fondamentale": "La contradiction entre la liberté de mouvement et de choix des individus (qui fonde la légitimité du système) et la nécessité de stabilité, de coordination ou de protection collective, qui peut exiger des mécanismes de contrainte ou de solidarité incompatibles avec une logique purement concurrentielle.",
+    "variables_potentielles": [
+      "gouvernance_institutions",
+      "organisation_territoires",
+      "demographie_mobilite_humaine",
+      "valeurs_culture_tempo_sociale"
+    ],
+    "scenarios": [
+      "reference",
+      "policy_reform"
+    ]
+  },
+  {
+    "nom": "Meridian Assembly",
+    "slug": "meridian_assembly",
+    "categorie": "institution",
+    "description": "Une institution post-nationale émergente qui incarne la reconfiguration de la souveraineté par l'abstraction des frontières traditionnelles, en s'appuyant sur des mécanismes de citoyenneté fluide, des réseaux déterritorialisés et une diplomatie opportuniste. Elle représente la montée en puissance d'acteurs hybrides, ni tout à fait étatiques ni purement privés, qui exploitent les failles des systèmes géopolitiques en crise pour s'imposer comme des alternatives légitimes, souvent au détriment des populations locales ou des structures héritées. Son essence réside dans sa capacité à agréger des fragments de pouvoir (reconnaissance internationale, ressources, adhésions) pour former une entité cohérente, mais dont la légitimité reste contestée.",
+    "tension_fondamentale": "La contradiction entre l'inclusion formelle (citoyenneté par abonnement, sièges diplomatiques) et l'exclusion réelle (détournement de souveraineté, marginalisation des communautés d'origine), où l'institution se nourrit des crises qu'elle prétend résoudre tout en reproduisant des rapports de domination sous une nouvelle forme.",
+    "variables_potentielles": [
+      "gouvernance_institutions",
+      "geopolitique_conflits",
+      "demographie_mobilite_humaine",
+      "technologie_information"
+    ],
+    "scenarios": [
+      "reference",
+      "breakdown",
+      "eco_communalism",
+      "policy_reform"
+    ]
+  },
+  {
+    "nom": "The Tidewater Canon",
+    "slug": "the_tidewater_canon",
+    "categorie": "système",
+    "description": "Un système doctrinal mature qui émerge comme alternative radicale à l'ordre institutionnel dominant, prônant la souveraineté absolue des entités politiques ou économiques sur leurs ressources, leur gouvernance et leur destin. Il se présente comme une philosophie de rupture, rejetant les structures multilatérales au profit d'une logique de gestion entrepreneuriale et décentralisée, tout en devenant paradoxalement un outil de légitimation pour les pouvoirs en place. Son influence s'étend par l'éducation, la diffusion de normes et la création d'un récit cohérent justifiant l'autonomie face à l'interdépendance.",
+    "tension_fondamentale": "La contradiction entre l'émancipation promise par la souveraineté absolue et la reproduction des hiérarchies de pouvoir qu'elle engendre, transformant une doctrine de libération en instrument de contrôle et d'exclusion.",
+    "variables_potentielles": [
+      "gouvernance_institutions",
+      "valeurs_culture_tempo_sociale",
+      "organisation_territoires",
+      "technologie_information"
+    ],
+    "scenarios": [
+      "reference",
+      "eco_communalism"
+    ]
+  },
+  {
+    "nom": "Deepfield Institute",
+    "slug": "deepfield_institute",
+    "categorie": "institution",
+    "description": "Institution élitiste et long-termiste dédiée à la préservation de l'espèce humaine ou d'une civilisation, souvent au mépris des équilibres démocratiques ou des libertés individuelles. Elle agit comme un gardien technocratique, subordonnant les choix présents à des impératifs futurs, qu'ils soient écologiques, génétiques ou géopolitiques. Financée par des acteurs puissants, elle légitime ses actions par une expertise scientifique ou une rationalité systémique, tout en étant perçue comme une menace par ceux qui en sont exclus ou marginalisés.",
+    "tension_fondamentale": "La survie collective justifie-t-elle le sacrifice des libertés, de l'équité ou de la souveraineté immédiate ? Cette entité incarne la contradiction entre une vision à long terme (nécessitant des sacrifices) et les droits ou aspirations des générations présentes, souvent reléguées au rang de variables d'ajustement.",
+    "variables_potentielles": [
+      "gouvernance_institutions",
+      "sante_biotechnologies",
+      "frontieres_du_systeme",
+      "demographie_mobilite_humaine"
+    ],
+    "scenarios": [
+      "reference",
+      "breakdown",
+      "fortress_world",
+      "new_sustainability"
+    ]
+  },
+  {
+    "nom": "Holdfast",
+    "slug": "holdfast",
+    "categorie": "infrastructure",
+    "description": "Une infrastructure conçue comme un refuge fortifié pour une élite, offrant sécurité et autarcie dans un contexte de fragmentation ou d'effondrement systémique. Elle incarne la privatisation de la souveraineté territoriale, où des espaces physiques et politiques sont soustraits au contrôle public pour devenir des enclaves autonomes, tolérées ou abandonnées par les structures étatiques. Son existence reflète une méfiance envers les institutions collectives et une volonté de préserver des privilèges dans un monde en transition ou en crise.",
+    "tension_fondamentale": "La contradiction entre la sécurité et l'exclusion : ces enclaves garantissent la survie de leurs membres en érigeant des barrières physiques et politiques, mais leur existence même fragilise l'idée d'un bien commun ou d'une gouvernance partagée, tout en dépendant paradoxalement de la tolérance des systèmes qu'elles rejettent.",
+    "variables_potentielles": [
+      "organisation_territoires",
+      "geopolitique_conflits",
+      "gouvernance_institutions",
+      "systeme_economique_redistribution"
+    ],
+    "scenarios": [
+      "reference",
+      "breakdown",
+      "fortress_world",
+      "new_sustainability"
+    ]
+  },
+  {
+    "nom": "Kindling",
+    "slug": "kindling",
+    "categorie": "réseau",
+    "description": "Un réseau clandestin d'acteurs accélérationnistes qui agit en marge des institutions établies pour précipiter leur effondrement, souvent par des moyens subversifs (sabotage, désinformation, infiltration). Il incarne une force de disruption radicale, cherchant à remplacer l'ordre existant par un nouveau paradigme, qu'il soit idéologique, technologique ou politique. Son existence repose sur l'idée que le système actuel est irrémédiablement corrompu ou inefficace et doit être détruit pour laisser place à une alternative.",
+    "tension_fondamentale": "La contradiction entre la légitimité morale de la destruction (au nom d'un futur meilleur) et l'illégitimité pratique de ses méthodes (violence, manipulation, illégalité). Son efficacité dépend de sa capacité à rester invisible, mais son impact réel exige une visibilité qui le rend vulnérable à la répression ou à la récupération par le système qu'il combat.",
+    "variables_potentielles": [
+      "geopolitique_conflits",
+      "technologie_information",
+      "gouvernance_institutions",
+      "valeurs_culture_tempo_sociale"
+    ],
+    "scenarios": [
+      "reference",
+      "eco_communalism"
+    ]
+  },
+  {
+    "nom": "Lamplight",
+    "slug": "lamplight",
+    "categorie": "média",
+    "description": "Un collectif indépendant de journalistes, chercheurs et activistes spécialisé dans l'investigation des structures de pouvoir opaques, des réseaux de financement clandestins et des territoires en marge des systèmes dominants. Il incarne la fonction critique de surveillance et de révélation des dysfonctionnements systémiques, agissant comme un contre-pouvoir face aux institutions, entreprises ou régimes qui cherchent à contrôler l'information et les récits. Son existence repose sur la préservation d'une autonomie intellectuelle et opérationnelle, souvent menacée par les acteurs qu'il expose.",
+    "tension_fondamentale": "La légitimité de la transparence et de la vérité comme biens communs entre en conflit permanent avec les mécanismes de pouvoir qui cherchent à les étouffer, instrumentaliser ou discréditer. Son ascension dépend de sa capacité à rester indépendant tout en étant suffisamment influent pour peser sur les équilibres systémiques.",
+    "variables_potentielles": [
+      "technologie_information",
+      "gouvernance_institutions",
+      "geopolitique_conflits",
+      "valeurs_culture_tempo_sociale"
+    ],
+    "scenarios": [
+      "reference",
+      "eco_communalism"
+    ]
+  },
+  {
+    "nom": "Raised Hands",
+    "slug": "raised_hands",
+    "categorie": "organisation",
+    "description": "Un mouvement émergent de citoyens-contractants ou résidents précaires qui réclament des droits politiques (vote, représentation) dans un système où leur statut juridique les en prive. Il incarne la lutte pour l'inclusion démocratique dans des structures de gouvernance qui fonctionnent sur des logiques de privilège, d'exclusion ou de contractualisation inégale. Son existence même questionne la légitimité des régimes hybrides ou technocratiques qui tolèrent sa présence tout en le réprimant.",
+    "tension_fondamentale": "La revendication de droits universels (participation, égalité) se heurte à un système qui fonde sa stabilité sur la segmentation et la précarisation des populations, rendant toute émancipation collective à la fois nécessaire et dangereuse pour l'ordre établi.",
+    "variables_potentielles": [
+      "gouvernance_institutions",
+      "valeurs_culture_tempo_sociale",
+      "demographie_mobilite_humaine",
+      "systeme_economique_redistribution"
+    ],
+    "scenarios": [
+      "reference",
+      "breakdown"
+    ]
+  },
+  {
+    "nom": "Ilse Varga-Holm",
+    "slug": "ilse_varga_holm",
+    "categorie": "humain",
+    "description": "Cette entité incarne l'archétype du souverain gestionnaire, un dirigeant qui combine autorité politique et maîtrise économique pour maintenir l'ordre et la stabilité d'un territoire ou d'une organisation. Pragmatique et stratégique, elle assure la pérennité du système en place tout en naviguant entre les attentes des élites et les besoins des gouvernés, souvent sous une apparence de légitimité institutionnelle ou populaire. Son pouvoir repose sur une gouvernance efficace, mais aussi sur une capacité à adapter les règles pour préserver son contrôle, même au prix de ruptures symboliques ou structurelles.",
+    "tension_fondamentale": "La contradiction entre la nécessité de stabilité et de continuité (via une gouvernance rationnelle et centralisée) et l'impératif de légitimité ou d'innovation (qui peut exiger des concessions, des réformes ou des ruptures avec l'ordre établi).",
+    "variables_potentielles": [
+      "gouvernance_institutions",
+      "systeme_economique_redistribution",
+      "organisation_territoires",
+      "geopolitique_conflits"
+    ],
+    "scenarios": [
+      "reference",
+      "breakdown",
+      "fortress_world",
+      "new_sustainability",
+      "eco_communalism",
+      "policy_reform"
+    ]
+  },
+  {
+    "nom": "Hyphan Raghavan",
+    "slug": "hyphan_raghavan",
+    "categorie": "humain",
+    "description": "Cette entité incarne l'archétype du successeur inattendu, choisi pour des raisons obscures et porteur d'une légitimité fragile mais décisive. Elle représente la transition du pouvoir entre des mains non prévues par les structures établies, souvent perçue comme une menace ou une promesse de changement radical. Son rôle est de questionner la continuité des systèmes en place, tout en étant elle-même un produit de ces systèmes.",
+    "tension_fondamentale": "La contradiction entre la nécessité de perpétuer l'ordre existant pour maintenir la stabilité et l'impératif de transformation pour répondre aux défis inédits, sans que personne ne sache si elle choisira l'un, l'autre, ou une voie encore inexplorée.",
+    "variables_potentielles": [
+      "gouvernance_institutions",
+      "geopolitique_conflits",
+      "valeurs_culture_tempo_sociale",
+      "systeme_economique_redistribution"
+    ],
+    "scenarios": [
+      "reference",
+      "breakdown",
+      "fortress_world",
+      "new_sustainability",
+      "eco_communalism",
+      "policy_reform"
+    ]
+  },
+  {
+    "nom": "Aurelio Stahl",
+    "slug": "aurelio_stahl",
+    "categorie": "humain",
+    "description": "Cette entité incarne l'intellectuel organique d'une doctrine en transition, un penseur systémique qui reformule les fondements idéologiques d'une époque en crise. Elle agit comme pont entre les structures de pouvoir établies et les aspirations collectives émergentes, en articulant une vision du monde qui légitime ou conteste l'ordre existant. Son rôle est à la fois celui d'un architecte conceptuel et d'un agitateur culturel, capable de mobiliser des réseaux transnationaux par la force de ses idées plutôt que par l'autorité institutionnelle.",
+    "tension_fondamentale": "La contradiction entre la nécessité de proposer un récit unificateur pour une époque fragmentée et le risque de voir ce récit récupéré, instrumentalisé ou rejeté par les forces mêmes qu'il cherche à influencer. Son influence dépend de sa capacité à rester en marge des institutions tout en étant suffisamment intégré pour en façonner les discours.",
+    "variables_potentielles": [
+      "valeurs_culture_tempo_sociale",
+      "gouvernance_institutions",
+      "technologie_information",
+      "geopolitique_conflits"
+    ],
+    "scenarios": [
+      "reference",
+      "new_sustainability",
+      "policy_reform"
+    ]
+  },
+  {
+    "nom": "Nadia Ferreira-Sato",
+    "slug": "nadia_ferreira_sato",
+    "categorie": "humain",
+    "description": "Cette entité incarne l'archétype du bâtisseur marginal, un acteur qui émerge des interstices du système pour créer des structures alternatives de survie, de résistance ou d'émancipation. Elle représente la capacité humaine à organiser des communs en dehors des cadres institutionnels dominants, souvent sous la menace directe de ces mêmes institutions. Son existence repose sur une légitimité locale ou communautaire, forgée par l'action concrète plutôt que par le droit ou la reconnaissance officielle. Elle est à la fois un refuge et un levier de transformation sociale, mais son autonomie précaire la place en tension permanente avec les pouvoirs établis.",
+    "tension_fondamentale": "La contradiction entre la nécessité de construire des espaces d'autonomie et de solidarité (pour survivre ou résister) et l'impératif de négocier ou de composer avec le système dominant (pour éviter l'écrasement ou la marginalisation totale). Cette tension se cristallise autour de la question : jusqu'où peut-on pousser l'autonomie sans devenir une cible, ou sans reproduire les logiques qu'on combat ?",
+    "variables_potentielles": [
+      "gouvernance_institutions",
+      "systeme_economique_redistribution",
+      "valeurs_culture_tempo_sociale",
+      "technologie_information"
+    ],
+    "scenarios": [
+      "reference",
+      "breakdown",
+      "new_sustainability"
+    ]
+  },
+  {
+    "nom": "Kaspar Lind",
+    "slug": "kaspar_lind",
+    "categorie": "humain",
+    "description": "Un recruteur clandestin et marginal qui opère dans les interstices des systèmes institutionnels, identifiant et mobilisant les individus désabusés ou en rupture avec l'ordre établi. Il incarne la figure du catalyseur souterrain, transformant la frustration et le désenchantement en énergie disruptive ou reconstructive, selon les besoins d'un réseau ou d'une cause. Son rôle est de connecter les talents et les compétences isolés aux mouvements ou organisations qui cherchent à contourner, subvertir ou réformer les structures dominantes.",
+    "tension_fondamentale": "La contradiction entre la nécessité de préserver une apparence de légitimité ou de normalité pour accéder aux ressources et aux individus, et l'impératif de rester invisible ou indétectable pour échapper aux mécanismes de contrôle ou de répression du système.",
+    "variables_potentielles": [
+      "technologie_information",
+      "gouvernance_institutions",
+      "systemes_productifs_travail",
+      "valeurs_culture_tempo_sociale"
+    ],
+    "scenarios": [
+      "reference",
+      "policy_reform"
+    ]
+  },
+  {
+    "nom": "Maëlys Okonkwo",
+    "slug": "maelys_okonkwo",
+    "categorie": "humain",
+    "description": "Cette entité incarne l'archétype du révélateur de vérité en marge des structures de pouvoir. Elle représente ceux qui, par leur métier ou leur engagement, exposent les dysfonctionnements, les manipulations ou les contradictions des systèmes en place, souvent au péril de leur sécurité ou de leur légitimité. Son rôle est de servir de contre-pouvoir informel, en documentant et en diffusant des informations critiques pour éclairer les choix collectifs ou individuels, tout en naviguant dans un environnement où la transparence est à la fois une nécessité et une menace.",
+    "tension_fondamentale": "La contradiction entre la nécessité de rendre visible ce qui est caché (pour informer, alerter ou mobiliser) et les risques inhérents à cette exposition (répression, marginalisation, instrumentalisation), qui menacent à la fois l'intégrité de l'entité et la portée de son action.",
+    "variables_potentielles": [
+      "technologie_information",
+      "geopolitique_conflits",
+      "valeurs_culture_tempo_sociale",
+      "gouvernance_institutions"
+    ],
+    "scenarios": [
+      "reference",
+      "policy_reform"
+    ]
+  },
+  {
+    "nom": "Elias Mørk",
+    "slug": "elias_m_rk",
+    "categorie": "humain",
+    "description": "Un scientifique ou expert de haut niveau, souvent directeur d'une institution de recherche ou d'innovation, dont le rôle est de concilier avancées technologiques ou biologiques avec des impératifs éthiques, politiques ou sociaux. Cette entité incarne la figure du décideur technique placé à l'intersection du progrès et des limites imposées par la gouvernance, la morale ou les contraintes systémiques. Son autorité repose sur une expertise reconnue, mais son action est constamment soumise à des arbitrages entre efficacité, équité et souveraineté.",
+    "tension_fondamentale": "La contradiction entre la poursuite de l'innovation ou de l'optimisation scientifique (au service d'un bien commun ou d'un pouvoir établi) et les risques de dérive, d'instrumentalisation ou d'exclusion que cette innovation engendre. Cette tension oppose la rationalité technique à la complexité des valeurs humaines et des rapports de force.",
+    "variables_potentielles": [
+      "sante_biotechnologies",
+      "gouvernance_institutions",
+      "frontieres_du_systeme",
+      "valeurs_culture_tempo_sociale"
+    ],
+    "scenarios": [
+      "reference",
+      "breakdown"
+    ]
   }
 ]

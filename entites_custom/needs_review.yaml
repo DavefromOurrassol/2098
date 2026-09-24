@@ -1,1 +1,400 @@
-needs_review: []
+needs_review:
+- status: needs_review
+  idea:
+    nom: Ergo-Wian Sovereign Holdings
+    category: entreprise
+    role: 'Gouvernement-entreprise administrant un territoire associé au Pacte des
+      Souverains : le conseil des actionnaires tient lieu de parlement, les résidents
+      ont un statut de clients-contractants sans droit de vote, et un souverain-gérant
+      nommé pour dix ans dirige l''ensemble. Modèle le plus abouti des zones post-démocratiques
+      du monde multipolaire, cité en exemple par ses partisans comme par ses détracteurs.'
+    etat: dominant
+    scenario_ref: reference
+    scenario_hint:
+    - reference
+    - breakdown
+    - fortress_world
+    - new_sustainability
+    - eco_communalism
+    - policy_reform
+    zone_hint: null
+    source: apocalypse_nerds_2026-09 (Hadjadji & Tesquet, Apocalypse Nerds, 2025)
+    consignes_scenarios:
+      breakdown: Rôle différent de celui du scénario reference, choisi selon la logique
+        de ce scénario ; présence réelle mais moins centrale que dans reference.
+      fortress_world: 'Cohérent avec le récit Hyphan de ce scénario : conglomérat
+        au cœur de l''apartheid corporate et militaro-industriel (migrations forcées,
+        zones interdites), plus dur et plus ouvertement coercitif que dans reference.'
+      new_sustainability: Rôle différent de celui du scénario reference, choisi selon
+        la logique de ce scénario ; présence réelle mais moins centrale que dans reference.
+      eco_communalism: Rôle différent de celui du scénario reference, choisi selon
+        la logique de ce scénario ; présence réelle mais moins centrale que dans reference.
+      policy_reform: Rôle différent de celui du scénario reference, choisi selon la
+        logique de ce scénario ; présence réelle mais moins centrale que dans reference.
+  error: "[llm_client] Variable MISTRAL_API_KEY non définie.\n  export MISTRAL_API_KEY='votre-clé'"
+- status: needs_review
+  idea:
+    nom: The Lattice
+    category: réseau
+    role: 'Fédération de villes à charte d''Amérique centrale (Amériques Multipolaires),
+      apparue dans le vide laissé par la crise constitutionnelle états-unienne de
+      2055 : chaque cité a son règlement, son conseil de gérance et un droit de sortie
+      garanti, mais aucune élection. Les résidents « votent avec leurs pieds » en
+      changeant de cité.'
+    etat: mature
+    scenario_ref: reference
+    scenario_hint:
+    - reference
+    - policy_reform
+    zone_hint: null
+    source: apocalypse_nerds_2026-09 (Hadjadji & Tesquet, Apocalypse Nerds, 2025)
+    consignes_scenarios:
+      policy_reform: 'Entité secondaire dans ce scénario : elle n''existe plus en
+        2098 qu''à l''état de souvenir des années 2020-2050 (trajectoire historique
+        ou mythifié), évoquée brièvement, jamais acteur de premier plan.'
+  error: "[llm_client] Variable MISTRAL_API_KEY non définie.\n  export MISTRAL_API_KEY='votre-clé'"
+- status: needs_review
+  idea:
+    nom: Meridian Assembly
+    category: institution
+    role: 'Assemblée d''États-réseaux nés de communautés en ligne, citoyenneté par
+      abonnement, terres dispersées sur plusieurs continents. Son levier principal
+      : racheter la souveraineté diplomatique des États insulaires submergés des Archipels
+      Flottants du Pacifique Sud pour obtenir sièges et reconnaissance, au grand malaise
+      des communautés déplacées.'
+    etat: ascendant
+    scenario_ref: reference
+    scenario_hint:
+    - reference
+    - breakdown
+    - eco_communalism
+    - policy_reform
+    zone_hint: null
+    source: apocalypse_nerds_2026-09 (Hadjadji & Tesquet, Apocalypse Nerds, 2025)
+    consignes_scenarios:
+      breakdown: 'Entité secondaire dans ce scénario : elle n''existe plus en 2098
+        qu''à l''état de souvenir des années 2020-2050 (trajectoire historique ou
+        mythifié), évoquée brièvement, jamais acteur de premier plan.'
+      eco_communalism: 'Entité secondaire dans ce scénario : elle n''existe plus en
+        2098 qu''à l''état de souvenir des années 2020-2050 (trajectoire historique
+        ou mythifié), évoquée brièvement, jamais acteur de premier plan.'
+      policy_reform: 'Entité secondaire dans ce scénario : elle n''existe plus en
+        2098 qu''à l''état de souvenir des années 2020-2050 (trajectoire historique
+        ou mythifié), évoquée brièvement, jamais acteur de premier plan.'
+  error: "[llm_client] Variable MISTRAL_API_KEY non définie.\n  export MISTRAL_API_KEY='votre-clé'"
+- status: needs_review
+  idea:
+    nom: The Tidewater Canon
+    category: système
+    role: 'Corpus doctrinal hérité de la néo-réaction des années 2020, devenu la philosophie
+      officieuse du Pacte des Souverains : quitter l''État plutôt que le réformer,
+      gouverner comme on gère une entreprise, se défier de « la Cathédrale » (médias,
+      universités, institutions multilatérales). Enseigné dans les écoles de gérance
+      des territoires post-démocratiques.'
+    etat: mature
+    scenario_ref: reference
+    scenario_hint:
+    - reference
+    - eco_communalism
+    zone_hint: null
+    source: apocalypse_nerds_2026-09 (Hadjadji & Tesquet, Apocalypse Nerds, 2025)
+    consignes_scenarios:
+      eco_communalism: 'Entité secondaire dans ce scénario : elle n''existe plus en
+        2098 qu''à l''état de souvenir des années 2020-2050 (trajectoire historique
+        ou mythifié), évoquée brièvement, jamais acteur de premier plan.'
+  error: "[llm_client] Variable MISTRAL_API_KEY non définie.\n  export MISTRAL_API_KEY='votre-clé'"
+- status: needs_review
+  idea:
+    nom: Deepfield Institute
+    category: institution
+    role: 'Institut longtermiste installé dans les États-Unis post-2055 (Amériques
+      Multipolaires), qui subordonne toute décision présente à la survie de l''espèce
+      dans un futur lointain : programmes spatiaux privés, natalité sélective, sélection
+      génétique. Financé par des fortunes des zones post-démocratiques, il fournit
+      leur caution scientifique.'
+    etat: mature
+    scenario_ref: reference
+    scenario_hint:
+    - reference
+    - breakdown
+    - fortress_world
+    - new_sustainability
+    zone_hint: null
+    source: apocalypse_nerds_2026-09 (Hadjadji & Tesquet, Apocalypse Nerds, 2025)
+    consignes_scenarios:
+      breakdown: 'Entité secondaire dans ce scénario : elle n''existe plus en 2098
+        qu''à l''état de souvenir des années 2020-2050 (trajectoire historique ou
+        mythifié), évoquée brièvement, jamais acteur de premier plan.'
+      fortress_world: 'Entité secondaire dans ce scénario : elle n''existe plus en
+        2098 qu''à l''état de souvenir des années 2020-2050 (trajectoire historique
+        ou mythifié), évoquée brièvement, jamais acteur de premier plan.'
+      new_sustainability: 'Entité secondaire dans ce scénario : elle n''existe plus
+        en 2098 qu''à l''état de souvenir des années 2020-2050 (trajectoire historique
+        ou mythifié), évoquée brièvement, jamais acteur de premier plan.'
+  error: "[llm_client] Variable MISTRAL_API_KEY non définie.\n  export MISTRAL_API_KEY='votre-clé'"
+- status: needs_review
+  idea:
+    nom: Holdfast
+    category: infrastructure
+    role: Réseau de bunkers-cités construits par les grandes fortunes, principalement
+      en Nouvelle-Zélande (Arc Indo-Pacifique), devenus des micro-territoires fermés
+      à gouvernance privée. En 2098, une partie est abandonnée ou reconvertie ; les
+      derniers restent des enclaves autarciques tolérées par les États voisins.
+    etat: résiduel
+    scenario_ref: reference
+    scenario_hint:
+    - reference
+    - breakdown
+    - fortress_world
+    - new_sustainability
+    zone_hint: null
+    source: apocalypse_nerds_2026-09 (Hadjadji & Tesquet, Apocalypse Nerds, 2025)
+    consignes_scenarios:
+      breakdown: 'Entité secondaire dans ce scénario : elle n''existe plus en 2098
+        qu''à l''état de souvenir des années 2020-2050 (trajectoire historique ou
+        mythifié), évoquée brièvement, jamais acteur de premier plan.'
+      fortress_world: 'Entité secondaire dans ce scénario : elle n''existe plus en
+        2098 qu''à l''état de souvenir des années 2020-2050 (trajectoire historique
+        ou mythifié), évoquée brièvement, jamais acteur de premier plan.'
+      new_sustainability: 'Entité secondaire dans ce scénario : elle n''existe plus
+        en 2098 qu''à l''état de souvenir des années 2020-2050 (trajectoire historique
+        ou mythifié), évoquée brièvement, jamais acteur de premier plan.'
+  error: "[llm_client] Variable MISTRAL_API_KEY non définie.\n  export MISTRAL_API_KEY='votre-clé'"
+- status: needs_review
+  idea:
+    nom: Kindling
+    category: réseau
+    role: 'Cellules accélérationnistes clandestines opérant en Europe Occidentale
+      Reconstruite, là où les institutions démocratiques tiennent encore : sabotages
+      ciblés, désinformation, infiltration d''administrations, pour hâter leur effondrement
+      et ouvrir la voie à une gouvernance de type Ergo-Wian. Désavouées publiquement
+      par le Pacte des Souverains.'
+    etat: marginal
+    est_clandestin: true
+    scenario_ref: reference
+    scenario_hint:
+    - reference
+    - eco_communalism
+    zone_hint: null
+    source: apocalypse_nerds_2026-09 (Hadjadji & Tesquet, Apocalypse Nerds, 2025)
+    consignes_scenarios:
+      eco_communalism: 'Entité secondaire dans ce scénario : elle n''existe plus en
+        2098 qu''à l''état de souvenir des années 2020-2050 (trajectoire historique
+        ou mythifié), évoquée brièvement, jamais acteur de premier plan.'
+  error: "[llm_client] Variable MISTRAL_API_KEY non définie.\n  export MISTRAL_API_KEY='votre-clé'"
+- status: needs_review
+  idea:
+    nom: Lamplight
+    category: média
+    role: Collectif de journalistes et de chercheurs basé à Genève (Europe Occidentale
+      Reconstruite), spécialisé dans l'enquête sur les territoires post-démocratiques,
+      leurs financements et leurs réseaux clandestins. Principale source critique
+      sur Ergo-Wian, The Lattice et Kindling.
+    etat: ascendant
+    scenario_ref: reference
+    scenario_hint:
+    - reference
+    - eco_communalism
+    zone_hint: null
+    source: apocalypse_nerds_2026-09 (Hadjadji & Tesquet, Apocalypse Nerds, 2025)
+    consignes_scenarios:
+      eco_communalism: 'Entité secondaire dans ce scénario : elle n''existe plus en
+        2098 qu''à l''état de souvenir des années 2020-2050 (trajectoire historique
+        ou mythifié), évoquée brièvement, jamais acteur de premier plan.'
+  error: "[llm_client] Variable MISTRAL_API_KEY non définie.\n  export MISTRAL_API_KEY='votre-clé'"
+- status: needs_review
+  idea:
+    nom: Raised Hands
+    category: organisation
+    role: Mouvement de résidents des villes de The Lattice (Amériques Multipolaires)
+      réclamant des élections et un droit de vote pour les clients-contractants. Toléré
+      mais surveillé ; ses meneurs risquent la résiliation de leur contrat de résidence,
+      c'est-à-dire l'expulsion.
+    etat: émergent
+    scenario_ref: reference
+    scenario_hint:
+    - reference
+    - breakdown
+    zone_hint: null
+    source: apocalypse_nerds_2026-09 (Hadjadji & Tesquet, Apocalypse Nerds, 2025)
+    consignes_scenarios:
+      breakdown: 'Entité secondaire dans ce scénario : elle n''existe plus en 2098
+        qu''à l''état de souvenir des années 2020-2050 (trajectoire historique ou
+        mythifié), évoquée brièvement, jamais acteur de premier plan.'
+  error: "[llm_client] Variable MISTRAL_API_KEY non définie.\n  export MISTRAL_API_KEY='votre-clé'"
+- status: needs_review
+  idea:
+    nom: Ilse Varga-Holm
+    category: humain
+    role: Souveraine-gérante d'Ergo-Wian Sovereign Holdings, troisième d'une lignée
+      de gérants. Pragmatique, populaire auprès du conseil des actionnaires, elle
+      tient le territoire d'une main de fer sous des dehors de gestionnaire. Elle
+      a désigné comme successeuse Hyphan Raghavan, qui n'est pas issue de la lignée.
+    etat: dominant
+    scenario_ref: reference
+    scenario_hint:
+    - reference
+    - breakdown
+    - fortress_world
+    - new_sustainability
+    - eco_communalism
+    - policy_reform
+    zone_hint: null
+    source: apocalypse_nerds_2026-09 (Hadjadji & Tesquet, Apocalypse Nerds, 2025)
+    consignes_scenarios:
+      breakdown: 'Personnage secondaire dans ce scénario : rôle sans aucun rapport
+        avec Ergo-Wian ni avec la gouvernance d''entreprise, choisi selon la logique
+        propre de ce monde.'
+      fortress_world: 'Personnage secondaire dans ce scénario : rôle sans aucun rapport
+        avec Ergo-Wian ni avec la gouvernance d''entreprise, choisi selon la logique
+        propre de ce monde.'
+      new_sustainability: 'Personnage secondaire dans ce scénario : rôle sans aucun
+        rapport avec Ergo-Wian ni avec la gouvernance d''entreprise, choisi selon
+        la logique propre de ce monde.'
+      eco_communalism: 'Personnage secondaire dans ce scénario : rôle sans aucun rapport
+        avec Ergo-Wian ni avec la gouvernance d''entreprise, choisi selon la logique
+        propre de ce monde.'
+      policy_reform: 'Personnage secondaire dans ce scénario : rôle sans aucun rapport
+        avec Ergo-Wian ni avec la gouvernance d''entreprise, choisi selon la logique
+        propre de ce monde.'
+  error: "[llm_client] Variable MISTRAL_API_KEY non définie.\n  export MISTRAL_API_KEY='votre-clé'"
+- status: needs_review
+  idea:
+    nom: Hyphan Raghavan
+    category: humain
+    role: Femme d'origine indienne, successeuse désignée d'Ilse Varga-Holm à la tête
+      d'Ergo-Wian Sovereign Holdings (Pacte des Souverains). Première gérante désignée
+      hors de la lignée, choisie pour des raisons que nul ne connaît vraiment ; personne
+      ne sait ce qu'elle fera du pouvoir, ni si elle perpétuera le modèle ou le transformera.
+    etat: ascendant
+    scenario_ref: reference
+    scenario_hint:
+    - reference
+    - breakdown
+    - fortress_world
+    - new_sustainability
+    - eco_communalism
+    - policy_reform
+    zone_hint: null
+    source: apocalypse_nerds_2026-09 (Hadjadji & Tesquet, Apocalypse Nerds, 2025)
+    consignes_scenarios:
+      breakdown: 'Personnage secondaire dans ce scénario : rôle sans aucun rapport
+        avec Ergo-Wian ni avec la gouvernance d''entreprise, choisi selon la logique
+        propre de ce monde.'
+      fortress_world: 'Personnage secondaire dans ce scénario : rôle sans aucun rapport
+        avec Ergo-Wian ni avec la gouvernance d''entreprise, choisi selon la logique
+        propre de ce monde.'
+      new_sustainability: 'Personnage secondaire dans ce scénario : rôle sans aucun
+        rapport avec Ergo-Wian ni avec la gouvernance d''entreprise, choisi selon
+        la logique propre de ce monde.'
+      eco_communalism: 'Personnage secondaire dans ce scénario : rôle sans aucun rapport
+        avec Ergo-Wian ni avec la gouvernance d''entreprise, choisi selon la logique
+        propre de ce monde.'
+      policy_reform: 'Personnage secondaire dans ce scénario : rôle sans aucun rapport
+        avec Ergo-Wian ni avec la gouvernance d''entreprise, choisi selon la logique
+        propre de ce monde.'
+  error: "[llm_client] Variable MISTRAL_API_KEY non définie.\n  export MISTRAL_API_KEY='votre-clé'"
+- status: needs_review
+  idea:
+    nom: Aurelio Stahl
+    category: humain
+    role: Principal idéologue vivant de The Tidewater Canon, conférencier et essayiste
+      itinérant entre les territoires du Pacte des Souverains, qui réécrit la doctrine
+      de la sortie pour le XXIIe siècle.
+    etat: mature
+    scenario_ref: reference
+    scenario_hint:
+    - reference
+    - new_sustainability
+    - policy_reform
+    zone_hint: null
+    source: apocalypse_nerds_2026-09 (Hadjadji & Tesquet, Apocalypse Nerds, 2025)
+    consignes_scenarios:
+      new_sustainability: Personnage secondaire dans ce scénario, au rôle modeste,
+        sans lien avec The Tidewater Canon ni la néo-réaction ; rôle choisi selon
+        la logique propre de ce monde.
+      policy_reform: Personnage secondaire dans ce scénario, au rôle modeste, sans
+        lien avec The Tidewater Canon ni la néo-réaction ; rôle choisi selon la logique
+        propre de ce monde.
+  error: "[llm_client] Variable MISTRAL_API_KEY non définie.\n  export MISTRAL_API_KEY='votre-clé'"
+- status: needs_review
+  idea:
+    nom: Nadia Ferreira-Sato
+    category: humain
+    role: Résidente d'une ville de The Lattice (Amériques Multipolaires) et fondatrice
+      de Raised Hands. Tolérée, surveillée, sous la menace permanente d'une résiliation
+      de son contrat de résidence.
+    etat: ascendant
+    scenario_ref: reference
+    scenario_hint:
+    - reference
+    - breakdown
+    - new_sustainability
+    zone_hint: null
+    source: apocalypse_nerds_2026-09 (Hadjadji & Tesquet, Apocalypse Nerds, 2025)
+    consignes_scenarios:
+      breakdown: Personnage secondaire dans ce scénario, au rôle modeste, sans lien
+        avec The Lattice ni Raised Hands ; rôle choisi selon la logique propre de
+        ce monde.
+      new_sustainability: Personnage secondaire dans ce scénario, au rôle modeste,
+        sans lien avec The Lattice ni Raised Hands ; rôle choisi selon la logique
+        propre de ce monde.
+  error: "[llm_client] Variable MISTRAL_API_KEY non définie.\n  export MISTRAL_API_KEY='votre-clé'"
+- status: needs_review
+  idea:
+    nom: Kaspar Lind
+    category: humain
+    role: Recruteur clandestin de Kindling en Europe Occidentale Reconstruite, qui
+      repère dans les administrations et les universités les profils désabusés susceptibles
+      de basculer.
+    etat: marginal
+    est_clandestin: true
+    scenario_ref: reference
+    scenario_hint:
+    - reference
+    - policy_reform
+    zone_hint: null
+    source: apocalypse_nerds_2026-09 (Hadjadji & Tesquet, Apocalypse Nerds, 2025)
+    consignes_scenarios:
+      policy_reform: Personnage secondaire dans ce scénario, au rôle modeste, sans
+        lien avec Kindling ni l'accélérationnisme ; rôle choisi selon la logique propre
+        de ce monde.
+  error: "[llm_client] Variable MISTRAL_API_KEY non définie.\n  export MISTRAL_API_KEY='votre-clé'"
+- status: needs_review
+  idea:
+    nom: Maëlys Okonkwo
+    category: humain
+    role: Journaliste d'investigation chez Lamplight (Genève, Europe Occidentale Reconstruite),
+      qui enquête sur les réseaux de Kindling et leurs liens supposés avec les territoires
+      du Pacte des Souverains.
+    etat: ascendant
+    scenario_ref: reference
+    scenario_hint:
+    - reference
+    - policy_reform
+    zone_hint: null
+    source: apocalypse_nerds_2026-09 (Hadjadji & Tesquet, Apocalypse Nerds, 2025)
+    consignes_scenarios:
+      policy_reform: Personnage secondaire dans ce scénario, au rôle modeste, sans
+        lien avec Lamplight ni Kindling ; rôle choisi selon la logique propre de ce
+        monde.
+  error: "[llm_client] Variable MISTRAL_API_KEY non définie.\n  export MISTRAL_API_KEY='votre-clé'"
+- status: needs_review
+  idea:
+    nom: Elias Mørk
+    category: humain
+    role: Docteur, directeur scientifique du Deepfield Institute (États-Unis post-2055,
+      Amériques Multipolaires), responsable du programme de sélection génétique de
+      l'institut.
+    etat: mature
+    scenario_ref: reference
+    scenario_hint:
+    - reference
+    - breakdown
+    zone_hint: null
+    source: apocalypse_nerds_2026-09 (Hadjadji & Tesquet, Apocalypse Nerds, 2025)
+    consignes_scenarios:
+      breakdown: Personnage secondaire dans ce scénario, au rôle modeste, sans lien
+        avec le Deepfield Institute ni la sélection génétique ; rôle choisi selon
+        la logique propre de ce monde.
+  error: "[llm_client] Variable MISTRAL_API_KEY non définie.\n  export MISTRAL_API_KEY='votre-clé'"

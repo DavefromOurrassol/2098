@@ -13,7 +13,7 @@ pour éviter toute nouvelle divergence de nommage.*
 
 ---
 
-## 🟢 1. Scénario 1 — Hyphan : worldbuilding géographique + zones fortress_world
+## 🟢 1. Scénario 1 — Hyphan : worldbuilding géographique + zones fortress_world (reste : injection des personnages)
 **Ouvert le 8 septembre.** David a fourni le premier jet narratif du
 scénario Hyphan (apartheid corporate/militaro-industriel, Ergo-Wian,
 migrations forcées) plus les cartes annexes du docx. Scénario porteur
@@ -59,56 +59,42 @@ complet — chantier surtout consacré à la refonte Carte, chantier #2) :
   construite cette session) pour repartir de zéro plutôt que de continuer
   à réparer l'existant — **à recréer proprement**, voir Reste à faire.
 
-**Statut au 23 septembre : EN PAUSE sur décision de David.** Seuls deux
-points ont avancé en marge d'autres chantiers : `tensions_internes`/
-`periode_transition`/`evenement_transition` de Zone Interdite de Heysham
-renseignés (premier test réel du panneau "Zones à enrichir"), et
-Royaume-Uni affecté à Heysham par David (entrée `origine_reelle` au format
-minimal, voir S13).
+**Revue point par point du "Reste à faire" le 24 septembre** (session du
+matin avec David — voir `HANDOFF_24_SEPTEMBRE.md`). Tout est tranché et
+exécuté sauf l'injection des personnages (point 3) :
 
-**Reste à faire** :
-- **Recréer Interzone Corridor proprement** (supprimée le 12 sept pour
-  repartir de zéro) et dessiner ses tracés pays par pays via le panneau
-  unique (bouton "✏️ dessiner" par ligne de pays). **Clarifier au passage
-  le sens de "Interzone"** : la description de Heysham parle des
-  "pillards de l'Interzone" — ancien nom de Zone Euro Sud, ou futur
-  Interzone Corridor ? Corriger la description si c'est un reste.
-- Créer Nordgard (niveau 1, Pays-Bas comme point de départ), Corridor
-  d'Amsterdam, Zone de Koursk — discutées/nommées, **pas confirmées
-  créées dans le vault réel**, à vérifier en début de session plutôt que
-  supposer.
-- Injecter dans le vault les personnages/entités/événements extraits du
-  texte Hyphan (liste déjà faite, jamais transformée en fiches).
-- **Partage France / Allemagne à trancher (constats du 23 sept,
-  `check_overlay_portion_coherence.py` + `diagnostiquer_portions_
-  orphelines.py`)** — aucune correction faite, car chacune revient à
-  décider qui possède quelle partie du territoire :
-  - Heysham a un overlay France (littoral Manche-Atlantique, Calais →
-    Lorient) cohérent avec son texte `portion`.
-  - Zone Euro Sud liste **France deux fois** (DOUBLON INTERNE), sans
-    aucun overlay : "France - Interzone" (placeholder, ancien nom) et un
-    texte qui décrit **Heysham** sur le Bassin parisien/Loire/Nord —
-    incompatible avec le texte littoral de Heysham. Retirer les textes
-    sans décider ferait de ces entrées des revendications "France
-    entière".
-  - Espace Nordique et Arctique porte une entrée Allemagne avec un
-    placeholder "Allemagne - Espace Nordique et Artique", sans overlay.
-    L'Allemagne n'est plus du tout dans Zone Euro Sud. L'ancien point
-    "overlay Allemagne enregistré sur la Norvège" est **périmé** : aucun
-    overlay Allemagne ni Norvège n'existe plus (seuls overlays de
-    `fortress_world` : Heysham/France et Espace Nordique/Russie-
-    Kaliningrad).
-- **Finlande et Lituanie** dans aucune zone de `fortress_world` (fichiers
-  `impact_bascule_*` présents : probablement désaffectées depuis la Carte
-  sans réaffectation). 2 chantiers `pays_sans_zone` écrits le 23 sept.
-- **12 sous-zones restées sous leur ancien parent** après les découpages
-  Hyphan (`check_origine_reelle_coherence`, 23 sept) : Bratislava-Secteur
-  Alpha et Genève-Bunker (+ leurs enfants) sous `bloc_eurasiatique_
-  occidental` alors que Slovaquie/Suisse sont dans Zone Euro Sud ;
-  Tbilissi-Nord (+ enfant) sous `zones_grises_tampons` alors que la
-  Géorgie est dans Zone Euro Sud ; Almaty (+ enfant) sous `zones_grises_
-  tampons` alors que le Kazakhstan est dans le Bloc Eurasiatique.
-  `reparenter_sous_zones_orphelines.py` ou "↗️ déplacer" dans l'arbre.
+- ✅ **Interzone Corridor — abandonné.** "Interzone" était l'ancien nom de
+  Zone Euro Sud. "Pillards de l'Interzone" → "pillards de la Zone Euro
+  Sud" dans la description de Heysham (frontmatter + corps markdown) ;
+  entrée provisoire "France - Interzone" retirée de Zone Euro Sud.
+- ✅ **Nordgard, Corridor d'Amsterdam, Zone de Koursk — abandonnés.**
+  Corridor d'Amsterdam (N1 sans pays) supprimé ; les Pays-Bas restent dans
+  l'Espace Nordique. `fortress_world` : 75 zones, 25 N1.
+- ⏳ **Injecter les personnages/entités/événements Hyphan** (liste du
+  8 sept jamais transformée en fiches). **Seul point restant** — nécessite
+  `HANDOFF_8_SEPTEMBRE.md` ou le texte Hyphan d'origine.
+- ✅ **Partage France / Allemagne.** France (F1b) : Zone Euro Sud porte la
+  base du pays, avec le texte `portion` "Toute la France hors littoral
+  Manche-Atlantique (Zone Interdite de Heysham) : Bassin parisien, Centre,
+  Est, vallée du Rhône et façade méditerranéenne." ; Heysham garde son
+  overlay littoral (Calais → Lorient). La ligne "ℹ portion sans overlay"
+  sur ce texte est voulue. Allemagne (A1) : entière dans l'Espace
+  Nordique, texte provisoire retiré (`portion: null`).
+- ✅ **Finlande et Lituanie** ajoutées à l'Espace Nordique dans la fiche
+  (la carte les y montrait déjà via `zones_pays.json`) ; 2 chantiers
+  `pays_sans_zone` marqués traités ; entrée générique "pays baltes"
+  retirée du Bloc Eurasiatique.
+- ✅ **Sous-zones mal rattachées.** Bratislava, Genève et Tbilissi (+ leurs
+  lieux) déplacées sous Zone Euro Sud. **Almaty + Complexe d'Orentchev
+  gardés volontairement sous les Zones Grises** (fief d'Orentchev) — le
+  garde-fou `check_origine_reelle_coherence` continuera de les signaler :
+  c'est voulu, ne pas "corriger".
+
+Restes mineurs hors Hyphan : `sao_paulo_megapole` sans pays (2 alertes du
+garde-fou, voir S14) ; corps markdown de `fortress_world.md` globalement
+périmé par rapport au frontmatter (ex. ligne "Origine réelle (2026) :
+Russie, Ukraine, Pologne… pays baltes") — ménage de texte libre à faire un
+jour, rien ne le relit.
 
 Voir `HANDOFF_8_SEPTEMBRE.md`, `HANDOFF_10_SEPTEMBRE.md` et
 `HANDOFF_12_SEPTEMBRE.md` pour le détail complet des zones et décisions
@@ -381,9 +367,15 @@ directement et excluent explicitement les fichiers `_index.md`.
 `zones_pays.json` (voir handoff) : `breakdown` (Arctique, Groenland),
 `new_sustainability` (Norvège), `reference` (Afghanistan, Italie, Kenya,
 Kirghizistan, Tadjikistan — Kenya est un rattachement volontaire).
-`fortress_world`, `eco_communalism`, `policy_reform` : 0. La carte ne lit
-pas ce fichier pour ses couleurs (elle lit les fiches `.md`), la dérive
-est donc invisible visuellement — mais le fichier sert à d'autres outils.
+`fortress_world`, `eco_communalism`, `policy_reform` : 0. **Précision du
+24 sept** : la carte colore d'abord depuis les fiches `.md`, mais **se
+replie sur `zones_pays.json` pour un pays absent de toute fiche** (cas
+réel : Finlande/Lituanie visibles en Espace Nordique alors qu'absentes de
+`fortress_world.md`). Une dérive peut donc être invisible (pays présent
+dans la fiche) ou au contraire masquer un trou de la fiche. Côté
+`reference`, `check_zones_coherence` confirme la cause : Afghanistan,
+Italie, Kirghizistan, Tadjikistan ne sont rattachés qu'à des sous-zones
+niveau 2, aucune zone N1.
 Commande de mesure dans `HANDOFF_23_SEPTEMBRE.md`. Pas d'urgence.
 
 ---

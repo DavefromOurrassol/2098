@@ -1029,6 +1029,13 @@
         "placeholder": "ex : idee_2026-06"
       },
       {
+        "key": "consignes_scenarios",
+        "type": "per_scenario_text",
+        "label": "Consignes par scénario",
+        "optional": true,
+        "description": "Une consigne libre par scénario, transmise à l'IA uniquement pour ce scénario — ex. \"rôle secondaire, simple souvenir des années 2030\" ou \"rôle sans rapport avec le scénario de référence\". Laisser vide = l'IA décide librement. Ignorée pour le scénario de référence (déjà fixé par Rôle et Trajectoire) et pour un scénario non coché dans \"Scénarios à couvrir\"."
+      },
+      {
         "key": "priorite_forcee",
         "type": "select",
         "label": "Priorité forcée (présence garantie)",

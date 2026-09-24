@@ -1,0 +1,115 @@
+---
+name: Lamplight Collective
+type: instance
+slug: lamplight_reference
+entite: lamplight
+scenario: reference
+localisation:
+  zone: geneve_lac_retreite
+  lieu: Genève
+  type_lieu: ville
+
+type_dans_scenario: réseau
+
+role_dans_scenario: >
+  Collectif de journalistes et chercheurs basé à Genève, Lamplight Collective s'est imposé comme le principal contre-pouvoir informationnel spécialisé dans l'investigation des structures opaques du système mondial de 2098. En enquêtant sur les financements clandestins des territoires post-démocratiques, les réseaux de corruption des consortiums énergétiques et les manipulations algorithmiques des plateformes dominantes, il incarne la fonction critique de surveillance des dysfonctionnements systémiques. Son rôle est d'autant plus crucial que les plateformes centralisées de narration officielle (comme Prisme Global) et les consortiums médiatiques corporatifs cherchent à étouffer ou discréditer ses révélations.
+
+responsabilites: >
+  Lamplight Collective produit des enquêtes approfondies sur les flux financiers illicites alimentant les zones grises, les détournements de ressources critiques par les consortiums privés, et les mécanismes de censure algorithmique des IA de modération. Il coordonne également des réseaux de lanceurs d'alerte dissidents et des collectifs de journalistes embarqués dans les territoires marginalisés, tout en préservant leur anonymat grâce à des infrastructures de communication sécurisées. Ses rapports sont utilisés par les institutions multilatérales survivantes et les mouvements sociaux pour contester les récits dominants.
+
+impact_local: 3
+impact_systemique_global: 4
+
+variables_influencees:
+    - technologie_information
+    - gouvernance_institutions
+    - systeme_economique_redistribution
+
+zone_geographique:
+    - globale
+    - urbaine
+
+zone_systemique:
+    - information
+    - gouvernance
+    - économie
+
+alliances:
+    - collectifs_academiques_independants_reference
+    - reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference
+    - reseau_mnemos_reference
+    - conseil_de_geneve_pour_les_droits_biosociaux_reference
+    - collectifs_de_journalisme_embarque_reference
+
+oppositions:
+    - consortiums_mediatiques_corporatifs_reference
+    - plateformes_centralisees_de_narration_officielle_reference
+    - ergo_wian_sovereign_holdings_reference
+    - the_lattice_reference
+    - consortiums_prives_de_gestion_des_donnees_critiques_reference
+
+type_relation_dominante: rivalité
+
+annee_debut: 2032
+annee_fin: 
+
+trajectoire: ascendant
+est_clandestin: false
+generation: transition
+
+injection:
+  type: custom
+  annee_injection: 2032
+  contexte_injection: >
+    Lamplight Collective agit comme un catalyseur de transparence dans un système mondial où l'information est de plus en plus centralisée et contrôlée. Ses enquêtes exposent les mécanismes de pouvoir opaques, forçant les institutions à rendre des comptes et réduisant l'asymétrie d'information entre les citoyens et les élites. Son impact est particulièrement fort sur la technologie_information, car il conteste directement la légitimité des plateformes dominantes et de leurs IA de modération, tout en proposant des alternatives décentralisées. Sur la gouvernance_institutions, il renforce les contre-pouvoirs et limite la capture des États par les intérêts privés. Enfin, en révélant les flux financiers illicites, il contribue à une redistribution plus équitable des ressources critiques.
+  impact_sur_variables:
+  - variable: technologie_information
+    delta_level: 12
+    duree: 15
+    polarite: 1
+  - variable: gouvernance_institutions
+    delta_level: 8
+    duree: 20
+    polarite: 1
+  - variable: systeme_economique_redistribution
+    delta_level: 6
+    duree: 10
+    polarite: 1
+  propagation:
+    via_matrice: true
+
+description_journalistique: >
+  Depuis son QG genevois, une ancienne tour de bureaux reconvertie en hub médiatique, le Lamplight Collective est devenu la bête noire des puissances opaques de 2098. Ses enquêtes, publiées simultanément en six langues sur des plateformes décentralisées, ont révélé les liens entre Ergo-Wian et les milices des détroits stratégiques, les financements occultes du Kindling par des fonds souverains arctiques, ou encore les algorithmes de The Lattice conçus pour étouffer les voix des territoires résiduels. Ses journalistes, souvent issus de zones grises ou de mégapoles autonomes, opèrent sous pseudonyme et utilisent des outils de cryptographie quantique pour protéger leurs sources. Leur dernier coup d'éclat ? La fuite des 'Lattice Papers', des milliers de documents prouvant la collusion entre les plateformes IA et les régimes post-démocratiques pour manipuler l'opinion publique.
+
+signes_distinctifs: >
+  Le logo du collectif, une lanterne stylisée dont la lumière perce un réseau de fils entrelacés (symbolisant les structures de pouvoir opaques), est devenu un emblème de la résistance informationnelle. Ses rapports sont reconnaissables à leur mise en page minimaliste, conçue pour être lisible même sur des terminaux low-tech, et à leur usage systématique de visualisations de données interactives permettant de naviguer dans les réseaux de corruption. Les membres du collectif portent souvent des badges luminescents lors des conférences de presse, un clin d'œil à leur nom et à leur mission d'éclairer les zones d'ombre.
+retry_signes_distinctifs: non
+
+tensions_narratives: >
+  Lamplight Collective est pris en étau entre son ambition de devenir un acteur systémique incontournable et les pressions croissantes des acteurs qu'il expose. Ses enquêtes sur les consortiums énergétiques opaques ont déclenché des cyberattaques massives, tandis que ses révélations sur les financements du Kindling lui ont valu des poursuites judiciaires dans plusieurs juridictions. Certains de ses membres, menacés physiquement, ont dû être exfiltrés vers des villes-refuge comme Helsinki Communs Numériques. Par ailleurs, le collectif est critiqué pour son manque de diversité géographique, avec une surreprésentation de journalistes occidentaux, ce qui limite sa légitimité dans les territoires du Sud global. Sa trajectoire future dépendra de sa capacité à élargir son réseau tout en résistant aux tentatives de récupération par des blocs géopolitiques concurrents.
+
+date_creation: 2026-09-24
+---
+
+# Lamplight Collective
+
+## Rôle dans [[reference]]
+Collectif de journalistes et chercheurs basé à Genève, Lamplight Collective s'est imposé comme le principal contre-pouvoir informationnel spécialisé dans l'investigation des structures opaques du système mondial de 2098. En enquêtant sur les financements clandestins des territoires post-démocratiques, les réseaux de corruption des consortiums énergétiques et les manipulations algorithmiques des plateformes dominantes, il incarne la fonction critique de surveillance des dysfonctionnements systémiques. Son rôle est d'autant plus crucial que les plateformes centralisées de narration officielle (comme Prisme Global) et les consortiums médiatiques corporatifs cherchent à étouffer ou discréditer ses révélations.
+
+## Responsabilités
+Lamplight Collective produit des enquêtes approfondies sur les flux financiers illicites alimentant les zones grises, les détournements de ressources critiques par les consortiums privés, et les mécanismes de censure algorithmique des IA de modération. Il coordonne également des réseaux de lanceurs d'alerte dissidents et des collectifs de journalistes embarqués dans les territoires marginalisés, tout en préservant leur anonymat grâce à des infrastructures de communication sécurisées. Ses rapports sont utilisés par les institutions multilatérales survivantes et les mouvements sociaux pour contester les récits dominants.
+
+## Variables influencées
+- [[technologie_information]]
+- [[gouvernance_institutions]]
+- [[systeme_economique_redistribution]]
+
+## Relations
+**Alliés** : [[collectifs_academiques_independants_reference]], [[reseau_des_chercheurs_en_ethique_des_systemes_distribues_reference]], [[reseau_mnemos_reference]], [[conseil_de_geneve_pour_les_droits_biosociaux_reference]], [[collectifs_de_journalisme_embarque_reference]]
+**Opposants** : [[consortiums_mediatiques_corporatifs_reference]], [[plateformes_centralisees_de_narration_officielle_reference]], [[ergo_wian_sovereign_holdings_reference]], [[the_lattice_reference]], [[consortiums_prives_de_gestion_des_donnees_critiques_reference]]
+
+## Description journalistique
+Depuis son QG genevois, une ancienne tour de bureaux reconvertie en hub médiatique, le Lamplight Collective est devenu la bête noire des puissances opaques de 2098. Ses enquêtes, publiées simultanément en six langues sur des plateformes décentralisées, ont révélé les liens entre Ergo-Wian et les milices des détroits stratégiques, les financements occultes du Kindling par des fonds souverains arctiques, ou encore les algorithmes de The Lattice conçus pour étouffer les voix des territoires résiduels. Ses journalistes, souvent issus de zones grises ou de mégapoles autonomes, opèrent sous pseudonyme et utilisent des outils de cryptographie quantique pour protéger leurs sources. Leur dernier coup d'éclat ? La fuite des 'Lattice Papers', des milliers de documents prouvant la collusion entre les plateformes IA et les régimes post-démocratiques pour manipuler l'opinion publique.
+
+## Tensions narratives
+Lamplight Collective est pris en étau entre son ambition de devenir un acteur systémique incontournable et les pressions croissantes des acteurs qu'il expose. Ses enquêtes sur les consortiums énergétiques opaques ont déclenché des cyberattaques massives, tandis que ses révélations sur les financements du Kindling lui ont valu des poursuites judiciaires dans plusieurs juridictions. Certains de ses membres, menacés physiquement, ont dû être exfiltrés vers des villes-refuge comme Helsinki Communs Numériques. Par ailleurs, le collectif est critiqué pour son manque de diversité géographique, avec une surreprésentation de journalistes occidentaux, ce qui limite sa légitimité dans les territoires du Sud global. Sa trajectoire future dépendra de sa capacité à élargir son réseau tout en résistant aux tentatives de récupération par des blocs géopolitiques concurrents.

@@ -1,0 +1,102 @@
+---
+name: Elias Mørk — Le Nœud de Bergen
+type: instance
+slug: elias_m_rk_breakdown
+entite: elias_m_rk
+scenario: breakdown
+
+type_dans_scenario: humain
+
+role_dans_scenario: >
+  Elias Mørk incarne la figure du scientifique-archiviste dans un monde où la fragmentation des savoirs et des infrastructures a rendu toute coordination technique presque impossible. Ancien expert en systèmes énergétiques critiques pour les enclaves industrielles du corridor Oural-Caspien, il a été contraint de fuir après l'effondrement des chaînes d'approvisionnement en 2056. Réfugié dans les enclaves industrielles de Bergen-Tromsø, il est devenu une figure clé des *Collectifs de Réparation Énergétique*, où il met son expertise au service de la survie des communautés locales. Son rôle est celui d'un médiateur technique : il négocie l'accès aux reliquats de technologies énergétiques entre milices, seigneurs de guerre et collectifs autonomes, tout en documentant les protocoles de réparation pour les générations futures.
+
+responsabilites: >
+  Mørk supervise la récupération et la réparation des infrastructures énergétiques résiduelles (centrales hydroélectriques, réseaux de chauffage urbain, micro-réseaux solaires) dans les enclaves nordiques. Il forme des techniciens nomades à la maintenance des systèmes critiques et archive les savoirs techniques dans des *nœuds mnésiques* locaux, des bases de données décentralisées résistantes aux pannes. Il sert aussi d'intermédiaire entre les *Factions Militaires Résiduelles de l'Ex-OTAN Nordique* et les *Communautés Rurales Autogérées des Nœuds de Survie*, évitant les conflits pour le contrôle des ressources énergétiques.
+
+impact_local: 4
+impact_systemique_global: 2
+
+variables_influencees:
+    - energie_ressources_critiques
+    - organisation_territoires
+    - gouvernance_institutions
+
+zone_geographique:
+    - régionale
+
+zone_systemique:
+    - énergie
+    - infrastructure
+    - gouvernance
+
+alliances:
+    - collectifs_de_reparation_energetique_breakdown
+    - communautes_rurales_autogerees_des_n_uds_de_survie_breakdown
+    - reseau_des_cartographes_des_zones_grises_breakdown
+
+oppositions:
+    - milices_de_controle_territorial_breakdown
+    - seigneuries_logistiques_armees_breakdown
+    - factions_energetiques_heritieres_des_pactes_abs_breakdown
+
+type_relation_dominante: symbiose
+
+annee_debut: 2058
+annee_fin: 
+
+trajectoire: ascendant
+est_clandestin: false
+generation: post-effondrement
+
+injection:
+  type: custom
+  annee_injection: 2058
+  contexte_injection: >
+    Mørk agit comme un stabilisateur local dans un système énergétique fragmenté : en restaurant des micro-réseaux et en formant des techniciens, il réduit la dépendance aux seigneurs de guerre et aux milices, tout en créant des îlots de résilience territoriale. Son impact sur *organisation_territoires* est indirect mais structurel : ses archives et ses protocoles permettent aux communautés de négocier leur autonomie face aux factions dominantes, limitant la fragmentation extrême des enclaves nordiques.
+  impact_sur_variables:
+  - variable: energie_ressources_critiques
+    delta_level: 8
+    duree: 15
+    polarite: 1
+  - variable: organisation_territoires
+    delta_level: 5
+    duree: 20
+    polarite: 1
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Elias Mørk, surnommé *Le Nœud de Bergen* par les techniciens qui croisent sa route, est une silhouette familière dans les ruines des enclaves industrielles du Grand Nord. Vêtu d'une combinaison de travail rapiécée aux couleurs des anciens drapeaux norvégiens, il se déplace avec une mallette contenant des outils artisanaux et un terminal portable alimenté par des batteries solaires. Ses archives, gravées sur des disques de verre résistant aux impulsions électromagnétiques, sont devenues une monnaie d'échange dans les négociations entre milices et communautés. On dit qu'il a sauvé Tromsø de l'effondrement en 2062 en redirigeant l'énergie d'une centrale hydroélectrique abandonnée vers les serres communautaires, évitant une famine hivernale. Aujourd'hui, il forme une nouvelle génération de *réparateurs*, des techniciens capables de maintenir en vie les reliquats d'un monde qui n'existe plus.
+
+signes_distinctifs: >
+  Mørk porte toujours un brassard bleu marqué d'un symbole ancien : un éclair traversant un engrenage, emblème des ingénieurs de l'ère pré-effondrement. Ses lunettes à réalité augmentée, récupérées dans les décombres d'une base militaire, lui permettent de superposer des schémas techniques aux infrastructures endommagées. Il parle peu, mais quand il le fait, c'est pour citer des protocoles de maintenance oubliés ou des extraits de rapports techniques des années 2040, comme s'il récitait des textes sacrés.
+retry_signes_distinctifs: non
+
+tensions_narratives: >
+  La tension centrale autour de Mørk réside dans son double rôle de gardien des savoirs et de facilitateur de survie. D'un côté, ses archives sont convoitées par les *Factions Énergétiques Héritières des Pactes ABS*, qui voient en lui un obstacle à leur contrôle des ressources. De l'autre, les *Collectifs de Réparation Énergétique* dépendent de lui pour former leurs membres, créant une relation de dépendance qui pourrait se retourner contre lui si ses méthodes sont jugées trop conciliantes avec les milices. Enfin, son refus catégorique de travailler avec les *Enclaves Corporatives Fortifiées* en fait une cible pour les seigneurs de guerre qui cherchent à monétiser son expertise. Son avenir pourrait basculer entre trois trajectoires : devenir un martyr de la résistance technique, être coopté par une faction dominante, ou disparaître dans l'oubli, laissant derrière lui des archives incomplètes et une génération de réparateurs sans guide.
+
+date_creation: 2026-09-24
+---
+
+# Elias Mørk — Le Nœud de Bergen
+
+## Rôle dans [[breakdown]]
+Elias Mørk incarne la figure du scientifique-archiviste dans un monde où la fragmentation des savoirs et des infrastructures a rendu toute coordination technique presque impossible. Ancien expert en systèmes énergétiques critiques pour les enclaves industrielles du corridor Oural-Caspien, il a été contraint de fuir après l'effondrement des chaînes d'approvisionnement en 2056. Réfugié dans les enclaves industrielles de Bergen-Tromsø, il est devenu une figure clé des *Collectifs de Réparation Énergétique*, où il met son expertise au service de la survie des communautés locales. Son rôle est celui d'un médiateur technique : il négocie l'accès aux reliquats de technologies énergétiques entre milices, seigneurs de guerre et collectifs autonomes, tout en documentant les protocoles de réparation pour les générations futures.
+
+## Responsabilités
+Mørk supervise la récupération et la réparation des infrastructures énergétiques résiduelles (centrales hydroélectriques, réseaux de chauffage urbain, micro-réseaux solaires) dans les enclaves nordiques. Il forme des techniciens nomades à la maintenance des systèmes critiques et archive les savoirs techniques dans des *nœuds mnésiques* locaux, des bases de données décentralisées résistantes aux pannes. Il sert aussi d'intermédiaire entre les *Factions Militaires Résiduelles de l'Ex-OTAN Nordique* et les *Communautés Rurales Autogérées des Nœuds de Survie*, évitant les conflits pour le contrôle des ressources énergétiques.
+
+## Variables influencées
+- [[energie_ressources_critiques]]
+- [[organisation_territoires]]
+- [[gouvernance_institutions]]
+
+## Relations
+**Alliés** : [[collectifs_de_reparation_energetique_breakdown]], [[communautes_rurales_autogerees_des_n_uds_de_survie_breakdown]], [[reseau_des_cartographes_des_zones_grises_breakdown]]
+**Opposants** : [[milices_de_controle_territorial_breakdown]], [[seigneuries_logistiques_armees_breakdown]], [[factions_energetiques_heritieres_des_pactes_abs_breakdown]]
+
+## Description journalistique
+Elias Mørk, surnommé *Le Nœud de Bergen* par les techniciens qui croisent sa route, est une silhouette familière dans les ruines des enclaves industrielles du Grand Nord. Vêtu d'une combinaison de travail rapiécée aux couleurs des anciens drapeaux norvégiens, il se déplace avec une mallette contenant des outils artisanaux et un terminal portable alimenté par des batteries solaires. Ses archives, gravées sur des disques de verre résistant aux impulsions électromagnétiques, sont devenues une monnaie d'échange dans les négociations entre milices et communautés. On dit qu'il a sauvé Tromsø de l'effondrement en 2062 en redirigeant l'énergie d'une centrale hydroélectrique abandonnée vers les serres communautaires, évitant une famine hivernale. Aujourd'hui, il forme une nouvelle génération de *réparateurs*, des techniciens capables de maintenir en vie les reliquats d'un monde qui n'existe plus.
+
+## Tensions narratives
+La tension centrale autour de Mørk réside dans son double rôle de gardien des savoirs et de facilitateur de survie. D'un côté, ses archives sont convoitées par les *Factions Énergétiques Héritières des Pactes ABS*, qui voient en lui un obstacle à leur contrôle des ressources. De l'autre, les *Collectifs de Réparation Énergétique* dépendent de lui pour former leurs membres, créant une relation de dépendance qui pourrait se retourner contre lui si ses méthodes sont jugées trop conciliantes avec les milices. Enfin, son refus catégorique de travailler avec les *Enclaves Corporatives Fortifiées* en fait une cible pour les seigneurs de guerre qui cherchent à monétiser son expertise. Son avenir pourrait basculer entre trois trajectoires : devenir un martyr de la résistance technique, être coopté par une faction dominante, ou disparaître dans l'oubli, laissant derrière lui des archives incomplètes et une génération de réparateurs sans guide.

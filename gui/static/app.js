@@ -2476,6 +2476,36 @@ async function _buildFormField(field, currentValues, script) {
     else inp.placeholder = field.label;
     group.appendChild(inp);
 
+  } else if (field.type === 'per_scenario_text') {
+    // Type ajouté le 24 septembre 2026 (champ consignes_scenarios de
+    // entites_custom/queue.yaml) : une zone de texte par scénario, collectée
+    // en dictionnaire {scenario: texte} -- seules les zones remplies sont
+    // envoyées. Le conteneur porte data-form-key ; les zones internes n'en
+    // ont pas (data-scenario seulement), pour ne pas être collectées deux
+    // fois comme des champs texte ordinaires.
+    const box = document.createElement('div');
+    box.className = 'yaml-per-scenario';
+    box.dataset.formKey = field.key;
+    const current = (currentVal && typeof currentVal === 'object') ? currentVal : {};
+    const scenarios = State.config?.scenarios || [];
+    scenarios.forEach(sc => {
+      const row = document.createElement('div');
+      row.style.cssText = 'margin-bottom:6px;';
+      const lab = document.createElement('div');
+      lab.style.cssText = 'font-size:11px;color:#888;font-family:"JetBrains Mono",monospace;';
+      lab.textContent = sc;
+      const ta = document.createElement('textarea');
+      ta.className = 'yaml-form-textarea';
+      ta.dataset.scenario = sc;
+      ta.rows = 2;
+      ta.placeholder = field.placeholder || `Consigne pour ${sc} (laisser vide = aucune)`;
+      ta.value = current[sc] || '';
+      row.appendChild(lab);
+      row.appendChild(ta);
+      box.appendChild(row);
+    });
+    group.appendChild(box);
+
   } else if (field.type === 'textarea') {
     const ta = document.createElement('textarea');
     ta.className = 'yaml-form-textarea';
@@ -2494,6 +2524,18 @@ async function _buildFormField(field, currentValues, script) {
   // les champs requis ne filtrait jamais rien.
   group.querySelectorAll('[data-form-key]').forEach(el => _markOptional(el, field));
 
+  // Texte d'aide (24 septembre 2026) : les "description" des config_fields
+  // de scripts_config.json n'étaient jamais affichées dans ce formulaire
+  // guidé (seulement pour les options CLI classiques), alors que plusieurs
+  // champs en ont une (priorite_forcee, consignes_scenarios, champs des
+  // signaux...). Même style que les options classiques.
+  if (field.description) {
+    const desc = document.createElement('div');
+    desc.className = 'option-desc';
+    desc.textContent = field.description;
+    group.appendChild(desc);
+  }
+
   return group;
 }
 
@@ -2511,6 +2553,16 @@ function _markOptional(el, field) {
   return el;
 }
 
+/** Valeur d'un champ per_scenario_text : {scenario: texte} des zones remplies. */
+function _collectPerScenario(el) {
+  const out = {};
+  el.querySelectorAll('textarea[data-scenario]').forEach(ta => {
+    const v = ta.value.trim();
+    if (v !== '') out[ta.dataset.scenario] = v;
+  });
+  return out;
+}
+
 /** Collecte les valeurs du formulaire guidé et appelle /api/yaml/form. */
 async function _saveYamlForm(wrapper, yamlPath, statusEl) {
   const fields = {};
@@ -2524,6 +2576,8 @@ async function _saveYamlForm(wrapper, yamlPath, statusEl) {
       // Multi-select : collecter les chips actives
       const active = [...el.querySelectorAll('.yaml-chip.active')].map(c => c.dataset.value);
       fields[key] = active;
+    } else if (el.classList.contains('yaml-per-scenario')) {
+      fields[key] = _collectPerScenario(el);
     } else if (el.tagName === 'SELECT' || el.tagName === 'INPUT') {
       fields[key] = el.type === 'number' ? (el.value !== '' ? Number(el.value) : '') : el.value;
     }
@@ -2668,6 +2722,9 @@ async function _appendYamlQueue(wrapper, yamlPath, statusEl) {
       const active = [...el.querySelectorAll('.yaml-chip.active')].map(c => c.dataset.value);
       if (active.length > 0) entry[key] = active;
       // Si vide → ne pas inclure (null = défaut dans le script)
+    } else if (el.classList.contains('yaml-per-scenario')) {
+      const obj = _collectPerScenario(el);
+      if (Object.keys(obj).length > 0) entry[key] = obj;
     } else if (el.tagName === 'SELECT') {
       if (el.value !== '') entry[key] = el.value;
     } else if (el.tagName === 'INPUT' && el.type === 'number') {
@@ -2691,6 +2748,9 @@ async function _appendYamlQueue(wrapper, yamlPath, statusEl) {
       if (el.classList.contains('yaml-chips')) {
         return el.querySelectorAll('.yaml-chip.active').length === 0;
       }
+      if (el.classList.contains('yaml-per-scenario')) {
+        return Object.keys(_collectPerScenario(el)).length === 0;
+      }
       return (el.value || '').trim() === '';
     })
     .map(el => el.closest('.yaml-form-field')?.querySelector('.option-label')?.textContent || '(champ)');
@@ -2713,6 +2773,8 @@ async function _appendYamlQueue(wrapper, yamlPath, statusEl) {
       wrapper.querySelectorAll('[data-form-key]').forEach(el => {
         if (el.classList.contains('yaml-chips')) {
           el.querySelectorAll('.yaml-chip').forEach(c => c.classList.remove('active'));
+        } else if (el.classList.contains('yaml-per-scenario')) {
+          el.querySelectorAll('textarea[data-scenario]').forEach(ta => { ta.value = ''; });
         } else if (el.tagName === 'SELECT') {
           el.selectedIndex = 0;
         } else if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {

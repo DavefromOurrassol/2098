@@ -1,0 +1,123 @@
+---
+name: The Tidewater Canon
+type: instance
+slug: the_tidewater_canon_reference
+entite: the_tidewater_canon
+scenario: reference
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
+
+type_dans_scenario: système
+
+role_dans_scenario: >
+  Corpus doctrinal mature hérité de la néo-réaction des années 2020, devenu la philosophie officieuse du Pacte des Souverains. Il prône la souveraineté absolue des entités politiques ou économiques sur leurs ressources, leur gouvernance et leur destin, rejetant les structures multilatérales au profit d'une logique de gestion entrepreneuriale et décentralisée. En 2098, il sert à la fois d'outil de légitimation pour les pouvoirs en place et de cadre idéologique pour les mouvements de rupture, enseigné dans les écoles de gérance des territoires post-démocratiques.
+
+responsabilites: >
+  Diffuser les principes de souveraineté radicale via des programmes éducatifs, des normes de gouvernance territoriale et des récits médiatiques. Légitimer les décisions unilatérales des blocs souverains en matière de ressources, d'énergie et de gestion des frontières. Fournir un cadre théorique pour la résistance aux institutions multilatérales et aux régulations globales.
+
+impact_local: 4
+impact_systemique_global: 4
+
+variables_influencees:
+    - gouvernance_institutions
+    - valeurs_culture_tempo_sociale
+    - systeme_economique_redistribution
+    - organisation_territoires
+
+zone_geographique:
+    - nationale
+    - régionale
+    - continentale
+    - globale
+
+zone_systemique:
+    - gouvernance
+    - économie
+    - société
+
+alliances:
+    - pacte_des_souverains_reference
+    - alliance_blocs_souverains_reference
+    - bloc_ressources_eurasiatique_bre_reference
+    - front_souverainiste_des_ressources_d_amerique_du_sud_reference
+    - consortiums_prives_d_extraction_de_ressources_critiques_reference
+    - plateformes_centralisees_de_narration_officielle_reference
+
+oppositions:
+    - assemblee_territoires_reference
+    - agence_internationale_des_energies_renouvelables_irena_2_reference
+    - agence_stabilisation_climatique_reference
+    - banque_mondiale_des_transitions_climatiques_reference
+    - institutions_multilaterales_survivantes_reference
+    - collectifs_academiques_independants_reference
+    - mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference
+
+type_relation_dominante: alliance stratégique
+
+annee_debut: 2032
+annee_fin: 
+
+trajectoire: mature
+est_clandestin: false
+generation: transition
+
+injection:
+  type: custom
+  annee_injection: 2032
+  contexte_injection: >
+    The Tidewater Canon agit comme un accélérateur de fragmentation institutionnelle et économique, tout en renforçant la résilience territoriale des blocs souverains. Son influence systémique se propage via les alliances du Pacte des Souverains, affectant directement les variables de gouvernance et de redistribution.
+  impact_sur_variables:
+  - variable: gouvernance_institutions
+    delta_level: -15
+    duree: 25
+    polarite: -1
+  - variable: systeme_economique_redistribution
+    delta_level: -12
+    duree: 20
+    polarite: -1
+  - variable: organisation_territoires
+    delta_level: 10
+    duree: 15
+    polarite: 1
+  propagation:
+    via_matrice: true
+
+description_journalistique: >
+  En 2098, The Tidewater Canon est devenu bien plus qu'une doctrine : une grammaire du pouvoir. Ses manuels, imprimés sur papier résistant aux intempéries ou diffusés via des réseaux cryptés, structurent la pensée des administrateurs territoriaux depuis le Sahel jusqu'aux mégapoles autonomes. On y apprend à 'gouverner comme une entreprise', à 'quitter l'État plutôt que le réformer', et à se méfier de 'la Cathédrale' – ce terme désignant désormais tout ce qui ressemble à une institution multilatérale, des agences climatiques aux plateformes d'IA centralisées. Ses détracteurs l'accusent d'avoir transformé la souveraineté en une machine à exclure, ses partisans y voient la seule réponse viable à l'effondrement des vieux ordres.
+
+signes_distinctifs: >
+  Un logo minimaliste représentant une vague stylisée brisant un mur institutionnel, souvent accompagné du slogan 'Tidewater Rules'. Les manuels officiels arborent une couverture bleu nuit avec des caractères dorés, évoquant à la fois le sérieux académique et l'opulence des fonds souverains. Les écoles affiliées se reconnaissent à leur architecture sobre, mélange de béton brut et de panneaux solaires, symbolisant l'autosuffisance.
+retry_signes_distinctifs: non
+
+tensions_narratives: >
+  La contradiction centrale du Canon – promettre l'émancipation tout en reproduisant les hiérarchies – est devenue un champ de bataille idéologique. Certains territoires l'utilisent pour justifier des régimes autoritaires, tandis que des mouvements dissidents s'en réclament pour exiger une souveraineté populaire réelle. La fracture s'accentue entre les 'puristes' du Canon, qui veulent étendre son application à tous les aspects de la vie sociale, et les 'réformistes' qui tentent de l'adapter aux défis climatiques et technologiques. Une question hante les débats : le Canon est-il un outil de libération ou le dernier avatar du capitalisme extractiviste ?
+
+date_creation: 2026-09-24
+---
+
+# The Tidewater Canon
+
+## Rôle dans [[reference]]
+Corpus doctrinal mature hérité de la néo-réaction des années 2020, devenu la philosophie officieuse du Pacte des Souverains. Il prône la souveraineté absolue des entités politiques ou économiques sur leurs ressources, leur gouvernance et leur destin, rejetant les structures multilatérales au profit d'une logique de gestion entrepreneuriale et décentralisée. En 2098, il sert à la fois d'outil de légitimation pour les pouvoirs en place et de cadre idéologique pour les mouvements de rupture, enseigné dans les écoles de gérance des territoires post-démocratiques.
+
+## Responsabilités
+Diffuser les principes de souveraineté radicale via des programmes éducatifs, des normes de gouvernance territoriale et des récits médiatiques. Légitimer les décisions unilatérales des blocs souverains en matière de ressources, d'énergie et de gestion des frontières. Fournir un cadre théorique pour la résistance aux institutions multilatérales et aux régulations globales.
+
+## Variables influencées
+- [[gouvernance_institutions]]
+- [[valeurs_culture_tempo_sociale]]
+- [[systeme_economique_redistribution]]
+- [[organisation_territoires]]
+
+## Relations
+**Alliés** : [[pacte_des_souverains_reference]], [[alliance_blocs_souverains_reference]], [[bloc_ressources_eurasiatique_bre_reference]], [[front_souverainiste_des_ressources_d_amerique_du_sud_reference]], [[consortiums_prives_d_extraction_de_ressources_critiques_reference]], [[plateformes_centralisees_de_narration_officielle_reference]]
+**Opposants** : [[assemblee_territoires_reference]], [[agence_internationale_des_energies_renouvelables_irena_2_reference]], [[agence_stabilisation_climatique_reference]], [[banque_mondiale_des_transitions_climatiques_reference]], [[institutions_multilaterales_survivantes_reference]], [[collectifs_academiques_independants_reference]], [[mouvement_pour_la_libre_circulation_des_personnes_et_des_donnees_reference]]
+
+## Description journalistique
+En 2098, The Tidewater Canon est devenu bien plus qu'une doctrine : une grammaire du pouvoir. Ses manuels, imprimés sur papier résistant aux intempéries ou diffusés via des réseaux cryptés, structurent la pensée des administrateurs territoriaux depuis le Sahel jusqu'aux mégapoles autonomes. On y apprend à 'gouverner comme une entreprise', à 'quitter l'État plutôt que le réformer', et à se méfier de 'la Cathédrale' – ce terme désignant désormais tout ce qui ressemble à une institution multilatérale, des agences climatiques aux plateformes d'IA centralisées. Ses détracteurs l'accusent d'avoir transformé la souveraineté en une machine à exclure, ses partisans y voient la seule réponse viable à l'effondrement des vieux ordres.
+
+## Tensions narratives
+La contradiction centrale du Canon – promettre l'émancipation tout en reproduisant les hiérarchies – est devenue un champ de bataille idéologique. Certains territoires l'utilisent pour justifier des régimes autoritaires, tandis que des mouvements dissidents s'en réclament pour exiger une souveraineté populaire réelle. La fracture s'accentue entre les 'puristes' du Canon, qui veulent étendre son application à tous les aspects de la vie sociale, et les 'réformistes' qui tentent de l'adapter aux défis climatiques et technologiques. Une question hante les débats : le Canon est-il un outil de libération ou le dernier avatar du capitalisme extractiviste ?

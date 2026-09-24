@@ -1,0 +1,99 @@
+---
+name: Vestiges des Citadelles Holdfast
+type: instance
+slug: holdfast_fortress_world
+entite: holdfast
+scenario: fortress_world
+
+type_dans_scenario: infrastructure
+
+role_dans_scenario: >
+  Les Holdfast étaient des enclaves fortifiées privées, construites dans les années 2020-2050 par des élites cherchant à se soustraire aux crises systémiques (climatiques, géopolitiques, économiques). Conçues comme des refuges autarciques, elles incarnaient une privatisation extrême de la souveraineté territoriale, où sécurité et exclusion allaient de pair. En 2098, elles ne subsistent qu’à l’état de ruines ou de mythes, évoquées comme les symboles d’une époque où l’idée de bien commun a été sacrifiée au profit de la survie des privilégiés. Leur héritage persiste dans la fragmentation territoriale actuelle, où les blocs souverains ont repris leur logique d’enfermement, mais à une échelle étatique plutôt que privée.
+
+responsabilites: >
+  À leur apogée, les Holdfast offraient à leurs résidents des services autarciques : production énergétique locale, réserves alimentaires, systèmes de défense autonomes, et gouvernance interne privatisée. Elles dépendaient cependant de la tolérance des États, qu’elles affaiblissaient en sapant l’autorité publique. Leur déclin a été accéléré par l’émergence des États-forteresses, qui ont absorbé leur modèle tout en éliminant leur concurrence.
+
+impact_local: 2
+impact_systemique_global: 1
+
+variables_influencees:
+    - organisation_territoires
+    - gouvernance_institutions
+    - systeme_economique_redistribution
+
+zone_geographique:
+    - nationale
+    - régionale
+
+zone_systemique:
+    - gouvernance
+    - infrastructure
+    - sécurité
+
+alliances:
+
+oppositions:
+    - mouvement_commun_midwest_fortress_world
+    - coalitions_des_deplaces_et_apatrides_fortress_world
+
+type_relation_dominante: conflit
+
+annee_debut: 2028
+annee_fin: 2060
+
+trajectoire: historique
+est_clandestin: false
+generation: pré-crise
+
+injection:
+  type: custom
+  annee_injection: 2028
+  contexte_injection: >
+    Les Holdfast ont accéléré la fragmentation territoriale en normalisant l’idée d’enclaves souveraines privées, affaiblissant la légitimité des États et préparant le terrain pour les blocs fermés. Leur modèle a aussi sapé la confiance dans les institutions publiques, en montrant que la sécurité pouvait être privatisée au détriment du bien commun.
+  impact_sur_variables:
+  - variable: organisation_territoires
+    delta_level: -5
+    duree: 20
+    polarite: -1
+  - variable: gouvernance_institutions
+    delta_level: -3
+    duree: 15
+    polarite: -1
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Dans les années 2040, les Holdfast étaient déjà des reliques d’un autre temps. Ces forteresses privées, construites par des milliardaires paranoïaques et des corporations en quête d’autonomie, ont fleuri pendant les décennies de chaos climatique et géopolitique. On en trouvait dans les Alpes, les Rocheuses, ou même en plein désert, toujours entourées de murs infranchissables et de milices privées. Aujourd’hui, leurs squelettes rouillés servent de repaires aux contrebandiers ou de symboles pour les mouvements anti-souveraineté. Les archives numériques des Holdfast, quand elles n’ont pas été effacées, révèlent une obsession maladive pour le contrôle : listes de résidents triés sur le volet, protocoles de confinement, et même des plans d’isolement total en cas d’effondrement. Ironie de l’histoire, les États-forteresses qui les ont remplacées ont repris leur logique, mais en l’étendant à des populations entières.
+
+signes_distinctifs: >
+  Architecture brutaliste et modulaire, conçue pour résister aux catastrophes : murs en béton armé, tours de surveillance, serres hydroponiques intégrées, et générateurs autonomes. Les Holdfast arboraient souvent des logos corporatifs stylisés, mélangeant symboles de sécurité (boucliers, serrures) et d’autosuffisance (feuilles, engrenages). Leurs ruines sont aujourd’hui marquées par des graffitis hostiles, comme 'Ici, on a choisi qui survivait'.
+retry_signes_distinctifs: non
+
+tensions_narratives: >
+  Les Holdfast posent une question centrale : leur échec était-il inévitable, ou ont-elles simplement été devancées par des acteurs plus puissants ? Certains historiens y voient les précurseurs des États-forteresses, tandis que d’autres soulignent leur incapacité à gérer les crises à grande échelle. Leur mémoire divise aussi les mouvements de résistance : pour les uns, elles incarnent l’égoïsme des élites ; pour les autres, elles prouvent que l’autonomie locale est possible, à condition de ne pas reproduire leurs erreurs d’exclusion. Enfin, des rumeurs persistent sur des Holdfast encore actives, cachées dans des zones grises ou reconverties en bases secrètes pour les oligarchies technologiques.
+
+date_creation: 2026-09-24
+---
+
+# Vestiges des Citadelles Holdfast
+
+## Rôle dans [[fortress_world]]
+Les Holdfast étaient des enclaves fortifiées privées, construites dans les années 2020-2050 par des élites cherchant à se soustraire aux crises systémiques (climatiques, géopolitiques, économiques). Conçues comme des refuges autarciques, elles incarnaient une privatisation extrême de la souveraineté territoriale, où sécurité et exclusion allaient de pair. En 2098, elles ne subsistent qu’à l’état de ruines ou de mythes, évoquées comme les symboles d’une époque où l’idée de bien commun a été sacrifiée au profit de la survie des privilégiés. Leur héritage persiste dans la fragmentation territoriale actuelle, où les blocs souverains ont repris leur logique d’enfermement, mais à une échelle étatique plutôt que privée.
+
+## Responsabilités
+À leur apogée, les Holdfast offraient à leurs résidents des services autarciques : production énergétique locale, réserves alimentaires, systèmes de défense autonomes, et gouvernance interne privatisée. Elles dépendaient cependant de la tolérance des États, qu’elles affaiblissaient en sapant l’autorité publique. Leur déclin a été accéléré par l’émergence des États-forteresses, qui ont absorbé leur modèle tout en éliminant leur concurrence.
+
+## Variables influencées
+- [[organisation_territoires]]
+- [[gouvernance_institutions]]
+- [[systeme_economique_redistribution]]
+
+## Relations
+**Alliés** : _aucun défini_
+**Opposants** : [[mouvement_commun_midwest_fortress_world]], [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+
+## Description journalistique
+Dans les années 2040, les Holdfast étaient déjà des reliques d’un autre temps. Ces forteresses privées, construites par des milliardaires paranoïaques et des corporations en quête d’autonomie, ont fleuri pendant les décennies de chaos climatique et géopolitique. On en trouvait dans les Alpes, les Rocheuses, ou même en plein désert, toujours entourées de murs infranchissables et de milices privées. Aujourd’hui, leurs squelettes rouillés servent de repaires aux contrebandiers ou de symboles pour les mouvements anti-souveraineté. Les archives numériques des Holdfast, quand elles n’ont pas été effacées, révèlent une obsession maladive pour le contrôle : listes de résidents triés sur le volet, protocoles de confinement, et même des plans d’isolement total en cas d’effondrement. Ironie de l’histoire, les États-forteresses qui les ont remplacées ont repris leur logique, mais en l’étendant à des populations entières.
+
+## Tensions narratives
+Les Holdfast posent une question centrale : leur échec était-il inévitable, ou ont-elles simplement été devancées par des acteurs plus puissants ? Certains historiens y voient les précurseurs des États-forteresses, tandis que d’autres soulignent leur incapacité à gérer les crises à grande échelle. Leur mémoire divise aussi les mouvements de résistance : pour les uns, elles incarnent l’égoïsme des élites ; pour les autres, elles prouvent que l’autonomie locale est possible, à condition de ne pas reproduire leurs erreurs d’exclusion. Enfin, des rumeurs persistent sur des Holdfast encore actives, cachées dans des zones grises ou reconverties en bases secrètes pour les oligarchies technologiques.

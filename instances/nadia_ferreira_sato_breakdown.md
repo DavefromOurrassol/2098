@@ -1,0 +1,110 @@
+---
+name: Nadia Ferreira-Sato — Les Nœuds de la Ceinture Verte
+type: instance
+slug: nadia_ferreira_sato_breakdown
+entite: nadia_ferreira_sato
+scenario: breakdown
+localisation:
+  zone: massif_central_cicatrices_vertes
+  lieu: Massif Central
+  type_lieu: region
+
+type_dans_scenario: humain
+
+role_dans_scenario: >
+  Nadia Ferreira-Sato incarne la figure du bâtisseur marginal dans les interstices des territoires fragmentés du Massif Central post-effondrement. Ancienne ingénieure agronome reconvertie en organisatrice communautaire, elle a fédéré des micro-communautés rurales autour de la réhabilitation des terres abandonnées, transformant les friches industrielles et agricoles en ceintures vertes autonomes. Son rôle est à la fois pratique (réseau de serres hydroponiques, récupération d'eau, semences open-source) et symbolique : elle prouve qu'une autonomie alimentaire et énergétique locale est possible, même dans un système en ruine. Son influence s'étend par capillarité, via des réseaux de solidarité horizontale qui contournent les milices agro-défensives et les seigneurs de guerre territoriaux.
+
+responsabilites: >
+  Coordination des collectifs de réparation énergétique et des enclaves agro-communautaires autonomes dans le Massif Central. Gestion des stocks de semences open-source et des protocoles de culture adaptés aux sols appauvris. Négociation avec les milices locales pour sécuriser les couloirs de transit des ressources (eau, outils, savoir-faire). Formation des jeunes générations aux techniques de survie post-effondrement, en insistant sur l'autonomie plutôt que la dépendance aux réseaux résiduels.
+
+impact_local: 4
+impact_systemique_global: 2
+
+variables_influencees:
+    - organisation_territoires
+    - systeme_economique_redistribution
+    - climat_environnement_global
+
+zone_geographique:
+    - régionale
+
+zone_systemique:
+    - société
+    - infrastructure
+
+alliances:
+    - communautes_rurales_autonomes_breakdown
+    - collectifs_de_reparation_energetique_breakdown
+    - reseaux_de_solidarite_horizontale_post_effondrement_breakdown
+    - massif_central_cicatrices_vertes_breakdown
+
+oppositions:
+    - milices_agro_defensives_locales_breakdown
+    - seigneurs_de_guerre_agro_territoriaux_breakdown
+    - seigneuries_foncieres_opportunistes_breakdown
+
+type_relation_dominante: rivalité
+
+annee_debut: 2052
+annee_fin: 
+
+trajectoire: ascendant
+est_clandestin: false
+generation: post-effondrement
+
+injection:
+  type: custom
+  annee_injection: 2052
+  contexte_injection: >
+    Nadia Ferreira-Sato influence directement l'organisation des territoires en prouvant qu'une autonomie locale est possible, même dans un système fragmenté. Son modèle de ceintures vertes et de réseaux de solidarité horizontale redéfinit les dynamiques de pouvoir au niveau régional, en contournant les structures institutionnelles défaillantes. Son impact sur le système économique est plus modeste mais réel : en créant des circuits de redistribution locaux (semences, outils, savoir-faire), elle limite la dépendance aux marchés résiduels et aux seigneurs de guerre. Enfin, ses pratiques agro-écologiques (réhabilitation des sols, cultures adaptées) ont un effet marginal mais symbolique sur l'environnement, en atténuant localement les effets du changement climatique.
+  impact_sur_variables:
+  - variable: organisation_territoires
+    delta_level: 8
+    duree: 15
+    polarite: 1
+  - variable: systeme_economique_redistribution
+    delta_level: 5
+    duree: 20
+    polarite: 1
+  - variable: climat_environnement_global
+    delta_level: 3
+    duree: 25
+    polarite: 1
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  Nadia Ferreira-Sato, 68 ans, est devenue une légende vivante dans les ruines du Massif Central. Vêtue d'une combinaison de travail rapiécée et d'un chapeau de paille tressé à partir de fibres de chanvre local, elle arpente les ceintures vertes qu'elle a contribué à créer, un carnet de notes en papier recyclé à la main. Ses « Nœuds de la Ceinture Verte » — des serres hydroponiques alimentées par des panneaux solaires récupérés — nourrissent aujourd'hui près de 15 000 personnes, dans une région où les chaînes d'approvisionnement se sont effondrées il y a plus de deux décennies. Les milices agro-défensives la tolèrent à peine, mais ne peuvent se permettre de l'éliminer : ses réseaux de semences open-source et ses protocoles de culture adaptés aux sols appauvris sont devenus une assurance-vie pour des centaines de communautés. « Elle n'a pas de titre, pas de mandat, pas de budget, mais tout le monde sait qui elle est », résume un ancien maire d'une commune rurale. « C'est la preuve que l'autonomie n'est pas une utopie, mais une nécessité. »
+
+signes_distinctifs: >
+  Toujours accompagnée d'un sac en toile de jute rempli de graines et d'outils de récupération. Porte un bracelet en fil de cuivre torsadé, symbole des collectifs de réparation énergétique. Son visage buriné par le soleil et ses mains couvertes de cicatrices de travail manuel sont devenus des emblèmes des « bâtisseurs de l'après ». Les jeunes générations imitent son style : vêtements rapiécés, chaussures en pneus recyclés, et une préférence marquée pour les matériaux bruts et réparables.
+retry_signes_distinctifs: non
+
+tensions_narratives: >
+  La tension fondamentale de Nadia Ferreira-Sato réside dans l'équilibre précaire entre autonomie et dépendance. Ses ceintures vertes sont une réussite locale, mais leur expansion se heurte aux milices agro-défensives, qui voient d'un mauvais œil cette concurrence à leur contrôle des ressources. Certains seigneurs de guerre territoriaux tentent de l'instrumentaliser pour légitimer leur propre pouvoir, tandis que d'autres cherchent à l'éliminer pour éviter que son modèle ne se propage. Par ailleurs, son refus de s'allier aux institutions résiduelles (comme l'Assemblée des Territoires Éclatés) limite son accès aux rares ressources centralisées, mais préserve son indépendance. Son plus grand défi ? Passer d'une figure locale à un symbole systémique, sans tomber dans le piège de la récupération politique ou de la mythification.
+
+date_creation: 2026-09-24
+---
+
+# Nadia Ferreira-Sato — Les Nœuds de la Ceinture Verte
+
+## Rôle dans [[breakdown]]
+Nadia Ferreira-Sato incarne la figure du bâtisseur marginal dans les interstices des territoires fragmentés du Massif Central post-effondrement. Ancienne ingénieure agronome reconvertie en organisatrice communautaire, elle a fédéré des micro-communautés rurales autour de la réhabilitation des terres abandonnées, transformant les friches industrielles et agricoles en ceintures vertes autonomes. Son rôle est à la fois pratique (réseau de serres hydroponiques, récupération d'eau, semences open-source) et symbolique : elle prouve qu'une autonomie alimentaire et énergétique locale est possible, même dans un système en ruine. Son influence s'étend par capillarité, via des réseaux de solidarité horizontale qui contournent les milices agro-défensives et les seigneurs de guerre territoriaux.
+
+## Responsabilités
+Coordination des collectifs de réparation énergétique et des enclaves agro-communautaires autonomes dans le Massif Central. Gestion des stocks de semences open-source et des protocoles de culture adaptés aux sols appauvris. Négociation avec les milices locales pour sécuriser les couloirs de transit des ressources (eau, outils, savoir-faire). Formation des jeunes générations aux techniques de survie post-effondrement, en insistant sur l'autonomie plutôt que la dépendance aux réseaux résiduels.
+
+## Variables influencées
+- [[organisation_territoires]]
+- [[systeme_economique_redistribution]]
+- [[climat_environnement_global]]
+
+## Relations
+**Alliés** : [[communautes_rurales_autonomes_breakdown]], [[collectifs_de_reparation_energetique_breakdown]], [[reseaux_de_solidarite_horizontale_post_effondrement_breakdown]], [[massif_central_cicatrices_vertes_breakdown]]
+**Opposants** : [[milices_agro_defensives_locales_breakdown]], [[seigneurs_de_guerre_agro_territoriaux_breakdown]], [[seigneuries_foncieres_opportunistes_breakdown]]
+
+## Description journalistique
+Nadia Ferreira-Sato, 68 ans, est devenue une légende vivante dans les ruines du Massif Central. Vêtue d'une combinaison de travail rapiécée et d'un chapeau de paille tressé à partir de fibres de chanvre local, elle arpente les ceintures vertes qu'elle a contribué à créer, un carnet de notes en papier recyclé à la main. Ses « Nœuds de la Ceinture Verte » — des serres hydroponiques alimentées par des panneaux solaires récupérés — nourrissent aujourd'hui près de 15 000 personnes, dans une région où les chaînes d'approvisionnement se sont effondrées il y a plus de deux décennies. Les milices agro-défensives la tolèrent à peine, mais ne peuvent se permettre de l'éliminer : ses réseaux de semences open-source et ses protocoles de culture adaptés aux sols appauvris sont devenus une assurance-vie pour des centaines de communautés. « Elle n'a pas de titre, pas de mandat, pas de budget, mais tout le monde sait qui elle est », résume un ancien maire d'une commune rurale. « C'est la preuve que l'autonomie n'est pas une utopie, mais une nécessité. »
+
+## Tensions narratives
+La tension fondamentale de Nadia Ferreira-Sato réside dans l'équilibre précaire entre autonomie et dépendance. Ses ceintures vertes sont une réussite locale, mais leur expansion se heurte aux milices agro-défensives, qui voient d'un mauvais œil cette concurrence à leur contrôle des ressources. Certains seigneurs de guerre territoriaux tentent de l'instrumentaliser pour légitimer leur propre pouvoir, tandis que d'autres cherchent à l'éliminer pour éviter que son modèle ne se propage. Par ailleurs, son refus de s'allier aux institutions résiduelles (comme l'Assemblée des Territoires Éclatés) limite son accès aux rares ressources centralisées, mais préserve son indépendance. Son plus grand défi ? Passer d'une figure locale à un symbole systémique, sans tomber dans le piège de la récupération politique ou de la mythification.

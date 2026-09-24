@@ -1,0 +1,108 @@
+---
+name: Deepfield Vestiges
+type: instance
+slug: deepfield_institute_fortress_world
+entite: deepfield_institute
+scenario: fortress_world
+localisation:
+  zone: null
+  lieu: null
+  type_lieu: null
+  note: transnationale_sans_ancrage
+
+type_dans_scenario: institution
+
+role_dans_scenario: >
+  Ancienne institution long-termiste des années 2020-2050, le Deepfield Institute incarne aujourd'hui un mythe fondateur des régimes autoritaires de Fortress World. Son héritage idéologique — la subordination des libertés individuelles à la survie collective — a été récupéré par les blocs fermés pour justifier leur gouvernance technocratique et leur contrôle des ressources. Bien que dissous dans les années 2050, ses archives et ses anciens membres influencent encore les politiques de souveraineté biologique et énergétique des États-Forteresses, notamment via des think tanks résiduels et des algorithmes de scoring corporatif inspirés de ses méthodes.
+
+responsabilites: >
+  À son apogée, le Deepfield Institute développait des modèles prédictifs de gestion des crises systémiques (climat, démographie, ressources) et préconisait des mesures coercitives pour les appliquer. Ses anciens protocoles sont aujourd'hui intégrés dans les systèmes de surveillance numérique souveraine et les dispositifs de contrôle frontalier des blocs, sous une forme fragmentée et militarisée. Ses archives, partiellement préservées dans les datacenters souverains, servent de référence pour les politiques de quotas énergétiques et de sélection migratoire.
+
+impact_local: 2
+impact_systemique_global: 1
+
+variables_influencees:
+    - gouvernance_institutions
+    - sante_biotechnologies
+    - demographie_mobilite_humaine
+
+zone_geographique:
+    - continentale
+    - globale
+
+zone_systemique:
+    - gouvernance
+    - sécurité
+    - infrastructure
+
+alliances:
+    - appareils_d_etat_des_blocs_fermes_fortress_world
+    - conseil_regulation_algorithmique_fortress_world
+    - institut_des_seuils_demographiques_fortress_world
+
+oppositions:
+    - alliance_sanitaire_des_populations_exclues_fortress_world
+    - cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
+    - coalitions_des_deplaces_et_apatrides_fortress_world
+
+type_relation_dominante: symbiose
+
+annee_debut: 2028
+annee_fin: 2053
+
+trajectoire: mythifié
+est_clandestin: false
+generation: pré-crise
+
+injection:
+  type: custom
+  annee_injection: 2028
+  contexte_injection: >
+    Deepfield Vestiges a ancré l’idée que la gouvernance doit être technocratique et autoritaire pour assurer la survie collective, renforçant les institutions des blocs fermés. En revanche, ses politiques de biotechnologies à deux vitesses (réservées aux élites) ont creusé les inégalités sanitaires, d’où un impact négatif sur cette variable.
+  impact_sur_variables:
+  - variable: gouvernance_institutions
+    delta_level: 5
+    duree: 30
+    polarite: 1
+  - variable: sante_biotechnologies
+    delta_level: 3
+    duree: 25
+    polarite: -1
+  propagation:
+    via_matrice: false
+
+description_journalistique: >
+  « Deepfield ? Un fantôme qui hante encore nos lois. » C’est par cette phrase que le porte-parole du Pacte des Forteresses Souveraines avait répondu en 2087 à une question sur l’origine des quotas énergétiques par catégorie sociale. Les archives du Deepfield Institute, dissous dans les purges des années 2050, ont été exhumées par les régimes autoritaires pour légitimer leur contrôle des flux humains et des ressources. Ses anciens chercheurs, recyclés dans les bureaux de contrôle frontalier ou les agences de scoring corporatif, appliquent aujourd’hui des versions militarisées de leurs modèles prédictifs. Les murs des zones protégées des blocs affichent encore des extraits de ses rapports, transformés en slogans : « La survie prime sur le choix. »
+
+signes_distinctifs: >
+  Aucun bâtiment ne porte plus son nom, mais ses symboles persistent : un logo stylisé représentant une courbe de survie systémique (une sigmoïde traversant un cercle), repris dans les interfaces des systèmes de surveillance numérique souveraine. Ses archives sont marquées d’un sceau numérique « DF-20XX » encore visible dans les datacenters des blocs. Les algorithmes inspirés de ses travaux utilisent des métadonnées estampillées « Deepfield Legacy » dans leur code source.
+retry_signes_distinctifs: non
+
+tensions_narratives: >
+  Les dissidents des zones tampons accusent les États-Forteresses d’avoir détourné l’héritage de Deepfield pour justifier leur autoritarisme, tandis que les régimes en place célèbrent son « réalisme visionnaire ». Certains anciens membres, réfugiés dans les cliniques de déaugmentation indépendantes, tentent de récupérer ses archives pour prouver que ses méthodes étaient conçues pour des crises temporaires, pas pour un contrôle permanent. Une rumeur persistante évoque l’existence d’un « Protocole Oméga », un plan secret de Deepfield pour un effondrement contrôlé des sociétés, que les blocs auraient partiellement appliqué.
+
+date_creation: 2026-09-24
+---
+
+# Deepfield Vestiges
+
+## Rôle dans [[fortress_world]]
+Ancienne institution long-termiste des années 2020-2050, le Deepfield Institute incarne aujourd'hui un mythe fondateur des régimes autoritaires de Fortress World. Son héritage idéologique — la subordination des libertés individuelles à la survie collective — a été récupéré par les blocs fermés pour justifier leur gouvernance technocratique et leur contrôle des ressources. Bien que dissous dans les années 2050, ses archives et ses anciens membres influencent encore les politiques de souveraineté biologique et énergétique des États-Forteresses, notamment via des think tanks résiduels et des algorithmes de scoring corporatif inspirés de ses méthodes.
+
+## Responsabilités
+À son apogée, le Deepfield Institute développait des modèles prédictifs de gestion des crises systémiques (climat, démographie, ressources) et préconisait des mesures coercitives pour les appliquer. Ses anciens protocoles sont aujourd'hui intégrés dans les systèmes de surveillance numérique souveraine et les dispositifs de contrôle frontalier des blocs, sous une forme fragmentée et militarisée. Ses archives, partiellement préservées dans les datacenters souverains, servent de référence pour les politiques de quotas énergétiques et de sélection migratoire.
+
+## Variables influencées
+- [[gouvernance_institutions]]
+- [[sante_biotechnologies]]
+- [[demographie_mobilite_humaine]]
+
+## Relations
+**Alliés** : [[appareils_d_etat_des_blocs_fermes_fortress_world]], [[conseil_regulation_algorithmique_fortress_world]], [[institut_des_seuils_demographiques_fortress_world]]
+**Opposants** : [[alliance_sanitaire_des_populations_exclues_fortress_world]], [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]], [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+
+## Description journalistique
+« Deepfield ? Un fantôme qui hante encore nos lois. » C’est par cette phrase que le porte-parole du Pacte des Forteresses Souveraines avait répondu en 2087 à une question sur l’origine des quotas énergétiques par catégorie sociale. Les archives du Deepfield Institute, dissous dans les purges des années 2050, ont été exhumées par les régimes autoritaires pour légitimer leur contrôle des flux humains et des ressources. Ses anciens chercheurs, recyclés dans les bureaux de contrôle frontalier ou les agences de scoring corporatif, appliquent aujourd’hui des versions militarisées de leurs modèles prédictifs. Les murs des zones protégées des blocs affichent encore des extraits de ses rapports, transformés en slogans : « La survie prime sur le choix. »
+
+## Tensions narratives
+Les dissidents des zones tampons accusent les États-Forteresses d’avoir détourné l’héritage de Deepfield pour justifier leur autoritarisme, tandis que les régimes en place célèbrent son « réalisme visionnaire ». Certains anciens membres, réfugiés dans les cliniques de déaugmentation indépendantes, tentent de récupérer ses archives pour prouver que ses méthodes étaient conçues pour des crises temporaires, pas pour un contrôle permanent. Une rumeur persistante évoque l’existence d’un « Protocole Oméga », un plan secret de Deepfield pour un effondrement contrôlé des sociétés, que les blocs auraient partiellement appliqué.
