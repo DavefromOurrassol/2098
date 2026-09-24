@@ -21,6 +21,8 @@ scenario_ref: reference
 role_ref: >
   Journaliste d'investigation chez Lamplight (Genève, Europe Occidentale Reconstruite), qui enquête sur les réseaux de Kindling et leurs liens supposés avec les territoires du Pacte des Souverains.
 etat_ref: ascendant
+consignes_scenarios:
+  policy_reform: Personnage secondaire dans ce scénario, au rôle modeste, sans lien avec Lamplight ni Kindling ; rôle choisi selon la logique propre de ce monde.
 ---
 
 # Maëlys Okonkwo

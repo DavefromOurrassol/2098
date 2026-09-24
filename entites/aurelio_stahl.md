@@ -22,6 +22,9 @@ scenario_ref: reference
 role_ref: >
   Principal idéologue vivant de The Tidewater Canon, conférencier et essayiste itinérant entre les territoires du Pacte des Souverains, qui réécrit la doctrine de la sortie pour le XXIIe siècle.
 etat_ref: mature
+consignes_scenarios:
+  new_sustainability: Personnage secondaire dans ce scénario, au rôle modeste, sans lien avec The Tidewater Canon ni la néo-réaction ; rôle choisi selon la logique propre de ce monde.
+  policy_reform: Personnage secondaire dans ce scénario, au rôle modeste, sans lien avec The Tidewater Canon ni la néo-réaction ; rôle choisi selon la logique propre de ce monde.
 ---
 
 # Aurelio Stahl

@@ -21,6 +21,8 @@ scenario_ref: reference
 role_ref: >
   Collectif de journalistes et de chercheurs basé à Genève (Europe Occidentale Reconstruite), spécialisé dans l'enquête sur les territoires post-démocratiques, leurs financements et leurs réseaux clandestins. Principale source critique sur Ergo-Wian, The Lattice et Kindling.
 etat_ref: ascendant
+consignes_scenarios:
+  eco_communalism: 'Entité secondaire dans ce scénario : elle n''existe plus en 2098 qu''à l''état de souvenir des années 2020-2050 (trajectoire historique ou mythifié), évoquée brièvement, jamais acteur de premier plan.'
 ---
 
 # Lamplight

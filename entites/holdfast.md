@@ -23,6 +23,10 @@ scenario_ref: reference
 role_ref: >
   Réseau de bunkers-cités construits par les grandes fortunes, principalement en Nouvelle-Zélande (Arc Indo-Pacifique), devenus des micro-territoires fermés à gouvernance privée. En 2098, une partie est abandonnée ou reconvertie ; les derniers restent des enclaves autarciques tolérées par les États voisins.
 etat_ref: résiduel
+consignes_scenarios:
+  breakdown: 'Entité secondaire dans ce scénario : elle n''existe plus en 2098 qu''à l''état de souvenir des années 2020-2050 (trajectoire historique ou mythifié), évoquée brièvement, jamais acteur de premier plan.'
+  fortress_world: 'Entité secondaire dans ce scénario : elle n''existe plus en 2098 qu''à l''état de souvenir des années 2020-2050 (trajectoire historique ou mythifié), évoquée brièvement, jamais acteur de premier plan.'
+  new_sustainability: 'Entité secondaire dans ce scénario : elle n''existe plus en 2098 qu''à l''état de souvenir des années 2020-2050 (trajectoire historique ou mythifié), évoquée brièvement, jamais acteur de premier plan.'
 ---
 
 # Holdfast

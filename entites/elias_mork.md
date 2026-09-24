@@ -1,7 +1,7 @@
 ---
 name: Elias Mørk
 type: entity
-slug: elias_m_rk
+slug: elias_mork
 category: humain
 description: >
   Un scientifique ou expert de haut niveau, souvent directeur d'une institution de recherche ou d'innovation, dont le rôle est de concilier avancées technologiques ou biologiques avec des impératifs éthiques, politiques ou sociaux. Cette entité incarne la figure du décideur technique placé à l'intersection du progrès et des limites imposées par la gouvernance, la morale ou les contraintes systémiques. Son autorité repose sur une expertise reconnue, mais son action est constamment soumise à des arbitrages entre efficacité, équité et souveraineté.
@@ -21,6 +21,8 @@ scenario_ref: reference
 role_ref: >
   Docteur, directeur scientifique du Deepfield Institute (États-Unis post-2055, Amériques Multipolaires), responsable du programme de sélection génétique de l'institut.
 etat_ref: mature
+consignes_scenarios:
+  breakdown: Personnage secondaire dans ce scénario, au rôle modeste, sans lien avec le Deepfield Institute ni la sélection génétique ; rôle choisi selon la logique propre de ce monde.
 ---
 
 # Elias Mørk
@@ -34,10 +36,10 @@ La contradiction entre la poursuite de l'innovation ou de l'optimisation scienti
 ## Instances par scénario
 | Scénario | Instance | État | Rôle |
 |---|---|---|---|
-| [[breakdown]] | [[elias_m_rk_breakdown]] | | |
+| [[breakdown]] | [[elias_mork_breakdown]] | | |
 | [[fortress_world]] | — | — | — |
 | [[new_sustainability]] | — | — | — |
 | [[eco_communalism]] | — | — | — |
 | [[policy_reform]] | — | — | — |
-| [[reference]] | [[elias_m_rk_reference]] | | |
+| [[reference]] | [[elias_mork_reference]] | | |
 

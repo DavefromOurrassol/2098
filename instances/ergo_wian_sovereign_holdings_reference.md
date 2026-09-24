@@ -5,8 +5,8 @@ slug: ergo_wian_sovereign_holdings_reference
 entite: ergo_wian_sovereign_holdings
 scenario: reference
 localisation:
-  zone: singapour_est
-  lieu: Singapour Est Nexcore
+  zone: pacte_des_souverains
+  lieu: 'Territoire associé du Pacte des Souverains'
   type_lieu: infrastructure
 
 type_dans_scenario: hybride

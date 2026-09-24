@@ -25,6 +25,12 @@ scenario_ref: reference
 role_ref: >
   Femme d'origine indienne, successeuse désignée d'Ilse Varga-Holm à la tête d'Ergo-Wian Sovereign Holdings (Pacte des Souverains). Première gérante désignée hors de la lignée, choisie pour des raisons que nul ne connaît vraiment ; personne ne sait ce qu'elle fera du pouvoir, ni si elle perpétuera le modèle ou le transformera.
 etat_ref: ascendant
+consignes_scenarios:
+  breakdown: 'Personnage secondaire dans ce scénario : rôle sans aucun rapport avec Ergo-Wian ni avec la gouvernance d''entreprise, choisi selon la logique propre de ce monde.'
+  fortress_world: 'Personnage secondaire dans ce scénario : rôle sans aucun rapport avec Ergo-Wian ni avec la gouvernance d''entreprise, choisi selon la logique propre de ce monde.'
+  new_sustainability: 'Personnage secondaire dans ce scénario : rôle sans aucun rapport avec Ergo-Wian ni avec la gouvernance d''entreprise, choisi selon la logique propre de ce monde.'
+  eco_communalism: 'Personnage secondaire dans ce scénario : rôle sans aucun rapport avec Ergo-Wian ni avec la gouvernance d''entreprise, choisi selon la logique propre de ce monde.'
+  policy_reform: 'Personnage secondaire dans ce scénario : rôle sans aucun rapport avec Ergo-Wian ni avec la gouvernance d''entreprise, choisi selon la logique propre de ce monde.'
 ---
 
 # Hyphan Raghavan

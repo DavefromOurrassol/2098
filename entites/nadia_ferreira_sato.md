@@ -22,6 +22,9 @@ scenario_ref: reference
 role_ref: >
   Résidente d'une ville de The Lattice (Amériques Multipolaires) et fondatrice de Raised Hands. Tolérée, surveillée, sous la menace permanente d'une résiliation de son contrat de résidence.
 etat_ref: ascendant
+consignes_scenarios:
+  breakdown: Personnage secondaire dans ce scénario, au rôle modeste, sans lien avec The Lattice ni Raised Hands ; rôle choisi selon la logique propre de ce monde.
+  new_sustainability: Personnage secondaire dans ce scénario, au rôle modeste, sans lien avec The Lattice ni Raised Hands ; rôle choisi selon la logique propre de ce monde.
 ---
 
 # Nadia Ferreira-Sato

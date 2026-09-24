@@ -23,6 +23,10 @@ scenario_ref: reference
 role_ref: >
   Institut longtermiste installé dans les États-Unis post-2055 (Amériques Multipolaires), qui subordonne toute décision présente à la survie de l'espèce dans un futur lointain : programmes spatiaux privés, natalité sélective, sélection génétique. Financé par des fortunes des zones post-démocratiques, il fournit leur caution scientifique.
 etat_ref: mature
+consignes_scenarios:
+  breakdown: 'Entité secondaire dans ce scénario : elle n''existe plus en 2098 qu''à l''état de souvenir des années 2020-2050 (trajectoire historique ou mythifié), évoquée brièvement, jamais acteur de premier plan.'
+  fortress_world: 'Entité secondaire dans ce scénario : elle n''existe plus en 2098 qu''à l''état de souvenir des années 2020-2050 (trajectoire historique ou mythifié), évoquée brièvement, jamais acteur de premier plan.'
+  new_sustainability: 'Entité secondaire dans ce scénario : elle n''existe plus en 2098 qu''à l''état de souvenir des années 2020-2050 (trajectoire historique ou mythifié), évoquée brièvement, jamais acteur de premier plan.'
 ---
 
 # Deepfield Institute

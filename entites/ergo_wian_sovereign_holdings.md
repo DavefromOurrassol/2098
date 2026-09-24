@@ -25,6 +25,12 @@ scenario_ref: reference
 role_ref: >
   Gouvernement-entreprise administrant un territoire associé au Pacte des Souverains : le conseil des actionnaires tient lieu de parlement, les résidents ont un statut de clients-contractants sans droit de vote, et un souverain-gérant nommé pour dix ans dirige l'ensemble. Modèle le plus abouti des zones post-démocratiques du monde multipolaire, cité en exemple par ses partisans comme par ses détracteurs.
 etat_ref: dominant
+consignes_scenarios:
+  breakdown: Rôle différent de celui du scénario reference, choisi selon la logique de ce scénario ; présence réelle mais moins centrale que dans reference.
+  fortress_world: 'Cohérent avec le récit Hyphan de ce scénario : conglomérat au cœur de l''apartheid corporate et militaro-industriel (migrations forcées, zones interdites), plus dur et plus ouvertement coercitif que dans reference.'
+  new_sustainability: Rôle différent de celui du scénario reference, choisi selon la logique de ce scénario ; présence réelle mais moins centrale que dans reference.
+  eco_communalism: Rôle différent de celui du scénario reference, choisi selon la logique de ce scénario ; présence réelle mais moins centrale que dans reference.
+  policy_reform: Rôle différent de celui du scénario reference, choisi selon la logique de ce scénario ; présence réelle mais moins centrale que dans reference.
 ---
 
 # Ergo-Wian Sovereign Holdings

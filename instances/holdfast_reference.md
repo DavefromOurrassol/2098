@@ -5,8 +5,8 @@ slug: holdfast_reference
 entite: holdfast
 scenario: reference
 localisation:
-  zone: polynesie_francaise_insulaire
-  lieu: Archipels du Sud-Pacifique (Nouvelle-Zélande et zones adjacentes)
+  zone: indo_pacifique_emergent
+  lieu: 'Nouvelle-Zélande (Arc Indo-Pacifique)'
   type_lieu: site_strategique
 
 type_dans_scenario: infrastructure

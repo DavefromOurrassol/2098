@@ -23,6 +23,10 @@ scenario_ref: reference
 role_ref: >
   Assemblée d'États-réseaux nés de communautés en ligne, citoyenneté par abonnement, terres dispersées sur plusieurs continents. Son levier principal : racheter la souveraineté diplomatique des États insulaires submergés des Archipels Flottants du Pacifique Sud pour obtenir sièges et reconnaissance, au grand malaise des communautés déplacées.
 etat_ref: ascendant
+consignes_scenarios:
+  breakdown: 'Entité secondaire dans ce scénario : elle n''existe plus en 2098 qu''à l''état de souvenir des années 2020-2050 (trajectoire historique ou mythifié), évoquée brièvement, jamais acteur de premier plan.'
+  eco_communalism: 'Entité secondaire dans ce scénario : elle n''existe plus en 2098 qu''à l''état de souvenir des années 2020-2050 (trajectoire historique ou mythifié), évoquée brièvement, jamais acteur de premier plan.'
+  policy_reform: 'Entité secondaire dans ce scénario : elle n''existe plus en 2098 qu''à l''état de souvenir des années 2020-2050 (trajectoire historique ou mythifié), évoquée brièvement, jamais acteur de premier plan.'
 ---
 
 # Meridian Assembly

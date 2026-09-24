@@ -22,6 +22,8 @@ role_ref: >
   Cellules accélérationnistes clandestines opérant en Europe Occidentale Reconstruite, là où les institutions démocratiques tiennent encore : sabotages ciblés, désinformation, infiltration d'administrations, pour hâter leur effondrement et ouvrir la voie à une gouvernance de type Ergo-Wian. Désavouées publiquement par le Pacte des Souverains.
 etat_ref: marginal
 est_clandestin_ref: true
+consignes_scenarios:
+  eco_communalism: 'Entité secondaire dans ce scénario : elle n''existe plus en 2098 qu''à l''état de souvenir des années 2020-2050 (trajectoire historique ou mythifié), évoquée brièvement, jamais acteur de premier plan.'
 ---
 
 # Kindling

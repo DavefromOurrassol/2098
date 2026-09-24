@@ -1,8 +1,8 @@
 ---
 name: Elias Mørk
 type: instance
-slug: elias_m_rk_reference
-entite: elias_m_rk
+slug: elias_mork_reference
+entite: elias_mork
 scenario: reference
 localisation:
   zone: null

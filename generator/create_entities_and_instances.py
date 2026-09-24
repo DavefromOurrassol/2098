@@ -189,6 +189,13 @@ def build_existing_entities_summary(entities):
     return "\n".join(lines)
 
 
+_TRANSLIT_SANS_NFD = str.maketrans({
+    "ø": "o", "Ø": "O", "æ": "ae", "Æ": "AE", "œ": "oe", "Œ": "OE",
+    "ß": "ss", "ł": "l", "Ł": "L", "đ": "d", "Đ": "D", "ð": "d", "Ð": "D",
+    "þ": "th", "Þ": "TH", "ħ": "h", "ı": "i",
+})
+
+
 def slugify(text):
     # Normalisation Unicode générique (NFD + suppression des marques
     # diacritiques) plutôt qu'une table d'accents français en dur — la
@@ -201,7 +208,11 @@ def slugify(text):
     # "rede_paulista_de_distribuicao_algoritmica"), corrigé le 14 août
     # 2026. Même principe déjà utilisé par _fold() dans gui/app.py.
     import unicodedata
-    s = unicodedata.normalize("NFD", text or "")
+    # Lettres sans décomposition Unicode (24 septembre 2026, cas réel
+    # "Elias Mørk" → slug "elias_m_rk") : NFD ne décompose pas ø/æ/ß/ł...,
+    # qui étaient donc remplacées par "_" au lieu d'être translittérées.
+    s = (text or "").translate(_TRANSLIT_SANS_NFD)
+    s = unicodedata.normalize("NFD", s)
     s = "".join(c for c in s if unicodedata.category(c) != "Mn")
     s = s.lower()
     s = re.sub(r"[^a-z0-9]+", "_", s)
@@ -505,7 +516,7 @@ def validate_auto_entity(entity, existing_entities, existing_names_in_batch):
 def write_entity_file(name, slug, category, description, tension,
                        variables, scenarios, custom_source=None,
                        scenario_ref=None, role_ref=None, etat_ref=None,
-                       est_clandestin_ref=None):
+                       est_clandestin_ref=None, consignes_scenarios=None):
     ENTITES_DIR.mkdir(parents=True, exist_ok=True)
     vars_yaml = "\n".join(f"  - {v}" for v in variables)
     scenarios_yaml = "\n".join(f"  - {s}" for s in scenarios)
@@ -530,6 +541,13 @@ def write_entity_file(name, slug, category, description, tension,
         # qui laisserait croire à une contrainte "false" par défaut.
         if est_clandestin_ref is not None:
             extra_fm += f"est_clandestin_ref: {str(est_clandestin_ref).lower()}\n"
+    # consignes_scenarios (24 septembre 2026) : persistées dans la fiche
+    # entité pour qu'une régénération ultérieure par generate_instances.py
+    # (qui relit la fiche depuis le disque et la passe telle quelle à
+    # process_entity_scenario) les retrouve automatiquement.
+    if consignes_scenarios:
+        extra_fm += yaml.dump({"consignes_scenarios": consignes_scenarios},
+                              allow_unicode=True, sort_keys=False, width=1000)
 
     content = f"""---
 name: {name}
@@ -828,6 +846,7 @@ def process_custom_idea(client, idea, dry_run=False, ancrage_temporel="libre"):
             scenarios, custom_source=idea.get("source"),
             scenario_ref=scenario_ref, role_ref=idea.get("role"), etat_ref=idea.get("etat"),
             est_clandestin_ref=est_clandestin_ref,
+            consignes_scenarios=consignes_scenarios,
         )
         append_to_entities_list({
             "nom": nom, "slug": slug, "categorie": category,

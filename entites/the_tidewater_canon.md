@@ -21,6 +21,8 @@ scenario_ref: reference
 role_ref: >
   Corpus doctrinal hérité de la néo-réaction des années 2020, devenu la philosophie officieuse du Pacte des Souverains : quitter l'État plutôt que le réformer, gouverner comme on gère une entreprise, se défier de « la Cathédrale » (médias, universités, institutions multilatérales). Enseigné dans les écoles de gérance des territoires post-démocratiques.
 etat_ref: mature
+consignes_scenarios:
+  eco_communalism: 'Entité secondaire dans ce scénario : elle n''existe plus en 2098 qu''à l''état de souvenir des années 2020-2050 (trajectoire historique ou mythifié), évoquée brièvement, jamais acteur de premier plan.'
 ---
 
 # The Tidewater Canon

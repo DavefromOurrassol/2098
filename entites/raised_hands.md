@@ -21,6 +21,8 @@ scenario_ref: reference
 role_ref: >
   Mouvement de résidents des villes de The Lattice (Amériques Multipolaires) réclamant des élections et un droit de vote pour les clients-contractants. Toléré mais surveillé ; ses meneurs risquent la résiliation de leur contrat de résidence, c'est-à-dire l'expulsion.
 etat_ref: émergent
+consignes_scenarios:
+  breakdown: 'Entité secondaire dans ce scénario : elle n''existe plus en 2098 qu''à l''état de souvenir des années 2020-2050 (trajectoire historique ou mythifié), évoquée brièvement, jamais acteur de premier plan.'
 ---
 
 # Raised Hands

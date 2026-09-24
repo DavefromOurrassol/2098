@@ -21,6 +21,8 @@ scenario_ref: reference
 role_ref: >
   Fédération de villes à charte d'Amérique centrale (Amériques Multipolaires), apparue dans le vide laissé par la crise constitutionnelle états-unienne de 2055 : chaque cité a son règlement, son conseil de gérance et un droit de sortie garanti, mais aucune élection. Les résidents « votent avec leurs pieds » en changeant de cité.
 etat_ref: mature
+consignes_scenarios:
+  policy_reform: 'Entité secondaire dans ce scénario : elle n''existe plus en 2098 qu''à l''état de souvenir des années 2020-2050 (trajectoire historique ou mythifié), évoquée brièvement, jamais acteur de premier plan.'
 ---
 
 # The Lattice

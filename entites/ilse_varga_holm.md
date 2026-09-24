@@ -25,6 +25,12 @@ scenario_ref: reference
 role_ref: >
   Souveraine-gérante d'Ergo-Wian Sovereign Holdings, troisième d'une lignée de gérants. Pragmatique, populaire auprès du conseil des actionnaires, elle tient le territoire d'une main de fer sous des dehors de gestionnaire. Elle a désigné comme successeuse Hyphan Raghavan, qui n'est pas issue de la lignée.
 etat_ref: dominant
+consignes_scenarios:
+  breakdown: 'Personnage secondaire dans ce scénario : rôle sans aucun rapport avec Ergo-Wian ni avec la gouvernance d''entreprise, choisi selon la logique propre de ce monde.'
+  fortress_world: 'Personnage secondaire dans ce scénario : rôle sans aucun rapport avec Ergo-Wian ni avec la gouvernance d''entreprise, choisi selon la logique propre de ce monde.'
+  new_sustainability: 'Personnage secondaire dans ce scénario : rôle sans aucun rapport avec Ergo-Wian ni avec la gouvernance d''entreprise, choisi selon la logique propre de ce monde.'
+  eco_communalism: 'Personnage secondaire dans ce scénario : rôle sans aucun rapport avec Ergo-Wian ni avec la gouvernance d''entreprise, choisi selon la logique propre de ce monde.'
+  policy_reform: 'Personnage secondaire dans ce scénario : rôle sans aucun rapport avec Ergo-Wian ni avec la gouvernance d''entreprise, choisi selon la logique propre de ce monde.'
 ---
 
 # Ilse Varga-Holm

@@ -22,6 +22,8 @@ role_ref: >
   Recruteur clandestin de Kindling en Europe Occidentale Reconstruite, qui repère dans les administrations et les universités les profils désabusés susceptibles de basculer.
 etat_ref: marginal
 est_clandestin_ref: true
+consignes_scenarios:
+  policy_reform: Personnage secondaire dans ce scénario, au rôle modeste, sans lien avec Kindling ni l'accélérationnisme ; rôle choisi selon la logique propre de ce monde.
 ---
 
 # Kaspar Lind

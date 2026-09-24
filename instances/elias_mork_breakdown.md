@@ -1,8 +1,8 @@
 ---
 name: Elias Mørk — Le Nœud de Bergen
 type: instance
-slug: elias_m_rk_breakdown
-entite: elias_m_rk
+slug: elias_mork_breakdown
+entite: elias_mork
 scenario: breakdown
 localisation:
   zone: noeud_nordark_tromso
