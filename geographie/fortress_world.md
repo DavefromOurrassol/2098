@@ -428,12 +428,14 @@ zones:
   - entite: Russie
     type_entite: pays
     portion: null
-  description: Infrastructure stratégique militarisée contrôlant les corridors arctiques dégelés,
-    intégrée de facto au Pacte des Forteresses Souveraines. La Nordisk Arktisk Transitkontroll
-    (NAT), filiale armée d'Ergo-Wian, verrouille les voies maritimes arctiques devenues artères
-    vitales pour les échanges inter-blocs, sous surveillance orbitale permanente. Surnommée
-    « Euro-Nord » dans le Hors, la zone est de fait gouvernée par Ergo-Wian, qui y détient les
-    pleins pouvoirs au service d'une population vieillissante protégée par ses forteresses.
+  - entite: République tchèque
+  description: Infrastructure stratégique militarisée contrôlant les corridors arctiques
+    dégelés, intégrée de facto au Pacte des Forteresses Souveraines. La Nordisk Arktisk
+    Transitkontroll (NAT), filiale armée d'Ergo-Wian, verrouille les voies maritimes
+    arctiques devenues artères vitales pour les échanges inter-blocs, sous surveillance
+    orbitale permanente. Surnommée « Euro-Nord » dans le Hors, la zone est de fait
+    gouvernée par Ergo-Wian, qui y détient les pleins pouvoirs au service d'une population
+    vieillissante protégée par ses forteresses.
   statut: stable
   tensions_internes: Conflits entre factions nordiques sur le degré d'autonomie de
     la NAT face aux blocs continentaux ; résistance des milices logistiques locales
@@ -2546,11 +2548,11 @@ zones:
   - entite: Andorre
     type_entite: pays
     portion: null
-  description: Confédération collectiviste des deux rives, climat désertique à oasis, gestion
-    communautaire des ressources héritée du principe pré-islamique du hima (terre protégée).
-    Connue dans le Hors sous le nom populaire de « Califat de Barcelone », que les légendes
-    peuplent de sorciers et de guerriers aux pouvoirs surnaturels, bien que la religion ne soit
-    pas le fondement de l'union.
+  description: Confédération collectiviste des deux rives, climat désertique à oasis,
+    gestion communautaire des ressources héritée du principe pré-islamique du hima
+    (terre protégée). Connue dans le Hors sous le nom populaire de « Califat de Barcelone
+    », que les légendes peuplent de sorciers et de guerriers aux pouvoirs surnaturels,
+    bien que la religion ne soit pas le fondement de l'union.
   statut: emergent
   tensions_internes: Conflits entre traditionalistes attachés aux principes ancestraux
     du hima et modernistes prônant une gestion technocratique des ressources, ainsi
@@ -2661,9 +2663,6 @@ zones:
   - entite: Slovaquie
     type_entite: pays
     portion: null
-  - entite: République tchèque
-    type_entite: pays
-    portion: null
   - entite: Autriche
     type_entite: pays
     portion: null
@@ -2692,15 +2691,16 @@ zones:
     type_entite: pays
     portion: 'Toute la France hors littoral Manche-Atlantique (Zone Interdite de Heysham)
       : Bassin parisien, Centre, Est, vallée du Rhône et façade méditerranéenne.'
-  description: 'Territoires interstitiels d''Europe méridionale échappant à tout contrôle effectif
-    d''un bloc — chaos généralisé, réfugiés climatiques et de guerre, contrôlés localement par
-    des bandes armées rivales (les recycleurs, le mouvement de reconquête européenne) qui se
-    disputent l''accès aux marchés lucratifs de main-d''œuvre offerts par les enclaves forteresses
-    comme l''Espace Nordique et Artique. Revendication nominale des blocs voisins sur certains
-    de ces territoires (notamment via Bloc Atlantique pour la France et l''Italie) non assortie
-    d''un contrôle réel — tension structurelle assumée, pas une incohérence. Dans la langue
-    courante, on l''appelle simplement « le Hors » : le territoire hors-forteresse, livré aux
-    factions armées qui s''y disputent le pouvoir et l''accès aux contrats d''Ergo-Wian.'
+  description: 'Territoires interstitiels d''Europe méridionale échappant à tout contrôle
+    effectif d''un bloc — chaos généralisé, réfugiés climatiques et de guerre, contrôlés
+    localement par des bandes armées rivales (les recycleurs, le mouvement de reconquête
+    européenne) qui se disputent l''accès aux marchés lucratifs de main-d''œuvre offerts
+    par les enclaves forteresses comme l''Espace Nordique et Artique. Revendication
+    nominale des blocs voisins sur certains de ces territoires (notamment via Bloc
+    Atlantique pour la France et l''Italie) non assortie d''un contrôle réel — tension
+    structurelle assumée, pas une incohérence. Dans la langue courante, on l''appelle
+    simplement « le Hors » : le territoire hors-forteresse, livré aux factions armées
+    qui s''y disputent le pouvoir et l''accès aux contrats d''Ergo-Wian.'
   statut: fragmenté
   tensions_internes: Conflits violents entre recycleurs (groupes criminels exploitant
     les ressources et les populations) et le mouvement de reconquête européenne (factions
@@ -2810,16 +2810,16 @@ zones:
   - entite: Paris
     type_entite: region_administrative
     portion: null
-  description: 'Ancienne capitale réduite à un champ de ruines habité, aux portes de la Zone
-    Interdite de Heysham qui a englouti la basse Seine en 2044. Ses anciens quartiers résidentiels
-    sont la principale mine de métaux du « monde d''avant » : les Recycleurs y tiennent leurs
-    « cycles », centres de collecte où tout se revend, tandis que les raids de la Reconquête
-    européenne frappent les communautés de déplacés, dont une importante diaspora issue des
-    migrations de la guerre indo-arabe de 2038.'
+  description: 'Ancienne capitale réduite à un champ de ruines habité, aux portes
+    de la Zone Interdite de Heysham qui a englouti la basse Seine en 2044. Ses anciens
+    quartiers résidentiels sont la principale mine de métaux du « monde d''avant »
+    : les Recycleurs y tiennent leurs « cycles », centres de collecte où tout se revend,
+    tandis que les raids de la Reconquête européenne frappent les communautés de déplacés,
+    dont une importante diaspora issue des migrations de la guerre indo-arabe de 2038.'
   statut: en_declin
-  tensions_internes: Guerre de rues entre Recycleurs et Reconquête européenne pour le contrôle
-    des quartiers et du recrutement forcé ; rapts de jeunes adultes destinés à la traite ;
-    transactions discrètes des deux factions avec Ergo-Wian.
+  tensions_internes: Guerre de rues entre Recycleurs et Reconquête européenne pour
+    le contrôle des quartiers et du recrutement forcé ; rapts de jeunes adultes destinés
+    à la traite ; transactions discrètes des deux factions avec Ergo-Wian.
   periode_transition: 2044-2060
   evenement_transition: null
   lieux_emblematiques: []
@@ -2837,12 +2837,13 @@ zones:
     type_entite: region_administrative
     portion: null
   description: 'Ancienne ville nouvelle du sud parisien dont les laboratoires de biotechnologie
-    abandonnés — l''ancien Génopole — servent de terrain neutre de fait : factions ennemies
-    et émissaires d''Ergo-Wian y négocient à l''abri des regards contrats de service, livraisons
-    de travailleurs et marchés inavouables.'
+    abandonnés — l''ancien Génopole — servent de terrain neutre de fait : factions
+    ennemies et émissaires d''Ergo-Wian y négocient à l''abri des regards contrats
+    de service, livraisons de travailleurs et marchés inavouables.'
   statut: en_declin
-  tensions_internes: Neutralité tacite fragile, garantie par l'intérêt commun des factions
-    à commercer avec Ergo-Wian ; nul ne sait qui surveille qui dans les anciens laboratoires.
+  tensions_internes: Neutralité tacite fragile, garantie par l'intérêt commun des
+    factions à commercer avec Ergo-Wian ; nul ne sait qui surveille qui dans les anciens
+    laboratoires.
   periode_transition: 2044-2060
   evenement_transition: null
   lieux_emblematiques: []
@@ -2860,14 +2861,15 @@ zones:
     type_entite: region_administrative
     portion: null
   description: Cité-refuge du sud du Hors, dressée au milieu d'une plaine quasi désertique
-    où l'été approche les 50 °C. Organisée autour de l'ancienne basilique Saint-Sernin, elle
-    vit comme un monastère du désert, à la manière des refuges cathares d'autrefois. La tribu
-    des Cinq Nations, clan indépendant dirigé par sa cheffe-chamane, la tient hors de portée
-    des Recycleurs comme de la Reconquête européenne. Elle entretient des liens étroits d'échange
-    et de passage avec Al-Hima, de l'autre côté des Pyrénées, sans lui appartenir.
+    où l'été approche les 50 °C. Organisée autour de l'ancienne basilique Saint-Sernin,
+    elle vit comme un monastère du désert, à la manière des refuges cathares d'autrefois.
+    La tribu des Cinq Nations, clan indépendant dirigé par sa cheffe-chamane, la tient
+    hors de portée des Recycleurs comme de la Reconquête européenne. Elle entretient
+    des liens étroits d'échange et de passage avec Al-Hima, de l'autre côté des Pyrénées,
+    sans lui appartenir.
   statut: stable
-  tensions_internes: Convoitise des deux factions ; eau rare ; équilibre délicat entre indépendance
-    et dépendance commerciale envers Al-Hima.
+  tensions_internes: Convoitise des deux factions ; eau rare ; équilibre délicat entre
+    indépendance et dépendance commerciale envers Al-Hima.
   periode_transition: 2050-2075
   evenement_transition: null
   lieux_emblematiques: []
