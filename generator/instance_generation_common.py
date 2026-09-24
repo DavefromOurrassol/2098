@@ -441,7 +441,8 @@ def call_claude_json(client, system, user_content, max_tokens=INSTANCE_MAX_TOKEN
 # ---------------------------------------------------------------------------
 
 def build_instance_prompt(entity_fm, scenario, hard_constraint=None, exclude_slug=None,
-                           zone_hint=None, ancrage_temporel="libre", injection_custom=False):
+                           zone_hint=None, ancrage_temporel="libre", injection_custom=False,
+                           consigne_scenario=None):
     """hard_constraint, si fourni : {"role": ..., "etat": ...} — contrainte
     dure pour le scénario de référence d'une entité custom.
 
@@ -460,6 +461,14 @@ def build_instance_prompt(entity_fm, scenario, hard_constraint=None, exclude_slu
         dans les 1-3 prochaines années, ancrée dans l'ÉTAT DU MONDE RÉEL
         plutôt que dans un jalon lointain du scénario. À utiliser quand on
         veut délibérément des entités qui émergent "maintenant".
+
+    consigne_scenario (ajouté le 24 septembre 2026) : consigne libre de
+    l'utilisateur pour CE scénario précis (champ consignes_scenarios de
+    entites_custom/queue.yaml, mode custom). Contrairement à hard_constraint
+    (scénario de référence uniquement, rôle/état figés), c'est une
+    orientation : poids narratif, trajectoire souhaitée, lien ou non avec
+    une autre entité... Sert typiquement à garder une entité secondaire
+    hors de son scénario de référence. None = comportement inchangé.
 
     injection_custom (ajouté le 15 août 2026, chantier injection
     matricielle) : si True, demande en plus au LLM un bloc
@@ -496,6 +505,17 @@ def build_instance_prompt(entity_fm, scenario, hard_constraint=None, exclude_slu
 L'utilisateur souhaite ancrer cette entité dans la zone : **{zone_hint}**
 Tiens-en compte pour la localisation, les responsabilités et le contexte
 narratif — mais reste cohérent avec la logique du scénario.
+"""
+
+    consigne_block = ""
+    if consigne_scenario:
+        consigne_block = f"""
+## CONSIGNE DE L'UTILISATEUR POUR CE SCÉNARIO (à respecter)
+{consigne_scenario}
+
+Cette consigne prime sur ton appréciation libre du poids ou de la
+trajectoire de l'entité dans ce scénario (elle ne remplace pas la
+cohérence avec la logique du monde décrite plus bas).
 """
 
     constraint_block = ""
@@ -669,7 +689,7 @@ Génère l'instance de l'entité "{entity_fm['name']}" dans le scénario "{scena
 - Catégorie : {entity_fm.get('category', '')}
 - Description : {entity_fm.get('description', '')}
 - Tension fondamentale : {entity_fm.get('tension_fondamentale', '')}
-{constraint_block}
+{constraint_block}{consigne_block}
 ## SCÉNARIO {scenario.upper()}
 - État : {sc_ctx['state_of_system']} | Tension : {sc_ctx['tension_level']}/5 | Trajectoire : {sc_ctx['trajectory']}
 - Régime : {sc_ctx['political_regime']} | Vitesse : {sc_ctx['transformation_speed']}
@@ -1264,6 +1284,7 @@ def process_entity_scenario(client, entity_fm, scenario, force=False, dry_run=Fa
 
     print(f"{log_prefix} {scenario}"
           f"{' [CONTRAINTE DURE]' if hard_constraint else ''}"
+          f"{' [CONSIGNE]' if (entity_fm.get('consignes_scenarios') or {}).get(scenario) else ''}"
           f"{' [ANCRAGE RÉCENT]' if ancrage_temporel == 'recent' else ''}...",
           end=" ", flush=True)
 
@@ -1273,6 +1294,10 @@ def process_entity_scenario(client, entity_fm, scenario, force=False, dry_run=Fa
         zone_hint=entity_fm.get("zone_hint"),
         ancrage_temporel=ancrage_temporel,
         injection_custom=injection_custom,
+        # consignes_scenarios (24 sept 2026) : même principe que zone_hint,
+        # lu depuis entity_fm (présent en mémoire en mode custom seulement,
+        # absent -- donc sans effet -- depuis generate_instances.py).
+        consigne_scenario=(entity_fm.get("consignes_scenarios") or {}).get(scenario),
     )
     try:
         instance_data = call_claude_json(

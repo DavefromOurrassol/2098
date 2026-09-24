@@ -603,10 +603,14 @@ QUEUE_TEMPLATE = """\
 #                     hybride | autre | média
 #   role            : rôle dans le scénario de référence — CONTRAINTE
 #                     DURE, repris tel quel par le script, pas reformulé
-#   etat            : état dans le scénario de référence — CONTRAINTE
-#                     DURE. Valeurs possibles :
-#                     actif | disparu | transformé | clandestin |
+#   etat            : trajectoire dans le scénario de référence —
+#                     CONTRAINTE DURE. Valeurs possibles (depuis la fusion
+#                     trajectoire du 9 août 2026) :
+#                     émergent | marginal | ascendant | dominant | mature |
+#                     déclinant | résiduel | transformé | disparu |
 #                     historique | mythifié
+#   est_clandestin  : optionnel. true | false | null (null = pas de
+#                     contrainte). Remplace l'ancien état "clandestin".
 #   scenario_ref    : le scénario où s'appliquent role/etat ci-dessus
 #                     (un seul, parmi : breakdown, fortress_world,
 #                     new_sustainability, eco_communalism,
@@ -619,6 +623,16 @@ QUEUE_TEMPLATE = """\
 #                     comme lieu d'ancrage de l'entité — injectée
 #                     directement dans le prompt de génération.
 #   source          : libre — date, contexte, lien...
+#   consignes_scenarios : optionnel (ajouté le 24 septembre 2026). Une
+#                     consigne libre PAR scénario (hors scenario_ref,
+#                     déjà fixé par role/etat), transmise au LLM
+#                     uniquement pour ce scénario — ex. garder l'entité
+#                     secondaire, en faire un souvenir historique, lui
+#                     donner un rôle sans rapport. Format :
+#                       consignes_scenarios:
+#                         breakdown: "rôle secondaire, souvenir des années 2030"
+#                         fortress_world: "..."
+#                     Un scénario absent de scenario_hint est ignoré.
 #   priorite_forcee : optionnel, false par défaut. true = garantit la
 #                     présence de cette entité dans les articles
 #                     générés sur TOUS les scénarios couverts
@@ -635,7 +649,8 @@ QUEUE_TEMPLATE = """\
 #     role: >
 #       Ancien officier de renseignement devenu cartographe clandestin
 #       des zones de non-droit, vendant ses relevés aux plus offrants.
-#     etat: clandestin
+#     etat: marginal
+#     est_clandestin: true
 #     scenario_ref: breakdown
 #     scenario_hint: null
 #     zone_hint: null
@@ -768,6 +783,28 @@ def process_custom_idea(client, idea, dry_run=False, ancrage_temporel="libre"):
     slug = slugify(nom)
     print("[3/3] Injection de l'entité...")
     zone_hint = idea.get("zone_hint") or None
+
+    # consignes_scenarios (24 septembre 2026) : consigne libre par scénario,
+    # injectée dans le prompt de l'instance du scénario concerné uniquement
+    # (voir build_instance_prompt, paramètre consigne_scenario). Les clés
+    # hors SCENARIOS ou hors des scénarios couverts sont signalées puis
+    # ignorées, jamais bloquantes.
+    consignes_scenarios = {}
+    raw_consignes = idea.get("consignes_scenarios") or {}
+    if not isinstance(raw_consignes, dict):
+        print(f"  ⚠ consignes_scenarios ignoré : attendu un dictionnaire "
+              f"{{scenario: texte}}, reçu {type(raw_consignes).__name__}")
+        raw_consignes = {}
+    for sc, texte in raw_consignes.items():
+        if sc not in SCENARIOS:
+            print(f"  ⚠ consignes_scenarios : scénario inconnu {sc!r} — ignoré")
+        elif sc not in scenarios:
+            print(f"  ⚠ consignes_scenarios : {sc!r} hors scenario_hint — ignoré")
+        elif texte and str(texte).strip():
+            consignes_scenarios[sc] = " ".join(str(texte).split())
+    if consignes_scenarios:
+        print(f"  Consignes par scénario : {', '.join(consignes_scenarios)}")
+
     # Chantier trajectoire (9 août 2026, Option 1) — voir _parse_optional_bool()
     est_clandestin_ref = _parse_optional_bool(idea.get("est_clandestin"))
 
@@ -781,6 +818,7 @@ def process_custom_idea(client, idea, dry_run=False, ancrage_temporel="libre"):
         "etat_ref": idea.get("etat"),
         "est_clandestin_ref": est_clandestin_ref,
         "zone_hint": zone_hint,
+        "consignes_scenarios": consignes_scenarios,
     }
 
     if not dry_run:
