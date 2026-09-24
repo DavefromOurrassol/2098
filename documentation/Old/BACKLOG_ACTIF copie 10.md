@@ -1,6 +1,5 @@
 # Backlog actif — Ourrassol 2098
-*Dernière consolidation majeure le 23 août 2026 (reconsolidé le 23
-septembre 2026 : #2, #2bis, #4 et S11 clos et archivés), mis à jour en continu
+*Dernière consolidation majeure le 23 août 2026, mis à jour en continu
 à chaque clôture de session. Chantiers clos et leur historique complet
 dans `BACKLOG_ARCHIVE.md` (fichier séparé, à uploader seulement en cas
 de besoin de vérifier si un point a déjà été traité). Chaque chantier
@@ -59,56 +58,29 @@ complet — chantier surtout consacré à la refonte Carte, chantier #2) :
   construite cette session) pour repartir de zéro plutôt que de continuer
   à réparer l'existant — **à recréer proprement**, voir Reste à faire.
 
-**Statut au 23 septembre : EN PAUSE sur décision de David.** Seuls deux
-points ont avancé en marge d'autres chantiers : `tensions_internes`/
-`periode_transition`/`evenement_transition` de Zone Interdite de Heysham
-renseignés (premier test réel du panneau "Zones à enrichir"), et
-Royaume-Uni affecté à Heysham par David (entrée `origine_reelle` au format
-minimal, voir S13).
-
 **Reste à faire** :
 - **Recréer Interzone Corridor proprement** (supprimée le 12 sept pour
-  repartir de zéro) et dessiner ses tracés pays par pays via le panneau
-  unique (bouton "✏️ dessiner" par ligne de pays). **Clarifier au passage
-  le sens de "Interzone"** : la description de Heysham parle des
-  "pillards de l'Interzone" — ancien nom de Zone Euro Sud, ou futur
-  Interzone Corridor ? Corriger la description si c'est un reste.
+  repartir de zéro) et dessiner ses tracés pays par pays via le nouveau
+  panneau unique (bouton "✏️ dessiner" par ligne de pays).
 - Créer Nordgard (niveau 1, Pays-Bas comme point de départ), Corridor
   d'Amsterdam, Zone de Koursk — discutées/nommées, **pas confirmées
   créées dans le vault réel**, à vérifier en début de session plutôt que
   supposer.
+- Corriger un overlay mal renseigné sur l'Allemagne (enregistré comme
+  couvrant la Norvège par erreur de sélection dans la liste déroulante —
+  voir chantier #2 ci-dessous, "Overlay créé sur le mauvais pays") —
+  statut non revérifié depuis le 8 septembre.
 - Injecter dans le vault les personnages/entités/événements extraits du
   texte Hyphan (liste déjà faite, jamais transformée en fiches).
-- **Partage France / Allemagne à trancher (constats du 23 sept,
-  `check_overlay_portion_coherence.py` + `diagnostiquer_portions_
-  orphelines.py`)** — aucune correction faite, car chacune revient à
-  décider qui possède quelle partie du territoire :
-  - Heysham a un overlay France (littoral Manche-Atlantique, Calais →
-    Lorient) cohérent avec son texte `portion`.
-  - Zone Euro Sud liste **France deux fois** (DOUBLON INTERNE), sans
-    aucun overlay : "France - Interzone" (placeholder, ancien nom) et un
-    texte qui décrit **Heysham** sur le Bassin parisien/Loire/Nord —
-    incompatible avec le texte littoral de Heysham. Retirer les textes
-    sans décider ferait de ces entrées des revendications "France
-    entière".
-  - Espace Nordique et Arctique porte une entrée Allemagne avec un
-    placeholder "Allemagne - Espace Nordique et Artique", sans overlay.
-    L'Allemagne n'est plus du tout dans Zone Euro Sud. L'ancien point
-    "overlay Allemagne enregistré sur la Norvège" est **périmé** : aucun
-    overlay Allemagne ni Norvège n'existe plus (seuls overlays de
-    `fortress_world` : Heysham/France et Espace Nordique/Russie-
-    Kaliningrad).
-- **Finlande et Lituanie** dans aucune zone de `fortress_world` (fichiers
-  `impact_bascule_*` présents : probablement désaffectées depuis la Carte
-  sans réaffectation). 2 chantiers `pays_sans_zone` écrits le 23 sept.
-- **12 sous-zones restées sous leur ancien parent** après les découpages
-  Hyphan (`check_origine_reelle_coherence`, 23 sept) : Bratislava-Secteur
-  Alpha et Genève-Bunker (+ leurs enfants) sous `bloc_eurasiatique_
-  occidental` alors que Slovaquie/Suisse sont dans Zone Euro Sud ;
-  Tbilissi-Nord (+ enfant) sous `zones_grises_tampons` alors que la
-  Géorgie est dans Zone Euro Sud ; Almaty (+ enfant) sous `zones_grises_
-  tampons` alors que le Kazakhstan est dans le Bloc Eurasiatique.
-  `reparenter_sous_zones_orphelines.py` ou "↗️ déplacer" dans l'arbre.
+- Écrire les textes `portion` du partage France (Zone Euro Sud / Zone
+  Interdite de Heysham) — **partiellement traité le 12 sept** : les
+  textes `portion` obsolètes/orphelins (masque supprimé sans que le texte
+  suive, avant le fix du 12 sept) ont été nettoyés sur les entrées
+  identifiées (Allemagne/Russie/Biélorussie/Slovaquie/République
+  tchèque/Belgique sur `espace_nordique_arctique`, France/Pays-Bas/
+  Allemagne sur `zone_euro_sud`) — écrire un texte `portion` **correct et
+  à jour** pour le partage France reste à faire ; `tensions_internes`/
+  `periode_transition` toujours vides sur Zone Interdite de Heysham.
 
 Voir `HANDOFF_8_SEPTEMBRE.md`, `HANDOFF_10_SEPTEMBRE.md` et
 `HANDOFF_12_SEPTEMBRE.md` pour le détail complet des zones et décisions
@@ -116,12 +88,130 @@ actées.
 
 ---
 
-## ✅ 2 / 2bis. Overlays + améliorations Carte / Refonte architecture Carte — CLOS le 23 septembre
-Reliquats traités le 23 sept (code mort `app.js`, `check_overlay_portion_
-coherence.py` débogué + intégré au scan, premier test réel "Zones à
-enrichir", portions orphelines rescannées). Détail : `BACKLOG_ARCHIVE.md`
-et `HANDOFF_23_SEPTEMBRE.md`. Points résiduels mineurs déplacés en
-secondaire (S12, S13, S14).
+## 🟢 2. Overlays GeoJSON + améliorations Carte (zones qui coupent un pays)
+**Ouvert le 8 septembre**, parti d'une question de David sur le scénario
+Hyphan (zones qui coupent un pays en deux) — a mené à la construction d'un
+système complet de polygones custom dessinés à la main sur la carte
+Leaflet, puis (12 septembre) à une **refonte complète de l'architecture**
+suite à l'accumulation de bugs de synchronisation. Voir le sous-chantier
+"Refonte architecture Carte" plus bas pour le détail de cette deuxième
+phase, nettement plus large que le scope initial.
+
+**Codé et livré le 8 septembre** : routes overlays (créer/lire/supprimer,
+écriture directe de `origine_reelle` manquante à la création), interface
+de dessin (Leaflet.Draw), panneau "Zones à enrichir" (comble
+`tensions_internes`/`periode_transition` vides sur une zone issue d'un
+split — aucun script existant ne le faisait), panneau "Gérer les
+overlays", bouton "Désaffecter" un pays, liste déroulante de zones dans
+`✂️ Scinder` (remplace la saisie de slug à la main), fix du bouton
+"déplacer" manquant sur les zones niveau 1, fix de la synchronisation
+`zones_pays.json` après un reparent (zone rétrogradée niveau 1→2+),
+`enrich_zone_manquante.py` (nouveau script `generator/`).
+
+**Non testé en conditions réelles avant livraison** (pas d'accès à
+`llm_client.py` ni à une vraie clé API côté Claude) : la génération LLM
+du panneau "Zones à enrichir" — premier vrai test à faire par David.
+
+**Fait le 9-10 septembre** : option "+ Créer une nouvelle zone niveau 1…"
+ajoutée au flux de dessin d'overlay (réutilise `/api/carte/creer_zone_vide`,
+déjà existante pour S11). Fix géométrie invalide sur
+`zone_dessin_complet.py` (S11) — `TopologyException` GEOS sur un tracé
+à main levée auto-intersectant, corrigé via `.buffer(0)`. Personnalisation
+visuelle de zone (couleur/motif, construite le 8 septembre sur une branche
+divergente) rapatriée dans la branche principale — bouton 🎨 dans l'arbre
+**et** dans le menu ✏️ de la légende, motif explicite "sans hachure"
+ajouté.
+
+**Bug trouvé le 10 septembre** : le bouton ✏️ Renommer ne propage pas vers
+les tracés d'overlay dessinés — **corrigé le 12 septembre** dans le cadre
+de la refonte architecture (voir sous-chantier ci-dessous, `rename()` migre
+désormais aussi les overlays).
+
+**Reste à faire (hors refonte, toujours valable)** :
+- `check_overlay_portion_coherence.py` (script de diagnostic, livré mais
+  **volontairement pas intégré au GUI**) — David veut le déboguer en
+  conditions réelles avant de l'ajouter comme étape optionnelle de
+  `scan_geographie_complet.py`.
+- Piège identifié, pas corrigé : le mécanisme multi-noms partageant un
+  polygone (Royaume-Uni/Angleterre/Écosse/Pays de Galles) peut laisser une
+  couleur "fantôme" si un seul des 4 noms est réaffecté — à surveiller si
+  ça touche Écosse/Pays de Galles à l'avenir.
+- Overlay Allemagne créé sur le mauvais pays (Norvège au lieu d'Allemagne,
+  erreur de sélection dans la liste déroulante) — à supprimer et refaire,
+  statut non revérifié depuis le 8 septembre.
+- Drift `zones_pays.json` repéré en marge sur `breakdown` (Groenland,
+  Arctique) et `reference` (Italie, Kirghizistan, Tadjikistan,
+  Afghanistan) — sans incidence sur `fortress_world`, pas traité, aucune
+  urgence identifiée.
+
+Voir `HANDOFF_8_SEPTEMBRE.md` et `HANDOFF_10_SEPTEMBRE.md` pour le détail
+complet (fichiers livrés, tous les bugs trouvés/corrigés).
+
+---
+
+## 🟢 2bis. Refonte architecture Carte (`zone_repository.py` + `routes_carte.py`)
+**Ouvert et quasi entièrement bouclé le 12 septembre.** Motivé par
+l'accumulation de bugs de synchronisation entre les trois sources de
+vérité d'une zone (`geographie/{scenario}.md`, `zones_pays.json`,
+`geo_overlays/{scenario}.geojson`) — split/reparent/rename avaient chacun
+leur propre trou trouvé et corrigé séparément (15 juillet, 8 sept, 10
+sept). David a demandé une refonte plutôt que d'attendre le prochain trou.
+
+**Backend construit et testé en conditions réelles** : `gui/
+zone_repository.py` (nouveau module, point d'écriture unique) +
+`gui/routes_carte.py` (Blueprint Flask, couche HTTP fine) remplacent ~20
+routes historiques d'`app.py`. Toutes les opérations portées : rename,
+reparent, split, personnaliser (+ hachures), assign/desaffecter, overlays
+créer/supprimer, creer_zone_n1, **supprimer_zone_n1 (nouveau, n'existait
+pas avant)**, propose (LLM), impact, ignorer. Script d'intégration
+réutilisable (`integrate_routes_carte.py`, retire les anciennes routes
+d'`app.py`, insère le Blueprint, valide via AST Python + `node --check`
+avant d'écrire quoi que ce soit).
+
+**Frontend reconstruit** : masquage overlay correct (opacité pleine,
+uniforme base/overlay), couleur identique entre calque de base et overlay
+d'une même zone, villes principales (nouvelle couche + toggle), contour de
+sélection unique et géométriquement précis (`turf.union`/`turf.difference`
+plutôt qu'un trait par pays), sous-zones enfin localisables (avec repli
+sur la zone parente si pas de géométrie propre), panneau unique par zone
+(fusion scinder + overlays + personnalisation + suppression, un seul point
+d'entrée "✏️ éditer" légende+arbre), hachures génériques désormais
+désactivées par défaut et pilotables par zone (au lieu d'automatiques
+au-delà de 8 zones).
+
+**~15 bugs trouvés et corrigés en testant en conditions réelles** pendant
+la refonte elle-même — liste complète dans `HANDOFF_12_SEPTEMBRE.md`
+(doublon Turquie, incohérence couleur base/overlay, surbrillance qui ne
+suivait pas le clic, opacité incohérente, désaffecter qui ne fonctionnait
+pas réellement, portions orphelines après suppression de masque, flash de
+sous-zone au chargement, bug du script d'intégration sur un prompt LLM
+multi-lignes non indenté confondu avec du code par une heuristique texte
+— corrigé en repassant par l'AST Python).
+
+**Reste à faire** :
+- ~~Correction du 12 septembre (soir)~~ : ce chantier listait à tort S11
+  comme "panneau GUI encore à construire" — vérification faite sur le code
+  réel, **S11 est en fait complet et fonctionnel**. Le seul vrai reste à
+  faire de cette correction — **migrer `dessiner_zone_complete/proposer`
+  vers `routes_carte.py`** — **fait et testé en conditions réelles le 14
+  septembre** (démarrage serveur propre, route répond, cycle S11 complet
+  validé au navigateur ; `creer_zone_vide`, route sœur du même flux, reste
+  volontairement dans `app.py`, non demandée). **Enrichissement LLM des
+  zones manquantes** reste non porté, fonctionnel tel quel dans `app.py`.
+- **Nettoyage de code mort** : `_ouvrirSplitPanel`, `_ouvrirPersoPanel`
+  (`app.js`) et leurs fonctions associées ne sont plus jamais appelées
+  depuis la fusion dans le panneau unique — laissées en place par
+  précaution, à retirer dans une prochaine passe.
+- Diagnostiquer si d'autres pays/zones ont des textes `portion` orphelins
+  au-delà de ceux déjà nettoyés le 12 sept (`diagnostiquer_portions_
+  orphelines.py` disponible pour relancer le scan).
+- Voir chantier #1 pour la suite d'Interzone Corridor (supprimée, à
+  recréer).
+
+Voir `HANDOFF_12_SEPTEMBRE.md` pour le détail complet (tous les fichiers
+livrés — une trentaine de scripts de patch/diagnostic incrémentaux,
+`zone_repository.py`/`routes_carte.py`/`integrate_routes_carte.py` comme
+livrables durables).
 
 ---
 
@@ -209,35 +299,30 @@ confirmé par David.
 
 ---
 
-## 🟢 4. Revue des 14 chantiers `zone_suspecte` en attente
-**Ouvert le 23 septembre** (reliquat du système du 25 juillet ; le
-chantier "Doublons pays-entier" qui le portait est clos et archivé). État
-au 23 sept : 19 chantiers au total, 14 `a_traiter`, **tous
-`zone_suspecte`** (plus aucun `pays_sans_zone` avant le scan du 23 qui en a
-ajouté 2 pour Finlande/Lituanie, voir #1). Tri proposé en session, **non
-appliqué — David a choisi de traiter d'abord #2/#2bis/#3/#4** :
-- **À appliquer** : `ameriques_multipolaires`/reference — proposition
-  déjà approuvée, relire puis "✓ Appliquer ce chantier".
-- **Probablement à ignorer** (faux positif ou choix narratif) :
-  `moyen_orient_golfe`/new_sustainability (conflit Israël-Iran de 2026 =
-  histoire réelle de départ) ; `al_hima`, `espace_nordique_arctique`
-  (zones Hyphan, choix de David) ; `tuvalu_refugies_climatiques`,
-  `singapour_megapole`, `amazonie_pacte_vert` (enclaves neutres
-  plausibles en fortress_world) ; `japon_archipel_resilient`,
-  `inde_bassins_sacres` (eco_communalism, nuance plus qu'incohérence).
-- **À lire vraiment** : `peninsule_iberique_cooperative`/policy_reform
-  (seul signal structurel : "union régionale" avec Espagne seule dans
-  `origine_reelle`) ; `bloc_eurasiatique_souverainiste`/
-  new_sustainability ; `espace_eurasiatique`/policy_reform ;
-  `bloc_persique_autonome` et `pacte_des_souverains`/reference.
+## 🟢 4. Doublons "pays entier" (`origine_reelle`) + intégration GUI
+**Ouvert le 13 septembre, clos le 14.** Bug structurel `origine_reelle`
+diagnostiqué et corrigé sur les 6 scénarios, intégration GUI demandée par
+David construite et testée en conditions réelles de bout en bout (cycle
+complet : diagnostic → chantier → approbation → application). Détail
+complet : voir `BACKLOG_ARCHIVE.md` (table des chantiers clos) et
+`HANDOFF_13_SEPTEMBRE.md`/`HANDOFF_14_SEPTEMBRE.md`.
 
-⚠ Ne pas utiliser le bouton global "Appliquer" avec le filtre "Tous" tant
-que `ameriques_multipolaires` n'a pas été relu : il serait appliqué au
-passage.
+**Reste ouvert** (mineur, ne bloque rien) :
+- Bug #5 (garde-fou `zones_pays.json` limité à `pays_liste`) : seul le cas
+  "match trouvé" a été testé en conditions réelles. La branche "aucun
+  match" -- celle qui corrige effectivement le bug d'origine -- reste à
+  rejouer sur un cas réel (ex. Balkans occidentaux, Danemark / Groenland).
+- Application en LOT du chantier `doublon_pays_entier` (bouton "Appliquer"
+  global scenario/all) jamais testée en navigateur -- seul le chemin
+  "chantier isolé" (id) a été validé.
+- Backlog `pays_sans_zone`/`zone_suspecte` préexistant (système du 25
+  juillet, indépendant de ce chantier) : David a signalé qu'il restait des
+  chantiers de ce type visibles dans l'onglet -- état actuel non vérifié
+  cette session, à consulter en début de prochaine session.
 
 ---
 
-# PARTIE 2 — SECONDAIRE — différé, pas d'action tant que rien ne remonte
+## Secondaire — différé, pas d'action tant que rien ne remonte
 *Priorité basse confirmée le 30 août — regroupés ici pour ne pas encombrer la lecture des chantiers actifs. À retraiter dès qu'un signal réel remonte (récurrence, besoin concret), pas de calendrier fixé.*
 
 ---
@@ -376,37 +461,15 @@ directement et excluent explicitement les fichiers `_index.md`.
 
 ---
 
-## ⚪ S12. Dérive ancienne `zones_pays.json` (hors fortress_world)
-**Connue depuis le 8 sept, remesurée le 23 sept** après restauration de
-`zones_pays.json` (voir handoff) : `breakdown` (Arctique, Groenland),
-`new_sustainability` (Norvège), `reference` (Afghanistan, Italie, Kenya,
-Kirghizistan, Tadjikistan — Kenya est un rattachement volontaire).
-`fortress_world`, `eco_communalism`, `policy_reform` : 0. La carte ne lit
-pas ce fichier pour ses couleurs (elle lit les fiches `.md`), la dérive
-est donc invisible visuellement — mais le fichier sert à d'autres outils.
-Commande de mesure dans `HANDOFF_23_SEPTEMBRE.md`. Pas d'urgence.
-
----
-
-## ⚪ S13. Affectation depuis la Carte : entrée `origine_reelle` incomplète
-**Repéré le 23 sept.** `assign_pays` (`zone_repository.py`) écrit
-`- entite: X` seul, sans `type_entite` ni `portion`, alors que les autres
-chemins d'écriture produisent l'entrée complète (13 cas sur
-`fortress_world`). Rattrapable à tout moment par `scan_geographie_complet
---run-type-entite --apply-type-entite` ; corriger la cause dans
-`zone_repository.py` à la prochaine passe sur ce fichier (à fournir).
-
----
-
-## ⚪ S14. Piège "couleur fantôme" Royaume-Uni/Angleterre/Écosse/Galles
-**Surveillance seulement** (identifié le 8 sept, reporté de #2). Le
-mécanisme multi-noms partageant un polygone peut laisser une couleur
-fantôme si un seul des 4 noms est réaffecté. Au 23 sept, les 4 noms +
-Irlande sont dans Zone Interdite de Heysham (`fortress_world`),
-`check_conventions_territoires` cohérent. À revérifier si l'un d'eux
-change de zone. Mineur connexe : `sao_paulo_megapole` (`fortress_world`)
-n'a aucun pays dans son `origine_reelle` (2 alertes du garde-fou pour ses
-sous-zones).
+## ⚪ S11. Outil de dessin de zone complète — CLOS, information périmée retirée le 12 septembre
+**Repéré le 8 septembre**, conçu et codé progressivement (9-12 septembre).
+Cette entrée décrivait le stade "discussion de conception seulement" —
+**périmé** : le chantier est en réalité complet et fonctionnel (dessin
+d'un contour complet, classification automatique split/overlay/ignoré par
+intersection géométrique Shapely, enrichissement Natural Earth + LLM pour
+les textes de portion, panneau GUI de review avant application). Voir
+chantier #2bis (Refonte architecture Carte) pour le détail à jour — cette
+entrée reste ici seulement le temps du prochain passage en archive.
 
 ---
 

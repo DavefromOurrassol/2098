@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "documentation/GitHUB.md",
+                "file": "documentation/BACKLOG_ACTIF.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "GitHUB"
+              "title": "BACKLOG_ACTIF"
             }
           }
         ]
@@ -185,12 +185,17 @@
   },
   "active": "776177f70fc76299",
   "lastOpenFiles": [
+    "documentation/GitHUB.md",
+    "documentation/HANDOFF_23_SEPTEMBRE.md",
+    "documentation/BACKLOG_ARCHIVE.md",
+    "documentation/BACKLOG_ACTIF.md",
+    "documentation/Old/HANDOFF_14_SEPTEMBRE copie.md",
+    "documentation/Old/BACKLOG_ARCHIVE copie 3.md",
+    "documentation/Old/BACKLOG_ACTIF copie 10.md",
     "geographie/breakdown.md",
     "gui/logs/scan_geographie_complet_20260923_184045.log",
-    "documentation/BACKLOG_ACTIF.md",
     "gui/check_overlay_portion_coherence.py",
     "geographie/breakdown_avant_test.md",
-    "documentation/BACKLOG_ARCHIVE.md",
     "documentation/Old/BACKLOG_ARCHIVE copie 2.md",
     "documentation/USER_MANUAL_COMPLET.md",
     "documentation/HANDOFF_14_SEPTEMBRE.md",
@@ -212,10 +217,6 @@
     "documentation/HANDOFF_8_SEPTEMBRE.md",
     "geographie/fortress_world.md",
     "documentation/Old/BACKLOG_ACTIF copie 5.md",
-    "documentation/Old/HANDOFF_7_SEPTEMBRE.md",
-    "documentation/need_action/impact_bascule_pays_bas_fortress_world.md",
-    "documentation/need_action/impact_bascule_bulgarie_fortress_world.md",
-    "documentation/need_action/impact_bascule_italie_fortress_world.md",
     "gui/static/geo_overlays/fortress_world.geojson.bak",
     "gui/static/geo_overlays/fortress_world.geojson",
     "generator/enrich_zone_manquante.py",
