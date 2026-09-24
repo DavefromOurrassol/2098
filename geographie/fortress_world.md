@@ -419,6 +419,12 @@ zones:
   - entite: Estonie
     type_entite: pays
     portion: null
+  - entite: Finlande
+    type_entite: pays
+    portion: null
+  - entite: Lituanie
+    type_entite: pays
+    portion: null
   - entite: Allemagne
     type_entite: pays
     portion: null

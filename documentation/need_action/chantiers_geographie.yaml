@@ -1385,11 +1385,11 @@ chantiers:
   probleme: '''Finlande'' n''apparaît dans aucune zone (tous niveaux) de fortress_world.'
   source_diagnostic: zones_coherence
   date_detection: '2026-09-23'
-  statut: a_traiter
+  statut: traite
   proposition: null
   proposition_approuvee: false
   date_proposition: null
-  date_traitement: null
+  date_traitement: '2026-09-24'
 - id: fortress_world__lituanie
   scenario: fortress_world
   type: pays_sans_zone
@@ -1397,11 +1397,11 @@ chantiers:
   probleme: '''Lituanie'' n''apparaît dans aucune zone (tous niveaux) de fortress_world.'
   source_diagnostic: zones_coherence
   date_detection: '2026-09-23'
-  statut: a_traiter
+  statut: traite
   proposition: null
   proposition_approuvee: false
   date_proposition: null
-  date_traitement: null
+  date_traitement: '2026-09-24'
 - id: fortress_world__al_hima
   scenario: fortress_world
   type: zone_suspecte
