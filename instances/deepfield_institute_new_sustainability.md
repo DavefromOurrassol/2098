@@ -44,8 +44,8 @@ oppositions:
 
 type_relation_dominante: rivalité
 
-annee_debut: 2054
-annee_fin: 
+annee_debut: 2026
+annee_fin: 2053
 
 trajectoire: mythifié
 est_clandestin: false

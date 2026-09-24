@@ -1,7 +1,3 @@
-generated: '2026-09-24T18:10:35'
-total_issues: 1
-scenarios:
-  new_sustainability:
-  - instance: deepfield_institute_new_sustainability
-    type: disparu_sans_annee_fin
-    message: trajectoire='mythifié' mais annee_fin absent
+generated: '2026-09-24T19:27:18'
+total_issues: 0
+scenarios: {}
