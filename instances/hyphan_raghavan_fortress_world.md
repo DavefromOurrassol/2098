@@ -46,6 +46,7 @@ signes_distinctifs: Hyphan porte souvent une veste de travail usée, héritée d
 retry_signes_distinctifs: non
 tensions_narratives: "Hyphan se trouve au cœur de plusieurs tensions narratives : la découverte progressive de sa nature de Dédoublée, qui pourrait faire d’elle une cible ou une arme pour les factions en présence ; la pression croissante d’Ergo-Wian, qui voit en elle une anomalie à éliminer ou à exploiter ; et la fragilité de sa position dans les Cycles, où sa survie dépend de sa capacité à rester invisible tout en glanant assez pour vivre. Son amitié avec Malo, un autre glaneur, et sa relation avec son oncle Vikram, qui la protège sans comprendre ses crises, ajoutent une dimension humaine à un enjeu systémique : dans un monde où les blocs forteresses traquent toute forme de déviance, que devient une adolescente dont l’esprit refuse de se plier aux frontières du réel ?"
 date_creation: 2026-09-24
+exclure_articles: true
 ---
 
 # Hyphan Raghavan
