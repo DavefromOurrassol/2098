@@ -409,31 +409,65 @@ def call_claude_json(client, system, user_content, max_tokens=INSTANCE_MAX_TOKEN
     if not text:
         raise RuntimeError("Réponse LLM vide.")
 
-    candidate = re.sub(r"^```(?:json)?\s*", "", text)
-    candidate = re.sub(r"\s*```$", "", candidate)
-    try:
-        return json.loads(candidate)
-    except json.JSONDecodeError:
-        pass
+    resultat = extraire_json(text)
+    if resultat is not None:
+        return resultat
 
-    # Filet de sécurité : le modèle raisonne parfois en texte libre avant
-    # de donner le JSON final malgré la consigne — on cherche le dernier
-    # bloc {...} complet plutôt que d'exiger une réponse 100% JSON pure.
-    matches = re.findall(r"\{(?:[^{}]|\{[^{}]*\})*\}", text)
-    if matches:
-        try:
-            return json.loads(matches[-1])
-        except json.JSONDecodeError:
-            pass
-
+    brut = _sauver_reponse_brute(text)
     likely_truncated = len(text) >= max_tokens * 3  # ~3-4 car/token en français
     if likely_truncated:
         raise RuntimeError(
             f"Réponse LLM probablement tronquée (max_tokens={max_tokens}, "
             f"{len(text)} caractères reçus, aucun JSON complet trouvé) — "
-            f"texte reçu: {text[:200]!r}"
+            f"réponse complète : {brut} — début : {text[:200]!r}"
         )
-    raise RuntimeError(f"Aucun JSON exploitable trouvé dans la réponse : {text[:200]!r}")
+    raise RuntimeError(f"Aucun JSON exploitable trouvé dans la réponse "
+                       f"(réponse complète : {brut}) : {text[:200]!r}")
+
+
+def extraire_json(text):
+    """Extrait l'objet JSON d'une réponse LLM (24 sept 2026).
+
+    Tolère : bloc ```json suivi d'un commentaire, texte avant le JSON,
+    imbrication profonde (l'ancien filet regex ne lisait que 2 niveaux),
+    virgules finales avant } ou ]. Retourne le plus grand objet dict
+    décodable, ou None.
+    """
+    candidate = re.sub(r"^```(?:json)?\s*", "", text.strip())
+    candidate = re.sub(r"\s*```$", "", candidate)
+    try:
+        obj = json.loads(candidate)
+        if isinstance(obj, dict):
+            return obj
+    except json.JSONDecodeError:
+        pass
+
+    dec = json.JSONDecoder()
+    for source in (text, re.sub(r",(\s*[}\]])", r"\1", text)):
+        meilleur, taille = None, -1
+        for m in re.finditer(r"\{", source):
+            try:
+                obj, fin = dec.raw_decode(source, m.start())
+            except json.JSONDecodeError:
+                continue
+            if isinstance(obj, dict) and fin - m.start() > taille:
+                meilleur, taille = obj, fin - m.start()
+        if meilleur is not None:
+            return meilleur
+    return None
+
+
+def _sauver_reponse_brute(text):
+    """Sauve la réponse LLM inexploitable pour diagnostic ; retourne le chemin."""
+    try:
+        from datetime import datetime
+        d = VAULT_ROOT / "gui" / "logs"
+        d.mkdir(parents=True, exist_ok=True)
+        f = d / f"llm_json_echec_{datetime.now():%Y%m%d_%H%M%S}.txt"
+        f.write_text(text, encoding="utf-8")
+        return str(f.relative_to(VAULT_ROOT))
+    except Exception as e:  # le diagnostic ne doit jamais masquer l'erreur
+        return f"(non sauvegardée : {e})"
 
 
 # ---------------------------------------------------------------------------
