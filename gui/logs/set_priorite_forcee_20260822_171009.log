@@ -1,2 +1,0 @@
-usage: set_priorite_forcee.py [-h] --slug SLUG --value {true,false}
-set_priorite_forcee.py: error: unrecognized arguments: --scenario eco_communalism

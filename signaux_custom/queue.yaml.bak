@@ -1,6 +1,0 @@
-queue:
-- id: IA administratives
-  description: Adoption massive d'agents IA autonomes dans les systèmes de gestion
-    informationnelle des administrations et entreprises, avec une dépendance croissante
-    aux infrastructures algorithmiques pour le traitement des données critiques.
-  variable_hint: technologie_information
