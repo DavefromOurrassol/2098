@@ -6,59 +6,47 @@ entite: mouvement_de_reconquete_europeenne
 scenario: fortress_world
 localisation:
   zone: zone_euro_sud
-  lieu: Hors européen (Sud de l'Europe)
-  type_lieu: region
-
+  lieu: Milan (QG) — antenne à Lyon
+  type_lieu: ville
 type_dans_scenario: organisation
+role_dans_scenario: Faction armée du Hors (Zone Euro Sud) se présentant comme la dernière ligne de défense des populations européennes « d'origine » contre le déclin démographique et culturel. Elle mène des raids meurtriers contre les communautés de déplacés et migrants, pratique l'esclavage des jeunes adultes capturés, et recrute de force dans les zones grises. Rivale des Recycleurs pour le contrôle des territoires abandonnés, elle négocie néanmoins avec Ergo-Wian pour des ressources stratégiques, illustrant la contradiction entre son discours de pureté et sa dépendance aux mêmes réseaux qu'elle combat. Son quartier général est à Milan ; Lyon en est la principale antenne.
+responsabilites: 'Organisation de raids armés dans les zones tampons du Sud de l''Europe, trafic d''êtres humains vers les marchés d''esclaves des blocs souverains, contrôle des corridors logistiques illégaux pour le compte d''Ergo-Wian en échange d''armes et de technologies de surveillance. Recrutement forcé parmi les populations marginalisées, avec une idéologie de « reconquête » fondée sur la nostalgie d''une Europe pré-2040 et la xénophobie violente.
 
-role_dans_scenario: >
-  Faction armée du Hors (Zone Euro Sud) se présentant comme la dernière ligne de défense des populations européennes « d'origine » contre le déclin démographique et culturel. Elle mène des raids meurtriers contre les communautés de déplacés et migrants, pratique l'esclavage des jeunes adultes capturés, et recrute de force dans les zones grises. Rivale des Recycleurs pour le contrôle des territoires abandonnés, elle négocie néanmoins avec Ergo-Wian pour des ressources stratégiques, illustrant la contradiction entre son discours de pureté et sa dépendance aux mêmes réseaux qu'elle combat.
-
-responsabilites: >
-  Organisation de raids armés dans les zones tampons du Sud de l'Europe, trafic d'êtres humains vers les marchés d'esclaves des blocs souverains, contrôle des corridors logistiques illégaux pour le compte d'Ergo-Wian en échange d'armes et de technologies de surveillance. Recrutement forcé parmi les populations marginalisées, avec une idéologie de « reconquête » fondée sur la nostalgie d'une Europe pré-2040 et la xénophobie violente.
-
+  '
 impact_local: 4
 impact_systemique_global: 3
-
 variables_influencees:
-    - geopolitique_conflits
-    - demographie_mobilite_humaine
-    - valeurs_culture_tempo_sociale
-
+- geopolitique_conflits
+- demographie_mobilite_humaine
+- valeurs_culture_tempo_sociale
 zone_geographique:
-    - régionale
-    - continentale
-
+- régionale
+- continentale
 zone_systemique:
-    - sécurité
-    - gouvernance
-    - société
-
+- sécurité
+- gouvernance
+- société
 alliances:
-    - ergo_wian_sovereign_holdings_fortress_world
-    - reseaux_de_contrebande_energetique_transfrontaliere_fortress_world
-
+- ergo_wian_sovereign_holdings_fortress_world
+- reseaux_de_contrebande_energetique_transfrontaliere_fortress_world
 oppositions:
-    - les_recycleurs_fortress_world
-    - coalitions_des_deplaces_et_apatrides_fortress_world
-    - alliance_sanitaire_des_populations_exclues_fortress_world
-    - agences_de_securite_interieure_des_etats_forteresses_fortress_world
-
+- les_recycleurs_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- alliance_sanitaire_des_populations_exclues_fortress_world
+- agences_de_securite_interieure_des_etats_forteresses_fortress_world
 type_relation_dominante: conflit
-
 annee_debut: 2047
-annee_fin: 
-
+annee_fin: null
 trajectoire: ascendant
 est_clandestin: false
 generation: forteresse
-
 injection:
   garantie_selection: false
   type: custom
   annee_injection: 2047
-  contexte_injection: >
-    La RE-LFP exacerbe les conflits géopolitiques en militarisant les zones grises et en alimentant les tensions entre blocs souverains et populations exclues. Son trafic d'esclaves et ses raids réduisent la mobilité humaine dans le Hors, tandis que son discours identitaire radical polarise les valeurs culturelles, renforçant les clivages entre communautés.
+  contexte_injection: 'La RE-LFP exacerbe les conflits géopolitiques en militarisant les zones grises et en alimentant les tensions entre blocs souverains et populations exclues. Son trafic d''esclaves et ses raids réduisent la mobilité humaine dans le Hors, tandis que son discours identitaire radical polarise les valeurs culturelles, renforçant les clivages entre communautés.
+
+    '
   impact_sur_variables:
   - variable: geopolitique_conflits
     delta_level: 15
@@ -74,17 +62,16 @@ injection:
     polarite: 1
   propagation:
     via_matrice: true
+description_journalistique: 'La Légion des Fronts Purs, ou RE-LFP, est devenue en 2098 l''une des factions les plus redoutées du Hors européen. Connue pour ses raids éclair contre les camps de déplacés, ses membres, vêtus de treillis noirs frappés d''une croix celtique stylisée en rouge, opèrent depuis des bases mobiles dans les ruines des anciennes métropoles méditerranéennes. Leur chef charismatique, un ancien officier des milices corporatistes de 2045, justifie leurs exactions par un discours de « survie civilisationnelle », mêlant références à une Europe mythifiée et technologie de surveillance de pointe fournie par Ergo-Wian. Leur trafic d''esclaves, notamment de jeunes adultes en âge de travailler, alimente les marchés noirs des blocs souverains, tandis que leurs recrutements forcés dans les zones grises en font une armée de plus en plus structurée, malgré leur illégitimité officielle.
 
-description_journalistique: >
-  La Légion des Fronts Purs, ou RE-LFP, est devenue en 2098 l'une des factions les plus redoutées du Hors européen. Connue pour ses raids éclair contre les camps de déplacés, ses membres, vêtus de treillis noirs frappés d'une croix celtique stylisée en rouge, opèrent depuis des bases mobiles dans les ruines des anciennes métropoles méditerranéennes. Leur chef charismatique, un ancien officier des milices corporatistes de 2045, justifie leurs exactions par un discours de « survie civilisationnelle », mêlant références à une Europe mythifiée et technologie de surveillance de pointe fournie par Ergo-Wian. Leur trafic d'esclaves, notamment de jeunes adultes en âge de travailler, alimente les marchés noirs des blocs souverains, tandis que leurs recrutements forcés dans les zones grises en font une armée de plus en plus structurée, malgré leur illégitimité officielle.
+  '
+signes_distinctifs: 'Treillis noirs avec croix celtique rouge sang, masques à gaz modifiés pour ressembler à des crânes, utilisation de drones de surveillance low-cost et de véhicules blindés récupérés sur d''anciens stocks militaires. Leur symbole, une épée brisant une chaîne, est tagué sur les murs des zones qu''ils contrôlent, souvent accompagné de slogans comme « L''Europe d''abord » ou « Sang et Sol ».
 
-signes_distinctifs: >
-  Treillis noirs avec croix celtique rouge sang, masques à gaz modifiés pour ressembler à des crânes, utilisation de drones de surveillance low-cost et de véhicules blindés récupérés sur d'anciens stocks militaires. Leur symbole, une épée brisant une chaîne, est tagué sur les murs des zones qu'ils contrôlent, souvent accompagné de slogans comme « L'Europe d'abord » ou « Sang et Sol ».
+  '
 retry_signes_distinctifs: non
+tensions_narratives: 'La RE-LFP incarne la contradiction fondamentale du Hors : une faction qui se veut le rempart d''une identité européenne « pure » mais qui dépend des mêmes réseaux de contrebande et de corruption qu''elle prétend combattre. Leur rivalité avec les Recycleurs, autre faction majeure du Hors, pourrait dégénérer en guerre ouverte pour le contrôle des corridors logistiques, tandis que leur alliance avec Ergo-Wian les place en porte-à-faux avec les populations locales, qui les voient comme des mercenaires au service des blocs. Leur trajectoire ascendante interroge : parviendront-ils à s''imposer comme une force politique légitime, ou seront-ils écrasés par les États-forteresses qu''ils prétendent défendre ?
 
-tensions_narratives: >
-  La RE-LFP incarne la contradiction fondamentale du Hors : une faction qui se veut le rempart d'une identité européenne « pure » mais qui dépend des mêmes réseaux de contrebande et de corruption qu'elle prétend combattre. Leur rivalité avec les Recycleurs, autre faction majeure du Hors, pourrait dégénérer en guerre ouverte pour le contrôle des corridors logistiques, tandis que leur alliance avec Ergo-Wian les place en porte-à-faux avec les populations locales, qui les voient comme des mercenaires au service des blocs. Leur trajectoire ascendante interroge : parviendront-ils à s'imposer comme une force politique légitime, ou seront-ils écrasés par les États-forteresses qu'ils prétendent défendre ?
-
+  '
 date_creation: 2026-09-24
 ---
 
