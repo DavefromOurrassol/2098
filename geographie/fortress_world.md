@@ -292,9 +292,6 @@ zones:
   - entite: Mongolie
     type_entite: pays
     portion: null
-  - entite: Andorre
-    type_entite: pays
-    portion: null
   - entite: Liechtenstein
     type_entite: pays
     portion: null
@@ -879,7 +876,7 @@ zones:
   nom: Bratislava-Secteur Alpha
   niveau: 2
   type: ville
-  parent: bloc_eurasiatique_occidental
+  parent: zone_euro_sud
   origine_reelle:
   - entite: Bratislava
     type_entite: region_administrative
@@ -1060,7 +1057,7 @@ zones:
   nom: Genève-Bunker
   niveau: 2
   type: ville
-  parent: bloc_eurasiatique_occidental
+  parent: zone_euro_sud
   origine_reelle:
   - entite: Genève
     type_entite: region_administrative
@@ -1488,7 +1485,7 @@ zones:
   nom: Tbilissi-Nord — Zone Franche
   niveau: 2
   type: ville
-  parent: zones_grises_tampons
+  parent: zone_euro_sud
   origine_reelle:
   - entite: Tbilissi
     type_entite: region_administrative
@@ -1898,9 +1895,9 @@ zones:
   promu_depuis: Marchés gris de Casablanca-Périphérie
 - slug: marches_gris_tbilissi
   nom: Marchés Gris de Distribution — Tbilissi-Nord
-  niveau: 3
+  niveau: 2
   type: site_strategique
-  parent: tbilissi_nord_zone_franche
+  parent: zone_euro_sud
   origine_reelle:
   - entite: Tbilissi
     type_entite: region_administrative
@@ -2545,6 +2542,9 @@ zones:
   - entite: Tunisie
     type_entite: pays
     portion: null
+  - entite: Andorre
+    type_entite: pays
+    portion: null
   description: Confédération collectiviste des deux rives, climat désertique à oasis,
     gestion communautaire des ressources héritée du principe pré-islamique du hima
     (terre protégée).
@@ -2687,7 +2687,8 @@ zones:
     portion: null
   - entite: France
     type_entite: pays
-    portion: 'Toute la France hors littoral Manche-Atlantique (Zone Interdite de Heysham) : Bassin parisien, Centre, Est, vallée du Rhône et façade méditerranéenne.'
+    portion: 'Toute la France hors littoral Manche-Atlantique (Zone Interdite de Heysham)
+      : Bassin parisien, Centre, Est, vallée du Rhône et façade méditerranéenne.'
   description: Territoires interstitiels d'Europe méridionale échappant à tout contrôle
     effectif d'un bloc — chaos généralisé, réfugiés climatiques et de guerre, contrôlés
     localement par des bandes armées rivales (les recycleurs, le mouvement de reconquête
@@ -3051,7 +3052,7 @@ Point de documentation des premières images brutes du conflit de 2027 par un co
 
 *Sources attestées : conflit_israel_iran_2026_fortress_world, voix_du_dehors_fortress_world*
 
-#### Bratislava-Secteur Alpha — sous [[bloc_eurasiatique_occidental]]
+#### Bratislava-Secteur Alpha — sous [[zone_euro_sud]]
 
 *ville — niveau 2 — statut : dominant*
 
@@ -3153,7 +3154,7 @@ Ville forteresse polonaise ayant accueilli une session mémorable du Pacte des F
 
 *Sources attestées : alliance_blocs_souverains_fortress_world*
 
-#### Genève-Bunker — sous [[bloc_eurasiatique_occidental]]
+#### Genève-Bunker — sous [[zone_euro_sud]]
 
 *ville — niveau 2 — statut : en_declin*
 
@@ -3363,7 +3364,7 @@ Plateforme flottante ancrée au large du Svalbard constituant le siège opérati
 
 *Sources attestées : armada_logistique_nordique_fortress_world*
 
-#### Tbilissi-Nord — Zone Franche — sous [[zones_grises_tampons]]
+#### Tbilissi-Nord — Zone Franche — sous [[zone_euro_sud]]
 
 *ville — niveau 2 — statut : fragmenté*
 
@@ -3575,7 +3576,7 @@ Marchés informels sous les néons de Casablanca-Périphérie où circulent donn
 
 *Sources attestées : voix_du_dehors_fortress_world*
 
-##### Marchés Gris de Distribution — Tbilissi-Nord — sous [[tbilissi_nord_zone_franche]]
+#### Marchés Gris de Distribution — Tbilissi-Nord — sous [[zone_euro_sud]]
 
 *site_strategique — niveau 3 — statut : fragmenté*
 
