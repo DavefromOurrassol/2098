@@ -8,7 +8,7 @@ chantiers:
     (ni enclave protégée ni hors-forteresse dégradée)
   source_diagnostic: patron_spatial
   date_detection: '2026-07-25'
-  statut: a_traiter
+  statut: ignore
   proposition:
     slug: amazonie_pacte_vert
     nom: Amazonie — Territoire du Pacte Vert
@@ -71,7 +71,7 @@ chantiers:
     promu_depuis: null
   proposition_approuvee: false
   date_proposition: null
-  date_traitement: null
+  date_traitement: '2026-09-25'
   proposition_issues: []
 - id: fortress_world__espace_nordique_arctique
   scenario: fortress_world
@@ -82,7 +82,7 @@ chantiers:
     du patron
   source_diagnostic: patron_spatial
   date_detection: '2026-07-25'
-  statut: a_traiter
+  statut: ignore
   proposition:
     slug: espace_nordique_arctique
     nom: Espace Nordique et Arctique
@@ -138,7 +138,7 @@ chantiers:
     - milices_de_piraterie_logistique_arctique_fortress_world
   proposition_approuvee: false
   date_proposition: null
-  date_traitement: null
+  date_traitement: '2026-09-25'
   proposition_issues: []
 - id: fortress_world__singapour_megapole
   scenario: fortress_world
@@ -148,7 +148,7 @@ chantiers:
     ce qui évoque une zone intermédiaire non alignée sur le patron spatial
   source_diagnostic: patron_spatial
   date_detection: '2026-07-25'
-  statut: a_traiter
+  statut: ignore
   proposition:
     slug: singapour_megapole
     nom: Singapour — Mégapole-Forteresse
@@ -183,7 +183,7 @@ chantiers:
       portion: null
   proposition_approuvee: false
   date_proposition: null
-  date_traitement: null
+  date_traitement: '2026-09-25'
   proposition_issues: []
 - id: fortress_world__tuvalu_refugies_climatiques
   scenario: fortress_world
@@ -194,7 +194,7 @@ chantiers:
     extrême
   source_diagnostic: patron_spatial
   date_detection: '2026-07-25'
-  statut: a_traiter
+  statut: ignore
   proposition:
     slug: tuvalu_refugies_climatiques
     nom: Tuvalu — Refuge Climatique
@@ -226,7 +226,7 @@ chantiers:
       portion: null
   proposition_approuvee: false
   date_proposition: null
-  date_traitement: null
+  date_traitement: '2026-09-25'
   proposition_issues: []
 - id: new_sustainability__bloc_eurasien_souverainiste
   scenario: new_sustainability
@@ -237,7 +237,7 @@ chantiers:
     aux modèles de transition écologique imposés par les centres institutionnels.
   source_diagnostic: patron_spatial
   date_detection: '2026-07-25'
-  statut: a_traiter
+  statut: ignore
   proposition:
     slug: bloc_eurasien_souverainiste
     nom: Bloc Eurasien souverainiste
@@ -359,7 +359,7 @@ chantiers:
     - conseil_regulation_algorithmique_new_sustainability
   proposition_approuvee: false
   date_proposition: null
-  date_traitement: null
+  date_traitement: '2026-09-25'
   proposition_issues: []
 - id: new_sustainability__moyen_orient_golfe
   scenario: new_sustainability
@@ -370,7 +370,7 @@ chantiers:
     de prévention des conflits.
   source_diagnostic: patron_spatial
   date_detection: '2026-07-25'
-  statut: a_traiter
+  statut: ignore
   proposition:
     slug: moyen_orient_golfe
     nom: Moyen-Orient et Golfe post-pétrolier
@@ -471,7 +471,7 @@ chantiers:
     - le_temoin_new_sustainability
   proposition_approuvee: false
   date_proposition: null
-  date_traitement: null
+  date_traitement: '2026-09-25'
   proposition_issues: []
 - id: eco_communalism__europe_occidentale_reconstituee
   scenario: eco_communalism
@@ -598,7 +598,7 @@ chantiers:
     avec la désurbanisation volontaire attendue.
   source_diagnostic: patron_spatial
   date_detection: '2026-07-25'
-  statut: a_traiter
+  statut: ignore
   proposition:
     slug: inde_bassins_sacres
     nom: Inde — Bassins Sacrés
@@ -640,7 +640,7 @@ chantiers:
       portion: null
   proposition_approuvee: false
   date_proposition: null
-  date_traitement: null
+  date_traitement: '2026-09-25'
   proposition_issues: []
 - id: eco_communalism__japon_archipel_resilient
   scenario: eco_communalism
@@ -650,7 +650,7 @@ chantiers:
     contredit la logique de désurbanisation volontaire et de petites communautés autonomes.
   source_diagnostic: patron_spatial
   date_detection: '2026-07-25'
-  statut: a_traiter
+  statut: ignore
   proposition:
     slug: japon_archipel_resilient
     nom: Japon — Archipel Résilient
@@ -688,7 +688,7 @@ chantiers:
       portion: null
   proposition_approuvee: false
   date_proposition: null
-  date_traitement: null
+  date_traitement: '2026-09-25'
   proposition_issues: []
 - id: policy_reform__bloc_souverainiste_non_signataire
   scenario: policy_reform
@@ -830,7 +830,7 @@ chantiers:
     en tension avec la coopération réelle mais non totale attendue.
   source_diagnostic: patron_spatial
   date_detection: '2026-07-25'
-  statut: a_traiter
+  statut: ignore
   proposition:
     slug: espace_eurasiatique
     nom: Espace Eurasiatique
@@ -957,7 +957,7 @@ chantiers:
     - institut_brookings_singapour_de_politique_computationnelle_policy_reform
   proposition_approuvee: false
   date_proposition: null
-  date_traitement: null
+  date_traitement: '2026-09-25'
   proposition_issues: []
 - id: policy_reform__peninsule_iberique_cooperative
   scenario: policy_reform
@@ -1137,7 +1137,7 @@ chantiers:
     Territoriaux, Nouveau Parti Commun) trop marquée pour un scénario conservateur.
   source_diagnostic: patron_spatial
   date_detection: '2026-07-25'
-  statut: a_traiter
+  statut: traite
   proposition:
     slug: ameriques_multipolaires
     nom: Amériques Multipolaires
@@ -1259,7 +1259,7 @@ chantiers:
     - front_souverainiste_des_ressources_d_amerique_du_sud_reference
   proposition_approuvee: true
   date_proposition: '2026-07-25'
-  date_traitement: null
+  date_traitement: '2026-09-25'
   proposition_issues: []
 - id: reference__bloc_persique_autonome
   scenario: reference
@@ -1373,11 +1373,11 @@ chantiers:
     mais fonctionnelle* attendue.
   source_diagnostic: patron_spatial
   date_detection: '2026-07-25'
-  statut: a_traiter
+  statut: ignore
   proposition: null
   proposition_approuvee: false
   date_proposition: null
-  date_traitement: null
+  date_traitement: '2026-09-25'
 - id: fortress_world__finlande
   scenario: fortress_world
   type: pays_sans_zone
@@ -1411,8 +1411,8 @@ chantiers:
     protégée ni à une zone hors-forteresse
   source_diagnostic: patron_spatial
   date_detection: '2026-09-23'
-  statut: a_traiter
+  statut: ignore
   proposition: null
   proposition_approuvee: false
   date_proposition: null
-  date_traitement: null
+  date_traitement: '2026-09-25'
