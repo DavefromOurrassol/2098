@@ -1,5 +1,6 @@
 # Manuel utilisateur complet — Pipeline Ourrassol 2098
-*Référence à jour au 3 septembre 2026 — couvre `generator/` (42+ scripts
+*Référence à jour au 3 septembre 2026, complétée au fil des sessions
+(dernier ajout : 24 septembre 2026) — couvre `generator/` (42+ scripts
 Python) et `gui/` (Flask). Historique complet des sessions et
 chantiers (bugs trouvés, itérations, tests réels) dans
 `USER_MANUAL_HISTORIQUE.md`, à uploader seulement au besoin.*
@@ -1798,6 +1799,33 @@ le 17 août.
 
 ---
 
+### Contrôle fin des instances — consignes, rôle, présence dans les articles (24 septembre 2026)
+
+**Consignes par scénario (`consignes_scenarios`)** — champ optionnel d'une entrée `entites_custom/queue.yaml` (`{scenario: texte}`), saisissable dans le GUI « Créer des entités » (un champ texte par scénario). Chaque consigne n'est injectée **que** dans le prompt de l'instance de son scénario (bloc « ## CONSIGNE DE L'UTILISATEUR POUR CE SCÉNARIO », ligne `[CONSIGNE]` dans le log) et est **enregistrée dans la fiche entité** : `generate_instances.py` la relit donc à chaque régénération. Usage type : donner à une entité un rôle très différent d'un scénario à l'autre (Hyphan Raghavan : dirigeante désignée d'Ergo-Wian dans `reference`, orpheline de 15 ans dans `fortress_world`). ⚠ `zone_hint` s'applique à **tous** les scénarios — pour une zone propre à un scénario, l'écrire dans la consigne (ou le rôle).
+
+**`generate_instances.py` — trois options ajoutées** (entrée GUI « Générer les instances manquantes ») :
+- `--role "texte"` : remplace le rôle imposé (`role_ref`) dans le **scénario de référence** de l'entité, puis régénère cette instance.
+- `--consigne "texte"` : remplace la consigne d'un **autre** scénario (`consignes_scenarios[scenario]`), puis régénère.
+- Les deux exigent `--entity` + `--scenario` + `--force`, réécrivent la fiche entité avec relecture de contrôle, et le `--dry-run` utilise déjà la fiche mise à jour. **Piège vécu** : un texte pour un scénario non-référence mis dans « Nouveau rôle » → refus, rien d'écrit ; il va dans « Consigne ».
+- `--injection-custom` : régénère une instance créée en mode custom **sans perdre** son bloc d'impact sur les variables.
+
+**Présence d'une instance dans les articles** — outil `set_selection_instance.py` (GUI 🎯 « Présence d'une instance dans les articles », section nettoyage des entités ; aucun appel LLM) :
+```bash
+python3 generator/set_selection_instance.py --slug hyphan_raghavan_fortress_world --action exclure
+python3 generator/set_selection_instance.py --entite ilse_varga_holm --scenario reference --action sans_garantie [--dry-run]
+```
+- `exclure` / `autoriser` : pose/retire `exclure_articles: true` (frontmatter de l'instance). `loader.py` retire ces instances **avant** toute sélection automatique (`[loader] N instance(s) exclue(s)`), mais le mode « Forcer un élément » les utilise toujours — personnage « en réserve ».
+- `sans_garantie` / `garantie` : instances **custom** seulement — `injection.garantie_selection: false` supprime la place garantie dans chaque article du scénario (plafond 6 par article), en gardant l'impact sur les variables. Utile quand trop d'instances custom monopolisent les articles.
+- ⚠ **Toute régénération réécrit la fiche et fait perdre le marqueur** : ré-exclure après chaque régénération (cas Hyphan, 24 sept).
+
+**Lecture du JSON des réponses LLM** (`extraire_json()`, `instance_generation_common.py`) : tolère un commentaire après le bloc ```json, du texte avant, une imbrication profonde et des virgules finales ; garde le plus grand objet décodable. En cas d'échec, la réponse brute est sauvée dans `gui/logs/llm_json_echec_AAAAMMJJ_HHMMSS.txt` (chemin cité dans l'erreur) — la lire avant de conclure à une troncature (voir S4 du backlog).
+
+**Pièges de contenu repérés le 24 sept** (le validateur les signale) : valeur inventée hors liste (`zone_geographique: planétaire` pour Alpha47 → `globale`) ; trajectoire `mythifié`/`disparu` sans `annee_fin` (Deepfield Institute, `new_sustainability` → dates 2026-2053 alignées sur son rôle). `slugify()` translittère désormais ø→o, æ→ae, ß→ss, ł→l… (cas `elias_mørk`).
+
+**Localisation sans sous-zone dédiée** : dans `localisation:`, `zone` doit être une zone existante du scénario, mais `lieu` est du texte libre — une ville sans sous-zone se note `zone: zone_euro_sud` + `lieu: Milan (QG) — antenne à Lyon`. Le générateur d'articles lit le **rôle**, pas `lieu` : mentionner aussi la ville dans `role_dans_scenario`. `extract_localisation.py` réécrit l'en-tête avec `yaml.dump` : un diff peut ne montrer que de la mise en forme (lignes vides, `>` → guillemets) — comparer le contenu YAML avant de s'inquiéter.
+
+---
+
 ## 3bis. Chantier `trajectoire` — fusion etat_temporel + age_historique (9 août 2026)
 
 **Point de départ** : incohérence trouvée sur `zones_extractivistes_
@@ -2846,8 +2874,13 @@ python3 check_zones_coherence.py --all
 LLM_PROVIDER=claude LLM_MODEL=claude-sonnet-5 python3 generate.py
 ```
 
+### Renommer une sous-zone depuis l'arbre (24 septembre 2026)
+Les zones niveau 2/3 ont désormais un bouton **✏️ renommer** dans l'arborescence de la Carte (à côté de « ↗️ déplacer ») : petit formulaire slug + nom sous le nœud, **🔍 Évaluer l'impact** puis **✓ Confirmer**, puis l'arbre se recharge avec le nouveau slug. Mêmes routes que le niveau 1 (`/api/carte/impact_renommage_zone`, `/api/carte/renommer_zone`) : `ZoneRepository.rename()` gère tous les niveaux et propage aux enfants, relations allies/rivaux, wikilinks, instances/event_instances, `zones_pays.json` et overlays (avec `.bak`). Couleur/motif/pays restent réservés au niveau 1 (« ✏️ éditer »). Premier usage : `tolosa_saint_sernin_du_desert` → `tolosa` (le LLM de localisation déformait le slug long). L'outil sidebar provisoire `renommer_slug_zone` (remplacement textuel sans `.bak`) a été retiré le même jour. Pas de création directe de sous-zone dans le GUI (S16 du backlog).
+
 ### ⚠ Précaution git — incident du 23 septembre 2026
 **Ne jamais lancer `git checkout -- FICHIER` (ni `git restore`) sur un fichier du vault sans avoir d'abord vérifié `git status`/`git diff FICHIER`.** Le vault accumule couramment plusieurs semaines de modifications non committées : un checkout ramène le fichier au dernier commit et efface silencieusement tout ce travail. Cas réel : après un test, `git checkout` de `geographie/breakdown.md` et `gui/zones_pays.json` a effacé un nettoyage du 13 sept (Sénégal) et ~2 mois d'affectations dans `zones_pays.json` (dernier commit de ce fichier : fin juillet). Récupéré grâce aux `.bak` (écrits avant chaque écriture par le GUI) et à leur présence dans un commit intermédiaire (`git show COMMIT:gui/zones_pays.json.bak`). Réflexe : **commiter avant tout test**, et restaurer après test depuis ce commit-là.
+
+**`.gitignore` (24 septembre 2026)** : `.DS_Store`, `.obsidian/workspace.json`, `*.bak`, `gui/logs/`, `__pycache__/` (plus `.env`, `*.pyc` déjà présents). Les `.bak` restent sur disque (filet de secours), mais ne sont plus versionnés — **pour une récupération, ils ne sont donc plus dans l'historique git** : commiter souvent reste la vraie protection. Sur la version de git du Mac de David, `git ls-files -ci` exige `--exclude-from=.gitignore` (`--exclude-standard` refusé).
 
 ### Bug récurrent connu
 Confusion `pipeline_dir` (= `generator/`) vs `vault_root` (racine du vault) dans `app.py` — `geographie/` vit à `vault_root`, pas dans `pipeline_dir`. Vérifier ce point en priorité en cas de nouveau bug carte/coverage. Même famille de confusion trouvée le 4 juillet dans `check_session.sh` (bug #11 du handoff) — toujours vérifier `$GUI_DIR` vs `$VAULT_DIR`/`generator` en cas de chemin suspect.

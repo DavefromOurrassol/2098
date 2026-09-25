@@ -1,6 +1,7 @@
 # Backlog actif — Ourrassol 2098
 *Dernière consolidation majeure le 23 août 2026 (reconsolidé le 23
-septembre 2026 : #2, #2bis, #4 et S11 clos et archivés), mis à jour en continu
+septembre 2026 : #2, #2bis, #4 et S11 clos et archivés ; le 24 septembre :
+#1 Hyphan clos et archivé, S15/S16 ajoutés), mis à jour en continu
 à chaque clôture de session. Chantiers clos et leur historique complet
 dans `BACKLOG_ARCHIVE.md` (fichier séparé, à uploader seulement en cas
 de besoin de vérifier si un point a déjà été traité). Chaque chantier
@@ -13,92 +14,13 @@ pour éviter toute nouvelle divergence de nommage.*
 
 ---
 
-## 🟢 1. Scénario 1 — Hyphan : worldbuilding géographique + zones fortress_world (reste : injection des personnages)
-**Ouvert le 8 septembre.** David a fourni le premier jet narratif du
-scénario Hyphan (apartheid corporate/militaro-industriel, Ergo-Wian,
-migrations forcées) plus les cartes annexes du docx. Scénario porteur
-tranché : **fortress_world** (breakdown écarté, lore incompatible déjà
-établi sur les mêmes territoires — Occitanie/Cellules Racines-Mères).
-
-**Fait le 8 septembre** : liste complète des personnages/entités/
-événements/zones candidats à l'injection extraite du texte (pas encore
-transformée en fiches réelles). Zones créées dans le vault réel : **Al-Hima**
-(Espagne/Portugal/Maroc/Algérie, via split de Bloc Atlantique), **Zone
-Interdite de Heysham** (Angleterre/France, via split de Bloc Atlantique,
-remplace le nom provisoire "Zone de Hartlepool"). **Nuuk-Forteresse**
-reparentée sous **Espace Nordique et Arctique** (niveau 1 → niveau 2).
-
-**Fait le 9-10 septembre** : Interzone renommée **Zone Euro Sud** (via le
-bouton ✏️ Renommer du GUI — fonction dédiée découverte en cours de
-session, existe depuis le 13 juillet). Bug Royaume-Uni/Zone Interdite de
-Heysham (désaffectation qui ne tenait pas) diagnostiqué et corrigé —
-cause : entrée "Royaume-Uni" orpheline dans l'`origine_reelle` de Heysham,
-retrouvée à chaque resynchronisation. Nouvelle zone **Interzone Corridor**
-trouvée dans le vault (créée par David hors session Claude) — couleur
-personnalisée enregistrée mais **tracé overlay jamais créé côté serveur**,
-à redessiner. Voir `HANDOFF_10_SEPTEMBRE.md` pour le détail complet.
-
-**Fait le 12 septembre** (voir `HANDOFF_12_SEPTEMBRE.md` pour le détail
-complet — chantier surtout consacré à la refonte Carte, chantier #2) :
-- **Zone Euro Sud, nombre de pays tranché** : 26 pays via `zones_pays.json`
-  (assignation pays-entier), 28 entrées dans `origine_reelle` — l'écart
-  n'était pas une erreur, ce sont Allemagne et Pays-Bas, présents
-  uniquement via overlay (portion partielle), donc absents à raison de
-  l'index pays-entier. Rien à corriger.
-- **Doublon Turquie trouvé et corrigé** (présente dans `origine_reelle` de
-  `zone_euro_sud` ET d'une nouvelle zone top-down `anatolie_forteresse_
-  eurasiatique` créée en session — la création top-down ne retirait pas
-  l'ancienne affectation). Fix structurel apporté à `creer_zone_n1()` :
-  toute création retire désormais automatiquement le pays des autres
-  zones qui le référençaient.
-- **Interzone Corridor** : renommée "Interzone Corridor Test" en cours de
-  session (test du bouton Renommer), restée invisible sur la carte (son
-  tracé n'a toujours jamais été dessiné — confirmé via un nouveau
-  diagnostic, `diagnostiquer_zones_invisibles.py`). **David a choisi de
-  la supprimer entièrement** (nouvelle capacité `supprimer_zone_n1`,
-  construite cette session) pour repartir de zéro plutôt que de continuer
-  à réparer l'existant — **à recréer proprement**, voir Reste à faire.
-
-**Revue point par point du "Reste à faire" le 24 septembre** (session du
-matin avec David — voir `HANDOFF_24_SEPTEMBRE.md`). Tout est tranché et
-exécuté sauf l'injection des personnages (point 3) :
-
-- ✅ **Interzone Corridor — abandonné.** "Interzone" était l'ancien nom de
-  Zone Euro Sud. "Pillards de l'Interzone" → "pillards de la Zone Euro
-  Sud" dans la description de Heysham (frontmatter + corps markdown) ;
-  entrée provisoire "France - Interzone" retirée de Zone Euro Sud.
-- ✅ **Nordgard, Corridor d'Amsterdam, Zone de Koursk — abandonnés.**
-  Corridor d'Amsterdam (N1 sans pays) supprimé ; les Pays-Bas restent dans
-  l'Espace Nordique. `fortress_world` : 75 zones, 25 N1.
-- ⏳ **Injecter les personnages/entités/événements Hyphan** (liste du
-  8 sept jamais transformée en fiches). **Seul point restant** — nécessite
-  `HANDOFF_8_SEPTEMBRE.md` ou le texte Hyphan d'origine.
-- ✅ **Partage France / Allemagne.** France (F1b) : Zone Euro Sud porte la
-  base du pays, avec le texte `portion` "Toute la France hors littoral
-  Manche-Atlantique (Zone Interdite de Heysham) : Bassin parisien, Centre,
-  Est, vallée du Rhône et façade méditerranéenne." ; Heysham garde son
-  overlay littoral (Calais → Lorient). La ligne "ℹ portion sans overlay"
-  sur ce texte est voulue. Allemagne (A1) : entière dans l'Espace
-  Nordique, texte provisoire retiré (`portion: null`).
-- ✅ **Finlande et Lituanie** ajoutées à l'Espace Nordique dans la fiche
-  (la carte les y montrait déjà via `zones_pays.json`) ; 2 chantiers
-  `pays_sans_zone` marqués traités ; entrée générique "pays baltes"
-  retirée du Bloc Eurasiatique.
-- ✅ **Sous-zones mal rattachées.** Bratislava, Genève et Tbilissi (+ leurs
-  lieux) déplacées sous Zone Euro Sud. **Almaty + Complexe d'Orentchev
-  gardés volontairement sous les Zones Grises** (fief d'Orentchev) — le
-  garde-fou `check_origine_reelle_coherence` continuera de les signaler :
-  c'est voulu, ne pas "corriger".
-
-Restes mineurs hors Hyphan : `sao_paulo_megapole` sans pays (2 alertes du
-garde-fou, voir S14) ; corps markdown de `fortress_world.md` globalement
-périmé par rapport au frontmatter (ex. ligne "Origine réelle (2026) :
-Russie, Ukraine, Pologne… pays baltes") — ménage de texte libre à faire un
-jour, rien ne le relit.
-
-Voir `HANDOFF_8_SEPTEMBRE.md`, `HANDOFF_10_SEPTEMBRE.md` et
-`HANDOFF_12_SEPTEMBRE.md` pour le détail complet des zones et décisions
-actées.
+## ✅ 1. Scénario 1 — Hyphan (fortress_world) — CLOS le 24 septembre
+Géographie tranchée le matin (revue point par point), personnages/entités/
+événements injectés l'après-midi depuis le docx `Ourrassol_Scénario1.docx`
+(16 entités, guerre indo-arabe 2038, sous-zones Paris/Évry/Tolosa), Hyphan
+elle-même en instance fortress_world exclue des articles. Détail :
+`BACKLOG_ARCHIVE.md` et `HANDOFF_24_SEPTEMBRE.md`. Suites optionnelles
+déplacées en secondaire (S15).
 
 ---
 
@@ -292,6 +214,17 @@ surveiller : si le symptôme devient fréquent sur un futur batch de
 volume, envisager un retry automatique dédié (distinct de celui déjà en
 place sur la longueur des articles).
 
+**Mise à jour du 24 septembre** : un 3e cas (régénération Hyphan,
+1 208 jetons de sortie) n'était **pas** une troncature — le JSON était
+très probablement complet, suivi d'un commentaire après le bloc ```json,
+et le filet de secours regex ne lisait que 2 niveaux d'imbrication. Les
+cas du 11 août étaient peut-être de la même nature. Corrigé :
+`extraire_json()` (`instance_generation_common.py`) tolère texte
+avant/après, imbrication profonde et virgules finales ; en cas d'échec,
+la réponse brute est sauvée dans `gui/logs/llm_json_echec_*.txt`.
+**Au prochain échec, lire ce fichier** avant de conclure à une
+troncature.
+
 ---
 
 ## ⚪ S5. Intégration GUI de `promote_ville.py`
@@ -399,6 +332,34 @@ Irlande sont dans Zone Interdite de Heysham (`fortress_world`),
 change de zone. Mineur connexe : `sao_paulo_megapole` (`fortress_world`)
 n'a aucun pays dans son `origine_reelle` (2 alertes du garde-fou pour ses
 sous-zones).
+
+---
+
+## ⚪ S15. Suites optionnelles du scénario Hyphan (fortress_world)
+**Nouveau, 24 sept.** Rien de bloquant :
+- Aligner l'instance fortress_world d'**Ergo-Wian** sur la gouvernance
+  d'Euro-Nord (Espace Nordique, NAT comme « filiale armée »), si les
+  articles ne la reflètent pas.
+- **Milan** (QG du Mouvement de Reconquête européenne) et **Lyon** (son
+  antenne) ne sont que des `lieu` en texte libre dans `zone_euro_sud`.
+  En faire de vraies sous-zones (comme `paris_hors`) seulement si d'autres
+  entités doivent y être placées.
+- Corps markdown de `fortress_world.md` globalement périmé par rapport au
+  frontmatter (ex. « Origine réelle (2026) : … pays baltes ») — rien ne le
+  relit, ménage de texte libre à faire un jour.
+- Personnages en réserve (exclus des articles) : Malo, Anton Vasko,
+  Raimon, et Hyphan elle-même — à ré-autoriser via 🎯 quand le récit
+  les fera apparaître.
+
+---
+
+## ⚪ S16. Pas de création directe de sous-zone (niveau 2/3) dans le GUI
+**Nouveau, 24 sept.** La Carte crée des zones niveau 1 (dessin) et
+déplace/renomme des sous-zones, mais ne sait pas créer une sous-zone
+directement. Contournement actuel : script ponctuel (cas `paris_hors`,
+`evry_hors`, `tolosa` le 24 sept) ou création N1 puis « ↗️ déplacer ».
+À construire si le besoin revient (Milan/Lyon, cf. S15) — `ZoneRepository`
+n'a qu'un `creer_zone_n1`.
 
 ---
 
