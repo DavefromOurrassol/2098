@@ -32,6 +32,7 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- agence_de_regulation_des_detroits_strategiques_ards_fortress_world
 - bloc_eurasiatique_occidental_fortress_world
 - cartels_miniers_militarises_subsahariens_fortress_world
 - complexe_orentchev_almaty_fortress_world
@@ -113,8 +114,10 @@ La tension fondamentale de ces commandements réside dans leur double loyauté :
 - [[energie_ressources_critiques]]
 
 
+
 ## Relations
 **Alliés :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_fortress_world]]
 - [[bloc_eurasiatique_occidental_fortress_world]]
 - [[cartels_miniers_militarises_subsahariens_fortress_world]]
 - [[complexe_orentchev_almaty_fortress_world]]

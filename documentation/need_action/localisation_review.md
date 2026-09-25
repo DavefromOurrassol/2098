@@ -1,6 +1,6 @@
 # Localisation — Review manuelle
 
-_Genere automatiquement par validate.py — 2026-09-25 17:37_
+_Genere automatiquement par validate.py — 2026-09-25 18:37_
 _Source de verite : etat reel des fiches dans le vault._
 
 **0 fiche(s) en attente de review.**

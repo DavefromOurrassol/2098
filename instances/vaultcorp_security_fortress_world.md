@@ -43,13 +43,18 @@ alliances:
 - administrations_de_controle_frontalier_des_blocs_fortress_world
 - agences_de_securite_interieure_des_etats_forteresses_fortress_world
 - alliance_blocs_souverains_fortress_world
+- alpha47_fortress_world
 - commandement_strategique_des_matieres_critiques_atlantique_fortress_world
 - complexes_militaro_industriels_de_gestion_des_ressources_fortress_world
 - consortiums_de_defense_orbitale_prives_fortress_world
 - consortiums_energetiques_du_bloc_ourrassol_fortress_world
+- ergo_wian_sovereign_holdings_fortress_world
 - executif_militaro_civil_du_regime_fortress_world
+- ingrid_solberg_fortress_world
 - instances_aria_concurrentes_des_blocs_rivaux_fortress_world
+- institut_des_seuils_demographiques_fortress_world
 - ironclad_logistics_fortress_world
+- les_gardiens_des_corridors_hybrides_fortress_world
 - milices_privees_de_protection_des_sites_germinaux_fortress_world
 - nexcore_atlantique_infrastructure_fortress_world
 - nexus_biosyn_fortress_world
@@ -65,7 +70,9 @@ oppositions:
 - contrebandiers_energetiques_des_zones_grises_fortress_world
 - factions_dissidentes_du_consortium_helios_fortress_world
 - mouvement_commun_midwest_fortress_world
+- reseau_des_cartographes_des_zones_grises_fortress_world
 - reseaux_de_contrebande_energetique_transfrontaliere_fortress_world
+- terminal_kharg_data_haven_fortress_world
 type_relation_dominante: symbiose
 
 annee_debut: 2031
@@ -122,13 +129,18 @@ La tension centrale autour de VCSDS réside dans sa double nature : est-elle le 
 - [[administrations_de_controle_frontalier_des_blocs_fortress_world]]
 - [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]]
 - [[alliance_blocs_souverains_fortress_world]]
+- [[alpha47_fortress_world]]
 - [[commandement_strategique_des_matieres_critiques_atlantique_fortress_world]]
 - [[complexes_militaro_industriels_de_gestion_des_ressources_fortress_world]]
 - [[consortiums_de_defense_orbitale_prives_fortress_world]]
 - [[consortiums_energetiques_du_bloc_ourrassol_fortress_world]]
+- [[ergo_wian_sovereign_holdings_fortress_world]]
 - [[executif_militaro_civil_du_regime_fortress_world]]
+- [[ingrid_solberg_fortress_world]]
 - [[instances_aria_concurrentes_des_blocs_rivaux_fortress_world]]
+- [[institut_des_seuils_demographiques_fortress_world]]
 - [[ironclad_logistics_fortress_world]]
+- [[les_gardiens_des_corridors_hybrides_fortress_world]]
 - [[milices_privees_de_protection_des_sites_germinaux_fortress_world]]
 - [[nexcore_atlantique_infrastructure_fortress_world]]
 - [[nexus_biosyn_fortress_world]]
@@ -144,4 +156,6 @@ La tension centrale autour de VCSDS réside dans sa double nature : est-elle le 
 - [[contrebandiers_energetiques_des_zones_grises_fortress_world]]
 - [[factions_dissidentes_du_consortium_helios_fortress_world]]
 - [[mouvement_commun_midwest_fortress_world]]
+- [[reseau_des_cartographes_des_zones_grises_fortress_world]]
 - [[reseaux_de_contrebande_energetique_transfrontaliere_fortress_world]]
+- [[terminal_kharg_data_haven_fortress_world]]

@@ -44,6 +44,7 @@ alliances:
 - conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world
 - conseil_moscou_est_fortress_world
 - consortium_eurasiatique_des_ressources_fermees_fortress_world
+- contrats_de_service_d_ergo_wian_fortress_world
 - directive_kontinuum_fortress_world
 - dispositifs_de_surveillance_numerique_souveraine_fortress_world
 - regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world
@@ -117,6 +118,7 @@ La Ceinture est indispensable aux forteresses et pourtant traitée comme une res
 - [[conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world]]
 - [[conseil_moscou_est_fortress_world]]
 - [[consortium_eurasiatique_des_ressources_fermees_fortress_world]]
+- [[contrats_de_service_d_ergo_wian_fortress_world]]
 - [[directive_kontinuum_fortress_world]]
 - [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
 - [[regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world]]

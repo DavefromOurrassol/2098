@@ -48,6 +48,7 @@ alliances:
 oppositions:
 - collectifs_de_reappropriation_energetique_peripherique_fortress_world
 - consortium_des_blocs_solaires_orbitaux_concurrents_fortress_world
+- consortium_des_pecheries_autonomes_du_grand_nord_fortress_world
 - factions_dissidentes_du_consortium_helios_fortress_world
 - reseaux_de_contrebande_energetique_transfrontaliere_fortress_world
 type_relation_dominante: dépendance
@@ -112,5 +113,6 @@ La tension centrale est celle d'un oligopole qui a résolu sa contradiction fond
 **Opposants :**
 - [[collectifs_de_reappropriation_energetique_peripherique_fortress_world]]
 - [[consortium_des_blocs_solaires_orbitaux_concurrents_fortress_world]]
+- [[consortium_des_pecheries_autonomes_du_grand_nord_fortress_world]]
 - [[factions_dissidentes_du_consortium_helios_fortress_world]]
 - [[reseaux_de_contrebande_energetique_transfrontaliere_fortress_world]]

@@ -35,6 +35,7 @@ alliances:
 - campements_seuils_fermes_fortress_world
 - coalitions_des_deplaces_et_apatrides_fortress_world
 - consortium_africain_de_biotechnologies_sociales_fortress_world
+- les_gardiens_des_n_uds_hybrides_fortress_world
 - les_veilleurs_du_fleuve_fortress_world
 - marches_gris_casablanca_fortress_world
 - marches_gris_tbilissi_fortress_world
@@ -108,11 +109,13 @@ Ces réseaux oscillent en permanence entre l'autonomie nécessaire à leur survi
 - [[gouvernance_institutions]]
 
 
+
 ## Relations
 **Alliés :**
 - [[campements_seuils_fermes_fortress_world]]
 - [[coalitions_des_deplaces_et_apatrides_fortress_world]]
 - [[consortium_africain_de_biotechnologies_sociales_fortress_world]]
+- [[les_gardiens_des_n_uds_hybrides_fortress_world]]
 - [[les_veilleurs_du_fleuve_fortress_world]]
 - [[marches_gris_casablanca_fortress_world]]
 - [[marches_gris_tbilissi_fortress_world]]

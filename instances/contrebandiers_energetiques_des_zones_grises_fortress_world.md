@@ -41,13 +41,17 @@ alliances:
 - marches_gris_casablanca_fortress_world
 - marches_gris_tbilissi_fortress_world
 - milices_de_piraterie_logistique_arctique_fortress_world
+- reseau_des_cartographes_des_zones_grises_fortress_world
 - reseaux_d_echange_clandestin_inter_zones_fortress_world
 - reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world
+- terminal_kharg_data_haven_fortress_world
 oppositions:
+- agence_de_regulation_des_detroits_strategiques_ards_fortress_world
 - appareils_d_etat_des_blocs_fermes_fortress_world
 - bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world
 - cartels_energetiques_des_bioreacteurs_fortress_world
 - consortiums_energetiques_du_bloc_ourrassol_fortress_world
+- les_gardiens_des_corridors_hybrides_fortress_world
 - nexcore_atlantique_infrastructure_fortress_world
 - reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world
 - reseaux_prives_de_securite_aux_frontieres_fortress_world
@@ -117,6 +121,7 @@ Le réseau est tiraillé entre sa fonction vitale de filet de survie et sa natur
 - [[frontieres_du_systeme]]
 
 
+
 ## Relations
 **Alliés :**
 - [[alliance_sanitaire_des_populations_exclues_fortress_world]]
@@ -128,13 +133,17 @@ Le réseau est tiraillé entre sa fonction vitale de filet de survie et sa natur
 - [[marches_gris_casablanca_fortress_world]]
 - [[marches_gris_tbilissi_fortress_world]]
 - [[milices_de_piraterie_logistique_arctique_fortress_world]]
+- [[reseau_des_cartographes_des_zones_grises_fortress_world]]
 - [[reseaux_d_echange_clandestin_inter_zones_fortress_world]]
 - [[reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world]]
+- [[terminal_kharg_data_haven_fortress_world]]
 **Opposants :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_fortress_world]]
 - [[appareils_d_etat_des_blocs_fermes_fortress_world]]
 - [[bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world]]
 - [[cartels_energetiques_des_bioreacteurs_fortress_world]]
 - [[consortiums_energetiques_du_bloc_ourrassol_fortress_world]]
+- [[les_gardiens_des_corridors_hybrides_fortress_world]]
 - [[nexcore_atlantique_infrastructure_fortress_world]]
 - [[reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world]]
 - [[reseaux_prives_de_securite_aux_frontieres_fortress_world]]

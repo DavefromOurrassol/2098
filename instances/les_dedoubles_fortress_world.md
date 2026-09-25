@@ -36,17 +36,17 @@ zone_systemique:
     - cyberspace
 
 alliances:
-    - coalitions_des_deplaces_et_apatrides_fortress_world
-    - reseaux_d_echange_clandestin_inter_zones_fortress_world
-    - cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
-    - mouvement_commun_midwest_fortress_world
-
+- cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- mouvement_commun_midwest_fortress_world
+- reseaux_d_echange_clandestin_inter_zones_fortress_world
 oppositions:
-    - ergo_wian_sovereign_holdings_fortress_world
-    - neurosentry_fortress_world
-    - agences_de_securite_interieure_des_etats_forteresses_fortress_world
-    - alpha47_fortress_world
-
+- agences_de_securite_interieure_des_etats_forteresses_fortress_world
+- alpha47_fortress_world
+- ergo_wian_sovereign_holdings_fortress_world
+- ingrid_solberg_fortress_world
+- la_garde_du_seuil_fortress_world
+- neurosentry_fortress_world
 type_relation_dominante: conflit
 
 annee_debut: 2047
@@ -104,12 +104,23 @@ Cartographier les métavers accessibles, former les nouveaux Dédoublés à cont
 - [[geopolitique_conflits]]
 - [[gouvernance_institutions]]
 
-## Relations
-**Alliés** : [[coalitions_des_deplaces_et_apatrides_fortress_world]], [[reseaux_d_echange_clandestin_inter_zones_fortress_world]], [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]], [[mouvement_commun_midwest_fortress_world]]
-**Opposants** : [[ergo_wian_sovereign_holdings_fortress_world]], [[neurosentry_fortress_world]], [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]], [[alpha47_fortress_world]]
 
 ## Description journalistique
 Depuis les interstices des blocs souverains, une rumeur persiste : celle des Échos du Hors, ces individus capables de glisser entre les versions du monde comme on change de fréquence radio. Officiellement, ils n'existent pas. Pourtant, dans les zones tampons d'Almaty ou les couloirs humanitaires de Bassora, des témoignages concordent : des 'Dédoublés' apparaissent brièvement, les yeux vitreux, murmurant des coordonnées de ressources inexistantes ou des avertissements sur des réalités parallèles. Ergo-Wian les traque sans relâche, mais les Échos résistent, organisés en un réseau clandestin qui défie les frontières physiques et numériques des forteresses. Leur dernier coup d'éclat ? Avoir piraté les archives d'Alpha47 pour y semer des fragments de métavers, rendant les données du complexe minier inutilisables pendant des semaines.
 
 ## Tensions narratives
 Les Échos du Hors sont tiraillés entre deux destins : devenir les gardiens d'un savoir interdit, capables de libérer des ressources et technologies des métavers pour briser l'emprise des blocs, ou être réduits en outils de contrôle par les pouvoirs en place, transformés en espions ou en armes de guerre cognitive. Leur existence même remet en cause la stabilité des forteresses, car ils prouvent que le monde n'est pas aussi verrouillé que les régimes le prétendent. Leur prochaine étape ? Une tentative de synchronisation massive de leurs perceptions, un 'Grand Éveil' qui pourrait soit révéler une vérité insupportable, soit les condamner à l'extinction.
+
+## Relations
+**Alliés :**
+- [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[mouvement_commun_midwest_fortress_world]]
+- [[reseaux_d_echange_clandestin_inter_zones_fortress_world]]
+**Opposants :**
+- [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]]
+- [[alpha47_fortress_world]]
+- [[ergo_wian_sovereign_holdings_fortress_world]]
+- [[ingrid_solberg_fortress_world]]
+- [[la_garde_du_seuil_fortress_world]]
+- [[neurosentry_fortress_world]]

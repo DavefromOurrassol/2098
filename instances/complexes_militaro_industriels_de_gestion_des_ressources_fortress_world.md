@@ -33,6 +33,7 @@ zone_systemique:
 alliances:
 - agences_de_securite_interieure_des_etats_forteresses_fortress_world
 - alliance_blocs_souverains_fortress_world
+- alpha47_fortress_world
 - amazonie_pacte_vert_fortress_world
 - appareils_d_etat_des_blocs_fermes_fortress_world
 - biolock_agritech_fortress_world
@@ -44,9 +45,11 @@ alliances:
 - commandements_logistiques_peripheriques_du_bloc_eurasien_central_fortress_world
 - consortium_eurasiatique_des_ressources_fermees_fortress_world
 - consortiums_energetiques_du_bloc_ourrassol_fortress_world
+- ergo_wian_sovereign_holdings_fortress_world
 - executif_militaro_civil_du_regime_fortress_world
 - grille_aria_fortress_world
 - instances_aria_concurrentes_des_blocs_rivaux_fortress_world
+- la_garde_du_seuil_fortress_world
 - milices_privees_de_protection_des_sites_germinaux_fortress_world
 - nexcore_atlantique_infrastructure_fortress_world
 - pacte_forteresses_souveraines_fortress_world
@@ -57,7 +60,10 @@ oppositions:
 - coalitions_des_deplaces_et_apatrides_fortress_world
 - collectifs_de_reappropriation_energetique_peripherique_fortress_world
 - consortium_amazonia_viva_fortress_world
+- consortium_des_pecheries_autonomes_du_grand_nord_fortress_world
 - factions_dissidentes_du_consortium_helios_fortress_world
+- les_cycles_fortress_world
+- les_gardiens_des_n_uds_hybrides_fortress_world
 - marches_gris_tbilissi_fortress_world
 - milices_de_piraterie_logistique_arctique_fortress_world
 - mouvement_des_communes_du_rust_belt_fortress_world
@@ -130,10 +136,12 @@ La tension première réside dans leur double loyauté : serviteurs du bloc qui 
 - [[organisation_territoires]]
 
 
+
 ## Relations
 **Alliés :**
 - [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]]
 - [[alliance_blocs_souverains_fortress_world]]
+- [[alpha47_fortress_world]]
 - [[amazonie_pacte_vert_fortress_world]]
 - [[appareils_d_etat_des_blocs_fermes_fortress_world]]
 - [[biolock_agritech_fortress_world]]
@@ -145,9 +153,11 @@ La tension première réside dans leur double loyauté : serviteurs du bloc qui 
 - [[commandements_logistiques_peripheriques_du_bloc_eurasien_central_fortress_world]]
 - [[consortium_eurasiatique_des_ressources_fermees_fortress_world]]
 - [[consortiums_energetiques_du_bloc_ourrassol_fortress_world]]
+- [[ergo_wian_sovereign_holdings_fortress_world]]
 - [[executif_militaro_civil_du_regime_fortress_world]]
 - [[grille_aria_fortress_world]]
 - [[instances_aria_concurrentes_des_blocs_rivaux_fortress_world]]
+- [[la_garde_du_seuil_fortress_world]]
 - [[milices_privees_de_protection_des_sites_germinaux_fortress_world]]
 - [[nexcore_atlantique_infrastructure_fortress_world]]
 - [[pacte_forteresses_souveraines_fortress_world]]
@@ -158,7 +168,10 @@ La tension première réside dans leur double loyauté : serviteurs du bloc qui 
 - [[coalitions_des_deplaces_et_apatrides_fortress_world]]
 - [[collectifs_de_reappropriation_energetique_peripherique_fortress_world]]
 - [[consortium_amazonia_viva_fortress_world]]
+- [[consortium_des_pecheries_autonomes_du_grand_nord_fortress_world]]
 - [[factions_dissidentes_du_consortium_helios_fortress_world]]
+- [[les_cycles_fortress_world]]
+- [[les_gardiens_des_n_uds_hybrides_fortress_world]]
 - [[marches_gris_tbilissi_fortress_world]]
 - [[milices_de_piraterie_logistique_arctique_fortress_world]]
 - [[mouvement_des_communes_du_rust_belt_fortress_world]]

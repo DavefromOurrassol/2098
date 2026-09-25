@@ -39,6 +39,7 @@ alliances:
 - complexe_orentchev_almaty_fortress_world
 - conseil_regulation_algorithmique_fortress_world
 - dispositifs_de_surveillance_numerique_souveraine_fortress_world
+- ergo_wian_sovereign_holdings_fortress_world
 - etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world
 - instances_aria_concurrentes_des_blocs_rivaux_fortress_world
 - nexcore_atlantique_infrastructure_fortress_world
@@ -122,6 +123,7 @@ La tension centrale réside dans la contradiction entre la promesse médicale �
 - [[systemes_productifs_travail]]
 
 
+
 ## Relations
 **Alliés :**
 - [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]]
@@ -131,6 +133,7 @@ La tension centrale réside dans la contradiction entre la promesse médicale �
 - [[complexe_orentchev_almaty_fortress_world]]
 - [[conseil_regulation_algorithmique_fortress_world]]
 - [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
+- [[ergo_wian_sovereign_holdings_fortress_world]]
 - [[etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world]]
 - [[instances_aria_concurrentes_des_blocs_rivaux_fortress_world]]
 - [[nexcore_atlantique_infrastructure_fortress_world]]

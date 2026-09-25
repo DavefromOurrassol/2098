@@ -330,6 +330,9 @@ def ctrl_quarantaine(fiches, zones, conf):
     return res
 
 
+_NEGATION = re.compile(r"(?<!\w)(pas|ni|non|jamais|plus|nullement|aucunement|loin d'etre)(?!\w)[^.;!?]*$")
+
+
 def ctrl_regles(fiches, conf, type_fiche):
     res, vus = [], set()
     for regle in conf["regles"]:
@@ -340,15 +343,29 @@ def ctrl_regles(fiches, conf, type_fiche):
             if sauf and zone_de(f["fm"]) in sauf:
                 continue
             for champ, texte in _textes(f["fm"]):
+                # Zones couvertes par une exception (ex. « Brest-Litovsk » pour
+                # la règle qui cherche « Brest ») : une occurrence à l'intérieur
+                # est ignorée.
+                exclues = [pos for ex in regle.get("exceptions") or []
+                           for pos in _chercher(texte, ex, casse)]
                 hits = []
                 for terme in regle.get("termes") or []:
                     for d, e in _chercher(texte, terme, casse):
-                        hits.append((terme, d, e))
+                        if not any(xd <= d and e <= xe for xd, xe in exclues):
+                            hits.append((terme, d, e))
                 groupes = regle.get("meme_phrase")
                 if groupes and len(groupes) == 2:
                     for debut, ph in _phrases(texte):
                         a = [(t, x) for t in groupes[0] for x in _chercher(ph, t, casse)]
-                        b = [t for t in groupes[1] if _chercher(ph, t, casse)]
+                        b = []
+                        for t in groupes[1]:
+                            for bd, _be in _chercher(ph, t, casse):
+                                # « n'est pas neutre », « ni neutre », « non neutre »…
+                                # confirment la règle au lieu de la contredire.
+                                if regle.get("ignorer_negation") and _NEGATION.search(
+                                        _plier(ph[max(0, bd - 30):bd])):
+                                    continue
+                                b.append(t)
                         if a and b:
                             t, (d, e) = a[0]
                             hits.append((f"{t} + {b[0]}", debut + d, debut + e))
@@ -710,7 +727,7 @@ def rapport_md(scenario, r):
           + (f" (+ {r['n_articles']} articles)" if r["n_articles"] else ""),
           f"- Règles de lore — **erreurs : {len(regles_err)}**, à relire : {len(regles_rel)}",
           f"- Quarantaine (fiche active localisée en zone interdite) : {len(r['quarantaine'])}",
-          f"- Transnationales localisées dans le texte : {len(r['transnationales'])}",
+          f"- Transnationales localisées dans le texte (info) : {len(r['transnationales'])}",
           f"- Relations à sens unique : {len(r['reciprocite'])} — contradictoires : {len(r['conflits'])}",
           f"- Relations inter-scénarios (info) : {len(r['inter_scenarios'])}"]
     if r.get("llm"):
@@ -737,20 +754,21 @@ def rapport_md(scenario, r):
     section("2. Quarantaine — fiches actives en zone interdite",
             [f"- `{x['slug']}` — zone `{x['zone']}` (sous {x['zone_quarantaine']}), trajectoire "
              f"**{x['trajectoire']}**" for x in r["quarantaine"]])
-    section("3. Transnationales mais localisées dans le texte",
-            [f"- `{x['slug']}` — cite : " + ", ".join(f"{n} (`{s}`)" for s, n in x["zones_citees"].items())
-             for x in r["transnationales"]])
-    section("4. Relations contradictoires (A allié de B, B opposé à A)",
+    section("3. Relations contradictoires (A allié de B, B opposé à A)",
             [f"- `{c['allie_a_corriger']}` liste `{c['opposant']}` en alliance, "
              f"qui le liste en opposition" for c in r["conflits"]])
-    section("5. Relations à sens unique",
+    section("4. Relations à sens unique",
             [f"- `{m['source']}` cite `{m['cible']}` ({m['champ']}), pas l'inverse"
              for m in r["reciprocite"]],
             vide="Rien à signaler.")
     if r["reciprocite"]:
         L.insert(-1, f"Correction automatique possible : `python3 generator/fix_alliances_oppositions.py "
                      f"--scenario {scenario} --reciprocite-seule --dry-run` puis sans `--dry-run`.")
-    section("6. Règles de lore — à relire", bloc_regles(regles_rel))
+    section("5. Règles de lore — à relire", bloc_regles(regles_rel))
+    section("6. Transnationales mais localisées dans le texte (information)",
+            ["Souvent légitime (une organisation transnationale nomme les zones où elle agit) ; à rattacher seulement si la fiche vit en réalité dans une seule zone.", ""]
+            + [f"- `{x['slug']}` — cite : " + ", ".join(f"{n} (`{s}`)" for s, n in x["zones_citees"].items())
+               for x in r["transnationales"]])
     section("7. Relations inter-scénarios (information)",
             [f"- `{x['slug']}` → `{x['ref']}` ({x['champ']}, scénario {x['scenario_ref']})"
              for x in r["inter_scenarios"]])

@@ -37,6 +37,7 @@ zone_systemique:
     - économie
 
 alliances:
+- agence_de_regulation_des_detroits_strategiques_ards_fortress_world
 - amazonie_pacte_vert_fortress_world
 - biolock_agritech_fortress_world
 - bloc_atlantique_fortress_world
@@ -45,6 +46,8 @@ alliances:
 - centre_controle_orbital_helios_fortress_world
 - complexes_militaro_industriels_de_gestion_des_ressources_fortress_world
 - directive_kontinuum_fortress_world
+- ingrid_solberg_fortress_world
+- institut_des_seuils_demographiques_fortress_world
 - ironclad_logistics_fortress_world
 - reseaux_prives_de_securite_aux_frontieres_fortress_world
 - terrashield_geoengineering_fortress_world
@@ -53,6 +56,7 @@ oppositions:
 - coalitions_des_deplaces_et_apatrides_fortress_world
 - factions_internes_pro_autarcie_totale_fortress_world
 - institutions_multilaterales_residuelles_fortress_world
+- les_recycleurs_fortress_world
 - reseaux_d_echange_clandestin_inter_zones_fortress_world
 type_relation_dominante: alliance stratégique
 
@@ -107,6 +111,7 @@ La logique même du Pacte accélère son effritement : chaque accord bilatéral 
 
 ## Relations
 **Alliés :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_fortress_world]]
 - [[amazonie_pacte_vert_fortress_world]]
 - [[biolock_agritech_fortress_world]]
 - [[bloc_atlantique_fortress_world]]
@@ -115,6 +120,8 @@ La logique même du Pacte accélère son effritement : chaque accord bilatéral 
 - [[centre_controle_orbital_helios_fortress_world]]
 - [[complexes_militaro_industriels_de_gestion_des_ressources_fortress_world]]
 - [[directive_kontinuum_fortress_world]]
+- [[ingrid_solberg_fortress_world]]
+- [[institut_des_seuils_demographiques_fortress_world]]
 - [[ironclad_logistics_fortress_world]]
 - [[reseaux_prives_de_securite_aux_frontieres_fortress_world]]
 - [[terrashield_geoengineering_fortress_world]]
@@ -123,4 +130,5 @@ La logique même du Pacte accélère son effritement : chaque accord bilatéral 
 - [[coalitions_des_deplaces_et_apatrides_fortress_world]]
 - [[factions_internes_pro_autarcie_totale_fortress_world]]
 - [[institutions_multilaterales_residuelles_fortress_world]]
+- [[les_recycleurs_fortress_world]]
 - [[reseaux_d_echange_clandestin_inter_zones_fortress_world]]

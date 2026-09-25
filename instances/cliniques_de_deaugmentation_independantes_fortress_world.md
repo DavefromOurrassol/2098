@@ -39,6 +39,8 @@ alliances:
 - campements_seuils_fermes_fortress_world
 - cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
 - coalitions_des_deplaces_et_apatrides_fortress_world
+- guilhelma_fortress_world
+- ilse_varga_holm_fortress_world
 - institutions_multilaterales_residuelles_fortress_world
 - internationale_travailleurs_augmentes_fortress_world
 - les_veilleurs_du_fleuve_fortress_world
@@ -53,6 +55,7 @@ oppositions:
 - bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world
 - conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world
 - corps_des_inspecteurs_de_conformite_inter_blocs_fortress_world
+- ingrid_solberg_fortress_world
 - neurosentry_fortress_world
 - nexus_biosyn_division_eurasienne_fortress_world
 type_relation_dominante: conflit
@@ -121,12 +124,15 @@ Ces cliniques se trouvent prises entre deux feux : les autorités des blocs qui 
 - [[demographie_mobilite_humaine]]
 
 
+
 ## Relations
 **Alliés :**
 - [[alliance_sanitaire_des_populations_exclues_fortress_world]]
 - [[campements_seuils_fermes_fortress_world]]
 - [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]]
 - [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[guilhelma_fortress_world]]
+- [[ilse_varga_holm_fortress_world]]
 - [[institutions_multilaterales_residuelles_fortress_world]]
 - [[internationale_travailleurs_augmentes_fortress_world]]
 - [[les_veilleurs_du_fleuve_fortress_world]]
@@ -141,6 +147,7 @@ Ces cliniques se trouvent prises entre deux feux : les autorités des blocs qui 
 - [[bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world]]
 - [[conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world]]
 - [[corps_des_inspecteurs_de_conformite_inter_blocs_fortress_world]]
+- [[ingrid_solberg_fortress_world]]
 - [[neurosentry_fortress_world]]
 - [[nexus_biosyn_division_eurasienne_fortress_world]]
 

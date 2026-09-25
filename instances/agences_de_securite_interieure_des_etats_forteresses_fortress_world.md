@@ -36,6 +36,7 @@ zone_systemique:
 - société
 alliances:
 - administrations_de_controle_frontalier_des_blocs_fortress_world
+- aymeric_de_valfort_fortress_world
 - bloc_atlantique_fortress_world
 - bloc_eurasiatique_occidental_fortress_world
 - bunker_chambre_securite_territoriale_fortress_world
@@ -49,6 +50,9 @@ alliances:
 - datacenters_conseil_eurasiatique_fortress_world
 - directive_kontinuum_fortress_world
 - front_resilient_pro_systeme_fortress_world
+- ingrid_solberg_fortress_world
+- institut_des_seuils_demographiques_fortress_world
+- la_garde_du_seuil_fortress_world
 - neurosentry_fortress_world
 - nexcore_atlantique_infrastructure_fortress_world
 - pacte_forteresses_souveraines_fortress_world
@@ -57,6 +61,7 @@ alliances:
 - siege_genevois_cars_fortress_world
 - vaultcorp_security_fortress_world
 oppositions:
+- anjali_raghavan_fortress_world
 - aria_instance_fantome_fortress_world
 - bassora_couloir_refugies_fortress_world
 - campements_seuils_fermes_fortress_world
@@ -66,15 +71,26 @@ oppositions:
 - collectifs_du_seuil_fortress_world
 - corridors_gris_asie_centrale_fortress_world
 - factions_internes_pro_autarcie_totale_fortress_world
+- gelecek_meclisi_fortress_world
+- guilhelma_fortress_world
+- ilse_varga_holm_fortress_world
 - institutions_multilaterales_residuelles_fortress_world
+- les_cycles_fortress_world
+- les_dedoubles_fortress_world
+- les_gardiens_des_n_uds_hybrides_fortress_world
+- les_recycleurs_fortress_world
+- les_veilleurs_des_nappes_phreatiques_fortress_world
 - les_veilleurs_du_fleuve_fortress_world
 - marches_gris_casablanca_fortress_world
 - marches_gris_tbilissi_fortress_world
 - mouvement_commun_midwest_fortress_world
+- mouvement_de_reconquete_europeenne_fortress_world
 - mouvement_des_communes_du_rust_belt_fortress_world
+- reseau_des_cartographes_des_zones_grises_fortress_world
 - reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world
 - reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world
 - rust_belt_communes_libres_fortress_world
+- tribu_des_cinq_nations_fortress_world
 - zones_grises_tampons_fortress_world
 type_relation_dominante: conflit
 annee_debut: 2036
@@ -146,9 +162,11 @@ La contradiction centrale de ces agences réside dans leur double mission imposs
 - [[demographie_mobilite_humaine]]
 
 
+
 ## Relations
 **Alliés :**
 - [[administrations_de_controle_frontalier_des_blocs_fortress_world]]
+- [[aymeric_de_valfort_fortress_world]]
 - [[bloc_atlantique_fortress_world]]
 - [[bloc_eurasiatique_occidental_fortress_world]]
 - [[bunker_chambre_securite_territoriale_fortress_world]]
@@ -162,6 +180,9 @@ La contradiction centrale de ces agences réside dans leur double mission imposs
 - [[datacenters_conseil_eurasiatique_fortress_world]]
 - [[directive_kontinuum_fortress_world]]
 - [[front_resilient_pro_systeme_fortress_world]]
+- [[ingrid_solberg_fortress_world]]
+- [[institut_des_seuils_demographiques_fortress_world]]
+- [[la_garde_du_seuil_fortress_world]]
 - [[neurosentry_fortress_world]]
 - [[nexcore_atlantique_infrastructure_fortress_world]]
 - [[pacte_forteresses_souveraines_fortress_world]]
@@ -170,6 +191,7 @@ La contradiction centrale de ces agences réside dans leur double mission imposs
 - [[siege_genevois_cars_fortress_world]]
 - [[vaultcorp_security_fortress_world]]
 **Opposants :**
+- [[anjali_raghavan_fortress_world]]
 - [[aria_instance_fantome_fortress_world]]
 - [[bassora_couloir_refugies_fortress_world]]
 - [[campements_seuils_fermes_fortress_world]]
@@ -179,15 +201,26 @@ La contradiction centrale de ces agences réside dans leur double mission imposs
 - [[collectifs_du_seuil_fortress_world]]
 - [[corridors_gris_asie_centrale_fortress_world]]
 - [[factions_internes_pro_autarcie_totale_fortress_world]]
+- [[gelecek_meclisi_fortress_world]]
+- [[guilhelma_fortress_world]]
+- [[ilse_varga_holm_fortress_world]]
 - [[institutions_multilaterales_residuelles_fortress_world]]
+- [[les_cycles_fortress_world]]
+- [[les_dedoubles_fortress_world]]
+- [[les_gardiens_des_n_uds_hybrides_fortress_world]]
+- [[les_recycleurs_fortress_world]]
+- [[les_veilleurs_des_nappes_phreatiques_fortress_world]]
 - [[les_veilleurs_du_fleuve_fortress_world]]
 - [[marches_gris_casablanca_fortress_world]]
 - [[marches_gris_tbilissi_fortress_world]]
 - [[mouvement_commun_midwest_fortress_world]]
+- [[mouvement_de_reconquete_europeenne_fortress_world]]
 - [[mouvement_des_communes_du_rust_belt_fortress_world]]
+- [[reseau_des_cartographes_des_zones_grises_fortress_world]]
 - [[reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world]]
 - [[reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world]]
 - [[rust_belt_communes_libres_fortress_world]]
+- [[tribu_des_cinq_nations_fortress_world]]
 - [[zones_grises_tampons_fortress_world]]
 
 ## Notes

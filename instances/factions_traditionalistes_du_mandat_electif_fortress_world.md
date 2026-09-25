@@ -38,6 +38,7 @@ alliances:
 - tribunal_algorithmique_de_bruxelles_fortress_world
 oppositions:
 - appareils_d_etat_des_blocs_fermes_fortress_world
+- aymeric_de_valfort_fortress_world
 - bloc_atlantique_fortress_world
 - bunker_chambre_securite_territoriale_fortress_world
 - bureau_gouvernance_algorithmique_fortress_world
@@ -110,6 +111,7 @@ Les Factions sont prises entre leur aspiration à défendre la démocratie repr�
 - [[organisation_territoires]]
 
 
+
 ## Relations
 **Alliés :**
 - [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]]
@@ -120,6 +122,7 @@ Les Factions sont prises entre leur aspiration à défendre la démocratie repr�
 - [[tribunal_algorithmique_de_bruxelles_fortress_world]]
 **Opposants :**
 - [[appareils_d_etat_des_blocs_fermes_fortress_world]]
+- [[aymeric_de_valfort_fortress_world]]
 - [[bloc_atlantique_fortress_world]]
 - [[bunker_chambre_securite_territoriale_fortress_world]]
 - [[bureau_gouvernance_algorithmique_fortress_world]]

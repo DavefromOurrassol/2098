@@ -40,13 +40,17 @@ alliances:
 - coalitions_des_deplaces_et_apatrides_fortress_world
 - consortium_africain_de_biotechnologies_sociales_fortress_world
 - contrebandiers_energetiques_des_zones_grises_fortress_world
+- guilhelma_fortress_world
+- les_veilleurs_des_nappes_phreatiques_fortress_world
 - les_veilleurs_du_fleuve_fortress_world
 - mouvement_commun_midwest_fortress_world
 - populations_des_zones_deficitaires_d_optimisation_fortress_world
+- reseau_des_cartographes_des_zones_grises_fortress_world
 - reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world
 - rust_belt_communes_libres_fortress_world
 oppositions:
 - administrations_de_controle_frontalier_des_blocs_fortress_world
+- alpha47_fortress_world
 - amazonie_pacte_vert_fortress_world
 - anba_siege_atlantique_fortress_world
 - bloc_atlantique_fortress_world
@@ -56,10 +60,16 @@ oppositions:
 - complexe_orentchev_almaty_fortress_world
 - conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world
 - conseil_moscou_est_fortress_world
+- contrats_de_service_d_ergo_wian_fortress_world
+- deepfield_institute_fortress_world
+- ergo_wian_sovereign_holdings_fortress_world
 - executif_militaro_civil_du_regime_fortress_world
 - geneve_bunker_fortress_world
+- ingrid_solberg_fortress_world
 - instances_aria_concurrentes_des_blocs_rivaux_fortress_world
+- institut_des_seuils_demographiques_fortress_world
 - milices_privees_de_protection_des_sites_germinaux_fortress_world
+- mouvement_de_reconquete_europeenne_fortress_world
 - neurosentry_fortress_world
 - nexcore_atlantique_infrastructure_fortress_world
 - nexus_biosyn_division_eurasienne_fortress_world
@@ -71,6 +81,7 @@ oppositions:
 - systemes_de_scoring_de_productivite_corporative_fortress_world
 - tours_nexus7_fortress_world
 - vaultcorp_security_fortress_world
+- vikram_raghavan_fortress_world
 - zones_grises_tampons_fortress_world
 type_relation_dominante: conflit
 annee_debut: 2044
@@ -140,6 +151,7 @@ L'Alliance est tiraillée entre son impératif humanitaire universel et la tenta
 - [[organisation_territoires]]
 
 
+
 ## Relations
 **Alliés :**
 - [[bassora_couloir_refugies_fortress_world]]
@@ -149,13 +161,17 @@ L'Alliance est tiraillée entre son impératif humanitaire universel et la tenta
 - [[coalitions_des_deplaces_et_apatrides_fortress_world]]
 - [[consortium_africain_de_biotechnologies_sociales_fortress_world]]
 - [[contrebandiers_energetiques_des_zones_grises_fortress_world]]
+- [[guilhelma_fortress_world]]
+- [[les_veilleurs_des_nappes_phreatiques_fortress_world]]
 - [[les_veilleurs_du_fleuve_fortress_world]]
 - [[mouvement_commun_midwest_fortress_world]]
 - [[populations_des_zones_deficitaires_d_optimisation_fortress_world]]
+- [[reseau_des_cartographes_des_zones_grises_fortress_world]]
 - [[reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world]]
 - [[rust_belt_communes_libres_fortress_world]]
 **Opposants :**
 - [[administrations_de_controle_frontalier_des_blocs_fortress_world]]
+- [[alpha47_fortress_world]]
 - [[amazonie_pacte_vert_fortress_world]]
 - [[anba_siege_atlantique_fortress_world]]
 - [[bloc_atlantique_fortress_world]]
@@ -165,10 +181,16 @@ L'Alliance est tiraillée entre son impératif humanitaire universel et la tenta
 - [[complexe_orentchev_almaty_fortress_world]]
 - [[conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world]]
 - [[conseil_moscou_est_fortress_world]]
+- [[contrats_de_service_d_ergo_wian_fortress_world]]
+- [[deepfield_institute_fortress_world]]
+- [[ergo_wian_sovereign_holdings_fortress_world]]
 - [[executif_militaro_civil_du_regime_fortress_world]]
 - [[geneve_bunker_fortress_world]]
+- [[ingrid_solberg_fortress_world]]
 - [[instances_aria_concurrentes_des_blocs_rivaux_fortress_world]]
+- [[institut_des_seuils_demographiques_fortress_world]]
 - [[milices_privees_de_protection_des_sites_germinaux_fortress_world]]
+- [[mouvement_de_reconquete_europeenne_fortress_world]]
 - [[neurosentry_fortress_world]]
 - [[nexcore_atlantique_infrastructure_fortress_world]]
 - [[nexus_biosyn_division_eurasienne_fortress_world]]
@@ -180,6 +202,7 @@ L'Alliance est tiraillée entre son impératif humanitaire universel et la tenta
 - [[systemes_de_scoring_de_productivite_corporative_fortress_world]]
 - [[tours_nexus7_fortress_world]]
 - [[vaultcorp_security_fortress_world]]
+- [[vikram_raghavan_fortress_world]]
 - [[zones_grises_tampons_fortress_world]]
 
 ## Notes

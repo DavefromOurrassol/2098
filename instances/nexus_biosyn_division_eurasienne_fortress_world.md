@@ -39,12 +39,14 @@ zone_systemique:
     - sécurité
 
 alliances:
+- aymeric_de_valfort_fortress_world
 - bloc_eurasiatique_occidental_fortress_world
 - cartels_miniers_militarises_subsahariens_fortress_world
 - complexe_orentchev_almaty_fortress_world
 - conseil_moscou_est_fortress_world
 - consortium_eurasiatique_des_ressources_fermees_fortress_world
 - etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world
+- la_garde_du_seuil_fortress_world
 - milices_privees_de_protection_des_sites_germinaux_fortress_world
 - nexus_biosyn_fortress_world
 - regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world
@@ -58,6 +60,7 @@ oppositions:
 - consortium_africain_de_biotechnologies_sociales_fortress_world
 - divisions_concurrentes_nexus_biosyn_fortress_world
 - factions_djihadistes_logistiques_d_asie_centrale_fortress_world
+- guilhelma_fortress_world
 - internationale_des_semenciers_agro_pirates_fortress_world
 - marches_gris_tbilissi_fortress_world
 - nexus_biosyn_division_pacifique_fortress_world
@@ -115,12 +118,14 @@ La Division navigue en permanence sur le fil entre autonomie opérationnelle et 
 
 ## Relations
 **Alliés :**
+- [[aymeric_de_valfort_fortress_world]]
 - [[bloc_eurasiatique_occidental_fortress_world]]
 - [[cartels_miniers_militarises_subsahariens_fortress_world]]
 - [[complexe_orentchev_almaty_fortress_world]]
 - [[conseil_moscou_est_fortress_world]]
 - [[consortium_eurasiatique_des_ressources_fermees_fortress_world]]
 - [[etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world]]
+- [[la_garde_du_seuil_fortress_world]]
 - [[milices_privees_de_protection_des_sites_germinaux_fortress_world]]
 - [[nexus_biosyn_fortress_world]]
 - [[regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world]]
@@ -134,6 +139,7 @@ La Division navigue en permanence sur le fil entre autonomie opérationnelle et 
 - [[consortium_africain_de_biotechnologies_sociales_fortress_world]]
 - [[divisions_concurrentes_nexus_biosyn_fortress_world]]
 - [[factions_djihadistes_logistiques_d_asie_centrale_fortress_world]]
+- [[guilhelma_fortress_world]]
 - [[internationale_des_semenciers_agro_pirates_fortress_world]]
 - [[marches_gris_tbilissi_fortress_world]]
 - [[nexus_biosyn_division_pacifique_fortress_world]]

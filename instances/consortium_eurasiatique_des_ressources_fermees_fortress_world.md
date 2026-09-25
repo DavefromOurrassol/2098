@@ -30,6 +30,7 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- agence_de_regulation_des_detroits_strategiques_ards_fortress_world
 - bloc_eurasiatique_occidental_fortress_world
 - bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world
 - cartels_energetiques_des_bioreacteurs_fortress_world
@@ -51,6 +52,7 @@ oppositions:
 - consortium_amazonia_viva_fortress_world
 - corridors_gris_asie_centrale_fortress_world
 - kalaallit_nunaat_sovereign_fund_fortress_world
+- les_veilleurs_des_nappes_phreatiques_fortress_world
 - marches_gris_tbilissi_fortress_world
 - operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world
 - reseaux_de_contrebande_energetique_transfrontaliere_fortress_world
@@ -118,8 +120,10 @@ Le Consortium est écartelé entre l'impératif de rétention absolue qui fonde 
 - [[organisation_territoires]]
 
 
+
 ## Relations
 **Alliés :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_fortress_world]]
 - [[bloc_eurasiatique_occidental_fortress_world]]
 - [[bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world]]
 - [[cartels_energetiques_des_bioreacteurs_fortress_world]]
@@ -141,6 +145,7 @@ Le Consortium est écartelé entre l'impératif de rétention absolue qui fonde 
 - [[consortium_amazonia_viva_fortress_world]]
 - [[corridors_gris_asie_centrale_fortress_world]]
 - [[kalaallit_nunaat_sovereign_fund_fortress_world]]
+- [[les_veilleurs_des_nappes_phreatiques_fortress_world]]
 - [[marches_gris_tbilissi_fortress_world]]
 - [[operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world]]
 - [[reseaux_de_contrebande_energetique_transfrontaliere_fortress_world]]

@@ -48,6 +48,8 @@ alliances:
 - communautes_deplacees_hors_quota_migratoire_fortress_world
 - dissidences_internes_aux_blocs_minoritaires_fortress_world
 - le_temoin_fortress_world
+- les_dedoubles_fortress_world
+- les_veilleurs_des_nappes_phreatiques_fortress_world
 - mouvement_des_communes_du_rust_belt_fortress_world
 - populations_des_zones_deficitaires_d_optimisation_fortress_world
 - reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world
@@ -63,10 +65,14 @@ oppositions:
 - bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world
 - commandement_strategique_des_matieres_critiques_atlantique_fortress_world
 - consortium_des_medias_d_etat_souverains_hegemonia_press_xinhua_fortifiee_eurovox_integral_fortress_world
+- contrats_de_service_d_ergo_wian_fortress_world
 - dispositifs_de_surveillance_numerique_souveraine_fortress_world
+- ergo_wian_sovereign_holdings_fortress_world
 - executif_militaro_civil_du_regime_fortress_world
 - front_resilient_pro_systeme_fortress_world
 - grille_aria_fortress_world
+- holdfast_fortress_world
+- institut_des_seuils_demographiques_fortress_world
 - milices_privees_de_protection_des_sites_germinaux_fortress_world
 - neurosentry_fortress_world
 - nexcore_atlantique_infrastructure_fortress_world
@@ -140,6 +146,8 @@ Le Front du Dehors est pris en étau entre deux logiques qui le déchirent : plu
 - [[communautes_deplacees_hors_quota_migratoire_fortress_world]]
 - [[dissidences_internes_aux_blocs_minoritaires_fortress_world]]
 - [[le_temoin_fortress_world]]
+- [[les_dedoubles_fortress_world]]
+- [[les_veilleurs_des_nappes_phreatiques_fortress_world]]
 - [[mouvement_des_communes_du_rust_belt_fortress_world]]
 - [[populations_des_zones_deficitaires_d_optimisation_fortress_world]]
 - [[reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world]]
@@ -155,10 +163,14 @@ Le Front du Dehors est pris en étau entre deux logiques qui le déchirent : plu
 - [[bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world]]
 - [[commandement_strategique_des_matieres_critiques_atlantique_fortress_world]]
 - [[consortium_des_medias_d_etat_souverains_hegemonia_press_xinhua_fortifiee_eurovox_integral_fortress_world]]
+- [[contrats_de_service_d_ergo_wian_fortress_world]]
 - [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
+- [[ergo_wian_sovereign_holdings_fortress_world]]
 - [[executif_militaro_civil_du_regime_fortress_world]]
 - [[front_resilient_pro_systeme_fortress_world]]
 - [[grille_aria_fortress_world]]
+- [[holdfast_fortress_world]]
+- [[institut_des_seuils_demographiques_fortress_world]]
 - [[milices_privees_de_protection_des_sites_germinaux_fortress_world]]
 - [[neurosentry_fortress_world]]
 - [[nexcore_atlantique_infrastructure_fortress_world]]

@@ -44,14 +44,16 @@ alliances:
 - datacenters_conseil_eurasiatique_fortress_world
 - directive_kontinuum_fortress_world
 - dispositifs_de_surveillance_numerique_souveraine_fortress_world
+- ergo_wian_sovereign_holdings_fortress_world
 - executif_militaro_civil_du_regime_fortress_world
+- institut_des_seuils_demographiques_fortress_world
 - neurosentry_fortress_world
 - rede_paulista_de_distribuicao_algoritmica_fortress_world
 oppositions:
 - aria_instance_fantome_fortress_world
 - coalitions_geopolitiques_d_infiltration_des_modeles_climatiques_fortress_world
-- collectifs_de_desobeissance_algorithmique_new_sustainability
 - factions_traditionalistes_du_mandat_electif_fortress_world
+- gelecek_meclisi_fortress_world
 - oracle_des_seuils_fortress_world
 - tribunal_algorithmique_de_bruxelles_fortress_world
 type_relation_dominante: dépendance
@@ -113,13 +115,15 @@ La légitimité du Conseil repose entièrement sur la croyance en l'infaillibili
 - [[datacenters_conseil_eurasiatique_fortress_world]]
 - [[directive_kontinuum_fortress_world]]
 - [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
+- [[ergo_wian_sovereign_holdings_fortress_world]]
 - [[executif_militaro_civil_du_regime_fortress_world]]
+- [[institut_des_seuils_demographiques_fortress_world]]
 - [[neurosentry_fortress_world]]
 - [[rede_paulista_de_distribuicao_algoritmica_fortress_world]]
 **Opposants :**
 - [[aria_instance_fantome_fortress_world]]
 - [[coalitions_geopolitiques_d_infiltration_des_modeles_climatiques_fortress_world]]
-- [[collectifs_de_desobeissance_algorithmique_new_sustainability]]
 - [[factions_traditionalistes_du_mandat_electif_fortress_world]]
+- [[gelecek_meclisi_fortress_world]]
 - [[oracle_des_seuils_fortress_world]]
 - [[tribunal_algorithmique_de_bruxelles_fortress_world]]

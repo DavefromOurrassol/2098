@@ -42,12 +42,14 @@ alliances:
 - anba_siege_atlantique_fortress_world
 - conseil_des_etats_nordiques_integres_reference
 - consortium_energetique_baltique_reference
+- contrats_de_service_d_ergo_wian_fortress_world
+- ergo_wian_sovereign_holdings_fortress_world
 - ironclad_logistics_fortress_world
 - kalaallit_nunaat_sovereign_fund_fortress_world
-- ergo_wian_sovereign_holdings_fortress_world
-- contrats_de_service_d_ergo_wian_fortress_world
+- les_gardiens_des_corridors_hybrides_fortress_world
 oppositions:
 - coalition_arctique_des_blocs_continentaux_fortress_world
+- consortium_des_pecheries_autonomes_du_grand_nord_fortress_world
 - consortium_sino_finlandais_de_flotte_autonome_fortress_world
 - corps_des_inspecteurs_de_conformite_inter_blocs_fortress_world
 - factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world
@@ -108,12 +110,14 @@ Les blocs dépendent d'une route commerciale possédée par un gouvernement-entr
 - [[anba_siege_atlantique_fortress_world]]
 - [[conseil_des_etats_nordiques_integres_reference]]
 - [[consortium_energetique_baltique_reference]]
+- [[contrats_de_service_d_ergo_wian_fortress_world]]
+- [[ergo_wian_sovereign_holdings_fortress_world]]
 - [[ironclad_logistics_fortress_world]]
 - [[kalaallit_nunaat_sovereign_fund_fortress_world]]
-- [[ergo_wian_sovereign_holdings_fortress_world]]
-- [[contrats_de_service_d_ergo_wian_fortress_world]]
+- [[les_gardiens_des_corridors_hybrides_fortress_world]]
 **Opposants :**
 - [[coalition_arctique_des_blocs_continentaux_fortress_world]]
+- [[consortium_des_pecheries_autonomes_du_grand_nord_fortress_world]]
 - [[consortium_sino_finlandais_de_flotte_autonome_fortress_world]]
 - [[corps_des_inspecteurs_de_conformite_inter_blocs_fortress_world]]
 - [[factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world]]

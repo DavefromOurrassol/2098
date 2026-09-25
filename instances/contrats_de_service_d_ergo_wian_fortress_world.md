@@ -36,19 +36,19 @@ zone_systemique:
     - société
 
 alliances:
-    - ergo_wian_sovereign_holdings_fortress_world
-    - alpha47_fortress_world
-    - zone_usines_forteresses_eurasie_fortress_world
-    - armada_logistique_nordique_fortress_world
-    - cartels_miniers_militarises_subsahariens_fortress_world
-    - factions_djihadistes_logistiques_d_asie_centrale_fortress_world
-
+- alpha47_fortress_world
+- armada_logistique_nordique_fortress_world
+- cartels_miniers_militarises_subsahariens_fortress_world
+- ergo_wian_sovereign_holdings_fortress_world
+- factions_djihadistes_logistiques_d_asie_centrale_fortress_world
+- ingrid_solberg_fortress_world
+- vikram_raghavan_fortress_world
+- zone_usines_forteresses_eurasie_fortress_world
 oppositions:
-    - alliance_sanitaire_des_populations_exclues_fortress_world
-    - coalitions_des_deplaces_et_apatrides_fortress_world
-    - mouvement_commun_midwest_fortress_world
-    - cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
-
+- alliance_sanitaire_des_populations_exclues_fortress_world
+- cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- mouvement_commun_midwest_fortress_world
 type_relation_dominante: dépendance
 
 annee_debut: 2046
@@ -107,12 +107,25 @@ Recrutement massif de travailleurs dans les zones Hors via des intermédiaires l
 - [[geopolitique_conflits]]
 - [[gouvernance_institutions]]
 
-## Relations
-**Alliés** : [[ergo_wian_sovereign_holdings_fortress_world]], [[alpha47_fortress_world]], [[zone_usines_forteresses_eurasie_fortress_world]], [[armada_logistique_nordique_fortress_world]], [[cartels_miniers_militarises_subsahariens_fortress_world]], [[factions_djihadistes_logistiques_d_asie_centrale_fortress_world]]
-**Opposants** : [[alliance_sanitaire_des_populations_exclues_fortress_world]], [[coalitions_des_deplaces_et_apatrides_fortress_world]], [[mouvement_commun_midwest_fortress_world]], [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]]
 
 ## Description journalistique
 Depuis les steppes kazakhes jusqu'aux mines arctiques de Kalaallit Nunaat, les 'Contrats Ergo-Wian' sont devenus le visage légal de l'esclavage moderne. Officiellement, ce sont des 'opportunités de mobilité sociale' pour les populations du Hors ; en réalité, des contrats de 20 ans non résiliables, où le logement insalubre et la ration alimentaire quotidienne servent de salaire. Les intermédiaires locaux – milices centrasiatiques, cartels subsahariens – se disputent le rôle de recruteur, transformant les zones grises en véritables marchés aux esclaves 2.0. Les blocs ferment les yeux : Euro-Nord a besoin de bras pour ses infrastructures vieillissantes, et les travailleurs du Hors n'ont pas le luxe de refuser.
 
 ## Tensions narratives
 La révolte gronde dans les camps de travail arctiques, où les conditions de vie se dégradent à mesure que les ressources s'épuisent. Les factions du Hors, autrefois alliées, commencent à se retourner contre Ergo-Wian, exigeant une part plus grande des profits. Dans les blocs, des voix dissidentes dénoncent un système qui sape les fondements moraux des forteresses. La question est désormais : jusqu'où les États-forteresses sont-ils prêts à aller pour préserver ce pilier invisible de leur stabilité ?
+
+## Relations
+**Alliés :**
+- [[alpha47_fortress_world]]
+- [[armada_logistique_nordique_fortress_world]]
+- [[cartels_miniers_militarises_subsahariens_fortress_world]]
+- [[ergo_wian_sovereign_holdings_fortress_world]]
+- [[factions_djihadistes_logistiques_d_asie_centrale_fortress_world]]
+- [[ingrid_solberg_fortress_world]]
+- [[vikram_raghavan_fortress_world]]
+- [[zone_usines_forteresses_eurasie_fortress_world]]
+**Opposants :**
+- [[alliance_sanitaire_des_populations_exclues_fortress_world]]
+- [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[mouvement_commun_midwest_fortress_world]]

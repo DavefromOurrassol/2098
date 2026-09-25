@@ -57,6 +57,7 @@ oppositions:
 - dispositifs_de_surveillance_numerique_souveraine_fortress_world
 - grille_aria_fortress_world
 - instances_aria_concurrentes_des_blocs_rivaux_fortress_world
+- institut_des_seuils_demographiques_fortress_world
 type_relation_dominante: infiltration
 
 annee_debut: 2041
@@ -128,3 +129,4 @@ LIMINAL prédit des seuils mais ne prescrit rien : chaque bloc reçoit les même
 - [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
 - [[grille_aria_fortress_world]]
 - [[instances_aria_concurrentes_des_blocs_rivaux_fortress_world]]
+- [[institut_des_seuils_demographiques_fortress_world]]

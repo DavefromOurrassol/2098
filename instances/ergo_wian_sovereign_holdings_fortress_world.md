@@ -37,24 +37,29 @@ zone_systemique:
     - infrastructure
 
 alliances:
-    - complexes_militaro_industriels_de_gestion_des_ressources_fortress_world
-    - conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world
-    - nexus_biosyn_fortress_world
-    - vaultcorp_security_fortress_world
-    - bureau_gouvernance_algorithmique_fortress_world
-    - pacte_forteresses_souveraines_fortress_world
-    - commandement_strategique_des_matieres_critiques_atlantique_fortress_world
-    - armada_logistique_nordique_fortress_world
-    - contrats_de_service_d_ergo_wian_fortress_world
-
+- alpha47_fortress_world
+- armada_logistique_nordique_fortress_world
+- aymeric_de_valfort_fortress_world
+- bureau_gouvernance_algorithmique_fortress_world
+- commandement_strategique_des_matieres_critiques_atlantique_fortress_world
+- complexes_militaro_industriels_de_gestion_des_ressources_fortress_world
+- conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world
+- contrats_de_service_d_ergo_wian_fortress_world
+- ingrid_solberg_fortress_world
+- les_recycleurs_fortress_world
+- mouvement_de_reconquete_europeenne_fortress_world
+- nexus_biosyn_fortress_world
+- pacte_forteresses_souveraines_fortress_world
+- vaultcorp_security_fortress_world
+- vikram_raghavan_fortress_world
 oppositions:
-    - alliance_sanitaire_des_populations_exclues_fortress_world
-    - coalitions_des_deplaces_et_apatrides_fortress_world
-    - mouvement_commun_midwest_fortress_world
-    - rust_belt_communes_libres_fortress_world
-    - cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
-    - voix_du_dehors_fortress_world
-
+- alliance_sanitaire_des_populations_exclues_fortress_world
+- cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- les_dedoubles_fortress_world
+- mouvement_commun_midwest_fortress_world
+- rust_belt_communes_libres_fortress_world
+- voix_du_dehors_fortress_world
 type_relation_dominante: conflit
 
 annee_debut: 2047
@@ -99,12 +104,35 @@ Depuis Euro-Nord, l'EWSD contrôle les corridors arctiques par sa filiale armée
 - [[systeme_economique_redistribution]]
 - [[technologie_information]]
 
-## Relations
-**Alliés** : [[complexes_militaro_industriels_de_gestion_des_ressources_fortress_world]], [[conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world]], [[nexus_biosyn_fortress_world]], [[vaultcorp_security_fortress_world]], [[bureau_gouvernance_algorithmique_fortress_world]], [[pacte_forteresses_souveraines_fortress_world]], [[commandement_strategique_des_matieres_critiques_atlantique_fortress_world]], [[armada_logistique_nordique_fortress_world]], [[contrats_de_service_d_ergo_wian_fortress_world]]
-**Opposants** : [[alliance_sanitaire_des_populations_exclues_fortress_world]], [[coalitions_des_deplaces_et_apatrides_fortress_world]], [[mouvement_commun_midwest_fortress_world]], [[rust_belt_communes_libres_fortress_world]], [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]], [[voix_du_dehors_fortress_world]]
 
 ## Description journalistique
 À Euro-Nord comme dans les zones que l'Ergo-Wian Sovereign Dominion gère par contrat, les villes ressemblent à des usines à ciel ouvert où chaque mouvement est optimisé pour la productivité. Les travailleurs, équipés d'implants Nexus BioSyn, sont notés en temps réel par des algorithmes de scoring qui déterminent leur accès aux rations d'eau, à l'électricité ou aux soins. Les 'zones déficitaires d'optimisation' — ces bidonvilles périphériques où s'entassent les populations hors-quota — sont encerclées par des murs intelligents et surveillées par des drones VaultCorp. Les migrations forcées vers les ceintures productives eurasiatiques ou les corridors logistiques arctiques sont devenues la norme, justifiées par des 'contrats de souveraineté biologique' signés sous la contrainte. L'EWSD ne cache même plus son mépris pour les institutions résiduelles : son souverain-gérant, un ancien gérant de fonds du XXIe siècle reconverti en seigneur territorial, a déclaré en 2089 que 'la démocratie était un bug du XXe siècle, corrigé par l'efficacité des marchés souverains'.
 
 ## Tensions narratives
 L'EWSD est au cœur de plusieurs lignes de fracture du scénario *fortress_world* : 1) **La révolte des seuils** — les populations des zones tampons, organisées en réseaux clandestins (Alliance Sanitaire, Mouvement Commun Midwest), sabotent les infrastructures de scoring et piratent les flux de données pour falsifier les quotas. 2) **La guerre des algorithmes** — les instances ARIA concurrentes des blocs rivaux tentent de corrompre les systèmes de gouvernance de l'EWSD, tandis que ses propres factions internes se déchirent entre partisans d'une autarcie totale et ceux favorables à des échanges limités avec les autres forteresses. 3) **La crise des augmentations** — les cliniques de déaugmentation indépendantes se multiplient, offrant aux travailleurs une échappatoire aux implants Nexus BioSyn, ce qui menace le modèle de productivité corporelle de l'EWSD. 4) **L'effondrement des nappes** — les Gardiens des Aquifères Oubliés accusent l'EWSD de pomper illégalement les ressources hydriques des zones grises, déclenchant des conflits armés avec les milices privées de protection des sites germinaux.
+
+## Relations
+**Alliés :**
+- [[alpha47_fortress_world]]
+- [[armada_logistique_nordique_fortress_world]]
+- [[aymeric_de_valfort_fortress_world]]
+- [[bureau_gouvernance_algorithmique_fortress_world]]
+- [[commandement_strategique_des_matieres_critiques_atlantique_fortress_world]]
+- [[complexes_militaro_industriels_de_gestion_des_ressources_fortress_world]]
+- [[conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world]]
+- [[contrats_de_service_d_ergo_wian_fortress_world]]
+- [[ingrid_solberg_fortress_world]]
+- [[les_recycleurs_fortress_world]]
+- [[mouvement_de_reconquete_europeenne_fortress_world]]
+- [[nexus_biosyn_fortress_world]]
+- [[pacte_forteresses_souveraines_fortress_world]]
+- [[vaultcorp_security_fortress_world]]
+- [[vikram_raghavan_fortress_world]]
+**Opposants :**
+- [[alliance_sanitaire_des_populations_exclues_fortress_world]]
+- [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[les_dedoubles_fortress_world]]
+- [[mouvement_commun_midwest_fortress_world]]
+- [[rust_belt_communes_libres_fortress_world]]
+- [[voix_du_dehors_fortress_world]]

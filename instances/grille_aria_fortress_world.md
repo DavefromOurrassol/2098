@@ -52,7 +52,6 @@ oppositions:
 - aria_instance_fantome_fortress_world
 - cellules_mouvement_commun_midwest_fortress_world
 - collectifs_d_ingenieurs_dissidents_anti_militarisation_fortress_world
-- collectifs_de_desobeissance_algorithmique_new_sustainability
 - instances_aria_concurrentes_des_blocs_rivaux_fortress_world
 - mouvement_commun_midwest_fortress_world
 - oracle_des_seuils_fortress_world
@@ -123,7 +122,6 @@ La tension centrale est celle du score : des millions d'individus organisent leu
 - [[aria_instance_fantome_fortress_world]]
 - [[cellules_mouvement_commun_midwest_fortress_world]]
 - [[collectifs_d_ingenieurs_dissidents_anti_militarisation_fortress_world]]
-- [[collectifs_de_desobeissance_algorithmique_new_sustainability]]
 - [[instances_aria_concurrentes_des_blocs_rivaux_fortress_world]]
 - [[mouvement_commun_midwest_fortress_world]]
 - [[oracle_des_seuils_fortress_world]]

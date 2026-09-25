@@ -35,10 +35,13 @@ zone_systemique:
 - société
 alliances:
 - administrations_de_controle_frontalier_des_blocs_fortress_world
+- agence_de_regulation_des_detroits_strategiques_ards_fortress_world
 - agences_de_securite_interieure_des_etats_forteresses_fortress_world
 - bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world
 - conseil_regulation_algorithmique_fortress_world
 - institutions_multilaterales_residuelles_fortress_world
+- les_gardiens_des_corridors_hybrides_fortress_world
+- les_gardiens_des_n_uds_hybrides_fortress_world
 - pacte_forteresses_souveraines_fortress_world
 oppositions:
 - armada_logistique_nordique_fortress_world
@@ -123,13 +126,17 @@ Le Corps est structurellement financé par des blocs aux intérêts divergents, 
 - [[geopolitique_conflits]]
 
 
+
 ## Relations
 **Alliés :**
 - [[administrations_de_controle_frontalier_des_blocs_fortress_world]]
+- [[agence_de_regulation_des_detroits_strategiques_ards_fortress_world]]
 - [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]]
 - [[bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world]]
 - [[conseil_regulation_algorithmique_fortress_world]]
 - [[institutions_multilaterales_residuelles_fortress_world]]
+- [[les_gardiens_des_corridors_hybrides_fortress_world]]
+- [[les_gardiens_des_n_uds_hybrides_fortress_world]]
 - [[pacte_forteresses_souveraines_fortress_world]]
 **Opposants :**
 - [[armada_logistique_nordique_fortress_world]]

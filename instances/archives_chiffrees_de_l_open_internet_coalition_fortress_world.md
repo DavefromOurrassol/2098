@@ -37,10 +37,12 @@ zone_systemique:
 alliances:
 - aria_instance_fantome_fortress_world
 - cellules_mouvement_commun_midwest_fortress_world
+- gelecek_meclisi_fortress_world
 - marches_gris_casablanca_fortress_world
 - marches_gris_tbilissi_fortress_world
 - reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world
 - rust_belt_communes_libres_fortress_world
+- terminal_kharg_data_haven_fortress_world
 - voix_du_dehors_fortress_world
 oppositions:
 - anba_siege_atlantique_fortress_world
@@ -119,14 +121,17 @@ Les Archives sont convoitées à la fois par les réseaux de résistance qui les
 - [[gouvernance_institutions]]
 
 
+
 ## Relations
 **Alliés :**
 - [[aria_instance_fantome_fortress_world]]
 - [[cellules_mouvement_commun_midwest_fortress_world]]
+- [[gelecek_meclisi_fortress_world]]
 - [[marches_gris_casablanca_fortress_world]]
 - [[marches_gris_tbilissi_fortress_world]]
 - [[reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world]]
 - [[rust_belt_communes_libres_fortress_world]]
+- [[terminal_kharg_data_haven_fortress_world]]
 - [[voix_du_dehors_fortress_world]]
 **Opposants :**
 - [[anba_siege_atlantique_fortress_world]]

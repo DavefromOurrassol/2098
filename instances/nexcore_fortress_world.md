@@ -42,7 +42,6 @@ alliances:
 - oligarchies_technologiques_souveraines_d_infrastructure_de_calcul_fortress_world
 oppositions:
 - factions_traditionalistes_du_mandat_electif_fortress_world
-- nexcore_new_sustainability
 type_relation_dominante: dépendance
 annee_debut: 2041
 annee_fin:
@@ -112,4 +111,3 @@ sur le degré de contrôle acceptable.
 - [[oligarchies_technologiques_souveraines_d_infrastructure_de_calcul_fortress_world]]
 **Opposants :**
 - [[factions_traditionalistes_du_mandat_electif_fortress_world]]
-- [[nexcore_new_sustainability]]

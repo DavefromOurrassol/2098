@@ -33,6 +33,7 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- anjali_raghavan_fortress_world
 - archives_chiffrees_de_l_open_internet_coalition_fortress_world
 - aria_instance_fantome_fortress_world
 - cellules_mouvement_commun_midwest_fortress_world
@@ -40,11 +41,13 @@ alliances:
 - cliniques_de_deaugmentation_independantes_fortress_world
 - coalitions_des_deplaces_et_apatrides_fortress_world
 - contrebandiers_energetiques_des_zones_grises_fortress_world
+- gelecek_meclisi_fortress_world
 - marches_gris_casablanca_fortress_world
 - marches_gris_tbilissi_fortress_world
 - mouvement_commun_midwest_fortress_world
 - oracle_des_seuils_fortress_world
 - reseaux_d_echange_clandestin_inter_zones_fortress_world
+- terminal_kharg_data_haven_fortress_world
 - voix_du_dehors_fortress_world
 oppositions:
 - administrations_de_controle_frontalier_des_blocs_fortress_world
@@ -127,8 +130,10 @@ La tension fondamentale de ces réseaux réside dans leur dépendance aux mêmes
 - [[geopolitique_conflits]]
 
 
+
 ## Relations
 **Alliés :**
+- [[anjali_raghavan_fortress_world]]
 - [[archives_chiffrees_de_l_open_internet_coalition_fortress_world]]
 - [[aria_instance_fantome_fortress_world]]
 - [[cellules_mouvement_commun_midwest_fortress_world]]
@@ -136,11 +141,13 @@ La tension fondamentale de ces réseaux réside dans leur dépendance aux mêmes
 - [[cliniques_de_deaugmentation_independantes_fortress_world]]
 - [[coalitions_des_deplaces_et_apatrides_fortress_world]]
 - [[contrebandiers_energetiques_des_zones_grises_fortress_world]]
+- [[gelecek_meclisi_fortress_world]]
 - [[marches_gris_casablanca_fortress_world]]
 - [[marches_gris_tbilissi_fortress_world]]
 - [[mouvement_commun_midwest_fortress_world]]
 - [[oracle_des_seuils_fortress_world]]
 - [[reseaux_d_echange_clandestin_inter_zones_fortress_world]]
+- [[terminal_kharg_data_haven_fortress_world]]
 - [[voix_du_dehors_fortress_world]]
 **Opposants :**
 - [[administrations_de_controle_frontalier_des_blocs_fortress_world]]

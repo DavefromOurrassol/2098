@@ -27,13 +27,16 @@ zone_systemique:
 - gouvernance
 - société
 alliances:
+- aymeric_de_valfort_fortress_world
 - ergo_wian_sovereign_holdings_fortress_world
 - reseaux_de_contrebande_energetique_transfrontaliere_fortress_world
+- vikram_raghavan_fortress_world
 oppositions:
-- les_recycleurs_fortress_world
-- coalitions_des_deplaces_et_apatrides_fortress_world
-- alliance_sanitaire_des_populations_exclues_fortress_world
 - agences_de_securite_interieure_des_etats_forteresses_fortress_world
+- alliance_sanitaire_des_populations_exclues_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- les_recycleurs_fortress_world
+- tribu_des_cinq_nations_fortress_world
 type_relation_dominante: conflit
 annee_debut: 2047
 annee_fin: null
@@ -88,12 +91,22 @@ Organisation de raids armés dans les zones tampons du Sud de l'Europe, trafic d
 - [[demographie_mobilite_humaine]]
 - [[valeurs_culture_tempo_sociale]]
 
-## Relations
-**Alliés** : [[ergo_wian_sovereign_holdings_fortress_world]], [[reseaux_de_contrebande_energetique_transfrontaliere_fortress_world]]
-**Opposants** : [[les_recycleurs_fortress_world]], [[coalitions_des_deplaces_et_apatrides_fortress_world]], [[alliance_sanitaire_des_populations_exclues_fortress_world]], [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]]
 
 ## Description journalistique
 La Légion des Fronts Purs, ou RE-LFP, est devenue en 2098 l'une des factions les plus redoutées du Hors européen. Connue pour ses raids éclair contre les camps de déplacés, ses membres, vêtus de treillis noirs frappés d'une croix celtique stylisée en rouge, opèrent depuis des bases mobiles dans les ruines des anciennes métropoles méditerranéennes. Leur chef charismatique, un ancien officier des milices corporatistes de 2045, justifie leurs exactions par un discours de « survie civilisationnelle », mêlant références à une Europe mythifiée et technologie de surveillance de pointe fournie par Ergo-Wian. Leur trafic d'esclaves, notamment de jeunes adultes en âge de travailler, alimente les marchés noirs des blocs souverains, tandis que leurs recrutements forcés dans les zones grises en font une armée de plus en plus structurée, malgré leur illégitimité officielle.
 
 ## Tensions narratives
 La RE-LFP incarne la contradiction fondamentale du Hors : une faction qui se veut le rempart d'une identité européenne « pure » mais qui dépend des mêmes réseaux de contrebande et de corruption qu'elle prétend combattre. Leur rivalité avec les Recycleurs, autre faction majeure du Hors, pourrait dégénérer en guerre ouverte pour le contrôle des corridors logistiques, tandis que leur alliance avec Ergo-Wian les place en porte-à-faux avec les populations locales, qui les voient comme des mercenaires au service des blocs. Leur trajectoire ascendante interroge : parviendront-ils à s'imposer comme une force politique légitime, ou seront-ils écrasés par les États-forteresses qu'ils prétendent défendre ?
+
+## Relations
+**Alliés :**
+- [[aymeric_de_valfort_fortress_world]]
+- [[ergo_wian_sovereign_holdings_fortress_world]]
+- [[reseaux_de_contrebande_energetique_transfrontaliere_fortress_world]]
+- [[vikram_raghavan_fortress_world]]
+**Opposants :**
+- [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]]
+- [[alliance_sanitaire_des_populations_exclues_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[les_recycleurs_fortress_world]]
+- [[tribu_des_cinq_nations_fortress_world]]

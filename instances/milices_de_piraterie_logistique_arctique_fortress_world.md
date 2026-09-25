@@ -31,12 +31,14 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- consortium_des_pecheries_autonomes_du_grand_nord_fortress_world
 - contrebandiers_energetiques_des_zones_grises_fortress_world
 - marches_gris_casablanca_fortress_world
 - marches_gris_tbilissi_fortress_world
 - operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world
 - reseaux_d_echange_clandestin_inter_zones_fortress_world
 oppositions:
+- agence_de_regulation_des_detroits_strategiques_ards_fortress_world
 - anba_siege_atlantique_fortress_world
 - armada_logistique_nordique_fortress_world
 - bloc_pacifique_nord_fortress_world
@@ -50,6 +52,8 @@ oppositions:
 - instances_aria_concurrentes_des_blocs_rivaux_fortress_world
 - ironclad_logistics_fortress_world
 - kalaallit_nunaat_sovereign_fund_fortress_world
+- les_gardiens_des_corridors_hybrides_fortress_world
+- les_gardiens_des_n_uds_hybrides_fortress_world
 - nexcore_atlantique_infrastructure_fortress_world
 type_relation_dominante: conflit
 annee_debut: 2041
@@ -117,14 +121,17 @@ Les milices sont prises en étau entre leur utilité instrumentale pour certains
 - [[energie_ressources_critiques]]
 
 
+
 ## Relations
 **Alliés :**
+- [[consortium_des_pecheries_autonomes_du_grand_nord_fortress_world]]
 - [[contrebandiers_energetiques_des_zones_grises_fortress_world]]
 - [[marches_gris_casablanca_fortress_world]]
 - [[marches_gris_tbilissi_fortress_world]]
 - [[operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world]]
 - [[reseaux_d_echange_clandestin_inter_zones_fortress_world]]
 **Opposants :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_fortress_world]]
 - [[anba_siege_atlantique_fortress_world]]
 - [[armada_logistique_nordique_fortress_world]]
 - [[bloc_pacifique_nord_fortress_world]]
@@ -138,6 +145,8 @@ Les milices sont prises en étau entre leur utilité instrumentale pour certains
 - [[instances_aria_concurrentes_des_blocs_rivaux_fortress_world]]
 - [[ironclad_logistics_fortress_world]]
 - [[kalaallit_nunaat_sovereign_fund_fortress_world]]
+- [[les_gardiens_des_corridors_hybrides_fortress_world]]
+- [[les_gardiens_des_n_uds_hybrides_fortress_world]]
 - [[nexcore_atlantique_infrastructure_fortress_world]]
 
 ## Notes

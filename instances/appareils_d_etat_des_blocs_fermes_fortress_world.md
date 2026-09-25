@@ -47,6 +47,7 @@ alliances:
 - conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world
 - consortium_des_medias_d_etat_souverains_hegemonia_press_xinhua_fortifiee_eurovox_integral_fortress_world
 - datacenters_conseil_eurasiatique_fortress_world
+- deepfield_institute_fortress_world
 - directive_kontinuum_fortress_world
 - executif_militaro_civil_du_regime_fortress_world
 - front_resilient_pro_systeme_fortress_world
@@ -143,6 +144,7 @@ La contradiction fondamentale de ces appareils réside dans leur dépendance aux
 - [[demographie_mobilite_humaine]]
 
 
+
 ## Relations
 **Alliés :**
 - [[administrations_de_controle_frontalier_des_blocs_fortress_world]]
@@ -159,6 +161,7 @@ La contradiction fondamentale de ces appareils réside dans leur dépendance aux
 - [[conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world]]
 - [[consortium_des_medias_d_etat_souverains_hegemonia_press_xinhua_fortifiee_eurovox_integral_fortress_world]]
 - [[datacenters_conseil_eurasiatique_fortress_world]]
+- [[deepfield_institute_fortress_world]]
 - [[directive_kontinuum_fortress_world]]
 - [[executif_militaro_civil_du_regime_fortress_world]]
 - [[front_resilient_pro_systeme_fortress_world]]

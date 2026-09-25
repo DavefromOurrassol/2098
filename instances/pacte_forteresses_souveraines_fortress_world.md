@@ -54,11 +54,13 @@ alliances:
 - consortium_sino_finlandais_de_flotte_autonome_fortress_world
 - corps_des_inspecteurs_de_conformite_inter_blocs_fortress_world
 - dispositifs_de_surveillance_numerique_souveraine_fortress_world
+- ergo_wian_sovereign_holdings_fortress_world
 - etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world
 - executif_militaro_civil_du_regime_fortress_world
 - front_resilient_pro_systeme_fortress_world
 - geneve_bunker_fortress_world
 - instances_aria_concurrentes_des_blocs_rivaux_fortress_world
+- institut_des_seuils_demographiques_fortress_world
 - milices_privees_de_protection_des_sites_germinaux_fortress_world
 - nexcore_atlantique_infrastructure_fortress_world
 - reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world
@@ -154,11 +156,13 @@ La cohésion du Pacte repose sur la permanence de la menace extérieure : à mes
 - [[consortium_sino_finlandais_de_flotte_autonome_fortress_world]]
 - [[corps_des_inspecteurs_de_conformite_inter_blocs_fortress_world]]
 - [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
+- [[ergo_wian_sovereign_holdings_fortress_world]]
 - [[etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world]]
 - [[executif_militaro_civil_du_regime_fortress_world]]
 - [[front_resilient_pro_systeme_fortress_world]]
 - [[geneve_bunker_fortress_world]]
 - [[instances_aria_concurrentes_des_blocs_rivaux_fortress_world]]
+- [[institut_des_seuils_demographiques_fortress_world]]
 - [[milices_privees_de_protection_des_sites_germinaux_fortress_world]]
 - [[nexcore_atlantique_infrastructure_fortress_world]]
 - [[reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world]]

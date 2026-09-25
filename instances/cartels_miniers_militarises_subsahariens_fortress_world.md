@@ -34,6 +34,7 @@ zone_systemique:
 alliances:
 - commandements_logistiques_peripheriques_du_bloc_eurasien_central_fortress_world
 - complexes_militaro_industriels_de_gestion_des_ressources_fortress_world
+- contrats_de_service_d_ergo_wian_fortress_world
 - nexcore_atlantique_infrastructure_fortress_world
 - nexus_biosyn_division_eurasienne_fortress_world
 oppositions:
@@ -112,10 +113,12 @@ La contradiction fondamentale qui les mine est leur dépendance absolue aux ache
 
 
 
+
 ## Relations
 **Alliés :**
 - [[commandements_logistiques_peripheriques_du_bloc_eurasien_central_fortress_world]]
 - [[complexes_militaro_industriels_de_gestion_des_ressources_fortress_world]]
+- [[contrats_de_service_d_ergo_wian_fortress_world]]
 - [[nexcore_atlantique_infrastructure_fortress_world]]
 - [[nexus_biosyn_division_eurasienne_fortress_world]]
 **Opposants :**

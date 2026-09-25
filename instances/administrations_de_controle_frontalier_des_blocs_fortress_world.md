@@ -47,6 +47,7 @@ alliances:
 - datacenters_conseil_eurasiatique_fortress_world
 - dispositifs_de_surveillance_numerique_souveraine_fortress_world
 - front_resilient_pro_systeme_fortress_world
+- institut_des_seuils_demographiques_fortress_world
 - nexcore_atlantique_infrastructure_fortress_world
 - pacte_forteresses_souveraines_fortress_world
 - siege_genevois_cars_fortress_world
@@ -63,15 +64,20 @@ oppositions:
 - collectifs_du_seuil_fortress_world
 - communautes_deplacees_hors_quota_migratoire_fortress_world
 - corridors_gris_asie_centrale_fortress_world
+- gelecek_meclisi_fortress_world
 - institutions_multilaterales_residuelles_fortress_world
+- les_gardiens_des_n_uds_hybrides_fortress_world
+- les_veilleurs_des_nappes_phreatiques_fortress_world
 - les_veilleurs_du_fleuve_fortress_world
 - marches_gris_casablanca_fortress_world
 - marches_gris_tbilissi_fortress_world
 - mouvement_commun_midwest_fortress_world
 - mouvement_des_communes_du_rust_belt_fortress_world
+- reseau_des_cartographes_des_zones_grises_fortress_world
 - reseaux_d_echange_clandestin_inter_zones_fortress_world
 - reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world
 - rust_belt_communes_libres_fortress_world
+- terminal_kharg_data_haven_fortress_world
 type_relation_dominante: conflit
 annee_debut: 2045
 annee_fin: null
@@ -138,6 +144,7 @@ Ces administrations incarnent la contradiction fondamentale du monde forteresse 
 - [[gouvernance_institutions]]
 
 
+
 ## Relations
 **Alliés :**
 - [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]]
@@ -156,6 +163,7 @@ Ces administrations incarnent la contradiction fondamentale du monde forteresse 
 - [[datacenters_conseil_eurasiatique_fortress_world]]
 - [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
 - [[front_resilient_pro_systeme_fortress_world]]
+- [[institut_des_seuils_demographiques_fortress_world]]
 - [[nexcore_atlantique_infrastructure_fortress_world]]
 - [[pacte_forteresses_souveraines_fortress_world]]
 - [[siege_genevois_cars_fortress_world]]
@@ -172,15 +180,20 @@ Ces administrations incarnent la contradiction fondamentale du monde forteresse 
 - [[collectifs_du_seuil_fortress_world]]
 - [[communautes_deplacees_hors_quota_migratoire_fortress_world]]
 - [[corridors_gris_asie_centrale_fortress_world]]
+- [[gelecek_meclisi_fortress_world]]
 - [[institutions_multilaterales_residuelles_fortress_world]]
+- [[les_gardiens_des_n_uds_hybrides_fortress_world]]
+- [[les_veilleurs_des_nappes_phreatiques_fortress_world]]
 - [[les_veilleurs_du_fleuve_fortress_world]]
 - [[marches_gris_casablanca_fortress_world]]
 - [[marches_gris_tbilissi_fortress_world]]
 - [[mouvement_commun_midwest_fortress_world]]
 - [[mouvement_des_communes_du_rust_belt_fortress_world]]
+- [[reseau_des_cartographes_des_zones_grises_fortress_world]]
 - [[reseaux_d_echange_clandestin_inter_zones_fortress_world]]
 - [[reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world]]
 - [[rust_belt_communes_libres_fortress_world]]
+- [[terminal_kharg_data_haven_fortress_world]]
 
 ## Notes
 Fiche enrichie depuis officialise_minimal le 2026-06-27.

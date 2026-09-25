@@ -44,6 +44,7 @@ alliances:
 - biolock_agritech_fortress_world
 - cartels_energetiques_des_bioreacteurs_fortress_world
 - conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world
+- ergo_wian_sovereign_holdings_fortress_world
 - etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world
 - instances_aria_concurrentes_des_blocs_rivaux_fortress_world
 - milices_privees_de_protection_des_sites_germinaux_fortress_world
@@ -119,6 +120,7 @@ La fracture interne entre les divisions est explosive : la Division Eurasienne e
 - [[biolock_agritech_fortress_world]]
 - [[cartels_energetiques_des_bioreacteurs_fortress_world]]
 - [[conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world]]
+- [[ergo_wian_sovereign_holdings_fortress_world]]
 - [[etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world]]
 - [[instances_aria_concurrentes_des_blocs_rivaux_fortress_world]]
 - [[milices_privees_de_protection_des_sites_germinaux_fortress_world]]

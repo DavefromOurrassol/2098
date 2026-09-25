@@ -73,6 +73,7 @@ oppositions:
 - collectifs_de_reappropriation_energetique_peripherique_fortress_world
 - collectifs_du_seuil_fortress_world
 - communautes_deplacees_hors_quota_migratoire_fortress_world
+- consortium_des_pecheries_autonomes_du_grand_nord_fortress_world
 - contrebandiers_energetiques_des_zones_grises_fortress_world
 - factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world
 - factions_djihadistes_logistiques_d_asie_centrale_fortress_world
@@ -172,6 +173,7 @@ La contradiction fondamentale de Nexcore est désormais visible même pour ses a
 - [[collectifs_de_reappropriation_energetique_peripherique_fortress_world]]
 - [[collectifs_du_seuil_fortress_world]]
 - [[communautes_deplacees_hors_quota_migratoire_fortress_world]]
+- [[consortium_des_pecheries_autonomes_du_grand_nord_fortress_world]]
 - [[contrebandiers_energetiques_des_zones_grises_fortress_world]]
 - [[factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world]]
 - [[factions_djihadistes_logistiques_d_asie_centrale_fortress_world]]

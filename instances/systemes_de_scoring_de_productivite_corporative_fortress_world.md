@@ -65,6 +65,7 @@ oppositions:
 - consortium_africain_de_biotechnologies_sociales_fortress_world
 - corridors_gris_asie_centrale_fortress_world
 - factions_traditionalistes_du_mandat_electif_fortress_world
+- ilse_varga_holm_fortress_world
 - internationale_travailleurs_augmentes_fortress_world
 - mouvement_commun_midwest_fortress_world
 - mouvement_des_communes_du_rust_belt_fortress_world
@@ -134,6 +135,7 @@ La tension centrale réside dans l'écart entre le discours de méritocracie tec
 - [[valeurs_culture_tempo_sociale]]
 
 
+
 ## Relations
 **Alliés :**
 - [[amazonie_pacte_vert_fortress_world]]
@@ -167,6 +169,7 @@ La tension centrale réside dans l'écart entre le discours de méritocracie tec
 - [[consortium_africain_de_biotechnologies_sociales_fortress_world]]
 - [[corridors_gris_asie_centrale_fortress_world]]
 - [[factions_traditionalistes_du_mandat_electif_fortress_world]]
+- [[ilse_varga_holm_fortress_world]]
 - [[internationale_travailleurs_augmentes_fortress_world]]
 - [[mouvement_commun_midwest_fortress_world]]
 - [[mouvement_des_communes_du_rust_belt_fortress_world]]

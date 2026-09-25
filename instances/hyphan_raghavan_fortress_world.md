@@ -22,12 +22,13 @@ zone_systemique:
   - société
   - information
 alliances:
-  - les_cycles_fortress_world
-  - les_recycleurs_fortress_world
-  - malo_fortress_world
+- anjali_raghavan_fortress_world
+- les_cycles_fortress_world
+- les_recycleurs_fortress_world
+- malo_fortress_world
 oppositions:
-  - mouvement_de_reconquete_europeenne_fortress_world
-  - ergo_wian_sovereign_holdings_fortress_world
+- ergo_wian_sovereign_holdings_fortress_world
+- mouvement_de_reconquete_europeenne_fortress_world
 type_relation_dominante: dépendance
 annee_debut: 2083
 annee_fin:
@@ -61,12 +62,19 @@ Hyphan survit en glanant des objets métalliques du « monde d'avant » qu'elle 
 - [[valeurs_culture_tempo_sociale]]
 - [[gouvernance_institutions]]
 
-## Relations
-**Alliés** : [[les_cycles_fortress_world]], [[les_recycleurs_fortress_world]], [[malo_fortress_world]]
-**Opposants** : [[mouvement_de_reconquete_europeenne_fortress_world]], [[ergo_wian_sovereign_holdings_fortress_world]]
 
 ## Description journalistique
 Paris-Hors, 2098. Hyphan Raghavan, 15 ans, est une silhouette familière des Cycles, ces marchés informels où s’échangent les reliques du monde d’avant. Orpheline, elle vit sous la protection de son oncle, Vikram Raghavan, l’un des piliers des Recycleurs, ces ferrailleurs qui font commerce des déchets métalliques des blocs forteresses. Mais depuis quelques mois, Hyphan est sujette à des crises étranges : des pertes de connaissance où des images inconnues se superposent à la réalité, comme si son esprit errait ailleurs. Les rumeurs parlent de la maladie d’Alpha47, contractée par son père avant sa mort, mais personne ne sait encore qu’elle est l’une de ces Dédoublées, ces êtres dont les perceptions défient les frontières du réel. Pour Ergo-Wian, elle n’est qu’une cible de plus dans une chasse aux anomalies qui secoue les marges du système.
 
 ## Tensions narratives
 Hyphan se trouve au cœur de plusieurs tensions narratives : la découverte progressive de sa nature de Dédoublée, qui pourrait faire d’elle une cible ou une arme pour les factions en présence ; la pression croissante d’Ergo-Wian, qui voit en elle une anomalie à éliminer ou à exploiter ; et la fragilité de sa position dans les Cycles, où sa survie dépend de sa capacité à rester invisible tout en glanant assez pour vivre. Son amitié avec Malo, un autre glaneur, et sa relation avec son oncle Vikram, qui la protège sans comprendre ses crises, ajoutent une dimension humaine à un enjeu systémique : dans un monde où les blocs forteresses traquent toute forme de déviance, que devient une adolescente dont l’esprit refuse de se plier aux frontières du réel ?
+
+## Relations
+**Alliés :**
+- [[anjali_raghavan_fortress_world]]
+- [[les_cycles_fortress_world]]
+- [[les_recycleurs_fortress_world]]
+- [[malo_fortress_world]]
+**Opposants :**
+- [[ergo_wian_sovereign_holdings_fortress_world]]
+- [[mouvement_de_reconquete_europeenne_fortress_world]]

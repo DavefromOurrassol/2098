@@ -33,11 +33,13 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- agence_de_regulation_des_detroits_strategiques_ards_fortress_world
 - anba_siege_atlantique_fortress_world
 - bloc_atlantique_fortress_world
 - centre_controle_orbital_helios_fortress_world
 - coalition_arctique_des_blocs_continentaux_fortress_world
 - complexes_militaro_industriels_de_gestion_des_ressources_fortress_world
+- ergo_wian_sovereign_holdings_fortress_world
 - ironclad_logistics_fortress_world
 - kalaallit_nunaat_sovereign_fund_fortress_world
 - nexcore_atlantique_infrastructure_fortress_world
@@ -117,13 +119,16 @@ Le CSMCA est écartelé entre la logique souverainiste des États membres qui co
 - [[gouvernance_institutions]]
 
 
+
 ## Relations
 **Alliés :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_fortress_world]]
 - [[anba_siege_atlantique_fortress_world]]
 - [[bloc_atlantique_fortress_world]]
 - [[centre_controle_orbital_helios_fortress_world]]
 - [[coalition_arctique_des_blocs_continentaux_fortress_world]]
 - [[complexes_militaro_industriels_de_gestion_des_ressources_fortress_world]]
+- [[ergo_wian_sovereign_holdings_fortress_world]]
 - [[ironclad_logistics_fortress_world]]
 - [[kalaallit_nunaat_sovereign_fund_fortress_world]]
 - [[nexcore_atlantique_infrastructure_fortress_world]]

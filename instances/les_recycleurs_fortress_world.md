@@ -36,14 +36,17 @@ zone_systemique:
     - infrastructure
 
 alliances:
-    - ergo_wian_sovereign_holdings_fortress_world
-    - reseaux_de_contrebande_energetique_transfrontaliere_fortress_world
-    - corridors_gris_asie_centrale_fortress_world
-
+- anjali_raghavan_fortress_world
+- corridors_gris_asie_centrale_fortress_world
+- ergo_wian_sovereign_holdings_fortress_world
+- les_cycles_fortress_world
+- reseaux_de_contrebande_energetique_transfrontaliere_fortress_world
+- vikram_raghavan_fortress_world
 oppositions:
-    - agences_de_securite_interieure_des_etats_forteresses_fortress_world
-    - alliance_blocs_souverains_fortress_world
-
+- agences_de_securite_interieure_des_etats_forteresses_fortress_world
+- alliance_blocs_souverains_fortress_world
+- mouvement_de_reconquete_europeenne_fortress_world
+- tribu_des_cinq_nations_fortress_world
 type_relation_dominante: rivalité
 
 annee_debut: 2047
@@ -102,12 +105,23 @@ Contrôle des centres de collecte des métaux (les 'Cycles'), gestion des résea
 - [[organisation_territoires]]
 - [[systeme_economique_redistribution]]
 
-## Relations
-**Alliés** : [[ergo_wian_sovereign_holdings_fortress_world]], [[reseaux_de_contrebande_energetique_transfrontaliere_fortress_world]], [[corridors_gris_asie_centrale_fortress_world]]
-**Opposants** : [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]], [[alliance_blocs_souverains_fortress_world]]
 
 ## Description journalistique
 Dans les ruines de Paris, les Ferrailleurs règnent en maîtres. Leurs centres de collecte, les 'Cycles', sont des forteresses de métal rouillé où s'entassent les trésors de l'ancien monde : cuivre, aluminium, terres rares extraites des décombres. Les enfants y travaillent sous la surveillance de miliciens armés, tandis que les adultes négocient avec les blocs fermés pour écouler leur butin. Leur chef, connu sous le nom de 'Le Ferrailleur', est une figure aussi redoutée que respectée, un seigneur de guerre qui a su transformer la survie en empire. Leur pouvoir repose sur une économie de la peur, mais aussi sur une capacité unique à fournir des ressources critiques dans un monde où chaque gramme de métal compte.
 
 ## Tensions narratives
 Les Ferrailleurs sont pris entre deux feux : d'un côté, leur alliance avec Ergo-Wian les expose à des représailles de la part des blocs fermés, qui voient en eux une menace à leur souveraineté. De l'autre, leur recrutement forcé et leur brutalité alimentent une résistance interne, notamment parmi les jeunes et les familles. Leur avenir dépendra de leur capacité à maintenir leur emprise locale tout en évitant une confrontation directe avec la Reconquête européenne, qui cherche à reprendre le contrôle des zones abandonnées.
+
+## Relations
+**Alliés :**
+- [[anjali_raghavan_fortress_world]]
+- [[corridors_gris_asie_centrale_fortress_world]]
+- [[ergo_wian_sovereign_holdings_fortress_world]]
+- [[les_cycles_fortress_world]]
+- [[reseaux_de_contrebande_energetique_transfrontaliere_fortress_world]]
+- [[vikram_raghavan_fortress_world]]
+**Opposants :**
+- [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]]
+- [[alliance_blocs_souverains_fortress_world]]
+- [[mouvement_de_reconquete_europeenne_fortress_world]]
+- [[tribu_des_cinq_nations_fortress_world]]

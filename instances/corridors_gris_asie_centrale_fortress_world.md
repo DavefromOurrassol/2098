@@ -44,6 +44,8 @@ alliances:
 - communautes_deplacees_hors_quota_migratoire_fortress_world
 - contrebandiers_energetiques_des_zones_grises_fortress_world
 - factions_djihadistes_logistiques_d_asie_centrale_fortress_world
+- ilse_varga_holm_fortress_world
+- les_recycleurs_fortress_world
 - marches_gris_tbilissi_fortress_world
 - operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world
 - reseaux_d_echange_clandestin_inter_zones_fortress_world
@@ -123,6 +125,8 @@ La surveillance satellitaire permanente génère une cartographie détaillée du
 - [[communautes_deplacees_hors_quota_migratoire_fortress_world]]
 - [[contrebandiers_energetiques_des_zones_grises_fortress_world]]
 - [[factions_djihadistes_logistiques_d_asie_centrale_fortress_world]]
+- [[ilse_varga_holm_fortress_world]]
+- [[les_recycleurs_fortress_world]]
 - [[marches_gris_tbilissi_fortress_world]]
 - [[operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world]]
 - [[reseaux_d_echange_clandestin_inter_zones_fortress_world]]

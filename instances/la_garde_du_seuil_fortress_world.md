@@ -36,17 +36,16 @@ zone_systemique:
     - société
 
 alliances:
-    - bloc_eurasiatique_occidental_fortress_world
-    - agences_de_securite_interieure_des_etats_forteresses_fortress_world
-    - complexes_militaro_industriels_de_gestion_des_ressources_fortress_world
-    - nexus_biosyn_division_eurasienne_fortress_world
-
+- agences_de_securite_interieure_des_etats_forteresses_fortress_world
+- bloc_eurasiatique_occidental_fortress_world
+- complexes_militaro_industriels_de_gestion_des_ressources_fortress_world
+- guilhelma_fortress_world
+- nexus_biosyn_division_eurasienne_fortress_world
 oppositions:
-    - coalitions_des_deplaces_et_apatrides_fortress_world
-    - reseaux_de_contrebande_energetique_transfrontaliere_fortress_world
-    - cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
-    - les_dedoubles_fortress_world
-
+- cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- les_dedoubles_fortress_world
+- reseaux_de_contrebande_energetique_transfrontaliere_fortress_world
 type_relation_dominante: alliance stratégique
 
 annee_debut: 2046
@@ -105,12 +104,22 @@ La Garde assure la sécurité des frontières physiques et symboliques du Califa
 - [[technologie_information]]
 - [[valeurs_culture_tempo_sociale]]
 
-## Relations
-**Alliés** : [[bloc_eurasiatique_occidental_fortress_world]], [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]], [[complexes_militaro_industriels_de_gestion_des_ressources_fortress_world]], [[nexus_biosyn_division_eurasienne_fortress_world]]
-**Opposants** : [[coalitions_des_deplaces_et_apatrides_fortress_world]], [[reseaux_de_contrebande_energetique_transfrontaliere_fortress_world]], [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]], [[les_dedoubles_fortress_world]]
 
 ## Description journalistique
 Depuis les ruelles étroites de la Barcelone reconquise jusqu'aux steppes kazakhes, les Gardiens du Miroir hantent les récits des voyageurs et des réfugiés. Vêtus de robes noires brodées de fils d'argent, leurs visages souvent masqués par des miroirs fractals, ils apparaissent aux frontières comme des ombres insaisissables, capables de se multiplier ou de disparaître dans un éclat de lumière. Les autorités du Califat entretiennent soigneusement le mystère : leurs exploits sont célébrés dans des poèmes épiques diffusés par les médias d'État, tandis que leur véritable nature — une élite de Dédoublés formés à maîtriser leurs reflets — reste un secret jalousement gardé. Leur réputation de guerriers invincibles en fait un outil de dissuasion aussi efficace que leurs drones ou leurs murs frontaliers.
 
 ## Tensions narratives
 La Garde du Seuil est prise dans une contradiction croissante : plus elle renforce son mythe pour dissuader les ennemis extérieurs, plus elle devient une cible pour les dissidences internes, qui voient en elle un symbole de l'oppression du Califat. Certains Dédoublés non affiliés à la Garde contestent son monopole sur leur « don », accusant ses membres de trahir leur propre nature en servant un régime autoritaire. Par ailleurs, des rumeurs persistantes évoquent des factions au sein même de la Garde, divisées entre ceux qui veulent révéler leur véritable nature pour légitimer leur pouvoir, et ceux qui préfèrent maintenir le secret, au risque de voir leur influence s'éroder face aux nouvelles technologies de surveillance.
+
+## Relations
+**Alliés :**
+- [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]]
+- [[bloc_eurasiatique_occidental_fortress_world]]
+- [[complexes_militaro_industriels_de_gestion_des_ressources_fortress_world]]
+- [[guilhelma_fortress_world]]
+- [[nexus_biosyn_division_eurasienne_fortress_world]]
+**Opposants :**
+- [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[les_dedoubles_fortress_world]]
+- [[reseaux_de_contrebande_energetique_transfrontaliere_fortress_world]]

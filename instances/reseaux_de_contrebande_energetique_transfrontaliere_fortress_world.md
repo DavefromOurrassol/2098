@@ -35,11 +35,16 @@ alliances:
 - coalitions_des_deplaces_et_apatrides_fortress_world
 - factions_dissidentes_du_consortium_helios_fortress_world
 - factions_djihadistes_logistiques_d_asie_centrale_fortress_world
+- guilhelma_fortress_world
+- ilse_varga_holm_fortress_world
+- les_recycleurs_fortress_world
 - marches_gris_casablanca_fortress_world
 - marches_gris_tbilissi_fortress_world
+- mouvement_de_reconquete_europeenne_fortress_world
 - operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world
 - rust_belt_communes_libres_fortress_world
 oppositions:
+- agence_de_regulation_des_detroits_strategiques_ards_fortress_world
 - anba_siege_atlantique_fortress_world
 - bloc_pacifique_nord_fortress_world
 - cartels_energetiques_des_bioreacteurs_fortress_world
@@ -53,8 +58,11 @@ oppositions:
 - consortiums_energetiques_du_bloc_ourrassol_fortress_world
 - corps_des_inspecteurs_de_conformite_inter_blocs_fortress_world
 - executif_militaro_civil_du_regime_fortress_world
+- ingrid_solberg_fortress_world
 - instances_aria_concurrentes_des_blocs_rivaux_fortress_world
 - ironclad_logistics_fortress_world
+- la_garde_du_seuil_fortress_world
+- les_gardiens_des_corridors_hybrides_fortress_world
 - reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world
 - vaultcorp_security_fortress_world
 type_relation_dominante: compétition
@@ -122,16 +130,22 @@ La tension centrale de ces réseaux réside dans leur double nature : instrument
 - [[geopolitique_conflits]]
 
 
+
 ## Relations
 **Alliés :**
 - [[coalitions_des_deplaces_et_apatrides_fortress_world]]
 - [[factions_dissidentes_du_consortium_helios_fortress_world]]
 - [[factions_djihadistes_logistiques_d_asie_centrale_fortress_world]]
+- [[guilhelma_fortress_world]]
+- [[ilse_varga_holm_fortress_world]]
+- [[les_recycleurs_fortress_world]]
 - [[marches_gris_casablanca_fortress_world]]
 - [[marches_gris_tbilissi_fortress_world]]
+- [[mouvement_de_reconquete_europeenne_fortress_world]]
 - [[operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world]]
 - [[rust_belt_communes_libres_fortress_world]]
 **Opposants :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_fortress_world]]
 - [[anba_siege_atlantique_fortress_world]]
 - [[bloc_pacifique_nord_fortress_world]]
 - [[cartels_energetiques_des_bioreacteurs_fortress_world]]
@@ -145,8 +159,11 @@ La tension centrale de ces réseaux réside dans leur double nature : instrument
 - [[consortiums_energetiques_du_bloc_ourrassol_fortress_world]]
 - [[corps_des_inspecteurs_de_conformite_inter_blocs_fortress_world]]
 - [[executif_militaro_civil_du_regime_fortress_world]]
+- [[ingrid_solberg_fortress_world]]
 - [[instances_aria_concurrentes_des_blocs_rivaux_fortress_world]]
 - [[ironclad_logistics_fortress_world]]
+- [[la_garde_du_seuil_fortress_world]]
+- [[les_gardiens_des_corridors_hybrides_fortress_world]]
 - [[reseaux_de_distribution_d_hydrogene_sous_contrat_militaire_fortress_world]]
 - [[vaultcorp_security_fortress_world]]
 

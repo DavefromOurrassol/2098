@@ -48,6 +48,7 @@ alliances:
 - reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world
 - rust_belt_communes_libres_fortress_world
 oppositions:
+- alpha47_fortress_world
 - amazonie_pacte_vert_fortress_world
 - bloc_atlantique_fortress_world
 - bloc_eurasiatique_occidental_fortress_world
@@ -60,12 +61,13 @@ oppositions:
 - datacenters_conseil_eurasiatique_fortress_world
 - directive_kontinuum_fortress_world
 - dispositifs_de_surveillance_numerique_souveraine_fortress_world
+- ergo_wian_sovereign_holdings_fortress_world
 - geneve_bunker_fortress_world
 - nexcore_atlantique_infrastructure_fortress_world
 - pacte_forteresses_souveraines_fortress_world
-- services_de_contre_information_des_blocs_geopolitiques_concurrents_reference
 - siege_genevois_cars_fortress_world
 - tbilissi_nord_zone_franche_fortress_world
+- vikram_raghavan_fortress_world
 - zone_usines_forteresses_eurasie_fortress_world
 - zones_grises_tampons_fortress_world
 type_relation_dominante: infiltration
@@ -131,6 +133,7 @@ La question qui fracture Fractures de l'intérieur : depuis 2089, des preuves ci
 - [[reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world]]
 - [[rust_belt_communes_libres_fortress_world]]
 **Opposants :**
+- [[alpha47_fortress_world]]
 - [[amazonie_pacte_vert_fortress_world]]
 - [[bloc_atlantique_fortress_world]]
 - [[bloc_eurasiatique_occidental_fortress_world]]
@@ -143,11 +146,12 @@ La question qui fracture Fractures de l'intérieur : depuis 2089, des preuves ci
 - [[datacenters_conseil_eurasiatique_fortress_world]]
 - [[directive_kontinuum_fortress_world]]
 - [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
+- [[ergo_wian_sovereign_holdings_fortress_world]]
 - [[geneve_bunker_fortress_world]]
 - [[nexcore_atlantique_infrastructure_fortress_world]]
 - [[pacte_forteresses_souveraines_fortress_world]]
-- [[services_de_contre_information_des_blocs_geopolitiques_concurrents_reference]]
 - [[siege_genevois_cars_fortress_world]]
 - [[tbilissi_nord_zone_franche_fortress_world]]
+- [[vikram_raghavan_fortress_world]]
 - [[zone_usines_forteresses_eurasie_fortress_world]]
 - [[zones_grises_tampons_fortress_world]]

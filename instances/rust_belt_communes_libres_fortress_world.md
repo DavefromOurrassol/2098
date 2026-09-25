@@ -64,6 +64,7 @@ oppositions:
 - complexes_militaro_industriels_de_gestion_des_ressources_fortress_world
 - consortium_des_blocs_solaires_orbitaux_concurrents_fortress_world
 - dispositifs_de_surveillance_numerique_souveraine_fortress_world
+- ergo_wian_sovereign_holdings_fortress_world
 - etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world
 - front_resilient_pro_systeme_fortress_world
 - milices_privees_de_protection_des_sites_germinaux_fortress_world
@@ -150,6 +151,7 @@ La tension fondamentale qui ronge la Fédération est celle de sa propre survie 
 - [[complexes_militaro_industriels_de_gestion_des_ressources_fortress_world]]
 - [[consortium_des_blocs_solaires_orbitaux_concurrents_fortress_world]]
 - [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
+- [[ergo_wian_sovereign_holdings_fortress_world]]
 - [[etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world]]
 - [[front_resilient_pro_systeme_fortress_world]]
 - [[milices_privees_de_protection_des_sites_germinaux_fortress_world]]

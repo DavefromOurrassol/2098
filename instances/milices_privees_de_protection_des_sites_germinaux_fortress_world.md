@@ -32,6 +32,7 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- alpha47_fortress_world
 - amazonie_pacte_vert_fortress_world
 - biolock_agritech_fortress_world
 - complexes_militaro_industriels_de_gestion_des_ressources_fortress_world
@@ -50,6 +51,7 @@ oppositions:
 - coalitions_des_deplaces_et_apatrides_fortress_world
 - consortium_africain_de_biotechnologies_sociales_fortress_world
 - internationale_des_semenciers_agro_pirates_fortress_world
+- les_veilleurs_des_nappes_phreatiques_fortress_world
 - les_veilleurs_du_fleuve_fortress_world
 - mouvement_commun_midwest_fortress_world
 - reseaux_d_echange_clandestin_inter_zones_fortress_world
@@ -120,8 +122,10 @@ Ces milices sont structurellement tiraillées entre leur loyauté contractuelle 
 - [[energie_ressources_critiques]]
 
 
+
 ## Relations
 **Alliés :**
+- [[alpha47_fortress_world]]
 - [[amazonie_pacte_vert_fortress_world]]
 - [[biolock_agritech_fortress_world]]
 - [[complexes_militaro_industriels_de_gestion_des_ressources_fortress_world]]
@@ -140,6 +144,7 @@ Ces milices sont structurellement tiraillées entre leur loyauté contractuelle 
 - [[coalitions_des_deplaces_et_apatrides_fortress_world]]
 - [[consortium_africain_de_biotechnologies_sociales_fortress_world]]
 - [[internationale_des_semenciers_agro_pirates_fortress_world]]
+- [[les_veilleurs_des_nappes_phreatiques_fortress_world]]
 - [[les_veilleurs_du_fleuve_fortress_world]]
 - [[mouvement_commun_midwest_fortress_world]]
 - [[reseaux_d_echange_clandestin_inter_zones_fortress_world]]

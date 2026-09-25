@@ -54,6 +54,7 @@ alliances:
 - consortium_helios_fortress_world
 - consortiums_de_defense_orbitale_prives_fortress_world
 - dispositifs_de_surveillance_numerique_souveraine_fortress_world
+- institut_des_seuils_demographiques_fortress_world
 - nexcore_atlantique_infrastructure_fortress_world
 - pacte_forteresses_souveraines_fortress_world
 - regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world
@@ -140,6 +141,7 @@ La question de qui décide des seuils d'alerte — et donc de qui est déclaré 
 - [[consortium_helios_fortress_world]]
 - [[consortiums_de_defense_orbitale_prives_fortress_world]]
 - [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
+- [[institut_des_seuils_demographiques_fortress_world]]
 - [[nexcore_atlantique_infrastructure_fortress_world]]
 - [[pacte_forteresses_souveraines_fortress_world]]
 - [[regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world]]

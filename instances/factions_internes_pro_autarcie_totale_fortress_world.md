@@ -37,6 +37,7 @@ oppositions:
 - agences_de_securite_interieure_des_etats_forteresses_fortress_world
 - alliance_blocs_souverains_fortress_world
 - appareils_d_etat_des_blocs_fermes_fortress_world
+- aymeric_de_valfort_fortress_world
 - bassora_couloir_refugies_fortress_world
 - bloc_atlantique_fortress_world
 - bloc_eurasiatique_occidental_fortress_world
@@ -113,6 +114,7 @@ La contradiction centrale de ces factions réside dans leur dépendance aux rés
 - [[systeme_economique_redistribution]]
 
 
+
 ## Relations
 **Alliés :**
 - [[factions_djihadistes_logistiques_d_asie_centrale_fortress_world]]
@@ -120,6 +122,7 @@ La contradiction centrale de ces factions réside dans leur dépendance aux rés
 - [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]]
 - [[alliance_blocs_souverains_fortress_world]]
 - [[appareils_d_etat_des_blocs_fermes_fortress_world]]
+- [[aymeric_de_valfort_fortress_world]]
 - [[bassora_couloir_refugies_fortress_world]]
 - [[bloc_atlantique_fortress_world]]
 - [[bloc_eurasiatique_occidental_fortress_world]]

@@ -34,19 +34,19 @@ zone_systemique:
     - infrastructure
 
 alliances:
-    - alliance_sanitaire_des_populations_exclues_fortress_world
-    - coalitions_des_deplaces_et_apatrides_fortress_world
-    - reseaux_d_echange_clandestin_inter_zones_fortress_world
-    - contrebandiers_energetiques_des_zones_grises_fortress_world
-    - cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
-
+- alliance_sanitaire_des_populations_exclues_fortress_world
+- cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- contrebandiers_energetiques_des_zones_grises_fortress_world
+- reseaux_d_echange_clandestin_inter_zones_fortress_world
 oppositions:
-    - administrations_de_controle_frontalier_des_blocs_fortress_world
-    - agences_de_securite_interieure_des_etats_forteresses_fortress_world
-    - bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world
-    - vaultcorp_security_fortress_world
-    - dispositifs_de_surveillance_numerique_souveraine_fortress_world
-
+- administrations_de_controle_frontalier_des_blocs_fortress_world
+- agences_de_securite_interieure_des_etats_forteresses_fortress_world
+- alpha47_fortress_world
+- bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world
+- dispositifs_de_surveillance_numerique_souveraine_fortress_world
+- institut_des_seuils_demographiques_fortress_world
+- vaultcorp_security_fortress_world
 type_relation_dominante: symbiose
 
 annee_debut: 2047
@@ -89,12 +89,25 @@ Production de cartes dynamiques des zones grises, incluant infrastructures criti
 - [[technologie_information]]
 - [[geopolitique_conflits]]
 
-## Relations
-**Alliés** : [[alliance_sanitaire_des_populations_exclues_fortress_world]], [[coalitions_des_deplaces_et_apatrides_fortress_world]], [[reseaux_d_echange_clandestin_inter_zones_fortress_world]], [[contrebandiers_energetiques_des_zones_grises_fortress_world]], [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]]
-**Opposants** : [[administrations_de_controle_frontalier_des_blocs_fortress_world]], [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]], [[bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world]], [[vaultcorp_security_fortress_world]], [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
 
 ## Description journalistique
 Depuis les ruines des anciennes républiques soviétiques et les interstices des corridors caucasiens, le Réseau Liminalis opère comme une ombre numérique. Ses membres, souvent des déserteurs des milices frontalières ou des universitaires radiés des blocs, arpentent les zones grises avec des drones low-tech et des capteurs bricolés, traçant des cartes que les États forteresses préféreraient voir disparaître. Leurs données, échangées via des réseaux maillés hors des infrastructures souveraines, alimentent les contrebandiers d'hydrogène et les cliniques de déaugmentation des seuils. En 2098, Liminalis reste l'une des dernières sources fiables sur les territoires que les blocs ont choisi d'oublier — ou de bombarder.
 
 ## Tensions narratives
 Le réseau est tiraillé entre sa mission originelle de préservation des savoirs et la tentation de monétiser ses données auprès des cartels énergétiques ou des milices privées. Certains membres prônent une alliance avec les factions djihadistes logistiques pour sécuriser des corridors, tandis que d'autres veulent rester neutres. La fragmentation des blocs pourrait offrir une fenêtre d'ascension — ou précipiter sa destruction par les agences de sécurité intérieure, qui voient en Liminalis une menace à l'ordre territorial souverain.
+
+## Relations
+**Alliés :**
+- [[alliance_sanitaire_des_populations_exclues_fortress_world]]
+- [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[contrebandiers_energetiques_des_zones_grises_fortress_world]]
+- [[reseaux_d_echange_clandestin_inter_zones_fortress_world]]
+**Opposants :**
+- [[administrations_de_controle_frontalier_des_blocs_fortress_world]]
+- [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]]
+- [[alpha47_fortress_world]]
+- [[bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world]]
+- [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
+- [[institut_des_seuils_demographiques_fortress_world]]
+- [[vaultcorp_security_fortress_world]]

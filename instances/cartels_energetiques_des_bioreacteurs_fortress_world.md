@@ -42,6 +42,7 @@ oppositions:
 - collectifs_de_reappropriation_energetique_peripherique_fortress_world
 - contrebandiers_energetiques_des_zones_grises_fortress_world
 - factions_djihadistes_logistiques_d_asie_centrale_fortress_world
+- les_gardiens_des_n_uds_hybrides_fortress_world
 - mouvement_des_communes_du_rust_belt_fortress_world
 - reseaux_de_contrebande_energetique_transfrontaliere_fortress_world
 type_relation_dominante: dépendance
@@ -110,6 +111,7 @@ La tension centrale repose sur la contradiction entre leur indispensabilité vit
 - [[systeme_economique_redistribution]]
 
 
+
 ## Relations
 **Alliés :**
 - [[alliance_blocs_souverains_fortress_world]]
@@ -122,6 +124,7 @@ La tension centrale repose sur la contradiction entre leur indispensabilité vit
 - [[collectifs_de_reappropriation_energetique_peripherique_fortress_world]]
 - [[contrebandiers_energetiques_des_zones_grises_fortress_world]]
 - [[factions_djihadistes_logistiques_d_asie_centrale_fortress_world]]
+- [[les_gardiens_des_n_uds_hybrides_fortress_world]]
 - [[mouvement_des_communes_du_rust_belt_fortress_world]]
 - [[reseaux_de_contrebande_energetique_transfrontaliere_fortress_world]]
 

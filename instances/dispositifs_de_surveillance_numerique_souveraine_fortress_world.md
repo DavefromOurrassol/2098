@@ -74,9 +74,11 @@ oppositions:
 - mouvement_commun_midwest_fortress_world
 - mouvement_des_communes_du_rust_belt_fortress_world
 - oracle_des_seuils_fortress_world
+- reseau_des_cartographes_des_zones_grises_fortress_world
 - reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world
 - reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world
 - rust_belt_communes_libres_fortress_world
+- terminal_kharg_data_haven_fortress_world
 - tribunal_algorithmique_de_bruxelles_fortress_world
 - voix_du_dehors_fortress_world
 type_relation_dominante: dépendance
@@ -146,6 +148,7 @@ La tension fondamentale réside dans la contradiction entre leur mission déclar
 - [[gouvernance_institutions]]
 
 
+
 ## Relations
 **Alliés :**
 - [[administrations_de_controle_frontalier_des_blocs_fortress_world]]
@@ -187,9 +190,11 @@ La tension fondamentale réside dans la contradiction entre leur mission déclar
 - [[mouvement_commun_midwest_fortress_world]]
 - [[mouvement_des_communes_du_rust_belt_fortress_world]]
 - [[oracle_des_seuils_fortress_world]]
+- [[reseau_des_cartographes_des_zones_grises_fortress_world]]
 - [[reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world]]
 - [[reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world]]
 - [[rust_belt_communes_libres_fortress_world]]
+- [[terminal_kharg_data_haven_fortress_world]]
 - [[tribunal_algorithmique_de_bruxelles_fortress_world]]
 - [[voix_du_dehors_fortress_world]]
 

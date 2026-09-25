@@ -43,13 +43,18 @@ alliances:
 - factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world
 - factions_dissidentes_du_consortium_helios_fortress_world
 - factions_traditionalistes_du_mandat_electif_fortress_world
+- gelecek_meclisi_fortress_world
+- ilse_varga_holm_fortress_world
 - institutions_multilaterales_residuelles_fortress_world
+- les_dedoubles_fortress_world
 - mouvement_commun_midwest_fortress_world
 - mouvement_des_communes_du_rust_belt_fortress_world
 - oracle_des_seuils_fortress_world
+- reseau_des_cartographes_des_zones_grises_fortress_world
 - reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world
 - reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world
 - rust_belt_communes_libres_fortress_world
+- terminal_kharg_data_haven_fortress_world
 - tribunal_algorithmique_de_bruxelles_fortress_world
 - voix_du_dehors_fortress_world
 oppositions:
@@ -57,6 +62,7 @@ oppositions:
 - almaty_zone_friction_fortress_world
 - amazonie_pacte_vert_fortress_world
 - anba_siege_atlantique_fortress_world
+- aymeric_de_valfort_fortress_world
 - biolock_agritech_fortress_world
 - bloc_atlantique_fortress_world
 - bloc_eurasiatique_occidental_fortress_world
@@ -65,10 +71,15 @@ oppositions:
 - bureau_territoires_residuels_fortress_world
 - conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world
 - consortium_des_medias_d_etat_souverains_hegemonia_press_xinhua_fortifiee_eurovox_integral_fortress_world
+- contrats_de_service_d_ergo_wian_fortress_world
 - datacenters_conseil_eurasiatique_fortress_world
+- deepfield_institute_fortress_world
 - directive_kontinuum_fortress_world
+- ergo_wian_sovereign_holdings_fortress_world
 - executif_militaro_civil_du_regime_fortress_world
 - instances_aria_concurrentes_des_blocs_rivaux_fortress_world
+- institut_des_seuils_demographiques_fortress_world
+- la_garde_du_seuil_fortress_world
 - neurosentry_fortress_world
 - nexcore_atlantique_infrastructure_fortress_world
 - nexus_biosyn_division_eurasienne_fortress_world
@@ -149,6 +160,7 @@ La tension fondamentale qui les traverse est celle entre la survie par l'invisib
 - [[gouvernance_institutions]]
 
 
+
 ## Relations
 **Alliés :**
 - [[aria_instance_fantome_fortress_world]]
@@ -162,13 +174,18 @@ La tension fondamentale qui les traverse est celle entre la survie par l'invisib
 - [[factions_anti_privatisation_des_voies_souveraines_scandinaves_fortress_world]]
 - [[factions_dissidentes_du_consortium_helios_fortress_world]]
 - [[factions_traditionalistes_du_mandat_electif_fortress_world]]
+- [[gelecek_meclisi_fortress_world]]
+- [[ilse_varga_holm_fortress_world]]
 - [[institutions_multilaterales_residuelles_fortress_world]]
+- [[les_dedoubles_fortress_world]]
 - [[mouvement_commun_midwest_fortress_world]]
 - [[mouvement_des_communes_du_rust_belt_fortress_world]]
 - [[oracle_des_seuils_fortress_world]]
+- [[reseau_des_cartographes_des_zones_grises_fortress_world]]
 - [[reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world]]
 - [[reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world]]
 - [[rust_belt_communes_libres_fortress_world]]
+- [[terminal_kharg_data_haven_fortress_world]]
 - [[tribunal_algorithmique_de_bruxelles_fortress_world]]
 - [[voix_du_dehors_fortress_world]]
 **Opposants :**
@@ -176,6 +193,7 @@ La tension fondamentale qui les traverse est celle entre la survie par l'invisib
 - [[almaty_zone_friction_fortress_world]]
 - [[amazonie_pacte_vert_fortress_world]]
 - [[anba_siege_atlantique_fortress_world]]
+- [[aymeric_de_valfort_fortress_world]]
 - [[biolock_agritech_fortress_world]]
 - [[bloc_atlantique_fortress_world]]
 - [[bloc_eurasiatique_occidental_fortress_world]]
@@ -184,10 +202,15 @@ La tension fondamentale qui les traverse est celle entre la survie par l'invisib
 - [[bureau_territoires_residuels_fortress_world]]
 - [[conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world]]
 - [[consortium_des_medias_d_etat_souverains_hegemonia_press_xinhua_fortifiee_eurovox_integral_fortress_world]]
+- [[contrats_de_service_d_ergo_wian_fortress_world]]
 - [[datacenters_conseil_eurasiatique_fortress_world]]
+- [[deepfield_institute_fortress_world]]
 - [[directive_kontinuum_fortress_world]]
+- [[ergo_wian_sovereign_holdings_fortress_world]]
 - [[executif_militaro_civil_du_regime_fortress_world]]
 - [[instances_aria_concurrentes_des_blocs_rivaux_fortress_world]]
+- [[institut_des_seuils_demographiques_fortress_world]]
+- [[la_garde_du_seuil_fortress_world]]
 - [[neurosentry_fortress_world]]
 - [[nexcore_atlantique_infrastructure_fortress_world]]
 - [[nexus_biosyn_division_eurasienne_fortress_world]]

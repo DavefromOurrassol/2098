@@ -35,19 +35,18 @@ zone_systemique:
     - société
 
 alliances:
-    - alliance_sanitaire_des_populations_exclues_fortress_world
-    - coalitions_des_deplaces_et_apatrides_fortress_world
-    - reseaux_d_echange_clandestin_inter_zones_fortress_world
-    - coalition_vivant_fortress_world
-    - mouvement_commun_midwest_fortress_world
-
+- alliance_sanitaire_des_populations_exclues_fortress_world
+- coalition_vivant_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- les_gardiens_des_n_uds_hybrides_fortress_world
+- mouvement_commun_midwest_fortress_world
+- reseaux_d_echange_clandestin_inter_zones_fortress_world
 oppositions:
-    - administrations_de_controle_frontalier_des_blocs_fortress_world
-    - agences_de_securite_interieure_des_etats_forteresses_fortress_world
-    - milices_privees_de_protection_des_sites_germinaux_fortress_world
-    - biolock_agritech_fortress_world
-    - consortium_eurasiatique_des_ressources_fermees_fortress_world
-
+- administrations_de_controle_frontalier_des_blocs_fortress_world
+- agences_de_securite_interieure_des_etats_forteresses_fortress_world
+- biolock_agritech_fortress_world
+- consortium_eurasiatique_des_ressources_fermees_fortress_world
+- milices_privees_de_protection_des_sites_germinaux_fortress_world
 type_relation_dominante: conflit
 
 annee_debut: 2047
@@ -90,12 +89,24 @@ Cartographier et protéger les nappes phréatiques hors des zones contrôlées p
 - [[organisation_territoires]]
 - [[gouvernance_institutions]]
 
-## Relations
-**Alliés** : [[alliance_sanitaire_des_populations_exclues_fortress_world]], [[coalitions_des_deplaces_et_apatrides_fortress_world]], [[reseaux_d_echange_clandestin_inter_zones_fortress_world]], [[coalition_vivant_fortress_world]], [[mouvement_commun_midwest_fortress_world]]
-**Opposants** : [[administrations_de_controle_frontalier_des_blocs_fortress_world]], [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]], [[milices_privees_de_protection_des_sites_germinaux_fortress_world]], [[biolock_agritech_fortress_world]], [[consortium_eurasiatique_des_ressources_fermees_fortress_world]]
 
 ## Description journalistique
 Depuis le verrouillage des nappes phréatiques du Sahel par le Bloc Atlantique en 2047, les Sentinelles des Aquifères Oubliés sont devenues le dernier rempart des populations exclues des zones sécurisées. Ces réseaux clandestins, souvent composés de femmes et d'anciens ingénieurs hydrauliques, ont transformé des milliers de villages en bastions de résistance hydrique. Leur méthode ? Des capteurs bricolés à partir de déchets électroniques, des puits communautaires creusés à la main, et une connaissance intime des aquifères qui défie les cartes officielles des blocs. Leur symbole, une goutte d'eau stylisée en forme de clé, est devenu un signe de ralliement dans les zones grises, où l'eau est plus précieuse que l'or.
 
 ## Tensions narratives
 Les Sentinelles sont tiraillées entre leur ancrage local et la nécessité de se coordonner à plus grande échelle pour peser face aux blocs. Leur alliance avec les Coalitions des Déplacés et Apatrides pourrait les entraîner dans une logique de confrontation directe, tandis que leur collaboration avec le Réseau Vert Clandestin ouvre la porte à une approche plus systémique, mais aussi plus risquée. Leur plus grand défi : éviter de reproduire les structures de pouvoir qu'ils combattent, tout en résistant à la répression croissante des milices corporatives. Leur trajectoire pourrait basculer vers une radicalisation armée ou, à l'inverse, vers une intégration forcée dans les dispositifs de gouvernance des blocs, sous la pression des crises hydriques.
+
+## Relations
+**Alliés :**
+- [[alliance_sanitaire_des_populations_exclues_fortress_world]]
+- [[coalition_vivant_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[les_gardiens_des_n_uds_hybrides_fortress_world]]
+- [[mouvement_commun_midwest_fortress_world]]
+- [[reseaux_d_echange_clandestin_inter_zones_fortress_world]]
+**Opposants :**
+- [[administrations_de_controle_frontalier_des_blocs_fortress_world]]
+- [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]]
+- [[biolock_agritech_fortress_world]]
+- [[consortium_eurasiatique_des_ressources_fermees_fortress_world]]
+- [[milices_privees_de_protection_des_sites_germinaux_fortress_world]]

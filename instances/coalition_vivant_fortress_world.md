@@ -36,11 +36,13 @@ alliances:
 - coalitions_des_deplaces_et_apatrides_fortress_world
 - consortium_amazonia_viva_fortress_world
 - le_temoin_fortress_world
+- les_veilleurs_des_nappes_phreatiques_fortress_world
 - marches_gris_tbilissi_fortress_world
 - mouvement_des_communes_du_rust_belt_fortress_world
 - populations_des_zones_deficitaires_d_optimisation_fortress_world
 oppositions:
 - amazonie_pacte_vert_fortress_world
+- aymeric_de_valfort_fortress_world
 - biolock_agritech_fortress_world
 - bloc_atlantique_fortress_world
 - bloc_eurasiatique_occidental_fortress_world
@@ -117,11 +119,13 @@ La coordination centrale a été compromise.
 - [[coalitions_des_deplaces_et_apatrides_fortress_world]]
 - [[consortium_amazonia_viva_fortress_world]]
 - [[le_temoin_fortress_world]]
+- [[les_veilleurs_des_nappes_phreatiques_fortress_world]]
 - [[marches_gris_tbilissi_fortress_world]]
 - [[mouvement_des_communes_du_rust_belt_fortress_world]]
 - [[populations_des_zones_deficitaires_d_optimisation_fortress_world]]
 **Opposants :**
 - [[amazonie_pacte_vert_fortress_world]]
+- [[aymeric_de_valfort_fortress_world]]
 - [[biolock_agritech_fortress_world]]
 - [[bloc_atlantique_fortress_world]]
 - [[bloc_eurasiatique_occidental_fortress_world]]

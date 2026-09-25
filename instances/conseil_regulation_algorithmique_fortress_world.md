@@ -41,6 +41,7 @@ alliances:
 - centre_controle_orbital_helios_fortress_world
 - conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world
 - corps_des_inspecteurs_de_conformite_inter_blocs_fortress_world
+- deepfield_institute_fortress_world
 - executif_militaro_civil_du_regime_fortress_world
 - front_resilient_pro_systeme_fortress_world
 - geneve_bunker_fortress_world
@@ -52,11 +53,11 @@ alliances:
 oppositions:
 - aria_instance_fantome_fortress_world
 - coalition_vivant_fortress_world
-- conseil_regulation_algorithmique_new_sustainability
 - factions_internes_pro_autarcie_totale_fortress_world
 - factions_traditionalistes_du_mandat_electif_fortress_world
 - le_temoin_fortress_world
 - oracle_des_seuils_fortress_world
+- terminal_kharg_data_haven_fortress_world
 - tribunal_algorithmique_de_bruxelles_fortress_world
 type_relation_dominante: rivalité
 annee_debut: 2044
@@ -130,6 +131,7 @@ en 2089 — on dit qu'il a rejoint un collectif non certifié.
 - [[centre_controle_orbital_helios_fortress_world]]
 - [[conglomerats_industriels_d_etat_des_augmentations_proprietaires_fortress_world]]
 - [[corps_des_inspecteurs_de_conformite_inter_blocs_fortress_world]]
+- [[deepfield_institute_fortress_world]]
 - [[executif_militaro_civil_du_regime_fortress_world]]
 - [[front_resilient_pro_systeme_fortress_world]]
 - [[geneve_bunker_fortress_world]]
@@ -141,9 +143,9 @@ en 2089 — on dit qu'il a rejoint un collectif non certifié.
 **Opposants :**
 - [[aria_instance_fantome_fortress_world]]
 - [[coalition_vivant_fortress_world]]
-- [[conseil_regulation_algorithmique_new_sustainability]]
 - [[factions_internes_pro_autarcie_totale_fortress_world]]
 - [[factions_traditionalistes_du_mandat_electif_fortress_world]]
 - [[le_temoin_fortress_world]]
 - [[oracle_des_seuils_fortress_world]]
+- [[terminal_kharg_data_haven_fortress_world]]
 - [[tribunal_algorithmique_de_bruxelles_fortress_world]]

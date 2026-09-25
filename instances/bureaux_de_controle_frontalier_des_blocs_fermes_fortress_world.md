@@ -46,6 +46,7 @@ alliances:
 - datacenters_conseil_eurasiatique_fortress_world
 - executif_militaro_civil_du_regime_fortress_world
 - instances_aria_concurrentes_des_blocs_rivaux_fortress_world
+- les_gardiens_des_corridors_hybrides_fortress_world
 - nexcore_atlantique_infrastructure_fortress_world
 - reseaux_prives_de_securite_aux_frontieres_fortress_world
 - terrashield_geoengineering_fortress_world
@@ -60,12 +61,15 @@ oppositions:
 - corridors_gris_asie_centrale_fortress_world
 - factions_dissidentes_du_consortium_helios_fortress_world
 - factions_internes_pro_autarcie_totale_fortress_world
+- ilse_varga_holm_fortress_world
 - institutions_multilaterales_residuelles_fortress_world
+- les_cycles_fortress_world
 - marches_gris_casablanca_fortress_world
 - marches_gris_tbilissi_fortress_world
 - milices_de_piraterie_logistique_arctique_fortress_world
 - mouvement_commun_midwest_fortress_world
 - populations_des_zones_deficitaires_d_optimisation_fortress_world
+- reseau_des_cartographes_des_zones_grises_fortress_world
 - reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world
 - vasil_orentchev_fortress_world
 type_relation_dominante: conflit
@@ -137,6 +141,7 @@ La contradiction centrale de ces bureaux réside dans leur dépendance paradoxal
 - [[gouvernance_institutions]]
 
 
+
 ## Relations
 **Alliés :**
 - [[administrations_de_controle_frontalier_des_blocs_fortress_world]]
@@ -153,6 +158,7 @@ La contradiction centrale de ces bureaux réside dans leur dépendance paradoxal
 - [[datacenters_conseil_eurasiatique_fortress_world]]
 - [[executif_militaro_civil_du_regime_fortress_world]]
 - [[instances_aria_concurrentes_des_blocs_rivaux_fortress_world]]
+- [[les_gardiens_des_corridors_hybrides_fortress_world]]
 - [[nexcore_atlantique_infrastructure_fortress_world]]
 - [[reseaux_prives_de_securite_aux_frontieres_fortress_world]]
 - [[terrashield_geoengineering_fortress_world]]
@@ -167,12 +173,15 @@ La contradiction centrale de ces bureaux réside dans leur dépendance paradoxal
 - [[corridors_gris_asie_centrale_fortress_world]]
 - [[factions_dissidentes_du_consortium_helios_fortress_world]]
 - [[factions_internes_pro_autarcie_totale_fortress_world]]
+- [[ilse_varga_holm_fortress_world]]
 - [[institutions_multilaterales_residuelles_fortress_world]]
+- [[les_cycles_fortress_world]]
 - [[marches_gris_casablanca_fortress_world]]
 - [[marches_gris_tbilissi_fortress_world]]
 - [[milices_de_piraterie_logistique_arctique_fortress_world]]
 - [[mouvement_commun_midwest_fortress_world]]
 - [[populations_des_zones_deficitaires_d_optimisation_fortress_world]]
+- [[reseau_des_cartographes_des_zones_grises_fortress_world]]
 - [[reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world]]
 - [[vasil_orentchev_fortress_world]]
 

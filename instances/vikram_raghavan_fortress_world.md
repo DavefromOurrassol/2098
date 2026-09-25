@@ -35,17 +35,14 @@ zone_systemique:
     - société
 
 alliances:
-    - les_recycleurs_fortress_world
-    - ergo_wian_sovereign_holdings_fortress_world
-    - mouvement_de_reconquete_europeenne_fortress_world
-    - contrats_de_service_d_ergo_wian_fortress_world
-
+- les_recycleurs_fortress_world
+- ergo_wian_sovereign_holdings_fortress_world
+- mouvement_de_reconquete_europeenne_fortress_world
+- contrats_de_service_d_ergo_wian_fortress_world
 oppositions:
-    - hyphan_raghavan_fortress_world
-    - alliance_sanitaire_des_populations_exclues_fortress_world
-    - coalitions_des_deplaces_et_apatrides_fortress_world
-    - voix_du_dehors_fortress_world
-
+- alliance_sanitaire_des_populations_exclues_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- voix_du_dehors_fortress_world
 type_relation_dominante: infiltration
 
 annee_debut: 2044
@@ -103,12 +100,20 @@ Vikram supervise les opérations de récupération et de recyclage des déchets 
 - [[gouvernance_institutions]]
 - [[demographie_mobilite_humaine]]
 
-## Relations
-**Alliés** : [[les_recycleurs_fortress_world]], [[ergo_wian_sovereign_holdings_fortress_world]], [[mouvement_de_reconquete_europeenne_fortress_world]], [[contrats_de_service_d_ergo_wian_fortress_world]]
-**Opposants** : [[hyphan_raghavan_fortress_world]], [[alliance_sanitaire_des_populations_exclues_fortress_world]], [[coalitions_des_deplaces_et_apatrides_fortress_world]], [[voix_du_dehors_fortress_world]]
 
 ## Description journalistique
 Dans les entrailles de Paris, où les néons des tours Nexus7 côtoient les ombres des bidonvilles high-tech, Vikram Raghavan règne en maître ambigu. Connu sous le surnom de 'L'Oncle' parmi les Recycleurs, il est à la fois le sauveur et le bourreau de sa communauté. Ses discours sur la résilience des migrants, diffusés via les Cycles de Paris, contrastent avec les rumeurs persistantes de ses transactions avec Ergo-Wian. Les familles qu'il protège le vénèrent ; celles qu'il livre aux milices de la Reconquête Européenne le maudissent. Son dernier coup d'éclat ? Avoir placé sa propre nièce, Hyphan, dans un convoi de Dédoublés vers les mines d'Alpha47, tout en négociant une exemption pour son quartier. Un équilibriste des temps sombres, dont le sourire chaleureux cache une froideur calculée.
 
 ## Tensions narratives
 La montée en puissance de Vikram coïncide avec l'intensification des purges de la Reconquête Européenne et la radicalisation des Recycleurs. Sa nièce, Hyphan, devenue une figure de la résistance, pourrait bien être la faille dans son armure. Les rumeurs de trahison se multiplient, et certains membres des Recycleurs commencent à remettre en question son leadership. Par ailleurs, Ergo-Wian exige des livraisons toujours plus importantes, mettant Vikram dans une position intenable : jusqu'où peut-il sacrifier les siens pour préserver son pouvoir ? Son ascension pourrait bien se terminer par une chute brutale, ou par une alliance encore plus sombre avec les forces qu'il prétend combattre.
+
+## Relations
+**Alliés :**
+- [[les_recycleurs_fortress_world]]
+- [[ergo_wian_sovereign_holdings_fortress_world]]
+- [[mouvement_de_reconquete_europeenne_fortress_world]]
+- [[contrats_de_service_d_ergo_wian_fortress_world]]
+**Opposants :**
+- [[alliance_sanitaire_des_populations_exclues_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[voix_du_dehors_fortress_world]]

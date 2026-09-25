@@ -32,11 +32,13 @@ zone_geographique:
 zone_systemique:
 - société
 alliances:
+- contrats_de_service_d_ergo_wian_fortress_world
 - corridors_gris_asie_centrale_fortress_world
 - factions_internes_pro_autarcie_totale_fortress_world
 - operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world
 - reseaux_de_contrebande_energetique_transfrontaliere_fortress_world
 oppositions:
+- agence_de_regulation_des_detroits_strategiques_ards_fortress_world
 - almaty_zone_friction_fortress_world
 - bassora_couloir_refugies_fortress_world
 - bloc_eurasiatique_occidental_fortress_world
@@ -50,6 +52,7 @@ oppositions:
 - consortiums_energetiques_du_bloc_ourrassol_fortress_world
 - instances_aria_concurrentes_des_blocs_rivaux_fortress_world
 - ironclad_logistics_fortress_world
+- les_gardiens_des_corridors_hybrides_fortress_world
 - marches_gris_tbilissi_fortress_world
 - nexcore_atlantique_infrastructure_fortress_world
 - nexus_biosyn_division_eurasienne_fortress_world
@@ -121,13 +124,16 @@ La tension fondamentale qui ronge ces factions est celle entre l'idéologie et l
 
 
 
+
 ## Relations
 **Alliés :**
+- [[contrats_de_service_d_ergo_wian_fortress_world]]
 - [[corridors_gris_asie_centrale_fortress_world]]
 - [[factions_internes_pro_autarcie_totale_fortress_world]]
 - [[operateurs_prives_de_transit_energetique_caucasien_centrasiatique_fortress_world]]
 - [[reseaux_de_contrebande_energetique_transfrontaliere_fortress_world]]
 **Opposants :**
+- [[agence_de_regulation_des_detroits_strategiques_ards_fortress_world]]
 - [[almaty_zone_friction_fortress_world]]
 - [[bassora_couloir_refugies_fortress_world]]
 - [[bloc_eurasiatique_occidental_fortress_world]]
@@ -141,6 +147,7 @@ La tension fondamentale qui ronge ces factions est celle entre l'idéologie et l
 - [[consortiums_energetiques_du_bloc_ourrassol_fortress_world]]
 - [[instances_aria_concurrentes_des_blocs_rivaux_fortress_world]]
 - [[ironclad_logistics_fortress_world]]
+- [[les_gardiens_des_corridors_hybrides_fortress_world]]
 - [[marches_gris_tbilissi_fortress_world]]
 - [[nexcore_atlantique_infrastructure_fortress_world]]
 - [[nexus_biosyn_division_eurasienne_fortress_world]]

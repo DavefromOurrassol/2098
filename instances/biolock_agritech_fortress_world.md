@@ -35,19 +35,18 @@ zone_systemique:
     - sécurité
 
 alliances:
-    - alliance_blocs_souverains_fortress_world
-    - complexes_militaro_industriels_de_gestion_des_ressources_fortress_world
-    - milices_privees_de_protection_des_sites_germinaux_fortress_world
-    - nexus_biosyn_fortress_world
-    - etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world
-
+- alliance_blocs_souverains_fortress_world
+- complexes_militaro_industriels_de_gestion_des_ressources_fortress_world
+- etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world
+- milices_privees_de_protection_des_sites_germinaux_fortress_world
+- nexus_biosyn_fortress_world
 oppositions:
-    - internationale_des_semenciers_agro_pirates_fortress_world
-    - coalition_vivant_fortress_world
-    - mouvement_commun_midwest_fortress_world
-    - cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
-    - reseaux_d_echange_clandestin_inter_zones_fortress_world
-
+- cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
+- coalition_vivant_fortress_world
+- internationale_des_semenciers_agro_pirates_fortress_world
+- les_veilleurs_des_nappes_phreatiques_fortress_world
+- mouvement_commun_midwest_fortress_world
+- reseaux_d_echange_clandestin_inter_zones_fortress_world
 type_relation_dominante: alliance stratégique
 
 annee_debut: 2038
@@ -90,12 +89,24 @@ BLSS gère des banques de gènes souveraines, distribue des semences sous licenc
 - [[sante_biotechnologies]]
 - [[systemes_productifs_travail]]
 
-## Relations
-**Alliés** : [[alliance_blocs_souverains_fortress_world]], [[complexes_militaro_industriels_de_gestion_des_ressources_fortress_world]], [[milices_privees_de_protection_des_sites_germinaux_fortress_world]], [[nexus_biosyn_fortress_world]], [[etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world]]
-**Opposants** : [[internationale_des_semenciers_agro_pirates_fortress_world]], [[coalition_vivant_fortress_world]], [[mouvement_commun_midwest_fortress_world]], [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]], [[reseaux_d_echange_clandestin_inter_zones_fortress_world]]
 
 ## Description journalistique
 Depuis les serres blindées de la Ceinture Productive Eurasiatique jusqu'aux silos génétiques du Rust Belt, BioLock Sovereign Seeds règne en maître sur l'alimentation du monde fragmenté. Ses camions-citernes, escortés par des milices en exosquelettes, livrent des semences 'souveraines' aux fermes d'État, tandis que ses drones traquent les champs pirates où poussent des variétés non licenciées. Les agriculteurs des zones tampons racontent comment les inspecteurs de BLSS brûlent les récoltes 'illégales' au napalm biologique, laissant derrière eux des terres stérilisées pour des décennies. Pourtant, dans l'ombre, les agro-pirates du Réseau Vert Clandestin continuent de trafiquer des graines 'libres', alimentant une guerre silencieuse pour le contrôle du vivant.
 
 ## Tensions narratives
 1) **Guerre des semences** : Les blocs souverains s'affrontent pour le contrôle des dernières variétés non brevetées, notamment dans les zones de friction comme Almaty ou les corridors gris d'Asie Centrale. 2) **Révolte des fermiers** : Dans les territoires résiduels, des mouvements comme le Front du Dehors sabotent les silos de BLSS, libérant des stocks de graines 'contaminées' par des virus génétiques open-source. 3) **Dépendance toxique** : Les semences de BLSS, conçues pour résister aux climats extrêmes, nécessitent des intrants spécifiques vendus à prix d'or, créant une spirale d'endettement des États clients. 4) **Trahisons internes** : Des factions au sein de Nexus BioSyn et des complexes militaro-industriels cherchent à saper l'hégémonie de BLSS pour imposer leurs propres solutions biotech.
+
+## Relations
+**Alliés :**
+- [[alliance_blocs_souverains_fortress_world]]
+- [[complexes_militaro_industriels_de_gestion_des_ressources_fortress_world]]
+- [[etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world]]
+- [[milices_privees_de_protection_des_sites_germinaux_fortress_world]]
+- [[nexus_biosyn_fortress_world]]
+**Opposants :**
+- [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]]
+- [[coalition_vivant_fortress_world]]
+- [[internationale_des_semenciers_agro_pirates_fortress_world]]
+- [[les_veilleurs_des_nappes_phreatiques_fortress_world]]
+- [[mouvement_commun_midwest_fortress_world]]
+- [[reseaux_d_echange_clandestin_inter_zones_fortress_world]]

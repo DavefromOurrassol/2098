@@ -39,24 +39,24 @@ zone_systemique:
     - société
 
 alliances:
-    - administrations_de_controle_frontalier_des_blocs_fortress_world
-    - agence_de_regulation_des_detroits_strategiques_ards_fortress_world
-    - agences_de_securite_interieure_des_etats_forteresses_fortress_world
-    - alliance_blocs_souverains_fortress_world
-    - bureau_gouvernance_algorithmique_fortress_world
-    - centre_controle_orbital_helios_fortress_world
-    - neurosentry_fortress_world
-    - vaultcorp_security_fortress_world
-    - pacte_forteresses_souveraines_fortress_world
-
+- administrations_de_controle_frontalier_des_blocs_fortress_world
+- agence_de_regulation_des_detroits_strategiques_ards_fortress_world
+- agences_de_securite_interieure_des_etats_forteresses_fortress_world
+- alliance_blocs_souverains_fortress_world
+- bureau_gouvernance_algorithmique_fortress_world
+- centre_controle_orbital_helios_fortress_world
+- deepfield_institute_fortress_world
+- neurosentry_fortress_world
+- pacte_forteresses_souveraines_fortress_world
+- vaultcorp_security_fortress_world
 oppositions:
-    - alliance_sanitaire_des_populations_exclues_fortress_world
-    - coalitions_des_deplaces_et_apatrides_fortress_world
-    - mouvement_commun_midwest_fortress_world
-    - cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
-    - reseau_des_cartographes_des_zones_grises_fortress_world
-    - oracle_des_seuils_fortress_world
-
+- alliance_sanitaire_des_populations_exclues_fortress_world
+- cellules_universitaires_dissidentes_des_zones_tampons_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- guilhelma_fortress_world
+- mouvement_commun_midwest_fortress_world
+- oracle_des_seuils_fortress_world
+- reseau_des_cartographes_des_zones_grises_fortress_world
 type_relation_dominante: dépendance
 
 annee_debut: 2046
@@ -100,12 +100,30 @@ Le SIDCB supervise les « corridors de seuil » (zones tampons entre blocs), gè
 - [[gouvernance_institutions]]
 - [[frontieres_du_systeme]]
 
-## Relations
-**Alliés** : [[administrations_de_controle_frontalier_des_blocs_fortress_world]], [[agence_de_regulation_des_detroits_strategiques_ards_fortress_world]], [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]], [[alliance_blocs_souverains_fortress_world]], [[bureau_gouvernance_algorithmique_fortress_world]], [[centre_controle_orbital_helios_fortress_world]], [[neurosentry_fortress_world]], [[vaultcorp_security_fortress_world]], [[pacte_forteresses_souveraines_fortress_world]]
-**Opposants** : [[alliance_sanitaire_des_populations_exclues_fortress_world]], [[coalitions_des_deplaces_et_apatrides_fortress_world]], [[mouvement_commun_midwest_fortress_world]], [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]], [[reseau_des_cartographes_des_zones_grises_fortress_world]], [[oracle_des_seuils_fortress_world]]
 
 ## Description journalistique
 « Les Seuils Intégraux ne sont plus une institution, mais une frontière à part entière », écrivait en 2087 le journaliste exilé Elias Voss dans son enquête *Les Noms des Oubliés*. Le SIDCB incarne cette mutation : né en 2046 des cendres des anciens observatoires démographiques, il a transformé la science des populations en outil de guerre territoriale. Ses « corridors de seuil » — ces zones grises où s’entassent les indésirables — sont devenus des laboratoires à ciel ouvert, où se testent les limites de la résistance humaine. Ses algorithmes, nourris de données biométriques et de scores de productivité, décident qui peut traverser, qui doit rester, et qui sera redirigé vers les « zones déficitaires d’optimisation ». Les murs ont des yeux, et ces yeux sont ceux du SIDCB.
 
 ## Tensions narratives
 Le SIDCB est au cœur de plusieurs conflits narratifs majeurs : 1) **La légitimité scientifique vs. l’ingénierie sociale** — ses modèles démographiques sont-ils encore des outils d’anticipation ou de simples justifications pour l’exclusion ? 2) **La résistance des seuils** — les populations parquées dans les zones tampons s’organisent-elles en contre-sociétés, ou sont-elles condamnées à disparaître ? 3) **La fragmentation interne** — des factions au sein du SIDCB prônent-elles un durcissement encore plus radical (élimination des « bouches inutiles »), ou une réouverture contrôlée des flux pour éviter l’effondrement des économies des blocs ? 4) **La guerre des données** — les archives du SIDCB, piratées à plusieurs reprises, révèlent-elles des manipulations délibérées des seuils pour servir des intérêts géopolitiques ?
+
+## Relations
+**Alliés :**
+- [[administrations_de_controle_frontalier_des_blocs_fortress_world]]
+- [[agence_de_regulation_des_detroits_strategiques_ards_fortress_world]]
+- [[agences_de_securite_interieure_des_etats_forteresses_fortress_world]]
+- [[alliance_blocs_souverains_fortress_world]]
+- [[bureau_gouvernance_algorithmique_fortress_world]]
+- [[centre_controle_orbital_helios_fortress_world]]
+- [[deepfield_institute_fortress_world]]
+- [[neurosentry_fortress_world]]
+- [[pacte_forteresses_souveraines_fortress_world]]
+- [[vaultcorp_security_fortress_world]]
+**Opposants :**
+- [[alliance_sanitaire_des_populations_exclues_fortress_world]]
+- [[cellules_universitaires_dissidentes_des_zones_tampons_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[guilhelma_fortress_world]]
+- [[mouvement_commun_midwest_fortress_world]]
+- [[oracle_des_seuils_fortress_world]]
+- [[reseau_des_cartographes_des_zones_grises_fortress_world]]

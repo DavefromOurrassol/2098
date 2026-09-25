@@ -39,13 +39,18 @@ alliances:
 - coalitions_des_deplaces_et_apatrides_fortress_world
 - contrebandiers_energetiques_des_zones_grises_fortress_world
 - corridors_gris_asie_centrale_fortress_world
+- les_cycles_fortress_world
+- les_dedoubles_fortress_world
+- les_veilleurs_des_nappes_phreatiques_fortress_world
 - les_veilleurs_du_fleuve_fortress_world
 - marches_gris_casablanca_fortress_world
 - marches_gris_tbilissi_fortress_world
 - milices_de_piraterie_logistique_arctique_fortress_world
+- reseau_des_cartographes_des_zones_grises_fortress_world
 - reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world
 - reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world
 - rust_belt_communes_libres_fortress_world
+- tribu_des_cinq_nations_fortress_world
 oppositions:
 - administrations_de_controle_frontalier_des_blocs_fortress_world
 - alliance_blocs_souverains_fortress_world
@@ -136,6 +141,7 @@ La tension fondamentale de ces réseaux réside dans leur double nature : instru
 - [[demographie_mobilite_humaine]]
 
 
+
 ## Relations
 **Alliés :**
 - [[aria_instance_fantome_fortress_world]]
@@ -145,13 +151,18 @@ La tension fondamentale de ces réseaux réside dans leur double nature : instru
 - [[coalitions_des_deplaces_et_apatrides_fortress_world]]
 - [[contrebandiers_energetiques_des_zones_grises_fortress_world]]
 - [[corridors_gris_asie_centrale_fortress_world]]
+- [[les_cycles_fortress_world]]
+- [[les_dedoubles_fortress_world]]
+- [[les_veilleurs_des_nappes_phreatiques_fortress_world]]
 - [[les_veilleurs_du_fleuve_fortress_world]]
 - [[marches_gris_casablanca_fortress_world]]
 - [[marches_gris_tbilissi_fortress_world]]
 - [[milices_de_piraterie_logistique_arctique_fortress_world]]
+- [[reseau_des_cartographes_des_zones_grises_fortress_world]]
 - [[reseaux_de_juristes_specialises_en_droit_corporel_souverain_fortress_world]]
 - [[reseaux_de_passeurs_d_information_aux_frontieres_inter_blocs_fortress_world]]
 - [[rust_belt_communes_libres_fortress_world]]
+- [[tribu_des_cinq_nations_fortress_world]]
 **Opposants :**
 - [[administrations_de_controle_frontalier_des_blocs_fortress_world]]
 - [[alliance_blocs_souverains_fortress_world]]

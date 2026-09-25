@@ -34,6 +34,7 @@ zone_systemique:
 - société
 alliances:
 - appareils_d_etat_des_blocs_fermes_fortress_world
+- aymeric_de_valfort_fortress_world
 - bloc_atlantique_fortress_world
 - bloc_eurasiatique_occidental_fortress_world
 - bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world
@@ -113,9 +114,11 @@ La coopération technique entre les trois bras du Consortium sur le protocole VE
 - [[gouvernance_institutions]]
 
 
+
 ## Relations
 **Alliés :**
 - [[appareils_d_etat_des_blocs_fermes_fortress_world]]
+- [[aymeric_de_valfort_fortress_world]]
 - [[bloc_atlantique_fortress_world]]
 - [[bloc_eurasiatique_occidental_fortress_world]]
 - [[bureaux_de_controle_frontalier_des_blocs_fermes_fortress_world]]

@@ -37,6 +37,7 @@ alliances:
 - bloc_eurasiatique_occidental_fortress_world
 - bloc_pacifique_nord_fortress_world
 - commandement_strategique_des_matieres_critiques_atlantique_fortress_world
+- consortium_des_pecheries_autonomes_du_grand_nord_fortress_world
 - consortiums_energetiques_du_bloc_ourrassol_fortress_world
 - pacte_forteresses_souveraines_fortress_world
 oppositions:
@@ -114,6 +115,7 @@ La Coalition est structurellement déchirée entre les intérêts divergents du 
 - [[organisation_territoires]]
 
 
+
 ## Relations
 **Alliés :**
 - [[administrations_de_controle_frontalier_des_blocs_fortress_world]]
@@ -121,6 +123,7 @@ La Coalition est structurellement déchirée entre les intérêts divergents du 
 - [[bloc_eurasiatique_occidental_fortress_world]]
 - [[bloc_pacifique_nord_fortress_world]]
 - [[commandement_strategique_des_matieres_critiques_atlantique_fortress_world]]
+- [[consortium_des_pecheries_autonomes_du_grand_nord_fortress_world]]
 - [[consortiums_energetiques_du_bloc_ourrassol_fortress_world]]
 - [[pacte_forteresses_souveraines_fortress_world]]
 **Opposants :**

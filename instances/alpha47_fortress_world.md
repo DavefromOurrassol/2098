@@ -37,17 +37,17 @@ zone_systemique:
     - société
 
 alliances:
-    - ergo_wian_sovereign_holdings_fortress_world
-    - complexes_militaro_industriels_de_gestion_des_ressources_fortress_world
-    - milices_privees_de_protection_des_sites_germinaux_fortress_world
-    - vaultcorp_security_fortress_world
-
+- complexes_militaro_industriels_de_gestion_des_ressources_fortress_world
+- contrats_de_service_d_ergo_wian_fortress_world
+- ergo_wian_sovereign_holdings_fortress_world
+- milices_privees_de_protection_des_sites_germinaux_fortress_world
+- vaultcorp_security_fortress_world
 oppositions:
-    - alliance_sanitaire_des_populations_exclues_fortress_world
-    - coalitions_des_deplaces_et_apatrides_fortress_world
-    - reseau_des_cartographes_des_zones_grises_fortress_world
-    - voix_du_dehors_fortress_world
-
+- alliance_sanitaire_des_populations_exclues_fortress_world
+- coalitions_des_deplaces_et_apatrides_fortress_world
+- les_dedoubles_fortress_world
+- reseau_des_cartographes_des_zones_grises_fortress_world
+- voix_du_dehors_fortress_world
 type_relation_dominante: conflit
 
 annee_debut: 2047
@@ -106,12 +106,23 @@ Extraction de minerais stratégiques (terres rares, métaux critiques) pour les 
 - [[sante_biotechnologies]]
 - [[systemes_productifs_travail]]
 
-## Relations
-**Alliés** : [[ergo_wian_sovereign_holdings_fortress_world]], [[complexes_militaro_industriels_de_gestion_des_ressources_fortress_world]], [[milices_privees_de_protection_des_sites_germinaux_fortress_world]], [[vaultcorp_security_fortress_world]]
-**Opposants** : [[alliance_sanitaire_des_populations_exclues_fortress_world]], [[coalitions_des_deplaces_et_apatrides_fortress_world]], [[reseau_des_cartographes_des_zones_grises_fortress_world]], [[voix_du_dehors_fortress_world]]
 
 ## Description journalistique
 Alpha47, surnommée 'La Mine des Ombres' par les travailleurs du Hors, est un complexe minier orbital situé sur une planète stérile du système Eridani. Géré par Ergo-Wian Sovereign Dominion, ce site est un symbole de l'exploitation des populations marginalisées dans les zones sacrifiées des blocs forteresses. Les mineurs, recrutés sous contrat de service dans les camps de réfugiés du Hors, extraient des terres rares et des métaux critiques dans des conditions dignes du XIXe siècle, sous la surveillance de milices privées. Une maladie mystérieuse, baptisée 'Fièvre des Visions', décime les travailleurs, mais Ergo-Wian refuse toute enquête indépendante, préférant étouffer les rumeurs plutôt que de risquer une interruption de la production. Les rares témoignages de survivants évoquent des hallucinations collectives avant la mort, alimentant les théories les plus folles sur une possible contamination extraterrestre ou une arme biologique secrète.
 
 ## Tensions narratives
 Alpha47 est au cœur de plusieurs enjeux majeurs : la lutte pour le contrôle des ressources critiques entre blocs forteresses, la résistance des travailleurs exploités et des réseaux clandestins qui tentent de faire fuiter des informations, et les mystères entourant la 'Fièvre des Visions'. Les rumeurs d'une possible origine non naturelle de la maladie pourraient déclencher une crise sanitaire mondiale si elles étaient confirmées, tandis que les tentatives d'Ergo-Wian pour étouffer l'affaire risquent de provoquer une révolte des mineurs ou une intervention des coalitions des déplacés. Par ailleurs, la découverte éventuelle de phénomènes inexpliqués sur Alpha47 pourrait remettre en question les fondements mêmes de la rationalité scientifique des blocs forteresses.
+
+## Relations
+**Alliés :**
+- [[complexes_militaro_industriels_de_gestion_des_ressources_fortress_world]]
+- [[contrats_de_service_d_ergo_wian_fortress_world]]
+- [[ergo_wian_sovereign_holdings_fortress_world]]
+- [[milices_privees_de_protection_des_sites_germinaux_fortress_world]]
+- [[vaultcorp_security_fortress_world]]
+**Opposants :**
+- [[alliance_sanitaire_des_populations_exclues_fortress_world]]
+- [[coalitions_des_deplaces_et_apatrides_fortress_world]]
+- [[les_dedoubles_fortress_world]]
+- [[reseau_des_cartographes_des_zones_grises_fortress_world]]
+- [[voix_du_dehors_fortress_world]]

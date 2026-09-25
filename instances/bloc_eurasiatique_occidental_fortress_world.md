@@ -61,6 +61,7 @@ alliances:
 - directive_kontinuum_fortress_world
 - dispositifs_de_surveillance_numerique_souveraine_fortress_world
 - etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world
+- la_garde_du_seuil_fortress_world
 - nexus_biosyn_division_eurasienne_fortress_world
 - pacte_forteresses_souveraines_fortress_world
 - regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world
@@ -165,6 +166,7 @@ La prospérité intérieure commence à montrer ses fissures : les factions pro-
 - [[directive_kontinuum_fortress_world]]
 - [[dispositifs_de_surveillance_numerique_souveraine_fortress_world]]
 - [[etats_forteresses_sous_contrat_de_souverainete_biologique_fortress_world]]
+- [[la_garde_du_seuil_fortress_world]]
 - [[nexus_biosyn_division_eurasienne_fortress_world]]
 - [[pacte_forteresses_souveraines_fortress_world]]
 - [[regimes_autoritaires_du_bloc_eurasiatique_occidental_fortress_world]]
