@@ -513,7 +513,59 @@ Corrige uniquement les champs en erreur et retourne le JSON complet corrigé.
 # Passe de réciprocité (locale, sans LLM)
 # ---------------------------------------------------------------------------
 
-def reciprocity_pass(scenario, dry_run, resolution_suit=False):
+def calculer_reciprocite(scenario, ignorer_exclues=False):
+    """
+    Calcul PUR (aucune écriture, aucun affichage) de la réciprocité d'un
+    scénario — extrait de reciprocity_pass() le 25 sept 2026 pour être
+    réutilisé en lecture seule par audit_lore.py, sans dupliquer la règle.
+
+    Retourne (fiches, additions, conflits) :
+      - fiches    : slug -> {"path", "fm", "body"}
+      - additions : slug -> {"alliances": set, "oppositions": set} — ce qui
+                    manque sur la fiche `slug` pour que la relation soit
+                    réciproque (A cite B dans `field`, B ne cite pas A)
+      - conflits  : liste de tuples (slug, target, field, opposite) — A
+                    classe B dans `field`, mais B classe A dans `opposite`
+    Les slugs fantômes et auto-références sont ignorés (comme avant).
+
+    ignorer_exclues (25 sept 2026, opt-in) : une fiche marquée
+    `exclure_articles: true` (personnage « en réserve », voir
+    set_selection_instance.py) ne propage PAS ses relations vers les autres
+    fiches — sinon la réciprocité l'inscrirait dans les relations d'instances
+    qui, elles, alimentent les articles. Les relations des autres fiches vers
+    elle restent propagées normalement (sans effet sur les articles).
+    """
+    fiches = {}
+    for path in sorted(INSTANCES_DIR.glob(f"*_{scenario}.md")):
+        fm, body = parse_md(path)
+        slug = fm.get("slug", path.stem)
+        fiches[slug] = {"path": path, "fm": fm, "body": body}
+
+    additions = {slug: {"alliances": set(), "oppositions": set()} for slug in fiches}
+    conflits = []
+
+    for slug, data in fiches.items():
+        fm = data["fm"]
+        if ignorer_exclues and fm.get("exclure_articles") is True:
+            continue  # personnage en réserve : ses relations ne sont pas propagées
+        for field, opposite in [("alliances", "oppositions"), ("oppositions", "alliances")]:
+            for target in (fm.get(field) or []):
+                if target not in fiches or target == slug:
+                    continue  # slug fantôme ou auto-référence, ignoré ici
+                target_fm = fiches[target]["fm"]
+                already_same = slug in (target_fm.get(field) or [])
+                already_opposite = slug in (target_fm.get(opposite) or [])
+                if already_same:
+                    continue  # déjà réciproque, rien à faire
+                if already_opposite:
+                    conflits.append((slug, target, field, opposite))
+                    continue
+                additions[target][field].add(slug)
+
+    return fiches, additions, conflits
+
+
+def reciprocity_pass(scenario, dry_run, resolution_suit=False, ignorer_exclues=False):
     """
     Pour chaque instance du scénario, si A cite B en alliance/opposition,
     B doit citer A en retour. Cette fonction elle-même ne résout jamais
@@ -526,44 +578,28 @@ def reciprocity_pass(scenario, dry_run, resolution_suit=False):
     même run, et le message le précise pour éviter de laisser croire que
     les conflits resteront non résolus. Si False (défaut), le message
     reste tel qu'avant : ces conflits nécessitent une revue manuelle.
+
+    Le calcul lui-même vit dans calculer_reciprocite() (25 sept 2026) ;
+    cette fonction garde l'affichage, les messages et l'écriture, à
+    l'identique d'avant le refactor.
     """
     print(f"\n{'─' * 60}")
     print(f"PASSE DE RÉCIPROCITÉ — {scenario}")
     print(f"{'─' * 60}")
 
-    fiches = {}
-    for path in sorted(INSTANCES_DIR.glob(f"*_{scenario}.md")):
-        fm, body = parse_md(path)
-        slug = fm.get("slug", path.stem)
-        fiches[slug] = {"path": path, "fm": fm, "body": body}
+    fiches, additions, conflits_bruts = calculer_reciprocite(scenario, ignorer_exclues)
 
-    additions = {slug: {"alliances": set(), "oppositions": set()} for slug in fiches}
-    conflicts = []
-
-    for slug, data in fiches.items():
-        fm = data["fm"]
-        for field, opposite in [("alliances", "oppositions"), ("oppositions", "alliances")]:
-            for target in (fm.get(field) or []):
-                if target not in fiches or target == slug:
-                    continue  # slug fantôme ou auto-référence, ignoré ici
-                target_fm = fiches[target]["fm"]
-                already_same = slug in (target_fm.get(field) or [])
-                already_opposite = slug in (target_fm.get(opposite) or [])
-                if already_same:
-                    continue  # déjà réciproque, rien à faire
-                if already_opposite:
-                    suffixe = (
-                        " — sera résolu automatiquement ci-dessous "
-                        "(opposition prioritaire sur alliance)"
-                        if resolution_suit
-                        else " — conflit non résolu automatiquement (revue manuelle nécessaire)"
-                    )
-                    conflicts.append(
-                        f"{slug} classe {target} dans '{field}', mais {target} classe "
-                        f"{slug} dans '{opposite}'{suffixe}"
-                    )
-                    continue
-                additions[target][field].add(slug)
+    suffixe = (
+        " — sera résolu automatiquement ci-dessous "
+        "(opposition prioritaire sur alliance)"
+        if resolution_suit
+        else " — conflit non résolu automatiquement (revue manuelle nécessaire)"
+    )
+    conflicts = [
+        f"{slug} classe {target} dans '{field}', mais {target} classe "
+        f"{slug} dans '{opposite}'{suffixe}"
+        for slug, target, field, opposite in conflits_bruts
+    ]
 
     n_added = 0
     for slug, adds in additions.items():
@@ -786,6 +822,12 @@ def main():
         help="Ne lance QUE la passe de réciprocité (aucun appel LLM)",
     )
     parser.add_argument(
+        "--ignorer-exclus", action="store_true",
+        help="Passe de réciprocité : ne propage pas les relations des fiches "
+             "exclues des articles (exclure_articles: true, personnages en "
+             "réserve), pour ne pas les inscrire chez les autres instances.",
+    )
+    parser.add_argument(
         "--skip-reciprocite", action="store_true",
         help="Ne lance pas la passe de réciprocité après la passe LLM",
     )
@@ -842,7 +884,8 @@ def main():
             if scenario not in SCENARIOS:
                 continue
             n_added, conflicts = reciprocity_pass(
-                scenario, args.dry_run, resolution_suit=args.resoudre_conflits
+                scenario, args.dry_run, resolution_suit=args.resoudre_conflits,
+                ignorer_exclues=args.ignorer_exclus,
             )
             total_added += n_added
             total_conflicts += len(conflicts)

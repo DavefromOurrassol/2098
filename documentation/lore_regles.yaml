@@ -1,0 +1,122 @@
+# documentation/lore_regles.yaml — règles de lore lues par generator/audit_lore.py
+# ============================================================================
+# Fichier ÉDITABLE À LA MAIN. Une section par scénario, plus `_tous` (règles
+# appliquées à tous les scénarios). audit_lore.py ne modifie jamais ce fichier.
+#
+# Deux mécanismes par scénario :
+#
+# 1. zones_quarantaine — une instance LOCALISÉE dans l'une de ces zones (ou
+#    dans une de leurs sous-zones) est signalée si sa trajectoire n'est pas
+#    dans `trajectoires_tolerees` ("rien ne peut y être actif").
+#
+# 2. regles — recherche dans tous les textes des fiches (frontmatter) :
+#    - termes: [...]            un des termes apparaît (mot entier)
+#    - meme_phrase: [[A], [B]]  un terme de A ET un terme de B dans la même phrase
+#    Options :
+#    - gravite: erreur | a_relire   (a_relire = peut être légitime, ex. rappel
+#                                    historique ; erreur = contredit le lore)
+#    - sensible_casse: true         les termes écrits ENTIÈREMENT EN MAJUSCULES
+#                                    (sigles : NAT) respectent la casse ; tous
+#                                    les autres termes ignorent toujours casse
+#                                    et accents (Ecosse = Écosse = ÉCOSSE)
+#    - sauf_zones: [slug, ...]      ignorer les fiches localisées dans ces zones
+#    - exceptions: [...]            occurrences à ignorer (ex. Brest-Litovsk pour Brest)
+#    - ignorer_negation: true       meme_phrase : ignore « n'est pas neutre », « ni neutre »…
+#                                    (négation dans les ~30 caractères avant le terme)
+#    - suggestion: "..."            remplacement proposé dans le rapport
+#    - message: "..."               explication affichée dans le rapport
+# ============================================================================
+
+_tous:
+  regles: []
+
+fortress_world:
+
+  zones_quarantaine:
+    - zone: zone_interdite_heysham
+      trajectoires_tolerees: [disparu, résiduel, mythifié]
+      message: >-
+        Zone Interdite de Heysham (Angleterre, Écosse, Irlande, Pays de Galles,
+        littoral Manche-Atlantique) en quarantaine depuis l'accident de 2044 :
+        rien ne peut y être actif.
+
+  regles:
+
+    - id: interzone_ancien_nom
+      gravite: erreur
+      termes: [Interzone]
+      suggestion: Zone Euro Sud
+      message: >-
+        « Interzone » est l'ancien nom de la Zone Euro Sud (renommée le
+        9 sept 2026).
+
+    - id: zones_abandonnees
+      gravite: erreur
+      termes:
+        - Nordgard
+        - Corridor d'Amsterdam
+        - Amsterdam Corridor
+        - Zone de Koursk
+      message: >-
+        Zone abandonnée le 24 sept 2026 (Nordgard, Corridor d'Amsterdam,
+        Zone de Koursk) : n'existe pas dans fortress_world. Les Pays-Bas sont
+        dans l'Espace Nordique (Euro-Nord).
+
+    - id: quarantaine_heysham_mention
+      gravite: a_relire
+      sauf_zones: []
+      exceptions: [Brest-Litovsk]
+      termes:
+        # Royaume-Uni et Irlande
+        - Écosse
+        - Angleterre
+        - Irlande
+        - Pays de Galles
+        - Royaume-Uni
+        - Grande-Bretagne
+        - Londres
+        - Manchester
+        - Liverpool
+        - Birmingham
+        - Leeds
+        - Bristol
+        - Édimbourg
+        - Glasgow
+        - Aberdeen
+        - Highlands
+        - Cardiff
+        - Dublin
+        - Belfast
+        - Cork
+        # Littoral Manche-Atlantique (France)
+        - Bretagne
+        - Normandie
+        - Brest
+        - Cherbourg
+        - Le Havre
+        - Saint-Malo
+        - Calais
+        - Dunkerque
+        - Boulogne-sur-Mer
+        - Caen
+        - Nantes
+        - Saint-Nazaire
+        - La Rochelle
+        - Bordeaux
+        - Lorient
+        - Quimper
+      message: >-
+        Lieu en quarantaine (Zone Interdite de Heysham) : légitime en rappel
+        historique (accident de 2044, évacuation), incohérent si une activité
+        actuelle y est décrite.
+
+    - id: nat_non_neutre
+      gravite: erreur
+      sensible_casse: true
+      ignorer_negation: true
+      meme_phrase:
+        - [NAT, Nordisk Arktisk Transitkontroll]
+        - [neutre, neutres, neutralité, indépendante, indépendant, impartiale]
+      message: >-
+        La NAT est la filiale armée d'Ergo-Wian, fait connu de tous en 2098 :
+        elle n'est ni neutre ni indépendante.
