@@ -1347,16 +1347,22 @@ class ZoneRepository:
             target = self._find(zones, zone_slug)
             if not target:
                 raise ZoneRepositoryError(f"Zone '{zone_slug}' introuvable dans la fiche")
+            paires_overlay = self._paires_overlay(scenario)
+            n_pays = _normalise_pays(pays)
             for z in zones:
                 if z is target:
                     continue
                 origine = z.get("origine_reelle")
                 if isinstance(origine, list):
+                    # S13bis (25 sept 2026) : une entrée adossée à un tracé
+                    # overlay (portion) est préservée -- même filtre que
+                    # retirer_doublons_pays_entier(), sinon le tracé devient orphelin.
                     z["origine_reelle"] = [o for o in origine
-                                            if not (isinstance(o, dict) and o.get("entite") == pays)]
+                                            if not (isinstance(o, dict) and o.get("entite") == pays
+                                                    and (z.get("slug"), n_pays) not in paires_overlay)]
             origine = target.setdefault("origine_reelle", [])
             if not any(isinstance(o, dict) and o.get("entite") == pays for o in origine):
-                origine.append({"entite": pays})
+                origine.append({"entite": pays, "type_entite": "pays", "portion": None})
             final_slug = zone_slug
         else:
             nz = nouvelle_zone or {}
@@ -1367,13 +1373,31 @@ class ZoneRepository:
                 raise ZoneRepositoryError("nouvelle_zone.slug et .nom requis")
             if self._find(zones, slug):
                 raise ZoneRepositoryError(f"Le slug '{slug}' existe déjà")
+            paires_overlay = self._paires_overlay(scenario)
+            n_pays = _normalise_pays(pays)
             for z in zones:
                 origine = z.get("origine_reelle")
                 if isinstance(origine, list):
+                    # S13bis : entrées overlay préservées (voir branche absorber).
                     z["origine_reelle"] = [o for o in origine
-                                            if not (isinstance(o, dict) and o.get("entite") == pays)]
-            zones.append({"slug": slug, "nom": nom, "niveau": 1, "parent": None,
-                          "description": description, "origine_reelle": [{"entite": pays}]})
+                                            if not (isinstance(o, dict) and o.get("entite") == pays
+                                                    and (z.get("slug"), n_pays) not in paires_overlay)]
+            # Schéma complet (25 sept 2026), aligné sur creer_zone_n1().
+            type_zone = str(nz.get("type") or "autre").strip()
+            statut = str(nz.get("statut") or "emergent").strip()
+            if type_zone not in ZONE_TYPES:
+                raise ZoneRepositoryError(f"type invalide, doit être parmi : {', '.join(ZONE_TYPES)}")
+            if statut not in ZONE_STATUTS:
+                raise ZoneRepositoryError(f"statut invalide, doit être parmi : {', '.join(ZONE_STATUTS)}")
+            zones.append({
+                "slug": slug, "nom": nom, "niveau": 1, "type": type_zone, "parent": None,
+                "origine_reelle": [{"entite": pays, "type_entite": "pays", "portion": None}],
+                "description": description, "statut": statut, "tensions_internes": "",
+                "periode_transition": None, "evenement_transition": None,
+                "lieux_emblematiques": [], "relations": {"allies": [], "rivaux": []},
+                "sources_attestees": [],
+            })
+            gf.body = gf.body.rstrip("\n") + f"\n\n### {nom}\n{description}\n"
             final_slug = slug
 
         self._save_geo(gf)
