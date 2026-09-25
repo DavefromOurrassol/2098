@@ -191,12 +191,13 @@ zones:
   niveau: 1
   type: union_regionale
   parent: null
-  statut: fragmenté
-  description: Coalition d'États chiites et de territoires autonomes centrée sur les
-    ressources pétrolières et gazières du Golfe Persique. Contrôlée par des milices
-    et des régimes autoritaires survivants.
-  tensions_internes: Conflits internes entre factions religieuses et ethniques, pression
-    des puissances régionales.
+  statut: stable
+  description: Coalition d'États du Golfe Persique centrée sur l'exploitation et l'exportation
+    des ressources pétrolières et gazières, structurée autour de hubs urbains et logistiques.
+    Gouvernée par des élites technocratiques et des consortiums énergétiques, avec
+    une stabilité précaire maintenue par des accords régionaux.
+  tensions_internes: Rivalités entre élites urbaines et périphéries en déclin, tensions
+    sur la répartition des revenus énergétiques et la modernisation des infrastructures.
   periode_transition: 2035-2080
   evenement_transition: Révolution énergétique du Golfe 2040 et fragmentation de l'Arabie
     saoudite.
@@ -212,10 +213,11 @@ zones:
     notes: ''
   relations:
     allies:
-    - Bloc Persique Autonome
+    - turquie_eurasie_moyen_orient
+    - bloc_eurasien_central
     rivaux:
-    - Zones Grises Globales
-    - Union Africaine de Résilience Territoriale
+    - zones_grises_globales
+    - israel_mediterranee_orientale
   sources_attestees: []
   origine_reelle:
   - entite: Iran

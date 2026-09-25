@@ -596,9 +596,6 @@ zones:
   - entite: France
     type_entite: pays
     portion: null
-  - entite: Portugal
-    type_entite: pays
-    portion: null
   - entite: Autriche
     type_entite: pays
     portion: null
@@ -800,6 +797,9 @@ zones:
   type: union_regionale
   origine_reelle:
   - entite: Espagne
+    type_entite: pays
+    portion: null
+  - entite: Portugal
     type_entite: pays
     portion: null
   description: Zone née de la réforme territoriale ibérique post-2040, marquée par
